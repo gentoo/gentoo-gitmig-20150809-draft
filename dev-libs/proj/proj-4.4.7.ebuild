@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/proj/proj-4.4.7.ebuild,v 1.2 2003/11/06 06:07:49 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/proj/proj-4.4.7.ebuild,v 1.3 2004/01/12 17:03:20 nerdboy Exp $
 
 DESCRIPTION="Cartographic projections library"
 HOMEPAGE="http://www.remotesensing.org/proj/"

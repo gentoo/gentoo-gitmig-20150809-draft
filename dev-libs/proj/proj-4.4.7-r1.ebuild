@@ -1,22 +1,17 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/proj/proj-4.4.7-r1.ebuild,v 1.1 2003/11/06 06:07:49 nerdboy Exp $
-
-# This is the Unidata Units library, which supports conversion of unit 
-# specifications between formatted and binary forms, arithmetic 
-# manipulation of unit specifications, and conversion of values between 
-# compatible scales of measurement.
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/proj/proj-4.4.7-r1.ebuild,v 1.2 2004/01/12 17:03:20 nerdboy Exp $
 
 S=${WORKDIR}/${P}
 N=${S}/nad
-DESCRIPTION="Proj.4 cartographic projection software with extra grids"
+DESCRIPTION="Proj.4 cartographic projection software with extra NAD27 grids"
 HOMEPAGE="http://proj.maptools.org/"
 SRC_URI="http://proj.maptools.org/dl/${P}.tar.gz
 	http://proj.maptools.org/dl/proj-nad27-1.1.tar.gz"
 
 SLOT="0"
 LICENSE="MIT"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
 
 DEPEND="virtual/glibc"
 RDEPEND="${DEPEND}"
