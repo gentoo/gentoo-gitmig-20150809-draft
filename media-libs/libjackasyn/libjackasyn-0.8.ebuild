@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjackasyn/libjackasyn-0.8.ebuild,v 1.4 2004/01/22 11:53:50 torbenh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjackasyn/libjackasyn-0.8.ebuild,v 1.5 2004/03/26 16:34:15 eradicator Exp $
 
 DESCRIPTION="An application/library for connecting OSS apps to Jackit."
 HOMEPAGE="http://gige.xdv.org/soft/libjackasyn"
@@ -9,7 +9,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 DEPEND="virtual/jack"
-S=${WORKDIR}/${P}
+IUSE=""
 
 src_unpack() {
 	unpack ${A}
