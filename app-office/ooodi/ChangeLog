@@ -1,6 +1,10 @@
 # ChangeLog for app-office/ooodi
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ooodi/ChangeLog,v 1.4 2003/06/06 19:26:07 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ooodi/ChangeLog,v 1.5 2003/07/31 19:53:50 pauldv Exp $
+
+  31 Jul 2003; <paul@gentoo.org> ooodi-0.61.ebuild:
+  Mark ooodi-0.61 as broken as there are gtk issues, and the dictionary url does
+  not work
 
 *ooodi-0.61 (06 Jun 2003)
 
