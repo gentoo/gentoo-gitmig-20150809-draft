@@ -1,7 +1,15 @@
 # ChangeLog for sys-apps/module-init-tools
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.28 2003/08/03 09:02:05 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.29 2003/08/10 20:45:13 azarah Exp $
 
+*module-init-tools-0.9.13_pre2 (10 Aug 2003)
+
+  10 Aug 2003; Martin Schlemmer <azarah@gentoo.org>
+  module-init-tools-0.9.13_pre2.ebuild,
+  files/module-init-tools-0.9.13-quiet-on-devfsd-probe-aliases.patch,
+  files/module-init-tools-0.9.7-export-gpl.patch:
+  New version. Add export-gpl.patch from MDK. Cleanup the
+  be-quiet-for-devfsd.patch and rename to quiet-on-devfsd-probe-aliases.patch.
 
 *module-init-tools-0.9.12-r1 (12 Jul 2003)
 
