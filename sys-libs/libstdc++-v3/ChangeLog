@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/libstdc++-v3
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.15 2004/08/01 16:43:16 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/ChangeLog,v 1.16 2004/08/03 04:12:56 morfic Exp $
+
+  02 Aug 2004; Daniel Goller <morfic@gentoo.org> libstdc++-v3-3.3.3-r1.ebuild:
+  Without stable deps reversing x86 to ~x86
 
   01 Aug 2004; Tom Gall <tgall@gentoo.org> libstdc++-v3-3.3.3-r1.ebuild:
   stable on ppc64, bug #59028
