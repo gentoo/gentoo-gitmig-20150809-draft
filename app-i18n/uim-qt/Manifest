@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 047673ccdc3af92acb7f11ac2c137300 ChangeLog 1139
+MD5 08fc6e4a3db453da8b335fd69ba9dc26 ChangeLog 1227
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 b77bd1592edf07e5956919c7ffe1ecd8 uim-qt-0.1.9.ebuild 1640
-MD5 e98f60f6057873befc4d0f1299dba5ff uim-qt-0.1.7.ebuild 1737
+MD5 51748431d3fec63701874d57e1712c90 uim-qt-0.1.7.ebuild 1736
 MD5 c422e240d4481961bb6e1165a071dbd1 files/digest-uim-qt-0.1.9 63
 MD5 f25e7d996a501e01443a0f31caf33284 files/digest-uim-qt-0.1.7 63
 MD5 fc9f430e80b37971d16d0aecf15d8957 files/uim-qt-0.1.7-thread.diff 293
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBY50vVWNWqTUmv+0RAjjZAJ0b7w+cKVGhBS8M9RARPOUMcWGVLwCeOMnI
-3tLbRRVpCgxpb4EhOLEaSM8=
-=mGWy
+iD8DBQFBY5+GVWNWqTUmv+0RAhKMAJ0T40REdS59D3/B+tvFZvLkR/v6HQCgsGFP
+k5k0hGrA8c8o5CGnwMjHXt8=
+=bQqu
 -----END PGP SIGNATURE-----
