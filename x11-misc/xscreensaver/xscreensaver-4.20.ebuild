@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.20.ebuild,v 1.1 2005/02/24 21:22:29 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.20.ebuild,v 1.2 2005/02/24 21:33:40 rizzo Exp $
 
 inherit eutils flag-o-matic
 
-IUSE="pam kerberos krb4 gtk2 gnome opengl jpeg xinerama offensive motif"
+IUSE="pam kerberos krb4 gtk gnome opengl jpeg xinerama offensive motif"
 
 DESCRIPTION="a modular screensaver for X11"
 SRC_URI="http://www.jwz.org/xscreensaver/${P}.tar.gz"
@@ -21,7 +21,7 @@ SLOT="0"
 RDEPEND="virtual/x11
 	media-libs/netpbm
 	>=sys-libs/zlib-1.1.4
-	gtk2? (
+	gtk? (
 		>=dev-libs/libxml2-2.5
 		>=x11-libs/gtk+-2
 		>=gnome-base/libglade-1.99
@@ -38,7 +38,7 @@ RDEPEND="virtual/x11
 DEPEND="${RDEPEND}
 	sys-devel/bc
 	dev-lang/perl
-	gtk2? ( dev-util/pkgconfig )
+	gtk? ( dev-util/pkgconfig )
 	nls? ( sys-devel/gettext )"
 
 # simple workaround for the flurry screensaver
@@ -47,7 +47,7 @@ filter-flags -maltivec
 append-flags -U__VEC__
 
 pkg_setup() {
-	if ! use gtk2 ; then
+	if ! use gtk ; then
 		if use motif ; then
 			ewarn 'From the configure script:'
 			ewarn '  Though the Motif front-end to xscreensaver is still'
@@ -55,9 +55,9 @@ pkg_setup() {
 			ewarn '  features: all new development on the xscreensaver-demo'
 			ewarn '  program is happening in the GTK version, and not in the'
 			ewarn '  Motif version.'
-			ewarn 'It is recommended that you use the "gtk2" USE flag.'
+			ewarn 'It is recommended that you use the "gtk" USE flag.'
 		else
-			ewarn "You have enabled neither gtk2 nor motif USE flags.  xscreensaver-demo"
+			ewarn "You have enabled neither gtk nor motif USE flags.  xscreensaver-demo"
 			ewarn "requires either GTK+ 2 or Motif (GTK+ 2 is recommended, as the Motif"
 			ewarn "version is no longer being maintained), so xscreensaver-demo will not"
 			ewarn "be built.  This is most likely NOT what you want."
@@ -95,7 +95,7 @@ src_compile() {
 
 	myconf="--with-fortune=/usr/bin/fortune"
 
-	if use gtk2 ; then
+	if use gtk ; then
 		myconf="${myconf} --without-motif --with-gtk --with-xml"
 	elif use motif; then
 		myconf="${myconf} --with-motif --without-gtk --without-pixbuf"
