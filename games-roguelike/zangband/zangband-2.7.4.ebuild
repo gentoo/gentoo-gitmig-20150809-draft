@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/zangband/zangband-2.7.4.ebuild,v 1.4 2004/06/24 23:14:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/zangband/zangband-2.7.4.ebuild,v 1.5 2004/07/14 14:57:58 agriffis Exp $
 
 inherit games
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://clockwork.dementia.org/angband/Variant/ZAngband/${P}.tar.gz"
 LICENSE="Moria"
 SLOT="0"
 KEYWORDS="x86 ppc"
-IUSE="X"
+IUSE="X gtk tcltk"
 
 DEPEND=">=sys-libs/ncurses-5
 	sys-libs/zlib
