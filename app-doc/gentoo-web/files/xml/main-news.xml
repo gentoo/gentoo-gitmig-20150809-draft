@@ -4,10 +4,24 @@
 <author title="Author"><mail link="drobbins@gentoo.org">Daniel Robbins</mail></author>
 
 <version>1.0.3</version>
-<date>21 Aug 2001</date>
+<date>29 Aug 2001</date>
 
 <newsitems>
-	<news align="left" graphic="/images/icon-linux.png">
+	<news align="left" graphic="/images/icon-clock.png">
+		<poster>drobbins</poster>
+		<date>29 Aug 2001</date>
+		<title>Gentoo Linux 1.0_rc6 status update redux</title>
+		<body>
+		<p><b>Gentoo Linux 1.0_rc6 is almost here.</b>  Right now -- this very moment -- I'm compiling our <e>sixth</e> 1.0_rc6 build image (chrootable environment); our build images are the heart of Gentoo Linux.  Tons of bugs have been fixed since last week, and our build images are now quite solid.  And even though the build images are only for Gentoo Linux build testers (at least right now), some of our more saavy users have already used them to build functional pre-1.0_rc6 systems.  However, I don't recommend you do this unless you have a lot of time on your hands, since nearly all packages with initscripts need to be updated to work with our new dependency-based init system.  While this isn't difficult work, it's probably best if you let us get to it first. :) 
+		</p>
+		<p>
+		<b>Also note that <uri link="http://www-106.ibm.com/developerworks/library/l-fs2.html">Part 2 of my Advanced Filesystem Implementor's Guide</uri> is now up on <uri link="http://www.ibm.com/developerworks/linux">IBM developerWorks</uri>.</b>  
+In it, I show you how to configure and use ReiserFS in a production environment.  I also show you how to <e>tweak ReiserFS for maximum performance</e>, and also cover potential application/ReiserFS interactions that you should know about.  You can also read the <uri link="http://www-106.ibm.com/developerworks/linux/library/l-fs.html">first Filesystem Guide article here</uri>; it contains a very good introduction to journalling filesystem technology and explains the design philosophy behind ReiserFS.
+		</p>
+		</body>
+	</news>
+	
+	<news align="right" graphic="/images/icon-linux.png">
 		<poster>drobbins</poster>
 		<date>21 Aug 2001</date>
 		<title>Keychain, Hackfest/Development update</title>
@@ -24,7 +38,7 @@
 		</p>
 		</body>
 	</news>
-	<news align="right" graphic="/images/icon-linux.png">
+	<news align="left" graphic="/images/icon-linux.png">
 		<poster>drobbins</poster>
 		<date>16 Aug 2001</date>
 		<title>New IBM dW tutorial, Hackfest, LWN</title>
@@ -35,7 +49,7 @@
 		<p>And third, <b>a new issue of <uri link="http://www.lwn.net">the Linux Weekly News</uri> is now online</b>.  I'm a big fan of LWN, and if you want to keep up with what is going on in the Linux world, it's always a good idea to head over to <uri>http://www.lwn.net</uri> every Thursday and give it a read.</p>
 		</body>
 	</news>
-<news align="left" graphic="/images/icon-stick1.png">
+<news align="right" graphic="/images/icon-stick1.png">
 		<poster>drobbins</poster>
 		<date>14 Aug 2001</date>
 		<title>Web site updates</title>
@@ -69,40 +83,6 @@ Right now, the XML component of the news system is complete, and Thread (dev-wik
 		Special thanks to Thread for his work on the dev-wiki and his current work on the News database
 		backend, and much thanks to Jano for providing us with the cool stickman graphic that you see on
 		the left. :)
-		</p>
-		</body>
-	</news>
-	<news align="right" graphic="/images/icon-clock.png">
-		<poster>drobbins</poster>
-		<date>14 Aug 2001</date>
-		<title>Gentoo Linux 1.0_rc6 status update</title>
-		<body>
-		<p>
-		I tend to get <e>a lot</e> of questions about our next release of Gentoo Linux, so why not kick off
-		our news page with a in-depth Gentoo Linux 1.0_rc6 status update?
-		</p>
-		<p>
-		<b>Release candidate 6 is coming along nicely.</b>  Currently, we have the <b>new dependency-based
-		initscripts</b> completed and working.  I wasn't really satisfied with any of the current dependency-based
-		init systems available, so we implemented our own system using a bit of <c>bash</c> wizardry.  We designed
-		our new dep-based scripts to work with the standard <c>/sbin/init</c>, so no newfangled version of <c>init</c>
-		is required.  These new scripts are <e>really fast</e> and <e>really slick</e>.  We are also now using a
-		brand new <path>modules.conf</path> generation system straight from <uri link="http://www.debian.org">Debian</uri>,
-		which seems to be working quite well.
-		</p>
-		<p><b>I just released the first version of the rc6 build image last night (13 Aug)</b>.   For those who don't know, a build
-		image is a minimal chrootable self-building environment used as the foundation for building a complete Gentoo Linux release.
-		You can't actually boot it, and right now, it's only for developers who are working to get their packages 
-		Gentoo Linux 1.0_rc6-ready, but if you'd like to play with it, you can download it <uri link="http://www.ibiblio.org/gentoo/snapshots/build/ix86-linux-gnu/">here</uri>.
-		This new build image has <e>lots</e> of improvements over rc5.  We now install kernel headers into
-		<path>/usr/include/linux</path> and <path>/usr/include/asm</path> directly, rather than using symlinks to point
-		to the appropriate directories in <path>/usr/src/linux</path>.  This is a good thing; it's recommended that you
-		keep the set of kernel headers that you used to build <e>glibc</e>, and we're doing that now.  Also, <c>vim</c>
-		is out and <c>nano</c> (a lean and mean <c>pico</c> clone) is in as the default build image editor.  <b>The new dependency-based initscripts are in.</b>
-		Our <e>glibc</e> has been tweaked so that rc6 will be IBM, Sun and Blackdown Java-compatible.  Not only that,
-		but the current rc6 build image is 3.8Mb <e>smaller</e> (13.1Mb) than our rc5 build image (16.9Mb)!  And you
-		can expect it to shrink by at least another Megabyte when we replace <c>nano</c> with <c>e3</c>, an editor written
-		in assembly that supports <c>vi</c>, <c>emacs</c> and <c>pico</c> keybindings.  Fun, fun, fun!
 		</p>
 		</body>
 	</news>
