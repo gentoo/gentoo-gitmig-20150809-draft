@@ -1,11 +1,15 @@
 # ChangeLog for kde-base/kdeaddons
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.30 2003/02/28 20:44:51 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/ChangeLog,v 1.31 2003/03/06 15:33:24 hannes Exp $
 
   15 Feb 2003; Jason Wever <weeve@gentoo.org> kdeaddons-3.1.ebuild:
   Changed ~sparc keyword to sparc.
 
 *kdeaddons-3.1 (01 Feb 2003)
+
+  06 Mar 2003; Hannes Mehnert <hannes@gentoo.org> kdeaddons-3.0.4.ebuild,
+  kdeaddons-3.0.5a.ebuild, kdeaddons-3.1.ebuild:
+  added depend on arts, fixes bug #15542
 
   28 Feb 2003; Will Woods <wwoods@gentoo.org> kdeaddons-3.1.ebuild :
   Added ~alpha keyword

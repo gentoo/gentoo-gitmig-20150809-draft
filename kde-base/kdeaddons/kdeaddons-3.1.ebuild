@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.1.ebuild,v 1.7 2003/02/28 20:44:51 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.1.ebuild,v 1.8 2003/03/06 15:33:24 hannes Exp $
 inherit kde-dist flag-o-matic
 
 IUSE="sdl svga xmms"
@@ -11,6 +11,7 @@ newdepend "~kde-base/kdebase-${PV}
 	~kde-base/kdenetwork-${PV}
 	~kde-base/kdemultimedia-${PV}
 	~kde-base/kdegames-${PV}
+	~kde-base/arts-1.1.0
 	sdl? ( >=media-libs/libsdl-1.2 )
 	svga? ( media-libs/svgalib )
 	xmms? ( media-sound/xmms )"
