@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/dosfstools
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/ChangeLog,v 1.15 2004/07/04 00:40:30 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/ChangeLog,v 1.16 2004/07/07 01:33:26 kloeri Exp $
+
+  07 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> dosfstools-2.10-r1.ebuild:
+  Stable on alpha.
 
   04 Jul 2004; Ian Leitch <port001@gentoo.org> dosfstools-2.10-r1.ebuild:
   Stable on x86
