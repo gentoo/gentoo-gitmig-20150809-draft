@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.9-r2.ebuild,v 1.2 2002/04/13 04:08:25 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.9-r2.ebuild,v 1.3 2002/04/16 10:15:34 seemant Exp $
 
 S=${WORKDIR}/mozilla
 DESCRIPTION="The Mozilla Web Browser"
@@ -47,7 +47,7 @@ src_compile() {
 	local myconf
 	# NOTE: QT and XLIB toolkit seems very unstable, leave disabled until
 	#       tested ok -- azarah
-#       if [ "`use mozqt`" ] ; then
+#       if [ "`use qt`" ] ; then
 		# when you enable this again, remember the qt dir is now /usr/qt/2 - danarmak
 #               myconf="--enable-toolkit-qt --enable-default-toolkit=qt"
 #               myconf="${myconf} --disable-toolkit-gtk --disable-toolkit-xlib"
