@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/compare
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/compare/ChangeLog,v 1.1 2005/01/07 22:56:39 stuart Exp $
+
+*compare-1.16 (07 Jan 2005)
+
+  07 Jan 2005; Stuart Herbert <stuart@gentoo.org> +metadata.xml,
+  +compare-1.16.ebuild:
+  Initial import; thanks to Georg Sauthoff <g_sauthoff@web.de>; see bug #76545
+
