@@ -1,28 +1,24 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r8.ebuild,v 1.1 2004/03/29 07:34:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r8.ebuild,v 1.2 2004/04/19 05:47:26 vapier Exp $
 
-inherit eutils
+inherit flag-o-matic gcc eutils
 
 DESCRIPTION="Standard Linux networking tools"
+HOMEPAGE="http://sites.inka.de/lina/linux/NetTools/"
 SRC_URI="http://www.tazenda.demon.co.uk/phil/net-tools/${P}.tar.bz2
 	mirror://gentoo/${P}-gentoo-extra-1.tar.bz2"
-HOMEPAGE="http://sites.inka.de/lina/linux/NetTools/"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64 ~ppc64 ~s390"
+SLOT="0"
+KEYWORDS="x86 ppc sparc alpha hppa mips amd64 ia64 ppc64 s390"
 IUSE="nls build static"
 
 DEPEND="nls? ( sys-devel/gettext )
 	>=sys-apps/sed-4"
 
 src_unpack() {
-
-	if [ "`use static`" ] ; then
-		CFLAGS="${CFLAGS} -static"
-		LDFLAGS="${LDFLAGS} -static"
-	fi
+	use static && append-flags -static && append-ldflags -static
 
 	PATCHDIR=${WORKDIR}/${P}-gentoo
 
@@ -31,6 +27,8 @@ src_unpack() {
 
 	# Compile fix for 2.6 kernels
 	epatch ${FILESDIR}/net-tools-1.60-2.6-compilefix.patch
+
+	epatch ${FILESDIR}/${PV}-gcc34.patch #48167
 
 	epatch ${FILESDIR}/net-tools-1.60-cleanup-list-handling.patch
 
@@ -53,16 +51,16 @@ src_unpack() {
 
 	sed -i \
 		-e "s:-O2 -Wall -g:${CFLAGS}:" \
-		-e "/^LOPTS =/ s/\$/${CFLAGS}/" Makefile ||
-			die "sed Makefile failed"
+		-e "/^LOPTS =/ s/\$/${CFLAGS}/" Makefile \
+		|| die "sed Makefile failed"
 
-	sed -i -e "s:/usr/man:/usr/share/man:" man/Makefile || \
-		die "sed man/Makefile failed"
+	sed -i -e "s:/usr/man:/usr/share/man:" man/Makefile \
+		|| die "sed man/Makefile failed"
 
 	cp -f ${PATCHDIR}/ether-wake.c ${S}
 	cp -f ${PATCHDIR}/ether-wake.8 ${S}/man/en_US
 
-	if [ -z "`use nls`" ] ; then
+	if ! use nls ; then
 		sed -i -e 's:\(#define I18N\) 1:\1 0:' config.h || \
 			die "sed config.h failed"
 
@@ -77,21 +75,21 @@ src_compile() {
 	# Changing "emake" to "make" closes half of bug #820;
 	# configure is run from *inside* the Makefile, sometimes
 	# breaking parallel makes (if ./configure doesn't finish first)
-	make || die
+	emake -j1 || die
 
-	if [ "`use nls`" ] ; then
+	if use nls ; then
 		cd po
 		make || die
+		cd ..
 	fi
 
-	cd ${S}
-	gcc ${CFLAGS} -o ether-wake ether-wake.c || die
+	$(gcc-getCC) ${CFLAGS} -o ether-wake ether-wake.c || die "ether-wake failed to build"
 }
 
 src_install() {
 	make BASEDIR=${D} install || die
 
-	dosbin ether-wake
+	dosbin ether-wake || die
 	mv ${D}/bin/* ${D}/sbin
 	for i in hostname domainname netstat dnsdomainname ypdomainname nisdomainname
 	do
@@ -100,7 +98,7 @@ src_install() {
 	dodir /usr/bin
 	dosym /bin/hostname /usr/bin/hostname
 
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		dodoc COPYING README README.ipv6 TODO
 	else

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/net-tools
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.28 2004/03/29 15:37:22 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.29 2004/04/19 05:47:26 vapier Exp $
+
+  19 Apr 2004; Mike Frysinger <vapier@gentoo.org> :
+  Add gcc-3.4 patch #48167 by George L. Emigh.
 
   29 Mar 2004; Sven Blumenstein <bazik@gentoo.org>
   files/net-tools-1.60-cleanup-list-handling.patch:
