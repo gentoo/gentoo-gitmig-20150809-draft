@@ -1,13 +1,17 @@
 # ChangeLog for net-www/apache
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.28 2002/10/12 21:16:25 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.29 2002/11/02 08:18:52 woodchip Exp $
+
+*apache-2.0.43 (02 Nov 2002)
+
+  02 Nov 2002; Donny Davies <woodchip@gentoo.org> : Chase latest; #9967.
 
 *apache-1.3.27-r1 (12 Oct 2002)
 
   12 Oct 2002; Donny Davies <woodchip@gentoo.org> :
   Added redhat db-4 patch, tweaked sys-libs/db dependency to make things
   more sane.  Swept up patches into a single diff.  Added (Gentoo/Linux)
-  to the server_version string.  Clean out old junk.  Help out the #8759 people ;-)
+  to the server_version string.  Clean out old junk.  Help out with #8759.
 
 *apache-1.3.27 (06 Oct 2002)
 
