@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mcdp
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mcdp/ChangeLog,v 1.8 2004/09/14 16:40:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mcdp/ChangeLog,v 1.9 2004/10/30 10:54:22 eradicator Exp $
+
+  30 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> mcdp-0.3j.ebuild:
+  toolchain love for bug #69011.
 
   14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> mcdp-0.3j.ebuild:
   Stable amd64, sparc.

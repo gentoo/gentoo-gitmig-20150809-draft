@@ -1,8 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mcdp/mcdp-0.3j.ebuild,v 1.9 2004/09/14 16:40:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mcdp/mcdp-0.3j.ebuild,v 1.10 2004/10/30 10:54:22 eradicator Exp $
 
 IUSE="diet"
+
+inherit toolchain-funcs
 
 DESCRIPTION="A very small console cd player"
 HOMEPAGE="http://www.mcmilk.de/projects/mcdp/"
@@ -19,7 +21,7 @@ src_compile() {
 	if use diet; then
 		emake || die
 	else
-		emake CC="gcc" || die
+		emake CC="$(tc-getCC)" || die
 	fi
 }
 
