@@ -1,6 +1,14 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.32 2003/03/12 22:20:39 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.33 2003/03/17 00:34:15 lu_zero Exp $
+
+*transcode-0.6.4.20030311 (24 Feb 2003)
+
+  16 Mar 2003; Luca Barbato <azarah@gentoo.org> transcode-0.6.4.20030311.ebuild :
+  That works on ppc, thanks to Strubie from the ppc forum
+
+  05 Mar 2003; Martin Schlemmer <azarah@gentoo.org> transcode-0.6.3.ebuild :
+  Get to work with latest netpbm (10.*0).
 
 *transcode-0.6.3 (24 Feb 2003)
 
