@@ -782,3 +782,7 @@ net-mail/courier
 # Why did this get installed by profiles? its broken. 
 # should be updated to 4.2 
 sys-apps/texinfo
+
+# mkennedy@gentoo.org 19 May 2002
+# testing
+=app-editors/xemacs-21.4.8
