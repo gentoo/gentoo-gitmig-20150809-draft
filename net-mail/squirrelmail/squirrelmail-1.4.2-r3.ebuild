@@ -1,29 +1,36 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.4.2-r2.ebuild,v 1.2 2004/02/13 09:54:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.4.2-r3.ebuild,v 1.1 2004/02/13 09:54:38 eradicator Exp $
 
 inherit webapp-apache
 
 DESCRIPTION="Webmail for nuts!"
 
 # Plugin Versions
+COMPATIBILITY_VER=1.2
 USERDATA_VER=0.9-1.4.0
 ADMINADD_VER=0.1-1.4.0
 VSCAN_VER=0.4-1.4.0
 GPG_VER=2.0.1-1.4.2
 LDAP_VER=0.4
+SECURELOGIN_VER=1.2-1.2.8
+SHOWSSL_VER=2.1-1.2.8
 
+PLUGINS_LOC="http://www.squirrelmail.org/plugins"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
 	mirror://sourceforge/retruserdata/retrieveuserdata.${USERDATA_VER}.tar.gz
-	http://www.squirrelmail.org/plugins/admin_add.${ADMINADD_VER}.tar.gz
-	http://www.squirrelmail.org/plugins/virus_scan.${VSCAN_VER}.tar.gz
-	http://www.squirrelmail.org/plugins/gpg.${GPG_VER}.tar.gz
-	http://www.squirrelmail.org/plugins/ldapuserdata-${LDAP_VER}.tar.gz"
+	${PLUGINS_LOC}/compatibility-${COMPATIBILITY_VER}.tar.gz
+	${PLUGINS_LOC}/secure_login-${SECURELOGIN_VER}.tar.gz
+	${PLUGINS_LOC}/show_ssl_link-${SHOWSSL_VER}.tar.gz
+	${PLUGINS_LOC}/admin_add.${ADMINADD_VER}.tar.gz
+	${PLUGINS_LOC}/virus_scan.${VSCAN_VER}.tar.gz
+	${PLUGINS_LOC}/gpg.${GPG_VER}.tar.gz
+	${PLUGINS_LOC}/ldapuserdata-${LDAP_VER}.tar.gz"
 
 RESTRICT="nomirror"
 HOMEPAGE="http://www.squirrelmail.org/"
 
-IUSE="crypt virus-scan ldap"
+IUSE="crypt virus-scan ldap ssl"
 
 LICENSE="GPL-2"
 SLOT="1"
@@ -55,6 +62,8 @@ src_unpack() {
 	# Now do the plugins
 	cd ${S}/plugins
 
+	unpack compatibility-${COMPATIBILITY_VER}.tar.gz
+
 	unpack admin_add.${ADMINADD_VER}.tar.gz
 
 	unpack retrieveuserdata.${USERDATA_VER}.tar.gz &&
@@ -71,6 +80,10 @@ src_unpack() {
 	use ldap &&
 		unpack ldapuserdata-${LDAP_VER}.tar.gz &&
 		epatch ${FILESDIR}/ldapuserdata-${LDAP_VER}-gentoo.patch
+
+	use ssl &&
+		unpack secure_login-${SECURELOGIN_VER}.tar.gz &&
+		unpack show_ssl_link-${SHOWSSL_VER}.tar.gz
 }
 
 src_compile() {
@@ -100,14 +113,17 @@ pkg_postinst() {
 
 	einfo "Now copy these following configuration files to their destinations and"
 	einfo "edit them to configure your settings.  This is not done automatically so"
-	einfo "that your old settings are not disturbed."
+	einfo "that your old settings are not disturbed.  For readibility, all files"
+	einfo "are relative to ${destdir}."
 
 	einfo
-	einfo "${destdir}/config/config_default.php -> ${destdir}/config/config.php"
-	einfo "${destdir}/plugins/retrieveuserdata/config_default.php -> ${destdir}/plugins/retrieveuserdata/config.php"
-	use virus-scan && einfo "${destdir}/plugins/virus_scan/config_default.php -> ${destdir}/plugins/virus_scan/config.php"
-	use crypt && einfo  "${destdir}/plugins/gpg/gpg_local_prefs_default.txt -> ${destdir}/plugins/gpg/gpg_local_prefs.txt"
-	use ldap && einfo  "${destdir}/plugins/ldapuserdata/config_sample.php -> ${destdir}/plugins/ldapuserdata/config.php"
+	einfo "config/config_default.php -> config/config.php"
+	einfo "plugins/retrieveuserdata/config_default.php -> plugins/retrieveuserdata/config.php"
+	use virus-scan && einfo "plugins/virus_scan/config_default.php -> plugins/virus_scan/config.php"
+	use crypt && einfo  "plugins/gpg/gpg_local_prefs_default.txt -> plugins/gpg/gpg_local_prefs.txt"
+	use ldap && einfo  "plugins/ldapuserdata/config_sample.php -> plugins/ldapuserdata/config.php"
+	use ssl && einfo  "plugins/show_ssl_link/config.php.sample -> plugins/show_ssl_link/config.php"
+	use ssl && einfo  "plugins/secure_login/config.php.sample -> plugins/secure_login/config.php"
 
 	einfo
 	einfo "You should also create the file '${destdir}/config/admins'"

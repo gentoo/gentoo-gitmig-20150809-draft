@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/squirrelmail
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/ChangeLog,v 1.32 2004/02/04 04:54:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/ChangeLog,v 1.33 2004/02/13 09:54:38 eradicator Exp $
+
+*squirrelmail-1.4.2-r3 (13 Feb 2004)
+
+  13 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  squirrelmail-1.4.2-r2.ebuild, squirrelmail-1.4.2-r3.ebuild:
+  Fixed typo and added more plugins: compatibility, secure_login, and
+  show_ssl_link.
 
 *squirrelmail-1.4.2-r2 (03 Feb 2004)
 
