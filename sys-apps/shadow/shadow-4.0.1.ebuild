@@ -1,37 +1,26 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-20001016-r6.ebuild,v 1.3 2002/01/15 21:55:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.1.ebuild,v 1.1 2002/01/15 21:55:23 drobbins Exp $
 
-DESCRIPTION="Utilities to deal with user accounts"
-SRC_URI="ftp://ftp.pld.org.pl/software/shadow/old/${P}.tar.gz"
 S=${WORKDIR}/${P}
-
+DESCRIPTION="Utilities to deal with user accounts"
+SRC_URI="ftp://ftp.pld.org.pl/software/shadow/${P}.tar.gz"
 DEPEND=">=sys-libs/pam-0.73 sys-devel/gettext"
-
 RDEPEND=">=sys-libs/pam-0.73"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}/src
-	cp ${FILESDIR}/useradd.c ${S}/src
-}
-
 src_compile() {
-
 	./configure \
 	--disable-desrpc \
 	--with-libcrypt \
 	--with-libcrack \
 	--with-libpam \
 	--host=${CHOST} || die "bad configure"
-
 	# Parallel make fails sometimes
 	make LDFLAGS="" || die "compile problem"
 }
 
 src_install() {
-
 	dodir /etc/default /etc/skel
 
 	make \
@@ -52,19 +41,13 @@ src_install() {
 	insopts -m0600 ; doins ${S}/etc/login.access
 	insopts -m0644 ; doins ${S}/etc/limits
 	insopts -m0644 ; doins ${FILESDIR}/login.defs
-
 	insinto /etc/pam.d ; insopts -m0644
 	doins ${FILESDIR}/shadow
 	newins ${FILESDIR}/shadow groupadd
 	newins ${FILESDIR}/shadow useradd
-
-	if [ -z "`use bootcd`" ]
-	then
-		cd ${S}/doc
-		dodoc ANNOUNCE INSTALL LICENSE README WISHLIST
-		docinto txt
-		dodoc HOWTO LSM README.* *.txt
-	else
-		rm -rf ${D}/usr/share ${D}/usr/lib/lib*.{a,la}
-	fi
+	newins ${FILESDIR}/shadow chage
+	cd ${S}/doc
+	dodoc ANNOUNCE INSTALL LICENSE README WISHLIST
+	docinto txt
+	dodoc HOWTO LSM README.* *.txt
 }
