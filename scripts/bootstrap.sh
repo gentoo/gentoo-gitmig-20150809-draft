@@ -1,7 +1,7 @@
 #!/bin/sh
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.36 2003/01/06 07:16:50 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.37 2003/01/15 01:47:33 drobbins Exp $
 
 # IMPORTANT NOTE:
 # This script now accepts an optional argument.
@@ -64,7 +64,8 @@ cleanup() {
 
 # Trap ctrl-c and stuff.  This should fix the users make.conf
 # not being restored.
-trap "cleanup" INT QUIT TSTP
+trap "cleanup" INT QUIT
+#TSTP messes ^Z of bootstrap up, so we don't trap it anymore.
 
 # USE may be set from the environment so we back it up for later.
 export ORIGUSE="`${PYTHON} -c 'import portage; print portage.settings["USE"];'`"
