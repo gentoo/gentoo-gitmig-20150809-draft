@@ -1,14 +1,8 @@
-# ChangeLog for app-misc/kstars
+# ChangeLog for app-misc/moldy
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kstars/ChangeLog,v 1.2 2002/05/04 01:22:37 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/moldy/ChangeLog,v 1.1 2002/05/07 01:57:35 george Exp $
 
-*kstars-0.6-r1 (3 May 2002)
-
-  3 May 2002; Donny Davies <woodchip@gentoo.org> :
-  
-  Add LICENSE, SLOT.
-
-*kstars-0.6-r1 (1 Feb 2002)
+*moldy-2.16e (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   

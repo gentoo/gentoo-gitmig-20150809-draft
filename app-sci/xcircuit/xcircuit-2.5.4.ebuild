@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: First Last <your email>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xcircuit/xcircuit-2.5.4.ebuild,v 1.3 2002/04/06 02:41:10 tod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xcircuit/xcircuit-2.5.4.ebuild,v 1.1 2002/05/07 01:57:35 george Exp $
 
 S=${WORKDIR}/${P}
 

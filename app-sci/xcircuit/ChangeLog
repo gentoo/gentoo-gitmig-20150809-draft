@@ -1,8 +1,12 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xcircuit/ChangeLog,v 1.2 2002/04/06 02:39:04 tod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xcircuit/ChangeLog,v 1.1 2002/05/07 01:57:35 george Exp $
 
 *xcircuit-2.5.4 (5 Apr 2003)
+
+  06 May 2002; George Shapovalov <george@gentoo.org> all :
+
+  moved from app-misc to app-sci
 
   5 Apr 2002; Tod Neidt <tod@gentoo.org> xcircuit-2.5.4.ebuild, Changelog :
 

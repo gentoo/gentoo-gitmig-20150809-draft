@@ -1,8 +1,12 @@
-# ChangeLog for app-misc/scigraphica
+# ChangeLog for app-misc/units
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/scigraphica/ChangeLog,v 1.1 2002/02/01 21:53:08 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/units/ChangeLog,v 1.1 2002/05/07 01:57:35 george Exp $
 
-*scigraphica-0.8.0 (1 Feb 2002)
+*units-1.74 (1 Feb 2002)
+
+  06 May 2002; G. Shapovalov <george@gentoo.org> Changelog:
+
+  Moved from app-misc to app-sci
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
