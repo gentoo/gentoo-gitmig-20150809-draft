@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20031222.ebuild,v 1.1 2003/12/26 23:32:37 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20031222.ebuild,v 1.2 2004/01/15 23:11:01 gmsoft Exp $
 
 IUSE="nls pic build nptl"
 
@@ -385,7 +385,7 @@ src_unpack() {
 		cd ${WORKDIR}
 		unpack ${P}-hppa-patches-p1.tar.bz2
 		cd ${S}
-		EPATCH_EXCLUDE="010* 020* 030* 040* 050* 055*"
+		EPATCH_EXCLUDE="010* 020* 030* 040* 050* 055* 130* 190* 200*"
 		for x in ${EPATCH_EXCLUDE}
 		do
 			rm -f ${WORKDIR}/${P}-hppa-patches/${x}
