@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6c44783868af7229fd9020222cd05733 ChangeLog 3551
+MD5 9be0ce481898711900bca2242aa386a9 ChangeLog 3646
 MD5 72dfdb08566ecf893b1dc1bcadc83b1c gnump3d-2.7.ebuild 2055
-MD5 9ab5d75117d87885f20fb3e518256edb gnump3d-2.8.ebuild 2079
+MD5 b7116a2fede9e382e12ad7cae4249019 gnump3d-2.8.ebuild 2083
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 8abeea82e07f1fc9c96048b7ace64d68 files/digest-gnump3d-2.7 64
 MD5 cccb4c3996e61048ecb0e45049f5c383 files/digest-gnump3d-2.8 64
 MD5 53ddcd88da020240ac2ec48f0100c4a9 files/gnump3d.conf.d 159
 MD5 27e1721a1708176c950425eeb3d4cfdd files/gnump3d.init.d 740
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD4DBQFBZLe5ArHZZzCEUG0RAlkAAJ9HF0SdqYi7KOiMh5WSrwnzCRYBfgCY1FVC
-h0DUhXjzS6SBpBy+zFi/+w==
-=anq0
------END PGP SIGNATURE-----
