@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/bittorrent 
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.22 2004/03/08 21:27:48 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittorrent/ChangeLog,v 1.23 2004/03/10 15:59:49 mholzer Exp $
+
+  10 Mar 2004; Martin Holzer <mholzer@gentoo.org> bittorrent-3.4.ebuild:
+  upstream problems. masking
 
 *bittorrent-3.4 (08 Mar 2004)
 
