@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2217ac7b42787887b9beda456addcb67 ChangeLog 808
+MD5 2ae05fd710b05605aebc63c30e4cc60d onis-0.6.1.ebuild 1028
+MD5 e8c419240ffc56d45432f03633c16b9f ChangeLog 918
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 bd39bb998209f2dceb1a4335eeee8b20 onis-0.6.1.ebuild 1016
 MD5 9b0ece7b82c71aae249b8e7bc1e4a40c files/0.6.0-nochdir.patch 258
 MD5 e83837edd6b3989aa23c4ab7a7d5b2c0 files/digest-onis-0.6.1 62
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBPkQlI1lqEGTUzyQRAplAAKDTYI/+cpd2xvSS2ANlrRenenuDkwCguA2+
-3Lt2IiH8BENg9Fhh2KByxD8=
-=4k4k
+iD8DBQFBtxIRI1lqEGTUzyQRAq2nAJ0TQgg0QZFNiqStU3SfEJIbTrrarQCglbaf
+pTdw3F5uvS5y7/tj1wJHzwI=
+=8zqZ
 -----END PGP SIGNATURE-----

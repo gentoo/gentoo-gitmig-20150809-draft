@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c92550cc76e1f80bcc6f9a4fd441bc76 pisg-0.61.ebuild 1242
-MD5 535e23e995369f18facdf660880feda6 pisg-0.57.ebuild 1234
-MD5 8aff78203a61ef3b46ef2c284a677871 ChangeLog 3330
+MD5 36667ae4f0b396b4fc51c3358c225a96 pisg-0.61.ebuild 1257
+MD5 0d30e107037716a1acb84df2ebdff708 pisg-0.57.ebuild 1249
+MD5 8fea96c0890ef6631ad89a5fdc83bc1d ChangeLog 3459
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 9de11d80cf02a7d17db1351fe63fc0ba files/digest-pisg-0.57 61
 MD5 6e4b3184fb6020dbe09ec1299c27423e files/digest-pisg-0.61 61
@@ -11,7 +11,7 @@ MD5 2116a6e5786030640b4a7f25159dbfc6 files/0.56-network-option-fix.patch 1345
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBsmT8I1lqEGTUzyQRAubbAKC+gpQsiYZpfQSQLt2CJ1wwefw4JgCdH0hR
-khBH5DtzoD3HoiB0V6UELEI=
-=DGeN
+iD8DBQFBtxHLI1lqEGTUzyQRAimgAJ4vV0d/reCd28KwBbSeMnf0aJpkFgCaAl7+
+eMO+HjD1b9d5AKN9P5zNxcQ=
+=Gkhe
 -----END PGP SIGNATURE-----
