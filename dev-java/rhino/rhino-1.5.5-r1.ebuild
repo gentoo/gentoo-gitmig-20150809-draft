@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/rhino-1.5.5-r1.ebuild,v 1.2 2005/01/29 21:23:03 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/rhino-1.5.5-r1.ebuild,v 1.3 2005/01/31 22:44:55 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -23,6 +23,7 @@ src_unpack() {
 	unpack ${MY_P}.zip
 	cd ${S}
 	mkdir build/
+	epatch ${FILESDIR}/${PV}_jdk15.patch
 	epatch ${FILESDIR}/00_dont-fetch-swing-ex.patch
 	cp ${DISTDIR}/rhino-swing-ex-1.0.zip build/swingExSrc.zip || die "unpack error"
 

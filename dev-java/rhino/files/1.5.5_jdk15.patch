@@ -1,0 +1,24 @@
+diff -uprN toolsrc.orig/org/mozilla/javascript/tools/shell/JavaPolicySecurity.java toolsrc/org/mozilla/javascript/tools/shell/JavaPolicySecurity.java
+--- toolsrc.orig/org/mozilla/javascript/tools/shell/JavaPolicySecurity.java	2005-01-31 23:35:59.926932408 +0100
++++ toolsrc/org/mozilla/javascript/tools/shell/JavaPolicySecurity.java	2005-01-31 23:42:08.121958256 +0100
+@@ -124,7 +124,8 @@ public class JavaPolicySecurity extends 
+ 
+     public JavaPolicySecurity() {
+         // To trigger error on jdk-1.1 with lazy load
+-        new CodeSource(null, null);
++        java.security.CodeSigner[] foo = new java.security.CodeSigner[1];
++	new CodeSource(null, foo);
+     }
+ 
+     protected void callProcessFileSecure(final Context cx,
+@@ -167,7 +168,9 @@ public class JavaPolicySecurity extends 
+     }
+ 
+     private ProtectionDomain getUrlDomain(URL url) {
+-        CodeSource cs = new CodeSource(url, null);
++	// dummy needed for jdk1.5
++	java.security.CodeSigner[] foo = new java.security.CodeSigner[1];
++        CodeSource cs = new CodeSource(url, foo);
+         PermissionCollection pc = Policy.getPolicy().getPermissions(cs);
+         return new ProtectionDomain(cs, pc);
+     }
