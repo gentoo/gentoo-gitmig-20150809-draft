@@ -1,20 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9282ff203712f0edfd8883d5f66f6ccc windowlab-1.17.ebuild 826
+MD5 004c97785bd0d189a918fc607ae3f37f ChangeLog 1769
 MD5 e53b30df7d03175a0babc2bbdae609a6 windowlab-1.23.ebuild 830
-MD5 63c5f48fc8b6ac1235aceb5390d634da windowlab-1.20.ebuild 826
-MD5 e3f4a6632c41b0eefc596d4ef0829852 windowlab-1.24.ebuild 834
-MD5 46a079b5592d1fb776c892c4fbcfaf9d ChangeLog 1621
 MD5 631a87a06351ea5153017bd01ef1a90a metadata.xml 744
-MD5 0150370c066fee9acc52a9d5ec3584a7 files/digest-windowlab-1.17 63
-MD5 d83998d1d0400f9e11b4857d6c633356 files/digest-windowlab-1.20 63
+MD5 94ddcecb8cc21af9a6b5c9ab323008c3 windowlab-1.24.ebuild 831
 MD5 a080a47d54f0bd1d58d26e3a290d4b35 files/digest-windowlab-1.23 63
 MD5 aaaec4eef2ed6342a0b232f8944a7eb8 files/digest-windowlab-1.24 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
-
-iD8DBQFBHM2iCHk4+ZoBpvsRAgmfAJ9qrmKsoFibn7un9gB5zEMeG46XDACaAoPf
-HhH2rAO/aNiP9nfWesB5UHQ=
-=+3Nh
------END PGP SIGNATURE-----
