@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/chemtool
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/chemtool/ChangeLog,v 1.13 2004/06/24 21:55:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/chemtool/ChangeLog,v 1.14 2004/08/18 07:44:26 phosphan Exp $
+
+  18 Aug 2004; Patrick Kursawe <phosphan@gentoo.org> chemtool-1.6.3.ebuild:
+  stable for x86
 
   02 Jun 2004; Aron Griffis <agriffis@gentoo.org> chemtool-1.6-r1.ebuild,
   chemtool-1.6.3.ebuild:
