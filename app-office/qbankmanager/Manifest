@@ -1,4 +1,6 @@
-MD5 a22caba8c876dedd953b1993241cc7a0 ChangeLog 825
+MD5 9ddfa8a8b5dfdaeed3270490b76177af ChangeLog 953
 MD5 a72a06a37ca4e5905085ebff07fe9e9e metadata.xml 217
 MD5 e899aa59fb73d860ae05838fdc80d922 qbankmanager-0.9.15.ebuild 726
+MD5 aca1638923267c398ece3acf0973ac40 qbankmanager-0.9.16.ebuild 726
 MD5 d55652d32c45ec851b0f8eb4d2c9a36a files/digest-qbankmanager-0.9.15 71
+MD5 e3cda0cc27c7334fb0436460a016a249 files/digest-qbankmanager-0.9.16 71
