@@ -1,0 +1,11 @@
+--- tools/ots/xp/AbiOts.cpp	2003-08-17 17:09:34.000000000 -0400
++++ tools/ots/xp/AbiOts.cpp	2003-08-17 17:09:10.000000000 -0400
+@@ -123,7 +123,7 @@
+   }
+ 
+   ots_parse_stream(reinterpret_cast<const unsigned char *>(txt.utf8_str()), txt.byteLength(), article);
+-  ots_remove_dict_words(article);
++  // ots_remove_dict_words(article);
+   ots_grade_doc (article);
+   ots_highlight_doc (article, getSummaryPercent());
+ 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.99.4-r1.ebuild,v 1.1 2003/08/15 19:06:49 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.99.4-r2.ebuild,v 1.1 2003/08/18 22:56:00 foser Exp $
 
 inherit eutils debug
 
@@ -45,6 +45,17 @@ DEPEND="${RDEPEND}
 # FIXME : do 'real' use switching, add gucharmap support
 # switches do not work by the looks of it
 
+src_unpack() {
+
+	unpack ${A}
+
+	# patch to make the ots plugin build 
+	# patch by mg <markglibert@hotpop.com> in #26824
+	cd ${S_P}
+	epatch ${FILESDIR}/${P}-ots_buildfix.patch
+
+}	
+
 src_compile() {
 	./autogen.sh
 
@@ -58,6 +69,7 @@ src_compile() {
 		`use_with xml2 libxml2` \
 		`use_enable spell enchant` \
 		--enable-bidi \
+		--without-ImageMagick \
 		--with-sys-wv || die  
 
 	emake all-recursive || die
