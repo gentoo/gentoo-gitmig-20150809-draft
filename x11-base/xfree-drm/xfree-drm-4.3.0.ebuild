@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0.ebuild,v 1.2 2003/03/05 08:07:30 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0.ebuild,v 1.3 2003/03/18 04:20:58 seemant Exp $
 
 # Small note:  we should prob consider using a DRM only tarball, as it will ease
 #              some of the overhead on older systems, and will enable us to
@@ -15,10 +15,6 @@ inherit eutils
 DEBUG="yes"
 RESTRICT="nostrip"
 
-# Are we using a snapshot ?
-USE_SNAPSHOT="yes"
-
-BASE_PV="${PV}"
 S=${WORKDIR}/linux/drm/kernel
 DESCRIPTION="Xfree86 Kernel DRM modules"
 HOMEPAGE="http://www.xfree.org"
@@ -61,10 +57,6 @@ else
 	VIDCARDS=""
 fi
 
-pkg_setup() {
-	check_KV
-}
-
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -74,16 +66,15 @@ src_unpack() {
 
 src_compile() {
 
-	check_KV
 	ln -sf Makefile.linux Makefile
 	einfo "Building DRM..."
 	if [ -z "${VIDCARDS}" ]
 	then
 		make  \
-			TREE="/usr/src/linux/include" KV="${KV}"
+			TREE="/usr/src/linux/include" KV="${KVERS}"
 	else
 		make ${VIDCARDS} \
-			TREE="/usr/src/linux/include" KV="${KV}"
+			TREE="/usr/src/linux/include" KV="${KVERS}"
 	fi
 }
 
@@ -94,13 +85,13 @@ src_install() {
 	then
 		make \
 			TREE="/usr/src/linux/include" \
-			KV="${KV}" \
+			KV="${KVERS}" \
 			DESTDIR="${D}" \
 			install || die
 	else
 		make \
 			TREE="/usr/src/linux/include" \
-			KV="${KV}" \
+			KV="${KVERS}" \
 			DESTDIR="${D}" \
 			MODS="${VIDCARDS}" \
 			install || die
