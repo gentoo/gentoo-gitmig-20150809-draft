@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pilot/gnome-pilot-0.1.71.ebuild,v 1.3 2003/03/11 21:11:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pilot/gnome-pilot-0.1.71.ebuild,v 1.4 2003/05/04 11:26:40 liquidx Exp $
 
 IUSE="nls"
 
@@ -11,12 +11,12 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/sources/gnome-pilot/0.1/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/gnome-pilot/"
 
 DEPEND="dev-lang/perl
-	>=gnome-base/control-center-1.4.0.1-r1
+	=gnome-base/control-center-1.4*
 	>=gnome-base/gnome-libs-1.4.1.7
 	=gnome-base/gnome-panel-1.4*
 	>=dev-libs/pilot-link-0.11.0
 	=dev-util/gob-1*
-	>=gnome-base/libglade-0.17"
+	=gnome-base/libglade-0.17*"
 
 RDEPEND="nls? ( sys-devel/gettext )"
 

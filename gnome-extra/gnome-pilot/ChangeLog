@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-pilot
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pilot/ChangeLog,v 1.18 2003/04/21 14:50:28 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pilot/ChangeLog,v 1.19 2003/05/04 11:26:40 liquidx Exp $
+
+  04 May 2003; Alastair Tse <liquidx@gentoo.org> gnome-pilot-0.1.65-r3.ebuild,
+  gnome-pilot-0.1.65-r5.ebuild, gnome-pilot-0.1.71.ebuild:
+  fix gnome1 deps
 
 *gnome-pilot-2.0.5 (21 Apr 2003)
 
