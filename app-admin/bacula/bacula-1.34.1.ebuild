@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.34.1.ebuild,v 1.8 2004/10/05 02:58:10 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.34.1.ebuild,v 1.9 2004/10/16 20:08:13 vapier Exp $
 
 DESCRIPTION="featureful client/server network backup suite"
 HOMEPAGE="http://www.bacula.org/"
@@ -13,8 +13,7 @@ IUSE="X gnome mysql readline sqlite ssl static tcpd"
 
 #theres a local sqlite use flag. use it -OR- mysql, not both.
 #mysql is the reccomended choice ...
-DEPEND="sys-libs/libtermcap-compat
-	>=sys-libs/zlib-1.1.4
+DEPEND=">=sys-libs/zlib-1.1.4
 	readline? ( >=sys-libs/readline-4.1 )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
