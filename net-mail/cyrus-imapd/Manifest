@@ -4,7 +4,7 @@ Hash: SHA1
 MD5 0736739cf4c6b9fc371e8fa78ecd237b cyrus-imapd-2.2.10.ebuild 8798
 MD5 2808ffa8657fb38606b151f497b7813e cyrus-imapd-2.2.8-r1.ebuild 8706
 MD5 052fda8a30a6419a70ed968ff2089642 cyrus-imapd-2.2.8.ebuild 5336
-MD5 e673a393a0d74aa493e524bebbccb454 ChangeLog 11970
+MD5 b2f05c7fef872b6d0939d4a95219ce65 ChangeLog 12040
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 375e343e1080fa924b085d5495e13588 files/cyrus.rc6 556
 MD5 88f50354abbcae1950a2d11c74db5fe5 files/cyrus-imapd-2.2.8-libwrap.patch 390
@@ -19,7 +19,7 @@ MD5 d91b5eaa87ced6cb7efc8c716fc7476a files/cyrus.conf 1354
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBpMFY5FrxP71izLARAlIeAKCeCmj3wrx3i9cUQpQsBRiQ6HzJJACfX3Fy
-aOuns/FD7L1C09YAwyroLxk=
-=K2VL
+iD8DBQFBpMIy5FrxP71izLARAkfcAJkBT3oAaB1Yfg49E+K67fsLt1G82gCfRxSP
+9TRoD6EJAtBS7YREYAeQbzo=
+=UKJC
 -----END PGP SIGNATURE-----
