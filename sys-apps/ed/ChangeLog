@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/ed
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.11 2004/06/24 22:04:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ChangeLog,v 1.12 2004/10/05 12:54:33 vapier Exp $
+
+*ed-0.2-r4 (05 Oct 2004)
+
+  05 Oct 2004; Mike Frysinger <vapier@gentoo.org> +files/0.2-info-dir.patch,
+  +files/0.2-mkstemp.patch, +ed-0.2-r4.ebuild:
+  Security fix #66400.
 
   02 Mar 2004; Brian Jackson <iggy@gentoo.org> ed-0.2-r3.ebuild:
   adding initial s390 support
