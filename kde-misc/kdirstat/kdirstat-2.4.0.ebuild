@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdirstat/kdirstat-2.4.0.ebuild,v 1.1 2004/10/30 17:23:11 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kdirstat/kdirstat-2.4.0.ebuild,v 1.2 2004/12/29 00:53:37 chriswhite Exp $
 
 inherit kde eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://kdirstat.sourceforge.net/"
 SRC_URI="mirror://sourceforge/kdirstat/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="x86 sparc ~amd64"
+KEYWORDS="x86 sparc ~amd64 ~ppc"
 
 IUSE=""
 SLOT="0"
