@@ -1,4 +1,14 @@
-MD5 7951976e151729341c407aeea9ddd572 ChangeLog 832
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b04b65c33e6ac174b82240ef1b842e76 ChangeLog 780
 MD5 805db42ed613adaf7151f91f9af0b0b3 iv-0.1.10.ebuild 743
 MD5 731bbb3f7376e225e06b79b3df8cc9c9 files/digest-iv-0.1.10 62
 MD5 c39cdd7fa9ad99b575e835c73126c25c files/iv-0.1.10-gentoo.patch 283
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBW1ZvI1lqEGTUzyQRAvnYAKC+xjF6RVHT6VIZBpk/LgNtol8cQgCdHYvz
+BmlumOoYAdkc38NZQSCRglE=
+=mdGE
+-----END PGP SIGNATURE-----
