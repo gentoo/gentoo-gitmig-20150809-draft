@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/kasablanca/kasablanca-0.3.1.ebuild,v 1.1 2004/04/21 02:58:31 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/kasablanca/kasablanca-0.3.1.ebuild,v 1.2 2004/04/21 08:47:44 dragonheart Exp $
 
 inherit kde
 need-kde 3.1
@@ -14,6 +14,24 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
+# commondpends based on (ldd /usr/bin/kasablanca ; ldd /usr/bin/kbftp ) |\
+# cut -f3 -d ' ' | xargs -n1 qpkg -f -v  | sort | uniq
+COMMONDEPENDS="dev-libs/expat
+	dev-libs/openssl
+	kde-base/kdelibs
+	media-libs/fontconfig
+	media-libs/freetype
+	media-libs/jpeg
+	media-libs/libart_lgpl
+	media-libs/libmng
+	media-libs/libpng
+	media-libs/nas
+	sys-devel/gcc
+	sys-libs/glibc
+	sys-libs/zlib
+	x11-base/xfree
+	x11-libs/qt"
+
 DEPEND="${DEPEND}
 	sys-apps/gawk
 	sys-apps/sed
@@ -21,14 +39,11 @@ DEPEND="${DEPEND}
 	>=sys-devel/automake-1.6
 	sys-devel/autoconf
 	sys-devel/gettext
-	x11-libs/qt
-	dev-libs/openssl"
+	${COMMONDEPENDS}"
 
 
 RDEPEND="${RDEPEND}
-	sys-devel/gettext
-	x11-libs/qt
-	dev-libs/openssl"
+	${COMMONDEPENDS}"
 
 
 
