@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/synaptics-0.13.2.ebuild,v 1.1 2004/05/10 23:21:51 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/synaptics-0.13.2.ebuild,v 1.2 2004/05/31 09:29:20 battousai Exp $
 
 # This ebuild overwrites synaptics files installed by <= xfree-4.3.0-r3
 # and xfree-4.3.99.14 >= X >= xfree-4.3.99.8.
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
-RDEPEND="|| ( >=x11-base/xfree-4.3.0-r6 x11-base/xorg-x11 )"
+RDEPEND=">=x11-base/xfree-4.3.0-r4"
 
 src_unpack() {
 	unpack ${A}
@@ -21,6 +21,7 @@ src_unpack() {
 	sed -i -e "s:BINDIR = \\\$(DESTDIR)/usr/local/bin:BINDIR = ${D}/usr/X11R6/bin:g" ${S}/Makefile
 	sed -i -e "s:CC = gcc:CC = ${CC}:g" ${S}/Makefile
 	sed -i -e "s:CDEBUGFLAGS = -O2:CDEBUGFLAGS = ${CFLAGS}:g" ${S}/Makefile
+	sed -i -e "s:MANDIR = .*:MANDIR = \\\$(DESTDIR)/usr/man/man1:" ${S}/Makefile
 }
 
 src_compile() {

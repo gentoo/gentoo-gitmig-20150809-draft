@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/synaptics
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/ChangeLog,v 1.15 2004/05/10 23:21:51 battousai Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/ChangeLog,v 1.16 2004/05/31 09:29:20 battousai Exp $
+
+  31 May 2004; Bryan Stine <battousai@gentoo.org>; synaptics-0.13.2.ebuild:
+  Added a little sed magic to change the MANDIR to /usr/man/man1 instead of
+  /usr/local... Thanks to Simon Cooper <thecoop@runbox.com> for reporting the
+  bug.
 
 *synaptics-0.13.2 (10 May 2004)
 
