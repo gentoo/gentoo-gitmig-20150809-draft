@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tar/tar-1.13.25-r3.ebuild,v 1.19 2003/10/29 03:14:07 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tar/tar-1.13.25-r3.ebuild,v 1.20 2003/11/02 07:33:20 seemant Exp $
 
 inherit eutils gnuconfig
 
@@ -8,8 +8,9 @@ IUSE="nls static build"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Use this to try make tarballs :)"
-SRC_URI="mirror://gnu/tar/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/tar/"
+SRC_URI="mirror://gentoo/${P}.tar.gz
+	mirror://gnu/tar/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
