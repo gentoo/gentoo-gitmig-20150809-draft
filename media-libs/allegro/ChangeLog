@@ -1,11 +1,15 @@
 # ChangeLog for media-libs/allegro
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.7 2002/12/13 10:59:35 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.8 2003/01/12 03:46:04 seemant Exp $
+
+*allegro-4.0.2 (06 Jul 2002)
+
+  11 Jan 2003; Seemant Kulleen <seemant@gentoo.org> allegro-4.0.3.ebuild :
+
+  filtered out the -fPIC flag.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*allegro-4.0.2 (06 Jul 2002)
-
   06 Jul 2002; Seemant Kulleen <seemant@gentoo.org> allegro-4.0.2.ebuild
   files/digest-allegro-4.0.2 :
 

@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.0.2.ebuild,v 1.5 2002/12/09 04:26:10 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.0.2.ebuild,v 1.6 2003/01/12 03:46:04 seemant Exp $
+
+inherit flag-o-matic
 
 IUSE="mmx esd static tetex X fbcon oss svga alsa"
 
@@ -91,7 +93,8 @@ src_compile() {
 	econf ${confopts} || die
 	
 	# emake doesn't work
-	make CFLAGS="${CFLAGS}" || die
+	filter-flags -fPIC
+	make CFLAGS="${CFLAGS/-fPIC/}" || die
 	
 	if use tetex;
 	then
