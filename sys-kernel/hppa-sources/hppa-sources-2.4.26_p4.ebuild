@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/hppa-sources-2.4.25_p1.ebuild,v 1.2 2004/04/27 21:59:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources/hppa-sources-2.4.26_p4.ebuild,v 1.1 2004/06/07 00:16:35 gmsoft Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -13,12 +13,9 @@ KV="${OKV}${EXTRAVERSION}"
 
 S=${WORKDIR}/linux-${KV}
 
-PATCH_SET="`seq 0 ${PATCH_LEVEL}`"
-PATCH_COUNT="$(( `echo ${PATCH_SET} | wc -w` - 1 ))"
-
 
 DESCRIPTION="Full sources for the Linux kernel with patch for hppa"
-SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2 http://ftp.parisc-linux.org/cvs/linux-2.4/patch-${OKV}-pa`echo ${PATCH_SET} | awk '{ print $1 }'`.gz
+SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2 http://ftp.parisc-linux.org/cvs/linux-2.4/patch-${OKV}-pa${PATCH_LEVEL}.gz
 http://dev.gentoo.org/~gmsoft/patches/parisc-2.4.23-pa4-missing-ioctl-translations.diff"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/ http://parisc-linux.org"
 KEYWORDS="hppa -*"
@@ -30,9 +27,8 @@ src_unpack() {
 	mv ${WORKDIR}/linux-${OKV} ${WORKDIR}/linux-${KV}
 	cd ${S}
 
-	einfo Applying ${OKV}-pa`echo ${PATCH_SET} | awk '{ print $1 }'`
-	zcat ${DISTDIR}/patch-${OKV}-pa`echo ${PATCH_SET} | awk '{ print $1 }'`.gz | patch -sp 1
-
+	einfo Applying ${OKV}-pa${PATCH_LEVEL}.gz
+	zcat ${DISTDIR}/patch-${OKV}-pa${PATCH_LEVEL}.gz | patch -sp 1
 
 	DEFCONFIG="${S}/arch/parisc/defconfig"
 
@@ -55,6 +51,7 @@ src_unpack() {
 	done
 
 	epatch ${DISTDIR}/parisc-2.4.23-pa4-missing-ioctl-translations.diff || die "Failed to patch missing ioctls translations!"
+	epatch ${FILESDIR}/CAN-2004-0394.patch || die "Failed to patch CAN-2004-0394 security fix!"
 
 	kernel_universal_unpack
 }
