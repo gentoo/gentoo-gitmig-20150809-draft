@@ -1,6 +1,12 @@
 # ChangeLog for net-print/gnome-cups-manager
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/ChangeLog,v 1.13 2004/03/16 02:37:37 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/ChangeLog,v 1.14 2004/03/20 18:21:35 foser Exp $
+
+*gnome-cups-manager-0.17-r03202004.ebuild (20 Mar 2004)
+
+  20 Mar 2004; foser <foser@gentoo.org> gnome-cups-manager-0.17-r03202004.ebuild :
+  CVS snapshot of HEAD, needed to compile to nautilus view in gnome 2.6
+  Updated deps
 
   15 Mar 2004; Stephen P. Becker <geoman@gentoo.org>
   gnome-cups-manager-0.17.ebuild:
