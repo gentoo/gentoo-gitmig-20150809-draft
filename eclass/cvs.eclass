@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.44 2003/07/04 13:21:02 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.45 2003/07/20 05:23:17 vapier Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -312,6 +312,7 @@ ECVS_LOCALNAME=$ECVS_LOCALNAME"
 	    unset ECVS_LOCALNAME_SETDEFAULT
 	fi
 
+	einfo "Source now in ${WORKDIR}"
 }
 
 EXPORT_FUNCTIONS src_unpack
