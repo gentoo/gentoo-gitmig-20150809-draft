@@ -1,0 +1,48 @@
+# ChangeLog for app-sci/yacas
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/yacas/ChangeLog,v 1.1 2004/12/28 15:19:17 ribosome Exp $
+
+*yacas-1.0.56 (28 Dec 2004)
+
+  28 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +yacas-1.0.56.ebuild:
+  Moved from app-sci/yacas to sci-mathematics/yacas.
+
+  18 Dec 2004; Simon Stelling <blubb@gentoo.org> yacas-1.0.56.ebuild:
+  added ~amd64
+
+  29 Nov 2004; Patrick Kursawe <phosphan@gentoo.org> -files/obsolete_cpp.patch:
+  Updated the patch for obsolete C++ stuff to work for gcc 3.4.3.
+  Patch moved to mirror system because of its size.
+
+  06 Sep 2004; Patrick Kursawe <phosphan@gentoo.org> -yacas-1.0.54.ebuild,
+  -yacas-1.0.55.ebuild, yacas-1.0.56.ebuild:
+  Declaring .56 stable, removing older versions.
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> yacas-1.0.54.ebuild,
+  yacas-1.0.55.ebuild, yacas-1.0.56.ebuild:
+  virtual/glibc -> virtual/libc
+
+  20 Apr 2004; David Holm <dholm@gentoo.org> yacas-1.0.56.ebuild:
+  Added to ~ppc.
+
+*yacas-1.0.56 (19 Apr 2004)
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> yacas-1.0.56.ebuild,
+  files/obsolete_cpp.patch:
+  Version bump, patch for some c++ problems
+
+*yacas-1.0.55 (09 Jul 2003)
+
+  09 Jul 2003; George Shapovalov <george@gentoo.org> yacas-1.0.55.ebuild :
+  version update, made 1.0.54 stable
+
+  10 Jun 2003; <msterret@gentoo.org> yacas-1.0.54.ebuild:
+  DEPEND on sed >= 4
+
+*yacas-1.0.54 (17 Apr 2003)
+
+  17 Apr 2003; George Shapovalov <george@gentoo.org> yacas-1.0.54.ebuild, files/digest-yacas-1.0.54 :
+  initial release (#3790)
+  YACAS is a very powerful, general purpose Computer Algebra System.
+  ebuild submitted by Tobias Florek <tflorek@web.de>
