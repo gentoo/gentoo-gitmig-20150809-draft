@@ -1,15 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-1.0_rc6.ebuild,v 1.2 2005/01/09 22:46:13 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/gambas-1.0.2.ebuild,v 1.1 2005/01/22 07:25:06 genone Exp $
 
 inherit eutils
 
-MY_P="${PN}-0.99.RC6"
-S="${WORKDIR}/${MY_P}"
-
 DESCRIPTION="a RAD tool for BASIC"
 HOMEPAGE="http://gambas.sourceforge.net"
-SRC_URI="http://gambas.sourceforge.net/${MY_P}.tar.bz2"
+SRC_URI="http://gambas.sourceforge.net/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
