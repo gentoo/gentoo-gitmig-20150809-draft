@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.2.99.3-r2/xdm.start,v 1.2 2003/01/21 22:30:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/files/4.2.99.4/xdm.start,v 1.1 2003/02/02 10:46:08 seemant Exp $
 
 # This is here to serve as a note to myself, and future developers.
 #

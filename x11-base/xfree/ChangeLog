@@ -1,16 +1,16 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.86 2003/01/31 09:16:01 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.87 2003/02/02 10:46:08 seemant Exp $
+
+*xfree-4.2.99.4 (02 Feb 2003)
+
+  02 Feb 2003; Seemant Kulleen <seemant@gentoo.org> xfree-4.2.99.4.ebuild
+  files/digest-xfree-4.2.99.4 files/4.2.99.4/* files/4.2.99.4-patches/* :
+
+  Updated to newest cvs frozen branch (4_2_99_4) Same patches are still applying
+  Also, this will be permanently ~arch masked and removed from package mask.
 
 *xfree-4.2.99.3-r2 (16 Jan 2003)
-
-  30 Jan 2003; Jack Morgan <jmorgan@gentoo.org> xfree-4.2.1-r*.ebuild
-  Added replace-flags "-mcpu=ultrasparc" "-mcpu=v8" as per bug #14126 
-  Changed -sparc to sparc
-
-  22 Jan 2003; Jason Wever <weeve@gentoo.org> xfree-4.2.1-r1.ebuild
-  Changed ~sparc keyword to -sparc as it introduces keymapping problems
-  not present in xfree-4.2.1-r0.
 
   16 Jan 2002; Seemant Kulleen <seemant@gentoo.org> xfree-4.2.99.3-r2.ebuild
   files/digest-xfree-4.2.99.3-r2 files/4.2.99.3-r2/* :
@@ -57,6 +57,10 @@
   Changed sparc ~sparc keywords.
  
 *xfree-4.2.1-r2 (05 Dec 2002)
+
+  30 Jan 2003; Jack Morgan <jmorgan@gentoo.org> xfree-4.2.1-r*.ebuild
+  Added replace-flags "-mcpu=ultrasparc" "-mcpu=v8" as per bug #14126 
+  Changed -sparc to sparc
 
   15 Jan 2002; Mark Guertin <gerk@gentoo.org> xfree-4.2.1-r2.ebuild :
   Removed patch 082 as it was the one breaking keycodes, set ppc in 
@@ -152,6 +156,10 @@
   gcc-2.95.3, as it cause compile to fail, closing bug #10146.
 
 *xfree-4.2.1-r1 (3 Nov 2002)
+
+  22 Jan 2003; Jason Wever <weeve@gentoo.org> xfree-4.2.1-r1.ebuild
+  Changed ~sparc keyword to -sparc as it introduces keymapping problems
+  not present in xfree-4.2.1-r0.
 
   3 Nov 2002; Martin Schlemmer <azarah@gentoo.org> :
 
