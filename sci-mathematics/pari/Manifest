@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bcb807d16b683aaa33ee7661306f6c50 ChangeLog 3572
+MD5 c881ae142213f4a6f3588e5a28213181 ChangeLog 3874
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 d33b0309bbbaa8e508e35af360efb31b pari-2.1.5-r1.ebuild 953
 MD5 4818ef4876441247184df2b11538de44 pari-2.1.5-r4.ebuild 1882
-MD5 3f0a4b74c862c38b7048281e78d7ebc4 pari-2.1.6.ebuild 1683
+MD5 bc462d4cf4c16f9ebab9217f7dc3fffd pari-2.1.6.ebuild 1911
 MD5 ee951aeeb2122fab2aaf9803097fad76 files/digest-pari-2.1.5-r1 63
 MD5 ee951aeeb2122fab2aaf9803097fad76 files/digest-pari-2.1.5-r4 63
 MD5 2fd9906f2bf293fdad42d572846508de files/digest-pari-2.1.6 60
@@ -15,7 +15,7 @@ MD5 cbd309a01e2fee1a5ba6cb3a93ba5708 files/wrong_functype.patch 1946
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCT+Sg5mJXAu5GbtIRAtLGAJ0a9sqcYySSWNU3NPCXhag1T3a4iACeKOnC
-IJLgVuTC9RRLVFNrDYCMRDM=
-=+TlM
+iD8DBQFCUAeJ5mJXAu5GbtIRAuL9AJ0R2D/kwlVNo4w0J+p38H+6SNEqPQCfZ2Nz
+MB5UrV5v0SKNnDH/8Hig9xs=
+=TYIm
 -----END PGP SIGNATURE-----

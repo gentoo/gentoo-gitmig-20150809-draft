@@ -1,6 +1,13 @@
 # ChangeLog for sci-mathematics/pari
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.5 2005/01/07 09:40:26 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/ChangeLog,v 1.6 2005/04/03 15:09:07 kugelfang Exp $
+
+  03 Apr 2005; Danny van Dyk <kugelfang@gentoo.org> pari-2.1.6.ebuild:
+  Fixed toolchain usage and added src_test() function.
+
+  03 Apr 2005; Danny van Dyk <kugelfang@gentoo.org> pari-2.1.6.ebuild:
+  Fixed -fPIC handling for all architectures. Fixed BUG #87283.
+  Marked stable on amd64.
 
 *pari-2.1.5-r4 (07 Jan 2005)
 
@@ -30,7 +37,7 @@
   +pari-2.1.5-r3.ebuild:
   Moved from app-sci/pari to sci-mathematics/pari.
 
-  12 Sep 2004; Bryan Østergaard <kloeri@gentoo.org> pari-2.1.5-r3.ebuild:
+  12 Sep 2004; Bryan ÃÂstergaard <kloeri@gentoo.org> pari-2.1.5-r3.ebuild:
   Fix fPIC issue on alpha.
 
   06 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> pari-2.1.5-r3.ebuild:
@@ -50,7 +57,7 @@
   08 May 2004; Danny van Dyk <kugelfang@gentoo.org> pari-2.1.5-r2.ebuild:
   Shared library will now be built with -fPIC, solves BUG #49853.
 
-  05 May 2004; Bryan Østergaard <kloeri@gentoo.org> pari-2.1.5-r2.ebuild:
+  05 May 2004; Bryan ÃÂstergaard <kloeri@gentoo.org> pari-2.1.5-r2.ebuild:
   Stable on alpha.
 
   19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> pari-2.1.4.ebuild,

@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.1.6.ebuild,v 1.4 2005/04/03 12:40:00 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/pari/pari-2.1.6.ebuild,v 1.5 2005/04/03 15:09:07 kugelfang Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="pari (or pari-gp) : a software package for computer-aided number theory"
 HOMEPAGE="http://pari.math.u-bordeaux.fr/"
@@ -23,11 +23,14 @@ src_unpack() {
 }
 
 src_compile() {
+	# Fix usage of toolchain
+	tc-getAS; tc-getLD; tc-getCC; tc-getCXX
 	./Configure \
 		--host="$(echo ${CHOST} | cut -f "1 3" -d '-')" \
 		--prefix=/usr \
 		--miscdir=/usr/share/doc/${PF} \
 		--datadir=/usr/share/${P} \
+		--libdir=/usr/$(get_libdir) \
 		--mandir=/usr/share/man/man1 || die "./configure failed"
 	addwrite "/var/lib/texmf"
 	addwrite "/usr/share/texmf"
@@ -46,7 +49,14 @@ src_compile() {
 	use doc && emake doc
 }
 
-src_install () {
+src_test() {
+	cd ${S}
+	ebegin "Testing pari kernel"
+	make CFLAGS="-Wl,-lpari" test-kernel > /dev/null
+	eend $?
+}
+
+src_install() {
 	make DESTDIR=${D} LIBDIR=${D}/usr/$(get_libdir) install || die
 	if use emacs; then
 		insinto /usr/share/emacs/site-lisp
