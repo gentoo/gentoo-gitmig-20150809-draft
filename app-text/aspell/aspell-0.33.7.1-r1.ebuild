@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author: Seemant Kulleen <seemant@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.33.7.1-r1.ebuild,v 1.6 2002/05/27 17:27:36 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.33.7.1-r1.ebuild,v 1.7 2002/07/11 03:43:11 seemant Exp $
 
+inherit libtool
 
 MY_P=${PN}-.33.7.1
 S=${WORKDIR}/${MY_P}
@@ -12,6 +12,10 @@ HOMEPAGE="http://aspell.sourceforge.net"
 
 DEPEND=">=app-text/pspell-0.12
 	>=sys-libs/ncurses-5.2"
+
+SLOT="0"
+LICENSE="LGPL-2"
+KEYWORDS="x86"
 
 #
 # These flags a reset here because too much optimisation can cause aspell's
@@ -31,8 +35,7 @@ src_compile() {
 	# 
 	# These two lines are here again to prevent breaking the compilation
 	#
-	libtoolize --copy --force
-	aclocal
+	elibtoolize
 
 	./configure \
 		--prefix=/usr \
