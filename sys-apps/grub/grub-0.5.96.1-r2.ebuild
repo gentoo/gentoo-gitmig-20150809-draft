@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/grub-0.5.96.1-r2.ebuild,v 1.1 2001/02/07 15:51:27 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grub/grub-0.5.96.1-r2.ebuild,v 1.2 2001/02/07 20:05:43 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -14,9 +14,10 @@ DEPEND="virtual/glibc
 
 src_compile() {
 
-	try  ./configure --prefix=/usr  \
+	try     ./configure --prefix=/usr  \
                 --mandir=/usr/share/man --infodir=/usr/share/info --host=${CHOST}
-	try make ${MAKEOPTS}
+
+	try make ${MAKEOPTS} -e  CPPFLAGS=\"-Wall -Wmissing-prototypes -Wunused -Wshadow -malign-jumps=1 -malign-loops=1 -malign-functions=1 -Wundef\"
 }
 
 src_install() {
