@@ -2,12 +2,12 @@
 Hash: SHA1
 
 MD5 b8b2b5eaea2ece8c6a16feb9d795d0d9 ChangeLog 389
-MD5 7261beb372eba314b38ce3edd6c09671 libip_vs_user_sync-1.0.0.ebuild 917
+MD5 9f9503ee9868a29e4e08f02bc2b2b96d libip_vs_user_sync-1.0.0.ebuild 922
 MD5 0a1870463b9a8e38a6a6e0cc1268c3d4 files/digest-libip_vs_user_sync-1.0.0 76
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBNJwfKtJO8LeSoosRAtkkAJ9/DUfcxZzPVKaiVbgppJqUWCV6dACfeO2M
-rgxt0CZb1S02VpIauUR+6ZA=
-=S4T1
+iD8DBQFBNJ5WKtJO8LeSoosRAmRsAJ9o32uotS7DQDPxI8N83Mxm1ISH0wCgl7ze
+1w5QrzWAz6kau/ai5RBmTDY=
+=/+yh
 -----END PGP SIGNATURE-----
