@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/SGMLSpm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/ChangeLog,v 1.3 2002/08/01 04:10:47 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/ChangeLog,v 1.4 2002/08/06 00:39:14 mcummings Exp $
+
+*SGMLSpm-1.03-r1 (6 May 2002)
+
+  5 Aug 2002; Michael Cummings <mcummings@gentoo.org> SGMLSpm-1.03-r2.ebuild :
+
+  changed make line to direct make to the sandboxed Makefile - was too
+  ambiguous before (caused errors in different perl versions)
 
 *SGMLSpm-1.03-r1 (6 May 2002)
 
