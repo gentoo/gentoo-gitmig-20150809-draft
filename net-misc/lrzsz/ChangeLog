@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/lrzsz
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lrzsz/ChangeLog,v 1.14 2004/11/15 06:52:46 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lrzsz/ChangeLog,v 1.15 2004/11/19 18:08:39 mrness Exp $
+
+  19 Nov 2004; Alin Nastac <mrness@gentoo.org> +metadata.xml,
+  +files/lrzsz-makefile-smp.patch, lrzsz-0.12.20-r1.ebuild:
+  Solve install failure on SMP machines (see #70931). Add metadata.xml.
 
   14 Nov 2004; Michael Sterrett <mr_bones_@gentoo.org>
   lrzsz-0.12.20-r1.ebuild:
