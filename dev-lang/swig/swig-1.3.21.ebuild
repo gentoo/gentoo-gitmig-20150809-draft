@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.21.ebuild,v 1.1 2004/02/20 13:47:03 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.21.ebuild,v 1.2 2004/02/21 00:16:07 lanius Exp $
 
 IUSE="java guile python tcltk ruby perl"
 
@@ -50,7 +50,7 @@ src_compile() {
 		$myc || die "./configure failed"
 
 	make || die
-	make runtime || die
+	make runtime PLTCOLLECTS="/usr/share/mzscheme/collects" || die
 }
 
 src_install () {
