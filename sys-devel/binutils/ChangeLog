@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.176 2004/12/21 07:28:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.177 2004/12/27 02:39:38 eradicator Exp $
+
+  26 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  binutils-2.15.92.0.2-r1.ebuild:
+  Removing sparc64-multilib stuff as we're just using the superior
+  binutils-config versions in that profile.
 
 *binutils-2.15.94.0.2 (21 Dec 2004)
 

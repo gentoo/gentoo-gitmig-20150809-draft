@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.92.0.2-r1.ebuild,v 1.20 2004/12/14 07:51:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.92.0.2-r1.ebuild,v 1.21 2004/12/27 02:39:38 eradicator Exp $
 
 inherit eutils libtool flag-o-matic gnuconfig
 
@@ -134,34 +134,16 @@ src_install() {
 		ln -s ../${CHOST}/bin/${x} ${x}
 	done
 
-	if [ -n "${PROFILE_ARCH}" ]; then
-		if [ "${PROFILE_ARCH}" = "sparc64-multilib" ]; then
-			for CH in ${MULTILIB_CHOSTS}; do
-				if [ "${CH}" = "${CHOST}" ]; then
-					for x in `ls ${D}/usr/${CHOST}/bin/`; do
-						[ ! -e "${D}/usr/bin/${CHOST}-${x}" ] && \
-							dosym ../${CHOST}/bin/${x} /usr/bin/${CHOST}-${x}
-					done
-				else
-					dodir /usr/${CH}/bin
+	if [ -n "${PROFILE_ARCH}" ] &&
+	   [ "${PROFILE_ARCH/64}" != "${PROFILE_ARCH}" ]; then
+		dosym ${CHOST} /usr/${CHOST/-/64-}
 
-					for x in `ls ${D}/usr/${CHOST}/bin/`; do
-						dosym ../../${CHOST}/bin/${x} /usr/${CH}/bin/${x}
-						[ ! -e "${D}/usr/bin/${CH}-${x}" ] && \
-							dosym ../${CH}/bin/${x} /usr/bin/${CH}-${x}
-					done
-				fi
-			done
-		elif [ "${PROFILE_ARCH/64}" != "${PROFILE_ARCH}" ]; then
-			dosym ${CHOST} /usr/${CHOST/-/64-}
-
-			for x in `ls ${D}/usr/${CHOST}/bin/`
-			do
-				[ ! -e "${D}/usr/bin/${CHOST}-${x}" ] && \
-					dosym ../${CHOST}/bin/${x} /usr/bin/${CHOST}-${x}
-				dosym ../${CHOST}/bin/${x} /usr/bin/${CHOST/-/64-}-${x}
-			done
-		fi
+		for x in `ls ${D}/usr/${CHOST}/bin/`
+		do
+			[ ! -e "${D}/usr/bin/${CHOST}-${x}" ] && \
+				dosym ../${CHOST}/bin/${x} /usr/bin/${CHOST}-${x}
+			dosym ../${CHOST}/bin/${x} /usr/bin/${CHOST/-/64-}-${x}
+		done
 	fi
 
 	cd ${S}
