@@ -1,0 +1,20 @@
+# ChangeLog for app-sci/emboss-kaptain
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss-kaptain/ChangeLog,v 1.1 2004/12/23 23:15:26 ribosome Exp $
+
+*emboss-kaptain-0.97 (23 Dec 2004)
+
+  23 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +emboss-kaptain-0.97.ebuild:
+  Moved from app-sci/emboss-kaptain to sci-biology/emboss-kaptain.
+
+  07 Nov 2004; Olivier Fisette <ribosome@gentoo.org>
+  emboss-kaptain-0.97.ebuild:
+  Changed dependency since "app-misc/kaptain" was moved to "kde-misc/kaptain".
+
+*emboss-kaptain-0.97 (30 Oct 2004)
+
+  30 Oct 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +emboss-kaptain-0.97.ebuild:
+  Initial import.
+
