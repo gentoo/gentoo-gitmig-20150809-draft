@@ -1,3 +1,7 @@
+This instructions are valid if you are using jabberd14 as the main server. If
+you are going to use jabberd2 you must edit /etc/confd/jabberd and change 
+jabberd14 to jabberd2.
+
 This is a small help to get you started with Jabber in Gentoo.
 Edit /etc/jabber/multiple.xml . This is the main jabber server config file.
 There change all references to localhost with the FQDN (Fully Qualified Domain 

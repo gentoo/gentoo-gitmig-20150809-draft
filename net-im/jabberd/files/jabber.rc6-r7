@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/files/jabber.rc6-r7,v 1.1 2004/04/08 02:00:51 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/files/jabber.rc6-r7,v 1.2 2004/04/08 22:16:18 humpback Exp $
 
 depend() {
 	need net
@@ -13,18 +13,53 @@ start() {
 	if [ "${JABBERD}" = "jabberd14" ]
 	then
 		jabberd -B -c /etc/jabber/multiple.xml >/dev/null 2>&1
+	else
+		ebegin "   Router"
+			start-stop-daemon --start -b -q -x /usr/bin/router
+		eend $?
+		ebegin "   Resolver"
+			start-stop-daemon --start -b -q -x /usr/bin/resolver
+		eend $?
+		ebegin "   Session Manager"
+			start-stop-daemon --start -b -q -x /usr/bin/sm
+		eend $?
+		ebegin "   Client to Server Component"
+			start-stop-daemon --start -b -q -x /usr/bin/c2s
+		eend $?
+		ebegin "   Server to Server Component"
+			start-stop-daemon --start -b -q -x /usr/bin/s2s
+		eend $?	
 	fi
+	
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping main Jabber Component"
 	kill `/var/log/jabber/jabberd14.pid`
-	sleep 2
-        if ( -f /var/log/jabber/jabberd14.pid ); then
-		kill -9 `cat /var/log/jabber/jabberd14.pid`
-		rm -f /var/log/jabber/jabberd14.pid
+	if [ "${JABBERD}" = "jabberd14" ]
+	then
+		sleep 2
+        		if ( -f /var/log/jabber/jabberd14.pid ); then
+				kill -9 `cat /var/log/jabber/jabberd14.pid`
+				rm -f /var/log/jabber/jabberd14.pid
+			fi
+	else
+		ebegin "   Router"
+			start-stop-daemon --stop -q --pidfile /var/jabberd/pid/router.pid
+		eend $?
+		ebegin "   Resolver"
+			start-stop-daemon --stop -q --pidfile /var/jabberd/pid/resolver.pid
+		eend $?
+		ebegin "   Session Manager"
+			start-stop-daemon --stop -q --pidfile /var/jabberd/pid/sm.pid
+		eend $?
+		ebegin "   Client to Server Component"
+			start-stop-daemon --stop -q --pidfile /var/jabberd/pid/c2s.pid
+		eend $?
+		ebegin "   Server to Server Component"
+			start-stop-daemon --stop -q --pidfile /var/jabberd/pid/s2s.pid
+		eend $?
 	fi
-						        fi
 	eend $?
 }

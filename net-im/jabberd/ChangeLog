@@ -1,6 +1,13 @@
 # ChangeLog for net-im/jabberd
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/ChangeLog,v 1.18 2004/04/08 02:00:51 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabberd/ChangeLog,v 1.19 2004/04/08 22:16:18 humpback Exp $
+
+*jabberd-2.0 (08 Apr 2004)
+
+  08 Apr 2004; Gustavo Felisberto <humpback@gentoo.org>; jabberd-2.0.ebuild,
+  files/README.Gentoo, files/jabber.rc6-r7:
+  Adding jabberd2 to portage. This must stay hardmasked because it needs further
+  testing.
 
 *jabberd-1.4.3-r3 (08 Apr 2004)
 
