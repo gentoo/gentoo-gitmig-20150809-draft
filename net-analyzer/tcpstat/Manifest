@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 14efb30f9dbbc8cc18fe42bcb44acf19 ChangeLog 1523
+MD5 e86dd09333c1d44ad1f71d4500cf496f ChangeLog 1613
 MD5 f34e3c8858756da0001b12d2d3fa1af2 metadata.xml 159
 MD5 b98a01181a829821c91a90493685fa1f tcpstat-1.4.ebuild 653
-MD5 5736d838f713f8a3236e5617f0af4102 tcpstat-1.5.ebuild 667
+MD5 b1fb1c74e1e5e7c2263848a9ab4f5ef9 tcpstat-1.5.ebuild 663
 MD5 e1467bede820e7a3acb951079a20285f files/digest-tcpstat-1.4 62
 MD5 efa37f1790c5016076a051b32e57b980 files/digest-tcpstat-1.5 62
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB/j+hmdTrptrqvGERAnLNAJ9psQVd8NbVQDBTTLScDMFgWNAOjACdHSTS
-6RHL3ifVSOqiNLXDmPrkm3g=
-=gzsv
+iD8DBQFCLJqGKRy60XGEcJIRAs+MAKCGVvHTd1SmQ6Ar05Q+aCWPaaQ/mACgolXL
+Utob5BmOpGQWFAFL8iMVhIg=
+=OaaD
 -----END PGP SIGNATURE-----
