@@ -1,13 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-server/halflife-server-3.1.1.1d.ebuild,v 1.2 2003/10/20 19:12:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-server/halflife-server-3.1.1.1d.ebuild,v 1.3 2003/11/30 11:44:26 vapier Exp $
 
-inherit games
+inherit games eutils
 
+MY_PV=${PV//.}
 MY_PN=hlds_l_3111_full
 DESCRIPTION="Halflife Linux Server"
 SRC_URI="${MY_PN}.bin
-	hlds_l_3111d_update.tar.gz"
+	hlds_l_${MY_PV}_update.tar.gz"
 HOMEPAGE="http://www.valve.com/ http://www.fileplanet.com/files/50000/58368.shtml"
 
 LICENSE="ValveServer"
@@ -32,13 +33,11 @@ pkg_nofetch() {
 }
 
 src_unpack() {
-	local metastart=`tail -c 8 ${DISTDIR}/${MY_PN}.bin | head -c 4 | hexdump -e \"%i\"`
-	local newsize=$(expr $(ls -al ${DISTDIR}/${MY_PN}.bin | awk '{print $5}') - $metastart)
-	tail -c ${newsize} ${DISTDIR}/${MY_PN}.bin > ${MY_PN}.bin
-	tar -xf ${MY_PN}.bin
+	unpack_pdv ${MY_PN}.bin 4
 	echo ">>> Unpacking ${MY_PN}.tar.gz to ${S}"
 	tar -zxf ${MY_PN}.tar.gz
-	unpack hlds_l_3111d_update.tar.gz
+	unpack hlds_l_${MY_PV}_update.tar.gz
+	rm ${MY_PN}.tar.gz
 }
 
 src_install() {

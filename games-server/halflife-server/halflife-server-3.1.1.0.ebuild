@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-server/halflife-server-3.1.1.0.ebuild,v 1.3 2003/11/30 11:25:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-server/halflife-server-3.1.1.0.ebuild,v 1.4 2003/11/30 11:41:35 vapier Exp $
 
 inherit games eutils
 
@@ -13,10 +13,10 @@ SRC_URI="${MY_PN}.bin"
 LICENSE="ValveServer"
 SLOT="0"
 KEYWORDS="x86"
-RESTRICT="nostrip fetch
+RESTRICT="nostrip fetch"
 
 DEPEND="sys-apps/util-linux"
-RDEPEND="dedicated? ( app-misc/screen )"
+RDEPEND="app-misc/screen"
 
 S=${WORKDIR}/hlds_l
 
