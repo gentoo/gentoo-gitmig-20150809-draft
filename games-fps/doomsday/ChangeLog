@@ -1,6 +1,9 @@
 # ChangeLog for games-fps/doomsday
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.5 2004/09/04 22:58:56 dholm Exp $
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomsday/ChangeLog,v 1.6 2004/09/28 00:45:36 swegener Exp $
+
+  28 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Gentoo Technologies, Inc. -> Gentoo Foundation
 
   05 Sep 2004; David Holm <dholm@gentoo.org> doomsday-1.8.1.ebuild:
   Added to ~ppc.
