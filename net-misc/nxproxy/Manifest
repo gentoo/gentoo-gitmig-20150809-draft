@@ -1,21 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 adf44d1fda821577fb33927b5e006641 nxproxy-1.4.0-r1.ebuild 1158
-MD5 a50ecb98a1a261895a4d34af6cda6b3c metadata.xml 369
-MD5 d564d865d76b42142b30594855fb92dd ChangeLog 1370
-MD5 0ab81abd64672b8b06855d000f8da279 nxproxy-1.3.2.ebuild 968
 MD5 a047d48d4c90b36628fcb266c1979817 nxproxy-1.3.0.ebuild 968
+MD5 0ab81abd64672b8b06855d000f8da279 nxproxy-1.3.2.ebuild 968
+MD5 d564d865d76b42142b30594855fb92dd ChangeLog 1370
+MD5 a50ecb98a1a261895a4d34af6cda6b3c metadata.xml 369
 MD5 d77bf14855cc15bab0ba709fec9cd09d nxproxy-1.4.0.ebuild 871
-MD5 f1f661803dff2f25c21ec49268803111 files/digest-nxproxy-1.4.0-r1 133
-MD5 d7c92d02795ad3ecf951731efaac6b03 files/1.2.2-Makefile.in.patch 421
+MD5 adf44d1fda821577fb33927b5e006641 nxproxy-1.4.0-r1.ebuild 1158
 MD5 16f01143f4d6dd7959a1ffd920722af5 files/digest-nxproxy-1.3.0 66
 MD5 34472d4d8979c06122ccb8e42633b27d files/digest-nxproxy-1.3.2 66
-MD5 f1f661803dff2f25c21ec49268803111 files/digest-nxproxy-1.4.0 133
+MD5 249d00d3d6c27a44d67fe9b947fe2053 files/digest-nxproxy-1.4.0 66
+MD5 d7c92d02795ad3ecf951731efaac6b03 files/1.2.2-Makefile.in.patch 421
+MD5 f1f661803dff2f25c21ec49268803111 files/digest-nxproxy-1.4.0-r1 133
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBukBfKtJO8LeSoosRAiCEAJ9I+MHPSYGblXhcjSsJwcl456Rx5gCeOhSh
-Ez7ZUUgvMSnl2ckGB+1Pke0=
-=rcAG
+iD8DBQFBuydHI1lqEGTUzyQRAnFpAJ92lV9GDSEhAlTN0fQwJap2rPpR9gCeMK3R
+LDA74VwI6PG7mClW0KHdbEI=
+=tNuR
 -----END PGP SIGNATURE-----
