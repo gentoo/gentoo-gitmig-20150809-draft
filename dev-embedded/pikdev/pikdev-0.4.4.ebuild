@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-0.4.4.ebuild,v 1.1 2003/12/07 03:16:06 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/pikdev-0.4.4.ebuild,v 1.2 2003/12/14 20:14:15 mr_bones_ Exp $
 
 DESCRIPTION="Graphical IDE for PIC-based application development"
 HOMEPAGE="http://pikdev.free.fr/"
@@ -14,7 +14,7 @@ RDEPEND=">=kde-base/kde-3.0
 		sys-libs/zlib
 		media-libs/libpng
 		dev-embedded/gputils
-		app-admin/fam-oss"
+		app-admin/fam"
 
 # build system uses some perl
 DEPEND="${RDEPEND}
