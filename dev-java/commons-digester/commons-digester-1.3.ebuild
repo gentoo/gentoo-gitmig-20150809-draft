@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/commons-digester-1.3.ebuild,v 1.1 2002/11/07 04:11:54 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/commons-digester-1.3.ebuild,v 1.2 2002/11/08 01:16:16 blizzy Exp $
 
 S=${WORKDIR}/${PN}-${PV}-src
 DESCRIPTION="The Jakarta Digester component reads XML configuration files to provide initialization of various Java objects within the system."
@@ -50,11 +50,4 @@ src_install () {
 	dodoc RELEASE-NOTES.txt
 	dohtml STATUS.html PROPOSAL.html
 	dohtml -r dist/docs/*
-}
-
-pkg_postinst() {
-	einfo "************* Documentation can be found at **************\n
-	WEB: ${HOMEPAGE}\n
-	LOCAL: /usr/share/doc/${PF}\n
-   **********************************************************"
 }

@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/commons-lang-1.0.ebuild,v 1.1 2002/11/02 21:47:27 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-lang/commons-lang-1.0.ebuild,v 1.2 2002/11/08 01:16:16 blizzy Exp $
 
 S="${WORKDIR}/${PN}-${PV}-src"
 DESCRIPTION="Jakarta components to manipulate core java classes"
@@ -40,12 +40,4 @@ src_install () {
 	dojar dist/${PN}*.jar || die "Unable to install"
 	dohtml -r dist/docs/*
 	dohtml PROPOSAL.html STATUS.html
-}
-
-
-pkg_postinst() {
-	einfo "************ Documentation can be found at ***************\n
-	WEB: ${HOMEPAGE}\n
-	LOCAL: /usr/share/doc/${PF}\n
-   **********************************************************"
 }

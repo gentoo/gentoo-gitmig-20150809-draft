@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/commons-logging-1.0.2.ebuild,v 1.1 2002/11/06 05:24:12 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/commons-logging-1.0.2.ebuild,v 1.2 2002/11/08 01:16:16 blizzy Exp $
 
 S="${WORKDIR}/${P}-src"
 DESCRIPTION="Jakarta component that abstract logging API"
@@ -41,11 +41,4 @@ src_install () {
 	dodoc RELEASE-NOTES.txt
 	dohtml PROPOSAL.html STATUS.html usersguide.html
 	dohtml -r dist/docs/*
-}
-
-pkg_postinst() {
-	einfo "**************** Documentation can be found at ******************\n
-	WEB: ${HOMEPAGE}\n
-	LOCAL: /usr/share/doc/${PF}\n
-   *****************************************************************"
 }
