@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pegasos-sources/pegasos-sources-2.4.26-r2.ebuild,v 1.1 2004/06/27 20:49:53 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pegasos-sources/pegasos-sources-2.4.26-r2.ebuild,v 1.2 2004/07/15 03:59:58 agriffis Exp $
 
 ETYPE="sources"
 inherit kernel-2
@@ -11,6 +11,7 @@ GPV=26.1
 GPV_SRC="mirror://gentoo/pegpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}-base.tar.bz2"
 
 KEYWORDS="-* ppc"
+IUSE=""
 
 UNIPATCH_LIST="${DISTDIR}/pegpatches-${KV_MAJOR}.${KV_MINOR}-${GPV}-base.tar.bz2
 	${FILESDIR}/${P}.CAN-2004-0394.patch
