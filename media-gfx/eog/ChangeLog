@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/eog
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.19 2002/11/28 01:14:44 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.20 2002/12/01 18:19:08 foser Exp $
+
+*eog-1.1.1 (01 Dec 2002)
+
+  01 Dec 2002; foser <foser@gentoo.org> eog-1.1.1.ebuild :
+  forgotten 2.1.2 Commit
 
 *eog-1.0.4 (28 Nov 2002)
   

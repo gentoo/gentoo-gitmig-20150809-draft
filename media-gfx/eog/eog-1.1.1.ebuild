@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-1.1.0.ebuild,v 1.2 2002/11/28 01:14:44 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/eog-1.1.1.ebuild,v 1.1 2002/12/01 18:19:08 foser Exp $
 
 inherit gnome2 debug
 
@@ -12,13 +12,13 @@ HOMEPAGE="http://www.gnome.org/"
 
 SLOT="1"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 RDEPEND=">=dev-libs/glib-2
 	>=gnome-base/gconf-1.2.1
-	>=gnome-base/gnome-vfs-2
+	=gnome-base/gnome-vfs-2.1*
 	=gnome-base/libgnomeui-2.1*
-	>=gnome-base/libbonoboui-2.0
+	=gnome-base/libbonoboui-2.1*
 	=gnome-base/bonobo-activation-2.1*
 	>=gnome-base/libglade-2
 	>=gnome-base/libgnomeprint-1.116.0
