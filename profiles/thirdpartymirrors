@@ -1,3 +1,3 @@
 sourceforge ftp://telia.dl.sourceforge.net/pub/sourceforge http://unc.dl.sourceforge.net/sourceforge http://belnet.dl.sourceforge.net/sourceforge
 gentoo		http://www.ibiblio.org/pub/linux/distributions/gentoo/distfiles
-gnome		ftp://ftp.gnome.org/pub/gnome/pre-gnome2/
+gnome		ftp://ftp.gnome.org/pub/gnome/2.0.0 ftp://archive.progeny.com/GNOME/2.0.0 
