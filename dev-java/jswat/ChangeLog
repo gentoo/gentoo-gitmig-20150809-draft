@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/jswat
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/ChangeLog,v 1.7 2003/05/24 10:45:47 absinthe Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/ChangeLog,v 1.8 2004/02/25 08:08:07 absinthe Exp $
+
+  25 Feb 2004; Dylan Carlson <absinthe@gentoo.org> :
+  Version bump.  
+
+  Keywords -ppc for jswat-2* due to dependency problems.
 
 *jswat-1.7.1 (24 May 2003)
 

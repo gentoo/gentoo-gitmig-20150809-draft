@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/jswat-2.17-r1.ebuild,v 1.6 2004/02/25 08:08:08 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/jswat-2.21.ebuild,v 1.1 2004/02/25 08:08:08 absinthe Exp $
 
 inherit java-pkg
 
@@ -10,13 +10,14 @@ HOMEPAGE="http://www.bluemarsh.com/java/jswat"
 SRC_URI="mirror://sourceforge/jswat/${PN}-src-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="x86 sparc -ppc"
-DEPEND=">=dev-java/ant-1.4.1"
+KEYWORDS="x86 sparc -ppc amd64"
+DEPEND=">=dev-java/ant-1.5"
 RDEPEND=">=virtual/jdk-1.4"
 IUSE="doc jikes junit"
 
 src_compile() {
-	antopts="-Dversion=${PV}"
+	epatch ${FILESDIR}/${P}.diff
+	# antopts="-Dversion=${PV}"
 	use jikes && antopts="${antopts} -Dbuild.compiler=jikes"
 	ant ${antopts} dist || die "Compile failed"
 
