@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6f82565e3e1a3a36e7cccdb6b9cee899 colorcvs-1.4.ebuild 554
-MD5 f9620d074f5e75c3e5775fca880adfe5 ChangeLog 425
+MD5 51ab6efec3fdad9c06818e961f43134f ChangeLog 511
+MD5 3379652e0fa98d9898f158af5a856476 colorcvs-1.4.ebuild 560
 MD5 5ac98d8a15363cbd017b801649d1fe53 metadata.xml 226
 MD5 b98a58bcc5f070737e4a43dc11243723 files/digest-colorcvs-1.4 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBes95EZCkKN40op4RAtZUAJ0Z1gKZS5MrrMZsue6BaEb1EeVJlACeIoc4
-6S9AP1Ulei+jmzmZUUQpRC4=
-=YNXo
------END PGP SIGNATURE-----
