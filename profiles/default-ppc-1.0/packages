@@ -65,10 +65,10 @@
 
 # ebuilds installing precompiled stuff:
 
-net-www/netscape-communicator
-net-www/netscape-flash
-net-www/netscape-navigator
-net-www/netscape-plugger
+~net-www/netscape-communicator
+~net-www/netscape-flash
+~net-www/netscape-navigator
+~net-www/netscape-plugger
 
 # more precompiled and/or x86 only ebuilds
 # not avail for ppc (gerk)
@@ -96,7 +96,8 @@ net-www/netscape-plugger
 ~app-emulation/psemu-padxwin
 ~app-emulation/psemu-peopssoftgpu
 ~app-emulation/psemu-peopsspu
-
+~dev-util/cvsup
+~media-video/realplayer
 
 # temp (to fix) currently x86 only builds 
 # that can be adjusted for ppc (gerk)
