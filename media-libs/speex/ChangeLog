@@ -1,0 +1,29 @@
+# ChangeLog for media-libs/speex
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header
+
+*speex-1.0_beta3 (12 Nov 2002)
+
+  12 Nov 2002; Matt Keadle <mkeadle@gentoo.org> speex-1.0_beta3.ebuild
+  files/digest-speex-1.0_beta3
+
+  The most obvious change is going from 'Speex' to 'speex'. This is heading to
+  portage unmasked as there are a few things wanting to depend on it. Has been
+  very stable on four test machines here.
+
+  This is an extention of the ChangeLog for 'Speex', so that its previous
+  records can still be available.
+
+*Speex-1.0_beta2-r1 (6 Nov 2002)
+
+  6 Nov 2002; Matt Keadle <mkeadle@gentoo.org> Speex-1.0_beta2-r1.ebuild files/digest-Speex-1.0_beta2-r1 :
+
+  manual.pdf now goes into /usr/share/doc/Speex and gcc issues seem to be resolved.
+
+*Speex-1.0_beta2 (29 Oct 2002) Bart Verwilst <verwilst@gentoo.org>
+
+*Speex-1.0_beta1 (26 Oct 2002)
+
+  26 Oct 2002; Nick Hadaway <raker@gentoo.org> Speex-1.0_beta1.ebuild,
+  files/digest-Speex-1.0_beta1 :
+  New ebuild added to support gnomemeeting-0.94.1
