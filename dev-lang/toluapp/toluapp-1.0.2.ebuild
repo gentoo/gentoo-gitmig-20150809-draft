@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/toluapp/toluapp-1.0.2.ebuild,v 1.4 2004/08/29 19:42:46 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/toluapp/toluapp-1.0.2.ebuild,v 1.5 2004/10/26 15:27:02 twp Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 MY_PN=${PN/toluapp/tolua++}
 MY_P=${MY_PN}-${PV}
@@ -26,7 +26,7 @@ src_unpack() {
 }
 
 src_compile() {
-	scons CC="${CC}" CCFLAGS="${CFLAGS}" LINK="${CC}" all
+	scons CC="$(tc-getCC)" CCFLAGS="${CFLAGS}" LINK="$(tc-getCC)" all
 }
 
 src_install() {

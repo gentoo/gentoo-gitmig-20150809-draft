@@ -1,5 +1,5 @@
-MD5 0453438c54375fc2cd0f1ce44f2362fe toluapp-1.0.2.ebuild 877
-MD5 c7d202558ad0efbe23c158fd03cbe87e ChangeLog 564
+MD5 a00846ccbed9ffaefa40cccc6e3c34f7 toluapp-1.0.2.ebuild 905
+MD5 445f276fa008979cb1ab3ceb45ce8e36 ChangeLog 690
 MD5 d992d28bec4a3bfd72b441145091a58e metadata.xml 244
 MD5 d4325b8449d8f996c02c2d81fcb432b4 files/toluapp-1.0.2-gentoo.patch 829
 MD5 0b99ea2ba429f9efe5ba48e52899a77a files/digest-toluapp-1.0.2 66

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/toluapp
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/toluapp/ChangeLog,v 1.4 2004/08/29 19:42:46 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/toluapp/ChangeLog,v 1.5 2004/10/26 15:27:02 twp Exp $
+
+  26 Oct 2004; Tom Payne <twp@gentoo.org> toluapp-1.0.2.ebuild:
+  Use $\(tc-getCC\) from toolchain-funcs.eclass. Bug #68998.
 
   29 Aug 2004; <twp@gentoo.org> toluapp-1.0.2.ebuild:
   Stable on x86.
