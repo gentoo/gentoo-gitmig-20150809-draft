@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mule-ucs/mule-ucs-0.85_rc3.ebuild,v 1.1 2003/12/14 18:27:34 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mule-ucs/mule-ucs-0.85_rc3.ebuild,v 1.2 2004/03/04 05:29:08 jhuebel Exp $
 
 inherit elisp-common
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.m17n.org/mule/
 SRC_URI="http://gentoojp.sourceforge.jp/distfiles/${MY_PN}-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 alpha ppc sparc"
+KEYWORDS="x86 alpha ppc sparc amd64"
 IUSE=""
 DEPEND="virtual/emacs"
 S="${WORKDIR}/${MY_PN}-current"
