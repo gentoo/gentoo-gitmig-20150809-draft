@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.13.1.ebuild,v 1.2 2005/02/12 14:37:37 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.13.4.ebuild,v 1.1 2005/04/05 14:41:27 g2boojum Exp $
+
+inherit eutils
 
 DESCRIPTION="Widely-used Mail Transport Agent (MTA)"
 HOMEPAGE="http://www.sendmail.org/"
@@ -9,7 +11,7 @@ SRC_URI="ftp://ftp.sendmail.org/pub/${PN}/${PN}.${PV}.tar.gz"
 LICENSE="Sendmail"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~hppa ~alpha ~ia64 ~s390 ~amd64 ~ppc64"
-IUSE="ssl ldap sasl tcpd mbox milter mailwrapper"
+IUSE="ssl ldap sasl tcpd mbox mailwrapper ipv6"
 
 DEPEND="net-mail/mailbase
 	sys-devel/m4
@@ -18,6 +20,7 @@ DEPEND="net-mail/mailbase
 	ssl? ( dev-libs/openssl )
 	ldap? ( net-nds/openldap )
 	>=sys-libs/db-3.2
+	!net-mail/vacation
 	"
 RDEPEND="${DEPEND}
 		>=net-mail/mailbase-0.00
@@ -30,41 +33,36 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
+	epatch ${FILESDIR}/sendmail-delivered_hdr.patch || die
+
 	confCCOPTS="${CFLAGS}"
 	confMAPDEF="-DMAP_REGEX"
 	conf_sendmail_LIBS=""
 	use sasl && confLIBS="${confLIBS} -lsasl2"  \
 		&& confENVDEF="${confENVDEF} -DSASL=2" \
 		&& confCCOPTS="${confCCOPTS} -I/usr/include/sasl" \
-		&& conf_sendmail_ENVDEF="${conf_sendmail_ENVDEF} -DSASL=2"  \
 		&& conf_sendmail_LIBS="${conf_sendmail_LIBS} -lsasl2"
 	use tcpd && confENVDEF="${confENVDEF} -DTCPWRAPPERS" \
 		&& confLIBS="${confLIBS} -lwrap"
-	use ssl && confENVDEF="${confENVDEF} -DSTARTTLS" \
+	use ssl && confENVDEF="${confENVDEF} -DSTARTTLS -D_FFR_DEAL_WITH_ERROR_SSL" \
 		&& confLIBS="${confLIBS} -lssl -lcrypto" \
-		&& conf_sendmail_ENVDEF="${conf_sendmail_ENVDEF} -DSTARTTLS" \
 		&& conf_sendmail_LIBS="${conf_sendmail_LIBS} -lssl -lcrypto"
 	use ldap && confMAPDEF="${confMAPDEF} -DLDAPMAP" \
 		&& confLIBS="${confLIBS} -lldap -llber"
-	use milter && confENVDEF="${confENVDEF} -DMILTER"
+	use ipv6 && confENVDEF="${confENVDEF} -DNETINET6"
 	sed -e "s:@@confCCOPTS@@:${confCCOPTS}:" \
 		-e "s/@@confMAPDEF@@/${confMAPDEF}/" \
 		-e "s/@@confENVDEF@@/${confENVDEF}/" \
 		-e "s/@@confLIBS@@/${confLIBS}/" \
-		-e "s/@@conf_sendmail_ENVDEF@@/${conf_sendmail_ENVDEF}/" \
 		-e "s/@@conf_sendmail_LIBS@@/${conf_sendmail_LIBS}/" \
 		${FILESDIR}/site.config.m4 > ${S}/devtools/Site/site.config.m4
 }
 
 src_compile() {
 	sh Build || die "compilation failed in main Build script"
-
-	if use milter
-	then
-	    pushd libmilter
-		sh Build || die "libmilter compilation failed"
-		popd
-	fi
+	pushd libmilter
+	sh Build || die "libmilter compilation failed"
+	popd
 }
 
 src_install () {
@@ -94,9 +92,7 @@ src_install () {
 			|| die "install failed"
 	done
 
-	if use milter
-	then
-	    dodir /usr/include/libmilter
+	dodir /usr/include/libmilter
 		make DESTDIR=${D} MANROOT=/usr/share/man/man \
 			SBINOWN=root SBINGRP=root UBINOWN=root UBINGRP=root \
 			MANOWN=root MANGRP=root INCOWN=root INCGRP=root \
@@ -104,7 +100,6 @@ src_install () {
 			MSPQOWN=root CFOWN=root CFGRP=root \
 			install -C ${OBJDIR}/libmilter \
 			|| die "install failed"
-	fi
 
 	fowners root:smmsp /usr/sbin/sendmail
 	fperms 2555 /usr/sbin/sendmail
@@ -118,11 +113,7 @@ src_install () {
 	newdoc sendmail/SECURITY SECURITY
 	newdoc sendmail/TUNING TUNING
 	newdoc smrsh/README README.smrsh
-
-	if use milter
-	then
-		newdoc libmilter/README README.libmilter
-	fi
+	newdoc libmilter/README README.libmilter
 
 	newdoc cf/README README.cf
 	newdoc cf/cf/README README.install-cf
@@ -130,33 +121,33 @@ src_install () {
 	insinto /etc/mail
 	if use mbox
 	then
-		doins ${FILESDIR}/{sendmail.cf,sendmail.mc}
+		doins ${FILESDIR}/sendmail.mc
 	else
-		newins ${FILESDIR}/sendmail-procmail.cf sendmail.cf
 		newins ${FILESDIR}/sendmail-procmail.mc sendmail.mc
 	fi
+	m4 ${D}/etc/mail/sendmail.mc > ${D}/etc/mail/sendmail.cf
 	echo "# local-host-names - include all aliases for your machine here" \
 		> ${D}/etc/mail/local-host-names
-	cat << EOF > ${D}/etc/mail/trusted-users
-# trusted-users - users that can send mail as others without a warning
-# apache, mailman, majordomo, uucp are good candidates
-EOF
-	cat << EOF > ${D}/etc/mail/access
-# Check the /usr/share/doc/sendmail/README.cf file for a description
-# of the format of this file. (search for access_db in that file)
-# The /usr/share/doc/sendmail/README.cf is part of the sendmail-doc
-# package.
-#
+	cat <<- EOF > ${D}/etc/mail/trusted-users
+		# trusted-users - users that can send mail as others without a warning
+		# apache, mailman, majordomo, uucp are good candidates
+	EOF
+	cat <<- EOF > ${D}/etc/mail/access
+		# Check the /usr/share/doc/sendmail/README.cf file for a description
+		# of the format of this file. (search for access_db in that file)
+		# The /usr/share/doc/sendmail/README.cf is part of the sendmail-doc
+		# package.
+		#
 
-EOF
-cat << EOF > ${D}/etc/conf.d/sendmail
-# Config file for /etc/init.d/sendmail
-# add start-up options here
-SENDMAIL_OPTS="-bd -q30m -L sm-mta" # default daemon mode
-CLIENTMQUEUE_OPTS="-Ac -q30m -L sm-cm" # clientmqueue
-KILL_OPTS="" # add -9/-15/your favorite evil SIG level here
+	EOF
+	cat <<- EOF > ${D}/etc/conf.d/sendmail
+		# Config file for /etc/init.d/sendmail
+		# add start-up options here
+		SENDMAIL_OPTS="-bd -q30m -L sm-mta" # default daemon mode
+		CLIENTMQUEUE_OPTS="-Ac -q30m -L sm-cm" # clientmqueue
+		KILL_OPTS="" # add -9/-15/your favorite evil SIG level here
 
-EOF
+	EOF
 	exeinto /etc/init.d
 	doexe ${FILESDIR}/sendmail
 	keepdir /usr/adm/sm.bin
@@ -169,6 +160,12 @@ EOF
 		dosed 's/} sendmail/} sendmail.sendmail/' /etc/init.d/sendmail
 	fi
 
+}
+
+pkg_preinst() {
+	if ! groupmod smmsp; then
+		groupadd smmsp || die "problem adding group smmsp"
+	fi
 }
 
 pkg_postinst() {
