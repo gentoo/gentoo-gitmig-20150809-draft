@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/activeheart
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/activeheart/ChangeLog,v 1.2 2004/08/30 19:44:41 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/activeheart/ChangeLog,v 1.3 2004/11/28 10:21:59 centic Exp $
+
+  28 Nov 2004; Dominik Stadler <centic@gentoo.org> activeheart-1.2.1.ebuild:
+  Add missing IUSE, mark stable on x86
 
   30 Aug 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   activeheart-1.2.1.ebuild:
