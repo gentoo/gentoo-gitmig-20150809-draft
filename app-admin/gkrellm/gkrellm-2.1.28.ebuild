@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.28.ebuild,v 1.1 2004/03/18 17:30:49 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.28.ebuild,v 1.2 2004/03/30 00:29:14 pylon Exp $
 
 S=${WORKDIR}/${P/a/}
 DESCRIPTION="Single process stack of various system monitors"
@@ -9,7 +9,7 @@ SRC_URI="http://web.wt.net/~billw/gkrellm/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~ia64"
+KEYWORDS="~x86 ppc ~alpha ~sparc ~hppa ~amd64 ~ia64"
 IUSE="X nls ssl"
 
 DEPEND=">=sys-apps/sed-4
