@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/intltool
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.43 2004/06/29 02:28:31 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/ChangeLog,v 1.44 2004/09/15 22:04:47 foser Exp $
+
+*intltool-0.31.2 (16 Sep 2004)
+
+  16 Sep 2004; foser <foser@gentoo.org> intltool-0.31.2.ebuild :
+  New release (#62484), now uses DESTDIR
 
   28 Jun 2004; Tom Gall <tgall@gentoo.org> intltool-0.30.ebuild:
   stable on ppc64
