@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/gallery
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.1 2004/08/15 10:00:35 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/gallery/ChangeLog,v 1.2 2004/08/19 06:35:48 rl03 Exp $
+
+*gallery-1.4.4-r1 (19 Aug 2004)
+
+  19 Aug 2004; Renat Lumpau <rl03@gentoo.org> +files/vuln-20040817.diff,
+  +gallery-1.4.4-r1.ebuild:
+  Fix for possible PHP insertion (bug #60742). Updated for webapp.eclass (bug
+  #58375).
 
 *gallery-1.4.3_p2 (15 Aug 2004)
 

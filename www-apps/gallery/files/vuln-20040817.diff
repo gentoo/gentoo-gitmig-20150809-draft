@@ -1,0 +1,17 @@
+--- save_photos.php.orig	2004-08-18 21:47:09.000000000 +0100
++++ save_photos.php	2004-08-18 21:54:21.000000000 +0100
+@@ -128,6 +128,14 @@
+ //			$name = eregi_replace(".$tag\$", "", $name);
+ 
+ 		}
++
++		$l_aTags = explode(".", $url);
++		if (!acceptableFormat($l_aTags[count($l_aTags) -1])
++		{
++			processingMsg(sprintf(_("URL %s doesn't contain a supported image"), $url));
++			continue;
++		}
++
+ 		/* Dont output warning messages if we cant open url */
+ 	
+ 		/*
