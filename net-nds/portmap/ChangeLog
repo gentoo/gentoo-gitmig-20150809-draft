@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/portmap
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/ChangeLog,v 1.23 2004/07/01 22:37:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/ChangeLog,v 1.24 2004/08/02 04:21:21 agriffis Exp $
+
+  02 Aug 2004; Aron Griffis <agriffis@gentoo.org> portmap-5b-r8.ebuild,
+  portmap-5b-r9.ebuild:
+  Add enewuser/enewgroup for rpc #41759
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> portmap-5b-r7.ebuild,
   portmap-5b-r8.ebuild, portmap-5b-r9.ebuild:

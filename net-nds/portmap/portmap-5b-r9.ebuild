@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-5b-r9.ebuild,v 1.3 2004/07/01 22:37:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-5b-r9.ebuild,v 1.4 2004/08/02 04:21:21 agriffis Exp $
 
 inherit eutils
 
@@ -88,3 +88,7 @@ src_install() {
 	dodoc BLURB CHANGES README
 }
 
+pkg_postinst() {
+	enewgroup rpc 111
+	enewuser rpc 111 /bin/false /dev/null rpc
+}
