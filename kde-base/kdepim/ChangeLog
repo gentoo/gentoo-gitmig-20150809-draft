@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.22 2003/01/08 21:45:57 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.23 2003/01/17 08:46:31 danarmak Exp $
+
+  17 Jan 2003; Dan Armak <danarmak@gentoo.org> kdepim-2.2.2.ebuild  :
+
+  Disable building kpilot, beacuse it cannot be built under gcc3.2.1/glibc
+  2.3.1. Oh, and if anyone still use kde 2 under Gentoo, we'd like to hear
+  about it :-)
 
   08 Jan 2003; Mark Guertin <gerk@gentoo.org> kdepim-3.1_rc6.ebuild:
   added ~ppc to keywords
