@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.4.ebuild,v 1.5 2003/12/08 14:33:14 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.4.ebuild,v 1.6 2003/12/08 19:40:45 brad Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins
 
@@ -54,14 +54,14 @@ DEPEND="${RDEPEND}
 export MOZ_THUNDERBIRD=1
 export MOZ_ENABLE_XFT=1
 
-pkg_setup() {
-	einfo "Please unmerge previous installs of Mozilla Thunderbird before"
-	einfo "merging this. Running emerge unmerge mozilla-thunderbird && rm -rf"
-	einfo "/usr/lib/MozillaThunderbird will ensure that all files are"
-	einfo "removed. If you need to do this, please press ctrl-c now and"
-	einfo "resume emerging once you're done."
-	sleep 5
-}
+#pkg_setup() {
+#	einfo "Please unmerge previous installs of Mozilla Thunderbird before"
+#	einfo "merging this. Running emerge unmerge mozilla-thunderbird && rm -rf"
+#	einfo "/usr/lib/MozillaThunderbird will ensure that all files are"
+#	einfo "removed. If you need to do this, please press ctrl-c now and"
+#	einfo "resume emerging once you're done."
+#	sleep 5
+#}
 
 src_unpack() {
 
