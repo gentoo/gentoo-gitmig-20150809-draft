@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.0.1.ebuild,v 1.7 2002/10/05 17:50:20 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.0.1.ebuild,v 1.8 2002/11/01 18:49:58 vapier Exp $
 
 IUSE="kde gnome"
 
@@ -84,7 +84,7 @@ src_install() {
 	virtualmake "-v -r:${T}/autoresponse"
 
 	echo
-	einfo "Removing build root from registy..."
+	einfo "Removing build root from registry..."
 	# Remove totally useless stuff.
 	rm -f ${D}${INSTDIR}/program/{setup.log,sopatchlevel.sh}
 	# Remove build root from registry and co
