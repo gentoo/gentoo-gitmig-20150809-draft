@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/mpich-1.2.4.ebuild,v 1.3 2003/02/13 16:24:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mpich/mpich-1.2.4.ebuild,v 1.4 2003/09/11 01:29:22 msterret Exp $
 
 S=${WORKDIR}/mpich-${PV}
 DESCRIPTION="MPICH - A portable MPI implementation"
@@ -19,8 +19,8 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}/romio/util/
-        mv romioinstall.in romioinstall.in-orig
-        sed -e "s|docdir=\"\$datadir/lam/doc\"|docdir=\"${D}/usr/share/doc/${PF}\"|" romioinstall.in-orig >romioinstall.in
+	mv romioinstall.in romioinstall.in-orig
+	sed -e "s|docdir=\"\$datadir/lam/doc\"|docdir=\"${D}/usr/share/doc/${PF}\"|" romioinstall.in-orig >romioinstall.in
 
 }
 

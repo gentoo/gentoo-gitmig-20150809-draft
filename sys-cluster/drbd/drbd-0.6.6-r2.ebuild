@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-0.6.6-r2.ebuild,v 1.1 2003/09/02 15:46:17 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-0.6.6-r2.ebuild,v 1.2 2003/09/11 01:29:22 msterret Exp $
 
 LICENSE="GPL-2"
 KEYWORDS="x86"
@@ -25,11 +25,11 @@ src_unpack() {
 
 src_compile() {
 	check_KV
-        einfo ""
-        einfo "Your kernel-sources in /usr/src/linux-${KV} must be properly configured"
+	einfo ""
+	einfo "Your kernel-sources in /usr/src/linux-${KV} must be properly configured"
 	einfo "and match the currently running kernel version ${KV}"
-        einfo "If otherwise -> build will fail."
-        einfo ""
+	einfo "If otherwise -> build will fail."
+	einfo ""
 	cd ${S}
 	emake || die
 }
