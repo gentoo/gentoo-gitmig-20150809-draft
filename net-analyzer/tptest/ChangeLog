@@ -1,6 +1,6 @@
 # ChangeLog for net-analyzer/tptest
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tptest/ChangeLog,v 1.3 2004/03/21 23:23:10 weeve Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tptest/ChangeLog,v 1.4 2004/06/24 22:22:14 agriffis Exp $
 
   21 Mar 2004; Jason Wever <weeve@gentoo.org> tptest-3.1.2.ebuild:
   Added ~sparc keyword.

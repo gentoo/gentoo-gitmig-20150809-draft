@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netspeed_applet/netspeed_applet-0.8.ebuild,v 1.5 2004/05/21 00:20:11 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netspeed_applet/netspeed_applet-0.8.ebuild,v 1.6 2004/06/24 22:12:21 agriffis Exp $
 
 IUSE=""
 DESCRIPTION="Applet showing network traffic for GNOME 2"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nload/nload-0.5.0.ebuild,v 1.9 2004/03/21 12:58:30 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nload/nload-0.5.0.ebuild,v 1.10 2004/06/24 22:13:22 agriffis Exp $
 
 inherit eutils
 

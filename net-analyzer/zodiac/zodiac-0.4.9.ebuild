@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zodiac/zodiac-0.4.9.ebuild,v 1.2 2003/03/07 23:35:49 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/zodiac/zodiac-0.4.9.ebuild,v 1.3 2004/06/24 22:24:19 agriffis Exp $
 
 DESCRIPTION="DNS protocol analyzer"
 HOMEPAGE="http://www.packetfactory.net/projects/zodiac/"

@@ -1,6 +1,6 @@
 # ChangeLog for net-analyzer/quidscor
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/quidscor/ChangeLog,v 1.1 2003/12/01 07:03:48 vapier Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/quidscor/ChangeLog,v 1.2 2004/06/24 22:16:27 agriffis Exp $
 
 *quidscor-1.2.48 (01 Dec 2003)
 

@@ -1,6 +1,6 @@
 # ChangeLog for net-analyzer/sniffit
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/ChangeLog,v 1.6 2003/07/28 15:43:51 azarah Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/ChangeLog,v 1.7 2004/06/24 22:18:13 agriffis Exp $
 
 *sniffit-0.3.7-r1 (28 Jul 2003)
 

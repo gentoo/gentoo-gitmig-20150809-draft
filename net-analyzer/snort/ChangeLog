@@ -1,6 +1,6 @@
 # ChangeLog for net-analyzer/snort
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.43 2004/06/19 20:38:06 hansmi Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.44 2004/06/24 22:18:26 agriffis Exp $
 
   19 Jun 2004; Michael Hanselmann <hansmi@gentoo.org> snort-2.0.6.ebuild:
   Marked snort 2.0.6 as ~ppc

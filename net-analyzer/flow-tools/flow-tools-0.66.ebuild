@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/flow-tools-0.66.ebuild,v 1.2 2003/07/13 11:30:11 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/flow-tools-0.66.ebuild,v 1.3 2004/06/24 22:01:26 agriffis Exp $
 
 DESCRIPTION="Flow-tools is a package for collecting and processing NetFlow data"
 HOMEPAGE="http://www.splintered.net/sw/flow-tools/"

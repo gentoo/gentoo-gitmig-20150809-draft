@@ -1,6 +1,6 @@
 # ChangeLog for net-analyzer/siphon
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/siphon/ChangeLog,v 1.4 2004/03/22 12:38:40 mboman Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/siphon/ChangeLog,v 1.5 2004/06/24 22:17:53 agriffis Exp $
 
   22 Mar 2004; Michael Boman <mboman@gentoo.org> metadata.xml,
   siphon-666.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nload/nload-0.6.0.ebuild,v 1.3 2004/04/03 06:43:05 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nload/nload-0.6.0.ebuild,v 1.4 2004/06/24 22:13:22 agriffis Exp $
 
 DESCRIPTION="console application which monitors network traffic and bandwidth usage in real time"
 SRC_URI="mirror://sourceforge/nload/${P}.tar.gz"

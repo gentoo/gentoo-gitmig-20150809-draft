@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-2.0.0_rc2-r1.ebuild,v 1.8 2004/06/09 17:55:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-2.0.0_rc2-r1.ebuild,v 1.9 2004/06/24 22:03:30 agriffis Exp $
 
 inherit eutils
 

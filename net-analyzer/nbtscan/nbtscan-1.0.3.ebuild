@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbtscan/nbtscan-1.0.3.ebuild,v 1.8 2003/02/13 13:45:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbtscan/nbtscan-1.0.3.ebuild,v 1.9 2004/06/24 22:09:50 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="NBTscan is a program for scanning IP networks for NetBIOS name information"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.4.ebuild,v 1.5 2004/06/03 20:47:02 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.4.ebuild,v 1.6 2004/06/24 22:01:02 agriffis Exp $
 
 inherit libtool flag-o-matic gcc eutils
 

@@ -1,6 +1,6 @@
 # ChangeLog for net-analyzer/chaosreader
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/chaosreader/ChangeLog,v 1.6 2004/06/17 21:27:34 spock Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/chaosreader/ChangeLog,v 1.7 2004/06/24 21:58:40 agriffis Exp $
 
   17 Jun 2004; Michal Januszewski <spock@gentoo.org> chaosreader-0.93.ebuild,
   chaosreader-0.94.ebuild:

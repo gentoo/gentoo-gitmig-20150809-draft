@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/angst/angst-0.4b.ebuild,v 1.5 2003/09/05 23:40:08 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/angst/angst-0.4b.ebuild,v 1.6 2004/06/24 21:55:36 agriffis Exp $
 
 IUSE=""
 DESCRIPTION="Angst is an active sniffer. It provides methods for aggressive sniffing on switched LANs."

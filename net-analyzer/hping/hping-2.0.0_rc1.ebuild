@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-2.0.0_rc1.ebuild,v 1.13 2004/06/09 17:55:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/hping-2.0.0_rc1.ebuild,v 1.14 2004/06/24 22:03:30 agriffis Exp $
 
 # NOTE: author couldn't make up mind over tarball names, directory names,
 # etc... hense the need to hardcode S and SRC_URI :(

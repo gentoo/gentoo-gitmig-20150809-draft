@@ -1,6 +1,6 @@
 # ChangeLog for net-analyzer/traceroute
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.16 2003/11/29 23:29:38 vapier Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/traceroute/ChangeLog,v 1.17 2004/06/24 22:22:25 agriffis Exp $
 
 *traceroute-1.4_p12-r2 (29 Nov 2003)
 

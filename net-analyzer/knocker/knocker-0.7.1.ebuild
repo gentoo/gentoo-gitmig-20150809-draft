@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/knocker/knocker-0.7.1.ebuild,v 1.7 2004/04/15 19:50:16 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/knocker/knocker-0.7.1.ebuild,v 1.8 2004/06/24 22:06:18 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Knocker is an easy to use security port scanner written in C"

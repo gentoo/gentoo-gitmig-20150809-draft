@@ -1,6 +1,6 @@
 # ChangeLog for net-analyzer/dsniff
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/ChangeLog,v 1.9 2004/05/03 10:07:00 dholm Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/ChangeLog,v 1.10 2004/06/24 22:00:09 agriffis Exp $
 
   03 May 2004; David Holm <dholm@gentoo.org> dsniff-2.3-r2.ebuild:
   Added to ~ppc.

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/tcptraceroute-1.5_beta5.ebuild,v 1.1 2004/06/08 16:07:26 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/tcptraceroute-1.5_beta5.ebuild,v 1.2 2004/06/24 22:21:31 agriffis Exp $
 
 MY_P=${P/_beta/beta}
 MY_PV=${PV/_beta/beta}

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.7.0_pre1.ebuild,v 1.1 2004/04/26 20:27:13 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.7.0_pre1.ebuild,v 1.2 2004/06/24 22:01:14 agriffis Exp $
 
 
 # the actual version is "NG-0.7.0" but I suppose portage people will not be
