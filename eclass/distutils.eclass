@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.10 2003/04/04 01:38:10 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.11 2003/04/28 02:46:51 vapier Exp $
 #
 # Author: Jon Nelson <jnelson@gentoo.org>
 #
 # The distutils eclass is designed to allow easier installation of
-# distutils-based python modules, and their incorporation into 
+# distutils-based python modules and their incorporation into 
 # the Gentoo Linux system.
 
 ECLASS=distutils

@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-dist.eclass,v 1.40 2003/04/27 13:49:00 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-dist.eclass,v 1.41 2003/04/28 02:46:51 vapier Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
-# This is the kde-dist eclass for >=2.2.1 kde base packages. Don't use for kdelibs though :-)
-# Don't use it for e.g. kdevelop, koffice because of their separate versionnig schemes.
+# This is the kde-dist eclass for >=2.2.1 kde base packages.  Don't use for kdelibs though :-)
+# Don't use it for e.g. kdevelop, koffice because of their separate versioning schemes.
 
 inherit kde
 ECLASS=kde-dist
