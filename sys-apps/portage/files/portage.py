@@ -84,9 +84,10 @@ def isfifo(x):
 
 def movefile(src,dest):
 	"""moves a file from src to dest, preserving all permissions and attributes."""
-	if os.path.exists(dest):
-		os.unlink(dest)
-	a=getstatusoutput("cp -a "+"'"+src+"' '"+dest+"'")	
+	if dest!="/bin/cp":
+		if os.path.exists(dest):
+			os.unlink(dest)
+	a=getstatusoutput("/bin/cp -a "+"'"+src+"' '"+dest+"'")	
 	os.unlink(src)
 	if a[0]==0:
 		return 1

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-21.6.ebuild,v 1.1 2000/10/18 04:14:03 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-21.6.ebuild,v 1.2 2000/10/27 23:56:30 drobbins Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -51,7 +51,7 @@ pkg_postinst() {
 	. ${ROOT}/etc/rc.d/config/functions
 
 	einfo "Activating boot-menu..."
-	ln -s boot-menu.b $ROOT/boot/boot.b;
+	ln -sf boot-menu.b $ROOT/boot/boot.b;
 
 }
 
