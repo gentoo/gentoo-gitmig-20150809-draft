@@ -1,0 +1,121 @@
+--- work.orig/streamripper-1.32/lib/types.h
++++ work/streamripper-1.32/lib/types.h
+@@ -33,6 +33,7 @@
+ #define MAX_URI_STRING		1024
+ #define MAX_ERROR_STR       (4096)
+ #define MAX_USERAGENT_STR	1024
++#define MAX_AUTH_LEN            255
+ 
+ #ifdef WIN32
+ 	#ifndef _WINSOCKAPI_
+--- work.orig/streamripper-1.32/lib/http.c
++++ work/streamripper-1.32/lib/http.c
+@@ -41,6 +41,8 @@
+ /*********************************************************************************
+  * Private functions
+  *********************************************************************************/
++static char* make_auth_header(const char *header_name, 
++			      const char *username, const char *password);
+ char* b64enc(const char *buf, int size);
+ 
+ 
+@@ -72,6 +74,11 @@
+ 		if (ret < 2) return SR_ERROR_PARSE_FAILURE;
+ 		url = strchr(url, '@') + 1;
+ 	}
++	else
++	{
++		urlinfo->username[0] = '\0';
++		urlinfo->password[0] = '\0';
++	}
+ 
+ 	//
+ 	// search for a port seperator
+@@ -115,33 +122,58 @@
+ 					"GET %s HTTP/1.0\r\n"
+ 					"Host: %s:%d\r\n"
+ 					"User-Agent: %s\r\n"
+-					"Icy-MetaData:1\r\n"
+-					"Accept: */*\r\n", 
++					"Icy-MetaData:1\r\n", 
+ 					myurl, 
+ 					ui.host, 
+ 					ui.port, 
+ 					useragent[0] ? useragent : "Streamripper/1.x");
+ 
+ 	//
++	// http authentication (not proxy, see below for that)
++	// 
++	if (ui.username[0] && ui.password[0])
++	{
++		char *authbuf = make_auth_header("Authorization", 
++						 ui.username,
++						 ui.password);
++		strcat(buffer, authbuf);
++		free(authbuf);
++	}
++
++	//
+ 	// proxy auth stuff
+ 	//
+ 	if (proxyurl && proxyui.username[0] && proxyui.password[0])
+ 	{
+-		char *authbuf = malloc(strlen(proxyui.username)+strlen(proxyui.password)+MAX_URI_STRING);
+-		char *auth64;
+-
+-		sprintf(authbuf, "%s:%s", proxyui.username, proxyui.password);
+-		auth64= b64enc(authbuf, strlen(authbuf));
+-		sprintf(authbuf, "Proxy-Authorization: Basic %s\r\n", auth64);
+-
++		char *authbuf = make_auth_header("Proxy-Authorization",
++						 proxyui.username,
++						 proxyui.password);
+ 		strcat(buffer, authbuf);
++		free(authbuf);
+ 	}
+-
++	
+ 	strcat(buffer, "\r\n");
+ 
+-    return SR_SUCCESS;
++	return SR_SUCCESS;
+ }
+ 
++// Make the 'Authorization: Basic xxxxxx\r\n' or 'Proxy-Authorization...' 
++// headers for the HTTP request.
++static char* make_auth_header(const char *header_name, 
++			      const char *username, const char *password) 
++{
++	char *authbuf = malloc(strlen(header_name) 
++			       + strlen(username)
++			       + strlen(password)
++			       + MAX_URI_STRING);
++	char *auth64;
++	sprintf(authbuf, "%s:%s", username, password);
++	auth64 = b64enc(authbuf, strlen(authbuf));
++	sprintf(authbuf, "%s: Basic %s\r\n", header_name, auth64);
++	free(auth64);
++	return authbuf;
++}
++
+ // Here we pretend we're IE 5, hehe
+ error_code httplib_construct_page_request(const char *url, BOOL proxyformat, char *buffer)
+ {
+--- work.orig/streamripper-1.32/CHANGES
++++ work/streamripper-1.32/CHANGES
+@@ -1,3 +1,15 @@
++new in cvs
++----------
++
++2003/09/25:
++* Added support for HTTP "Basic" authorization. Works with DigitallyImported.com.
++  (lib/types.h, lib/http.c) -Colin D. Bennett <cbennett@radsoft.com>
++* Fixed a couple of tiny memory leaks in the usage of b64enc(), the
++  returned buffer allocated as 'string' in b64enc wasn't being freed,
++  and the 'authbuf' malloc'd in httplib_construct_sc_request for the 
++  proxy authorization wasn't freed.
++  (lib/http.c) -Colin D. Bennett <cbennett@radsoft.com>
++
+ new in 1.30b (win32 & nix)
+ --------------
+ 
