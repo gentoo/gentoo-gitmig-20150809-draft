@@ -1,0 +1,19 @@
+--- shadow-4.0.3/libmisc/Makefile.am.old	2002-03-10 02:11:55.000000000 -0500
++++ shadow-4.0.3/libmisc/Makefile.am	2004-01-09 21:09:15.000000000 -0500
+@@ -58,4 +58,4 @@
+ 	valid.c \
+ 	xmalloc.c
+ 
+-libmisc_la_LIBADD = $(LIBCRACK)
++libmisc_la_LIBADD = $(LIBCRACK) $(LIBPAM)
+--- shadow-4.0.3/libmisc/Makefile.in.old	2002-03-13 14:04:01.000000000 -0500
++++ shadow-4.0.3/libmisc/Makefile.in	2004-01-09 21:09:27.000000000 -0500
+@@ -167,7 +167,7 @@
+ 	xmalloc.c
+ 
+ 
+-libmisc_la_LIBADD = $(LIBCRACK)
++libmisc_la_LIBADD = $(LIBCRACK) $(LIBPAM)
+ subdir = libmisc
+ mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
+ CONFIG_HEADER = $(top_builddir)/config.h

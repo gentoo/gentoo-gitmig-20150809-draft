@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r10.ebuild,v 1.2 2004/01/10 01:39:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r10.ebuild,v 1.3 2004/01/10 02:37:14 agriffis Exp $
 
 IUSE="pam selinux"
 
@@ -17,7 +17,7 @@ SRC_URI="ftp://ftp.pld.org.pl/software/shadow/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="-*"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~mips ~hppa ~arm ~ia64 ~ppc64"
 
 DEPEND=">=sys-libs/cracklib-2.7-r3
 	pam? ( >=sys-libs/pam-0.75-r4 )
@@ -40,12 +40,20 @@ src_unpack() {
 
 	use selinux && epatch ${FILESDIR}/${SELINUX_PATCH}
 
-	# Get su to call pam_open_session(), and also set DISPLAY and XAUTHORITY,
-	# else the session entries in /etc/pam.d/su never get executed, and
-	# pam_xauth for one, is then never used.  This should close bug #8831.
-	#
-	# <azarah@gentoo.org> (19 Oct 2002)
-	use pam && epatch ${FILESDIR}/${P}-su-pam_open_session.patch-v2
+	if use pam; then
+		# Get su to call pam_open_session(), and also set DISPLAY and XAUTHORITY,
+		# else the session entries in /etc/pam.d/su never get executed, and
+		# pam_xauth for one, is then never used.  This should close bug #8831.
+		#
+		# <azarah@gentoo.org> (19 Oct 2002)
+		epatch ${FILESDIR}/${P}-su-pam_open_session.patch-v2
+
+		# libmisc needs to link against pam and pam_misc, at least
+		# when built as a shared object.  See bug 37725.
+		#
+		# <agriffis@gentoo.org> (09 Jan 2004)
+		epatch ${FILESDIR}/${P}-shared-needs-pam.patch
+	fi
 
 	# If su should not simulate a login shell, use '/bin/sh' as shell to enable
 	# running of commands as user with /bin/false as shell, closing bug #15015.
@@ -60,12 +68,6 @@ src_unpack() {
 }
 
 src_compile() {
-	# This static library should always be built with -fPIC (even on
-	# 32-bit platforms) because it is consumed in a shared object in
-	# freeradius.  See bug 37719 and
-	# http://marc.theaimsgroup.com/?l=gentoo-dev&m=107112691504786&w=2
-	append-flags -fPIC
-
 	# Allows shadow configure detect mips systems properly
 	gnuconfig_update
 
@@ -79,14 +81,14 @@ src_compile() {
 	./configure --disable-desrpc \
 		--with-libcrypt \
 		--with-libcrack \
-		--enable-shared=no \
+		--enable-shared=yes \
 		--enable-static=yes \
 		--host=${CHOST} \
 		`use_enable nls` \
 		${myconf} || die "bad configure"
 
 	# Parallel make fails sometimes
-	make || die "compile problem"
+	emake -j1 || die "compile problem"
 }
 
 src_install() {
