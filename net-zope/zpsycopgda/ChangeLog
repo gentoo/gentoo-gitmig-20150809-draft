@@ -1,0 +1,9 @@
+# ChangeLog for net-zope/zpsycopgda
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zpsycopgda/ChangeLog,v 1.1 2003/03/09 00:26:49 kutsuya Exp $
+
+*zpsycopgda-1.1.2 (08 Mar 2003)
+
+  08 Mar 2003; Jason Shoemaker <kutsuya@gentoo.org> zpsycopgda-1.1.2.ebuild:
+  Initial import.
+
