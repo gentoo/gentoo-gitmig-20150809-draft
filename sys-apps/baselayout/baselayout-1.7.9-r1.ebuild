@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.7.9-r1.ebuild,v 1.6 2002/08/14 02:57:01 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.7.9-r1.ebuild,v 1.7 2002/08/18 16:41:05 murphy Exp $
 
 SV="1.3.5"
 SVREV=""
@@ -66,6 +66,18 @@ src_unpack() {
 			Makefile.orig >Makefile || die
 	fi
 	
+	# Fix Sparc specific stuff
+	if [ "${ARCH}" == "sparc" -o "${ARCH}" == "sparc64" ]; then
+		cd ${S}/etc
+		cp rc.conf rc.conf.orig
+		sed -e 's:KEYMAP="us":KEYMAP="sun":' rc.conf.orig >rc.conf || die
+		rm rc.conf.orig
+
+		cp inittab inittab.orig
+		sed -e 's"# TERMINALS"# SERIAL CONSOLE\nc0:12345:respawn:/sbin/agetty 9600 ttyS0 linux\n\n# TERMINALS"' \
+			inittab.orig >inittab || die
+		rm inittab.orig
+	fi
 }
 
 src_compile() {
