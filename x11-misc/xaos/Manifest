@@ -1,5 +1,5 @@
-MD5 191604cb275d6d0479b2ccd5f97965ac xaos-3.1_pre5.ebuild 1575
-MD5 b17179d0ff5843279480ca9c846144c0 xaos-3.1.ebuild 1665
 MD5 ad32d9433a7ad7026521c629c1b07bd4 ChangeLog 868
+MD5 1fb0754cd3eba39b650c2e81358ed44d xaos-3.1.ebuild 1671
+MD5 6a526603517c0f5fb9726ee1e744e02e xaos-3.1_pre5.ebuild 1582
 MD5 f15bb8d89c74bd6168e7e67b16b789d4 files/digest-xaos-3.1 61
 MD5 94464bc3f5d2a609e7c9df60b40e022f files/digest-xaos-3.1_pre5 65
