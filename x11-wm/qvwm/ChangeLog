@@ -1,0 +1,11 @@
+# ChangeLog for x11-wm/qvwm
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/qvwm/ChangeLog,v 1.1 2003/10/17 22:34:00 usata Exp $
+
+*qvwm-1.1.12 (18 Oct 2003)
+
+  18 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> qvwm-1.1.12.ebuild:
+  Initial import. Ebuild submitted by Bernardo S. A. Silva
+  <bsaslinux@globo.com> and MATSUU Takuto <matsuu@gentoo.org>.
+  Closing Bug 17147.
+
