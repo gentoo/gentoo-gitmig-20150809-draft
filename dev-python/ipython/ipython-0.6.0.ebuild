@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.6.0.ebuild,v 1.3 2004/06/25 01:32:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ipython/ipython-0.6.0.ebuild,v 1.4 2005/01/25 22:46:16 lucass Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://ipython.scipy.org/"
 LICENSE="PYTHON"
 SLOT="0"
 IUSE="gnuplot"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="x86 ~amd64 ~ppc"
 DEPEND=">=dev-lang/python-2.2"
 RDEPEND="${DEPEND}
 	gnuplot? ( dev-python/gnuplot-py )"
