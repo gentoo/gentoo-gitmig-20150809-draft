@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/obconf
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.5 2003/09/25 14:00:24 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/obconf/ChangeLog,v 1.6 2003/09/27 01:23:54 weeve Exp $
+
+  26 Sep 2003; Jason Wever <weeve@gentoo.org> obconf-1.4.ebuild:
+  Added ~sparc keyword
 
 *obconf-1.4 (25 Sep 2003)
 
