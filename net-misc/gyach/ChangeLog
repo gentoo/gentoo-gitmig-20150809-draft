@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/gyach
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-#
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gyach/ChangeLog,v 1.2 2002/05/01 06:03:48 mkennedy Exp $
+
+*gyach-0.7.6 (30 Apr 2002)
+
+  30 Apr 2002; Matthew Kennedey <mkennedy@gentoo.org> ChangeLog,
+  gyach-0.7.6.ebuild, files/digest-gyach-0.7.6 :
+
+  Add more to docs (samples.*). Version bump to latest. Added LICENSE,
+  DEPEND fix.
 
 *gyach-0.7.5-r1 (4 Feb 2002)
 
