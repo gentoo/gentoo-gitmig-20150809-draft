@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/freeswan-1.99.ebuild,v 1.5 2003/09/05 22:01:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/freeswan-1.99.ebuild,v 1.6 2003/09/12 04:58:14 jhhudso Exp $
 
 X509_PATCH=0.9.15
 S=${WORKDIR}/${P}
@@ -21,8 +21,7 @@ pkg_setup() {
 	[ -d /usr/src/linux/net/ipsec ] || {
 		echo You need to have the crypto-enabled version of Gentoo Sources
 		echo with a symlink to it in /usr/src/linux in order to have IPSec
-		echo kernel compatibility.  Please emerge sys-kernel/crypto-sources,
-		echo compile an IPSec-enabled kernel and attempt this ebuild again.
+		echo kernel compatibility.
 		exit 1
 	}
 }
