@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.21.ebuild,v 1.3 2003/09/11 08:42:04 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.21.2.ebuild,v 1.1 2003/09/14 10:01:26 obz Exp $
 
 inherit gnome2
 
@@ -34,8 +34,9 @@ src_unpack( ) {
 
 	unpack ${A}
 	cd ${S}
-	# patch to prevent building the Sensors that are
-	# included here, we have them in x11-plugins/
+	# patch to prevent building the External and FontSelector
+	# sensors included here, because we're using the ones
+	# from x11-plugins/
 	epatch ${FILESDIR}/gdesklets-core-0.21-Sensors.patch
 
 }
