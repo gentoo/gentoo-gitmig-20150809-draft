@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/petrovich/petrovich-1.0.0.ebuild,v 1.13 2002/12/09 04:17:35 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/petrovich/petrovich-1.0.0.ebuild,v 1.14 2002/12/30 12:40:10 mholzer Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Filesystem Integrity Checker"
-SRC_URI="http://prdownloads.sf.net/petrovich/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://sourceforge.net/projects/petrovich"
 
 SLOT="0"

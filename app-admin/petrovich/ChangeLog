@@ -1,19 +1,19 @@
 # ChangeLog for app-admin/petrovich
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/petrovich/ChangeLog,v 1.4 2002/12/13 10:55:54 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/petrovich/ChangeLog,v 1.5 2002/12/30 12:40:10 mholzer Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
 *petrovich-1.0.0 (1 Feb 2002)
 
-  29 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> petrovich-1.0.0 :
+  30 Dec 2002; Martin Holzer <mholzer@gentoo.org> petrovich-1.0.0.ebuild ChangeLog :
+  Change SRC_URI to use mirror://sf
 
+  29 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> petrovich-1.0.0 :
   Added ppc to KEYWORDS. Added RDEPEND.
   
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
   writing correct changelogs are explained in the skel.ChangeLog file which you
   can find in the root directory of the portage repository.
+
