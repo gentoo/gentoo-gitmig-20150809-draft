@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.28 2004/07/09 10:57:35 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.29 2004/07/11 00:33:35 chrb Exp $
+
+  11 Jul 2004; Chris Bainbridge <chrb@gentoo.org> mythtv-0.15.1-r1.ebuild:
+  add inherit gcc
 
   09 Jul 2004; Chris Bainbridge <chrb@gentoo.org> mythtv-0.15.1-r1.ebuild:
   Add X to IUSE
