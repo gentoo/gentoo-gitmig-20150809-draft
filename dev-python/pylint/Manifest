@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ec38a2bb288265be711d131b462e9324 ChangeLog 1691
 MD5 96c74caf687d660f02f673950a52a0e1 pylint-0.4.0.ebuild 561
+MD5 bd2006ef804424a09d73223be7f5ac89 ChangeLog 1801
 MD5 de49db4ac5dda36b7186d0dd722ff41a pylint-0.4.2.ebuild 592
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 9ed3489d82701c8d91193821214bd749 files/digest-pylint-0.4.2 63
 MD5 7dc504c0fc2deb503cde73e6c3b60578 files/digest-pylint-0.4.0 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBxiu6ugEuf3OQ0akRAnvKAJwOwzibgyDSWGhDgTnk2mgAOnGLLwCfTt9/
-PDAiARl425vuGN54VMwoN14=
-=XEvd
------END PGP SIGNATURE-----
