@@ -177,6 +177,20 @@ to compile them from sources.</p>
 </section>
 </chapter>
 <chapter>
+<title>Here kernel. . .</title>
+<section>
+<body>
+<p>OK; even if you'd like to custom-compile your own kernel from the bootcd
+(yes, this is possible!) you need to emerge our default kernel package.  Everyone
+should do this:</p>
+<pre>
+# <i>emerge /usr/portage/packages/All/linux-2.4.4.9.tbz2</i>
+</pre>
+<p>If you want to compile your own kernel, I'll show you how in a bit.</p>
+</body>
+</section>
+</chapter>
+<chapter>
 <title>Do the chroot</title>
 <section>
 <body>
@@ -322,7 +336,11 @@ of any hostnames that may not be in your nameservers.  Here's a template for thi
 <p>Look in the <path>/etc/rc.d/config</path> directory; you'll see a file
 called <path>OFF_inet.eth0</path>.  Copy this file to <path>inet.eth0</path>, and edit the top part of it
 so that it contains the IP address settings you want to use on your first
-ethernet card.  Look in <path>/lib/modules</path> for the ethernet module
+ethernet card.  
+(If you dynamically obtain your IP address from DHCP then instead 
+copy <path>OFF_inet.dhcp_eth0</path>
+to <path>inet.dhcp_eth0</path>.  No editing should be required.)
+Look in <path>/lib/modules</path> for the ethernet module
 specific to your particular ethernet card, and append it to the
 <path>/etc/rc.d/config/modules</path> file (you can also add any options you
 need to the same line.)  Then, when Gentoo Linux boots, this module will be
@@ -407,10 +425,18 @@ use GRUB to boot a bootable Windows partition.</p>
 your root filesystem.  <path>(hd0,2)</path> contains the NT boot
 loader.</note> <p>Also, if you need to pass any options to the kernel, simply
 add them to the end of the <c>kernel</c> command.  We're already passing one option
-(<c>root=/dev/hda2</c>), but you can pass others as well.  There's one in particular
+(<c>root=/dev/hda2</c>), but you can pass others as well.  
+<!--
+There's one in particular
 that you may be interested in.  If you want to enable devfs (a special device
 filesystem), you can add the <c>devfs=mount</c> option at the end of the <c>kernel</c>
-line.  </p>
+line.  
+-->
+<note>Unlike in earlier versions of Gentoo Linux, you no longer have to add 
+<c>devfs=mount</c> to the end of the <c>kernel</c> line to enable devfs.  In rc5
+devfs is enabled by default.
+</note>
+</p>
 
 </body>
 </section>
