@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-2.4.0.ebuild,v 1.5 2003/10/21 02:49:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/libgtkhtml-2.4.0.ebuild,v 1.6 2003/10/22 12:03:12 darkspecter Exp $
 
 inherit eutils gnome2
 
@@ -9,7 +9,7 @@ DESCRIPTION="a Gtk+ based HTML rendering library"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="1"
 LICENSE="LGPL-2.1 GPL-2"
-KEYWORDS="x86 ~ppc alpha ~sparc amd64"
+KEYWORDS="x86 ppc alpha ~sparc amd64"
 
 # FIXME : seems only testapps need gnomevfs
 RDEPEND=">=x11-libs/gtk+-2

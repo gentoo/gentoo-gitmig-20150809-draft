@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/zenity
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.7 2003/10/17 14:43:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/ChangeLog,v 1.8 2003/10/22 12:03:13 darkspecter Exp $
+
+  22 Oct 2003; Bartosch Pixa <darkspecter@gentoo.org> zenity-1.6.ebuild:
+  set ppc in keywords
 
   17 Oct 2003; Aron Griffis <agriffis@gentoo.org> zenity-1.6.ebuild:
   Stable on alpha
