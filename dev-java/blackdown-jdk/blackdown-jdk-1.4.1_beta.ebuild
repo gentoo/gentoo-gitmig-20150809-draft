@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1_beta.ebuild,v 1.2 2002/10/18 21:46:41 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1_beta.ebuild,v 1.3 2002/10/24 17:42:05 azarah Exp $
 
 . /usr/portage/eclass/inherit.eclass
 inherit java
@@ -23,7 +23,7 @@ KEYWORDS="~x86 -ppc -sparc -sparc64"
 IUSE="mozilla doc"
 
 src_unpack () {
-	tail +350 ${DISTDIR}/${A} | tar xjf -
+	tail +350 ${DISTDIR}/${A} | tar --no-same-owner -jxp
 }
 
 
@@ -34,7 +34,7 @@ src_install () {
 	cp -dpR ${S}/{bin,jre,lib,man,include,include-old} ${D}/opt/${P}
 
 	dodir /opt/${P}/share/java
-	cp -R ${S}/{demo,src.jar} ${D}/opt/${P}/share
+	cp -R ${S}/{demo,src}.{jar,zip} ${D}/opt/${P}/share
 	
 	dodoc COPYRIGHT LICENSE README INSTALL
 	dohtml README.html
