@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/kuvert/kuvert-1.1.8.ebuild,v 1.1 2004/09/03 20:47:12 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/kuvert/kuvert-1.1.8.ebuild,v 1.2 2004/09/04 23:04:14 dholm Exp $
 
 MY_P=${P/-/_}
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.snafu.priv.at/mystuff/kuvert/"
 SRC_URI="http://www.snafu.priv.at/mystuff/kuvert/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64"
+KEYWORDS="~amd64 ~ppc"
 IUSE=""
 SLOT="0"
 
