@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/hylafax
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.47 2005/01/11 15:34:23 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.48 2005/02/18 06:50:22 nerdboy Exp $
+
+*hylafax-4.2.1 (17 Feb 2005)
+
+  17 Feb 2005; Steve Arnold <nerdboy@gentoo.org> +hylafax-4.2.1.ebuild:
+  Version bump to address bugs 64291 and 80534; all previous patches
+  incorporated upstream.  C++ make break on parallel makes, but it
+  builds fine with -j1 and a cool-running system...
 
 *hylafax-4.2.0-r2 (11 Jan 2005)
 
