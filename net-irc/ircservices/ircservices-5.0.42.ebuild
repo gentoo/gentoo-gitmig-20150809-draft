@@ -1,15 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ircservices-5.0.41.ebuild,v 1.5 2004/12/05 01:13:37 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircservices/ircservices-5.0.42.ebuild,v 1.1 2004/12/05 01:13:38 swegener Exp $
 
 inherit eutils fixheadtails flag-o-matic
 
 DESCRIPTION="ChanServ, NickServ & MemoServ with support for several IRC daemons"
 HOMEPAGE="http://www.ircservices.za.net/"
-SRC_URI="mirror://gentoo/${P}.tar.gz"
+SRC_URI="ftp://ftp.esper.net/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 DEPEND=""
@@ -27,6 +27,8 @@ src_unpack() {
 }
 
 src_compile() {
+	append-flags -fno-stack-protector
+
 	./configure \
 		-cflags "${CFLAGS}" \
 		-bindest /usr/bin \
