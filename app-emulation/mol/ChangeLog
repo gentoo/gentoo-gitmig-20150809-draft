@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/mol
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.44 2005/01/28 20:06:05 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/ChangeLog,v 1.45 2005/02/20 04:59:31 josejx Exp $
+
+  20 Feb 2005; Joseph Jezak <josejx@gentoo.org>
+  +files/mol-0.9.71_pre1-big-filesystem.patch, mol-0.9.71_pre1.ebuild:
+  Added big filesystem image patch from bug #80098.
 
   28 Jan 2005; Michael Hanselmann <hansmi@gentoo.org>
   +files/mol-0.9.71_pre1-linux-2.6.9.patch, mol-0.9.70.ebuild,

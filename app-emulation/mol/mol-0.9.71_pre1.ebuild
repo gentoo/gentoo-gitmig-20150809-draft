@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.71_pre1.ebuild,v 1.3 2005/01/28 20:06:05 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mol/mol-0.9.71_pre1.ebuild,v 1.4 2005/02/20 04:59:31 josejx Exp $
 
 inherit flag-o-matic eutils
 
@@ -38,6 +38,9 @@ src_unpack() {
 
 	# Fixes bug 79428
 	epatch ${FILESDIR}/${P}-linux-2.6.9.patch
+
+	# Adds big filesystem (>2Gb) image support, bug #80098
+	epatch ${FILESDIR}/${P}-big-filesystem.patch
 
 	# dhcp config fix and show dchpd messages on starting mol
 	sed -i "s:#ddns-update-style:ddns-update-style:g" Doc/config/dhcpd-mol.conf || die
