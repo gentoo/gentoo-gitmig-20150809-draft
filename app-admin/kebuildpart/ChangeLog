@@ -1,9 +1,13 @@
 # ChangeLog for app-admin/kebuildpart
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/kebuildpart/ChangeLog,v 1.3 2002/07/09 18:44:27 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/kebuildpart/ChangeLog,v 1.4 2002/08/13 20:47:30 pvdabeel Exp $
 
 *kebuildpart-0.3-r1 (09 Jul 2002)
 
+  13 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> :
+  
+  Compilation failed for both 0.3 and 0.3-r1 on ppc with qt version 3.0.4-20020606-r1, I'll try again with qt-3.0.5 later
+  
   09 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
   new version that installs the missing kebuildview.h to fix #4724.

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/kebuildpart/kebuildpart-0.3-r1.ebuild,v 1.5 2002/07/27 10:44:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/kebuildpart/kebuildpart-0.3-r1.ebuild,v 1.6 2002/08/13 20:47:30 pvdabeel Exp $
 
 inherit kde-base || die
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://kemerge.sourceforge.net/"
 
 
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86" #does not compile on ppc with qt version 3.0.4 - see Changelog
 
 src_unpack () {
 	base_src_unpack
