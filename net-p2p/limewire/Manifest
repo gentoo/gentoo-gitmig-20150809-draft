@@ -1,6 +1,9 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fb722980f8659267692de9efc81ef1f3 limewire-4.1.4.ebuild 1316
 MD5 44992ccf7ae489f0842db68c901523c1 limewire-4.0.8.ebuild 1453
-MD5 a5a3a11858e0f043cd616faa3cff2b08 limewire-4.1.5.ebuild 1512
+MD5 b9103ab4b36debd15f51d9d62907d387 limewire-4.1.5.ebuild 1586
 MD5 e2c19d4895302fc5ed133c250781e321 ChangeLog 1289
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
 MD5 f0bc044b80e93fa644c558352bbc8cee files/limewire.desktop 295
@@ -8,3 +11,10 @@ MD5 4bc9de1c64fa197e07a0ce419a562cc5 files/main-icon.png 1457
 MD5 54690e8cf4fe2f9308c9d79afcd97e2e files/digest-limewire-4.0.8 69
 MD5 aea545f7079f321b066bea364358391b files/digest-limewire-4.1.4 69
 MD5 7431943b1829b30578f3496683725fdd files/digest-limewire-4.1.5 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBO/zicAgAdbxYsnERAqP5AJsH9gNF9c56IaSVZivsV8MXutOPEgCffWcK
+59uzXktHqn8vfNXSgOZn4wM=
+=hGu2
+-----END PGP SIGNATURE-----
