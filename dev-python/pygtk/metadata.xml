@@ -3,4 +3,10 @@
 <pkgmetadata>
 <herd>gnome</herd>
 <herd>python</herd>
+<longdescription>
+PyGTK provides a convenient wrapper for the GTK+ library for use in
+Python programs, taking care of many of the boring details such as
+managing memory and type casting. When combined with PyORBit and
+gnome-python, it can be used to write full featured Gnome applications.
+</longdescription>
 </pkgmetadata>

@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.2.0.ebuild,v 1.8 2004/07/10 16:37:55 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-2.3.92.ebuild,v 1.1 2004/07/10 16:37:55 lucass Exp $
 
 inherit gnome.org python
 
 DESCRIPTION="GTK+2 bindings for Python"
 HOMEPAGE="http://www.pygtk.org/"
-SRC_URI="ftp://ftp.gnome.org/pub/gnome/sources/pygtk/2.2/${P}.tar.bz2"
+SRC_URI="ftp://ftp.gnome.org/pub/gnome/sources/pygtk/2.3/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="2"
@@ -15,10 +15,10 @@ IUSE="gnome opengl"
 
 RDEPEND=">=dev-lang/python-2.2
 	>=x11-libs/pango-1
-	>=x11-libs/gtk+-2.2
+	>=x11-libs/gtk+-2.4.0
 	>=dev-libs/atk-1
-	>=dev-libs/glib-2
-	gnome? ( >=gnome-base/libglade-2 )
+	>=dev-libs/glib-2.4.0
+	gnome? ( >=gnome-base/libglade-2.3.6 )
 	opengl? ( virtual/opengl
 		dev-python/PyOpenGL
 		>=x11-libs/gtkglarea-1.99 )"

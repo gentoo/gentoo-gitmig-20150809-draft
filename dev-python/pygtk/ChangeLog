@@ -1,6 +1,14 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.50 2004/07/04 09:56:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.51 2004/07/10 16:37:55 lucass Exp $
+
+*pygtk-2.3.92 (10 Jul 2004)
+
+  10 Jul 2004; Lukasz Strzygowski <lucass@gentoo.org> metadata.xml,
+  pygtk-0.6.11-r1.ebuild, pygtk-2.0.0.ebuild, pygtk-2.2.0.ebuild, pygtk-0.6.11.ebuild,
+  pygtk-1.99.13-r1.ebuild, pygtk-2.0.0-r1.ebuild, pygtk-2.3.92.ebuild:
+  Added and hardmasked ebuild for 2.3.92 (unstable branch). Added
+  long description to metadata.xml. Updated homepage's url to http://www.pygtk.org/.
 
   04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> pygtk-2.0.0-r1.ebuild:
   Stable on alpha.
