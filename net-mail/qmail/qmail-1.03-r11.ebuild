@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r11.ebuild,v 1.1 2003/08/05 11:46:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r11.ebuild,v 1.2 2003/08/06 07:48:38 robbat2 Exp $
 
 inherit eutils
 
@@ -43,33 +43,42 @@ PROVIDE="virtual/mta
 S=${WORKDIR}/${P}
 
 src_unpack() {
-	unpack ${P}.tar.gz qmail-tls.patch.tbz2
+
+	# This makes life easy
+	EPATCH_OPTS="-d ${S}" 
+
+	# unpack the initial stuff
+	unpack ${P}.tar.gz qmail-tls.patch.tbz2 qmail-smtpd-auth-0.31.tar.gz
 
 	# SMTP AUTH
-	unpack qmail-smtpd-auth-0.31.tar.gz
-	cd ${WORKDIR}/qmail-smtpd-auth-0.31
-	cp README.auth base64.c base64.h ${S}
-	cd ${S}
-	epatch ../qmail-smtpd-auth-0.31/auth.patch
+	cp ${WORKDIR}/qmail-smtpd-auth-0.31/{README.auth,base64.c,base64.h} ${S}
+
+	EPATCH_SINGLE_MSG="Adding SMTP AUTH support" \
+	epatch qmail-smtpd-auth-0.31/auth.patch
+
 	# Fixes a problem when utilizing "morercpthosts"
 	epatch ${FILESDIR}/${PV}-${PR}/smtp-auth-close3.patch
 
 	# TLS support and an EHLO patch
 	if use ssl 
 	then
-		ebegin "Applying tls.patch.bz2..."
-		bzcat ${WORKDIR}/tls.patch.bz2 | patch -p1 &>/dev/null || die
+		#bzcat ${WORKDIR}/tls.patch.bz2 | patch -p1 &>/dev/null || die
+		ebegin "Adding TLS support" 
+		bzcat ${WORKDIR}/tls.patch.bz2 | patch -p1 -d ${S} &>/dev/null || die
 		eend $?
 	fi
 
 	# patch so an alternate queue processor can be used
 	# i.e. - qmail-scanner
+	EPATCH_SINGLE_MSG="Adding QMAILQUEUE support" \
 	epatch ${DISTDIR}/qmailqueue-patch	
 
 	# a patch for faster queue processing
+	EPATCH_SINGLE_MSG="Patching for large queues" \
 	epatch ${DISTDIR}/big-todo.103.patch
 
 	# Support for remote hosts that have QMTP
+	EPATCH_SINGLE_MSG="Adding support for remote QMTP hosts" \
 	epatch ${DISTDIR}/qmail-1.03-qmtpc.patch
 
 	# Fix for tabs in .qmail bug noted at
@@ -78,7 +87,6 @@ src_unpack() {
 	epatch ${DISTDIR}/qmail-local-tabs.patch
 
 	# Account for Linux filesystems lack of a synchronus link()
-	cd ${S}
 	epatch ${DISTDIR}/qmail-link-sync.patch
 
 	# Increase limits for large mail systems
@@ -96,6 +104,8 @@ src_unpack() {
 	# Reject some bad relaying attempts
 	# gentoo bug #18064 
 	epatch ${DISTDIR}/qmail-smtpd-relay-reject
+
+	cd ${S}
 
 	if [ `use ssl` ]; then
 		echo "${CC} ${CFLAGS} -DTLS" > conf-cc
@@ -172,7 +182,7 @@ src_install() {
 		doman $i
 	done
 
-	einfo "Adding /var/qmail/bin to PATH and ROOTPATH"
+	einfo "Adding env.d entry for qmail"
 	dodir /etc/env.d
 	insinto /etc/env.d
 	doins ${FILESDIR}/${PV}-${PR}/99qmail 
@@ -280,6 +290,9 @@ pkg_postinst() {
 	[ -e ${ROOT}/var/qmail/queue/lock/trigger ] || mkfifo ${ROOT}/var/qmail/queue/lock/trigger
 	chmod 622 ${ROOT}/var/qmail/queue/lock/trigger
 	chown qmails.qmail ${ROOT}/var/qmail/queue/lock/trigger
+
+	# for good measure
+	env-update
 
 	einfo "Please do not forget to run, the following syntax :"
 	einfo "ebuild /var/db/pkg/${CATEGORY}/${PN}-${PV}-${PR}/${PN}-${PV}-${PR}.ebuild config"

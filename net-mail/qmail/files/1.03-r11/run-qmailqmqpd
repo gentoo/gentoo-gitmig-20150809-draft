@@ -4,8 +4,8 @@
 SERVICE=qmqp
 
 # We run this afterwards to allow appending of values etc.
-[ -s ${CONTROLDIR}/conf-common ] && source ${CONTROLDIR}/conf-common
-[ -s ${CONTROLDIR}/conf-${SERVICE}d ] && source ${CONTROLDIR}/conf-${SERVICE}d
+[ -s ${QMAIL_CONTROLDIR}/conf-common ] && source ${QMAIL_CONTROLDIR}/conf-common
+[ -s ${QMAIL_CONTROLDIR}/conf-${SERVICE}d ] && source ${QMAIL_CONTROLDIR}/conf-${SERVICE}d
 
 # Now run it all
 exec /usr/bin/softlimit -m 8000000 \
