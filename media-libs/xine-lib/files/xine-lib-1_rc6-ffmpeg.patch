@@ -1,0 +1,44 @@
+--- src/libffmpeg/xine_decoder.h_old	2004-09-18 23:42:37.480104064 +0900
++++ src/libffmpeg/xine_decoder.h	2004-09-18 23:42:50.224166672 +0900
+@@ -41,7 +41,7 @@
+ #endif
+ 
+ #ifdef HAVE_FFMPEG
+-#  include <avcodec.h>
++#  include <ffmpeg/avcodec.h>
+ #else
+ #  include "libavcodec/avcodec.h"
+ #endif
+--- src/libffmpeg/video_decoder.c_old	2004-09-19 00:13:50.512359880 +0900
++++ src/libffmpeg/video_decoder.c	2004-09-19 00:14:29.522429448 +0900
+@@ -48,7 +48,7 @@
+ #include "mpeg_parser.h"
+ 
+ #ifdef HAVE_FFMPEG
+-#  include <postprocess.h>
++#  include <postproc/postprocess.h>
+ #else
+ #  include "libavcodec/libpostproc/postprocess.h"
+ #endif
+--- src/libffmpeg/dvaudio_decoder.c_old	2004-09-19 00:28:37.116575552 +0900
++++ src/libffmpeg/dvaudio_decoder.c	2004-09-19 00:28:56.180677368 +0900
+@@ -57,7 +57,7 @@
+ #endif
+ 
+ #ifdef HAVE_FFMPEG
+-#  include <avcodec.h>
++#  include <ffmpeg/avcodec.h>
+ #  include "libavcodec/dvdata.h"
+ #else
+ #  include "libavcodec/avcodec.h"
+--- src/libffmpeg/xine_encoder.c_old	2004-09-19 00:27:52.558349432 +0900
++++ src/libffmpeg/xine_encoder.c	2004-09-19 00:28:21.745912248 +0900
+@@ -41,7 +41,7 @@
+ #include "video_out_dxr3.h"
+ 
+ #ifdef HAVE_FFMPEG
+-#  include <avcodec.h>
++#  include <ffmpeg/avcodec.h>
+ #else
+ #  include "libavcodec/avcodec.h"
+ #endif
