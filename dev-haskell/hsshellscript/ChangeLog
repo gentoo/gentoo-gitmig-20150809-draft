@@ -1,6 +1,16 @@
 # ChangeLog for dev-haskell/hsshellscript
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsshellscript/ChangeLog,v 1.1 2005/01/24 14:20:03 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hsshellscript/ChangeLog,v 1.2 2005/03/04 03:16:13 araujo Exp $
+
+  03 Mar 2005; Luis F. Araujo <araujo@gentoo.org> metadata.xml,
+  hsshellscript-2.1.0.ebuild:
+  Fixed the installation problem of the libraries
+
+*hsshellscript-2.1.0 (03 Mar 2005)
+
+  03 Mar 2005; Luis F. Araujo <araujo@gentoo.org> metadata.xml,
+  hsshellscript-2.1.0.ebuild:
+  Fixed the installation problem of the libraries
 
   24 Jan 2005; Andres Loeh <kosmikus@gentoo.org> :
   Initial import (bug #79170).
