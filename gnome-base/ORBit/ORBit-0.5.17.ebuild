@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit/ORBit-0.5.17.ebuild,v 1.24 2004/07/14 15:20:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit/ORBit-0.5.17.ebuild,v 1.25 2004/07/16 03:24:18 tgall Exp $
 
 inherit gnome.org libtool gnuconfig
 
@@ -19,7 +19,7 @@ RDEPEND="virtual/libc
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc alpha mips hppa amd64 ppc ia64"
+KEYWORDS="x86 sparc alpha mips hppa amd64 ppc ia64 ppc64"
 
 src_compile() {
 	if ! use nls ; then
