@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.7.6.ebuild,v 1.3 2003/09/29 22:54:16 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.7.6.ebuild,v 1.4 2003/11/22 14:39:10 liquidx Exp $
 
 inherit flag-o-matic
 filter-flags -fPIC
@@ -15,14 +15,15 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
-IUSE="kde sse 3dnow"
+IUSE="kde sse 3dnow openal"
 
 DEPEND="virtual/x11
 	virtual/opengl
 	>=sys-apps/sed-4
 	>=media-gfx/imagemagick-5.5.7
 	kde? ( kde-base/kdeartwork )
-	!kde? ( x11-misc/xscreensaver )"
+	!kde? ( x11-misc/xscreensaver )
+	openal? ( media-libs/openal )"
 
 src_unpack() {
 	unpack ${A}
@@ -50,6 +51,7 @@ src_compile() {
 	econf \
 		`use_enable sse` \
 		`use_enable 3dnow` \
+		`use_enable openal sound` \
 		${myconf} || die
 	emake || die
 }
@@ -63,11 +65,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [ -f ${ROOT}/usr/X11R6/lib/X11/app-defaults/XScreenSaver ]; then
-		[ -n "`grep 'euphoria --root' /usr/X11R6/lib/X11/app-defaults/XScreenSaver`" ] && return 0
-		einfo "Adding Really Slick Screensavers to XScreenSaver"
+	local XSCREENSAVER_CONF="${ROOT}/usr/X11R6/lib/X11/app-defaults/XScreenSaver"
 
-		sed -i '/*programs:/a\
+	if [ -f ${XSCREENSAVER_CONF} -a -z "`grep 'Euphoria' ${XSCREENSAVER_CONF}`" ]; then
+		einfo "Adding Really Slick Screensavers to XScreenSaver"
+		sed -e '/*programs:/a\
 	GL:       \"Cyclone\"  cyclone --root     \\n\\\
 	GL:      \"Euphoria\"  euphoria --root    \\n\\\
 	GL:    \"Fieldlines\"  fieldlines --root  \\n\\\
@@ -86,7 +88,7 @@ pkg_postinst() {
 	GL:    \"MatrixView\"  matrixview --root  \\n\\\
 	GL:   \"Spirographx\"  spirographx --root \\n\\\
 	GL:   \"BusySpheres\"  busyspheres --root \\n\\' \
-	${ROOT}/usr/X11R6/lib/X11/app-defaults/XScreenSaver
+		-i ${XSCREENSAVER_CONF}
 
 	else
 		einfo "Unable to add these to XScreenSaver configuration"
@@ -96,8 +98,10 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
+	local XSCREENSAVER_CONF="${ROOT}/usr/X11R6/lib/X11/app-defaults/XScreenSaver"
+
 	has_version rss-glx && return 0
-	if [ -f ${ROOT}/usr/X11R6/lib/X11/app-defaults/XScreenSaver ]; then
+	if [ -f ${XSCREENSAVER_CONF} ]; then
 		einfo "Removing Really Slick Screensavers from XScreenSaver configuration."
 		sed \
 			-e '/\"Cyclone\"  cyclone/d' \
@@ -117,7 +121,7 @@ pkg_postrm() {
 			-e '/\"BioF\"  biof/d' \
 			-e '/\"MatrixView\"  matrixview/d' \
 			-e '/\"Spirographx\"  spirographx/d' \
-			-e '/\"BusySpheres\"  busyspheres/d' -i \
-			${ROOT}/usr/X11R6/lib/X11/app-defaults/XScreenSaver
+			-e '/\"BusySpheres\"  busyspheres/d' \
+			-i ${XSCREENSAVER_CONF}
 	fi
 }
