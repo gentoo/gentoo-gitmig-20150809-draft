@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# <aliz@gentoo.org> (31 Jul 2002)
+# Masked for testing
+=dev-libs/mm-1.2.1
+
 # Daniel Robbins <drobbins@gentoo.org> (30 Jul 2002)
 # no corresponding PyQt on cvs to get this thing to compile
 dev-python/anygui
