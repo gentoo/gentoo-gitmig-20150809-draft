@@ -1,17 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.20.ebuild,v 1.6 2004/01/15 17:57:31 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.20.ebuild,v 1.7 2004/01/26 01:04:07 vapier Exp $
 
 inherit eutils flag-o-matic
 
-IUSE="ssl slp pam"
-
 DESCRIPTION="The Common Unix Printing System"
-HOMEPAGE="http://www.cups.org"
-
-S=${WORKDIR}/${P}
+HOMEPAGE="http://www.cups.org/"
 SRC_URI="ftp://ftp.easysw.com/pub/cups/${PV}/${P}-source.tar.bz2"
-PROVIDE="virtual/lpr"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa amd64 ~ia64 ppc64"
+IUSE="ssl slp pam"
 
 DEPEND="virtual/glibc
 	pam? ( >=sys-libs/pam-0.75 )
@@ -21,25 +21,19 @@ DEPEND="virtual/glibc
 	>=media-libs/tiff-3.5.5
 	>=media-libs/jpeg-6b"
 RDEPEND="${DEPEND} !virtual/lpr"
-
 has_version net-print/foomatic && DEPEND="${DEPEND} >=net-print/foomatic-3.0.0"
-
-LICENSE="GPL-2"
-SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa amd64 ~ia64 ppc64"
-
-filter-flags -fomit-frame-pointer
+PROVIDE="virtual/lpr"
 
 src_unpack() {
-	unpack ${A} || die
-	cd ${S} || die
-
+	unpack ${A}
+	cd ${S}
 	epatch ${FILESDIR}/disable-strip.patch || die
-
-	WANT_AUTOCONF_2_5=1 autoconf || die
+	WANT_AUTOCONF=2.5 autoconf || die
 }
 
 src_compile() {
+	filter-flags -fomit-frame-pointer
+
 	local myconf
 	use amd64 && replace-flags -Os -O2
 	use pam || myconf="${myconf} --disable-pam"
