@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.3.ebuild,v 1.2 2003/02/02 15:16:08 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.3.ebuild,v 1.3 2003/02/13 13:39:52 vapier Exp $
 
 # dsniff needs to build it's own version of sys-libs/db, since the one 
 # normally installed is for some reason unusable for dsniffs configure script.

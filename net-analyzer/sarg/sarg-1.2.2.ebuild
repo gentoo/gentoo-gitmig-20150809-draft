@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/sarg-1.2.2.ebuild,v 1.3 2002/11/30 02:03:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/sarg-1.2.2.ebuild,v 1.4 2003/02/13 13:50:14 vapier Exp $
 
 DESCRIPTION="Sarg (Squid Analysis Report Generator) is a tool that allows you to view where your users are going to on the Internet."
 HOMEPAGE="http://web.onda.com.br/orso/sarg.html"

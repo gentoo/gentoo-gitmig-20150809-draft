@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpflow/tcpflow-0.20.ebuild,v 1.1 2002/10/29 17:51:26 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpflow/tcpflow-0.20.ebuild,v 1.2 2003/02/13 13:51:33 vapier Exp $
 
 DESCRIPTION="A Tool for monitoring, capturing and storing TCP connections flows"
 HOMEPAGE="http://www.circlemud.org/~jelson/software/tcpflow/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.0_beta6.ebuild,v 1.3 2002/11/19 09:08:50 alron Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.0_beta6.ebuild,v 1.4 2003/02/13 13:43:45 vapier Exp $
 DESCRIPTION="Nagios $PV core - Host and service monitor cgi, docs etc..."
 HOMEPAGE="http://www.nagios.org/"
 SRC_URI="http://telia.dl.sourceforge.net/sourceforge/nagios/nagios-1.0b6.tar.gz"

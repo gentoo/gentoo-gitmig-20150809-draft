@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.8.2-r1.ebuild,v 1.8 2002/12/09 04:33:08 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.8.2-r1.ebuild,v 1.9 2003/02/13 13:39:57 vapier Exp $
 
 IUSE="nls"
 DESCRIPTION="A graphical network monitor for Unix modeled after etherman"

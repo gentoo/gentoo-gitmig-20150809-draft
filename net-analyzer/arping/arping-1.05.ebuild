@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/arping-1.05.ebuild,v 1.2 2003/02/04 15:54:32 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/arping-1.05.ebuild,v 1.3 2003/02/13 13:39:02 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A utility to see if a specific IP address is taken and what MAC address owns it"

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/nagios-1.0_beta6.ebuild,v 1.4 2002/11/19 09:07:23 alron Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/nagios-1.0_beta6.ebuild,v 1.5 2003/02/13 13:43:27 vapier Exp $
 
 DESCRIPTION="Nagios $PV - merge this to pull install all of the nagios packages"
 HOMEPAGE="http://www.nagios.org/"

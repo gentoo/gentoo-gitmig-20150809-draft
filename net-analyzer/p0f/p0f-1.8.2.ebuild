@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/p0f-1.8.2.ebuild,v 1.10 2002/12/09 04:33:09 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/p0f-1.8.2.ebuild,v 1.11 2003/02/13 13:49:28 vapier Exp $
 
 DESCRIPTION="p0f performs passive OS detection based on SYN packets."
 SRC_URI="http://www.stearns.org/p0f/p0f-1.8.2.tgz"

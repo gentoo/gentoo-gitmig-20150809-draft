@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nsca/nagios-nsca-2.1.ebuild,v 1.1 2002/11/02 05:55:41 alron Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nsca/nagios-nsca-2.1.ebuild,v 1.2 2003/02/13 13:44:20 vapier Exp $
 DESCRIPTION="Nagios $PV NSCA  - Nagios Service Check Acceptor"
 HOMEPAGE="http://www.nagios.org/"
 SRC_URI="http://telia.dl.sourceforge.net/sourceforge/nagios/nsca-2.1.tar.gz"
