@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fujaba/fujaba-4.0.1.ebuild,v 1.1 2004/03/12 02:19:23 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fujaba/fujaba-4.0.1.ebuild,v 1.2 2004/03/22 20:10:26 dholm Exp $
 
 MY_PV="${PV//./_}"
 MY_PNB="Fujaba_${PV:0:1}"
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.uni-paderborn.de/cs/fujaba/index.html"
 SRC_URI="ftp://ftp.uni-paderborn.de/private/fujaba/${MY_PNB}/FujabaToolSuite_Developer${MY_PV}.zip"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 RDEPEND=">=virtual/jdk-1.4.1"
 
