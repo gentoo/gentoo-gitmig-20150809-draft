@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.2.ebuild,v 1.24 2004/07/14 15:09:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.2.ebuild,v 1.25 2004/07/30 03:09:05 tgall Exp $
 
 IUSE="doc nls kde"
 
@@ -11,7 +11,7 @@ DESCRIPTION="GNOME Core Libraries"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/sources/${PN}/1.4/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 LICENSE="GPL-2"
-KEYWORDS="x86 alpha hppa amd64 ia64 sparc mips ppc"
+KEYWORDS="x86 alpha hppa amd64 ia64 sparc mips ppc ppc64"
 #  ppc"
 
 RDEPEND=">=media-libs/imlib-1.9.10
