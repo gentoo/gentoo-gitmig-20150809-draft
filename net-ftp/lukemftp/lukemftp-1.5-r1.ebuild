@@ -14,7 +14,7 @@ DEPEND="virtual/glibc
 
 
 src_compile() {
-    try ./configure --host=$${CHOST} --prefix=/usr \
+    try ./configure --host=${CHOST} --prefix=/usr \
         --enable-editcomplete --program-prefix=lukemftp
 
     try make
