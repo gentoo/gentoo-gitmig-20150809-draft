@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6.ebuild,v 1.2 2004/12/26 23:06:03 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6.ebuild,v 1.3 2004/12/27 00:41:11 chriswhite Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -194,6 +194,9 @@ src_compile() {
 
 	# let's play the filtration game!  MPlayer hates on all!
 	strip-flags
+
+	#add -frename-registers per bug #75960
+	append-flags -frename-registers
 
 	# ugly optimizations cause MPlayer to cry on x86 systems!
 	if use x86 ; then
