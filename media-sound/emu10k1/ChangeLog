@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/emu10k1
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1/ChangeLog,v 1.13 2004/02/05 07:44:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1/ChangeLog,v 1.14 2004/02/06 12:14:01 eradicator Exp $
+
+  06 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  emu10k1-0.20a-r5.ebuild:
+  Added error message to pkg_setup that this module only works with 2.4.x
+  kernels.
 
   04 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
   emu10k1-0.20a-r5.ebuild:

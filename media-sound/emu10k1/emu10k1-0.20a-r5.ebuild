@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1/emu10k1-0.20a-r5.ebuild,v 1.4 2004/02/05 07:44:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1/emu10k1-0.20a-r5.ebuild,v 1.5 2004/02/06 12:14:01 eradicator Exp $
+
+inherit kernel-mod
 
 MY_P="${P/-/-v}"
 DESCRIPTION="Drivers, utilities, and effects for Sound Blaster cards (SBLive!, SB512, Audigy)"
@@ -19,6 +21,8 @@ S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
 	[ -z "$KV" ] && die "Couldn't detect kernel version.  Does /usr/src/linux exist?"
+	kernel-mod_is_2_4_kernel || die "This module is only compatible with 2.4.x kernels."
+
 	return 0
 }
 
@@ -35,8 +39,8 @@ src_compile() {
 	echo "MODVERSIONS := y" >> config
 	echo "DBGEMU := n" >> config
 
-	# Unset ARCH to prevent conflict.  See bug #40424
-	unset ARCH
+	# Unset ARCH to prevent conflict with 2.6 kernels.  See bug #40424
+	# unset ARCH
 
 	export KERNEL_SOURCE=/usr/src/linux
 	make || die "make failed"
