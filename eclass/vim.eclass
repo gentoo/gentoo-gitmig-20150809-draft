@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.99 2005/02/03 21:12:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.100 2005/02/08 21:40:17 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -196,6 +196,9 @@ vim_pkg_setup() {
 		eerror "and /etc/portage/package.* files."
 		die "${PF} not supported."
 	fi
+
+	# people with broken alphabets run into trouble. bug 82186.
+	unset LANG LC_ALL
 }
 
 vim_src_unpack() {
