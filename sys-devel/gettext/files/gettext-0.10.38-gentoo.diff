@@ -1,0 +1,22 @@
+diff -r -C2 gettext-0.10.38.orig/misc/Makefile.in gettext-0.10.38/misc/Makefile.in
+*** gettext-0.10.38.orig/misc/Makefile.in	Wed May 23 16:54:14 2001
+--- gettext-0.10.38/misc/Makefile.in	Tue Aug 21 22:05:17 2001
+***************
+*** 176,183 ****
+  	done
+  .el.elc:
+! 	@echo 'WARNING: Warnings can be ignored. :-)'
+! 	if test $(EMACS) != no; then \
+! 	  EMACS=$(EMACS) $(SHELL) $(srcdir)/elisp-comp $<; \
+! 	fi
+  
+  mostlyclean-lisp:
+--- 176,183 ----
+  	done
+  .el.elc:
+! 	#@echo 'WARNING: Warnings can be ignored. :-)'
+! 	#if test $(EMACS) != no; then \
+! 	#  EMACS=$(EMACS) $(SHELL) $(srcdir)/elisp-comp $<; \
+! 	#fi
+  
+  mostlyclean-lisp:
