@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/gauche-qdbm
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-qdbm/ChangeLog,v 1.2 2004/08/28 09:00:53 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/gauche-qdbm/ChangeLog,v 1.3 2004/12/06 03:33:11 weeve Exp $
+
+  05 Dec 2004; Jason Wever <weeve@gentoo.org> gauche-qdbm-0.2.ebuild:
+  Added ~sparc keyword.
 
   28 Aug 2004; Akinori Hattori <hattya@gentoo.org> gauche-qdbm-0.2.ebuild:
   stable on x86.
