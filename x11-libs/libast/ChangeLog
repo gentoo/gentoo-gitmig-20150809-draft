@@ -1,8 +1,11 @@
 # ChangeLog for x11-libs/libast
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/ChangeLog,v 1.7 2003/03/20 12:58:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libast/ChangeLog,v 1.8 2003/04/09 15:50:10 todd Exp $
 
 *libast-0.5-r1 (20 Mar 2003)
+
+  09 Apr 2003; Todd Sunderlin <todd@gentoo.org> libast-0.5-r1.ebuild:
+  Marked stable for sparc.
 
   20 Mar 2003; Seemant Kulleen <seemant@gentoo.org> libast-0.4-r1.ebuild,
   libast-0.4-r1.ebuild, libast-0.5-r1.ebuild:
