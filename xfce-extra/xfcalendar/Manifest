@@ -2,7 +2,7 @@ MD5 2396543c6386e20c62ce3bafc3932a33 ChangeLog 1271
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 ab3cba911827b56093dd356a52a32f96 xfcalendar-0.1.6.ebuild 841
 MD5 6f335138de0bbdde2c725025c115590e xfcalendar-0.1.5.ebuild 829
-MD5 8b0cbe3df2147d56ec33ecd9087057d3 xfcalendar-0.1.8.ebuild 865
+MD5 d46abb27288fd0e374e99eb977bbc509 xfcalendar-0.1.8.ebuild 863
 MD5 96ccbcd1888a4ceff37f93fdc83e8ab8 files/digest-xfcalendar-0.1.6 68
 MD5 90a52c03fafdb3ad10616f98833e54b9 files/digest-xfcalendar-0.1.5 68
 MD5 bfde7fbf93fd396d5dcef9c039375e66 files/digest-xfcalendar-0.1.8 68
