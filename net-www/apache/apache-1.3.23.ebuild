@@ -1,10 +1,10 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.22-r6.ebuild,v 1.2 2001/12/23 23:25:19 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.23.ebuild,v 1.1 2002/02/04 20:20:06 woodchip Exp $
 
-AV="1.3.22"
-MSV="2.8.5"
+AV="1.3.23"
+MSV="2.8.6"
 
 A="apache_${AV}.tar.gz mod_ssl-${MSV}-${AV}.tar.gz"
 S=${WORKDIR}/apache_${AV}
@@ -92,7 +92,6 @@ pkg_prerm() {
     if [ "$ROOT" = "/" ] && [ -e /dev/shm/.init.d/started/httpd ] ; then
 	/etc/init.d/httpd stop
     fi
-    return # dont fail
 }
 
 pkg_preinst() {
@@ -100,5 +99,4 @@ pkg_preinst() {
     if [ "$ROOT" = "/" ] && [ -e /dev/shm/.init.d/started/httpd ] ; then
 	/etc/init.d/httpd stop
     fi
-    return # dont fail
 }
