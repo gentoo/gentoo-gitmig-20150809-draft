@@ -1,0 +1,14 @@
+# ChangeLog for sys-apps/pcmcia-cs-tools
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs-tools/ChangeLog,v 1.1 2003/02/02 18:20:02 chadh Exp $
+
+*pcmcia-cs-tools-3.2.3 (23 Jan 2003)
+
+  23 Jan 2003; Chad Huneycutt <chadh@gentoo.org> pcmcia-cs-tools-3.2.3.ebuild :
+  This package installs just the tools (cardmgr, etc.) from pcmcia-cs.
+  Installing this ebuild achieves almost the same result as installing the old
+  pcmcia-cs package with pcmcia enabled in the kernel config.  The advantage of
+  having a separate ebuild is more apparent in the context of this ebuild's
+  partner, pcmcia-cs-drivers, which installs just the pcmcia-cs modules.
+  Hopefully this new separation will make it easier to configure your laptop
+  exactly as needed.
