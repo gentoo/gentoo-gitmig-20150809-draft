@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/bluefish
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.12 2002/12/13 10:56:05 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.13 2002/12/14 21:14:04 hanno Exp $
+
+*bluefish-0.8 (14 Dec 2002)
+
+  14 Dec 2002; Hanno Boeck <hanno@gentoo.org> bluefish-0.8.ebuild :
+  New version supporting GTK 2.
+  Snapshots of gtk2 port removed.  
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
