@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.165 2004/11/04 13:45:22 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.166 2004/11/07 23:30:53 josejx Exp $
+
+  08 Nov 2004; Joseph Jezak <josejx@gentoo.org> kdelibs-3.3.1.ebuild:
+  Marked ppc stable.
 
   04 Nov 2004; Jason Wever <weeve@gentoo.org> kdelibs-3.3.1.ebuild:
   Stable on sparc wrt security bug #69936.
