@@ -1,6 +1,15 @@
 # ChangeLog for media-libs/flac
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.44 2005/02/05 12:49:35 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.45 2005/02/18 22:49:55 chainsaw Exp $
+
+*flac-1.1.2 (18 Feb 2005)
+
+  18 Feb 2005; Tony Vroon <chainsaw@gentoo.org>
+  +files/flac-1.1.2-libtool.patch, +files/flac-1.1.2-m4.patch,
+  +flac-1.1.2.ebuild:
+  Version bump to 1.1.2; slotted to avoid breakage. PPC keywords temporarily
+  dropped until the Altivec-on-non-Darwin patches are ported. Closes bug
+  #81291.
 
   05 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> flac-1.1.0-r1.ebuild,
   flac-1.1.0-r2.ebuild, flac-1.1.0.ebuild, flac-1.1.1.ebuild:
