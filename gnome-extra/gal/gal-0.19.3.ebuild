@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.19.3.ebuild,v 1.4 2002/08/19 06:01:32 spider Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.19.3.ebuild,v 1.5 2002/10/04 05:36:33 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The Gnome Application Libraries"

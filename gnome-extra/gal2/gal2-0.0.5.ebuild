@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal2/gal2-0.0.5.ebuild,v 1.4 2002/09/06 04:32:58 spider Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal2/gal2-0.0.5.ebuild,v 1.5 2002/10/04 05:36:40 vapier Exp $
 
 inherit gnome2
 

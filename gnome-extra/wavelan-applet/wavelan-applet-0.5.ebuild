@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Distributed under the terms of the GNU General Public License v2
 # Authour: Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/wavelan-applet/wavelan-applet-0.5.ebuild,v 1.4 2002/08/16 04:14:00 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/wavelan-applet/wavelan-applet-0.5.ebuild,v 1.5 2002/10/04 05:39:57 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNOME Panel applet that shows the strength of a wavelan connection"

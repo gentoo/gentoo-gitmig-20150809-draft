@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mc/mc-4.6.0_pre1.ebuild,v 1.1 2002/08/28 08:22:12 naz Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mc/mc-4.6.0_pre1.ebuild,v 1.2 2002/10/04 05:39:38 vapier Exp $
 
 MY_T="${PN}-4.6.0-pre1"
 S=${WORKDIR}/${MY_T}
