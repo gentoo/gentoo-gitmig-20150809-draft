@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.42 2004/02/06 20:35:45 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.43 2004/02/09 09:31:40 gmsoft Exp $
+
+  09 Feb 2004; Guy Martin <gmsoft@gentoo.org> pam-0.75-r11.ebuild,
+  pam-0.77.ebuild:
+  Marked stable on hppa. Removed arm keywords to commit.
 
   06 Feb 2004; Martin Schlemmer <azarah@gentoo.org> pam-0.77.ebuild:
   Bump to stable for x86.

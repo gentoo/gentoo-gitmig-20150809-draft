@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r11.ebuild,v 1.23 2004/01/30 07:30:01 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r11.ebuild,v 1.24 2004/02/09 09:31:40 gmsoft Exp $
 
 IUSE="berkdb selinux"
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.kernel.org/pub/linux/libs/pam/pre/library/Linux-PAM-${PV}.ta
 HOMEPAGE="http://www.kernel.org/pub/linux/libs/pam/"
 
 LICENSE="BSD | GPL-2"
-KEYWORDS="amd64 x86 ppc sparc alpha hppa arm mips"
+KEYWORDS="amd64 x86 ppc sparc alpha hppa mips"
 SLOT="0"
 
 RDEPEND=">=sys-libs/cracklib-2.7-r3
