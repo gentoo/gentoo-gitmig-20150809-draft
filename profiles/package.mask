@@ -353,10 +353,6 @@ media-video/kxine
 # Masked for testing.
 =net-mail/procmail-3.22-r3
 
-# <spider@gentoo.org> (16 Jul 2002)
-# Masking this out due to feature incompleteness
-dev-libs/libmrproject
->=app-office/mrproject-0.5.90
 
 # <spider@gentoo.org> (25 Jul 2002)
 # we need to fix deps on >=dev-util/gob-1.0.x
