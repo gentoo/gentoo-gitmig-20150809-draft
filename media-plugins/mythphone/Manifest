@@ -1,3 +1,5 @@
+MD5 8e19f5aa425b7e7aa3ff93b6afb5163d ChangeLog 338
 MD5 20e2255501865de5b568424821abf69d metadata.xml 161
-MD5 45687946188b74b2fa46842229bb3502 mythphone-0.16.ebuild 545
+MD5 c2a5769c5abb62fe6aaa1b7eb505047a mythphone-0.16.ebuild 754
+MD5 c8a5b3151324b04836f22f4d9586c498 files/mythphone-0.16-include.patch 242
 MD5 bf30357411353ae10a9bafe9186a9fe8 files/digest-mythphone-0.16 67
