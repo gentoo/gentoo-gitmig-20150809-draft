@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/qt-embedded-3.3.2.ebuild,v 1.1 2004/07/01 14:02:46 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/qt-embedded-3.3.2.ebuild,v 1.2 2004/07/02 09:48:37 mr_bones_ Exp $
 
 DESCRIPTION="QT version ${PV}"
 HOMEPAGE="http://www.trolltech.com/"
@@ -79,7 +79,7 @@ src_compile() {
 	emake symlinks src-qmake src-moc sub-src sub-tools || die "making main"
 	cd ${S}/tools/designer/uic && emake || die "making uic"
 	cd ${S}/tools/assistant/lib && emake || die "making qassistantclientlib"
-	
+
 	if ! use doc; then
 		cd ${S} && emake sub-tutorial || die "making tutorial"
 		LD_LIBRARY_PATH="${S}/lib:${LD_LIBRARY_PATH}" \
@@ -90,7 +90,7 @@ src_compile() {
 src_install() {
 	INSTALL_ROOT=${D} emake install
 
-	# symlinks shouldn't be necessary! The qmakespec file tells qmake to use the 
+	# symlinks shouldn't be necessary! The qmakespec file tells qmake to use the
 	# correct library. Uncomment these if it causes a problem
 	# libqt -> libqt-mt symlinks
 #	into ${QTBASE}/lib
