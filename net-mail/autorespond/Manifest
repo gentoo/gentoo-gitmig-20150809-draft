@@ -1,4 +1,5 @@
-# $Header: /var/cvsroot/gentoo-x86/net-mail/autorespond/Manifest,v 1.2 2003/12/26 04:00:59 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/autorespond/Manifest,v 1.3 2003/12/26 04:02:18 robbat2 Exp $
 MD5 4395509dd47d56d86de93c5e1ea0ead8 autorespond-2.0.4.ebuild 843
-MD5 dc47220ee06c480bfc804c2453afc060 ChangeLog 396
+MD5 ded2483de9014eceb20b18a2b1a7e548 ChangeLog 486
+MD5 5e658b705b2985d36d82b2a5d218ec78 metadata.xml 224
 MD5 43cfadac548b18767864b6c01797df5f files/digest-autorespond-2.0.4 137
