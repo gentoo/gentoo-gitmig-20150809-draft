@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/readline
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.24 2003/06/24 14:35:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.25 2003/09/17 22:41:05 avenj Exp $
+
+  17 Sep 2003; Jon Portnoy <avenj@gentoo.org> readline-4.3-r4.ebuild :
+  ia64 keywords.
 
   24 Jun 2003; Aron Griffis <agriffis@gentoo.org> readline-4.3-r4.ebuild:
   Mark stable on alpha

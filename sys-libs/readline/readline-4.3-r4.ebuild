@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r4.ebuild,v 1.17 2003/09/07 00:22:30 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r4.ebuild,v 1.18 2003/09/17 22:41:09 avenj Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="amd64 x86 ppc sparc alpha hppa arm mips"
+KEYWORDS="amd64 x86 ppc sparc alpha hppa arm mips ia64"
 
 # We must be sertain that we have a bash that is linked
 # to its internal readline, else we may get problems.

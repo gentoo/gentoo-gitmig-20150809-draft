@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/slang
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.16 2003/07/19 11:33:53 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.17 2003/09/17 22:47:01 avenj Exp $
+
+  17 Sep 2003; Jon Portnoy <avenj@gentoo.org> slang-1.4.9.ebuild :
+  ia64 keywords.
 
   19 Jul 2003; Alastair Tse <liquidx@gentoo.org> slang-1.4.5-r2.ebuild,
   slang-1.4.5-r3.ebuild:
