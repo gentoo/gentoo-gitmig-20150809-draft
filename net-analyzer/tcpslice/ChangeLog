@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tcpslice
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpslice/ChangeLog,v 1.5 2004/07/08 22:58:30 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpslice/ChangeLog,v 1.6 2004/07/10 11:19:37 eldad Exp $
+
+  10 Jul 2004; Eldad Zack <eldad@gentoo.org> tcpslice-1.1_alpha3.ebuild:
+  Changed to mirror://debian
 
   09 Jul 2004; Eldad Zack <eldad@gentoo.org> tcpslice-1.1_alpha3.ebuild:
   Tidy up.
