@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-1.0.2.ebuild,v 1.12 2004/12/22 02:45:46 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-1.0.2-r1.ebuild,v 1.1 2004/12/22 02:45:46 obz Exp $
 
 inherit gnome2 eutils
 
