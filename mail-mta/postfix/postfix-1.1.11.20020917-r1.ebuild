@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-1.1.11.20020917-r1.ebuild,v 1.3 2004/06/24 22:24:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-1.1.11.20020917-r1.ebuild,v 1.4 2004/07/14 16:53:02 agriffis Exp $
 
-IUSE="ssl mysql sasl ldap ipv6"
+IUSE="ipv6 ldap mysql pam sasl ssl"
 
 PF_PV=1.1.11-20020917
 PF_P=postfix-${PF_PV}
