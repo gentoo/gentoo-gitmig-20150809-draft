@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/attr
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.26 2004/02/21 23:30:05 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.27 2004/02/27 01:02:53 lu_zero Exp $
+
+*attr-2.4.8 (27 Feb 2004)
+
+  27 Feb 2004; Luca Barbato <lu_zero@gentoo.org> attr-2.4.7-r1.ebuild,
+  attr-2.4.8.ebuild:
+  Fixed a ppc issue unsetting the PLATFORM variable, solves bug #42937, version
+  bump
 
   21 Feb 2004; Jason Wever <weeve@gentoo.org> attr-2.4.7-r1.ebuild:
   Changed sparc fix so now it's an actual fix rather than a workaround.

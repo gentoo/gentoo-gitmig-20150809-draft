@@ -1,17 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.7-r1.ebuild,v 1.14 2004/02/27 01:02:53 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.8.ebuild,v 1.1 2004/02/27 01:02:53 lu_zero Exp $
 
 inherit eutils
 
 DESCRIPTION="xfs extended attributes tools"
 HOMEPAGE="http://oss.sgi.com/projects/xfs"
-SRC_URI="ftp://oss.sgi.com/projects/xfs/download/cmd_tars/${P}.src.tar.gz
+SRC_URI="ftp://oss.sgi.com/projects/xfs/download/latest/cmd_tars/${P}.src.tar.gz
 		http://acl.bestbits.at/current/tar/${P}.src.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha ~hppa mips ~amd64 ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64"
 IUSE="nls debug"
 
 DEPEND=">=sys-apps/portage-2.0.47-r10
@@ -35,13 +35,10 @@ src_compile() {
 	if use debug; then
 		DEBUG=-DDEBUG
 		OPTIMIZER="-g"
-		CFLAGS=
-		CXXFLAGS=
-		export DEBUG OPTIMIZER CFLAGS CXXFLAGS
+		export DEBUG OPTIMIZER
 	else
 		DEBUG=-DNDEBUG
 		OPTIMIZER=""
-		# note that CFLAGS is already inherited!
 		export DEBUG OPTIMIZER
 	fi
 
@@ -55,7 +52,6 @@ src_compile() {
 		-e 's:^PKG_\(.*\)_DIR = \(.*\)$:PKG_\1_DIR = ${DESTDIR}\2:' \
 		-e 's:-O1::' -e 's:../$(INSTALL) -S \(.*\) $(PKG_.*_DIR)/\(.*$\)::' \
 		include/builddefs
-
 	make || die
 }
 
