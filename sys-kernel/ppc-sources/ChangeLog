@@ -1,16 +1,15 @@
 # ChangeLog for sys-kernel/ppc-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ChangeLog,v 1.30 2003/12/02 07:55:45 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ChangeLog,v 1.31 2003/12/05 17:21:16 plasmaroo Exp $
 
 *ppc-sources-2.4.22-r3 (02 Dec 2003)
 
   02 Dec 2003; Brian Jackson <iggy@gentoo.org> ppc-sources-2.4.22-r3.ebuild:
-  version bump for do_brk vuln
+  Version bump for the 'do_brk' vulnerability.
 
   01 Dec 2003; Brian Jackson <iggy@gentoo.org> ppc-sources-2.4.21-r2.ebuild,
   ppc-sources-2.4.22-r1.ebuild, ppc-sources-2.4.22-r2.ebuild,
-  files/do_brk_fix.patch:
-  fix do_brk vuln
+  files/do_brk_fix.patch: Fix the 'do_brk' vulnerability.
 
 *ppc-sources-2.4.22-r2 (20 Nov 2003)
 
@@ -20,7 +19,7 @@
   ppc-sources-2.4.21-r2.ebuild, ppc-sources-2.4.22-r1.ebuild,
   ppc-sources-2.4.22-r2.ebuild:
   Move version handling logic to after inherit kernel, or insert it where
-  necessary
+  necessary.
 
   26 Oct 2003; David Holm <dholm@gentoo.org> ppc-sources-2.4.22-r1.ebuild,
   files/ppc-sources-2.4.22-r1.via-pmu.diff:
@@ -37,13 +36,13 @@
   ppc-sources-2.4.20-r2.ebuild, ppc-sources-2.4.20-r3.ebuild,
   ppc-sources-2.4.20-r4.ebuild, ppc-sources-2.4.21-r1.ebuild,
   ppc-sources-2.4.21-r2.ebuild, ppc-sources-2.4.22-r1.ebuild:
-  now uses mirror://kernel.
+  Now uses mirror://kernel.
 
   12 Jun 2003; <msterret@gentoo.org> ppc-sources-2.4.19-r3.ebuild,
   ppc-sources-2.4.19-r4.ebuild, ppc-sources-2.4.19-r5.ebuild,
   ppc-sources-2.4.19-r6.ebuild, ppc-sources-2.4.19.ebuild,
   ppc-sources-2.4.20-r1.ebuild:
-  fix Header
+  Fix the header.
 
 *ppc-sources-2.4.21-r2 (25 Jun 2003)
 
@@ -74,7 +73,7 @@
 *ppc-sources-2.4.20-r3 (11 Feb 2003)
 
   15 Mar 2003; Mark Guertin <gerk@gentoo.org> ppc-sources-2.4.20-r3.ebuild:
-  set ppc in keywords
+  Set ppc in the keywords.
 
   10 Feb 2003; Olivier Reisch <doctomoe@gentoo.org> ppc-sources-2.4.20-r2.ebuild:
   Added missing SLOT to ebuild.
@@ -82,13 +81,12 @@
 *ppc-sources-2.4.20-r2 (18 Dec 2002)
 
   08 Jan 2003; Mark Guertin <gerk@gentoo.org> ppc-sources-2.4.20-r2.ebuild:
-  Set keyword to ppc
+  Set keyword to 'ppc'.
 
   23 Dec 2002; Christian Birchinger <joker@gentoo.org> :     
-  Removed sparc64 keyword.
+  Removed 'sparc64' keyword.
 
   18 Dec 2002; Kain <kain@kain.org> ppc-sources-2.4.20-r2 :
-
   New PPC kernel.  ext2/3 ACL & xattr patches are now included, as well as
   freeswan and some other miscellaneous fixes.  This kernel is made from
   benh's ppc.bkbits.net linuxppc_2_4_benh tree as of changeset 1.755.
@@ -102,10 +100,9 @@
   17 Dec 2002; Brandon Low <lostlogic@gentoo.org>:
   Make all kernel-sources SLOT="${KV}"
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : Changed sparc ~sparc keywords.
  
   10 Oct 2002; Kain <kain@kain.org> ppc-sources-2.4.20-r1 :
-
   New PPC benh kernel + XFS.  Please remember that turning on XFS is optional.
 
 *ppc-sources-2.4.19-r6 (12 Jun 2002)
@@ -114,34 +111,29 @@
   Added arch keywords (ppc -x86 -sparc -sparc64)
 
   12 Jun 2002; Kain <kain@kain.org> all :
-
   We are back to a standard kernel + XFS.  This will be the ppc-sources used
   for the gentoo-ppc-1.2 bootcd.
 
 *ppc-sources-2.4.19-r5 (26 May 2002)
 
   26 May 2002; Kain <kain@kain.org> all :
-
   Firewire still works, but otherwise this kernel is more like -r3.
   The rmap vm doesn't seem to work too well on ppc after additional testing.
 
 *ppc-sources-2.4.19-r4 (26 May 2002)
 
   26 May 2002; Kain <kain@kain.org> all :
-
   Firewire works again.  This kernel implements the O(1) scheduler, XFS,
   the rmap VM, and the HZ=1000 timer.
 
 *ppc-sources-2.4.19-r3 <kain@kain.org> :
 
   Second official ppc kernel release:
-
   More drivers in the defconfig for the cdrom image have been integrated;
   We also have the drm-kernel from the ati.2 drivers at gatos.sf.net integrated
   in.  These work better on the TiBook rev2 (I don't know about rev3).
 
-  Fixes also in the ebuild
+  Fixes also in the ebuild.
 
 *ppc-sources-2.4.19 <pvdabeel@gentoo.org> :
-
   First official ppc kernel release
