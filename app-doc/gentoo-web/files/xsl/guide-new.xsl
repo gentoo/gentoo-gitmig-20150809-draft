@@ -1,6 +1,7 @@
 <?xml version='1.0'?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:output method="html" indent="yes"/> 
+<xsl:preserve-space elements="pre"/>
 
 <xsl:template match="/guide">
 	<html>
@@ -52,18 +53,15 @@
 	</html>
 </xsl:template>
 
+<xsl:template match="mail">
+	<a href="mailto:{@link}"><xsl:value-of select="."/></a>
+</xsl:template>
+
 <xsl:template match="author">
-<xsl:choose>
-	<xsl:when test="@email">
-		<a href="mailto:{@email}"><xsl:value-of select="."/></a>
-	</xsl:when>
-	<xsl:otherwise>
-		<xsl:value-of select="."/>
-	</xsl:otherwise>
-</xsl:choose>
-<xsl:if test="@title">, <i><xsl:value-of select="@title"/></i>
-</xsl:if>	
-<br/>
+	<xsl:apply-templates />
+	<xsl:if test="@title">, <i><xsl:value-of select="@title"/></i>
+	</xsl:if>	
+	<br/>
 </xsl:template>
 
 <xsl:template match="chapter">
@@ -78,38 +76,72 @@
 	<xsl:apply-templates select="body"/>
 </xsl:template>
 
+<xsl:template match="figure">
+	<table border="0"><tr><td>
+	<xsl:variable name="fignum"><xsl:number level="any"/></xsl:variable>
+	<xsl:variable name="figid">doc_fig<xsl:number/></xsl:variable>
+	<a href="#{$figid}"/>
+	<xsl:choose>
+		<xsl:when test="@short">
+			<img src="{@link}" alt="Fig. {$fignum}: {@short}"/>
+		</xsl:when>
+		<xsl:otherwise>
+			<img src="{@link}" alt="Fig. {$fignum}"/>
+		</xsl:otherwise>
+	</xsl:choose>
+	</td></tr><tr><td class="tochead">
+	<xsl:choose>
+		<xsl:when test="@caption">
+			Figure <xsl:value-of select="$fignum"/>: <xsl:value-of select="@caption" />
+		</xsl:when>
+		<xsl:otherwise>
+			Figure <xsl:value-of select="$fignum"/>
+		</xsl:otherwise>
+	</xsl:choose>
+	</td></tr></table>
+</xsl:template>
+	
 <xsl:template match="note">
-	<p class="note"><b>Note:</b>
+	<p class="note"><b>Note: </b>
+	<xsl:apply-templates />
+	</p>
+</xsl:template>
+
+<xsl:template match="impo">
+	<p class="impo"><b>Important: </b>
+	<xsl:apply-templates />
+	</p>
+</xsl:template>
+
+<xsl:template match="warn">
+	<p class="warn"><b>Warning: </b>
 	<xsl:apply-templates />
 	</p>
 </xsl:template>
 
 <xsl:template match="codenote">
-	<span class="codenote">(<b>Note:</b> <xsl:value-of select="." />)</span>
+	<span class="comment">// <xsl:value-of select="." /></span>
 </xsl:template>
 
-
-<xsl:template match="important">
-	<p class="importanthead"><xsl:value-of select="title"/></p>
-	<xsl:apply-templates select="body"/>
+<xsl:template match="comment">
+	<span class="comment"><xsl:apply-templates /></span>
 </xsl:template>
 
-<xsl:template match="warning">
-	<p class="warninghead"><xsl:value-of select="title"/></p>
-	<xsl:apply-templates select="body"/>
+<xsl:template match="i">
+	<span class="input"><xsl:apply-templates /></span>
 </xsl:template>
 
 <xsl:template match="body">
 	<xsl:apply-templates />
 </xsl:template>
 
-<xsl:template match="code">
+<xsl:template match="c">
 	<span class="code"><xsl:apply-templates /></span> 
 </xsl:template>
 
 <xsl:template match="pre">
-	<xsl:if test="@linkid">
-		<a href="#{@linkid}"/>
+	<xsl:if test="@id">
+		<a href="#{@id}"/>
 	</xsl:if>	
 	<xsl:if test="@caption">
 		<p class="caption"><xsl:value-of select="@caption" /></p>
@@ -119,8 +151,22 @@
 	</pre>
 </xsl:template>
 
+<!-- path is used for specifying files and URLs; if you are linking
+part of a sentence rather than a path, then don't use this, use span instead-->
 <xsl:template match="path">
-	<span class="path"><xsl:apply-templates /></span>
+	<span class="path"><xsl:value-of select="."/></span>
+</xsl:template>
+
+<xsl:template match="uri">
+	<xsl:choose>
+		<xsl:when test="@link">
+			<a href="{@link}"><xsl:value-of select="."/></a>
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:variable name="loc" select="."/>
+			<a href="{$loc}"><xsl:value-of select="."/></a>
+		</xsl:otherwise>
+	</xsl:choose>
 </xsl:template>
 
 <xsl:template match="p">
@@ -129,10 +175,6 @@
 
 <xsl:template match="e">
 	<span class="emphasis"><xsl:apply-templates /></span>
-</xsl:template>
-
-<xsl:template match="link">
-	<a href="{@path}"><xsl:value-of select="."/></a>
 </xsl:template>
 
 <xsl:template match="mail">
@@ -152,7 +194,19 @@
 </xsl:template>
 
 <xsl:template match="th">
-	<td class="tablehead"><b><xsl:apply-templates /></b></td>
+	<td class="tochead"><b><xsl:apply-templates /></b></td>
+</xsl:template>
+
+<xsl:template match="ul">
+	<ul><xsl:apply-templates /></ul>
+</xsl:template>
+
+<xsl:template match="ol">
+	<ol><xsl:apply-templates /></ol>
+</xsl:template>
+
+<xsl:template match="li">
+	<li><xsl:apply-templates /></li>
 </xsl:template>
 
 </xsl:stylesheet>

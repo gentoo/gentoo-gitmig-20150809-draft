@@ -17,6 +17,7 @@ PRE {
 	margin: 0.5em 5% 0.5em 5%; 
 	background: #ddddff;
 	font-family: Lucida Console, Courier;
+	color: #000000;
 }
 
 /*
@@ -52,21 +53,36 @@ H1 {
 }
 
 .code {
-	font-weight: bold;
 	font-family: Lucida Console, Courier;
+	color: #0000ff;
 }
 
 .path {
 	font-family: Lucida Console, Courier;
 }
 
+.emphasis {
+	font-style: italic;
+}
+
 .note {
 	background: #ffffbb;
 }
 
-.codenote {
-	background: #eeeeff;
-	font-family: Georgia, Verdana, Arial, Helvetica; 
+.impo {
+	background: #bbffbb;
+}
+
+.warn {
+	background: #ffbbbb;
+}
+
+.input {
+	color: #0000ff;
+}
+
+.comment {
+	color: #ff0000; 
 }
 
 .notehead {
@@ -88,8 +104,13 @@ H1 {
 	margin: 4.0em 0% 0.1em 3%; 
 }
 
-.tablehead {
-	background: #e0e0e0;
+.tableinfo {
+	padding-left: 1.0em;
+	padding-right: 1.0em;
+	font-size: 0.7em; 
+	background: #ddddff;
+	font-weight: bold; 
+	font-family: Verdana, Arial, Helvetica;
 }
 
 .doclink { 
@@ -102,6 +123,8 @@ H1 {
 }
 
 .tochead {
+	padding-left: 1.0em;
+	padding-right: 1.0em;
 	margin: 0em 0% 0.2em 0%;
 	font-size: 0.7em; 
 	background:#7a5ada; 
