@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/aabrowse/aabrowse-0.0.8.ebuild,v 1.1 2004/12/07 10:23:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/aabrowse/aabrowse-0.0.8.ebuild,v 1.2 2004/12/08 04:13:55 mr_bones_ Exp $
+
+inherit kde
 
 DESCRIPTION="Server Browser for Americas Army"
 HOMEPAGE="http://sourceforge.net/projects/aabrowse/"
@@ -18,6 +20,7 @@ DEPEND="virtual/x11
 	geoip? ( >=dev-libs/geoip-1.3.0 )"
 
 src_compile() {
+	kde_src_compile nothing
 	export WANT_AUTOCONF=2.5
 	econf \
 		--disable-dependency-tracking \
