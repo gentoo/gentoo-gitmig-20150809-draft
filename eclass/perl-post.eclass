@@ -1,7 +1,7 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
 # Author: Seemant Kulleen <seemant@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-post.eclass,v 1.6 2002/07/26 21:50:16 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-post.eclass,v 1.7 2002/07/27 18:28:00 aliz Exp $
 # The perl-post eclass is designed to allow the ${installarchdir}/perllocal.pod
 # file to be updated cleanly after perl and/or perl-modules are installed
 # or removed.
@@ -15,33 +15,33 @@ ARCH_LIB=""
 POD_DIR=""
 
 
-perl_pkg_setup() {
+perl-post_pkg_setup() {
 
 	perlinfo
 }
 
 
-perl_pkg_preinst() {
+perl-post_pkg_preinst() {
 	
 	perlinfo
 }
 
-perl_pkg_postinst() {
+perl-post_pkg_postinst() {
 
 	updatepod
 }
 
-perl_pkg_prerm() {
+perl-post_pkg_prerm() {
 	
 	updatepod
 }
 
-perl_pkg_postrm() {
+perl-post_pkg_postrm() {
 
 	updatepod
 }
 
-perl_perlinfo() {
+perl-post_perlinfo() {
 
 	if [ -f /usr/bin/perl ]
 	then 
@@ -54,7 +54,7 @@ perl_perlinfo() {
 
 }
 
-perl_updatepod() {
+perl-post_updatepod() {
 	perlinfo
 
 	if [ -d "${POD_DIR}" ]
