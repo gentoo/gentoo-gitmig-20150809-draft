@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/lsh/lsh-1.4.3-r1.ebuild,v 1.3 2004/07/17 09:42:45 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/lsh/lsh-1.4.3-r1.ebuild,v 1.4 2004/11/22 04:45:01 vapier Exp $
 
 inherit eutils
 
@@ -26,20 +26,22 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-gcc34.patch
+	epatch ${FILESDIR}/${PV}-configure.patch
+	autoconf || die
 }
 
 src_compile() {
 	# configure script checks /dev/ptmx in order to enable
 	# proper unix pty support ... so lets fake that it works :)
 	addpredict /dev/ptmx
-#		`use_enable kerberos` \
+#		$(use_enable kerberos)
 	econf \
 		--disable-kerberos \
-		`use_enable pam` \
-		`use_enable ipv6` \
-		`use_with zlib` \
-		`use_with tcpd tcpwrappers` \
-		`use_with X x` \
+		$(use_enable pam) \
+		$(use_enable ipv6) \
+		$(use_with zlib) \
+		$(use_with tcpd tcpwrappers) \
+		$(use_with X x) \
 		|| die
 	emake || die
 }
