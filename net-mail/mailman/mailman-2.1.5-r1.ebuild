@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.5-r1.ebuild,v 1.1 2004/07/22 00:31:23 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.5-r1.ebuild,v 1.2 2004/07/22 06:40:45 mholzer Exp $
 
 inherit eutils
 IUSE="apache2"
@@ -62,9 +62,6 @@ src_install () {
 	keepdir ${INSTALLDIR}/lists
 	keepdir ${INSTALLDIR}/qfiles
 
-	chown -R mailman:mailman ${ID}
-	chmod 2775 ${ID}
-
 	if use apache2; then
 		dodir /etc/apache2/conf/modules.d
 		insinto /etc/apache2/conf/modules.d
@@ -106,12 +103,16 @@ src_install () {
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/mailman.rc mailman
+
+	chown -R mailman:mailman ${ID}
+	chmod 2775 ${ID}
 	}
 
 pkg_postinst() {
 	cd ${INSTALLDIR}
 	bin/update
 	bin/check_perms -f
+	bin/check_perms_grsecurity.py -f
 	einfo ""
 	einfo "Please read /usr/share/doc/${PF}/README.gentoo.gz for additional"
 	einfo "Setup information, mailman will NOT run unless you follow"
