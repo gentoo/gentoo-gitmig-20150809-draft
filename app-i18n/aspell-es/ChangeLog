@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/aspell-es
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/aspell-es/ChangeLog,v 1.2 2002/08/14 14:30:49 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/aspell-es/ChangeLog,v 1.3 2002/08/15 08:42:17 seemant Exp $
+
+*aspell-0.0.0.10 (15 Aug 2002)
+
+  15 Aug 2002; Seemant Kulleen <seemant@gentoo.org>
+  aspell-es-0.0.0.10.ebuild  aspell-es-0.0_pre10.ebuild :
+
+  killed the pre ebuild, in favour of new version scheme and eclass.
 
 *aspell-0.0_pre10 (14 Aug 2002)
 
