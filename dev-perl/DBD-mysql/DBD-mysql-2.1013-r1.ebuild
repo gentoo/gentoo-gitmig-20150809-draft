@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/DBD-mysql-2.1013-r1.ebuild,v 1.11 2004/07/14 17:16:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/DBD-mysql-2.1013-r1.ebuild,v 1.12 2004/10/16 23:57:21 rac Exp $
 
 inherit perl-module
 
@@ -9,7 +9,7 @@ SRC_URI="http://www.cpan.org/authors/id/JWIED/${P}.tar.gz"
 HOMEPAGE="http://www.cpan.org/modules/by-module/DBD/"
 
 SLOT="0"
-LICENSE="Artistic | GPL-2"
+LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="x86 amd64 ppc sparc alpha hppa"
 IUSE=""
 

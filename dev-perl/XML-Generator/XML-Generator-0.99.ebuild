@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Generator/XML-Generator-0.99.ebuild,v 1.11 2004/08/28 21:57:31 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Generator/XML-Generator-0.99.ebuild,v 1.12 2004/10/16 23:57:24 rac Exp $
 
 inherit perl-module
 
@@ -8,7 +8,7 @@ DESCRIPTION="Perl XML::Generator - A module to help in generating XML documents"
 HOMEPAGE="http://www.cpan.org/authors/id/B/BH/BHOLZMAN/"
 SRC_URI="http://www.cpan.org/authors/id/B/BH/BHOLZMAN/${P}.tar.gz"
 
-LICENSE="GPL-2 | Artistic"
+LICENSE="|| ( GPL-2 Artistic )"
 SLOT="0"
 KEYWORDS="sparc x86 ppc amd64 s390 hppa ppc64"
 IUSE=""

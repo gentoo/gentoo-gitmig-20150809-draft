@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-CD-disc-cover/Audio-CD-disc-cover-0.05.ebuild,v 1.7 2004/06/25 00:07:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-CD-disc-cover/Audio-CD-disc-cover-0.05.ebuild,v 1.8 2004/10/16 23:57:19 rac Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://home.wanadoo.nl/jano/disc-cover.html"
 SRC_URI="http://home.wanadoo.nl/jano/files/${MY_P}.tar.gz"
 IUSE=""
 SLOT="0"
-LICENSE="Artistic | GPL-2"
+LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="x86 amd64 ppc sparc alpha"
 
 DEPEND="${DEPEND}

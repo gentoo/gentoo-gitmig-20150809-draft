@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-ICal/Date-ICal-1.72.ebuild,v 1.8 2004/07/14 17:13:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-ICal/Date-ICal-1.72.ebuild,v 1.9 2004/10/16 23:57:21 rac Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.cpan.org/modules/by-module/Date/${MY_P}.tar.gz"
 HOMEPAGE="http://www.cpan.org/modules/by-module/Date/${MY_P}.readme"
 
 SLOT="0"
-LICENSE="Artistic | GPL-2"
+LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="x86 amd64 ~ppc sparc alpha"
 IUSE=""
 

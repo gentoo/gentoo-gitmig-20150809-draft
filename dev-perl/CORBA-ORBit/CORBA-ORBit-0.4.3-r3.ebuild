@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CORBA-ORBit/CORBA-ORBit-0.4.3-r3.ebuild,v 1.16 2004/08/21 15:56:04 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CORBA-ORBit/CORBA-ORBit-0.4.3-r3.ebuild,v 1.17 2004/10/16 23:57:20 rac Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.cpan.org/modules/by-module/CORBA/${P}.tar.gz"
 HOMEPAGE="http://www.cpan.org/modules/by-module/CORBA/${P}.readme"
 
 SLOT="0"
-LICENSE="Artistic | GPL-2"
+LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="x86 amd64 ppc sparc alpha"
 IUSE=""
 

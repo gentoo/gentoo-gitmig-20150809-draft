@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSLeay/Net-SSLeay-1.19.ebuild,v 1.10 2004/07/14 19:50:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-SSLeay/Net-SSLeay-1.19.ebuild,v 1.11 2004/10/16 23:57:22 rac Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.cpan.org/authors/id/SAMPO/${MY_P}.tar.gz"
 HOMEPAGE="http://www.cpan.org/authors/id/SAMPO/${MY_P}.readme"
 
 SLOT="0"
-LICENSE="Artistic | GPL-2"
+LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="x86 amd64 ppc sparc alpha"
 IUSE=""
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-DBI/Apache-DBI-0.94.ebuild,v 1.6 2004/10/06 21:02:04 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-DBI/Apache-DBI-0.94.ebuild,v 1.7 2004/10/16 23:57:19 rac Exp $
 
 inherit perl-module
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://cpan/authors/id/A/AB/ABH/${P}.tar.gz"
 HOMEPAGE="http://search.cpan.org/~abh/${P}/"
 
 SLOT="0"
-LICENSE="Artistic | GPL-2"
+LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="x86 ~amd64 ~ppc sparc alpha"
 IUSE=""
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/XML-Twig-3.13.ebuild,v 1.7 2004/07/13 23:38:24 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Twig/XML-Twig-3.13.ebuild,v 1.8 2004/10/16 23:57:24 rac Exp $
 
 inherit perl-module
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/XML/${MY_P}.readme"
 SRC_URI="http://www.cpan.org/modules/by-module/XML/${MY_P}.tar.gz"
 
 SRC_TEST="do"
-LICENSE="Artistic | GPL-2"
+LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc amd64 alpha"
 IUSE="nls"

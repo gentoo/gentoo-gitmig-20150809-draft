@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Quoted/Text-Quoted-1.7.ebuild,v 1.3 2004/09/02 13:34:34 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Quoted/Text-Quoted-1.7.ebuild,v 1.4 2004/10/16 23:57:23 rac Exp $
 
 # this is an RT dependency
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.cpan.org/modules/by-authors/id/J/JE/JESSE/${P}.readme"
 
 SRC_TEST="do"
 SLOT="0"
-LICENSE="Artistic | GPL-2"
+LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="~x86 ~ppc"
 
 DEPEND="dev-perl/text-autoformat

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPM/RPM-0.40.ebuild,v 1.10 2004/07/14 20:21:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPM/RPM-0.40.ebuild,v 1.11 2004/10/16 23:57:23 rac Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.cpan.org/authors/id/RJRAY/${MY_P}.tar.gz"
 HOMEPAGE="http://search.cpan.org/author/RJRAY/Perl-RPM-${PV}/"
 
 SLOT="0"
-LICENSE="Artistic | GPL-2"
+LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="x86 amd64 ppc sparc alpha"
 IUSE=""
 

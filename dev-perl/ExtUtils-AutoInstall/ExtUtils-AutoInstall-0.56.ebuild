@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-AutoInstall/ExtUtils-AutoInstall-0.56.ebuild,v 1.5 2004/07/14 17:27:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-AutoInstall/ExtUtils-AutoInstall-0.56.ebuild,v 1.6 2004/10/16 23:57:21 rac Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ SRC_URI="http://search.cpan.org/CPAN/authors/id/A/AU/AUTRIJUS/${P}.tar.gz"
 HOMEPAGE="http://search.cpan.org/author/AUTRIJUS/${P}/"
 
 SLOT="0"
-LICENSE="Artistic | GPL-2"
+LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="x86 ~amd64 ~ppc sparc alpha"
 
 DEPEND="${DEPEND}"

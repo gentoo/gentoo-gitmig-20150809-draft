@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Heap/Heap-0.71.ebuild,v 1.1 2004/07/30 16:27:38 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Heap/Heap-0.71.ebuild,v 1.2 2004/10/16 23:57:22 rac Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.cpan.org/modules/by-module/Heap/${P}.tar.gz"
 HOMEPAGE="http://www.cpan.org/modules/by-module/Heap/${P}.readme"
 
 SLOT="0"
-LICENSE="Artistic | GPL-2"
+LICENSE="|| ( Artistic GPL-2 )"
 KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha"
 
 DEPEND="${DEPEND}"
