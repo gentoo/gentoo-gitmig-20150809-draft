@@ -2,7 +2,7 @@ MD5 fb37e913fece40227de866c18b12c380 zope-config-0.3.ebuild 954
 MD5 66364d21a70a8fb1b0a30f7831df514e zope-config-0.1-r1.ebuild 540
 MD5 106b4e9bfa6936347389d843627217a3 zope-config-0.4-r1.ebuild 958
 MD5 ce10dc2ab0139995d0a9f0a8bcdce9b1 zope-config-0.4.ebuild 955
-MD5 ab2663bb45ae590615580dce26c8ed29 ChangeLog 3083
+MD5 2484a2029b049f48587d2fb2002f867e ChangeLog 3308
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-zope-config-0.3 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-zope-config-0.4 0
@@ -11,7 +11,5 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-zope-config-0.4-r1 0
 MD5 0f40a729a7da468e26035bb6ee809497 files/0.1/zope-config 6878
 MD5 ee33083be6a5df4425481f4212e94493 files/0.3/zope-config 7714
 MD5 091fc2dce258d3da117b7c1017bd5b9a files/0.3/zope-config.conf 1040
-MD5 e634da1b14d3ff327398a413ab3796fc files/0.4/zope-config 12296
-MD5 db1d2aa45d51bc9279b3be400a31c56a files/0.4/zope-config.conf 1080
-MD5 7bd362aa818369883cc6e7ac520a451a files/0.4-r1/zope-config 12457
-MD5 50636bfb7b5d468507cb2aa7af9f6afd files/0.4-r1/zope-config.conf 1082
+MD5 9237b73a13c642df6ef97fe398852685 files/0.4/zope-config 12454
+MD5 a896b537030a8353798897a448a152ca files/0.4/zope-config.conf 1079

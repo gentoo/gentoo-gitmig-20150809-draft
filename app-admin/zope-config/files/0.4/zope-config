@@ -9,7 +9,7 @@
 #
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/files/0.4/zope-config,v 1.2 2004/07/14 21:22:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/files/0.4/zope-config,v 1.3 2004/07/24 22:19:46 batlogg Exp $
 #
 #
 # Notes:
@@ -81,7 +81,11 @@ zinst_fs_setup()
 		# need a param
 		RESULT=${E_PARAM}
 	elif [ ${ZOPE27} ] ; then
-		${BIN}/mkzopeinstance.py --dir $2
+		if [ "x$3" == "xinituser" ] ; then
+			${BIN}/mkzopeinstance.py --user admin:admin --dir $2
+		else
+			${BIN}/mkzopeinstance.py --dir $2
+		fi
 		RESULT=$?
 	else
             if [ $NEWZOPE = 1 ] ; then
@@ -393,7 +397,7 @@ zserv_version_detect()
 
 while [ "$#" -gt 0 ] ; do
 	case "$1" in
-	-*=*) OPTARG=$(echo "$1" | sed 's/[-_a-zA-Z0-9]*=//') ;;
+	-*=*) OPTARG=$(echo "$1" | sed 's/[-_a-zA-Z0-9:]*=//') ;;
 	*) OPTARG= ;;
 	esac
 
@@ -401,6 +405,7 @@ while [ "$#" -gt 0 ] ; do
 	--zserv=*) ZSERV_DIR=${OPTARG} ; zserv_version_detect ;;
 	--zinst=*) ZINST_DIR=${OPTARG} ;;
 	--zgid=*)  ZGID_NAME=${OPTARG} ;;
+	--zinituser) ZINIT_USER=inituser ;;
 	--zidef-set) zinst_default_set ; exit $? ;;
 	--zidef-get) zinst_default_get ; exit $? ;;
 	--zpasswd) zinst_zpasswd_set ; exit $? ;;
@@ -430,7 +435,7 @@ if [ -z ${ZGID_NAME} ] ; then
 fi
 zserv_is_2.7_or_newer ${ZSERV_DIR}
 
-zinst_fs_setup ${ZSERV_DIR} ${ZINST_DIR}
+zinst_fs_setup ${ZSERV_DIR} ${ZINST_DIR} ${ZINIT_USER}
 zinst_rc_setup ${ZSERV_DIR} ${ZINST_DIR} ${ZIRC_NAME}
 
 ! groupmod ${ZGID_NAME} >/dev/null 2>&1 && groupadd ${ZGID_NAME}
@@ -448,3 +453,4 @@ else
 	echo "Note: Don\'t forget to edit ZOPE_OPTS in ${CONFD}${ZIRC_NAME}"
 	echo "      (you might want to add -P 8{1,2,3,..}00 to set the zope ports offset)"
 fi
+

@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/zope-config
 # Copyright 2003-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/ChangeLog,v 1.20 2004/07/24 20:52:20 batlogg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/ChangeLog,v 1.21 2004/07/24 22:19:46 batlogg Exp $
+
+  25 Jul 2004; Jodok Batlogg <batlogg@gentoo.org>; files/0.4/zope-config,
+  files/0.4/zope-config.conf, -files/0.4-r1/zope-config,
+  -files/0.4-r1/zope-config.conf:
+  zope-config-0.4-r1 uses same file dir as zope-config-0.4
 
 *zope-config-0.4-r1 (24 Jul 2004)
 
