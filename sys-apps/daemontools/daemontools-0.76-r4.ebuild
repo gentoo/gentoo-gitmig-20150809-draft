@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemontools/daemontools-0.76-r4.ebuild,v 1.18 2005/01/30 21:40:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemontools/daemontools-0.76-r4.ebuild,v 1.19 2005/02/11 05:41:02 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -50,6 +50,13 @@ src_install() {
 
 	dodoc CHANGES ../package/README TODO
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/svscan-0.76-r4 svscan
+	newinitd ${FILESDIR}/svscan-0.76-r4 svscan
+}
+
+pkg_postinst() {
+	einfo "You can run daemontools using the svscan init.d script,"
+	einfo "or you could run it through inittab."
+	einfo "To use inittab, emerge supervise-scripts and run:"
+	einfo "svscan-add-to-inittab"
+	einfo "Then you can hup init with the command telinit q"
 }
