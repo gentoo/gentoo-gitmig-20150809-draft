@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/ViewKlass/ViewKlass-0.6.0.ebuild,v 1.1 2003/02/11 06:25:18 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/ViewKlass/ViewKlass-0.6.0.ebuild,v 1.2 2003/02/11 08:13:44 mkennedy Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ LICENSE="LGPL-2.1"
 DEPEND="virtual/motif"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 
 S=${WORKDIR}/${P}
 
