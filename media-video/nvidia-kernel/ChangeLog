@@ -1,23 +1,24 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.5 2002/05/25 23:15:16 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.6 2002/08/16 14:59:38 drobbins Exp $
+
+  16 Aug 2002; Daniel Robbins <drobbins@gentoo.org>: Added the
+  IGNORE_CC_MISMATCH make flag; in some cases, the NVIDIA build process tries
+  to be too smart and intentionally aborts when it shouldn't. This is a
+  build-related change, so no version bump (still 1.0.2960)
 
 *nvidia-kernel-1.0.2960 (26 May 2002)
 
 *nvidia-kernel-1.0.2880-r1 (29 Apr 2002)
 
-  8 May 2002; Jon Nelson <jnelson@gentoo.org>
-  	nvidia-kernel-1.0.2880-r1.ebuild :
-        
-  Make sure to usr KERNDIR=/usr/src/linux
-  /usr/src/linux should be a symlink pointing to the real sources,
-  which may lie outside /usr/src.  KV is set appropriately
-  in any case by more recent versions of portage.
+  08 May 2002; Jon Nelson <jnelson@gentoo.org> nvidia-kernel-1.0.2880-r1.ebuild:
+  Make sure to usr KERNDIR=/usr/src/linux /usr/src/linux should be a symlink
+  pointing to the real sources, which may lie outside /usr/src.  KV is set
+  appropriately in any case by more recent versions of portage.
 
-  3 May 2002; Arcady Genkin <agenkin@thpoon.com>
-	nvidia-kernel-1.0.2800-r1.ebuild :
-
-  Make sure that Portage *does* set KV to something; bail out otherwise. ;^)
+  03 May 2002; Arcady Genkin <agenkin@thpoon.com>
+  nvidia-kernel-1.0.2800-r1.ebuild: Make sure that Portage *does* set KV to
+  something; bail out otherwise. ;^)
 	
   29 Apr 2002; Daniel Robbins <drobbins@gentoo.org>: Changed NV_KV to KV and
   added a Portage dependency to ensure that KV is available.  Should fix some

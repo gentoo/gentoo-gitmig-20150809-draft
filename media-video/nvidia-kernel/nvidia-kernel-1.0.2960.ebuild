@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.2960.ebuild,v 1.5 2002/08/16 01:07:10 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.2960.ebuild,v 1.6 2002/08/16 14:59:38 drobbins Exp $
 
 DESCRIPTION="Linux kernel module for the NVIDIA's X driver"
 HOMEPAGE="http://www.nvidia.com/"
@@ -26,7 +26,11 @@ KEYWORDS="x86 -ppc -sparc -sparc64"
 src_compile() {
 	# Portage should determine the version of the kernel sources
 	check_KV
-	make KERNDIR="/usr/src/linux" \
+	#IGNORE_CC_MISMATCH disables a sanity check that's needed when gcc has been
+	#updated but the running kernel is still compiled with an older gcc.  This is
+	#needed for chrooted building, where the sanity check detects the gcc of the
+	#kernel outside the chroot rather than within.
+	make IGNORE_CC_MISMATCH="yes" KERNDIR="/usr/src/linux" \
 		clean NVdriver || die
 }
 
