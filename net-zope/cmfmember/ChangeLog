@@ -1,6 +1,10 @@
 # ChangeLog for net-zope/cmfmember
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfmember/ChangeLog,v 1.1 2005/02/24 13:58:41 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfmember/ChangeLog,v 1.2 2005/02/25 12:52:28 radek Exp $
+
+  25 Feb 2005; Radoslaw Stachowiak <radek@gentoo.org>
+  cmfmember-1.0_beta5.ebuild:
+  Better description and corrected homepag.
 
 *cmfmember-1.0_beta5 (24 Feb 2005)
 

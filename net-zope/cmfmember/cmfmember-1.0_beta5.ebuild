@@ -1,13 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfmember/cmfmember-1.0_beta5.ebuild,v 1.1 2005/02/24 13:58:41 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/cmfmember/cmfmember-1.0_beta5.ebuild,v 1.2 2005/02/25 12:52:28 radek Exp $
 
 inherit zproduct
 
-DESCRIPTION="Content Management Framework Member object."
-
-
-HOMEPAGE="http://www.sourceforge.org/collective"
+DESCRIPTION="CMFMember is a replacement for portal_memberdata for Zope/Plone member management"
+HOMEPAGE="http://sourceforge.net/projects/collective"
 MY_PN="CMFMember"
 MY_P="${MY_PN}-${PV/_beta/beta}"
 SRC_URI="mirror://sourceforge/collective/${MY_P}.tar.gz"
