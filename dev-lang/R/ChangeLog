@@ -1,8 +1,11 @@
 # ChangeLog for dev-lang/R
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.30 2004/08/22 20:07:49 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/ChangeLog,v 1.31 2004/09/09 12:35:17 tchiwam Exp $
 
 *R-1.9.1 (22 Aug 2004)
+
+  09 Sep 2004; Philippe Trottier <tchiwam@gentoo.org> R-1.9.1.ebuild,
+  marked ~ppc64
 
   22 Aug 2004; Danny van Dyk <kugelfang@gentoo.org> -R-1.9.0.ebuild,
   +R-1.9.1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.9.1.ebuild,v 1.1 2004/08/22 20:07:49 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.9.1.ebuild,v 1.2 2004/09/09 12:35:17 tchiwam Exp $
 
 IUSE="blas X tcltk gnome zlib bzlib pcre f2c"
 
@@ -38,7 +38,7 @@ DEPEND="virtual/libc
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="~x86 ~sparc ~ppc ~amd64"
+KEYWORDS="~x86 ~sparc ~ppc ~ppc64 ~amd64"
 
 pkg_setup() {
 	if [ -z "$(which g77 2>/dev/null)" ]; then
