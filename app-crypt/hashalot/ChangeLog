@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/hashalot
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashalot/ChangeLog,v 1.13 2004/06/11 17:48:58 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/hashalot/ChangeLog,v 1.14 2004/06/13 00:10:54 dragonheart Exp $
+
+*hashalot-0.3 (13 Jun 2004)
+
+  13 Jun 2004; Daniel Black <dragonheart@gentoo.org> +hashalot-0.3.ebuild:
+  version bump. Thank to Alessandro Di Marco <dmr@gmx.it> in bug #53591
 
   11 Jun 2004; Gustavo Zacarias <gustavoz@gentoo.org> hashalot-0.2.0.ebuild:
   Stable on sparc
