@@ -1,0 +1,9 @@
+# ChangeLog for x11-themes/gentoo-artwork
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/ChangeLog,v 1.1 2003/01/31 23:20:08 tad Exp $
+
+*gentoo-artwork-0.1 (01 Feb 2003)
+
+  01 Feb 2003; Troy Dack <tad@gentoo.org> gentoo-artwork-0.1.ebuild,
+  Changelog, digest-gentoo-artwork-0.1 : Initial ebuild. See 
+  /usr/share/pixmaps/gentoo/CREDITS for contributor details.
