@@ -1,0 +1,12 @@
+diff -urN autofs-3.1.7/modules/lookup_program.c autofs-3.1.7-modified/modules/lookup_program.c
+--- autofs-3.1.7/modules/lookup_program.c	Sat Nov  4 01:05:17 2000
++++ autofs-3.1.7-modified/modules/lookup_program.c	Wed Jul 17 21:20:06 2002
+@@ -16,7 +16,7 @@
+ 
+ #include <ctype.h>
+ #include <errno.h>
+-#include <limits.h>
++#include <linux/limits.h>
+ #include <malloc.h>
+ #include <stdio.h>
+ #include <string.h>

@@ -1,0 +1,14 @@
+diff -urN autofs-3.1.7/Makefile.conf autofs-3.1.7-modified/Makefile.conf
+--- autofs-3.1.7/Makefile.conf	Wed Jul 17 21:28:35 2002
++++ autofs-3.1.7-modified/Makefile.conf	Wed Jul 17 21:29:05 2002
+@@ -17,8 +17,8 @@
+ HESIOD_FLAGS = 
+ 
+ # LDAP support: yes (1) no (0)
+-LDAP = 0
+-LIBLDAP= 
++LDAP = 1
++LIBLDAP= -lldap -llber
+ LDAP_FLAGS = 
+ 
+ # NIS+ support: yes (1) no (0)

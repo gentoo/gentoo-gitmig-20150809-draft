@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-3.1.7-r3.ebuild,v 1.4 2002/07/17 09:52:23 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-3.1.7-r3.ebuild,v 1.5 2002/07/18 02:46:08 raker Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Kernel based automounter"
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.kernel.org/pub/linux/daemons/autofs/${P}.tar.bz2
 	ftp://ftp.de.kernel.org/pub/linux/daemons/autofs/${P}.tar.bz2
 	ftp://ftp.uk.kernel.org/pub/linux/daemons/autofs/${P}.tar.bz2"
 
-DEPEND="ldap? ( ~net-nds/openldap-1.2 )"
+DEPEND="ldap? ( >=net-nds/openldap-1.2 )"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -23,6 +23,9 @@ src_unpack() {
 src_compile() {
 	local myconf
 	use ldap || myconf="--without-openldap"
+	export HAVE_LDAP=1 
+	export LIBLDAP="$LIBLDAP -lldap -llber"
+	export LIBS="-lldap -llber $LIBS"
 	./configure --host=${HOST} --prefix=/usr ${myconf} || die
 	emake || die
 }

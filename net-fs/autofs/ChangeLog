@@ -1,6 +1,15 @@
 # ChangeLog for net-fsautofsChangeLog/
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.8 2002/07/17 03:11:56 lamer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/ChangeLog,v 1.9 2002/07/18 02:46:08 raker Exp $
+
+*autofs-3.1.7-r4 (17 Jul 2002)
+
+  17 Jul 2002; Nick Hadaway <raker@gentoo.org>
+  autofs-3.1.7-r4, files/digest-autofs-3.1.7-r4 :
+
+  Patched autofs to correctly pull OPEN_MAX from linux/limits.h instead
+  of a manual setting of OPEN_MAX.  Also patched for ldap 2.x support
+  setting ldap related variables that configure fails to do.
 
   16 Jul 2002; Ben Lutgens <lamer@gentoo.org> files/autofs.rc6  :
 
