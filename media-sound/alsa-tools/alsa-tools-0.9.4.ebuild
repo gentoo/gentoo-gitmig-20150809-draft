@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-0.9.4.ebuild,v 1.2 2003/06/04 23:03:09 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-0.9.4.ebuild,v 1.3 2003/06/06 21:55:11 agenkin Exp $
 
 DESCRIPTION="Advanced Linux Sound Architecture tools"
 HOMEPAGE="http://www.alsa-project.org"
@@ -17,6 +17,12 @@ S="${WORKDIR}/${P}"
 
 # This is a list of the tools in the package.
 ALSA_TOOLS="ac3dec as10k1 envy24control sb16_csp seq/sbiload"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	patch -p1 < ${FILESDIR}/${P}-gcc3.3.patch || die
+}
 
 src_compile() {
     # Some of the tools don't make proper use of CFLAGS, even though
