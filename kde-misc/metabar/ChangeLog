@@ -1,0 +1,11 @@
+# ChangeLog for kde-misc/metabar
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/metabar/ChangeLog,v 1.1 2005/04/05 17:59:21 greg_g Exp $
+
+*metabar-0.7 (05 Apr 2005)
+
+  05 Apr 2005; Gregorio Guidi <greg_g@gentoo.org> +metadata.xml,
+  +metabar-0.7.ebuild:
+  Initial import (#83227). Ebuild proposed by Gleb Litvjak
+  <soundblaster@aircom.lv> and Dennis Nienhüser <fragfred@gmx.de>.
+
