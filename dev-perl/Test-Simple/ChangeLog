@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Test-Simple
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Simple/ChangeLog,v 1.13 2003/08/04 01:15:01 gmsoft Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Simple/ChangeLog,v 1.14 2004/02/16 15:14:44 mcummings Exp $
+
+  16 Feb 2004; Michael Cummings,,, <mcummings@gentoo.org>
+  Test-Simple-0.42-r1.ebuild, Test-Simple-0.42.ebuild,
+  Test-Simple-0.47-r1.ebuild, Test-Simple-0.47.ebuild:
+  Cleaning house; 0.42 isn't available on cpan, and 47 is marked stable for all
+  archs anyway
 
   25 Jul 2003; <rac@gentoo.org> Test-Simple-0.47-r1.ebuild:
   Remove ~arch protection on all but hppa and arm
