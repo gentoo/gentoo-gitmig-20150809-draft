@@ -3,13 +3,13 @@ Hash: SHA1
 
 MD5 a94a3cf1671ba45df93608a285ea448f ChangeLog 3836
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 88012bc33e0801de03648823142148bd man-pages-1.67.ebuild 718
+MD5 d5858c76accf94d137d68578e0412523 man-pages-1.67.ebuild 639
 MD5 af09d031dcee66929510e078d00066f2 files/man2.tar.gz 1982
 MD5 b4ee140499ba754aedc8e451d7b49b09 files/digest-man-pages-1.67 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBmPXVHTu7gpaalycRAgQCAJ43NhuACnHm3TFpCU88fsup42gKKwCfVUOa
-Cc8ItbQRaDtOSesH955LI9I=
-=x+kB
+iD8DBQFBmPk8HTu7gpaalycRAsZGAJ9o8Xo+u6EHk1Gf15EWX2SnQm2sigCeMuYh
+sHP+CKwHHRkwqfULAFQovOs=
+=XOB0
 -----END PGP SIGNATURE-----
