@@ -1,6 +1,6 @@
 #!/bin/sh
 # $Xorg: Xsetup_0,v 1.3 2000/08/17 19:54:17 cpqbld Exp $
-xconsole -geometry 480x130-0-0 -daemon -notify -verbose -fn fixed -exitOnFail
+#xconsole -geometry 480x130-0-0 -daemon -notify -verbose -fn fixed -exitOnFail
 
 # --- Gentoo ---
 # create list of sessions for kdm
@@ -12,6 +12,7 @@ done
 echo sessions: $sessions
 
 # update all kdmrcs located
+source /etc/make.conf
 for dir in $KDE2DIR $KDE3DIR $KDE2LIBSDIR $KDE3LIBSDIR $KDEDIR ~/.kde /usr/kde/2 /usr/kde/3 /usr
 do
 
@@ -23,11 +24,3 @@ ${sessions}" kdmrc.orig > kdmrc
     rm kdmrc.orig
     
 done
-
-# needed for kdm to display a background
-# this needs to be verified, and i implemented
-# it this way to try and avoid stale lock/whatever
-if [ -n "`ps -A | grep kdm`" ] ; then
-	eval `which kdmdesktop`
-fi
-
