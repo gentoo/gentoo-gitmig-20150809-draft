@@ -3,6 +3,7 @@ Hash: SHA1
 
 MD5 ee9102ee0f537b27b4e040cd82a5ec05 libquicktime-0.9.3.ebuild 1415
 MD5 c7e03e3284339e9f9ae0524c4403a983 ChangeLog 3652
+MD5 955f56e990f8c32d705708b4cc4db089 metadata.xml 251
 MD5 d213fb30f555b2c9096392bb69d63ed2 libquicktime-0.9.2_pre1.ebuild 1549
 MD5 bec1723df4a91e50936583a7e0b778eb libquicktime-0.9.2.ebuild 1574
 MD5 2945e87a4f7f7263e45ea3c392895011 files/digest-libquicktime-0.9.3 70
@@ -12,7 +13,7 @@ MD5 7431f4892f67adb233bef504876078db files/libquicktime-0.9.2-amd64.patch 2861
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBf7ANRPjscZbntocRAkNBAJ0fwWP9um4CNs+bsdvYTu6Qd557jACeIIZC
-6vQrUEKb4Mb9zcNYgGkQ3AY=
-=KExY
+iD8DBQFBf7LzRPjscZbntocRAuRXAJ9CU0XLW4Q9+oslmpis5e+EB04AOwCfUJ9D
+nr1FfoHqikiu85DIRHbXxjo=
+=mNxM
 -----END PGP SIGNATURE-----
