@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/bmon
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/ChangeLog,v 1.8 2004/07/08 16:39:32 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bmon/ChangeLog,v 1.9 2004/07/13 18:00:59 aliz Exp $
+
+  13 Jul 2004; Daniel Ahlberg <aliz@gentoo.org> bmon-1.2.1.ebuild:
+  Added amd64 keyword, closing #56849.
 
   08 Jul 2004; Eldad Zack <eldad@gentoo.org> bmon-1.2.0.ebuild,
   bmon-1.2.1.ebuild:
