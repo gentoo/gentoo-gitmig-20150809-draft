@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/files/am-wrapper-1.sh,v 1.1 2004/11/14 05:32:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake-wrapper/files/am-wrapper-1.sh,v 1.2 2004/11/14 05:46:07 vapier Exp $
 
 # Based on the am-wrapper.pl script provided by MandrakeSoft
 # Rewritten in bash by Gregorio Guidi
@@ -39,12 +39,12 @@ if [ "${0##*/}" = "am-wrapper.sh" ] ; then
 	exit 1
 fi
 
-vers="$(seq 1.9 -0.1 1.4)"
+vers="1.9 1.8 1.7 1.6 1.5 1.4)"
 
 for v in ${vers} ; do
 	eval binary_${v/./_}="${0}-${v}"
 done
-binary="binary_1_9"
+binary="${binary_1_9}"
 
 #
 # autodetect routine
