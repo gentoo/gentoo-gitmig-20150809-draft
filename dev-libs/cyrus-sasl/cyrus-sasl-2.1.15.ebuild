@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.15.ebuild,v 1.5 2004/01/28 14:17:44 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.15.ebuild,v 1.6 2004/04/26 00:48:04 agriffis Exp $
 
 IUSE="gdbm berkdb ldap mysql kerberos static ssl java pam" # otp krb4
 
@@ -99,7 +99,7 @@ src_compile() {
 		--with-configdir=/etc/sasl2 \
 		--with-plugindir=/usr/lib/sasl2 \
 		--with-dbpath=/etc/sasl2/sasldb2 \
-		${myconf}
+		${myconf} || die "econf failed"
 
 	emake || die "compile problem"
 }

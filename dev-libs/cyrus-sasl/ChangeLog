@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.65 2004/04/19 15:57:20 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.66 2004/04/26 00:48:04 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> cyrus-sasl-2.1.14.ebuild,
+  cyrus-sasl-2.1.15.ebuild, cyrus-sasl-2.1.17.ebuild,
+  cyrus-sasl-2.1.18.ebuild:
+  Add die following econf for bug 48950
 
   20 Apr 2004; Daniel Black <dragonheart@gentoo.org> cyrus-sasl-2.1.17.ebuild,
   cyrus-sasl-2.1.18.ebuild:

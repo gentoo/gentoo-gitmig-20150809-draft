@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/expat
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.28 2004/04/17 07:10:10 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.29 2004/04/26 00:50:51 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> expat-1.95.7.ebuild:
+  Add die following econf for bug 48950
 
   17 Apr 2004; Travis Tilley <lv@gentoo.org> expat-1.95.7.ebuild:
   marked stable on amd64

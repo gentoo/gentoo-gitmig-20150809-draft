@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.18.ebuild,v 1.4 2004/04/19 15:57:20 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.18.ebuild,v 1.5 2004/04/26 00:48:04 agriffis Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -99,7 +99,7 @@ src_compile() {
 		--with-configdir=/etc/sasl2 \
 		--with-plugindir=/usr/lib/sasl2 \
 		--with-dbpath=/etc/sasl2/sasldb2 \
-		${myconf}
+		${myconf} || die "econf failed"
 
 	# Parallel build doesn't work.
 	emake -j1 || die "compile problem"

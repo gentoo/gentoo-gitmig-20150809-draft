@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.14.ebuild,v 1.13 2004/02/24 09:41:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.14.ebuild,v 1.14 2004/04/26 00:48:04 agriffis Exp $
 
 inherit eutils
 
@@ -100,7 +100,7 @@ src_compile() {
 		--with-configdir=/etc/sasl2 \
 		--with-plugindir=/usr/lib/sasl2 \
 		--with-dbpath=/etc/sasl2/sasldb2 \
-		${myconf}
+		${myconf} || die "econf failed"
 
 	emake || die "compile problem"
 }

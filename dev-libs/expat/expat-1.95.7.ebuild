@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/expat-1.95.7.ebuild,v 1.8 2004/04/17 07:10:10 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/expat-1.95.7.ebuild,v 1.9 2004/04/26 00:50:51 agriffis Exp $
 
 inherit gnuconfig
 
@@ -18,7 +18,7 @@ src_compile() {
 	# Detect mips systems properly
 	use mips && gnuconfig_update
 
-	econf
+	econf || die "econf failed"
 	emake
 }
 
