@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-NCopy/File-NCopy-0.34.ebuild,v 1.1 2003/06/04 00:26:09 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-NCopy/File-NCopy-0.34.ebuild,v 1.2 2003/06/04 00:30:01 mcummings Exp $
 
 inherit perl-module
 
@@ -13,3 +13,4 @@ SLOT="0"
 LICENSE="Artistic | GPL-2"
 KEYWORDS="x86 ~alpha ~arm ~hppa ~mips ~ppc ~sparc"
 
+DEPEND="dev-perl/File-Spec"
