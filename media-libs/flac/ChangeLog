@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/flac
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.43 2004/12/29 00:41:31 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/ChangeLog,v 1.44 2005/02/05 12:49:35 luckyduck Exp $
+
+  05 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> flac-1.1.0-r1.ebuild,
+  flac-1.1.0-r2.ebuild, flac-1.1.0.ebuild, flac-1.1.1.ebuild:
+  added a dummy src_test to remove excessive testing. see #59482
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

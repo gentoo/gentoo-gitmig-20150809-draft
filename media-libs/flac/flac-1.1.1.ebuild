@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.1.ebuild,v 1.7 2004/11/08 20:05:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.1.ebuild,v 1.8 2005/02/05 12:49:35 luckyduck Exp $
 
 inherit libtool eutils flag-o-matic gcc
 
@@ -62,3 +62,6 @@ pkg_postinst() {
 	preserve_old_lib_notify /usr/$(get_libdir)/libFLAC.so.4
 	preserve_old_lib_notify /usr/$(get_libdir)/libFLAC++.so.2
 }
+
+# see #59482
+src_test() { :; }

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.0-r1.ebuild,v 1.13 2004/07/13 23:43:08 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.0-r1.ebuild,v 1.14 2005/02/05 12:49:35 luckyduck Exp $
 
 inherit libtool
 
@@ -56,3 +56,6 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 }
+
+# see #59482
+src_test() { :; }

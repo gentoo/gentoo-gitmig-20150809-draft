@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.0-r2.ebuild,v 1.10 2004/11/08 20:05:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.0-r2.ebuild,v 1.11 2005/02/05 12:49:35 luckyduck Exp $
 
 inherit libtool eutils flag-o-matic gcc
 
@@ -52,3 +52,6 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 }
+
+# see #59482
+src_test() { :; }
