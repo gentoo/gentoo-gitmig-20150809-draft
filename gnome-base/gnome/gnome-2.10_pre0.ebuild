@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.10_pre0.ebuild,v 1.4 2005/03/11 20:53:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.10_pre0.ebuild,v 1.5 2005/03/11 23:33:09 foser Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -54,6 +54,8 @@ RDEPEND="!gnome-base/gnome-core
 	>=media-libs/gstreamer-0.8.9
 	>=media-libs/gst-plugins-0.8.8
 	>=gnome-extra/gnome-media-2.10
+	>=media-video/totem-1
+	>=media-sound/sound-juicer-2.10
 
 	>=media-gfx/eog-2.8.0
 	!hppa? ( !mips? ( >=net-www/epiphany-1.6 ) )
