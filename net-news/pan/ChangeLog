@@ -1,6 +1,10 @@
 # ChangeLog for net-news/pan
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-news/pan/ChangeLog,v 1.6 2002/05/23 00:29:23 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/pan/ChangeLog,v 1.7 2002/05/23 19:15:18 spider Exp $
+
+*pan-0.11.93 (23 May 2002) 
+  23 May 2002; Spider <spider@gentoo.org> pan-0.11.93.ebuild: 
+  New version of the gnome2 branch
 
 *pan-0.11.92 (22 May 2002) 
   22 May 2002; Spider <spider@gentoo.org> pan-0.11.92.ebuild: 
