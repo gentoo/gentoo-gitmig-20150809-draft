@@ -1,6 +1,6 @@
 # ChangeLog for x11-themes/gnome-themes
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.30 2003/12/11 15:22:41 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/ChangeLog,v 1.31 2003/12/12 23:54:48 gmsoft Exp $
 
 *gnome-themes-2.4.1 (11 Dec 2003)
 
@@ -47,6 +47,9 @@
   Removed in favour of 2.4.0
 
 *gnome-themes-2.4.0 (10 Sep 2003)
+
+  13 Dec 2003; Guy Martin <gmsoft@gentoo.org> gnome-themes-2.4.0.ebuild :
+  Marked stable on hppa.
 
   10 Sep 2003; Mike Gardiner <obz@gentoo.org> gnome-themes-2.4.0.ebuild:
   New version

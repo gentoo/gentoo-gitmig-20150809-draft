@@ -1,6 +1,6 @@
 # ChangeLog for x11-themes/gtk-engines-thinice
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-thinice/ChangeLog,v 1.9 2003/11/15 03:04:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-thinice/ChangeLog,v 1.10 2003/12/12 23:52:09 gmsoft Exp $
 
   14 Nov 2003; Aron Griffis <agriffis@gentoo.org>
   gtk-engines-thinice-2.0.2.ebuild:
@@ -11,6 +11,9 @@
   regenerate autoconf stuff for amd64 (#29805)
 
 *gtk-engines-thinice-2.0.2-r1 (19 Jun 2003)
+
+  13 Dec 2003; Guy Martin <gmsoft@gentoo.org> gtk-engines-thinice-2.0.2.ebuild :
+  Marked stable on hppa.
 
   19 Jun 2003; Alastair Tse <liquidx@gentoo.org>
   gtk-engines-thinice-2.0.2-r1.ebuild:
