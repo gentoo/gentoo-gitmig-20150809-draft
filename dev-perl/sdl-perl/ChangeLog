@@ -1,6 +1,6 @@
-# ChangeLog for dev-perlsdl-perlChangeLog/
+# ChangeLog for dev-perl/sdl-perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/ChangeLog,v 1.8 2002/12/13 10:56:41 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/sdl-perl/ChangeLog,v 1.9 2002/12/17 19:37:10 vapier Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
@@ -12,7 +12,7 @@
   29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
 
   forced version bump to install into correct locations
-# ChangeLog for dev-perl/SDL-sdlpl
+# ChangeLog for dev-perl/sdl-perl
 
 
 *sdl-perl-1.18.5-r2 (5 Jul 2002)
