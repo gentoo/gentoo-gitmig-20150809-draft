@@ -1,3 +1,4 @@
+move dev-perl/Net-LDAP dev-perl/perl-ldap
 move dev-python/ReportLab dev-python/reportlab
 move x11-libs/gtkmm dev-cpp/gtkmm
 move dev-libs/KXL dev-games/KXL
