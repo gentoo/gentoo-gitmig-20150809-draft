@@ -1,6 +1,6 @@
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arc/arc-521e.ebuild,v 1.3 2002/09/06 22:12:50 owen Exp $
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arc/arc-521e.ebuild,v 1.4 2002/09/30 03:01:29 vapier Exp $
 
 DESCRIPTION="Create & extract files from DOS .ARC files."
 
