@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.19-r1.ebuild,v 1.6 2004/11/16 04:56:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.19-r1.ebuild,v 1.7 2005/01/12 19:43:14 dsd Exp $
 
 inherit eutils flag-o-matic toolchain-funcs kernel-mod
 
@@ -43,6 +43,9 @@ src_unpack() {
 
 	# PCI functions have been renamed with newer kernels #69580
 	epatch ${FILESDIR}/${P}-pci-get-class.patch
+
+	# devfs_mk_symlink no longer available #77186
+	epatch ${FILESDIR}/${P}-devfs.patch
 
 	# Link like the other packages
 	sed -i 's:$(FLAGS):$(CFLAGS) $(LDFLAGS):' demos/Makefile || die
@@ -137,6 +140,9 @@ src_install() {
 
 	dodir /etc/modules.d
 	echo "probeall  /dev/svga  svgalib_helper" > ${D}/etc/modules.d/svgalib
+
+	dodir /etc/devfs.d
+	newins ${FILESDIR}/svgalib.devfs svgalib
 
 	exeinto /usr/lib/svgalib/demos
 	for x in ${S}/demos/*

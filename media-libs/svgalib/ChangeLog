@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/svgalib
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.50 2004/11/16 04:56:31 vapier Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.51 2005/01/12 19:43:14 dsd Exp $
+
+  12 Jan 2005; Daniel Drake <dsd@gentoo.org>
+  +files/svgalib-1.9.19-devfs.patch, +files/svgalib.devfs,
+  svgalib-1.9.19-r1.ebuild:
+  Fix 2.6.10 compatibility, bug #77186
 
   15 Nov 2004; Mike Frysinger <vapier@gentoo.org> svgalib-1.9.19-r1.ebuild:
   Fix the buildcsr demo target to use the correct linking flags #71194.
