@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/giblib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giblib/ChangeLog,v 1.13 2004/06/24 23:00:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giblib/ChangeLog,v 1.14 2004/07/31 01:35:55 tgall Exp $
+
+  31 Jul 2004; Tom Gall <tgall@gentoo.org> giblib-1.2.3.ebuild:
+  stable on ppc64, bug #57034
 
   10 May 2004; Travis Tilley <lv@gentoo.org> giblib-1.2.3.ebuild:
   added ~amd64 keyword
