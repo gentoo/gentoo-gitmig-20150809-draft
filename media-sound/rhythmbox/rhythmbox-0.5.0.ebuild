@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.5.0.ebuild,v 1.2 2003/08/17 19:55:30 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.5.0.ebuild,v 1.3 2003/08/20 16:39:27 tester Exp $
 
 # Comments wrt gstreamer are in the build.  Not all the gstreamer plugins
 # required for support are in portage yet.
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/rhythmbox/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
 
 DEPEND="virtual/glibc
 	media-libs/flac
