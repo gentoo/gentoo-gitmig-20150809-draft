@@ -1,18 +1,19 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.52-r3.ebuild,v 1.9 2005/02/13 05:00:13 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.52-r3.ebuild,v 1.10 2005/02/18 03:27:29 beu Exp $
 
 inherit eutils gnuconfig
 
 # latest gentoo apache files
 GENTOO_PATCHNAME="gentoo-apache-${PVR}"
-GENTOO_PATCHSTAMP="20050212"
+GENTOO_PATCHSTAMP="20050218"
 GENTOO_PATCHDIR="${WORKDIR}/${GENTOO_PATCHNAME}"
 
 DESCRIPTION="The Apache Web Server, Version 2.0.x"
 HOMEPAGE="http://httpd.apache.org/"
 SRC_URI="mirror://apache/httpd/httpd-${PV}.tar.bz2
-		mirror://gentoo/${GENTOO_PATCHNAME}-${GENTOO_PATCHSTAMP}.tar.bz2"
+	http://dev.gentoo.org/~beu/${GENTOO_PATCHNAME}-${GENTOO_PATCHSTAMP}.tar.bz2
+	mirror://gentoo/${GENTOO_PATCHNAME}-${GENTOO_PATCHSTAMP}.tar.bz2"
 
 LICENSE="Apache-2.0"
 SLOT="2"
@@ -22,6 +23,7 @@ IUSE="apache2 doc ldap mpm-leader mpm-metux mpm-peruser mpm-prefork mpm-threadpo
 DEPEND="dev-lang/perl
 		=dev-libs/apr-0.9.5
 		=dev-libs/apr-util-0.9.5
+		dev-libs/expat
 		net-www/gentoo-webroot-default
 		app-misc/mime-types
 		sys-libs/zlib

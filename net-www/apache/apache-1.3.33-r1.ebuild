@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.33-r1.ebuild,v 1.7 2005/02/13 02:21:32 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.33-r1.ebuild,v 1.8 2005/02/18 03:27:29 beu Exp $
 
 inherit eutils fixheadtails
 
 # latest gentoo apache files
 GENTOO_PATCHNAME="gentoo-apache-${PVR}"
-GENTOO_PATCHSTAMP="20050212"
+GENTOO_PATCHSTAMP="20050218"
 GENTOO_PATCHDIR="${WORKDIR}/${GENTOO_PATCHNAME}"
 
 # The mod_ssl archive is only for providing the EAPI patch in here.
@@ -19,6 +19,7 @@ HOMEPAGE="http://httpd.apache.org"
 SRC_URI="mirror://apache/httpd/apache_${PV}.tar.gz
 		ssl? ( ftp://ftp.modssl.org/source/mod_ssl-${mod_ssl_ver}-${PV}.tar.gz )
 		lingerd? ( http://images.iagora.com/media/software/lingerd/lingerd-${lingerd_ver}.tar.gz )
+		http://dev.gentoo.org/~beu/${GENTOO_PATCHNAME}-${GENTOO_PATCHSTAMP}.tar.bz2
 		mirror://gentoo/${GENTOO_PATCHNAME}-${GENTOO_PATCHSTAMP}.tar.bz2"
 
 LICENSE="Apache-2.0"
