@@ -1,4 +1,6 @@
-MD5 6e7ed6b686a40817f72c64e3462396fc nvtv-0.4.4.ebuild 1174
 MD5 b1e6f7c646455d478c4b1bc46be05e0f ChangeLog 1265
+MD5 6e7ed6b686a40817f72c64e3462396fc nvtv-0.4.4.ebuild 1174
+MD5 b734a39a00cc5e351b9b6a5826625d7c nvtv-0.4.5.ebuild 1156
 MD5 5f2bf6c79b70ba39b3c942a63dc046e9 files/digest-nvtv-0.4.4 62
 MD5 9ab4a460e891477b0f575c2fb123c641 files/nvtv.start 549
+MD5 adc49002cf7b7b0274f7b51ba7e0749d files/digest-nvtv-0.4.5 62
