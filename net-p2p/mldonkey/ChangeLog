@@ -1,7 +1,12 @@
 # ChangeLog for net-p2p/mldonkey
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# Author: José Alberto Suárez López <bass@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.1 2002/06/26 11:09:16 bangert Exp $
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.2 2002/12/09 20:53:22 hannes Exp $
+
+*mldonkey-2.00-r1 (09 Dec 2002)
+
+  09 Dec 2002; Hannes Mehnert <hannes@mehnert.org> mldonkey-2.00-r1.ebuild:
+  this ebuild is now from source. Thanks to gentoo-bug@loitsch.org (Christian
+  Loitsch) for submission (bug #9677)
 
   26 Jun 2002; Thilo Bangert <bangert@gentoo.org> :
   
