@@ -1,4 +1,7 @@
-MD5 b9dc63f92e1aecffdc4cfabb3964a3c0 ChangeLog 80257
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 60b6bdc804732673545e18ae1f9f0414 ChangeLog 80681
 MD5 aa7f9fb82c023a1343426871e52d4a7d gcc-2.95.3-r8.ebuild 7442
 MD5 f95107278e3a6306068d0f9ef63fc5de gcc-3.2.3-r4.ebuild 19890
 MD5 244dda3a476e86cb7d23830b245ab323 gcc-3.3.2-r2.ebuild 18031
@@ -13,11 +16,11 @@ MD5 026c988062231208a5ff4b40ef50e55d gcc-3.4.1-r3.ebuild 31433
 MD5 a00a988dba51eceb014f2e5252d62c53 gcc-3.4.2-r2.ebuild 13505
 MD5 e1dd8a063189d88b781ac008892e2da5 gcc-3.4.3.ebuild 13231
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
-MD5 2919ec27ca82cd9aab7b163b61e9bbc3 gcc-3.3.5-r1.ebuild 3784
-MD5 4971de27715e1d06bd242ec44acff059 gcc-3.3.5.20050130.ebuild 3683
-MD5 72f3638ed54df5c816073daf78e194c4 gcc-3.4.3-r1.ebuild 5323
-MD5 692bfcc4c1dae12efb3c9dd16292885d gcc-3.4.3.20050110.ebuild 5322
-MD5 f77a0592c6e6c6d1c0db28052acb4304 gcc-4.0.0_alpha20050213.ebuild 1293
+MD5 9f903dc849cceb2df3888c80b6ae2b50 gcc-3.3.5-r1.ebuild 3788
+MD5 59505ddd83a2c3a8eee09723971e3ed5 gcc-3.3.5.20050130.ebuild 3688
+MD5 73f27589e9df8e88e95e59acae0446cd gcc-3.4.3-r1.ebuild 5327
+MD5 61cb80c331af86d6bbf02b189ea3270c gcc-3.4.3.20050110.ebuild 5326
+MD5 8f78837a780a6d21fa1393a52515c932 gcc-4.0.0_alpha20050213.ebuild 1624
 MD5 f7e7042c2ddf66e344b30cbc66ebaf73 files/cc 24
 MD5 80d122265d3062847a4a1b161abe1d26 files/cpp 24
 MD5 47eeaf2ebd915e107081602b157b4e45 files/digest-gcc-2.95.3-r8 137
@@ -113,3 +116,10 @@ MD5 007c62d92efd70fd44c4d2e6a326036b files/3.4.3/libffi-without-libgcj.patch 165
 MD5 7434140298091f759eba5e9706264130 files/3.4.3/libssp.patch 2029
 MD5 c8fd3851ccee57651e43cac458dba7c1 files/awk/fixlafiles.awk 7837
 MD5 c672adb59a1f452475ab0a864b9d1bd1 files/awk/scanforssp.awk 5830
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCIHBiArHZZzCEUG0RAo69AKCFQXJssbwDXLpwVkyrlA+PRkO1vwCeM0Qt
+iSggDuxJp92vBLNU9YOsqMc=
+=f/9F
+-----END PGP SIGNATURE-----
