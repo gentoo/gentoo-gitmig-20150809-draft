@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-1.1.2.ebuild,v 1.9 2004/04/27 18:21:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-1.1.2.ebuild,v 1.10 2004/06/07 13:12:18 aliz Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 DESCRIPTION="A firewall GUI"
 HOMEPAGE="http://www.fwbuilder.org/"
@@ -21,6 +21,12 @@ DEPEND="sys-devel/autoconf
 	nls? ( >=sys-devel/gettext-0.11 )
 	~net-libs/libfwbuilder-1.0.2"
 
+src_unpack() {
+	unpack ${A} ; cd ${S}
+
+	epatch ${FILESDIR}/${P}-nls_fix.patch
+}
+
 src_compile() {
 	use sparc && replace-flags -O3 -O2
 	local myconf
@@ -38,7 +44,7 @@ src_compile() {
 	if use static ; then
 		emake LDFLAGS="-static" || die "emake LDFLAGS failed"
 	else
-		emake || die "emake failed"
+		make -j1 || die "emake failed"
 	fi
 }
 
