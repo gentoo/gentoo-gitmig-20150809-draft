@@ -1,36 +1,35 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/pspell/pspell-0.12.2-r1.ebuild,v 1.5 2002/05/27 17:27:36 drobbins Exp $
+# Author: Achim Gottinger <achim@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/app-text/pspell/pspell-0.12.2-r3.ebuild,v 1.1 2002/06/19 21:33:47 seemant Exp $
+
+inherit libtool
 
 #Remove leading zero from version number
 MYPV=${PV#0}
-
 S=${WORKDIR}/${PN}-${MYPV}
-
 DESCRIPTION="A spell checker frontend for aspell and ispell"
-
-SRC_URI="mirror://sourceforge/${PN}/${PN}-${MYPV}.tar.gz"
-
+SRC_URI="http://telia.dl.sf.net/${PN}/${PN}-${MYPV}.tar.gz" #2481
 HOMEPAGE="http://pspell.sourceforge.net"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc
+	>=sys-devel/libtool-1.4.1-r4"
 
 
 src_compile() {
 
+	elibtoolize
+	
 	./configure \
 		--prefix=/usr \
+		--exec-prefix=/usr \
+		--bindir=/usr/bin \
+		--sharedstatedir=/var/lib \
 		--enable-doc-dir=/usr/share/doc/${PF} \
+		--enable-ltdl \
 		--host=${CHOST} || die "./configure failed"
 		
 	emake || die "Parallel Make Failed"
-	cd modules
-	./configure \
-		--prefix=/usr \
-		--host=${CHOST} || die "Modules config failed"
-	emake || die "Modules compilation filed"
-
 }
 
 src_install () {
@@ -42,5 +41,4 @@ src_install () {
 	cd ${D}/usr/share/doc/${PF}
 	mv man-html html
 	mv man-text txt
-
 }
