@@ -1,8 +1,11 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/ChangeLog,v 1.1 2002/03/05 21:23:37 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/ChangeLog,v 1.2 2002/07/16 04:46:43 gerk Exp $
 
 *usermode-kernel-2.4.18 (4 March 2002)
+
+  15 Jul 2002; Mark Guertin <gerk@gentoo.org>
+  Added arch keywords (-ppc -sparc -sparc64)
 
   4 March 2002; Grant Goodyear <g2boojum@gentoo.org> :
   

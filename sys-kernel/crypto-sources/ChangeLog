@@ -1,8 +1,11 @@
 # ChangeLog for sys-kernel/crypto-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/crypto-sources/ChangeLog,v 1.1 2002/07/09 13:20:45 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/crypto-sources/ChangeLog,v 1.2 2002/07/16 04:30:27 gerk Exp $
 
 *crypto-sources-2.4.19-r7 (09 Jul 2002)
+
+  15 Jul 2002; Mark Guertin <gerk@gentoo.org>
+  Added arch keywords (-ppc -sparc -sparc64)
 
   09 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> ChangeLog :
 

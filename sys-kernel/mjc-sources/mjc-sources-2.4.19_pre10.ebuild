@@ -26,7 +26,7 @@ PROVIDE="virtual/linux-sources"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 -ppc -sparc -sparc64"
 
 if [ $ETYPE = "sources" ] && [ -z "`use build`" ]
 then

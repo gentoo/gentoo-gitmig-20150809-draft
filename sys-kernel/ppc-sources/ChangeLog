@@ -1,8 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. 
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Id: ChangeLog,v 1.5 2002/06/12 07:28:42 kain Exp $
+# $Id: ChangeLog,v 1.6 2002/07/16 04:39:54 gerk Exp $
 
 *ppc-sources-2.4.19-r6 (12 Jun 2002)
+
+  15 Jul 2002; Mark Guertin <gerk@gentoo.org>
+  Added arch keywords (ppc -x86 -sparc -sparc64)
 
   12 Jun 2002; Kain <kain@kain.org> all :
 

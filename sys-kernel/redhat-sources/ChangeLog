@@ -1,8 +1,11 @@
 # ChangeLog for sys-kernel/redhat-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/redhat-sources/ChangeLog,v 1.2 2002/05/21 07:07:34 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/redhat-sources/ChangeLog,v 1.3 2002/07/16 04:44:14 gerk Exp $
 
 *redhat-sources-2.4.18-r4 (21 May 2002)
+
+  15 Jul 2002; Mark Guertin <gerk@gentoo.org>
+  Added arch keywords (-ppc -sparc -sparc64)
 
   21 May 2002; Bruce A. Locke <blocke@shivan.org> redhat-sources-2.4.18-r4.ebuild :
 

@@ -1,8 +1,11 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.1 2002/05/12 21:42:40 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.2 2002/07/16 04:45:51 gerk Exp $
 
 *sparc-sources-2.2.21_pre3 (12 May 2002)
+
+  15 Jul 2002; Mark Guertin <gerk@gentoo.org>
+  Added arch keywords (sparc sparc64 -ppc -x86)
 
   12 May 2002; M.Thibaut <murphy@gentoo.org> :
   This is the 2.2.20 version of the Linux kernel with the devfs patch

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.18-r1.ebuild,v 1.4 2002/07/11 06:30:56 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/usermode-sources/usermode-sources-2.4.18-r1.ebuild,v 1.5 2002/07/16 04:46:43 gerk Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -22,7 +22,7 @@ SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2  http:
 HOMEPAGE="http://www.kernel.org/ http://user-mode-linux.sourceforge.net" 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 -ppc -sparc -sparc64"
 
 #console-tools is needed to solve the loadkeys fiasco.
 #binutils version needed to avoid Athlon/PIII/SSE assembler bugs.

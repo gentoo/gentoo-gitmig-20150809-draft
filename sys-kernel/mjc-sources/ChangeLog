@@ -4,6 +4,10 @@
 
 *mjc-sources 2.4.19-pre10-mjc3 (1 July 2002)
 
+  15 Jul 2002; Mark Guertin <gerk@gentoo.org>
+  Added arch keywords (-ppc -sparc -sparc64)
+
+
 	Initial ChangeLog.  Sources currently include:
 
 	
