@@ -1,9 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.1.2.ebuild,v 1.6 2002/12/09 04:21:04 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.1.2.ebuild,v 1.7 2002/12/25 05:50:08 bcowan Exp $
 
 S=${WORKDIR}/${P}
-DESCRIPTION="Netscape Portabel Runtime"
+DESCRIPTION="Netscape Portable Runtime"
 SRC_URI="ftp://ftp.mozilla.org/pub/nspr/releases/v${PV}/src/${P}.tar.gz"
 HOMEPAGE="http://www.mozilla.org/projects/nspr/"
 
