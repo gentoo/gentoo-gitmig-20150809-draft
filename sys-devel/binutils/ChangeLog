@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.95 2003/12/30 23:03:14 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.96 2003/12/31 13:37:00 gmsoft Exp $
 
   30 Dec 2003; Sven Blumenstein <bazik@gentoo.org>
   binutils-2.11.92.0.12.3-r2.ebuild, binutils-2.11.92.0.7.ebuild,
@@ -17,7 +17,10 @@
 
 *binutils-2.14.90.0.7-r3 (09 Nov 2003)
 
-  08 Dec 2003; Guy martin <gmsoft@gentoo.org> binutils-2.14.90.0.7-r3.ebuild:
+  31 Dec 2003; Guy Martin <gmsoft@gentoo.org> binutils-2.14.90.0.7-r3.ebuild:
+  Added hppa64-linux target for hppa.
+
+  08 Dec 2003; Guy Martin <gmsoft@gentoo.org> binutils-2.14.90.0.7-r3.ebuild:
   Marked stable on hppa.
 
   09 Nov 2003; Martin Schlemmer <azarah@gentoo.org>
