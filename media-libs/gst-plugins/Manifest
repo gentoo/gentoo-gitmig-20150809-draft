@@ -3,7 +3,7 @@ MD5 ca97543ee9f2a20325ce51626a1f3c43 gst-plugins-0.6.1.ebuild 4861
 MD5 2cd19bec6d50309a6d2c80a0685fc1dd gst-plugins-0.6.3.ebuild 3045
 MD5 03d56a2e17b78c7c97dd3fc8a4618288 ChangeLog 8926
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 93ece6f64af8c80bda3885512538d130 gst-plugins-0.6.4.ebuild 2919
+MD5 9e5ad85d06e8d34aa3cb09777052f41c gst-plugins-0.6.4.ebuild 2918
 MD5 4ce1d39bcd5cf1db9464cad55467b790 files/gst-plugins-0.6.3-gcc33.patch 1307
 MD5 c416f328737707f685267ea1dcf14272 files/digest-gst-plugins-0.6.2-r1 71
 MD5 1934516009a2cf836520961cd1fd0085 files/gst-plugins-0.6.2-rm_cflags.patch 2542
