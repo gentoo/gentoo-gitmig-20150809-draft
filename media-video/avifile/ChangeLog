@@ -1,6 +1,16 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.81 2004/10/23 14:35:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.82 2004/11/12 10:57:59 phosphan Exp $
+
+*avifile-0.7.41.20041001-r1 (12 Nov 2004)
+
+  12 Nov 2004; Patrick Kursawe <phosphan@gentoo.org>
+  +files/avifile-0.7.41.20041001-gcc2.patch,
+  +avifile-0.7.41.20041001-r1.ebuild:
+  Fixing bug #67441 (configure script stripped -g from CFLAGS - even in the
+  middle of a word), bug #68899 (hard-coded -lXrender in some Makefile, removing
+  it if not using X), bug #70074 (doesn't compile with gcc 2.95) and
+  bug #69511 (parts of the build did not use our CFLAGS)
 
   23 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   avifile-0.7.41.20041001.ebuild:

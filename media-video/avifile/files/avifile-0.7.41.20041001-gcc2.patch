@@ -1,0 +1,36 @@
+--- lib/subtitle/subread.c~	2004-03-28 09:45:08 -0500
++++ lib/subtitle/subread.c	2004-11-04 14:40:52 -0500
+@@ -101,11 +101,12 @@
+     {
+ 	int n = 0;
+ 	char* b = trim_spaces(txt);
+-        trim_http(b);
++	char* t;
++	trim_http(b);
+ 
+ 	// skip color and font-style change - not supported right now
+ 	// {c:$00ffff} {y:i}
+-	char* t = strchr(b, '{');
++	t = strchr(b, '{');
+ 	if (t)
+ 	{
+ 	    char u = toupper(t[1]);
+--- ffmpeg/libavcodec/libpostproc/postprocess_template.c~	2004-09-30 10:55:16 -0400
++++ ffmpeg/libavcodec/libpostproc/postprocess_template.c	2004-11-04 14:20:43 -0500
+@@ -2731,6 +2731,7 @@
+ 	if(dc_mask & eq_mask){
+ 		int offset= -8*step;
+ 		int64_t *temp_sums= sums;
++		int xxx;
+ 
+ 		asm volatile(
+ 		"movq %2, %%mm0					\n\t"  // QP,..., QP
+@@ -2870,7 +2871,7 @@
+ 		);
+ 
+ 		src+= step; // src points to begin of the 8x8 Block
+-                int xxx = dc_mask & eq_mask;
++                xxx = dc_mask & eq_mask;
+ 		asm volatile(
+ 		"movq %4, %%mm6					\n\t"
+ 		"pcmpeqb %%mm5, %%mm5				\n\t"
