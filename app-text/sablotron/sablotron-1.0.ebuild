@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-1.0.ebuild,v 1.4 2004/01/10 16:00:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-1.0.ebuild,v 1.5 2004/01/31 10:21:08 obz Exp $
 
 inherit libtool
 
@@ -44,14 +44,14 @@ src_compile() {
 	# is added <obz@gentoo.org>
 	export LDFLAGS="-lstdc++"
 
-	econf ${myconf} --prefix=${D} || die "Configure failed"
+	econf ${myconf} || die "Configure failed"
 	emake || die "Make failed"
 
 }
 
 src_install() {
 
-	einstall || die "Install failed"
+	einstall prefix=${D}/usr || die "Install failed"
 	dodoc ${DOCS}
 
 }

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-0.96.ebuild,v 1.10 2004/01/02 22:02:15 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-0.96.ebuild,v 1.11 2004/01/31 10:21:08 obz Exp $
 
 inherit eutils libtool
 
