@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/bmp-outlame
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/bmp-outlame/ChangeLog,v 1.1 2004/11/20 19:08:04 chainsaw Exp $
+
+*bmp-outlame-0.2.2 (20 Nov 2004)
+
+  20 Nov 2004; Tony Vroon <chainsaw@gentoo.org> +files/0.2.2-includes.patch,
+  +bmp-outlame-0.2.2.ebuild:
+  Initial commit. Ebuild based on the one submitted by will@johnstonclan.net
+  in bug #65225.
+
