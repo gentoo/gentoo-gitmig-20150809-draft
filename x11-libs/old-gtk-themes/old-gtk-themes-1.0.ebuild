@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Aron Griffis <agriffis@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/old-gtk-themes/old-gtk-themes-1.0.ebuild,v 1.1 2001/11/10 22:09:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/old-gtk-themes/old-gtk-themes-1.0.ebuild,v 1.2 2002/03/28 10:10:29 seemant Exp $
 
 S=${WORKDIR}
 DESCRIPTION="All themes from (new) gtk.themes.org"
@@ -19,7 +19,7 @@ src_unpack() {
 	# Get the directory listing; this creates the file .listing
 	rm -f .listing
 	wget -nr -O/dev/null --passive-ftp \
-		ftp://ftp3.sourceforge.net/pub/mirrors/themes.org/gtk/ \
+		http://www.themes.org/skins/gtk/ \
 		|| die "wget failed"
 	# Convert it from "ls -l" format to "ls" format, and remove
 	# carriage returns.  Skip LCARS_blue-1.2, which appears to be
