@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/GD-Graph3d
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD-Graph3d/ChangeLog,v 1.5 2004/09/04 17:16:23 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD-Graph3d/ChangeLog,v 1.6 2004/10/19 12:12:57 mcummings Exp $
+
+  19 Oct 2004; Michael Cummings <mcummings@gentoo.org> GD-Graph3d-0.63.ebuild:
+  marking ~sparc
 
   04 Sep 2004; Thomas Matthijs <axxo@gentoo.org> GD-Graph3d-0.63.ebuild:
   fix depend syntax 58347
