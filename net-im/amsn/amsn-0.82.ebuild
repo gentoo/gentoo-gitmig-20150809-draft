@@ -16,6 +16,7 @@ KEYWORDS="~x86 ~amd64"
 
 DEPEND=">=dev-lang/tcl-8.3.3
 	>=dev-lang/tk-8.3.3
+	dev-tcltk/tls
 	imlib? ( media-libs/imlib )"
 
 src_compile() {
