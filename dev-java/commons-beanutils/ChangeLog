@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/commons-beanutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/ChangeLog,v 1.5 2003/02/12 05:50:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/ChangeLog,v 1.6 2003/03/22 11:46:29 absinthe Exp $
+
+*commons-beanutils-1.6.1 (22 Mar 2003)
+
+  22 Mar 2003; Dylan Carlson <absinthe@gentoo.org>
+  commons-beanutils-1.6.1.ebuild:
+  Version bump; thanks to Lim Swee Tat <st_lim@stlim.net> for his contributions
+  to this effort. Now uses the jakarta-commons eclass.
 
 *commons-beanutils-1.5-r1 (24 Nov 2002)
 
