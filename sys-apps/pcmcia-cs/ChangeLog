@@ -1,7 +1,10 @@
 # ChangeLog for sys-apps/pcmcia-cs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.5 2002/03/17 00:06:47 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/ChangeLog,v 1.6 2002/03/19 05:16:46 chadh Exp $
 
+*pcmcia-cs-3.1.33-r1 (18 Mar 2002)
+  18 Mar 2002; Chad Huneycutt <chadh@gentoo.org>
+  newest version of pcmcia-cs
 
 *pcmcia-cs-3.1.31-r5 (14 Mar 2002)
 
