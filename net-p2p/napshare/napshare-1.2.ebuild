@@ -1,12 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/napshare/napshare-1.2.ebuild,v 1.8 2004/06/25 00:35:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/napshare/napshare-1.2.ebuild,v 1.9 2004/07/09 02:42:24 squinky86 Exp $
 
 IUSE=""
 
-IUSE=""
-
-S=${WORKDIR}/${P}
 DESCRIPTION="NapShare is a fully automated Gnutella P2P client made to run 24/7 unattended"
 SRC_URI="mirror://sourceforge/napshare/${P}.tar.gz"
 HOMEPAGE="http://napshare.sourceforge.net/"
