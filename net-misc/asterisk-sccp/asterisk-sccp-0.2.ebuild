@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-sccp/asterisk-sccp-0.2.ebuild,v 1.1 2004/02/19 00:17:46 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk-sccp/asterisk-sccp-0.2.ebuild,v 1.2 2004/02/19 00:20:12 stkn Exp $
 
 IUSE="debug"
 
@@ -12,6 +12,8 @@ S="${WORKDIR}/chan_sccp-${PV}"
 SLOT="0"
 KEYWORDS="~x86"
 LICENSE="GPL-2"
+
+DEPEND=">=net-misc/asterisk-0.5.0"
 
 src_unpack() {
 	unpack ${A}
