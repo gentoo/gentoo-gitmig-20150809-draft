@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 66d8e3c82c0f83f3773f3dee00973b5b ChangeLog 1102
 MD5 3ff31b5479b2a0244f5711fff3155aed metadata.xml 221
 MD5 67b88eb277b43e9f4bbb4740a730be6d zsh-completion-20040730.ebuild 623
-MD5 f5175cd3a6cb98f41b0bfb3db7e60577 ChangeLog 1004
-MD5 556d0740da94c7976b277a164c887937 zsh-completion-20050120.ebuild 647
+MD5 ae6dcc386c009589dfa8006432e63dc9 zsh-completion-20050120.ebuild 647
 MD5 35ff3cee00b0cd4c52e0460b71330832 files/digest-zsh-completion-20040730 73
 MD5 a2402abf02f18a5420c901c1d066819b files/digest-zsh-completion-20050120 74
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCPv4WVWNWqTUmv+0RAgVcAKCevQGLLbiJzmjoQIaGZonylu76KwCfbLCM
-8PHnOBpu70voNCxXRrkuoP4=
-=Sg0i
------END PGP SIGNATURE-----
