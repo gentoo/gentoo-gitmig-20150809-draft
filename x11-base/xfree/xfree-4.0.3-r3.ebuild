@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.0.3-r3.ebuild,v 1.5 2001/05/18 05:02:22 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.0.3-r3.ebuild,v 1.6 2001/05/18 17:02:05 achim Exp $
 
 A="X402src-1.tgz X402src-2.tgz X402src-3.tgz 4.0.2-4.0.3.diff.gz truetype.tar.gz"
 S=${WORKDIR}/xc
@@ -24,7 +24,7 @@ DEPEND=">=sys-libs/ncurses-5.1
         >=sys-devel/flex-2.5.4a-r2
         sys-devel/perl"
 
-PROVIDE="virtual/x11 virtual/opengl media-libs/freetype-2.0.6"
+PROVIDE="virtual/x11 virtual/opengl"
 
 src_unpack () {
 
