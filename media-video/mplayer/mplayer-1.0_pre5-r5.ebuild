@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r5.ebuild,v 1.6 2004/12/19 00:49:24 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r5.ebuild,v 1.7 2004/12/19 17:13:26 kloeri Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -87,7 +87,7 @@ SLOT="0"
 LICENSE="GPL-2"
 #KEYWORDS="~x86 ~ppc ~alpha ~amd64 ~ia64 ~hppa ~sparc"
 #agriffis - uncomment this when ia64 is ready - Chris
-KEYWORDS="x86 ppc ~alpha amd64 ~hppa sparc ppc64"
+KEYWORDS="x86 ppc alpha amd64 ~hppa sparc ppc64"
 
 src_unpack() {
 
