@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.2-r2.ebuild,v 1.5 2005/01/16 10:56:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.2-r2.ebuild,v 1.6 2005/03/03 18:46:52 pythonhead Exp $
 
 inherit flag-o-matic eutils gnuconfig
 
@@ -138,6 +138,10 @@ src_install() {
 		cd contrib/src
 		einstall || die "install unicode contrib failed"
 	fi
+
+	# twp 20040830 wxGTK-2.4.2 forgets to install htmlproc.h; copy it manually
+	insinto /usr/include/wx/html
+	doins ${S}/include/wx/html/htmlproc.h
 
 	cd ${S}
 	dodoc *.txt
