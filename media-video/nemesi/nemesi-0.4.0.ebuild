@@ -1,19 +1,14 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nemesi/nemesi-0.4.0.ebuild,v 1.1 2004/12/17 06:26:10 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nemesi/nemesi-0.4.0.ebuild,v 1.2 2004/12/18 10:08:28 mr_bones_ Exp $
 
 DESCRIPTION="Tiny rtsp client"
-
 HOMEPAGE="http://streaming.polito.it/"
-
 SRC_URI="http://streaming.polito.it/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-
 SLOT="0"
-
 KEYWORDS="~x86 ~ppc"
-
 IUSE="gtk sdl"
 
 DEPEND="sys-libs/glibc
