@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/myth.eclass,v 1.8 2005/02/21 22:55:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/myth.eclass,v 1.9 2005/02/27 10:59:52 eradicator Exp $
 #
 # Author: Daniel Ahlberg <aliz@gentoo.org>
 #
 
-inherit multilib
+inherit multilib toolchain-funcs
 
 ECLASS=myth
 INHERITED="${INHERITED} ${ECLASS}"
@@ -51,7 +51,7 @@ myth_src_compile() {
 	export QMAKESPEC="linux-g++"
 
 	qmake -o "Makefile" "${PN}.pro"
-	emake || die
+	emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" "${@}" || die
 }
 
 myth_src_install() {
