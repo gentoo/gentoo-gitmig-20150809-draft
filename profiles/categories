@@ -58,6 +58,7 @@ games-util
 gnome-base
 gnome-extra
 kde-base
+local
 media-fonts
 media-gfx
 media-libs
