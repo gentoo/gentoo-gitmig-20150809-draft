@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.12.ebuild,v 1.3 2003/06/14 07:18:45 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.12-r1.ebuild,v 1.1 2003/06/20 14:45:07 lostlogic Exp $
 
 IUSE="ssl mysql sasl ldap ipv6 maildir mbox"
 
 inherit eutils
 
-TLS_P="pfixtls-0.8.13-${PV}-0.9.7b"
+TLS_P="pfixtls-0.8.14-${PV}-0.9.7b"
 IPV6="1.14"
 IPV6_P="ipv6-${IPV6}-pf-${PV}"
 IPV6_TLS_P="tls+${IPV6_P}"
