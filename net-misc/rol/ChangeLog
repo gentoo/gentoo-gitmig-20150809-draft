@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/rol
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rol/ChangeLog,v 1.5 2003/12/01 17:47:32 seemant Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rol/ChangeLog,v 1.6 2004/05/11 00:07:36 mr_bones_ Exp $
+
+*rol-0.3.0 (10 May 2004)
+
+  10 May 2004; Michael Sterrett <mr_bones_@gentoo.org> rol-0.3.0.ebuild:
+  version bump to fix bug #50506
 
   01 Dec 2003; Seemant Kulleen <seemant@gentoo.org> rol-0.2.2.ebuild:
   Added gconf2 to dependency list. Closes bug #34616 by Fabio Di Fabio
