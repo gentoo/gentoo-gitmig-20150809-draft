@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <seemant@gentoo.org> (15 Sep 2003)
+# Working copy of gtk2 -claws got checked in
+=net-mail/sylpheed-claws-0.9.5-r1
+
 # <wolf31o2@gentoo.org> (14 Sep 2003)
 # masking enemy-territory until contact is made with id
 games-fps/enemy-territory
