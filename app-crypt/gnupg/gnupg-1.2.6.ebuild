@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.6.ebuild,v 1.16 2004/12/07 12:54:06 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.6.ebuild,v 1.17 2004/12/31 02:28:18 dragonheart Exp $
 
 inherit eutils flag-o-matic
 
@@ -40,6 +40,9 @@ src_unpack() {
 	fi
 
 	use ppc64 && epatch ${FILESDIR}/gnupg-1.2.4.ppc64.patch
+	cd ${S}
+	sed -i -e 's:PIC:__PIC__:' mpi/i386/mpih-{add,sub}1.S intl/relocatable.c
+	sed -i -e 's:if PIC:ifdef __PIC__:' mpi/sparc32v8/mpih-mul{1,2}.S
 }
 
 src_compile() {
@@ -73,8 +76,6 @@ src_compile() {
 	if use static; then
 		myconf="${myconf} --with-included-zlib"
 		append-ldflags -static
-	else
-		myconf="${myconf} --without-included-zlib"
 	fi
 
 	# Still needed?

@@ -3,6 +3,10 @@
 <pkgmetadata>
 <herd>crypto</herd>
 <maintainer>
+  <email>crypto@gentoo.org</email>
+  <name>Crypto Herd</name>
+</maintainer>
+<maintainer>
   <email>taviso@gentoo.org</email>
   <name>Tavis Ormandy</name>
 </maintainer>

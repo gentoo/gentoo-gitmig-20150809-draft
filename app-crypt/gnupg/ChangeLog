@@ -1,6 +1,10 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.87 2004/12/19 03:19:32 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.88 2004/12/31 02:28:18 dragonheart Exp $
+
+  31 Dec 2004; Daniel Black <dragonheart@gentoo.org> metadata.xml,
+  gnupg-1.2.6.ebuild:
+  PIC patch added thanks to Peter S. Mazinger <ps.m@gmx.net> in bug #74521
 
 *gnupg-1.4.0 (19 Dec 2004)
 
