@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/calltree
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/calltree/ChangeLog,v 1.15 2004/08/14 22:30:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/calltree/ChangeLog,v 1.16 2004/09/16 15:48:47 caleb Exp $
+
+  16 Sep 2004; Caleb Tennis <caleb@gentoo.org> calltree-0.9.7-r1.ebuild:
+  This version isn't compatible with newer valgrinds - use callgrind instead.
+  Bug #62863
 
 *calltree-0.9.7-r1 (14 Aug 2004)
 
