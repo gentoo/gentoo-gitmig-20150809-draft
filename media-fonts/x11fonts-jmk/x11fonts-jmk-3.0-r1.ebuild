@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/x11fonts-jmk/x11fonts-jmk-3.0-r1.ebuild,v 1.6 2004/09/29 17:49:26 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/x11fonts-jmk/x11fonts-jmk-3.0-r1.ebuild,v 1.7 2005/02/20 11:56:27 usata Exp $
 
 MY_P=jmk-x11-fonts-${PV}
 S=${WORKDIR}/${MY_P}
@@ -18,6 +18,9 @@ RDEPEND=""
 FONTPATH="/usr/share/fonts/jmk"
 
 src_compile() {
+
+	local GZIP_OPTS="${GZIP}"
+	local GZIP="gzip ${GZIP_OPTS}"
 
 	xmkmf || die
 	emake || die

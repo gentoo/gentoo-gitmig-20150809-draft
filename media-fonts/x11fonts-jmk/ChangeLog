@@ -1,6 +1,10 @@
 # ChangeLog for media-fonts/x11fonts-jmk
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/x11fonts-jmk/ChangeLog,v 1.6 2004/09/29 17:49:26 gustavoz Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/x11fonts-jmk/ChangeLog,v 1.7 2005/02/20 11:56:27 usata Exp $
+
+  20 Feb 2005; Mamoru KOMACHI <usata@gentoo.org> x11fonts-jmk-3.0-r1.ebuild,
+  -x11fonts-jmk-3.0.ebuild:
+  Respect users' ${GZIP} setting; bug #71974.
 
   29 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   x11fonts-jmk-3.0-r1.ebuild:
