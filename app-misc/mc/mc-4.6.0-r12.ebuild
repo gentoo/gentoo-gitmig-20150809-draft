@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r12.ebuild,v 1.1 2004/11/17 13:48:26 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r12.ebuild,v 1.2 2004/11/17 13:50:57 lanius Exp $
 
 inherit flag-o-matic eutils
 
@@ -101,6 +101,9 @@ src_install() {
 	doins ${FILESDIR}/ebuild.syntax
 	cd ${D}/usr/share/mc/syntax
 	epatch ${FILESDIR}/${P}-ebuild-syntax.patch
+
+	# http://bugs.gentoo.org/show_bug.cgi?id=71275
+	rm -f ${D}/usr/share/locale/locale.alias
 }
 
 pkg_postinst() {
