@@ -1,6 +1,6 @@
 # ChangeLog for app-emacs/sha1
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/sha1/ChangeLog,v 1.1 2003/11/22 06:23:21 mkennedy Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/sha1/ChangeLog,v 1.2 2004/06/24 22:23:27 agriffis Exp $
 
 *sha1-19990113 (22 Nov 2003)
 

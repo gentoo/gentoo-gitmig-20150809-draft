@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/proofgeneral-3.4.ebuild,v 1.5 2004/06/20 12:37:09 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/proofgeneral/proofgeneral-3.4.ebuild,v 1.6 2004/06/24 22:20:35 agriffis Exp $
 
 SIMPLE_ELISP='nil'
 inherit elisp

@@ -1,6 +1,6 @@
 # ChangeLog for app-emacs/gnuplot-mode
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuplot-mode/ChangeLog,v 1.1 2004/03/13 21:45:55 usata Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnuplot-mode/ChangeLog,v 1.2 2004/06/24 22:12:12 agriffis Exp $
 
 *gnuplot-mode-0.6.0 (14 Mar 2004)
 

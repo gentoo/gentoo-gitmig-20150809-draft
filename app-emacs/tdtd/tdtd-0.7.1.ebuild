@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tdtd/tdtd-0.7.1.ebuild,v 1.2 2004/03/14 12:46:10 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tdtd/tdtd-0.7.1.ebuild,v 1.3 2004/06/24 22:25:12 agriffis Exp $
 
 inherit elisp
 

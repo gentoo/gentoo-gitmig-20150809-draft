@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mailcrypt/mailcrypt-3.5.7.ebuild,v 1.4 2004/04/25 17:10:57 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mailcrypt/mailcrypt-3.5.7.ebuild,v 1.5 2004/06/24 22:17:39 agriffis Exp $
 
 inherit elisp
 

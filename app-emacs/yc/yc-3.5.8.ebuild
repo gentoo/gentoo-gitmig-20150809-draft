@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/yc/yc-3.5.8.ebuild,v 1.6 2004/02/24 08:58:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/yc/yc-3.5.8.ebuild,v 1.7 2004/06/24 22:29:12 agriffis Exp $
 
 inherit elisp
 

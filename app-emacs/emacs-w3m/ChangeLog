@@ -1,6 +1,6 @@
 # ChangeLog for app-emacs/emacs-w3m
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/ChangeLog,v 1.15 2004/06/23 17:42:49 usata Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/ChangeLog,v 1.16 2004/06/24 22:10:11 agriffis Exp $
 
   24 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> emacs-w3m-1.4.ebuild:
   Stable on x86 and ppc

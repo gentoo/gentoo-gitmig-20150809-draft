@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mule-ucs/mule-ucs-0.84-r1.ebuild,v 1.4 2004/06/14 08:21:09 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mule-ucs/mule-ucs-0.84-r1.ebuild,v 1.5 2004/06/24 22:19:17 agriffis Exp $
 
 inherit elisp-common eutils
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/lookup/lookup-1.4.ebuild,v 1.2 2004/04/25 14:26:59 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/lookup/lookup-1.4.ebuild,v 1.3 2004/06/24 22:17:07 agriffis Exp $
 
 inherit elisp
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-mode/nxml-mode-20031031.ebuild,v 1.3 2004/04/06 03:47:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/nxml-mode/nxml-mode-20031031.ebuild,v 1.4 2004/06/24 22:19:39 agriffis Exp $
 
 inherit elisp eutils
 

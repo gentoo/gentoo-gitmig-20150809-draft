@@ -1,6 +1,6 @@
 # ChangeLog for app-emacs/ilisp
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ilisp/ChangeLog,v 1.9 2003/11/12 05:50:57 mkennedy Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ilisp/ChangeLog,v 1.10 2004/06/24 22:15:28 agriffis Exp $
 
   11 Nov 2003; <mkennedy@gentoo.org> ilisp-5.12.0-r3.ebuild,
   files/50ilispclc-gentoo.el:

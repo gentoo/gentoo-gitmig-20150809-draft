@@ -1,6 +1,6 @@
 # ChangeLog for app-emacs/xrdb-mode
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/xrdb-mode/ChangeLog,v 1.1 2003/09/10 07:42:50 mkennedy Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/xrdb-mode/ChangeLog,v 1.2 2004/06/24 22:28:30 agriffis Exp $
 
 *xrdb-mode-2.31 (10 Sep 2003)
 

@@ -1,6 +1,6 @@
 # ChangeLog for app-emacs/python-mode
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.4 2004/04/03 23:35:30 pylon Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.5 2004/06/24 22:21:19 agriffis Exp $
 
   04 Apr 2004; Lars Weiler <pylon@gentoo.org> python-mode-4.6.ebuild:
   stable on ppc

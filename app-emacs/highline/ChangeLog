@@ -1,6 +1,6 @@
 # ChangeLog for app-emacs/highline
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/highline/ChangeLog,v 1.4 2004/04/18 02:22:28 randy Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/highline/ChangeLog,v 1.5 2004/06/24 22:13:42 agriffis Exp $
 
   17 Apr 2004; Michael McCabe <randy@gentoo.org> highline-4.2.ebuild:
   added s390 keywords
