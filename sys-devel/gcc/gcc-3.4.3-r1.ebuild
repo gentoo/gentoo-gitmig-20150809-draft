@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3-r1.ebuild,v 1.13 2005/01/09 19:02:54 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3-r1.ebuild,v 1.14 2005/01/10 11:26:22 eradicator Exp $
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+ssp extensions, Haj Ten Brugge runtime bounds checking"
 
@@ -72,73 +72,7 @@ SPLIT_SPECS="${SPLIT_SPECS:="true"}"
 
 inherit eutils flag-o-matic libtool gnuconfig toolchain
 
-gcc_do_filter_flags() {
-	strip-flags
-
-	# In general gcc does not like optimization, and add -O2 where
-	# it is safe.  This is especially true for gcc 3.3 + 3.4
-	replace-flags -O? -O2
-
-	# -mcpu is deprecated on these archs, and possibly others
-	if use amd64 || use x86 ; then
-		setting="`get-flag mcpu`"
-		[ ! -z "${setting}" ] && \
-			replace-flags -mcpu="${setting}" -mtune="${setting}" && \
-			ewarn "-mcpu is deprecated on your arch\a\a\a" && \
-			epause 5
-	fi
-
-	strip-unsupported-flags
-
-	# If we use multilib on mips, we shouldn't pass -mabi flag - it breaks
-	# build of non-default-abi libraries.
-	use mips && use multilib && filter-flags "-mabi*"
-
-	# Compile problems with these (bug #6641 among others)...
-	#filter-flags "-fno-exceptions -fomit-frame-pointer -fforce-addr"
-
-	export GCJFLAGS="${CFLAGS}"
-}
-
-
-chk_gcc_version() {
-	mkdir -p "${WORKDIR}"
-
-	# This next bit is for updating libtool linker scripts ...
-	local OLD_GCC_VERSION="`gcc -dumpversion`"
-	local OLD_GCC_CHOST="$(gcc -v 2>&1 | egrep '^Reading specs' |\
-	                       sed -e 's:^.*/gcc[^/]*/\([^/]*\)/[0-9]\+.*$:\1:')"
-
-	if [ "${OLD_GCC_VERSION}" != "${MY_PV_FULL}" ]
-	then
-		echo "${OLD_GCC_VERSION}" > "${WORKDIR}/.oldgccversion"
-	fi
-
-	if [ -n "${OLD_GCC_CHOST}" ]
-	then
-		if [ "${CHOST}" = "${CTARGET}" -a "${OLD_GCC_CHOST}" != "${CHOST}" ]
-		then
-			echo "${OLD_GCC_CHOST}" > "${WORKDIR}/.oldgccchost"
-		fi
-	fi
-
-	# Did we check the version ?
-	touch "${WORKDIR}/.chkgccversion"
-}
-
 src_unpack() {
-	# if sandbox is enabled, and multilib is enabled, but we dont have a 32bit
-	# sandbox... installing gcc will fail as soon as it starts configuring the
-	# 32bit libstdc++. not fun.
-	if use amd64 && use multilib && hasq sandbox $FEATURES && [ ! -e /lib32/libsandbox.so ] ; then
-		eerror "You need a 32bit sandbox to install 32bit code with sandbox"
-		eerror "enabled. Either add FEATURES=-sandbox or disable multilib."
-		eerror "After installing a multilib gcc, you can re-emerge portage"
-		eerror "to get a 32bit sandbox, and this problem will go away."
-		ebeep
-		die "no 32bit sandbox"
-	fi
-
 	gcc_src_unpack
 
 	# bah
@@ -162,38 +96,6 @@ src_unpack() {
 		#epatch ${FILESDIR}/3.4.3/libffi-nogcj-lib-path-fix.patch
 	fi
 
-	# /* Begin mips bits */
-	if use mips; then
-		# If mips, and we DON'T want multilib, then rig gcc to only use n32 OR n64
-		if use !multilib; then
-			use n32 && epatch ${FILESDIR}/3.4.1/gcc-3.4.1-mips-n32only.patch
-			use n64 && epatch ${FILESDIR}/3.4.1/gcc-3.4.1-mips-n64only.patch
-		fi
-
-		# Patch forward-ported from a gcc-3.0.x patch that adds -march=r10000 and
-		# -mtune=r10000 support to gcc (Allows the compiler to generate code to
-		# take advantage of R10k's second ALU, perform shifts, etc..
-		#
-		# Needs re-porting to DFA in gcc-4.0 - Any Volunteers? :)
-		epatch ${FILESDIR}/3.4.2/gcc-3.4.x-mips-add-march-r10k.patch
-
-		# This is a very special patch -- it allows us to build semi-usable kernels
-		# on SGI IP28 (Indigo2 Impact R10000) systems.  The patch is henceforth
-		# regarded as a kludge by upstream, and thus, it will never get accepted upstream,
-		# but for our purposes of building a kernel, it works.
-		# Unless you're building an IP28 kernel, you really don't need care about what
-		# this patch does, because if you are, you are probably already aware of what
-		# it does.
-		# All that said, the abilities of this patch are disabled by default and need
-		# to be enabled by passing -mip28-cache-barrier.  Only used to build kernels, 
-		# There is the possibility it may be used for very specific userland apps too.
-		if use ip28; then
-			epatch ${FILESDIR}/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers.patch
-		fi
-	fi
-	# /* End mips bits */
-
-
 	# hack around some ugly 32bit sse2 wrong-code bugs
 	epatch ${FILESDIR}/3.4.2/gcc34-m32-no-sse2.patch
 	epatch ${FILESDIR}/3.4.2/gcc34-fix-sse2_pinsrw.patch
@@ -201,308 +103,45 @@ src_unpack() {
 	# Fix cross-compiling
 	epatch ${FILESDIR}/3.4.3/gcc-3.4.3-cross-compile.patch
 
-	if use amd64 && use multilib ; then
-		# this should hack around the GCC_NO_EXECUTABLES bug
-		epatch ${FILESDIR}/3.4.1/gcc-3.4.1-glibc-is-native.patch
-		cd ${S}/libstdc++-v3
-		einfo "running autoreconf..."
-		autoreconf 2> /dev/null
-		cd ${S}
-	fi
-}
-
-src_install() {
-	local x=
-
-	# Do allow symlinks in ${PREFIX}/lib/gcc-lib/${CHOST}/${PV}/include as
-	# this can break the build.
-	for x in ${WORKDIR}/build/gcc/include/*
-	do
-		if [ -L ${x} ]
-		then
-			rm -f ${x}
-			continue
-		fi
-	done
-	# Remove generated headers, as they can cause things to break
-	# (ncurses, openssl, etc).
-	for x in `find ${WORKDIR}/build/gcc/include/ -name '*.h'`
-	do
-		if grep -q 'It has been auto-edited by fixincludes from' ${x}
-		then
-			rm -f ${x}
-		fi
-	done
-
-	einfo "Installing GCC..."
-	# Do the 'make install' from the build directory
-	cd ${WORKDIR}/build
-	S="${WORKDIR}/build" \
-	make DESTDIR="${D}" install || die
-
-	if [ "${CHOST}" == "${CTARGET}" ] ; then
-		[ -r ${D}${BINPATH}/gcc ] || die "gcc not found in ${D}"
-	fi
-
-	dodir /lib /usr/bin
-	dodir /etc/env.d/gcc
-	create_gcc_env_entry
-
-	if want_split_specs ; then
-		if use hardened ; then
-			create_gcc_env_entry vanilla
-		fi
-		use !hardened && hardened_gcc_works && create_gcc_env_entry hardened
-		if hardened_gcc_works || hardened_gcc_works pie ; then
-			create_gcc_env_entry hardenednossp
-		fi
-		if hardened_gcc_works || hardened_gcc_works ssp ; then
-			create_gcc_env_entry hardenednopie
-		fi
-
-		cp ${WORKDIR}/build/*.specs ${D}/${LIBPATH}
-	fi
-
-	# we dont want these in freaky non-versioned paths that dont ever get used
-	fix_freaky_non_versioned_library_paths_that_dont_ever_get_used 32
-	fix_freaky_non_versioned_library_paths_that_dont_ever_get_used 64
-	# and mips is just freaky in general ;p
-	fix_freaky_non_versioned_library_paths_that_dont_ever_get_used o32
-	# and finally, the non-bitdepth-or-ABI-specific freaky path
-
-	if [ -d ${D}/${LIBPATH}/../lib ] ; then
-		if [ "${PROFILE_ARCH}" = "sparc64-multilib" ] &&
-		   [ "${CTARGET}" = "sparc64-unknown-linux-gnu" ]; then
-			if [ -d "${D}/${LIBPATH}/32" ]; then
-				mv ${D}/${LIBPATH}/../lib/* ${D}/${LIBPATH}/32
-				rm -rf ${D}/${LIBPATH}/../lib
-			else
-				mv ${D}/${LIBPATH}/../lib ${D}/${LIBPATH}/32
-			fi
-		else
-			mv ${D}/${LIBPATH}/../lib/* ${D}/${LIBPATH}/
-			rm -rf ${D}/${LIBPATH}/../lib
-		fi
-	fi
-
-	# we also dont want libs in /usr/lib*
-	if [ "${PROFILE_ARCH}" = "sparc64-multilib" ] &&
-	   [ "${CTARGET}" = "sparc64-unknown-linux-gnu" ]; then
-			[ ! -d "${D}/${LIBPATH}/32" ] && mkdir ${D}/${LIBPATH}/32
-			mv ${D}/${PREFIX}/lib/*.a ${D}/${PREFIX}/lib/*.la ${D}/${PREFIX}/lib/*so* \
-				${D}/${LIBPATH}/32
-	fi
-
-	# FIXME: You're forgetting the libs in ${PREFIX}/lib ...
-	# see the sparc64-multilib hack ^^
-	if [ -d ${D}/${PREFIX}/lib32 -a -d ${D}/${LIBPATH}/32 ] ; then
-		mv ${D}/${PREFIX}/lib32/* ${D}/${LIBPATH}/32/
-		rm -rf ${D}/${PREFIX}/lib32/
-	elif [ -d ${D}/${PREFIX}/lib32 -a ! -d ${D}/${LIBPATH}/32 ] ; then
-		mv ${D}/${PREFIX}/lib32/* ${D}/${LIBPATH}/
-		rm -rf ${D}/${PREFIX}/lib32/
-	fi
-
-	if [ -d ${D}/${PREFIX}/lib64 -a -d ${D}/${LIBPATH}/64 ] ; then
-		mv ${D}/${PREFIX}/lib64/* ${D}/${LIBPATH}/64/
-		rm -rf ${D}/${PREFIX}/lib64/
-	elif [ -d ${D}/${PREFIX}/lib64 -a ! -d ${D}/${LIBPATH}/64 ] ; then
-		mv ${D}/${PREFIX}/lib64/* ${D}/${LIBPATH}/
-		rm -rf ${D}/${PREFIX}/lib64/
-	fi
-
-	# and sometimes crap ends up here too :|
-	mv ${D}/${LIBPATH}/../*.a ${D}/${LIBPATH}/../*.la ${D}/${LIBPATH}/../*so* \
-		${D}/${LIBPATH}/
-
-	# make sure the libtool archives have libdir set to where they actually
-	# -are-, and not where they -used- to be.
-	fix_libtool_libdir_paths "$(find ${D}/${LIBPATH} -name *.la)"
-
-	# Make sure we dont have stuff lying around that
-	# can nuke multiple versions of gcc
-	if ! use build
-	then
-		cd ${D}${LIBPATH}
-
-		# Move Java headers to compiler-specific dir
-		for x in ${D}${PREFIX}/include/gc*.h ${D}${PREFIX}/include/j*.h
-		do
-			[ -f "${x}" ] && mv -f ${x} ${D}${LIBPATH}/include/
-		done
-		for x in gcj gnu java javax org
-		do
-			if [ -d "${D}${PREFIX}/include/${x}" ]
-			then
-				dodir /${LIBPATH}/include/${x}
-				mv -f ${D}${PREFIX}/include/${x}/* ${D}${LIBPATH}/include/${x}/
-				rm -rf ${D}${PREFIX}/include/${x}
-			fi
-		done
-
-		if [ -d "${D}${PREFIX}/lib/security" ]
-		then
-			dodir /${LIBPATH}/security
-			mv -f ${D}${PREFIX}/lib/security/* ${D}${LIBPATH}/security
-			rm -rf ${D}${PREFIX}/lib/security
-		fi
-
-		# Move libgcj.spec to compiler-specific directories
-		[ -f "${D}${PREFIX}/lib/libgcj.spec" ] && \
-			mv -f ${D}${PREFIX}/lib/libgcj.spec ${D}${LIBPATH}/libgcj.spec
-
-		# Rename jar because it could clash with Kaffe's jar if this gcc is
-		# primary compiler (aka don't have the -<version> extension)
-		cd ${D}${PREFIX}/${CTARGET}/gcc-bin/${MY_PV_FULL}
-		[ -f jar ] && mv -f jar gcj-jar
-
-		# Move <cxxabi.h> to compiler-specific directories
-		[ -f "${D}${STDCXX_INCDIR}/cxxabi.h" ] && \
-			mv -f ${D}${STDCXX_INCDIR}/cxxabi.h ${D}${LIBPATH}/include/
-
-		# These should be symlinks
-		cd ${D}${BINPATH}
-		for x in gcc g++ c++ g77 gcj
-		do
-			# For some reason, g77 gets made instead of ${CTARGET}-g77... this makes it safe
-			if [ -f "${x}" ]
-			then
-				mv "${x}" "${CTARGET}-${x}"
+	# If mips, and we DON'T want multilib, then rig gcc to only use n32 OR n64
+	einfo "Applying CTARGET based patches: ${CTARGET}"
+	case "${CTARGET}" in
+		mips*-*)
+			# If mips, and we DON'T want multilib, then rig gcc to only use n32 OR n64
+			if use !multilib; then
+				use n32 && epatch ${FILESDIR}/3.4.1/gcc-3.4.1-mips-n32only.patch
+				use n64 && epatch ${FILESDIR}/3.4.1/gcc-3.4.1-mips-n64only.patch
 			fi
 
-			if [ "${CHOST}" == "${CTARGET}" ] && [ -f "${CTARGET}-${x}" ]
-			then
-				[ ! -f "${x}" ] && mv "${CTARGET}-${x}" "${x}"
-				ln -sf ${x} ${CTARGET}-${x}
+			# Patch forward-ported from a gcc-3.0.x patch that adds -march=r10000 and
+			# -mtune=r10000 support to gcc (Allows the compiler to generate code to
+			# take advantage of R10k's second ALU, perform shifts, etc..
+			#
+			# Needs re-porting to DFA in gcc-4.0 - Any Volunteers? :)
+			epatch ${FILESDIR}/3.4.2/gcc-3.4.x-mips-add-march-r10k.patch
+
+			# This is a very special patch -- it allows us to build semi-usable kernels
+			# on SGI IP28 (Indigo2 Impact R10000) systems.  The patch is henceforth
+			# regarded as a kludge by upstream, and thus, it will never get accepted upstream,
+			# but for our purposes of building a kernel, it works.
+			# Unless you're building an IP28 kernel, you really don't need care about what
+			# this patch does, because if you are, you are probably already aware of what
+			# it does.
+			# All that said, the abilities of this patch are disabled by default and need
+			# to be enabled by passing -mip28-cache-barrier.  Only used to build kernels, 
+			# There is the possibility it may be used for very specific userland apps too.
+			if use ip28; then
+				epatch ${FILESDIR}/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers.patch
 			fi
-
-			if [ -f "${CTARGET}-${x}-${PV}" ]
-			then
-				rm -f ${CTARGET}-${x}-${PV}
-				ln -sf ${CTARGET}-${x} ${CTARGET}-${x}-${PV}
+			;;
+		x86_64-*)
+			if use multilib; then
+				epatch ${FILESDIR}/3.4.1/gcc-3.4.1-glibc-is-native.patch
+				cd ${S}/libstdc++-v3
+				einfo "running autoreconf..."
+				autoreconf 2> /dev/null
+				cd ${S}
 			fi
-		done
-	fi
-
-	# This one comes with binutils
-	rm -f ${D}${PREFIX}/lib/libiberty.a
-	rm -f ${D}${LIBPATH}/libiberty.a
-
-	[ -e ${D}/${PREFIX}/lib/32 ] && rm -rf ${D}/${PREFIX}/lib/32
-
-	cd ${S}
-	if ! use build && [ "${CHOST}" == "${CTARGET}" ] ; then
-		prepman ${DATAPATH}
-		prepinfo ${DATAPATH}
-	else
-		rm -rf ${D}/usr/share/{man,info}
-		rm -rf ${D}${DATAPATH}/{man,info}
-	fi
-
-	# Rather install the script, else portage with changing $FILESDIR
-	# between binary and source package borks things ....
-	if [ "${CHOST}" == "${CTARGET}" ] ; then
-		insinto /lib/rcscripts/awk
-		doins ${FILESDIR}/awk/fixlafiles.awk
-		exeinto /sbin
-		doexe ${FILESDIR}/fix_libtool_files.sh
-	fi
-
-	# I do not know if this will break gcj stuff, so I'll only do it for
-	#   objc for now; basically "ffi.h" is the correct file to include,
-	#   but it gets installed in .../GCCVER/include and yet it does 
-	#   "#include <ffitarget.h>" which (correctly, as it's an "extra" file)
-	#   is installed in .../GCCVER/include/libffi; the following fixes
-	#   ffi.'s include of ffitarget.h - Armando Di Cianno <fafhrd@gentoo.org>
-	if use objc && ! use gcj; then
-		#dosed "s:<ffitarget.h>:<libffi/ffitarget.h>:g" /${LIBPATH}/include/ffi.h
-		mv ${D}/${LIBPATH}/include/libffi/* ${D}/${LIBPATH}/include
-		rm -Rf ${D}/${LIBPATH}/include/libffi
-	fi
-}
-
-fix_freaky_non_versioned_library_paths_that_dont_ever_get_used() {
-	# first the multilib case
-	if [ -d ${D}/${LIBPATH}/../$1 -a -d ${D}/${LIBPATH}/$1 ] ; then
-		mv ${D}/${LIBPATH}/../$1/* ${D}/${LIBPATH}/$1/
-		rm -rf ${D}/${LIBPATH}/../$1
-	fi
-	if [ -d ${D}/${LIBPATH}/../lib$1 -a -d ${D}/${LIBPATH}/$1 ] ; then
-		mv ${D}/${LIBPATH}/../lib$1/* ${D}/${LIBPATH}/$1/
-		rm -rf ${D}/${LIBPATH}/../lib$1
-	fi
-	# and now to fix up the non-multilib case
-	if [ -d ${D}/${LIBPATH}/../$1 -a ! -d ${D}/${LIBPATH}/$1 ] ; then
-		mv ${D}/${LIBPATH}/../$1/* ${D}/${LIBPATH}/
-		rm -rf ${D}/${LIBPATH}/../$1
-	fi
-	if [ -d ${D}/${LIBPATH}/../lib$1 -a ! -d ${D}/${LIBPATH}/$1 ] ; then
-		mv ${D}/${LIBPATH}/../lib$1/* ${D}/${LIBPATH}/
-		rm -rf ${D}/${LIBPATH}/../lib$1
-	fi
-}
-
-fix_libtool_libdir_paths() {
-	local dirpath
-	for archive in ${*} ; do
-		dirpath=$(dirname ${archive} | sed -e "s:^${D}::")
-		sed -i ${archive} -e "s:^libdir.*:libdir=\'${dirpath}\':"
-	done
-}
-
-pkg_preinst() {
-
-	if [ ! -f "${WORKDIR}/.chkgccversion" ]
-	then
-		mkdir -p ${WORKDIR}
-		chk_gcc_version
-	fi
-
-	# Make again sure that the linker "should" be able to locate
-	# libstdc++.so ...
-	if use multilib && [ "${ARCH}" = "amd64" ]
-	then
-		# Can't always find libgcc_s.so.1, make it find it
-		export LD_LIBRARY_PATH="${LIBPATH}:${LIBPATH}/../lib64:${LIBPATH}/../lib32:${LD_LIBRARY_PATH}"
-	else
-		export LD_LIBRARY_PATH="${LIBPATH}:${LD_LIBRARY_PATH}"
-	fi
-	${ROOT}/sbin/ldconfig
-}
-
-pkg_postinst() {
-
-	if use multilib && [ "${ARCH}" = "amd64" ]
-	then
-		# Can't always find libgcc_s.so.1, make it find it
-		export LD_LIBRARY_PATH="${LIBPATH}:${LIBPATH}/../lib64:${LIBPATH}/../lib32:${LD_LIBRARY_PATH}"
-	else
-		export LD_LIBRARY_PATH="${LIBPATH}:${LD_LIBRARY_PATH}"
-	fi
-
-	should_we_gcc_config && do_gcc_config
-
-	# Update libtool linker scripts to reference new gcc version ...
-	if [ "${ROOT}" = "/" ] && \
-	   [ -f "${WORKDIR}/.oldgccversion" -o -f "${WORKDIR}/.oldgccchost" ]
-	then
-		local OLD_GCC_VERSION=
-		local OLD_GCC_CHOST=
-
-		if [ -f "${WORKDIR}/.oldgccversion" ] && \
-		   [ -n "$(cat "${WORKDIR}/.oldgccversion")" ]
-		then
-			OLD_GCC_VERSION="$(cat "${WORKDIR}/.oldgccversion")"
-		else
-			OLD_GCC_VERSION="${MY_PV_FULL}"
-		fi
-
-		if [ -f "${WORKDIR}/.oldgccchost" ] && \
-		   [ -n "$(cat "${WORKDIR}/.oldgccchost")" ]
-		then
-			OLD_GCC_CHOST="--oldarch $(cat "${WORKDIR}/.oldgccchost")"
-		fi
-
-		/sbin/fix_libtool_files.sh ${OLD_GCC_VERSION} ${OLD_GCC_CHOST}
-	fi
+			;;
+	esac
 }

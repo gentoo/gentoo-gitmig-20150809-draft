@@ -1,6 +1,15 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.366 2005/01/09 19:02:53 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.367 2005/01/10 11:26:22 eradicator Exp $
+
+  10 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  gcc-3.3.5-r1.ebuild, gcc-3.4.3-r1.ebuild:
+  Moved src_install, pkg_preinst, and pkg_postinst into eclass using
+  gcc-3.3.5-r1 and gcc-3.4.3-r1 as a base. Made env.d script creation more
+  abstract. Fixed up multilib support. Fixed some problems moving libs to
+  incorrect destinations or not moving some libs. Fixed a few
+  cross-compilation problems (but not all yet). Closes bug #76884. Updated
+  src_unpack to do patches based on instead of .
 
   09 Jan 2005; Joshua Kinard <kumba@gentoo.org>
   +files/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers.patch, gcc-3.4.3-r1.ebuild:
