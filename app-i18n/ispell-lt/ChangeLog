@@ -1,0 +1,11 @@
+# ChangeLog for app-i18n/ispell-lt
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ispell-lt/ChangeLog,v 1.1 2002/11/15 02:56:42 seemant Exp $
+
+*ispell-lt-0.5 (14 Nov 2002)
+
+  14 Nov 2002; Seemant Kulleen <seemant@gentoo.org> ispell-lt-0.5.ebuild
+  files/digest-ispell-lt-0.5 ChangeLog :
+
+  New Lithuanian language dictionary for ispell.  Submitted by:
+  roma1390@uosis.mif.vu.lt (roma1390) in bug #10524.
