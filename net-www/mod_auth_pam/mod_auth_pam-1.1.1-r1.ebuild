@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pam/mod_auth_pam-1.1.1-r1.ebuild,v 1.2 2005/01/23 13:06:47 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pam/mod_auth_pam-1.1.1-r1.ebuild,v 1.3 2005/01/23 13:27:04 trapni Exp $
 
 inherit eutils apache-module
 
 DESCRIPTION="PAM authentication module for Apache2"
 HOMEPAGE="http://pam.sourceforge.net/mod_auth_pam/"
 
-SRC_URI="http://pam.sourceforge.net/mod_auth_pam/dist/${PN}-2.0-1.1.1.tar.gz"
+SRC_URI="http://pam.sourceforge.net/mod_auth_pam/dist/${PN}-2.0-${PV}.tar.gz"
 LICENSE="Apache-1.1"
 
 KEYWORDS="~x86 ~ppc ~sparc ~amd64"
@@ -18,13 +18,13 @@ IUSE=""
 
 S="${WORKDIR}/${PN}"
 
-APXS2_S="${S}/.libs"
 APACHE2_MOD_CONF="${PVR}/10_mod_auth_pam"
 DOCFILES="INSTALL README"
 
+need_apache
 
 src_unpack() {
-	unpack "${PN}-2.0-1.1.1.tar.gz"
+	unpack "${PN}-2.0-${PV}.tar.gz"
 	cd "${S}"
 	epatch ${FILESDIR}/${PF}-gentoo.diff || die
 }
@@ -34,9 +34,9 @@ src_compile() {
 }
 
 src_install () {
-	APACHE2_MOD_FILE='mod_auth_sys_group.so' apache2_src_install
+	APACHE2_MOD_FILE='.libs/mod_auth_sys_group.so' apache2_src_install
 	unset DOCFILES APACHE2_MOD_CONF
-	APACHE2_MOD_FILE='mod_auth_pam.so' apache2_src_install
+	APACHE2_MOD_FILE='.libs/mod_auth_pam.so' apache2_src_install
 
 	insinto /etc/pam.d
 	newins ${FILESDIR}/apache2.pam apache2

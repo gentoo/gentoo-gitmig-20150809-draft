@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_auth_pam
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pam/ChangeLog,v 1.6 2005/01/23 13:06:47 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pam/ChangeLog,v 1.7 2005/01/23 13:27:04 trapni Exp $
+
+  23 Jan 2005; Christian Parpart <trapni@gentoo.org>
+  mod_auth_pam-1.1.1-r1.ebuild:
+  code cleanup; added missing need_apache2
 
   23 Jan 2005; Christian Parpart <trapni@gentoo.org>
   mod_auth_pam-1.1.1-r1.ebuild:
