@@ -1,6 +1,9 @@
 # ChangeLog for net-www/wwwoffle
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/ChangeLog,v 1.19 2004/06/06 00:13:44 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/ChangeLog,v 1.20 2004/06/15 02:32:25 dragonheart Exp $
+
+  15 Jun 2004; Daniel Black <dragonheart@gentoo.org> wwwoffle-2.8b.ebuild:
+  x86 stable
 
   06 Jun 2004; Daniel Black <dragonheart@gentoo.org> wwwoffle-2.7h.ebuild:
   QA fix
