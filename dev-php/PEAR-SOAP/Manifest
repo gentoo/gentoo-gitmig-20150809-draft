@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4017ff6fa613ca214e192cd44f9bd0bf PEAR-SOAP-0.8.1.ebuild 480
-MD5 46633fc124ceafb62731e98157a72f18 ChangeLog 949
+MD5 2315d1457c0d7ebba21dca11aefc7ecb ChangeLog 1043
 MD5 34b376f52ca199fffb4e52b83169574a metadata.xml 156
+MD5 a7e32b3820c47db4ff1478b610349648 PEAR-SOAP-0.8.1.ebuild 476
 MD5 5dc7ed9efa9f23d57aef84a6b46a9c55 files/digest-PEAR-SOAP-0.8.1 58
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCMt7taGfFFLhbXWkRApviAJ9o0/E+BrEDAwFP4JM3L/LiV+wUuACbBYhK
-fyL3JqdBsqA6IsHrr+5p7GE=
-=PgFS
+iD8DBQFCRtY8ugEuf3OQ0akRAlY6AJ4jdPrjfdBElJbatwexVcDuoW3w2gCgovvb
+sTihFfnqAQEiZiqKi7OBQcM=
+=rtHJ
 -----END PGP SIGNATURE-----
