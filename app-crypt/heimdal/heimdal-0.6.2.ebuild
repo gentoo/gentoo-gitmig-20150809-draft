@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.2.ebuild,v 1.10 2004/06/14 17:36:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.2.ebuild,v 1.11 2004/06/24 21:32:53 agriffis Exp $
 
 inherit libtool eutils
 

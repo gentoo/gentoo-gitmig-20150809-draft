@@ -1,6 +1,6 @@
 # ChangeLog for app-crypt/bestcrypt
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.14 2004/06/06 23:17:25 dragonheart Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.15 2004/06/24 21:30:10 agriffis Exp $
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> bestcrypt-1.2_p6.ebuild,
   bestcrypt-1.4_p2.ebuild, bestcrypt-1.5_p1.ebuild, bestcrypt-1.5_p2.ebuild,

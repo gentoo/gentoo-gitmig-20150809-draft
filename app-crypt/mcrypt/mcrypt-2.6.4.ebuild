@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mcrypt/mcrypt-2.6.4.ebuild,v 1.7 2004/06/06 15:48:33 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mcrypt/mcrypt-2.6.4.ebuild,v 1.8 2004/06/24 21:34:12 agriffis Exp $
 
 DESCRIPTION="replacement of the old unix crypt(1)"
 HOMEPAGE="http://mcrypt.sourceforge.net/"

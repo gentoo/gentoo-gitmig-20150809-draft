@@ -1,6 +1,6 @@
 # ChangeLog for app-crypt/seahorse
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.15 2004/05/26 21:53:48 lv Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.16 2004/06/24 21:37:50 agriffis Exp $
 
   26 May 2004; Travis Tilley <lv@gentoo.org> seahorse-0.6.3.ebuild:
   added ~amd64 keyword

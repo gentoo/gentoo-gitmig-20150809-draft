@@ -1,6 +1,6 @@
 # ChangeLog for app-crypt/johntheripper
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.16 2004/06/01 23:14:36 agriffis Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/ChangeLog,v 1.17 2004/06/24 21:33:25 agriffis Exp $
 
   01 Jun 2004; Aron Griffis <agriffis@gentoo.org> johntheripper-1.6-r1.ebuild,
   johntheripper-1.6.ebuild:

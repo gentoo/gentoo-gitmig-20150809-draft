@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/steghide/steghide-0.5.1.ebuild,v 1.2 2004/02/16 07:15:07 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/steghide/steghide-0.5.1.ebuild,v 1.3 2004/06/24 21:38:22 agriffis Exp $
 
 DESCRIPTION="A steganography program which hides data in various media files"
 HOMEPAGE="http://steghide.sourceforge.net/"

@@ -1,6 +1,6 @@
 # ChangeLog for app-crypt/newpg
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/newpg/ChangeLog,v 1.9 2004/05/06 07:47:10 dragonheart Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/newpg/ChangeLog,v 1.10 2004/06/24 21:35:20 agriffis Exp $
 
   06 May 2004; Daniel Black <dragonheart@gentoo.org> :
   There are no more versions. There is a 0.9.5 tarball as a placeholder. This

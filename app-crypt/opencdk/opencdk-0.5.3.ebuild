@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/opencdk-0.5.3.ebuild,v 1.9 2004/06/14 00:02:20 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/opencdk/opencdk-0.5.3.ebuild,v 1.10 2004/06/24 21:35:36 agriffis Exp $
 
 DESCRIPTION="Open Crypto Development Kit for basic OpenPGP message manipulation"
 HOMEPAGE="http://www.gnutls.org/"

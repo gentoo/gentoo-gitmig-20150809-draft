@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.7.0.ebuild,v 1.3 2004/06/15 21:17:11 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/gpa-0.7.0.ebuild,v 1.4 2004/06/24 21:31:44 agriffis Exp $
 
 DESCRIPTION="Standard GUI for GnuPG"
 HOMEPAGE="http://www.gnupg.org/(en)/related_software/gpa/index.html"
