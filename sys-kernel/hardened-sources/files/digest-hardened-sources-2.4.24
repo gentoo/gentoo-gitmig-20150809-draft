@@ -1,0 +1,4 @@
+MD5 1e055c42921b2396a559d84df4c3d9aa linux-2.4.24.tar.bz2 29837818
+MD5 ecf37e9bd868f2fa3fc581569ab724e0 hardened-sources-2.4.24-base.patch.bz2 1670068
+MD5 9f581b1bedf236bec48b43127ee79b33 hardened-sources-2.4.24-grsec.patch.bz2 100207
+MD5 d8a2e8fff78e272378e5c8d13b344550 hardened-sources-2.4.24-selinux.patch.bz2 219034
