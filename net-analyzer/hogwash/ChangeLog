@@ -1,10 +1,12 @@
 # ChangeLog for net-analyzer/hogwash
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hogwash/ChangeLog,v 1.4 2003/02/10 14:46:22 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hogwash/ChangeLog,v 1.5 2003/02/10 14:47:17 sethbc Exp $
 
 *hogwash-0.4_pre1 (10 Feb 2003)
   10 Feb 2003; Seth Chandler <sethbc@gentoo.org>: hogwash-0.4_pre1.ebuild
   added to portage but -arch masked to fix some sandbox issues
+
+  no longer -arch masked, now in ~arch
 
 *hogwash-0.2_pre7 (10 Feb 2003)
   10 Feb 2003; Seth Chandler <sethbc@gentoo.org>: hogwash-0.2_pre7.ebuild
