@@ -21,6 +21,6 @@ start() {
 
 stop() {
     ebegin "Stopping fcron"
-    start-stop-daemon --stop --quiet --pidfile /var/run/fcron.pid --exec /usr/sbin/fcron
+    start-stop-daemon --stop --quiet --pidfile /var/run/fcron.pid
     eend $?
 }
