@@ -10,13 +10,12 @@ KEYWORDS="x86 -ppc -sparc -sparc64"
 SLOT="0"
 LICENSE="GPL-2"
 
-DEPEND="virtual/glibc
-	>=sys-libs/ncurses-5.2-r5
-	sys-apps/grep sys-apps/sed"
-	
-RDEPEND="virtual/glibc
-	>=sys-libs/ncurses-5.2-r5"
+RDEPEND=">=sys-libs/ncurses-5.2-r5"
 
+DEPEND="${RDEPEND}
+	sys-apps/grep 
+	sys-apps/sed"
+	
 pkg_setup() {
 	[ "$ROOT" != "/" ] && return 0
 	#If the user doesn't have a /boot or /mnt/boot filesystem, skip.
