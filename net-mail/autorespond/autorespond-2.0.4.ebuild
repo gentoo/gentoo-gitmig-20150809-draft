@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/autorespond/autorespond-2.0.4.ebuild,v 1.6 2004/05/30 10:56:16 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/autorespond/autorespond-2.0.4.ebuild,v 1.7 2004/06/07 06:06:29 kloeri Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ DEBIAN_P="${P/-/_}-${DEBIAN_PV}"
 SRC_URI="mirror://sourceforge/qmailadmin/${P}.tar.gz
 		 mirror://debian/pool/contrib/${PN:0:1}/${PN}/${DEBIAN_P}.diff.gz"
 HOMEPAGE="http://inter7.com/devel/"
-KEYWORDS="~x86 ~alpha ~hppa ia64 ~mips ~ppc ~sparc amd64"
+KEYWORDS="~x86 alpha ~hppa ia64 ~mips ~ppc ~sparc amd64"
 LICENSE="GPL-2"
 SLOT="0"
 RDEPEND="mail-mta/qmail"
