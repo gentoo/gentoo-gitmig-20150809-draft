@@ -1,0 +1,10 @@
+# ChangeLog for www-servers/axis
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/axis/ChangeLog,v 1.1 2005/01/22 14:04:51 luckyduck Exp $
+
+*axis-1.2_rc2 (22 Jan 2005)
+
+  22 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
+  +files/axis-1.2-gentoo.patch, +axis-1.2_rc2.ebuild:
+  Initial import. Ebuild contributions by various people, see #38899.
+
