@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.6 2004/07/21 10:42:41 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.7 2004/07/21 10:59:01 stuart Exp $
 #
 # eclass/php5-sapi.eclass
 #		Eclass for building different php5 SAPI instances
@@ -23,7 +23,7 @@ HOMEPAGE="http://www.php.net/"
 LICENSE="PHP"
 SRC_URI="http://www.php.net/distributions/${MY_P}.tar.bz2"
 S="${WORKDIR}/${MY_P}"
-IUSE="${IUSE} adabas bcmath birdstep bzlib calendar cpdflib crypt ctype curl curlwrappers db2 dbase dbmaker dbx dio esoob exif fam frontbase fdftk filepro ftp gmp hyperwave-api iconv informix ingres interbase iodbc jpeg libedit mcve mhash ming mnogosearch msession msql mssql mysql ncurses nls nis oci8 oracle7 ovrimos pcre pfpro png postgres posix readline recode sapdb session shared simplexml snmp soap sockets solid spell spl ssl sybase sybase-ct sysvipc tidy tiff tokenizer truetype odbc wddx xsl xml2 xmlrpc zlib dba cdb berkdb flatfile gdbm inifile qdbm empress empress-bcs gd gd-external imap kerberos ldap sasl pcntl sqlite"
+IUSE="${IUSE} adabas bcmath birdstep bzlib calendar cpdflib crypt ctype curl curlwrappers db2 dbase dbmaker dbx dio esoob exif fam frontbase fdftk filepro ftp gmp hyperwave-api iconv informix ingres interbase iodbc jpeg libedit mcve memlimit mhash ming mnogosearch msession msql mssql mysql ncurses nls nis oci8 oracle7 ovrimos pcre pfpro png postgres posix readline recode sapdb session shared simplexml snmp soap sockets solid spell spl ssl sybase sybase-ct sysvipc tidy tiff tokenizer truetype odbc wddx xsl xml2 xmlrpc zlib dba cdb berkdb flatfile gdbm inifile qdbm empress empress-bcs gd gd-external imap kerberos ldap sasl pcntl sqlite"
 
 # these USE flags should have the correct dependencies
 
@@ -37,7 +37,6 @@ DEPEND="$DEPEND
 	gd-external? ( media-libs/gd )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	gmp? ( dev-libs/gmp )
-	iconv? ( dev-libs/libiconv )
 	imap? ( virtual/imapd )
 	jpeg? ( >=media-libs/jpeg-6b )
 	ldap? ( >=net-nds/openldap-1.2.11 )
@@ -164,11 +163,6 @@ php5-sapi_check_awkward_uses () {
 	else
 		enable_extension_with		"mysqli"		"mysql"			1
 	fi
-
-	case "$PHPSAPI" in
-		cli|cgi)
-			enable_extension_with "pcntl" "pcntl" 1 ;;
-	esac
 
 	confutils_use_conflict "readline" "libedit"
 
@@ -305,6 +299,7 @@ php5-sapi_src_compile () {
 	enable_extension_enable		"mbstring"		"nls"			1
 	enable_extension_with		"mcrypt"		"crypt"			1
 	enable_extension_with		"mcve"			"mcve"			1
+	enable_extension_enable		"memory-limit"	"memlimit"		0
 	enable_extension_with		"mhash"			"mhash"			1
 	enable_extension_with		"ming"			"ming"			1
 	enable_extension_with		"mnogosearch"	"mnogosearch"	1
@@ -315,6 +310,7 @@ php5-sapi_src_compile () {
 	enable_extension_with		"oracle"		"oracle7"		1
 	enable_extension_with		"openssl"		"ssl"			1
 	enable_extension_with		"ovrimos"		"ovrimos"		1
+	enable_extension_enable		"pcntl" 		"pcntl" 		1
 	enable_extension_without	"pcre-regx"		"pcre"			1
 	enable_extension_with		"pfpro"			"pfpro"			1
 	enable_extension_with		"pgsql"			"postgres"		1
