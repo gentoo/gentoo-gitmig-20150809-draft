@@ -1,5 +1,5 @@
-MD5 c508c244f80d86c20c1c1fcc50e0c583 libquicktime-0.9.2.ebuild 1570
-MD5 ff06a7f641b18626b3f16c03b88d721c libquicktime-0.9.2_pre1.ebuild 1545
+MD5 bec1723df4a91e50936583a7e0b778eb libquicktime-0.9.2.ebuild 1574
+MD5 d213fb30f555b2c9096392bb69d63ed2 libquicktime-0.9.2_pre1.ebuild 1549
 MD5 24688a2b612f75a405ae3f3a22349def ChangeLog 3524
 MD5 abf06ed2bfc6e4b130b44e3818ec0c99 files/digest-libquicktime-0.9.2 70
 MD5 7431f4892f67adb233bef504876078db files/libquicktime-0.9.2-amd64.patch 2861

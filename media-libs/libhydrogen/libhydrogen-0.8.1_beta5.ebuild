@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libhydrogen/libhydrogen-0.8.1_beta5.ebuild,v 1.7 2004/06/24 23:10:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libhydrogen/libhydrogen-0.8.1_beta5.ebuild,v 1.8 2004/07/14 20:09:35 agriffis Exp $
 
 inherit libtool
 
@@ -12,6 +12,7 @@ SRC_URI="mirror://sourceforge/hydrogen/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc"
+IUSE="alsa"
 
 RDEPEND="virtual/x11 \
 	>=media-libs/audiofile-0.2.3 \
