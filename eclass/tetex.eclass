@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.14 2004/09/08 20:05:18 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.15 2004/09/08 20:07:56 usata Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
@@ -17,7 +17,7 @@ if [ -z "${TETEX_PV}" ] ; then
 	TETEX_PV=${PV}
 fi
 
-IUSE="X tcltk"
+IUSE="X"
 
 S=${WORKDIR}/tetex-src-${TETEX_PV}
 TETEX_SRC="tetex-src-${TETEX_PV}.tar.gz"
@@ -47,7 +47,6 @@ DEPEND="!app-text/tetex
 RDEPEND="${DEPEND}
 	!app-text/dvipdfm
 	>=dev-lang/perl-5.2
-	tcltk? ( <dev-perl/perl-tk-804.027 )
 	dev-util/dialog"
 PROVIDE="virtual/tetex"
 
