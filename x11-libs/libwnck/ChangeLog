@@ -1,6 +1,6 @@
 # ChangeLog for x11-libs/libwnck
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.34 2003/11/15 02:43:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.35 2003/12/13 00:28:30 gmsoft Exp $
 
   14 Nov 2003; Aron Griffis <agriffis@gentoo.org> libwnck-2.4.0.1-r1.ebuild:
   Stable on ia64
@@ -18,6 +18,9 @@
   of -r1 with the patch
 
 *libwnck-2.4.0.1-r1 (13 Oct 2003)
+
+  13 Dec 2003; Guy Martin <gmsoft@gentoo.org> libwnck-2.4.0.1-r1.ebuild :
+  Marked stable on hppa.
 
   13 Oct 2003; Mike Gardiner <obz@gentoo.org> libwnck-2.4.0.1-r1.ebuild:
   Revision bump for patch
