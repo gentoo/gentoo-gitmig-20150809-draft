@@ -56,11 +56,11 @@
 *sys-fs/e2fsprogs
 *sys-libs/cracklib  
 *sys-libs/db
-*sys-libs/glibc
 *sys-libs/ncurses
 *sys-libs/pam
 *sys-libs/readline
 *sys-libs/zlib
 *virtual/bootloader
 *virtual/editor
+*virtual/glibc
 *virtual/modutils
