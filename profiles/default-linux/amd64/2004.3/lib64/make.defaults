@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2004.3/lib64/make.defaults,v 1.1 2004/09/09 03:53:00 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2004.3/lib64/make.defaults,v 1.2 2004/09/09 07:07:25 lv Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -15,7 +15,7 @@ GRP_STAGE23_USE="${ARCH} ipv6 pam tcpd readline nls ssl gpm perl python berkdb a
 # Sane, functional, almost-but-not-quite-minimal default for USE
 USE="${GRP_STAGE23_USE} oss alsa crypt jpeg nls userlocales opengl png xml2 acpi gif jp2 lzw lzw-tiff png tiff truetype usb xpm xprint xrandr xv"
 
-# unfortunately, gcc doesnt provide is with an -march=x86_64.
+# unfortunately, gcc doesnt provide us with an -march=x86_64.
 CFLAGS="-O2 -pipe -march=k8"
 CXXFLAGS="${CFLAGS}"
 
@@ -26,6 +26,7 @@ CHOST="x86_64-pc-linux-gnu"
 CHOST32="i686-pc-linux-gnu"
 CONF_MULTILIBDIR="lib32"
 CONF_LIBDIR="lib64"
+ARCH_WRAPPER="linux32"
 
 CC32="gcc32"
 CPP32="g++32"
