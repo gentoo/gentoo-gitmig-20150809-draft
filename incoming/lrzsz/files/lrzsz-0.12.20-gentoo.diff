@@ -1,0 +1,40 @@
+diff -r -C2 -P lrzsz.orig/src/lrz.c lrzsz-0.12.20/src/lrz.c
+*** lrzsz.orig/src/lrz.c	Wed Dec 30 02:49:24 1998
+--- lrzsz-0.12.20/src/lrz.c	Thu Jul 26 00:05:00 2001
+***************
+*** 42,45 ****
+--- 42,46 ----
+  #include "error.h"
+  
++ /*
+  #ifndef STRICT_PROTOTYPES
+  extern time_t time();
+***************
+*** 47,50 ****
+--- 48,52 ----
+  extern char *strstr();
+  #endif
++ */
+  
+  #ifndef HAVE_ERRNO_DECLARATION
+diff -r -C2 -P lrzsz.orig/src/lsz.c lrzsz-0.12.20/src/lsz.c
+*** lrzsz.orig/src/lsz.c	Tue Dec 29 17:07:59 1998
+--- lrzsz-0.12.20/src/lsz.c	Thu Jul 26 00:05:14 2001
+***************
+*** 51,54 ****
+--- 51,55 ----
+  #include "error.h"
+  
++ /*
+  #ifndef STRICT_PROTOTYPES
+  extern time_t time();
+***************
+*** 56,59 ****
+--- 57,61 ----
+  extern char *strstr();
+  #endif
++ */
+  
+  #ifndef HAVE_ERRNO_DECLARATION
+/*
+*/
