@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/rox
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rox/ChangeLog,v 1.17 2003/06/24 08:55:37 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rox/ChangeLog,v 1.18 2003/08/29 00:40:46 mkennedy Exp $
+
+*rox-2.0.1 (28 Aug 2003)
+
+  28 Aug 2003; Matthew Kennedy <mkennedy@gentoo.org> rox-2.0.1.ebuild:
+  minor version update and bug 26162
 
   24 Jun 2003; Tavis Ormandy <taviso@gentoo.org> rox-2.0.0.ebuild:
   marking ~alpha
