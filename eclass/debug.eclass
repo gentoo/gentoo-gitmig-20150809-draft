@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/debug.eclass,v 1.9 2002/02/12 10:21:28 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/debug.eclass,v 1.10 2002/03/03 05:17:20 danarmak Exp $
 # This provides functions for verbose output for debugging
 
 # redirect output, unset to disable. use e.g. /dev/stdout to write into a file/device.
@@ -25,7 +25,7 @@ debug-print() {
 		fi
 		
 		# default target
-		[ -d "$BUILD_PREFIX/$P/temp" ] && echo $1 >> ${BUILD_PREFIX}/${P}/temp/eclass-debug.log
+		[ -d "$BUILD_PREFIX/$P/temp" ] && echo $1 >> ${T}/eclass-debug.log
 		
 		shift
 	done
