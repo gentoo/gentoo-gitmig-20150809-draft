@@ -1,24 +1,19 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmwave/wmwave-0.4.ebuild,v 1.3 2004/06/24 23:19:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmwave/wmwave-0.4.ebuild,v 1.4 2004/07/17 15:19:32 s4t4n Exp $
 
 IUSE=""
 S="${WORKDIR}/wmwave"
 KEYWORDS="~ppc ~x86"
-DESCRIPTION="wmwave is a windom manager dockapp which displays the quality, link, level and noise of an iee802.11 (wavelan) link."
-SRC_URI="http://www.schuermann.org/~dockapps/dist/wmwave-0-4.tgz"
-HOMEPAGE="http://www.schuermann.org/~dockapps"
+DESCRIPTION="wmwave is a dockapp that displays quality, link, level and noise of an iee802.11 (wavelan) connection."
+SRC_URI="mirror://sourceforge/wmwave/${PN}-0-4.tgz"
+HOMEPAGE="http://wmwave.sourceforge.net/"
 LICENSE="GPL-2"
-DEPEND=""
+DEPEND="virtual/x11"
 SLOT="0"
 
-src_unpack() {
-	unpack "wmwave-0-4.tgz"
-	cd "${S}"
-}
-
 src_compile() {
-	emake || die
+	emake FLAGS="${CFLAGS}" || die "Compilation failed"
 }
 
 src_install () {
