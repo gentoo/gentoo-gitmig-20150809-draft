@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.0_rc1.ebuild,v 1.2 2004/04/03 23:55:13 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.0_rc1.ebuild,v 1.3 2004/04/16 05:37:26 vapier Exp $
+
+inherit gnuconfig
 
 MY_PV=${PV/_/-}
 MY_P=TiMidity++-${MY_PV}
@@ -9,15 +11,11 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="A handy MIDI to WAV converter with OSS and ALSA output support"
 HOMEPAGE="http://timidity.sourceforge.net/"
 SRC_URI="mirror://sourceforge/timidity/${MY_P}.tar.bz2"
-RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
 IUSE="oss nas esd motif X gtk oggvorbis tcltk slang alsa"
-
-inherit gnuconfig
-
 
 RDEPEND=">=sys-libs/ncurses-5.0
 	X? ( virtual/x11 )
@@ -29,7 +27,6 @@ RDEPEND=">=sys-libs/ncurses-5.0
 	slang? ( >=sys-libs/slang-1.4 )
 	tcltk? ( >=dev-lang/tk-8.1 )
 	oggvorbis? ( >=media-libs/libvorbis-1.0_beta4 )"
-
 DEPEND="${RDEPEND}
 	sys-devel/autoconf"
 
@@ -38,14 +35,14 @@ src_compile() {
 	local audios
 	local interfaces
 
-	use amd64 && ( epatch ${FILESDIR}/gnuconfig_update.patch
+	if use amd64 ; then
+		epatch ${FILESDIR}/gnuconfig_update.patch
 		epatch ${FILESDIR}/long-64bit.patch
-		gnuconfig_update )
+		gnuconfig_update
+	fi
 
 	interfaces="dynamic,ncurses,emacs,vt100"
-	if [ "`use oss`" ]; then \
-		audios="oss";
-	fi
+	use oss && audios="oss";
 
 	use X \
 		&& myconf="${myconf} --with-x \
@@ -54,10 +51,8 @@ src_compile() {
 		|| myconf="${myconf} --without-x "
 
 	use slang && interfaces="${interfaces},slang"
-	if [ "`use X`" ]; then \
+	if use X ; then \
 		use gtk && interfaces="${interfaces},gtk";
-	fi
-	if [ "`use X`" ]; then \
 		use motif && interfaces="${interfaces},motif";
 	fi
 
@@ -82,15 +77,15 @@ src_compile() {
 	emake || die
 }
 
-src_install () {
+src_install() {
 	make DESTDIR=${D} install || die
 	dodir /usr/share/timidity/config
 	insinto /usr/share/timidity/config
 	doins ${FILESDIR}/timidity.cfg
-	dodoc AUTHORS COPYING ChangeLog* INSTALL*
+	dodoc AUTHORS ChangeLog* INSTALL*
 	dodoc NEWS README*
 
-	if use alsa; then
+	if use alsa ; then
 		insinto /etc/conf.d
 		newins ${FILESDIR}/conf.d.timidity timidity
 
@@ -99,14 +94,14 @@ src_install () {
 	fi
 }
 
-pkg_postinst () {
+pkg_postinst() {
 	einfo ""
 	einfo "A timidity config file has been installed in"
 	einfo "/usr/share/timitidy/config/timidity.cfg. This"
 	einfo "file must to copied into /usr/share/timidity/"
 	einfo "and edited to match your configuration."
 	einfo ""
-	if use alsa; then
+	if use alsa ; then
 		einfo "An init script for the alsa timidity sequencer has been installed."
 		einfo "If you wish to use the timidity virtual sequencer, edit /etc/conf.d/timidity"
 		einfo "and run 'rc-update add timidity <runlevel> && /etc/init.d/timidity start'"

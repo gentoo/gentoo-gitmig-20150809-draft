@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.12.0-r3.ebuild,v 1.11 2004/04/03 23:55:13 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.12.0-r3.ebuild,v 1.12 2004/04/16 05:37:26 vapier Exp $
+
+inherit gnuconfig
 
 MY_P=TiMidity++-${PV}-pre1
 S=${WORKDIR}/${MY_P}
@@ -12,7 +14,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc ~amd64 ~sparc"
 IUSE="oss nas esd motif X gtk oggvorbis tcltk slang alsa"
-inherit gnuconfig
 
 RDEPEND=">=sys-libs/ncurses-5.0
 	X? ( virtual/x11 )
@@ -24,14 +25,13 @@ RDEPEND=">=sys-libs/ncurses-5.0
 	slang? ( >=sys-libs/slang-1.4 )
 	tcltk? ( >=dev-lang/tk-8.1 )
 	oggvorbis? ( >=media-libs/libvorbis-1.0_beta4 )"
-
 DEPEND="${RDEPEND}
 	sys-devel/autoconf"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${P}-alsalib-fix.patch || die "Alsalib-1.0 patch failed"
+	epatch ${FILESDIR}/${P}-alsalib-fix.patch
 }
 
 src_compile() {
@@ -39,14 +39,14 @@ src_compile() {
 	local audios
 	local interfaces
 
-	use amd64 && ( epatch ${FILESDIR}/gnuconfig_update.patch
+	if use amd64 ; then
+		epatch ${FILESDIR}/gnuconfig_update.patch
 		epatch ${FILESDIR}/long-64bit.patch
-		gnuconfig_update )
+		gnuconfig_update
+	fi
 
 	interfaces="dynamic,ncurses,emacs,vt100"
-	if [ "`use oss`" ]; then \
-		audios="oss";
-	fi
+	use oss && audios="oss";
 
 	use X \
 		&& myconf="${myconf} --with-x \
@@ -55,10 +55,8 @@ src_compile() {
 		|| myconf="${myconf} --without-x "
 
 	use slang && interfaces="${interfaces},slang"
-	if [ "`use X`" ]; then \
+	if use X ; then \
 		use gtk && interfaces="${interfaces},gtk";
-	fi
-	if [ "`use X`" ]; then \
 		use motif && interfaces="${interfaces},motif";
 	fi
 
@@ -83,12 +81,12 @@ src_compile() {
 	emake || die
 }
 
-src_install () {
+src_install() {
 	make DESTDIR=${D} install || die
 	dodir /usr/share/timidity/config
 	insinto /usr/share/timidity/config
 	doins ${FILESDIR}/timidity.cfg
-	dodoc AUTHORS COPYING ChangeLog* INSTALL*
+	dodoc AUTHORS ChangeLog* INSTALL*
 	dodoc NEWS README*
 
 	if use alsa; then
@@ -100,7 +98,7 @@ src_install () {
 	fi
 }
 
-pkg_postinst () {
+pkg_postinst() {
 	einfo ""
 	einfo "A timidity config file has been installed in"
 	einfo "/usr/share/timitidy/config/timidity.cfg. This"

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.0_rc2.ebuild,v 1.7 2004/04/06 18:07:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.0_rc2.ebuild,v 1.8 2004/04/16 05:37:26 vapier Exp $
+
+inherit gnuconfig
 
 MY_PV=${PV/_/-}
 MY_P=TiMidity++-${MY_PV}
@@ -9,14 +11,11 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="A handy MIDI to WAV converter with OSS and ALSA output support"
 HOMEPAGE="http://timidity.sourceforge.net/"
 SRC_URI="mirror://sourceforge/timidity/${MY_P}.tar.bz2"
-RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
 IUSE="oss nas esd motif X gtk oggvorbis tcltk slang alsa kde jack portaudio emacs"
-
-inherit gnuconfig
 
 RDEPEND=">=sys-libs/ncurses-5.0
 	X? ( virtual/x11 )
@@ -30,13 +29,10 @@ RDEPEND=">=sys-libs/ncurses-5.0
 	jack? ( !sparc? ( virtual/jack ) )
 	portaudio? ( !ppc? ( media-libs/portaudio ) )
 	oggvorbis? ( >=media-libs/libvorbis-1.0_beta4 )"
-
-DEPEND="${RDEPEND}
-	sys-devel/autoconf"
-
-RDEPEND="${RDEPEND}
 	tcltk? ( >=dev-lang/tk-8.1 )
 	emacs? ( virtual/emacs )"
+DEPEND="${RDEPEND}
+	sys-devel/autoconf"
 
 src_compile() {
 	local myconf
@@ -45,7 +41,7 @@ src_compile() {
 
 	interfaces="dynamic,ncurses,emacs,vt100"
 
-	if use X; then
+	if use X ; then
 		myconf="${myconf} --with-x --enable-spectrogram --enable-wrd"
 		interfaces="${interfaces},xskin,xaw"
 		use gtk && interfaces="${interfaces},gtk"
@@ -81,12 +77,12 @@ src_compile() {
 	emake || die
 }
 
-src_install () {
+src_install() {
 	make DESTDIR=${D} install || die
 	dodir /usr/share/timidity/config
 	insinto /usr/share/timidity/config
 	doins ${FILESDIR}/timidity.cfg
-	dodoc AUTHORS COPYING ChangeLog* INSTALL*
+	dodoc AUTHORS ChangeLog* INSTALL*
 	dodoc NEWS README*
 
 	insinto /etc/conf.d
@@ -95,14 +91,14 @@ src_install () {
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/init.d.timidity timidity
 
-	if use emacs; then
+	if use emacs ; then
 		dosed 's:/usr/local/bin/timidity:/usr/bin/timidity:g' /usr/share/emacs/site-lisp/timidity.el
 	else
 		rm ${D}/timidity.el
 	fi
 }
 
-pkg_postinst () {
+pkg_postinst() {
 	einfo ""
 	einfo "A timidity config file has been installed in"
 	einfo "/usr/share/timitidy/config/timidity.cfg. This"
