@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Mail-Procmail
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Procmail/ChangeLog,v 1.13 2004/02/16 12:48:42 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Mail-Procmail/ChangeLog,v 1.14 2004/05/26 10:09:00 kloeri Exp $
+
+  26 May 2004; Bryan Østergaard <kloeri@gentoo.org> Mail-Procmail-1.06.ebuild:
+  Stable on alpha.
 
 *Mail-Procmail-1.06 (16 Feb 2004)
 
