@@ -1,6 +1,15 @@
 # ChangeLog for media-video/mtxdrivers-pro
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers-pro/ChangeLog,v 1.16 2004/10/04 06:37:25 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers-pro/ChangeLog,v 1.17 2004/10/14 03:32:11 spyderous Exp $
+
+  13 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  +files/mtxdrivers-pro-1.1.0_beta-r2-kernel-2.6-will1-20041013.patch,
+  mtxdrivers-pro-1.1.0_beta-r2.ebuild:
+  Fix to reflect upstream's change from a tarball to a .run makeself archive.
+  Also fix the compile on 2.6 kernels by adding
+  mtxdrivers-pro-1.1.0_beta-r2-kernel-2.6-will1-20041013.patch. Thanks to
+  Matthew Cerha <matthew.cerha@gmail.com> for giving me the incentive to do this
+  and letting me know about the .run issue.
 
   03 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
   -mtxdrivers-pro-1.1.0_beta-r1.ebuild, -mtxdrivers-pro-1.1.0_beta.ebuild:
