@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/aim-transport/aim-transport-20040131-r2.ebuild,v 1.1 2004/07/09 17:50:01 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/aim-transport/aim-transport-20040131-r2.ebuild,v 1.2 2004/10/27 09:39:07 slarti Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 
-KEYWORDS="~x86 ~sparc ~ppc hppa"
+KEYWORDS="~x86 ~sparc ~ppc hppa ~amd64"
 
 IUSE=""
 
