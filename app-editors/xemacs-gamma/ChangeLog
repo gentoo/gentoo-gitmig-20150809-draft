@@ -1,7 +1,10 @@
 # ChangeLog for app-editor/xemacs-gamma
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gamma/ChangeLog,v 1.3 2002/05/10 23:48:54 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gamma/ChangeLog,v 1.4 2002/12/09 04:17:41 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *xemacs-gamma-21.4.8 (10 May 2002)
 
   10 May 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,

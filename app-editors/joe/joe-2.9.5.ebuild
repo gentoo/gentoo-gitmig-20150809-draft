@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-2.9.5.ebuild,v 1.8 2002/10/18 21:15:09 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-2.9.5.ebuild,v 1.9 2002/12/09 04:17:39 manson Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A free ASCII-Text Screen Editor for UNIX"
@@ -11,7 +11,7 @@ DEPEND=">=sys-libs/ncurses-5.2-r2"
 RDEPEND=""
 
 SLOT="0"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 LICENSE="GPL-1"
 
 src_unpack() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20020324.ebuild,v 1.12 2002/10/18 21:15:09 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20020324.ebuild,v 1.13 2002/12/09 04:17:39 manson Exp $
 
 IUSE="gpm slang X"
 
@@ -33,7 +33,7 @@ fi
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 src_unpack() {
 

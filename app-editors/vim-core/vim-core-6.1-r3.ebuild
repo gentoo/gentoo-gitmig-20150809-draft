@@ -1,10 +1,10 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/vim-core-6.1-r3.ebuild,v 1.6 2002/11/12 22:34:23 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/vim-core-6.1-r3.ebuild,v 1.7 2002/12/09 04:17:41 manson Exp $
 
 inherit vim
 DESCRIPTION="vim, gvim and kvim shared files"
-KEYWORDS="~x86 ppc ~sparc ~sparc64 ~alpha"
+KEYWORDS="~x86 ppc ~sparc  ~alpha"
 DEPEND="dev-util/cscope
 	sys-libs/libtermcap-compat
 	>=sys-libs/ncurses-5.2-r2

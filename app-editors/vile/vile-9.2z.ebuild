@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/vile-9.2z.ebuild,v 1.1 2002/10/21 10:21:59 cybersystem Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/vile-9.2z.ebuild,v 1.2 2002/12/09 04:17:41 manson Exp $
 
 IUSE="perl"
 
@@ -45,7 +45,7 @@ RDEPEND="virtual/glibc
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
+KEYWORDS="~x86 ~ppc ~sparc "
 
 src_unpack() {
 	unpack vile-9.2.tgz

@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r7.ebuild,v 1.10 2002/10/05 05:39:07 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.1-r7.ebuild,v 1.11 2002/12/09 04:17:41 manson Exp $
 
 IUSE="gpm nls gnome python X gtk ruby perl"
 
@@ -59,7 +59,7 @@ HOMEPAGE="http://www.vim.org/"
 
 SLOT="0"
 LICENSE="vim"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 DEPEND="dev-util/cscope
 	>=sys-libs/ncurses-5.2-r2

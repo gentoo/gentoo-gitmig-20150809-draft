@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.1-r4.ebuild,v 1.12 2002/10/16 23:17:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.1-r4.ebuild,v 1.13 2002/12/09 04:17:38 manson Exp $
 
 IUSE="X nls motif"
 
@@ -27,7 +27,7 @@ RDEPEND=""
 PROVIDE="virtual/emacs"
 
 SLOT="0"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc"
 LICENSE="GPL-2"
 
 src_unpack() {
@@ -35,11 +35,11 @@ src_unpack() {
 	# Resolves bug 2104 # ppc fix
 
 	SYSTEM_ARCH=`echo $ARCH |\
-	sed -e s/[i]*.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/`
+	sed -e s/[i]*.86/i386/ -e s/sun4u/sparc/ -e s/arm.*/arm/ -e s/sa110/arm/`
 	if [ -z "$SYSTEM_ARCH" ]
 	then
 	 SYSTEM_ARCH=`uname -m |\
-	 sed -e s/[i]*.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/`
+	 sed -e s/[i]*.86/i386/ -e s/sun4u/sparc/ -e s/arm.*/arm/ -e s/sa110/arm/`
 	fi 
 
 	cd ${WORKDIR}
@@ -52,7 +52,7 @@ src_unpack() {
 	  ;;
 	 i386)
 	  ;;
-	 sparc64)
+	sparc)
 	  ;;
 	 arm)
 	  ;;

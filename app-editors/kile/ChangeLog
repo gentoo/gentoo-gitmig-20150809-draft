@@ -1,7 +1,10 @@
 # ChangeLog for app-editors/kile
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.7 2002/11/30 12:40:52 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/ChangeLog,v 1.8 2002/12/09 04:17:39 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
   30 Nov 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
   Fix #11173: add a patch to enable compiling with a qt that has STL support,

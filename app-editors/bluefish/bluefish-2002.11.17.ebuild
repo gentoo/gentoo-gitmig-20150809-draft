@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-2002.11.17.ebuild,v 1.2 2002/11/30 21:53:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-2002.11.17.ebuild,v 1.3 2002/12/09 04:17:38 manson Exp $
 
 MY_PV=`echo ${PV} | sed -e 's/\./-/g'`
 S=${WORKDIR}/${PN}-gtk2
@@ -9,7 +9,7 @@ SRC_URI="http://pkedu.fbt.eitn.wau.nl/~olivier/snapshots/${PN}-gtk2port-${MY_PV}
 HOMEPAGE="http://bluefish.openoffice.nl/"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
+KEYWORDS="~x86 ~ppc ~sparc "
 SLOT="0"
 IUSE="nls perl"
 

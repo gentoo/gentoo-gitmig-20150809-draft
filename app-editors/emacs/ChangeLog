@@ -1,7 +1,10 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.8 2002/09/16 02:45:31 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.9 2002/12/09 04:17:38 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *emacs-21.2-r2 (14 Sep 2002)
 
   14 Sep 2002; Matthew Kennedy <mkennedy@gentoo.org>

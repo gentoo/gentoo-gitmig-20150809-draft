@@ -1,7 +1,10 @@
 # ChangeLog for app-editors/xemacs-packages-sumo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-packages-sumo/ChangeLog,v 1.6 2002/09/23 05:25:11 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-packages-sumo/ChangeLog,v 1.7 2002/12/09 04:17:41 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *xemacs-packages-sumo-2002.09.19 (Sep 23, 2002)
 
   23 Sep 2002; Arcady Genkin <agenkin@thpoon.com>

@@ -1,7 +1,10 @@
 # ChangeLog for app-emacs/tamago
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tamago/ChangeLog,v 1.2 2002/11/18 09:00:59 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tamago/ChangeLog,v 1.3 2002/12/09 04:17:41 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *tamago-4.0.6 (06 Nov 2002)
 
   18 Nov 2002; Masatomo Nakano <nakano@gentoo.org> tamago-4.0.6.ebuild 

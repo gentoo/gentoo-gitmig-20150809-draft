@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gtk-xemacs/gtk-xemacs-21.1.12_p3.ebuild,v 1.11 2002/10/20 18:37:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gtk-xemacs/gtk-xemacs-21.1.12_p3.ebuild,v 1.12 2002/12/09 04:17:39 manson Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="XEmacs 21.1.12 GTK"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.cs.indiana.edu/elisp/gui-xemacs/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND="=x11-libs/gtk+-1.2*"
 

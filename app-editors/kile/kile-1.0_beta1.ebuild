@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-1.0_beta1.ebuild,v 1.9 2002/10/04 04:09:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-1.0_beta1.ebuild,v 1.10 2002/12/09 04:17:39 manson Exp $
 inherit kde-base
 
 need-kde 3
@@ -14,6 +14,6 @@ DEPEND="$DEPEND sys-devel/perl"
 RDEPEND="${RDEPEND} app-text/tetex"
 
 
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 LICENSE="GPL-2"
 
