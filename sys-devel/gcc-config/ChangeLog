@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gcc-config
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.6 2002/12/13 11:00:39 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.7 2002/12/16 04:19:05 azarah Exp $
+
+*gcc-config-1.2.2 (16 Dec 2002)
+
+  16 Dec 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  Update to handle wrappers used for /lib/cpp and /usr/bin/cc in
+  new gcc ebuilds.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
