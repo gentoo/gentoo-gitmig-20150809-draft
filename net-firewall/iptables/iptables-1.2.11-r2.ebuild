@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.11-r2.ebuild,v 1.11 2004/09/05 14:02:18 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.11-r2.ebuild,v 1.12 2004/09/10 15:09:39 aliz Exp $
 
 inherit eutils flag-o-matic
 
@@ -38,6 +38,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}-files/grsecurity-1.2.8-iptables.patch.bz2
 	epatch ${FILESDIR}/${PV}-files/install_ipv6_apps.patch.bz2
 	epatch ${FILESDIR}/${PV}-files/install_all_dev_files.patch.bz2
+	epatch ${FILESDIR}/${PV}-files/round-robin.patch
 
 	sed -i "s/PF_EXT_SLIB:=/PF_EXT_SLIB:=stealth /g" extensions/Makefile
 
