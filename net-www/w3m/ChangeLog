@@ -1,6 +1,11 @@
 # ChangeLog for net-www/w3m
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/ChangeLog,v 1.16 2003/02/12 16:27:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/ChangeLog,v 1.17 2003/02/17 14:22:12 aliz Exp $
+
+*w3m-0.3.2.2 (17 Feb 2003)
+
+  17 Feb 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Security update.
 
   12 Feb 2003; Aron Griffis <agriffis@gentoo.org> w3m-0.3-r6.ebuild :
   Add alpha to KEYWORDS
