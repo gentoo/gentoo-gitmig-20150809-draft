@@ -1,0 +1,13 @@
+# ChangeLog for dev-perl/Event
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event/ChangeLog,v 1.1 2002/04/21 23:02:23 mkennedy Exp $
+
+*Event-0.85 (21 Apr 2002)
+
+  21 Apr 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  Event-0.85.ebuild, files/digest-Event-0.85 :
+  
+  New ebuild. Resolves bug # 912.
+
+  The Event module provide a central facility to watch for various
+  types of events and invoke a callback when these events occur.
