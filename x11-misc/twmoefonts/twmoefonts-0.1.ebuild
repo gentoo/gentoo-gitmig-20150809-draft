@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/twmoefonts/twmoefonts-0.1.ebuild,v 1.1 2002/11/06 14:59:23 stubear Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/twmoefonts/twmoefonts-0.1.ebuild,v 1.2 2002/11/06 15:45:31 stubear Exp $
 
 IUSE=""
 DESCRIPTION="Standard tranditional Chinese fonts made by Minister of Education (MOE), Republic of China."
@@ -24,13 +24,11 @@ src_install() {
 	insinto /usr/share/fonts/ttf/zh_TW
 	doins *.ttf
 	if test -r /usr/share/fonts/ttf/zh_TW/fonts.scale; then
-	    ORIGC=$(head -1 /usr/share/fonts/ttf/zh_TW/fonts.scale)
-		INC=$(head -1 ${FILESDIR}/TW-fonts.scale)
-		echo ${ORIGC}+${INC} | bc > tmp
 		tail +2 /usr/share/fonts/ttf/zh_TW/fonts.scale >> tmp
 		tail +2 ${FILESDIR}/TW-fonts.scale >> tmp
-		newins tmp fonts.scale
-		rm -f tmp
+		echo $(sort -u tmp | wc -l) > newfont.scale
+		sort -u tmp >> newfont.scale
+		newins newfont.scale fonts.scale
 	else
 		newins ${FILESDIR}/TW-fonts.scale fonts.scale	
 	fi
