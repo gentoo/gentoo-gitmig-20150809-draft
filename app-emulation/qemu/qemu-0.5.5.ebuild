@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.5.5.ebuild,v 1.2 2004/05/17 15:29:36 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.5.5.ebuild,v 1.3 2004/05/17 15:40:41 lu_zero Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://fabrice.bellard.free.fr/qemu/"
 KEYWORDS="~x86 ~ppc -alpha -sparc"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
-IUSE="softmmu"
+IUSE="softmmu qemu-fast"
 
 DEPEND="virtual/glibc
 		media-libs/libsdl"
@@ -19,8 +19,9 @@ RDEPEND=""
 
 RESTRICT="nostrip"
 
-TARGET_LIST="i386 arm-user i386-user ppc-user sparc-user" #i386-softmmu ppc-softmmu
+TARGET_LIST="arm-user i386-user ppc-user sparc-user" #i386-softmmu ppc-softmmu
 use softmmu && TARGET_LIST="${TARGET_LIST} i386-softmmu ppc-softmmu"
+use qemu-fast && TARGET_LIST="${TARGET_LIST} i386"
 
 #RUNTIME_PATH="/emul/gnemul/"
 src_unpack () {
