@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdeadmin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.111 2005/01/28 18:48:19 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/ChangeLog,v 1.112 2005/02/02 11:25:31 lanius Exp $
+
+  02 Feb 2005; Heinrich Wendel <lanius@gentoo.org>
+  kdeadmin-3.4.0_beta1.ebuild:
+  mark ~amd64
 
   23 Jan 2005; Markus Rothe <corsair@gentoo.org> kdeadmin-3.3.2.ebuild:
   Stable on ppc64; bug #78619
