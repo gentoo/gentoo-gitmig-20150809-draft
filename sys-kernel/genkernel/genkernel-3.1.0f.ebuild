@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.1.0e.ebuild,v 1.1 2005/01/22 20:16:47 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.1.0f.ebuild,v 1.1 2005/01/26 22:11:37 plasmaroo Exp $
 
 DESCRIPTION="Gentoo autokernel script"
 HOMEPAGE="http://www.gentoo.org"
