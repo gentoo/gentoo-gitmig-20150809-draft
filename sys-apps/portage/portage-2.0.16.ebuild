@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc. Distributed under the terms
-# of the GNU General Public License, v2 or later 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.15.ebuild,v 1.2 2002/07/17 05:33:55 jtegart Exp $
+# Copyright 1999-2002 Gentoo Technologies, Inc. 
+# Distributed under the terms of the GNU General Public License v2 
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.16.ebuild,v 1.1 2002/07/23 04:36:42 drobbins Exp $
  
 S=${WORKDIR}/${P}
 SLOT="0"
@@ -34,7 +34,6 @@ src_compile() {
 	fi
 
 }
-
 
 src_install() {
 	#config files
@@ -137,41 +136,41 @@ pkg_postinst() {
 		rm -rf ${ROOT}/usr/lib/sandbox
 	fi
 
-	#upgrade /var/db/pkg library; conditional required for build image creation
-	if [ -d ${ROOT}var/db/pkg ]
-	then
-		echo ">>> Database upgrade..."
-		cd ${ROOT}var/db/pkg
-		for x in *
-		do
-			[ ! -d "$x" ] && continue
-			#go into each category directory so we don't overload the python2.2 command-line
-			cd $x
-			#fix silly output from this command (hack)
-			python2.2 ${ROOT}usr/lib/portage/bin/db-update.py `find -name VIRTUAL` > /dev/null
-			cd ..
-		done
-		echo ">>> Database upgrade complete."
-		#remove old virtual directory to prevent virtual deps from getting messed-up
-		[ -d ${ROOT}var/db/pkg/virtual ] && rm -rf ${ROOT}var/db/pkg/virtual
-	fi
-
 	#fix cache (could contain staleness)
 	if [ ! -d ${ROOT}var/cache/edb/dep/sys-apps ]
 	then
-		if [ -d ${ROOT}var/cache/edb/dep ]
+		if [ ! -d ${ROOT}var/cache/edb/dep ]
 		then
-			#avoid using "*" below as it can overwhelm rm
-			rm -rf ${ROOT}var/cache/edb/dep
-		fi	
-		#ok, set setgid wheel on the cache directory so that "wheel" users can cache stuff too.
-		install -m2775 -o root -g wheel -d ${ROOT}var/cache/edb/dep
-	
+			#upgrade /var/db/pkg library; conditional required for build image creation
+			if [ -d ${ROOT}var/db/pkg ]
+			then
+				echo ">>> Database upgrade..."
+				cd ${ROOT}var/db/pkg
+				for x in *
+				do
+					[ ! -d "$x" ] && continue
+					#go into each category directory so we don't overload the python2.2 command-line
+					cd $x
+					#fix silly output from this command (hack)
+					python2.2 ${ROOT}usr/lib/portage/bin/db-update.py `find -name VIRTUAL` > /dev/null
+				cd ..
+				done
+				echo ">>> Database upgrade complete."
+				#remove old virtual directory to prevent virtual deps from getting messed-up
+				[ -d ${ROOT}var/db/pkg/virtual ] && rm -rf ${ROOT}var/db/pkg/virtual
+			fi
+		fi
+		install -d -m0755 ${ROOT}var/cache/edb
+		install -d -m4755 -o root -g wheel ${ROOT}var/cache/edb/dep
 	else
 		chown -R root.wheel ${ROOT}var/cache/edb/dep/*
 		chmod g+sw ${ROOT}var/cache/edb/dep/*
 	fi
 	rm -f ${ROOT}usr/lib/python2.2/site-packages/portage.py[co]
+	chmod 4755 ${ROOT}var/cache/edb/dep
+	chown root.wheel ${ROOT}var/cache/edb/dep
+	[ -e ${ROOT}var/cache/edb/xcache.p ] && chmod 0664 ${ROOT}var/cache/edb/xcache.p && chown root.wheel ${ROOT}var/cache/edb/dep/xcache.p
+	
 	# we gotta re-compile these modules and deal with systems with clock skew (stale compiled files)
 	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/python2.2/site-packages/portage.py')" || die
 	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/python2.2/site-packages/portage.py')" || die
