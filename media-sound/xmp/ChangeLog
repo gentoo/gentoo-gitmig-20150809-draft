@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/xmp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmp/ChangeLog,v 1.8 2004/06/25 00:30:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmp/ChangeLog,v 1.9 2004/11/23 04:06:02 eradicator Exp $
+
+  22 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmp-2.0.5_pre3-r1.ebuild:
+  -sparc -amd64
 
   20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmp-2.0.5_pre3-r1.ebuild:

@@ -1,19 +1,22 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmp/xmp-2.0.5_pre3-r1.ebuild,v 1.5 2004/06/25 00:30:23 agriffis Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmp/xmp-2.0.5_pre3-r1.ebuild,v 1.6 2004/11/23 04:06:02 eradicator Exp $
 
 IUSE="xmms arts esd nas X oss"
 
+inherit eutils
+
 S="${WORKDIR}/${PN}-2.0.5-pre3"
+
 DESCRIPTION="Extended Module Player"
-SRC_URI="mirror://sourceforge/xmp/${PN}-2.0.5pre3.tar.bz2"
 HOMEPAGE="http://xmp.sf.net"
+SRC_URI="mirror://sourceforge/xmp/${PN}-2.0.5pre3.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+#-amd64: 2.0.5_pre3-r1 - compilation nightmare
+#-sparc: Segfaults
+KEYWORDS="-amd64 x86 -sparc"
 
 DEPEND="X? ( virtual/x11 )
 	esd? ( media-sound/esound )
