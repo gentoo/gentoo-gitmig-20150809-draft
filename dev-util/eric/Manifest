@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 9c65ccf9e0d6f84dd7009ad79abff730 ChangeLog 1773
 MD5 f036090827b3deabc3c1c38d38f482a1 eric-3.4.2.ebuild 1166
+MD5 7fce93a7edf8ec32b28280a405db814d eric-3.5.0.ebuild 1406
+MD5 aaeb515622f6dd2961faa7493bc8c9fa ChangeLog 1882
 MD5 56ad59727dbcdbf30e7ed8282d3913e5 metadata.xml 175
 MD5 54e179783c939656987a63d3d243fcac files/digest-eric-3.4.2 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBW1NwI1lqEGTUzyQRAi5TAJ9eEDkYQ0zBG1cVIl4ZnH5k5Y28YACfUicI
-ORoOegF7JyJ/vHmjwr8gXUk=
-=chvN
------END PGP SIGNATURE-----
+MD5 bec8684a65b3a340f4b0f6b068827208 files/digest-eric-3.5.0 273
