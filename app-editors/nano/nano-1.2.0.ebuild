@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.2.0.ebuild,v 1.1 2003/02/22 07:51:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.2.0.ebuild,v 1.2 2003/02/28 18:18:56 zwelch Exp $
 
 MY_P="${PN}-${PV/_}"
 DESCRIPTION="clone of Pico with more functions in a smaller size"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.nano-editor.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa arm"
 IUSE="nls build slang spell"
 
 S=${WORKDIR}/${MY_P}
