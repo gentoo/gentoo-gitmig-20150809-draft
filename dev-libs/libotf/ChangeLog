@@ -1,9 +1,9 @@
 # ChangeLog for dev-libs/libotf
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libotf/ChangeLog,v 1.3 2004/06/14 16:55:31 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libotf/ChangeLog,v 1.4 2004/06/15 09:04:19 usata Exp $
 
   15 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> libotf-0.9.ebuild:
-  Stable on x86
+  Stable on x86 and added to ~alpha
 
   03 May 2004; David Holm <dholm@gentoo.org> libotf-0.9.ebuild:
   Added to ~ppc.
