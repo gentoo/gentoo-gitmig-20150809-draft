@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/cocoon/cocoon-2.1.4.ebuild,v 1.1 2004/03/12 03:16:28 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/cocoon/cocoon-2.1.4.ebuild,v 1.2 2004/05/14 01:48:20 zx Exp $
 
 inherit java-pkg
 
@@ -12,11 +12,9 @@ LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="~x86 ~sparc"
 IUSE="doc"
-IUSE="doc jikes"
 
 DEPEND=">=virtual/jdk-1.4
-		>=dev-java/ant-1.5.3
-		jikes? ( >dev-java/jikes-1.18 )"
+	>=dev-java/ant-1.5.3"
 RDEPEND=">=virtual/jdk-1.4"
 
 src_unpack() {
@@ -24,7 +22,6 @@ src_unpack() {
 
 	cd ${S}
 	echo -e "# Gentoo build properties" > local.build.properties
-	use jikes && echo -e "compiler=jikes\n" >> local.build.properties
 	[ ! `use doc` ] && echo -e "exclude.javadocs=true\n" >> local.build.properties
 	[ ! `use doc` ] && echo -e "exclude.webapp.javadocs=true\n" >> local.build.properties
 	[ ! `use doc` ] && echo -e "exclude.webapp.documentation=true\n" >> local.build.properties
