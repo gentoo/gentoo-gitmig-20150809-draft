@@ -4,4 +4,4 @@ MD5 2914cd886cce48e88ae3476775353a59 files/clamd.rc 1251
 MD5 ce9876fced63b00a9145a572acd5718d files/digest-clamav-0.54-r1 63
 MD5 63a2aafcff254e04b2496453d15b7a8b ChangeLog 1263
 MD5 57631c7c693f14629ee9270e944f50e6 clamav-0.54-r1.ebuild 988
-MD5 eded76cba20933f15ff21266fd1ee17f clamav-0.60.ebuild 986
+MD5 2f691175befa11317dbb75505052c21b clamav-0.60.ebuild 983
