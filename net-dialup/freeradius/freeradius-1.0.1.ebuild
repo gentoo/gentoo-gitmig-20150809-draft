@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.0.1.ebuild,v 1.4 2004/10/17 09:28:51 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.0.1.ebuild,v 1.5 2005/02/21 02:41:31 dragonheart Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ SLOT="0"
 DEPEND="virtual/libc
 	>=sys-libs/db-3.2
 	sys-libs/gdbm
-	snmp? ( virtual/snmp )
+	snmp? ( net-analyzer/net-snmp )
 	mysql? ( dev-db/mysql )
 	postgres? ( dev-db/postgresql )
 	pam? ( sys-libs/pam )

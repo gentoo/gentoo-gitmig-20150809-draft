@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/gnuradius-1.2.ebuild,v 1.2 2005/02/06 14:14:39 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnuradius/gnuradius-1.2.ebuild,v 1.3 2005/02/21 02:42:05 dragonheart Exp $
 
 MY_P=radius-${PV}
 DESCRIPTION="GNU radius authentication server"
@@ -19,7 +19,7 @@ DEPEND="!net-dialup/freeradius
 		odbc? ( || ( dev-db/unixODBC dev-db/libiodbc ) )
 		readline? ( sys-libs/readline )
 		dbm? ( sys-libs/gdbm )
-		snmp? ( virtual/snmp )
+		snmp? ( net-analyzer/net-snmp )
 		pam? ( sys-libs/pam )"
 S=${WORKDIR}/${MY_P}
 
