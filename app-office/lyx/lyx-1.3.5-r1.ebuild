@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.5-r1.ebuild,v 1.1 2005/04/03 05:05:35 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.3.5-r1.ebuild,v 1.2 2005/04/06 11:47:44 usata Exp $
 
 inherit kde-functions eutils libtool
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.lyx.org/pub/lyx/stable/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 IUSE="cjk nls cups qt debug gnome"
 
 # these dependencies need looking at.
@@ -26,7 +26,9 @@ DEPEND="virtual/x11
 	>=dev-lang/perl-5
 	nls? ( sys-devel/gettext )
 	app-text/aiksaurus
-	qt? ( >=x11-libs/qt-3 ) !qt? ( =x11-libs/xforms-1* )"
+	qt? ( >=x11-libs/qt-3 )
+	!qt? ( cjk? ( =x11-libs/xforms-1.0-r1 )
+		!cjk? ( =x11-libs/xforms-1* ) )"
 
 RDEPEND="${DEPEND}
 	virtual/ghostscript
@@ -53,7 +55,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-boost.patch
 	if use cjk && use qt ; then
 		epatch ${DISTDIR}/CJK-LyX-qt-${PV}-1.patch
-	elif use cjk && built_with_use 'x11-libs/xforms' cjk ; then
+	elif use cjk && built_with_use '=x11-libs/xforms-1.0-r1' cjk ; then
 		epatch ${DISTDIR}/CJK-LyX-xforms-${PV}-1.patch
 	elif use cjk ; then
 		eerror
@@ -65,6 +67,7 @@ src_unpack() {
 		eerror 'or'
 		eerror '3) USE="-cjk" emerge lyx (normal LyX will be built)'
 		eerror
+		die "Please remerge xforms-1.0-r1 with cjk USE flag enabled."
 	fi
 	elibtoolize || die
 }
