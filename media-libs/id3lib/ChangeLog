@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/id3lib
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.16 2003/12/01 22:52:03 ciaranm Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/ChangeLog,v 1.17 2004/01/17 03:30:16 darkspecter Exp $
+
+  17 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org> id3lib-3.8.3-r1.ebuild:
+  set ppc in keywords
 
   01 Dec 2003; Ciaran McCreesh <ciaranm@gentoo.org> id3lib-3.8.3-r1.ebuild:
   Moved to stable on sparc for easytag
