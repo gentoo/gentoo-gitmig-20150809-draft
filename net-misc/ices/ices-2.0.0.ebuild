@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ices/ices-2.0.0.ebuild,v 1.1 2004/03/17 04:22:09 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ices/ices-2.0.0.ebuild,v 1.2 2004/04/07 07:46:09 eradicator Exp $
 
-IUSE="oggvorbis"
+IUSE=""
 
 DESCRIPTION="icecast MP3 streaming client. supports on the fly re-encoding"
 SRC_URI="http://www.icecast.org/files/${P}.tar.gz"
@@ -15,21 +15,11 @@ KEYWORDS="~x86 ~sparc ~amd64"
 DEPEND="dev-libs/libxml2
 	dev-util/pkgconfig
 	>=media-libs/libshout-2.0
-	oggvorbis? ( >=media-libs/libogg-1.0
-		>=media-libs/libvorbis-1.0 )"
-
-S=${WORKDIR}/${P}
+	>=media-libs/libvorbis-1.0"
 
 src_compile ()
 {
-	local myconf=""
-
-	use oggvorbis || \
-		myconf="${myconf} --with-vorbis=no --with-ogg=no"
-
-	econf \
-		--sysconfdir=/etc/ices2 \
-		${myconf} || die "configure failed"
+	econf --sysconfdir=/etc/ices2 || die "configure failed"
 
 	emake || die "make failed"
 }

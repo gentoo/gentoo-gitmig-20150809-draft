@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/ices
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ices/ChangeLog,v 1.8 2004/03/26 21:47:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ices/ChangeLog,v 1.9 2004/04/07 07:46:09 eradicator Exp $
+
+  07 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> ices-2.0.0.ebuild,
+  ices-2.0_beta4.ebuild:
+  2.0 requires ogg now.  Bug #47034.
 
   26 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> ices-0.2.3.ebuild:
   Made aliz's QA script happy.
