@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/uim
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.62 2004/07/19 02:27:59 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.63 2004/07/30 23:45:36 matsuu Exp $
+
+*uim-0.4.2.1 (31 Jul 2004)
+
+  31 Jul 2004; MATSUU Takuto <matsuu@gentoo.org> +uim-0.4.2.1.ebuild:
+  Version bumped.
 
   18 Jul 2004; Tom Gall <tgall@gentoo.org> uim-0.4.1.ebuild:
   stable on ppc64, bug #57120
