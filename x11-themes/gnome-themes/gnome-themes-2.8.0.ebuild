@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/gnome-themes-2.8.0.ebuild,v 1.8 2004/12/11 10:39:14 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/gnome-themes-2.8.0.ebuild,v 1.9 2005/01/08 23:28:54 slarti Exp $
 
 # FIXME : the engines in here should probably be disabled and done in seperate ebuilds
 
