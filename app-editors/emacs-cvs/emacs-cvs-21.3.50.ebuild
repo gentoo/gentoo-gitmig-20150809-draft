@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-21.3.50.ebuild,v 1.20 2004/02/23 18:03:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-21.3.50.ebuild,v 1.21 2004/03/25 07:36:28 mr_bones_ Exp $
 
 ECVS_AUTH="ext"
 export CVS_RSH="ssh"
@@ -33,7 +33,8 @@ DEPEND=">=sys-libs/ncurses-5.3
 		jpeg? ( >=media-libs/jpeg-6b )
 		tiff? ( >=media-libs/tiff-3.5.7 )
 		png? ( >=media-libs/libpng-1.2.5 )
-		gtk? ( =x11-libs/gtk+-2* ) : ( Xaw3d? ( x11-libs/Xaw3d ) )
+		gtk? ( =x11-libs/gtk+-2* )
+		!gtk? ( Xaw3d? ( x11-libs/Xaw3d ) )
 		gnome? ( gnome-base/gnome-desktop ) )
 	nls? ( >=sys-devel/gettext-0.11.5 )"
 

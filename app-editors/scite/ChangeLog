@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/scite
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.17 2004/02/23 14:10:58 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/ChangeLog,v 1.18 2004/03/25 07:31:05 mr_bones_ Exp $
+
+  24 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> scite-1.5.6.ebuild,
+  scite-1.5.7.ebuild:
+  don't use deprecated ? : use syntax
 
   23 Feb 2004; Sven Blumenstein <bazik@gentoo.org> scite-1.5.8.ebuild:
   Stable on sparc.
