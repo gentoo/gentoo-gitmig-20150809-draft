@@ -1,6 +1,6 @@
 # ChangeLog for sys-cluster/pvm
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/ChangeLog,v 1.2 2002/12/17 19:48:18 vapier Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/pvm/ChangeLog,v 1.3 2003/02/12 09:13:05 vapier Exp $
 
 
 *pvm-3.4.4 (13 Nov 2002)

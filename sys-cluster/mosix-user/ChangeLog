@@ -1,6 +1,6 @@
 # ChangeLog for sys-cluster/mosix-user
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mosix-user/ChangeLog,v 1.2 2002/12/17 19:47:54 vapier Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/mosix-user/ChangeLog,v 1.3 2003/02/12 09:12:45 vapier Exp $
 
 
   04 Nov 2002; Michael Imhof <tantive@gentoo.org>
