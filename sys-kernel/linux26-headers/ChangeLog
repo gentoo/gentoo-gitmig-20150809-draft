@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/linux26-headers
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.2 2004/07/10 00:28:11 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.3 2004/07/11 02:21:31 lv Exp $
+
+  10 Jul 2004; Travis Tilley <lv@gentoo.org> linux26-headers-2.6.6-r1.ebuild,
+  linux26-headers-2.6.6.ebuild, linux26-headers-2.6.7-r1.ebuild:
+  changed autoconf.h fix so that one doesnt need to be root, and fixed
+  installing linux26-headers when system headers are not present (bug 56609)
 
   10 Jul 2004; <plasmaroo@gentoo.org>
   files/linux26-headers-2.6.6-appCompat.patch,

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/linux26-headers-2.6.6-r1.ebuild,v 1.2 2004/07/10 00:28:11 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/linux26-headers-2.6.6-r1.ebuild,v 1.3 2004/07/11 02:21:31 lv Exp $
 
 ETYPE="headers"
 inherit kernel eutils
@@ -70,33 +70,17 @@ src_unpack() {
 }
 
 src_compile() {
-
-	# Generating autoconf.h...
-	addwrite /usr/include/linux
-	[ -f ${ROOT}/usr/include/linux/autoconf.h ] || touch ${ROOT}/usr/include/linux/autoconf.h
-
-	# Compile the default configuration
-	MY_ARCH=${ARCH}
-	unset ${ARCH}
-	make defconfig
-	ARCH=${MY_ARCH}
-
-	# If this is sparc, then generate asm_offsets.h
-	if use sparc; then
-		make ARCH=${ARCH} dep || die "Failed to run 'make dep'"
-	fi
-
+	# autoconf.h isnt generated unless it already exists. plus, we have
+	# no gurentee that any headers are installed on the system...
+	[ -f ${ROOT}/usr/include/linux/autoconf.h ] || \
+		touch ${S}/include/linux/autoconf.h
+	# if there arent any installed headers, then there also isnt an asm
+	# symlink in /usr/include/, and make defconfig will fail.
+	ln -sf ${S}/include/asm-${ARCH} ${S}/include/asm
+	make defconfig HOSTCFLAGS="-Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -I${S}/include/"
 }
 
 src_install() {
-	# XXX Bug in Kernel.eclass requires this fix for now.
-	# XXX Remove when kernel.eclass is fixed.
-	# XXX 2.4 kernels symlink 'asm' to 'asm-${ARCH}' in include/
-	# XXX 2.6 kernels don't, however.  So we fix this here so kernel.eclass can find the include/asm folder
-	if [ "`KV_to_int ${OKV}`" -ge "`KV_to_int 2.6.0`" ]; then
-		ln -sf ${S}/include/asm-${ARCH} ${S}/include/asm
-	fi
-
 	# Do normal src_install stuff
 	kernel_src_install
 
