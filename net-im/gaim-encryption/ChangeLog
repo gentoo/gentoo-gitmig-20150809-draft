@@ -1,0 +1,11 @@
+# ChangeLog for net-im/gaim-encryption
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-encryption/ChangeLog,v 1.1 2004/01/12 05:25:37 rizzo Exp $
+
+*gaim-encryption-2.20 (11 Jan 2004)
+
+  11 Jan 2004; Don Seiler <rizzo@gentoo.org>; gaim-encryption-2.20.ebuild,
+  metadata.xml:
+  Initian add. Splitting gaim-encryption into it's own package for easier
+  management.
+
