@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.177 2004/02/17 23:04:52 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.178 2004/02/21 21:36:55 brad_mssw Exp $
+
+  21 Feb 2004; Brad House <brad_mssw@gentoo.org> gcc-3.3.3.ebuild:
+  mark stable for amd64 2004.0 release
 
 *gcc-3.3.3 (18 Feb 2004)
 
