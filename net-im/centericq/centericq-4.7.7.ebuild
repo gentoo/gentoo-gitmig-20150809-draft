@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.7.2.ebuild,v 1.2 2002/06/22 00:40:37 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.7.7.ebuild,v 1.1 2002/07/09 17:50:40 lostlogic Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A ncurses ICQ/Yahoo!/MSN Client"
@@ -18,7 +18,6 @@ src_unpack() {
 	unpack ${P}.tar.gz
 	cd ${S}
 	echo "CFLAGS += ${CFLAGS}" >> Makefile.rules
-	patch -p1 < ${FILESDIR}/${P}-gentoo.patch || die "Failed to patch sources"
 
 }
 
@@ -34,5 +33,3 @@ src_install () {
 	make DESTDIR=${D} install || die
 
 }
-
-
