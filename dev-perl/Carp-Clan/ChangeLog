@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Carp-Clan
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Carp-Clan/ChangeLog,v 1.1 2004/10/18 16:36:15 mcummings Exp $
+
+*Carp-Clan-5.3 (18 Oct 2004)
+
+  18 Oct 2004; Michael Cummings <mcummings@gentoo.org> +metadata.xml,
+  +Carp-Clan-5.3.ebuild:
+  new dep for Bit-Vector. Only adding testable archs
+
