@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-xmlbeans/xml-xmlbeans-20041217.ebuild,v 1.2 2004/12/24 12:46:25 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-xmlbeans/xml-xmlbeans-20041217.ebuild,v 1.3 2005/01/03 01:41:07 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -11,13 +11,14 @@ LICENSE="Apache-2.0"
 SLOT="1"
 KEYWORDS="~x86 ~amd64"
 
-IUSE="doc"
+IUSE="doc junit source"
 
 DEPEND=">=virtual/jdk-1.4
 	>=dev-java/ant-core-1.6.2
 	${RDEPEND}"
 RDEPEND=">=virtual/jre-1.4
-	=dev-java/jaxen-1.1_beta2*"
+	=dev-java/jaxen-1.1_beta2*
+	junit? ( >=dev-java/junit-3.8 )"
 
 S=${WORKDIR}/${P}/v1
 
@@ -31,14 +32,21 @@ src_unpack() {
 	rm -f jaxen-1.1-beta-2.jar junit.jar
 
 	java-pkg_jar-from jaxen-1.1 jaxen-1.1-beta-2-dev.jar jaxen-1.1-beta-2.jar
-	java-pkg_jar-from junit
-
+	if use junit; then
+		java-pkg_jar-from junit
+	fi
 }
 
 src_compile() {
-	local antflags="default"
+	local antflags="xbean.jar"
 	if use doc; then
 		antflags="${antflags} docs"
+	fi
+	if use junit; then
+		antflags="${antflags} random.jar drt.jar drt"
+	fi
+	if use source; then
+		antflags="${antflags} sources"
 	fi
 	ant ${antflags} || die "compile failed"
 }
@@ -49,5 +57,9 @@ src_install() {
 	dodoc CHANGES.txt LICENSE.txt NOTICE.txt README.txt
 	if use doc; then
 		java-pkg_dohtml -r build/docs/*
+	fi
+	if use source; then
+		dodir /usr/share/doc/${PF}/source
+		cp build/ar/xbeansrc.zip ${D}/usr/share/doc/${PF}/source
 	fi
 }

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xml-xmlbeans
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-xmlbeans/ChangeLog,v 1.2 2004/12/24 12:46:25 axxo Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xml-xmlbeans/ChangeLog,v 1.3 2005/01/03 01:41:07 luckyduck Exp $
+
+  03 Jan 2005; Jan Brinkmann <lucky@gentoo.org> xml-xmlbeans-20041217.ebuild:
+  Updated junit dependency and added source useflag. Fixes #75906
 
   24 Dec 2004; Thomas Matthijs <axxo@gentoo.org>
   files/xml-xmlbeans-gentoo.patch, xml-xmlbeans-20041217.ebuild:
