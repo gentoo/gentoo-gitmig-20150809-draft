@@ -1,11 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/biopython/biopython-1.21.ebuild,v 1.4 2003/12/31 02:47:08 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/biopython/biopython-1.23.ebuild,v 1.1 2003/12/31 02:47:08 george Exp $
+
+inherit distutils
 
 IUSE=""
 
-S=${WORKDIR}/${P}
-DESCRIPTION="Biopython - python module for Computational Moelcular Biology"
+DESCRIPTION="Biopython - python modules for computational molecular biology"
 SRC_URI="http://www.biopython.org/files/${P}.tar.gz"
 HOMEPAGE="http://www.biopython.org"
 
@@ -16,18 +17,16 @@ DEPEND=">=dev-lang/python-2.0
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 
 src_compile() {
-	python setup.py build || die
-#	python setup.py test --no-gui || die
+	distutils_src_compile
 }
 
 src_install() {
-	echo y | python setup.py install --prefix=${D}/usr || die
+	DOCS="Doc/* Doc/install/*.txt"
+	distutils_src_install
 
-	dodoc PKG-INFO README NEWS LICENSE CONTRIB
-	dodoc Doc/* Doc/install/*.txt
 	dohtml Doc/install/*.html
 	cp -r Doc/examples/ ${D}/usr/share/doc/${PF}/
 }
