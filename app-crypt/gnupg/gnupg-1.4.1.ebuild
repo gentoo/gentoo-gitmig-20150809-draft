@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.1.ebuild,v 1.5 2005/03/17 19:45:42 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.1.ebuild,v 1.6 2005/03/18 00:46:54 robbat2 Exp $
 
 inherit eutils flag-o-matic
 
@@ -15,7 +15,7 @@ SRC_URI="ftp://ftp.gnupg.org/gcrypt/gnupg/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha amd64 ~arm hppa ppc ~ppc-macos ~s390 sparc ~x86 ~ia64 ~mips ~ppc64"
+KEYWORDS="~alpha amd64 ~arm hppa ppc ~ppc-macos ~s390 sparc x86 ~ia64 ~mips ~ppc64"
 IUSE="bzip2 caps curl ecc idea ldap nls readline selinux smartcard zlib X"
 
 #static not working yet
