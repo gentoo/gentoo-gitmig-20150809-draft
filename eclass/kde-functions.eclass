@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.37 2002/10/31 10:55:08 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.38 2002/10/31 20:47:41 danarmak Exp $
 # This contains everything except things that modify ebuild variables and functions (e.g. $P, src_compile() etc.)
 
 ECLASS=kde-functions
@@ -262,9 +262,9 @@ qtver-from-kdever() {
 
 	case $1 in
 		2*)	ver=2.3.1;;
-		3*)	ver=3.0.4;;
-		5)		ver=3.0.4;; # cvs version
-		*)		echo "!!! error: $FUNCNAME called with invalid parameter: \"$1\", please report bug" && exit 1;;
+		3*)	ver=3.0.5;;
+		5)	ver=3.1;; # cvs version
+		*)	echo "!!! error: $FUNCNAME called with invalid parameter: \"$1\", please report bug" && exit 1;;
 	esac
 
 	selected_version="$ver"
