@@ -473,3 +473,9 @@ move app-games/simutrans games-simulation/simutrans
 move app-games/stoned games-simulation/stoned
 move app-games/tornado games-strategy/tornado
 move app-games/supertux games-arcade/supertux
+move media-libs/gst-plugins-cdparanoia media-plugins/gst-plugins-cdparanoia
+move media-libs/gst-plugins-gnomevfs media-plugins/gst-plugins-gnomevfs
+move media-libs/gst-plugins-mad media-plugins/gst-plugins-mad
+move media-libs/gst-plugins-oss media-plugins/gst-plugins-oss
+move media-libs/gst-plugins-vorbis media-plugins/gst-plugins-vorbis
+
