@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 286c483eadfb9b61bf14f92486feff83 ksim-3.4.0.ebuild 422
-MD5 84da1bce40690d89d0ec854def5cf866 ksim-3.4.0_rc1.ebuild 420
-MD5 fd1ba78f4d10c0d3a99794bbb52575ef ChangeLog 1349
+MD5 3e4dd3bb46459beadade4aa6fd73e854 ChangeLog 1438
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
-MD5 dbade662a75a6b44c890deef5400485f files/digest-ksim-3.4.0 68
+MD5 84da1bce40690d89d0ec854def5cf866 ksim-3.4.0_rc1.ebuild 420
+MD5 59d960007e05b0f8edbfe4f6447694db ksim-3.4.0.ebuild 428
 MD5 2e986761e662b965b58e8ca3bbe8579b files/digest-ksim-3.4.0_rc1 378
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCOvwoUpKYMelfdYERAvlBAJ48t0nAkIGnbeYf/mVM2hvmt699jwCeJqka
-s1SZY7QrX/rbj8mpC6quhpc=
-=+rUr
------END PGP SIGNATURE-----
+MD5 dbade662a75a6b44c890deef5400485f files/digest-ksim-3.4.0 68
