@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mandrake-artwork/mandrake-artwork-1.0.2.ebuild,v 1.4 2004/08/30 19:44:42 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mandrake-artwork/mandrake-artwork-1.0.2.ebuild,v 1.5 2005/01/01 02:42:10 weeve Exp $
 
 inherit eutils kde-functions kde
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/galaxy-${PV}-${MDK_EXTRAVERSION}.src.rpm"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ppc ~alpha"
+KEYWORDS="~x86 ppc ~alpha ~sparc"
 IUSE="kde"
 
 # Needed to build...
