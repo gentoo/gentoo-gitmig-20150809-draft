@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/quadra-1.1.8.ebuild,v 1.7 2004/06/24 23:08:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/quadra-1.1.8.ebuild,v 1.8 2004/11/12 18:36:38 blubb Exp $
 
 inherit eutils gcc games
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/quadra/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 IUSE="svga"
 
 RDEPEND="virtual/x11
@@ -25,6 +25,7 @@ src_unpack() {
 	cd ${S}
 	[ $(gcc-major-version) == 3 ] && epatch "${FILESDIR}/${P}-gcc3.patch"
 	epatch "${FILESDIR}/libpng-1.2.5.patch"
+	use amd64 && epatch "${FILESDIR}/${P}-amd64.patch"
 	sed -i \
 		-e 's:-pedantic::' config/vars.mk \
 			|| die "sed config/vars.mk failed"
