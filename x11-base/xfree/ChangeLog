@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.162 2003/07/17 23:34:37 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.163 2003/07/17 23:46:12 spyderous Exp $
+
+  17 Jul 2003; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r3.ebuild:
+  Fixed problem with problem fix.
 
   17 Jul 2003; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.0-r3.ebuild:
   Fixed problem with synaptics-update patch, typo in ebuild.

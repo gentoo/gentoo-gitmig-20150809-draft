@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.35 2003/07/17 23:34:37 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.36 2003/07/17 23:46:12 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -260,9 +260,9 @@ src_unpack() {
 	
 	# Set up Synaptics Makefile
 	cd ${WORKDIR}
-	epatch ${DISTDIR}/XFree86-synaptics-update-${SYNDRV_VER}.diff
+	epatch ${DISTDIR}/XFree86-synaptics-update-${SYNDRV_VER}${SYNUPDATE_VER}.diff
 	cd ${SYNDIR}
-	epatch ${DISTDIR}/XFree86-synaptics-fixup-${SYNDRV_VER}${SYNUPDATE_VER}.diff
+	epatch ${DISTDIR}/XFree86-synaptics-fixup-${SYNDRV_VER}.diff
 
 	# Fix DRI related problems
 	cd ${S}/programs/Xserver/hw/xfree86/
