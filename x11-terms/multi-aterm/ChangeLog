@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/multi-aterm
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-aterm/ChangeLog,v 1.16 2005/01/12 19:17:52 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-aterm/ChangeLog,v 1.17 2005/02/05 11:16:52 hansmi Exp $
+
+  05 Feb 2005; Michael Hanselmann <hansmi@gentoo.org>
+  multi-aterm-0.2.1.ebuild:
+  Stable on ppc.
 
   12 Jan 2005; Guy Martin <gmsoft@gentoo.org> multi-aterm-0.2.1.ebuild:
   Stable on hppa.
