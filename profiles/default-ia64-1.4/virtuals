@@ -10,8 +10,8 @@ virtual/opengl			x11-base/xfree
 virtual/glu				x11-base/xfree
 virtual/glut			media-libs/glut
 virtual/imapUW			net-mail/uw-imap
-virtual/jdk				dev-java/blackdown-jdk
-virtual/jre				dev-java/blackdown-jre
+virtual/jdk				dev-java/jrockit
+virtual/jre				dev-java/jrockit
 virtual/imapd			net-mail/courier-imap
 sys-apps/console-tools	sys-apps/kbd
 virtual/blackbox		x11-wm/blackbox
