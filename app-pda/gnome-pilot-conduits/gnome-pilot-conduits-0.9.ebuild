@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot-conduits/gnome-pilot-conduits-0.9.ebuild,v 1.4 2004/02/22 19:48:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot-conduits/gnome-pilot-conduits-0.9.ebuild,v 1.5 2004/06/24 21:42:27 agriffis Exp $
 
 DESCRIPTION="Gnome Pilot Conduits"
 SRC_URI="mirror://gnome/sources/gnome-pilot-conduits/${PV:0:3}/${P}.tar.bz2"

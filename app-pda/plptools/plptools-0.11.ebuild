@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/plptools/plptools-0.11.ebuild,v 1.7 2004/01/11 01:30:59 tad Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/plptools/plptools-0.11.ebuild,v 1.8 2004/06/24 21:44:42 agriffis Exp $
 
 DESCRIPTION="Libraries and utilities to communicate with a Psion palmtop via serial."
 HOMEPAGE="http://plptools.sourceforge.net"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-0.99.7.ebuild,v 1.1 2004/05/03 20:38:57 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/jpilot/jpilot-0.99.7.ebuild,v 1.2 2004/06/24 21:42:58 agriffis Exp $
 
 SYNCMAL="0.72.1"
 MALSYNC="2.2.0"

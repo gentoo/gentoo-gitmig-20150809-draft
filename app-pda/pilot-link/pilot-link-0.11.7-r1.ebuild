@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.11.7-r1.ebuild,v 1.4 2004/06/02 12:45:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.11.7-r1.ebuild,v 1.5 2004/06/24 21:44:17 agriffis Exp $
 
 inherit perl-module
 

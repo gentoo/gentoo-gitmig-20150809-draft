@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnupod/gnupod-0.94.ebuild,v 1.1 2004/06/23 03:52:14 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnupod/gnupod-0.94.ebuild,v 1.2 2004/06/24 21:42:37 agriffis Exp $
 
 inherit perl-module
 
