@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.134 2005/01/16 07:48:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.135 2005/01/18 09:22:01 eradicator Exp $
+
+*distcc-2.18.3-r2 (18 Jan 2005)
+
+  18 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  -distcc-2.18.3-r1.ebuild, +distcc-2.18.3-r2.ebuild:
+  Revbumping to force people to get the updated patch.
 
   15 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
   distcc-2.18.3-r1.ebuild:
