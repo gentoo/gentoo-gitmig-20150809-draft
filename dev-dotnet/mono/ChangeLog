@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/mono
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/ChangeLog,v 1.18 2004/06/02 20:58:44 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/ChangeLog,v 1.19 2004/06/16 05:45:36 latexer Exp $
+
+*mono-0.96 (16 Jun 2004)
+
+  16 Jun 2004; Peter Johanson,,, <peter@gentoo.org> mono-0.96.ebuild:
+  Beta3 loves you.
 
   02 Jun 2004; Aron Griffis <agriffis@gentoo.org> mono-0.31.ebuild,
   mono-0.91.ebuild, mono-0.95.ebuild:
