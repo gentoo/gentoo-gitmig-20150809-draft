@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.59 2004/10/29 22:51:00 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.60 2004/11/02 06:42:51 kumba Exp $
+
+*mips-sources-2.6.9-r2 (02 Nov 2004)
+
+  02 Nov 2004; Joshua Kinard <kumba@gentoo.org>
+  mips-sources-2.6.8.1-r1.ebuild, -mips-sources-2.6.9-r1.ebuild,
+  +mips-sources-2.6.9-r2.ebuild:
+  Added a patch for 2.6.9 that allows for Linux on Octane (IP30, 'Speedracer').
+  This also fixes the 2.6.9-r1 bad digests (finally), and cleans 2.6.8.1's 
+  ebuild up a bit.
 
   29 Oct 2004; Joshua Kinard <kumba@gentoo.org> :
   Tweaked the prologue patch in the generic patch tarball.
@@ -10,7 +19,7 @@
   29 Oct 2004; Joshua Kinard <kumba@gentoo.org> +mips-sources-2.6.9-r1.ebuild,
   -mips-sources-2.6.9.ebuild:
   Added revised 2.6.9 ebuild with better patches. One fixes the prologue code
-  issue again for gcc-3.4.x, another patch (for livecd testing only adds in
+  issue again for gcc-3.4.x, another patch for livecd testing only adds in
   CDROM partition support (this is extremely experimental), and a gbefb typo
   fix.
 

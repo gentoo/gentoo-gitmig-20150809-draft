@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.8.1-r1.ebuild,v 1.1 2004/09/29 09:46:15 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.8.1-r1.ebuild,v 1.2 2004/11/02 06:42:51 kumba Exp $
 
 
 # Version Data
 OKV=${PV/_/-}
 CVSDATE="20040822"			# Date of diff between kernel.org and lmo CVS
-#IP30DATE=""				# Date of diff for IP30 (Octane) patches - XXX - Not Implemented Yet
 COBALTPATCHVER="1.7"			# Tarball version for cobalt patches
 SECPATCHVER="1.2"			# Tarball version for security patches
 GENPATCHVER="1.0"			# Tarball version for generic patches
@@ -35,7 +34,7 @@ SLOT="${OKV}"
 PROVIDE="virtual/linux-sources"
 KEYWORDS="-*"
 IUSE="cobalt"
-#IUSE="cobalt ip30 ip27"
+#IUSE="cobalt ip27"
 
 DESCRIPTION="Linux-Mips CVS sources for MIPS-based machines, dated ${CVSDATE}"
 SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${OKV}.tar.bz2
@@ -43,7 +42,6 @@ SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${OKV}.tar.bz2
 		mirror://gentoo/${PN}-security_patches-${SECPATCHVER}.tar.bz2
 		mirror://gentoo/${PN}-generic_patches-${GENPATCHVER}.tar.bz2
 		cobalt? ( mirror://gentoo/cobalt-patches-26xx-${COBALTPATCHVER}.tar.bz2 )"
-#		ip30? ( mirror://gentoo/ip30-patches-${IP30DATE}.tar.bz2 )			# IP30 Patches - XXX - Not Implemented
 #		ip27? ( mirror://lmoftp/blah.tar.bz2 )						# IP27 Patches - XXX - Not Implemented
 
 pkg_setup() {
@@ -59,13 +57,6 @@ pkg_setup() {
 		einfo "installed and setup."
 		echo -e ""
 	fi
-
-#	# See if we're using IP30 (Octane) - XXX - Not Implemented
-#	if use ip30; then
-#		echo -e ""
-#		einfo ""
-#		echo -e ""
-#	fi
 
 #	# See if we're using IP27 (Origin) - XXX - Not Implemented
 #	if use ip27; then
@@ -130,12 +121,6 @@ src_unpack() {
 		S="${S}.cobalt"
 	fi
 
-
-#	# IP30 (Octane) Patch - XXX - Not Implemented
-#	if use ip30; then
-#		echo -e ""
-#		einfo ">>> Patching kernel for SGI Octane (IP30) support ..."
-#	fi
 
 #	# IP27 (Origin) Hacks - XXX - Not Implemented
 #	if use ip27; then

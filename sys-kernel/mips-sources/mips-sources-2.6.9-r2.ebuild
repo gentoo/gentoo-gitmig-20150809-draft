@@ -1,15 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.9-r1.ebuild,v 1.1 2004/10/29 13:55:22 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.9-r2.ebuild,v 1.1 2004/11/02 06:42:51 kumba Exp $
 
 
 # Version Data
 OKV=${PV/_/-}
 CVSDATE="20041022"			# Date of diff between kernel.org and lmo CVS
-#IP30DATE=""				# Date of diff for IP30 (Octane) patches - XXX - Not Implemented Yet
 COBALTPATCHVER="1.8"			# Tarball version for cobalt patches
 SECPATCHVER="1.3"			# Tarball version for security patches
-GENPATCHVER="1.2"			# Tarball version for generic patches
+GENPATCHVER="1.3"			# Tarball version for generic patches
 EXTRAVERSION="-mipscvs-${CVSDATE}"
 KV="${OKV}${EXTRAVERSION}"
 
@@ -26,15 +25,15 @@ inherit kernel eutils
 # 2) linux-mips.org CVS snapshot diff from 14 Aug 2004
 # 3) Generic Fixes
 # 4) Security fixes
-# 5) Patches for Cobalt support
-
+# 5) Patches for Cobalt support (http://www.colonel-panic.org/cobalt-mips/)
+# 6) Patch for IP30 Octane Support (http://helios.et.put.poznan.pl/~sskowron/ip30/)
 
 HOMEPAGE="http://www.linux-mips.org/"
 SLOT="${OKV}"
 PROVIDE="virtual/linux-sources"
 KEYWORDS="-*"
-IUSE="cobalt livecd"
-#IUSE="cobalt ip30 ip27"
+IUSE="cobalt ip30 livecd"
+#IUSE="cobalt ip30 ip27 livecd"
 
 DESCRIPTION="Linux-Mips CVS sources for MIPS-based machines, dated ${CVSDATE}"
 SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${OKV}.tar.bz2
@@ -42,7 +41,6 @@ SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${OKV}.tar.bz2
 		mirror://gentoo/${PN}-security_patches-${SECPATCHVER}.tar.bz2
 		mirror://gentoo/${PN}-generic_patches-${GENPATCHVER}.tar.bz2
 		cobalt? ( mirror://gentoo/cobalt-patches-26xx-${COBALTPATCHVER}.tar.bz2 )"
-#		ip30? ( mirror://gentoo/ip30-patches-${IP30DATE}.tar.bz2 )			# IP30 Patches - XXX - Not Implemented
 #		ip27? ( mirror://lmoftp/blah.tar.bz2 )						# IP27 Patches - XXX - Not Implemented
 
 pkg_setup() {
@@ -59,12 +57,25 @@ pkg_setup() {
 		echo -e ""
 	fi
 
-#	# See if we're using IP30 (Octane) - XXX - Not Implemented
-#	if use ip30; then
-#		echo -e ""
-#		einfo ""
-#		echo -e ""
-#	fi
+	# See if we're using IP30 (Octane) - XXX - Not Implemented
+	if use ip30; then
+		echo -e ""
+		einfo "Octane Support is EXPERIMENTAL!  Note the use of caps and the word"
+		einfo "EXPERIMENTAL.  That said, while current tests of Octane support"
+		einfo "generally have worked well, there are some known drawbacks, including"
+		einfo "lack of an X driver (Octane only works in console framebuffer for"
+		einfo "now, but this will likely change).  Also, and this is important,"
+		einfo "but you can ONLY use ONE scsi disk in the Octane.  Use of a second or"
+		einfo "more disks will oops the kernel.  It is hoped the move to the qla1280"
+		einfo "scsi driver will resolve this bug, but that is in the future.  For now,"
+		einfo "the qlogicisp driver is the only thing available, and thus limits us to"
+		einfo "one scsi disk."
+		echo -e ""
+		einfo "Also, Octane can only be netbooted.  There is no support for disk-booting"
+		einfo "as of yet.  Disk-booting will require a 64bit Arcboot or an entirely new"
+		einfo "bootloader, and both are non-existant at this point in time."
+		echo -e ""
+	fi
 
 #	# See if we're using IP27 (Origin) - XXX - Not Implemented
 #	if use ip27; then
@@ -96,16 +107,20 @@ src_unpack() {
 	eend
 
 
+	# IP30 (Octane) Patch
+	if use ip30; then
+		echo -e ""
+		einfo ">>> Patching kernel for SGI Octane (IP30) support ..."
+		epatch ${WORKDIR}/mips-patches/misc-2.6.9-ip30-octane-support.patch
+		mv ${WORKDIR}/linux-${OKV}-${CVSDATE} ${WORKDIR}/linux-${OKV}-${CVSDATE}.ip30
+		S="${S}.ip30"
+	fi
+
+
 	# Patches used in building LiveCDs /* EXPERIMENTAL */
 	if use livecd; then
 		epatch ${WORKDIR}/mips-patches/misc-2.6-livecd-partitioned-cdroms.patch
 	fi
-
-
-#	# Security Fixes
-#	echo -e ""
-#	ebegin ">>> Applying Security Fixes"
-#	eend
 
 
 	# Cobalt Patches
@@ -116,17 +131,16 @@ src_unpack() {
 			epatch ${x}
 		done
 		cp ${WORKDIR}/cobalt-patches-26xx-${COBALTPATCHVER}/cobalt-patches.txt ${S}
-		cd ${WORKDIR}
 		mv ${WORKDIR}/linux-${OKV}-${CVSDATE} ${WORKDIR}/linux-${OKV}-${CVSDATE}.cobalt
 		S="${S}.cobalt"
 	fi
 
 
-#	# IP30 (Octane) Patch - XXX - Not Implemented
-#	if use ip30; then
-#		echo -e ""
-#		einfo ">>> Patching kernel for SGI Octane (IP30) support ..."
-#	fi
+#	# Security Fixes
+#	echo -e ""
+#	ebegin ">>> Applying Security Fixes"
+#	eend
+
 
 #	# IP27 (Origin) Hacks - XXX - Not Implemented
 #	if use ip27; then
