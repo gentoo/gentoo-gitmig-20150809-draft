@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.75-r8.ebuild,v 1.10 2004/03/10 15:13:39 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.75-r8.ebuild,v 1.11 2004/03/17 21:15:50 rizzo Exp $
 
 inherit flag-o-matic eutils gcc
 
-IUSE="nls perl spell nas cjk debug ssl"
+IUSE="nls perl spell nas cjk debug crypt"
 
 DESCRIPTION="GTK Instant Messenger client"
 HOMEPAGE="http://gaim.sourceforge.net/"
@@ -25,7 +25,7 @@ DEPEND=">=x11-libs/gtk+-2.0
 		>=sys-apps/sed-4.0.0 )
 	spell? ( >=app-text/gtkspell-2.0.2 )
 	|| ( dev-libs/nss net-www/mozilla )"
-PDEPEND="ssl? ( net-im/gaim-encryption )"
+PDEPEND="crypt? ( net-im/gaim-encryption )"
 
 pkg_setup() {
 	ewarn

@@ -1,6 +1,11 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.146 2004/03/14 01:57:50 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.147 2004/03/17 21:15:50 rizzo Exp $
+
+  17 Mar 2004; Don Seiler <rizzo@gentoo.org>; gaim-0.75-r10.ebuild,
+  gaim-0.75-r8.ebuild:
+  Changing from USEing 'ssl' to using 'crypt' for gaim-encryption, since
+  gaim-encryption doesn't do ssl, and it does do encryption.
 
   13 Mar 2004; Stephen P. Becker <geoman@gentoo.org> gaim-0.75-r10.ebuild:
   Added ~mips keyword.
