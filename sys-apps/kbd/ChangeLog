@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/kbd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.15 2003/08/01 22:43:22 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.16 2003/08/02 13:00:21 azarah Exp $
+
+*kbd-1.08-r2 (02 Aug 2003)
+
+  02 Aug 2003; Martin Schlemmer <azarah@gentoo.org> kbd-1.08-r2.ebuild,
+  files/kbd-1.08-kbd_repeat.patch:
+  A better fix from Keith M Wesolowski <wesolows@gentoo.org> (bug #25517).
 
   02 Aug 2003; Martin Schlemmer <azarah@gentoo.org>
   files/kbd-1.08-sparc-fixes.patch:
