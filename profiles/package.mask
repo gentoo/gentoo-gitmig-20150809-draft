@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2939 2004/06/16 14:42:59 brad Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2940 2004/06/16 21:27:07 agriffis Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,11 +21,6 @@
 ##
 ##   End example
 ##
-
-# <brad@gentoo.org> (16 Jun 2004)
-# Mask Firefox 0.9 for testing
->=net-www/mozilla-firefox-0.9
->=net-www/mozilla-firefox-bin-0.9
 
 # <mr_bones_@gentoo.org> (15 June 2004)
 # http://bugs.gentoo.org/show_bug.cgi?id=54059
