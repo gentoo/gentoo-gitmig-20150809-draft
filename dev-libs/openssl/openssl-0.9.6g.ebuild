@@ -10,7 +10,7 @@ RDEPEND="virtual/glibc"
 DEPEND="${RDEPEND} >=sys-devel/perl-5"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc alpha"
+KEYWORDS="x86 ppc alpha sparc sparc64"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
