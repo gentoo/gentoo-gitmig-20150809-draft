@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/mkxf86config
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/ChangeLog,v 1.5 2004/05/14 15:28:09 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/ChangeLog,v 1.6 2004/06/23 12:01:28 wolf31o2 Exp $
+
+*mkxf86config-0.8-r2 (23 Jun 2004)
+
+  23 Jun 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  -mkxf86config-0.8-r1.ebuild, +mkxf86config-0.8-r2.ebuild,
+  -mkxf86config-0.8.ebuild:
+  Bumped to new revision for LiveCD and closing bug #54870.
 
   14 May 2004; Chris Gianelloni <wolf31o2@gentoo.org> metadata.xml:
   Changing maintainers to newly created livecd herd.
