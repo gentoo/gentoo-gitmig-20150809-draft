@@ -2,7 +2,7 @@
 #mmx
 #3dnow
 #odbc
-#fbcon		
+#fbcon
 #oss
 #libg++
 #objprelink
@@ -20,7 +20,7 @@ slang		sys-libs/slang
 readline	sys-libs/readline
 arts		kde-base/arts
 tetex		app-text/tetex
-aalib		media-libs/aalib	
+aalib		media-libs/aalib
 nas		media-libs/nas
 bonobo		gnome-base/bonobo
 svga		media-libs/svgalib
@@ -55,5 +55,6 @@ ldap		net-nds/openldap
 snmp		net-analyzer/ucd-snmp
 cdr		app-cdr/cdrtools
 scanner		media-gfx/sane-backends
+emboss		sci-biology/emboss
 
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.defaults,v 1.14 2005/02/14 01:28:02 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/use.defaults,v 1.15 2005/02/18 03:46:39 ribosome Exp $
 
 aalib				media-libs/aalib
 adns				net-libs/adns
@@ -16,6 +16,7 @@ cscope				dev-util/cscope
 cups				net-print/cups
 curl				net-misc/curl
 directfb			dev-libs/DirectFB
+emboss				sci-biology/emboss
 esd					media-sound/esound
 fam					app-admin/fam
 firebird			dev-db/firebird
