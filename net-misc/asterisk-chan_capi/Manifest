@@ -1,0 +1,5 @@
+MD5 015f5e120080cde3cedc62e64c6f7825 asterisk-chan_capi-0.3.5.ebuild 1141
+MD5 de41c503f05f5f99a8635b0e333729a5 metadata.xml 217
+MD5 8d12e0a4774db939301995bd295d768a ChangeLog 421
+MD5 638b29011d5aa2a04c9ae5a706d16b89 files/digest-asterisk-chan_capi-0.3.5 66
+MD5 20866dceae16bdac07ffa8b6f8aa2986 files/chan_capi-0.3.5-gentoo.diff 1113
