@@ -1,0 +1,32 @@
+# ChangeLog for sys-apps/tpb
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpb/ChangeLog,v 1.1 2004/03/08 05:08:54 latexer Exp $
+
+*tpb-0.5.1 (08 Mar 2004)
+
+  08 Mar 2004; Peter Johanson <latexer@gentoo.org> metadata.xml,
+  tpb-0.4.2.ebuild, tpb-0.5.1.ebuild, tpb-0.6.0.ebuild,
+  files/tpb-configure-fix.diff:
+  Moved to new app-laptop
+
+*tpb-0.6.0 (02 Dec 2003)
+
+  02 Dec 2003; Peter Johanson <latexer@gentoo.org> tpb-0.5.1.ebuild,
+  tpb-0.6.0.ebuild, files/tpb-0.5.1-configure-fix.patch,
+  files/tpb-configure-fix.diff, metadata.xml:
+  Added 0.6.0, moved configure patch to generic name and edited ebuilds
+  accordingly, and added metadata.xml
+
+  30 Jun 2003; Peter Johanson <latexer@gentoo.org> tpb-0.5.1.ebuild,
+  files/tpb-0.5.1-configure-fix.patch:
+  Added patch to correct enable/disable xosd support
+
+*tpb-0.5.1 (16 Apr 2003)
+
+  16 Apr 2003; Peter Johanson <latexer@gentoo.org> tpb-0.5.1.ebuild:
+  bump
+
+*tpb-0.4.2 (01 Apr 2003)
+
+  01 Apr 2003; Peter Johanson <latexer@gentoo.org> tpb-0.4.2.ebuild:
+  Initial import.
