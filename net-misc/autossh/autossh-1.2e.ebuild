@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/autossh/autossh-1.2e.ebuild,v 1.1 2004/01/27 15:26:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/autossh/autossh-1.2e.ebuild,v 1.2 2004/02/11 15:43:06 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Automatically restart SSH sessions and tunnels"
@@ -14,9 +14,8 @@ DEPEND="virtual/glibc sys-apps/sed"
 RDEPEND="virtual/glibc net-misc/openssh"
 
 src_unpack() {
-	unpack ${A} && cd ${S} || die
-	patch -p0 -l < ${FILESDIR}/${P}-reuse.patch || die
-	sed -i "s|CFLAGS=|CFLAGS=${CFLAGS}|g" Makefile.linux || die
+	unpack ${A} && cd ${S}
+	sed -i "s|CFLAGS=|CFLAGS=${CFLAGS}|g" Makefile.linux
 }
 
 src_compile() {
