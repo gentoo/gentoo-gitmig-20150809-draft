@@ -539,3 +539,7 @@ dev-lang/tcl-tk
 #seemant@gentoo.org 16 Apr 2002
 # ispell's newer stuff is totally b0rked
 >=ispell-3.2.06.ebuild
+
+seemant@gentoo.org 17 Apr 2002
+#masking so that some users can test it first
+=media-video/mplayer-0.60-r6
