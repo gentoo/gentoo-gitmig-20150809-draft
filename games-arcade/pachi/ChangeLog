@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/pachi
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pachi/ChangeLog,v 1.3 2004/04/05 06:31:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pachi/ChangeLog,v 1.4 2004/04/25 02:40:54 mr_bones_ Exp $
+
+  24 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> pachi-20030927.ebuild,
+  pachi-20031005.ebuild:
+  removed older ebuilds
 
 *pachi-1.0 (04 Apr 2004)
 
