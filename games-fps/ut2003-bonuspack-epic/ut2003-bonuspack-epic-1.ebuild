@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-bonuspack-epic/ut2003-bonuspack-epic-1.ebuild,v 1.3 2004/03/17 12:13:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-bonuspack-epic/ut2003-bonuspack-epic-1.ebuild,v 1.4 2004/04/02 01:51:28 wolf31o2 Exp $
 
 inherit games
 
@@ -115,6 +115,6 @@ q
 EOT
 
 	cp DefUser.ini DefUser.ini.pre-epic
-	sed 's/^F11=.*$/F11=MusicMenu/g'  < DefUser.ini > DefUser.ini~~
-	mv DefUser.ini~~ DefUser.ini
+	sed -i 's/^F11=.*$/F11=MusicMenu/g' DefUser.ini
+	chown games:games ${dir}/System/*.ini
 }

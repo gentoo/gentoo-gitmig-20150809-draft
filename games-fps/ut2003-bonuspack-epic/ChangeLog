@@ -1,6 +1,10 @@
 # ChangeLog for games-fps/ut2003-bonuspack-epic
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-bonuspack-epic/ChangeLog,v 1.4 2004/03/17 12:13:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003-bonuspack-epic/ChangeLog,v 1.5 2004/04/02 01:51:28 wolf31o2 Exp $
+
+  01 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  ut2003-bonuspack-epic-1.ebuild:
+  Fixing a sed to be sed -i and also making sure files are owned by user games.
 
   17 Mar 2004; Chris Gianelloni <wolf31o2@gentoo.org>
   ut2003-bonuspack-epic-1.ebuild:
