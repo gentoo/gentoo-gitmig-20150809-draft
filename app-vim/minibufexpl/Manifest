@@ -1,18 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 911018c08bdd7cbc472cd229f73f7227 ChangeLog 1731
-MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
-MD5 4b847e5f4a84c33a5ae2bc35cce89322 minibufexpl-6.2.6.ebuild 440
 MD5 2e598b8749063f7727180020458d5e24 minibufexpl-6.3.1.ebuild 445
+MD5 c923fb4a8474e4a10a6640ac7dfec56b minibufexpl-6.3.2.ebuild 908
+MD5 59618cb6c38ee4e4b290319bc002407c ChangeLog 1874
 MD5 4582282bd33222329371149a9d7d5b3a minibufexpl-6.3.1-r1.ebuild 904
-MD5 c91c0f5625dd939dc121c5a068c0fa74 files/digest-minibufexpl-6.2.6 69
-MD5 32c61863835ac319af932bbe475680cb files/digest-minibufexpl-6.3.1 69
+MD5 4b847e5f4a84c33a5ae2bc35cce89322 minibufexpl-6.2.6.ebuild 440
+MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
+MD5 c8044a2b62a7cfc0eeb12f86474869a5 files/digest-minibufexpl-6.3.2 69
 MD5 32c61863835ac319af932bbe475680cb files/digest-minibufexpl-6.3.1-r1 69
+MD5 32c61863835ac319af932bbe475680cb files/digest-minibufexpl-6.3.1 69
+MD5 c91c0f5625dd939dc121c5a068c0fa74 files/digest-minibufexpl-6.2.6 69
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBZf4wHTu7gpaalycRAkn4AKDbgK4IthKwQcGilAJdljfhk6R4fACbBMZw
-Cr3qh8YmOXdnCnrq/Z/L/Kw=
-=7m6h
+iD8DBQFBs0wkLLFUmVNQ7rkRAn+nAKCetqUoTdI1u1pQ17djQNpIvKPvxwCfb863
+q6clEoqQdvJ0NNstA4kjk80=
+=pfGg
 -----END PGP SIGNATURE-----
