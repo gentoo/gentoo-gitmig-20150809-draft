@@ -1,8 +1,20 @@
-MD5 f6e9541a21cef246d8526e08b2a4804c ChangeLog 1211
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8ff513c65abeefc91560c1721dc9c066 musepack-tools-1.15r-r1.ebuild 1698
 MD5 9198f99a0d177ef29405ec279ebde1c6 musepack-tools-1.15r.ebuild 1626
-MD5 da322e6de9051b732f4d858efb9656e5 files/digest-musepack-tools-1.15r 68
+MD5 665a99e9582143227fee0219ba293249 ChangeLog 1428
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 bf43c1ab1667a88c9ebfaf7dc8bd7157 musepack-tools-1.15r-r2.ebuild 1746
+MD5 e2b1a42af0b2661239d43baa7204cdf7 files/musepack-tools-1.15r-r1-Makefile.patch 3748
 MD5 1455d6a964f7627af39de693f68a6069 files/musepack-tools-1.15r-Makefile.patch 3459
 MD5 da322e6de9051b732f4d858efb9656e5 files/digest-musepack-tools-1.15r-r1 68
-MD5 e2b1a42af0b2661239d43baa7204cdf7 files/musepack-tools-1.15r-r1-Makefile.patch 3748
+MD5 da322e6de9051b732f4d858efb9656e5 files/digest-musepack-tools-1.15r-r2 68
+MD5 da322e6de9051b732f4d858efb9656e5 files/digest-musepack-tools-1.15r 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBO673E67gNkjlZFIRArZPAJ0eR0bDxsgmKev2tkmYAA29E/58kgCfUI4k
+3xPT/u6RBw4R7gqnXEt+X64=
+=rbUN
+-----END PGP SIGNATURE-----

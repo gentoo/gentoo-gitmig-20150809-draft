@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/musepack-tools
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.6 2004/07/07 09:49:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.7 2004/09/06 00:27:30 pkdawson Exp $
+
+*musepack-tools-1.15r-r2 05 Sep 2004
+
+  05 Sep 2004; Patrick Dawson <pkdawson@gentoo.org>
+  +musepack-tools-1.15r-r2.ebuild:
+  Added filters for some mfpmath flags. Thanks to <numlock@freesurf.ch>
+  Closes bug #62224.
 
 *musepack-tools-1.15r-r1 (07 Jul 2004)
 
