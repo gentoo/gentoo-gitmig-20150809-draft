@@ -1,12 +1,17 @@
 # ChangeLog for dev-perl/DateManip
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/ChangeLog,v 1.3 2002/07/23 02:27:37 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/ChangeLog,v 1.4 2002/08/07 23:15:34 cselkirk Exp $
 
 *grepmail-4.70-r1 (16 Jul 2002)
   
+  07 Aug 2002; Calum Selkirk <cselkirk@gentoo.org> grepmail-4.70-r1.ebuild :
+
+  Changed base_src_complile and base_src_test to perl-module_src_compile and
+  perl-module_src_test.
+  
   22 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> grepmail-4.70-r1.ebuild :
 
-  Added dev-perl/Digest-MD5 and dev-prel/Parse-RecDescent to DEPEND.
+  Added dev-perl/Digest-MD5 and dev-perl/Parse-RecDescent to DEPEND.
   Seemant: i think you may have had these installed prior to building.
   Added RDEPEND. Q: should these be ="" (as per skel.ebuild) or ${DEPEND}? 
 

@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/grepmail-4.70-r1.ebuild,v 1.3 2002/07/23 02:27:37 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/grepmail-4.70-r1.ebuild,v 1.4 2002/08/07 23:15:34 cselkirk Exp $
 
 inherit perl-module
 
@@ -24,6 +24,6 @@ RDEPEND=""
 	
 src_compile () {
 
-	echo "" | base_src_compile
-	base_src_test || die
+	echo "" | perl-module_src_compile
+	perl-module_src_test || die
 }
