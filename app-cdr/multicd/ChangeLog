@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/multicd
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/multicd/ChangeLog,v 1.1 2003/10/09 16:15:10 mholzer Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/multicd/ChangeLog,v 1.2 2004/03/19 09:40:54 mr_bones_ Exp $
+
+  19 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> multicd-1.7.2.ebuild:
+  fix depend (bug #45110); tidy
 
 *multicd-1.7.2 (10 Oct 2003)
 
