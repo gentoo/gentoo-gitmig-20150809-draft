@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/shorten
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/shorten/ChangeLog,v 1.7 2004/04/20 17:34:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/shorten/ChangeLog,v 1.8 2004/04/26 04:05:12 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> shorten-3.3.ebuild:
+  Add die following econf for bug 48950
 
   20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> shorten-3.3.ebuild,
   shorten-3.5.0.ebuild, shorten-3.5.1.ebuild:

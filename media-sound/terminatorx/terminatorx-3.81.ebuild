@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.81.ebuild,v 1.7 2004/04/23 22:29:15 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/terminatorx-3.81.ebuild,v 1.8 2004/04/26 04:06:53 agriffis Exp $
 
 inherit gnome2
 
@@ -62,7 +62,7 @@ src_compile() {
 		&& myconf="${myconf} --enable-sox" \
 		|| myconf="${myconf} --disable-sox"
 
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 
 	emake || die
 }

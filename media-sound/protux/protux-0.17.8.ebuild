@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/protux/protux-0.17.8.ebuild,v 1.6 2004/04/20 17:31:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/protux/protux-0.17.8.ebuild,v 1.7 2004/04/26 04:04:21 agriffis Exp $
 
 IUSE=""
 
@@ -30,7 +30,7 @@ src_compile() {
 	export WANT_AUTOMAKE=1.4
 	export WANT_AUTOCONF=2.1
 	make -f admin/Makefile.common
-	econf
+	econf || die "econf failed"
 	emake || die
 }
 

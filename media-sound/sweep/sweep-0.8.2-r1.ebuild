@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/sweep-0.8.2-r1.ebuild,v 1.7 2004/04/24 16:31:07 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sweep/sweep-0.8.2-r1.ebuild,v 1.8 2004/04/26 04:06:08 agriffis Exp $
 
 inherit eutils
 
@@ -39,7 +39,7 @@ src_compile() {
 	use alsa && myconf="${myconf} --enable-alsa"
 	use nls  || myconf="${myconf} --disable-nls"
 
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 	emake
 }
 
