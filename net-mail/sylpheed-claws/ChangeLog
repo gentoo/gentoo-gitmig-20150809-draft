@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/sylpheed-claws
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.58 2003/12/09 17:56:49 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.59 2003/12/16 22:55:17 genone Exp $
+
+  16 Dec 2003; Marius Mauch <genone@gentoo.org> sylpheed-claws-0.8.11.ebuild,
+  sylpheed-claws-0.9.0-r1.ebuild, sylpheed-claws-0.9.5-r1.ebuild,
+  sylpheed-claws-0.9.5.ebuild, sylpheed-claws-0.9.6-r1.ebuild,
+  sylpheed-claws-0.9.6.ebuild, sylpheed-claws-0.9.7.ebuild:
+  marking 0.9.7 stable on x86, removing ~mips and ~hppa as dependencies are 
+  broken on these archs
 
   09 Dec 2003; Heinrich Wendel <lanius@gentoo.org>
   sylpheed-claws-0.9.5-r1.ebuild, sylpheed-claws-0.9.5.ebuild,
