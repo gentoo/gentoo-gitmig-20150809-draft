@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/c-client
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.12 2004/01/10 16:20:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/c-client/ChangeLog,v 1.13 2004/02/02 02:45:35 avenj Exp $
+
+  01 Jan 2004; Jon Portnoy <avenj@gentoo.org> c-client-2002e-r1.ebuild :
+  AMD64 keywords.
 
   10 Jan 2004; <agriffis@gentoo.org> c-client-2002e-r1.ebuild:
   stable on ia64
