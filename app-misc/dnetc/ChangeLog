@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/dnetc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.9 2003/03/31 18:36:41 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/ChangeLog,v 1.10 2003/04/29 11:36:35 taviso Exp $
+
+*dnetc-2.9003.480 (29 Apr 2003)
+
+  29 Apr 2003; Tavis Ormandy <taviso@gentoo.org> dnetc-2.8010.463.ebuild,
+  dnetc-2.9003.480.ebuild:
+  Adding a working Alpha ebuild, previous ebuild is totally broken.
 
 *dnetc-2.9003.481 (09 Mar 2003)
 
