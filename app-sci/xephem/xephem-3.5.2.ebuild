@@ -1,12 +1,12 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xephem/xephem-3.5.2.ebuild,v 1.10 2003/09/06 22:23:06 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xephem/xephem-3.5.2.ebuild,v 1.11 2004/04/19 12:57:53 phosphan Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="XEphem is the X Windows Ephemeris, and provides a scientific-grade solar system model, star charts, sky views, plus a whole lot more."
 SRC_URI="${PN}-${PV}.tar.gz"
 HOMEPAGE="http://www.clearskyinstitute.com/xephem"
 KEYWORDS="x86 ppc"
+IUSE=""
 SLOT="0"
 LICENSE="as-is"
 DEPEND="x11-libs/openmotif"
@@ -22,20 +22,17 @@ pkg_setup() {
 src_compile() {
 
 	cd libastro
-	mv Makefile Makefile.orig
 	sed -e "s:CFLAGS=.*:CFLAGS=${CFLAGS} -ffast-math -Wall:" \
-			Makefile.orig > Makefile
+			-i Makefile
 	emake || die
 	cd ../libip
-	mv Makefile Makefile.orig
 	sed -e "s:CFLAGS=*:CFLAGS=${CFLAGS} -I../libastro -ffast-math -Wall:" \
-			Makefile.orig > Makefile
+			-i Makefile
 	emake || die
 	cd ../GUI/xephem
 	xmkmf
-	mv Makefile Makefile.orig
 	sed -e "s:CDEBUGFLAGS = .*:CDEBUGFLAGS = ${CFLAGS} -fno-strength-reduce:" \
-			Makefile.orig > Makefile
+			-i Makefile
 	emake || die
 
 }

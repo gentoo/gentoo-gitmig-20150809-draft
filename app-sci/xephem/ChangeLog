@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/xephem
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xephem/ChangeLog,v 1.7 2003/02/12 05:20:31 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xephem/ChangeLog,v 1.8 2004/04/19 12:57:53 phosphan Exp $
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> xephem-3.5.2.ebuild:
+  Adding IUSE, removing S=... with no effect
 
   03 Sep 2002; Daniel Robbins <drobbins@gentoo.org> xephem-3.5.2.ebuild:
   moved rphillips' 'download later' stuff into pkg_setup so it doesn't
