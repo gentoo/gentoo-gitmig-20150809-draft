@@ -1,5 +1,5 @@
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.48.ebuild,v 1.4 2003/05/20 22:06:04 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.48.ebuild,v 1.5 2003/05/29 07:55:28 carpaski Exp $
 
 IUSE="build"
 
@@ -97,7 +97,9 @@ src_install() {
 	dosym ../lib/portage/bin/pkgmerge /usr/sbin/pkgmerge
 	dosym ../lib/portage/bin/ebuild /usr/sbin/ebuild
 	dosym ../lib/portage/bin/ebuild.sh /usr/sbin/ebuild.sh
+
 	dosym ../lib/portage/bin/etc-update /usr/sbin/etc-update
+	dosym ../lib/portage/bin/fixpackages /usr/sbin/fixpackages
 	
 	dosym ../lib/portage/bin/env-update /usr/sbin/env-update
 	dosym ../lib/portage/bin/xpak /usr/bin/xpak
