@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.103 2004/10/15 14:04:54 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.104 2004/10/15 16:56:53 gregkh Exp $
+
+*gentoo-dev-sources-2.6.8-r10 (15 Oct 2004)
+
+  15 Oct 2004; Greg Kroah-Hartman <gregkh@gentoo.org>
+  +gentoo-dev-sources-2.6.8-r10.ebuild:
+  Added inotify patch so that all gnome users can feel the love...
 
   15 Oct 2004; Daniel Drake <dsd@gentoo.org>
   gentoo-dev-sources-2.6.8-r9.ebuild:
