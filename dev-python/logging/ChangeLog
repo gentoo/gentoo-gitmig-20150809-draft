@@ -1,0 +1,9 @@
+# ChangeLog for dev-python/logging
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/logging/ChangeLog,v 1.1 2003/11/12 19:01:14 pythonhead Exp $
+
+*logging-0.4.7 (12 Nov 2003)
+
+  12 Nov 2003; Rob Cakebread <pythonhead@gentoo.org> logging-0.4.7.ebuild:
+  Initial commit. Thanks to Frido Ferdinand <frido@zolder.net> (Bug #21345)
+
