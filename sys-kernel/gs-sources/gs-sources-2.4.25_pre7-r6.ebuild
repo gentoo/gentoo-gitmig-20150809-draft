@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.25_pre7-r6.ebuild,v 1.1 2004/06/14 19:51:46 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.25_pre7-r6.ebuild,v 1.2 2004/06/20 12:37:02 plasmaroo Exp $
 
 IUSE="build crypt"
 
@@ -27,9 +27,8 @@ S=${WORKDIR}/linux-${KV}
 # Documentation on the patches contained in this kernel will be installed
 # to /usr/share/doc/gs-sources-${PV}/patches.txt.gz
 
-DESCRIPTION="This kernel stays up to date with current kernel -pres,
-	with recent acpi,evms,win4lin,futexes,aic79xx,
-	superfreeswan,preempt, and various hw fixes."
+DESCRIPTION="This kernel stays up to date with current kernel -pre's, with recent ACPI,
+	EVMS, Win4Lin, aic79xx, Super FreeS/WAN, preempt, and various hardware fixes."
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	 mirror://gentoo/patches-${KV/r6/r1}.tar.bz2"
 KEYWORDS="x86 -ppc -sparc"
