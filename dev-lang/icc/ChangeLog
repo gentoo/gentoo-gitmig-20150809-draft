@@ -1,0 +1,17 @@
+# ChangeLog for dev-lang/icc
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.1 2002/04/13 20:23:46 karltk Exp $
+
+*icc-5.0.1 (12 Apr 2002)
+
+  12 Apr 2002; William McArthur <Leknor@Leknor.com> ChangeLog :
+
+  Initial Gentoo package. The install from Intel is RPM based so I extract
+  the i386 RPMs manually using rpm2cpio and cpio. (Idea taken from the
+  realplayer ebuild) Other than running rpm for you the install script just
+  replaces some stings in a few files with sed, so I copied and mangled the
+  relavent lines from their install and use them. I also correct a typo
+  descriped on Intel's web site. This fix should be removed at next icc upgrade.
+  The install is a simple copy and adding one file to /etc/env.d to set up a few
+  enviroment settings icc needs. After the package is merged I inform the user
+  where to get a license key and where to put it.
