@@ -1,10 +1,6 @@
 # ChangeLog for media-gfx/autotrace
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/ChangeLog,v 1.9 2004/05/18 20:15:40 kugelfang Exp $
-
-  18 May 2004; Danny van Dyk <kugelfang@gentoo.org>
-  autotrace-0.31.1-r1.ebuild:
-  Marked ~amd64.
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/ChangeLog,v 1.10 2004/05/18 20:16:50 kugelfang Exp $
 
   18 May 2004; Danny van Dyk <kugelfang@gentoo.org>
   autotrace-0.31.1-r1.ebuild:
