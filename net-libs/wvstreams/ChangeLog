@@ -1,6 +1,14 @@
 # ChangeLog for net-libs/wvstreams
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.39 2005/02/14 17:51:33 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.40 2005/02/17 19:59:44 mrness Exp $
+
+*wvstreams-4.0.1-r1 (17 Feb 2005)
+
+  17 Feb 2005; Alin Nastac <mrness@gentoo.org>
+  +files/wvstreams-4.0.1-linux-serial.patch, +wvstreams-4.0.1-r1.ebuild,
+  wvstreams-4.0.1.ebuild:
+  Add patch derived from debian patch (wwwstreams_4.0.1-1.3) that fixes bugs
+  #79897 and #79913.
 
   14 Feb 2005; Gustavo Zacarias <gustavoz@gentoo.org> wvstreams-4.0.1.ebuild:
   Stable on sparc wrt #76455
