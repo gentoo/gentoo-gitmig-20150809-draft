@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/file
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.65 2004/11/14 04:37:24 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.66 2004/11/14 21:06:49 kloeri Exp $
+
+  14 Nov 2004; Bryan Østergaard <kloeri@gentoo.org> file-4.10-r1.ebuild:
+  Stable on alpha.
 
   13 Nov 2004; <solar@gentoo.org> +files/file-4.10-mconvert.patch,
   file-4.10-r1.ebuild:
