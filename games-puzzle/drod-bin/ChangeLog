@@ -1,8 +1,11 @@
 # ChangeLog for games-puzzle/drod-bin
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/drod-bin/ChangeLog,v 1.3 2004/01/18 09:15:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/drod-bin/ChangeLog,v 1.4 2004/02/26 07:24:10 vapier Exp $
 
 *drod-bin-1.6.5 (18 Jan 2004)
+
+  26 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
+  Backup saved games when updating/re-emerging #42836.
 
   18 Jan 2004; Michael Sterrett <mr_bones_@gentoo.org> drod-bin-1.6.5.ebuild:
   version bump (bug 38516)
