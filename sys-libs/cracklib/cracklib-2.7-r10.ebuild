@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r10.ebuild,v 1.6 2004/11/08 23:26:00 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/cracklib-2.7-r10.ebuild,v 1.7 2004/11/12 21:07:52 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.crypticide.org/users/alecm/security/${MY_P}.tar.gz"
 
 LICENSE="CRACKLIB"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc mips alpha ~arm ~hppa amd64 ~ia64 ~ppc64 ~s390"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ~ppc ~ppc64 s390 sh sparc x86"
 IUSE="pam uclibc"
 
 RDEPEND="sys-apps/miscfiles
