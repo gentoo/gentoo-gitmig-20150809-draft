@@ -1,13 +1,21 @@
 # ChangeLog for sys-kernel/xfs-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.18 2003/01/30 04:38:12 livewire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.19 2003/01/31 03:06:38 livewire Exp $
 
-*xfs-sources-2.4.20_pre5 (29 Jan 2003)
- 
-  29 Jan 2003; Bob Johnson <livewire@gentoo.org>
+*xfs-sources-2.4.20_pre6 (30 Jan 2003)
 
-  - fix eepro100 compile
+  30 Jan 2003; Bob Johnson <livewire@gentoo.org>
 
+  - Newest Aic79xx and Aic7xxx
+  - bcm 4400 and 5700 nic drivers
+  - fixed mki adapter build
+  - preliminary Nforce2 ide support
+  - nforce 810 audio fix
+  - eepro100 compile fix
+  - Adaptec firmware patch
+  - in2000 and ncr scsi compile fixes
+  - pull via-rhine,winbond,yellowfin,starfire,hamachi updates
+	
 *xfs-sources-2.4.20_pre5 (14 Jan 2003)
 
   14 Jan 2003; Bob Johnson <livewire@gentoo.org>:
