@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/gpsdrive
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.7 2003/09/14 16:36:58 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.8 2003/09/24 06:44:59 iggy Exp $
+
+*gpsdrive-2.04 (24 Sep 2003)
+
+  24 Sep 2003; <iggy@gentoo.org> gpsdrive-2.03.ebuild, gpsdrive-2.04.ebuild:
+  added 2.04, bumped 2.03 to stable, thanks to Michael Palmer
 
 *gpsdrive-2.03 (14 Sep 2003)
 
