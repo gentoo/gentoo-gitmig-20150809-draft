@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/oroborus-extras
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus-extras/ChangeLog,v 1.6 2003/06/12 19:08:16 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus-extras/ChangeLog,v 1.7 2003/07/09 18:24:58 mholzer Exp $
+
+*oroborus-extras-2.0.13 (09 Jul 2003)
+
+  09 Jul 2003; Martin Holzer <mholzer@gentoo.org>
+  oroborus-extras-2.0.13.ebuild:
+  Version bumped. ebuild submitted by Soren Harward <soren@byu.edu> in #23780.
 
   12 Jun 2003; <msterret@gentoo.org> oroborus-extras-2.0.1-r1.ebuild:
   add Header
