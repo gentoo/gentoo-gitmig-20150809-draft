@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.25 2004/10/04 15:09:39 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.26 2004/10/05 03:32:36 lv Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -23,7 +23,7 @@ if [ "${ETYPE}" == "gcc-library" ] ; then
 		fi
 	fi
 else
-	IUSE="static nls bootstrap build nomultilib gcj gtk f77 objc hardened uclibc n32 n64"
+	IUSE="static nls bootstrap build multilib gcj gtk f77 objc hardened uclibc n32 n64"
 	if [ "${CHOST}" == "${CCHOST}" ] ; then
 		SLOT="${PV%.*}"
 	else
@@ -115,8 +115,8 @@ gcc-compiler-pkg_setup() {
 	esac
 
 	#cannot have both n32 & n64 without multilib
-	if use n32 && use n64 && use nomultilib; then
-		eerror "Please disable nomultilib if you want to use both n32 & n64";
+	if use n32 && use n64 && use !multilib; then
+		eerror "Please enable multilib if you want to use both n32 & n64";
 		die "Invalid USE flag combination";
 	fi
 }
@@ -752,7 +752,7 @@ gcc-library-configure() {
 
 gcc-compiler-configure() {
 	# multilib support
-	if use !nomultilib && (use amd64 || use mips)
+	if use multilib && (use amd64 || use mips)
 	then
 		confgcc="${confgcc} --enable-multilib"
 	else
@@ -772,7 +772,7 @@ gcc-compiler-configure() {
 	# Add --with-abi flags to enable respective MIPS ABIs
 	case "${CCHOST}" in
 		mips*)
-		use !nomultilib && myconf="${myconf} --with-abi=32"
+		use multilib && myconf="${myconf} --with-abi=32"
 		use n64 && myconf="${myconf} --with-abi=n64"
 		use n32 && myconf="${myconf} --with-abi=n32"
 		;;
