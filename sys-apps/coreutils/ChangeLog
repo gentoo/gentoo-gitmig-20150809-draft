@@ -1,11 +1,11 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.62 2003/12/31 02:58:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.63 2003/12/31 02:59:52 seemant Exp $
 
   30 Dec 2003; Seemant Kulleen <seemant@gentoo.org>
   coreutils-5.0.91-r2.ebuild, coreutils-5.0.91-r3.ebuild:
   Added acl, gettext and libtermcap-compat to RDEPEND as well, otherwise that
-  leads to b0rked tbz2's. Thanks to Donny Davis <woodchip@gentoo.org> :)
+  leads to b0rked tbz2's. Thanks to Donny Davies <woodchip@gentoo.org> :)
 
   30 Dec 2003; Seemant Kulleen <seemant@gentoo.org>
   coreutils-5.0.91-r3.ebuild:
