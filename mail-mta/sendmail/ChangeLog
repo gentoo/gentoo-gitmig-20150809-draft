@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/sendmail
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.1 2004/05/30 09:20:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/ChangeLog,v 1.2 2004/05/30 21:13:45 g2boojum Exp $
+
+*sendmail-8.12.11-r3 (30 May 2004)
+
+  30 May 2004; Grant Goodyear <g2boojum@gentoo.org> files/mailer.conf,
+  sendmail-8.12.11-r1.ebuild, sendmail-8.12.11-r2.ebuild,
+  +sendmail-8.12.11-r3.ebuild:
+  Changes so that mailwrapper can be optional (w/ a "mailwrapper" USE flag).
 
 *sendmail-8.12.11-r2 (30 May 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.12.11-r1.ebuild,v 1.2 2004/05/30 21:13:45 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.12.11-r3.ebuild,v 1.1 2004/05/30 21:13:45 g2boojum Exp $
 
 DESCRIPTION="Widely-used Mail Transport Agent (MTA)"
 HOMEPAGE="http://www.sendmail.org/"
@@ -8,25 +8,20 @@ SRC_URI="ftp://ftp.sendmail.org/pub/${PN}/${PN}.${PV}.tar.gz"
 
 LICENSE="Sendmail"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~hppa ~alpha ~ia64"
-IUSE="ssl ldap sasl berkdb tcpd gdbm mbox"
+KEYWORDS="~x86 ~ppc ~sparc ~hppa ~alpha ~ia64 s390"
+IUSE="ssl ldap sasl tcpd mbox milter mailwrapper"
 
-DEPEND="net-dns/hesiod
-	net-mail/mailbase
-	sys-libs/gdbm
+DEPEND="net-mail/mailbase
 	sys-devel/m4
 	sasl? ( >=dev-libs/cyrus-sasl-2.1.10 )
 	tcpd? ( sys-apps/tcp-wrappers )
 	ssl? ( dev-libs/openssl )
 	ldap? ( net-nds/openldap )
-	|| (
-		gdbm? ( sys-libs/gdbm )
-		berkdb? ( >=sys-libs/db-3.2 )
-		sys-libs/gdbm
-	)"
+	>=sys-libs/db-3.2
+	"
 RDEPEND="${DEPEND}
 		>=net-mail/mailbase-0.00
-		=net-mail/mailwrapper-0.1"
+		mailwrapper? ( >=net-mail/mailwrapper-0.2 )"
 PDEPEND="!mbox? ( net-mail/procmail )"
 PROVIDE="virtual/mta"
 
@@ -35,10 +30,7 @@ src_unpack() {
 	cd ${S}
 
 	confCCOPTS="${CFLAGS}"
-	confMAPDEF="-DNEWDB -DNIS -DMAP_REGEX"
-	confENVDEF="-DXDEBUG=0"
-	confLIBS="-lnsl -lcrypt"
-	conf_sendmail_ENVDEF="-DFALSE=0 -DTRUE=1"
+	confMAPDEF="-DMAP_REGEX"
 	conf_sendmail_LIBS=""
 	use sasl && confLIBS="${confLIBS} -lsasl2"  \
 		&& confENVDEF="${confENVDEF} -DSASL=2" \
@@ -53,9 +45,7 @@ src_unpack() {
 		&& conf_sendmail_LIBS="${conf_sendmail_LIBS} -lssl -lcrypto"
 	use ldap && confMAPDEF="${confMAPDEF} -DLDAPMAP" \
 		&& confLIBS="${confLIBS} -lldap -llber"
-	if use gdbm || ! use berkdb ; then
-		confLIBS="${confLIBS} -lgdbm"
-	fi
+	use milter && confENVDEF="${confENVDEF} -DMILTER"
 	sed -e "s:@@confCCOPTS@@:${confCCOPTS}:" \
 		-e "s/@@confMAPDEF@@/${confMAPDEF}/" \
 		-e "s/@@confENVDEF@@/${confENVDEF}/" \
@@ -66,21 +56,23 @@ src_unpack() {
 }
 
 src_compile() {
-	for x in libmilter libsmutil sendmail mailstats rmail praliases smrsh makemap vacation mail.local
-	do
-		pushd ${x}
-		sh Build
+	sh Build || die "compilation failed in main Build script"
+
+	if use milter
+	then
+	    pushd libmilter
+		sh Build || die "libmilter compilation failed"
 		popd
-	done
+	fi
 }
 
 src_install () {
 	OBJDIR="obj.`uname -s`.`uname -r`.`arch`"
-	dodir /etc/pam.d /usr/bin /usr/include/libmilter /usr/lib
+	dodir /etc/pam.d /usr/bin /usr/lib
 	dodir /usr/share/man/man{1,5,8} /usr/sbin /var/log /usr/share/sendmail-cf
 	dodir /var/spool/{mqueue,clientmqueue} /etc/conf.d
 	keepdir /var/spool/{clientmqueue,mqueue}
-	for dir in libmilter libsmutil sendmail mailstats praliases smrsh makemap vacation
+	for dir in libsmutil sendmail mailstats praliases smrsh makemap vacation editmap
 	do
 		make DESTDIR=${D} MANROOT=/usr/share/man/man \
 			SBINOWN=root SBINGRP=root UBINOWN=root UBINGRP=root \
@@ -100,10 +92,22 @@ src_install () {
 			force-install -C ${OBJDIR}/${dir} \
 			|| die "install failed"
 	done
-	mv ${D}/usr/sbin/sendmail ${D}/usr/sbin/sendmail.sendmail
-	fowners root:smmsp /usr/sbin/sendmail.sendmail
+
+	if use milter
+	then
+	    dodir /usr/include/libmilter
+		make DESTDIR=${D} MANROOT=/usr/share/man/man \
+			SBINOWN=root SBINGRP=root UBINOWN=root UBINGRP=root \
+			MANOWN=root MANGRP=root INCOWN=root INCGRP=root \
+			LIBOWN=root LIBGRP=root GBINOWN=root GBINGRP=root \
+			MSPQOWN=root CFOWN=root CFGRP=root \
+			install -C ${OBJDIR}/libmilter \
+			|| die "install failed"
+	fi
+
+	fowners root:smmsp /usr/sbin/sendmail
+	fperms 2555 /usr/sbin/sendmail
 	fowners smmsp:smmsp /var/spool/clientmqueue
-	fperms 2555 /usr/sbin/sendmail.sendmail
 	fperms 770 /var/spool/clientmqueue
 	fperms 700 /var/spool/mqueue
 	dosym /usr/sbin/sendmail /usr/lib/sendmail
@@ -113,14 +117,17 @@ src_install () {
 	newdoc sendmail/SECURITY SECURITY
 	newdoc sendmail/TUNING TUNING
 	newdoc smrsh/README README.smrsh
-	newdoc libmilter/README README.libmilter
+
+	if use milter
+	then
+		newdoc libmilter/README README.libmilter
+	fi
+
 	newdoc cf/README README.cf
 	newdoc cf/cf/README README.install-cf
 	cp -a cf/* ${D}/usr/share/sendmail-cf
-	insinto /etc
-	doins ${FILESDIR}/mailer.conf
 	insinto /etc/mail
-	if [ -n "` use mbox `" ]
+	if use mbox
 	then
 		doins ${FILESDIR}/{sendmail.cf,sendmail.mc}
 	else
@@ -139,10 +146,6 @@ EOF
 # The /usr/share/doc/sendmail/README.cf is part of the sendmail-doc
 # package.
 #
-# by default we allow relaying from localhost...
-localhost.localdomain		RELAY
-localhost			RELAY
-127.0.0.1			RELAY
 
 EOF
 cat << EOF > ${D}/etc/conf.d/sendmail
@@ -155,7 +158,24 @@ KILL_OPTS="" # add -9/-15/your favorite evil SIG level here
 EOF
 	exeinto /etc/init.d
 	doexe ${FILESDIR}/sendmail
-	dosed 's/} sendmail/} sendmail.sendmail/' /etc/init.d/sendmail
 	keepdir /usr/adm/sm.bin
+
+	if use mailwrapper
+	then
+		mv ${D}/usr/sbin/sendmail ${D}/usr/sbin/sendmail.sendmail
+		insinto /etc/mail
+		doins ${FILESDIR}/mailer.conf
+		dosed 's/} sendmail/} sendmail.sendmail/' /etc/init.d/sendmail
+	fi
+
 }
 
+pkg_postinst() {
+	if ! use mailwrapper && [[ -e /etc/mailer.conf ]]
+	then
+		einfo
+		einfo "Since you emerged sendmail without mailwrapper in USE,"
+		einfo "you probably want to 'emerge -C mailwrapper' now."
+		einfo
+	fi
+}

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.12.11-r2.ebuild,v 1.1 2004/05/30 09:20:40 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/sendmail/sendmail-8.12.11-r2.ebuild,v 1.2 2004/05/30 21:13:45 g2boojum Exp $
 
 DESCRIPTION="Widely-used Mail Transport Agent (MTA)"
 HOMEPAGE="http://www.sendmail.org/"
@@ -21,7 +21,7 @@ DEPEND="net-mail/mailbase
 	"
 RDEPEND="${DEPEND}
 		>=net-mail/mailbase-0.00
-		net-mail/mailwrapper"
+		=net-mail/mailwrapper-0.1"
 PDEPEND="!mbox? ( net-mail/procmail )"
 PROVIDE="virtual/mta"
 
@@ -127,6 +127,8 @@ src_install () {
 	newdoc cf/README README.cf
 	newdoc cf/cf/README README.install-cf
 	cp -a cf/* ${D}/usr/share/sendmail-cf
+	insinto /etc
+	doins ${FILESDIR}/mailer.conf
 	insinto /etc/mail
 	if [ -n "` use mbox `" ]
 	then
