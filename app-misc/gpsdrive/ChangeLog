@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/gpsdrive
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.15 2004/02/29 17:19:59 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.16 2004/03/04 04:18:58 latexer Exp $
+
+*gpsdrive-2.09 (03 Mar 2004)
+
+  03 Mar 2004; Peter Johanson <latexer@gentoo.org> gpsdrive-2.09.ebuild:
+  Bump, thanks to synack on freenode for pointing it out.
 
 *gpsdrive-2.08 (27 Feb 2004)
 
