@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.58 2004/11/08 18:33:46 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.59 2004/12/13 19:04:06 azarah Exp $
+
+*pam-0.77-r4 (13 Dec 2004)
+
+  13 Dec 2004; Martin Schlemmer <azarah@gentoo.org> files/pam_env.conf,
+  +pam-0.77-r4.ebuild:
+  Fix DISPLAY not set for ssh -X.
 
 *pam-0.77-r3 (08 Nov 2004)
 
