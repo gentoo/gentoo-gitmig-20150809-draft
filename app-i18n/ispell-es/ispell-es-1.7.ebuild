@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Leonardo Boshell <p@kapcoweb.com>
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/ispell-es/ispell-es-1.7.ebuild,v 1.4 2002/05/08 06:10:57 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/ispell-es/ispell-es-1.7.ebuild,v 1.5 2002/05/31 14:18:12 seemant Exp $
 
-MY_P="espa%7Enol-"${PV}
-S=${WORKDIR}/${MY_P}
+MY_P="espanol-"${PV}
+S=${WORKDIR}/${MY_P/n/~n}
 DESCRIPTION="A Spanish dictionary for ispell"
 SRC_URI="ftp://ftp.fi.upm.es/pub/unix/${MY_P}.tar.gz"
 HOMEPAGE="http://www.datsi.fi.upm.es/~coes/"
