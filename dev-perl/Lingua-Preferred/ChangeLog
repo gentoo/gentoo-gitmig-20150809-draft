@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Lingua-Preferred
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Preferred/ChangeLog,v 1.7 2004/07/13 23:23:11 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Lingua-Preferred/ChangeLog,v 1.8 2004/07/15 14:37:24 gustavoz Exp $
+
+  15 Jul 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  Lingua-Preferred-0.2.4.ebuild:
+  Sparc stable
 
   13 Jul 2004; Robert Coie <rac@gentoo.org> Lingua-Preferred-0.2.4.ebuild:
   Keywording amd64 and x86
