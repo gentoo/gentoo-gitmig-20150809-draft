@@ -1,0 +1,25 @@
+--- Makefile.old	2004-01-16 11:25:11.000000000 +0900
++++ Makefile	2005-01-06 14:03:06.640334056 +0900
+@@ -3,11 +3,11 @@
+ CPPFLAGS = -std=gnu99 -Wall -g `pkg-config --cflags $(PKGS)` -DDATADIR=\"$(datadir)\"
+ LIBS = `pkg-config --libs $(PKGS)`
+ 
+-prefix = /home/azz/src/potamus
++prefix = /usr
+ exec_prefix = $(prefix)
+ bindir = $(exec_prefix)/bin
+ datadir = $(prefix)/share
+-DESTDIR =
++
+ 
+ potamus: $(OBJS)
+ 	$(CC) $(CPPFLAGS) -o potamus $(OBJS) $(LIBS)
+@@ -21,7 +21,7 @@
+ 	rm -f $(OBJS) potamus *~ *.bak depend share/potamus/*.bak
+ 
+ depend:
+-	@for x in *.c ; do $(CXX) -MM $$x ; done >depend
++	@for x in *.c ; do $(CXX) `pkg-config --cflags $(PKGS)` -DDATADIR=\"$(datadir)\"  -MM $$x ; done >depend
+ .PHONY: depend
+ 
+ include depend
