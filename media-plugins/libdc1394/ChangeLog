@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/libdc1394
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/libdc1394/ChangeLog,v 1.9 2004/12/04 20:07:12 corsair Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/libdc1394/ChangeLog,v 1.10 2005/01/25 19:51:18 corsair Exp $
+
+  25 Jan 2005; Markus Rothe <corsair@gentoo.org> libdc1394-1.0.0.ebuild:
+  Stable on ppc64
 
   04 Dec 2004; Markus Rothe <corsair@gentoo.org> libdc1394-1.0.0.ebuild:
   Added ~ppc64 to KEYWORDS; bug #72993

@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/coriander
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/coriander/ChangeLog,v 1.4 2004/12/04 20:12:22 corsair Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/coriander/ChangeLog,v 1.5 2005/01/25 19:52:38 corsair Exp $
+
+  25 Jan 2005; Markus Rothe <corsair@gentoo.org> coriander-1.0.0.ebuild:
+  Stable on ppc64
 
   04 Dec 2004; Markus Rothe <corsair@gentoo.org> coriander-1.0.0.ebuild:
   Added ~ppc64 to KEYWORDS; bug #72995
