@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tbass/tbass-20030108.ebuild,v 1.4 2003/07/02 12:33:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tbass/tbass-20030108.ebuild,v 1.5 2003/11/09 01:18:30 george Exp $
 
 IUSE=""
 
@@ -21,7 +21,7 @@ KEYWORDS="x86 ~ppc ~sparc "
 
 DEPEND="virtual/glibc
 	sys-devel/binutils
-	>=app-sci/lard-20030109
+	>=app-sci/lard-2.0.15
 	dev-libs/gmp
 	dev-lang/perl
 	x11-libs/gtk+"
