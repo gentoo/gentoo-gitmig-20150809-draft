@@ -24,6 +24,8 @@
 # <solar@gentoo.org> (Dec 10 2004) 
 # masked for security reasons, see bug #30554 
 <=net-www/jboss-3.2.1-r1
+# bug #34599
+<app-misc/screen-4.0.1-r1
 
 # <souder@gentoo.org>  (08 Dec 2003)
 # Unmaintained upstream since > year
