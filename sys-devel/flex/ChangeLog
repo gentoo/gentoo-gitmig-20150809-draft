@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/flex
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.8 2003/01/18 19:03:06 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.9 2003/02/08 21:13:47 gmsoft Exp $
+
+  08 Feb 2003; Guy Martin <gmsoft@gentoo.org> flex-2.5.4a-r5.ebuild :
+  Added hppa to keywords.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
