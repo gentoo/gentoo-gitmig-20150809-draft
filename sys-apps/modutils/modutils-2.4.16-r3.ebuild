@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/modutils-2.4.16-r3.ebuild,v 1.5 2002/08/14 03:11:18 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/modutils-2.4.16-r3.ebuild,v 1.6 2002/09/21 03:29:58 vapier Exp $
 
 S=${WORKDIR}/${P}
 SLOT="0"
 DESCRIPTION="Standard kernel module utilities"
 SRC_URI="http://www.kernel.org/pub/linux/utils/kernel/modutils/v2.4/${P}.tar.bz2"
-HOMEPAGE=""
+HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/modutils/"
 KEYWORDS="x86 ppc sparc sparc64"
 LICENSE="GPL-2"
 DEPEND="virtual/glibc"
