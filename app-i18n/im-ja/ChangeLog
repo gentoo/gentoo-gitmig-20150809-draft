@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/im-ja
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/ChangeLog,v 1.28 2004/07/04 02:44:17 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/ChangeLog,v 1.29 2004/08/26 11:44:56 usata Exp $
+
+  26 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> im-ja-1.2.ebuild:
+  Stable on x86 and alpha.
 
   04 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> im-ja-1.1.ebuild,
   im-ja-1.2.ebuild:
