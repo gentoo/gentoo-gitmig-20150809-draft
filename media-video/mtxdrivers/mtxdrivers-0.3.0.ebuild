@@ -1,11 +1,11 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers/mtxdrivers-0.3.0.ebuild,v 1.8 2004/01/19 03:01:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers/mtxdrivers-0.3.0.ebuild,v 1.9 2004/03/20 05:12:23 ferringb Exp $
 
 At="mtxdrivers-rh9.0-0.3.0.run"
 DESCRIPTION="Drviers for the Matrox Parhelia and Millenium P650/P750 cards."
 HOMEPAGE="http://www.matrox.com/mga/products/parhelia/home.cfm"
-SRC_URI="${At}"
+#SRC_URI="${At}"
 
 LICENSE="Matrox"
 SLOT="0"
@@ -14,7 +14,7 @@ RESTRICT="fetch"
 
 DEPEND=">=x11-base/xfree-4.2.0
 	virtual/kernel
-	!mtxdrivers-pro"
+	!media-video/mtxdrivers-pro"
 
 pkg_nofetch() {
 	einfo "You must go to: http://www.matrox.com/mga/registration/home.cfm?refid=7667"
