@@ -540,10 +540,6 @@ media-libs/libfame
 # standard library does not compile
 =dev-lang/clean-2.0.1
 
-# <aliz@gentoo.org> (18 Jul 2002)
-# masked for testing
-=media-sound/xmms-1.2.7-r12
-
 # azarah@gentoo.org (17 Jul 2002)
 # needs testing.
 # Added other deps that depend on baselayout
