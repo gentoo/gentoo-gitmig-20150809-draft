@@ -16,3 +16,4 @@ move games-fps/d1x games-action/d1x
 move games-fps/descent1-maps games-action/descent1-maps
 move net-im/jabber-server net-im/jabberd
 move net-www/mozilla-firebird net-www/mozilla-firefox
+move media-libs/libebml dev-libs/libebml
