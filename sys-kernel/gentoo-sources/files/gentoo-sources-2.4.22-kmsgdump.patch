@@ -1,0 +1,27 @@
+--- linux-2.4.22-gentoo-r1/include/asm-i386/kmsgdump.h.orig	2003-12-05 14:47:30.000000000 -0800
++++ linux-2.4.22-gentoo-r1.plasmaroo/include/asm-i386/kmsgdump.h	2003-12-05 14:49:44.000000000 -0800
+@@ -8,8 +8,23 @@
+  */
+ 
+ /* LOG_BUF_LEN : should match </usr/src/linux/kernel/printk.c>'s */
++#include <linux/config.h>
+ #ifndef LOG_BUF_LEN
+-#define LOG_BUF_LEN     (16384)
++
++#if !defined(CONFIG_LOG_BUF_SHIFT) || (CONFIG_LOG_BUF_SHIFT - 0 == 0)
++#if defined(CONFIG_MULTIQUAD) || defined(CONFIG_IA64)
++#define LOG_BUF_LEN     (65536)
++#elif defined(CONFIG_ARCH_S390)
++#define LOG_BUF_LEN     (131072)
++#elif defined(CONFIG_SMP)
++#define LOG_BUF_LEN     (32768)
++#else
++#define LOG_BUF_LEN     (16384)                 /* This must be a power of two */
++#endif
++#else /* CONFIG_LOG_BUF_SHIFT */
++#define LOG_BUF_LEN (1 << CONFIG_LOG_BUF_SHIFT)
++#endif
++
+ #endif
+ 
+ #define	CODEORIGIN	0x0700

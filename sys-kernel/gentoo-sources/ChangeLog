@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.45 2003/12/04 22:09:58 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.46 2003/12/05 23:55:03 plasmaroo Exp $
+
+  05 Dec 2003; <plasmaroo@gentoo.org> gentoo-sources-2.4.22-r1.ebuild,
+  files/gentoo-sources-2.4.22-kmsgdump.patch:
+  Added a fix to fix a "CONFIG_LOG_BUF_SHIFT" problem as
+  include/asm-i386/kmsgdump.h was not updated for some reason. Thanks to
+  Leandro Dorileo <leandro at inforagro.dom.br> for the patch. This closes
+  bug #35123.
 
   03 Dec 2003; Brian Jackson <iggy@gentoo.org>
   gentoo-sources-2.4.20-r9.ebuild, files/do_brk_fix.patch:

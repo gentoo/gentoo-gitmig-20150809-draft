@@ -1,6 +1,6 @@
-MD5 b82068ab5ee9cfa401f412b3b387a95d ChangeLog 12147
+MD5 6ab76d9dbeb5a51afe4c6eb68aba12dc ChangeLog 12484
 MD5 1af785c8a3f44b880753f316bb4970f3 gentoo-sources-2.4.22.ebuild 1911
-MD5 18e30dca6be96fa965c366d3d123a986 gentoo-sources-2.4.22-r1.ebuild 1895
+MD5 51d342166d91ae444e1a22c0319bb5ae gentoo-sources-2.4.22-r1.ebuild 1944
 MD5 9eaf2835f8242a58af89b897f1ee9438 metadata.xml 350
 MD5 32c2163cad1c7253c80be7b369602b92 gentoo-sources-2.4.20-r8.ebuild 5557
 MD5 f44bfa5126842e2f7868d584c7f9e6ea gentoo-sources-2.4.19-r10.ebuild 2357
@@ -29,6 +29,7 @@ MD5 849223b7d8e6c9c2a22f84b571aa516c files/digest-gentoo-sources-2.4.20-r8 145
 MD5 849223b7d8e6c9c2a22f84b571aa516c files/digest-gentoo-sources-2.4.20-r5 145
 MD5 2ac4fd77e067652901ccf234c9687bb1 files/i810_drm.patch 1247
 MD5 0d1cdff97252338dc5acc37c5f84d7c6 files/security.patch3 3333
+MD5 394bae02a20af95fc9d320f6cea3834e files/gentoo-sources-2.4.22-kmsgdump.patch 887
 MD5 8c31359a134b927f7038539e7dd896d4 files/digest-gentoo-sources-2.4.19-r10 146
 MD5 a580e6b8c602c2e13fb5de7cc2de65a0 files/do_brk_fix.patch 242
 MD5 02b1f745c441693b1558b2b6d3f28c45 files/gentoo-sources-2.4.20-mdcount.patch 1345
