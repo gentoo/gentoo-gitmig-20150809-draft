@@ -1,10 +1,22 @@
-MD5 57ecff5c789185a930c69acf5ab92b29 ChangeLog 918
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9b65e28e32c00e3328d6a8a3b6b1ff54 ChangeLog 1067
 MD5 07aa1897fda73805b9d68a2b82090e5f metadata.xml 218
 MD5 0a5fdff2d61f3c70c89f48f61c6513cc ripmime-1.2.16.16.ebuild 575
 MD5 70bf51603c11c54bebdd2e4885120304 ripmime-1.3.0.3.ebuild 572
 MD5 e2adecb987faf90159273e01ef82ca05 ripmime-1.3.0.4.ebuild 572
 MD5 961a1e302bb949f2c42479282ca17773 ripmime-1.3.0.5.ebuild 576
+MD5 6f1bd1ff93c5cf7287a75d7564339cdd ripmime-1.3.1.2.ebuild 603
 MD5 90ac15d08d9a2b4a80c402fd6b9f69fe files/digest-ripmime-1.2.16.16 68
 MD5 05f52ca937d795026efa5f3c2364e95a files/digest-ripmime-1.3.0.3 66
 MD5 4d30f88ea4b22ebbf7f1c675c792cd30 files/digest-ripmime-1.3.0.4 66
 MD5 0207b2b726524157a9a88bb49ee67d06 files/digest-ripmime-1.3.0.5 67
+MD5 daa75cca12eeafe8e7457fcb817aace1 files/digest-ripmime-1.3.1.2 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFBAAEiHTu7gpaalycRAi1OAKC6gtJxzDlDZXJRhaklyubCvsrGSgCgs3+m
+GUURM+H1V6owWFVsYnfa+v4=
+=chzc
+-----END PGP SIGNATURE-----
