@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.9 2003/04/25 14:42:00 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.10 2003/05/08 05:49:15 heim Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -262,8 +262,8 @@ php_src_install() {
 
     #revert Pear patch
     rm ${D}/usr/lib/php/PEAR/Registry.php
-    mv ${S}/pear/PEAR/Registry.old ${D}/usr/lib/php/PEAR/Registry.php
-
+    #mv ${S}/pear/PEAR/Registry.old ${D}/usr/lib/php/PEAR/Registry.php
+    cat ${S}/pear/PEAR/Registry.old | sed -e 's:${PORTAGE_TMPDIR}/${PF}::' > ${D}/usr/lib/php/PEAR/Registry.php
 
 	
 }
