@@ -1,13 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gento Foundation.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-cascade.sh,v 1.14 2004/08/23 04:42:42 solar Exp $
-
-# drobbins optimized this script at some point which made a bootstrap
-# to complete 20 mins to 2 hours faster, depending on CPU. He did this
-# by merging both stages of bootstrap into a single stage. In doing so
-# we no longer compile gcc and binutils twice.  Doing this is said to be
-# unnecessary and a holdover from very early versions of Gentoo.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-cascade.sh,v 1.15 2004/09/27 21:45:11 vapier Exp $
 
 # people who were here:
 # (drobbins, 06 Jun 2003)
@@ -26,6 +20,7 @@ fi
 
 unset STRAP_EMERGE_OPTS 
 STRAP_RUN=1
+DEBUG=0
 
 for opt in "$@" ; do
 	case "${opt}" in
@@ -56,19 +51,13 @@ if [ ! -d "${MYPROFILEDIR}" ] ; then
 	exit 1
 fi
 
-# A flat profile is a cascaded profile with one level.
-#if [ ! -f "${MYPROFILEDIR}/parent" ] ; then
-#	echo "!!! Error:  You must use 'bootstrap.sh' with non-cascading profiles. Exiting."
-#	exit 1
-#fi
-
 # spython is 1.0_rc6 and earlier and python is 1.0 and later
 [ -e /usr/bin/spython ] && PYTHON="/usr/bin/spython" || PYTHON="/usr/bin/python"
 
 [ -e /etc/profile ] && source /etc/profile
 
 echo -e "\n${GOOD}Gentoo Linux${GENTOO_VERS}; ${BRACKET}http://www.gentoo.org/${NORMAL}"
-echo -e "Copyright 2001-2004 Gentoo Foundation.; Distributed under the GPLv2"
+echo -e "Copyright 1999-2004 Gentoo Foundation.; Distributed under the GPLv2"
 if [ "${STRAP_EMERGE_OPTS:0:2}" = "-f" ]; then
 	echo "Fetching all bootstrap-related archives ..."
 else
@@ -92,8 +81,8 @@ cleanup() {
 }
 
 pycmd() {
-	[ "${DEBUG}" = 1 ] && echo ${PYTHON} -c "$*" > /dev/stderr
-	${PYTHON} -c "$*"
+	[ "${DEBUG}" = 1 ] && echo ${PYTHON} -c "$@" > /dev/stderr
+	${PYTHON} -c "$@"
 }
 
 # Trap ctrl-c and stuff.  This should fix the users make.conf
@@ -127,7 +116,7 @@ fi
 # bug #50158 (don't use `which` in a bootstrap).
 if ! type -path portageq &>/dev/null; then
 	echo
-	eerror "Your portage version is too old.  Please use a later stage1 image."
+	eerror "Your portage version is too old.  Please use a newer stage1 image."
 	echo
 	cleanup 1
 fi
@@ -165,9 +154,7 @@ n=${n%%-[0-9]*}; echo "my$(tr a-z- A-Z_ <<<$n)=$p; "; done)
 [ "${myPORTAGE}" = "" ] && myPORTAGE="portage"
 [ "${myBINUTILS}" = "" ] && myBINUTILS="binutils"
 [ "${myGCC}" = "" ] && myGCC="gcc"
-#[ "${myGETTEXT}" = "" ] && myGETTEXT="gettext" ; # We only gettext if nls is desired.
 [ "${myLIBC}" = "" ] && myLIBC="virtual/libc"
-# texinfo; category/PN combo due to app-xemacs/texinfo
 [ "${myTEXINFO}" = "" ] && myTEXINFO="sys-apps/texinfo"
 [ "${myZLIB}" = "" ] && myZLIB="zlib"
 [ "${myNCURSES}" = "" ] && myNCURSES="ncurses"
@@ -231,7 +218,7 @@ export USE="${ORIGUSE} bootstrap ${STAGE1_USE}"
 emerge ${STRAP_EMERGE_OPTS} ${myOS_HEADERS} ${myTEXINFO} ${myGETTEXT} ${myBINUTILS} || cleanup 1
 echo -------------------------------------------------------------------------------
 
-# If say both gcc and binutils was build for i486, and we then merge
+# If say both gcc and binutils were built for i486, and we then merge
 # binutils for i686 without removing the i486 version (Note that this is
 # _only_ when its exactly the same version of binutils ... if we have say
 # 2.14.90.0.6 build for i486, and bootstrap then merge 2.14.90.0.7 for i686,
