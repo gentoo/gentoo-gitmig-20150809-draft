@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.3-r6.ebuild,v 1.2 2002/08/29 22:45:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.3-r6.ebuild,v 1.3 2002/09/17 14:19:36 kain Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Text based WWW browser, supports tables and frames"
@@ -9,7 +9,7 @@ HOMEPAGE="http://w3m.sourceforge.net/"
 
 SLOT="0"
 LICENSE="w3m"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc sparc64 ppc"
 
 DEPEND=">=sys-libs/ncurses-5.2-r3
 	>=sys-libs/zlib-1.1.3-r2
