@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.4.ebuild,v 1.9 2003/02/13 12:54:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.5-r1.ebuild,v 1.1 2003/03/25 00:26:17 malverian Exp $
 
 IUSE="mpeg mikmod oggvorbis"
 
@@ -12,13 +12,20 @@ HOMEPAGE="http://www.libsdl.org/projects/SDL_mixer/index.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc ~alpha"
 
-DEPEND=">=media-libs/libsdl-1.2.4
+DEPEND=">=media-libs/libsdl-1.2.5
 	>=media-libs/smpeg-0.4.4-r1
 	mikmod? ( >=media-libs/libmikmod-3.1.10 )
 	oggvorbis? ( >=media-libs/libvorbis-1.0_beta4 )"
 
+src_unpack() {
+unpack ${A}
+cd ${S}/timidity
+cp config.h config.h.orig
+sed -e 's:/usr/local/lib/timidity:/usr/share/timidity:' config.h.orig > config.h
+rm -f config.h.orig
+}
 
 src_compile() {
 
