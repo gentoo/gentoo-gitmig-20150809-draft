@@ -1,0 +1,8 @@
+# ChangeLog for games-emulation/gcube
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gcube/ChangeLog,v 1.1 2004/12/26 22:37:27 vapier Exp $
+
+*gcube-0.3 (26 Dec 2004)
+
+  26 Dec 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me for #73589.

@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7ee1ed96a21ee9563e0fabd16c2c16c0 gcube-0.3.ebuild 783
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 d7722fbcc22597dd6db1edabb9f6cd2d ChangeLog 347
+MD5 242ede24bf8626606400a53bcd2e9ab9 files/digest-gcube-0.3 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBzz02roRuSHgZdywRAkKcAKCB+G9PozpsM4EUJv0dtvtAmRsasgCfU32u
+9dk3uKepd+AxFrnvoHkPAAY=
+=b3Bs
+-----END PGP SIGNATURE-----
