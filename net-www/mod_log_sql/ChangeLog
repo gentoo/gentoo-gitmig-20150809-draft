@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_log_sql
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_log_sql/ChangeLog,v 1.5 2004/05/06 20:06:15 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_log_sql/ChangeLog,v 1.6 2004/05/12 00:27:07 zul Exp $
+
+  12 May 2004; Chuck Short <zul@gentoo.org> mod_log_sql-1.97.ebuild,
+  files/10_mod_log_sql.conf, files/10_mod_log_sql_apache2.conf:
+  Added extra module to be loaded. Closes #50277.
 
   07 May 2004; Chuck Short <zul@gentoo.org> mod_log_sql-1.97.ebuild,
   files/mod_log_sql-1.97-gentoo.patch:

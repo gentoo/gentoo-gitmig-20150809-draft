@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_log_sql/mod_log_sql-1.97.ebuild,v 1.3 2004/05/06 20:06:15 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_log_sql/mod_log_sql-1.97.ebuild,v 1.4 2004/05/12 00:27:07 zul Exp $
 
 inherit eutils
 
@@ -73,7 +73,7 @@ src_compile() {
 src_install() {
 	detectapache
 	exeinto ${APACHE_MODULES_DIR}
-	doexe .libs/${PN}.so
+	doexe .libs/${PN}.so .libs/mod_log_sql_mysql.so
 
 	use ssl && doexe .libs/mod_log_sql_ssl.so
 
