@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.3-r1.ebuild,v 1.2 2004/10/10 20:32:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.3-r1.ebuild,v 1.3 2004/10/10 20:33:21 eradicator Exp $
 
 inherit eutils
 
@@ -117,7 +117,7 @@ src_install() {
 	# Setup the symlinks if libdir isn't "lib"
 	if [ "$(get_libdir)" != "lib" ]; then
 		dodir ${QTBASE}/$(get_libdir)
-		dosym $(get_libdir) ${QTBASE}/lib  
+		dosym $(get_libdir) ${QTBASE}/lib
 	fi
 
 	export QTDIR=${S}
