@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/XML-NodeFilter
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-NodeFilter/ChangeLog,v 1.1 2003/06/17 11:57:16 mcummings Exp $
+
+*XML-NodeFilter-0.01 (17 Jun 2003)
+
+  17 Jun 2003; Michael Cummings <mcummings@gentoo.org>
+  XML-NodeFilter-0.01.ebuild:
+  This is a missing perl dep for a lot of XML modules
+
