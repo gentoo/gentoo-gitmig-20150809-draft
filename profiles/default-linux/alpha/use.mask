@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.5 2004/10/20 00:05:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/use.mask,v 1.6 2004/10/23 00:24:35 vapier Exp $
 
 # This file masks out USE flags that are simply NOT allowed in the default
 # profile for any architecture.  This works, for example, if a non-default
@@ -80,3 +80,5 @@ sybase-ct
 # Added because of xmms-plugin.eclass.  Please test out
 # media-sound/beep-media-player and remove if   
 bmp
+
+nptl

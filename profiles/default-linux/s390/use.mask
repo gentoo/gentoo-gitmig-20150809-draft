@@ -23,6 +23,7 @@ trusted
 voodoo3
 wavelan
 java
+nptl
 
 # don't quite know about this one, I'll need to revisit
 socks5
