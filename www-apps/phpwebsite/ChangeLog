@@ -1,6 +1,10 @@
 # ChangeLog for net-www/phpwebsite
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/ChangeLog,v 1.6 2004/09/03 17:17:21 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/ChangeLog,v 1.7 2004/09/04 00:35:08 kloeri Exp $
+
+  04 Sep 2004; Bryan Østergaard <kloeri@gentoo.org>
+  phpwebsite-0.9.3_p4-r1.ebuild:
+  Stable on alpha.
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   phpwebsite-0.9.3_p2-r1.ebuild, phpwebsite-0.9.3_p4-r1.ebuild,
