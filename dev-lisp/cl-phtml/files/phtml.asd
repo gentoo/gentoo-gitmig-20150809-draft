@@ -1,6 +1,16 @@
+;;; -*- Mode: Lisp; Syntax: ANSI-Common-Lisp -*-
 
-(in-package "CL-USER")
+(defpackage #:phtml-system
+  (:use #:cl #:asdf))
+(in-package #:phtml-system)
 
-(asdf:defsystem phtml
+(in-package :phtml-system)
+
+(defclass acl-file (cl-source-file) ())
+
+(defmethod asdf::source-file-type ((c acl-file) (s module)) 
+  "cl")
+
+(defsystem phtml
     :depends-on (acl-compat)
-    :components ((:file "phtml")))
+    :components ((:acl-file "phtml")))
