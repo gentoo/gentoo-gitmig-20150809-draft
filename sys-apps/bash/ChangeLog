@@ -1,9 +1,14 @@
 # ChangeLog for sys-apps/bash
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/ChangeLog,v 1.12 2002/12/09 04:37:24 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/ChangeLog,v 1.13 2002/12/09 22:34:03 azarah Exp $
 
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  10 Dec 2002; Martin Schlemmer <azarah@gentoo.org> bash-2.05b-r3.ebuild :
+
+  Mark stable.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> :
+  
+  Changed sparc ~sparc keywords
  
 *bash-2.05b-r3 (25 Sep 2002)
 

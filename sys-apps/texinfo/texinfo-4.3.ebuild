@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.3.ebuild,v 1.3 2002/12/09 04:37:27 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.3.ebuild,v 1.4 2002/12/09 22:30:05 azarah Exp $
 
 IUSE="nls build"
 
@@ -9,7 +9,7 @@ DESCRIPTION="The GNU info program and utilities"
 SRC_URI="mirror://gnu/texinfo/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/texinfo/"
 
-KEYWORDS="~x86 ~ppc ~sparc  ~alpha"
+KEYWORDS="x86 ppc sparc alpha"
 SLOT="0"
 LICENSE="GPL-2"
 
