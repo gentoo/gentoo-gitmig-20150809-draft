@@ -1,10 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-1.0.2.ebuild,v 1.10 2002/10/05 05:39:05 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-1.0.2.ebuild,v 1.11 2002/11/30 02:13:54 vapier Exp $
 
-IUSE="nls"
-
-S=${WORKDIR}/${P}
 DESCRIPTION="File Roller is an archive manager for the GNOME environment."
 SRC_URI="mirror://sourceforge/${PN/-/}/${P}.tar.gz"
 HOMEPAGE="http://fileroller.sourceforge.net/"
@@ -12,6 +9,7 @@ HOMEPAGE="http://fileroller.sourceforge.net/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc sparc64"
+IUSE="nls"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	>=gnome-base/gnome-libs-1.4.1.4
@@ -20,7 +18,6 @@ DEPEND="=x11-libs/gtk+-1.2*
 	>=gnome-base/oaf-0.6.8
 	>=gnome-base/bonobo-1.0.19
 	>=media-libs/gdk-pixbuf-0.16.0"
-
 RDEPEND="${DEPEND}
 	nls? ( dev-util/intltool )"
 	
@@ -28,11 +25,11 @@ src_compile() {
 	local myconf=""
 	use nls || myconf="--disable-nls"
 
-	econf ${myconf} || die
+	econf ${myconf}
 	emake || die
 }
 
 src_install() {
-	einstall || die
+	einstall
 	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
 }
