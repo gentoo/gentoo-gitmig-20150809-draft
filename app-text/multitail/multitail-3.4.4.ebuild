@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/multitail-3.4.4.ebuild,v 1.1 2005/01/16 15:52:04 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/multitail/multitail-3.4.4.ebuild,v 1.2 2005/01/20 15:39:12 ka0ttic Exp $
 
 inherit flag-o-matic
 
@@ -15,6 +15,13 @@ IUSE="debug"
 
 DEPEND="virtual/libc
 	sys-libs/ncurses"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	# tail: '-100lf' option is obsolete; use '-f-n 100' since this will be removed in the future
+	sed -i 's/-%dlf/-fn%d/' mt.c || die "sed mt.c failed"
+}
 
 src_compile() {
 	append-flags "-D$(uname) -DVERSION=\\\"${PV}\\\""
