@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/cnet
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cnet/ChangeLog,v 1.6 2004/07/11 10:04:53 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cnet/ChangeLog,v 1.7 2004/11/21 11:41:12 eldad Exp $
+
+  21 Nov 2004; Eldad Zack <eldad@gentoo.org> cnet-2.0.5.ebuild:
+  This package has a hard dependency on libelf and will break against elfutils.
+  closes #67375.
 
   11 Jul 2004; Eldad Zack <eldad@gentoo.org> metadata.xml, cnet-2.0.5.ebuild:
   Updated metadata, marked x86 stable.

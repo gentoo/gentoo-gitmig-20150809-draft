@@ -1,5 +1,15 @@
-MD5 2810e695b9d26fed8e08cf695317e54f cnet-2.0.5.ebuild 1091
-MD5 ca6eb91b7ceedd26580f8a496b2c9977 ChangeLog 1020
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d5e52cc47230e288ad40e44b0ffddbf0 cnet-2.0.5.ebuild 1159
+MD5 cd65c131a6f0ffe5cd21a7dead925755 ChangeLog 1182
 MD5 b4e1d959ab12c9bb69e0db9f1d66205f metadata.xml 218
 MD5 5fa730e3f767e911187654f6f809257f files/digest-cnet-2.0.5 60
 MD5 652fb332fa98e02524b07ee1561c6182 files/cnet-2.0.5-gentoo.patch 1363
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBoH2ZT+MN7JbqCpMRAus+AJsF+4Z8j69Ev6JHhWULW23bpvXurQCePGc2
+nR74jaZ5QsgJsg/o0fMJtRY=
+=m29z
+-----END PGP SIGNATURE-----
