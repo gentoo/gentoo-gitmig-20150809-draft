@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-0.1-r1.ebuild,v 1.4 2005/03/14 10:06:29 tigger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/cryptsetup-0.1-r1.ebuild,v 1.5 2005/03/22 18:03:20 gustavoz Exp $
 
 inherit kernel-mod
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.saout.de/misc/dm-crypt/${PN}-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 arm hppa ia64 ppc s390 x86"
+KEYWORDS="amd64 arm hppa ia64 ppc s390 ~sparc x86"
 IUSE=""
 
 DEPEND=">=sys-fs/device-mapper-1.00.07-r1

@@ -1,9 +1,19 @@
-MD5 a562ab3dfba05c3f52de4afde1a829de cryptsetup-0.1.ebuild 1147
-MD5 09eb5fa42bbfd0d101eef1b06a279103 cryptsetup-0.1-r1.ebuild 1272
-MD5 81d893da652f78154e7aeea32a6b5449 ChangeLog 1230
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5be5a7266a46591bb4db0cacd9ac8af3 metadata.xml 226
-MD5 8ba7b3e2be7e2f9178838a62e11ccd19 files/dm-crypt-start.sh 3864
-MD5 0f3b17ce04a644eefd9272f05dd78d01 files/cryptfs.confd 1138
-MD5 8619b3f74d4d362bab9f430b63243a74 files/dm-crypt-stop.sh 1290
+MD5 0fcb7df8ea2508f06df296d6835e0698 ChangeLog 1345
+MD5 92290d85ad8be184b0a054045e6b73ec cryptsetup-0.1-r1.ebuild 1281
+MD5 a562ab3dfba05c3f52de4afde1a829de cryptsetup-0.1.ebuild 1147
 MD5 959c303c3bfeab6c12e28ae4e16400b3 files/digest-cryptsetup-0.1 67
 MD5 959c303c3bfeab6c12e28ae4e16400b3 files/digest-cryptsetup-0.1-r1 67
+MD5 0f3b17ce04a644eefd9272f05dd78d01 files/cryptfs.confd 1138
+MD5 8619b3f74d4d362bab9f430b63243a74 files/dm-crypt-stop.sh 1290
+MD5 8ba7b3e2be7e2f9178838a62e11ccd19 files/dm-crypt-start.sh 3864
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCQF3vKRy60XGEcJIRAmEbAJ9P1/9dbCCSu/kYue9SUPhhVaaq/QCgr7MS
+aTWEk4UQbseXF8swB5qX9BA=
+=82jm
+-----END PGP SIGNATURE-----
