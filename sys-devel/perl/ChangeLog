@@ -1,6 +1,18 @@
 # ChangeLog for sys-devel/perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.29 2002/12/17 20:38:38 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.30 2002/12/19 21:46:05 mcummings Exp $
+
+* perl-5.6.1-r10 (19 Dec 2002)
+
+  19 Dec 2002; Michael Cummings <mcummings@gentoo.org>
+  perl-5.6.1-r10.ebuild:
+
+  Contains patch for safe.pm - security bug, see bug 12190.
+
+  19 Dec 2002; Michael Cummings <mcummings@gentoo.org>
+  perl-5.8.0-r6.ebuild:
+
+  Same name, different ebuild. This is for the safe.pm fix.
 
 * perl-5.8.0-r6 (17 Dec 2002)
 

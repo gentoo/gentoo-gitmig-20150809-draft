@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.8.0-r6.ebuild,v 1.2 2002/12/17 18:37:07 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.8.0-r6.ebuild,v 1.3 2002/12/19 21:46:05 mcummings Exp $
 
 IUSE="berkdb gdbm"
 
@@ -12,15 +12,18 @@ LICENSE="Artistic GPL-2"
 SLOT="0"
 # devs, please email if this tests ok on your platform rather than
 # unmasking it - mcummings@gentoo.org
-KEYWORDS="-x86 -sparc -ppc -alpha"
+KEYWORDS="~x86 ~sparc ~ppc ~alpha ~mips"
 
 DEPEND="sys-apps/groff 
 	berkdb? ( >=sys-libs/db-3.2.3h-r3 =sys-libs/db-1.85-r1 ) 
-	gdbm? ( >=sys-libs/gdbm-1.8.0 )"
+	gdbm? ( >=sys-libs/gdbm-1.8.0 )
+	>=sys-apps/portage-2.0.45-r4"
 
 RDEPEND="berkdb? ( >=sys-libs/db-3.2.3h-r3 =sys-libs/db-1.85-r1 ) 
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )"
     
+PDEPEND=">=dev-perl/Safe-2.09"
+
 pkg_setup() {
 	if [ -z "`use threads`" ]
 	then
@@ -38,13 +41,13 @@ pkg_setup() {
 src_compile() {
 	export LC_ALL=C
     local myconf
-	myarch="${CHOST%%-*}-linux"
 	if [ "`use threads`" ]
 	then
 		einfo "using threads"
+		mythreading="-multi"
 		myconf="-Dusethreads ${myconf}"
-		myarch="${CHOST%%-*}-linux-thread-multi"
 	fi
+	myarch="${CHOST%%-*}-linux-thread"
 
 	if [ "`use gdbm`" ]
 	then
@@ -195,8 +198,8 @@ EOF
 
 # This removes ${D} from Config.pm
 
-	dosed /usr/lib/perl5/${PV}/${myarch}/Config.pm
-	dosed /usr/lib/perl5/${PV}/${myarch}/.packlist
+	dosed /usr/lib/perl5/${PV}/${myarch}${mythreading}/Config.pm
+	dosed /usr/lib/perl5/${PV}/${myarch}${mythreading}/.packlist
 
 	 
 
