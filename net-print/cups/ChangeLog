@@ -1,6 +1,14 @@
 # ChangeLog for net-print/cups
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.18 2002/10/07 15:32:52 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.19 2002/10/10 19:29:21 raker Exp $
+
+*cups-1.1.16 (10 Oct 2002)
+
+  10 Oct 2002; Nick Hadaway <raker@gentoo.org> cups-1.1.16.ebuild :
+  Thanks to g2boojum for jumping right on this.  This version bump is
+  more like a shove.  Lots of bug fixes.  No real feature adds but many
+  printing issues seem to be resolved by this release.  Check out
+  http://www.cups.org/relnotes.html for the gory details.
 
 *cups-1.1.15-r2 (19 Jul 2002)
 
