@@ -1,0 +1,10 @@
+# ChangeLog for app-vim/genutils
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/genutils/ChangeLog,v 1.1 2004/07/15 18:30:50 ciaranm Exp $
+
+*genutils-1.13 (15 Jul 2004)
+
+  15 Jul 2004; Ciaran McCreesh <ciaranm@gentoo.org> +metadata.xml,
+  +genutils-1.13.ebuild:
+  New ebuild. We'll be needing this for a few other app-vim plugins shortly.
+
