@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.4 2004/03/15 00:26:52 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.5 2004/03/15 00:36:09 spyderous Exp $
 
 # TODO
 # 14 Mar. 2004 <spyderous@gentoo.org>
@@ -29,7 +29,7 @@ RESTRICT="nostrip"
 IUSE="3dfx truetype nls cjk doc ipv6 debug static sdk gatos no-pam pie"
 IUSE_INPUT_DEVICES="synaptics wacom"
 
-PATCH_VER="2.1.26.14"
+PATCH_VER="2.1.26.15"
 FILES_VER="0.1.5"
 RENDER_VER="0.8"
 XRENDER_VER="0.8.4"
@@ -373,6 +373,10 @@ src_unpack() {
 	# set uid any more.
 	echo "#define InstallXserverSetUID NO" >> config/cf/host.def
 	echo "#define BuildServersOnly NO" >> config/cf/host.def
+
+	# Don't use /lib64 ..
+	# Replaces 0181_all_4.3.0-amd64-nolib64.patch
+	echo "#define HaveLib64 NO" >> config/cf/host.def
 
 	# Bug #12775 .. fails with -Os.
 	replace-flags "-Os" "-O2"
