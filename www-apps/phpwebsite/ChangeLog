@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/phpwebsite
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/ChangeLog,v 1.9 2004/09/15 21:35:39 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/ChangeLog,v 1.10 2004/11/17 15:53:41 rizzo Exp $
+
+*phpwebsite-0.9.3_p4-r2 (17 Nov 2004)
+
+  17 Nov 2004; Don Seiler <rizzo@gentoo.org> +phpwebsite-0.9.3_p4-r2.ebuild:
+  Revision bump for security patch, bug #71502
 
   15 Sep 2004; Don Seiler <rizzo@gentoo.org> -phpwebsite-0.9.3_p2-r1.ebuild,
   phpwebsite-0.9.3_p4-r1.ebuild, -phpwebsite-0.9.3_p4.ebuild:
