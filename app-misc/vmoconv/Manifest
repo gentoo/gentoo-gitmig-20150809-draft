@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cb2585301efece430a47edabebcae8ae ChangeLog 337
+MD5 e761b8033eae7fd110ca91842d57f9f5 metadata.xml 365
+MD5 3aa35ed20707db334598d4df62259c59 vmoconv-1.0.ebuild 765
+MD5 ad51711b81f583af1b493e09c0bb8e7c files/digest-vmoconv-1.0 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB3zZoQlM6RnzZP+IRArLdAJsF1sfuW28xHOHZyaa2omX5KZxkqACeJZ/q
+WBcL1oFhHxUQZz5cNfWFPfo=
+=QYez
+-----END PGP SIGNATURE-----

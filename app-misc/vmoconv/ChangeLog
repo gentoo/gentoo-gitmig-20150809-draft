@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/vmoconv
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/vmoconv/ChangeLog,v 1.1 2005/01/08 01:24:47 ticho Exp $
+
+*vmoconv-1.0 (08 Jan 2005)
+
+  08 Jan 2005; Andrej Kacian <ticho@gentoo.org> +metadata.xml,
+  +vmoconv-1.0.ebuild:
+  Initial import.
+
