@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.8.ebuild,v 1.3 2005/01/18 10:07:19 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.8.ebuild,v 1.4 2005/01/23 20:49:55 eradicator Exp $
 
 IUSE="oss doc"
 inherit linux-mod flag-o-matic eutils
@@ -28,13 +28,6 @@ DEPEND="${RDEPEND}
 PROVIDE="virtual/alsa"
 
 pkg_setup() {
-	CONFIG_CHECK="SOUND !SND !SOUND_PRIME"
-	SND_ERROR="ALSA is already compiled into the kernel."
-	SOUND_ERROR="Your kernel doesn't have sound support enabled."
-	SOUND_PRIME_ERROR="Your kernel is configured to use the deprecated OSS drivers.  Please disable them and re-emerge alsa-driver."
-
-	linux-mod_pkg_setup
-
 	# By default, drivers for all supported cards will be compiled.
 	# If you want to only compile for specific card(s), set ALSA_CARDS
 	# environment to a space-separated list of drivers that you want to build.
@@ -42,28 +35,26 @@ pkg_setup() {
 	#
 	#   env ALSA_CARDS='emu10k1 intel8x0 ens1370' emerge alsa-driver
 	#
+	ALSA_CARDS=${ALSA_CARDS:-all}
 
-	linux_chkconfig_present PNP || export PNP_DRIVERS="interwave interwave-stb"
+	# Which drivers need PNP
+	local PNP_DRIVERS="interwave interwave-stb"
 
-	if [ -z "${ALSA_CARDS}" ]
-	then
-		ALSA_CARDS=all
-		if [ -n "${PNP_DRIVERS}" ]
-		then
-			ewarn "Some drivers have been disabled."
-			ewarn "They require CONFIG_PNP in the kernel: ${PNP_DRIVERS}"
-		else
-			ewarn "\${ALSA_CARDS} isn't set, so we are compiling all alsa drivers."
-		fi
+	CONFIG_CHECK="SOUND !SND !SOUND_PRIME"
+	SND_ERROR="ALSA is already compiled into the kernel."
+	SOUND_ERROR="Your kernel doesn't have sound support enabled."
+	SOUND_PRIME_ERROR="Your kernel is configured to use the deprecated OSS drivers.  Please disable them and re-emerge alsa-driver."
+	PNP_ERROR="Some of the drivers youu selected require PNP in your kernel.  Either enable PNP in your kernel or trim which drivers get compiled using ALSA_DRIVERS in /etc/make.conf."
+
+	if [[ "${ALSA_CARDS}" == "all" ]]; then
+		CONFIG_CHECK="${CONFIG_CHECK} PNP"
 	else
-		for pnpdriver in ${PNP_DRIVERS}
-		do
-			# check for pnp drivers in ALSA_CARDS
-			[ `expr match ${pnpdriver} "${ALSA_CARDS}"` -gt 0 ] && \
-				die "Driver ${pnpdriver} needs CONFIG_PNP."
+		for pnpdriver in ${PNP_DRIVERS}; do
+			hasq ${pnpdriver} ${ALSA_CARDS} && CONFIG_CHECK="${CONFIG_CHECK} PNP"
 		done
 	fi
 
+	linux-mod_pkg_setup
 }
 
 src_unpack() {

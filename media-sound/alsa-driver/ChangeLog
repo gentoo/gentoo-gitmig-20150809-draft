@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.130 2005/01/18 10:07:19 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.131 2005/01/23 20:49:55 eradicator Exp $
+
+  23 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  alsa-driver-1.0.8.ebuild:
+  Cleanup PNP logic.
+
+  23 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  alsa-driver-1.0.8.ebuild:
+  Cleanup PNP logic.
 
   18 Jan 2005; Daniel Black <dragonheart@gentoo.org>
   alsa-driver-1.0.6a.ebuild, alsa-driver-1.0.7-r3.ebuild,
