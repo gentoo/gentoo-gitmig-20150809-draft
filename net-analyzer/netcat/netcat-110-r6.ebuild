@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/netcat-110-r6.ebuild,v 1.5 2004/09/20 00:38:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/netcat-110-r6.ebuild,v 1.6 2004/10/26 14:34:03 vapier Exp $
 
 inherit eutils gcc flag-o-matic
 
 MY_P=nc${PV}
 DESCRIPTION="the network swiss army knife"
-HOMEPAGE="http://www.atstake.com/research/tools/network_utilities/"
+HOMEPAGE="http://www.securityfocus.com/tools/137"
 SRC_URI="http://www.atstake.com/research/tools/network_utilities/${MY_P}.tgz
 	ftp://sith.mimuw.edu.pl/pub/users/baggins/IPv6/nc-v6-20000918.patch.gz
 	mirror://gentoo/${PF}-gentoo-deb-patches.tbz2"
