@@ -1,19 +1,20 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms-arts/xmms-arts-0.4.ebuild,v 1.3 2001/01/16 15:18:38 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms-arts/xmms-arts-0.4.ebuild,v 1.4 2001/04/29 18:42:54 achim Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="This output plugin allows xmms to work with arts, KDE's sound system"
 SRC_URI="http://home.earthlink.net/~bheath/xmms-arts/xmmsarts-0.4.tar.gz"
 HOMEPAGE="http://home.earthlink.net/~bheath/xmms-arts/"
-DEPEND=">=sys-libs/glibc-2.1.3 >=media-sound/xmms-1.2.3 >=kde-base/kde-2.0.1"
+
+DEPEND="virtual/glibc >=media-sound/xmms-1.2.3 >=kde-base/kdelibs-2.1.1"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	cp Makefile.am Makefile.orig
-	sed -e "s:artsc-config:/opt/kde2/bin/artsc-config:" Makefile.orig > Makefile.am
+	sed -e "s:artsc-config:${KDEDIR}/bin/artsc-config:" Makefile.orig > Makefile.am
 	autoconf
 }
 

@@ -1,7 +1,7 @@
 ## Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.ebuild,v 1.2 2001/04/18 04:46:35 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.ebuild,v 1.3 2001/04/29 18:42:54 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 DEPEND="nls? ( sys-devel/gettext )
 	mozilla? ( >=net-www/mozilla-0.8-r1 )
-        >=media-libs/freetype-2.0
+        >=media-libs/freetype-2.0.1
         >=sys-libs/pam-0.73
 	>=gnome-base/bonobo-0.37
 	>=gnome-base/libghttp-1.0.9
