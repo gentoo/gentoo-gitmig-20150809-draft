@@ -1,0 +1,12 @@
+# ChangeLog for media-plugins/xmms-scrobbler
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-scrobbler/ChangeLog,v 1.1 2004/02/03 08:55:51 eradicator Exp $
+
+*xmms-scrobbler-0.3.1 (03 Feb 2004)
+
+  03 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-scrobbler-0.3.1.ebuild:
+  xmms-scrobbler is a plugin for xmms to enable users to use the
+  audioscrobbler.com music profiling system. The ebuild was submitted by Espen
+  Stokholm Andersen <espen@insomnica.net> in bug #39455.
+
