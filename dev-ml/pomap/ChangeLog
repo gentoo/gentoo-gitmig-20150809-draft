@@ -1,0 +1,10 @@
+# ChangeLog for dev-ml/pomap
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pomap/ChangeLog,v 1.1 2003/04/24 08:19:27 george Exp $
+
+*pomap-2.9.1.ebuild (24 Apr 2003)
+
+  24 Apr 2003; George Shapovalov <george@gentoo.org> pomap-2.9.1.ebuild, files/{digest-pomap-2.9.1} :
+  initial release (#17520)
+  Partially Ordered Map ADT for O'Caml
+  ebuild submitted by Bardur Arantsson <bardur-gta@odense.kollegienet.dk>
