@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/asfrecorder/asfrecorder-1.1.ebuild,v 1.6 2004/07/01 08:38:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/asfrecorder/asfrecorder-1.1.ebuild,v 1.7 2004/07/14 21:19:08 agriffis Exp $
 
 inherit gcc
 
@@ -12,6 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_PN}.zip"
 LICENSE="public-domain"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 DEPEND="virtual/libc"
 
