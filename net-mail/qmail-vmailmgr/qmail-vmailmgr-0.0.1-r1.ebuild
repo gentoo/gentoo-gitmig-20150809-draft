@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-vmailmgr/qmail-vmailmgr-0.0.1-r1.ebuild,v 1.14 2004/08/08 00:15:38 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-vmailmgr/qmail-vmailmgr-0.0.1-r1.ebuild,v 1.15 2004/08/08 00:18:37 slarti Exp $
 
 S=${WORKDIR}
-DESCRIPTION="qmail with vmailmgr - a fullfletched virtual domains hosting environment"
+DESCRIPTION="qmail with vmailmgr - a fully-fledged virtual domains hosting environment"
 HOMEPAGE="http://vmailmgr.org"
 SRC_URI=""
 
