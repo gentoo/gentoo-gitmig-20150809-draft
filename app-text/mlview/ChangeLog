@@ -1,6 +1,13 @@
 # ChangeLog for app-text/mlview
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mlview/ChangeLog,v 1.2 2003/02/12 05:33:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mlview/ChangeLog,v 1.3 2003/09/28 10:27:52 obz Exp $
+
+*mlview-0.6.0 (28 Sep 2003)
+
+  28 Sep 2003; Mike Gardiner <obz@gentoo.org> metadata.xml,
+  mlview-0.6.0.ebuild, files/mlview-0.6.0-Makefile.in.patch:
+  New version, rewrote the ebuild to take advantage of the gnome2 eclass, as
+  well as included a patch for the Makefile.in against sandbox violations
 
 *mlview-0.0.3_rc1 (05 Nov 2002)
 
