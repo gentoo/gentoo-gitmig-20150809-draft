@@ -1,10 +1,10 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.5.0.ebuild,v 1.1 2004/12/05 15:54:36 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.5.0.ebuild,v 1.2 2005/01/13 15:28:18 liquidx Exp $
 
 IUSE="nls esd gnome oss kde"
 
-inherit eutils
+inherit eutils flag-o-matic
 
 S="${WORKDIR}/${P}final"
 DESCRIPTION="GTK based download manager for X."
@@ -33,6 +33,7 @@ src_unpack() {
 src_compile() {
 
 	myconf=""
+	append-flags -D_FILE_OFFSET_BITS=64
 
 	use nls \
 		&& myconf="${myconf} --enable-nls" \
