@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-db/m17n-db-1.0.2.ebuild,v 1.7 2004/07/19 02:22:49 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-db/m17n-db-1.0.2.ebuild,v 1.8 2004/07/31 17:04:27 usata Exp $
 
 DESCRIPTION="Database for the m17n library"
 HOMEPAGE="http://www.m17n.org/m17n-lib/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.m17n.org/m17n-lib/download/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ~alpha ~ppc ~amd64 ppc64"
+KEYWORDS="x86 alpha ppc ~amd64 ppc64"
 
 IUSE=""
 

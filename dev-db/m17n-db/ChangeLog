@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/m17n-db
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-db/ChangeLog,v 1.7 2004/07/19 02:22:49 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-db/ChangeLog,v 1.8 2004/07/31 17:04:27 usata Exp $
+
+  01 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> m17n-db-1.0.2.ebuild:
+  Stable on ppc and alpha.
 
   18 Jul 2004; Tom Gall <tgall@gentoo.org> m17n-db-1.0.2.ebuild:
   stable on ppc64, bug #57120
