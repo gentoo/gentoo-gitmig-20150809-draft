@@ -1,0 +1,60 @@
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fluidsynth/fluidsynth-1.0.5.ebuild,v 1.1 2004/09/28 20:15:08 eradicator Exp $
+
+IUSE="alsa jack sse ladcca"
+
+inherit flag-o-matic eutils
+
+DESCRIPTION="IIWU Synth is a software real-time synthesizer based on the Soundfont 2 specifications."
+HOMEPAGE="http://www.fluidsynth.org/"
+SRC_URI="http://savannah.nongnu.org/download/fluid/${P}.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
+
+DEPEND="jack? ( media-sound/jack-audio-connection-kit )
+	media-libs/ladspa-sdk
+	alsa? ( media-libs/alsa-lib
+	        ladcca? ( >=media-libs/ladcca-0.3 ) )"
+
+# Alsa is required for ladcca support in this package.
+
+asrc_unpack() {
+	unpack ${A}
+
+	cd ${S}
+	epatch ${FILESDIR}/1.0.3-nonx86.patch
+}
+
+src_compile() {
+	local myconf
+	myconf="--enable-ladspa"
+	if use alsa; then
+		myconf="${myconf} --enable-alsa `use_enable ladcca`"
+	else
+		myconf="${myconf} --disable-alsa --disable-ladcca"
+	fi
+	use jack || myconf="--disable-jack-support ${myconf}"
+	if use sse; then
+		myconf="--enable-SSE ${myconf}"
+		# If your CFLAGS include optimizations for sse, ie:
+		# -march=pentium4 -mfpmath=sse -msse2
+		# AND your USE flags include sse, ie: USE=sse,
+		# the sounds with fluidsynth will be distorted. 
+		if [ `is-flag "-march=pentium4"` ]; then
+			filter-flags "-msse2"
+			filter-flags "-mfpmath=sse"
+		fi
+	fi
+	econf ${myconf} || die "./configure failed"
+	emake || die
+}
+
+src_install() {
+	einstall || die
+	dodoc AUTHORS COPYING INSTALL NEWS README THANKS TODO
+}
+
+
