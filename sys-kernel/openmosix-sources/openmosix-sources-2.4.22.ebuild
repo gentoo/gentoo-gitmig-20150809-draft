@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.22.ebuild,v 1.5 2003/11/20 07:43:38 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.22.ebuild,v 1.6 2003/12/01 22:58:29 iggy Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -32,6 +32,8 @@ src_unpack() {
 	mv linux-${OKV} linux-${KV} || die
 	cd linux-${KV}
 	bzcat ${DISTDIR}/openMosix-2.4.22-1.bz2|patch -p1 || die "-openmosix patch failed"
+
+	epatch ${FILESDIR}/do_brk_fix.patch || die "failed to patch for do_brk vuln"
 
 	kernel_universal_unpack
 }
