@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/gmime
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.9 2005/01/12 13:45:16 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/ChangeLog,v 1.10 2005/01/12 22:33:23 ticho Exp $
+
+  12 Jan 2005; Andrej Kacian <ticho@gentoo.org> gmime-2.1.10.ebuild:
+  As mono USE flag is use.masked on amd64, readding ~amd64, so this arch can
+  use getmail.
 
 *gmime-2.1.10 (12 Jan 2005)
 

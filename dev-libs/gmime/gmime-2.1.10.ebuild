@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.1.10.ebuild,v 1.1 2005/01/12 13:45:16 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmime/gmime-2.1.10.ebuild,v 1.2 2005/01/12 22:33:23 ticho Exp $
 
 inherit gnome2 eutils mono
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://spruce.sourceforge.net/gmime/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 
 RDEPEND=">=dev-libs/glib-2
 	doc? ( >=dev-util/gtk-doc-1.0 )"
