@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/scgi/scgi-1.2_alpha1.ebuild,v 1.3 2004/05/22 01:05:55 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/scgi/scgi-1.2_alpha2.ebuild,v 1.1 2004/05/22 01:05:55 robbat2 Exp $
 
 MY_P=${P/_alpha/a}
 S=${WORKDIR}/${MY_P}
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.mems-exchange.org/software/scgi/"
 SRC_URI="http://www.mems-exchange.org/software/files/${PN}/${MY_P}.tar.gz"
 LICENSE="CNRI"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE=""
 
 inherit distutils
