@@ -320,6 +320,3 @@ dev-lang/tcl-tk
 # seems to be incompatible with autoconf 2.13, / Hallski
 >=sys-devel/libtool-1.4.2
 
-# Failed to build for at least me and "wouzer" Bugzilla issue: #243
->=x11-base/xfree-4.2.0
-
