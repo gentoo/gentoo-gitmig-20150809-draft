@@ -1,0 +1,94 @@
+diff -ur libwnck-2.8.1/libwnck/tasklist.c libwnck-2.8.1-patched/libwnck/tasklist.c
+--- libwnck-2.8.1/libwnck/tasklist.c	2004-09-21 22:07:25.000000000 +0800
++++ libwnck-2.8.1-patched/libwnck/tasklist.c	2004-12-29 12:15:02.720282672 +0800
+@@ -261,6 +261,11 @@
+ static gpointer task_parent_class;
+ static gpointer tasklist_parent_class;
+ 
++/* Keep track of tasklist instances so we can decide
++ * whether to show windows from all monitors
++ */
++static GSList *tasklist_instances;
++
+ /**
+  * eel_gtk_label_make_bold.
+  *
+@@ -517,6 +522,11 @@
+   atk_obj = gtk_widget_get_accessible (widget);
+   atk_object_set_name (atk_obj, _("Window List"));
+   atk_object_set_description (atk_obj, _("Tool to switch between visible windows"));
++
++  tasklist_instances = g_slist_append (tasklist_instances, tasklist);
++  g_slist_foreach( tasklist_instances,
++		   (GFunc) wnck_tasklist_update_lists,
++		   NULL);
+ }
+ 
+ static void
+@@ -546,6 +556,11 @@
+ 
+   tasklist = WNCK_TASKLIST (object);
+ 
++  tasklist_instances = g_slist_remove (tasklist_instances, tasklist);
++  g_slist_foreach (tasklist_instances,
++		   (GFunc) wnck_tasklist_update_lists,
++		   NULL);
++
+   if (tasklist->priv->free_icon_loader_data != NULL)
+     (* tasklist->priv->free_icon_loader_data) (tasklist->priv->icon_loader_data);
+   
+@@ -1498,26 +1513,42 @@
+   GList *l;
+   WnckTask *win_task;
+   WnckTask *class_group_task;
+-  gint monitor_num;
+ 
+   wnck_tasklist_free_tasks (tasklist);
+   
+-  windows = wnck_screen_get_windows (tasklist->priv->screen);
+-  
+   if (GTK_WIDGET (tasklist)->window != NULL)
+     {
+-      monitor_num = gdk_screen_get_monitor_at_window (_wnck_screen_get_gdk_screen (tasklist->priv->screen),
+-                                                      GTK_WIDGET (tasklist)->window);
+-      if (monitor_num != tasklist->priv->monitor_num)
+-        {
+-          tasklist->priv->monitor_num = monitor_num;
+-          gdk_screen_get_monitor_geometry (_wnck_screen_get_gdk_screen (tasklist->priv->screen),
+-                                           tasklist->priv->monitor_num,
+-                                           &tasklist->priv->monitor_geometry);
++    
++      /*
++       * only show windows from this monitor if there is more than one tasklist running
++       */
++      if (tasklist_instances == NULL || 
++	  tasklist_instances->next == NULL)
++	{
++	  tasklist->priv->monitor_num = -1;
+         }
++      else
++	{
++	  int monitor_num;
++
++	  monitor_num = gdk_screen_get_monitor_at_window (
++		  _wnck_screen_get_gdk_screen (tasklist->priv->screen),
++		  GTK_WIDGET (tasklist)->window);
++
++	  if (monitor_num != tasklist->priv->monitor_num)
++	    {
++	      tasklist->priv->monitor_num = monitor_num;
++	      gdk_screen_get_monitor_geometry (
++		      _wnck_screen_get_gdk_screen (
++			  tasklist->priv->screen),
++		      tasklist->priv->monitor_num,
++		      &tasklist->priv->monitor_geometry);
++	    }
++	}
++	
+     }
+  
+-  l = windows;
++  l = windows = wnck_screen_get_windows (tasklist->priv->screen);
+   while (l != NULL)
+     {
+       win = WNCK_WINDOW (l->data);
