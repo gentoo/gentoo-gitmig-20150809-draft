@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/gnome-cups-manager-0.28.ebuild,v 1.9 2005/03/11 18:35:15 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/gnome-cups-manager-0.28.ebuild,v 1.10 2005/03/17 16:42:38 lanius Exp $
 
 inherit gnome2 eutils
 
@@ -18,7 +18,7 @@ RDEPEND=">=dev-libs/glib-2
 	>=gnome-base/libgnomeui-2.2
 	>=gnome-base/libglade-2
 	>=gnome-base/libbonobo-2
-	=net-print/libgnomecups-0.1*
+	=net-print/libgnomecups-0.1.14
 	app-admin/gnomesu"
 
 DEPEND="${RDEPEND}
