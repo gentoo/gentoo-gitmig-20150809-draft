@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/xosd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.18 2003/08/15 11:08:37 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.19 2003/08/16 20:22:21 g2boojum Exp $
+
+  16 Aug 2003; Nick Hadaway <raker@gentoo.org> xosd-2.2.4.ebuild:
+  Thanks to Jonathan Hitchcock on bug #26710 for noticing that the
+  xmms plugin gets installed to the wrong directory.
 
 *xosd-2.2.4 (15 Aug 2003)
 
