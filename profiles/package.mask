@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3738 2005/03/17 20:50:41 fafhrd Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3739 2005/03/18 15:06:29 ka0ttic Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Aaron Walker <ka0ttic@gentoo.org> (18 Mar 2005)
+# buffer overflows galore; pending removal.
+x11-terms/tilda
 
 # Armando Di Cianno <fafhrd@gentoo.org> (15 Mar 2005)
 # clipbook - Upstream down-bumped the version, and real package is diff now
