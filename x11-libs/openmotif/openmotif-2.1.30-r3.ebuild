@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r3.ebuild,v 1.10 2004/01/13 14:38:11 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.1.30-r3.ebuild,v 1.11 2004/01/17 19:44:17 lanius Exp $
 
 MY_P=${P}-4_MLI.src
 S=${WORKDIR}/motif
@@ -22,6 +22,7 @@ SLOT="0"
 # packages athlon-xp and only motif i686.  needs investigation.
 inherit flag-o-matic
 replace-flags "-mcpu=athlon-xp" "-mcpu=i686"
+append-flags "-ansi"
 
 src_unpack() {
 	local cfg="${S}/config/cf/site.def"
@@ -36,6 +37,8 @@ src_unpack() {
 	echo >>$cfg "#undef  OptimizedCplusplusDebugFlags"
 	echo >>$cfg "#define OptimizedCplusplusDebugFlags ${CXXFLAGS}"
 
+	sed -i -e "s:#define USE_BYACC               YES:#undef USE_BYACC:" config/cf/host.def
+
 	# move `system.mwmrc' from `lib/X11' to `lib/X11/mwm' (but install into
 	# `/etc/X11/mwm')
 	ebegin "patching 'clients/mwm/Imakefile' (mwm confdir)"
@@ -44,8 +47,8 @@ src_unpack() {
 	  -e 's:\(InstallNonExecFile.system\.mwmrc,\).*/lib/X11\(.*\):\1/etc/X11/mwm\2:'\
 	    "${S}/clients/mwm/Imakefile"
 	eend $? || die
-
 	#
+
 	epatch ${FILESDIR}/${P}-imake-tmpdir.patch
 }
 
@@ -69,10 +72,10 @@ src_install() {
 
 	einfo "Cleaning up X11 stuff"
 	rm -fR ${D}/etc
-	for nib in $NOINSTBIN; do
+	for nib in ${NOINSTBIN}; do
 		f="${D}usr/X11R6/bin/${nib}"; rm "$f" || die "rm $f"
 	done
-	for nim in $NOINSTMAN1; do
+	for nim in ${NOINSTMAN1}; do
 		f="${D}usr/X11R6/man/man1/${nim}.1x"; rm "$f" || die "rm $f"
 	done
 	rm -rf "${D}usr/X11R6/lib/X11" || die "rm config"
