@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/squid-2.5.8.ebuild,v 1.8 2005/02/18 07:37:17 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/squid-2.5.8.ebuild,v 1.9 2005/02/21 04:04:53 agriffis Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ SRC_URI="ftp://ftp.squid-cache.org/pub/squid-2/STABLE/${S_PP}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ~ia64 ppc ppc64 sparc x86 mips"
+KEYWORDS="alpha amd64 hppa ia64 ppc ppc64 sparc x86 mips"
 IUSE="pam ldap ssl sasl snmp debug uclibc selinux underscores"
 
 RDEPEND="virtual/libc
