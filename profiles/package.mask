@@ -414,10 +414,6 @@ x11-libs/qt-embedded
 # new package, masked for testing
 net-mail/pinepgp
 
-# <blizzy@gentoo.org> (13 Aug 2002)
-# masked for testing, might pose security problems!
-sys-apps/fakeroot
-
 # <blizzy@gentoo.org> (12 Aug 2002)
 # masked for testing
 =sys-apps/gradm-1.4
