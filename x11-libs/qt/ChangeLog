@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.121 2004/02/12 20:28:26 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.122 2004/02/13 13:05:15 caleb Exp $
+
+  13 Feb 2004; Caleb Tennis <caleb@gentoo.org> qt-3.3.0.ebuild:
+  Recomment out directory setting lines so that a Qt upgrade links properly
 
   12 Feb 2004; Caleb Tennis <caleb@gentoo.org> qt-3.3.0.ebuild:
   Fix postgresql include dir

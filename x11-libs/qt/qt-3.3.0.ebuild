@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.0.ebuild,v 1.15 2004/02/12 20:28:27 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.0.ebuild,v 1.16 2004/02/13 13:05:15 caleb Exp $
 
 SRCTYPE="free"
 DESCRIPTION="QT version ${PV}"
@@ -81,9 +81,14 @@ src_compile() {
 		-system-libpng -lpthread -xft -platform ${PLATFORM} -xplatform \
 		${PLATFORM} -xrender -prefix ${D}${QTBASE} -plugindir ${QTBASE}/plugins \
 		-docdir ${QTBASE}/doc -translationdir ${QTBASE}/translations \
-		-datadir ${QTBASE} -sysconfdir ${QTBASE}/etc/settings -fast ${myconf} \
-		-libdir ${QTBASE}/lib -headerdir ${QTBASE}/include \
-		-bindir ${QTBASE}/bin -dlopen-opengl || die
+		-datadir ${QTBASE} -sysconfdir ${QTBASE}/etc/settings -fast ${myconf} || die
+#		-libdir ${QTBASE}/lib -headerdir ${QTBASE}/include \
+#		-bindir ${QTBASE}/bin -dlopen-opengl || die
+#
+#	The above lines should be commented out.  It's more appropriate to set them, but
+#	the problem is that the tools built during Qt's compilation (like uic) will
+#	use the already installed Qt's installation instead of the newly installing
+#	Qt's, which may be binary incompatible and cause build problems.
 
 	export QTDIR=${S}
 	emake src-qmake src-moc sub-src sub-tools || die
