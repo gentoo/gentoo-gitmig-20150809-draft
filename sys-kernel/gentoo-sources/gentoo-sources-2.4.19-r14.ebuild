@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.19-r14.ebuild,v 1.1 2004/06/01 16:45:42 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.19-r14.ebuild,v 1.2 2004/06/13 17:30:03 plasmaroo Exp $
 
 IUSE="build crypt xfs acpi4linux"
 
@@ -71,7 +71,7 @@ src_unpack() {
 	use xfs && { epatch ${FILESDIR}/${PN}-2.4.CAN-2004-0133.patch || die "Failed to add the CAN-2004-0133 patch!"; }
 	epatch ${FILESDIR}/${PN}-2.4.CAN-2004-0177.patch || die "Failed to add the CAN-2004-0177 patch!"
 	epatch ${FILESDIR}/${PN}-2.4.CAN-2004-0178.patch || die "Failed to add the CAN-2004-0178 patch!"
-	epatch ${FILESDIR}/${PN}-2.4.CAN-2004-0181.patch || die "Failed to add the CAN-2004-0181 patch!"
+	epatch ${FILESDIR}/${P}-CAN-2004-0181.patch || die "Failed to add the CAN-2004-0181 patch!"
 	epatch ${FILESDIR}/${PN}-2.4.CAN-2004-0394.patch || die "Failed to add the CAN-2004-0394 patch!"
 	epatch ${FILESDIR}/${PN}-2.4.CAN-2004-0427.patch || die "Failed to add the CAN-2004-0427 patch!"
 }
