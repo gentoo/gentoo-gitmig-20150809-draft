@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.44 2003/12/01 10:40:04 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.45 2004/01/05 13:05:18 weeve Exp $
+
+  05 Jan 2004; Jason Wever <weeve@gentoo.org> ethereal-0.9.13.ebuild,
+  ethereal-0.9.14.ebuild, ethereal-0.9.15.ebuild, ethereal-0.9.16-r1.ebuild,
+  ethereal-0.9.16.ebuild:
+  Marked 0.9.16 stable on sparc and adjusted the copyright dates in all.
 
 *ethereal-0.9.16-r1 (01 Dec 2003)
 
