@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/jail
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/ChangeLog,v 1.9 2003/07/30 23:46:46 raker Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/ChangeLog,v 1.10 2004/04/17 06:17:50 mr_bones_ Exp $
+
+  16 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> jail-1.9.ebuild:
+  clean older version
 
   30 Jul 2003; Nick Hadaway <raker@gentoo.org> jail-1.9-r1.ebuild:
   Added a patch so /etc/shells gets the correct entry.  Thanks to
