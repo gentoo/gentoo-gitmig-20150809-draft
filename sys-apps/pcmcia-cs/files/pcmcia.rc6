@@ -3,12 +3,6 @@
 # Distributed under the terms of the GNU General Public License v2
 # /space/gentoo/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/files/pcmcia.new,v 1.2 2001/12/06 20:17:02 azarah Exp
 
-# you can override the scheme by setting it in the environment
-OSCHEME=""
-if [ -n "${SCHEME}" ] ; then OSCHEME=${SCHEME} ; fi
-. /etc/pcmcia.conf
-if [ -n "${OSCHEME}" ] ; then SCHEME=${OSCHEME} ; fi
-
 RUN=/var/run
 SC=${RUN}/pcmcia-scheme
 
@@ -22,6 +16,8 @@ cleanup()
 }
 
 start() {
+   	local modules_loaded
+	local code
 	# Scheme is set for the /etc/pcmcia/shared script
 	if [ -n "${SCHEME}" ] ; then umask 022 ; echo $SCHEME > ${SC}
 	else umask 022 ; touch ${SC}
@@ -38,14 +34,19 @@ start() {
 	fi
 
 	if [ -z "`fgrep  ds /proc/modules`" ] ; then
-		eerror "You need to load the pcmcia modules ($PCIC) and ds)"
-		eerror "in order for cardmgr to start."
-		return 1
+		modules_loaded="0"
+	else 
+		modules_loaded="1"
 	fi
 
 	ebegin "Starting pcmcia"
 	start-stop-daemon --start --quiet --exec /sbin/cardmgr -- -f -s ${RUN}/stab ${CARDMGR_OPTS}
-	eend $?
+	code=$?	
+	if [ $code -gt 0 -a $modules_loaded -eq 0 ] ; then
+		einfo "cardmgr failed to start.  Make sure that you have PCMCIA"
+		einfo "loaded, either as a module or built into the kernel"
+	fi
+	eend $code
 }
 
 stop() {
