@@ -4,6 +4,8 @@ MD5 11c4331cb3a68b4bd5250959127e31c0 file-3.39.ebuild 1008
 MD5 864d9d78ae48573d790cc598fcc4bc40 file-3.41.ebuild 1025
 MD5 20dd962c51a7b039d867a7a99645fbb5 file-4.01.ebuild 936
 MD5 e593a4a7dea3146bb413dea1737d48b6 file-4.02.ebuild 1093
+MD5 6e07f31ae04c047cf06aedd0717cf449 file-4.03.ebuild 1097
+MD5 8a94349d0574b8fdb31ba08f31c8f5a7 files/digest-file-4.03 61
 MD5 3a18c97dfcc727e6c1b701cc8c03af47 files/digest-file-3.37 267
 MD5 950dd57055e8275bd852869557035f42 files/digest-file-3.39 268
 MD5 eabc698678353b52ea7d9bfb724d4e1e files/digest-file-3.41 268
