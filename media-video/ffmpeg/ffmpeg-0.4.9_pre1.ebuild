@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_pre1.ebuild,v 1.1 2004/07/21 09:54:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.9_pre1.ebuild,v 1.2 2004/08/25 02:45:12 swegener Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -10,7 +10,7 @@ DESCRIPTION="Complete solution to record, convert and stream audio and video. In
 HOMEPAGE="http://ffmpeg.sourceforge.net/"
 MY_P=${P/_/-}
 S=${WORKDIR}/${MY_P}
-SRC_URI="http://easynews.dl.sourceforge.net/sourceforge/ffmpeg/${MY_P}.tar.gz"
+SRC_URI="mirror://sourceforge/ffmpeg/${MY_P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"

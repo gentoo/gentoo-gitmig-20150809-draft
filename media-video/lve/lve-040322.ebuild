@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lve/lve-040322.ebuild,v 1.6 2004/07/11 07:33:28 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lve/lve-040322.ebuild,v 1.7 2004/08/25 02:42:31 swegener Exp $
 
 inherit eutils gcc
 
@@ -10,8 +10,8 @@ PDATE=20${PV##*.}
 
 DESCRIPTION="Linux Video Editor"
 HOMEPAGE="http://lvempeg.sourceforge.net"
-SRC_URI="http://heanet.dl.sourceforge.net/sourceforge/lvempeg/lve-040322.src.tar.bz2
-http://download.videolan.org/pub/videolan/vlc/0.7.1/contrib/ffmpeg-${PDATE}.tar.bz2"
+SRC_URI="mirror://sourceforge/lvempeg/lve-040322.src.tar.bz2
+	http://download.videolan.org/pub/videolan/vlc/0.7.1/contrib/ffmpeg-${PDATE}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
