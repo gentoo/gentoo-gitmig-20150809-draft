@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/zproduct.eclass,v 1.9 2003/10/26 09:12:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/zproduct.eclass,v 1.10 2003/12/29 13:09:12 lanius Exp $
 # Author: Jason Shoemaker <kutsuya@gentoo.org>
 
 # This eclass is designed to streamline the construction of
@@ -13,9 +13,10 @@ EXPORT_FUNCTIONS src_install pkg_prerm pkg_postinst pkg_config
 DESCRIPTION="This is a zope product"
 #HOMEPAGE=""
 #SRC_URI=""
-DEPEND=""
-RDEPEND=">=net-zope/zope-2.6.0-r2
+
+newrdepend ">=net-zope/zope-2.6.0-r2
 	app-admin/zprod-manager"
+
 IUSE=""
 SLOT="0"
 KEYWORDS="x86 ppc"
