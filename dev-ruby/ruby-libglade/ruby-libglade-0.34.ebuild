@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libglade/ruby-libglade-0.34.ebuild,v 1.4 2004/04/17 00:05:52 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-libglade/ruby-libglade-0.34.ebuild,v 1.5 2004/06/24 19:35:23 fmccor Exp $
 
 inherit ruby
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/ruby-gnome/ruby-gnome-all-${PV}.tar.gz"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="x86 ~alpha ~ppc"
+KEYWORDS="x86 ~alpha ~ppc ~sparc"
 USE_RUBY="ruby16 ruby18 ruby19"
 
 DEPEND="virtual/ruby
