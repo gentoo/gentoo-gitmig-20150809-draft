@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/oniguruma
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/oniguruma/ChangeLog,v 1.4 2004/02/07 07:54:00 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/oniguruma/ChangeLog,v 1.5 2004/02/28 17:00:08 usata Exp $
+
+*oniguruma-2.2.1 (29 Feb 2004)
+
+  29 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> oniguruma-2.2.1.ebuild:
+  Version bumped
 
 *oniguruma-2.1.0 (07 Feb 2004)
 
