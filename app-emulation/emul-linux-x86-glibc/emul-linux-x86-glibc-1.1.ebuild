@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-glibc/emul-linux-x86-glibc-1.1.ebuild,v 1.1 2004/08/16 20:40:54 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-glibc/emul-linux-x86-glibc-1.1.ebuild,v 1.2 2004/08/18 21:44:47 lv Exp $
 
 DESCRIPTION="GNU C Library for emulation of 32bit x86 on amd64"
 HOMEPAGE="http://www.gentoo.org/"
@@ -27,11 +27,12 @@ src_install() {
 	mkdir -p ${D}/usr
 	ln -sf /emul/linux/x86/usr/lib ${D}/usr/lib32
 
-	cp -aRpvf ${WORKDIR}/* ${D}/
-
+	cd ${WORKDIR}/emul/linux/x86/usr/lib32 || die
 	# fix linker scripts to point to lib32
 	sed -i -e "s/\/lib\//\/lib32\//g" libc.so
 	sed -i -e "s/\/lib\//\/lib32\//g" libpthread.so
+
+	cp -aRpvf ${WORKDIR}/* ${D}/
 
 	# create env.d entry
 	mkdir -p ${D}/etc/env.d
