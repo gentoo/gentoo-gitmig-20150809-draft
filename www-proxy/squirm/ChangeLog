@@ -1,6 +1,9 @@
-# ChangeLog for net-www/squirm
+# ChangeLog for www-proxy/squirm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/squirm/ChangeLog,v 1.4 2004/09/03 16:06:50 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/squirm/ChangeLog,v 1.5 2004/09/05 09:25:51 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> squirm-1.23.ebuild:
   Masked squirm-1.23.ebuild stable for ppc

@@ -1,6 +1,9 @@
-# ChangeLog for net-www/junkbuster
+# ChangeLog for www-proxy/junkbuster
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/junkbuster/ChangeLog,v 1.1 2004/08/15 18:49:42 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/junkbuster/ChangeLog,v 1.2 2004/09/05 09:19:57 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
 *junkbuster-2.0.2 (15 Aug 2004)
 
