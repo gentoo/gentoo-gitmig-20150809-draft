@@ -440,10 +440,6 @@ x11-libs/gtkmm-addons
 # worksforme // Spider
 >=net-www/mozilla-1.0.2
 
-# <g2boojum@gentoo.org> (27 Sep 2002)
-# useful security tool; masked while in freeze
-app-admin/logsentry
-
 # <azarah@gentoo.org> (27 Sep 2002)
 #latest gnome-spell
 =app-text/gnome-spell-0.5
@@ -465,10 +461,6 @@ app-admin/logsentry
 >=media-sound/jack-audio-connection-kit-0.34.0-r2
 # adding libsndfile-1 compatible faac
 >=media-libs/faac-26102001-r1
-
-# <g2boojum@gentoo.org> (22 Sep 2002)
-# Mask perl-ldap while still semi-frozen
-dev-perl/perl-ldap
 
 # <lostlogic@gentoo.org> (21 Sep 2002)
 # Needed for lolo-sources-2.4.19.10_pre[1-5]
@@ -493,10 +485,6 @@ dev-perl/perl-ldap
 # <blocke@shivan.org> (16 Sep 2002)
 # Masked due to freeze
 #=net-www/galeon-1.2.6
-
-# <g2boojum@gentoo.org> (15 Sep 2002)
-# Masked for testing, 'cause it's not quite done, and 'cause there's a freeze
-x11-misc/chbg
 
 # <mkennedy@gentoo.org> (15 Sep 2002)
 # Upstream too buggy to use. Doesn't seem to be a stable or pre
@@ -1175,10 +1163,6 @@ x11-libs/gdkxft
 # lostlogic@gentoo.org 06 Jun 2002
 # Masked because installs headers in wrong location
 =media-libs/id3lib-3.8.0_pre2-r2
-
-# g2boojum@gentoo.org 14 June 2002
-# works, but can't log in (meaning it really _doesn't_ work)
-=net-mail/courier-imap-1.4.5-r1
 
 # naz@gentoo.org 16 Jun 2002
 # Works but needs some testing an finishing startxdfb script, hint hint :o).
