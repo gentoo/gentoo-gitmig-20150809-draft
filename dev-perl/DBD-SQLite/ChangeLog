@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/DBD-SQLite
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-SQLite/ChangeLog,v 1.1 2004/03/31 11:59:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-SQLite/ChangeLog,v 1.2 2004/05/06 17:48:49 ciaranm Exp $
+
+  06 May 2004; Ciaran McCreesh <ciaranm@gentoo.org> DBD-SQLite-0.31.ebuild:
+  Added ~sparc, #50267
 
 *DBD-SQLite-0.31 (31 Mar 2004)
 
