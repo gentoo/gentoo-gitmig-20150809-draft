@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Update: Roman Weber <gentoo@gonzo.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.2.2-r1.ebuild,v 1.7 2002/09/02 02:27:42 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.2.2-r1.ebuild,v 1.8 2002/09/02 20:45:16 cardoe Exp $
 
 MY_P=php-${PV}
 S=${WORKDIR}/${MY_P}
@@ -154,10 +154,10 @@ src_compile() {
 		myconf="${myconf} --with-xpm-dir=/usr/X11R6"
 		LDFLAGS="$LDFLAGS -L/usr/X11R6/lib"
 	fi
+		# --with-gmp \
 
 	./configure \
 		--prefix=/usr \
-		# --with-gmp \
 		--with-bz2 \
 		--enable-ftp \
 		--enable-dbase \
