@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.0.5.ebuild,v 1.4 2004/07/01 22:16:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-3.0.7.ebuild,v 1.1 2004/08/13 23:09:51 dragonheart Exp $
 
 IUSE="ssl socks5 nls"
 
@@ -8,10 +8,13 @@ inherit eutils
 
 DESCRIPTION="A sophisticated ftp/http client, file transfer program."
 HOMEPAGE="http://ftp.yars.free.net/projects/lftp/"
-SRC_URI="http://ftp.yars.free.net/pub/software/unix/net/ftp/client/lftp/${P}.tar.bz2"
+
+SRC_URI="http://the.wiretapped.net/mirrors/lftp/${P}.tar.bz2"
+# Was a bit too slow and unreliable last time I tried (dragonheart)
+#SRC_URI="http://ftp.yars.free.net/pub/software/unix/net/ftp/client/lftp/${P}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~hppa ~mips ~ia64"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~hppa ~mips ~ia64 ~ppc64"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	ssl? ( >=dev-libs/openssl-0.9.6 )
@@ -21,7 +24,10 @@ DEPEND=">=sys-libs/ncurses-5.1
 	alpha? ( >=sys-apps/sed-4 )
 	virtual/libc
 	sys-libs/readline
-	socks5? ( sys-libs/pam )"
+	socks5? ( sys-libs/pam )
+	sys-apps/gawk
+	sys-devel/bison
+	sys-devel/libtool"
 
 RDEPEND="nls? ( sys-devel/gettext )
 	>=sys-libs/ncurses-5.1
@@ -48,11 +54,11 @@ src_compile() {
 		--without-modules \
 		${myconf} || die "econf failed"
 
-	make || die "compile problem"
+	emake || die "compile problem"
 }
 
 src_install() {
-	make install DESTDIR=${D} || die
+	emake install DESTDIR=${D} || die
 
 	# hrmph, empty..
 	rm -rf ${D}/usr/lib
