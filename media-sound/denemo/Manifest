@@ -1,6 +1,16 @@
-MD5 02667c725ceb1c9b99a3e8502708b95b ChangeLog 1051
-MD5 a24c42bfb3a870f6e9f05454e435d7ef denemo-0.5.9.ebuild 667
-MD5 d8c60cbec7df81b1135609e39c878249 denemo-0.7.2.ebuild 724
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f7aedf4c4ec21a38fa5a84814f4273e1 ChangeLog 1192
+MD5 25d2623b0aafb762049394cb5a982bc9 denemo-0.5.9.ebuild 640
+MD5 d2ed56a1f5279c3973b620800cf65e8b denemo-0.7.2.ebuild 702
 MD5 3be4f6e757e3057184136a002b0165f9 metadata.xml 221
 MD5 3f6f1cf45c08fe02d8aa60b1aeb756dd files/digest-denemo-0.5.9 64
 MD5 cf903ece8513fee0c0c41f6af8f1c32b files/digest-denemo-0.7.2 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+
+iD8DBQFBK/uaI1lqEGTUzyQRAoEJAKDY1a0YkJEWwvkJP7pM06n+OcLT7wCfXHOL
+BAV/EPuMERFCcpnCCRqnDPQ=
+=GFuz
+-----END PGP SIGNATURE-----

@@ -1,12 +1,22 @@
-MD5 ad951f5599fce01d3ce965c0c2548886 ripperx-2.4.ebuild 998
-MD5 9c553d08a9aa28fb9b97af2d579d4277 ripperx-2.3.ebuild 1056
-MD5 48fd2eac9c87cafc22a5b118594c2e45 ripperx-2.6.1.ebuild 1067
-MD5 6e759385b5f888d550fa89d08f2ce98c ripperx-2.5.ebuild 998
-MD5 90801a78c8883f0626da9c2cf42f401c ChangeLog 1672
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6d388629bae60b9967f4914072480874 ChangeLog 1788
 MD5 05ab4d4775083f0930841e415df18ad6 metadata.xml 160
+MD5 0d8f62f47b6ccef514deb7e5d205f3e2 ripperx-2.3.ebuild 1047
+MD5 ad951f5599fce01d3ce965c0c2548886 ripperx-2.4.ebuild 998
+MD5 6e759385b5f888d550fa89d08f2ce98c ripperx-2.5.ebuild 998
 MD5 1cfaa20eea3138386462c0e735e678a6 ripperx-2.6.0.ebuild 1001
-MD5 0d13097c6f099b88fc973df0065461f6 files/digest-ripperx-2.6.0 65
-MD5 1f2af914ab56a0c8534da1b64458d910 files/digest-ripperx-2.6.1 65
+MD5 48fd2eac9c87cafc22a5b118594c2e45 ripperx-2.6.1.ebuild 1067
 MD5 e7b366801eb77e3f9ce37e94c38f3921 files/digest-ripperx-2.3 63
 MD5 cde7a0c5632fd107a4b222325b024add files/digest-ripperx-2.4 63
 MD5 db9ba9f39ab32790cadebbe948abed3a files/digest-ripperx-2.5 63
+MD5 0d13097c6f099b88fc973df0065461f6 files/digest-ripperx-2.6.0 65
+MD5 1f2af914ab56a0c8534da1b64458d910 files/digest-ripperx-2.6.1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+
+iD8DBQFBK/rxI1lqEGTUzyQRAvCQAJ40AD1p4XrXUdw2xk37NnSDcnJEmQCeIavv
+XRfFNzWlsnt0dKfQtNuJch8=
+=57yg
+-----END PGP SIGNATURE-----
