@@ -1,6 +1,12 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.47 2003/04/21 23:58:22 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.48 2003/05/22 19:15:00 mholzer Exp $
+
+*avifile-0.7.37.20030522 (22 May 2003)
+
+  22 May 2003; Martin Holzer <mholzer@gentoo.org>
+  avifile-0.7.37.20030522.ebuild:
+  Version bumped.
 
 *avifile-0.7.34.20030319 (22 Apr 2003)
 
