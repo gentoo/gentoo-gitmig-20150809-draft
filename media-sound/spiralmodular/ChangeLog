@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/spiralmodular
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/spiralmodular/ChangeLog,v 1.6 2004/04/16 11:36:23 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/spiralmodular/ChangeLog,v 1.7 2004/04/17 18:25:29 eradicator Exp $
+
+  17 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  spiralmodular-0.2.1.ebuild:
+  removed jack from IUSE.
 
   16 Apr 2004; Travis Tilley <lv@gentoo.org> spiralmodular-0.2.2a.ebuild:
   added ~amd64 keyword
