@@ -1,9 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 2180bc7c92ba94a4dff04a3682d978a7 aap-1.010.ebuild 888
 MD5 575897a55a4001fbf0b7c859c6c8e151 aap-1.000.ebuild 845
-MD5 5c5ad5332388066ed37540691e3cafe6 ChangeLog 1602
+MD5 a17f5414a89ec732cdc0ab40a819a9bd ChangeLog 1708
 MD5 0d13ce35a2c2267c4b979bfe23f9dada aap-1.055.ebuild 925
 MD5 f2b1ef119505f65c40a2683a05230467 aap-1.000-r1.ebuild 891
 MD5 fc1e980ce819ad9c5da9a1bd607be72c aap-1.070.ebuild 1013
@@ -15,10 +12,3 @@ MD5 c8821df8212d8fda85c8d1a9a3ac290e files/digest-aap-1.070 59
 MD5 1af821073e552639ccebd80f2cc26fed files/digest-aap-1.072 59
 MD5 029fb320b49e703cad4d1d08c709eb76 files/digest-aap-1.000-r1 59
 MD5 029fb320b49e703cad4d1d08c709eb76 files/digest-aap-1.000 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFByEu1LLFUmVNQ7rkRAq6xAJ98zimY6ZcZ8KgmTE9YBal54keRNwCfVL5x
-vzHaqlKfBkR3dZFyTb20/Xc=
-=xecq
------END PGP SIGNATURE-----
