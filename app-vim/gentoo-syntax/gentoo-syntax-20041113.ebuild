@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/gentoo-syntax-20041113.ebuild,v 1.2 2004/11/24 17:37:27 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/gentoo-syntax-20041113.ebuild,v 1.3 2004/12/04 18:02:33 slarti Exp $
 
 inherit eutils vim-plugin
 
@@ -8,7 +8,7 @@ DESCRIPTION="vim plugin: Gentoo Ebuild, Eclass, GLEP, ChangeLog and Portage
 Files syntax highlighting, filetype and indent settings"
 HOMEPAGE="http://developer.berlios.de/projects/gentoo-syntax"
 LICENSE="vim"
-KEYWORDS="x86 sparc mips ~amd64 ~ppc ~ppc64 ~alpha ~ia64"
+KEYWORDS="x86 sparc mips amd64 ~ppc ~ppc64 ~alpha ~ia64"
 SRC_URI="http://download.berlios.de/gentoo-syntax/${P}.tar.bz2"
 
 # For gathering stats. Evil, I know, but I need to know whether I can
