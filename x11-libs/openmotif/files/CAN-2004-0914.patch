@@ -1,0 +1,1601 @@
+diff -r -u motif.0194/lib/Xm/Imakefile motif/lib/Xm/Imakefile
+--- motif.0194/lib/Xm/Imakefile	2005-01-18 15:34:38.000000000 +0100
++++ motif/lib/Xm/Imakefile	2005-01-18 19:34:41.789393240 +0100
+@@ -169,7 +169,7 @@
+         XpmCrBufFrP.c  XpmCrPFrBuf.c  XpmRdFToDat.c  XpmWrFFrP.c    Xpmrgb.c \
+         XpmCrDatFrI.c  XpmCrPFrDat.c  XpmRdFToI.c    Xpmcreate.c    Xpmscan.c \
+         XpmCrDatFrP.c  XpmCrPFrI.c    XpmRdFToP.c    Xpmdata.c \
+-        XpmCrIFrBuf.c  XpmImage.c     XpmWrFFrBuf.c  Xpmhashtab.c
++        XpmCrIFrBuf.c  XpmImage.c     XpmWrFFrBuf.c  Xpmhashtab.c   s_popen.c
+ 
+ #if UseLocalRegex
+ REGEX_SRCS = regexp.c
+@@ -232,7 +232,7 @@
+         XpmCrBufFrP.o  XpmCrPFrBuf.o  XpmRdFToDat.o  XpmWrFFrP.o    Xpmrgb.o \
+         XpmCrDatFrI.o  XpmCrPFrDat.o  XpmRdFToI.o    Xpmcreate.o    Xpmscan.o \
+         XpmCrDatFrP.o  XpmCrPFrI.o    XpmRdFToP.o    Xpmdata.o \
+-        XpmCrIFrBuf.o  XpmImage.o     XpmWrFFrBuf.o  Xpmhashtab.o
++        XpmCrIFrBuf.o  XpmImage.o     XpmWrFFrBuf.o  Xpmhashtab.o   s_popen.o
+ 
+ #if UseLocalRegex
+ REGEX_OBJS = regexp.o
+diff -r -u motif.0194/lib/Xm/XpmAttrib.c motif/lib/Xm/XpmAttrib.c
+--- motif.0194/lib/Xm/XpmAttrib.c	2005-01-18 15:34:38.000000000 +0100
++++ motif/lib/Xm/XpmAttrib.c	2005-01-18 19:26:30.705049408 +0100
+@@ -33,13 +33,15 @@
+ *  Developed by Arnaud Le Hors                                                *
+ \*****************************************************************************/
+ 
++/* October 2004, source code review by Thomas Biege <thomas@suse.de> */
++
+ #include "XpmI.h"
+ 
+ /* 3.2 backward compatibility code */
+ LFUNC(CreateOldColorTable, int, (XpmColor *ct, unsigned int ncolors,
+ 				 XpmColor ***oldct));
+ 
+-LFUNC(FreeOldColorTable, void, (XpmColor **colorTable, int ncolors));
++LFUNC(FreeOldColorTable, void, (XpmColor **colorTable, unsigned int ncolors));
+ 
+ /*
+  * Create a colortable compatible with the old style colortable
+@@ -51,9 +53,9 @@
+     XpmColor ***oldct;
+ {
+     XpmColor **colorTable, **color;
+-    int a;
++    unsigned int a;
+ 
+-    if (ncolors >= SIZE_MAX / sizeof(XpmColor *)) 
++    if (ncolors >= UINT_MAX / sizeof(XpmColor *)) 
+ 	return XpmNoMemory;
+ 
+     colorTable = (XpmColor **) XpmMalloc(ncolors * sizeof(XpmColor *));
+@@ -70,9 +72,9 @@
+ static void
+ FreeOldColorTable(colorTable, ncolors)
+     XpmColor **colorTable;
+-    int ncolors;
++    unsigned int ncolors;
+ {
+-    int a, b;
++    unsigned int a, b;
+     XpmColor **color;
+     char **sptr;
+ 
+@@ -123,7 +125,7 @@
+     XpmExtension *ext;
+     char **sptr;
+ 
+-    if (extensions) {
++    if (extensions  && nextensions > 0) {
+ 	for (i = 0, ext = extensions; i < nextensions; i++, ext++) {
+ 	    if (ext->name)
+ 		XpmFree(ext->name);
+diff -r -u motif.0194/lib/Xm/XpmCrBufFrI.c motif/lib/Xm/XpmCrBufFrI.c
+--- motif.0194/lib/Xm/XpmCrBufFrI.c	2000-05-10 16:02:01.000000000 +0200
++++ motif/lib/Xm/XpmCrBufFrI.c	2005-01-18 19:26:30.706049256 +0100
+@@ -42,15 +42,17 @@
+ 			 unsigned int *used_size, XpmColor *colors,
+ 			 unsigned int ncolors, unsigned int cpp));
+ 
+-LFUNC(WritePixels, void, (char *dataptr, unsigned int *used_size,
++LFUNC(WritePixels, void, (char *dataptr, unsigned int data_size,
++			  unsigned int *used_size,
+ 			  unsigned int width, unsigned int height,
+ 			  unsigned int cpp, unsigned int *pixels,
+ 			  XpmColor *colors));
+ 
+-LFUNC(WriteExtensions, void, (char *dataptr, unsigned int *used_size,
++LFUNC(WriteExtensions, void, (char *dataptr, unsigned int data_size,
++			      unsigned int *used_size,
+ 			      XpmExtension *ext, unsigned int num));
+ 
+-LFUNC(ExtensionsSize, int, (XpmExtension *ext, unsigned int num));
++LFUNC(ExtensionsSize, unsigned int, (XpmExtension *ext, unsigned int num));
+ LFUNC(CommentsSize, int, (XpmInfo *info));
+ 
+ int
+@@ -93,11 +95,11 @@
+ 
+ #undef RETURN
+ #define RETURN(status) \
+-{ \
++do { \
+     if (ptr) \
+ 	XpmFree(ptr); \
+     return(status); \
+-}
++} while(0)
+ 
+ int
+ XpmCreateBufferFromXpmImage(buffer_return, image, info)
+@@ -111,7 +113,7 @@
+     unsigned int cmts, extensions, ext_size = 0;
+     unsigned int l, cmt_size = 0;
+     char *ptr = NULL, *p;
+-    unsigned int ptr_size, used_size;
++    unsigned int ptr_size, used_size, tmp;
+ 
+     *buffer_return = NULL;
+ 
+@@ -133,7 +135,13 @@
+ #ifdef VOID_SPRINTF
+     used_size = strlen(buf);
+ #endif
+-    ptr_size = used_size + ext_size + cmt_size + 1;
++    ptr_size = used_size + ext_size + cmt_size + 1; /* ptr_size can't be 0 */
++    if(ptr_size <= used_size ||
++       ptr_size <= ext_size  ||
++       ptr_size <= cmt_size)
++    {
++        return XpmNoMemory;
++    }
+     ptr = (char *) XpmMalloc(ptr_size);
+     if (!ptr)
+ 	return XpmNoMemory;
+@@ -144,7 +152,7 @@
+ #ifndef VOID_SPRINTF
+ 	used_size +=
+ #endif
+-	sprintf(ptr + used_size, "/*%s*/\n", info->hints_cmt);
++	snprintf(ptr + used_size, ptr_size-used_size, "/*%s*/\n", info->hints_cmt);
+ #ifdef VOID_SPRINTF
+ 	used_size += strlen(info->hints_cmt) + 5;
+ #endif
+@@ -162,7 +170,7 @@
+ #ifndef VOID_SPRINTF
+ 	l +=
+ #endif
+-	sprintf(buf + l, " %d %d", info->x_hotspot, info->y_hotspot);
++	snprintf(buf + l, sizeof(buf)-l, " %d %d", info->x_hotspot, info->y_hotspot);
+ #ifdef VOID_SPRINTF
+ 	l = strlen(buf);
+ #endif
+@@ -184,6 +192,8 @@
+     l = strlen(buf);
+ #endif
+     ptr_size += l;
++    if(ptr_size <= l)
++        RETURN(XpmNoMemory);
+     p = (char *) XpmRealloc(ptr, ptr_size);
+     if (!p)
+ 	RETURN(XpmNoMemory);
+@@ -196,7 +206,7 @@
+ #ifndef VOID_SPRINTF
+ 	used_size +=
+ #endif
+-	sprintf(ptr + used_size, "/*%s*/\n", info->colors_cmt);
++	snprintf(ptr + used_size, ptr_size-used_size, "/*%s*/\n", info->colors_cmt);
+ #ifdef VOID_SPRINTF
+ 	used_size += strlen(info->colors_cmt) + 5;
+ #endif
+@@ -212,7 +222,12 @@
+      * 4 = 1 (for '"') + 3 (for '",\n')
+      * 1 = - 2 (because the last line does not end with ',\n') + 3 (for '};\n')
+      */
+-    ptr_size += image->height * (image->width * image->cpp + 4) + 1;
++     if(image->width  > UINT_MAX / image->cpp ||
++       (tmp = image->width * image->cpp + 4) <= 4 ||
++        image->height > UINT_MAX / tmp ||
++       (tmp = image->height * tmp + 1) <= 1 ||
++       (ptr_size += tmp) <= tmp)
++	RETURN(XpmNoMemory);
+ 
+     p = (char *) XpmRealloc(ptr, ptr_size);
+     if (!p)
+@@ -224,17 +239,17 @@
+ #ifndef VOID_SPRINTF
+ 	used_size +=
+ #endif
+-	sprintf(ptr + used_size, "/*%s*/\n", info->pixels_cmt);
++	snprintf(ptr + used_size, ptr_size-used_size, "/*%s*/\n", info->pixels_cmt);
+ #ifdef VOID_SPRINTF
+ 	used_size += strlen(info->pixels_cmt) + 5;
+ #endif
+     }
+-    WritePixels(ptr + used_size, &used_size, image->width, image->height,
++    WritePixels(ptr + used_size, ptr_size - used_size, &used_size, image->width, image->height,
+ 		image->cpp, image->data, image->colorTable);
+ 
+     /* print extensions */
+     if (extensions)
+-	WriteExtensions(ptr + used_size, &used_size,
++	WriteExtensions(ptr + used_size, ptr_size-used_size, &used_size,
+ 			info->extensions, info->nextensions);
+ 
+     /* close the array */
+@@ -245,6 +260,7 @@
+     return (XpmSuccess);
+ }
+ 
++
+ static int
+ WriteColors(dataptr, data_size, used_size, colors, ncolors, cpp)
+     char **dataptr;
+@@ -254,7 +270,7 @@
+     unsigned int ncolors;
+     unsigned int cpp;
+ {
+-    char buf[BUFSIZ];
++    char buf[BUFSIZ] = {0};
+     unsigned int a, key, l;
+     char *s, *s2;
+     char **defaults;
+@@ -264,6 +280,8 @@
+ 
+ 	defaults = (char **) colors;
+ 	s = buf + 1;
++	if(cpp > (sizeof(buf) - (s-buf)))
++		return(XpmNoMemory);
+ 	strncpy(s, *defaults++, cpp);
+ 	s += cpp;
+ 
+@@ -272,14 +290,24 @@
+ #ifndef VOID_SPRINTF
+ 		s +=
+ #endif
+-		sprintf(s, "\t%s %s", xpmColorKeys[key - 1], s2);
++		/* assume C99 compliance */
++		snprintf(s, sizeof(buf) - (s-buf), "\t%s %s", xpmColorKeys[key - 1], s2);
+ #ifdef VOID_SPRINTF
+ 		s += strlen(s);
+ #endif
++		/* now let's check if s points out-of-bounds */
++		if((s-buf) > sizeof(buf))
++			return(XpmNoMemory);
+ 	    }
+ 	}
++	if(sizeof(buf) - (s-buf) < 4)
++		return(XpmNoMemory);
+ 	strcpy(s, "\",\n");
+ 	l = s + 3 - buf;
++	if( *data_size                   >= UINT_MAX-l ||
++	    *data_size + l               <= *used_size ||
++	   (*data_size + l - *used_size) <= sizeof(buf))
++		return(XpmNoMemory);
+ 	s = (char *) XpmRealloc(*dataptr, *data_size + l);
+ 	if (!s)
+ 	    return (XpmNoMemory);
+@@ -292,8 +320,9 @@
+ }
+ 
+ static void
+-WritePixels(dataptr, used_size, width, height, cpp, pixels, colors)
++WritePixels(dataptr, data_size, used_size, width, height, cpp, pixels, colors)
+     char *dataptr;
++    unsigned int data_size;
+     unsigned int *used_size;
+     unsigned int width;
+     unsigned int height;
+@@ -304,27 +333,36 @@
+     char *s = dataptr;
+     unsigned int x, y, h;
+ 
++    if(height <= 1)
++    	return;
++
+     h = height - 1;
+     for (y = 0; y < h; y++) {
+ 	*s++ = '"';
+ 	for (x = 0; x < width; x++, pixels++) {
+-	    strncpy(s, colors[*pixels].string, cpp);
++	    if(cpp >= (data_size - (s-dataptr)))
++		return;
++	    strncpy(s, colors[*pixels].string, cpp); /* how can we trust *pixels? :-\ */
+ 	    s += cpp;
+ 	}
++	if((data_size - (s-dataptr)) < 4)
++		return;
+ 	strcpy(s, "\",\n");
+ 	s += 3;
+     }
+     /* duplicate some code to avoid a test in the loop */
+     *s++ = '"';
+     for (x = 0; x < width; x++, pixels++) {
+-	strncpy(s, colors[*pixels].string, cpp);
++	if(cpp >= (data_size - (s-dataptr)))
++	    return;
++	strncpy(s, colors[*pixels].string, cpp); /* how can we trust *pixels? */
+ 	s += cpp;
+     }
+     *s++ = '"';
+     *used_size += s - dataptr;
+ }
+ 
+-static int
++static unsigned int
+ ExtensionsSize(ext, num)
+     XpmExtension *ext;
+     unsigned int num;
+@@ -333,21 +371,26 @@
+     char **line;
+ 
+     size = 0;
++    if(num == 0)
++    	return(0); /* ok? */
+     for (x = 0; x < num; x++, ext++) {
+ 	/* 11 = 10 (for ',\n"XPMEXT ') + 1 (for '"') */
+ 	size += strlen(ext->name) + 11;
+-	a = ext->nlines;
++	a = ext->nlines; /* how can we trust ext->nlines to be not out-of-bounds? */
+ 	for (y = 0, line = ext->lines; y < a; y++, line++)
+ 	    /* 4 = 3 (for ',\n"') + 1 (for '"') */
+ 	    size += strlen(*line) + 4;
+     }
+     /* 13 is for ',\n"XPMENDEXT"' */
++    if(size > UINT_MAX - 13) /* unlikely */
++    	return(0);
+     return size + 13;
+ }
+ 
+ static void
+-WriteExtensions(dataptr, used_size, ext, num)
++WriteExtensions(dataptr, data_size, used_size, ext, num)
+     char *dataptr;
++    unsigned int data_size;
+     unsigned int *used_size;
+     XpmExtension *ext;
+     unsigned int num;
+@@ -360,7 +403,7 @@
+ #ifndef VOID_SPRINTF
+ 	s += 11 +
+ #endif
+-	sprintf(s, ",\n\"XPMEXT %s\"", ext->name);
++	snprintf(s, data_size - (s-dataptr), ",\n\"XPMEXT %s\"", ext->name);
+ #ifdef VOID_SPRINTF
+ 	s += strlen(ext->name) + 11;
+ #endif
+@@ -369,13 +412,13 @@
+ #ifndef VOID_SPRINTF
+ 	    s += 4 +
+ #endif
+-	    sprintf(s, ",\n\"%s\"", *line);
++	    snprintf(s, data_size - (s-dataptr), ",\n\"%s\"", *line);
+ #ifdef VOID_SPRINTF
+ 	    s += strlen(*line) + 4;
+ #endif
+ 	}
+     }
+-    strcpy(s, ",\n\"XPMENDEXT\"");
++    strncpy(s, ",\n\"XPMENDEXT\"", data_size - (s-dataptr)-1);
+     *used_size += s - dataptr + 13;
+ }
+ 
+@@ -386,6 +429,7 @@
+     int size = 0;
+ 
+     /* 5 = 2 (for "/_*") + 3 (for "*_/\n") */
++    /* wrap possible but *very* unlikely */
+     if (info->hints_cmt)
+ 	size += 5 + strlen(info->hints_cmt);
+ 
+diff -r -u motif.0194/lib/Xm/XpmCrDatFrI.c motif/lib/Xm/XpmCrDatFrI.c
+--- motif.0194/lib/Xm/XpmCrDatFrI.c	2005-01-18 15:34:38.000000000 +0100
++++ motif/lib/Xm/XpmCrDatFrI.c	2005-01-18 19:26:30.708048952 +0100
+@@ -33,13 +33,16 @@
+ *  Developed by Arnaud Le Hors                                                *
+ \*****************************************************************************/
+ 
++/* October 2004, source code review by Thomas Biege <thomas@suse.de> */
++
+ #include "XpmI.h"
+ 
+ LFUNC(CreateColors, int, (char **dataptr, unsigned int *data_size,
+ 			  XpmColor *colors, unsigned int ncolors,
+ 			  unsigned int cpp));
+ 
+-LFUNC(CreatePixels, void, (char **dataptr, unsigned int width,
++LFUNC(CreatePixels, void, (char **dataptr, unsigned int data_size,
++			   unsigned int width,
+ 			   unsigned int height, unsigned int cpp,
+ 			   unsigned int *pixels, XpmColor *colors));
+ 
+@@ -47,7 +50,8 @@
+ 			      unsigned int *ext_size,
+ 			      unsigned int *ext_nlines));
+ 
+-LFUNC(CreateExtensions, void, (char **dataptr, unsigned int offset,
++LFUNC(CreateExtensions, void, (char **dataptr, unsigned int data_size,
++			       unsigned int offset,
+ 			       XpmExtension *ext, unsigned int num,
+ 			       unsigned int ext_nlines));
+ 
+@@ -88,7 +92,7 @@
+ 
+ #undef RETURN
+ #define RETURN(status) \
+-{ \
++do { \
+     if (header) { \
+ 	for (l = 0; l < header_nlines; l++) \
+ 	    if (header[l]) \
+@@ -96,7 +100,7 @@
+ 		XpmFree(header); \
+     } \
+     return(status); \
+-}
++} while(0)
+ 
+ int
+ XpmCreateDataFromXpmImage(data_return, image, info)
+@@ -127,11 +131,17 @@
+      * alloc a temporary array of char pointer for the header section which
+      * is the hints line + the color table lines
+      */
+-    header_nlines = 1 + image->ncolors;
++    header_nlines = 1 + image->ncolors; /* this may wrap and/or become 0 */
++
++    /* 2nd check superfluous if we do not need header_nlines any further */
++    if(header_nlines <= image->ncolors ||
++       header_nlines >= UINT_MAX / sizeof(char *))
++    	return(XpmNoMemory);
++
+     header_size = sizeof(char *) * header_nlines;
+-    if (header_size >= SIZE_MAX / sizeof(char *))
++    if (header_size >= UINT_MAX / sizeof(char *))
+ 	return (XpmNoMemory);
+-    header = (char **) XpmCalloc(header_size, sizeof(char *));
++    header = (char **) XpmCalloc(header_size, sizeof(char *)); /* can we trust image->ncolors */
+     if (!header)
+ 	return (XpmNoMemory);
+ 
+@@ -175,8 +185,22 @@
+ 
+     /* now we know the size needed, alloc the data and copy the header lines */
+     offset = image->width * image->cpp + 1;
+-    data_size = header_size + (image->height + ext_nlines) * sizeof(char *)
+-	+ image->height * offset + ext_size;
++
++    if(offset <= image->width || offset <= image->cpp)
++	RETURN(XpmNoMemory);
++
++    if( (image->height + ext_nlines) >= UINT_MAX / sizeof(char *))
++	RETURN(XpmNoMemory);
++    data_size = (image->height + ext_nlines) * sizeof(char *);
++
++    if (image->height > UINT_MAX / offset ||
++        image->height * offset > UINT_MAX - data_size)
++	RETURN(XpmNoMemory);
++    data_size += image->height * offset;
++
++    if( (header_size + ext_size) >= (UINT_MAX - data_size) )
++	RETURN(XpmNoMemory);
++    data_size += header_size + ext_size;
+ 
+     data = (char **) XpmMalloc(data_size);
+     if (!data)
+@@ -184,8 +208,10 @@
+ 
+     data_nlines = header_nlines + image->height + ext_nlines;
+     *data = (char *) (data + data_nlines);
++
++    /* can header have less elements then n suggests? */
+     n = image->ncolors;
+-    for (l = 0, sptr = data, sptr2 = header; l <= n; l++, sptr++, sptr2++) {
++    for (l = 0, sptr = data, sptr2 = header; l <= n && sptr && sptr2; l++, sptr++, sptr2++) {
+ 	strcpy(*sptr, *sptr2);
+ 	*(sptr + 1) = *sptr + strlen(*sptr2) + 1;
+     }
+@@ -194,12 +220,13 @@
+     data[header_nlines] = (char *) data + header_size
+ 	+ (image->height + ext_nlines) * sizeof(char *);
+ 
+-    CreatePixels(data + header_nlines, image->width, image->height,
++    CreatePixels(data + header_nlines, data_size-header_nlines, image->width, image->height,
+ 		 image->cpp, image->data, image->colorTable);
+ 
+     /* print extensions */
+     if (extensions)
+-	CreateExtensions(data + header_nlines + image->height - 1, offset,
++	CreateExtensions(data + header_nlines + image->height - 1,
++			 data_size - header_nlines - image->height + 1, offset,
+ 			 info->extensions, info->nextensions,
+ 			 ext_nlines);
+ 
+@@ -221,23 +248,34 @@
+     char *s, *s2;
+     char **defaults;
+ 
++    /* can ncolors be trusted here? */
+     for (a = 0; a < ncolors; a++, colors++, dataptr++) {
+ 
+ 	defaults = (char **) colors;
++	if (sizeof(buf) <= cpp)
++	  return(XpmNoMemory);
+ 	strncpy(buf, *defaults++, cpp);
+ 	s = buf + cpp;
+ 
++	if(sizeof(buf) <= (s-buf))
++	  return XpmNoMemory;
++	
+ 	for (key = 1; key <= NKEYS; key++, defaults++) {
+ 	    if (s2 = *defaults) {
+ #ifndef VOID_SPRINTF
+ 		s +=
+ #endif
+-		sprintf(s, "\t%s %s", xpmColorKeys[key - 1], s2);
+++ 		/* assume C99 compliance */
+++ 			snprintf(s, sizeof(buf)-(s-buf), "\t%s %s", xpmColorKeys[key - 1], s2);
+ #ifdef VOID_SPRINTF
+ 		s += strlen(s);
+ #endif
++		/* does s point out-of-bounds? */
+++ 		if(sizeof(buf) < (s-buf))
+++ 			return XpmNoMemory;
+ 	    }
+ 	}
++	/* what about using strdup()? */
+ 	l = s - buf + 1;
+ 	s = (char *) XpmMalloc(l);
+ 	if (!s)
+@@ -249,8 +287,9 @@
+ }
+ 
+ static void
+-CreatePixels(dataptr, width, height, cpp, pixels, colors)
++CreatePixels(dataptr, data_size, width, height, cpp, pixels, colors)
+     char **dataptr;
++    unsigned int data_size;
+     unsigned int width;
+     unsigned int height;
+     unsigned int cpp;
+@@ -260,21 +299,38 @@
+     char *s;
+     unsigned int x, y, h, offset;
+ 
++    if(height <= 1)
++    	return;
++
+     h = height - 1;
++
+     offset = width * cpp + 1;
++
++    if(offset <= width || offset <= cpp)
++    	return;
++
++    /* why trust h? */
+     for (y = 0; y < h; y++, dataptr++) {
+ 	s = *dataptr;
++	/* why trust width? */
+ 	for (x = 0; x < width; x++, pixels++) {
+-	    strncpy(s, colors[*pixels].string, cpp);
++	    if(cpp > (data_size - (s - *dataptr)))
++	    	return;
++	    strncpy(s, colors[*pixels].string, cpp); /* why trust pixel? */
+ 	    s += cpp;
+ 	}
+ 	*s = '\0';
++	if(offset > data_size)
++		return;
+ 	*(dataptr + 1) = *dataptr + offset;
+     }
+     /* duplicate some code to avoid a test in the loop */
+     s = *dataptr;
++    /* why trust width? */
+     for (x = 0; x < width; x++, pixels++) {
+-	strncpy(s, colors[*pixels].string, cpp);
++	if(cpp > data_size - (s - *dataptr))
++	    	return;
++	strncpy(s, colors[*pixels].string, cpp); /* why should we trust *pixel? */
+ 	s += cpp;
+     }
+     *s = '\0';
+@@ -307,8 +363,9 @@
+ }
+ 
+ static void
+-CreateExtensions(dataptr, offset, ext, num, ext_nlines)
++CreateExtensions(dataptr, data_size, offset, ext, num, ext_nlines)
+     char **dataptr;
++    unsigned int data_size;
+     unsigned int offset;
+     XpmExtension *ext;
+     unsigned int num;
+@@ -321,12 +378,12 @@
+     dataptr++;
+     a = 0;
+     for (x = 0; x < num; x++, ext++) {
+-	sprintf(*dataptr, "XPMEXT %s", ext->name);
++	snprintf(*dataptr, data_size, "XPMEXT %s", ext->name);
+ 	a++;
+ 	if (a < ext_nlines)
+ 	    *(dataptr + 1) = *dataptr + strlen(ext->name) + 8;
+ 	dataptr++;
+-	b = ext->nlines;
++	b = ext->nlines; /* can we trust these values? */
+ 	for (y = 0, line = ext->lines; y < b; y++, line++) {
+ 	    strcpy(*dataptr, *line);
+ 	    a++;
+diff -r -u motif.0194/lib/Xm/Xpmcreate.c motif/lib/Xm/Xpmcreate.c
+--- motif.0194/lib/Xm/Xpmcreate.c	2005-01-18 15:34:38.000000000 +0100
++++ motif/lib/Xm/Xpmcreate.c	2005-01-18 19:55:57.894395792 +0100
+@@ -39,6 +39,8 @@
+  * HeDu (hedu@cul-ipn.uni-kiel.de) 4/94
+  */
+ 
++/* October 2004, source code review by Thomas Biege <thomas@suse.de> */
++
+ #include "XpmI.h"
+ #include <ctype.h>
+ 
+@@ -560,7 +562,7 @@
+ 	     */
+ 	} else {
+ #endif
+-	    int i;
++	    unsigned int i;
+ 
+ 	    ncols = visual->map_entries;
+ 	    cols = (XColor *) XpmCalloc(ncols, sizeof(XColor));
+@@ -718,17 +720,10 @@
+ /* function call in case of error, frees only locally allocated variables */
+ #undef RETURN
+ #define RETURN(status) \
+-{ \
+-    if (ximage) XDestroyImage(ximage); \
+-    if (shapeimage) XDestroyImage(shapeimage); \
+-    if (image_pixels) XpmFree(image_pixels); \
+-    if (mask_pixels) XpmFree(mask_pixels); \
+-    if (nalloc_pixels) \
+-	(*freeColors)(display, colormap, alloc_pixels, nalloc_pixels, NULL); \
+-    if (alloc_pixels) XpmFree(alloc_pixels); \
+-    if (used_pixels) XpmFree(used_pixels); \
+-    return (status); \
+-}
++do { \
++        ErrorStatus = status; \
++        goto error; \
++} while(0)
+ 
+ int
+ XpmCreateImageFromXpmImage(display, image,
+@@ -799,7 +794,7 @@
+ 
+     ErrorStatus = XpmSuccess;
+ 
+-    if (image->ncolors >= SIZE_MAX / sizeof(Pixel)) 
++    if (image->ncolors >= UINT_MAX / sizeof(Pixel)) 
+ 	return (XpmNoMemory);
+ 
+     /* malloc pixels index tables */
+@@ -945,10 +940,14 @@
+ 	return (XpmNoMemory);
+ 
+ #ifndef FOR_MSW
+-    if (height != 0 && (*image_return)->bytes_per_line >= SIZE_MAX / height)
++     if (height != 0 && (*image_return)->bytes_per_line >= INT_MAX / height) {
++ 	XDestroyImage(*image_return);
+       return XpmNoMemory;
++     }
+     /* now that bytes_per_line must have been set properly alloc data */
+-    (*image_return)->data =
++        if((*image_return)->bytes_per_line == 0 ||  height == 0)
++     	return XpmNoMemory;
++     (*image_return)->data =
+ 	(char *) XpmMalloc((*image_return)->bytes_per_line * height);
+ 
+     if (!(*image_return)->data) {
+@@ -975,7 +974,7 @@
+ LFUNC(_putbits, void, (register char *src, int dstoffset,
+ 		       register int numbits, register char *dst));
+ 
+-LFUNC(_XReverse_Bytes, int, (register unsigned char *bpt, register int nb));
++LFUNC(_XReverse_Bytes, int, (register unsigned char *bpt, register unsigned int nb));
+ 
+ static unsigned char Const _reverse_byte[0x100] = {
+     0x00, 0x80, 0x40, 0xc0, 0x20, 0xa0, 0x60, 0xe0,
+@@ -1015,12 +1014,12 @@
+ static int
+ _XReverse_Bytes(bpt, nb)
+     register unsigned char *bpt;
+-    register int nb;
++    register unsigned int nb;
+ {
+     do {
+ 	*bpt = _reverse_byte[*bpt];
+ 	bpt++;
+-    } while (--nb > 0);
++    } while (--nb > 0); /* is nb user-controled? */
+     return 0;
+ }
+ 
+@@ -1159,7 +1158,7 @@
+     register char *src;
+     register char *dst;
+     register unsigned int *iptr;
+-    register int x, y, i;
++    register unsigned int x, y, i;
+     register char *data;
+     Pixel pixel, px;
+     int nbytes, depth, ibu, ibpp;
+@@ -1169,8 +1168,8 @@
+     depth = image->depth;
+     if (depth == 1) {
+ 	ibu = image->bitmap_unit;
+-	for (y = 0; y < height; y++)
+-	    for (x = 0; x < width; x++, iptr++) {
++	for (y = 0; y < height; y++) /* how can we trust height */
++	    for (x = 0; x < width; x++, iptr++) { /* how can we trust width */
+ 		pixel = pixels[*iptr];
+ 		for (i = 0, px = pixel; i < sizeof(unsigned long);
+ 		     i++, px >>= 8)
+@@ -1245,12 +1244,12 @@
+ {
+     unsigned char *data;
+     unsigned int *iptr;
+-    int y;
++    unsigned int y;
+     Pixel pixel;
+ 
+ #ifdef WITHOUT_SPEEDUPS
+ 
+-    int x;
++    unsigned int x;
+     unsigned char *addr;
+ 
+     data = (unsigned char *) image->data;
+@@ -1287,7 +1286,7 @@
+ 
+ #else  /* WITHOUT_SPEEDUPS */
+ 
+-    int bpl = image->bytes_per_line;
++    unsigned int bpl = image->bytes_per_line;
+     unsigned char *data_ptr, *max_data;
+ 
+     data = (unsigned char *) image->data;
+@@ -1355,11 +1354,11 @@
+ {
+     unsigned char *data;
+     unsigned int *iptr;
+-    int y;
++    unsigned int y;
+ 
+ #ifdef WITHOUT_SPEEDUPS
+ 
+-    int x;
++    unsigned int x;
+     unsigned char *addr;
+ 
+     data = (unsigned char *) image->data;
+@@ -1383,7 +1382,7 @@
+ 
+     Pixel pixel;
+ 
+-    int bpl = image->bytes_per_line;
++    unsigned int bpl = image->bytes_per_line;
+     unsigned char *data_ptr, *max_data;
+ 
+     data = (unsigned char *) image->data;
+@@ -1436,11 +1435,11 @@
+ {
+     char *data;
+     unsigned int *iptr;
+-    int y;
++    unsigned int y;
+ 
+ #ifdef WITHOUT_SPEEDUPS
+ 
+-    int x;
++    unsigned int x;
+ 
+     data = image->data;
+     iptr = pixelindex;
+@@ -1450,7 +1449,7 @@
+ 
+ #else  /* WITHOUT_SPEEDUPS */
+ 
+-    int bpl = image->bytes_per_line;
++    unsigned int bpl = image->bytes_per_line;
+     char *data_ptr, *max_data;
+ 
+     data = image->data;
+@@ -1485,12 +1484,12 @@
+ 	PutImagePixels(image, width, height, pixelindex, pixels);
+     else {
+ 	unsigned int *iptr;
+-	int y;
++	unsigned int y;
+ 	char *data;
+ 
+ #ifdef WITHOUT_SPEEDUPS
+ 
+-	int x;
++	unsigned int x;
+ 
+ 	data = image->data;
+ 	iptr = pixelindex;
+@@ -1668,6 +1667,9 @@
+     Pixel px;
+     int nbytes;
+ 
++    if(x < 0 || y < 0)
++    	return 0;
++
+     for (i=0, px=pixel; i<sizeof(unsigned long); i++, px>>=8)
+ 	((unsigned char *)&pixel)[i] = px;
+     src = &ximage->data[XYINDEX(x, y, ximage)];
+@@ -1699,7 +1701,10 @@
+     register int i;
+     register char *data;
+     Pixel px;
+-    int nbytes, ibpp;
++    unsigned int nbytes, ibpp;
++
++    if(x < 0 || y < 0)
++    	return 0;
+ 
+     ibpp = ximage->bits_per_pixel;
+     if (ximage->depth == 4)
+@@ -1732,6 +1737,9 @@
+ {
+     unsigned char *addr;
+ 
++    if(x < 0 || y < 0)
++    	return 0;
++
+     addr = &((unsigned char *)ximage->data) [ZINDEX32(x, y, ximage)];
+     *((unsigned long *)addr) = pixel;
+     return 1;
+@@ -1746,6 +1754,9 @@
+ {
+     unsigned char *addr;
+ 
++    if(x < 0 || y < 0)
++    	return 0;
++
+     addr = &((unsigned char *)ximage->data) [ZINDEX32(x, y, ximage)];
+     addr[0] = pixel >> 24;
+     addr[1] = pixel >> 16;
+@@ -1763,6 +1774,9 @@
+ {
+     unsigned char *addr;
+ 
++    if(x < 0 || y < 0)
++    	return 0;
++
+     addr = &((unsigned char *)ximage->data) [ZINDEX32(x, y, ximage)];
+     addr[3] = pixel >> 24;
+     addr[2] = pixel >> 16;
+@@ -1780,6 +1794,9 @@
+ {
+     unsigned char *addr;
+     
++    if(x < 0 || y < 0)
++    	return 0;
++
+     addr = &((unsigned char *)ximage->data) [ZINDEX16(x, y, ximage)];
+     addr[0] = pixel >> 8;
+     addr[1] = pixel;
+@@ -1795,6 +1812,9 @@
+ {
+     unsigned char *addr;
+     
++    if(x < 0 || y < 0)
++    	return 0;
++
+     addr = &((unsigned char *)ximage->data) [ZINDEX16(x, y, ximage)];
+     addr[1] = pixel >> 8;
+     addr[0] = pixel;
+@@ -1808,6 +1828,9 @@
+     int y;
+     unsigned long pixel;
+ {
++    if(x < 0 || y < 0)
++    	return 0;
++
+     ximage->data[ZINDEX8(x, y, ximage)] = pixel;
+     return 1;
+ }
+@@ -1819,6 +1842,9 @@
+     int y;
+     unsigned long pixel;
+ {
++    if(x < 0 || y < 0)
++    	return 0;
++
+     if (pixel & 1)
+ 	ximage->data[ZINDEX1(x, y, ximage)] |= 0x80 >> (x & 7);
+     else
+@@ -1833,6 +1859,9 @@
+     int y;
+     unsigned long pixel;
+ {
++    if(x < 0 || y < 0)
++    	return 0;
++
+     if (pixel & 1)
+ 	ximage->data[ZINDEX1(x, y, ximage)] |= 1 << (x & 7);
+     else
+@@ -1992,8 +2021,8 @@
+ 	xpmGetCmt(data, &colors_cmt);
+ 
+     /* malloc pixels index tables */
+-    if (ncolors >= SIZE_MAX / sizeof(Pixel)) 
+-	return XpmNoMemory;
++    if (ncolors >= UINT_MAX / sizeof(Pixel)) 
++	RETURN(XpmNoMemory);
+ 
+     image_pixels = (Pixel *) XpmMalloc(sizeof(Pixel) * ncolors);
+     if (!image_pixels)
+@@ -2104,7 +2133,7 @@
+      * free the hastable
+      */
+     if (ErrorStatus != XpmSuccess)
+-	RETURN(ErrorStatus)
++	RETURN(ErrorStatus);
+     else if (USE_HASHTABLE)
+ 	xpmHashTableFree(&hashtable);
+ 
+@@ -2251,14 +2280,14 @@
+ 
+ 	    /* array of pointers malloced by need */
+ 	    unsigned short *cidx[256];
+-	    int char1;
++	    unsigned int char1;
+ 
+ 	    if (ncolors > 256)
+ 		return (XpmFileInvalid);
+ 
+ 	    bzero((char *)cidx, 256 * sizeof(unsigned short *)); /* init */
+ 	    for (a = 0; a < ncolors; a++) {
+-		char1 = colorTable[a].string[0];
++	      char1 = (unsigned char) colorTable[a].string[0];
+ 		if (cidx[char1] == NULL) { /* get new memory */
+ 		    cidx[char1] = (unsigned short *)
+ 			XpmCalloc(256, sizeof(unsigned short));
+diff -r -u motif.0194/lib/Xm/Xpmdata.c motif/lib/Xm/Xpmdata.c
+--- motif.0194/lib/Xm/Xpmdata.c	2000-05-10 16:02:01.000000000 +0200
++++ motif/lib/Xm/Xpmdata.c	2005-01-18 20:01:43.286888152 +0100
+@@ -274,7 +274,7 @@
+ 	}
+ 	ungetc(c, file);
+     }
+-    return (n);
++    return (n); /* this returns bytes read + 1 */
+ }
+ 
+ /*
+@@ -371,8 +371,9 @@
+ {
+     if (!mdata->type)
+ 	*cmt = NULL;
+-    else if (mdata->CommentLength) {
+-	*cmt = (char *) XpmMalloc(mdata->CommentLength + 1);
++         else if (dmata->CommentLength != 0 && mdata->CommentLength < UINT_MAX - 1) {
++       		if( (*cmt = (char *) XpmMalloc(mdata->CommentLength + 1)) == NULL)
++	 		return XpmNoMemory;
+ 	strncpy(*cmt, mdata->Comment, mdata->CommentLength);
+ 	(*cmt)[mdata->CommentLength] = '\0';
+ 	mdata->CommentLength = 0;
+@@ -400,7 +401,7 @@
+ xpmParseHeader(mdata)
+     xpmData *mdata;
+ {
+-    char buf[BUFSIZ];
++    char buf[BUFSIZ+1] = {0};
+     int l, n = 0;
+ 
+     if (mdata->type) {
+diff -r -u motif.0194/lib/Xm/Xpmhashtab.c motif/lib/Xm/Xpmhashtab.c
+--- motif.0194/lib/Xm/Xpmhashtab.c	2005-01-18 15:34:38.000000000 +0100
++++ motif/lib/Xm/Xpmhashtab.c	2005-01-18 20:02:37.302676504 +0100
+@@ -139,13 +139,13 @@
+     unsigned int size = table->size;
+     xpmHashAtom *t, *p;
+     int i;
+-    int oldSize = size;
++    unsigned int oldSize = size;
+ 
+     t = atomTable;
+     HASH_TABLE_GROWS
+ 	table->size = size;
+     table->limit = size / 3;
+-    if (size >= SIZE_MAX / sizeof(*atomTable)) 
++    if (size >= UINT_MAX / sizeof(*atomTable)) 
+ 	return (XpmNoMemory);
+     atomTable = (xpmHashAtom *) XpmMalloc(size * sizeof(*atomTable));
+     if (!atomTable)
+@@ -207,7 +207,7 @@
+     table->size = INITIAL_HASH_SIZE;
+     table->limit = table->size / 3;
+     table->used = 0;
+-    if (table->size >= SIZE_MAX / sizeof(*atomTable))
++    if (table->size >= UINT_MAX / sizeof(*atomTable))
+ 	return (XpmNoMemory);
+     atomTable = (xpmHashAtom *) XpmMalloc(table->size * sizeof(*atomTable));
+     if (!atomTable)
+diff -r -u motif.0194/lib/Xm/XpmI.h motif/lib/Xm/XpmI.h
+--- motif.0194/lib/Xm/XpmI.h	2005-01-18 15:34:38.000000000 +0100
++++ motif/lib/Xm/XpmI.h	2005-01-18 19:44:59.012561056 +0100
+@@ -108,8 +108,10 @@
+  * lets try to solve include files
+  */
+ 
++#include <sys/types.h>
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <limits.h>
+ /* stdio.h doesn't declare popen on a Sequent DYNIX OS */
+ #ifdef sequent
+ extern FILE *popen();
+diff -r -u motif.0194/lib/Xm/Xpmmisc.c motif/lib/Xm/Xpmmisc.c
+--- motif.0194/lib/Xm/Xpmmisc.c	2000-05-10 16:02:01.000000000 +0200
++++ motif/lib/Xm/Xpmmisc.c	2005-01-18 20:03:23.061720072 +0100
+@@ -47,7 +47,7 @@
+     char *s1;
+ {
+     char *s2;
+-    int l = strlen(s1) + 1;
++    size_t l = strlen(s1) + 1;
+ 
+     if (s2 = (char *) XpmMalloc(l))
+ 	strcpy(s2, s1);
+diff -r -u motif.0194/lib/Xm/Xpmparse.c motif/lib/Xm/Xpmparse.c
+--- motif.0194/lib/Xm/Xpmparse.c	2005-01-18 15:34:38.000000000 +0100
++++ motif/lib/Xm/Xpmparse.c	2005-01-18 20:09:04.590799760 +0100
+@@ -43,21 +43,21 @@
+ #include <ctype.h>
+ 
+ #ifdef HAS_STRLCAT
+-# define STRLCAT(dst, src, dstsize) { \
++# define STRLCAT(dst, src, dstsize) do { \
+   	if (strlcat(dst, src, dstsize) >= (dstsize)) \
+-	    return (XpmFileInvalid); }
+-# define STRLCPY(dst, src, dstsize) { \
++	    return (XpmFileInvalid); } while(0)
++# define STRLCPY(dst, src, dstsize) do { \
+   	if (strlcpy(dst, src, dstsize) >= (dstsize)) \
+-	    return (XpmFileInvalid); }
++	    return (XpmFileInvalid); } while(0)
+ #else
+-# define STRLCAT(dst, src, dstsize) { \
++# define STRLCAT(dst, src, dstsize) do { \
+ 	if ((strlen(dst) + strlen(src)) < (dstsize)) \
+  	    strcat(dst, src); \
+-	else return (XpmFileInvalid); }
+-# define STRLCPY(dst, src, dstsize) { \
++	else return (XpmFileInvalid); } while(0)
++# define STRLCPY(dst, src, dstsize) do { \
+ 	if (strlen(src) < (dstsize)) \
+  	    strcpy(dst, src); \
+-	else return (XpmFileInvalid); }
++	else return (XpmFileInvalid); } while(0)
+ #endif
+ 
+ LFUNC(ParsePixels, int, (xpmData *data, unsigned int width,
+@@ -77,14 +77,9 @@
+ /* function call in case of error, frees only locally allocated variables */
+ #undef RETURN
+ #define RETURN(status) \
+-{ \
+-    if (colorTable) xpmFreeColorTable(colorTable, ncolors); \
+-    if (pixelindex) XpmFree(pixelindex); \
+-    if (hints_cmt)  XpmFree(hints_cmt); \
+-    if (colors_cmt) XpmFree(colors_cmt); \
+-    if (pixels_cmt) XpmFree(pixels_cmt); \
+-    return(status); \
+-}
++do { \
++	goto error;
++} while(0)
+ 
+ /*
+  * This function parses an Xpm file or data and store the found informations
+@@ -347,7 +342,7 @@
+     char **defaults;
+     int ErrorStatus;
+ 
+-    if (ncolors >= SIZE_MAX / sizeof(XpmColor))
++    if (ncolors >= UINT_MAX / sizeof(XpmColor))
+ 	return (XpmNoMemory);
+     colorTable = (XpmColor *) XpmCalloc(ncolors, sizeof(XpmColor));
+     if (!colorTable)
+@@ -360,7 +355,7 @@
+ 	    /*
+ 	     * read pixel value
+ 	     */
+-	    if (cpp >= SIZE_MAX - 1) {
++	    if (cpp >= UINT_MAX - 1) {
+ 		xpmFreeColorTable(colorTable, ncolors);
+ 		return (XpmNoMemory);
+ 	    }
+@@ -419,9 +414,9 @@
+ 			return (XpmFileInvalid);
+ 		    }
+ 		    if (!lastwaskey)
+-			STRLCAT(curbuf, " ", sizeof(curbuf)); /* append space */
++			STRLCAT(curbuf, " ", sizeof(curbuf));/* append space */
+ 		    buf[l] = '\0';
+-		    STRLCAT(curbuf, buf, sizeof(curbuf));/* append buf */
++		    STRLCAT(curbuf, buf, sizeof(curbuf)); /* append buf */
+ 		    lastwaskey = 0;
+ 		}
+ 	    }
+@@ -429,7 +424,7 @@
+ 		xpmFreeColorTable(colorTable, ncolors);
+ 		return (XpmFileInvalid);
+ 	    }
+-	    len = strlen(curbuf) + 1;
++	    len = strlen(curbuf) + 1; /* integer overflow just theoretically possible */
+ 	    s = defaults[curkey] = (char *) XpmMalloc(len);
+ 	    if (!s) {
+ 		xpmFreeColorTable(colorTable, ncolors);
+@@ -448,7 +443,7 @@
+ 	    /*
+ 	     * read pixel value
+ 	     */
+-	    if (cpp >= SIZE_MAX - 1) {
++	    if (cpp >= UINT_MAX - 1) {
+ 		xpmFreeColorTable(colorTable, ncolors);
+ 		return (XpmNoMemory);
+ 	    }
+@@ -493,7 +488,7 @@
+ 	    memcpy(s, curbuf, len);
+ 	    color->c_color = s;
+ 	    *curbuf = '\0';		/* reset curbuf */
+-	    if (a < ncolors - 1)
++	    if (a < ncolors - 1)	/* can we trust ncolors -> leave data's bounds */
+ 		xpmNextString(data);	/* get to the next string */
+ 	}
+     }
+@@ -512,11 +507,11 @@
+     xpmHashTable *hashtable;
+     unsigned int **pixels;
+ {
+-    unsigned int *iptr, *iptr2;
++    unsigned int *iptr, *iptr2 = NULL; /* found by Egbert Eich */
+     unsigned int a, x, y;
+ 
+-    if ((height > 0 && width >= SIZE_MAX / height) ||
+-	width * height >= SIZE_MAX / sizeof(unsigned int)) 
++    if ((height > 0 && width >= UINT_MAX / height) ||
++	width * height >= UINT_MAX / sizeof(unsigned int)) 
+ 	return XpmNoMemory;
+ #ifndef FOR_MSW
+     iptr2 = (unsigned int *) XpmMalloc(sizeof(unsigned int) * width * height);
+@@ -541,8 +536,10 @@
+ 	{
+ 	    unsigned short colidx[256];
+ 
+-	    if (ncolors > 256)
++	    if (ncolors > 256) {
++		XpmFree(iptr2); /* found by Egbert Eich */
+ 		return (XpmFileInvalid);
++	    }
+ 
+ 	    bzero((char *)colidx, 256 * sizeof(short));
+ 	    for (a = 0; a < ncolors; a++)
+@@ -569,16 +566,20 @@
+ 	{
+ 
+ /* free all allocated pointers at all exits */
+-#define FREE_CIDX {int f; for (f = 0; f < 256; f++) \
+-if (cidx[f]) XpmFree(cidx[f]);}
++#define FREE_CIDX \
++do \
++{ \
++	int f; for (f = 0; f < 256; f++) \
++	if (cidx[f]) XpmFree(cidx[f]); \
++} while(0)
+ 
+ 	    /* array of pointers malloced by need */
+ 	    unsigned short *cidx[256];
+-	    int char1;
++	    unsigned int char1;
+ 
+ 	    bzero((char *)cidx, 256 * sizeof(unsigned short *)); /* init */
+ 	    for (a = 0; a < ncolors; a++) {
+-		char1 = colorTable[a].string[0];
++		char1 = (unsigned char) colorTable[a].string[0];
+ 		if (cidx[char1] == NULL) { /* get new memory */
+ 		    cidx[char1] = (unsigned short *)
+ 			XpmCalloc(256, sizeof(unsigned short));
+@@ -621,8 +622,10 @@
+ 	    char *s;
+ 	    char buf[BUFSIZ];
+ 
+-	    if (cpp >= sizeof(buf))
++	    if (cpp >= sizeof(buf)) {
++		XpmFree(iptr2); /* found by Egbert Eich */
+ 		return (XpmFileInvalid);
++	    }
+ 
+ 	    buf[cpp] = '\0';
+ 	    if (USE_HASHTABLE) {
+@@ -632,7 +635,7 @@
+ 		    xpmNextString(data);
+ 		    for (x = 0; x < width; x++, iptr++) {
+ 			for (a = 0, s = buf; a < cpp; a++, s++)
+-			    *s = xpmGetC(data);
++			    *s = xpmGetC(data); /* int assigned to char, not a problem here */
+ 			slot = xpmHashSlot(hashtable, buf);
+ 			if (!*slot) {	/* no color matches */
+ 			    XpmFree(iptr2);
+@@ -646,7 +649,7 @@
+ 		    xpmNextString(data);
+ 		    for (x = 0; x < width; x++, iptr++) {
+ 			for (a = 0, s = buf; a < cpp; a++, s++)
+-			    *s = xpmGetC(data);
++			    *s = xpmGetC(data); /* int assigned to char, not a problem here */
+ 			for (a = 0; a < ncolors; a++)
+ 			    if (!strcmp(colorTable[a].string, buf))
+ 				break;
+@@ -701,7 +704,7 @@
+     while (!notstart && notend) {
+ 	/* there starts an extension */
+ 	ext = (XpmExtension *)
+-	    XpmRealloc(exts, (num + 1) * sizeof(XpmExtension));
++	    XpmRealloc(exts, (num + 1) * sizeof(XpmExtension)); /* can the loop be forced to iterate often enough to make "(num + 1) * sizeof(XpmExtension)" wrapping? */
+ 	if (!ext) {
+ 	    XpmFree(string);
+ 	    XpmFreeExtensions(exts, num);
+@@ -738,7 +741,7 @@
+ 	while ((notstart = strncmp("XPMEXT", string, 6))
+ 	       && (notend = strncmp("XPMENDEXT", string, 9))) {
+ 	    sp = (char **)
+-		XpmRealloc(ext->lines, (nlines + 1) * sizeof(char *));
++		XpmRealloc(ext->lines, (nlines + 1) * sizeof(char *)); /* can we iterate enough for a wrapping? */
+ 	    if (!sp) {
+ 		XpmFree(string);
+ 		ext->nlines = nlines;
+diff -r -u motif.0194/lib/Xm/XpmRdFToBuf.c motif/lib/Xm/XpmRdFToBuf.c
+--- motif.0194/lib/Xm/XpmRdFToBuf.c	2000-05-10 16:02:01.000000000 +0200
++++ motif/lib/Xm/XpmRdFToBuf.c	2005-01-18 19:37:46.233353496 +0100
+@@ -38,6 +38,8 @@
+  * HeDu (hedu@cul-ipn.uni-kiel.de) 4/94
+  */
+ 
++/* October 2004, source code review by Thomas Biege <thomas@suse.de> */
++
+ #include "XpmI.h"
+ #include <sys/stat.h>
+ #if !defined(FOR_MSW) && !defined(WIN32)
+@@ -59,7 +61,8 @@
+     char *filename;
+     char **buffer_return;
+ {
+-    int fd, fcheck, len;
++    int fd, fcheck;
++    off_t len;
+     char *ptr;
+     struct stat stats;
+     FILE *fp;
+@@ -83,7 +86,7 @@
+ 	close(fd);
+ 	return XpmOpenFailed;
+     }
+-    len = (int) stats.st_size;
++    len = stats.st_size;
+     ptr = (char *) XpmMalloc(len + 1);
+     if (!ptr) {
+ 	fclose(fp);
+diff -r -u motif.0194/lib/Xm/XpmRdFToI.c motif/lib/Xm/XpmRdFToI.c
+--- motif.0194/lib/Xm/XpmRdFToI.c	2000-05-10 16:02:01.000000000 +0200
++++ motif/lib/Xm/XpmRdFToI.c	2005-01-18 19:39:36.739554000 +0100
+@@ -33,6 +33,8 @@
+ *  Developed by Arnaud Le Hors                                                *
+ \*****************************************************************************/
+ 
++/* October 2004, source code review by Thomas Biege <thomas@suse.de> */
++
+ #include "XpmI.h"
+ #include <sys/stat.h>
+ #include <sys/param.h>
+@@ -122,6 +124,12 @@
+ /*
+  * open the given file to be read as an xpmData which is returned.
+  */
++#ifndef NO_ZPIPE
++	FILE *s_popen(char *cmd, const char *type);
++#else
++#	define s_popen popen
++#endif
++
+ static int
+ OpenReadFile(filename, mdata)
+     char *filename;
+@@ -139,17 +147,21 @@
+ 	mdata->type = XPMFILE;
+     } else {
+ #ifndef NO_ZPIPE
+-	int len = strlen(filename);
++	size_t len = strlen(filename);
++
++	if(len == 0                        ||
++	   filename[len-1] == '/')
++		return(XpmOpenFailed);
+ 	if ((len > 2) && !strcmp(".Z", filename + (len - 2))) {
+ 	    mdata->type = XPMPIPE;
+-	    sprintf(buf, "uncompress -c \"%s\"", filename);
+-	    if (!(mdata->stream.file = popen(buf, "r")))
++	    snprintf(buf, sizeof(buf), "uncompress -c \"%s\"", filename);
++	    if (!(mdata->stream.file = s_popen(buf, "r")))
+ 		return (XpmOpenFailed);
+ 
+ 	} else if ((len > 3) && !strcmp(".gz", filename + (len - 3))) {
+ 	    mdata->type = XPMPIPE;
+-	    sprintf(buf, "gunzip -qc \"%s\"", filename);
+-	    if (!(mdata->stream.file = popen(buf, "r")))
++	    snprintf(buf, sizeof(buf), "gunzip -qc \"%s\"", filename);
++	    if (!(mdata->stream.file = s_popen(buf, "r")))
+ 		return (XpmOpenFailed);
+ 
+ 	} else {
+@@ -157,19 +169,19 @@
+ 	    if (!(compressfile = (char *) XpmMalloc(len + 4)))
+ 		return (XpmNoMemory);
+ 
+-	    sprintf(compressfile, "%s.Z", filename);
++	    snprintf(compressfile, len+4, "%s.Z", filename);
+ 	    if (!stat(compressfile, &status)) {
+-		sprintf(buf, "uncompress -c \"%s\"", compressfile);
+-		if (!(mdata->stream.file = popen(buf, "r"))) {
++		snprintf(buf, sizeof(buf), "uncompress -c \"%s\"", compressfile);
++		if (!(mdata->stream.file = s_popen(buf, "r"))) {
+ 		    XpmFree(compressfile);
+ 		    return (XpmOpenFailed);
+ 		}
+ 		mdata->type = XPMPIPE;
+ 	    } else {
+-		sprintf(compressfile, "%s.gz", filename);
++		snprintf(compressfile, len+4, "%s.gz", filename);
+ 		if (!stat(compressfile, &status)) {
+-		    sprintf(buf, "gunzip -c \"%s\"", compressfile);
+-		    if (!(mdata->stream.file = popen(buf, "r"))) {
++		    snprintf(buf, sizeof(buf), "gunzip -c \"%s\"", compressfile);
++		    if (!(mdata->stream.file = s_popen(buf, "r"))) {
+ 			XpmFree(compressfile);
+ 			return (XpmOpenFailed);
+ 		    }
+@@ -211,7 +223,7 @@
+ 	break;
+ #ifndef NO_ZPIPE
+     case XPMPIPE:
+-	pclose(mdata->stream.file);
++	fclose(mdata->stream.file);
+ 	break;
+ #endif
+     }
+diff -r -u motif.0194/lib/Xm/Xpmscan.c motif/lib/Xm/Xpmscan.c
+--- motif.0194/lib/Xm/Xpmscan.c	2005-01-18 15:34:38.000000000 +0100
++++ motif/lib/Xm/Xpmscan.c	2005-01-18 20:15:18.509955408 +0100
+@@ -38,6 +38,8 @@
+  * HeDu (hedu@cul-ipn.uni-kiel.de) 4/94
+  */
+ 
++/* October 2004, source code review by Thomas Biege <thomas@suse.de> */
++
+ #include "XpmI.h"
+ 
+ #define MAXPRINTABLE 92			/* number of printable ascii chars
+@@ -158,12 +160,10 @@
+ /* function call in case of error, frees only locally allocated variables */
+ #undef RETURN
+ #define RETURN(status) \
+-{ \
+-    if (pmap.pixelindex) XpmFree(pmap.pixelindex); \
+-    if (pmap.pixels) XpmFree(pmap.pixels); \
+-    if (colorTable) xpmFreeColorTable(colorTable, pmap.ncolors); \
+-    return(status); \
+-}
++do { \
++        ErrorStatus = status; \
++        goto error; \
++} while(0)
+ 
+ /*
+  * This function scans the given image and stores the found informations in
+@@ -221,15 +221,15 @@
+     else
+ 	cpp = 0;
+ 
+-    if ((height > 0 && width >= SIZE_MAX / height) ||
+-	width * height >= SIZE_MAX / sizeof(unsigned int))
++    if ((height > 0 && width >= UINT_MAX / height) ||
++	width * height >= UINT_MAX / sizeof(unsigned int))
+ 	RETURN(XpmNoMemory);
+     pmap.pixelindex =
+ 	(unsigned int *) XpmCalloc(width * height, sizeof(unsigned int));
+     if (!pmap.pixelindex)
+ 	RETURN(XpmNoMemory);
+ 
+-    if (pmap.size >= SIZE_MAX / sizeof(Pixel)) 
++    if (pmap.size >= UINT_MAX / sizeof(Pixel)) 
+ 	RETURN(XpmNoMemory);
+ 
+     pmap.pixels = (Pixel *) XpmMalloc(sizeof(Pixel) * pmap.size);
+@@ -286,7 +286,7 @@
+      * get rgb values and a string of char, and possibly a name for each
+      * color
+      */
+-    if (pmap.ncolors >= SIZE_MAX / sizeof(XpmColor))
++    if (pmap.ncolors >= UINT_MAX / sizeof(XpmColor))
+ 	RETURN(XpmNoMemory);
+     colorTable = (XpmColor *) XpmCalloc(pmap.ncolors, sizeof(XpmColor));
+     if (!colorTable)
+@@ -335,7 +335,7 @@
+ 
+     /* first get a character string */
+     a = 0;
+-    if (cpp >= SIZE_MAX - 1)
++    if (cpp >= UINT_MAX - 1)
+ 	return (XpmNoMemory);
+     if (!(s = color->string = (char *) XpmMalloc(cpp + 1)))
+ 	return (XpmNoMemory);
+@@ -428,7 +428,7 @@
+     }
+ 
+     /* first get character strings and rgb values */
+-    if (ncolors >= SIZE_MAX / sizeof(XColor) || cpp >= SIZE_MAX - 1)
++    if (ncolors >= UINT_MAX / sizeof(XColor) || cpp >= UINT_MAX - 1)
+ 	return (XpmNoMemory);
+     xcolors = (XColor *) XpmMalloc(sizeof(XColor) * ncolors);
+     if (!xcolors)
+@@ -585,7 +585,7 @@
+     char *dst;
+     unsigned int *iptr;
+     char *data;
+-    int x, y, i;
++    unsigned int x, y, i;
+     int bits, depth, ibu, ibpp, offset;
+     unsigned long lbt;
+     Pixel pixel, px;
+@@ -687,7 +687,7 @@
+     unsigned char *addr;
+     unsigned char *data;
+     unsigned int *iptr;
+-    int x, y;
++    unsigned int x, y;
+     unsigned long lbt;
+     Pixel pixel;
+     int depth;
+@@ -752,7 +752,7 @@
+     unsigned char *addr;
+     unsigned char *data;
+     unsigned int *iptr;
+-    int x, y;
++    unsigned int x, y;
+     unsigned long lbt;
+     Pixel pixel;
+     int depth;
+@@ -797,7 +797,7 @@
+ {
+     unsigned int *iptr;
+     unsigned char *data;
+-    int x, y;
++    unsigned int x, y;
+     unsigned long lbt;
+     Pixel pixel;
+     int depth;
+@@ -830,7 +830,7 @@
+     int (*storeFunc) ();
+ {
+     unsigned int *iptr;
+-    int x, y;
++    unsigned int x, y;
+     char *data;
+     Pixel pixel;
+     int xoff, yoff, offset, bpl;
+Nur in motif/lib/Xm: Xpms_popen.c.
+diff -r -u motif.0194/lib/Xm/XpmWrFFrBuf.c motif/lib/Xm/XpmWrFFrBuf.c
+--- motif.0194/lib/Xm/XpmWrFFrBuf.c	2000-05-10 16:02:01.000000000 +0200
++++ motif/lib/Xm/XpmWrFFrBuf.c	2005-01-18 19:40:49.472496912 +0100
+@@ -33,6 +33,8 @@
+ *  Developed by Arnaud Le Hors                                                *
+ \*****************************************************************************/
+ 
++/* October 2004, source code review by Thomas Biege <thomas@suse.de> */
++
+ #include "XpmI.h"
+ 
+ int
+@@ -50,7 +52,7 @@
+     fcheck = fwrite(buffer, len, 1, fp);
+     fclose(fp);
+     if (fcheck != 1)
+-	return XpmOpenFailed;
++	return XpmOpenFailed; /* maybe use a better return value */
+ 
+     return XpmSuccess;
+ }
+diff -r -u motif.0194/lib/Xm/XpmWrFFrI.c motif/lib/Xm/XpmWrFFrI.c
+--- motif.0194/lib/Xm/XpmWrFFrI.c	2005-01-18 15:34:38.000000000 +0100
++++ motif/lib/Xm/XpmWrFFrI.c	2005-01-18 19:43:51.397840056 +0100
+@@ -33,6 +33,8 @@
+ *  Developed by Arnaud Le Hors                                                *
+ \*****************************************************************************/
+ 
++/* October 2004, source code review by Thomas Biege <thomas@suse.de> */
++
+ #include "XpmI.h"
+ #if !defined(NO_ZPIPE) && defined(WIN32)
+ # define popen _popen
+@@ -93,7 +95,7 @@
+     XpmInfo *info;
+ {
+     xpmData mdata;
+-    char *name, *dot, *s, new_name[BUFSIZ];
++    char *name, *dot, *s, new_name[BUFSIZ] = {0};
+     int ErrorStatus;
+ 
+     /* open file to write */
+@@ -112,7 +114,8 @@
+ #endif
+ 	/* let's try to make a valid C syntax name */
+ 	if (dot = index(name, '.')) {
+-	    strcpy(new_name, name);
++  		strncpy(new_name, name, sizeof(new_name));
++  + 	    	new_name[sizeof(new_name)-1] = 0;
+ 	    /* change '.' to '_' */
+ 	    name = s = new_name;
+ 	    while (dot = index(s, '.')) {
+@@ -122,7 +125,8 @@
+ 	}
+ 	if (dot = index(name, '-')) {
+ 	    if (name != new_name) {
+-		strcpy(new_name, name);
++		strncpy(new_name, name, sizeof(new_name));
++		new_name[sizeof(new_name)-1] = 0;
+ 		name = new_name;
+ 	    }
+ 	    /* change '-' to '_' */
+@@ -239,7 +243,7 @@
+     unsigned int x, y, h;
+ 
+     h = height - 1;
+-    if (cpp != 0 && width >= (SIZE_MAX - 3)/cpp) 
++    if (cpp != 0 && width >= (UINT_MAX - 3)/cpp)
+ 	return XpmNoMemory;    
+     p = buf = (char *) XpmMalloc(width * cpp + 3);
+     if (!buf)
+@@ -291,6 +295,11 @@
+ /*
+  * open the given file to be written as an xpmData which is returned
+  */
++#ifndef NO_ZPIPE
++	FILE *s_popen(char *cmd, const char *type);
++#else
++#	define s_popen popen
++#endif
+ static int
+ OpenWriteFile(filename, mdata)
+     char *filename;
+@@ -306,16 +315,23 @@
+ 	mdata->type = XPMFILE;
+     } else {
+ #ifndef NO_ZPIPE
+-	int len = strlen(filename);
++	size_t len = strlen(filename);
++
++	if(len == 0                        ||
++	   filename[0] == '/'              ||
++	   strstr(filename, "../") != NULL ||
++	   filename[len-1] == '/')
++		return(XpmOpenFailed);
++
+ 	if (len > 2 && !strcmp(".Z", filename + (len - 2))) {
+-	    sprintf(buf, "compress > \"%s\"", filename);
+-	    if (!(mdata->stream.file = popen(buf, "w")))
++	    snprintf(buf, sizeof(buf), "compress > \"%s\"", filename);
++	    if (!(mdata->stream.file = s_popen(buf, "w")))
+ 		return (XpmOpenFailed);
+ 
+ 	    mdata->type = XPMPIPE;
+ 	} else if (len > 3 && !strcmp(".gz", filename + (len - 3))) {
+-	    sprintf(buf, "gzip -q > \"%s\"", filename);
+-	    if (!(mdata->stream.file = popen(buf, "w")))
++	    snprintf(buf, sizeof(buf), "gzip -q > \"%s\"", filename);
++	    if (!(mdata->stream.file = s_popen(buf, "w")))
+ 		return (XpmOpenFailed);
+ 
+ 	    mdata->type = XPMPIPE;
+@@ -346,7 +362,7 @@
+ 	break;
+ #ifndef NO_ZPIPE
+     case XPMPIPE:
+-	pclose(mdata->stream.file);
++	fclose(mdata->stream.file);
+ 	break;
+ #endif
+     }
