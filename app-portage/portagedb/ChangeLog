@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/portagedb
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portagedb/ChangeLog,v 1.1 2005/01/02 19:57:57 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portagedb/ChangeLog,v 1.2 2005/01/02 20:35:09 blubb Exp $
+
+  02 Jan 2005; Simon Stelling <blubb@gentoo.org> portagedb-0.2.0.ebuild:
+  Typo in append-flag*s*
 
 *portagedb-0.2.0 (02 Jan 2005)
 

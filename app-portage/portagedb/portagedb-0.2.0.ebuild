@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portagedb/portagedb-0.2.0.ebuild,v 1.1 2005/01/02 19:57:57 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portagedb/portagedb-0.2.0.ebuild,v 1.2 2005/01/02 20:35:09 blubb Exp $
 
 inherit flag-o-matic
 
@@ -26,7 +26,7 @@ src_compile() {
 	autoconf
 
 	if use debug; then
-		append-flag -g	./configure || die "configure failed"
+		append-flags -g	./configure || die "configure failed"
 	else
 		./configure || die "configure failed"
 	fi
