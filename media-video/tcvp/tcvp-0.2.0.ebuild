@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/tcvp/tcvp-0.2.0.ebuild,v 1.1 2004/06/04 10:39:12 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/tcvp/tcvp-0.2.0.ebuild,v 1.2 2004/06/05 10:31:55 dholm Exp $
 
 DESCRIPTION="TCVP is a modular player and encoder/transcoder for music and video."
 HOMEPAGE="http://tcvp.sourceforge.net"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="OpenSoftware"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 IUSE="alsa cdr dvd encode ffmpeg oggvorbis oss static"
 
