@@ -1,8 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.50.16.ebuild,v 1.1 2003/10/26 21:04:51 mholzer Exp $
-
-IUSE="cdr gnome"
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.50.16.ebuild,v 1.2 2004/02/11 01:30:38 vapier Exp $
 
 inherit perl-module
 
@@ -14,11 +12,13 @@ MY_URL="dist"
 
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="dvd::rip is a graphical frontend for transcode"
-SRC_URI="http://www.exit1.org/${PN}/${MY_URL}/${MY_P}.tar.gz"
 HOMEPAGE="http://www.exit1.org/dvdrip/"
-SLOT="0"
+SRC_URI="http://www.exit1.org/${PN}/${MY_URL}/${MY_P}.tar.gz"
+
 LICENSE="Artistic GPL-2"
-KEYWORDS="~x86 ~ppc"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~amd64"
+IUSE="cdr gnome"
 
 DEPEND=" gnome? ( gnome-extra/gtkhtml )
 	cdr? ( >=media-video/vcdimager-0.7.19
@@ -30,7 +30,6 @@ DEPEND=" gnome? ( gnome-extra/gtkhtml )
 	dev-perl/gtk-perl
 	dev-perl/Storable
 	dev-perl/Event"
-
 RDEPEND=">=net-analyzer/fping-2.3
 	>=media-sound/ogmtools-0.972
 	>=media-video/mjpegtools-1.6.0
