@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmltex/xmltex-1.0.ebuild,v 1.2 2001/03/19 21:00:02 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmltex/xmltex-1.0.ebuild,v 1.3 2001/04/11 18:12:38 achim Exp $
 
 #P=
 A=base.tar.gz
@@ -27,7 +27,7 @@ src_install () {
     try make DESTDIR=${D} install
     dodir /usr/bin
     cd ${D}/usr/bin
-    ln -sf /usr/bin/virtex xmltext
+    ln -sf /usr/bin/virtex xmltex
     ln -sf /usr/bin/pdfvirtex pdfxmltex
 }
 
