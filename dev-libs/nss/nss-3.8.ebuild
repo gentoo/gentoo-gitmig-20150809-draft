@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.8.ebuild,v 1.26 2004/07/07 18:35:32 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.8.ebuild,v 1.27 2004/07/24 07:04:14 liquidx Exp $
 
 inherit eutils
 
@@ -22,14 +22,14 @@ src_unpack() {
 	unpack ${A}
 
 	# hack nspr paths
-	echo 'INCLUDES += -I/usr/include/nspr -I$(DIST)/include/dbm' \
+	echo 'INCLUDES += -I${ROOT}usr/include/nspr -I$(DIST)/include/dbm' \
 		>> ${S}/mozilla/security/coreconf/headers.mk || die "failed to append include"
 
-	sed -e 's:$(DIST)/lib/$(LIB_PREFIX)plc4:/usr/lib/$(LIB_PREFIX)plc4:' \
-		-e 's:$(DIST)/lib/$(LIB_PREFIX)plds4:/usr/lib/$(LIB_PREFIX)plds4:' \
+	sed -e 's:$(DIST)/lib/$(LIB_PREFIX)plc4:${ROOT}usr/lib/$(LIB_PREFIX)plc4:' \
+		-e 's:$(DIST)/lib/$(LIB_PREFIX)plds4:${ROOT}usr/lib/$(LIB_PREFIX)plds4:' \
 		-i ${S}/mozilla/security/nss/lib/ckfw/builtins/Makefile
-	sed -e 's:$(DIST)/lib/$(LIB_PREFIX)plc4:/usr/lib/$(LIB_PREFIX)plc4:' \
-		-e 's:$(DIST)/lib/$(LIB_PREFIX)plds4:/usr/lib/$(LIB_PREFIX)plds4:' \
+	sed -e 's:$(DIST)/lib/$(LIB_PREFIX)plc4:${ROOT}usr/lib/$(LIB_PREFIX)plc4:' \
+		-e 's:$(DIST)/lib/$(LIB_PREFIX)plds4:${ROOT}usr/lib/$(LIB_PREFIX)plds4:' \
 		-i ${S}/mozilla/security/nss/lib/fortcrypt/swfort/pkcs11/Makefile
 
 	# modify install path
