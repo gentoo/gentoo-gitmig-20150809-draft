@@ -1,5 +1,5 @@
 #!/bin/sh
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/files/ipac-ng.cron,v 1.1 2003/09/29 02:16:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/files/ipac-ng.cron,v 1.2 2004/07/18 03:47:05 dragonheart Exp $
 
 FI=/usr/sbin/fetchipac
 
