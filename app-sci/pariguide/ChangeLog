@@ -1,0 +1,10 @@
+# ChangeLog for app-sci/pariguide
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-sci/pariguide/ChangeLog,v 1.1 2002/12/15 23:07:28 george Exp $
+
+*pariguide-0.43a.ebuild (15 ‰≈À 2002)
+
+  15 Dec 2002; George Shapovalov <george@gentoo.org> ChangeLog, pariguide-0.43a.ebuild, files/digest-pariguide-0.43a :
+  initial release
+  PariGUIde, a GUI for the math. program Pari-GP
+  ebuild submitted by 
