@@ -1,12 +1,14 @@
---- acconfig.h
-+++ acconfig.h
+diff -ur nautilus-2.8.0/acconfig.h nautilus-2.8.0-newpatch/acconfig.h
+--- nautilus-2.8.0/acconfig.h	2003-10-14 23:28:25.000000000 +0800
++++ nautilus-2.8.0-newpatch/acconfig.h	2004-11-11 17:02:43.170940312 +0800
 @@ -23,3 +23,4 @@
  #define HAVE_GTK_MULTIHEAD /* needed for egg-screen-exec functions */
  #undef HAVE_STARTUP_NOTIFICATION
  #undef HAVE_EXIF
 +#undef HAVE_OLD_EXIF
---- components/image_properties/nautilus-image-properties-view.c
-+++ components/image_properties/nautilus-image-properties-view.c
+diff -ur nautilus-2.8.0/components/image_properties/nautilus-image-properties-view.c nautilus-2.8.0-newpatch/components/image_properties/nautilus-image-properties-view.c
+--- nautilus-2.8.0/components/image_properties/nautilus-image-properties-view.c	2004-03-09 19:23:37.000000000 +0800
++++ nautilus-2.8.0-newpatch/components/image_properties/nautilus-image-properties-view.c	2004-11-11 17:02:43.171940160 +0800
 @@ -124,13 +124,20 @@
  exif_content_callback (ExifContent *content, gpointer data)
  {
@@ -28,9 +30,10 @@
  	if (attribute->value != NULL) {
  		attribute->found = TRUE;
  	}
---- configure.in
-+++ configure.in
-@@ -228,12 +227,17 @@
+diff -ur nautilus-2.8.0/configure.in nautilus-2.8.0-newpatch/configure.in
+--- nautilus-2.8.0/configure.in	2004-09-13 16:45:08.000000000 +0800
++++ nautilus-2.8.0-newpatch/configure.in	2004-11-11 17:03:13.662304920 +0800
+@@ -228,11 +228,19 @@
  
  AC_MSG_CHECKING(for libExif)
  
@@ -39,18 +42,19 @@
 -  AC_DEFINE(HAVE_EXIF,1)
 -  AC_SUBST(EXIF_CFLAGS)
 -  AC_SUBST(EXIF_LIBS)
--fi
-+PKG_CHECK_MODULES(EXIF, libexif > 0.5.12, [
-+    AC_DEFINE(HAVE_EXIF, 1, [Define to 1 if you have EXIF library (libexif).])
-+    AC_SUBST(EXIF_CFLAGS)
-+    AC_SUBST(EXIF_LIBS)
-+  ], [
-+    PKG_CHECK_MODULES(EXIF, libexif = 0.5.12, [
-+      AC_DEFINE(HAVE_EXIF, 1)
-+      AC_DEFINE(HAVE_OLD_EXIF, 1, [Define to 1 if your EXIF library has old API.])
-+      AC_SUBST(EXIF_CFLAGS)
-+      AC_SUBST(EXIF_LIBS)
-+])])
++PKG_CHECK_MODULES(EXIF, libexif > 0.5.12, have_new_exif=yes, have_new_exif=no)
++if test "x$have_new_exif" = "xyes"; then
++	AC_DEFINE(HAVE_EXIF,1)
++	AC_SUBST(EXIF_CFLAGS)
++	AC_SUBST(EXIF_LIBS)
++else
++	PKG_CHECK_MODULES(EXIF, libexif = 0.5.12, have_old_exif=yes, have_old_exif=no)
++	if test "x$have_old_exif" = "xyes"; then
++		AC_DEFINE(HAVE_EXIF,1)
++		AC_DEFINE(HAVE_OLD_EXIF,1)
++		AC_SUBST(EXIF_CFLAGS)
++		AC_SUBST(EXIF_LIBS)
++	fi
+ fi
  
  dnl ==========================================================================
- 
