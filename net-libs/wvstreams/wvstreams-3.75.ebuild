@@ -1,5 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-3.75.ebuild,v 1.2 2004/04/04 09:20:31 mr_bones_ Exp $
+
+inherit eutils
 
 DESCRIPTION="A network programming library in C++"
 HOMEPAGE="http://open.nit.ca/wiki/?page=WvStreams"
@@ -15,8 +18,7 @@ RDEPEND="gtk? ( >=x11-libs/gtk+-2.2.0 )
 	oggvorbis? ( >=media-libs/libogg-1.0
 		>=media-libs/libvorbis-1.0
 		speex? ( <=media-libs/speex-1.0 ) )
-	:
-		( speex? ( >=media-libs/speex-1.0 ) )
+	!oggvorbis? ( speex? ( >=media-libs/speex-1.0 ) )
 	fam? ( >=app-admin/fam-2.7.0 )
 	>=sys-libs/db-3
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )

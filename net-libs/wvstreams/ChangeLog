@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/wvstreams
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.13 2004/04/03 14:05:24 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.14 2004/04/04 09:20:31 mr_bones_ Exp $
+
+  04 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> wvstreams-3.75.ebuild:
+  header fix; inherit eutils for epatch; don't use deprecated ? : use syntax
 
 *wvstreams-3.75 (03 Apr 2004)
 
