@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.7-r1.ebuild,v 1.3 2004/06/02 14:15:38 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.7-r1.ebuild,v 1.4 2004/06/07 07:48:05 mr_bones_ Exp $
 
 inherit fixheadtails eutils
 
@@ -38,6 +38,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}-nobuggy-X.patch #30089
 	epatch ${FILESDIR}/${PV}-libcaca.patch #40224
 	epatch ${FILESDIR}/${PV}-gcc34.patch #48947
+	epatch ${FILESDIR}/${PV}-joystick.patch #52833
 
 	ht_fix_file configure.in
 
