@@ -1,9 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27.ebuild,v 1.4 2005/02/01 23:49:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27.ebuild,v 1.5 2005/02/03 23:22:24 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
+export CBUILD=${CBUILD:-${CHOST}}
 export CTARGET=${CTARGET:-${CHOST}}
 if [[ ${CTARGET} == ${CHOST} ]] ; then
 	if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
@@ -42,14 +43,17 @@ KEYWORDS="~arm ~mips ~ppc ~sh ~sparc ~x86"
 IUSE="alsa build debug hardened ipv6 static" # nls is not supported yet
 RESTRICT="nostrip"
 
-DEPEND="sys-devel/gcc"
+DEPEND="sys-devel/gcc
+	virtual/os-headers"
 RDEPEND=""
 PROVIDE="virtual/libc"
 
 S=${WORKDIR}/${MY_P}
 
 alt_kprefix() {
-	if [[ ${CTARGET} == ${CHOST} ]] || [[ -n ${UCLIBC_AND_GLIBC} ]] ; then
+	if [[ ${CBUILD} == ${CHOST} && ${CTARGET} == ${CHOST} ]] \
+	   || [[ -n ${UCLIBC_AND_GLIBC} ]]
+	then
 		echo /usr
 	else
 		echo /usr/${CTARGET}
@@ -109,7 +113,7 @@ src_unpack() {
 	einfo "Runtime Prefix: $(alt_rprefix)"
 	einfo "Kernel Prefix:  $(alt_kprefix)"
 	einfo "Devel Prefix:   $(alt_prefix)"
-	einfo "CBUILD:         ${CBUILD:-${CHOST}}"
+	einfo "CBUILD:         ${CBUILD}"
 	einfo "CHOST:          ${CHOST}"
 	einfo "CTARGET:        ${CTARGET}"
 	einfo "CPU:            ${UCLIBC_CPU}"
@@ -156,7 +160,7 @@ src_unpack() {
 		echo "DODEBUG=y" >> .config
 	fi
 
-	sed -i -e 's:^ARCH_.*_ENDIAN=y::' .config
+	sed -i -e '/ARCH_.*_ENDIAN/d' .config
 	echo "ARCH_$(tc-endian | tr [a-z] [A-Z])_ENDIAN=y" >> .config
 
 	for def in DO_C99_MATH UCLIBC_HAS_{RPC,CTYPE_CHECKED,WCHAR,HEXADECIMAL_FLOATS,GLIBC_CUSTOM_PRINTF,FOPEN_EXCLUSIVE_MODE,GLIBC_CUSTOM_STREAMS,PRINTF_M_SPEC,FTW} ; do
@@ -223,13 +227,13 @@ src_unpack() {
 		-e "s:RUNTIME_PREFIX=.*:RUNTIME_PREFIX=\"$(alt_rprefix)\":" \
 		.config
 
-	make -s oldconfig > /dev/null || die "could not make oldconfig"
+	yes "" 2> /dev/null | make -s oldconfig > /dev/null || die "could not make oldconfig"
 
 	chmod +x extra/scripts/relative_path.sh
 
 	cp .config myconfig
 
-	emake clean >/dev/null || die "could not clean"
+	emake clean > /dev/null || die "could not clean"
 }
 
 src_compile() {
