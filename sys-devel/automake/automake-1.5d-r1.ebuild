@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.5d-r1.ebuild,v 1.2 2002/03/26 01:20:27 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.5d-r1.ebuild,v 1.3 2002/04/07 13:46:10 gbevin Exp $
 
 OLD_PV=1.4-p5
 OLD_P=${PN}-${OLD_PV}
@@ -15,6 +15,7 @@ HOMEPAGE="http://www.gnu.org/software/automake/automake.html"
 DEPEND="sys-devel/perl
 	>=sys-devel/autoconf-2.52-r1"
 		
+SLOT="1.5"
 
 src_compile() {
 

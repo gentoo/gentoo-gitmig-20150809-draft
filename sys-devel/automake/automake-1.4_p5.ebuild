@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.4_p5.ebuild,v 1.3 2002/03/21 08:20:17 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.4_p5.ebuild,v 1.4 2002/04/07 13:46:10 gbevin Exp $
 
 MY_P=${P/_/-}
 S=${WORKDIR}/${MY_P}
@@ -10,6 +10,8 @@ SRC_URI="ftp://prep.ai.mit.edu/gnu/automake/${MY_P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/automake/automake.html"
 
 DEPEND="sys-devel/perl"
+
+SLOT="1.4"
 
 src_compile() {
 	./configure --prefix=/usr \

@@ -11,6 +11,8 @@ HOMEPAGE="http://www.gnu.org/software/automake/automake.html"
 
 DEPEND="sys-devel/perl"
 
+SLOT="1.5"
+
 src_compile() {
     try ./configure --prefix=/usr --infodir=/usr/share/info --host=${CHOST}
     try make ${MAKEOPTS}
