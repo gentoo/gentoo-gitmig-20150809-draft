@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xvid
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.29 2004/10/03 20:33:57 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.30 2004/10/04 14:31:47 phosphan Exp $
+
+  04 Oct 2004; Patrick Kursawe <phosphan@gentoo.org> xvid-1.0.2.ebuild:
+  Fixing typo which broke patching (bug #62939).
 
   03 Oct 2004; Danny van Dyk <kugelfang@gentoo.org> xvid-1.0.2.ebuild:
   Marked ~amd64 and added 64bit patch again. BUG #62939.
