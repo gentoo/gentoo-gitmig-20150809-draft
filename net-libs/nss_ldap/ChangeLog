@@ -1,12 +1,15 @@
 # ChangeLog for net-libs/nss_ldap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/ChangeLog,v 1.11 2003/06/16 18:56:12 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nss_ldap/ChangeLog,v 1.12 2003/06/18 02:01:14 woodchip Exp $
+
+  17 Jun 2003; Donny Davies <woodchip@gentoo.org> nss_ldap-207-r1.ebuild:
+  Add a few more doc files.
 
 *nss_ldap-207-r1 (16 Jun 2003)
 
   16 Jun 2003; Donny Davies <woodchip@gentoo.org> nss_ldap-207-r1.ebuild:
   Install the library in /lib.  This revision also properly installs the
-  configuration file;  /etc/ldap.conf != /etc/openldap/ldap.conf!!!!!
+  configuration file;  /etc/ldap.conf != /etc/openldap/ldap.conf!
 
 *nss_ldap-207 (28 May 2003)
 
