@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/metacity
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.81 2004/12/11 08:36:21 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.82 2004/12/19 05:58:09 obz Exp $
+
+  19 Dec 2004; Mike Gardiner <obz@gentoo.org> metacity-2.8.6-r1.ebuild,
+  -metacity-2.8.6.ebuild:
+  Keyworded x86 and ppc for GNOME 2.8.1
 
 *metacity-2.8.8 (11 Dec 2004)
 
