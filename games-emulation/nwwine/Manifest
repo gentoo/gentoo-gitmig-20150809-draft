@@ -1,14 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a98c1c828d497139998cbc1cf9eaccb5 ChangeLog 1434
 MD5 6525c48ba09d08599432ea6c299e52f4 metadata.xml 354
-MD5 ffe0a7155071d0c09f9262a40210854f nwwine-20020703.ebuild 3165
-MD5 98f7f6eab0f5cab1dfc79be4cb177ad5 nwwine-20030618.ebuild 3321
-MD5 0295cc8701ea325a92772e5fad8f3172 nwwine-20030709.ebuild 3390
-MD5 b30122a6070d54ee8f566148dad83609 nwwine-20030911.ebuild 3252
-MD5 cec34c252d6533f2810215a52b8da2ff files/digest-nwwine-20020703 68
-MD5 da29c2497d9360990085f8b6d248f9a5 files/digest-nwwine-20030618 293
-MD5 f1568a96d35c3362af94ca9370e9a24d files/digest-nwwine-20030709 226
-MD5 af8da46a0e51578ff1e18e399141d628 files/nwwine-20020703-fake_windows.tar.bz2 500
-MD5 0244316187b4ee80cb791d238f1a67a6 files/nwwine-20020703-misc.tar.bz2 4603
-MD5 0126ece21ada0109c07ad248a8048ba4 files/digest-nwwine-20030911 226
+MD5 d50fd5c1e55d7af9c8e66262e2c15193 nwwine-20030911.ebuild 3231
 MD5 1534218bc3f9c926d04b92007be4a16b files/wine-alsa.patch 86329
+MD5 0126ece21ada0109c07ad248a8048ba4 files/digest-nwwine-20030911 226
 MD5 1668a758aa2007cb99a773b3c5c844c9 files/winearts-kdecvs-fix.patch 325
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBhHPdHTu7gpaalycRApYvAKCE3n6xyjFuwGGWYZzPpSA8XAGUkwCfV6t+
+x+w/6FbUuz34Xm9t839zZsc=
+=bv6B
+-----END PGP SIGNATURE-----
