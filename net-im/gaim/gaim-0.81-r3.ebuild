@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.81-r3.ebuild,v 1.1 2004/08/23 19:29:12 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.81-r3.ebuild,v 1.2 2004/08/23 19:33:17 rizzo Exp $
 
 inherit flag-o-matic eutils gcc
 use debug && inherit debug
@@ -71,7 +71,7 @@ src_unpack() {
 	epatch ${FILESDIR}/gaim-0.82cvs-gtkprefs-fix.patch
 	cd ${S}/src/protocols/msn/
 	epatch ${FILESDIR}/gaim-0.81_msn-slp.diff
-	cd ${S}/src/protocols/novell
+	cd ${S}/src/protocols/novell/
 	epatch ${FILESDIR}/gaim-0.82cvs-novell.diff
 }
 

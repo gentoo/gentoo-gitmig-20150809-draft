@@ -3,7 +3,7 @@ MD5 aa2bd01ed3b53a41dd82677362df7309 gaim-0.80.ebuild 3677
 MD5 19b3cafbbe380403d46cccc45a984b80 metadata.xml 481
 MD5 ce948aa070cbdedd0e166613b097fb6e gaim-0.81-r1.ebuild 3525
 MD5 c21c8b11e93aaa2494e8d22cd918d8e0 gaim-0.81-r2.ebuild 3623
-MD5 09789cbaff38edc2b4618a8e166df8b9 gaim-0.81-r3.ebuild 3703
+MD5 ed634d8e63bd8930a700ea858bf68d06 gaim-0.81-r3.ebuild 3704
 MD5 ad7e4af1d9de1d8a8c2b24530b6469e5 files/gaim-0.81_msn-slp.diff 779
 MD5 afc682711efed5d09a9229bd06a7a13b files/gaim-0.76-xinput.patch 644
 MD5 ed679fa262748c5626af4d9dcfd4b278 files/digest-gaim-0.81-r1 63
