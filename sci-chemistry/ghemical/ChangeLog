@@ -1,0 +1,41 @@
+# ChangeLog for app-sci/ghemical
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/ghemical/ChangeLog,v 1.1 2004/12/24 16:36:01 ribosome Exp $
+
+*ghemical-1.00 (24 Dec 2004)
+
+  24 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +ghemical-1.00.ebuild:
+  Moved from app-sci/ghemical to sci-chemistry/ghemical.
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> ghemical-0.90.ebuild,
+  ghemical-1.00.ebuild, files/ghemical-0.90-gentoo.patch:
+  Added IUSE, moved to sed -i
+
+*ghemical-1.00 (13 Feb 2003)
+
+  13 Jan 2003; foser <foser@gentoo.org> ghemical-1.00.ebuild :
+  Corrected deps, removed gtkglext dep.
+
+  12 Jan 2003; Matthew Turk <satai@gentoo.org> :
+  Fix stupid typos.
+
+  03 Jan 2003; Matthew Turk <satai@gentoo.org> :
+  Clean up some more depends.
+
+  30 Dec 2002; Matthew Turk <satai@gentoo.org> :
+  Fixed #10784 by adding gtkglext as DEPEND.
+
+  05 Dec 2002; Hannes Mehnert <hannes@gentoo.org> ghemical-1.00.ebuild:
+  version bump
+
+  02 Nov 2002; Hannes Mehnert <hannes@gentoo.org> ghemical-0.90.ebuild:
+  marked stable for x86
+
+  31 Oct 2002; Hannes Mehnert <hannes@gentoo.org> ghemical-0.90.ebuild:
+  added --enable-mpqc (since mpqc is now in portage)
+
+*ghemical-0.90.ebuild (28 Oct 2002)
+
+  28 Oct 2002; Hannes Mehnert <hannes@gentoo.org> ghemical-0.90.ebuild,
+  ChangeLog: Initial ebuild.
