@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.0.3.ebuild,v 1.9 2004/06/24 22:55:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.0.3.ebuild,v 1.10 2004/08/12 11:52:20 mr_bones_ Exp $
 
 inherit flag-o-matic
 
@@ -23,7 +23,12 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	sed -i '/TARGET_ARCH=/s:=.*:=:' ${S}/configure || die 'couldnt remove pentium cpu'
+	# remove the prototype for malloc for gcc34 (bug #58279)
+	sed -i \
+		-e '/*malloc/d' \
+		-e '/TARGET_ARCH=/s:=.*:=:' \
+		${S}/configure \
+		|| die 'couldnt remove pentium cpu'
 }
 
 src_compile() {
@@ -31,28 +36,29 @@ src_compile() {
 	econf \
 		--enable-linux \
 		--enable-vga \
-		`use_enable static` \
-		`use_enable static staticprog` \
-		`use_enable mmx` \
-		`use_enable sse` \
-		`use_enable oss ossdigi` \
-		`use_enable oss ossmidi` \
-		`use_enable alsa alsadigi` \
-		`use_enable alsa alsamidi` \
-		`use_enable esd esddigi` \
-		`use_enable arts artsdigi` \
-		`use_with X x` \
-		`use_enable X xwin-shm` \
-		`use_enable X xwin-vidmode` \
-		`use_enable X xwin-dga` \
-		`use_enable X xwin-dga2` \
-		`use_enable fbcon` \
-		`use_enable svga svgalib` \
+		$(use_enable static) \
+		$(use_enable static staticprog) \
+		$(use_enable mmx) \
+		$(use_enable sse) \
+		$(use_enable oss ossdigi) \
+		$(use_enable oss ossmidi) \
+		$(use_enable alsa alsadigi) \
+		$(use_enable alsa alsamidi) \
+		$(use_enable esd esddigi) \
+		$(use_enable arts artsdigi) \
+		$(use_with X x) \
+		$(use_enable X xwin-shm) \
+		$(use_enable X xwin-vidmode) \
+		$(use_enable X xwin-dga) \
+		$(use_enable X xwin-dga2) \
+		$(use_enable fbcon) \
+		$(use_enable svga svgalib) \
 		|| die
 
-	cp makefile{,.orig}
-	sed -e "/CFLAGS =.*/s:$: ${CFLAGS}:" \
-		makefile.orig > makefile
+	sed -i \
+		-e "/CFLAGS =.*/s:$: ${CFLAGS}:" \
+		makefile \
+		|| die "sed makefile failed"
 	emake -j1 || die	# parallel fails
 
 	if use tetex ; then
