@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20040117-r1.ebuild,v 1.2 2004/02/12 11:05:57 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20040117-r1.ebuild,v 1.3 2004/02/24 18:01:57 vapier Exp $
 
 IUSE="nls pic build nptl"
 
@@ -66,9 +66,8 @@ LICENSE="LGPL-2"
 DEPEND=">=sys-devel/gcc-3.2.3-r1
 	nptl? ( >=sys-devel/gcc-3.3.1-r1 )
 	>=sys-devel/binutils-2.14.90.0.6-r1
-	hppa? ( >=sys-kernel/hppa-headers-2.4.21_p13 ) : ( virtual/os-headers )
+	virtual/os-headers
 	nls? ( sys-devel/gettext )"
-
 RDEPEND="virtual/os-headers
 	sys-apps/baselayout
 	nls? ( sys-devel/gettext )"
