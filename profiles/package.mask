@@ -291,4 +291,3 @@ net-misc/gkrellmwireless
 
 #Should be tested
 =net-mail/teapop-0.3.3
-media-gfx/pixieplus
