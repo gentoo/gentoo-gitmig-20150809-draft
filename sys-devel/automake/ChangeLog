@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/automake
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.14 2002/10/20 09:06:18 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.15 2002/11/23 12:58:59 doctomoe Exp $
+
+  23 Nov 2002; Olivier Reisch <doctomoe@gentoo.org> automake-1.6.3.ebuild:
+  Added ppc keyword. 1.6.3 will be needed for KDE 3.1
 
 automake-1.6.3 (20 Oct 2002)
 
