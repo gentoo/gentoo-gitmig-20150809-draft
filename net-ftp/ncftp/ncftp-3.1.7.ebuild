@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ncftp-3.1.7.ebuild,v 1.8 2004/04/13 13:51:29 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ncftp-3.1.7.ebuild,v 1.9 2004/04/26 00:02:46 randy Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.ncftp.com/ncftp/${P}-src.tar.bz2
 
 LICENSE="Clarified-Artistic"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 s390"
 IUSE="ipv6"
 
 DEPEND=">=sys-libs/ncurses-5.2"
