@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.80.0.ebuild,v 1.5 2004/01/19 07:48:09 torbenh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/jack-audio-connection-kit-0.80.0.ebuild,v 1.6 2004/02/01 12:59:26 ferringb Exp $
 
 inherit flag-o-matic
 
@@ -25,7 +25,12 @@ DEPEND=">=media-libs/alsa-lib-0.9.1
 
 PROVIDE="virtual/jack"
 
-
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-alsalib-fix.patch || \
+		die "Alsalib-1.0 patch failed"
+}
 
 src_compile() {
 	local myconf

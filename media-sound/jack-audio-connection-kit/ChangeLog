@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/jack-audio-connection-kit
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/ChangeLog,v 1.22 2003/12/18 22:07:29 mholzer Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jack-audio-connection-kit/ChangeLog,v 1.23 2004/02/01 12:59:26 ferringb Exp $
+
+  01 Feb 2004; Brian Harring <ferringb@gentoo.org>
+  jack-audio-connection-kit-0.80.0.ebuild,
+  files/jack-audio-connection-kit-0.80.0-alsalib-fix.patch:
+  Alsalib-1.0 compilation fix (39095)
 
   18 Dec 2003; Martin Holzer <mholzer@gentoo.org>
   jack-audio-connection-kit-0.75.0.ebuild,
