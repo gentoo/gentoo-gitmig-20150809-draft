@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-2.0.0.44.ebuild,v 1.10 2005/02/07 22:28:41 fserb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyopengl/pyopengl-2.0.0.44.ebuild,v 1.11 2005/02/08 12:03:36 fserb Exp $
 
 MY_P=${P/pyopengl/PyOpenGL}
 S=${WORKDIR}/${MY_P}
@@ -34,8 +34,8 @@ src_unpack() {
 		TCLLIBRARY="'\/usr\/$(get_libdir)\/tcl${tclv}'"
 		TKEQ="True"
 	else
-		TKLIBRARY="/usr/lib/"
-		TCLLIBRARY="/usr/lib/"
+		TKLIBRARY="'/usr/lib/'"
+		TCLLIBRARY="'/usr/lib/'"
 		TKEQ="None"
 	fi
 	SEDED="""
