@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-base.eclass,v 1.3 2003/07/25 10:42:59 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-base.eclass,v 1.4 2003/08/03 19:26:02 stuart Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Stuart Herbert <stuart@gentoo.org>
@@ -55,9 +55,15 @@ php-ext-base_buildinilist () {
 	done
 	
 	if [[ ${PHPINIFILELIST} = "" ]]; then
-		msg="No PHP ini files found for this extension"
-		eerror ${msg}
-		die ${msg}
+		# backwards support for the old location
+
+		if [ -f /etc/php4/php.ini ] ; then
+			PHPINIFILELIST="etc/php4/php.ini"
+		else
+			msg="No PHP ini files found for this extension"
+			eerror ${msg}
+			die ${msg}
+		fi
 	fi
 
 #	einfo "php.ini files found in $PHPINIFILELIST"
@@ -65,7 +71,6 @@ php-ext-base_buildinilist () {
 
 php-ext-base_src_install() {
 	if [ "$PHP_EXT_INI" = "yes" ] ; then
-		php-ext-base_buildinilist
 		php-ext-base_addextension "${PHP_EXT_NAME}.so"
 	fi
 }
@@ -126,4 +131,7 @@ php-ext-base_addtoinifiles () {
 	done
 }
 	
+# now, we build the INI file list for use in this class
+
+php-ext-base_buildinilist
 

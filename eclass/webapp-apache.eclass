@@ -1,11 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp-apache.eclass,v 1.1 2003/08/03 19:20:11 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp-apache.eclass,v 1.2 2003/08/03 19:26:02 stuart Exp $
 #
 # Author: Stuart Herbert <stuart@gentoo.org>
 # 
 # Based on discussions held on gentoo-dev mailing list, and a bug report
-# contributed by <??> in bug #14870, and robbat2's mod_php ebuild
+# contributed by Ian Leitch <port001@w0r.mine.nu> in bug #14870, 
+# and robbat2's mod_php ebuild
 
 ECLASS=webapp-apache
 INHERITED="$INHERITED $ECLASS"
