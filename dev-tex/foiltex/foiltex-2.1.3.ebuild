@@ -1,7 +1,7 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Felix Kurth <felix@fkurth.de>
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/foiltex/foiltex-2.1.3.ebuild,v 1.2 2003/06/12 20:43:18 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/foiltex/foiltex-2.1.3.ebuild,v 1.3 2004/04/13 13:17:15 kugelfang Exp $
 
 inherit latex-package
 
@@ -12,7 +12,7 @@ HOMEPAGE="ftp://ftp.dante.de/tex-archive/help/Catalogue/entries/foiltex.html"
 LICENSE="as-is"
 #for License details see /usr/share/doc/latex-foiltex-2.1.3/foiltex.ins
 SLOT="0"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc ~amd64"
 
 
 src_install () {
