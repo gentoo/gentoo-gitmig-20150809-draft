@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.6.ebuild,v 1.1 2003/04/27 19:28:48 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.6.ebuild,v 1.2 2003/04/28 18:43:54 azarah Exp $
 
 # This ebuild needs to be merged "live".  You can't simply make a package
 # of it and merge it later.
@@ -333,6 +333,7 @@ src_install() {
 	do
 		[ -f ${foo} ] && doman ${foo}
     done
+	docinto /
 	dodoc ${FILESDIR}/copyright
 	dodoc ${S}/ChangeLog
 
