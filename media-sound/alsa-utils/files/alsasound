@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound,v 1.16 2004/08/30 03:29:39 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound,v 1.17 2004/10/30 01:42:11 eradicator Exp $
 #
 # Gentoo users: add this script to 'boot' run level.
 # ==================================================
@@ -27,13 +27,16 @@
 #  along with this program; if not, write to the Free Software
 #  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA
 
-#	Edited to support Linux kernel 2.5 and above as well as 2.4
-#	John Mylchreest <johnm@gentoo.org>
-#	July 29, 2003 
-
+# ChangeLog:
+#
+# 2003.07.29 - John Mylchreest <johnm@gentoo.org>
+# Edited to support Linux kernel 2.5 and above as well as 2.4
+#
+# 2004.06.02 - Jeremy Huddleston <eradicator@gentoo.org>
 # Rewritten for better support for built-in drivers 
-# Jeremy Huddleston <eradicator@gentoo.org>
-# 2004.06.02
+#
+# 2004.10.29 - Jeremy Huddleston <eradicator@gentoo.org>
+# Cleaned up to work better for mixed builtin/module systems
 
 alsactl=/usr/sbin/alsactl
 asoundcfg=/etc/asound.state
@@ -42,68 +45,74 @@ alsascrdir=/etc/alsa.d
 
 depend() {
 	need bootmisc localmount
-	before modules
-	after isapnp
-	provide alsa-modules
+	after modules isapnp coldplug hotplug
 }
 
 load_modules() {
+	# List of drivers for each card.
 	DRIVERS="$(modprobe -c | grep -E "^[[:space:]]*alias[[:space:]]+snd-card-[[:digit:]]" | awk '{print $3}')"
+
+	# Fall back on the automated aliases if we don't have ALSA configured properly...
+	if [ -z "${DRIVERS}" ] && ! ([ -d /proc/asound ] && [ -z "$(grep ' no soundcards ' /proc/asound/cards)" ]); then
+		ewarn "Could not detect custom ALSA settings.  Loading all detected alsa drivers."
+		DRIVERS="$(modprobe -c | grep pci: |  awk '{ print $3 }' | grep snd.* | sort | uniq)"
+		[ -z "${DRIVERS}" ] && eerror "Unable to find any ALSA drivers. Have you compiled alsa-drivers correctly?"
+	fi
 
 	if modprobe -c | grep -q "snd.*oss$" ; then
 		# Test for use of OSS
-		einfo "Using ALSA OSS emulation"
 		OSS="$(modprobe -l | grep "snd.*oss" | sed -e "s:\/.*\/::" -e "s:\..*::")"
 		# Add oss modules to list
 		for i in ${OSS}
 		do
-			DRIVERS="${i} ${DRIVERS}"
+			DRIVERS="${DRIVERS} ${i}"
 		done
 	fi
-		
-	# Fall back on the automated aliases if we don't have ALSA configured properly...
-	if [ -z "${DRIVERS}" ]; then
-		ewarn "Could not detect custom ALSA settings.  Loading all detected alsa drivers."
-		DRIVERS="$(modprobe -c | grep pci: |  awk '{ print $3 }' | grep snd.* | sort | uniq)"
-	fi
 
-	[ -z "${DRIVERS}" ] && eerror "Unable to find any ALSA drivers. Have you compiled alsa-drivers correctly?"
+	# We want to ensure snd-seq is loaded as it is needed for things like timidity even if
+	# we don't use a real sequencer.
+	DRIVERS="${DRIVERS} $(modprobe -l | grep "snd.seq\." | sed -e "s:\/.*\/::" -e "s:\..*::")"
 
 	for DRIVER in ${DRIVERS}
 	do
 		if [ ! "${DRIVER}" = off ] &&
 		   [ -z `cut -d' ' -f1 /proc/modules | egrep "^${DRIVER}\$"` ] &&
 		   [ -z `cut -d' ' -f1 /proc/modules | egrep "^${DRIVER//-/_}\$"` ]; then
-			einfo "Loading: ${DRIVER}"
+			ebegin "  Loading: ${DRIVER}"
 			/sbin/modprobe ${DRIVER}
+			eend $?
 		fi
 	done
 		
 	sleep 1
 
 	if [ -f /proc/asound/seq/drivers ] ; then
-		# We want to ensure snd-seq is loaded as it is needed for things like timidity even if
-		# we don't use a real sequencer.
-		SEQUENCERS="snd-seq $(awk -F, '$2~/^empty$/ {print $1}' /proc/asound/seq/drivers)"
+		SEQUENCERS="$(awk -F, '$2~/^empty$/ {print $1}' /proc/asound/seq/drivers)"
 		for SEQUENCER in ${SEQUENCERS}
 		do
 			if [ -z `cut -d' ' -f1 /proc/modules | egrep "^${SEQUENCER}\$"` ] &&
 			   [ -z `cut -d' ' -f1 /proc/modules | egrep "^${SEQUENCER//-/_}\$"` ]; then
-				einfo "Loading: ${SEQUENCER}"
-				[ -n "${SEQUENCER}" ] && /sbin/modprobe ${SEQUENCER}
+				ebegin "  Loading: ${SEQUENCER}"
+				/sbin/modprobe ${SEQUENCER}
+				eend $?
 			fi
 		done
 	fi
 		
-	einfo "Running card-dependent scripts"
 	for DRIVER in ${DRIVERS}
 	do
 		TMP=${DRIVER##snd-}
 		TMP=${TMP##snd_}
-		[ -x "${alsascrdir}/${TMP}" ] && ${alsascrdir}/${TMP}
+		if [ -x "${alsascrdir}/${TMP}" ]; then
+			ebegin "  Running: ${alsascrdir}/${TMP}"
+			${alsascrdir}/${TMP}
+			eend $?
+		fi
 	done
 		
-	[ ! -d /proc/asound ] && eerror "ERROR: Failed to load necessary drivers"
+	if [ ! -d /proc/asound ] || [ ! -z "$(grep ' no soundcards ' /proc/asound/cards)" ]; then
+		eerror "ERROR: Failed to load necessary drivers"
+	fi
 }
 
 unload_modules() {
@@ -170,11 +179,12 @@ save_mixer() {
 }
 
 start() {
-	if [ -d /proc/asound ] && [ -z "$(grep ' no soundcards ' /proc/asound/cards)" ] ; then
-		ebegin "ALSA Detected"
+	ebegin "Loading ALSA drivers"
+	if load_modules; then
+		eend 0
 	else
-		ebegin "Loading ALSA drivers"
-		load_modules
+		eend 1
+		return 1
 	fi
 	
 	einfo "Restoring Mixer Levels"
@@ -190,19 +200,22 @@ stop() {
 	
 	ebegin "Unloading ALSA"
 	terminate
+	eend 0
 
 	if [ "${SAVE_ON_STOP}" = "yes" ]; then
 		einfo "Storing ALSA Mixer Levels"
-		if ! save_mixer; then
+		if save_mixer; then
+			eend 0
+		else
 			eend 1
 		fi
 	fi
 
 	einfo "Unloading modules"
-	if ! unload_modules; then
+	if unload_modules; then
+		eend 0
+	else
 		eend 1
 	fi
-
-	eend 0
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.71 2004/10/08 19:09:01 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.72 2004/10/30 01:42:11 eradicator Exp $
+
+  29 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> files/alsasound:
+  init script cleaned up to work better with mixed module/builtin systems.
+  Also works properly if some modules are already loaded.
 
   08 Oct 2004; Guy Martin <gmsoft@gentoo.org> alsa-utils-1.0.6.ebuild:
   Marked stable on hppa.
