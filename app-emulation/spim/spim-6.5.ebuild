@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/spim-6.5.ebuild,v 1.4 2003/07/01 21:58:48 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/spim-6.5.ebuild,v 1.5 2003/10/18 21:10:33 brandy Exp $
 
 IUSE="X"
 
@@ -22,7 +22,7 @@ src_compile() {
 	    Makefile > Makefile.comp
 	cp Makefile.comp Makefile
 
-	einfo "Making comsole spim"
+	einfo "Making console spim"
 	emake spim || die "make spim failed"
 	if [ `use X` ]; then
 		einfo "Making xspim"
