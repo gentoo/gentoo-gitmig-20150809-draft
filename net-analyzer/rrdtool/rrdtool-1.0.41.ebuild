@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.41.ebuild,v 1.4 2003/04/24 16:19:59 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.41.ebuild,v 1.5 2003/05/30 13:27:25 seemant Exp $
 
 inherit perl-module
 
@@ -25,7 +25,7 @@ pkg_setup() {
 	use tcltk && \
 		TCLVER=`awk -F\' '/TCL_VERSION/ {print $2}' /usr/lib/tclConfig.sh`
 
-	use perl && perl-post_pkg_setup
+	use perl && perl-module_pkg_setup
 }
 
 src_compile() {
@@ -65,7 +65,7 @@ src_install() {
 	doins contrib/*
 
 	if [ `use perl` ] ; then
-		perl-post_perlinfo
+		perlinfo
 		mytargets="site-perl-install"
 		perl-module_src_install || die
 	fi
@@ -83,17 +83,17 @@ src_install() {
 
 
 pkg_preinst() {
-	use perl && perl-post_pkg_preinst
+	use perl && perl-module_pkg_preinst
 }
 
 pkg_postinst() {
-	use perl && perl-post_pkg_postinst
+	use perl && perl-module_pkg_postinst
 }
 
 pkg_prerm() {	
-	use perl && perl-post_pkg_prerm
+	use perl && perl-module_pkg_prerm
 }
 
 pkg_postrm() {
-	use perl && perl-post_pkg_postrm
+	use perl && perl-module_pkg_postrm
 }
