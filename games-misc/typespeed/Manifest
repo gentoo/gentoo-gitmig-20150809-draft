@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a922e7c261e02b91a9aa6a4aa431c480 typespeed-0.4.4.ebuild 2090
-MD5 6d796b061ed1c1337ef157a5f74dab35 metadata.xml 403
-MD5 48ddfa316630c8efd3381dc1aa4ec21d ChangeLog 469
-MD5 09490e2cc962578e3cf60ee6d9893fe9 files/digest-typespeed-0.4.4 66
+MD5 6c9e1e8b6b900824f6663bab4dd5d6de ChangeLog 687
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 d0e1d0a85b960aaef7df58956931a5ac typespeed-0.4.4-r1.ebuild 1415
 MD5 9818f759fab13af7dcafc9ad329e1af9 files/01_all_statedir-fix.patch 2095
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB64/smdTrptrqvGERAofYAJ9e1m9ehHaIQ+6SxOK1fo+fQV+O9QCfcgp9
-5UIpd27sBQpyHkrqDanTAm8=
-=LpRe
------END PGP SIGNATURE-----
+MD5 09490e2cc962578e3cf60ee6d9893fe9 files/digest-typespeed-0.4.4-r1 66
