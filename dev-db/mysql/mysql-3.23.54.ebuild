@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.54.ebuild,v 1.1 2002/12/13 19:11:32 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.54.ebuild,v 1.2 2002/12/15 11:58:45 bjb Exp $
 
 IUSE="static readline innodb berkdb tcpd ssl"
 
@@ -25,7 +25,7 @@ DEPEND="readline? ( >=sys-libs/readline-4.1 )
 	sys-devel/perl
 	sys-apps/procps"
 
-KEYWORDS="x86 ~sparc ~alpha"
+KEYWORDS="x86 ~sparc alpha"
 
 # HEY!
 # the benchmark stuff in /usr/share/mysql/sql-bench and

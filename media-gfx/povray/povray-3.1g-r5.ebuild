@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.1g-r5.ebuild,v 1.9 2002/10/20 18:48:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.1g-r5.ebuild,v 1.10 2002/12/15 11:58:45 bjb Exp $
 
 IUSE="icc X svga"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.povray.org/"
 
 SLOT="0"
 LICENSE="povlegal-3.1g"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc alpha"
 
 DEPEND="media-libs/libpng
 	sys-libs/zlib

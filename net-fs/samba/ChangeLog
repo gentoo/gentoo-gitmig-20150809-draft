@@ -1,8 +1,11 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.23 2002/12/07 06:53:37 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.24 2002/12/15 11:58:45 bjb Exp $
 
 *samba-2.2.7 (Nov 20 2002)
+
+  15 Dec 2002; Bjoern Brauel <bjb@gentoo.org> samba-2.2.7.ebuild :
+  Add alpha to KEYWORDS
 
   07 Dec 2002; Jack Morgan <jmorgan@gentoo.org> samba-2.2.5-r1.ebuild, 
   samba-2.2.6-r2.ebuild, samba-2.2.7.ebuild :

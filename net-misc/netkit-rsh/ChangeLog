@@ -1,10 +1,13 @@
 # ChangeLog for net-misc/netkit-rsh
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/ChangeLog,v 1.6 2002/12/13 11:00:13 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/ChangeLog,v 1.7 2002/12/15 11:58:45 bjb Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *netkit-rsh-0.17-r3 (25 Oct 2002)
+
+  15 Dec 2002; Bjoern Brauel <bjb@gentoo.org> netkit-rsh-0.17-r3.ebuild :
+  Add alpha to KEYWORDS
 
   25 Oct 2002; Donny Davies <woodchip@gentoo.org> : Add xinetd.d/ configs; #9443.
 

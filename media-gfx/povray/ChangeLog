@@ -1,8 +1,11 @@
 # ChangeLog for media-gfx/povray
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.12 2002/10/05 19:25:54 cybersystem Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.13 2002/12/15 11:58:45 bjb Exp $
 
 *povray-3.5a (05 Oct 2002)
+
+  15 Dec 2002; Bjoern Brauel <bjb@gentoo.org> povray-3.5a.ebuild :
+  Add alpha to KEYWORDS
 
   05 Oct 2002; Sascha Schwabbauer <cybersystem@gentoo.org> povray-3.5a.ebuild :
 

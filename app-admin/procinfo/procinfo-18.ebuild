@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/procinfo/procinfo-18.ebuild,v 1.11 2002/12/09 04:17:35 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/procinfo/procinfo-18.ebuild,v 1.12 2002/12/15 11:58:45 bjb Exp $
 
 DESCRIPTION="A utility to prettyprint /proc/*"
 SRC_URI="ftp://ftp.cistron.nl/pub/people/svm/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="ftp://ftp.cistron.nl/pub/people/svm/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc alpha"
 
 DEPEND="sys-libs/ncurses"
 RDEPEND="sys-devel/perl"

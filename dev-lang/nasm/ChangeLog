@@ -1,10 +1,13 @@
 # ChangeLog for dev-lang/nasm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.12 2002/12/13 10:56:26 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/ChangeLog,v 1.13 2002/12/15 11:58:45 bjb Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *nasm-0.98.34 (08 Sep 2002)
+
+  15 Dec 2002; Bjoern Brauel <bjb@gentoo.org> nasm-0.98.34.ebuild :
+  Add -alpha to KEYWORDS
   
   08 Sep 2002; Doug Goldstein <cardoe@gentoo.org> nasm-0.98.34.ebuild, nasm-0.98.34-remove-doc-target.diff :
   Updated to new version and creates new patches

@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/chkrootkit-0.37.ebuild,v 1.7 2002/12/09 04:17:34 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chkrootkit/chkrootkit-0.37.ebuild,v 1.8 2002/12/15 11:58:45 bjb Exp $
 
 DESCRIPTION="chkrootkit is a tool to locally check for signs of a rootkit."
 SRC_URI="ftp://ftp.pangeia.com.br/pub/seg/pac/${P}.tar.gz"
 HOMEPAGE="http://www.chkrootkit.org/"
 
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc alpha"
 LICENSE="AMS"
 SLOT="0"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.43-r1.ebuild,v 1.3 2002/11/29 15:38:01 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.43-r1.ebuild,v 1.4 2002/12/15 11:58:45 bjb Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.apache.org/"
 S="${WORKDIR}/httpd-${PV}"
 SRC_URI="http://www.apache.org/dist/httpd/httpd-${PV}.tar.gz
 	mirror://gentoo/${P}-gentoo.diff.bz2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~alpha"
 LICENSE="Apache-1.1"
 SLOT="2"
 

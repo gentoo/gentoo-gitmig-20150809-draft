@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/DirectFB
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.18 2002/12/13 10:56:29 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/ChangeLog,v 1.19 2002/12/15 11:58:45 bjb Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
@@ -12,6 +12,9 @@
   Version bump.
 
 *DirectFB-0.9.13-r1 (30 Oct 2002)
+
+  15 Dec 2002; Bjoern Brauel <bjb@gentoo.org> DirectFB-0.9.13-r1.ebuild :
+  Add alpha to KEYWORDS
 
   30 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
   Added a gcc3.x fix for libflash and a library linkage fix for libpng-1.2.5

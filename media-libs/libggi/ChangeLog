@@ -1,10 +1,13 @@
 # ChangeLog for media-libs/libggi
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/ChangeLog,v 1.6 2002/12/13 10:59:35 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libggi/ChangeLog,v 1.7 2002/12/15 11:58:45 bjb Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *libggi-2.0.1 (05 Jun 2002)
+
+  15 Dec 2002; Bjoern Brauel <bjb@gentoo.org> libggi-2.0.1.ebuild :
+  Add alpha to KEYWORDS
 
   23 Jul 2002; Mark Guertin <gerk@gentoo.org> :
   Added ppc to keywords

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.1.3.ebuild,v 1.2 2002/11/08 09:06:34 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3blaster/mp3blaster-3.1.3.ebuild,v 1.3 2002/12/15 11:58:45 bjb Exp $
 
 IUSE="oggvorbis mysql"
 
@@ -14,7 +14,7 @@ DEPEND=">=sys-libs/ncurses-5.2
 #	nas? ( >=media-libs/nas-1.4.1 )
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~alpha"
 SRC_URI="http://www.stack.nl/~brama/mp3blaster/src/${P}.tar.gz"
 S=${WORKDIR}/${P}
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-0.96-r2.ebuild,v 1.7 2002/12/09 04:33:20 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-0.96-r2.ebuild,v 1.8 2002/12/15 11:58:45 bjb Exp $
 
 IUSE="gpm ssl"
 
@@ -11,7 +11,7 @@ DESCRIPTION="A console-based web browser"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc alpha"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	gpm? ( >=sys-libs/gpm-1.19.3 )

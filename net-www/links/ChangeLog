@@ -1,10 +1,13 @@
 # ChangeLog for net-www/links
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/ChangeLog,v 1.19 2002/12/13 11:00:27 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/ChangeLog,v 1.20 2002/12/15 11:58:45 bjb Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *links-2.1_pre6 (04 Nov 2002)
+
+  15 Dec 2002; Bjoern Brauel <bjb@gentoo.org> links-2.1_pre6.ebuild :
+  Add alpha to KEYWORDS
 
   04 Nov 2002; Seemant Kulleen <seemant@gentoo.org> links-2.1_pre6.ebuild
   files/digest-links-2.1_pre6 :

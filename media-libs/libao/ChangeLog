@@ -1,10 +1,13 @@
 # ChangeLog for media-libs/libao
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.4 2002/12/13 10:59:35 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.5 2002/12/15 11:58:45 bjb Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *libao-0.8.3 (19 Jul 2002)
+
+  15 Dec 2002; Bjoern Brauel <bjb@gentoo.org> libao-0.8.3.ebuild :
+  Add alpha to KEYWORDS
 
   19 Jul 2002; Brandon Low <lostlogic@gentoo.org> libao-0.8.3.ebuild:
 
