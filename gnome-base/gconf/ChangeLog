@@ -1,6 +1,9 @@
 # ChangeLog for gnome-base/gconf
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.75 2004/07/05 17:53:47 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.76 2004/07/11 18:58:47 spider Exp $
+
+  11 Jul 2004; <spider@gentoo.org> :
+  versionbump, removed gcc 2.95.x patch as it doesn't apply anymore.
 
   05 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> gconf-2.6.0.ebuild:
   Stable on alpha.
