@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/kochi-substitute
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/kochi-substitute/ChangeLog,v 1.13 2004/05/24 16:18:24 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/kochi-substitute/ChangeLog,v 1.14 2004/05/31 15:31:09 foser Exp $
+
+*kochi-substitute-20030809-r3 (31 May 2004)
+
+  31 May 2004; foser <foser@gentoo.org> kochi-substitute-20030809-r3.ebuild:
+  Use font eclass
 
   25 May 2004; Mamoru KOMACHI <usata@gentoo.org>
   -kochi-substitute-20030809-r1.ebuild:
