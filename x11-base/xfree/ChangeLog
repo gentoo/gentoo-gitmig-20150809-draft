@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.32 2002/07/17 19:04:21 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.33 2002/07/29 03:51:11 azarah Exp $
+
+  29 Jul 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  Fixes for gcc-3.x and also fixes that should resolve bug #5613.
 
   17 Jul 2002; Martin Schlemmer <azarah@gentoo.org> :
 
