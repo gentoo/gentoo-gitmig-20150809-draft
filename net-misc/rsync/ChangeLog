@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/rsync
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.38 2004/04/12 00:33:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.39 2004/04/19 08:29:09 mholzer Exp $
+
+*rsync-2.6.0-r1 (19 Apr 2004)
+
+  19 Apr 2004; Martin Holzer <mholzer@gentoo.org> rsync-2.6.0-r1.ebuild:
+  adding acl patch. closes 48214
 
   11 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> rsync-2.6.0.ebuild:
   add patch from Sascha Silbe to fix use static linking (bug #47361)
