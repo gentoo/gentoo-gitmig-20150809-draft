@@ -1,4 +1,4 @@
-MD5 7ae7ed064fe206802a09774ea09c360f ChangeLog 7021
+MD5 202468cdb2e2a202dbd4ca4259da1d75 ChangeLog 7109
 MD5 12b9a2c28624e5232b2e8016de89ef77 lftp-2.6.10.ebuild 1356
 MD5 08697d1f660f48d0b1d4e9737dc05c9f lftp-2.6.11.ebuild 1361
 MD5 1bdf3137a1e0eeaebcf552971e2cf92c lftp-3.0.1.ebuild 1360
@@ -6,7 +6,7 @@ MD5 b8efc5c19381f538632f196250ef98a0 lftp-3.0.2.ebuild 1360
 MD5 62c0e6cceacfea18a633fdcb972e3bdc lftp-3.0.3.ebuild 1360
 MD5 ae4f2395450bab2986bf13ce4c537ff2 lftp-3.0.5.ebuild 1578
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 c12f3c499bf2071bb3012edcb9a429e8 lftp-3.0.6.ebuild 1631
+MD5 b0df3960c9f3b36d6439d4bab8972076 lftp-3.0.6.ebuild 1632
 MD5 0000187694fd92f30e8669216ab2d7a4 files/digest-lftp-2.6.10 65
 MD5 d640fa2520c5748b7ebfba9feeae8f91 files/digest-lftp-2.6.11 65
 MD5 f3f81fdb1ae3f2163617edfdffc9229a files/digest-lftp-3.0.1 64
