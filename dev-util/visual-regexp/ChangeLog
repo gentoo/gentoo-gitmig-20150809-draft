@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/visual-regexp
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/visual-regexp/ChangeLog,v 1.1 2004/05/02 17:50:36 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/visual-regexp/ChangeLog,v 1.2 2004/05/03 10:17:43 dholm Exp $
+
+  03 May 2004; David Holm <dholm@gentoo.org> visual-regexp-3.0.ebuild:
+  Added to ~ppc.
 
 *visual-regexp-3.0 (02 May 2004)
 
