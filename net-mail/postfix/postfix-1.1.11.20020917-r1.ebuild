@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11.20020917-r1.ebuild,v 1.2 2002/12/09 04:33:14 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-1.1.11.20020917-r1.ebuild,v 1.3 2003/02/10 19:49:28 edolnx Exp $
 
 IUSE="ssl mysql sasl ldap ipv6"
 
@@ -17,7 +17,7 @@ SRC_URI="ftp://ftp.aet.tu-cottbus.de/pub/postfix_tls/related/postfix/${PF_P}.tar
 
 LICENSE="IPL-1"
 SLOT="0"
-KEYWORDS="~x86 ~sparc  ~ppc"
+KEYWORDS="~x86 ~sparc ~alpha ~ppc"
 
 PROVIDE="virtual/mta
 	 virtual/mda"
