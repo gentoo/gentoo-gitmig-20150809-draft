@@ -1,0 +1,11 @@
+--- ufed-0.35.orig/ufed.pl
++++ ufed-0.35/ufed.pl
+@@ -753,7 +753,7 @@
+       for $i (@use_mask_flags) 
+          { 
+             next if($i eq "");
+-            $final_list =~ s!-?$i!!g; 
++            $final_list =~ s!-?\b$i\b!!g; 
+             #$All .= "$i ";            
+          }
+       #$All .= "\n";            

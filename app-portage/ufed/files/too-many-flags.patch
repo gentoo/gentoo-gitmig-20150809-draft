@@ -1,0 +1,23 @@
+--- ufed-0.35.orig/ufed.pl
++++ ufed-0.35/ufed.pl
+@@ -294,8 +294,8 @@
+    # stderr output was not messing up the parsing of the results anymore.
+    # Thanks Brandon
+ 
+-   $rc = system('exec 3> ' . $tempfile . ' ; DIALOG_ESC="" dialog '
+-               . ' --output-fd 3'
++   my ($cmdfh, $cmdfile) = tempfile('dialog.XXXXXX', DIR => '/tmp', UNLINK => 1);
++   print $cmdfh  ' --output-fd 3'
+                . ' --separate-output '
+                . '--no-shadow --backtitle "Gentoo Linux USE flags editor '
+                . $version . '" '
+@@ -305,7 +305,8 @@
+                . $lines . ' '
+                . $cols . ' '
+                . ($lines - 8) . ' '
+-               . $items) >> 8;
++               . $items;
++   $rc = system('exec 3> ' . $tempfile . ' ; DIALOG_ESC="" dialog --file ' . $cmdfile) >> 8;
+    if ($rc == 1)
+       { return 'CANCEL'; }
+    if ($rc == 255)

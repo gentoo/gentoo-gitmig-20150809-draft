@@ -1,6 +1,19 @@
 # ChangeLog for app-portage/ufed
 # Copyright 2003-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ChangeLog,v 1.8 2004/10/06 16:21:56 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ChangeLog,v 1.9 2004/11/22 05:44:27 genone Exp $
+
+*ufed-0.35-r2 (22 Nov 2004)
+
+  22 Nov 2004; Marius Mauch <genone@gentoo.org>
+  +files/disabled-defaults.patch, +files/no-partial-match.patch,
+  +files/quote-escape.patch, +files/too-many-flags.patch,
+  +ufed-0.35-r2.ebuild:
+  new revision featuring patches for bugs #59004, #68691, #68924 and #70776.
+  Thanks to fn_x@hotmail.com for providing those. Also made the dialog
+  dep more strict.Ideally this should be bumped straight to stable as some of
+  these bugs prevent ufed from working at all, but the new dialog dep isn't yet
+  stable on all archs. ufed-0.35 will probably be the last version of the perl
+  version, it will likely be replaced by a python version soon.
 
 *ufed-0.35-r1 (06 Oct 2004)
 

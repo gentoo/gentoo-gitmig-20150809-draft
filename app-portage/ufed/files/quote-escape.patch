@@ -1,0 +1,18 @@
+--- ufed-0.35.orig/ufed.pl
++++ ufed-0.35/ufed.pl
+@@ -163,6 +163,7 @@
+       $line =~ s/[\r\n]//g;
+       ($flag, $desc) =  ($line =~ m!([^ ]+)[ \t]+-[ \t]+(.*)!); # match the "flag - description" syntax
+       $desc =~ s/[ \t]+/ /;
++      $desc =~ s/[\\\$"]/\\$&/g;
+       $flag =~ s/[ \t]+//;
+ 
+       # now eliminate comments, blanklines and internal flags
+@@ -209,6 +210,7 @@
+       $line =~ s/[\r\n]//g;
+       ($package, $flag, $desc) =  ($line =~ m!([^:]*):([^ ]+)[ \t]+-[ \t]+(.*)!); # match the "package:flag - description" syntax
+       $desc =~ s/[ \t]+/ /;
++      $desc =~ s/[\\\$"]/\\$&/g;
+       $flag =~ s/[ \t]+//;
+       
+       # now eliminate comments, blanklines

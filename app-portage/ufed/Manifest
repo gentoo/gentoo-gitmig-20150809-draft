@@ -4,16 +4,22 @@ Hash: SHA1
 MD5 5b239a48dca80f4d77638418f77c1534 metadata.xml 175
 MD5 b854d7b32009a942ddeac70bbf723867 ufed-0.34.ebuild 584
 MD5 10c952ad8b1ed9e276d99822b5d478cc ufed-0.35.ebuild 594
-MD5 8d6e09a37304879924684d4009aca831 ChangeLog 534
 MD5 990d282eb2356c942cfc907774409d2c ufed-0.35-r1.ebuild 692
+MD5 290bd64a06741ea86d9a188349a512f0 ChangeLog 1208
+MD5 3c58199c37538795349dfe5cbaa5a519 ufed-0.35-r2.ebuild 680
 MD5 35a8e5d4b5839bd2b35920e1a8c36ac6 files/digest-ufed-0.34 61
 MD5 a7da464cbe65178edc2a25fdf2c17a58 files/digest-ufed-0.35 61
 MD5 a7da464cbe65178edc2a25fdf2c17a58 files/digest-ufed-0.35-r1 61
 MD5 8d2bc2f609d970b14ec9d0a612455aec files/cascaded-profile-support.patch 1895
+MD5 a7da464cbe65178edc2a25fdf2c17a58 files/digest-ufed-0.35-r2 61
+MD5 9aa470b56ba7c7059ec8b31cc43e2718 files/disabled-defaults.patch 526
+MD5 f6d051548c2dd570064edc49440d3eba files/no-partial-match.patch 318
+MD5 acdcf613e49b8e59907b9be7acfe0267 files/quote-escape.patch 682
+MD5 c8a0516c5520c99e559d7fb0c65983e9 files/too-many-flags.patch 875
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBZBuw6J2i8a8J4okRAlVHAKCIL+wXZPqNb8+dToQl32Qd6/H3wACgmBMA
-lgjK7m5wpAoDb/mjfeQ2PlA=
-=LDDT
+iD8DBQFBoYr96J2i8a8J4okRArEmAKCaiTBF7Ew7G/zcVKk3oJipAWZn9wCeKbP4
+SMlJjeHt/vTpiJ8RlGxPHwE=
+=MLf1
 -----END PGP SIGNATURE-----

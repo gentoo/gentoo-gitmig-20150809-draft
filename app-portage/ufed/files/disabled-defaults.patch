@@ -1,0 +1,13 @@
+--- ufed-0.35.orig/ufed.pl
++++ ufed-0.35/ufed.pl
+@@ -672,7 +672,8 @@
+    #$All = "Make.def : " . join(' ', @make_defaults_flags) . "\n";
+ 
+    #Step 2)
+-   $Results =  resolve_flags(join (' ', @make_defaults_flags),
+-                             join (' ', @use_defaults_flags));
++   $Results =  resolve_flags(resolve_flags('',
++                             join (' ', @make_defaults_flags)),
++                             join (' ', @use_defaults_flags));
+ 
+    #$All .= "Use.def : " . join(' ', @use_defaults_flags) . "\n";
