@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/kde-i18n-ru
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kde-i18n-ru/ChangeLog,v 1.8 2002/12/09 21:58:10 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kde-i18n-ru/ChangeLog,v 1.9 2002/12/21 19:46:04 hannes Exp $
+
+*kde-i18n-ru-3.0.5a (21 Dec 2002)
+
+  21 Dec 2002; Hannes Mehnert <hannes@gentoo.org> kde-i18n-ru-3.0.5a.ebuild:
+  version bump
 
 *kde-i18n-ru-3.1_rc5 (09 Dec 2002)
 
