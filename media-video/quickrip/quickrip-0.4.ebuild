@@ -25,7 +25,7 @@ src_install() {
 	exeinto /usr/share/quickrip 
 	doexe *.py *.ui
 
-	odoc README LICENSE
+	dodoc README LICENSE
 	dodir /usr/bin
 	dosym /usr/share/quickrip/quickrip.py /usr/bin/quickrip 
 }
