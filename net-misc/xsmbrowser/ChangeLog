@@ -1,0 +1,9 @@
+# ChangeLog for net-misc/xsmbrowser
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/xsmbrowser/ChangeLog,v 1.1 2003/04/15 03:34:51 pebenito Exp $
+
+*xsmbrowser-3.4.0 (14 Apr 2003)
+
+  14 Apr 2003; <pebenito@gentoo.org> Manifest, xsmbrowser-3.4.0.ebuild:
+  Ebuild submitted by Qubax.  RDEP fixes and install path fixes.
+
