@@ -1,0 +1,27 @@
+--- poppassd.c	2003-08-19 12:28:31.000000000 +0100
++++ ../poppassd-1.8.4-bak/poppassd.c	2004-11-19 01:41:02.775001296 +0000
+@@ -59,7 +59,7 @@
+ #include <ctype.h>
+ #include <strings.h>
+ #include <errno.h>
+-#include <varargs.h>
++#include <stdarg.h>
+ #include <pwd.h>
+ #include <string.h>
+ #include <dirent.h>
+@@ -90,13 +90,11 @@
+ #define POP_SKIPASS 2
+ short int pop_state = POP_OLDPASS;
+ 
+-void WriteToClient (fmt, va_alist)
+-char *fmt;
+-va_dcl
++void WriteToClient (char *fmt, ...)
+ {
+ 	va_list ap;
+ 	
+-	va_start (ap);
++	va_start (ap, fmt);
+ 	vfprintf (stdout, fmt, ap);
+ 	fputs ("\r\n", stdout );
+ 	fflush (stdout);
