@@ -1,0 +1,28 @@
+#!/sbin/runscript
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# /space/gentoo/cvsroot/gentoo-x86/net-misc/openssh/files/sshd.rc6,v 1.6 2001/12/06 20:17:02 azarah Exp
+
+depend() {
+	need net
+}
+
+checkconfig() {
+        if [ -z "$IS_CONFIGURED" ] ; then
+                eerror "You need to setup /etc/conf.d/pure-ftpd first"
+                return 1
+        fi
+}
+
+start() {
+	checkconfig || return 1
+	ebegin "Starting Pure-FTPd"
+	start-stop-daemon --start --quiet --exec /usr/sbin/pure-ftpd
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping Pure-FTPd"
+	start-stop-daemon --stop --quiet --pidfile /var/run/pure-ftpd.pid
+	eend $?
+}
