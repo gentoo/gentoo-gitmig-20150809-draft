@@ -1,6 +1,9 @@
 # ChangeLog for net-news/gnewspost
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/gnewspost/ChangeLog,v 1.7 2004/06/19 00:42:40 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/gnewspost/ChangeLog,v 1.8 2004/06/19 01:51:33 swegener Exp $
+
+  19 Jun 2004; Sven Wegener <swegener@gentoo.org> gnewspost-0.6.ebuild:
+  Removed S=${WORKDIR}/${P}
 
   19 Jun 2004; Sven Wegener <swegener@gentoo.org> +metadata.xml:
   Added metadata.xml

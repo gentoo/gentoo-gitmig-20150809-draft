@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/gnewspost/gnewspost-0.6.ebuild,v 1.8 2004/04/27 21:57:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/gnewspost/gnewspost-0.6.ebuild,v 1.9 2004/06/19 01:51:33 swegener Exp $
 
 inherit eutils
 
@@ -19,8 +19,6 @@ RDEPEND="${DEPEND}
 	=net-news/newspost-2.0
 	app-arch/cfv
 	=sys-libs/db-1*"
-
-S=${WORKDIR}/${P}
 
 src_unpack() {
 	unpack ${A}
