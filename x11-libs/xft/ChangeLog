@@ -1,6 +1,6 @@
 # ChangeLog for x11-libs/xft
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xft/ChangeLog,v 1.16 2003/03/11 11:07:50 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xft/ChangeLog,v 1.17 2003/03/12 19:07:32 zwelch Exp $
 
   11 Mar 2003; Guy Martin <gmsoft@gentoo.org> xft-2.0.1-r1.ebuild :
   Added hppa to keywords.
@@ -24,6 +24,9 @@
   Add ~alpha to KEYWORDS
 
 *xft-2.0.1-r1 (23 Dec 2002)
+
+  12 Mar 2003; Zach Welch <zwelch@gentoo.org> xft-2.0.1-r1.ebuild:
+  add arm keyword
 
   23 Dec 2002; Martin Schlemmer <azarah@gentoo.org> xft-2.0.1-r1.ebuild :
   Update from XFree86 cvs tree.  Only backup the Xft headers if XftFreetype.h
