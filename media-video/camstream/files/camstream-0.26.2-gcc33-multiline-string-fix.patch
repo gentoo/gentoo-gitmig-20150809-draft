@@ -1,5 +1,5 @@
---- ./camstream-0.26.2/camstream/ftpput.cc	2002-05-01 01:23:20.000000000 +0100
-+++ ./camstream-0.26.2/camstream/ftpput.cc.patched	2003-10-04 05:26:00.000000000 +0100
+--- ./camstream/ftpput.cc	2002-05-01 01:23:20.000000000 +0100
++++ ./camstream/ftpput.cc.patched	2003-10-04 05:26:00.000000000 +0100
 @@ -35,18 +35,19 @@
  
  void CFTPPut::Usage()

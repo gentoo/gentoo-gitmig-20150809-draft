@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/camstream-0.26.2.ebuild,v 1.6 2003/11/14 09:14:18 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/camstream-0.26.2.ebuild,v 1.7 2003/11/19 11:18:30 phosphan Exp $
+
+inherit kde-functions
 
 DESCRIPTION="Collection of tools for webcams and other video devices"
 HOMEPAGE="http://www.smcc.demon.nl/camstream/"
@@ -10,17 +12,21 @@ KEYWORDS="x86"
 SLOT="0"
 IUSE="doc"
 
-DEPEND="virtual/x11
-	virtual/glibc
-	>=x11-libs/qt-2.2.2*
-	"
+need-qt 3
+
+# camstream configure script gets it wrong, sometimes
+
+DEPEND="virtual/x11"
 
 src_unpack() {
 	unpack ${A}
-
+	cd ${S}
 	# Patch to fix an instance of a multi-line string which gcc-3.3.x dislikes greatly.
 	# Closes Bug #30292
 	epatch ${FILESDIR}/${P}-gcc33-multiline-string-fix.patch
+
+	# configure script sometimes can't fund uic/moc, see bug 31940
+	epatch ${FILESDIR}/uicmocpath.patch
 }
 
 src_install () {
