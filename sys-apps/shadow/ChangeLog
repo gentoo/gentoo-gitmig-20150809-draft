@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.36 2003/08/04 19:44:48 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.37 2003/09/25 18:43:00 mholzer Exp $
+
+  26 Sep 2003; Martin Holzer <mholzer@gentoo.org> shadow-4.0.3-r3.ebuild,
+  shadow-4.0.3-r4.ebuild, shadow-4.0.3-r5.ebuild, shadow-4.0.3-r6.ebuild,
+  shadow-4.0.3-r7.ebuild:
+  Added nls? sys-devel/gettext. Closes #29236.
 
 *shadow-4.0.3-r7 (04 Aug 2003)
 

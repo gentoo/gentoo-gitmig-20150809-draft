@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r5.ebuild,v 1.4 2003/09/07 00:44:11 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r5.ebuild,v 1.5 2003/09/25 18:43:00 mholzer Exp $
 
 IUSE=""
 
@@ -19,7 +19,7 @@ KEYWORDS="x86 amd64 ppc sparc alpha mips hppa arm"
 
 DEPEND=">=sys-libs/pam-0.75-r4
 	>=sys-libs/cracklib-2.7-r3
-	sys-devel/gettext"
+	nls? ( sys-devel/gettext )"
 
 RDEPEND=">=sys-libs/pam-0.75-r4
 	>=sys-libs/cracklib-2.7-r3"
