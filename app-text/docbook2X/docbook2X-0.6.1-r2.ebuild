@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/docbook2X-0.6.1-r2.ebuild,v 1.1 2003/07/07 14:00:41 ykoehler Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/docbook2X-0.6.1-r2.ebuild,v 1.2 2003/07/07 15:28:04 ykoehler Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Tools to convert docbook to man and info"
@@ -20,6 +20,7 @@ RDEPEND=">=dev-perl/XML-Writer-0.4
 
 src_install () {
 
+	# Get current install Perl site arch directory.
 	eval `perl '-V:installsitearch'`
 	SITE_ARCH=${installsitearch}
 
