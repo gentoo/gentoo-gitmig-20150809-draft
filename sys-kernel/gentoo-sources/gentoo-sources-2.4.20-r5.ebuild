@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r5.ebuild,v 1.2 2003/07/22 20:00:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r5.ebuild,v 1.3 2003/09/07 18:54:18 mholzer Exp $
 
 IUSE="build crypt evms2 aavm usagi"
 
@@ -23,7 +23,7 @@ OKV="2.4.20"
 # to /usr/share/doc/gentoo-sources-${PV}/patches.txt.gz
 
 DESCRIPTION="Full sources for the Gentoo Kernel."
-SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
+SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	mirror://gentoo/patches-${KV}.tar.bz2"
 HOMEPAGE="http://www.gentoo.org/ http://www.kernel.org/"
 LICENSE="GPL-2"

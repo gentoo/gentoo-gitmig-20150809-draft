@@ -1,8 +1,17 @@
 # ChangeLog for sys-kernel/gs-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/ChangeLog,v 1.19 2003/06/29 22:54:45 livewire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/ChangeLog,v 1.20 2003/09/07 18:55:52 mholzer Exp $
 
 gs-sources-2.4.22_pre2 (29 June 2003)
+
+*gs-sources-2.4.21_rc1-r1 (08 Sep 2003)
+
+  08 Sep 2003; Martin Holzer <mholzer@gentoo.org>
+  gs-sources-2.4.21_pre7-r1.ebuild, gs-sources-2.4.21_pre7.ebuild,
+  gs-sources-2.4.21_rc1-r1.ebuild, gs-sources-2.4.21_rc1.ebuild,
+  gs-sources-2.4.21_rc2.ebuild, gs-sources-2.4.21_rc6.ebuild,
+  gs-sources-2.4.21_rc8.ebuild, gs-sources-2.4.22_pre2.ebuild:
+  SRC now uses mirror://kernel
 
   29 June 2003; Bob Johnson <livewire@gentoo.org>
 
