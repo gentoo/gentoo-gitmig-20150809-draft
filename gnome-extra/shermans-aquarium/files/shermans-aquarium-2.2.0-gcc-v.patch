@@ -1,0 +1,19 @@
+*** configure.in.old	Mon Sep  6 19:45:37 2004
+--- configure.in	Mon Sep  6 19:45:53 2004
+***************
+*** 674,680 ****
+  else
+  echo "\"\\n\";">>src/stamp.h
+  fi
+! echo "char *gccinfo=\"$CC `$CC --version`\\n\";">>src/stamp.h
+  
+  AC_OUTPUT(src/Makefile Makefile) 
+  if test x$gnome1 = xyes ; then
+--- 674,680 ----
+  else
+  echo "\"\\n\";">>src/stamp.h
+  fi
+! echo "char *gccinfo=\"$CC `$CC --version | head -n 1`\\n\";">>src/stamp.h
+  
+  AC_OUTPUT(src/Makefile Makefile) 
+  if test x$gnome1 = xyes ; then

@@ -1,4 +1,5 @@
-MD5 0b8ce7ca4a76a4e34fea53a7814f24a1 ChangeLog 955
+MD5 cdb692a77f20521a2bfae825b1ab96de ChangeLog 1138
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 bc5ce7c904fa4378862cc30b3e4c5635 shermans-aquarium-2.2.0.ebuild 1913
+MD5 f376f1bf2374a6d0cfc34899aecb4219 shermans-aquarium-2.2.0.ebuild 2015
 MD5 2e8ccc0d3063621b87a0f12b69420b99 files/digest-shermans-aquarium-2.2.0 75
+MD5 db0ad320466766d2de4b54ef908f5639 files/shermans-aquarium-2.2.0-gcc-v.patch 508

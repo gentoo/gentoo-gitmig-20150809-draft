@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/shermans-aquarium/shermans-aquarium-2.2.0.ebuild,v 1.8 2004/06/24 22:10:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/shermans-aquarium/shermans-aquarium-2.2.0.ebuild,v 1.9 2004/10/08 10:11:24 liquidx Exp $
+
+inherit eutils
 
 MY_P=${PN/-/_}-${PV}
 DESCRIPTION="A gnome/wm applet displaying comical fish"
@@ -30,6 +32,12 @@ DEPEND="virtual/x11
 # redefine ${S} to point to the correct source, needs
 # the _ switched for - because of the source naming
 S=${WORKDIR}/${MY_P}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}; epatch ${FILESDIR}/${P}-gcc-v.patch
+	autoconf
+}
 
 src_compile( ) {
 
