@@ -1,6 +1,15 @@
 # ChangeLog for media-video/ati-drivers-extra
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers-extra/ChangeLog,v 1.25 2005/02/16 22:23:09 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers-extra/ChangeLog,v 1.26 2005/03/18 02:30:28 lu_zero Exp $
+
+  18 Mar 2005; Luca Barbato <lu_zero@gentoo.org>
+  -files/fglrx-3.7.0-fix-fglrx_panel-includes.patch,
+  -files/ati-drivers-extra-3.14.1-ui-improvements.patch,
+  -files/ati-drivers-extra-3.14.6-improvements.patch.bz2,
+  -ati-drivers-extra-3.9.0.ebuild, -ati-drivers-extra-3.11.1.ebuild,
+  -ati-drivers-extra-3.12.0.ebuild, -ati-drivers-extra-3.14.1.ebuild,
+  -ati-drivers-extra-3.14.1-r1.ebuild, -ati-drivers-extra-3.14.6.ebuild:
+  Cleanup
 
 *ati-drivers-extra-8.10.19 (16 Feb 2005)
 
