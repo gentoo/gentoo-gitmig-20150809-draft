@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/activesupport
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/activesupport/ChangeLog,v 1.1 2005/02/28 17:49:54 caleb Exp $
+
+*activesupport-1.0.0 (28 Feb 2005)
+
+  28 Feb 2005; Caleb Tennis <caleb@gentoo.org> +metadata.xml,
+  +activesupport-1.0.0.ebuild:
+  Initial import - support for rails.  From bug #83446.
+

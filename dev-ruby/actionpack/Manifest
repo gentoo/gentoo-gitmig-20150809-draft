@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 5d01df84ef40a8353c6d30630364893f actionpack-1.4.0.ebuild 667
+MD5 872d6946b814ee62b9c604ae020cd176 actionpack-1.5.0.ebuild 695
+MD5 c6ba17d6c83b8f1f4b95e38f55cb294b ChangeLog 497
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 8e639271fbb141ddf22b7de91835c7c2 ChangeLog 363
 MD5 1dcf06b2e95fbfdf9c2f499da5be240a files/digest-actionpack-1.4.0 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCEt2Pz2gxt1z4IGYRAjAzAKC8y+qDMh7mG50aFAiSTvtWFTOxTACZAUlh
-MSAvI7y9uV5+2ObolkmLHGo=
-=wIg9
------END PGP SIGNATURE-----
+MD5 b957eed75058069dd6830b703539fb11 files/digest-actionpack-1.5.0 65
