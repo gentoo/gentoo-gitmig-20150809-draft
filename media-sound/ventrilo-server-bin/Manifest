@@ -1,10 +1,20 @@
-MD5 13eb2ed79beaeb5d9622d32cc0665881 ChangeLog 1267
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6d4ab872c0ae149eecd39051d0e092c4 ventrilo-server-bin-2.2.0.ebuild 873
+MD5 a7852bcd7ec855e228025310a05e69b1 ventrilo-server-bin-2.2.0-r1.ebuild 1010
+MD5 5464f58421d4a9919935284cd107cfae ChangeLog 1423
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 db860e563e934efb51cead14168e90b3 ventrilo-server-bin-2.1.2.ebuild 811
-MD5 8fc8dfb7e235563e204c1b3665c59788 ventrilo-server-bin-2.2.0.ebuild 861
-MD5 1edd644b7e993a9dfed4c15422797d21 ventrilo-server-bin-2.2.0-r1.ebuild 998
-MD5 75e3ee40d2009f5b7709e6263323d485 files/init.d.ventrilo 600
 MD5 65abedc9626a604d070d71f3b2da7124 files/digest-ventrilo-server-bin-2.1.2 81
 MD5 96b88d3c1c59db4a79c58a874ec039dc files/digest-ventrilo-server-bin-2.2.0 81
 MD5 5fcc2c24b7e7ab0520b78f61f6534934 files/conf.d.ventrilo 82
+MD5 75e3ee40d2009f5b7709e6263323d485 files/init.d.ventrilo 600
 MD5 96b88d3c1c59db4a79c58a874ec039dc files/digest-ventrilo-server-bin-2.2.0-r1 81
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBrO6sI1lqEGTUzyQRAgP/AJ9e6GPJn/G+2oNtC1c2Ho+H/MdHdACfTmk/
+pT27lmWlHKXK4e7Ktkrx8e8=
+=BW+A
+-----END PGP SIGNATURE-----
