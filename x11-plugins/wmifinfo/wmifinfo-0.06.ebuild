@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifinfo/wmifinfo-0.06.ebuild,v 1.6 2004/11/24 23:05:37 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmifinfo/wmifinfo-0.06.ebuild,v 1.7 2005/01/26 14:03:37 s4t4n Exp $
 
 IUSE=""
 
