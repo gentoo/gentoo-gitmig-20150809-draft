@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh/ssh-3.2.5.ebuild,v 1.4 2004/02/25 00:17:19 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ssh/ssh-3.2.5.ebuild,v 1.5 2004/02/25 13:58:06 humpback Exp $
 
-DESCRIPTION="Ssh.com Non-Comercial Use ssh version"
+DESCRIPTION="SSH.COM free for Non-Comercial Use ssh version"
 HOMEPAGE="http://www.ssh.com/"
 SRC_URI="ftp://ftp.ssh.com/pub/ssh/old/${P}.tar.gz"
 RESTRICT="nomirror"
