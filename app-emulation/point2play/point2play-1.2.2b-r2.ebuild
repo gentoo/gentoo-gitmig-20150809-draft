@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/point2play/point2play-1.2.2b-r1.ebuild,v 1.2 2004/05/16 06:06:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/point2play/point2play-1.2.2b-r2.ebuild,v 1.1 2004/05/18 22:52:51 vapier Exp $
 
 inherit eutils
 
@@ -40,4 +40,5 @@ src_install() {
 		usr/lib/menu \
 		usr/lib/transgaming_point2play/{bin,etc,lib}
 	mv * ${D}
+	dobin ${FILESDIR}/Point2Play
 }
