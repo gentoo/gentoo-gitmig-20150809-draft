@@ -1,6 +1,6 @@
 MD5 39793fbef16989ec7c19fa8ba04370ee udev-013.ebuild 3343
-MD5 39793fbef16989ec7c19fa8ba04370ee udev-013-r1.ebuild 3343
-MD5 8a5c1d2590f40ad2072b6ce3f86fd1ad ChangeLog 4730
+MD5 094d53c404aa8f37f7736b355ea7db45 udev-013-r1.ebuild 3346
+MD5 587f6b44601dba58a82992226948f9a7 ChangeLog 5015
 MD5 a19af1e2e874cadb09ab486d2fd343bb udev-012.ebuild 3400
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 dbe7dc643caeafddc845fe9269430123 files/udev-011-no-wait-for-sleep.patch 1053
@@ -9,6 +9,6 @@ MD5 8ee2274e54f304cb9dbbe9094982fe94 files/digest-udev-013-r1 62
 MD5 4e0d7e033730bbe5544745788e7a13a8 files/udev-012-udev_c-gcc295-compat.patch 277
 MD5 35fcac8040808dde93580ddfe5ff5a18 files/digest-udev-012 62
 MD5 8ee2274e54f304cb9dbbe9094982fe94 files/digest-udev-013 62
-MD5 0cbfae752b41708f46464420a9fa0414 files/udev.rules.post_012 4367
+MD5 8e183b484cd841ca7c3537c1cbd923a5 files/udev.rules.post_012 4367
 MD5 aba24cfb26a8f0b604a44a0d9ca7f830 files/udev.permissions 3550
 MD5 4c26691abc7f47b0329203056cbcbebc files/udev.rules 3554
