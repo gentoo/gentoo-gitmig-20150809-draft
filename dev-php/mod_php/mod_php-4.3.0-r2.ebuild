@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.0-r2.ebuild,v 1.3 2003/01/13 16:49:51 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.0-r2.ebuild,v 1.4 2003/02/07 21:41:14 rphillips Exp $
+
+inherit flag-o-matic 
 
 IUSE="png apache2 truetype postgres tiff libwww nls jpeg ssl oci8 mysql X gdbm curl imap xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam"
 
@@ -13,6 +15,9 @@ LICENSE="PHP"
 KEYWORDS="x86 sparc ppc alpha"
 SLOT="0"
 PROVIDE="virtual/php"
+
+#fixes bug #14067
+replace-flags "-march=k6*" "-march=i586"
 
 	# users have been having problems with compiling the gmp support... disabled for now
 	# - rphillips
@@ -198,6 +203,7 @@ src_compile() {
 		--enable-wddx \
 		--enable-dbase \
 		--with-zlib=yes \
+		--with-iconv \
 		--enable-bcmath \
 		--enable-sysvsem \
 		--enable-exif \
@@ -228,13 +234,14 @@ src_install() {
 	cp php.ini-dist php.ini
 	insinto /etc/php4
 	doins php.ini
-	dosym /usr/lib/php/extensions/no-debug-non-zts-20020429 /etc/php4/lib
+	dosym /usr/lib/apache-extramodules /etc/php4/lib
 
 	#install scripts
 	exeinto /usr/bin
 	doexe ${S}/pear/scripts/phpize
 	doexe ${S}/pear/scripts/php-config
 	doexe ${S}/pear/scripts/phpextdist
+	doexe ${S}/ext/ext_skel
 	
 
     #revert Pear patch
@@ -267,7 +274,7 @@ pkg_postinst() {
 	else
 		einfo "1. Execute the command:"
 		einfo " \"ebuild /var/db/pkg/dev-php/${PF}/${PF}.ebuild config\""
-		einfo "2. Edit /etc/conf.d/apache and add \"-D PHP4\""
+		einfo "2. Edit /etc/conf.d/apache and add \"-D PHP\""
 		einfo
 		einfo "That will include the php mime types in your configuration"
 		einfo "automagically and setup Apache to load php when it starts."
