@@ -428,7 +428,7 @@ net-p2p/giftcurs
 # require libpng or qt installed.
 # Arcady Genkin <agenkin@gentoo.org> May 20, 2002.
 #
->=net-www/opera-6.0
+net-www/opera
 
 # Masing Azarah's new baselayout until several problems are confirmed fixed.
 # 4 Mar 2002, Daniel Robbins
