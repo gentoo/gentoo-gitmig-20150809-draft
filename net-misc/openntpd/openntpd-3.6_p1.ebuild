@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-3.6_p1.ebuild,v 1.8 2004/12/22 14:38:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openntpd/openntpd-3.6_p1.ebuild,v 1.9 2004/12/22 14:43:12 vapier Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://openbsd/OpenNTPD/portable/${MY_P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 sparc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ~ppc64 sparc x86"
 IUSE="ssl"
 
 RDEPEND="virtual/libc
