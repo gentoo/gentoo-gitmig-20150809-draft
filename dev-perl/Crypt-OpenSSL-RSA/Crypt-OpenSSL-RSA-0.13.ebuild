@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-RSA/Crypt-OpenSSL-RSA-0.13.ebuild,v 1.7 2002/10/04 20:53:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-OpenSSL-RSA/Crypt-OpenSSL-RSA-0.13.ebuild,v 1.8 2002/10/17 16:43:13 bjb Exp $
 
 
 inherit perl-module
@@ -14,7 +14,7 @@ DEPEND="virtual/glibc
 	>=sys-devel/perl-5 
 	dev-perl/Crypt-OpenSSL-Random 
 	dev-libs/openssl"
-KEYWORDS="x86"
+KEYWORDS="x86 alpha"
 SLOT="0"
 
 mydoc="rfc*.txt"

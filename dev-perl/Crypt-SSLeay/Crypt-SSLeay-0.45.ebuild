@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/author/CHAMAS/Crypt-SSLeay-${PV}/"
 
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 alpha"
 
 DEPEND="virtual/glibc 
 	>=sys-devel/perl-5
