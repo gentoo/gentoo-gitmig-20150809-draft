@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.0.1.ebuild,v 1.2 2005/02/09 06:06:27 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-4.0.1.ebuild,v 1.3 2005/02/13 05:45:32 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://people.nit.ca/~sfllaw/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~alpha ~amd64 ~hppa ~ppc"
+KEYWORDS="~alpha ~amd64 hppa ~ppc ~sparc x86"
 IUSE="gtk qt oggvorbis speex fam qdbm pam slp doc fftw tcltk"
 
 RDEPEND="virtual/libc
