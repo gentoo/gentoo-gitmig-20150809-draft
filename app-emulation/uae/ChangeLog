@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/uae
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/ChangeLog,v 1.8 2003/09/03 00:03:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/ChangeLog,v 1.9 2003/09/03 00:10:05 msterret Exp $
+
+  02 Sep 2003; Michael Sterrett <msterret@gentoo.org> uae-0.8.22.ebuild:
+  use emake -j1 so I know the makefiles are buggy.
 
 *uae-0.8.22 (9 Oct 2002)
 

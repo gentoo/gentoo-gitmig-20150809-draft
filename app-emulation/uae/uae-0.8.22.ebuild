@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.22.ebuild,v 1.10 2003/09/03 00:03:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.22.ebuild,v 1.11 2003/09/03 00:10:05 msterret Exp $
 
 DESCRIPTION="An amiga emulator"
 HOMEPAGE="http://www.freiburg.linux.de/~uae/"
@@ -39,7 +39,7 @@ src_compile() {
 		--enable-scsi-device \
 		${myconf} || die "./configure failed"
 
-	make || die "emake failed"
+	emake -j1 || die "emake failed"
 }
 
 src_install() {
