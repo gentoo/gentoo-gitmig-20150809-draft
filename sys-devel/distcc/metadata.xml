@@ -4,8 +4,7 @@
 <herd>cluster</herd>
 <maintainer>
   <email>lisa@gentoo.org</email>
-<name>Lisa Seelye</name>
-<!-- <description>Description of the maintainership</description> -->
+  <name>Lisa Seelye</name>
 </maintainer>
 <longdescription>Distcc is a program to distribute compilation of C code across several machines on a network</longdescription>
 </pkgmetadata>
