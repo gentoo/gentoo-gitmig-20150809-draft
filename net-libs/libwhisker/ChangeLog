@@ -1,6 +1,16 @@
 # ChangeLog for net-libs/libwhisker
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwhisker/ChangeLog,v 1.7 2004/06/24 23:15:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwhisker/ChangeLog,v 1.8 2004/09/21 12:13:49 mcummings Exp $
+
+*libwhisker-2.1 (21 Sep 2004)
+
+  21 Sep 2004; Michael Cummings <mcummings@gentoo.org> +libwhisker-2.1.ebuild:
+  New version of the ever popular libwhisker. Please read the output before
+  filing a bug - the author of this library has asked that we not mirror or
+  allow wget's of his source code. Do not file (another) bug about this.
+
+  21 Sep 2004; Michael Cummings <mcummings@gentoo.org> :
+  Update digest
 
   29 Mar 2004; Michael Cummings <mcummings@gentoo.org> libwhisker-1.8.ebuild:
   fixed SRC_URI
