@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/lilo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/ChangeLog,v 1.35 2003/10/13 18:38:00 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/ChangeLog,v 1.36 2003/11/06 21:20:47 azarah Exp $
+
+*lilo-22.5.8-r1 (06 Nov 2003)
+
+  06 Nov 2003; Martin Schlemmer <azarah@gentoo.org> lilo-22.5.8-r1.ebuild:
+  Get the build to actually use gcc as $CC; remove the hardened crap.
 
 *lilo-22.5.8 (13 Oct 2003)
 
