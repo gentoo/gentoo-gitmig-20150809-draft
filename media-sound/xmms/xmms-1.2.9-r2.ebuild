@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.9-r2.ebuild,v 1.2 2004/02/05 07:19:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.9-r2.ebuild,v 1.3 2004/02/07 03:21:04 eradicator Exp $
 
 inherit flag-o-matic eutils
 
@@ -57,7 +57,8 @@ src_unpack() {
 	epatch ${PATCHDIR}/${P}-sigterm.patch
 
 	#shadow Patch, bug #30420.
-	epatch ${PATCHDIR}/${P}-shadow.patch
+	#in mainline 1.2.9 now
+	#epatch ${PATCHDIR}/${P}-shadow.patch
 
 	# read_all patch, bug #39456
 	epatch ${PATCHDIR}/${P}-read_all_fix.patch

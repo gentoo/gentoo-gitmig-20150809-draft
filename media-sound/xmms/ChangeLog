@@ -1,8 +1,12 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.99 2004/02/05 23:52:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.100 2004/02/07 03:21:03 eradicator Exp $
 
-  04 Feb 2004; root <eradicator@gentoo.org> xmms-1.2.9-r2.ebuild:
+  06 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> xmms-1.2.9-r1.ebuild,
+  xmms-1.2.9-r2.ebuild:
+  shading patch removed as a fix is in mainline 1.2.9
+
+  04 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> xmms-1.2.9-r2.ebuild:
   Added patch to fix compilation in gcc2 provided in bug #40370 by Tristan
   Henderson <T.Henderson@cs.ucl.ac.uk>.
 
