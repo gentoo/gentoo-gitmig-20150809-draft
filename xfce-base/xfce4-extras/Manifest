@@ -1,4 +1,6 @@
 MD5 966c40ddb5885e06804cf1f3cae4fb0b ChangeLog 364
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 d6a40ada672199df7b79ecf11f792798 xfce4-extras-4.1.91.ebuild 824
+MD5 a3a0a1691012056ddd82b324b4edcb74 xfce4-extras-4.1.99.1.ebuild 826
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-xfce4-extras-4.1.91 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-xfce4-extras-4.1.99.1 0
