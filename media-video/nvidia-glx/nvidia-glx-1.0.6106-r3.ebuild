@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.6106-r2.ebuild,v 1.1 2004/07/17 22:21:14 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.6106-r3.ebuild,v 1.1 2004/07/18 02:51:18 cyfred Exp $
 
 inherit eutils
 
@@ -33,7 +33,7 @@ IUSE="multilib"
 
 DEPEND="virtual/libc
 	virtual/x11
-	>=x11-base/opengl-update-1.8
+	>=x11-base/opengl-update-1.8.1
 	~media-video/nvidia-kernel-${PV}"
 
 PDEPEND="amd64? ( multilib? ( >=app-emulation/emul-linux-x86-nvidia-${PV}-r1 ) )"
@@ -161,20 +161,6 @@ pkg_preinst() {
 	if [ -e ${ROOT}/etc/env.d/09nvidia ]
 	then
 		rm -f ${ROOT}/etc/env.d/09nvidia
-	fi
-	# Make sure the symlink change is done properly
-	if [ -d "${ROOT}/usr/lib/tls" ]
-	then
-		if [ -z "$(ls "${ROOT}/usr/lib/tls/" 2>/dev/null | grep -v 'nvidia')" ]
-		then
-			rm -rf ${ROOT}/usr/lib/tls/
-		else
-			eerror "Not only nvidia-glx occupies ${ROOT}/usr/lib/tls!"
-			eerror "Please open a bug and include the output of:"
-			echo
-			eerror "  $ ls -l /usr/lib/tls"
-			die "Not only nvidia-glx occupies ${ROOT}/usr/lib/tls!"
-		fi
 	fi
 }
 
