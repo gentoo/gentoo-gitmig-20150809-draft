@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bomberclone/bomberclone-0.11.4.ebuild,v 1.1 2004/12/14 03:29:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bomberclone/bomberclone-0.11.5.ebuild,v 1.1 2004/12/29 08:14:19 mr_bones_ Exp $
 
 inherit games
 
@@ -11,18 +11,18 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~mips ppc ~amd64"
-IUSE=""
+IUSE="X"
 
-RDEPEND="virtual/x11
+DEPEND="virtual/libc
+	X? ( virtual/x11 )
 	>=media-libs/libsdl-1.1.0
 	media-libs/sdl-image
 	media-libs/sdl-mixer"
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
 
 src_compile() {
 	egamesconf \
 		--disable-dependency-tracking \
+		$(use_with X x) \
 		--datadir="${GAMES_DATADIR_BASE}" || die
 	sed -i \
 		-e "/PACKAGE_DATA_DIR/ s:/usr/games/share/games/:${GAMES_DATADIR}/:" \
