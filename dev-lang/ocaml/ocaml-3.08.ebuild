@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.08.ebuild,v 1.3 2004/08/16 23:33:49 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.08.ebuild,v 1.4 2004/08/18 19:39:28 mattam Exp $
 
 inherit flag-o-matic eutils
 
@@ -18,6 +18,13 @@ DEPEND="virtual/libc
 	tcltk? ( >=dev-lang/tk-3.3.3 )"
 
 S="${WORKDIR}/${P}.0"
+
+pkg_setup() {
+	ewarn
+	ewarn "Building ocaml with unsafe CFLAGS can have unexpected results"
+	ewarn "Please retry building with safer CFLAGS before reporting bugs"
+	ewarn
+}
 
 src_compile() {
 	filter-flags "-fstack-protector"
@@ -38,6 +45,9 @@ src_compile() {
 		-libdir /usr/lib/ocaml \
 		-mandir /usr/share/man \
 		--with-pthread ${myconf} || die
+
+	sed -i -e "s/\(BYTECCCOMPOPTS=.*\)/\1 ${CFLAGS}/" config/Makefile
+	sed -i -e "s/\(NATIVECCCOMPOPTS=.*\)/\1 ${CFLAGS}/" config/Makefile
 
 	make world || die
 	make opt || die

@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ocaml
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.44 2004/08/16 23:33:49 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.45 2004/08/18 19:39:28 mattam Exp $
+
+  18 Aug 2004; Matthieu Sozeau <mattam@gentoo.org> ocaml-3.07-r1.ebuild,
+  ocaml-3.08.ebuild:
+  Add handling of CFLAGS, use with care!
 
   16 Aug 2004; Guy Martin <gmsoft@gentoo.org> ocaml-3.08.ebuild:
   Yay, my port to hppa-linux is in the mainstream ! Marking stable !

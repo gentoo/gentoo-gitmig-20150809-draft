@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.07-r1.ebuild,v 1.22 2004/08/14 04:45:52 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.07-r1.ebuild,v 1.23 2004/08/18 19:39:28 mattam Exp $
 
 inherit flag-o-matic eutils
 
@@ -17,6 +17,13 @@ IUSE="tcltk latex"
 
 DEPEND="virtual/libc
 	tcltk? ( >=dev-lang/tk-3.3.3 )"
+
+pkg_setup() {
+	ewarn
+	ewarn "Building ocaml with unsafe CFLAGS can have unexpected results"
+	ewarn "Please retry building with safer CFLAGS before reporting bugs"
+	ewarn
+}
 
 src_unpack() {
 	unpack ${P}.tar.gz
@@ -45,6 +52,9 @@ src_compile() {
 		-libdir /usr/lib/ocaml \
 		-mandir /usr/share/man \
 		--with-pthread ${myconf} || die
+
+	sed -i -e "s/\(BYTECCCOMPOPTS=.*\)/\1 ${CFLAGS}/" config/Makefile
+	sed -i -e "s/\(NATIVECCCOMPOPTS=.*\)/\1 ${CFLAGS}/" config/Makefile
 
 	make world || die
 	make opt || die
