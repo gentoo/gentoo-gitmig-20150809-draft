@@ -1,3 +1,5 @@
-MD5 7b4d226434184e4b70ea1e36279501d6 ChangeLog 463
-MD5 8f79d1623d2edbbbfda7bb84746daad1 ebindings-0.2.20030220.ebuild 1152
 MD5 62ec88d855d65a8e6f57cd77d325f60c files/digest-ebindings-0.2.20030220 74
+MD5 9226a8680ba85ded5ea2fe12a515da4a files/digest-ebindings-0.2.20030629 74
+MD5 8f79d1623d2edbbbfda7bb84746daad1 ebindings-0.2.20030220.ebuild 1152
+MD5 c1a66ea5cd23586c2d8e43cbf64b21a5 ChangeLog 569
+MD5 c1d5458fc334d80d2cf07953272dfc98 ebindings-0.2.20030629.ebuild 845
