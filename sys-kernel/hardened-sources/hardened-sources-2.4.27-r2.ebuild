@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.4.27-r2.ebuild,v 1.1 2004/08/31 18:03:06 scox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.4.27-r2.ebuild,v 1.2 2004/09/05 14:07:43 scox Exp $
 
 IUSE="selinux"
 ETYPE="sources"
@@ -29,7 +29,7 @@ UNIPATCH_DOCS="${WORKDIR}/patches/hardened-patches-${KV_MAJOR}.${KV_MINOR}-${HGP
 DESCRIPTION="Hardened sources for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
 
 SRC_URI="${KERNEL_URI} ${HGPV_SRC}"
-KEYWORDS="~x86 -ppc"
+KEYWORDS="x86 -ppc"
 
 pkg_postinst() {
 	postinst_sources
