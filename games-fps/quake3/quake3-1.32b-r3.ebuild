@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.32b-r3.ebuild,v 1.10 2004/05/12 10:43:18 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.32b-r3.ebuild,v 1.11 2004/06/03 23:08:42 mr_bones_ Exp $
 
 inherit games
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.idsoftware.com/idstuff/quake3/linux/linuxq3apoint-${PV}-3.x86
 LICENSE="Q3AEULA"
 SLOT="0"
 KEYWORDS="-* x86 amd64"
-IUSE="${IUSE} X opengl"
+IUSE="dedicated X opengl"
 RESTRICT="nostrip"
 
 RDEPEND="virtual/glibc
