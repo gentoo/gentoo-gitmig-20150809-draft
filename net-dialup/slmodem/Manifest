@@ -3,16 +3,14 @@ Hash: SHA1
 
 MD5 7faf41f1aa59e6b8a1673f106ffac1e1 metadata.xml 523
 MD5 39a6e7fcda2ee23817e894ed009e7ba7 slmodem-2.7.14.ebuild 1511
-MD5 42c6fc2da2ef0bf0a2f68bad6c9607e6 ChangeLog 5186
-MD5 78259439fc399e5842dc7367b2ed1f38 slmodem-2.9.9-r2.ebuild 4333
-MD5 da09cacea9ef6ab797c9872e18fecada slmodem-2.9.9-r1.ebuild 3792
+MD5 c490649057672f2ccb995d437b478eaf ChangeLog 5616
+MD5 d5d2b6c197ae9d40d4e3326e2f1b1dd5 slmodem-2.9.9-r2.ebuild 4335
 MD5 43dee264075d4262df5388ce1f055929 files/slmodem-2.9.conf 707
 MD5 04150d1eddd9774a7d1a70df93600e3c files/digest-slmodem-2.7.14 64
 MD5 5565553c8ddd949c38070e59ce64b90c files/slmodem-2.7.14-makefile-fixup.patch 1626
 MD5 24079d6e20ac945048a1c212f06772ce files/slmodem-2.7.devfs 431
 MD5 117ea746ee99218e673afc397038120d files/slmodem-2.7.modules 669
 MD5 8834a62c67909059cef10887bfbcc853 files/slmodem-2.9.modules 494
-MD5 9ae4e594075f43c76a7067fa8004095a files/digest-slmodem-2.9.9-r1 65
 MD5 9ae4e594075f43c76a7067fa8004095a files/digest-slmodem-2.9.9-r2 65
 MD5 c80ecf5c3d5605220e4b0055850260a5 files/slmodem-2.9.devfs 786
 MD5 5c0b5dfce1ad5bd98a79d8307faf584d files/slmodem-2.9.init 2659
@@ -20,7 +18,7 @@ MD5 a1b37267647bbb45a01facc3b807ccff files/slmodem-2.9.9-makefile-fixup.patch 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBHsgvmdTrptrqvGERAtrIAJsGJnb+kX1ViIUbCdiWn5BcgpJWCQCdFg2r
-Xfsp0RjIIW6v6zGoiGNzR+k=
-=5QpA
+iD8DBQFBJTgvmdTrptrqvGERArWMAKCBenaTtFnRQdqxtmVXtihLA1iFGACglyuM
+8H9doG3Hu2mL9iiSmt+KNhc=
+=dhqV
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.9-r2.ebuild,v 1.3 2004/08/15 02:47:00 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.9-r2.ebuild,v 1.4 2004/08/19 23:40:19 dragonheart Exp $
 
 inherit kmod eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.smlink.com/"
 SRC_URI="http://www.smlink.com/main/down/${P}.tar.gz"
 LICENSE="Smart-Link"
 SLOT="${KV}"
-KEYWORDS="~x86"
+KEYWORDS="x86 -*"
 IUSE="alsa usb"
 
 DEPEND="virtual/libc
