@@ -1,6 +1,11 @@
 # ChangeLog for app-office/gnucash
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.35 2003/09/14 21:26:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/ChangeLog,v 1.36 2003/09/17 02:43:32 agriffis Exp $
+
+*gnucash-1.8.7 (16 Sep 2003)
+
+  16 Sep 2003; Aron Griffis <agriffis@gentoo.org> gnucash-1.8.7.ebuild:
+  Version bump to 1.8.7 and remove the libofx hack (no longer needed)
 
 *gnucash-1.8.6 (14 Sep 2003)
 
