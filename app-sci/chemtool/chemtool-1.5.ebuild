@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-sci/chemtool/chemtool-1.5.ebuild,v 1.1 2002/11/28 06:09:24 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/chemtool/chemtool-1.5.ebuild,v 1.2 2002/12/12 05:46:31 george Exp $
 
 IUSE="gnome kde nls"
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 IUSE="gnome kde nls"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=">=media-gfx/transfig-3.2.3d
 		>=x11-libs/gtk+-1.2.10
