@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pxp/pxp-1.1.94.2.ebuild,v 1.1 2005/03/09 00:08:31 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pxp/pxp-1.1.95.ebuild,v 1.1 2005/03/09 00:22:40 mattam Exp $
 
 inherit findlib
 
@@ -13,6 +13,7 @@ KEYWORDS="~x86 ~ppc"
 
 SLOT="0"
 DEPEND=">=dev-ml/pcre-ocaml-4.31
+>=dev-ml/ulex-0.5
 >=dev-ml/ocamlnet-0.98"
 
 IUSE="doc"

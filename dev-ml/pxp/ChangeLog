@@ -1,6 +1,12 @@
 # ChangeLog for dev-ml/pxp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/pxp/ChangeLog,v 1.9 2005/03/09 00:08:31 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/pxp/ChangeLog,v 1.10 2005/03/09 00:22:40 mattam Exp $
+
+*pxp-1.1.95 (09 Mar 2005)
+
+  09 Mar 2005; Matthieu Sozeau <mattam@gentoo.org> -pxp-1.1.94.2.ebuild,
+  +pxp-1.1.95.ebuild:
+  Really latest dev. version.
 
 *pxp-1.1.94.2 (09 Mar 2005)
 
