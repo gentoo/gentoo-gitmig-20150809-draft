@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.1-r5.ebuild,v 1.5 2004/09/10 10:12:23 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/jython-2.1-r5.ebuild,v 1.6 2004/09/16 08:24:48 sejo Exp $
 
 inherit java-pkg
 
@@ -21,8 +21,10 @@ DEPEND=">=virtual/jdk-1.2
 
 src_unpack() {
 	addwrite .hotspot
-	cd ${DISTDIR}
-	java ${PN}-${MY_PV} -o ${S}/ demo lib source
+	cp ${DISTDIR}/${A} ${WORKDIR}
+	cd ${WORKDIR}
+	`java-config -J` -classpath . ${PN}-${MY_PV} -o ${S}/ demo lib source || die "unpack failed"
+	
 }
 
 src_compile() {
