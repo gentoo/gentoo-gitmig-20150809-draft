@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-1.16.7-r1.ebuild,v 1.4 2003/06/21 21:19:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-1.16.7-r3.ebuild,v 1.1 2003/08/02 13:34:44 seemant Exp $
 
 IUSE="static build"
 
@@ -11,7 +11,7 @@ SRC_URI="http://ftp.debian.org/debian/pool/main/d/${PN}/${PN}_${PV}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2 BSD"
-KEYWORDS="x86 amd64 ppc sparc alpha mips hppa arm"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~mips ~hppa ~arm"
 
 DEPEND="virtual/glibc"
 
@@ -28,6 +28,10 @@ src_unpack() {
 
 	# Patch savelog to use bzip2 compression instead of gzip
 	epatch ${FILESDIR}/${PN}-compress.patch
+
+	# Get it to work with gcc-3.3
+	# <azarah@gentoo.org> (18 May 2003)
+	epatch ${FILESDIR}/${P}-gcc33.patch
 }
 
 src_compile() {
@@ -41,7 +45,7 @@ src_compile() {
 
 src_install() {
 	into /
-	dobin readlink tempfile mktemp
+	dobin tempfile mktemp
 
 	if [ -z "`use build`" ]
 	then
