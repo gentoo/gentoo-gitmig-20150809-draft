@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/rhino
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.1 2003/05/29 00:54:23 tberman Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/rhino/ChangeLog,v 1.2 2004/01/03 19:40:35 strider Exp $
 
 *rhino-1.5_rc4 (28 May 2003)
 
