@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xpad
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/ChangeLog,v 1.18 2003/11/15 03:05:34 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xpad/ChangeLog,v 1.19 2003/12/14 04:08:46 pylon Exp $
+
+  14 Dec 2003; Lars Weiler <pylon@gentoo.org> xpad-1.13.ebuild:
+  Make stable on ppc
 
 *xpad-1.13 (15 Nov 2003)
 
