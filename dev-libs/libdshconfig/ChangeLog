@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libdshconfig
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdshconfig/ChangeLog,v 1.3 2003/03/20 13:32:44 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdshconfig/ChangeLog,v 1.4 2003/08/14 03:47:28 vapier Exp $
+
+*libdshconfig-0.20.8 (13 Aug 2003)
+
+  13 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bumpage.
 
 *libdshconfig-0.20.7-r1 (20 Mar 2003)
 
