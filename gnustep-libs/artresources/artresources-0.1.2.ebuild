@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/artresources/artresources-0.1.2.ebuild,v 1.1 2004/09/24 01:02:20 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-libs/artresources/artresources-0.1.2.ebuild,v 1.2 2004/10/09 21:58:17 dholm Exp $
 
 inherit gnustep
 
@@ -10,7 +10,7 @@ DESCRIPTION="GNUstep ArtResources library for GNUstep Backend library"
 
 SRC_URI="http://w1.423.telia.com/~u42308495/alex/backart/ArtResources-${PV}.tar.bz2"
 HOMEPAGE="http://w1.423.telia.com/~u42308495/"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 SLOT="0"
 LICENSE="LGPL-2.1"
 
