@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.108 2005/02/13 14:05:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.109 2005/02/13 14:07:52 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -59,14 +59,11 @@ is_crosscompile() {
 
 GCC_RELEASE_VER=$(get_version_component_range 1-3)
 GCC_BRANCH_VER=$(get_version_component_range 1-2)
+GCC_CONFIG_VER=${GCC_RELEASE_VER}
 GCCMAJOR=$(get_version_component_range 1)
 GCCMINOR=$(get_version_component_range 2)
 GCCMICRO=$(get_version_component_range 3)
 [[ -z ${BRANCH_UPDATE} ]] && BRANCH_UPDATE=$(get_version_component_range 4)
-
-# According to gcc/c-cppbuiltin.c, GCC_CONFIG_VER MUST match this regex.
-# ([^0-9]*-)?[0-9]+[.][0-9]+([.][0-9]+)?([- ].*)?
-GCC_CONFIG_VER=${GCC_CONFIG_VER:-"$(replace_version_separator 3 '-')"}
 
 GCC_MANPAGE_VERSION=${GCC_MANPAGE_VERSION:-${GCC_RELEASE_VER}}
 
@@ -724,14 +721,6 @@ gcc-compiler_pkg_postinst() {
 	einfo "If you have issues with packages unable to locate libstdc++.la,"
 	einfo "then try running 'fix_libtool_files.sh' on the old gcc versions."
 	echo
-
-	# If our gcc-config version doesn't like '-' in it's version string,
-	# tell our users that gcc-config will yell at them, but it's all good.
-	if ! has_version '>=sys-devel/gcc-config-1.3.10-r1' && [[ ${GCC_CONFIG_VER/-/} != ${GCC_CONFIG_VER} ]]; then
-		ewarn "Your version of gcc-config will issue about having an invalid profile"
-		ewarn "when switching to this profile.  It is safe to ignore this warning,"
-		ewarn "and this problem has been corrected in >=sys-devel/gcc-config-1.3.10-r1."
-	fi
 }
 
 gcc-compiler_pkg_prerm() {
@@ -814,17 +803,8 @@ gcc_src_unpack() {
 		disgusting_gcc_multilib_HACK || die "multilib hack failed"
 	fi
 
-	local version_string="${GCC_CONFIG_VER}"
-
-	# Backwards support... add the BRANCH_UPDATE for 3.3.5-r1 and 3.4.3-r1
-	# which set it directly rather than using ${PV}
-	if [ "${PVR}" = "3.3.5-r1" -o "${PVR}" = "3.4.3-r1" ]; then
-		 version_string="${version_string} ${BRANCH_UPDATE}"
-	fi
-
-	version_string="${version_string} (${release_version})"
-	einfo "patching gcc version: ${version_string}"
-	gcc_version_patch "${version_string}"
+	einfo "patching gcc version: ${BRANCH_UPDATE} (${release_version})"
+	gcc_version_patch "${BRANCH_UPDATE} (${release_version})"
 
 	# Misdesign in libstdc++ (Redhat)
 	cp -a ${S}/libstdc++-v3/config/cpu/i{4,3}86/atomicity.h
@@ -1707,8 +1687,9 @@ do_gcc_config() {
 gcc_version_patch() {
 	[[ -z $1 ]] && die "no arguments to gcc_version_patch"
 
-	sed -i -e "s~\(const char version_string\[\] = \"\).*\(\".*\)~\1$1\2~" \
-	       -e 's~http:\/\/gcc\.gnu\.org\/bugs\.html~http:\/\/bugs\.gentoo\.org\/~' ${S}/gcc/version.c || die "failed to update version.c with Gentoo branding."
+	sed -i -e 's~\(const char version_string\[\] = ".....\).*\(".*\)~\1 @GENTOO@\2~' ${S}/gcc/version.c || die "failed to add @GENTOO@"
+	sed -i -e "s:@GENTOO@:$1:g" ${S}/gcc/version.c || die "failed to patch version"
+	sed -i -e 's~http:\/\/gcc\.gnu\.org\/bugs\.html~http:\/\/bugs\.gentoo\.org\/~' ${S}/gcc/version.c || die "failed to update bugzilla URL"
 }
 
 # The purpose of this DISGUSTING gcc multilib hack is to allow 64bit libs
