@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/amanda
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/ChangeLog,v 1.4 2003/07/10 21:23:38 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/ChangeLog,v 1.5 2003/11/06 20:26:09 robbat2 Exp $
+
+  06 Nov 2003; Robin H. Johnson <robbat2@gentoo.org> amanda-2.4.4-r1.ebuild,
+  amanda-2.4.4.ebuild:
+  : instead of . for chown
 
   10 Jul 2003; Robin H. Johnson <robbat2@gentoo.org> amanda-2.4.4-r1.ebuild:
   Marking as stable on x86 as it works in a production environment for me.

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4-r1.ebuild,v 1.6 2003/09/15 17:47:58 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4-r1.ebuild,v 1.7 2003/11/06 20:26:09 robbat2 Exp $
 
 inherit eutils
 
@@ -287,14 +287,14 @@ src_install() {
 		einfo "Securing directory (${i})"
 		dodir ${i}
 		keepdir ${i}
-		fowners ${AMANDA_USER_NAME}.${AMANDA_GROUP_NAME} ${i}
+		fowners ${AMANDA_USER_NAME}:${AMANDA_GROUP_NAME} ${i}
 		fperms 700 ${i}
 	done
 
 	for i in amandates dumpdates; do
 		einfo "Creating inital Amanda file (${i})"
 		touch ${D}/etc/${i}
-		fowners ${AMANDA_USER_NAME}.${AMANDA_GROUP_NAME} /etc/${i}
+		fowners ${AMANDA_USER_NAME}:${AMANDA_GROUP_NAME} /etc/${i}
 		fperms 600 /etc/${i}
 	done
 

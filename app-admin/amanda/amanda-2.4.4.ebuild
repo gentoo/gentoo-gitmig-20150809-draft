@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4.ebuild,v 1.7 2003/09/30 08:10:04 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4.ebuild,v 1.8 2003/11/06 20:26:09 robbat2 Exp $
 
 inherit eutils
 DESCRIPTION="The Advanced Maryland Automatic Network Disk Archiver"
@@ -172,16 +172,16 @@ src_install() {
 
 	# einfo "Installing Sample Daily Backup Configuration"
 	insinto /etc/amanda/${AMANDA_CONFIG_NAME}
-	fowners ${AMANDA_USER_NAME}.${AMANDA_GROUP_NAME} /etc/amanda
-	fowners ${AMANDA_USER_NAME}.${AMANDA_GROUP_NAME} /etc/amanda/${AMANDA_CONFIG_NAME}
-	fowners ${AMANDA_USER_NAME}.${AMANDA_GROUP_NAME} /etc/amanda/${AMANDA_CONFIG_NAME}/*
+	fowners ${AMANDA_USER_NAME}:${AMANDA_GROUP_NAME} /etc/amanda
+	fowners ${AMANDA_USER_NAME}:${AMANDA_GROUP_NAME} /etc/amanda/${AMANDA_CONFIG_NAME}
+	fowners ${AMANDA_USER_NAME}:${AMANDA_GROUP_NAME} /etc/amanda/${AMANDA_CONFIG_NAME}/*
 	fperms 700 /etc/amanda
 	fperms 700 /etc/amanda/${AMANDA_CONFIG_NAME}
 
 	local i
 	for i in amandates dumpdates; do
 		touch ${D}/etc/${i}
-		fowners ${AMANDA_USER_NAME}.${AMANDA_GROUP_NAME} /etc/${i}
+		fowners ${AMANDA_USER_NAME}:${AMANDA_GROUP_NAME} /etc/${i}
 		fperms 600 /etc/${i}
 	done
 
@@ -189,11 +189,11 @@ src_install() {
 	dodir ${AMANDA_TMPDIR}
 	dodir ${AMANDA_TMPDIR}/dumps
 	dodir ${AMANDA_USER_HOMEDIR}/${AMANDA_CONFIG_NAME}
-	fowners ${AMANDA_USER_NAME}.${AMANDA_GROUP_NAME} ${AMANDA_USER_HOMEDIR}
-	fowners ${AMANDA_USER_NAME}.${AMANDA_GROUP_NAME} ${AMANDA_TAR_LISTDIR}
-	fowners ${AMANDA_USER_NAME}.${AMANDA_GROUP_NAME} ${AMANDA_TMPDIR}
-	fowners ${AMANDA_USER_NAME}.${AMANDA_GROUP_NAME} ${AMANDA_TMPDIR}/dumps
-	fowners ${AMANDA_USER_NAME}.${AMANDA_GROUP_NAME} ${AMANDA_USER_HOMEDIR}/${AMANDA_CONFIG_NAME}
+	fowners ${AMANDA_USER_NAME}:${AMANDA_GROUP_NAME} ${AMANDA_USER_HOMEDIR}
+	fowners ${AMANDA_USER_NAME}:${AMANDA_GROUP_NAME} ${AMANDA_TAR_LISTDIR}
+	fowners ${AMANDA_USER_NAME}:${AMANDA_GROUP_NAME} ${AMANDA_TMPDIR}
+	fowners ${AMANDA_USER_NAME}:${AMANDA_GROUP_NAME} ${AMANDA_TMPDIR}/dumps
+	fowners ${AMANDA_USER_NAME}:${AMANDA_GROUP_NAME} ${AMANDA_USER_HOMEDIR}/${AMANDA_CONFIG_NAME}
 	fperms 700 ${AMANDA_USER_HOMEDIR}
 
 	# DevFS
