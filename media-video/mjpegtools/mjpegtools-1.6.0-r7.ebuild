@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.0-r7.ebuild,v 1.5 2003/02/18 21:08:59 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.0-r7.ebuild,v 1.6 2003/02/20 21:59:51 agriffis Exp $
 
-IUSE="sse arts gtk mmx sdl X quicktime 3dnow avi"
+IUSE="sse arts gtk mmx sdl X quicktime 3dnow avi svga"
 
 inherit libtool flag-o-matic base
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://mjpeg.sourceforge.net/"
 
 LICENSE="as-is"
 SLOT="1"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~alpha"
 
 RDEPEND="media-libs/jpeg
 	media-libs/libpng
@@ -33,15 +33,14 @@ DEPEND="${RDEPEND}
 	3dnow? ( dev-lang/nasm )
 	sse? ( dev-lang/nasm )
 	media-libs/libdv
-	media-libs/svgalib
+	svga? ( media-libs/svgalib )
 	arts? ( kde-base/arts )"
 
 
 src_unpack() {
 	base_src_unpack
 	
-	if [ ! -z "`use quicktime`" ]
-	then
+	if use quicktime; then
 		cd ${WORKDIR}/quicktime4linux-1.4-patch
 		cp libmjpeg.h libmjpeg.h.orig
 		sed -e "s:\"jpeg/jpeglib.h\":<jpeglib.h>:" libmjpeg.h.orig > libmjpeg.h
@@ -55,7 +54,11 @@ src_unpack() {
 		sed -e "s/dv_decoder_new(0,0,0)\;/dv_decoder_new()\;/" lav_common.c.old > lav_common.c
 		sed -e "s/dv_decoder_new(0,0,0)\;/dv_decoder_new()\;/" lav_io.c.old > lav_io.c
 	fi
-	use ppc && ( cd ${S}; patch -p1 < ${FILESDIR}/1.6.0-r7-ppc.patch || die )
+
+	if use ppc; then
+		cd ${S}
+		epatch ${FILESDIR}/1.6.0-r7-ppc.patch || die "epatch failed"
+	fi
 }
 
 src_compile() {
@@ -79,8 +82,7 @@ src_compile() {
 	use avi	\
 		|| myconf="${myconf} --without-aviplay"
 	
-	if [ ! -z "`use quicktime`" ]
-	then
+	if use quicktime; then
 		einfo "Building quicktime4linux"
 		myconf="${myconf} --with-quicktime=${WORKDIR}/quicktime4linux-1.4-patch"
 		

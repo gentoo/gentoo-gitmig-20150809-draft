@@ -1,6 +1,6 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.18 2003/02/18 21:08:59 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.19 2003/02/20 21:59:51 agriffis Exp $
 
 *mjpegtools-1.6.1 (09 Feb 2003)
 
@@ -9,6 +9,12 @@
   Version bumped. Submitted by mathewalexander@surewest.net in #10970.
 
 *mjpegtools-1.6.0-r7 (27 Dec 2002)
+
+  20 Feb 2003; Aron Griffis <agriffis@gentoo.org> mjpegtools-1.6.0-r7.ebuild :
+  Make svgalib dependent on USE=svga.  This isn't really the best
+  fix because it's actually libsdl that depends on svgalib, but it
+  will do for the moment.  Add ~alpha to KEYWORDS and fix a couple
+  niglets in the ebuild.
 
   18 Feb 2003; Martin Holzer <mholzer@gentoo.org> mjpegtools-1.6.0-r7 :
   Added svgalib to DEPEND. Closes #15876.
