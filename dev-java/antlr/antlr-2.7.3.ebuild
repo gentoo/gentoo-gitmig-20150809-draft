@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.3.ebuild,v 1.5 2004/07/14 01:37:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/antlr-2.7.3.ebuild,v 1.6 2004/09/04 12:59:13 axxo Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.antlr.org"
 DEPEND=">=virtual/jdk-1.2"
 SLOT="0"
 LICENSE="ANTLR"
-KEYWORDS="x86 ppc ~sparc amd64"
+KEYWORDS="x86 ppc sparc amd64"
 IUSE=""
 
 src_compile() {

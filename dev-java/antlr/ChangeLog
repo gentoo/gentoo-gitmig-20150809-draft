@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/antlr
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.19 2004/07/15 16:33:48 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.20 2004/09/04 12:59:13 axxo Exp $
+
+  04 Sep 2004; Thomas Matthijs <axxo@gentoo.org> antlr-2.7.3.ebuild:
+  stable on sparc
 
   15 Jul 2004; Thomas Matthijs <axxo@gentoo.org> :
   version bump
