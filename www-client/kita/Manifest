@@ -1,10 +1,20 @@
-MD5 c368654f6740a0c91f6c3c371f94759a kita-0.170.0.ebuild 1110
-MD5 e569d99f3a71a37a3730cc9f31eda56a kita-0.171.0.ebuild 1117
-MD5 ab786d2dbd197a4c06c17aede115cc01 kita-0.160.0.ebuild 1116
-MD5 6f614bb7ada0fa4afb3d2f6c7715cf6d kita-0.172.0.ebuild 1126
-MD5 c38fe67aba5145fe57a7db9702307169 ChangeLog 6075
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 17700f9f5d9a7fca45ccf30ec35c6f9e ChangeLog 6284
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 0a8a7aad519b57d52f31769d89739e59 files/digest-kita-0.160.0 64
-MD5 faf0396a02593e81202c4aeaab2486a2 files/digest-kita-0.170.0 64
+MD5 acedc34d8a4fbb4d19cb2d0bb6b2d03c kita-0.173.0.ebuild 986
+MD5 ab786d2dbd197a4c06c17aede115cc01 kita-0.160.0.ebuild 1116
+MD5 e569d99f3a71a37a3730cc9f31eda56a kita-0.171.0.ebuild 1117
+MD5 84dfd4f3ad376d47a5e39d1ddf7cc6e6 kita-0.172.0.ebuild 1123
 MD5 c436b9a54e7833abfe5c284305036a9d files/digest-kita-0.171.0 64
+MD5 0a8a7aad519b57d52f31769d89739e59 files/digest-kita-0.160.0 64
 MD5 080c86da7ca1362bbd0a6d2fd961eb39 files/digest-kita-0.172.0 64
+MD5 4d6c23d65ce12c502c5fbbdb6a5bb60a files/digest-kita-0.173.0 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBq+wpVWNWqTUmv+0RAgEpAJ43F0SL14PkljZwDsHtr+NDqXLbVACeNcoS
+nOEpC+ZqYKoaMqGgA/XOBYw=
+=4wm0
+-----END PGP SIGNATURE-----
