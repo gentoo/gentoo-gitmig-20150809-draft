@@ -1,8 +1,16 @@
 # ChangeLog for app-arch/rpm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.22 2003/03/28 22:08:18 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/ChangeLog,v 1.23 2003/04/14 15:54:05 cretin Exp $
+
+*rpm-4.2_pre069 (14 Apr 2003)
+
+  14 Apr 2003; Stefan Jones <cretin@gentoo.org> :
+  New version shipped with RH 9.0, named rpm-4.2-0.69
 
 *rpm-4.2 (6 Mar 2003)
+
+  14 Apr 2003; Stefan Jones <cretin@gentoo.org> :
+  Removed from portage for naming violation.
 
   28 Mar 2003; Alastair Tse <liquidx@gentoo.org> rpm-4.2.ebuild:
   elibtoolize for librpmdb librpmio and friends

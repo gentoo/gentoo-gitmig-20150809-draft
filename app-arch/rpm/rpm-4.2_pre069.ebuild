@@ -1,15 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2.ebuild,v 1.7 2003/03/28 22:08:18 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2_pre069.ebuild,v 1.1 2003/04/14 15:54:05 cretin Exp $
 
 inherit flag-o-matic libtool
 
 DESCRIPTION="Red Hat Package Management Utils"
-SRC_URI="ftp://ftp.rpm.org/pub/rpm/dist/rpm-4.2.x/${P}.tar.gz"
+SRC_URI="mirror://gentoo/rpm-4.2-0.69.tar.gz"
 HOMEPAGE="http://www.rpm.org/"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="~x86 ppc ~sparc alpha"
+KEYWORDS="x86 ppc sparc alpha"
 IUSE="nls python doc"
 RDEPEND="=sys-libs/db-3.2*
 	>=sys-libs/zlib-1.1.3
@@ -20,6 +20,7 @@ RDEPEND="=sys-libs/db-3.2*
 	nls? ( sys-devel/gettext )
 	python? ( =dev-lang/python-2.2* )
 	doc? ( app-doc/doxygen )"
+S=${WORKDIR}/rpm-4.2
 
 strip-flags
 
