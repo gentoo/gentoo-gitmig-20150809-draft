@@ -1,5 +1,5 @@
-MD5 c64d97c1712e69811773b4d2edf52c24 ocaml-mode-3.07.ebuild 1059
+MD5 3dcedf1ec64a5afc10fc6735bfb8ee4b ocaml-mode-3.07.ebuild 1056
 MD5 432e713ceefcf4059f586d012b5c1f19 ChangeLog 518
 MD5 81377dd0b004dbd067148ec7adc1a4a2 metadata.xml 178
-MD5 06a183adbef34aa6ef3e47aab97aad35 files/50ocaml-mode-gentoo.el 323
 MD5 6e02dcc33419f9e035b77ff4a0104e8b files/digest-ocaml-mode-3.07 63
+MD5 06a183adbef34aa6ef3e47aab97aad35 files/50ocaml-mode-gentoo.el 323
