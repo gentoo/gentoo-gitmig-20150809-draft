@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/pilot-link
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pilot-link/ChangeLog,v 1.7 2002/07/30 12:22:18 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pilot-link/ChangeLog,v 1.8 2002/08/12 06:40:04 satai Exp $
+
+*pilot-link-0.11.3 (08 Aug 2002)
+
+  08 Aug 2002; Matthew Turk <satai@gentoo.org> ChangeLog  :
+
+  Update to latest version, fixing numerous problems, particularly the numbering
+  of contact fields.  Suggested recompile of all applications using this -
+  gnome-pilot, gnome-pilot-conduits, jpilot and evolution.
 
 *pilot-link-0.11.1-r1 (30 Jul 2002)
 
