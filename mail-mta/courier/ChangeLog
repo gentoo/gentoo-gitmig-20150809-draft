@@ -1,6 +1,13 @@
 # ChangeLog for mail-mta/courier
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.12 2004/08/01 19:28:28 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.13 2004/08/17 03:50:06 swtaylor Exp $
+
+*courier-0.46.20040816 (16 Aug 2004)
+
+  16 Aug 2004; Scott W Taylor <swtaylor@gentoo.org>
+  +courier-0.46.20040816.ebuild:
+  version bump. spf beginning to be handled internally. "man 8 courier" for
+  details.54557 really fixed.
 
 *courier-0.46 (01 Aug 2004)
 
