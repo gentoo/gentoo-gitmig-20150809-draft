@@ -3,7 +3,9 @@ MD5 1890d192a42e2100b9db9d5e95deca22 nautilus-cd-burner-0.2.ebuild 684
 MD5 aa0731e1a5a1a4bcd8a95c3c34184471 nautilus-cd-burner-0.3.2.ebuild 696
 MD5 dcd5bb5ecf7ca3cad2c3416ae95e86f8 nautilus-cd-burner-0.4.0.ebuild 696
 MD5 94ee6b07872f69dcfbdce32b97382f2d nautilus-cd-burner-0.4.1.ebuild 681
+MD5 94ee6b07872f69dcfbdce32b97382f2d nautilus-cd-burner-0.4.2.ebuild 681
 MD5 39cfb7d65833ba1c0a0f85202c5b7665 files/digest-nautilus-cd-burner-0.2 75
 MD5 21de2a801bb5f7ebfda840ee3af33d57 files/digest-nautilus-cd-burner-0.3.2 76
 MD5 a5aace323b3ad7ec76cbeb1f1f218627 files/digest-nautilus-cd-burner-0.4.0 76
 MD5 e07cf5f53c1a61ad2d9c6fb271e29187 files/digest-nautilus-cd-burner-0.4.1 76
+MD5 77c80c394bc05d4940eae31e95d3404b files/digest-nautilus-cd-burner-0.4.2 76

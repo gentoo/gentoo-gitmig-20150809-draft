@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/automake
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.27 2003/06/12 22:11:42 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.28 2003/06/30 23:14:03 aliz Exp $
+
+*automake-1.7.5 (30 Jun 2003)
+
+  30 Jun 2003; Daniel Ahlberg <aliz@gentoo.org> automake-1.7.5.ebuild :
+  Version bump.
 
   12 Jun 2003; <msterret@gentoo.org> automake-1.6.1-r6.ebuild:
   fix Header

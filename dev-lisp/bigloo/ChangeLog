@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/bigloo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/bigloo/ChangeLog,v 1.4 2003/02/12 06:10:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/bigloo/ChangeLog,v 1.5 2003/06/30 23:14:03 aliz Exp $
+
+*bigloo-2.5c (30 Jun 2003)
+
+  30 Jun 2003; Daniel Ahlberg <aliz@gentoo.org> bigloo-2.5c.ebuild :
+  Version bump.
 
 *bigloo-2.5a (16 Aug 2002)
 
