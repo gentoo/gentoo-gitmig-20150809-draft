@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/prism54-firmware
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/prism54-firmware/ChangeLog,v 1.1 2005/01/03 16:03:19 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/prism54-firmware/ChangeLog,v 1.2 2005/01/08 15:03:22 brix Exp $
+
+  08 Jan 2005; Henrik Brix Andersen <brix@gentoo.org>
+  prism54-firmware-1.0.4.3.ebuild:
+  No need to block net-wireless/prism54 since it already blocks
+  net-wireless/prism54-firmware.
 
 *prism54-firmware-1.0.4.3 (03 Jan 2005)
 
