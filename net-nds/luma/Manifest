@@ -3,10 +3,12 @@ MD5 146ece73992b14a23b94ff05e5f7c91a luma-1.4.ebuild 945
 MD5 d18dc619182c35c92227d5cba74050fc luma-2.0.1.ebuild 841
 MD5 38eea6212c9b88b10fc10410c7fc210c luma-1.6.ebuild 838
 MD5 c5699df8769dea959f33b376782ff02e luma-2.0.3.ebuild 1180
-MD5 e5d4edd0a70edbceb53a4f7d10f6580d ChangeLog 1636
+MD5 0968d01fa08c5611650ba0e9c8718fd9 ChangeLog 1744
 MD5 811c07ba7510a315382249fc3adb44fc metadata.xml 175
+MD5 e99358941bc8d8f7e823b4efa80fb5e0 luma-2.1.ebuild 1178
 MD5 16949160b2f6f63b47cf329f3fb9a087 files/digest-luma-1.4 64
 MD5 a21f1cf1d3c01e1613854750396360fa files/digest-luma-1.6 61
+MD5 0f8ed0214f4ca01d742e5e138890f4d7 files/digest-luma-2.1 61
 MD5 a6bb7f9692be516ae8190875bb4d5acf files/digest-luma-2.0.1 63
 MD5 1e87c70a69c742f68ad7891442e1dea3 files/digest-luma-2.0.2 63
 MD5 f2aaabeb9fe26499c1257d7981b05102 files/digest-luma-2.0.3 63
