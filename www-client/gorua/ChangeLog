@@ -1,0 +1,58 @@
+# ChangeLog for www-client/gorua
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/gorua/ChangeLog,v 1.1 2004/09/08 13:46:39 usata Exp $
+
+*gorua-0.17 (08 Sep 2004)
+
+  08 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +files/bookmarks_sample, +files/goRua.sh,
+  +files/gorua-bbsmenu-update-gentoo.diff, +gorua-0.17.ebuild:
+  Moved net-www/gorua to www-client/gorua.
+
+  16 May 2004; Mamoru KOMACHI <usata@gentoo.org> gorua-0.16-r2.ebuild,
+  gorua-0.17.ebuild, files/bookmarks_sample,
+  files/gorua-0.16-ruby18-gentoo.diff:
+  Updated bookmarks_sample. Marked 0.17 stable on x86 and alpha.
+  Removed old ebuild.
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> gorua-0.16-r2.ebuild,
+  gorua-0.17.ebuild:
+  Add inherit eutils
+
+*gorua-0.17 (12 Apr 2004)
+
+  12 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> gorua-0.16-r2.ebuild,
+  gorua-0.17.ebuild:
+  Version bumped. virtual/ruby fix
+
+  26 Dec 2003; Jason Wever <weeve@gentoo.org> gorua-0.16-r1.ebuild:
+  Changed sparc keyword to ~sparc as ruby-gtk has been masked until a few hours
+  ago and hasn't had a chance to be properly tested.
+
+*gorua-0.16-r2 (27 Dec 2003)
+
+  27 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> gorua-0.16-r1.ebuild,
+  gorua-0.16-r2.ebuild, gorua-0.16.ebuild,
+  files/gorua-0.16-ruby18-gentoo.diff:
+  Fixed runtime error on ruby 1.8. Forced ruby 1.6 for gorua-0.16-r1
+  and marked as stable.
+
+*gorua-0.16-r1 (13 Oct 2003)
+
+  13 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> gorua-0.16-r1.ebuild,
+  files/bookmarks_sample, files/goRua.sh:
+  Updated 2chmenu.html path and bookmark. Changed install site dir.
+
+*gorua-0.16 (11 Sep 2003)
+
+  13 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> gorua-0.16.ebuild:
+  Considered as stable for alpha, sparc and ppc.
+
+  27 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> gorua-0.16.ebuild:
+  Marked stable on x86
+
+  11 Sep 2003; Mamoru KOMACHI <usata@gentoo.org>
+  gorua-0.16.ebuild, files/bookmarks_sample, files/goRua.sh,
+  files/gorua-bbsmenu-update-gentoo.diff:
+  Initial import
+
