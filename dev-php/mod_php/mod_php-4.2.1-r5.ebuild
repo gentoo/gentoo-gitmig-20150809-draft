@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Update: Roman Weber <gentoo@gonzo.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.2.1-r5.ebuild,v 1.1 2002/07/16 04:02:53 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.2.1-r5.ebuild,v 1.2 2002/07/16 09:08:46 rphillips Exp $
 
 A=php-${PV}.tar.gz
 S=${WORKDIR}/php-${PV}
@@ -11,6 +11,7 @@ HOMEPAGE="http://www.php.net/"
 LICENSE="PHP"
 KEYWORDS="x86 ppc"
 SLOT="0"
+PROVIDE="virtual/php"
 
 DEPEND=">=dev-libs/gmp-3.1.1
 	>=net-www/apache-1.3.26-r2
