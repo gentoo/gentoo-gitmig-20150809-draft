@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.20 2003/03/31 15:59:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.21 2003/04/02 14:38:07 agriffis Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -105,6 +105,10 @@ case ${VIMPATCH} in
 	;;
 esac
 
+# Add a patch to catch threaded Perl, which breaks Vim (see bug 18555)
+#SRC_URI="${SRC_URI}
+#	perl? ( mirror://gentoo/vim-${PV}-checkperl.patch.bz2 )"
+
 #=== End of SRC_URI setting ===============================================
 
 HOMEPAGE="http://www.vim.org/"
@@ -113,7 +117,13 @@ LICENSE="vim"
 
 DEPEND="${DEPEND}
 	>=sys-apps/sed-4
-	sys-devel/autoconf"
+	sys-devel/autoconf
+	dev-util/cscope
+	gpm?     ( >=sys-libs/gpm-1.19.3 )
+	ncurses? ( >=sys-libs/ncurses-5.2-r2 ) : ( sys-libs/libtermcap-compat )
+	perl?    ( dev-lang/perl )
+	python?  ( dev-lang/python )
+	ruby?    ( >=dev-lang/ruby-1.6.4 )"
 
 apply_vim_patches() {
 	local p
@@ -173,7 +183,7 @@ apply_vim_patches() {
 	# For reasons yet unknown, epatch fails to apply this cleanly
 	ebegin "Applying filtered vim patches..."
 	TMPDIR=${T} patch -f -s -p0 < ${p}
-	eend 0
+	eend
 }
 
 vim_src_unpack() {
@@ -193,6 +203,11 @@ vim_src_unpack() {
 	EPATCH_SUFFIX="gz" \
 		EPATCH_FORCE="yes" \
 		epatch ${WORKDIR}/gentoo/patches-all/
+
+	# Add threaded Perl check to configure.in (configure is remade in
+	# src_compile)
+	#cd ${S}
+	#use perl && epatch ${DISTDIR}/vim-6.1-checkperl.patch.bz2
 }
 
 src_compile() {
@@ -204,8 +219,13 @@ src_compile() {
 	# (3) Notice auto/configure is newer than auto/config.mk
 	# (4) Run ./configure (with wrong args) to remake auto/config.mk
 	sed -i 's/ auto.config.mk:/:/' src/Makefile
-	touch src/configure.in
+	rm -f src/auto/configure
 	make -C src auto/configure || die "make auto/configure failed"
+
+	# This should fix a sandbox violation.
+	for file in /dev/pty/s*; do
+		addwrite $file
+	done
 
 	if [ ${PN} = vim-core ]; then
 		myconf="--with-features=tiny \
@@ -215,52 +235,43 @@ src_compile() {
 			--disable-pythoninterp \
 			--disable-rubyinterp \
 			--disable-gpm"
-		use nls \
-			&& myconf="${myconf} --enable-multibyte" \
-			|| myconf="${myconf} --disable-nls"
 	else
 		myconf="--with-features=huge \
-			--enable-multibyte \
-			--enable-cscope"
-		myconf="${myconf} `use_enable nls`"
+			--enable-cscope \
+			--enable-multibyte"
 		myconf="${myconf} `use_enable gpm`"
 		myconf="${myconf} `use_enable perl perlinterp`"
 		myconf="${myconf} `use_enable python pythoninterp`"
 		myconf="${myconf} `use_enable ruby rubyinterp`"
-
 		# tclinterp is broken; when you --enable-tclinterp flag, then
 		# the following command never returns:
 		#   VIMINIT='let OS=system("uname -s")' vim
 		#myconf="${myconf} `use_enable tcl tclinterp`"
 
-		# The console vim will change the caption of a terminal in X.
-		# Disable this functionality unless USE=X.  Don't use
-		# "use_with" here because then we're telling Vim to use X even
-		# though it might not be installed.
 		if [ ${PN} = vim ]; then
-			use X || myconf="${myconf} --without-x"
-		fi
-	fi
-
-	# This should fix a sandbox violation.
-	for file in /dev/pty/s*; do
-		addwrite $file
-	done
-
-	if [ "${PN}" = "gvim" ]; then
-		myconf="${myconf} --with-vim-name=gvim --with-x"
-		if use gtk2; then
-			myconf="${myconf} --enable-gui=gtk2 --enable-gtk2-check"
-		elif use gnome; then
-			myconf="${myconf} --enable-gui=gnome"
-		elif use gtk; then
-			myconf="${myconf} --enable-gui=gtk"
+			myconf="${myconf} --enable-gui=no `use_with X x`"
+		elif [ ${PN} = gvim ]; then
+			myconf="${myconf} --with-vim-name=gvim --with-x"
+			if use gtk2; then
+				myconf="${myconf} --enable-gui=gtk2 --enable-gtk2-check"
+			elif use gnome; then
+				myconf="${myconf} --enable-gui=gnome"
+			elif use gtk; then
+				myconf="${myconf} --enable-gui=gtk"
+			else
+				myconf="${myconf} --enable-gui=athena"
+			fi
 		else
-			myconf="${myconf} --enable-gui=athena"
+			die "vim.eclass doesn't understand PN=${PN}"
 		fi
-	else
-		myconf="${myconf} --enable-gui=no"
 	fi
+
+	myconf="${myconf} `use_enable nls`"
+
+	# Note: If USE=gpm, then ncurses will still be required
+	use ncurses \
+		&& myconf="${myconf} --with-tlib=ncurses" \
+		|| myconf="${myconf} --with-tlib=termcap"
 
 	econf ${myconf} || die "vim configure failed"
 
