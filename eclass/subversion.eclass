@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.4 2004/02/08 14:37:59 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.5 2004/02/27 09:00:25 hattya Exp $
 
 ## --------------------------------------------------------------------------- #
 # Author: Akinori Hattori <hattya@gentoo.org>
@@ -22,6 +22,7 @@ INHERITED="${INHERITED} ${ECLASS}"
 EXPORT_FUNCTIONS src_unpack
 
 HOMEPAGE="http://subversion.tigris.org/"
+DESCRIPTION="Based on the ${ECLASS} eclass"
 
 
 ## -- add subversion in DEPEND
@@ -50,7 +51,7 @@ ESVN_STORE_DIR="${DISTDIR}/svn-src"
 ## -- ESVN_REPO_URI:  repository uri
 #
 # e.g. http://foo/trunk, svn://bar/trunk
-# but currentry support http only.
+# but currentry support http and https only.
 #
 [ -z "${ESVN_REPO_URI}" ]  && ESVN_REPO_URI=""
 
@@ -83,41 +84,40 @@ ESVN_STORE_DIR="${DISTDIR}/svn-src"
 
 subversion_svn_fetch() {
 
-	# http only...
-	if [ "${ESVN_REPO_URI%%:*}" != "http" ]; then
-		if [ -z "${ESVN_REPO_URI}" ]; then
-			die "subversion.eclass: ESVN_REPO_URI is empty."
+	# ESVN_REPO_URI is empty.
+	[ -z "${ESVN_REPO_URI}" ] && die "subversion.eclass: ESVN_REPO_URI is empty."
 
-		else
+	# http and https only...
+	case ${ESVN_REPO_URI%%:*} in
+		http)	;;
+		https)	;;
+		*)
 			die "subversion.eclass: fetch from "${ESVN_REPO_URI%:*}" is not yet implemented."
-
-		fi
-	fi
-
-	if [ ! -d "${ESVN_STORE_DIR}" ]; then
-		# I don't know why this causes access violation.
-		addwrite "${ESVN_STORE_DIR}"
-
-		mkdir -p "${ESVN_STORE_DIR}" || die "subversion.eclass: can't mkdir ${ESVN_STORE_DIR}."
-		einfo "created store directory: ${ESVN_STORE_DIR}"
-		einfo
-	fi
-
-	cd "${ESVN_STORE_DIR}" || die "subversion.eclass: can't cd to ${ESVN_STORE_DIR}."
+			;;
+	esac
 
 	# every time
+	addwrite "${ESVN_STORE_DIR}"
 	addwrite "/etc/subversion"
 
 	# -userpriv
 	addwrite "/root/.subversion"
 
-	einfo
-
-	if [ -z ${ESVN_REPO_URI##*/} ]; then
-		ESVN_REPO_FIX="${ESVN_REPO_FIX%/}"
+	if [ ! -d "${ESVN_STORE_DIR}" ]; then
+		mkdir -p "${ESVN_STORE_DIR}" || die "subversion.eclass: can't mkdir ${ESVN_STORE_DIR}."
+		einfo "created store directory: ${ESVN_STORE_DIR}"
+		einfo
 	fi
 
-	ESVN_CO_DIR="${ESVN_PROJECT}/${ESVN_REPO_URI##*/}"
+	cd "${ESVN_STORE_DIR}"
+
+	if [ -z ${ESVN_REPO_URI##*/} ]; then
+		ESVN_REPO_FIX="${ESVN_REPO_URI%/}"
+	else
+		ESVN_REPO_FIX="${ESVN_REPO_URI}"
+	fi
+
+	ESVN_CO_DIR="${ESVN_PROJECT}/${ESVN_REPO_FIX##*/}"
 
 	if [ ! -d "${ESVN_CO_DIR}/.svn" ]; then
 		# first check out
@@ -126,7 +126,7 @@ subversion_svn_fetch() {
 		einfo "check out from: ${ESVN_REPO_URI}"
 
 		mkdir -p "${ESVN_PROJECT}" || die "subversion.eclass: can't mkdir ${ESVN_PROJECT}."
-		cd "${ESVN_PROJECT}" || die "subversion.eclass: can't cd to ${ESVN_PROJECT}."
+		cd "${ESVN_PROJECT}"
 
 		${ESVN_FETCH_CMD} "${ESVN_REPO_URI}" || die "subversion.eclass: can't fetch from ${ESVN_REPO_URI}."
 		einfo "     stored in: ${ESVN_STORE_DIR}/${ESVN_CO_DIR}"
@@ -137,9 +137,13 @@ subversion_svn_fetch() {
 		einfo
 		einfo "   update from: ${ESVN_REPO_URI}"
 
-		cd "${ESVN_CO_DIR}" || die "subversion.eclass: can't cd to ${ESVN_CO_DIR}."
+		cd "${ESVN_CO_DIR}"
 		${ESVN_UPDATE_CMD} || die "subversion.eclass: can't update from ${ESVN_REPO_URI}."
 		einfo "    updated in: ${ESVN_STORE_DIR}/${ESVN_CO_DIR}"
+	fi
+
+	if [ $(whoami) != "portage" ]; then
+		chmod -R o+rw ${ESVN_STORE_DIR} || die "subversion.eclass: can't chmod ${ESVN_STORE_DIR}."
 	fi
 
 	# copy to the ${WORKDIR}
@@ -157,7 +161,8 @@ subversion_bootstrap() {
 		cd "${WORKDIR}/${P}"
 
 		if [ -x "${ESVN_BOOTSTRAP}" ]; then
-			./${ESVN_BOOTSTRAP}
+			einfo "begin bootstrap -->"
+			./${ESVN_BOOTSTRAP} || die "subversion.eclass: can't bootstrap with ${ESVN_BOOTSTRAP}."
 		fi
 
 	fi
@@ -169,7 +174,7 @@ subversion_bootstrap() {
 
 subversion_src_unpack() {
 
-	subversion_svn_fetch
-	subversion_bootstrap
+	subversion_svn_fetch || die "subversion.eclass: unknown problem in subversion_svn_fetch()."
+	subversion_bootstrap || die "subversion.eclass: unknown problem in subversion_bootstrap()."
 
 }
