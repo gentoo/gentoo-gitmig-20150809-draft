@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-navigator/netscape-navigator-4.80.ebuild,v 1.1 2004/07/04 12:39:30 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-navigator/netscape-navigator-4.80.ebuild,v 1.2 2005/03/15 20:05:58 seemant Exp $
 
 IUSE=""
 
@@ -19,7 +19,7 @@ LICENSE="NETSCAPE"
 DEPEND=">=sys-libs/lib-compat-1.0
 	net-www/netscape-flash"
 RDEPEND="${DEPEND}
-	!net-www/netscape-communicator"
+	!www-client/netscape-communicator"
 
 src_install() {
 	dodir /opt/netscape
