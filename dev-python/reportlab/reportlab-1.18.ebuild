@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/reportlab-1.18.ebuild,v 1.3 2004/03/15 01:22:38 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/reportlab-1.18.ebuild,v 1.4 2004/04/18 17:08:04 aliz Exp $
 
 #goofy tarball versioning
 vmaj=${PV%%.*}
@@ -21,7 +21,7 @@ DEPEND=">=sys-libs/zlib-0.95
 IUSE=""
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ~ppc sparc ~alpha"
+KEYWORDS="x86 ~ppc sparc ~alpha ~amd64"
 
 src_install() {
 	python_version

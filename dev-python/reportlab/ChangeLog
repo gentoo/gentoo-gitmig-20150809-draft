@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/reportlab
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.7 2004/03/15 01:22:38 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/reportlab/ChangeLog,v 1.8 2004/04/18 17:08:04 aliz Exp $
+
+  18 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> reportlab-1.18.ebuild:
+  Adding amd64 keyword, closing #48058.
 
   14 Mar 2004; Jason Wever <weeve@gentoo.org> reportlab-1.18.ebuild:
   Marked stable on sparc.
