@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/commons-httpclient
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/ChangeLog,v 1.4 2004/03/02 08:54:26 aliz Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-httpclient/ChangeLog,v 1.5 2004/03/09 05:51:53 zx Exp $
+
+*commons-httpclient-2.0-r1 (09 Mar 2004)
+
+  09 Mar 2004; Chris Aniszczyk <zx@gentoo.org>
+  commons-httpclient-2.0-r1.ebuild, files/gentoo.diff:
+  Weaning off the broken jakarta-commons eclass. Closes #43709
 
 *commons-httpclient-2.0 (24 Feb 2004)
 
