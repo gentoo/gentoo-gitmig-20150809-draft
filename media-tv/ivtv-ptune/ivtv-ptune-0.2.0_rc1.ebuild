@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv-ptune/ivtv-ptune-0.2.0_rc1.ebuild,v 1.1 2004/10/15 22:09:09 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv-ptune/ivtv-ptune-0.2.0_rc1.ebuild,v 1.2 2004/10/15 22:55:41 iggy Exp $
 
 DESCRIPTION="ivtv tuner perl scripts"
 HOMEPAGE="http://ivtv.sourceforge.net"
@@ -28,7 +28,7 @@ src_compile() {
 
 src_install() {
 	cd ${WORKDIR}/${P}-${PR}/utils
-	dobin ptune.pl ptune-ui.pl
+	dobin ptune.pl ptune-ui.pl record-v4l2.pl
 	newdoc README README.utils
 	dodoc README.ptune
 }
