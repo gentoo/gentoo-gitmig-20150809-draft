@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.25_pre7-r8.ebuild,v 1.1 2004/07/09 15:27:32 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.25_pre7-r8.ebuild,v 1.2 2004/07/15 03:50:06 agriffis Exp $
 
-IUSE="build crypt"
+IUSE="crypt"
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
