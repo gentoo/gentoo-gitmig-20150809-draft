@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realone/realone-1.ebuild,v 1.5 2003/02/13 13:33:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realone/realone-1.ebuild,v 1.6 2003/03/16 14:33:43 liquidx Exp $
+
+IUSE="gnome kde"
 
 inherit virtualx
 
@@ -107,10 +109,20 @@ src_install() {
 	doins Gemini_0_1 RealMediaSDK_6_0 RealPlayer_9_0 RealShared_0_0
 
 	# KDE desktop entry
-	if [ ${KDEDIR} ]; then
+	if [ -n "`use kde`" -a -n "${KDEDIR}" ]; then
 		insinto ${KDEDIR}/${APPLNK}
 		doins ${FILESDIR}/realone.desktop
 	fi
+    
+    # Gnome desktop entry
+    if [ -n "`use gnome`" ]; then
+    	insinto /usr/share/applications
+        doins ${FILESDIR}/realone.desktop
+    fi
+    
+    # Install pixmaps
+	insinto /usr/share/pixmaps
+	doins *.xpm    
 
 	# Wrapper script
 	exeinto /opt/bin

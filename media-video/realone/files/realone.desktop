@@ -1,10 +1,10 @@
 [Desktop Entry]
 Encoding=UTF-8
 Exec=realone %U
-Icon=realplayer
+Icon=realplay.xpm
 GenericName=Video Player
 Name=RealOne Player
 Type=Application
 Terminal=0
 MimeType=application/smil;audio/vnd.rn-realaudio;audio/x-pn-realaudio;image/vnd.rn-realflash;text/vnd.rn-realtext;video/vnd.rn-realvideo
-
+Categories=Application;AudioVideo;
