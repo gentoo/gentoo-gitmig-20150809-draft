@@ -1,8 +1,11 @@
 # ChangeLog for app-text/htmltidy
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/ChangeLog,v 1.6 2003/02/01 17:17:35 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/ChangeLog,v 1.7 2003/02/01 18:26:10 kutsuya Exp $
 
 *htmltidy-2.7.18-r1 (03 Jan 2003)
+
+  01 Feb 2003; Jason Shoemaker <kutsuya@gentoo.org> : Fixed broken source link.
+  Resolves #7151.
 
   03 Jan 2003; Matthew Turk <satai@gentoo.org> : Added dbpatch to convert HTML
   to either Docbook/XML or Docbook/SGML. Thanks to Ferdy <ferdy@ferdyx.org> 
