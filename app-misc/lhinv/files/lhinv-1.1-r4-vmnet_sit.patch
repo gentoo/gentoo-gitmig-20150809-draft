@@ -1,0 +1,17 @@
+--- lhinv.src.orig	2004-07-11 18:48:15.366067680 +0100
++++ lhinv.src		2004-07-11 18:50:40.316031936 +0100
+@@ -402,9 +402,11 @@
+ 	# for now, this is it.
+ 
+         my %if_names = (
+-                'eth' => 'Ethernet',
+-                'ppp' => 'Point-to-Point',
+-                'slp' => 'Serial Line IP',
++                'eth'	=> 'Ethernet',
++                'ppp'	=> 'Point-to-Point',
++                'slp'	=> 'Serial Line IP',
++		'sit'	=> 'Simple Internet Transition',
++		'vmnet'	=> 'VMware Virtual Net',
+ 	);  		
+         my @if_dev = ();
+  

@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/lhinv
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lhinv/ChangeLog,v 1.10 2004/07/10 13:33:32 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lhinv/ChangeLog,v 1.11 2004/07/11 18:23:15 slarti Exp $
+
+*lhinv-1.1-r4 (11 Jul 2004)
+
+  11 Jul 2004; Tom Martin <slarti@gentoo.org>
+  +files/lhinv-1.1-r4-vmnet_sit.patch, lhinv-1.1-r4.ebuild:
+  Added a sit/vmnet interface type patch. Thanks to Tyler Montbriand
+  <tsm@accesscomm.ca> in bug 54344.
 
   10 Jul 2004; Tom Martin <slarti@gentoo.org> lhinv-1.1-r3.ebuild:
   Added ~amd64.
