@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ctags
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ChangeLog,v 1.31 2004/12/29 00:29:07 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ChangeLog,v 1.32 2004/12/30 00:58:13 kloeri Exp $
+
+  30 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> ctags-5.5.4-r1.ebuild:
+  Stable on alpha.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> ctags-5.5.4-r1.ebuild:
   x86, sparc, mips stable
