@@ -1,26 +1,20 @@
-#
 # (C) 2002 The TelemetryBox Corporation. http://telemetrybox.biz
 # Christoph Lameter, <christoph@lameter.com>, July 15, 2002
-#
 # Released under the GPL
-#
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/discover/discover-1.5-r1.ebuild,v 1.3 2002/07/31 16:42:11 christoph Exp $
 DESCRIPTION="Discover hardware and load the appropriate drivers for that hardware."
 HOMEPAGE="http://www.progeny.com/discover"
-SRC_URI="ftp://ftp.debian.org/debian/pool/main/d/discover/discover_1.5-1.tar.gz"
+SRC_URI="ftp://ftp.debian.org/debian/pool/main/d/discover/${PN}_${PV}-1.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86"
 DEPEND=""
 RDEPEND="sys-apps/discover-data"
 
 S=${WORKDIR}/${P}
 
 src_compile() {
-	./configure --prefix=/usr \
-                --sbindir=/sbin \
-                --sysconfdir=/etc \
-                --mandir=/usr/share/man \
-                --infodir=/usr/share/info || die "configure failed"
+  econf --sbindir=/sbin || die "configure failed"
   emake || die
 }
 
@@ -30,6 +24,6 @@ src_install () {
         insinto /usr/share/discover
         doins discover/linuxrc
 	dodoc BUGS AUTHORS ChangeLog NEWS README TODO ChangeLog.mandrake docs/ISA-Structure docs/PCI-Structure docs/Programming
-	insinto /var/lib/discover
+	dodir /var/lib/discover
 	prepallman
 }
