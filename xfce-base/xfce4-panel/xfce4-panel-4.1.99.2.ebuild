@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/xfce4-panel-4.1.99.2.ebuild,v 1.1 2004/12/13 20:41:53 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/xfce4-panel-4.1.99.2.ebuild,v 1.2 2004/12/18 18:57:24 morfic Exp $
+
+inherit eutils
 
 DESCRIPTION="Xfce 4 panel"
 HOMEPAGE="http://www.xfce.org/"
@@ -22,6 +24,17 @@ RDEPEND="virtual/x11
 	=xfce-base/xfce-mcs-manager-${PV}"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+src_compile () {
+	unpack ${A}
+	cd ${S}
+	if use ppc ; then
+		epatch ${FILESDIR}/getc.patch
+	fi
+
+	econf
+	emake
+}
 
 src_install () {
 	make DESTDIR=${D} install || die

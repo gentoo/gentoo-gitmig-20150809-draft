@@ -1,0 +1,41 @@
+--- panel/main.c.orig 2004-10-06
+10:25:08.000000000 +0200
++++ panel/main.c      2004-12-14
+08:55:53.849841352 +0100
+@@ -316,7 +316,8 @@
+                       const char *old_subdir, const char *old_file,
+                       const char *new_subdir, const char *new_file)
+ {
+-    char  *old, *new, *path, c;
++    char  *old, *new, *path;
++    int c;
+     FILE *r, *w;
+     GError *error = NULL;
+
+--- panel/xfce_support.c.orig 2004-11-10
+10:36:45.000000000 +0100
++++ panel/xfce_support.c      2004-12-14
+08:55:53.887835576 +0100
+@@ -194,7 +194,8 @@
+ {
+     FILE *fp;
+     FILE *bakfp;
+-    char bakfile[MAXSTRLEN + 1], c;
++    char bakfile[MAXSTRLEN + 1];
++    int c;
+
+     snprintf (bakfile, MAXSTRLEN, "%s.bak", path);
+
+--- settings/xfce_settings_plugin.c.orig
+2004-12-14 08:56:28.720540200 +0100
++++ settings/xfce_settings_plugin.c
+2004-12-14 08:56:43.271328144 +0100
+@@ -100,7 +100,8 @@
+                       const char *old_subdir, const char *old_file,
+                       const char *new_subdir, const char *new_file)
+ {
+-    char  *old, *new, *path, c;
++    char  *old, *new, *path;
++    int c;
+     FILE *r, *w;
+     GError *error = NULL;

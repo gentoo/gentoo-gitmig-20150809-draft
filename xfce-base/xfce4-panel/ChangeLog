@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xfce4-panel
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.38 2004/12/13 20:41:53 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.39 2004/12/18 18:57:24 morfic Exp $
+
+  18 Dec 2004; Daniel Goller <morfic@gentoo.org> +files/getc.patch,
+  xfce4-panel-4.1.99.2.ebuild:
+  Applying panel endianess patch for ppc
 
 *xfce4-panel-4.1.99.2 (13 Dec 2004)
 
@@ -32,7 +36,7 @@
   xfce4-panel-4.0.6.ebuild:
   Masked xfce4-panel-4.0.6.ebuild stable for ppc
 
-  07 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> xfce4-panel-4.0.6.ebuild:
+  07 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> xfce4-panel-4.0.6.ebuild:
   Stable on alpha.
 
   06 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org>
