@@ -1,0 +1,11 @@
+# ChangeLog for dev-libs/buddy
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/buddy/ChangeLog,v 1.1 2004/05/17 12:10:17 phosphan Exp $
+
+*buddy-2.2 (17 May 2004)
+
+  17 May 2004; Patrick Kursawe <phosphan@gentoo.org> buddy-2.2.ebuild,
+  metadata.xml:
+  Ebuild by Peter Simons <simons+gentoo@cryp.to> and olivier.fisette@sympatico.ca
+  See bug #39396
+
