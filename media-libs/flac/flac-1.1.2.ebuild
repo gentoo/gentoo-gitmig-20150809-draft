@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.2.ebuild,v 1.4 2005/02/19 22:38:37 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.2.ebuild,v 1.5 2005/02/21 00:56:23 lu_zero Exp $
 
 inherit libtool eutils flag-o-matic gcc
 
@@ -30,7 +30,7 @@ src_unpack() {
 	epatch "${FILESDIR}"/${P}-libtool.patch
 	epatch "${FILESDIR}"/${P}-gas.patch
 	epatch "${FILESDIR}"/${P}-makefile.patch
-	./autogen.sh || die "autogen failed"
+	./autogen.sh 
 	libtoolize --copy --force
 	elibtoolize --reverse-deps
 }
