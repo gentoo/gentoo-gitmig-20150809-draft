@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libemf
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/ChangeLog,v 1.5 2004/06/24 23:08:21 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/ChangeLog,v 1.6 2005/02/01 14:47:49 phosphan Exp $
+
+  01 Feb 2005; Patrick Kursawe <phosphan@gentoo.org>
+  +files/libEMF-1.0-amd64.patch, libemf-1.0.ebuild:
+  Adding patch for amd64, see bug #9167 (patch source: PLD)
 
   24 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> libemf-1.0.ebuild:
   Added missing "inherit eutils"

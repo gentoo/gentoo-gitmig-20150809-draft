@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/libemf-1.0.ebuild,v 1.8 2004/06/24 23:08:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/libemf-1.0.ebuild,v 1.9 2005/02/01 14:47:49 phosphan Exp $
 
 inherit eutils gcc
 
@@ -20,7 +20,8 @@ S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
-	[ $(gcc-major-version) -ge 3 ] && epatch ${FILESDIR}/${MY_P}-gcc3.patch
+	epatch ${FILESDIR}/${MY_P}-gcc3.patch
+	epatch ${FILESDIR}/${MY_P}-amd64.patch
 }
 
 src_compile() {
