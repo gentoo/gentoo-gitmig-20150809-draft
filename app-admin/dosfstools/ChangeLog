@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/dosfstools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/dosfstools/ChangeLog,v 1.9 2003/03/28 17:53:42 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/dosfstools/ChangeLog,v 1.10 2003/09/08 20:06:33 mholzer Exp $
+
+*dosfstools-2.9 (08 Sep 2003)
+
+  08 Sep 2003; Martin Holzer <mholzer@gentoo.org> dosfstools-2.8-r3.ebuild,
+  dosfstools-2.9.ebuild, files/2.8-errno.patch, files/errno.patch:
+  Version bumped. Closes #28139.
 
 *dosfstools-2.8-r3 (26 Feb 2003)
 
