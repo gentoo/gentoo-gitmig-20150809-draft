@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.1.ebuild,v 1.3 2004/03/03 14:54:06 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.1.ebuild,v 1.4 2004/03/05 05:48:31 jhuebel Exp $
 
 S=${WORKDIR}/${P/_/-}
 DESCRIPTION="Openbox is a standards compliant, fast, light-weight, extensible window manager."
@@ -20,7 +20,7 @@ DEPEND="virtual/xft
 RDEPEND=${DEPEND}
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc"
+KEYWORDS="x86 ~ppc sparc amd64"
 
 src_compile() {
 
