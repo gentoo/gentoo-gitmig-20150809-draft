@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.10m-r1.ebuild,v 1.4 2000/10/03 16:02:06 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.10m-r1.ebuild,v 1.5 2000/11/19 12:17:29 achim Exp $
 
 P="util-linux-2.10m"      
 A="${P}.tar.bz2 
@@ -17,6 +17,8 @@ SRC_URI="ftp://ftp.kernel.org/pub/linux/utils/util-linux/${A}
 	 ftp://ftp.linuxnfs.sourceforge.org/pub/nfs/${P}-mount-compat.patch
 	 ftp://ftp.linuxnfs.sourceforge.org/pub/nfs/${P}-mount-nfsv3.patch
 	 ftp://ftp.linuxnfs.sourceforge.org/pub/nfs/${P}-mount-rpc.patch"
+
+DEPEND="sys-libs/test"
 
 src_compile() {                           
 	try ./configure

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.2-r4.ebuild,v 1.1 2000/11/12 21:54:23 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.2-r4.ebuild,v 1.2 2000/11/19 12:17:29 achim Exp $
 
 P=gcc-2.95.2
 A="gcc-2.95.2.tar.gz 
@@ -73,8 +73,6 @@ src_install() {
 	dodir /lib
 	dosym	${T}/lib/gcc-lib/i686-pc-linux-gnu/2.95.2/cpp /lib/cpp
 	dosym   /usr/bin/gcc /usr/bin/cc
-	prepman
-	prepinfo
 	cd ${S}
 	dodoc COPYING COPYING.LIB README FAQ MAINTAINERS
 }

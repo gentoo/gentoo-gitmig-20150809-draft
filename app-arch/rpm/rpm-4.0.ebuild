@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.0.ebuild,v 1.4 2000/11/17 11:15:51 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.0.ebuild,v 1.5 2000/11/19 12:17:29 achim Exp $
 
 A="${P}.tar.gz"
 S=${WORKDIR}/${P}
@@ -14,7 +14,7 @@ DEPEND=">=sys-apps/bash-2.04
 	>=sys-libs/zlib-1.1.3
 	>=sys-apps/bzip2-1.0.1
 	>=sys-libs/db-3.1.17
-	=sys-libs/db-1.58"
+	=sys-libs/db-1.85"
 
 
 src_compile() {
