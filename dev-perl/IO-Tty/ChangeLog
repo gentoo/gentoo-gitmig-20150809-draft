@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/IO-Tty
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Tty/ChangeLog,v 1.12 2004/06/25 00:40:28 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Tty/ChangeLog,v 1.13 2005/01/04 13:18:42 mcummings Exp $
+
+  04 Jan 2005; Michael Cummings <mcummings@gentoo.org>
+  IO-Tty-0.04-r1.ebuild, IO-Tty-0.04.ebuild, IO-Tty-1.02-r1.ebuild,
+  IO-Tty-1.02.ebuild:
+  bug 76590
 
   15 Apr 2004; Michael McCabe <randy@gentoo.org> IO-Tty-1.02-r1.ebuild:
   adding s390 keywords

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/HTTP-GHTTP
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-GHTTP/ChangeLog,v 1.14 2004/06/25 00:38:35 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTTP-GHTTP/ChangeLog,v 1.15 2005/01/04 13:14:48 mcummings Exp $
+
+  04 Jan 2005; Michael Cummings <mcummings@gentoo.org>
+  HTTP-GHTTP-1.07-r1.ebuild:
+  bug 76590
 
   16 Apr 2004; Michael Cummings <mcummings@gentoo.org>
   HTTP-GHTTP-1.07-r1.ebuild, HTTP-GHTTP-1.07.ebuild:

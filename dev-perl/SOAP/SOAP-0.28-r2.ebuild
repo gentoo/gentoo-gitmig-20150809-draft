@@ -1,12 +1,12 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP/SOAP-0.28-r2.ebuild,v 1.8 2004/07/14 20:25:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP/SOAP-0.28-r2.ebuild,v 1.9 2005/01/04 13:34:23 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="A Perl Module for SOAP"
-SRC_URI="http://cpan.valueclick.com/modules/by-module/SOAP/${P}.tar.gz"
-HOMEPAGE="http://cpan.valueclick.com/modules/by-module/SOAP/${P}.readme"
+SRC_URI="mirror://cpan/authors/id/K/KB/KBROWN/${P}.tar.gz"
+HOMEPAGE="http://search.cpan.org/~kbrown/${P}/"
 
 SLOT="0"
 LICENSE="Artistic"

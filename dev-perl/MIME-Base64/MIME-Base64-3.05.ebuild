@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Base64/MIME-Base64-3.05.ebuild,v 1.7 2004/11/07 09:54:31 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Base64/MIME-Base64-3.05.ebuild,v 1.8 2005/01/04 13:22:10 mcummings Exp $
 
 inherit perl-module
 

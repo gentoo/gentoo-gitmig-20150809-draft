@@ -1,12 +1,12 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Base64/MIME-Base64-2.20.ebuild,v 1.11 2004/10/16 23:57:22 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MIME-Base64/MIME-Base64-2.20.ebuild,v 1.12 2005/01/04 13:22:10 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="A base64/quoted-printable encoder/decoder Perl Modules"
-SRC_URI="http://cpan.valueclick.com/modules/by-category/15_World_Wide_Web_HTML_HTTP_CGI/MIME/${P}.tar.gz"
-HOMEPAGE="http://cpan.valueclick.com/modules/by-category/15_World_Wide_Web_HTML_HTTP_CGI/MIME/${P}.readme"
+SRC_URI="mirror://cpan/authors/id/G/GA/GAAS/${P}.tar.gz"
+HOMEPAGE="http://search.cpan.org/~gaas/${P}/"
 
 SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"

@@ -1,14 +1,14 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.0.ebuild,v 1.12 2004/09/04 16:10:13 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.0.ebuild,v 1.13 2005/01/04 13:26:55 mcummings Exp $
 
 IUSE="opengl"
 
 inherit perl-module
 
 DESCRIPTION="PDL Perl Module"
-SRC_URI="http://cpan.valueclick.com/modules/by-module/PDL/${P}.tar.gz"
-HOMEPAGE="http://cpan.valueclick.com/modules/by-module/PDL/${P}.readme"
+SRC_URI="mirror://cpan/authors/id/C/CS/CSOE/${P}.tar.gz"
+HOMEPAGE="http://search.cpan.org/~csoe/${P}/"
 
 SLOT="0"
 LICENSE="Artistic as-is"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IPC-Run
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Run/ChangeLog,v 1.1 2004/08/05 21:47:31 agriffis Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IPC-Run/ChangeLog,v 1.2 2005/01/04 13:19:58 mcummings Exp $
+
+  04 Jan 2005; Michael Cummings <mcummings@gentoo.org> IPC-Run-0.78.ebuild:
+  bug 76590
 
 *IPC-Run-0.78 (05 Aug 2004)
 

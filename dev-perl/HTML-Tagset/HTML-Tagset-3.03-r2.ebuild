@@ -1,12 +1,12 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tagset/HTML-Tagset-3.03-r2.ebuild,v 1.14 2004/07/22 02:32:50 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Tagset/HTML-Tagset-3.03-r2.ebuild,v 1.15 2005/01/04 13:11:33 mcummings Exp $
 
 inherit perl-module
 
 DESCRIPTION="data tables useful in parsing HTML"
-SRC_URI="http://cpan.valueclick.com/modules/by-category/15_World_Wide_Web_HTML_HTTP_CGI/HTML/${P}.tar.gz"
-HOMEPAGE="http://cpan.valueclick.com/modules/by-category/15_World_Wide_Web_HTML_HTTP_CGI/HTML/${P}.readme"
+SRC_URI="mirror://cpan/authors/id/S/SB/SBURKE/${P}.tar.gz"
+HOMEPAGE="http://search.cpan.org/~sburke/${P}/"
 
 SLOT="0"
 LICENSE="Artistic"
