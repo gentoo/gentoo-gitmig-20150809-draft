@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-mad
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mad/ChangeLog,v 1.16 2004/05/04 02:25:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-mad/ChangeLog,v 1.17 2004/06/15 17:19:07 eradicator Exp $
+
+  15 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-mad-0.5.6-r1.ebuild:
+  Added to ~amd64.
 
   03 May 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-mad-0.5.1.ebuild, xmms-mad-0.5.4.ebuild, xmms-mad-0.5.6-r1.ebuild:
