@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.18 2004/12/31 03:18:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.19 2005/01/10 02:41:58 vapier Exp $
 #
 # Author: Toolchain Ninjas <ninjas@gentoo.org>
 #
@@ -85,6 +85,40 @@ tc-is-cross-compiler() {
 		return $([[ ${CBUILD} != ${CHOST} ]])
 	fi
 	return 1
+}
+
+
+# Translate a CBUILD/CHOST/CTARGET into the kernel/portage
+# equivalent of $ARCH
+ninja_magic_to_arch() {
+ninj() { [[ ${type} = "kern" ]] && echo $1 || echo $2 ; }
+
+	local type=$1
+	local host=$2
+
+	case ${host} in
+		alpha*)		echo alpha;;
+		x86_64*)	ninj x86_64 amd64;;
+		arm*)		echo arm;;
+		hppa*)		ninj parisc hppa;;
+		ia64*)		echo ia64;;
+		mips*)		echo mips;;
+		powerpc64*)	echo ppc64;;
+		powerpc*)	echo ppc;;
+		sparc64*)	ninj sparc64 sparc;;
+		sparc*)		echo sparc;;
+		s390*)		echo s390;;
+		sh64*)		ninj sh64 sh;;
+		sh*)		echo sh;;
+		i?86*)		echo x86;;
+		*)			echo wtf;;
+	esac
+}
+host_to_arch_kernel() {
+	ninja_magic_to_arch kern $@
+}
+host_to_arch_portage() {
+	ninja_magic_to_arch portage $@
 }
 
 
