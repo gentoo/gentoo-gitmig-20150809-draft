@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/kinterbasdb
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/kinterbasdb/ChangeLog,v 1.4 2003/02/12 06:32:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/kinterbasdb/ChangeLog,v 1.5 2003/04/04 21:54:21 liquidx Exp $
+
+*kinterbasdb-3.0.2 (04 Apr 2003)
+
+  04 Apr 2003; Alastair Tse <liquidx@gentoo.org> kinterbasdb-3.0.2.ebuild:
+  version bump. about time we have a stable ver in portage.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
