@@ -1,6 +1,6 @@
 # ChangeLog for games-rpg/planeshift
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/planeshift/ChangeLog,v 1.4 2004/06/21 23:50:19 mr_bones_ Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/planeshift/ChangeLog,v 1.5 2004/06/24 23:16:40 agriffis Exp $
 
   21 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
   planeshift-0.2.010-r1.ebuild:
