@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/star/star-1.5_alpha14.ebuild,v 1.3 2003/06/26 16:06:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/star/star-1.5_alpha14.ebuild,v 1.4 2003/07/18 20:38:45 tester Exp $
 
 S=${WORKDIR}/${P/_alpha[0-9][0-9]}
 
@@ -22,6 +22,14 @@ src_unpack() {
 	cd ${S}/DEFAULTS
 	cp Defaults.linux Defaults.linux.orig
 	sed -e 's:/opt/schily:/usr:g' -e 's:bin:root:g' Defaults.linux.orig > Defaults.linux
+
+	if [ "${ARCH}" = "amd64" ]
+	then
+		cd ${S}/RULES
+		cp i386-linux-cc.rul x86_64-linux-cc.rul
+		cp i386-linux-gcc.rul x86_64-linux-gcc.rul
+	fi
+
 }
 
 src_compile() {
