@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.3.ebuild,v 1.3 2000/10/23 11:27:16 achim Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.3.ebuild,v 1.4 2000/11/01 04:44:23 achim Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
 
 A=""
 S=${WORKDIR}/${P}
@@ -80,8 +80,15 @@ src_install()
 	insinto /usr/bin
 	insopts -m0755
 	doins colors
+	dodir /dev
+	cd ${D}/dev
+	MAKEDEV generic-i386
+        MAKEDEV sg
+        MAKEDEV scd
+        MAKEDEV rtc 
 	dodoc README.newusers blurb.txt
 }
+
 
 
 

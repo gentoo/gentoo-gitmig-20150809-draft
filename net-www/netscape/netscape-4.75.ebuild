@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape/netscape-4.75.ebuild,v 1.4 2000/09/16 16:32:48 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape/netscape-4.75.ebuild,v 1.5 2000/11/01 04:44:23 achim Exp $
 
 P=netscape-4.75
 A=communicator-v475-us.x86-unknown-linux2.2.tar.gz
@@ -9,6 +9,8 @@ S=${WORKDIR}/communicator-v475.x86-unknown-linux2.2
 DESCRIPTION="Netscape Communicator 4.75"
 SRC_URI="ftp://ftp.netscape.com/pub/communicator/english/4.75/unix/supported/linux22/complete_install/"${A}
 HOMEPAGE="http://developer.netscape.com/support/index.html"
+
+DEPEND=""
 
 src_install() {                               
   cd ${S}
