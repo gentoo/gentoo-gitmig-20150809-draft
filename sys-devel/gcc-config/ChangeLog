@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc-config
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.63 2004/10/26 04:05:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.64 2004/10/26 18:15:30 azarah Exp $
+
+  26 Oct 2004; Martin Schlemmer <azarah@gentoo.org> +files/wrapper-1.4.3.c:
+  Add GCCBITS support to wrapper.
 
 *gcc-config-1.3.7-r1 (25 Oct 2004)
 
