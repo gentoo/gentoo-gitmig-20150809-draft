@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ru/manpages-ru-0.7.ebuild,v 1.1 2002/11/02 07:22:01 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ru/manpages-ru-0.7.ebuild,v 1.2 2002/11/02 07:26:36 agenkin Exp $
 
-DESCRIPTION="A ollection of Russian translations of Linux manual pages."
+DESCRIPTION="A collection of Russian translations of Linux manual pages."
 HOMEPAGE="http://alexm.here.ru/manpages-ru/"
 LICENSE="GPL-2"
 
