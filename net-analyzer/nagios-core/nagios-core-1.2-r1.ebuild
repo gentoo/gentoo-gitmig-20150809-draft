@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2-r1.ebuild,v 1.6 2004/07/01 17:04:29 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2-r1.ebuild,v 1.7 2004/07/03 09:06:26 eldad Exp $
 
 inherit eutils
 
@@ -32,6 +32,17 @@ DEPEND=">=mail-client/mailx-8.1
 S="${WORKDIR}/${MY_P}"
 
 pkg_setup() {
+	# If there's a gd lib on the system, it will try to build with it.
+	# check if gdlib-config is on, and then check its output.
+	if [[ -x /usr/bin/gdlib-config ]]; then
+		if [[ ! $(gdlib-config --libs | grep -- -ljpeg) ]]; then
+			eerror "Your gd has been compiled without jpeg support."
+			eerror "Please re-emerge gd:"
+			eerror "# USE="jpeg" emerge gd"
+			die "pkg_setup failed"
+		fi
+	fi
+
 	enewgroup nagios
 	enewuser nagios -1 /bin/bash /dev/null nagios
 }
