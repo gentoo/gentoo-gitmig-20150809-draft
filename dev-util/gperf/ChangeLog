@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/gperf
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gperf/ChangeLog,v 1.19 2004/07/02 05:08:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gperf/ChangeLog,v 1.20 2004/07/05 23:25:53 mr_bones_ Exp $
+
+  05 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> gperf-2.7.2.ebuild:
+  Fix depend (bug #56184); don't assign default to S
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> gperf-2.7.2.ebuild,
   gperf-3.0.1.ebuild:
