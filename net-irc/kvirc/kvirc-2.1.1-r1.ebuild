@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Prakash Shetty (Crux) <ps@gnuos.org>
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-2.1.1-r1.ebuild,v 1.2 2002/01/09 19:13:24 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-2.1.1-r1.ebuild,v 1.3 2002/01/12 09:08:06 danarmak Exp $
 use kde && . /usr/portage/eclass/inherit.eclass
 use kde && inherit kde-base
 
@@ -24,8 +24,8 @@ src_compile() {
     use kde && myconf="${myconf} --with-kde-support"
     
     use kde && kde_src_compile myconf
-    ./configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info \
-	--host=${CHOST} ${myconf} || die
+    ./configure --mandir=/usr/share/man --infodir=/usr/share/info \
+	--host=${CHOST} ${myconf} --prefix=/usr || die
 
     make kvirc || die
 }
