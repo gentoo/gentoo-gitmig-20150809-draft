@@ -1,3 +1,6 @@
+# Compiled by: james <zeurx@hotmail.com>
+# http://bugs.gentoo.org/show_bug.cgi?id=24988
+#
 # Canon PowerShot A10
 usbcam               0x0003      0x04a9   0x304f    0x0000       0x0000       0x00         0x00            0x00            0x00            0x00               0x00               0x00000000
 # Canon PowerShot A100
