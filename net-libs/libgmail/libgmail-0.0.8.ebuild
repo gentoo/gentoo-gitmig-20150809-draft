@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libgmail/libgmail-0.0.8.ebuild,v 1.3 2004/10/17 09:53:06 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libgmail/libgmail-0.0.8.ebuild,v 1.4 2005/02/02 16:26:31 squinky86 Exp $
 
 inherit python
 
@@ -29,7 +29,7 @@ src_install() {
 	python_version
 	exeinto /usr/lib/python${PYVER}/site-packages
 	doexe libgmail.py constants.py mkconstants.py
-	dodir /usr/share/doc/${PF}
-	cp -r demos ${D}/usr/share/doc/${PF}
-	dodoc ANNOUNCE CHANGELOG README demos/*
+	exeinto /usr/share/doc/${PF}/demos
+	doexe -r demos/*
+	dodoc ANNOUNCE CHANGELOG README
 }
