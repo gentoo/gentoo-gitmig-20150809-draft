@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/GD
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.25 2004/11/01 02:10:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.26 2004/11/14 08:25:54 vapier Exp $
+
+*GD-2.18 (14 Nov 2004)
+
+  14 Nov 2004; Mike Frysinger <vapier@gentoo.org>
+  -files/2.12-gif-support.patch, -files/2.12-makefile-opts.patch,
+  -GD-2.12.ebuild, GD-2.16.ebuild, +GD-2.18.ebuild:
+  Version bump.
 
 *GD-2.16 (31 Oct 2004)
 

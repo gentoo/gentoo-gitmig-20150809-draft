@@ -1,544 +1,0 @@
-diff -Naurp GD-2.05.orig/GD.pm GD-2.05/GD.pm
---- GD-2.05.orig/GD.pm	2002-11-24 20:27:31.000000000 -0500
-+++ GD-2.05/GD.pm	2003-01-06 17:07:02.000000000 -0500
-@@ -166,6 +166,15 @@ sub GD::Image::newFromPng {
-     $class->_newFromPng($fh,@_);
- }
- 
-+sub GD::Image::newFromGif {
-+    croak("Usage: newFromGid(class,filehandle)") unless @_==2;
-+    my($class) = shift;
-+    my($f)     = shift;
-+    my $fh = $class->_make_filehandle($f);
-+    binmode($fh);
-+    $class->_newFromGif($fh);
-+}
-+
- sub GD::Image::newFromJpeg {
-     croak("Usage: newFromJpeg(class,filehandle,[truecolor])") unless @_>=2;
-     my($class) = shift;
-@@ -211,6 +220,7 @@ sub _image_type {
-   my $data = shift;
-   my $magic = substr($data,0,4);
-   return 'Png'  if $magic eq "\x89PNG";
-+  return 'Gif'  if $magic eq "GIF8";
-   return 'Jpeg' if $magic eq "\377\330\377\340";
-   return 'Jpeg' if $magic eq "\377\330\377\356";
-   return 'Gd2'  if $magic eq "gd2\000";
-@@ -617,6 +627,14 @@ you can call the image query methods des
- The newFromPngData() method will create a new GD::Image initialized
- with the PNG format B<data> contained in C<$data>.
- 
-+=item B<$image = GD::Image-E<gt>newFromGif($file)>
-+
-+=item B<$image = GD::Image-E<gt>newFromGifData($data)>
-+
-+These methods will create an image from a GIF file.  They work just
-+like newFromPng() and newFromPngData(), and will accept the same
-+filehandle and pathname arguments.
-+
- =item B<$image = GD::Image-E<gt>newFromJpeg($file, [$truecolor])>
- 
- =item B<$image = GD::Image-E<gt>newFromJpegData($data, [$truecolor])>
-@@ -745,6 +763,10 @@ pipe it to a display program, or write i
- Same as gd(), except that it returns the data in compressed GD2
- format.
- 
-+=item B<$gifdata = $image-E<gt>gif>
-+
-+Same as gd(), except that it returns the data in GIF format.
-+
- =item B<$wbmpdata = $image-E<gt>wbmp([$foreground])>
- 
- This returns the image data in WBMP format, which is a black-and-white
-diff -Naurp GD-2.05.orig/GD.xs GD-2.05/GD.xs
---- GD-2.05.orig/GD.xs	2002-11-22 14:20:54.000000000 -0500
-+++ GD-2.05/GD.xs	2003-01-06 17:07:02.000000000 -0500
-@@ -251,6 +251,7 @@ extern	gdFontPtr	gdFontTiny;
- #ifdef PERL_OBJECT
- #  ifdef WIN32
- #define GDIMAGECREATEFROMPNG(x) gdImageCreateFromPng((FILE*)x)
-+#define GDIMAGECREATEFROMGIF(x) gdImageCreateFromGif((FILE*)x)
- #define GDIMAGECREATEFROMXBM(x) gdImageCreateFromXbm((FILE*)x)
- #define GDIMAGECREATEFROMJPEG(x) gdImageCreateFromJpeg((FILE*)x)
- #define GDIMAGECREATEFROMWBMP(x) gdImageCreateFromWBMP((FILE*)x)
-@@ -261,6 +262,7 @@ extern	gdFontPtr	gdFontTiny;
- #else
- #  ifdef USE_PERLIO
- #define GDIMAGECREATEFROMPNG(x) gdImageCreateFromPng(PerlIO_findFILE(x))
-+#define GDIMAGECREATEFROMGIF(x) gdImageCreateFromGif(PerlIO_findFILE(x))
- #define GDIMAGECREATEFROMXBM(x) gdImageCreateFromXbm(PerlIO_findFILE(x))
- #define GDIMAGECREATEFROMJPEG(x) gdImageCreateFromJpeg(PerlIO_findFILE(x))
- #define GDIMAGECREATEFROMWBMP(x) gdImageCreateFromWBMP(PerlIO_findFILE(x))
-@@ -269,6 +271,7 @@ extern	gdFontPtr	gdFontTiny;
- #define GDIMAGECREATEFROMGD2PART(x,a,b,c,d) gdImageCreateFromGd2Part(PerlIO_findFILE(x),a,b,c,d)
- #  else
- #define GDIMAGECREATEFROMPNG(x) gdImageCreateFromPng(x)
-+#define GDIMAGECREATEFROMGIF(x) gdImageCreateFromGif(x)
- #define GDIMAGECREATEFROMXBM(x) gdImageCreateFromXbm(x)
- #define GDIMAGECREATEFROMJPEG(x) gdImageCreateFromJpeg(x)
- #define GDIMAGECREATEFROMWBMP(x) gdImageCreateFromWBMP(x)
-@@ -503,6 +506,23 @@ gdnewFromPngData(packname="GD::Image", i
- 	RETVAL
- 
- GD::Image
-+gdnewFromGifData(packname="GD::Image", imageData, ...)
-+ 	char *	packname
-+	SV *	imageData
-+	PROTOTYPE: $$;$
-+        PREINIT:
-+	  gdIOCtx* ctx;
-+          char*    data;
-+          STRLEN   len;
-+	CODE:
-+	data = SvPV(imageData,len);
-+        ctx = newDynamicCtx(data,len);
-+	RETVAL = (GD__Image) gdImageCreateFromGifCtx(ctx);
-+        (ctx->gd_free)(ctx);
-+	OUTPUT:
-+	RETVAL
-+
-+GD::Image
- gdnewFromGdData(packname="GD::Image", imageData)
- 	char *	packname
- 	SV *	imageData
-@@ -604,6 +624,16 @@ gd_newFromGd(packname="GD::Image", fileh
- 	RETVAL
- 
- GD::Image
-+gd_newFromGif(packname="GD::Image", filehandle)
-+	char *	packname
-+	InputStream	filehandle
-+	PROTOTYPE: $$
-+	CODE:
-+	RETVAL = GDIMAGECREATEFROMGIF(filehandle);
-+	OUTPUT:
-+	RETVAL
-+
-+GD::Image
- gd_newFromGd2(packname="GD::Image", filehandle)
- 	char *	packname
- 	InputStream	filehandle
-@@ -810,6 +840,21 @@ gdgd2(image)
-   OUTPUT:
-     RETVAL
- 
-+SV*
-+gdgif(image)
-+  GD::Image	image
-+  PROTOTYPE: $
-+  CODE:
-+  {
-+	void*         data;
-+	int           size;
-+	data = gdImageGifPtr(image,&size);
-+	RETVAL = newSVpv((char*) data,size);
-+	gdFree(data);
-+  }
-+  OUTPUT:
-+    RETVAL
-+
- int
- gdtransparent(image, ...)
- 	GD::Image	image
-diff -Naurp GD-2.05.orig/t/GD.t GD-2.05/t/GD.t
---- GD-2.05.orig/t/GD.t	2002-11-22 15:30:06.000000000 -0500
-+++ GD-2.05/t/GD.t	2003-01-06 17:07:02.000000000 -0500
-@@ -7,7 +7,7 @@ use constant FONT=>"$Bin/Generic.ttf";
- use constant SKIP_TEST_8 => 1;
- 
- my $loaded;
--BEGIN {$| = 1; $loaded = 0; print "1..10\n"; }
-+BEGIN {$| = 1; $loaded = 0; print "1..11\n"; }
- END {print "not ok 1\n" unless $loaded;}
- 
- use GD qw(:DEFAULT GD_CMP_IMAGE);
-@@ -29,6 +29,7 @@ if (defined $arg && $arg eq '--write') {
-   compare(&test8,8,'write');
-   compare(&test9('frog.xpm'),9,'write');
-   compare(&test10('frog.jpg'),10,'write');
-+  compare(&test11('frog.gif'),11,'write');
- }
- 
- compare(test2(),2);
-@@ -65,6 +66,14 @@ if (GD::Image->newFromJpeg('frog.jpg')) 
-   print "not ok ",10,"\n";
- }
- 
-+if (GD::Image->newFromGif('frog.gif')) {
-+  compare(test11('frog.gif'),11);
-+} elsif ($@ =~/not built with gif support/) {
-+  print "ok ",11," # Skip, no GIF support\n";
-+} else {
-+  print "not ok ",11,"\n";
-+}
-+
- sub compare {
-     my($imageData,$testNo,$fht) = @_;
-     local($/);
-@@ -298,6 +307,6 @@ sub test10 {
- sub test11 {
-   my $fn = shift;
-   my $im = GD::Image->newFromGif($fn);
--  $im->gif;
-+  $im->png;
- }
- 
-diff -Naurp GD-2.05.orig/t/GD.t~ GD-2.05/t/GD.t~
---- GD-2.05.orig/t/GD.t~	1969-12-31 19:00:00.000000000 -0500
-+++ GD-2.05/t/GD.t~	2002-11-22 15:30:06.000000000 -0500
-@@ -0,0 +1,303 @@
-+#!/usr/bin/perl -w
-+
-+use lib './blib/lib','./blib/arch','../blib/lib','../blib/arch';
-+use FileHandle;
-+use FindBin qw($Bin);
-+use constant FONT=>"$Bin/Generic.ttf";
-+use constant SKIP_TEST_8 => 1;
-+
-+my $loaded;
-+BEGIN {$| = 1; $loaded = 0; print "1..10\n"; }
-+END {print "not ok 1\n" unless $loaded;}
-+
-+use GD qw(:DEFAULT GD_CMP_IMAGE);
-+$loaded++;
-+print "ok 1\n";
-+
-+chdir 't' || die "Couldn't change to 't' directory: $!";
-+
-+$arg = shift;
-+
-+if (defined $arg && $arg eq '--write') {
-+  warn "Writing regression files...";
-+  compare(&test2,2,'write');
-+  compare(&test3,3,'write');
-+  compare(&test4,4,'write');
-+  compare(&test5,5,'write');
-+  compare(&test6,6,'write');
-+  compare(&test7,7,'write');
-+  compare(&test8,8,'write');
-+  compare(&test9('frog.xpm'),9,'write');
-+  compare(&test10('frog.jpg'),10,'write');
-+}
-+
-+compare(test2(),2);
-+compare(test3(),3);
-+compare(test4(),4);
-+compare(test5(),5);
-+compare(test6(),6);
-+compare(test7(),7);
-+
-+if (SKIP_TEST_8) {
-+  print "ok 8 # Skip, FreeType changes too frequently to be testable\n";
-+}
-+elsif (GD::Image->stringTTF(0,FONT,12.0,0.0,20,20,"Hello world!")) {
-+  multicompare(test8(),8,undef);
-+} elsif ($@ =~/not built with .+Type font support/) {
-+  print "ok ",8," # Skip, no FreeType font support\n";
-+} else {
-+  print "not ok ",8,"\n";
-+}
-+
-+if (GD::Image->newFromXpm('frog.xpm')) {
-+  compare(test9('frog.xpm'),9);
-+} elsif ($@ =~/not built with xpm support/) {
-+  print "ok ",9," # Skip, no XPM support\n";
-+} else {
-+  print "not ok ",9,"\n";
-+}
-+
-+if (GD::Image->newFromJpeg('frog.jpg')) {
-+  compare(test10('frog.jpg'),10);
-+} elsif ($@ =~/not built with jpeg support/) {
-+  print "ok ",10," # Skip, no JPEG support\n";
-+} else {
-+  print "not ok ",10,"\n";
-+}
-+
-+sub compare {
-+    my($imageData,$testNo,$fht) = @_;
-+    local($/);
-+    undef $/;
-+    my $ok = $testNo;
-+    my $regressdata;
-+    my $file = ($^O eq 'VMS')? "test.out_".$testNo."_png" : "./test.out.$testNo.png";
-+    if (defined $fht and $fht eq 'write') {
-+      open (REGRESSFILE,">$file")
-+	|| die "Can't open regression file '$file': $!\n";
-+      binmode REGRESSFILE;
-+      print REGRESSFILE $imageData;
-+      close REGRESSFILE;
-+    } else {
-+      open (REGRESSFILE,"./$file")
-+        || die "Can't open regression file './t/$file': $!\n";
-+      binmode REGRESSFILE;
-+      $regressdata = <REGRESSFILE>;
-+      close REGRESSFILE;
-+      print $imageData eq $regressdata ? "ok $ok" : "not ok $ok","\n";
-+    }
-+}
-+
-+sub multicompare {
-+  my($imageData,$testNo,$fht,@alt) = @_;
-+  local $/ = undef;
-+  my $ok = $testNo;
-+  my $regressdata;
-+  my $file = ($^O eq 'VMS')? "test.out_".$testNo."_png" : "test.out.$testNo.png";
-+  if (defined $fht and $fht eq 'write') {
-+    die "Not implemented with multicompare";
-+  } else {
-+    my $equal;
-+    opendir(DIR,'.');
-+  ENTRY:
-+    while (my $entry =readdir(DIR)) {
-+      next unless $entry =~ /^$file(-\d+)?/;
-+      open (REGRESSFILE,$entry)
-+	|| die "Can't open regression file './t/$entry': $!\n";
-+      binmode REGRESSFILE;
-+      $regressdata = <REGRESSFILE>;
-+      close REGRESSFILE;
-+      if ($imageData eq $regressdata) {
-+	$equal = 1;
-+	last ENTRY;
-+      }
-+    }
-+    closedir DIR;
-+    print $equal ? "ok $ok" : "not ok $ok","\n";
-+  }
-+}
-+
-+sub test2 {
-+    my($im) = new GD::Image(300,300);
-+    my($white) = $im->colorAllocate(255, 255, 255);        
-+    my($black) = $im->colorAllocate(0, 0, 0);
-+    my($red) = $im->colorAllocate(255, 0, 0);      
-+    my($green) = $im->colorAllocate(0,255,0);
-+    my($yellow) = $im->colorAllocate(255,250,205);
-+    open (TILE,"./tile.png") || die "Can't open tile file: $!";
-+    my($tile) = newFromPng GD::Image(TILE);
-+    close TILE;
-+    $im->setBrush($tile);
-+    $im->arc(100,100,100,150,0,360,gdBrushed);
-+    $im->setTile($tile);
-+    $im->filledRectangle(150,150,250,250,gdTiled);
-+    $im->rectangle(150,150,250,250,$black);
-+    $im->setStyle($green,$green,$green,gdTransparent,$red,$red,$red,gdTransparent);
-+    $im->line(0,280,300,280,gdStyled);
-+    return $im->png;
-+}
-+
-+sub test3 {
-+    my($im) = new GD::Image(300,300);
-+    my($white,$black,$red,$blue,$yellow) = (
-+					    $im->colorAllocate(255, 255, 255),
-+					    $im->colorAllocate(0, 0, 0),
-+					    $im->colorAllocate(255, 0, 0),
-+					    $im->colorAllocate(0,0,255),
-+					    $im->colorAllocate(255,250,205)
-+					    );
-+    my($brush) = new GD::Image(10,10);
-+    $brush->colorAllocate(255,255,255); # white
-+    $brush->colorAllocate(0,0,0);	# black
-+    $brush->transparent($white);	# white is transparent
-+    $brush->filledRectangle(0,0,5,2,$black); # a black rectangle
-+    $im->setBrush($brush);
-+    $im->arc(100,100,100,150,0,360,gdBrushed);
-+    my($poly) = new GD::Polygon;
-+    $poly->addPt(30,30);
-+    $poly->addPt(100,10);
-+    $poly->addPt(190,290);
-+    $poly->addPt(30,290);
-+    $im->polygon($poly,gdBrushed);
-+    $im->fill(132,62,$blue);
-+    $im->fill(100,70,$red);
-+    $im->fill(40,40,$yellow);
-+    $im->interlaced(1);
-+    $im->copy($im,150,150,20,20,50,50);
-+    $im->copyResized($im,10,200,20,20,100,100,50,50);
-+    return $im->png;
-+}
-+
-+sub test4 {
-+    my($im) = new GD::Image(100,50);
-+    my($black,$white,$red,$blue) = 
-+	(
-+	 $im->colorAllocate(0, 0, 0),
-+	 $im->colorAllocate(255, 255, 255),
-+	 $im->colorAllocate(255, 0, 0),
-+	 $im->colorAllocate(0,0,255)
-+	 );
-+    $im->arc(50, 25, 98, 48, 0, 360, $white);
-+    $im->fill(50, 21, $red);
-+    return $im->png;
-+}
-+
-+sub test5 {
-+    my($im) = new GD::Image(225,180);
-+    my($black,$white,$red,$blue,$yellow) = 
-+       ($im->colorAllocate(0, 0, 0),
-+	$im->colorAllocate(255, 255, 255),
-+	$im->colorAllocate(255, 0, 0),
-+	$im->colorAllocate(0,0,255),
-+	$im->colorAllocate(255,250,205)
-+	);
-+    my($poly) = new GD::Polygon;
-+    $poly->addPt(0,50);
-+    $poly->addPt(25,25);
-+    $poly->addPt(50,50);
-+    $im->filledPolygon($poly,$blue);
-+    $poly->offset(100,100);
-+    $im->filledPolygon($poly,$red);
-+    $poly->map(50,50,100,100,10,10,110,60);
-+    $im->filledPolygon($poly,$yellow);
-+    $poly->map($poly->bounds,50,20,80,160);
-+    $im->filledPolygon($poly,$white);
-+    return $im->png;
-+}
-+
-+sub test6 {
-+    my($im) = new GD::Image(300,300);
-+    my($white,$black,$red,$blue,$yellow) = 
-+	(
-+	 $im->colorAllocate(255, 255, 255),
-+	 $im->colorAllocate(0, 0, 0),
-+	 $im->colorAllocate(255, 0, 0),
-+	 $im->colorAllocate(0,0,255),
-+	 $im->colorAllocate(255,250,205)
-+	 );
-+    $im->transparent($white);
-+    $im->interlaced(1);
-+    my($brush) = new GD::Image(10,10);
-+    $brush->colorAllocate(255,255,255);
-+    $brush->colorAllocate(0,0,0);
-+    $brush->transparent($white);
-+    $brush->filledRectangle(0,0,5,2,$black);
-+    $im->string(gdLargeFont,150,10,"Hello world!",$red);
-+    $im->string(gdSmallFont,150,28,"Goodbye cruel world!",$blue);
-+    $im->stringUp(gdTinyFont,280,250,"I'm climbing the wall!",$black);
-+    $im->charUp(gdMediumBoldFont,280,280,"Q",$black);
-+    $im->setBrush($brush);
-+    $im->arc(100,100,100,150,0,360,gdBrushed);
-+    $poly = new GD::Polygon;
-+    $poly->addPt(30,30);
-+    $poly->addPt(100,10);
-+    $poly->addPt(190,290);
-+    $poly->addPt(30,290);
-+    $im->polygon($poly,gdBrushed);
-+    $im->fill(132,62,$blue);
-+    $im->fill(100,70,$red);
-+    $im->fill(40,40,$yellow);
-+    return $im->png;
-+}
-+
-+sub test7 {
-+    my $dtor = 0.0174533;
-+    my $pi = 3.141592654;
-+    my $xsize = 500;   my $ysize = 500;   my $scale = 1;
-+    my $x_offset = $xsize/2;   my $y_offset = $ysize/2;
-+    my $im = new GD::Image($xsize,$ysize);
-+    my $poly = new GD::Polygon;
-+    my $col_bg = $im->colorAllocate(0,0,0);
-+    my $col_fg = $im->colorAllocate(255,255,0);
-+    my $col_fill = $im->colorAllocate(255,0,0);
-+    my $r_0 = 100;     my $theta_0 = 20;      my $spring_factor = 30;
-+    for($theta=0;$theta<=360;$theta++) {
-+	my $r = $r_0 + $spring_factor*sin(2*$pi*$theta/$theta_0);
-+	my $x = int($r * cos($theta*$dtor))*$scale+$x_offset;
-+	my $y = int($r * sin($theta*$dtor))*$scale+$y_offset;
-+	$poly->addPt($x,$y);
-+    }
-+
-+    $im->filledPolygon($poly,$col_fill);            # Call gdImageFilledPolygon()
-+
-+    return $im->png;
-+}
-+
-+sub test8 {
-+  my $im = GD::Image->new(400,250);
-+  if (!$im) { printf("Test7: no image");};
-+  my($white,$black,$red,$blue,$yellow) = 
-+    (
-+     $im->colorAllocate(255, 255, 255),
-+     $im->colorAllocate(0, 0, 0),
-+     $im->colorAllocate(255, 0, 0),
-+     $im->colorAllocate(0,0,255),
-+     $im->colorAllocate(255,250,205)
-+    );
-+
-+  # Some TTFs
-+  $im->stringFT($black,FONT,12.0,0.0,20,20,"Hello world!") || warn $@;
-+  $im->stringFT($red,FONT,14.0,0.0,20,80,"Hello world!") || warn $@;
-+  $im->stringFT($blue,FONT,30.0,-0.5,60,100,"Goodbye cruel world!") || warn $@;
-+  $im->png;
-+}
-+
-+sub test9 {
-+  my $fn = shift;
-+  my $im = GD::Image->newFromXpm($fn);
-+  $im->png;
-+}
-+
-+sub test10 {
-+  my $fn = shift;
-+  my $im = GD::Image->newFromJpeg($fn);
-+  $im->png;
-+}
-+
-+# not used
-+sub test11 {
-+  my $fn = shift;
-+  my $im = GD::Image->newFromGif($fn);
-+  $im->gif;
-+}
-+
-diff -Naurp GD-2.05.orig/t/frog.gif GD-2.05/t/frog.gif
---- GD-2.05.orig/t/frog.gif	1969-12-31 19:00:00.000000000 -0500
-+++ GD-2.05/t/frog.gif	2003-01-06 17:07:02.000000000 -0500
-@@ -0,0 +1,28 @@
-+GIF89a0 0 ÷                   !  !   ) )        !      !  	. 9  ) !  ! ) ! ) ! !% 1  1 1 ) 1 1! 9d 1+-m@yI6uO„:1„C|[.|aŒA;-<+ŠP‡]1Œ\ ˆs1Št¤3D!œ@-¤&+·%2£@5µ;Ğ5&Ä3*Ì-)ÌC9½)5½73Ã/1Ó2˜U5œM1šZ+˜u5¹J4±Z+¿X-ÔUİ×ğÜ)âÉ+æ×æçõéîç$ïä ï÷ ïÿ ÷ï ÷÷ ÷ÿ ÿï ÿ÷ ÿÿïïï÷÷ïôñï÷÷ÿÿ÷ÿÿìñ÷ï÷÷÷ÿ÷ÿÿïÿ÷ÿÿ!ñùÿóÿÿ!ÿÿ-óï-ó÷+ÿñ-ııL‘LšI•UvN-ŒH.˜H/˜R*¢S£R°O±H¨E-¡T/±G-°R*FŒ0C­/>À'B»9:Î'<Î1>Ç;<Ñ;eb4Y˜/N»/OÆ2“]3³bp.»"ç” äŸ ï  ÷œ ÷¥ ÿ” ÿœ ÿ¥ Ò˜Ø”é‘è÷¥ÿœûœù™&ã«	÷­ ÷±ÿ¥ÿ­ ÿ­ÿµ ÿ½ Ş©$Ù²3ó©ï¯*ÿ¥û¥&ıµü¹)KuJGŠPH›RK©LF·HPµFF±UR±R;¿TFÁNNÄFRÁRBÊN=ÔQHÔFJÓRJ€aMšcK­eV«cA½gP¿`FÌ_RĞ`N™xKºwDÛªCâÏ9äÜIãß?õä?õõh‹\dªY]µO`³b\ÅLaÁYbµk^Ìly_F–bJƒSuÁ]ÃvHÛ§O¯¼Zİ¸PaÄ`ÛÆqÖœ¡Ã¡Zæãmîî¤ÿÿ¹ÿÿÜØÅóû÷Æÿÿáÿüäüÿïÿÿûûÿÿÿÿ,    0 0  ş »Üi3'Ì›3fêdÙÖ-Czñ¶mû’¥K1çÌ!s¦c™2fÌœáxæ ˜7wN’¹#FÁ”r¶p³gïM›4½iáógmÚtYÆMI’cî¼yŒ2n¸Ü‘ÃfÏšûöñë×Ÿ>~üöék¯6nŞˆiÆËpßŒycåJ3oö Áƒ…Û½¯üüõÓº5,Y{pä¸	é¦qH‚pKŠ13™7aFÊ­'Î—oöÆÚm³Ş7,kÔ,f,GÎ7AvÔ£ºÌA»BÁØñ’§bĞôê1¤×­·?yÜˆÚ‘ Ë6o„"tã%Ÿ<hîŒ9†Ì>Ş¶ş|±Ãœ>pğà9G0sôŒl´:ÒÍ”©ÃG‹q<jŒ1ÒplÑÂ
-+-L‡z°_R`Œq™sÕÑeĞ„BœÉÃ'pó…b”á=&LÁ"@^ì‘FHréöÑÁ&`Jw¤fˆ‘‡+˜àÃ‘'tGYxSÂ=H#C?ˆ°YÌÁ˜`ÁÇ7^xá‡ß|˜z@7†uxcÂpşàÃ0`ñ…,ğ€8D‘C6S” $^c˜¸Í€Hô<€èÜd¡œYp³ÂĞÌ°C7ÜğC‚ñ”°b6C!PØĞEry±şûøãÏ>$ÄÃÀ>ÿøÃO	Şpá†~\:44DCC=ø°B<
-+`3Å5ì„VP3E
-+ÜÄ1ÆNÆÊÿôCÁ>ı @€`øÑÅÛ€Í5“ÃCHÁÃ
-+Ği6;èÄÈ\A*‡…­ıL€?ä#@>àÃ ş Å–ş0C4:DrÄ9§BM ˜3Ã:P‘Œ•q5P”ÀDğCÀ<óTàO ù0>øÓ@™0Lq4,CK,100 4ÁAË”<Q„5Ò\Ï"@.„õp>œ»•ÛœğCFPAD$Ì ±Ù şS×0D•HB	%I<cÌ. SE5ä“OVLÓx>³^P `JÃ&@h2É3O ±Ä10 6ÙHaE3”H"	ÍP‚8“LâL2Å˜.ÀÙT3ÍìNLÕœÂ4äh¢¼2E(Ä%T˜3À
-+3Ø0„Í3	9Ë`¾L$›PrI‘$¿M4ÁÌ$âCÌ3NQ3(SŒ2–0ñDèHp-€<˜¬€b  (8F5AŒ#0CeÅ G1"qd0ƒ‘(G9"QeT¢M8ÇQ€‚&8	H¸‚F x¬ÀÙ¨B×Ä¡ÕÈ†. `wş¦âƒgºpŒÃÈxÆ2†À%8#	WDHÀ(`n(Æ2–Q x  $ D  È % ’l †1¦sd–h‚5R°x\  F5†qàù0È@|Ø|Àø–&ÉüP–@ €’Ea.`B2RĞm” 8ß8€€‘”  ~ˆvØ²ƒğ  nÙ €c@²i”c P\0Ü \†4¾h 1Î2Œ¸e/pˆnî¢¹hÇ<$ L7şPÊÓ
-+˜a…ğ_›8–qc˜#x)şØ]'[9¼£ïÈÅ;š‹Ol n4°L(¯(@†¶ 4|ÃĞ(äì©sÃÒó¢éD` /öĞ‹HéxHŒeX#àG.`G¼“|p<‚!\`!8à4@r£Õ0F9ÄQcuâXG1˜ğŒ#PÁ•Ø„P xL!)Ø‚è€…-¤`FPŞ&,qctM 0‡1ˆÁ'\ÂL¨¡ñÀaC“0ÇPƒ*‰­Q#,ˆ"m¸@F .ÁküÁ¸À:›`	K¬¯k¥2p¸b€ x‡%œğKDñş‡<ÎáwœCÚx²‘ƒdPáR‹‚1ŒAÌi”„Æ=.„1¬(ã	JÀæQÛ\ä¢¿pÇ:{Ö(Ğ Q A0r0„õ£&‹F1sD; Â$Y€è ê[Æ ª‹XÈBº§;æGÖ æ°€ª°„¬Fâ›Ê2ÊEaä 	K`+$Â!phÖtîÈ. |
-+] bïÀ@2ƒpHN¤Áˆ2.!‰âÖ 
-+PHÊPc	J°D2|ZHs€#ê Ar±P¸b¹Ğ€  Œiƒ-ğ€!jLb ğ®9–Ac„yM¸„ş Q ŒT¤Ç€Ä:.@ë¶ƒ ÆéB s€€‘‡ 0€hààİƒ„•‡ÁáWÁ“8Æïv ¥£!0ÇÂ‘	
-+¸Ãè  À`"@r0‘ Ô ×@æ €‘ X PÂ&$/ P8,ƒ`B@‡0€d   &"0t`ÂÚ" Æ”qŒy  è€ Õv€"Ã×ÆD$àlÀx÷:Ğtx¢é8D 8N"ƒ(„'Ò‰wvà@:”Œ €ËÈÄ ¬›‹Tàâıı*~
-+Xàb€ D#ş±ˆE4bƒy#ü-L€#µëŞÂıMYÿNŸø ,Ha‹Qˆ"±Å-H1
-+Z˜‚ƒèD"Ñˆ‘"‰@9'ÒAH¢ :8ÑôAx‚è  :ğ“â¦ -ÎvS˜Â®XÓaC4â(—z:ÒQ|÷=°{"ˆN@D*~¡‹QÔÂ£0ÚÛŞ
-+¸3‚t<İqˆApâ…`;ÒÁˆF¤Ã†(„¾ŸŠ]|ü›¼P….|qŠÚ×¬`….XÁF<BóOÄÜ›~ùËÛ‚`z7G¼Š_¸b¾/|ÁVˆÂö§ ….`Ì¡‹XÂÆ_Éáˆò—ÿ%Ä!:!ˆNô¢ºõM1 ‡b§˜…(@Q£ß>° t±ğ‰ ğ
-+¯Ğ	Š rWrØMİ¤ªĞW¶7
-+§ ×W
-+¦@
-+¤`Øç}"(
-+ç
-+¼Ğ®Ğ«ğ~¯°
-+«°ºğM®À
-+´Ğs´p
-+£Ğ
-+¼ y§`8ØÙ
-+¹×
-+Ø—}±`k·v¤k÷s² ° Ö7H
-+k‡v­@„7x{8h
-+¾À
-+¾ ®Ğv·  ;
-\ No newline at end of file
-diff -Naurp GD-2.05.orig/t/test.out.11.png GD-2.05/t/test.out.11.png
---- GD-2.05.orig/t/test.out.11.png	1969-12-31 19:00:00.000000000 -0500
-+++ GD-2.05/t/test.out.11.png	2003-01-06 17:07:02.000000000 -0500
-@@ -0,0 +1,13 @@
-+‰PNG
-+
-+   IHDR   0   0   `Ü	µ  ıPLTE                 !    ) )        !      !  	. 9  ) !  ! ) ! ) ! !% 1  1 1 ) 1 1! 9d 1+-m@yI6uO„:1„C|[.|aŒA;-<+ŠP‡]1Œ\ ˆs1Št¤3D!œ@-¤&+·%2£@5µ;Ğ5&Ä3*Ì-)ÌC9½)5½73Ã/1Ó2˜U5œM1šZ+˜u5¹J4±Z+¿X-ÔUİ×ğÜ)âÉ+æ×æçõéîç$ïä ï÷ ïÿ ÷ï ÷÷ ÷ÿ ÿï ÿ÷ ÿÿïïï÷÷ïôñï÷÷ÿÿ÷ÿÿìñ÷ï÷÷÷ÿ÷ÿÿïÿ÷ÿÿ!ñùÿóÿÿ!ÿÿ-óï-ó÷+ÿñ-ııL‘LšI•UvN-ŒH.˜H/˜R*¢S£R°O±H¨E-¡T/±G-°R*FŒ0C­/>À'B»9:Î'<Î1>Ç;<Ñ;eb4Y˜/N»/OÆ2“]3³bp.»"ç” äŸ ï  ÷œ ÷¥ ÿ” ÿœ ÿ¥ Ò˜Ø”é‘è÷¥ÿœûœù™&ã«	÷­ ÷±ÿ¥ÿ­ ÿ­ÿµ ÿ½ Ş©$Ù²3ó©ï¯*ÿ¥û¥&ıµü¹)KuJGŠPH›RK©LF·HPµFF±UR±R;¿TFÁNNÄFRÁRBÊN=ÔQHÔFJÓRJ€aMšcK­eV«cA½gP¿`FÌ_RĞ`N™xKºwDÛªCâÏ9äÜIãß?õä?õõh‹\dªY]µO`³b\ÅLaÁYbµk^Ìly_F–bJƒSuÁ]ÃvHÛ§O¯¼Zİ¸PaÄ`ÛÆqÖœ¡Ã¡Zæãmîî¤ÿÿ¹ÿÿÜØÅóû÷Æÿÿáÿüäüÿïÿÿûûÿÿÿÿ)Cà  ÌIDATxœ%SXW½3#]·uÕh¨€Š†¥R-PD@T@l…‘‡%X·ÉÈC¢‚¯†§"FyX…lÒ¤ àB !I	Qb@H„ºb#úí{îÜ¹ó8ç¿ÿ9ß8Êa%|C2'CÕCz½~Z¯VG†f%$$Ä0™ÌØXƒ	/HfÉ‰"c ':•À‰Šœ™yoÄÌÌó°”óÉ‰		,“É`Ä²™$Ğ9$Åˆì#œøï’ÏÏÌóósóó†¹¹¹™¡Sß±Iä3ØñPAÒÉ$’w`ÉÇN…¾‡ÔÅÃüü‚Q13s"Élxb%,ñ£tòX	¾aÆô“qq‘Ã3ssïßçû?†Cşuœ½T=Éf±H(8sœK2Iˆa1£’"N‡==<3ı‡zhzhhğüiv4lŸÉd%ÄCºÑ
-+;".åô1=
-+ßÄ$Ÿ}™täØ‰³'N:qöTü±¨„3ÆdX‰‰F~ìÉ”°¡ÁSÇéLÃ9¾Õn«:2.şÌw‰,:'ŠC&-%CÂê	PÀ8>¸må–ÁÈ3Ñ 6bzs››õ¦é”ˆäo’•D!YlÉ‰â|ËbÅ0¢O‡ÙmŞµk×–¡¸XúÜÆÙ½ïswkuJhô}>$e8"â\ÄpdÈpÄIO:ù|³Ä.m!‘ ìS·Ç.ª ›¡8X?6B½ò+·L‡M¯„ë`(;š:hçÑëàêîìì±Uô6nn*Ï={w|±52”¤G„o3,.6é?2üµ8oóü;éœ‡C¯ãcGw÷]vzğá@P“ëààş ÛÁ8zòsÃ¢¹é_k`ÙâÂŠsG#Õ›œÚ\>óüÚÍùC`âì¬rİ¹çp×áşÿ<¢ÿhaÍŸ‹”Ytùs,ş-,6äğxgÏKØÅ 0ƒÃNZ÷|ï§ı6ƒÓú•óË¦¦>^DfM¦ş\¾¸b8r[³›£ÌËË×·G+ Øö^‰'í@şÕƒŞOúpıFkÌ°°üãy:;»fÙ¢ÁZ­Şâá¾æ•'ßí»[%A ±½×ÉóËü+W¯~ù¨·ï:¤ÄfgL—E®$^ÇâİEüG÷ûznÇ 6 ú:ø·«W®øıF£jùü‡İí†â*¥GQ\ê¯|i¥-**êñşjÿ5šv_xîıMÊ•„,¯øê5ï¼Ñ"Íß_Î×¶Kğö–SÛÚ{
-+üÜ¿ÿI
-+Ş™wI©µSÙ)õ‘ÓºÛGÛó^vË¥yccyÊü|ÿ—ğ%Õÿáşı‡ƒ7¾z»/T‡úpmÿCï~¥jN ŠcF (Šb˜æEG×#YAõ}øåáÓ@¿É-€ ^àí2™ÇPA …òÉêÕÀŒB¡¬BPÃğ¾¡SQüŸØÂOwÇ¥Ê6ZDÌLÍV£ˆ…ùKSsSKKKs¥À¹âCÓÊìıºm‡€ÚÆ	—Ñ^`ˆ	²ÖÔœÔô×ò‚qYÌ)ò÷å¦ã=4{5ˆÜæL´çÉú0ô AVA^s}fffcsÃ›)
-+À6Q-L–*Şš#­1­ìi§EmQ…;­1}ûæmÃÛ·?®7[2A`¯¯µS»ìÃO€cÃ›{qïÔ½ÒIt:Ì˜õ8FÀ¤>°…†	©ìI_^±Æ
-+×©ìSAbÊß%Z*¾ÑŠJ(t:ÍX›RÙ1¦ëlS¶i_·û=ò¡äÛSû~RÙ†Ÿ‰!á¶®ûŠŠŠ|:úpÔD×!•¸öĞ¯ÇÿÀ#9­­³‡¯Sè¬¨W¼Ÿô«>U«Ã€^­f¿wßn¿kò'
-+¼U‚Såşr¾wq­«_)“Ğ˜¦àÀÁ‚@ªşİ»—`ròå³gŸ}®ré¦=Å¶vtŒôD¥.-8•xàĞ(=øUw;159ÙĞ n·L¾Ö?³utTO9¿}LçğØ©ó…îq¯«_ª4ÁvvûËe¤×WßbqÃ›É)Ç	'nİ×‡|ó‹ópWwU×Øü‹¿oÏeVƒS1òÅbÿÔøÖtõõí…1RI`×µ+£„S@@·×±³ß÷«‚n*ìL7¢yE˜54Ş¬Ÿ —%
-+I§T*Óâhk_?¿˜tÔÉF;‰@OÿkR%õ«æİyù5¾zxc~£°z #Fó´h!òx‡Œ¸¬´i´ÄÎCù
-+ÜÕÙ—8YépÍõµ“Àr|ŒôšŒXk^™N N.OùÖjÖaxÀâ+EZAë.ÙnUøÊŒSLÇ—™¬Z[¸zÍxáx¡u¿OOç_Õ+qíò]ŸYP&-ÖO"ë'×[¼ã7Ò&2.–\(Ià¦İ˜¸ìêâIÕP&Æ)­Ô~Ùu¬¡¡áçú–úê–ŸZnU×W€xYÙÙ<.——Å+I¥`š×(:1^’ºkUà¯~ÜP-¸W^VSsë?‚òZaà–fåòxYYY\nÉDª¥iª…iêx	Ç½‘jjqÁbÃO-‘°¶V 	…Âª*ËËHOçår¹FÁDZšñà¥ó².^,åf–fşÜ".¯–EpoCANNFúÔdepK2Òrş;‘Ã›ø!=-ã"ä6ÖW467ı"¾/2BPY)®l9¹‘•7âñr Òy9ßçò23ëÅ-U÷Ë›î7U–-	ÄÕâH‡”ì¬ìÜŒÈÍÎæf”~_ÚÜ,¾u¿IxW,¾uWt·ìf]­
-+jªkjj@nÖ¥Ò_-½t)²/]‚?æ¥_šËëê`ÍrÑ2Ñ¿…AİRO58@™¸¼ª©¹ª¹¢¹ù×ŠŠFqcsUeí½òZQùí&Xö¨¼®V$¸YYyûÿF@Í½ZA­@PS+(«¹s§ºº²ì®@ Ÿˆ„·o‹jQ¹ğ~å}qL	Şı±xğFë\    IEND®B`‚
-\ No newline at end of file

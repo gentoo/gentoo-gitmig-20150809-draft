@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-2.16.ebuild,v 1.2 2004/11/14 08:25:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-2.18.ebuild,v 1.1 2004/11/14 08:25:54 vapier Exp $
 
 inherit eutils perl-module
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.cpan.org/modules/by-module/GD/${P}.tar.gz"
 
 LICENSE="|| ( Artistic GPL-2 )"
 SLOT="0"
-KEYWORDS="alpha amd64 hppa ia64 mips ppc sparc x86"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc ~x86"
 IUSE="jpeg truetype X gif png"
 
 DEPEND=">=media-libs/gd-2.0.12
