@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-dist.eclass,v 1.56 2004/08/06 18:46:57 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-dist.eclass,v 1.57 2004/08/10 13:58:11 caleb Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -21,6 +21,7 @@ case "$PV" in
 	3.3.0_beta1)		SRC_PATH="unstable/3.2.91/src/${PN}-${PV/3.3.0_beta1/3.2.91}.tar.bz2" ;;
 	3.3.0_beta2)		SRC_PATH="unstable/3.2.92/src/${PN}-${PV/3.3.0_beta2/3.2.92}.tar.bz2" ;;
 	3.3.0_rc1)		SRC_PATH="unstable/3.3.0rc1/src/${PN}-${PV/_/-}.tar.bz2" ;;
+	3.3.0_rc2)		SRC_PATH="unstable/3.3.0rc2/src/${PN}-${PV/_/-}.tar.bz2" ;;
 	3*)			SRC_PATH="stable/$PV/src/${P}.tar.bz2" ;;
 	5)			SRC_URI="" # cvs ebuilds, no SRC_URI needed
 				debug-print "$ECLASS: cvs detected" ;;
@@ -35,6 +36,7 @@ need-kde $PV
 [ "$PV" == "3.3.0_beta1" ] && S=${WORKDIR}/${PN}-3.2.91
 [ "$PV" == "3.3.0_beta2" ] && S=${WORKDIR}/${PN}-3.2.92
 [ "$PV" == "3.3.0_rc1" ] && S=${WORKDIR}/${PN}-3.3.0
+[ "$PV" == "3.3.0_rc2" ] && S=${WORKDIR}/${PN}-3.3.0
 
 DESCRIPTION="KDE ${PV} - "
 HOMEPAGE="http://www.kde.org/"
