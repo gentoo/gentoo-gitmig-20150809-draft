@@ -1,0 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cbb7fda0951ecafb177dc48b3345fa39 ChangeLog 1447
+MD5 291288ea901e1af85e18e5468fb89763 lsh-1.4.3-r1.ebuild 1521
+MD5 48f92b7cf2f5538a6e68145828e8f8ad files/lsh.confd 367
+MD5 12d8d84a70281a27cccb14cc8e2c83e2 files/digest-lsh-1.4.3-r1 62
+MD5 e2a988c83f0406d964502a58a4f58cd3 files/1.4.3-gcc34.patch 2002
+MD5 5e752fc7adf408a2f4a3fb4601132787 files/1.4.3-configure.patch 355
+MD5 3e325f3a64bf91a900f317fd2e49a4c2 files/lsh.rc 814
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBoqT3HTu7gpaalycRAodrAKDuuTowB7HlyRF50mqije3A4/eKVwCfYZNM
+ZF9lyF958eRD3X95fG6WeQo=
+=GbwV
+-----END PGP SIGNATURE-----

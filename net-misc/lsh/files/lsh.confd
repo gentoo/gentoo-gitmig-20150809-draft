@@ -1,0 +1,9 @@
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lsh/files/lsh.confd,v 1.1 2004/11/23 02:47:12 vapier Exp $
+
+# see `lshd --help` for more information
+# -p [num]         changes the port number to listen on
+# --no-root-login  don't allow root to login
+
+LSHD_OPTS=""
