@@ -1,7 +1,16 @@
 # ChangeLog for media-gfx/gphoto2
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/ChangeLog,v 1.8 2003/02/12 07:01:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/ChangeLog,v 1.9 2003/02/12 15:46:59 spider Exp $
 
+*gphoto2-2.1.1 (12 feb 2003)
+  
+  12 feb 2003; Spider <spider@gentoo.org> gphoto2-2.1.1.ebuild :
+  lots of changes, libgphoto2 dependency, added aalib? useflag (jpeg is only 
+  used to transfer data to aalib for previews.) added ncurses for the 
+  configurator frontend, added readline optional diable switch. Marked popt 
+   as a fixed dep, since it will become the defacto standard
+
+  
 
 *gphoto2-2.1.0 (23 Oct 2002)
   
