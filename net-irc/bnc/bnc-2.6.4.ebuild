@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/bnc-2.6.4.ebuild,v 1.9 2003/12/29 18:52:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/bnc-2.6.4.ebuild,v 1.10 2004/05/28 02:57:20 vapier Exp $
 
 MY_P=${P/-/}
 DESCRIPTION="BNC (BouNCe) is used as a gateway to an IRC Server"
@@ -11,7 +11,8 @@ SRC_URI="http://gotbnc.com/files/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ppc sparc alpha arm"
+IUSE=""
 
 DEPEND="virtual/glibc"
 
@@ -24,8 +25,8 @@ src_compile() {
 }
 
 src_install() {
-	dodoc CHANGES COPYING README
-	dobin bnc bncchk bncsetup bncmkpasswd
+	dodoc CHANGES README
+	dobin bnc bncchk bncsetup bncmkpasswd || die
 	insinto /usr/share/${MY_P}
 	doins example.conf motd
 }

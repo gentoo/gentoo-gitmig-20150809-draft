@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.1.ebuild,v 1.5 2004/04/26 01:27:08 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.1.ebuild,v 1.6 2004/05/28 02:58:40 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -12,18 +12,19 @@ SRC_URI="ftp://ftp.bitchx.com/pub/BitchX/source/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc hppa ~alpha amd64"
+KEYWORDS="x86 ~ppc sparc ~alpha arm hppa amd64"
 IUSE="ssl esd gnome xmms ipv6 gtk cjk"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	ssl? ( >=dev-libs/openssl-0.9.6 )
-	xmms? ( media-sound/xmms )
 	ncurses? ( sys-libs/ncurses )
+	!arm? (
+	xmms? ( media-sound/xmms )
 	esd? ( >=media-sound/esound-0.2.5
 		>=media-libs/audiofile-0.1.5 )
 	gtk? ( =x11-libs/gtk+-1.2*
 		>=media-libs/imlib-1.9.10-r1 )
-	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )"
+	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 ) )"
 
 src_unpack() {
 	unpack ${MY_P}.tar.gz
