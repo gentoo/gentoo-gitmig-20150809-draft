@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/rsbac-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/ChangeLog,v 1.5 2004/01/07 00:41:57 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/ChangeLog,v 1.6 2004/01/08 05:16:34 iggy Exp $
+
+  07 Jan 2004; Brian Jackson <iggy@gentoo.org> rsbac-sources-2.4.20-r1.ebuild,
+  files/do_brk_fix.patch, files/nr_rsbac_patch.diff:
+  remove all rsbac-sources ebuilds, I'll remove the dir later
 
 *rsbac-sources-2.4.20-r1 (07 Jan 2004)
 
