@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/matrox.eclass,v 1.1 2003/12/29 17:17:26 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/matrox.eclass,v 1.2 2004/04/11 05:46:09 mr_bones_ Exp $
 #
 # Author: Donnie Berkholz <spyderous@gentoo.org>
 #
@@ -18,7 +18,7 @@ LICENSE="Matrox"
 SLOT="${KV}"
 RESTRICT="fetch nostrip"
 
-newrdepend ">=x11-base/xfree-4.2.0
+RDEPEND=">=x11-base/xfree-4.2.0
 	virtual/linux-sources"
 
 matrox_pkg_setup() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/pcmcia.eclass,v 1.2 2004/02/07 23:44:23 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/pcmcia.eclass,v 1.3 2004/04/11 05:46:09 mr_bones_ Exp $
 
 # pcmcia.eclass - This eclass facilities writing ebuilds for driver packages 
 # that may need to build against the pcmcia-cs drivers, depending on kernel
@@ -46,7 +46,7 @@ SRC_URI="pcmcia?	( mirror://sourceforge/pcmcia-cs/${PCMCIA_BASE_VERSION}.tar.gz 
 # kernel's, but it's here to remind me in case it does become an issue
 #ppc? ( http://dev.gentoo.org/~latexer/files/patches/${PCMCIA_BASE_VERSION}-ppc-fix.diff.gz ) )
 
-newdepend "pcmcia?	( >=sys-apps/${PCMCIA_BASE_VERSION} )"
+DEPEND="pcmcia? ( >=sys-apps/${PCMCIA_BASE_VERSION} )"
 
 PCMCIA_SOURCE_DIR="${WORKDIR}/${PCMCIA_BASE_VERSION}"
 

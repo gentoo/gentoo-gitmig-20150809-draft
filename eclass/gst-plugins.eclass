@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins.eclass,v 1.11 2004/03/29 15:36:16 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gst-plugins.eclass,v 1.12 2004/04/11 05:46:09 mr_bones_ Exp $
 
 # Author : foser <foser@gentoo.org>
 
@@ -55,7 +55,8 @@ SLOT=${PV_MAJ_MIN}
 
 S=${WORKDIR}/${MY_P}
 
-newdepend "=media-libs/${MY_P}*" ">=sys-apps/sed-4"
+DEPEND="=media-libs/${MY_P}*
+	>=sys-apps/sed-4"
 
 ###
 # internal functions

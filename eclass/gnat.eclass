@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.4 2003/12/12 05:04:44 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnat.eclass,v 1.5 2004/04/11 05:46:09 mr_bones_ Exp $
 #
 # Author: David Holm <dholm@telia.com>
 #
@@ -13,7 +13,7 @@ inherit flag-o-matic
 
 INHERITED="$INHERITED $ECLASS"
 
-newdepend dev-lang/gnat
+DEPEND="dev-lang/gnat"
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
 

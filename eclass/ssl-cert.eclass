@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ssl-cert.eclass,v 1.2 2004/04/01 22:08:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ssl-cert.eclass,v 1.3 2004/04/11 05:46:09 mr_bones_ Exp $
 #
 # Author: Max Kalika <max@gentoo.org>
 #
@@ -12,7 +12,7 @@ INHERITED="$INHERITED $ECLASS"
 
 # Conditionally depend on OpenSSL: allows inheretence
 # without pulling extra packages if not needed
-newdepend "ssl? ( dev-libs/openssl )"
+DEPEND="ssl? ( dev-libs/openssl )"
 
 # Initializes variables and generates the needed 
 # OpenSSL configuration file and a CA serial file

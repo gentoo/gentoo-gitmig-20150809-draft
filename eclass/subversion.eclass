@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.8 2004/04/05 14:25:28 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.9 2004/04/11 05:46:09 mr_bones_ Exp $
 
 ## --------------------------------------------------------------------------- #
 # Author: Akinori Hattori <hattya@gentoo.org>
@@ -29,7 +29,7 @@ DESCRIPTION="Based on the ${ECLASS} eclass"
 
 ## -- add subversion in DEPEND
 #
-newdepend "dev-util/subversion"
+DEPEND="dev-util/subversion"
 
 
 ## -- ESVN_STORE_DIR:  subversion sources store directory

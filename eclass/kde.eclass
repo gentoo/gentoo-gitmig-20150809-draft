@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.93 2004/02/24 13:50:07 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.94 2004/04/11 05:46:09 mr_bones_ Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -21,7 +21,7 @@ DEPEND=">=sys-devel/automake-1.7.0
 	dev-lang/perl" # perl is used for makefile generation
 
 # all kde apps need this one
-newdepend "~kde-base/kde-env-3"
+DEPEND="${DEPEND} ~kde-base/kde-env-3"
 
 # overridden in other places like kde-dist, kde-source and some individual ebuilds
 SLOT="0"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ebook.eclass,v 1.14 2004/03/05 00:10:35 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ebook.eclass,v 1.15 2004/04/11 05:46:09 mr_bones_ Exp $
 #
 # Author Francisco Gimeno <kikov@fco-gimeno.com>
 # Mantainer José Alberto Suárez López <bass@gentoo.org>
@@ -63,9 +63,7 @@ if [ "${DEVHELPROOT}" = "" ]; then
 	DEVHELPROOT="usr/share/devhelp"
 fi
 if [ "${RDEPEND}" = "" ]; then
-	# FIXME: newdepend sets both DEPEND and RDEPEND
-	# this should be changed to newrdepend, but that doesn't exist right now.
-	newdepend ">=dev-util/devhelp-0.6"
+	RDEPEND=">=dev-util/devhelp-0.6"
 fi
 if [ "${DESCRIPTION}" = "" ]; then
 	DESCRIPTION="${P} ebook based in $ECLASS eclass"

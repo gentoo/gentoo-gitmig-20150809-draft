@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.64 2003/11/11 12:49:40 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.65 2004/04/11 05:46:09 mr_bones_ Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -97,25 +97,25 @@ need-kde() {
 		# goes to show this code is awfully inflexible, i guess.
 		# maybe i should look at relocating it...
 		if [ "$PV" == "3.0.3" ]; then
-			newdepend "=kde-base/kdelibs-3.0.3*"
+			DEPEND="${DEPEND} =kde-base/kdelibs-3.0.3*"
 		elif [ "$PV" == "3.1.3" ]; then
-			newdepend "=kde-base/kdelibs-3.1.3*"
+			DEPEND="${DEPEND} =kde-base/kdelibs-3.1.3*"
 		elif [ "$PV" == "3.1.2" ]; then
-			newdepend "=kde-base/kdelibs-3.1.2*"
+			DEPEND="${DEPEND} =kde-base/kdelibs-3.1.2*"
 		elif [ "$PV" == "3.1.1" ]; then
-			newdepend "=kde-base/kdelibs-3.1.1*"
+			DEPEND="${DEPEND} =kde-base/kdelibs-3.1.1*"
 		elif [ "$PV" == "2.2.2" ]; then
-			newdepend "=kde-base/kdelibs-2.2.2*"
+			DEPEND="${DEPEND} =kde-base/kdelibs-2.2.2*"
 		else
-			newdepend "~kde-base/kdelibs-${KDEVER}"
+			DEPEND="${DEPEND} ~kde-base/kdelibs-${KDEVER}"
 		fi
 	else
 		# everything else only needs a minimum version
 		if [ "$KDEMAJORVER" == "2" ]; then
-			newdepend "=kde-base/kdelibs-2.2*"
+			DEPEND="${DEPEND} =kde-base/kdelibs-2.2*"
 		else
 			min-kde-ver $KDEVER
-			newdepend ">=kde-base/kdelibs-${selected_version}"
+			DEPEND="${DEPEND} >=kde-base/kdelibs-${selected_version}"
 		fi
 	fi
 
@@ -127,7 +127,6 @@ need-kde() {
 	else
 		SLOT="0"
 	fi
-
 }
 
 set-kdedir() {
@@ -229,8 +228,8 @@ need-qt() {
 	QT=qt
 
 	case $QTVER in
-	    2*)	newdepend "=x11-libs/${QT}-2.3*" ;;
-	    3*)	newdepend ">=x11-libs/${QT}-${QTVER}" ;;
+	    2*)	DEPEND="${DEPEND} =x11-libs/${QT}-2.3*" ;;
+	    3*)	DEPEND="${DEPEND} >=x11-libs/${QT}-${QTVER}" ;;
 	    *)	echo "!!! error: $FUNCNAME() called with invalid parameter: \"$QTVER\", please report bug" && exit 1;;
 	esac
 

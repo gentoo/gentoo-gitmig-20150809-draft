@@ -1,15 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep.eclass,v 1.6 2003/10/26 09:12:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnustep.eclass,v 1.7 2004/04/11 05:46:09 mr_bones_ Exp $
 
 ECLASS=gnustep
 INHERITED="$INHERITED $ECLASS"
 
 DESCRIPTION="Based on the gnustep eclass."
 
-newdepend /c
-newdepend dev-util/gnustep-make
-newdepend dev-util/gnustep-base
+DEPEND="dev-util/gnustep-make
+	dev-util/gnustep-base
+	sys-devel/gcc
+	virtual/glibc"
+RDEPEND="virtual/glibc"
 
 getsourcedir() {
 	if [ ! -d "${S}" ] ; then
@@ -25,10 +27,10 @@ getsourcedir() {
 
 need-gnustep-gui() {
 	if [ "$1" ] ; then
-		newdepend ">=dev-util/gnustep-gui-$1"
+		DEPEND="${DEPEND} >=dev-util/gnustep-gui-$1"
 		RDEPEND="${RDEPEND} >=dev-util/gnustep-back-$1"
 	else
-		newdepend "dev-util/gnustep-gui"
+		DEPEND="${DEPEND} dev-util/gnustep-gui"
 		RDEPEND="${RDEPEND} dev-util/gnustep-back"
 	fi
 }

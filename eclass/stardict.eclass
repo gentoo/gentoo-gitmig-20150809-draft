@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/stardict.eclass,v 1.3 2004/01/09 01:10:55 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/stardict.eclass,v 1.4 2004/04/11 05:46:09 mr_bones_ Exp $
 
 # Author : Alastair Tse <liquidx@gentoo.org>
 #
@@ -34,7 +34,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
 
-newdepend ">=app-dicts/stardict-2.1"
+DEPEND=">=app-dicts/stardict-2.1"
 
 S=${WORKDIR}/${DICT_P}
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.22 2003/11/25 09:44:18 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/distutils.eclass,v 1.23 2004/04/11 05:46:09 mr_bones_ Exp $
 #
 # Author: Jon Nelson <jnelson@gentoo.org>
 # Current Maintainer: Alastair Tse <liquidx@gentoo.org>
@@ -27,10 +27,10 @@ INHERITED="$INHERITED $ECLASS"
 # This helps make it possible to add extensions to python slots.
 # Normally only a -py21- ebuild would set PYTHON_SLOT_VERSION.
 if [ "${PYTHON_SLOT_VERSION}" = 2.1 ] ; then 
-	newdepend "=dev-lang/python-2.1*"
+	DEPEND="=dev-lang/python-2.1*"
 	python="python2.1"
 else
-	newdepend "virtual/python"
+	DEPEND="virtual/python"
 	python="python"
 fi
 
