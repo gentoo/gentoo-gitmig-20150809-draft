@@ -1,4 +1,4 @@
-MD5 582612a76adbd9258f230939fc46d9ef ChangeLog 704
-MD5 677a8b64c5eb48d781ce729f93299b3f bluez-hcidump-1.5.ebuild 604
-MD5 23d1ee94cc2fb13eb6dcae0a51b061fa metadata.xml 237
+MD5 8414bc0efaa32b5374ab7253c9069cbc bluez-hcidump-1.5.ebuild 604
+MD5 e4456fc91da29ddf1055eb66f2dc7e86 ChangeLog 858
+MD5 439de383d422683abddb9ff8b75aa67b metadata.xml 235
 MD5 9ac9731893433576225ec15b1e327514 files/digest-bluez-hcidump-1.5 69
