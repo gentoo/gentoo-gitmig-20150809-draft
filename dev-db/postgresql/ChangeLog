@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.116 2004/08/14 16:32:59 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.117 2004/08/19 01:40:17 weeve Exp $
+
+  18 Aug 2004; Jason Wever <weeve@gentoo.org> postgresql-7.4.3-r1.ebuild:
+  Stable on sparc.
 
   14 Aug 2004; Masatomo Nakano <nakano@gentoo.org> postgresql-7.3.6-r2.ebuild,
   postgresql-7.4.3-r1.ebuild:
