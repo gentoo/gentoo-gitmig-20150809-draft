@@ -1,29 +1,26 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/armagetron/armagetron-0.2.6.0.ebuild,v 1.1 2003/10/14 22:29:47 luke-jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/armagetron/armagetron-0.2.6.0.ebuild,v 1.2 2003/10/14 22:57:56 vapier Exp $
 
-inherit games
+inherit games flag-o-matic
 
-IUSE="`echo " ${IUSE} " | sed 's/ dedicated //'`"
-
-S=${WORKDIR}/${PN}-${PV}
-DESCRIPTION="armagetron: 3d tron lightcycles, just like the movie"
+DESCRIPTION="3d tron lightcycles, just like the movie"
+HOMEPAGE="http://armagetron.sourceforge.net/"
 SRC_URI="mirror://sourceforge/armagetron/${P}.tar.bz2
 	http://armagetron.sourceforge.net/addons/moviesounds_fq.zip
 	http://armagetron.sourceforge.net/addons/moviepack.zip"
-HOMEPAGE="http://armagetron.sourceforge.net/"
-KEYWORDS="~x86 ~ppc"
+
 LICENSE="GPL-2"
 SLOT="0"
-CXXFLAGS=${CXXFLAGS/-fno-exceptions/}
+KEYWORDS="~x86 ~ppc"
+
 RDEPEND="virtual/x11
 	virtual/opengl
 	media-libs/libsdl
 	media-libs/sdl-image
 	sys-libs/zlib
 	media-libs/libpng"
-
-DEPEND="$RDEPEND
+DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
 	app-arch/unzip"
 
@@ -39,7 +36,13 @@ src_unpack() {
 			die 'sed Makefile.global.in failed'
 }
 
-src_install () {
+src_compile() {
+	filter-flags -fno-exceptions
+	egamesconf || die
+	emake || die
+}
+
+src_install() {
 	# make install for armagetron is non-existant
 	dodir ${GAMES_BINDIR}
 	dodir ${GAMES_LIBDIR}/${PN}
