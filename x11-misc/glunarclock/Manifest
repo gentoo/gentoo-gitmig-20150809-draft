@@ -1,4 +1,14 @@
-MD5 6ef3ca68f7fe0a4f1b1ce7913d3a690f ChangeLog 712
-MD5 cffcd4bd8bc661b5b6d42f17a3874573 glunarclock-0.32.1.ebuild 879
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 70fb9ff65fbcaf75ba37e3ba7ae1ce68 ChangeLog 800
+MD5 cb9f1b8fc35b1d36f2ae187e56032c17 glunarclock-0.32.1.ebuild 878
 MD5 acc0a08cfd0d0d6369735fd5e04e54a2 metadata.xml 228
 MD5 7d152fa8b6ca5f8599b8ab2735cefcc0 files/digest-glunarclock-0.32.1 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBXUytI7fK2cqeyXkRAqLhAJ92OSajkRsoMVk5lWg2p3c4sNNtxQCguD38
+HmZrokXQ16WNL1/58Sw7CbE=
+=VlV6
+-----END PGP SIGNATURE-----

@@ -1,8 +1,18 @@
-MD5 dfcd984290a4a30a8dd61f009c8d0361 ChangeLog 2014
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 1f319923421a8c88302ab36cb4d5bbd8 ChangeLog 2119
+MD5 cac2ac896a18e38706adc562654d2fc5 fbpanel-3.8-r1.ebuild 918
 MD5 880bf85de3a322e21ead4d9f996f3a93 fbpanel-3.5.ebuild 647
-MD5 bc89eb220b7ed4772f59d878a20ffb25 fbpanel-3.8-r1.ebuild 920
-MD5 4896819d7cc99b9f5e9ccccebff5df0b fbpanel-3.8.ebuild 649
 MD5 380111f714c8f2ff062a821baf931f2f metadata.xml 252
-MD5 ed7fc5104dfc3f883d28ab46b2e91de6 files/digest-fbpanel-3.5 59
+MD5 ab46541a69366d9b0fcf3c2fe04b6275 fbpanel-3.8.ebuild 647
 MD5 aa7afad959893ae665e84f884d4cf046 files/digest-fbpanel-3.8 59
 MD5 aa7afad959893ae665e84f884d4cf046 files/digest-fbpanel-3.8-r1 59
+MD5 ed7fc5104dfc3f883d28ab46b2e91de6 files/digest-fbpanel-3.5 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBXU6yI7fK2cqeyXkRAoR6AJ9CVjPIDNYzl0TtbBP+qfBkzdrazACgqej7
+XYhXVIl9SZXXEjzcrjUFIjo=
+=O/0q
+-----END PGP SIGNATURE-----

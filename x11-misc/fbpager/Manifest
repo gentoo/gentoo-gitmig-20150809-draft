@@ -1,4 +1,14 @@
-MD5 112799bdaeebd9602a220fd3818ccbd7 fbpager-0.1.4.ebuild 632
-MD5 508fabaa783a192165d7712fdd9ec11a ChangeLog 574
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e03ba9d763f78d9f935964305e75008e ChangeLog 656
+MD5 c35e734d8817afaf0a595c450aba56f2 fbpager-0.1.4.ebuild 630
 MD5 579076f73457df8c5cba170b0e99634d metadata.xml 163
 MD5 ba5857f3b3d05a7ebb5461aa770f7e52 files/digest-fbpager-0.1.4 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBXU5lI7fK2cqeyXkRAlZxAKDa1jGkSS2dEflodXW+Lad/TNb//ACfVD95
+eD99YK+Gj6C7zXJj3dVGPOA=
+=05Kq
+-----END PGP SIGNATURE-----

@@ -1,6 +1,16 @@
-MD5 f8497fa6b376e86c5a1b508f9ff3f8b4 ChangeLog 1054
-MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 074a325b4d34d1dc3d184ec2339dc529 ChangeLog 1135
 MD5 50579db0fdf3f6db33c122e6f2ae7a99 uf-view-2.2.ebuild 669
-MD5 27264bf72fb706e6f364c4070c9bcac6 uf-view-2.4.ebuild 674
-MD5 576bc386ddac1059d522da62583422cd files/digest-uf-view-2.2 63
+MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
+MD5 916986869ade25aa6af44134910cb2fb uf-view-2.4.ebuild 672
 MD5 22eb9fe6bda7d3c1b7623207976743b8 files/digest-uf-view-2.4 63
+MD5 576bc386ddac1059d522da62583422cd files/digest-uf-view-2.2 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBXU0mI7fK2cqeyXkRAorfAKCTP9QGd4Q9jo+76M/aMU+GV2maigCg9bfK
+eGyifLx9aviGXY21k6+iPvI=
+=VyQl
+-----END PGP SIGNATURE-----
