@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.2.ebuild,v 1.32 2004/04/05 23:17:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.2.ebuild,v 1.33 2004/04/06 03:13:47 vapier Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 DESCRIPTION="Network Time Protocol suite/programs"
 HOMEPAGE="http://www.ntp.org/"
