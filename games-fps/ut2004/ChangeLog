@@ -1,10 +1,17 @@
 # ChangeLog for games-fps/ut2004
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.12 2004/06/24 22:49:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.13 2004/06/26 15:53:04 wolf31o2 Exp $
+
+*ut2004-3236-r1 (26 Jun 2004)
+
+  26 Jun 2004; Chris Gianelloni <wolf31o2@gentoo.org> +ut2004-3236-r1.ebuild,
+  -ut2004-3236.ebuild:
+  Updated to use newest patch files, compiled with GCC 3.x, rather than GCC 2.x.
+  Also added uz2unpack DEPEND.  Should close bug #51644.
 
   22 Jun 2004; Chris Gianelloni <wolf31o2@gentoo.org> -ut2004-3204.ebuild,
   ut2004-3236.ebuild:
-  Moving 3204 to stable on x86 due to security vulnerability in Unreal Engine.
+  Moving 3236 to stable on x86 due to security vulnerability in Unreal Engine.
   See bug #54726 for more information.
 
 *ut2004-3236 (16 Jun 2004)

@@ -1,24 +1,26 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3236.ebuild,v 1.3 2004/06/24 22:49:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3236-r1.ebuild,v 1.1 2004/06/26 15:53:04 wolf31o2 Exp $
 
 inherit games
 
+MY_P="${PN}-lnxpatch${PV}-1.tar.bz2"
 DESCRIPTION="Unreal Tournament 2004 - follow-up to the 2003  multi-player first-person shooter"
 HOMEPAGE="http://www.unrealtournament2004.com/"
-SRC_URI="http://mirror1.icculus.org/${PN}/${PN}-lnxpatch${PV}.tar.bz2
-	http://ftp4.3dgamers.com/pub/3dgamers/games/unrealtourn2k4/${PN}-lnxpatch${PV}.tar.bz2
-	http://3dgamers.intelenet.net/pub/3dgamers/games/unrealtourn2k4/${PN}-lnxpatch${PV}.tar.bz2
-	ftp://3dgamers.in-span.net/pub/3dgamers5/games/unrealtourn2k4/${PN}-lnxpatch${PV}.tar.bz2
-	http://iadfillvip.xlontech.net/100083/games/unrealtourn2k4/${PN}-lnxpatch${PV}.tar.bz2"
+SRC_URI="http://ftp4.3dgamers.com/pub/3dgamers/games/unrealtourn2k4/${MY_P}
+	http://3dgamers.intelenet.net/pub/3dgamers/games/unrealtourn2k4/${MY_P}
+	ftp://3dgamers.in-span.net/pub/3dgamers5/games/unrealtourn2k4/${MY_P}
+	http://iadfillvip.xlontech.net/100083/games/unrealtourn2k4/${MY_P}
+	http://mirror1.icculus.org/${PN}/${MY_P}"
 
 LICENSE="ut2003"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="x86 amd64"
 RESTRICT="nostrip"
 IUSE="opengl dedicated"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc
+	games-util/uz2unpack"
 RDEPEND="opengl? ( virtual/opengl )
 	dedicated? ( app-misc/screen )"
 
@@ -65,7 +67,7 @@ src_unpack() {
 		|| die "unpacking linux installer"
 	use x86 && tar -xf ${S}/linux-x86.tar
 	use amd64 && tar -xf ${S}/linux-amd64.tar
-	unpack ${PN}-lnxpatch${PV}.tar.bz2
+	unpack ${MY_P}
 }
 
 src_install() {
@@ -181,7 +183,7 @@ src_install() {
 
 	# creating .loki/installed links
 	mkdir -p ${D}/root/.loki/installed
-	dosym ${dir}/.manifest/${PN}.xml ${D}/root/.loki/installed/${PN}.xml
+	dosym .manifest/${PN}.xml /root/.loki/installed/${PN}.xml
 
 	games_make_wrapper ut2004 ./ut2004 ${dir}
 
@@ -209,6 +211,7 @@ pkg_postinst() {
 	echo
 	einfo "To play the game run:"
 	einfo " ut2004"
+	echo
 }
 
 pkg_postrm() {
