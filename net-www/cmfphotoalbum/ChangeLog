@@ -1,9 +1,0 @@
-# ChangeLog for net-www/cmfphotoalbum
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/cmfphotoalbum/ChangeLog,v 1.1 2003/02/28 02:49:32 kutsuya Exp $
-
-*cmfphotoalbum-0.22 (27 Feb 2003)
-
-  27 Feb 2003; Jason Shoemaker <kutsuya@gentoo.org> cmfphotoalbum-0.22.ebuild:
-  Initial import. Ebuild submitted by Dominik(#16304)
-
