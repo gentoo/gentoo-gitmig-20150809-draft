@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8.ebuild,v 1.20 2003/09/07 00:06:04 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8.ebuild,v 1.21 2004/01/29 03:58:32 agriffis Exp $
 
 MY_P=${PN}-III-alpha9.8
 S=${WORKDIR}/${MY_P}
@@ -12,7 +12,7 @@ DEPEND="virtual/glibc"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha hppa amd64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64"
 
 src_compile() {
 
