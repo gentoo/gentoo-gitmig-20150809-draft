@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.29 2004/02/22 22:32:05 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.30 2004/02/24 18:39:13 cretin Exp $
+
+*elfutils-0.94 (24 Feb 2004)
+
+  24 Feb 2004; Stefan Jones <cretin@gentoo.org> :
+  New version from what was RedHat rawhide. x86 only
 
   22 Feb 2004; <tuxus@gentoo.org> elfutils-0.89.ebuild:
   files/elfutils-0.89-alpha-mips-atime.diff:  Fix 0.89 compilation on mips
