@@ -3,12 +3,12 @@ Hash: SHA1
 
 MD5 bbc235efc33864de5fae589b8d2df0e3 ChangeLog 1096
 MD5 fc4e25d7343dc6d2b44602bd3972903a metadata.xml 245
-MD5 a99745958ca3d79dbbb2d08f0bea7a28 snortalog-2.2.1.ebuild 774
+MD5 3a742c8d0cf321e15ed3a3efbba5e805 snortalog-2.2.1.ebuild 871
 MD5 424d2f24724379f96c1c10b866081de4 files/digest-snortalog-2.2.1 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBojT6T+MN7JbqCpMRAvPhAJwJ+5Wl0Vi74cJqB2Qd3pz95NENwwCfW1Zm
-vA/apLCs/piyWLywkcv93jU=
-=SRVG
+iD8DBQFBojmzT+MN7JbqCpMRAlgsAJ9sV3Z+u8FZAyIbLgAA+CArmkQ18ACfSvt8
+zu/C5q9CSzZmr14h3f1Ayc4=
+=Rllq
 -----END PGP SIGNATURE-----
