@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-2.1.3.ebuild,v 1.5 2004/07/22 14:09:07 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/strongswan-2.1.5.ebuild,v 1.1 2004/07/22 14:09:07 pfeifer Exp $
 
 inherit eutils
 
@@ -11,11 +11,14 @@ SRC_URI="http://download.strongswan.org/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* x86 ~ppc ~amd64"
-IUSE=""
+KEYWORDS="-* ~x86"
+IUSE="curl ldap smartcard"
 
 DEPEND="virtual/libc
 	virtual/linux-sources
+	curl? ( net-misc/curl )
+	ldap? ( =net-nds/openldap-2* )
+	smartcard? ( dev-libs/opensc )
 	>=dev-libs/gmp-3.1.1
 	net-misc/host
 	sys-apps/iproute2"
@@ -92,7 +95,26 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/${P}-gentoo.patch
-	epatch ${FILESDIR}/${P}-gcc34.patch
+
+	cd programs/pluto
+
+	if use curl ; then
+		ebegin "Curl support requested. Enabling curl support"
+		sed -i -e 's:#LIBCURL=1:LIBCURL=1:g' Makefile || die
+		eend $?
+	fi
+
+	if use ldap ; then
+		ebegin "LDAP support requested. Enabling LDAPv3 support"
+		sed -i -e 's:#LDAP_VERSION=3:LDAP_VERSION=3:g' Makefile || die
+		eend $?
+	fi
+
+	if  use smartcard ; then
+		ebegin "Smartcard support requested. Enabling opensc support"
+		sed -i -e 's:#SMARTCARD=1:SMARTCARD=1:g' Makefile || die
+		eend $?
+	fi
 }
 
 src_compile() {
@@ -116,7 +138,7 @@ src_install() {
 		INC_MANDIR=share/man \
 		install || die
 
-	dodoc INSTALL CREDITS BUGS CHANGES README doc/*
+	dodoc CHANGES* CREDITS INSTALL LICENSE README* doc/*
 	dosym /etc/ipsec/ipsec.d /etc/ipsec.d
 
 	exeinto /etc/init.d/
