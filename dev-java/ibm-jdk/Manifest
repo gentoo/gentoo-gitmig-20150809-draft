@@ -1,7 +1,7 @@
 MD5 07b2728373dff64e3b4665c1085b8875 ibm-jdk-1.3.1-r2.ebuild 1251
 MD5 96866baefcdee0f34b345bcfccc0fe20 ibm-jdk-1.4.0-r2.ebuild 1132
 MD5 702a3fa4819558c1cd64ef5f1b6bc0ef ibm-jdk-1.3.1-r3.ebuild 1780
-MD5 779869d3a5511312b13420d9ad1269d6 ChangeLog 6143
+MD5 c503b4e15608df2465d1543213d47137 ChangeLog 6258
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 0874dc9e9e028754455f311b4a5369b1 ibm-jdk-1.4.1.ebuild 1911
 MD5 971e2c067f8f28bd0f7c882607650469 files/cpuinfo 12
@@ -10,5 +10,5 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-ibm-jdk-1.3.1-r3 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-ibm-jdk-1.4.0-r2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-ibm-jdk-1.4.1 0
 MD5 9ae91d234d420cc6d86162f6baee6909 files/ibm-jdk-1.3.1 580
-MD5 676087c42e5c3d2cb63de0199ad6fb75 files/ibm-jdk-1.4.0 726
-MD5 c2a3afcbcfa06a46b04f5f93adf0c0c2 files/ibm-jdk-1.4.1 581
+MD5 f7fdf6d0e9fb6909a75edc31d2cbd1db files/ibm-jdk-1.4.0 759
+MD5 fa3de514a4df106e128f692713326fa6 files/ibm-jdk-1.4.1 759
