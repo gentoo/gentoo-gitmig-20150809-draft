@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/cracklib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.1 2002/02/01 21:53:38 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/cracklib/ChangeLog,v 1.2 2002/03/17 22:55:24 azarah Exp $
+
+
+*cracklib-2.7-r3 (18 Mar 2002)
+
+  18 Mar 2002; M.Schlemmer <azarah@gentoo.org> :
+
+  Add /usr/lib/cracklib_dict.* for pam/shadow cracklib support.
 
 *cracklib-2.7-r2 (1 Feb 2002)
 
