@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-1.0.6.ebuild,v 1.9 2003/05/29 14:36:10 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/yelp-1.0.6.ebuild,v 1.10 2003/06/07 16:09:23 liquidx Exp $
 
 inherit gnome2
 
@@ -19,7 +19,8 @@ RDEPEND=">=gnome-base/ORBit2-2.4.1
 	>=gnome-base/libbonobo-2.0.0
 	=gnome-extra/libgtkhtml-2*
 	>=dev-libs/libxslt-1.0.20"
-DEPEND="${DEPEND}
+
+DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0"
 
 G2CONF="${G2CONF} --enable-platform-gnome-2"
