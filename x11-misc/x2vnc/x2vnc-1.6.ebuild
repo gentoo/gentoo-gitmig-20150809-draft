@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2vnc/x2vnc-1.6.ebuild,v 1.7 2004/06/12 17:55:16 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/x2vnc/x2vnc-1.6.ebuild,v 1.8 2004/06/24 02:07:05 agriffis Exp $
 
 DESCRIPTION="Control a remote computer running VNC from X"
 SRC_URI="http://fredrik.hubbe.net/${PN}/${P}.tar.gz"
@@ -25,7 +25,7 @@ src_install () {
 	dodir /usr/bin
 	make DESTDIR=${D} install || die
 
-	if [ `use tcltk` ]
+	if use tcltk
 	then
 		dobin contrib/tkx2vnc
 	fi

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.7.6.ebuild,v 1.8 2004/04/27 20:49:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.7.6.ebuild,v 1.9 2004/06/24 02:12:27 agriffis Exp $
 
 inherit flag-o-matic eutils
 use kde && inherit kde
@@ -37,7 +37,7 @@ src_compile() {
 	myconf="${myconf} --bindir=/usr/lib/xscreensaver" \
 	myconf="${myconf} --with-configdir=/usr/share/control-center/screensavers/" \
 
-	if [ -n "`use kde`" ]; then
+	if use kde; then
 		find . -name '*.desktop' -exec \
 			sed -i \
 				-e 's:Exec=kxsrun \(.*\):Exec=kxsrun /usr/lib/xscreensaver/\1:g' \

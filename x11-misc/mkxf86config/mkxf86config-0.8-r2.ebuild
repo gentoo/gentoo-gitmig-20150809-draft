@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/mkxf86config-0.8-r2.ebuild,v 1.1 2004/06/23 12:01:28 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/mkxf86config/mkxf86config-0.8-r2.ebuild,v 1.2 2004/06/24 02:08:34 agriffis Exp $
 
 inherit eutils
 
@@ -36,7 +36,7 @@ src_install() {
 	exeinto /usr/sbin
 	doexe mkxf86config.sh
 
-	if [ `use livecd` ] ; then
+	if use livecd; then
 		exeinto /etc/init.d
 		newexe ${FILESDIR}/mkxf86config-init mkxf86config
 	fi
