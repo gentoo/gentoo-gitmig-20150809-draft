@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.1-r6.ebuild,v 1.3 2002/12/16 18:38:19 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.1-r6.ebuild,v 1.4 2002/12/23 17:49:58 azarah Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -148,6 +148,9 @@ src_unpack() {
 		epatch ${WORKDIR}/patch
 	fi
 
+	# Fix bug URL
+	epatch ${FILESDIR}/${PV}/${P}-bug-url.patch
+
 	# Patches from Redhat ...
 	epatch ${FILESDIR}/${PV}/gcc32-ada-make.patch
 	epatch ${FILESDIR}/${PV}/gcc32-shared-pthread.patch
@@ -262,6 +265,9 @@ src_compile() {
 	then 
 		find ${S} -name '*.[17]' -exec touch {} \; || :
 	fi
+
+	# Setup -j in MAKEOPTS
+	get_number_of_jobs
 
 	einfo "Building GCC..."
 	if [ -z "`use static`" ]

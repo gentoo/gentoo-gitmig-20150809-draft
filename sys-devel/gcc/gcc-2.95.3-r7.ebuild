@@ -1,8 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r7.ebuild,v 1.16 2002/12/16 18:12:40 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r7.ebuild,v 1.17 2002/12/23 17:49:58 azarah Exp $
 
 IUSE="nls static build"
+
+inherit eutils
 
 TV="4.0"
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.gz"
@@ -53,7 +55,7 @@ src_unpack() {
 	#
 	# Azarah - 30 Jun 2002
 	#
-	patch -l -p1 < ${FILESDIR}/${P}-new-atexit.diff || die
+	epatch ${FILESDIR}/${P}-new-atexit.diff
 	
 	# Now we integrate texinfo-${TV} into gcc.  It comes with texinfo-3.12.
 #	cd ${S}
@@ -97,6 +99,9 @@ src_compile() {
 		--enable-threads \
 		--with-local-prefix=${LOC}/local \
 		${myconf} || die
+
+	# Setup -j in MAKEOPTS
+	get_number_of_jobs
 
 	if [ -z "`use static`" ]
 	then

@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r8.ebuild,v 1.9 2002/12/16 18:38:19 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.3-r8.ebuild,v 1.10 2002/12/23 17:49:58 azarah Exp $
 
 IUSE="static nls bootstrap java build"
 
-inherit flag-o-matic gcc
+inherit eutils flag-o-matic gcc
 
 # Compile problems with these (bug #6641 among others)...
 filter-flags "-fno-exceptions -fomit-frame-pointer"
@@ -113,8 +113,7 @@ src_unpack() {
 	#
 	# Azarah - 30 Jun 2002
 	#
-	einfo "Applying new-atexit patch..."
-	patch -l -p1 < ${FILESDIR}/${P}-new-atexit.diff > /dev/null || die
+	epatch ${FILESDIR}/${P}-new-atexit.diff
 
 	# Currently if any path is changed via the configure script, it breaks
 	# installing into ${D}.  We should not patch it in src_install() with
@@ -184,6 +183,9 @@ src_compile() {
 		${myconf} || die
 
 	touch ${S}/gcc/c-gperf.h
+	
+	# Setup -j in MAKEOPTS
+	get_number_of_jobs
 
 	einfo "Building GCC..."
 	if [ -z "`use static`" ]
