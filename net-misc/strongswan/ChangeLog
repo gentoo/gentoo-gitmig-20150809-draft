@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/strongswan
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.18 2004/11/06 14:28:58 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.19 2004/11/15 21:18:01 pfeifer Exp $
+
+  15 Nov 2004; Jay Pfeifer <pfeifer@gentoo.org> strongswan-2.2.2.ebuild:
+  Stable on x86.
 
   06 Nov 2004; Lars Weiler <pylon@gentoo.org> strongswan-2.2.2.ebuild:
   Stable on ppc.
@@ -10,7 +13,7 @@
   25 Oct 2004; Jay Pfeifer <pfeifer@gentoo.org> strongswan-2.2.2.ebuild:
   Version bump to strongswan-2.2.2.
   Move forward ~amd64 from version 2.1.3 to 2.2.2 since opensc/openct are now available for ~amd64.
-  Tested on opeteron and nocona systems.
+  Tested on opteron and nocona systems.
 
   25 Oct 2004; Jay Pfeifer <pfeifer@gentoo.org> strongswan-2.2.1.ebuild:
   Mark stable on x86.
