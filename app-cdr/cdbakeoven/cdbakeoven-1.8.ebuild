@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdbakeoven/cdbakeoven-1.8.ebuild,v 1.2 2002/02/12 01:23:18 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdbakeoven/cdbakeoven-1.8.ebuild,v 1.3 2002/04/13 16:43:38 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde-base || die
 
@@ -10,7 +10,6 @@ need-kde 2.2
 DESCRIPTION="CDBakeOven, KDE CD Writing Software"
 SRC_URI="http://prdownloads.sourceforge.net/cdbakeoven/${P}.tar.bz2"
 HOMEPAGE="http://cdbakeoven.sourceforge.net"
-SLOT="0"
 S=${WORKDIR}/${P}
 
 newdepend ">=media-libs/libogg-1.0_rc2
