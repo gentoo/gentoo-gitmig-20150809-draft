@@ -1,4 +1,6 @@
+MD5 f5f7f31863d1b1c976d392127f5717a5 kdewebdev-3.3.0_beta2.ebuild 397
 MD5 f5f7f31863d1b1c976d392127f5717a5 kdewebdev-3.3.0_beta1.ebuild 397
 MD5 ec44932e375fffba5adf2ef5481c425d ChangeLog 530
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 c305f63b152b00aa4fa663cb14c348e4 files/digest-kdewebdev-3.3.0_beta1 70
+MD5 ff97db4add93349cd1f0ba7dc3583e3c files/digest-kdewebdev-3.3.0_beta2 70

@@ -1,3 +1,4 @@
+MD5 800d0421767a5a630e1c66bea1f280a6 kdeutils-3.3.0_beta2.ebuild 366
 MD5 2c7957107be161b3f7d441298d617d7a kdeutils-3.2.1.ebuild 397
 MD5 53684aef9a08451bd9262dcea20ba3a9 kdeutils-3.1.5.ebuild 381
 MD5 52c0f3117d7aaa84f879ef2762bcb526 kdeutils-3.2.3.ebuild 440
@@ -7,6 +8,7 @@ MD5 4c0a7868d1c0904614a94be126722075 kdeutils-3.2.2.ebuild 526
 MD5 b6b98bf932c07590f8778d5cbef4a32b ChangeLog 8888
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 952c40f755e6e95c5a5ec885dc039d63 files/digest-kdeutils-3.3.0_beta1 69
+MD5 a6bc35ef457064aa5074e30dcbcc23ad files/digest-kdeutils-3.3.0_beta2 69
 MD5 40be85c9e2811d00aea01f19a6b743ee files/digest-kdeutils-3.1.5 68
 MD5 8d2bf90b91493ae30edaf1de4f3eefa6 files/digest-kdeutils-3.2.0 68
 MD5 7840ed5d5d2d46305c181af5c6354484 files/digest-kdeutils-3.2.1 68
