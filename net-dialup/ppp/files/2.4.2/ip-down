@@ -28,4 +28,4 @@ if [ "$USEPEERDNS" ]; then
 
 fi
 
-[ -f /etc/ppp/ip-down.local ] && . /etc/ppp/ip-down.local $1 $2 $3 $4 $5 $6
+[ -f /etc/ppp/ip-down.local ] && . /etc/ppp/ip-down.local "$1" "$2" "$3" "$4" "$5" "$6"
