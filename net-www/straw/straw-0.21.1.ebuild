@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/straw/straw-0.20.ebuild,v 1.2 2003/11/03 22:28:25 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/straw/straw-0.21.1.ebuild,v 1.1 2003/11/15 18:02:16 foser Exp $
 
 inherit python distutils
 
@@ -38,12 +38,16 @@ src_unpack() {
 }
 
 src_compile() {
+
 	export LC_ALL="C"
 	emake || die
+
 }
 
 src_install() {
+
 	make PREFIX=${D}/usr install || die "install failed"
 	dodoc NEWS README TODO
+
 }
 
