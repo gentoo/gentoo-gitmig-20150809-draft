@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12-r5.ebuild,v 1.19 2005/01/10 01:54:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12-r5.ebuild,v 1.20 2005/01/10 02:56:52 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -38,7 +38,7 @@ src_unpack() {
 	# Mailing list post with info:
 	# http://www.kerneli.org/pipermail/cryptoapi-devel/2003-September/000634.html
 	# Follow thread for usage.
-	use crypt && epatch ${DISTDIR}/${CRYPT_PATCH_P}.patch.bz2
+	use crypt && epatch ${WORKDIR}/${CRYPT_PATCH_P}.patch
 
 	# Fix rare failures with -j4 or higher
 	epatch ${FILESDIR}/${PN}-2.11z-parallel-make.patch
