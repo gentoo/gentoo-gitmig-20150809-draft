@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/caps-plugins/caps-plugins-0.1.10.ebuild,v 1.5 2004/07/06 18:36:25 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/caps-plugins/caps-plugins-0.1.10.ebuild,v 1.6 2004/07/13 08:53:46 slarti Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/caps-plugins-0.1.10-fpic.patch || die
+	epatch ${FILESDIR}/${PN}-0.1.10-fpic.patch || die
 }
 
 src_compile() {
