@@ -1,0 +1,10 @@
+# ChangeLog for sec-policy/selinux-ntp
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ntp/ChangeLog,v 1.1 2003/08/12 02:25:48 pebenito Exp $
+
+*selinux-ntp-20030811 (11 Aug 2003)
+
+  11 Aug 2003; Chris PeBenito <pebenito@gentoo.org> metadata.xml,
+  selinux-ntp-20030811.ebuild:
+  Initial commit
+
