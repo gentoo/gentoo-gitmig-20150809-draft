@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/flatzebra/flatzebra-0.1.1.ebuild,v 1.6 2005/01/01 17:59:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/flatzebra/flatzebra-0.1.1.ebuild,v 1.7 2005/01/18 04:01:13 weeve Exp $
 
 DESCRIPTION="A generic game engine for 2D double-buffering animation"
 HOMEPAGE="http://www3.sympatico.ca/sarrazip/en/"
@@ -8,7 +8,7 @@ SRC_URI="http://www3.sympatico.ca/sarrazip/dev/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64"
+KEYWORDS="x86 ppc ~amd64 ~sparc"
 IUSE=""
 
 RDEPEND=">=media-libs/libsdl-1.2.4
