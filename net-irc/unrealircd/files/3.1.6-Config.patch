@@ -1,0 +1,29 @@
+--- Config.orig	2003-01-31 22:32:22.000000000 -0500
++++ Config	2003-01-31 22:32:54.000000000 -0500
+@@ -21,7 +21,7 @@
+ SETUP=include/setup.h
+ OPTIONS_H=include/settings.h
+ OPTIONS=Settings
+-AUTO_CONFIG=""
++AUTO_CONFIG="-n"
+ #
+ STDLIBH=undef
+ STDDEFH=undef
+@@ -64,7 +64,7 @@
+ #
+ # Some reasonable defaults
+ #
+-DEFOPT="-O -g"
++DEFOPT="GENTOO_CFLAGS"
+ DEFCFLAGS="$DEFOPT"
+ DEFLIBS="none"
+ MKPASSWDLIBS="-lcrypt"
+@@ -73,7 +73,7 @@
+ IRCNET=""
+ NOSPOOF="1"
+ KLINE_ADDRESS=""
+-DPATH="$DIR"
++DPATH="/etc/unrealircd/"
+ SPATH="$DIR/src/ircd"
+ MODE_X=""
+ TRUEHUB=""

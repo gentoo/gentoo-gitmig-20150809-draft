@@ -1,21 +1,21 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.1.5.1.ebuild,v 1.4 2003/07/02 19:26:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.1.6.ebuild,v 1.1 2003/07/02 19:26:51 vapier Exp $
 
-MY_P=Unreal${PV}-Valek
-DESCRIPTION="aimed to be an advanced, not an easy IRCd"
+MY_P=Unreal${PV}-Noon
+DESCRIPTION="aimed to be an advanced (not easy) IRCd"
 HOMEPAGE="http://www.unrealircd.com/"
 SRC_URI="http://www.gower.net/unrealircd/${MY_P}.tar.gz
 	ftp://unreal.secure-tech.net/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE="ssl"
 
 DEPEND="ssl? ( dev-libs/openssl )"
 
-S=${WORKDIR}/Unreal${PV}
+S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A} && cd ${S}
@@ -63,5 +63,7 @@ pkg_postinst() {
 	einfo "You can find example cron scripts here:"
 	einfo "   /usr/share/doc/${PF}/ircd.cron"
 	einfo "   /usr/share/doc/${PF}/ircdchk"
+	echo
 	einfo "You can also use /etc/init.d/unrealircd to start at boot"
+	echo
 }
