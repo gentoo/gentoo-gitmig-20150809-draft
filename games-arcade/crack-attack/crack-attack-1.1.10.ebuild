@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/crack-attack-1.1.10.ebuild,v 1.1 2003/10/21 02:26:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/crack-attack-1.1.10.ebuild,v 1.2 2003/11/11 20:40:11 vapier Exp $
 
 inherit games flag-o-matic gcc
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://aluminumangel.org/attack/"
 SRC_URI="http://aluminumangel.org/cgi-bin/download_counter.cgi?attack_linux+attack/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 hppa"
 SLOT="0"
 
 RDEPEND="media-libs/glut"
