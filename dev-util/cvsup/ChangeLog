@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/cvsup
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsup/ChangeLog,v 1.10 2003/07/17 23:23:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsup/ChangeLog,v 1.11 2003/12/31 02:19:03 mr_bones_ Exp $
+
+  30 Dec 2003; Michael Sterrett <mr_bones_@gentoo.org> cvsup-16.1h.ebuild:
+  use sed -i and do more checking/reporting of errors
 
 *cvsup-16.1h (17 Apr 2003)
 
