@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.62 2004/02/12 15:12:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.63 2004/02/20 19:36:05 aliz Exp $
+
+  20 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> openssh-3.7.1_p2-r2.ebuild:
+  Filter flag if using ldap. Closing #41727.
 
   12 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
   Set Protocol to only allow ssh2 by default #41215 and enable pam if in USE.
