@@ -1,6 +1,16 @@
 # ChangeLog for net-dialup/slmodem
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.17 2004/08/01 09:40:12 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.18 2004/08/02 02:51:09 dragonheart Exp $
+
+*slmodem-2.9.9-r1 (02 Aug 2004)
+
+  02 Aug 2004; Daniel Black <dragonheart@gentoo.org>
+  -files/slmodem-2.9.7-makefile-fixup.patch, files/slmodem-2.9.conf,
+  files/slmodem-2.9.init, -slmodem-2.9.7-r1.ebuild, -slmodem-2.9.7-r2.ebuild,
+  -slmodem-2.9.7.ebuild, +slmodem-2.9.9-r1.ebuild:
+  fixed initscript installation. Added slmodem_test to the install. Removed
+  older buggy versions. Closes bug #58222. Thanks to Stefan Schweizer
+  <sschweizer@gmail.com> for the init scripts
 
   01 Aug 2004; Donnie Berkholz <spyderous@gentoo.org>; files/slmodem-2.9.init,
   slmodem-2.9.9.ebuild:

@@ -1,11 +1,11 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/files/slmodem-2.9.init,v 1.7 2004/08/01 09:40:12 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/files/slmodem-2.9.init,v 1.8 2004/08/02 02:51:09 dragonheart Exp $
 
 depend() {
 	need logger
-	if [ "${ALSA}" = "yes" ]
+	if [ "${MODULE}" = "alsa" ];
 	then
 		need alsasound
 	fi
@@ -19,41 +19,89 @@ checkconfig() {
 	fi
 }
 
-start() {
+function loadsalsa {
 	ebegin "Starting slmodemd for ${DEV}"
+	start-stop-daemon --start --background --nicelevel=${NICE} --make-pidfile \
+		--pidfile /var/run/slmodemd.pid --startas /usr/sbin/slmodemd \
+		-- -country=${COUNTRY} -g=${GROUP} --alsa hw:${HW_SLOT}
+	return ${?}
+}
 
+function loadsmodule {
 	modprobe ${MODULE};
+    
 	if [ "$?" -gt 0 ]
 	then
 		eerror "Missing ${MODULE}. Please set up /etc/conf.d/slmodem"
 		eend 1;
-	fi
+    	fi
 
 	#sleep as per http://bugs.gentoo.org/show_bug.cgi?id=47947#c59
+	ebegin "Waiting for ${MODULE} modem driver initialisation"
 	local COUNT=0
-	while [ ! -c ${DEV} -a ${COUNT} -lt 4 ];
+	echo -e "${NORMAL}   "
+	echo -ne "${NORMAL}"
+	while [ ! -c ${MDEV} -a ${COUNT} -lt 5 ];
 	do
-		sleep 0.25
-		einfo "Waiting for driver initialisation"
+		sleep 0.5
+		echo -ne "."
 		COUNT=`expr ${COUNT} + 1`
-	done
-
-	if [ ! -c ${DEV} ];
+   	done
+    
+	echo -ne "\n"
+    
+	if [ ! -c ${MDEV} ];
 	then
-		eerror "Module - ${MODULE} failed to initialise device ${DEVICE}"
+		eerror "Module - ${MODULE} failed to initialise device ${MDEV}"
 		eend 1
+	else
+		eend 0 
 	fi
 
+    	ebegin "Starting slmodemd for ${DEV}"
 	start-stop-daemon --start --background --nicelevel=${NICE} --make-pidfile \
 		--pidfile /var/run/slmodemd.pid --startas /usr/sbin/slmodemd \
-		-- -country=${COUNTRY} -g=${GROUP} ${DEV}
-	eend $?
+		-- -country=${COUNTRY} -g=${GROUP} ${MDEV}
+	return ${?}
+}
+
+start() {
+
+	checkconfig || return 1
+
+	# either if we use alsa or not, the only thing we need is 
+	# ttySL0, which is created by slmodemd when started (points to a pts)
+
+	if [ "${MODULE}" == "alsa" ]; then
+		loadsalsa
+	else
+		loadsmodule
+	fi
+    
+	result=${?}
+    
+	test ! -z "${LN_DEV}" && /bin/ln -s ${DEV} ${LN_DEV} 2> /dev/null
+    
+	eend ${result}
 }
 
 stop() {
-    ebegin "Shutting down slmodemd"
-    start-stop-daemon --stop --quiet --pidfile /var/run/slmodemd.pid && rm /var/run/slmodemd.pid
-    modprobe -r ${MODULE}
-    eend $?
+	ebegin "Shutting down slmodemd"
+	start-stop-daemon --stop --quiet --pidfile /var/run/slmodemd.pid && rm /var/run/slmodemd.pid
+	eend ${?}
+	if [ ! "${MODULE}" == "alsa" ];
+	then
+		ebegin "Waiting for ${MODULE} modem driver unload"
+		echo -e "${NORMAL}   "
+		echo -ne "${NORMAL}"
+		for ((a=0,result=1; result==1 && a <= 5 ; a++))
+		do
+			sleep 0.25
+			echo -ne "."
+			modprobe -r slamr 2> /dev/null && result=0
+		done
+		echo -ne "\n"
+		eend ${result}
+	fi
+	unlink ${LN_DEV} 2> /dev/null
 }
-
