@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.124 2004/06/21 04:58:06 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.125 2004/06/24 14:40:29 mholzer Exp $
+
+*xine-lib-1_rc5 (24 Jun 2004)
+
+  24 Jun 2004; Martin Holzer <mholzer@gentoo.org> xine-lib-1_rc5.ebuild,
+  files/protect-CFLAGS.patch-1_rc5,
+  files/xine-lib-1_rc5-configure-sparc.patch:
+  Version bumped. Closes 54913
 
   21 Jun 2004; Brad Laue <brad@gentoo.org> xine-lib-1_rc4-r1.ebuild:
   Stable on x86.
