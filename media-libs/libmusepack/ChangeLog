@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libmusepack
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmusepack/ChangeLog,v 1.8 2004/12/19 05:28:51 eradicator Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmusepack/ChangeLog,v 1.9 2005/01/29 21:29:50 chainsaw Exp $
+
+*libmusepack-1.1 (29 Jan 2005)
+
+  29 Jan 2005; Tony Vroon <chainsaw@gentoo.org> +libmusepack-1.1.ebuild:
+  Slotted version bump to 1.1 release. New license, ABI incompatible with
+  earlier versions. Ebuild based on the one submitted by 4nykey@nm.ru in bug
+  #79260.
 
   18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   -libmusepack-1.0.2.ebuild, libmusepack-1.0.3.ebuild:
