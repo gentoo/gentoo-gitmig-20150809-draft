@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.2.6-r2.ebuild,v 1.2 2003/02/13 06:23:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.2.6-r2.ebuild,v 1.3 2003/04/20 21:22:03 method Exp $
 
 S=${WORKDIR}/krb5-${PV}/src
 SRC_URI="http://www.crypto-publish.org/dist/mit-kerberos5/krb5-${PV}.tar.gz"
@@ -29,6 +29,7 @@ src_compile() {
 		|| myconf="${myconf} --without-krb4 --disable-krb4"
 
 	econf \
+                --with-ccopts=${CFLAGS} \
 		--mandir=/usr/share/man \
 		--localstatedir=/etc \
 		--enable-shared \

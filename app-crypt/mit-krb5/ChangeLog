@@ -1,8 +1,12 @@
 # ChangeLog for app-crypt/mit-krb5
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.4 2003/03/30 17:40:52 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/ChangeLog,v 1.5 2003/04/20 21:22:02 method Exp $
 
 *mit-krb5-1.2.7 (30 Mar 2003)
+
+  20 Apr 2003; Joshua Brindle <method@gentoo.org> mit-krb5-1.2.6-r2.ebuild,
+  mit-krb5-1.2.6-r3.ebuild, mit-krb5-1.2.7.ebuild:
+  added --with-ccopts= so it won't disregard user CFLAGS
 
   30 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> mit-krb5-1.2.7.ebuid :
   Security update. Various patches from MIT applied.  
