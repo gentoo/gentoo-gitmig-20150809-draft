@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-2.66.ebuild,v 1.3 2004/07/22 01:33:02 jbms Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-2.66.ebuild,v 1.4 2004/11/06 00:11:45 chriswhite Exp $
 
-inherit nsplugins
+inherit nsplugins toolchain-funcs
 
 S=${WORKDIR}/${PN}
 GECKO_SDK="gecko-sdk-i686-pc-linux-gnu-1.6.tar.gz"

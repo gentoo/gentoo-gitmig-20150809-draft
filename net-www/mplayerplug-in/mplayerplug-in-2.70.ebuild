@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-2.70.ebuild,v 1.1 2004/10/27 06:56:11 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-2.70.ebuild,v 1.2 2004/11/06 00:11:45 chriswhite Exp $
 
-inherit nsplugins
+inherit nsplugins toolchain-funcs
 
 DESCRIPTION="mplayer plug-in for Mozilla"
 HOMEPAGE="http://mplayerplug-in.sourceforge.net/"

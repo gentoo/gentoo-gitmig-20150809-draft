@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-0.95.ebuild,v 1.5 2004/06/25 01:06:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-0.95.ebuild,v 1.6 2004/11/06 00:11:45 chriswhite Exp $
 
 IUSE=""
 
-inherit nsplugins
+inherit nsplugins toolchain-funcs
 
 S="${WORKDIR}/${PN}"
 HOMEPAGE="http://mplayerplug-in.sourceforge.net/"
@@ -20,8 +20,7 @@ KEYWORDS="~x86 ~amd64 ~ia64 ~ppc ~alpha"
 DEPEND=">=media-video/mplayer-0.91"
 
 src_compile() {
-	[ -z "${CC}" ] && CC="gcc"
-	emake CC="${CC}" OPTIMIZER="${CFLAGS}" || die
+	emake CC="$(tc-getCC)" OPTIMIZER="${CFLAGS}" || die
 }
 
 src_install() {
