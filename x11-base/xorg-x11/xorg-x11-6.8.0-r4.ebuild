@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.4 2004/11/18 16:43:41 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.5 2004/11/18 17:24:04 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -237,6 +237,12 @@ src_unpack() {
 	if use uclibc; then
 		sed -i -e 's:GLXCLIENTDIRS = glxinfo glxgears:GLXCLIENTDIRS = :' \
 			${S}/programs/Imakefile
+	fi
+
+	# Get rid of cursor sets other than core and handhelds, saves ~4MB
+	if use minimal; then
+		 sed -i -e 's:SUBDIRS = redglass whiteglass handhelds:SUBDIRS = handhelds:' \
+			${S}/programs/xcursorgen/Imakefile
 	fi
 
 	cd ${S}
