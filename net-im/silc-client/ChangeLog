@@ -1,6 +1,10 @@
 # ChangeLog for net-im/silc-client
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/ChangeLog,v 1.24 2004/07/15 21:15:35 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/ChangeLog,v 1.25 2004/10/19 10:54:33 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
+  silc-client-1.0.1-r1.ebuild:
+  Stable on amd64.
 
   15 Jul 2004; Sven Wegener <swegener@gentoo.org> silc-client-1.0.1-r1.ebuild:
   Marked stable on x86.
