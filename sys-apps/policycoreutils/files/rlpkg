@@ -1,7 +1,7 @@
 #!/bin/bash
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/files/rlpkg,v 1.1 2003/08/11 00:05:08 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/files/rlpkg,v 1.2 2004/01/31 09:07:38 pebenito Exp $
 
 # Author: Chris PeBenito <pebenito@gentoo.org>
 #	this probably isnt the cleanest script, but it works.
@@ -13,7 +13,7 @@
 . /sbin/functions.sh
 PROG=`basename ${0}`
 
-if [ -z ${1} ]; then
+if [ -z "${1}" ]; then
 	echo "The Gentoo Linux package relabeler"
 	echo
 	echo "Usage: ${PROG} <pkg1> [<pkg2> ...]"
@@ -35,21 +35,18 @@ if [ "${build}" == " " ]; then
 	exit 1
 fi
 
-# ask portage what POLICYDIR is set to (inline python)
+# ask portage what POLICYDIR is set to
 # this should catch env vars too
-POLICYDIR="`python << EndOfFile
-import portage
-print portage.settings['POLICYDIR'];
-EndOfFile`"
+POLICYDIR="`portageq envvar POLICYDIR`"
 
-if [ -z ${POLICYDIR} ]; then
+if [ -z "${POLICYDIR}" ]; then
 	POLICYDIR="/etc/security/selinux/src/policy"
 	ewarn "Warning, no POLICYDIR set, using ${POLICYDIR}."
 	echo
 fi
 
 # make sure the policydir exists
-if [ ! -d ${POLICYDIR} ]; then
+if [ ! -d "${POLICYDIR}" ]; then
 	echo "The policy directory ${POLICYDIR} doesnt exist!"
 	echo
 	echo "Set the policy dir in make.conf: POLICYDIR=\"/etc/security/selinux/src/mypolicy\""
