@@ -1,6 +1,16 @@
 # ChangeLog for x11-themes/commonbox-styles
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/commonbox-styles/ChangeLog,v 1.8 2002/10/14 23:35:23 mkeadle Exp $
+# $Header:
+
+*commonbox-styles-0.6 (26 Nov 2002)
+
+  26 Nov 2002; Matt Keadle <mkeadle@gentoo.org>
+  commonbox-styles-0.6.ebuild files/digest-commonbox-styles-0.6 :
+
+  New revisions of styles from Openbox are now included. Openbox
+  can now use pixmaps as window buttons, which the new styles now
+  are able to take advantage of. Pixmap buttons will now be
+  installed untill Openbox is installed.
 
 *commonbox-styles-0.5 (14 Oct 2002)
 
