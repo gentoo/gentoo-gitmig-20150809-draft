@@ -1,14 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/chrootuid/chrootuid-1.3.ebuild,v 1.3 2004/06/24 21:24:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/chrootuid/chrootuid-1.3.ebuild,v 1.4 2004/06/29 19:26:33 agriffis Exp $
 
 IUSE=""
 
 MY_P="${P/-/}"
 
-DESCRIPTION="Chrootuid makes it easy to run a network service at low privilege level and with restricted file system access."
+DESCRIPTION="run a network service at low privilege level and with restricted file system access"
 HOMEPAGE="ftp://ftp.porcupine.org/pub/security/index.html"
 SRC_URI="ftp://ftp.porcupine.org/pub/security/${MY_P}.tar.gz"
+DEPEND=">=sys-apps/sed-4"
 
 LICENSE="BSD"
 KEYWORDS="x86"
