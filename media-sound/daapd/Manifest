@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 aee18878f1cd62e75a5cdd4b2b01cd47 ChangeLog 2003
+MD5 18dc08a37e11fda92a1c560f83e85329 ChangeLog 2171
+MD5 f1a82bd9846fb2926d132d29851f16fa daapd-0.2.3d.ebuild 1313
 MD5 67fa7232a65762eb47d8773c5fb33811 metadata.xml 592
-MD5 d3c0c1d4b06e14d146b1bc2740c29183 daapd-0.2.3d.ebuild 1302
+MD5 f1be018e61557e7ca897f2f1078b13b4 files/daapd-0.2.3d-gentoo.patch 1569
 MD5 3beda326653c14c1fbd33c762af01e2e files/daapd.conf.d 673
 MD5 c5e17de0906d8f26eae32f5af43b6b23 files/daapd.init.d 1067
-MD5 f1be018e61557e7ca897f2f1078b13b4 files/daapd-0.2.3d-gentoo.patch 1569
 MD5 c25c564a55bdc585c844929ca710971a files/digest-daapd-0.2.3d 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBvtbYArHZZzCEUG0RAjK2AJ9uq1w7zIeC3uggPXTniIt1YkADKQCfV78y
-M6P9dSzc+8UluhFodwuOs0Q=
-=HDzo
+iD8DBQFB2beAKRy60XGEcJIRAgMVAJ0S3JKrzg5ijQp2i2+TVko8OHaH7wCfdEWO
+lmQ4i1k5+M2Fy8CNQ6k/08k=
+=BnO+
 -----END PGP SIGNATURE-----

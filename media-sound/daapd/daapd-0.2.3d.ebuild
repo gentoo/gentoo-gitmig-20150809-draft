@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/daapd/daapd-0.2.3d.ebuild,v 1.4 2004/12/14 12:03:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/daapd/daapd-0.2.3d.ebuild,v 1.5 2005/01/03 21:21:57 gustavoz Exp $
 
-IUSE="aac howl"
+IUSE="aac howl mpeg4"
 
 inherit flag-o-matic eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.deleet.de/projekte/daap/daapd/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~ppc"
+KEYWORDS="~amd64 ~x86 ~ppc ~sparc"
 
 DEPEND="sys-libs/zlib
 	howl? ( >=net-misc/howl-0.9.6-r1 )
