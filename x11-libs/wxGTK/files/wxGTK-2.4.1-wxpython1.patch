@@ -1,0 +1,50 @@
+diff -ur wx/chkconf.h ../../wxPythonSrc-2.4.1.2/include/wx/chkconf.h
+--- wxGTK-2.4.1/include/wx/chkconf.h	2003-06-08 09:13:10.000000000 +0100
++++ wxGTK-2.4.1/include/wx/chkconf.h	2003-06-16 21:46:45.000000000 +0100
+@@ -4,7 +4,7 @@
+  * Author:      Vadim Zeitlin
+  * Modified by:
+  * Created:     09.08.00
+- * RCS-ID:      $Id: wxGTK-2.4.1-wxpython1.patch,v 1.1 2003/07/09 00:58:58 liquidx Exp $
++ * RCS-ID:      $Id: wxGTK-2.4.1-wxpython1.patch,v 1.1 2003/07/09 00:58:58 liquidx Exp $
+  * Copyright:   (c) 2000 Vadim Zeitlin <vadim@wxwindows.org>
+  * Licence:     wxWindows license
+  */
+@@ -772,6 +772,17 @@
+ #   endif
+ #endif /* wxUSE_FILESYSTEM */
+ 
++#if wxUSE_FS_INET
++#   if !wxUSE_PROTOCOL
++#       ifdef wxABORT_ON_CONFIG_ERROR
++#           error "wxUSE_FS_INET requires wxUSE_PROTOCOL"
++#       else
++#           undef wxUSE_PROTOCOL
++#           define wxUSE_PROTOCOL 1
++#       endif
++#   endif
++#endif /* wxUSE_FS_INET */
++
+ #if wxUSE_STOPWATCH || wxUSE_DATETIME
+ #    if !wxUSE_LONGLONG
+ #        ifdef wxABORT_ON_CONFIG_ERROR
+diff -ur wx/menuitem.h ../../wxPythonSrc-2.4.1.2/include/wx/menuitem.h
+--- wxGTK-2.4.1/include/wx/menuitem.h	2003-06-08 09:13:11.000000000 +0100
++++ wxGTK-2.4.1/include/wx/menuitem.h	2003-06-11 00:48:45.000000000 +0100
+@@ -4,7 +4,7 @@
+ // Author:      Vadim Zeitlin
+ // Modified by:
+ // Created:     25.10.99
+-// RCS-ID:      $Id: wxGTK-2.4.1-wxpython1.patch,v 1.1 2003/07/09 00:58:58 liquidx Exp $
++// RCS-ID:      $Id: wxGTK-2.4.1-wxpython1.patch,v 1.1 2003/07/09 00:58:58 liquidx Exp $
+ // Copyright:   (c) 1999 Vadim Zeitlin <zeitlin@dptmaths.ens-cachan.fr>
+ // Licence:     wxWindows license
+ ///////////////////////////////////////////////////////////////////////////////
+@@ -49,6 +49,7 @@
+ 
+     // the menu we're in
+     wxMenu *GetMenu() const { return m_parentMenu; }
++    void SetMenu(wxMenu* menu) { m_parentMenu = menu; }
+ 
+     // get/set id
+     void SetId(int id) { m_id = id; }
