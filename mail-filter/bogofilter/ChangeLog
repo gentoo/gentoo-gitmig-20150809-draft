@@ -1,6 +1,15 @@
 # ChangeLog for mail-filter/bogofilter
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/ChangeLog,v 1.23 2004/11/02 20:33:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/ChangeLog,v 1.24 2004/12/14 00:26:15 tove Exp $
+
+*bogofilter-0.93.2 (14 Dec 2004)
+
+  14 Dec 2004; Torsten Veller <tove@gentoo.org> -bogofilter-0.13.7.3.ebuild,
+  -bogofilter-0.17.5.ebuild, -bogofilter-0.92.2.ebuild,
+  -bogofilter-0.92.6.ebuild, -bogofilter-0.92.7.ebuild,
+  +bogofilter-0.93.2.ebuild:
+  Version bump. Closes #73919, reported by Erinn Looney-Triggs.
+  Clean out old ebuilds, #69505.
 
   02 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   bogofilter-0.92.8.ebuild:
