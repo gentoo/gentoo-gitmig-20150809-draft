@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/ivtv
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.5 2004/03/30 00:05:44 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ChangeLog,v 1.6 2004/05/07 21:27:55 aliz Exp $
+
+  07 May 2004; Daniel Ahlberg <aliz@gentoo.org> ivtv-0.1.9-r3.ebuild:
+  Added dependency to unzip, needed by ivtvfwextract.
 
 *ivtv-0.1.9-r3 (29 Mar 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.1.9-r3.ebuild,v 1.1 2004/03/30 00:05:44 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/ivtv/ivtv-0.1.9-r3.ebuild,v 1.2 2004/05/07 21:27:55 aliz Exp $
 
 # TODO
 # the "Gentoo way" is to use /usr/src/linux, not the running kernel
@@ -24,7 +24,8 @@ KEYWORDS="~x86"
 
 IUSE="lirc"
 
-DEPEND="lirc? ( app-misc/lirc )"
+DEPEND="lirc? ( app-misc/lirc )
+	app-arch/unzip"
 
 src_unpack() {
 	unpack ${P}.tar.gz
