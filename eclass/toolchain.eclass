@@ -1,20 +1,96 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.52 2004/11/18 12:17:01 lv Exp $
-#
-# This eclass should contain general toolchain-related functions that are
-# expected to not change, or change much.
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.53 2004/11/21 23:02:07 lv Exp $
 
+
+HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
+LICENSE="GPL-2 LGPL-2.1"
+
+
+#---->> eclass stuff <<----
 inherit eutils versionator libtool
 ECLASS=toolchain
 INHERITED="$INHERITED $ECLASS"
+DESCRIPTION="Based on the ${ECLASS} eclass"
 EXPORT_FUNCTIONS src_unpack pkg_setup src_compile src_install
 
-DESCRIPTION="Based on the ${ECLASS} eclass"
-HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
+toolchain_src_install() {
+	${ETYPE}-src_install
+}
+toolchain_src_compile() {
+	gcc_src_compile
+}
+toolchain_src_unpack() {
+	gcc_src_unpack
+}
+toolchain_pkg_setup() {
+	gcc_pkg_setup
+}
+#----<< eclass stuff >>----
 
+
+#---->> globals <<----
 export CTARGET="${CTARGET:-${CHOST}}"
 
+MY_PV_FULL="$(get_version_component_range 1-3)"
+MY_PV="$(get_version_component_range 1-2)"
+GCCMAJOR="$(get_version_component_range 1)"
+GCCMINOR="$(get_version_component_range 2)"
+GCCMICRO="$(get_version_component_range 3)"
+
+MAIN_BRANCH="${PV}"  # Tarball, etc used ...
+# Pre-release support
+if [ ${PV} != ${PV/_pre/-} ] ; then
+	PRERELEASE=${PV/_pre/-}
+fi
+# make _alpha and _beta ebuilds automatically use a snapshot
+if [ ${PV} != ${PV/_alpha/} ] ; then
+	SNAPSHOT="${MY_PV}-${PV##*_alpha}"
+elif [ ${PV} != ${PV/_beta/} ] ; then
+	SNAPSHOT="${MY_PV}-${PV##*_beta}"
+fi
+
+if [ "${ETYPE}" == "gcc-library" ] ; then
+	GCC_VAR_TYPE="${GCC_VAR_TYPE:=non-versioned}"
+	GCC_LIB_COMPAT_ONLY="${GCC_LIB_COMPAT_ONLY:=true}"
+	GCC_TARGET_NO_MULTILIB="${GCC_TARGET_NO_MULTILIB:=true}"
+else
+	GCC_VAR_TYPE="${GCC_VAR_TYPE:=versioned}"
+	GCC_LIB_COMPAT_ONLY="false"
+	GCC_TARGET_NO_MULTILIB="${GCC_TARGET_NO_MULTILIB:=false}"
+fi
+
+PREFIX="${PREFIX:="/usr"}"
+
+if [ "${GCC_VAR_TYPE}" == "versioned" ] ; then
+	if version_is_at_least 3.4.0 ; then
+		# GCC 3.4 no longer uses gcc-lib.
+		LIBPATH="${LIBPATH:="${PREFIX}/lib/gcc/${CTARGET}/${MY_PV_FULL}"}"
+	else
+		LIBPATH="${LIBPATH:="${PREFIX}/lib/gcc-lib/${CTARGET}/${MY_PV_FULL}"}"
+	fi
+	INCLUDEPATH="${INCLUDEPATH:="${LIBPATH}/include"}"
+	BINPATH="${BINPATH:="${PREFIX}/${CTARGET}/gcc-bin/${MY_PV_FULL}"}"
+	DATAPATH="${DATAPATH:="${PREFIX}/share/gcc-data/${CTARGET}/${MY_PV}"}"
+	# Dont install in /usr/include/g++-v3/, but in gcc internal directory.
+	# We will handle /usr/include/g++-v3/ with gcc-config ...
+	STDCXX_INCDIR="${STDCXX_INCDIR:="${LIBPATH}/include/g++-v${MY_PV/\.*/}"}"
+elif [ "${GCC_VAR_TYPE}" == "non-versioned" ] ; then
+	# using non-versioned directories to install gcc, like what is currently
+	# done for ppc64 and 3.3.3_pre, is a BAD IDEA. DO NOT do it!! However...
+	# setting up variables for non-versioned directories might be useful for
+	# specific gcc targets, like libffi. Note that we dont override the value
+	# returned by get_libdir here.
+	LIBPATH="${LIBPATH:="${PREFIX}/$(get_libdir)"}"
+	INCLUDEPATH="${INCLUDEPATH:="${PREFIX}/include"}"
+	BINPATH="${BINPATH:="${PREFIX}/bin/"}"
+	DATAPATH="${DATAPATH:="${PREFIX}/share/"}"
+	STDCXX_INCDIR="${STDCXX_INCDIR:="${PREFIX}/include/g++-v3/"}"
+fi
+#----<< globals >>----
+
+
+#---->> SLOT+IUSE logic <<----
 if [ "${ETYPE}" == "gcc-library" ] ; then
 	IUSE="nls build uclibc"
 	SLOT="${CTARGET}-${SO_VERSION_SLOT:-5}"
@@ -29,122 +105,29 @@ else
 		SLOT="${CTARGET}-${PV%.*}"
 	fi
 fi
-LICENSE="GPL-2 LGPL-2.1"
-
-gcc_setup_static_vars() {
-	#MY_PV="`echo ${PV} | awk -F. '{ gsub(/_pre.*|_alpha.*/, ""); print $1 "." $2 }'`"
-	#MY_PV_FULL="`echo ${PV} | awk '{ gsub(/_pre.*|_alpha.*/, ""); print $0 }'`"
-
-	MY_PV_FULL="$(get_version_component_range 1-3)"
-	MY_PV="$(get_version_component_range 1-2)"
-
-	GCCMAJOR="$(get_version_component_range 1)"
-	GCCMINOR="$(get_version_component_range 2)"
-	GCCMICRO="$(get_version_component_range 3)"
-
-	MAIN_BRANCH="${PV}"  # Tarball, etc used ...
-
-	# Pre-release support
-	if [ ${PV} != ${PV/_pre/-} ] ; then
-		PRERELEASE=${PV/_pre/-}
-	fi
+#----<< SLOT+IUSE logic >>----
 
 
-	# make _alpha and _beta ebuilds automatically use a snapshot
-	if [ ${PV} != ${PV/_alpha/} ] ; then
-		SNAPSHOT="${MY_PV}-${PV##*_alpha}"
-	elif [ ${PV} != ${PV/_beta/} ] ; then
-		SNAPSHOT="${MY_PV}-${PV##*_beta}"
-	fi
-}
+#---->> S + SRC_URI essentials <<----
 
-
-gcc_setup_path_vars() {
-	PREFIX="${PREFIX:="/usr"}"
-
-	if [ "$1" == "versioned" ] ; then
-		if version_is_at_least 3.4.0 ; then
-			# GCC 3.4 no longer uses gcc-lib.
-			LIBPATH="${LIBPATH:="${PREFIX}/lib/gcc/${CTARGET}/${MY_PV_FULL}"}"
-		else
-			LIBPATH="${LIBPATH:="${PREFIX}/lib/gcc-lib/${CTARGET}/${MY_PV_FULL}"}"
-		fi
-		INCLUDEPATH="${INCLUDEPATH:="${LIBPATH}/include"}"
-		BINPATH="${BINPATH:="${PREFIX}/${CTARGET}/gcc-bin/${MY_PV_FULL}"}"
-		DATAPATH="${DATAPATH:="${PREFIX}/share/gcc-data/${CTARGET}/${MY_PV}"}"
-		# Dont install in /usr/include/g++-v3/, but in gcc internal directory.
-		# We will handle /usr/include/g++-v3/ with gcc-config ...
-		STDCXX_INCDIR="${STDCXX_INCDIR:="${LIBPATH}/include/g++-v${MY_PV/\.*/}"}"
-	elif [ "$1" == "non-versioned" ] ; then
-		# using non-versioned directories to install gcc, like what is currently
-		# done for ppc64 and 3.3.3_pre, is a BAD IDEA. DO NOT do it!! However...
-		# setting up variables for non-versioned directories might be useful for
-		# specific gcc targets, like libffi. Note that we dont override the value
-		# returned by get_libdir here.
-		LIBPATH="${LIBPATH:="${PREFIX}/$(get_libdir)"}"
-		INCLUDEPATH="${INCLUDEPATH:="${PREFIX}/include"}"
-		BINPATH="${BINPATH:="${PREFIX}/bin/"}"
-		DATAPATH="${DATAPATH:="${PREFIX}/share/"}"
-		STDCXX_INCDIR="${STDCXX_INCDIR:="${PREFIX}/include/g++-v3/"}"
+# This function sets the source directory depending on whether we're using
+# a prerelease, snapshot, or release tarball. To use it, just set S with:
+#
+#	S="$(gcc_get_s_dir)"
+#
+# Travis Tilley <lv@gentoo.org> (03 Sep 2004)
+#
+gcc_get_s_dir() {
+	if [ -n "${PRERELEASE}" ] ; then
+		GCC_S="${WORKDIR}/gcc-${PRERELEASE}"
+	elif [ -n "${SNAPSHOT}" ] ; then
+		GCC_S="${WORKDIR}/gcc-${SNAPSHOT}"
 	else
-		die "this function needs to be called with versioned of non-versioned"
-	fi
-}
-
-
-gcc_setup_variables() {
-	if [ "${ETYPE}" == "gcc-library" ] ; then
-		GCC_VAR_TYPE="${GCC_VAR_TYPE:=non-versioned}"
-		GCC_LIB_COMPAT_ONLY="${GCC_LIB_COMPAT_ONLY:=true}"
-		GCC_TARGET_NO_MULTILIB="${GCC_TARGET_NO_MULTILIB:=true}"
-	else
-		GCC_VAR_TYPE="${GCC_VAR_TYPE:=versioned}"
-		GCC_LIB_COMPAT_ONLY="false"
-		GCC_TARGET_NO_MULTILIB="${GCC_TARGET_NO_MULTILIB:=false}"
-	fi
-	gcc_setup_path_vars ${GCC_VAR_TYPE}
-
-	# if this value isnt set, lets assume that we're building a target that
-	# only requires support for c.
-	GCC_LANG="${GCC_LANG:=c}"
-}
-
-
-gcc-compiler-pkg_setup() {
-	# Must compile for mips64-linux target if we want n32/n64 support
-	case "${CTARGET}" in
-		mips64-*) ;;
-		*)
-			if use n32 || use n64; then
-				eerror "n32/n64 can only be used when target host is mips64-*-linux-*";
-				die "Invalid USE flags for CTARGET ($CTARGET)";
-			fi
-		;;
-	esac
-
-	#cannot have both n32 & n64 without multilib
-	if use n32 && use n64 && use !multilib; then
-		eerror "Please enable multilib if you want to use both n32 & n64";
-		die "Invalid USE flag combination";
+		GCC_S="${WORKDIR}/gcc-${MAIN_BRANCH}"
 	fi
 
-	# we dont want to use the installed compiler's specs to build gcc!
-	unset GCC_SPECS || :
+	echo "${GCC_S}"
 }
-
-gcc-library-pkg_setup() {
-	:
-}
-
-gcc_pkg_setup() {
-	gcc_setup_static_vars
-	gcc_setup_variables
-
-	S="$(gcc_get_s_dir)"
-
-	${ETYPE}-pkg_setup || die "${ETYPE}-pkg_setup failed"
-}
-
 
 # This function handles the basics of setting the SRC_URI for a gcc ebuild.
 # To use, set SRC_URI with:
@@ -201,6 +184,13 @@ gcc_pkg_setup() {
 #					PP_FVER="${PP_VER//_/.}-2"
 #			would download gcc3_4/protector-3.4-2.tar.gz
 #
+#	HTB_VER
+#	HTB_GCC_VER
+#			These variables control whether or not an ebuild supports Herman
+#			ten Brugge's bounds-checking patches. If you want to use a patch
+#			for an older gcc version with a new gcc, make sure you set
+#			HTB_GCC_VER to that version of gcc.
+#
 #	GCC_MANPAGE_VERSION
 #			The version of gcc for which we will download manpages. This will
 #			default to ${PV}, but we may not want to pre-generate man pages
@@ -215,17 +205,14 @@ get_gcc_src_uri() {
 	# This variable should be set to the devspace of whoever is currently
 	# maintaining GCC. Please dont set this to mirror, that would just
 	# make the files unavailable until they get mirrored.
-	local devspace_uri="http://dev.gentoo.org/~lv/toolchain-files/"
+	local devspace_uri="http://dev.gentoo.org/~lv/GCC/"
 	GENTOO_TOOLCHAIN_BASE_URI=${GENTOO_TOOLCHAIN_BASE_URI:=${devspace_uri}}
-
-	gcc_setup_static_vars
 
 	if [ -n "${PIE_VER}" ] ; then
 		PIE_CORE="${PIE_CORE:=gcc-${MY_PV_FULL}-piepatches-v${PIE_VER}.tar.bz2}"
 	fi
 
 	GCC_MANPAGE_VERSION="${GCC_MANPAGE_VERSION:=${MY_PV_FULL}}"
-
 
 	# Set where to download gcc itself depending on whether we're using a
 	# prerelease, snapshot, or release tarball.
@@ -267,6 +254,7 @@ get_gcc_src_uri() {
 			${GENTOO_TOOLCHAIN_BASE_URI}${PIE_CORE}"
 	fi
 
+	# gcc bounds checking patch
 	if [ -n "${HTB_VER}" ] ; then
 		GCC_SRC_URI="${GCC_SRC_URI}
 					boundschecking? ( http://web.inter.nl.net/hcc/Haj.Ten.Brugge/bounds-checking-${PN}-${HTB_GCC_VER:=${PV}}-${HTB_VER}.patch.bz2 )"
@@ -274,25 +262,315 @@ get_gcc_src_uri() {
 
 	echo "${GCC_SRC_URI}"
 }
+S="$(gcc_get_s_dir)"
+SRC_URI="$(get_gcc_src_uri)"
+#---->> S + SRC_URI essentials >>----
 
 
-# This function sets the source directory depending on whether we're using
-# a prerelease, snapshot, or release tarball. To use it, just set S with:
-#
-#	S="$(gcc_get_s_dir)"
-#
-# Travis Tilley <lv@gentoo.org> (03 Sep 2004)
-#
-gcc_get_s_dir() {
-	if [ -n "${PRERELEASE}" ] ; then
-		GCC_S="${WORKDIR}/gcc-${PRERELEASE}"
-	elif [ -n "${SNAPSHOT}" ] ; then
-		GCC_S="${WORKDIR}/gcc-${SNAPSHOT}"
+#---->> support checks <<----
+
+# The gentoo piessp patches allow for 3 configurations:
+# 1) PIE+SSP by default
+# 2) PIE by default
+# 3) SSP by default
+hardened_gcc_works() {
+	if [ "$1" == "pie" ] ; then
+		local tocheck=${HARDENED_PIE_WORKS}
+	elif [ "$1" == "ssp" ] ; then
+		local tocheck=${HARDENED_SSP_WORKS}
 	else
-		GCC_S="${WORKDIR}/gcc-${MAIN_BRANCH}"
+		local tocheck=${HARDENED_GCC_WORKS}
 	fi
 
-	echo "${GCC_S}"
+	for myarch in ${tocheck}
+	do
+		[ "${ARCH}" == "${myarch}" ] && return 0
+	done
+	return 1
+}
+
+has_libssp() {
+	[ -e /$(get_libdir)/libssp.so ] && return 0
+	return 1
+}
+
+want_libssp() {
+	[ "${GCC_LIBSSP_SUPPORT}" == "true" ] || return 1
+	has_libssp || return 1
+	[ -n "${PP_FVER}" ] || return 1
+	return 0
+}
+
+want_boundschecking() {
+	[ -z "${HTB_VER}" ] && return 1
+	use boundschecking && return 0
+	return 1
+}
+
+want_split_specs() {
+	[ "${SPLIT_SPECS}" == "true" ] && [ -n "${PIE_CORE}" ] && \
+		! want_boundschecking && return 0
+	return 1
+}
+
+# This function checks whether or not glibc has the support required to build
+# Position Independant Executables with gcc.
+glibc_have_pie() {
+	if [ ! -f ${ROOT}/usr/$(get_libdir)/Scrt1.o ] ; then
+		echo
+		ewarn "Your glibc does not have support for pie, the file Scrt1.o is missing"
+		ewarn "Please update your glibc to a proper version or disable hardened"
+		echo
+		return 1
+	fi
+}
+
+# This function determines whether or not libc has been patched with stack
+# smashing protection support.
+libc_has_ssp() {
+	local libc_prefix
+	use ppc64 && libc_prefix="/lib64/"
+	libc_prefix="${libc_prefix:="/$(get_libdir)/"}"
+
+	use uclibc \
+		&& local libc_file="libc.so.0" \
+		|| local libc_file="libc.so.6"
+
+	local my_libc=${ROOT}/${libc_prefix}/${libc_file}
+
+	# Check for the libc to have the __guard symbols
+	if  [ "$(readelf -s "${my_libc}" 2>/dev/null | \
+	         grep GLOBAL | grep OBJECT | grep '__guard')" ] && \
+	    [ "$(readelf -s "${my_libc}" 2>/dev/null | \
+	         grep GLOBAL | grep FUNC | grep '__stack_smash_handler')" ]
+	then
+		return 0
+	else
+		return 1
+	fi
+}
+
+# This is to make sure we don't accidentally try to enable support for a
+# language that doesnt exist. GCC 3.4 supports f77, while 4.0 supports f95, etc.
+#
+# Travis Tilley <lv@gentoo.org> (26 Oct 2004)
+#
+gcc-lang-supported() {
+	grep ^language=\"${1}\" ${S}/gcc/*/config-lang.in > /dev/null && return 0
+	ewarn "The ${1} language is not supported by this release of gcc"
+	return 1
+}
+
+#----<< support checks >>----
+
+
+
+#---->> specs + env.d logic <<----
+
+# configure to build with the hardened GCC specs as the default
+make_gcc_hard() {
+	if hardened_gcc_works ; then
+		einfo "Updating gcc to use automatic PIE + SSP building ..."
+		sed -e 's|^HARD_CFLAGS = |HARD_CFLAGS = -DEFAULT_PIE_SSP |' \
+			-i ${S}/gcc/Makefile.in || die "Failed to update gcc!"
+	elif hardened_gcc_works pie ; then
+		einfo "Updating gcc to use automatic PIE building ..."
+		ewarn "SSP has not been enabled by default"
+		sed -e 's|^HARD_CFLAGS = |HARD_CFLAGS = -DEFAULT_PIE |' \
+			-i ${S}/gcc/Makefile.in || die "Failed to update gcc!"
+	elif hardened_gcc_works ssp ; then
+		einfo "Updating gcc to use automatic SSP building ..."
+		ewarn "PIE has not been enabled by default"
+		sed -e 's|^HARD_CFLAGS = |HARD_CFLAGS = -DEFAULT_SSP |' \
+			-i ${S}/gcc/Makefile.in || die "Failed to update gcc!"
+	else
+		# do nothing if hardened isnt supported, but dont die either
+		ewarn "hardened is not supported for this arch in this gcc version"
+		ebeep
+		return 0
+	fi
+
+	# rebrand to make bug reports easier
+	release_version="${release_version/Gentoo/Gentoo Hardened}"
+}
+
+create_vanilla_specs_file() {
+	pushd ${WORKDIR}/build/gcc > /dev/null
+	if use hardened ; then
+		# if using hardened, then we need to move xgcc out of the way
+		# and recompile it
+		cp Makefile Makefile.orig
+		sed -i -e 's/^HARD_CFLAGS.*/HARD_CFLAGS = /g' Makefile
+		mv xgcc xgcc.hard
+		mv gcc.o gcc.o.hard
+		make xgcc
+		einfo "Creating a vanilla gcc specs file"
+		./xgcc -dumpspecs > ${WORKDIR}/build/vanilla.specs
+		# restore everything to normal
+		mv gcc.o.hard gcc.o
+		mv xgcc.hard xgcc
+		mv Makefile.orig Makefile
+	else
+		einfo "Creating a vanilla gcc specs file"
+		./xgcc -dumpspecs > ${WORKDIR}/build/vanilla.specs
+	fi
+	popd > /dev/null
+}
+
+create_hardened_specs_file() {
+	pushd ${WORKDIR}/build/gcc > /dev/null
+	if use !hardened ; then
+		# if not using hardened, then we need to move xgcc out of the way
+		# and recompile it
+		cp Makefile Makefile.orig
+		sed -i -e 's/^HARD_CFLAGS.*/HARD_CFLAGS = -DEFAULT_PIE_SSP/g' Makefile
+		mv xgcc xgcc.vanilla
+		mv gcc.o gcc.o.vanilla
+		make xgcc
+		einfo "Creating a hardened gcc specs file"
+		./xgcc -dumpspecs > ${WORKDIR}/build/hardened.specs
+		# restore everything to normal
+		mv gcc.o.vanilla gcc.o
+		mv xgcc.vanilla xgcc
+		mv Makefile.orig Makefile
+	else
+		einfo "Creating a hardened gcc specs file"
+		./xgcc -dumpspecs > ${WORKDIR}/build/hardened.specs
+	fi
+	popd > /dev/null
+}
+
+create_hardenednossp_specs_file() {
+	pushd ${WORKDIR}/build/gcc > /dev/null
+	cp Makefile Makefile.orig
+	sed -i -e 's/^HARD_CFLAGS.*/HARD_CFLAGS = -DEFAULT_PIE/g' Makefile
+	mv xgcc xgcc.moo
+	mv gcc.o gcc.o.moo
+	make xgcc
+	einfo "Creating a hardened no-ssp gcc specs file"
+	./xgcc -dumpspecs > ${WORKDIR}/build/hardenednossp.specs
+	# restore everything to normal
+	mv gcc.o.moo gcc.o
+	mv xgcc.moo xgcc
+	mv Makefile.orig Makefile
+	popd > /dev/null
+}
+
+create_hardenednopie_specs_file() {
+	pushd ${WORKDIR}/build/gcc > /dev/null
+	cp Makefile Makefile.orig
+	sed -i -e 's/^HARD_CFLAGS.*/HARD_CFLAGS = -DEFAULT_SSP/g' Makefile
+	mv xgcc xgcc.moo
+	mv gcc.o gcc.o.moo
+	make xgcc
+	einfo "Creating a hardened no-pie gcc specs file"
+	./xgcc -dumpspecs > ${WORKDIR}/build/hardenednopie.specs
+	# restore everything to normal
+	mv gcc.o.moo gcc.o
+	mv xgcc.moo xgcc
+	mv Makefile.orig Makefile
+	popd > /dev/null
+}
+
+split_out_specs_files() {
+	want_split_specs || return 1
+	if hardened_gcc_works ; then
+		create_hardened_specs_file
+		create_vanilla_specs_file
+		create_hardenednossp_specs_file
+		create_hardenednopie_specs_file
+	elif hardened_gcc_works pie ; then
+		create_vanilla_specs_file
+		create_hardenednossp_specs_file
+	elif hardened_gcc_works ssp ; then
+		create_vanilla_specs_file
+		create_hardenednopie_specs_file
+	fi
+}
+
+create_gcc_env_entry() {
+	dodir /etc/env.d/gcc
+	local gcc_envd_base="/etc/env.d/gcc/${CTARGET}-${MY_PV_FULL}"
+
+	if [ "$1" == "" ] ; then
+		gcc_envd_file="${D}${gcc_envd_base}"
+		# I'm leaving the following commented out to remind me that it
+		# was an insanely -bad- idea. Stuff broke. GCC_SPECS isnt unset
+		# on chroot or in non-toolchain.eclass gcc ebuilds!
+		#gcc_specs_file="${LIBPATH}/specs"
+		gcc_specs_file=""
+	else
+		gcc_envd_file="${D}${gcc_envd_base}-$1"
+		gcc_specs_file="${LIBPATH}/$1.specs"
+	fi
+
+	echo "PATH=\"${BINPATH}\"" > ${gcc_envd_file}
+	echo "ROOTPATH=\"${BINPATH}\"" >> ${gcc_envd_file}
+
+	# Thanks to multilib, setting ldpath just got a little bit nuttier.
+	use amd64 && multilib_dirnames="32"
+	# we dont support this kind of amd64 multilib
+	#use x86 && multilib_dirnames="64"
+	# I'm unsure which of these is the default, so lets add both
+	use ppc64 && multilib_dirnames="64 32"
+	# same here.
+	use mips && multilib_dirnames="o32 32 64"
+
+	LDPATH="${LIBPATH}"
+
+	if [ -n "${multilib_dirnames}" ] ; then
+		for path in ${multilib_dirnames} ; do
+			LDPATH="${LDPATH}:${LIBPATH}/${path}"
+		done
+	fi
+
+	local mbits=
+	has_m32 && mbits="${mbits} 32"
+	has_m64 && mbits="${mbits} 64"
+	echo "GCCBITS=\"${mbits}\"" >> ${gcc_envd_file}
+
+	echo "LDPATH=\"${LDPATH}\"" >> ${gcc_envd_file}
+	echo "MANPATH=\"${DATAPATH}/man\"" >> ${gcc_envd_file}
+	echo "INFOPATH=\"${DATAPATH}/info\"" >> ${gcc_envd_file}
+	echo "STDCXX_INCDIR=\"${STDCXX_INCDIR##*/}\"" >> ${gcc_envd_file}
+	# Also set CC and CXX
+	echo "CC=\"gcc\"" >> ${gcc_envd_file}
+	echo "CXX=\"g++\"" >> ${gcc_envd_file}
+	# Set which specs file to use
+	[ -n "${gcc_specs_file}" ] && echo "GCC_SPECS=\"${gcc_specs_file}\"" >> ${gcc_envd_file}
+}
+
+#----<< specs + env.d logic >>----
+
+
+
+#---->> unorganised crap in need of refactoring follows
+
+gcc_pkg_setup() {
+	if [ "${ETYPE}" == "gcc-compiler" ] ; then
+		# Must compile for mips64-linux target if we want n32/n64 support
+		case "${CTARGET}" in
+			mips64-*) ;;
+			*)
+				if use n32 || use n64; then
+					eerror "n32/n64 can only be used when target host is mips64-*-linux-*";
+					die "Invalid USE flags for CTARGET ($CTARGET)";
+				fi
+			;;
+		esac
+
+		#cannot have both n32 & n64 without multilib
+		if use n32 && use n64 && use !multilib; then
+			eerror "Please enable multilib if you want to use both n32 & n64";
+			die "Invalid USE flag combination";
+		fi
+
+		# we dont want to use the installed compiler's specs to build gcc!
+		unset GCC_SPECS || :
+	fi
+
+	want_libssp && libc_has_ssp && \
+		die "libssp cannot be used with a glibc that has been patched to provide ssp symbols"
 }
 
 
@@ -304,7 +582,6 @@ gcc_get_s_dir() {
 #
 gcc_quick_unpack() {
 	pushd ${WORKDIR} > /dev/null
-	gcc_setup_static_vars
 
 	if [ -n "${PRERELEASE}" ] ; then
 		unpack gcc-${PRERELEASE}.tar.bz2
@@ -339,14 +616,13 @@ gcc_quick_unpack() {
 	fi
 
 	# pappy@gentoo.org - Fri Oct  1 23:24:39 CEST 2004
-	if use boundschecking
+	if want_boundschecking
 	then
 		unpack "bounds-checking-${PN}-${HTB_GCC_VER:=${PV}}-${HTB_VER}.patch.bz2"
 	fi
 
 	popd > /dev/null
 }
-
 
 # Exclude any unwanted patches, as specified by the following variables:
 #
@@ -385,8 +661,6 @@ do_gcc_SSP_patches() {
 	local ssppatch
 	local sspdocs
 
-	version_is_at_least 3.2.3 || die "gcc version not supported by do_gcc_SSP_patches"
-
 	# Etoh keeps changing where files are and what the patch is named
 	if version_is_at_least 3.4.1 ; then
 		# >3.4.1 uses version in patch name, and also includes docs
@@ -402,7 +676,6 @@ do_gcc_SSP_patches() {
 		ssppatch="${S}/protector.dif"
 		sspdocs="no"
 	else
-		# redundantly redundant
 		die "gcc version not supported by do_gcc_SSP_patches"
 	fi
 
@@ -413,20 +686,23 @@ do_gcc_SSP_patches() {
 	fi
 
 	# we apply only the needed parts of protectonly.dif
-	sed -e 's|^CRTSTUFF_CFLAGS = |CRTSTUFF_CFLAGS = -fno-stack-protector-all |' \
+	sed -e 's|^CRTSTUFF_CFLAGS = |CRTSTUFF_CFLAGS = -fno-stack-protector-all |'\
 		-i gcc/Makefile.in || die "Failed to update crtstuff!"
 
 	# if gcc in a stage3 defaults to ssp, is version 3.4.0 and a stage1 is built
 	# the build fails building timevar.o w/:
 	# cc1: stack smashing attack in function ix86_split_to_parts()
-	if gcc -dumpspecs | grep -q "fno-stack-protector:" && [ "${GCCMINOR}" -ge "4" ] && [ -f ${FILESDIR}/3.4.0/gcc-3.4.0-cc1-no-stack-protector.patch ] ; then
+	if gcc -dumpspecs | grep -q "fno-stack-protector:" && version_is_at_least 3.4.0 && ! version_is_at_least 4.0.0 && [ -f ${FILESDIR}/3.4.0/gcc-3.4.0-cc1-no-stack-protector.patch ] ; then
 		use build && epatch ${FILESDIR}/3.4.0/gcc-3.4.0-cc1-no-stack-protector.patch
 	fi
 
 	release_version="${release_version}, ssp-${PP_FVER}"
-	update_gcc_for_libc_ssp
+	if want_libssp ; then
+		update_gcc_for_libssp
+	else
+		update_gcc_for_libc_ssp
+	fi
 }
-
 
 # If glibc or uclibc has been patched to provide the necessary symbols itself,
 # then lets use those for SSP instead of libgcc.
@@ -438,6 +714,12 @@ update_gcc_for_libc_ssp() {
 	fi
 }
 
+# a split out non-libc non-libgcc ssp requires additional spec logic changes
+update_gcc_for_libssp() {
+	einfo "Updating gcc to use SSP from libssp..."
+	sed -e 's|^\(INTERNAL_CFLAGS.*\)$|\1 -D_LIBSSP_PROVIDES_SSP_|' \
+		-i ${S}/gcc/Makefile.in || die "Failed to update gcc!"
+}
 
 # do various updates to PIE logic
 do_gcc_PIE_patches() {
@@ -450,98 +732,14 @@ do_gcc_PIE_patches() {
 	# disable relro/now
 	#use uclibc && epatch ${FILESDIR}/3.3.3/gcc-3.3.3-norelro.patch
 
+	# we want to be able to control the pie patch logic via something other
+	# than ALL_CFLAGS...
+	sed -e '/^ALL_CFLAGS/iHARD_CFLAGS = ' \
+		-e 's|^ALL_CFLAGS = |ALL_CFLAGS = $(HARD_CFLAGS) |' \
+		-i ${S}/gcc/Makefile.in
+
 	release_version="${release_version}, pie-${PIE_VER}"
 }
-
-
-# configure to build hardened GCC
-make_gcc_hard() {
-	einfo "Updating gcc to use automatic PIE + SSP building ..."
-	sed -e 's|^ALL_CFLAGS = |ALL_CFLAGS = -DEFAULT_PIE_SSP |' \
-		-i ${S}/gcc/Makefile.in || die "Failed to update gcc!"
-
-	# rebrand to make bug reports easier
-	release_version="${release_version/Gentoo/Gentoo Hardened}"
-}
-
-
-create_vanilla_specs_file() {
-	pushd ${WORKDIR}/build/gcc > /dev/null
-	if use hardened ; then
-		# if using hardened, then we need to move xgcc out of the way
-		# and recompile it
-		cp Makefile Makefile.orig
-		sed -i -e 's#ALL_CFLAGS = -DEFAULT_PIE_SSP#ALL_CFLAGS = #' Makefile
-		mv xgcc xgcc.hard
-		mv gcc.o gcc.o.hard
-		make xgcc
-		einfo "Creating a vanilla gcc specs file"
-		./xgcc -dumpspecs > ${WORKDIR}/build/vanilla.specs
-		# restore everything to normal
-		mv gcc.o.hard gcc.o
-		mv xgcc.hard xgcc
-		mv Makefile.orig Makefile
-	else
-		einfo "Creating a vanilla gcc specs file"
-		./xgcc -dumpspecs > ${WORKDIR}/build/vanilla.specs
-	fi
-	popd > /dev/null
-}
-
-
-create_hardened_specs_file() {
-	pushd ${WORKDIR}/build/gcc > /dev/null
-	if use !hardened ; then
-		# if not using hardened, then we need to move xgcc out of the way
-		# and recompile it
-		cp Makefile Makefile.orig
-		sed -i -e 's#ALL_CFLAGS = #ALL_CFLAGS = -DEFAULT_PIE_SSP #' Makefile
-		mv xgcc xgcc.vanilla
-		mv gcc.o gcc.o.vanilla
-		make xgcc
-		einfo "Creating a hardened gcc specs file"
-		./xgcc -dumpspecs > ${WORKDIR}/build/hardened.specs
-		# restore everything to normal
-		mv gcc.o.vanilla gcc.o
-		mv xgcc.vanilla xgcc
-		mv Makefile.orig Makefile
-	else
-		einfo "Creating a hardened gcc specs file"
-		./xgcc -dumpspecs > ${WORKDIR}/build/hardened.specs
-	fi
-	popd > /dev/null
-}
-
-
-create_hardenednossp_specs_file() {
-	pushd ${WORKDIR}/build/gcc > /dev/null
-	cp Makefile Makefile.orig
-
-	if use hardened ; then
-		sed -i -e 's#ALL_CFLAGS = -DEFAULT_PIE_SSP#ALL_CFLAGS = -DEFAULT_PIE#' Makefile
-	else
-		sed -i -e 's#ALL_CFLAGS = #ALL_CFLAGS = -DEFAULT_PIE #' Makefile
-	fi
-	
-	mv xgcc xgcc.moo
-	mv gcc.o gcc.o.moo
-	make xgcc
-	einfo "Creating a hardened no-ssp gcc specs file"
-	./xgcc -dumpspecs > ${WORKDIR}/build/hardenednossp.specs
-	# restore everything to normal
-	mv gcc.o.moo gcc.o
-	mv xgcc.moo xgcc
-	mv Makefile.orig Makefile
-	popd > /dev/null
-}
-
-
-split_out_specs_files() {
-	create_hardened_specs_file || die "failed to split out hardened specs"
-	create_vanilla_specs_file || die "failed to split out vanilla specs"
-	create_hardenednossp_specs_file || die "failed to create nossp hardened specs"
-}
-
 
 should_we_gcc_config() {
 	# we only want to switch compilers if installing to / and we're not
@@ -624,7 +822,6 @@ do_gcc_config() {
 	fi
 }
 
-
 # This function allows us to gentoo-ize gcc's version number and bugzilla
 # URL without needing to use patches.
 #
@@ -637,7 +834,6 @@ gcc_version_patch() {
 	sed -i -e "s:@GENTOO@:$1:g" ${S}/gcc/version.c || die "failed to patch version"
 	sed -i -e 's~http:\/\/gcc\.gnu\.org\/bugs\.html~http:\/\/bugs\.gentoo\.org\/~' ${S}/gcc/version.c || die "failed to update bugzilla URL"
 }
-
 
 # The purpose of this DISGUSTING gcc multilib hack is to allow 64bit libs
 # to live in lib instead of lib64 where they belong, with 32bit libraries
@@ -652,16 +848,6 @@ disgusting_gcc_multilib_HACK() {
 	sed -i -e 's~^MULTILIB_OSDIRNAMES.*~MULTILIB_OSDIRNAMES = ../'$(get_libdir)' ../'$(get_multilibdir)'~' ${S}/gcc/config/i386/t-linux64
 }
 
-
-hardened_gcc_works() {
-	for myarch in ${HARDENED_GCC_WORKS}
-	do
-		[ "${ARCH}" == "${myarch}" ] && return 0
-	done
-	return 1
-}
-
-
 disable_multilib_libjava() {
 	# We dont want a multilib libjava, so lets use this hack taken from fedora
 	pushd ${S} > /dev/null
@@ -673,7 +859,6 @@ disable_multilib_libjava() {
 	sed -i -e 's/^check: check-recursive/ifeq (\$(MULTISUBDIR),)\ncheck: check-recursive\nelse\ncheck:\n\techo Multilib libjava check disabled\nendif/' libjava/Makefile.in
 	popd > /dev/null
 }
-
 
 # generic GCC src_unpack, to be called from the ebuild's src_unpack.
 # BIG NOTE regarding hardened support: ebuilds with support for hardened are
@@ -692,8 +877,8 @@ gcc-compiler-src_unpack() {
 	# the necessary support
 	[ -n "${PIE_VER}" ] && use hardened && glibc_have_pie
 
-	if ! use boundschecking ; then
-		if use hardened && hardened_gcc_works ; then
+	if ! want_boundschecking ; then
+		if use hardened ; then
 			einfo "updating configuration to build hardened GCC"
 			make_gcc_hard || die "failed to make gcc hard"
 		fi
@@ -714,7 +899,7 @@ gcc_src_unpack() {
 		epatch ${WORKDIR}/patch
 	fi
 
-	if ! use boundschecking ; then
+	if ! want_boundschecking ; then
 		if [ "${ARCH}" != "hppa" -a "${ARCH}" != "hppa64" -a -n "${PP_VER}" ] ; then
 			do_gcc_SSP_patches
 		fi
@@ -758,58 +943,6 @@ gcc_src_unpack() {
 	disable_multilib_libjava || die "failed to disable multilib java"
 }
 
-
-# This function checks whether or not glibc has the support required to build
-# Position Independant Executables with gcc.
-glibc_have_pie() {
-	if [ ! -f ${ROOT}/usr/$(get_libdir)/Scrt1.o ] ; then
-		echo
-		ewarn "Your glibc does not have support for pie, the file Scrt1.o is missing"
-		ewarn "Please update your glibc to a proper version or disable hardened"
-		echo
-		return 1
-	fi
-}
-
-
-# This function determines whether or not libc has been patched with stack
-# smashing protection support.
-libc_has_ssp() {
-	local libc_prefix
-	use ppc64 && libc_prefix="/lib64/"
-	libc_prefix="${libc_prefix:="/$(get_libdir)/"}"
-
-	use uclibc \
-		&& local libc_file="libc.so.0" \
-		|| local libc_file="libc.so.6"
-
-	local my_libc=${ROOT}/${libc_prefix}/${libc_file}
-
-	# Check for the libc to have the __guard symbols
-	if  [ "$(readelf -s "${my_libc}" 2>/dev/null | \
-	         grep GLOBAL | grep OBJECT | grep '__guard')" ] && \
-	    [ "$(readelf -s "${my_libc}" 2>/dev/null | \
-	         grep GLOBAL | grep FUNC | grep '__stack_smash_handler')" ]
-	then
-		return 0
-	else
-		return 1
-	fi
-}
-
-
-# This is to make sure we don't accidentally try to enable support for a
-# language that doesnt exist. GCC 3.4 supports f77, while 4.0 supports f95, etc.
-#
-# Travis Tilley <lv@gentoo.org> (26 Oct 2004)
-#
-gcc-lang-supported() {
-	grep ^language=\"${1}\" ${S}/gcc/*/config-lang.in > /dev/null && return 0
-	ewarn "The ${1} language is not supported by this release of gcc"
-	return 1
-}
-
-
 gcc-library-configure() {
 	# multilib support
 	if [ "${GCC_TARGET_NO_MULTILIB}" == "true" ]
@@ -819,7 +952,6 @@ gcc-library-configure() {
 		confgcc="${confgcc} --enable-multilib"
 	fi
 }
-
 
 gcc-compiler-configure() {
 	# multilib support
@@ -879,7 +1011,6 @@ gcc-compiler-configure() {
 	einfo "configuring for GCC_LANG: ${GCC_LANG}"
 }
 
-
 # Other than the variables described for gcc_setup_variables, the following
 # will alter tha behavior of gcc_do_configure:
 #
@@ -897,10 +1028,6 @@ gcc-compiler-configure() {
 #
 gcc_do_configure() {
 	local confgcc
-
-	# If we've forgotten to set the path variables, this will give us
-	# reasonable defaults.
-	gcc_setup_variables
 
 	if [ "${GCC_VAR_TYPE}" == "versioned" ] ; then
 		confgcc="--enable-version-specific-runtime-libs"
@@ -1010,7 +1137,6 @@ gcc_do_configure() {
 	popd > /dev/null
 }
 
-
 # This function accepts one optional argument, the make target to be used.
 # If ommitted, gcc_do_make will try to guess whether it should use all,
 # profiledbootstrap, or bootstrap-lean depending on CTARGET and arch. An
@@ -1086,7 +1212,6 @@ gcc_do_make() {
 	popd
 }
 
-
 # This function will add ${PV} to the names of all shared libraries in the
 # directory specified to avoid filename collisions between multiple slotted 
 # non-versioned gcc targets. If no directory is specified, it is assumed that
@@ -1117,7 +1242,6 @@ add_version_to_shared() {
 	done
 }
 
-
 # This is mostly a stub function to be overwritten in an ebuild
 gcc_do_filter_flags() {
 	strip-flags
@@ -1129,7 +1253,6 @@ gcc_do_filter_flags() {
 	# ...sure, why not?
 	strip-unsupported-flags
 }
-
 
 gcc_src_compile() {
 	gcc_do_filter_flags
@@ -1161,13 +1284,12 @@ gcc_src_compile() {
 
 	# Do not create multiple specs files for PIE+SSP if boundschecking is in
 	# USE, as we disable PIE+SSP when it is.
-	if [ "${ETYPE}" == "gcc-compiler" -a "${SPLIT_SPECS}" == "true" ]  && use !boundschecking ; then
+	if [ "${ETYPE}" == "gcc-compiler" -a "${SPLIT_SPECS}" == "true" ]  && ! want_boundschecking ; then
 		split_out_specs_files || die "failed to split out specs"
 	fi
 
 	popd > /dev/null
 }
-
 
 gcc-library-src_install() {
 	einfo "Installing ${PN} ..."
@@ -1208,70 +1330,4 @@ gcc-library-src_install() {
 	fi
 }
 
-create_gcc_env_entry() {
-	dodir /etc/env.d/gcc
-	local gcc_envd_base="/etc/env.d/gcc/${CTARGET}-${MY_PV_FULL}"
 
-	if [ "$1" == "" ] ; then
-		gcc_envd_file="${D}${gcc_envd_base}"
-		# I'm leaving the following commented out to remind me that it
-		# was an insanely -bad- idea. Stuff broke. GCC_SPECS isnt unset
-		# on chroot or in non-toolchain.eclass gcc ebuilds!
-		#gcc_specs_file="${LIBPATH}/specs"
-		gcc_specs_file=""
-	else
-		gcc_envd_file="${D}${gcc_envd_base}-$1"
-		gcc_specs_file="${LIBPATH}/$1.specs"
-	fi
-
-	echo "PATH=\"${BINPATH}\"" > ${gcc_envd_file}
-	echo "ROOTPATH=\"${BINPATH}\"" >> ${gcc_envd_file}
-
-	# Thanks to multilib, setting ldpath just got a little bit nuttier.
-	use amd64 && multilib_dirnames="32"
-	# we dont support this kind of amd64 multilib
-	#use x86 && multilib_dirnames="64"
-	# I'm unsure which of these is the default, so lets add both
-	use ppc64 && multilib_dirnames="64 32"
-	# same here.
-	use mips && multilib_dirnames="o32 32 64"
-
-	LDPATH="${LIBPATH}"
-
-	if [ -n "${multilib_dirnames}" ] ; then
-		for path in ${multilib_dirnames} ; do
-			LDPATH="${LDPATH}:${LIBPATH}/${path}"
-		done
-	fi
-
-	local mbits=
-	has_m32 && mbits="${mbits} 32"
-	has_m64 && mbits="${mbits} 64"
-	echo "GCCBITS=\"${mbits}\"" >> ${gcc_envd_file}
-
-	echo "LDPATH=\"${LDPATH}\"" >> ${gcc_envd_file}
-	echo "MANPATH=\"${DATAPATH}/man\"" >> ${gcc_envd_file}
-	echo "INFOPATH=\"${DATAPATH}/info\"" >> ${gcc_envd_file}
-	echo "STDCXX_INCDIR=\"${STDCXX_INCDIR##*/}\"" >> ${gcc_envd_file}
-	# Also set CC and CXX
-	echo "CC=\"gcc\"" >> ${gcc_envd_file}
-	echo "CXX=\"g++\"" >> ${gcc_envd_file}
-	# Set which specs file to use
-	[ -n "${gcc_specs_file}" ] && echo "GCC_SPECS=\"${gcc_specs_file}\"" >> ${gcc_envd_file}
-}
-
-toolchain_src_install() {
-	${ETYPE}-src_install
-}
-
-toolchain_src_compile() {
-	gcc_src_compile
-}
-
-toolchain_src_unpack() {
-	gcc_src_unpack
-}
-
-toolchain_pkg_setup() {
-	gcc_pkg_setup
-}
