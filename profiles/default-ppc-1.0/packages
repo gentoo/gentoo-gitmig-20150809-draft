@@ -33,6 +33,9 @@
 
 # PPC PROFILE
 
+# qt-3.0.5 not tested yet on ppc - danarmak Jul 20
+<x11-libs/qt-3.0.5
+
 # syslog-ng segfaults on usage
 # maksed for now, Gerk Jul 14/02
 ~app-admin/syslog-ng
