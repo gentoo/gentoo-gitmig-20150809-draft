@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r5.ebuild,v 1.8 2004/09/06 19:07:39 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r5.ebuild,v 1.9 2004/09/08 20:17:30 vapier Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -21,7 +21,7 @@ SRC_URI="http://www.kernel.org/pub/linux/libs/uclibc/${MY_P}.tar.bz2
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~arm"
+KEYWORDS="x86 ~ppc ~sparc ~mips arm"
 IUSE="build hardened ipv6 static debug" # nls is not supported yet
 RESTRICT="nostrip"
 
