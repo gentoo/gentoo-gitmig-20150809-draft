@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.0.2.ebuild,v 1.1 2002/02/01 01:09:41 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.0.2-r1.ebuild,v 1.1 2002/03/18 03:28:41 woodchip Exp $
 
 DESCRIPTION="Advanced Power Management Daemon"
 HOMEPAGE="http://www.worldvisions.ca/~apenwarr/apmd/"

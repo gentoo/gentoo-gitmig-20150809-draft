@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/apmd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/ChangeLog,v 1.1 2002/02/01 21:53:36 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/ChangeLog,v 1.2 2002/03/18 03:28:41 woodchip Exp $
+
+*apmd-3.0.2-r1 (17 March 2002)
+
+  17 March 2002; Donny Davies <woodchip@gentoo.org> apmd-3.0.2-r1.ebuild,
+  files/apmd.rc6 :
+
+  Fixed initscript booboo which prevented apmd from starting properly.  Ooops :)
+  Closes #1143, #1072.
 
 *apmd-3.0.2 (1 Feb 2002)
 
