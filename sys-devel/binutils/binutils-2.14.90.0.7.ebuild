@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.7.ebuild,v 1.4 2003/11/08 19:24:13 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.7.ebuild,v 1.5 2003/11/09 15:43:16 azarah Exp $
 
 IUSE="nls bootstrap build"
 
@@ -159,9 +159,11 @@ src_install() {
 	then
 		dosym ${CHOST} /usr/${CHOST/-/64-}
 
-		for x in `ls ${D}/usr/${CHOST/-/64-}/bin/`
+		for x in `ls ${D}/usr/${CHOST}/bin/`
 		do
-			dosym ../${CHOST/-/64-}/bin/${x} /usr/bin/${CHOST/-/64-}-${x}
+			[ ! -e "${D}/usr/bin/${CHOST}-${x}" ] && \
+				dosym ../${CHOST}/bin/${x} /usr/bin/${CHOST}-${x}
+			dosym ../${CHOST}/bin/${x} /usr/bin/${CHOST/-/64-}-${x}
 		done
 	fi
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.7-r1.ebuild,v 1.3 2003/11/09 15:43:16 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.7-r3.ebuild,v 1.1 2003/11/09 15:43:16 azarah Exp $
 
 IUSE="nls bootstrap build"
 
@@ -20,7 +20,7 @@ HOMEPAGE="http://sources.redhat.com/binutils/"
 
 SLOT="0"
 LICENSE="GPL-2 | LGPL-2"
-KEYWORDS="~ppc -hppa"
+KEYWORDS="~amd64 ~x86 ~ppc ~alpha ~sparc ~mips ~hppa ~arm ~ia64"
 
 DEPEND="virtual/glibc
 	nls? ( sys-devel/gettext )
@@ -52,6 +52,24 @@ src_unpack() {
 	# Some IA64 patches
 	epatch ${FILESDIR}/2.14/${PN}-2.14.90.0.6-ia64-speedup.patch
 
+	# This fixes a problem with the wrong upcode being used for ppc's
+	# long branch stubs:
+	#
+	#   http://sources.redhat.com/ml/binutils/2003-11/msg00077.html
+	#   http://sources.redhat.com/ml/binutils/2003-11/msg00082.html
+	#
+	# and also fixes dynamic reloc for ppc and a number of other
+	# archs.
+	#
+	#  http://sources.redhat.com/ml/binutils/2003-11/msg00069.html
+	#
+	[ -z "`use sparc`" ] && \
+		epatch ${FILESDIR}/2.14/${PN}-2.14.90.0.7-ppc-reloc.patch
+
+	# Teach ld how to ensure that the TLS segment p_vaddr is aligned
+	# for a number of archs.
+	epatch ${FILESDIR}/2.14/${PN}-2.14.90.0.7-tls-section-alignment.patch
+
 	if [ "${ARCH}" = "amd64" ]
 	then
 		epatch ${FILESDIR}/${PN}-2.14.amd64-32bit-path-fix.patch
@@ -59,9 +77,6 @@ src_unpack() {
 
 	use x86 &> /dev/null \
 		&& epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.20-array-sects-compat.patch
-
-	use ppc &> /dev/null \
-		&& epatch ${FILESDIR}/2.14/${PN}-2.14.90.0.7-ppc-reloc.patch
 
 
 	# Libtool is broken (Redhat).
