@@ -926,3 +926,7 @@ net-mail/spamassassin
 # stroke@gentoo.org 08 Jul 2002
 # media-libs/libpng-1.2.4 latest version, masked for testing
 =media-libs/libpng-1.2.4
+
+# aliz@gentoo.org 09 Jul 2002
+# sys-apps/util-linux/util-linux-2.11r-r1 masked for testing
+=sys-apps/util-linux-2.11r-r1
