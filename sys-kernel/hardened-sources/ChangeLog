@@ -1,8 +1,12 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.5 2003/04/12 23:39:26 frogger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.6 2003/04/13 02:57:26 frogger Exp $
 
 *hardened-sources-2.4.20-r1 (09 Apr 2003)
+
+  12 Apr 2003; Matthew Rickard <frogger@gentoo.org>
+  hardened-sources-2.4.20-r1.ebuild, manifest:
+  Updated to install flask components correctly for selinux
 
   12 Apr 2003; Matthew Rickard <frogger@gentoo.org>
   hardened-sources-2.4.20-r1.ebuild:

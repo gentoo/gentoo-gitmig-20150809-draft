@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 
-IUSE="build"
+IUSE="build selinux"
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -46,8 +46,22 @@ src_unpack() {
 	kernel_src_unpack
 }
 
+src_install() {
+	if [ "`use selinux`" ]; then
+		insinto /usr/flask
+		doins ${S}/security/selinux/flask/access_vectors
+		doins ${S}/security/selinux/flask/security_classes
+		doins ${S}/security/selinux/flask/initial_sids
+		insinto /usr/include/linux/flask
+		doins ${S}/security/selinux/include/linux/flask/*.h
+		insinto /usr/include/asm/flask
+		doins ${S}/security/selinux/include/asm/flask/uninstd.h
+	fi
+}
+
 pkg_postinst() {
 	kernel_pkg_postinst
+	
 	einfo "This kernel contains LSM/SElinux or GRSecurity, and Systrace"
 	einfo "This is not yet a production ready kernel.  If you experience problems with"
 	einfo "this kernel please report them by assigning bugs on bugs.gentoo.org to"
