@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmatroska
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.13 2004/02/23 17:20:46 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.14 2004/02/26 20:14:38 gmsoft Exp $
+
+  26 Feb 2004; Guy Martin <gmsoft@gentoo.org> libmatroska-0.6.3.ebuild:
+  Keyworded ~hppa.
 
   23 Feb 2004; Martin Holzer <mholzer@gentoo.org> libmatroska-0.6.2.ebuild:
   x86 stable.
