@@ -1,8 +1,11 @@
 # ChangeLog for app-admin/modconf
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/modconf/ChangeLog,v 1.1 2003/03/09 20:43:50 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modconf/ChangeLog,v 1.2 2003/03/28 09:48:48 pvdabeel Exp $
 
 *modconf-0.2.43 (09 Mar 2003)
+
+  28 Mar 2003; Pieter Van den Abeele <pvdabeel@gentoo.org> modconf-0.2.43.ebuild :
+  Works on ppc: moving from unknown to unstable ppc
 
   09 Mar 2003; Martin Schlemmer <azarah@gentoo.org> modconf-0.2.43.ebuild,
                                                     modconf-0.2.43-gentoo.patch :
