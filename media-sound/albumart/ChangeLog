@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/albumart
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/albumart/ChangeLog,v 1.1 2004/07/14 23:13:40 squinky86 Exp $
+
+*albumart-1.3.1 (14 Jul 2004)
+
+  14 Jul 2004; Jon Hood <squinky86@gentoo.org> +metadata.xml,
+  +albumart-1.3.1.ebuild:
+  Initial import. Thanks to Joonas Kerttula <jokerttu@mail.student.oulu.fi> in
+  #51373 for this ebuild.
+
