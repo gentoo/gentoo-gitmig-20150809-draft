@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/libcdio
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.24 2005/02/07 08:47:07 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/ChangeLog,v 1.25 2005/04/01 00:30:05 luckyduck Exp $
+
+  01 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> libcdio-0.69.ebuild,
+  libcdio-0.70.ebuild:
+  pkgconfig not any longer in RDEPEND, fixes #87400
 
   07 Feb 2005; Markus Rothe <corsair@gentoo.org> libcdio-0.70.ebuild:
   Stable on ppc64
