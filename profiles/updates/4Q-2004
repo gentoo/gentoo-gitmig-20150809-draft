@@ -205,3 +205,4 @@ move app-sci/otter sci-mathematics/otter
 move app-sci/pari sci-mathematics/pari
 move app-sci/scilab sci-mathematics/scilab
 move app-sci/singular sci-mathematics/singular
+move app-sci/yacas sci-mathematics/yacas
