@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/guilib/guilib-1.1.0-r1.ebuild,v 1.2 2004/02/20 10:27:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/guilib/guilib-1.1.0-r1.ebuild,v 1.3 2004/04/26 02:51:15 agriffis Exp $
 
 MY_P="GUIlib-${PV}"
 DESCRIPTION="a simple widget set for SDL"
@@ -18,7 +18,7 @@ S="${WORKDIR}/${MY_P}"
 src_compile() {
 	patch < ${FILESDIR}/${P}.makefile.patch
 
-	econf --with-gnu-ld
+	econf --with-gnu-ld || die "econf failed"
 	emake || die
 }
 
