@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/anthy
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.20 2004/06/24 21:43:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/ChangeLog,v 1.21 2004/07/04 09:25:40 hattya Exp $
+
+*anthy-5500 (04 Jul 2004)
+
+  04 Jul 2004; Akinori Hattori <hattya@gentoo.org> +anthy-5500.ebuild:
+  new upstream release.
 
   23 Jun 2004; <matsuu@gentoo.org> anthy-5100b.ebuild:
   Marked amd64 as stable.
