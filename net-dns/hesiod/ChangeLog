@@ -1,8 +1,11 @@
 # ChangeLog for net-dns/hesiod
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/ChangeLog,v 1.1 2002/06/29 00:55:03 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/hesiod/ChangeLog,v 1.2 2002/09/21 21:13:59 owen Exp $
 
 *hesiod-3.0.2 (8 Jun 2002)
+
+  21 Sep 2002; Owen Stampflee <owen@gentoo.org> :
+  Added PPC to KEYWORDS.
 
   8 Jun 2002; Grant Goodyear <g2boojum@gentoo.org> : 
 
