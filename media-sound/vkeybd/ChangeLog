@@ -1,8 +1,8 @@
 # ChangeLog for media-sound/vkeybd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/ChangeLog,v 1.1 2002/12/21 05:17:05 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vkeybd/ChangeLog,v 1.2 2002/12/21 05:17:31 agenkin Exp $
 
 *vkeybd-0.1.12 (20 Dec 2002)
 
   20 Dec 2002; Arcady Genkin <agenkin@gentoo.org> :
-  Initial version by Rene Wagner <reenoo@gmx.de>.  Closes #12198.
+  Initial version by Rene Wagner <reenoo@gmx.de>.  Closes #12217.
