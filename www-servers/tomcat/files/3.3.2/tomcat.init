@@ -1,11 +1,10 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/files/3.3.2/tomcat.init,v 1.1 2004/08/08 18:39:49 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/files/3.3.2/tomcat.init,v 1.2 2004/10/08 13:38:08 axxo Exp $
 
 depend() {
-	need net
-	use dns
+	use dns net
 }
 
 start()	{

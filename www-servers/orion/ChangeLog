@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/orion
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/orion/ChangeLog,v 1.3 2004/10/02 15:40:59 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/orion/ChangeLog,v 1.4 2004/10/08 13:38:48 axxo Exp $
+
+  08 Oct 2004; Thomas Matthijs <axxo@gentoo.org> files/2.0/orion.init,
+  files/2.0.1/orion.init, files/2.0.2/orion.init:
+  use net instead of need net in init.d script
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.
