@@ -1,0 +1,10 @@
+# ChangeLog for net-analyzer/snmptt
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snmptt/ChangeLog,v 1.1 2004/07/09 13:34:03 eldad Exp $
+
+*snmptt-0.9 (09 Jul 2004)
+
+  09 Jul 2004; Eldad Zack <eldad@gentoo.org> +metadata.xml,
+  +snmptt-0.9.ebuild:
+  Initial ebuild. Thanks to Karl Dag Gursli <karl-d@gursli.com>. Closes #50968
+
