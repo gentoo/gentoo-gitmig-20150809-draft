@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.96.0.ebuild,v 1.1 2003/04/10 12:14:27 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.96.0.ebuild,v 1.2 2003/04/10 12:17:12 foser Exp $
 
 inherit gnome2
 
@@ -20,7 +20,7 @@ RDEPEND=">=dev-libs/glib-2.1
 	>=media-libs/xine-lib-1_beta9"
 
 DEPEND="${RDEPEND}
-	>=dev-util/intltool-0.17
+	>=dev-util/intltool-0.20
 	>=dev-util/pkgconfig-0.12.0"
 
 DOCS="AUTHORS ChangeLog COPYING*  README* INSTALL NEWS"
