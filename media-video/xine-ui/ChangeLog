@@ -1,6 +1,12 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.66 2004/10/23 03:50:01 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.67 2004/12/27 04:51:21 chriswhite Exp $
+
+*xine-ui-0.99.3 (27 Dec 2004)
+
+  27 Dec 2004; Chris White <chriswhite@gentoo.org> +xine-ui-0.99.3.ebuild:
+  Bump to version 0.99.3. This closes bug #75359. Thanks to James Stockton for
+  the ebuild submission.
 
 *xine-ui-0.99.3_pre20041022 (23 Oct 2004)
 
