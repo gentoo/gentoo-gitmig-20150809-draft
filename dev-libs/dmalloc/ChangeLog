@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/dmalloc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/ChangeLog,v 1.8 2003/11/20 13:37:14 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/ChangeLog,v 1.9 2003/11/27 15:11:49 aliz Exp $
+
+  27 Nov 2003; Daniel Ahlberg <aliz@gentoo.org> dmalloc-5.2.4.ebuild:
+  Fix -fPIC issues. Patch from rawhide. Closing #34470.
 
 *dmalloc-5.2.4 (20 Nov 2003)
 
