@@ -1,6 +1,14 @@
 # ChangeLog for net-irc/unrealircd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.14 2004/06/24 23:09:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/ChangeLog,v 1.15 2004/07/24 00:17:37 swegener Exp $
+
+*unrealircd-3.2.1 (24 Jul 2004)
+
+  24 Jul 2004; Sven Wegener <swegener@gentoo.org> -files/mkunrealircd-cert,
+  files/unrealircd.confd, files/unrealircd.rc, +unrealircd-3.2.1.ebuild,
+  -unrealircd-3.2_rc2.ebuild:
+  Version bump. Closes bug #48965 and bug #41919. Switched from
+  mkunrealircd-cert to ssl-cert.eclass.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> unrealircd-3.1.5.1.ebuild,
   unrealircd-3.1.6.ebuild, unrealircd-3.2_rc2.ebuild:

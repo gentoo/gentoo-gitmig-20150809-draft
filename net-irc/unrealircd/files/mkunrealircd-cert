@@ -1,4 +1,0 @@
-#!/bin/bash
-
-openssl req -new -config /etc/unrealircd/ssl.cnf -out /etc/unrealircd/server.req.pem -keyout /etc/unrealircd/server.key.pem -nodes
-openssl req -x509 -config /etc/unrealircd/ssl.cnf -days 365 -in /etc/unrealircd/server.req.pem -key /etc/unrealircd/server.key.pem -out /etc/unrealircd/server.cert.pem
