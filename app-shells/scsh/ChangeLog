@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/scsh
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-shells/scsh/ChangeLog,v 1.1 2002/02/24 22:31:38 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/scsh/ChangeLog,v 1.2 2002/03/06 17:54:10 karltk Exp $
+
+*scsh-0.6.1-r1 ( 6 Mar 2002 )
+
+  6 Mar 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ChangeLog scsh-0.6.1-r1 files/digest-scsh-0.6.1-r1:
+
+  Fixed a bug where scsh.1 was installed in /usr/share/man instead of 
+  /usr/share/man/man1.
 
 *scsh-0.6.0 ( 25 Feb 2002 )
 
