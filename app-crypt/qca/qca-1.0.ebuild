@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-1.0.ebuild,v 1.3 2004/12/30 04:16:43 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/qca-1.0.ebuild,v 1.4 2004/12/30 13:20:07 eradicator Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://delta.affinix.com/qca//qca-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~ia64 ~hppa"
+KEYWORDS="~amd64 ~x86 ~sparc ~ppc ~ia64 ~hppa"
 IUSE=""
 
 DEPEND=">=x11-libs/qt-3.3.0-r1
