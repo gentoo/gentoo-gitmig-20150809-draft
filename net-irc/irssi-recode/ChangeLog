@@ -1,0 +1,10 @@
+# ChangeLog for net-irc/irssi-recode
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-recode/ChangeLog,v 1.1 2003/11/19 23:49:28 gregf Exp $
+
+*irssi-recode-1.36 (19 Nov 2003)
+
+  19 Nov 2003; Greg Fitzgerald <gregf@gentoo.org> irssi-recode-1.36.ebuild:
+  Initial Version. Closes bug #32904 submitted by Niklas Bertell
+  <niklas.bertell@abo.fi>
+
