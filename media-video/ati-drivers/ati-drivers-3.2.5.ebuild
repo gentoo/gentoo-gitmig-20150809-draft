@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.2.5.ebuild,v 1.6 2003/09/14 18:34:07 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.2.5.ebuild,v 1.7 2003/09/22 11:52:59 lu_zero Exp $
 
 IUSE="qt kde gnome"
 
@@ -164,7 +164,7 @@ pkg_postinst() {
 	#fi
 
 	einfo "To switch to ATI OpenGL, run \"opengl-update ati\""
-	einfo "To chance your XF86Config you can use the bundled \"fglrxconfig\""
+	einfo "To change your XF86Config you can use the bundled \"fglrxconfig\""
 #drm-module
 	update-modules
 
