@@ -1,8 +1,11 @@
 # ChangeLog for media-sound/takcd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/takcd/ChangeLog,v 1.1 2003/02/08 01:36:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/takcd/ChangeLog,v 1.2 2003/04/13 06:35:59 vladimir Exp $
 
 *takcd-0.08 (07 Feb 2003)
+
+  12 Apr 2003; Graham Forest <vladimir@gentoo.org> takcd-0.08.ebuild:
+  set ~ppc in keywords
 
   07 Feb 2003; Seemant Kulleen <seemant@gentoo.org> takcd-0.08.ebuild
   ChangeLog files/digest-takcd-0.08 :
