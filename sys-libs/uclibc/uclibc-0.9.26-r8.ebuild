@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.26-r8.ebuild,v 1.3 2005/01/14 04:24:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.26-r8.ebuild,v 1.4 2005/01/14 06:43:26 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -265,7 +265,13 @@ src_install() {
 	# scsi is uclibc's own directory since cvs 20040212
 	rm -r "${D}"$(alt_prefix)/include/{asm,linux,asm-generic}
 
-	[[ ${CTARGET} != ${CHOST} ]] && return 0
+	if [[ ${CTARGET} != ${CHOST} ]] ; then
+		# Need this symlink in order for gcc to find the system
+		# headers properly when creating final stage compiler.
+		# See the '--with-headers' option in the gcc manual.
+		dosym include $(alt_prefix)/sys-include
+		return 0
+	fi
 
 	if [[ ${CHOST} == *-uclibc ]] ; then
 		emake PREFIX="${D}" install_utils || die "install-utils failed"
