@@ -1,0 +1,19 @@
+diff -ur shfs-0.31-1/Makefile shfs-0.31-1.orig/Makefile
+--- shfs-0.31-1.orig/Makefile	2003-06-01 16:31:17.000000000 -0500
++++ shfs-0.31-1/Makefile	2003-06-01 18:03:09.000000000 -0500
+@@ -1,5 +1,5 @@
+ # for making packages
+-ROOT=/
++ROOT=${D}
+ # where to install modules
+ MODULESDIR=${ROOT}/lib/modules/$(shell uname -r)
+ # kernel source tree
+@@ -7,7 +7,7 @@
+ # use modversions?
+ MODVERSIONS=yes
+ # leave empty if you don't need amd support
+-AMD_CONF_DIR=/etc/am-utils/
++# AMD_CONF_DIR=/etc/am-utils/
+ # leave empty if you don't need man pages installed
+ MAN_PAGE_DIR=
+ # leave empty if you don't need html manual

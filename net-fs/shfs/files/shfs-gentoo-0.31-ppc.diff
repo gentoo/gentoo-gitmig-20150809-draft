@@ -1,0 +1,19 @@
+*** /var/tmp/portage/shfs-0.31/work/shfs-0.31-1.orig/shfs/Makefile	Sun Jun  1 23:47:27 2003
+--- /var/tmp/portage/shfs-0.31/work/shfs-0.31-1/shfs/Makefile	Sun Jun  1 23:47:58 2003
+*************** SEARCHDIRS := -I- -I. -I${KERNEL_SOURCES
+*** 17,23 ****
+  CC     := gcc
+  CFLAGS  = -O2 -fomit-frame-pointer -fno-strict-aliasing -pipe -Wall ${SEARCHDIRS} -DMODULE ${MVER} -D__KERNEL__ -DLINUX -DDEBUG_LEVEL=${DEBUG}
+  LINKER    := ld
+! LDFLAGS    = -m elf_i386 -r
+  LOADLIBES := 
+  
+  all: ${ALL_TARGETS}
+--- 17,23 ----
+  CC     := gcc
+  CFLAGS  = -O2 -fomit-frame-pointer -fno-strict-aliasing -pipe -Wall ${SEARCHDIRS} -DMODULE ${MVER} -D__KERNEL__ -DLINUX -DDEBUG_LEVEL=${DEBUG}
+  LINKER    := ld
+! LDFLAGS    = -m elf32ppclinux -r
+  LOADLIBES := 
+  
+  all: ${ALL_TARGETS}

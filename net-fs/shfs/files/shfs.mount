@@ -1,0 +1,61 @@
+#!/bin/sh
+#
+# This amd automounter script is called when remote host should be
+# (un)mounted under /shfs directory. Feel free to modify this script 
+# to satisfy your needs (e.g add special options to shfsmount, 
+# restrict mount to some users, etc.).
+#
+# mount user-id key dir
+# umount dir
+
+umask 022
+
+case `basename $0` in
+    "mount")
+	ID="$1"; KEY="$2"; DIR="$3"
+	if [ -z "$ID" -o -z "$KEY" -o -z "$DIR" ]; then
+		echo "Invalid usage."
+		exit 2
+	fi
+
+	RUSER=`echo "$KEY" | cut -d"%" -f1`
+	RHOST=`echo "$KEY" | cut -d"%" -f2-`
+
+	SSH_AGENT_PID=`ps -C ssh-agent -opid=,uid= | sed -n "s/^[ \t]\{1,\}\([0-9]\{1,\}\)\{1,\}[ \t]\{1,\}$ID\$/\1/p" | tail -1`
+	SSH_AUTH_SOCK=`find /tmp -follow -maxdepth 4 -type s -user "$ID" | grep ssh | grep agent | tail -1`
+
+	if [ ! -z "$SSH_AGENT_PID" -a ! -z "$SSH_AUTH_SOCK" ]; then
+		export SSH_AGENT_PID SSH_AUTH_SOCK
+	fi
+
+	IDG=`grep "^[^:]*:[^:]*:$ID:.*$" /etc/passwd | cut -d":" -f4`
+
+	mkdir -p $DIR
+	shfsmount -u "$ID" -O "-o BatchMode=yes" "$RUSER@$RHOST" "$DIR" -o uid="$ID",gid="$IDG" >/dev/null 2>&1
+
+	if [ $? -ne 0 ]; then
+		rmdir $DIR
+		exit 2
+	else
+		exit 0
+	fi
+	;;
+	
+     umount)
+	DIR="$1"
+	if [ -z "$DIR" ]; then
+		echo "Invalid usage."
+		exit 2
+	fi
+
+	if umount "$DIR" >/dev/null 2>&1; then
+		rmdir "$DIR" >/dev/null 2>&1
+		exit 0;
+	fi
+	exit 2
+    ;;
+
+    *)
+	echo "Invalid usage."
+	exit 2
+esac

@@ -1,0 +1,1 @@
+*       type:=program;fs:=${autodir}/${rhost}${rfs};mount:="/etc/amd/shfs.mount mount ${uid} ${key} ${fs}";unmount:="/etc/amd/shfs.umount umount ${fs}"
