@@ -1,0 +1,16 @@
+diff -NurB gok-0.8.3-orig/gok/gok-scanner.c gok-0.8.3/gok/gok-scanner.c
+--- gok-0.8.3-orig/gok/gok-scanner.c	2003-10-10 02:12:30.000000000 -0500
++++ gok-0.8.3/gok/gok-scanner.c	2003-10-10 02:12:53.000000000 -0500
+@@ -220,10 +220,10 @@
+ 	xmlNode *retval = NULL;
+ 	int      target_lang_len = strlen ((char *)target_lang);
+ 	gboolean lang_is_matched = FALSE;	
+-
+-	gok_log_enter();
+ 	gboolean is_lang_match = FALSE;
+ 	gboolean is_perfect_match = FALSE;
++
++	gok_log_enter();
+ 	/* loop through the document looking for the name string */
+ 	while (pNode != NULL)
+ 	{
