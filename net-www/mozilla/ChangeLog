@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.120 2003/09/25 08:03:09 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.121 2003/10/03 03:48:04 brad_mssw Exp $
+
+  02 Oct 2003; Brad House <brad_mssw@gentoo.org> mozilla-1.4-r4.ebuild,
+  files/mozilla-1.4-amd64.patch:
+  amd64 build fixes based on mandrakes patch set
 
   25 Sep 2003; Tavis Ormandy <taviso@gentoo.org> mozilla-1.4-r4.ebuild:
   add -L/usr/X11R6/lib on alpha.

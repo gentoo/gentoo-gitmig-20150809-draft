@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.4-r4.ebuild,v 1.2 2003/09/25 08:03:09 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.4-r4.ebuild,v 1.3 2003/10/03 03:48:04 brad_mssw Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug"
 # Internal USE flags that I do not really want to advertise ...
@@ -49,8 +49,16 @@ fi
 
 # We set -O in ./configure to -O1, as -O2 cause crashes on startup ...
 # (bug #13287)
-export CFLAGS="${CFLAGS//-O?}"
-export CXXFLAGS="${CFLAGS//-O?}"
+
+if [ "${ARCH}" = "amd64" ]
+then
+	# Anything more than this causes segfaults on startup on amd64
+	export CFLAGS="-Wall -O -fPIC -pipe"
+	export CXXFLAGS=${CFLAGS}
+else
+	export CFLAGS="${CFLAGS//-O?}"
+	export CXXFLAGS="${CFLAGS//-O?}"
+fi
 
 EMVER="0.76.7"
 IPCVER="1.0.3"
@@ -68,7 +76,7 @@ SRC_URI="ftp://ftp.mozilla.org/pub/mozilla/releases/${PN}${MY_PV2}/src/${PN}-sou
 #	mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2"
 HOMEPAGE="http://www.mozilla.org"
 
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 
@@ -138,6 +146,10 @@ src_unpack() {
 		if [ "${ARCH}" = "alpha" ]
 		then
 			cd ${S}; epatch ${FILESDIR}/${PN}-alpha-xpcom-subs-fix.patch
+		fi
+		if [ "${ARCH}" = "amd64" ]
+		then
+			cd ${S}; epatch ${FILESDIR}/${PN}-1.4-amd64.patch
 		fi
 	fi
 
@@ -339,6 +351,15 @@ src_compile() {
 	# Get it to work without warnings on gcc3
 	export CXXFLAGS="${CXXFLAGS} -Wno-deprecated"
 
+	# On amd64 we statically set 'safe' CFLAGS. Use those only.
+	# using the standard -O2 will cause segfaults on startup for amd64
+	if [ "${ARCH}" = "amd64" ]
+	then
+		ENABLE_OPTIMIZE="${CFLAGS}"
+	else
+		ENABLE_OPTIMIZE="-O2"
+	fi
+
 	cd ${S}
 	einfo "Configuring Mozilla..."
 	./configure --prefix=/usr/lib/mozilla \
@@ -352,7 +373,7 @@ src_compile() {
 		--enable-xsl \
 		--enable-crypto \
 		--enable-extensions="${myext}" \
-		--enable-optimize="-O2" \
+		--enable-optimize="${ENABLE_OPTIMIZE}" \
 		--with-default-mozilla-five-home=/usr/lib/mozilla \
 		${myconf} || die
 
