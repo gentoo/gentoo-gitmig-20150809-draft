@@ -1,4 +1,1 @@
-#%PAM-1.0
-
-auth       required	/lib/security/pam_stack.so service=system-auth
-
+auth       required   pam_pwdb.so shadow nullok

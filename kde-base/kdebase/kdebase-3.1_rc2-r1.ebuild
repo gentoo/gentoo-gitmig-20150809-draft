@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.1_rc2.ebuild,v 1.1 2002/11/05 00:03:57 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.1_rc2-r1.ebuild,v 1.1 2002/11/09 22:36:00 danarmak Exp $
 inherit kde-dist 
 
 IUSE="ldap pam motif encode oggvorbis cups ssl opengl samba"
@@ -52,7 +52,7 @@ src_install() {
 
     # startkde script
     cd ${D}/${KDEDIR}/bin
-    patch -p0 < ${FILESDIR}/startkde-${PVR}-gentoo.diff || die
+    patch -p0 < ${FILESDIR}/${PVR}/startkde-gentoo.diff || die
     mv startkde startkde.orig
     sed -e "s:_KDEDIR_:${KDEDIR}:" startkde.orig > startkde
     rm startkde.orig
@@ -67,10 +67,10 @@ ${KDEDIR}/bin/startkde" > kde-${PV}
     doexe kde-${PV}
 
     cd ${D}/${KDEDIR}/share/config/kdm || die
-    mv kdmrc kdmrc.orig
     sed -e "s:SessionTypes=:SessionTypes=kde-${PV},:" \
-	-e "s:Session=${PREFIX}/share/config/kdm/Xsession:Session=/etc/X11/xdm/Xsession:"  kdmrc.orig > kdmrc
-    rm kdmrc.orig
+	-e "s:Session=${PREFIX}/share/config/kdm/Xsession:Session=/etc/X11/xdm/Xsession:" \
+	${FILESDIR}/${PVR}/kdmrc > kdmrc
+    cp ${FILESDIR}/${PVR}/backgroundrc .
 
     #backup splashscreen images, so they can be put back when unmerging 
     #mosfet or so.

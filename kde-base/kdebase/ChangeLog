@@ -1,6 +1,14 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.32 2002/11/05 00:03:57 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.33 2002/11/09 22:36:00 danarmak Exp $
+
+*kdebase-3.1_rc2-r1 (10 Nov 2002)
+
+  10 Nov 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  This new revision has a static kdmrc file that enables several faetures
+  not pesent in the default one we had before. Among them are antialiasing
+  being turned on by default and making kdm use the scripts in /etc/X11/xdm.
 
 *kdebase-3.1_rc2 (04 Nov 2002)
 
