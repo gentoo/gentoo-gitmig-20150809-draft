@@ -1,11 +1,11 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mhxd/mhxd-0.4.10.ebuild,v 1.2 2004/08/02 18:27:52 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mhxd/mhxd-0.4.10.ebuild,v 1.3 2005/01/30 23:02:39 kang Exp $
 
 inherit eutils
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ppc sparc"
 
 DESCRIPTION="This is a Hotline 1.5+ compatible *nix Hotline Server. It supports IRC compatibility. See http://www.hotspringsinc.com/"
 SRC_URI="http://projects.acidbeats.de/${P}.tar.bz2"
