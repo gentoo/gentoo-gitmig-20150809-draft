@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/rexima
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rexima/ChangeLog,v 1.1 2003/07/19 04:06:16 jje Exp $
+
+*rexima-1.4 (19 Jul 2003)
+
+  19 Jul 2003; jje <jje@gentoo.org> rexima-1.4.ebuild:
+  Initial revision.
+  
+  Submitted by: John Oxley <oxo-gentoo@rucus.ru.ac.za>
+
