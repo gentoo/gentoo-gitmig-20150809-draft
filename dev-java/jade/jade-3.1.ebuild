@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jade/jade-3.1.ebuild,v 1.5 2004/06/27 17:41:08 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jade/jade-3.1.ebuild,v 1.6 2004/10/16 08:46:45 absinthe Exp $
 
 inherit java-pkg
 
@@ -13,7 +13,7 @@ DEPEND=">=virtual/jdk-1.3
 RDEPEND=">=virtual/jdk-1.3"
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc ppc ~amd64"
+KEYWORDS="x86 ~sparc ppc amd64"
 
 S=${WORKDIR}/${PN}
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ant-tasks
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.10 2004/09/28 15:04:11 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-tasks/ChangeLog,v 1.11 2004/10/16 08:40:45 absinthe Exp $
+
+  16 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
+  ant-tasks-1.6.2-r5.ebuild:
+  Stable on amd64.
 
   28 Sep 2004; Thomas Matthijs <axxo@gentoo.org> ant-tasks-1.6.2-r5.ebuild:
   depend on ant-core not ant
