@@ -1,6 +1,9 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.27 2004/12/11 15:36:27 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.28 2004/12/28 19:55:25 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   11 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> clamav-0.80.ebuild:
   ~alpha keyword.
@@ -112,7 +115,7 @@
   04 May 2004; Luca Barbato <lu_zero@gentoo.org> clamav-0.70.ebuild:
   Marked ppc
 
-  30 Apr 2004; Bryan �stergaard <kloeri@gentoo.org> clamav-0.70.ebuild:
+  30 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> clamav-0.70.ebuild:
   Stable on alpha.
 
   29 Apr 2004; Jason Wever <weeve@gentoo.org> clamav-0.70.ebuild:
