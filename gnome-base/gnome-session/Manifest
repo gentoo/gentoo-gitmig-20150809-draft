@@ -1,30 +1,20 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 226dd61252caf3ed17ed88759301a532 ChangeLog 11697
-MD5 83f24762bbd25b6828aa7ca32cc4e800 gnome-session-2.4.2.ebuild 1312
+MD5 e4982d9876770455de51c227911b039c gnome-session-2.8.1.ebuild 1515
 MD5 99a7fb3933117e9549c9c7dd90c0ceb1 gnome-session-2.6.2.ebuild 1363
 MD5 a296d97782aadce09cdecb58dc7bcbb2 gnome-session-2.8.0.ebuild 1539
-MD5 b9f2668d0c3a7cc4f9d8433c9dc5baf5 gnome-session-2.8.1.ebuild 1516
+MD5 83f24762bbd25b6828aa7ca32cc4e800 gnome-session-2.4.2.ebuild 1312
+MD5 9523f2e7bcc615cb830ea1f3ac7587cd ChangeLog 11800
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 aff175f5a75a41baf94508844f8a07eb gnome-session-2.10.0.ebuild 1529
 MD5 b10dbd1b6388f5fdf9feee0e56525ea5 files/Gnome 2464
+MD5 f02a80d3f1435547a479312c15cc1030 files/gnome-splash.png 78064
+MD5 b6e2c49cdafa0d5d8fe9ab4e28f5fc3d files/gnome-session-2.8.1-hide_splash.patch 1469
 MD5 c7dd76860a26aa54145fafa215e0aa42 files/digest-gnome-session-2.4.2 72
 MD5 d71ad6bbed92ba29fddd9c12be898740 files/digest-gnome-session-2.6.2 72
 MD5 70b59c75e8a1ccc5b3d88f594082a4c3 files/digest-gnome-session-2.8.0 72
 MD5 3a73b51368c53cc714ffc2e7ba6b3d05 files/digest-gnome-session-2.8.1 72
-MD5 f02a80d3f1435547a479312c15cc1030 files/gentoo-splash.png 78064
 MD5 9ef946bc879dec308dc85b43f1e6b29f files/gnome-session-2-hide_splash.patch 1584
-MD5 73b0d3a312160d827670731c38f3f2ce files/gnome-session-2.0.9-64bit.patch 889
-MD5 9b6a487176c392343b5ce7eab34297af files/gnome-session-2.4-defaults.patch 1004
 MD5 9c41a7c69837eba927f8d546d3c13b8d files/gnome-session-2.6-schema_defaults.patch 1484
-MD5 b6e2c49cdafa0d5d8fe9ab4e28f5fc3d files/gnome-session-2.8.1-hide_splash.patch 1469
-MD5 f02a80d3f1435547a479312c15cc1030 files/gnome-splash.png 78064
+MD5 f02a80d3f1435547a479312c15cc1030 files/gentoo-splash.png 78064
+MD5 9b6a487176c392343b5ce7eab34297af files/gnome-session-2.4-defaults.patch 1004
+MD5 73b0d3a312160d827670731c38f3f2ce files/gnome-session-2.0.9-64bit.patch 889
 MD5 cb41214e255018ea0c78074aeafd0177 files/digest-gnome-session-2.10.0 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCLo6iXjcVihsel0ERAtpkAKC6ICXVXhEijcF/MmxkHRrcMkTTdwCffIgz
-0uyK2w+XVMX1BAGA4HMQ8XA=
-=fWCa
------END PGP SIGNATURE-----

@@ -1,12 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 fb52119aa3b98ef00a889d825007a47d eel-2.6.2.ebuild 819
 MD5 623cbf8e99056a785e8c1f4ef6597923 eel-2.8.0.ebuild 868
-MD5 3ba99af2e82606b2ec72b71b880ff6aa eel-2.8.2.ebuild 948
+MD5 940f3b645c8c9f19800a29a4bef29650 eel-2.8.2.ebuild 944
 MD5 3a3d6f15ca39ac8335433820d89b0934 eel-1.0.2-r3.ebuild 1053
 MD5 2df4a5ef6a84eaddc68d6528ea5eae65 eel-2.10.0.ebuild 900
-MD5 7a5b1d795d772b43653d431c4a180c72 ChangeLog 10086
+MD5 4c87e8282e9e392fce261a32098b296d ChangeLog 10172
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 4db4dce6c2cb4828230a59ca6f8591da files/digest-eel-2.6.2 62
 MD5 5b6a818e2977e84150d8da4535200dac files/digest-eel-2.8.0 62
@@ -14,10 +11,3 @@ MD5 264fd59008cfedede385a11935e73c63 files/digest-eel-2.8.2 62
 MD5 c884c4a35910537301a9beec39b4d3ce files/digest-eel-1.0.2-r3 61
 MD5 89f62dff205403c2cdd39f793f3833d4 files/digest-eel-2.10.0 63
 MD5 6c2c05d297ba2e0923fa995020e278f2 files/eel-2.8.2-amd64.patch 788
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCTcNO06ebR+OMO78RAtSEAJ9P3/tr8GH4jVeenICPb9onfxjV9QCdFAvd
-QGgvSU7EQxl/H6FSdRGfOT8=
-=oPt5
------END PGP SIGNATURE-----

@@ -1,30 +1,20 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a7a84f481732b2557b45efb7f4c80ff4 ChangeLog 8495
-MD5 4f46399c4b5d92365a8684e782ba459e libgnome-2.10.0.ebuild 971
+MD5 c661958f62ee1261125399dfce446838 libgnome-2.8.0.ebuild 900
 MD5 1f94f66ef5731fb3e03af5532d6f0298 libgnome-2.4.0.ebuild 819
+MD5 4f46399c4b5d92365a8684e782ba459e libgnome-2.10.0.ebuild 971
 MD5 b33cbf990d672a2e5f5cacfff3a2b443 libgnome-2.6.0.ebuild 817
 MD5 4b8b571d26fd9256174f17cb0e8c9b3d libgnome-2.6.1.1-r1.ebuild 919
-MD5 94680178f319589976646a080856ef12 libgnome-2.6.1.2.ebuild 833
-MD5 553003cbde7bf940e388313910a087cc libgnome-2.8.0.ebuild 901
 MD5 b06e6c30eac7b6394fca9490be8d837a libgnome-2.8.1.ebuild 1192
+MD5 fdadd8850dc956de1b43e76be48db0a1 ChangeLog 8588
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 3111d83a6edd0cd8430b893cbbaedd88 files/digest-libgnome-2.10.0 68
+MD5 94680178f319589976646a080856ef12 libgnome-2.6.1.2.ebuild 833
 MD5 855dcd3c74ed050bee4e7f8d50a3b870 files/digest-libgnome-2.4.0 67
 MD5 db85dc1051fbaabe3ef0b73fa8c6f13c files/digest-libgnome-2.6.0 68
-MD5 971c1f5de6aa1275e6e49d2026058beb files/digest-libgnome-2.6.1.1-r1 70
-MD5 145e53730390dfc40b6d0f90d57c5fa6 files/digest-libgnome-2.6.1.2 70
 MD5 c2e07e8bdba217ff85b031c801efc0d2 files/digest-libgnome-2.8.0 68
 MD5 7bbc55d295e56f0371ea0d254dfaf4dc files/digest-libgnome-2.8.1 68
-MD5 5c0b401f19aeb078f2fb6d04bbb545c0 files/libgnome-2.6.1.1-fix_sound.patch 515
+MD5 3111d83a6edd0cd8430b893cbbaedd88 files/digest-libgnome-2.10.0 68
+MD5 971c1f5de6aa1275e6e49d2026058beb files/digest-libgnome-2.6.1.1-r1 70
 MD5 64f8702ea154f3889f0640ef41e701bf files/libgnome-2.8.0-va_list.patch 772
 MD5 0eeecb52a849c65dbb5101f2ed3305dd files/libgnome-2.8.1-va_list.patch 580
+MD5 145e53730390dfc40b6d0f90d57c5fa6 files/digest-libgnome-2.6.1.2 70
 MD5 ce5833278452053c32262d4da9f4832f files/libgnome-gcc4.patch 457
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCQ2x2CRZPokWLroQRAmFQAJ0enXzF+gT2yap0mzSUxO1DZmsJrACffcpf
-o+iNheFYNrA9FsU81EteWD8=
-=R5Qt
------END PGP SIGNATURE-----
+MD5 5c0b401f19aeb078f2fb6d04bbb545c0 files/libgnome-2.6.1.1-fix_sound.patch 515
