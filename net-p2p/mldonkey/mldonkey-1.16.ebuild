@@ -1,16 +1,18 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-1.16.ebuild,v 1.1 2002/06/26 11:09:16 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-1.16.ebuild,v 1.2 2002/07/17 02:25:20 seemant Exp $
 
 myarch=`uname -m`
 S="${WORKDIR}/${PN}-shared"
 DESCRIPTION="A new client for eDonkey, for file sharing."
 SRC_URI="http://freesoftware.fsf.org/download/mldonkey/${P}.shared.${myarch}-Linux.tar.bz2"
 HOMEPAGE="http://go.to/mldonkey"
-LICENSE="GPL-2"
-DEPEND="${RDEPEND}"
-RDEPEND="gtk? ( x11-libs/gtk+ )"
+
 SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
+
+DEPEND="gtk? ( x11-libs/gtk+ )"
 
 src_compile() {
 	einfo "Nothing to compile for ${P}."

@@ -1,34 +1,31 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/teknap/teknap-1.3g.ebuild,v 1.3 2002/07/11 06:30:49 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/teknap/teknap-1.3g.ebuild,v 1.4 2002/07/17 02:25:20 seemant Exp $
 
 MY_P=TekNap-${PV}
 S=${WORKDIR}/TekNap
 DESCRIPTION="TekNap is a console Napster/OpenNap client"
 SRC_URI="ftp://ftp.teknap.com/pub/TekNap/${MY_P}.tar.gz"
 HOMEPAGE="http://www.TekNap.com/"
+
 SLOT="0"
+KEYWORDS="x86"
+LICENSE="as-is"
 
 DEPEND="virtual/glibc >=sys-libs/ncurses-5.2
-		gtk? ( =x11-libs/gtk+-1.2* )
-		tcpd? ( sys-apps/tcp-wrappers )
-		xmms? ( media-sound/xmms )"
+	gtk? ( =x11-libs/gtk+-1.2* )
+	tcpd? ( sys-apps/tcp-wrappers )
+	xmms? ( media-sound/xmms )"
 
 src_compile() {
 	local myconf
-	if [ "`use gtk`" ] ; then
-		myconf="--with-gtk"
-	fi
-	if [ "`use tcpd`" ] ; then
-		myconf="${myconf} --enable-wrap"
-	fi
-	if [ "`use xmms`" ] ; then
-		myconf="${myconf} --enable-xmms"
-	fi
-	if [ "`use ipv6`" ] ; then
-		myconf="${myconf} --enable-ipv6"
-	fi
-
+	use gtk && myconf="--with-gtk"
+	
+	use tcpd && myconf="${myconf} --enable-wrap"
+	
+	use xmms && myconf="${myconf} --enable-xmms"
+	
+	use ipv6 && myconf="${myconf} --enable-ipv6"
 	myconf="${myconf} --enable-cdrom"
 
 	econf ${myconf} || die
@@ -51,4 +48,3 @@ src_install () {
 	dodoc *.txt TekNap.faq bugs link-guidelines macosx.notes
 	doman TekNap.1
 }
-

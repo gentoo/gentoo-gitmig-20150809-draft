@@ -8,10 +8,13 @@ need-kde 3
 
 DESCRIPTION="KDE interface for giFT"
 HOMEPAGE="http://kift.sourceforge.net"
-LICENSE="GPL-2"
-newdepend ">=net-p2p/gift-0.10.0_pre020527"
-
 SRC_URI="mirror://sourceforge/kift/${P}.tar.gz"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
+
+newdepend ">=net-p2p/gift-0.10.0_pre020527"
 
 src_unpack() {
 

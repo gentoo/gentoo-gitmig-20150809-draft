@@ -1,13 +1,14 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/lopster/lopster-1.0.1.20020702.ebuild,v 1.1 2002/07/02 13:10:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/lopster/lopster-1.0.1.20020702.ebuild,v 1.2 2002/07/17 02:25:20 seemant Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="A Napster Client using GTK"
-SRC_URI="http://www.ibiblio.org/pub/Linux/distributions/gentoo/distfiles/${P}.tar.bz2"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
 HOMEPAGE="http://lopster.sourceforge.net"
 SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86"
 
 DEPEND="=x11-libs/gtk+-1.2*"
 
