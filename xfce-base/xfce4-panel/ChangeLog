@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/xfce4-panel
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.24 2004/05/03 13:20:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-panel/ChangeLog,v 1.25 2004/05/19 12:24:06 gmsoft Exp $
+
+  19 May 2004; Guy Martin <gmsoft@gentoo.org> xfce4-panel-4.0.5.ebuild:
+  Marked stable on hppa.
 
   03 May 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   xfce4-panel-4.0.5.ebuild:
