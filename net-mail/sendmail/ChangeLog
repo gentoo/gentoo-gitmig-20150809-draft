@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/sendmail
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/ChangeLog,v 1.41 2004/04/27 09:23:24 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/ChangeLog,v 1.42 2004/05/12 12:21:51 randy Exp $
+
+  12 May 2004; Michael McCabe <randy@gentoo.org> sendmail-8.12.11-r2.ebuild:
+  Added s390 keywords
 
 *sendmail-8.12.11-r2 (21 Apr 2004)
 
