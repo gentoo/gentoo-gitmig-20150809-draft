@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gaim-xmms-remote
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-xmms-remote/ChangeLog,v 1.1 2004/03/26 03:10:59 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-xmms-remote/ChangeLog,v 1.2 2004/04/05 15:27:56 rizzo Exp $
+
+  05 Apr 2004; Don Seiler <rizzo@gentoo.org>; gaim-xmms-remote-1.0.ebuild:
+  Works fine with 0.76
 
 *gaim-xmms-remote-1.0 (25 Mar 2004)
 
