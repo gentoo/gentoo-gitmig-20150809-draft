@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.29 2003/02/25 18:34:56 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.30 2003/02/28 12:43:54 murphy Exp $
+
+  28 Feb 2003; Maarten Thibaut <murphy@gentoo.org> openssl-0.9.6i.ebuild :
+  Add code to detect sparc32 build on sparc64. Add code to compile for
+  sparc32 on sparc64 depending on PROFILE_ARCH environment variable.
 
   23 Feb 2003; Zach Welch <zwelch@gentoo.org> openssl-0.9.6i.ebuild :
   Add arm patch to ebuild to fix problems linking aginst libcrypto.so

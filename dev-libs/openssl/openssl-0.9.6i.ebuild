@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6i.ebuild,v 1.4 2003/02/25 18:34:56 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6i.ebuild,v 1.5 2003/02/28 12:43:54 murphy Exp $
 
 IUSE=""
 
@@ -14,6 +14,10 @@ DEPEND="${RDEPEND} >=sys-devel/perl-5"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86 ppc alpha sparc mips hppa arm"
+
+if [ "$PROFILE_ARCH" = "sparc" -a "`uname -m`" = "sparc64" ]; then
+	SSH_TARGET="linux-sparcv8"
+fi
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
@@ -43,7 +47,13 @@ src_unpack() {
 }
 
 src_compile() {
-	./config --prefix=/usr --openssldir=/etc/ssl shared threads || die
+	if [ ${SSH_TARGET} ]; then
+		einfo "Forcing ${SSH_TARGET} compile"
+		./Configure ${SSH_TARGET} --prefix=/usr \
+			--openssldir=/etc/ssl shared threads || die
+	else
+		./config --prefix=/usr --openssldir=/etc/ssl shared threads || die
+	fi
 	# i think parallel make has problems
 	make all || die
 }
