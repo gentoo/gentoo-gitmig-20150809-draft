@@ -1,20 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.5.ebuild,v 1.11 2002/12/15 10:44:11 bjb Exp $
-
-IUSE="X cups gnome"
-
-S=${WORKDIR}/espgs-${PV}
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.5.ebuild,v 1.12 2002/12/18 15:32:32 vapier Exp $
 
 DESCRIPTION="ESP Ghostscript -- an enhanced version of GNU Ghostscript with better printer support"
 SRC_URI="ftp://ftp.easysw.com/pub/ghostscript/espgs-${PV}-source.tar.bz2
-ftp://ftp.easysw.com/pub/ghostscript/gnu-gs-fonts-std-6.0.tar.gz
-ftp://ftp.easysw.com/pub/ghostscript/gnu-gs-fonts-other-6.0.tar.gz"
+	ftp://ftp.easysw.com/pub/ghostscript/gnu-gs-fonts-std-6.0.tar.gz
+	ftp://ftp.easysw.com/pub/ghostscript/gnu-gs-fonts-other-6.0.tar.gz"
 HOMEPAGE="http://www.easysw.com/"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
 KEYWORDS="x86 ppc sparc alpha"
+IUSE="X cups gnome"
 
 DEPEND="virtual/glibc
 	>=media-libs/jpeg-6b 
@@ -23,24 +20,23 @@ DEPEND="virtual/glibc
 	X? ( virtual/x11 ) 
 	gnome? ( >=media-gfx/gimp-print-4.2.1 )"
 
-src_unpack() {
+S=${WORKDIR}/espgs-${PV}
 
-	unpack espgs-${PV}-source.tar.bz2 || die
-	unpack gnu-gs-fonts-std-6.0.tar.gz || die
-	unpack gnu-gs-fonts-other-6.0.tar.gz || die
+src_unpack() {
+	unpack espgs-${PV}-source.tar.bz2
+	unpack gnu-gs-fonts-std-6.0.tar.gz
+	unpack gnu-gs-fonts-other-6.0.tar.gz
 
 	# Brother HL-12XX support
 	cp ${FILESDIR}/gs7.05-gdevhl12.c ${S}/src/gdevhl12.c || die
 	mv ${S}/src/Makefile.in ${S}/src/Makefile.in.orig
 	sed 's#^\(DEVICE_DEVS6=.*\)$#\1 $(DD)hl1240.dev $(DD)hl1250.dev#' \
-	    < ${S}/src/Makefile.in.orig > ${S}/src/Makefile.in || die
+		${S}/src/Makefile.in.orig > ${S}/src/Makefile.in || die
 
 	patch -p0 < ${FILESDIR}/png.diff || die "patch failed"
-
 }
 
 src_compile() {
-
 	local myconf
 	myconf="--with-ijs --with-omni"
 
@@ -53,14 +49,12 @@ src_compile() {
 	use gnome && myconf="${myconf} --with-gimp-print" \
 		|| myconf="${myconf} --without-gimp-print"
 
-	econf ${myconf} || die "./configure failed"
-
+	econf ${myconf}
 	make || die "make failed"
 }
 
 src_install() {
-
-	einstall install_prefix=${D} || die "make install failed"
+	einstall install_prefix=${D}
 
 	cd ${WORKDIR}
 	cp -a fonts ${D}/usr/share/ghostscript || die
@@ -71,7 +65,4 @@ src_install() {
 	dohtml doc/*.html doc/*.htm
 	insinto /usr/share/emacs/site-lisp
 	doins doc/gsdoc.el || die
-
 }
-
-
