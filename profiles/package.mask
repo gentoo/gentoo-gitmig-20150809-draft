@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <liquidx@gentoo.org> (29 Aug 2003)
+# initial testing for python 2.3.x. do not unmask unless you
+# are prepared for a non-working portage.
+=dev-lang/python-2.3*
+
 # <dholm@gentoo.org> (27 Aug 2003)
 # CVS snapshot of the coming gnat 5.0
 =dev-lang/gnat-5.0*
