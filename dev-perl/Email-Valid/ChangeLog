@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Email-Valid
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Valid/ChangeLog,v 1.1 2003/05/09 22:29:04 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Email-Valid/ChangeLog,v 1.2 2003/06/08 04:01:41 rac Exp $
+
+  07 Jun 2003; <rac@gentoo.org> Email-Valid-0.14.ebuild:
+  Add IUSE
 
 *Email-Valid-0.14 (09 May 2003)
 
