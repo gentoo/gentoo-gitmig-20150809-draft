@@ -58,9 +58,9 @@ app-editors/gtk-xemacs
 
 #OK, this one (2.4.5) is missing the reiserfs umount patch
 # I simply block all 2.4.5 packages since they all need some extra work
->=sys-kernel/linux-sources-2.4.5
->=sys-kernel/linux-2.4.5
->=sys-kernel/linux-extras-2.4.5
+#>=sys-kernel/linux-sources-2.4.5
+#>=sys-kernel/linux-2.4.5
+#>=sys-kernel/linux-extras-2.4.5
 
 #I (drobbins) added this one; 2.4.5.5 locks up regularly, even from console
 #All I need to to is extract a bzip2'd tarball of the kernel sources, and
