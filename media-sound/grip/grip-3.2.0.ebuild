@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.2.0.ebuild,v 1.6 2004/07/13 20:35:16 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.2.0.ebuild,v 1.7 2004/08/22 05:15:57 obz Exp $
 
 DESCRIPTION="GTK+ based Audio CD Player/Ripper."
 HOMEPAGE="http://www.nostatic.org/grip"
@@ -15,7 +15,7 @@ DEPEND=">=x11-libs/gtk+-2.2
 	media-sound/cdparanoia
 	>=media-libs/id3lib-3.8.3
 	>=gnome-base/libgnomeui-2.2.0
-	gnome-base/ORBit2
+	>=gnome-base/orbit-2
 	gnome-base/libghttp
 	net-misc/curl
 	oggvorbis? ( media-sound/vorbis-tools )
