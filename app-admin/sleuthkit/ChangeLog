@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/sleuthkit
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sleuthkit/ChangeLog,v 1.11 2004/06/25 14:55:13 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sleuthkit/ChangeLog,v 1.12 2004/07/19 07:03:23 dragonheart Exp $
+
+*sleuthkit-1.70 (19 Jul 2004)
+
+  19 Jul 2004; Daniel Black <dragonheart@gentoo.org> +sleuthkit-1.70.ebuild:
+  version bump. Thank to Antek Grzymala <awaria@chopin.edu.pl> in bug #55269
 
   25 Jun 2004; Ferris McCormick <fmccor@gentoo.org> sleuthkit-1.69.ebuild:
   Mark stable on sparc.
