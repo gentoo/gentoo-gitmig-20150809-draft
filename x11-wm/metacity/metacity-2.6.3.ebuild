@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.6.3.ebuild,v 1.7 2004/06/24 23:43:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.6.3.ebuild,v 1.8 2004/06/30 14:05:11 agriffis Exp $
 
 inherit gnome2
 
@@ -34,11 +34,10 @@ src_unpack(){
 
 	# causes ICE on ppc w/ gcc (still)
 	cd ${S}
-	use ppc && (
+	if use ppc; then
 		[ -z "${CC}" ] && CC=gcc
 		if [ "`${CC} -dumpversion | cut -d. -f1,2`" != "2.95" ] ; then
 			patch -p0 < ${FILESDIR}/metacity-2.4.3-ppc-gcc3.2.diff || die "patch failed"
 		fi
-	)
-
+	fi
 }
