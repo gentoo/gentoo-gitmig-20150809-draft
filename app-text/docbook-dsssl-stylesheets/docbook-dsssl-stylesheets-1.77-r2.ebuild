@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-dsssl-stylesheets/docbook-dsssl-stylesheets-1.77-r2.ebuild,v 1.14 2004/03/21 08:19:55 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-dsssl-stylesheets/docbook-dsssl-stylesheets-1.77-r2.ebuild,v 1.15 2004/04/26 11:15:25 obz Exp $
 
 inherit sgml-catalog
 
@@ -9,12 +9,13 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="DSSSL Stylesheets for DocBook."
 SRC_URI="mirror://sourceforge/docbook/${MY_P}.tar.gz"
 HOMEPAGE="http://www.sourceforge.net/docbook/"
-
-RDEPEND="app-text/sgml-common"
+LICENSE="as-is"
 
 SLOT="0"
-LICENSE="as-is"
+IUSE=""
 KEYWORDS="ia64 x86 ppc sparc alpha hppa amd64 mips"
+
+RDEPEND="app-text/sgml-common"
 
 sgml-catalog_cat_include "/etc/sgml/dsssl-docbook-stylesheets.cat" \
 	"/usr/share/sgml/docbook/dsssl-stylesheets-${PV}/catalog"
