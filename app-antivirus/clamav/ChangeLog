@@ -1,6 +1,13 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.34 2005/01/26 21:27:40 kaiowas Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.35 2005/01/27 08:39:02 ticho Exp $
+
+*clamav-0.81 (27 Jan 2005)
+
+  27 Jan 2005; Andrej Kacian <ticho@gentoo.org> files/clamd.rc,
+  +clamav-0.81.ebuild:
+  Version bump. Added "provide antivirus" to the initscript. Disabled milter
+  useflag, since it requires libmilter, which is not in portage.
 
   26 Jan 2005; petre rodan <kaiowas@gentoo.org> clamav-0.75.1.ebuild,
   clamav-0.80.ebuild, clamav-0.81_rc1.ebuild:
