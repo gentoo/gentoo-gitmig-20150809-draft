@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netspeed_applet/netspeed_applet-0.8.ebuild,v 1.6 2004/06/24 22:12:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netspeed_applet/netspeed_applet-0.8.ebuild,v 1.7 2004/07/11 10:27:54 eldad Exp $
 
 IUSE=""
 DESCRIPTION="Applet showing network traffic for GNOME 2"
@@ -18,7 +18,7 @@ DEPEND=">=gnome-base/libgnomeui-2
 RDEPEND="${DEPEND}
 	>=dev-util/intltool-0.21"
 
-S=${WORKDIR}/${P}
+
 
 src_compile() {
 	econf || die "./configure failed"
