@@ -149,7 +149,7 @@ if [ ${verb} ];then
 fi
 emerge system -eup | \
 	sed -e "/ebuild/s:^.*] \([^ ]*\) *:\1:p;d" | \
-	sort -u uniq \
+	sort -u \
 	> ${tmp}/system
 
 if [ ${verb} ]; then
