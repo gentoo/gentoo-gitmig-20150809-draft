@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.6.7.ebuild,v 1.1 2004/03/06 13:23:43 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rhythmbox/rhythmbox-0.6.8.ebuild,v 1.1 2004/03/06 14:09:49 foser Exp $
 
 inherit gnome2
 
@@ -46,6 +46,7 @@ use xine && G2CONF="${G2CONF} --enable-xine"
 use flac && G2CONF="${G2CONF} --enable-flac"
 
 G2CONF="${G2CONF} \
+	$(use_enable flac) \
 	$(use_enable oggvorbis vorbis) \
 	$(use_enable mad mp3) \
 	$(use_enable faad mp4 ) \
