@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6e71c2a2906411c0bb70a305678a2d0a ChangeLog 1629
-MD5 8e939a6faa2f3ed8d6f875a31c938117 tinyca-0.5.4.ebuild 1087
-MD5 e0da06986ce4be5c408bb5f758bb456e tinyca-0.5.4-r1.ebuild 1119
 MD5 98ae4a0ddbc10c7114dd812dc8d40748 tinyca-0.6.6.ebuild 1203
-MD5 bbea0bcb9faf9c5ba37f2ff9b94f262d tinyca-0.6.7.ebuild 1479
+MD5 e0da06986ce4be5c408bb5f758bb456e tinyca-0.5.4-r1.ebuild 1119
+MD5 cd2e6d4b3548a1fc9188c4b5803e213a ChangeLog 1627
 MD5 566cf4f89e44670d0aba4a745913d748 metadata.xml 224
+MD5 8e939a6faa2f3ed8d6f875a31c938117 tinyca-0.5.4.ebuild 1087
+MD5 bbea0bcb9faf9c5ba37f2ff9b94f262d tinyca-0.6.7.ebuild 1479
 MD5 ce4138146004f379403a5187796ce262 files/digest-tinyca-0.5.4 64
-MD5 ce4138146004f379403a5187796ce262 files/digest-tinyca-0.5.4-r1 64
 MD5 2bcc4d940205e70dd881c538b45d1173 files/digest-tinyca-0.6.6 64
 MD5 f43987f1a14d5d3bde3916f480d303b7 files/digest-tinyca-0.6.7 65
+MD5 ce4138146004f379403a5187796ce262 files/digest-tinyca-0.5.4-r1 64
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCAKj3mdTrptrqvGERArBSAJ9hP3NwhNi1m6FkPu2q6XxrzjETBwCfVXnV
-ZK1yvjaWit4t1B0dUckId/s=
-=m2Zm
+iD8DBQFCAPSyI1lqEGTUzyQRAiJQAKCjSL5Hjln1DRt2i2EuLcUh221GcwCfV0Rx
+mqMxaIh91SpiUjWPBDVB3fM=
+=GuqU
 -----END PGP SIGNATURE-----
