@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.94 2005/02/08 19:42:45 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.95 2005/02/08 21:57:48 hollow Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -55,10 +55,8 @@ EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install \
 	pkg_preinst pkg_postinst
 
 export CTARGET=${CTARGET:-${CHOST}}
-if [[ ${CTARGET} == ${CHOST} ]] ; then
-	if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
-		export CTARGET=${CATEGORY/cross-}
-	fi
+if [[ ${CTARGET} == ${CHOST} && ${CATEGORY/cross-} != ${CATEGORY}]]; then
+	export CTARGET=${CATEGORY/cross-}
 fi
 
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
@@ -105,12 +103,10 @@ kernel_is() {
 
 kernel_is_2_4() {
 	kernel_is 2 4
-	return $?
 }
 
 kernel_is_2_6() {
 	kernel_is 2 6 || kernel_is 2 5
-	return $?
 }
 
 kernel_header_destdir() {
@@ -120,8 +116,7 @@ kernel_header_destdir() {
 }
 
 # Capture the sources type and set DEPENDs
-if [[ ${ETYPE} == sources ]]
-then
+if [[ ${ETYPE} == sources ]]; then
 	DEPEND="!build? ( sys-apps/sed
 					  >=sys-devel/binutils-2.11.90.0.31 )
 			doc? ( app-text/docbook-sgml-utils )"
@@ -134,13 +129,11 @@ then
 	SLOT="${PVR}"
 	DESCRIPTION="Sources for the Linux kernel"
 	IUSE="${IUSE} symlink build doc"
-elif [[ ${ETYPE} == headers ]]
-then
+elif [[ ${ETYPE} == headers ]]; then
 	DESCRIPTION="Linux system headers"
 	IUSE="${IUSE}"
 	
-	if [[ ${CTARGET} = ${CHOST} ]]
-	then
+	if [[ ${CTARGET} = ${CHOST} ]]; then
 		DEPEND="!virtual/os-headers"
 		PROVIDE="virtual/kernel virtual/os-headers"
 		SLOT="0"
@@ -210,7 +203,7 @@ compile_headers() {
 	local xmakeopts="ARCH=${KARCH}"
 	if [[ ${CTARGET} != ${CHOST} ]]; then
 		xmakeopts="${xmakeopts} CROSS_COMPILE=${CTARGET}-"
-	elif type -p ${CHOST}-ar ; then
+	elif type -p ${CHOST}-ar; then
 		xmakeopts="${xmakeopts} CROSS_COMPILE=${CHOST}-"
 	fi
 
@@ -218,8 +211,7 @@ compile_headers() {
 		yes "" | make oldconfig ${xmakeopts}
 		echo ">>> make oldconfig complete"
 		use sparc && make dep ${xmakeopts}
-
-	elif kernel_is 2 6 ; then
+	elif kernel_is 2 6; then
 		# autoconf.h isnt generated unless it already exists. plus, we have
 		# no guarantee that any headers are installed on the system...
 		[[ -f ${ROOT}/usr/include/linux/autoconf.h ]] \
@@ -311,20 +303,11 @@ install_sources() {
 			> ${S}/patches.txt
 	fi
 
-	for doc in ${UNIPATCH_DOCS}; do
-		[[ -f ${doc} ]] && docs="${docs} ${doc}"
-	done
-
-	if [[ -f ${S}/patches.txt ]]; then
-		docs="${docs} ${S}/patches.txt"
-	fi
-
-	use doc && \
-	! use arm && \
-	! use s390 && \
-		install_manpages
-	
+	for doc in ${UNIPATCH_DOCS}; do	[[ -f ${doc} ]] && docs="${docs} ${doc}"; done
+	if [[ -f ${S}/patches.txt ]]; then docs="${docs} ${S}/patches.txt"; fi
+	use doc && ! use arm && ! use s390 && install_manpages
 	dodoc ${docs}
+
 	mv ${WORKDIR}/linux* ${D}/usr/src
 }
 
@@ -368,8 +351,7 @@ postinst_sources() {
 	fi
 
 	# Don't forget to make directory for sysfs
-	[[ ! -d ${ROOT}sys ]] && \
-		kernel_is 2 6 && mkdir /sys
+	[[ ! -d ${ROOT}sys ]] && kernel_is 2 6 && mkdir /sys
 
 	echo
 	einfo "After installing a new kernel of any version, it is important"
@@ -381,21 +363,15 @@ postinst_sources() {
 	echo
 
 	# if K_EXTRAEINFO is set then lets display it now
-	if [[ -n ${K_EXTRAEINFO} ]] ; then
+	if [[ -n ${K_EXTRAEINFO} ]]; then
 		echo ${K_EXTRAEINFO} | fmt |
-		while read -s ELINE ; do
-			einfo "${ELINE}"
-		done
+		while read -s ELINE; do	einfo "${ELINE}"; done
 	fi
 
 	# if K_EXTRAEWARN is set then lets display it now
-	if [[ -n ${K_EXTRAEWARN} ]]
-	then
+	if [[ -n ${K_EXTRAEWARN} ]]; then
 		echo ${K_EXTRAEWARN} | fmt |
-		while read -s ELINE
-		do
-			ewarn "${ELINE}"
-		done
+		while read -s ELINE; do ewarn "${ELINE}"; done
 	fi
 }
 
@@ -411,7 +387,7 @@ postinst_headers() {
 #==============================================================
 setup_headers() {
 	[[ -z ${H_SUPPORTEDARCH} ]] && H_SUPPORTEDARCH=${PN/-*/}
-	for i in ${H_SUPPORTEDARCH} ; do
+	for i in ${H_SUPPORTEDARCH}; do
 		[[ $(tc-arch) == "${i}" ]] && H_ACCEPT_ARCH="yes"
 	done
 
@@ -427,17 +403,8 @@ setup_headers() {
 # unipatch
 #==============================================================
 unipatch() {
-	local i
-	local x
-	local extention
-	local PIPE_CMD
-	local UNIPATCH_DROP
-	local KPATCH_DIR
-	local PATCH_DEPTH
-	local ELINE
-	local STRICT_COUNT
-	local PATCH_LEVEL
-	local myLC_ALL
+	local i x extention PIPE_CMD UNIPATCH_DROP KPATCH_DIR PATCH_DEPTH ELINE
+	local STRICT_COUNT PATCH_LEVEL myLC_ALL
 	
 	# set to a standard locale to ensure sorts are ordered properly.
 	myLC_ALL="${LC_ALL}"
@@ -457,10 +424,8 @@ unipatch() {
 	UNIPATCH_LIST="${@}"
 
 	#unpack any passed tarballs
-	for i in ${UNIPATCH_LIST}
-	do
-		if [ -n "$(echo ${i} | grep -e "\.tar" -e "\.tbz" -e "\.tgz")" ]
-		then
+	for i in ${UNIPATCH_LIST}; do
+		if [ -n "$(echo ${i} | grep -e "\.tar" -e "\.tbz" -e "\.tgz")" ]; then
 			extention=${i/*./}
 			extention=${extention/:*/}
 			case ${extention} in
@@ -472,8 +437,7 @@ unipatch() {
 				      die "Unrecognized tarball compression";;
 			esac
 
-			if [ -n "${UNIPATCH_STRICTORDER}" ]
-			then
+			if [ -n "${UNIPATCH_STRICTORDER}" ]; then
 				STRICT_COUNT=$((${STRICT_COUNT} + 1))
 				mkdir -p ${KPATCH_DIR}/${STRICT_COUNT}/
 				${PIPE_CMD} ${i/:*/} -C ${KPATCH_DIR}/${STRICT_COUNT}/ 1>/dev/null
@@ -481,8 +445,7 @@ unipatch() {
 				${PIPE_CMD} ${i/:*/} -C ${KPATCH_DIR} 1>/dev/null
 			fi
 
-			if [ $? == 0 ]
-			then
+			if [ $? == 0 ]; then
 				einfo "${i/*\//} unpacked"
 				[ -n "$(echo ${i} | grep ':')" ] && echo ">>> Strict patch levels not currently supported for tarballed patchsets"
 			else
@@ -507,10 +470,8 @@ unipatch() {
 			x=${i/*\//}
 			x=${x/\.${extention}/}
 
-			if [ -n "${PIPE_CMD}" ]
-			then
-				if [ ! -r "${i}" ]
-				then
+			if [ -n "${PIPE_CMD}" ]; then
+				if [ ! -r "${i}" ]; then
 					echo
 					eerror "FATAL: unable to locate:"
 					eerror "${i}"
@@ -519,8 +480,7 @@ unipatch() {
 					die Unable to locate ${i}
 				fi
 
-				if [ -n "${UNIPATCH_STRICTORDER}" ]
-				then
+				if [ -n "${UNIPATCH_STRICTORDER}" ]; then
 					STRICT_COUNT=$((${STRICT_COUNT} + 1))
 					mkdir -p ${KPATCH_DIR}/${STRICT_COUNT}/
 					$(${PIPE_CMD} ${i} > ${KPATCH_DIR}/${STRICT_COUNT}/${x}.patch${PATCH_LEVEL})
@@ -534,51 +494,39 @@ unipatch() {
 	#populate KPATCH_DIRS so we know where to look to remove the excludes
 	x=${KPATCH_DIR}
 	KPATCH_DIR=""
-	for i in $(find ${x} -type d | sort -n)
-	do
+	for i in $(find ${x} -type d | sort -n); do
 		KPATCH_DIR="${KPATCH_DIR} ${i}"
 	done
 
 	#so now lets get rid of the patchno's we want to exclude
 	UNIPATCH_DROP="${UNIPATCH_EXCLUDE} ${UNIPATCH_DROP}"
-	for i in ${UNIPATCH_DROP}
-	do
+	for i in ${UNIPATCH_DROP}; do
 		ebegin "Excluding Patch #${i}"
-		for x in ${KPATCH_DIR}
-		do
-			rm -f ${x}/${i}* 2>/dev/null
-		done
+		for x in ${KPATCH_DIR}; do rm -f ${x}/${i}* 2>/dev/null; done
 		eend $?
 	done
 
 	# and now, finally, we patch it :)
-	for x in ${KPATCH_DIR}
-	do
-		for i in $(find ${x} -maxdepth 1 -iname "*.patch*" -or -iname "*.diff*" | sort -n)
-		do
+	for x in ${KPATCH_DIR}; do
+		for i in $(find ${x} -maxdepth 1 -iname "*.patch*" -or -iname "*.diff*" | sort -n); do
 			STDERR_T="${T}/${i/*\//}"
 			STDERR_T="${STDERR_T/.patch*/.err}"
 
 			[ -z ${i/*.patch*/} ] && PATCH_DEPTH=${i/*.patch/}
 			[ -z ${i/*.diff*/} ]  && PATCH_DEPTH=${i/*.diff/}
 
-			if [ -z "${PATCH_DEPTH}" ]; then
-				PATCH_DEPTH=0
-			fi
+			if [ -z "${PATCH_DEPTH}" ]; then PATCH_DEPTH=0 fi
 
 			ebegin "Applying ${i/*\//} (-p${PATCH_DEPTH}+)"
-			while [ ${PATCH_DEPTH} -lt 5 ]
-			do
+			while [ ${PATCH_DEPTH} -lt 5 ]; do
 				echo "Attempting Dry-run:" >> ${STDERR_T}
 				echo "cmd: patch -p${PATCH_DEPTH} --dry-run -f < ${i}" >> ${STDERR_T}
 				echo "=======================================================" >> ${STDERR_T}
-				if [ $(patch -p${PATCH_DEPTH} --dry-run -f < ${i} >> ${STDERR_T}) $? -eq 0 ]
-				then
+				if [ $(patch -p${PATCH_DEPTH} --dry-run -f < ${i} >> ${STDERR_T}) $? -eq 0 ]; then
 					echo "Attempting patch:" > ${STDERR_T}
 					echo "cmd: patch -p${PATCH_DEPTH} -f < ${i}" >> ${STDERR_T}
 					echo "=======================================================" >> ${STDERR_T}
-					if [ $(patch -p${PATCH_DEPTH} -f < ${i} >> ${STDERR_T}) "$?" -eq 0 ]
-					then
+					if [ $(patch -p${PATCH_DEPTH} -f < ${i} >> ${STDERR_T}) "$?" -eq 0 ]; then
 						eend 0
 						rm ${STDERR_T}
 						break
@@ -592,8 +540,7 @@ unipatch() {
 					PATCH_DEPTH=$((${PATCH_DEPTH} + 1))
 				fi
 			done
-			if [ ${PATCH_DEPTH} -eq 5 ]
-			then
+			if [ ${PATCH_DEPTH} -eq 5 ]; then
 				eend 1
 				eerror "Please attach ${STDERR_T} to any bug you may post."
 				die "Unable to dry-run patch."
@@ -602,10 +549,7 @@ unipatch() {
 	done
 
 	# clean up  KPATCH_DIR's - fixes bug #53610
-	for x in ${KPATCH_DIR}
-	do
-		rm -Rf ${x}
-	done
+	for x in ${KPATCH_DIR}; do rm -Rf ${x}; done
 	
 	LC_ALL="${myLC_ALL}"
 }
@@ -684,8 +628,7 @@ detect_version() {
 
 	if [[ -n ${K_PREPATCHED} ]]; then
 		EXTRAVERSION="${EXTRAVERSION}-${PN/-*}${PR/r}"
-	elif [[ "${ETYPE}" = "sources" ]]
-	then
+	elif [[ "${ETYPE}" = "sources" ]]; then
 		# For some sources we want to use the PV in the extra version
 		# This is because upstream releases with a completely different
 		# versioning scheme.
@@ -694,12 +637,9 @@ detect_version() {
 		  vserver) K_USEPV=1;;
 		esac
 
-		[[ -z ${K_NOUSENAME} ]] && \
-			EXTRAVERSION="${EXTRAVERSION}-${PN/-*}"
-		[[ -n ${K_USEPV} ]] && \
-			EXTRAVERSION="${EXTRAVERSION}-${PV//_/-}"
-		[[ -n ${PR//r0} ]] && \
-			EXTRAVERSION="${EXTRAVERSION}-${PR}"
+		[[ -z ${K_NOUSENAME} ]] && EXTRAVERSION="${EXTRAVERSION}-${PN/-*}"
+		[[ -n ${K_USEPV} ]]     && EXTRAVERSION="${EXTRAVERSION}-${PV//_/-}"
+		[[ -n ${PR//r0} ]]      && EXTRAVERSION="${EXTRAVERSION}-${PR}"
 	fi
 
 	KV_FULL=${OKV}${EXTRAVERSION}
@@ -710,25 +650,25 @@ detect_version() {
 	# will pull:
 	#   linux-2.6.10.tar.bz2 & patch-2.6.11-rc3.bz2 & patch-2.6.11-rc3-bk2.bz2
 
-	if [[ ${RELEASETYPE} == -rc ]] || [[ ${RELEASETYPE} == -pre ]] ; then
+	if [[ ${RELEASETYPE} == -rc ]] || [[ ${RELEASETYPE} == -pre ]]; then
 		OKV="${KV_MAJOR}.${KV_MINOR}.$((${KV_PATCH} - 1))"
 		KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/testing/patch-${CKV//_/-}.bz2
 					mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
 		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${CKV//_/-}.bz2"
 	fi
 
-	if [[ ${RELEASETYPE} == -bk ]] ; then
+	if [[ ${RELEASETYPE} == -bk ]]; then
 		KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/snapshots/patch-${OKV}${RELEASE}.bz2
 					mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
 		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${OKV}${RELEASE}.bz2"
 	fi
 
-	if [[ ${RELEASETYPE} == -rc-bk ]] ; then
+	if [[ ${RELEASETYPE} == -rc-bk ]]; then
 		OKV="${KV_MAJOR}.${KV_MINOR}.$((${KV_PATCH} - 1))"
 		KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/snapshots/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2
 					mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/testing/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE/-bk*}.bz2
 					mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
-					UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE/-bk*}.bz2 ${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2"
+		UNIPATCH_LIST_DEFAULT="${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE/-bk*}.bz2 ${DISTDIR}/patch-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}${RELEASE}.bz2"
 	fi
 
 	# we will set this for backwards compatibility.
@@ -751,8 +691,7 @@ detect_arch() {
 	ARCH_PATCH=""
 	ALL_ARCH="X86 PPC PPC64 SPARC MIPS ALPHA ARM HPPA AMD64 IA64 X86OBSD S390 SH"
 
-	for LOOP_ARCH in ${ALL_ARCH}
-	do
+	for LOOP_ARCH in ${ALL_ARCH}; do
 		COMPAT_URI="${LOOP_ARCH}_URI"
 		COMPAT_URI="${!COMPAT_URI}"
 
