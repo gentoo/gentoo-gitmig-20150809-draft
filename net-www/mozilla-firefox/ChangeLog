@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mozilla-firefox
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.14 2004/02/26 15:08:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.15 2004/03/07 17:24:51 brad Exp $
+
+*mozilla-firefox-0.8-r1 (07 Mar 2004)
+
+  07 Mar 2004; Brad Laue <brad@gentoo.org> mozilla-firefox-0.8-r1.ebuild:
+  Add Xinerama support.
 
   26 Feb 2004; Aron Griffis <agriffis@gentoo.org> files/firefox:
   Add a PATH fix from Bob Bell to be able to find xwininfo
