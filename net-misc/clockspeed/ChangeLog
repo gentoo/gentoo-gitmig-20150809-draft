@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/clockspeed
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/ChangeLog,v 1.15 2004/09/09 17:28:31 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/ChangeLog,v 1.16 2004/09/27 15:24:46 gustavoz Exp $
+
+  27 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  clockspeed-0.62-r3.ebuild:
+  Fixed missing INSTALL, thanks to Yassen Damyanov
 
   09 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   clockspeed-0.62-r3.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/clockspeed-0.62-r3.ebuild,v 1.7 2004/09/09 17:28:31 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/clockspeed-0.62-r3.ebuild,v 1.8 2004/09/27 15:24:46 gustavoz Exp $
 
 inherit eutils
 
@@ -34,7 +34,7 @@ src_install() {
 	dosbin ${FILESDIR}/ntpclockset
 
 	doman clockspeed.1 clockadd.1 clockview.1 sntpclock.1 taiclock.1 taiclockd.1
-	dodoc BLURB CHANGES README THANKS TODO
+	dodoc BLURB CHANGES INSTALL README THANKS TODO
 
 	insinto /var/lib/clockspeed
 	doins leapsecs.dat
