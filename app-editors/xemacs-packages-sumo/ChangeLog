@@ -1,14 +1,16 @@
 # ChangeLog for app-editors/xemacs-packages-sumo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-packages-sumo/ChangeLog,v 1.8 2002/12/13 10:56:06 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-packages-sumo/ChangeLog,v 1.9 2002/12/25 22:43:23 agenkin Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+*xemacs-packages-sumo-2002.09.19-r1 (Dec 25, 2002)
+
+  25 Dec 2002; Arcady Genkin <agenkin@gentoo.org> :
+  Now installs mule packages for those with "mule" in the USE variable.
+
 *xemacs-packages-sumo-2002.09.19 (Sep 23, 2002)
 
   23 Sep 2002; Arcady Genkin <agenkin@thpoon.com>
         xemacs-packages-sumo-2002.09.19.ebuild :
-
   New version.
 
 *xemacs-packages-sumo-2002.07.20 (Aug 19, 2002)
