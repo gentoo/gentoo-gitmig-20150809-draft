@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery/gallery-1.3.3.ebuild,v 1.3 2003/02/13 08:56:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gallery/gallery-1.3.3.ebuild,v 1.4 2003/03/06 21:15:47 mholzer Exp $
 
 DESCRIPTION="Web based (PHP Script) photo album viewer/creator."
 HOMEPAGE="http://gallery.sourceforge.net/"
@@ -9,7 +9,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
-depenD=">=net-www/apache-1.3.24-r1
+DEPEND=">=net-www/apache-1.3.24-r1
 	>=dev-php/mod_php-4.1.2-r5
 	>=media-gfx/jhead-1.6
 	>=media-gfx/imagemagick-5.4.9.1-r1"
