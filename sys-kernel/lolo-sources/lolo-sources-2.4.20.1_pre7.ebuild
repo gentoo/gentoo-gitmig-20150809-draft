@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/lolo-sources-2.4.20.1_pre7.ebuild,v 1.1 2002/12/24 08:19:19 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/lolo-sources-2.4.20.1_pre7.ebuild,v 1.2 2002/12/24 16:35:40 lostlogic Exp $
 
 IUSE="build crypt"
 
@@ -35,6 +35,9 @@ src_unpack() {
 	cd ${KV}
 	# Kill patches we aren't suppposed to use, don't worry about 
 	# failures, if they aren't there that is a good thing!
+
+	# This patch smelled bad, broke iptables userland, sorry.
+	rm 79*
 
 	# This is the ratified crypt USE flag, enables IPSEC and patch-int
 	[ `use crypt` ] || rm 8*
