@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.80.ebuild,v 1.4 2004/07/21 16:51:42 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.80.ebuild,v 1.5 2004/07/27 03:06:12 rizzo Exp $
 
 inherit flag-o-matic eutils gcc
 use debug && inherit debug
@@ -68,8 +68,9 @@ src_unpack() {
 }
 
 src_compile() {
-	einfo "Replacing -Os CFLAG with -O2"
-	replace-flags -Os -O2
+	# Stabilize things
+	strip-flags
+	replace-flags -O? -O2
 
 	# -msse2 doesn't play nice on gcc 3.2
 	[ "`gcc-version`" == "3.2" ] && filter-flags -msse2
