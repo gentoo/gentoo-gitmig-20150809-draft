@@ -1,8 +1,14 @@
-MD5 ab65313fbd7279a53346a005362c1e30 gjiten-2.1.ebuild 1344
-MD5 2c4468626da05effdd33c5c3cb8e24dd gjiten-2.3.ebuild 1396
-MD5 12b0408bc150c92994dce9f4c78c1614 gjiten-2.2.ebuild 1373
-MD5 540ad47383e3d119a3bf3fd9b1719fb6 ChangeLog 1106
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 cc085fab328b0aa82fcc5b064f72e1e4 ChangeLog 1262
 MD5 f2fc5e05a51ba163bb49deed0254effe metadata.xml 456
-MD5 c1203dae16baccbae3b5a5bc51cee64f files/digest-gjiten-2.1 62
-MD5 f5bcceab6c8b9c6be3666a2ae542941b files/digest-gjiten-2.2 62
+MD5 079603d00d58ba93613886c0bd257dad gjiten-2.3.ebuild 1393
 MD5 7f70f34e92d0d83ae21bf688299aa33e files/digest-gjiten-2.3 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBihN7VWNWqTUmv+0RAtuXAKCCwzVPxncYvE5Jh2rjgdOYDHq/6QCgrHdZ
+T0+4XNC/rpCDPhWlTBPoMq8=
+=lQJl
+-----END PGP SIGNATURE-----
