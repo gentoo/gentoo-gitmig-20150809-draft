@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.24 2004/01/30 21:58:02 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.25 2004/02/20 17:33:38 usata Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -184,7 +184,7 @@ prepall() {
 		for rb in ${USE_RUBY} ruby ; do
 			einfo "Using $rb"
 			export RUBY=/usr/bin/$rb
-			ruby() { /usr/bin/$rb $* ; }
+			ruby() { /usr/bin/$rb "$@" ; }
 			mkdir -p ${S}
 			cd ${WORKDIR}
 			einfo "Unpacking for $rb"
