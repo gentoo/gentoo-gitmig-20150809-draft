@@ -1,10 +1,15 @@
 # ChangeLog for gnome-base/control-center
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/ChangeLog,v 1.59 2004/03/31 22:55:25 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/ChangeLog,v 1.60 2004/04/02 16:33:10 foser Exp $
+
+*control-center-2.6.0.3 (02 Apr 2004)
+
+  02 Apr 2004; foser <foser@gentoo.org> control-center-2.6.0.3.ebuild :
+  Gnome 2.6 final final
 
 *control-center-2.6.0.2 (01 Apr 2004)
 
-  01 Apr 2004; foser <foser@gentoo.org> control-center-2.6.0.1.ebuild :
+  01 Apr 2004; foser <foser@gentoo.org> control-center-2.6.0.2.ebuild :
   Gnome 2.6 final
 
   28 Mar 2004; foser <foser@gentoo.org> control-center-2.5.4.ebuild :

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.6.0.2.ebuild,v 1.1 2004/03/31 22:55:25 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.6.0.3.ebuild,v 1.1 2004/04/02 16:33:10 foser Exp $
 
 # FIXME : double check all the acme stuff
 inherit gnome2 eutils
