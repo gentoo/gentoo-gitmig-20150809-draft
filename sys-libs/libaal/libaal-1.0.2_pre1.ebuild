@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libaal/libaal-1.0.2_pre1.ebuild,v 1.1 2004/09/19 21:17:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libaal/libaal-1.0.2_pre1.ebuild,v 1.2 2004/09/19 21:36:18 vapier Exp $
+
+inherit eutils
 
 MY_P="${PN}-${PV/_/-}"
 DATE="2004.09.17"
@@ -35,5 +37,6 @@ src_install() {
 	for l in libaal libaal-alone ; do
 		mv ${D}/lib/${l}.{a,la} ${D}/usr/lib/
 		dosym ../usr/lib/${l}.a /lib/${l}.a
+		gen_usr_ldscript ${l}.so
 	done
 }
