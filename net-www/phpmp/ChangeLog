@@ -1,6 +1,11 @@
 # ChangeLog for net-www/phpmp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/phpmp/ChangeLog,v 1.14 2004/03/25 16:14:22 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phpmp/ChangeLog,v 1.15 2004/03/28 23:13:36 stuart Exp $
+
+*phpmp-0.10.1-r1 (29 Mar 2004)
+
+  29 Mar 2004; Stuart Herbert <stuart@gentoo.org> phpmp-0.10.1-r1.ebuild:
+  Added missing file transparent.gif to the src_install(); closes bug #45143
 
 *phpmp-0.10.1 (25 Mar 2004)
 
