@@ -1,0 +1,14 @@
+--- contrib/eventhandlers/distributed-monitoring/submit_check_result_via_nsca.orig	2004-08-20 14:57:38.462260008 +0300
++++ contrib/eventhandlers/distributed-monitoring/submit_check_result_via_nsca	2004-08-20 15:06:46.647923120 +0300
+@@ -32,7 +32,10 @@
+ 
+ NscaBin="/usr/local/nagios/libexec/send_nsca" 
+ NscaCfg="/usr/local/nagios/etc/send_nsca.cfg"
+-NagiosHost="nagioshost"
++
++# Gentoo Linux Users: configure the hostname in /etc/conf.d/nagios
++source /etc/conf.d/nagios
++NagiosHost="${NAGIOS_NSCA_HOST}"
+  
+ # create the command line to add to the command file
+ cmdline="$1;$2;$3;$4"

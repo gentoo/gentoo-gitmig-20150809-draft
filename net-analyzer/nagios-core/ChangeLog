@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/nagios-core
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.38 2004/08/16 10:37:07 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.39 2004/08/20 13:38:13 eldad Exp $
+
+*nagios-core-1.2-r3 (20 Aug 2004)
+
+  20 Aug 2004; Eldad Zack <eldad@gentoo.org> metadata.xml, +files/conf.d,
+  +files/submit_check_result_via_nsca.patch, +nagios-core-1.2-r3.ebuild:
+  Distributed monitoring friendly - Thanks to Marcel Pommer <marsellus@gmx.net>
+  for pointing out the issues involved. Closes bug #60642.
 
   16 Aug 2004; Eldad Zack <eldad@gentoo.org> nagios-core-1.2-r2.ebuild:
   x86 stable
