@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/monkey-bubble
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/ChangeLog,v 1.17 2004/09/05 12:38:36 malc Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/monkey-bubble/ChangeLog,v 1.18 2005/03/31 23:10:38 mr_bones_ Exp $
+
+  31 Mar 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  -monkey-bubble-0.1.6.ebuild, -monkey-bubble-0.1.9.ebuild:
+  clean old versions
 
   05 Sep 2004; Malcolm Lashley <malc@gentoo.org> monkey-bubble-0.3.2.ebuild:
   Patch and make ~amd64 - closes bug #59000
