@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.3-r1.ebuild,v 1.3 2003/04/06 03:02:41 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.3-r1.ebuild,v 1.4 2003/04/10 20:36:30 azarah Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome"
 # Internal USE flags that I do not really want to advertise ...
@@ -543,9 +543,13 @@ pkg_preinst() {
 	fi
 
 	# Remove stale component registry.
-    if [ -e ${ROOT}/usr/lib/component.reg ]
+    if [ -e ${ROOT}/usr/lib/mozilla/component.reg ]
 	then
-		rm -f ${ROOT}/usr/lib/component.reg
+		rm -f ${ROOT}/usr/lib/mozilla/component.reg
+	fi
+	if [ -e ${ROOT}/usr/lib/mozilla/components/compreg.dat ]
+	then
+		rm -f ${ROOT}/usr/lib/mozilla/components/compreg.dat
 	fi
 
 	# Make sure these are removed.
@@ -565,8 +569,10 @@ pkg_postinst() {
 	# Register Components and Chrome
 	einfo "Registering Components and Chrome..."
 	${MOZILLA_FIVE_HOME}/mozilla-rebuild-databases.pl
+	# Fix permissions of component registry
+	chmod 0644 ${MOZILLA_FIVE_HOME}/components/compreg.dat
 	# Fix directory permissions
-	find ${MOZILLA_FIVE_HOME}/ -type d -perm 0700 -exec chmod 755 {} \; || :
+	find ${MOZILLA_FIVE_HOME}/ -type d -perm 0700 -exec chmod 0755 {} \; || :
 	# Fix permissions on chrome files
 	find ${MOZILLA_FIVE_HOME}/chrome/ -name '*.rdf' -exec chmod 0644 {} \; || :
 
