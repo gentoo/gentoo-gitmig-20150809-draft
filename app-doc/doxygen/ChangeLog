@@ -1,8 +1,11 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.9 2003/03/19 12:23:37 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.10 2003/04/06 20:45:44 weeve Exp $
 
-*doxyten-1.2.18 (13 Oct 2002)
+*doxygen-1.2.18 (13 Oct 2002)
+
+  06 Apr 2003; Jason Wever <weeve@gentoo.org> doxygen-1.2.18.ebuild:
+  Changed ~sparc keyword to sparc.
 
   19 Mar 2003; Jason Wever <weeve@gentoo.org> doxygen-1.2.18.ebuild:
   Added ~sparc to keywords.
