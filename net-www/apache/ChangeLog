@@ -1,6 +1,13 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.243 2004/09/06 20:28:28 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.244 2004/09/07 22:04:50 stuart Exp $
+
+*apache-2.0.50-r1 (07 Sep 2004)
+
+  07 Sep 2004; Stuart Herbert <stuart@gentoo.org>
+  +files/patches/2.0.50-r1/00_ssl_engine.patch,
+  +files/patches/2.0.50-r1/Readme.PATCHES, +apache-2.0.50-r1.ebuild:
+  Fix for bug #62626
 
   06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> apache-2.0.49-r3.ebuild,
   apache-2.0.49-r4.ebuild, apache-2.0.50.ebuild:
