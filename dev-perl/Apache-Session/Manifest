@@ -1,4 +1,6 @@
 MD5 a20ec44077a706051cf242dc5a0cb057 Apache-Session-1.54.ebuild 606
-MD5 a333f55219fbe8184b35e41999e1ddf5 ChangeLog 416
+MD5 d1aa50550fa64ee1026bbdb04033a06f ChangeLog 561
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 298602c052dbe31b96ff443c96fc0381 Apache-Session-1.6.ebuild 606
 MD5 b9ba2fa4ca7a9a1c76047772f06c0246 files/digest-Apache-Session-1.54 70
+MD5 890c172aa22b4374dbd5ecce92db0e37 files/digest-Apache-Session-1.6 69
