@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.16-r1.ebuild,v 1.6 2004/09/23 04:37:07 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.16-r1.ebuild,v 1.7 2004/09/23 04:52:40 morfic Exp $
 
 inherit eutils
 
@@ -49,24 +49,7 @@ src_unpack() {
 
 src_compile(){
 
-	 local myconf="
-		$(use_with esd esd-config /usr/bin/esd-config)
-
-		$(use_enable nls)
-		$(use_enable nls i18n)
-
-		$(use_with imlib)
-
-		$(use_enable spell GtkSpell)
-
-		$(use_enable x86 x86-asm)
-
-		$(use_enable xinerama)
-
-		$(use_enable gnome menus-gnome1)
-		$(use_enable gnome menus-gnome2)"
-
-	if use silverxp || use truetype
+	if use truetype
 	then
 		myconf="${myconf} --enable-gradients --enable-shape --enable-movesize-fx --enable-shaped-decorations"
 	else
@@ -77,10 +60,18 @@ src_compile(){
 		--with-libdir=/usr/share/icewm \
 		--with-cfgdir=/etc/icewm \
 		--with-docdir=/usr/share/doc/${PF}/html \
+		$(use_with esd esd-config /usr/bin/esd-config) \
+		$(use_enable nls) \
+		$(use_enable nls i18n) \
+		$(use_with imlib) \
+		$(use_enable spell GtkSpell) \
+		$(use_enable x86 x86-asm) \
+		$(use_enable xinerama) \
+		$(use_enable gnome menus-gnome1) \
+		$(use_enable gnome menus-gnome2) \
 		${myconf} || die "configure failed"
 
 	sed -i "s:/icewm-\$(VERSION)::" src/Makefile || die "patch failed"
-
 
 	emake || die "emake failed"
 }
@@ -94,7 +85,6 @@ src_install(){
 	exeinto /etc/X11/Sessions
 	doexe $T/icewm
 
-	dodir /usr/share/xsessions
 	insinto /usr/share/xsessions
 	doins ${FILESDIR}/IceWM.desktop
 
