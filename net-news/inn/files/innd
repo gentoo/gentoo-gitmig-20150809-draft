@@ -1,0 +1,20 @@
+#!/sbin/runscript
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# /space/gentoo/cvsroot/gentoo-x86/net-misc/bind/files/named.rc6,v 1.4 2002/06/01 16:31:07 nitro Exp
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin "Starting innd"
+	start-stop-daemon --start --quiet --chuid news:news --exec /usr/lib/news/bin/innd
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping innd"
+	start-stop-daemon --stop --quiet --pidfile /var/run/innd.pid
+	eend $?
+}
