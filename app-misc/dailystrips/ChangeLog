@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/dailystrips
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dailystrips/ChangeLog,v 1.11 2003/09/04 04:19:08 msterret Exp $
+
+*dailystrips-1.0.28 (03 Sep 2003)
+
+  03 Sep 2003; Michael Sterrett <msterret@gentoo.org>
+  dailystrips-1.0.28.ebuild:
+  tidy; use sed -i; no need to keepdir /etc since strips.def is installed there.
+
