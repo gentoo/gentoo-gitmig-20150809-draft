@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.116 2005/03/03 05:06:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.117 2005/03/04 10:21:27 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1352,7 +1352,7 @@ gcc-compiler_src_install() {
 		#   "#include <ffitarget.h>" which (correctly, as it's an "extra" file)
 		#   is installed in .../GCCVER/include/libffi; the following fixes
 		#   ffi.'s include of ffitarget.h - Armando Di Cianno <fafhrd@gentoo.org>
-		if use objc && ! use gcj ; then
+		if ! use build && use objc && ! use gcj ; then
 			#dosed "s:<ffitarget.h>:<libffi/ffitarget.h>:g" /${LIBPATH}/include/ffi.h
 			mv ${D}/${LIBPATH}/include/libffi/* ${D}/${LIBPATH}/include
 			rm -Rf ${D}/${LIBPATH}/include/libffi
