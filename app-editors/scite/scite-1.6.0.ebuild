@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.6.0.ebuild,v 1.5 2004/07/08 22:01:45 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.6.0.ebuild,v 1.6 2004/09/21 23:40:56 pythonhead Exp $
 
-MY_PV=$(echo ${PV} | sed 's:\.::g')
+MY_PV=${PV//./}
 
 S=${WORKDIR}/${PN}/gtk
 DESCRIPTION="A very powerful editor for programmers"

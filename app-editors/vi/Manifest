@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 aead3165130c9a39d8f4ff4fe9905d5f vi-3.7-r6.ebuild 1628
-MD5 7f0141f7c47d626fcd94d2233cfd2237 vi-3.7-r5.ebuild 1838
 MD5 b01d1980b15c8df95be8ebfa5213cd01 ChangeLog 3952
-MD5 80f9d1630595865e6f30218435b8fdea vi-3.7-r4.ebuild 1806
 MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
-MD5 ce4d692dfa7de2308c057231387e920c files/digest-vi-3.7-r4 61
+MD5 286838b3617adf7dff0d6369d7991779 vi-3.7-r5.ebuild 1837
+MD5 80f9d1630595865e6f30218435b8fdea vi-3.7-r4.ebuild 1806
+MD5 cceaa186e8d71dbedee94ba7a76bbdf3 vi-3.7-r6.ebuild 1632
 MD5 25bd0a0d78a6d80250c679b3e34523ff files/digest-vi-3.7-r5 61
 MD5 25bd0a0d78a6d80250c679b3e34523ff files/digest-vi-3.7-r6 61
+MD5 ce4d692dfa7de2308c057231387e920c files/digest-vi-3.7-r4 61
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBOeNU/rLF9B432nYRApuFAJ0a1eXpz31o8vprXBC948HpS6FeqgCePF6B
-RTNLJr39TFZzF8bnTqvM+hc=
-=VgjM
+iD4DBQFBULy8HTu7gpaalycRAtcKAJ9pzOvqyVI37Yf0g6KZceEsxZ4ceACXWDgZ
+WW+oSXkhcuPQtFjcFJfhcg==
+=hKXG
 -----END PGP SIGNATURE-----
