@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/jmeter-2.0.1-r1.ebuild,v 1.4 2005/01/01 12:04:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/jmeter-2.0.1-r1.ebuild,v 1.5 2005/01/29 21:31:01 luckyduck Exp $
 
 inherit java-pkg
 
@@ -18,7 +18,7 @@ DEPEND=">=virtual/jdk-1.3
 	dev-java/xalan
 	>=dev-java/avalon-logkit-bin-1.2
 	dev-java/junit
-	dev-java/rhino
+	=dev-java/rhino-1.5*
 	dev-java/soap
 	dev-java/jtidy
 	doc? ( >=dev-java/velocity-1.4 )"
@@ -43,7 +43,7 @@ src_unpack() {
 	java-pkg_jar-from xerces-2
 	java-pkg_jar-from avalon-logkit-bin avalon-logkit.jar logkit-1.2.jar
 	java-pkg_jar-from junit
-	java-pkg_jar-from rhino
+	java-pkg_jar-from rhino-1.5
 	java-pkg_jar-from soap
 	java-pkg_jar-from jtidy
 	rm -f jorphan.jar
