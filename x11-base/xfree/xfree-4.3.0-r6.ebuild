@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.45 2004/07/03 13:32:47 klieber Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.46 2004/07/08 15:48:40 klieber Exp $
 
 inherit eutils flag-o-matic gcc xfree
 
@@ -143,6 +143,7 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 	!virtual/x11
 	!x11-base/xorg-x11
 	!x11-libs/xft"
+
 #RDEPEND="$DEPEND"
 # unzip - needed for savage driver (version 1.1.27t)
 # x11-libs/xft -- blocked because of interference with xfree's
