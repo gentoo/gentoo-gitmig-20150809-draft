@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.10 2005/03/05 22:13:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.11 2005/03/05 22:31:27 eradicator Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -576,6 +576,10 @@ alt_usrlibdir() {
 }
 
 setup_flags() {
+	# If the user wants to use -fomit-frame-pointer, let the build system
+	# determine when it's safe
+	is-flag -fomit-frame-pointer && EXTRA_ECONF="--enable-omitfp ${EXTRA_ECONF}"
+
 	# Over-zealous CFLAGS can often cause problems.  What may work for one
 	# person may not work for another.  To avoid a large influx of bugs
 	# relating to failed builds, we strip most CFLAGS out to ensure as few
@@ -641,12 +645,7 @@ setup_flags() {
 		append-flags -finline-limit=2000
 	fi
 
-	# If the user wants to use -fomit-frame-pointer, let the build system
-	# determine when it's safe
-	has_flag -fomit-frame-pointer && EXTRA_ECONF="--enable-omitfp ${EXTRA_ECONF}"
-
 	# We don't want these flags for glibc
-	filter-flags -fomit-frame-pointer -malign-double
 	filter-ldflags -pie
 
 	# Lock glibc at -O2 -- linuxthreads needs it and we want to be
