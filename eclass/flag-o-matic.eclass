@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.62 2004/07/15 04:59:44 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.63 2004/07/18 04:59:30 vapier Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
 ECLASS=flag-o-matic
 INHERITED="$INHERITED $ECLASS"
-IUSE="$IUSE debug"
+
+IUSE="debug"
 
 #
 #### filter-flags <flags> ####
@@ -207,7 +208,7 @@ strip-flags() {
 	for x in ${CFLAGS}; do
 		for y in ${ALLOWED_FLAGS}; do
 			flag=${x%%=*}
-			if [ "${flag%%${y}}" = "" ]; then
+			if [ "${flag%%${y}}" = "" ] || [ "${flag:0:5}" = "-fno-" ] || [ "${flag:0:5}" = "-mno-" ] ; then
 				NEW_CFLAGS="${NEW_CFLAGS} ${x}"
 				break
 			fi
@@ -217,7 +218,7 @@ strip-flags() {
 	for x in ${CXXFLAGS}; do
 		for y in ${ALLOWED_FLAGS}; do
 			flag=${x%%=*}
-			if [ "${flag%%${y}}" = "" ]; then
+			if [ "${flag%%${y}}" = "" ] || [ "${flag:0:5}" = "-fno-" ] || [ "${flag:0:5}" = "-mno-" ] ; then
 				NEW_CXXFLAGS="${NEW_CXXFLAGS} ${x}"
 				break
 			fi
