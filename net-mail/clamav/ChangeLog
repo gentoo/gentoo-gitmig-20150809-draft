@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/clamav
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/clamav/ChangeLog,v 1.30 2004/04/29 19:51:33 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/clamav/ChangeLog,v 1.31 2004/04/30 03:04:42 weeve Exp $
+
+  29 Apr 2004; Jason Wever <weeve@gentoo.org> clamav-0.70.ebuild:
+  Stable on sparc wrt bug #46264.
 
   29 Apr 2004; Thomas Raschbacher <lordvan@gentoo.org> clamav-0.68.ebuild,
   clamav-0.70_rc.ebuild:
