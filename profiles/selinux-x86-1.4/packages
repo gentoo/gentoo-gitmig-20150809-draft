@@ -94,7 +94,10 @@ sys-apps/vcron-3.0.1-r1
 *sys-apps/man-pages
 *sys-apps/modutils
 *sys-apps/net-tools
-*sys-apps/netkit-base
+
+#This thing sucks, replacing with iputils
+#*sys-apps/netkit-base
+
 *sys-apps/psmisc
 *sys-apps/sed
 *sys-apps/setserial
