@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.19-r4.ebuild,v 1.1 2002/09/08 13:39:14 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.19-r4.ebuild,v 1.2 2002/09/08 18:55:09 tantive Exp $
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 # we use this next variable to avoid duplicating stuff on cvs
@@ -46,7 +46,7 @@ src_unpack() {
 	
 	#if the used gcc is gcc3 there is a seperate patch applied.
 	if [ `gcc -dumpversion | cut -d. -f1` == 3 ]; then
-		cat ${DISTDIR}/linux-gentoo-${KV}-gcc3.patch.bzip2 | bzip2 -d | patch -p1 || die
+		cat ${DISTDIR}/linux-gentoo-${KV}-gcc3.patch.bz2 | bzip2 -d | patch -p1 || die
 	fi
 
 	#sometimes we have icky kernel symbols; this seems to get rid of them
