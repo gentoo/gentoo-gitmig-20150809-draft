@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/mono
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.21 2003/05/12 16:32:20 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.22 2003/06/27 17:53:06 foser Exp $
+
+*mono-0.25 (27 Jun 2003)
+
+  27 Jun 2003; foser <foser@gentoo.org> mono-0.25.ebuild :
+  New version
 
 *mono-0.24-r1 (12 May 2003)
 
