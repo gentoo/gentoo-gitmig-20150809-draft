@@ -1,6 +1,13 @@
 # ChangeLog for media-video/realplayer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.20 2003/09/14 23:01:04 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/ChangeLog,v 1.21 2003/11/02 13:58:41 liquidx Exp $
+
+*realplayer-8-r7 (02 Nov 2003)
+
+  02 Nov 2003; Alastair Tse <liquidx@gentoo.org> realplayer-8-r6.ebuild,
+  realplayer-8-r7.ebuild:
+  split rv9 codecs to media-plugins/realvideo-codecs, switched to pkg_nofetch()
+  and cleaned up src_unpack()
 
   09 Sep 2003; Alastair Tse <liquidx@gentoo.org> realplayer-8-r2.ebuild,
   realplayer-8-r3.ebuild, realplayer-8-r4.ebuild, realplayer-8-r6.ebuild:
