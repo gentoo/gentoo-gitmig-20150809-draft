@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/ripmime
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ripmime/ChangeLog,v 1.17 2005/01/30 04:55:49 superlag Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ripmime/ChangeLog,v 1.18 2005/03/22 20:21:28 blubb Exp $
+
+  22 Mar 2005; <blubb@gentoo.org> ripmime-1.4.0.3.ebuild:
+  added ~amd64
 
   29 Jan 2005; Aaron Kulbe <superlag@gentoo.org> ripmime-1.4.0.3.ebuild:
   Forgot to keyword 1.4.0.3
