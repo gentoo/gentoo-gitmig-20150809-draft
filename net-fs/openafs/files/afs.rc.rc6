@@ -1,5 +1,5 @@
 #! /sbin/runscript
-#RCUPDATE:3 4:77:This line is required for script management
+#RCUPDATE:34:77:This line is required for script management
 
 # Copyright 2000, International Business Machines Corporation and others.
 # All Rights Reserved.
