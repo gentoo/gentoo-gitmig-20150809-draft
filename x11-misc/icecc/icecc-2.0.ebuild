@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icecc/icecc-2.0.ebuild,v 1.1 2003/04/14 10:36:54 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icecc/icecc-2.0.ebuild,v 1.2 2003/04/17 06:02:02 phosphan Exp $
 
-DESCRIPTION="IceWM Control Center"
+DESCRIPTION="IceWM Control Center (only main program, see icewm-tools for the rest)"
 SRC_URI="http://tsa.dyndns.org/mirror/xvadim/${P}.tar.bz2"
 HOMEPAGE="http://tsa.dyndns.org/mirror/xvadim/"
 LICENSE="GPL-2"
@@ -34,4 +34,8 @@ src_install () {
 	dodir /usr/share/${PN}/themes
 	cp -a theme/* ${D}/usr/share/${PN}/themes/
 	chmod go-w ${D}/usr/share/${PN}/themes/
+}
+
+pkg_postinst () {
+	einfo "emerge icewm-tools for the control center helper tools"
 }
