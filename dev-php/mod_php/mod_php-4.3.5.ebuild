@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.5.ebuild,v 1.4 2004/03/31 13:21:34 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.5.ebuild,v 1.5 2004/04/01 06:30:30 robbat2 Exp $
 
 IUSE="${IUSE} apache2"
 
-DESCRIPTION="Apache module for PHP"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~ia64 ~amd64"
 
 detectapache() {
@@ -50,6 +49,8 @@ PHPSAPI="apache${APACHEVER}"
 # In this case the PHPSAPI setting is dependant on the detectapache function
 # above this point as well!
 inherit php-sapi eutils
+
+DESCRIPTION="Apache module for PHP"
 
 DEPEND_EXTRA=">=net-www/apache-1.3.26-r2
 			  apache2? ( >=net-www/apache-2.0.43-r1 )"

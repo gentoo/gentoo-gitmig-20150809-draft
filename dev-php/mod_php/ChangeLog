@@ -1,6 +1,15 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.133 2004/03/31 13:21:34 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.134 2004/04/01 06:30:30 robbat2 Exp $
+
+  31 Mar 2004; Robin H. Johnson <robbat2@gentoo.org> mod_php-4.3.2-r1.ebuild,
+  mod_php-4.3.2-r2.ebuild, mod_php-4.3.2-r3.ebuild, mod_php-4.3.2-r4.ebuild,
+  mod_php-4.3.2-r5.ebuild, mod_php-4.3.2.ebuild, mod_php-4.3.3-r1.ebuild,
+  mod_php-4.3.3-r2.ebuild, mod_php-4.3.3-r3.ebuild, mod_php-4.3.3.ebuild,
+  mod_php-4.3.3_rc3.ebuild, mod_php-4.3.4-r1.ebuild, mod_php-4.3.4-r2.ebuild,
+  mod_php-4.3.4-r3.ebuild, mod_php-4.3.4-r4.ebuild, mod_php-4.3.4.ebuild,
+  mod_php-4.3.5.ebuild:
+  remove all old php ebuilds before 4.3.4-r4. fix bug #46309.
 
   31 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> mod_php-4.3.5.ebuild:
   Fixed amd64 patch, closing #46260.
