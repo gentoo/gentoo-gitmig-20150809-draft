@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.20-r1.ebuild,v 1.9 2004/09/06 18:05:24 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.20-r1.ebuild,v 1.10 2004/09/07 02:00:44 robbat2 Exp $
 
 inherit eutils gnuconfig
 #to accomodate -laadeedah releases
@@ -21,7 +21,7 @@ SRC_URI="mirror://mysql/Downloads/${SDIR}/${NEWP}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="ia64 x86 sparc ppc amd64 hppa alpha mips ~s390 arm ~ppc64"
-IUSE="static readline innodb berkdb tcpd ssl perl debug"
+IUSE="static readline innodb berkdb tcpd ssl perl debug selinux"
 RESTRICT="nomirror"
 
 DEPEND="readline? ( >=sys-libs/readline-4.1 )
@@ -32,13 +32,15 @@ DEPEND="readline? ( >=sys-libs/readline-4.1 )
 	sys-apps/procps
 	>=sys-apps/sed-4"
 PDEPEND="perl? ( dev-perl/DBI dev-perl/DBD-mysql )"
+RDEPEND="${DEPEND} selinux? ( sec-policy/selinux-mysql )"
 
 warning() {
 	ewarn
-	ewarn "If you're upgrading from MySQL-3.x, you must recompile the other"
-	ewarn "packages on your system that link with libmysqlclient after the"
-	ewarn "upgrade completes.  To obtain such a list of packages for your"
-	ewarn "system, you may use 'revdep-rebuild' from app-portage/gentoolkit."
+	ewarn "If you're upgrading from MySQL-3.x to 4.0, or 4.0.x to 4.1.x, you"
+	ewarn "must recompile the other packages on your system that link with"
+	ewarn "libmysqlclient after the upgrade completes.  To obtain such a list"
+	ewarn "of packages for your system, you may use 'revdep-rebuild' from"
+	ewarn "app-portage/gentoolkit."
 	ewarn
 	epause 5
 }
@@ -215,12 +217,15 @@ pkg_config() {
 		local DATADIR=""
 		if [ -f '/etc/mysql/my.cnf' ] ; then
 			#DATADIR=`grep ^datadir /etc/mysql/my.cnf | sed -e 's/.*= //'`
-			DATADIR=`/usr/sbin/mysqld  --help |grep '^datadir' | awk '{print $2}'`
+			#DATADIR=`/usr/sbin/mysqld  --help |grep '^datadir' | awk '{print $2}'`
+			#DATADIR=`my_print_defaults mysqld | grep -- '^--datadir' | tail -n1 | sed -e 's|^--datadir=||'`
+			DATADIR=`my_print_defaults mysqld | sed -ne '/datadir/s|^--datadir=||p' | tail -n1`
 		fi
 		if [ -z "${DATADIR}" ]; then
 			DATADIR="/var/lib/mysql/"
 		fi
 		chown -R mysql:mysql ${DATADIR}
+		chmod 0750 ${DATADIR}
 	else
 		einfo "Hmm, it appears as though you already have the mysql"
 		einfo "database in place.  If you are having problems trying"
@@ -237,14 +242,16 @@ pkg_preinst() {
 
 pkg_postinst() {
 	#empty dirs...
-	install -d -m0755 -o mysql -g mysql ${ROOT}/var/lib/mysql
+	install -d -m0750 -o mysql -g mysql ${ROOT}/var/lib/mysql
 	install -d -m0755 -o mysql -g mysql ${ROOT}/var/run/mysqld
 	install -d -m0755 -o mysql -g mysql ${ROOT}/var/log/mysql
 
 	#secure the logfiles... does this bother anybody?
 	touch ${ROOT}/var/log/mysql/mysql.{log,err}
-	chown mysql:mysql ${ROOT}/var/log/mysql/mysql.{log,err}
-	chmod 0660 ${ROOT}/var/log/mysql/mysql.{log,err}
+	chown mysql:mysql ${ROOT}/var/log/mysql/mysql*
+	chmod 0660 ${ROOT}/var/log/mysql/mysql*
+	# secure some directories
+	chmod 0750 ${ROOT}/var/log/mysql ${ROOT}/var/lib/mysql
 
 	#your friendly public service announcement...
 	einfo
