@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/mysqltool
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/ChangeLog,v 1.20 2005/01/01 17:38:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/ChangeLog,v 1.21 2005/02/14 05:49:24 robbat2 Exp $
+
+  13 Feb 2005; Robin H. Johnson <robbat2@gentoo.org>
+  mysqltool-0.95-r1.ebuild, mysqltool-0.95-r2.ebuild,
+  mysqltool-0.95-r3.ebuild:
+  Bug #54609: Fix upstream location.
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> mysqltool-0.95-r1.ebuild,
   mysqltool-0.95-r2.ebuild, mysqltool-0.95-r3.ebuild:

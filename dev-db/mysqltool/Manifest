@@ -1,8 +1,19 @@
-MD5 2f05708c9550197619e686158535c00e ChangeLog 2447
-MD5 4fbd1f95c0032a51ce7a539e92489a65 mysqltool-0.95-r1.ebuild 2287
-MD5 35eca94ca53074d062df65f5676bce21 mysqltool-0.95-r2.ebuild 3226
-MD5 b15dde39e11035418ba1b38b425a4708 mysqltool-0.95-r3.ebuild 3227
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 771af902c65b8b539afecfa000db264b mysqltool-0.95-r2.ebuild 3248
+MD5 9645f50852154beb6294da951fddc3e1 mysqltool-0.95-r1.ebuild 2309
+MD5 4d4663d62ae7ce2073e812a2f4c317ed mysqltool-0.95-r3.ebuild 3249
+MD5 7432feca1685c4a8e1beffa502d07ed7 ChangeLog 2617
 MD5 8f29dbd83bfe415fe9b3dff311ce9c20 files/90_mysqltool.conf.m4 363
 MD5 f19ea0fa37a19ab341ca96aacd0418c9 files/digest-mysqltool-0.95-r1 65
 MD5 f19ea0fa37a19ab341ca96aacd0418c9 files/digest-mysqltool-0.95-r2 65
 MD5 f19ea0fa37a19ab341ca96aacd0418c9 files/digest-mysqltool-0.95-r3 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+Comment: Robbat2 @ Orbis-Terrarum Networks
+
+iD8DBQFCEDvxPpIsIjIzwiwRAir2AKCmaVyvPYhKGu0AVLeY3TWVcZy+2gCg3Ys1
+fRIQEvCyTwAcboEhNE3uzfo=
+=pUnx
+-----END PGP SIGNATURE-----

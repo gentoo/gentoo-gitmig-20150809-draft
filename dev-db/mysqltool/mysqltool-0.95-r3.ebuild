@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/mysqltool-0.95-r3.ebuild,v 1.5 2005/01/01 17:38:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/mysqltool-0.95-r3.ebuild,v 1.6 2005/02/14 05:49:24 robbat2 Exp $
 
 inherit perl-module
 
 S=${WORKDIR}/MysqlTool-${PV}
 DESCRIPTION="Web interface for managing one or more mysql server installations"
-SRC_URI="http://www.dajoba.com/projects/mysqltool/MysqlTool-${PV}.tar.gz"
-HOMEPAGE="http://www.dajoba.com/projects/mysqltool/"
+SRC_URI="http://www.brouhaha.com/~eric/software/mysqltool/download/MysqlTool-${PV}.tar.gz"
+HOMEPAGE="http://www.brouhaha.com/~eric/software/mysqltool/"
 IUSE="apache2"
 
 LICENSE="GPL-2"
