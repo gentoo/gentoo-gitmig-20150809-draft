@@ -21,6 +21,13 @@
 ##   End example
 ##
 
+# The user submitted ebuild for Speex is *not enough*.
+# There are issues with gcc3 that I've contacted the
+# authors about that I'm told will be resolved in beta2.
+# Also, the docs do not install into the correct place.
+# I did not commit this ebuild, only covering a little butt.
+>=media-libs/Speex-1.0_beta1
+
 # <danarmak@gentoo.org> (29 Oct 2002)
 # fix for bug #9423, in testing
 =kde-base/kdebase-3.0.4-r1
