@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-atlas/lapack-atlas-3.6.0.ebuild,v 1.13 2004/09/12 20:49:41 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-atlas/lapack-atlas-3.6.0.ebuild,v 1.14 2004/11/01 00:58:15 ribosome Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic toolchain-funcs
 
 DESCRIPTION="Full LAPACK implementation using available ATLAS routines"
 HOMEPAGE="http://math-atlas.sourceforge.net/"
@@ -90,22 +90,20 @@ atlas_fail() {
 }
 
 src_compile() {
-	GCC="gcc"
-
 	cd ${S}
 	if [ -n "${interactive}" ]
 	then
 		echo "${interactive}"
-		make config CC="${GCC} -DUSE_LIBTOOL -DINTERACTIVE" || die
+		make config CC="$(tc-getCC) -DUSE_LIBTOOL -DINTERACTIVE" || die
 	else
 		# Use ATLAS defaults for all questions:
-		(echo | make config CC="${GCC} -DUSE_LIBTOOL") || atlas_fail
+		(echo | make config CC="$(tc-getCC) -DUSE_LIBTOOL") || atlas_fail
 	fi
 
 	TMPSTR=$(ls Make.Linux*)
 	ATLAS_ARCH=${TMPSTR#'Make.'}
 
-	CC="libtool --mode=compile --tag=CC ${GCC} -I/usr/include/atlas"
+	CC="libtool --mode=compile --tag=CC $(tc-getCC) -I/usr/include/atlas"
 
 	cd ${S}/src/lapack/${ATLAS_ARCH}
 	make lib CC="${CC}" || die
@@ -149,7 +147,7 @@ src_compile() {
 		ar cru liblapack.a *.o
 		ranlib liblapack.a
 	else
-		libtool --mode=link --tag=CC ${GCC} -o liblapack.la *.lo \
+		libtool --mode=link --tag=CC $(tc-getCC) -o liblapack.la *.lo \
 			-rpath ${RPATH} -lblas -lcblas -latlas -lg2c
 	fi
 }

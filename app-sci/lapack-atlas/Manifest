@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d7273fde4d4904b2cc060659da55bc6f ChangeLog 2099
-MD5 2749b4830b01bc6c558cc9c9d682bc9d lapack-atlas-3.6.0.ebuild 4954
+MD5 d795305a6b3244afbd3983d7366c457d lapack-atlas-3.6.0.ebuild 4977
+MD5 89652ab963cb1da9ab02bc6365ad9318 ChangeLog 2233
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
+MD5 13d26350d75e6993f1b3ec48ca97f14e files/war 545
 MD5 b3d716baf0a71dd55ce358d086e4069b files/digest-lapack-atlas-3.6.0 335
 MD5 1b77dbffbf246309e6e97c77b64735fd files/f77-ATLAS 408
-MD5 13d26350d75e6993f1b3ec48ca97f14e files/war 545
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBXsY6I1lqEGTUzyQRAgBmAKCEtTSwT4IoXFRT81gYCkpvYq9YwgCglud9
-OwLLBRkuj3edDfL4RFSPojE=
-=LhJt
------END PGP SIGNATURE-----

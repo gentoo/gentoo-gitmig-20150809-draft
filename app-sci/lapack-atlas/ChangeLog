@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/lapack-atlas
 # Copyright 2004-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-atlas/ChangeLog,v 1.15 2004/10/02 15:16:04 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-atlas/ChangeLog,v 1.16 2004/11/01 00:58:15 ribosome Exp $
+
+  31 Oct 2004; Olivier Fisette <ribosome@gentoo.org> lapack-atlas-3.6.0.ebuild:
+  Use tc-getCC from toolchain-funcs rather than $CC.
 
   12 Sep 2004; Danny van Dyk <kugelfang@gentoo.org> lapack-atlas-3.6.0.ebuild:
   Marked stable on amd64.
