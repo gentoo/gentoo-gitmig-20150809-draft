@@ -1,6 +1,11 @@
 # ChangeLog for www-servers/tomcat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.16 2005/02/13 19:52:06 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.17 2005/03/06 13:36:38 luckyduck Exp $
+
+  06 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  files/5.0.28/scripts.patch:
+  added log4j to classpath in catalina.sh, fixes #84206. thanks to Santiago Gala
+  <sgala@apache.org> for the report and the fix.
 
   13 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org>
   files/5.0.28/build.xml-02.patch, files/5.0.28/gentoo.diff,

@@ -6,7 +6,7 @@ diff -uprN ../jakarta-tomcat-5.0.28-src.orig/jakarta-tomcat-catalina/catalina/sr
    CLASSPATH="$CLASSPATH":"$JSSE_HOME"/lib/jcert.jar:"$JSSE_HOME"/lib/jnet.jar:"$JSSE_HOME"/lib/jsse.jar
  fi
 -CLASSPATH="$CLASSPATH":"$CATALINA_HOME"/bin/bootstrap.jar:"$CATALINA_HOME"/bin/commons-logging-api.jar
-+CLASSPATH="$CLASSPATH":"$CATALINA_HOME"/bin/bootstrap.jar:`java-config -p commons-logging`
++CLASSPATH="$CLASSPATH":"$CATALINA_HOME"/bin/bootstrap.jar:`java-config -p commons-logging`:`java-config -p log4j`
  
  if [ -z "$CATALINA_BASE" ] ; then
    CATALINA_BASE="$CATALINA_HOME"
