@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.188 2004/07/30 21:39:04 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.189 2004/07/31 06:17:52 chriswhite Exp $
+
+  31 Jul 2004; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre5-r2.ebuild:
+  Took pre5-r2 down to unstable.  See Bug #55456 for more information.
 
   30 Jul 2004; Bryan Østergaard <kloeri@gentoo.org>
   mplayer-1.0_pre4-r7.ebuild:
@@ -9,6 +12,9 @@
   30 Jul 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   mplayer-1.0_pre5-r2.ebuild:
   Stable on sparc wrt #55456
+
+  31 Jul 2004; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre5-r2.ebuild:
+  Took pre5-r2 down to unstable.  See Bug #55456 for more information.
 
   30 Jul 2004; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre5-r2.ebuild:
   Added einfo about the network USE flag. This enables/disables streaming and is
