@@ -85,7 +85,9 @@ sys-libs/gdbm
 sys-libs/glibc  
 sys-libs/gpm    
 sys-libs/ncurses     
-sys-libs/nss-db 
+# Removed since it's really no need for this to be default, and it together 
+# with defaulting to db in /etc/nsswitch.conf breaks evolution >= 0.11.
+# sys-libs/nss-db 
 sys-libs/pam     
 sys-libs/pwdb      
 sys-libs/readline  
