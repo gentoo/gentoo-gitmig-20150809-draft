@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libdockapp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/ChangeLog,v 1.8 2004/04/17 23:02:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libdockapp/ChangeLog,v 1.9 2004/04/25 20:25:42 spyderous Exp $
+
+  25 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  libdockapp-0.4.0-r1.ebuild, libdockapp-0.4.0.ebuild:
+  Change x11-base/xfree dependency to virtual/x11 (#48918).
 
   17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> libdockapp-0.4.0-r1.ebuild:
   Removed S.
