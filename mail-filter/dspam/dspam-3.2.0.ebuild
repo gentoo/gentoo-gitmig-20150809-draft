@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.2.0.ebuild,v 1.4 2004/11/04 16:33:44 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.2.0.ebuild,v 1.5 2004/11/05 15:48:13 st_lim Exp $
 
 inherit eutils
 
@@ -124,7 +124,6 @@ src_compile() {
 	elif use sqlite ; then
 		myconf="${myconf} --with-storage-driver=sqlite_drv"
 		myconf="${myconf} --enable-virtual-users"
-		myconf="${myconf} --enable-preferences-extension"
 
 	else
 		myconf="${myconf} --with-storage-driver=libdb4_drv"

@@ -1,6 +1,12 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.23 2004/11/04 16:33:44 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.24 2004/11/05 15:48:13 st_lim Exp $
+
+*dspam-3.2.1 (05 Nov 2004)
+
+  05 Nov 2004; Lim Swee Tat <st_lim@gentoo.org> dspam-3.2.0.ebuild,
+  dspam-3.2.1.ebuild:
+  Fixing bug #68526, removed preferences-extension from sqlite
 
   02 Nov 2004; Lim Swee Tat <st_lim@gentoo.org> -dspam-3.1.0.ebuild,
   -dspam-3.1.1.ebuild, -dspam-3.2_rc3.ebuild:
