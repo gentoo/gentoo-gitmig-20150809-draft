@@ -2271,3 +2271,14 @@ diff -urp linux-2.6.10/include/linux/usb_ch9.h linux-2.6.10-gentoo/include/linux
  
  /*-------------------------------------------------------------------------*/
  
+diff -urp linux-2.6.10/include/linux/if_ppp.h linux-2.6.10-gentoo/include/linux/if_ppp.h
+--- linux-2.6.10/include/linux/if_ppp.h	2005-02-25 00:19:05.000000000 +0000
++++ linux-2.6.10-gentoo/include/linux/if_ppp.h	2005-03-06 18:22:18.483422888 +0000
+@@ -34,6 +34,7 @@
+ 
+ #ifndef _IF_PPP_H_
+ #define _IF_PPP_H_
++#include <linux/types.h>
+ 
+ /*
+  * Packet sizes
