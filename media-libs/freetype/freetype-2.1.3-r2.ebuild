@@ -1,15 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.3-r2.ebuild,v 1.17 2004/07/01 07:55:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.3-r2.ebuild,v 1.18 2004/07/14 19:35:41 agriffis Exp $
 
-IUSE="doc"
+IUSE="doc smooth"
 
 inherit eutils flag-o-matic gcc
 
 FT_SMOOTH_VER="20021210"
 
 SPV="`echo ${PV} | cut -d. -f1,2`"
-S="${WORKDIR}/${P}"
 DESCRIPTION="A high-quality and portable font engine"
 SRC_URI="mirror://sourceforge/freetype/${P}.tar.bz2
 	doc? ( mirror://sourceforge/${PN}/ftdocs-${PV}.tar.bz2 )
