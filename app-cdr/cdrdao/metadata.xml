@@ -7,5 +7,5 @@
   <name>Lars Weiler</name>
   <description>Testing on x86 and ppc with SCSI and ATAPI writers.</description>
 </maintainer>
-<longdescription>CD command line recording, ripping and copiing tool.</longdescription>
+<longdescription>CD command line recording, ripping and copying tool.</longdescription>
 </pkgmetadata>
