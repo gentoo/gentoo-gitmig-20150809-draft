@@ -1,12 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/jakarta/jakarta-3.1-r1.ebuild,v 1.1 2000/08/10 01:53:39 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/jakarta/jakarta-3.1-r1.ebuild,v 1.2 2000/08/16 04:38:21 drobbins Exp $
 
 P=jakarta-3.1
 A="jakarta-tomcat.tar.gz jakarta-ant.tar.gz"
 S=${WORKDIR}
-CATEGORY="net-www"
 DESCRIPTION="Apache Servlet Engine"
 SRC_URI="http://jakarta.apache.org/builds/tomcat/release/v3.1/src/jakarta-tomcat.tar.gz
 	 http://jakarta.apache.org/builds/tomcat/release/v3.1/src/jakarta-ant.tar.gz"

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/lynx-2.8.3-r1.ebuild,v 1.1 2000/08/10 01:53:39 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/lynx-2.8.3-r1.ebuild,v 1.2 2000/08/16 04:38:21 drobbins Exp $
 
 # NOW HAS SSLeay Support (so it will use the SSLeay library if found to
 # do SSL connections :)
@@ -9,7 +9,6 @@
 P=lynx-2.8.3
 A="lynx-2.8.3.tar.gz lynx-283-ssl.patch.gz"
 S=${WORKDIR}/lynx-2.8.3.rel1
-CATEGORY="net-www"
 SRC_URI="ftp://lynx.isc.org/lynx-2.8.3/lynx-2.8.3.tar.gz
 	 http://www.moxienet.com/lynx/lynx-283-ssl.patch.gz"
 

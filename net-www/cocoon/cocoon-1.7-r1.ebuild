@@ -1,12 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/cocoon/cocoon-1.7-r1.ebuild,v 1.1 2000/08/10 01:53:39 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/cocoon/cocoon-1.7-r1.ebuild,v 1.2 2000/08/16 04:38:21 drobbins Exp $
 
 P=cocoon-1.7
 A=Cocoon-1.7.tar.gz
 S=${WORKDIR}/${P}
-CATEGORY="net-www"
 DESCRIPTION="A Web Publishing Framework for Apache"
 SRC_URI="http://xml.apache.org/cocoon/dist/"${A}
 HOMEPAGE="http://xml.apache.org/cocoon/"
