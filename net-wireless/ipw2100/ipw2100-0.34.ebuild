@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-0.33.ebuild,v 1.1 2004/03/17 03:21:07 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-0.34.ebuild,v 1.1 2004/03/18 02:35:31 latexer Exp $
 
 inherit kernel-mod eutils
 
@@ -19,14 +19,22 @@ KEYWORDS="~x86"
 
 IUSE=""
 DEPEND=""
+RDEPEND=">=sys-apps/hotplug-20030805-r2"
 
 src_unpack() {
+	if ! egrep "^CONFIG_FW_LOADER=[ym]" ${ROOT}/usr/src/linux/.config >/dev/null
+	then
+		eerror ""
+		eerror "New versions of ${PN} require firmware loader support from"
+		eerror "your kernel. This can be found in Device Drivers --> Generic"
+		eerror "Driver Support on 2.6 or in Library Routines on 2.4 kernels."
+		die "Firmware loading support not detected."
+	fi
+
 	unpack ${A}
 	kernel-mod_getversion
-
-	cd ${S}
-	epatch ${FILESDIR}/${P}-makefile-fix.diff
 }
+
 src_compile() {
 	unset ARCH
 	emake KSRC=${ROOT}/usr/src/linux all || die
@@ -47,7 +55,7 @@ src_install() {
 	doins ipw2100.${KV_OBJ}
 	doins av5100.${KV_OBJ}
 
-	insinto /etc/firmware
+	insinto /usr/lib/hotplug/firmware
 	doins ${WORKDIR}/${PN}-${FW_VERSION}.fw
 	doins ${WORKDIR}/LICENSE
 }
