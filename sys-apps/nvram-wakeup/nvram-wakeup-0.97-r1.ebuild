@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/nvram-wakeup/nvram-wakeup-0.97.ebuild,v 1.1 2004/10/08 04:03:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/nvram-wakeup/nvram-wakeup-0.97-r1.ebuild,v 1.1 2005/03/12 22:33:15 vapier Exp $
 
 inherit flag-o-matic
 
@@ -11,24 +11,36 @@ SRC_URI="mirror://sourceforge/nvram-wakeup/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE=""
+IUSE="nls"
+
+DEPEND="nls? ( sys-devel/gettext )"
+RDEPEND=""
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
+	use nls || epatch "${FILESDIR}"/${P}-nonls.patch
 	# Need to be careful with CFLAGS since this could eat your bios
 	strip-flags
 	sed -i \
-		-e "s:-O2 -Wall -Wstrict-prototypes -g -mcpu=i686:${CFLAGS} -g:" \
+		-e "s:-O2 -Wall -Wstrict-prototypes -g -mcpu=i686:${CFLAGS}:" \
 		Makefile || die "setting CFLAGS"
 }
 
 src_install() {
 	make \
-		prefix=${D}/usr \
-		MANDIR=${D}/usr/share/man \
-		DOCDIR=${D}/usr/share/doc/${PF} \
+		prefix="${D}"/usr \
+		MANDIR="${D}"/usr/share/man \
+		DOCDIR="${D}"/usr/share/doc/${PF} \
 		install || die
+
+	dodoc "${D}"/usr/bin/vdrshutdown
+	rm -f "${D}"/usr/bin/vdrshutdown
+	dodoc set_timer
+
+	rm -f "${D}"/usr/sbin/time
+	rm -f "${D}"/usr/share/man/man*/time.8*
+
 	prepalldocs
 }
 

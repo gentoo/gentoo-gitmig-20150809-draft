@@ -1,14 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 564977d5bcd3d9948a52faa87ffabbdd nvram-wakeup-0.97.ebuild 1501
-MD5 1df7dd2a4d6edb67648007e88bf0c19b ChangeLog 381
+MD5 d6845e0be200fb54821b0aead24a53a9 ChangeLog 612
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 e2dd22a894561858f4bac2dc63c0104e files/digest-nvram-wakeup-0.97 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBZhGwHTu7gpaalycRAqEOAKCoS7wCsLL0a1goqWFsBIOWjO+1lgCfUOUe
-CkuMAd88uVfHwICmHkLf+v4=
-=4SeQ
------END PGP SIGNATURE-----
+MD5 07b2a3215271ddf2d7915c70b4101904 nvram-wakeup-0.97-r1.ebuild 1767
+MD5 1ac2b7a57e30cd14a35e95d131b312ee files/nvram-wakeup-0.97-nonls.patch 672
+MD5 e2dd22a894561858f4bac2dc63c0104e files/digest-nvram-wakeup-0.97-r1 69
