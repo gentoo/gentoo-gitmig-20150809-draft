@@ -2,8 +2,8 @@ MD5 674d71c150a166a3b7e9cbae0469e653 openoffice-1.1.0-r2.ebuild 19974
 MD5 c0a6d36a7529f0a22bae30399b11bc5d openoffice-1.0.3-r1.ebuild 21888
 MD5 b9784ec8b39fd6b0f6f7c27a8eb77da5 openoffice-1.1.0-r1.ebuild 19871
 MD5 f077d92e54b1d2ca2b657c9c1b04471d openoffice-1.1.0.ebuild 19836
-MD5 e1f33e1256569bf886d6721f7faed926 openoffice-1.1.0-r3.ebuild 20081
-MD5 4b76ac55f79c522715389a9fbc7ccf86 ChangeLog 11655
+MD5 9eafaaaea21af4fe9fde9566f78ee789 openoffice-1.1.0-r3.ebuild 20079
+MD5 ed71e68a611e21a0bee611455dccfbc1 ChangeLog 11986
 MD5 e3ec4a70395943b59adad7fc4f0538d7 metadata.xml 461
 MD5 9d1828c128b70f1612c0c31b69719a26 files/digest-openoffice-1.1.0 195
 MD5 b1ec8fd75e9b93ccf4a4f0c926de5199 files/digest-openoffice-1.0.3-r1 330
