@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/quake3
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/ChangeLog,v 1.4 2003/10/05 02:23:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/ChangeLog,v 1.5 2003/12/06 15:06:15 wolf31o2 Exp $
+
+*quake3-1.32b-r3 (06 Dec 2003)
+
+  06 Dec 2003; Chris Gianelloni <wolf31o2@gentoo.org> quake3-1.32b-r3.ebuild:
+  Bumped version to newest revision.  Closing Bug #35178.
 
   05 Aug 2003; Chris Gianelloni <wolf31o2@gentoo.org> quake3-1.32b.ebuild:
   Updated to use games user, make a desktop entry, and added to description
