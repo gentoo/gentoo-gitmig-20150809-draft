@@ -1,0 +1,25 @@
+# ChangeLog for sys-apps/tw_cli
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/tw_cli/ChangeLog,v 1.1 2005/03/05 22:48:50 ciaranm Exp $
+
+*tw_cli-2.00.00.032b (05 Mar 2005)
+
+  05 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> +metadata.xml,
+  +tw_cli-2.00.00.032b.ebuild, +tw_cli-2.00.00.042.ebuild:
+  Moved from sys-apps/tw_cli to sys-block/tw_cli.
+
+*tw_cli-2.00.00.032b (20 Feb 2005)
+
+  20 Feb 2005; Robin H. Johnson <robbat2@gentoo.org>
+  +tw_cli-2.00.00.032b.ebuild, +tw_cli-2.00.00.042.ebuild,
+  -tw_cli-7.7.1.ebuild:
+  Change version scheme at request of upstream. Add in the current upstream
+  experimental, which is needed for any modern 2.6 kernel actually.
+
+*tw_cli-7.7.1 (09 Feb 2005)
+
+  09 Feb 2005; Robin H. Johnson <robbat2@gentoo.org> +metadata.xml,
+  +tw_cli-7.7.1.ebuild:
+  Initial commit. Based on ebuild submission by Joshua Schmidlkofer
+  <menion@asylumwear.com>.
+
