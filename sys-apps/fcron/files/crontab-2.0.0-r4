@@ -1,0 +1,19 @@
+# /etc/crontab
+#
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/files/crontab-2.0.0-r4,v 1.1 2003/11/19 06:44:55 prez Exp $
+
+# fcron || dcron:
+# This is NOT the system crontab! fcron and dcron do not support a system crontab.
+# to get /etc/cron.{hourly|daily|weekly|montly} working with fcron or dcron do
+# crontab /etc/crontab
+# as root.
+# NOTE: This will REPLACE root's current crontab!!
+# 20 Apr 2002; Thilo Bangert <bangert@gentoo.org>
+
+# check scripts in cron.hourly, cron.daily, cron.weekly and cron.monthly
+
+0 *  * * *      rm -f /var/spool/cron/lastrun/cron.hourly
+0 0  * * *      rm -f /var/spool/cron/lastrun/cron.daily
+0 0  * * 6      rm -f /var/spool/cron/lastrun/cron.weekly
+0 0  1 * *      rm -f /var/spool/cron/lastrun/cron.monthly
+* * * * *       /usr/bin/test -x /usr/sbin/run-crons && /usr/sbin/run-crons 
