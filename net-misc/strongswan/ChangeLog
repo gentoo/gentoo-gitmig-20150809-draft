@@ -1,6 +1,9 @@
-# ChangeLog for net-misc/openswan
+# ChangeLog for net-misc/strongswan
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.13 2004/08/31 18:15:42 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/strongswan/ChangeLog,v 1.14 2004/09/05 08:14:51 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
 *strongswan-2.2.0 (31 Aug 2004)
 

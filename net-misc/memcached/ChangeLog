@@ -1,6 +1,9 @@
-# ChangeLog for net-www/memcached
+# ChangeLog for net-misc/memcached
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/ChangeLog,v 1.3 2004/08/22 22:35:53 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/memcached/ChangeLog,v 1.4 2004/09/05 08:13:21 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
   22 Aug 2004; Lisa Seelye <lisa@gentoo.org> -memcached-1.1.10.ebuild,
   memcached-1.1.11.ebuild, -memcached-1.1.9.ebuild:

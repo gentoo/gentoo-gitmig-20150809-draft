@@ -1,6 +1,9 @@
-# ChangeLog for net-misc/dhcp-agent 
+# ChangeLog for net-misc/dhcp-agent
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp-agent/ChangeLog,v 1.4 2004/06/24 23:41:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp-agent/ChangeLog,v 1.5 2004/09/05 08:11:09 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
   24 Mar 2004; Jason Wever <weeve@gentoo.org> dhcp-agent-0.37.ebuild:
   Added ~sparc keyword.

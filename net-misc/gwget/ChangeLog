@@ -1,6 +1,9 @@
-# ChangeLog for net-misc/gwget2
+# ChangeLog for net-misc/gwget
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/ChangeLog,v 1.1 2004/08/23 09:15:41 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gwget/ChangeLog,v 1.2 2004/09/05 08:12:34 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
 *gwget-0.6 (23 Aug 2004)
 

@@ -1,6 +1,9 @@
-# ChangeLog for net-misc/fsh 
+# ChangeLog for net-misc/fsh
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/fsh/ChangeLog,v 1.5 2004/07/13 21:19:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/fsh/ChangeLog,v 1.6 2004/09/05 08:11:49 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
   13 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> fsh-1.2-r1.ebuild,
   -fsh-1.2.ebuild:
