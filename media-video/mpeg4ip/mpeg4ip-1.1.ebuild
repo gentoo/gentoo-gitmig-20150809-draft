@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.1.ebuild,v 1.11 2005/01/04 03:05:51 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.1.ebuild,v 1.12 2005/01/17 19:17:00 tester Exp $
 
 inherit eutils
 
@@ -18,10 +18,7 @@ KEYWORDS="x86 amd64"
 
 IUSE="ipv6 mmx gtk v4l2 xvid nas alsa esd arts"
 
-RDEPEND="sys-devel/libtool
-	sys-devel/autoconf
-	sys-devel/automake
-	>=media-libs/faac-1.20.1
+RDEPEND=">=media-libs/faac-1.20.1
 	>=media-sound/lame-3.92
 	gtk? ( >=x11-libs/gtk+-2 )
 	media-libs/libid3tag
@@ -32,6 +29,9 @@ RDEPEND="sys-devel/libtool
 	esd? ( media-sound/esound )"
 
 DEPEND="${RDEPEND}
+	sys-devel/libtool
+	sys-devel/autoconf
+	sys-devel/automake
 	x86? ( mmx? ( >=dev-lang/nasm-0.98.19 ) )"
 
 src_unpack() {

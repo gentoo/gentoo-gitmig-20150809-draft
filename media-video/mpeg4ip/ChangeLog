@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mpeg4ip
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.20 2005/01/06 20:11:21 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.21 2005/01/17 19:17:00 tester Exp $
+
+  17 Jan 2005; Olivier Crête <tester@gentoo.org> :
+  Moved libtool/autoconf/automake to DEPEND
 
   06 Jan 2005; Olivier Crête <tester@gentoo.org> mpeg4ip-1.2.ebuild:
   enable-v4l2 now works ok too

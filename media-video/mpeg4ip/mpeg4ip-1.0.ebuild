@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.0.ebuild,v 1.9 2005/01/04 03:05:51 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/mpeg4ip-1.0.ebuild,v 1.10 2005/01/17 19:17:00 tester Exp $
 
 DESCRIPTION="MPEG 4 implementation library"
 
@@ -17,15 +17,19 @@ KEYWORDS="x86 -amd64"
 
 IUSE="ipv6 mmx gtk"
 
-DEPEND="sys-devel/libtool
-		sys-devel/autoconf
-		sys-devel/automake
-		media-libs/faac
-		>=media-sound/lame-3.92
-		gtk? ( >=x11-libs/gtk+-2 )
-		mmx? ( >=dev-lang/nasm-0.98.19 )
-		media-video/ffmpeg
-		!media-libs/faad2"
+
+RDEPEND="media-libs/faac
+	>=media-sound/lame-3.92
+	gtk? ( >=x11-libs/gtk+-2 )
+	mmx? ( >=dev-lang/nasm-0.98.19 )
+	media-video/ffmpeg
+	!media-libs/faad2"
+
+DEPEND="${RDEPEND}
+	sys-devel/libtool
+	sys-devel/autoconf
+	sys-devel/automake"
+
 
 src_unpack() {
 	unpack ${A}
