@@ -1,0 +1,8 @@
+diff -ruN wvstreams-3.74.0/vars.mk wvstreams-3.74.0.fix/vars.mk
+--- wvstreams-3.74.0/vars.mk	2003-11-14 16:09:07.000000000 -0500
++++ wvstreams-3.74.0.fix/vars.mk	2003-11-20 00:07:53.000000000 -0500
+@@ -183,3 +183,4 @@
+ libwvutils.a libwvutils.so: $(call objects,utils)
+ libwvutils.so: -lz -lcrypt
+ 
++uniconf/daemon/uniconfdaemon: libuniconf.so libwvutils.so -ldb

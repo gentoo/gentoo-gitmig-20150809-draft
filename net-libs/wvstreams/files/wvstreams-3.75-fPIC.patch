@@ -1,0 +1,31 @@
+--- wvrules.mk	2004-03-30 11:06:53.678390208 +0000
++++ wvrules.mk	2004-03-30 11:07:24.470786433 +0000
+@@ -98,8 +98,8 @@
+ 
+ # macros that expand to the object files in the given directories
+ objects=$(sort $(foreach type,c cc,$(call objects_$(type),$1)))
+-objects_c=$(patsubst %.c,%.o,$(wildcard $(addsuffix /*.c,$1)))
+-objects_cc=$(patsubst %.cc,%.o,$(wildcard $(addsuffix /*.cc,$1)))
++objects_c=$(patsubst %.c,%.fpic.o,$(wildcard $(addsuffix /*.c,$1)))
++objects_cc=$(patsubst %.cc,%.fpic.o,$(wildcard $(addsuffix /*.cc,$1)))
+ 
+ # we need a default rule, since the 'includes' below causes trouble
+ .PHONY: default all
+@@ -225,7 +225,7 @@
+ %.E: %.cc;	$(call wvcxx,$@,$<,$*,,-E)
+ %.E: %.cpp;	$(call wvcxx,$@,$<,$*,,-E)
+ 
+-%.moc: %.h;	moc -o $@ $<
++%.moc: %.h;	moc $< -o $@
+ 
+ ../%.so:;	@echo "Shared library $@ does not exist!"; exit 1
+ ../%.a:;	@echo "Library $@ does not exist!"; exit 1
+--- qt/rules.mk	2004-03-30 11:49:37.765484752 +0000
++++ qt/rules.mk	2004-03-30 11:49:45.994461367 +0000
+@@ -1,4 +1,4 @@
+ 
+-qt/wvqtstreamclone.o: include/wvqtstreamclone.moc
+-qt/wvqthook.o: include/wvqthook.moc
++qt/wvqtstreamclone.fpic.o: include/wvqtstreamclone.moc
++qt/wvqthook.fpic.o: include/wvqthook.moc
+ 
