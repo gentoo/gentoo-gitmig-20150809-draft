@@ -20,9 +20,7 @@ icc
 icc-pgo
 mmx
 mmx2
-mzscheme
 oss
-qdbm
 selinux
 solid
 sse
@@ -46,6 +44,8 @@ jack-tmpfs
 kde
 mikmod
 mono
+mzscheme
+qdbm
 socks5
 xmms
 
