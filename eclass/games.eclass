@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.46 2003/08/01 02:04:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.47 2003/08/05 01:55:40 vapier Exp $
 #
 # devlist: {vapier,wolf31o2,msterret}@gentoo.org
 #
@@ -91,6 +91,7 @@ prepgamesdirs() {
 			find ${D}/${dir} -type f -print0 | xargs --null chmod o-rwx,g+r
 		) >& /dev/null
 	done
+	chmod 750 ${GAMES_BINDIR}/* >& /dev/null
 }
 
 gamesenv() {
