@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/dosbox-cvs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox-cvs/ChangeLog,v 1.8 2004/07/01 11:13:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox-cvs/ChangeLog,v 1.9 2004/07/26 05:56:46 mr_bones_ Exp $
+
+  25 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  dosbox-cvs-20030809.ebuild:
+  add a warning for people using ati-drivers (bug #57188)
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   dosbox-cvs-20030809.ebuild:

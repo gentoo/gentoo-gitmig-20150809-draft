@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox-cvs/dosbox-cvs-20030809.ebuild,v 1.9 2004/07/01 11:13:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox-cvs/dosbox-cvs-20030809.ebuild,v 1.10 2004/07/26 05:56:46 mr_bones_ Exp $
 
 inherit games cvs
 
@@ -44,4 +44,12 @@ src_install() {
 	make DESTDIR=${D} install || die "make install failed"
 	dodoc AUTHORS ChangeLog INSTALL NEWS README THANKS
 	prepgamesdirs
+}
+
+pkg_postinst() {
+	games_pkg_postinst
+	echo
+	einfo "If you're using ati-drivers, you may need to use output=overlay"
+	einfo "in the dosbox config file (see bug #57188)."
+	echo
 }
