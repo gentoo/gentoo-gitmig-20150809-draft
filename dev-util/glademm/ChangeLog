@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/glademm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glademm/ChangeLog,v 1.14 2003/10/02 15:46:39 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glademm/ChangeLog,v 1.15 2003/11/12 22:01:39 lu_zero Exp $
+
+  12 Nov 2003; Luca Barbato <lu_zero@gentoo.org> glademm-2.0.0.ebuild:
+  Marked ~ppc
 
   02 Oct 2003; Joshua Kinard <kumba@gentoo.org> glademm-2.0.0.ebuild:
   Added a patch that fixes a missing <cassert> include that allows glademm to

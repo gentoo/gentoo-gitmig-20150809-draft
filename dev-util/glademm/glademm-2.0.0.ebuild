@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glademm/glademm-2.0.0.ebuild,v 1.4 2003/10/02 15:46:39 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glademm/glademm-2.0.0.ebuild,v 1.5 2003/11/12 22:01:39 lu_zero Exp $
 
 inherit gnome2
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://home.wtal.de/petig/Gtk/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="x86 ~sparc ~ppc"
 
 DEPEND="virtual/glibc"
 
