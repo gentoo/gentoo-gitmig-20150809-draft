@@ -1,6 +1,11 @@
 # ChangeLog for app-benchmarks/siege
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/ChangeLog,v 1.5 2003/10/20 23:17:54 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/ChangeLog,v 1.6 2003/12/23 09:19:22 pyrania Exp $
+
+*siege-2.58 (23 Dec 2003)
+
+  23 Dec 2003; Markus Nigbur <pyrania@gentoo.org> siege-2.58.ebuild:
+  Version bump. Thanks to Brian O'Kelley (bug #35963)
 
   21 Oct 2003; Markus Nigbur <pyrania@gentoo.org> siege-2.55.ebuild:
   Another openssl fix.
