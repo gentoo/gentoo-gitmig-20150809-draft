@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.142 2004/06/03 23:43:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.143 2004/06/10 12:08:04 caleb Exp $
+
+*kdelibs-3.2.3 (10 Jun 2004)
+
+  10 Jun 2004; Caleb Tennis <caleb@gentoo.org> +kdelibs-3.2.3.ebuild:
+  Version bump
 
   03 Jun 2004; Aron Griffis <agriffis@gentoo.org> kdelibs-3.2.0.ebuild:
   Fix use invocation
