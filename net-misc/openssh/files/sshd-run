@@ -1,7 +1,0 @@
-#!/bin/sh
-if [ ! -e /var/run/sshd.pid ]
-then
-	/usr/sbin/sshd
-	sleep 2
-fi
-exec envuidgid daemon /usr/bin/watchpid `cat /var/run/sshd.pid`
