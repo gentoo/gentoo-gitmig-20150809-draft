@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r4.ebuild,v 1.2 2003/09/12 11:35:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r4.ebuild,v 1.3 2003/09/13 17:47:31 seemant Exp $
 
 inherit eutils
 
 IUSE="nls build acl selinux"
 
-PATCH_VER=1.5
+PATCH_VER=1.6
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Standard GNU file utilities (chmod, cp, dd, dir, ls...), text utilities (sort, tr, head, wc..), and shell utilities (whoami, who,...)"
@@ -22,6 +22,7 @@ KEYWORDS="~x86 ~amd64 ~ppc ~sparc alpha hppa ~arm ~mips"
 DEPEND="virtual/glibc
 	>=sys-apps/portage-2.0.49
 	nls? ( sys-devel/gettext )
+	acl? ( sys-apps/acl )
 	selinux? ( >=sys-apps/selinux-small-2003011510-r2 )"
 
 PATCHDIR=${WORKDIR}/patch
@@ -48,6 +49,11 @@ src_unpack() {
 	if use acl
 	then
 		mv ${PATCHDIR}/001* ${PATCHDIR}/excluded
+		if [ -z "`use nls`" ] ; then
+			ewarn "blah"
+			mv ${PATCHDIR}/acl/004* ${PATCHDIR}/excluded
+			ewarn "heh"
+		fi
 		use selinux || EPATCH_SUFFIX="patch" epatch ${PATCHDIR}/acl
 	fi
 
@@ -67,11 +73,17 @@ src_compile() {
 	local myconf=""
 	use nls || myconf="--disable-nls"
 
+	if use acl
+	then
+		mv m4/inttypes.m4 m4/inttypes-eggert.m4
+		autoreconf --force --install || die
+	fi
+
 	econf \
 		--bindir=/bin \
 		${myconf} || die
 
-	if [ "`use static`" ]
+	if use static
 	then
 		emake LDFLAGS=-static || die
 	else
