@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/CDDB-File
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CDDB-File/ChangeLog,v 1.5 2003/07/12 10:49:57 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CDDB-File/ChangeLog,v 1.6 2004/02/27 15:55:43 mcummings Exp $
+
+  27 Feb 2004; Michael Cummings <mcummings@gentoo.org>
+  CDDB-File-1.03-r1.ebuild, CDDB-File-1.03.ebuild:
+  slot fix
 
 *CDDB-File-1.03-r1 (21 Jun 2003)
  

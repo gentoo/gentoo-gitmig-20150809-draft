@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/CDDB-File/CDDB-File-1.03.ebuild,v 1.7 2003/06/21 21:36:35 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/CDDB-File/CDDB-File-1.03.ebuild,v 1.8 2004/02/27 15:55:43 mcummings Exp $
 
 inherit perl-module
 
@@ -12,6 +12,5 @@ HOMEPAGE="http://search.cpan.org/author/TMTM/CDDB-File-${PV}/"
 DEPEND="${DEPEND}
 	dev-perl/Test-Simple"
 
-SLOT="2"
 LICENSE="Artistic | GPL-2"
 KEYWORDS="x86 amd64 ppc alpha"
