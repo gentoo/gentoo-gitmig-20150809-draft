@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/eject-2.0.13.ebuild,v 1.15 2004/11/08 19:56:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/eject-2.0.13.ebuild,v 1.16 2005/01/25 14:22:06 kingtaco Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.ibiblio.org/pub/Linux/utils/disk-management/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
-IUSE=""
+IUSE="nls"
 
 RDEPEND="virtual/libc"
 DEPEND="${RDEPEND}
@@ -31,6 +31,11 @@ src_unpack() {
 		-e 's|-I/usr/src/linux -I/usr/src/linux|-I/usr/include|' \
 		${S}/Makefile.in \
 		|| die "sed Makefile.in failed"
+
+	if ! use nls
+		then
+		sed -i "s:SUBDIRS = po::" Makefile.in || die "sed nls failed"
+	fi
 }
 
 src_install() {
