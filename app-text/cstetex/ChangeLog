@@ -1,0 +1,11 @@
+# ChangeLog for app-text/cstetex
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/cstetex/ChangeLog,v 1.1 2003/11/12 19:51:41 usata Exp $
+
+*cstetex-2.0.2 (13 Nov 2003)
+
+  13 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> cstetex-2.0.2.ebuild,
+  metadata.xml, files/cstetex-2.0.2.diff:
+  Intial import. Ebuild submitted by Jaromir Malenko <malenko@email.cz>.
+  He did an excellent work with tetex.eclass as well. See bug #31657.
+
