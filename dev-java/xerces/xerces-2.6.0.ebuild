@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.6.0.ebuild,v 1.2 2003/12/16 02:11:31 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-2.6.0.ebuild,v 1.3 2003/12/16 03:19:37 strider Exp $
 
 inherit java-pkg eutils
 
@@ -44,3 +44,22 @@ src_install() {
 		dohtml -r build/docs/javadocs
 	fi
 }
+
+pkg_postinst() {
+	if [ -n "`use doc`" ] ; then
+		einfo "                                                          "
+		einfo " API Documentation is in /usr/share/doc/${PN}-${PV}.      "
+		einfo "                                                          "
+		einfo " Online Documentation:                                    "
+		einfo "     http://xml.apache.org/xerces2-j/api.html             "
+		einfo "                                                          "
+		sleep 5
+	else
+		einfo "                                                          "
+		einfo " Online Documentation:                                    "
+		einfo "     http://xml.apache.org/xerces2-j/api.html             "
+		einfo "                                                          "
+		sleep 5
+	fi
+}
+
