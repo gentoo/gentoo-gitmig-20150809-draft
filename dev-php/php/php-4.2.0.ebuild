@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.2.0.ebuild,v 1.6 2002/10/05 05:39:11 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.2.0.ebuild,v 1.7 2002/12/09 04:21:12 manson Exp $
 
 IUSE="xml nls flash java qt libwww crypt mysql odbc postgres pam readline ssl pdflib ldap X gdbm berkdb imap xml2"
 
@@ -10,7 +10,7 @@ DESCRIPTION="PHP embedded scripting language (Commandline Use) -
 SRC_URI="http://www.php.net/distributions/php-${PV}.tar.gz"
 HOMEPAGE="http://www.php.net/"
 SLOT="0"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 LICENSE="PHP"
 
 DEPEND=">=dev-libs/gmp-3.1.1

@@ -13,7 +13,7 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/Finance/${MY_P}.readme"
 
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 DEPEND="${DEPEND}
 		dev-perl/HTML-TableExtract"

@@ -1,7 +1,10 @@
 # ChangeLog for dev-perl/Apache-DBI
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-DBI/ChangeLog,v 1.1 2002/11/18 04:30:44 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Apache-DBI/ChangeLog,v 1.2 2002/12/09 04:21:05 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *Apache-DBI-0.89 (15 Nov 2002)
 
   15 Nov 2002; Matthew Kennedy <mkennedy@gentoo.org>

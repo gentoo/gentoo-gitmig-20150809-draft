@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpdbg/phpdbg-2.10.ebuild,v 1.4 2002/10/04 05:25:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpdbg/phpdbg-2.10.ebuild,v 1.5 2002/12/09 04:21:12 manson Exp $
 
 PL="pl3"
 S=${WORKDIR}/dbg-${PV}${PL}
@@ -12,7 +12,7 @@ LICENSE="dbgphp"
 DEPEND="virtual/php"
 
 # support ppc? or others?
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 src_compile() {
 	phpize

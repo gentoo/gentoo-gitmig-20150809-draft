@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail_Mime/PEAR-Mail_Mime-1.2.1.ebuild,v 1.3 2002/11/26 13:03:16 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-Mail_Mime/PEAR-Mail_Mime-1.2.1.ebuild,v 1.4 2002/12/09 04:21:12 manson Exp $
 
 P=${PN/PEAR-//}-${PV}
 DESCRIPTION="Provides classes to deal with creation and manipulation of mime messages."
@@ -8,7 +8,7 @@ HOMEPAGE="http://pear.php.net/package-info.php?pacid=21"
 SRC_URI="http://pear.php.net/get/${P}.tgz"
 LICENSE="PHP"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~sparc64 ~alpha"
+KEYWORDS="x86 ~ppc ~sparc  ~alpha"
 DEPEND="virtual/php"
 RDEPEND="${DEPEND}"
 S=${WORKDIR}/${P}

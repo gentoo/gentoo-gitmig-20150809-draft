@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XQL/XML-XQL-0.67.ebuild,v 1.1 2002/10/24 14:18:40 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XQL/XML-XQL-0.67.ebuild,v 1.2 2002/12/09 04:21:11 manson Exp $
 
 inherit perl-module
 
@@ -13,7 +13,7 @@ SRC_URI="http://cpan.org/modules/by-module/XML/${MY_P}.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="x86 sparc sparc64 ~ppc ~alpha"
+KEYWORDS="x86 sparc  ~ppc ~alpha"
 
 DEPEND="${DEPEND}
 	>=dev-perl/libxml-perl-0.07-r1
