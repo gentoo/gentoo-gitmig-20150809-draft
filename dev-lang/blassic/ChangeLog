@@ -1,0 +1,8 @@
+# ChangeLog for dev-lang/blassic
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/blassic/ChangeLog,v 1.1 2003/07/31 21:45:01 rphillips Exp $
+
+*blassic-0.5.4 (31 Jul 2003)
+
+  31 Jul 2003; Ryan Phillips <rphillips@gentoo.org> blassic-0.5.4.ebuild :
+  Package created by Ivan-Benjamin Garcia Tora. Fixes #20860
