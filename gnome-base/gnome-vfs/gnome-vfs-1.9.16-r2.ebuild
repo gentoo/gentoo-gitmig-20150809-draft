@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.9.16-r2.ebuild,v 1.1 2002/06/04 06:59:52 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.9.16-r2.ebuild,v 1.2 2002/06/04 08:08:00 blocke Exp $
 
 inherit gnome2
 
@@ -28,13 +28,9 @@ DEPEND="${RDEPEND}
 LIBTOOL_FIX="1"
 
 DOCS="AUTHORS COPYING* ChangeLog HACKING INSTALL NEWS README TODO"
+SCHEMAS="system_http_proxy.schemas"
 
 src_compile() {
 	gnome2_src_compile DESTDIR=${D}
-}
-
-pkg_postinst() {
-	SCHEMAS="`cat system_http_proxy.schemas`"
-	gnome2_pkg_postinst
 }
 
