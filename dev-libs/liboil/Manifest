@@ -1,5 +1,15 @@
-MD5 895a7df2a35e62a2a4c6fcb1c3c3b535 ChangeLog 584
-MD5 054155b2a17cf20e18bd852a1a484691 liboil-0.2.0.ebuild 814
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c9b93e37d10e75199bc29cccd6f11ebe liboil-0.2.0.ebuild 822
+MD5 89a0515544e10bbde098376ad8c9c32e ChangeLog 692
 MD5 daa5b5804d181bac157ac3a6939bb152 metadata.xml 221
 MD5 9224d2f16c82093310f3ec19f52c3ef3 files/digest-liboil-0.2.0 64
 MD5 5d5ac560f35118a370bed2a7a948341c files/liboil-0.2.0-altivec.patch 4732
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBnoWTZ/iYVBmujdURAkwvAJ4iCz4Y8TF8zZqBxCiEzrBlzXozlwCg9rBI
+73BvHEs+tOKr3BkNXGecCYs=
+=5zXb
+-----END PGP SIGNATURE-----
