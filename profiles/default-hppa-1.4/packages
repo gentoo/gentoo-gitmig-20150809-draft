@@ -58,7 +58,7 @@
 *sys-apps/gawk
 *sys-apps/grep
 *sys-apps/groff
-*virutal/bootloader
+*virtual/bootloader
 *sys-apps/gzip
 *sys-apps/hdparm
 *sys-apps/less
