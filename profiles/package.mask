@@ -31,11 +31,6 @@
 # Masked for testing.
 =net-mail/procmail-3.22-r3
 
-
-# <phoenix@gentoo.org> 26 Jul 20002
-# Masking new xfsprogs for testing
-=sys-apps/xfsprogs-20020330-r1
-
 # <spider@gentoo.org> 16 Jul 2002
 # Masking this out due to feature incompleteness
 dev-libs/libmrproject
