@@ -71,10 +71,6 @@ media-video/realone
 >=net-mail/evolution-1.1.90
 >=gnome-extra/gtkhtml-1.1.4
 
-# <azarah@gentoo.org> (09 Nov 2002)
-# author say its borked
->=app-admin/usermin-0.970
-
 # <hannes@gentoo.org> (04 Nov 2002)
 # kde 3.1 rc2: masked permanently
 ~x11-libs/qt-3.1.0_pre20021104
