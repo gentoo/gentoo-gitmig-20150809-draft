@@ -1,10 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-base/xfce4-base-4.0.3.ebuild,v 1.1 2004/01/09 05:35:53 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4-base/xfce4-base-4.0.3.ebuild,v 1.2 2004/04/17 21:17:04 aliz Exp $
 
 IUSE=""
-S=${WORKDIR}/${P}
-
 DESCRIPTION="XFCE4, a lightweight Desktop Environment"
 HOMEPAGE="http://www.xfce.org/"
 

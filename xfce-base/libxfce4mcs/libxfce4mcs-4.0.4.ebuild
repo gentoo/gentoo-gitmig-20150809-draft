@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4mcs/libxfce4mcs-4.0.4.ebuild,v 1.5 2004/04/05 13:18:09 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4mcs/libxfce4mcs-4.0.4.ebuild,v 1.6 2004/04/17 21:17:04 aliz Exp $
 
 IUSE="X"
-S=${WORKDIR}/${P}
-
 DESCRIPTION="Libraries for XFCE4"
 HOMEPAGE="http://www.xfce.org/"
 SRC_URI="http://www.xfce.org/archive/xfce-${PV}/src/${P}.tar.gz"

@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xffm/xffm-4.0.3.ebuild,v 1.6 2004/03/10 07:18:48 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xffm/xffm-4.0.3.ebuild,v 1.7 2004/04/17 21:17:04 aliz Exp $
 
 IUSE="samba"
-S=${WORKDIR}/${P}
-
 DESCRIPTION="Xfce4 file manager"
 HOMEPAGE="http://www.xfce.org/"
 SRC_URI="http://www.xfce.org/archive/xfce-${PV}/src/${P}.tar.gz"

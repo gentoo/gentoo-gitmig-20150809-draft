@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.0.4.ebuild,v 1.5 2004/04/05 14:09:34 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfdesktop/xfdesktop-4.0.4.ebuild,v 1.6 2004/04/17 21:17:04 aliz Exp $
 
 IUSE="X"
-S=${WORKDIR}/${P}
-
 DESCRIPTION="Xfce4 desktop"
 HOMEPAGE="http://www.xfce.org/"
 SRC_URI="http://www.xfce.org/archive/xfce-${PV}/src/${P}.tar.gz"
