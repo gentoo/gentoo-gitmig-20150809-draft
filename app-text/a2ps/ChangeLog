@@ -1,6 +1,9 @@
 # ChangeLog for app-text/a2ps
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.33 2004/08/27 18:39:08 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.34 2004/12/29 20:40:12 morfic Exp $
+
+  29 Dec 2004; Daniel Goller <morfic@gentoo.org> a2ps-4.13c-r1.ebuild:
+  Fixing what needs fixing, libtoolize --copy --force
 
 *a2ps-4.13b-r6 (28 Aug 2004)
 

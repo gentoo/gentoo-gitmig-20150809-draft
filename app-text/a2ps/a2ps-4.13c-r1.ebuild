@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c-r1.ebuild,v 1.2 2004/11/04 22:21:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c-r1.ebuild,v 1.3 2004/12/29 20:40:12 morfic Exp $
 
 inherit gnuconfig eutils
 
@@ -36,6 +36,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}-gcc34.patch
 	use cjk && epatch ${DISTDIR}/${P}-ja_nls.patch.gz
 	gnuconfig_update || die "gnuconfig_update failed"
+	libtoolize --copy --force || die "libtoolize failed"
 }
 
 src_compile() {
