@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/moinmoin/moinmoin-1.0.ebuild,v 1.3 2002/08/01 11:40:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/moinmoin/moinmoin-1.0.ebuild,v 1.4 2002/08/16 03:01:02 murphy Exp $
 
 PN0="moin"
 S=${WORKDIR}/${PN0}-${PV}
@@ -11,7 +11,7 @@ DESCRIPTION="Python WikiClone"
 
 SRC_URI="http://download.sourceforge.net/${PN0}/${PN0}-${PV}.tar.gz"
 HOMEPAGE="http://moin.sourceforge.net"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 SLOT="0"
 LICENSE="GPL-2"
 

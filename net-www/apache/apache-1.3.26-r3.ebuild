@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.26-r3.ebuild,v 1.3 2002/07/16 04:54:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.26-r3.ebuild,v 1.4 2002/08/16 03:01:01 murphy Exp $
 
 mod_ssl_ver=2.8.9-${PV}
 HARD_SERVER_LIMIT=512
@@ -23,7 +23,7 @@ DEPEND="${RDEPEND} sys-devel/perl"
 
 SLOT="1"
 LICENSE="Apache-1.1"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 
 src_unpack() {
 	local myssl

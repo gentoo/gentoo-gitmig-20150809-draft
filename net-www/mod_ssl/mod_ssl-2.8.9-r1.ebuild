@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/mod_ssl-2.8.9-r1.ebuild,v 1.3 2002/07/14 20:25:23 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/mod_ssl-2.8.9-r1.ebuild,v 1.4 2002/08/16 03:01:02 murphy Exp $
 
 MY_P=${P}-1.3.26
 
 DESCRIPTION="An SSL module for the Apache Web server"
 HOMEPAGE="http://www.modssl.org"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 S=${WORKDIR}/${MY_P}
 SRC_URI="http://www.modssl.org/source/${MY_P}.tar.gz"

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0-r3.ebuild,v 1.9 2002/08/11 20:10:37 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0-r3.ebuild,v 1.10 2002/08/16 03:01:02 murphy Exp $
 
 # NOTE: to build without the mail and news component:  export NO_MAIL="YES"
 
@@ -11,7 +11,7 @@ S=${WORKDIR}/mozilla
 DESCRIPTION="The Mozilla Web Browser"
 SRC_URI="ftp://ftp.mozilla.org/pub/mozilla/releases/${PN}${MY_PV1}/src/${PN}-source-${MY_PV1}.tar.bz2"
 HOMEPAGE="http://www.mozilla.org"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 LICENSE="MPL-1.1 | NPL-1.1"
 
 RDEPEND=">=x11-base/xfree-4.2.0-r11

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/zope/zope-2.5.1.ebuild,v 1.3 2002/08/01 11:59:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/zope/zope-2.5.1.ebuild,v 1.4 2002/08/16 03:01:02 murphy Exp $
 
 A="Zope-${PV}-src.tgz ZEO-1.0.tgz"
 S=${WORKDIR}/Zope-${PV}-src
@@ -14,7 +14,7 @@ DEPEND="virtual/glibc
 RDEPEND="${DEPEND}"
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 
 src_unpack() {
 

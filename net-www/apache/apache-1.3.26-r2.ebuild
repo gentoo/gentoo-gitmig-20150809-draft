@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.26-r2.ebuild,v 1.2 2002/07/14 20:25:23 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.26-r2.ebuild,v 1.3 2002/08/16 03:01:01 murphy Exp $
 
 mod_ssl_ver=2.8.9-${PV}
 HARD_SERVER_LIMIT=512
@@ -8,7 +8,7 @@ HARD_SERVER_LIMIT=512
 S=${WORKDIR}/apache_${PV}
 DESCRIPTION="The Apache Web Server"
 HOMEPAGE="http://www.apache.org http://www.modssl.org"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 SRC_URI="http://httpd.apache.org/dist/httpd/apache_${PV}.tar.gz
 	ftp://ftp.modssl.org/source/mod_ssl-${mod_ssl_ver}.tar.gz"
 # The mod_ssl archive is only for providing the EAPI patch in here.
