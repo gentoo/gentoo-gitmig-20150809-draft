@@ -1,6 +1,12 @@
 # ChangeLog for app-admin/mailmin
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mailmin/ChangeLog,v 1.4 2004/04/19 05:11:30 klasikahl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mailmin/ChangeLog,v 1.5 2004/04/19 07:24:56 mholzer Exp $
+
+*mailmin-0.0.1-r1 (19 Apr 2004)
+
+  19 Apr 2004; Martin Holzer <mholzer@gentoo.org> mailmin-0.0.1-r1.ebuild,
+  mailmin-0.0.1-r2.ebuild:
+  better way to use webapp-detect
 
 *mailmin-0.0.1-r2 (18 Apr 2004)
 
