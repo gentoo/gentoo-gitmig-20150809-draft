@@ -1,0 +1,2 @@
+# 2.6 kernel doesn't work on sparc yet.
+nptl
