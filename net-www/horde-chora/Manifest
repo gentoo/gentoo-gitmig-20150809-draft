@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a77593549cd8ee56da7674d1db94803f ChangeLog 1667
-MD5 d86d0ad4329945465a774bbab15d8ec0 horde-chora-1.2.2.ebuild 426
+MD5 90f115d9ab73f387d6c410805145478c horde-chora-1.2.2.ebuild 420
+MD5 ed1668667d8281d1add051e61eac4cef ChangeLog 1661
 MD5 6365671491544cf2ce501433af5f560d metadata.xml 1387
 MD5 a3cb613cce208501c004fcffe708762b files/digest-horde-chora-1.2.2 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFAzJM3HTu7gpaalycRAq6kAKCmYnAPDk5OaIVFV+SkQ0p1PGJqCQCeI5Dh
-1iYVVrZPYy7/zvv1jhI7d2o=
-=VNP/
------END PGP SIGNATURE-----

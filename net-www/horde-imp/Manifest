@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4b3d1f9959f03cbef2383dee6575d025 ChangeLog 2376
-MD5 dd2f62953fbeb517a13eb1c672bab9a8 horde-imp-3.2.4.ebuild 429
+MD5 72fd082f3c962e2edcbc276b3487379e horde-imp-3.2.4.ebuild 423
+MD5 4302e0727d1159e8d9447f4bb50ebada ChangeLog 2370
 MD5 df7b9cb8aaba349bce3d45e694e2f7a1 metadata.xml 375
 MD5 ab6319265637b2e97f326f84f3c42692 files/digest-horde-imp-3.2.4 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFAzZMSHTu7gpaalycRAhvkAKCaI2ODGv1E1pWF1zLuG2mBBGPz9gCggO1w
-z4g0N9rgHw/q0AoGWmzhM7Q=
-=buW/
------END PGP SIGNATURE-----
