@@ -3,8 +3,8 @@ Hash: SHA1
 
 MD5 a061972319122050e43c6e3c6db88a8b ChangeLog 8080
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 1fa3660c3a81c8b04f21174ffa305a9a sed-4.1.2.ebuild 1784
-MD5 f43ec14cdbc4c750e782a9cf49f07309 sed-4.0.9.ebuild 1779
+MD5 acfa8abd84130788db5507942e549596 sed-4.1.2.ebuild 1835
+MD5 8f388c6c0928f2280672d775ec595b05 sed-4.0.9.ebuild 1830
 MD5 da2101c043ce802aabb650bea031a52d files/digest-sed-4.1.2 61
 MD5 1f789b81b2d7992345e1490c68ad5477 files/dos2unix 59
 MD5 2502535e2cc93fa49d1c2fdc31eff1b2 files/unix2dos 56
@@ -12,7 +12,7 @@ MD5 a244109e1adcbd40a02446fb23df33c1 files/digest-sed-4.0.9 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBX79RHTu7gpaalycRAm5JAJ0ekEO0tow3Mt5d3smH1e8nGHemLACgmdea
-yWs/7Pvw4wRtB8BTnIaZof8=
-=TRx4
+iD8DBQFBZWbGHTu7gpaalycRAtHxAKCNONd9ZvpaAfNr4STTZd0VsJyWcgCg2Xra
+YtDHI7/V5DcR25xG/8khoyU=
+=+Xre
 -----END PGP SIGNATURE-----
