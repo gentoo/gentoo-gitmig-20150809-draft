@@ -1,5 +1,5 @@
-MD5 0de9d5f1727fdc32b4b5d97d7381d256 xmlto-0.0.15.ebuild 1132
-MD5 3b571eeb09e32d5f36671de761e61195 ChangeLog 1843
+MD5 21c7b5f7e948d68091cc67d88e47da90 xmlto-0.0.15.ebuild 1178
+MD5 028686a7443d6dbbdec4997223f9c841 ChangeLog 2030
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 1cfec32ebd5d3739c8040ed9cfb1f4ae files/digest-xmlto-0.0.15 64
 MD5 f93a45750c50ece36b816d374dde7e28 files/xmlto-0.0.15-head-fix.patch 620
