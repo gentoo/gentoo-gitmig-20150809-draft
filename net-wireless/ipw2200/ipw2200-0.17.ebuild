@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200/ipw2200-0.17.ebuild,v 1.1 2004/12/11 21:02:40 jbms Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200/ipw2200-0.17.ebuild,v 1.2 2005/01/18 10:37:27 brix Exp $
 
 inherit kernel-mod eutils
 
@@ -22,7 +22,9 @@ IUSE=""
 # module, so it is blocked.  This problem will likely be resolved
 # upstream eventually.
 DEPEND="!net-wireless/ipw2100"
-RDEPEND="!net-wireless/ipw2100 >=sys-apps/hotplug-20030805-r2"
+RDEPEND="!net-wireless/ipw2100
+		!net-wireless/ipw2200-firmware
+		>=sys-apps/hotplug-20030805-r2"
 
 src_unpack() {
 
