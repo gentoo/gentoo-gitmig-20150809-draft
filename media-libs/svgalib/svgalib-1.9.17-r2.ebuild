@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.17-r2.ebuild,v 1.2 2003/08/07 03:55:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.17-r2.ebuild,v 1.3 2003/09/06 23:59:49 msterret Exp $
 
 inherit eutils
 
@@ -41,13 +41,13 @@ src_compile() {
 	cp -a src/libvga.so.${PV} sharedlib/
 	make OPTIMIZE="${CFLAFS}" LDFLAGS='-L ../sharedlib' \
 		-C threeDKit lib3dkit.a || die "Failed to build threeDKit!"
-	
+
 	make INCLUDEDIR="/usr/src/linux/include" -C kernel/svgalib_helper \
 		clean all || die "Failed to build kernel module!"
-	
+
 	make OPTIMIZE="${CFLAGS}" LDFLAGS='-L ../sharedlib' demoprogs || \
 		die "Failed to build demoprogs!"
-	
+
 	cp Makefile Makefile.orig
 	sed -e 's/\(install: $(INSTALLAOUTLIB) \)installheaders \(.*\)/\1\2/g' \
 	 	Makefile.orig > Makefile

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.6.1-r1.ebuild,v 1.5 2003/08/12 22:30:32 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.6.1-r1.ebuild,v 1.6 2003/09/06 23:59:48 msterret Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -59,8 +59,8 @@ src_install () {
 			mv ${PDH} ${PDH}.old
 			sed -e "s:${D}::" ${PDH}.old > ${PDH}
 
-			insinto /usr/share/gtk-doc/html/${PDH/.devhelp/} 
-			doins ${PDH} 
+			insinto /usr/share/gtk-doc/html/${PDH/.devhelp/}
+			doins ${PDH}
 		done
 	fi
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.3.1-r3.ebuild,v 1.17 2003/07/28 21:06:07 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-1.3.1-r3.ebuild,v 1.18 2003/09/06 23:59:48 msterret Exp $
 
 IUSE="nls"
 
@@ -34,7 +34,7 @@ DEPEND="virtual/glibc"
 RDEPEND="nls? ( sys-devel/gettext )"
 
 src_unpack() {
-		
+
 	cd ${WORKDIR}
 	unpack ${P}.tar.gz
 	# freetype1-contrib goes under freetype-1.3.1
@@ -59,7 +59,7 @@ src_compile() {
 	sed -e "s:ttlib tttest ttpo:ttlib ttpo:" Makefile.orig > Makefile
 
 	make || die
-	
+
 	# make contrib utils
 	for x in ttf2bdf ttf2pfb ttf2pk ttfbanner
 	do
@@ -86,7 +86,7 @@ src_install() {
 	dodoc announce PATENTS README readme.1st
 	dodoc docs/*.txt docs/FAQ docs/TODO
 	dohtml -r docs
-	
+
 	# install contrib utils
 	cd ${S}/freetype1-contrib
 	into /usr
@@ -98,5 +98,5 @@ src_install() {
 	doman ttf2bdf/ttf2bdf.man.1
 	docinto contrib
 	dodoc ttf2pk/ttf2pk.doc
-	
+
 }

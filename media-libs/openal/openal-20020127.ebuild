@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20020127.ebuild,v 1.14 2003/07/14 14:15:10 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20020127.ebuild,v 1.15 2003/09/06 23:59:48 msterret Exp $
 
 IUSE="mpeg arts esd sdl oggvorbis alsa"
 
@@ -33,7 +33,7 @@ src_compile() {
 
 	use esd && myconf="${myconf} --enable-esd"
 	use sdl && myconf="${myconf} --enable-sdl"
-	use alsa && myconf="${myconf} --enable-alsa" 
+	use alsa && myconf="${myconf} --enable-alsa"
 	use arts && myconf="${myconf} --enable-arts"
 	use mpeg && myconf="${myconf} --enable-smpeg"
 	use oggvorbis && myconf="${myconf} --enable-vorbis"
@@ -65,7 +65,7 @@ src_install() {
 	cd ${S}
 	dodoc CHANGES COPYING CREDITS
 	dohtml docs/*.html
-	
+
 	# something is screwy with the makefiles so we create the two library
 	# symlinks manually
 	cd ${D}/usr/lib

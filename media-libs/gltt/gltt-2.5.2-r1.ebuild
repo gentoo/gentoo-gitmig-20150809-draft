@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gltt/gltt-2.5.2-r1.ebuild,v 1.9 2003/02/13 12:44:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gltt/gltt-2.5.2-r1.ebuild,v 1.10 2003/09/06 23:59:48 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GL truetype library"
@@ -28,7 +28,7 @@ src_compile() {
 		--with-x \
 		--prefix=/usr \
 		--with-ttf-dir=/usr || die
-		
+
 	make || die
 
 }
@@ -36,7 +36,7 @@ src_compile() {
 src_install() {
 
 	make DESTDIR=${D} install || die
-		
+
 	dodoc AUTHORS COPYING ChangeLog NEWS README
 
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc4-r2.ebuild,v 1.13 2003/07/18 21:55:44 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aalib/aalib-1.4_rc4-r2.ebuild,v 1.14 2003/09/06 23:59:48 msterret Exp $
 
 IUSE="X slang gpm"
 
@@ -40,11 +40,11 @@ src_compile() {
 	use slang \
 		&& myconf="--with-slang-driver=yes" \
 		|| myconf="--with-slang-driver=no"
-	
+
 	use X \
 		&& myconf="${myconf} --with-x11-driver=yes" \
 		|| myconf="${myconf} --with-x11-driver=no"
-	
+
 	use gpm \
 		&& myconf="${myconf} --with-gpm-mouse=no"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/libogg-1.0.ebuild,v 1.10 2003/07/18 21:55:44 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/libogg-1.0.ebuild,v 1.11 2003/09/06 23:59:48 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="the Ogg media file format library"
@@ -21,7 +21,7 @@ src_compile() {
 
 src_install () {
 	make DESTDIR=${D} install || die
-    
+
 	# remove the docs installed by make install, since I'll install
 	# them in portage package doc directory
 	echo "Removing docs installed by make install"
@@ -32,7 +32,7 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo 
+	einfo
 	einfo "Note the 1.0 version of libogg has been installed"
 	einfo "Applications that used pre-1.0 ogg libraries will"
 	einfo "need to be recompiled for the new version."

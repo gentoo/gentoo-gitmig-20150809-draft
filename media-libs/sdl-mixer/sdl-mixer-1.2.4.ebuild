@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.4.ebuild,v 1.11 2003/03/25 00:27:54 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.4.ebuild,v 1.12 2003/09/06 23:59:48 msterret Exp $
 
 IUSE="mpeg mikmod oggvorbis"
 
@@ -35,6 +35,6 @@ src_compile() {
 src_install() {
 
 	make DESTDIR=${D} install || die
-	
-	dodoc CHANGES COPYING README  
+
+	dodoc CHANGES COPYING README
 }

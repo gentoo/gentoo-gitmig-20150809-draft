@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdaudio/libcdaudio-0.99.6-r2.ebuild,v 1.1 2003/03/20 13:59:36 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdaudio/libcdaudio-0.99.6-r2.ebuild,v 1.2 2003/09/06 23:59:48 msterret Exp $
 
 inherit flag-o-matic
 
@@ -19,7 +19,7 @@ src_compile() {
 
 	# -fPIC is required for this library on alpha, see bug #17192
 	use alpha && append-flags -fPIC
-	
+
 	econf --enable-threads --with-gnu-ld
 	emake || die
 }

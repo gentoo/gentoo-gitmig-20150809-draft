@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r3.ebuild,v 1.14 2003/07/18 21:55:44 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r3.ebuild,v 1.15 2003/09/06 23:59:48 msterret Exp $
 
 inherit gnuconfig flag-o-matic
 
@@ -24,7 +24,7 @@ src_unpack() {
 
 	# allow /etc/make.conf's HOST setting to apply
 	cd ${S}
-	cp configure configure.orig 
+	cp configure configure.orig
 	sed 's/ltconfig.*/& $CHOST/' configure.orig > configure
 	use alpha && gnuconfig_update
 	use hppa && gnuconfig_update

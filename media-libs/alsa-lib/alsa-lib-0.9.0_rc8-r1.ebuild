@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-0.9.0_rc8-r1.ebuild,v 1.1 2003/03/06 18:47:44 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-0.9.0_rc8-r1.ebuild,v 1.2 2003/09/06 23:59:48 msterret Exp $
 
 inherit libtool
 
@@ -17,7 +17,7 @@ DEPEND="virtual/glibc"
 SRC_URI="ftp://ftp.alsa-project.org/pub/lib/${P/_rc/rc}a.tar.bz2"
 S=${WORKDIR}/${P/_rc/rc}a
 
-src_compile() {                           
+src_compile() {
 	elibtoolize
 	econf || die "./configure failed"
 	make || die "make failed"
@@ -33,6 +33,6 @@ src_install() {
 	#compatible with libasound.so.2 and a simple link
 	#fixes the problem (fingers crossed)
 	dosym /usr/lib/libasound.so.2 /usr/lib/libasound.so.1
-	
-	dodoc ChangeLog COPYING TODO 
+
+	dodoc ChangeLog COPYING TODO
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-4.0.1-r3.ebuild,v 1.15 2003/08/07 03:53:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-4.0.1-r3.ebuild,v 1.16 2003/09/06 23:59:48 msterret Exp $
 
 DESCRIPTION="A library for generating PDF on the fly"
 HOMEPAGE="http://www.pdflib.com/"
@@ -39,7 +39,7 @@ src_compile() {
 			local pyver="`/usr/bin/python -V 2>&1 \
 			|cut -d ' ' -f 2 |cut -d '.' -f 1,2`"
 			myconf="${myconf} --with-pyincl=/usr/include/python${pyver}"
-		fi 
+		fi
 	) || ( \
 		myconf="${myconf} --with-py=no"
 	)
@@ -47,7 +47,7 @@ src_compile() {
 	use java \
 		&& myconf="${myconf} --with-java=${JAVA_HOME}" \
 		|| myconf="${myconf} --with-java=no"
-		
+
 	# libpng-1.2.5 needs to be linked against stdc++ and zlib
 	cp configure configure.old
 	sed -e 's:-lpng:-lpng -lz -lstdc++:' configure.old > configure
@@ -58,7 +58,7 @@ src_compile() {
 		--with-pnglib \
 		--with-zlib \
 		${myconf} || die
-	
+
 	emake || die
 }
 
@@ -111,13 +111,13 @@ src_install() {
 	then
 		insinto /usr/share/pdflib
 		doins ${S}/bind/java/pdflib.java
-	
+
 		mkdir -p com/pdflib
 		mv ${S}/bind/java/pdflib.java com/pdflib
 		javac com/pdflib/pdflib.java
-	
+
 		jar cf pdflib.jar com/pdflib/*.class
-	
+
 		dojar pdflib.jar
 	fi
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5-r1.ebuild,v 1.19 2003/09/06 15:01:34 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5-r1.ebuild,v 1.20 2003/09/06 23:59:48 msterret Exp $
 
 inherit flag-o-matic
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha hppa amd64"
 
-RDEPEND="sys-libs/zlib 
+RDEPEND="sys-libs/zlib
 	media-libs/jpeg"
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )"
@@ -47,14 +47,14 @@ src_install() {
 	# was also generated using info from SF's src.rpm
 
 	patch -p1 < ${FILESDIR}/libmpeg3-gentoo-patch-part2
-	
+
 	dodir /usr/bin
-	
+
 	make \
 		DESTDIR=${D}/usr \
 		install || die
-	
+
 	dolib.a ${CHOST%%-*}/libmpeg3.a
-	
+
 	dohtml -r docs
 }

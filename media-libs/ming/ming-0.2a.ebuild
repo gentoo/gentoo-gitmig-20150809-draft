@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.2a.ebuild,v 1.9 2003/08/14 19:20:13 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.2a.ebuild,v 1.10 2003/09/06 23:59:48 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A OpenSource library from flash movie generation"
@@ -20,16 +20,16 @@ src_unpack() {
 }
 
 src_compile() {
-	
+
 	[ "${ARCH}" = "hppa" ] && CFLAGS="${CFLAGS} -fPIC"
-	
+
 	make CC="gcc -Wall" all static || die
-	cd util 
+	cd util
 	make CC="gcc -Wall" bindump hexdump listswf listfdb listmp3 listjpeg makefdb swftophp \
 		|| die
 }
 
-src_install () { 
+src_install () {
 	dolib.so libming.so
 	dolib.a  libming.a
 	insinto /usr/include

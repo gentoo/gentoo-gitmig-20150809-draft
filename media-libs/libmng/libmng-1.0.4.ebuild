@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/libmng-1.0.4.ebuild,v 1.8 2003/07/18 21:55:44 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmng/libmng-1.0.4.ebuild,v 1.9 2003/09/06 23:59:48 msterret Exp $
 
 S=${WORKDIR}/${P}
 
@@ -12,7 +12,7 @@ SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 ppc sparc alpha hppa amd64"
 
-DEPEND=">=media-libs/jpeg-6b 
+DEPEND=">=media-libs/jpeg-6b
 	>=sys-libs/zlib-1.1.4
 	>=media-libs/lcms-1.0.8"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-0.9.0_rc2.ebuild,v 1.11 2003/02/13 12:40:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-0.9.0_rc2.ebuild,v 1.12 2003/09/06 23:59:48 msterret Exp $
 
 MY_P=${P/_rc/rc}
 S=${WORKDIR}/${MY_P}
@@ -15,7 +15,7 @@ SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="x86 ppc sparc "
 
-src_compile() {                           
+src_compile() {
 	./configure \
 		--host=${CHOST} \
 		--prefix=/usr \
@@ -33,6 +33,6 @@ src_install() {
 	#compatible with libasound.so.2 and a simple link
 	#fixes the problem (fingers crossed)
 	dosym /usr/lib/libasound.so.2 /usr/lib/libasound.so.1
-	
-	dodoc ChangeLog COPYING TODO 
+
+	dodoc ChangeLog COPYING TODO
 }

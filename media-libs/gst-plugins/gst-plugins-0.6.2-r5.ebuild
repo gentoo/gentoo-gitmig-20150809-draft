@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.2-r5.ebuild,v 1.4 2003/08/07 03:51:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.2-r5.ebuild,v 1.5 2003/09/06 23:59:48 msterret Exp $
 
 # IMPORTANT
 #
 # Since gst-plugins uses a local copy of ffmpeg we consider this a non-external plugin
-# In essence this means gst-plugins without any external plugins already provides a 
+# In essence this means gst-plugins without any external plugins already provides a
 # wide range of audio/video codecs
 #
 # This may change in the future, but for now 3rd-party apps do probably not need to depend
@@ -34,7 +34,7 @@ MAKEOPTS="${MAKEOPTS} -j1"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	# ppc asm included in the resample plugin seems to be broken, 
+	# ppc asm included in the resample plugin seems to be broken,
 	# using a slower but working version for now
 	epatch ${FILESDIR}/noppcasm.patch
 
@@ -66,7 +66,7 @@ src_compile() {
 	filter-flags "-fprefetch-loop-arrays" # see bug 22249
 
 	gst-plugins_src_configure --program-suffix=-${PV_MAJ_MIN}
-	
+
 	emake || die
 
 }

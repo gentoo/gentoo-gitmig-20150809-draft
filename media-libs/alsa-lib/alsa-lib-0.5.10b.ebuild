@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-0.5.10b.ebuild,v 1.10 2003/02/13 12:40:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-0.5.10b.ebuild,v 1.11 2003/09/06 23:59:48 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Advanced Linux Sound Architecture / Library"
@@ -14,7 +14,7 @@ SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="x86 sparc ~alpha"
 
-src_compile() {                           
+src_compile() {
 
   ./configure --host=${CHOST} --prefix=/usr || die
   make || die

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.2.ebuild,v 1.5 2003/08/07 03:51:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.2.ebuild,v 1.6 2003/09/06 23:59:48 msterret Exp $
 
 inherit eutils libtool gnome2 flag-o-matic
 
@@ -43,14 +43,14 @@ RDEPEND="=media-libs/gstreamer-${PV}*
 	png? ( >=media-libs/libpng-1.2.3 )
 	alsa? ( >=media-libs/alsa-lib-0.9.0_rc2 )
 	arts? ( >=kde-base/arts-1.0.2 )
-	dvd? ( 	media-libs/libdvdnav 
+	dvd? ( 	media-libs/libdvdnav
 		media-libs/libdvdread )
 	aalib? ( media-libs/aalib )"
 
 # Some ditched minor plugins to bring number of deps down
 #	>=media-libs/flac-1.0.3
-#	virtual/jack 
-#	media-libs/ladspa-sdk" 
+#	virtual/jack
+#	media-libs/ladspa-sdk"
 #	>=media-libs/libdv-0.9.5
 
 DEPEND="${RDEPEND}
@@ -59,7 +59,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	# ppc asm included in the resample plugin seems to be broken, 
+	# ppc asm included in the resample plugin seems to be broken,
 	# using a slower but working version for now
 	epatch ${FILESDIR}/noppcasm.patch
 
@@ -141,15 +141,15 @@ src_compile() {
 		|| myconf="${myconf} --disable-vorbis --disable-vorbistest"
 	use mikmod \
 		&& myconf="${myconf} --enable-mikmod --enable-libmikmodtest" \
-		|| myconf="${myconf} --disable-mikmod --disable-libmikmodtest"	
-	
+		|| myconf="${myconf} --disable-mikmod --disable-libmikmodtest"
+
  	# qcam doesn't work on PPC
 	use ppc && myconf="${myconf} --disable-qcam"
-	
+
 	econf ${myconf} \
 		--program-suffix=-${PV_MAJ_MIN} \
 		|| die "./configure failed"
-		
+
 	emake || make || die
 }
 

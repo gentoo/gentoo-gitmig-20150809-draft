@@ -1,14 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.13-r3.ebuild,v 1.4 2003/08/07 03:55:30 vapier Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.13-r3.ebuild,v 1.5 2003/09/06 23:59:49 msterret Exp $
 
 IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa"
 
 inherit libtool
 
 # this build doesn't play nice with -maltivec (gcc 3.2 only option) on ppc
-inherit flag-o-matic 
-filter-flags "-maltivec -mabi=altivec" 
+inherit flag-o-matic
+filter-flags "-maltivec -mabi=altivec"
 replace-flags k6-3 i686
 replace-flags k6-2 i686
 replace-flags k6   i686
@@ -24,7 +24,7 @@ KEYWORDS="x86 ppc sparc "
 
 DEPEND="oggvorbis? ( media-libs/libvorbis )
 	X? ( virtual/x11 )
-	avi? ( x86? ( >=media-libs/win32codecs-0.50 
+	avi? ( x86? ( >=media-libs/win32codecs-0.50
 	       media-libs/divx4linux ) )
 	esd? ( media-sound/esound )
 	dvd? ( >=media-libs/libdvdcss-0.0.3.3
@@ -45,7 +45,7 @@ src_unpack() {
 
 	patch -p1 < ${FILESDIR}/xine-lib-configure.patch || \
 	    die "configure patch failed"
-	
+
 	# allows kxine to work; see bug #5412
 	patch -p1 < ${FILESDIR}/${P}-kxine.patch || \
 	    die "patching for kxine support failed"
@@ -95,7 +95,7 @@ src_compile() {
 		|| myconf="${myconf} --disable-ogg --disable-vorbis"
 #			 --disable-oggtest \
 #			 --disable-vorbistest"
-	
+
 	use avi	\
 		&& myconf="${myconf} --with-w32-path=/usr/lib/win32" \
 		|| myconf="${myconf} --disable-asf"
@@ -103,14 +103,14 @@ src_compile() {
 	einfo "myconf: ${myconf}"
 
 	econf ${myconf} || die
-		    
+
 	elibtoolize
 
 	emake || die
 }
 
 src_install() {
-	
+
 	make DESTDIR=${D} install || die
 
 	# Xine's makefiles install some file incorrectly. (Bug #8583).

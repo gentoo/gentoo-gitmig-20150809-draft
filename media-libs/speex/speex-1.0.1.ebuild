@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.0.1.ebuild,v 1.2 2003/07/02 19:22:59 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/speex/speex-1.0.1.ebuild,v 1.3 2003/09/06 23:59:49 msterret Exp $
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -29,7 +29,7 @@ src_compile() {
 src_install () {
 	einstall || die
 	rm -rf ${D}/usr/share/doc/*
-	
+
 	insinto /usr/share/doc/${P}
 	doins ${S}/doc/manual.pdf
 	dodoc AUTHORS ChangeLog README TODO NEWS

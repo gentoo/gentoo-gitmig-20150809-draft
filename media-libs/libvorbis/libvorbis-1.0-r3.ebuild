@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.0-r3.ebuild,v 1.1 2003/08/05 09:58:07 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.0-r3.ebuild,v 1.2 2003/09/06 23:59:48 msterret Exp $
 
 inherit libtool eutils
 
@@ -46,7 +46,7 @@ src_compile() {
 src_install () {
 	make DESTDIR=${D} install || die
 
-	dosym /usr/lib/libvorbisfile.so.3.0.0 /usr/lib/libvorbisfile.so.0 
+	dosym /usr/lib/libvorbisfile.so.3.0.0 /usr/lib/libvorbisfile.so.0
 	dosym /usr/lib/libvorbisenc.so.2.0.0 /usr/lib/libvorbisenc.so.0
 
 	echo "Removing docs installed by make install"
@@ -59,7 +59,7 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo 
+	einfo
 	einfo "Note the 1.0 version of libvorbis has been installed"
 	einfo "Applications that used pre-1.0 vorbis libraries will"
 	einfo "need to be recompiled for the new version."

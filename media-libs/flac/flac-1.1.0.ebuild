@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.0.ebuild,v 1.11 2003/08/20 16:40:45 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.0.ebuild,v 1.12 2003/09/06 23:59:48 msterret Exp $
 
 inherit libtool
 
@@ -41,7 +41,7 @@ src_compile() {
 
 	use sse && myconf="--enable-sse"
 
-	econf ${myconf} || die 
+	econf ${myconf} || die
 	cp Makefile Makefile.orig
 
 	#the man page ebuild requires docbook2man... yick!

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openquicktime/openquicktime-1.0.ebuild,v 1.12 2003/03/06 21:23:38 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openquicktime/openquicktime-1.0.ebuild,v 1.13 2003/09/06 23:59:48 msterret Exp $
 
 inherit flag-o-matic
 replace-flags "-fprefetch-loop-arrays" " "
@@ -20,11 +20,11 @@ DEPEND="media-sound/lame
 	media-libs/jpeg"
 
 src_compile() {
-	
+
 	./configure \
 		--enable-debug=no \
 		--prefix=/usr || die # Disable debug - enabled by default
-		
+
 	make || die
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-3.10-r3.ebuild,v 1.8 2003/03/11 21:11:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-3.10-r3.ebuild,v 1.9 2003/09/06 23:59:48 msterret Exp $
 
 # NOTE:  Do NOT build this with optimizations, as it will make this package
 #        unstable!!!!
@@ -38,18 +38,18 @@ src_unpack() {
 	cd ${S}/h3/minihwc ; ln -fs linhwc.c.dri linhwc.c
 	cd ${S}/h3/glide3/src ; ln -fs gglide.c.dri gglide.c
 	ln -fs gsst.c.dri gsst.c ; ln -fs glfb.c.dri glfb.c
-	
+
 	cd ${S}
 	libtoolize -f && aclocal && automake && autoconf
 }
-	
+
 src_compile() {
 	mkdir build
 	cd build
 	../configure --prefix=/usr \
 		--enable-fx-glide-hw=${compilefor} \
 		--enable-fx-dri-build || die
-		
+
 	./build.3dfx all || die
 }
 

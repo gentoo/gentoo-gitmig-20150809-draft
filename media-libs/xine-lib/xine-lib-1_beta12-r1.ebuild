@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_beta12-r1.ebuild,v 1.6 2003/08/07 03:55:30 vapier Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_beta12-r1.ebuild,v 1.7 2003/09/06 23:59:49 msterret Exp $
 
 # this build doesn't play nice with -maltivec (gcc 3.2 only option) on ppc
 # Commenting this out in this ebuild, because CFLAGS and CXXFLAGS are unset
@@ -26,7 +26,7 @@ IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa gnome"
 
 DEPEND="oggvorbis? ( media-libs/libvorbis )
 	X? ( virtual/x11 )
-	avi? ( x86? ( >=media-libs/win32codecs-0.50 
+	avi? ( x86? ( >=media-libs/win32codecs-0.50
 	       media-libs/divx4linux ) )
 	esd? ( media-sound/esound )
 	dvd? ( >=media-libs/libdvdcss-0.0.3.3
@@ -36,7 +36,7 @@ DEPEND="oggvorbis? ( media-libs/libvorbis )
 	aalib? ( media-libs/aalib )
 	directfb? ( >=dev-libs/DirectFB-0.9.9
 		    dev-util/pkgconfig )
-	gnome? ( >=gnome-base/gnome-vfs-2.0 
+	gnome? ( >=gnome-base/gnome-vfs-2.0
 			dev-util/pkgconfig )
 	>=media-libs/flac-1.0.4
 	>=media-libs/libsdl-1.1.5
@@ -58,7 +58,7 @@ src_compile() {
 
 	# Use the built-in dvdnav plugin.
 	local myconf="--with-included-dvdnav"
-	
+
 	# Most of these are not working currently, but are here for completeness
 	# don't use the --disable-XXXtest because that defaults to ON not OFF
 	use X \
@@ -94,7 +94,7 @@ src_compile() {
 
 	cp config.h config.h.sed
 
-	if [ ! `use gnome` ] 
+	if [ ! `use gnome` ]
 	then
 		einfo "supposedly not using gnome. disabling gnome-vfs support"
 		cp config.h config.h.sed
@@ -125,7 +125,7 @@ pkg_postinst() {
 	einfo "This library version 1 is incompatible with the plugins,"
 	einfo "designed for the prior library versions (such as xine-d4d,"
 	einfo "xine-d5d, xine-dmd, and xine-dvdnav."
-	einfo 
+	einfo
 	einfo "Also make sure to remove your ~/.xine if upgrading from"
 	einfo "a previous version."
 	einfo

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.2_pre1.ebuild,v 1.12 2003/08/12 23:56:18 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.2_pre1.ebuild,v 1.13 2003/09/06 23:59:48 msterret Exp $
 
 inherit libtool eutils
 
@@ -48,7 +48,7 @@ src_compile() {
 	elibtoolize
 
 	local myconf
-	
+
 	use mmx \
 		&& myconf="${myconf} --enable-mmx" \
 		|| myconf="${myconf} --disable-mmx"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.4.20020601.ebuild,v 1.14 2003/06/11 22:11:12 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.4.20020601.ebuild,v 1.15 2003/09/06 23:59:48 msterret Exp $
 
 IUSE="arts xv opengl fbcon aalib nas esd X svga ggi alsa directfb"
 
@@ -72,7 +72,7 @@ src_compile() {
 	use arts \
 		&& myconf="${myconf} --enable-arts" \
 		|| myconf="${myconf} --disable-arts"
-	
+
 	use svga \
 		&& myconf="${myconf} --enable-video-svga" \
 		|| myconf="${myconf} --disable-video-svga"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.5-r1.ebuild,v 1.8 2003/07/29 21:17:55 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.5-r1.ebuild,v 1.9 2003/09/06 23:59:48 msterret Exp $
 
 IUSE="arts xv opengl fbcon aalib nas esd X svga ggi alsa"
 
@@ -23,7 +23,7 @@ RDEPEND=">=media-libs/audiofile-0.1.9
 	arts? ( kde-base/arts )
 	svga? ( >=media-libs/svgalib-1.4.2 )
 	opengl? ( virtual/opengl )"
-# This create circular deps for the moment ... 
+# This create circular deps for the moment ...
 #	directfb? ( dev-libs/DirectFB )"
 
 DEPEND="${RDEPEND}
@@ -67,7 +67,7 @@ src_compile() {
 	use arts \
 		&& myconf="${myconf} --enable-arts" \
 		|| myconf="${myconf} --disable-arts"
-	
+
 	use svga \
 		&& myconf="${myconf} --enable-video-svga" \
 		|| myconf="${myconf} --disable-video-svga"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/skstream/skstream-0.2.2.ebuild,v 1.6 2003/02/13 12:55:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/skstream/skstream-0.2.2.ebuild,v 1.7 2003/09/06 23:59:49 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="FreeSockets - Portable C++ classes for IP (sockets) applications"
@@ -22,6 +22,6 @@ src_compile() {
 src_install() {
 
 	make DESTDIR=${D} install || die
-	
+
 	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/a52dec-0.7.4.ebuild,v 1.8 2003/07/21 15:16:51 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/a52dec-0.7.4.ebuild,v 1.9 2003/09/06 23:59:48 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="a52dec is a bundle of the liba52 (a free library for decoding ATSC A/52 streams used in DVD, etc) with a test program"
@@ -25,12 +25,12 @@ src_compile() {
 		|| myconf="${myconf} --enable-shared --disable-static"
 
 	econf ${myconf} || die
-	make || die	
+	make || die
 
 }
 
 src_install() {
-	
+
 	einstall docdir=${D}/usr/share/doc/${PF}/html || die
 
 	dodoc AUTHORS COPYING ChangeLog HISTORY INSTALL NEWS README TODO

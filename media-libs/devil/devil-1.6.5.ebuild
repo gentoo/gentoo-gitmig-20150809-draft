@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.6.5.ebuild,v 1.3 2003/07/20 05:42:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.6.5.ebuild,v 1.4 2003/09/06 23:59:48 msterret Exp $
 
 inherit libtool
 
@@ -25,7 +25,7 @@ S=${WORKDIR}/DevIL
 
 src_compile() {
 	local myconf
-	use X && myconf="${myconf} --with-x"	
+	use X && myconf="${myconf} --with-x"
 	use gif || myconf="${myconf} --disable-gif"
 	use png || myconf="${myconf} --disable-png"
 	use sdl || myconf="${myconf} --disable-sdl"

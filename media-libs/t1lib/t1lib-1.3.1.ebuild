@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-1.3.1.ebuild,v 1.16 2003/08/14 15:13:04 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/t1lib/t1lib-1.3.1.ebuild,v 1.17 2003/09/06 23:59:49 msterret Exp $
 
 inherit gnuconfig
 
@@ -36,10 +36,10 @@ src_compile() {
 	use X \
 		&& myconf="--with-x" \
 		|| myconf="--without-x"
-	
+
 	use tetex \
 		|| myopt="without_doc"
-	echo `pwd`	
+	echo `pwd`
 	econf ${myconf} || die
 	make ${myopt} || die
 }

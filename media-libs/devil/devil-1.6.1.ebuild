@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.6.1.ebuild,v 1.6 2003/02/13 12:41:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.6.1.ebuild,v 1.7 2003/09/06 23:59:48 msterret Exp $
 
 IUSE="gif png tiff sdl X opengl jpeg"
 
@@ -30,7 +30,7 @@ DEPEND="${RDEPEND}"
 
 src_compile() {
 	local myconf
-	use X && myconf="${myconf} --with-x"	
+	use X && myconf="${myconf} --with-x"
 	use gif || myconf="${myconf} --disable-gif"
 	use png || myconf="${myconf} --disable-png"
 	use sdl || myconf="${myconf} --disable-sdl"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.6.0-r2.ebuild,v 1.7 2003/08/12 22:27:55 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.6.0-r2.ebuild,v 1.8 2003/09/06 23:59:48 msterret Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -41,20 +41,20 @@ src_unpack() {
 	# some extra error feedback
 	epatch ${FILESDIR}/${PN}-error_report.patch
 
-	# use 'opt' as our default scheduler it is new and has some 
+	# use 'opt' as our default scheduler it is new and has some
 	# known problems but the default scheduler will crash on systems
-	# with their glibc compiled for i386+, which means for about all 
+	# with their glibc compiled for i386+, which means for about all
 	# of our users :)
 	# http://www.gstreamer.net/releases/0.6.0/notice.php
-	# 
+	#
 	# foser <foser@gentoo.org>
 	epatch ${FILESDIR}/${PN}-default_scheduler_opt.patch
-	
+
 	# Added patch for sparc.  Resolves bug #15502.  Thanks to
 	# Alvaro Figueroa for pointing out the fix :)
 	epatch ${FILESDIR}/${PN}-0.6.0-sparc.patch
 }
-	
+
 src_compile() {
 	elibtoolize
 

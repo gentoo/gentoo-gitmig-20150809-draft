@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.5.2.ebuild,v 1.4 2003/07/12 18:05:45 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.5.2.ebuild,v 1.5 2003/09/06 23:59:48 msterret Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -27,10 +27,10 @@ DEPEND=">=dev-libs/glib-2.0.4
 		app-text/ghostscript )
 	x86? ( >=dev-lang/nasm-0.90 )
 	>=sys-libs/zlib-1.1.4"
-	
+
 src_unpack() {
 	unpack ${A}
-	
+
 	# Patch for problems compiling when specifying USE="doc"
 	# The problem is that gstreamer's docs import the wrong version
 	# (or different to ours) of app-text/docbook-xsl-stylesheets,

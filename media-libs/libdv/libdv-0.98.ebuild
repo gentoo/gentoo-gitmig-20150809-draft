@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-0.98.ebuild,v 1.12 2003/07/18 21:55:44 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-0.98.ebuild,v 1.13 2003/09/06 23:59:48 msterret Exp $
 
 IUSE="sdl gtk xv"
 
@@ -19,18 +19,18 @@ DEPEND=" dev-libs/popt
 	xv? ( x11-base/xfree )
 	dev-util/pkgconfig
 	sdl? ( >=media-libs/libsdl-1.2.4.20020601 )"
-	
+
 src_compile() {
 
 	myconf="--without-debug"
-	
+
 	use gtk \
 		|| myconf="$myconf --disable-gtk"
-	
+
 	use sdl \
 		&& myconf="$myconf --enable-sdl" \
 		|| myconf="$myconf --disable-sdl"
-		
+
 # Do not work in some cases if disabled.
 #	use xv \
 #		|| myconf="$mycong --disable-xv"

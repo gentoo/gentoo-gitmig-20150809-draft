@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.1-r1.ebuild,v 1.16 2003/07/18 21:55:44 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.1-r1.ebuild,v 1.17 2003/09/06 23:59:48 msterret Exp $
 
 inherit debug eutils
 
@@ -32,34 +32,34 @@ src_unpack() {
 
 	# Cvs update from XFree86 tree
 	epatch ${PPREFIX}-${PV}-cvs-update-20021221.patch
-	
+
 	# Some patches from Redhat
 	epatch ${PPREFIX}-2.0-defaultconfig.patch
 	epatch ${PPREFIX}-${PV}-slighthint.patch
 	# Blacklist certain fonts that freetype can't handle
 	epatch ${PPREFIX}-0.0.1.020826.1330-blacklist.patch
 	# Fix config script to alway include X11 fontpath and remove date
-	epatch ${PPREFIX}-${PV}-x11fontpath-date-configure-v2.patch 
+	epatch ${PPREFIX}-${PV}-x11fontpath-date-configure-v2.patch
 	# fix font width bug with cjk fonts
 	epatch ${PPREFIX}-${PV}-fixedwidth.patch
 }
 
 src_compile() {
 	fc_setup
-	
+
 	[ "${ARCH}" == "alpha" -a "${CC}" == "ccc" ] && \
 		die "Dont compile fontconfig with ccc, it doesnt work very well"
-	
+
 	econf \
 		--x-includes=/usr/X11R6/include \
 		--x-libraries=/usr/X11R6/lib || die
-	
+
 	emake || die
 }
 
 src_install() {
 	fc_setup
-	
+
 	einstall confdir=${D}/etc/fonts \
 		datadir=${D}/usr/share || die
 
@@ -68,7 +68,7 @@ src_install() {
 	newins ${S}/fonts.conf fonts.conf.new
 
 	cd ${S}
-	
+
 	mv fc-cache/fc-cache.man fc-cache/fc-cache.1
 	mv fc-list/fc-list.man fc-list/fc-list.1
 	mv src/fontconfig.man src/fontconfig.3

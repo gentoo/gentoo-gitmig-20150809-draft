@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.5.2.ebuild,v 1.4 2003/08/07 03:51:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.5.2.ebuild,v 1.5 2003/09/06 23:59:48 msterret Exp $
 
 inherit eutils libtool gnome2 flag-o-matic
 
 
 DESCRIPTION="Additional plugins for gstreamer - streaming media framework"
-# bz2 gives 404 right now 
+# bz2 gives 404 right now
 #SRC_URI="mirror://sourceforge/gstreamer/${P}.tar.bz2"
 #SRC_URI="mirror://sourceforge/gstreamer/${P}.tar.gz"
 HOMEPAGE="http://gstreamer.sourceforge.net"
@@ -29,21 +29,21 @@ DEPEND="=media-libs/gstreamer-${PV}*
 	encode? ( media-sound/lame )
 	quicktime? ( media-libs/openquicktime )
 	mpeg? (	=media-libs/libmpeg2-0.3.1* )
-	oggvorbis? ( media-libs/libvorbis 
+	oggvorbis? ( media-libs/libvorbis
 	             media-libs/libogg )
-	jpeg? (	media-video/mjpegtools 
+	jpeg? (	media-video/mjpegtools
 	mmx? ( >=media-libs/jpeg-mmx-1.1.2-r1 ) )
 	esd? ( media-sound/esound )
 	gnome? ( >=gnome-base/gnome-vfs-2.0.1 )
 	mikmod? ( media-libs/libmikmod )
 	sdl? ( media-libs/libsdl )
 	png? ( >=media-libs/libpng-1.2.3 )
-	alsa? ( >=media-libs/alsa-lib-0.9.0_rc2 
+	alsa? ( >=media-libs/alsa-lib-0.9.0_rc2
 	media-sound/jack-audio-connection-kit )
 	arts? ( >=kde-base/arts-1.0.2 )
 	dvd? ( 	media-libs/libdvdnav )
 	aalib? ( media-libs/aalib )
-	media-libs/ladspa-sdk" 
+	media-libs/ladspa-sdk"
 
 # disable avi for now, it doesnt work
 #	avi? ( media-video/avifile )
@@ -89,24 +89,24 @@ src_compile() {
 		|| myconf="${myconf} --disable-mpeg2dec"
  	use oggvorbis \
 		&& myconf="${myconf} --enable-vorbis --enable-vorbistest" \
-		|| myconf="${myconf} --disable-vorbis --disable-vorbistest"		
- 
+		|| myconf="${myconf} --disable-vorbis --disable-vorbistest"
+
     # qcam doesn't work on PPC
 	use ppc && myconf="${myconf} --disable-qcam"
 	# not testing for much here, since if its in USE we want it, but its autodetected by configure
-	
+
 	econf ${myconf} \
 		|| die "./configure failed"
-		
+
 	emake || make || die
 }
 
 src_install () {
-	export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1"		
+	export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1"
 	make DESTDIR=${D} install || die
 	unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
 
-	dodoc AUTHORS COPYING INSTALL README RELEASE TODO 
+	dodoc AUTHORS COPYING INSTALL README RELEASE TODO
 }
 
 pkg_postinst () {

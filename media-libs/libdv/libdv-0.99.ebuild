@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-0.99.ebuild,v 1.4 2003/08/18 17:36:05 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdv/libdv-0.99.ebuild,v 1.5 2003/09/06 23:59:48 msterret Exp $
 
 DESCRIPTION="Software codec for dv-format video (camcorders etc)."
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -16,7 +16,7 @@ DEPEND="dev-libs/popt
 	=x11-libs/gtk+-1.2*
 	sdl? ( >=media-libs/libsdl-1.2.4.20020601 )
 	xv? ( virtual/x11 )"
-	
+
 src_compile() {
 	local myconf
 	myconf="${myconf} `use_with debug`"

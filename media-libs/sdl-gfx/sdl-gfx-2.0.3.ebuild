@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/sdl-gfx-2.0.3.ebuild,v 1.11 2003/03/10 22:19:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/sdl-gfx-2.0.3.ebuild,v 1.12 2003/09/06 23:59:48 msterret Exp $
 
 inherit flag-o-matic
 
@@ -20,8 +20,8 @@ filter-flags "-O?" "-O2"
 
 src_compile() {
 	local myconf
-	
-	if use ppc || use sparc || use 
+
+	if use ppc || use sparc || use
 	then
 		myconf="--disable-mmx"
 	else

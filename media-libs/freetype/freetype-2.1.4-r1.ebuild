@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.4-r1.ebuild,v 1.1 2003/08/10 19:20:50 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.4-r1.ebuild,v 1.2 2003/09/06 23:59:48 msterret Exp $
 
 IUSE="doc zlib bindist"
 
@@ -33,10 +33,10 @@ src_compile() {
 
 	use zlib \
 		&& myconf="${myconf} --with-zlib" \
-		|| myconf="${myconf} --without-zlib" 
+		|| myconf="${myconf} --without-zlib"
 
 	use bindist || append-flags "${CFLAGS} -DTT_CONFIG_OPTION_BYTECODE_INTERPRETER"
-	
+
 	make setup CFG="--host=${CHOST} --prefix=/usr ${myconf}" unix || die
 
 	emake || die
@@ -51,7 +51,7 @@ src_compile() {
 src_install() {
 	make prefix=${D}/usr install || die
 
-	dodoc ChangeLog README 
+	dodoc ChangeLog README
 	dodoc docs/{CHANGES,*.txt,PATENTS,TODO}
 
 	use doc && dohtml -r docs/*

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/sdl-sound-1.0.0.ebuild,v 1.4 2003/07/18 21:55:45 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-sound/sdl-sound-1.0.0.ebuild,v 1.5 2003/09/06 23:59:49 msterret Exp $
 
 IUSE="oggvorbis"
 
@@ -24,13 +24,13 @@ src_compile() {
 	econf \
 		--enable-midi \
 		--disable-flac || die
-		
+
 	emake || die
 }
 
 src_install() {
 
 	einstall || die
-	
+
 	dodoc CHANGELOG COPYING CREDITS INSTALL README TODO
 }

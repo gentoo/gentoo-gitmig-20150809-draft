@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpgalleg/jpgalleg-1.1.ebuild,v 1.2 2003/02/13 12:46:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpgalleg/jpgalleg-1.1.ebuild,v 1.3 2003/09/06 23:59:48 msterret Exp $
 
 DESCRIPTION="The jpeg loading routines are able to load almost any JPG image file with Allegro."
 HOMEPAGE="http://orbflux.com/jpgalleg/"
@@ -29,15 +29,15 @@ src_install() {
     cd ${S}/
     dodir /usr/include
     dodir /usr/lib
-    
+
     insinto /usr/include
     doins jpgalleg.h
 
     insinto /usr/lib
-    doins libjpgal.a 
-    
+    doins libjpgal.a
+
     dodoc README
 
     insinto /usr/share/doc/${P}/examples
-    doins *   # maybe not a good idea but it's not really a 'package' 
+    doins *   # maybe not a good idea but it's not really a 'package'
 }

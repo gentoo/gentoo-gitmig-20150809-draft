@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-9.12-r4.ebuild,v 1.11 2003/07/18 21:55:45 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-9.12-r4.ebuild,v 1.12 2003/09/06 23:59:48 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A set of utilities for converting to/from the netpbm (and related) formats"
@@ -44,11 +44,11 @@ src_compile() {
 
 src_install () {
 	make INSTALL_PREFIX="${D}/usr/" install || die "Install failed"
-	
+
 	# fix broken symlinks
 	dosym /usr/bin/gemtopnm /usr/bin/gemtopbm
 	dosym /usr/bin/pnmtoplainpnm /usr/bin/pnmnoraw
-	
+
 	insinto /usr/include
 	doins pnm/{pam,pnm}.h ppm/{ppm,pgm,pbm}.h
 	doins pbmplus.h shhopt/shhopt.h

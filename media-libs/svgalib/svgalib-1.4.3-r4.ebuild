@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.4.3-r4.ebuild,v 1.7 2003/09/06 22:57:44 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.4.3-r4.ebuild,v 1.8 2003/09/06 23:59:49 msterret Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ DEPEND="virtual/glibc"
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	
+
 	cd ${S}
 	epatch ${FILESDIR}/${P}-gentoo.diff
 	epatch ${FILESDIR}/${P}-userpriv.patch
@@ -40,7 +40,7 @@ src_compile() {
 	make OPTIMIZE="${CFLAGS}" -C gl libvgagl.so.${PV} || die
 
 	make OPTIMIZE="${CFLAGS}" LDFLAGS='-L ../sharedlib' demoprogs || die
-	
+
 	cp Makefile Makefile.orig
 	sed 's/\(install: $(INSTALLAOUTLIB) \)installheaders \(.*\)/\1\2/g' \
 		Makefile.orig > Makefile
@@ -85,5 +85,5 @@ pkg_postinst() {
 	for x in /usr/lib/svgalib/demos/* /usr/lib/svgalib/theeDKit/*; do
 		chown root ${x}
 		chmod u+s ${x}
-	done       
+	done
 }

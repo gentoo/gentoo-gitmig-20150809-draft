@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/id3lib-3.8.3-r1.ebuild,v 1.5 2003/08/20 16:40:45 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/id3lib/id3lib-3.8.3-r1.ebuild,v 1.6 2003/09/06 23:59:48 msterret Exp $
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -21,7 +21,7 @@ src_install() {
 	einstall || die "Install failed"
 	dosym /usr/lib/libid3-3.8.so.3 /usr/lib/libid3-3.8.so.0.0.0
 	dosym /usr/lib/libid3-3.8.so.0.0.0 /usr/lib/libid3-3.8.so.0
-	
+
 	dodoc AUTHORS COPYING ChangeLog HISTORY INSTALL README THANKS TODO
 #	some example programs to be placed in docs dir.
 	make clean

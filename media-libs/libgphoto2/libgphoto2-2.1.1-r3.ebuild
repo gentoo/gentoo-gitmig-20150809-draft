@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.1-r3.ebuild,v 1.1 2003/08/20 16:44:05 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.1-r3.ebuild,v 1.2 2003/09/06 23:59:48 msterret Exp $
 
 inherit libtool
 
@@ -32,16 +32,16 @@ src_compile() {
 	elibtoolize
 
 	local myconf
-	
+
 	myconf="--with-rpmbuild=/bin/false"
 
 	use jpeg \
 		&& myconf="${myconf} --with-exif-prefix=/usr" \
 		|| myconf="${myconf} --without-exif"
-	
+
 	myconf="${myconf} `use_enable nls`"
 	myconf="${myconf} `use_enable doc docs`"
-		
+
 	econf ${myconf}
 	emake || die "make failed"
 }
@@ -63,12 +63,12 @@ src_install() {
 	rm -rf ${D}/usr/share/doc/libgphoto2_port
 
 	dodoc ChangeLog NEWS* README AUTHORS TESTERS MAINTAINERS HACKING CHANGES
-	
+
 	# install hotplug support
 	insinto /etc/hotplug/usb
 	newins ${S}/packaging/linux-hotplug/usbcam.console usbcam
 	chmod +x ${D}/etc/hotplug/usb/usbcam
-	
+
 	HOTPLUG_USERMAP="${D}/etc/hotplug/usb/usbcam.usermap"
 	${D}/usr/lib/libgphoto2/print-usb-usermap >> ${HOTPLUG_USERMAP}
 }

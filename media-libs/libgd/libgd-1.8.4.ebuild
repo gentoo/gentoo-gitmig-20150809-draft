@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-1.8.4.ebuild,v 1.6 2003/06/26 22:11:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-1.8.4.ebuild,v 1.7 2003/09/06 23:59:48 msterret Exp $
 
 MY_P=${P/lib/}
 S=${WORKDIR}/${MY_P}
@@ -31,18 +31,18 @@ src_unpack() {
 	use X \
 		&& compopts="${compopts} -DHAVE_XPM" \
 		&& libsopts="${libsopts} -lXpm -lX11"
-	
+
 	use jpeg \
 		&& compopts="${compopts} -DHAVE_LIBJPEG" \
 		&& libsopts="${libsopts} -ljpeg"
 
 	compopts="${compopts} -DHAVE_LIBPNG" \
 	libsopts="${libsopts} -lpng"
-	
+
 	use truetype \
 		&& compopts="${compopts} -DHAVE_LIBTTF" \
 		&& libsopts="${libsopts} -lttf"
-	
+
 	mv Makefile Makefile.old || die
 	if [ `use truetype` ]
 	then
@@ -64,13 +64,13 @@ src_compile() {
 
 src_install() {
 	dodir /usr/{bin,lib,include}
-	
+
 	make \
 		INSTALL_LIB=${D}/usr/lib \
 		INSTALL_BIN=${D}/usr/bin \
 		INSTALL_INCLUDE=${D}/usr/include \
 		install || die
-	
+
 	preplib /usr
 
 	dodoc readme.txt

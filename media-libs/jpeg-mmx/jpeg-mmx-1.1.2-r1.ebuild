@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-mmx/jpeg-mmx-1.1.2-r1.ebuild,v 1.10 2003/07/20 01:13:23 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg-mmx/jpeg-mmx-1.1.2-r1.ebuild,v 1.11 2003/09/06 23:59:48 msterret Exp $
 
 inherit libtool flag-o-matic gnuconfig
 
@@ -38,7 +38,7 @@ src_install() {
 		install || die "install failed"
 
 	mv ${D}/usr/lib/libjpeg.la ${D}/usr/lib/libjpeg-mmx.la
-	mv ${D}/usr/lib/libjpeg.so.62.0.0 ${D}/usr/lib/libjpeg-mmx.so.62.0.0 
+	mv ${D}/usr/lib/libjpeg.so.62.0.0 ${D}/usr/lib/libjpeg-mmx.so.62.0.0
 	rm ${D}/usr/lib/libjpeg.so
 	ln -s /usr/lib/libjpeg-mmx.so.62.0.0 ${D}/usr/lib/libjpeg-mmx.so
 	rm ${D}/usr/lib/libjpeg.so.62

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/libdvdcss-1.2.3.ebuild,v 1.4 2003/02/13 12:47:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/libdvdcss-1.2.3.ebuild,v 1.5 2003/09/06 23:59:48 msterret Exp $
 
 IUSE=""
 
@@ -22,16 +22,16 @@ src_compile() {
 	unset CFLAGS
 	unset CXXFLAGS
 	econf || die
-		    
+
 	make || die
 }
 
 src_install() {
-	
+
 	einstall || die
 
 	dodoc AUTHORS COPYING ChangeLog INSTALL README TODO
-	
+
 	##
 	## 0.0.3.* and 1.0.0 compat
 	##
@@ -47,7 +47,7 @@ src_install() {
 		[ -z "${realname}" ] && \
 			realname="$(ls -l ${D}/usr/lib/libdvdcss.so |gawk '{print $10}')"
 		[ -z "${realname}" ] && return 0
-	
+
 		for x in libdvdcss.so.0 libdvdcss.so.1
 		do
 			dosym ${realname} /usr/lib/${x}

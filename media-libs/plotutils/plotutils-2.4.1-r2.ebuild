@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/plotutils-2.4.1-r2.ebuild,v 1.13 2003/02/13 12:53:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/plotutils-2.4.1-r2.ebuild,v 1.14 2003/09/06 23:59:48 msterret Exp $
 
 IUSE="X"
 
 #The plotutils package contains extra X fonts.  These fonts are not installed
-#in the current ebuild.  The commented out ebuild lines below are for future 
+#in the current ebuild.  The commented out ebuild lines below are for future
 #reference when this ebuild may be updated to install the fonts.
 #NOTE: The current method does not play nice with X and sandbox.  Most of the
 #font installation procedures should probably be moved to pkg_postinst.
@@ -39,19 +39,19 @@ src_unpack() {
 }
 
 src_compile() {
-	
+
 	#enable build of C++ version
-	local myconf="--enable-libplotter" 
-	
+	local myconf="--enable-libplotter"
+
 	#The following two additional configure options may be of interest
 	#to users with specific printers, i.e. HP LaserJets with PCL 5 or HP-GL/2.
 	#Not sure if enabling screws the pooch for those without these printers.
 	#--enable-ps-fonts-in-pcl --enable-lj-fonts-in-ps
-	
+
 	use X \
 		&& myconf="${myconf} --with-x --enable-libxmi" \
 		|| myconf="${myconf} --without-x"
- 
+
 	econf ${myconf} || die "./configure failed"
 	emake || die "Parallel Make Failed"
 
@@ -61,10 +61,10 @@ src_install () {
 
 	einstall \
 		datadir=${D}/usr/share || die "Installation Failed"
-	
+
 	dodoc AUTHORS COMPAT COPYING ChangeLog INSTALL* \
 		KNOWN_BUGS NEWS ONEWS PROBLEMS README THANKS TODO
-	
+
 }
 
 pkg_postinst() {
@@ -79,6 +79,6 @@ pkg_postinst() {
 		einfo "program xfig, you might want to recompile to take"
 		einfo "advantage of the additional ps fonts."
 		einfo "Also, it is possible to enable ghostscript and possibly"
-		einfo "your printer to use the HP fonts." 
+		einfo "your printer to use the HP fonts."
 	fi
 }

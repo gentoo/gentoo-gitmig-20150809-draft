@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-2.0.1.ebuild,v 1.5 2003/08/20 16:40:46 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-2.0.1.ebuild,v 1.6 2003/09/06 23:59:48 msterret Exp $
 
 IUSE=""
 
@@ -26,7 +26,7 @@ src_unpack() {
 	sed -e 's:^CFLAGS:#CFLAGS:g' \
 		-e 's:^CPPFLAGS:#CPPFLAGS:g' \
 		configure.in.orig > configure.in
-	
+
 	# Fix problems with later versions of automake.  Please do not
 	# remove .. if there are any issues, let me know.
 	# <azarah@gentoo.org> (30 Mar 2003)
@@ -35,7 +35,7 @@ src_unpack() {
 	aclocal
 	autoconf
 	automake
-	
+
 	elibtoolize
 }
 
