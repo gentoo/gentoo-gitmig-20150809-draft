@@ -1,6 +1,19 @@
 # ChangeLog for net-dialup/isdn4k-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.28 2004/11/11 06:20:53 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.29 2004/11/22 20:05:39 mrness Exp $
+
+*isdn4k-utils-3.5_pre20041110 (22 Nov 2004)
+
+  22 Nov 2004; Alin Nastac <mrness@gentoo.org> metadata.xml,
+  +files/3.5_pre20041110/config, +files/3.5_pre20041110/config.old,
+  +files/3.5_pre20041110/ioptions, +files/3.5_pre20041110/ip-down,
+  +files/3.5_pre20041110/ip-up, +files/3.5_pre20041110/isdn.conf,
+  +files/3.5_pre20041110/isdn.init, +files/3.5_pre20041110/isdnlog.conf,
+  +files/3.5_pre20041110/isdnlog.init,
+  +files/3.5_pre20041110/isdnlog.logrotated, +files/3.5_pre20041110/net.ippp0,
+  +files/3.5_pre20041110/options.ippp0, +isdn4k-utils-3.5_pre20041110.ebuild:
+  Improved ebuild imported from #71845, thanks to Stefan Briesenick
+  <sbriesen@gmx.de>.
 
   11 Nov 2004; Alin Nastac <mrness@gentoo.org> 
   files/3.5_p20041024/ip-down, files/3.5_p20041024/ip-up:

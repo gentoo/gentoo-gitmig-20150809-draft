@@ -1,0 +1,29 @@
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/files/3.5_pre20041110/options.ippp0,v 1.1 2004/11/22 20:05:39 mrness Exp $
+
+# Example config for a personal ISP dialin
+# see "man ipppd" for explanation of all possible options
+
+# for the defaultroute setting, look in /etc/conf.d/net
+
+/dev/isdn/ippp0
+
+# you have to put login and password into /etc/ppp/pap-secrets too
+
+name "insert ppp login here"
+
+lock
+ipcp-accept-local
+ipcp-accept-remote
+noipdefault
+
+# You might want to try these if you have problems:
+#-vj
+#-vjccomp
+#-ac
+#-pc
+#-bsdcomp
+#mru 1524
+#mtu 1500
+#noccp

@@ -1,0 +1,100 @@
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/files/3.5_pre20041110/net.ippp0,v 1.1 2004/11/22 20:05:39 mrness Exp $
+
+#NB: Config is in /etc/conf.d/net
+
+depend() {
+	need isdn
+}
+
+checkconfig() {
+	if [ -z "$(eval echo \$\{iface_${IFACE}\})" ]
+	then
+		eerror "Please make sure that /etc/conf.d/net has \$iface_$IFACE set"
+		return 1
+	fi
+}
+
+start() {
+	checkconfig || return 1
+
+	local iface_args="$(eval echo \$\{iface_${IFACE}\})"
+	local ipppd_opts=""
+
+	ebegin "Starting ipppd for ${IFACE}"
+	[ -n "${gateway}" ] && [ "${gateway%/*}" = "${IFACE}" ] && ipppd_opts='defaultroute'
+	/sbin/ipppd ${ipppd_opts} pidfile /var/run/ipppd.${IFACE}.pid file /etc/ppp/options.${IFACE} || {
+		local retval=$?
+		eend ${retval} "Failed to start ipppd"
+		return ${retval}
+	}
+	eend 0
+
+	ebegin "Bringing ${IFACE} up"
+	/sbin/ifconfig ${IFACE} ${iface_args} >/dev/null || {
+		local retval=$?
+		eend ${retval} "Failed to bring ${IFACE} up"
+		stop
+		return ${retval}
+	}
+	eend 0
+
+	if [ -n "$(eval echo \$\{inet6_${IFACE}\})" ]
+	then
+		local x=""
+		ebegin "  Adding inet6 addresses"
+		for x in $(eval echo \$\{inet6_${IFACE}\})
+		do
+			ebegin "    ${IFACE} inet6 add ${x}"
+			/sbin/ifconfig ${IFACE} inet6 add ${x} >/dev/null
+			eend 0
+		done
+		save_options "inet6" "$(eval echo \$\{inet6_${IFACE}\})"
+	fi
+
+	if [ -n "${gateway}" ] && [ "${gateway%/*}" = "${IFACE}" ]
+	then
+		ebegin "  Setting default gateway"
+		/sbin/route add default dev ${gateway%/*} >/dev/null || {
+			local retval=$?
+			eend ${retval} "Failed to bring ${IFACE} up"
+			stop
+			return ${retval}
+		}
+		eend 0
+	fi
+
+	# Enabling rp_filter causes wacky packets to be auto-dropped by
+	# the kernel
+	if [ -e /proc/sys/net/ipv4/conf/${IFACE}/rp_filter ]
+	then
+		echo 1 > /proc/sys/net/ipv4/conf/${IFACE}/rp_filter
+	fi
+}
+
+stop() {
+	local myinet6="$(get_options inet6)"
+	local pidfile="/var/run/ipppd.${IFACE}.pid"
+
+	ebegin "Bringing ${IFACE} down"
+
+	# Also down the inet6 interfaces
+	if [ -n "${myinet6}" ]
+	then
+		local x=""
+		for x in ${myinet6}
+		do
+			/sbin/ifconfig ${IFACE} inet6 del ${x} >/dev/null
+		done
+	fi
+
+	/sbin/ifconfig ${IFACE} down >/dev/null
+
+	# Kill ipppd
+	test -s "${pidfile}" && kill `cat ${pidfile}`
+	sleep 1
+	test -s "${pidfile}" && sleep 2 && test -s "${pidfile}" && einfon "Killing ipppd" && kill -KILL `cat ${pidfile}`
+
+	eend 0
+}

@@ -1,0 +1,68 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/files/3.5_pre20041110/isdn.init,v 1.1 2004/11/22 20:05:39 mrness Exp $
+
+opts="start stop save reload info show"
+
+depend() {
+	use pcmcia capi
+}
+
+start() {
+	local i=0
+	while true; do
+		local DRIVER=$(eval echo "\$ISDN_DRIVER_${i}")
+		local PARAMS=$(eval echo "\$ISDN_PARAMS_${i}")
+		[ -z "${DRIVER}" ] && break
+		if ! /bin/grep -q "^${DRIVER} " /proc/modules ; then
+			ebegin "Loading ISDN driver ${DRIVER}"
+			/sbin/modprobe ${DRIVER} ${PARAMS} &>/dev/null
+			eend $?
+		fi
+		: $((i++))
+	done
+
+	ebegin "Loading isdnctrl configuration"
+	[ ! -f "${ISDNCTRL_CONFIG}" ] || /usr/sbin/isdnctrl readconf "${ISDNCTRL_CONFIG}" >/dev/null
+	eend $?
+	
+	if [ -n "${IPROFD_SETTINGS}" ]; then
+		ebegin "Starting modem-register daemon"
+		start-stop-daemon --start --quiet --exec /usr/sbin/iprofd -- "${IPROFD_SETTINGS}"
+		eend $?
+	fi
+}
+
+stop() {
+	if [ -n "${IPROFD_SETTINGS}" ]; then
+		ebegin "Stopping modem-register daemon"
+		start-stop-daemon --stop --quiet --retry 5 --exec /usr/sbin/iprofd
+		eend $?
+	fi
+
+	ebegin "Unloading isdnctrl configuration"
+	/usr/sbin/isdnctrl reset force >/dev/null
+	eend $?
+}
+
+save() {
+	ebegin "Saving isdnctrl configuration"
+	/usr/sbin/isdnctrl writeconf "${ISDNCTRL_CONFIG}" >/dev/null
+	eend $?
+}
+
+reload() {
+	ebegin "Reloading isdnctrl configuration"
+	/usr/sbin/isdnctrl reset >/dev/null
+	[ ! -f "${ISDNCTRL_CONFIG}" ] || /usr/sbin/isdnctrl readconf "${ISDNCTRL_CONFIG}" >/dev/null
+	eend $?
+}
+
+info() {
+	/usr/sbin/isdnctrl status all
+}
+
+show() {
+        /usr/sbin/isdnctrl list all
+}
