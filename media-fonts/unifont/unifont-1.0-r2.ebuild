@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/unifont-1.0-r2.ebuild,v 1.3 2004/04/25 15:19:51 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/unifont-1.0-r2.ebuild,v 1.4 2004/04/25 15:45:31 usata Exp $
 
 inherit eutils
 
@@ -8,8 +8,8 @@ IUSE="X"
 
 DESCRIPTION="X11 GNU unicode font"
 HOMEPAGE="http://czyborra.com/"
-SRC_URI="http://ftp.debian.org/debian/pool/main/u/unifont/${P/-/_}.orig.tar.gz
-	http://ftp.debian.org/debian/pool/main/u/unifont/${P/-/_}-1.diff.gz"
+SRC_URI="mirror://debian/pool/main/u/unifont/${P/-/_}.orig.tar.gz
+	mirror://debian/pool/main/u/unifont/${P/-/_}-1.diff.gz"
 
 LICENSE="freedist"
 SLOT="0"
