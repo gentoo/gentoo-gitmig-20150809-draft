@@ -2,10 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>net-im</herd>
-<maintainer>
-  <email>luke-jr@gentoo.org</email>
-  <name>Luke-Jr</name>
-  <description>Maintaining this until someone else wants to maintain it (preferably someone who uses it)</description>
-</maintainer>
 <longdescription>This is the official Jabber server along with many different gateways to other IM protocols.</longdescription>
 </pkgmetadata>
