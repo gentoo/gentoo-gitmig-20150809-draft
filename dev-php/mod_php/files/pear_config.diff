@@ -1,0 +1,12 @@
+--- pear/PEAR/Config.php	2002/12/22 01:43:20	1.35.2.2
++++ pear/PEAR/Config.php	2003/01/07 23:12:06	1.41
+
+@@ -142,7 +142,7 @@ if (isset($_ENV['PHP_PEAR_PREFERRED_STAT
+ if (isset($_ENV['PHP_PEAR_UMASK'])) {
+     define('PEAR_CONFIG_DEFAULT_UMASK', $_ENV['PHP_PEAR_UMASK']);
+ } else {
+-    define('PEAR_CONFIG_DEFAULT_UMASK', umask());
++    define('PEAR_CONFIG_DEFAULT_UMASK', decoct(umask()));
+ }
+
+ // Default for cache_ttl
