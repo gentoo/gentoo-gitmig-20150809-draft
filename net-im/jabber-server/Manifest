@@ -1,8 +1,8 @@
-MD5 a9213d2a897ec283c394cf2bdd5786d5 ChangeLog 1810
+MD5 562a2de4e681ffe3e36b9647100ca7ce ChangeLog 2041
 MD5 294f8b0ea0f44ada8012c8dcbc085830 metadata.xml 492
 MD5 b4f693604b2b6a39d6759ce5e89e4db3 jabber-server-1.4.2-r2.ebuild 3881
 MD5 8e3f2c9def6ac70299c29c1f25ed90ef jabber-server-1.4.2-r3.ebuild 7175
-MD5 075b59737a2532faddefa942615a3369 jabber-server-1.4.2-r4.ebuild 7183
+MD5 a50342f45cf7ee3fe7a58ae6c565a988 jabber-server-1.4.2-r4.ebuild 7340
 MD5 56c6d30985fe5f4ce2ecbc717f2b0f11 files/config-1.4.2-r1.tbz2 3202
 MD5 b9aed79237eda16bfed03ecd55ab1d84 files/config-1.4.2-r3.tbz2 3341
 MD5 9729606a22930fc068220751ef1a6f89 files/digest-jabber-server-1.4.2-r2 426
@@ -12,3 +12,5 @@ MD5 411dedb4aa875912c371c2e0c5997d82 files/jabber.rc6-r1 739
 MD5 cdd557874bd23433279e577b7e7a511d files/jabber.rc6-r3 904
 MD5 bc605a772d428ee0977b948ecdae26d3 files/mio_ssl.c.patch 874
 MD5 de75a0ec597fea156fdbfbd699124e34 files/digest-jabber-server-1.4.2-r4 535
+MD5 2e890fc1be6ca6bd51afdeebb9aae64e files/config-1.4.2-r4.tbz2 3835
+MD5 6eec3798463d34b660b93470f12bb8d5 files/msn-configure-patch-00 1051
