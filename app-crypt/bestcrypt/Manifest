@@ -1,6 +1,6 @@
 MD5 063d2613f18d19f836ebd5884afd1f73 ChangeLog 1043
 MD5 b09d194cf99d8d47eb265a64ed720542 bestcrypt-1.2_p2.ebuild 1589
-MD5 589bbaa696e3cc888256a3ef1ed40d6f bestcrypt-1.2_p5.ebuild 1810
+MD5 38c3fdfbe6d4bd8b8bc5332ccc0b0eee bestcrypt-1.2_p5.ebuild 1809
 MD5 99ea589c8d024e3c7721ea0978430eda bestcrypt-1.2_p6.ebuild 1811
 MD5 4d55e7543ba2eec5715d0a6aae4b811c files/bcrypt 2736
 MD5 da7493ab01dda1aa1011a445088054ad files/digest-bestcrypt-1.2_p2 67
