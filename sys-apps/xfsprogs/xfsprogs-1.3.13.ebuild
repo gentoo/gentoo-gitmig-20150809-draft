@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsprogs/xfsprogs-1.3.13.ebuild,v 1.4 2001/12/15 06:11:09 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsprogs/xfsprogs-1.3.13.ebuild,v 1.5 2001/12/26 11:05:46 gbevin Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="xfs filesystem utilities"
@@ -28,5 +28,5 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install install-dev || die
+	make DESTDIR=${D} DK_INC_DIR=${D}/usr/include/disk install install-dev || die
 }
