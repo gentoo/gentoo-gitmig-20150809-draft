@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-0.9.8.20040710.ebuild,v 1.2 2004/07/13 17:18:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-0.9.8.20040710.ebuild,v 1.3 2004/07/18 05:29:52 vapier Exp $
 
 inherit enlightenment eutils flag-o-matic
 
@@ -8,7 +8,7 @@ DESCRIPTION="GTK2 file-manager"
 HOMEPAGE="http://evidence.sourceforge.net/"
 
 LICENSE="GPL-2"
-IUSE="X debug gnome kde mad oggvorbis perl truetype"
+IUSE="X debug gnome kde mad oggvorbis perl truetype xine avi mpeg"
 
 DEPEND=">=dev-util/pkgconfig-0.5
 	=x11-libs/gtk+-2*
@@ -19,6 +19,9 @@ DEPEND=">=dev-util/pkgconfig-0.5
 	mad? ( media-sound/madplay )
 	truetype? ( =media-libs/freetype-2* )
 	kde? ( kde-base/kdelibs )
+	xine? ( >=media-libs/xine-lib-1_rc1 )
+	avi? ( >=media-video/avifile-0.7.38 )
+	mpeg? ( media-libs/libmpeg3 )
 	media-libs/libao
 	virtual/libc
 	sys-devel/gcc
@@ -43,6 +46,9 @@ src_compile() {
 		--enable-canvas-evas2
 		--enable-extra-themes
 		--enable-extra-iconsets
+		`use_enable xine thumbnailer-xine`
+		`use_enable avi thumbnailer-avi`
+		`use_enable mpeg thumbnailer-mpeg3`
 		`use_enable perl pcre`
 		`use_enable X x`
 		`use_enable mad libmad`
