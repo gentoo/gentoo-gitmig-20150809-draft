@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.0.1.1.ebuild,v 1.1 2002/07/29 05:01:14 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.0.1.1.ebuild,v 1.2 2002/07/30 04:21:48 seemant Exp $
 
 inherit debug
 inherit gnome2
@@ -44,12 +44,12 @@ G2CONF="${G2CONF} --with-ncurses --enable-debug=yes"
 		
 src_install() {
 	export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1"
-	make prefix=${D}/usr \
-		sysconfdir=${D}/etc \
-		infodir=${D}/usr/share/info \
-		mandir=${D}/usr/share/man \
-		localstatedir=${D}/var/lib \
-		install || die "install failure"
+#	make prefix=${D}/usr \
+#		sysconfdir=${D}/etc \
+#		infodir=${D}/usr/share/info \
+#		mandir=${D}/usr/share/man \
+#		localstatedir=${D}/var/lib \
+		einstall || die "install failure"
 	unset GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL
 
 	dodoc AUTHORS COPYING COPYING-DOCS ChangeLog HACKING INSTALL MAINTAINERS NEWS README TODO
