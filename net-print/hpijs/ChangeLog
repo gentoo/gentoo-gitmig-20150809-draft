@@ -1,6 +1,9 @@
 # ChangeLog for net-print/hpijs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/ChangeLog,v 1.31 2004/08/04 20:56:49 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/ChangeLog,v 1.32 2004/09/04 01:49:03 kloeri Exp $
+
+  04 Sep 2004; Bryan Østergaard <kloeri@gentoo.org> hpijs-1.5.ebuild:
+  Stable on alpha.
 
   04 Aug 2004; Heinrich Wendel <lanius@gentoo.org> hpijs-1.6.1.ebuild:
   fix amd64 compile
