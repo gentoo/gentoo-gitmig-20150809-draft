@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r4.ebuild,v 1.4 2004/05/04 03:00:35 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r4.ebuild,v 1.5 2004/05/04 14:58:18 solar Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj f77 objc hardened uclibc debug"
 
@@ -365,7 +365,7 @@ src_unpack() {
 	# to build crtbeginT.o (May 2 2004)
 	# Testing arm again (May 3 2004)
 
-	use uclibc && epatch ${FILESDIR]/3.3.3/gcc-3.3.3-uclibc-add-ssp.patch
+	use uclibc && epatch ${FILESDIR}/3.3.3/gcc-3.3.3-uclibc-add-ssp.patch
 	#use uclibc || epatch ${DISTDIR}/${PIE_EXCLUSION_PATCH}
 	use uclibc || epatch ${DISTDIR}/${SSP_EXCLUSION_PATCH}
 
