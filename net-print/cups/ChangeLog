@@ -1,6 +1,12 @@
 # ChangeLog for net-print/cups
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.13 2002/05/04 22:45:53 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.14 2002/06/24 20:21:48 woodchip Exp $
+
+*cups-1.1.15 (17 Jun 2002)
+
+  17 Jun 2002; mjc <mjc@gentoo.org> :
+
+  New CUPS.
 
 *cups-1.1.14-r4 (4 May 2002)
 
