@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.70 2004/11/24 00:27:46 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.71 2004/11/24 08:26:11 josejx Exp $
+
+  06 Nov 2004; Joseph Jezak <josejx@gentoo.org> phpmyadmin-2.6.0_p3.ebuild:
+  Marked ppc stable for bug #71819
 
   24 Nov 2004; Bryan Østergaard <kloeri@gentoo.org>
   phpmyadmin-2.6.0_p3.ebuild:
