@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Michael Conrad Tilstra <michael@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rio500/rio500-0.7.ebuild,v 1.1 2001/04/25 21:10:16 michael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rio500/rio500-0.7.ebuild,v 1.2 2001/04/25 21:17:20 michael Exp $
 
 #P=
 A=${P}.tar.gz
@@ -15,8 +15,8 @@ DEPEND="virtual/glibc
 
 src_compile() {
     try ./configure --prefix=/usr --host=${CHOST} \
-         --with-fontpath=/usr/share/rio500  \
-         --with-usbdevfs --with-id3support
+         --with-fontpath=/usr/share/rio500 
+#         --with-usbdevfs --with-id3support
     try make
 }
 
