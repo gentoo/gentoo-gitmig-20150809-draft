@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/gtk-sharp-0.9.ebuild,v 1.1 2003/05/08 13:26:59 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/gtk-sharp-0.9.ebuild,v 1.2 2003/05/09 17:44:14 foser Exp $
 
 # WARNING 
 # All gst-sharp hacks done in this build are nonfunctional
@@ -39,6 +39,11 @@ src_unpack() {
 	mv configure.in configure.in.old
 	sed -e "s:sample/Makefile::" -e "s:sample/rsvg/Makefile::" configure.in.old > configure.in
 
+	# Workaround possible upgrade problems
+	cd ${S}/rsvg 
+	mv Makefile.in Makefile.in.old
+	sed -e "s:glib-sharp:../glib/glib-sharp.dll:" Makefile.in.old > Makefile.in
+
 	# patch gst-sharp stuff
 	# epatch ${FILESDIR}/${P}-gst_sharp.patch
 }
@@ -51,7 +56,7 @@ src_compile() {
 
 	econf || die "./configure failed"
 
-	emake || die
+	MAKEOPTS="-j1" MONO_PATH=${S} emake || die
 
 	# gst-sharp hacks
 	# cd ${S}/gst/
