@@ -1,0 +1,38 @@
+--- dnsmasq-2.16.orig/src/cache.c
++++ dnsmasq-2.16/src/cache.c
+@@ -17,7 +17,7 @@
+ static int cache_inserted, cache_live_freed, insert_error;
+ static union bigname *big_free;
+ static int bignames_left, log_queries, cache_size, hash_size;
+-static int index;
++static int uid;
+ 
+ static void cache_free(struct crec *crecp);
+ static void cache_unlink(struct crec *crecp);
+@@ -36,7 +36,7 @@
+   cache_size = size;
+   big_free = NULL;
+   bignames_left = size/10;
+-  index = 0;
++  uid = 0;
+ 
+   cache_inserted = cache_live_freed = 0;
+ 
+@@ -48,7 +48,7 @@
+ 	{
+ 	  cache_link(crecp);
+ 	  crecp->flags = 0;
+-	  crecp->uid = index++;
++	  crecp->uid = uid++;
+ 	}
+     }
+   
+@@ -85,7 +85,7 @@
+ {
+   crecp->flags &= ~F_FORWARD;
+   crecp->flags &= ~F_REVERSE;
+-  crecp->uid = index++; /* invalidate CNAMES pointing to this. */
++  crecp->uid = uid++; /* invalidate CNAMES pointing to this. */
+   
+   if (cache_tail)
+     cache_tail->next = crecp;

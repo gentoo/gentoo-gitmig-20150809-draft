@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.16.ebuild,v 1.1 2004/10/22 17:33:25 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.16.ebuild,v 1.2 2004/11/06 21:47:25 avenj Exp $
+
+inherit eutils
 
 MY_P="${P/_/}"
 MY_PV="${PV/_rc*/}"
@@ -19,6 +21,7 @@ DEPEND="virtual/libc
 S="${WORKDIR}/${PN}-${MY_PV}"
 
 src_compile() {
+	epatch ${FILESDIR}/dnsmasq-2.16-gcc34.diff
 	emake || die
 }
 

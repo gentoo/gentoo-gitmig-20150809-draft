@@ -1,4 +1,4 @@
-MD5 d8e0ebafa977178d33108d4ab2638f72 ChangeLog 6627
+MD5 770034bbaee20983b84793e4691c3536 ChangeLog 6844
 MD5 17ced6f6c41f0105ab28e94b8a7bd4f5 dnsmasq-2.8-r1.ebuild 1024
 MD5 26b4f1cdd80b7aee01db99e5ecf2ec0f dnsmasq-2.5-r1.ebuild 1018
 MD5 cda4a1f79a0b97ab668d8bf1a7c9be7b dnsmasq-2.14.ebuild 923
@@ -6,7 +6,7 @@ MD5 51334b67d2cbed22e0efec4143bc6ff0 metadata.xml 245
 MD5 559ce46912f31c1d022757db2228b0fe dnsmasq-2.15.ebuild 922
 MD5 7a4b20cff20e1240e4ba113c04e6880b dnsmasq-2.13.ebuild 924
 MD5 2afac01881b13d0907550170a81ccecc dnsmasq-2.9.ebuild 1048
-MD5 79b5a7e033cce70f9b1b2456d56833de dnsmasq-2.16.ebuild 923
+MD5 2745c43a45b869faa180967dbfeddb6d dnsmasq-2.16.ebuild 983
 MD5 088c015866ccd21fcb147094476a89cb files/digest-dnsmasq-2.14 64
 MD5 39075dfeab4bbded5f0e8680df29e414 files/digest-dnsmasq-2.8-r1 63
 MD5 8aeaa6fcd017624c86ad1a090cd8598a files/digest-dnsmasq-2.15 64
@@ -16,3 +16,4 @@ MD5 fc1326c5ef78a5ba4a73f6261806579f files/dnsmasq.confd 339
 MD5 6a1f2d0e8629951259975bc9f17ee8b3 files/digest-dnsmasq-2.13 64
 MD5 d48a297550b42f81be10bd5fcf4e15a7 files/digest-dnsmasq-2.9 63
 MD5 8a37300e75cd9eea55ab1ff9d8146fa5 files/digest-dnsmasq-2.16 64
+MD5 ddb2a3e0678cbf7c15d32a020c964b41 files/dnsmasq-2.16-gcc34.diff 928
