@@ -1,6 +1,11 @@
 # ChangeLog for x11-terms/aterm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.23 2004/03/07 16:09:34 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.24 2004/03/27 19:34:21 spock Exp $
+
+  27 Mar 2004; Michal Januszewski <spock@gentoo.org> aterm-0.4.2-r4.ebuild,
+  aterm-0.4.2-r5.ebuild, aterm-0.4.2-r6.ebuild, aterm-0.4.2-r7.ebuild,
+  aterm-0.4.2-r8.ebuild:
+  Ebuild clean-ups.
 
   07 Mar 2004; Stephen P. Becker <geoman@gentoo.org> aterm-0.4.2-r7.ebuild:
   Added ~mips keyword
