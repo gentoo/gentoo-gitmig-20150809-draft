@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r5.ebuild,v 1.4 2004/04/07 00:06:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r5.ebuild,v 1.5 2004/04/07 00:07:20 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -73,8 +73,6 @@ src_compile() {
 }
 
 src_install() {
-	dodoc README* RELNOTES
-
 	into /
 	cd ${S}/ip
 	dosbin ifcfg ip routef routel rtacct rtmon rtpr || die "dosbin * failed"
@@ -82,9 +80,9 @@ src_install() {
 	dosbin tc || die "dosbin tc failed"
 	cd ${S}
 
-	#install Debian man pages
 	doman debian/manpages/*.[1-9]
 
+	dodoc README* RELNOTES
 	docinto examples ; dodoc examples/*
 	docinto examples/diffserv ; dodoc examples/diffserv/*
 	dodir /etc/iproute2
