@@ -1,5 +1,5 @@
-MD5 3c993542fb30fd6d5b45cb128814c3b5 cl-jpeg-1.033-r1.ebuild 695
-MD5 ca4f6d2872ab053bf8b266b7b2dd14c1 ChangeLog 979
+MD5 895885613983a7ef6693738a1bdef432 ChangeLog 1084
+MD5 ddccc345bb4e249f792ad0ed8940ae43 cl-jpeg-1.033-r1.ebuild 702
 MD5 e900640cfb73238c426e47e7dcbab707 metadata.xml 313
 MD5 196f99ce048bd8172af4ba6a35d7eb53 files/1.033-defconstant-gentoo.patch 3012
 MD5 60288ebdfb919c971ebd8c9de6584985 files/digest-cl-jpeg-1.033-r1 61
