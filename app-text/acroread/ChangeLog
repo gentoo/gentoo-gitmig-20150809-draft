@@ -1,6 +1,12 @@
 # ChangeLog for app-text/acroread
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.45 2005/03/14 21:27:05 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/ChangeLog,v 1.46 2005/03/15 19:21:03 genstef Exp $
+
+  15 Mar 2005; Stefan Schweizer <genstef@gentoo.org> acroread-7.0.ebuild:
+  Ebuild cleanup, version 0.7 bug 85226, adding ldap use-flag for bug 85297
+  thanks to Lee Trager <nukem@users.xeroprj.org> and devinkinder@comcast.net,
+  removing asainfonts DEPEND, thanks to Chin Yee <polar88bear@hotmail.com> in
+  bug 85343. Thanks to Herbie Hopkins and others.
 
 *acroread-7.0 (14 Mar 2005)
 

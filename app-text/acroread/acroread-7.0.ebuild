@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.ebuild,v 1.2 2005/03/14 21:33:29 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-7.0.ebuild,v 1.3 2005/03/15 19:21:03 genstef Exp $
 
 inherit nsplugins eutils
 
@@ -10,12 +10,13 @@ SRC_URI="ftp://ftp.adobe.com/pub/adobe/reader/unix/7x/${PV}/enu/AdbeRdr${PV/.}_l
 
 LICENSE="Adobe"
 SLOT="0"
-KEYWORDS="-* ~x86"
-IUSE="cjk noplugin"
+KEYWORDS="-* ~x86 ~amd64"
+IUSE="noplugin ldap"
 RESTRICT="nostrip"
 
-DEPEND="virtual/libc"
-RDEPEND="cjk? ( media-fonts/acroread-asianfonts )"
+RDEPEND="virtual/libc
+	!amd64? ( ldap? ( net-nds/openldap ))
+	amd64? ( >=app-emulation/emul-linux-x86-gtklibs-1.2-r1 )"
 PROVIDE="virtual/pdfviewer"
 
 INSTALLDIR=/opt/Acrobat7
@@ -57,11 +58,17 @@ src_install() {
 		inst_plugin ${INSTALLDIR}/Browser/intellinux/nppdf.so
 	fi
 
-	#dynamic environment by T.Henderson@cs.ucl.ac.uk (Tristan Henderson)
-	dodir /etc/env.d
-	echo -e "PATH=${INSTALLDIR}\nROOTPATH=${INSTALLDIR}" > \
-		${D}/etc/env.d/10acroread5
+	if use amd64 ; then
+		# Work around buggy 32bit glibc on amd64, bug 77229
+		dosed  "3i\export GCONV_PATH=\"/usr/lib32/gconv\"" ${INSTALLDIR}/acroread
+	fi
 
+	if use amd64 || ! use ldap ; then
+		mv ${D}${INSTALLDIR}/Reader/intellinux/plug_ins/PPKLite.api \
+			${D}${INSTALLDIR}/Reader/intellinux/plug_ins/PPKLite.api.disabled
+	fi
+
+	dosym ${INSTALLDIR}/acroread /usr/bin/acroread
 }
 
 pkg_postinst () {
@@ -69,4 +76,12 @@ pkg_postinst () {
 	find ${INSTALLDIR} -type d | xargs chmod 755 || die
 
 	einfo "The browser plugin does not work on firefox 1.0.1 (yet)"
+	einfo
+	einfo "Asianfonts are not avaiable seperately for version 7 (yet)"
+	einfo "The work around for the time being is to copy the 'Resource' directory from"
+	einfo "a windows machine with acrobat reader 7 and asian font support installed."
+	einfo
+	einfo "The Acrobat(TM) Security Plugin will be enabled with USE=ldap, it"
+	einfo "does not work with amd64 because there there is no x86 ldap-emulation"
+	einfo "package available in portage."
 }
