@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.675 2004/10/08 12:11:14 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.676 2004/10/08 12:28:55 pauldv Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -228,7 +228,6 @@ dev-tex/preview-latex:xemacs - Adds support for XEmacs
 dev-util/eric:idl - Enable omniorb support
 dev-util/glade:gnomedb - Enable gnomedb widgets for Glade.
 dev-util/pbuilder:uml - Enable pbuilder user mode linux support
-dev-util/subversion:svnwrapper - Use a wrapper for svn, enabling custom code.
 dev-util/xmingw-gcc:f77 - Build support for the f77 language
 dev-util/xmingw-gcc:gcj - Build gcj (java compiler included with gcc package)
 games-action/d2x:cdinstall - Enables copying files from the CD
