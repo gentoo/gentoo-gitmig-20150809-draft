@@ -1,5 +1,0 @@
-#!/bin/tcsh 
-source LinuxIntelEnv.Set
-setenv PATH ${PATH}:/usr/X11R6/bin #for xmkmf
-./bootstrap
-dmake/dmake product=full
