@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.45-r2.ebuild,v 1.7 2004/06/24 22:16:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.45-r2.ebuild,v 1.8 2004/06/30 18:01:16 vapier Exp $
 
 inherit perl-module flag-o-matic gnuconfig
 
@@ -15,8 +15,9 @@ IUSE="tcltk perl"
 
 DEPEND="perl? ( dev-lang/perl )
 	sys-apps/gawk
-	>=media-libs/libgd-1.8.3"
+	>=media-libs/gd-1.8.3"
 RDEPEND="tcltk? ( dev-lang/tcl )"
+
 TCLVER=""
 
 pkg_setup() {

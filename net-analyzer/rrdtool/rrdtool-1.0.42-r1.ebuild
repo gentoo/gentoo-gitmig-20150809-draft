@@ -1,25 +1,23 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.42-r1.ebuild,v 1.7 2004/06/24 22:16:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.42-r1.ebuild,v 1.8 2004/06/30 18:01:16 vapier Exp $
 
 inherit perl-module flag-o-matic
 
 DESCRIPTION="A system to store and display time-series data"
-SRC_URI="http://people.ee.ethz.ch/%7Eoetiker/webtools/${PN}/pub/${P}.tar.gz"
 HOMEPAGE="http://people.ee.ethz.ch/~oetiker/webtools/rrdtool/"
+SRC_URI="http://people.ee.ethz.ch/%7Eoetiker/webtools/${PN}/pub/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc"
 IUSE="tcltk perl"
 
-filter-mfpmath "sse"
-filter-flags "-ffast-math"
-
 DEPEND="perl? ( dev-lang/perl )
 	sys-apps/gawk
-	>=media-libs/libgd-1.8.3"
+	>=media-libs/gd-1.8.3"
 RDEPEND="tcltk? ( dev-lang/tcl )"
+
 TCLVER=""
 
 pkg_setup() {
@@ -33,6 +31,9 @@ pkg_setup() {
 }
 
 src_compile() {
+	filter-mfpmath "sse"
+	filter-flags "-ffast-math"
+
 	local myconf
 	use tcltk \
 		&& myconf="${myconf} --with-tcllib=/usr/lib" \
