@@ -1,6 +1,11 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.7 2002/11/22 20:58:50 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.8 2002/12/05 22:18:15 rphillips Exp $
+
+*phpmyadmin-2.3.2-r1 (05 Dec 2002)
+
+  05 Dec 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog phpmyadmin-2.3.2-r1.ebuild:
+  Added Arthur Ward's ebuild fixes to include the fpdf components.
 
 *phpmyadmin-2.3.3-rc1 (22 Nov 2002)
 
