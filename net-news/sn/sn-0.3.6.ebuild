@@ -1,9 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/sn/sn-0.3.5.ebuild,v 1.2 2003/02/13 15:17:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/sn/sn-0.3.6.ebuild,v 1.1 2003/03/06 03:13:08 vapier Exp $
 
 DESCRIPTION="Hassle-free Usenet news system for small sites"
-SRC_URI="http://infa.abo.fi/~patrik/sn/files/${P}.tar.gz"
+SRC_URI="http://infa.abo.fi/~patrik/sn/files/${P}.tar.bz2"
 HOMEPAGE="http://infa.abo.fi/~patrik/sn/"
 
 KEYWORDS="x86"
@@ -29,7 +29,7 @@ src_install() {
 		BINDIR=${D}/usr/sbin \
 		MANDIR=${D}/usr/share/man \
 		|| die "make install failed"
-	dodoc COPYING FAQ INSTALL* INTERNALS README* THANKS TODO
+	dodoc CHANGES FAQ INSTALL* INTERNALS README* THANKS TODO
 }
 
 pkg_postinst() {
