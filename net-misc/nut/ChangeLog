@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/nut
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/ChangeLog,v 1.28 2004/03/15 15:22:05 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/ChangeLog,v 1.29 2004/03/16 00:05:03 max Exp $
+
+  15 Mar 2004; Max Kalika <max@gentoo.org> nut-1.4.1.ebuild:
+  Bump to stable x86.
 
 *nut-1.4.1 (08 Mar 2004)
 *nut-1.5.12 (08 Mar 2004)

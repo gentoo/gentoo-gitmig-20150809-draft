@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.4.1.ebuild,v 1.1 2004/03/09 03:39:22 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nut/nut-1.4.1.ebuild,v 1.2 2004/03/16 00:05:03 max Exp $
 
 DESCRIPTION="Network-UPS Tools."
 HOMEPAGE="http://www.networkupstools.org/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://nut/source/${PV%.*}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 ~sparc"
 IUSE="cgi"
 
 RDEPEND="cgi? ( =media-libs/libgd-1* )"
@@ -48,7 +48,7 @@ src_compile() {
 
 	emake || die "compile problem"
 
-	if [ "`use cgi`" ] ; then
+	if use cgi ; then
 		emake cgi || die "compile cgi problem"
 	fi
 }
@@ -63,7 +63,7 @@ src_install() {
 		mv "${i}" "${i/.sample/}"
 	done
 
-	if [ "`use cgi`" ] ; then
+	if use cgi ; then
 		make DESTDIR="${D}" install-cgi || die "make install-cgi failed"
 		einfo "CGI monitoring scripts are installed in /usr/share/nut,"
 		einfo "copy them to your web server's ScriptPath to activate."
