@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre3-r5.ebuild,v 1.1 2004/03/31 09:24:02 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre3-r5.ebuild,v 1.2 2004/03/31 19:10:44 mholzer Exp $
 
-IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb gtk2 samba lirc matroska debug joystick theora"
+IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb gtk2 samba lirc matroska debug joystick theora ipv6"
 
 inherit eutils
 
@@ -259,6 +259,7 @@ src_compile() {
 		`use_enable 3dfx tdfxfb` \
 		`use_enable matrox mga` \
 		`use_enable xmms` \
+		`use_enable ipv6 inet6` \
 		${myconf} || die
 	# Breaks with gcc-2.95.3, bug #14479:
 	#  --enable-shared-pp \

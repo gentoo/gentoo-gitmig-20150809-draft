@@ -1,6 +1,9 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.116 2004/03/31 09:24:02 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.117 2004/03/31 19:10:44 mholzer Exp $
+
+  31 Mar 2004; Martin Holzer <mholzer@gentoo.org> mplayer-1.0_pre3-r5.ebuild:
+  adding ipv6 configure. closes 42940
 
 *mplayer-1.0_pre3-r3 (31 Mar 2004)
 
