@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources-dev/hppa-sources-dev-2.4.21_p9.ebuild,v 1.4 2003/09/07 07:26:00 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources-dev/hppa-sources-dev-2.4.21_p9.ebuild,v 1.5 2003/10/27 13:49:11 aliz Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -20,7 +20,7 @@ S=${WORKDIR}/linux-${KV}
 PATCH_BASE="7"
 
 DESCRIPTION="Full sources for the Linux kernel with patch for hppa"
-SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2 http://ftp.parisc-linux.org/cvs/linux-2.4/patch-${OKV}-pa${PATCH_BASE}.diff.gz
+SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2 http://ftp.parisc-linux.org/cvs/linux-2.4/patch-${OKV}-pa${PATCH_BASE}.diff.gz
 `for i in \`seq $((PATCH_BASE + 1)) ${PATCH_LEVEL}\`; do echo http://ftp.parisc-linux.org/cvs/linux-2.4/patch-${OKV}-pa$((i - 1))-pa${i}.gz; done`
 http://dev.gentoo.org/~gmsoft/${PN}-${OKV}-grsec-crypto-r1.diff.bz2
 http://dev.gentoo.org/~gmsoft/hppa-sources-dev-grsec-hppa64-fix.patch"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/alpha-sources-2.4.19-r1.ebuild,v 1.9 2003/09/07 07:26:00 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/alpha-sources-2.4.19-r1.ebuild,v 1.10 2003/10/27 13:49:11 aliz Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -20,7 +20,7 @@ ETYPE="sources"
 
 
 DESCRIPTION="Full sources for the Gentoo Linux Alpha kernel"
-SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2 http://www.tuxnetwork.de/gentoo/linux-gentoo-alpha-${KV}.patch.bz2"
+SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2 http://www.tuxnetwork.de/gentoo/linux-gentoo-alpha-${KV}.patch.bz2"
 PROVIDE="virtual/linux-sources"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 LICENSE="GPL-2"

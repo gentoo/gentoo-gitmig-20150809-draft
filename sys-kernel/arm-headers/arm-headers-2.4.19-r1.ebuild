@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/arm-headers/arm-headers-2.4.19-r1.ebuild,v 1.3 2003/09/08 02:34:54 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/arm-headers/arm-headers-2.4.19-r1.ebuild,v 1.4 2003/10/27 13:49:11 aliz Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 IUSE=""
@@ -55,7 +55,7 @@ ARM_KERNEL_PATCH="patch-${OKV}${ARM_PATCH_SUFFIX}"
 
 DESCRIPTION="Full sources for the ARM/Linux kernel"
 KEYWORDS="arm -hppa -x86 -ppc -sparc -alpha -mips"
-SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2 \
+SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2 \
 	ftp://ftp.arm.linux.org.uk/pub/armlinux/source/kernel-patches/v2.4/${ARM_KERNEL_PATCH}.bz2"
 HOMEPAGE="http://www.arm.linux.org.uk/ \
 		http://www.kernel.org/ \

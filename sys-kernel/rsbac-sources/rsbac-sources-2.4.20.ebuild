@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/rsbac-sources-2.4.20.ebuild,v 1.5 2003/09/07 07:26:01 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/rsbac-sources-2.4.20.ebuild,v 1.6 2003/10/27 13:49:11 aliz Exp $
 
 ETYPE="sources"
 
@@ -19,7 +19,7 @@ RSBAC=rsbac-v1.2.1
 
 DESCRIPTION="Rule Set Based Access Control (RSBAC) Kernel Patch"
 HOMEPAGE="http://www.rsbac.org"
-SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
+SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 http://www.rsbac.org/code/rsbac-v1.2.1.tar.bz2
 http://www.rsbac.org/patches/v1.2.1/patch-2.4.20-v1.2.1.gz
 http://www.rsbac.org/bugfixes/rsbac-bugfix-v1.2.1-1.diff

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ia64-sources/ia64-sources-2.4.22.ebuild,v 1.2 2003/10/02 19:58:36 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ia64-sources/ia64-sources-2.4.22.ebuild,v 1.3 2003/10/27 13:49:11 aliz Exp $
 
 IUSE=""
 
@@ -27,7 +27,7 @@ KV="${KV/-r0//}"
 MYSNAPSHOT="030909"
 DESCRIPTION="Full sources for the Gentoo Kernel."
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-http://www.kernel.org/pub/linux/kernel/ports/ia64/v2.4/linux-${OKV}-ia64-${MYSNAPSHOT}.diff.bz2"
+mirror://kernel/linux/kernel/ports/ia64/v2.4/linux-${OKV}-ia64-${MYSNAPSHOT}.diff.bz2"
 
 HOMEPAGE="http://www.gentoo.org/ http://www.kernel.org/"
 LICENSE="GPL-2"

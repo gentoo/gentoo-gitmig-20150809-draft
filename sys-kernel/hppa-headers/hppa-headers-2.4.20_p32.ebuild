@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-headers/hppa-headers-2.4.20_p32.ebuild,v 1.4 2003/09/08 08:00:37 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-headers/hppa-headers-2.4.20_p32.ebuild,v 1.5 2003/10/27 13:49:11 aliz Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 IUSE=""
@@ -27,7 +27,7 @@ S=${WORKDIR}/linux-${KV}
 SLOT="0"
 
 
-SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2 \
+SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2 \
 	http://ftp.parisc-linux.org/cvs/patch-${KV}.diff.gz"
 
 
