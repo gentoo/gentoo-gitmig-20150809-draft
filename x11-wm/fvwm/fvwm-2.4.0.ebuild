@@ -10,6 +10,7 @@ HOMEPAGE="http://www.fvwm.org/"
 DEPEND="virtual/glibc
 	>=sys-libs/readline-4.1
 	>=x11-libs/gtk+-1.2.10
+	>=dev-libs/libstroke-0.4
 	gnome? ( >=gnome-base/gnome-libs-1.2.13 )"
 
 src_compile() {
