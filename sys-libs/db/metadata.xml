@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<herd>sys-libs</herd>
+<herd>base-system</herd>
 <maintainer restrict=">=sys-libs/db-3.2.9-r5">
   <!-- I'm currently working on making db 4 work with gentoo, but am not
         maintaining general db -->
