@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gomd-cvs/gomd-cvs-0.0_alpha.ebuild,v 1.1 2003/07/24 16:23:15 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gomd-cvs/gomd-cvs-0.0_alpha.ebuild,v 1.2 2003/08/23 10:50:00 tantive Exp $
 
 DESCRIPTION="general openMosix daemon"
 HOMEPAGE="https://savannah.nongnu.org/forum/forum.php?forum_id=2219"
@@ -21,7 +21,7 @@ ECVS_TOP_DIR="${DISTDIR}/cvs-src/${PN}"
 S=${WORKDIR}/${ECVS_MODULE}
 
 src_compile() {
-    ./compile.sh
+    ./compile.sh --with-libgtop
 }
 
 #src_install() {
