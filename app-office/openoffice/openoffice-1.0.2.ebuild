@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.2.ebuild,v 1.4 2003/01/29 12:50:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.2.ebuild,v 1.5 2003/01/29 15:25:15 azarah Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -332,6 +332,8 @@ src_compile() {
 		# Setup path for new gcc layout in $LinuxEnvSet, else the build
 		# environment will not find gcc ... (Az)
 		perl -pi -e "s|PATH \.:\$SOLARVER|PATH \.:${gcc_path}:\$SOLARVER|" ${LinuxEnvSet}
+		# New builds start quoting stuff ...
+		perl -pi -e "s|PATH \"\.:\$SOLARVER|PATH \"\.:${gcc_path}:\$SOLARVER|" ${LinuxEnvSet}
 	fi
 
 	# Should the build use multiprocessing?
