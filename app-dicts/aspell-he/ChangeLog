@@ -1,6 +1,9 @@
 # ChangeLog for app-dicts/aspell-he
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-he/ChangeLog,v 1.4 2004/10/14 20:03:23 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-he/ChangeLog,v 1.5 2004/12/18 19:22:49 blubb Exp $
+
+  18 Dec 2004; Simon Stelling <blubb@gentoo.org> aspell-he-0.8.0.ebuild:
+  added forgotten IUSE=""
 
   14 Oct 2004; David Holm <dholm@gentoo.org> aspell-he-0.8.0.ebuild:
   Added to ~ppc.
