@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/chemtool/chemtool-1.6.ebuild,v 1.2 2003/08/05 18:31:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/chemtool/chemtool-1.6.ebuild,v 1.3 2003/08/06 06:47:11 phosphan Exp $
 
 [ -n "`use kde`" ] && inherit kde-functions
 inherit eutils
@@ -19,7 +19,7 @@ DEPEND=">=media-gfx/transfig-3.2.3d
 	>=media-libs/libemf-1.0
 	sys-apps/supersed
 	gnome? ( gnome-base/gnome )
-	kde? ( kde-base/kde )
+	kde? ( kde-base/kdebase )
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
@@ -29,12 +29,14 @@ src_unpack() {
 }
 
 src_compile() {
+	local mykdedir="${KDEDIR}"
+	if [ -z "${mykdedir}" ]; then mykdedir="bogus_kde"; fi
 	local config_opts
 	config_opts="--enable-emf"
 
 	if [ "`use kde`" ]; then
 		need-kde 2
-		config_opts="${config_opts} --with-kdedir=${KDEDIR}" ;
+		config_opts="${config_opts} --with-kdedir=${mykdedir}" ;
 	else
 		config_opts="${config_opts} --without-kdedir"
 	fi
@@ -59,16 +61,20 @@ src_compile() {
 }
 
 src_install() {
-	dodir ${KDEDIR}/share/applnk/Graphics
-	dodir ${KDEDIR}/share/mimelnk/application
-	dodir ${KDEDIR}/share/icons/hicolor/32x32/mimetypes
+
+	local mykdedir="${KDEDIR}"
+	if [ -z "${mykdedir}" ]; then mykdedir="bogus_kde"; fi
+	local sharedirs="applnk/Graphics mimelnk/application icons/hicolor/32x32/mimetypes"
+	for dir in ${sharedirs}; do
+		dodir ${mykdedir}/share/${dir}
+    done
 	dodir /usr/share/mime-types
    	dodir /usr/share/pixmaps/mc
 
 	make DESTDIR="${D}" install || die "make install failed"
 
 	if ! use kde; then
-		rm -rf ${D}/${KDEDIR}
+			rm -rf ${D}/${mykdedir}
 	fi
 
 	if ! use gnome; then

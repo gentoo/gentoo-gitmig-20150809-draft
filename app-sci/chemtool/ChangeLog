@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/chemtool
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/chemtool/ChangeLog,v 1.4 2003/07/17 13:09:19 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/chemtool/ChangeLog,v 1.5 2003/08/06 06:47:11 phosphan Exp $
+
+  06 Aug 2003; Patrick Kursawe <phosphan@gentoo.org> chemtool-1.6.ebuild:
+  Trying to fix bug 24984, no revision bump necessary.
 
 *chemtool-1.6 (17 Jul 2003)
 
