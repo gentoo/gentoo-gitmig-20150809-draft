@@ -1,6 +1,12 @@
 # ChangeLog for xfce-base/xfce-mcs-manager
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-mcs-manager/ChangeLog,v 1.41 2005/01/06 21:14:59 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce-mcs-manager/ChangeLog,v 1.42 2005/01/17 01:55:01 bcowan Exp $
+
+*xfce-mcs-manager-4.2.0 (16 Jan 2005)
+
+  16 Jan 2005; Brad Cowan <bcowan@gentoo.org>
+  +xfce-mcs-manager-4.2.0.ebuild:
+  4.2 final release of Xfce4.
 
 *xfce-mcs-manager-4.1.99.3-r1 (06 Jan 2005)
 
