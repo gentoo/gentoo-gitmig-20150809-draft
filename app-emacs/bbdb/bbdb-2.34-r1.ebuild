@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/bbdb-2.34-r1.ebuild,v 1.4 2004/04/25 16:56:26 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/bbdb-2.34-r1.ebuild,v 1.5 2004/06/04 19:55:21 usata Exp $
 
 inherit elisp
 
@@ -30,7 +30,7 @@ src_unpack() {
 	mv bbdb-sort-mailrc.el bbdb-sort-mailrc.txt
 	sed -e "0,/^Bng$/d" \
 		bbdb-sort-mailrc.txt > bbdb-sort-mailrc.el
-	cp ${DISTDIR}/{dates,point-at}.el .
+	cp ${DISTDIR}/{dates,point-at}.el ${S}/bits || die "cp failed"
 
 	if ! use crypt; then
 		rm ${S}/bits/bbdb-pgp.el
@@ -43,10 +43,14 @@ src_unpack() {
 src_compile() {
 
 	econf --with-emacs=emacs || die "econf failed"
-	make || die
-	echo "(add-to-list 'load-path \"${S}/bits\")" > ${T}/lp.el
-	emacs -batch -q --no-site-file --no-init-file \
-		-l ${T}/lp.el -f batch-byte-compile bits/*.el || die
+	emake -j1 || die "emake failed"
+	cat >${T}/lp.el<<-EOF
+		(add-to-list 'load-path "${S}/bits")
+		(add-to-list 'load-path "${S}/lisp")
+	EOF
+	emacs --batch -q --no-site-file --no-init-file \
+		-l ${T}/lp.el -f batch-byte-compile bits/*.el \
+		|| die "make bits failed"
 }
 
 src_install() {

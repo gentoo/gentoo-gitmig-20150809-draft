@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/bbdb
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/ChangeLog,v 1.9 2004/06/02 01:48:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/ChangeLog,v 1.10 2004/06/04 19:55:21 usata Exp $
+
+  05 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> bbdb-2.34-r1.ebuild:
+  Fixed fresh installation, see bug #52857
 
   01 Jun 2004; Aron Griffis <agriffis@gentoo.org>
   bbdb-2.35_pre20040323.ebuild:
