@@ -1,0 +1,19 @@
+diff -urN xmame-0.70.1-orig/src/unix/osd_cpu.h xmame-0.70.1/src/unix/osd_cpu.h
+--- xmame-0.70.1-orig/src/unix/osd_cpu.h	2003-06-12 05:37:50.000000000 +0200
++++ xmame-0.70.1/src/unix/osd_cpu.h	2003-07-15 15:09:03.000000000 +0200
+@@ -39,11 +39,15 @@
+ #endif
+ 
+ /* grrr work around some stupid header conflicts */
++#ifndef xgl
+ #if !defined __XF86_DGA_C && !defined __XOPENGL_C_ && !defined LONG64
+ typedef signed   char      INT8;
+ typedef signed   short     INT16;
+ typedef signed   int       INT32;
+ #endif
++#else
++#include <X11/Xmd.h>
++#endif
+ 
+ #ifndef LONG64
+ typedef signed   long long INT64;
