@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.5 2004/07/14 22:21:14 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.6 2004/07/21 10:42:41 stuart Exp $
 #
 # eclass/php5-sapi.eclass
 #		Eclass for building different php5 SAPI instances
@@ -23,7 +23,7 @@ HOMEPAGE="http://www.php.net/"
 LICENSE="PHP"
 SRC_URI="http://www.php.net/distributions/${MY_P}.tar.bz2"
 S="${WORKDIR}/${MY_P}"
-IUSE="${IUSE} adabas bcmath birdstep bzlib calendar cpdflib crypt ctype curl curlwrappers db2 dbase dbmaker dbx dio esoob exif fam frontbase fdftk filepro ftp gmp hyperwave-api iconv informix ingres interbase iodbc libedit mcve mhash ming mnogosearch msession msql mssql mysql ncurses nls nis oci8 oracle7 ssl ovrimos pcre pfpro postgres posix readline recode sapdb session shared simplexml snmp soap sockets solid spell spl ssl sybase sybase-ct sysvipc tidy tokenizer truetype odbc wddx xsl xml2 xmlrpc zlib dba cdb berkdb flatfile gdbm inifile qdbm empress empress-bcs gd gd-external imap kerberos ssl ldap sasl pcntl sqlite"
+IUSE="${IUSE} adabas bcmath birdstep bzlib calendar cpdflib crypt ctype curl curlwrappers db2 dbase dbmaker dbx dio esoob exif fam frontbase fdftk filepro ftp gmp hyperwave-api iconv informix ingres interbase iodbc jpeg libedit mcve mhash ming mnogosearch msession msql mssql mysql ncurses nls nis oci8 oracle7 ovrimos pcre pfpro png postgres posix readline recode sapdb session shared simplexml snmp soap sockets solid spell spl ssl sybase sybase-ct sysvipc tidy tiff tokenizer truetype odbc wddx xsl xml2 xmlrpc zlib dba cdb berkdb flatfile gdbm inifile qdbm empress empress-bcs gd gd-external imap kerberos ldap sasl pcntl sqlite"
 
 # these USE flags should have the correct dependencies
 
@@ -119,9 +119,16 @@ php5-sapi_check_awkward_uses () {
 		enable_extension_enable	"gd-jis-conf"	"nls" 0
 		enable_extension_enable	"gd-native-ttf"	"truetype" 0
 	else
-		enable_extension_with "gd" "gd" 1
-		enable_extension_enable	"gd-jis-conf"	"nls" 0
-		enable_extension_enable	"gd-native-ttf"	"truetype" 0
+		enable_extension_with	"freetype-dir"	"truetype"	0
+		enable_extension_with	"t1lib"			"truetype"	0 
+		enable_extension_enable	"gd-jis-conf"	"nls"		0
+		enable_extension_enable	"gd-native-ttf"	"truetype"	0
+		enable_extension_with 	"jpeg-dir" 		"jpeg" 		0 "/usr"
+		enable_extension_with 	"png-dir" 		"png" 		0 "/usr"
+		enable_extension_with 	"tiff-dir" 		"tiff" 		0 "/usr"
+		enable_extension_with 	"xpm-dir" 		"xpm" 		0 "/usr"
+		# enable gd last, so configure can pick up the previous settings
+		enable_extension_with "gd" "gd" 0
 	fi
 
 	if useq imap ; then
@@ -347,6 +354,7 @@ php5-sapi_src_compile () {
 
 
 	echo "${my_conf}"
+	// die "debugging output"
 
 	econf ${my_conf} || die "configure failed"
 	emake || die "make failed"
