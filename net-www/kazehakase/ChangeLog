@@ -1,0 +1,9 @@
+# ChangeLog for net-www/kazehakase
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/kazehakase/ChangeLog,v 1.1 2004/02/19 09:13:20 brad Exp $
+
+*kazehakase-0.1.2 (19 Feb 2004)
+
+  19 Feb 2004; Brad Laue <brad@gentoo.org> kazehakase-0.1.2.ebuild:
+  Introducing Kazehakase, a lightweight gecko based browser.
+
