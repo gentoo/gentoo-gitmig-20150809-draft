@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.119 2004/05/12 02:22:26 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.120 2004/05/12 08:16:53 aliz Exp $
 
 *binutils-2.15.90.0.3-r3 (11 May 2004)
 
@@ -23,11 +23,13 @@
   mips. That problem has been resolved in the kernel sources now, so it's safe
   to put these into unstable (2.15 needs more testing).
 
-*binutils-2.15.90.0.1.1-r1 (04 May 2004)
+*binutils-2.15.90.0.1.1-r2 (10 May 2004)
 
   10 May 2004; Travis Tilley <lv@gentoo.org>
   +binutils-2.15.90.0.1.1-r2.ebuild:
   added backports of the tbss fix and relro patch
+
+*binutils-2.15.90.0.1.1-r1 (04 May 2004)
 
   04 May 2004; Travis Tilley <lv@gentoo.org>
   +binutils-2.15.90.0.1.1-r1.ebuild:
