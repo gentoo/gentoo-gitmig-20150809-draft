@@ -1,6 +1,13 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.19 2003/04/19 19:26:36 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.20 2003/05/25 08:11:53 pauldv Exp $
+
+*openoffice-1.0.3-r1 (25 May 2003)
+
+  25 May 2003; Paul de Vrieze <pauldv@gentoo.org> openoffice-1.0.3-r1.ebuild,
+  files/1.0.3/vcl.printcxx.OOO_STABLE_1_PORTS.100102.patch:
+  Apply a patch found from openoffice bugzilla that should fix the printing
+  problem that caused an 1.0.3.1 release for the binary version.
 
 *openoffice-1.0.3 (07 Apr 2003)
   07 Apr 2003; Seth Chandler <sethbc@gentoo.org>;
