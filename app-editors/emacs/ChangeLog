@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/emacs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.34 2004/09/07 14:29:18 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/ChangeLog,v 1.35 2004/09/23 04:45:55 usata Exp $
+
+  23 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> emacs-21.3-r3.ebuild,
+  emacs-21.3-r4.ebuild:
+  Filtered out -O[3-9] if gcc-3.4 detected; bug #64832, bug #64790
+  and bug #64286.
 
   07 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> emacs-21.3-r4.ebuild:
   Added nosendmail USE flag. This closes bug #11104.

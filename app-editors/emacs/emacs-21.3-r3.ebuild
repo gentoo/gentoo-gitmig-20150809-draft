@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3-r3.ebuild,v 1.7 2004/07/04 14:15:47 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3-r3.ebuild,v 1.8 2004/09/23 04:45:55 usata Exp $
 
-inherit flag-o-matic eutils
+inherit flag-o-matic eutils gcc
 
 DESCRIPTION="An incredibly powerful, extensible text editor"
 HOMEPAGE="http://www.gnu.org/software/emacs"
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/emacs/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc -alpha arm -hppa ~amd64 -ia64 ~s390"
+KEYWORDS="x86 ppc ~sparc -alpha arm -hppa ~amd64 -ia64 ~s390"
 IUSE="X nls motif leim gnome Xaw3d lesstif"
 
 RDEPEND="sys-libs/ncurses
@@ -42,6 +42,11 @@ src_compile() {
 
 	# -fstack-protector gets internal compiler error at xterm.c (bug 33265)
 	filter-flags -fstack-protector
+
+	# gcc 3.4 with -O3 or stronger flag spoils emacs
+	if [ "$(gcc-major-version)" -ge 3 -a "$(gcc-minor-version)" -ge 4 ] ; then
+		replace-flags -O[3-9] -O2
+	fi
 
 	epatch ${FILESDIR}/${P}-amd64.patch
 	epatch ${FILESDIR}/${P}-hppa.patch
