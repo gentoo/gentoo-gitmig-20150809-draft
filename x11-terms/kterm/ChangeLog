@@ -1,0 +1,12 @@
+# ChangeLog for x11-terms/kterm
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/ChangeLog,v 1.1 2002/08/12 15:31:17 stubear Exp $
+
+*kterm-6.2.0 (12 Aug 2002)
+
+  12 Aug 2002; Stuart Bouyer <stubear@gentoo.org> kterm-6.2.0.ebuild, 
+  ChangeLog, digest-kterm-6.2.0, kterm-6.2.0-gentoo.patch:
+
+  Initial ebuild added to portage tree. Ebuild and patch submitted by
+  Atzm Watanabe <sitosito@p.chan.ne.jp>.
+
