@@ -1,6 +1,15 @@
 # ChangeLog for net-dialup/rp-pppoe
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.5 2002/08/30 11:33:31 cybersystem Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.6 2002/09/27 09:26:16 seemant Exp $
+
+*rp-pppoe-3.4-r1 (27 Jul 2002)
+ 
+  27 Sep 2002; Seemant Kulleen <seemant@gentoo.org> rp-pppoe-3.3-r1.ebuild
+  rp-pppoe-3.4-r1.ebuild :
+
+  If "tcltk" is in USE, then the tkpppoe front end will get installed.
+  Thanks to: tobi.bayer@gmx.de (Tobias Bayer) in bug #8419 for catching
+  this.
 
   30 Aug 2002; Sascha Schwabbauer <cybersystem@gentoo.org> :
  
@@ -9,8 +18,6 @@
   21 Aug 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
   Fix typo in HOMEPAGE. Close #6789.
-
-*rp-pppoe-3.3 (27 Jul 2002)
 
   27 Jul 2002; Seemant Kulleen <seemant@gentoo.org> rp-pppoe-3.3.ebuild
   files/digest-rp-pppoe-3.3 :
