@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.6 2005/02/10 05:42:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125.ebuild,v 1.7 2005/02/10 11:06:05 eradicator Exp $
 
 KEYWORDS="~amd64 ~mips ~sparc ~x86"
 
@@ -1054,15 +1054,16 @@ src_install() {
 	ABI=${ABI:-default}
 
 	# Handle stupid lib32 BS
-	if [ "$(tc-arch)" = "amd64" -a "${ABI}" = "x86" -a "$(get_libdir)" != "lib" ] && ! is_crosscompile; then
+	unset OLD_LIBDIR
+	if [ "$(tc-arch)" = "amd64" -a "${ABI}" = "x86" -a "$(get_libdir)" != "lib" ]; then
 		OLD_LIBDIR="$(get_libdir)"
 		LIBDIR_x86="lib"
 	fi
 
 	toolchain-glibc_src_install
 
-	# Handle stupid lib32 BS
-	if [ "$(tc-arch)" = "amd64" -a "${ABI}" = "x86" -a -n "${OLD_LIBDIR}" ] && ! is_crosscompile; then
+	# Handle stupid lib32 BS on amd64
+	if [ -n "${OLD_LIBDIR}" ]; then
 		LIBDIR_x86="${OLD_LIBDIR}"
 		unset OLD_LIBDIR
 
