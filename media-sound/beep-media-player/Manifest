@@ -1,20 +1,24 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 dd78b7990514069b8e807a8088303c3b beep-media-player-0.9.7-r4.ebuild 2538
 MD5 319fe8f45b51a2d31f8d4e9a4071ca10 metadata.xml 248
-MD5 7cdb15e8042acb07351df6b0cf5fa1ca ChangeLog 8065
+MD5 ecf0a3cb9f9582ce0032e594b93de9de ChangeLog 8409
 MD5 a72c1bd12ff2c4440d2eeb74cdcf0d34 beep-media-player-0.9.7-r2.ebuild 2330
-MD5 67e8e728e7d218400dedc65a068b83f1 beep-media-player-0.9.7-r3.ebuild 2447
+MD5 86cbeae9768257e75957c6cadcd8375a beep-media-player-0.9.7-r3.ebuild 2446
 MD5 d14dde91067c784f210c19e1e4024650 files/0.9.7-desktop-icon.patch 535
 MD5 bea6e241ce4dae7a01125836fda25fcc files/0.9.7-bigendian.patch 315
 MD5 8b9a3f5a01668b72272dc2f8b2969659 files/digest-beep-media-player-0.9.7-r2 62
+MD5 8b9a3f5a01668b72272dc2f8b2969659 files/digest-beep-media-player-0.9.7-r4 62
 MD5 8b9a3f5a01668b72272dc2f8b2969659 files/digest-beep-media-player-0.9.7-r3 62
 MD5 533bcd69c3357e3b6dd5b3a49afbb6bf files/0.9.7-noclick-resize.patch 974
+MD5 893b0d5bce79831b0f71aae51af7440d files/0.9.7-vorbis-date.patch 637
+MD5 32c2097467512370b951158b88abbeda files/0.9.7-hidden-window.patch 658
 MD5 e0224d7dcc5a2cb1af6ea6b18a6daea8 files/beep-config 3347
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0-ecc0.1.6 (GNU/Linux)
 
-iD8DBQFCI2wdp5vW4rUFj5oRAuclAJ9tJrIPSMFDi1AuV1q6wQvnOqhSUgCghU/i
-qZCWw7nDNNKALT4ibkuaAA4=
-=b69a
+iD8DBQFCI3XWp5vW4rUFj5oRAjcjAKCP2Cg7oYxnk4y+zOZolqTRkfp6cwCglxn4
+ytWJl7HqJKK2hGmzPLdFcao=
+=/yKR
 -----END PGP SIGNATURE-----

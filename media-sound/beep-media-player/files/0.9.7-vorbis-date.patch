@@ -1,0 +1,12 @@
+diff -uNr bmp.orig/Input/vorbis/fileinfo.c bmp/Input/vorbis/fileinfo.c
+--- bmp.orig/Input/vorbis/fileinfo.c	2004-12-04 18:29:06.000000000 +0900
++++ bmp/Input/vorbis/fileinfo.c	2005-01-28 21:45:52.000000000 +0900
+@@ -993,7 +993,7 @@
+     gtk_entry_set_text(GTK_ENTRY(tracknumber_entry),
+                        get_comment(comment, "tracknumber"));
+     gtk_entry_set_text(GTK_ENTRY(date_entry),
+-                       get_comment(comment, "data"));
++                       get_comment(comment, "date"));
+ #ifdef ALL_VORBIS_TAGS
+     gtk_entry_set_text(GTK_ENTRY(version_entry),
+                        get_comment(comment, "version"));
