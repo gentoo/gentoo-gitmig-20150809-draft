@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.29.20030204.ebuild,v 1.4 2003/02/06 19:30:03 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.29.20030204.ebuild,v 1.5 2003/02/07 21:40:49 seemant Exp $
 
 IUSE="static freetype xv sdl oss dvd mmx sse 3dnow zlib oggvorbis X qt alsa esd"
 
@@ -13,9 +13,13 @@ SRC_URI="http://avifile.sourceforge.net/${MY_P}.tgz
 	mirror://gentoo/20030130.diff.bz2"
 HOMEPAGE="http://avifile.sourceforge.net/"
 
-DEPEND=">=media-libs/divx4linux-20020418
-	>=media-libs/jpeg-6b
-	>=media-libs/win32codecs-0.90
+SLOT="0.7"
+LICENSE="GPL-2"
+KEYWORDS="~x86 ~sparc"
+
+DEPEND=">=media-libs/jpeg-6b
+	x86? ( >=media-libs/divx4linux-20020418
+		>=media-libs/win32codecs-0.90 )
 	>=media-video/ffmpeg-0.4
 	>=media-sound/mad-0.14
 	>=media-libs/xvid-0.9.0
@@ -31,9 +35,6 @@ DEPEND=">=media-libs/divx4linux-20020418
 	qt? ( >=x11-libs/qt-3.0.3 )
 	alsa? ( >=media-libs/alsa-lib-0.9.0_rc2 )
 	esd? ( >=media-sound/esound-0.2.28 )"
-SLOT="0.7"
-LICENSE="GPL-2"
-KEYWORDS="~x86"
 
 src_compile() {
 	local myconf=""

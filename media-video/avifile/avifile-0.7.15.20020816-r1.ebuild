@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.15.20020816-r1.ebuild,v 1.2 2003/01/19 14:46:57 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.15.20020816-r1.ebuild,v 1.3 2003/02/07 21:40:49 seemant Exp $
 
 IUSE="nas avi sdl kde oggvorbis 3dnow qt"
 
@@ -14,17 +14,17 @@ DESCRIPTION="Library for AVI-Files"
 SRC_URI="http://avifile.sourceforge.net/${MY_P}.tgz"
 HOMEPAGE="http://avifile.sourceforge.net/"
 
-DEPEND=">=media-libs/divx4linux-20020418
-	media-libs/jpeg
-	media-libs/win32codecs
+SLOT="0.7"
+LICENSE="GPL-2"
+KEYWORDS="x86 ~sparc"
+
+DEPEND="media-libs/jpeg
+	x86? ( >=media-libs/divx4linux-20020418
+		media-libs/win32codecs )
 	qt? ( >=x11-libs/qt-3.0.3 )
 	nas? ( >=media-libs/nas-1.4.2 )
 	sdl? ( >=media-libs/libsdl-1.2.2 )
 	oggvorbis? ( media-libs/libvorbis )"
-
-SLOT="0.7"
-LICENSE="GPL-2"
-KEYWORDS="x86"
 
 src_compile() {
 

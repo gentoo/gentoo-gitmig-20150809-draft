@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.27.20030122-r1.ebuild,v 1.4 2003/02/01 20:07:17 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.27.20030122-r1.ebuild,v 1.5 2003/02/07 21:40:49 seemant Exp $
 
 IUSE="static freetype xv sdl oss dvd mmx sse 3dnow zlib oggvorbis X qt"
 
@@ -15,9 +15,13 @@ SRC_URI="http://avifile.sourceforge.net/${MY_P}.tgz
 	mirror://gentoo/20030130.diff.bz2"
 HOMEPAGE="http://avifile.sourceforge.net/"
 
-DEPEND=">=media-libs/divx4linux-20020418
-	>=media-libs/jpeg-6b
-	>=media-libs/win32codecs-0.90
+SLOT="0.7"
+LICENSE="GPL-2"
+KEYWORDS="~x86 ~sparc"
+
+DEPEND=">=media-libs/jpeg-6b
+	x86? ( >=media-libs/divx4linux-20020418
+		>=media-libs/win32codecs-0.90 )
 	>=media-video/ffmpeg-0.4
 	>=media-sound/mad-0.14
 	>=media-libs/xvid-0.9.0
@@ -33,10 +37,6 @@ DEPEND=">=media-libs/divx4linux-20020418
 	oggvorbis? ( >=media-libs/libvorbis-1.0 )
 	X? ( >=x11-base/xfree-4.2.0 >=x11-libs/xft-2.0.1 )
 	qt? ( >=x11-libs/qt-3.0.3 )"
-
-SLOT="0.7"
-LICENSE="GPL-2"
-KEYWORDS="~x86"
 
 src_unpack() {
         unpack ${MY_P}.tgz

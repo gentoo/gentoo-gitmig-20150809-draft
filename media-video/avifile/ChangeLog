@@ -1,8 +1,15 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.37 2003/02/06 04:31:58 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.38 2003/02/07 21:40:49 seemant Exp $
 
 *avifile-0.7.29.20030204 (04 Feb 2003)
+
+  07 Feb 2003; Seemant Kulleen <seemant@gentoo.org> *.ebuild :
+
+  Cleaned out old, crusty ebuilds. More importantly, divx4linux and
+  win32codecs are installed ONLY on the x86 arch, not any others.  Added
+  ~sparc KEYWORD.  Closing bug #15276 by Alvaro Figueroa
+  <fede2@fuerzag.ulatina.ac.cr>
 
   05 Feb 2003; Nick Hadaway <raker@gentoo.org> avifile-0.7.29.20030204.ebuild :
   Added a pkg_postinst with a note about making aviplay suid root
