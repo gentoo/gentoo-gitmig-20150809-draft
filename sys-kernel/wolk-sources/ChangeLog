@@ -1,8 +1,10 @@
 # ChangeLog for sys-kernel/wolk-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/ChangeLog,v 1.51 2004/07/09 18:05:47 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/ChangeLog,v 1.52 2004/07/17 21:07:34 aliz Exp $
 
 *wolk-sources-4.9-r10 (09 Jul 2004)
+*wolk-sources-4.11-r7 (09 Jul 2004)
+*wolk-sources-4.14-r4 (09 Jul 2004)
 
   09 Jul 2004; <plasmaroo@gentoo.org> -wolk-sources-4.11-r6.ebuild,
   +wolk-sources-4.11-r7.ebuild, -wolk-sources-4.14-r3.ebuild,

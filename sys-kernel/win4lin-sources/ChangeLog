@@ -1,8 +1,9 @@
 # ChangeLog for sys-kernel/win4lin-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/ChangeLog,v 1.28 2004/07/09 17:45:30 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/ChangeLog,v 1.29 2004/07/17 21:08:42 aliz Exp $
 
 *win4lin-sources-2.4.26-r3 (09 Jul 2004)
+*win4lin-sources-2.6.7-r2 (09 Jul 2004)
 
   09 Jul 2004; <plasmaroo@gentoo.org> -win4lin-sources-2.4.26-r2.ebuild,
   +win4lin-sources-2.4.26-r3.ebuild, -win4lin-sources-2.6.7-r1.ebuild,

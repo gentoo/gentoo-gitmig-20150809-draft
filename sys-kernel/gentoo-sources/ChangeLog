@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.81 2004/07/16 20:12:57 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.82 2004/07/17 21:06:12 aliz Exp $
 
   16 Jul 2004; Chris Gianelloni <wolf31o2@gentoo.org>
   gentoo-sources-2.4.26-r6.ebuild:
@@ -17,6 +17,7 @@
   Version bump - SquashFS support bumped to 2.0.
 
 *gentoo-sources-2.4.26-r4 (09 Jul 2004)
+*gentoo-sources-2.4.22-r13 (09 Jul 2004)
 
   09 Jul 2004; <plasmaroo@gentoo.org> -gentoo-sources-2.4.19-r17.ebuild,
   +gentoo-sources-2.4.19-r18.ebuild, -gentoo-sources-2.4.20-r20.ebuild,
