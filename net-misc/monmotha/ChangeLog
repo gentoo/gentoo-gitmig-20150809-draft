@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/monmotha
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/monmotha/ChangeLog,v 1.5 2004/11/23 21:07:58 sekretarz Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/monmotha/ChangeLog,v 1.6 2005/02/10 13:10:21 dragonheart Exp $
+
+*monmotha-2.3.8 (10 Feb 2005)
+
+  10 Feb 2005; Daniel Black <dragonheart@gentoo.org>
+  -files/rc.firewall-2.3.8-pre7, +monmotha-2.3.8.ebuild,
+  -monmotha-2.3.8_pre7.ebuild:
+  Version bump as per bug #80946. Thanks to Curtis Magyar <curtm4n@gmail.com>
 
   23 Nov 2004; Karol Wojtaszek <sekretarz@gentoo.org>
   monmotha-2.3.8_pre7.ebuild:

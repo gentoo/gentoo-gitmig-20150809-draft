@@ -1,15 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9a9f7a607b21cb94eb3b402fcc57ea1e monmotha-2.3.8_pre7.ebuild 1185
-MD5 1d249ebf9a70938427d7999471add0b6 ChangeLog 660
-MD5 5368c139957ecdf3fed36278f89e926e files/rc.firewall-2.3.8-pre7 55183
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-monmotha-2.3.8_pre7 0
+MD5 fd6399df54b59cccbb1694f9ce027e4a ChangeLog 913
+MD5 2672f25978b6493997931ff2482a90a2 monmotha-2.3.8.ebuild 1358
 MD5 b3f639c3a99e5294907fec299abfa02c files/monmotha.rc6 937
+MD5 f9171b64cd98abf12dd87ce0348f4267 files/digest-monmotha-2.3.8 61
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFBo6a7Z/iYVBmujdURAgsdAJ9UmK4W7GbZNh3aRXDmpNKQLZXVfgCgu1YK
-Ro/X4k2bDRZIOWP+xqzEDO8=
-=Nmno
+iD8DBQFCC11TmdTrptrqvGERAve4AKCQ8oAyb9FoHkKUlKeoOQe021o+twCgmAA5
+sjKnyZDgObNCzngirIRzb84=
+=2F4R
 -----END PGP SIGNATURE-----

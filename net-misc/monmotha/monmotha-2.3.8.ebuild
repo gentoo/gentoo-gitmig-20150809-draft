@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/monmotha/monmotha-2.3.8_pre7.ebuild,v 1.8 2004/11/23 21:07:58 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/monmotha/monmotha-2.3.8.ebuild,v 1.1 2005/02/10 13:10:21 dragonheart Exp $
 
 DESCRIPTION="MonMotha IPTables-based firewall script."
 HOMEPAGE="http://monmotha.mplug.org/firewall/"
@@ -11,11 +11,21 @@ IUSE=""
 SLOT="0"
 RDEPEND=">=net-firewall/iptables-1.2.5"
 
+MY_PVP=(${PV//[-\._]/ })
+
+S=${WORKDIR}
+
+SRC_URI="http://monmotha.mplug.org/~monmotha/firewall/firewall/${MY_PVP[0]}.${MY_PVP[1]}/rc.firewall-${PV}"
+
+src_unpack() {
+	cp ${DISTDIR}/${A} ${S}/
+}
+
 src_install() {
 	exeinto /etc/init.d
 	newexe "${FILESDIR}/monmotha.rc6" monmotha
 	exeinto /etc/monmotha
-	newexe "${FILESDIR}/rc.firewall-${PV/_pre/-pre}" monmotha
+	newexe "${S}/rc.firewall-${PV}" monmotha
 }
 
 pkg_postinst () {
