@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/jedit
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.23 2004/02/08 00:34:34 anti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/ChangeLog,v 1.24 2004/02/09 05:33:16 anti Exp $
+
+  09 Feb 2004; Ray Russell Reese III <anti@gentoo.org> jedit-4.0.3-r2.ebuild,
+  jedit-4.1.ebuild, jedit-4.2_pre8.ebuild, jedit-4.2_pre9.ebuild:
+  Changed .keep behavior, now uses keepdir.  Closes #39810
 
 *jedit-4.2_pre9 (07 Feb 2004)
 

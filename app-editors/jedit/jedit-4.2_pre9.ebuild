@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2_pre9.ebuild,v 1.1 2004/02/08 00:34:34 anti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.2_pre9.ebuild,v 1.2 2004/02/09 05:33:16 anti Exp $
 
 MY_PV="42pre9"
 
@@ -57,11 +57,11 @@ src_install () {
 	chmod 755 ${D}/usr/share/jedit/jedit.sh
 
 	ln -s ../share/jedit/jedit.sh ${D}/usr/bin/jedit
+
+	keepdir /usr/share/jedit/jars
 }
 
 pkg_postinst() {
-	touch /usr/share/jedit/jars/.keep
-
 	einfo "The system directory for jEdit plugins is"
 	einfo "/usr/share/jedit/jars"
 }
