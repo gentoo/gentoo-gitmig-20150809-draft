@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3396 2004/12/16 14:57:41 latexer Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3397 2004/12/16 16:19:40 ribosome Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <ribosome@gentoo.org> (14 Dec 2004)
+# Needs testing
+app-sci/nmrview
 
 # <mkennedy@gentoo.org> (14 Dec 2004)
 # Masked pending removal
