@@ -605,6 +605,11 @@ def ververify(myorigval,silent=1):
 		string.atof(myval[-1])
 		return 1
 	except:
+		if len(myval)==1:
+			#fail, our only version part did not pass
+			if not silent:
+				print "!!!",myval[0],"is not a valid version part."
+			return 0
 		pass
 	if len(myval[-1])==0:
 		if not silent:
