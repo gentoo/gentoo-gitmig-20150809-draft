@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/fbpanel
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fbpanel/ChangeLog,v 1.1 2003/06/19 20:14:31 mkeadle Exp $
+
+*fbpanel-1.0 (19 Jun 2003)
+
+  19 Jun 2003; mkeadle <mkeadle@gentoo.org> fbpanel-1.0.ebuild:
+  initial import of fbpanel. thanks for the base ebuild goes to Cory McWilliams
+  <mcwilc@rpi.edu> in bug #22584.
+
