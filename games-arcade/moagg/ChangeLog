@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/moagg
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/moagg/ChangeLog,v 1.11 2005/02/07 06:49:51 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/moagg/ChangeLog,v 1.12 2005/02/19 00:36:03 mr_bones_ Exp $
+
+  18 Feb 2005; Michael Sterrett <mr_bones_@gentoo.org> -moagg-0.14.ebuild,
+  -moagg-0.15.ebuild, -moagg-0.16.ebuild:
+  clean old ebuilds
 
 *moagg-0.17 (07 Feb 2005)
 
