@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k-gtk-gui/ed2k-gtk-gui-0.6.2.ebuild,v 1.2 2004/04/21 21:33:17 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ed2k-gtk-gui/ed2k-gtk-gui-0.6.2.ebuild,v 1.3 2004/04/28 23:28:15 squinky86 Exp $
 
 inherit libtool
 
@@ -14,8 +14,7 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND=">=x11-libs/gtk+-2.0
-	>=net-libs/gnet-1.1
-	>=net-p2p/overnet-0.51*"
+	>=net-libs/gnet-1.1"
 
 src_compile() {
 	econf || die "configure failed"
@@ -28,8 +27,11 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
+	echo
 	einfo "Please refer to ${HOMEPAGE} if you are"
 	einfo "unable to set up the client."
-	einfo
+	echo
+	ewarn "ed2k-gtk-gui requires access to an overnet/edonkey core. If you"
+	ewarn "do not have access to a core, you can install net-p2p/overnet."
+	echo
 }
