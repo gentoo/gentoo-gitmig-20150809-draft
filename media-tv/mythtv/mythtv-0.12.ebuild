@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.12.ebuild,v 1.2 2003/10/20 03:04:16 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.12.ebuild,v 1.3 2003/10/28 16:08:38 max Exp $
 
 inherit flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.mythtv.org/mc/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
-IUSE="alsa dvb lcd lirc nvidia"
+IUSE="alsa lcd lirc nvidia"
 
 DEPEND="virtual/x11
 	>=x11-libs/qt-3.1
@@ -20,10 +20,10 @@ DEPEND="virtual/x11
 	>=media-tv/xmltv-0.5.16
 	>=sys-apps/sed-4
 	alsa? ( media-libs/alsa-lib )
-	dvb? ( media-libs/libdvb )
 	lcd? ( app-misc/lcdproc )
 	lirc? ( app-misc/lirc )
 	nvidia? ( media-video/nvidia-glx )"
+	#dvb? ( media-libs/libdvb )
 
 RDEPEND="${DEPEND}
 	!media-tv/mythfrontend"
@@ -35,6 +35,8 @@ pkg_setup() {
 		eerror "'mysql' to your USE flags, and re-emerge Qt."
 		die "Qt needs mysql support"
 	fi
+
+	return 0
 }
 
 src_unpack() {
@@ -46,7 +48,7 @@ src_unpack() {
 }
 
 src_compile() {
-	local cpu="`get-flag march`"
+	local cpu="`get-flag march || get-flag mcpu`"
 	if [ "${cpu}" ] ; then
 		sed -e "s:pentiumpro:${cpu}:g" -i "settings.pro" || die "sed failed"
 	fi
@@ -56,12 +58,13 @@ src_compile() {
 			-e "s:#EXTRA_LIBS += -lasound:EXTRA_LIBS += -lasound:" \
 			-i "settings.pro" || die "enable alsa sed failed"
 	fi
-	if [ "`use dvb`" ] ; then
-		sed -e "s:#CONFIG += using_dvb:CONFIG += using_dvb:" \
-			-e "s:#DEFINES += USING_DVB:DEFINES += USING_DVB:" \
-			-e "s:#INCLUDEPATH += /usr/src:INCLUDEPATH += /usr:" \
-			-i "settings.pro" || die "enable dvb sed failed"
-	fi
+	# Not quite ready for prime time.
+	#if [ "`use dvb`" ] ; then
+	#	sed -e "s:#CONFIG += using_dvb:CONFIG += using_dvb:" \
+	#		-e "s:#DEFINES += USING_DVB:DEFINES += USING_DVB:" \
+	#		-e "s:#INCLUDEPATH += /usr/src:INCLUDEPATH += /usr:" \
+	#		-i "settings.pro" || die "enable dvb sed failed"
+	#fi
 	if [ "`use lcd`" ] ; then
 		sed -e "s:#DEFINES += LCD_DEVICE:DEFINES += LCD_DEVICE:" \
 			-i "settings.pro" || die "enable lcd sed failed"
