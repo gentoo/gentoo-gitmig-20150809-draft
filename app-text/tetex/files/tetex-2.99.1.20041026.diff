@@ -1,12 +1,21 @@
 diff -urN tetex-src-beta-2.96.7.20040721.orig/texk/kpathsea/texmf.in tetex-src-beta-2.96.7.20040721/texk/kpathsea/texmf.in
 --- tetex-src-beta-2.96.7.20040721.orig/texk/kpathsea/texmf.in	2004-06-19 18:35:43.000000000 +0900
 +++ tetex-src-beta-2.96.7.20040721/texk/kpathsea/texmf.in	2004-09-03 01:00:44.002700096 +0900
-@@ -63,11 +63,11 @@
+@@ -56,18 +56,18 @@
+ 
+ % The tree containing the runtime files closely related to the specific
+ % program version used:
+-TEXMFMAIN = @texmf@
++TEXMFMAIN = /var/lib/texmf
+ 
+ % The main distribution tree:
+-TEXMFDIST = @texmf@-dist
++TEXMFDIST = /usr/share/texmf
  
  % A place for local additions to a "standard" texmf tree. If defined,
  % teTeX's texconfig also stores modified config files here:
 -TEXMFLOCAL = @texmf@-local
-+TEXMFLOCAL = /etc/texmf
++TEXMFLOCAL = /usr/local/share/texmf
  
  % If defined, teTeX's texconfig stores variable runtime data here
  % (instead of the TEXMFMAIN tree).
@@ -23,7 +32,7 @@ diff -urN tetex-src-beta-2.96.7.20040721.orig/texk/kpathsea/texmf.in tetex-src-b
 +TEXMF = {$HOMETEXMF,!!$TEXMFLOCAL,!!$VARTEXMF,!!$TEXMFMAIN,!!$TEXMFDIST}
  
  % The system trees.  These are the trees that are shared by all the users.
- SYSTEXMF = $TEXMFLOCAL:$TEXMFMAIN:$TEXMFDIST
+ SYSTEXMF = $TEXMFLOCAL;$TEXMFMAIN;$TEXMFDIST
 @@ -87,7 +87,7 @@
  % Where generated fonts may be written.  This tree is used when the sources
  % were found in a system tree and either that tree wasn't writable, or the
@@ -40,31 +49,31 @@ diff -urN tetex-src-beta-2.96.7.20040721.orig/texk/web2c/fmtutil.in tetex-src-be
  
  # Change "tex.ini -> bplain.ini" and "- -> language.dat"
  # if you want babel support in tex:
--tex		tex		-		-8bit tex.ini
-+tex		tex		language.dat		-8bit bplain.ini
+-tex		tex		-		-translate-file=cp227.tcx tex.ini
++tex		tex		language.dat		-translate-file=cp227.tcx bplain.ini
  @ALEPH@aleph		aleph		-		*aleph.ini
- @PETEX@latex		pdfetex		language.dat	-8bit *latex.ini
- @PETEX@etex		pdfetex		language.def	-8bit *etex.ini
-@@ -52,11 +52,11 @@
+ @PETEX@latex		pdfetex		language.dat	-translate-file=cp227.tcx *latex.ini
+ @PETEX@etex		pdfetex		language.def	-translate-file=cp227.tcx *etex.ini
+@@ -53,11 +53,11 @@
  
  # Change "amstex.ini -> bamstex.ini" and "- -> language.dat"
  # if you want babel support in amstex:
--#! amstex	pdfetex		-		-8bit *amstex.ini
-+amstex			pdfetex		language.dat	-8bit *bamstex.ini
+-#! amstex	pdfetex		-		-translate-file=cp227.tcx *amstex.ini
++amstex	pdfetex		language.dat		-translate-file=cp227.tcx *bamstex.ini
  
  # Change "pdfamstex.ini -> pdfbamstex.ini" and "- -> language.dat"
  # if you want babel support in pdfamstex:
--#! pdfamstex	pdfetex			-	-8bit *pdfamstex.ini
-+pdfamstex	pdfetex			language.dat	-8bit *pdfbamstex.ini
+-#! pdfamstex	pdfetex			-	-translate-file=cp227.tcx *pdfamstex.ini
++pdfamstex	pdfetex			language.dat	-translate-file=cp227.tcx *pdfbamstex.ini
  
  # Context formats:
- #! cont-cz	pdfetex		cont-usr.tex	-8bit *cont-cz.ini
-@@ -93,7 +93,7 @@
+ #! cont-cz	pdfetex		cont-usr.tex	-translate-file=cp227.tcx *cont-cz.ini
+@@ -95,7 +95,7 @@
  
  # Change "eplain.ini -> ebplain.ini" and "- -> language.dat"
  # if you want babel support in eplain:
--#! eplain	pdfetex		-	-8bit *eplain.ini
-+eplain		pdfetex		language.dat		-8bit *ebplain.ini
+-#! eplain	pdfetex		-	-translate-file=cp227.tcx *eplain.ini
++eplain	pdfetex		language.dat	-translate-file=cp227.tcx *ebplain.ini
  
  
  # mptopdf utility

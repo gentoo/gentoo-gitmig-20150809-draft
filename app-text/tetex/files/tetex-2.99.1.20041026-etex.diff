@@ -1,0 +1,11 @@
+--- texk/web2c/etexdir/etex.mk.orig	2004-10-28 01:44:18.541833699 +0900
++++ texk/web2c/etexdir/etex.mk	2004-10-28 01:44:36.393095608 +0900
+@@ -23,7 +23,7 @@
+ # C file dependencies
+ $(etex_c) etexcoerce.h etexd.h: etex.p $(web2c_texmf)
+ 	$(web2c) etex
+-etexextra.c: lib/texmfmp.c
++etexextra.c: lib/texmfmp.c etexdir/etexextra.h
+ 	sed s/TEX-OR-MF-OR-MP/etex/ $(srcdir)/lib/texmfmp.c >$@
+ etexdir/etexextra.h: etexdir/etexextra.in etexdir/etex.version
+ 	test -d etexdir || mkdir etexdir

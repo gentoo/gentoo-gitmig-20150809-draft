@@ -1,6 +1,18 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.67 2004/10/17 12:30:14 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.68 2004/10/28 11:58:22 usata Exp $
+
+*tetex-2.99.1.20041026 (28 Oct 2004)
+*tetex-2.0.2-r4 (28 Oct 2004)
+
+  28 Oct 2004; Mamoru KOMACHI <usata@gentoo.org>
+  -files/tetex-2.96.7.20040721-dont-run-config.diff,
+  -files/tetex-2.96.7.20040721.diff,
+  +files/tetex-2.99.1.20041026-dont-run-config.diff,
+  +files/tetex-2.99.1.20041026-etex.diff, +files/tetex-2.99.1.20041026.diff,
+  +tetex-2.0.2-r4.ebuild, -tetex-2.96.7.20040721.ebuild,
+  +tetex-2.99.1.20041026.ebuild:
+  Version bumped (bug #60835). Added 2.0.2-r4 to push out xdvi fix(bug #68883).
 
 *tetex-2.96.7.20040721 (17 Oct 2004)
 
