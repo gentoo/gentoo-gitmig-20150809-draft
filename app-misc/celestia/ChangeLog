@@ -1,10 +1,15 @@
 # ChangeLog for app-misc/celestia
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/celestia/ChangeLog,v 1.7 2003/02/12 04:57:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/celestia/ChangeLog,v 1.8 2003/05/12 06:13:05 george Exp $
+
+*celestia-1.3.0 (11 May 2003)
+
+  11 May 2003; George Shapovalov <george@gentoo.org> celestia-1.2.5.ebuild :
+  new version (#19642)
 
 *celestia-1.2.5 (12 Jan 2003)
 
-  12 Jan 2003l George Shapovalov <george@gentoo.org> celestia-1.2.5.ebuild :
+  12 Jan 2003; George Shapovalov <george@gentoo.org> celestia-1.2.5.ebuild :
 
   new version. Looks like gcc-3.x issue were fixed.
   Also problems were reported when compiling celestia with nvidia drivers
