@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/rdesktop
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.9 2002/12/29 16:37:44 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.10 2003/01/07 19:48:24 chouser Exp $
+
+  07 Jan 2003; Chris Houser <chouser@gentoo.org> rdesktop-1.2_beta1-r1.ebuild :
+  Added alpha to KEYWORDS
 
 *rdesktop-1.2_beta1-r1 (28 Dec 2002)
 
