@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/libgnomeprint-2.4.0.ebuild,v 1.5 2003/10/22 12:01:39 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/libgnomeprint-2.4.0.ebuild,v 1.6 2003/11/08 15:21:52 todd Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="2.2"
-KEYWORDS="x86 ppc alpha ~sparc ~hppa amd64"
+KEYWORDS="x86 ppc alpha sparc ~hppa amd64"
 IUSE="cups doc"
 
 RDEPEND=">=dev-libs/glib-2
