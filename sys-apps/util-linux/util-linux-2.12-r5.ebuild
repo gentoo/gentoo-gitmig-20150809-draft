@@ -1,32 +1,21 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12-r5.ebuild,v 1.5 2004/04/07 19:49:23 kumba Exp $
-
-IUSE="crypt nls static pam selinux"
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12-r5.ebuild,v 1.6 2004/04/24 08:51:15 vapier Exp $
 
 inherit eutils flag-o-matic
 
-## see below for details on pic.patch
-case ${ARCH} in
-	"x86"|"hppa"|"sparc"|"ppc"|"amd64")
-		;;
-	*)
-		filter-flags -fPIC
-		;;
-esac
-
-S="${WORKDIR}/${P}"
 CRYPT_PATCH_P="${P}-cryptoapi-losetup"
 SELINUX_PATCH="util-linux-2.12-selinux.diff.bz2"
 DESCRIPTION="Various useful Linux utilities"
+HOMEPAGE="http://www.kernel.org/pub/linux/utils/util-linux/"
 SRC_URI="mirror://kernel/linux/utils/${PN}/${P}.tar.gz
 	ftp://ftp.cwi.nl/pub/aeb/${PN}/${P}.tar.gz
 	crypt? ( mirror://gentoo/${CRYPT_PATCH_P}.patch.bz2 )"
-HOMEPAGE="http://www.kernel.org/pub/linux/utils/util-linux/"
 
-KEYWORDS="x86 ~amd64 ~ppc ~sparc ~alpha mips ~hppa ~ia64 ~ppc64"
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 ~ppc ~ppc64 ~sparc mips ~alpha arm ~hppa ~amd64 ~ia64"
+IUSE="crypt nls static pam selinux"
 
 DEPEND="virtual/glibc
 	>=sys-apps/sed-4.0.5
@@ -34,8 +23,8 @@ DEPEND="virtual/glibc
 	selinux? ( sys-libs/libselinux )
 	pam? ( sys-apps/pam-login )
 	crypt? ( app-crypt/hashalot )"
-
-RDEPEND="${DEPEND} dev-lang/perl
+RDEPEND="${DEPEND}
+	dev-lang/perl
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
@@ -68,17 +57,25 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.11z-agetty-domainname-option.patch
 
 	# Add NFS4 support (kernel 2.5/2.6).
-#	if [ ! -z "`use crypt`" ] ; then
-#		epatch ${FILESDIR}/${PN}-2.11z-01-nfsv4-crypt.dif
-#	else
-		epatch ${FILESDIR}/${PN}-2.11z-01-nfsv4.dif
-#	fi
+#	use crypt \
+#		&& epatch ${FILESDIR}/${PN}-2.11z-01-nfsv4-crypt.dif \
+#		|| 
+	epatch ${FILESDIR}/${PN}-2.11z-01-nfsv4.dif
 
 	# <solar@gentoo.org> This patch should allow us to remove -fPIC
 	# out of the filter-flags we need this be able to emit position
 	# independent code so we can link our elf executables as shared
 	# objects. "prelink" should now also be able to take advantage
 	epatch ${FILESDIR}/${PN}-2.11z-pic.patch
+
+	## see below for details on pic.patch
+	case ${ARCH} in
+		"x86"|"hppa"|"sparc"|"ppc"|"amd64")
+			;;
+		*)
+			filter-flags -fPIC
+			;;
+	esac
 
 	# Allow util-linux to compile with 2.6.x headers #31286
 	epatch ${FILESDIR}/${P}-kernel-2.6.patch
@@ -104,7 +101,7 @@ src_unpack() {
 		-e "s:SUIDMODE=.*4755:SUIDMODE=4711:" \
 		MCONFIG || die "MCONFIG sed"
 
-	if [ -z "`use nls`" ] ; then
+	if ! use nls ; then
 		sed -i -e 's/DISABLE_NLS=no/DISABLE_NLS=yes/' MCONFIG ||
 			die "MCONFIG nls sed"
 	fi
@@ -117,18 +114,14 @@ src_unpack() {
 }
 
 src_compile() {
-	if [ "`use static`" ] ; then
-		export LDFLAGS="${LDFLAGS} -static"
-	fi
-
+	use static && append-ldflags -static
 	econf || die "configure failed"
-
 	emake || die "emake failed"
 	cd sys-utils && makeinfo *.texi || die "makeinfo failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "install failed"
+	make DESTDIR=${D} install || die "install failed"
 
 	dodoc HISTORY MAINTAINER README VERSION
 	docinto licenses
@@ -136,4 +129,3 @@ src_install() {
 	docinto examples
 	dodoc example.files/*
 }
-

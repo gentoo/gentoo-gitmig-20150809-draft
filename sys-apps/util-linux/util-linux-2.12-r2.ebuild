@@ -1,39 +1,27 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12-r2.ebuild,v 1.4 2004/04/20 03:44:38 lv Exp $
-
-IUSE="crypt nls static pam selinux"
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12-r2.ebuild,v 1.5 2004/04/24 08:51:15 vapier Exp $
 
 inherit eutils flag-o-matic
 
-## see below for details on pic.patch
-case ${ARCH} in
-	"x86"|"hppa"|"sparc"|"ppc"|"amd64")
-		;;
-	*)
-		filter-flags -fPIC
-		;;
-esac
-
-S="${WORKDIR}/${P}"
 CRYPT_PATCH_P="${PN}-2.11z-crypt-gentoo"
 SELINUX_PATCH="util-linux-2.12-selinux.diff.bz2"
 DESCRIPTION="Various useful Linux utilities"
+HOMEPAGE="http://www.kernel.org/pub/linux/utils/util-linux/"
 SRC_URI="mirror://kernel/linux/utils/${PN}/${P}.tar.gz
 	ftp://ftp.cwi.nl/pub/aeb/${PN}/${P}.tar.gz
 	crypt? ( mirror://gentoo/${CRYPT_PATCH_P}.patch.bz2 )"
-HOMEPAGE="http://www.kernel.org/pub/linux/utils/util-linux/"
 
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~mips ~hppa ia64"
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~mips ~hppa ia64"
+IUSE="crypt nls static pam selinux"
 
 DEPEND="virtual/glibc
 	>=sys-apps/sed-4.0.5
 	>=sys-libs/ncurses-5.2-r2
 	selinux? ( sys-libs/libselinux )
 	pam? ( sys-apps/pam-login )"
-
 RDEPEND="${DEPEND} dev-lang/perl
 	nls? ( sys-devel/gettext )"
 
@@ -42,9 +30,7 @@ src_unpack() {
 
 	cd ${S}
 
-#	if [ ! -z "`use crypt`" ] ; then
-#		epatch ${DISTDIR}/${CRYPT_PATCH_P}.patch.bz2
-#	fi
+#	use crypt && epatch ${DISTDIR}/${CRYPT_PATCH_P}.patch.bz2
 
 	# Fix rare failures with -j4 or higher
 	epatch ${FILESDIR}/${PN}-2.11z-parallel-make.patch
@@ -74,6 +60,15 @@ src_unpack() {
 	# objects. "prelink" should now also be able to take advantage
 	epatch ${FILESDIR}/${PN}-2.11z-pic.patch
 
+	## see below for details on pic.patch
+	case ${ARCH} in
+		"x86"|"hppa"|"sparc"|"ppc"|"amd64")
+			;;
+		*)
+			filter-flags -fPIC
+			;;
+	esac
+
 	#enable pam only if we use it
 	use pam && sed -i "s:HAVE_PAM=no:HAVE_PAM=yes:" MCONFIG
 
@@ -89,7 +84,7 @@ src_unpack() {
 		-e "s:SUIDMODE=.*4755:SUIDMODE=4711:" \
 		MCONFIG || die "MCONFIG sed"
 
-	if [ -z "`use nls`" ] ; then
+	if ! use nls ; then
 		sed -i -e 's/DISABLE_NLS=no/DISABLE_NLS=yes/' MCONFIG ||
 			die "MCONFIG nls sed"
 	fi
@@ -99,18 +94,14 @@ src_unpack() {
 }
 
 src_compile() {
-	if [ "`use static`" ] ; then
-		export LDFLAGS="${LDFLAGS} -static"
-	fi
-
+	use static && append-ldflags -static
 	econf || die "configure failed"
-
 	emake || die "emake failed"
 	cd sys-utils && makeinfo *.texi || die "makeinfo failed"
 }
 
 src_install() {
-	make DESTDIR="${D}" install || die "install failed"
+	make DESTDIR=${D} install || die "install failed"
 
 	dodoc HISTORY MAINTAINER README VERSION
 	docinto licenses
@@ -118,4 +109,3 @@ src_install() {
 	docinto examples
 	dodoc example.files/*
 }
-

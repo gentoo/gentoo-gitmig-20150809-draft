@@ -1,32 +1,21 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12-r4.ebuild,v 1.9 2004/04/20 03:44:38 lv Exp $
-
-IUSE="crypt nls static pam selinux"
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12-r4.ebuild,v 1.10 2004/04/24 08:51:15 vapier Exp $
 
 inherit eutils flag-o-matic
 
-## see below for details on pic.patch
-case ${ARCH} in
-	"x86"|"hppa"|"sparc"|"ppc"|"amd64")
-		;;
-	*)
-		filter-flags -fPIC
-		;;
-esac
-
-S="${WORKDIR}/${P}"
 CRYPT_PATCH_P="${P}-cryptoapi-losetup"
 SELINUX_PATCH="util-linux-2.12-selinux.diff.bz2"
 DESCRIPTION="Various useful Linux utilities"
+HOMEPAGE="http://www.kernel.org/pub/linux/utils/util-linux/"
 SRC_URI="mirror://kernel/linux/utils/${PN}/${P}.tar.gz
 	ftp://ftp.cwi.nl/pub/aeb/${PN}/${P}.tar.gz
 	crypt? ( mirror://gentoo/${CRYPT_PATCH_P}.patch.bz2 )"
-HOMEPAGE="http://www.kernel.org/pub/linux/utils/util-linux/"
 
-KEYWORDS="x86 amd64 ~ppc sparc alpha mips hppa ia64 ~ppc64 s390"
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 amd64 ~ppc sparc alpha mips hppa ia64 ~ppc64 s390"
+IUSE="crypt nls static pam selinux"
 
 DEPEND="virtual/glibc
 	>=sys-apps/sed-4.0.5
@@ -34,8 +23,8 @@ DEPEND="virtual/glibc
 	selinux? ( sys-libs/libselinux )
 	pam? ( sys-apps/pam-login )
 	crypt? ( app-crypt/hashalot )"
-
-RDEPEND="${DEPEND} dev-lang/perl
+RDEPEND="${DEPEND}
+	dev-lang/perl
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
@@ -79,6 +68,15 @@ src_unpack() {
 	# independent code so we can link our elf executables as shared
 	# objects. "prelink" should now also be able to take advantage
 	epatch ${FILESDIR}/${PN}-2.11z-pic.patch
+
+	## see below for details on pic.patch
+	case ${ARCH} in
+		"x86"|"hppa"|"sparc"|"ppc"|"amd64")
+			;;
+		*)
+			filter-flags -fPIC
+			;;
+	esac
 
 	# Allow util-linux to compile with 2.6.x headers #31286
 	epatch ${FILESDIR}/${P}-kernel-2.6.patch
