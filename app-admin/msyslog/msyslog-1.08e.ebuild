@@ -1,10 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/msyslog-1.08e.ebuild,v 1.1 2002/07/25 12:54:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/msyslog-1.08e.ebuild,v 1.2 2002/08/08 02:42:20 seemant Exp $
 
 MY_P=${PN}-v${PV}
 S=${WORKDIR}/${MY_P}
-S2=${WORKDIR}/${PN}-gentoo
 DESCRIPTION="Flexible and easy to integrate syslog with modularized input/output"
 HOMEPAGE="http://www.core-sdi.com/download/download1.html"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}-src.tar.gz
@@ -20,7 +19,7 @@ DEPEND="mysql? ( >=dev-db/mysql-3.23 )
 src_unpack() {
 	unpack ${A} ; cd ${S}
 	# fix paths for pidfile, config file, libdir, logdir, manpages, etc...
-	patch -p1 < ${S2}/${P}-gentoo.diff || die "bad patchfile"
+	( bzcat ${DISTDIR}/${P}-gentoo.diff.tar.bz2 | patch -p1 ) || die
 }
 
 src_compile() {
