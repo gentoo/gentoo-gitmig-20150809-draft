@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.7.ebuild,v 1.8 2003/02/13 06:00:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.7.ebuild,v 1.9 2003/06/21 00:11:14 liquidx Exp $
 
 inherit flag-o-matic
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://cdrdao.sourceforge.net/"
 SLOT="0"
 LICENSE="GPL-2"
 RDEPEND="gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 
-	>=gnome-extra/gnomemm-1.2.2 )"
+	>=dev-cpp/gnomemm-1.2.2 )"
 
 DEPEND=">=dev-util/pccts-1.33.24-r1
 	${RDEPEND}"
