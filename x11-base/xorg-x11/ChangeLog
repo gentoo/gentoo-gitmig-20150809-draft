@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.206 2004/11/17 17:38:19 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.207 2004/11/17 17:43:07 spyderous Exp $
+
+  17 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.0-r3.ebuild:
+  Remove ppc64-specific relinking for dlloader issues, because it's fixed in
+  6.8. Requested by Markus Rothe <corsair@gentoo.org>.
 
 *xorg-x11-6.8.0-r3 (17 Nov 2004)
 
