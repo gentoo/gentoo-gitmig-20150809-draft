@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources-dev/hppa-sources-dev-2.4.21_p10.ebuild,v 1.1 2003/08/13 15:24:34 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hppa-sources-dev/hppa-sources-dev-2.4.21_p10.ebuild,v 1.2 2003/08/14 12:00:27 gmsoft Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -22,7 +22,7 @@ PATCH_BASE="7"
 DESCRIPTION="Full sources for the Linux kernel with patch for hppa"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2 http://ftp.parisc-linux.org/cvs/linux-2.4/patch-${OKV}-pa${PATCH_BASE}.diff.gz
 `for i in \`seq $((PATCH_BASE + 1)) ${PATCH_LEVEL}\`; do echo http://ftp.parisc-linux.org/cvs/linux-2.4/patch-${OKV}-pa$((i - 1))-pa${i}.gz; done`
-http://dev.gentoo.org/~gmsoft/${PN}-${OKV}-grsec-crypto.diff.bz2
+http://dev.gentoo.org/~gmsoft/${PN}-${OKV}-grsec-crypto-r1.diff.bz2
 http://dev.gentoo.org/~gmsoft/hppa-sources-dev-grsec-hppa64-fix.patch"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/ http://parisc-linux.org" 
 KEYWORDS="hppa -*"
@@ -44,8 +44,8 @@ src_unpack() {
 	done
 
 	einfo Patching for grsecurity and CryptoApi support
-	bzcat ${DISTDIR}/${PN}-${OKV}-grsec-crypto.diff.bz2 | patch -sp 1
-	einfo Fix for grsec on hppa64
+	bzcat ${DISTDIR}/${PN}-${OKV}-grsec-crypto-r1.diff.bz2 | patch -sp 1
+	einfo Fixing grsec on hppa64
 	cat ${DISTDIR}/hppa-sources-dev-grsec-hppa64-fix.patch | patch -sp 1
 
 	kernel_universal_unpack
