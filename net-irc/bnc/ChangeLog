@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/bnc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/ChangeLog,v 1.4 2003/02/12 08:03:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/ChangeLog,v 1.5 2003/11/21 13:05:20 zul Exp $
+
+  21 Nov 2003; Chuck Short <zul@gentoo.org> bnc-2.8.6.ebuild:
+  Added cd ${S}, closes bug #33803.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
