@@ -1,8 +1,11 @@
 # ChangeLog for net-misc/sslwrap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sslwrap/ChangeLog,v 1.8 2003/02/12 08:33:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sslwrap/ChangeLog,v 1.9 2003/11/30 05:41:15 vapier Exp $
 
 *sslwrap-2.0.6 (11 Jul 2002)
+
+  30 Nov 2003; Mike Frysinger <vapier@gentoo.org> :
+  Compile fix when using openssl 0.9.7 #34151.
 
   10 Feb 2003; Seemant Kulleen <seemant@gentoo.org> *.ebuild :
 
