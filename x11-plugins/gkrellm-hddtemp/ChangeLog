@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/gkrellm-hddtemp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-hddtemp/ChangeLog,v 1.14 2004/09/02 18:22:39 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-hddtemp/ChangeLog,v 1.15 2004/09/06 01:30:50 swegener Exp $
+
+  06 Sep 2004; Sven Wegener <swegener@gentoo.org> gkrellm-hddtemp-0.1.ebuild,
+  gkrellm-hddtemp-0.2_beta.ebuild:
+  Updated HOMEPAGE. Thanks to Tor Klingberg <tor.klingberg@gmx.net> in bug
+  #62940.
 
   02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   gkrellm-hddtemp-0.1.ebuild, gkrellm-hddtemp-0.2_beta.ebuild:

@@ -1,5 +1,15 @@
-MD5 887d636f414d7cd023af43d1393c66af ChangeLog 2100
-MD5 37ab6575dd4b3f485fa7657c89e3c97a gkrellm-hddtemp-0.1.ebuild 1025
-MD5 74ad24acd440f2085b17867630ac773b gkrellm-hddtemp-0.2_beta.ebuild 1548
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 41bcbe90451de5235a06bfa1fdaa661d ChangeLog 2299
+MD5 854c5e4821a6c6a55362ff2c0da6154c gkrellm-hddtemp-0.1.ebuild 1022
+MD5 e893aeef49e7c833bf4dee035834f3db gkrellm-hddtemp-0.2_beta.ebuild 1545
 MD5 a9f57bac01537cef132c947c68eb3977 files/digest-gkrellm-hddtemp-0.1 69
 MD5 d3cc852ee5cbc0155681cecb5e3afa65 files/digest-gkrellm-hddtemp-0.2_beta 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBO74oI1lqEGTUzyQRAifEAKDG7U+z2hsHNeIVRPYZL3JC8Lh2DgCgiRfZ
+nAZXk+n6u6rBu/PczYzs+Bc=
+=Nlmj
+-----END PGP SIGNATURE-----
