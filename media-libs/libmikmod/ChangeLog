@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libmikmod
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.28 2004/08/19 02:31:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmikmod/ChangeLog,v 1.29 2004/11/13 05:26:33 kito Exp $
+
+  12 Nov 2004; Kito <kito@gentoo.org> libmikmod-3.1.11-r1.ebuild:
+  KEYWORD ~ppc-macos. Added elibtoolize conditional to fix shared libs on
+  Darwin/OSX
 
   18 Aug 2004; Aron Griffis <agriffis@gentoo.org> libmikmod-3.1.11-r1.ebuild:
   stable on alpha
