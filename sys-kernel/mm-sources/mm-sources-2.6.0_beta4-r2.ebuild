@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.0_beta4-r2.ebuild,v 1.1 2003/08/27 15:55:01 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.0_beta4-r2.ebuild,v 1.2 2003/09/05 13:57:29 latexer Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -36,7 +36,7 @@ src_unpack() {
 
 	find . -iname "*~" | xargs rm 2> /dev/null
 
- 	# Gentoo Linux uses /boot, so fix 'make install' to work properly
+	# Gentoo Linux uses /boot, so fix 'make install' to work properly
 	# also fix the EXTRAVERSION
 	cd ${S}
 	mv Makefile Makefile.orig
@@ -44,19 +44,19 @@ src_unpack() {
 		-e "s:^\(EXTRAVERSION =\).*:\1 ${EXTRAVERSION}:" \
 			Makefile.orig >Makefile || die # test, remove me if Makefile ok
 	rm Makefile.orig
- 
+
 	cd  ${S}/Documentation/DocBook
 	sed -e "s:db2:docbook2:g" Makefile > Makefile.new \
 		&& mv Makefile.new Makefile
 	cd ${S}
- 
+
 	#This is needed on > 2.5
 	MY_ARCH=${ARCH}
 	unset ARCH
 	#sometimes we have icky kernel symbols; this seems to get rid of them
 	make mrproper || die "make mrproper died"
 	ARCH=${MY_ARCH}
- 	
+
 	# kernel_universal_unpack used to do this... changes in kconfig make
 	# this die now
 	#make include/linux/version.h || die "make include/linux/version.h failed"
