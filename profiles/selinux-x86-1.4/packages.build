@@ -1,8 +1,9 @@
 sys-apps/baselayout
 sys-libs/glibc
 sys-apps/texinfo
-sys-apps/bash
+app-shells/bash
 sys-apps/bzip2
+sys-apps/coreutils
 sys-apps/debianutils
 sys-apps/diffutils
 sys-apps/file
@@ -19,10 +20,13 @@ sys-devel/flex
 sys-devel/gcc
 sys-devel/make
 sys-devel/patch
+sys-devel/gettext
 dev-lang/python
 net-misc/wget
 net-misc/rsync
 app-editors/nano
 sys-apps/net-tools
 sys-apps/less
-sys-apps/coreutils
+sys-apps/attr
+sys-libs/libselinux
+dev-python/python-selinux
