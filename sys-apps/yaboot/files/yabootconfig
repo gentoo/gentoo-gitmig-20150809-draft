@@ -610,6 +610,7 @@ boot=${BOOT}${DEVICE:-}
 partition=$PARTITION
 root=$ROOT
 timeout=30
+delay=5
 install=${INSTALL}${OFBOOT:-}\n"
 
 ## generate image= section
