@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-aterm/multi-aterm-0.0.5.ebuild,v 1.2 2004/02/17 07:44:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-aterm/multi-aterm-0.0.5.ebuild,v 1.3 2004/02/28 21:29:28 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A terminal emulator with transparency support as well as rxvt backwards compatibility like aterm, with tab support"
@@ -17,9 +17,8 @@ DEPEND="media-libs/jpeg
 
 src_compile() {
 	cd ${S}/src
-	cp feature.h feature.h.orig
-	sed "s:\(#define LINUX_KEYS\):/\*\1\*/:" \
-	feature.h.orig > feature.h
+	sed -i "s:\(#define LINUX_KEYS\):/\*\1\*/:" \
+		feature.h
 
 	cd ${S}
 	econf --enable-transparency \

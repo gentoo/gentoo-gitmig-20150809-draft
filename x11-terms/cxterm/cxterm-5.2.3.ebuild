@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/cxterm/cxterm-5.2.3.ebuild,v 1.1 2004/01/26 17:35:52 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/cxterm/cxterm-5.2.3.ebuild,v 1.2 2004/02/28 21:29:28 aliz Exp $
 
 S="${WORKDIR}/${P}"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
@@ -11,15 +11,14 @@ DEPEND="virtual/x11"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 # hyper-optimizations untested...
 #
 src_compile() {
 
 	cd ${S}
-	sed "s/genCxterm/\.\/genCxterm/g" ${S}/scripts/Makefile.in > ${S}/scripts/Makefile.new
-	mv ${S}/scripts/Makefile.new ${S}/scripts/Makefile.in
+	sed -i "s/genCxterm/\.\/genCxterm/g" ${S}/scripts/Makefile.in
 
 	./configure --prefix=/usr \
 				--mandir=/usr/share/man \
