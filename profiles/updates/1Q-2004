@@ -29,3 +29,4 @@ move sys-apps/i8kutils app-laptop/i8kutils
 move sys-apps/radeontool app-laptop/radeontool
 move app-misc/toshiba-utils app-laptop/toshiba-utils
 move app-misc/spicctrl app-laptop/spicctrl
+move games-action/stepmania games-arcade/stepmania
