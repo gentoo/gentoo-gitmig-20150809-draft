@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/imaging
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.5 2004/10/03 23:18:58 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/ChangeLog,v 1.6 2004/11/01 10:32:58 josejx Exp $
+
+  01 Nov 2004; Joseph Jezak <josejx@gentoo.org> imaging-1.1.3-r2.ebuild:
+  Marked ppc stable.
 
   04 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
   +files/imaging-1.1.4-ft-2.1.9.patch, imaging-1.1.4.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/imaging-1.1.3-r2.ebuild,v 1.2 2004/08/20 15:29:45 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/imaging-1.1.3-r2.ebuild,v 1.3 2004/11/01 10:32:58 josejx Exp $
 
 inherit distutils
 
@@ -19,7 +19,7 @@ DEPEND=">=media-libs/jpeg-6a
 	tcltk? ( dev-lang/tk )"
 
 SLOT="0"
-KEYWORDS="x86 ~sparc ~alpha ~ppc"
+KEYWORDS="x86 ~sparc ~alpha ppc"
 LICENSE="as-is"
 
 src_compile() {
