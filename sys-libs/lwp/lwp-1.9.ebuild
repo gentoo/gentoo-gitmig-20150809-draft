@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lwp/lwp-1.9.ebuild,v 1.2 2002/11/12 06:59:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lwp/lwp-1.9.ebuild,v 1.3 2003/02/13 16:50:40 vapier Exp $
 
 DESCRIPTION="Light weight process library (used by Coda).  This is NOT libwww-perl."
 HOMEPAGE="http://www.coda.cs.cmu.edu/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/detect/detect-0.9.72.ebuild,v 1.1 2002/09/15 15:37:45 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/detect/detect-0.9.72.ebuild,v 1.2 2003/02/13 16:48:25 vapier Exp $
 
 DESCRIPTION="Detect is a library for automatic hardware detection."
 HOMEPAGE="http://www.mandrakelinux.com/harddrake/index.php"
