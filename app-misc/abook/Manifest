@@ -1,5 +1,5 @@
-MD5 74562e3adec1bf0f182b3ffc123ea8e2 ChangeLog 1852
-MD5 1febd853ba2f3c7f4d55623465ca597b abook-0.5.2-r1.ebuild 810
+MD5 49ecde16cf0084bfa60905563508dd2f ChangeLog 1986
+MD5 5c2616f26ceb15fef14e009124e2a0ca abook-0.5.2-r1.ebuild 812
 MD5 838ab371973d52a741378b9dced70f87 metadata.xml 434
 MD5 9d6404a56098175050b0c50331519bc8 files/abook-0.5.2-filter.diff 939
 MD5 882e53be58a3a05f24a7c29f49e998cb files/digest-abook-0.5.2-r1 63

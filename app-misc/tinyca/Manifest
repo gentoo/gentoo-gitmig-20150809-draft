@@ -1,17 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c001813973b241ee7011bdb7f348a51f ChangeLog 1017
-MD5 aca4f15a763ce3be243f9886e0b5dc38 tinyca-0.5.4-r1.ebuild 1114
+MD5 8ace7f760c86ba9986e74d76b101640b ChangeLog 1150
+MD5 bbbac9c3f08a1a4e3db307535f168ee1 tinyca-0.5.4-r1.ebuild 1116
 MD5 e722595bc20216838441d7ddc34b5049 tinyca-0.5.4.ebuild 1083
 MD5 e2bebf23f7783c2a82c626a5cc1b7c67 tinyca-0.6.6.ebuild 1192
 MD5 ce4138146004f379403a5187796ce262 files/digest-tinyca-0.5.4 64
 MD5 ce4138146004f379403a5187796ce262 files/digest-tinyca-0.5.4-r1 64
 MD5 2bcc4d940205e70dd881c538b45d1173 files/digest-tinyca-0.6.6 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBHqPfI1lqEGTUzyQRAnz1AJ47R6UboX17gIgO1qSMdrdzVnTYlACguyWw
-S7zb8CZ+6VTMIDL32i+FwNY=
-=YgrF
------END PGP SIGNATURE-----

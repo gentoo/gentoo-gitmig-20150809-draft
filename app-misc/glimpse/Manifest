@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fc897fb73a331419a6cf8fe1d5e62bfb ChangeLog 1663
-MD5 cd7d5180af47e5a9869413a4bbea71ea glimpse-4.15-r1.ebuild 760
+MD5 5ca3d1ea9ae3d54b8aa72e481b045d40 ChangeLog 1796
+MD5 6d3b0abd9eaa989bb2dbccf72b3ea555 glimpse-4.15-r1.ebuild 761
 MD5 e36c48e485d3d7cd1dd17409e1cbc34d glimpse-4.17.4.ebuild 1176
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 70ba17a37033e7a97c52c9a359f613e0 files/4.15-errno.patch 4623
+MD5 344aa4793307f2aa3574436006c0e14a files/4.17.4-gcc3.patch 2131
 MD5 42e75d4b9b3765782ef71b6519d8adc9 files/digest-glimpse-4.15-r1 64
 MD5 a1275d58e7fbf52d926178e7c4b2c16a files/digest-glimpse-4.17.4 66
-MD5 344aa4793307f2aa3574436006c0e14a files/4.17.4-gcc3.patch 2131
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA35LAHTu7gpaalycRAqvCAJwNXz9Jn+kvq2Fg5RFzQ+8X3g0lewCfUtH0
-SBGVL1Z7+DpwSUZr6eRi/1o=
-=JNz8
------END PGP SIGNATURE-----
