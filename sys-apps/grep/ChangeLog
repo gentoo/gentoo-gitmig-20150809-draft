@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/grep
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.24 2004/06/11 23:29:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.25 2004/06/11 23:35:04 mr_bones_ Exp $
+
+*grep-2.5.1-r3 (11 Jun 2004)
+
+  11 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> grep-2.5.1-r3.ebuild:
+  rev bump to get use perl fix
 
   11 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> grep-2.5.1-r2.ebuild:
   compile statically if use perl to address bug #53627
