@@ -1,10 +1,14 @@
 # ChangeLog for dev-lang/php
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.13 2002/09/11 05:04:02 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.14 2002/09/13 05:39:01 rphillips Exp $
 
 *php-4.2.3 (10 Sep 2002)
 
-  10 Sep 2002; Ryan Phillips <rphillips@gentoo.org> php-4.2.3-r1.ebuild :
+  12 Sep 2002; Ryan Phillips <rphillips@gentoo.org> php-4.2.3.ebuild :
+
+  Added xmlrpc to 'xml' use flag. Fixes #7811
+
+  10 Sep 2002; Ryan Phillips <rphillips@gentoo.org> php-4.2.3.ebuild :
 
   New version...
 
