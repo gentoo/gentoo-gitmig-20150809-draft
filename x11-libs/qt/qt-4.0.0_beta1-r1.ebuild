@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta1-r1.ebuild,v 1.4 2004/12/28 21:12:56 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta1-r1.ebuild,v 1.5 2004/12/29 17:46:55 caleb Exp $
 
 inherit eutils flag-o-matic
 
@@ -67,6 +67,7 @@ src_unpack() {
 	# Qt4 moc does not work with -O3, unfortunately.
 	replace-flags -O3 -O2
 	filter-flags -finline-functions
+
 	sed -i -e "s:QMAKE_CFLAGS_RELEASE.*=.*:QMAKE_CFLAGS_RELEASE=${CFLAGS}:" \
 		-e "s:QMAKE_CXXFLAGS_RELEASE.*=.*:QMAKE_CXXFLAGS_RELEASE=${CXXFLAGS}:" \
 		-e "s:QMAKE_LFLAGS_RELEASE.*=.*:QMAKE_LFLAGS_RELEASE=${LDFLAGS}:" \
@@ -75,6 +76,7 @@ src_unpack() {
 	epatch ${FILESDIR}/qt4b1.patch
 	epatch ${FILESDIR}/qt4b1_20041228.patch
 	epatch ${FILESDIR}/qt4-rpath.patch
+	epatch ${FILESDIR}/qt4-qtprf.patch
 }
 
 src_compile() {
@@ -134,6 +136,7 @@ src_install() {
 
 	dodir /usr/lib/qt4/mkspecs
 	cp -a ${S}/mkspecs/linux-g++ ${D}/usr/lib/qt4/mkspecs/linux-g++
+	cp -a ${S}/mkspecs/features ${D}/usr/lib/qt4/mkspecs/features
 	cp -a ${S}/mkspecs/default ${D}/usr/lib/qt4/mkspecs/default
 
 	insinto /etc/env.d

@@ -1,0 +1,11 @@
+--- mkspecs/features/unix/qt.prf.orig	2004-12-29 11:19:43.660482480 -0500
++++ mkspecs/features/unix/qt.prf	2004-12-29 11:19:39.329140944 -0500
+@@ -7,7 +7,7 @@
+ # prevents us from picking up "stale" includes
+ INCLUDEPATH = $$QMAKE_INCDIR_QT $$INCLUDEPATH
+ 
+-!isEmpty(QMAKE_RTLDIR_QT):QMAKE_LIBDIR += $$QMAKE_RTLDIR_QT
++#!isEmpty(QMAKE_RTLDIR_QT):QMAKE_LIBDIR += $$QMAKE_RTLDIR_QT
+ QMAKE_LIBDIR += $$QMAKE_LIBDIR_QT
+ for(QTLIB, $$list($$lower($$unique(QT)))) {
+    qlib =
