@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.12 2004/03/28 21:02:06 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.13 2004/03/28 22:01:51 stuart Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -93,7 +93,7 @@ RDEPEND="${RDEPEND}
    virtual/mta
    sys-apps/file
    yaz? ( dev-libs/yaz )
-   doc? ( app-doc/php-docs-200403 )"
+   doc? ( app-doc/php-docs )"
 
 
 # USE structure doesn't support ~x86
@@ -172,7 +172,7 @@ if [ -z "${PHPSAPI}" ]; then
 	eerror "${msg}"
 	die "${msg}"
 fi
-# build the destination and php.ini details
+# build the destination and php.ini detail
 PHPINIDIRECTORY="/etc/php/${PHPSAPI}-php${PHPMAJORVER}"
 PHPINIFILENAME="php.ini"
 
@@ -533,6 +533,20 @@ php-sapi_src_install() {
 	# A lot of ini file funkiness
 	insinto ${PHPINIDIRECTORY}
 	newins ${phpinisrc} ${PHPINIFILENAME}
+
+	# 2004/03/28 - stuart@gentoo.org
+	#
+	# This is where we install header files that PHP itself doesn't install,
+	# but which PECL packages depend on
+
+	for x in ext/mbstring/libmbfl/mbfl/mbfilter.h ; do
+		my_headerdir="/usr/include/php/`dirname $x`"
+		echo "$my_headerdir"
+		if [ ! -d "${D}$my_headerdir" ]; then
+			mkdir -p ${D}$my_headerdir
+		fi
+		cp $x ${D}/usr/include/php/$x
+	done
 }
 
 php-sapi_pkg_preinst() {
