@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/qca
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.9 2005/01/17 19:48:15 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/qca/ChangeLog,v 1.10 2005/01/18 14:07:44 gustavoz Exp $
+
+  18 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> qca-1.0-r1.ebuild:
+  Stable on sparc
 
   17 Jan 2005; Gustavo Felisberto <humpback@gentoo.org>; qca-1.0-r1.ebuild:
   Marked x86
