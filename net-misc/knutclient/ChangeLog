@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/knutclient
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.2 2004/03/01 21:34:08 aliz Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/ChangeLog,v 1.3 2004/03/14 17:28:54 mr_bones_ Exp $
+
+  14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  knutclient-0.6.0.ebuild, knutclient-0.7.1.ebuild:
+  inherit kde instead of deprecated kde-base
 
 *knutclient-0.7.1 (17 Oct 2003)
 

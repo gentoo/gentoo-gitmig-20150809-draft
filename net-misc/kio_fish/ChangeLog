@@ -1,10 +1,13 @@
 # ChangeLog for net-misc/kio_fish
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kio_fish/ChangeLog,v 1.8 2003/04/23 12:44:12 danarmak Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kio_fish/ChangeLog,v 1.9 2004/03/14 17:27:01 mr_bones_ Exp $
 
   Added warning message: this app is part of KDE 3.1 (kdebase). You really
   should upgrade to kde 3.1 and use it from there. This old standalone
   version is not being updated or fixed anymore.
+
+  14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> kio_fish-1.1.2.ebuild:
+  inherit kde instead of deprecated kde-base
 
   31 Jan 2003; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 

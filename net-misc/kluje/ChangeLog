@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/kluje
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kluje/ChangeLog,v 1.10 2004/03/13 06:01:22 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kluje/ChangeLog,v 1.11 2004/03/14 17:27:13 mr_bones_ Exp $
+
+  14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> kluje-0.5.ebuild,
+  kluje-0.6.ebuild, kluje-0.7.ebuild:
+  inherit kde instead of deprecated kde-base
 
   12 Mar 2004; Jason Wever <weeve@gentoo.org> kluje-0.7.ebuild:
   Added ~sparc keyword.

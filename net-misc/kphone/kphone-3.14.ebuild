@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kphone/kphone-3.14.ebuild,v 1.1 2004/01/07 09:38:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kphone/kphone-3.14.ebuild,v 1.2 2004/03/14 17:29:29 mr_bones_ Exp $
 
-inherit kde-base
+inherit kde
 
 need-kde 3
 LICENSE="GPL-2"

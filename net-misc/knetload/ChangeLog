@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/knetload
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knetload/ChangeLog,v 1.10 2004/01/09 21:08:38 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knetload/ChangeLog,v 1.11 2004/03/14 17:27:29 mr_bones_ Exp $
+
+  14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> knetload-1.94.ebuild,
+  knetload-1.99.ebuild:
+  inherit kde instead of deprecated kde-base
 
   09 Jan 2004; Jason Wever <weeve@gentoo.org> knetload-1.99.ebuild:
   Marked stable on sparc.

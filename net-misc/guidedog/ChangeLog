@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/guidedog
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/guidedog/ChangeLog,v 1.3 2003/03/11 22:31:06 mholzer Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/guidedog/ChangeLog,v 1.4 2004/03/14 17:26:44 mr_bones_ Exp $
+
+  14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> guidedog-0.9.0.ebuild:
+  inherit kde instead of deprecated kde-base
 
 *guidedog-0.9.0 (11 Mar 2003)
 

@@ -1,8 +1,9 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Alexander Papaspyrou <alexander.papaspyrou@udo.edu
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knetmonapplet/knetmonapplet-0.6.6.ebuild,v 1.6 2003/09/05 22:01:49 msterret Exp $
-inherit kde-base
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knetmonapplet/knetmonapplet-0.6.6.ebuild,v 1.7 2004/03/14 17:28:19 mr_bones_ Exp $
+
+inherit kde
 need-kde 3
 
 DESCRIPTION="Graphical network monitor for the KDE panel"

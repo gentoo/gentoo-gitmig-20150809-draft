@@ -1,8 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/knutclient-0.6.0.ebuild,v 1.3 2003/07/22 20:15:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knutclient/knutclient-0.6.0.ebuild,v 1.4 2004/03/14 17:28:54 mr_bones_ Exp $
 
-inherit kde-base
+inherit kde
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Client for the NUT UPS monitoring daemon"
