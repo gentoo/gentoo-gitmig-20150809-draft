@@ -1,12 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-0.9.4.ebuild,v 1.4 2003/06/16 22:28:48 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-0.9.4.ebuild,v 1.5 2003/07/04 08:11:14 jje Exp $
 
 DESCRIPTION="Advanced Linux Sound Architecture tools"
 HOMEPAGE="http://www.alsa-project.org"
 LICENSE="GPL-2"
 
 DEPEND=">=media-libs/alsa-lib-0.9.4
+	>=media-sound/alsa-driver-0.9.4
 	=x11-libs/gtk+-1.2*"
 
 SLOT="0.9"
