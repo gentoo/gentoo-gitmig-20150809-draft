@@ -1,13 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.90-r1.ebuild,v 1.7 2004/06/25 00:34:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xawtv/xawtv-3.90-r1.ebuild,v 1.8 2004/07/14 21:12:28 agriffis Exp $
 
 inherit virtualx
 
-IUSE="aalib motif alsa opengl quicktime lirc mmx zvbi"
+IUSE="aalib alsa lirc mmx motif nls opengl quicktime zvbi"
 
 MY_PATCH="xaw-deinterlace-3.76-0.1.1.diff.bz2"
-S=${WORKDIR}/${P}
 MY_FONT=tv-fonts-1.0
 DESCRIPTION="TV application for the bttv driver"
 HOMEPAGE="http://bytesex.org/xawtv/"
