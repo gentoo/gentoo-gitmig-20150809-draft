@@ -1,6 +1,9 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.125 2004/04/15 22:46:06 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.126 2004/04/16 11:24:39 zul Exp $
+
+  16 Apr 2004; Chuck Short <zul@gentoo.org> files/2.0.49/commonapache2.conf:
+  Fixed typo, closes #46028.
 
   15 Apr 2004; Chuck Short <zul@gentoo.org> files/2.0.49/commonapache2.conf:
   Added mod_perl2 support to commonapache2.conf. Closes #33149.
