@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.5.ebuild,v 1.3 2004/01/03 19:15:42 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.5.ebuild,v 1.4 2004/01/06 06:48:13 nakano Exp $
 
 DESCRIPTION="sophisticated Object-Relational DBMS"
 
@@ -190,6 +190,14 @@ pkg_postinst() {
 	einfo "to setup the initial database environment."
 	einfo ""
 	einfo "Make sure the postgres user in /etc/passwd has an account setup with /bin/bash as the shell, or /bin/true"
+	if use pg-hier; then
+		ewarn ""
+		ewarn "REQUIRED!! After installing patched PostgreSQL by pg-hier"
+		ewarn "it is required to run 'initdb'. Without this Pg will fail "
+		ewarn "with error "
+		ewarn "ERROR: did not find '}' at end of input node. "
+		ewarn ""
+	fi
 }
 
 pkg_config() {

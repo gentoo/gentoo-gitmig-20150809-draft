@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.78 2004/01/05 10:43:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.79 2004/01/06 06:48:13 nakano Exp $
+
+  06 Jan 2004; Masatomo Nakano <nakano@gentoo.org> postgresql-7.3.5.ebuild,
+  postgresql-7.4-r1.ebuild, postgresql-7.4-r2.ebuild,
+  postgresql-7.4.1-r1.ebuild, files/postgresql.conf-7.4,
+  files/postgresql.init-7.4:
+  Fixed digest file and added a message for pg-hire.
+  This closes #35754,37345. And Clean up old ebuild.
 
 *postgresql-7.4.1-r1 (05 Jan 2004)
 
