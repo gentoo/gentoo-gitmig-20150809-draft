@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kasteroids
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kasteroids/ChangeLog,v 1.5 2005/03/14 18:58:36 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kasteroids/ChangeLog,v 1.6 2005/03/18 17:27:52 morfic Exp $
+
+  18 Mar 2005; Daniel Goller <morfic@gentoo.org> kasteroids-3.4.0.ebuild:
+  Added to ~ppc
 
   14 Mar 2005; Marcus D. Hanwell <cryos@gentoo.org> kasteroids-3.4.0.ebuild:
   Should not have been keyworded, when tested I found that pressing L to launch

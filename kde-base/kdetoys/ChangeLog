@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdetoys
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys/ChangeLog,v 1.105 2005/03/14 21:45:40 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys/ChangeLog,v 1.106 2005/03/18 16:35:21 morfic Exp $
+
+  18 Mar 2005; Daniel Goller <morfic@gentoo.org> kdetoys-3.4.0.ebuild:
+  Added to ~ppc
 
 *kdetoys-3.4.0 (14 Mar 2005)
 

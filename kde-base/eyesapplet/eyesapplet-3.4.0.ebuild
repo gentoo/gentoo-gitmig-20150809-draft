@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/eyesapplet/eyesapplet-3.4.0.ebuild,v 1.1 2005/03/13 21:18:59 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/eyesapplet/eyesapplet-3.4.0.ebuild,v 1.2 2005/03/18 16:40:53 morfic Exp $
 
 KMNAME=kdetoys
 MAXKDEVER=$PV
@@ -8,6 +8,6 @@ KM_DEPRANGE="$PV $MAXKDEVER"
 inherit kde-meta
 
 DESCRIPTION="kicker applet: eyes following the movement of the mouse pointer"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE=""
 DEPEND=""

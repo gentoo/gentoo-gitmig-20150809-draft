@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.4.0.ebuild,v 1.1 2005/03/14 21:23:29 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.4.0.ebuild,v 1.2 2005/03/18 16:33:30 morfic Exp $
 
 inherit kde-dist eutils
 
 DESCRIPTION="KDE base packages: the desktop, panel, window manager, konqueror..."
 
-KEYWORDS="~x86 ~amd64 ~sparc"
+KEYWORDS="~x86 ~amd64 ~sparc ~ppc"
 IUSE="arts cups java ldap ieee1394 hal lm_sensors logitech-mouse opengl pam samba ssl"
 # hal: enables hal backend for 'media:' ioslave
 

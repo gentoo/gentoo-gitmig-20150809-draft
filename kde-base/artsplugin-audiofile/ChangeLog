@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/artsplugin-audiofile
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-audiofile/ChangeLog,v 1.4 2005/03/14 15:13:09 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/artsplugin-audiofile/ChangeLog,v 1.5 2005/03/18 16:58:38 morfic Exp $
+
+  18 Mar 2005; Daniel Goller <morfic@gentoo.org>
+  artsplugin-audiofile-3.4.0.ebuild:
+  Added to ~ppc
 
   14 Mar 2005; Marcus D. Hanwell <cryos@gentoo.org>
   artsplugin-audiofile-3.4.0.ebuild:

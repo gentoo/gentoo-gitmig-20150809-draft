@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/noatun-plugins
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/noatun-plugins/ChangeLog,v 1.3 2005/03/13 21:19:12 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/noatun-plugins/ChangeLog,v 1.4 2005/03/18 17:13:06 morfic Exp $
+
+  18 Mar 2005; Daniel Goller <morfic@gentoo.org>
+  noatun-plugins-3.4.0.ebuild:
+  Added to ~ppc
 
   13 Mar 2005; Dan Armak <danarmak@gentoo.org> noatun-plugins-3.4.0.ebuild:
   KDE 3.4.0 ebuilds. Note that the tarballs won't be officially released for a

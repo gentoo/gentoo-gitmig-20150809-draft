@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.224 2005/03/17 13:30:39 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.225 2005/03/18 16:34:39 morfic Exp $
+
+  18 Mar 2005; Daniel Goller <morfic@gentoo.org> kdelibs-3.4.0.ebuild:
+  Added to ~ppc
 
   17 Mar 2005; Jason Wever <weeve@gentoo.org> kdelibs-3.2.3-r8.ebuild,
   kdelibs-3.3.2-r7.ebuild:
