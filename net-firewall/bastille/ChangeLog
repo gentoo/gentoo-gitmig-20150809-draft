@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/bastille
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/bastille/ChangeLog,v 1.2 2003/08/03 03:12:17 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/bastille/ChangeLog,v 1.3 2003/08/03 11:40:26 seemant Exp $
+
+  03 Aug 2003; Seemant Kulleen <seemant@gentoo.org> :
+  Added iptables to RDEPEND.  Thanks to Wingedone
 
   02 Aug 2003; <solar@gentoo.org> bastille-2.1.1.ebuild:
   Added support for console only building. Server installs are a place

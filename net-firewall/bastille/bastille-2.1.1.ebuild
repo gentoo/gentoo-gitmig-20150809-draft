@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/bastille/bastille-2.1.1.ebuild,v 1.3 2003/08/03 03:12:17 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/bastille/bastille-2.1.1.ebuild,v 1.4 2003/08/03 11:40:08 seemant Exp $
 
 inherit perl-module
 
@@ -19,7 +19,8 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa"
 
 
-RDEPEND="dev-perl/Curses
+RDEPEND="net-firewall/iptables
+	dev-perl/Curses
 	tcltk? ( dev-perl/perl-tk )"
 
 src_unpack() {
