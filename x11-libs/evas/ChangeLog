@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/evas
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/ChangeLog,v 1.8 2003/03/20 13:02:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/ChangeLog,v 1.9 2003/10/14 02:48:10 vapier Exp $
+
+*evas-1.0.0.20031013_pre12 (13 Oct 2003)
+
+  13 Oct 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump.
 
 *evas-1.0.0.20030220_pre5-r1 (20 Mar 2003)
 
