@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/cherokee/cherokee-0.4.14.ebuild,v 1.1 2004/03/18 18:33:23 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/cherokee/cherokee-0.4.14.ebuild,v 1.2 2004/03/19 07:19:05 dholm Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="An extremely fast and tiny web server."
@@ -17,7 +17,7 @@ RDEPEND="virtual/glibc
 		>=gnome-base/ORBit2-2.6.1
 		>=gnome-base/gnome-vfs-2.2.4 )"
 
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 SLOT="0"
 IUSE="gnome"
 
