@@ -1,31 +1,25 @@
 # Copyright 2003 Arcady Genkin <agenkin@gentoo.org>.
-# Distributed under the terms of the GNU General Public License v2.
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/Tk_Theme/Tk_Theme-23.ebuild,v 1.3 2003/07/12 13:10:41 aliz Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/Tk_Theme/Tk_Theme-23.ebuild,v 1.4 2003/08/07 03:19:11 vapier Exp $
 
 DESCRIPTION="Theming library for TCL/TK."
 HOMEPAGE="http://www.xmission.com/~georgeps/Tk_Theme/"
-IUSE=""
+SRC_URI="http://www.xmission.com/~georgeps/Tk_Theme/${P}.tgz"
+
+LICENSE="BSD"
+SLOT="0"
+KEYWORDS="x86"
 
 DEPEND="dev-lang/tcl
 	dev-lang/tk
 	x11-base/xfree"
 
-LICENSE="BSD"
-KEYWORDS="x86"
-
-SLOT="0"
-SRC_URI="http://www.xmission.com/~georgeps/Tk_Theme/${P}.tgz"
-S=${WORKDIR}/${P}
-
 src_compile() {
-
 	tclsh configure || die
 	make || die
-
 }
 
 src_install() {
-
 	local libdir=/usr/lib/Tk_Theme
 	
 	insinto ${libdir}
@@ -34,5 +28,4 @@ src_install() {
 	doexe theme.so
 
 	dodoc Changes LICENSE README TODO
-
 }
