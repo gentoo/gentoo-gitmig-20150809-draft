@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3027 2004/07/29 08:29:44 mr_bones_ Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3028 2004/07/30 11:59:24 karltk Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <karltk@gentoolorg> (30 Jul 2004)
+# Moving from dev-java/jython to dev-java/jython-bin
+dev-java/jython
 
 # <mr_bones_@gentoo.org> (Jul 29 2004)
 # Mask until 0.6.1b can replace it.  Upstream noticed a bug right after release.
