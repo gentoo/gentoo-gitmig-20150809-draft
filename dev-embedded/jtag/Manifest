@@ -1,5 +1,5 @@
-MD5 fd6860bc993b6da1c19db63a4dfe6b1e ChangeLog 959
+MD5 1387de3e71bca004ddbe0bb93a218450 ChangeLog 964
 MD5 a28a809849d8cc98176478c8a7313876 metadata.xml 412
-MD5 f0e9ab3ca11eecd72544f4b384538f07 jtag-0.5.1-r1.ebuild 848
+MD5 651da7a33b313be91c5f1f49eee1a4b5 jtag-0.5.1-r1.ebuild 853
 MD5 09b6f20c9fb4fecd8754d06560debd93 files/digest-jtag-0.5.1-r1 63
 MD5 ff63599d1407a461b7016e0df2158d78 files/jtag-0.5.1-no-erase-overshoot.diff 1132

@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3c59ad1d8df869262b49d19e82583b31 dc-tool-ip-1.0.4.ebuild 1100
-MD5 5b30e705e7a00a77983c825c5d20225f ChangeLog 549
+MD5 07ea9eb1fdf68ae5f8b98ba8cb0ffb3e ChangeLog 553
+MD5 006f2bb7d6f4690aaef1c54374fcaedf dc-tool-ip-1.0.4.ebuild 1104
 MD5 c5b5abb3be81bb53cfee6c21c8ee3645 metadata.xml 222
-MD5 62e0368b50026e7ca176387d1445d637 files/1.0.4-bfd-update.patch 909
 MD5 8bae092f81b693467415ec097555bb7b files/digest-dc-tool-ip-1.0.4 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBlq1BHTu7gpaalycRAmTnAJsEurSKSC9eiw2CdIHYVWj8gCwzHQCfQLH8
-PQSUz56qba68YKmUDScdSUE=
-=ftmc
------END PGP SIGNATURE-----
+MD5 62e0368b50026e7ca176387d1445d637 files/1.0.4-bfd-update.patch 909

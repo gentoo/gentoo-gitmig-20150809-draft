@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 462428bc940bca4616f7a43e9dc9ff3f ChangeLog 3646
 MD5 7d36efc2d3cf66fe798832feb7034d92 metadata.xml 254
-MD5 bb854c271a739656109a9e9028770d39 ChangeLog 3647
-MD5 aa2be0ed2eb32ba5c50f05393bcc2384 sdcc-2.4.0.ebuild 1033
-MD5 038160f382e3fbe7d1187707b4dc46f9 sdcc-2.4.0_p20041215.ebuild 1100
-MD5 3dd8ba8a8704f8a3b7ce15bb2f012fe5 sdcc-2.4.0_p20040927.ebuild 1099
-MD5 b28000eb9afb40c92c48b7bc322ac7c1 files/digest-sdcc-2.4.0_p20041215 70
+MD5 e85f3ce84504295db28455e101342da4 sdcc-2.4.0.ebuild 1032
+MD5 15c3e47cdcf13a0d0445dc2d8b8af685 sdcc-2.4.0_p20041215.ebuild 1099
+MD5 c78d900c13abb7f03a8295c0dae93620 sdcc-2.4.0_p20040927.ebuild 1098
 MD5 bfc177a29ceb52dfa8883108634d1e7e files/digest-sdcc-2.4.0 63
+MD5 b28000eb9afb40c92c48b7bc322ac7c1 files/digest-sdcc-2.4.0_p20041215 70
 MD5 cea9a416749ed5e475a0f546a7f60388 files/digest-sdcc-2.4.0_p20040927 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBwXM/mdTrptrqvGERAnuVAJ9OlvNVQMdDN5r9MD3c4PKzO7jMBwCfRwPu
-Es8oRJB28pPIWccIIrBvCnk=
-=QvJs
------END PGP SIGNATURE-----

@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 67d2a8a105097f6edfe809d82a4cfb80 ChangeLog 758
-MD5 923e6426e162315b183d23857a1c2199 gpsim-lcd-0.1.1.ebuild 905
+MD5 ad51deec3991653399d1858635d75d7e ChangeLog 760
+MD5 d55e102ca789dbb2d1f194dc8e2aabce gpsim-lcd-0.1.1.ebuild 909
 MD5 9dc9c88b5a3165e98cdcb06ee4a6d4fc metadata.xml 234
 MD5 6afce2c0050a1d6a1a5a16c5818a54db files/digest-gpsim-lcd-0.1.1 61
 MD5 fe7a1baafadcc1af27792ad5d0bf65e8 files/gpsim-lcd-0.1.1-display_fix.patch 348
 MD5 61f40c22ba6832f8704ba79fb8cfe31e files/gpsim-lcd-0.1.1-gcc33.patch 906
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4W1aHTu7gpaalycRAsdyAKDSVLIvg3K7FCXdTA+5Xhp2jBLz7QCfWt70
-whNuE1BHkwX4fx/iyG4MHvk=
-=zfxf
------END PGP SIGNATURE-----

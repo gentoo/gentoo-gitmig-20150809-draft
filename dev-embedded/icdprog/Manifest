@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e49f337f169f6fe8be4dcc97b47a36d1 ChangeLog 571
-MD5 15a157d6970c262a017bf653cf7eb04a icdprog-0.3.ebuild 857
+MD5 8b85073ec213ec761996627d760e87e9 ChangeLog 573
+MD5 2a70f7ebf42c6fbbfa6c1c143f489ade icdprog-0.3.ebuild 861
 MD5 440de90e4b4f892d4833edbb7b73e841 metadata.xml 402
 MD5 0485693f75dadcdc9339897ad331c9a2 files/digest-icdprog-0.3 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4W2mHTu7gpaalycRAoZYAJ4k3euVkVq4tLaRFe3EhBw1ZuzswACgslBv
-ruBeaQ3TN7R2fZy31irgbYo=
-=2ZwP
------END PGP SIGNATURE-----

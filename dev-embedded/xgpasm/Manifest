@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8be5d44ad8e1d2f38c1d0a33d8f3eabb ChangeLog 599
+MD5 fb2fe44e17e20ead17137c9b0b9b9f8d ChangeLog 601
 MD5 ea8a409ee6fb2eeb1e714eef8c1ebe2f metadata.xml 431
-MD5 2549e4217eea7c017bc7f8d1f76fa5e4 xgpasm-1.0.ebuild 644
+MD5 967206264b80a1a1efb79ac0aca67d76 xgpasm-1.0.ebuild 648
 MD5 d9981902768854c4660e5cc0a60df76b files/digest-xgpasm-1.0 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4W5sHTu7gpaalycRAooCAJ97MNrwsMzYLWPedvQugbwWUd4k8QCgsj/2
-sf9wFDmv8nUKItDt0EmsVpY=
-=W/50
------END PGP SIGNATURE-----
