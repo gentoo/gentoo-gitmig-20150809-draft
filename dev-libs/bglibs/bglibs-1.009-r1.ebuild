@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/bglibs-1.009-r1.ebuild,v 1.2 2003/09/23 04:15:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/bglibs/bglibs-1.009-r1.ebuild,v 1.3 2003/11/05 01:21:13 robbat2 Exp $
 
 inherit fixheadtails
 
@@ -18,6 +18,10 @@ DEPEND="virtual/glibc"
 src_unpack() {
 	unpack ${A}
 	ht_fix_file ${S}/Makefile
+	# fix weird bug with new gcc and compile of tests failing due to style of
+	# gcc flags not on bugzilla, but personally reported to robbat2@gentoo.org
+	# by personal friend
+	sed -e 's|libraries selftests installer|libraries installer|g' -i ${S}/Makefile
 }
 
 src_compile() {
