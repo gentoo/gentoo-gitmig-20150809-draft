@@ -1,7 +1,7 @@
 # Masked until bug #60413 is fixed.
 media-libs/xine-lib
 
-# Still needing 2.4
+# Still needing 2.4 default
 sys-kernel/linux26-headers
 >=sys-kernel/linux-headers-2.6.0
 >=sys-kernel/gentoo-dev-sources-2.6.8
@@ -9,3 +9,5 @@ sys-kernel/linux26-headers
 >=sys-kernel/development-sources-2.6.8
 >=sys-kernel/vanilla-sources-2.6.8
 
+# Something between 2.3.3.20040420 and 2.3.4.20040619 breaks blackdown-jdk
+>=sys-libs/glibc-2.3.4

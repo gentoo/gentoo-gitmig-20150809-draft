@@ -46,7 +46,8 @@
 *>=sys-apps/portage-2.0.45-r2
 *>=sys-devel/binutils-2.13.90.0.16
 *<sys-devel/gcc-3.4.1
-*>=sys-libs/glibc-2.3.1-r2
+# Something between 2.3.3.20040420 and 2.3.4.20040619 breaks blackdown-jdk
+*<sys-libs/glibc-2.3.4
 <=sys-kernel/linux-headers-2.4.23
 >=sys-apps/sysklogd-1.4.1
 *dev-lang/python
