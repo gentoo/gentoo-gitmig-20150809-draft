@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbcd/bbcd-0.3.1-r1.ebuild,v 1.1 2003/08/20 05:04:27 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbcd/bbcd-0.3.1-r1.ebuild,v 1.2 2003/12/07 14:01:01 lanius Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Basic CD Player for blackbox wm"
@@ -17,6 +17,7 @@ DEPEND="virtual/blackbox
 src_unpack() {
 	unpack ${P}.tar.gz
 	epatch ${FILESDIR}/${P}_${PV}a.diff.gz
+	epatch ${FILESDIR}/${P}-gcc3.3.patch
 }
 
 src_compile() {
