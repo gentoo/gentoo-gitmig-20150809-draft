@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.103 2005/01/17 15:05:25 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.104 2005/01/17 20:56:26 suka Exp $
+
+  17 Jan 2005; Andreas Proschofsky <suka@gentoo.org>
+  +files/1.1.4/gcc34-sal-link-to-libsupc++.diff, openoffice-1.1.4.ebuild:
+  Cleanup and sync with openoffice-ximian, also add another patch for gcc 3.4
 
   17 Jan 2005; Andreas Proschofsky <suka@gentoo.org>
   openoffice-1.1.4.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.4.ebuild,v 1.10 2005/01/17 15:05:25 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.4.ebuild,v 1.11 2005/01/17 20:56:26 suka Exp $
 
 # Notes:
 #
@@ -24,14 +24,14 @@
 #   Get support going for installing a custom language pack.  Also
 #   need to be able to install more than one language pack.
 
-inherit flag-o-matic eutils toolchain-funcs
+inherit eutils flag-o-matic toolchain-funcs
 
 IUSE="curl gnome hardened java kde nptl zlib"
 
-LOC="/opt"
-INSTDIR="${LOC}/OpenOffice.org"
+INSTDIR="/opt/OpenOffice.org"
 S="${WORKDIR}"
 DESCRIPTION="OpenOffice.org, a full office productivity suite."
+
 SRC_URI="mirror://openoffice/stable/${PV}/OOo_${PV}_source.tar.gz
 		http://www.stlport.org/archive/STLport-4.6.2.tar.gz
 		ppc? ( http://www.openoffice.org/files/documents/111/2112/LINUXGCCPinc.zip
@@ -45,20 +45,18 @@ SLOT="0"
 KEYWORDS="x86 ppc ~sparc"
 
 RDEPEND="!app-office/openoffice-bin
-	>=sys-libs/glibc-2.1
-	!=sys-libs/glibc-2.3.1*
+	virtual/x11
+	virtual/libc
+	virtual/lpr
 	>=dev-lang/perl-5.0
 	>=media-libs/libart_lgpl-2.3.13
 	>=x11-libs/startup-notification-0.5
 	>=media-libs/freetype-2.1.4
-	virtual/x11
 	app-arch/zip
 	app-arch/unzip
 	dev-libs/expat
 	java? ( >=virtual/jre-1.4.1 )
-	virtual/lpr
-	ppc? ( >=sys-libs/glibc-2.2.5-r7
-	>=sys-devel/gcc-3.2.1 )"
+	ppc? ( >=sys-devel/gcc-3.2.1 )"
 
 DEPEND="${RDEPEND}
 	>=sys-apps/findutils-4.1.20-r1
@@ -86,10 +84,6 @@ pkg_setup() {
 		fi
 	fi
 
-	ewarn " This version should now also compile fine with gcc 3.4.x "
-	ewarn " If you encounter problems in relation to this, please report "
-	ewarn " them to http://bugs.gentoo.org "
-	ewarn ""
 	ewarn " It is important to note that OpenOffice.org is a very fragile  "
 	ewarn " build when it comes to CFLAGS.  A number of flags have already "
 	ewarn " been filtered out.  If you experience difficulty merging this  "
@@ -227,9 +221,10 @@ src_unpack() {
 	cp ${DISTDIR}/STLport-4.6.2.tar.gz ${S}/stlport/download || die
 	epatch ${FILESDIR}/${PV}/newstlportfix.patch
 
-	epatch ${FILESDIR}/${PV}/openoffice-java.patch
-
 	epatch ${FILESDIR}/${PV}/gcc-instlib.patch
+
+	#Another java problem
+	epatch ${FILESDIR}/${PV}/javafix.patch
 
 	# Workaround for bug #73940, may break debug use flag on ppc
 	if use ppc; then
@@ -239,8 +234,16 @@ src_unpack() {
 	#Fix for newer Freetype
 	epatch ${FILESDIR}/${PV}/freetype-217.patch
 
-	#Another java problem
-	epatch ${FILESDIR}/${PV}/javafix.patch
+	epatch ${FILESDIR}/${PV}/openoffice-java.patch
+
+	# GCC 3.4.x fixes
+	if [ "$(gcc-version)" = "3.4" ]
+	then
+		epatch ${FILESDIR}/${PV}/gcc34.patch.bz2
+		epatch ${FILESDIR}/${PV}/gcc34-sal-link-to-libsupc++.diff
+		use !java && epatch ${FILESDIR}/${PV}/gcc34-nojava-fix.patch
+		use nptl && epatch ${FILESDIR}/${PV}/gcc34-nptl-fix.patch
+	fi
 
 	#phtread-fix
 	epatch ${FILESDIR}/${PV}/pthreadlink-fix.patch
@@ -250,39 +253,8 @@ src_unpack() {
 		epatch ${FILESDIR}/${PV}/hardened-link.patch
 	fi
 
-	# GCC 3.4.x fixes
-	if [ "$(gcc-version)" = "3.4" ]
-	then
-		epatch ${FILESDIR}/${PV}/gcc34.patch.bz2
-		use !java && epatch ${FILESDIR}/${PV}/gcc34-nojava-fix.patch
-		use nptl && epatch ${FILESDIR}/${PV}/gcc34-nptl-fix.patch
-	fi
-
-	# Compile problems with these ...
-	filter-flags "-funroll-loops"
-	filter-flags "-fomit-frame-pointer"
-	filter-flags "-fprefetch-loop-arrays"
-	filter-flags "-fno-default-inline"
-	filter-flags "-fstack-protector"
-	filter-flags "-ftracer"
-	append-flags "-fno-strict-aliasing"
-	replace-flags "-O3" "-O2"
-	replace-flags "-Os" "-O2"
-
-	if [ "$(gcc-version)" == "3.2" ]; then
-		einfo "You use a buggy gcc, so replacing -march=pentium4 with -march=pentium3"
-		replace-flags "-march=pentium4" "-march=pentium3 -mcpu=pentium4"
-	fi
-
-	# Now for our optimization flags ...
-	export CXXFLAGS="${CXXFLAGS} -fno-for-scope -fpermissive -fno-rtti"
-	perl -pi -e "s|^CFLAGSOPT=.*|CFLAGSOPT=${CFLAGS}|g" \
-		${S}/solenv/inc/unxlngi4.mk
-	perl -pi -e "s|^CFLAGSCXX=.*|CFLAGSCXX=${CXXFLAGS}|g" \
-		${S}/solenv/inc/unxlngi4.mk
-
 	#Do our own branding by setting gentoo linux as the vendor
-	sed -i -e "s,\(//\)\(.*\)\(my company\),\2Gentoo Linux," ${S}/offmgr/source/offapp/intro/ooo.src
+	sed -i -e "s,\(//\)\(.*\)\(my company\),\2Gentoo Linux," ${S}/offmgr/source/offapp/intro/ooo.src || die
 }
 
 get_EnvSet() {
@@ -302,7 +274,6 @@ src_compile() {
 
 	addpredict /bin
 	addpredict /root/.gconfd
-	local buildcmd=""
 	export MYCONF=""
 
 	#Check if we use java
@@ -330,7 +301,7 @@ src_compile() {
 	# compiled with 2.95.3, while OO is compiled with 3.x). (Az)
 	einfo "Configuring OpenOffice.org with language support for ${LFULLNAME}..."
 	cd ${S}/config_office
-	rm -f config.cache
+	rm -f config.cache || die
 
 	if [ "LANGNAME" != "ENUS" ]; then
 		LANGNAME="${LANGNAME},ENUS"
@@ -339,8 +310,8 @@ src_compile() {
 	use sparc && MYCONF="${MYCONF} --disable-mozilla"
 
 	MYCONF="${MYCONF} --enable-libart \
-		--with-lang=${LANGNAME} \
 		--enable-libsn \
+		--with-lang=${LANGNAME} \
 		--without-fonts \
 		--with-system-freetype"
 
@@ -356,20 +327,52 @@ src_compile() {
 		tar -xzf ${DISTDIR}/helpcontent_${LANGNO}_unix.tgz -C ${S}/solver/${SOLVER}/${SOLPATH}/pck
 	fi
 
-	# Set $ECPUS to amount of processes multiprocessing build should use.
-	# NOTE:  Setting this too high might cause dmake to segfault!!
-	#        Setting this to anything but "1" on my pentium4 causes things
-	#        to segfault :(
-	[ -z "${ECPUS}" ] && export ECPUS="1"
+	# Build as minimal as possible
+	export BUILD_MINIMAL="${LANGNO}"
 
-	# Should the build use multiprocessing?
-	# We use build.pl directly, as dmake tends to segfault. (Az)
-	if [ "${ECPUS}" -gt 1 ]
+	#Get info for parallel build
+	export JOBS=`echo "${MAKEOPTS}" | sed -e "s/.*-j\([0-9]\+\).*/\1/"`
+
+	if [ "${JOBS}" -gt 10 ]
 	then
-		buildcmd="${S}/solenv/bin/build.pl --all -P${ECPUS} product=full strip=true --dlv_switch link"
-	else
-		buildcmd="${S}/solenv/bin/build.pl --all product=full strip=true --dlv_switch link"
+		export JOBS="10"
+		einfo "dmake fails with too much parallel jobs, so limiting to 10"
 	fi
+
+	export buildcmd="${S}/solenv/bin/build.pl --all product=full strip=true --dlv_switch link"
+
+	# Should the build use multiprocessing? Not enabled by default, as it tends to break 
+	if [ "${WANT_DISTCC}" == "true" ]
+	then
+		if [ "${JOBS}" -gt 1 ]
+		then
+			export buildcmd="${buildcmd} -P${JOBS}"
+			einfo "Using distcc, Good Luck"
+		fi
+	fi
+
+	# Compile problems with these ...
+	filter-flags "-funroll-loops"
+	filter-flags "-fomit-frame-pointer"
+	filter-flags "-fprefetch-loop-arrays"
+	filter-flags "-fno-default-inline"
+	filter-flags "-fstack-protector"
+	filter-flags "-ftracer"
+	append-flags "-fno-strict-aliasing"
+	replace-flags "-O3" "-O2"
+	replace-flags "-Os" "-O2"
+
+	if [ "$(gcc-version)" == "3.2" ]; then
+		einfo "You use a buggy gcc, so replacing -march=pentium4 with -march=pentium3"
+		replace-flags "-march=pentium4" "-march=pentium3 -mcpu=pentium4"
+	fi
+
+	# Now for our optimization flags ...
+	export CXXFLAGS="${CXXFLAGS} -fno-for-scope -fpermissive -fno-rtti"
+	perl -pi -e "s|^CFLAGSOPT=.*|CFLAGSOPT=${CFLAGS}|g" \
+		${S}/solenv/inc/unxlngi4.mk
+	perl -pi -e "s|^CFLAGSCXX=.*|CFLAGSCXX=${CXXFLAGS}|g" \
+		${S}/solenv/inc/unxlngi4.mk
 
 	if [ -z "$(grep 'CCCOMP' ${S}/${LinuxEnvSet})" ]
 	then
@@ -458,15 +461,6 @@ src_install() {
 	find ${D}${INSTDIR}/ -type f -exec chmod a+r {} \;
 	chmod a+x ${D}${INSTDIR}/share/config/webcast/*.pl
 
-	# Fix symlinks
-	for x in "soffice program/spadmin" \
-		"program/setup setup" \
-		"program/spadmin spadmin"
-	do
-		dosym $(echo ${x} | awk '{print $1}') \
-			${INSTDIR}/$(echo ${x} | awk '{print $2}')
-	done
-
 	# Install user autoresponse file
 	insinto /etc/openoffice
 	sed -e "s|<pv>|${PV}|g" ${T}/rsfile-local > ${T}/autoresponse-${PV}.conf
@@ -527,6 +521,9 @@ src_install() {
 		done
 	fi
 
+	# Remove unneeded stuff
+	rm -rf ${D}${INSTDIR}/share/cde || die
+
 	# Fix instdb.ins, to *not* install local copies of these
 	for entry in Kdeapplnk Kdemimetext Kdeicons Gnome_Apps Gnome_Icons Gnome2_Apps; do
 		perl -pi -e "/^File gid_File_Extra_$entry/ .. /^End/ and (\
@@ -537,9 +534,6 @@ src_install() {
 			s|\t\t\t\t\t\".*|\r|g)" \
 			${D}${INSTDIR}/program/instdb.ins
 	done
-
-	# Remove unneeded stuff
-	rm -rf ${D}${INSTDIR}/share/cde
 
 	# Make sure these do not get nuked.
 	keepdir ${INSTDIR}/user/registry/res/en-us/org/openoffice/{Office,ucb} ${INSTDIR}/user/psprint/{driver,fontmetric} ${INSTDIR}/user/{autocorr,backup,plugin,store,temp,template}

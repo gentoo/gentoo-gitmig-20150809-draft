@@ -1,0 +1,13 @@
+--- sal/util/makefile.mk.foo	2004-12-21 14:38:37.314521336 -0500
++++ sal/util/makefile.mk	2004-12-21 14:46:52.495159848 -0500
+@@ -146,6 +146,10 @@
+ SHL1STDLIBS+=-init InitLibrary -term ExitLibrary
+ .ENDIF # MAC
+ 
++.IF "$(OS)"=="LINUX"
++SHL1STDLIBS+= -Wl,-Bstatic -lsupc++ -Wl,-Bdynamic -lgcc_s
++.ENDIF
++
+ .IF "$(GUI)"=="UNX"
+ .IF "$(OS)"=="SOLARIS"
+ # libposix4.so (SunOS 5.6) <-> librt.so (SunOS >= 5.7)
