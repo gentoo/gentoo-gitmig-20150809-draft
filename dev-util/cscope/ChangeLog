@@ -1,6 +1,16 @@
 # ChangeLog for dev-util/cscope
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.14 2003/11/15 18:29:15 jbms Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.15 2004/02/04 16:23:52 agriffis Exp $
+
+*cscope-15.5 (04 Feb 2004)
+
+  04 Feb 2004; Aron Griffis <agriffis@gentoo.org> cscope-15.5.ebuild,
+  metadata.xml:
+  Update to cscope-15.5 with KEYWORDS restored from cscope-15.3. It appears
+  that somebody doesn't understand how to work with KEYWORDS, or doesn't
+  understand how to write a ChangeLog entry explaining their actions.
+  cscope-15.5 fixes the bison incompatibility so Brandy's sed fix is no longer
+  needed.  Add metadata.xml putting this ebuild into the vim and emacs herds.
 
   15 Nov 2003; Jeremy Maitin-Shepard <jbms@gentoo.org> cscope-15.4-r1.ebuild:
   Fixed emacs lisp and site file installation.
