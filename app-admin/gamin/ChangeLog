@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/gamin
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/ChangeLog,v 1.18 2005/03/16 06:42:11 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gamin/ChangeLog,v 1.19 2005/03/21 21:51:06 foser Exp $
+
+*gamin-0.0.26-r5 (21 Mar 2005)
+
+  21 Mar 2005; foser <foser@gentoo.org> gamin-0.0.26-r5.ebuild :
+  Add patch to work with inotify 0.21
 
 *gamin-0.0.26 (15 Mar 2005)
 

@@ -1,0 +1,98 @@
+Index: server/gam_inotify.c
+===================================================================
+RCS file: /cvs/gnome/gamin/server/gam_inotify.c,v
+retrieving revision 1.13
+diff -u -r1.13 gam_inotify.c
+--- server/gam_inotify.c	10 Feb 2005 22:51:00 -0000	1.13
++++ server/gam_inotify.c	16 Mar 2005 21:22:32 -0000
+@@ -116,11 +116,19 @@
+             return;
+         }
+ 
+-	iwr.name = g_strdup(path);
+-	iwr.mask = 0xffffffff; // all events
++	{
++	    int fd = open(path, O_RDONLY);
+ 
+-        wd = ioctl(fd, INOTIFY_WATCH, &iwr);
+-        g_free(iwr.name);
++	    if (fd < 0) {
++		G_UNLOCK(inotify);
++		return;
++	    }
++
++	    iwr.fd = fd;
++	    iwr.mask = 0xffffffff; // all events
++	    wd = ioctl(fd, INOTIFY_WATCH, &iwr);
++	    close (fd);
++	}
+ 
+         if (wd < 0) {
+             G_UNLOCK(inotify);
+Index: server/local_inotify.h
+===================================================================
+RCS file: /cvs/gnome/gamin/server/local_inotify.h,v
+retrieving revision 1.5
+diff -u -r1.5 local_inotify.h
+--- server/local_inotify.h	10 Feb 2005 22:51:00 -0000	1.5
++++ server/local_inotify.h	16 Mar 2005 21:22:32 -0000
+@@ -17,11 +17,11 @@
+  * such as IN_CREATE, IN_DELETE, IN_OPEN, IN_CLOSE, ..., relative to the wd.
+  */
+ struct inotify_event {
+-	__s32 wd;	/* watch descriptor */
+-	__u32 mask;	/* watch mask */
+-	__u32 cookie;	/* cookie used for synchronizing two events */
+-	size_t len;	/* length (including nulls) of name */
+-	char name[0];	/* stub for possible name */
++	__s32		wd;		/* watch descriptor */
++	__u32		mask;		/* watch mask */
++	__u32		cookie;		/* cookie to synchronize two events */
++	size_t		len;		/* length (including nulls) of name */
++	char		name[0];	/* stub for possible name */
+ };
+ 
+ /*
+@@ -30,8 +30,8 @@
+  * Pass to the inotify device via the INOTIFY_WATCH ioctl
+  */
+ struct inotify_watch_request {
+-	char *name;		/* directory name */
+-	__u32 mask;		/* event mask */
++	int		fd;		/* fd of filename to watch */
++	__u32		mask;		/* event mask */
+ };
+ 
+ /* the following are legal, implemented events */
+@@ -67,12 +67,7 @@
+ #include <linux/dcache.h>
+ #include <linux/fs.h>
+ #include <linux/config.h>
+-
+-struct inotify_inode_data {
+-	struct list_head watches;	/* list of watches on this inode */
+-	spinlock_t lock;		/* lock protecting the struct */
+-	atomic_t count;			/* ref count */
+-};
++#include <asm/atomic.h>
+ 
+ #ifdef CONFIG_INOTIFY
+ 
+@@ -82,7 +77,7 @@
+ 					      const char *);
+ extern void inotify_super_block_umount(struct super_block *);
+ extern void inotify_inode_is_dead(struct inode *);
+-extern __u32 inotify_get_cookie(void);
++extern u32 inotify_get_cookie(void);
+ 
+ #else
+ 
+@@ -106,7 +101,7 @@
+ {
+ }
+ 
+-static inline __u32 inotify_get_cookie(void)
++static inline u32 inotify_get_cookie(void)
+ {
+ 	return 0;
+ }

@@ -1,24 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3e1eb9458924ed0b517b9975191f310a ChangeLog 3585
-MD5 875135e8740bafa4dab79ee592cf9744 metadata.xml 279
-MD5 1a12b6356c49807d6a034d775c96575f gamin-0.0.20.ebuild 828
 MD5 59d28e6a7eced2cd85355b76c6ae02b4 gamin-0.0.26.ebuild 1186
-MD5 39ade60322eb86b40eca5ba38fd6d522 gamin-0.0.15.ebuild 842
-MD5 2695c38fbf4b4e11fe5d9c4d6f080ffc gamin-0.0.18.ebuild 889
+MD5 53bae81158628c4344478bd60cf48dd8 gamin-0.0.26-r5.ebuild 1260
 MD5 e14b51caa6ba40b1982f36284c19f75b gamin-0.0.19.ebuild 833
 MD5 d56aae268087693c5b5fe3fc58cdae4c gamin-0.0.25.ebuild 1185
-MD5 04ae13b77ce72f4c93d0460b1bbcfd57 files/digest-gamin-0.0.20 64
-MD5 caf15e7329c9675dff66e7f65b424e79 files/digest-gamin-0.0.26 64
-MD5 a6ae9d25c124ec87523b00e860cc0d2f files/digest-gamin-0.0.25 64
+MD5 1a12b6356c49807d6a034d775c96575f gamin-0.0.20.ebuild 828
+MD5 2695c38fbf4b4e11fe5d9c4d6f080ffc gamin-0.0.18.ebuild 889
+MD5 a92771d98b21d5dffb9b739c450ed3b1 ChangeLog 3720
+MD5 875135e8740bafa4dab79ee592cf9744 metadata.xml 279
+MD5 39ade60322eb86b40eca5ba38fd6d522 gamin-0.0.15.ebuild 842
+MD5 f37ab3721e3687f4ce0797dd6dac31d5 files/gamin-0.0.26-inotify_use_fd.patch 2739
+MD5 caf15e7329c9675dff66e7f65b424e79 files/digest-gamin-0.0.26-r5 64
 MD5 c576a2ec43ce151b5bc78b77e0f58c9a files/digest-gamin-0.0.15 64
 MD5 b183176dcfe9a0ad1609767f11cafc12 files/digest-gamin-0.0.18 64
 MD5 35d7d4d3208d674f62e4f2d7ef7d383f files/digest-gamin-0.0.19 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCN9YX1ZcsMnZjRyIRAicYAJ9ZHtB3GZfFCtjpIyt2h3bJ0W3rMACfXxjO
-QqVFkCmZF8xl1fe22eyZ4wo=
-=iCQY
------END PGP SIGNATURE-----
+MD5 04ae13b77ce72f4c93d0460b1bbcfd57 files/digest-gamin-0.0.20 64
+MD5 a6ae9d25c124ec87523b00e860cc0d2f files/digest-gamin-0.0.25 64
+MD5 caf15e7329c9675dff66e7f65b424e79 files/digest-gamin-0.0.26 64
