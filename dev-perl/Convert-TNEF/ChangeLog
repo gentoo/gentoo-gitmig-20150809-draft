@@ -1,7 +1,14 @@
 # ChangeLog for dev-perl/Convert-TNEF
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-TNEF/ChangeLog,v 1.1 2002/10/23 15:30:21 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-TNEF/ChangeLog,v 1.2 2002/11/26 17:29:49 mcummings Exp $
 
+*Convert-TNEF-0.17-r2 (26 Nov 2002)
+
+  26 Nov 2002; Michael Cummings <mcummings@gentoo.org> \
+  Convert-TNEF-0.17-r2.ebuild:
+  
+  Was missing module deps. Thanks to Alexander Holler in bug 10355.
+  
 *Convert-TNEF-0.17 (23 Oct 2002)
 
   23 Oct 2002; Nick Hadaway <raker@gentoo.org> Convert-TNEF-0.17.ebuild,
