@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-9999.ebuild,v 1.3 2005/01/08 09:00:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-9999.ebuild,v 1.4 2005/02/22 23:55:52 vapier Exp $
 
 EHACKAUTOGEN=yes
 inherit enlightenment
@@ -28,7 +28,7 @@ src_compile() {
 
 	export MY_ECONF="
 		${mymmx} \
-		$(use_with X x) \
+		$(use_enable X x11) \
 	"
 	enlightenment_src_compile
 }
