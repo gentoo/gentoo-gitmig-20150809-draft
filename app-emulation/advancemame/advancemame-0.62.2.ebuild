@@ -1,8 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/advancemame/advancemame-0.62.2.ebuild,v 1.3 2003/02/13 07:12:03 vapier Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/advancemame/advancemame-0.62.2.ebuild,v 1.4 2003/02/28 23:21:37 vapier Exp $
 
 inherit eutils
 
@@ -14,7 +12,7 @@ ADVMNU_VER="2.2.2"
 
 MY_PV="$(echo ${PV} | cut -d. -f1,2)"
 S="${WORKDIR}/advmame"
-DESCRIPTION="AdvanceMAME is a GNU/Linux port of the MAME emulator, with GUI menu."
+DESCRIPTION="GNU/Linux port of the MAME emulator, with GUI menu."
 SRC_URI="mirror://sourceforge/advancemame/${P}.tar.gz
 	mirror://sourceforge/advancemame/advancemenu-${ADVMNU_VER}.tar.gz
 	http://mbnet.fi/~gridle/mame${MY_PV/\.}s.zip
@@ -32,10 +30,8 @@ RDEPEND="virtual/glibc
 	>=media-libs/libsdl-1.2.3
 	slang? ( sys-libs/slang )
 	svga? ( >=media-libs/svgalib-1.9 )"
-
 DEPEND="${RDEPEND}
 	sys-kernel/linux-headers"
-
 
 src_unpack() {
 	unpack ${A}

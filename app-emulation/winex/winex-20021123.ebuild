@@ -1,18 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20021123.ebuild,v 1.6 2003/02/18 16:07:24 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20021123.ebuild,v 1.7 2003/02/28 23:30:39 vapier Exp $
 
 inherit base
 
-IUSE="cups opengl"
-S=${WORKDIR}/wine
-DESCRIPTION="WineX is a distribution of Wine with enhanced DirectX for gaming"
+DESCRIPTION="distribution of Wine with enhanced DirectX for gaming"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 HOMEPAGE="http://www.transgaming.com/"
 
 SLOT="0"
-KEYWORDS="x86 -ppc -sparc "
+KEYWORDS="x86 -ppc -sparc"
 LICENSE="Aladdin"
+IUSE="cups opengl"
 
 DEPEND="sys-devel/gcc
 	sys-devel/flex
@@ -25,6 +24,8 @@ DEPEND="sys-devel/gcc
 	opengl? ( virtual/opengl )
 	cups? ( net-print/cups )
 	!app-emulation/winex-transgaming"
+
+S=${WORKDIR}/wine
 
 src_unpack() {
 	base_src_unpack

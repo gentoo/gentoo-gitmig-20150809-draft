@@ -1,11 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20020807.ebuild,v 1.9 2003/02/18 16:07:24 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20020807.ebuild,v 1.10 2003/02/28 23:30:39 vapier Exp $
 
-IUSE="cups opengl"
-
-S=${WORKDIR}/wine
-DESCRIPTION="WineX is a distribution of Wine with enhanced DirectX for gaming"
+DESCRIPTION="distribution of Wine with enhanced DirectX for gaming"
 SRC_URI="mirror://gentoo/${P}.tar.bz2
 	mirror://gentoo/${P}-fake_windows.tar.bz2"
 HOMEPAGE="http://www.transgaming.com/"
@@ -13,6 +10,7 @@ HOMEPAGE="http://www.transgaming.com/"
 SLOT="0"
 KEYWORDS="x86 -ppc"
 LICENSE="Aladdin"
+IUSE="cups opengl"
 
 DEPEND="virtual/x11
 	sys-devel/gcc
@@ -24,6 +22,8 @@ DEPEND="virtual/x11
 	>=media-libs/freetype-2.0.0
 	dev-lang/tcl dev-lang/tk
 	!app-emulation/winex-transgaming"
+
+S=${WORKDIR}/wine
 
 src_compile() {
 	# Azarah's patches

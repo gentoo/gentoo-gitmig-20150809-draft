@@ -1,28 +1,25 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: David Holm <david@realityrift.com>
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/hatari/hatari-0.20.2.ebuild,v 1.3 2003/02/13 07:14:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/hatari/hatari-0.20.2.ebuild,v 1.4 2003/02/28 23:23:00 vapier Exp $
 
-S="${WORKDIR}/${P}"
-DESCRIPTION="HAtari is an Atari ST emulator"
-SRC_URI="http://belnet.dl.sourceforge.net/sourceforge/hatari/${P}.tar.gz"
+DESCRIPTION="Atari ST emulator"
+SRC_URI="mirror://sourceforge.net/hatari/${P}.tar.gz"
 HOMEPAGE="http://hatari.sourceforge.net/"
+
 LICENSE="GPL-2"
-DEPEND="media-libs/libsdl"
-IUSE=""
 KEYWORDS="~x86"
 SLOT="0"
 
+DEPEND="media-libs/libsdl"
+
 src_compile() {
-	cd ${S}/src
+	cd src
 	emake || die
 }
 
 src_install () {
-	# Install binary
 	dobin ${S}/src/hatari || die
-
-	# Install documentation.
 	dodoc authors.txt ChangeLog readme.txt
 }
 
