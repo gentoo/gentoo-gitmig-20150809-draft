@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kde-env
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/ChangeLog,v 1.18 2004/06/24 22:12:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-env/ChangeLog,v 1.19 2004/08/25 19:03:54 caleb Exp $
+
+*kde-env-3-r3 (25 Aug 2004)
+
+  25 Aug 2004; Caleb Tennis <caleb@gentoo.org> kde-env-3-r3.ebuild:
+  New version, supports KDE_MALLOC and KDE_IS_PRELINKED (see bug #60771)
 
   20 Jun 2004; Tom Gall <tgall@gentoo.org> kde-env-3-r2.ebuild:
   stable on ppc64, bug #54146
