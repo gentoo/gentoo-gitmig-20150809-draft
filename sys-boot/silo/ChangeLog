@@ -1,6 +1,12 @@
 # ChangeLog for sys-boot/silo
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/ChangeLog,v 1.5 2004/01/02 19:08:43 weeve Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/ChangeLog,v 1.6 2004/01/30 18:59:05 ciaranm Exp $
+
+*silo-1.4.3 (30 Jan 2004)
+
+  30 Jan 2004; Ciaran McCreesh <ciaranm@gentoo.org> silo-1.4.3.ebuild:
+  Version bump. Note that this is in package.mask for now because of known
+  issues with certain kernels.
 
   02 Jan 2004; Jason Wever <weeve@gentoo.org> silo-1.3.0-r1.ebuild,
   silo-1.3.1-r1.ebuild, silo-1.3.1.ebuild, silo-1.3.2-r1.ebuild,
