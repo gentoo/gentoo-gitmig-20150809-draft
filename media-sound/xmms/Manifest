@@ -1,3 +1,4 @@
+MD5 ebbd8bf1035bdcb45b8cdedc68ac886a xmms-1.2.9-r2.ebuild 5435
 MD5 098cf94c1939610a33de20a0e4ae7bc1 xmms-1.2.7-r23.ebuild 5467
 MD5 0ea7c6cc662efde38e1d62c154939246 xmms-1.2.7-r25.ebuild 5877
 MD5 307e3924e2195cfc4def01d56413a01b xmms-1.2.9-r1.ebuild 5443
@@ -10,3 +11,4 @@ MD5 20b60b9c94a35974970dafd0bbd050c4 files/digest-xmms-1.2.7-r25 211
 MD5 924d785f5c63c99d5c20c0853c1a719b files/digest-xmms-1.2.8-r3 216
 MD5 f52f09b25da87c876de70b6177292f2e files/digest-xmms-1.2.8-r4 216
 MD5 a306da2de55b0fc1037d9d11a12ea1e1 files/digest-xmms-1.2.9-r1 216
+MD5 42f21b2228dc3438d3bfd1e6a138a637 files/digest-xmms-1.2.9-r2 217

@@ -1,6 +1,16 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.96 2004/02/04 05:11:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.97 2004/02/04 07:50:39 eradicator Exp $
+
+*xmms-1.2.9-r2 (03 Feb 2004)
+
+  03 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> xmms-1.2.7-r23.ebuild,
+  xmms-1.2.7-r25.ebuild, xmms-1.2.8-r3.ebuild, xmms-1.2.8-r4.ebuild,
+  xmms-1.2.9-r1.ebuild, xmms-1.2.9-r2.ebuild:
+  Updated ebuilds to request correct automake versions. Closes bug #40348.
+  Updated russian patch (now called recode patch) in 1.2.9-r2 to version csa27.
+  See bug #40103. Added patch from http://bugs.xmms.org/show_bug.cgi?id=1583 to
+  close bug #39456.
 
   03 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-1.2.7-r23.ebuild, xmms-1.2.7-r25.ebuild, xmms-1.2.8-r3.ebuild,
