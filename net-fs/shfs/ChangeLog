@@ -1,0 +1,21 @@
+# ChangeLog for net-fs/shfs
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/ChangeLog,v 1.1 2003/06/03 07:38:29 absinthe Exp $
+
+*shfs-0.31 (03 Jun 2003)
+
+  03 Jun 2003; Dylan Carlson <absinthe@gentoo.org> shfs-0.31.ebuild,
+  files/shfs-gentoo-0.31-makefile-root.diff, 
+  files/shfs-gentoo-0.31-ppc.diff:
+  
+  Initial import.  Closes #20882.  Add the 'amd' USE if you want to take 
+  advantage of the AMD (BSD) automounter support included in this ebuild.
+  
+  Thanks to: 
+  	Gilberto Ficara <g.ficara@oltrelinux.com>
+  	Jesse Dearing <countzero@zerothdimension.net>
+  	Matt Klosterman <matt@klosterman.net>
+  	Jonathan Hitchcock <vhata-gentoo@rucus.ru.ac.za>
+  
+  Still needs testing, and integration by other archs (sparc and alpha). 
+  But let's fly with it for now.  Cheers.
