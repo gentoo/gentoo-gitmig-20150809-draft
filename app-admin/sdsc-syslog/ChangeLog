@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sdsc-syslog
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sdsc-syslog/ChangeLog,v 1.3 2004/06/24 21:37:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sdsc-syslog/ChangeLog,v 1.4 2004/11/19 07:13:20 dragonheart Exp $
+
+  19 Nov 2004; Daniel Black <dragonheart@gentoo.org> sdsc-syslog-1.0.2.ebuild:
+  Changed install from einstall to make DESTDIR=... as per bug #71550. Removed
+  RESTRICT=nomirror as per policy. Thanks Spanky.
 
   15 Jun 2004; Daniel Black <dragonheart@gentoo.org> sdsc-syslog-1.0.2.ebuild:
   x86 stable
