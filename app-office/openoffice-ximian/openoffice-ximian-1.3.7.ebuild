@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.7.ebuild,v 1.12 2005/01/20 11:53:57 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.7.ebuild,v 1.13 2005/01/22 16:01:18 suka Exp $
 
 # Notes:
 #
@@ -74,8 +74,10 @@ RDEPEND="!app-office/openoffice-ximian-bin
 	app-arch/unzip
 	dev-libs/expat
 	java? ( >=virtual/jre-1.4.1 )
-	ppc? ( >=sys-libs/glibc-2.2.5-r7
-	>=sys-devel/gcc-3.2.1 )"
+	ppc? ( >=sys-devel/gcc-3.2.1 )
+	linguas_ja? ( >=media-fonts/kochi-substitute-20030809-r3 )
+	linguas_zh_CN? ( >=media-fonts/arphicfonts-0.1-r2 )
+	linguas_zh_TW? ( >=media-fonts/arphicfonts-0.1-r2 )"
 
 DEPEND="${RDEPEND}
 	>=sys-apps/findutils-4.1.20-r1
@@ -104,86 +106,97 @@ pkg_setup() {
 		fi
 	fi
 
+	ewarn
 	ewarn " It is important to note that OpenOffice.org is a very fragile  "
 	ewarn " build when it comes to CFLAGS.  A number of flags have already "
 	ewarn " been filtered out.  If you experience difficulty merging this  "
 	ewarn " package and use agressive CFLAGS, lower the CFLAGS and try to  "
 	ewarn " merge again.					               "
+	ewarn
+	ewarn " Please note that this package now uses the LINGUAS environment "
+	ewarn " variable to provide localization. The old LANGUAGE=ENUS|PORT..."
+	ewarn " system does NOT work anymore."
+	ewarn
 
 	set_languages
 }
 
 set_languages () {
 
-	if [ -z "$LANGUAGE" ]; then
-		LANGUAGE=01
+	strip-linguas en pt ru el nl fr es fi hu ca it cs sk da sv nb no pl de sl pt_BR th et ja ko zh_CN zh_TW tr hi_IN ar he
+	if [ -n "${LINGUAS}" ] ; then
+		# use the leftmost value
+		temp_lang=( ${LINGUAS} )
+		primary_lang=${temp_lang[0]}
+	else
+		primary_lang="en"
 	fi
 
-	case "$LANGUAGE" in
-		01 | ENUS ) LANGNO=01; LANGNAME=ENUS; LFULLNAME="US English (default)"
+	case "${primary_lang}" in
+		en ) OOLANGNO=01; OOLANGNAME=ENUS; OOLFULLNAME="US English (default)"
 			;;
-		03 | PORT ) LANGNO=03; LANGNAME=PORT; LFULLNAME=Portuguese
+		pt ) OOLANGNO=03; OOLANGNAME=PORT; OOLFULLNAME=Portuguese
 			;;
-		07 | RUSS ) LANGNO=07; LANGNAME=RUSS; LFULLNAME=Russian
+		ru ) OOLANGNO=07; OOLANGNAME=RUSS; OOLFULLNAME=Russian
 			;;
-		30 | GREEK ) LANGNO=30; LANGNAME=GREEK; LFULLNAME=Greek
+		el ) OOLANGNO=30; OOLANGNAME=GREEK; OOLFULLNAME=Greek
 			;;
-		31 | DTCH ) LANGNO=31; LANGNAME=DTCH; LFULLNAME=Dutch
+		nl ) OOLANGNO=31; OOLANGNAME=DTCH; OOLFULLNAME=Dutch
 			;;
-		33 | FREN ) LANGNO=33; LANGNAME=FREN; LFULLNAME=French
+		fr ) OOLANGNO=33; OOLANGNAME=FREN; OOLFULLNAME=French
 			;;
-		34 | SPAN ) LANGNO=34; LANGNAME=SPAN; LFULLNAME=Spanish
+		es ) OOLANGNO=34; OOLANGNAME=SPAN; OOLFULLNAME=Spanish
 			;;
-		35 | FINN ) LANGNO=35; LANGNAME=FINN; LFULLNAME=Finnish
+		fi ) OOLANGNO=35; OOLANGNAME=FINN; OOLFULLNAME=Finnish
 			;;
-		37 | CAT ) LANGNO=37; LANGNAME=CAT; LFULLNAME=Catalan
+		hu ) OOLANGNO=36; OOLANGNAME=HUNG; OOLFULLNAME=Hungarian
 			;;
-		39 | ITAL ) LANGNO=39; LANGNAME=ITAL; LFULLNAME=Italian
+		ca ) OOLANGNO=37; OOLANGNAME=CAT; OOLFULLNAME=Catalan
 			;;
-		42 | CZECH ) LANGNO=42; LANGNAME=CZECH; LFULLNAME=Czech
+		it ) OOLANGNO=39; OOLANGNAME=ITAL; OOLFULLNAME=Italian
 			;;
-		43 | SLOVAK ) LANGNO=43; LANGNAME=SLOVAK; LFULLNAME=Slovak
+		cs ) OOLANGNO=42; OOLANGNAME=CZECH; OOLFULLNAME=Czech
 			;;
-		45 | DAN ) LANGNO=45; LANGNAME=DAN; LFULLNAME=Danish
+		sk ) OOLANGNO=43; OOLANGNAME=SLOVAK; OOLFULLNAME=Slovak
 			;;
-		46 | SWED ) LANGNO=46; LANGNAME=SWED; LFULLNAME=Swedish
+		da ) OOLANGNO=45; OOLANGNAME=DAN; OOLFULLNAME=Danish
 			;;
-		48 | POL ) LANGNO=48; LANGNAME=POL; LFULLNAME=Polish
+		sv ) OOLANGNO=46; OOLANGNAME=SWED; OOLFULLNAME=Swedish
 			;;
-		49 | GER ) LANGNO=49; LANGNAME=GER; LFULLNAME=German
+		no ) OOLANGNO=47; OOLANGNAME=NORBOK; OOLFULLNAME="Norwegian"
 			;;
-		55 | PORTBR ) LANGNO=55; LANGNAME=PORTBR; LFULLNAME="Portuguese brazilian"
+		pl ) OOLANGNO=48; OOLANGNAME=POL; OOLFULLNAME=Polish
 			;;
-		66 | THAI ) LANGNO=66; LANGNAME=THAI; LFULLNAME=Thai
+		de ) OOLANGNO=49; OOLANGNAME=GER; OOLFULLNAME=German
 			;;
-		77 | ESTONIAN ) LANGNO=77; LANGNAME=ESTONIAN; LFULLNAME=Estonian
+		sl ) OOLANGNO=50; OOLANGNAME=SLOVENIAN; OOLFULLNAME=Slovenian
 			;;
-		81 | JAPN ) LANGNO=81; LANGNAME=JAPN; LFULLNAME="Japanese"
+		pt_BR ) OOLANGNO=55; OOLANGNAME=PORTBR; OOLFULLNAME="Portuguese brazilian"
 			;;
-		82 | KOREAN ) LANGNO=82; LANGNAME=KOREAN; LFULLNAME=Korean
+		th ) OOLANGNO=66; OOLANGNAME=THAI; OOLFULLNAME=Thai
 			;;
-		86 | CHINSIM ) LANGNO=86; LANGNAME=CHINSIM; LFULLNAME="Simplified Chinese (PRC)"
+		et ) OOLANGNO=77; OOLANGNAME=ESTONIAN; OOLFULLNAME=Estonian
 			;;
-		88 | CHINTRAD ) LANGNO=88; LANGNAME=CHINTRAD; LFULLNAME="Traditional Chinese (taiwan)"
+		ja ) OOLANGNO=81; OOLANGNAME=JAPN; OOLFULLNAME="Japanese"
 			;;
-		90 | TURK ) LANGNO=90; LANGNAME=TURK; LFULLNAME=Turkish
+		ko ) OOLANGNO=82; OOLANGNAME=KOREAN; OOLFULLNAME=Korean
 			;;
-		91 | HINDI ) LANGNO=91; LANGNAME=HINDI; LFULLNAME=Hindi
+		zh_CN ) OOLANGNO=86; OOLANGNAME=CHINSIM; OOLFULLNAME="Simplified Chinese (PRC)"
 			;;
-		96 | ARAB ) LANGNO=96; LANGNAME=ARAB; LFULLNAME=Arabic
+		zh_TW ) OOLANGNO=88; OOLANGNAME=CHINTRAD; OOLFULLNAME="Traditional Chinese (taiwan)"
 			;;
-		97 | HEBREW ) LANGNO=97; LANGNAME=HEBREW; LFULLNAME=Hebrew
+		tr ) OOLANGNO=90; OOLANGNAME=TURK; OOLFULLNAME=Turkish
 			;;
-		* )
-			eerror "Unknown LANGUAGE setting!"
-			eerror
-			eerror "Known LANGUAGE settings are:"
-			eerror "  ENUS | PORT | RUSS | GREEK | DTCH | FREN | SPAN | FINN | CAT | ITAL |"
-			eerror "  CZECH | SLOVAK | DAN | SWED | POL | GER | PORTBR | THAI | ESTONIAN |"
-			eerror "  JAPN | KOREAN | CHINSIM | CHINTRAD | TURK | HINDI | ARAB | HEBREW"
-			die
+		hi_IN ) OOLANGNO=91; OOLANGNAME=HINDI; OOLFULLNAME=Hindi
+			;;
+		ar ) OOLANGNO=96; OOLANGNAME=ARAB; OOLFULLNAME=Arabic
+			;;
+		he ) OOLANGNO=97; OOLANGNAME=HEBREW; OOLFULLNAME=Hebrew
 			;;
 	esac
+
+	einfo "Installing OpenOffice.org for ${OOLFULLNAME} environment."
+
 }
 
 oo_setup() {
@@ -359,19 +372,18 @@ src_compile() {
 	# Do NOT compile with a external STLport, as gcc-2.95.3 users will
 	# get linker errors due to the ABI being different (STLport will be
 	# compiled with 2.95.3, while OO is compiled with 3.x). (Az)
-	einfo "Configuring OpenOffice.org with language support for ${LFULLNAME}..."
 	cd ${S}/config_office
 	rm -f config.cache || die
 	autoconf || die
 
-	if [ "LANGNAME" != "ENUS" ]; then
-		LANGNAME="${LANGNAME},ENUS"
+	if [ "OOLANGNAME" != "ENUS" ]; then
+		OOLANGNAME="${OOLANGNAME},ENUS"
 	fi
 
 	MYCONF="${MYCONF} --enable-libart \
 		--enable-libsn \
 		--enable-crashdump=no \
-		--with-lang=${LANGNAME} \
+		--with-lang=${OOLANGNAME} \
 		--without-fonts \
 		--disable-rpath \
 		--enable-fontconfig \
@@ -385,14 +397,14 @@ src_compile() {
 	get_EnvSet
 
 	# unpack help files if present
-	if [ -f ${DISTDIR}/helpcontent_${LANGNO}_unix.tgz ]; then
-		einfo "Using helpcontent for ${LFULLNAME}"
+	if [ -f ${DISTDIR}/helpcontent_${OOLANGNO}_unix.tgz ]; then
+		einfo "Using helpcontent for ${OOLFULLNAME}"
 		mkdir -p ${S}/solver/${SOLVER}/${SOLPATH}/pck
-		tar -xzf ${DISTDIR}/helpcontent_${LANGNO}_unix.tgz -C ${S}/solver/${SOLVER}/${SOLPATH}/pck
+		tar -xzf ${DISTDIR}/helpcontent_${OOLANGNO}_unix.tgz -C ${S}/solver/${SOLVER}/${SOLPATH}/pck
 	fi
 
 	# Build as minimal as possible
-	export BUILD_MINIMAL="${LANGNO}"
+	export BUILD_MINIMAL="${OOLANGNO}"
 
 	# Embedded python dies without Home set
 	if test "z${HOME}" = "z"; then
@@ -510,7 +522,7 @@ src_install() {
 
 	einfo "Installing Ximian-OpenOffice.org into build root..."
 	dodir ${INSTDIR}
-	cd ${S}/instsetoo/${SOLPATH}/${LANGNO}/normal
+	cd ${S}/instsetoo/${SOLPATH}/${OOLANGNO}/normal
 	./setup -v -noexit -nogui -r:${T}/autoresponse || die "Setup failed"
 
 	#Fix for parallel install
