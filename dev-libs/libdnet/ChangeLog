@@ -1,8 +1,13 @@
 # ChangeLog for dev-libs/libdnet
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/ChangeLog,v 1.4 2003/02/12 06:04:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libdnet/ChangeLog,v 1.5 2003/07/31 21:11:33 rphillips Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*libdnet-1.7 (31 Jul 2003)
+
+  31 Jul 2003; Ryan Phillips <rphillips@gentoo.org> libdnet-1.7.ebuild :
+  new version
  
 *libdnet-1.4 (30 Apr 2002)
 
