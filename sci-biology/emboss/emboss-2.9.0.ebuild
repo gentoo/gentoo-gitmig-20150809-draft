@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/emboss-2.9.0.ebuild,v 1.3 2005/01/03 05:13:22 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/emboss/emboss-2.9.0.ebuild,v 1.4 2005/01/30 16:28:43 ribosome Exp $
 
 DESCRIPTION="The European Molecular Biology Open Software Suite - A sequence analysis package"
 HOMEPAGE="http://emboss.sourceforge.net/"
@@ -39,7 +39,7 @@ src_compile() {
 	econf ${EXTRA_CONF} || die
 	# Do not install the JEMBOSS component (the --without-java configure option
 	# does not work). JEMBOSS will be available as a separate package.
-	sed -i -e 's/SUBDIRS = plplot ajax nucleus emboss test doc jemboss/SUBDIRS = plplot ajax nucleus emboss test doc/' Makefile
+	sed -i -e 's/SUBDIRS = plplot ajax nucleus emboss test doc jemboss/SUBDIRS = plplot ajax nucleus emboss test doc/' Makefile || die
 	emake || die
 }
 
