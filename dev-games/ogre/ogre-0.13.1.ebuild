@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-0.13.1.ebuild,v 1.1 2004/03/10 04:10:22 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-0.13.1.ebuild,v 1.2 2004/04/02 21:24:45 mr_bones_ Exp $
 
 DESCRIPTION="Object-oriented Graphics Rendering Engine"
 HOMEPAGE="http://www.ogre3d.org/"
@@ -21,7 +21,7 @@ RDEPEND="virtual/opengl
 	)
 	sys-libs/zlib"
 DEPEND="${RDEPEND}
-	>=media-gfx/nvidia-cg-toolkit-2
+	>=media-gfx/nvidia-cg-toolkit-1.2
 	>=sys-apps/sed-4
 	|| ( dev-libs/STLport >=sys-devel/gcc-3.0 )"
 
