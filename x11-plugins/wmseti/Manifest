@@ -1,4 +1,14 @@
-MD5 492fe67b3ef92320684f5ef20f121b7f ChangeLog 574
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d0f5a41609e921b3c367b0e7416b6d4d wmseti-1.0.3.ebuild 609
+MD5 da852d3b84e5d811c496fb6e83ce5698 ChangeLog 689
 MD5 62ba71d3b2fa785a4cbd5d47fdbd0eb6 metadata.xml 165
-MD5 2fd602618154bde8b744032fbbe5157b wmseti-1.0.3.ebuild 598
 MD5 fcab103d1ef88063a3eeced90e54bcaf files/digest-wmseti-1.0.3 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCMEw306ebR+OMO78RAqChAJ9XKnfOJ0f4mza9EIEVxT9592tXHwCcD6wx
+Din0O4qpegaGPAQwU3672AM=
+=RZA8
+-----END PGP SIGNATURE-----

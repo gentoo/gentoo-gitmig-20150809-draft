@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmseti
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmseti/ChangeLog,v 1.4 2004/11/25 06:12:45 weeve Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmseti/ChangeLog,v 1.5 2005/03/10 13:31:26 luckyduck Exp $
+
+  10 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> wmseti-1.0.3.ebuild:
+  added ~amd64 KEYWORD, fixes #83856
 
   24 Nov 2004; Jason Wever <weeve@gentoo.org> wmseti-1.0.3.ebuild:
   Added ~sparc keyword.
