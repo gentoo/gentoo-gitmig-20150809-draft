@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/gcc-config
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.32 2003/04/06 22:18:42 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/ChangeLog,v 1.33 2003/04/08 12:53:38 azarah Exp $
+
+*gcc-config-1.3.2 (08 Apr 2003)
+
+  08 Apr 2003; Martin Schlemmer <azarah@gentoo.org> gcc-config-1.3.2.ebuild,
+  files/gcc-config-1.3.2, files/gcc-config-1.4.1 :
+  Add speed optimization patch from Aron Griffis <agriffis@gentoo.org>. 
+  Basically we only get the CHOST from portage if needed ... closes bug #18766.
+  Use wrapper-1.4.c ...
 
 *gcc-config-1.3.1-r1 (06 Apr 2003)
 
