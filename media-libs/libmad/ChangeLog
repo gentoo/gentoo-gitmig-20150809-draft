@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmad
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/ChangeLog,v 1.16 2004/03/30 00:58:22 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/ChangeLog,v 1.17 2004/04/21 14:42:42 gmsoft Exp $
+
+  21 Apr 2004; Guy Martin <gmsoft@gentoo.org> libmad-0.15.1b.ebuild:
+  Marked stable on hppa.
 
   29 Mar 2004; Jason Wever <weeve@gentoo.org> libmad-0.15.1b.ebuild:
   Stable on sparc.
