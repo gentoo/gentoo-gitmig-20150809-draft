@@ -1,6 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0d98ae90c8c29777fb11a1359ea2e161 ChangeLog 569
 MD5 727a0439b6414317f15fcb5e1ae56182 vimirc-0.8.11.ebuild 970
-MD5 844459232c1bc8e3e2f4d46b203b01b7 ChangeLog 453
-MD5 95835999517d0b7ec05d023f64e381ed vimirc-0.8.5-r1.ebuild 966
+MD5 6f4e396986f53d26fedf2639f70a0a75 vimirc-0.9.10.ebuild 968
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
+MD5 95835999517d0b7ec05d023f64e381ed vimirc-0.8.5-r1.ebuild 966
+MD5 47960d80f1cbe9a5917462ca53048804 files/digest-vimirc-0.9.10 65
 MD5 e2843db54bc9df5411c42873f79e7d4d files/digest-vimirc-0.8.11 65
 MD5 0951d2c4f839b3d9dd1554bbb9bd6028 files/digest-vimirc-0.8.5-r1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCKPgcCHk4+ZoBpvsRAmXsAKCx0bMBHGpqAv/QgXNRR7WJPYjClwCdFpK4
+oXkZWYSl7h+Nm2yWb1g4f9c=
+=Qpgu
+-----END PGP SIGNATURE-----
