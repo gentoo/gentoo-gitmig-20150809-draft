@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.2.5-r1.ebuild,v 1.1 2004/09/03 19:56:19 ticho Exp $
-
-IUSE="ssl nls ipv6 kerberos krb4"
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.2.5-r1.ebuild,v 1.2 2004/10/20 18:40:08 vapier Exp $
 
 inherit eutils gnuconfig
 
@@ -10,9 +8,10 @@ DESCRIPTION="the legendary remote-mail retrieval and forwarding utility"
 HOMEPAGE="http://www.catb.org/~esr/fetchmail/"
 SRC_URI="http://www.catb.org/~esr/${PN}/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2 public-domain"
-KEYWORDS="~x86 ~alpha ~sparc ~ppc ~amd64 ~s390 ~ppc64"
+SLOT="0"
+KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sparc ~x86"
+IUSE="ssl nls ipv6 kerberos krb4"
 
 DEPEND="virtual/libc
 	ssl? ( >=dev-libs/openssl-0.9.6 )
