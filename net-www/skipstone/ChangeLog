@@ -1,6 +1,13 @@
 # ChangeLog for net-www/skipstone
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/skipstone/ChangeLog,v 1.9 2002/05/21 14:00:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/skipstone/ChangeLog,v 1.10 2002/06/25 19:48:36 seemant Exp $
+
+*skipstone-0.8.3 (25 Jun 2002)
+  
+  25 Jun 2002; Seemant Kulleen <seemant@gentoo.org> skipstone-0.8.3.ebuild
+  files/digest-skipstone-0.8.3 files/skipstone-gentoo.patch :
+
+  Version bump. Updated patch to work with new version.
 
 *skipstone-0.8.2 (20 May 2002)
 

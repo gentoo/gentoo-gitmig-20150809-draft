@@ -1,6 +1,6 @@
-diff -urN skipstone-0.8.2.old/locale/ru.po skipstone-0.8.2/locale/ru.po
---- skipstone-0.8.2.old/locale/ru.po	Fri May 10 13:20:45 2002
-+++ skipstone-0.8.2/locale/ru.po	Tue May 21 06:56:18 2002
+diff -urN skipstone-0.8.3.old/locale/ru.po skipstone-0.8.3/locale/ru.po
+--- skipstone-0.8.3.old/locale/ru.po	Fri May 10 13:20:45 2002
++++ skipstone-0.8.3/locale/ru.po	Tue May 21 06:56:18 2002
 @@ -616,14 +616,6 @@
  msgid "Respect java script window sizing?"
  msgstr "Учитывать размеры окон ява-скриптов"
@@ -39,9 +39,9 @@ diff -urN skipstone-0.8.2.old/locale/ru.po skipstone-0.8.2/locale/ru.po
  #: ../src/skipstone-print.c:34
  msgid "Print Error!"
  msgstr "Ошибка печати!"
-diff -urN skipstone-0.8.2.old/locale/zh_TW.Big5.po skipstone-0.8.2/locale/zh_TW.Big5.po
---- skipstone-0.8.2.old/locale/zh_TW.Big5.po	Fri May 10 13:20:45 2002
-+++ skipstone-0.8.2/locale/zh_TW.Big5.po	Tue May 21 06:56:35 2002
+diff -urN skipstone-0.8.3.old/locale/zh_TW.Big5.po skipstone-0.8.3/locale/zh_TW.Big5.po
+--- skipstone-0.8.3.old/locale/zh_TW.Big5.po	Fri May 10 13:20:45 2002
++++ skipstone-0.8.3/locale/zh_TW.Big5.po	Tue May 21 06:56:35 2002
 @@ -1583,10 +1583,6 @@
  msgid "Russian (ru)"
  msgstr "╚X╩y (ru)"
