@@ -1,0 +1,10 @@
+# ChangeLog for sec-policy/selinux-ftpd
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-ftpd/ChangeLog,v 1.1 2004/07/13 14:00:49 method Exp $
+
+*selinux-ftpd-20040713 (13 Jul 2004)
+
+  13 Jul 2004; Joshua Brindle <method@gentoo.org>
+  selinux-ftpd-20040713.ebuild:
+  initial import, direct from sf.net
+
