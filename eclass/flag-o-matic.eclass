@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.81 2005/01/29 03:09:45 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.82 2005/02/07 17:50:24 solar Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -58,11 +58,6 @@ inherit eutils toolchain-funcs multilib
 # Remove particular flags from LDFLAGS
 # Matches only complete flags
 #
-#### etexec-flags ####
-# hooked function for hardened gcc that appends
-# -fno-pic to {C,CXX,LD}FLAGS
-# when a package is filtering -fpic, -fPIC, -fpie, -fPIE
-#
 #### fstack-flags ####
 # hooked function for hardened gcc that appends
 # -fno-stack-protector to {C,CXX,LD}FLAGS
@@ -108,8 +103,10 @@ filter-flags() {
 
 	for x in "$@" ; do
 		case "${x}" in
-			-fPIC|-fpic|-fPIE|-fpie|-pie) etexec-flags;;
-			-fstack-protector|-fstack-protector-all) fstack-flags;;
+			-fPIC|-fpic|-fPIE|-fpie|-pie)
+				append-flags `test_flag -fno-pie`;;
+			-fstack-protector|-fstack-protector-all)
+				fstack-flags;;
 		esac
 	done
 
@@ -140,6 +137,7 @@ append-lfs-flags() {
 }
 
 append-flags() {
+	[[ -z $* ]] && return 0
 	export CFLAGS="${CFLAGS} $*"
 	export CXXFLAGS="${CXXFLAGS} $*"
 	[ -n "`is-flag -fno-stack-protector`" -o \
@@ -427,22 +425,6 @@ filter-ldflags() {
 	done
 	LDFLAGS="${LDFLAGS:1:${#LDFLAGS}-2}"
 	export LDFLAGS
-	return 0
-}
-
-etexec-flags() {
-	# if you're not using a hardened compiler you wont need this
-	# PIC/no-pic kludge in the first place.
-	has_hardened || return 0
-	use amd64 && return 0
-	use mips && return 0
-
-	if has_pie || has_pic; then
-		[ -z "`is-flag -fno-pic`" ] && 
-			export CFLAGS="${CFLAGS} `test_flag -fno-pic`"
-		[ -z "`is-flag -nopie`" ] && 
-			export CFLAGS="${CFLAGS} `test_flag -nopie`"
-	fi
 	return 0
 }
 
