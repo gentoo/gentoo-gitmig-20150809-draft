@@ -12,7 +12,7 @@ SYSLOG_SU_ENAB          yes
 SYSLOG_SG_ENAB          yes
 CONSOLE         	/etc/securetty
 MOTD_FILE       	/etc/motd
-FTMP_FILE       	/var/log/btmpFAIL_DELAY		3
+FTMP_FILE       	/var/log/btmp
 FAILLOG_ENAB            yes
 LOG_UNKFAIL_ENAB        no
 DIALUPS_CHECK_ENAB      yes
