@@ -1,6 +1,14 @@
 # ChangeLog for dev-cpp/libxmlpp
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.13 2004/11/12 08:32:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libxmlpp/ChangeLog,v 1.14 2004/11/12 12:13:19 eradicator Exp $
+
+*libxmlpp-1.0.4 (12 Nov 2004)
+*libxmlpp-2.8.0 (12 Nov 2004)
+
+  12 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  -libxmlpp-0.21.0.ebuild, -libxmlpp-0.25.0.ebuild, +libxmlpp-1.0.4.ebuild,
+  +libxmlpp-2.8.0.ebuild:
+  Version bump galore closes bug #51719.
 
   12 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   libxmlpp-1.0.2.ebuild:
