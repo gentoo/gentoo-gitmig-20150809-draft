@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/freeswan
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/ChangeLog,v 1.15 2003/11/18 15:57:32 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/ChangeLog,v 1.16 2004/01/03 14:06:50 aliz Exp $
+
+  03 Jan 2004; Daniel Ahlberg <aliz@gentoo.org> freeswan-2.04.ebuild, freeswan-1.99.ebuild :
+  Adding iproute dependency. Closing #35879.
 
 *freeswan-2.04 (18 Nov 2003)
 

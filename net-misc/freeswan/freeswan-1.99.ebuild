@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/freeswan-1.99.ebuild,v 1.7 2003/09/12 05:07:08 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/freeswan-1.99.ebuild,v 1.8 2004/01/03 14:06:50 aliz Exp $
 
 X509_PATCH=0.9.34
 S=${WORKDIR}/${P}
@@ -11,7 +11,8 @@ SRC_URI="ftp://ftp.xs4all.nl/pub/crypto/freeswan/${P}.tar.gz
 HOMEPAGE="http://www.freeswan.org"
 DEPEND="virtual/glibc
 	virtual/linux-sources
-	>=dev-libs/gmp-3.1.1"
+	>=dev-libs/gmp-3.1.1
+	sys-apps/iproute"
 LICENSE="GPL-2"
 RDEPEND=""
 SLOT="0"
