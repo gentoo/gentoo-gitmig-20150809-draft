@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/bincimap
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/ChangeLog,v 1.1 2003/10/11 20:26:52 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/ChangeLog,v 1.2 2003/10/13 13:30:30 nakano Exp $
+
+*bincimap-1.2.3-r1 (13 Oct 2003)
+
+  13 Oct 2003; Masatomo Nakano <nakano@gentoo.org> bincimap-1.2.3-r1.ebuild:
+  Fixed RDEPEND to include sys-apps/ucspi-tcp.
 
 *bincimap-1.2.3 (11 Oct 2003)
 
