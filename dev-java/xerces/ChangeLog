@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xerces
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.34 2004/10/20 07:57:12 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.35 2004/10/21 19:19:14 axxo Exp $
+
+  21 Oct 2004; Thomas Matthijs <axxo@gentoo.org> xerces-2.3.0.ebuild,
+  xerces-2.6.2-r1.ebuild:
+  put the sampes in the correct place
 
   20 Oct 2004; Dylan Carlson <absinthe@gentoo.org> xerces-2.3.0.ebuild:
   Keywords ~amd64.
