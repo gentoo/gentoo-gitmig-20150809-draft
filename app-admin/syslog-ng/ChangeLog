@@ -1,8 +1,12 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.9 2002/10/12 07:26:42 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.10 2002/10/12 10:19:15 seemant Exp $
 
 *syslog-ng-1.5.21 (12 Oct 2002)
+
+  12 Oct 2002; Seemant Kulleen <seemant@gentoo.org> syslog-ng-1.5.21.ebuild :
+
+  Works on sparcs
 
   12 Oct 2002; Bruce A. Locke <blocke@shivan.org> syslog-ng-1.5.21.ebuild, files/syslog-ng.conf.sample:
   Version bump and older versions removed due to security issue.  "kernsrc"
