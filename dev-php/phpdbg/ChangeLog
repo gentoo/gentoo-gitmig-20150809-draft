@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/phpdbg
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpdbg/ChangeLog,v 1.5 2003/10/14 03:41:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpdbg/ChangeLog,v 1.6 2003/10/19 18:53:29 stuart Exp $
+
+  19 Oct 2003; Stuart Herbert <stuart@gentoo.org> :
+  Version bump; closes bug #23870
 
   13 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:
   add metadata.xml
