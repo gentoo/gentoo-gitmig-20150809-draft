@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8-r1.ebuild,v 1.1 2003/11/13 13:19:48 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8-r1.ebuild,v 1.2 2003/11/13 20:51:01 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -68,11 +68,11 @@ src_unpack() {
 	if use perl; then
 		cd ${WORKDIR}; epatch ${FILESDIR}/fvwmtabs-insecure-tmp-handling.diff
 
-		# i'll include a default icon for FvwmTabs, this removes the dependency 
-		# on fvwm_icons.
-		ebegin "	Setting default Icon for FvwmTabs"
-		sed -i 's#/usr/share/icons/mini/mini-happy.xpm#/usr/share/fvwm/mini-happy.xpm#g' \
-			FvwmTabs FvwmTabs.1 README.fvwmtabs fvwmtabrc
+		# I'll supply a default icon for FvwmTabs, this removes the need for
+		# installing an iconset, this one comes from the fvwm_icons package.
+		ebegin "	Setting default icon for FvwmTabs"
+			sed -i 's#/usr/share/icons/mini/mini-happy.xpm#/usr/share/fvwm/mini-happy.xpm#g' \
+				FvwmTabs FvwmTabs.1 fvwmtabrc
 		eend $?
 	fi
 
@@ -220,7 +220,7 @@ src_install() {
 			dodoc ${WORKDIR}/fvwmtabrc ${WORKDIR}/README.fvwmtabs
 			doman ${WORKDIR}/FvwmTabs.1
 
-			# drag and drop icon, this removes dependancy on fvwm_icons.
+			# install default drag and drop icon.
 			insinto /usr/share/fvwm
 			newins ${FILESDIR}/mini.happy.xpm mini-happy.xpm
 		else
