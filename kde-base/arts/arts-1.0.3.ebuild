@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.0.3.ebuild,v 1.4 2002/09/21 01:52:37 vapier Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.0.3.ebuild,v 1.5 2002/10/04 05:40:21 vapier Exp $
 inherit kde-base flag-o-matic
 
 SRC_URI="mirror://kde/stable/3.0.3/src/${P}.tar.bz2"

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.2a.ebuild,v 1.1 2002/09/11 07:45:08 danarmak Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.2a.ebuild,v 1.2 2002/10/04 05:42:20 vapier Exp $
 inherit kde kde.org
 #don't inherit kde-dist! it calls need-kde which adds kdelibs to depend -> circular deps!
 
