@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/fvwm-themes-extra
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-themes-extra/ChangeLog,v 1.4 2004/06/24 23:26:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-themes-extra/ChangeLog,v 1.5 2004/07/04 00:02:01 weeve Exp $
+
+  03 Jul 2004; Jason Wever <weeve@gentoo.org> fvwm-themes-extra-0.7.0.ebuild:
+  Added ~sparc keyword.
 
   11 Apr 2004; Markus Nigbur <pyrania@gentoo.org>
   fvwm-themes-extra-0.7.0.ebuild:
