@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgeasy/pgeasy-3.0.1.ebuild,v 1.4 2004/06/24 21:59:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgeasy/pgeasy-3.0.1.ebuild,v 1.5 2004/10/01 12:47:23 pyrania Exp $
+
+inherit eutils
 
 DESCRIPTION="An easy-to-use C interface to PostgreSQL."
 HOMEPAGE="http://gborg.postgresql.org/project/pgeasy/projdisplay.php"
@@ -14,7 +16,8 @@ DEPEND=">=dev-db/postgresql-7.3.2"
 
 src_unpack() {
 	unpack ${A}
-	cd ${S} && patch -p0 <${FILESDIR}/Makefile-gentoo.patch || die
+	cd ${S}
+	epatch ${FILESDIR}/Makefile-gentoo.patch || die "epatch failed,"
 }
 
 src_compile() {

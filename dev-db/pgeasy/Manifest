@@ -1,4 +1,14 @@
-MD5 274a44592509591e65be1604f33687cb pgeasy-3.0.1.ebuild 886
-MD5 b5a71b7c2888d5d3800137d78577f4c9 ChangeLog 481
-MD5 4016912a424a60d58ea0174086e3f6c9 files/digest-pgeasy-3.0.1 62
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bf2a5eae35e0954b93beb852209d9bce ChangeLog 559
+MD5 de295bd97034d98e1da8a8e64cd4f140 pgeasy-3.0.1.ebuild 912
 MD5 bfe8974eeabbe4d6362d3949d33b70a8 files/Makefile-gentoo.patch 395
+MD5 4016912a424a60d58ea0174086e3f6c9 files/digest-pgeasy-3.0.1 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBXVGHI7fK2cqeyXkRArBPAKDZcccmC5Iahh4f+sXIxhlLp0cPqACfZEUA
+svINFVKXV3yXwatZqle31iI=
+=Zm4l
+-----END PGP SIGNATURE-----
