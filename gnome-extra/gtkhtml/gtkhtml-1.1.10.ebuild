@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.1.10.ebuild,v 1.3 2003/04/28 23:40:05 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.1.10.ebuild,v 1.4 2003/05/16 01:04:00 pylon Exp $
 
 IUSE="nls gnome"
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2 LGPL-2.1"
 # not compile, so not sure as to what to set SLOT to .. it could be
 # that new versions will support 1.[12] of gtkhtml ...
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ppc ~sparc ~alpha"
 
 # peg gtkhtml at gal-0.23 because it might get confused with gal-1.99
 RDEPEND="=gnome-extra/gal-0.24*

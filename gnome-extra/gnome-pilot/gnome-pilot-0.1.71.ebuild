@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pilot/gnome-pilot-0.1.71.ebuild,v 1.4 2003/05/04 11:26:40 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pilot/gnome-pilot-0.1.71.ebuild,v 1.5 2003/05/16 01:03:28 pylon Exp $
 
 IUSE="nls"
 
@@ -22,7 +22,7 @@ RDEPEND="nls? ( sys-devel/gettext )"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc "
+KEYWORDS="~x86 ~sparc ppc"
 
 src_unpack() {
 

@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gnome-pilot
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pilot/ChangeLog,v 1.19 2003/05/04 11:26:40 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pilot/ChangeLog,v 1.20 2003/05/16 01:03:28 pylon Exp $
+
+  16 May 2003; Lars Weiler <pylon@gentoo.org> gnome-pilot-0.1.71.ebuild:
+  Set ppc in KEYWORDS
 
   04 May 2003; Alastair Tse <liquidx@gentoo.org> gnome-pilot-0.1.65-r3.ebuild,
   gnome-pilot-0.1.65-r5.ebuild, gnome-pilot-0.1.71.ebuild:
