@@ -1,0 +1,30 @@
+# ChangeLog for dev-libs/publib
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/publib/ChangeLog,v 1.1 2002/02/27 02:56:13 chouser Exp $
+
+*publib-0.31 (26 Feb 2002)
+
+  26 Feb 2002; Chris Houser <chouser@gentoo.org> publib-0.31.ebuild
+	 files/digest-publib-0.31 ChangeLog :
+
+  Renamed the man pages to section "o" to avoid collision with more
+  standard man page names.  Polished up the ebuild, added ChangeLog
+  and checked in to ebuild tree.
+
+  This closes bug 596.  Thanks Ilian Zarov!
+
+
+  7 Feb 2002; Ilian Zarov <coder@descom.com> publib-0.31.ebuild :
+
+  Initial ebuild for Gentoo.
+
+  Publib is a library of C functions for various purposes. It has been
+  written so that it is easy to extend. It's build tools can easily be
+  used for other libraries.
+
+  The library contains functions for memory allocation, bit arrays,
+  configuration files, comparing standard C types for qsort and
+  bsearch, error messages, expression parsing and evaluation,
+  filenames, hash tables, integer sets, log files, the Linux Software
+  Map, NNTP, priority queues, normal queues, editor buffers, stacks,
+  and strings.
