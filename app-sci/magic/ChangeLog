@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/magic
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/magic/ChangeLog,v 1.7 2003/11/17 14:32:39 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/magic/ChangeLog,v 1.8 2003/11/18 08:36:39 phosphan Exp $
+
+  18 Nov 2003; Patrick Kursawe <phosphan@gentoo.org> magic-7.1-r2.ebuild,
+  files/magic-7.1-misc.patch, files/magic-7.1-paths.patch,
+  files/magic-7.1-vararg.patch:
+  Should compile _and_ work now.
 
 *magic-7.1-r2 (17 Nov 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/magic/magic-7.1-r2.ebuild,v 1.2 2003/11/17 17:51:47 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/magic/magic-7.1-r2.ebuild,v 1.3 2003/11/18 08:36:39 phosphan Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The VLSI design CAD tool"
@@ -26,12 +26,9 @@ src_unpack() {
 	# Patch for GCC 3.2 compatibility
 	epatch ${FILESDIR}/${P}-gcc3.2.patch
 
-	# deprecated varargs stuff
+	# some gcc 3.3 stuff, paths...
 	cd ${S}
-	epatch ${FILESDIR}/${P}-vararg.patch
-
-	# modify hardcoded paths
-	epatch ${FILESDIR}/${P}-paths.patch
+	epatch ${FILESDIR}/${P}-misc.patch
 
 	# Insert our idea of configuration file
 	cp ${FILESDIR}/defs.mak-${PV}-r2 ${S}/defs.mak
@@ -40,8 +37,8 @@ src_unpack() {
 
 	# Clean up all the pre-GCC-3.2 preprocessor directives
 	einfo "Cleansing preprocessor directives"
-	find ./ -name "*.[ch]" -or -name "proto.magic" | xargs -n 1 perl -pi -e 's/^\#endif..*$/\#endif/'
-	find ./ -name "*.[ch]" -or -name "proto.magic" | xargs -n 1 perl -pi -e 's/^\#else..*$/\#else/'
+	find ./ -name "*.[ch]" | xargs -n 1 perl -pi -e 's/^\#endif..*$/\#endif/'
+	find ./ -name "*.[ch]" | xargs -n 1 perl -pi -e 's/^\#else..*$/\#else/'
 }
 
 src_compile() {
@@ -62,6 +59,7 @@ src_install () {
 	mv * ${D}/usr/share/magic/
 	cd ${D}/usr/lib
 	mv *.h *.a magic/
-	dosym ../share/magic/sys magic/sy
-	dosym ../share/magic/scm magic/scm
+	ln -s ../../share/magic/sys magic/sys
+	ln -s ../../share/magic/scm magic/scm
+	ln -s ../../share/magic/tutorial magic/tutorial
 }
