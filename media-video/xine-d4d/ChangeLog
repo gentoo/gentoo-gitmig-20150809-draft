@@ -1,8 +1,11 @@
 # ChangeLog for media-video/xine-d5d
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-d4d/ChangeLog,v 1.1 2002/11/20 16:04:51 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-d4d/ChangeLog,v 1.2 2002/12/12 09:26:08 agenkin Exp $
 
-*xine-d4d-0.3.2-r1 (08 Jul 2002)
+*xine-d4d-0.3.2 (08 Jul 2002)
+
+  12 Dec 2002; Arcady Genkin <agenkin@thpoon.com> xine-d4d-0.3.2-r2.ebuild :
+  Fixed dependency on xine-lib 0.9.
 
   23 Sep 2002; Arcady Genkin <agenkin@thpoon.com> xine-d4d-0.3.2-r2.ebuild :
 
@@ -12,8 +15,6 @@
   08 Jul 2002; Brandon Low <lostlogic@gentoo.org> xine-d4d-0.3.2-r1.ebuild :
 
   No functional change but captaincss has moved again :)
-
-*xine-d4d-0.3.2 (03 Jul 2002)
 
   03 Jul 2002; Brandon Low <lostlogic@gentoo.org> xine-d4d-0.3.2.ebuild :
 

@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-d4d/xine-d4d-0.3.2-r2.ebuild,v 1.1 2002/11/20 16:04:51 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-d4d/xine-d4d-0.3.2-r2.ebuild,v 1.2 2002/12/12 09:26:08 agenkin Exp $
 
 DESCRIPTION="Captain CSS plugin for the xine media player."
 HOMEPAGE="http://members.fortunecity.de/captaincss/"
 LICENSE="LGPL"
 
-DEPEND=">=media-libs/xine-lib-0.9.12"
+DEPEND="=media-libs/xine-lib-0.9*"
 
 SLOT="0"
 KEYWORDS="x86 ppc"
