@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r2.ebuild,v 1.2 2004/07/24 16:25:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r2.ebuild,v 1.3 2004/07/25 05:29:03 ferringb Exp $
 
 inherit eutils flag-o-matic kmod
 
-IUSE="3dfx 3dnow aalib alsa altivec arts bidi debug divx4linux dvb cdparanoia directfb dvd edl encode esd fbdev gif ggi gtk ipv6 joystick jpeg libcaca lirc live lzo mad matroska matrox mpeg mmx mythtv nas network nls oggvorbis opengl oss rtc samba sdl sse svga tga theora truetype v4l v4l2 X xinerama xmms xvid"
+IUSE="3dfx 3dnow aalib alsa altivec arts bidi debug divx4linux dvb cdparanoia directfb dvd edl encode esd fbdev gif ggi gtk ipv6 joystick jpeg libcaca lirc live lzo mad matroska matrox mpeg mmx mythtv nas network nls oggvorbis opengl oss rtc samba sdl sse svga tga theora truetype v4l v4l2 X xinerama xmms xv xvid"
 
 BLUV=1.4
 SVGV=1.9.17
