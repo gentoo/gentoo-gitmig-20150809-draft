@@ -1,0 +1,11 @@
+--- src/qt_install.pri.orig	2004-12-27 20:58:04.222818152 -0500
++++ src/qt_install.pri	2004-12-27 20:58:31.992596504 -0500
+@@ -31,7 +31,7 @@
+     targ_headers.files = $$INSTALL_HEADERS
+     targ_headers.path = $$headers.path/$$TARGET
+     targ_headers.commands = $$fromfile($$HEADERS_PRI, CLASSES_COPY)
+-    targ_headers.commands ~= s,PREFIXPATH,$$targ_headers.path,g
++    targ_headers.commands ~= s,PREFIXPATH,$(INSTALL_ROOT)/$$targ_headers.path,g
+     INSTALLS += targ_headers
+     contains(INSTALLS, framework) {
+           framework.files += $$INSTALL_HEADERS
