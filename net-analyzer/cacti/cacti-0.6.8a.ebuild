@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.6.8a.ebuild,v 1.6 2003/04/05 12:48:08 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cacti/cacti-0.6.8a.ebuild,v 1.7 2003/05/13 19:15:25 mholzer Exp $
 
 DESCRIPTION="Cacti is a complete frondend to rrdtool"
 HOMEPAGE="http://www.raxnet.net/products/cacti/"
@@ -14,6 +14,7 @@ KEYWORDS="x86 ~ppc ~sparc ~alpha"
 DEPEND=""
 RDEPEND="net-www/apache
 	snmp? ( net-analyzer/ucd-snmp )
+	net-analyzer/rrdtool
 	dev-db/mysql
 	dev-php/php
 	dev-php/mod_php"
