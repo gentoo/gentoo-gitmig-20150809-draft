@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r11.ebuild,v 1.25 2004/04/16 10:24:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r11.ebuild,v 1.26 2004/05/12 13:26:01 pappy Exp $
 
 inherit gcc eutils flag-o-matic
 
@@ -117,8 +117,10 @@ src_compile() {
 	fi
 
 	# work/Linux-PAM-0.75/modules/pam_pwdb/Makefile:    $(CC) -o $(CHKPWD) $^ -lpwdb
-	has_version "sys-devel/hardened-gcc" && \
+	if use hardened
+	then
 		sed -i "s:-lpwdb:-lpwdb -lcrypt:g" ${WORKDIR}/Linux-PAM-0.75/modules/pam_pwdb/Makefile
+	fi
 
 	make || die "Failed to build"
 }
