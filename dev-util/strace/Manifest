@@ -8,7 +8,7 @@ MD5 c8f6e53db1108edf6a09cf9d662899b5 strace-4.5.1.ebuild 1299
 MD5 fe3a541c05056316939e1370a1726380 strace-4.5.ebuild 1239
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 962d17f7bdafc82ed4880f08ddf63fe5 strace-4.4.98-r1.ebuild 1461
-MD5 224246553e3e98266c20debe8a5c0ed5 strace-4.5.6.ebuild 1141
+MD5 d1b9f162931446b254a287709bb637d3 strace-4.5.6.ebuild 1146
 MD5 1c269bae9f741bbe53fe641a0da876bc files/digest-strace-4.4.94 360
 MD5 45f2fb0d3dc9d9f796448a40d38edc0b files/digest-strace-4.4.98 66
 MD5 5c3b3bb609d3956a94ec20b4a39da546 files/digest-strace-4.5 63
@@ -20,7 +20,7 @@ MD5 f18a719a3d60b0a6f6fd89949d1db35c files/digest-strace-4.5.6 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBJuQzHTu7gpaalycRAgE7AKCDbqgH+EeYPyIcQWXbuZ3ektaEpACg3DsB
-ESswO1YG3nT2W5T90l9bRag=
-=omEB
+iD8DBQFBUO1tHTu7gpaalycRAqFVAKCqQtetcOHdthtpHBj8kE7JJpeGyACg6PcZ
+llESVoJTZBcKQfcKU4C9ssg=
+=m7iN
 -----END PGP SIGNATURE-----
