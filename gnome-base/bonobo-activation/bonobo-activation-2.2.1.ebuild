@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo-activation/bonobo-activation-2.2.1.ebuild,v 1.5 2003/03/01 14:45:09 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo-activation/bonobo-activation-2.2.1.ebuild,v 1.6 2003/05/29 23:13:13 lu_zero Exp $
 
 IUSE="doc"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ~ppc alpha ~sparc"
+KEYWORDS="x86 ppc alpha ~sparc"
 
 RDEPEND=">=dev-libs/glib-2.0.1
 	>=dev-libs/libxml2-2.4.20
