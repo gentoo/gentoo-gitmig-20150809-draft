@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.0-r1.ebuild,v 1.2 2004/06/25 00:26:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.0-r1.ebuild,v 1.3 2004/07/03 04:34:29 squinky86 Exp $
 
 inherit gnuconfig
 
@@ -16,7 +16,7 @@ RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
-IUSE="oss nas esd motif X gtk oggvorbis tcltk slang alsa kde jack portaudio emacs"
+IUSE="oss nas esd motif X gtk oggvorbis tcltk slang alsa arts jack portaudio emacs"
 
 RDEPEND=">=sys-libs/ncurses-5.0
 	X? ( virtual/x11 )
@@ -26,7 +26,7 @@ RDEPEND=">=sys-libs/ncurses-5.0
 	alsa? ( media-libs/alsa-lib )
 	motif? ( >=x11-libs/openmotif-2.1 )
 	slang? ( >=sys-libs/slang-1.4 )
-	kde? ( kde-base/arts )
+	arts? ( kde-base/arts )
 	jack? ( !sparc? ( media-sound/jack-audio-connection-kit ) )
 	portaudio? ( !ppc? ( media-libs/portaudio ) )
 	oggvorbis? ( >=media-libs/libvorbis-1.0_beta4 )"
@@ -48,7 +48,8 @@ src_compile() {
 	if use X ; then
 		myconf="${myconf} --with-x --enable-spectrogram --enable-wrd"
 		interfaces="${interfaces},xskin,xaw"
-		use gtk && interfaces="${interfaces},gtk"
+		# wrapping in a "use arts" because of bug #48761
+		use arts || use gtk && interfaces="${interfaces},gtk"
 		use motif && interfaces="${interfaces},motif"
 	else
 		myconf="${myconf} --without-x"
@@ -60,7 +61,7 @@ src_compile() {
 	use esd && audios="${audios},esd"
 	use oggvorbis && audios="${audios},vorbis"
 	use nas && { audios="${audios},nas"; myconf="${myconf} --with-nas-library=/usr/X11R6/lib/libaudio.so"; }
-	use kde && audios="${audios},arts"
+	use arts && audios="${audios},arts"
 	(! use sparc) && use jack && audios="${audios},jack"
 	(use x86 || use sparc) && use portaudio && audios="${audios},portaudio"
 
