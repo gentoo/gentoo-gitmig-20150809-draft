@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/bittornado-0.3.1.ebuild,v 1.1 2004/05/21 18:12:04 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/bittornado/bittornado-0.3.1.ebuild,v 1.2 2004/06/01 21:27:19 mholzer Exp $
 
 inherit distutils
 inherit eutils
@@ -35,9 +35,6 @@ src_unpack() {
 
 	# fixes wrong icons path
 	sed -i "s:os.path.abspath(os.path.dirname(os.path.realpath(sys.argv\[0\]))):\"${PIXMAPLOC}/\":" btdownloadgui.py
-
-	#Fix to get installed
-	sed -i 's:"btdownloadlibrary.py",::' setup.py
 }
 
 src_install() {
