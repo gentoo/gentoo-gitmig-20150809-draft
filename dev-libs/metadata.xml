@@ -6,7 +6,11 @@
 		libraries.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie dev-libs enthält verschiedenste Programmierbibliotheken.
+		Die Kategorie dev-libs enthÃ¤lt verschiedenste Programmierbibliotheken.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría dev-libs contiene varias librerías mixtas
+		para programación.
 	</longdescription>
 </catmetadata>
 
