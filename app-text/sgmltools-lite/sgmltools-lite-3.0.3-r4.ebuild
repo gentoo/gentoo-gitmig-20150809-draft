@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r4.ebuild,v 1.1 2002/03/31 13:43:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r4.ebuild,v 1.2 2002/04/03 12:19:03 seemant Exp $
 
 S=${WORKDIR}/${P}
 SRC_URI="http://prdownloads.sourceforge.net/sgmltools-lite/${P}.tar.gz
@@ -26,7 +26,14 @@ src_compile() {
 		--datadir=/usr/share	\
 		--mandir=/usr/share/man	|| die
 	
-	make || die
+	make || die	
+
+	#remove CVS directories from the tree
+	for dirs in bin doc dsssl dtd man python rpm
+	do
+		rm -rf ${dirs}/CVS
+	done
+
 }
 
 src_install() {

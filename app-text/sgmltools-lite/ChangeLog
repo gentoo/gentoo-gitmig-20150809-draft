@@ -1,6 +1,13 @@
 # ChangeLog for app-text/sgmltools-lite
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.5 2002/03/31 13:43:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.6 2002/04/03 12:20:26 seemant Exp $
+
+*sgmltools-lite-3.0.3-r4 (3 Apr 2002)
+
+  3 Apr 2002; Seemant Kulleen <seemant@gentoo.org> sgmltools-lite-3.0.3-r4.ebuild :
+
+  Some users report that the CVS directories in the source tree cause emerge
+  failures, so these are being removed before make install.
 
 *sgmltools-lite-3.0.3-r4 (31 Mar 2002)
 
