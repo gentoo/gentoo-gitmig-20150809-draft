@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Id: pmud-0.10.1-r2.ebuild,v 1.6 2002/07/20 18:52:35 gerk Exp $
+# $Id: pmud-0.10.1-r2.ebuild,v 1.7 2002/08/01 22:09:40 cselkirk Exp $
 
 S=${WORKDIR}/${P}
 
@@ -28,18 +28,21 @@ src_compile() {
 }
 
 src_install () {
-	doman pmud.8 snooze.8 fblevel.8 batmon.8 xmouse.8
+	doman pmud.8 snooze.8 fblevel.8
 	exeinto /sbin
-	doexe pmud wakebay snooze fblevel
-	exeinto /usr/bin
-	doexe Batmon
-	exeinto /usr/X11R6/bin
-	doexe xmouse
+	doexe pmud wakebay snooze fblevel 
 	exeinto /etc/power
-	doexe ${FILESDIR}/pwrctl{,-local}
-
+	doexe ${FILESDIR}/pwrctl{,-local} 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/pmud.start pmud
 	insinto /etc
 	doins ${FILESDIR}/power.conf
+	use X && ( \
+	doman batmon.8 xmouse.8
+	exeinto /usr/bin 
+	doexe Batmon 
+	exeinto /usr/X11R6/bin
+	doexe xmouse )
+	
+
 }

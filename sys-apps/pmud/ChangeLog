@@ -1,8 +1,13 @@
 # ChangeLog for sys-apps/pmud 
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Id: ChangeLog,v 1.7 2002/07/23 11:56:53 cselkirk Exp $
+# $Id: ChangeLog,v 1.8 2002/08/01 22:09:40 cselkirk Exp $
 
 *pmud-0.10.1-r2.ebuild (14 July 2002)
+
+  1 Aug 2002; Calum Selkirk <cselkirk@gentoo.org> pmud-0.10.1-r2.ebuild :
+
+  Changed src_install to only install X related apps and manpages if we
+  have USE="X"
 
   23 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> files/pmud.start
   Also redirected stder & stdout to /dev/null on stop().
