@@ -1,6 +1,10 @@
 # ChangeLog for net-print/gnome-cups-manager
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/ChangeLog,v 1.12 2003/11/29 22:02:54 brad_mssw Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/ChangeLog,v 1.13 2004/03/16 02:37:37 geoman Exp $
+
+  15 Mar 2004; Stephen P. Becker <geoman@gentoo.org>
+  gnome-cups-manager-0.17.ebuild:
+  Added ~mips keyword.
 
   29 Nov 2003; Brad House <brad_mssw@gentoo.org>
   gnome-cups-manager-0.17.ebuild:

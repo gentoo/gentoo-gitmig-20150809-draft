@@ -1,4 +1,4 @@
-MD5 6dae95b443777de3b98de444d36134ec files/digest-gnome-cups-manager-0.17 76
-MD5 566c23d90fe2deea4f2178f83956f40a gnome-cups-manager-0.17.ebuild 660
-MD5 f5758aae0c686911ea681931a4e37323 ChangeLog 1702
+MD5 08c722d42a27b437773d7527457848e6 gnome-cups-manager-0.17.ebuild 666
+MD5 3ae997f71975f551388ff293e4d65a83 ChangeLog 1810
 MD5 574309004015c52c39e2f4e8122c18a3 metadata.xml 180
+MD5 6dae95b443777de3b98de444d36134ec files/digest-gnome-cups-manager-0.17 76
