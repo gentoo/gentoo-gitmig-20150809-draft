@@ -1635,7 +1635,7 @@ class dblink:
 			mergestart=mergeroot
 			print ">>> Updating mtimes..."
 			#before merging, it's *very important* to touch all the files !!!
-			os.system("(cd "+mergeroot+"; for x in `find`; do  touch -c $x; done)")
+			os.system("(cd "+mergeroot+"; for x in `find`; do  touch -c $x 2>/dev/null; done)")
 			print ">>> Merging",self.cat+"/"+self.pkg,"to",root
 			if not os.path.exists(root):
 				print "!!! Error: ROOT setting points to a non-existent directory.  Exiting."
