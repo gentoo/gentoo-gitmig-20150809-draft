@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/skencil/skencil-0.6.16.ebuild,v 1.1 2004/02/09 22:59:21 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/skencil/skencil-0.6.16.ebuild,v 1.2 2004/03/10 19:42:15 hanno Exp $
 
 IUSE="nls"
 S=${WORKDIR}/${P}
@@ -13,7 +13,7 @@ DEPEND=">=dev-python/Imaging-1.1.2-r1
 RDEPEND="nls? ( sys-devel/gettext )"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 src_compile() {
 	use nls && useopts="${useopts} --with-nls"
