@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/libmcrypt-2.5.1-r3.ebuild,v 1.3 2002/06/30 20:45:12 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/libmcrypt-2.5.1-r3.ebuild,v 1.4 2002/06/30 22:04:52 azarah Exp $
 
 inherit libtool
 
@@ -21,19 +21,29 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
+	# This is also fixes for bug #3940.  The included libltdl gives some
+	# errors during ./configure
 	rm -rf ${S}/libltdl
 	rm -f ${S}/config.{guess,status,sub}
 	libtoolize --ltdl --copy --force
 
-	# Try to fix some wierd build problems.
+	# Try to fix some wierd build problems. See bug #3940.
+	echo ">>> Reconfiguring package..."
 	for x in $(find ${S} -name configure)
 	do
 		cd ${x%/*}
 		export WANT_AUTOMAKE_1_6=1
 		export WANT_AUTOCONF_2_5=1
-		aclocal
-		automake --gnu --add-missing --include-deps
-		autoconf
+		autoreconf --force --install --symlink &>${T}/autoreconf.log || ( \
+			echo "DEBUG: working directory is: `pwd`" >>${T}/autoreconf.log
+			eerror "Reonfigure failed, please attatch the contents of:"
+			eerror
+			eerror "  ${T}/autoreconf.log"
+			eerror
+			eerror "in your bugreport."
+			# we need an error here, else the ebuild do not die
+			exit 1
+		) || die "running autoreconf failed"
 	done
 }
 
