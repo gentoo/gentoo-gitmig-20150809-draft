@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.9.ebuild,v 1.4 2004/01/09 04:17:12 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.9.ebuild,v 1.5 2004/01/09 21:58:09 weeve Exp $
 
 IUSE="nls ipv6 perl ssl"
 
@@ -21,7 +21,7 @@ RDEPEND="nls? ( sys-devel/gettext )"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc alpha hppa ~mips ~amd64 ia64"
+KEYWORDS="x86 ~ppc sparc alpha hppa ~mips ~amd64 ia64"
 
 src_unpack() {
 	unpack ${A}
