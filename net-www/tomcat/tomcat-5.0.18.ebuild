@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-5.0.18.ebuild,v 1.3 2004/02/22 07:27:17 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-5.0.18.ebuild,v 1.4 2004/03/17 04:31:02 zx Exp $
 
 inherit eutils
 
@@ -10,7 +10,8 @@ HOMEPAGE="http://jakarta.apache.org/tomcat"
 KEYWORDS="x86 ppc sparc ~alpha"
 LICENSE="Apache-1.1"
 SLOT="0"
-DEPEND="sys-apps/sed"
+DEPEND="sys-apps/sed
+		>=java-config-1.2.6"
 RDEPEND=">=virtual/jdk-1.2"
 IUSE="doc jikes"
 
