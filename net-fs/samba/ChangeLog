@@ -1,11 +1,14 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.32 2003/03/29 04:58:11 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.33 2003/04/07 12:01:36 gmsoft Exp $
 
   28 Mar 2003; Donny Davies <woodchip@gentoo.org> :
   Clean out all old stuff.
 
 *samba-2.2.8 (15 Mar 2003)
+
+  07 Apr 2003; Guy Martin <gmsoft@gentoo.org> samba-2.2.8.ebuild :
+  Added hppa to KEYWORDS.
 
   15 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> :
   Security update.
