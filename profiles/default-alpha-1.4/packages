@@ -39,7 +39,7 @@
 *>=sys-libs/glibc-2.2.5-r7
 *virtual/modutils
 ~sys-kernel/linux-headers-2.4.19
->=sys-apps/sysklogd-1.4.1
+>=app-admin/sysklogd-1.4.1
 *dev-lang/python
 # xfree 4.2.1 will be the initial version for alpha 
 >=x11-base/xfree-4.2.1
