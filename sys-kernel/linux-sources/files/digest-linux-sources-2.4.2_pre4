@@ -3,6 +3,8 @@ MD5 bc3b2219f901cd789777f39435ff76f5 patch-2.4.2-pre4.bz2
 MD5 53740608812efa82532da2f980e6f974 lm_sensors-2.5.5.tar.gz
 MD5 f45a05097515a07afc87836c158834a1 jfs-0.1.5-patch.tar.gz
 MD5 a485ece59b10da2202fae7b78a542707 alsa-driver-0.5.10b.tar.bz2
-MD5 29083e6c2c3ff5cf8a5aca4b6b42a5a1 linux-2.4.2-pre4-reiserfs-20010220.patch.gz
 MD5 700cd28b9c235d05aae0255ec9b48d31 linux-2.4.2-pre4-knfsd-6.g.patch.gz
+MD5 a7c6c4867b2b8bd71eaf39b7b5f560c9 patch-D-isofsnfs
+MD5 c85c6707d4d40f2c23c7fefb5800eb15 patch-E-ufsnfsd
+MD5 78d0fd47b94af7b5e67b549b8286f0c6 patch-F-efsnfsd
 MD5 6384e7909a8c750cc3d856784060e993 lvm_0.9.1_beta5_a.tar.gz

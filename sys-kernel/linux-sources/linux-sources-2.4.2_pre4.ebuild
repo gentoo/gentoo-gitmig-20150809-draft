@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.2_pre4.ebuild,v 1.1 2001/02/21 15:46:22 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.2_pre4.ebuild,v 1.2 2001/02/21 16:40:59 achim Exp $
 
 S=${WORKDIR}/linux
 #OKV=original kernel version, KV=patched kernel version
@@ -25,7 +25,6 @@ SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
          http://www.netroedge.com/~lm78/archive/lm_sensors-${SENV}.tar.gz 
          http://oss.software.ibm.com/developerworks/opensource/jfs/project/pub/jfs-${JFSV}-patch.tar.gz
          ftp://ftp.alsa-project.org/pub/driver/alsa-driver-${AV}.tar.bz2
-	 ftp://ftp.reiserfs.com/pub/reiserfs-for-2.4/linux-2.4.2-pre4-reiserfs-20010220.patch.gz
 	 ftp://ftp.reiserfs.com/pub/misc-patches/linux-2.4.2-pre4-knfsd-6.g.patch.gz
          ftp://ftp.sistina.com/pub/LVM/0.9.1_beta/lvm_${LVMVARC}.tar.gz"
 
@@ -49,13 +48,9 @@ src_unpack() {
     cd ${S}
     echo "Applying ${KV} patch..."
     try bzip2 -dc ${DISTDIR}/patch-${KV}.bz2 | patch -p1
-#    echo "Applying reiserfs-update patch..."
-#    try gzip -dc ${DISTDIR}/linux-2.4.2-pre4-reiserfs-20010220.patch.gz | patch -N -p1
-#    echo "You can ignore the tail-conversion.c reject the changes already are in rc19"
     echo "Applying reiserfs-nfs patch..."
-    try gzip -dc ${DISTDIR}/linux-2.4.2-pre4-knfsd-6.g.patch.gz | patch -N -p1
+    try gzip -dc ${DISTDIR}/linux-2.4.2-pre4-knfsd-6.g.patch.gz | patch -p1
     mkdir ${S}/extras
-    
     #create and apply LVM patch.  The tools get built later.
     cd ${S}/extras
     echo "Unpacking and applying LVM patch..."
