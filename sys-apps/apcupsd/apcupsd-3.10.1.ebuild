@@ -1,0 +1,77 @@
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.1.ebuild,v 1.1 2002/10/21 04:45:53 zwelch Exp $
+
+S=${WORKDIR}/${P}
+DESCRIPTION="APC UPS daemon with integrated tcp/ip remote shutdown (*ALPHA*)"
+SRC_URI="ftp://ftp.apcupsd.com/pub/apcupsd/development/${P}.tar.gz \
+	ftp://ftp.apcupsd.com/pub/apcupsd/contrib/gd1.2.tar.gz"
+HOMEPAGE="http://www.sibbald.com/apcupsd/"
+KEYWORDS="~x86"
+SLOT="0"
+LICENSE="GPL-2"
+ 
+DEPEND="virtual/glibc
+	virtual/mta
+	sys-libs/ncurses"
+ 
+XPIDDIR=/var/run
+XLOGDIR=/var/log
+XLOCKDIR=/var/lock
+XSYSCONFDIR=/etc/apcupsd
+XPWRFAILDIR=${XSYSCONFDIR}
+
+src_unpack() {
+	unpack ${A}
+
+	cp -a ${WORKDIR}/gd1.2 ${S}/src/
+	cp -a ${S} ${S}-orig
+	ln -s /usr/portage/sys-apps/apcupsd/files ${WORKDIR}/files
+}
+
+src_compile() {
+	# --with-distname redundant for >=baselayout-1.8.4, but req'd for prev.
+	MAIL=/usr/sbin/sendmail ./configure \
+		--prefix=/usr \
+		--sbindir=/usr/sbin \
+		--sysconfdir=${XSYSCONFDIR} \
+		--with-pwrfail-dir=${XPWRFAILDIR} \
+		--with-lock-dir=${XLOCKDIR} \
+		--with-pid-dir=${XPIDDIR} \
+		--with-log-dir=${XLOGDIR} \
+		--with-distname=gentoo \
+		--with-upstype=usb \
+		--with-upscable=usb \
+		--with-serial-dev=/dev/usb/hid/hiddev[0-9] \
+		--with-net-port=6666 \
+		--with-nis-port=7000 \
+		--enable-usb \
+		--enable-net \
+		--enable-powerflute \
+		--enable-pthreads \
+		--with-css-dir=/home/httpd/apcupsd \
+		--with-cgi-bin=/home/httpd/apcupsd \
+		--enable-cgi \
+		|| die   
+	make || die
+}
+ 
+src_install () {
+	GEN2DD=${D}
+	make DESTDIR=${GEN2DD%*/} install
+
+	echo "Installing full documentation into /usr/share/doc/${P}..."
+	cd ${S}/doc
+	dodoc README.*
+	docinto developers_manual
+	dodoc developers_manual/*
+	docinto logo
+	dodoc logo/*
+	docinto manual
+	dodoc manual/*
+	docinto old_documents
+	dodoc old_documents/*
+	docinto vim
+	dodoc vim/*
+}
+
