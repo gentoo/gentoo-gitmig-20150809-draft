@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.2-r3.ebuild,v 1.11 2004/06/25 23:48:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.2-r3.ebuild,v 1.12 2004/06/26 08:18:29 seemant Exp $
 
 inherit gcc flag-o-matic
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
 IUSE="build static debug"
 
-DEPEND="virtual/libc"
+DEPEND="virtual/libc virtual/glibc"
 
 src_unpack() {
 	unpack ${A}
