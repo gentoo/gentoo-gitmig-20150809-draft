@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/piwi
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/piwi/ChangeLog,v 1.8 2004/03/19 00:09:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/piwi/ChangeLog,v 1.9 2004/03/21 13:03:35 mboman Exp $
+
+  21 Mar 2004; Michael Boman <mboman@gentoo.org> piwi-0.0.20030717.ebuild:
+  QA: Unnecessary definition of S removed.
 
   18 Mar 2004; Jason Wever <weeve@gentoo.org> piwi-0.8.0.20031109-r1.ebuild:
   Added ~sparc keyword.

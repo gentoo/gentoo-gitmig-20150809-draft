@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/piwi/piwi-0.0.20030717.ebuild,v 1.2 2003/09/05 23:40:10 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/piwi/piwi-0.0.20030717.ebuild,v 1.3 2004/03/21 13:03:35 mboman Exp $
 
 DESCRIPTION="(Prelude|Perl) IDS Web Interface"
 HOMEPAGE="http://www.prelude-ids.org"
@@ -18,8 +18,6 @@ DEPEND="
 	gd? ( dev-perl/GDGraph dev-perl/Geo-IP )
 "
 RDEPEND="${DEPEND}"
-
-S=${WORKDIR}/${P}
 
 src_install() {
 	into /home/httpd/htdocs/piwi || die
