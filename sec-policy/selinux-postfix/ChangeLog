@@ -1,0 +1,10 @@
+# ChangeLog for sec-policy/selinux-postfix
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-postfix/ChangeLog,v 1.1 2004/04/28 03:58:47 pebenito Exp $
+
+*selinux-postfix-20040427 (27 Apr 2004)
+
+  27 Apr 2004; Chris PeBenito <pebenito@gentoo.org> +metadata.xml,
+  +selinux-postfix-20040427.ebuild:
+  Initial commit.
+
