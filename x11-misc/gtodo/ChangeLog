@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/gtodo
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtodo/ChangeLog,v 1.8 2004/06/24 22:21:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtodo/ChangeLog,v 1.9 2004/07/03 12:01:48 pyrania Exp $
+
+  03 Jul 2004; <pyrania@gentoo.org> gtodo-0.14.ebuild:
+  Added gtodo-applet support. Closing bug #44233.
 
   15 Jun 2004; Ian Leitch <port001@gentoo.org> gtodo-0.13.5.ebuild,
   gtodo-0.14.ebuild:
