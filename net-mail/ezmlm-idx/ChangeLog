@@ -1,8 +1,11 @@
 # ChangeLog for net-mail/ezmlm-idx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ChangeLog,v 1.5 2003/04/08 22:04:49 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/ezmlm-idx/ChangeLog,v 1.6 2003/04/09 00:01:15 liquidx Exp $
 
 *ezmlm-idx-0.40-r2 (30 Nov 2002)
+
+  09 Apr 2003; Alastair Tse <liquidx@gentoo.org> ezmlm-idx-0.40-r2.ebuild:
+  added ~ppc keyword. See #18843.
 
   08 Apr 2003; Alastair Tse <liquidx@gentoo.org> ezmlm-idx-0.40-r2.ebuild:
   errno fix for glibc-2.3.2. thanks to Sebastian Klemke <packet@berlin.ccc.de>.
