@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/wput
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wput/ChangeLog,v 1.7 2004/07/25 14:39:45 jmglov Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wput/ChangeLog,v 1.8 2004/12/12 19:08:58 ka0ttic Exp $
+
+*wput-0.5 (12 Dec 2004)
+
+  12 Dec 2004; Aaron Walker <ka0ttic@gentoo.org> metadata.xml,
+  +files/wput-0.5-gentoo.diff, +wput-0.5.ebuild:
+  Version bump; updated metadata.xml.
 
   25 Jul 2004; Josh Glover <jmglov@gentoo.org> metadata.xml:
   Taking over maintainership of this ebuild
