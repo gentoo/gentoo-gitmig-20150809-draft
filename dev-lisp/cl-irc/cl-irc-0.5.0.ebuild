@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-irc/cl-irc-0.5.0.ebuild,v 1.1 2004/02/01 19:17:06 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-irc/cl-irc-0.5.0.ebuild,v 1.2 2004/02/01 20:25:55 mkennedy Exp $
 
 inherit common-lisp
 
@@ -21,9 +21,9 @@ src_install() {
 	common-lisp-install cl-irc.asd *.lisp
 	common-lisp-system-symlink
 	dodoc CREDITS LICENSE README TODO
-	docinto /usr/share/doc/$PF/doc
+	docinto doc
 	dodoc doc/*.txt
-	docinto /usr/share/doc/$PF/examples
+	docinto examples
 	dodoc example/*.lisp example/Mop_Sym.txt
 }
 

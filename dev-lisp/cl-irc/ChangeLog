@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/cl-irc
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-irc/ChangeLog,v 1.1 2004/02/01 19:17:06 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-irc/ChangeLog,v 1.2 2004/02/01 20:25:55 mkennedy Exp $
+
+  01 Feb 2004; <mkennedy@gentoo.org> cl-irc-0.5.0.ebuild:
+  Minor correction to documentation paths.
 
 *cl-irc-0.5.0 (01 Feb 2004)
 
