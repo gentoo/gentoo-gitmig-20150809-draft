@@ -1,7 +1,16 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.6 2002/12/13 10:56:59 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.7 2003/01/10 08:12:48 kain Exp $
 
+  10 Jan 2003; Kain <kain@kain.org> : blender-2.26_pre20030109.ebuild
+  files/digest-blender-2.26_pre20030109
+  Blender CVS snapshot source build for 2.26.  I figured this would be decent
+  to work with, since Blender CVS is in feature freeze at the moment.  This
+  blender works with autoconf and has GCC-3 fixes, so it builds (and runs!)
+  for me on PPC and x86.  Testers wanted.
+
+*blender-2.26_pre20030109 (10 Jan 203)
+  
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *blender-2.23 (15 Oct 2002)
