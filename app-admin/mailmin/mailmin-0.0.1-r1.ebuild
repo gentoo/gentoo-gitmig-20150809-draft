@@ -1,12 +1,12 @@
-#//Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mailmin/mailmin-0.0.1-r1.ebuild,v 1.1 2004/04/12 00:10:08 klasikahl Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mailmin/mailmin-0.0.1-r1.ebuild,v 1.2 2004/04/12 00:29:43 klasikahl Exp $
 
 inherit webapp-apache
 
 DESCRIPTION="Mailmin is a PHP frontend to the virtual mail database that is needed in the Virtual/Mailhost Postfix Howto."
 
-HOMEPAGE="http://gentoo.org/proj/en/virt-mail-admin.xml"
+HOMEPAGE="http://gentoo.org/proj/en/mailmin.xml"
 
 SRC_URI="mirror://gentoo/${P}-pre2-alpha.tar.bz2
 		http://dev.gentoo.org/~klasikahl/mailmin/${P}-pre2-alpha.tar.bz2"
@@ -30,8 +30,8 @@ S=${WORKDIR}/${P}-pre2-alpha/mail
 pkg_setup() {
 	webapp-pkg_setup "${NO_WEBSERVER}"
 	if [ -L ${HTTPD_ROOT}/${PN} ] ; then
-		ewarn "You need to unmerge your old virt-mail-admin version first."
-		ewarn "virt-mail-admin will be installed into ${HTTPD_ROOT}/${PN}"
+		ewarn "You need to unmerge your old Mailmin version first."
+		ewarn "Mailmin will be installed into ${HTTPD_ROOT}/${PN}"
 		ewarn "directly instead of a version-dependant directory."
 		die "need to unmerge old version first"
 	fi
