@@ -1,8 +1,12 @@
-# ChangeLog for app-i18n/ispell-da
+# ChangeLog for app-dicts/ispell-da
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-da/ChangeLog,v 1.1 2002/12/03 07:15:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-da/ChangeLog,v 1.2 2002/12/03 07:31:35 seemant Exp $
 
 *ispell-da-1.4.22 (11 Jul 2002)
+ 
+  02 Dec 2002; Seemant Kulleen <seemant@gentoo.org> * :
+
+  Moved from app-i18n to app-dicts
 
   11 Jul 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog
   ispell-da-1.4.22.ebuild files/digest-ispell-da-1.4.22 :

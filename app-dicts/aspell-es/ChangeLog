@@ -1,8 +1,12 @@
-# ChangeLog for app-i18n/aspell-es
+# ChangeLog for app-dicts/aspell-es
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-es/ChangeLog,v 1.1 2002/12/03 07:15:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-es/ChangeLog,v 1.2 2002/12/03 07:31:35 seemant Exp $
 
 *aspell-0.50.2 (03 Sep 2002)
+
+  02 Dec 2002; Seemant Kulleen <seemant@gentoo.org> * :
+
+  Moved from app-i18n to app-dicts
 
   03 Sep 2002; Seemant Kulleen <seemant@gentoo.org> aspell-0.50.2.ebuild
   files/digest-aspell-0.50.2 :

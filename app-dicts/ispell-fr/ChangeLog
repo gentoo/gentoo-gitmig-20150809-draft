@@ -1,9 +1,12 @@
-# ChangeLog for app-i18n/ispell-fr
+# ChangeLog for app-dicts/ispell-fr
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-fr/ChangeLog,v 1.1 2002/12/03 07:15:39 seemant Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-fr/ChangeLog,v 1.2 2002/12/03 07:31:35 seemant Exp $
 
 *ispell-fr-1.0 (06 Oct 2002)
+
+  02 Dec 2002; Seemant Kulleen <seemant@gentoo.org> * :
+
+  Moved from app-i18n to app-dicts
 
   06 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ispell-fr-1.0.ebuild
   ChangeLog files/digest-ispell-fr-1.0 :
