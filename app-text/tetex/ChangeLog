@@ -1,6 +1,9 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.48 2003/09/29 21:04:09 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.49 2003/10/07 20:46:40 johnm Exp $
+
+  07 Oct 2003; John Mylchreest <johnm@gentoo.org>; tetex-2.0.2-r1.ebuild:
+  fixing POSIX 1003.1-2001 chown change. '.' now ':'
 
   30 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> tetex-1.0.7-r12.ebuild,
   tetex-1.0.7-r13.ebuild:
