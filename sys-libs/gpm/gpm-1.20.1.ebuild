@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.1.ebuild,v 1.7 2003/07/06 16:08:45 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.1.ebuild,v 1.8 2003/07/16 14:12:35 pvdabeel Exp $
 
 IUSE=""
 # Please use this variable to keep patch names sane for our patches!
@@ -26,7 +26,7 @@ DEPEND=">=sys-libs/ncurses-5.2
 	
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc alpha hppa arm"
+KEYWORDS="x86 ppc ~sparc alpha hppa arm"
 
 PATCHDIR=${WORKDIR}/patches
 
