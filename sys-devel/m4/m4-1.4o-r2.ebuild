@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4o-r2.ebuild,v 1.8 2002/08/01 11:59:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4o-r2.ebuild,v 1.9 2002/08/14 11:56:44 murphy Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.seindal.dk/gnu/${A}"
 HOMEPAGE="http://www.gnu.org/software/m4/m4.html"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPEND="virtual/glibc
         nls? ( sys-devel/gettext )

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.1.ebuild,v 1.4 2002/07/11 06:30:56 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.1.ebuild,v 1.5 2002/08/14 11:56:44 murphy Exp $
 
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
@@ -10,7 +10,7 @@ SRC_URI="ftp://sourceware.cygnus.com/pub/gdb/releases/${A}
 	 ftp://ftp.freesoftware.com/pub/sourceware/gdb/releases/${A}"
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2-r2

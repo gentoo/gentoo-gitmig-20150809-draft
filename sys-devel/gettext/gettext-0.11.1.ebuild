@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.11.1.ebuild,v 1.7 2002/08/01 11:40:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.11.1.ebuild,v 1.8 2002/08/14 11:56:44 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU locale utilities"
@@ -8,7 +8,7 @@ SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/gettext/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/gettext/gettext.html"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 
 src_unpack() {
 	unpack ${A}
