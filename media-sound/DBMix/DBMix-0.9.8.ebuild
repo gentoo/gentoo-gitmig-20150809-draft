@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/DBMix/DBMix-0.9.8.ebuild,v 1.4 2004/07/04 09:29:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/DBMix/DBMix-0.9.8.ebuild,v 1.5 2004/07/08 07:56:07 eradicator Exp $
 
 IUSE="xmms"
 
@@ -13,7 +13,7 @@ RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
 # -amd64: looks like sizeof() problems... sound plays but "skippy"
-# -sparc: fails to initialize
+# -sparc: fails to initialize.  xmms plugin segfaults xmms on exit
 KEYWORDS="x86 -amd64 -sparc"
 
 DEPEND="x11-libs/gtk+
