@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmpeg3
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.17 2003/11/04 02:40:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/ChangeLog,v 1.18 2003/11/04 12:31:38 weeve Exp $
+
+  04 Nov 2003; Jason Wever <weeve@gentoo.org> libmpeg3-1.5.2.ebuild:
+  New version requires nasm which only works on x86, so marking -sparc.
 
 *libmpeg3-1.5.2 (03 Nov 2003)
 
