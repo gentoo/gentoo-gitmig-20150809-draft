@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.4.94.ebuild,v 1.2 2003/04/03 20:12:41 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.4.94.ebuild,v 1.3 2003/04/04 02:33:42 joker Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A usefull diagnostic, instructional, and debugging tool"
@@ -16,7 +16,7 @@ DEPEND="virtual/glibc >=sys-devel/autoconf-2.54"
 
 
 src_compile() {
-	# Compile fails with -O3 on  but works on x86, sparc untested
+	# Compile fails with -O3 on sparc but works on x86
 	if [ "${ARCH}" == "sparc" -o "${ARCH}" == "" ]; then
 		replace-flags -O[3-9] -O2
 	fi
