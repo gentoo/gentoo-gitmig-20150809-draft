@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.30-r2.ebuild,v 1.1 2004/09/15 14:34:53 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.30-r2.ebuild,v 1.2 2004/09/17 18:29:15 lanius Exp $
 
 inherit flag-o-matic eutils
 
@@ -21,6 +21,7 @@ IUSE="doc"
 
 pkg_setup() {
 	enewgroup fax
+	enewgroup modem
 	enewuser fax -1 /bin/false /dev/null fax
 }
 
@@ -70,6 +71,7 @@ src_compile() {
 
 src_install () {
 	dodir /var/spool
+	dodir /var/log/mgetty
 	dodir /usr/share/info
 	make prefix=${D}/usr \
 		INFODIR=${D}/usr/share/info \

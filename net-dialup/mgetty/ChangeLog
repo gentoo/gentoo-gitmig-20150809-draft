@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/mgetty
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.33 2004/09/15 14:34:52 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.34 2004/09/17 18:29:15 lanius Exp $
+
+  17 Sep 2004; Heinrich Wendel <lanius@gentoo.org> mgetty-1.1.30-r2.ebuild:
+  create /var/log/mgetty; add modem group; bug #64357
 
 *mgetty-1.1.30-r2 (15 Sep 2004)
 
