@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/libbtctl
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/ChangeLog,v 1.13 2004/10/16 17:46:50 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/libbtctl/ChangeLog,v 1.14 2004/10/16 20:37:03 liquidx Exp $
+
+  16 Oct 2004; Alastair Tse <liquidx@gentoo.org> libbtctl-0.3.ebuild:
+  fix missing libsdp
 
   16 Oct 2004; Alastair Tse <liquidx@gentoo.org> libbtctl-0.3.ebuild:
   fix questionable || dep on bluez<>2.7
