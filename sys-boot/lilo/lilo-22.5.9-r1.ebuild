@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.5.9-r1.ebuild,v 1.3 2004/06/28 01:48:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.5.9-r1.ebuild,v 1.4 2004/07/03 18:58:35 solar Exp $
 
 inherit eutils flag-o-matic
 
@@ -61,10 +61,10 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-create-install-dirs.patch
 	# Correctly document commandline options -v and -V, bug #43554
 	epatch ${FILESDIR}/${P}-correct-usage-info.patch
+	sed -i -e s,usr/man,usr/share/man,g ${S}/Makefile
 }
 
 src_compile() {
-
 	# hardened automatic PIC plus PIE building should be suppressed
 	# because of assembler instructions that cannot be compiled PIC
 	HARDENED_CFLAGS="`test_flag -fno-pic` `test_flag -nopie`"
