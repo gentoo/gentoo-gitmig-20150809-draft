@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/mbrola-3.0.1h-r1.ebuild,v 1.1 2004/03/17 16:07:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/mbrola-3.0.1h-r1.ebuild,v 1.2 2004/03/24 17:19:16 eradicator Exp $
 
 S=${WORKDIR}
 URL="http://tcts.fpms.ac.be/synthesis/mbrola"
@@ -13,6 +13,8 @@ HOMEPAGE="http://tcts.fpms.ac.be/synthesis/mbrola.html"
 
 DEPEND=">=app-accessibility/festival-1.4.2
 	app-arch/unzip"
+
+IUSE=""
 
 SLOT="0"
 LICENSE="MBROLA"
