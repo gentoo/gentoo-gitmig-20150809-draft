@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-2.1.ebuild,v 1.3 2003/09/30 19:41:36 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-2.1.ebuild,v 1.4 2003/11/26 11:19:22 aliz Exp $
 
 DESCRIPTION="Serial Communication Program"
 SRC_URI="http://alioth.debian.org/download.php/123/${P}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://alioth.debian.org/projects/minicom"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~alpha ~hppa ~sparc ~mips"
+KEYWORDS="~x86 ~ppc ~alpha ~hppa ~sparc ~mips ~amd64"
 
 DEPEND=">=sys-libs/ncurses-5.2-r3"
 
