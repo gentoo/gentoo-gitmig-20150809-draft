@@ -1,6 +1,6 @@
 # ChangeLog for app-sci/blas-config
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-config/ChangeLog,v 1.12 2004/09/30 11:58:41 fmccor Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-config/ChangeLog,v 1.13 2004/10/02 15:21:54 swegener Exp $
 
   30 Sep 2004; Ferris McCormick <fmccor@gentoo.org> blas-config-1.0.1.ebuild:
   Stable for sparc.  Needed for get_libdir function built-in to work correctly
