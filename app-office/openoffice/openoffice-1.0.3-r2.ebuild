@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.3-r2.ebuild,v 1.6 2004/06/29 17:46:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.3-r2.ebuild,v 1.7 2004/08/21 19:32:30 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -134,6 +134,7 @@ RDEPEND=">=sys-libs/glibc-2.1
 
 DEPEND="${RDEPEND}
 	app-shells/tcsh
+	sys-libs/pam
 	!app-office/openoffice-bin
 	!app-arch/star
 	!dev-util/dmake"

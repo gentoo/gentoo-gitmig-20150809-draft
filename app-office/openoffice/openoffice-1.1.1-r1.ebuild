@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.1-r1.ebuild,v 1.8 2004/06/29 17:46:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.1-r1.ebuild,v 1.9 2004/08/21 19:32:30 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -69,6 +69,7 @@ DEPEND="${RDEPEND}
 	>=virtual/jdk-1.4.1
 	sys-apps/findutils
 	dev-util/pkgconfig
+	sys-libs/pam
 	!dev-util/dmake"
 
 pkg_setup() {
