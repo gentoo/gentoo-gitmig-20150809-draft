@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/rpm.eclass,v 1.1 2003/06/21 13:24:12 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/rpm.eclass,v 1.2 2003/06/21 13:42:42 liquidx Exp $
 
 # Author : Alastair Tse <liquidx@gentoo.org> (21 Jun 2003)
 #
@@ -22,11 +22,13 @@
 # In that case, you need to add app-arch/rpm to your DEPEND. rpm2targz
 # will automatically find rpm2cpio and use it instead of its own rpmoffset.
 #
-# Also, rpm2targz-8.0 behaves differently from rpm2targz-9.0. The newer
-# versions will autodetect rpm2cpio whereas 8.0 doesn't. Also, 9.0 will
-# detect if it is a source rpm and place files in ${prefix%.src} whereas
-# 8.0 will just place them in the current directory. This eclass DEPENDS
-# on rpm2targz 9.0.
+# In addition, rpm2targz-8.0 behaves differently from rpm2targz-9.0. The newer
+# versions will autodetect rpm2cpio whereas 8.0 doesn't. 
+#
+# Also, 9.0 wil# detect if it is a source rpm and place files in 
+# ${prefix%.src} whereas 8.0 will just place them in the current directory. 
+# As of writing, the current rpm2targz-9.0 in portage has been patched to
+# remove this behaviour for backwards compatibility.
 
 ECLASS="rpm"
 INHERITED="$INHERITED $ECLASS"
@@ -60,7 +62,7 @@ rpm_src_unpack() {
 				for t in *.tar.gz *.tgz *.tbz2 *.tar.bz2 *.zip *.ZIP; do
 					findopts="${findopts} -o -name ${t}"
 				done
-				for t in $(find ${prefix%.src} ${findopts} | xargs); do
+				for t in $(find * ${findopts} | xargs); do
 					unpack ${t}
 					rm -f ${t}
 				done
