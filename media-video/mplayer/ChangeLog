@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.120 2004/04/08 20:31:55 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.121 2004/04/14 04:37:15 swtaylor Exp $
+
+  13 Apr 2004; Scott W Taylor <swtaylor@gentoo.org>
+  mplayer-1.0_pre3-r5.ebuild:
+  update -fPIC handling for post-hardened-gcc
 
   08 Apr 2004; Luca Barbato <lu_zero@gentoo.org> mplayer-1.0_pre3-r5.ebuild:
   Added useflags for v4l and v4l2
