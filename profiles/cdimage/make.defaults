@@ -1,0 +1,10 @@
+# Copyright 2000 Daniel Robbins, Gentoo Technologies, Inc.
+# System-wide defaults for the Portage system
+
+CHOST=i486-pc-linux-gnu
+PLATFORM=$CHOST
+USE="berkdb gdbm readline slang pam"
+USE="nls"
+CFLAGS="-m486 -march=i486 -O2"
+CXXFLAGS=$CFLAGS
+#DEBUG=true

@@ -1,0 +1,5 @@
+virtual/python			dev-lang/python
+virtual/bash			sys-apps/bash
+virtual/kernel			sys-kernel/linux
+virtual/glibc 			sys-libs/glibc
+
