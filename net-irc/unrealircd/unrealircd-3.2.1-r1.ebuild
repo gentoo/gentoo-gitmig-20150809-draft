@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.1-r1.ebuild,v 1.2 2004/08/14 18:37:04 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/unrealircd/unrealircd-3.2.1-r1.ebuild,v 1.3 2004/08/14 20:43:09 swegener Exp $
 
 inherit eutils ssl-cert
 
@@ -47,6 +47,7 @@ src_compile() {
 		--with-permissions=0600 \
 		--with-fd-setsize=1024 \
 		--enable-dynamic-linking \
+		--enable-prefixaq \
 		$(use_enable zlib ziplinks) \
 		$(use_enable ssl) \
 		$(use_enable hub) \
@@ -80,12 +81,18 @@ src_install() {
 		&& docert server.cert \
 		&& dosym server.cert.key /etc/unrealircd/server.key.pem
 
+	insinto /etc/unrealircd/aliases
+	doins aliases/*.conf
+	insinto /etc/unrealircd/networks
+	doins networks/*.network
+
 	sed -i \
 		-e s:src/modules:/usr/lib/unrealircd/modules: \
 		-e s:ircd\\.log:/var/log/unrealircd/ircd.log: \
 		${D}/etc/unrealircd/unrealircd.conf
 
-	dodoc Changes Donation Unreal.nfo ircdcron/{ircd.cron,ircdchk}
+	dodoc Changes Donation Unreal.nfo networks/makenet \
+		ircdcron/{ircd.cron,ircdchk}
 	dohtml doc/*.html
 
 	exeinto /etc/init.d
