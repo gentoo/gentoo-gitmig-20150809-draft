@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Desktop Team <desktop@gentoo.org>
 # Author: Jens Blaesche <mr.big@pc-trouble.de>
-# $Header: /var/cvsroot/gentoo-x86/media-video/zapping/zapping-0.6.1-r1.ebuild,v 1.2 2001/10/27 01:53:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/zapping/zapping-0.6.1-r1.ebuild,v 1.3 2001/10/27 01:55:51 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Zapping is a TV- and VBI- viewer for the Gnome environment."
@@ -30,10 +30,11 @@ src_install () {
 	     sysconfdir=${D}/etc			\
 	     infodir=${D}/usr/share/info	\
 	     mandir=${D}/usr/share/man		\
+		 PACKAGE_LIB_DIR=${D}/usr/lib/zapping \
+		 PACKAGE_PIXMAPS_DIR=${D}/usr/share/pixmaps/zapping \
+		 PLUGIN_DEFAULT_DIR=${D}/usr/lib/zapping/plugins \
 	     install || die
-
 	rm ${D}/usr/bin/zapzilla
 	dosym /usr/bin/zapping /usr/bin/zapzilla
-
 	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
 }
