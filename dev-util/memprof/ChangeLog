@@ -1,9 +1,8 @@
 # ChangeLog for dev-util/memprof
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/memprof/ChangeLog,v 1.3 2002/12/09 04:21:16 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/memprof/ChangeLog,v 1.4 2002/12/13 10:56:50 blizzy Exp $
 
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *memprof-0.5.1 (23 Oct 2002)
 

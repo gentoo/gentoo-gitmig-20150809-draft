@@ -1,12 +1,12 @@
 # ChangeLog for dev-util/gob
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.9 2002/12/11 17:33:20 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/ChangeLog,v 1.10 2002/12/13 10:56:49 blizzy Exp $
 
   10 Dec 2002; foser <foser@gentoo.org> gob-2.0.2.ebuild gob-2.0.1.ebuild :
   Fix glib dependancy (bug #11633)
 
 * Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *gob-2.0.2 (20 Aug 2002)
   20 Aug 2002; Gabriele Giorgetti <stroke@gentoo.org> gob-2.0.2.ebuild :

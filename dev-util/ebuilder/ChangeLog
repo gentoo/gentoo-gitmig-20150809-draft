@@ -1,9 +1,8 @@
 # ChangeLog for dev-util/ebuilder
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ebuilder/ChangeLog,v 1.6 2002/12/09 04:21:14 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ebuilder/ChangeLog,v 1.7 2002/12/13 10:56:49 blizzy Exp $
 
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *ebuilder-0.4-r1 (06 May 2002)
 
@@ -35,7 +34,7 @@
 
   A revision number can now be added to the package name.
 
-  Changed the fourth line in the ebuilds to "$Header: /var/cvsroot/gentoo-x86/dev-util/ebuilder/ChangeLog,v 1.6 2002/12/09 04:21:14 manson Exp $".
+  Changed the fourth line in the ebuilds to "$Header: /var/cvsroot/gentoo-x86/dev-util/ebuilder/ChangeLog,v 1.7 2002/12/13 10:56:49 blizzy Exp $".
 
 
 *ebuilder-0.3 (04 May 2002)
