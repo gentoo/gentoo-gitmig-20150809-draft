@@ -1,8 +1,11 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.26 2002/08/26 09:20:59 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.27 2002/08/26 10:15:04 aliz Exp $
 
 *postgresql-7.2.2 (26 Aug 2002)
+
+  26 Aug 2002; Daniel Ahlberg <aliz@gentoo.org> postgresql-7.2.2.ebuild:
+  Small cleanups and fixes.
 
   26 Aug 2002; Daniel Ahlberg <aliz@gentoo.org> postgresql-7.2.2.ebuild:
   Cleaned up ebuild. Removed tarballs of documentation and manpages from

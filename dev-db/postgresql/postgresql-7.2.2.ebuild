@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2.2.ebuild,v 1.2 2002/08/26 09:20:59 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2.2.ebuild,v 1.3 2002/08/26 10:15:04 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PostgreSQL is a sophisticated Object-Relational DBMS"
@@ -86,7 +86,7 @@ pkg_preinst() {
 	fi
 
 	if ! id postgres; then
-		useradd -g postgres -s /dev/null -d /var/lib/postgresql -c "postgres" postgres
+		useradd -g postgres -s /bin/bash -d /var/lib/postgresql -c "postgres" postgres
 		assert "problem adding user postgres"
 	fi
 }
@@ -109,7 +109,6 @@ src_install () {
 	cd ${S}/doc
 	dodoc FAQ* KNOWN_BUGS MISSING_FEATURES README*
 	dodoc TODO internals.ps bug.template
-	dodoc *.tar.gz
 	docinto sgml
 	dodoc src/sgml/*.{sgml,dsl}
 	docinto sgml/ref
@@ -122,15 +121,11 @@ src_install () {
 	dojar ${D}/usr/share/postgresql/java/postgresql.jar
 	rm ${D}/usr/share/postgresql/java/postgresql.jar
 
-	dodir ${D}/usr/include/postgresql/pgsql
-	ln -s ${D}/usr/include/*.h ${D}/usr/include/postgresql/pgsql
+	dodir /usr/include/postgresql/pgsql
+	cp ${D}/usr/include/*.h ${D}/usr/include/postgresql/pgsql
 
 	exeinto /etc/init.d/
 	doexe ${FILESDIR}/${PV}/${PN}
-
-	# remove unnecessary files
-	rm ${D}/usr/share/doc/${P}/postgres.tar.gz
-	rm ${D}/usr/share/doc/${P}/man.tar.gz
 
 	einfo ">>> Execute the following command"
 	einfo ">>> ebuild  /var/db/pkg/dev-db/${P}/${P}.ebuild config"
