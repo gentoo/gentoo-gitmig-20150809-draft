@@ -740,7 +740,7 @@
 +fi
 +
 +touch $SCOREFILES
-+chown root.games $SCOREFILES
++chown root:games $SCOREFILES
 +chmod 664 $SCOREFILES
 +
 +# These files may not be world-readable as they have passwords
@@ -750,7 +750,7 @@
 +# I have to make this directory here, because older version of this package
 +# always deleted it in their postrm. Oops.
 +mkdir -p /var/games/bsdgames/sail
-+chown root.games /var/games/bsdgames/sail
++chown root:games /var/games/bsdgames/sail
 +chmod g+rws /var/games/bsdgames/sail
 +
 +#DEBHELPER#
@@ -816,7 +816,7 @@
 +	# Have to set up directory hierarchy, since this is running as a
 +	# preinst.
 +	mkdir -p /var/games/bsdgames/phantasia
-+	chown root.games /var/games/bsdgames \
++	chown root:games /var/games/bsdgames \
 +		/var/games/bsdgames/phantasia
 +	chmod g+rws /var/games/bsdgames \
 +		/var/games/bsdgames/phantasia
@@ -909,7 +909,7 @@
 +
 +	chmod -R u+rw debian/bsdgames/usr/
 +	# Games with score files need to be set up sgid games.
-+	chown root.games debian/bsdgames/usr/games/atc \
++	chown root:games debian/bsdgames/usr/games/atc \
 +		debian/bsdgames/usr/games/battlestar \
 +		debian/bsdgames/usr/games/canfield \
 +		debian/bsdgames/usr/games/cribbage \
@@ -929,7 +929,7 @@
 +		debian/bsdgames/usr/games/sail
 +	# The game directories need to be sgid too, and let's
 +	# remove all the zero byte score files in them.
-+	chown root.games debian/bsdgames/var/games/bsdgames/ \
++	chown root:games debian/bsdgames/var/games/bsdgames/ \
 +		debian/bsdgames/var/games/bsdgames/sail \
 +		debian/bsdgames/var/games/bsdgames/phantasia
 +	chmod g+rws debian/bsdgames/var/games/bsdgames/ \
