@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-prepatch-sources/vanilla-prepatch-sources-2.4.23_pre1.ebuild,v 1.1 2003/08/30 13:53:20 frogger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-prepatch-sources/vanilla-prepatch-sources-2.4.23_pre1.ebuild,v 1.2 2003/09/29 18:41:41 mholzer Exp $
 
 IUSE="build"
 
@@ -18,8 +18,8 @@ EXTRAVERSION="`echo ${KV}|sed -e 's:[^-]*\(-.*$\):\1:'`"
 BASE="`echo ${KV}|sed -e s:${EXTRAVERSION}::`"
 
 DESCRIPTION="Full sources for the prerelease vanilla Linux kernel"
-SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-http://www.kernel.org/pub/linux/kernel/v2.4/testing/patch-${PV/_/-}.bz2"
+SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
+mirror://kernel/linux/kernel/v2.4/testing/patch-${PV/_/-}.bz2"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
