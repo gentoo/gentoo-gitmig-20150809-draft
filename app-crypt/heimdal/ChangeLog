@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.4 2002/10/26 15:24:01 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.5 2002/12/06 06:13:41 kain Exp $
+
+*heimdal-0.5.1-r1 (05 Dec 2002)
+
+  05 Dec 2002; Kain X <kain@kain.org> heimdal-0.5.1-r1.ebuild :
+  Initial setup for new virtual/krb5 structure
 
 *heimdal-0.5.1 (26 Oct 2002)
 
