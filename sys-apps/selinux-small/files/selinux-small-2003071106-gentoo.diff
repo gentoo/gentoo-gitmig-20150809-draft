@@ -96,6 +96,71 @@ diff -urN selinux.orig/libsecure/test/Makefile selinux/libsecure/test/Makefile
  # Add 'exec_s' if you do not have 'runas'.
  # Add 'getsecsid' if you do not have the modified 'id'.
  # Add 'lstat_s' and 'stat_s' if you do not have the modified 'stat'.
+diff -urN selinux.orig/libsecure/test/arch/i386/stat64_s.c selinux/libsecure/test/arch/i386/stat64_s.c
+--- selinux.orig/libsecure/test/arch/i386/stat64_s.c	2002-03-13 13:39:21.000000000 -0600
++++ selinux/libsecure/test/arch/i386/stat64_s.c	2003-07-13 16:20:33.000000000 -0500
+@@ -49,6 +49,7 @@
+ 		}
+ 
+ 		printf("Context:  %s\n", context);
++		free(context);
+ 	}
+ 
+ 	exit(0);
+diff -urN selinux.orig/libsecure/test/getsecsid.c selinux/libsecure/test/getsecsid.c
+--- selinux.orig/libsecure/test/getsecsid.c	2001-07-18 15:38:06.000000000 -0500
++++ selinux/libsecure/test/getsecsid.c	2003-07-13 16:20:33.000000000 -0500
+@@ -51,6 +51,6 @@
+ 	}
+ 
+ 	printf("Context:  %s\n", scontext);
+-
++	free(scontext);
+ 	exit(0);
+ }
+diff -urN selinux.orig/libsecure/test/lstat_s.c selinux/libsecure/test/lstat_s.c
+--- selinux.orig/libsecure/test/lstat_s.c	2001-07-18 15:38:06.000000000 -0500
++++ selinux/libsecure/test/lstat_s.c	2003-07-13 16:20:33.000000000 -0500
+@@ -48,6 +48,7 @@
+ 		}
+ 
+ 		printf("Context:  %s\n", context);
++		free(context);
+ 	}
+ 
+ 	exit(0);
+diff -urN selinux.orig/libsecure/test/sid_to_context.c selinux/libsecure/test/sid_to_context.c
+--- selinux.orig/libsecure/test/sid_to_context.c	2001-07-18 15:38:06.000000000 -0500
++++ selinux/libsecure/test/sid_to_context.c	2003-07-13 16:20:33.000000000 -0500
+@@ -43,5 +43,6 @@
+ 	}
+ 
+ 	printf("%s\n", buf);
++	free(buf);
+ 	exit(0);
+ }
+diff -urN selinux.orig/libsecure/test/stat_s.c selinux/libsecure/test/stat_s.c
+--- selinux.orig/libsecure/test/stat_s.c	2001-07-18 15:38:06.000000000 -0500
++++ selinux/libsecure/test/stat_s.c	2003-07-13 16:20:33.000000000 -0500
+@@ -48,6 +48,7 @@
+ 		}
+ 
+ 		printf("Context:  %s\n", context);
++		free(context);
+ 	}
+ 
+ 	exit(0);
+diff -urN selinux.orig/libsecure/test/statfs_s.c selinux/libsecure/test/statfs_s.c
+--- selinux.orig/libsecure/test/statfs_s.c	2001-07-18 15:38:06.000000000 -0500
++++ selinux/libsecure/test/statfs_s.c	2003-07-13 16:20:33.000000000 -0500
+@@ -48,6 +48,7 @@
+ 		}
+ 
+ 		printf("Context:  %s\n", context);
++		free(context);
+ 	}
+ 
+ 	exit(0);
 diff -urN selinux.orig/module/Makefile selinux/module/Makefile
 --- selinux.orig/module/Makefile	2003-04-22 08:24:05.000000000 -0500
 +++ selinux/module/Makefile	2003-07-13 15:00:48.000000000 -0500
