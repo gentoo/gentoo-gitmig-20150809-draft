@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/d4x
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/ChangeLog,v 1.14 2004/03/29 02:07:36 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/ChangeLog,v 1.15 2004/04/04 20:23:47 weeve Exp $
+
+  04 Apr 2004; Jason Wever <weeve@gentoo.org> d4x-2.4.1-r1.ebuild:
+  Marked stable on sparc.
 
   28 Mar 2004; Jason Wever <weeve@gentoo.org> d4x-2.4.1-r1.ebuild,
   files/d4x-sndserv-bigendian.patch:
