@@ -2,15 +2,15 @@
 Hash: SHA1
 
 MD5 665c223710a2c382f5c4e8206f5e7a28 msmtp-1.2.3.ebuild 1220
-MD5 55cceec0f0d5b8a7597b87bf8cc08235 msmtp-1.2.4.ebuild 1221
-MD5 ac9662fa98221fe2e301c5455bcc1769 ChangeLog 2933
+MD5 e8deb22f82de9c58052007eb32847187 msmtp-1.2.4.ebuild 1155
+MD5 467cb5e5ec738bfe11e17073fcf285c9 ChangeLog 3062
 MD5 570c3b91cefa46a71ea570343906ccc3 metadata.xml 247
 MD5 7c72ffdb691739c7e527ec1c06c22efd files/digest-msmtp-1.2.3 63
 MD5 0553a19313bf7527b1bbb9e1539f2021 files/digest-msmtp-1.2.4 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBsKkICHk4+ZoBpvsRAru0AKCQcdmijrbxO6GxgOj6HACBRAfCqgCfd5jN
-omoC4qTmvjTmcVcQ7VguVyM=
-=8l0r
+iD8DBQFBvzwpCHk4+ZoBpvsRAs35AJ9Wr0Xn9Rpi32wxiIHXc+dXpcvVVQCeO0EN
+8sg1QykJhmeCfB5A937bWxM=
+=GmQW
 -----END PGP SIGNATURE-----
