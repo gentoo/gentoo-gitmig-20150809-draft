@@ -1,6 +1,15 @@
 # ChangeLog for dev-lang/mono
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.5 2002/07/28 17:48:40 sunflare Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.6 2002/07/29 10:09:23 trance Exp $
+
+
+
+*mono-0.13 (29 Jul 2002)
+
+  29 Jul 2002; Kevyn Shortell <trance@gentoo.org> mono-0.13.ebuild, ChangeLog:
+  Added >=glib-2.x as a dependency, closing bug #5708.  Many thanks to Nathan
+  Sharfi <nisharfi@csupomona.edu> for testing ebuild on glib-1.3 machine to
+  find the bug =).
 
 *mono-0.13 (28 Jul 2002)
 
