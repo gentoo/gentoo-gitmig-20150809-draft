@@ -1,7 +1,18 @@
-MD5 818ce6599b0a658a4cbb53c276791690 ChangeLog 430
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0dc7eb3ff5a1cd09419433245c4a408e ChangeLog 644
 MD5 075fea99b82d61028585dc3e42f00466 metadata.xml 156
 MD5 c8cc33559ef60b592ec67bc3dd48cdd4 pilot-mailsync-0.8.0.2.ebuild 761
-MD5 01c3597bf14dcd2c12ce7d2065e3b0fa pilot-mailsync-0.8.3.ebuild 885
+MD5 134c04ec9bcc904b57f2d98facbb8a23 pilot-mailsync-0.8.3.ebuild 1399
+MD5 6a51c29662580634d473ffe20de05ccd pilot-mailsync-0.8.1.ebuild 760
 MD5 6f4db2e33b85320840d9490d4408773a files/digest-pilot-mailsync-0.8.0.2 75
 MD5 c40b06dccab65e88a6d81d42dcea483b files/digest-pilot-mailsync-0.8.1 73
 MD5 35a746c8fc6fc591cff6b6d3744c76c1 files/digest-pilot-mailsync-0.8.3 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB95DDRkyva5PS18kRAhsZAKCaM9/VisbceHfLCllU0vN90EwklQCfU2Lb
+819ErRvbKUYijJIVhbMGjWQ=
+=44mX
+-----END PGP SIGNATURE-----
