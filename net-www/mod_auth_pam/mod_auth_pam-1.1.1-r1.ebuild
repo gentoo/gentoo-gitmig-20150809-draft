@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pam/mod_auth_pam-1.1.1-r1.ebuild,v 1.4 2005/02/17 09:30:54 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pam/mod_auth_pam-1.1.1-r1.ebuild,v 1.5 2005/02/25 11:58:37 hollow Exp $
 
 inherit eutils apache-module
 
@@ -18,7 +18,10 @@ IUSE=""
 APACHE2_EXECFILES=".libs/mod_auth_sys_group.so"
 
 APACHE1_MOD_CONF="${PVR}/10_${PN}"
+APACHE1_MOD_DEFINE="AUTH_PAM"
+
 APACHE2_MOD_CONF="${PVR}/10_${PN}"
+APACHE2_MOD_DEFINE="AUTH_PAM"
 
 DOCFILES="INSTALL README doc/*"
 
@@ -27,26 +30,26 @@ need_apache
 SRC_URI="apache2?  http://pam.sourceforge.net/mod_auth_pam/dist/${PN}-2.0-${PV}.tar.gz
 	 !apache2? http://pam.sourceforge.net/mod_auth_pam/dist/${PN}-${PV}.tar.gz"
 
-use apache2 && S=${WORKDIR}/${PN}
+useq apache2 && S=${WORKDIR}/${PN}
 
 src_unpack() {
 	unpack ${A} || die "unpack failed"
 	cd ${S} || "couldn't cd to \$S"
-	use apache2 || epatch ${FILESDIR}/${P}-compile-fix.patch || die "patch failed"
-	use apache2 && sed -i -e 's/servicename = "httpd"/servicename = "apache2"/' ${PN}.c
-	use apache2 || sed -i -e 's/servicename = "httpd"/servicename = "apache"/' ${PN}.c
+	useq apache2 || epatch ${FILESDIR}/${P}-compile-fix.patch || die "patch failed"
+	useq apache2 && sed -i -e 's/servicename = "httpd"/servicename = "apache2"/' ${PN}.c
+	useq apache2 || sed -i -e 's/servicename = "httpd"/servicename = "apache"/' ${PN}.c
 }
 
 src_compile() {
 	apache-module_src_compile
-	use apache2 && ${APXS2} -c mod_auth_sys_group.c
+	useq apache2 && ${APXS2} -c mod_auth_sys_group.c
 }
 
 src_install () {
 	apache-module_src_install
 	insinto /etc/pam.d
-	use apache2 && newins ${FILESDIR}/apache2.pam apache2
-	use apache2 || newins ${FILESDIR}/apache2.pam apache
+	useq apache2 && newins ${FILESDIR}/apache2.pam apache2
+	useq apache2 || newins ${FILESDIR}/apache2.pam apache
 }
 
 pkg_postinst() {
