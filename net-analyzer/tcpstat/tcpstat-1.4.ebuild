@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpstat/tcpstat-1.4.ebuild,v 1.11 2004/06/24 22:21:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpstat/tcpstat-1.4.ebuild,v 1.12 2004/07/08 23:00:37 eldad Exp $
 
 IUSE="berkdb"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Reports network interface statistics"
 SRC_URI="http://www.frenchfries.net/paul/tcpstat/${P}.tar.gz"
 HOMEPAGE="http://www.frenchfries.net/paul/tcpstat/"
