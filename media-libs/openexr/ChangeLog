@@ -1,0 +1,18 @@
+# ChangeLog for media-libs/openexr
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/ChangeLog,v 1.1 2003/10/15 12:28:13 brandy Exp $
+
+*openexr-1.0.6 (16 Oct 2003)
+
+  16 Oct 2003; Brandy Westcott brandy@gentoo.org metadata.xml,
+  openexr-1.0.6.ebuild:
+  Initial import. OpenEXR is an image format developed by Industrial Light
+  & Magic. A big thanks to Henti Smith <henti@geekware.co.za> for providing
+  the ebuild (see Bug #14415)
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
+
