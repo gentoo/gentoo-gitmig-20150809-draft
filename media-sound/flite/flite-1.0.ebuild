@@ -7,7 +7,11 @@ DESCRIPTION="Flite text to speech engine"
 HOMEPAGE="http://www.speech.cs.cmu.edu/flite/index.html"
 SRC_URI="http://www.speech.cs.cmu.edu/flite/packed/flite-1.0/${P}-beta.tar.gz"
 
-DEPEND=""
+SLOT="0"
+LICENSE="X11"
+KEYWORDS="x86"
+
+DEPEND="virtual/glibc"
 
 src_compile() {
 	econf || die
