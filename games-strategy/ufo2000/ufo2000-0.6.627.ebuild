@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo2000/ufo2000-0.4.0.334.ebuild,v 1.6 2005/01/27 01:40:41 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo2000/ufo2000-0.6.627.ebuild,v 1.1 2005/01/27 01:40:41 mr_bones_ Exp $
 
 inherit games
 
@@ -8,51 +8,62 @@ DESCRIPTION="Free multiplayer remake of X-COM (UFO: Enemy Unknown)"
 HOMEPAGE="http://ufo2000.sourceforge.net/"
 SRC_URI="http://ufo2000.lxnt.info/files/${P}-src.tar.bz2
 	ftp://ftp.microprose.com/pub/mps-online/x-com/xcomdemo.zip
-	ftp://ftp.microprose.com/pub/mps-online/demos/terror.zip"
+	ftp://ftp.microprose.com/pub/mps-online/demos/terror.zip
+	oggvorbis? ( http://ufo2000.lxnt.info/files/ufo2000-music-20041222.zip )"
 
-KEYWORDS="-* x86 ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
-IUSE=""
+KEYWORDS="-* x86 ~ppc"
+IUSE="oggvorbis"
 
-DEPEND="virtual/libc
-	>=media-libs/allegro-4.0.0
-	>=dev-lang/lua-5.0
+RDEPEND="virtual/libc
+	dev-libs/expat
 	>=dev-games/hawknl-1.66
-	>=media-libs/aldumb-0.9.2
-	media-libs/libogg
-	media-libs/libvorbis
-	dev-libs/expat"
+	>=media-libs/allegro-4.0.0
+	oggvorbis? ( >=media-libs/aldumb-0.9.2
+		media-libs/libogg
+		media-libs/libvorbis )"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 src_unpack() {
 	unpack ${P}-src.tar.bz2
 
 	cd "${S}/XCOMDEMO"
 	unpack xcomdemo.zip
-	unzip -LL XCOM.EXE -d ..
+	unzip -qLL XCOM.EXE -d .. || die "unzip failed"
 	rm XCOM.EXE
-	mv ../xcomdemo/* "${S}/XCOMDEMO/"
+	mv ../xcomdemo/* "${S}/XCOMDEMO/" || die "mv failed"
 
 	cd "${S}/TFTDDEMO"
 	unpack terror.zip
-	unzip -LL TFTD.ZIP
+	unzip -qLL TFTD.ZIP || die "unzip failed"
 	rm TFTD.ZIP
+
+	if use oggvorbis ; then
+		cd "${S}/newmusic"
+		unpack ufo2000-music-20041222.zip
+	fi
 }
 
 src_compile() {
+	local myconf
+
+	use oggvorbis && myconf="dumbogg=1"
+
 	emake \
 		DATA_DIR="${GAMES_DATADIR}/${PN}" \
 		OPTFLAGS="${CXXFLAGS}" \
-		dumbogg=1 \
-			|| die "emake failed"
+		${myconf} \
+		|| die "emake failed"
 }
 
 src_install() {
 	dogamesbin ufo2000 || die "dogamesbin failed"
 	dodir "${GAMES_DATADIR}/${PN}"
 	cp -R arts newmaps newmusic newunits init-scripts script \
-		XCOMDEMO XCOM TFTDDEMO TFTD \
-		*.dat armoury.set ufo2000.ini soundmap.xml \
+		XCOMDEMO XCOM TFTDDEMO TFTD translations \
+		*.dat ufo2000.default.ini soundmap.xml \
 			"${D}/${GAMES_DATADIR}/${PN}" \
 				|| die "cp failed"
 	keepdir "${GAMES_DATADIR}/${PN}/newmusic"
