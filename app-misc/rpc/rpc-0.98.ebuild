@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rpc/rpc-0.98.ebuild,v 1.5 2004/09/14 08:59:31 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rpc/rpc-0.98.ebuild,v 1.6 2004/10/06 00:46:24 sekretarz Exp $
+
+inherit eutils
 
 DESCRIPTION="A fullscreen console-based RPN calculator that uses the curses library"
 
@@ -14,6 +16,13 @@ IUSE=""
 
 DEPEND=">=dev-libs/ccmath-2.2
 	sys-libs/ncurses"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/${P}-gcc-34.patch
+}
 
 src_install() {
 	einstall || die

@@ -1,14 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f97f7014c265136376ffde335f158134 ChangeLog 1787
+MD5 d84e71e1dc57631401f82fe7f69e26eb rpc-0.98.ebuild 701
+MD5 98192e4ea2ad3e964d08abfdc296c106 ChangeLog 1935
 MD5 27c80a8d690d932f131215d791821fcd metadata.xml 253
-MD5 73c13a767798f39c1ef4dcd24be69c1e rpc-0.98.ebuild 606
 MD5 6ece87b2316722560e5c1cdd6e2a6e02 files/digest-rpc-0.98 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBW0alI1lqEGTUzyQRAhJAAJsHtSGvdO5qWdQI0ZKgf6RjStoh6QCfen5S
-oo8zWalkWMoY1AppaIaEZJw=
-=tIpH
------END PGP SIGNATURE-----
+MD5 d71204d211c67258865ebfb1bae7721a files/rpc-0.98-gcc-34.patch 29973
