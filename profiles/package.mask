@@ -71,10 +71,6 @@
 # masked for testing.
 =dev-libs/pilot-link-0.11.1
 
-# <aliz@gentoo.org> 22 Jul 2002
-# masked for testing
-x11-misc/xfractint
-
 # <seemant@gentoo.org> 21 Jul 2002
 # masked for testing
 =sys-devel/gettext-0.11.3
@@ -86,10 +82,6 @@ x11-misc/xfractint
 # <george@gentoo.org> (19 Jul 2002)
 # masked for testing
 dev-lang/tcc
-
-# <aliz@gentoo.org> (19 Jul 2002)
-# masked for testing
-=x11-misc/xloadimage-4.1
 
 # <nitro@gentoo.org> (19 Jun 2002)
 # new version, please test
