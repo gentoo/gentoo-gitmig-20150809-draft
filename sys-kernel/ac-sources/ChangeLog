@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/ac-sources
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ac-sources/ChangeLog,v 1.44 2004/11/28 00:12:39 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ac-sources/ChangeLog,v 1.45 2004/12/03 20:11:26 plasmaroo Exp $
+
+  03 Dec 2004; <plasmaroo@gentoo.org> ac-sources-2.6.9-r12.ebuild,
+  +files/ac-sources-2.6.9.vma.patch:
+  Adding overwrapping VMA security fix, bug #72452.
 
 *ac-sources-2.6.9-r12 (27 Nov 2004)
 
