@@ -1,44 +1,3 @@
-Received: (at 178209) by bugs.debian.org; 6 Mar 2003 23:41:35 +0000
-From ecki@lina.inka.de Thu Mar 06 17:41:35 2003
-Return-path: <ecki@lina.inka.de>
-Received: from quechua.inka.de (mail.inka.de) [193.197.184.2] (mail)
-	by master.debian.org with esmtp (Exim 3.12 1 (Debian))
-	id 18r4zW-0005lZ-00; Thu, 06 Mar 2003 17:41:34 -0600
-Received: from calista.inka.de (p508b2614.dip.t-dialin.net [80.139.38.20])
-	by mail.inka.de with asmtp 
-	id 18r4zU-0003YP-00; Fri, 07 Mar 2003 00:41:32 +0100
-Received: from ecki by calista.inka.de with local   (Exim 3.35 #1 (Debian))
-	id 18r4zS-0007tr-00; Fri, 07 Mar 2003 00:41:30 +0100
-Date: Fri, 7 Mar 2003 00:41:30 +0100
-To: Matt Domsch <Matt_Domsch@dell.com>
-Cc: 178209@bugs.debian.org
-Subject: Re: nameif segfault in net-tools-1.60
-Message-ID: <20030306234130.GB29359@lina.inka.de>
-References: <1046982565.1712.30.camel@localhost.localdomain> <20030306230708.GA29359@lina.inka.de> <1046992495.4526.19.camel@localhost.localdomain>
-Mime-Version: 1.0
-Content-Type: text/plain; charset=us-ascii
-Content-Disposition: inline
-In-Reply-To: <1046992495.4526.19.camel@localhost.localdomain>
-User-Agent: Mutt/1.4i
-From: Bernd Eckenfels <ecki@lina.inka.de>
-Delivered-To: 178209@bugs.debian.org
-X-Spam-Status: No, hits=-4.2 required=4.0
-	tests=IN_REP_TO,PATCH_UNIFIED_DIFF,QUOTED_EMAIL_TEXT,REFERENCES,
-	      SIGNATURE_SHORT_DENSE,SPAM_PHRASE_00_01,USER_AGENT,
-	      USER_AGENT_MUTT
-	version=2.44
-X-Spam-Level: 
-
-On Thu, Mar 06, 2003 at 05:14:55PM -0600, Matt Domsch wrote:
-> 85748, filed against the Phoebe public beta so you can see it.
-
-I think the following will do it:
-
-Index: nameif.c
-===================================================================
-RCS file: /cvs/net-tools/nameif.c,v
-retrieving revision 1.1
-retrieving revision 1.3
 diff -u -r1.1 -r1.3
 --- nameif.c	18 Oct 2000 17:26:29 -0000	1.1
 +++ nameif.c	6 Mar 2003 23:26:52 -0000	1.3
@@ -46,8 +5,8 @@ diff -u -r1.1 -r1.3
   * Writen 2000 by Andi Kleen.
   * Subject to the Gnu Public License, version 2.  
   * TODO: make it support token ring etc.
-- * $Id: net-tools-1.60-cleanup-list-handling.patch,v 1.1 2004/03/29 07:34:04 seemant Exp $
-+ * $Id: net-tools-1.60-cleanup-list-handling.patch,v 1.1 2004/03/29 07:34:04 seemant Exp $
+- * $Id: net-tools-1.60-cleanup-list-handling.patch,v 1.2 2004/03/29 15:37:22 bazik Exp $
++ * $Id: net-tools-1.60-cleanup-list-handling.patch,v 1.2 2004/03/29 15:37:22 bazik Exp $
   */ 
  #ifndef _GNU_SOURCE 
  #define _GNU_SOURCE
@@ -106,8 +65,6 @@ diff -u -r1.1 -r1.3
 +			warning(_("interface '%s' not found"), ch->ifname); 
  		free(ch); 
  	}
- 
-
 
 
 

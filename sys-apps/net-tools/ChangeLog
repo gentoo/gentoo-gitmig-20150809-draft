@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/net-tools
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.27 2004/03/29 07:34:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.28 2004/03/29 15:37:22 bazik Exp $
+
+  29 Mar 2004; Sven Blumenstein <bazik@gentoo.org>
+  files/net-tools-1.60-cleanup-list-handling.patch:
+  Fixed net-tools-1.60-cleanup-list-handling.patch, closes bug #46082,
+  blameseemant! :)
 
 *net-tools-1.60-r8 (28 Mar 2004)
 
