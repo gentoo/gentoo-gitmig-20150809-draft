@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/TimeDate/TimeDate-1.16.ebuild,v 1.5 2004/07/14 20:47:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/TimeDate/TimeDate-1.16.ebuild,v 1.6 2004/08/17 18:05:49 agriffis Exp $
 
 inherit perl-module
 
@@ -10,5 +10,5 @@ SRC_URI="http://www.cpan.org/modules/by-module/Date/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 ~amd64 ~ppc sparc alpha"
+KEYWORDS="x86 ~amd64 ~ppc sparc alpha ia64"
 IUSE=""
