@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.5.ebuild,v 1.13 2003/09/08 07:10:17 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.5.ebuild,v 1.14 2003/09/15 19:08:33 lanius Exp $
 
 DESCRIPTION="A user-mode PPPoE client and server suite for Linux"
 SRC_URI="http://www.roaringpenguin.com/pppoe/${P}.tar.gz"
@@ -35,4 +35,10 @@ src_install () {
 		datadir=/usr/share/doc/${PF}/ install || die "Failed to install the GUI"
 		dosym /usr/share/doc/${PF}/tkpppoe /usr/share/tkpppoe
 	fi
+
+	exeinto /etc/init.d ; newexe ${FILESDIR}/rp-pppoe.rc rp-pppoe
+}
+
+pkg_postinst() {
+	einfo "Use adsl-setup to configure your dialup connection"
 }

@@ -1,0 +1,19 @@
+#!/sbin/runscript 
+# This init script controls the pppoe connection for adsl lines. 
+# Distributed under the terms of the GNU General Public License v2 
+ 
+depend() { 
+        need net
+} 
+ 
+start() { 
+        ebegin "Starting adsl" 
+        start-stop-daemon --start --quiet --exec /usr/sbin/adsl-start --background
+        eend $? 
+} 
+ 
+stop() { 
+        ebegin "Stopping adsl" 
+        start-stop-daemon --start --quiet --exec /usr/sbin/adsl-stop --background
+        eend $? 
+}

@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/rp-pppoe
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.16 2003/08/21 23:35:30 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.17 2003/09/15 19:08:33 lanius Exp $
+
+  15 Sep 2003; Heinrich Wendel <lanius@gentoo.org> rp-pppoe-3.5.ebuild,
+  files/rp-pppoe.rc:
+  added init script
+  added info at the end how to configure connection
 
   21 Aug 2003; Will Woods <wwoods@gentoo.org> rp-pppoe-3.5.ebuild:
   Marked stable for alpha
