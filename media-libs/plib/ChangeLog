@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/plib
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plib/ChangeLog,v 1.9 2004/01/06 22:39:23 gmsoft Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plib/ChangeLog,v 1.10 2004/03/28 05:23:49 mr_bones_ Exp $
+
+*plib-1.8.2 (27 Mar 2004)
+
+  27 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> plib-1.8.2.ebuild:
+  version bump (bug #45223); patch from James Jones; I took out the special PIC
+  handling for hppa. I'm hoping it's fixed in the distro now.
 
   06 Oct 2003; Aron Griffis <agriffis@gentoo.org> plib-1.6.0.ebuild:
   Stable on alpha
