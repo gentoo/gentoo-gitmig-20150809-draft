@@ -1,6 +1,6 @@
 MD5 85846612b4e6d8c1597dec2b557ceae4 ChangeLog 4560
 MD5 fdf431aef4b2fe64bc9246f8f3138ab9 phpmyadmin-2.5.2_p1.ebuild 2672
-MD5 fdf431aef4b2fe64bc9246f8f3138ab9 phpmyadmin-2.5.3.ebuild 2672
+MD5 1745416a65613624aef53ef5e46db543 phpmyadmin-2.5.3.ebuild 2665
 MD5 c8831e7a64bded4933b46b81e013e9b8 phpmyadmin-2.4.0.ebuild 2245
 MD5 633d67d0522016962bc00c6beb338645 phpmyadmin-2.5.0.ebuild 2658
 MD5 5e839c97f3eeb6d655345b2427123f13 phpmyadmin-2.5.1.ebuild 2663
@@ -22,3 +22,5 @@ MD5 12e8a97118eb6912911e207e72d1a421 files/mysql-setup.sql.in-2.5.2 3230
 MD5 51bc2409d6f1bf8818b935e352c072ea files/config.inc.php-2.5.2.patch 4826
 MD5 12e8a97118eb6912911e207e72d1a421 files/mysql-setup.sql.in-2.5.2_p1 3230
 MD5 37b2ad1d3840091597ad37e33b015d98 files/config.inc.php-2.5.2_p1.patch 4830
+MD5 12e8a97118eb6912911e207e72d1a421 files/mysql-setup.sql.in-2.5.3 3230
+MD5 fe846e076048ecd9c28277a5fc9ea0c9 files/config.inc.php-2.5.3.patch 4826
