@@ -17,9 +17,15 @@ IUSE=""
 DEPEND=">=app-cdr/cdrtools-2.01_alpha24"
 PROVIDE="virtual/cdrtools"
 
+src_unpack() {
+	if use x86; then
+		cp ${DISTDIR}/${X86_FILENAME} ${WORKDIR}/
+	fi
+}
+
 src_install() {
 	if use x86; then
-		dobin ${X86_FILENAME}
+		dobin ${WORKDIR}/${X86_FILENAME}
 		dosym /usr/bin/${X86_FILENAME} /usr/bin/cdrecord.prodvd
 	fi
 	dobin ${FILESDIR}/cdrecord-wrapper.sh

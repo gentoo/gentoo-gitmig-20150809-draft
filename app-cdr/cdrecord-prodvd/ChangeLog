@@ -1,0 +1,11 @@
+# ChangeLog for app-cdr/cdrecord-prodvd
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrecord-prodvd/ChangeLog,v 1.1 2004/01/17 22:07:58 pylon Exp $
+
+*cdrecord-prodvd-2.01_alpha24 (17 Jan 2004)
+
+  17 Jan 2004; Lars Weiler <pylon@gentoo.org>
+  cdrecord-prodvd-2.01_alpha24.ebuild, files/cdrecord-wrapper.sh:
+  Separated cdrecord-prodvd in an ebuild by it's own to end the troubles with
+  installing it in xcdroast
+
