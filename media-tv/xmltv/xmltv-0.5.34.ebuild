@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.34.ebuild,v 1.4 2004/07/13 23:40:03 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/xmltv/xmltv-0.5.34.ebuild,v 1.5 2004/08/25 21:20:06 aliz Exp $
 
 inherit perl-module
 
@@ -63,41 +63,41 @@ DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
 [ -z "${XMLTV_OPTS}" ] || has tv_grab_uk_rt ${XMLTV_OPTS} \
-	&& DEPEND="${DEPEND} >=dev-perl/HTML-Parser-3.34"
+	&& newdepend >=dev-perl/HTML-Parser-3.34
 [ -z "${XMLTV_OPTS}" ] || has tv_grab_na_dd ${XMLTV_OPTS} \
-	&& DEPEND="${DEPEND} dev-perl/SOAP-Lite dev-perl/TermReadKey"
+	&& newdepend dev-perl/SOAP-Lite dev-perl/TermReadKey
 [ -z "${XMLTV_OPTS}" ] || has tv_grab_na_icons ${XMLTV_OPTS} \
-	&& DEPEND="${DEPEND} dev-perl/HTML-TableExtract >=dev-perl/WWW-Mechanize-1.02"
+	&& newdepend dev-perl/HTML-TableExtract >=dev-perl/WWW-Mechanize-1.02
 [ -z "${XMLTV_OPTS}" ] || has tv_grab_fi ${XMLTV_OPTS} \
-	&& DEPEND="${DEPEND} dev-perl/HTML-Tree"
+	&& newdepend dev-perl/HTML-Tree
 [ -z "${XMLTV_OPTS}" ] || has tv_grab_es ${XMLTV_OPTS} \
-	&& DEPEND="${DEPEND} dev-perl/HTML-Tree"
+	&& newdepend dev-perl/HTML-Tree
 [ -z "${XMLTV_OPTS}" ] || has tv_grab_es_digital ${XMLTV_OPTS} \
-	&& DEPEND="${DEPEND} dev-perl/HTML-Tree"
+	&& newdepend dev-perl/HTML-Tree
 [ -z "${XMLTV_OPTS}" ] || has tv_grab_nl ${XMLTV_OPTS} \
-	&& DEPEND="${DEPEND} dev-perl/HTML-Tree"
+	&& newdepend dev-perl/HTML-Tree
 [ -z "${XMLTV_OPTS}" ] || has tv_grab_nl_wolf ${XMLTV_OPTS} \
-	&& DEPEND="${DEPEND} dev-perl/HTML-Tree"
+	&& newdepend dev-perl/HTML-Tree
 [ -z "${XMLTV_OPTS}" ] || has tv_grab_huro ${XMLTV_OPTS} \
-	&& DEPEND="${DEPEND} dev-perl/HTML-Tree"
+	&& newdepend dev-perl/HTML-Tree
 [ -z "${XMLTV_OPTS}" ] || has tv_grab_dk ${XMLTV_OPTS} \
-	&& DEPEND="${DEPEND} dev-perl/HTML-Tree"
+	&& newdepend dev-perl/HTML-Tree
 [ -z "${XMLTV_OPTS}" ] || has tv_grab_jp ${XMLTV_OPTS} \
-	&& DEPEND="${DEPEND} dev-perl/HTML-Tree dev-perl/Text-Kakasi"
+	&& newdepend dev-perl/HTML-Tree dev-perl/Text-Kakasi
 [ -z "${XMLTV_OPTS}" ] || has tv_grab_de_tvtoday ${XMLTV_OPTS} \
-	&& DEPEND="${DEPEND} >=dev-perl/HTML-Parser-3.34 dev-perl/HTML-Tree"
+	&& newdepend >=dev-perl/HTML-Parser-3.34 dev-perl/HTML-Tree
 [ -z "${XMLTV_OPTS}" ] || has tv_grab_se ${XMLTV_OPTS} \
-	&& DEPEND="${DEPEND} dev-perl/XML-LibXML"
+	&& newdepend dev-perl/XML-LibXML
 [ -z "${XMLTV_OPTS}" ] || has tv_grab_fr ${XMLTV_OPTS} \
-	&& DEPEND="${DEPEND} >=dev-perl/HTML-Parser-3.34 dev-perl/HTML-Tree"
+	&& newdepend >=dev-perl/HTML-Parser-3.34 dev-perl/HTML-Tree
 [ -z "${XMLTV_OPTS}" ] || has tv_grab_no ${XMLTV_OPTS} \
-	&& DEPEND="${DEPEND} >=dev-perl/HTML-Parser-3.34 dev-perl/HTML-TableExtract dev-perl/HTML-LinkExtractor"
+	&& newdepend >=dev-perl/HTML-Parser-3.34 dev-perl/HTML-TableExtract dev-perl/HTML-LinkExtractor
 [ -z "${XMLTV_OPTS}" ] || has tv_grab_pt ${XMLTV_OPTS} \
-	&& DEPEND="${DEPEND} dev-perl/HTML-Tree"
+	&& newdepend dev-perl/HTML-Tree
 [ -z "${XMLTV_OPTS}" ] || has tv_check ${XMLTV_OPTS} \
-	&& DEPEND="${DEPEND} dev-perl/perl-tk dev-perl/Tk-TableMatrix"
+	&& newdepend dev-perl/perl-tk dev-perl/Tk-TableMatrix
 [ -z "${XMLTV_OPTS}" ] || has tv_pick_cgi ${XMLTV_OPTS} \
-	&& DEPEND="${DEPEND} dev-perl/CGI"
+	&& newdepend dev-perl/CGI
 
 make_config() {
 	if [ -z "${XMLTV_OPTS}" ] ; then
