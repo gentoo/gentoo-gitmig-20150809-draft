@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.53 2003/10/02 02:55:52 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.54 2003/10/02 18:28:11 brad_mssw Exp $
+
+  02 Oct 2003; Brad House <brad_mssw@gentoo.org> db-3.2.9-r7.ebuild:
+  add ~amd64 flag
 
   01 Oct 2003; Jason Wever <weeve@gentoo.org> db-4.0.14-r2.ebuild:
   Added sparc keyword, fixed bug #28328.
