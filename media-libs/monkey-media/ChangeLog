@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/monkey-media
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/monkey-media/ChangeLog,v 1.4 2002/12/04 19:19:46 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/monkey-media/ChangeLog,v 1.5 2002/12/24 21:11:11 azarah Exp $
+
+  23 Dec 2002; Martin Schlemmer <azarah@gentoo.org> monkey-media-0.6.0.ebuild :
+  Fix glib dep, as it work with glib-2.2.0 ..  Take out the -Werror, as it
+  causes things to bork ..
 
   04 Dec 2002; Martin Schlemmer <azarah@gentoo.org> monkey-media-0.6.0.ebuild :
   Work with gtk+-2.1 and atk-1.1 ...

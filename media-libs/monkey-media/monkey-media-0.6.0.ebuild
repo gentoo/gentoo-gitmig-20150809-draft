@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/monkey-media/monkey-media-0.6.0.ebuild,v 1.2 2002/12/04 19:19:46 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/monkey-media/monkey-media-0.6.0.ebuild,v 1.3 2002/12/24 21:11:16 azarah Exp $
 
 IUSE="doc"
 
@@ -18,7 +18,7 @@ KEYWORDS="~x86 ~ppc"
 RDEPEND="
 	>=x11-libs/gtk+-2.0.6
 	>=dev-libs/atk-1.0
-	=dev-libs/glib-2.0*
+	>=dev-libs/glib-2.0*
 	>=media-libs/audiofile-0.2.3
 	=gnome-base/gnome-vfs-2.0*
 	>=media-libs/gstreamer-0.4.2
@@ -42,7 +42,9 @@ src_compile () {
 	find . -iname makefile |while read MAKEFILE
 		do einfo "parsing ${MAKEFILE}"
 		cp ${MAKEFILE}  ${MAKEFILE}.old
-		sed -e "s:-I/usr/include : :g" ${MAKEFILE}.old > ${MAKEFILE}
+		sed -e "s:-I/usr/include : :g" \
+		    -e "s:-Werror::g" \
+		    ${MAKEFILE}.old > ${MAKEFILE}
 	done
 	emake || die "compile failed" 
 
