@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tleds/tleds-1.05_beta11.ebuild,v 1.10 2004/01/23 02:06:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tleds/tleds-1.05_beta11.ebuild,v 1.11 2004/06/09 18:31:22 agriffis Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ src_unpack() {
 }
 
 src_compile() {
-	if [ `use X` ] ; then
+	if use X ; then
 		emake all || die "make failed :("
 	else
 		emake tleds || die "make tleds failed :("
