@@ -1,6 +1,12 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.80 2004/03/16 02:39:24 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.81 2004/03/20 23:04:20 foser Exp $
+
+*mautilus-2.5.91
+
+  20 Mar 2004; foser <foser@gentoo.org> nautilus-2.5.91.ebuild :
+  Gnome 2.6 commit
+  Dep on icon-them-1.1 because of the default open folder icons
 
   15 Mar 2004; Stephen P. Becker <geoman@gentoo.org> nautilus-2.4.2.ebuild:
   Added ~mips keyword.
@@ -10,6 +16,9 @@
 
   10 Feb 2004; <spider@gentoo.org> nautilus-2.4.2.ebuild:
   added intltool dep (XML::Parser)
+
+  10 Feb 2004; foser <foser@gentoo.org> nautilus-2.4.2.ebuild :
+  Add intltool dep to fix XML-Parser issues (#41109)
 
   10 Feb 2004; Gustavo Zacarias <gustavoz@gentoo.org> nautilus-2.4.2.ebuild:
   stable on hppa and sparc
