@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author: Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/lynx-2.8.4a-r2.ebuild,v 1.1 2001/08/30 03:22:02 woodchip Exp $
+# Author Achim Gottinger <achim@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/lynx-2.8.4a-r2.ebuild,v 1.2 2001/08/31 01:07:34 woodchip Exp $
 
 S=${WORKDIR}/lynx2-8-4
 HOMEPAGE="http://lynx.browser.org/"
