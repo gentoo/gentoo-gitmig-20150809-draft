@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-3.3.2-r2.ebuild,v 1.3 2004/08/06 17:24:26 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-3.3.2-r2.ebuild,v 1.4 2004/08/06 17:28:17 axxo Exp $
 
 inherit eutils
 
@@ -43,7 +43,7 @@ src_install() {
 	dodir ${TOMCAT_HOME} /var/log/${TOMCAT_NAME} /etc/${TOMCAT_NAME}
 	keepdir /var/log/${TOMCAT_NAME}
 
-	mv conf ${D}/etc/${TOMCAT_NAME}
+	mv conf/* ${D}/etc/${TOMCAT_NAME}
 	mv bin doc lib modules native webapps ${D}${TOMCAT_HOME}
 
 	dosym /etc/${TOMCAT_NAME} ${TOMCAT_HOME}/conf
