@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/pmud 
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Id: ChangeLog,v 1.6 2002/07/20 00:06:16 gerk Exp $
+# $Id: ChangeLog,v 1.7 2002/07/23 11:56:53 cselkirk Exp $
 
 *pmud-0.10.1-r2.ebuild (14 July 2002)
+
+  23 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> files/pmud.start
+  Also redirected stder & stdout to /dev/null on stop().
 
   19 Jul 2002; Mark Guertin <gerk@gentoo.org> files/pmud.start
   Added >/dev/null 2>&1 to surpress extra output of pmud at system startup
