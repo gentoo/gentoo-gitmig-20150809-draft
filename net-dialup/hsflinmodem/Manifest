@@ -1,3 +1,5 @@
-MD5 cc8c9a24bc6049eb97ac8f5f66aec4fd files/digest-hsflinmodem-5.03.27.02122600 88
+MD5 425e19e9ff4fa7faf26997105c2688bd ChangeLog 1147
+MD5 ba607e5d24cf119b9ca5824325d07a66 hsflinmodem-5.03.27.03042700.ebuild 826
 MD5 d510a5be63f9019a49c5572bc950472c hsflinmodem-5.03.27.02122600.ebuild 807
-MD5 64b25ae4da5672c9b060c9c3bbf44391 ChangeLog 1007
+MD5 cc8c9a24bc6049eb97ac8f5f66aec4fd files/digest-hsflinmodem-5.03.27.02122600 88
+MD5 222986571fa7485c7c0868210312f2c6 files/digest-hsflinmodem-5.03.27.03042700 88
