@@ -1,0 +1,23 @@
+# ChangeLog for app-sci/raster3d
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/raster3d/ChangeLog,v 1.1 2004/12/24 17:04:44 ribosome Exp $
+
+*raster3d-2.6e (24 Dec 2004)
+
+  24 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +raster3d-2.6e.ebuild:
+  Moved from app-sci/raster3d to sci-chemistry/raster3d.
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> raster3d-2.6e.ebuild:
+  Adding IUSE
+
+*raster3d-2.6e (01 Nov 2002)
+
+  01 Nov 2002; George Shapovalov <george@gentoo.org> raster3d-2.6e.ebuild :
+  
+  first commit
+  Raster3D is a set of tools for
+  generating high quality raster images of proteins or other molecules. The
+  homepage is at http://www.bmsc.washington.edu/raster3d/raster3d.html.
+  
+  ebuild submitted by Jianghai Zhu <zhu5@purdue.edu>
