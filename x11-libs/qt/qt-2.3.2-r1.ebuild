@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-2.3.2-r1.ebuild,v 1.18 2003/03/15 12:25:10 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-2.3.2-r1.ebuild,v 1.19 2003/04/27 14:14:17 pauldv Exp $
 
 IUSE="gif opengl nas"
 
@@ -34,6 +34,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
+	chmod +w configure
 	cp configure configure.orig
 	sed -e "s:read acceptance:acceptance=yes:" configure.orig > configure
 
