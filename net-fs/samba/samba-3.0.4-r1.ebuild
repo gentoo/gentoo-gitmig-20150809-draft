@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.4-r1.ebuild,v 1.1 2004/06/11 14:30:14 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.4-r1.ebuild,v 1.2 2004/06/15 02:31:11 agriffis Exp $
 
 inherit eutils
 
@@ -322,7 +322,7 @@ src_install() {
 		cd ${WORKDIR}/smbldap-tools-${SMBLDAP_TOOLS_VER}
 		dodoc CONTRIBUTORS COPYING ChangeLog FILES INFRA INSTALL README TODO
 	fi
-	if [ -z "`use doc`" ]; then
+	if ! use doc; then
 		rm -rf ${D}/usr/share/doc/${PF}/swat/help/{guide,howto,devel}
 		rm -rf ${D}/usr/share/doc/${PF}/swat/using_samba
 	fi
