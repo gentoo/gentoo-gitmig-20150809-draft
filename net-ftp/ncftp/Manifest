@@ -4,14 +4,11 @@ Hash: SHA1
 MD5 0706dee12ee43de999cfbffa64b61dc2 ChangeLog 3905
 MD5 2f4035e2a68bf680d7e936f9f4676b0c metadata.xml 715
 MD5 bff9e3daf8193a35b37834c4415ac86c ncftp-3.1.8.ebuild 829
-MD5 9aa681679f93288cabb711efdd4f6ba4 ncftp-3.1.7.ebuild 822
 MD5 1436077c34d3a623944d848639bd92dd files/digest-ncftp-3.1.8 142
-MD5 8b3b76f500340f4728601c1c99bb04fe files/ncftp-3.1.5-cjk.patch 360
-MD5 b62d8b6b7801c9d6ebca4f3fdc7b654c files/digest-ncftp-3.1.7 141
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB3yT2roRuSHgZdywRAkphAJ4+L41SUqGEcIBSHmYE9Lni3NyfwQCgg8qi
-KwsTPl20a18ebi7qskkV+yQ=
-=oXGh
+iD8DBQFB3zUyroRuSHgZdywRAqyvAJ0Zy7q08D+vG5u9K4sqTHT/hXuhLwCdF6fC
+aY9B+AGTNY11X0jhuP61PQE=
+=w25q
 -----END PGP SIGNATURE-----
