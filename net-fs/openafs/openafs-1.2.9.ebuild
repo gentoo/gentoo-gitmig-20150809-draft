@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.9.ebuild,v 1.5 2003/10/20 05:32:21 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.9.ebuild,v 1.6 2003/11/21 18:16:46 rphillips Exp $
 
 inherit check-kernel
 
@@ -22,7 +22,7 @@ DEPEND="virtual/linux-sources
 	>=sys-libs/ncurses-5.2
 	>=sys-libs/pam-0.75"
 
-ARCH=i386_linux24
+SYS_NAME=i386_linux24
 
 
 pkg_setup() {
@@ -59,7 +59,7 @@ src_compile() {
 src_install () {
 	# Client
 
-	cd ${S}/${ARCH}/dest/root.client/usr/vice
+	cd ${S}/${SYS_NAME}/dest/root.client/usr/vice
 
 	insinto /etc/afs/modload
 	doins etc/modload/*
@@ -78,7 +78,7 @@ src_install () {
 	dosbin etc/afsd
 
 	# Client Bin
-	cd ${S}/${ARCH}/dest
+	cd ${S}/${SYS_NAME}/dest
 	exeinto /usr/afsws/bin
 	doexe bin/*
 
@@ -89,7 +89,7 @@ src_install () {
 	dosym  /usr/afsws/lib/afs/libtermlib.a /usr/afsws/lib/afs/libnull.a
 
 	# Server
-	cd ${S}/${ARCH}/dest/root.server/usr/afs
+	cd ${S}/${SYS_NAME}/dest/root.server/usr/afs
 	exeinto /usr/afs/bin
 	doexe bin/*
 
