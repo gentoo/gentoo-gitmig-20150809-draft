@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/Imaging-py21
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging-py21/ChangeLog,v 1.1 2004/07/20 18:13:21 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging-py21/ChangeLog,v 1.2 2004/09/02 17:28:21 pythonhead Exp $
+
+  02 Sep 2004; Rob Cakebread <pythonhead@gentoo.org>
+  imaging-py21-1.1.4.ebuild:
+  Marked stable x86
 
 *imaging-py21-1.1.4 (20 Jul 2004)
 
