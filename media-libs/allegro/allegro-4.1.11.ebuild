@@ -1,9 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.1.11.ebuild,v 1.3 2003/09/24 21:51:32 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/allegro-4.1.11.ebuild,v 1.4 2004/02/29 09:45:47 vapier Exp $
 
 inherit flag-o-matic
-filter-flags -fPIC
 
 DESCRIPTION="cross-platform multimedia library"
 SRC_URI="mirror://sourceforge/alleg/${P}.tar.gz"
@@ -31,6 +30,7 @@ src_unpack() {
 }
 
 src_compile() {
+	filter-flags -fPIC
 	econf \
 		--enable-linux \
 		--enable-vga \
