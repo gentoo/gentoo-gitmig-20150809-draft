@@ -110,6 +110,13 @@ net-misc/radvd
 # <aliz@gentoo.org> (24 Jul 2002)
 # masked for testing
 =sys-apps/groff-1.18
+<<<<<<< package.mask
+
+# <drobbins@gentoo.org> 24 Jul 2002
+# this version breaks with gcc 3.1
+# =net-im/gnomemeeting-0.93.0
+=======
+>>>>>>> 1.1077
 
 # <seemant@gentoo.org> (23 Jul 2002)
 # Masked while the system people put this through the test
@@ -226,8 +233,9 @@ sys-apps/mkisofs
 =sys-apps/portage-2.0.14
 =sys-apps/portage-2.0.15
 =sys-apps/portage-2.0.16
-#versions for testing:
 =sys-apps/portage-2.0.17
+#versions for testing:
+=sys-apps/portage-2.0.18
 
 # lamer@gentoo.org (15 Jul 2002)
 # Needs socks testing
