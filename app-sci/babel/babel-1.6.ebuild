@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/babel/babel-1.6.ebuild,v 1.13 2004/03/03 13:23:52 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/babel/babel-1.6.ebuild,v 1.14 2004/03/26 12:05:17 phosphan Exp $
+
+inherit eutils
 
 DESCRIPTION="Babel is a program to interconvert file formats used in molecular modeling."
 
