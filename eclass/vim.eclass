@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.103 2005/03/21 18:00:16 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.104 2005/03/24 16:36:32 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -317,9 +317,10 @@ src_compile() {
 	WANT_AUTOCONF=2.5 \
 		make -C src $confrule || die "make $confrule failed"
 
-	# This should fix a sandbox violation (see bug 24447)
-	for file in /dev/pty/s* /dev/console; do
-		addwrite $file
+	# This should fix a sandbox violation (see bug 24447). The hvc
+	# things are for ppc64, see bug 86433.
+	for file in /dev/pty/s* /dev/console /dev/hvc/* /dev/hvc* ; do
+		[[ -e ${file} ]] && addwrite $file
 	done
 
 	if [[ "${MY_PN}" == "vim-core" ]] ||
