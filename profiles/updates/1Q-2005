@@ -231,3 +231,4 @@ move net-www/httrack www-client/httrack
 move net-www/surfraw www-client/surfraw
 move media-gfx/pfaedit media-gfx/fontforge
 move net-www/w3mir www-client/w3mir
+move net-www/kazehakase-cvs www-client/kazehakase-cvs
