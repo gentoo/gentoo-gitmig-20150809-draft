@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exmh/exmh-2.6.3.ebuild,v 1.1 2003/07/31 19:08:15 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exmh/exmh-2.6.3.ebuild,v 1.2 2003/07/31 19:10:16 rphillips Exp $
 
 DESCRIPTION="An X user interface for MH mail"
 SRC_URI="ftp://ftp.scriptics.com/pub/tcl/${PN}/${PN}-${PV}.tar.gz"
@@ -25,7 +25,7 @@ src_unpack() {
 	cd ${S}
 	for i in *.MASTER; do cp $i ${i%%.MASTER}; done
 	mv exmh.l exmh.1
-	patch -p1 < ${FILESDIR}/exmh-2.5-conf.patch
+	patch -p1 < ${FILESDIR}/exmh-2.6.3-conf.patch
 	cd misc
 	rm -rf RPM *tar* *gbuffy*
 	for i in *

@@ -1,0 +1,87 @@
+diff -urN exmh-2.6.3/exmh exmh-2.6.3-gentoo/exmh
+--- exmh-2.6.3/exmh	2003-04-19 12:41:21.000000000 +0200
++++ exmh-2.6.3-gentoo/exmh	2003-04-19 12:34:08.000000000 +0200
+@@ -1,4 +1,4 @@
+-#!wish -f
++#!/usr/bin/wish -f
+ #
+ # TK interface to the MH Mail utility
+ # Brent Welch <welch@acm.org>
+@@ -17,6 +17,8 @@
+ 
+ # The following lines are patched by exmh.install
+ #CONFIGURATION
++source /etc/exmh.conf
++set exmh(version) "version 2.6.3 04/02/2003 (gentoo $exmh(gentoo-config-version))"
+ #END CONFIGURATION
+ 
+ if [catch {file join a b}] {
+diff -urN exmh-2.6.3/exmh-bg exmh-2.6.3-gentoo/exmh-bg
+--- exmh-2.6.3/exmh-bg	2003-04-19 12:41:21.000000000 +0200
++++ exmh-2.6.3-gentoo/exmh-bg	2003-04-19 12:34:29.000000000 +0200
+@@ -1,4 +1,4 @@
+-#!wish -f
++#!/usr/bin/wish -f
+ #
+ # Background processing script for exmh.
+ # This does stuff and then sends messages to the background module
+@@ -17,6 +17,8 @@
+ # any specification.
+ 
+ #CONFIGURATION
++source /etc/exmh.conf
++set exmh(version) "version 2.6.3 04/02/2003 (gentoo $exmh(gentoo-config-version))"
+ #END CONFIGURATION
+ 
+ wm withdraw .
+diff -urN exmh-2.6.3/exmh-strip exmh-2.6.3-gentoo/exmh-strip
+--- exmh-2.6.3/exmh-strip	2003-04-19 12:41:21.000000000 +0200
++++ exmh-2.6.3-gentoo/exmh-strip	2003-04-19 12:33:58.000000000 +0200
+@@ -1,4 +1,4 @@
+-#!wish
++#!/usr/bin/wish -f
+ #
+ # Utility to strip out attachments from MIME messages.
+ # They are replaced with references to the external files.
+@@ -41,6 +41,8 @@
+ # any specification.
+ 
+ #CONFIGURATION
++source /etc/exmh.conf
++set exmh(version) "version 2.6.3 04/02/2003 (gentoo $exmh(gentoo-config-version))"
+ #END CONFIGURATION
+ 
+ if {[catch {wm withdraw .}]} {
+diff -urN exmh-2.6.3/gentoo/exmh.conf exmh-2.6.3-gentoo/gentoo/exmh.conf
+--- exmh-2.6.3/gentoo/exmh.conf	1970-01-01 01:00:00.000000000 +0100
++++ exmh-2.6.3-gentoo/gentoo/exmh.conf	2003-04-19 15:04:01.000000000 +0200
+@@ -0,0 +1,29 @@
++# /etc/exmh.conf - configuration file for exmh
++# this is sourced by exmh, so please use tcl syntax
++set wish /usr/bin/wish
++set exmh(gentoo-config-version) {2.6.3}
++set exmh(name) exmh
++set exmh(maintainer) welch@acm.org
++set mh_path /usr/bin
++set exmh(slocal) /usr/bin/slocal
++set mime(dir) /usr/bin
++set mailcap_default /etc/mailcap
++set mimetypes_default /etc/mime.types
++set exmh(expect) /usr/bin/expect
++set exmh(expectk) /usr/expectk
++set faces(dir) /usr/lib/faces
++set faces(set,user) {local users usenix misc}
++set faces(set,unknown) {domains unknown}
++set faces(set,news) news
++set faces(defaultDomain) panasas.com
++set faces(suffix) {xpm gif xbm}
++set pgp(pgp,path) /usr/bin
++set pgp(pgp5,path) /usr/bin
++set pgp(gpg,path) /usr/bin
++set pgp(pgp6,path) /usr/bin
++set glimpse(path) /usr/bin
++set sound(cmd) {/usr/bin/play -v 38}
++set exmh(library) /usr/lib/exmh-2.6.3
++set install(dir,bin) /usr/bin
++set install(dir,man) /usr/share/man/manl
++set install(dir,lib) /usr/lib/exmh-2.6.3
