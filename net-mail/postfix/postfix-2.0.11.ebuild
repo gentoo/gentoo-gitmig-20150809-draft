@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.11.ebuild,v 1.3 2003/06/13 10:34:58 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.11.ebuild,v 1.4 2003/06/13 12:18:14 seemant Exp $
+
+IUSE="ssl mysql sasl ldap ipv6 maildir mbox"
 
 inherit eutils
 
@@ -8,18 +10,21 @@ TLS_P="pfixtls-0.8.13-2.0.10-0.9.7b"
 IPV6="1.14"
 IPV6_P="ipv6-${IPV6}-pf-${PV}"
 IPV6_TLS_P="tls+${IPV6_P}"
-IUSE="ssl mysql sasl ldap ipv6 maildir mbox"
+
 DESCRIPTION="A fast and secure drop-in replacement for sendmail"
 HOMEPAGE="http://www.postfix.org"
 SRC_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/official/${P}.tar.gz
 	ssl? ( ftp://ftp.aet.tu-cottbus.de/pub/postfix_tls/${TLS_P}.tar.gz )
 	ipv6? ( ftp://ftp.stack.nl/pub/postfix/tls+ipv6/${IPV6}/${IPV6_P}.patch.gz )
 	ipv6? ( ftp://ftp.stack.nl/pub/postfix/tls+ipv6/${IPV6}/${IPV6_TLS_P}.patch.gz )"
-LICENSE="IPL-1"
+
 SLOT="0"
+LICENSE="IPL-1"
 KEYWORDS="~x86 ~sparc ~ppc"
+
 PROVIDE="virtual/mta
-	 virtual/mda"
+	virtual/mda"
+
 DEPEND=">=sys-libs/db-3.2
 	>=sys-apps/sed-4
 	>=dev-libs/libpcre-3.4
@@ -27,6 +32,7 @@ DEPEND=">=sys-libs/db-3.2
 	mysql? ( >=dev-db/mysql-3.23.51 )
 	ssl? ( >=dev-libs/openssl-0.9.6g )
 	sasl? ( dev-libs/cyrus-sasl )"
+
 RDEPEND="${DEPEND}
 	>=net-mail/mailbase-0.00
 	!virtual/mta"
@@ -47,6 +53,29 @@ pkg_setup() {
 	if ! grep -q ^mail:.*postfix /etc/group ; then
 		usermod -G mail postfix || die "problem adding user postfix to group mail"
 	fi
+	
+	# Prevent mangling the smtpd.conf file
+	if [ ! -L ${ROOT}/usr/lib/sasl2/smtpd.conf ]
+	then
+		if [ -f ${ROOT}/usr/lib/sasl2/smtpd.conf ]
+		then
+			ebegin "Protecting your smtpd.conf file"
+			if [ ! -d ${ROOT}/etc/sasl2 ]
+			then
+				mkdir -p ${ROOT}/etc/sasl2
+			fi
+
+			if [ -f ${ROOT}/etc/sasl2/smtpd.conf ]
+			then
+				mv ${ROOT}/usr/lib/sasl2/smtpd.conf \
+					${ROOT}/etc/sasl2/._cfg0000_smtpd.conf
+			else
+				mv ${ROOT}/usr/lib/sasl2/smtpd.conf ${ROOT}/etc/sasl2
+			fi
+			eend
+		fi
+	fi
+
 }
 
 src_unpack() {
@@ -54,15 +83,15 @@ src_unpack() {
 	cd ${S}
 	if [ "`use ssl`" ]; then
 		if [ "`use ipv6`" ]; then
-			epatch ${DISTDIR}/${IPV6_TLS_P}.patch.gz || die "ipv6/tls patch died"
+			epatch ${DISTDIR}/${IPV6_TLS_P}.patch.gz
 		else
 			unpack ${TLS_P}.tar.gz
-			epatch ${WORKDIR}/${P}/${TLS_P}/pfixtls.diff || die "tls patch died"
+			epatch ${WORKDIR}/${P}/${TLS_P}/pfixtls.diff
 		fi
 		CCARGS="${CCARGS} -DHAS_SSL"
 		AUXLIBS="${AUXLIBS} -lssl -lcrypto"
 	elif [ "`use ipv6`" ]; then
-		epatch ${DISTDIR}/${IPV6_P}.patch.gz || die "ipv6 patch died"
+		epatch ${DISTDIR}/${IPV6_P}.patch.gz
 	fi
 	cd ${S}/conf
 	sed -i -e "s:/usr/libexec/postfix:/usr/lib/postfix:" main.cf
@@ -117,14 +146,13 @@ src_compile() {
 }
 
 src_install () {
-	dodir /usr/bin /usr/sbin /usr/lib/postfix /etc/postfix/sample \
-		/var/spool/postfix/tmp
-	touch ${D}/var/spool/postfix/.keep
+	dodir /usr/bin /usr/sbin /usr/lib/postfix /etc/postfix/sample
+	keepdir /var/spool/postfix/tmp
 
 	cd ${S}/bin
 	dosbin post* sendmail
-	chown root:postdrop ${D}/usr/sbin/{postdrop,postqueue}
-	chmod 2755 ${D}/usr/sbin/{postdrop,postqueue}
+	fowners root:postdrop /usr/sbin/{postdrop,postqueue}
+	fperms 2755 /usr/sbin/{postdrop,postqueue}
 
 	dosym /usr/sbin/sendmail /usr/bin/mailq
 	dosym /usr/sbin/sendmail /usr/bin/newaliases
@@ -166,16 +194,13 @@ src_install () {
 	exeinto /etc/init.d ; doexe ${FILESDIR}/postfix
 	insinto /etc/pam.d ; newins ${FILESDIR}/smtp.pam smtp
 
+	insinto /etc/sasl2
+	doins ${FILESDIR}/smtpd.conf
 	if [ "`use sasl`" ] ; then
-		# sasl 2
-		if [ -f /usr/include/sasl/sasl.h ] ; then
-			insinto /usr/lib/sasl2
-			doins ${FILESDIR}/smtpd.conf
-		else
-			insinto /etc/sasl
-			doins ${FILESDIR}/smtpd.conf
-		fi
+		dodir /usr/lib/sasl2
+		dosym ../../../etc/sasl2/smtpd.conf /usr/lib/sasl2/smtpd.conf
 	fi
+
 	cd ${D}/etc/postfix
 	if [ "`use maildir`" ]; then
 		sed -i -e "s:^#\(home_mailbox = \)Maildir/:\1.maildir/:" main.cf
