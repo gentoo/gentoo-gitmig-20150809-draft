@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.2.ebuild,v 1.17 2002/11/30 01:53:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.2.ebuild,v 1.18 2002/12/09 04:25:04 manson Exp $
 
 IUSE="ssl opengl motif ldap encode samba cups oggvorbis pam"
 inherit kde-dist
 
 DESCRIPTION="KDE $PV - base packages: the desktop, panel, window manager, konqueror..."
 
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 newdepend ">=media-sound/cdparanoia-3.9.8
 	ldap? ( >=net-nds/openldap-1.2 )

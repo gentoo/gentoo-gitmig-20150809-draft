@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/kde-3.0.2.ebuild,v 1.11 2002/10/04 05:40:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/kde-3.0.2.ebuild,v 1.12 2002/12/09 04:25:04 manson Exp $
 
 DESCRIPTION="KDE $PV - merge this to pull in all non-developer kde-base/* packages"
 HOMEPAGE="http://www.kde.org/"
@@ -9,4 +9,4 @@ RDEPEND=`echo ~kde-base/kde{libs,base,addons,admin,artwork,edu,games,graphics,mu
 
 SLOT="3.0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.0.2-r1.ebuild,v 1.12 2002/12/02 19:57:56 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.0.2-r1.ebuild,v 1.13 2002/12/09 04:25:04 manson Exp $
 
 IUSE="ssl cups ipv6 alsa"
 inherit kde kde.org
@@ -9,7 +9,7 @@ inherit kde kde.org
 # check need for glib >=1.3.3 (we have 1.2.10 only; configure has no glib flag but searches for it)
 
 DESCRIPTION="KDE $PV - base libraries needed by all kde programs"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 HOMEPAGE="http//www.kde.org/"
 
 SLOT="3.0"
@@ -65,7 +65,7 @@ src_compile() {
 	use cups	&& myconf="$myconf --enable-cups"		|| myconf="$myconf --disable-cups"
 	
 	[ "$ARCH" != "ppc" ] && \
-		[ "$ARCH" != "sparc" ] && [ "$ARCH" != "sparc64" ] && \
+		[ "$ARCH" != "sparc" ] && [ "$ARCH" != "" ] && \
 		myconf="$myconf --enable-fast-malloc=full"
 	
 	kde_src_compile configure make
