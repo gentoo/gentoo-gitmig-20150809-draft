@@ -1,6 +1,5 @@
 #!/sbin/runscript
 
-# dont write the hourly --MARK-- message
 SYSLOGD="-m 0"
 # send warnings and above to the console
 KLOGD="-c 3 -2"
@@ -11,9 +10,9 @@ depend() {
 
 start() {
     ebegin "Starting syslogd, klogd"
-    start-stop-daemon --start --quiet --exec /usr/sbin/syslogd -- ${SYSLOGD}
+    start-stop-daemon --start --quiet --exec /usr/sbin/syslogd -- $SYSLOGD
     retval=$?
-    start-stop-daemon --start --quiet --exec /usr/sbin/klogd -- ${KLOGD}
+    start-stop-daemon --start --quiet --exec /usr/sbin/klogd -- $KLOGD
     retval=$(( $retval + $? ))
     eend $retval 
 }
