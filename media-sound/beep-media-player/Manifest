@@ -1,11 +1,21 @@
-MD5 df88ae2a1afc4f6a4509337489a101d0 beep-media-player-0.9.7-r1.ebuild 2275
-MD5 868ef0748cad8d5fa63d8be0667faf4a beep-media-player-0.9.7.ebuild 2070
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a31ccc69b99456e3ceb4982a57427963 ChangeLog 7377
 MD5 319fe8f45b51a2d31f8d4e9a4071ca10 metadata.xml 248
-MD5 def3db973ff34b2dbd4b91732c75da29 ChangeLog 7267
-MD5 ee4927a008cb64a390c357f4875f7e30 beep-media-player-0.9.7-r2.ebuild 2326
-MD5 bea6e241ce4dae7a01125836fda25fcc files/0.9.7-bigendian.patch 315
-MD5 533bcd69c3357e3b6dd5b3a49afbb6bf files/0.9.7-noclick-resize.patch 974
+MD5 ac66b2f1affa97ffc408b53daa8a5d2f beep-media-player-0.9.7.ebuild 2070
+MD5 f4f2f6f94fc39c6dc3acddf92a477e91 beep-media-player-0.9.7-r1.ebuild 2275
+MD5 cbc98b23465b22a040f42d70d7019e7f beep-media-player-0.9.7-r2.ebuild 2325
 MD5 e0224d7dcc5a2cb1af6ea6b18a6daea8 files/beep-config 3347
-MD5 8b9a3f5a01668b72272dc2f8b2969659 files/digest-beep-media-player-0.9.7 62
-MD5 8b9a3f5a01668b72272dc2f8b2969659 files/digest-beep-media-player-0.9.7-r1 62
 MD5 8b9a3f5a01668b72272dc2f8b2969659 files/digest-beep-media-player-0.9.7-r2 62
+MD5 8b9a3f5a01668b72272dc2f8b2969659 files/digest-beep-media-player-0.9.7 62
+MD5 533bcd69c3357e3b6dd5b3a49afbb6bf files/0.9.7-noclick-resize.patch 974
+MD5 8b9a3f5a01668b72272dc2f8b2969659 files/digest-beep-media-player-0.9.7-r1 62
+MD5 bea6e241ce4dae7a01125836fda25fcc files/0.9.7-bigendian.patch 315
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB2cakKRy60XGEcJIRAopGAJ9GlV42xKWEt9VVEhhbSel4Ofi9fwCdFHm9
+o2coIKbqHuQhUMaEnTE4/Dk=
+=okTL
+-----END PGP SIGNATURE-----

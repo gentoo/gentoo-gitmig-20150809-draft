@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.7-r1.ebuild,v 1.4 2004/12/28 19:54:36 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.7-r1.ebuild,v 1.5 2005/01/03 22:26:34 gustavoz Exp $
 
 IUSE="nls gnome mp3 oggvorbis alsa oss esd mmx old-eq"
 
