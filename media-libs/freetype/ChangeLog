@@ -1,6 +1,8 @@
 # ChangeLog for media-libs/freetype
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.1 2002/02/01 21:53:30 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.2 2002/02/17 17:41:09 azarah Exp $
+
+*freetype-2.0.8 (17 Feb 2002)
 
 *freetype-2.0.5-r1 (1 Feb 2002)
 
