@@ -1,0 +1,8 @@
+# ChangeLog for gnome-base/bonobo-activation
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo-activation/ChangeLog,v 1.1 2002/05/22 20:52:17 spider Exp $
+
+*bonobo-activation-0.9.8 (22 May 2002)
+  22 May 2002; Spider <spider@gentoo.org> bonobo-activation-0.9.8.ebuild:
+  part of gnome2 . initial cvs commit
+
