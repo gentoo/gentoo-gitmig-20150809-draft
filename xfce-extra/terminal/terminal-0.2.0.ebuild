@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/terminal-0.2.0.ebuild,v 1.1 2004/12/02 18:21:29 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/terminal-0.2.0.ebuild,v 1.2 2004/12/02 21:32:31 bcowan Exp $
 
 MY_P="${PN/t/T}-${PV}"
 S=${WORKDIR}/${MY_P}
@@ -19,7 +19,8 @@ RDEPEND=">=x11-libs/gtk+-2.4*
 	>=xfce-extra/exo-0.2.0
 	>=x11-libs/vte-0.11.11
 	x11-libs/startup-notification
-	xfce-base/xfce4-base"
+	>=xfce-base/libxfcegui4-4.1.99.1
+	>=xfce-base/libxfce4util-4.1.99.1"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 src_compile() {
