@@ -1,6 +1,11 @@
 # ChangeLog for app-text/tkinfo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tkinfo/ChangeLog,v 1.6 2003/07/17 00:08:38 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tkinfo/ChangeLog,v 1.7 2003/08/25 07:03:30 msterret Exp $
+
+*tkinfo-2.6 (25 Aug 2003)
+
+  25 Aug 2003; Michael Sterrett <msterret@gentoo.org> tkinfo-2.6.ebuild:
+  version bump
 
   17 Jul 2003; Lars Weiler <pylon@gentoo.org> tkinfo-2.5-r1.ebuild:
   Set ppc into KEYWORDS
