@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.20.ebuild,v 1.6 2003/12/24 00:44:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.20.ebuild,v 1.7 2004/01/02 06:32:44 vapier Exp $
 
 inherit eutils
 
@@ -34,6 +34,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-linux-2.6.patch
+	sed -i 's:wm97xx_ts=yes:wm97xx_ts=no:' configure #36924
 }
 
 src_compile() {
