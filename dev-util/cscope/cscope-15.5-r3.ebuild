@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/cscope-15.5-r3.ebuild,v 1.2 2004/12/11 01:00:32 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/cscope-15.5-r3.ebuild,v 1.3 2004/12/11 03:44:45 dragonheart Exp $
 
 inherit gnuconfig elisp-common eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/cscope/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390 ~ppc64"
+KEYWORDS="x86 ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390 ~ppc64"
 IUSE="emacs"
 
 RDEPEND=">=sys-libs/ncurses-5.2"

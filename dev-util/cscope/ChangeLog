@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/cscope
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.38 2004/11/30 12:26:07 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/ChangeLog,v 1.39 2004/12/11 03:44:45 dragonheart Exp $
+
+*cscope-15.5-r3 (11 Dec 2004)
+
+  11 Dec 2004; Daniel Black <dragonheart@gentoo.org> cscope-15.5-r3.ebuild:
+  keyworded ppc as per bug #71595
 
   30 Nov 2004; Guy Martin <gmsoft@gentoo.org> cscope-15.5-r2.ebuild:
   Stable on hppa.
