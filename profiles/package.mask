@@ -1,6 +1,25 @@
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 
+# Short-term mask, will test quickly and announce. -danarmak Jun 5th
+>=kde-base/kde-3.0.1.20020604
+>=kde-base/arts-1.0.1.20020604
+>=kde-base/kdeaddons-3.0.1.20020604
+>=kde-base/kdeadmin-3.0.1.20020604
+>=kde-base/kdeartwork-3.0.1.20020604
+>=kde-base/kdebase-3.0.1.20020604
+>=kde-base/kdebindings-3.0.1.20020604
+>=kde-base/kdeedu-3.0.1.20020604
+>=kde-base/kdegames-3.0.1.20020604
+>=kde-base/kdegraphics-3.0.1.20020604
+>=kde-base/kdelibs-3.0.1.20020604
+>=kde-base/kdemultimedia-3.0.1.20020604
+>=kde-base/kdenetwork-3.0.1.20020604
+>=kde-base/kdepim-3.0.1.20020604
+>=kde-base/kdesdk-3.0.1.20020604
+>=kde-base/kdetoys-3.0.1.20020604
+>=kde-base/kdeutils-3.0.1.20020604
+
 #Temporary masked for me to test it, will be used in new stageX gcc3.1 tarball
 #as well.. Verwilst, 6 June
 =sys-libs/glibc-2.2.5-r4
@@ -12,7 +31,7 @@ x11-libs/xosd
 # redhat patches -- blocke, 6/1/02
 <=x11-libs/gtk+-1.2.10-r7
 
-# old version isn't available, new version doesn't compile
+# old version isn't available, new version doesn't compile - danarmak
 media-libs/nurbs++
 
 # This one causes a lot of problems ... svgalib gives problems
