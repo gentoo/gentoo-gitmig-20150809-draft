@@ -1,0 +1,12 @@
+--- keys.orig	2003-09-04 12:47:12.000000000 -0500
++++ keys.c	2003-09-04 12:47:20.000000000 -0500
+@@ -60,8 +60,8 @@
+ 
+ 
+ crypt_key * GE_find_key_by_name(key_ring *ring, char *name) {
+-   gaim_debug(GAIM_DEBUG_MISC, "gaim-encryption", "find key by name: %s\n", name);
+    key_ring *i = GE_find_key_node_by_name(ring, name);
++   gaim_debug(GAIM_DEBUG_MISC, "gaim-encryption", "find key by name: %s\n", name);
+    return (i == NULL) ? NULL : ((key_ring_data *)i->data)->key;
+ }
+ 
