@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/libosip-2.0.7.ebuild,v 1.2 2004/06/24 23:13:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/libosip-2.0.7.ebuild,v 1.3 2004/07/01 22:26:11 eradicator Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ SLOT="2"
 KEYWORDS="~x86"
 LICENSE="LGPL-2"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	dev-util/gperf"
 
 src_compile() {

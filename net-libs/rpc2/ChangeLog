@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/rpc2
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/rpc2/ChangeLog,v 1.10 2004/06/24 23:17:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/rpc2/ChangeLog,v 1.11 2004/07/01 22:27:40 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> rpc2-1.13.ebuild,
+  rpc2-1.19.ebuild, rpc2-1.20.ebuild, rpc2-1.22.ebuild:
+  virtual/glibc -> virtual/libc
 
 *rpc2-1.22 (12 May 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.0.14.ebuild,v 1.2 2004/06/24 23:11:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.0.14.ebuild,v 1.3 2004/07/01 22:24:49 eradicator Exp $
 
 DESCRIPTION="A TLS 1.0 and SSL 3.0 implementation for the GNU project"
 HOMEPAGE="http://www.gnutls.org/"
@@ -16,7 +16,7 @@ KEYWORDS="~x86 ~amd64 ~sparc ~ppc ~mips ~alpha"
 RDEPEND=">=dev-libs/libgcrypt-1.1.94
 	crypt? ( >=app-crypt/opencdk-0.5.3 )
 	zlib? ( >=sys-libs/zlib-1.1 )
-	virtual/glibc"
+	virtual/libc"
 
 # Need masking on ~amd64 ~sparc ~ppc ~mips ~alpha
 #	>=dev-libs/libtasn1-0.2

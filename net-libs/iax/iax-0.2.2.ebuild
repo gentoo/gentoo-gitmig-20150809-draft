@@ -1,14 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/iax/iax-0.2.2.ebuild,v 1.4 2004/06/24 23:11:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/iax/iax-0.2.2.ebuild,v 1.5 2004/07/01 22:25:02 eradicator Exp $
 
 IUSE=""
 
 DESCRIPTION="IAX (Inter Asterisk eXchange) Library"
 HOMEPAGE="http://www.digium.com/"
 LICENSE="LGPL-2"
-DEPEND="virtual/glibc"
-RDEPEND="virtual/glibc"
+DEPEND="virtual/libc"
+RDEPEND="virtual/libc"
 SLOT="0"
 SRC_URI="http://www.digium.com/pub/libiax/${P}.tar.gz"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/cvm/cvm-0.18.ebuild,v 1.3 2004/06/25 03:10:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/cvm/cvm-0.18.ebuild,v 1.4 2004/07/01 22:24:33 eradicator Exp $
 
 inherit fixheadtails gcc
 
@@ -13,9 +13,9 @@ SLOT="0"
 KEYWORDS="x86 ~sparc"
 IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=dev-libs/bglibs-1.009"
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 
 src_unpack() {
 	unpack ${A}

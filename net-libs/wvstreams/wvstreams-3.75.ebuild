@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-3.75.ebuild,v 1.5 2004/06/24 23:18:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-3.75.ebuild,v 1.6 2004/07/01 22:27:54 eradicator Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ RDEPEND="gtk? ( >=x11-libs/gtk+-2.2.0 )
 	dev-libs/openssl"
 
 DEPEND="${RDEPEND}
-	virtual/glibc"
+	virtual/libc"
 
 S=${WORKDIR}/${P}.0
 

@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libosip
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/ChangeLog,v 1.11 2004/06/24 23:13:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libosip/ChangeLog,v 1.12 2004/07/01 22:26:11 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  libosip-0.8.8-r1.ebuild, libosip-0.8.8.ebuild, libosip-0.9.6.ebuild,
+  libosip-0.9.7.ebuild, libosip-2.0.6.ebuild, libosip-2.0.7.ebuild:
+  virtual/glibc -> virtual/libc
 
   06 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> libosip-0.9.6.ebuild:
   Stable on alpha.

@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/liblockfile-1.03.ebuild,v 1.16 2004/06/24 23:13:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/liblockfile/liblockfile-1.03.ebuild,v 1.17 2004/07/01 22:25:42 eradicator Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Implements functions designed to lock the standard mailboxes."
 SRC_URI="mirror://debian/pool/main/libl/${PN}/${PN}_${PV}.tar.gz"
 HOMEPAGE="http://www.debian.org"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 SLOT="0"
 LICENSE="LGPL-2"

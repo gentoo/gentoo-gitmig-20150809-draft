@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/libical-moz
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libical-moz/ChangeLog,v 1.7 2004/06/24 23:12:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libical-moz/ChangeLog,v 1.8 2004/07/01 22:25:15 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  libical-moz-0.23.ebuild:
+  virtual/glibc -> virtual/libc
 
   05 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> libical-moz-0.23.ebuild:
   Stable on alpha.

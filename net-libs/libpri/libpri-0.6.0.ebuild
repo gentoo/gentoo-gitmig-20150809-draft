@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/libpri-0.6.0.ebuild,v 1.2 2004/06/24 23:14:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpri/libpri-0.6.0.ebuild,v 1.3 2004/07/01 22:26:42 eradicator Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_compile() {
 	emake || die

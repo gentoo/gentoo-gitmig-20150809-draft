@@ -25,7 +25,7 @@ RDEPEND="gtk? ( >=x11-libs/gtk+-2.2.0 )
 	dev-libs/openssl"
 
 DEPEND="${RDEPEND}
-	virtual/glibc"
+	virtual/libc"
 
 S=${WORKDIR}/${P}.0
 

@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.29 2004/06/24 23:14:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.30 2004/07/01 22:26:27 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  libpcap-0.7.2-r1.ebuild, libpcap-0.7.2.ebuild, libpcap-0.8.1-r1.ebuild,
+  libpcap-0.8.1.ebuild, libpcap-0.8.3-r1.ebuild, libpcap-0.8.3.ebuild:
+  virtual/glibc -> virtual/libc
 
   04 Apr 2004; Aron Griffis <agriffis@gentoo.org> libpcap-0.8.3-r1.ebuild:
   Mark stable on alpha and ia64 for bug 46258
