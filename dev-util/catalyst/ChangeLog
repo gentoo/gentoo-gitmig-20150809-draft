@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/catalyst
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.10 2004/04/04 17:05:40 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.11 2004/04/08 18:44:02 gustavoz Exp $
+
+*catalyst-1.0.5.1 (08 Apr 2004)
+
+  08 Apr 2004; Gustavo Zacarias <gustavoz@gentoo.org> catalyst-1.0.5.1.ebuild:
+  Stable on sparc
 
   04 Apr 2004; John Davis <zhen@gentoo.org> :
   release of 1.0.5.1, fixes /dev issue in stages, as well as a modules.conf fix
