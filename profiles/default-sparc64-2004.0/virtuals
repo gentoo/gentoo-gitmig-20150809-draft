@@ -60,3 +60,4 @@ virtual/cdrtools		app-cdr/cdrtools
 virtual/mailx		mail-client/mailx
 virtual/w3m		www-client/w3m
 virtual/gnustep-back    gnustep-base/gnustep-back-art
+virtual/psviewer	app-text/gs
