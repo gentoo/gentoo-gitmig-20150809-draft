@@ -1,0 +1,31 @@
+diff -Nur gimageview-0.2.27-bak/src/gimv_thumb_view.c gimageview-0.2.27/src/gimv_thumb_view.c
+--- gimageview-0.2.27-bak/src/gimv_thumb_view.c	2004-12-20 20:07:31.000000000 +0900
++++ gimageview-0.2.27/src/gimv_thumb_view.c	2005-01-11 20:00:00.039241976 +0900
+@@ -1533,9 +1533,13 @@
+ 
+    gimv_thumb_view_sort_data (tv);
+ 
++#if 0
+    for (node = new_thumb_list; node; node = g_list_next (node))
+       tv->vfuncs->insert_thumb (tv, node->data, tv->summary_mode);
+    g_list_free(new_thumb_list);
++#endif
++
++   gimv_thumb_view_set_widget (tv, tv->tw, tv->container, tv->summary_mode);
+ }
+ 
+ 
+@@ -1577,9 +1581,13 @@
+ 
+    gimv_thumb_view_sort_data (tv);
+ 
++#if 0
+    for (node = new_thumb_list; node; node = g_list_next (node))
+       tv->vfuncs->insert_thumb (tv, node->data, tv->summary_mode);
+    g_list_free(new_thumb_list);
++#endif
++
++   gimv_thumb_view_set_widget (tv, tv->tw, tv->container, tv->summary_mode);
+ }
+ 
+ 

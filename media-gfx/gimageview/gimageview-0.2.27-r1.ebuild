@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimageview/gimageview-0.2.27-r1.ebuild,v 1.1 2005/01/19 13:13:46 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimageview/gimageview-0.2.27-r1.ebuild,v 1.2 2005/02/05 05:34:01 usata Exp $
+
+inherit eutils
 
 DESCRIPTION="Powerful GTK+ based image & movie viewer"
 HOMEPAGE="http://gtkmmviewer.sourceforge.net/"
@@ -26,6 +28,13 @@ DEPEND="virtual/x11
 		imlib? ( media-libs/imlib )
 		media-libs/gdk-pixbuf
 		) )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-sort_fix.diff
+	epatch ${FILESDIR}/${P}-gtk12_fix.diff
+}
 
 src_compile() {
 	local myconf=""
