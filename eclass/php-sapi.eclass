@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.39 2004/06/30 17:24:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.40 2004/07/05 20:43:48 mr_bones_ Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -307,7 +307,7 @@ php-sapi_src_compile() {
 	use !alpha && myconf="${myconf} `use_with java java ${JAVA_HOME}`"
 	myconf="${myconf} `use_with mcal mcal /usr`"
 	# fix bug 55150, our mcal is PAM-enabled
-	use mcal && use pam && !use imap && LDFLAGS="${LDFLAGS} -lpam"
+	use mcal && use pam && ! use imap && LDFLAGS="${LDFLAGS} -lpam"
 	[ -n "${INFORMIXDIR}" ] && myconf="${myconf} `use_with informix informix ${INFORMIXDIR}`"
 	[ -n "${ORACLE_HOME}" ] && myconf="${myconf} `use_with oci8 oci8 ${ORACLE_HOME}`"
 	myconf="${myconf} `use_with odbc unixODBC /usr`"
