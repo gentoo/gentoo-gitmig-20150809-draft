@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-alsa
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-alsa/ChangeLog,v 1.14 2004/08/18 13:39:20 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-alsa/ChangeLog,v 1.15 2004/08/19 08:27:02 gmsoft Exp $
+
+  19 Aug 2004; Guy Martin <gmsoft@gentoo.org>
+  gst-plugins-alsa-0.8.2-r1.ebuild, gst-plugins-alsa-0.8.3.ebuild:
+  Added some hppa KEYWORDS to make Mr_Bones happy.
 
 *gst-plugins-alsa-0.8.3 (18 Aug 2004)
 
