@@ -1,8 +1,12 @@
 # ChangeLog for net-analyzer/mtr
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.5 2002/12/13 10:59:47 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.6 2003/01/02 16:40:43 mholzer Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+
+*mtr-0.52 (02 Jan 2002)
+
+  02 Jan 2002; Martin Holzer <mholzer@gentoo.org> mtr-0.52.ebuild files/digest-mtr-0.52 ChangeLog :
+  Version bump. Closes #12598.
  
 *mtr-0.51 (05 Nov 2002)
 
