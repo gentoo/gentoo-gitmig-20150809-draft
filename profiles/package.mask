@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# <owen@gentoo.org> 22 Jul 2002
+# Broken against latest FLTK. Hopefully will be fixed with a new POSE.
+<=app-emulation/pose-3.5
+
 # phoen][x <phoenix@gentoo.org> 22 Jul 2002
 # Bumped to new version - masked for testing
 >=app-emulation/bochs-1.4.1
