@@ -1,10 +1,14 @@
 # ChangeLog for net-mail/courier
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/ChangeLog,v 1.9 2002/12/13 11:00:07 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/ChangeLog,v 1.10 2002/12/21 19:30:04 raker Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *courier-0.40.1 (19 Nov 2002)
+
+  21 Dec 2002; Nick Hadaway <raker@gentoo.org> courier-0.40.1.ebuild :
+  Filter -fomit-frame-pointer and -funroll-loops as these flags seem
+  to cause problems with maildrop and maildirmake.
 
   21 Nov 2002; Nick Hadaway <raker@gentoo.org> courier-0.40.1.ebuild,
   files/password.dist :
