@@ -1,6 +1,9 @@
-# ChangeLog for net-www/orion
+# ChangeLog for www-servers/orion
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/www-servers/orion/ChangeLog,v 1.1 2004/08/08 17:51:02 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/orion/ChangeLog,v 1.2 2004/09/05 09:44:51 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
 *orion-2.0.2 (08 Aug 2004)
 

@@ -1,6 +1,9 @@
-# ChangeLog for net-www/resin-ee
+# ChangeLog for www-servers/resin-ee
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/resin-ee/ChangeLog,v 1.1 2004/08/08 18:29:25 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/resin-ee/ChangeLog,v 1.2 2004/09/05 09:49:25 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
 *resin-ee-2.1.14 (08 Aug 2004)
 

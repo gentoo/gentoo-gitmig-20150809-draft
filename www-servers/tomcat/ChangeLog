@@ -1,6 +1,9 @@
-# ChangeLog for net-www/tomcat
+# ChangeLog for www-servers/tomcat
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.5 2004/09/03 16:27:04 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/tomcat/ChangeLog,v 1.6 2004/09/05 09:51:06 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
   03 Sep 2004; Thomas Matthijs <axxo@gentoo.org> tomcat-3.3.2-r2.ebuild,
   -tomcat-4.1.30-r4.ebuild, tomcat-4.1.30-r5.ebuild, -tomcat-5.0.27-r3.ebuild:

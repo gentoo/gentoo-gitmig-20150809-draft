@@ -1,6 +1,9 @@
-# ChangeLog for net-www/fnord
+# ChangeLog for www-servers/fnord
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/ChangeLog,v 1.2 2004/09/03 15:58:51 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/fnord/ChangeLog,v 1.3 2004/09/05 09:35:55 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> fnord-1.8.ebuild:
   Masked fnord-1.8.ebuild stable for ppc
