@@ -1,5 +1,5 @@
-# $Id: herdstat.bashcomp,v 1.1 2005/03/09 12:07:21 ka0ttic Exp $
-# bash command-line completion for herdstat
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/files/herdstat.bashcomp,v 1.2 2005/03/09 16:41:34 ka0ttic Exp $
+# bash command line completion for herdstat.
 # Author: Aaron Walker <ka0ttic@gentoo.org>
 
 _herdstat() {
