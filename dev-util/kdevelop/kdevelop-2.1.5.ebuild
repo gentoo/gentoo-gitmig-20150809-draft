@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.1.5.ebuild,v 1.9 2004/01/30 05:42:29 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.1.5.ebuild,v 1.10 2004/04/26 02:06:03 agriffis Exp $
 
 inherit kde eutils
 need-kde 3.1
@@ -56,7 +56,7 @@ src_unpack() {
 src_compile() {
 	kde_src_compile
 	cd ${WORKDIR}/c_cpp_reference-2.0.2_for_KDE_3.0
-	econf --with-qt-dir=/usr/qt/3
+	econf --with-qt-dir=/usr/qt/3 || die "econf failed"
 	emake
 }
 
