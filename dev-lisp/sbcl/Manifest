@@ -4,8 +4,14 @@ MD5 a6e113337aada357e7aa8b93dce9c82a sbcl-0.7.5.ebuild 1372
 MD5 215c765767ee81f9cbae0696e4fc0c53 sbcl-0.7.6-r1.ebuild 1482
 MD5 3f7c2bc02639ca69e478db920d8b3704 sbcl-0.7.7.ebuild 1479
 MD5 6c9f9c96627678efaa377d40692ea969 sbcl-0.8.1.ebuild 1534
+MD5 4813c38a994e688f183266606db881ea sbcl-0.8.3.ebuild 2562
+MD5 b55652c2793ead3ec9d19c10588c320a sbcl-0.8.3.ebuild~ 2572
 MD5 36e1837606337c53dc21111b18146143 files/digest-sbcl-0.6.12 150
 MD5 61c9382b669d5b190b434be62664253e files/digest-sbcl-0.7.5 219
 MD5 bc8e434b44fc3abc15022afc66be888f files/digest-sbcl-0.7.6-r1 300
 MD5 1b52d1cb085fdfec090a08604c2fd4ed files/digest-sbcl-0.7.7 300
 MD5 1821ff9718a8d902b416c691258c9a40 files/digest-sbcl-0.8.1 304
+MD5 149ae58f2a3254c2746b71452292abf2 files/sbcl.sh 2170
+MD5 6e40a080b566cc78dfe522ae34eec0a7 files/common-lisp-controller.lisp 1338
+MD5 6b18a7ce9fb1c3c721b30b93b9404be5 files/sbcl.rc 311
+MD5 1c37a6df08d60b9008ded7dfb2b584ab files/digest-sbcl-0.8.3 301

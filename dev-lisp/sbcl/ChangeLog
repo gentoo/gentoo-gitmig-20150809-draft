@@ -1,6 +1,13 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.12 2003/06/28 13:29:23 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.13 2003/09/21 02:25:56 mkennedy Exp $
+
+*sbcl-0.8.3 (20 Sep 2003)
+
+  20 Sep 2003; Matthew Kennedy <mkennedy@gentoo.org> sbcl-0.8.3.ebuild,
+  files/install-clc.lisp, files/sbcl.rc, files/sbcl.sh:
+  new upstream release and support for common lisp controller gathered by Geoff
+  Cant <geoffrey.cant.1@uni.massey.ac.nz> of bug #28340
 
 *sbcl-0.8.1 (27 Jun 2003)
 
