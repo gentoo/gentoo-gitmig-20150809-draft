@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/soup-0.7.10.ebuild,v 1.1 2002/12/24 11:37:15 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/soup/soup-0.7.10.ebuild,v 1.2 2003/01/14 16:23:31 foser Exp $
 
 IUSE="ssl doc"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 DEPEND=">=dev-util/pkgconfig-0.12.0
 	=dev-libs/glib-1.2*
-	>=dev-libs/libxml2-2.4.16
+	dev-libs/libxml
 	dev-libs/popt
 	ssl? ( dev-libs/openssl )
 	doc? ( >=dev-util/gtk-doc-0.9-r2 )"
@@ -49,4 +49,3 @@ src_install() {
     
  	dodoc AUTHORS ABOUT-NLS COPYING* ChangeLog README* INSTALL NEWS TODO
 }
-
