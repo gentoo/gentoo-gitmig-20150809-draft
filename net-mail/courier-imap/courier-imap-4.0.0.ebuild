@@ -1,22 +1,21 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.0.0_rc1.ebuild,v 1.1 2004/12/11 07:10:46 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-4.0.0.ebuild,v 1.1 2005/01/02 05:24:56 langthang Exp $
 
 inherit eutils gnuconfig
 IUSE="fam berkdb gdbm debug ipv6 nls selinux"
 
 DESCRIPTION="An IMAP daemon designed specifically for maildirs"
 HOMEPAGE="http://www.courier-mta.org/"
-#SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
-MY_PV=${PV/_rc*/}
-SRC_URI=""http://www.courier-mta.org/beta/imap/${PN}-${MY_PV}.tar.bz2""
+SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
+#MY_PV=${PV/_rc*/}
+#SRC_URI=""http://www.courier-mta.org/beta/imap/${PN}-${MY_PV}.tar.bz2""
 
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 #userpriv breaks linking against vpopmail
-#do not mirror beta release.
-RESTRICT="nouserpriv nomirror"
+RESTRICT="nouserpriv"
 
 RDEPEND="virtual/libc
 	>=dev-libs/openssl-0.9.6
@@ -32,7 +31,7 @@ DEPEND="${RDEPEND}
 	!virtual/imapd"
 PROVIDE="virtual/imapd"
 
-S=${WORKDIR}/${PN}-${MY_PV}
+#S=${WORKDIR}/${PN}-${MY_PV}
 pkg_setup() {
 	if ! use berkdb && ! use gdbm; then
 		echo
@@ -75,18 +74,21 @@ src_unpack() {
 
 	export WANT_AUTOCONF="2.5"
 	gnuconfig_update
+	libtoolize --copy --force
 	ebegin "Recreating configure"
 	autoconf || \
 		die "recreate configure failed"
 	eend $?
 
 	cd ${S}/maildir
+	libtoolize --copy --force
 	ebegin "Recreating maildir/configure"
 	autoconf || \
 		die "recreate configure failed"
 	eend $?
 
 	cd ${S}/bdbobj
+	libtoolize --copy --force
 	ebegin "Recreating bdbobj/configure"
 		autoconf || \
 		die "recreate configure failed"
