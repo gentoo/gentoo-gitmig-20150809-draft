@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mod_ssl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/ChangeLog,v 1.26 2004/04/16 11:27:48 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/ChangeLog,v 1.27 2004/05/12 04:34:49 zul Exp $
+
+*mod_ssl-2.8.17 (12 May 2004)
+
+  12 May 2004; Chuck Short <zul@gentoo.org> mod_ssl-2.8.17.ebuild:
+  Version bump.
 
   16 Apr 2004; Chuck Short <zul@gentoo.org> files/ssl.default-vhost.conf:
   Fixed DocumentRoot. Closes #47988.
