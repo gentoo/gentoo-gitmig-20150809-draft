@@ -1,13 +1,14 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.0.ebuild,v 1.1 2002/05/18 08:28:50 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.0.ebuild,v 1.2 2002/05/18 08:51:22 agenkin Exp $
 
-NV=6.0-20020510.3-shared-qt.i386
-S=${WORKDIR}/opera-${NV}
-DESCRIPTION="Opera webbrowser, version 6.0 TP"
-SRC_URI="http://www.panix.com/opera/files/linux/600/final/en/qt_shared_rh/opera-${NV}.tar.bz2"
+DESCRIPTION="Opera web browser, version 6.0 Final."
 HOMEPAGE="http://www.opera.com"
+
+NV=6.0-20020510.2-shared-qt.i386
+S=${WORKDIR}/opera-${NV}
+SRC_URI="http://www.panix.com/opera/files/linux/600/final/en/qt_shared/opera-${NV}.tar.bz2"
 
 DEPEND="=x11-libs/qt-2*
 	=media-libs/libpng-1.0.12*"
@@ -49,4 +50,6 @@ src_install() {
 		doins images/opera.xpm
 	fi
 
+	insinto /etc/env.d
+	doins ${FILESDIR}/10opera6
 }

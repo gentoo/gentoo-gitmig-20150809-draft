@@ -1,7 +1,14 @@
 # ChangeLog for net-www/opera
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.7 2002/05/12 17:20:11 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.8 2002/05/18 08:51:21 agenkin Exp $
 
+*opera-6.0 (18 May 2002)
+
+  18 May 2002; Arcady Genkin <agenkin@thpoon.com> opera-6.0.ebuild:
+
+  Upgrade to version 6.0 final.
+  Added /opt/opera/bin to PATH in profile.env.
+	
 *opera-6.0_beta2 (12 May 2002)
 
   12 May 2002; Karl Trygve Kalleberg <karltk@gentoo.org> opera-6.0_beta2.ebuild files/digest-opera-6.0_beta2:
