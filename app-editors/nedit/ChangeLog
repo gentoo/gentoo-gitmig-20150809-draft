@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/nedit
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.23 2004/03/30 06:03:59 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.24 2004/04/09 12:32:53 lanius Exp $
+
+  09 Apr 2004; Heinrich Wendel <lanius@gentoo.org> nedit-5.4.ebuild:
+  stable on x86
 
   30 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; nedit-5.3-r2.ebuild,
   nedit-5.4.ebuild, nedit-5.4_pre20030213.ebuild:
