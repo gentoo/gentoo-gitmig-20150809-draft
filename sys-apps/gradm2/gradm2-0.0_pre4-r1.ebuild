@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm2/gradm2-0.0_pre4-r1.ebuild,v 1.2 2003/06/21 21:19:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm2/gradm2-0.0_pre4-r1.ebuild,v 1.3 2003/07/07 05:24:48 solar Exp $
 
 MY_PV=2.0-pre4
 
@@ -73,12 +73,12 @@ src_install() {
 
 pkg_setup() {
 	if [ -e /usr/src/linux/grsecurity ]; then
-		[ ! -e /usr/src/linux/grsecurity/gracl_learn.c ] && {
+		if [ ! -e /usr/src/linux/grsecurity/gracl_learn.c ]; then
 			ewarn "gradm2 was designed to be used with grsecurity2 but it looks like your using grsecurity1"
 			ewarn "we hope you know what your doing"
 			einfo "(hint try emerge sys-apps/gradm) If you need support for grsecurity 1.x"
 			echo
-		}
+		fi
 	else
 		ewarn "Your going to need to a grsecurity2 enabled kernel to take advantage of the tool"
 	fi
