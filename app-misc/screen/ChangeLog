@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/screen
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.42 2003/11/20 21:48:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.43 2003/11/29 16:40:50 solar Exp $
+
+*screen-4.0.1-r1 (29 Nov 2003)
+
+  29 Nov 2003; <solar@gentoo.org> screen-4.0.1-r1.ebuild,
+  files/screen-4.0.1-int-overflow-fix.patch:
+  corrected integer overflows in ansi.c/resize.c max window height/width is now
+  1000x1000 Bug: #34599
 
   20 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> screen-4.0.1.ebuild:
   install patchlevel.h as doc for bug 33852; more error checking/messages; use
