@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha18-r1.ebuild,v 1.3 2003/09/11 14:43:59 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha18-r1.ebuild,v 1.4 2003/09/11 22:45:19 pylon Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ S=${WORKDIR}/${PN}-2.01
 
 src_unpack() {
 	unpack ${A}
-	unpack ${DVDR_PATCH_P}.bz2
+	use dvdr && unpack ${DVDR_PATCH_P}.bz2
 
 	cd ${S}
 	# Add support for 2.5 kernels
