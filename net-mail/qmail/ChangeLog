@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/qmail
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.4 2002/05/12 00:07:33 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/ChangeLog,v 1.5 2002/06/10 20:14:43 g2boojum Exp $
+
+  10 June 2002; Grant Goodyear <bangert@gentoo.org> qmail-1.03-r8.ebuild :
+  
+  Added qmail-queue patch for qmail-scanner, closing bug #3416.
 
   12 May 2002; Thilo Bangert <bangert@gentoo.org> qmail-1.03-r7.ebuild :
   fixed location for dns patch. added new digest to reflect the change
