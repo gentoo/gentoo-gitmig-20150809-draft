@@ -1,4 +1,4 @@
-MD5 54f4c3ba19572225acc9fa342af7f3f1 ChangeLog 964
+MD5 355bc43c8f820a5e289dfdcdfc7ce2ea ChangeLog 1290
 MD5 9d471cc484027d6985487e1f0064643f wordpress-1.0.2.ebuild 1959
 MD5 3d182d43f7f0341a9a42f96694f04e72 metadata.xml 224
 MD5 854b49269847305ac5b9d202007ee6e2 wordpress-1.2.ebuild 1930
@@ -6,4 +6,4 @@ MD5 3310de51163cfb2a4b23c784003c123d files/digest-wordpress-1.0.2 74
 MD5 8798d44320b59c755a81271d58bd3827 files/wordpress-1.0.2.gentoo.diff 7670
 MD5 60c89171f6db7c359da81d9bd4a78853 files/digest-wordpress-1.2 72
 MD5 c2b531747ebb18f8bc7eed6261710c66 files/1.2/postinstall-en.txt 490
-MD5 e8432807dc9e3b2bb0817928cb87f40a files/1.2/login-patch.diff 2010
+MD5 831533425b7654ea6ace6c302d06901f files/1.2/login-patch.diff 2048

@@ -1,14 +1,13 @@
-diff -u --recursive wordpress/wp-admin/auth.php /srv/stu.gnqs.org/www/htdocs/diary/wp-admin/auth.php
+diff -u --recursive wordpress/wp-admin/auth.php diary/wp-admin/auth.php
 --- wordpress/wp-admin/auth.php	2004-05-19 08:05:40.000000000 +0100
-+++ /srv/stu.gnqs.org/www/htdocs/diary/wp-admin/auth.php	2004-07-11 23:22:25.125981755 +0100
-@@ -15,9 +15,14 @@
++++ diary/wp-admin/auth.php	2004-07-20 21:32:39.048004629 +0100
+@@ -15,9 +15,13 @@
  	}
  
  	if ('' == $user_login)
 +	{
  		return false;
 +	}
-+
  	if (!$user_pass_md5)
 +	{
  		return false;
@@ -16,7 +15,7 @@ diff -u --recursive wordpress/wp-admin/auth.php /srv/stu.gnqs.org/www/htdocs/dia
  
  	$login = $wpdb->get_row("SELECT user_login, user_pass FROM $tableusers WHERE user_login = '$user_login'");
  
-@@ -25,7 +30,7 @@
+@@ -25,7 +29,7 @@
  		return false;
  
  	} else {
@@ -25,47 +24,46 @@ diff -u --recursive wordpress/wp-admin/auth.php /srv/stu.gnqs.org/www/htdocs/dia
  			return true;
  		} else {
  			return false;
-@@ -46,4 +51,4 @@
+@@ -46,4 +50,4 @@
  	exit();
  }
  
 -?>
 \ No newline at end of file
 +?>
-diff -u --recursive wordpress/wp-login.php /srv/stu.gnqs.org/www/htdocs/diary/wp-login.php
+Only in /srv/stu.gnqs.org/www/htdocs/diary/: wp-config.php
+diff -u --recursive wordpress/wp-login.php diary/wp-login.php
 --- wordpress/wp-login.php	2004-05-18 02:29:29.000000000 +0100
-+++ /srv/stu.gnqs.org/www/htdocs/diary/wp-login.php	2004-07-11 23:00:59.412276890 +0100
-@@ -95,14 +95,8 @@
++++ diary/wp-login.php	2004-07-20 22:10:53.836444653 +0100
+@@ -74,8 +74,8 @@
+ 		global $wpdb, $log, $pwd, $error, $user_ID;
+ 		global $tableusers, $pass_is_md5;
+ 		$user_login = &$log;
+-		$pwd = md5($pwd);
+-		$password = &$pwd;
++		$password = md5($pwd);
++
+ 		if (!$user_login) {
+ 			$error = __('<strong>Error</strong>: the login field is empty.');
+ 			return false;
+@@ -95,8 +95,9 @@
  			$pwd = '';
  			return false;
  		} else {
 -		$user_ID = $login->ID;
 -			if (($pass_is_md5 == 0 && $login->user_login == $user_login && $login->user_pass == $password) || ($pass_is_md5 == 1 && $login->user_login == $user_login && $login->user_pass == md5($password))) {
--				return true;
--			} else {
--				$error = __('<strong>Error</strong>: wrong login or password.');
--				$pwd = '';
--			return false;
--			}
 +			$user_ID = $login->ID;
-+			return true;
- 		}
- 	}
++
++			if ($login->user_login == $user_login && $login->user_pass == $password) {
+ 				return true;
+ 			} else {
+ 				$error = __('<strong>Error</strong>: wrong login or password.');
+@@ -242,7 +243,7 @@
  
-@@ -111,11 +105,11 @@
- 		header('Last-Modified: ' . gmdate('D, d M Y H:i:s') . ' GMT');
- 		header('Cache-Control: no-cache, must-revalidate');
- 		header('Pragma: no-cache');
--	if ($is_IIS) {
--		header('Refresh: 0;url=wp-login.php');
--	} else {
--		header('Location: wp-login.php');
--	}
-+		if ($is_IIS) {
-+			header('Refresh: 0;url=wp-login.php');
-+		} else {
-+			header('Location: wp-login.php');
-+		}
- 		exit();
- 	} else {
- 		$user_login = $log;
+ 		$userdata = get_userdatabylogin($user_login);
+ 
+-		if ($user_pass_md5 != md5($userdata->user_pass)) {
++		if ($user_pass_md5 != $userdata->user_pass) {
+ 			return false;
+ 		} else {
+ 			return true;
