@@ -1,6 +1,16 @@
 # ChangeLog for media-tv/nuvexport
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nuvexport/ChangeLog,v 1.5 2004/11/30 22:07:55 swegener Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nuvexport/ChangeLog,v 1.6 2005/01/13 06:48:08 cardoe Exp $
+
+*nuvexport-0.2_pre20050106 (13 Jan 2005)
+
+  13 Jan 2005; Doug Goldstein <cardoe@gentoo.org> metadata.xml,
+  +nuvexport-0.2_pre20050106.ebuild, -nuvexport-20040822.ebuild,
+  -nuvexport-20041022.ebuild:
+  deleted old revisions because of versioning issues
+  changed maintainership to media-tv cause kanaka appears to be MIA
+  revision bump, changed the way the ebuild installs the files
+  upstream is targeting a 0.2 release so had to renumber the releases
 
 *nuvexport-20041022 (30 Nov 2004)
 
