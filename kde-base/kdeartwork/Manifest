@@ -1,17 +1,27 @@
-MD5 2cc537a8383a6a8f85d3dffcae5ef2c4 kdeartwork-3.1.5.ebuild 577
-MD5 d8693b2146a0716c9bfd73f8997a473c kdeartwork-3.2.3.ebuild 604
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8ca410cf2ad980f70f163c70840e3630 kdeartwork-3.2.0.ebuild 492
 MD5 ebc4fb1b9774f1ce5154a56b5af43fb9 kdeartwork-3.2.2.ebuild 496
-MD5 0764996c0abe70e7541992af2428c2c5 ChangeLog 12170
+MD5 f42ace3baac0e2fcdcc3edb792e4f182 ChangeLog 12271
+MD5 2cc537a8383a6a8f85d3dffcae5ef2c4 kdeartwork-3.1.5.ebuild 577
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 8f0cb485ecbd54f88bbdf5fe14ca590e kdeartwork-3.3.0.ebuild 850
-MD5 569d645a558fb762030d28f57095b49b kdeartwork-3.3.1.ebuild 675
-MD5 4affe90f3e8d7a728eb0089811b613fc files/digest-kdeartwork-3.1.5 71
-MD5 c34d3074ca608e62d2de9eba80a3cb2c files/digest-kdeartwork-3.2.0 71
-MD5 b1917d58e026721bef996f7238f91fd0 files/digest-kdeartwork-3.2.2 71
-MD5 750b31061cf39ebc204bbc9b012da76a files/digest-kdeartwork-3.2.3 71
-MD5 1579545755bc63505fd6c670f9e70bdc files/xsaver-conflicting-typedefs.diff 510
-MD5 47117c4358388ad57e28193e59ca41ff files/3.3.0-kfiresaver-Makefile.am.patch 1024
-MD5 667743a96cce7b95f425585895883e4f files/3.3.0-kfiresaver-configure.in.in.patch 499
-MD5 4fef77564341d14de7efedac9437d258 files/digest-kdeartwork-3.3.0 71
+MD5 339ab5850995c643dd3d79b542d79051 kdeartwork-3.3.1.ebuild 675
+MD5 d8693b2146a0716c9bfd73f8997a473c kdeartwork-3.2.3.ebuild 604
 MD5 71ae2484985e5597a671357e5ccc6e72 files/digest-kdeartwork-3.3.1 71
+MD5 4fef77564341d14de7efedac9437d258 files/digest-kdeartwork-3.3.0 71
+MD5 47117c4358388ad57e28193e59ca41ff files/3.3.0-kfiresaver-Makefile.am.patch 1024
+MD5 b1917d58e026721bef996f7238f91fd0 files/digest-kdeartwork-3.2.2 71
+MD5 4affe90f3e8d7a728eb0089811b613fc files/digest-kdeartwork-3.1.5 71
+MD5 1579545755bc63505fd6c670f9e70bdc files/xsaver-conflicting-typedefs.diff 510
+MD5 c34d3074ca608e62d2de9eba80a3cb2c files/digest-kdeartwork-3.2.0 71
+MD5 667743a96cce7b95f425585895883e4f files/3.3.0-kfiresaver-configure.in.in.patch 499
+MD5 750b31061cf39ebc204bbc9b012da76a files/digest-kdeartwork-3.2.3 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBmzXDugEuf3OQ0akRAuU+AJ48m6g9Wk683C9PokUvVwW8SJqJcgCeL4fI
+phQxbuMfNH8XrWsKsZQcorM=
+=leXv
+-----END PGP SIGNATURE-----

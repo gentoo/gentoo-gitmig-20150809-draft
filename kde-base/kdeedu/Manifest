@@ -1,16 +1,26 @@
-MD5 c0091be71d74150aaa6df2a9132e889c ChangeLog 11947
-MD5 3c1830326f62eb4fd9949afaae95e473 kdeedu-3.1.5.ebuild 463
-MD5 b818d954b67bd75b71bbdbcbd06d9d80 kdeedu-3.2.0.ebuild 330
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9f5a66911c3bcdeb0cfc8f2611c8ffbd kdeedu-3.2.2.ebuild 417
-MD5 005041ac2714185f0ab873e6102fa752 kdeedu-3.2.3.ebuild 372
-MD5 4935a58bed2a592057a7695d22f752a9 kdeedu-3.3.0.ebuild 682
-MD5 3da35468ad6ffadf4d1367abb707c7bd kdeedu-3.3.1.ebuild 477
+MD5 a82807e64dae593472536d343fcfb5c8 ChangeLog 12042
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
+MD5 b818d954b67bd75b71bbdbcbd06d9d80 kdeedu-3.2.0.ebuild 330
+MD5 4935a58bed2a592057a7695d22f752a9 kdeedu-3.3.0.ebuild 682
+MD5 3c1830326f62eb4fd9949afaae95e473 kdeedu-3.1.5.ebuild 463
+MD5 005041ac2714185f0ab873e6102fa752 kdeedu-3.2.3.ebuild 372
+MD5 ec8aadbd50ffc9c1c53dfcc5633edb78 kdeedu-3.3.1.ebuild 476
 MD5 b7e131f3c6e455cce46d298409a97c5c files/digest-kdeedu-3.1.5 67
-MD5 26194614e3c7bd041714926665d3b0eb files/digest-kdeedu-3.2.0 67
 MD5 c96e5306587a4cbab3c0b49e3f563aa3 files/digest-kdeedu-3.2.2 67
-MD5 ccd5af76582fc3fd522ecdd655355d38 files/digest-kdeedu-3.2.3 67
-MD5 f6329bc956122f20027b1b20fc166a00 files/digest-kdeedu-3.3.0 67
-MD5 2a1597c73a9b7fc6bce690eb033c66e4 files/digest-kdeedu-3.3.1 67
 MD5 9e8eed1c67fbddc5309dd31d73d02be5 files/kdeedu-3.2.2-gcc34-compile.patch 3614
 MD5 221b952d234335b7df86fd12050267c4 files/kdeedu-3.3.0-sparc.patch 2607
+MD5 f6329bc956122f20027b1b20fc166a00 files/digest-kdeedu-3.3.0 67
+MD5 2a1597c73a9b7fc6bce690eb033c66e4 files/digest-kdeedu-3.3.1 67
+MD5 ccd5af76582fc3fd522ecdd655355d38 files/digest-kdeedu-3.2.3 67
+MD5 26194614e3c7bd041714926665d3b0eb files/digest-kdeedu-3.2.0 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBmzQaugEuf3OQ0akRAqjMAJ9CgvLSoukYHl+V0SaXHpGX4y4XzgCgg0ng
+Ef59j51zrLYeTmYu8+9NUJc=
+=QfyS
+-----END PGP SIGNATURE-----
