@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.181 2005/03/03 17:08:35 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.182 2005/03/13 05:47:47 robbat2 Exp $
+
+*mysql-4.0.24 (12 Mar 2005)
+
+  12 Mar 2005; Robin H. Johnson <robbat2@gentoo.org> +mysql-4.0.24.ebuild:
+  MySQL-4.0.24, based strictly off MySQL-4.0.23-r2. Added error checking on
+  epatch statements and a new src_test function. Does not implement the
+  discussion from #44592.
 
   03 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> mysql-3.23.52-r1.ebuild,
   mysql-3.23.56.ebuild, mysql-3.23.57-r1.ebuild, mysql-3.23.57.ebuild,
