@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/uim-qt
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-qt/ChangeLog,v 1.3 2004/08/21 20:35:31 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-qt/ChangeLog,v 1.4 2004/09/05 12:22:06 usata Exp $
+
+*uim-qt-0.1.7 (05 Sep 2004)
+
+  05 Sep 2004; Mamoru KOMACHI <usata@gentoo.org>
+  +files/uim-qt-0.1.7-thread.diff, -uim-qt-0.1.6_p20040815.ebuild,
+  -uim-qt-0.1.6_p20040821.ebuild, +uim-qt-0.1.7.ebuild:
+  Version bumped. Removed old SVN snapshots.
 
 *uim-qt-0.1.6_p20040821 (22 Aug 2004)
 

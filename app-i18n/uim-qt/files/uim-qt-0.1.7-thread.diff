@@ -1,0 +1,11 @@
+--- quiminputcontextplugin.pro.orig	2004-09-05 10:19:56.000000000 +0900
++++ quiminputcontextplugin.pro	2004-09-05 21:04:28.000000000 +0900
+@@ -4,7 +4,7 @@
+ 
+ TEMPLATE = lib
+ INCLUDEPATH += . /usr/local/include/uim
+-CONFIG += qt plugin
++CONFIG += qt plugin thread
+ LIBS += -luim
+ DEFINES += 
+ 
