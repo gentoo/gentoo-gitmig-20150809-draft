@@ -1,14 +1,19 @@
 # ChangeLog for net-www/horde-imp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-imp/ChangeLog,v 1.5 2003/02/06 02:27:28 alron Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-imp/ChangeLog,v 1.6 2003/02/11 01:57:34 alron Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+*horde-imp-3.2_rc1 (10 Feb 2003)
+  10 Feb 2003; Dean Bailey <alron@gentoo.org> horde-imp-3.2_rc2 :
+  Added 3.2-RC2 of IMP. Masked as -x86 so on. This is just a minor version bump. Same reasons as previous
+  RC.
+
 *horde-imp-3.2_rc1 (05 Feb 2003)
   05 Feb 2003; Dean Bailey <alron@gentoo.org> horde-imp-3.2_rc1 :
   Added 3.2-RC1 of IMP. Masked as -x86 so on. This version fixes a bunch of bugs/security issues. Mostly
   dealing with temp files for attachment uploads, and sessions.
 
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+  
 *horde-imp-3.1 (31 Oct 2002)
 
   31 Oct 2002; Karl Trygve Kalleberg <karltk@gentoo.org> horde-imp-2.1.ebuild files/digest-horde-imp-3.1 : 
