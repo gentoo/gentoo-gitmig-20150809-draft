@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.8-r1.ebuild,v 1.3 2004/11/20 15:11:07 satya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.9.ebuild,v 1.1 2004/11/20 15:11:07 satya Exp $
 
 inherit eutils flag-o-matic
 #---------------------------------------------------------------------------
@@ -47,7 +47,7 @@ RDEPEND="ldap? dev-perl/perl-ldap ${_COMMON_DEPS}
 #---------------------------------------------------------------------------
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="~x86"
 #===========================================================================
 pkg_setup() {
 	ewarn "2004-11: new ebuild flags:"
@@ -67,7 +67,6 @@ src_unpack() {
 	find . -name .cvsignore | xargs rm -f
 	find . -name CVS | xargs rm -rf
 	# Add patch(es) --------------------------------------------------------
-	epatch ${FILESDIR}/samba-3.0.8-lanman.patch || die # win9x/Me NULL printing
 	epatch ${FILESDIR}/samba-3.0.x-python-setup.patch || die
 	#bug #44743 ------------------------------------------------------------
 	if [ ${ARCH} = "amd64" -o ${ARCH} = "ppc" -o ${ARCH} = "ppc64" ]; then
@@ -354,10 +353,6 @@ src_install() {
 		rm -rf ${D}/usr/share/doc/${PF}/swat/help/{guide,howto,devel}
 		rm -rf ${D}/usr/share/doc/${PF}/swat/using_samba
 	fi
-	# in case of upstream packaging errors... (bug #70628)
-	chown -R root:root ${D}/usr/share/doc/${PF}
-	chmod go+r  `find ${D}/usr/share/doc/${PF} -type f`
-	chmod go+rx `find ${D}/usr/share/doc/${PF} -type d`
 	# moving manpages ------------------------------------------------------
 	mv ${D}/usr/man ${D}/usr/share/man
 }
@@ -380,8 +375,6 @@ pkg_postinst() {
 	ewarn ""
 	ewarn "  pdbedit --force-initialized-passwords"
 	ewarn ""
-	ewarn "2004-05: LIBs location change: /usr/lib/samba/*"
-	ewarn "            (due to ldap/vfs external tools assumptions)"
 	ewarn "2004-09: LIBs flags changes for suid bins: LDFLAGS+='-Wl,-z,now'"
 	if use winbind; then
 		ewarn "         3.0.7: param: 'winbind enable local accounts' is now"
@@ -399,10 +392,6 @@ pkg_postinst() {
 		ewarn "If you are upgrading from prior to 3.0.2, and you are using LDAP"
 		ewarn "    for Samba authentication, you must check the sambaPwdLastSet"
 		ewarn "    attribute on all accounts, and ensure it is not 0."
-		einfo "2004-07: WARNING: smbldap-tools changes"
-		einfo "    smbldap-tools conf changed to /etc/smbldap-tools"
-		einfo "    /usr/share/samba/scripts: some script names changed"
-		einfo "    dev-perl/Crypt-SmbHash: new pwd hash validation/conversion system"
 		einfo ""
 	fi
 }
