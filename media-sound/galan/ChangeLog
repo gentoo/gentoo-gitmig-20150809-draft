@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/galan
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/ChangeLog,v 1.1 2003/03/15 11:49:28 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/ChangeLog,v 1.2 2003/03/23 23:57:14 jje Exp $
+
+*galan-0.2.14 (24 Mar 2003)
+
+  24 Mar 2003; jje <jje@gentoo.org> galan-0.2.14.ebuild:
+  Version bump.
 
 *galan-0.2.13d (15 Mar 2003)
 
