@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.56 2005/03/03 17:51:36 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.57 2005/03/16 07:36:15 mkennedy Exp $
+
+  16 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org> sbcl-0.8.18.ebuild,
+  sbcl-0.8.19.ebuild, sbcl-0.8.20.ebuild:
+  Correct MIPS SRC_URI; Add support for amd64 (see Bug #84876 and Bug #85274);
+  Detect an attempt to use "hardened" features
 
 *sbcl-0.8.20 (02 Mar 2005)
 
