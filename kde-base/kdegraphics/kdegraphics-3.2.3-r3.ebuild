@@ -1,12 +1,12 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.2.3-r3.ebuild,v 1.1 2004/12/27 15:23:12 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.2.3-r3.ebuild,v 1.2 2005/01/06 22:40:09 sekretarz Exp $
 
 inherit kde-dist eutils
 
 DESCRIPTION="KDE graphics-related apps"
 
-KEYWORDS="x86 ppc ~sparc ~alpha hppa ~amd64 ia64"
+KEYWORDS="x86 ppc ~sparc ~alpha hppa amd64 ia64"
 IUSE="gphoto2 tetex scanner opengl"
 
 DEPEND="~kde-base/kdebase-${PV}
