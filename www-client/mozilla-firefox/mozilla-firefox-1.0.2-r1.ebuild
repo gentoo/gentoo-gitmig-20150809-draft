@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.2-r1.ebuild,v 1.3 2005/03/26 07:00:14 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/mozilla-firefox/mozilla-firefox-1.0.2-r1.ebuild,v 1.4 2005/03/26 07:08:32 brad Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils mozconfig mozilla-launcher multilib
 
@@ -131,16 +131,17 @@ src_install() {
 
 	cd ${S}/build/unix
 	# Fix firefox-config and install it
-	sed -i -e "s:/lib/firefox-${MY_PV}::g" firefox-config
-	sed -i -e "s:/firefox-${MY_PV}::g" firefox-config
+	sed -i -e "s:/lib/firefox-${MY_PV}:/$(get_libdir)/MozillaFirefox:g" firefox-config
+	sed -i -e "s:/firefox-${MY_PV}:/MozillaFirefox:g" firefox-config
 	exeinto /usr/$(get_libdir)/MozillaFirefox
 	doexe firefox-config
 	# Fix pkgconfig files and install them
 	insinto /usr/$(get_libdir)/pkgconfig
 	for x in *.pc; do
 			if [[ -f ${x} ]]; then
-					sed -i -e "s:/lib/firefox-${MY_PV}::g" ${x}
-					sed -i -e "s:/firefox-${MY_PV}::g" ${x}
+					sed -i -e
+					"s:/lib/firefox-${MY_PV}:/$(get_libdir)/MozillaFirefox:g" ${x}
+					sed -i -e "s:/firefox-${MY_PV}:/MozillaFirefox:g" ${x}
 					doins ${x}
 			fi
 	done
