@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.34 2003/03/28 22:57:06 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.35 2003/04/17 09:05:03 cretin Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -61,7 +61,7 @@ INHERITED="$INHERITED $ECLASS"
 
 # Branch/tag to use, default is HEAD
 # uncomment the following line to enable the reset-branch-to-HEAD behaviour
-[ -z "$ECVS_BRANCH" ] && ECVS_BRANCH="HEAD"
+# [ -z "$ECVS_BRANCH" ] && ECVS_BRANCH="HEAD"
 
 # Subdirectory in module to be fetched, default is not defined = whole module
 # DO NOT set default to "", if it's defined at all code will break!
