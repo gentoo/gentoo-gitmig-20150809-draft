@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.3_pre0.ebuild,v 1.7 2005/02/24 06:11:12 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.3_pre0.ebuild,v 1.8 2005/02/24 07:52:27 obz Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -40,13 +40,13 @@ RDEPEND="!gnome-base/gnome-core
 
 	>=gnome-base/libbonobo-2.8.1
 	>=gnome-base/libbonoboui-2.8.1
-	>=gnome-base/libgnome-2.8
-	>=gnome-base/libgnomeui-2.8
+	>=gnome-base/libgnome-2.8.1
+	>=gnome-base/libgnomeui-2.8.1
 	>=gnome-base/libgnomecanvas-2.8
 	>=gnome-base/libglade-2.4.2
 
 	>=gnome-extra/bug-buddy-2.8
-	>=gnome-base/control-center-2.8.1-r1
+	>=gnome-base/control-center-2.8.2
 
 	>=gnome-base/eel-2.8.2
 	>=gnome-base/nautilus-2.8.2-r1
