@@ -593,15 +593,6 @@ net-www/zope
 # drobbins, 16 Mar 2002: This kernel sucks :)
 =sys-kernel/linux-sources-2.4.18
 
-# By unmasking this, you hereby promise to update your gift package as 
-# soon as a new version is available in Portage, otherwise you'll pollute 
-# the still-under-high-development network with old protocols and such.
-  
-net-p2p/gift
-net-p2p/kift
-net-p2p/giftcurs
-#note: kift and giftcurs depend on gift, so they need masking too. (drobbins, 7 Jul 2002)
-
 # Opera 6 final.
 # This package requires that qt2 package were linked against libpng 1.0.12,
 # while the latest libpng version is 1.2.  Since I could not figure out how
