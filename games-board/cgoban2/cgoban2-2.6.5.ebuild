@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/cgoban2/cgoban2-2.6.5.ebuild,v 1.1 2004/09/23 08:05:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/cgoban2/cgoban2-2.6.5.ebuild,v 1.2 2004/10/27 10:10:50 slarti Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://kgs.kiseido.com/cgoban-unix-${PV}.tar.bz2"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~amd64"
 IUSE=""
 
 RDEPEND=">=virtual/jre-1.3
