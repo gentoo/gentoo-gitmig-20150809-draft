@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/wwwoffle-2.8b.ebuild,v 1.4 2004/06/15 02:32:25 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/wwwoffle-2.8b.ebuild,v 1.5 2004/06/18 02:42:35 weeve Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.demon.co.uk/pub/unix/httpd/${P}.tgz
 	ftp://ftp.ibiblio.org/pub/Linux/apps/www/servers/${P}.tgz"
 
 HOMEPAGE="http://www.gedanken.demon.co.uk/wwwoffle"
-KEYWORDS="x86 ~sparc ~ppc ~ppc64"
+KEYWORDS="x86 sparc ~ppc ~ppc64"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="ipv6"
