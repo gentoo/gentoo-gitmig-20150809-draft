@@ -18,11 +18,8 @@ then
 		#bogus pidfile, remove
 		rm /var/run/xinetd.pid
 	fi
-fi
-if [ ! -e /var/run/xinetd.pid ]
-then
+else
 	/usr/sbin/xinetd -pidfile /var/run/xinetd.pid
 	/usr/bin/sleep 1
 fi
 exec /usr/bin/watchpid `cat /var/run/xinetd.pid`
-
