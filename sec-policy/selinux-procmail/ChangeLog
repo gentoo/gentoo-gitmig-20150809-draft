@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-procmail
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-procmail/ChangeLog,v 1.4 2004/11/23 17:14:30 kaiowas Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-procmail/ChangeLog,v 1.5 2005/02/25 08:18:04 kaiowas Exp $
+
+*selinux-procmail-20050219 (25 Feb 2005)
+
+  25 Feb 2005; petre rodan <kaiowas@gentoo.org>
+  -selinux-procmail-20041028.ebuild, +selinux-procmail-20050219.ebuild:
+  removed old build, merge with upstream
 
   23 Nov 2004; petre rodan <kaiowas@gentoo.org>
   selinux-procmail-20041119.ebuild:
