@@ -1,6 +1,6 @@
 # ChangeLog for dev-lang/php
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.6 2002/07/16 09:08:46 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.7 2002/07/18 22:49:57 rphillips Exp $
 
   15 Jul 2002; Owen Stampflee <owen@gentoo.org>
 
@@ -25,11 +25,15 @@
 
 *mod_php-4.2.1-r5 (12 Jul 2002)
 
-  16 Jul 2002; Ryan Phillips <rphillips@gentoo.org> php-4.2.1-r5.ebuild :
+  16 Jul 2002; Ryan Phillips <rphillips@gentoo.org> mod_php-4.2.1-r5.ebuild :
+
+  Added libwww depedency to xml use var
+
+  16 Jul 2002; Ryan Phillips <rphillips@gentoo.org> mod_php-4.2.1-r5.ebuild :
 
   Now provides virtual support
 
-  12 Jul 2002; Roman Weber <gentoo@gonzo.ch> php-4.2.1-r5.ebuild :
+  12 Jul 2002; Roman Weber <gentoo@gonzo.ch> mod_php-4.2.1-r5.ebuild :
     
 	  Fixed compile error with sablotron 0.95
 	    Fixed weird uname bug. (Bug #4913)   

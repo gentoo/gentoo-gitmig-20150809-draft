@@ -1,8 +1,12 @@
 # ChangeLog for dev-lang/php
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.4 2002/07/16 09:09:52 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.5 2002/07/18 22:48:48 rphillips Exp $
 
 *php-4.2.1-r3 (12 Jul 2002)
+
+  18 Jul 2002; Ryan Phillips <rphillips@gentoo.org> php-4.2.1-r3.ebuild :
+
+  Fixed xml dependency
 
   16 Jul 2002; Ryan Phillips <rphillips@gentoo.org> php-4.2.1-r3.ebuild :
 
