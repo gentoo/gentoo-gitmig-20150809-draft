@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/basc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/basc/ChangeLog,v 1.15 2005/01/04 17:08:44 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/basc/ChangeLog,v 1.16 2005/01/07 22:48:45 pvdabeel Exp $
+
+  07 Jan 2005; Pieter Van den Abeele <pvdabeel@gentoo.org> basc-1.5.5.ebuild:
+  bug 77030
 
   04 Jan 2005; Pieter Van den Abeele <pvdabeel@gentoo.org> basc-1.5.3.ebuild:
   Added new fallback-detection for windowmanager, which searches
