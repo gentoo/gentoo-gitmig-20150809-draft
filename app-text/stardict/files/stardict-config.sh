@@ -1,9 +1,9 @@
 #!/bin/bash
 Big5 () {
 
-    cat /usr/X11R6/share/stardict/hzfont/fonts.dir | \
+    cat /usr/share/stardict/hzfont/fonts.dir | \
     sed "s/hz16.pcf/hz16ft.pcf/" > /tmp/fonts.dir
-    cp /tmp/fonts.dir /usr/X11R6/share/stardict/hzfont/fonts.dir
+    cp /tmp/fonts.dir /usr/share/stardict/hzfont/fonts.dir
     xset fp rehash
 }
 
