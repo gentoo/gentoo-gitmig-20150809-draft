@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/figlet
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/ChangeLog,v 1.6 2003/03/29 11:18:02 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/ChangeLog,v 1.7 2003/07/05 01:15:04 msterret Exp $
+
+  04 Jul 2003; Michael Sterrett <msterret@gentoo.org> figlet-22-r1.ebuild:
+  added more error checking.
+  Don't bother to install figmagic since file groks FIGlet files as distributed.
 
   20 Feb 2003; Guy Martin <gmsoft@gentoo.org> figlet-22-r1.ebuild :
   Added hppa to keywords.

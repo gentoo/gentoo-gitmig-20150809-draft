@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/figlet-22-r1.ebuild,v 1.6 2003/04/23 14:31:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/figlet-22-r1.ebuild,v 1.7 2003/07/05 01:15:04 msterret Exp $
 
 MY_P=${P/-/}
 S=${WORKDIR}/${MY_P}
@@ -14,13 +14,14 @@ KEYWORDS="x86 ~ppc sparc ~alpha ~mips hppa ~arm"
 
 DEPEND="virtual/glibc
 	>=sys-apps/portage-2.0.47-r10
-	>=sys-apps/sed-4.0.5"
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PF}-gentoo.diff
-	sed -i "s/CFLAGS = -g/CFLAGS = ${CFLAGS}/g" Makefile
+	sed -i "s/CFLAGS = -g/CFLAGS = ${CFLAGS}/g" Makefile || \
+		die "sed Makefile failed"
 }
 
 src_compile() {
@@ -35,7 +36,7 @@ src_install() {
 		DESTDIR=${D}/usr/bin \
 		MANDIR=${D}/usr/share/man/man6 \
 	    DEFAULTFONTDIR=${D}/usr/share/figlet \
-		install || die
+		install || die "make install failed"
 
-	dodoc Artistic-license.txt FTP-NOTE README showfigfonts figmagic figfont.txt
+	dodoc Artistic-license.txt FTP-NOTE README showfigfonts figfont.txt
 }
