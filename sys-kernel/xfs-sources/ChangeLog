@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/xfs-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.17 2003/01/15 17:24:26 livewire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.18 2003/01/30 04:38:12 livewire Exp $
+
+*xfs-sources-2.4.20_pre5 (29 Jan 2003)
+ 
+  29 Jan 2003; Bob Johnson <livewire@gentoo.org>
+
+  - fix eepro100 compile
 
 *xfs-sources-2.4.20_pre5 (14 Jan 2003)
 
