@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.8 2004/04/07 23:14:53 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.9 2004/04/08 01:55:25 spyderous Exp $
 
 # This is a snapshot of the XORG-RELEASE-1 branch.
 
@@ -202,11 +202,8 @@ pkg_setup() {
 	# <azarah@gentoo.org> (13 Oct 2002)
 	strip-flags
 
-	# Check for existence of $CC, we use it later
-	if [ -z "${CC}" ]
-	then
-		die "Please set the CC variable to your compiler. export CC=gcc."
-	fi
+	# Set up CC variable, we use it later
+	gcc-getCC
 
 	# See bug #35468, circular pam-X11 dep
 	if [ "`use pam`" -a "`best_version x11-base/${PN}`" ]
