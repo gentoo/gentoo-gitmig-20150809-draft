@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r3.ebuild,v 1.6 2004/06/02 14:52:35 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r3.ebuild,v 1.7 2004/06/03 13:10:53 zul Exp $
 
 inherit flag-o-matic eutils fixheadtails gnuconfig
 
-PATCHDIR=${FILESDIR}/patches/${PV}-r2
+PATCHDIR=${FILESDIR}/patches/${PV}-r3
 S="${WORKDIR}/httpd-${PV}"
 DESCRIPTION="Apache Web Server, Version 2.0.x"
 HOMEPAGE="http://www.apache.org/"
