@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/nwwine/nwwine-20030709.ebuild,v 1.1 2003/09/09 16:26:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/nwwine/nwwine-20030709.ebuild,v 1.2 2003/10/11 07:46:52 coronalvr Exp $
 
 DESCRIPTION="A special version of wine for the Never Winter Nights toolkit"
 SRC_URI="mirror://gentoo/nwwine-20030618-misc.tar.bz2
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.winehq.com/ http://republika.pl/nwnlinux/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 -ppc -sparc"
+KEYWORDS="x86 -ppc -sparc"
 IUSE="nas arts cups opengl alsa tcltk"
 S=${WORKDIR}/nwwine-based-on-${PV}
 
