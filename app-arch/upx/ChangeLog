@@ -1,8 +1,11 @@
 # ChangeLog for app-arch/upx
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/upx/ChangeLog,v 1.4 2002/12/23 07:13:59 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/upx/ChangeLog,v 1.5 2003/01/01 20:20:21 raker Exp $
 
 *upx-1.24 (23 Dec 2002)
+
+  01 Jan 2003; Nick Hadaway <raker@gentoo.org> upx-1.24.ebuild :
+  Marked stable.
 
   23 Dec 2002; Nick Hadaway <raker@gentoo.org> upx-1.24.ebuild,
   files/digest-upx-1.24 :
