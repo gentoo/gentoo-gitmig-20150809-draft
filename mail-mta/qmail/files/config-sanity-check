@@ -1,6 +1,6 @@
 #!/bin/sh
 # Configuration Sanity Checking for qmail
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/files/config-sanity-check,v 1.2 2004/07/18 03:29:51 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/files/config-sanity-check,v 1.3 2005/01/10 00:17:34 robbat2 Exp $
 # This is intended solely to stop qmail eating up all your hard disk space with logs
 
 CONFIG_SANITY_GOOD=1
@@ -12,11 +12,13 @@ if [ -z "${QMAILDUID}" -o -z "${NOFILESGID}" -o -z "${SERVICE}" -o -z "${QMAILLU
 fi
 
 if [ -z "${LOG_OPTS}" -o -z "${LOG_DEST}" ]; then
+    echo "LOG_OPTS: ${LOG_OPTS}"
+    echo "LOG_DEST: ${LOG_DEST}"
     echo "Error in logging setup!"
     CONFIG_SANITY_GOOD=0
 fi
 
-if [ ! -f ${QMAIL_CONTROLDIR}/rcpthosts -a -z "${QMAIL_DISABLE_SANITY_CHECK}" -a "${SERVICE}" = "smtp" ]; then
+if [ "${SERVICE}" = "smtp" -a ! -f ${QMAIL_CONTROLDIR}/rcpthosts -a -z "${QMAIL_DISABLE_SANITY_CHECK}" ]; then
     echo "No /var/qmail/control/rcpthosts!"
     echo "Refusing to start SMTP listener because it'll create an open relay"
     CONFIG_SANITY_GOOD=0
@@ -28,8 +30,8 @@ if [ "${SERVICE}" != "send" -a ! -f "${TCPSERVER_RULESCDB}" ]; then
 fi
 
 if [ ! "${CONFIG_SANITY_GOOD}" -eq "1" ]; then
-    echo "Some error detected, sleeping for 30 seconds for safety"
-    sleep 30s
+	echo "Some error detected in ${SERVICE}, sleeping for 90 seconds for safety"
+    sleep 90s
     exit 1
 fi
 

@@ -1,6 +1,10 @@
 # ChangeLog for mail-mta/qmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.26 2005/01/09 13:31:15 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.27 2005/01/10 00:17:34 robbat2 Exp $
+
+  09 Jan 2005; Robin H. Johnson <robbat2@gentoo.org>
+  files/config-sanity-check:
+  Bug #77159 redux.
 
   09 Jan 2005; Michael Hanselmann <hansmi@gentoo.org>
   files/1.03-r15/Makefile-relaymxlookup.patch,
