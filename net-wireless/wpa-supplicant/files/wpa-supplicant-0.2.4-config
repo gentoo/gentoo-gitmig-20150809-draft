@@ -1,0 +1,26 @@
+# Needed for the wireless drivers
+CONFIG_WIRELESS_EXTENSION=y
+
+# Drivers which compile out-of-the-box
+CONFIG_DRIVER_ATMEL=y
+CONFIG_DRIVER_HOSTAP=y
+CONFIG_DRIVER_NDISWRAPPER=y
+CONFIG_DRIVER_PRISM54=y
+CONFIG_DRIVER_WEXT=y
+
+# Drivers which doesn't compile out-of-the-box
+#CONFIG_DRIVER_HERMES=y
+
+# Drivers which compiles using patches/external sources
+CONFIG_DRIVER_MADWIFI=y
+
+# Authentication methods
+CONFIG_IEEE8021X_EAPOL=y
+CONFIG_EAP_GTC=y
+CONFIG_EAP_LEAP=y
+CONFIG_EAP_MD5=y
+CONFIG_EAP_OTP=y
+CONFIG_EAP_SIM=y
+CONFIG_MSCHAPV2=y
+
+# ssl and pcap USE flags controls remaining options!

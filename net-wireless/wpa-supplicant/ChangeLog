@@ -1,0 +1,10 @@
+# ChangeLog for net-wireless/wpa-supplicant
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa-supplicant/ChangeLog,v 1.1 2004/09/16 18:19:40 brix Exp $
+
+*wpa-supplicant-0.2.4 (16 Sep 2004)
+
+  16 Sep 2004; Henrik Brix Andersen <brix@gentoo.org>
+  +files/wpa-supplicant-0.2.4-config, +wpa-supplicant-0.2.4.ebuild:
+  Initial import. Fixes bug #57708. Ebuild by latexer and me.
+
