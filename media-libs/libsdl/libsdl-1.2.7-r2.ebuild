@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.7-r2.ebuild,v 1.3 2004/07/29 03:29:33 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.7-r2.ebuild,v 1.4 2004/07/31 06:42:33 vapier Exp $
 
 inherit fixheadtails eutils
 
@@ -30,6 +30,16 @@ DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )"
 
 S=${WORKDIR}/SDL-${PV}
+
+pkg_setup() {
+	if use noaudio || use novideo || use nojoystick ; then
+		ewarn "Since you've chosen to turn off some of libsdl's functionality,"
+		ewarn "don't bother filing libsdl-related bugs until trying to remerge"
+		ewarn "libsdl without the no* flags in USE.  You need to know what"
+		ewarn "you're doing to selectively turn off parts of libsdl."
+		sleep 30
+	fi
+}
 
 src_unpack() {
 	unpack ${A}

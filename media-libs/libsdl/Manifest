@@ -1,19 +1,29 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 4c1133450dae3ae72a46c555792303ac ChangeLog 8257
-MD5 725053ce30b454e912aaab60c08caf10 libsdl-1.2.6-r3.ebuild 2854
-MD5 4cdef02cae2d28ec06e6fc752ff24602 libsdl-1.2.7-r1.ebuild 2750
-MD5 bfd1db926c2fabf86ff7484eb2b597e9 libsdl-1.2.7-r2.ebuild 2811
-MD5 5074715fa2ad4fbd78e35864ff07248a libsdl-1.2.7.ebuild 2486
 MD5 baaaa69f33ef9027dac84ee4ff02773b metadata.xml 974
+MD5 4cdef02cae2d28ec06e6fc752ff24602 libsdl-1.2.7-r1.ebuild 2750
+MD5 725053ce30b454e912aaab60c08caf10 libsdl-1.2.6-r3.ebuild 2854
+MD5 5074715fa2ad4fbd78e35864ff07248a libsdl-1.2.7.ebuild 2486
+MD5 8833b16b55986ac60e1dc944d8ab468d libsdl-1.2.7-r2.ebuild 3182
 MD5 0c2020ec3ce37ea0612064c52d1014b1 files/1.2.6-alsa-1.0.0.patch 557
-MD5 4f1ce33c931d461bed06277f60341085 files/1.2.6-nobuggy-X.patch 568
-MD5 71a857d2bbcc34c4807638eb5d710f2e files/1.2.7-26headers.patch 1017
-MD5 206ddd08dd3e33819d03245d11af3014 files/1.2.7-gcc34.patch 8196
-MD5 e71ab5ce20cb7c70631a59f9d209cce1 files/1.2.7-joystick.patch 1317
-MD5 abf0c6fe9d93e5b0cc9a4dbb6d93ad87 files/1.2.7-joystick2.patch 16196
-MD5 803844293dc7df2bb7d2323c03977b71 files/1.2.7-libcaca.patch 23266
-MD5 4f1ce33c931d461bed06277f60341085 files/1.2.7-nobuggy-X.patch 568
-MD5 b66ce90b8939cef871c1c9b065fc0658 files/digest-libsdl-1.2.6-r3 62
-MD5 2e9d99f7ab858b5a64d124abea4565b9 files/digest-libsdl-1.2.7 62
 MD5 2e9d99f7ab858b5a64d124abea4565b9 files/digest-libsdl-1.2.7-r1 62
-MD5 2e9d99f7ab858b5a64d124abea4565b9 files/digest-libsdl-1.2.7-r2 62
+MD5 803844293dc7df2bb7d2323c03977b71 files/1.2.7-libcaca.patch 23266
+MD5 b66ce90b8939cef871c1c9b065fc0658 files/digest-libsdl-1.2.6-r3 62
+MD5 206ddd08dd3e33819d03245d11af3014 files/1.2.7-gcc34.patch 8196
 MD5 419d8c241f85b4deba895c615faa5612 files/libsdl-1.2.6-fullscreen.patch 1094
+MD5 e71ab5ce20cb7c70631a59f9d209cce1 files/1.2.7-joystick.patch 1317
+MD5 4f1ce33c931d461bed06277f60341085 files/1.2.6-nobuggy-X.patch 568
+MD5 4f1ce33c931d461bed06277f60341085 files/1.2.7-nobuggy-X.patch 568
+MD5 2e9d99f7ab858b5a64d124abea4565b9 files/digest-libsdl-1.2.7 62
+MD5 abf0c6fe9d93e5b0cc9a4dbb6d93ad87 files/1.2.7-joystick2.patch 16196
+MD5 2e9d99f7ab858b5a64d124abea4565b9 files/digest-libsdl-1.2.7-r2 62
+MD5 71a857d2bbcc34c4807638eb5d710f2e files/1.2.7-26headers.patch 1017
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFBCz+DHTu7gpaalycRAv85AJ4mCwWo8OXIu6a3W93XIb22Il6CNACgmeOP
+bcXYDHO3ildbVXhslarstd4=
+=wk3S
+-----END PGP SIGNATURE-----
