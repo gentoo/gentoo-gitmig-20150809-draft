@@ -1,10 +1,21 @@
 # ChangeLog for net-misc/cfengine
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.1 2002/02/01 21:53:34 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.2 2002/07/02 03:07:36 jnelson Exp $
+
+*cfengine-2.0.3 (1 Jul 2002)
+  1 Jul 2002; Jon Nelson <jnelson@gentoo.org> ChangeLog cfengine-2.0.3.ebuild:
+  
+  Update ebuild closes #2915
+  Note that this revision still does not contain an init.d file,
+  nor a sample config file, because at this time I (jnelson) haven't
+  fully set up a cfengine installation.
 
 *cfengine-1.6.3 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  
+  Ebuild Author Prakash Shetty (Crux) <ps@gnuos.org>
+
   
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
