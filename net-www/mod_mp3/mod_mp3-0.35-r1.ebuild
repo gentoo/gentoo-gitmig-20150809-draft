@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_mp3/mod_mp3-0.35-r1.ebuild,v 1.9 2004/02/22 16:53:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_mp3/mod_mp3-0.35-r1.ebuild,v 1.10 2004/04/05 00:39:27 zul Exp $
 
 DESCRIPTION="Module for turning Apache into an MP3 or Ogg streaming server"
 HOMEPAGE="http://media.tangent.org/"
