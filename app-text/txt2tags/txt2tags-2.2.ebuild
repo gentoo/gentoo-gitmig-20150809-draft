@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/txt2tags-2.0.ebuild,v 1.3 2005/01/01 16:40:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/txt2tags-2.2.ebuild,v 1.1 2005/03/05 15:28:30 usata Exp $
 
 inherit elisp-common
 
@@ -44,8 +44,10 @@ SITEFILE="50${PN}-gentoo.el"
 src_install() {
 	dobin t2tconv txt2tags
 
-	dodoc README* doc/RULES TODO ChangeLog* doc/txt2tagsrc
-	dohtml doc/userguide/*
+	dodoc README* TEAM TODO ChangeLog* doc/txt2tagsrc
+	dohtml -r doc/*
+	insinto /usr/share/doc/${PF}
+	doins doc/userguide.pdf
 	# samples go into "samples" doc directory
 	docinto samples
 	dodoc samples/abuseme.* samples/sample.*

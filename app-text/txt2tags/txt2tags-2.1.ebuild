@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/txt2tags-2.1.ebuild,v 1.3 2005/01/01 16:40:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/txt2tags-2.1.ebuild,v 1.4 2005/03/05 15:28:30 usata Exp $
 
 inherit elisp-common
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://txt2tags.sourceforge.net/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~amd64"
+KEYWORDS="x86 ~sparc ~ppc ~amd64"
 DEPEND="virtual/python
 	tcltk? ( dev-lang/tk )
 	emacs? ( virtual/emacs )"

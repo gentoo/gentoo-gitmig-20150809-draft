@@ -1,6 +1,12 @@
 # ChangeLog for app-text/txt2tags
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/ChangeLog,v 1.13 2005/01/01 16:40:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/ChangeLog,v 1.14 2005/03/05 15:28:30 usata Exp $
+
+*txt2tags-2.2 (06 Mar 2005)
+
+  06 Mar 2005; Mamoru KOMACHI <usata@gentoo.org> -txt2tags-2.0.ebuild,
+  txt2tags-2.1.ebuild, +txt2tags-2.2.ebuild:
+  Version bumped. This closes bug #84086.
 
   03 Dec 2004; Mamoru KOMACHI <usata@gentoo.org> txt2tags-2.1.ebuild:
   Updated documentations; thanks to Bardur Arantsson <gentoo@@scientician.net>.
