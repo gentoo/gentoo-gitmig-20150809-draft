@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/mailbase-0.00-r5.ebuild,v 1.13 2004/01/20 19:15:44 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/mailbase-0.00-r5.ebuild,v 1.14 2004/01/29 04:42:03 agriffis Exp $
 
 S="${WORKDIR}"
 DESCRIPTION="MTA layout package"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gentoo.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc ~alpha hppa ~arm amd64 mips"
+KEYWORDS="x86 ppc sparc alpha hppa ~arm amd64 mips ia64"
 
 DEPEND=""
 
