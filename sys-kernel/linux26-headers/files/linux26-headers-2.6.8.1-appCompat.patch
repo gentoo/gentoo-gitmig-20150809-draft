@@ -940,9 +940,9 @@ diff -ur linux-2.6.7/include/linux/fd.h linux-2.6.7-gentoo/include/linux/fd.h
  #include <linux/ioctl.h>
  
  /* New file layout: Now the ioctl definitions immediately follow the
-diff -ur linux-2.6.7/include/linux/compiler.h linux-2.6.7-gentoo/include/linux/compiler.h
---- linux-2.6.7/include/linux/compiler.h	2004-06-12 12:11:54.000000000 +0100
-+++ linux-2.6.7-gentoo/include/linux/compiler.h	2004-06-24 09:48:32.478502752 +0100
+diff -ur linux-2.6.8.1/include/linux/compiler.h linux-2.6.8.1-gentoo/include/linux/compiler.h
+--- linux-2.6.8.1/include/linux/compiler.h	2004-06-12 12:11:54.000000000 +0100
++++ linux-2.6.8.1-gentoo/include/linux/compiler.h	2004-06-24 09:48:32.478502752 +0100
 @@ -15,8 +15,19 @@
  # define __chk_user_ptr(x) (void)0
  #endif
@@ -972,7 +972,21 @@ diff -ur linux-2.6.7/include/linux/compiler.h linux-2.6.7-gentoo/include/linux/c
  
  /* Intel compiler defines __GNUC__. So we will overwrite implementations
   * coming from above header files here
-@@ -57,8 +69,6 @@
+@@ -47,7 +59,12 @@
+ 
+ /* Optimization barrier */
+ #ifndef barrier
+-# define barrier() __memory_barrier()
++# include <asm/system.h>
++# ifdef mb
++#   define barrier() mb()
++# else
++#   define barrier() __asm__ __volatile__ ("" : : : "memory")
++# endif
+ #endif
+ 
+ #ifndef RELOC_HIDE
+@@ -57,8 +74,6 @@
      (typeof(ptr)) (__ptr + (off)); })
  #endif
  
@@ -981,7 +995,7 @@ diff -ur linux-2.6.7/include/linux/compiler.h linux-2.6.7-gentoo/include/linux/c
  /*
   * Allow us to mark functions as 'deprecated' and have gcc emit a nice
   * warning for each use, in hopes of speeding the functions removal.
-@@ -120,4 +130,10 @@
+@@ -124,4 +139,10 @@
  #define noinline
  #endif
  
@@ -1695,3 +1709,43 @@ diff -ur linux-2.6.8.1/include/asm-ia64/fpu.h linux-2.6.8.1-gentoo/include/asm-i
  
  # endif /* __ASSEMBLY__ */
  
+diff -ur linux-2.6.8.1/include/asm-ppc/bitops.h linux-2.6.8.1-gentoo/include/asm-ppc/bitops.h
+--- linux-2.6.8.1/include/asm-ppc/bitops.h	2004-08-14 11:55:32.000000000 +0100
++++ linux-2.6.8.1-gentoo/include/asm-ppc/bitops.h	2004-12-26 19:58:15.881705760 +0000
+@@ -2,9 +2,9 @@
+  * bitops.h: Bit string operations on the ppc
+  */
+ 
+-#ifdef __KERNEL__
+ #ifndef _PPC_BITOPS_H
+ #define _PPC_BITOPS_H
++#ifdef __KERNEL__
+ 
+ #include <linux/config.h>
+ #include <linux/compiler.h>
+@@ -251,6 +251,8 @@
+ 	return __ilog2(x & -x) + 1;
+ }
+ 
++#endif /* __KERNEL__ */
++
+ /*
+  * fls: find last (most-significant) bit set.
+  * Note fls(0) = 0, fls(1) = 1, fls(0x80000000) = 32.
+@@ -263,6 +265,8 @@
+ 	return 32 - lz;
+ }
+ 
++#ifdef __KERNEL__
++
+ /*
+  * hweightN: returns the hamming weight (i.e. the number
+  * of bits set) of a N-bit word
+@@ -456,5 +460,6 @@
+ #define minix_test_bit(nr,addr) ext2_test_bit(nr,addr)
+ #define minix_find_first_zero_bit(addr,size) ext2_find_first_zero_bit(addr,size)
+ 
+-#endif /* _PPC_BITOPS_H */
+ #endif /* __KERNEL__ */
++#endif /* _PPC_BITOPS_H */
++
