@@ -114,6 +114,7 @@ sys-devel
 sys-fs
 sys-kernel
 sys-libs
+sys-process
 www-apache
 www-apps
 www-client
