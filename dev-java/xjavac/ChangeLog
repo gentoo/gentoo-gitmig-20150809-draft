@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/xjavac
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xjavac/ChangeLog,v 1.1 2005/01/08 21:11:01 luckyduck Exp $
+
+*xjavac-20041208 (08 Jan 2005)
+
+  08 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
+  +files/xjavac-20041208-build.xml, +xjavac-20041208.ebuild:
+  Initial import. Needed to remove all packed jars from xerces-2 (#63287). Fixes
+  #73816.
+
