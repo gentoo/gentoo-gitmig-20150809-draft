@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/ci/ci-1.1.2-r1.ebuild,v 1.2 2004/01/11 17:36:45 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/ci/ci-1.1.4.ebuild,v 1.1 2004/01/31 16:59:49 usata Exp $
 
 IUSE=""
 
@@ -9,17 +9,19 @@ HOMEPAGE="http://wids.net/lab/Ci.html"
 if [ "${P/_/}" = "${P}" ] ; then
 	# normal release
 	#MY_P=${PN}.nr${PV%%.*}
-	MY_P=${PN}.delta${PV##*.}
+	MY_PV=delta${PV##*.}
+	MY_P=${PN}.${MY_PV}
 	SRC_URI="http://wids.net/archive/Ci/${MY_P}.tar.gz"
 else
 	# snapshot
-	MY_P=${PN}.snapshot-${PV#*_p}
+	MY_PV=${PV#*_p}
+	MY_P=${PN}.snapshot-${MY_PV}
 	SRC_URI="http://wids.net/archive/Ci/snapshot/${MY_P}.tar.gz"
 fi
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 DEPEND=">=sys-apps/sed-4"
 RDEPEND="dev-lang/ruby
@@ -27,18 +29,7 @@ RDEPEND="dev-lang/ruby
 	>=dev-ruby/ruby-gtk-0.28
 	media-fonts/monafont"
 
-if [ "${P/_/}" = "${P}" ] ; then
-	S=${WORKDIR}/Ci
-else
-	S=${WORKDIR}/Ci-${PV#*_p}
-fi
-
-src_unpack() {
-
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.diff
-}
+S=${WORKDIR}/Ci-${MY_PV}
 
 src_compile() {
 
