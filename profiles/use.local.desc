@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.712 2004/11/04 14:25:54 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.713 2004/11/05 03:17:54 lv Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -630,6 +630,7 @@ sys-libs/glibc:n32 - Enable n32 ABI support on mips
 sys-libs/glibc:n64 - Enable n64 ABI support on mips
 sys-libs/glibc:nptlonly - Disables building the linuxthreads fallback in glibc ebuilds that support building both linuxthreads and nptl.
 sys-libs/glibc:userlocales - build only the locales specified in /etc/locales.build
+sys-libs/glibc:nomalloccheck - default to not performing some sanity checks that prevent and detect data corruption. this removes the small overhead introduced by the check.
 sys-libs/pam:pwdb - If you want pam_pwdb.so installed to use pwdb as passwd db
 www-apps/horde-passwd:clearpasswd - Enables cleartext password storage in the vpopmail files
 www-apps/nut:cgi - Add CGI script support
