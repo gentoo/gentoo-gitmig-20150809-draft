@@ -1,6 +1,9 @@
 # ChangeLog for app-office/abiword
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.40 2003/06/18 15:59:43 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.41 2003/06/21 01:25:23 weeve Exp $
+
+  20 Jun 2003; Jason Wever <weeve@gentoo.org> abiword-1.0.6-r1.ebuild:
+  Changed ~sparc keyword to sparc.
 
 *abiword-1.99.1 (18 Jun 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.2.1-r1.ebuild,v 1.5 2003/05/19 13:16:05 brain Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.2.1-r1.ebuild,v 1.6 2003/06/21 01:21:56 weeve Exp $
 inherit kde-base flag-o-matic
 
 filter-flags "-fomit-frame-pointer"
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.koffice.org/"
 LICENSE="GPL-2 LGPL-2"
 SRC_URI="mirror://kde/stable/$P/src/$P.tar.bz2"
 
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc sparc"
 
 DEPEND="$DEPEND
 	>=dev-lang/python-2.2.1
