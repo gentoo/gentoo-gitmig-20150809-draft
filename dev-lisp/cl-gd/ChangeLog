@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-gd
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-gd/ChangeLog,v 1.3 2003/10/16 03:08:45 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-gd/ChangeLog,v 1.4 2003/10/30 09:01:30 mkennedy Exp $
+
+*cl-gd-0.2.0 (30 Oct 2003)
+
+  30 Oct 2003; <mkennedy@gentoo.org> cl-gd-0.2.0.ebuild:
+  new upstream, follow Edi's tar.gz naming convention, install the test suite
 
   15 Oct 2003; Matthew Kennedy <mkennedy@gentoo.org> cl-gd-0.1.4.ebuild,
   metadata.xml:
