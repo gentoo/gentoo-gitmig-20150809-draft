@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda-client/coda-client-5.3.19.ebuild,v 1.7 2004/03/23 23:01:00 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda-client/coda-client-5.3.19.ebuild,v 1.8 2004/03/27 14:15:47 dragonheart Exp $
+
+inherit eutils
 
 IUSE=""
 MY_P=${P/-client/}

@@ -1,6 +1,10 @@
 # ChangeLog for net-fs/coda-client
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda-client/ChangeLog,v 1.4 2004/03/23 23:01:00 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda-client/ChangeLog,v 1.5 2004/03/27 14:15:47 dragonheart Exp $
+
+  27 Mar 2004; Daniel Black <dragonheart@gentoo.org>
+  coda-client-5.3.19.ebuild:
+  Added inherit eutils
 
   24 Mar 2004; Daniel Black <dragonheart@gentoo.org>
   coda-client-5.3.19.ebuild, metadata.xml,
