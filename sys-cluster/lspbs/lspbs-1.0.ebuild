@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lspbs/lspbs-1.0.ebuild,v 1.2 2004/05/04 20:08:02 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lspbs/lspbs-1.0.ebuild,v 1.3 2004/06/24 22:39:07 agriffis Exp $
 
 DESCRIPTION="Displays clear, concise and up-to-date PBS node and CPU usage information."
 SRC_URI="http://homepages.inf.ed.ac.uk/s0239160/misc/lspbs/lspbs-${PV}.tar.gz"

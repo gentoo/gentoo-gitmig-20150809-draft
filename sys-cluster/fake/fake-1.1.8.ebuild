@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fake/fake-1.1.8.ebuild,v 1.2 2003/11/06 15:56:36 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fake/fake-1.1.8.ebuild,v 1.3 2004/06/24 22:37:17 agriffis Exp $
 
 DESCRIPTION="Fake has been designed to switch in backup servers on a LAN. In particular it has been designed to backup Mail, Web and Proxy servers during periods of both unscheduled and scheduled down time. Fake allows you to take over the IP address of another machine in the LAN by bringing up an additional interface and making use of ARP spoofing. The additional interface can be either a physical interface or an IP alias."
 SRC_URI="http://www.vergenet.net/linux/${PN}/download/${PV}/${P}.tar.gz"

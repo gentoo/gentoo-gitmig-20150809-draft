@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-6.5.6-r1.ebuild,v 1.5 2004/06/16 05:14:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/lam-mpi-6.5.6-r1.ebuild,v 1.6 2004/06/24 22:38:56 agriffis Exp $
 
 Name="lam"
 S=${WORKDIR}/${Name}-${PV}

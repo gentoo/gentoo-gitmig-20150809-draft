@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.29_p196-r1.ebuild,v 1.3 2004/05/10 23:39:49 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.29_p196-r1.ebuild,v 1.4 2004/06/24 22:41:24 agriffis Exp $
 
 inherit eutils
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/openmosix-user-0.3.4-r1.ebuild,v 1.1 2003/11/06 16:17:05 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/openmosix-user-0.3.4-r1.ebuild,v 1.2 2004/06/24 22:40:11 agriffis Exp $
 
 S=${WORKDIR}/openmosix-tools-${PV}
 DESCRIPTION="User-land utilities for openMosix process migration (clustering) software"

@@ -1,6 +1,6 @@
 # ChangeLog for sys-cluster/vproc
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vproc/ChangeLog,v 1.1 2004/03/25 12:35:18 tantive Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/vproc/ChangeLog,v 1.2 2004/06/24 22:41:35 agriffis Exp $
 
 *vproc-0.01 (25 Mar 2004)
 
