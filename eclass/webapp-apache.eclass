@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp-apache.eclass,v 1.8 2003/08/18 13:00:01 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp-apache.eclass,v 1.9 2003/08/20 10:19:46 stuart Exp $
 #
 # Author: Stuart Herbert <stuart@gentoo.org>
 # 
@@ -46,6 +46,11 @@ function webapp-detect () {
 	webapp-determine-installowner
 	webapp-determine-htdocsdir
     webapp-determine-cgibindir
+
+	# explicit return here to ensure the return code
+	# from webapp-determine-cgibindir above isn't returned instead
+
+	return 0
 }
 
 function webapp-determine-htdocsdir ()
