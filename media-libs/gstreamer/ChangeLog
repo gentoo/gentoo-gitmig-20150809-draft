@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.28 2003/06/10 15:08:43 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.29 2003/07/15 20:23:37 liquidx Exp $
+
+  15 Jul 2003; Alastair Tse <liquidx@gentoo.org> gstreamer-0.6.2.ebuild:
+  putting this back in ~x86
 
 *gstreamer-0.6.2 (10 Jun 2003)
 
