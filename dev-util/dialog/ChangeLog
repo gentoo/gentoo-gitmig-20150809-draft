@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/dialog
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.1 2002/02/01 21:53:28 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.2 2002/03/27 13:51:26 seemant Exp $
+
+*dialog-0.7-r1 (27 Mar 2002)
+
+  27 Mar 2002; Seemant Kulleen <seemant@gentoo.org> dialog-0.7-r1.ebuild :
+
+  man page/LFH compliance fix submiited by Matthew Kennedy
 
 *dialog-0.7 (1 Feb 2002)
 
