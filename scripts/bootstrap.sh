@@ -1,15 +1,17 @@
 #!/bin/bash
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.44 2003/06/06 06:12:11 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.45 2003/06/06 06:14:47 drobbins Exp $
 
 # IMPORTANT NOTE:
-# This script now accepts an optional argument.
-# Without an argument, it executes normally.
-# With a "1.5" argument, it will execute only the first half of the build process.
-# With a "2" argument, it will execute only the second half of the build process.
-# Please ensure that this is maintained properly, as it is needed for my stage-building tools
-# (drobbins, 06 Jan 2003)
+# This script no longer accepts an optional argument.
+# It was removed by the same person who added it -- me, drobbins -- when I optimized
+# bootstrap to complete 20 mins to 2 hours faster, depending on CPU. I did this by 
+# merging both stages of bootstrap into a single stage. We no longer compile gcc and
+# binutils twice. Doing this is unnecessary and a holdover from very early versions
+# of Gentoo, where we were being ultra-paranoid.
+
+# (drobbins, 06 Jun 2003)
 
 MYPROFILEDIR="`readlink -f /etc/make.profile`"
 if [ ! -d ${MYPROFILEDIR} ]
