@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pim/gnome-pim-1.4.6.ebuild,v 1.2 2002/07/11 06:30:26 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pim/gnome-pim-1.4.6.ebuild,v 1.3 2002/07/25 03:49:17 spider Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="gnome-pim"
@@ -8,6 +8,9 @@ SRC_URI="http://www.eskil.org/gnome-pilot/download/tarballs/${P}.tar.gz
  ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz
  http://me.in-berlin.de/~jroger/gnome-pim/${P}.tar.gz"
 HOMEPGAE="http://www.gnome.org/gnome-office/gnome-pim.shtml"
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86"
 
 RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1"
 
