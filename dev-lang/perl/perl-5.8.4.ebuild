@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.4.ebuild,v 1.1 2004/05/03 22:17:53 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.4.ebuild,v 1.2 2004/05/08 23:54:37 rac Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -74,7 +74,7 @@ src_unpack() {
 	# handling breaks.  Fixes bug #14380.
 	# <rac@gentoo.org> (14 Feb 2003)
 	# reinstated to try to avoid sdl segfaults 03.10.02
-	#cd ${S}; epatch ${FILESDIR}/${P}-prelink-lpthread.patch
+	cd ${S}; epatch ${FILESDIR}/${P}-prelink-lpthread.patch
 
 	# Patch perldoc to not abort when it attempts to search
 	# nonexistent directories; fixes bug #16589.
