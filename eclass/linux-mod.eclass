@@ -1,9 +1,52 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.9 2004/12/06 22:23:17 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.10 2004/12/14 18:56:46 johnm Exp $
 
-# This eclass provides functions for compiling external kernel modules
-# from source.
+# Description: This eclass is used to interface with linux-info in such a way
+#              to provide the functionality required and initial functions
+#			   required to install external modules against a kernel source
+#			   tree.
+#
+# Maintainer: John Mylchreest <johnm@gentoo.org>
+# Copyright 2004 Gentoo Linux
+#
+# Please direct your bugs to the current eclass maintainer :)
+
+# A Couple of env vars are available to effect usage of this eclass
+# These are as follows:
+# 
+# Env Var		Option		Default			Description
+# KERNEL_DIR	<string>	/usr/src/linux	The directory containing kernel
+#											the target kernel sources.
+# BUILD_PARAMS	<string>					The parameters to pass to make.
+# BUILD_TARGETS	<string>	clean modules	The build targets to pass to make.
+# MODULE_NAMES	<string>					This is the modules which are
+#											to be built automatically using the
+#											default pkg_compile/install. They
+#											are explained properly below.
+
+
+# MODULE_NAMES - Detailed Overview
+# 
+# The structure of each MODULE_NAMES entry is as follows:
+# modulename(libmodulesdir:modulesourcedir)
+# for example:
+# MODULE_NAMES="module_pci(pci:${S}/pci) module_usb(usb:${S}/usb)"
+# 
+# what this would do is
+#  cd ${S}/pci
+#  make ${BUILD_PARAMS} ${BUILD_TARGETS}
+#  insinto /lib/modules/${KV_FULL}/pci
+#  doins module_pci.${KV_OBJ}
+#
+#  cd ${S}/usb
+#  make ${BUILD_PARAMS} ${BUILD_TARGETS}
+#  insinto /lib/modules/${KV_FULL}/usb
+#  doins module_usb.${KV_OBJ}
+#
+# if the modulessourcedir isnt specified, it assumes ${S}
+# if the libmodulesdir isnt specified, it assumes misc.
+# if no seperator is defined ":" then it assumes the argument is modulesourcedir
 
 inherit linux-info
 ECLASS=linux-mod
@@ -14,11 +57,6 @@ DESCRIPTION="Based on the $ECLASS eclass"
 SLOT=0
 DEPEND="virtual/linux-sources
 		sys-apps/sed"
-
-
-# This eclass is designed to help ease the installation of external kernel
-# modules into the kernel tree.
-
 
 # eclass utilities
 # ----------------------------------
@@ -83,7 +121,7 @@ display_postinst() {
 	# if we haven't determined the version yet, we need too.
 	get_version;
 	
-	local modulename moduledir sourcedir module_temp file i
+	local modulename moduledir sourcedir moduletemp file i
 	
 	file=${ROOT}/etc/modules.autoload.d/kernel-${KV_MAJOR}.${KV_MINOR}
 	file=${file/\/\///}
@@ -92,11 +130,14 @@ display_postinst() {
 	einfo "please type the following as root:"
 	for i in ${MODULE_NAMES}
 	do
-		module_temp="$(echo ${i} | sed -e "s:.*(\(.*\)):\1:")"
-		modulename="${i/(*/}"
-		moduledir="${module_temp/:*/}"
+		moduletemp="$(echo ${i} | sed -e "s:\(.*\)(\(.*\)):\1 \2:")"
+		modulename="${moduletemp/ */}"
+		moduletemp="${moduletemp/* /}"
+		# if we specify two args, then we can set moduledir
+		[ -z "${moduletemp/*:*/}" ] && moduledir="${moduletemp/:*/}"
+		# if we didnt pass the brackets, then we shouldnt accept anything
+		[ -n "${moduletemp/${modulename}/}" ] && sourcedir="${moduletemp/*:/}"
 		moduledir="${moduledir:-misc}"
-		sourcedir="${module_temp/*:/}"
 		sourcedir="${sourcedir:-${S}}"
 		
 		einfo "    # echo \"${modulename}\" >> ${file}"
@@ -116,19 +157,22 @@ linux-mod_pkg_setup() {
 }
 
 linux-mod_src_compile() {
-	local modulename moduledir sourcedir module_temp xarch i
+	local modulename moduledir sourcedir moduletemp xarch i
 	xarch="${ARCH}"
 	unset ARCH	
 
 	for i in ${MODULE_NAMES}
 	do
-		module_temp="$(echo ${i} | sed -e "s:.*(\(.*\)):\1:")"
-		modulename="${i/(*/}"
-		moduledir="${module_temp/:*/}"
+		moduletemp="$(echo ${i} | sed -e "s:\(.*\)(\(.*\)):\1 \2:")"
+		modulename="${moduletemp/ */}"
+		moduletemp="${moduletemp/* /}"
+		# if we specify two args, then we can set moduledir
+		[ -z "${moduletemp/*:*/}" ] && moduledir="${moduletemp/:*/}"
+		# if we didnt pass the brackets, then we shouldnt accept anything
+		[ -n "${moduletemp/${modulename}/}" ] && sourcedir="${moduletemp/*:/}"
 		moduledir="${moduledir:-misc}"
-		sourcedir="${module_temp/*:/}"
 		sourcedir="${sourcedir:-${S}}"
-	
+		
 		einfo "Preparing ${modulename} module"
 		cd ${sourcedir}
 		emake ${BUILD_PARAMS} ${BUILD_TARGETS:-clean module} || die Unable to make ${BUILD_PARAMS} ${BUILD_TARGETS:-clean module}.
@@ -137,15 +181,18 @@ linux-mod_src_compile() {
 }
 
 linux-mod_src_install() {
-	local modulename moduledir sourcedir module_temp i
+	local modulename moduledir sourcedir moduletemp i
 
 	for i in ${MODULE_NAMES}
 	do
-		module_temp="$(echo ${i} | sed -e "s:.*(\(.*\)):\1:")"
-		modulename="${i/(*/}"
-		moduledir="${module_temp/:*/}"
+		moduletemp="$(echo ${i} | sed -e "s:\(.*\)(\(.*\)):\1 \2:")"
+		modulename="${moduletemp/ */}"
+		moduletemp="${moduletemp/* /}"
+		# if we specify two args, then we can set moduledir
+		[ -z "${moduletemp/*:*/}" ] && moduledir="${moduletemp/:*/}"
+		# if we didnt pass the brackets, then we shouldnt accept anything
+		[ -n "${moduletemp/${modulename}/}" ] && sourcedir="${moduletemp/*:/}"
 		moduledir="${moduledir:-misc}"
-		sourcedir="${module_temp/*:/}"
 		sourcedir="${sourcedir:-${S}}"
 
 		einfo "Installing ${modulename} module"

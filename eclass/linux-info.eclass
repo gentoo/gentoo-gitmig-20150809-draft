@@ -1,10 +1,53 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.9 2004/12/10 22:43:03 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.10 2004/12/14 18:56:46 johnm Exp $
 #
-# This eclass provides functions for querying the installed kernel
-# source version, selected kernel options etc.
+# Description: This eclass is used as a central eclass for accessing kernel
+#			   related information for sources already installed.
+#			   It is vital for linux-mod to function correctly, and is split
+#			   out so that any ebuild behaviour "templates" are abstracted out
+#			   using additional eclasses.
 #
+# Maintainer: John Mylchreest <johnm@gentoo.org>
+# Copyright 2004 Gentoo Linux
+#
+# Please direct your bugs to the current eclass maintainer :)
+
+# A Couple of env vars are available to effect usage of this eclass
+# These are as follows:
+# 
+# Env Var		Option		Description
+# KERNEL_DIR	<string>	The directory containing kernel the target kernel
+#							sources.
+# CONFIG_CHECK	<string>	a list of .config options to check for before
+#							proceeding with the	install. ie: CONFIG_CHECK="MTRR"
+#							You can also check that an option doesn't exist by 
+#							prepending it with an exclamation mark (!).
+#							ie: CONFIG_CHECK="!MTRR"
+# <CFG>_ERROR	<string>	The error message to display when the above check
+#							fails. <CFG> should reference the appropriate option
+#							as above. ie: MTRR_ERROR="MTRR exists in the .config
+#							but shouldn't!!"
+# KBUILD_OUTPUT	<string>	This is passed on commandline, or can be set from
+#							the kernel makefile. This contains the directory
+#							which is to be used as the kernel object directory.
+
+# There are also a couple of variables which are set by this, and shouldn't be
+# set by hand. These are as follows:
+# 
+# Env Var		Option		Description
+# KV_FULL		<string>	The full kernel version. ie: 2.6.9-gentoo-johnm-r1
+# KV_MAJOR		<integer>	The kernel major version. ie: 2
+# KV_MINOR		<integer>	The kernel minor version. ie: 6
+# KV_PATCH		<integer>	The kernel patch version. ie: 9
+# KV_EXTRA		<string>	The kernel EXTRAVERSION. ie: -gentoo
+# KV_LOCAL		<string>	The kernel LOCALVERSION concatenation. ie: -johnm
+# KV_DIR		<string>	The kernel source directory, will be null if
+#							KERNEL_DIR is invalid.
+# KV_OUT_DIR	<string>	The kernel object directory. will be KV_DIR unless
+#							koutput is used. This should be used for referencing
+#							.config.
+
 
 ECLASS=linux-info
 INHERITED="$INHERITED $ECLASS"
@@ -388,4 +431,5 @@ local	DEFLATE
 
 linux-info_pkg_setup() {
 	get_version;
+	[ -n "${CONFIG_CHECK}" ] && check_extra_config;
 }
