@@ -1,24 +1,25 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoo-stats/gentoo-stats-0.4.ebuild,v 1.3 2004/03/16 23:51:34 mksoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoo-stats/gentoo-stats-0.5.ebuild,v 1.1 2004/03/16 23:51:34 mksoft Exp $
 
 DESCRIPTION="Gentoo Linux usage statistics client daemon"
-HOMEPAGE="http://stats.gentoo.org"
-SRC_URI="ftp://stats.gentoo.org/${PN}/${P}.tar.bz2"
+HOMEPAGE="http://mksoft.co.il/gentoo-stats/"
+SRC_URI="http://mksoft.co.il/gentoo-stats/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 # devs: please do not change this, it wouldn't make much sense right now
 KEYWORDS="x86 ppc sparc -alpha hppa amd64"
 
-RDEPEND=">=dev-lang/perl-5.6.1
-	dev-perl/libwww-perl
-	sys-apps/pciutils"
+RDEPEND="dev-lang/python"
 DEPEND=""
+
+S=${WORKDIR}
 
 src_install() {
 	into /usr
 	dosbin gentoo-stats
+	dodir /etc/gentoo-stats
 	insinto /etc/gentoo-stats
 	doins gentoo-stats.conf
 }
