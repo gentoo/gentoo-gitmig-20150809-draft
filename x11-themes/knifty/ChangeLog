@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/knifty
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/knifty/ChangeLog,v 1.12 2004/09/05 17:37:38 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/knifty/ChangeLog,v 1.13 2004/10/11 23:24:21 carlo Exp $
+
+  12 Oct 2004; Carsten Lohrke <carlo@gentoo.org> knifty-0.4.2.ebuild:
+  stable on x86
 
   05 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> knifty-0.4.2.ebuild:
   Added amd64 keyword, closing #58987.
