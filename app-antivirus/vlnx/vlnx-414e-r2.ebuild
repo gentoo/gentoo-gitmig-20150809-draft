@@ -1,7 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# Script Revised by Parag Mehta <pm@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/vlnx/vlnx-414e-r2.ebuild,v 1.3 2004/06/24 21:27:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/vlnx/vlnx-414e-r2.ebuild,v 1.4 2004/10/03 22:03:19 swegener Exp $
 
 MY_P=${PN}${PV}
 S=${WORKDIR}/${MY_P}
