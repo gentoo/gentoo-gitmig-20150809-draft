@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jext/jext-3.2_pre3.ebuild,v 1.8 2004/06/24 21:57:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jext/jext-3.2_pre3.ebuild,v 1.9 2004/07/30 11:58:41 karltk Exp $
 
 inherit java-pkg
 
@@ -17,7 +17,7 @@ KEYWORDS="x86 ~ppc sparc"
 
 DEPEND=">=virtual/jdk-1.3
 	>=dev-java/ant-1.4.1
-	dev-java/jython"
+	|| ( dev-java/jython dev-java/jython-bin )"
 RDEPEND=">=virtual/jre-1.3"
 
 S=${WORKDIR}/${PN}-${MY_PV}

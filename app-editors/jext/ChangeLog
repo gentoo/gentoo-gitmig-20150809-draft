@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/jext
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jext/ChangeLog,v 1.4 2004/06/24 21:57:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jext/ChangeLog,v 1.5 2004/07/30 11:58:41 karltk Exp $
+
+  30 Jul 2004; Karl Trygve Kalleberg <karltk@gentoo.org> jext-3.2_pre3.ebuild:
+  Moved dev-java/jython to dev-java/jython-bin.
 
   19 Jun 2004; Jason Wever <weeve@gentoo.org> jext-3.2_pre3.ebuild:
   Stable on sparc.
