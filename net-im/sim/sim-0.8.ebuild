@@ -1,19 +1,20 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.8.ebuild,v 1.1 2002/10/25 16:20:00 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.8.ebuild,v 1.2 2002/12/05 19:19:00 danarmak Exp $
 
 IUSE="ssl kde"
 [ -n "`use kde`" ] && inherit kde-base
-[ -n "`use kde`" ] || inherit kde-functions
+[ -n "`use kde`" ] || inherit base kde-functions
 
 LICENSE="GPL-2"
 DESCRIPTION="An ICQ v8 Client. Supports File Transfer, Chat, Server-Side Contactlist, ..."
 SRC_URI="http://sim.shutoff.spb.ru/${P}.tar.gz"
 HOMEPAGE="http://sim.shutoff.spb.ru/"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 
 newdepend "ssl? ( dev-libs/openssl )"
+DEPEND="$DEPEND sys-devel/flex"
 
 if [ -n "`use ssl`" ]; then
     myconf="$myconf --enable-openssl"
@@ -29,6 +30,8 @@ else
     myconf="$myconf --disable-kde"
 fi
 
+PATCHES="$FILESDIR/$P-nostl.diff"
+
 src_compile() {
 
     [ -n "`use kde`" ] && kde_src_compile myconf
@@ -37,5 +40,13 @@ src_compile() {
     cd $S
     ./configure $myconf || die
     emake || die
+
+}
+
+src_install() {
+
+    cd $S
+    make DESTDIR=$D install
+    dodoc TODO README ChangeLog COPYING AUTHORS
 
 }
