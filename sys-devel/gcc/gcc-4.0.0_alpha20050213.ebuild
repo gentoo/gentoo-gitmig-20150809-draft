@@ -1,8 +1,7 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.0_alpha20050213.ebuild,v 1.1 2005/02/26 12:40:21 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-4.0.0_alpha20050213.ebuild,v 1.2 2005/03/01 02:32:40 vapier Exp $
 
-GCC_MANPAGE_VERSION="none"
 ETYPE="gcc-compiler"
 
 inherit toolchain

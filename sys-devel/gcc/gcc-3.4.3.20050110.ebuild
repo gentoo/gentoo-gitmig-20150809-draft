@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.20050110.ebuild,v 1.18 2005/03/01 01:48:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.20050110.ebuild,v 1.19 2005/03/01 02:32:40 vapier Exp $
 
-#GCC_MANPAGE_VERSION="none"
+MAN_VER="3.4.3"
 PATCH_VER="1.1"
 PIE_VER="8.7.7"
 PIE_CORE="gcc-3.4.3-piepatches-v${PIE_VER}.tar.bz2"

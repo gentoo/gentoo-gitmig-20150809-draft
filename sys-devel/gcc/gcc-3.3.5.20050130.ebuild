@@ -1,13 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5.20050130.ebuild,v 1.11 2005/03/01 01:48:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.5.20050130.ebuild,v 1.12 2005/03/01 02:32:40 vapier Exp $
 
-#GCC_MANPAGE_VERSION="3.3.5"
+MAN_VER="3.3.5"
 PATCH_VER="1.2"
-PP_VER="3_3_5_20050130"
-PP_FVER="${PP_VER//_/.}-1"
+UCLIBC_VER=""
 PIE_VER="8.7.7.1"
 PIE_CORE="gcc-3.3.5-piepatches-v${PIE_VER}.tar.bz2"
+PP_VER="3_3_5_20050130"
+PP_FVER="${PP_VER//_/.}-1"
 HTB_VER="1.00-r2"
 #HTB_GCC_VER="3.3.5"
 
