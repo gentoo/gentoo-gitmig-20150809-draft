@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/kde-i18n-de
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kde-i18n-de/ChangeLog,v 1.14 2003/06/29 22:12:03 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kde-i18n-de/ChangeLog,v 1.15 2003/08/16 07:21:41 seemant Exp $
+
+*kde-i18n-de-3.1.2 (16 Aug 2003)
+
+  16 Aug 2003; Seemant Kulleen <seemant@gentoo.org> kde-i18n-de-3.1.2.ebuild:
+  checking in on behalf of Murray_B -- version bump.  I hardcoded the
+  KEYWORDS to put it into testing -- a real kde person needs to verify this.
+  Should close bug #26536 by Marius Schäfer <marius.schaefer@mimamau.de>
 
 *kde-i18n-de-3.1.1 (20 Mar 2003)
 
