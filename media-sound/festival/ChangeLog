@@ -3,6 +3,11 @@
 # $Header: /home/cvsroot/gentoo-x86/media-sound/festival/ChangeLog,v 1 2002/05/07
 # 03:58:19 naz Exp $
 
+  11 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  festival-1.4.2-r1.ebuild, festival-1.4.2-r2.ebuild,
+  festival-1.4.2-r3.ebuild, festival-1.4.2.ebuild, festival-1.4.3.ebuild:
+  Removing crusty ebuilds.
+
   10 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
   festival-1.4.3.ebuild, metadata.xml, files/festival-1.4.3-asterisk.patch:
   Added optional patch that adds a new command named tts_textasterisk that is

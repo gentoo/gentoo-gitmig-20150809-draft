@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/festival/festival-1.4.2-r3.ebuild,v 1.6 2004/01/26 08:33:09 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/festival/festival-1.4.2-r3.ebuild,v 1.7 2004/02/12 06:05:38 eradicator Exp $
 
 S=${WORKDIR}/${PN}
 TOOLSDIR=${WORKDIR}/speech_tools
@@ -38,7 +38,7 @@ SLOT="0"
 LICENSE="FESTIVAL BSD as-is"
 KEYWORDS="x86 ~ppc sparc"
 
-DEPEND="virtual/glibc"
+DEPEND="sys-apps/sed "
 
 src_compile() {
 	cd ${TOOLSDIR}

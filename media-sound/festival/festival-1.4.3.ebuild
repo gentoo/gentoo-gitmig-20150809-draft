@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/festival/festival-1.4.3.ebuild,v 1.4 2004/02/10 19:14:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/festival/festival-1.4.3.ebuild,v 1.5 2004/02/12 06:05:38 eradicator Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Festival Text to Speech engine"
@@ -31,10 +31,11 @@ SRC_URI="${SITE}/${P}-release.tar.gz
 
 SLOT="0"
 LICENSE="FESTIVAL BSD as-is"
-KEYWORDS="~x86"
+KEYWORDS="x86 ~ppc ~sparc"
 
 RDEPEND="virtual/glibc"
-DEPEND=">=media-sound/speech-tools-1.2.3"
+DEPEND=">=media-sound/speech-tools-1.2.3
+	sys-apps/sed"
 
 src_unpack() {
 	unpack ${P}-release.tar.gz
