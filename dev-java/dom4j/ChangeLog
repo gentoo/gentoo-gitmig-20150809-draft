@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/dom4j
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/ChangeLog,v 1.7 2003/07/11 21:41:51 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dom4j/ChangeLog,v 1.8 2004/03/18 13:10:23 dholm Exp $
+
+  18 Mar 2004; David Holm <dholm@gentoo.org> dom4j-1.4.ebuild:
+  Added to ~ppc.
 
 *dom4j-1.4 (24 Apr 2003)
 
