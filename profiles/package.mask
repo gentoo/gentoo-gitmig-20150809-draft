@@ -502,3 +502,4 @@ dev-lang/tcl-tk
 
 #seemant@gentoo.org 1 Apr 2002
 =media-video/drip-0.81
+=sys-apps/util-linux-2.11l-r1
