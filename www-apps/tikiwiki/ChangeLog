@@ -1,6 +1,11 @@
 # ChangeLog for www-apps/tikiwiki
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/ChangeLog,v 1.4 2004/09/05 09:04:16 swegener Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/ChangeLog,v 1.5 2005/01/04 12:59:54 mholzer Exp $
+
+*tikiwiki-1.8.4.1 (04 Jan 2005)
+
+  04 Jan 2005; Martin Holzer <mholzer@gentoo.org> +tikiwiki-1.8.4.1.ebuild:
+  Version bumped. Security fix. See 75568
 
   05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed ChangeLog header.

@@ -26,6 +26,8 @@ Tiki likes PHP to have :
     ==> 'default_charset = utf-8'
     ==> 'file_uploads = On'
 
+Make certain you have compiled php and mod_php with your database of choice in
+the USE flags.
 
 Please read the files in ${MY_INSTALLDIR}/doc
 especially if you want clean URLs under Apache.

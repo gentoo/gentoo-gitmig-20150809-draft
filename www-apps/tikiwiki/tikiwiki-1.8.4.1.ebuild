@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/tikiwiki-1.8.3.ebuild,v 1.2 2004/09/03 17:17:21 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/tikiwiki-1.8.4.1.ebuild,v 1.1 2005/01/04 12:59:54 mholzer Exp $
 
 inherit webapp
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 IUSE=""
-KEYWORDS="~x86 ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 RDEPEND="virtual/php
 	media-gfx/graphviz"
@@ -41,16 +41,11 @@ src_install() {
 
 	# Install the minimal doc (points to web page)
 	#
-	dodoc doc/readme.txt
-	dodoc doc/htaccess
-	dodoc doc/htaccess.readme
-	dodoc INSTALL
-	dodoc README
-	rm INSTALL README
+	dodoc doc/readme.txt doc/htaccess doc/htaccess.readme INSTALL README
 
 	# The bulk goes into htdocs
-	#
-	cp -a . ${D}/${MY_HTDOCSDIR}
+	# but don't copy INSTALL and README
+	cp -a [[:lower:]]* ${D}/${MY_HTDOCSDIR}
 
 	# Recursively set server ownership to allow server to write
 	# This is the rough equivalent of the setup.sh script
@@ -78,4 +73,12 @@ src_install() {
 	webapp_src_install
 }
 
-
+pkg_config() {
+	einfo "Type in your MySQL root password to create an empty tiki database:"
+	mysqladmin -u root -p create tikiwiki
+	einfo ""
+	einfo ""
+	einfo "Now, point your browser to the location of tiki-install.php"
+	einfo "    ==> e.g. http://localhost/tikiwiki/tiki-install.php"
+	einfo ""
+}
