@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/cdb-0.75.ebuild,v 1.15 2004/06/29 15:17:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/cdb/cdb-0.75.ebuild,v 1.16 2004/12/07 21:06:50 absinthe Exp $
 
 inherit eutils gcc
 
@@ -10,7 +10,7 @@ SRC_URI="http://cr.yp.to/cdb/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 alpha"
+KEYWORDS="x86 alpha ~amd64"
 IUSE=""
 
 DEPEND=">=sys-apps/portage-2.0.47-r10
