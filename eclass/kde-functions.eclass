@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.18 2002/07/17 20:25:16 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.19 2002/07/26 15:34:50 danarmak Exp $
 # This contains everything except things that modify ebuild variables and functions (e.g. $P, src_compile() etc.)
 ECLASS=kde-functions
 INHERITED="$INHERITED $ECLASS"
@@ -322,3 +322,22 @@ kde_sandbox_patch() {
 
 }
 
+
+# remove an optimization flag from a specific subdirectory's makefiles.
+# currently kdebase and koffice use it to compile certain subdirs without
+# -fomit-frame-pointer which breaks some things.
+# Parameters:
+# $1: subdirectory
+# $2: flag to remove
+kde_remove_flag() {
+    
+    cd ${S}/${1} || die
+    [ -n "$2" ] || die
+    
+    cp Makefile Makefile.orig
+    sed -e "/CFLAGS/ s/${2}//g
+/CXXFLAGS/ s/${2}//g" Makefile.orig > Makefile
+
+    cd $OLDPWD
+    
+}
