@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/larch
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/larch/ChangeLog,v 1.2 2004/06/25 02:39:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/larch/ChangeLog,v 1.3 2004/06/28 03:22:14 agriffis Exp $
+
+  27 Jun 2004; Aron Griffis <agriffis@gentoo.org> larch-1.0_pre0.ebuild:
+  QA - fix use invocation
 
 *larch-1.0_pre0 (04 Oct 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/larch/larch-1.0_pre0.ebuild,v 1.4 2004/06/25 02:39:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/larch/larch-1.0_pre0.ebuild,v 1.5 2004/06/28 03:22:14 agriffis Exp $
 
 MY_P="${P//_/}"
 DESCRIPTION="revision control system ideal for widely distributed development (see \"tla\" also)"
@@ -74,7 +74,7 @@ src_install () {
 	# get some docs
 	cd ${WORKDIR}/${MY_P}/src
 	dodoc COPYING
-	if [ $(use doc) ]; then
+	if use doc; then
 		dohtml -r docs-larch
 		dodoc docs-larch/ps/arch.ps
 	fi
