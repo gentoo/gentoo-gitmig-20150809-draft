@@ -1,8 +1,12 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.6 2002/06/27 15:37:51 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.7 2002/07/16 02:29:19 owen Exp $
 
 *koffice-1.2_beta2 (27 June 2002) Bart Verwilst <verwilst@gentoo.org>
+
+  15 Jul 2002; Owen Stampflee <owen@gentoo.org> :
+
+  Added KEYWORDS.
 
 *koffice-1.2_beta1-r2 (27 May 2002)
 

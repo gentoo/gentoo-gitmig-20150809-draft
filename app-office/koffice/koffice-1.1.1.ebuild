@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.1.1.ebuild,v 1.10 2002/07/11 06:30:17 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.1.1.ebuild,v 1.11 2002/07/16 02:29:19 owen Exp $
 
 inherit kde-base || die
 
@@ -15,6 +15,9 @@ SRC_PATH="kde/stable/${P}/src/${P}.tar.bz2"
 SRC_URI="ftp://ftp.kde.org/pub/$SRC_PATH
 	 ftp://ftp.fh-heilbronn.de/pub/mirrors/$SRC_PATH
 	 ftp://ftp.sourceforge.net/pub/mirrors/$SRC_PATH"
+
+
+KEYWORDS="x86 ppc"
 
 DEPEND="$DEPEND
 	>=dev-lang/python-2.0-r5"
