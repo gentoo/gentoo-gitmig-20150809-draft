@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b8f45d3032c5feab0e7a0d8137259f50 shmux-1.0_beta3.ebuild 755
+MD5 809fdbb24c1177ba34d056255c235003 metadata.xml 385
+MD5 80a695fe8b37ef015c3f46fc986ea88d ChangeLog 368
+MD5 144fba546d28c924431ecb975ee22cd9 files/digest-shmux-1.0_beta3 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA9GCp04iMKjbTpdgRAt7NAJ9A4fnPad8v2ZjJtRFl3U8C1y3urACdHCGA
+6lLq2diZTLoBeKlbDCTjdvo=
+=RA1w
+-----END PGP SIGNATURE-----
