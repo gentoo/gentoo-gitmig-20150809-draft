@@ -1,0 +1,6 @@
+MD5 f7d6d6d97595d01353dc03dd3e091b29 files/battery.sh 790
+MD5 384a3c0ba9c47cef45f4b202e69f5581 files/digest-speedfreq-0.5 64
+MD5 d58f636fe334013825e6e2fdebd63f75 files/speedfreq.conf 855
+MD5 ee4a11af0a145ce9247ed6c2417ac961 files/speedfreq.rc 985
+MD5 b051a049ab8414913f63845045b36f9d ChangeLog 355
+MD5 a2e36b9e7b86382a05de8c8cc9a3713b speedfreq-0.5.ebuild 1825
