@@ -1,17 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.3.0_beta2.ebuild,v 1.1 2004/07/23 12:28:46 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.3.0.ebuild,v 1.1 2004/08/19 18:09:53 caleb Exp $
 
 inherit kde-dist flag-o-matic
 
 DESCRIPTION="KDE addon modules: plugins for konqueror, noatun etc"
 
 KEYWORDS="~x86 ~amd64"
-IUSE="sdl svga xmms esd"
+IUSE="arts sdl svga xmms esd"
 
 DEPEND="~kde-base/kdepim-${PV}
 	~kde-base/kdemultimedia-${PV}
-	~kde-base/arts-${PV//3.3/1.3}
+	arts? ( ~kde-base/arts-${PV//3.3/1.3} )
 	esd? ( media-sound/esound )
 	sdl? ( >=media-libs/libsdl-1.2 )
 	svga? ( media-libs/svgalib )
