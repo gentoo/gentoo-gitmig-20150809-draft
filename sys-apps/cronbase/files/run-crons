@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cronbase/files/run-crons,v 1.8 2003/01/31 17:17:13 prez Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cronbase/files/run-crons,v 1.9 2003/11/19 06:31:23 prez Exp $
 #
 # 23 Jun 2002; Jon Nelson <jnelson@gentoo.org> run-crons:
 #
@@ -21,7 +21,17 @@
 
 mkdir -p /var/spool/cron/lastrun
 
-#
+# Make sure its not running multiple instances at once.
+if test -f /var/spool/cron/lastrun/lock
+then
+    cronpid=`cat /var/spool/cron/lastrun/lock`
+    if `kill -0 $cronpid >/dev/null 2>&1`
+    then
+	exit 0
+    fi
+fi
+
+echo "$$" >/var/spool/cron/lastrun/lock
 
 for BASE in hourly daily weekly monthly
 do
@@ -65,7 +75,8 @@ do
     fi
 done
 
-#
+# Remove lock, we're done.
+rm -f /var/spool/cron/lastrun/lock
 
 touch /var/spool/cron/lastrun
 find /var/spool/cron/lastrun -newer /var/spool/cron/lastrun -exec /bin/rm -f {} \;

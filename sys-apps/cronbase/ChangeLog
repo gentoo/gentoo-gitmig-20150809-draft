@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/cronbase
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cronbase/ChangeLog,v 1.17 2003/09/17 21:15:27 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cronbase/ChangeLog,v 1.18 2003/11/19 06:31:23 prez Exp $
+
+*cronbase-0.2.1-r3 (19 Nov 2003)
+
+  19 Nov 2003; Preston A. Elder <prez@gentoo.org> run-crons :
+  Added code to ensure only one run-crons instance runs at once.
+
+*cronbase-0.2.1-r2 (31 Jan 2003)
 
   17 Sep 2003; Jon Portnoy <avenj@gentoo.org> cronbase-0.2.1-r2.ebuild :
   ia64 keywords.
@@ -10,8 +17,6 @@
 
   07 Feb 2003; Guy Martin <gmsoft@gentoo.org> cronbase-0.2.1-r2.ebuild :
   Added hppa to keywords.
-
-*cronbase-0.2.1-r2 (31 Jan 2003)
 
   31 Jan 2003; Preston A. Elder <prez@gentoo.org> run-crons :
   Chaged month delay from 30 to 31 days, as per Bug #14862
