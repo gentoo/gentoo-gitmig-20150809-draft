@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nemesi/nemesi-0.4.0.ebuild,v 1.4 2005/02/08 11:40:19 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nemesi/nemesi-0.5.0.ebuild,v 1.1 2005/02/08 11:40:19 lu_zero Exp $
 
 DESCRIPTION="Tiny rtsp client"
 HOMEPAGE="http://streaming.polito.it/"
@@ -14,7 +14,8 @@ IUSE="gtk sdl"
 DEPEND="sys-libs/glibc
 		gtk? ( >=x11-libs/gtk+-2.4 )
 		sdl? ( media-libs/libsdl )
-		media-video/ffmpeg"
+		media-video/ffmpeg
+		app-text/ghostscript"
 
 export WANT_AUTOMAKE="1.6"
 
