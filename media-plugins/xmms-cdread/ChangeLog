@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/xmms-cdread
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-cdread/ChangeLog,v 1.2 2003/02/12 07:20:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-cdread/ChangeLog,v 1.3 2003/09/20 10:09:37 jje Exp $
+
+*xmms-cdread-0.14a-r1 (20 Sep 2003)
+
+  20 Sep 2003; jje <jje@gentoo.org> xmms-cdread-0.14a-r1.ebuild,
+  files/xmms-cdread-0.14a-xmms-1.2.8.patch:
+  patching playlist code to hack around playlist_generate_shuffle_list no longer
+  being exported from xmms. This allows the plugin to work with xmms-1.2.8.
+  Closes #28746.
 
 *xmms-cdread-0.14a (25 Oct 2002)
 
