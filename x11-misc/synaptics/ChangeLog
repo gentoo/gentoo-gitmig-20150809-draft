@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/synaptics
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/ChangeLog,v 1.6 2003/11/24 04:13:46 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/ChangeLog,v 1.7 2003/12/15 11:46:36 spyderous Exp $
+
+  15 Dec 2003; Donnie Berkholz <spyderous@gentoo.org>; files/rc.conf,
+  files/rc.init:
+  Somehow I forgot to add the init.d and conf.d scripts for syndaemon, and
+  nobody even noticed.
 
   23 Nov 2003; Donnie Berkholz <spyderous@gentoo.org>; synaptics-0.12.0.ebuild:
   Re-marking as testing, it's not allowed to depend on something unstable.

@@ -1,0 +1,20 @@
+#!/sbin/runscript
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/synaptics/files/rc.init,v 1.1 2003/12/15 11:46:37 spyderous Exp $
+
+depend() {
+	use localmount
+}
+
+start() {
+	ebegin "Starting syndaemon"
+	syndaemon ${RSYNC_OPTS}
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping syndaemon"
+	kill `cat /var/run/syndaemon.pid`
+	eend $?
+}
