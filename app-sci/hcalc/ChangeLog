@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/hcalc
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/hcalc/ChangeLog,v 1.1 2003/07/17 01:45:45 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/hcalc/ChangeLog,v 1.2 2004/06/23 03:36:33 ribosome Exp $
+
+*hcalc-1.0 (22 Jun 2004)
+
+  22 Jun 2004; Olivier Fisette <ribosome@gentoo.org>; hcalc-1.0.ebuild
+  Removed superfluous RDEPEND="${DEPEND}"
 
 *hcalc-1.0 (16 Jul 2003)
 
