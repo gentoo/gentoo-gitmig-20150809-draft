@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-5.1.1.ebuild,v 1.6 2002/10/05 05:39:12 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/insight-5.1.1.ebuild,v 1.7 2002/12/09 04:21:15 manson Exp $
 
 IUSE="nls"
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://sources.redhat.com/pub/gdb/releases/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND="sys-libs/ncurses"
 RDEPEND="${DEPEND}

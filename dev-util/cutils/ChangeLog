@@ -1,7 +1,10 @@
 # ChangeLog for dev-util/cutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cutils/ChangeLog,v 1.1 2002/08/03 04:19:45 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cutils/ChangeLog,v 1.2 2002/12/09 04:21:13 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *cutils-1.6 (01 Aug 2002)
 
   1 Aug 2002; George Shapovalov <george@gentoo.org> cutils-1.6.ebuildi, cutils-1.6-gentoo.diff :

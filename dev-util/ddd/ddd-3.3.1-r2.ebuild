@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.1-r2.ebuild,v 1.6 2002/11/13 01:17:55 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.1-r2.ebuild,v 1.7 2002/12/09 04:21:13 manson Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU DDD is a graphical front-end for command-line debuggers"
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.easynet.be/gnu/ddd/${P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1 FDL-1.1"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 DEPEND="virtual/x11
 	>=sys-devel/gdb-4.16

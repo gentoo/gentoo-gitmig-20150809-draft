@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tkcvs/tkcvs-6.4-r2.ebuild,v 1.5 2002/10/04 21:01:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tkcvs/tkcvs-6.4-r2.ebuild,v 1.6 2002/12/09 04:21:16 manson Exp $
 
 
 S=${WORKDIR}/${P}
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.twobarleycorns.net/tkcvs.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 RDEPEND=">=dev-lang/tk-8.1.1"
 

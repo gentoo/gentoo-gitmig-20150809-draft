@@ -1,7 +1,10 @@
 # ChangeLog for dev-util/diasce
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/diasce/ChangeLog,v 1.1 2002/11/07 18:55:50 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/diasce/ChangeLog,v 1.2 2002/12/09 04:21:13 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *diasce-1.2 (07 Nov 2002)
 
   07 Nov 2002; foser <foser@gentoo.org> diasce-1.2.ebuild ChangeLog :

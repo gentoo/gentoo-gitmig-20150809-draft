@@ -1,7 +1,10 @@
 # ChangeLog for dev-util/gputils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gputils/ChangeLog,v 1.1 2002/04/24 20:20:08 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gputils/ChangeLog,v 1.2 2002/12/09 04:21:15 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *gputils-0.10.2 (24 Apr 2002)
 
   24 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> gputils-0.10.2.ebuild files/digest-gputils-0.10.2 :

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glademm/glademm-0.6.4.ebuild,v 1.3 2002/11/12 06:38:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glademm/glademm-0.6.4.ebuild,v 1.4 2002/12/09 04:21:15 manson Exp $
 
 DESCRIPTION="A C++ backend for glade, the GUI designer for Gtk."
 HOMEPAGE="http://home.wtal.de/petig/Gtk/"
@@ -8,7 +8,7 @@ SRC_URI="http://distro.ibiblio.org/pub/linux/distributions/sorcerer/sources/${P}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND=">=dev-util/glade-0.6.4
 	=x11-libs/gtk+-1.2*

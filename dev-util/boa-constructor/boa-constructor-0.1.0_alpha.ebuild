@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/boa-constructor/boa-constructor-0.1.0_alpha.ebuild,v 1.6 2002/10/04 05:30:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boa-constructor/boa-constructor-0.1.0_alpha.ebuild,v 1.7 2002/12/09 04:21:13 manson Exp $
 
 BOA_VER=0.1.0-alpha
 S=${WORKDIR}/boa
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/boa-constructor/${PN}-${BOA_VER}.src.zip"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 RDEPEND=">=dev-lang/python-2.0
 	>=dev-python/wxPython-2.3

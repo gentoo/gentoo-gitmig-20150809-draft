@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cweb/cweb-3.63-r1.ebuild,v 1.2 2002/10/04 05:31:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cweb/cweb-3.63-r1.ebuild,v 1.3 2002/12/09 04:21:13 manson Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Knuth's and Levy's C/C++ documenting system"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www-cs-faculty.stanford.edu/~knuth/cweb.html"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND="virtual/glibc"
 

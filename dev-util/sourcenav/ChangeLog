@@ -1,7 +1,10 @@
 # ChangeLog for dev-util/sourcenav
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/ChangeLog,v 1.1 2002/11/04 12:17:54 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sourcenav/ChangeLog,v 1.2 2002/12/09 04:21:16 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *sourcenav-5.1.1 (01 Nov 2002)
 
   01 Nov 2002; Daniel Ahlberg <aliz@gentoo.org> :

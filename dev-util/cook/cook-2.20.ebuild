@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cook/cook-2.20.ebuild,v 1.5 2002/10/04 05:31:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cook/cook-2.20.ebuild,v 1.6 2002/12/09 04:21:13 manson Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Cook is a tool for constructing files. It is a replacement for make."
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.canb.auug.org.au/~millerp/cook/cook.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND="sys-devel/bison"
 

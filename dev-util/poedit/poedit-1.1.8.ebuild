@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/poedit/poedit-1.1.8.ebuild,v 1.4 2002/10/04 21:01:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/poedit/poedit-1.1.8.ebuild,v 1.5 2002/12/09 04:21:16 manson Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Cross-platform gettext catalogs (.po files) editor."
@@ -9,7 +9,7 @@ HOMEPAGE="http://poedit.sourceforge.net/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="x86 sparc "
 
 DEPEND=">=x11-libs/wxGTK-2.3.2
 	>=sys-libs/db-3"

@@ -1,7 +1,10 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.15 2002/11/30 23:52:36 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.16 2002/12/09 04:21:15 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *kdevelop-3.0_alpha2 (30 Nov 2002)
 
   30 Nov 2002; Hannes Mehnert <hannes@gentoo.org> kdevelop-3.0_alpha2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.4-r1.ebuild,v 1.9 2002/10/20 13:05:24 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.4-r1.ebuild,v 1.10 2002/12/09 04:21:13 manson Exp $
 
 IUSE="nls"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://devhelp.codefactory.se/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc sparc64 ppc"
+KEYWORDS="x86 sparc  ppc"
 
 DEPEND=">=gnome-base/gnome-libs-1.4.1.7 
 	 >=gnome-base/ORBit-0.5.10-r1
