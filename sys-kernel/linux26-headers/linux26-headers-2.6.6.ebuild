@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/linux26-headers-2.6.6.ebuild,v 1.1 2004/07/09 22:44:48 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/linux26-headers-2.6.6.ebuild,v 1.2 2004/07/10 00:28:11 plasmaroo Exp $
 
 ETYPE="headers"
 inherit kernel eutils
@@ -64,6 +64,10 @@ src_unpack() {
 }
 
 src_compile() {
+
+	# Generating autoconf.h...
+	addwrite /usr/include/linux
+	[ -f ${ROOT}/usr/include/linux/autoconf.h ] || touch ${ROOT}/usr/include/linux/autoconf.h
 
 	# Compile the default configuration
 	MY_ARCH=${ARCH}

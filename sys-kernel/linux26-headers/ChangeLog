@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/linux26-headers
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.1 2004/07/09 22:44:48 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.2 2004/07/10 00:28:11 plasmaroo Exp $
+
+  10 Jul 2004; <plasmaroo@gentoo.org>
+  files/linux26-headers-2.6.6-appCompat.patch,
+  files/linux26-headers-2.6.7-appCompat.patch:
+  Added a HID_MAX_USAGES definition to solve apcupsd compilation issues, bug
+  #55951. AMD64 2.6.7 iptables issues as per bug #55928 should also now be
+  solved. Added a fix to touch <linux/autoconf.h> in ${ROOT} if it does
+  not exist before installation to solve the empty <linux/autoconf.h> issue -
+  closes bug #51935.
 
 *linux26-headers-2.6.6 (09 Jul 2004)
 

@@ -799,22 +799,27 @@ diff -ur linux-2.6.6/include/linux/audit.h linux-2.6.6-gentoo/include/linux/audi
  struct audit_message {
  	struct nlmsghdr nlh;
  	char		data[1200];
-diff -ur linux-2.6.6/include/asm-x86_64/sigcontext.h linux-2.6.6-gentoo/include/asm-x86_64/sigcontext.h
---- linux-2.6.6/include/asm-x86_64/sigcontext.h	2004-05-25 17:47:07.000000000 +0100
-+++ linux-2.6.6-gentoo/include/asm-x86_64/sigcontext.h	2004-06-02 22:04:52.000000000 +0100
-@@ -6,6 +6,8 @@
+diff -ur linux-2.6.7/include/asm-x86_64/sigcontext.h linux-2.6.7-gentoo/include/asm-x86_64/sigcontext.h
+--- linux-2.6.7/include/asm-x86_64/sigcontext.h	2004-05-25 17:47:07.000000000 +0100
++++ linux-2.6.7-gentoo/include/asm-x86_64/sigcontext.h	2004-06-02 22:04:52.000000000 +0100
+@@ -7,6 +7,12 @@
  /* FXSAVE frame */
  /* Note: reserved1/2 may someday contain valuable data. Always save/restore
     them when you change signal frames. */
 +
++#ifndef __KERNEL__
++#include <signal.h> /* Pulls in <bits/sigcontext.h> which contains both /*
++                    /* of these structures... */
++#else
 +#ifndef _SIGNAL_H
  struct _fpstate {
  	__u16	cwd;
  	__u16	swd;
-@@ -52,3 +54,4 @@
+@@ -53,3 +59,5 @@
  };
  
  #endif
++#endif
 +#endif
 diff -ur linux-2.6.6/include/linux/gfp.h linux-2.6.6-gentoo/include/linux/gfp.h
 --- linux-2.6.6/include/linux/gfp.h	2004-04-04 04:36:52.000000000 +0100
@@ -986,3 +991,15 @@ diff -ur linux-2.6.7/include/linux/compiler.h linux-2.6.7-gentoo/include/linux/c
  #ifdef __KERNEL__
  
  #ifndef __ASSEMBLY__
+diff -ur linux-2.6.6/include/linux/hiddev.h linux-2.6.6-gentoo/include/linux/hiddev.h
+--- linux-2.6.6/include/linux/hiddev.h	2004-06-12 12:11:54.000000000 +0100
++++ linux-2.6.6-gentoo/include/linux/hiddev.h	2004-07-10 00:13:36.584448824 +0100
+@@ -33,6 +33,8 @@
+  * The event structure itself
+  */
+ 
++#define HID_MAX_USAGES 1024 /* From: drivers/usb/input/hid.h */
++
+ struct hiddev_event {
+ 	unsigned hid;
+ 	signed int value;
