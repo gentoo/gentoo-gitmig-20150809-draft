@@ -3,7 +3,7 @@ virtual/lpr			net-print/cups
 virtual/python			dev-lang/python
 virtual/mta			mail-mta/ssmtp
 virtual/alsa			media-sound/alsa-driver
-virtual/kernel			sys-kernel/linux-headers
+virtual/kernel			sys-kernel/linux26-headers
 virtual/linux-sources		sys-kernel/gentoo-sources
 virtual/glibc			sys-libs/glibc
 virtual/libc			sys-libs/glibc

@@ -31,14 +31,16 @@
 # prevents the user from shooting himself/herself in the foot by installing a
 # wacky version.
 
-*>=sys-apps/baselayout-1.10.1
+*>=sys-apps/baselayout-1.9.4-r3
 *>=sys-apps/portage-2.0.50-r8
 *>=sys-devel/binutils-2.14.90.0.8-r1
 *>=sys-devel/gcc-3.3.3
 *>=sys-libs/glibc-2.3.4.20040605
+*sys-libs/libstdc++-v3
+
 *virtual/modutils
 *virtual/os-headers
-*virtual/logger
+virtual/logger
 *dev-lang/python
 
 
@@ -84,18 +86,18 @@
 *sys-apps/util-linux
 *sys-apps/which
 *>=sys-devel/autoconf-2.59-r4
-*>=sys-devel/automake-1.8.5-r1
+*>=sys-devel/automake-1.8.3
 *sys-devel/bc
 *sys-devel/bin86
 *sys-devel/bison
 *sys-devel/flex
-*>=sys-devel/libtool-1.5.2-r5
+*>=sys-devel/libtool-1.4.3-r4
 *sys-devel/m4
 *sys-devel/make
 *sys-devel/patch
 *sys-libs/cracklib  
 *sys-libs/db
-*>=sys-libs/ncurses-5.4-r2
+*>=sys-libs/ncurses-5.2.20020112a
 *>=sys-libs/pam-0.77-r1
 *sys-libs/pwdb      
 *sys-libs/readline  
