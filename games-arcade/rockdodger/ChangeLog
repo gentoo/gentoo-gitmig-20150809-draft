@@ -1,0 +1,10 @@
+# ChangeLog for games-arcade/rockdodger
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/rockdodger/ChangeLog,v 1.1 2004/04/14 19:10:47 mr_bones_ Exp $
+
+*rockdodger-0.6.0a (14 Apr 2004)
+
+  14 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml,
+  rockdodger-0.6.0a.ebuild:
+  initial commit; ebuild by Alexandru Toma via bug #47431
+
