@@ -1,0 +1,8 @@
+# ChangeLog for dev-java/commons-primitives
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed unde the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-primitives/ChangeLog,v 1.1 2004/03/30 22:11:57 karltk Exp $
+
+
+  30 Mar 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  commons-primitives-1.0.ebuild: Initial import. Ebuild submitted by
+  myself.
