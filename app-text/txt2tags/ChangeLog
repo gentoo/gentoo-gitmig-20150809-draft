@@ -1,0 +1,9 @@
+# ChangeLog for app-text/txt2tags
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/txt2tags/ChangeLog,v 1.1 2003/04/28 20:27:09 liquidx Exp $
+
+*txt2tags-1.4 (28 Apr 2003)
+
+  28 Apr 2003; Alastair Tse <liquidx@gentoo.org> txt2tags-1.4.ebuild:
+  Initial ebuild submitted by Bardur Arantsson (#18687)
+
