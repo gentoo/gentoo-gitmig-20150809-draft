@@ -2,6 +2,12 @@
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
 # $Header
 
+*synergy-1.0.0 (20 Jan 2003)
+  
+  20 Jan 2003; Brad Cowan <bcowan@gentoo.org> synergy-1.0.0.ebuild,
+  files/digest-synergy-1.0.0:
+  Version bump.
+
 *synergy-0.9.13 (8 Nov 2002)
   
   8 Nov 2002; Matt Keadle <mkeadle@gentoo.org> synergy-0.9.13.ebuild
