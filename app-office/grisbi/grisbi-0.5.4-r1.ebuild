@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/grisbi-0.5.4.ebuild,v 1.2 2004/12/27 18:14:15 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/grisbi/grisbi-0.5.4-r1.ebuild,v 1.1 2004/12/28 19:27:37 seemant Exp $
 inherit eutils
 
 IUSE="print nls ofx"
