@@ -1,12 +1,16 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/files/bluetooth.rc,v 1.4 2004/07/15 00:23:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/files/bluetooth.rc,v 1.5 2004/09/21 23:09:54 liquidx Exp $
 
 UART_CONF="/etc/bluetooth/uart"
 
 depend() {
 	after hotplug
+}
+
+start_probe() {
+	/sbin/modprobe bluetooth l2cap rfcomm sdp
 }
 
 start_uarts() {
@@ -23,6 +27,7 @@ stop_uarts() {
 start() {
 	local RETVAL
    	ebegin "Starting Bluetooth"
+	start_probe
 	[ -x /usr/sbin/hcid ] && \
 		start-stop-daemon --start --quiet --exec /usr/sbin/hcid
 	RETVAL=$?		

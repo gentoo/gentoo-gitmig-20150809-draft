@@ -1,6 +1,16 @@
 # ChangeLog for net-wireless/bluez-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.27 2004/09/19 15:25:44 puggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.28 2004/09/21 23:09:54 liquidx Exp $
+
+*bluez-utils-2.10-r1 (22 Sep 2004)
+
+  22 Sep 2004; Alastair Tse <liquidx@gentoo.org> files/bluetooth.rc,
+  +files/2.10-r1/bluetooth.rc, +files/2.10-r1/pin,
+  +files/2.10-r1/pin-helper.sh, +bluez-utils-2.10-r1.ebuild:
+  changes to init scripts (added dund,pand support, added conf.d defaults)
+  (#60304) thanks to Florian Ehrenthal, made pin number handling more compliant
+  with upstream (#56173), upped pygtk dep to 2.2 (#56157). versionised
+  init files.
 
   19 Sep 2004; Douglas Russell,,, <puggy@gentoo.org> bluez-utils-2.10.ebuild:
   Bumping x86 and ppc stable
