@@ -5,7 +5,7 @@ MD5 ea024131a545fa4a5fc712bd871b3c42 gcl-2.5.2.ebuild 1570
 MD5 6e2df427db74fc0608117017db2a77cd gcl-2.5.3.ebuild 1791
 MD5 8c799e2d46e1f2d6efa432f12f166e31 gcl-2.6.2.ebuild 1989
 MD5 894bececac629362becdffb8733d47f1 gcl-2.6.3.ebuild 2327
-MD5 cd78b13661da7dfc23f0e6e8aa00ca7f gcl-2.6.4.ebuild 3266
+MD5 1d14bc4f73062ee5131d302ec9035b1d gcl-2.6.4.ebuild 3259
 MD5 76c0f2f918c95b927960b6dd7f700d32 metadata.xml 414
 MD5 d6815097d1cd20da7c27ba2396bd2ca2 gcl-2.6.5.ebuild 3777
 MD5 ebf9ac3ed9129b8c967416164e1b8dcf files/digest-gcl-2.4.0 59
