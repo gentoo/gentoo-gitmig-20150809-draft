@@ -1,6 +1,9 @@
 # ChangeLog for net-news/inn
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/inn/ChangeLog,v 1.15 2004/09/27 21:01:35 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/inn/ChangeLog,v 1.16 2004/10/01 23:32:48 swegener Exp $
+
+  02 Oct 2004; Sven Wegener <swegener@gentoo.org> -inn-2.3.5.ebuild:
+  Removed old ebuild.
 
   27 Sep 2004; Sven Wegener <swegener@gentoo.org> inn-2.4.1.ebuild:
   Added elibtoolize to src_unpack() because the included libtool is broken.
