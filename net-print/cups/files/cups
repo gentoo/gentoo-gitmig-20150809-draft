@@ -1,0 +1,2 @@
+auth	required	/usr/lib/security/pam_pwdb.so nullok shadow
+account	required	/usr/lib/security/pam_pwdb.so
