@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.ebuild,v 1.4 2002/08/14 12:00:14 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.ebuild,v 1.5 2002/08/14 15:49:12 murphy Exp $
 
 FT2_VER=2.0.9
 MY_V="`echo ${PV} |sed -e 's:\.::g'`"
@@ -100,7 +100,7 @@ src_unpack () {
 	echo "#define OptimizedCDebugFlags ${CFLAGS}" >> config/cf/host.def
 	echo "#define GccWarningOptions -pipe" >> config/cf/host.def
 
-	if [ "${ARCH}" = "x86 sparc sparc64" ]
+	if [ "${ARCH}" = "x86" ]
 	then
 		# optimize Mesa for architecture
 		if [ -n "`use mmx`" ]
