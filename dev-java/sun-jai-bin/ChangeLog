@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sun-jai-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jai-bin/ChangeLog,v 1.1 2004/12/23 11:56:50 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jai-bin/ChangeLog,v 1.2 2004/12/29 22:00:23 ciaranm Exp $
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *sun-jai-bin-1.1.2.01 (23 Dec 2004)
 
@@ -17,7 +20,7 @@
   +jai-bin-1.1.2.01.ebuild:
   version bump, only install *.so on x86
 
-  17 Oct 2004; Bryan Østergaard,,, <kloeri@gentoo.org>
+  17 Oct 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org>
   jai-bin-1.1.2-r2.ebuild, jai-bin-1.1.2-r3.ebuild:
   Remove alpha keywords.
 
