@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.350 2005/03/09 14:01:09 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.351 2005/03/10 01:08:16 kugelfang Exp $
+
+  10 Mar 2005; Danny van Dyk <kugelfang@gentoo.org>
+  xorg-x11-6.8.2-r1.ebuild:
+  Marked stable on amd64.
 
   09 Mar 2005; Stephen P. Becker <geoman@gentoo.org>
   xorg-x11-6.8.2-r1.ebuild:
