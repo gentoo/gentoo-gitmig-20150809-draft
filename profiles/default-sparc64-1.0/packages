@@ -1,4 +1,4 @@
-# This file created automagically by /usr/portage/profiles/default-sparc-1.0/scripts/generate-packages.sh on Wed Jul 10 22:41:01 UTC 2002
+# This file created automagically by ../default-sparc-1.0/scripts/generate-packages.sh on Tue Jul 16 21:16:24 UTC 2002
 
 # IMPORTANT: In order to parse this new format, you need Portage 1.6 or later!
 
@@ -167,8 +167,8 @@
 >=net-dialup/ppp-2.4.1-r6
 <=sys-apps/tcp-wrappers-7.6-r3
 
-# These lines added by /usr/portage/profiles/default-sparc-1.0/scripts/generate-packages.sh
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc64-1.0/packages,v 1.17 2002/07/11 06:21:03 jtegart Exp $
+# These lines added by ../default-sparc-1.0/scripts/generate-packages.sh
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc64-1.0/packages,v 1.18 2002/07/17 04:19:42 jtegart Exp $
 #
 # Please edit the file packages.sparc, it will be included in
 # packages the next time you run generate-packages.sh
@@ -180,6 +180,6 @@
 # Kernel compiler
 *sys-devel/egcs64-sparc
 
-# Fix OpenSSL 0.9.6d issue
-#<dev-libs/openssl-0.9.6d
-# End of lines added by /usr/portage/profiles/default-sparc-1.0/scripts/generate-packages.sh
+# Not all ebuilds have a sparc64 keyword as of now, so don't use the new version of portage yet.
+<portage-2.0.14
+# End of lines added by ../default-sparc-1.0/scripts/generate-packages.sh
