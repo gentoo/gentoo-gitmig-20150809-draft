@@ -1,0 +1,169 @@
+diff -BurN libs/libmyth/util.cpp libs/libmyth/util.cpp
+--- libs/libmyth/util.cpp	2005-01-27 15:43:13.000000000 -0800
++++ libs/libmyth/util.cpp	2005-04-04 14:20:31.584196189 -0700
+@@ -741,6 +741,23 @@
+ 
+     return text;
+ }
++int MythSecsTo(const QDateTime &from, const QDateTime &to)
++{
++    return (from.time().secsTo(to.time()) +
++            from.date().daysTo(to.date()) * 60 * 60 * 24);
++}
++ 
++QDateTime MythUTCToLocal(const QDateTime &utc)
++{
++    QDateTime local = QDateTime(QDate(1970, 1, 1));
++
++    int timesecs = MythSecsTo(local, utc);
++    QDateTime localdt;
++    localdt.setTime_t(timesecs);
++
++    return localdt;
++}
++  	
+ 
+ long long stringToLongLong(const QString &str)
+ {
+diff -BurN libs/libmyth/util.h libs/libmyth/util.h
+--- libs/libmyth/util.h	2005-01-23 14:45:30.000000000 -0800
++++ libs/libmyth/util.h	2005-04-04 14:21:32.149926366 -0700
+@@ -3,6 +3,7 @@
+ 
+ #include <qsocket.h>
+ #include <qstringlist.h>
++#include <qdatetime.h>
+ #include <qcolor.h>
+ 
+ #include <time.h>
+@@ -47,6 +48,9 @@
+ 
+ QString cutDownString(QString text, QFont *testFont, int maxwidth);
+ 
++QDateTime MythUTCToLocal(const QDateTime &utc);
++int MythSecsTo(const QDateTime &from, const QDateTime &to);
++
+ long long stringToLongLong(const QString &str);
+ QString longLongToString(long long ll);
+ 
+diff -BurN libs/libmythtv/datadirect.cpp libs/libmythtv/datadirect.cpp
+--- libs/libmythtv/datadirect.cpp	2005-01-27 23:33:46.000000000 -0800
++++ libs/libmythtv/datadirect.cpp	2005-04-04 14:25:45.985077439 -0700
+@@ -1,6 +1,7 @@
+ #include "datadirect.h"
+ #include "../libmyth/mythwidgets.h"
+ #include "../libmyth/mythcontext.h"
++#include "../libmyth/util.h"
+ 
+ #include <qfile.h>
+ #include <qstring.h>
+@@ -68,16 +69,19 @@
+         curr_schedule.stationid = pxmlatts.value("station");
+ 
+         QString timestr = pxmlatts.value("time");
+-        QDateTime basedt = QDateTime(QDate(1970, 1, 1));
++        //QDateTime basedt = QDateTime(QDate(1970, 1, 1));
++	QDateTime UTCdt = QDateTime::fromString(timestr, Qt::ISODate);
++	
++	curr_schedule.time = MythUTCToLocal(UTCdt);
++
++        //QDateTime UTCdt;
++        //QDateTime localdt;
++        //UTCdt = QDateTime::fromString(pxmlatts.value("time"), Qt::ISODate);
+ 
+-        QDateTime UTCdt;
+-        QDateTime localdt;
+-        UTCdt = QDateTime::fromString(pxmlatts.value("time"), Qt::ISODate);
++        //int timesecs = basedt.secsTo(UTCdt);
++        //localdt.setTime_t(timesecs);
+ 
+-        int timesecs = basedt.secsTo(UTCdt);
+-        localdt.setTime_t(timesecs);
+-
+-        curr_schedule.time = localdt;
++        //curr_schedule.time = localdt;
+         QString durstr;
+ 
+         durstr = pxmlatts.value("duration");
+diff -BurN libs/libmythtv/siparser.cpp libs/libmythtv/siparser.cpp
+--- libs/libmythtv/siparser.cpp	2005-02-06 10:15:30.000000000 -0800
++++ libs/libmythtv/siparser.cpp	2005-04-04 14:29:42.170931847 -0700
+@@ -1,4 +1,5 @@
+ #include "../libmyth/mythcontext.h"
++#include "../libmyth/util.h"
+ #include "siparser.h"
+ #include <qdatetime.h>
+ #include <qtextcodec.h>
+@@ -931,17 +932,19 @@
+     QDateTime UTCTime = QDateTime(QDate(year,month,day),QTime(hour,min,sec));
+ 
+     // Convert to localtime
+-    QDateTime EPOCTime = QDateTime(QDate(1970, 1, 1));
+-    int timesecs = EPOCTime.secsTo(UTCTime);
++    return MythUTCToLocal(UTCTime);
+ 
+-    QDateTime LocalTime;
++    //QDateTime EPOCTime = QDateTime(QDate(1970, 1, 1));
++    //int timesecs = EPOCTime.secsTo(UTCTime);
+ 
+-    LocalTime.setTime_t(timesecs);
++    //QDateTime LocalTime;
+ 
+-    QString UTCText = UTCTime.toString();
+-    QString LocalText = LocalTime.toString();
++    //LocalTime.setTime_t(timesecs);
+ 
+-    return LocalTime;
++    //QString UTCText = UTCTime.toString();
++    //QString LocalText = LocalTime.toString();
++
++    //return LocalTime;
+ 
+ }
+ 
+@@ -1994,13 +1997,14 @@
+ //    QDateTime UTCTime = ATSCEPOC.addSecs(offset - (((STTHandler*) Table[STT])->GPSOffset) );
+     QDateTime UTCTime = ATSCEPOC.addSecs(offset - 13 );
+     // Get UTC
+-    QDateTime UTCEPOC = QDateTime(QDate(1970,1,1));
++    return MythUTCToLocal(UTCTime);
++    //QDateTime UTCEPOC = QDateTime(QDate(1970,1,1));
+     // Now sloppily convert it to localtime
+ 
+-    int timesecs = UTCEPOC.secsTo(UTCTime);
+-    QDateTime LocalTime;
+-    LocalTime.setTime_t(timesecs);
+-    return LocalTime;
++    //int timesecs = UTCEPOC.secsTo(UTCTime);
++    //QDateTime LocalTime;
++    //LocalTime.setTime_t(timesecs);
++    //return LocalTime;
+ }
+ 
+ /*
+diff -BurN programs/mythfilldatabase/filldata.cpp programs/mythfilldatabase/filldata.cpp
+--- programs/mythfilldatabase/filldata.cpp	2005-02-09 13:35:13.000000000 -0800
++++ programs/mythfilldatabase/filldata.cpp	2005-04-04 14:31:47.732685624 -0700
+@@ -1013,13 +1013,15 @@
+ 
+     if (!quiet)
+         cout << "Clearing data for source...\n";
+-    QDateTime basedt = QDateTime(QDate(1970, 1, 1));
+-    QDateTime fromlocaldt;
+-    int timesecs = basedt.secsTo(ddprocessor.getActualListingsFrom());
+-    fromlocaldt.setTime_t(timesecs);
+-    QDateTime tolocaldt;
+-    timesecs = basedt.secsTo(ddprocessor.getActualListingsTo());
+-    tolocaldt.setTime_t(timesecs);
++    QDateTime fromlocaldt = MythUTCToLocal(ddprocessor.getActualListingsFrom());
++    QDateTime tolocaldt = MythUTCToLocal(ddprocessor.getActualListingsTo());
++    //QDateTime basedt = QDateTime(QDate(1970, 1, 1));
++    //QDateTime fromlocaldt;
++    //int timesecs = basedt.secsTo(ddprocessor.getActualListingsFrom());
++    //fromlocaldt.setTime_t(timesecs);
++    //QDateTime tolocaldt;
++    //timesecs = basedt.secsTo(ddprocessor.getActualListingsTo());
++    //tolocaldt.setTime_t(timesecs);
+ 
+     if (!quiet)
+         cout << "Clearing from " << fromlocaldt.toString() 

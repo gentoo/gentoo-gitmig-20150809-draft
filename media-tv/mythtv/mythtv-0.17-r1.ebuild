@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.17.ebuild,v 1.7 2005/04/06 10:07:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.17-r1.ebuild,v 1.1 2005/04/06 10:07:40 eradicator Exp $
 
-inherit myth flag-o-matic eutils
+inherit myth flag-o-matic eutils toolchain-funcs
 
 DESCRIPTION="Homebrew PVR project"
 HOMEPAGE="http://www.mythtv.org/"
@@ -165,6 +165,10 @@ src_unpack() {
 	is-flag "-march=athlon-xp" && replace-flags "-O3" "-O2"
 
 	myth_src_unpack || die "unpack failed"
+
+	cd ${S}
+	# Fix bug with daylight savings time
+	epatch ${FILESDIR}/mythtv-0.17-qt334-dst-fix.patch
 }
 
 src_compile() {
@@ -175,15 +179,15 @@ src_compile() {
 
 	qmake -o "Makefile" "${PN}.pro"
 	make qmake || die
-	emake -C libs/libavcodec || die
-	emake -C libs/libavformat || die
-	emake -C libs/libmythsamplerate || die
-	emake -C libs/libmythsoundtouch || die
-	emake -C libs/libmythmpeg2 || die
-	emake -C libs/libmyth || die
-	emake -C libs/libmythtv || die
-	emake -C libs || die
-	emake || die
+	emake -C libs/libavcodec CC="$(tc-getCC)" CXX="$(tc-getCXX)" || die
+	emake -C libs/libavformat CC="$(tc-getCC)" CXX="$(tc-getCXX)" || die
+	emake -C libs/libmythsamplerate CC="$(tc-getCC)" CXX="$(tc-getCXX)" || die
+	emake -C libs/libmythsoundtouch CC="$(tc-getCC)" CXX="$(tc-getCXX)" || die
+	emake -C libs/libmythmpeg2 CC="$(tc-getCC)" CXX="$(tc-getCXX)" || die
+	emake -C libs/libmyth CC="$(tc-getCC)" CXX="$(tc-getCXX)" || die
+	emake -C libs/libmythtv CC="$(tc-getCC)" CXX="$(tc-getCXX)" || die
+	emake -C libs CC="$(tc-getCC)" CXX="$(tc-getCXX)" || die
+	emake CC="$(tc-getCC)" CXX="$(tc-getCXX)" || die
 }
 
 src_install() {
