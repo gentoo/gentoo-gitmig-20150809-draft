@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.0.2.ebuild,v 1.8 2004/11/11 14:57:52 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.0.2.ebuild,v 1.9 2004/11/11 23:21:03 foser Exp $
 
 inherit eutils virtualx gnome2 flag-o-matic alternatives
 
@@ -113,7 +113,7 @@ src_compile() {
 			--with-nspr-includes=${NSPR_INC} \
 			--with-nspr-libs=${NSPR_LIB} \
 			--with-nss-includes=${NSS_INC} \
-			--with-nss-libs=${NSS_LIB}"s
+			--with-nss-libs=${NSS_LIB}"
 	else
 		myconf="${myconf} --without-nspr-libs --without-nspr-includes \
 		--without-nss-libs --without-nss-includes"
