@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/fortran.eclass,v 1.2 2004/10/10 12:59:01 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/fortran.eclass,v 1.3 2004/10/10 22:28:42 kugelfang Exp $
 #
 # Author: Danny van Dyk <kugelfang@gentoo.org>
 #
 
-ECLASS=fortran
-INHERITED="$INHERITED $ECLASS"
+inherit eutils
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
 
@@ -14,9 +13,8 @@ DESCRIPTION="Based on the ${ECLASS} eclass"
 
 # need_fortran(<profiles>):
 #  profiles = <profile> ... <profile>
-#  profile = [path/to/]<compiler>
 #
-#  compiler:
+#  profile:
 #   * f77 - GCC Fortran 77
 #   * f2c - Fortran 2 C Translator
 #   * ifc - Intel Fortran Compiler
@@ -28,7 +26,8 @@ need_fortran() {
 	if [ -z "$*" ]; then
 		eerror "Call need_fortran with at least one argument !"
 	fi
-	local AVAILABLE=""
+	local AVAILABLE
+	local PROFILE
 	for PROFILE in $@; do
 		case ${PROFILE} in
 			f77)
@@ -106,9 +105,6 @@ need_fortran() {
 					;;
 			esac
 			if [ "${TEST}" == "${AVAILABLE}" ]; then
-				echo ${MY_FORTRAN}
-				echo ${TEST}
-				echo ${AVAILABLE}
 				eerror "Current Fortan Compiler is set to ${MY_FORTRAN}, which is not usable with this package !"
 				die "Wrong Fortran Compiler !"
 			fi
@@ -122,7 +118,8 @@ patch_fortran() {
 	if [ -z "${FORTRANC}" ]; then
 		return
 	fi
-	PATCHES=${FILESDIR}/${P}-${FORTRANC}*
+	local PATCHES=${FILESDIR}/${P}-${FORTRANC}*
+	local PATCH
 	if [ -n "${PATCHES}" ]; then
 		for PATCH in ${PATCHES}; do
 			epatch ${PATCH}
