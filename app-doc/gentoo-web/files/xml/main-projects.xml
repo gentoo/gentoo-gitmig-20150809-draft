@@ -1,0 +1,40 @@
+<?xml version='1.0'?>
+<mainpage id="projects">
+<title>Gentoo Linux Projects</title>
+<author title="Chief Architect"><mail link="drobbins@gentoo.org">Daniel Robbins</mail></author>
+
+<standout>
+<title>About these projects</title>
+<body>
+<p>
+	This page lists development projects that are not specifically Gentoo Linux-related.
+</p>
+</body>
+</standout>
+
+<version>1.0.1</version>
+<date>22 Apr 2001</date>
+
+<chapter>
+
+<section>
+<body>
+
+	<p>
+	<uri link="/projects/dynfw.html">The dynfw firewall scripts</uri> are a collection of netfilter-based
+	(<c>iptables</c>) firewall scripts designed to allow for an immediate, measured response against pending
+	security threats.  These <c>bash</c> scripts have been designed to work with nearly any netfilter-based firewall
+	(including both "allow by default" and "deny by default" configurations).
+	</p>
+
+	<p>
+	<uri link="/projects/xml.html">The XML projects page</uri> contains the complete <c>guide</c> XSLT engine that
+	is used to create this entire site, including the main pages and online documentation.  On this page, you
+	can find a tarball that contains the complete sources that were used to generate the latest version of 
+	the <uri>http://www.gentoo.org</uri> Web site -- the one you are viewing now.
+	</p>
+
+</body>
+</section>
+</chapter>
+</mainpage>

@@ -3,15 +3,6 @@
 <title>dynfw Dynamic Firewall Tools, v1.0</title>
 <author title="Author"><mail link="drobbins@gentoo.org">Daniel Robbins</mail></author>
 
-<abstract>
-Firewalls all good and fun, but what do you do when you need to make rapid,
-complex changes to your iptables-based firewall rules?  Easy -- use the dynfw
-Dynamic Firewall Tools, a collection of robust bash scripts that are designed
-to work with nearly any existing iptables-based firewall configuration.  You
-can use these scripts to increase your network security and responsiveness, and
-as inspiration for your own creative designs.
-</abstract>
-
 <version>1.0</version>
 <date>19 Apr 2001</date>
 
@@ -22,18 +13,31 @@ as inspiration for your own creative designs.
 <title>Introduction</title>
 <body>
 
-<p>The dynfw scripts originated from an article I wrote for <uri link="http://www.ibm.com/developerworks">IBM developerWorks</uri> that showed how to make a firewall more responsive by creating scripts that automate common "firewall-tweaking" tasks,
-such as blocking an IP, ratelimiting a host, etc.  The reason for the scripts is simple -- when you're in a crisis, you don't
-want to make changes to your master firewall script in a frantic state.  Instead, you want to have an already-existing and
-easy-to-use mechanism to make those changes for you, eliminating the possibility of error and allowing immediate response.
-<p>You can read <uri link="http://www-106.ibm.com/developerworks/linux/library/l-fw/?n-l-4191">the original IBM developerWorks dynfw article</uri>,
-which explains how to use the scripts.</p>
-<p>You can download the current version of dynfw here: <uri>dynfw-1.0.tar.gz</uri>.</p>
-<p>The dynfw Dynamic Firewall Tools are Copyright 2001 Gentoo Technologies, Inc. and distributed under the GNU Public License.You are encouraged to send any bug fixes or improvements to these tools to <mail link="drobbins@gentoo.org">Daniel Robbins</mail> so that they can be rolled into the official release.</p>
+<p>Firewalls all good and fun, but what do you do when you need to make rapid,
+complex changes to your netfilter-based firewall?  Instead of feverishly
+hacking away at a complex master firewall script, use the dynfw Dynamic
+Firewall Tools.  This collection of robust bash scripts have been designed to
+work with nearly any existing netfilter-based firewall configuration.  By using
+these scripts, you'll be able to make near-immediate changes to your firewall
+configuration without risk of misconfiguration, resulting in vastly improved
+network security and responsiveness.  The dynfw firewall scripts were
+originally featured in <uri
+link="http://www-106.ibm.com/developerworks/linux/library/l-fw/?n-l-4191">this
+IBM developerWorks article</uri>.</p>
+
+<p>You can download the current version of dynfw here:
+<uri>dynfw-1.0.tar.gz</uri>.</p> 
+
+<note>The dynfw Dynamic Firewall Tools are
+Copyright 2001 Gentoo Technologies, Inc. and distributed under the GNU Public
+License.  You are encouraged to send any bug fixes or improvements to these
+tools to <mail link="drobbins@gentoo.org">Daniel Robbins</mail> so that they
+can be rolled into the official release.</note>
 
 
 <p>The following scripts are included in <path>dynfw-1.0.tar.gz</path>:
 </p>
+<p>
 <table>
 <tr><th>Script</th><th>Description</th></tr>
 <tr><ti><path>install.sh</path></ti><ti>the install script -- run this first</ti></tr>

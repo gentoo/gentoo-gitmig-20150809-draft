@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.1.ebuild,v 1.4 2001/06/09 16:06:42 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.1.ebuild,v 1.5 2001/06/16 05:44:53 drobbins Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="www.gentoo.org website"
@@ -49,6 +49,7 @@ src_install() {
 
 	xsltproc xsl/guide-main.xsl xml/main-about.xml > ${D}/usr/local/httpd/htdocs/index.html
 	xsltproc xsl/guide-main.xsl xml/main-download.xml > ${D}/usr/local/httpd/htdocs/index-download.html
+	xsltproc xsl/guide-main.xsl xml/main-projects.xml > ${D}/usr/local/httpd/htdocs/index-projects.html
 		
 	doins css/main-new.css
 	

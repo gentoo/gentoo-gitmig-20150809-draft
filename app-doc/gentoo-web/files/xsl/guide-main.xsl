@@ -46,6 +46,7 @@
 				&#160;&#160;<a class="oldlink" href="/index.html">About Gentoo Linux</a><br/>
 				&#160;&#160;<a class="oldlink" href="/index-download.html">Download/Install</a><br/> 
 				&#160;&#160;<a class="oldlink" href="/index-changelog.html">CVS Changelog</a><br/> 
+				&#160;&#160;<a class="oldlink" href="/index-projects.html">Projects</a><br/> 
 				<br/>
 				<xsl:choose>
 				<xsl:when test="/guide/@type='project'">
@@ -85,11 +86,13 @@
 		<tr valign="top" bgcolor="#ddddff">
 			<td class="infotext">
 				<br/>
-				<p class="infosub">Summary:</p>
-				<p class="infolist">
-				<xsl:apply-templates select="abstract"/>
-				</p>
+				<xsl:if test="abstract">
+					<p class="infosub">Summary:</p>
+					<p class="infolist">
+					<xsl:apply-templates select="abstract"/>
+					</p>
 				<br/>
+				</xsl:if>
 				<p class="infosub">Document Authors:</p>
 				<p class="infolist">
 				<xsl:apply-templates select="author"/>
@@ -174,10 +177,18 @@
 				</xsl:choose>
 				<xsl:choose>
 					<xsl:when test="/mainpage/@id='changelog'">
-						<a class="highlight" href="/index-changelog.html">CVS Changelog</a>
+						<a class="highlight" href="/index-changelog.html">CVS Changelog</a> |
 					</xsl:when>
 					<xsl:otherwise>
-						<a class="menulink" href="/index-changelog.html">CVS Changelog</a>
+						<a class="menulink" href="/index-changelog.html">CVS Changelog</a> |
+					</xsl:otherwise>
+				</xsl:choose>
+				<xsl:choose>
+					<xsl:when test="/mainpage/@id='projects'">
+						<a class="highlight" href="/index-projects.html">Projects</a>
+					</xsl:when>
+					<xsl:otherwise>
+						<a class="menulink" href="/index-projects.html">Projects</a>
 					</xsl:otherwise>
 				</xsl:choose>
 				</p>
