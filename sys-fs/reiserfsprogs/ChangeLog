@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/reiserfsprogs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.25 2004/08/24 19:42:18 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.26 2004/09/04 02:37:51 tgall Exp $
+
+  03 Sep 2004; Tom Gall <tgall@gentoo.org> reiserfsprogs-3.6.18.ebuild:
+  stable on ppc64
 
   24 Aug 2004; <solar@gentoo.org> reiserfsprogs-3.6.17.ebuild,
   reiserfsprogs-3.6.18.ebuild:
