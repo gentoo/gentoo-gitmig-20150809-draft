@@ -6,7 +6,7 @@
 # 
 #  etcat v0.1.4 (27 Apr 2003)
 #
-#  $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/etcat,v 1.6 2003/05/08 11:38:08 liquidx Exp $
+#  $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/etcat,v 1.7 2003/06/13 07:41:25 liquidx Exp $
 #
 # --| About |--------------------------------------------------------
 #
@@ -42,7 +42,8 @@
 # 
 # --| Changes |------------------------------------------------------
 #
-#  * etcat-0.2.0 ( ?? )
+#  * etcat-0.2.0 (13 Jun 2003)
+#    - Updated "versions" with PORTAGE_OVERLAY detection
 #    - Added "graph" feature
 #  * etcat-0.1.5 (30 Apr 2003)
 #    - Fixed disappearing short opts. Oops.
@@ -99,7 +100,7 @@ options = {
 "depends":("d","Finds all packages that are directly dependent to a regex search string.",
 ["etcat depends 'gnome-base/libgnome'", "etcat depends '>=dev-lang/python-2.2'"]),
 "files":("f","Lists files that belongs to a package and optionally with version.",[]),
-"graph":("g","Graphs Dependencies",[]),
+"graph":("g","Graphs Dependencies (NON WORKING)",[]),
 "size":("s","Lists the installed size of a package.",[]),
 "uses":("u", "Advanced output of USE vars in a package. Tells you flags used by a package at time of installation, flags in current config and flag description.",[]),
 "versions":("v","Displays the versions available for a specific package. Colour coded to indicate installation status and displays slot information.",
@@ -517,6 +518,7 @@ def versions(query):
             state = []
             color = green
             unstable = 0
+	    overlay = ""
             
             # check if masked
             if ver not in unmasked:
@@ -547,6 +549,14 @@ def versions(query):
                 color = turquoise
             else:
                 state.append(" ")
+		
+	    # check if this is a OVERLAY ebuilds
+	    try:
+		if portage.portdb.oroot:
+		    if os.path.exists(portage.portdb.oroot + "/" + package + "/" + pkg + ".ebuild"):
+			overlay = " OVERLAY"
+	    except AttributeError:
+		pass
 
             # print
 	    try:
@@ -555,8 +565,8 @@ def versions(query):
 		    slot = ["0"]
 	    except KeyError:
 		slot = ["?"]
-            
-            print " "*8 + "[" + string.join(state,"") + "] " + color(ver) + " (" + color(slot[0]) + ")"
+		
+            print " "*8 + "[" + string.join(state,"") + "] " + color(ver) + " (" + color(slot[0]) + ")" + overlay
 
         print
 
@@ -749,6 +759,7 @@ graphcache = []
 
 def graph(query):
     print "attempt to graph dependencies"
+    print red("warning, this is BETA, will probably report the wrong results")
     rgraph(query, [])
 
 # return string of deps that are valid
