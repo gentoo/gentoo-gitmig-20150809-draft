@@ -31,3 +31,5 @@ MD5 227f2c2422f5382be32230d29f265b8a files/digest-development-sources-2.5.72 67
 MD5 1cc3d17b5b26440091bfd384b8d43371 files/digest-development-sources-2.5.73 67
 MD5 f4493f109865b4224bafa9380559fac3 files/digest-development-sources-2.5.74 67
 MD5 879821b31e600ad5815cfabcb6ae1152 files/digest-development-sources-2.5.75 67
+MD5 3d25b43e2bad146dfee3ac9a7a186d2f development-sources-2.6.0_beta3-r8.ebuild 3286
+MD5 ee03bf2bc399597a51976774177ad2f3 files/digest-development-sources-2.6.0_beta3-r8 142
