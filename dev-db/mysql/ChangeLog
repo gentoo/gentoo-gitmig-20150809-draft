@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.55 2003/06/21 10:00:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.56 2003/07/03 08:26:23 robbat2 Exp $
 
 *mysql-3.23.57 (17 Mar 2003)
 
@@ -9,7 +9,10 @@
 
 *mysql-4.0.13-r3 (12 Jun 2003)
 
-  12 Jun 2003; <robbat2@gentoo.org> mysql-4.0.13-r3.ebuild:
+  3 Jun 2003; Robin Johnson <robbat2@gentoo.org> mysql-4.0.13-r3.ebuild:
+  Add SSL warning as per bug #22964.
+
+  12 Jun 2003; Robin Johnson <robbat2@gentoo.org> mysql-4.0.13-r3.ebuild:
   Show a sensible error message and die if the user has USE="static ssl" as
   MySQLv4 doesn't support these simultanoeusly.
 
