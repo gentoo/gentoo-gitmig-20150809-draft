@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.39 2003/01/15 23:14:06 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.40 2003/01/23 21:53:00 tuxus Exp $
+
+  23 Jan 2003; Jan Seidel <tuxus@gentoo.org> glibc-2.3.1-r3.ebuild :
+  Add MIPS inline-syscall-mips patch
 
   16 Jan 2003; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.1-r3.ebuild :
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r3.ebuild,v 1.2 2003/01/15 23:14:06 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r3.ebuild,v 1.3 2003/01/23 21:53:00 tuxus Exp $
 
 IUSE="nls pic build"
 
@@ -131,7 +131,7 @@ src_unpack() {
 		epatch ${FILESDIR}/${PV}/${P}-elf-machine-rela-mips.patch
 		epatch ${FILESDIR}/${PV}/${P}-exit-syscall-mips.patch
 		epatch ${FILESDIR}/${PV}/${P}-fpu-cw-mips.patch
-#		epatch ${FILESDIR}/${PV}/${P}-inline-syscall-mips.patch
+		epatch ${FILESDIR}/${PV}/${P}-inline-syscall-mips.patch
 		epatch ${FILESDIR}/${PV}/${P}-libgcc-compat-mips.patch
 		epatch ${FILESDIR}/${PV}/${P}-librt-mips.patch
 		epatch ${FILESDIR}/${PV}/${P}-tst-rndseek-mips.patch
