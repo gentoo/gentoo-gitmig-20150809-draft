@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/longplayer/longplayer-0.99.2.ebuild,v 1.1 2004/03/31 18:43:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/longplayer/longplayer-0.99.2.ebuild,v 1.2 2004/03/31 18:44:17 eradicator Exp $
 
 inherit eutils kde
 
@@ -38,10 +38,9 @@ src_unpack() {
 }
 
 src_compile() {
-	addwrite ${QTDIR}/etc/settings/.qt_plugins_${QTVER}rc.lock
-	econf `use_enable berkdb berkeleydb` || die "econf failed"
-
 	addwrite "${QTDIR}/etc/settings"
+
+	econf `use_enable berkdb berkeleydb` || die "econf failed"
 	emake || die "emake failed"
 }
 
