@@ -37,10 +37,6 @@ ldap
 acl
 
 # 14 Mar 2003 Guy Martin <gmsoft@gentoo.org>
-# Postgresql is curently b0rked on hppa
-postgres
-
-# 14 Mar 2003 Guy Martin <gmsoft@gentoo.org>
 # USE flags not related to hppa
 3dnow
 acpi
