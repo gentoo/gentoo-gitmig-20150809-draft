@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/cnet
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cnet/ChangeLog,v 1.1 2003/08/01 19:48:23 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cnet/ChangeLog,v 1.2 2003/12/08 21:54:57 rizzo Exp $
+
+  08 Dec 2003; Don Seiler <rizzo@gentoo.org>; cnet-2.0.5.ebuild:
+  Fix for Bug 35160: hardwired CFLAGS.  Thanks to Eldad Zack
+
+  08 Dec 2003; Don Seiler <rizzo@gentoo.org>; cnet-2.0.5.ebuild:
+  Fix for Bug 35109: Install docs.  Thanks to viktor(at)neotek(dot)hu
 
 *cnet-2.0.5 (01 Aug 2003)
 

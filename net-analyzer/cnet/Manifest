@@ -1,5 +1,5 @@
-MD5 975f150504319d33da3f4270e028ba7c cnet-2.0.5.ebuild 868
-MD5 0f7257094a7d95ba4471aa9fe54a148e ChangeLog 435
+MD5 20a4df78099ef1df5629d0c2d984b2c3 cnet-2.0.5.ebuild 1042
+MD5 179ea6ecc0de6ae072fc05c7ad36f36e ChangeLog 698
 MD5 169e364920f553ebb1b1cdd3f2778f45 metadata.xml 527
 MD5 5fa730e3f767e911187654f6f809257f files/digest-cnet-2.0.5 60
 MD5 652fb332fa98e02524b07ee1561c6182 files/cnet-2.0.5-gentoo.patch 1363
