@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-diskperf/xfce4-diskperf-1.0.ebuild,v 1.3 2003/10/16 04:57:56 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-diskperf/xfce4-diskperf-1.0.ebuild,v 1.4 2004/04/27 16:03:33 pvdabeel Exp $
 
 IUSE=""
 MY_P="${PN}-plugin-${PV}"
