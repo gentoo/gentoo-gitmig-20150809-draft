@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/pptpclient
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/ChangeLog,v 1.16 2004/10/02 12:50:27 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/ChangeLog,v 1.17 2004/10/06 07:27:59 dragonheart Exp $
+
+  06 Oct 2004; Daniel Black <dragonheart@gentoo.org>
+  -pptpclient-1.1.0-r1.ebuild, -pptpclient-1.1.0.ebuild,
+  -pptpclient-1.2.0.ebuild, pptpclient-1.3.1.ebuild, pptpclient-1.4.0.ebuild,
+  pptpclient-1.5.0.ebuild:
+  Removed old versions. Added pptp-command to SRC_URI - Thanks to email from
+  Torben Frey <kic@lavalite.de> for the notification
 
   02 Oct 2004; Daniel Black <dragonheart@gentoo.org> -files/pptp-command,
   -files/pptp-init, pptpclient-1.1.0-r1.ebuild, pptpclient-1.1.0.ebuild,

@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/pptpclient-1.5.0.ebuild,v 1.2 2004/10/02 12:50:27 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/pptpclient-1.5.0.ebuild,v 1.3 2004/10/06 07:27:59 dragonheart Exp $
 
 MY_P=pptp-linux-${PV}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Linux client for PPTP"
 HOMEPAGE="http://pptpclient.sourceforge.net/"
-SRC_URI="mirror://sourceforge/pptpclient/${MY_P}.tar.gz"
+SRC_URI="mirror://gentoo/pptp-command
+	mirror://sourceforge/pptpclient/${MY_P}.tar.gz"
 RESTRICT="nomirror"
 
 SLOT="0"
