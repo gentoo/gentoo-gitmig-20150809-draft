@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Sean Mitchell <sean@arawak.tzo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.04.ebuild,v 1.3 2002/06/09 02:17:18 daybird Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.04.ebuild,v 1.4 2002/06/10 13:30:56 daybird Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Objective Caml is a fast modern type-inferring functional programming language descended from the ML (Meta Language) family."
@@ -22,7 +22,8 @@ src_unpack()
 	cd ${S}
 	if [ ${ARCH} == "ppc" ]
 	then
-		patch -l -p1 < ${FILESDIR}/${P}-ppc.diff
+		tar -zxf ${FILESDIR}/${P}-ppc.diff.tgz
+		patch -l -p1 < ${P}-ppc.diff
 	fi
 }
 
