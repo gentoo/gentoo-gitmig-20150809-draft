@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-28_pre3.ebuild,v 1.1 2004/11/24 20:04:25 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/wireless-tools-28_pre3.ebuild,v 1.2 2004/11/30 10:40:23 brix Exp $
 
 inherit toolchain-funcs
 
@@ -23,13 +23,13 @@ IUSE="multicall nls"
 src_unpack() {
 	unpack ${A}
 
-	sed -i "s:gcc:$(tc-getCC):" \
+	sed -i "s:^\(CC\) = gcc:\1 = $(tc-getCC):" \
 		${S}/Makefile
 
-	sed -i "s:ar:$(tc-getAR):" \
+	sed -i "s:^\(AR\) = ar:\1 = $(tc-getAR):" \
 		${S}/Makefile
 
-	sed -i "s:ranlib:$(tc-getRANLIB):" \
+	sed -i "s:^\(RANLIB\) = ranlib:\1 = $(tc-getRANLIB):" \
 		${S}/Makefile
 
 	sed -i "s:^\(CFLAGS=-Os\):#\1:" \

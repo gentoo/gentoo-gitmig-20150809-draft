@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/wireless-tools
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.51 2004/11/25 00:04:07 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.52 2004/11/30 10:40:23 brix Exp $
+
+  30 Nov 2004; Henrik Brix Andersen <brix@gentoo.org>
+  wireless-tools-28_pre3.ebuild:
+  Fixed tc-getXX() sed statements (bug #72833).
 
   25 Nov 2004; Sven Wegener <swegener@gentoo.org> :
   Fixed digest.
