@@ -1,0 +1,11 @@
+--- epan/Makefile.in.old	2004-03-26 04:05:56.000000000 +0000
++++ epan/Makefile.in	2004-04-23 08:59:22.353604120 +0100
+@@ -1453,7 +1453,7 @@
+ CCLD = $(CC)
+ LINK = $(LIBTOOL) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
+ 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+-CFLAGS = @CFLAGS@
++CFLAGS = @CFLAGS@ -fno-unroll-loops
+ DIST_SOURCES = $(libethereal_la_SOURCES) $(EXTRA_libethereal_la_SOURCES)
+ 
+ RECURSIVE_TARGETS = info-recursive dvi-recursive install-info-recursive \
