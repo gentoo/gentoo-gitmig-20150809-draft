@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/rapidsvn
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.13 2004/12/04 07:51:45 dragonheart Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rapidsvn/ChangeLog,v 1.14 2005/03/17 09:54:39 dholm Exp $
+
+*rapidsvn-0.7.1 (17 Mar 2005)
+
+  17 Mar 2005; David Holm <dholm@gentoo.org> rapidsvn-0.7.0.ebuild,
+  +rapidsvn-0.7.1.ebuild:
+  Version bumped
+  Added icon and desktop entry
 
 *rapidsvn-0.7.0 (04 Dec 2004)
 
