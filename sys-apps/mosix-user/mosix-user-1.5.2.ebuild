@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mosix-user/mosix-user-1.5.2.ebuild,v 1.3 2001/11/24 16:48:43 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mosix-user/mosix-user-1.5.2.ebuild,v 1.4 2001/11/25 02:40:12 drobbins Exp $
 
 S=${WORKDIR}/user
 DESCRIPTION="User-land utilities for MOSIX process migration (clustering) software"
@@ -80,9 +80,9 @@ src_install () {
 
 pkg_postinst() {
 	echo
-	echo ">>> To complete MOSIX installation, edit /etc/mosix.map and then type:
-	echo ">>> # rc-update add mosix default
-	echo ">>> ...to add MOSIX to the default runlevel.  This particular version of"
-	echo ">>> mosix-user has been designed to work with the 2.4.13 kernel."
+	echo " To complete MOSIX installation, edit /etc/mosix.map and then type:
+	echo "# rc-update add mosix default
+	echo " ...to add MOSIX to the default runlevel.  This particular version of"
+	echo " mosix-user has been designed to work with the 2.4.13 kernel."
 	echo
 }
