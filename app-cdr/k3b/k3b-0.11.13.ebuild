@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.13.ebuild,v 1.1 2004/08/05 15:52:56 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.13.ebuild,v 1.2 2004/08/05 22:09:47 carlo Exp $
 
 inherit kde
 
@@ -54,7 +54,7 @@ fi
 
 src_compile() {
 	local _S=${S}
-	local myconf="--enable-libsuffix= $(use_with kde k3bsetup)"
+	local myconf="--enable-libsuffix= $(use_with kde k3bsetup) $(use_with arts)"
 
 	# Build process of K3B
 	kde_src_compile
