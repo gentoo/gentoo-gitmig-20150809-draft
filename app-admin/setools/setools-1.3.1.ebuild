@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-1.3.1.ebuild,v 1.3 2004/05/31 19:21:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-1.3.1.ebuild,v 1.4 2004/06/21 17:59:55 pebenito Exp $
 
 DESCRIPTION="SELinux policy tools"
 HOMEPAGE="http://www.tresys.com/selinux_policy_tools.html"
@@ -50,6 +50,13 @@ src_unpack() {
 	sed -i -e 's,-Z system_u:object_r:seuser_exec_t,,g' ${S}/seuser/Makefile
 	sed -i -e 's,-Z system_u:object_r:seuser_conf_t,,g' ${S}/seuser/Makefile
 	sed -i -e 's,-Z system_u:object_r:policy_src_t,,g' ${S}/seuser/Makefile
+
+	# dont do findcon or replcon if USE=-selinux
+	if ! use selinux; then
+		einfo "Disabling replcon and findcon"
+		sed -i -e '/^SE_CMDS/s/replcon//' ${S}/secmds/Makefile
+		sed -i -e '/^SE_CMDS/s/findcon//' ${S}/secmds/Makefile
+	fi
 
 	# set policy dir in seuser.conf
 	sed -i -e '/^policy_dir/d' -e '/^user_file/d' ${S}/seuser/seuser.conf
