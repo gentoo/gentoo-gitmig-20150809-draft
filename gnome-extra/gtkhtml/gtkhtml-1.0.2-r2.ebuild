@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.0.2-r2.ebuild,v 1.1 2002/06/12 12:06:56 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.0.2-r2.ebuild,v 1.2 2002/06/12 20:00:53 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="gtkhtml"
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 RDEPEND=">=gnome-extra/gal-0.19
 	( >=gnome-base/control-center-1.4.0.1-r1
-			<control-center-1.99.0 )
+	  <gnome-base/control-center-1.99.0 )
 	>=gnome-base/libghttp-1.0.9-r1
 	>=dev-libs/libunicode-0.4-r1
 	>=gnome-base/gnome-print-0.34
