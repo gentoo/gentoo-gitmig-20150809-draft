@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.26 2004/04/11 05:46:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.27 2004/06/08 21:11:50 mr_bones_ Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -27,12 +27,12 @@ ELT_find_ltmain_sh() {
 	local x=
 	local dirlist=
 
-    for x in $(find "${S}" -name 'ltmain.sh')
-    do
-        dirlist="${dirlist} ${x%/*}"
-    done
+	for x in $(find "${S}" -name 'ltmain.sh')
+	do
+		dirlist="${dirlist} ${x%/*}"
+	done
 
-    echo "${dirlist}"
+	echo "${dirlist}"
 }
 
 #
@@ -74,7 +74,7 @@ ELT_walk_patches() {
 		else
 			return ${ret}
 		fi
-		
+
 		for x in $(ls -d "${patch_dir}"/* 2>/dev/null)
 		do
 			if [ -n "${x}" -a -f "${x}" ]
@@ -86,10 +86,10 @@ ELT_walk_patches() {
 					# to --remove-internal-dep
 					sed -e "s|@REM_INT_DEP@|$3|g" ${x} > \
 						${T}/$$.rem_int_deps.patch
-					
+
 					x="${T}/$$.rem_int_deps.patch"
 				fi
-			
+
 				if ELT_try_and_apply_patch "$1" "${x}"
 				then
 					ret=0
@@ -113,7 +113,7 @@ elibtoolize() {
 	local elt_patches="portage relink max_cmd_len sed test tmp"
 
 	my_dirlist="$(ELT_find_ltmain_sh)"
-	
+
 	for x in $*
 	do
 		case "${x}" in
@@ -156,7 +156,7 @@ elibtoolize() {
 	do
 		local tmp="$(echo "${x}" | sed -e "s|${S}||")"
 		export ELT_APPLIED_PATCHES=
-		
+
 		cd ${x}
 		einfo "Patching \${S}$(echo "/${tmp}/ltmain.sh" | sed -e 's|//|/|g')..."
 
@@ -190,7 +190,7 @@ elibtoolize() {
 					ret=$?
 					;;
 			esac
-			
+
 			if [ "${ret}" -ne 0 ]
 			then
 				case ${y} in
@@ -258,4 +258,3 @@ elibtoolize() {
 	# src_compile()
 	cd ${S}
 }
-
