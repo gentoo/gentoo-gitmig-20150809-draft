@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/chpax
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/ChangeLog,v 1.13 2003/12/09 05:48:19 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/ChangeLog,v 1.14 2003/12/30 21:26:08 solar Exp $
+
+*chpax-0.6 (30 Dec 2003)
+
+  30 Dec 2003; <solar@gentoo.org> chpax-0.6.ebuild, files/pax-conf.d:
+  This release adds mips and mips64 support. Currently Gentoo does not support
+  mips64 but when we do chpax can be ~mips64 keyworded
 
   09 Dec 2003; <solar@gentoo.org> chpax-0.5.ebuild:
   permission change on chpax so the portage user can execute it.
