@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/picocontainer/picocontainer-1.0_beta3.ebuild,v 1.2 2004/01/11 18:09:24 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/picocontainer/picocontainer-1.0_beta3.ebuild,v 1.3 2004/04/10 15:22:30 zx Exp $
 
 inherit java-pkg
 
-DESCRIPTION="This is a sample skeleton ebuild file"
-HOMEPAGE="http://www.picocontainer.org"
+DESCRIPTION="http://docs.codehaus.org/display/PICO/"
+HOMEPAGE="http://docs.codehaus.org/display/PICO/"
 SRC_URI="http://dist.codehaus.org/picocontainer/distributions/${PN}-1.0-beta-3-src.tar.gz"
 LICENSE="PicoContainer"
 SLOT="1"

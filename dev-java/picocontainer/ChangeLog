@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/picocontainer
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/picocontainer/ChangeLog,v 1.3 2004/03/07 02:38:39 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/picocontainer/ChangeLog,v 1.4 2004/04/10 15:22:30 zx Exp $
+
+  10 Apr 2004; Chris Aniszczyk <zx@gentoo.org> picocontainer-1.0_beta3.ebuild,
+  picocontainer-1.0_beta4.ebuild:
+  Fixed $HOMEPAGE AND $DESCRIPTION, closes #47200
 
 *picocontainer-1.0_beta4 (09 Mar 2004)
 
