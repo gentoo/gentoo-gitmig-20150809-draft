@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-1.7.9.ebuild,v 1.13 2004/06/29 16:35:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-1.7.9.ebuild,v 1.14 2004/08/14 21:48:35 robbat2 Exp $
 
 inherit gcc eutils
 
@@ -25,7 +25,7 @@ DEPEND="<dev-db/mysql-4.0.0
 src_compile() {
 	if [ `gcc-major-version` -eq 3 ] ; then
 		epatch ${DISTDIR}/mysql++-gcc-3.0.patch
-		epatch ${FILESDIR}/mysql++-gcc-3.2.patch
+		epatch ${DISTDIR}/mysql++-gcc-3.2.patch
 	fi
 	epatch ${FILESDIR}/mysql++-1.7.9_example.patch
 
