@@ -2,16 +2,18 @@
 Hash: SHA1
 
 MD5 ab33374dfff86c590745d0d56a66b709 commons-httpclient-2.0-r1.ebuild 1277
+MD5 a4a49f34c3723a871d2f7710239aebd7 commons-httpclient-2.0.2.ebuild 1557
 MD5 5c51aa209417dd687d1f03e2461e9a82 commons-httpclient-2.0.1.ebuild 1557
-MD5 56e4a0a544bb367ce3a07ad69fd84576 ChangeLog 1309
+MD5 e4cfe47303fc4dade3f4bad7edff4696 ChangeLog 1452
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 22c430c6bf50bc578f8095df5fd64cc4 files/digest-commons-httpclient-2.0.1 81
+MD5 63acee983ed2a9669cd20bc47743b8d3 files/digest-commons-httpclient-2.0.2 81
 MD5 35bcb566781a909ae25bac9979bf497c files/gentoo.diff 444
 MD5 70dbd7a345c0a9f6a17998de0191f13e files/digest-commons-httpclient-2.0-r1 79
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBbC/x/rLF9B432nYRAmzjAJ9ZldOXFC8uXZcOgX1uyhlKCFA6LgCdETx9
-xOZZ40gsw/O59HMcHduL4Nk=
-=YxaT
+iD8DBQFBbWDU/rLF9B432nYRAtOmAKCfmLYFTFqlUMPDuC7xBLT7rqlFwACfTSXg
+0fQAhmzJPw6iOSoUiPed/W0=
+=6Lph
 -----END PGP SIGNATURE-----
