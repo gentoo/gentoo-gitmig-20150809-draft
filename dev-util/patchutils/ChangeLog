@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/patchutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/ChangeLog,v 1.22 2004/10/13 20:29:19 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/patchutils/ChangeLog,v 1.23 2004/10/19 10:02:13 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> patchutils-0.2.25.ebuild,
+  patchutils-0.2.29.ebuild:
+  Stable on amd64.
 
   13 Oct 2004; Tom Martin <slarti@gentoo.org> metadata.xml:
   Added to the shell-tools herd.
