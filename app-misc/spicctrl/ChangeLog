@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/spicctrl
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+
+*spicctrl (12 Jul 2002)
+
+  12 Jul 2002; Doug Goldstein <cardoe@gentoo.org> ChangeLog spicctrl-1.2.ebuild
+  files/digest-spicctrl-1.2 :
+
+  Ebuild submitted by hanno@gmx.de (Hanno Boeck) in bug #2985
+  Cleaned up prior to comitting
