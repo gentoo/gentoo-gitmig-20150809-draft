@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/mldonkey
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.25 2003/12/18 20:45:06 lanius Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.26 2004/01/22 21:18:25 mattam Exp $
+
+  22 Jan 2004; Matthieu Sozeau <mattam@gentoo.org> mldonkey-2.5.3-r1.ebuild,
+  mldonkey-2.5.3-r2.ebuild, mldonkey-2.5.4.ebuild:
+  Changed lablgtk dependancies to =lablgtk-1.2.5 before lablgtk-2 inclusion.
 
   18 Dec 2003; Heinrich Wendel <lanius@gentoo.org> mldonkey-2.5.4.ebuild:
   Moved enewuser to src_install, so the home directory is created.

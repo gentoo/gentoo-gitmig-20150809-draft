@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.3-r1.ebuild,v 1.7 2003/11/30 21:26:51 jbms Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.3-r1.ebuild,v 1.8 2004/01/22 21:18:25 mattam Exp $
 
 IUSE="gtk"
 
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc"
 
 
-DEPEND="gtk? ( >=lablgtk-1.2.4 )
+DEPEND="gtk? ( =lablgtk-1.2.5 )
 	=dev-lang/ocaml-3.06*
 	dev-lang/perl"
 RDEPEND="net-misc/wget"
