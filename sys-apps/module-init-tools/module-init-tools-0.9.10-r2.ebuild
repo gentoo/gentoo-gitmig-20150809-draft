@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-0.9.10-r2.ebuild,v 1.1 2003/03/09 11:30:34 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-0.9.10-r2.ebuild,v 1.2 2003/03/09 19:17:32 azarah Exp $
 
 # This includes backwards compatability for stable kernels
 IUSE=""
@@ -26,7 +26,7 @@ RDEPEND=">=sys-apps/devfsd-1.3.25-r1
 	>=sys-kernel/development-sources-2.5.48"
 
 pkg_setup() {
-	get_KV &> /dev/null
+	check_KV
 
 	if [ ! -f /lib/modules/${KV}/modules.dep ]
 	then
