@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dictd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.4 2002/12/15 00:54:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.5 2003/01/19 16:26:16 doctomoe Exp $
+
+  19 Jan 2003; Olivier Reisch <doctomoe@gentoo.org> dictd-1.8.0.ebuild:
+  Added ~ppc keyword
 
 *dictd-1.8.0 (14 Dec 2002)
 
