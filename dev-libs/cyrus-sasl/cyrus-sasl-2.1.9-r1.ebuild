@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.9-r1.ebuild,v 1.2 2002/12/09 04:21:02 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.9-r1.ebuild,v 1.3 2002/12/19 03:14:30 raker Exp $
 
 S=${WORKDIR}/${P}
 
@@ -11,6 +11,8 @@ SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${P}.tar.gz"
 LICENSE="as-is"
 SLOT="2"
 KEYWORDS="~x86 ~ppc -sparc "
+
+IUSE="gdbm berkdb ldap mysql kerberos"
 
 inherit eutils
 
