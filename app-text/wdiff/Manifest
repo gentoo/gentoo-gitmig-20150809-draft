@@ -1,5 +1,6 @@
 MD5 f8e7a31aced0c9f217d9afa8fb3d2d39 wdiff-0.5.ebuild 956
 MD5 f65684db8718ed674ce6b05f5b79b36c ChangeLog 1309
+MD5 64ed5942489fe8d8672fabf259c4412a metadata.xml 255
 MD5 5a27a6fa2ad35b2a7811c43c8e6caab5 wdiff-0.5-r1.ebuild 1004
 MD5 d6f2ef7713b8a0187fd684b0d8010347 files/digest-wdiff-0.5 128
 MD5 9857b4daaad6db84f5c7dd600a7e7b4c files/wdiff-0.5-segfault-fix.diff 487
