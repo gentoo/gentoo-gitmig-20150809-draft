@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-pt/aspell-pt-20041027.ebuild,v 1.1 2005/02/15 21:53:44 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-pt/aspell-pt-20041027.ebuild,v 1.2 2005/02/16 17:36:05 arj Exp $
 
 ASPELL_LANG="Portuguese"
 
@@ -32,5 +32,6 @@ src_compile() {
 
 src_install() {
 	addwrite "/usr/lib/"
+	addwrite "/usr/share/aspell"
 	emake install || die "make failed"
 }
