@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.1.23-r1.ebuild,v 1.1 2005/01/24 08:15:56 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.1.23-r1.ebuild,v 1.2 2005/01/24 08:22:41 trapni Exp $
 
 inherit eutils gnuconfig
 
@@ -39,7 +39,7 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 	cd "${S}/includes/gnutls"
-	epatch "${FILESDIR}/${PN}-1.1.23.h.patch" || die "Cannot patch gnutls/extra.h"
+	epatch "${FILESDIR}/${PN}-1.1.23-extra.h.patch" || die "Cannot patch gnutls/extra.h"
 	cd "${OLDPWD}"
 
 	# Needed for mips and probably others
