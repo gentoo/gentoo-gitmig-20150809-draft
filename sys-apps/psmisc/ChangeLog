@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/psmisc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/ChangeLog,v 1.32 2004/03/29 16:37:46 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/ChangeLog,v 1.33 2004/04/09 05:00:27 lv Exp $
+
+  09 Apr 2004; Travis Tilley <lv@gentoo.org> psmisc-21.2-r4.ebuild:
+  stable on amd64
 
   29 Mar 2004; Jon Portnoy <avenj@gentoo.org> psmisc-21.4.ebuild :
   Removed RESTRICT=nomirror.

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/file
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.37 2004/03/23 16:04:48 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.38 2004/04/09 04:58:01 lv Exp $
+
+  09 Apr 2004; Travis Tilley <lv@gentoo.org> file-4.06.ebuild:
+  stable on amd64
 
 *file-4.08 (23 Mar 2004)
 
