@@ -1,5 +1,5 @@
 MD5 b84d681bc21fd1603d3613943f711aed beecrypt-3.1.0-r1.ebuild 1427
-MD5 e362e1cb0f447a456bb74dd4add9b673 beecrypt-3.1.0-r2.ebuild 1669
+MD5 859e40b11cae752507e340494b65861a beecrypt-3.1.0-r2.ebuild 1663
 MD5 b9cb7403469cb94aa176999623106596 ChangeLog 2782
 MD5 a1ec8219f4c2e7e3185f2cd869ddae33 files/beecrypt-3.1.0-python2.3.patch 769
 MD5 db9e84b099b36cd8fc6d05840c25007f files/beecrypt-3.1.0-athlon.diff 393
