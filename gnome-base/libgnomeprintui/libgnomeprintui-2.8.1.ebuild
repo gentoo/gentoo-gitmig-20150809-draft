@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprintui/libgnomeprintui-2.8.1.ebuild,v 1.2 2004/12/09 04:55:49 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprintui/libgnomeprintui-2.8.1.ebuild,v 1.3 2004/12/09 13:57:15 joem Exp $
 
 inherit eutils gnome2
 
@@ -15,7 +15,7 @@ IUSE="doc"
 RDEPEND=">=x11-libs/gtk+-2.4
 	=gnome-base/libgnomeprint-${PV}*
 	>=gnome-base/libgnomecanvas-2
-	>=x11-themes/hicolor-icon-theme-0.5"
+	>=x11-themes/gnome-icon-theme-2.8.0"
 
 DEPEND="${RDEPEND}
 	sys-devel/gettext
@@ -24,13 +24,3 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS ChangeLog NEWS README"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-
-	#Don't require gnome-icon-theme as a build time dep
-	#see bug #72901 for more information <joem@gentoo.org>
-
-	epatch ${FILESDIR}/${P}-no-gnome-icon.patch
-	autoconf || die "autoconf failed"
-}
