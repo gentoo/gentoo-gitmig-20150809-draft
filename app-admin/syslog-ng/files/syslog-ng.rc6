@@ -1,13 +1,13 @@
 #!/sbin/runscript
 
-need() {
+depend() {
     need clock
 }
 
 checkconfig() {
     if [ ! -e /etc/syslog-ng/syslog-ng.conf ] ; then
 	eerror "You need a /etc/syslog-ng/syslog-ng.conf first"
-	eerror "There is a sample in /usr/share/docs/syslog-ng"
+	eerror "There is a sample in  /usr/share/doc/syslog-ng"
 	return 1
     fi
 }
