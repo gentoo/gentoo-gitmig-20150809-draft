@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6.3_pre0.ebuild,v 1.8 2004/08/22 12:51:04 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.6.3_pre0.ebuild,v 1.9 2004/08/22 17:44:40 obz Exp $
 
 # UPDATE TRACKER : GNOME TEAM ONLY
 
@@ -33,8 +33,8 @@ RDEPEND="!gnome-base/gnome-core
 	>=x11-libs/pango-1.4.1-r1
 
 	hppa? ( >=dev-libs/libxml2-2.6.9 )
-	!hppa? ( >=dev-libs/libxml2-2.6.11 )
-	>=dev-libs/libxslt-1.1.8-r1
+	!hppa? ( >=dev-libs/libxml2-2.6.12 )
+	>=dev-libs/libxslt-1.1.9
 
 	>=x11-libs/libxklavier-1.02
 	>=media-libs/audiofile-0.2.6-r1
