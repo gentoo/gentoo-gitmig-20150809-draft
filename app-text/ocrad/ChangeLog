@@ -1,6 +1,11 @@
 # ChangeLog for app-text/ocrad
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ocrad/ChangeLog,v 1.6 2004/07/01 19:28:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ocrad/ChangeLog,v 1.7 2004/10/01 08:03:27 usata Exp $
+
+*ocrad-0.8 (01 Oct 2004)
+
+  01 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> +ocrad-0.8.ebuild:
+  Version bumped; bug #64281. Respect user's CXX/CXXFLAGS.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> ocrad-0.7.ebuild:
   virtual/glibc -> virtual/libc

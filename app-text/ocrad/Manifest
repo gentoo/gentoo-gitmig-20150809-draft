@@ -1,4 +1,6 @@
-MD5 bdee621e634cfbda4052b0dfdef1fde5 ChangeLog 663
+MD5 fe165d515db2b69ad78f5b739863e0cc ChangeLog 812
 MD5 cf6fae23c926d0a529f52619cea00222 metadata.xml 415
 MD5 75910f8880858e1dfde80d680484b86e ocrad-0.7.ebuild 633
+MD5 03cfc69db9977f007e07f2702a330aff ocrad-0.8.ebuild 736
 MD5 970723d6bc8bcf6107fe88050201dd9d files/digest-ocrad-0.7 61
+MD5 3d73b676885b98273bec8b5b10017ccd files/digest-ocrad-0.8 61
