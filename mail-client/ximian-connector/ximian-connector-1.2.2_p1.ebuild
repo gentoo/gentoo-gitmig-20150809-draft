@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/ximian-connector/ximian-connector-1.2.2_p1.ebuild,v 1.2 2004/05/30 10:58:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/ximian-connector/ximian-connector-1.2.2_p1.ebuild,v 1.3 2004/06/07 04:10:25 agriffis Exp $
 
 DESCRIPTION="Ximian Connector (An Evolution Plugin to talk to Exchange Servers)"
 HOMEPAGE="http://www.ximian.com"
@@ -12,10 +12,10 @@ RESTRICT="fetch nostrip"
 XIMIAN_ARCH="blargh"
 XIMIAN_DIST="frobs"
 
-if [ `use ppc` ]; then
+if use ppc; then
 	XIMIAN_DIST="yellowdog-22-ppc"
 	XIMIAN_ARCH="ppc"
-elif [ `use x86` ]; then
+elif use x86; then
 	XIMIAN_DIST="redhat-73-i386"
 	XIMIAN_ARCH="i386"
 fi
