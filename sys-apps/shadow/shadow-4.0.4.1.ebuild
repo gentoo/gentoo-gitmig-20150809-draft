@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.4.1.ebuild,v 1.8 2004/03/29 22:05:49 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.4.1.ebuild,v 1.9 2004/04/22 11:22:43 lv Exp $
 
 inherit eutils libtool gnuconfig
 
@@ -53,6 +53,10 @@ src_unpack() {
 	# Patch the useradd manpage to be a bit more clear, closing bug #13203.
 	# Thanks to Guy <guycad@mindspring.com>.
 	epatch ${FILESDIR}/${P}-useradd-manpage-update.patch
+
+    # Patch to correct the definition if malloc, so that shadow can compile
+	# using gcc 3.4. see bug #47455 for more information
+	epatch ${FILESDIR}/${P}-gcc34-xmalloc.patch
 }
 
 src_compile() {

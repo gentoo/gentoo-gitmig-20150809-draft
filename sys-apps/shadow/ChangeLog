@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.51 2004/03/29 22:05:49 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.52 2004/04/22 11:22:43 lv Exp $
+
+  22 Apr 2004; Travis Tilley <lv@gentoo.org>
+  +files/shadow-4.0.3-gcc34-xmalloc.patch,
+  +files/shadow-4.0.4.1-gcc34-xmalloc.patch, shadow-4.0.3-r9.ebuild,
+  shadow-4.0.4.1.ebuild:
+  fixes for compiling with gcc 3.4 - bug #47455
 
   29 Mar 2004; Jon Portnoy <avenj@gentoo.org> shadow-4.0.3-r9.ebuild,
   shadow-4.0.3-r10.ebuild, shadow-4.0.4.1.ebuild :
