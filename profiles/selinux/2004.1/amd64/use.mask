@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/amd64/use.mask,v 1.1 2004/09/20 00:38:34 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/amd64/use.mask,v 1.2 2004/09/20 03:08:11 pebenito Exp $
 
 #unknowns
 afs
@@ -52,11 +52,6 @@ mmx2
 sse
 sse2
 3dnow
-
-# 2004/06/22 - Taken from 2004.0 profile
-# Chris PeBenito <pebenito@gentoo.org>
-# must use a SELinux profile
-selinux
 
 # 2004/06/25 - Danny van Dyk <kugelfang@gentoo.org>
 # Known BUGs (#54760) + lack of brain/man power to maintain "hardened" in the
