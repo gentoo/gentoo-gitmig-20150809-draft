@@ -1,6 +1,17 @@
 # ChangeLog for media-gfx/bootsplash 
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/ChangeLog,v 1.45 2004/06/24 22:33:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/ChangeLog,v 1.46 2004/06/26 13:02:35 spock Exp $
+
+*bootsplash-0.6.1-r2 (26 Jun 2004)
+
+  26 Jun 2004; Michal Januszewski <spock@gentoo.org>
+  +bootsplash-0.6.1-r2.ebuild:
+  A release with experimental new features. I've added support for 32bpp modes
+  (24bpp might work too, but I didn't have a chance to test it) and removed all
+  references to vesafb. This means you should now be able to use bootsplash with
+  other framebuffer drivers. I've tested it with rivafb and it worked fine. The
+  only drawback is that the console becomes slower, as bootsplash can't take
+  advantage of any accelerated routines (yet :)).
 
 *bootsplash-0.6.1-r1 (22 Jun 2004)
 
