@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/baekmuk-fonts-2.1-r1.ebuild,v 1.5 2004/01/09 22:41:55 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/baekmuk-fonts/baekmuk-fonts-2.1-r1.ebuild,v 1.6 2004/03/07 19:24:07 psi29a Exp $
 
 IUSE="X truetype"
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.mizi.co.kr/ko/prod/etc/mos-pro2.htm"
 
 SLOT="0"
 LICENSE="BAEKMUK"
-KEYWORDS="ia64 x86 alpha ~ppc sparc hppa amd64"
+KEYWORDS="ia64 x86 alpha ~ppc sparc hppa amd64 ~mips"
 
 DEPEND="virtual/x11
 	truetype? ( virtual/xft )"
