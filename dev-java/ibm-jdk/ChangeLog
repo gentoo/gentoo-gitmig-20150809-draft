@@ -1,62 +1,56 @@
 # ChangeLog for dev-java/ibm-jdk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ChangeLog,v 1.8 2002/08/01 17:26:54 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ChangeLog,v 1.9 2002/08/26 16:03:22 karltk Exp $
 
 *ibm-jdk-1.3.1-r1 (12 May 2002)
 
-  01 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ibm-jdk-1.3.1-r1.ebuild :
+  26 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ibm-jdk-1.3.1-r1.ebuild:
+  Added doc keyword to optionally install documentation. Set slot to 1.3, so
+  it can coexist with other IBM JDKs (if they come). Fixes #6668.
 
+  01 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ibm-jdk-1.3.1-r1.ebuild:
   Added LICENSE, KEYWORDS and SLOT.
 
   14 May 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ibm-jdk-1.3.1-r1.ebuild files/digest-ibm-jdk-1.3.1-r1:
-
   Fixed the creation of a spurious /usr/ibm-jdk-1.3.1/share.
 
-  12 May 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ibm-jdk-1.3.1-r1.ebuild files/digest-ibm-jdk-1.3.1-r1:
-
+  12 May 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ibm-jdk-1.3.1-r1.ebuild, files/digest-ibm-jdk-1.3.1-r1:
   Disabled browser plugin as it does not work.
-
-  Removed ibm-jdk-1.3.1.ebuild files/digest-ibm-jdk-1.3.1
+  Removed ibm-jdk-1.3.1.ebuild, files/digest-ibm-jdk-1.3.1
 
 *ibm-jdk-1.3.0-r4 (12 May 2002)
 
-  14 May 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ibm-jdk-1.3.0-r4.ebuild files/digest-ibm-jdk-1.3.0-r4:
+  26 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ibm-jdk-1.3.0-r4.ebuild:
+  Added doc keyword to optionally install documentation.
 
+  14 May 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ibm-jdk-1.3.0-r4.ebuild files/digest-ibm-jdk-1.3.0-r4:
   Fixed the creation of a spurious /usr/ibm-jdk-1.3.0/share.
 
   12 May 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ibm-jdk-1.3.0-r4.ebuild files/digest-ibm-jdk-1.3.0-r4:
-
   Disabled browser plugin as it does not work.
-
   Removed ibm-jdk-1.3.0-r3.ebuild files/digest-ibm-jdk-1.3.0-r3
 
 *ibm-jdk-1.3.1 (10 Apr 2002)
 
   10 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ibm-jdk-1.3.1.ebuild files/digest-ibm-jdk-1.3.1 files/ibm-jdk-1.3.1:
-
   New upstream version. Enhancement request submitted by Nuno Ferreira
   <nuno.m.r.f@mail.telepac.pt>.
 
 *ibm-jdk-1.3.0-r3 (09 Apr 2002)
 
   09 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ibm-jdk-1.3.0-r3.ebuild files/digest-ibm-jdk-1.3.0-r3:
-
   Now sets proper ROOTPATH.
-
   Removed ibm-jdk-1.3.0-r2.ebuild files/digest-ibm-jdk-1.3.0-r2
 
 *ibm-jdk-1.3.0-r2 (18 Mar 2002)
 
   18 Mar 2002; G.Bevin <karkt@gentoo.org> files/digest-ibm-jdk-1.3.0-r2 ibm-jdk-1.3.0-r2.ebuild files/ibm-jdk-1.3.0 :
-
   Added support for JVM switching.
-
   Removed old revisions.
 
 *ibm-jdk-1.3.0-r1 (7 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> files/digest-ibm-jdk-1.3.0-r1 ibm-jdk-1.3.0-r1.ebuild :
-
   IBM JDK now tells Portage that it provides a virtual/jdk-1.3 and 
   virtual/jre-1.3. This means that is a proper Blackdown/Sun replacement for
   those who prefer the IBM JDK.
@@ -64,9 +58,4 @@
 *ibm-jdk-1.3.0 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
-  Added initial ChangeLog which should be updated whenever the package is
-  updated in any way. This changelog is targetted to users. This means that the
-  comments should well explained and written in clean English. The details about
-  writing correct changelogs are explained in the skel.ChangeLog file which you
-  can find in the root directory of the portage repository.
+  Added initial ChangeLog.
