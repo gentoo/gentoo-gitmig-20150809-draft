@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.8.2-r3.ebuild,v 1.5 2004/07/22 04:23:26 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/xmule-1.8.2-r3.ebuild,v 1.6 2004/07/23 20:31:07 squinky86 Exp $
 
 inherit eutils
 
@@ -59,7 +59,7 @@ src_install () {
 	doins src/resource/*
 	mv ${D}/usr/bin/xmule ${D}/usr/bin/xmule-bin
 	mv ${D}/var/tmp/portage/${PF}/image/usr/share/locale/* ${D}/usr/share/locale/
-	rm -f ${D}/var
+	rm -rf ${D}/var
 	exeinto /usr/bin
 	newexe ${FILESDIR}/xmule.sh xmule
 }

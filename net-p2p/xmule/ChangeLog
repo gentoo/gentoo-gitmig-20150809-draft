@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/xmule
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/ChangeLog,v 1.42 2004/07/22 04:23:26 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/ChangeLog,v 1.43 2004/07/23 20:31:07 squinky86 Exp $
+
+  23 Jul 2004; Jon Hood <squinky86@gentoo.org> xmule-1.8.2-r3.ebuild:
+  Fixed removal of temp files irt #58083; thanks Antonio <netbix@tiscali.it>.
 
   21 Jul 2004; Jon Hood <squinky86@gentoo.org> -files/ini2.patch,
   -xmule-1.6.0a.ebuild, -xmule-1.6.1.ebuild, -xmule-1.7.4c.ebuild,
