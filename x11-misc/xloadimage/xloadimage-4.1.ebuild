@@ -1,42 +1,37 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xloadimage/xloadimage-4.1.ebuild,v 1.10 2003/01/19 16:13:04 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xloadimage/xloadimage-4.1.ebuild,v 1.11 2003/02/11 12:45:20 seemant Exp $
+
+inherit eutils
 
 IUSE="tiff jpeg png"
 
 MY_P=${P/-/.}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Xloadimage is a utility which will view many different types of images under X11"
-SRC_URI="ftp://ftp.x.org/R5contrib/${MY_P}.tar.gz"
 HOMEPAGE="http://gopher.std.com/homepages/jimf/xloadimage.html"
-LICENSE="MIT"
+SRC_URI="ftp://ftp.x.org/R5contrib/${MY_P}.tar.gz
+	mirror://gentoo/${P}-gentoo.diff.bz2
+	http://cvs.gentoo.org/~seemant/${P}-gentoo.diff.bz2"
+
 SLOT="0"
-KEYWORDS="x86 sparc  ppc alpha"
+LICENSE="MIT"
+KEYWORDS="x86 sparc ppc alpha"
+
 DEPEND="x11-base/xfree
 	tiff? ( media-libs/tiff )
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )"
-#RDEPEND=""
 
 src_unpack() {
-	unpack ${MY_P}.tar.gz
+	unpack ${A}
 	cd ${S}
-	patch -p1 < ${FILESDIR}/${P}-gentoo.diff
+	epatch ${WORKDIR}/${P}-gentoo.diff
 	
 	cp Make.conf Make.conf.orig
 	sed -e "s:OPT_FLAGS=:OPT_FLAGS=$CFLAGS:" Make.conf.orig >Make.conf
-
-}
-
-src_compile() {
-	chmod 0755 configure
-	./configure \
-		--host=${CHOST} \
-		--prefix=/usr \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man || die "./configure failed"
-
-	make || die
+	
+	chmod +x ${S}/configure
 }
 
 src_install () {
@@ -48,11 +43,8 @@ src_install () {
 	insinto /etc/X11
 	doins xloadimagerc
 
-	mv xloadimage.man xloadimage.1
-	mv uufilter.man uufilter.1
-
-	doman xloadimage.1
-	doman uufilter.1
+	newman xloadimage.man xloadimage.1
+	newman uufilter.man uufilter.1
 
 	dosym /usr/share/man/man1/xloadimage.1.gz /usr/share/man/man1/xsetbg.1.gz
 	dosym /usr/share/man/man1/xloadimage.1.gz /usr/share/man/man1/xview.1.gz

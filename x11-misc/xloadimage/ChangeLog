@@ -1,8 +1,14 @@
 # ChangeLog for x11-misc/xloadimage
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xloadimage/ChangeLog,v 1.8 2003/01/02 00:48:14 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xloadimage/ChangeLog,v 1.9 2003/02/11 12:45:20 seemant Exp $
 
 *xloadimage-4.1-r1 (02 Jan 2003)
+
+  11 Feb 2003; Seemant Kulleen <seemant@gentoo.org> xloadimage-4.1.ebuild
+  xloadimage-4.1-r1.ebuild :
+
+  Cleaned up ebuild syntax slightly. Also moved the -gentoo.diff from
+  files/ to a bzip2'd diff on the mirrors.
 
   02 Jan 2003; Martin Schlemmer <azarah@gentoo.org> xloadimage-4.1-r1.ebuild :
   Things should include errno.h, not define errno as external.  This fixes
