@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/psemu-gpupetemesagl
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-gpupetemesagl/ChangeLog,v 1.4 2004/06/24 22:34:13 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-gpupetemesagl/ChangeLog,v 1.5 2005/03/06 06:38:55 mr_bones_ Exp $
+
+  06 Mar 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  psemu-gpupetemesagl-1.75.ebuild:
+  fix HOMEPAGE; tidy
 
 *psemu-gpupetemesagl-1.75 (16 Nov 2003)
 
