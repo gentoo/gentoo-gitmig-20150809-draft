@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/plib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plib/ChangeLog,v 1.16 2004/10/02 08:58:39 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plib/ChangeLog,v 1.17 2004/10/21 19:48:06 seemant Exp $
+
+  21 Oct 2004; Seemant Kulleen <seemant@gentoo.org> -plib-1.4.2-r1.ebuild,
+  plib-1.8.3.ebuild:
+  move 1.8.3 to stable x86 and remove outdated 1.4.2-r1. This is required for
+  moving flighgear-0.9.4 to stable
 
   02 Oct 2004; Luca Barbato <lu_zero@gentoo.org> plib-1.8.3.ebuild:
   Marked ppc, this version works with gcc3.4
