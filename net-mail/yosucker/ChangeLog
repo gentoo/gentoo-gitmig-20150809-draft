@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/yosucker
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/yosucker/ChangeLog,v 1.4 2003/10/06 00:36:03 abhishek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/yosucker/ChangeLog,v 1.5 2003/11/25 03:51:15 abhishek Exp $
+
+*yosucker-51a (24 Nov 2003)
+
+  24 Nov 2003; Abhishek Amit <abhishek@gentoo.org> yosucker-51a.ebuild:
+  Version Bump
 
 *yosucker-41 (05 Oct 2003)
 
