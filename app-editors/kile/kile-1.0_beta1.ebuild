@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-1.0_beta1.ebuild,v 1.5 2002/07/25 19:28:29 kabau Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-1.0_beta1.ebuild,v 1.6 2002/07/27 10:44:28 seemant Exp $
 
 inherit kde-base || die
 
@@ -14,7 +14,7 @@ S=${WORKDIR}/kile-beta1.0
 DEPEND="$DEPEND sys-devel/perl"
 RDEPEND="${RDEPEND} app-text/tetex"
 
-SLOT="0"
+
 KEYWORDS="x86"
 LICENSE="GPL-2"
 
