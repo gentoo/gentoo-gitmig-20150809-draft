@@ -1,0 +1,11 @@
+# ChangeLog for media-video/kmenc15
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmenc15/ChangeLog,v 1.1 2005/03/15 00:17:30 trapni Exp $
+
+*kmenc15-0.03 (15 Mar 2005)
+
+  15 Mar 2005; Christian Parpart <trapni@gentoo.org> +metadata.xml,
+  +kmenc15-0.03.ebuild:
+  Initial import. Ebuild submitted by eCore <egore@gmx.de> 
+  and Oded Shimon <ods15@ods15.dyndns.org>. Thanks to them ;)
+
