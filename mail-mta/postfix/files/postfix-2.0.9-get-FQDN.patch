@@ -22,7 +22,7 @@
  	namebuf[MAXHOSTNAMELEN] = 0;
 -	if (valid_hostname(namebuf, DO_GRIPE) == 0)
 +	if (!(hp = gethostbyname(namebuf)))
-+	    msg_fatal("gethostbyname: %m");
++	    msg_fatal("gethostbyname(\"%s\") does not resolve as a fully qualified domain name.", namebuf);
 +	if (valid_hostname(hp->h_name, DO_GRIPE) == 0)
  	    msg_fatal("unable to use my own hostname");
 -	my_host_name = mystrdup(namebuf);

@@ -1,4 +1,4 @@
-MD5 06a5833ec0f7c0b3335cc1d6443e1426 ChangeLog 25052
+MD5 5c58b1b47025f16aa6d043a84f4e1759 ChangeLog 25308
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 b0cc073bb81fa3a90c018aacb6956b8a postfix-1.1.11.20020917-r1.ebuild 4555
 MD5 447574cc6b931bf04baf228b2cff3b59 postfix-1.1.11.20020917.ebuild 4534
@@ -24,7 +24,7 @@ MD5 bbaf5265ce09b79fded4d429f420ea23 files/digest-postfix-2.1.1 422
 MD5 f1af44e37cedb6d624cb8a366c642f2f files/mailer.conf 1544
 MD5 0acffde07d4dd4906e5f1cdb7dc9a646 files/main.cf 18374
 MD5 8bb2393cb308f752dcb6aa654e98034a files/master.cf 4419
-MD5 ff6584c14212d383b742fe5fc0aceed5 files/postfix-2.0.9-get-FQDN.patch 993
+MD5 fd78f3c5211f280a77dc8c8acd3dd898 files/postfix-2.0.9-get-FQDN.patch 1057
 MD5 caa45c1c2711fe687d0896d8b6400e78 files/postfix.rc6 585
 MD5 d404cff3d69da12b544c6eaa5f20f7d2 files/smtp.pam 250
 MD5 0de0aeb149204f1dc5ead666107694ce files/smtp.pass 137
