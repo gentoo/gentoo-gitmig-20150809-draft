@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/gnu-javamail
 # Copyright 2000-2004 Gentoo Foundation; Distributed unde the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-javamail/ChangeLog,v 1.5 2004/06/24 22:27:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-javamail/ChangeLog,v 1.6 2004/08/01 10:43:26 karltk Exp $
+
+  01 Aug 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  javamail-20030331.ebuild: Fixed dep on gnu-classpath-inetlib.
 
   13 May 2004; Chris Aniszczyk <zx@gentoo.org> gnu-javamail-20040331.ebuild:
   Bug fix, closes #50206
@@ -17,3 +20,4 @@
   01 Apr 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
   javamail-20030331.ebuild: Initial import. Ebuild submitted by myself.
   No joke.
+
