@@ -16,7 +16,7 @@
 # Last updated: 11 Apr 2002 21:31:03 CDT
 #
 
-3dfx  - Adds support for 3dfx video cards to XFree86. See: voodoo3
+3dfx - Adds support for 3dfx video cards to XFree86. See: voodoo3
 3dnow - Adds support for 3dnow multimedia processor instructions
 aalib - Adds support for media-libs/aalib (ASCI-Graphics Library)
 acl - Adds support for sys-apps/acl (XFS dump/restore utilities)
