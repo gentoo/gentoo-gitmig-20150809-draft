@@ -8,12 +8,12 @@ MD5 b94881244c34e4837b00ccf23e86a9c2 disspam-0.10.ebuild 643
 MD5 668ccd56366920090a126cc10aff7cb9 disspam-0.12-r1.ebuild 1102
 MD5 ddb8a156da69c67f9ed6054ee673afc4 files/digest-disspam-0.10 62
 MD5 548d657cf971ba884004c6d2a64380fa files/digest-disspam-0.12 63
-MD5 14ac36538e60b579bec0c3c04658ca05 files/0.12-sa302fix.patch 381
+MD5 7f9a737e57d995d4630d4186543669fe files/0.12-sa302fix.patch 617
 MD5 548d657cf971ba884004c6d2a64380fa files/digest-disspam-0.12-r1 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB1YxrQlM6RnzZP+IRAjmYAJ0ecShoSZEDj5yRQDRv5CV6xA1xLwCfUjhj
-qpQKikQ0EeOVK51+Ly9as7s=
-=D+dm
+iD8DBQFB1Y2NQlM6RnzZP+IRAksLAKDFQjjjNc/t4IHof6+LcV1mNwvmtwCfaIC3
+a0s/KWu7Y4Chb8WHJndYi6U=
+=ywpd
 -----END PGP SIGNATURE-----
