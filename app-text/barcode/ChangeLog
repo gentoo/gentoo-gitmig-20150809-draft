@@ -1,8 +1,11 @@
 # ChangeLog for app-text/barcode
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/barcode/ChangeLog,v 1.2 2003/02/12 05:22:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/barcode/ChangeLog,v 1.3 2003/10/28 17:37:53 vapier Exp $
 
 *barcode-0.98 (23 Nov 2002)
+
+  28 Oct 2003; Mike Frysinger <vapier@gentoo.org> :
+  Sed Makefile.in to be FHS happy and fix info dir entries #32076.
 
   23 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
   Initial import.  Ebuild submitted by Miguel Revilla Rodríguez <yo@miguelrevilla.com>.
