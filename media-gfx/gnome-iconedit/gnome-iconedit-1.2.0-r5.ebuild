@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-iconedit/gnome-iconedit-1.2.0-r5.ebuild,v 1.18 2004/06/24 22:39:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-iconedit/gnome-iconedit-1.2.0-r5.ebuild,v 1.19 2004/07/14 17:37:36 agriffis Exp $
 
 inherit flag-o-matic eutils
 
@@ -11,6 +11,7 @@ SRC_URI="http://210.77.60.218/ftp/ftp.debian.org/pool/main/g/${PN}/${PN}_${PV}.o
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc ~amd64"
+IUSE="nls"
 
 RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
 	=x11-libs/gtk+-1.2*
