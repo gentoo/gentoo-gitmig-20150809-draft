@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.7.4-r1.ebuild,v 1.1 2003/06/04 14:11:20 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/rss-glx/rss-glx-0.7.4-r1.ebuild,v 1.2 2003/06/07 01:40:16 liquidx Exp $
 
 use kde && inherit kde
 
@@ -17,6 +17,7 @@ KEYWORDS="~x86 ~ppc"
 
 DEPEND="virtual/x11
 	virtual/opengl
+	>=sys-apps/sed-4
 	kde? ( kde-base/kdeartwork ) : ( x11-misc/xscreensaver )"
 
 src_unpack() {
