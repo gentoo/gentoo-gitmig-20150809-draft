@@ -1,0 +1,74 @@
+--- courier-imap-3.0.2/configure	2004-03-16 18:17:04.000000000 -0800
++++ courier-imap-3.0.2-patched/configure	2004-03-24 11:04:22.589990744 -0800
+@@ -2846,71 +2846,6 @@
+ fi
+ 
+ 
+-# Check whether --with-redhat or --without-redhat was given.
+-if test "${with_redhat+set}" = set; then
+-  withval="$with_redhat"
+-   redhat=$withval
+-else
+-  redhat=no
+-fi;
+-
+-if test "$srcdir" = "."
+-then
+-	case `./config.guess` in
+-	*-redhat-*)
+-		if test "$redhat" = "no"
+-		then
+-			hash='#'
+-			{ echo "$as_me:$LINENO: WARNING: === I think you are trying to run this configure script" >&5
+-echo "$as_me: WARNING: === I think you are trying to run this configure script" >&2;}
+-			{ echo "$as_me:$LINENO: WARNING: === on Red Hat/Fedora.  You're doing too much work!" >&5
+-echo "$as_me: WARNING: === on Red Hat/Fedora.  You're doing too much work!" >&2;}
+-			{ echo "$as_me:$LINENO: WARNING: === It's much faster to create installable binary RPMs" >&5
+-echo "$as_me: WARNING: === It's much faster to create installable binary RPMs" >&2;}
+-			{ echo "$as_me:$LINENO: WARNING: === like this: http://www.courier-mta.org/FAQ.html${hash}rpm" >&5
+-echo "$as_me: WARNING: === like this: http://www.courier-mta.org/FAQ.html${hash}rpm" >&2;}
+-			{ echo "$as_me:$LINENO: WARNING: === When you do this you may find that RPM will tell you" >&5
+-echo "$as_me: WARNING: === When you do this you may find that RPM will tell you" >&2;}
+-			{ echo "$as_me:$LINENO: WARNING: === to install some other software first, before trying to" >&5
+-echo "$as_me: WARNING: === to install some other software first, before trying to" >&2;}
+-			{ echo "$as_me:$LINENO: WARNING: === build this one, and even tell you the name of RPMs you" >&5
+-echo "$as_me: WARNING: === build this one, and even tell you the name of RPMs you" >&2;}
+-			{ echo "$as_me:$LINENO: WARNING: === need to install from the distribution CD.  That's much" >&5
+-echo "$as_me: WARNING: === need to install from the distribution CD.  That's much" >&2;}
+-			{ echo "$as_me:$LINENO: WARNING: === easier than trying to figure out the same from some" >&5
+-echo "$as_me: WARNING: === easier than trying to figure out the same from some" >&2;}
+-			{ echo "$as_me:$LINENO: WARNING: === cryptic error message." >&5
+-echo "$as_me: WARNING: === cryptic error message." >&2;}
+-			{ echo "$as_me:$LINENO: WARNING: " >&5
+-echo "$as_me: WARNING: " >&2;}
+-			{ echo "$as_me:$LINENO: WARNING: === Even if you don't intend to use everything you need to" >&5
+-echo "$as_me: WARNING: === Even if you don't intend to use everything you need to" >&2;}
+-			{ echo "$as_me:$LINENO: WARNING: === have in order to build via RPM, you should still do as" >&5
+-echo "$as_me: WARNING: === have in order to build via RPM, you should still do as" >&2;}
+-			{ echo "$as_me:$LINENO: WARNING: === you're told.  All the extra stuff (LDAP, SQL, etc...)" >&5
+-echo "$as_me: WARNING: === you're told.  All the extra stuff (LDAP, SQL, etc...)" >&2;}
+-			{ echo "$as_me:$LINENO: WARNING: === goes into RPM sub-packages, which do not need to be" >&5
+-echo "$as_me: WARNING: === goes into RPM sub-packages, which do not need to be" >&2;}
+-			{ echo "$as_me:$LINENO: WARNING: === installed." >&5
+-echo "$as_me: WARNING: === installed." >&2;}
+-			{ echo "$as_me:$LINENO: WARNING: === But, if you insist, you can simply add '--with-redhat'" >&5
+-echo "$as_me: WARNING: === But, if you insist, you can simply add '--with-redhat'" >&2;}
+-			{ echo "$as_me:$LINENO: WARNING: === parameter to this configure script and not see this" >&5
+-echo "$as_me: WARNING: === parameter to this configure script and not see this" >&2;}
+-			{ echo "$as_me:$LINENO: WARNING: === error message.  You should also do this when upgrading" >&5
+-echo "$as_me: WARNING: === error message.  You should also do this when upgrading" >&2;}
+-			{ echo "$as_me:$LINENO: WARNING: === and you didn't use RPM with the older version." >&5
+-echo "$as_me: WARNING: === and you didn't use RPM with the older version." >&2;}
+-			{ { echo "$as_me:$LINENO: error: ... in either case you better know what you're doing!" >&5
+-echo "$as_me: error: ... in either case you better know what you're doing!" >&2;}
+-   { (exit 1); exit 1; }; }
+-		fi
+-		;;
+-	*)
+-		;;
+-	esac
+-fi
+-
+ if test x$prefix = xNONE
+ then
+ 	prefix="$defaultprefix"

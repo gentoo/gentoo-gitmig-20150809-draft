@@ -1,0 +1,34 @@
+--- courier-imap-3.0.2/bdbobj/bdbobj.c	2003-09-29 05:00:43.000000000 -0700
++++ courier-imap-3.0.2-patched/bdbobj/bdbobj.c	2004-03-24 10:58:22.559723664 -0800
+@@ -112,13 +112,13 @@
+ #else
+ 	obj->dbf=0;
+ 
+-#define DB_40 0
++#define DB_41 0
+ 
+ #if DB_VERSION_MAJOR == 4
+-#if DB_VERSION_MINOR == 0
++#if DB_VERSION_MINOR == 1
+ 
+-#undef DB_40
+-#define DB_40 1
++#undef DB_41
++#define DB_41 1
+ 
+ #endif
+ #endif
+@@ -132,10 +132,10 @@
+ 	{
+ 		if ( (*obj->dbf->open)(obj->dbf,
+ 
+-#if DB_40
+-
++#if DB_41
++                       NULL,
+ #else
+-				       NULL,
++
+ #endif
+ 
+ 				       filename, NULL,

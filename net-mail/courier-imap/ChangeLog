@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/courier-imap
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.55 2004/03/10 12:42:49 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/ChangeLog,v 1.56 2004/03/26 06:57:20 solar Exp $
+
+*courier-imap-3.0.2 (26 Mar 2004)
+
+  26 Mar 2004; <solar@gentoo.org> courier-imap-3.0.2.ebuild,
+  files/courier-imap-3.0.2-db40vs41.patch,
+  files/courier-imap-3.0.2-removerpm.patch:
+  courier-imap <3.0.0: Courier Multiple Remote Buffer Overflow Vulnerabilities.
+  bug #45584
 
   10 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> courier-imap-2.1.2-r1.ebuild,
   files/courier-imap-2.1.2-res_query.patch:
