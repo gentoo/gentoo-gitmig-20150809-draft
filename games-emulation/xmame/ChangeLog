@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/xmame
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/ChangeLog,v 1.14 2004/02/21 21:39:45 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/ChangeLog,v 1.15 2004/02/22 10:39:45 dholm Exp $
+
+  22 Feb 2004; David Holm <dholm@gentoo.org> xmame-0.79.1.ebuild,
+  files/0.79.1-glx-fix.patch:
+  Added some bugfixes from bug #42268. Added to ~x86, ~amd64 and ~ia64.
 
 *xmame-0.79.1 (21 Feb 2004)
 

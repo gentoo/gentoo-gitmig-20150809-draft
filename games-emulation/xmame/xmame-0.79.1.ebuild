@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.79.1.ebuild,v 1.1 2004/02/21 21:39:45 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.79.1.ebuild,v 1.2 2004/02/22 10:39:45 dholm Exp $
 
 inherit games flag-o-matic gcc eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://x.mame.net/download/xmame-${PV}.tar.bz2"
 
 LICENSE="xmame"
 SLOT="0"
-KEYWORDS="~ppc ~sparc ~alpha ~hppa"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64"
 IUSE="sdl dga xv alsa esd opengl X 3dfx svga ggi arts joystick net"
 
 RDEPEND="sys-libs/zlib
@@ -35,15 +35,36 @@ S=${WORKDIR}/xmame-${PV}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	epatch ${FILESDIR}/${PV}-glx-fix.patch
 	sed -i 's:JOY_BUTTONS 16:JOY_BUTTONS 32:' src/unix/devices.h || die "setting joybuttons failed" #36818
 
 	#ln -s makefile.unix Makefile
 	case "${ARCH}" in
-	x86|ia64|amd64)
+	x86)
 		sed -i \
 			-e '/X86_ASM_68000 =/s:#::' \
 			-e '/X86_MIPS3_DRC =/s:#::' Makefile \
 			|| die "sed Makefile (x86) failed"
+		if  [ `use joystick` ] ; then
+			sed -i \
+				-e '/JOY_I386.*=/s:#::' Makefile \
+				|| die "sed Makefile (joystick) failed"
+		fi
+		;;
+	ia64)
+		sed -i \
+			-e '/^MY_CPU/s:i386:ia64:' Makefile \
+			|| die "sed Makefile (ia64) failed"
+		if  [ `use joystick` ] ; then
+			sed -i \
+				-e '/JOY_I386.*=/s:#::' Makefile \
+				|| die "sed Makefile (joystick) failed"
+		fi
+		;;
+	amd64)
+		sed -i \
+			-e '/^MY_CPU/s:i386:amd64:' Makefile \
+			|| die "sed Makefile (amd64) failed"
 		if  [ `use joystick` ] ; then
 			sed -i \
 				-e '/JOY_I386.*=/s:#::' Makefile \
@@ -122,7 +143,7 @@ src_unpack() {
 	fi
 
 	case ${ARCH} in
-		x86)	append-flags -Wno-unused -fomit-frame-pointer -fstrict-aliasing -fstrength-reduce -ffast-math
+		x86|ia64|amd64)	append-flags -Wno-unused -fomit-frame-pointer -fstrict-aliasing -fstrength-reduce -ffast-math
 			[ `gcc-major-version` -eq 3 ] \
 				&& append-flags -falign-functions=2 -falign-jumps=2 -falign-loops=2 \
 				|| append-flags -malign-functions=2 -malign-jumps=2 -malign-loops=2
