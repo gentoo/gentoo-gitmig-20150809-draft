@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.90 2005/01/18 08:45:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.91 2005/01/20 06:50:36 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -10,7 +10,7 @@ inherit eutils versionator libtool toolchain-funcs flag-o-matic gnuconfig
 
 ECLASS=toolchain
 INHERITED="$INHERITED $ECLASS"
-EXPORT_FUNCTIONS pkg_setup src_unpack src_compile pkg_preinst src_install pkg_postinst pkg_prerm pkg_postrm
+EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_test pkg_preinst src_install pkg_postinst pkg_prerm pkg_postrm
 DESCRIPTION="Based on the ${ECLASS} eclass"
 
 FEATURES=${FEATURES/multilib-strict/}
@@ -23,6 +23,9 @@ toolchain_src_unpack() {
 }
 toolchain_src_compile() {
 	gcc_src_compile
+}
+toolchain_src_test() {
+	gcc_src_test
 }
 toolchain_pkg_preinst() {
 	${ETYPE}_pkg_preinst
@@ -1161,6 +1164,11 @@ gcc_src_compile() {
 	fi
 
 	popd > /dev/null
+}
+
+gcc_src_test() {
+	cd ${WORKDIR}/build
+	make check || die "check failed :("
 }
 
 gcc-library_src_install() {
