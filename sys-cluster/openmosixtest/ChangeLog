@@ -1,6 +1,13 @@
 # ChangeLog for sys-cluster/openmosixtest
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosixtest/ChangeLog,v 1.2 2003/10/18 07:17:19 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosixtest/ChangeLog,v 1.3 2004/03/28 10:01:23 tantive Exp $
+
+*openmosixtest-0.1-r6 (28 Mar 2004)
+
+  28 Mar 2004; Michael Imhof <tantive@gentoo.org> openmosixtest-0.1-r4.ebuild,
+  openmosixtest-0.1-r5.ebuild, openmosixtest-0.1-r6.ebuild:
+  New ebuild includes ltp and lmbench. Submitted by Antonio <netbix@netbix.net>.
+  Closes #45930.
 
 *openmosixtest-0.1-r5 (22 May 2003)
 
