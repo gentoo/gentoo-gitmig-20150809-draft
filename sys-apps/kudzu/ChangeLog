@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/kudzu
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/ChangeLog,v 1.4 2003/08/11 17:39:52 wwoods Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/ChangeLog,v 1.5 2004/02/17 15:25:48 dholm Exp $
+
+*kudzu-1.1.43 (17 Feb 2004)
+
+  17 Feb 2004; David Holm <dholm@gentoo.org> kudzu-1.1.43.ebuild:
+  Version bump and added to ~ppc. Some more work needs to be done for this to
+  work properly. The init script should probably be rewritten to Gentoo-style.
 
   11 Aug 2003; Will Woods <wwoods@gentoo.org> kudzu-0.99.66.ebuild,
   kudzu-0.99.99.ebuild:
