@@ -1,0 +1,100 @@
+--- stlport/makefile.mk.orig	2004-01-28 11:52:04.000000000 +0100
++++ stlport/makefile.mk	2004-11-04 15:36:38.158427224 +0100
+@@ -72,11 +72,12 @@
+ # --- Files --------------------------------------------------------
+ .EXPORT : CC CXX
+ .IF "$(COMID)"=="gcc3"
+-	TARFILE_NAME=STLport-4.5
+        .IF "$(OS)$(BUILD_OS_MAJOR)$(BUILD_OS_MINOR)"=="MACOSX103"
++               TARFILE_NAME=STLport-4.5
+                PATCH_FILE_NAME=STLport-4.5-macxp-panther.patch
+        .ELSE
+-               PATCH_FILE_NAME=STLport-4.5.patch
++               TARFILE_NAME=STLport-4.6.2
++               PATCH_FILE_NAME=STLport-4.6.2.patch
+        .ENDIF
+ .ELSE			# "$(COMID)"=="gcc3"
+ 	.IF "$(OS)"=="MACOSX"
+@@ -127,7 +128,7 @@
+ 		.ELIF "$(OS)"=="MACOSX"
+ 			BUILD_FLAGS=-f gcc-3.0-macosx.mak
+ 		.ELSE
+-			BUILD_FLAGS=-f gcc-3.0.mak
++			BUILD_FLAGS=-f gcc.mak
+		.ENDIF
+ 	.ELSE # "$(COMID)"=="gcc3"
+ 		# MacOS X/Darwin need a special makefile
+--- /dev/null	2004-10-28 17:21:08.585283768 +0200
++++ stlport/STLport-4.6.2.patch	2004-11-04 21:27:55.986110360 +0100
+@@ -0,0 +1,71 @@
++--- misc/build/STLport-4.6.2/src/num_get_float.cpp	2003-11-02 09:58:50.000000000 +0100
+++++ misc/build/STLport-4.6.2/src/num_get_float.cpp	2004-11-04 15:26:12.605525720 +0100
++@@ -770,18 +770,18 @@
++ 
++ void  _STLP_CALL
++ __string_to_float(const string& v, float& val) {
++-    val = _Stl_string_to_double(v.data());
+++    val = _Stl_string_to_double(v.c_str());
++ }
++ 
++ void  _STLP_CALL
++ __string_to_float(const string& v, double& val) {
++-    val = _Stl_string_to_double(v.data());
+++    val = _Stl_string_to_double(v.c_str());
++ }
++ 
++ #ifndef _STLP_NO_LONG_DOUBLE
++ void  _STLP_CALL
++ __string_to_float(const string& v, long double& val) {
++-    val = _Stl_string_to_long_double(v.data());
+++    val = _Stl_string_to_long_double(v.c_str());
++ }
++ #endif
++ 
++--- misc/build/STLport-4.6.2/stlport/config/stl_gcc.h	2003-11-02 09:59:11.000000000 +0100
+++++ misc/build/STLport-4.6.2/stlport/config/stl_gcc.h	2004-11-04 15:26:12.342565696 +0100
++@@ -7,7 +7,9 @@
++ # define _STLP_USE_GLIBC
++ #endif
++ 
+++#if (__GNUC__ >= 3) && (__GNUC_MAJOR__ >= 4)
++ #   define _STLP_NO_MEMBER_TEMPLATE_KEYWORD
+++#endif
++ 
++ # if defined(__FreeBSD__) || defined (__hpux) || defined(__amigaos__) || ( defined(__OS2__) && defined(__EMX__) )
++ #  define _STLP_NO_WCHAR_T
++@@ -263,7 +265,7 @@
++ 
++ # if (__GNUC__ >= 3)
++ 
++-#  if ((__GNUC_MINOR__ == 0) || (__APPLE__))
+++#  if 1 || ((__GNUC_MINOR__ == 0) || (__APPLE__))
++ #   define _STLP_NATIVE_INCLUDE_PATH ../g++-v3
++ #   define _STLP_NATIVE_OLD_STREAMS_INCLUDE_PATH ../g++-v3/backward
++ #  else
++--- misc/build/STLport-4.6.2/stlport/stdexcept	2003-11-02 09:59:01.000000000 +0100
+++++ misc/build/STLport-4.6.2/stlport/stdexcept	2004-11-04 15:26:12.474545632 +0100
++@@ -60,6 +60,11 @@
++ # endif
++ #  define _STLP_EXCEPTION_BASE exception
++ 
+++#if (__GNUC__ >= 3)
+++#undef _STLP_NOTHROW_INHERENTLY
+++#define _STLP_NOTHROW_INHERENTLY throw()
+++#endif
+++
++ class _STLP_CLASS_DECLSPEC __Named_exception : public _STLP_EXCEPTION_BASE {
++ public:
++   __Named_exception(const string& __str) 
++--- misc/build/STLport-4.6.2/src/common_rules.mak	2004-11-04 21:25:58.322997872 +0100
+++++ misc/build/STLport-4.6.2/src/common_rules.mak	2004-11-04 21:26:15.731351400 +0100
++@@ -84,7 +84,8 @@
++ 	$(RM) $(OUTDIR)/$(STLDEBUG_NAME).$(DYNEXT)
++ 	$(RM) $(OUTDIR)/$(DEBUG_NAME).$(DYNEXT)
++ 	ln -s $(RELEASE_DYNLIB) $(OUTDIR)/$(RELEASE_NAME).$(DYNEXT)
++-	-ln -s $(DEBUG_DYNLIB) $(OUTDIR)/$(DEBUG_NAME).$(DYNEXT)
+++# not needed ?
+++#	-ln -s $(DEBUG_DYNLIB) $(OUTDIR)/$(DEBUG_NAME).$(DYNEXT)
++ 	ln -s $(STLDEBUG_DYNLIB) $(OUTDIR)/$(STLDEBUG_NAME).$(DYNEXT)
++ 
++ install_unix :

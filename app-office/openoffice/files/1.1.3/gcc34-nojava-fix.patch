@@ -1,0 +1,11 @@
+--- sfx2/util/makefile.mk	2004-11-06 18:49:27.753988376 +0100
++++ sfx2/util/makefile.mk	2004-11-06 18:39:19.706425656 +0100
+@@ -70,6 +70,8 @@
+ GEN_HID=TRUE
+ GEN_HID_OTHER=TRUE
+ 
++LINKFLAGSDEFS = # do not fail with missing symbols
++
+ # --- Settings -----------------------------------------------------
+ 
+ .INCLUDE :  settings.mk
