@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/cl-rfc2388
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-rfc2388/ChangeLog,v 1.1 2004/12/28 21:43:05 mkennedy Exp $
+
+*cl-rfc2388-20041228 (28 Dec 2004)
+
+  28 Dec 2004; Matthew Kennedy <mkennedy@gentoo.org> +metadata.xml,
+  +cl-rfc2388-20041228.ebuild:
+  Initial port. Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
