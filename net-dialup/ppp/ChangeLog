@@ -1,8 +1,13 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.9 2002/09/05 16:14:31 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.10 2002/09/15 08:10:32 phoenix Exp $
 
 *ppp-2.4.1-r11 (28 Aug 2002)
+
+  15 Sep 2002; phoen][x <phoenix@gentoo.org> ppp-2.4.1-r11.ebuild :
+
+  Uploaded the tarball to ibiblio and modified SRC_URI.
+  This closes bug 7771.
 
   05 Sep 2002; phoen][x <phoenix@gentoo.org> ppp-2.4.1-r11.ebuild :
 

@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r11.ebuild,v 1.2 2002/09/05 16:14:31 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r11.ebuild,v 1.3 2002/09/15 08:10:32 phoenix Exp $
 
 S=${WORKDIR}/${P}.pppoe4
 DESCRIPTION="Point-to-point protocol - patched for pppoe"
-SRC_URI="http://www.shoshin.uwaterloo.ca/~mostrows/${P}-pppoe4.tgz"
+SRC_URI="mirror://gentoo/${P}-pppoe4.tgz"
 HOMEPAGE="http://www.samba.org/ppp"
 
 DEPEND="virtual/glibc"
