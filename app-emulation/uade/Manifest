@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 865741da710e6d0249cb6487955e5b0e uade-1.00.ebuild 1604
-MD5 7cbc51f320d1cdb336b071de886b25c8 uade-0.91-r1.ebuild 1534
-MD5 5e0e693bfb3862a705778fa4518184c1 uade-0.81.ebuild 1594
-MD5 cb48c6142f4398e52e764a6a1d839591 ChangeLog 2836
+MD5 ffde91d22f9533b1576e7743acb31444 ChangeLog 2841
 MD5 a715d9de7a6423e88a804a562c2220a9 metadata.xml 219
-MD5 ef3c7fc767538fbeb54e89c600038bdd files/uade-0.91-bmp-fix.patch 1252
+MD5 a291ccdb609188978ba6f5da64bb2f5a uade-1.00.ebuild 1609
+MD5 b0067de7c2b071849fbe532a63b818ed uade-0.81.ebuild 1596
+MD5 1a0eb9587c6b615bf15e5ff84babf035 uade-0.91-r1.ebuild 1539
+MD5 1f90b1c9ed54563fc4371e3976a2b4bb files/digest-uade-0.91-r1 63
 MD5 4df754504fa84b727b0d21eccfcbf1c5 files/digest-uade-0.81 63
 MD5 196ca74d6a4fbf1a5f1faa68af4cba37 files/digest-uade-1.00 63
-MD5 1f90b1c9ed54563fc4371e3976a2b4bb files/digest-uade-0.91-r1 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBjNzJchej4aZK9/cRAmMjAJ9MfQtAG/Wd0bmuO+ZM5Ql7TI1mvgCfWepv
-3gNQeoYvFOKEqUo4h6eEE48=
-=WnCR
------END PGP SIGNATURE-----
+MD5 ef3c7fc767538fbeb54e89c600038bdd files/uade-0.91-bmp-fix.patch 1252

@@ -1,33 +1,23 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dd5c86e247c3e37d4cccb902604baf9f win4lin-5.0.4.ebuild 2815
-MD5 31cbc326b06649f0945f52cc228b4260 win4lin-5.1.ebuild 2831
-MD5 9ff0d53144f3d3123cab081aa87f7fdf win4lin-5.0.1.ebuild 2816
-MD5 5628564e57bbf1ed9bad2771cbf15011 win4lin-4.0.20.ebuild 2411
-MD5 397a65d54ae5dbe379e464912d39b9c5 win4lin-4.0.16.ebuild 2412
-MD5 3179fefb71409f45ef86c05ba7514134 win4lin-5.0.8.ebuild 2832
-MD5 b22a76442695ed5569cff19d7553ffd8 win4lin-5.1.1.ebuild 3176
-MD5 950f3e38720efa26ce4ce0cf951db012 win4lin-4.0.22.ebuild 2416
-MD5 3376c113f7d65f780aa0c02e54ef53a5 ChangeLog 3154
+MD5 ee1f409cea0489a41504bef880adee83 ChangeLog 3157
 MD5 80df6097e8c9748b3cb41808ada21f86 metadata.xml 465
-MD5 dff0eadb5df79743de992424e4c6a0b3 win4lin-4.0.12.ebuild 2412
-MD5 5fec029d8463ba33430ac0d42b4fc687 files/win4lin.initd.new 456
-MD5 a56d557323abbc90fb5aab4b4896b6a2 files/digest-win4lin-5.0.1 71
-MD5 3653275db4219e37fdd58300140669ea files/digest-win4lin-5.0.4 71
-MD5 799dd2399a061b88260b94b201e35107 files/digest-win4lin-5.0.8 71
-MD5 7da856dbe813f4f7c0d4332456339448 files/digest-win4lin-5.1.1 72
-MD5 9ee870309aa9caefa4449a3b6d2dff5d files/digest-win4lin-5.1 72
+MD5 149c5ee5fa78da403f8cd683790b5992 win4lin-4.0.12.ebuild 2414
+MD5 ba1a2d8df2def4a8f1383100778d943a win4lin-4.0.16.ebuild 2414
+MD5 69d228220acd2c79bf4b2d5bd6e50fbe win4lin-4.0.20.ebuild 2413
+MD5 047f3dedc1edc9d758fb14688dfc904f win4lin-4.0.22.ebuild 2418
+MD5 0de1e5eb35736ef95ac05e5efd90f4dc win4lin-5.0.1.ebuild 2818
+MD5 23084a32db33b85f24568a8efa170297 win4lin-5.0.4.ebuild 2818
+MD5 22b9e2f4e11405f55824b61fac9b30eb win4lin-5.0.8.ebuild 2834
+MD5 955b75a09ffd98b86d9c41043d3be256 win4lin-5.1.ebuild 2833
+MD5 c1ae5bb4769a0aa08cc7ff04fe88c22a win4lin-5.1.1.ebuild 3182
 MD5 f55a22f0e3747c4673f80d53803502f2 files/digest-win4lin-4.0.12 142
 MD5 6e0fd7f874abc97d2186d2c99527d488 files/digest-win4lin-4.0.16 142
 MD5 e910056949f5711c131f501e1fea8742 files/digest-win4lin-4.0.20 142
 MD5 710ef99af4d9318d273c6596773de660 files/digest-win4lin-4.0.22 72
+MD5 a56d557323abbc90fb5aab4b4896b6a2 files/digest-win4lin-5.0.1 71
+MD5 3653275db4219e37fdd58300140669ea files/digest-win4lin-5.0.4 71
+MD5 799dd2399a061b88260b94b201e35107 files/digest-win4lin-5.0.8 71
+MD5 9ee870309aa9caefa4449a3b6d2dff5d files/digest-win4lin-5.1 72
 MD5 baf7d82f65c984dda45ba34d32aac52f files/registerme.sh 327
 MD5 64806537e817b95e25bb98a6e1b67379 files/win4lin.initd 1677
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBzHGJI1lqEGTUzyQRAvM3AJ92iCu0fNHZVl+TWec2F4hs00vZAACfQpoD
-grhl2SovhJYgtMSNnEsN+S4=
-=im2l
------END PGP SIGNATURE-----
+MD5 5fec029d8463ba33430ac0d42b4fc687 files/win4lin.initd.new 456
+MD5 7da856dbe813f4f7c0d4332456339448 files/digest-win4lin-5.1.1 72

@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 eb58019b579b84f5c5e5fb14dd6a56f9 ChangeLog 1430
-MD5 f958d98ac52e9b201a0ca0353b612ba4 hercules-2.17.1-r1.ebuild 1747
-MD5 dc030551702eee1b872f76275028556a hercules-3.00.ebuild 1884
-MD5 463bba781c3b264e2260e3e6e580b07e hercules-3.01.ebuild 1952
+MD5 99ea66f1c6302de5c2dbb229243fd234 ChangeLog 1432
+MD5 23af55e92212bdafac1a86104c3d63ce hercules-2.17.1-r1.ebuild 1752
+MD5 012376e2fce2ca6a429af80965551205 hercules-3.00.ebuild 1888
+MD5 968c7b72b7bbecb7091f27ff50f152c3 hercules-3.01.ebuild 1956
 MD5 1795fda604c41d53f524294b6d6daf35 metadata.xml 645
 MD5 e09f0c008fb3b02510eb63971a66ecf3 files/digest-hercules-2.17.1-r1 68
 MD5 64b6313ec62cc77a8a5b021ab426a67d files/digest-hercules-3.00 66
 MD5 420850c3a641b2b1c34c6a9794e2278c files/digest-hercules-3.01 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA31KOHTu7gpaalycRAr1qAKC3udmowEPGQnlqiYIUp/SDBaOQGACdFi+L
-+028Kt62KEmpixVjHFXGYcw=
-=wnSI
------END PGP SIGNATURE-----

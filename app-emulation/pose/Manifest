@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a2a34997573f49d7d3cc327ace0edbd0 ChangeLog 2091
-MD5 d47960797c32b8dfa65100c57ff15834 pose-3.5-r1.ebuild 2043
-MD5 bcda1cbbd0dbe060795ea1e8c6c3b8bc pose-3.5-r4.ebuild 2167
+MD5 bb424da9a00f3c5cee20e97a85816fed ChangeLog 2093
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+MD5 39b222942f3bac2da655b8fc017f1f5a pose-3.5-r1.ebuild 2047
+MD5 919a09eed65dcfb526536aff0cd2b5a9 pose-3.5-r4.ebuild 2169
 MD5 36734bf153faeb688279a79e5da1769b files/choose-gl.diff 666
 MD5 7c326f33b70eba59b3f6a1949e2270a2 files/detect-fluid.diff 1946
 MD5 90145d8ed014f39eb749610c2effa942 files/digest-pose-3.5-r1 140
-MD5 dbef5e8a7e42d97ef76d763fab5090e1 files/init-clipwidget.diff 486
-MD5 cfbe27dfd96b63e7d178676a16b39b19 files/separate-builddir.diff 2420
 MD5 99bd1bea9a79c798b2bd9c5534b52fd1 files/digest-pose-3.5-r4 69
 MD5 3adbabe4753e34bc04ef685b74afd27e files/gcc-3.3_fix.diff.bz2 5023
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA31LhHTu7gpaalycRAg+pAJ9ZNzzKl3gvu2FM+NZLMUxaOed0DQCgwYdS
-h6lqqNo271xxILvfWF8iHbw=
-=8oT3
------END PGP SIGNATURE-----
+MD5 dbef5e8a7e42d97ef76d763fab5090e1 files/init-clipwidget.diff 486
+MD5 cfbe27dfd96b63e7d178676a16b39b19 files/separate-builddir.diff 2420

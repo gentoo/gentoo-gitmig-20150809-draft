@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f104adb1f56fdd07798e03a6f6a73443 ChangeLog 1193
-MD5 e1fd58d4d29b11247fd8e6fb89a74efc cedega-4.0.ebuild 1903
+MD5 5822bac77e2012e8d62059a890411397 ChangeLog 1198
+MD5 af563b1eccc5d65923edc9cd69611118 cedega-4.0.ebuild 1907
 MD5 6525c48ba09d08599432ea6c299e52f4 metadata.xml 354
-MD5 ea9268c54bbecbb484aa6242b4ae9c08 cedega-4.0.1.ebuild 1901
-MD5 16da555b8d1dbe730333e7bf54f5cf64 cedega-4.2.ebuild 1904
-MD5 9f4f9c998dc3beb0aa1f817df058ad05 cedega-4.1.1.ebuild 1906
-MD5 2d9b7f28af5368228c02625ee45dedc1 cedega-4.1.ebuild 1904
-MD5 657fb775bd6024c1190841d2c709e184 cedega-4.2-r1.ebuild 1915
+MD5 6f71b916cd6fb68cf1bf9712095851f1 cedega-4.0.1.ebuild 1905
+MD5 7e2c51f907a1ba375a95cec1a589a338 cedega-4.1.ebuild 1908
+MD5 d333faae59c1cf6ba2423ca97fd88b31 cedega-4.1.1.ebuild 1910
+MD5 538ecd7f7701f16e6bdf297800b09b8b cedega-4.2.ebuild 1908
+MD5 00abcfab5c50be7fd48f1f8e4a870db7 cedega-4.2-r1.ebuild 1919
 MD5 7eccc393a8bb2164b799f66650fc2b54 files/digest-cedega-4.0 67
 MD5 0ec2c4d5f2aa15fadf20a22ae70f6188 files/digest-cedega-4.0.1 69
 MD5 ffb176a2f0e413c04ab3ea5e50ead483 files/digest-cedega-4.1 67
 MD5 73ddb9d92b6c018acae1f3bd69cc9b39 files/digest-cedega-4.1.1 69
 MD5 f1991570b6dade58853086db1af35521 files/digest-cedega-4.2 67
 MD5 6f2852701a274200e814a6412c9b52e9 files/digest-cedega-4.2-r1 75
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBxPU1roRuSHgZdywRAu8zAJ9qBi6gZpWiZza3TP9fMphjFoiRZgCeLmvj
-Ot2ftsFUJy5vWg1zF22XSn4=
-=NNMe
------END PGP SIGNATURE-----

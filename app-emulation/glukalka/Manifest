@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c2aad87f821df02410343ca13747bdcd ChangeLog 750
-MD5 84f34b67b0fa35bc0ed9b06311478b6e glukalka-0.67.ebuild 1079
-MD5 10e85839393f1061dac96ca3f421a415 glukalka-0.90.1.ebuild 1156
+MD5 eab28ebb24036d8467096bb0c0e4474e ChangeLog 752
+MD5 1b090f8686da28339a67a640aff1cf0b glukalka-0.67.ebuild 1081
+MD5 564e706c183876eba8e5fdcc4c5960b5 glukalka-0.90.1.ebuild 1160
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 7d60f81894db7604b4b460a59eb06892 files/digest-glukalka-0.67 66
 MD5 3ed009a076160256494cfe67d2250f1f files/digest-glukalka-0.90.1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA31J8HTu7gpaalycRAsPEAJ4tNs2ZDSnGz3UpA5Kn47qqZwUD+wCfdeVF
-FvQMVSzl0XuxYxxSDCF7TOg=
-=e2eI
------END PGP SIGNATURE-----

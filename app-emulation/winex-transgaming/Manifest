@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c7775374d3fa3165525a8fb56cfe07c3 ChangeLog 2471
+MD5 86eafba7c456c2920ef1ad1fa6e1f25d ChangeLog 2473
 MD5 6e817c3f6b82338028366853fddccf5f metadata.xml 157
-MD5 7edccf57909030edd83be203a5f5c522 winex-transgaming-2.2.1.ebuild 1886
-MD5 d200b62df56b5bfbe941d5227b0906d4 winex-transgaming-3.2.1.ebuild 1892
-MD5 5494df2da4030059ab0949cd70c4788f winex-transgaming-3.2.ebuild 1890
-MD5 a450ea3ef1048d69bfb61b68a33b9256 winex-transgaming-3.3.ebuild 1890
-MD5 96ff71be297823de8025167e8aab6892 winex-transgaming-3.3.1.ebuild 1892
-MD5 d6be039f02bdc0525c1365085c738d08 winex-transgaming-3.3.2.ebuild 1892
+MD5 760a330d0853c74186c67d16b3e783a2 winex-transgaming-2.2.1.ebuild 1891
+MD5 09433f36506e84063661e9c1d57f911f winex-transgaming-3.2.1.ebuild 1896
+MD5 e852e100653da11392b1794fae0809ff winex-transgaming-3.2.ebuild 1894
+MD5 45e5bc4e476b9c2ff3be355f11dd47a9 winex-transgaming-3.3.1.ebuild 1896
+MD5 46ef8ab7611758ff27790155ccf8e44a winex-transgaming-3.3.2.ebuild 1896
+MD5 b075b852732c1ccc16e333b4df80fb11 winex-transgaming-3.3.ebuild 1894
 MD5 93a58801baa3625ef005f55a3f774ae0 files/digest-winex-transgaming-2.2.1 61
 MD5 43d8d1b59eb0488c57fb15120b0dba70 files/digest-winex-transgaming-3.2 67
 MD5 d26b8a8318a326544866ff2eb7eaee93 files/digest-winex-transgaming-3.2.1 69
 MD5 1645affc907869aec8754a8cceb508f8 files/digest-winex-transgaming-3.3 67
 MD5 82daebfaaaf20a44b6d4b5c072022653 files/digest-winex-transgaming-3.3.1 69
 MD5 ac7212402024483b80ba6983f7cf0afb files/digest-winex-transgaming-3.3.2 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBrNsXroRuSHgZdywRAnzmAJkBzAZqsskv2OGyZerX6UL1C0hFVgCdGikw
-3D9BuIM+lQXPlFLESfJfPWE=
-=BQND
------END PGP SIGNATURE-----
