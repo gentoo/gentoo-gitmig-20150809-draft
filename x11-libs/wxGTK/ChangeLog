@@ -1,11 +1,20 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.17 2002/12/13 11:00:51 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.18 2002/12/18 15:00:47 seemant Exp $
+
+
+*wxGTK-2.2.9-r1 (18 Dec 2002)
+
+  18 Dec 2002; Seemant Kulleen <seemant@gentoo.org> wxGTK-2.2.9-r1.ebuild
+  files/digest-wxGTK-2.2.9-r1 :
+
+  This version is REQUIRED for audacity. If you are NOT the audacity or
+  wxGTK maintainer, please do NOT touch these files.
+
+*wxGTK-2.3.3 (26 Oct 2002)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*wxGTK-2.3.3 (26 Oct 2002)
-
   05 Dec 2002; Mike Frysinger <vapier@gentoo.org>
   It would seem optional zlib support isnt optional ;)
 
