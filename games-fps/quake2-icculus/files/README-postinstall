@@ -5,6 +5,17 @@ Note:
 1. If you install a new compile of quake2, you'll lose your savegames. I'm 
 sorry. Don't upgrade in the middle of a single-player game.
 
+===============================================================================
+
+To emerge the Quake2 data:
+--------------------------
+1. emerge quake2-data
+
+That was easy huh ? :)  Note: this requires the Quake2 CD and/or the data files
+from an installed copy of the game (like for windows).
+
+===============================================================================
+
 To install the Quake2 demo data:
 --------------------------------
 1. download ftp://ftp.idsoftware.com/idstuff/quake2/q2-314-demo-x86.exe
@@ -14,7 +25,7 @@ To install the Quake2 demo data:
 ===============================================================================
 
 To install the Quake2 gamedata from game CD:
--------------------------------
+--------------------------------------------
 (assuming the cdrom is mounted at /cdrom)
 
 1. cp /cdrom/Install/Data/baseq2/pak0.pak  /usr/share/games/quake2-data/baseq2/
