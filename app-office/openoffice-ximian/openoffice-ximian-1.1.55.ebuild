@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.55.ebuild,v 1.15 2004/07/17 21:32:17 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.55.ebuild,v 1.16 2004/08/20 20:54:29 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -189,7 +189,7 @@ oo_setup() {
 			export GCC_PROFILE="$(/usr/sbin/gcc-config --get-current-profile)"
 
 			# Just recheck gcc version ...
-			if [ "$(gcc-version)" != 3.2 -a "$(gcc-version)" != "3.3" ]
+			if [ "$(gcc-version)" != "3.2" ] && [ "$(gcc-version)" != "3.3" ]
 			then
 				# See if we can get a gcc profile we know is proper ...
 				if /usr/sbin/gcc-config --get-bin-path ${CHOST}-3.2.1 &> /dev/null
@@ -197,7 +197,7 @@ oo_setup() {
 					export PATH="$(/usr/sbin/gcc-config --get-bin-path ${CHOST}-3.2.1):${PATH}"
 					export GCC_PROFILE="${CHOST}-3.2.1"
 				else
-					eerror "This build needs gcc-3.2.1 or later!"
+					eerror "This build needs gcc-3.2 or gcc-3.3!"
 					eerror
 					eerror "Use gcc-config to change your gcc profile:"
 					eerror
@@ -365,6 +365,8 @@ src_install() {
 	addpredict "/dev/dri"
 	addpredict "/usr/bin/soffice"
 	addpredict "/pspfontcache"
+	addpredict "/opt/OpenOffice.org/foo.tmp"
+	addpredict "/opt/OpenOffice.org/delme"
 
 	# The install part should now be relatively OK compared to
 	# what it was.  Basically we use autoresponse files to install
