@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/mozilla-firebird-0.6-r5.ebuild,v 1.4 2003/06/26 10:05:37 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/mozilla-firebird-0.6-r5.ebuild,v 1.5 2003/08/01 04:21:01 brad Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins
 
@@ -19,7 +19,7 @@ SRC_URI="http://komodo.mozilla.org/pub/firebird/releases/${PV}/MozillaFirebird-$
 KEYWORDS="x86 ~ppc sparc ~alpha"
 SLOT="0"
 LICENSE="MPL-1.1 | NPL-1.1"
-IUSE="java gtk2 ipv6"
+IUSE="java gtk2 ipv6 gnome"
 
 RDEPEND="virtual/x11
    >=dev-libs/libIDL-0.8.0
