@@ -21,6 +21,13 @@
 ##   End example
 ##
 
+
+# <phoenix@gentoo.org> (13 Sep 2002)
+# Masking wine-20020904-r1 and winex-20020807-r1
+# in order to test the new manpage setup.
+=app-emulation/wine-20020904-r1
+=app-emulation/winex-20020807-r1
+
 # Hannes Mehnertk <hannes@gentoo.org> (13 sep 2002)
 # masked kvim
 app-editors/kvim
