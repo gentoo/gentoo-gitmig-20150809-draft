@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/autossh
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/autossh/ChangeLog,v 1.13 2004/08/22 21:43:43 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/autossh/ChangeLog,v 1.14 2004/09/01 10:19:29 aliz Exp $
+
+*autossh-1.2g (01 Sep 2004)
+
+  01 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> autossh-1.2g.ebuild:
+  Version bump, closing #62329.
 
   22 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> autossh-1.2f.ebuild:
   Stable on alpha.
