@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.17 2003/05/06 12:38:11 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.18 2003/06/30 15:06:25 gmsoft Exp $
 
 *libpcre-4.2-r1 (03 May 2003)
 
@@ -28,6 +28,9 @@
   Version bumped.
 
 *libpcre-3.9-r2 (10 Mar 2003)
+
+  30 Jun 2003; Guy Martin <gmsoft@entoo.org> libpcre-3.9-r2.ebuild :
+  Marked stable on hppa.
 
   21 Mar 2003; Guy Martin <gmsoft@gentoo.org> libpcre-3.9-r2.ebuild :
   Added ~hppa to KEYWORDS.
