@@ -1,6 +1,13 @@
 # ChangeLog for net-www/dillo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/ChangeLog,v 1.25 2003/12/11 00:09:50 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/ChangeLog,v 1.26 2003/12/11 16:05:17 usata Exp $
+
+*dillo-0.7.3-r4 (12 Dec 2003)
+
+  12 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> dillo-0.7.3-r3.ebuild,
+  dillo-0.7.3-r4.ebuild:
+  Updated i18n patch (some more fixes with regard to libiconv).
+  Marked -r3 stable for x86 and alpha.
 
   10 Dec 2003; Jon Portnoy <avenj@gentoo.org> dillo-0.7.3-r2.ebuild,
   dillo-0.7.3-r3.ebuild :
