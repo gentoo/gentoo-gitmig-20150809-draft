@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3477 2005/01/11 03:34:53 avenj Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3478 2005/01/11 11:03:20 dragonheart Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -30,11 +30,6 @@
 # Masking version that needs to be removed soon;
 # Newer version was released soon after to correct major bugs.
 =x11-wm/windowmaker-0.90.0
-
-# <dragonheart@gentoo.org> (10 Jan 2005)
-# Masked because I ran out of time to fully test
-# needed for security bug #75395
-=net-analyzer/snort-2.3.0_rc2
 
 # <hollow@gentoo.org> (10 Jan 2005)
 # Apache herd package refresh (New ebuild)
