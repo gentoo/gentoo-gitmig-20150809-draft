@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-1.0.0-r3.ebuild,v 1.16 2004/07/16 03:51:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/frozen-bubble/frozen-bubble-1.0.0-r3.ebuild,v 1.17 2004/07/16 22:36:35 mr_bones_ Exp $
 
 inherit perl-module games
 
@@ -45,17 +45,17 @@ src_unpack() {
 }
 
 src_compile() {
-	make \
+	emake \
 		OPTIMIZE="${CFLAGS}" \
 		PREFIX=/usr \
 		BINDIR="${GAMES_BINDIR}" \
 		DATADIR="${GAMES_DATADIR}" \
 		MANDIR=/usr/share/man \
-		|| die "make game failed"
+		|| die "emake game failed"
 
 	cd "${WORKDIR}/${NET_SERVER_P}"
 	egamesconf || die
-	make || die "make server failed"
+	emake || die "emake server failed"
 }
 
 src_install() {
