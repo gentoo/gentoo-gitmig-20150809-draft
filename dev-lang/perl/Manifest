@@ -1,37 +1,47 @@
-MD5 058abe07e988525f178e08271fa948c6 ChangeLog 28644
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c56f744c486258dd02d8966eda2b1a1b ChangeLog 28903
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 f3a27833295b2d972120d7b97460d4ee perl-5.8.2-r1.ebuild 9772
-MD5 221e4d78753e426f4e9522543e2871c8 perl-5.8.3.ebuild 9741
-MD5 4f401681acd69ecc4a2a4235c62c125e perl-5.8.4-r1.ebuild 11851
-MD5 6ae5c3853f98f54395b532c982c2ca08 perl-5.8.4.ebuild 10537
-MD5 54b0adf69396ecc085f7f7a4af83a7a5 perl-5.8.5.ebuild 11214
-MD5 8381e239056a7895edf8f3c6c05c835c files/digest-perl-5.8.2-r1 64
-MD5 35eb3b7645102bbcc4088d900dc28984 files/digest-perl-5.8.3 64
+MD5 b586eafcb1bd8808ee9162c373fed2c7 perl-5.8.2-r1.ebuild 9812
+MD5 12228601c0b002cb8029d0e890a79007 perl-5.8.3.ebuild 9781
+MD5 100a8ed6cf6f3cd470095386aff55265 perl-5.8.4-r1.ebuild 11891
+MD5 c9346e983cfc8f78407efe7dda56fd3e perl-5.8.4.ebuild 10577
+MD5 39caac050c4dd81b1812c22304b3f5f3 perl-5.8.5.ebuild 11254
 MD5 93155b02a7e9d3cdc6d6934ce78d9f11 files/digest-perl-5.8.4 64
+MD5 0a28eb41f5f12ed54f025004af45c83d files/perl-5.8.4-perldoc-emptydirs.patch 489
+MD5 319b56a7ce715fb7a494fe4d5cb9474c files/perl-5.8.4-picdl.patch 250
+MD5 d9412dab085f22309997c8f08ea1ac85 files/perl-5.8.4-reorder-INC.patch 2211
+MD5 4e99f7529e149661372283c981cf17ff files/perl-5.8.4-prelink-lpthread.patch 476
+MD5 076dcbef37263d6dd7af719b55cfc2de files/perl-5.8.4-noksh.patch 611
+MD5 ce442db939c59218a16be167f793b817 files/perl-5.8.2-uclibc.patch 573
 MD5 93155b02a7e9d3cdc6d6934ce78d9f11 files/digest-perl-5.8.4-r1 64
+MD5 35eb3b7645102bbcc4088d900dc28984 files/digest-perl-5.8.3 64
+MD5 44e1f1420947cc552c66fb434ba4c855 files/perl-5.8.4-NDBM-GDBM-compat.patch 428
+MD5 8381e239056a7895edf8f3c6c05c835c files/digest-perl-5.8.2-r1 64
 MD5 c354e2fbf8141a769c20032e94f45fd3 files/digest-perl-5.8.5 64
 MD5 b8480b2ccbf7d5a7fe543b9e6f8dbc14 files/libperl_rebuilder 10260
 MD5 060e9f10466fdc1268c75a7cf4dcbc7c files/perl-5.8.0-RC2-special-h2ph-not-failing-on-machine_ansi_header.patch 446
-MD5 0a28eb41f5f12ed54f025004af45c83d files/perl-5.8.2-perldoc-emptydirs.patch 489
-MD5 319b56a7ce715fb7a494fe4d5cb9474c files/perl-5.8.2-picdl.patch 250
-MD5 4e99f7529e149661372283c981cf17ff files/perl-5.8.2-prelink-lpthread.patch 476
-MD5 d9412dab085f22309997c8f08ea1ac85 files/perl-5.8.2-reorder-INC.patch 2211
-MD5 ce442db939c59218a16be167f793b817 files/perl-5.8.2-uclibc.patch 573
+MD5 01af75daf3d222a668059e90d78a1f9d files/perl-5.8.4-nonblock.patch 400
+MD5 076dcbef37263d6dd7af719b55cfc2de files/perl-5.8.5-noksh.patch 611
+MD5 01af75daf3d222a668059e90d78a1f9d files/perl-5.8.5-nonblock.patch 400
+MD5 0a28eb41f5f12ed54f025004af45c83d files/perl-5.8.5-perldoc-emptydirs.patch 489
 MD5 0a28eb41f5f12ed54f025004af45c83d files/perl-5.8.3-perldoc-emptydirs.patch 489
 MD5 319b56a7ce715fb7a494fe4d5cb9474c files/perl-5.8.3-picdl.patch 250
 MD5 4e99f7529e149661372283c981cf17ff files/perl-5.8.3-prelink-lpthread.patch 476
 MD5 d9412dab085f22309997c8f08ea1ac85 files/perl-5.8.3-reorder-INC.patch 2211
-MD5 44e1f1420947cc552c66fb434ba4c855 files/perl-5.8.4-NDBM-GDBM-compat.patch 428
-MD5 076dcbef37263d6dd7af719b55cfc2de files/perl-5.8.4-noksh.patch 611
-MD5 01af75daf3d222a668059e90d78a1f9d files/perl-5.8.4-nonblock.patch 400
-MD5 0a28eb41f5f12ed54f025004af45c83d files/perl-5.8.4-perldoc-emptydirs.patch 489
-MD5 319b56a7ce715fb7a494fe4d5cb9474c files/perl-5.8.4-picdl.patch 250
-MD5 4e99f7529e149661372283c981cf17ff files/perl-5.8.4-prelink-lpthread.patch 476
-MD5 d9412dab085f22309997c8f08ea1ac85 files/perl-5.8.4-reorder-INC.patch 2211
-MD5 076dcbef37263d6dd7af719b55cfc2de files/perl-5.8.5-noksh.patch 611
-MD5 01af75daf3d222a668059e90d78a1f9d files/perl-5.8.5-nonblock.patch 400
-MD5 0a28eb41f5f12ed54f025004af45c83d files/perl-5.8.5-perldoc-emptydirs.patch 489
 MD5 319b56a7ce715fb7a494fe4d5cb9474c files/perl-5.8.5-picdl.patch 250
 MD5 4e99f7529e149661372283c981cf17ff files/perl-5.8.5-prelink-lpthread.patch 476
 MD5 d9412dab085f22309997c8f08ea1ac85 files/perl-5.8.5-reorder-INC.patch 2211
+MD5 0a28eb41f5f12ed54f025004af45c83d files/perl-5.8.2-perldoc-emptydirs.patch 489
+MD5 319b56a7ce715fb7a494fe4d5cb9474c files/perl-5.8.2-picdl.patch 250
+MD5 4e99f7529e149661372283c981cf17ff files/perl-5.8.2-prelink-lpthread.patch 476
+MD5 d9412dab085f22309997c8f08ea1ac85 files/perl-5.8.2-reorder-INC.patch 2211
 MD5 803b7c028f59008ea1e6d577e5c0bab0 files/stat.t 8884
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBWFO6HTu7gpaalycRAoULAJwPTXdvabgv5eptSfyYKnpfMQwGhgCgycI1
+ltRrOUz+m1cZjHNJpQ3nk+I=
+=20Hq
+-----END PGP SIGNATURE-----

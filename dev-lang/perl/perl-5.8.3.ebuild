@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.3.ebuild,v 1.13 2004/09/27 11:33:14 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.3.ebuild,v 1.14 2004/09/27 17:53:42 vapier Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -27,7 +27,8 @@ DEPEND="sys-apps/groff
 	!<dev-perl/ExtUtils-MakeMaker-6.17
 	!<dev-perl/File-Spec-0.84-r1
 	!<dev-perl/Test-Simple-0.47-r1"
-RDEPEND="berkdb? ( sys-libs/db )
+RDEPEND=">=sys-devel/libperl-${PV}
+	berkdb? ( sys-libs/db )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )"
 
 pkg_setup() {
@@ -54,10 +55,10 @@ pkg_setup() {
 		ewarn ""
 	fi
 
-	if [ ! -f /usr/lib/${LIBPERL} ]
+	if [ ! -f "${ROOT}/usr/lib/${LIBPERL}" ]
 	then
 		# Make sure we have libperl installed ...
-		eerror "Cannot find /usr/lib/${LIBPERL}!  Make sure that you"
+		eerror "Cannot find ${ROOT}/usr/lib/${LIBPERL}!  Make sure that you"
 		eerror "have sys-libs/libperl installed properly ..."
 		die "Cannot find /usr/lib/${LIBPERL}!"
 	fi
