@@ -1,0 +1,14 @@
+--- src/global.c.orig	2004-11-10 01:28:23.091315572 -0500
++++ src/global.c	2004-11-10 01:28:40.231186724 -0500
+@@ -836,11 +836,6 @@
+ 		IFHELP(nano_dos_msg, TOGGLE_DOS_KEY), NANO_NO_KEY,
+ 		NANO_NO_KEY, NOVIEW, 0);
+ 
+-    /* Translators: try to keep this string under 16 characters long */
+-    if (!ISSET(RESTRICTED))
+-	sc_init_one(&writefile_list, NANO_NO_KEY, N_("Mac Format"),
+-		IFHELP(nano_mac_msg, TOGGLE_MAC_KEY), NANO_NO_KEY,
+-		NANO_NO_KEY, NOVIEW, 0);
+ #endif
+ 
+     /* Translators: try to keep this string under 16 characters long */
