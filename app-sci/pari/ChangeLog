@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/pari
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/pari/ChangeLog,v 1.12 2004/01/28 22:34:48 sediener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/pari/ChangeLog,v 1.13 2004/03/15 12:38:05 phosphan Exp $
+
+*pari-2.1.5-r1 (15 Mar 2004)
+
+  15 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> pari-2.1.5-r1.ebuild:
+  Fixing bug #29163.
 
   28 Jan 2004; Stephen Diener <sediener@gentoo.org> pari-2.1.5.ebuild:
   changed from DEPEND on app-text/tetex to virtual/tetex Bug #38859
