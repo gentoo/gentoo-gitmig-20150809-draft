@@ -1,6 +1,11 @@
 # ChangeLog for app-vim/vimirc
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/vimirc/ChangeLog,v 1.4 2004/03/19 08:57:08 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/vimirc/ChangeLog,v 1.5 2004/03/27 01:32:29 ciaranm Exp $
+
+*vimirc-0.6.3 (27 Mar 2004)
+
+  27 Mar 2004; Ciaran McCreesh <ciaranm@gentoo.org> vimirc-0.6.3.ebuild:
+  Version bump
 
   16 Mar 2004; David Holm <dholm@gentoo.org> vimirc-0.5.3.ebuild:
   Added to ~ppc.
