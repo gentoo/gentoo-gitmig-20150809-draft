@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/regexxer
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/regexxer/ChangeLog,v 1.6 2004/04/11 14:54:20 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/regexxer/ChangeLog,v 1.7 2004/05/30 19:42:18 khai Exp $
+
+  30 May 2004; Yi Qiang <khai@gentoo.org> regexxer-0.4.ebuild,
+  regexxer-0.5.ebuild, regexxer-0.6.ebuild:
+  Fixed gtkmm deps.
 
   11 Apr 2004; Markus Nigbur <pyrania@gentoo.org> regexxer-0.6.ebuild:
   Marking stable on x86.
