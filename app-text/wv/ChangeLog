@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wv
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv/ChangeLog,v 1.20 2004/07/12 16:41:06 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv/ChangeLog,v 1.21 2004/08/08 15:00:13 foser Exp $
+
+  08 Aug 2004; foser <foser@gentoo.org> wv-1.0.0-r1.ebuild :
+  Fix HOMEPAGE as suggested in #58117 by Aniruddha Shankar <karim@sarai.net>
 
 *wv-1.0.0-r1 (12 Jul 2004)
 
