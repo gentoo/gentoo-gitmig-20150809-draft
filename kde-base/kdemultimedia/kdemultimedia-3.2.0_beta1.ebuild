@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.2.0_beta1.ebuild,v 1.3 2003/11/05 18:34:20 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.2.0_beta1.ebuild,v 1.4 2003/11/05 18:46:53 caleb Exp $
 inherit kde-dist flag-o-matic
 
 IUSE="nas esd motif slang tcltk oggvorbis gtk alsa cdr gstreamer"
@@ -10,7 +10,6 @@ KEYWORDS="~x86"
 newdepend ">=sys-libs/ncurses-5.2
 	>=media-sound/cdparanoia-3.9.8
 	>=media-libs/libvorbis-1.0_beta4
-	>=media-video/xanim-2.80.1
 	nas? ( >=media-libs/nas-1.4.1 )
 	esd? ( >=media-sound/esound-0.2.22 )
 	motif? ( virtual/motif )
@@ -24,9 +23,6 @@ newdepend ">=sys-libs/ncurses-5.2
 	alsa? ( >=media-libs/alsa-lib-0.5.9 )
 	gstreamer? ( media-libs/gstreamer )
 	!media-sound/juk"
-
-RDEPEND="$RDEPEND
-	cdr? ( app-cdr/cdrtools >=app-cdr/cdrdao-1.1.5 )"
 
 replace-flags "-O3" "-O2"
 
