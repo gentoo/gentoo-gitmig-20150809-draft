@@ -1,0 +1,4 @@
+MD5 21aaafac4cdd7132146b6afba7f3d4ec mtink-0.9.55.ebuild 1230
+MD5 6ad02a6f13fe4cf6465067819ea603a5 files/mtinkd.rc 429
+MD5 009b793f79082e258e5dffbefb4c45f8 files/mtinkd.confd 414
+MD5 6e4f37da8ada0ed3ec7b695aba334737 files/digest-mtink-0.9.55 64
