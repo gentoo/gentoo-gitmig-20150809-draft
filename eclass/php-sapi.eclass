@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.7 2004/02/05 06:09:18 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.8 2004/02/11 09:11:08 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -73,7 +73,7 @@ RDEPEND="${RDEPEND}
    png? ( >=media-libs/libpng-1.2.5 )
    postgres? ( >=dev-db/postgresql-7.1 )
    qt? ( >=x11-libs/qt-2.3.0 )
-   snmp? ( net-analyzer/net-snmp )
+   snmp? ( virtual/snmp )
    spell? ( app-text/aspell )
    ssl? ( >=dev-libs/openssl-0.9.5 )
    tiff? ( >=media-libs/tiff-3.5.5 )
