@@ -1,0 +1,4 @@
+# Config file for /etc/init.d/ntop
+
+# Set preferred options here
+#NTOP_OPTS="--http-server 3000 --https-server 0 --interface eth0"

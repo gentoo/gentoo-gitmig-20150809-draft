@@ -1,0 +1,17 @@
+#!/sbin/runscript
+
+depend() {
+        need net
+}
+
+start() {
+	ebegin "Starting ntop"
+	start-stop-daemon --start --quiet --exec /usr/bin/ntop -- -d -L ${NTOP_OPTS} >/dev/null
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping ntop"
+	start-stop-daemon --stop --quiet --retry 5 --exec /usr/bin/ntop
+	eend $?
+}
