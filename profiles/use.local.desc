@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.540 2004/08/07 19:35:40 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.541 2004/08/07 22:41:42 tomk Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -228,6 +228,7 @@ mail-client/pine:passfile - Adds support for caching IMAP passwords into a file 
 mail-client/squirrelmail:virus-scan - Install plugin to support virus scanning of email attachments
 mail-client/sylpheed-claws:clamav - Enables support for the Clam Antivirus, with a plugin
 mail-client/sylpheed-claws:dillo - Enables support for inline http email viewing with a plugin (which depends on the dillo browser)
+mail-filter/ask:procmail - Adds support for procmail
 mail-filter/bsfilter:mecab - Adds support for mecab
 mail-filter/bsfilter:chasen - Adds support for chasen
 mail-filter/clamassassin:subject-rewrite - Adds support for subject rewriting.
