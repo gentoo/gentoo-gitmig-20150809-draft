@@ -1,7 +1,7 @@
 # Copyriht 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.1.ebuild,v 1.1 2001/12/19 20:19:48 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.1.ebuild,v 1.2 2002/03/28 22:37:32 seemant Exp $
 
 MY_P="${P/sdl-/SDL_}"
 S=${WORKDIR}/${MY_P}
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.libsdl.org/projects/SDL_mixer/index.html"
 DEPEND="virtual/glibc
 	>=media-libs/libsdl-1.2.2
 	>=media-libs/smpeg-0.4.4-r1
-	ogg? ( >=media-libs/libvorbis-1.0_beta4 )"
+	oggvorbis? ( >=media-libs/libvorbis-1.0_beta4 )"
 
 
 src_compile() {
