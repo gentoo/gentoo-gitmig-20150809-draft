@@ -1,6 +1,6 @@
 # Copyright (c) Vitaly Kushneriuk
-# Distributed under the terms of the GNU General Public License, v2.
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/yawmppp/yawmppp-2.0.2.ebuild,v 1.7 2003/09/05 23:18:18 msterret Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/yawmppp/yawmppp-2.0.2.ebuild,v 1.8 2003/09/11 23:29:52 msterret Exp $
 
 S=${WORKDIR}/${P}
 

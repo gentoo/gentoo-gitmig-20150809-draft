@@ -1,6 +1,6 @@
 # Copyright (c) Vitaly Kushneriuk
-# Distributed under the terms of the GNU General Public License, v2.
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/login-app/login-app-2.0.0_alpha7.ebuild,v 1.9 2003/09/05 23:18:18 msterret Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/login-app/login-app-2.0.0_alpha7.ebuild,v 1.10 2003/09/11 23:30:23 msterret Exp $
 
 _P=Login.app-2.0.0-Alpha-7
 S=${WORKDIR}/${_P}
