@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.108 2004/01/04 15:35:28 weeve Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.109 2004/01/08 15:30:13 caleb Exp $
+
+  08 Jan 2004; Caleb Tennis <caleb@gentoo.org> kdelibs-3.1.4.ebuild:
+  Hopefully this will stop so many bugs from being reported
+  until autoconf becomes stable.
 
   04 Jan 2004; Jason Wever <weeve@gentoo.org> kdelibs-3.2.0_beta2.ebuild:
   Added ~sparc keyword.

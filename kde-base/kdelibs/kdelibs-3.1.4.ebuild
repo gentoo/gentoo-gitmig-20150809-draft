@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1.4.ebuild,v 1.16 2004/01/04 02:21:57 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1.4.ebuild,v 1.17 2004/01/08 15:30:13 caleb Exp $
 inherit kde
 #don't inherit  kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
 
@@ -44,6 +44,14 @@ use x86 && myconf="$myconf --enable-fast-malloc=full"
 set-kdedir $PV
 
 src_unpack() {
+	if [ `best_version autoconf` = "sys-devel/autoconf-2.57-r1" ];
+        then
+		ewarn ""
+		ewarn "KDELIBS 3.1.4 will not work with your current autoconf version"
+		ewarn "You should upgrade to 2.57a or 2.58"
+		die
+	fi
+ 
 	kde_src_unpack
 	epatch ${FILESDIR}/${P}-alsafix.diff
 	kde_sandbox_patch ${S}/kio/misc/kpac
