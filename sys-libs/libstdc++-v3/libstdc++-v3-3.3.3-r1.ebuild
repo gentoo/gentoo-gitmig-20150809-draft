@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.3-r1.ebuild,v 1.11 2004/07/15 21:49:59 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libstdc++-v3/libstdc++-v3-3.3.3-r1.ebuild,v 1.12 2004/07/16 20:59:15 lv Exp $
 
 IUSE="nls"
 
@@ -54,10 +54,10 @@ do_filter_flags() {
 	filter-flags -fno-web
 
 	# xgcc isnt patched with propolice
-	filter-flags -fstack-protector
-	filter-flags -fno-stack-protector
 	filter-flags -fstack-protector-all
 	filter-flags -fno-stack-protector-all
+	filter-flags -fstack-protector
+	filter-flags -fno-stack-protector
 
 	# xgcc isnt patched with the gcc symbol visibility patch
 	filter-flags -fvisibility-inlines-hidden
