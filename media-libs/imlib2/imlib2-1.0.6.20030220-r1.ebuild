@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.0.6.20030220-r1.ebuild,v 1.6 2003/08/26 03:49:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.0.6.20030220-r1.ebuild,v 1.7 2003/08/26 18:39:04 carpaski Exp $
 
 inherit flag-o-matic
 
@@ -21,6 +21,8 @@ DEPEND="=media-libs/freetype-1*
 	jpeg? ( media-libs/jpeg )
 	tiff? ( >=media-libs/tiff-3.5.5 )
 	virtual/x11"
+
+S=${WORKDIR}/${PN}
 
 replace-flags k6-3 i586
 replace-flags k6-2 i586

@@ -1,9 +1,12 @@
 # ChangeLog for media-libs/imlib2
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.14 2003/08/26 03:49:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/ChangeLog,v 1.15 2003/08/26 18:39:04 carpaski Exp $
 
 *imlib2-1.0.7.20030629 (29 Jun 2003)
 
+  26 Aug 2003; Nicholas Jones <carpaski@gentoo.org> :
+	Add S back to ebuild.
+	
   25 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
   Add virtual/x11 since it is required to compile #27169.
 
