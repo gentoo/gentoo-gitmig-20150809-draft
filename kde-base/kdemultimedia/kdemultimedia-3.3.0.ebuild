@@ -1,24 +1,24 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.3.0_beta2.ebuild,v 1.2 2004/07/28 13:51:09 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.3.0.ebuild,v 1.1 2004/08/19 14:30:00 caleb Exp $
 
 inherit kde-dist flag-o-matic
 
 DESCRIPTION="KDE multimedia apps: noatun, kscd, artsbuilder..."
 
 KEYWORDS="~x86 ~amd64"
-IUSE="flac encode oggvorbis alsa xine speex"
+IUSE="alsa audiofile cdparanoia encode flac oggvorbis speex xine"
 
 DEPEND="~kde-base/kdebase-${PV}
-	media-sound/cdparanoia
+	audiofile? ( media-libs/audiofile )
+	cdparanoia? ( media-sound/cdparanoia )
 	flac? ( media-libs/flac )
 	encode? ( media-sound/lame )
-	oggvorbis? ( media-libs/libvorbis media-libs/libogg )
+	oggvorbis? ( media-sound/vorbis-tools )
 	xine? ( >=media-libs/xine-lib-1_beta12 )
 	alsa? ( media-libs/alsa-lib )
 	speex? ( media-libs/speex )
-	media-sound/trm
-	media-libs/taglib
+	media-libs/taglib media-libs/tunepimp
 	!media-sound/juk"
 
 src_unpack() {
@@ -30,7 +30,10 @@ src_compile() {
 	# Still persists with 3.2.1 - kaboodle
 	filter-flags "-fno-default-inline"
 
-	myconf="$myconf --with-xine-prefix=/usr"
+	use xine && myconf="$myconf --with-xine-prefix=/usr"
+	use xine || DO_NOT_COMPILE="$DO_NOT_COMPILE xine_artsplugin"
+
+	myconf="${myconf} `use_with cdparanoia`"
 
 	# make -j2 fails, at least on ppc
 	use ppc && export MAKEOPTS="$MAKEOPTS -j1"
