@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpower/wmpower-0.3.0.ebuild,v 1.1 2003/10/22 15:38:03 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmpower/wmpower-0.3.0.ebuild,v 1.2 2003/11/02 12:17:43 pyrania Exp $
 
 IUSE=""
 
@@ -13,6 +13,12 @@ SLOT="0"
 KEYWORDS="x86 amd64"
 
 DEPEND="virtual/x11"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/cflags.patch
+}
 
 src_install() {
 	dodir /usr/bin
