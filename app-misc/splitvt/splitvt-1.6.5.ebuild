@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ryan Tolboom <ryan@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/splitvt/splitvt-1.6.5.ebuild,v 1.1 2001/02/11 19:31:58 ryan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/splitvt/splitvt-1.6.5.ebuild,v 1.2 2001/02/11 20:25:53 ryan Exp $
 
 S=${WORKDIR}/splitvt-1.6.5
 SRC_URI="http://www.devolution.com/~slouken/projects/splitvt/splitvt-1.6.5.tar.gz"
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.devolution.com/~slouken/projects/splitvt"
 
 DESCRIPTION="A program for splitting terminals into two shells"
 
-DEPEND=">=sys-libs/glibc-2.1.3"
+DEPEND=">=sys-libs/ncurses-5.1"
 
 src_unpack() {
     
