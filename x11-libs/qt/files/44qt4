@@ -1,0 +1,5 @@
+#PATH=/usr/lib/qt4/bin
+#ROOTPATH=/usr/lib/qt4/bin
+LDPATH=/usr/lib/qt4/lib
+QMAKESPEC=linux-g++
+#MANPATH=/usr/qt/3/doc/man

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta1-r1.ebuild,v 1.2 2004/12/28 18:33:46 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta1-r1.ebuild,v 1.3 2004/12/28 20:56:28 caleb Exp $
 
 inherit eutils flag-o-matic
 
@@ -35,8 +35,9 @@ S=${WORKDIR}/qt-x11-${SRCTYPE}-${PV/_beta1/-b2}-snapshot-${SNAPSHOT}
 
 QTPREFIXDIR=${S}
 QTBINDIR=/usr/lib/qt4/bin
-QTLIBDIR=/usr/lib/qt4
+QTLIBDIR=/usr/lib/qt4/lib
 QTDOCDIR=/usr/lib/qt4/doc
+QTDATADIR=/usr/lib/qt4
 QTHEADERDIR=/usr/include/qt4
 QTPLUGINDIR=/usr/lib/qt4/plugins
 QTSYSCONFDIR=/etc/qt4
@@ -113,7 +114,7 @@ src_compile() {
 		-qt-imgfmt-{jpeg,png} -system-lib{jpeg,png} -fast \
 		-platform ${PLATFORM} -xplatform ${PLATFORM} \
 		-tablet -xft -xrender -xrandr -xkb -xshape -sm \
-		-prefix ${QTPREFIXDIR} -bindir ${QTBINDIR} -libdir ${QTLIBDIR} \
+		-prefix ${QTPREFIXDIR} -bindir ${QTBINDIR} -libdir ${QTLIBDIR} -datadir ${QTDATADIR} \
 		-docdir ${QTDOCDIR} -headerdir ${QTHEADERDIR} -plugindir ${QTPLUGINDIR} \
 		-sysconfdir ${QTSYSCONFDIR} -translationdir ${QTTRANSDIR} ${myconf} || die
 
@@ -137,10 +138,10 @@ src_install() {
 	make INSTALL_ROOT=${D} sub-demos-install_subtargets-ordered sub-examples-install_subtargets-ordered || die
 	use doc && make INSTALL_ROOT=${D} install_htmldocs sub-tutorial-install_subtargets-ordered
 
-#	dodir /usr/qt4/bin
-#	into /usr/qt4
-#	dobin assistant designer findtr linguist lrelease lupdate moc qm2ts qmake qt3to4 qtconfig rcc syncqt uic uic3
+	dodir /usr/lib/qt4/mkspecs
+	cp -a ${S}/mkspecs/linux-g++ ${D}/usr/lib/qt4/mkspecs/linux-g++
+	cp -a ${S}/mkspecs/default ${D}/usr/lib/qt4/mkspecs/default
 
-#	insinto /etc/env.d
-#	doins ${FILESDIR}/{45qt3,50qtdir3}
+	insinto /etc/env.d
+	doins ${FILESDIR}/44qt4
 }
