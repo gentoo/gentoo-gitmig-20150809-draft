@@ -136,7 +136,7 @@ fi
 find /var/db/pkg -name '*.ebuild' | \
 	sed -e "s:/var/db/pkg/::" \
 		-e "s:${X}/${X}/${X}:\1/\2:" | \
-	sort | uniq >> ${tmp}/current
+	sort -u >> ${tmp}/current
 
 if [ ${verb} ]; then
 	echo -e "${CY}"`cat ${tmp}/current | wc -l` "currently merged packages.${NO}"
@@ -149,7 +149,7 @@ if [ ${verb} ];then
 fi
 emerge system -eup | \
 	sed -e "/ebuild/s:^.*] \([^ ]*\) *:\1:p;d" | \
-	sort | uniq \
+	sort -u uniq \
 	> ${tmp}/system
 
 if [ ${verb} ]; then
@@ -203,7 +203,7 @@ fi
 cat ${tmp}/system >> ${tmp}/image.unsorted
 
 #Cleanup image
-sort ${tmp}/image.unsorted | uniq > ${tmp}/image
+sort -u ${tmp}/image.unsorted > ${tmp}/image
 
 if [ ${verb} ];then
 	echo -e "${CY}"`cat ${tmp}/image | wc -l` "packages contained in final image.${NO}"

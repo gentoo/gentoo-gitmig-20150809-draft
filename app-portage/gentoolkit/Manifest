@@ -1,4 +1,4 @@
-MD5 b058dc78f43d55a402b7f4d935c41783 ChangeLog 21048
+MD5 5263aba351da654ba6b0de7a5b3addae ChangeLog 21096
 MD5 8293fb11223ccfc1f9b80caa687b1f31 gentoolkit-0.1.30.ebuild 2740
 MD5 2342f8711f0a4ecb063556c25fde9add metadata.xml 605
 MD5 ec64f86677a1db3ee6030299475a2e7f gentoolkit-0.1.31.ebuild 2710
@@ -11,7 +11,7 @@ MD5 4b37657e210479e18a3bb1620d65eb39 files/euse/euse.1 2719
 MD5 b82b1b8fff626b1de5e751988b6c1c38 files/gentool/ChangeLog 485
 MD5 4465ed729e3e37c812bed62d9aa940e1 files/gentool/gentool-author-coverage 351
 MD5 0f7187ebddef30fd6d426acd7c267956 files/gentool/gentool-bump-revision 1992
-MD5 50dccf92bb434c370a284d02ca63362b files/gentool/gentool-package-count 356
+MD5 d58d04fcf29c815e63bca5820c7a63ee files/gentool/gentool-package-count 352
 MD5 8bd1ba99607f3b9c421aa0ba44e84fcc files/gentool/gentool-total-coverage 156
 MD5 e4a164d551dbf4f0fc809dec2a57e858 files/gentool/histogram.awk 308
 MD5 f338c90f4e82b9c5e0a8815414805238 files/portage-statistics/ChangeLog 377
@@ -20,7 +20,7 @@ MD5 4465ed729e3e37c812bed62d9aa940e1 files/portage-statistics/pst-author-coverag
 MD5 50dccf92bb434c370a284d02ca63362b files/portage-statistics/pst-package-count 356
 MD5 8bd1ba99607f3b9c421aa0ba44e84fcc files/portage-statistics/pst-total-coverage 156
 MD5 53bb611c54d0d77c27a0b554a5300c67 files/scripts/ChangeLog 2214
-MD5 4b6bed0e41c186eda2d830d89a84b344 files/scripts/dep-clean 6956
+MD5 a325d30ede781c8afd795dbdea44c71e files/scripts/dep-clean 6949
 MD5 ae1ecff118b5583eac443b6afbccb0fd files/scripts/dep-clean.1 5645
 MD5 66c792cf569cddd351bcccedd69d659f files/scripts/echangelog 6106
 MD5 73a88cfef008b2113c51187b87ae338b files/scripts/echangelog.1 9275
