@@ -1,6 +1,9 @@
 # ChangeLog for net-im/gnugadu
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/ChangeLog,v 1.7 2004/04/04 11:29:30 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/ChangeLog,v 1.8 2004/04/06 22:21:30 spock Exp $
+
+  07 Apr 2004; Michal Januszewski <spock@gentoo.org> gnugadu-2.0.ebuild:
+  Dropping gtkspell support because gnugadu works only with gtkspell-2.0.2.
 
 *gnugadu-2.0 (04 Apr 2004)
 
