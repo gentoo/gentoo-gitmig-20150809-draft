@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20020511-r1.ebuild,v 1.4 2002/07/21 03:12:53 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20020511-r1.ebuild,v 1.5 2002/08/19 17:50:20 cybersystem Exp $
 
 S=${WORKDIR}/wine
 DESCRIPTION="WineX is a distribution of Wine with enhanced DirectX for gaming"
@@ -19,7 +19,7 @@ DEPEND="virtual/x11
 
 SLOT="0"
 LICENSE="Aladdin"
-KEYWORDS="x86"
+KEYWORDS="x86 -ppc"
 
 src_compile() {
 	

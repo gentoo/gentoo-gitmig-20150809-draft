@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20020807.ebuild,v 1.1 2002/08/07 15:36:43 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20020807.ebuild,v 1.2 2002/08/19 17:50:20 cybersystem Exp $
 
 S=${WORKDIR}/wine
 DESCRIPTION="WineX is a distribution of Wine with enhanced DirectX for gaming"
@@ -9,7 +9,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 HOMEPAGE="http://www.transgaming.com/"
 
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 -ppc"
 LICENSE="Aladdin"
 
 DEPEND="virtual/x11
