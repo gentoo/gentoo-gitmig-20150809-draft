@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.3.5-r1.ebuild,v 1.1 2005/03/02 12:53:13 sebastian Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-PEAR/PEAR-PEAR-1.3.5-r1.ebuild,v 1.2 2005/03/07 06:41:48 sebastian Exp $
 
 ARCHIVE_TAR="1.2"
 CONSOLE_GETOPT="1.2"
@@ -24,13 +24,11 @@ PDEPEND=">=dev-php/PEAR-Archive_Tar-1.1
 		>=dev-php/PEAR-XML_RPC-1.0.4"
 
 src_install() {
-	if [ ! -x "/usr/bin/pear" ]; then
-		einfo "No previous PEAR installation found."
+	if has_version "dev-php/PEAR-PEAR"; then
+		install_pear_without_bootstrap
+	else
 		bootstrap_pear
 		install_pear_after_bootstrap
-	else
-		einfo "Previous PEAR installation found."
-		install_pear_without_bootstrap
 	fi
 }
 
