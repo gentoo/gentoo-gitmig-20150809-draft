@@ -1,6 +1,6 @@
 # Copyright 2001-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/2005.0/2.4/packages,v 1.1 2005/01/20 21:10:21 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/alpha/2005.0/2.4/packages,v 1.2 2005/03/17 20:34:10 vapier Exp $
 
 # For instructions on how this file works (as an inclusion mask, primarily),
 # please refer to ${PORTDIR}/profiles/base/packages
@@ -25,3 +25,5 @@
 <sys-kernel/win4lin-sources-2.5
 
 <sys-kernel/linux-headers-2.5
+
+->=sys-kernel/linux-headers-2.5
