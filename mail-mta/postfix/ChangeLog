@@ -1,6 +1,17 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.58 2005/03/05 06:11:49 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.59 2005/03/10 01:48:44 langthang Exp $
+
+*postfix-2.2.0 (09 Mar 2005)
+
+  09 Mar 2005; Tuấn Văn <langthang@gentoo.org> +postfix-2.2.0.ebuild:
+  New postfix-2.2.0 release. This release includes IPV6 and TLS in the
+  official release. "vda" has been removed as it isn't available for
+  experimetal Postfix release. "vda" will be added as soon as it's available.
+  Please review these document for more infomation:
+  ftp://ftp.porcupine.org/mirrors/postfix-release/official/postfix-2.2.0.RELEA
+  SE_NOTES http://www.postfix.org/TLS_README.html
+  http://www.postfix.org/IPV6_README.html
 
 *postfix-2.2.0_rc2 (04 Mar 2005)
 
