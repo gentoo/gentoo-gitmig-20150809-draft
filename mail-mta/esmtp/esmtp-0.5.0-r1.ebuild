@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/esmtp/esmtp-0.5.0-r1.ebuild,v 1.3 2004/09/04 23:02:27 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/esmtp/esmtp-0.5.0-r1.ebuild,v 1.4 2004/09/26 00:40:02 ticho Exp $
 
 DESCRIPTION="esmtp is a user configurable relay-only Mail Transfer Agent (MTA) with a sendmail compatible syntax"
 HOMEPAGE="http://esmtp.sourceforge.net/"
@@ -15,6 +15,7 @@ DEPEND="virtual/libc
 RDEPEND="${DEPEND}
 	mailwrapper? ( >=net-mail/mailwrapper-0.2 )
 	!mailwrapper? ( !virtual/mta )"
+PROVIDE="virtual/mta"
 
 src_install() {
 	make DESTDIR=${D} install || die "einstall failed"
