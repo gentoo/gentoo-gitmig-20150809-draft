@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.74 2004/10/15 22:35:01 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.75 2004/10/19 00:38:24 gregkh Exp $
+
+*udev-040 (18 Oct 2004)
+
+  18 Oct 2004; Greg Kroah-Hartman <gregkh@gentoo.org> +udev-040.ebuild:
+  040 release
+  Now fixes all the vcs issues in wait_for_sysfs (famous last words...)
+  Also fixes mtr device node issue, sorry about that...
 
   15 Oct 2004; Greg Kroah-Hartman <gregkh@gentoo.org> :
   039 release
