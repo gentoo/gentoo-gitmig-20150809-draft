@@ -1,10 +1,17 @@
 # ChangeLog for dev-util/pccts
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/ChangeLog,v 1.3 2002/03/15 20:30:34 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/ChangeLog,v 1.4 2002/03/17 11:32:43 gbevin Exp $
+
+*pccts-1.33.32-r1 ( 17 Mar 2002 )
+
+  17 Mar 2002; G.Bevin <gbevin@gentoo.org> pccts-1.33.32-r1.ebuild
+  files/digest-pccts-1.33.32-r1
+  
+  Fixed wrong sorcerer include path.  
 
 *pccts-1.33.32 ( 15 Mar 2002 )
 
-  15 Mar 2002; G.Bevin <gbevin@gentoo.org> ChangeLog pccts-1.33.32.ebuild
+  15 Mar 2002; G.Bevin <gbevin@gentoo.org> pccts-1.33.32.ebuild
   files/digest-pccts-1.33.32 files/pccts-1.33.32-gentoo.diff
 
   New upstream version.
@@ -13,7 +20,7 @@
 
 *pccts-1.33.31 ( 12 Feb 2002 )
 
-  12 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ChangeLog pccts-1.33.31.ebuild
+  12 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org> pccts-1.33.31.ebuild
   files/digest-pccts-1.33.31
 
   New upstream version.

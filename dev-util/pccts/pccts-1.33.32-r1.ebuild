@@ -1,7 +1,7 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Peter Kadau <peter.kadau@web.de>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/pccts-1.33.32.ebuild,v 1.1 2002/03/15 20:30:34 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/pccts-1.33.32-r1.ebuild,v 1.1 2002/03/17 11:32:44 gbevin Exp $
 
 S=${WORKDIR}/pccts
 DESCRIPTION="An embedded C/C++ parser generator"
@@ -14,7 +14,7 @@ RDEPEND=""
 src_unpack() {
 	unpack ${A}
 
-	patch -p0 <${FILESDIR}/${PF}-gentoo.diff
+	patch -p0 <${FILESDIR}/${PF}-gentoo.diff || die
 }
 
 src_compile() {
@@ -42,7 +42,7 @@ src_install() {
 	doins h/*.{h,c,cpp}
 
 	# sorcerer includes
-	insinto /usr/include/pccts/sorcerer/include
+	insinto /usr/include/pccts/sorcerer
 	doins sorcerer/h/*.{h,c,cpp}
 
 	# sorcerer libraries
