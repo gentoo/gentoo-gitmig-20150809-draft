@@ -1,6 +1,18 @@
 # ChangeLog for sys-libs/pam
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.62 2005/02/04 00:22:15 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/ChangeLog,v 1.63 2005/02/25 20:31:28 azarah Exp $
+
+*pam-0.78 (25 Feb 2005)
+
+  25 Feb 2005; Martin Schlemmer <azarah@gentoo.org>
+  files/README.pam_console, +files/pam.d/other, +files/pam.d/system-auth,
+  +pam-0.78.ebuild:
+  Add patch from bug #80566 (by Mark Loeser <halcyon@whiterapid.com>). Added
+  workaround from bug #80604 (by Roland Bar <roland@pinguin.tv>). Force
+  locales to default, bug #70471 (by Alessandro Guido <devnull@box.it>). Fix
+  sound perms on pam_console_reset, bug #55305. Add patch for bug #62059 (by
+  Jason Fritcher <jkf@wolfnet.org>). Add pam_chroot, pam_console and
+  pam_timestamp USE flags for these optional modules
 
 *pam-0.77-r7 (04 Feb 2005)
 

@@ -25,7 +25,7 @@ have to be members of the audio group to access audio devices).
 However, Gentoo gives you the possibility to enable pam_console, you just have
 to follow these advices:
 
-1) In /etc/pam.d/system-auth, add the following line:
+1) In /etc/pam.d/login, add the following line:
 
   session    optional     /lib/security/pam_console.so
 
