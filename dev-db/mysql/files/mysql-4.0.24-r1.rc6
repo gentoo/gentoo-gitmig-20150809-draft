@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/mysql-4.0.24-r1.rc6,v 1.1 2005/03/13 05:54:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/files/mysql-4.0.24-r1.rc6,v 1.2 2005/03/13 20:10:08 robbat2 Exp $
 
 depend() {
 	use dns net
@@ -9,9 +9,6 @@ depend() {
 
 
 getconfig() {
-	MY_NAME="(`basename $1`)"
-	[ -z "${MY_NAME/(mysql)}" ] && MY_NAME=""
-
 	MY_CNF=${MY_CNF=/etc/mysql/my.cnf}
 	if [ ! -f ${MY_CNF} ]; then
 		eerror "No ${MY_CNF} file exists! Using automatic defaults!"
@@ -20,16 +17,18 @@ getconfig() {
 	#dir=`my_print_defaults mysqld | grep -- '^--datadir' | tail -n1 | sed -e 's|^--datadir=||'`
 	#dir=`my_print_defaults mysqld | sed -ne '/datadir/s|^--datadir=||p' | tail -n1`
 	local mysqld_cnf="`my_print_defaults --config-file=${MY_CNF} mysqld`"
-	dir=`echo "${mysqld_cnf}" | sed -ne '/datadir/s|^--datadir=||p' | tail -n1`
-	pid_file=`echo "${mysqld_cnf}" | sed -ne '/pid-file/s|^--pid-file=||p' | tail -n1`
+	datadir=`echo "${mysqld_cnf}" | sed -ne '/datadir/s|^--datadir=||p' | tail -n1`
+	pidfile=`echo "${mysqld_cnf}" | sed -ne '/pid-file/s|^--pid-file=||p' | tail -n1`
 	
 	# push these out to the script
-	export MY_NAME MY_CNF pid_file datadir 
+	export MY_CNF 
+	export pidfile
+	export datadir 
 }
 
 checkconfig() {
 	getconfig
-	if [ -z "$datadir" ]; then
+	if [ -z "${datadir}" ]; then
 		eerror "Your mysql doesn't have any datadir setting, default or specific"
 		eerror "Please check your my.cnf : ${MY_CNF}"
 		return 1
@@ -45,16 +44,16 @@ checkconfig() {
 start() {
 	getconfig
 	checkconfig || return 1
-	ebegin "Starting mysqld (${MY_NAME})"
-	start-stop-daemon --start --quiet --pidfile=${pid_file}
+	ebegin "Starting mysqld (${MY_CNF})"
+	start-stop-daemon --start --quiet --background \
 		--exec /usr/bin/mysqld_safe \
-		--background --defaults-file=${MY_CNF} -- >/dev/null 2>&1
+		-- --defaults-file=${MY_CNF} >/dev/null 2>&1
 	eend $?
 }
 
 stop () {
 	getconfig
-	ebegin "Stopping mysqld (${MY_NAME})"
-	start-stop-daemon --stop --retry 5 --quiet --pidfile=${pid_file}
+	ebegin "Stopping mysqld (${MY_CNF})"
+	start-stop-daemon --stop --retry 5 --quiet --pidfile=${pidfile}
 	eend $?
 }
