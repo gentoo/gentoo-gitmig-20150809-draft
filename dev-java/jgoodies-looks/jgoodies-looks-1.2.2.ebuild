@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-looks/jgoodies-looks-1.2.2.ebuild,v 1.4 2005/01/28 14:51:03 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-looks/jgoodies-looks-1.2.2.ebuild,v 1.5 2005/03/30 18:57:41 compnerd Exp $
 
 inherit java-pkg
 
@@ -10,14 +10,14 @@ SRC_URI="http://www.jgoodies.com/download/libraries/looks-1_2_2.zip"
 
 LICENSE="BSD"
 SLOT="1.2"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="doc jikes"
 
-DEPEND=">=virtual/jre-1.4
+DEPEND=">=virtual/jdk-1.4.2
 		>=dev-java/ant-core-1.4
 		  app-arch/unzip
 		jikes? ( >=dev-java/jikes-1.21 )"
-RDEPEND=">=virtual/jre-1.4"
+RDEPEND=">=virtual/jre-1.4.2"
 
 S="${WORKDIR}/looks-1.2.2"
 
