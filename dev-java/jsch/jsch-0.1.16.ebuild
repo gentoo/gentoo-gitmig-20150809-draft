@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/jsch-0.1.16.ebuild,v 1.6 2005/01/26 21:36:39 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsch/jsch-0.1.16.ebuild,v 1.7 2005/03/29 13:42:09 luckyduck Exp $
 
 inherit java-pkg
 
@@ -16,14 +16,19 @@ DEPEND=">=virtual/jdk-1.4
 	>=dev-java/ant-core-1.4
 	>=dev-java/jzlib-1.0.3
 	app-arch/unzip
-	jikes? ( >=dev-java/jikes-1.17 )"
+	jikes? ( >=dev-java/jikes-1.17 )
+	ppc? ( dev-java/gnu-crypto )"
 RDEPEND=">=virtual/jdk-1.4"
 
 src_compile() {
 	local antflags="dist"
 	use doc && antflags="${antflags} javadoc"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
-	ant ${antflags} || die "compilation failed"
+	if use ppc; then
+		ant $(java-config -p gnu-crypto) ${antflags} || die "compilation failed"
+	else
+		ant ${antflags} || die "compilation failed"
+	fi
 }
 
 src_install() {
