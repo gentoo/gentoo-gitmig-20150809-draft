@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/logjam-4.4.0-r1.ebuild,v 1.3 2005/01/05 09:58:00 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/logjam-4.4.1.ebuild,v 1.1 2005/01/05 09:58:00 joem Exp $
 
-IUSE="xmms spell gtkhtml"
+IUSE="gtk gtkhtml spell svg xmms"
 
-inherit eutils
+inherit
 
 DESCRIPTION="GTK2-based LiveJournal client"
 HOMEPAGE="http://logjam.danga.com/"
@@ -14,33 +14,35 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 
-DEPEND=">=x11-libs/gtk+-2
-	>=dev-libs/libxml2-2.0
+RDEPEND=">=dev-libs/libxml2-2.0
 	net-misc/curl
+	gtk? ( >=x11-libs/gtk+-2 )
 	gtkhtml? ( =gnome-extra/libgtkhtml-3.0.10* )
 	spell? ( app-text/gtkspell )
+	svg? ( >=gnome-base/librsvg-2.2.3 )
 	xmms? ( media-sound/xmms )"
+
+DEPEND="${RDEPEND}
+	>=dev-util/intltool-0.29
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
-
-	cd ${S}
-	epatch ${FILESDIR}/${P}-gcc3.4.patch
-	epatch ${FILESDIR}/${P}-offline-sync.patch
-
 	sed -i -e s/logjam.png/logjam_pencil.png/ ${S}/data/logjam.desktop.in
-
 }
 
 src_compile() {
 
 	econf \
-	`use_enable xmms` \
-	`use_with gtkhtml` || die
+	`use_with gtk` \
+	`use_with gtkhtml` \
+	`use_with spell gtkspell` \
+	`use_with svg librsvg` \
+	`use_with xmms` || die
 	emake || die
 }
 
 src_install() {
 	make DESTDIR=${D} install || die
-	dodoc doc/README doc/TODO
+	dodoc Changelog doc/README doc/TODO
 }
