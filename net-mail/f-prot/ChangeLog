@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/f-prot
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/f-prot/ChangeLog,v 1.23 2004/03/15 15:17:51 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/f-prot/ChangeLog,v 1.24 2004/03/25 23:03:17 absinthe Exp $
+
+*f-prot-4.4.1 (25 Mar 2004)
+
+  25 Mar 2004; Dylan Carlson <absinthe@gentoo.org> f-prot-4.4.1.ebuild:
+  Version bump.  Thanks: Timo Maier <tam@gmx.de>.
 
 *f-prot-4.3.5 (04 Mar 2004)
 
