@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/python-selinux-2.14.ebuild,v 1.4 2004/06/25 01:46:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/python-selinux/python-selinux-2.14.ebuild,v 1.5 2004/09/20 21:17:36 pebenito Exp $
 
 inherit python
 python_version
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gentoo.org/proj/en/hardened/selinux/"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="x86 ppc sparc amd64"
 IUSE=""
 
 DEPEND="dev-lang/python
