@@ -1,6 +1,10 @@
 # ChangeLog for media-tv/mythfrontend
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/ChangeLog,v 1.31 2005/02/12 17:06:03 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/ChangeLog,v 1.32 2005/03/26 08:20:51 cardoe Exp $
+
+  26 Mar 2005; Doug Goldstein <cardoe@gentoo.org> mythfrontend-0.17.ebuild:
+  fixed a DEPEND. remove install of depreciated mysql.txt. added msgs for
+  ieee1394 and nvidia USE flags (bug #81767)
 
   12 Feb 2005; Doug Goldstein <cardoe@gentoo.org> mythfrontend-0.17.ebuild:
   filter problematic CFLAGS

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/mythfrontend-0.17.ebuild,v 1.3 2005/02/12 17:06:03 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/mythfrontend-0.17.ebuild,v 1.4 2005/03/26 08:20:51 cardoe Exp $
 
 inherit myth flag-o-matic eutils
 
@@ -23,7 +23,8 @@ DEPEND=">=media-libs/freetype-2.0
 	dvb? ( media-libs/libdvb )
 	lcd? ( app-misc/lcdproc )
 	lirc? ( app-misc/lirc )
-	nvidia? ( media-video/nvidia-glx )"
+	nvidia? ( media-video/nvidia-glx )
+	ieee1394? ( sys-libs/libraw1394 )"
 
 RDEPEND="${DEPEND}
 	!media-tv/mythtv"
@@ -38,7 +39,20 @@ pkg_setup() {
 		die "Qt needs MySQL support"
 	fi
 
-	return 0
+	if use ieee1394; then
+		echo
+		ewarn "If you want to USE 'ieee1394', you need to install libiec61883"
+		ewarn "which is not available in Portage at this time. Do this at your"
+		ewarn "own risk. No Support provided."
+		echo
+	fi
+
+	if use nvidia; then
+		echo
+		ewarn "You enabled the 'nvidia' USE flag, you must have a GeForce 4 or"
+		ewarn "greater to use this. Otherwise, you'll have crashes with MythTV"
+		echo
+	fi
 }
 
 setup_pro() {
@@ -169,10 +183,6 @@ src_compile() {
 
 src_install() {
 	myth_src_install || die "install failed"
-
-	dodir /etc/mythtv
-	mv "${D}/usr/share/mythtv/mysql.txt" "${D}/etc/mythtv"
-	dosym /etc/mythtv/mysql.txt /usr/share/mythtv/mysql.txt
 
 	dodoc keys.txt docs/*.{txt,pdf}
 	dohtml docs/*.html
