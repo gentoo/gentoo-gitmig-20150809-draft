@@ -1,0 +1,8 @@
+# ChangeLog for media-libs/libvideogfx
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvideogfx/ChangeLog,v 1.1 2003/06/27 12:37:03 pylon Exp $
+
+  27 Jun 2003; Lars Weiler <pylon@gentoo.org> :
+  Initial import.
+  Thanks to Oriol Rius <oriol@joor.net> for this ebuild.
+
