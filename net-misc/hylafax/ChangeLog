@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/hylafax
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.37 2004/08/30 00:03:32 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.38 2004/10/13 14:27:42 gmsoft Exp $
+
+  13 Oct 2004; Guy Martin <gmsoft@gentoo.org> hylafax-4.1.8-r4.ebuild:
+  Forced -fPIC patch on every arches (#55238).
 
 *hylafax-4.2.0 (29 Aug 2004)
 

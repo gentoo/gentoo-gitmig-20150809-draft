@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.1.8-r4.ebuild,v 1.3 2004/08/23 00:00:55 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.1.8-r4.ebuild,v 1.4 2004/10/13 14:27:42 gmsoft Exp $
 
 # This was originally contributed by Stephane Loeuillet, via
 # Gentoo bug: http://bugs.gentoo.org/show_bug.cgi?id=28574
@@ -33,11 +33,7 @@ export CONFIG_PROTECT="${CONFIG_PROTECT} /var/spool/fax/etc"
 
 src_compile() {
 	epatch ${FILESDIR}/${P}-gcc-version.patch
-	case ${ARCH} in
-		"alpha"|"amd64")
-		epatch ${FILESDIR}/${P}-fPIC.patch
-		;;
-	esac
+	epatch ${FILESDIR}/${P}-fPIC.patch
 	# no 'econf' here because does not support standard --prefix option (prehistoric autoconf v1.92 used !!!)
 	autoreconf -f
 	./configure \
