@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/camstream-0.26.3.ebuild,v 1.6 2004/06/25 00:37:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/camstream-0.26.3.ebuild,v 1.7 2004/07/14 21:31:49 agriffis Exp $
 
 inherit eutils gnuconfig
 
@@ -17,7 +17,7 @@ DEPEND=">=x11-libs/qt-3"
 src_unpack () {
 	unpack ${A}
 	cd ${S}
-	use amd64 && gnuconfig_update
+	gnuconfig_update
 	# Camstream has 32 bit asssembler normally.
 	use amd64 && epatch ${FILESDIR}/x86_64-asm.patch
 }
