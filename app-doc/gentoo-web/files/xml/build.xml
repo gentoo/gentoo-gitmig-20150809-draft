@@ -12,8 +12,8 @@ sources that are automatically downloaded from the Internet.  This build CD inst
 will work with any x86-compatible system.
 </abstract>
 
-<version>1.1</version>
-<date>31 August 2001</date>
+<version>1.2</version>
+<date>02 Sep 2001</date>
 
 <chapter>
 <title>About the Install</title>
@@ -25,11 +25,12 @@ boot process.  This new boot CD will boot from nearly any modern IDE CD-ROM driv
 as well as almost any modern SCSI CD-ROM.  Included on the CD-ROM is Linux support for
 IDE (built-in to the kernel) as well as support for all SCSI devices (available as 
 modules).  In addition, we provide modules for literally every kind of network card
-that Linux supports.</p>
+that Linux supports.  The installation works by using a small included build image as
+a base to download and install packages whose sources are downloaded from the Internet.</p>
 
 <p>To install from the build CD, you will need to have a 486+ processor, and ideally at
-least 64 Megabytes of RAM.  To begin the install process, first grab the 15Mb
-build CD ISO image (<path>build-ix86-1.0_rc6-r8.iso</path> is the latest at the time this
+least 64 Megabytes of RAM.  To begin the install process, first grab the 16Mb
+build CD ISO image (<path>build-ix86-1.0_rc6-r9.iso</path> is the latest at the time this
 article was written) from
 <uri>http://www.ibiblio.org/gentoo/snapshots/build/ix86-linux-gnu/</uri>.  Then, create
 your own CD-ROM using this image and your preferred CD burning software.
@@ -301,12 +302,25 @@ If you have a static ppp link, you can !!! do this...!!!
 </body>
 </section>
 </chapter>
-
+<chapter>
+<title>Rsync</title>
+<section>
+<body>
+<p>Now that you have networking properly configured, we need to complete the all-important <c>emerge rsync</c> step,
+which will download an up-to-the-minute copy of the Gentoo Linux Portage tree from gentoo.org.  Simply type:
+</p>
+<pre>
+# <i>emerge rsync</i>
+</pre>
+<p>The Portage tree will begin to be transferred; it's about 20Mb in size.</p>
+</body>
+</section>
+</chapter>
 <chapter>
 <title>Bootstrap</title>
 <section>
 <body>
-<p>Now, it's time to bootstrap the system build tools.
+<p>Now that you have a working copy of the Portage tree, it's time to bootstrap the system build tools.
 First, you need to edit the file <path>/etc/make.conf</path>.  In this file, you
 should set your <c>USE</c> flags, which specify optional functionality that you
 would like built into packages; the commented-out defaults are recommended.  You also should set appropriate <c>CHOST</c>, <c>

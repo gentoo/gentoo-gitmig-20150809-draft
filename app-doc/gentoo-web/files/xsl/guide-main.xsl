@@ -321,7 +321,7 @@ User Docs:<br/>
 						<a class="altlink" href="/doc/desktop.html">Desktop Guide</a><br/>
 						<a class="altlink" href="/doc/portage-user.html">Portage User Guide</a><br/>
 						<font color="#ff0000">New!</font> <a class="altlink" href="/doc/openafs.html">OpenAFS Installation Guide</a><br/>
-						<a class="altlink" href="/doc/build.html">"From Source" CD Install Guide</a><br/>
+						<font color="#ff0000">New for 1.0_rc6!</font><a class="altlink" href="/doc/build.html">"From Source" CD Install Guide</a><br/>
 						<a class="altlink" href="/index-download.html">Binary CD Install Guide</a><br/>
 						<a class="altlink" href="/doc/nvidia_tsg.html">nvidia Troubleshooting Guide</a><br/>
 						<br/>
