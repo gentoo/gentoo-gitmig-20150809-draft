@@ -1,6 +1,16 @@
 # ChangeLog for games-emulation/xmess
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/ChangeLog,v 1.26 2005/04/01 16:35:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmess/ChangeLog,v 1.27 2005/04/01 16:38:20 mr_bones_ Exp $
+
+  01 Apr 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  -files/0.77.1-icc.patch, -files/0.80.1-glx-fix.patch,
+  -files/0.78.1-glx-fix.patch, -files/0.80.1-icc.patch,
+  -files/0.77.1-alsa-1.0.0.patch, -files/0.77.1-glx-fix.patch,
+  -files/0.78.1-icc.patch, -files/0.78.1-osd_die.patch,
+  -files/0.80.1-make.patch, -files/0.81.1-glx-fix.patch,
+  -files/0.82.1-glx-fix.patch, -files/0.88-glx-fix.patch,
+  -xmess-0.90.ebuild, -xmess-0.92.ebuild:
+  clean old files
 
   01 Apr 2005; Michael Sterrett <mr_bones_@gentoo.org> xmess-0.95.ebuild:
   sync with xmame ebuild
