@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-9.12-r4.ebuild,v 1.5 2003/02/14 17:14:39 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-9.12-r4.ebuild,v 1.6 2003/04/17 16:42:53 lostlogic Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A set of utilities for converting to/from the netpbm (and related) formats"
@@ -18,17 +18,16 @@ KEYWORDS="x86 ppc sparc "
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	sed <${FILESDIR}/${PV}/Makefile.config >Makefile.config \
-		-e "s|-O3|${CFLAGS}|"
+	sed -e "s:-O3:${CFLAGS}" ${FILESDIR}/${PV}/Makefile.config >Makefile.config
 }
 
 src_compile() {
 	MAKEOPTS="${MAKEOPTS} -j1"
-	emake CC="${CC}" CXX="${CXX}"|| die
+	emake CC="${CC}" CXX="${CXX}"|| die "Make failed"
 }
 
 src_install () {
-	make INSTALL_PREFIX="${D}/usr/" install || die
+	make INSTALL_PREFIX="${D}/usr/" install || die "Install failed"
 	
 	# fix broken symlinks
 	dosym /usr/bin/gemtopnm /usr/bin/gemtopbm
