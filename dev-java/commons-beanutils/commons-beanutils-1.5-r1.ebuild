@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/commons-beanutils-1.5-r1.ebuild,v 1.2 2002/12/08 04:29:52 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/commons-beanutils-1.5-r1.ebuild,v 1.3 2002/12/15 16:19:49 strider Exp $
 
 S=${WORKDIR}/${PN}-${PV}-src
 DESCRIPTION="The Jakarta BeanUtils component provides easy-to-use wrappers around Reflection and Introspection APIs"
@@ -10,8 +10,8 @@ DEPEND=">=virtual/jdk-1.3
 	>=dev-java/ant-1.4
 	>=dev-java/commons-collections-2.1
 	>=dev-java/commons-logging-1.0.2
-	junit? ( >=junit-3.7 )"
-RDEPEND=">=virtual/jre-1.4
+	junit? ( >=dev-java/junit-3.7 )"
+RDEPEND=">=virtual/jdk-1.3
 	>=dev-java/commons-collections-2.1
 	>=dev-java/commons-logging-1.0.2"
 LICENSE="Apache-1.1"
