@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.10.19.ebuild,v 1.2 2005/02/24 04:34:09 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-8.10.19.ebuild,v 1.3 2005/02/24 17:42:30 mr_bones_ Exp $
 
 IUSE=""
 
@@ -132,7 +132,7 @@ src_install() {
 
 	#ati custom stuff
 	insinto /usr
-	doins -r ${WORKDIR}/usr/include 
+	doins -r ${WORKDIR}/usr/include
 }
 
 src_install-libs() {
@@ -161,7 +161,7 @@ src_install-libs() {
 
 	# same as the xorg implementation
 	dosym ../${X11_IMPLEM}/extensions ${ATI_ROOT}/extensions
-	#Workaround 
+	#Workaround
 	sed -e "s:libdir=.*:libdir=${ATI_ROOT}/lib:" \
 		/usr/${inslibdir}/opengl/${X11_IMPLEM}/lib/libGL.la \
 		> $D/${ATI_ROOT}/lib/libGL.la
