@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7.ebuild,v 1.12 2003/07/31 15:23:09 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7.ebuild,v 1.13 2003/07/31 15:41:01 taviso Exp $
 
 inherit gnuconfig
 
-IUSE="readline ncurses gtk stroke gnome rplay xinerama cjk perl nls png bidi"
+IUSE="readline ncurses gtk stroke gnome rplay xinerama cjk perl nls png bidi doc"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="an extremely powerful ICCCM-compliant multiple virtual desktop window manager"
@@ -25,6 +25,7 @@ RDEPEND="readline? ( >=sys-libs/readline-4.1
 		bidi? ( >=dev-libs/fribidi-0.10.4 )
 		png? ( >=media-libs/libpng-1.0.12-r2 )
 		stroke? ( >=dev-libs/libstroke-0.4 )
+		doc? ( >=media-libs/netpbm-9.12-r4 )
 		>=media-libs/fontconfig-2.1-r1
 		>=dev-libs/expat-1.95.6-r1
 		virtual/x11
@@ -159,6 +160,10 @@ src_install() {
 	docs/COMMANDS docs/DEVELOPERS docs/FAQ docs/error_codes docs/TODO \
 	docs/fvwm.lsm
 
+	# optional example scripts (generate dynamic menus - really awesome, try
+	# this out) :)
+	use doc && dodoc utils/fvwm_make_directory_menu.sh \
+	utils/fvwm_make_browse_menu.sh utils/quantize_pixmaps 
 }
 
 pkg_postinst() {
