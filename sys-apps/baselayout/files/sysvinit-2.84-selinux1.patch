@@ -20,18 +20,18 @@
 +  extern char *selinux_mnt;
 +
 +  log(L_VB, "Loading security policy\n");
-+  if (mount("none", SELINUXMNT, "selinuxfs", 0, 0) < 0) {
++  if (mount("none", "/selinux/", "selinuxfs", 0, 0) < 0) {
 +    if (errno == ENODEV) {
-+      log(L_VB, "SELinux not supported by kernel: %s\n",SELINUXMNT,strerror(errno));
++      log(L_VB, "SELinux not supported by kernel: %s\n","/selinux/",strerror(errno));
 +    } 
 +    else {
-+      log(L_VB, "Failed to mount %s: %s\n",SELINUXMNT,strerror(errno));
++      log(L_VB, "Failed to mount %s: %s\n","/selinux/",strerror(errno));
 +      return ret;
 +    }
 +    return ret; /* Never gets here */
 +  }
 +
-+  selinux_mnt = SELINUXMNT; /* set manually since we mounted it */
++  selinux_mnt = "/selinux/"; /* set manually since we mounted it */
 +
 +  policy_version=security_policyvers();
 +  if (policy_version < 0) {
@@ -46,16 +46,16 @@
 +  } 
 +  *enforce=rc;
 +
-+  snprintf(policy_file,sizeof(policy_file),"%s.%d",SELINUXPOLICY,policy_version);
++  snprintf(policy_file,sizeof(policy_file),"%s.%d","/etc/security/selinux/policy",policy_version);
 +  fd = open(policy_file, O_RDONLY);
 +  if (fd < 0) {
 +    /* Check previous version to see if old policy is available
 +     */
-+    snprintf(policy_file,sizeof(policy_file),"%s.%d",SELINUXPOLICY,policy_version-1);
++    snprintf(policy_file,sizeof(policy_file),"%s.%d","/etc/security/selinux/policy",policy_version-1);
 +    fd = open(policy_file, O_RDONLY);
 +    if (fd < 0) {
 +      log(L_VB,  "Can't open '%s.%d':  %s\n",
-+	  SELINUXPOLICY,policy_version,strerror(errno));
++	  "/etc/security/selinux/policy",policy_version,strerror(errno));
 +      goto UMOUNT;
 +    }
 +  }
@@ -78,7 +78,7 @@
 +  }
 +
 + UMOUNT:
-+  /*umount(SELINUXMNT); */
++  /*umount("/selinux/"); */
 +  if ( fd >= 0) {
 +    close(fd);
 +  }

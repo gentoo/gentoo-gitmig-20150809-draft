@@ -1,9 +1,14 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.209 2005/02/24 13:56:52 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.210 2005/02/24 23:20:34 pebenito Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+  24 Feb 2005; Chris PeBenito <pebenito@gentoo.org>
+  files/sysvinit-2.84-selinux1.patch:
+  Fix paths in selinux patch to permanently fix #77101, since libselinux no
+  longer statically #define's them
 
   24 Feb 2005; Chris Gianelloni <wolf31o2@gentoo.org>
   files/rc-scripts-1.4.16-livecd.patch:
