@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/gst-plugins-mad
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mad/ChangeLog,v 1.33 2004/11/12 04:22:27 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-mad/ChangeLog,v 1.34 2004/11/14 23:50:51 kloeri Exp $
+
+  15 Nov 2004; Bryan Østergaard <kloeri@gentoo.org>
+  gst-plugins-mad-0.8.5.ebuild:
+  Stable on alpha.
 
   12 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   gst-plugins-mad-0.8.5.ebuild:
