@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/iptraf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.17 2003/11/02 19:12:02 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.18 2003/12/29 03:25:26 kumba Exp $
+
+  28 Dec 2003; Joshua Kinard <kumba@gentoo.org> iptraf-2.7.0-r1.ebuild:
+  Move to mips stable (~mips -> mips)
 
   02 Nov 2003; Christian Birchinger <joker@gentoo.org> iptraf-2.7.0-r1.ebuild:
   Added sparc stable keyword
