@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/WindowMaker
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/ChangeLog,v 1.3 2002/04/12 18:35:36 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/ChangeLog,v 1.4 2002/04/18 00:39:48 spider Exp $
+
+*WindowMaker-0.80.0-r3 (18 Apr 2002)
+  18 Apr 2002; Spider <spider@gentoo.org> WindowMaker-0.80.0-r3.ebuild:
+  removed an extra ) in the  gif? part
 
 *WindowMaker-0.80.0-r3 (12 Apr 2002)
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/WindowMaker-0.80.0-r3.ebuild,v 1.1 2002/04/12 18:35:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/WindowMaker-0.80.0-r3.ebuild,v 1.2 2002/04/18 00:39:48 spider Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Window Maker"
@@ -15,7 +15,7 @@ DEPEND="virtual/x11
 	x11-wm/gnustep-env
 	png? ( >=media-libs/libpng-1.2.1 )
 	jpeg? ( >=media-libs/jpeg-6b-r2 )
-	gif? ( >=media-libs/giflib-4.1.0-r3 )
+	gif? ( >=media-libs/giflib-4.1.0-r3 
 		>=media-libs/libungif-4.1.0 )"
 
 RDEPEND="nls? ( >=sys-devel/gettext-0.10.39 )"
