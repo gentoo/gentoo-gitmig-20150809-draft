@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-theme-switch/gtk-theme-switch-1.0.1-r1.ebuild,v 1.4 2004/04/27 21:17:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-theme-switch/gtk-theme-switch-1.0.1-r1.ebuild,v 1.5 2004/06/04 18:08:26 mr_bones_ Exp $
 
 inherit eutils
 
@@ -34,7 +34,4 @@ src_install () {
 	mv ${D}usr/man/* ${D}usr/share/man/man1 || die
 	rm -rf ${D}usr/man
 	dodoc ChangeLog readme*
-}
-pkg_postinstall () {
-	echo "If don't works try with -02 flag in make.conf"
 }
