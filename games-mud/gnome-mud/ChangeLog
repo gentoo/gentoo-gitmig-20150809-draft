@@ -1,6 +1,10 @@
 # ChangeLog for games-mud/gnome-mud
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/ChangeLog,v 1.14 2004/12/28 23:08:16 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/ChangeLog,v 1.15 2005/01/23 07:16:47 mr_bones_ Exp $
+
+  23 Jan 2005; Michael Sterrett <mr_bones_@gentoo.org>
+  gnome-mud-0.10.5.ebuild:
+  HOMEPAGE fix (bug #75571)
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

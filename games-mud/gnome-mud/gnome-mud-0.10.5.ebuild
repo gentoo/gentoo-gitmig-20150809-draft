@@ -1,11 +1,11 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/gnome-mud-0.10.5.ebuild,v 1.3 2004/11/05 05:21:43 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/gnome-mud-0.10.5.ebuild,v 1.4 2005/01/23 07:16:47 mr_bones_ Exp $
 
 inherit games gnome2
 
 DESCRIPTION="GNOME MUD client"
-HOMEPAGE="http://www.gnome.org/softwaremap/projects/gnome-mud/"
+HOMEPAGE="http://amcl.sourceforge.net/"
 SRC_URI="mirror://gnome/sources/${PN}/0.10/${P}.tar.bz2"
 
 LICENSE="GPL-2"
