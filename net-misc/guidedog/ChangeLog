@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/guidedog
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/guidedog/ChangeLog,v 1.8 2004/06/28 20:16:05 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/guidedog/ChangeLog,v 1.9 2004/08/12 11:33:09 dragonheart Exp $
+
+  12 Aug 2004; Daniel Black <dragonheart@gentoo.org> guidedog-1.0.0.ebuild:
+  x86 stable
 
   28 Jun 2004; Carsten Lohrke <carlo@gentoo.org> guidedog-0.9.0.ebuild,
   guidedog-1.0.0.ebuild:
