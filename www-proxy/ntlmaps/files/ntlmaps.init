@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/ntlmaps/files/ntlmaps.init,v 1.1 2004/08/15 18:55:44 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/ntlmaps/files/ntlmaps.init,v 1.2 2004/08/30 18:47:26 mholzer Exp $
 
 MY_CMD="/usr/bin/python /usr/ntlmaps/main.py"
 MY_PID_FILE="/var/run/ntlmaps.pid"
@@ -13,7 +13,7 @@ depend() {
 start() {
     ebegin "Starting ntlmaps"
 	touch ${MY_PID_FILE}
-	chown nobody.nogroup ${MY_PID_FILE}
+	chown nobody:nogroup ${MY_PID_FILE}
     start-stop-daemon --quiet --start --background --exec ${MY_CMD} \
         --make-pidfile --pidfile ${MY_PID_FILE} --chuid nobody -- \
         -c /etc/conf.d/ntlmaps.cfg < /dev/null
