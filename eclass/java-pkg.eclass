@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.1 2003/04/26 11:29:16 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.2 2003/05/14 04:35:54 absinthe Exp $
 
 inherit base
 ECLASS=java-pkg
@@ -75,7 +75,7 @@ java-pkg_dojar()
 		exit 1
 	fi
 
-	# Make sure direcotry is created
+	# Make sure directory is created
 	if [ ! -d "${D}${jardest}" ] ; then
 		install -d "${D}${jardest}"
 	fi
@@ -94,7 +94,7 @@ java-pkg_dojar()
 			mysrc="${i}"
 		fi
 
-		# Iinstall files
+		# Install files
 		install -m 0644 "${mysrc}" "${D}${jardest}"
 
 		# Build CLASSPATH
@@ -109,3 +109,47 @@ java-pkg_dojar()
 	echo "DESCRIPTION=${DESCRIPTION}" > "${package_env}"
 	echo "CLASSPATH=${cp_prepend}:${cp_pkg}:${cp_append}" >> "${package_env}"
 }
+
+java-pkg_dowar()
+{
+	debug-print-function ${FUNCNAME} $*
+	[ -z "$1" ]
+	
+	# Check for arguments
+	if [ -z "$*" ] ; then
+		echo "${0}: at least one argument needed"
+		exit 1
+	fi
+	
+	if [ -z "${WARDESTTREE}" ] ; then
+		WARDESTTREE="webapps"
+	fi
+	
+	sharepath="${DESTTREE}/share"
+	shareroot="${sharepath}/${PN}"
+	wardest="${shareroot}/${WARDESTTREE}"
+
+	debug-print "WARDESTTREE=${WARDESTTREE}"
+	debug-print "sharepath=${sharepath}"
+	debug-print "shareroot=${shareroot}"
+	debug-print "wardest=${wardest}"
+	
+	for i in $* ; do
+		# Check for symlink
+		if [ -L "${i}" ] ; then
+			cp "${i}" "${T}"
+			mysrc="${T}"/`/usr/bin/basename "${i}"`
+
+		# Check for directory
+		elif [ -d "${i}" ] ; then
+			echo "dowar: warning, skipping directory ${i}"
+			continue
+		else
+			mysrc="${i}"
+		fi
+
+		# Install files
+		install -m 0644 "${mysrc}" "${D}${wardest}"
+	done
+}
+
