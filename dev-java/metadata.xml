@@ -9,5 +9,9 @@
 		Die Kategorie dev-java enthält Bibliotheken und Werkzeuge für die 
 		Programmiersprache Java.
 	</longdescription>
+	<longdescription lang="fi">
+		Kategoria dev-java sisältää kirjastoja ja työkaluja 
+		Java-ohjelmointikielen hyödyntämiseen.
+	</longdescription>
 </catmetadata>
 
