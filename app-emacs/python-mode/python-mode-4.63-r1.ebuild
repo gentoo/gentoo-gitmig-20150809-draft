@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/python-mode-4.63-r1.ebuild,v 1.3 2005/01/01 13:57:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/python-mode-4.63-r1.ebuild,v 1.4 2005/02/10 08:34:04 usata Exp $
 
 inherit distutils elisp
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/python-mode/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc-macos ~amd64"
+KEYWORDS="x86 ~ppc-macos ~amd64"
 
 DEPEND="app-emacs/pymacs"
 
