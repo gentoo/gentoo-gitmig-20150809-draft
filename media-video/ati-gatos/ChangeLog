@@ -1,6 +1,12 @@
 # ChangeLog for media-video/ati-gatos
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ChangeLog,v 1.16 2004/06/25 00:36:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-gatos/ChangeLog,v 1.17 2004/09/30 22:17:01 battousai Exp $
+
+*ati-gatos-4.4.0 (30 Sep 2004)
+
+  30 Sep 2004; Bryan Stine <battousai@gentoo.org>; +ati-gatos-4.4.0.ebuild:
+  Version bump to xorg-ready ati.4.4.0. This ebuild also includes a patch to
+  apply when using xorg-x11 6.8.0.
 
   11 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>; ati-gatos-4.3.0.ebuild:
   xfree -r6 became -r7.
