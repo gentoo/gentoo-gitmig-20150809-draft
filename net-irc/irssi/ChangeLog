@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/irssi
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.28 2003/08/22 01:56:51 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.29 2003/09/18 17:30:49 avenj Exp $
+
+  18 Sep 2003; Jon Portnoy <avenj@gentoo.org> :
+  ia64 keywords.
 
   21 Aug 2003; <chuck@gentoo.org> :
   Added SSL suport, closes bug #26343.
