@@ -1,0 +1,10 @@
+# ChangeLog for kde-misc/kmobiletools
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/kmobiletools/ChangeLog,v 1.1 2004/11/12 11:08:19 motaboy Exp $
+
+*kmobiletools-0.4.0 (12 Nov 2004)
+
+  12 Nov 2004; Simone Gotti <motaboy@gentoo.org> +metadata.xml,
+  +kmobiletools-0.4.0.ebuild:
+  New ebuild, thanks to Christian Hartmann and Timo Maier. Closes bug #62084.
+
