@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/help2man
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.5 2003/02/24 22:34:59 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.6 2003/02/25 19:07:31 dragon Exp $
 
   23 Feb 2003; Guy Martin <gmsoft@gentoo.org> help2man-1.29.ebuild :
   Added ~hppa to keywords.
@@ -9,6 +9,9 @@
   Add ~alpha to KEYWORDS
 
 *help2man-1.29 (03 Feb 2003)
+
+  25 Feb 2003; Nicholas Wourms <dragon@gentoo.org> help2man-1.29.ebuild :
+  Marked as stable on mips.
 
   24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> help2man-1.29.ebuild :
   Marked as testing for mips.
