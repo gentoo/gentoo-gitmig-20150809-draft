@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 68a9f4555ebd59cd39203778ba3c55d3 puretls-0.94_beta4.ebuild 1229
-MD5 6652d97977498f08ee2f3dab1d6c46a4 ChangeLog 609
+MD5 3fdf05b53a119ce1409d4dddb6d463c5 ChangeLog 713
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 c1c5c272601e3aa90991e9650b5c5092 puretls-0.94_beta4.ebuild 1240
 MD5 72e5e38066c9bd32bb64a5fbb7487db9 files/digest-puretls-0.94_beta4 213
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBcVs3/rLF9B432nYRAjspAKCF6CirJy4kO9t9PFO1YYQ/sePSzQCeO/Fn
-2fxxyqO0rafmDIP3qDqONzM=
-=aGHw
------END PGP SIGNATURE-----
