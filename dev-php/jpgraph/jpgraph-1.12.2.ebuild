@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Released under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-php/jpgraph/jpgraph-1.12.2.ebuild,v 1.2 2003/08/04 01:21:56 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/jpgraph/jpgraph-1.12.2.ebuild,v 1.3 2003/08/04 23:43:56 stuart Exp $
 #
 # Based on the ebuild submitted by ??
 
@@ -44,12 +44,31 @@ pkg_setup ()
 
 src_install ()
 {
-	sed -i 's|DEFINE("CACHE_FILE_GROUP", "wwwadmin");|DEFINE("CACHE_FILE_GROUP", "${HTTPD_GROUP}";|' src/jpgraph.php
-	sed -i 's|/tmp/jpgraph_cache/|${JPGRAPH_CACHE_DIR}/|g' src/jpgraph.php
+	einfo "Patching jpgraph.php"
+	
+	# patch 1:
+	# make jpgraph use the correct group for file permissions
 
-	sed -i 's|DEFINE("USE_CACHE",false);|if (!defined("USE_CACHE")) DEFINE("USE_CACHE", false);|' src/jpgraph.php
+	sed -i "s|^DEFINE(\"CACHE_FILE_GROUP\",\"wwwadmin\");|DEFINE(\"CACHE_FILE_GROUP\", \"${HTTPD_GROUP}\";|" src/jpgraph.php
+
+	# patch 2:
+	# make jpgraph use the correct directory for caching
+
+	sed -i "s|/tmp/jpgraph_cache/|${JPGRAPH_CACHE_DIR}/|g;" src/jpgraph.php
+
+	# patch 3:
+	# switch off the directory cache
+
+	sed -i 's|^DEFINE("USE_CACHE",false);|if (!defined("USE_CACHE")) DEFINE("USE_CACHE", false);|' src/jpgraph.php
+
+	# patch 4:
+	# don't read the READ_CACHE if we're not creating any images in the
+	# cache in the first place (doh)
+
+	sed -i 's|DEFINE("READ_CACHE",true);|DEFINE("READ_CACHE", $USE_CACHE);|' src/jpgraph.php
 
 	# install php files
+	einfo "Building list of files to install"
 	php-lib_src_install src `cd src ; find . -type f -print`
 
 	# install documentation
@@ -62,5 +81,5 @@ src_install ()
 
 	keepdir "${JPGRAPH_CACHE_DIR}"
 	fowners ${HTTPD_USER}.${HTTPD_GROUP} "${JPGRAPH_CACHE_DIR}"
-	fperms 777 "${JPGRAPH_CACHE_DIR}"
+	fperms 700 "${JPGRAPH_CACHE_DIR}"
 }
