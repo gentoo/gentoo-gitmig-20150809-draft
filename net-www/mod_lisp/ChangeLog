@@ -1,0 +1,9 @@
+# ChangeLog for net-www/mod_lisp
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_lisp/ChangeLog,v 1.1 2003/06/19 07:04:21 mkennedy Exp $
+
+*mod_lisp-2.31 (18 Jun 2003)
+
+  18 Jun 2003; Matthew Kennedy <mkennedy@gentoo.org> :
+  Initial import.
+
