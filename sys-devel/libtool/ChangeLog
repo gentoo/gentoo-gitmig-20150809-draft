@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.51 2004/07/16 04:03:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.52 2004/09/02 02:44:48 vapier Exp $
+
+  01 Sep 2004; Mike Frysinger <vapier@gentoo.org>
+  files/1.5.2/libtool-1.5.2-libtool_m4-shared_ext.patch:
+  Make sure we quote the grep #47771 by csm@gnu.org.
 
   15 Jul 2004; Aron Griffis <agriffis@gentoo.org> libtool-1.4.3-r3.ebuild,
   libtool-1.4.3-r4.ebuild, libtool-1.5.2-r3.ebuild, libtool-1.5.2-r4.ebuild,
