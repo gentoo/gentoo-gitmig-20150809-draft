@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/grass
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/grass/ChangeLog,v 1.1 2003/04/12 00:52:08 vladimir Exp $
+
+*grass-5.0.1 (11 Apr 2003)
+
+  11 Apr 2003; Graham Forest <vladimir@gentoo.org> grass-5.0.1.ebuild:
+  Initial import, ebuild submitted by both Andy Romeril <aromeril@attbi.com>,
+  and Doug Gorley <douggorley@shaw.ca>
+
