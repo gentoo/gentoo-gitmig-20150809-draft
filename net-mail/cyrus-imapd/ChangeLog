@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.26 2003/06/10 07:54:29 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.27 2003/07/09 09:39:35 raker Exp $
+
+*cyrus-imapd-2.1.14 (09 Jul 2003)
+
+  09 Jul 2003; Nick Hadaway <raker@gentoo.org> cyrus-imapd-2.1.14.ebuild,
+  files/2.1.14-db4.patch:
+  Version bump.  patch for versioned symbols in db4.  Added ipv6 support
+  thanks to the heads up from Bernhard Schmidt on bug #23690.
 
 *cyrus-imapd-2.1.13 (09 Jun 2003)
 
