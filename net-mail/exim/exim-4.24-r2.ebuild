@@ -13,7 +13,7 @@ HOMEPAGE="http://www.exim.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~hppa ppc ~amd64 ppc64 ~alpha"
+KEYWORDS="~x86 ~sparc ~hppa ppc ~amd64 ~alpha"
 
 PROVIDE="virtual/mta"
 DEPEND=">=sys-apps/sed-4.0.5

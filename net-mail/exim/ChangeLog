@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/exim
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.46 2004/03/07 01:52:17 klieber Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.47 2004/03/14 21:00:20 tgall Exp $
+
+  14 Mar 2004; Tom Gall <tgall@gentoo.org> exim-4.24-r1.ebuild,
+  exim-4.24-r2.ebuild:
+  remove ppc64 for now
 
 *exim-4.24-r2 (06 Mar 2004)
 
