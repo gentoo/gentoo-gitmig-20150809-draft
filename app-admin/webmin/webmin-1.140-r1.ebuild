@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.140-r1.ebuild,v 1.2 2004/04/23 01:26:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.140-r1.ebuild,v 1.3 2004/04/24 05:03:55 mr_bones_ Exp $
 
 inherit eutils
 
@@ -80,8 +80,8 @@ pkg_postinst() {
 		/etc/init.d/webmin start
 	fi
 
-        einfo "Add webmin to your boot-time services with 'rc-update add webmin'."
-        einfo "Point your web browser to http://localhost:10000 to use webmin."
+	einfo "Add webmin to your boot-time services with 'rc-update add webmin'."
+	einfo "Point your web browser to http://localhost:10000 to use webmin."
 }
 
 pkg_prerm() {

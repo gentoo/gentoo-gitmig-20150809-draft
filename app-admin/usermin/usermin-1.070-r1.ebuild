@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.070-r1.ebuild,v 1.1 2004/04/23 01:29:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.070-r1.ebuild,v 1.2 2004/04/24 05:02:12 mr_bones_ Exp $
 
 inherit eutils
 
@@ -46,33 +46,33 @@ src_install() {
 }
 
 pkg_postinst() {
-        /etc/init.d/usermin stop >& /dev/null
-        stopstatus=$?
+	/etc/init.d/usermin stop >& /dev/null
+	stopstatus=$?
 
-        cd /usr/libexec/usermin
-        config_dir=/etc/usermin
-        var_dir=/var/log/usermin
-        perl=/usr/bin/perl
-        autoos=1
-        port=10000
-        login=root
-        crypt=`grep "^root:" /etc/shadow | cut -f 2 -d :`
-        host=`hostname`
-        use ssl && ssl=1 || ssl=0
-        atboot=0
-        nostart=1
-        nochown=1
-        autothird=1
-        nouninstall=1
-        noperlpath=1
-        export config_dir var_dir perl autoos port login crypt host ssl nochown autothird nouninstall nostart noperlpath
-        perl /usr/libexec/usermin/maketemp.pl
-        ./setup.sh > /tmp/.webmin/usermin-setup.out 2>&1
+	cd /usr/libexec/usermin
+	config_dir=/etc/usermin
+	var_dir=/var/log/usermin
+	perl=/usr/bin/perl
+	autoos=1
+	port=10000
+	login=root
+	crypt=`grep "^root:" /etc/shadow | cut -f 2 -d :`
+	host=`hostname`
+	use ssl && ssl=1 || ssl=0
+	atboot=0
+	nostart=1
+	nochown=1
+	autothird=1
+	nouninstall=1
+	noperlpath=1
+	export config_dir var_dir perl autoos port login crypt host ssl nochown autothird nouninstall nostart noperlpath
+	perl /usr/libexec/usermin/maketemp.pl
+	./setup.sh > /tmp/.webmin/usermin-setup.out 2>&1
 
-        if [ "$stopstatus" = "0" ]; then
-                # Start if it was running before
-                /etc/init.d/usermin start
-        fi
+	if [ "$stopstatus" = "0" ]; then
+		# Start if it was running before
+		/etc/init.d/usermin start
+	fi
 
 	einfo "Add usermin to your boot-time services with 'rc-update add usermin'."
 	einfo "Point your web browser to http://localhost:20000 to use usermin."
