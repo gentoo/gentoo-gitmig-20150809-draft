@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/mailx-8.1.2.20021129-r4.ebuild,v 1.2 2004/09/13 17:16:17 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/mailx-8.1.2.20021129-r4.ebuild,v 1.3 2004/09/13 17:40:23 ticho Exp $
 
 inherit ccc eutils
 IUSE=""
@@ -22,7 +22,7 @@ PROVIDE="virtual/mailx"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~ia64 ~amd64 ~ppc64"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa ~ia64 ~amd64 ~ppc64"
 
 src_unpack() {
 
