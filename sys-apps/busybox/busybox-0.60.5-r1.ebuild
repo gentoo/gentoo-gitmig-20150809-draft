@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-0.60.5-r1.ebuild,v 1.5 2003/06/22 23:47:19 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-0.60.5-r1.ebuild,v 1.6 2003/07/15 18:18:03 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Utilities for rescue and embedded systems"
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.busybox.net"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 amd64"
-IUSE="static"
+IUSE="static uclibc"
 
 DEPEND="virtual/glibc"
 RDEPEND="!static? ${DEPEND}"
@@ -25,7 +25,7 @@ src_unpack() {
 src_compile() {
 	local myconf
 	use static && myconf="${myconf} DOSTATIC=true"
-	if [ "$LINK_LIBC" = "uclibc" ]; then
+	if [ `use uclibc` ]; then
 		myconf="${myconf} \
 			CC=/usr/i386-linux-uclibc/bin/i386-uclibc-gcc \
 			USE_SYSTEM_PWD=false"
@@ -57,7 +57,7 @@ src_install() {
 
 pkg_postinst() {
 	einfo ""
-	einfo "Edit /usr/portage/sys-apps/busybox/files/Config.h and"
+	einfo "Edit /usr/portage/sys-apps/busybox/files/Config.h-${PV}-cd and"
 	einfo "re-emerge if you need to add/remove functionality in "
 	einfo "BusyBox."
 	einfo ""
