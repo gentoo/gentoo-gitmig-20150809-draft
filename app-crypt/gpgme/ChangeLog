@@ -1,6 +1,14 @@
 # ChangeLog for app-crypt/gpgme
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.34 2004/07/24 06:23:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/ChangeLog,v 1.35 2004/07/29 21:43:41 caleb Exp $
+
+*gpgme-0.9.0 (29 Jul 2004)
+
+  29 Jul 2004; Caleb Tennis <caleb@gentoo.org> gpgme-0.9.0.ebuild:
+  New version. Make it depend on a newer gnupg, and add a line to configure to
+  tell it the binary name is now /usr/bin/gpg2.  This still seems to have compilation
+  problems with the latest gnupg's, and the upstream site gives HTTP errors when I fill out
+  a bug report...
 
   24 Jul 2004; Mike Frysinger <vapier@gentoo.org> gpgme-0.4.7.ebuild:
   Add smime USE #50681 by Malte S. Stretz.
