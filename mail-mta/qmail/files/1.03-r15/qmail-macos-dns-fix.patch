@@ -1,0 +1,11 @@
+diff -u qmail-1.03.orig/dns.c qmail-1.03/dns.c
+--- qmail-1.03.orig/dns.c	Tue Aug 31 21:27:34 2004
++++ qmail-1.03/dns.c	Tue Aug 31 21:41:50 2004
+@@ -3,6 +3,7 @@
+ #include <sys/types.h>
+ #include <netinet/in.h>
+ #include <arpa/nameser.h>
++#include <arpa/nameser_compat.h>
+ #include <resolv.h>
+ #include <errno.h>
+ extern int res_query();

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r15.ebuild,v 1.6 2004/07/20 14:24:11 tomk Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r15.ebuild,v 1.7 2004/08/31 20:04:11 hansmi Exp $
 
 inherit gcc eutils fixheadtails
 
@@ -193,6 +193,12 @@ src_unpack() {
 
 	EPATCH_SINGLE_MSG="qmail-pop3d fix for top output so Evolution doesn't barf" \
 	epatch ${FILESDIR}/${PVR}/qmail-pop3d-top-outputfix.patch
+
+	# Fix a compilation-error on Mac OS X
+	# qmail doesn't run yet on Mac OS X, but this will help in the future
+	if useq macos; then
+		epatch ${FILESDIR}/${PVR}/qmail-macos-dns-fix.patch
+	fi
 
 	echo -n "$(gcc-getCC) ${CFLAGS}" >${S}/conf-cc
 	if use ssl; then
