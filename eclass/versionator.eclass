@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/versionator.eclass,v 1.5 2005/01/04 13:03:54 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/versionator.eclass,v 1.6 2005/03/25 00:51:48 ciaranm Exp $
 #
 # Original Author: Ciaran McCreesh <ciaranm@gentoo.org>
 #
@@ -232,12 +232,13 @@ version_is_at_least() {
 	local done_w="" done_h="" i=0
 	while [[ -z "${done_w}" ]] || [[ -z "${done_h}" ]] ; do
 		local cur_w="${want_c[$i]}" cur_h="${have_c[$i]}"
-		[[ -z "${cur_w##[^[:digit:]]*}" ]] && done_w="yes"
-		[[ -z "${cur_h##[^[:digit:]]*}" ]] && done_h="yes"
-		[[ -z "${done_w}" ]] || cur_w=0
-		[[ -z "${done_h}" ]] || cur_h=0
-		if [[ ${cur_w} -lt ${cur_h} ]] ; then return 0 ; fi
-		if [[ ${cur_w} -gt ${cur_h} ]] ; then return 1 ; fi
+		local my_cur_w="${cur_w//#0}" my_cur_h="${cur_h//#0}"
+		[[ -z "${my_cur_w##[^[:digit:]]*}" ]] && done_w="yes"
+		[[ -z "${my_cur_h##[^[:digit:]]*}" ]] && done_h="yes"
+		[[ -z "${done_w}" ]] || my_cur_w=0
+		[[ -z "${done_h}" ]] || my_cur_h=0
+		if [[ ${my_cur_w} -lt ${my_cur_h} ]] ; then return 0 ; fi
+		if [[ ${my_cur_w} -gt ${my_cur_h} ]] ; then return 1 ; fi
 		i=$(($i + 1))
 	done
 
@@ -309,6 +310,11 @@ __versionator__test_version_is_at_least() {
 
 	version_is_at_least "1.2-r1"        "1.2_beta2-r3"  && echo "test 18 failed"
 	version_is_at_least "1.2-r1"        "1.3_beta2-r3"  || echo "test 19 failed"
+
+	version_is_at_least "1.002"           "1.2"         || echo "test 20 failed"
+	version_is_at_least "1.2"             "1.002"       || echo "test 21 failed"
+	version_is_at_least "1.003"           "1.2"         && echo "test 22 failed"
+	version_is_at_least "1.3"             "1.002"       && echo "test 23 failed"
 	return 0
 }
 
