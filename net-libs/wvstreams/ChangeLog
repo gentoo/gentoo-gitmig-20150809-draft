@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/wvstreams
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.28 2004/11/30 06:27:28 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.29 2004/12/08 17:15:45 mrness Exp $
+
+*wvstreams-4.0-r1 (08 Dec 2004)
+
+  08 Dec 2004; Alin Nastac <mrness@gentoo.org> metadata.xml,
+  +wvstreams-4.0-r1.ebuild:
+  Correct flags and dependencies; add doc flag for installing doxygen generated
+  documentation. See bug #70420.
 
   30 Nov 2004; Alin Nastac <mrness@gentoo.org> wvstreams-4.0.ebuild:
   Change fam dependency to virtual/fam.
