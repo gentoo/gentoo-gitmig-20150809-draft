@@ -1,0 +1,16 @@
+Index: smbd/lanman.c
+===================================================================
+--- source/smbd/lanman.c	(revision 3681)
++++ source/smbd/lanman.c	(revision 3862)
+@@ -2267,6 +2267,12 @@
+ 		return False;
+ 	*rparam_len = 4;
+ 	*rparam = REALLOC(*rparam,*rparam_len);
++
++	if ( (snum = lp_servicenumber(sharename)) == -1 ) {
++		DEBUG(0,("api_PrintJobInfo: unable to get service number from sharename [%s]\n",
++			sharename));
++		return False;
++	}
+   
+ 	*rdata_len = 0;
