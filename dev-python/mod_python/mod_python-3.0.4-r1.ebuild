@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-3.0.4-r1.ebuild,v 1.1 2004/01/28 13:39:12 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-3.0.4-r1.ebuild,v 1.2 2004/01/28 19:30:04 mr_bones_ Exp $
 
 inherit python
 
@@ -11,7 +11,7 @@ LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
-DEPEND="dev-lang/python 
+DEPEND="dev-lang/python
 	>=net-www/apache-2.0"
 
 src_unpack() {
