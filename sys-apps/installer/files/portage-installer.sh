@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ $# != 2 ] ; then
-  echo "Usage: $0 [input file] [config file]"
+  echo "Usage: $0 [input file] [basic|fstab]"
   exit 0
 fi
 
@@ -15,14 +15,6 @@ text=""
 
 xml2config() {
   echo $xmlfile | extract -x $1 - | pipe | sed -e "s:^-::" | awk -f awk/$2.awk
-}
-
-xmlexists() {
-  text=$xmlfile
-  for i in $1
-  do
-    text=`echo $text | extract -x $i -`
-  done
 }
 
 case $2 in
