@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/fop
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.9 2004/10/16 17:13:01 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.10 2004/10/17 21:44:41 axxo Exp $
+
+  17 Oct 2004; Thomas Matthijs <axxo@gentoo.org> fop-0.20.5.ebuild:
+  add jai en jimi support, #67265
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> fop-0.20.5.ebuild:
   use java-pkg_dohtml instead of dohtml to also install the package-list in
