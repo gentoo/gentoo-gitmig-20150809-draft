@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bluej/bluej-1.3.0.ebuild,v 1.2 2003/10/31 13:44:13 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bluej/bluej-1.3.0.ebuild,v 1.3 2004/03/02 13:53:34 lanius Exp $
 
 inherit java-pkg
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.bluej.org"
 
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ~sparc"
 
 DEPEND=">=virtual/jdk-1.4*"
 
