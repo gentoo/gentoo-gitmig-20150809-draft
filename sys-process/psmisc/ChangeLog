@@ -1,0 +1,183 @@
+# ChangeLog for sys-apps/psmisc
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-process/psmisc/ChangeLog,v 1.1 2005/03/03 16:24:36 ciaranm Exp $
+
+*psmisc-21.5 (03 Mar 2005)
+
+  03 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> +metadata.xml,
+  +files/psmisc-21.4-no-nls.patch, +files/psmisc-21.4-selinux.diff.bz2,
+  +files/psmisc-21.5-selinux.diff.bz2, +psmisc-21.4.ebuild,
+  +psmisc-21.5.ebuild:
+  Moved from sys-apps/psmisc to sys-process/psmisc.
+
+  07 Feb 2005; Gustavo Zacarias <gustavoz@gentoo.org> psmisc-21.5.ebuild:
+  Stable on sparc
+
+  04 Jan 2005; Chris PeBenito <pebenito@gentoo.org>
+  +files/psmisc-21.5-selinux.diff.bz2, psmisc-21.5.ebuild:
+  Add missing SELinux patch for 21.5.
+
+*psmisc-21.5 (01 Jan 2005)
+
+  01 Jan 2005; Mike Frysinger <vapier@gentoo.org> +psmisc-21.5.ebuild:
+  Version bump.
+
+  01 Jan 2005; Mike Frysinger <vapier@gentoo.org>
+  -files/psmisc-21.4-no-nls-selinux.patch, files/psmisc-21.4-no-nls.patch,
+  files/psmisc-21.4-selinux.diff.bz2, psmisc-21.4.ebuild:
+  Clean up the patches #76230 by Milus János.
+
+  07 Dec 2004; Mike Frysinger <vapier@gentoo.org> psmisc-21.4.ebuild:
+  Remove C++ requirement #73632.
+
+  22 Oct 2004; Chris PeBenito <pebenito@gentoo.org> psmisc-21.4.ebuild:
+  Add libtool to selinux dep to fix #59196.
+
+  27 Sep 2004; Danny van Dyk <kugelfang@gentoo.org> psmisc-21.4.ebuild:
+  Marked stable on amd64.
+
+  25 Sep 2004; Joshua Kinard <kumba@gentoo.org> psmisc-21.4.ebuild:
+  Marked stable on mips.
+
+  09 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> psmisc-21.4.ebuild:
+  Stable on sparc
+
+  25 Jun 2004; <solar@gentoo.org> psmisc-21.4.ebuild,
+  files/psmisc-21.4-no-nls-selinux.patch:
+  no-nls patch was failing with USE='selinux -nls', added offset patch from bug
+  #55115
+
+  15 Jun 2004; <solar@gentoo.org> psmisc-21.2-r4.ebuild, psmisc-21.4.ebuild,
+  files/psmisc-21.2-no-nls.patch, files/psmisc-21.4-no-nls.patch:
+  added patch to allow the disabling of nls for psmisc
+
+  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> psmisc-21.4.ebuild:
+  Stable on alpha.
+
+  27 Apr 2004; Michael McCabe <randy@gentoo.org> psmisc-21.4.ebuild:
+  Marked stable on s390
+
+  09 Apr 2004; Travis Tilley <lv@gentoo.org> psmisc-21.2-r4.ebuild:
+  stable on amd64
+
+  29 Mar 2004; Jon Portnoy <avenj@gentoo.org> psmisc-21.4.ebuild :
+  Removed RESTRICT=nomirror.
+
+  25 Mar 2004; Martin Holzer <mholzer@gentoo.org> psmisc-21.4.ebuild,
+  files/psmisc-21.4-selinux.diff.bz2:
+  adding selinux patch.
+
+*psmisc-21.4 (24 Mar 2004)
+
+  24 Mar 2004; Martin Holzer <mholzer@gentoo.org> psmisc-21.4.ebuild:
+  Version bumped. Closes 45251
+
+  21 Mar 2004; Joshua Kinard <kumba@gentoo.org> psmisc-21.2-r4.ebuild:
+  Added gnuconfig support for mips64 hosts
+
+  20 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> psmisc-21.2-r3.ebuild,
+  psmisc-21.2-r4.ebuild:
+  inherit eutils for epatch
+
+  07 Mar 2004; Joshua Kinard <kumba@gentoo.org> psmisc-21.2-r3.ebuild,
+  psmisc-21.2-r4.ebuild:
+  Marked stable on mips, copyright header fixes.
+
+  02 Mar 2004; Brian Jackson <iggy@gentoo.org> psmisc-21.2-r4.ebuild:
+  adding initial s390 support
+
+  03 Feb 2004; <gustavoz@gentoo.org> psmisc-21.2-r4.ebuild:
+  marked stable on sparc
+
+  02 Feb 2004; Chris PeBenito <pebenito@gentoo.org> psmisc-21.2-r4.ebuild:
+  Mark x86 stable.
+
+  03 Feb 2004; Bartosch Pixa <darkspecter@gentoo.org> psmisc-21.2-r4.ebuild:
+  set ppc in keywords
+
+*psmisc-21.2-r4 (28 Oct 2003)
+
+  03 Feb 2003; Guy Martin <gmsoft@gentoo.org> psmisc-21.2-r4.ebuild :
+  Marked stable on hppa.
+
+  28 Oct 2003; Chris PeBenito <pebenito@gentoo.org> psmisc-21.2-r3.ebuild,
+  psmisc-21.2-r4.ebuild, files/psmisc-21.2-selinux.diff.bz2:
+  Switch SELinux patch from old API to new API.
+
+  14 Sep 2003; Martin Schlemmer <azarah@gentoo.org> :
+  Killall segfault if an command is longer than 128 bytes, as the realloc call
+  is not done in such an way to update the pointer that is used, thanks to bug
+  (bug #28234) submitted by Grant McDorman <grant.mcdorman@sympatico.ca>.
+
+*psmisc-21.2-r3 (04 Aug 2003)
+
+  04 Aug 2003; Martin Schlemmer <azarah@gentoo.org> psmisc-21.2-r3.ebuild:
+  We use pidof from baselayout, bug #21191
+
+  24 Jun 2003; Aron Griffis <agriffis@gentoo.org> psmisc-21.2-r2.ebuild:
+  Mark stable on alpha
+
+*psmisc-21.2-r2 (19 May 2003)
+
+  06 Jul 2003; Guy Martin <gmsoft@gentoo.org> psmisc-21.2-r2.ebuild :
+  Marked stable on hppa.
+
+  22 Jun 2003; Joshua Kinard <kumba@gentoo.org> psmisc-21.2-r2.ebuild:
+  Changed ~sparc & ~mips to sparc & mips
+
+  19 May 2003; Martin Schlemmer <azarah@gentoo.org> psmisc-21.2-r2.ebuild,
+  files/psmisc-21.2-gcc33.patch:
+  Fix gcc-3.3 compile issues, bug #21212.
+
+*psmisc-21.2-r1 (20 Mar 2003)
+
+  25 Mar 2003; Joshua Brindle <method@gentoo.org> psmisc-21.2-r1.ebuild:
+  added selinux support, thanks sindian
+
+  20 Mar 2003; Seemant Kulleen <seemant@gentoo.org> psmisc-19-r3.ebuild,
+  psmisc-19-r3.ebuild, psmisc-21.2-r1.ebuild:
+  removed pic cruft
+
+*psmisc-21.2 (19 Nov 2002)
+
+  20 Mar 2003; Seemant Kulleen <seemant@gentoo.org> psmisc-19-r3.ebuild,
+  psmisc-19-r3.ebuild, psmisc-21.2.ebuild:
+  removed pic cruft
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> psmisc-21.2.ebuild :
+  Marked as stable for mips.
+
+  20 Feb 2003; Zach Welch <zwelch@gentoo.org> psmisc-21.2.ebuild :
+  Added arm to keywords.
+
+  09 Feb 2003; Guy Martin <gmsoft@gentoo.org> psmisc-21.2.ebuild :
+  Added hppa to keywords.
+
+  01 Jan 2003; Mike Frysinger <vapier@gentoo.org> :
+  Unmasked KEYWORDS for all arch's
+
+  23 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Version bump, enhancements, change to use psmisc source
+
+*psmisc-19-r3 (1 Feb 2002)
+
+  24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> psmisc-19-r3.ebuild :
+  Marked as stable for mips.
+
+  09 Feb 2003; Seemant Kulleen <seemant@gentoo.org> psmisc-19-r3.ebuild :
+
+  Sed delimiters are now : instead of /, closing bug #15006 by Blu3
+  <david+gentoo.org@blue-labs.org>
+
+  23 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Removed bootcd USE flag
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> psmisc-19-r3.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
