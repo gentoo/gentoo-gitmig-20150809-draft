@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.23 2003/05/24 13:36:47 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.24 2003/05/26 07:47:23 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -165,7 +165,13 @@ php_src_unpack() {
 	# pear's world writable files is a php issue fixed in their cvs tree.
 	# http://bugs.php.net/bug.php?id=20978
 	# http://bugs.php.net/bug.php?id=20974
+	EPATCH_SINGLE_MSG="Applying fix for PEAR world writable files"
 	epatch ${FILESDIR}/pear_config.diff || die "epatch failed"
+
+	EPATCH_SINGLE_MSG="Applying DB4 patch"
+	epatch ${DISTDIR}/php-${PV}-db4.diff.gz
+	cd ${S}
+	autoconf
 }
 
 
@@ -188,7 +194,14 @@ php_src_compile() {
 
 	[ -x "/usr/sbin/sendmail" ] || die "You need a virtual/mta that provides /usr/sbin/sendmail!"
 
-	use berkdb && myconf="${myconf} --with-db3=/usr"
+	#Hack to use db4
+	if [ -n "`has_version =sys-libs/db-4*`" -a "`grep -q -- '--with-db4' configure`" ] ; then
+		einfo "Enabling db4"
+		use berkdb && myconf="${myconf} --with-db4=/usr"
+	else
+		use berkdb && myconf="${myconf} --with-db3=/usr"
+	fi
+
 	use cjk && myconf="${myconf} --enable-mbstring --enable-mbregex"
 	use crypt && myconf="${myconf} --with-mcrypt=/usr --with-mhash"
 	use firebird && myconf="${myconf} --with-interbase=/opt/interbase"
