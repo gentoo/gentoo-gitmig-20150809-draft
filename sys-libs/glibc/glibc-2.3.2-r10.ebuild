@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r10.ebuild,v 1.3 2004/04/24 07:49:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r10.ebuild,v 1.4 2004/04/24 08:21:10 kumba Exp $
 
 IUSE="nls pic build nptl"
 
@@ -350,6 +350,7 @@ src_unpack() {
 		epatch ${FILESDIR}/2.3.2/${P}-mips-add-n32-n64-sysdep-cancel.patch
 		epatch ${FILESDIR}/2.3.2/${P}-mips-configure-for-n64-symver.patch
 		epatch ${FILESDIR}/2.3.2/${P}-mips-pread-linux2.5.patch
+		epatch ${FILESDIR}/2.3.2/${P}-mips-fix-nested-entend-pairs.patch
 	fi
 
 	if [ "${ARCH}" = "alpha" ]
