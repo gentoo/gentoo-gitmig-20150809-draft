@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/dynfw/dynfw-1.0.1.ebuild,v 1.1 2003/02/24 20:31:14 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/dynfw/dynfw-1.0.1.ebuild,v 1.2 2003/03/04 00:56:29 vladimir Exp $
 
 S=${WORKDIR}/${P}
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://gentoo.org/projects/dynfw"
 DEPEND="sys-apps/bash"
 KEYWORDS="x86 sparc "
 SLOT="0"
-LICENSE="GPL"
+LICENSE="GPL-2"
 
 src_install () {
 	dodir /usr/sbin
