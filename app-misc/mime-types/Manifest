@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5a43343b1739d3cbf84e6f382212778c ChangeLog 1794
-MD5 a3caa9c4574025ee13db7303f562bdc5 mime-types-1.0-r1.ebuild 518
-MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 66bf4fdf5f5bd93922be287e4acea341 ChangeLog 1898
 MD5 4884d966d31a91bb7b2f63d0eb18708b mime-types-1.0.ebuild 502
+MD5 1494952d638c9886e4686ad85d9c7211 mime-types-1.0-r1.ebuild 520
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 0d15f9f712d0699eebc5e3309135eb51 files/digest-mime-types-1.0 65
 MD5 70a0a661efdf25f44423fcf623e6a511 files/digest-mime-types-1.0-r1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBUTSK10xuJSrg3/sRAoS4AJ4ukaKMh2YBp9flatFWhnGwrLRgRQCfSjLI
-nf+hxfL/N+gqL4jCRVTfog0=
-=iOj4
------END PGP SIGNATURE-----
