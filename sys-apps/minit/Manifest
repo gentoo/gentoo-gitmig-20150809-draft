@@ -1,0 +1,5 @@
+MD5 4617a01e192816c0eeb0cde8f6b77251 minit-0.9.1.ebuild 637
+MD5 c3e12c9725e084bcb26975d67146bad6 ChangeLog 346
+MD5 4e33e3743e1248b860b74722c4a3f18c metadata.xml 1039
+MD5 d5149bbafb2a189d9e66474604665c57 files/0.9.1-destdir.patch 622
+MD5 3a89b9f95fc635cb93140ba98b960068 files/digest-minit-0.9.1 63
