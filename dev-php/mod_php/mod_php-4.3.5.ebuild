@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.5.ebuild,v 1.1 2004/03/29 00:05:16 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.5.ebuild,v 1.2 2004/03/29 10:42:30 robbat2 Exp $
 
 IUSE="${IUSE} apache2"
 
@@ -71,7 +71,13 @@ src_unpack() {
 	fi
 
 	# bug fix for security problem - bug #39952
-	epatch ${FILESDIR}/mod_php-4.3.4-r3.diff
+	# integrated upstream now
+	#epatch ${FILESDIR}/mod_php-4.3.4-r3.diff
+
+	# stop php from activing the apache config, as we will do that ourselves
+	for i in configure sapi/apache/config.m4 sapi/apache2filter/config.m4 sapi/apache2handler/config.m4; do
+		sed -i.orig -e 's,-i -a -n php4,-i -n php4,g' $i
+	done
 }
 
 src_compile() {
@@ -94,7 +100,7 @@ src_compile() {
 
 src_install() {
 	PHP_INSTALLTARGETS="install"
-	php-sapi_src_install 
+	php-sapi_src_install
 	einfo "Adding extra symlink to php.ini for Apache${USE_APACHE2}"
 	dodir /etc/apache${USE_APACHE2}/conf/
 	dodir ${PHPINIDIRECTORY}
