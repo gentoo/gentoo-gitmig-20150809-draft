@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.68.ebuild,v 1.3 2004/06/27 09:52:39 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcdio/libcdio-0.68.ebuild,v 1.4 2004/08/11 20:18:06 jhuebel Exp $
 
 IUSE="cddb"
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 DEPEND="dev-util/pkgconfig
 	dev-libs/popt
 	cddb? ( >=media-libs/libcddb-0.9.4 )"
