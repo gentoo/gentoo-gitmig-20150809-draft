@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d5b0bfdc4c843878fd256ee2a50c290f xt-bin-20020426a.ebuild 671
-MD5 cea0e2d94b160989768dc90a474b32fc ChangeLog 1380
+MD5 fcbf2ba247f41554efb579614a85b699 ChangeLog 1469
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 c02ff64fd90795739b5d4cbcabd31dee xt-bin-20020426a.ebuild 677
 MD5 a0c73f30606fd5fd4595e036e71a8a61 files/digest-xt-bin-20020426a 102
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBCsap/rLF9B432nYRAmgtAJ4lFnMVvutNAa8z4zFX84kzFSiTOgCeIpaq
-gGP45jSn5UM7GP1Wl04et9o=
-=qT6B
------END PGP SIGNATURE-----
