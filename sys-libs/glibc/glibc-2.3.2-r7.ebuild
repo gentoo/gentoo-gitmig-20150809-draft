@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r7.ebuild,v 1.1 2003/10/14 00:18:13 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r7.ebuild,v 1.2 2003/10/15 21:17:10 azarah Exp $
 
 IUSE="nls pic build nptl"
 
@@ -53,7 +53,7 @@ SRC_URI="http://ftp.gnu.org/gnu/glibc/glibc-${MY_PV}.tar.bz2
 	mirror://gentoo/${P}-branch-update-${BRANCH_UPDATE}.patch.bz2"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
-KEYWORDS="-*"
+KEYWORDS="-* ~sparc"
 # Is 99% compadible, just some .a's bork
 SLOT="2.2"
 LICENSE="LGPL-2"
@@ -319,7 +319,6 @@ src_unpack() {
 		epatch ${FILESDIR}/2.3.1/${PN}-2.3.1-librt-mips.patch
 		epatch ${FILESDIR}/2.3.2/${P}-mips-add-n32-n64-sysdep-cancel.patch
 		epatch ${FILESDIR}/2.3.2/${P}-mips-configure-for-n64-symver.patch
-		epatch ${FILESDIR}/2.3.2/${P}-mips-fix-n32-n64-sysdep-headers.patch
 		epatch ${FILESDIR}/2.3.2/${P}-mips-pread-linux2.5.patch
 	fi
 

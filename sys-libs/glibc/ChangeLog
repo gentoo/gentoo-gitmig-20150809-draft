@@ -1,6 +1,16 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.92 2003/10/14 22:52:43 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.93 2003/10/15 21:17:10 azarah Exp $
+
+  15 Oct 2003; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.2-r1.ebuild,
+  glibc-2.3.2-r7.ebuild:
+  Sparc updates from Kumba <kumba@gentoo.org>:
+  
+    glibc-2.3.2-r1:  Change ~sparc -> sparc in keywords
+    glibc-2.3.2-r7:  Add ~sparc to keywords
+                     Remove the following patch for mips to let
+		     glibc compile:
+		     ${P}-mips-fix-n32-n64-sysdep-headers.patch
 
   15 Oct 2003; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.2-r6.ebuild:
   Mark as unstable for x86 - we should start wider testing sooner or later, and
