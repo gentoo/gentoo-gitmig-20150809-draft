@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/gq/gq-1.0_beta1.ebuild,v 1.3 2004/06/25 00:22:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/gq/gq-1.0_beta1.ebuild,v 1.4 2004/07/01 22:37:36 eradicator Exp $
 
 S=${WORKDIR}/${PN}-${PV/_/}
 DESCRIPTION="GTK-based LDAP client"
@@ -25,7 +25,7 @@ RDEPEND=">=x11-libs/gtk+-2
 	=dev-libs/atk-1*
 	x11-libs/pango
 	dev-libs/cyrus-sasl
-	virtual/glibc"
+	virtual/libc"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig

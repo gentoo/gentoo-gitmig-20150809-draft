@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-5b-r8.ebuild,v 1.13 2004/06/25 00:23:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-5b-r8.ebuild,v 1.14 2004/07/01 22:37:51 eradicator Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ~ppc64 s390"
 IUSE="selinux"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-apps/tcp-wrappers-7.6-r7"
 RDEPEND="selinux? ( sec-policy/selinux-portmap )"
 
