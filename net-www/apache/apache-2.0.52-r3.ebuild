@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.52-r3.ebuild,v 1.18 2005/03/05 02:45:16 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.52-r3.ebuild,v 1.19 2005/03/05 02:52:49 beu Exp $
 
 inherit eutils gnuconfig
 
@@ -21,7 +21,7 @@ IUSE="apache2 debug doc ldap mpm-leader mpm-metux mpm-peruser mpm-prefork mpm-th
 
 RDEPEND="dev-lang/perl
 	~dev-libs/apr-0.9.5
-	=dev-libs/apr-util-0.9.5
+	~dev-libs/apr-util-0.9.5
 	dev-libs/expat
 	net-www/gentoo-webroot-default
 	app-misc/mime-types
