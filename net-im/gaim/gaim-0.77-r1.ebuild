@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.77-r1.ebuild,v 1.2 2004/05/04 21:19:08 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.77-r1.ebuild,v 1.3 2004/05/05 04:30:34 rizzo Exp $
 
 inherit flag-o-matic eutils gcc
 use debug && inherit debug
@@ -61,8 +61,10 @@ src_unpack() {
 	epatch ${FILESDIR}/gaim-0.77-smileys_dialogs.patch
 	epatch ${FILESDIR}/gaim-0.77-ucs2-copypaste.patch
 	use cjk && epatch ${FILESDIR}/gaim-0.76-xinput.patch
-	cd src/protocols/novell
+	cd ${S}/src/protocols/novell
 	epatch ${FILESDIR}/gaim-0.78cvs-novelltweaks5.patch
+	cd ${S}/src/protocols/msn
+	epatch ${FILESDIR}/gaim-0.77-msn_chat_leave.patch
 }
 
 src_compile() {
