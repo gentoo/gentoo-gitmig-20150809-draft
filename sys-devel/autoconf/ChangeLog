@@ -1,6 +1,16 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.27 2003/09/28 14:45:44 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.28 2003/10/07 22:02:28 azarah Exp $
+
+*autoconf-2.57a-r1 (08 Oct 2003)
+
+  08 Oct 2003; Martin Schlemmer <azarah@gentoo.org> autoconf-2.57a-r1.ebuild,
+  files/autoconf-2.57a-AC_HELP_STRING.patch:
+  Fix a bug in AC_HELP_STRING definition, bug #29961, thanks to TGL
+  <degrenier@easyconnect.fr> for tracking the problem.
+
+  07 Oct 2003; Martin Schlemmer <azarah@gentoo.org> autoconf-2.57a.ebuild:
+  This breaks a few things, including ntp, etc.
 
 *autoconf-2.57a (28 Sep 2003)
 
