@@ -1,6 +1,16 @@
 # ChangeLog for sci-libs/netcdf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.4 2005/02/07 09:29:49 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/ChangeLog,v 1.5 2005/02/18 05:16:41 nerdboy Exp $
+
+*netcdf-3.6.0-r1 (17 Feb 2005)
+
+  17 Feb 2005; Steve Arnold <nerdboy@gentoo.org> netcdf-3.5.0-r3.ebuild,
+  netcdf-3.5.0-r4.ebuild, netcdf-3.5.1.ebuild, +netcdf-3.6.0-r1.ebuild,
+  -netcdf-3.6.0.ebuild:
+  There was a semi-silent upstream fix for a large file bug, plus some
+  package-naming insanity, as well as movage of older source.  This fixes
+  everything by forcing an upgrade for the upstream bugfix, ie, a 
+  preemptive strike, as well as the older 3.5.x path fixes.  Whew...
 
 *netcdf-3.6.0 (07 Feb 2005)
 

@@ -1,19 +1,21 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-3.6.0.ebuild,v 1.1 2005/02/07 09:29:49 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/netcdf/netcdf-3.6.0-r1.ebuild,v 1.1 2005/02/18 05:16:41 nerdboy Exp $
 
 inherit eutils
 
+MY_PV=${PV}-p1
+
 DESCRIPTION="Scientific library and interface for array oriented data access"
-SRC_URI="ftp://ftp.unidata.ucar.edu/pub/netcdf/${P}.tar.Z"
-HOMEPAGE="http://www.unidata.ucar.edu/packages/netcdf/"
+SRC_URI="ftp://ftp.unidata.ucar.edu/pub/netcdf/${PN}-${MY_PV}.tar.gz"
+HOMEPAGE="http://my.unidata.ucar.edu/content/software/netcdf/index.html"
 
 LICENSE="UCAR-Unidata"
 SLOT="0"
 IUSE=""
 KEYWORDS="~x86 ~sparc ~amd64 ~alpha ~ia64 ~ppc ~mips ~hppa"
 
-S=${WORKDIR}/${P}/src
+S=${WORKDIR}/${PN}-${MY_PV}/src
 
 src_unpack() {
 	unpack ${A}
