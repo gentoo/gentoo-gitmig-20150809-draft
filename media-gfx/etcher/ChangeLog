@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/etcher
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/etcher/ChangeLog,v 1.1 2003/02/20 12:37:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/etcher/ChangeLog,v 1.2 2003/03/10 17:25:16 vapier Exp $
+
+*etcher-1.0.20030310 (10 Mar 2003)
+
+  10 Mar 2003; Mike Frysinger <vapier@gentoo.org> :
+  Proper nls support in source now.
 
 *etcher-1.0.20030220 (20 Feb 2003)
 

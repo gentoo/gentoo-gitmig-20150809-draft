@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/etcher/etcher-1.0.20030220.ebuild,v 1.2 2003/03/03 14:52:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/etcher/etcher-1.0.20030310.ebuild,v 1.1 2003/03/10 17:25:16 vapier Exp $
 
 DESCRIPTION="graphical editing tool for creating and manipulating Ebits GUI elements"
 HOMEPAGE="http://www.enlightenment.org/pages/etcher.html"
@@ -10,6 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
+IUSE="nls"
 
 DEPEND="virtual/glibc
 	sys-devel/gcc
@@ -28,18 +29,8 @@ pkg_setup() {
 }
 
 src_compile() {
-	cp Makefile.am{,.old}
-	sed -e 's:intl::' \
-		-e 's:po::' \
-		Makefile.am.old > Makefile.am
-	cp configure.in configure.in.old
-	sed -e 's:intl/Makefile::' \
-		-e 's:po/Makefile.in::' \
-		-e 's:m4/Makefile::' \
-		configure.in.old > configure.in
-
 	env PATH="${T}:${PATH}" WANT_AUTOCONF_2_5=1 NOCONFIGURE=yes ./autogen.sh || die
-	econf --disable-nls --with-gnu-ld || die
+	econf `use_enable nls` --with-gnu-ld || die
 	emake || die
 }
 
