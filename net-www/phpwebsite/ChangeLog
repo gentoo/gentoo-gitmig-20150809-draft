@@ -1,6 +1,11 @@
 # ChangeLog for net-www/phpwebsite
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/phpwebsite/ChangeLog,v 1.8 2003/11/23 00:28:28 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phpwebsite/ChangeLog,v 1.9 2003/11/23 00:42:36 mholzer Exp $
+
+  23 Nov 2003; Martin Holzer <mholzer@gentoo.org>
+  phpwebsite-0.9.3_p1-r1.ebuild, files/phpwebsite-0.9.3-1-supplemental.patch,
+  files/phpwebsite-0.9.3_p1-supplemental.patch:
+  removing $header$ from patch. closes #32844
 
   23 Nov 2003; Martin Holzer <mholzer@gentoo.org> phpwebsite-0.9.2_p1.ebuild,
   phpwebsite-0.9.3.ebuild, phpwebsite-0.9.3_p1.ebuild:

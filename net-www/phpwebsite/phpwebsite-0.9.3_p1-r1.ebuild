@@ -1,7 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# Maintainer: Don Seiler <rizzo@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/phpwebsite/phpwebsite-0.9.3_p1-r1.ebuild,v 1.2 2003/11/06 20:33:24 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phpwebsite/phpwebsite-0.9.3_p1-r1.ebuild,v 1.3 2003/11/23 00:42:36 mholzer Exp $
 
 inherit webapp-apache
 
@@ -16,8 +15,8 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 
-DEPEND="virtual/php
-	>=sys-devel/patch-2.5.9"
+DEPEND=">=sys-devel/patch-2.5.9"
+RDEPEND="virtual/php"
 
 webapp-detect || NO_WEBSERVER=1
 
@@ -28,7 +27,8 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/phpwebsite-${MY_PV}-supplemental.patch
+	cd ${S}
+	epatch ${FILESDIR}/${P}-supplemental.patch
 	cd ${S}/setup
 	cp ${FILESDIR}/update.php-${PV} .
 }
@@ -39,7 +39,7 @@ src_install() {
 	dodoc ${S}/docs/*
 
 	#cd "${D}/${HTTPD_ROOT}"
-	chown -R "${HTTPD_USER}.${HTTPD_GROUP}" "${D}/${HTTPD_ROOT}/phpwebsite"
+	chown -R "${HTTPD_USER}:${HTTPD_GROUP}" "${D}/${HTTPD_ROOT}/phpwebsite"
 	chmod 0775 "${D}/${HTTPD_ROOT}/phpwebsite"
 	find "${D}/${HTTPD_ROOT}/phpwebsite/" -type d | xargs chmod 2775
 	find "${D}/${HTTPD_ROOT}/phpwebsite/" -type f | xargs chmod 0664

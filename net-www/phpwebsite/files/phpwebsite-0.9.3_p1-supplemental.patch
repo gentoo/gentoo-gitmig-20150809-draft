@@ -9,15 +9,6 @@ diff -ruN phpwebsite-0.9.3-1-full-orig/core/EZform.php phpwebsite-0.9.3-1-full/c
  
  /**
   * Creates HTML form elements and/or an entire form
-@@ -34,7 +35,7 @@
-  *
-  * For many form elements, that may be all you need.
-  *
-- * @version $Id: phpwebsite-0.9.3-1-supplemental.patch,v 1.1 2003/11/02 16:16:51 mholzer Exp $
-+ * @version $Id: phpwebsite-0.9.3-1-supplemental.patch,v 1.1 2003/11/02 16:16:51 mholzer Exp $
-  * @author Matthew McNaney <matt@NOSPAM.tux.appstate.edu>
-  * @author Don Seiler <don@NOSPAM.seiler.us>
-  * @package Core
 @@ -410,7 +411,6 @@
     * @param string name         Name of element to set the type
     */
