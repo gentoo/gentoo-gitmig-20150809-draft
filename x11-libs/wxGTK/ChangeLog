@@ -1,6 +1,6 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.9 2002/08/23 00:23:16 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.10 2002/08/25 16:50:09 raker Exp $
 
 *wxGTK-2.2.9-r1 (09 Aug 2002)
 
@@ -13,6 +13,10 @@
   Thanks to Francisco Gimeno for fixing the joystick code compile problem.
 
 *wxGTK-2.3.2-r2 (13 Jun 2002) 
+
+  25 Aug 2002; Nick Hadaway <raker@gentoo.org>
+  wxGTK-2.3.2-r2.ebuild :
+  Changed tiff to be a forced dependancy as wxGTK will not compile without it.
 
   13 Aug 2002; Nick Hadaway <raker@gentoo.org>
   wxGTK-2.3.2-r2.ebuild :

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.3.2-r2.ebuild,v 1.7 2002/08/14 16:49:47 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.3.2-r2.ebuild,v 1.8 2002/08/25 16:50:09 raker Exp $
 
 S=${WORKDIR}/${P}
 
@@ -18,7 +18,7 @@ DEPEND="dev-libs/libunicode
 	gif? ( media-libs/giflib )
 	png? ( media-libs/libpng )
 	jpeg? ( media-libs/jpeg )
-	tiff? ( media-libs/tiff )
+	media-libs/tiff
 	odbc? ( dev-db/unixODBC  )
 	opengl? ( virtual/opengl )"
 
@@ -45,7 +45,8 @@ src_compile() {
 	
 	#Build static library too, shared library is enabled by default.
 	#Enable useful config options that don't have USE flags
-	myconf="${myconf} --enable-static --with-zlib --with-unicode"
+	myconf="${myconf} --enable-static --with-zlib --with-unicode \
+		--with-libtiff"
 	
 	#Note: pcx image support enabled by default if found.
 	#Also, all wxWindows gui features are enabled by default. If you
@@ -77,10 +78,6 @@ src_compile() {
 		&& myconf="${myconf} --with-libjpeg"	\
 		|| myconf="${myconf} --without-libjpeg"
 
-	use tiff	\
-		&& myconf="${myconf} --with-libtiff"	\
-		|| myconf="${myconf} --without-libtiff"
-	
 	gunzip < ${FILESDIR}/${P}.diff.gz | patch -p1
 	
 	econf ${myconf} || die "configuration failed"
