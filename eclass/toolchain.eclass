@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.37 2004/10/26 04:09:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.38 2004/10/26 18:51:57 lv Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -18,7 +18,11 @@ if [ "${ETYPE}" == "gcc-library" ] ; then
 	SLOT="${CTARGET}-${SO_VERSION_SLOT:-5}"
 else
 	IUSE="static nls bootstrap build multilib gcj gtk f77 nocxx objc hardened uclibc n32 n64 boundschecking"
-	SLOT="${CTARGET}-${PV%.*}"
+	if [ "${CHOST}" == "${CTARGET}" ] ; then
+		SLOT="${PV%.*}"
+	else
+		SLOT="${CTARGET}-${PV%.*}"
+	fi
 fi
 
 
