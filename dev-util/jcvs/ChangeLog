@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/jcvs
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jcvs/ChangeLog,v 1.1 2004/11/14 15:22:29 axxo Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jcvs/ChangeLog,v 1.2 2005/02/17 17:55:23 luckyduck Exp $
+
+  17 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> jcvs-5.4.2.ebuild:
+  added missing unzip dependency. see #69831
 
 *jcvs-5.4.2 (14 Nov 2004)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jcvs/jcvs-5.4.2.ebuild,v 1.2 2004/11/15 02:15:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jcvs/jcvs-5.4.2.ebuild,v 1.3 2005/02/17 17:55:23 luckyduck Exp $
 
 inherit java-pkg
 
@@ -17,6 +17,7 @@ DEPEND=">=virtual/jdk-1.3
 	>=dev-java/commons-logging-1.0.4
 	>=dev-java/j2ssh-0.2.7
 	>=dev-java/javahelp-bin-2
+	app-arch/unzip
 	jikes? ( dev-java/jikes )"
 RDEPEND=">=virtual/jre-1.3
 	>=dev-java/sun-jaf-bin-1.0.2
