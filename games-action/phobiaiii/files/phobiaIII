@@ -1,0 +1,4 @@
+#!/bin/sh
+cd /opt/phobiaiii
+export LD_PRELOAD=libsmpeg-0.4.so.0.dummy
+exec ./phobia3 "$@"
