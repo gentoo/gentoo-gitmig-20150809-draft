@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.8.ebuild,v 1.1 2004/10/24 17:15:22 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.8.ebuild,v 1.2 2004/11/05 13:50:17 nakano Exp $
 
 inherit eutils gnuconfig flag-o-matic java-pkg
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://postgresql/source/v${PV}/${PN}-base-${PV}.tar.bz2
 LICENSE="POSTGRESQL"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~hppa ~ia64 ~mips"
-IUSE="doc java libg++ nls pam perl python readline ssl tcltk zlib"
+IUSE="doc java libg++ nls pam perl python readline ssl tcltk zlib threads"
 
 DEPEND="virtual/libc
 	sys-devel/autoconf
@@ -87,6 +87,7 @@ src_compile() {
 	use pam && myconf="$myconf --with-pam"
 	use readline || myconf="$myconf --without-readline"
 	use zlib || myconf="$myconf --without-zlib"
+	use threads && myconf="$myconf --enable-thread-safety"
 
 	# these are the only working CFLAGS I could get on ppc, so locking them
 	# down, anything more aggressive fails (i.e. -mcpu or -Ox)

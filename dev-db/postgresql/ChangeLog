@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.149 2004/10/24 17:15:22 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.150 2004/11/05 13:50:17 nakano Exp $
+
+  05 Nov 2004; Masatomo Nakano <nakano@gentoo.org> postgresql-7.3.8.ebuild,
+  postgresql-7.4.6.ebuild:
+  Added threads support.
 
 *postgresql-7.3.8 (24 Oct 2004)
 
