@@ -1,0 +1,11 @@
+# ChangeLog for app-pda/malsync
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-pda/malsync/ChangeLog,v 1.1 2003/09/02 21:55:49 liquidx Exp $
+
+*malsync-2.2.0 (02 Sep 2003)
+
+  02 Sep 2003; Alastair Tse <liquidx@gentoo.org> malsync-2.2.0.ebuild,
+  files/Makefile-pilot-link.diff:
+  initial ebuild and patch. thanks to Tristan Henderson
+  <T.Henderson@cs.ucl.ac.uk> (#25724)
+
