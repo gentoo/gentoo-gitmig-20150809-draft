@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/dosbox-0.61.ebuild,v 1.7 2004/06/10 08:11:45 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/dosbox-0.61.ebuild,v 1.8 2004/06/10 08:31:48 mr_bones_ Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="DOS emulator"
 HOMEPAGE="http://dosbox.sourceforge.net/"
@@ -21,10 +21,9 @@ DEPEND="virtual/glibc
 	media-libs/libpng
 	media-libs/sdl-net"
 
-src_unpack()
-{
+src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/dosbox_gcc34.gz
+	epatch "${FILESDIR}/dosbox_gcc34.gz"
 }
 
 src_compile() {
