@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.0.2.ebuild,v 1.4 2003/01/28 05:23:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.0.2.ebuild,v 1.5 2003/01/29 17:10:12 gerk Exp $
 
 IUSE="kde gnome"
 
@@ -16,7 +16,7 @@ INSTDIR="${LOC}/OpenOffice.org${PV}"
 MY_PV="`echo ${PV} | gawk '{ print toupper($1) }'`"
 
 if [ `use ppc` ]; then
-	MY_P="OOo_${MY_PV}_LinuxPPC_installer"
+	MY_P="OOo_${MY_PV}_LinuxPowerPC_installer"
 	S="${WORKDIR}/${MY_P}"
 else
 	MY_P="OOo_${MY_PV}_LinuxIntel_install" 
@@ -39,7 +39,7 @@ DEPEND="virtual/glibc
 
 LICENSE="LGPL-2 | SISSL-1.1"
 SLOT="0"
-KEYWORDS="~x86 -ppc -sparc "
+KEYWORDS="~x86 ~ppc -sparc "
 
 src_install() {
 

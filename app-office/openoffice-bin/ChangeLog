@@ -1,6 +1,11 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.12 2002/12/13 10:56:14 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.13 2003/01/29 17:10:12 gerk Exp $
+
+*openoffice-bin-1.0.2 (Jan 29 2003)
+  27 Jan 2003; Mark Guertin <gerk@gentoo.org> openoffice-bin-1.0.2.ebuild :
+  Fixed MY_PV for installation path issue on PPC and added ppc digest.  Tested
+  and set to ~ppc.  Was no initial ChangeLog entry for this ebuild.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
