@@ -14,12 +14,12 @@ MD5 2fe94d2623c5b129780b72bacaf4a7bc files/20041006/rcapid.xinetd 236
 MD5 650c413593fe44524150e1365965cdb3 files/20041006/capi.blacklist 455
 MD5 fb9f9b4003d8d1647e23cf7b329386f6 files/20041006/capi.confd 424
 MD5 2ddf9c04a03949cb2301888586096bfe files/20041006/capi.hotplug 2435
-MD5 52be2456f464fdaca472a9e38d4aca03 files/20041006/capi.initd 1189
+MD5 c5a549ccab638e5b694c2e57a13b1c84 files/20041006/capi.initd 1187
 MD5 fa4cf0be46c4a16a2ef6fd178ed54c01 files/20041006/capi.usermap 1504
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFByzFXjtv59x0+BrURAu7NAJ9vOAQp75qu06Mt4206/jkkVx3CvQCgmVYj
-QFsx3dzSTN8mzrHy1/Fvl2o=
-=tS4m
+iD8DBQFBy8+Gjtv59x0+BrURAhsqAKCIki/0LcjXManBasSFo5NZicqovACfat0B
+ThyH/4SiTpVjoW6mLUGFx2I=
+=EG/b
 -----END PGP SIGNATURE-----

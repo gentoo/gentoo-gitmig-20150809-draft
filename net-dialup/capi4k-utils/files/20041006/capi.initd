@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/files/20041006/capi.initd,v 1.1 2004/12/23 20:57:46 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/files/20041006/capi.initd,v 1.2 2004/12/24 08:12:43 mrness Exp $
 
 opts="start stop info"
 
@@ -22,7 +22,8 @@ start() {
 
 	ebegin "Loading CAPI"
 
-	/usr/sbin/capiinit 2>/dev/null -c /dev/null prepare
+	/sbin/modprobe -s kernelcapi
+	/sbin/modprobe -s capi
 	/sbin/modprobe -s capidrv
 	
 	if /usr/sbin/capiinit activate ; then
@@ -37,9 +38,9 @@ stop() {
 
 	ebegin "Unloading CAPI"
 
-	/sbin/modprobe -sqr capidrv	
+	/sbin/modprobe -sr capidrv
 	/usr/sbin/capiinit 2>/dev/null stop
-	for DRV in $DRIVERS; do	/sbin/modprobe -sqr $DRV; done
+	for DRV in $DRIVERS; do	/sbin/modprobe -sr $DRV; done
 	
 	eend $?
 }
