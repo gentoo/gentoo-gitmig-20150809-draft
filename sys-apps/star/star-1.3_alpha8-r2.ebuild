@@ -1,6 +1,6 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/star/star-1.3_alpha8-r2.ebuild,v 1.4 2002/07/14 19:20:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/star/star-1.3_alpha8-r2.ebuild,v 1.5 2002/08/01 11:59:04 seemant Exp $
 
 A=star-1.3a8.tar.gz
 S=${WORKDIR}/star-1.3
