@@ -1,6 +1,11 @@
 # ChangeLog for media-video/vcdimager
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/ChangeLog,v 1.23 2004/12/11 23:22:38 kloeri Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/ChangeLog,v 1.24 2005/01/09 00:50:12 luckyduck Exp $
+
+  09 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  vcdimager-0.7.20-r1.ebuild, vcdimager-0.7.20-r2.ebuild,
+  vcdimager-0.7.20.ebuild:
+  updated SRC_URI. fixes bug #65292.
 
   12 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
   vcdimager-0.7.20-r2.ebuild:
