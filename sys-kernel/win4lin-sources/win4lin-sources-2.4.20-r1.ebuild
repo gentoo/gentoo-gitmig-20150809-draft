@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.4.20-r1.ebuild,v 1.7 2003/11/20 07:43:38 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.4.20-r1.ebuild,v 1.8 2003/12/02 00:36:23 iggy Exp $
 
 IUSE="build"
 
@@ -36,6 +36,8 @@ src_unpack() {
 
 	cat ${DISTDIR}/mki-adapter.patch|patch -p1 || die "-mki-adapter patch failed"
 	cat ${DISTDIR}/Kernel-Win4Lin3-${OKV}.patch|patch -p1 || die "-Win4Lin3 patch failed"
+
+	epatch ${FILESDIR}/do_brk_fix.patch || die "failed to patch for do_brk vuln"
 
 	kernel_universal_unpack
 }
