@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>, Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/fileutils-4.1.3.ebuild,v 1.1 2001/12/12 20:26:28 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/fileutils-4.1.3.ebuild,v 1.2 2001/12/16 14:57:21 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard GNU file utilities (chmod, cp, dd, dir, ls, etc)"
@@ -29,6 +29,10 @@ src_install() {
 	then
 		cd ${S}
 		dodoc COPYING NEWS README*  THANKS TODO ChangeLog ChangeLog-1997 AUTHORS
+
+		#conflicts with textutils.  seems that they install the same
+		#.info file between the two of them
+		rm -f ${D}/usr/share/info/coreutils.info
 	else
 		rm -rf ${D}/usr/share
 	fi
