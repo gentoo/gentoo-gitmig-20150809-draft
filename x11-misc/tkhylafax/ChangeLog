@@ -1,0 +1,9 @@
+# ChangeLog for x11-misc/tkhylafax
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/tkhylafax/ChangeLog,v 1.1 2003/09/24 02:54:16 nerdboy Exp $
+
+*tkhylafax-3.2 (23 Sep 2003)
+
+  23 Sep 2003; <sarnold@gentoo.org> metadata.xml, tkhylafax-3.2.ebuild:
+  new tkhylafax ebuild of old but functional code
+
