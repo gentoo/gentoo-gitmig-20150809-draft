@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/icoutils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/icoutils/ChangeLog,v 1.8 2004/07/01 10:49:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/icoutils/ChangeLog,v 1.9 2004/09/20 13:48:39 hanno Exp $
+
+*icoutils-0.23.0 (20 Sep 2004)
+
+  20 Sep 2004; Hanno Boeck <hanno@gentoo.org> +icoutils-0.23.0.ebuild:
+  Version bump.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   icoutils-0.17.0.ebuild:
