@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7.ebuild,v 1.3 2003/07/30 16:34:58 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7.ebuild,v 1.4 2003/07/30 20:43:29 taviso Exp $
 
 inherit gnuconfig
 
-IUSE="ncurses gtk gnome oss"
+IUSE="ncurses gtk gnome oss xinerama"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="an extremely powerful ICCCM-compliant multiple virtual desktop window manager"
@@ -42,6 +42,10 @@ src_compile() {
 	use oss \
 		&& myconf="--with-rplay" \
 		|| myconf="--without-rplay"
+
+	use xinerama \
+		&& myconf="--enable-xinerama" \
+		|| myconf="--disable-xinerama"
 
 	# CFLAGS containing comma will break this, so change it for !
 	sed -i 's#\x27s,xCFLAGSx,$(CFLAGS),\x27#\x27s!xCFLAGSx!$(CFLAGS)!\x27#' \
