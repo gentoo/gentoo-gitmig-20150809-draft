@@ -2,6 +2,9 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header
 
+  09 Jul 2003; Will Woods <wwoods@gentoo.org> docker-1.5.ebuild:
+  Added ~alpha to KEYWORDS
+
   12 Jun 2003; <msterret@gentoo.org> docker-1.3-r1.ebuild, docker-1.5.ebuild:
   fix Header
 
