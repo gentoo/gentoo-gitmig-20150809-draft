@@ -1,19 +1,21 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-kronolith/horde-kronolith-1.1.ebuild,v 1.7 2004/01/07 21:40:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-kronolith/horde-kronolith-1.1.ebuild,v 1.8 2004/01/19 06:37:45 vapier Exp $
 
 inherit webapp-apache
 
-DESCRIPTION="Kronolith ${PV} is the Horde calendar application"
-HOMEPAGE="http://www.horde.org"
 MY_P=${P/horde-/}
+DESCRIPTION="Kronolith is the Horde calendar application"
+HOMEPAGE="http://www.horde.org/"
 SRC_URI="ftp://ftp.horde.org/pub/kronolith/${MY_P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="x86 ~ppc ~sparc ~alpha"
+
 DEPEND=""
 RDEPEND=">=net-www/horde-2.2.4"
-IUSE=""
+
 S=${WORKDIR}/${MY_P}
 
 webapp-detect || NO_WEBSERVER=1
@@ -28,7 +30,7 @@ pkg_setup() {
 	einfo "Installing into ${ROOT}${HTTPD_ROOT}."
 }
 
-src_install () {
+src_install() {
 	webapp-mkdirs
 
 	local DocumentRoot=${HTTPD_ROOT}

@@ -1,21 +1,23 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-chora/horde-chora-1.2-r1.ebuild,v 1.8 2003/12/15 20:46:02 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-chora/horde-chora-1.2-r1.ebuild,v 1.9 2004/01/19 06:36:04 vapier Exp $
 
 inherit webapp-apache
 
-DESCRIPTION="Chora ${PV} is the Horde CVS viewer."
-HOMEPAGE="http://www.horde.org"
 MY_P=${P/horde-/}
+DESCRIPTION="Chora is the Horde CVS viewer"
+HOMEPAGE="http://www.horde.org/"
 SRC_URI="ftp://ftp.horde.org/pub/chora/tarballs/${MY_P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc ~alpha"
+
 DEPEND=""
 RDEPEND=">=net-www/horde-2.2.4
 	>=app-text/rcs-5.7-r1
 	>=dev-util/cvs-1.11.2"
-IUSE=""
+
 S=${WORKDIR}/${MY_P}
 
 webapp-detect || NO_WEBSERVER=1
@@ -25,7 +27,7 @@ pkg_setup() {
 	einfo "Installing into ${ROOT}${HTTPD_ROOT}."
 }
 
-src_install () {
+src_install() {
 	webapp-mkdirs
 
 	local DocumentRoot=${HTTPD_ROOT}

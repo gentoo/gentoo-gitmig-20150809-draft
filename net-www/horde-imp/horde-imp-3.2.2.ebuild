@@ -1,18 +1,21 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-imp/horde-imp-3.2.2.ebuild,v 1.6 2003/12/15 20:53:08 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-imp/horde-imp-3.2.2.ebuild,v 1.7 2004/01/19 06:36:42 vapier Exp $
 
 inherit webapp-apache
 
-DESCRIPTION="Horde IMP provides webmail access"
-HOMEPAGE="http://www.horde.org"
 MY_P=${P/horde-/}
+DESCRIPTION="Horde IMP provides webmail access to IMAP/POP3 mailboxes"
+HOMEPAGE="http://www.horde.org/"
 SRC_URI="ftp://ftp.horde.org/pub/imp/tarballs/${MY_P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="x86 ~ppc ~sparc ~alpha"
+
 DEPEND=""
 RDEPEND=">=net-www/horde-2.2.4"
+
 S=${WORKDIR}/${MY_P}
 
 webapp-detect || NO_WEBSERVER=1
@@ -30,7 +33,7 @@ pkg_setup() {
 	einfo "Installing into ${ROOT}${HTTPD_ROOT}."
 }
 
-src_install () {
+src_install() {
 	webapp-mkdirs
 
 	local DocumentRoot=${HTTPD_ROOT}

@@ -1,19 +1,21 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-turba/horde-turba-1.2.1.ebuild,v 1.6 2004/01/07 21:37:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-turba/horde-turba-1.2.1.ebuild,v 1.7 2004/01/19 06:38:44 vapier Exp $
 
 inherit webapp-apache
 
-DESCRIPTION="Turba ${PV} is the Horde address book / contact management program"
-HOMEPAGE="http://www.horde.org"
 MY_P=${P/horde-/}
+DESCRIPTION="Turba is the Horde address book / contact management program"
+HOMEPAGE="http://www.horde.org/"
 SRC_URI="ftp://ftp.horde.org/pub/turba/tarballs/${MY_P}.tar.gz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc ~alpha"
+
 DEPEND=""
 RDEPEND=">=net-www/horde-2.2.4"
-IUSE=""
+
 S=${WORKDIR}/${MY_P}
 
 webapp-detect || NO_WEBSERVER=1
@@ -33,7 +35,7 @@ pkg_setup() {
 	[ -f ${REGISTRY} ] || die "${REGISTRY} not found"
 }
 
-src_install () {
+src_install() {
 	webapp-mkdirs
 
 	local DocumentRoot=${HTTPD_ROOT}
