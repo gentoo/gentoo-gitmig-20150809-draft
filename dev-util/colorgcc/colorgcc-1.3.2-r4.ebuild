@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/colorgcc/colorgcc-1.3.2-r4.ebuild,v 1.1 2003/10/02 17:06:03 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/colorgcc/colorgcc-1.3.2-r4.ebuild,v 1.2 2004/03/01 22:15:18 dholm Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.mindspring.com/~jamoyers/software/colorgcc/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~mips"
+KEYWORDS="~x86 ~sparc ~mips ~ppc"
 
 DEPEND="dev-lang/perl"
 
