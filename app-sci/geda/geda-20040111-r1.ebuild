@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/geda/geda-20040111-r1.ebuild,v 1.1 2004/06/03 12:51:34 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/geda/geda-20040111-r1.ebuild,v 1.2 2004/06/04 23:29:42 dholm Exp $
 
 S=${WORKDIR}
 
@@ -20,7 +20,7 @@ SRC_URI="http://www.geda.seul.org/devel/${PV}/geda-${PV}.tar.gz
 
 IUSE=""
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 SLOT="0"
 
 DEPEND=">=sys-libs/glibc-2.1.3

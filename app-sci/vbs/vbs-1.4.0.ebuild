@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc. and Tim Yamin <plasmaroo@gentoo.org> <plasmaroo@squirrelsoft.org.uk>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/vbs/vbs-1.4.0.ebuild,v 1.2 2004/04/19 12:45:57 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/vbs/vbs-1.4.0.ebuild,v 1.3 2004/06/04 23:25:27 dholm Exp $
 
 HOMEPAGE="http://www.geda.seul.org/tools/vbs/index.html"
 DESCRIPTION="vbs - the Verilog Behavioral Simulator"
@@ -9,7 +9,7 @@ SRC_URI="http://www.geda.seul.org/dist/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND=">=sys-devel/flex-2.3
 	>=sys-devel/bison-1.22"
