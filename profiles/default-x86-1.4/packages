@@ -40,7 +40,7 @@
 #*>=sys-apps/module-init-utils-0.9.10-r5
 *virtual/modutils
 =sys-kernel/linux-headers-2.4.19
->=sys-apps/sysklogd-1.4.1
+>=app-admin/sysklogd-1.4.1
 *dev-lang/python
 
 
