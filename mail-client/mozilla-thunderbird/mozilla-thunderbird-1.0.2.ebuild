@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.0.2.ebuild,v 1.7 2005/03/24 19:20:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-1.0.2.ebuild,v 1.8 2005/03/25 02:14:18 brad Exp $
 
 IUSE="crypt"
 
@@ -20,7 +20,7 @@ KEYWORDS="alpha amd64 ia64 ppc ~sparc x86"
 SLOT="0"
 LICENSE="MPL-1.1 NPL-1.1"
 
-RDEPEND="crypt? ( >=app-crypt/gnupg-1.2.1 )
+RDEPEND="crypt? ( >=app-crypt/gnupg-1.4 )
 	>=www-client/mozilla-launcher-1.28"
 
 S=${WORKDIR}/mozilla
