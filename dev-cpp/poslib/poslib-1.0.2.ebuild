@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/poslib/poslib-1.0.2.ebuild,v 1.3 2004/04/22 23:06:19 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/poslib/poslib-1.0.2.ebuild,v 1.4 2004/06/24 21:51:13 agriffis Exp $
 
 DESCRIPTION="A library for creating C++ programs using the Domain Name System"
 HOMEPAGE="http://www.posadis.org/projects/poslib.php"
