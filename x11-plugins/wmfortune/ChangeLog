@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmfortune
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfortune/ChangeLog,v 1.5 2004/08/08 01:03:07 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmfortune/ChangeLog,v 1.6 2004/11/24 05:39:48 weeve Exp $
+
+  23 Nov 2004; Jason Wever <weeve@gentoo.org> wmfortune-0.241.ebuild:
+  Added ~sparc keyword.
 
   08 Aug 2004; Tom Martin <slarti@gentoo.org> wmfortune-0.241.ebuild:
   Typo in DESCRIPTION: forune -> fortune. Bug 59717.

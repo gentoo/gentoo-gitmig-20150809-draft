@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmcube
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcube/ChangeLog,v 1.9 2004/09/03 02:54:12 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcube/ChangeLog,v 1.10 2004/11/24 05:19:27 weeve Exp $
+
+  23 Nov 2004; Jason Wever <weeve@gentoo.org> wmcube-0.98.ebuild:
+  Added ~sparc keyword.
 
   02 Sep 2004; Tom Gall <tgall@gentoo.org> wmcube-0.98.ebuild:
   stable on ppc64, bug #62253

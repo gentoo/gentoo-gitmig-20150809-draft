@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmdeskguide
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdeskguide/ChangeLog,v 1.3 2004/07/22 22:10:39 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdeskguide/ChangeLog,v 1.4 2004/11/24 05:23:30 weeve Exp $
+
+  23 Nov 2004; Jason Wever <weeve@gentoo.org> wmdeskguide-0.2.ebuild:
+  Added ~sparc keyword.
 
   23 Jul 2004; Michele Noberasco <s4t4n@gentoo.org> wmdeskguide-0.2.ebuild:
   Stable for x86.

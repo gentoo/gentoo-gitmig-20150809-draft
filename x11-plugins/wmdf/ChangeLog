@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmdf
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdf/ChangeLog,v 1.5 2004/09/03 02:58:22 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdf/ChangeLog,v 1.6 2004/11/24 05:26:53 weeve Exp $
+
+  23 Nov 2004; Jason Wever <weeve@gentoo.org> wmdf-0.1.6.ebuild:
+  Added ~sparc keyword.
 
   02 Sep 2004; Tom Gall <tgall@gentoo.org> wmdf-0.1.6.ebuild:
   stable on ppc64, bug #62255

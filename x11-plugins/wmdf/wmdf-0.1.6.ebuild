@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdf/wmdf-0.1.6.ebuild,v 1.5 2004/09/03 02:58:22 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdf/wmdf-0.1.6.ebuild,v 1.6 2004/11/24 05:26:53 weeve Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ DEPEND="virtual/x11"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ppc64"
+KEYWORDS="x86 ppc ppc64 ~sparc"
 
 src_compile() {
 	econf || die "Configure failed"
