@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27.ebuild,v 1.8 2005/02/21 02:22:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/uclibc/uclibc-0.9.27.ebuild,v 1.9 2005/02/28 23:31:34 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -67,7 +67,7 @@ alt_rprefix() {
 	if [[ ${CTARGET} == ${CHOST} ]] ; then
 		echo /
 	else
-		echo /usr/${CTARGET}
+		echo /usr/${CTARGET}/
 	fi
 }
 
@@ -75,7 +75,7 @@ CPU_ARM="GENERIC_ARM ARM{610,710,720T,920T,922T,926T,_{SA110,SA1100,XSCALE}}"
 CPU_MIPS="MIPS_ISA_{1,2,3,4,MIPS{32,64}}"
 CPU_PPC=""
 CPU_SH="SH{2,3,4,5}"
-CPU_X86="GENERIC_386 {3,4,5,6}86 PENTIUM{II,III,4} K{6,7} ELAN CRUSOE WINCHIP{C6,2} CYRIXIII NEHEMIAH"
+CPU_X86="GENERIC_386 {3,4,5,6}86 586MMX PENTIUM{II,III,4} K{6,7} ELAN CRUSOE WINCHIP{C6,2} CYRIXIII NEHEMIAH"
 IUSE_UCLIBC_CPU="${CPU_ARM} ${CPU_MIPS} ${CPU_PPC} ${CPU_SH} ${CPU_X86}"
 
 check_cpu_opts() {
@@ -220,7 +220,7 @@ src_unpack() {
 	# we are building against system installed kernel headers
 	sed -i \
 		-e "s:KERNEL_SOURCE.*:KERNEL_SOURCE=\"$(alt_kprefix)\":" \
-		-e "s:SHARED_LIB_LOADER_PREFIX=.*:SHARED_LIB_LOADER_PREFIX=\"$(alt_rprefix)/$(get_libdir)\":" \
+		-e "s:SHARED_LIB_LOADER_PREFIX=.*:SHARED_LIB_LOADER_PREFIX=\"$(alt_rprefix)$(get_libdir)\":" \
 		-e "s:DEVEL_PREFIX=.*:DEVEL_PREFIX=\"$(alt_prefix)\":" \
 		-e "s:RUNTIME_PREFIX=.*:RUNTIME_PREFIX=\"$(alt_rprefix)\":" \
 		.config
