@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kaffeine
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.26 2004/12/23 23:37:48 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.27 2004/12/26 19:04:26 carlo Exp $
+
+  26 Dec 2004; Carsten Lohrke <carlo@gentoo.org> kaffeine-0.5.ebuild:
+  added xorg configure option: #75722, #59746
 
 *kaffeine-0.5 (24 Dec 2004)
 
