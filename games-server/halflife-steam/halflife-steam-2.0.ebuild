@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-steam/halflife-steam-2.0_beta.ebuild,v 1.1 2003/09/10 05:51:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-steam/halflife-steam-2.0.ebuild,v 1.1 2003/12/03 00:15:06 vapier Exp $
 
-inherit games
+inherit games eutils
 
 DESCRIPTION="client for Valve Software's Steam content delivery program"
 HOMEPAGE="http://www.steampowered.com/"
-SRC_URI="steam.gz Steam_README.txt"
+SRC_URI="hldsupdatetool.bin hldsupdatetool_readme.txt"
 
 LICENSE="ValveServer"
 SLOT="0"
@@ -24,8 +24,9 @@ pkg_nofetch() {
 }
 
 src_unpack() {
-	unpack steam.gz
-	cp ${DISTDIR}/Steam_README.txt .
+	unpack_pdv hldsupdatetool.bin 4
+	chmod a+x steam
+	cp ${DISTDIR}/hldsupdatetool_readme.txt .
 }
 
 src_install() {
@@ -35,7 +36,7 @@ src_install() {
 	dogamesbin ${FILESDIR}/steam
 	dosed "s:GENTOO_DIR:${GAMES_PREFIX_OPT}/halflife:" ${GAMES_BINDIR}/steam
 
-	dodoc Steam_README.txt
+	dodoc hldsupdatetool_readme.txt
 
 	prepgamesdirs
 }
