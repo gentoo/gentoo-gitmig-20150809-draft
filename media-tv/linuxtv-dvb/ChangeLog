@@ -1,0 +1,37 @@
+# ChangeLog for media-tv/linuxtv-dvb
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/linuxtv-dvb/ChangeLog,v 1.1 2003/06/18 11:59:10 seemant Exp $
+
+*linuxtv-dvb-1.0.0_pre2-r1 (18 Jun 2003)
+
+  18 Jun 2003; Seemant Kulleen <seemant@gentoo.org>
+  linuxtv-dvb-1.0.0_pre2-r1.ebuild, linuxtv-dvb-1.0.0_pre2-r2.ebuild,
+  files/dvb:
+  moved to media-tv
+
+*linuxtv-dvb-1.0.0_pre2-r2 (03 Apr 2003)
+
+  03 Apr 2003; Martin Holzer <mholzer@gentoo.org>
+  linuxtv-dvb-1.0.0_pre2-r2.ebuild, files/dvb:
+  Added file for autoload all modules. Thx to Ronald Steininger
+  (ronald.steininger@gmx.at) for submitting in #18055
+
+*linuxtv-dvb-1.0.0_pre2-r1 (25 Mar 2003)
+  25 Mar 2003; Thomas Raschbacher <lordvan@gentoo.org>
+  new release to fix bug #18100 (dvbnet installed in /dvbnet)
+	
+*linuxtv-dvb-1.0.0_pre2 (19 Mar 2003)
+
+  22 Mar 2003; Martin Holzer <mholzer@gentoo.org>
+  linuxtv-dvb-1.0.0_pre2.ebuild:
+  added more docs and einfos to make it userfriendly
+
+  19 Mar 2003; Martin Holzer <mholzer@gentoo.org>
+  linuxtv-dvb-1.0.0_pre2.ebuild:
+  Added info for your kernel config.
+
+  11 Mar 2003; Martin Holzer <mholzer@gentoo.org>
+  linuxtv-dvb-1.0.0_pre2.ebuild : Added virtual/linux-sources to DEPEND.
+
+  06 Mar 2003; Thomas Raschbacher <lordvan@gentoo.org>: linuxtv-dvb-1.0.0_pre2:
+  initial ebuild
