@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.38 2004/02/15 09:07:07 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.39 2004/02/15 21:15:46 azarah Exp $
+
+  15 Feb 2004; Martin Schlemmer <azarah@gentoo.org> files/ac-wrapper-2.pl:
+  Set AUTOM4TE to autoconf version being run, bug #40983.
 
   14 Feb 2004; Martin Schlemmer <azarah@gentoo.org> files/ac-wrapper-2.pl:
   Fix ac-wrapper.pl to also work with AC_PREREQ(2.50) (note the 2.50 and not
