@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/nsplugins.eclass,v 1.5 2002/11/23 08:50:00 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/nsplugins.eclass,v 1.6 2002/12/13 20:50:33 phoenix Exp $
 # Just some re-usable functions for the netscape/moz plugins sharing
 
 ECLASS=nsplugins
@@ -40,9 +40,20 @@ pkg_mv_plugins() {
 # This function installs a plugin with dosym to PLUGINS_DIR.
 # First argument should be the plugin file.
 inst_plugin() {
-	dodir /usr/lib/${PLUGINS_DIR}
-# $ROOT should only be used in pkg_*() functions ...
-#	dosym ${1} ${ROOT}/usr/lib/${PLUGINS_DIR}
-	dosym ${1} /usr/lib/${PLUGINS_DIR}
+	# Get the filename
+	MYFILE="`echo ${1} | gawk  -F '/' '{ print $NF }'`"
+
+	# Install the plugin if none is installed
+	if [ ! -L /usr/lib/${PLUGINS_DIR}/${MYFILE} ]
+	then
+		dodir /usr/lib/${PLUGINS_DIR}
+		# $ROOT should only be used in pkg_*() functions ...
+		#	dosym ${1} ${ROOT}/usr/lib/${PLUGINS_DIR}
+		echo dosym ${1} /usr/lib/${PLUGINS_DIR}
+		dosym ${1} /usr/lib/${PLUGINS_DIR}
+		einfo "Symlinked the java plugin into the mozilla/phoenix/galeon plugin directory."
+	else
+		einfo "Not creating symlink for the java plugin, because there already is a java plugin installed."
+	fi
 }
 
