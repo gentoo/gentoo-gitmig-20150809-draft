@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Parser/HTML-Parser-3.26-r2.ebuild,v 1.5 2003/02/13 11:09:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Parser/HTML-Parser-3.26-r2.ebuild,v 1.6 2003/02/28 15:37:10 gmsoft Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://cpan.valueclick.com/modules/by-category/15_World_Wide_Web_HTML_
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha hppa"
 
 DEPEND="${DEPEND}
 	>=dev-perl/HTML-Tagset-3.03"
