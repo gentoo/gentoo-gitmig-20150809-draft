@@ -5,7 +5,7 @@ virtual/os-headers	sys-kernel/linux-headers
 virtual/lpr             net-print/cups
 virtual/python          dev-lang/python
 virtual/mta             net-mail/ssmtp
-virtual/alsa            media-sound/alsa-driver    
+virtual/alsa            sys-kernel/gentoo-dev-sources
 virtual/kernel          sys-kernel/linux-headers
 virtual/linux-sources   sys-kernel/vanilla-sources
 virtual/glibc           sys-libs/glibc
