@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-2.0.0.ebuild,v 1.7 2004/01/09 14:43:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-2.0.0.ebuild,v 1.8 2004/01/09 20:22:42 gustavoz Exp $
 
 # devel version - debug
 inherit gnome2 debug
@@ -34,7 +34,7 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0"
 
 SLOT="2"
-KEYWORDS="x86 ~ppc alpha ~sparc"
+KEYWORDS="x86 ~ppc alpha sparc"
 
 # ugly, but necessary
 addwrite /usr/share/pygtk/2.0/codegen
