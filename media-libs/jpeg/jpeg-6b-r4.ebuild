@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r3.ebuild,v 1.35 2004/10/23 08:06:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/jpeg-6b-r4.ebuild,v 1.1 2004/11/11 00:06:08 vapier Exp $
 
 inherit gnuconfig flag-o-matic libtool eutils
 
@@ -26,15 +26,13 @@ src_unpack() {
 	sed -i 's/ltconfig.*/& $CHOST/' configure
 	gnuconfig_update
 	uclibctoolize
-	( use ppc-macos || use macos ) && darwintoolize
+	use ppc-macos && darwintoolize
 }
 
 src_compile() {
 	replace-cpu-flags k6 k6-2 k6-3 i586
-
 	econf --enable-shared --enable-static || die "econf failed"
-
-	make || die
+	emake || die
 }
 
 src_install() {
@@ -44,8 +42,10 @@ src_install() {
 		libdir=${D}/usr/$(get_libdir) \
 		mandir=${D}/usr/share/man/man1 \
 		install || die
+	insinto /usr/include
+	doins jpegint.h
 
-	if [ ! use ppc-macos ]; then
+	if ! use ppc-macos ; then
 		dosym libjpeg.so.62.0.0 /usr/$(get_libdir)/libjpeg.so.62
 		dosym libjpeg.so.62.0.0 /usr/$(get_libdir)/libjpeg.so
 	fi
