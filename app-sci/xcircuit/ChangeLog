@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/xcircuit
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xcircuit/ChangeLog,v 1.9 2003/02/12 05:20:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xcircuit/ChangeLog,v 1.10 2003/11/27 21:23:51 plasmaroo Exp $
+
+*xcircuit-3.1.29 (27 Nov 2003)
+
+  27 Nov 2003; <plasmaroo@gentoo.org> xcircuit-3.1.29.ebuild:
+  Version bump...
 
 *xcircuit-2.5.5 (5 Jan 2003)
 
