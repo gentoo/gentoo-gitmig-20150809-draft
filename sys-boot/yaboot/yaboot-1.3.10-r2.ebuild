@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.10-r2.ebuild,v 1.4 2004/06/24 22:36:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/yaboot/yaboot-1.3.10-r2.ebuild,v 1.5 2004/07/15 02:52:59 agriffis Exp $
 
 inherit eutils
 
-S=${WORKDIR}/${P}
 DESCRIPTION="PPC Bootloader"
 SRC_URI="http://penguinppc.org/projects/yaboot/${P}.tar.gz"
 HOMEPAGE="http://penguinppc.org/projects/yaboot/"
@@ -12,6 +11,7 @@ HOMEPAGE="http://penguinppc.org/projects/yaboot/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="ppc -x86 -amd64 -alpha -hppa -mips -sparc"
+IUSE=""
 
 DEPEND="sys-apps/powerpc-utils
 	sys-fs/hfsutils
@@ -36,4 +36,3 @@ src_install() {
 	mv -f etc/yaboot.conf.edit etc/yaboot.conf
 	make ROOT=${D} ${MAKEOPTS} install || die
 }
-

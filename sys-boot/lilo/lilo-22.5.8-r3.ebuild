@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.5.8-r3.ebuild,v 1.5 2004/06/28 01:48:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.5.8-r3.ebuild,v 1.6 2004/07/15 02:50:25 agriffis Exp $
 
 inherit mount-boot eutils flag-o-matic
 
@@ -181,4 +181,3 @@ pkg_postinst() {
 	sleep 3
 	echo
 }
-

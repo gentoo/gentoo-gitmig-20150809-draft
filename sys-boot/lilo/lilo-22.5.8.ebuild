@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.5.8.ebuild,v 1.6 2004/06/24 22:35:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.5.8.ebuild,v 1.7 2004/07/15 02:50:25 agriffis Exp $
 
 inherit mount-boot eutils flag-o-matic
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Standard Linux boot loader"
 HOMEPAGE="http://lilo.go.dyndns.org/pub/linux/lilo/"
 SRC_URI="http://home.san.rr.com/johninsd/pub/linux/lilo/${P}.tar.gz
@@ -14,6 +13,7 @@ SRC_URI="http://home.san.rr.com/johninsd/pub/linux/lilo/${P}.tar.gz
 SLOT="0"
 LICENSE="BSD GPL-2"
 KEYWORDS="-* ~x86"
+IUSE=""
 
 DEPEND="dev-lang/nasm
 	>=sys-devel/bin86-0.15.5"
@@ -162,4 +162,3 @@ pkg_postinst() {
 	sleep 3
 	echo
 }
-
