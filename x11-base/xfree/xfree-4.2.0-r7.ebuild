@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r7.ebuild,v 1.1 2002/03/06 07:59:07 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r7.ebuild,v 1.2 2002/03/08 02:18:07 chadh Exp $
 
 MY_V="`echo ${PV} |sed -e 's:\.::g'`"
 S=${WORKDIR}/xc
-DESCRIPTION="Xfree86: famouse and free X server"
+DESCRIPTION="Xfree86: famous and free X server"
 SRC_PATH0="ftp://ftp.xfree.org/pub/XFree86/${PV}/source"
 SRC_PATH1="ftp://ftp1.sourceforge.net/pub/mirrors/XFree86/${PV}/source"
 
