@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/bbpager
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbpager/ChangeLog,v 1.1 2002/02/01 21:53:38 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbpager/ChangeLog,v 1.2 2002/03/15 15:06:34 seemant Exp $
+
+*bbpager-0.3.0-r2 (15 Mar 2002)
+
+  15 Mar 2002; Seemant Kulleen <seemant@gentoo.org> bbpager-0.3.0-r2.ebuild :
+
+  Changed the DEPENDS info to reflect new virtual/blackbox because this package
+  works as well with fluxbox.
 
 *bbpager-0.3.0-r1 (1 Feb 2002)
 
