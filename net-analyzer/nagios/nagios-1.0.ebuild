@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/nagios-1.0.ebuild,v 1.2 2003/01/15 19:51:53 alron Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios/nagios-1.0.ebuild,v 1.3 2003/01/15 23:55:10 alron Exp $
 
 DESCRIPTION="Nagios $PV - merge this to pull install all of the nagios packages"
 HOMEPAGE="http://www.nagios.org/"
@@ -17,7 +17,7 @@ pkg_postinst() {
 	einfo
 	einfo "To have nagios visable on the web, please do the following:"
 	einfo "1. Execute the command:"
-	einfo " \"ebuild /var/db/pkg/net-analyzer/nagios-core-${PV}/nagios-core-${PF}.ebuild config\""
+	einfo " \"ebuild /var/db/pkg/net-analyzer/nagios-core-${PV}/nagios-core-${PV}.ebuild config\""
 	einfo " 2. Edit /etc/conf.d/apache and add \"-D NAGIOS\""
 	einfo
 	einfo "That will make nagios's web front end visable via"
