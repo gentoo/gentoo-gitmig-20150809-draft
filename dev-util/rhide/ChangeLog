@@ -1,8 +1,11 @@
 # ChangeLog for dev-util/rhide
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/ChangeLog,v 1.8 2003/05/09 16:12:58 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/ChangeLog,v 1.9 2003/05/09 23:19:33 mholzer Exp $
 
 *rhide-1.5-r1 (03 Apr 2003)
+
+  09 May 2003; Martin Holzer <mholzer@gentoo.org> rhide-1.5-r1.ebuild:
+  Fixed setedit source.
 
   03 Apr 2003; Martin Schlemmer <azarah@gentoo.org> rhide-1.5-r1 :
   Update setedit sources to the official released ones.
