@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.30 2002/07/19 01:13:33 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.31 2002/07/19 22:59:56 lostlogic Exp $
+
+*gentoolkit-0.1.15-r1 (19 Jul 2002)
+
+  19 Jul 2002; Brandon Low <lostlogic@gentoo.org> files/scripts/dep-clean gentoolkit-0.1.15-r1.ebuild:
+
+  Fix minor permissions error on dep-clean and an issue with 
+  non-escaped '.' characters in dep-clean.  Thanks to Hannes 
+  Mehnert for the catch and patch.
 
 *gentoolkit-0.1.15 (18 Jul 2002)
 

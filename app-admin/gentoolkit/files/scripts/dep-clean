@@ -180,7 +180,7 @@ qpkg -I -nc -vv | \
 
 cat ${tmp}/world.all | sed -e s:$:xxx: | \
 	fgrep "`find /usr/portage/ -iname '*.ebuild'|cut -f4,6 -d/ | \
-		sed -e s:\.ebuild:xxx:`" | \
+		sed -e s:\\.ebuild:xxx:`" | \
 		sed -e "s:^:\\\=:" -e "s:xxx::" > ${tmp}/world.new
 
 sort ${tmp}/world.new | uniq | \
@@ -253,7 +253,7 @@ if [ ${removed} ]; then
 	echo -e "${CY}These packages are installed but not in the portage tree.${NO}"
 	cat ${tmp}/current | sed -e s:$:xxx: | \
 		fgrep -v "`find /usr/portage/ -iname '*.ebuild'|cut -f4,6 -d/ | \
-			sed -e s:\.ebuild:xxx:`" | \
+			sed -e s:\\\.ebuild:xxx:`" | \
 		sed -e "s:xxx:${CY}${REMO}${YL}:" > ${tmp}/world
 	echo -ne "${YL}"
 	cat ${tmp}/world
