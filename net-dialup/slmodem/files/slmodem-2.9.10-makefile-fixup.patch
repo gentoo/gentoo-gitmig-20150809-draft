@@ -1,6 +1,6 @@
 diff -Nru slmodem-2.9.10.orig/Makefile slmodem-2.9.10/Makefile
 --- slmodem-2.9.10.orig/Makefile	2004-08-08 16:27:51.000000000 +0300
-+++ slmodem-2.9.10/Makefile	2004-09-23 21:55:55.275220920 +0300
++++ slmodem-2.9.10/Makefile	2004-09-29 23:49:21.601948472 +0300
 @@ -13,7 +13,9 @@
  #
  ###########################################################################
@@ -44,7 +44,7 @@ diff -Nru slmodem-2.9.10.orig/Makefile slmodem-2.9.10/Makefile
  	$(foreach dir,$(sub-dirs),$(MAKE) -C $(dir) $(patsubst %-sub-dirs,%,$@) && ) echo "done."
 diff -Nru slmodem-2.9.10.orig/drivers/Makefile slmodem-2.9.10/drivers/Makefile
 --- slmodem-2.9.10.orig/drivers/Makefile	2003-12-21 23:15:54.000000000 +0200
-+++ slmodem-2.9.10/drivers/Makefile	2004-09-23 21:47:51.456772504 +0300
++++ slmodem-2.9.10/drivers/Makefile	2004-09-29 23:50:09.901605808 +0300
 @@ -16,9 +16,17 @@
  #KBUILD_VERBOSE=1
  #export KBUILD_VERBOSE
@@ -123,7 +123,7 @@ diff -Nru slmodem-2.9.10.orig/drivers/Makefile slmodem-2.9.10/drivers/Makefile
 +	cp /etc/modules.conf $(DESTDIR)/etc/modules.conf.slamr && \
 +	echo 'alias char-major-212 slamr' >> $(DESTDIR)/etc/modules.conf && \
 +	echo 'alias char-major-213 slusb' >> $(DESTDIR)/etc/modules.conf 
-+	/sbin/depmod -a
++#	/sbin/depmod -a
 +
 +install-modules: uninstall-old
  	install -D -m 644 slamr.o $(module-dir)/slamr.o
@@ -180,7 +180,7 @@ diff -Nru slmodem-2.9.10.orig/drivers/Makefile slmodem-2.9.10/drivers/Makefile
 +.PHONY: install install-modules uninstall-old install-devices remove-devices  all
 diff -Nru slmodem-2.9.10.orig/modem/Makefile slmodem-2.9.10/modem/Makefile
 --- slmodem-2.9.10.orig/modem/Makefile	2003-11-20 14:50:47.000000000 +0200
-+++ slmodem-2.9.10/modem/Makefile	2004-09-23 21:47:51.457772352 +0300
++++ slmodem-2.9.10/modem/Makefile	2004-09-29 23:49:21.602948320 +0300
 @@ -16,8 +16,7 @@
  CC:= gcc
  RM:= rm -f

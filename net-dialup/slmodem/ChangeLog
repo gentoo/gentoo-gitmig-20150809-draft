@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/slmodem
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.25 2004/09/23 22:59:28 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/ChangeLog,v 1.26 2004/10/01 22:52:21 dragonheart Exp $
+
+  02 Oct 2004; Daniel Black <dragonheart@gentoo.org>
+  files/slmodem-2.9.10-makefile-fixup.patch:
+  Fixes compile for 2.4 kernels (bug #65743 and #61825). Thanks to Alin 
+  Nastac <mrness@gentoo.ro> for the fixed patch
 
 *slmodem-2.9.10 (24 Sep 2004)
 
