@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/table
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/table/ChangeLog,v 1.6 2005/01/01 14:02:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/table/ChangeLog,v 1.7 2005/02/01 08:10:52 mkennedy Exp $
+
+  01 Feb 2005; Matthew Kennedy <mkennedy@gentoo.org> metadata.xml:
+  New upstream version; Reduced ebuild; Expanded metadata.xml
 
   12 Dec 2004; Jason Wever <weeve@gentoo.org> table-1.5.53.ebuild:
   Stable on sparc.
