@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.7.5.ebuild,v 1.1 2003/06/30 23:14:03 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.7.5.ebuild,v 1.2 2003/07/01 10:18:43 aliz Exp $
 
 IUSE=""
 
@@ -277,8 +277,8 @@ src_install() {
 	# ************ automake-1.4-p6 ************
 	#
 
-	cd ${OLD14_S}
-	fix_bins "1.4"
+#	cd ${OLD14_S}
+#	fix_bins "1.4"
 
 	# Ignore duplicates like automake-1.5 and 1.6
 	#epatch ${FILESDIR}/${PN}-1.4_p5-ignore-duplicates.patch
