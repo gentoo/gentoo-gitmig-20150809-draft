@@ -5,7 +5,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/files/java-config,v 1.5 2002/03/18 21:45:38 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/files/java-config,v 1.6 2002/04/09 21:34:00 karltk Exp $
 
 version=0.2.0
 all_params="$*"
@@ -132,6 +132,7 @@ function vm_envvars() {
 			echo "PATH=\${PATH}:${!i}"
 		elif [ $i == "ADDPATH" ] && [ "$system" ]; then
 			echo "PATH=${!i}"
+			echo "ROOTPATH=${!i}"
 		elif [ $i == "ADDLDPATH" ] ; then
 			if [ "$system" ]; then
 				echo "LDPATH=${!i}"
