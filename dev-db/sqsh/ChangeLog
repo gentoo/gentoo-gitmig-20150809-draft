@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/sqsh
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqsh/ChangeLog,v 1.7 2004/03/09 15:23:33 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqsh/ChangeLog,v 1.8 2004/03/30 20:07:54 spyderous Exp $
+
+  30 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; sqsh-2.1-r1.ebuild,
+  sqsh-2.1.ebuild:
+  Change x11-base/xfree dependency to virtual/x11.
 
   09 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> sqsh-2.1-r1.ebuild:
   Adding amd64 keyword. Closing #43599.
