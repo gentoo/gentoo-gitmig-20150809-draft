@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbaudit/nbaudit-1.0.ebuild,v 1.16 2004/08/24 10:37:22 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbaudit/nbaudit-1.0.ebuild,v 1.17 2005/02/08 12:23:10 ka0ttic Exp $
+
+inherit eutils
 
 # It is officially called nat10 but the name conflicts with other projects
 # so I'm following the *BSDs suggestion of calling it nbaudit
@@ -11,28 +13,27 @@ DESCRIPTION="NetBIOS file sharing services scanner (nat10)"
 SRC_URI="http://www.tux.org/pub/security/secnet/tools/nat10/${MY_P}.tgz"
 HOMEPAGE="http://www.tux.org/pub/security/secnet/tools/nat10/"
 
-DEPEND=""
-
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 sparc"
 IUSE=""
 
+DEPEND=">=sys-apps/sed-4"
+RDEPEND="virtual/libc"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-gentoo.diff
+}
+
 src_compile() {
-
-	sed -i -e "s/# \(FLAGSM = -DLINUX -DSHADOW_PWD\)/\1 -DNO_ASMSIGNALH/; s;# LIBSM = -lshadow;LIBSM = -lshadow -L/usr/X11R6/lib/modules ;" Makefile
-
 	# NOTE: DO NOT SET CFLAGS OR THE PROGRAM WILL SEGFAULT
-	make all || die
-
+	make all || die "make failed"
 }
 
 src_install () {
-	mv nat nbaudit
-	dobin nbaudit
-
-	mv nat.1 nbaudit.1
-	doman nbaudit.1
-
+	newbin nat nbaudit
+	newman nat.1 nbaudit.1
 	dodoc README COPYING
 }

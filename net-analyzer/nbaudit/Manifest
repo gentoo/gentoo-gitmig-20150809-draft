@@ -1,14 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d0e307e7401c6c93bb262984eb72f690 ChangeLog 1236
-MD5 e192b5384fe781cadabf5fcea0de4a6f nbaudit-1.0.ebuild 1007
+MD5 b1b771826387b5464bc00b7317254a85 ChangeLog 1481
+MD5 5cdb642576e3468418bec41c13c6bddd nbaudit-1.0.ebuild 980
 MD5 3d43677d80da81ea017059e47706b615 metadata.xml 240
+MD5 3db83317eead74eb910f332814c82988 files/nbaudit-1.0-gentoo.diff 2517
 MD5 ad726c93a81f56b634d898446e1a803b files/digest-nbaudit-1.0 54
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFBKxrET+MN7JbqCpMRAkykAJ9d2gA2zh5NK1uud4jFhIcSfaLLHQCfUR5k
-B6TiDepCZcWs2+KkDWJ9xss=
-=lEFP
+iD8DBQFCCK+jEZCkKN40op4RAjxIAKCSpA2grpCvvzRKF6qkIRqcqcrmyQCeNBqD
+RTxVgccMi+t8SGT/vK9r400=
+=55tt
 -----END PGP SIGNATURE-----

@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nbaudit
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbaudit/ChangeLog,v 1.8 2004/08/24 10:37:22 eldad Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nbaudit/ChangeLog,v 1.9 2005/02/08 12:23:10 ka0ttic Exp $
+
+  08 Feb 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/nbaudit-1.0-gentoo.diff, nbaudit-1.0.ebuild:
+  Cleaned up ebuild; Added a patch with some gcc-3.4 fixes as well replacing
+  all occurrences of 'nat' with 'nbaudit' in the manual page.
 
   24 Aug 2004; Eldad Zack <eldad@gentoo.org> nbaudit-1.0.ebuild:
   Fixed -lshadow linking problem. Thanks to wernfried haas
