@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.4 2005/03/04 04:28:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.5 2005/03/04 18:59:23 vapier Exp $
 
 source /sbin/functions.sh || exit 1
 die() {
@@ -19,10 +19,10 @@ cat << EOF
 Usage: ${HILITE}crossdev${NORMAL} ${GOOD}[options]${NORMAL} ${BRACKET}--target TARGET${NORMAL}
 
 ${GOOD}Options${NORMAL}:
-    ${GOOD}-b, --binutils${NORMAL} ver    Specify version of binutils to use
-    ${GOOD}-g, --gcc${NORMAL} ver         Specify version of gcc to use
-    ${GOOD}-k, --kernel${NORMAL} ver      Specify version of kernel headers to use
-    ${GOOD}-l, --libc${NORMAL} ver        Specify version of libc to use
+    ${GOOD}--b, --binutils${NORMAL} ver   Specify version of binutils to use
+    ${GOOD}--g, --gcc${NORMAL} ver        Specify version of gcc to use
+    ${GOOD}--k, --kernel${NORMAL} ver     Specify version of kernel headers to use
+    ${GOOD}--l, --libc${NORMAL} ver       Specify version of libc to use
     ${GOOD}-a, -b, -p, -v${NORMAL}        Options to pass to emerge (see emerge(1))
 
     ${GOOD}-s1, --stage1${NORMAL}         Build a C compiler (no libc/C++)
@@ -104,15 +104,15 @@ LVER="[latest]"
 
 while [[ $# -gt 0 ]] ; do
 	case $1 in
-	-t|--target)   shift; parse_target $1;;
-	-b|--binutils) shift; BVER=-$1;;
-	-g|--gcc)      shift; GVER=-$1;;
-	-k|--kernel)   shift; KVER=-$1;;
-	-l|--libc)     shift; LVER=-$1;;
-	-s?|--stage?)  STAGE=${1:0-1};;
-	-a|-b|-p|-v)   UOPTS="${UOPTS} $1";;
-	-h|--help)     usage;;
-	*)             eerror "UNKNOWN OPTION: '$1'" ; usage 1;;
+	-t|--target)    shift; parse_target $1;;
+	--b|--binutils) shift; BVER=-$1;;
+	--g|--gcc)      shift; GVER=-$1;;
+	--k|--kernel)   shift; KVER=-$1;;
+	--l|--libc)     shift; LVER=-$1;;
+	-s?|--stage?)   STAGE=${1:0-1};;
+	-a|-b|-p|-v)    UOPTS="${UOPTS} $1";;
+	-h|--help)      usage;;
+	*)              eerror "UNKNOWN OPTION: '$1'" ; usage 1;;
 	esac
 	shift
 done
@@ -135,7 +135,7 @@ PORTDIR_OVERLAY=$(portageq envvar PORTDIR_OVERLAY)
 PORTDIR=$(portageq envvar PORTDIR)
 PORT_LOGDIR=$(portageq envvar PORT_LOGDIR)
 PORT_LOGDIR=${PORT_LOGDIR:-/var/log/portage}
-PKGDIR=$(portageq envvar PKGDIR)/cross-${CTARGET}
+PKGDIR=$(portageq envvar PKGDIR)/cross/${CTARGET}
 [[ ! -d ${PORT_LOGDIR} ]] && mkdir -p ${PORT_LOGDIR}
 (
 hr
