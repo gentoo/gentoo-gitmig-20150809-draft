@@ -1,3 +1,4 @@
 move sys-apps/brltty app-accessibility/brltty
 move app-misc/yasr app-accessibility/yasr
 
+move media-sound/festival app-accessibility/festival
