@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-eawpatches/timidity-eawpatches-12.ebuild,v 1.5 2003/02/13 13:20:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-eawpatches/timidity-eawpatches-12.ebuild,v 1.6 2003/12/08 16:15:05 spider Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Eric Welsh's GUS patches for TiMidity"
@@ -30,7 +30,7 @@ src_install () {
 
 	# Make sure ownership and perms are sane
 	cd ${D}/${instdir}
-	chown -R root.root eawpatches
+	chown -R root:root eawpatches
 	chmod -R a+rX,go-w eawpatches
 
 	# Install timidity.cfg where timidity can find it
