@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.106 2004/09/15 23:10:21 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.107 2004/09/19 16:13:01 caleb Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -12,7 +12,7 @@ ECLASS=kde
 INHERITED="$INHERITED $ECLASS"
 DESCRIPTION="Based on the $ECLASS eclass"
 HOMEPAGE="http://www.kde.org/"
-IUSE="${IUSE} debug arts"
+IUSE="${IUSE} debug arts xinerama"
 
 DEPEND=">=sys-devel/automake-1.7.0
 	sys-devel/autoconf
@@ -80,7 +80,7 @@ kde_src_compile() {
 		case $1 in
 			myconf)
 				debug-print-section myconf
-				myconf="$myconf --host=${CHOST} --prefix=${PREFIX} --with-x --enable-mitshm --with-xinerama --with-qt-dir=${QTDIR} --enable-mt"
+				myconf="$myconf --host=${CHOST} --prefix=${PREFIX} --with-x --enable-mitshm $(use_with xinerama) --with-qt-dir=${QTDIR} --enable-mt"
 				# calculate dependencies separately from compiling, enables ccache to work on kde compiles
 				[ -z "$UNSERMAKE" ] && myconf="$myconf --disable-dependency-tracking"
 				if use debug ; then
@@ -117,6 +117,13 @@ kde_src_compile() {
 				export KDEDIRS="${PREFIX}:${KDEDIR}"
 
 				cd $S
+
+				# If we're not a kde-base ebuild, then set up the /usr directories properly
+				# Perhaps this could get changed later to use econf instead?
+				if [ $PREFIX = "/usr" ]; then
+					myconf="${myconf} --mandir=/usr/share/man --infodir=/usr/share/info --datadir=/usr/share --sysconfdir=/etc --localstatedir=/var/lib"
+				fi
+
 				./configure \
 					${myconf} \
 					--libdir="\${exec_prefix}/$(get_libdir)" \
