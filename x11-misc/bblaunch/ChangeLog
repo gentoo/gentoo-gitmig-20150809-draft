@@ -1,0 +1,12 @@
+# ChangeLog for x11-misc/bblaunch
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header
+
+*bblaunch-0.0.3 (10 Dec 2002)
+  
+  10 Dec 2002; Matt Keadle <mkeadle@gentoo.org> bblaunch-0.0.3.ebuild
+  files/digest-bblaunch-0.0.3 :
+
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. Thanks to Steingrim Dovland for submitting this ebuild
+  in bug #11900.
