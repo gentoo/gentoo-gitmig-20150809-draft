@@ -1,10 +1,11 @@
 # ChangeLog for media-fonts/urw-fonts
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/ChangeLog,v 1.14 2004/11/01 17:55:25 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/urw-fonts/ChangeLog,v 1.15 2004/12/16 08:36:13 corsair Exp $
 
-  01 Nov 2004; Markus Rothe <corsair@gentoo.org>
+  16 Dec 2004; Markus Rothe <corsair@gentoo.org> urw-fonts-2.1-r2.ebuild:
+  Stable on ppc64
 
-  urw-fonts-2.1-r2.ebuild:
+  01 Nov 2004; Markus Rothe <corsair@gentoo.org> urw-fonts-2.1-r2.ebuild:
   Marked ~ppc64; bug #68103
 
   17 Oct 2004; Dylan Carlson <absinthe@gentoo.org> urw-fonts-2.1-r2.ebuild:
