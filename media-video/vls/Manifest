@@ -1,10 +1,21 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9e41d350e375888f5423c519a455b289 vls-0.5.6-r1.ebuild 916
 MD5 f36343caec9f9bd914d92cd129893774 vls-0.5.5-r1.ebuild 889
 MD5 69af3c87aaba6c0cb6805b82a71c159a vls-0.5.5.ebuild 768
-MD5 f55eeb1b14f82f0ea91bcaa2c998c2c4 vls-0.5.6-r2.ebuild 915
-MD5 be85018d5567acab522196bb15f5e912 ChangeLog 1585
+MD5 65bad42c4d1141ed4ee528f12d61900b vls-0.5.6-r2.ebuild 1010
+MD5 259c89c629b0e7fa55be3af2155e7b07 ChangeLog 1757
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
+MD5 8f73d513b104c15745ca3a2b60cdd64d files/vls-0.5.6-gcc34.patch 2553
 MD5 c02a9033fcb3db177a39b972ffb0cc6d files/digest-vls-0.5.5 61
 MD5 c02a9033fcb3db177a39b972ffb0cc6d files/digest-vls-0.5.5-r1 61
 MD5 17bf9416e2bf4aca59217e79371eb8ac files/digest-vls-0.5.6-r1 61
 MD5 17bf9416e2bf4aca59217e79371eb8ac files/digest-vls-0.5.6-r2 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCTFFF06ebR+OMO78RAo2EAKCDzuVXj5La2C2/X4q2CnMapdigHwCfYJqf
+uRLy7L7AYfy+S9mZsrkv0aE=
+=kueZ
+-----END PGP SIGNATURE-----

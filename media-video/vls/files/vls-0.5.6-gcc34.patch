@@ -1,0 +1,84 @@
+diff -uprN src.orig/core/common.h src/core/common.h
+--- src.orig/core/common.h	2005-03-31 00:01:14.000000000 +0200
++++ src/core/common.h	2005-03-31 00:25:08.000000000 +0200
+@@ -110,8 +110,6 @@ typedef unsigned long       count;
+     typedef uint32_t            u32;
+     typedef int32_t             s32;
+ 
+-    typedef uint64_t            u64;
+-    typedef int64_t             s64;
+ #else
+     typedef unsigned char       u8;
+     typedef signed char         s8;
+diff -uprN src.orig/core/hashtable.h src/core/hashtable.h
+--- src.orig/core/hashtable.h	2005-03-31 00:01:14.000000000 +0200
++++ src/core/hashtable.h	2005-03-31 00:19:30.000000000 +0200
+@@ -62,7 +62,7 @@ template <class T> class C_HashMethod
+   u32 m_uiMaxHash;
+ };
+ 
+-
++template <>
+ class C_HashMethod<u32>
+ {
+  public:
+@@ -75,7 +75,7 @@ class C_HashMethod<u32>
+   u32 m_uiMaxHash;
+ };
+ 
+-
++template <>
+ class C_HashMethod<u16>
+ {
+  public:
+@@ -88,7 +88,7 @@ class C_HashMethod<u16>
+   u32 m_uiMaxHash;
+ };
+ 
+-
++template <>
+ class C_HashMethod<handle>
+ {
+  public:
+diff -uprN src.orig/core/library.cpp src/core/library.cpp
+--- src.orig/core/library.cpp	2005-03-31 00:01:14.000000000 +0200
++++ src/core/library.cpp	2005-03-31 21:31:10.340269432 +0200
+@@ -33,7 +33,8 @@
+ // There is no preamble since this file is to be included in the files which
+ // use the template: look at vector.h for further explanation
+ 
+-
++#define DL_LAZY 1
++#include <dlfcn.h>
+ 
+ //******************************************************************************
+ // class C_Library
+Files src.orig/core/.library.cpp.swp and src/core/.library.cpp.swp differ
+diff -uprN src.orig/core/stream.cpp src/core/stream.cpp
+--- src.orig/core/stream.cpp	2005-03-31 00:01:14.000000000 +0200
++++ src/core/stream.cpp	2005-03-31 00:40:27.000000000 +0200
+@@ -317,6 +317,9 @@ template <class IOStream>
+ template <class IOStream>
+  C_Stream<IOStream>& C_Stream<IOStream>::operator >> (C_Serializable& cObject)
+ {
++  C_ClassDescription cObjectDescription = cObject.Reflect();
++  C_Serializer cSerializer(&cObject, cObjectDescription);
++  
+   try
+   {
+     u32 iByteCount = cSerializer.NextBytesCount();
+@@ -324,11 +327,12 @@ template <class IOStream>
+     {
+       const byte aBytes[iByteCount];
+       u32 iOffset = 0;
+-
++	
++      int iRc;
+       // Read the data to deserialize on the stream
+       do
+       {
+-        int iRc = m_pIOStream->Read(aBytes+iOffset, iByteCount-iOffset);
++        iRc = m_pIOStream->Read(aBytes+iOffset, iByteCount-iOffset);
+         ASSERT(iRc >= 0 || iRc == FILE_EOF);
+         iOffset += iRc;
+       }
