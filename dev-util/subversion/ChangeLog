@@ -1,10 +1,21 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.8 2003/04/25 11:36:33 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.9 2003/04/26 14:07:16 pauldv Exp $
+
+*subversion-0.21.0 (26 Apr 2003)
+
+  26 Apr 2003; Paul de Vrieze<pauldv@gentoo.org> subversion-0.21.0.ebuild:
+  New upstream version. Also do not build the apache module if the apache2 use
+  flag is not specified. As in this case subversion provides its own apr libs,
+  it actually blocks on apache2.
 
 *subversion-0.20.1 (25 Apr 2003)
 
-  25 Apr 2003; <pauldv@gentoo.org> subversion-0.20.1.ebuild:
+  26 Apr 2003; Paul de Vrieze <pauldv@gentoo.org> subversion-0.20.1.ebuild:
+  Fixed a small error in the config script. It did not ensure the existence of
+  /home/svn resulting in a failure.
+
+  25 Apr 2003; Paul de Vrieze <pauldv@gentoo.org> subversion-0.20.1.ebuild:
   Added || die to the make install parts
 
   15 Mar 2003; Martin Schlemmer <azarah@gentoo.org> subversion-0.10_pre1.ebuild :
