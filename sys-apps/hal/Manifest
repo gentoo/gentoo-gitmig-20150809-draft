@@ -2,7 +2,8 @@ MD5 faaf821c60bf4b6c663caeace3e21a95 hal-0.4.2-r1.ebuild 2728
 MD5 f6c71019d8f7b2dab5ef13de1abd9244 hal-0.4.1-r1.ebuild 2567
 MD5 8a56df2be3b94b0e0e958c48e6c14df5 hal-0.2.98-r1.ebuild 2102
 MD5 4de36bde0054e10e722225fe4ffd6c6b hal-0.4.4-r1.ebuild 2758
-MD5 2048e7a0ec1c8df30099a0a831d1079e ChangeLog 3480
+MD5 4cf759c01af0d694ce5dc082bcfd3864 hal-0.4.5.ebuild 2505
+MD5 377a6a4f274fb9a1906e99a0f1772628 ChangeLog 3593
 MD5 731695e9263a5a2e1eeba290b36078d5 metadata.xml 219
 MD5 192112dfb678a9795a93d3cdcc50bb95 files/hald 543
 MD5 2396bfac6dd9b68615328b1b9325ed2c files/hal-0.4.4-iso_label_selection.patch 1541
@@ -13,6 +14,7 @@ MD5 a9afa7e41b21ea5f012765a8ced6c10d files/digest-hal-0.4.2-r1 62
 MD5 11d67cf37182e289664f50de3ee6172f files/digest-hal-0.4.4-r1 62
 MD5 0693dbefb790150740986cce82039b82 files/hal-0.4.2-cdrom_media_check.patch 1194
 MD5 399570c945e0f4bffbeb645e057e027b files/hal-0.4.1-dm_devices_tab.patch 1028
+MD5 ada3b2801b82813b4f10fd6f6caf9d6f files/digest-hal-0.4.5 62
 MD5 314ebeadb0a53e448e74ad6a3eead3f8 files/hal-0.4.4-check_ide_floppy_for_zip_fdi.patch 1920
 MD5 2b00af86c624d74107035a007ac3c9da files/hal-0.4.4-volume_id_fat.patch 849
 MD5 eeb1838cdb78726ab674194f0d268270 files/hal-0.4.2-fstab_sync_crash.patch 468
