@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-cvs/scim-cvs-0.99.1.ebuild,v 1.4 2004/07/09 20:54:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-cvs/scim-cvs-0.99.6.ebuild,v 1.1 2004/08/14 00:34:59 usata Exp $
 
 inherit gnome2 eutils cvs
 
@@ -86,6 +86,17 @@ pkg_postinst() {
 	einfo
 	einfo "where 'your_language' can be zh_CN, zh_TW, ja_JP.eucJP or any other"
 	einfo "UTF-8 locale such as en_US.UTF-8 or ja_JP.UTF-8"
+	einfo
+	einfo "If you prefer KDE/Qt interface, try emerge app-i18n/skim."
+	einfo
+	einfo "To use Chinese input methods:"
+	einfo "	# emerge app-i18n/scim-tables app-i18n/scim-chinese"
+	einfo "To use Korean input methods:"
+	einfo "	# emerge app-i18n/scim-hangul"
+	einfo "To use Japanese input methods:"
+	einfo "	# emerge app-i18n/scim-uim"
+	einfo "To use various input methods (more than 30 languages):"
+	einfo "	# emerge app-i18n/scim-m17n"
 	einfo
 
 	gtk-query-immodules-2.0 > ${ROOT}etc/gtk-2.0/gtk.immodules
