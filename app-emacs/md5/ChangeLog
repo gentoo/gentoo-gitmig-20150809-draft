@@ -1,0 +1,9 @@
+# ChangeLog for app-emacs/md5
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/md5/ChangeLog,v 1.1 2003/11/22 06:23:21 mkennedy Exp $
+
+*md5-1.0 (22 Nov 2003)
+
+  22 Nov 2003; <mkennedy@gentoo.org> md5-1.0.ebuild, files/50md5-gentoo.el:
+  initial import. ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+

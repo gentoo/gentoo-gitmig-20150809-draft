@@ -1,0 +1,10 @@
+# ChangeLog for app-emacs/sha1
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/sha1/ChangeLog,v 1.1 2003/11/22 06:23:21 mkennedy Exp $
+
+*sha1-19990113 (22 Nov 2003)
+
+  22 Nov 2003; <mkennedy@gentoo.org> sha1-19990113.ebuild,
+  files/50sha1-gentoo.el:
+  initial import. ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
