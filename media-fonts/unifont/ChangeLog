@@ -1,6 +1,9 @@
 # ChangeLog for media-fonts/unifont
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/ChangeLog,v 1.7 2004/06/24 22:31:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/unifont/ChangeLog,v 1.8 2004/08/02 18:22:16 sejo Exp $
+
+  02 Aug 2004; <SeJo@gentoo.org> unifont-1.0-r2.ebuild:
+  added ~ppc keyword
 
   26 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> unifont-1.0-r2.ebuild:
   Changed to use Debian mirror
