@@ -2,6 +2,21 @@
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
 # $Header
 
+*fluxbox-0.1.13-r1 (21 Nov 2002)
+
+  21 Nov 2002; Matt Keadle <mkeadle@gentoo.org> fluxbox-0.1.13-r1.ebuild
+  files/digest-fluxbox-0.1.13-r1 files/fluxbox-0.1.13-menukey.patch
+
+  Patch applied to allow manipulation of the root applications menu with
+  standard keybindings. In your ~/.fluxbox/keys files you can now make
+  use of: WindowMenu, NextMenuItem, PrevMenuItem, SelectMenuItem,
+  OpenSubmenu, and CloseMenu. For instance:
+
+  Control Right :OpenSubmenu
+
+  No found issues with any flags or build types associated with fluxbox
+  
+
 *fluxbox-0.1.13 (19 Nov 2002)
 
   19 Nov 2002; Matt Keadle <mkeadle@gentoo.org> fluxbox-0.1.13.ebuild
