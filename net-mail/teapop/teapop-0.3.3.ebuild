@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/teapop-0.3.3.ebuild,v 1.1 2002/01/03 09:54:56 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/teapop-0.3.3.ebuild,v 1.2 2002/03/23 23:19:16 karltk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Tiny POP3 server"
@@ -48,4 +48,6 @@ src_install () {
 	
 	docinto rfc
 	dodoc rfc/rfc*.txt
+
+	rm -rf ${D}/usr/etc
 }
