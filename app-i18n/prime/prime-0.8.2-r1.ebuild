@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/prime-0.8.2-r1.ebuild,v 1.1 2004/05/17 18:03:48 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/prime-0.8.2-r1.ebuild,v 1.2 2004/05/22 18:53:07 usata Exp $
 
 inherit ruby eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://taiyaki.org/prime/"
 SRC_URI="http://prime.sourceforge.jp/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~alpha ~ppc"
+KEYWORDS="x86 alpha ppc"
 SLOT="0"
 
 DEPEND="virtual/ruby
