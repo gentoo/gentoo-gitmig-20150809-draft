@@ -1,0 +1,9 @@
+# ChangeLog for app-sci/gnucap
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gnucap/ChangeLog,v 1.1 2003/11/28 22:07:24 plasmaroo Exp $
+
+*gnucap-0.33 (28 Nov 2003)
+
+  28 Nov 2003; <plasmaroo@gentoo.org> gnucap-0.33.ebuild:
+  Initial commit...
+
