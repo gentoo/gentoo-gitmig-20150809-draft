@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.3_rc1.ebuild,v 1.1 2005/03/28 17:42:02 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-3.3_rc1-r1.ebuild,v 1.1 2005/03/29 13:46:27 lostlogic Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://icculus.org/openbox/releases/${P/_/-}.tar.gz
 LICENSE="GPL-2"
 SLOT="3"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
-IUSE="nls startup-notification"
+IUSE="pango nls startup-notification"
 
 RDEPEND="virtual/xft
 	virtual/x11
@@ -20,6 +20,7 @@ RDEPEND="virtual/xft
 	>=media-libs/fontconfig-2
 	>=dev-libs/libxml2-2.0"
 DEPEND="${RDEPEND}
+	pango? ( x11-libs/pango )
 	startup-notification? ( x11-libs/startup-notification )
 	dev-util/pkgconfig"
 
@@ -32,7 +33,8 @@ src_unpack() {
 }
 
 src_compile() {
-	econf `use_enable nls` || die
+	econf `use_enable nls` \
+	      `use_enable pango` || die
 	emake || die
 }
 
