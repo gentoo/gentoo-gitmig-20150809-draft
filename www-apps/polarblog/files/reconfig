@@ -1,0 +1,6 @@
+#!/bin/bash
+if [ $1 = "start" -o $1 = "install" ]; then
+	# enable RSS
+	chmod 777 ${MY_INSTALLDIR}
+	sed -e "s|/your/path/to/public_html/polarblog|${MY_INSTALLDIR}|" -i ${MY_INSTALLDIR}/config/config.php.dist
+fi
