@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.5.ebuild,v 1.3 2004/09/06 20:45:30 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.5.ebuild,v 1.4 2004/09/22 18:00:12 rac Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -52,7 +52,7 @@
 #
 # Martin Schlemmer <azarah@gentoo.org> (28 Dec 2002).
 
-IUSE="berkdb gdbm threads uclibc"
+IUSE="berkdb gdbm ithreads uclibc"
 
 inherit eutils flag-o-matic
 
@@ -97,13 +97,13 @@ RDEPEND="
 PDEPEND=">=dev-lang/perl-${PV}"
 
 pkg_setup() {
-	# I think this should rather be displayed if you *have* 'threads'
+	# I think this should rather be displayed if you *have* 'ithreads'
 	# in USE if it could break things ...
-	if use threads
+	if use ithreads
 	then
 		ewarn ""
 		ewarn "PLEASE NOTE: You are compiling perl-5.8 with"
-		ewarn "threading enabled."
+		ewarn "interpreter-level threading enabled."
 		ewarn "Threading is not supported by all applications "
 		ewarn "that compile against perl. You use threading at "
 		ewarn "your own discretion. "
@@ -113,7 +113,7 @@ pkg_setup() {
 		ewarn ""
 		ewarn "PLEASE NOTE: If you want to compile perl-5.8 with"
 		ewarn "threading enabled , you must restart this emerge"
-		ewarn "with USE=threads emerge...."
+		ewarn "with USE=ithreads emerge...."
 		ewarn "Threading is not supported by all applications "
 		ewarn "that compile against perl. You use threading at "
 		ewarn "your own discretion. "
@@ -153,9 +153,9 @@ src_compile() {
 	export LC_ALL="C"
 	local myconf=""
 
-	if use threads
+	if use ithreads
 	then
-		einfo "using threads"
+		einfo "using ithreads"
 		mythreading="-multi"
 		myconf="-Dusethreads ${myconf}"
 		myarch="${CHOST%%-*}-linux-thread"
