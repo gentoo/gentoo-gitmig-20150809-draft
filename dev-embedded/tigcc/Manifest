@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 420df847a3db1c4969aff20243f656dd metadata.xml 165
-MD5 c4227eb67187cd03c84f4526ef549b67 tigcc-0.96_beta2.ebuild 6432
 MD5 f53793cea997bd546537d4462413c6cc ChangeLog 1408
-MD5 3a8b30a23eebff88f4772ea1d8120987 tigcc-0.95-r2.ebuild 6495
+MD5 420df847a3db1c4969aff20243f656dd metadata.xml 165
 MD5 ab3a26d7b8a324524371943f5425e13b tigcc-0.95_p3.ebuild 6493
-MD5 75b1dd6ba9dd67df855f5d0a3165fd06 files/digest-tigcc-0.95-r2 315
-MD5 e161f0140b76a6dc3981581bc5103585 files/digest-tigcc-0.96_beta2 318
+MD5 3a8b30a23eebff88f4772ea1d8120987 tigcc-0.95-r2.ebuild 6495
+MD5 e3ed8d9ec7bd75eb4997b7d983087fb1 tigcc-0.96_beta2.ebuild 6298
 MD5 627b7e86641edb82ffa0702ff65de4c1 files/a68k-fix.patch 625
 MD5 1ea537485d88f982402fa3bf8930fd64 files/digest-tigcc-0.95_p3 315
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCIu/nmdTrptrqvGERAq0dAJ9r2ABq0tGbt1tU8UZlPLh975G2AACfRk8b
-GF+0nWIYKOv2da7A4Ui0lSA=
-=7C6n
------END PGP SIGNATURE-----
+MD5 75b1dd6ba9dd67df855f5d0a3165fd06 files/digest-tigcc-0.95-r2 315
+MD5 e161f0140b76a6dc3981581bc5103585 files/digest-tigcc-0.96_beta2 318

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/tigcc-0.96_beta2.ebuild,v 1.1 2005/02/28 10:18:04 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/tigcc/tigcc-0.96_beta2.ebuild,v 1.2 2005/03/01 03:21:10 mr_bones_ Exp $
 
 inherit eutils
 
@@ -18,8 +18,8 @@ HOMEPAGE="http://tigcc.ticalc.org"
 
 SRC_URI="mirror://gentoo/${PF}.tar.bz2
 	mirror://gnu/gcc/releases/gcc-${BASE_GCC}/gcc-core-${BASE_GCC}.tar.bz2
- 	mirror:/kernel/linux/devel/binutils/binutils-${BASE_BINUTILS}.tar.bz2
-	http://members.chello.at/gerhard.kofler/kevin/ti89prog/libfargo.zip 
+	mirror:/kernel/linux/devel/binutils/binutils-${BASE_BINUTILS}.tar.bz2
+	http://members.chello.at/gerhard.kofler/kevin/ti89prog/libfargo.zip
 	http://members.chello.at/gerhard.kofler/kevin/ti89prog/flashosa.zip"
 
 LICENSE="GPL-2"
@@ -40,7 +40,7 @@ src_unpack() {
 
 	cd ${WORKDIR}/gcc-${BASE_GCC}
 	epatch ${S}/sources/gcc/gcc-${BASE_GCC}-tigcc-*.diff
-	
+
 	# create build directories for binutils and gcc
 	mkdir -p ${WORKDIR}/build/binutils
 	mkdir ${WORKDIR}/build/gcc
@@ -65,7 +65,7 @@ src_compile() {
 		--disable-nls --disable-multilib --disable-shared --enable-static \
 		--disable-threads \
 		|| die "gcc - configure"
-	# GCC compilations _is intended_ to fail on a certain point, 
+	# GCC compilations _is intended_ to fail on a certain point,
 	# don't worry about that.
 	emake
 
@@ -103,22 +103,22 @@ src_install() {
 	dodir /usr/bin
 
 	# install documentation
-        if use doc ; then
-		# patch the script that launches the documentation 
+	if use doc ; then
+		# patch the script that launches the documentation
 		# browser to point to the correct location
 		sed "s:\$TIGCC/doc:/usr/share/doc/${P}:g" \
 			${S}/tigcclib/doc/converter/tigccdoc \
 			> ${S}/tigcclib/doc/converter/tigccdoc.new
-                cd ${S}/tigcclib/doc/converter
-                newbin tigccdoc.new tigccdoc
-                cd ${S}/tigcclib/doc
-                dohtml -r html/*.html
-                cp html/qt-assistant.adp ${D}/usr/share/doc/${PF}/html
+		cd ${S}/tigcclib/doc/converter
+		newbin tigccdoc.new tigccdoc
+		cd ${S}/tigcclib/doc
+		dohtml -r html/*.html
+		cp html/qt-assistant.adp ${D}/usr/share/doc/${PF}/html
 
-                cd ${S}/sources/a68k
-                docinto a68k
-                dodoc docs/*.txt
-        fi
+		cd ${S}/sources/a68k
+		docinto a68k
+		dodoc docs/*.txt
+	fi
 
 	dodir /usr/share/doc/${PF}
 	cd ${S}
@@ -154,7 +154,7 @@ src_install() {
 		/usr/ti-linux-gnu/tigcc-bin/${GCC_VER}/ti-linux-gnu-gcc
 
 	# install gas
-	# exeinto /usr/ti-linux-gnu/bin <-- a symlink will be 
+	# exeinto /usr/ti-linux-gnu/bin <-- a symlink will be
 	# created so that gas resides in /usr/ti-linux-gnu/bin too
 	cd ${WORKDIR}/build/binutils
 	newexe gas/as-new as
