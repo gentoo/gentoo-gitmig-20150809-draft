@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20021002-r1.ebuild,v 1.6 2003/04/13 10:35:30 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20021002-r1.ebuild,v 1.7 2003/04/14 09:49:39 cretin Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ HOMEPAGE="ftp://people.redhat.com/jakub/prelink"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc  ppc alpha"
+KEYWORDS="x86 ppc alpha"
 
 DEPEND=">=dev-libs/libelf-0.8
 	>=sys-libs/glibc-2.3.1
