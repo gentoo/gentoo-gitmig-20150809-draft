@@ -1,14 +1,13 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <hallski@gentoo.org>, Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-0.15-r2.ebuild,v 1.1 2001/10/07 00:09:25 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-0.15-r3.ebuild,v 1.1 2001/10/08 00:46:38 hallski Exp $
 
 DB3=db-3.1.17
-A="${P}.tar.gz ${DB3}.tar.gz"
 S=${WORKDIR}/${P}
 DESCRIPTION="A GNOME groupware application, a Microsoft Outlook workalike"
-SRC_URI="ftp://ftp.ximian.com/pub/source/${PN}/${A}
-	 ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${A}
+SRC_URI="ftp://ftp.ximian.com/pub/source/${PN}/${P}.tar.gz
+	 ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${P}.tar.gz
 	 http://www.sleepycat.com/update/3.1.17/${DB3}.tar.gz"
 HOMEPAGE="http://www.ximian.com"
 
@@ -65,16 +64,19 @@ src_compile() {
 	./configure --host=${CHOST} 		     			\
 		    --prefix=/usr					\
 		    --sysconfdir=/etc		 			\
+		    --localstatedir=/var/lib				\
 		    --enable-file-locking=no 				\
 		    --with-db3=${WORKDIR}/db3 				\
-	            --without-movemail 					\
 		    $myconf || die
 
 	make || die # emake didn't work.
 }
 
 src_install () {
-	make DESTDIR=${D} install || die
+	make prefix=${D}/usr						\
+	     sysconfdir=${D}/etc					\
+	     localstatedir=${D}/var/lib					\
+	     DESTDIR=${D} install || die
 
 	dodoc AUTHORS COPYING ChangeLog HACKING MAINTAINERS
 	dodoc NEWS README
