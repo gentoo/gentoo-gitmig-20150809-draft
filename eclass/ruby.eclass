@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.17 2003/12/24 22:14:55 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.18 2004/01/12 17:55:05 usata Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -59,8 +59,9 @@ ruby_src_unpack() {
 	[[ -n "${PATCHES}" ]] && xpatch "${PATCHES}"
 
 	if [[ "${WITH_RUBY/ruby16/}" != "${WITH_RUBY}" && "${WITH_RUBY/ruby18/}" != "${WITH_RUBY}" ]] ; then
-		mkdir ${T}/${S#${WORKDIR}}
-		cp -a * ${T}${S#${WORKDIR}}
+		cd ${WORKDIR}
+		mkdir ${T}/build
+		tar cf - . | ( cd ${T}/build ; tar xpf - )
 	fi
 }
 
@@ -104,7 +105,7 @@ ruby_econf() {
 		einfo "running econf for ruby 1.6 ;)"
 		erubyconf ruby16 $@ || die
 		einfo "running econf for ruby 1.8 ;)"
-		cd ${T}/${S#${WORKDIR}}
+		cd ${T}/build/${S#${WORKDIR}}
 		erubyconf ruby18 $@ || die
 		cd -
 	elif [[ "${WITH_RUBY/ruby16/}" != "${WITH_RUBY}" ]] ; then
@@ -130,7 +131,7 @@ ruby_emake() {
 		einfo "running emake for ruby 1.6 ;)"
 		erubymake $@ || die
 		einfo "running emake for ruby 1.8 ;)"
-		cd ${T}/${S#${WORKDIR}}
+		cd ${T}/build/${S#${WORKDIR}}
 		erubymake $@ || die
 		cd -
 	elif [[ "${WITH_RUBY/ruby16/}" != "${WITH_RUBY}" ]] ; then
@@ -190,7 +191,7 @@ ruby_einstall() {
 		einfo "running einstall for ruby 1.6 ;)"
 		erubyinstall ruby16 $@
 		einfo "running einstall for ruby 1.8 ;)"
-		cd ${T}/${S#${WORKDIR}}
+		cd ${T}/build/${S#${WORKDIR}}
 		erubyinstall ruby18 $@
 		cd -
 	elif [[ "${WITH_RUBY/ruby16/}" != "${WITH_RUBY}" ]] ; then
