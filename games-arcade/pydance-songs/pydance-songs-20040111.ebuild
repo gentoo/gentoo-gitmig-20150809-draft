@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pydance-songs/pydance-songs-20040111.ebuild,v 1.2 2004/02/20 06:20:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pydance-songs/pydance-songs-20040111.ebuild,v 1.3 2004/04/11 03:09:18 mr_bones_ Exp $
 
 inherit games
 
@@ -23,6 +23,7 @@ SRC_URI="http://icculus.org/pyddr/6jan.ogg
 LICENSE="X11"
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 RDEPEND="games-arcade/pydance"
 
