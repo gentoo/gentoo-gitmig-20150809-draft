@@ -1,0 +1,10 @@
+# ChangeLog for games-arcade/pacmanarena
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pacmanarena/ChangeLog,v 1.1 2003/09/26 02:07:44 msterret Exp $
+
+*pacmanarena-0.01 (25 Sep 2003)
+
+  25 Sep 2003; Michael Sterrett <msterret@gentoo.org> pacmanarena-0.01.ebuild:
+  initial commit; ebuild based on the one submitted by Gustavo Felisberto via
+  bug 29425
+
