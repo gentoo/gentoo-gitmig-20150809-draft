@@ -1,14 +1,18 @@
 # ChangeLog for media-libs/libmad
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/ChangeLog,v 1.8 2003/09/17 01:19:38 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/ChangeLog,v 1.9 2003/11/04 09:43:11 kumba Exp $
+
+
+*libmad-0.15.0b-r1 (03 Sep 2003)
+
+  04 Nov 2003; Joshua Kinard <kumba@gentoo.org> libmad-0.15.0b-r1.ebuild:
+  Added ~mips to KEYWORDS
 
   16 Sep 2003; Jason Wever <weeve@gentoo.org> libmad-0.15.0b-r1.ebuild:
   Marked stable for sparc.
 
   07 Sep 2003; Caleb Tennis <caleb@gentoo.org> libmad-0.15.0b-r1.ebuild:
   Marked as x86 stable as KDE (arts) depends on it.
-
-*libmad-0.15.0b-r1 (03 Sep 2003)
 
   03 Sep 2003; Brandon Low <lostlogic@gentoo.org> libmad-0.15.0b-r1.ebuild:
   Add a speedup patgch this is experimental, see how it goes for you
