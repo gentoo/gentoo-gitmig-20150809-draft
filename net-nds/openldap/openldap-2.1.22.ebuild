@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.22.ebuild,v 1.1 2003/07/09 20:12:20 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.1.22.ebuild,v 1.2 2003/07/10 23:22:00 robbat2 Exp $
 
 IUSE="ssl tcpd readline ipv6 gdbm sasl kerberos odbc perl slp berkdb"
 
@@ -112,6 +112,7 @@ src_compile() {
 	myconf="${myconf} --enable-rewrite --enable-rlookups"
 	myconf="${myconf} --enable-meta --enable-monitor"
 	myconf="${myconf} --enable-null --enable-shell"
+	myconf="${myconf} --enable-local --enable-proctitle"
 
 	# disabled options
 	# --enable-bdb --with-bdb-module=dynamic

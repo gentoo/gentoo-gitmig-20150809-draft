@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.41 2003/07/09 20:12:20 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.42 2003/07/10 23:22:00 robbat2 Exp $
+
+  10 Jul 2003; Robin H. Johnson <robbat2@gentoo.org> openldap-2.1.22.ebuild:
+  AF_UNIX and process title support.
 
   09 Jul 2003; Nick Hadaway <raker@gentoo.org> openldap-2.1.22.ebuild:
   Version bump.  Added ebuild changes made to 2.0.27-r4 to 2.1.22.
