@@ -28,5 +28,5 @@ src_install () {
 	dodoc doc/*.txt
 	dodoc doc/Tech.Notes
 	docinto html
-	dodoc doc/*.html
+	dohtml doc/*.html
 }

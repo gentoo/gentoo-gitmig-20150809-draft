@@ -1,14 +1,18 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.2 2002/02/20 21:04:25 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.3 2002/02/21 09:45:09 gbevin Exp $
 
+  21 Feb 2002; G.Bevin <gbevin@gentoo.org> libpcre-3.9.ebuild :
+  
+  Fixed html docs installation problem.
+  
 *libpcre-3.9 (20 Feb 2002)
 
-  20 Feb 2002; G.Bevin <gbevin@gentoo.org> :
+  20 Feb 2002; G.Bevin <gbevin@gentoo.org> libpcre-3.9.ebuild,
+  files/digest-libpcre-3.9:
   
   Version upgrade to latest version.
   Added binary compatibility slot 3.
-  
 
 *libpcre-3.7 (1 Feb 2002)
 
