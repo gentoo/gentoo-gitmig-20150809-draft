@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-0.5.ebuild,v 1.1 2005/03/03 15:12:50 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-process/htop/htop-0.5.ebuild,v 1.2 2005/03/04 14:14:20 josejx Exp $
 
 inherit eutils flag-o-matic
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://htop.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc amd64"
+KEYWORDS="x86 ppc ~sparc amd64"
 IUSE="debug"
 DEPEND="sys-libs/ncurses"
 
