@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/pdflib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/ChangeLog,v 1.51 2005/01/02 06:41:23 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/ChangeLog,v 1.52 2005/02/02 21:49:10 j4rg0n Exp $
+
+  02 Feb 2005; Lina Pezzella <j4rg0n@gentoo.org> pdflib-5.0.4_p1-r1.ebuild:
+  Stable ppc-macos
 
   02 Jan 2005; Lina Pezzella <j4rg0n@gentoo.org> pdflib-5.0.4_p1-r1.ebuild:
   Unstable ppc-macos.
