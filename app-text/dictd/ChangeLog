@@ -1,6 +1,9 @@
 # ChangeLog for app-text/dictd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.22 2005/01/01 16:08:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.23 2005/02/19 10:06:27 corsair Exp $
+
+  19 Feb 2005; Markus Rothe <corsair@gentoo.org> dictd-1.9.11-r1.ebuild:
+  Stable on ppc64; bug #81211
 
   20 Dec 2004; Alastair Tse <liquidx@gentoo.org> dictd-1.9.14.ebuild:
   fix installation of conf.d and init.d files for 1.9.14 (#74771)
