@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.ebuild,v 1.20 2005/02/28 15:52:45 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.ebuild,v 1.21 2005/03/01 03:27:09 mr_bones_ Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -166,7 +166,7 @@ src_compile() {
 
 	if use xvmc; then
 		count="0"
-		use nvidia && count="`expr ${count} + 1`" 
+		use nvidia && count="`expr ${count} + 1`"
 		use i8x0 && count="`expr ${count} + 1`"
 		use cle266 && count="`expr ${count} + 1`"
 		if [ "${count}" -gt "1" ]; then
