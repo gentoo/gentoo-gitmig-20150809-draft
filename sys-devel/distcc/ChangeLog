@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.53 2003/07/12 19:57:46 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.54 2003/07/12 23:02:52 lisa Exp $
 
 *distcc-2.8 (09 Jul 2003)
   10 Jul 2003: Lisa Marie Seelye <lisa@gentoo.org> :
@@ -9,6 +9,10 @@
   12 Jul 2003: Lisa Marie Seelye <lisa@gentoo.org> :
   Changed the USE flags from 'gnome' to 'gtk2' since distccmon-gnome was
   changed to use gtk instead of gnome libraries.
+
+  12 Jul 2003: Lisa Marie Seelye <lisa@gentoo.org> :
+  Oops. :)  `gtk' is preferred over `gtk2'.  Thanks Spider for the 
+  heads up!
 
 *distcc-2.7.1 (01 Jul 2003)
 
