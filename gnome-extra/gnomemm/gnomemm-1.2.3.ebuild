@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnomemm/gnomemm-1.2.3.ebuild,v 1.1 2002/07/31 17:00:15 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnomemm/gnomemm-1.2.3.ebuild,v 1.2 2002/08/15 01:43:41 spider Exp $
 
 
 S=${WORKDIR}/${P}
@@ -11,10 +11,9 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="x86"
 
-RDEPEND="( >=x11-libs/gtkmm-1.2.8
-			<x11-libs/gtkmm-1.3.0 )
-	 >=gnome-base/ORBit-0.5.11
-	 =sys-libs/db-1*"
+RDEPEND="=x11-libs/gtkmm-1.2*
+		 >=gnome-base/ORBit-0.5.11
+		 =sys-libs/db-1*"
 
 DEPEND="${RDEPEND}"
 
