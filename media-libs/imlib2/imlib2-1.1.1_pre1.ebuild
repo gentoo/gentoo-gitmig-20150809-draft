@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.1.1_pre1.ebuild,v 1.2 2004/06/24 23:03:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.1.1_pre1.ebuild,v 1.3 2004/07/14 19:47:54 agriffis Exp $
 
 inherit enlightenment flag-o-matic gcc
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.enlightenment.org/pages/imlib2.html"
 SRC_URI="mirror://sourceforge/enlightenment/${MY_P}.tar.gz"
 
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64"
-IUSE="${IUSE} mmx gif png jpeg tiff static X"
+IUSE="X gif jpeg mmx png tiff"
 
 DEPEND="=media-libs/freetype-2*
 	gif? ( media-libs/libungif
