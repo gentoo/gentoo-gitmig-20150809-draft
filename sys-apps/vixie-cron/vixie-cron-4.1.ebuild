@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/vixie-cron-4.1.ebuild,v 1.2 2004/08/27 22:57:25 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/vixie-cron-4.1.ebuild,v 1.3 2004/08/27 22:59:00 ciaranm Exp $
 
 inherit eutils
 
@@ -49,7 +49,7 @@ src_compile() {
 }
 
 src_install() {
-	#this does not work if the directory exists already
+	# this does not work if the directory exists already
 	diropts -m0750 -o root -g cron
 	dodir /var/spool/cron/crontabs
 	keepdir /var/spool/cron/crontabs/
