@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/docbook2X-0.6.1.ebuild,v 1.13 2002/10/04 05:04:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/docbook2X-0.6.1.ebuild,v 1.14 2002/10/19 16:16:04 aliz Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Tolls to convert docbook to man and info"
-SRC_URI="http://download.sourceforge.net/docbook2x/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/docbook2x/${P}.tar.gz"
 HOMEPAGE="http://docbook2x.sourceforge.net"
 
 SLOT="0"

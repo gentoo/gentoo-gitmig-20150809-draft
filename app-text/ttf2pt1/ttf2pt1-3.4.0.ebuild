@@ -5,7 +5,7 @@
 A=${P}.tgz
 S=${WORKDIR}/${P}
 DESCRIPTION="Converts True Type to Type 1 fonts"
-SRC_URI="http://download.sourceforge.net/ttf2pt1/${A}"
+SRC_URI="mirror://sourceforge/ttf2pt1/${A}"
 HOMEPAGE="http://ttf2pt1.sourceforge.net"
 KEYWORDS="x86 sparc sparc64"
 SLOT="0"

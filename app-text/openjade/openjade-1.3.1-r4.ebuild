@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.1-r4.ebuild,v 1.7 2002/10/04 05:06:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.1-r4.ebuild,v 1.8 2002/10/19 16:16:04 aliz Exp $
 
 inherit libtool flag-o-matic
 
@@ -9,7 +9,7 @@ filter-flags -fno-exceptions
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Jade is an implemetation of DSSSL - an ISO standard for formatting SGML and XML documents"
-SRC_URI="http://download.sourceforge.net/openjade/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/openjade/${P}.tar.gz"
 HOMEPAGE="http://openjade.sourceforge.net"
 SLOT="0"
 LICENSE="as-is"

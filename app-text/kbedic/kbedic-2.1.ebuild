@@ -1,13 +1,13 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/kbedic-2.1.ebuild,v 1.8 2002/10/17 14:31:19 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/kbedic-2.1.ebuild,v 1.9 2002/10/19 16:16:04 aliz Exp $
 
 use kde && inherit kde
 
 S=${WORKDIR}/${P}
 DESCRIPTION="English <-> Bulgarian Dictionary"
 SRC_URI="http://kbedic.search.bg/download/${P}.tar.gz
-	 http://ftp1.sourceforge.net/kbedic/${P}.tar.gz"
+	 mirror://sourceforge/kbedic/${P}.tar.gz"
 HOMEPAGE="http://kbedic.sourceforge.net"
 KEYWORDS="x86 sparc sparc64"
 SLOT="0"
