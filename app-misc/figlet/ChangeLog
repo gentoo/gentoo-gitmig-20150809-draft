@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/figlet
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/ChangeLog,v 1.4 2003/02/12 04:58:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/ChangeLog,v 1.5 2003/02/20 13:53:28 gmsoft Exp $
+
+  20 Feb 2003; Guy Martin <gmsoft@gentoo.org> figlet-22-r1.ebuild :
+  Added hppa to keywords.
 
 *figlet-22-r1 (28 Oct 2002)
 
