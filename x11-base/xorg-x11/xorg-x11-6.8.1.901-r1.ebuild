@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.901-r1.ebuild,v 1.4 2005/01/16 05:20:18 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.901-r1.ebuild,v 1.5 2005/01/20 18:51:12 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -311,7 +311,8 @@ src_install() {
 
 	# .la files for libtool support
 	insinto /usr/$(get_libdir)
-	doins ${FILES_DIR}/$(get_libdir)/*.la
+	# (#67729) Needs to be lib, not $(get_libdir)
+	doins ${FILES_DIR}/lib/*.la
 
 	# Backwards compat, FHS, etc.
 	dosym ../../usr/X11R6/bin/Xorg /etc/X11/X
