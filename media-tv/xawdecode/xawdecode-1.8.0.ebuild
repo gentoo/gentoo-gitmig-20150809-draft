@@ -15,7 +15,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~arm"
 
 RDEPEND="virtual/x11
 	>=media-libs/zvbi-0.2.4
-	|| ( x11-libs/neXtaw x11-libs/xaw )
+	|| ( x11-libs/neXtaw x11-libs/Xaw3d )
 	x86? ( >=media-libs/divx4linux-20030428 )
 	ffmpeg? ( >=media-video/ffmpeg-0.4.7 )
 	xvid? ( >=media-libs/xvid-0.9.1 )
