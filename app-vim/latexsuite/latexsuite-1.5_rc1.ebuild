@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/latexsuite/latexsuite-1.5_rc1.ebuild,v 1.7 2004/07/14 13:38:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/latexsuite/latexsuite-1.5_rc1.ebuild,v 1.8 2004/07/27 06:19:56 ciaranm Exp $
 
 inherit vim-plugin
 
@@ -29,7 +29,7 @@ pkg_postinst() {
 	einfo ""
 	einfo "To use the latexSuite plugin add:"
 	einfo "   filetype plugin on"
-	einfo "   set grepprg=grep\ -nH\ $*"
+	einfo '   set grepprg=grep\ -nH\ $*'
 	einfo "to your ~/.vimrc-file"
 	einfo ""
 	einfo "Help for this plugin is available with ':help latex-suite' in vim"

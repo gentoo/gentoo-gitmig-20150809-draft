@@ -1,6 +1,10 @@
 # ChangeLog for app-vim/latexsuite
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/latexsuite/ChangeLog,v 1.9 2004/06/24 23:02:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/latexsuite/ChangeLog,v 1.10 2004/07/27 06:19:56 ciaranm Exp $
+
+  27 Jul 2004; Ciaran McCreesh <ciaranm@gentoo.org> latexsuite-1.5.ebuild,
+  latexsuite-1.5_rc1.ebuild:
+  Fix einfo for bug #58377
 
   20 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> latexsuite-1.5.ebuild:
   Stable on sparc
