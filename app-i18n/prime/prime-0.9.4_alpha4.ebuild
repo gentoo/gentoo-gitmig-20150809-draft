@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/prime-0.8.4.ebuild,v 1.6 2005/01/01 14:37:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/prime-0.9.4_alpha4.ebuild,v 1.1 2005/02/08 10:19:55 usata Exp $
 
 inherit ruby
 
@@ -9,13 +9,15 @@ HOMEPAGE="http://taiyaki.org/prime/"
 SRC_URI="http://prime.sourceforge.jp/src/${P/_/-}.tar.gz"
 
 LICENSE="GPL-2"
+# 0.8.X -> stable, 0.9.Y -> development; dictionary format may change
+# between releases in development branch, so please use it with care
 SLOT="0"
-KEYWORDS="alpha ppc x86"
+KEYWORDS="~alpha ~ppc ~x86"
 IUSE="emacs"
 
-DEPEND="virtual/ruby
-	app-dicts/prime-dict
-	>=dev-libs/suikyo-1.3.0
+DEPEND=">=app-dicts/prime-dict-0.8.5
+	>=dev-libs/suikyo-2.0.1_alpha2"
+RDEPEND="${DEPEND}
 	dev-ruby/ruby-progressbar
 	dev-ruby/sary-ruby"
 PDEPEND="emacs? ( app-emacs/prime-el )"
@@ -30,8 +32,7 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
-	make DESTDIR=${D} install-etc || die
+	make DESTDIR=${D} install install-etc || die
 
 	erubydoc
 }
