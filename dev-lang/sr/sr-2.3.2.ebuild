@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/sr/sr-2.3.2.ebuild,v 1.5 2004/03/14 02:40:38 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/sr/sr-2.3.2.ebuild,v 1.6 2004/04/16 02:33:00 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="SR (Synchronizing Resources) is a language for writing concurrent programs"
 HOMEPAGE="http://www.cs.arizona.edu/sr"

@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98.36.ebuild,v 1.6 2003/12/09 18:05:14 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98.36.ebuild,v 1.7 2004/04/16 02:29:47 vapier Exp $
+
+inherit etuils
 
 DESCRIPTION="groovy little assembler"
 HOMEPAGE="http://nasm.sourceforge.net/"
@@ -17,15 +19,15 @@ DEPEND="!build? ( dev-lang/perl )
 
 src_unpack() {
 	unpack ${A}
-
-	[ -z "`use doc`" ] && cd ${S} && epatch ${FILESDIR}/${P}-remove-doc-target.diff
+	cd ${S}
+	use doc || epatch ${FILESDIR}/${P}-remove-doc-target.diff
 }
 
 src_compile() {
 	./configure --prefix=/usr || die
 
-	if [ `use build` ] ; then
-		make nasm
+	if use build ; then
+		make nasm || die
 	else
 		make everything || die
 	fi
@@ -33,14 +35,14 @@ src_compile() {
 }
 
 src_install() {
-	if [ `use build` ] ; then
+	if use build ; then
 		dobin nasm
 	else
 		dobin nasm ndisasm rdoff/{ldrdf,rdf2bin,rdf2ihx,rdfdump,rdflib,rdx}
 		dosym /usr/bin/rdf2bin /usr/bin/rdf2com
 		doman nasm.1 ndisasm.1
-		dodoc AUTHORS CHANGES COPYING ChangeLog INSTALL README TODO
-		if [ `use doc` ] ; then
+		dodoc AUTHORS CHANGES ChangeLog INSTALL README TODO
+		if use doc ; then
 			doinfo doc/info/*
 			dohtml doc/html/*
 			dodoc doc/nasmdoc.*

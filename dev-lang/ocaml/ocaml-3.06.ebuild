@@ -1,8 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.06.ebuild,v 1.11 2004/02/27 19:38:42 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.06.ebuild,v 1.12 2004/04/16 02:30:10 vapier Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 DESCRIPTION="fast modern type-inferring functional programming language descended from the ML (Meta Language) family"
 HOMEPAGE="http://www.ocaml.org/"
@@ -17,7 +17,7 @@ DEPEND="virtual/glibc
 	tcltk? ( >=dev-lang/tk-3.3.3 )"
 
 src_compile() {
-filter-flags "-fstack-protector"
+	filter-flags "-fstack-protector"
 
 	local myconf
 	use tcltk || myconf="-no-tk"
@@ -30,7 +30,6 @@ filter-flags "-fstack-protector"
 		epatch ${FILESDIR}/ocaml-3.06-sparc-configure.patch
 		myconf="${myconfg} -host sparc-unknown-linux-gnu"
 	fi
-
 
 	./configure -prefix /usr \
 		-bindir /usr/bin \
@@ -53,5 +52,5 @@ src_install() {
 	dosed "s:${D}::g" /usr/lib/ocaml/ld.conf
 
 	# documentation
-	dodoc Changes INSTALL LICENSE README Upgrading
+	dodoc Changes INSTALL README Upgrading
 }

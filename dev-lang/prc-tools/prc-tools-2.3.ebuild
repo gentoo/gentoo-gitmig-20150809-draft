@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/prc-tools/prc-tools-2.3.ebuild,v 1.5 2004/04/06 03:01:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/prc-tools/prc-tools-2.3.ebuild,v 1.6 2004/04/16 02:30:27 vapier Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic eutils
 
 BIN_V="binutils-2.14"
 GDB_V="gdb-5.3"

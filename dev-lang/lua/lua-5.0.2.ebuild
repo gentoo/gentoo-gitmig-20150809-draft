@@ -1,19 +1,22 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.0.2.ebuild,v 1.3 2004/03/29 19:04:12 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/lua/lua-5.0.2.ebuild,v 1.4 2004/04/16 02:29:02 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="A powerful light-weight programming language designed for extending applications"
 HOMEPAGE="http://www.lua.org/"
 SRC_URI="http://www.lua.org/ftp/${P}.tar.gz"
+
 LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~alpha -hppa ~mips ~ppc sparc x86 ~amd64"
 IUSE="readline"
+
 DEPEND=">=sys-apps/sed-4
 	sys-apps/findutils"
 
 src_unpack() {
-
 	unpack ${A}
 
 	epatch ${FILESDIR}/lua-${PV}-pic.patch
@@ -32,7 +35,7 @@ src_unpack() {
 	sed -i doc/readme.html \
 		-e 's:\(/README\)\("\):\1.gz\2:g'
 
-	if [ `use readline` ]; then
+	if use readline ; then
 		sed -i config \
 			-e "s:^#\(USERCONF=-DLUA_USERCONFIG='\"\$(LUA)/etc/saconfig.c\"' -DUSE_READLINE\):\1:" \
 			-e 's:^#\(EXTRA_LIBS= -lm -ldl -lreadline\) # \(-lhistory -lcurses -lncurses\):\1 \2:'
@@ -52,7 +55,6 @@ Version: ${PV}
 Cflags: -I\${includedir}
 Libs: -L\${libdir} -llua -llualib -ldl -lm
 EOF
-
 }
 
 src_compile() {
@@ -62,10 +64,9 @@ src_compile() {
 }
 
 src_install() {
-
 	make DESTDIR=${D} install soinstall || die "make install soinstall failed"
 
-	dodoc COPYRIGHT HISTORY UPDATE
+	dodoc HISTORY UPDATE
 	dohtml doc/*.html doc/*.gif
 	for i in `find . -name README -printf "%h\n"`; do
 		docinto ${i#.}
@@ -80,5 +81,4 @@ src_install() {
 	doins etc/lua.xpm
 	insinto /usr/lib/pkgconfig
 	doins etc/lua.pc
-
 }

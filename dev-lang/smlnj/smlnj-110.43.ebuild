@@ -1,10 +1,9 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/smlnj-110.43.ebuild,v 1.2 2003/10/03 05:24:38 kumba Exp $
-
-IUSE=""
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/smlnj-110.43.ebuild,v 1.3 2004/04/16 02:32:26 vapier Exp $
 
 DESCRIPTION="Standard ML of New Jersey compiler and libraries"
+HOMEPAGE="http://cm.bell-labs.com/cm/cs/what/smlnj/"
 SRC_URI="ftp://ftp.research.bell-labs.com/dist/smlnj/working/${PV}/config.tgz
 	ftp://ftp.research.bell-labs.com/dist/smlnj/working/${PV}/runtime.tgz
 	ftp://ftp.research.bell-labs.com/dist/smlnj/working/${PV}/boot.x86-unix.tgz
@@ -15,12 +14,11 @@ SRC_URI="ftp://ftp.research.bell-labs.com/dist/smlnj/working/${PV}/config.tgz
 	ftp://ftp.research.bell-labs.com/dist/smlnj/working/${PV}/cml.tgz
 	ftp://ftp.research.bell-labs.com/dist/smlnj/working/${PV}/eXene.tgz"
 
-HOMEPAGE="http://cm.bell-labs.com/cm/cs/what/smlnj/"
-
 LICENSE="BSD"
-KEYWORDS="-* ~x86"
-
 SLOT="0"
+KEYWORDS="-* ~x86"
+IUSE=""
+
 DEPEND="virtual/glibc"
 
 SMLNJ_DEST="/usr/share/smlnj"
@@ -65,8 +63,7 @@ src_compile() {
 	./config/install.sh || die
 }
 
-src_install () {
-
+src_install() {
 	dodir ${SMLNJ_DEST}
 
 	cp -r ${WORKDIR}/{bin,lib} ${D}${SMLNJ_DEST} || die
@@ -82,5 +79,4 @@ src_install () {
 	dosym ${SMLNJ_DEST}/bin/ml-makedepend /usr/bin
 	dosym ${SMLNJ_DEST}/bin/ml-yacc /usr/bin
 	dosym ${SMLNJ_DEST}/bin/sml /usr/bin
-
 }
