@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/vanilla-sources-2.6.11.4.ebuild,v 1.3 2005/03/27 20:31:57 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/vanilla-sources-2.6.11.5.ebuild,v 1.1 2005/03/27 20:31:57 chainsaw Exp $
 
 detect_kpatch() {
 	[ "${KV_PATCH/.[0-9]}" == "${KV_PATCH}" ] && return 1
