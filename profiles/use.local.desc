@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.721 2004/11/07 02:40:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.722 2004/11/07 17:38:40 ferringb Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -131,8 +131,7 @@ app-text/namazu:kakasi - Enable kakasi support for namazu
 app-text/noweb:icon - Enable icon language support for noweb
 app-text/sword-modules:intl - Enable different languages
 app-text/sword:icu - Enable icu support for sword
-app-text/xpdf:nodrm - Disable the drm feature
-decoder.
+app-text/xpdf:nodrm - Disable the drm feature decoder.
 dev-cpp/sptk:fltk - Enable FLTK support
 dev-db/firebird:inetd - If you want inetd version instead of a superserver (daemon)
 dev-db/postgresql:pg-hier - Enables recursive queries like Oracle's 'CONNECT BY' feature.
@@ -436,8 +435,7 @@ media-video/vlc:faad - Enables faad2 support
 media-video/vlc:matroska - Enables support for the matroska video format
 media-video/vlc:v4l - Enables video4linux support
 media-video/winki:css - Enables ripping of encrypted dvds
-media-video/winki:vcd - Enables creation of vcds
-mime preprocessor.
+media-video/winki:vcd - Enables creation of vcds mime preprocessor.
 net-analyzer/fprobe:messages - enable console messages
 net-analyzer/nagios-core:noweb - disable web interface
 net-analyzer/nagios-plugins:nagios-dns - installs deps for dns monitoring
