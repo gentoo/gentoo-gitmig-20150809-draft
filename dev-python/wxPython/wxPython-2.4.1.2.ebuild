@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/wxPython-2.4.1.2.ebuild,v 1.8 2003/10/08 21:16:14 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/wxPython-2.4.1.2.ebuild,v 1.9 2003/12/26 03:19:13 weeve Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.wxpython.org/"
 
 SLOT="0"
 LICENSE="wxWinLL-3"
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc sparc ~alpha"
 
 RDEPEND=">=dev-lang/python-2.1
 	=x11-libs/wxGTK-2.4.1*
