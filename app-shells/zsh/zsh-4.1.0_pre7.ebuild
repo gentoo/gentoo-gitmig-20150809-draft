@@ -1,38 +1,35 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.6-r3.ebuild,v 1.5 2003/04/17 08:39:02 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.1.0_pre7.ebuild,v 1.1 2003/04/17 08:39:02 vladimir Exp $
 
 IUSE="ncurses"
+MY_PV=${PV%_*}-dev-${PV#*_pre}
+MY_PN=${PN}-${MY_PV}
+S=${WORKDIR}/${MY_PN}
 
 DESCRIPTION="UNIX Shell similar to the Korn shell"
-MYPATCH="zsh_4.0.6-15.diff"
 HOMEPAGE="http://www.zsh.org/"
-SRC_URI="ftp://ftp.zsh.org/pub/${P}.tar.gz
-	 http://ftp.debian.org/debian/pool/main/z/${PN}/${MYPATCH}.gz
-	 http://cvs.gentoo.org/~vladimir/distfiles/zshall-${PV}.bz2"
+SRC_URI="ftp://ftp.zsh.org/pub/zsh/development/${MY_PN}.tar.bz2
+		http://cvs.gentoo.org/~vladimir/distfiles/zshall-${MY_PV}.bz2"
 
 SLOT="0"
 LICENSE="ZSH"
-KEYWORDS="x86 alpha ppc ~sparc"
+KEYWORDS="~x86 ~alpha ~ppc ~sparc"
 
 DEPEND="ncurses? ( >=sys-libs/ncurses-5.1 )"
 
-src_unpack() {
-	unpack ${A}
-	patch -p0 < ${MYPATCH}
-}
-	
 src_compile() {
 
 	# New zshall.1 generated with the following, run in Doc:
 	# perl -nle'$_ = `cat $1` if /^\.so man1\/(.+\.1)/;print' zshall.1
-	mv ${WORKDIR}/zshall-${PV} ${S}/Doc/zshall.1
-
+	mv ${WORKDIR}/zshall-${MY_PV} ${S}/Doc/zshall.1
+	
 	use ncurses && MYCONF="--with-curses-terminfo"
 	
 	econf \
 		--bindir=/bin \
 		--libdir=/usr/lib \
+		--with-curses-terminfo \
 		--enable-maildir-support \
 		--enable-etcdir=/etc/zsh \
 		--enable-zshenv=/etc/zsh/zshenv \
