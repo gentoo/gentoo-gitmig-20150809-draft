@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/metacity
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.87 2004/12/28 22:38:54 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.88 2005/01/08 23:22:55 slarti Exp $
+
+  08 Jan 2005; Tom Martin <slarti@gentoo.org> metacity-2.8.6-r1.ebuild:
+  Stable on amd64.
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
