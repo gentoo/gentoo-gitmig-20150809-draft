@@ -1,3 +1,4 @@
-MD5 e5c4881e9aba7bf856ee28f82c007adb files/digest-leaflet-19990601 67
-MD5 ecbebef2eec244b06de0439c4be044bb leaflet-19990601.ebuild 602
 MD5 7a6523ab616e169a64bedd2dddc46781 ChangeLog 456
+MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+MD5 ecbebef2eec244b06de0439c4be044bb leaflet-19990601.ebuild 602
+MD5 e5c4881e9aba7bf856ee28f82c007adb files/digest-leaflet-19990601 67
