@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-collections
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/ChangeLog,v 1.21 2004/07/16 20:14:11 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/ChangeLog,v 1.22 2004/08/24 03:46:38 zx Exp $
+
+  23 Aug 2004; Chris Aniszczyk <zx@gentoo.org>
+  -commons-collections-3.0-r1.ebuild, commons-collections-3.1.ebuild:
+  Marking stable on x86 & cleanup
 
 *commons-collections-3.1 (16 Jul 2004)
 
