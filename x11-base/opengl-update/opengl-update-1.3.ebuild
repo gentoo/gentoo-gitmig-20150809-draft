@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/opengl-update-1.3.ebuild,v 1.10 2003/02/13 16:53:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/opengl-update-1.3.ebuild,v 1.11 2004/02/22 12:29:26 mr_bones_ Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Utility to change the OpenGL interface being used."
