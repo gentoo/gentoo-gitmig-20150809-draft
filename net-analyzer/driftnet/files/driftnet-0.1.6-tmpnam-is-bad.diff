@@ -1,0 +1,69 @@
+diff --exclude='*~' -urN driftnet-0.1.6.orig/display.c driftnet-0.1.6/display.c
+--- driftnet-0.1.6.orig/display.c	2005-03-18 07:55:41.000000000 -0500
++++ driftnet-0.1.6/display.c	2005-03-18 09:03:59.000000000 -0500
+@@ -20,6 +20,7 @@
+ #include <fcntl.h>
+ #include <string.h>
+ #include <errno.h>
++#include <time.h>
+ 
+ #include <sys/stat.h>
+ 
+@@ -297,7 +298,7 @@
+ gboolean pipe_event(GIOChannel chan, GIOCondition cond, gpointer data) {
+     static char *path;
+     char name[TMPNAMELEN];
+-    ssize_t rr;
++    ssize_t rr = 0;
+     int nimgs = 0;
+ 
+     if (!path)
+diff --exclude='*~' -urN driftnet-0.1.6.orig/driftnet.c driftnet-0.1.6/driftnet.c
+--- driftnet-0.1.6.orig/driftnet.c	2005-03-18 07:55:41.000000000 -0500
++++ driftnet-0.1.6/driftnet.c	2005-03-18 09:07:43.000000000 -0500
+@@ -50,6 +50,7 @@
+ int verbose, adjunct;
+ int tmpdir_specified;
+ char *tmpdir;
++char tmpdir_template[] = "driftnet-XXXXXX";
+ int max_tmpfiles;
+ 
+ enum mediatype extract_type = m_image;
+@@ -474,6 +475,8 @@
+     int mpeg_player_specified = 0;
+     pthread_t packetth;
+ 
++    tmpdir = NULL;
++
+     /* Handle command-line options. */
+     opterr = 0;
+     while ((c = getopt(argc, argv, optstring)) != -1) {
+@@ -584,12 +587,10 @@
+         }
+     } else {
+         /* need to make a temporary directory. */
+-        for (;;) {
+-            tmpdir = strdup(tmpnam(NULL));
+-            if (mkdir(tmpdir, 0700) == 0)
+-                break;
+-            free(tmpdir);
+-        }
++	if (!(tmpdir = mkdtemp(tmpdir_template))) {
++	    fprintf(stderr, PROGNAME": mkdtemp: %s\n", strerror(errno));
++	    return -1;
++	}
+     }
+ 
+     if (verbose) 
+diff --exclude='*~' -urN driftnet-0.1.6.orig/playaudio.c driftnet-0.1.6/playaudio.c
+--- driftnet-0.1.6.orig/playaudio.c	2005-03-18 07:55:41.000000000 -0500
++++ driftnet-0.1.6/playaudio.c	2005-03-18 09:03:59.000000000 -0500
+@@ -167,7 +167,7 @@
+ static void mpeg_player_manager(void) {
+     extern sig_atomic_t foad; /* in driftnet.c */
+     struct sigaction sa = {0};
+-    pid_t mpeg_pid;
++    pid_t mpeg_pid = -1;
+ 
+     sa.sa_handler = SIG_DFL;
+     sigaction(SIGCHLD, &sa, NULL);

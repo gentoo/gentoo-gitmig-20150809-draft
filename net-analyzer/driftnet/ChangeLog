@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/driftnet
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/ChangeLog,v 1.15 2005/03/06 03:37:18 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/driftnet/ChangeLog,v 1.16 2005/03/18 14:19:35 ka0ttic Exp $
+
+  18 Mar 2005; Aaron Walker <ka0ttic@gentoo.org>
+  -files/driftnet-0.1.6-nogtk.patch,
+  +files/driftnet-0.1.6-tmpnam-is-bad.diff, driftnet-0.1.6.ebuild:
+  Use giflib rather than libungif for bug 85720. Also removed unnecessary
+  nogtk patch since it can easily be done with a sed. Added a patch to fix a
+  few warnings, most importantly the use of tmpnam().
 
   06 Mar 2005; Joseph Jezak <josejx@gentoo.org> driftnet-0.1.6.ebuild:
   Marked ppc stable for bug #84140.

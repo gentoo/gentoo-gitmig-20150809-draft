@@ -1,5 +1,15 @@
-MD5 1f161b6fa915e71b8a2b9813351de2ea ChangeLog 1320
-MD5 bd41da31ff6d51b9666712471f76fe8c driftnet-0.1.6.ebuild 1243
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bbe7c920381f40ef16f8c75af699754c driftnet-0.1.6.ebuild 1656
+MD5 7325b51b4ded1481eb8115fac4051470 ChangeLog 1680
 MD5 fe5d2611299b3a390d7681e92ff4d5c5 metadata.xml 287
+MD5 197d8c21e7593ec2c40a08c80e5b9808 files/driftnet-0.1.6-tmpnam-is-bad.diff 2096
 MD5 c0c08c9836402b53a0eb51c3b6c6201a files/digest-driftnet-0.1.6 65
-MD5 8768d05471c8332731ad3d51f7f18ff6 files/driftnet-0.1.6-nogtk.patch 996
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCOuOCEZCkKN40op4RAmE6AJ9KO6o0mSpnG2FTeT+ge6GNkIVItwCbBSQA
+ZyVp5M2REL26TC51d7j6M2I=
+=3RpE
+-----END PGP SIGNATURE-----
