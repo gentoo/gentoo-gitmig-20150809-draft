@@ -2,9 +2,11 @@ MD5 51e6ba7f8f9b184749ef30046562a60d libevent-0.7a.ebuild 743
 MD5 3c4602fe76592ba3a4dae2280c8e40e2 libevent-0.6.ebuild 722
 MD5 3114eb9644b242ed938709eff70a26de libevent-0.7c.ebuild 722
 MD5 d76425c786bb21a7fb334f377abf0030 libevent-0.8.ebuild 791
-MD5 346b10243d77f3080c995dd5eb465eae ChangeLog 1778
+MD5 0d25c7d1a5f9c51d1d6b32f4cb86622a ChangeLog 1946
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+MD5 e7e92497bdaa2f298dca4a581da90ff2 libevent-0.8a.ebuild 788
 MD5 dafcd039bbe6a5e664cbb3ba7c749b9c files/digest-libevent-0.6 63
 MD5 02accc1e6e8b44b59d8fc193e21914df files/digest-libevent-0.8 63
 MD5 3626ef8d7264491d4e298e6e6965d135 files/digest-libevent-0.7a 64
 MD5 689ab0af8c8ee4742fa19610adbb1167 files/digest-libevent-0.7c 64
+MD5 7fae4b3118510dd6b88868b2cdf7e989 files/digest-libevent-0.8a 64
