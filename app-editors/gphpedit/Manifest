@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fa9a7f1bb72ad6e20f8f88387d581e74 ChangeLog 889
 MD5 c378217638aa9b5056b3a33f8859b8bc gphpedit-0.4.3.ebuild 648
-MD5 5643a8be6b3a6a878e96d4d259988439 gphpedit-0.9.6.ebuild 684
+MD5 56c07b77b23c278b36a6967016ed812f gphpedit-0.9.6.ebuild 683
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 fd6d197b7562ef3b534e1db2f822744e files/digest-gphpedit-0.4.3 66
 MD5 f44408eb5e7c8472ca40c70423599872 files/digest-gphpedit-0.9.6 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBcrayRkyva5PS18kRAqjfAKCnzO75T83ge/QcGFkAuG2c8lcvHQCeI0dw
+0M7HFH75HtQa+8Mn6EHRBLg=
+=m5H4
+-----END PGP SIGNATURE-----
