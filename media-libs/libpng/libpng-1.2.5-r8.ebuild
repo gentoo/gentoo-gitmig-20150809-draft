@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.5-r8.ebuild,v 1.7 2004/09/22 05:29:12 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.2.5-r8.ebuild,v 1.8 2004/09/22 07:19:22 mr_bones_ Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -21,7 +21,9 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${P}-gentoo.diff
 	epatch ${FILESDIR}/${P}-security.diff
-	( use macos || use ppc-macos ) && epatch ${FILESDIR}/macos.patch # implements strnlen
+	if use macos || use ppc-macos ; then
+		epatch ${FILESDIR}/macos.patch # implements strnlen
+	fi
 
 	[ "`gcc-version`" == "3.2" ] && replace-cpu-flags i586 k6 k6-2 k6-3
 	[ "`gcc-version`" == "3.3" ] && replace-cpu-flags i586 k6 k6-2 k6-3
@@ -50,8 +52,7 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/{include,lib}
-	dodir /usr/share/man
+	dodir /usr/{include,lib} /usr/share/man
 	einstall MANPATH=${D}/usr/share/man || die "Failed to install"
 
 	doman libpng.3 libpngpf.3 png.5
