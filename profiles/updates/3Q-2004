@@ -197,3 +197,5 @@ move app-admin/foremost app-forensics/foremost
 move sys-apps/air app-forensics/air
 move app-admin/chkrootkit app-forensics/chkrootkit
 move app-admin/rkhunter app-forensics/rkhunter
+move app-admin/aide app-forensics/aide
+
