@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/gnome-mud-0.10.2-r1.ebuild,v 1.1 2003/09/28 23:48:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/gnome-mud-0.10.2-r1.ebuild,v 1.2 2003/12/15 06:12:02 mr_bones_ Exp $
 
 inherit games gnome2
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/amcl/${P}.tar.gz"
 HOMEPAGE="http://amcl.sourceforge.net/"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 
 IUSE="python zlib"
