@@ -1,0 +1,32 @@
+# ChangeLog for net-www/netrik
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/netrik/ChangeLog,v 1.1 2005/03/23 16:46:59 seemant Exp $
+
+  23 Mar 2005; Seemant Kulleen <seemant@gentoo.org> +netrik-1.6.0.ebuild,
+  +netrik-1.10.2.ebuild, +netrik-1.15.3.ebuild:
+  Moved from net-www/netrik to www-client/netrik.
+
+*netrik-1.15.3 (23 Feb 2005)
+
+  23 Feb 2005; Karol Wojtaszek <sekretarz@gentoo.org> +netrik-1.15.3.ebuild:
+  Version bump, bug #61210. Added to ~amd64
+
+  06 Nov 2004; <pyrania@gentoo.org> netrik-1.10.2.ebuild,
+  netrik-1.6.0.ebuild:
+  Marked stable on x86, added nls to IUSE.
+
+  24 Mar 2004; Jason Wever <weeve@gentoo.org> netrik-1.10.2.ebuild:
+  Added ~sparc keyword.
+
+*netrik-1.10.2 (19 JUN 2003)
+
+  19 JUN 2003; Carl Perry <edolnx@gentoo.org> netrik-1.10.2.ebuild:
+  Version bumped, works for me.  Bug #18503
+
+*netrik-1.6.0 (19 Jun 2003)
+ 
+  13 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
+
+  29 Mar 2003; Chuck Short <chuck_short@rogers.com> netrik-1.6.0.ebuild:
+  Initial Release.
