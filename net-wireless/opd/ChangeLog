@@ -1,9 +1,9 @@
 # ChangeLog for net-wireless/opd
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/opd/ChangeLog,v 1.2 2004/12/16 08:48:02 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/opd/ChangeLog,v 1.3 2004/12/16 08:50:21 ticho Exp $
 
   16 Dec 2004; Andrej Kacian <ticho@gentoo.org> metadata.xml:
-  Specify no-herd in metadata.
+  Assign to mobile herd.
 
 *opd-0.2 (15 Dec 2004)
 
