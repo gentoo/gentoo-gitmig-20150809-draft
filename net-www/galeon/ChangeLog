@@ -1,6 +1,9 @@
 # ChangeLog for net-www/galeon
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.26 2002/12/16 22:48:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.27 2002/12/22 21:19:04 foser Exp $
+
+  22 Dec 2002; foser <foser@gentoo.org> galeon-1.2.7.ebuild galeon-1.2.6.ebuild :
+  Added scrollkeeper dep (bug #12583)
 
   16 Dec 2002; Aron Griffis <agriffis@gentoo.org> galeon-1.2.7.ebuild :
   Add ~alpha to KEYWORDS
