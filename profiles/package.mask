@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3271 2004/10/21 18:28:20 chriswhite Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3272 2004/10/22 11:52:44 klieber Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,16 @@
 ##
 ##   End example
 ##
+
+# <klieber@gentoo.org> (01 Apr 2004)
+# The following package contains a serious, undisclosed security vulnerability
+# and has been hard masked accordingly.
+#
+# Please see http://bugs.gentoo.org/show_bug.cgi?id=66395 for more info
+#
+# You may unmask this package by placing an appropriate entry in your
+# /etc/portage/package.unmask file
+net-www/bugport
 
 # <vapier@gentoo.org> (20 Oct 2004)
 # New SLOT-ed autoconf's
