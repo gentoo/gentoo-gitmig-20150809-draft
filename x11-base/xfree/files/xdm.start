@@ -21,7 +21,7 @@ case "$DISPLAYMANAGER" in
 	EXE=$KDEDIR/bin/kdm   
 	;;
     gdm|GDM|Gnome|GNOME) 
-	EXE=$GNOMEDIR/bin/gdm 
+	EXE=$GNOME_PATH/bin/gdm 
 	;;
     *)	
 	EXE=/usr/X11R6/bin/xdm ;;
