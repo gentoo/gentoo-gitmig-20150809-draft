@@ -1,5 +1,15 @@
-MD5 df1ca6519be8bfd77961cf1de8272b21 ChangeLog 1808
-MD5 daac002601b4caa6480434a7d16ea8a6 sdlroids-1.3.4-r3.ebuild 916
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f129e956040bd13733852e476a215ec9 ChangeLog 1922
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 441c876acdb07a550d72fa4645d5efee files/1.3.4-sound.patch 654
+MD5 75b77be974d7b783203aec55dd840d0b sdlroids-1.3.4-r3.ebuild 920
 MD5 933513560ad26be0b6fc1e21bb526a64 files/digest-sdlroids-1.3.4-r3 67
+MD5 441c876acdb07a550d72fa4645d5efee files/1.3.4-sound.patch 654
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCQwnAugEuf3OQ0akRAkxtAJ9w0QAf07mVccXDdluDlhiWPStCxwCglvhw
+cEmAvXB8Yc/3ahz66H6flQY=
+=5KbG
+-----END PGP SIGNATURE-----
