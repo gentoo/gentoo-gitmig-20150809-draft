@@ -1,6 +1,6 @@
-# ChangeLog for media-gfx/scrot
+# ChangeLog for net-misc/linux-identd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-identd/ChangeLog,v 1.5 2002/12/13 11:00:13 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linux-identd/ChangeLog,v 1.6 2002/12/17 19:44:38 vapier Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
