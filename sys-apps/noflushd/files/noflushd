@@ -18,7 +18,7 @@ start() {
     EXTRA=''
     
     # Pull in configuration file if exists, overrides defaults
-    [ -f /etc/noflushd.conf ] && . /etc/noflushd.conf
+    [ -f /etc/rc.d/config/noflushd.conf ] && . /etc/noflushd.conf
     
     OPTIONS='-n $TIMEOUT $DISKS $EXTRA'
     
