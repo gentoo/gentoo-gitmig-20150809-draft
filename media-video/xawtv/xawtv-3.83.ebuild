@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/xawtv-3.83.ebuild,v 1.4 2003/03/09 13:32:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/xawtv-3.83.ebuild,v 1.5 2003/03/13 23:26:04 seemant Exp $
 
-IUSE="aalib motif alsa opengl nls"
+IUSE="aalib motif alsa opengl nls quicktime"
 
 S=${WORKDIR}/${P}
 MY_FONT=tv-fonts-1.0

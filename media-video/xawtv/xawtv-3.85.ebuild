@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/xawtv-3.85.ebuild,v 1.2 2003/03/10 10:32:27 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/xawtv-3.85.ebuild,v 1.3 2003/03/13 23:26:04 seemant Exp $
 
 inherit eutils
 
-IUSE="aalib motif alsa opengl nls"
+IUSE="aalib motif alsa opengl nls quicktime"
 
 MY_PATCH="xaw-deinterlace-3.76-0.1.1.diff.bz2"
 S=${WORKDIR}/${P}

@@ -1,8 +1,13 @@
 # ChangeLog for media-video/xawtv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/ChangeLog,v 1.20 2003/03/10 10:32:27 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/ChangeLog,v 1.21 2003/03/13 23:26:04 seemant Exp $
 
 *xawtv-3.85 (09 Mar 2003)
+
+  13 Mar 2003; Seemant Kulleen <seemant@gentoo.org> xawtv-3.83.ebuild,
+  xawtv-3.85.ebuild:
+  Added quicktime to IUSE. Thanks to: Matt Taylor <liverbugg@juno.com> in bug
+  #17409
 
   10 Mar 2003; Seemant Kulleen <seemant@gentoo.org> xawtv-3.85.ebuild:
   plugins directory fixed. thanks to Patrick Kursawe <phosphan@gentoo.org> in
