@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.110 2005/02/14 11:33:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.111 2005/02/18 18:04:42 azarah Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -699,7 +699,7 @@ gcc-compiler_pkg_preinst() {
 	use multislot && return 0
 
 	# libtool files aren't affected by cross compilers
-	is_crosscompile || return 0
+	is_crosscompile && return 0
 
 	# Now check to see if we already have a version installed in this 
 	# SLOT ... if we do, then bail if it's a minor upgrade (like we 

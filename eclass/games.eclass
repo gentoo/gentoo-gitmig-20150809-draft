@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.87 2005/02/05 21:32:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.88 2005/02/18 18:04:42 azarah Exp $
 #
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org -> games@gentoo.org
 #
@@ -52,9 +52,10 @@ egamesconf() {
 			--host=${CHOST} \
 			--mandir=/usr/share/man \
 			--infodir=/usr/share/info \
-			--datadir="${GAMES_DATADIR}" \
-			--sysconfdir="${GAMES_SYSCONFDIR}" \
-			--localstatedir="${GAMES_STATEDIR}" \
+			--datadir=${GAMES_DATADIR} \
+			--sysconfdir=${GAMES_SYSCONFDIR} \
+			--localstatedir=${GAMES_STATEDIR} \
+			--with-data-dir=${GAMES_DATADIR}/${PN} \
 			${EXTRA_ECONF} \
 			"$@" || die "egamesconf failed"
 	else

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.151 2005/02/11 22:56:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.152 2005/02/18 18:04:42 azarah Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -460,6 +460,8 @@ have_NPTL() {
 #
 get_number_of_jobs() {
 	local jobs=0
+
+	return 0
 
 	if [ ! -r /proc/cpuinfo ]
 	then

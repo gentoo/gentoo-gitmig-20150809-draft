@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.3.10-r1.ebuild,v 1.3 2005/02/04 00:10:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.3.10-r1.ebuild,v 1.4 2005/02/18 18:04:42 azarah Exp $
 
 inherit toolchain-funcs
 
@@ -20,6 +20,10 @@ DEPEND="virtual/libc
 	>=sys-apps/portage-2.0.47-r10" # We need portageq ...
 
 S=${WORKDIR}
+
+src_unpack() {
+	[[ ${USE} =~ "foo" ]] && einfo "\"foo\" in USE" || einfo "\"foo\" not in USE"
+}
 
 src_compile() {
 	$(tc-getCC) -O2 -Wall -o wrapper \

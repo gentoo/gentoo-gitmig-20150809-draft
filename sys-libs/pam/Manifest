@@ -8,6 +8,8 @@ MD5 5236b3cdb8926f86382225b63b23d391 pam-0.77-r6.ebuild 7844
 MD5 1d05f0436f1c273d7862099f309afe4d metadata.xml 156
 MD5 9c0c3cf85b94ae623375fb05294b924a pam-0.77-r8.ebuild 8212
 MD5 cb547fcc1f1893c82cbf6edcd41a2258 pam-0.77-r2.ebuild 7764
+MD5 6c227f730561be87a8bedbb4f77f08b8 pam-0.78.ebuild 9210
+MD5 f4bbf6b4467812bf1079763bc78493eb .pam-0.78.ebuild.swp 32768
 MD5 d3bdcb58b9fe268620b2c37b9b07d756 files/pam_env.conf 3062
 MD5 7abfe66b5996b628696d244d462e47b0 files/digest-pam-0.77-r3 201
 MD5 028c285db4076f549774c258d0eddcfc files/digest-pam-0.77-r1 201
@@ -17,6 +19,7 @@ MD5 41e8f5fddbc8e00ebfdc3aeadbf7c50e files/digest-pam-0.77-r7 201
 MD5 693d0527279f95e01ad9a5ba6ef45389 files/digest-pam-0.77-r8 201
 MD5 b38aa656e6c205427dd4c4ba7d6d3f97 files/digest-pam-0.77-r6 201
 MD5 0044f2b0098d7a94664bd8ae7776029d files/README.pam_console 2102
+MD5 3c8bc88aa7683a04624575a3bb3abb9e files/digest-pam-0.78 200
 MD5 69f8cfad7f241eb669085eaa753cd9dd files/pam-0.77-console-reset.patch 1826
 MD5 7abfe66b5996b628696d244d462e47b0 files/digest-pam-0.77-r2 201
 MD5 849aa086002eda305d4d6d59a94fadd8 files/pam.d/rexec 457

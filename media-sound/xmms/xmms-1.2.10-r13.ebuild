@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r13.ebuild,v 1.2 2005/02/14 18:58:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r13.ebuild,v 1.3 2005/02/18 18:04:42 azarah Exp $
 
 inherit flag-o-matic eutils libtool gnuconfig
 
@@ -104,6 +104,7 @@ src_compile() {
 	# Please see Bug 58092 for details
 	use ppc64 && replace-flags "-O[2-9]" "-O1"
 
+	env ACLOCAL="aclocal -I ${WORKDIR}/m4" \
 	econf `use_enable nls` ${myconf} || die
 
 	# For some reason, gmake doesn't export this for libtool's consumption
