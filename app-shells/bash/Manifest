@@ -1,6 +1,6 @@
 MD5 8b99da5508bcba7b25f62196ec4d169c ChangeLog 11807
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 75337a758e0e67e9d365e702dba3a450 bash-3.0-r7.ebuild 4038
+MD5 c92ca1abfb503715462216d207b7202d bash-3.0-r7.ebuild 4056
 MD5 32e3e05f531830e9e6e413fcb0293028 bash-2.05b-r9.ebuild 3527
 MD5 2675a90ea8716842f6cf5b22c1e7cda0 bash-2.05b-r11.ebuild 3738
 MD5 edf95b873162f4548435c379e4998b4e files/bash-2.05b-empty-herestring.patch 836

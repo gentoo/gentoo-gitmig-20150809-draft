@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r7.ebuild,v 1.2 2004/11/12 14:36:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-3.0-r7.ebuild,v 1.3 2004/12/07 22:46:14 vapier Exp $
 
 inherit eutils flag-o-matic gnuconfig gcc
 
@@ -110,7 +110,7 @@ src_compile() {
 		--without-gnu-malloc \
 		${myconf} || die
 	# Make sure we always link statically with ncurses
-	sed -i "/^TERMCAP_LIB/s:-lncurses:-Wl,-Bstatic -lncurses -Wl,-Bdynamic:" Makefile || die "sed failed"
+	sed -i "/^TERMCAP_LIB/s:-lncurses:-L${ROOT}/usr/lib -Wl,-Bstatic -lncurses -Wl,-Bdynamic:" Makefile || die "sed failed"
 	emake || die "make failed"
 }
 
