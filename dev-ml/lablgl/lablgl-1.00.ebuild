@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.00.ebuild,v 1.17 2005/02/14 19:14:48 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgl/lablgl-1.00.ebuild,v 1.18 2005/04/01 04:37:21 agriffis Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ DEPEND=">=dev-lang/ocaml-3.05
 
 SRC_URI="http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/dist/${P}.tar.gz"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha ~ia64 amd64 hppa"
+KEYWORDS="x86 ppc sparc alpha ia64 amd64 hppa"
 
 pkg_setup()
 {
