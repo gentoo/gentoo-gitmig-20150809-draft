@@ -3,7 +3,7 @@
 <pkgmetadata>
 <herd>no-herd</herd>
 <maintainer>
-  <email>pappy@gentoo.org</email>
+  <email>former-dev-pappy@gentoo.org</email>
   <description>Author of devel-chroots script</description>
 </maintainer>
 <longdescription>This script should make it easy to automatically create and work with chroots on Gentoo developer machines</longdescription>

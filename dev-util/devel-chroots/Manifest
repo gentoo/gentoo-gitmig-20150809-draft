@@ -1,6 +1,16 @@
-MD5 6848a8decf88b0ffa24c1809407d0a37 ChangeLog 1160
-MD5 8160d205fbb150f9c9b4400854199288 devel-chroots-1.0.0.ebuild 800
-MD5 e762141a3e6766f5dddf49f931cdd0b1 devel-chroots-1.0.1.ebuild 1100
-MD5 c5d4fa2050828a5f16b909c2708a3fbb metadata.xml 423
-MD5 d6dafe7e0848d37e899e8f17fb8b23e6 files/digest-devel-chroots-1.0.0 69
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d58943a0ba1360148c70b57d664c842d ChangeLog 1409
+MD5 eb503f8c0dbf0444ee7cfd626c505f6b metadata.xml 434
+MD5 c713f0d8de03d5bc13eee52fac9cf971 devel-chroots-1.0.0.ebuild 759
+MD5 9b2d2933bafc753fe7c191cc35fa51a9 devel-chroots-1.0.1.ebuild 1042
 MD5 8d02613924d503918ba9d1169de52d5d files/digest-devel-chroots-1.0.1 69
+MD5 d6dafe7e0848d37e899e8f17fb8b23e6 files/digest-devel-chroots-1.0.0 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCFzg5mdTrptrqvGERAlNRAJ93zgYgRkVKFJV1/VjK32REafU6fQCeJ0+k
+e84r/I+2SnPYt6aE2ieryLU=
+=bmFa
+-----END PGP SIGNATURE-----
