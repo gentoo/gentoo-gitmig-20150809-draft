@@ -1,19 +1,20 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/itcl-3.2.1-r1.ebuild,v 1.10 2004/10/19 10:00:11 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/itcl/itcl-3.2.1-r1.ebuild,v 1.11 2004/10/19 18:14:52 vapier Exp $
 
 inherit eutils
 
 MY_P=${PN}${PV}
 S=${WORKDIR}/${MY_P}
-IUSE=""
 DESCRIPTION="Object Oriented Enhancements for Tcl/Tk"
-SRC_URI="mirror://sourceforge/incrtcl/${MY_P}_src.tgz"
 HOMEPAGE="http://www.tcltk.com/${PN}/"
+SRC_URI="mirror://sourceforge/incrtcl/${MY_P}_src.tgz"
 
-SLOT="0"
 LICENSE="as-is BSD"
-KEYWORDS="x86 ~ppc sparc amd64 alpha"
+SLOT="0"
+KEYWORDS="alpha amd64 ia64 ~ppc sparc x86"
+IUSE=""
+
 DEPEND="dev-lang/tk"
 PDEPEND="dev-tcltk/iwidgets"
 
