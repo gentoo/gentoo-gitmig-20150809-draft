@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/fmod
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/ChangeLog,v 1.9 2004/04/29 01:09:05 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/ChangeLog,v 1.10 2004/06/08 05:17:58 eradicator Exp $
+
+*fmod-3.73 (07 Jun 2004)
+
+  07 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> fmod-3.73.ebuild:
+  Version bump closes bug #53191. Removed non-x86 ARCHS as this is a binary
+  dist.
 
   28 Apr 2004; Jon Portnoy <avenj@gentoo.org> fmod-3.71.ebuild :
   Stable on AMD64.
