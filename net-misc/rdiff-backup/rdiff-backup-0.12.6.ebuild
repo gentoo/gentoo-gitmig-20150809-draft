@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdiff-backup/rdiff-backup-0.12.6.ebuild,v 1.2 2004/01/25 11:50:38 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdiff-backup/rdiff-backup-0.12.6.ebuild,v 1.3 2004/03/25 01:11:27 weeve Exp $
 
 inherit distutils
 
@@ -9,7 +9,7 @@ DESCRIPTION="Remote incremental file backup utility, similar to rsync but more r
 SRC_URI="http://rdiff-backup.stanford.edu/${P}.tar.gz"
 HOMEPAGE="http://rdiff-backup.stanford.edu"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="x86 sparc"
 SLOT="0"
 
 RDEPEND=">=net-libs/librsync-0.9.6"
