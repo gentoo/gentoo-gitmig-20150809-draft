@@ -1,0 +1,12 @@
+diff -Nur multi-aterm-0.2.1/src/command.c multi-aterm-0.2.1-fixed/src/command.c
+--- multi-aterm-0.2.1/src/command.c	2004-08-17 12:09:11.000000000 +0200
++++ multi-aterm-0.2.1-fixed/src/command.c	2004-09-04 05:27:51.740333672 +0200
+@@ -1487,7 +1487,7 @@
+ 	static XComposeStatus compose = { NULL, 0 };
+ 	static unsigned char kbuf[KBUFSZ];
+ 	int             ctrl, meta, shft, len;
+-	KeySym          keysym;
++	KeySym          keysym = 0;
+ 
+ /*
+  * use Num_Lock to toggle Keypad on/off.  If Num_Lock is off, allow an
