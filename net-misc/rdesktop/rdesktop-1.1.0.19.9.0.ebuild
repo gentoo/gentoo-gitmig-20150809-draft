@@ -1,24 +1,20 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.1.0.19.9.0.ebuild,v 1.4 2003/02/10 10:32:00 seemant Exp $
-
-inherit eutils
-
-IUSE="ssl"
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/rdesktop-1.1.0.19.9.0.ebuild,v 1.5 2003/08/03 04:01:58 vapier Exp $
 
 PATCH_PV="19-9-0"
 PATCH_PV_SED=".${PATCH_PV//-/.}"
 MY_P=${P/$PATCH_PV_SED}
-
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="A Remote Desktop Protocol Client"
+HOMEPAGE="http://rdesktop.sourceforge.net/"
 SRC_URI="mirror://sourceforge/rdesktop/${MY_P}.tar.gz
 	http://bibl4.oru.se/projects/rdesktop/rdesktop-unified-patch${PATCH_PV}.bz2"
-HOMEPAGE="http://rdesktop.sourceforge.net/"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc"
+IUSE="ssl debug"
 
 DEPEND="virtual/x11
 	ssl? ( >=dev-libs/openssl-0.9.6b )"
@@ -30,17 +26,12 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf
-
-	use ssl && myconf="--with-openssl"
-	use ssl || myconf="--without-openssl"
-
-	[ "${DEBUG}" ] && myconf="${myconf} --with-debug"
-
 	./configure \
 		--prefix=/usr \
 		--mandir=/usr/share/man \
-		${myconf} || die
+		`use_with ssl openssl` \
+	        `use_with debug` \
+		|| die
 
 	use ssl && echo "CFLAGS += -I/usr/include/openssl" >> Makeconf
 
@@ -55,7 +46,7 @@ src_compile() {
 	emake || die "compile problem"
 }
 
-src_install () {
+src_install() {
 	dobin rdesktop
 	doman rdesktop.1
 	dodoc COPYING CHANGES readme.txt rdp-srvr-readme.txt

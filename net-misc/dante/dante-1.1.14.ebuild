@@ -1,47 +1,40 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.13.ebuild,v 1.15 2003/08/03 04:05:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.14.ebuild,v 1.1 2003/08/03 04:05:49 vapier Exp $
 
 inherit gcc
 
 DESCRIPTION="A free socks4,5 and msproxy implemetation"
-SRC_URI="ftp://ftp.inet.no/pub/socks/${P}.tar.gz"
 HOMEPAGE="http://www.inet.no/dante/"
+SRC_URI="ftp://ftp.inet.no/pub/socks/${P}.tar.gz"
 
 LICENSE="BSD"
-KEYWORDS="x86 ppc sparc alpha hppa"
 SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa"
 IUSE="tcpd debug"
 
-RDEPEND="virtual/glibc
+DEPEND="virtual/glibc
 	sys-libs/pam
 	tcpd? ( sys-apps/tcp-wrappers )"
-DEPEND="${RDEPEND}
-	dev-lang/perl"
 
 src_compile() {
-	[ "`gcc-version`" == "3.2" ] && export CFLAGS=""
-
-	local myconf
-	use tcpd || myconf="--disable-libwrap"
-	[ `use debug` ] || myconf="${myconf} --disable-debug"
-	./configure \
-		--prefix=/usr \
-		--mandir=/usr/share/man \
+	econf \
+		`use_enable debug` \
+		`use_enable tcpd libwrap` \
 		--with-socks-conf=/etc/socks/socks.conf \
 		--with-sockd-conf=/etc/socks/sockd.conf \
-		--host=${CHOST} ${myconf} || die "bad ./configure"
+		${myconf} \
+		|| die "bad ./configure"
 	emake || die "compile problem"
 }
 
 src_install() {
+	make DESTDIR=${D} install || die
 	# Line 99 in socks.h conflicts with stuff in line 333 of
 	# /usr/include/netinet/in.h this is a not-too-cool way of fix0ring that
-	cat capi/socks.h | \
-		sed -e "s:^int Rbindresvport://int Rbindresvport:" > capi/socks.h
-	make DESTDIR=${D} install || die
+	dosed "s:^int Rbindresvport://int Rbindresvport:" /usr/include/socks.h
 	# bor: comment libdl.so out it seems to work just fine without it
-	perl -pe 's/(libdl\.so)//' -i ${D}/usr/bin/socksify
+	dosed 's:libdl\.so::' /usr/bin/socksify
 	dodir /etc/socks
 	dodoc BUGS CREDITS LICENSE NEWS README SUPPORT TODO VERSION 
 	docinto txt

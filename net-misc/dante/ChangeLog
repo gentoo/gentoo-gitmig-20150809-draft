@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/dante
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/ChangeLog,v 1.14 2003/03/13 22:42:19 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/ChangeLog,v 1.15 2003/08/03 04:05:49 vapier Exp $
+
+*dante-1.1.14 (03 Aug 2003)
+
+  03 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bumpage.
 
 *dante-1.1.13 (15 Jul 2002)
 
