@@ -1,8 +1,0 @@
-#!/bin/bash
-# rc		This file is responsible for starting/stopping
-#		services when the runlevel changes.
-/bin/hostname gentoo-box
-/bin/mount -at nonfs
-cd /
-
-
