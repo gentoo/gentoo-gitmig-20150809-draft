@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/normalize
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/normalize/ChangeLog,v 1.6 2003/07/17 22:18:41 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/normalize/ChangeLog,v 1.7 2003/07/19 19:33:30 raker Exp $
+
+  19 Jul 2003; Nick Hadaway <raker@gentoo.org> normalize-0.7.6-r1.ebuild:
+  Added mad use variable and marked stable for x86.
 
 *normalize-0.7.6-r1 (17 Jul 2003)
 
