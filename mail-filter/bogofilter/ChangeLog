@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/bogofilter
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/ChangeLog,v 1.1 2004/06/03 07:03:43 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/bogofilter/ChangeLog,v 1.2 2004/06/06 19:10:17 g2boojum Exp $
+
+*bogofilter-0.91.0 (06 Jun 2004)
+
+  06 Jun 2004; Grant Goodyear <g2boojum@gentoo.org> +bogofilter-0.91.0.ebuild:
+  Version bump, thanks to Daniel Webert (Bug #51089).
 
 *bogofilter-0.15.13.1 (03 Jun 2004)
 
