@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-gcc/avr-gcc-3.3-r1.ebuild,v 1.1 2004/03/07 19:25:57 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-gcc/avr-gcc-3.3-r1.ebuild,v 1.2 2004/03/07 19:28:07 pappy Exp $
 
 DESCRIPTION="The GNU C compiler for the AVR microcontroller architecture"
 
@@ -52,9 +52,8 @@ src_compile() {
 }
 
 src_install() {
-       make prefix=${D}${INSTALLDIR} \
-           mandir=${D}${MANDIR} \
-           infodir=${D}${INFODIR} \
-           install || die
-						       
+	make prefix=${D}${INSTALLDIR} \
+		mandir=${D}${MANDIR} \
+		infodir=${D}${INFODIR} \
+		install || die
 }
