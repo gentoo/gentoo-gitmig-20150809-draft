@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/newt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.13 2004/06/24 23:29:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/newt/ChangeLog,v 1.14 2004/12/15 07:30:28 robbat2 Exp $
+
+*newt-0.50.35-r4 (14 Dec 2004)
+
+  14 Dec 2004; Robin H. Johnson <robbat2@gentoo.org>
+  +newt-0.50.35-r4.ebuild:
+  Bug #73850, and clean up the build process as well.
 
 *newt-0.50.35-r3 (12 May 2004)
 
