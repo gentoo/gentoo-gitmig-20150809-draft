@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/povray
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.42 2005/01/20 05:44:54 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.43 2005/01/20 06:11:52 morfic Exp $
+
+  20 Jan 2005; Daniel Goller <morfic@gentoo.org> -files/README.ICC-PGO,
+  -files/gentoo-3.5.patch, -files/gentoo.patch,
+  -files/povray-3.5-amd64.patch, -files/prob-opt.sh, -povray-3.1g-r5.ebuild,
+  -povray-3.5.ebuild, povray-3.6.1-r1.ebuild:
+  Cleanup old and or broken versions
 
   19 Jan 2005; Mike Doty <kingtaco@gentoo.org> povray-3.6.1-r1.ebuild:
   stable on amd64.

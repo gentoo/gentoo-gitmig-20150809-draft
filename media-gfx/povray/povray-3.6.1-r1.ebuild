@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.6.1-r1.ebuild,v 1.8 2005/01/20 05:44:54 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.6.1-r1.ebuild,v 1.9 2005/01/20 06:11:52 morfic Exp $
 
 inherit flag-o-matic
 
@@ -28,8 +28,6 @@ src_compile() {
 	if  get-flag march == k6-2 ; then
 		filter-flags -fomit-frame-pointer
 	fi
-
-	echo ${CFLAGS}
 
 	use X && myconf="${myconf} --with-x" \
 		|| myconf="${myconf} --without-x"\
