@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/terminal
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/ChangeLog,v 1.5 2005/03/04 06:42:34 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/terminal/ChangeLog,v 1.6 2005/03/21 00:16:06 bcowan Exp $
+
+  21 Mar 2005; Brad Cowan <bcowan@gentoo.org> :
+  Version bump. Now has option to choose default browser and mail client.
 
 *terminal-0.2.4_pre1 (04 Mar 2005)
 
