@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/bestcrypt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.18 2004/09/11 12:49:53 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.19 2004/10/07 17:11:23 lostlogic Exp $
+
+*bestcrypt-1.5_p7 (07 Oct 2004)
+
+  07 Oct 2004; Brandon Low <lostlogic@gentoo.org> +bestcrypt-1.5_p7.ebuild:
+  Bump, and moving this directly to stable as it is just bug fixes from 1.5_p6
+  both in the gentoo version and the upstream.
 
   11 Sep 2004; Daniel Black <dragonheart@gentoo.org> metadata.xml:
   crypto herd to maintain
