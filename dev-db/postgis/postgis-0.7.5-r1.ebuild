@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-0.7.5-r1.ebuild,v 1.2 2004/03/21 15:41:33 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/postgis-0.7.5-r1.ebuild,v 1.3 2004/04/20 15:54:27 mholzer Exp $
 
 MY_PGSQL="postgresql-7.3.4"
 DESCRIPTION="adds support for geographic objects to PostgreSQL"
 HOMEPAGE="http://postgis.refractions.net/"
 SRC_URI="http://postgis.refractions.net/${P}.tar.gz
-	ftp://ftp8.us.postgresql.org/pub/pgsql/source/v7.3.4/${MY_PGSQL}.tar.gz"
+	mirror://postgresql/source/v7.3.4/${MY_PGSQL}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

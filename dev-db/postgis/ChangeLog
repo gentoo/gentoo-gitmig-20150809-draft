@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/postgis
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.9 2004/03/21 15:41:33 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgis/ChangeLog,v 1.10 2004/04/20 15:54:27 mholzer Exp $
+
+  20 Apr 2004; Martin Holzer <mholzer@gentoo.org> postgis-0.7.5-r1.ebuild:
+  src_uri now uses mirror://postgresql
 
   21 Mar 2004; Martin Holzer <mholzer@gentoo.org> postgis-0.7.5-r1.ebuild:
   adding categorie. see 45110 for details
