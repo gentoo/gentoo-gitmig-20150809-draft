@@ -1,6 +1,11 @@
 # ChangeLog for net-firewall/firestorm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firestorm/ChangeLog,v 1.7 2004/07/01 22:14:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firestorm/ChangeLog,v 1.8 2004/11/24 14:10:15 dragonheart Exp $
+
+*firestorm-0.5.5 (24 Nov 2004)
+
+  24 Nov 2004; Daniel Black <dragonheart@gentoo.org> +firestorm-0.5.5.ebuild:
+  version bump thanks to bug #72064. Bug report by cpu <cpu@ztpnet.pl>
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   firestorm-0.5.2.ebuild, firestorm-0.5.4.ebuild:

@@ -1,5 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a71a3b703a06a5c000468c2f4195541a ChangeLog 1067
 MD5 5e1414eb19cc7a6f12f0781798464231 firestorm-0.5.2.ebuild 615
 MD5 7c17faba1f3c503b22169914de74d8c1 firestorm-0.5.4.ebuild 625
-MD5 6c36817c18944791bb140a9c1fd5b804 ChangeLog 884
+MD5 4a0a986e8db5ac1ff443334f5b26225f firestorm-0.5.5.ebuild 630
 MD5 5fd77e2f02542a16e419af97f39edb06 files/digest-firestorm-0.5.2 67
 MD5 36474e9be9cd5c6d37f465ee7408d561 files/digest-firestorm-0.5.4 67
+MD5 c29ef45ce159d15a5bad558a335ab671 files/digest-firestorm-0.5.5 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBpJZNmdTrptrqvGERAvJ8AJwMwD2Af6pi/WSALV/Z0xtOpoQ94gCcDkA4
+stcbF6FoWSrwVsSuEN9v+qI=
+=slkR
+-----END PGP SIGNATURE-----
