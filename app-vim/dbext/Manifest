@@ -1,4 +1,14 @@
-MD5 96376d30f026ef5e3d3cc3b78eb19767 ChangeLog 411
-MD5 056608d3120da34b3654341dda755229 dbext-2.10.ebuild 570
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a66867c1677ef9b050a65c57920f8624 ChangeLog 514
+MD5 80e7aecc0e70b77fc4a3f1e9a0b62996 dbext-2.10.ebuild 569
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
 MD5 bf160f2be3aac67bb3b50bd7907e4c6c files/digest-dbext-2.10 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBhQH/LLFUmVNQ7rkRAtYWAJ9jDXCXfpIcpclLpj4TjPkappGftACdFxSi
+eXjAFI1tGx5xhRDURguwlUw=
+=43Wk
+-----END PGP SIGNATURE-----
