@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.1.ebuild,v 1.4 2004/04/05 13:56:44 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.1.1.ebuild,v 1.5 2004/04/11 21:00:39 suka Exp $
 
 IUSE="kde gnome"
 
@@ -39,7 +39,7 @@ RDEPEND="virtual/glibc
 
 LICENSE="LGPL-2 | SISSL-1.1"
 SLOT="0"
-KEYWORDS="~x86 -ppc -sparc"
+KEYWORDS="x86 -ppc -sparc"
 
 src_install() {
 	# Sandbox issues; bug #8587
