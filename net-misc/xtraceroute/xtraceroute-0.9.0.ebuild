@@ -4,17 +4,15 @@
 # /space/gentoo/cvsroot/gentoo-x86/skel.ebuild,v 1.4 2002/03/12 16:05:09 tod Exp
 
 S="${WORKDIR}/${P}"
-
 DESCRIPTION="neat graphical traceroute displaying route on the globe"
-
 SRC_URI="http://www.dtek.chalmers.se/~d3august/xt/dl/${P}.tar.gz
-		http://www.dtek.chalmers.se/~d3august/xt/dl/ndg_files.tar.gz"
+	http://www.dtek.chalmers.se/~d3august/xt/dl/ndg_files.tar.gz"
 HOMEPAGE="http://www.dtek.chalmers.se/~d3august/xt/"
 
 DEPEND="x11-base/xfree
-	x11-libs/gtk+
+	=x11-libs/gtk+-1.2*
 	net-misc/traceroute
-	x11-libs/gtkglarea
+	<x11-libs/gtkglarea-1.99.0
 	media-libs/gdk-pixbuf
 	net-misc/host"
 
