@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Singleton/Class-Singleton-1.03.ebuild,v 1.5 2004/09/27 22:00:26 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Singleton/Class-Singleton-1.03.ebuild,v 1.6 2005/01/12 01:51:45 sekretarz Exp $
 
 inherit perl-module
 
@@ -10,5 +10,5 @@ SRC_URI="http://search.cpan.org/CPAN/authors/id/A/AB/ABW/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ~ppc ~alpha"
+KEYWORDS="x86 sparc ~ppc ~alpha ~amd64"
 IUSE=""

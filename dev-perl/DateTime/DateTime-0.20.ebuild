@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime/DateTime-0.20.ebuild,v 1.5 2004/07/14 17:15:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DateTime/DateTime-0.20.ebuild,v 1.6 2005/01/12 01:55:30 sekretarz Exp $
 
 inherit perl-module
 
