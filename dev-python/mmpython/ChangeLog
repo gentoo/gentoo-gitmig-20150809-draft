@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/mmpython
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mmpython/ChangeLog,v 1.4 2003/10/20 05:07:21 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mmpython/ChangeLog,v 1.5 2003/11/03 16:49:16 max Exp $
+
+*mmpython-0.3 (03 Nov 2003)
+
+  03 Nov 2003; Max Kalika <max@gentoo.org> mmpython-0.3.ebuild:
+  Bump to version 0.3.
 
   19 Oct 2003; Max Kalika <max@gentoo.org> mmpython-0.2.ebuild:
   Add quotes and CVS header.
