@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/pachi
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/pachi/ChangeLog,v 1.2 2003/10/07 06:19:24 mr_bones_ Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/pachi/ChangeLog,v 1.3 2004/04/05 06:31:23 mr_bones_ Exp $
+
+*pachi-1.0 (04 Apr 2004)
+
+  04 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> pachi-1.0.ebuild:
+  version bump (bug #46361); patch from Matze Braun
 
 *pachi-20031005 (06 Oct 2003)
 

@@ -1,0 +1,44 @@
+diff -ru PachiOrig/configure.in Pachi/configure.in
+--- PachiOrig/configure.in	2002-12-01 19:24:03.000000000 +0100
++++ Pachi/configure.in	2004-03-31 17:29:55.230515320 +0200
+@@ -1,5 +1,8 @@
+ # Process this file with autoconf to produce a configure script.
++AC_PREREQ([2.54])
++
+ AC_INIT(src/faes.cpp, 0.1, T-1000@Bigfoot.com)
++AC_CANONICAL_SYSTEM
+ AM_INIT_AUTOMAKE(pachi, 0.1)
+ AM_CONFIG_HEADER(config.h)
+ 
+@@ -44,7 +47,7 @@
+ 	SCOREDIR="."
+ else
+ 	DATADIR="$datadir/$PACKAGE"
+-	SCOREDIR="/var/lib/games/$PACKAGE"
++	SCOREDIR="$localstatedir/$PACKAGE"
+ fi
+ 
+ eval DATAPATH=`eval echo "$DATADIR"`
+diff -ru PachiOrig/data/Makefile.am Pachi/data/Makefile.am
+--- PachiOrig/data/Makefile.am	2002-12-08 14:30:17.000000000 +0100
++++ Pachi/data/Makefile.am	2004-03-31 16:53:10.424696752 +0200
+@@ -10,13 +10,13 @@
+ objects_v2.dat \
+ rooms_v2.dat
+ 
+-score_DATA = \
++score_DATA_ = \
+ scores.dat
+ 
+-EXTRA_DIST = $(dat_DATA) $(score_DATA)
++EXTRA_DIST = $(dat_DATA) $(score_DATA_)
+ 
+ install-data-local:
+-	for file in $(score_DATA); do\
+-	    chgrp $(group) $(scoredir)/$$file; \
+-	    chmod $(perms) $(scoredir)/$$file; \
+-	done					    
++	$(mkinstalldirs) $(DESTDIR)$(scoredir)
++	for file in $(score_DATA_); do                                       \
++		$(INSTALL) -g $(group) -m $(perms) $$file $(DESTDIR)$(scoredir); \
++	done
