@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3/heroes3-1.3.1a-r1.ebuild,v 1.3 2005/03/05 17:39:48 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/heroes3/heroes3-1.3.1a-r1.ebuild,v 1.4 2005/03/25 01:19:09 wolf31o2 Exp $
 
 # 	[x] Base Install Required (+4 MB) 
 #	[x] Scenarios (+7 MB)
@@ -14,7 +14,7 @@ inherit games
 IUSE="nocd maps music sounds videos"
 DESCRIPTION="Heroes of Might and Magic III : The Restoration of Erathia - turn-based 2-D medieval combat"
 HOMEPAGE="http://www.lokigames.com/products/heroes3/"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 # Since I do not have a PPC machine to test with, I will leave the PPC stuff in
 # here so someone else can stabilize loki_setupdb and loki_patch for PPC and
@@ -80,8 +80,7 @@ src_install() {
 	# we run touch on ${D} so as to make sure portage doesnt do any such thing
 	find ${Ddir} -exec touch '{}' \;
 
-	cp ${CDROM_ROOT}/icon.xpm ${S}/heroes3.xpm
-	doicon ${S}/heroes3.xpm
+	newicon ${CDROM_ROOT}/icon.xpm heroes3.xpm
 
 	prepgamesdirs
 	make_desktop_entry heroes3 "Heroes of Might and Magic III" "heroes3.xpm"
