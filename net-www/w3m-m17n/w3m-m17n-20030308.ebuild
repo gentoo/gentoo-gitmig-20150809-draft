@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m-m17n/w3m-m17n-20030308.ebuild,v 1.1 2003/06/20 13:47:54 yakina Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m-m17n/w3m-m17n-20030308.ebuild,v 1.2 2003/06/20 18:27:04 yakina Exp $
 
 IUSE="gpm imlib ssl"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www2u.biglobe.ne.jp/~hsaka/w3m/"
 
 SLOT="0"
 LICENSE="w3m"
-KEYWORDS="~x86 ~alpha"
+KEYWORDS="x86 alpha"
 
 DEPEND=">=sys-libs/ncurses-5.2-r3
 	>=sys-libs/zlib-1.1.3-r2
