@@ -1,0 +1,35 @@
+#!/sbin/runscript
+
+#NOTE: these variables will be moved to /etc/conf.d/noflushd soon, once
+#      the new initscript changes are done. Its only here temporarily.
+
+#you can put these in your rc.conf file if you wish
+#TIMEOUT=60
+#DISKS=/dev/discs/disc0/disc
+#EXTRA=
+#NOFLUSHD_OPTS="-n $TIMEOUT $DISKS $EXTRA"
+
+depend() {
+	need localmount
+}
+
+checkconfig() {
+	if [ -z "$NOFLUSHD_OPTS" ] ; then
+		eerror "You need to setup your NOFLUSHD_OPTS first"
+		eerror "Check that you've  adjusted for your needs"
+		return 1
+	fi
+}
+
+start() {
+	checkconfig || return 1
+	ebegin "Starting noflushd"
+	start-stop-daemon --start --quiet --exec /usr/sbin/noflushd -- $NOFLUSHD_OPTS
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping noflushd"
+	start-stop-daemon --stop --quiet --pidfile /var/run/noflushd.pid
+	eend $?
+}
