@@ -1,4 +1,14 @@
-MD5 6429af1efbc1d0e10f9126e49efcdd14 passook-1.0.0.ebuild 715
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 10d06d77106dae7c800803d462fd4284 ChangeLog 949
-MD5 dea799398b05ab4dc9782c51ad3b316f files/passook.diff 663
+MD5 40cbdb313dd8ecc7f479dd795883f467 passook-1.0.0.ebuild 721
 MD5 5db7ef9bcc7e703f3d1c38294506d8c3 files/digest-passook-1.0.0 57
+MD5 dea799398b05ab4dc9782c51ad3b316f files/passook.diff 663
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA+eEJmdTrptrqvGERAnLCAKCdJos2rFMlbojgzTdWaTny6bnbAACfev2n
+ijV6LGe9jmzhFfQSRqycDpY=
+=wpav
+-----END PGP SIGNATURE-----
