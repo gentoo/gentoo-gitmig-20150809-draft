@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Digest-MD5
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-MD5/ChangeLog,v 1.22 2004/01/08 18:39:42 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Digest-MD5/ChangeLog,v 1.23 2004/01/18 20:27:25 tuxus Exp $
+
+  18 Jan 2004; <tuxus@gentoo.org> Digest-MD5-2.33.ebuild:
+  Added ~mips to KEYWORDS.
 
   08 Jan 2004; <gustavoz@gentoo.org> Digest-MD5-2.33.ebuild:
   stable on hppa
