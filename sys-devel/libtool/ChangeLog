@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.14 2002/12/20 19:07:00 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.15 2003/02/07 20:35:55 gmsoft Exp $
+
+  07 Feb 2003; Guy Martin <gmsoft@gentoo.org> libtool-1.4.1-r10-ebuild :
+  Added hppa to keywords.
 
 *libtool-1.4.1-r10 (20 Dec 2002)
   20 Dec 2002; Jan Seidel <tuxus@gentoo.org> libtool-1.4.1-r10-ebuild :

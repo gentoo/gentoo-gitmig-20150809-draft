@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/m4
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.6 2003/01/07 20:17:44 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.7 2003/02/07 20:39:22 gmsoft Exp $
+
+  07 Feb 2003; Guy Martin <gmsoft@gentoo.org> :
+  Added hppa to keywords.
 
 *m4-1.4p-r1 (07 Jan 2003)
 
