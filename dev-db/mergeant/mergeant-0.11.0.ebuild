@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mergeant/mergeant-0.11.0.ebuild,v 1.2 2003/04/09 09:37:56 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mergeant/mergeant-0.11.0.ebuild,v 1.3 2003/07/11 21:04:12 aliz Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ DESCRIPTION="Database admin tool using libgnomedb and libgda"
 HOMEPAGE="http://www.gnome-db.org/"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 RDEPEND=">=gnome-extra/libgnomedb-0.11.0
 	>=gnome-extra/libgda-0.11.0

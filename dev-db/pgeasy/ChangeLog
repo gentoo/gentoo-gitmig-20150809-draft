@@ -1,8 +1,8 @@
 # ChangeLog for dev-db/pgeasy
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgeasy/ChangeLog,v 1.1 2003/04/04 19:51:27 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgeasy/ChangeLog,v 1.2 2003/07/11 21:04:13 aliz Exp $
 
-*pgeas-3.0.1 (04 Apr 2003)
+*pgeasy-3.0.1 (04 Apr 2003)
 
   04 Apr 2003; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
   pgeasy-3.0.1.ebuild, files/digest-pgeasy-3.0.1 :

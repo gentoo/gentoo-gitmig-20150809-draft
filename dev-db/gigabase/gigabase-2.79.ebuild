@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/gigabase-2.79.ebuild,v 1.1 2003/02/18 12:52:30 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/gigabase/gigabase-2.79.ebuild,v 1.2 2003/07/11 21:04:12 aliz Exp $
 
 DESCRIPTION="OO-DBMS with interfaces for C/C++/Java/PHP/Perl"
 HOMEPAGE="http://www.garret.ru/~knizhnik/gigabase.html"
 SRC_URI="http://www.garret.ru/~knizhnik/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 DEPEND=""
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.3.3.ebuild,v 1.8 2003/03/25 05:20:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.3.3.ebuild,v 1.9 2003/07/11 21:04:13 aliz Exp $
 
 MY_PN=phpMyAdmin
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://phpmyadmin.sourceforge.net/"
 LICENSE="GPL-2"
 SLOT="0"
 # only known to work on x86... can people test on other platforms?
-KEYWORDS="~x86 ~sparc ppc ~alpha"
+KEYWORDS="x86 ~sparc ppc ~alpha"
 
 DEPEND=">=net-www/apache-1.3.24-r1 >=dev-db/mysql-3.23.38 >=dev-php/mod_php-4.1.2-r5"
 

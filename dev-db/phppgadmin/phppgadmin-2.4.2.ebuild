@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/phppgadmin-2.4.2.ebuild,v 1.1 2003/03/01 08:34:58 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/phppgadmin-2.4.2.ebuild,v 1.2 2003/07/11 21:04:16 aliz Exp $
 
 MY_PN=phpPgAdmin
 MY_PV="`echo ${PV} | sed -e 's:\.:-:g'`"
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_PN}_${MY_PV}.tar.bz2"
 HOMEPAGE="http://phppgadmin.sourceforge.net/"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 SLOT="0"
 
 DEPEND=">=net-www/apache-1.3.24-r1

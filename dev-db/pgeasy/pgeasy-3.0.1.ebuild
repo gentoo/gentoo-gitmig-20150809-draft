@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgeasy/pgeasy-3.0.1.ebuild,v 1.1 2003/04/04 19:51:27 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgeasy/pgeasy-3.0.1.ebuild,v 1.2 2003/07/11 21:04:13 aliz Exp $
 
 DESCRIPTION="An easy-to-use C interface to PostgreSQL."
 HOMEPAGE="http://gborg.postgresql.org/project/pgeasy/projdisplay.php"
 SRC_URI="ftp://gborg.postgresql.org/pub/pgeasy/stable/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 DEPEND=">=dev-db/postgresql-7.3.2"

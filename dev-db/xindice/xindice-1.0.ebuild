@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/xindice/xindice-1.0.ebuild,v 1.2 2003/04/25 15:15:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/xindice/xindice-1.0.ebuild,v 1.3 2003/07/11 21:04:18 aliz Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://xml.apache.org/xindice/dist/xml-xindice-${PV}.tar.gz"
 
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="doc"
 
 DEPEND=">=dev-java/sun-jdk-1.3"

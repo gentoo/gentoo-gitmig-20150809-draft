@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.8.ebuild,v 1.2 2003/02/13 10:05:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/tora/tora-1.3.8.ebuild,v 1.3 2003/07/11 21:04:18 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="TOra - Toolkit For Oracle"
@@ -10,7 +10,7 @@ DEPEND=">=x11-libs/qt-3.0.0
 		mysql? ( >=dev-db/mysql-3.23 )
 		postgres? ( >=dev-db/postgresql-7.1 )"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 LICENSE="GPL-2"
 
 src_compile() {
