@@ -1,6 +1,9 @@
 # ChangeLog for net-print/foomatic-db
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/ChangeLog,v 1.21 2004/12/20 21:28:04 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/ChangeLog,v 1.22 2004/12/20 22:59:16 swegener Exp $
+
+  20 Dec 2004; Sven Wegener <swegener@gentoo.org> :
+  Added missing digest entries.
 
 *foomatic-db-20041220 (20 Dec 2004)
 
