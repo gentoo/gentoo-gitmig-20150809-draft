@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.8.ebuild,v 1.6 2003/06/12 21:21:55 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/openafs-1.2.8.ebuild,v 1.7 2003/07/30 20:54:12 rphillips Exp $
 
 
 S=${WORKDIR}/${P}
@@ -38,6 +38,7 @@ src_unpack() {
 
 src_compile() {
 	epatch ${FILESDIR}/openafs-1.2.6.patch
+	epatch ${FILESDIR}/openafs-1.2.8.patch
 
 	./configure \
 		--with-afs-sysname=i386_linux24 \

@@ -1,0 +1,48 @@
+diff -urN openafs-1.2.8/src/pam/Makefile.in openafs-1.2.8-patched/src/pam/Makefile.in
+--- openafs-1.2.8/src/pam/Makefile.in	2002-09-10 01:03:42.000000000 -0400
++++ openafs-1.2.8-patched/src/pam/Makefile.in	2003-07-30 11:57:49.000000000 -0400
+@@ -44,7 +44,7 @@
+ 	  afs_pam_msg.o afs_message.o AFS_component_version_number.o
+    OBJS = $(SHOBJS) test_pam.o
+ INCLUDES=-I${TOP_SRCDIR}/config -I${TOP_INCDIR} \
+-	-I/usr/include -I/usr/include/sys
++	-I/usr/include 
+ CFLAGS =  ${DEBUG} ${INCLUDES} ${PAM_CFLAGS}
+ 
+ all: test_pam ${TOP_LIBDIR}/pam_afs.so.1 ${TOP_LIBDIR}/pam_afs.krb.so.1
+diff -urN openafs-1.2.8/src/ptserver/ptserver.h openafs-1.2.8-patched/src/ptserver/ptserver.h
+--- openafs-1.2.8/src/ptserver/ptserver.h	2001-03-27 03:49:41.000000000 -0500
++++ openafs-1.2.8-patched/src/ptserver/ptserver.h	2003-07-30 11:57:20.000000000 -0400
+@@ -28,7 +28,7 @@
+ #define	ANONYMOUSID	32766
+ 
+ #define PRDBVERSION	0
+-
++#include <errno.h>
+ struct prheader {
+     afs_int32 version;			/* database version number */
+     afs_int32 headerSize;			/* bytes in header (almost version#) */
+diff -urN openafs-1.2.8/src/sys/rmtsysd.c openafs-1.2.8-patched/src/sys/rmtsysd.c
+--- openafs-1.2.8/src/sys/rmtsysd.c	2001-07-12 15:59:17.000000000 -0400
++++ openafs-1.2.8-patched/src/sys/rmtsysd.c	2003-07-30 11:56:32.000000000 -0400
+@@ -31,7 +31,7 @@
+ #include <stdio.h>
+ #include <rx/xdr.h>
+ #include "rmtsys.h"
+-
++#include <errno.h>
+ extern int errno;   /* We ship this over the net if needed */
+ extern RMTSYS_ExecuteRequest();
+ 
+diff -urN openafs-1.2.8/src/sys/rmtsyss.c openafs-1.2.8-patched/src/sys/rmtsyss.c
+--- openafs-1.2.8/src/sys/rmtsyss.c	2001-08-07 20:04:10.000000000 -0400
++++ openafs-1.2.8-patched/src/sys/rmtsyss.c	2003-07-30 11:56:50.000000000 -0400
+@@ -32,7 +32,7 @@
+ #endif
+ /*#include <afs/cellconfig.h>*/
+ #include "rmtsys.h"
+-
++#include <errno.h>
+ extern int errno;   /* We ship this over the net if needed */
+ extern RMTSYS_ExecuteRequest();
+ 
