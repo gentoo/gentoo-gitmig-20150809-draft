@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/fluxconf
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxconf/ChangeLog,v 1.19 2004/06/24 22:18:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxconf/ChangeLog,v 1.20 2004/07/19 18:40:26 malc Exp $
+
+  19 Jul 2004; <malc@gentoo.org> fluxconf-0.9.7.ebuild:
+  Moving to stable on amd64 in line with x86 - and closing bug #57563
 
   15 Jun 2004; Jason Wever <weeve@gentoo.org> fluxconf-0.9.7.ebuild:
   Stable on sparc.
