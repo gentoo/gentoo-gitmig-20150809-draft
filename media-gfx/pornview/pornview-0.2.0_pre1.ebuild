@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/pornview-0.2.0_pre1.ebuild,v 1.4 2003/12/06 18:24:27 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pornview/pornview-0.2.0_pre1.ebuild,v 1.5 2004/03/28 21:23:57 avenj Exp $
 
 IUSE="avi gtk2 jpeg mpeg nls static"
 
@@ -18,7 +18,7 @@ DEPEND="media-libs/libpng
 	nls? ( sys-devel/gettext )"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~amd64"
 SRC_URI="mirror://sourceforge/${PN}/${P/_/}.tar.gz"
 RESTRICT="nomirror"
 
