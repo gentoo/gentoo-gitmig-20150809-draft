@@ -1,28 +1,18 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fe49d1729f390df06adac99ed7d5e49c ChangeLog 5969
-MD5 dc321fef8956eb35804439f3ec535bf7 gconf-editor-2.4.0.ebuild 692
-MD5 9309216b0addd1f74348cc5ad1989d7d gconf-editor-2.6.0.ebuild 859
-MD5 12f39d10e3d472a7f457ef13486b509a gconf-editor-2.6.1.ebuild 628
-MD5 9ad48f878bc5f7176450b307c177ab28 gconf-editor-2.6.2.ebuild 626
 MD5 f2a895d2a52f28d78267a1cd6c84a564 gconf-editor-2.8.0.ebuild 695
+MD5 dc321fef8956eb35804439f3ec535bf7 gconf-editor-2.4.0.ebuild 692
+MD5 12f39d10e3d472a7f457ef13486b509a gconf-editor-2.6.1.ebuild 628
 MD5 0bfe7da6b029506c145a7a31b4369fab gconf-editor-2.8.2.ebuild 688
+MD5 9309216b0addd1f74348cc5ad1989d7d gconf-editor-2.6.0.ebuild 859
+MD5 9ad48f878bc5f7176450b307c177ab28 gconf-editor-2.6.2.ebuild 626
+MD5 fe49d1729f390df06adac99ed7d5e49c ChangeLog 5969
+MD5 d4836e2d9f57d12601db62ce91b4ab83 gconf-editor-2.10.0.ebuild 709
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 540ecb440a07d63b4e240d8606b3a4c1 gconf-editor-2.10.0.ebuild 708
+MD5 99070c44d83be5df6ca3a275c4cc3b13 files/digest-gconf-editor-2.10.0 72
+MD5 37d0c602679587424d11f7b6363421a8 files/gconf-editor-2.4.0-gtk+-2.4.patch 1528
 MD5 a2b72e9cea80bfd300183397a4487a72 files/digest-gconf-editor-2.4.0 71
 MD5 e1005344b4be9e39de4829d91f0c2aba files/digest-gconf-editor-2.6.0 71
 MD5 8866f71c7c4162fc9ed59f0f60bdfe6c files/digest-gconf-editor-2.6.1 71
 MD5 6b1fcd04a46411dda1c62bd9df47e431 files/digest-gconf-editor-2.6.2 71
 MD5 dc5bba44c0b64bae5537992930ccd9d0 files/digest-gconf-editor-2.8.0 71
 MD5 1a02c71e7fe8df4aeb8b35a48667c2b9 files/digest-gconf-editor-2.8.2 71
-MD5 37d0c602679587424d11f7b6363421a8 files/gconf-editor-2.4.0-gtk+-2.4.patch 1528
 MD5 d82811e98599090bb20b4e7173356556 files/gconf-editor-2.6.0-revert_escape_cjk.patch 3887
-MD5 99070c44d83be5df6ca3a275c4cc3b13 files/digest-gconf-editor-2.10.0 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCLop+XjcVihsel0ERAs78AKDQXvXF8w2a1SZrz7hSIE0ERcIPHgCggd8a
-JwH2LczPXPKFFKC1MTXKXgk=
-=llWL
------END PGP SIGNATURE-----
