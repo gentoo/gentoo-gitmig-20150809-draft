@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/emboss
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/emboss/ChangeLog,v 1.10 2004/07/15 02:06:20 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/emboss/ChangeLog,v 1.11 2004/07/20 00:34:01 ribosome Exp $
+
+  19 Jul 2004; Olivier Fisette <ribosome@gentoo.org> emboss-2.9.0.ebuild:
+  Version bump. Changed the configuration and install steps a bit to
+  reflect the fact that header files are now installed automatically.
 
   14 Jul 2004; Olivier Fisette <ribosome@gentoo.org>
   emboss-2.8.0-r3.ebuild: Modified configuration step to make the X and png
