@@ -1,4 +1,14 @@
-MD5 1f02b9dfcfebd3207447439f057ba101 ChangeLog 558
-MD5 836ac7f8ab7aa8e7a04af60097f965a5 fortune-mod-kernelcookies-0.1.ebuild 680
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a8047900c918cf9191e57000a52105cb ChangeLog 772
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 5a4d8659a05f4d396335a6d4304af4f9 files/digest-fortune-mod-kernelcookies-0.1 63
+MD5 c0d97584d30d5c363544b4136a224cf1 fortune-mod-kernelcookies-8.ebuild 688
+MD5 5fd9719487741cb1f0af51c53c429b55 files/digest-fortune-mod-kernelcookies-8 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA16KxHTu7gpaalycRAkZFAJ4qAKataXn+ErpDkgQWy702cqdDYQCff1Ul
+BuC8gtL7VeoN37XmZ6H0pjE=
+=4rTY
+-----END PGP SIGNATURE-----
