@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m-m17n/w3m-m17n-0.4.2.ebuild,v 1.7 2004/03/11 20:28:48 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m-m17n/w3m-m17n-0.4.2.ebuild,v 1.8 2004/03/13 20:36:55 taviso Exp $
 
 W3M_CVS_PV="1.862"
 W3M_P="${P/-m17n/}+cvs-${W3M_CVS_PV}"
@@ -14,13 +14,13 @@ HOMEPAGE="http://w3m.sourceforge.net/
 	http://www2u.biglobe.ne.jp/~hsaka/w3m/
 	http://www.page.sannet.ne.jp/knabe/w3m/w3m.html"
 SRC_URI="mirror://gentoo/${W3M_P}.tar.gz
-	mirror://gentoo/libwc-${LIBWC_PV}.tar.gz"
-	http://www.page.sannet.ne.jp/knabe/w3m/${W3M_M17N_P}-1.diff.gz
+	mirror://gentoo/libwc-${LIBWC_PV}.tar.gz
+	http://www.page.sannet.ne.jp/knabe/w3m/${W3M_M17N_P}-1.diff.gz"
 #	nls? ( http://www.page.sannet.ne.jp/knabe/w3m/${W3M_M17N_P}-nls-1.diff.gz)
 
 LICENSE="w3m"
 SLOT="0"
-KEYWORDS="x86 alpha ppc sparc"
+KEYWORDS="x86 alpha ~ppc sparc"
 IUSE="X nopixbuf imlib imlib2 xface migemo gpm ssl"
 #IUSE="nls"
 
