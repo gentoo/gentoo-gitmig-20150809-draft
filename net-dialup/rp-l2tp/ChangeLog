@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/rp-l2tp
 # Copyright 2003-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-l2tp/ChangeLog,v 1.4 2004/06/24 22:32:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-l2tp/ChangeLog,v 1.5 2004/07/01 22:09:43 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  rp-l2tp-0.3-r1.ebuild:
+  virtual/glibc -> virtual/libc
 
   19 Nov 2003; Heinrich Wendel <lanius@gentoo.org> metadata.xml:
   metadata.xml

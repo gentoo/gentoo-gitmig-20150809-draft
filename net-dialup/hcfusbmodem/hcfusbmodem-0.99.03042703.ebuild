@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfusbmodem/hcfusbmodem-0.99.03042703.ebuild,v 1.2 2004/06/24 22:27:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hcfusbmodem/hcfusbmodem-0.99.03042703.ebuild,v 1.3 2004/07/01 22:07:14 eradicator Exp $
 
 MY_PV=0.99lnxtbeta03042703ppc
 MY_P=${PN}-${MY_PV}
@@ -8,7 +8,7 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="hcfusbmodem - Modem driver for Connexant HSF chipset"
 SRC_URI="http://www.linuxant.com/drivers/hcf/archive/${MY_P}/${MY_P}.tar.gz"
 HOMEPAGE="http://www.linuxant.com/drivers"
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 IUSE=""
 SLOT="0"
 LICENSE="Conexant"

@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/hsflinmodem
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
 
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  hsflinmodem-5.03.27.02122600.ebuild, hsflinmodem-5.03.27.03042700.ebuild:
+  virtual/glibc -> virtual/libc
+
   19 Nov 2003; Heinrich Wendel <lanius@gentoo.org> metadata.xml:
   metadata
 

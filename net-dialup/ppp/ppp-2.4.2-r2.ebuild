@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r2.ebuild,v 1.10 2004/06/24 22:30:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r2.ebuild,v 1.11 2004/07/01 22:09:06 eradicator Exp $
 
 inherit eutils gnuconfig
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~hppa amd64 ~ia64"
 IUSE="ipv6 activefilter pam atm"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	>=net-libs/libpcap-0.8
 	atm? ( x86? ( net-dialup/linux-atm ) )"
 DEPEND="${RDEPEND}

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/l2tpd/l2tpd-0.69-r1.ebuild,v 1.4 2004/06/24 22:28:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/l2tpd/l2tpd-0.69-r1.ebuild,v 1.5 2004/07/01 22:08:11 eradicator Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.l2tpd.org/"
 MY_P="freeswan-l2tp-8jdl"
 SRC_URI="http://www.jacco2.dds.nl/networking/tarballs/${MY_P}.tgz"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-apps/sed-4"
 
 LICENSE="GPL-2"

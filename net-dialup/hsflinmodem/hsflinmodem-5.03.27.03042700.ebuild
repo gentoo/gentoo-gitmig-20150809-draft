@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsflinmodem/hsflinmodem-5.03.27.03042700.ebuild,v 1.2 2004/06/24 22:27:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/hsflinmodem/hsflinmodem-5.03.27.03042700.ebuild,v 1.3 2004/07/01 22:07:28 eradicator Exp $
 
 MY_PV=5.03.27lnxtbeta03042700
 MY_P=${PN}-${MY_PV}
@@ -8,7 +8,7 @@ S=${WORKDIR}/${MY_P}
 DESCRIPTION="hsflinmodem - Modem driver for Connexant HSF chipset"
 SRC_URI="http://www.linuxant.com/drivers/hsf/archive/${MY_P}/${MY_P}.tar.gz"
 HOMEPAGE="http://www.linuxant.com/drivers/hsf/index.html"
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 IUSE=""
 SLOT="0"
 LICENSE="Conexant"

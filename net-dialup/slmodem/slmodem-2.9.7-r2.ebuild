@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.7-r2.ebuild,v 1.2 2004/06/24 22:32:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.7-r2.ebuild,v 1.3 2004/07/01 22:10:03 eradicator Exp $
 
 IUSE="alsa"
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.smlink.com/linux/unsupported/${MY_P}.tar.gz"
 LICENSE="Smart-Link"
 SLOT="0"
 KEYWORDS="~x86"
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 S="${WORKDIR}/${MY_P}"
 
 src_unpack() {

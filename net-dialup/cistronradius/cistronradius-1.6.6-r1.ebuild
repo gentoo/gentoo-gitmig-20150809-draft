@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/cistronradius/cistronradius-1.6.6-r1.ebuild,v 1.5 2004/06/24 22:25:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/cistronradius/cistronradius-1.6.6-r1.ebuild,v 1.6 2004/07/01 22:05:18 eradicator Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 -*"
 LICENSE="GPL-2"
 SLOT="0"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 		>=sys-apps/sed-4*"
 
 src_unpack() {

@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/gmasqdialer
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gmasqdialer/ChangeLog,v 1.3 2004/06/24 22:26:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gmasqdialer/ChangeLog,v 1.4 2004/07/01 22:06:37 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  gmasqdialer-0.99.13.ebuild:
+  virtual/glibc -> virtual/libc
 
   19 Mar 2004; Heinrich Wendel <lanius@gentoo.org> gmasqdialer-0.99.13.ebuild:
   fix depend

@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/pptpd-1.1.3.ebuild,v 1.6 2004/06/24 22:31:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpd/pptpd-1.1.3.ebuild,v 1.7 2004/07/01 22:09:29 eradicator Exp $
 
 S=${WORKDIR}/pptpd-1.1.3
 DESCRIPTION="Linux Point-to-Point Tunnelling Protocol Server"
 SRC_URI="http://unc.dl.sourceforge.net/sourceforge/poptop/pptpd-1.1.3.tar.gz"
 HOMEPAGE="http://sourceforge.net/projects/poptop/"
 
-DEPEND="virtual/glibc net-dialup/ppp"
+DEPEND="virtual/libc net-dialup/ppp"
 
 SLOT="0"
 LICENSE="GPL-2"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.8.ebuild,v 1.2 2004/06/24 22:32:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.8.ebuild,v 1.3 2004/07/01 22:10:03 eradicator Exp $
 
 inherit kmod
 
@@ -12,7 +12,7 @@ SLOT="0"
 KEYWORDS="-*"
 IUSE="${IUSE} alsa"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	alsa? ( media-libs/alsa-lib )
 	sys-kernel/config-kernel"
 

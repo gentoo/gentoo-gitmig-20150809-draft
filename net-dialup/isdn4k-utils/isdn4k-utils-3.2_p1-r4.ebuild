@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.2_p1-r4.ebuild,v 1.5 2004/06/24 22:28:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/isdn4k-utils-3.2_p1-r4.ebuild,v 1.6 2004/07/01 22:07:43 eradicator Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ KEYWORDS="~x86 ~amd64 ~alpha"
 LICENSE="GPL-2"
 
 RDEPEND=">=sys-apps/portage-2.0.47-r10
-	virtual/glibc
+	virtual/libc
 	sys-libs/ncurses
 	sys-libs/gdbm
 	X? (

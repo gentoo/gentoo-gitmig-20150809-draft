@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/kpnadsl4linux/kpnadsl4linux-1.10-r1.ebuild,v 1.8 2004/06/24 22:28:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/kpnadsl4linux/kpnadsl4linux-1.10-r1.ebuild,v 1.9 2004/07/01 22:07:57 eradicator Exp $
 
 IUSE=""
 DESCRIPTION="ADSL4Linux, a PPTP start/stop/etc. program especially for Dutch users, for gentoo."
@@ -10,7 +10,7 @@ SRC_URI="http://home.planet.nl/~mcdon001/${P}.tar.gz
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc amd64"
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 RDEPEND="sys-apps/gawk
 	>=net-dialup/pptpclient-1.1.0
 	>=net-dialup/ppp-2.4.0"
