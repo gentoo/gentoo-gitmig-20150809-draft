@@ -1,6 +1,16 @@
-MD5 f4fd6aacc1ed4fb9e9b4f8d8e15789af ChangeLog 2269
-MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ca476af912aa698dfce681255f5228f5 ChangeLog 2357
 MD5 a51b1a56648f7280bb10713c5aac5a38 minibufexpl-6.3.1-r1.ebuild 908
-MD5 97fea60575b2ea68bf26e5354b032700 minibufexpl-6.3.2.ebuild 907
+MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
+MD5 2d0819f9184163031f256d1ab7da3a71 minibufexpl-6.3.2.ebuild 902
 MD5 32c61863835ac319af932bbe475680cb files/digest-minibufexpl-6.3.1-r1 69
 MD5 c8044a2b62a7cfc0eeb12f86474869a5 files/digest-minibufexpl-6.3.2 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB2c6OCHk4+ZoBpvsRAmxFAKCausUSUVN5uG+GEQLZ30R+jN/8XACgrysC
+QIVSRprc4WnTcH4+Qcn02bo=
+=3XPh
+-----END PGP SIGNATURE-----
