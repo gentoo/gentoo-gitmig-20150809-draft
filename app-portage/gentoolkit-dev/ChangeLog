@@ -1,7 +1,12 @@
 # ChangeLog for app-portage/gentoolkit-dev
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.4 2004/03/05 18:10:04 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.5 2004/04/14 01:59:56 karltk Exp $
 
+*gentoolkit-dev-0.2.0_pre3 (14 Apr 2004)
+
+  14 Apr 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  gentoolkit-dev-0.2.0_pre3.ebuild: New upstream version.
+  
   04 Mar 2004; Brian Jackson <iggy@gentoo.org>
   gentoolkit-dev-0.2.0_pre2.ebuild:
   added s390 keywords
