@@ -1,6 +1,12 @@
 # ChangeLog for games-strategy/ufo2000
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo2000/ChangeLog,v 1.2 2004/01/31 01:02:18 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo2000/ChangeLog,v 1.3 2004/02/13 01:52:22 mr_bones_ Exp $
+
+*ufo2000-0.4.0.334 (12 Feb 2004)
+
+  12 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  ufo2000-0.4.0.334.ebuild:
+  version bump (bug #41325); music patch from Serge Semashko
 
 *ufo2000-0.4.0_beta324 (30 Jan 2004)
 
