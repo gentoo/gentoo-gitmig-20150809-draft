@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.8.0-r9.ebuild,v 1.9 2003/02/19 21:46:47 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.8.0-r9.ebuild,v 1.10 2003/02/23 00:01:21 gmsoft Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -198,6 +198,8 @@ src_compile() {
 	then
 		myconf="${myconf} -Ud_longdbl"
 	fi
+
+	[ "${ARCH}" = "hppa" ] && append-flags -fPIC
 	
 	if [ "${PN}" = "libperl" ]
 	then

@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/perl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.58 2003/02/19 21:46:47 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.59 2003/02/23 00:01:21 gmsoft Exp $
+
+  23 Feb 2003; Guy Martin <gmsoft@gentoo.org> perl-5.8.0-r9.ebuild :
+  Added -fPIC to CFLAGS on hppa. It's needed by apps linking to some perl libs.
 
   18 Feb 2003; Zach Welch <zwelch@gentoo.org> perl-5.8.0-r9.ebuild :
   Added arm to keywords.
