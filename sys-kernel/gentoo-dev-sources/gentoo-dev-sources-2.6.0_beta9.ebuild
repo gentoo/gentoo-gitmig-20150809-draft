@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.0_beta9.ebuild,v 1.2 2003/11/02 18:15:34 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.0_beta9.ebuild,v 1.3 2003/11/04 22:00:44 johnm Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #Original Kernel Version before Patches
@@ -15,8 +15,6 @@ GPV=0.3
 KV=${OKV}${EXTRAVERSION}
 
 ETYPE="sources"
-IUSE="build"
-
 inherit kernel
 
 DESCRIPTION="Full sources for the development branch of the Linux kernel (2.6)"
@@ -46,69 +44,11 @@ src_unpack() {
 	# apply gentoo patches
 	epatch ${DISTDIR}/genpatches-2.6-${GPV}.tar.bz2
 
-	#-----
-	## Current kernel_universal_unpack is broken with 2.6
-	## using this until the issue has been rectified.
-	#kernel_universal_unpack
-
-	# remove all tilde suffixed files
-	find . -iname "*~" -exec rm {} \;
-
-	# Gentoo Linux uses /boot, so fix 'make install' to work properly
-	# also fix the EXTRAVERSION
-	mv Makefile Makefile.orig
-	sed -e 's:#export\tINSTALL_PATH:export\tINSTALL_PATH:' \
-	    -e "s:^\(EXTRAVERSION =\).*:\1 -$(echo ${KV} | cut -d- -f2,3,4,5):" \
-		Makefile.orig > Makefile || die # test, remove me if Makefile ok
-	rm Makefile.orig
-
-	cd  ${S}/Documentation/DocBook
-	sed -e "s:db2:docbook2:g" Makefile > Makefile.new \
-			&& mv Makefile.new Makefile
-	cd ${S}
-
-	if [ ${ETYPE} == "headers" ]
-	then
-		MY_ARCH=${ARCH}
-		unset ${ARCH}
-		make mrproper || die "make mrproper died"
-		ARCH=${MY_ARCH}
-	fi
+	kernel_universal_unpack
 }
 
 pkg_install() {
-	## Using this until kernel_src_unpack works with 2.6
-	#
-	#fix silly permissions in tarball
-	cd ${WORKDIR}
-	chown -R root:root *
-	chmod -R a+r-w+X,u+w *
-
-	cd ${S}
-	if [ "$ETYPE" = "sources" ]
-	then
-		dodir /usr/src
-		echo ">>> Copying sources..."
-		if [ -d "${WORKDIR}/${KV}/docs/" ]
-		then
-			for file in $(ls -1 ${WORKDIR}/${KV}/docs/)
-			do
-				echo "XX_${file}*" >> patches.txt
-				cat ${WORKDIR}/${KV}/docs/${file} >> patches.txt
-			done
-		fi
-		if [ -f patches.txt ]; then
-			dodoc patches.txt
-		fi
-		mv ${WORKDIR}/linux* ${D}/usr/src
-	else
-		#linux-headers
-		dodir /usr/include/linux
-		cp -ax ${S}/include/linux/* ${D}/usr/include/linux
-		rm -rf ${D}/usr/include/linux/modules
-		dodir /usr/include/asm
-		cp -ax ${S}/include/asm/* ${D}/usr/include/asm
-	fi
+	kernel_src_install
 }
 
 pkg_postinst() {
