@@ -3,6 +3,11 @@
 # /home/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.21 2004/03/08 14:56:09
 # lanius Exp $
 
+*lirc-0.7.0_pre4 (09 Apr 2004)
+
+  09 Apr 2004; Heinrich Wendel <lanius@gentoo.org> lirc-0.7.0_pre4.ebuild:
+  version bump, enable syslog logging, bug #47311
+
   14 Mar 2004; Heinrich Wendel <lanius@gentoo.org> lirc-0.7.0_pre3.ebuild:
   fix url to kernel 2.6 patch, remove irda warning, it's obsolete, bug #44395
 
