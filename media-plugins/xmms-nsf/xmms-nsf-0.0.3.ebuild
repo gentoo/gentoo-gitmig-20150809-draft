@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-nsf/xmms-nsf-0.0.3.ebuild,v 1.4 2003/08/07 04:01:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-nsf/xmms-nsf-0.0.3.ebuild,v 1.5 2003/10/12 12:14:30 mholzer Exp $
 
 DESCRIPTION="An xmms input-plugin for NSF-files (the nintendo 8-bit soundfiles) that uses source from NEZamp."
 HOMEPAGE="http://www.xmms.org/"
@@ -12,6 +12,12 @@ KEYWORDS="x86"
 
 DEPEND="media-sound/xmms
 	=x11-libs/gtk+-1.2*"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-gcc3.patch
+}
 
 src_install() {
 	make DESTDIR=${D} install || die
