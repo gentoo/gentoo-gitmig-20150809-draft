@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.29 2004/09/15 20:18:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.30 2004/09/17 12:25:50 vapier Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -27,6 +27,7 @@ virtual/lapack				app-sci/lapack-atlas
 virtual/libc				sys-libs/glibc
 virtual/glu					x11-base/xfree
 virtual/glut				media-libs/glut
+virtual/gnustep-back		gnustep-base/gnustep-back-xlib
 virtual/gzip				app-arch/gzip
 virtual/imap-c-client		net-libs/c-client
 virtual/imapUW				net-mail/uw-imap
@@ -38,6 +39,7 @@ virtual/jre					dev-java/blackdown-jre
 virtual/krb5				app-crypt/mit-krb5
 virtual/logger				app-admin/metalog
 virtual/lpr					net-print/cups
+virtual/m3					dev-lang/cm3
 virtual/mda					mail-filter/procmail
 virtual/mpg123				media-sound/mpg123
 virtual/mta					mail-mta/ssmtp
