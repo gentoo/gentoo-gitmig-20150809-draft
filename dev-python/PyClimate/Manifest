@@ -1,4 +1,6 @@
 MD5 d704534b86e2653d25b4e2f4c6b9e1e1 PyClimate-1.2.1.ebuild 921
 MD5 5711f48155e6a9f7f569dab40265e627 metadata.xml 729
-MD5 a39bdb2cec7fb3be0f0f6956379e68db ChangeLog 395
+MD5 022fe00c44f0d72528c372b2caf31e73 ChangeLog 571
+MD5 7f35de7c2d3e747f4108114649c9f79b PyClimate-1.2.1-r1.ebuild 1290
 MD5 f8ee275409815fba5c7c815d370748bf files/digest-PyClimate-1.2.1 67
+MD5 f8ee275409815fba5c7c815d370748bf files/digest-PyClimate-1.2.1-r1 67
