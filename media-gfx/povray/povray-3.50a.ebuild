@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50a.ebuild,v 1.3 2002/08/05 03:22:01 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50a.ebuild,v 1.4 2002/08/07 01:18:31 rphillips Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="POV Ray- The Persistance of Vision Ray Tracer"
@@ -38,7 +38,8 @@ src_compile() {
 	cp optout.h optout.h.orig
 	sed -e "s/#error You must complete the following DISTRIBUTION_MESSAGE macro//" optout.h.orig > optout.h
 
-	echo "s/^CPPFLAGS =/CPPFLAGS = -ansi -c/" >> makefile.sed
+	# rphillips - removed because of compilation issues
+	# echo "s/^CPPFLAGS =/CPPFLAGS = -ansi -c/" >> makefile.sed
 
 	if [ "`use icc`" ]; then
 		# ICC CPPFLAGS
