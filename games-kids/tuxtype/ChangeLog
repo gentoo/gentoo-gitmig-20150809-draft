@@ -1,6 +1,9 @@
 # ChangeLog for games-kids/tuxtype
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxtype/ChangeLog,v 1.4 2004/05/30 15:46:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxtype/ChangeLog,v 1.5 2004/06/04 22:43:53 jhuebel Exp $
+
+  04 Jun 2004; Jason Eric Huebel <jhuebel@gentoo.org> tuxtype-1.0.3-r1.ebuild:
+  gnuconfig_update added, ~amd64
 
   30 May 2004; Gustavo Zacarias <gustavoz@gentoo.org> tuxtype-1.0.3-r1.ebuild:
   Stable on sparc
