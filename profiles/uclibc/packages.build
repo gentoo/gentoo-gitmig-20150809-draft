@@ -27,3 +27,4 @@ net-misc/rsync
 virtual/editor
 sys-apps/net-tools
 sys-apps/less
+sys-apps/findutils
