@@ -1,13 +1,10 @@
---- asound.h.orig	2004-06-30 15:18:14.131997218 -0700
-+++ asound.h	2004-06-30 15:19:05.599888165 -0700
-@@ -61,6 +61,10 @@
- #include <sys/types.h>
- #endif
+--- asound.h.orig	2004-07-02 03:37:34.548378530 -0700
++++ asound.h	2004-07-02 03:37:57.019607386 -0700
+@@ -26,6 +26,7 @@
+ #if defined(LINUX) || defined(__LINUX__) || defined(__linux__)
  
-+#ifndef __user
-+#define __user
-+#endif
-+
- /*
-  *  protocol version
-  */
+ #include <linux/ioctl.h>
++#include <linux/compiler.h>
+ 
+ #ifdef __KERNEL__
+ 
