@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59r-r2.ebuild,v 1.4 2003/06/23 13:05:38 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59r-r2.ebuild,v 1.5 2003/07/17 21:26:30 gmsoft Exp $
 
 S=${WORKDIR}/${P}
 
@@ -13,7 +13,7 @@ DEPEND="virtual/glibc
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc alpha ~hppa"
+KEYWORDS="x86 ppc sparc alpha hppa"
 
 src_unpack () {
 	unpack ${A}
