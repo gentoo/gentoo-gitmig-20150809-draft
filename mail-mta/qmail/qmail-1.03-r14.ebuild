@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r14.ebuild,v 1.11 2005/01/27 19:19:29 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r14.ebuild,v 1.12 2005/03/03 18:43:27 ciaranm Exp $
 
 inherit toolchain-funcs eutils fixheadtails
 
@@ -49,7 +49,7 @@ RDEPEND="!virtual/mta
 	virtual/libc
 	app-shells/bash
 	>=sys-apps/ucspi-tcp-0.88
-	>=sys-apps/daemontools-0.76-r1
+	>=sys-process/daemontools-0.76-r1
 	>=net-mail/checkpassword-0.90
 	>=net-mail/cmd5checkpw-0.22
 	>=net-mail/dot-forward-0.71

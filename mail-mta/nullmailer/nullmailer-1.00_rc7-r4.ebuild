@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.00_rc7-r4.ebuild,v 1.5 2005/03/03 17:26:21 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.00_rc7-r4.ebuild,v 1.6 2005/03/03 18:40:52 ciaranm Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ RDEPEND="!mailwrapper? ( !virtual/mta )
 		mailwrapper? ( >=net-mail/mailwrapper-0.2 )
 		virtual/libc
 		>=sys-process/supervise-scripts-3.2
-		>=sys-apps/daemontools-0.76-r1
+		>=sys-process/daemontools-0.76-r1
 		sys-apps/shadow"
 PROVIDE="virtual/mta"
 

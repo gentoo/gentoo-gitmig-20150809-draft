@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.00_rc7-r1.ebuild,v 1.5 2005/03/03 17:24:09 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/nullmailer/nullmailer-1.00_rc7-r1.ebuild,v 1.6 2005/03/03 18:40:52 ciaranm Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ DEPEND="virtual/libc
 RDEPEND="!virtual/mta
 		virtual/libc
 		>=sys-process/supervise-scripts-3.2
-		>=sys-apps/daemontools-0.76-r1
+		>=sys-process/daemontools-0.76-r1
 		sys-apps/shadow"
 PROVIDE="virtual/mta"
 
