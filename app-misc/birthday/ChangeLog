@@ -1,0 +1,8 @@
+# ChangeLog for app-misc/birthday
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/birthday/ChangeLog,v 1.1 2002/12/08 21:38:58 sethbc Exp $
+
+*Birthday-1.5 (08 Dec 2002)
+
+  08 Dec 2002; Seth Chandler <sethbc@gentoo.org> birthday-1.5.ebuild :
+  ebuild submitted by Ryan Shaw <ryan.shaw@stanfordalumni.org>
