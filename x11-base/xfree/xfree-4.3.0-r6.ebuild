@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.41 2004/06/22 13:21:11 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r6.ebuild,v 1.42 2004/06/23 23:55:35 agriffis Exp $
 
 inherit eutils flag-o-matic gcc xfree
 
@@ -283,20 +283,20 @@ src_unpack() {
 	fi
 # FIXME: bug #19812, 075 should be deprecated by 076, left as
 # TDFX_RISKY for feedback (put in -r3 if no problems)
-	if [ "`use 3dfx`" -a "${TDFX_RISKY}" = "yes" ]
+	if use 3dfx && [ "${TDFX_RISKY}" = "yes" ]
 	then
 		mv -f ${PATCH_DIR}/5850* ${PATCH_DIR}/excluded
 	else
 		mv -f ${PATCH_DIR}/5851* ${PATCH_DIR}/excluded
 	fi
 
-	if [ -z "`use ipv6`" ]
+	if ! use ipv6
 	then
 		mv -f ${PATCH_DIR}/200* ${PATCH_DIR}/excluded
 		mv -f ${PATCH_DIR}/9921* ${PATCH_DIR}/excluded
 	else
 		mv -f ${PATCH_DIR}/9920* ${PATCH_DIR}/excluded
-		if [ -z "`use doc`" ]
+		if ! use doc
 		then
 			mv -f ${PATCH_DIR}/2001* ${PATCH_DIR}/excluded
 		fi
@@ -502,7 +502,7 @@ src_unpack() {
 	echo "#define SharedLibXft YES" >> config/cf/host.def
 
 	# disable docs if doc not in USE
-	if [ -z "`use doc`" ]
+	if ! use doc
 	then
 		echo "#define BuildLinuxDocText NO" >> config/cf/host.def
 		echo "#define BuildLinuxDocHtml NO" >> config/cf/host.def
@@ -517,7 +517,7 @@ src_unpack() {
 	fi
 
 	# Native Language Support Fonts
-	if [ -z "`use nls`" ]
+	if ! use nls
 	then
 		echo "#define BuildCyrillicFonts NO" >> config/cf/host.def
 		echo "#define BuildArabicFonts NO" >> config/cf/host.def
@@ -525,7 +525,7 @@ src_unpack() {
 		echo "#define BuildHebrewFonts NO" >> config/cf/host.def
 		echo "#define BuildThaiFonts NO" >> config/cf/host.def
 
-		if [ -z "`use cjk`" ]
+		if ! use cjk
 		then
 			echo "#define BuildCIDFonts NO" >> config/cf/host.def
 			echo "#define BuildJapaneseFonts NO" >> config/cf/host.def

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r7.ebuild,v 1.3 2004/06/12 23:40:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r7.ebuild,v 1.4 2004/06/23 23:55:35 agriffis Exp $
 
 # TODO
 # 14 Mar. 2004 <spyderous@gentoo.org>
@@ -177,7 +177,7 @@ pkg_setup() {
 	strip-flags
 
 	# See bug #35468, circular pam-xfree dep
-	if [ "`use pam`" -a "`best_version x11-base/xfree`" ]
+	if use pam && [ -n "`best_version x11-base/xfree`" ]
 	then
 		einfo "Previous XFree86 installation detected"
 		einfo "Enabling PAM features in XFree86..."
@@ -321,18 +321,18 @@ src_unpack() {
 	fi
 # FIXME: bug #19812, 075 should be deprecated by 076, left as
 # TDFX_RISKY for feedback (put in -r3 if no problems)
-	if [ "`use 3dfx`" -a "${TDFX_RISKY}" = "yes" ]
+	if use 3dfx && [ "${TDFX_RISKY}" = "yes" ]
 	then
 		patch_exclude 5850
 	else
 		patch_exclude 5851
 	fi
 
-	if [ -z "`use ipv6`" ]
+	if ! use ipv6
 	then
 		patch_exclude 200*
 	else
-		if [ -z "`use doc`" ]
+		if ! use doc
 		then
 			patch_exclude 2001
 		fi
@@ -344,7 +344,7 @@ src_unpack() {
 	fi
 
 	# Unsure of this patch's effect if other gatos stuff is not used
-	if [ ! "`use gatos`" ]
+	if ! use gatos
 	then
 		patch_exclude 9841_all_4.3.0-gatos-mesa
 	fi
@@ -456,7 +456,7 @@ src_unpack() {
 
 	# Remove circular dep between pam and xfree, bug #35468
 	# If no-pam isn't in USE and we have xfree, then we can enable PAM
-	if [ "`use pam`" -a "`best_version x11-base/xfree`" ]
+	if use pam && [ -n "`best_version x11-base/xfree`" ]
 	then
 		# If you want to have optional pam support, do it properly ...
 		echo "#define HasPam YES" >> config/cf/host.def
@@ -572,7 +572,7 @@ src_unpack() {
 	fi
 
 	# Native Language Support Fonts
-	if [ -z "`use nls`" ]
+	if ! use nls
 	then
 		echo "#define BuildCyrillicFonts NO" >> config/cf/host.def
 		echo "#define BuildArabicFonts NO" >> config/cf/host.def
@@ -580,7 +580,7 @@ src_unpack() {
 		echo "#define BuildHebrewFonts NO" >> config/cf/host.def
 		echo "#define BuildThaiFonts NO" >> config/cf/host.def
 
-		if [ -z "`use cjk`" ]
+		if ! use cjk
 		then
 			echo "#define BuildCIDFonts NO" >> config/cf/host.def
 			echo "#define BuildJapaneseFonts NO" >> config/cf/host.def
