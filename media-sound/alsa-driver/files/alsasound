@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/files/alsasound,v 1.8 2002/07/22 16:45:18 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/files/alsasound,v 1.9 2002/12/21 17:14:48 agenkin Exp $
 #
 # Gentoo users: add this script to 'boot' run level.
 # ==================================================
@@ -65,6 +65,8 @@ start() {
       eend 0
     fi
   done
+  # The next line is a hack around output race condition (Gentoo bug #12524).
+  echo " "
   #
   # insert sequencer modules
   #
