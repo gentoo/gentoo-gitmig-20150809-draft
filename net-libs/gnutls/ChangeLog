@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.41 2005/01/06 11:09:31 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.42 2005/01/06 20:35:38 dragonheart Exp $
+
+  07 Jan 2005; Daniel Black <dragonheart@gentoo.org>
+  +files/gnutls-1.0.14-extra.h.patch:
+  Over zelously pruned patch. Bug #76890 refers. Thanks to Alex Tomkins
+  <tomkins-gb@darkzone.net> and Dargo (on irc)
 
   06 Jan 2005; Daniel Black <dragonheart@gentoo.org> gnutls-1.0.17.ebuild,
   gnutls-1.0.23.ebuild:
