@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ispell-3.2.06-r5.ebuild,v 1.7 2003/06/16 23:52:27 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ispell-3.2.06-r5.ebuild,v 1.8 2003/07/31 20:44:39 agriffis Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://fmg-www.cs.ucla.edu/geoff/ispell.html"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 sparc ~ppc ~alpha ~mips hppa"
+KEYWORDS="x86 sparc ~ppc alpha ~mips hppa"
 
 DEPEND="sys-devel/bison
 	sys-apps/miscfiles
