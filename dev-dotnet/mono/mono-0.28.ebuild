@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-0.26.ebuild,v 1.4 2003/10/01 17:34:57 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/mono-0.28.ebuild,v 1.1 2003/10/04 20:07:21 scandium Exp $
 
 inherit mono
 
@@ -39,9 +39,15 @@ src_compile() {
 	econf || die
 	MAKEOPTS="${MAKEOPTS} -j1" emake || die "MONO compilation failure"
 
-	#disable building of mcs for now, see bug 26839
-	#cd ${MCS_S}
-	#PATH=${S}/runtime:${S}/mono/mini:${PATH} MONO_PATH=${S}/runtime:${MONO_PATH} make MCS=${S}/runtime/mcs || die "MCS compilation failure"
+	ln -s ../runtime ${WORKDIR}/${P}/runtime/lib
+	cd ${MCS_S}
+	echo "prefix=${S}/runtime" > build/config.make
+	echo "MONO_PATH=${S}/runtime" >> build/config.make
+	echo "BOOTSTRAP_MCS=${S}/runtime/mcs" >> build/config.make
+	echo "RUNTIME=${S}/mono/mini/mono \${RUNTIME_FLAGS}" >> build/config.make
+	echo "export MONO_PATH" >> build/config.make
+	make || die "MCS compilation failure"
+	echo "prefix=/usr" >> build/config.make
 }
 
 src_install () {
@@ -52,19 +58,19 @@ src_install () {
 	docinto docs
 	dodoc docs/*
 
-	# now install our own compiled dlls (disabled for now, mcs build problems)
-	#cd ${MCS_S}
-	#einstall || die
+	# now install our own compiled dlls
+	cd ${MCS_S}
+	einstall || die
 
 	# install mono's logo
-	#insopts -m0644
-	#insinto /usr/share/pixmaps/mono
-	#doins MonoIcon.png ScalableMonoIcon.svg
+	insopts -m0644
+	insinto /usr/share/pixmaps/mono
+	doins MonoIcon.png ScalableMonoIcon.svg
 
-	#docinto mcs
-	#dodoc AUTHORS COPYING README* ChangeLog INSTALL.txt
-	#docinto mcs/docs
-	#dodoc docs/*.txt
+	docinto mcs
+	dodoc AUTHORS COPYING README* ChangeLog INSTALL.txt
+	docinto mcs/docs
+	dodoc docs/*.txt
 
 	# init script
 	exeinto /etc/init.d ; newexe ${FILESDIR}/dotnet.init dotnet

@@ -1,6 +1,11 @@
 # ChangeLog for dev-dotnet/mono
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/ChangeLog,v 1.5 2003/09/29 18:06:11 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/mono/ChangeLog,v 1.6 2003/10/04 20:07:21 scandium Exp $
+
+*mono-0.28 (04 Oct 2003)
+
+  04 Oct 2003; Rainer Groesslinger <scandium@gentoo.org> mono-0.28.ebuild:
+  new version
 
 *mono-0.26-r1 (29 Sep 2003)
 
