@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/kamix
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kamix/ChangeLog,v 1.1 2004/08/11 05:45:55 pkdawson Exp $
+
+*kamix-0.5.4 (11 Aug 2004)
+
+  11 Aug 2004; Patrick Dawson <pkdawson@gentoo.org> kamix-0.5.4.ebuild :
+  Initial import.  Ebuild submitted by Stefan Schedl <stefan.schedl@gmx.de>.
+  Closes bug #55147.
