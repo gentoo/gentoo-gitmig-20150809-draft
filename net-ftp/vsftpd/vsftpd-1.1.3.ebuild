@@ -1,22 +1,30 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-1.1.3.ebuild,v 1.2 2003/02/15 17:31:31 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-1.1.3.ebuild,v 1.3 2003/02/18 09:44:01 seemant Exp $
+
+inherit flag-o-matic eutils
 
 IUSE="pam tcpd"
 
 DESCRIPTION="Very Secure FTP Daemon written with speed, size and security in mind"
-SRC_URI="ftp://vsftpd.beasts.org/users/cevans/${P}.tar.gz"
 HOMEPAGE="http://vsftpd.beasts.org/"
-DEPEND="pam? ( >=sys-libs/pam-0.75 ) tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
-RDEPEND="${DEPEND} || ( sys-apps/xinetd >=sys-apps/ucspi-tcp-0.88-r3 )"
+SRC_URI="ftp://vsftpd.beasts.org/users/cevans/${P}.tar.gz"
+
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~sparc"
 
+DEPEND="pam? ( >=sys-libs/pam-0.75 )
+	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
+
+RDEPEND="${DEPEND} || ( sys-apps/xinetd >=sys-apps/ucspi-tcp-0.88-r3 )"
+
+filter-flags "-fPIC"
+
 src_unpack() {
-	unpack ${A} || die
-	cd ${S} || die
-	patch -p1 <${FILESDIR}/${P}-gentoo.diff || die
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-gentoo.diff
 	use tcpd && echo '#define VSF_BUILD_TCPWRAPPERS' >> builddefs.h
 }
 
