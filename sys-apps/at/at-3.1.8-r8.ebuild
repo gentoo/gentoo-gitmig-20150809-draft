@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r8.ebuild,v 1.7 2002/10/04 06:22:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r8.ebuild,v 1.8 2002/10/18 23:57:49 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Queues jobs for later execution"
 SRC_URI="http://ftp.debian.org/debian/pool/main/a/at/at_${PV}-11.tar.gz"
-HOMEPAGE=""
+HOMEPAGE="ftp://jurix.jura.uni-sb.de/pub/jurix/source/chroot/appl/at/"
 KEYWORDS="x86 ppc sparc sparc64"
 SLOT="0"
 LICENSE="GPL-2"
@@ -14,7 +14,6 @@ DEPEND="virtual/glibc >=sys-devel/flex-2.5.4a"
 RDEPEND="virtual/glibc virtual/mta"
 
 src_compile() {
-
 	./configure --host=${CHOST/-pc/} --sysconfdir=/etc/at \
 		--with-jobdir=/var/cron/atjobs \
 		--with-atspool=/var/cron/atspool \
@@ -25,7 +24,6 @@ src_compile() {
 }
 
 src_install() {
-
 	into /usr
 	chmod 755 batch
 	chmod 755 atrun

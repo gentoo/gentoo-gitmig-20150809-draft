@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.0.2-r3.ebuild,v 1.5 2002/10/05 05:39:24 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.0.2-r3.ebuild,v 1.6 2002/10/18 23:57:49 vapier Exp $
 
 IUSE="X"
 
@@ -12,12 +12,11 @@ S=${WORKDIR}/${PN}
 
 DEPEND="virtual/glibc >=sys-apps/debianutils-1.16 X? ( virtual/x11 )"
 RDEPEND=${DEPEND}
-LICENSE="GPL"
+LICENSE="GPL-2"
 SLOT=0
 KEYWORD="x86"
 
 src_unpack() {
-
 	unpack ${A} ; cd ${S}
 
 	cp Makefile Makefile.orig

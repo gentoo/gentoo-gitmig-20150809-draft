@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ami/ami-1.0.11-r1.ebuild,v 1.7 2002/10/04 06:22:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ami/ami-1.0.11-r1.ebuild,v 1.8 2002/10/18 23:57:49 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Korean IMS Ami"
 SRC_URI="http://www.kr.freebsd.org/~hwang/ami/${P}.tar.gz
-    http://www.kr.freebsd.org/~hwang/ami/hanja.dic.gz
+	http://www.kr.freebsd.org/~hwang/ami/hanja.dic.gz
 	ftp://ftp.nnongae.com/pub/gentoo/${P}.patch"
 HOMEPAGE="http://www.kr.freebsd.org/~hwang/ami/index.html"
 KEYWORDS="x86"
@@ -13,44 +13,43 @@ SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND=">=media-libs/gdk-pixbuf-0.7.0"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
-    unpack ${P}.tar.gz
-
+	unpack ${A}
 	patch -p0 < ${DISTDIR}/${P}.patch || die
 }
 
 src_compile() {
-    local config
+	local config
 
-    use gnome && config="--enable-gnome-applet"
+	use gnome && config="--enable-gnome-applet"
 
-    ./configure \
-        --host=${CHOST} \
-        --prefix=/usr \
-        --infodir=/usr/share/info \
-        --with-hangul-keyboard=2 \
-        --sysconfdir=/etc \
-        ${config} \
-        --mandir=/usr/share/man || die "./configure failed"
+	./configure \
+		--host=${CHOST} \
+		--prefix=/usr \
+		--infodir=/usr/share/info \
+		--with-hangul-keyboard=2 \
+		--sysconfdir=/etc \
+		${config} \
+		--mandir=/usr/share/man || die "./configure failed"
 
-    emake || die
+	emake || die
 
-    cd ${S}/hanjadic
-    emake || die
+	cd ${S}/hanjadic
+	emake || die
 }
 
-src_install () {
+src_install() {
+	make \
+		prefix=${D}/usr \
+		mandir=${D}/usr/share/man \
+		infodir=${D}/usr/share/info \
+		sysconfdir=${D}/etc \
+		install || die
 
-    make \
-        prefix=${D}/usr \
-        mandir=${D}/usr/share/man \
-        infodir=${D}/usr/share/info \
-        sysconfdir=${D}/etc \
-        install || die
+	gzip -d -c ${DISTDIR}/hanja.dic.gz > ${D}/usr/share/ami/hanja.dic
 
-    gzip -d -c ${DISTDIR}/hanja.dic.gz > ${D}/usr/share/ami/hanja.dic
-
-    dobin ${S}/hanjadic/hanja-hwp2ami
-    dodoc AUTHORS COPYING* ChangeLog INSTALL README README.en NEWS THANKS
+	dobin ${S}/hanjadic/hanja-hwp2ami
+	dodoc AUTHORS COPYING* ChangeLog INSTALL README README.en NEWS THANKS
 }

@@ -1,23 +1,21 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r6.ebuild,v 1.7 2002/10/04 06:22:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r6.ebuild,v 1.8 2002/10/18 23:57:49 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Queues jobs for later execution"
 SRC_URI="ftp://jurix.jura.uni-sb.de/pub/jurix/source/chroot/appl/at/${P}.tar.bz2
 	 ftp://jurix.jura.uni-sb.de/pub/jurix/source/chroot/appl/at/${P}.dif"
-HOMEPAGE=""
+HOMEPAGE="ftp://jurix.jura.uni-sb.de/pub/jurix/source/chroot/appl/at/"
 KEYWORDS="x86"
 SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND="virtual/glibc >=sys-devel/flex-2.5.4a"
-
 RDEPEND="virtual/glibc"
 
 src_unpack() {
-
-	unpack ${P}.tar.bz2
+	unpack ${A}
 	cd ${S}
 	patch -p0 < ${DISTDIR}/${P}.dif || die
 	cp configure.in configure.orig

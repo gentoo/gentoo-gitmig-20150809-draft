@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r3.ebuild,v 1.10 2002/10/04 06:46:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r3.ebuild,v 1.11 2002/10/18 23:57:49 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="queues jobs for later execution"
@@ -12,34 +12,30 @@ SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND="virtual/glibc >=sys-devel/flex-2.5.4a"
-
 RDEPEND="virtual/glibc"
 
 src_unpack() {
-
-    unpack ${P}.tar.bz2
-    cd ${S}
-    patch -p0 < ${DISTDIR}/${P}.dif || die
-    cp configure.in configure.orig
-    patch -p0 < ${FILESDIR}/${P}-configure.in-sendmail-gentoo.diff || die
-    patch -p0 < ${FILESDIR}/${P}-configure-sendmail-gentoo.diff || die
+	unpack ${A}
+	cd ${S}
+	patch -p0 < ${DISTDIR}/${P}.dif || die
+	cp configure.in configure.orig
+	patch -p0 < ${FILESDIR}/${P}-configure.in-sendmail-gentoo.diff || die
+	patch -p0 < ${FILESDIR}/${P}-configure-sendmail-gentoo.diff || die
 }
 
 src_compile() {
+	./configure --host=${CHOST/-pc/} --sysconfdir=/etc/at \
+		--with-jobdir=/var/cron/atjobs \
+		--with-atspool=/var/cron/atspool \
+		--with-etcdir=/etc/at \
+		--with-daemon_username=at \
+		--with-daemon_groupname=at
+	assert
 
-    ./configure --host=${CHOST/-pc/} --sysconfdir=/etc/at \
-	--with-jobdir=/var/cron/atjobs \
-	--with-atspool=/var/cron/atspool \
-	--with-etcdir=/etc/at \
-	--with-daemon_username=at \
-	--with-daemon_groupname=at
-    assert
-
-    emake || die
+	emake || die
 }
 
 src_install() {
-
 	into /usr
 	chmod 755 batch
 	chmod 755 atrun
@@ -51,10 +47,10 @@ src_install() {
 
 	for i in atjobs atspool
 	do
-	  dodir /var/cron/${i}
-	  fperms 700 /var/cron/${i}
-	  fowners at.at /var/cron/${i}
-	  touch ${D}/var/cron/${i}/.SEQ
+		dodir /var/cron/${i}
+		fperms 700 /var/cron/${i}
+		fowners at.at /var/cron/${i}
+		touch ${D}/var/cron/${i}/.SEQ
 	done
 
 	exeinto /etc/rc.d/init.d
