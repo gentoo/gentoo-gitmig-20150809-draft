@@ -1,6 +1,12 @@
 # ChangeLog for net-www/galeon
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.68 2003/11/13 03:47:55 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.69 2003/11/23 12:25:27 obz Exp $
+
+*galeon-1.2.12 (23 Nov 2003)
+
+  23 Nov 2003; Mike Gardiner <obz@gentoo.org> galeon-1.2.12.ebuild:
+  New version. Requires the mozilla 1.5->1.5b hack, or else it won't detect 1.5
+  correctly, nor build
 
   12 Nov 2003; Sven Blumenstein <bazik@gentoo.org> galeon-1.3.10.ebuild:
   Added ~sparc keyword.
