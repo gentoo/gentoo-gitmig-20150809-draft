@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/glabels
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/glabels/ChangeLog,v 1.3 2003/07/28 09:55:57 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/glabels/ChangeLog,v 1.4 2003/09/28 11:05:18 obz Exp $
+
+*glabels-1.92.0 (28 Sep 2003)
+
+  28 Sep 2003; Mike Gardiner <obz@gentoo.org> glabels-1.92.0.ebuild,
+  metadata.xml, files/glabels-1.92.0.desktop:
+  New version bump to fix bugs like #29831, #27214, #28773, #29076. Thanks to
+  <wolfwood@users.sourceforge.net> for the .desktop file ideas and patches, etc
 
 *glabels-1.90.0 (07 Dec 2002)
 
