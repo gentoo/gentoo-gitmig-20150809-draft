@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.9-r1.ebuild,v 1.4 2002/03/26 23:51:09 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.9-r1.ebuild,v 1.5 2002/04/12 19:02:37 spider Exp $
 
 S=${WORKDIR}/mozilla
 DESCRIPTION="The Mozilla Web Browser"
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.mozilla.org"
 PROVIDE="virtual/x11-web-browser"
 
 RDEPEND=">=gnome-base/ORBit-0.5.10-r1
-	>=dev-libs/glib-1.2.10
+	=dev-libs/glib-1.2*
 	>=sys-libs/zlib-1.1.4
 	>=media-libs/jpeg-6b
 	>=media-libs/libmng-1.0.0
