@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ytalk/ytalk-3.1.1.ebuild,v 1.11 2003/09/05 22:01:49 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ytalk/ytalk-3.1.1.ebuild,v 1.12 2004/01/14 18:23:54 agriffis Exp $
 
 IUSE="X"
 
@@ -9,7 +9,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Multi-user replacement for UNIX talk"
 SRC_URI="http://www.iagora.com/~espel/ytalk/${P}.tar.gz"
 HOMEPAGE="http://www.iagora.com/~espel/ytalk/ytalk.html"
-KEYWORDS="x86 sparc  ppc"
+KEYWORDS="x86 sparc  ppc ~alpha"
 LICENSE="freedist"
 SLOT="0"
 
