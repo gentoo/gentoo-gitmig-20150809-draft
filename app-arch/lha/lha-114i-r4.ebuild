@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/lha/lha-114i-r4.ebuild,v 1.3 2004/11/01 09:58:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/lha/lha-114i-r4.ebuild,v 1.4 2004/12/20 16:14:45 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,13 +10,14 @@ SRC_URI="http://www2m.biglobe.ne.jp/~dolphin/lha/prog/${P}.tar.gz"
 
 LICENSE="lha"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha amd64 ppc64 ppc-macos"
+KEYWORDS="alpha amd64 hppa ppc ppc64 ppc-macos sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc"
 
-src_unpack () {
-	unpack ${A} ; cd ${S}
+src_unpack() {
+	unpack ${A}
+	cd ${S}
 	cd src
 	epatch ${FILESDIR}/${P}.diff
 	epatch ${FILESDIR}/${PN}-command_buffer.patch
