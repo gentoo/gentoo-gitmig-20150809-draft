@@ -1,8 +1,12 @@
 # ChangeLog for app-i18n/imhangul_status_applet
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul_status_applet/ChangeLog,v 1.6 2003/02/13 04:13:09 seo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul_status_applet/ChangeLog,v 1.7 2003/03/02 21:56:43 seo Exp $
 
 *imhangul_status_applet-0.2-r1 (27 Jan 2003)
+
+  02 Mar 2003; Jungmin Seo <seo@gentoo.org> 
+  imhangul_status_applet-0.2-r1.ebuild :
+  now stable in x86 and ppc
 
   14 Feb 2003; Jungmin Seo <seo@gentoo.org> 
   imhangul_status_applet-0.2-r1.ebuild :
@@ -15,6 +19,10 @@
   now 'schema installation' works
  
 *imhangul_status_applet-0.2 (24 Jan 2003)
+
+  02 Mar 2003; Jungmin Seo <seo@gentoo.org> imhangul_status_applet-0.2.ebuld,
+  files/digest-imhangul_status_applet-0.2 :
+  removes from portage as 0.2-r1 is now stable
 
   24 Jan 2003; Jungmin Seo <seo@gentoo.org> 
   imhangul_status_applet-0.2.ebuild :
