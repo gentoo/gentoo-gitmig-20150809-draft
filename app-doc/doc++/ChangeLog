@@ -1,0 +1,11 @@
+# ChangeLog for app-doc/doc++
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doc++/ChangeLog,v 1.1 2003/07/20 03:47:09 jje Exp $
+
+*doc++-3.4.10 (20 Jul 2003)
+
+  20 Jul 2003; jje <jje@gentoo.org> doc++-3.4.10.ebuild:
+  Initial revision. Just part of the bounty of #22053.
+  
+  Submitted by: Paul Giordano <giordano@covad.net>
+
