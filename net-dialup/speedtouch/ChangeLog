@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/speedtouch
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/ChangeLog,v 1.11 2003/11/19 14:50:43 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/ChangeLog,v 1.12 2003/12/23 11:54:29 lanius Exp $
+
+*speedtouch-1.2_beta3 (23 Dec 2003)
+
+  23 Dec 2003; Heinrich Wendel <lanius@gentoo.org>
+  speedtouch-1.2_beta3-r1.ebuild:
+  added installation of adsl-conf-pppd to /usr/sbin
 
   19 Nov 2003; Heinrich Wendel <lanius@gentoo.org> metadata.xml:
   metadata.xml

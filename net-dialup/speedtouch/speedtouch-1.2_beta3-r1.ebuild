@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/speedtouch-1.2_beta3.ebuild,v 1.1 2003/12/14 19:16:07 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/speedtouch-1.2_beta3-r1.ebuild,v 1.1 2003/12/23 11:54:29 lanius Exp $
 
 inherit flag-o-matic
 filter-flags -mpowerpc-gfxopt -mpowerpc-gpopt
@@ -36,9 +36,14 @@ src_install () {
 	echo $(find ${D}/usr/share/doc/speedtouch/ -type f) | xargs dodoc
 	rm -rf ${D}/usr/share/doc/speedtouch/
 	dodoc AUTHORS COPYING ChangeLog INSTALL TODO VERSION
+
 	exeinto /etc/init.d ; newexe ${FILESDIR}/speedtouch.rc6 speedtouch
+
 	insinto /etc/conf.d ; newins ${FILESDIR}/speedtouch.confd speedtouch
+
 	insopts -m 600 ; insinto /etc/ppp/peers ; doins ${FILESDIR}/adsl.sample
+
+	dosbin doc-linux/adsl-conf-pppd
 }
 
 pkg_postinst() {
