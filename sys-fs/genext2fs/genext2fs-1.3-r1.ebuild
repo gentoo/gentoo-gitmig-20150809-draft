@@ -1,11 +1,11 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/genext2fs/genext2fs-1.3-r1.ebuild,v 1.4 2004/10/07 21:18:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/genext2fs/genext2fs-1.3-r1.ebuild,v 1.5 2005/01/02 10:50:37 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="generate ext2 file systems"
-HOMEPAGE="http://packages.debian.org/unstable/admin/genext2fs"
+HOMEPAGE="http://sourceforge.net/projects/genext2fs"
 SRC_URI="mirror://debian/pool/main/g/genext2fs/${PN}_${PV}.orig.tar.gz
 	mirror://gentoo/${P}-uclibc-updates.patch.bz2"
 
@@ -29,5 +29,5 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} || die
+	make install DESTDIR="${D}" || die
 }
