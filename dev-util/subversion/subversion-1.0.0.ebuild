@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.0.0.ebuild,v 1.1 2004/02/23 14:41:50 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.0.0.ebuild,v 1.2 2004/02/23 16:20:55 weeve Exp $
 
 inherit elisp-common libtool python
 
@@ -34,7 +34,7 @@ RDEPEND="python? ( >=dev-lang/python-2.0 )
 	apache2? ( >=net-www/apache-2.0.48 )
 	!apache2? ( !>=net-www/apache-2* )
 	!dev-libs/apr
-	python? ( || ( =dev-lang/swig-1.3.19 
+	python? ( || ( =dev-lang/swig-1.3.19
 			>=dev-lang/swig-1.3.21
 	) )
 	>=net-misc/neon-0.24.4
@@ -75,7 +75,7 @@ pkg_setup() {
 
 src_unpack() {
 	cd ${WORKDIR}
-	unpack ${PN}-${PV}.tar.gz
+	unpack ${PN}-${PV}.tar.bz2
 	cd ${S}
 
 	patch -p1 <${FILESDIR}/subversion-db4.patch
