@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.61 2004/07/12 02:31:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.62 2004/07/15 04:59:44 lv Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -314,13 +314,31 @@ has_ssp() {
 }
 
 has_m64() {
-	test_flag -m64
-	return $?
+	# this doesnt test if the flag is accepted, it tests if the flag
+	# actually -WORKS-. non-multilib gcc will take both -m32 and -m64!
+	# please dont replace this function with test_flag in some future
+	# clean-up!
+	temp=`mktemp`
+	echo "int main() { return(0); }" > ${temp}.c
+	${CC/ .*/} -m64 -o /dev/null ${temp}.c > /dev/null 2>&1
+	ret=$?
+	rm -f ${temp}.c
+	[ "$ret" != "1" ] && return 0
+	return 1
 }
 
 has_m32() {
-	test_flag -m32
-	return $?
+	# this doesnt test if the flag is accepted, it tests if the flag
+	# actually -WORKS-. non-multilib gcc will take both -m32 and -m64!
+	# please dont replace this function with test_flag in some future
+	# clean-up!
+	temp=`mktemp`
+	echo "int main() { return(0); }" > ${temp}.c
+	${CC/ .*/} -m32 -o /dev/null ${temp}.c > /dev/null 2>&1
+	ret=$?
+	rm -f ${temp}.c
+	[ "$ret" != "1" ] && return 0
+	return 1
 }
 
 replace-sparc64-flags() {
