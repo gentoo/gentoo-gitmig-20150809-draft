@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.19 2004/10/18 18:29:43 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.20 2004/10/19 06:13:23 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -239,10 +239,7 @@ pkg_setup() {
 		ewarn "Please emerge this with USE=\"bitmap-fonts\" to enable"
 		ewarn "75dpi and 100dpi fonts.  Your GTK+-1.2 fonts may look"
 		ewarn "screwy otherwise"
-	fi
 
-	if ! use bitmap-fonts
-	then
 		ebeep 5
 		epause 10
 	fi
