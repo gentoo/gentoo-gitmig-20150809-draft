@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.17 2003/05/30 13:20:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.18 2003/06/02 01:20:59 mcummings Exp $
+
+*rrdtool-1.0.41-r1 (01 Jun 2003)
+
+  01 Jun 2003; Michael Cummings <mcummings@gentoo.org>
+  rrdtool-1.0.40-r1.ebuild, rrdtool-1.0.41-r1.ebuild,
+  rrdtool-1.0.42-r1.ebuild:
+  Version bump because eclasses changed
 
   30 May 2003; Seemant Kulleen <seemant@gentoo.org> rrdtool-1.0.42.ebuild:
   change perl-post to perl-module for inheritance
