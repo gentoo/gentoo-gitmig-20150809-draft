@@ -1,6 +1,10 @@
 # ChangeLog for games-arcade/netris
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/netris/ChangeLog,v 1.4 2004/06/24 22:09:13 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/netris/ChangeLog,v 1.5 2005/01/06 22:26:21 sekretarz Exp $
+
+  06 Jan 2005; Karol Wojtaszek <sekretarz@gentoo.org>
+  +files/netris-time.patch, netris-0.52.ebuild:
+  Added to ~amd64
 
 *netris-0.52 (23 Sep 2003)
 

@@ -1,0 +1,11 @@
+diff -Naur netris-0.52/curses.c netris-0.52.patched/curses.c
+--- netris-0.52/curses.c	2003-08-13 03:33:02.000000000 +0200
++++ netris-0.52.patched/curses.c	2005-01-03 16:27:30.646054296 +0100
+@@ -25,6 +25,7 @@
+ #include <curses.h>
+ #include <string.h>
+ #include <stdlib.h>
++#include <time.h>
+ 
+ #ifdef NCURSES_VERSION
+ # define HAVE_NCURSES
