@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2.ebuild,v 1.1 2004/11/27 11:13:12 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.2.ebuild,v 1.2 2004/12/17 12:31:41 eldad Exp $
 
 inherit eutils
 
@@ -51,7 +51,7 @@ src_unpack() {
 	#wrt to bugs 68467, 68254
 	sed -i -e 's/^NSC_AGENTLIBS="@AGENTLIBS@"/NSC_AGENTLIBS="@AGENTLIBS@ @WRAPLIBS@"/' net-snmp-config.in
 
-	sed -i -e '551s;embed_perl="yes",;embed_perl=$enableval,;' configure.in
+	sed -i -e 's;embed_perl="yes",;embed_perl=$enableval,;' configure.in
 	autoconf || die "autoconf failed"
 }
 

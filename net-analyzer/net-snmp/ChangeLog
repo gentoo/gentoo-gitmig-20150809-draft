@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.70 2004/12/16 06:04:05 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.71 2004/12/17 12:31:41 eldad Exp $
+
+  17 Dec 2004; Eldad Zack <eldad@gentoo.org> net-snmp-5.2.ebuild:
+  autoconf re-fix (perl), changed sedding to be line-number independant for
+  future releases. Closes #59605.
 
   16 Dec 2004; Dylan Carlson <absinthe@gentoo.org> net-snmp-5.1.1-r1.ebuild:
   Stable on amd64.
