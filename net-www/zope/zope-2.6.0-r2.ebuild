@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/zope/zope-2.6.0-r2.ebuild,v 1.1 2003/02/17 03:57:23 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/zope/zope-2.6.0-r2.ebuild,v 1.2 2003/02/17 04:54:38 kutsuya Exp $
 
 S="${WORKDIR}/Zope-${PV}-src"
 

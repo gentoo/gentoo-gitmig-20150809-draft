@@ -2,7 +2,7 @@
 # Zope rc-script for Gentoo Linux
 # Copyright 2002-2003 by Jason Shoemaker
 # Distributed under the terms of the GNU General Public License, v2 or later.
-# $Header: /var/cvsroot/gentoo-x86/net-www/zope/files/2.6.0/zope-r1.initd,v 1.1 2003/02/17 03:57:23 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/zope/files/2.6.0/zope-r1.initd,v 1.2 2003/02/17 04:54:38 kutsuya Exp $
 
 depend() 
 {
