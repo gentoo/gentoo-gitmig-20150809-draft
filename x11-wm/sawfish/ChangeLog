@@ -1,6 +1,11 @@
 # ChangeLog for x11-wm/sawfish
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.12 2002/08/04 15:19:41 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/ChangeLog,v 1.13 2002/10/15 16:32:05 foser Exp $
+
+*sawfish-1.0.1-r6 (15 Oct 2002)
+  
+  15 Oct 2002; foser <foser@gentoo.org> sawfish-1.0.1-r6.ebuild :
+  Added MAKEOPTS="-j1" (see bug #4728)
 
 *sawfish-1.0.1-r5 (4 Aug 2002) 
   4 Aug 2002; Gabriele Giorgetti <stroke@gentoo.org> sawfish-1.0.1-r5.ebuild:
