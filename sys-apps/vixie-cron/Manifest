@@ -1,28 +1,32 @@
-MD5 5d4da5ea5491e0e50cbb70bb1b44874c ChangeLog 11935
-MD5 0fcc78652b11c683f3fe76d614934379 metadata.xml 288
-MD5 96f9e03ead97dce72db64ee9a6730ae2 vixie-cron-3.0.1-r1.ebuild 1670
-MD5 5f6e2e2e1586bca899cf1ea2080de64a vixie-cron-3.0.1-r3.ebuild 1915
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 1985d806ba1556d197f4054765b6006e vixie-cron-3.0.1-r4.ebuild 2019
-MD5 10e6e5c36bab78f2ad1c22adb26c4931 vixie-cron-3.0.1-r5.ebuild 2202
 MD5 81048a4b18fee963919e309e1b5b0967 vixie-cron-4.1-r5.ebuild 2632
-MD5 4b48f0ba12308f1afe776e97cf757957 vixie-cron-4.1-r3.ebuild 2830
 MD5 79a935a3e530efe990cab92963df8191 vixie-cron-4.1-r4.ebuild 3290
-MD5 5eab102dfecfc35810ab8cf50f95d0d3 files/cron.pam.d 123
-MD5 f9c762005dc744193babe199ba3fb297 files/crontab 604
-MD5 90b7dda2ca0ecdd2f4dcd9764eaa2358 files/crontab-3.0.1-r4 617
-MD5 041d9eec86f3869f6613b876ada841a1 files/digest-vixie-cron-3.0.1-r1 144
-MD5 041d9eec86f3869f6613b876ada841a1 files/digest-vixie-cron-3.0.1-r3 144
-MD5 041d9eec86f3869f6613b876ada841a1 files/digest-vixie-cron-3.0.1-r4 144
-MD5 9d66b761d15afae9471d33509b712fe9 files/vixie-cron-3.0.1-close_stdin.diff 810
-MD5 cec7bf697ed66fa43aedb973b2ad5362 files/vixie-cron-3.0.1-pam.patch 1854
-MD5 1915f29deae7e87c569877f1dbbbec67 files/vixie-cron-3.0.1-selinux.diff.bz2 1853
-MD5 2790891d7be3833a500e5af547546b0d files/vixie-cron.rc6 526
-MD5 de84c3326555349db053b4aa13c0805f files/crontab.5.diff 772
-MD5 041d9eec86f3869f6613b876ada841a1 files/digest-vixie-cron-3.0.1-r5 144
-MD5 b806ca293a6934a3965a063ec2fe0381 files/digest-vixie-cron-4.1-r5 143
+MD5 10e6e5c36bab78f2ad1c22adb26c4931 vixie-cron-3.0.1-r5.ebuild 2202
+MD5 a214e16ea985514317dcd0af517ef40a ChangeLog 12083
+MD5 0fcc78652b11c683f3fe76d614934379 metadata.xml 288
 MD5 8692002451e69ee31d667eb2d0dc904d files/vixie-cron-4.1-cron.deny 220
+MD5 90b7dda2ca0ecdd2f4dcd9764eaa2358 files/crontab-3.0.1-r4 617
+MD5 f9c762005dc744193babe199ba3fb297 files/crontab 604
+MD5 de84c3326555349db053b4aa13c0805f files/crontab.5.diff 772
+MD5 5eab102dfecfc35810ab8cf50f95d0d3 files/cron.pam.d 123
 MD5 620b10c2982aed3071acd92d52e76d8e files/vixie-cron-4.1-pam.patch 1714
-MD5 08c5d571b72d52a2762b2c40639d6946 files/vixie-cron-4.1-commandline.patch 387
 MD5 4c35adb745265e3008fe1999d6a18952 files/vixie-cron-4.1-selinux.diff 3557
-MD5 cdf831673f04d48d38020428f6c72937 files/digest-vixie-cron-4.1-r3 143
+MD5 2790891d7be3833a500e5af547546b0d files/vixie-cron.rc6 526
+MD5 9d66b761d15afae9471d33509b712fe9 files/vixie-cron-3.0.1-close_stdin.diff 810
+MD5 08c5d571b72d52a2762b2c40639d6946 files/vixie-cron-4.1-commandline.patch 387
+MD5 041d9eec86f3869f6613b876ada841a1 files/digest-vixie-cron-3.0.1-r4 144
+MD5 041d9eec86f3869f6613b876ada841a1 files/digest-vixie-cron-3.0.1-r5 144
+MD5 cec7bf697ed66fa43aedb973b2ad5362 files/vixie-cron-3.0.1-pam.patch 1854
 MD5 b806ca293a6934a3965a063ec2fe0381 files/digest-vixie-cron-4.1-r4 143
+MD5 b806ca293a6934a3965a063ec2fe0381 files/digest-vixie-cron-4.1-r5 143
+MD5 1915f29deae7e87c569877f1dbbbec67 files/vixie-cron-3.0.1-selinux.diff.bz2 1853
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCBTHREZCkKN40op4RAr6OAJ0fXq+MayfQjfeHCVErXSeUBZnYSwCggOwX
+jzKfF0PvP8ty+OSOMtuVHgY=
+=80XN
+-----END PGP SIGNATURE-----
