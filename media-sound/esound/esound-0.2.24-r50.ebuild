@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org> and Spider <spider@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.24-r50.ebuild,v 1.1 2002/03/28 22:38:50 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/esound-0.2.24-r50.ebuild,v 1.2 2002/04/11 00:34:52 spider Exp $
 
 EXTRA="esound-0.2.24-ztp20020319_0.patch.gz"
 S=${WORKDIR}/${P}
@@ -28,8 +28,7 @@ src_unpack() {
 			
 
 src_compile() {
-# 	gunzip -dc patch -p0 < ${FILESDIR}/evolution-1.0.2-kde.patch
-			
+	libtoolize --copy --force	
 	local myconf
 
 	use tcpd && myconf="${myconf} --with-libwrap" \
