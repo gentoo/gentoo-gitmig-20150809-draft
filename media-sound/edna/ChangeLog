@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/edna
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/ChangeLog,v 1.13 2004/10/26 16:25:13 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/edna/ChangeLog,v 1.14 2004/11/03 16:15:29 corsair Exp $
+
+  03 Nov 2004; Markus Rothe <corsair@gentoo.org> edna-0.5-r4.ebuild:
+  Marked ~ppc64; bug #69126
 
   26 Oct 2004; Steve Arnold <nerdboy@gentoo.org> metadata.xml,
   files/edna.gentoo, edna-0.5-r3.ebuild, edna-0.5-r4.ebuild:

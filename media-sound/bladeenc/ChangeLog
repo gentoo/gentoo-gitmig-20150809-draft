@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/bladeenc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bladeenc/ChangeLog,v 1.11 2004/07/01 08:06:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bladeenc/ChangeLog,v 1.12 2004/11/03 16:17:09 corsair Exp $
+
+  03 Nov 2004; Markus Rothe <corsair@gentoo.org> bladeenc-0.94.2-r1.ebuild:
+  Marked ~ppc64; bug #69135
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   bladeenc-0.94.2-r1.ebuild:
