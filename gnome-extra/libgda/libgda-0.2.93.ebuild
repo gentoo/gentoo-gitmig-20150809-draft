@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-0.2.93.ebuild,v 1.1 2001/11/04 11:03:30 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-0.2.93.ebuild,v 1.2 2001/11/05 12:27:05 achim Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="gda lib"
@@ -13,6 +13,7 @@ RDEPEND="virtual/glibc
 	 >=gnome-base/gconf-1.0.4-r2
 	 >=gnome-base/oaf-0.6.6-r1
 	 >=gnome-base/bonobo-1.0.9-r1
+	 >=dev-libs/libxslt-1.0.1
 	 >=sys-libs/gdbm-1.8.0
 	 >=sys-libs/readline-4.1
 	 >=dev-perl/CORBA-ORBit-0.4.3
