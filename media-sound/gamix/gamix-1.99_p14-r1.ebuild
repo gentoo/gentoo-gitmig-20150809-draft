@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gamix/gamix-1.99_p14-r1.ebuild,v 1.6 2004/03/01 04:54:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gamix/gamix-1.99_p14-r1.ebuild,v 1.7 2004/03/15 02:49:23 eradicator Exp $
 
-PV=${P/_p/.p}
-S=${WORKDIR}/${PV}
+MY_P=${P/_p/.p}
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="GTK ALSA audio mixer"
 HOMEPAGE="http://www1.tcnet.ne.jp/fmurata/linux/down"
-SRC_URI="http://www1.tcnet.ne.jp/fmurata/linux/down/${PV}.tar.gz"
+SRC_URI="http://www1.tcnet.ne.jp/fmurata/linux/down/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
