@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/ecasound
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ChangeLog,v 1.9 2003/07/12 20:30:50 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ChangeLog,v 1.10 2003/09/20 13:32:57 jje Exp $
+
+*ecasound-2.3.0 (20 Sep 2003)
+
+  20 Sep 2003; jje <jje@gentoo.org> ecasound-2.3.0.ebuild:
+  Version bump. Closes #27593.
+  
+  Submitted by:	Kasper Souren <Kasper.Souren@ircam.fr>
 
 *ecasound-2.2.3 (18 May 2003)
 
