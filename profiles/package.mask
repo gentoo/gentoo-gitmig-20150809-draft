@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2753 2004/03/18 21:31:13 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2754 2004/03/19 03:38:15 raker Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -22,6 +22,10 @@
 ##
 ##   End example
 ##
+
+# <raker@gentoo.org> (18 Mar 2004)
+# The latest AfterStep beta is broken :(
+=x11-wm/afterstep-2.0_beta4
 
 # <foser@gentoo.org> (18 Mar 2004)
 # The big gnome 2.6 mask
