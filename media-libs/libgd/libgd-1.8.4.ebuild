@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-1.8.4.ebuild,v 1.2 2003/03/20 01:18:08 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/libgd-1.8.4.ebuild,v 1.3 2003/05/18 20:53:56 mholzer Exp $
 
-IUSE="X"
+IUSE="X jpeg truetype"
 
 MY_P=${P/lib/}
 S=${WORKDIR}/${MY_P}

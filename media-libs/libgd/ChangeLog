@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libgd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/ChangeLog,v 1.24 2003/04/23 00:13:19 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgd/ChangeLog,v 1.25 2003/05/18 20:53:56 mholzer Exp $
+
+  18 May 2003; Martin Holzer <mholzer@gentoo.org> libgd-1.8.3-r6.ebuild,
+  libgd-1.8.4.ebuild:
+  Added USE flags. Closes #21059.
 
 *libgd-2.0.12 (14 Apr 2003)
 
