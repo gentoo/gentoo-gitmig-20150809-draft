@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.39 2004/08/05 22:19:16 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.40 2004/08/10 02:05:02 squinky86 Exp $
+
+*rrdtool-1.0.49 (09 Aug 2004)
+
+  09 Aug 2004; Jon Hood <squinky86@gentoo.org>
+  -files/rrdtool-1.0.46-fPIC.patch, -files/rrdtool-1.0.46-tcl.patch,
+  +files/rrdtool-1.0.49-fPIC.patch, -rrdtool-1.0.45.ebuild,
+  -rrdtool-1.0.46.ebuild, +rrdtool-1.0.49.ebuild:
+  Version bump, closes #59851, thanks Haroon Rafique
+  <corporate_gadfly@hotmail.com>; ebuild cleanups.
 
 *rrdtool-1.0.48 (05 Aug 2004)
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.45.ebuild,v 1.11 2004/07/14 22:33:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.49.ebuild,v 1.1 2004/08/10 02:05:02 squinky86 Exp $
 
-inherit perl-module flag-o-matic gnuconfig
+inherit perl-module flag-o-matic gnuconfig eutils
 
 DESCRIPTION="A system to store and display time-series data"
 HOMEPAGE="http://people.ee.ethz.ch/~oetiker/webtools/rrdtool/"
@@ -10,8 +10,8 @@ SRC_URI="http://people.ee.ethz.ch/%7Eoetiker/webtools/${PN}/pub/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~amd64"
-IUSE="tcltk perl"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64"
+IUSE="perl tcltk"
 
 DEPEND="perl? ( dev-lang/perl )
 	sys-apps/gawk
@@ -21,33 +21,40 @@ RDEPEND="tcltk? ( dev-lang/tcl )"
 TCLVER=""
 
 pkg_setup() {
-	if use tcltk; then
-		TCLVER=`awk -F\' '/TCL_VERSION/ {print $2}' /usr/lib/tclConfig.sh`
-	fi
-
-	if use perl; then
+	if use perl ; then
 		perl-module_pkg_setup
 	fi
 }
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-fPIC.patch
+}
+
 src_compile() {
-	filter-mfpmath "sse"
-	filter-flags "-ffast-math"
+	filter-mfpmath sse
+	filter-flags -ffast-math
 
 	local myconf
+	myconf="${myconf} --datadir=/usr/share --enable-shared"
+
 	use tcltk \
 		&& myconf="${myconf} --with-tcllib=/usr/lib" \
 		|| myconf="${myconf} --without-tcllib"
 
-	gnuconfig_update
+	if use perl; then
+		econf ${myconf} --with-perl-options='PREFIX=/usr INSTALLDIRS=vendor DESTDIR=${D}' || die "econf failed"
 
-	econf \
-		--datadir=/usr/share \
-		--enable-shared \
-		--with-perl-options='INSTALLMAN1DIR=/usr/share/man/man1 INSTALLMAN3DIR=/usr/share/man/man3  PREFIX=${D}/usr' \
-		${myconf} || die
+		# libraries without -fPIC? feh!
+		for libdir in cgilib* gd* libpng* zlib*; do
+			sed -i -e 's/^CFLAGS.*/& -fPIC/' ${libdir}/Makefile
+		done
+	else
+		econf ${myconf} || die "econf failed"
+	fi
 
-	make || die
+	make || die "make failed"
 }
 
 src_install() {
@@ -75,12 +82,15 @@ src_install() {
 		perlinfo
 		mytargets="site-perl-install"
 		perl-module_src_install || die
+
+		# remove duplicate installation into /usr/lib/perl
+		rm -Rf ${D}/usr/lib/perl
 	fi
 
 	if use tcltk ; then
-		mv ${S}/tcl/tclrrd.so ${S}/tcl/tclrrd${PV}.so
-		insinto /usr/lib/tcl${TCL_VER}/tclrrd${PV}
-		doins ${S}/tcl/tclrrd${PV}.so
+#		mv ${S}/tcl/tclrrd.so ${S}/tcl/tclrrd${PV}.so
+#		insinto /usr/lib/tcl${TCL_VER}/tclrrd${PV}
+#		doins ${S}/tcl/tclrrd${PV}.so
 		echo "package ifneeded Rrd ${PV} [list load [file join \$$dir .. tclrrd${PV}.so]]" \
 			>> ${D}/usr/lib/tcl${TCL_VER}/tclrrd${PV}/pkgIndex.tcl
 	fi
