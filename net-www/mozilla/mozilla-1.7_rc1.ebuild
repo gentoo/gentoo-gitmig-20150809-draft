@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7_rc1.ebuild,v 1.4 2004/04/26 15:33:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7_rc1.ebuild,v 1.5 2004/04/26 22:35:10 agriffis Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug xinerama"
 # Internal USE flags that I do not really want to advertise ...
@@ -145,6 +145,11 @@ src_unpack() {
 	# <azarah@gentoo.org> (23 Feb 2003)
 	epatch ${FILESDIR}/1.3/${PN}-1.3-fix-RAW-target.patch
 
+	# Fix incorrect version in milestone.txt (1.7rc1 claims 1.7b)
+	einfo "Updating milestone.txt to ${MY_PV}"
+	sed -i -ne '/^#/p' config/milestone.txt   # maintain comments
+	echo "${MY_PV}" >> config/milestone.txt   # add version line
+
 	WANT_AUTOCONF_2_1=1 autoconf &> /dev/null
 
 	# Unpack the enigmail plugin
@@ -269,9 +274,10 @@ src_compile() {
 	fi
 
 	if [[ $(gcc-major-version) -eq 3 ]]; then
-		# Currently gcc-3.2 or older do not work well if we specify "-march"
-		# and other optimizations for pentium4.
-		if [[ $(gcc-minor-version) -lt 3 ]]; then
+		# gcc-3 prior to 3.2.3 doesn't work well for pentium4
+		if [[ $(gcc-minor-version) -lt 2 || 
+			( $(gcc-minor-version) -eq 2 && $(gcc-micro-version) -lt 3 ) ]]
+		then
 			replace-flags -march=pentium4 -march=pentium3
 			filter-flags -msse2
 		fi
