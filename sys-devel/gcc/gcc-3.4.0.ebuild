@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0.ebuild,v 1.2 2004/04/26 18:29:41 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0.ebuild,v 1.3 2004/04/26 18:43:39 lv Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj hardened f77 objc uclibc"
 
@@ -389,7 +389,7 @@ src_compile() {
 	use ppc64 && myconf="${myconf} --with-cpu=g5 --with-arch=g5"
 	use s390 && myconf="${myconf} --with-cpu=z990 --with-arch=g5"
 	use x86 && myconf="${myconf} --with-cpu=pentium4 --with-arch=i586"
-	use mips && myconf="${myconf} --with-arch=r4k"
+	use mips && myconf="${myconf} --with-cpu=r4600 --with-arch=mips3"
 	use ppc && myconf="${myconf} --with-cpu=g4 --with-arch=g3"
 
 	# In general gcc does not like optimization, and add -O2 where
