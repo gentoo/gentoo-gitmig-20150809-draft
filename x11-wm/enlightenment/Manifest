@@ -6,10 +6,12 @@ MD5 24c537c993ea9c463f993b24a872183c files/digest-enlightenment-0.16.6 74
 MD5 943d1947d4bd7b7ee6387ba5827166a4 files/enlightenment 33
 MD5 c0e73afcafa0fbb90610eef266a75c82 files/0.16.9999-kde-menu.patch 454
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-enlightenment-0.16.9999 0
+MD5 9919f320a4902d208dd1692c0525ad1a files/digest-enlightenment-0.16.7_pre3 78
 MD5 31a7fa2e46a2ea87c2eaa2170bd34f57 files/digest-enlightenment-0.16.7_pre2 78
-MD5 688fb4fa68cf0c40767f01ef2dcbc569 ChangeLog 3793
+MD5 f856152ae77e16cd50dfcf66426c3654 ChangeLog 3939
 MD5 6792bd8950bc740b8ca729de336a77fd enlightenment-0.16.5-r4.ebuild 1611
 MD5 eb0095cd3900360ecf60b64e384ac3cb enlightenment-0.16.6.ebuild 1869
 MD5 7ed1cbab645402fbf7666ed95588542d metadata.xml 1572
 MD5 5e78707d61d0a54a62b18e305bec2872 enlightenment-0.16.9999.ebuild 1928
+MD5 7554e32702113f384bede345dc3bb5b0 enlightenment-0.16.7_pre3.ebuild 1145
 MD5 6284355a2929d2ef70be74c29716d9ad enlightenment-0.16.7_pre2.ebuild 1145
