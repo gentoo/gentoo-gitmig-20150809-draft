@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.21.ebuild,v 1.4 2004/08/08 12:06:42 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.21.ebuild,v 1.5 2004/08/10 23:06:26 foser Exp $
 
 # because of the experimental nature debug by default
-inherit debug
+inherit debug eutils
 
 IUSE="X gtk qt python doc"
 
@@ -79,6 +79,13 @@ src_install() {
 	fi
 
 	dodoc AUTHORS ChangeLog HACKING NEWS README doc/TODO doc/*html
+
+}
+
+pkg_preinst() {
+
+	enewgroup messagebus || die "Problem adding messagebus group"
+	enewuser messagebus -1 /bin/false /dev/null messagebus || die "Problem adding messagebus user"
 
 }
 
