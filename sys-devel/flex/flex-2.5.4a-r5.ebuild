@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.4a-r5.ebuild,v 1.26 2004/09/16 06:36:40 robmoss Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/flex-2.5.4a-r5.ebuild,v 1.27 2004/10/07 19:17:19 j4rg0n Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="FLEX"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390 macos ppc-macos"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
 IUSE="build static"
 
 DEPEND="virtual/libc"

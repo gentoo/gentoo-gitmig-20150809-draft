@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/flex
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.23 2004/09/16 06:36:40 robmoss Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/flex/ChangeLog,v 1.24 2004/10/07 19:17:19 j4rg0n Exp $
+
+  07 Oct 2004; Lina Pezzella <j4rg0n@gentoo.org> flex-2.5.4a-r5.ebuild:
+  Removed ~macos keyword Bug #65763
 
    06 Sep 2004; Alexander Plank <alexander@gentoo.org> flex-2.5.4a-r5.ebuild:
    add ~macos -- it overwrites apple's flex
