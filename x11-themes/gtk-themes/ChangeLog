@@ -1,6 +1,18 @@
 # ChangeLog for x11-themes/gtk-themes
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-themes/ChangeLog,v 1.10 2003/10/04 12:33:58 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-themes/ChangeLog,v 1.11 2003/10/14 22:12:13 liquidx Exp $
+
+  14 Oct 2003; Alastair Tse <liquidx@gentoo.org> gtk-themes-1.0.ebuild,
+  gtk-themes-2.0-r2.ebuild:
+  replace notif/metal/redmond95/pixbuf themes with gtk-engines and up the
+  gtk-engines-mist dep so we get the patch to enable/disable gtk1/2
+
+  14 Oct 2003; Alastair Tse <liquidx@gentoo.org> gtk-themes-2.0-r2.ebuild:
+  fix -mist dep
+
+  14 Oct 2003; Alastair Tse <liquidx@gentoo.org> gtk-themes-2.0-r2.ebuild:
+  changed dep to gtk-engines-mist-0.10. thats the version that has gtk1/gtk2
+  seperation
 
   04 Oct 2003; L. Boshell <leonardop@gentoo.org> gtk-themes-2.0-r1.ebuild,
   gtk-themes-2.0-r2.ebuild:

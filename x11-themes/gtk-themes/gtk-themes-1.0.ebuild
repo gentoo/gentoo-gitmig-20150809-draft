@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-themes/gtk-themes-1.0.ebuild,v 1.5 2003/02/13 17:42:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-themes/gtk-themes-1.0.ebuild,v 1.6 2003/10/14 22:12:13 liquidx Exp $
 
 DESCRIPTION="Some nice themes for GTK+"
 LICENSE="GPL-2"
@@ -65,7 +65,7 @@ DEPEND="=x11-themes/gtk-engines-begtk-1.0.1*
 	=x11-themes/gtk-engines-raleigh-0.12*
 	=x11-themes/gtk-engines-redmond95-0.12*
 	=x11-themes/gtk-engines-thinice-1.0.4*
-	=x11-themes/gtk-engines-xenophilia-0.8*"
+	>=x11-themes/gtk-engines-xenophilia-0.8"
 
 src_unpack() {
 	return 0

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-themes/gtk-themes-2.0-r2.ebuild,v 1.3 2003/10/04 12:33:58 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-themes/gtk-themes-2.0-r2.ebuild,v 1.4 2003/10/14 22:12:13 liquidx Exp $
 
 DESCRIPTION="Some nice themes for GTK+ 2"
 LICENSE="GPL-2"
@@ -26,14 +26,11 @@ SRC_URI="${BASE_URI}aqualightblue-gtk2/aqualightblue-gtk2-default.tar.gz
 HOMEPAGE="http://themes.freshmeat.net/ http://art.gnome.org/"
 
 DEPEND=">=x11-themes/gtk-engines-cleanice-1.1.5
-	>=x11-themes/gtk-engines-flat-2.0
 	>=x11-themes/gtk-engines-lighthouseblue-0.4.2
-	>=x11-themes/gtk-engines-metal-1.9.0
 	>=x11-themes/gtk-engines-magicchicken-1
-	=x11-themes/gtk-engines-mist-0.8-r2
-	>=x11-themes/gtk-engines-pixbuf-1.9.0
-	>=x11-themes/gtk-engines-redmond95-1.9.0
-	>=x11-themes/gtk-engines-thinice-2.0.1
+	>=x11-themes/gtk-engines-mist-0.10
+	>=x11-themes/gtk-engines-2.0
+	>=x11-themes/gtk-engines-thinice-2.0.2-r1
 	>=x11-themes/gtk-engines-xfce-2.0.8"
 
 src_unpack() {
