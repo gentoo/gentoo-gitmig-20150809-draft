@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/glmix
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glmix/ChangeLog,v 1.4 2004/09/28 19:37:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glmix/ChangeLog,v 1.5 2004/11/12 08:29:26 eradicator Exp $
+
+  12 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org> glmix-0.1.ebuild:
+  Stable sparc.
 
   28 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> glmix-0.1.ebuild:
   Ebuild cleanup.  Added to ~sparc.  Stable on amd64 and x86.
