@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/logjam
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/ChangeLog,v 1.11 2003/07/21 22:24:51 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/ChangeLog,v 1.12 2003/09/28 03:57:41 obz Exp $
+
+*logjam-4.2.4 (28 Sep 2003)
+
+  28 Sep 2003; Mike Gardiner <obz@gentoo.org> logjam-4.2.2.ebuild,
+  logjam-4.2.4.ebuild:
+  New version, and marked 4.2.2 stable on x86. Sparc/ppc keywords need to be
+  updated
 
 *logjam-4.2.2 (21 Jul 2003)
 
