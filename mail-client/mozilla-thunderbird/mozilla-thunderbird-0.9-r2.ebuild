@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-0.9-r2.ebuild,v 1.1 2004/11/14 03:33:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-0.9-r2.ebuild,v 1.2 2004/11/15 02:22:40 agriffis Exp $
 
 IUSE="crypt gtk2"
 
@@ -143,9 +143,14 @@ pkg_postinst() {
 	env-update
 
 	# Register Components and Chrome
+	#
+	# Bug 67031: Set HOME=~root in case this is being emerged via sudo.
+	# Otherwise the following commands will create ~/.mozilla owned by root
+	# and 700 perms, which makes subsequent execution of firefox by user
+	# impossible.
 	einfo "Registering Components and Chrome..."
-	LD_LIBRARY_PATH=${ROOT}/usr/lib/MozillaThunderbird ${MOZILLA_FIVE_HOME}/regxpcom
-	LD_LIBRARY_PATH=${ROOT}/usr/lib/MozillaThunderbird ${MOZILLA_FIVE_HOME}/regchrome
+	HOME=~root LD_LIBRARY_PATH=/usr/lib/MozillaThunderbird ${MOZILLA_FIVE_HOME}/regxpcom
+	HOME=~root LD_LIBRARY_PATH=/usr/lib/MozillaThunderbird ${MOZILLA_FIVE_HOME}/regchrome
 
 	# Fix permissions of component registry
 	chmod 0644 ${MOZILLA_FIVE_HOME}/components/compreg.dat
