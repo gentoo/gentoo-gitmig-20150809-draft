@@ -1,10 +1,20 @@
-MD5 ded38c6892a9ce02998abd0387e0f7a9 ChangeLog 5389
-MD5 ad647d2094cd075f13796e53f8ae34fe intltool-0.30.ebuild 654
-MD5 fed2ee45e4fc807aeb9e026134f39a3c intltool-0.31.2.ebuild 685
-MD5 fa50286a78f1672c7949129c5e7c3cb1 intltool-0.31.3.ebuild 687
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4e374aa9074d013bb366bcf4c704199f ChangeLog 5487
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 fa50286a78f1672c7949129c5e7c3cb1 intltool-0.31.3.ebuild 687
+MD5 13911e307c40c5da010f8b052eaf4082 intltool-0.31.2.ebuild 682
 MD5 626602aa2aea5953c3868af14805bb18 intltool-0.32.1.ebuild 687
-MD5 0e6797a08a511e06578b68207686a2f5 files/digest-intltool-0.30 66
+MD5 ad647d2094cd075f13796e53f8ae34fe intltool-0.30.ebuild 654
 MD5 795eb1575afa6905cbf7452c64b99776 files/digest-intltool-0.31.2 68
-MD5 4ba1ae08b6a0cab877142c6c716ff1f7 files/digest-intltool-0.31.3 68
 MD5 1928cb7c9113dac8b9c09d32e03d95f3 files/digest-intltool-0.32.1 68
+MD5 4ba1ae08b6a0cab877142c6c716ff1f7 files/digest-intltool-0.31.3 68
+MD5 0e6797a08a511e06578b68207686a2f5 files/digest-intltool-0.30 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBonfOugEuf3OQ0akRAiSXAJwMdRstwYf2s3544z3tSy4D27uAnQCdFdyA
+jUiUIx6KnfEnEJ7nY9GXslQ=
+=+TAg
+-----END PGP SIGNATURE-----
