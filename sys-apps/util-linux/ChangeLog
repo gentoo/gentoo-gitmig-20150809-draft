@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.54 2003/08/10 21:16:49 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.55 2003/09/20 05:14:23 seemant Exp $
+
+  19 Sep 2003; Seemant Kulleen <seemant@gentoo.org>
+  util-linux-2.11z-r6.ebuild, util-linux-2.11z-r7.ebuild,
+  util-linux-2.12.ebuild:
+  fix for USE=static, thanks to: Sascha Silbe <sascha-gentoo-bugzilla@silbe.org>
+  in bug #29160
 
   10 Aug 2003; Martin Schlemmer <azarah@gentoo.org>
   util-linux-2.11z-r6.ebuild:
