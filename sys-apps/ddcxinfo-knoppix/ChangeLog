@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/ddcxinfo-knoppix
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ddcxinfo-knoppix/ChangeLog,v 1.1 2004/01/03 17:31:21 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ddcxinfo-knoppix/ChangeLog,v 1.2 2004/03/20 19:24:03 zhen Exp $
+
+  20 Mar 2004; John Davis <zhen@gentoo.org> ddcxinfo-knoppix-0.6.ebuild:
+  bumping to x86 stable since we use it on livecds and it has proven to be
+  stable.
 
 *ddcxinfo-knoppix-0.6 (03 Jan 2004)
 
