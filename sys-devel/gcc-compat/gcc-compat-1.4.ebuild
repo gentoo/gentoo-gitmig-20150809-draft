@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-compat/gcc-compat-1.4.ebuild,v 1.6 2004/06/24 22:45:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-compat/gcc-compat-1.4.ebuild,v 1.7 2004/07/15 03:17:56 agriffis Exp $
 
 DESCRIPTION="This is a compatability layer for use when upgrading to profile $PV"
 HOMEPAGE="http://www.gentoo.org"
@@ -11,6 +11,7 @@ LICENSE="GPL-2"
 # This is ABSOLUTELY Machine non-specific
 SLOT="0"
 KEYWORDS="x86 ppc sparc "
+IUSE=""
 
 DEPEND=""
 RDEPEND=""
