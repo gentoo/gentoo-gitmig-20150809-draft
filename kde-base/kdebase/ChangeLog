@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.161 2004/12/09 01:50:30 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.162 2004/12/09 01:53:27 caleb Exp $
+
+  08 Dec 2004; Caleb Tennis <caleb@gentoo.org> +files/pgo.desktop:
+  forgot this file
 
 *kdebase-3.3.2 (08 Dec 2004)
 

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Charset=
+Hidden=false
+Keys=pgo
+Name=Gentoo Package Database
+Query=http://packages.gentoo.org/search/?sstring=\\{@}
+ServiceTypes=SearchProvider
+Type=Service
+
