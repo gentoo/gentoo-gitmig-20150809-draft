@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-itouch/xmms-itouch-0.1.2-r1.ebuild,v 1.4 2004/04/20 17:53:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-itouch/xmms-itouch-0.1.2-r1.ebuild,v 1.5 2004/04/22 06:22:52 eradicator Exp $
 
-IUSE=""
+IUSE="nls"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="XMMS plugin for multimedia keys on Logitech keyboards and others alike"
 HOMEPAGE="http://www.saunalahti.fi/~syrjala/xmms-itouch/"
 SRC_URI="http://www.saunalahti.fi/~syrjala/xmms-itouch/${P}.tar.gz
@@ -24,17 +23,13 @@ src_unpack() {
 
 }
 
-src_install () {
-	make DESTDIR=${D} install || die
+src_compile() {
+	econf `use_enable nls` || die
+	emake || die
 }
 
-src_compile() {
-	local myconf
-
-	use nls || myconf="${myconf} --disable-nls"
-
-	econf ${myconf}
-	emake || die
+src_install () {
+	make DESTDIR=${D} install || die
 }
 
 pkg_postinst() {
