@@ -1,6 +1,6 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tla.eclass,v 1.1 2003/11/21 17:39:58 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tla.eclass,v 1.2 2004/03/07 18:48:32 rphillips Exp $
 #
 # Original Author:    Jeffrey Yasskin <jyasskin@mail.utexas.edu>
 #
@@ -65,7 +65,7 @@ tla_register_archives() {
 	debug-print-function $FUNCNAME $* $ETLA_ARCHIVES
 
 	for archive in $ETLA_ARCHIVES; do
-		$ETLA_TLA_CMD register-archive $archive || die "Could not register archive $archive"
+		$ETLA_TLA_CMD register-archive -f $archive || die "Could not register archive $archive"
 	done
 }
 
