@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mpg123
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.23 2003/11/24 01:30:54 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.24 2004/01/12 00:21:56 agriffis Exp $
+
+  11 Jan 2004; Aron Griffis <agriffis@gentoo.org> mpg123-0.59s-r1.ebuild:
+  stable on alpha and ia64
 
   23 Nov 2003; Mike Frysinger <vapier@gentoo.org> :
   Add generic patch for hppa support.
