@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lvm-user/lvm-user-1.0.5.ebuild,v 1.6 2002/12/09 04:37:25 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lvm-user/lvm-user-1.0.5.ebuild,v 1.7 2002/12/16 09:06:27 aliz Exp $
+
+inherit flag-o-matic
 
 S=${WORKDIR}/LVM/${PV}
 DESCRIPTION="User-land utilities for LVM (Logical Volume Manager) software"
@@ -17,9 +19,8 @@ SLOT="0"
 KS=/usr/src/linux
 
 src_compile() {
-	cd ${S}
-	#This ebuild doesn't like this opt setting; closes bug #598
-	export CFLAGS="${CFLAGS/-fomit-frame-pointer/}"
+	addwrite /dev/stderr
+	filter-flags -fomit-frame-pointer
 	[ -f "Makefile" ] && ( make clean || die )
 	CFLAGS="${CFLAGS} -I${KS}/include" \
 		./configure --prefix=/ \
