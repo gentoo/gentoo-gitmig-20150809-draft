@@ -1,24 +1,26 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/queue-fix/queue-fix-1.4-r2.ebuild,v 1.8 2004/04/27 21:04:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/queue-fix/queue-fix-1.4-r2.ebuild,v 1.9 2004/05/25 21:53:37 vapier Exp $
 
-inherit eutils
+inherit eutils gcc
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Qmail Queue Repair Application with support for big-todo"
-SRC_URI="http://www.netmeridian.com/e-huss/${P}.tar.gz
-		mirror://qmail/queue-fix-todo.patch"
 HOMEPAGE="http://www.netmeridian.com/e-huss/"
+SRC_URI="http://www.netmeridian.com/e-huss/${P}.tar.gz
+	mirror://qmail/queue-fix-todo.patch"
 
-SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 alpha ~hppa mips ppc sparc amd64 ia64"
+SLOT="0"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64"
 IUSE=""
+
 DEPEND="sys-devel/gcc-config"
-RDEPEND="|| ( net-mail/qmail
-			  net-mail/qmail-mysql
-			  net-mail/qmail-ldap
-			)"
+RDEPEND="
+	|| (
+		net-mail/qmail
+		net-mail/qmail-mysql
+		net-mail/qmail-ldap
+	)"
 
 src_unpack() {
 	unpack ${P}.tar.gz
@@ -28,15 +30,14 @@ src_unpack() {
 }
 
 src_compile() {
-	echo "${CC} ${CFLAGS}" > conf-cc
-	echo "${CC} ${LDFLAGS}" > conf-ld
+	echo "$(gcc-getCC) ${CFLAGS}" > conf-cc
+	echo "$(gcc-getCC) ${LDFLAGS}" > conf-ld
 	emake || die
 }
 
 src_install () {
 	into /var/qmail
-	dobin queue-fix
+	dobin queue-fix || die
 	into /usr
 	dodoc README CHANGES
 }
-

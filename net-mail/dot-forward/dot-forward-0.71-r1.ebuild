@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dot-forward/dot-forward-0.71-r1.ebuild,v 1.9 2004/04/10 04:41:13 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dot-forward/dot-forward-0.71-r1.ebuild,v 1.10 2004/05/25 21:52:01 vapier Exp $
 
 inherit eutils gcc
 
@@ -10,7 +10,8 @@ SRC_URI="http://cr.yp.to/software/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64"
+IUSE=""
 
 DEPEND="virtual/glibc
 	sys-apps/groff"
@@ -36,5 +37,5 @@ src_install() {
 
 	insopts -o root -g qmail -m 755
 	insinto /var/qmail/bin
-	doins dot-forward
+	doins dot-forward || die
 }
