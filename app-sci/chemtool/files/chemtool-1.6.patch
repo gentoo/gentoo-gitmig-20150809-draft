@@ -1,0 +1,11 @@
+--- Makefile.in 2003-05-11 15:02:15.000000000 +0200
++++ Makefile.in.new     2003-07-17 13:56:25.000000000 +0200
+@@ -5,7 +5,7 @@
+ mandir=@mandir@
+ kdedir=@kdemimedir@
+ gnomedir=@gnomemimedir@
+-CFLAGS=-O2 -Wall -Wunused -Wuninitialized -I. `gtk-config --cflags` @DEFS@ -DLOCALEDIR=\"${localedir}\"
++CFLAGS=-O2 -Wall -Wunused -Wuninitialized -I /usr/include/libEMF -I. `gtk-config --cflags` @DEFS@ -DLOCALEDIR=\"${localedir}\"
+ 
+ CC=@CC@
+ CP=/bin/cp
