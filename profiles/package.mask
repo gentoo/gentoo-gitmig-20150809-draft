@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# <raker@gentoo.org> (12 Aug 2002)
+# masked new build of hylafax.
+=net-misc/hylafax-4.1.3
+
 # <stubear@gentoo.org> (12 Aug 2002)
 # masked for testing
 =app-i18n/konfont-0.1
