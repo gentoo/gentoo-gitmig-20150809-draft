@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/fcron-2.9.5.1-r1.ebuild,v 1.1 2005/01/15 12:39:25 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/fcron-2.9.5.1-r1.ebuild,v 1.2 2005/01/15 15:12:06 ka0ttic Exp $
 
 inherit cron
 
@@ -69,7 +69,7 @@ src_compile() {
 src_install() {
 	docrondir /var/spool/cron/fcrontabs -m0770 -o cron -g cron
 	docron fcron -m0110 -o root -g root
-	docrontab fcrontab -m6110 -o root -g cron
+	docrontab fcrontab -m6110 -o cron -g cron
 
 	docron fcrondyn -m6110 -o cron -g cron
 	docron fcronsighup -m6110 -o root -g cron
@@ -101,6 +101,5 @@ src_install() {
 pkg_postinst() {
 	einfo "Each user who uses fcron should be added to the cron group"
 	einfo "in /etc/group and also be added in /etc/fcron/fcron.allow"
-	einfo
 	cron-pkg_postinst
 }
