@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header:
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.0.4.ebuild,v 1.4 2002/12/21 13:48:19 hannes Exp $
 # TODO: add gnustep bindings
 inherit kde-dist
 
