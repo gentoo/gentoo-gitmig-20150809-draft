@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-0.6.12-r1.ebuild,v 1.1 2004/08/30 13:51:12 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-0.6.12-r1.ebuild,v 1.2 2004/08/31 02:55:46 mr_bones_ Exp $
 
 inherit eutils
 
@@ -59,7 +59,7 @@ src_install() {
 
 	# needed by drbd startup script
 	dodir /var/lib/drbd
-	keepdir /var/lib/drbd 
+	keepdir /var/lib/drbd
 
 	# docs
 	dodoc README ChangeLog COPYING
