@@ -1,14 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.ebuild,v 1.1 2002/08/23 12:51:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.ebuild,v 1.2 2002/08/23 13:40:25 seemant Exp $
 
 inherit libtool
 
-MY_P=${P/_pre/-}
-S=${WORKDIR}/${MY_P}
+S=${WORKDIR}/${P}
 DESCRIPTION="A spell checker replacement for ispell"
 SRC_URI="ftp://ftp.gnu.org/gnu/aspell/${P}.tar.gz"
-HOMEPAGE="http://www.gnu.org/software/aspell/index.html"
+HOMEPAGE="http://aspell.net/"
 
 DEPEND=">=sys-libs/ncurses-5.2"
 
@@ -45,8 +44,6 @@ src_install () {
 	dodoc man-text
 	cd ${S}
 	
-#	dosym /usr/lib/libpspell.so.15 /usr/lib/libpspell.so
-	
 	dodoc README* TODO
 
 }
@@ -55,4 +52,7 @@ pkg_postinst() {
 
 	einfo "You will need to install a dictionary now.  Please choose an"
 	einfo "aspell-<LANG> dictionary from the app-i18n category"
+	einfo "After installing an aspell dictionary for your language(s),"
+	einfo "You may use the aspell-import utility to import your personal"
+	einfo "dictionaries from ispell, pspell and the older aspell"
 }
