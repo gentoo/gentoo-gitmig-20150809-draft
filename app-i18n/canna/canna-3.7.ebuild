@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.7.ebuild,v 1.7 2004/05/04 18:12:04 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/canna-3.7.ebuild,v 1.8 2004/05/06 11:31:57 usata Exp $
 
 inherit cannadic eutils
 
@@ -38,6 +38,10 @@ src_unpack() {
 src_compile() {
 
 	xmkmf || die
+
+	# Remove VENDORNAME, see bug #48229
+	sed -i -e "/VENDORNAME/d" Makefile
+
 	#make libCannaDir=../lib/canna canna || die
 	make canna || die
 

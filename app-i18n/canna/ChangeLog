@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/canna
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.35 2004/05/04 18:12:04 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/canna/ChangeLog,v 1.36 2004/05/06 11:31:57 usata Exp $
+
+  06 May 2004; Mamoru KOMACHI,c10344,, <usata@gentoo.org> canna-3.6_p4.ebuild,
+  canna-3.7.ebuild, canna-3.7_p1.ebuild:
+  Remove VENDORNAME from Makefile. Closing bug #48229
 
 *canna-3.7_p1 (05 May 2004)
 
