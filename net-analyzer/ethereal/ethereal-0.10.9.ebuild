@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.9.ebuild,v 1.7 2005/01/25 12:01:53 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.10.9.ebuild,v 1.8 2005/01/29 20:47:16 dragonheart Exp $
 
 inherit libtool flag-o-matic gcc eutils
 
@@ -25,7 +25,7 @@ RDEPEND=">=sys-libs/zlib-1.1.4
 		!gtk2? ( =x11-libs/gtk+-1.2* ) )
 	!gtk? ( =dev-libs/glib-1.2* )
 	ssl? ( >=dev-libs/openssl-0.9.6e )
-	>=net-libs/libpcap-0.7.1
+	virtual/libpcap
 	>=dev-libs/libpcre-4.2
 	adns? ( net-libs/adns )"
 DEPEND="${RDEPEND}
