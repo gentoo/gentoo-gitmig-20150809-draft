@@ -1,16 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-imp/horde-imp-3.2.1.ebuild,v 1.2 2003/09/06 01:54:08 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-imp/horde-imp-3.2.1.ebuild,v 1.3 2003/09/11 19:13:37 mholzer Exp $
 
 DESCRIPTION="IMP ${PV} provides webmail access"
 HOMEPAGE="http://www.horde.org"
-P=imp-3.2.1
-SRC_URI="ftp://ftp.horde.org/pub/imp/tarballs/imp-3.2.1.tar.gz"
+MY_P=${P/horde-/}
+SRC_URI="ftp://ftp.horde.org/pub/imp/tarballs/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 DEPEND=""
 RDEPEND=">=net-www/horde-2.2.1"
+S=${WORKDIR}/${MY_P}
 
 find_http_root() {
 	export HTTPD_ROOT=`grep apache /etc/passwd | cut -d: -f6`/htdocs
