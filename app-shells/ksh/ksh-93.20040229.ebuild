@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20040229.ebuild,v 1.1 2004/04/10 21:22:03 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20040229.ebuild,v 1.2 2004/04/15 23:09:17 randy Exp $
 
 inherit ccc eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.research.att.com/~gsf/download/tgz/INIT.${RELEASE}.tgz
 
 LICENSE="ATT"
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~sparc"
+KEYWORDS="~x86 ~alpha ~sparc s390"
 IUSE="static nls"
 
 DEPEND="virtual/glibc !app-shells/pdksh"

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20030724.ebuild,v 1.7 2003/12/06 15:26:10 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/ksh/ksh-93.20030724.ebuild,v 1.8 2004/04/15 23:09:17 randy Exp $
 
 inherit ccc eutils
 
