@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1558bd1f7e14477e0a95ecc0613c8449 ChangeLog 600
-MD5 9d730d2fe4bee096da42c81d2f4e19bf bastet-0.41.ebuild 1053
+MD5 f876ff2d343b9b6da61d5f16cbd41727 ChangeLog 690
+MD5 714a6d06518e26b42eeba1dbb92ffedd bastet-0.41.ebuild 1052
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 8693dd589c6c495627bb6d1aa2b9d36e files/digest-bastet-0.41 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFByDSa60LfUIagIAkRAlMvAJ9yHoFaylrlbzT9WnW3PHp/PHSv8ACgxpzR
-g2d/v0XnGP1WaHBPaP+5Tqs=
-=W2Sa
------END PGP SIGNATURE-----
