@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus/gnus-5.10.3.ebuild,v 1.4 2004/06/15 08:29:00 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus/gnus-5.10.3.ebuild,v 1.5 2004/06/18 06:42:23 mr_bones_ Exp $
 
 inherit elisp
 
@@ -18,7 +18,7 @@ DEPEND="virtual/emacs
 
 src_compile() {
 	local myconf
-	if [ $(use emacs-w3) ]; then
+	if use emacs-w3 ; then
 		myconf="${myconf} --with-w3=/usr/share/emacs/site-lisp/w3"
 		myconf="${myconf} --with-url=/usr/share/emacs/site-lisp/w3"
 	else
