@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3307 2004/11/09 12:38:11 genone Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3308 2004/11/09 23:35:24 taviso Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <taviso@gentoo.org> (09 Nov 2004)
+# preparing for removal, please contact me with comments.
+app-editors/videoteco
 
 # <danarmak@gentoo.org> (06 Nov 2004)
 # Masked incoming 'split' kde ebuilds pending more extensive testing
