@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/jisx0213-fonts/jisx0213-fonts-1.03.ebuild,v 1.5 2004/08/03 17:49:28 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/jisx0213-fonts/jisx0213-fonts-20040425.ebuild,v 1.1 2004/08/03 17:49:28 usata Exp $
 
 IUSE="X"
 
@@ -9,10 +9,14 @@ DESCRIPTION="Japanese fixed fonts that cover JIS0213 charset"
 HOMEPAGE="http://www12.ocn.ne.jp/~imamura/jisx0213.html"
 SRC_BASE1=http://www12.ocn.ne.jp/~imamura
 SRC_BASE2=http://gitatsu.hp.infoseek.co.jp/bdf
-SRC_URI="${SRC_BASE1}/jiskan16-2000-1.bdf.gz
+SRC_URI="${SRC_BASE1}/jiskan16-2004-1.bdf.gz
+	${SRC_BASE1}/jiskan16-2000-1.bdf.gz
 	${SRC_BASE1}/jiskan16-2000-2.bdf.gz
+	${SRC_BASE1}/K14-2004-1.bdf.gz
 	${SRC_BASE1}/K14-2000-1.bdf.gz
 	${SRC_BASE1}/K14-2000-2.bdf.gz
+	${SRC_BASE1}/K12-1.bdf.gz
+	${SRC_BASE1}/K12-2.bdf.gz
 	${SRC_BASE1}/A14.bdf.gz
 	${SRC_BASE1}/A12.bdf.gz
 	${SRC_BASE2}/jiskan24-2000-1.bdf.gz
