@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/prime
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/ChangeLog,v 1.10 2004/01/28 14:40:31 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/ChangeLog,v 1.11 2004/01/29 16:55:52 usata Exp $
+
+*prime-0.7.6 (30 Jan 2004)
+
+  30 Jan 2004; Mamoru KOMACHI <usata@gentoo.org> prime-0.7.6.ebuild:
+  Version bumped
 
 *prime-0.7.6_rc2 (28 Jan 2004)
 
