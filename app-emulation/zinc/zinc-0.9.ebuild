@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/zinc/zinc-0.9.ebuild,v 1.1 2002/07/19 20:29:48 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/zinc/zinc-0.9.ebuild,v 1.2 2002/08/06 18:37:20 gerk Exp $
 
 S="${WORKDIR}/zinc"
 A="${P}-linux.tar.bz2"
@@ -9,7 +9,7 @@ SRC_URI="http://www.emuhype.com/files/${A}"
 HOMEPAGE="http://www.emuhype.com"
 DEPEND="=sys-apps/baselayout-1.8.0"
 RDEPEND="${DEPEND}"
-KEYWORDS="x86"
+KEYWORDS="x86 -ppc -sparc -sparc64"
 LICENSE="proprietary"
 SLOT="0"
 
