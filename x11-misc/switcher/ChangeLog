@@ -1,0 +1,9 @@
+# ChangeLog for x11-misc/switcher
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/switcher/ChangeLog,v 1.1 2003/08/20 09:56:12 coronalvr Exp $
+
+*switcher-0.3.7a (20 Aug 2003)
+
+  20 Aug 2003; Alex Veber <coronalvr@gentoo.org> switcher-0.3.7a.ebuild:
+  Initial Import, thanks to Dror Levin (spatz@012.net.il)
+
