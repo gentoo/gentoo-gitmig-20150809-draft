@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.115 2005/04/05 22:17:54 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.116 2005/04/06 14:46:09 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -659,10 +659,15 @@ detect_version() {
 
 	KV_MAJOR=$(get_version_component_range 1 ${OKV})
 	KV_MINOR=$(get_version_component_range 2 ${OKV})
-	KV_PATCH=$(get_version_component_range 3 ${OKV})
-	KV_EXTRA=$(get_version_component_range 4- ${OKV})
+
+	if [[ ${KV_MAJOR}${KV_MINOR}${KV_PATCH} -ge 269 ]]; then
+		KV_PATCH=$(get_version_component_range 3 ${OKV})
+		KV_EXTRA=$(get_version_component_range 4- ${OKV})
+		KV_EXTRA=${KV_EXTRA/[-_]*}
+	else
+		KV_PATCH=$(get_version_component_range 3- ${OKV})
+	fi
 	KV_PATCH=${KV_PATCH/[-_]*}
-	KV_EXTRA=${KV_EXTRA/[-_]*}
 
 	KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
 
@@ -678,6 +683,7 @@ detect_version() {
 	# we can work on better sorting EXTRAVERSION.
 	# first of all, we add the release
 	EXTRAVERSION="${RELEASE}"
+	[[ -n ${KV_EXTRA} ]] && EXTRAVERSION=".${KV_EXTRA}${EXTRAVERSION}"
 
 	if [[ -n ${K_PREPATCHED} ]]; then
 		EXTRAVERSION="${EXTRAVERSION}-${PN/-*}${PR/r}"
