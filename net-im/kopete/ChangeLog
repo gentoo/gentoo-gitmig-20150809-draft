@@ -1,6 +1,11 @@
 # ChangeLog for net-im/kopete
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/ChangeLog,v 1.7 2003/01/03 11:06:27 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/ChangeLog,v 1.8 2003/02/10 21:29:15 ykoehler Exp $
+
+*kopete-0.6.0 (10 Feb 2003)
+
+  10 Feb 2003; Yannick Koehler <ykoehler@gentoo.org> kopete-0.6.0.ebuild files/digest-kopete-0.6.0 :
+  Version Bump. Removed patches has they have been fixed inside the official package.
 
   03 Jan 2003; Hannes Mehnert <hannes@gentoo.org> kopete-0.5.ebuild:
   fix for kde-3.0.5a, solves #12686
