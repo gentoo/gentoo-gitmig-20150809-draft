@@ -1,8 +1,13 @@
 # ChangeLog for gnome-base/nautilus
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.20 2002/07/18 20:01:22 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/ChangeLog,v 1.21 2002/07/25 12:04:40 spider Exp $
 
+*nautilus-2.0.1 (25 Jul 2002)
+  25 Jul 2002; Spider <spider@gentoo.org> nautilus-2.0.1.ebuild :
+  versionbumped, changed deps to match
+  thanks to Andreas Kotowicz <koto@mynetix.de>  and Manny <christian-neumair@web.de>
 
+  
 nautilus-2.0.0-r4 (18 Jul 2002)
   18 Jul 2002; Spider <spider@gentoo.org> nautilus-2.0.0-r4.ebuild :
   now has gdialog support

@@ -1,7 +1,14 @@
 # ChangeLog for gnome-base/librsvg
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.4 2002/06/19 17:53:32 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.5 2002/07/25 12:04:39 spider Exp $
 
+
+*librsvg-2.0.1 (25 Jul 2002)
+  25 Jul 2002; Spider <spider@gentoo.org> librsvg-2.0.1.ebuild :
+  versionbumped, changed deps, mirror:/ and eclassed
+
+  thanks to Andreas Kotowicz <koto@mynetix.de>  and Manny <christian-neumair@web.de>
+      
 *librsvg-2.0.0-r1 (19 Jun 2002)
   19 Jun 2002; Gabriele Giorgetti <stroke@gentoo.org> librsvg-2.0.0-r1.ebuild:
   Added missing GTK+2 depencie. (librsvg was failing to build if no GTK+2 
