@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d71844b822349e9750c7c17d3cb5811f libemf-1.0.ebuild 836
-MD5 4f978efdbb1285ff86f3afb0571cf7e9 ChangeLog 1074
+MD5 03f2258a8d90644db4a0ecb04a03af1c ChangeLog 1175
+MD5 d1bfc0be415e6161117838632046fd9b libemf-1.0.ebuild 839
 MD5 b742040acaeddc3798a21739bd59e8aa metadata.xml 224
-MD5 da0b56d85ef634877fc9be4d56503463 files/libEMF-1.0-amd64.patch 2362
-MD5 3b1d4fe080501e571622229464654b95 files/libEMF-1.0-gcc3.patch 2429
 MD5 5dd26ee62faddde9ae039b314d8e0850 files/digest-libemf-1.0 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCP18r06ebR+OMO78RAgJxAJ9+zwJYR7T984L4y7emyh9UFywipQCfUi7Z
-p8juDcfknc/JyPBmsLvgvys=
-=rnao
------END PGP SIGNATURE-----
+MD5 3b1d4fe080501e571622229464654b95 files/libEMF-1.0-gcc3.patch 2429
+MD5 da0b56d85ef634877fc9be4d56503463 files/libEMF-1.0-amd64.patch 2362
