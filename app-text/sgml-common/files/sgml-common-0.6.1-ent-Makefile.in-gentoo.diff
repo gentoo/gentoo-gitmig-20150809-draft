@@ -1,0 +1,11 @@
+--- iso-entities/Makefile.in~	Tue Jan 30 15:43:34 2001
++++ iso-entities/Makefile.in	Sun Mar 18 22:43:13 2001
+@@ -62,7 +62,7 @@
+ VERSION = @VERSION@
+ docdir = @docdir@
+ 
+-isoentdir = $(prefix)/share/sgml/sgml-iso-entities-8879.1986
++isoentdir = $(prefix)/share/sgml/sgml/ent/iso-8879.1986
+ isoent_DATA = ISOamsa.ent ISOamsb.ent ISOamsc.ent ISOamsn.ent ISOamso.ent ISOamsr.ent               ISObox.ent ISOcyr1.ent ISOcyr2.ent ISOdia.ent ISOgrk1.ent ISOgrk2.ent               ISOgrk3.ent ISOgrk4.ent ISOlat1.ent ISOlat2.ent ISOnum.ent ISOpub.ent               ISOtech.ent catalog
+ 
+ 

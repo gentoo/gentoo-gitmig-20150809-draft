@@ -1,0 +1,38 @@
+# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# Author Achim Gottinger <achim@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-dtd/docbook-sgml-dtd-3.1.ebuild,v 1.1 2001/03/20 05:53:12 achim Exp $
+
+A="docbk31.zip"
+S=${WORKDIR}/${P}
+DESCRIPTION="Docbook SGML DTD 3.1"
+SRC_URI="http://www.oasis-open.org/docbook/sgml/${PV}/${A}"
+
+HOMEPAGE="http://www.oasis-open.org/docbook/sgml/${PV}/index.html"
+
+DEPEND=">=app-arch/unzip-5.41
+                app-text/sgml-common"
+
+
+src_unpack() {
+  mkdir ${S}
+  cd ${S}
+  unpack ${A}
+  cp ${FILESDIR}/${P}.Makefile Makefile
+  patch -b docbook.cat ${FILESDIR}/${P}-catalog.diff
+}
+
+src_install () {
+
+    try make DESTDIR=${D}/usr/share/sgml/docbook/sgml-dtd-${PV} install
+    dodoc *.txt
+}
+
+pkg_postinst() {
+    install-catalog --add /etc/sgml/sgml-docbook-${PV}.cat  /usr/share/sgml/docbook/sgml-dtd-${PV}/catalog
+    install-catalog --add /etc/sgml/sgml-docbook-${PV}.cat /etc/sgml/sgml-docbook.cat
+}
+pkg_prerm() {
+    install-catalog --remove /etc/sgml/sgml-docbook-${PV}.cat /usr/share/sgml/docbooke/sgml-dtd-${PV}/catalog
+    install-catalog --remove /etc/sgml/sgml-docbook-${PV}.cat /etc/sgml/sgml-docbook.cat
+}
