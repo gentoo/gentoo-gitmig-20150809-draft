@@ -1,27 +1,26 @@
 # ChangeLog for net-im/gaim-cvs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-cvs/ChangeLog,v 1.4 2002/10/26 07:53:07 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-cvs/ChangeLog,v 1.5 2002/10/28 16:53:27 vapier Exp $
 
 *gaim-cvs-0.60-r1 (25 Oct 2002)
 
-  26 Oct 2002; phoen][x <phoenix@gentoo.org> gaim-cvs-0.60-r1.ebuild:
+  28 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Updated DEPEND to allow for gtk-2.0 and up #9795
 
+  26 Oct 2002; phoen][x <phoenix@gentoo.org> gaim-cvs-0.60-r1.ebuild:
   Fixed the DEPENDency. The ebuild did not depend on dev-util/cvs, because
   i inherited cvs before i set DEPEND. That caused DEPEND to overwrite the
   dev-util/cvs dependency. Thx to mjc for finding that bug. 
 
   25 Oct 2002; phoen][x <phoenix@gentoo.org> gaim-cvs-0.60-r1.ebuild:
-  
   Cleaned the ebuild:
   Removed "gnome gtk2" from IUSE; removed unused "local gnomeopts" from src_unpack(); 
   removed #SRC_URI=; modified DESCRIPTION; removed RDEPEND="${DEPEND}".
 
   25 Oct 2002; Mike Frysinger <vapier@gentoo.org> gaim-cvs-0.60-r1.ebuild:
-  
   Added the ebuild from #9227 by Seth Chandler <sethbc1980@hotmail.com>.
 
 *gaim-cvs-0.60 (19 Oct 2002)
 
   19 Oct 2002; phoen][x <phoenix@gentoo.org> gaim-cvs-0.60.ebuild:
-  
   Initial import. This is the gaim CVS ebuild.

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-cvs/gaim-cvs-0.60-r1.ebuild,v 1.3 2002/10/26 07:53:07 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-cvs/gaim-cvs-0.60-r1.ebuild,v 1.4 2002/10/28 16:53:27 vapier Exp $
 
 IUSE="nas nls esd arts perl"
 
@@ -13,8 +13,8 @@ KEYWORDS="~x86 ~ppc"
 
 DEPEND="=sys-libs/db-1*
 	!net-im/gaim
-	=x11-libs/gtk+-2.0*
-	=dev-libs/glib-2.0*
+	>=x11-libs/gtk+-2.0
+	>=dev-libs/glib-2.0
 	esd? ( >=media-sound/esound-0.2.22-r2 )
 	nls? ( sys-devel/gettext )
 	nas? ( >=media-libs/nas-1.4.1-r1 )
