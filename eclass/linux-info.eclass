@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.5 2004/12/01 18:08:57 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-info.eclass,v 1.6 2004/12/01 23:26:43 johnm Exp $
 #
 # This eclass provides functions for querying the installed kernel
 # source version, selected kernel options etc.
@@ -20,7 +20,7 @@ KERNEL_DIR="${KERNEL_DIR:-/usr/src/linux}"
 # getfilevar <VARIABLE> <CONFIGFILE>
 
 getfilevar() {
-local	ERROR curpwd
+local	ERROR workingdir basefname basedname arch
 	ERROR=0
 	
 	[ -z "${1}" ] && ERROR=1
@@ -28,14 +28,22 @@ local	ERROR curpwd
 
 	if [ "${ERROR}" = 1 ]
 	then
+		ebeep
+		echo -e "\n"
 		eerror "getfilevar requires 2 variables, with the second a valid file."
 		eerror "   getfilevar <VARIABLE> <CONFIGFILE>"
 	else
-		curpwd="${PWD}"
-		cd $(dirname ${2})
-		echo $(echo -e "include $(basename ${2})\ne:\n\t@echo \$(${1})" | make -f - e)
-	 	cd ${curpwd}
-	#	grep -e "^$1[= ]" $2 | sed 's: = :=:' | cut -d= -f2-
+		workingdir=${PWD}
+		basefname=$(basename ${2})
+		basedname=$(dirname ${2})
+		arch=${ARCH}
+		unset ARCH
+		
+		cd ${basedname}
+		echo -e "include ${basefname}\ne:\n\t@echo \$(${1})" | make -f - e
+		cd ${workingdir}
+		 
+		ARCH=${arch}
 	fi
 }
 
@@ -125,7 +133,7 @@ get_version() {
 	# do we pass KBUILD_OUTPUT on the CLI?
 	OUTPUT_DIR="${OUTPUT_DIR:-${KBUILD_OUTPUT}}"
 	
-	# Or maybe KBUILD_OUTPUT is set in Makefile?
+	# And if we didn't pass it, we can take a nosey in the Makefile
 	kbuild_output="$(getfilevar KBUILD_OUTPUT ${KV_DIR}/Makefile)"
 	OUTPUT_DIR="${OUTPUT_DIR:-${kbuild_output}}"
 	
