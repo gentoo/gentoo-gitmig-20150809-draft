@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.3.0_rc2.ebuild,v 1.5 2005/01/25 10:33:46 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-2.3.0_rc2.ebuild,v 1.6 2005/01/25 12:11:24 dragonheart Exp $
 
 inherit eutils gnuconfig
 
@@ -91,10 +91,10 @@ src_compile() {
 
 pkg_preinst() {
 	enewgroup snort
-	enewuser snort -1 /dev/null /var/log/snort snort
+	enewuser snort -1 /bin/false /var/log/snort snort
 	usermod -d "/var/log/snort" snort || die "usermod problem"
 	usermod -g "snort" snort || die "usermod problem"
-	usermod -s "/dev/null" snort || die "usermod problem"
+	usermod -s "/bin/false" snort || die "usermod problem"
 	echo "ignore any message about CREATE_HOME above..."
 }
 
