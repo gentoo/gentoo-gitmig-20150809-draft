@@ -1,7 +1,12 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.58 2003/04/06 13:25:55 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.59 2003/04/12 23:20:25 brain Exp $
 
+*qt-3.1.2-r1 (13 Apr 2003)
+  
+  13 Apr 2003; Michele Balistreri <brain@gentoo.org> qt-3.1.2-r1.ebuild:
+  Fix bug #19005
+  
   06 Apr 2003; Dan Armak <danarmak@gentoo.org> qt-3.1.2.ebuild:
   Add dep on app-doc/qt-docs of the same version, if USE doc is enabled.
 
