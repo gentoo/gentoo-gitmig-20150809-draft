@@ -13,7 +13,7 @@
 # psypete says these are broken and i am using the
 # opporturnity to test the masking style :)
 # <bangert@gentoo.org> (28 Jun 2002)
-# psypete says these are not really broken - its just 
+# psypete says these are not really broken - its just
 # the v4l stuff that does not work
 #=media-video/mplayer-0.90_pre5
 #=media-video/mplayer-0.90_pre5-r1
@@ -39,10 +39,6 @@
 # new version, masked for testing.
 # supposedly fixes some ppc problems, ppc people, please test!
 =dev-lang/ocaml-3.05
-
-# <blizzy@gentoo.org> (07 Aug 2002)
-# new package, masked for testing
-net-misc/fmirror
 
 # Dan Armak <danarmak@gentoo.org> (06 aug 2002)
 # mask kvim (committing now); the ebuild is ok but conflicts with generic vim
@@ -187,8 +183,8 @@ x11-themes/gtk-xfce-engine
 
 # <george@gentoo.org> (03 Aug 2002)
 # masked for testing.
-# PLEASE DO NOT UNMASK ON SERVER! Insted please let me know if it tested Ok 
-# (with USE="-tcltk"). 
+# PLEASE DO NOT UNMASK ON SERVER! Insted please let me know if it tested Ok
+# (with USE="-tcltk").
 =dev-lang/ocaml-3.04-r2
 
 # <drobbins@gentoo.org> (03 Aug 2002)
@@ -217,7 +213,7 @@ x11-themes/gtk-xfce-engine
 # Seemant Kulleen <seemant@gentool.org> (01 Aug 2002)
 # the dependency is on an old, now removed version of PyQt
 dev-python/anygui
-	
+
 # Kevyn Shortell <trance@gentoo.org> (01 Aug 2002)
 # both .92 and 93 do not compile on x86 or ppc, masking.
 net-im/gnomemeeting
@@ -347,14 +343,14 @@ app-misc/ldapbrowser
 net-misc/fakeidentd
 
 # <spider@gentoo.org> (25 Jul 2002)
-#  Just a minor change, worth testing 
+#  Just a minor change, worth testing
 # as it uses less RAM during compile
 # but shouldn't be unmasked just for this
 # only changes the buildprocess
 =net-www/mozilla-1.0-r4
 
 # <g2boojum@gentoo.org> (24 Jul 2002)
-# waiting on copyright 
+# waiting on copyright
 net-misc/radvd
 
 # <aliz@gentoo.org> (24 Jul 2002)
@@ -639,7 +635,7 @@ dev-libs/libiconv
 <app-admin/sudo-1.6.6
 
 # Masked out the koffice pre ebuilds, since beta1 is out
-# <Verwilst, 26 April 2002> 
+# <Verwilst, 26 April 2002>
 =koffice-1.2_pre20020411
 =koffice-1.2_pre20020404
 
@@ -648,7 +644,7 @@ dev-libs/libiconv
 #repeat for newer rsync
 =net-misc/rsync-2.5.5-r1
 
-# Licq is b0rked beyond usability.. Not only the ebuild, but the protocol 
+# Licq is b0rked beyond usability.. Not only the ebuild, but the protocol
 #they use as well... Trust me, unmasking this has no use at all :o) <Verwilst, 17 April 2002>
 # adding gtk+licq just to make it complete;  26 Jun 2002; <spider@gentoo.org>
 <net-im/licq-1.1.0
@@ -673,7 +669,7 @@ dev-libs/libiconv
 =sys-libs/glibc-2.2.5-r3
 
 # 23 Mar, m0rpheus: bind 8 keeps having serious problems.
-<net-misc/bind-9.0.0 
+<net-misc/bind-9.0.0
 
 # bug #468
 net-www/zope
@@ -944,7 +940,7 @@ dev-lang/tcl-tk
 # Test ok, and is latest stable.  Azarah (08 Aug 2002)
 #>=sys-apps/shadow-4.0.3
 
-# spider@gentoo.org ; 21 May 2002; 
+# spider@gentoo.org ; 21 May 2002;
 # this is the gnome2 mask!
 # (gnome-2 that is ;)
 
@@ -974,8 +970,8 @@ media-libs/monkey-sound
 media-sound/rhythmbox
 
 
-# Gnome 2 users should not uncomment theese. broken and/or not-present. 
-# I repeat- NOT - 
+# Gnome 2 users should not uncomment theese. broken and/or not-present.
+# I repeat- NOT -
 #########
 
 # Not in portage. deprecated
@@ -1040,7 +1036,7 @@ app-cdr/cddump
 # This version breaks pretty-print (see bug #5560).
 app-editors/xemacs-packages-sumo-2002.07.20
 
-# mkennedy@gentoo.org 12 May 2002 
+# mkennedy@gentoo.org 12 May 2002
 # will be renames to app-editors/xemacs-gtk (so we'll have xemacs,
 # xemacs-gtk, xemacs-motif)
 app-editors/gtk-xemacs
@@ -1050,8 +1046,8 @@ app-editors/gtk-xemacs
 app-editors/xemacs-gamma
 
 # spider@gentoo.org 18 May 2002
-# Why did this get installed by profiles? its broken. 
-# should be updated to 4.2 
+# Why did this get installed by profiles? its broken.
+# should be updated to 4.2
 <sys-apps/texinfo-4.2
 
 # spider@gentoo.org 23 May 2002
