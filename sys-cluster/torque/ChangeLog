@@ -1,6 +1,18 @@
 # ChangeLog for sys-cluster/torque
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.8 2005/02/20 09:41:03 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/torque/ChangeLog,v 1.9 2005/03/15 21:59:03 seemant Exp $
+
+*torque-1.0.1_p6 (15 Mar 2005)
+
+  15 Mar 2005; Seemant Kulleen <seemant@gentoo.org> -torque-1.0.1-r6.ebuild,
+  +torque-1.0.1_p6.ebuild:
+  This update to _p6 from -r6 changes nothing functionally. Just a saner
+  nameing convention, and no clobbering the global context with the cat | sed
+  business, and also no overriding of and so on
+
+  15 Mar 2005; Seemant Kulleen <seemant@gentoo.org> torque-1.0.1-r6.ebuild:
+  fix the sed in global scope nonsense, though I do believe the package itself
+  should not depend on the revision number
 
   20 Feb 2005; Donnie Berkholz <spyderous@gentoo.org>; +metadata.xml:
   Add metadata -- owned by cluster herd.
