@@ -1,0 +1,9 @@
+# ChangeLog for sys-devel/autoconf-wrapper
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf-wrapper/ChangeLog,v 1.1 2004/10/21 01:06:11 vapier Exp $
+
+*autoconf-wrapper-1 (20 Oct 2004)
+
+  20 Oct 2004; Mike Frysinger <vapier@gentoo.org>:
+  Break the autoconf wrapper (ac-wrapper.pl) off into its own package.
+  This updated version resolves #56670 and #66478.
