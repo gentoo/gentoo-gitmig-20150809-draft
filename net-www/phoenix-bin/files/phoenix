@@ -3,6 +3,10 @@
 export MOZILLA_FIVE_HOME="/usr/lib/phoenix"
 PHOENIX_PATH="/usr/lib/phoenix"
 
+# Seems like pidof resides in /sbin on some boxes
+# Modifying the PATH to reflect that
+PATH="/sbin:${PATH}"
+
 if [ -z "`pidof phoenix-bin`" ]; then
 	# No phoenix running
 	${PHOENIX_PATH}/phoenix $@
