@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/rp-pppoe
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.41 2005/01/22 04:14:10 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/ChangeLog,v 1.42 2005/01/23 08:52:35 mrness Exp $
+
+*rp-pppoe-3.5-r6 (23 Jan 2005)
+
+  23 Jan 2005; Alin Nastac <mrness@gentoo.org> +rp-pppoe-3.5-r6.ebuild:
+  Add kernel support for PPPoE, thanks to Yuri Karaban <ykar@list.ru> (bug #74598).
 
   22 Jan 2005; Markus Nigbur <pyrania@gentoo.org> rp-pppoe-3.5-r5.ebuild:
   Fixed SRC_URI. Added tcltk to IUSE.
