@@ -1,6 +1,2 @@
-MD5 48c5f1a5b0f2b9e6399d01ace7228faa libxfce4util-4.2.0.ebuild 404
-MD5 78ec411ad9c5255b2b32d8acb68806fa libxfce4util-4.0.6.ebuild 732
-MD5 34d31416ab9b59c810c157bebab03ae0 ChangeLog 5660
-MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
-MD5 71f8db52c0e0da0e1ee4a70c35c0edd6 files/digest-libxfce4util-4.0.6 70
+MD5 23910cd552119b38dd1ce9c915e77834 libxfce4util-4.2.0.ebuild 403
 MD5 767623de028b6ecae2141c3c5d2478c0 files/digest-libxfce4util-4.2.0 71
