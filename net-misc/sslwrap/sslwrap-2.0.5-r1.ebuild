@@ -1,7 +1,7 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sslwrap/sslwrap-2.0.5-r1.ebuild,v 1.5 2000/11/02 08:31:53 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sslwrap/sslwrap-2.0.5-r1.ebuild,v 1.6 2002/03/27 11:50:25 seemant Exp $
 
 P=sslwrap-2.0.5
 A=sslwrap.tar.gz
@@ -23,8 +23,7 @@ src_unpack () {
 }
 
 src_compile() {                           
-  cd ${S}
-  try make
+  emake || die
 }
 
 src_install() {                               
@@ -32,9 +31,5 @@ src_install() {
   into /usr
   dosbin sslwrap
   dodoc README
-  docinto html
-  dodoc docs.html
+  dohtml -r ./
 }
-
-
-
