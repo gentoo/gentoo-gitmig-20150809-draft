@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/gdm-themes-2.0.ebuild,v 1.2 2004/10/16 12:10:30 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/gdm-themes-2.0.ebuild,v 1.3 2004/11/19 15:40:49 humpback Exp $
 
 RESTRIC="nomirror"
 DESCRIPTION="Some nice themes for the GDM Greeter"
@@ -99,7 +99,6 @@ SRC_URI="${THEME_URI}GDM-300-lantueno.tar.gz
 	${THEME_URI}GDM-Slacked.tar.gz
 	${THEME_URI}GDM-Slackgdm.tar.gz
 	${THEME_URI}GDM-Space.tar.gz
-	${THEME_URI}GDM-Spiderman.tar.gz
 	${THEME_URI}GDM-Splinter.tar.gz
 	${THEME_URI}GDM-Sunset.tar.gz
 	${THEME_URI}GDM-Synergy.tar.gz
