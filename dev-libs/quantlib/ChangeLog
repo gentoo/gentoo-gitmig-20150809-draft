@@ -1,10 +1,14 @@
 # ChangeLog for dev-libs/quantlib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/quantlib/ChangeLog,v 1.5 2003/02/12 06:09:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/quantlib/ChangeLog,v 1.6 2003/03/25 20:13:29 seemant Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *quantlib-0.3.0 (01 Nov 2002)
+
+  25 Mar 2003; Seemant Kulleen <seemant@gentoo.org> quantlib-0.3.0.ebuild:
+  removed useless and undocumented libtool USE flag, and homepage syntax fix
+  thanks to Frantz Dhin <tragedy_rm@hotmail.com> in bug #18145
 
   01 Nov 2002; George Shapovalov <george@gentoo.org> quantlib-0.3.0.ebuild : 
   
