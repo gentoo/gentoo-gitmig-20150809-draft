@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/pdnsd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.8 2003/02/12 07:55:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/ChangeLog,v 1.9 2003/02/27 09:58:06 aliz Exp $
+
+  27 Feb 2003; Daniel Ahlberg <aliz@gentoo.org> pdnsd-1.1.7a.ebuild files/pdnsd.rc6 :
+  Add --tcp to daemon startup, closes #15657. Small fixes in 1.1.7a ebuild.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.1.7a.ebuild,v 1.6 2003/02/13 13:58:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.1.7a.ebuild,v 1.7 2003/02/27 09:58:06 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Proxy DNS server with permanent caching"
@@ -14,7 +14,6 @@ LICENSE="BSD | GPL-2"
 KEYWORDS="x86 ppc sparc "
 
 src_compile() {
-
 	econf \
 		--sysconfdir=/etc/pdnsd \
 		--with-cachedir=/var/lib/pdnsd \
@@ -24,12 +23,11 @@ src_compile() {
 }
 
 src_install() {
-
 	make DESTDIR=${D} install || die
 
 	dodoc AUTHORS COPYING* ChangeLog* NEWS README THANKS TODO
 	docinto contrib ; dodoc contrib/{README,dhcp2pdnsd,pdnsd_dhcp.pl}
-	docinto html ; dodoc doc/html/*
+	docinto html ; dohtml doc/html/*
 	docinto txt ; dodoc doc/txt/*
 	newdoc doc/pdnsd.conf pdnsd.conf.sample
 
