@@ -1,8 +1,11 @@
 # ChangeLog for net-www/skipstone
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/skipstone/ChangeLog,v 1.10 2002/06/25 19:48:36 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/skipstone/ChangeLog,v 1.11 2002/07/14 20:25:23 aliz Exp $
 
 *skipstone-0.8.3 (25 Jun 2002)
+
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> skipstone-0.8.3.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
   
   25 Jun 2002; Seemant Kulleen <seemant@gentoo.org> skipstone-0.8.3.ebuild
   files/digest-skipstone-0.8.3 files/skipstone-gentoo.patch :

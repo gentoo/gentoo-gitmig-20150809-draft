@@ -1,12 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-navigator/netscape-navigator-4.08.ebuild,v 1.4 2002/04/26 06:17:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-navigator/netscape-navigator-4.08.ebuild,v 1.5 2002/07/14 20:25:23 aliz Exp $
 
 S=${WORKDIR}/navigator-v408.x86-unknown-linux2.0
 DESCRIPTION="Netscape Navigator 4.08"
 SRC_URI="ftp://ftp.netscape.com/pub/communicator/4.08/english/unix/unsupported/linux20_glibc2/navigator_standalone/navigator-v408-export.x86-unknown-linux2.0_glibc.tar.gz"
 HOMEPAGE="http://developer.netscape.com/support/index.html"
 RDEPEND=">=sys-libs/lib-compat-1.0"
+SLOT="0"
+KEYWORDS="x86"
 
 src_install() {								  
 	cd ${S}

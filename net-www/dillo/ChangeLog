@@ -1,8 +1,11 @@
 # ChangeLog for net-www/dillo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/ChangeLog,v 1.4 2002/05/31 01:20:49 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/ChangeLog,v 1.5 2002/07/14 20:25:23 aliz Exp $
 
 *dillo-0.6.6 (30 May 2002)
+
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> dillo-0.6.6.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
 
   30 May 2002; Seemant Kulleen <seemant@gentoo.org> dillo-0.6.6.ebuild
   files/digest-dillo-0.6.6 :
@@ -11,12 +14,18 @@
 
 *dillo-0.6.5 (26 Apr 2002)
 
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> dillo-0.6.5.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
   26 Apr 2002; Seemant Kulleen <seemant@gentoo.org> dillo-0.6.5.ebuild
   files/digest-dillo-0.6.5 :
 
   Version bump.
 
 *dillo-0.6.4-r1 (12 Apr 2002)
+
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> dillo-0.6.4-r1.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
 
   12 Apr 2002; Seemant Kulleen <seemant@gentoo.org> dillo-0.6.4-r1.ebuild :
 

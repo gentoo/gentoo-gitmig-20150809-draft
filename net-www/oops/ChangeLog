@@ -1,8 +1,11 @@
 # ChangeLog for net-www/oops
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/oops/ChangeLog,v 1.1 2002/02/01 21:53:36 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/oops/ChangeLog,v 1.2 2002/07/14 20:25:23 aliz Exp $
 
 *oops-1.5.6 (1 Feb 2002)
+
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> oops-1.5.6.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   

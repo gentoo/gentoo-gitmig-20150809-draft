@@ -1,14 +1,20 @@
 # ChangeLog for net-www/wwwoffle
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/ChangeLog,v 1.5 2002/06/02 21:40:57 wmertens Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/ChangeLog,v 1.6 2002/07/14 20:25:23 aliz Exp $
 
 *wwwoffle-2.7b (02 Jun 2002)
+
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> wwwoffle-2.7b.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
 
   02 Jun 2002; Wout Mertens <wmertens@gentoo.org>:
   New mainstream version. This one fixes the problem where it wouldn't pass
   on length information.
 
 *wwwoffle-2.7-r1 (16 Mar 2002)
+
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> wwwoffle-2.7-r1.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
 
   26 Mar 2002; Dan Armak <danarmak@gentoo.org>: general cleanup
   of the ebuild. Fix bug that made the default spooldir /var/tmp/portage/...

@@ -1,12 +1,14 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.0_beta2.ebuild,v 1.2 2002/07/11 06:30:49 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.0_beta2.ebuild,v 1.3 2002/07/14 20:25:23 aliz Exp $
 
 NV=6.0-20020412.2-shared-qt.i386
 S=${WORKDIR}/opera-${NV}
 DESCRIPTION="Opera webbrowser, version 6.0 Beta 2"
 SRC_URI="ftp://ftp.opera.com/pub/opera/linux/600/beta2/opera-${NV}.tar.bz2"
 HOMEPAGE="http://www.opera.com"
+SLOT="0"
+KEYWORDS="x86"
 
 DEPEND="=x11-libs/qt-2*"
 

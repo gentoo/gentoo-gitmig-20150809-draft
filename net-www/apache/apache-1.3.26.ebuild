@@ -8,6 +8,7 @@ HARD_SERVER_LIMIT=512
 S=${WORKDIR}/apache_${PV}
 DESCRIPTION="The Apache Web Server"
 HOMEPAGE="http://www.apache.org http://www.modssl.org"
+KEYWORDS="x86"
 SRC_URI="http://httpd.apache.org/dist/httpd/apache_${PV}.tar.gz
 	ftp://ftp.modssl.org/source/mod_ssl-${mod_ssl_ver}.tar.gz"
 # The mod_ssl archive is only for providing the EAPI patch in here.

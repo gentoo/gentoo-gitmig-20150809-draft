@@ -1,11 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.6.6.ebuild,v 1.2 2002/07/11 06:30:49 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.6.6.ebuild,v 1.3 2002/07/14 20:25:23 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Lean GTK+-based web browser"
 SRC_URI="http://dillo.cipsga.org.br/download/${P}.tar.gz"
 HOMEPAGE="http://dillo.cipsga.org.br"
+KEYWORDS="x86"
+SLOT="0"
+LICENSE="GPL-2"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	>=media-libs/jpeg-6b

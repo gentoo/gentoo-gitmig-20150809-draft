@@ -1,8 +1,11 @@
 # ChangeLog for net-www/htdig
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/htdig/ChangeLog,v 1.8 2002/05/28 04:57:17 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/htdig/ChangeLog,v 1.9 2002/07/14 20:25:23 aliz Exp $
 
 *htdig-3.1.6-r4 (27 May 2002)
+
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> htdig-3.1.6-r4.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
 
   27 May 2002; Matthew Kennedy <mkennedy@gentoo.org>
   htdig-3.1.6-r4.ebuild, files/digest-htdig-3.1.6-r4, ChangeLog :
@@ -13,6 +16,9 @@
 
 *htdig-3.1.6-r3 (22 May 2002)
 
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> htdig-3.1.6-r3.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
   22 May 2002; Seemant Kulleen <seemant@gentoo.org> htdig-3.1.6-r3.ebuild
   files/digest-htdig-3.1.6-r3 :
 
@@ -22,12 +28,18 @@
 
 *htdig-3.1.6-r2 (25 Apr 2002)
 
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> htdig-3.1.6-r2.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
   25 Apr 2002; Seemant Kulleen <seemant@gentoo.org> htdig-3.1.6-r2.ebuild
   files/digest-htdig-3.1.6-r2 :
 
   More fixes from StuBear to place things in correct locations.
 
 *htdig-3.1.6-r1 (22 Apr 2002)
+
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> htdig-3.1.6-r1.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
 
   22 Apr 2002; Seemant Kulleen <seemant@gentoo.org> htdig-3.1.6-r1.ebuild
   files/digest-htdig-3.1.6-r1:

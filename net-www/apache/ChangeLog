@@ -3,6 +3,12 @@
 
 *apache-1.3.26-r4 (3 Jul 2002)
 
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> apache-1.3.26.ebuild :
+  Added KEYWORDS.
+
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> apache-1.3.26-r4.ebuild :
+  Added KEYWORDS.
+
   3 Jul 2002; Brandon Low <lostlogic@gentoo.org> apache-1.3.26-r4.ebuild:
 
   Just .keep some directories we make so that they will be handled more 
@@ -10,10 +16,16 @@
 
 *apache-1.3.26-r3 (2 Jul 2002)
 
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> apache-1.3.26-r3.ebuild :
+  Added KEYWORDS.
+
   2 Jul 2002; Jon Nelson <jnelson@gentoo.org> apache-1.3.26-r3.ebuild:
   Basically, move stuff from pkg_setup() to postinst.
 
 *apache-1.3.26-r2 (22 Jun 2002)
+
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> apache-1.3.26-r2.ebuild :
+  Added KEYWORDS.
 
   22 Jun 2002; Nicholas Jones <carpaski@gentoo.org> :
 
@@ -21,6 +33,9 @@
     Moved sed on DATA_DIR after configs were coppied from ${FILESDIR} 
 
 *apache-1.3.26-r1 (20 Jun 2002)
+
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> apache-1.3.26-r1.ebuild :
+  Added KEYWORDS.
 
   20 Jun 2002; Nicholas Jones <carpaski@gentoo.org> :
 
@@ -37,6 +52,9 @@
 
 *apache-1.3.24-r6 (18 Jun 2002)
 
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> apache-1.3.24-r6.ebuild :
+  Added KEYWORDS.
+
   18 Jun 2002; Nicholas Jones <carpaski@gentoo.org> :
 
   o ADDED PATCH FOR PROXY-HTTP1.1-CHUNKS EXPLOIT
@@ -47,6 +65,9 @@
                        of the apache user will be the data directory
 
 *apache-1.3.24-r2 (4 May 2002)
+
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> apache-1.3.24-r2.ebuild :
+  Added KEYWORDS.
 
   4 May 2002; Donny Davies <woodchip@gentoo.org> :
 

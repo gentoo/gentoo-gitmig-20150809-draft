@@ -1,14 +1,20 @@
 # ChangeLog for net-www/amaya
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/ChangeLog,v 1.2 2002/06/02 13:04:47 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/ChangeLog,v 1.3 2002/07/14 20:25:22 aliz Exp $
 
 *amaya-6.1 (2 June 2002)
+
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> amaya-6.1.ebuild :
+  Added KEYWORDS.
   
   2 June 2002; Gabriele Giorgetti <stroke@gentoo.org> ChangeLog:
  
   New release.  
 
 *amaya-4.1-r1 (1 Feb 2002)
+
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> amaya-4.1-r1.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   

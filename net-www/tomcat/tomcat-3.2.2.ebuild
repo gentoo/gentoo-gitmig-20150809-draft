@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-3.2.2.ebuild,v 1.7 2002/07/11 06:30:49 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-3.2.2.ebuild,v 1.8 2002/07/14 20:25:23 aliz Exp $
 
 A="jakarta-tomcat-3.2.2-src.tar.gz jakarta-servletapi-3.2.2-src.tar.gz jakarta-ant-1.3-src.tar.gz"
 S=${WORKDIR}
@@ -9,6 +9,9 @@ SRC_URI="http://jakarta.apache.org/builds/jakarta-tomcat/release/v3.2.2/src/jaka
 	 http://jakarta.apache.org/builds/jakarta-tomcat/release/v3.2.2/src/jakarta-servletapi-3.2.2-src.tar.gz
 	 http://jakarta.apache.org/builds/jakarta-ant/release/v1.3/src/jakarta-ant-1.3-src.tar.gz"
 HOMEPAGE="http://jakarta.apache.org"
+KEYWORDS="x86"
+SLOT="0"
+LICENSE="Apache-1.1"
 
 DEPEND=">=sys-apps/bash-2.04
 	>=sys-libs/glibc-2.1.3

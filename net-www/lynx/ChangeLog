@@ -1,8 +1,11 @@
 # ChangeLog for net-www/lynx
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/ChangeLog,v 1.5 2002/06/02 21:11:17 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/ChangeLog,v 1.6 2002/07/14 20:25:23 aliz Exp $
 
 *lynx-2.8.4a-r4 (2 June 2002)
+
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> lynx-2.8.4a-r4.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
 
   2 June 2002; Matthew Kennedy <mkennedy@gentoo.org>
   lynx-2.8.4a-r4.ebuild, files/digest-lynx-2.8.4a-r4,
@@ -12,6 +15,9 @@
   don't.
 
 *lynx-2.8.4a-r3 (29 May 2002)
+
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> lynx-2.8.4a-r3.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
 
   29 May 2002; Preston A. Elder <prez@gentoo.org> lynx-2.8.4a-r3.ebuild :
 
@@ -33,6 +39,9 @@
   stefan@mdy.univie.ac.at
 
 *lynx-2.8.4a-r2 (1 Feb 2002)
+
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> lynx-2.8.4a-r2.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   

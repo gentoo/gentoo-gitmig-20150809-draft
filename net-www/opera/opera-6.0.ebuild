@@ -1,9 +1,11 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.0.ebuild,v 1.5 2002/07/11 06:30:49 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.0.ebuild,v 1.6 2002/07/14 20:25:23 aliz Exp $
 
 DESCRIPTION="Opera web browser, version 6.0 Final."
 HOMEPAGE="http://www.opera.com"
+SLOT="0"
+KEYWORDS="x86"
 
 NV=6.0-20020510.2-shared-qt.i386
 S=${WORKDIR}/opera-${NV}

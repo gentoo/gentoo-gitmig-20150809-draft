@@ -1,6 +1,6 @@
 # ChangeLog for net-www/gplflash
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gplflash/ChangeLog,v 1.2 2002/07/09 19:36:44 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gplflash/ChangeLog,v 1.3 2002/07/14 20:25:23 aliz Exp $
 
   09 Jul 2002; Martin Schlemmer <azarah@gentoo.org> gcc3-gentoo.diff :
 
@@ -8,6 +8,12 @@
   patch after commit, causing gplflash to still fail with gcc3.
 
 *gplflash-0.4.10-r1 (29 Jun 2002)
+
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> gplflash-0.4.10.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> gplflash-0.4.10-r1.ebuild :
+  Added KEYWORDS.
 
   29 Jun 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
   gplflash-0.4.10-r1.ebuild :

@@ -6,6 +6,8 @@ S=${WORKDIR}/plugger-4.0
 DESCRIPTION="Plugger 4.0 streaming media plugin"
 SRC_URI="http://fredrik.hubbe.net/plugger/"${A}
 HOMEPAGE="http://fredrik.hubbe.net/plugger.html"
+SLOT="0"
+KEYWORDS="x86"
 
 src_install() {                               
   cd ${S}

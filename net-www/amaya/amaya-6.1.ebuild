@@ -1,11 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/amaya-6.1.ebuild,v 1.2 2002/07/11 06:30:49 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/amaya-6.1.ebuild,v 1.3 2002/07/14 20:25:22 aliz Exp $
 
 S=${WORKDIR}/Amaya/LINUX-ELF
 DESCRIPTION="The W3C Web-Browser"
 SRC_URI="ftp://ftp.w3.org/pub/amaya/${PN}-src-${PV}.tgz"
 HOMEPAGE="http://www.w3.org/Amaya/"
+KEYWORDS="x86"
 LICENSE="GPL-2"
 SLOT="0"
 
