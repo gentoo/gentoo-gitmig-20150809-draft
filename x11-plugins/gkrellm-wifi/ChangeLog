@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/gkrellm-wifi
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-wifi/ChangeLog,v 1.6 2004/09/02 18:22:39 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-wifi/ChangeLog,v 1.7 2004/09/10 08:33:39 brix Exp $
+
+  10 Sep 2004; Henrik Brix Andersen <brix@gentoo.org>
+  gkrellm-wifi-0.9.12.ebuild:
+  Updated HOMEPAGE and SRC_URI
 
   02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   gkrellm-wifi-0.9.12.ebuild:
