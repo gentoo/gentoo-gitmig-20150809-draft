@@ -1,8 +1,13 @@
 # ChangeLog for net-misc/hylafax
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.17 2003/09/24 06:28:47 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.18 2003/10/04 03:19:56 nerdboy Exp $
 
-  23 Sep 2003; <sarnold@gentoo.org> hylafax-4.1.7.ebuild:
+*hylafax-4.1.7-r1 (03 Oct 2003)
+
+  03 Oct 2003; <nerdboy@gentoo.org> hylafax-4.1.7-r1.ebuild:
+  added autoreconf for new gcc 3.3.1 version output
+
+  23 Sep 2003; <nerdboy@gentoo.org> hylafax-4.1.7.ebuild:
   changed keywords to x86
 
   22 Sep 2003; <paul@gentoo.org> metadata.xml:
