@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mtxdrivers-pro
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers-pro/ChangeLog,v 1.8 2004/03/12 19:45:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mtxdrivers-pro/ChangeLog,v 1.9 2004/03/21 23:44:25 spyderous Exp $
+
+*mtxdrivers-pro-1.1.0_beta-r1 (21 Mar 2004)
+
+  21 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  mtxdrivers-pro-1.1.0_beta-r1.ebuild:
+  Changing absolute symlinks to relative to close #44969.
 
   12 Mar 2004; Seemant Kulleen <seemant@gentoo.org>
   mtxdrivers-pro-1.0_beta4.ebuild:
