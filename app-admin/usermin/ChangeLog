@@ -1,7 +1,13 @@
 # ChangeLog for app-admin/usermin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.5 2002/12/15 01:04:26 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.6 2002/12/16 09:18:16 seemant Exp $
 
+*usermin-0.980 (16 Dec 2002)
+
+  16 Dec 2002; Seemant Kulleen <Seemant@gentoo.org> usermin-0.980.ebuild
+  files/digest-usermin-0.980 :
+
+  Version bump.
 
 *usermin-0.970 (14 Dec 2002)
 
