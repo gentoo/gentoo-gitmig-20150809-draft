@@ -1,19 +1,29 @@
-MD5 2f041910dbe646752631160e687a3c29 arts-1.3.0.ebuild 2977
-MD5 7d6ae50bdf1adcd0bb79daccefa6ce94 arts-1.1.5.ebuild 2756
-MD5 c6809c77c1b1fbae91165c5072f72d7a arts-1.2.3.ebuild 2828
-MD5 60e7dd02191c75d55532d4dad3b4c0ab arts-1.3.1.ebuild 2984
-MD5 9c1e707e6fe4ef2698b71e3ca63b7fdc arts-1.2.0.ebuild 2577
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 25d309302e5a34558768627a9c305e77 ChangeLog 15727
-MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 6d8f52083c2f7e211ceff377e2d60432 arts-1.2.2.ebuild 2822
-MD5 9ffc978b18c6e1ad49a0c7eec49074f6 files/optional-deps.diff 3154
+MD5 7d6ae50bdf1adcd0bb79daccefa6ce94 arts-1.1.5.ebuild 2756
+MD5 9c1e707e6fe4ef2698b71e3ca63b7fdc arts-1.2.0.ebuild 2577
+MD5 259db09d0161fe9fe93458c43b750cfa arts-1.3.1.ebuild 2985
+MD5 bab807d1a8aaeb6738fafd25d14dd63e arts-1.2.3.ebuild 2827
+MD5 2397f14df73b06f4d1d899679481f3bc arts-1.3.0.ebuild 2977
+MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
+MD5 2d584d662a2b0b0e7a278bde6cd42e8f files/digest-arts-1.1.5 63
+MD5 1fc0f59ed1b61c1221f4156dac3569b7 files/digest-arts-1.2.2 63
+MD5 31e77598f97a91673f69ed4c44bd1f57 files/digest-arts-1.2.0 63
+MD5 258879d2a4fd175a96b7c80bb99a82cf files/digest-arts-1.3.1 63
 MD5 e78db892e7b447f86fab2ea9503a3a3d files/arts-1.2.2-buffer.patch 745
 MD5 185a4720c0e94a1546ee383016fc3e3c files/arts-vorbis-fix.dif 1136
-MD5 2d584d662a2b0b0e7a278bde6cd42e8f files/digest-arts-1.1.5 63
-MD5 31e77598f97a91673f69ed4c44bd1f57 files/digest-arts-1.2.0 63
-MD5 1fc0f59ed1b61c1221f4156dac3569b7 files/digest-arts-1.2.2 63
-MD5 ac0526184e3193af65a2a8aa7fd5feab files/digest-arts-1.2.3 63
-MD5 afbe195b431271c6ccfe51cc58aced5c files/digest-arts-1.3.0 63
-MD5 258879d2a4fd175a96b7c80bb99a82cf files/digest-arts-1.3.1 63
 MD5 e78db892e7b447f86fab2ea9503a3a3d files/arts-1.2.3-buffer.patch 745
+MD5 ac0526184e3193af65a2a8aa7fd5feab files/digest-arts-1.2.3 63
+MD5 9ffc978b18c6e1ad49a0c7eec49074f6 files/optional-deps.diff 3154
+MD5 afbe195b431271c6ccfe51cc58aced5c files/digest-arts-1.3.0 63
 MD5 68ec6c8e74dfea13c3bb54575b1c51d4 files/1.3.0-jack-configure.in.in.patch 694
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBdVJOHTu7gpaalycRAoHRAKDhE9tn35MgksSSKRi1bAtN0x4QYACdF8aF
+HgIxOYtwNCLm2/F9LuNOjBI=
+=BCSG
+-----END PGP SIGNATURE-----
