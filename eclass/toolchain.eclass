@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.65 2004/12/07 04:05:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.66 2004/12/07 04:07:42 vapier Exp $
 
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
@@ -234,6 +234,7 @@ get_gcc_src_uri() {
 		# we want all branch updates to be against the main release
 		if [ -n "${BRANCH_UPDATE}" ] ; then
 			GCC_SRC_URI="${GCC_SRC_URI}
+				mirror://gentoo/${PN}-${MAIN_BRANCH}-branch-update-${BRANCH_UPDATE}.patch.bz2
 				${GENTOO_TOOLCHAIN_BASE_URI}/${PN}-${MAIN_BRANCH}-branch-update-${BRANCH_UPDATE}.patch.bz2"
 		fi
 	fi
@@ -249,18 +250,21 @@ get_gcc_src_uri() {
 	# So... lets include some pre-generated ones, shall we?
 	if [ "${GCC_MANPAGE_VERSION}" != "none" ] ; then
 		GCC_SRC_URI="${GCC_SRC_URI}
+			mirror://gentoo/gcc-${GCC_MANPAGE_VERSION}-manpages.tar.bz2
 			${GENTOO_TOOLCHAIN_BASE_URI}/gcc-${GCC_MANPAGE_VERSION}-manpages.tar.bz2"
 	fi
 
 	# various gentoo patches
 	if [ -n "${PATCH_VER}" ] ; then
 		GCC_SRC_URI="${GCC_SRC_URI}
+			mirror://gentoo/${PN}-${PATCH_GCC_VER:=${PV}}-patches-${PATCH_VER}.tar.bz2
 			${GENTOO_TOOLCHAIN_BASE_URI}/${PN}-${PATCH_GCC_VER:=${PV}}-patches-${PATCH_VER}.tar.bz2"
 	fi
 
 	# strawberry pie, Cappuccino and a Gauloises
 	if [ -n "${PIE_CORE}" ] ; then
 		GCC_SRC_URI="${GCC_SRC_URI}
+			mirror://gentoo/${PIE_CORE}
 			${GENTOO_TOOLCHAIN_BASE_URI}${PIE_CORE}"
 	fi
 
