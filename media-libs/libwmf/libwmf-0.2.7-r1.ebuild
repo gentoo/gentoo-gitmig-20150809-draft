@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.7-r1.ebuild,v 1.1 2003/03/05 00:29:31 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.7-r1.ebuild,v 1.2 2003/03/05 01:04:24 liquidx Exp $
+
+inherit libtool
 
 IUSE="jpeg X"
 
@@ -29,7 +31,8 @@ DEPEND=">=app-text/ghostscript-6.50
 # plotutils are not really supported yet, so looks like that's it
 
 src_compile() {
-
+	elibtoolize
+	
 	use jpeg || myconf="${myconf} --with-jpeg=no"
 	use X || myconf="${myconf} --with-x=no"
 
