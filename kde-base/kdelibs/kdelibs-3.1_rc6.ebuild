@@ -1,11 +1,11 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1_rc6.ebuild,v 1.4 2003/01/08 21:45:57 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.1_rc6.ebuild,v 1.5 2003/01/08 22:44:29 gerk Exp $
 inherit kde kde.org flag-o-matic
 #don't inherit  kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
 
 DESCRIPTION="KDE libraries needed by all kde programs" 
-KEYWORDS="~x86 ~pp ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc"
 HOMEPAGE="http//www.kde.org/"
 SLOT="3.1"
 LICENSE="GPL-2 LGPL-2"
