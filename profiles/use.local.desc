@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.242 2004/02/12 13:08:49 tigger Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.243 2004/02/12 17:57:11 azarah Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -263,6 +263,7 @@ sys-devel/uclibc-buildroot:pie - adds support for Position Independent Executabl
 sys-devel/uclibc-buildroot:softfloat - software floating point calculations for FPU lacking processors
 sys-devel/uclibc-buildroot:savedconfig - Adds support to user defined configs
 sys-devel/gcc:multilib - On 64bit systems, if you want to be able to compile 32bit and 64bit binaries
+sys-devel/gcc:nogcj - Do not build gcj (java compiler included with gcc package)
 sys-devel/gdb:objc - If you want to be able to debug Objective C code.
 sys-devel/oskit:oskit-noassert - Disable assertions in debugging
 sys-devel/oskit:oskit-nobuild - Configure but don't build OSKit
