@@ -1,9 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2004.3/lib64/make.defaults,v 1.2 2004/09/09 07:07:25 lv Exp $
-#
-# System-wide defaults for the Portage system
-# See portage(5) manpage
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2004.3/lib64/make.defaults,v 1.3 2004/09/09 13:00:25 vapier Exp $
 
 ARCH="amd64"
 ACCEPT_KEYWORDS="${ARCH}"
@@ -15,12 +12,7 @@ GRP_STAGE23_USE="${ARCH} ipv6 pam tcpd readline nls ssl gpm perl python berkdb a
 # Sane, functional, almost-but-not-quite-minimal default for USE
 USE="${GRP_STAGE23_USE} oss alsa crypt jpeg nls userlocales opengl png xml2 acpi gif jp2 lzw lzw-tiff png tiff truetype usb xpm xprint xrandr xv"
 
-# unfortunately, gcc doesnt provide us with an -march=x86_64.
-CFLAGS="-O2 -pipe -march=k8"
-CXXFLAGS="${CFLAGS}"
-
 ARCH="amd64"
-CHOST="x86_64-pc-linux-gnu"
 
 # currently theoretical multilib stuff only available if using portage 2.0.51
 CHOST32="i686-pc-linux-gnu"
@@ -33,4 +25,3 @@ CPP32="g++32"
 
 # we can enable sandbox now that we use multilib by default
 FEATURES="sandbox"
-

@@ -1,14 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/ppc/make.defaults,v 1.6 2004/08/25 14:03:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/selinux/2004.1/ppc/make.defaults,v 1.7 2004/09/09 13:01:36 vapier Exp $
 
 ARCH="ppc"
-CHOST=powerpc-unknown-linux-gnu
-PLATFORM=$CHOST
-MAKEOPTS="-j2"
-
-CFLAGS="-O2 -pipe"
-CXXFLAGS=${CFLAGS}
 
 USE="ppc berkdb crypt ncurses pam python readline selinux ssl tcpd zlib"
 GRP_STAGE23_USE="ppc berkdb crypt ncurses pam python readline selinux ssl tcpd zlib"
