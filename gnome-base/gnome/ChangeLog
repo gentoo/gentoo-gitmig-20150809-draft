@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/gnome
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.90 2004/02/05 23:09:06 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/ChangeLog,v 1.91 2004/02/06 02:10:36 spider Exp $
+
+  06 Feb 2004; <spider@gentoo.org> gnome-2.4.2.ebuild:
+  move intltool, pkg-config, gtk-doc to DEPEND instead of RDEPEND. kills off the
+  last RDEPEND=intltool in my install
 
   06 Feb 2004; <spider@gentoo.org> gnome-2.4.2.ebuild:
   updated scrollkeeper to 0.3.14, intltool to 0.30

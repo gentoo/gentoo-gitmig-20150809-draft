@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.2.ebuild,v 1.2 2004/02/05 23:09:06 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.2.ebuild,v 1.3 2004/02/06 02:10:36 spider Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop."
@@ -24,6 +24,7 @@ KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64 ~ia64"
 #  of Gnome and should be provided with that, consider only 
 #  installing the parts needed for smaller installations.
 
+	
 RDEPEND="!gnome-base/gnome-core
 
 	>=dev-libs/glib-2.2.3
@@ -105,12 +106,9 @@ RDEPEND="!gnome-base/gnome-core
 	>=x11-libs/vte-0.11.10
 
 	>=app-text/scrollkeeper-0.3.14
-	>=dev-util/pkgconfig-0.15
-	>=dev-util/intltool-0.30
 
 	cdr? ( >=gnome-extra/nautilus-cd-burner-0.6.1 )
 	dvdr? ( >=gnome-extra/nautilus-cd-burner-0.6.1 )
-	doc? ( >=dev-util/gtk-doc-1.1 )
 
 	accessibility? ( >=gnome-extra/libgail-gnome-1.0.2
 		>=gnome-extra/at-spi-1.3.9
@@ -120,6 +118,13 @@ RDEPEND="!gnome-base/gnome-core
 		>=gnome-extra/gnopernicus-0.7.1 )
 
 	samba? ( >=gnome-extra/gnome-vfs-extras-0.99.11 )"
+
+# move theese to DEPEND and not RDEPEND, this cuts down on GRP sets. :)
+
+DEPEND="${RDEPEND}
+	>=dev-util/pkgconfig-0.15
+	>=dev-util/intltool-0.30
+	doc? ( >=dev-util/gtk-doc-1.1 )"
 
 pkg_postinst () {
 
