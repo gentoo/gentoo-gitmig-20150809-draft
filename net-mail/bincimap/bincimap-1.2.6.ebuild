@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/bincimap-1.2.6.ebuild,v 1.1 2004/02/15 09:51:58 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/bincimap-1.2.6.ebuild,v 1.2 2004/03/05 17:25:03 nakano Exp $
 
 DESCRIPTION="IMAP server for Maildir"
 SRC_URI="http://www.bincimap.org/dl/tarballs/1.2/${P}final.tar.bz2"
 HOMEPAGE="http://www.bincimap.org/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86 ~amd64"
 IUSE="ssl"
 
 DEPEND="virtual/glibc
