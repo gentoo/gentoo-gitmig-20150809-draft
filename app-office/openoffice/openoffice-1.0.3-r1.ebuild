@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.3-r1.ebuild,v 1.3 2003/08/07 11:44:54 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.3-r1.ebuild,v 1.4 2003/09/04 02:29:34 weeve Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -118,7 +118,7 @@ HOMEPAGE="http://www.openoffice.org/"
 
 LICENSE="LGPL-2 | SISSL-1.1"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~sparc"
 IUSE="gnome kde"
 
 RDEPEND=">=sys-libs/glibc-2.1
@@ -343,6 +343,14 @@ src_unpack() {
 
 	#This patches the stupid printer problem (to upgrade to 1.0.3.1)
 	epatch ${FILESDIR}/${PV}/vcl.printcxx.OOO_STABLE_1_PORTS.100102.patch
+
+	# Patches for sparc
+	if [ "${ARCH}" = "sparc" ]
+	then
+		epatch $FILESDIR/${PV}/openoffice-1.0.3-sparc-gentoo.patch
+		epatch $FILESDIR/${PV}/openoffice-1.0.1-sparc.patch.bz2
+	fi
+	
 }
 
 get_EnvSet() {
@@ -500,6 +508,18 @@ src_install() {
 	addpredict "/dev/dri"
 
 	get_EnvSet
+
+	# Added by Jason Wever <weeve@gentoo.org>
+	# For some weird reason, when you get done building
+	# the source on sparc, it doesn't have a readme file in place
+	# for the installation program (probably due to a non-supported
+	# arch/os combo.  This fixed that
+	if [ "${ARCH}" = "sparc" ]
+	then
+	cp ${S}/readlicense_oo/source/readme/unxlngi4/README \
+		${S}/instsetoo/unxlngs.pro/${LANGUAGE}/normal/README
+	fi
+
 	
 	# The install part should now be relatively OK compared to
 	# what it was.  Basically we use autoresponse files to install
