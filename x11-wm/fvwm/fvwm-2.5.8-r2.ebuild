@@ -1,12 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8-r2.ebuild,v 1.1 2003/11/27 16:28:17 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.8-r2.ebuild,v 1.2 2003/11/28 09:26:59 taviso Exp $
 
 inherit eutils flag-o-matic
 
 IUSE="readline truetype ncurses gtk stroke gnome rplay xinerama perl nls png bidi imlib tcltk debug gtk2"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="An extremely powerful ICCCM-compliant multiple virtual desktop window manager"
 SRC_URI="ftp://ftp.fvwm.org/pub/fvwm/version-2/${P}.tar.bz2
 		perl? ( mirror://gentoo/FvwmTabs-2.6.tar.gz )"
@@ -46,6 +45,8 @@ DEPEND="${RDEPEND}
 	sys-devel/automake
 	sys-devel/autoconf
 	dev-util/pkgconfig"
+
+S=${WORKDIR}/${P}
 
 src_unpack() {
 	unpack ${A}
@@ -174,6 +175,7 @@ src_compile() {
 	# more verbosity for module developers/hackers/etc.
 	if use debug; then
 		myconf="${myconf} --enable-debug-msgs --enable-command-log"
+		append-flags -DCR_DETECT_MOTION_METHOD_DEBUG
 	fi
 
 	# Xft Anti Aliased text support (yummy eye candy)
@@ -253,10 +255,8 @@ src_install() {
 		rm -rf ${D}/usr/bin/fvwm-perllib ${D}/usr/share/man/man1/fvwm-perllib.1
 	fi
 
-	# neat utility for testing fvwm behaviour on applications
-	# setting various hints, creates a simple black window with 
-	# configurable hints set. 
-	# maybe useful for developers...
+	# neat utility for testing fvwm behaviour on applications setting various 
+	# hints, creates a simple black window with configurable hints set. 
 	if use debug; then
 		dobin ${S}/tests/hints/hints_test
 		newdoc ${S}/tests/hints/README README.hints
