@@ -1,0 +1,42 @@
+Index: acinclude.m4
+===================================================================
+RCS file: /cvsroot/k3d/k3d/acinclude.m4,v
+retrieving revision 1.74.2.11
+diff -r1.74.2.11 acinclude.m4
+16a17,45
+> # K3D_CHECK_VARARGS - handles per-platform behavior for varargs macros
+> 
+> AC_DEFUN([K3D_CHECK_VARARGS], [
+> 	AC_MSG_CHECKING([for va_copy() or __va_copy])
+> 	
+> 	AC_LINK_IFELSE([#include <stdarg.h>
+> 		va_list ap1,ap2;
+> 		va_copy(ap1,ap2);],
+> 		[k3d_have_va_copy=yes], [k3d_have_va_copy=no])
+> 
+> 	AC_LINK_IFELSE([#include <stdarg.h>
+> 		va_list ap1,ap2;
+> 		__va_copy(ap1,ap2);],
+> 		[k3d_have___va_copy=yes], [k3d___have_va_copy=no])
+> 
+> 	if test x"$k3d_have_va_copy" = x"yes"; then
+> 		AC_DEFINE(HAVE_VA_COPY, 1, [Define to 1 if either va_copy or __va_copy is available])
+> 		AC_DEFINE(VA_COPY, va_copy, [Define to the specific version of va_copy or __va_copy that is available])
+> 		AC_MSG_RESULT([found va_copy])
+> 	elif test x"$k3d_have___va_copy" = x"yes"; then
+> 		AC_DEFINE(HAVE_VA_COPY, 1, [Define to 1 if either va_copy or __va_copy is available])
+> 		AC_DEFINE(VA_COPY, __va_copy, [Define to the specific version of va_copy or __va_copy that is available])
+> 		AC_MSG_RESULT([found __va_copy])
+> 	else
+> 		AC_MSG_RESULT([found neither])
+> 	fi
+> ])
+> 
+> ########################################################
+Index: configure.ac
+===================================================================
+RCS file: /cvsroot/k3d/k3d/configure.ac,v
+retrieving revision 1.219.2.14
+diff -r1.219.2.14 configure.ac
+19a20
+> K3D_CHECK_VARARGS

@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/k3d
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/ChangeLog,v 1.6 2004/06/24 22:44:11 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/ChangeLog,v 1.7 2005/01/13 07:53:37 lu_zero Exp $
+
+*k3d-0.4.4.0 (13 Jan 2005)
+
+  13 Jan 2005; Luca Barbato <lu_zero@gentoo.org> +files/va_copy.patch,
+  +k3d-0.4.4.0.ebuild:
+  New version, marked just ~x86 since has known issue at least on ppc.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> k3d-0.2.5.4.ebuild:
   Add inherit eutils
