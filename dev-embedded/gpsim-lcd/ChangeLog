@@ -1,6 +1,9 @@
 # ChangeLog for dev-embedded/gpsim-lcd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim-lcd/ChangeLog,v 1.9 2005/01/05 08:13:02 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim-lcd/ChangeLog,v 1.10 2005/03/25 20:48:00 blubb Exp $
+
+  25 Mar 2005; <blubb@gentoo.org> gpsim-lcd-0.2.1.ebuild:
+  added ~amd64
 
   05 Jan 2005; Daniel Black <dragonheart@gentoo.org> gpsim-lcd-0.2.1.ebuild:
   Replaced gnuconfig method with an autoconf to generate config.guess files that
