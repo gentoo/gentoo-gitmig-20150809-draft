@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.67 2004/04/16 01:00:48 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.68 2004/04/19 14:54:36 caleb Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -277,9 +277,9 @@ min-kde-ver() {
 
 	case $1 in
 		2*)			selected_version="2.2.2";;
-		3.0.*)			selected_version="3.0";;
-		3.1.*)			selected_version="3.1";;
-		3.2.*)			selected_version="3.2";;
+		3.0*)			selected_version="3.0";;
+		3.1*)			selected_version="3.1";;
+		3.2*)			selected_version="3.2";;
 		3*)			selected_version="3.0";;
 		5)			selected_version="5";;
 		*)			echo "!!! error: $FUNCNAME() called with invalid parameter: \"$1\", please report bug" && exit 1;;
