@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_rc4.ebuild,v 1.1 2003/02/16 14:22:34 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_rc4.ebuild,v 1.2 2003/03/06 21:58:36 azarah Exp $
 
 IUSE="dga oss jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts"
 
@@ -67,7 +67,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 
 src_unpack() {
@@ -150,6 +150,9 @@ src_compile() {
 	use fbcon \
 		|| myconf="${myconf} --disable-fbdev"
 
+	use esd \
+		|| myconf="${myconf} --disable-esd"
+		
 	use alsa \
 		|| myconf="${myconf} --disable-alsa"
 
@@ -229,12 +232,13 @@ src_compile() {
 		--disable-runtime-cpudetection \
 		--enable-largefiles \
 		--enable-menu \
-		--enable-shared-pp \
 		--enable-dynamic-plugins \
 		--enable-real \
 		--with-reallibdir=${REALLIBDIR} \
 		--with-x11incdir=/usr/X11R6/include \
 		${myconf} || die
+	# Breaks with gcc-2.95.3, bug #14479
+	# --enable-shared-pp \
 
 	# emake borks on fast boxes - Azarah (07 Aug 2002)
 	make all || die
@@ -260,8 +264,12 @@ src_install() {
 	if [ -f ${S}/postproc/libpostproc.a ]
 	then
 		dolib ${S}/postproc/libpostproc.a
-#		insinto /usr/include
-#		doins ${S}/postproc/postprocess.h
+		
+		if [ ! -f ${D}/usr/include/postproc/postprocess.h ]
+		then
+			insinto /usr/include/postproc
+			doins ${S}/postproc/postprocess.h
+		fi
 	fi
 
 	# Install the documentation
