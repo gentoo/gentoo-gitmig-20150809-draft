@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.6.ebuild,v 1.8 2004/10/23 15:33:57 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.7.ebuild,v 1.1 2004/10/23 15:33:57 griffon26 Exp $
 
 inherit eutils
 
@@ -12,13 +12,13 @@ SRC_URI="ftp://ftp.coda.cs.cmu.edu/pub/coda/src/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~x86 ~ppc"
 
 # partly based on the deps suggested by Mandrake's RPM, and/or on my current versions
 # Also, definely needs coda.h from linux-headers.
-DEPEND=">=sys-libs/lwp-1.11
-	>=net-libs/rpc2-1.22
-	>=sys-libs/rvm-1.9
+DEPEND=">=sys-libs/lwp-1.12
+	>=net-libs/rpc2-1.23
+	>=sys-libs/rvm-1.10
 	>=sys-libs/db-3
 	>=sys-libs/ncurses-4
 	>=sys-libs/readline-3
@@ -40,12 +40,6 @@ RDEPEND=">=sys-libs/lwp-1.11
 	>=sys-libs/ncurses-4
 	>=sys-libs/readline-3
 	kerberos? ( virtual/krb5 )"
-
-src_unpack() {
-	unpack ${A}
-	epatch ${FILESDIR}/coda-6.0.6-gcc3.4.patch
-}
-
 
 src_compile() {
 	local myflags=""
@@ -222,7 +216,7 @@ pkg_config () {
 	${CODA_ADMIN_NAME}
 	yes
 	${CODA_STORAGE_DIR}/${RVM_LOG_PARTITION}
-	2M
+	20M
 	${CODA_STORAGE_DIR}/${RVM_DATA_PARTITION}
 	315M
 	y
@@ -250,19 +244,6 @@ pkg_config () {
 	venus-setup ${FQDN} 20000 > /dev/null
 
 	/etc/init.d/venus start
-
-	einfo "Waiting for ${CODA_MOUNTPOINT} to be mounted... "
-	for count in 4 3 2 1 0; do
-		if [ ! -e ${CODA_MOUNTPOINT}/NOT_REALLY_CODA ]; then
-			break
-		fi
-		sleep 1
-	done
-
-	if [ ${count} = 0 ]; then
-		eerror "Mounting failed!"
-		exit 1
-	fi
 
 	einfo "Mounting coda volume at ${CODA_MOUNTPOINT}/${FQDN}/${CODA_TEST_VOLUME_MOUNTPOINT}"
 	clog ${CODA_ADMIN_NAME}@${FQDN} > /dev/null <<- EOF

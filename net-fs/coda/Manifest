@@ -3,8 +3,9 @@ Hash: SHA1
 
 MD5 f905a614fde3a85e0adefb203ece18fc metadata.xml 321
 MD5 14e8df1cfd403bd955f4de826e758920 coda-6.0.3.ebuild 2974
-MD5 92f63e6bcc1ec4e289b435f1863319ed coda-6.0.6.ebuild 7604
-MD5 16aa6f61858308da592649d2d378ca91 ChangeLog 2518
+MD5 bfd3abaab090ccc7e90b6b5aa4263a9d coda-6.0.6.ebuild 7603
+MD5 70839c250adba445286f8f7ff43c877c coda-6.0.7.ebuild 7289
+MD5 0d2f57c9f3616d1f8dd7c64b5f7ee46e ChangeLog 2715
 MD5 d21e4e5142a0266459b5ad8b39e3e707 files/coda-6.0.3-iowr.patch 607
 MD5 464a8cd91e3af12266c0570034388221 files/coda-6.0.6-gcc3.4.patch 1984
 MD5 d08316a08429d573d30dbc9924707206 files/digest-coda-6.0.3 63
@@ -13,10 +14,11 @@ MD5 78b3c40cf0a838d73ed8a67e9d153589 files/coda-update 1223
 MD5 f40f2b0227b97168e8dcd64c86f2e8cc files/codasrv 941
 MD5 1ea6425841d7fed645aad9d06d728ff7 files/auth2 1041
 MD5 494ef5b4a48b5a4aa77251d2b5942a91 files/venus 697
+MD5 0dd425125e2797d85724264c3255d77a files/digest-coda-6.0.7 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBYv1TMGnpIbeahxwRAtfMAKDBXANLgRfWTQyeGJClutmanfcaiACgoV4T
-2Gjs9w/bGTX52svJBqMrON4=
-=NMgM
+iD8DBQFBenntMGnpIbeahxwRAs6oAKCbSld/AkgKLvShe3TVlnZxZzHv0QCfZpZY
+uOOitKcFqrZZ/fcNFEoaVq0=
+=y9L6
 -----END PGP SIGNATURE-----
