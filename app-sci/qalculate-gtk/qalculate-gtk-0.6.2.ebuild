@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/qalculate-gtk/qalculate-gtk-0.6.2.ebuild,v 1.2 2004/07/22 13:28:05 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/qalculate-gtk/qalculate-gtk-0.6.2.ebuild,v 1.3 2004/07/23 19:12:37 mr_bones_ Exp $
 
 inherit gnome2 flag-o-matic
 
@@ -27,8 +27,6 @@ DEPEND="${RDEPEND}
 	app-text/scrollkeeper
 	nls? ( sys-devel/gettext )"
 
-DOCS="AUTHORS COPYING ChangeLog NEWS README INSTALL TODO"
+DOCS="AUTHORS ChangeLog NEWS README INSTALL TODO"
 
 replace-flags -Os -O2
-
-
