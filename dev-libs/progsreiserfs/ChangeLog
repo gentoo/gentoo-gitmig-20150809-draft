@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/progsreiserfs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/progsreiserfs/ChangeLog,v 1.9 2003/08/07 14:53:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/progsreiserfs/ChangeLog,v 1.10 2003/08/11 23:42:08 wwoods Exp $
+
+  11 Aug 2003; Will Woods <wwoods@gentoo.org> progsreiserfs-0.3.0.4.ebuild:
+  Marked stable for alpha
 
   07 Aug 2003; Aron Griffis <agriffis@gentoo.org>
   progsreiserfs-0.3.0.4.ebuild:
