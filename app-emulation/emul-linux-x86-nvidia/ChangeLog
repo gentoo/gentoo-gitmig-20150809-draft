@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/emul-linux-x86-nvidia
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-nvidia/ChangeLog,v 1.14 2005/01/26 18:43:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-nvidia/ChangeLog,v 1.15 2005/01/26 18:52:39 eradicator Exp $
+
+  26 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  emul-linux-x86-nvidia-1.0.6111-r1.ebuild,
+  emul-linux-x86-nvidia-1.0.6629.ebuild:
+  DEPEND -> RDEPEND.
 
   26 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
   emul-linux-x86-nvidia-1.0.6111-r1.ebuild,
