@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r1.ebuild,v 1.6 2000/10/29 20:37:00 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r1.ebuild,v 1.7 2000/11/01 04:44:20 achim Exp $
 
 P=qmail-1.03
 A="qmail-1.03.tar.gz checkpassword-0.81.tar.gz"
@@ -10,6 +10,9 @@ DESCRIPTION="qmail is a modern replacement for sendmail which uses Maildirs"
 SRC_URI="http://cr.yp.to/software/qmail-1.03.tar.gz
 	 http://cr.yp.to/software/checkpassword-0.81.tar.gz"
 HOMEPAGE="http://www.qmail.org"
+
+DEPEND=">=sys-apps/bash-2.04
+	>=sys-libs/glibc-2.1.3"
 
 src_compile() {
   cd ${S}
