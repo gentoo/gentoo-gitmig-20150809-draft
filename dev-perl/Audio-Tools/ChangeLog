@@ -1,10 +1,13 @@
 # ChangeLog for dev-perl/Audio-Tools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-Tools/ChangeLog,v 1.6 2003/04/08 04:51:31 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-Tools/ChangeLog,v 1.7 2003/07/11 19:57:53 gmsoft Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *Audio-Tools-0.01 (30 Oct 2002)
+
+  11 Jul 2003; Guy Martin <gmsoft@gentoo.org> Audio-Tools-0.01.ebuild :
+  Added hppa to KEYWORDS.
 
   07 Apr 2003; Zach Welch <zwelch@gentoo.org> Audio-Tools-0.01.ebuild:
   mark ppc stable

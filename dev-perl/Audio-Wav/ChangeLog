@@ -1,10 +1,13 @@
 # ChangeLog for dev-perl/Audio-Wav
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-Wav/ChangeLog,v 1.5 2003/04/08 04:52:53 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Audio-Wav/ChangeLog,v 1.6 2003/07/11 20:00:16 gmsoft Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *Audio-Wav-0.02 (30 Oct 2002)
+
+  11 Jul 2003; Guy Martin <gmsoft@gentoo.org> Audio-Wav-0.02.ebuild :
+  Added hppa to KEYWORDS.
 
   07 Apr 2003; Zach Welch <zwelch@gentoo.org> Audio-Wav-0.02.ebuild:
   mark ppc stable
