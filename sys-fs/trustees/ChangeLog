@@ -1,6 +1,6 @@
-# ChangeLog for sys-apps/trustees
+# ChangeLog for sys-fs/trustees
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/trustees/ChangeLog,v 1.1 2003/10/14 01:48:12 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/trustees/ChangeLog,v 1.2 2003/10/14 13:28:29 vapier Exp $
 
 *trustees-2.10 (13 Oct 2003)
 
