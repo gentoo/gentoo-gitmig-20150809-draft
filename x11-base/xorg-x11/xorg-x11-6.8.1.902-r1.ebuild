@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.902-r1.ebuild,v 1.5 2005/01/24 10:19:54 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.1.902-r1.ebuild,v 1.6 2005/01/24 10:28:06 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -22,6 +22,7 @@
 #			be one line of bash expansion like rm -f ${ROOT}/usr/$(get_libdir)/
 #			X11/locale/{ja*|ko*|zh*}/Compose
 #		Move /usr/X11R6/include to /usr/include/X11
+#			- find imake define for this
 #		Move /usr/X11R6/bin to /usr/bin
 #		Clean up migration function
 #			- generalize to take arguments like:
@@ -32,8 +33,9 @@
 #					- cpio dereferences symlinks, tar wastes time
 #		Fix direction of lib -> libdir symlink
 #		Functionalize ebuild more cleanly -- only call subfunctions in primary
-#			ebuild functions, no direct code
-
+#			ebuild functions, no direct code, no functions of more than 60 lines
+#		Generalize any functions that make sense to generalize (i.e., anything
+#			that might realistically see use elsewhere, or repetitively here)
 inherit eutils flag-o-matic toolchain-funcs x11 linux-info
 
 
