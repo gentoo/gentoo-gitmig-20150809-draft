@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-5.0.0_alpha2.ebuild,v 1.3 2004/06/24 22:38:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-5.0.0_beta1.ebuild,v 1.1 2004/07/05 12:20:07 lanius Exp $
 
 inherit flag-o-matic libtool
 
@@ -43,10 +43,6 @@ src_compile() {
 		&& myconf="${myconf} --enable-lexmarkutil" \
 		|| myconf="${myconf} --disable-lexmarkutil"
 
-	has_version =media-gfx/gimp-1.2* \
-		&& myconf="${myconf} --with-gimp" \
-		|| myconf="${myconf} --without-gimp"
-
 	if use cups; then
 		myconf="${myconf} --with-cups"
 	else
@@ -64,7 +60,7 @@ src_compile() {
 		|| myconf="${myconf} --without-foomatic"
 
 	# --without-translated-ppds enabled \
-	GIMPTOOL=/usr/bin/gimptool-1.2 econf \
+	econf \
 		--enable-test \
 		--with-ghostscript \
 		--with-user-guide \
