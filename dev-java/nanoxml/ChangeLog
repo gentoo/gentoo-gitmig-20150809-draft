@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/nanoxml
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/nanoxml/ChangeLog,v 1.1 2004/09/21 19:36:44 axxo Exp $
+
+*nanoxml-2.2.1 (21 Sep 2004)
+
+  21 Sep 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
+  +nanoxml-2.2.1.ebuild:
+  initial import, ebuild created by me, as a dep
+
