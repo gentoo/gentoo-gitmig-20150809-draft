@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.3.0_beta2.ebuild,v 1.1 2003/01/13 23:54:03 alron Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-plugins/nagios-plugins-1.3.0_beta2.ebuild,v 1.2 2003/01/15 20:01:19 alron Exp $
 DESCRIPTION="Nagios $PV plugins - Pack of plugins to make Nagios work properly"
 HOMEPAGE="http://www.nagios.org/"
 SRC_URI="mirror://sourceforge/nagiosplug/nagios-plugins-1.3.0-beta2.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86 ~sparc ~ppc"
 IUSE=""
 DEPEND=">=bind-tools-9.2.2_rc1
 		>=openssl-0.9.6g
