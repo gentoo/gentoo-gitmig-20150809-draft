@@ -2,8 +2,8 @@
 Hash: SHA1
 
 MD5 966a1b97060ac3708d22d088e3cf49d6 bash-completion-20041017-r3.ebuild 2621
-MD5 d40377e38750d274590de97e86b57783 bash-completion-20050121-r1.ebuild 2705
-MD5 06940f5e576bb697824702dc7f4e80cb ChangeLog 17223
+MD5 bf2724c11aaf37196eb4a948abb109e9 bash-completion-20050121-r1.ebuild 2704
+MD5 9d78698cbebad8f6c0b3140856845309 ChangeLog 17335
 MD5 00e8cae3d9ece63e4be61f4a2b3afd5e metadata.xml 930
 MD5 8f9c39e1a1f7ad657433883606d247df bash-completion-20050121-r2.ebuild 2720
 MD5 4406981db9a6c4f413d3f9f4b14eae91 files/gentoo-bashcomp-20050117-equery.diff 3329
@@ -17,7 +17,7 @@ MD5 61eddfb92948b070333a59498edf5266 files/20041017-gentoo.diff 2032
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCB4RZEZCkKN40op4RAh/uAKCv9WDjPbtNMJghK2nGZew3Ksc2nACfWVI/
-EHJ7VQljlvXjRtihsQ3hxGY=
-=ajUP
+iD8DBQFCHxK2EZCkKN40op4RAkooAKC+pL8kRvix2Z/xPWuz7y7UEznZywCgoWHh
+d4m5J0/vJhYbuwst0GbWd94=
+=2ids
 -----END PGP SIGNATURE-----
