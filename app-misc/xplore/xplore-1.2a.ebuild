@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xplore/xplore-1.1-r1.ebuild,v 1.9 2003/03/29 23:53:36 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xplore/xplore-1.2a.ebuild,v 1.1 2003/03/29 23:53:36 liquidx Exp $
 
 IUSE=""
 
@@ -15,7 +15,8 @@ KEYWORDS="x86"
 
 # its webpage states the lesstif does not fully work with xplore
 DEPEND="virtual/x11
-	>=x11-libs/openmotif-2.2"
+	virtual/motif"
+#	>=x11-libs/openmotif-2.2"
 
 src_compile() {
 	#Fix Xplore.tmpl so installation is to /usr instead of /usr/X11R6
@@ -27,7 +28,8 @@ src_compile() {
 		Xplore.tmpl.orig > Xplore.tmpl
 		
 	xmkmf -a || die "xmkmf Makefile creation failed"
-	make || die "Parallel make failed."
+    # parallel make fails
+	make || die "make failed"
 }
 
 src_install() {
