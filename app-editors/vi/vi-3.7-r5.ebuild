@@ -1,21 +1,21 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vi/vi-3.7-r3.ebuild,v 1.11 2003/09/05 23:05:05 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vi/vi-3.7-r5.ebuild,v 1.1 2004/01/04 17:13:09 seemant Exp $
 
 IUSE=""
 
-MY_P=ex-020403
+MY_P=ex-040103
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="The original VI package"
-SRC_URI="http://download.berlios.de/ex-vi/${MY_P}.tar.gz"
 HOMEPAGE="http://ex-vi.berlios.de/"
-LICENSE="Caldera"
+SRC_URI="http://ex-vi.berlios.de/archive/${MY_P}.tar.gz"
 SLOT="0"
-KEYWORDS="x86 ppc sparc arm mips alpha"
+LICENSE="Caldera"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~arm ~amd64 ~ia64 ~ppc64"
 
 # NOTE: vi needs /etc/termcap to function properly with TERM=linux.
 DEPEND="sys-libs/ncurses
-	sys-libs/libtermcap-compat"
+	>=sys-libs/libtermcap-compat-2.0.8"
 
 PROVIDE="virtual/editor"
 
@@ -38,6 +38,8 @@ src_compile() {
 }
 
 src_install() {
+	local l
+
 	dodir /usr/share/man
 	keepdir /var/lib/{exrecover,expreserve}
 	make INSTALL=/usr/bin/install \
@@ -50,5 +52,13 @@ src_install() {
 		install || die
 
 	dodoc Changes LICENSE README TODO
-}
 
+	# By default this installs as ex with symlinks pointing to ex.
+	# To reduce conflicts with other vi programs, change the master
+	# program to vi, then point the symlinks at it.
+	cd ${D}/usr/bin
+	rm vi
+	mv ex vi
+	for l in *; do [ -L $l ] && ln -sfn vi $l; done
+	ln -s vi ex
+}

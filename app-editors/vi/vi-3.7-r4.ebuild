@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vi/vi-3.7-r4.ebuild,v 1.3 2003/10/31 19:20:16 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vi/vi-3.7-r4.ebuild,v 1.4 2004/01/04 17:13:09 seemant Exp $
 
 IUSE=""
 
@@ -15,7 +15,7 @@ KEYWORDS="x86 ppc sparc arm mips alpha hppa"
 
 # NOTE: vi needs /etc/termcap to function properly with TERM=linux.
 DEPEND="sys-libs/ncurses
-	sys-libs/libtermcap-compat"
+	=sys-libs/libtermcap-compat-1.2.3*"
 
 PROVIDE="virtual/editor"
 
