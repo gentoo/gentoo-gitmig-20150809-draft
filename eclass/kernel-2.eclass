@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.50 2004/11/25 23:39:34 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.51 2004/11/26 01:47:42 johnm Exp $
 
 # kernel.eclass rewrite for a clean base regarding the 2.6 series of kernel
 # with back-compatibility for 2.4
@@ -63,7 +63,7 @@ SLOT="${KV}"
 # Grab kernel version from KV
 KV_MAJOR=$(echo ${KV} | cut -d. -f1)
 KV_MINOR=$(echo ${KV} | cut -d. -f2)
-KV_PATCH=$(echo ${KV} | cut -d. -f3)
+KV_PATCH=$(echo ${KV} | cut -d. -f3-)
 KV_PATCH=${KV_PATCH/[-_]*/}
 
 # set LINUX_HOSTCFLAGS if not already set
@@ -326,7 +326,8 @@ postinst_sources() {
 	fi
 
 	# Show policy version, if this kernel has SELinux...
-	local secfile="${ROOT}usr/src/linux-${KV_MAJOR}.${KV_MINOR}.${KV_PATCH}/security/selinux/include/security.h"
+	local secfile
+	secfile="${ROOT}usr/src/linux-${KV}/security/selinux/include/security.h"
 	if use selinux && [ -f "$secfile" ]
 	then
 		local polver=$(awk '/POLICYDB_VERSION /{print $3}' $secfile)
@@ -354,7 +355,7 @@ postinst_headers() {
 	einfo "you re-merge glibc as follows:"
 	einfo "# emerge glibc"
 	einfo "Failure to do so will cause glibc to not make use of newer"
-	einfo "features present in the updated kernelheaders."
+	einfo "features present in the updated kernel headers."
 	echo
 }
 
@@ -574,7 +575,9 @@ detect_version() {
 	# KV: Kernel Version (2.6.0-gentoo/2.6.0-test11-gentoo-r1)
 	# EXTRAVERSION: The additional version appended to OKV (-gentoo/-gentoo-r1)
 	
-	if [ -z "${OKV}" ]
+	[ -n "${DETECTED}" ] && return
+	
+	if [ -z "${OKV}" ];
 	then
 		OKV=${PV/_beta/-test}
 		OKV=${OKV/_rc/-rc}
@@ -584,7 +587,7 @@ detect_version() {
 	
 	KV_MAJOR=$(echo ${OKV} | cut -d. -f1)
 	KV_MINOR=$(echo ${OKV} | cut -d. -f2)
-	KV_PATCH=$(echo ${OKV} | cut -d. -f3)
+	KV_PATCH=$(echo ${OKV} | cut -d. -f3-)
 	KV_PATCH=${KV_PATCH/[-_]*/}
 	
 	KERNEL_URI="mirror://kernel/linux/kernel/v${KV_MAJOR}.${KV_MINOR}/linux-${OKV}.tar.bz2"
@@ -599,7 +602,6 @@ detect_version() {
 		RELEASE=${RELEASE/_pre/-bk}
 	fi
 	RELEASETYPE=${RELEASE//[0-9]/}
-	
 	EXTRAVERSION="${RELEASE}"
 
 	if [ -n "${K_PREPATCHED}" ]
@@ -610,8 +612,6 @@ detect_version() {
 		[ "${PN/-*/}" == "wolk" ] && EXTRAVERSION="-${PN/-*/}-${PV}"
 		[ "${PR}" != "r0" ] && EXTRAVERSION="${EXTRAVERSION}-${PR}"
 	fi
-
-	KV=${OKV}${EXTRAVERSION}
 
 	# -rcXX-bkXX pulls are *IMPOSSIBLE* to support within the 
 	# portage naming convention these cannot be supported, but the code here can
@@ -648,6 +648,7 @@ detect_version() {
 	fi
 
 	S=${WORKDIR}/linux-${KV}
+	DETECTED="yes"
 }
 
 detect_arch() {
