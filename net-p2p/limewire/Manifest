@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 ebf0c3570cbf88e31c6dc75ee3990302 limewire-4.1.4.ebuild 1315
-MD5 5dc5d942dabf62b527044119d5cb8a53 limewire-4.0.8.ebuild 1306
+MD5 9db9cfc9258ce4609b557ac85e20150b limewire-4.0.8.ebuild 1314
 MD5 cfbc35e7efaf662861e90209d21ad6d0 ChangeLog 951
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
 MD5 54690e8cf4fe2f9308c9d79afcd97e2e files/digest-limewire-4.0.8 69
@@ -10,7 +10,7 @@ MD5 aea545f7079f321b066bea364358391b files/digest-limewire-4.1.4 69
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBJNs6cAgAdbxYsnERAqlWAJoDvGI/Fhrff+yp3+U+6GkZ2vjNcACfTNcd
-0uNGPsBagGw41QiaT4rYo9Q=
-=Ef4j
+iD8DBQFBLmZAcAgAdbxYsnERAksbAJ4ifCRREt3gjlORs2iNCD+/sMxewQCcDG5v
+G1FPQHnotS3yL9rpEoCOU00=
+=Gdom
 -----END PGP SIGNATURE-----
