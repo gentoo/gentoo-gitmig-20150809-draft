@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/wwwoffle-2.6d.ebuild,v 1.2 2001/10/20 16:47:13 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/wwwoffle-2.6d-r6.ebuild,v 1.1 2001/10/20 16:47:13 danarmak Exp $
 
 S=${WORKDIR}/${P}
 
@@ -50,9 +50,10 @@ src_install () {
     make DESTDIR=${D} install || die
     
     # Install the wwwoffled init script
-    insinto /etc/rc.d/init.d
-    newins ${FILESDIR}/wwwoffled.rc5 wwwoffled
-    chmod a+x ${D}/etc/rc.d/init.d/wwwoffled
+    insinto /etc/init.d
+    doins ${FILESDIR}/wwwoffled-online
+    newins ${FILESDIR}/wwwoffled.rc6 wwwoffled
+    chmod a+x ${D}/etc/init.d/{wwwoffled,wwwoffled-online}
     
 }
 
@@ -71,10 +72,8 @@ pkg_postinst() {
     It's well commented and very powerful.
     
     To start using wwwoffle:
-    1. Run 'rc-update add wwwoffled <runlevels>'.
-    2. Run 'wwwoffle -online; wwwoffle -fetch' whenever you go online
-       (at boot if you're on a network) and 'wwwoffle -offline'
-       when you disconnect.
+    1. rc-update add wwwoffled to boot.
+    2. rc-update add wwwoffled-online to your 'online' runlevels.
     3. Configure any programs to use localhost:8080 as a proxy
        server for HTTP, HTTPS, FTP and finger.
     "

@@ -1,0 +1,18 @@
+#!/sbin/runscript
+
+depend() {
+    need wwwoffled net
+}
+
+start() {
+    ebegin "Starting wwwoffled-online"
+    wwwoffle -online
+    eend $? "Started wwwoffled-online." "Error starting wwwoffled-online."
+}
+
+stop() {
+    ebegin "Stopping wwwoffled-online"
+    wwwoffle -offline
+    eend $? "Stopped wwwoffled-online." "Error stopping wwwoffled-online."
+}
+

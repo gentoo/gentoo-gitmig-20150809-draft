@@ -1,0 +1,21 @@
+#!/sbin/runscript
+
+EXE=`which wwwoffled`
+SERVICE='wwwoffled'
+
+depend() {
+    need localmount
+}
+
+start() {
+    ebegin "Starting $SERVICE"
+    start-stop-daemon --start --quiet --exec $EXE -- -c /var/spool/wwwoffle/wwwoffle.conf
+    eend $? "Started $SERVICE." "Error starting $SERVICE."
+}
+
+stop() {
+    ebegin "Stopping $SERVICE"
+    start-stop-daemon --stop --quiet --exec $EXE
+    eend $? "Stopped $SERVICE." "Error stopping $SERVICE."
+}
+
