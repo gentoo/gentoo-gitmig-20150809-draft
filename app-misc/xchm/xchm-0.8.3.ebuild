@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/xchm/xchm-0.8.3.ebuild,v 1.1 2003/09/29 17:30:06 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/xchm/xchm-0.8.3.ebuild,v 1.2 2003/10/07 12:34:07 dholm Exp $
 
 DESCRIPTION="Utility for viewing Microsoft .chm files."
 HOMEPAGE="http://xchm.sf.net"
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/xchm/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 IUSE="doc"
 DEPEND=">=app-doc/chmlib-0.31
