@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/perltrash
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/perltrash/ChangeLog,v 1.7 2004/07/10 15:16:46 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/perltrash/ChangeLog,v 1.8 2004/10/21 14:37:54 ka0ttic Exp $
+
+  21 Oct 2004; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml:
+  Add metadata (shell-tools)
 
   10 Jul 2004; Tom Martin <slarti@gentoo.org> perltrash-0.3.ebuild:
   Marked ~amd64.

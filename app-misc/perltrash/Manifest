@@ -1,7 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 23cd5dbeb8fcd5f3d08e98945033b526 perltrash-0.1.ebuild 529
 MD5 df373e2b0f3e19fe81446a65742a46e3 perltrash-0.3.ebuild 536
 MD5 0ae9ba2d393dfd59fda79fd7402c6343 perltrash-0.2.ebuild 529
-MD5 237cd75b0ffe5db89256d9dd08c0734c ChangeLog 700
+MD5 401d5ad6db9e28ca2825dc317201b7bc ChangeLog 795
+MD5 0c131a7201c4670302767f93643876fa metadata.xml 165
 MD5 7e40787f01b135e60b19b6f24ff93966 files/digest-perltrash-0.1 64
 MD5 30af243192085040d38c4ac87540bab0 files/digest-perltrash-0.2 65
 MD5 ba2dfd33daa3095ecf415d98638e5e9d files/digest-perltrash-0.3 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBd8nLEZCkKN40op4RAoDeAJ9BbqwRWMI2IbvfFaVrGYsBT+THNgCglFhF
+zMKkFPTqHXXHwIbUS1FFiVE=
+=Fbjm
+-----END PGP SIGNATURE-----
