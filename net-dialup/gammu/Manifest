@@ -1,5 +1,5 @@
 MD5 95ad20a603a51fc351cba6209dce66e4 gammu-0.94.0.ebuild 1248
-MD5 ed72910f6ee419b1f5018aa051a87f62 ChangeLog 281
+MD5 b552781412cc7d2afd7a2e4cd143869f ChangeLog 308
 MD5 87844c6e9a700c2b04cceac0b33a1a79 metadata.xml 225
-MD5 a51e26cc2b8474ef250748df885cf5cb files/digest-gammu-0.94.0 64
 MD5 c76bf05f7542b93d1ffee8dbe6891432 files/gammu-0.94.0-LastCalendar.patch 576
+MD5 a51e26cc2b8474ef250748df885cf5cb files/digest-gammu-0.94.0 64
