@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ibm-jdk-1.3.1-r1.ebuild,v 1.1 2002/05/12 17:49:25 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ibm-jdk-1.3.1-r1.ebuild,v 1.2 2002/05/14 00:01:03 karltk Exp $
 
 At=IBMJava2-SDK-131.tgz
 S=${WORKDIR}/IBMJava2-131
@@ -32,7 +32,7 @@ src_install () {
 		cp -dpR $i ${D}/opt/${P}/
 	done
 
-	dodir /usr/${P}/share
+	dodir /opt/${P}/share
 	for i in demo src.jar ; do
 		cp -dpR $i ${D}/opt/${P}/share/
 	done
