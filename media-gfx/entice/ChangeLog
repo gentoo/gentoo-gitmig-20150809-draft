@@ -1,8 +1,12 @@
 # ChangeLog for media-gfx/entice
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/entice/ChangeLog,v 1.1 2003/02/20 12:39:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/entice/ChangeLog,v 1.2 2003/03/13 19:48:11 agriffis Exp $
 
 *entice-0.7.0.20030220 (20 Feb 2003)
+
+  13 Mar 2003; Aron Griffis <agriffis@gentoo.org>
+  entice-0.7.0.20030220.ebuild:
+  Add ~alpha to KEYWORDS
 
   20 Feb 2003; Mike Frysinger <vapier@gentoo.org> :
   Initial import.  Ebuild submitted by me.

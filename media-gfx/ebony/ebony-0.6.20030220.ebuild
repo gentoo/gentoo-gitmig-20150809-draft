@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ebony/ebony-0.6.20030220.ebuild,v 1.2 2003/03/03 14:57:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ebony/ebony-0.6.20030220.ebuild,v 1.3 2003/03/13 19:46:01 agriffis Exp $
 
 DESCRIPTION="tool that creates special bits called bg.db's"
 HOMEPAGE="http://www.enlightenment.org/pages/ebony.html"
@@ -9,7 +9,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~alpha"
 
 DEPEND="virtual/glibc
 	sys-devel/gcc
