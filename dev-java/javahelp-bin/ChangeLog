@@ -1,6 +1,9 @@
-# ChangeLog for dev-java/javahelp
+# ChangeLog for dev-java/javahelp-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javahelp-bin/ChangeLog,v 1.1 2004/07/30 20:28:57 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javahelp-bin/ChangeLog,v 1.2 2004/09/05 07:09:33 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
   30 Jul 2004; Thomas Matthijs <axxo@gentoo.org> :
   move dev-java/javahelp dev-java/javahelp-bin

@@ -1,6 +1,9 @@
-# ChangeLog for dev-java/scala
+# ChangeLog for dev-java/scala-bin
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed unde the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/scala-bin/ChangeLog,v 1.1 2004/08/02 13:12:26 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/scala-bin/ChangeLog,v 1.2 2004/09/05 07:18:13 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
 *scala-bin-1.2.0.1 (02 Aug 2004)
 

@@ -1,6 +1,9 @@
-# ChangeLog for dev-java/sun-jre
+# ChangeLog for dev-java/sun-jre-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.5 2004/08/06 14:13:57 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.6 2004/09/05 07:20:16 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
   06 Aug 2004; Thomas Matthijs <axxo@gentoo.org> -files/sun-jre-bin-1.4.2.04,
   -sun-jre-bin-1.4.2.04.ebuild:

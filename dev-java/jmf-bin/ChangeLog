@@ -1,6 +1,9 @@
-# ChangeLog for dev-java/jmf
+# ChangeLog for dev-java/jmf-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmf-bin/ChangeLog,v 1.1 2004/07/30 20:51:22 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmf-bin/ChangeLog,v 1.2 2004/09/05 07:11:33 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
 *jmf-bin-2.1.1e (30 Jul 2004)
 

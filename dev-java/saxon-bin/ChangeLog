@@ -1,6 +1,9 @@
-# ChangeLog for dev-java/saxon
+# ChangeLog for dev-java/saxon-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon-bin/ChangeLog,v 1.1 2004/07/30 21:46:14 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon-bin/ChangeLog,v 1.2 2004/09/05 07:17:28 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
 *saxon-bin-6.5.3 (30 Jul 2004)
 

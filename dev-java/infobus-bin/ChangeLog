@@ -1,6 +1,9 @@
-# ChangeLog for dev-java/infobus
+# ChangeLog for dev-java/infobus-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/infobus-bin/ChangeLog,v 1.1 2004/07/30 19:52:13 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/infobus-bin/ChangeLog,v 1.2 2004/09/05 07:06:54 swegener Exp $
+
+  05 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
 *infobus-bin-1.2 (30 Jul 2004)
 
