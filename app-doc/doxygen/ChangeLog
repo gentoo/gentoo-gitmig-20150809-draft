@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/doxygen
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.42 2004/06/24 21:39:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/ChangeLog,v 1.43 2004/07/23 16:06:37 tgall Exp $
+
+  23 Jul 2004; Tom Gall <tgall@gentoo.org> doxygen-1.3.7.ebuild:
+  stable on ppc64
 
   09 Jun 2004; Ferris McCormick <fmccor@gentoo.org> doxygen-1.3.6.ebuild:
   Marked stable on sparc.

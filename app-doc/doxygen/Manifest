@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 349482f46d1e11cb9a27a4dfde9d6d15 ChangeLog 7705
-MD5 47bc3717c27b02b0ac371e390cfcb0e6 doxygen-1.3.7.ebuild 2842
+MD5 b21859c4110f83bdc1ef8360eb46082f ChangeLog 7786
 MD5 a50cf5cce5de0592963796884063725d doxygen-1.3.5-r1.ebuild 2840
 MD5 a1736e2bd5f886049e4055896e25d05b doxygen-1.3.5.ebuild 2517
 MD5 41714edfd55071a4abdec7f99942e253 doxygen-1.3.6.ebuild 2836
+MD5 4786d3c3d30701dfee1ea945bc3b3706 doxygen-1.3.7.ebuild 2847
 MD5 b0a0946d26e4c157e66cb81d8557b2f7 metadata.xml 375
-MD5 df3a9ba1fcea84b8601e1175a21de969 files/digest-doxygen-1.3.7 70
+MD5 6fbdec5b9c246aad6da7d0e897fc88c0 files/digest-doxygen-1.3.5 70
 MD5 6fbdec5b9c246aad6da7d0e897fc88c0 files/digest-doxygen-1.3.5-r1 70
 MD5 ad1b465c01ce64583c79c9ff8704a1db files/digest-doxygen-1.3.6 70
-MD5 6fbdec5b9c246aad6da7d0e897fc88c0 files/digest-doxygen-1.3.5 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4IByHTu7gpaalycRAkztAJ41C6TFEI8r6wttfSs9CNJ24VsoiQCgmFli
-HYixVuBtom7uikbkmC82mac=
-=9q4S
------END PGP SIGNATURE-----
+MD5 df3a9ba1fcea84b8601e1175a21de969 files/digest-doxygen-1.3.7 70
