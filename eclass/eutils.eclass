@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.108 2004/10/01 19:23:58 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.109 2004/10/02 01:42:32 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -114,10 +114,11 @@ get_libdir_override() {
 # <azarah@gentoo.org> (26 Oct 2002)
 #
 gen_usr_ldscript() {
+	local libdir="$(get_libdir)"
 	# Just make sure it exists
-	dodir /usr/$(get_libdir)
+	dodir /usr/${libdir}
 
-	cat > "${D}/usr/$(get_libdir)/$1" << END_LDSCRIPT
+	cat > "${D}/usr/${libdir}/${1}" << END_LDSCRIPT
 /* GNU ld script
    Because Gentoo have critical dynamic libraries
    in /lib, and the static versions in /usr/lib, we
@@ -125,8 +126,9 @@ gen_usr_ldscript() {
    otherwise we run into linking problems.
    See bug #4411 on http://bugs.gentoo.org/ for
    more info.  */
-GROUP ( /$(get_libdir)/$1 )
+GROUP ( /${libdir}/${1} )
 END_LDSCRIPT
+	fperms a+x "/usr/${libdir}/${1}"
 }
 
 # Simple function to draw a line consisting of '=' the same length as $*
