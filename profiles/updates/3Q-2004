@@ -103,3 +103,4 @@ move net-www/curator www-apps/curator
 move net-www/diaria www-apps/diaria
 move app-misc/gallery www-apps/gallery
 move net-www/horde www-apps/horde
+move net-www/horde-accounts www-apps/horde-accounts
