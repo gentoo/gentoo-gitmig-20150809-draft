@@ -1,6 +1,16 @@
-MD5 442a08832235a7920feeb32bb3b24da8 ChangeLog 1132
-MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 9e26c86d875605b5fbad2ce1478134bb rdoc-0.9.0.ebuild 839
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b612692498ccbe4aadb61804c4fc5f63 rdoc-0_beta2.ebuild 848
-MD5 ea0f4da90c71c45f582c15aa0b73b1bb files/digest-rdoc-0.9.0 119
+MD5 9e26c86d875605b5fbad2ce1478134bb rdoc-0.9.0.ebuild 839
+MD5 0200f1196f2ded6a2557e0de1dac016a ChangeLog 1203
+MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
+MD5 632583917f0a3a213a891112f570ff6b files/digest-rdoc-0.9.0 59
 MD5 155232a3a4e7509b4a882d516c03ad1a files/digest-rdoc-0_beta2 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBon2uI1lqEGTUzyQRAtNWAJ9Ju5+PY5fHjlwY0+9dC88/AGilvQCgyF68
+t4UkYZZEYxKyiFAmcShKUWY=
+=xBKx
+-----END PGP SIGNATURE-----

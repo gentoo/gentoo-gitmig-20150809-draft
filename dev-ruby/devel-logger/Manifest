@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 ac1160369938b6e884ba2840d7a8b0d0 devel-logger-1.0.1-r1.ebuild 746
 MD5 3741ef531a34ba478c90680306b5de80 devel-logger-1.0.1.ebuild 682
-MD5 5d364a44625a8ccf5099d7bb157fd479 ChangeLog 787
+MD5 1cdd7d748fffa1b841e350e759ce5580 ChangeLog 856
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 MD5 5d54e90cd47bb9648a56b56c3052ce92 files/digest-devel-logger-1.0.1-r1 68
-MD5 a2db6e34624815cc914bd03e5ae6fafe files/digest-devel-logger-1.0.1 136
+MD5 5d54e90cd47bb9648a56b56c3052ce92 files/digest-devel-logger-1.0.1 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBon3jI1lqEGTUzyQRAoKRAKDZ+WPAqp3dz8WuVMG6hdrlawGlpgCdHeR3
+tYIWTlrqzSLaU2wT4/pqs0Q=
+=aFmU
+-----END PGP SIGNATURE-----
