@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.25 2003/10/07 20:30:55 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.26 2003/10/22 11:58:52 darkspecter Exp $
+
+  22 Oct 2003; Bartosch Pixa <darkspecter@gentoo.org> pygtk-2.0.0.ebuild:
+  set ppc in keywords
 
   07 Oct 2003; Alastair Tse <liquidx@gentoo.org> pygtk-2.0.0.ebuild:
   remove inherit debug
