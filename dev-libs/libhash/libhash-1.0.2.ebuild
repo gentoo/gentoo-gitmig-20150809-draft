@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhash/libhash-1.0.2.ebuild,v 1.1 2004/07/14 01:59:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhash/libhash-1.0.2.ebuild,v 1.2 2004/07/17 09:35:17 dholm Exp $
 
 inherit gcc
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.ugh.net.au/pub/unix/libhash/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE="doc"
 
 DEPEND="virtual/libc"
