@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/prism54/prism54-20040208.ebuild,v 1.1 2004/02/08 17:45:07 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/prism54/prism54-20040208.ebuild,v 1.2 2004/02/08 19:29:45 latexer Exp $
 
 MY_P=${P/prism54-/prism54-cvs}
-DESCRIPTION="Driver for Intersil Prism DT / Prism Duette wireless chipsets"
+DESCRIPTION="Driver for Intersil Prism GT / Prism Duette wireless chipsets"
 HOMEPAGE="http://prism54.org/"
 
 # nomirror for firmware issues. Emails sent to inquire about this.
@@ -18,6 +18,7 @@ IUSE="pcmcia"
 
 DEPEND="virtual/kernel"
 RDEPEND=">=sys-apps/hotplug-20030805-r2
+		net-wireless/wireless-tools
 		pcmcia? ( sys-apps/pcmcia-cs )"
 
 S=${WORKDIR}/${MY_P}
@@ -29,6 +30,7 @@ src_unpack() {
 	einfo "2.6 users will need to disable sandbox for now to avoid"
 	einfo "sandbox issues. See bug #32737 for info on work being done to"
 	einfo "fix this."
+	einfo "Module versioning (CONFIG_MODVERSION) should be disabled."
 
 	unpack ${MY_P}.tar.bz2
 }

@@ -4,9 +4,9 @@ MD5 1b50a6c92eefec354e814d0c0b930dd8 linux-wlan-ng-0.2.1_pre11.ebuild 6519
 MD5 8bf74fc480cc45fe8c456dd0c54b73d0 linux-wlan-ng-0.2.1_pre17-r1.ebuild 4293
 MD5 3f657575611c9d4cf56f33f46be4a2b6 linux-wlan-ng-0.2.0-r1.ebuild 6237
 MD5 e7e41202c86b856c3791606b0cd09cee linux-wlan-ng-0.2.1_pre8.ebuild 6518
-MD5 7b9f97b0f4e1a8e964f75cdebe9aae52 linux-wlan-ng-0.2.0-r3.ebuild 4791
+MD5 a2d508b5b435b1d9ef70e666e1fd4ee6 linux-wlan-ng-0.2.0-r3.ebuild 4790
 MD5 105bb42e47bc7c1f2cbc62ca7a20c737 linux-wlan-ng-0.2.1_pre17.ebuild 6853
-MD5 2f1c5566e0c98c2ab5b0caa3f2de1ff7 ChangeLog 6693
+MD5 10bc1383766b8a3ddc9e1c6ebf3adae0 ChangeLog 6832
 MD5 32831d719499c83f7942f6432ef58278 metadata.xml 252
 MD5 4ba4f50725309cebf376a17edd220b89 files/digest-linux-wlan-ng-0.2.1_pre8 436
 MD5 8dab46b657f6e8498e9cb48cfa346b5c files/digest-linux-wlan-ng-0.2.1_pre11 437

@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/prism54
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/prism54/ChangeLog,v 1.1 2004/02/08 17:45:07 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/prism54/ChangeLog,v 1.2 2004/02/08 19:29:45 latexer Exp $
+
+  08 Feb 2004; Peter Johanson <latexer@gentoo.org> prism54-20040208.ebuild:
+  Added wireless-tools RDEPEND and info about module versioning.
 
 *prism54-20040208 (08 Feb 2004)
 
