@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/egenix-mx-base-2.0.5.ebuild,v 1.7 2004/02/27 07:49:03 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/egenix-mx-base-2.0.5.ebuild,v 1.8 2004/03/16 19:28:31 kloeri Exp $
 
 inherit distutils flag-o-matic
 
 IUSE=""
 DESCRIPTION="egenix utils for Python."
-SRC_URI="http://www.lemburg.com/files/python/${P}.tar.gz"
+SRC_URI="http://www.egenix.com/files/python/${P}.tar.gz"
 HOMEPAGE="http://www.egenix.com/"
 
 DEPEND="virtual/python"
