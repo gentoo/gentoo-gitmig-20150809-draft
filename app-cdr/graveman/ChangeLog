@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/graveman
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/ChangeLog,v 1.2 2005/01/08 08:30:48 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/graveman/ChangeLog,v 1.3 2005/01/25 00:45:36 pylon Exp $
+
+*graveman-0.3.2 (25 Jan 2005)
+
+  25 Jan 2005; Lars Weiler <pylon@gentoo.org> +graveman-0.3.2.ebuild:
+  Version bump.  Thanks to the contributors in bug #78852.
 
   08 Jan 2005; Lars Weiler <pylon@gentoo.org> graveman-0.2-r20041227.ebuild:
   According to dertobi123 it works on amd64.  Keyword added.
