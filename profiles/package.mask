@@ -241,17 +241,6 @@ net-misc/gift
 media-video/xine-d4d
 media-video/xine-d5d
 
-# New orinoco_cs 0.11a driver -- karltk (01/05/2002)
-#
-# Only tested with the SMC2632W card, should unmask
-# if it works nicely with the other PrismII cards.
-
-# Gerk - June 9 2002
-# also left masked to exclude pcmcia-cs-3.1.33-r5 for testing for
-# ppc fixes (orinoco drivers from r4 exist in r5 but are commented out)
-
->=sys-apps/pcmcia-cs-3.1.33-r4
-
 # Masing Azarah's new baselayout until several problems are confirmed fixed.
 # 4 Mar 2002, Daniel Robbins
 =sys-apps/baselayout-1.7.2
