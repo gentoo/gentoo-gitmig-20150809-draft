@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Parse-RecDescent
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-RecDescent/ChangeLog,v 1.14 2003/07/12 10:49:57 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-RecDescent/ChangeLog,v 1.15 2004/01/08 01:43:42 gustavoz Exp $
+
+  07 Jan 2004; <gustavoz@gentoo.org> Parse-RecDescent-1.94.ebuild:
+  marked stable on sparc
 
   24 Jun 2003; Aron Griffis <agriffis@gentoo.org>
   Parse-RecDescent-1.94.ebuild:
