@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.259 2005/01/05 03:10:24 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.260 2005/01/06 05:52:59 spyderous Exp $
+
+  05 Jan 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.0-r4.ebuild, xorg-x11-6.8.1.901.ebuild:
+  Strip -momit-leaf-frame-pointer on sparc, since -fomit-frame-pointer is also
+  stripped.
 
   04 Jan 2005; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r4.ebuild, xorg-x11-6.8.1.901.ebuild:

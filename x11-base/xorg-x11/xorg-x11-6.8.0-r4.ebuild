@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.39 2005/01/05 03:10:24 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.40 2005/01/06 05:52:59 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -493,7 +493,7 @@ cflag_setup() {
 		# -fomit-frame-pointer known to break things and is pointless
 		# according to ciaranm
 		# And hardened compiler must be softened. -- fmccor, 20.viii.04
-		sparc)	filter-flags "-fomit-frame-pointer"
+		sparc)	filter-flags "-fomit-frame-pointer" "-momit-leaf-frame-pointer"
 			if use hardened && ! use dlloader; then
 				einfo "Softening gcc for sparc"
 				ALLOWED_FLAGS="${ALLOWED_FLAGS} -fno-pie -fno-PIE"
