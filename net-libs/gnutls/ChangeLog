@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.35 2004/08/14 23:15:55 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.36 2004/08/15 01:15:27 hardave Exp $
+
+  14 Aug 2004; Hardave Riar <hardave@gentoo.org> gnutls-1.0.17.ebuild:
+  Added gnuconfig_update for mips64 support
 
   14 Aug 2004; Hardave Riar <hardave@gentoo.org> gnutls-1.0.17.ebuild:
   Stable on mips, bug 59231.

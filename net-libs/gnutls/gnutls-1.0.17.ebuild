@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.0.17.ebuild,v 1.10 2004/08/14 23:15:55 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-1.0.17.ebuild,v 1.11 2004/08/15 01:15:27 hardave Exp $
 
-inherit eutils
+inherit eutils gnuconfig
 
 DESCRIPTION="A TLS 1.0 and SSL 3.0 implementation for the GNU project"
 HOMEPAGE="http://www.gnutls.org/"
@@ -41,6 +41,9 @@ src_unpack() {
 }
 
 src_compile() {
+	# Needed for mips and probablly others
+	gnuconfig_update
+
 	#   I think this vvv gets ignored if not present
 	local myconf="--without-included-libtasn1 --without-included-opencdk"
 
