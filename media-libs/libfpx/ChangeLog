@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libfpx
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libfpx/ChangeLog,v 1.4 2004/10/22 01:21:00 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libfpx/ChangeLog,v 1.5 2004/10/30 16:14:13 geoman Exp $
+
+  30 Oct 2004; Stephen P. Becker <geoman@gentoo.org> libfpx-1.2.0.9.ebuild:
+  Added ~mips keyword.
 
   21 Oct 2004; Jason Wever <weeve@gentoo.org> libfpx-1.2.0.9.ebuild:
   Added ~sparc keyword wrt bug #68145.
