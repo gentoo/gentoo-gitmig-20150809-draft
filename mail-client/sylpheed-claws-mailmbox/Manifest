@@ -1,4 +1,14 @@
-MD5 492590133a3c322a16f54087737d0ea4 ChangeLog 716
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5d0a878a0318c6d261424c0f55af1345 metadata.xml 392
-MD5 2d616c829e9788de6e1264b5bd329ebf sylpheed-claws-mailmbox-0.9.ebuild 751
+MD5 d47dc52082984190a724378ba4c8bfd8 sylpheed-claws-mailmbox-0.9.ebuild 756
+MD5 dba5a4d7a24fa7e3721ae3058d4d5f3c ChangeLog 834
 MD5 72109419685fb54ad908a857ff95a3f0 files/digest-sylpheed-claws-mailmbox-0.9 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBdXFpugEuf3OQ0akRAouMAJ9e005GHfnz8Mnz9r9HxDoOHE5P1ACfYqn/
+TWsPVlkWtau1NZSfpY5T420=
+=v7SI
+-----END PGP SIGNATURE-----
