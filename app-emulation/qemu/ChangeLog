@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/qemu
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.23 2004/11/26 20:44:27 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/ChangeLog,v 1.24 2004/11/28 01:23:22 lu_zero Exp $
+
+*qemu-0.6.1-r1 (28 Nov 2004)
+
+  28 Nov 2004; Luca Barbato <lu_zero@gentoo.org>
+  +files/qemu-0.6.1-20041126.patch, +qemu-0.6.1-r1.ebuild:
+  updated qemu to the 20041126 cvs snapshot, this should fix bug #72561
 
   26 Nov 2004; Luca Barbato <lu_zero@gentoo.org>
   -files/qemu-0.5.4-jocelyn-mayer-ppc.patch, -qemu-0.5.1.ebuild,
