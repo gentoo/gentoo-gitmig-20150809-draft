@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.1.0.ebuild,v 1.10 2003/01/28 06:48:04 nall Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.1.0.ebuild,v 1.11 2003/01/30 19:40:19 danarmak Exp $
 inherit kde-base flag-o-matic
 
 # this is the arts 1.1 from kde 3.1, as opposed to arts 1.1.0 from kde 3.1 beta2 and friends
@@ -28,7 +28,7 @@ PATCHES="${FILESDIR}/tmp-mcop-user-fix.patch"
 
 src_unpack() {
 
-    base_src_unpack
+    kde_src_unpack
     
     kde_sandbox_patch ${S}/soundserver
 

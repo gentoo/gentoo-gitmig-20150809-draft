@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.4.ebuild,v 1.6 2002/11/30 01:53:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.4.ebuild,v 1.7 2003/01/30 19:40:19 danarmak Exp $
 inherit kde-dist
 
 IUSE="ldap pam motif encode oggvorbis cups ssl opengl samba qt31patch"
@@ -37,7 +37,7 @@ use pam		&& myconf="$myconf --with-pam=yes"	|| myconf="$myconf --with-pam=no --w
 
 src_unpack() {
     
-    base_src_unpack
+    kde_src_unpack
 
     # Enable this local USE flag to allow nspluginviewer to compile with qt 3.1.x.
     # It will patch nsplugins/viewer dir to cvs HEAD status.

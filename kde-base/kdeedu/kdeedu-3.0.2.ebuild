@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/kdeedu-3.0.2.ebuild,v 1.8 2002/12/09 04:25:04 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/kdeedu-3.0.2.ebuild,v 1.9 2003/01/30 19:40:19 danarmak Exp $
 inherit kde-dist
 
 DESCRIPTION="KDE $PV - educational apps"
@@ -9,7 +9,7 @@ KEYWORDS="x86 ppc sparc "
 
 src_unpack() {
 
-    base_src_unpack
+    kde_src_unpack
     
     kde_sandbox_patch ${S}/klettres/klettres
 

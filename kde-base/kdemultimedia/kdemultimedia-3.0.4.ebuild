@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.0.4.ebuild,v 1.5 2002/11/21 17:51:54 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.0.4.ebuild,v 1.6 2003/01/30 19:40:19 danarmak Exp $
 inherit kde-dist flag-o-matic
 
 DESCRIPTION="KDE $PV - multimedia apps"
@@ -46,7 +46,7 @@ myconf="$myconf $myaudio $myinterface"
 
 src_unpack() {
     
-    base_src_unpack
+    kde_src_unpack
     cd ${S}
     patch -p0 < ${FILESDIR}/${P}-gentoo-timidity.diff || die
 #    use alsa && patch -p0 < ${FILESDIR}/${P}-gentoo-alsa.diff

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.2-r4.ebuild,v 1.18 2003/01/06 08:39:07 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.2-r4.ebuild,v 1.19 2003/01/30 19:40:19 danarmak Exp $
 
 IUSE="ssl cups ipv6 alsa"
 inherit kde kde.org
@@ -48,7 +48,7 @@ set-kdedir $PV
 
 src_unpack() {
     
-	base_src_unpack
+	kde_src_unpack
 	
 	kde_sandbox_patch ${S}/{arts/soundserver,kio/kpac}
 	

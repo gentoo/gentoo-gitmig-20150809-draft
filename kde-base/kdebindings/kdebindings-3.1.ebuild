@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.1.ebuild,v 1.6 2003/01/21 21:08:42 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.1.ebuild,v 1.7 2003/01/30 19:40:19 danarmak Exp $
 # TODO: add gnustep, objc bindings
 inherit kde-dist 
 
@@ -30,7 +30,7 @@ export LIBPYTHON="`python-config`"
 
 src_unpack()
 {
-    base_src_unpack
+    kde_src_unpack
     
     if [ -z "`use mozilla`" ]; then
 	# disable mozilla bindings/xpart, because configure doesn't seem to do so

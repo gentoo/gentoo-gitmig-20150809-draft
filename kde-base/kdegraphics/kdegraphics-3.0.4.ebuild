@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.0.4.ebuild,v 1.8 2002/11/26 05:24:46 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/kdegraphics-3.0.4.ebuild,v 1.9 2003/01/30 19:40:19 danarmak Exp $
 inherit kde-dist
 
 DESCRIPTION="KDE $PV - graphics-related apps"
@@ -30,7 +30,7 @@ need-autoconf 2.1
 
 src_unpack() {
 
-    base_src_unpack
+    kde_src_unpack
     
     if [ -z "`use scanner`" ]; then
 	cd $S

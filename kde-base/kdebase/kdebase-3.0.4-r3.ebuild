@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.4-r3.ebuild,v 1.4 2002/12/01 20:26:11 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.4-r3.ebuild,v 1.5 2003/01/30 19:40:19 danarmak Exp $
 inherit kde-dist
 
 IUSE="ldap pam motif encode oggvorbis cups ssl opengl samba"
@@ -52,7 +52,7 @@ pkg_setup() {
 
 src_unpack() {
     
-	base_src_unpack
+	kde_src_unpack
 
         # It will patch nsplugins/viewer dir to cvs HEAD status.
 	# THIS MAY BE UNSTABLE

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.0.2.ebuild,v 1.11 2002/12/09 04:25:04 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaddons/kdeaddons-3.0.2.ebuild,v 1.12 2003/01/30 19:40:19 danarmak Exp $
 
 IUSE="sdl svga"
 inherit kde-dist
@@ -20,7 +20,7 @@ use sdl && myconf="$myconf --with-sdl --with-sdl-prefix=/usr" || myconf="$myconf
 # with 3.0.1, don't know if it's still necessary.
 #src_unpack() {
 #
-#    base_src_unpack
+#    kde_src_unpack
 #    
 #    cd ${S}/noatun-plugins
 #    for x in `find -iname Makefile.am` `find -iname Makefile.in`; do

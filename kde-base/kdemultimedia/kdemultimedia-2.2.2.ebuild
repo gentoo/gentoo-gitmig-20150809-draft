@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-2.2.2.ebuild,v 1.16 2002/12/09 04:25:04 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-2.2.2.ebuild,v 1.17 2003/01/30 19:40:19 danarmak Exp $
 
 IUSE="nas esd motif gtk slang alsa"
 inherit kde-dist
@@ -21,7 +21,7 @@ newdepend ">=sys-libs/ncurses-5.2
 
 src_unpack() {
 
-    base_src_unpack all patch
+    kde_src_unpack all patch
     
 }
 

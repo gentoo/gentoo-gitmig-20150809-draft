@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.5a-r2.ebuild,v 1.1 2003/01/28 12:16:54 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.5a-r2.ebuild,v 1.2 2003/01/30 19:40:19 danarmak Exp $
 NEED_KDE_DONT_ADD_KDELIBS_DEP=1 # we're a special case, see below
 inherit eutils flag-o-matic kde-dist
 
@@ -136,7 +136,7 @@ pkg_setup() {
 
 src_unpack() {
     
-	base_src_unpack
+	kde_src_unpack
 
 	cd ${S}; epatch ${FILESDIR}/${PVR}/${P}-nspluginviewer-qt31.diff.gz
 

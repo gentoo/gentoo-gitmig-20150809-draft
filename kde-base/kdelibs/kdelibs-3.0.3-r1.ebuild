@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.0.3-r1.ebuild,v 1.9 2003/01/07 08:24:20 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.0.3-r1.ebuild,v 1.10 2003/01/30 19:40:19 danarmak Exp $
 
 IUSE="ssl cups ipv6 alsa"
 inherit kde kde.org
@@ -60,7 +60,7 @@ PATCHES="$FILESDIR/$P-ynet.diff"
 
 src_unpack() {
 
-    base_src_unpack
+    kde_src_unpack
     kde_sandbox_patch ${S}/kio/misc/kpac
 
 }
