@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/vanilla-prepatch-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-prepatch-sources/ChangeLog,v 1.27 2004/02/12 09:42:04 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-prepatch-sources/ChangeLog,v 1.28 2004/02/16 15:36:06 plasmaroo Exp $
+
+*vanilla-prepatch-sources-2.4.25_rc3 (16 Feb 2004)
+
+  16 Feb 2004; <plasmaroo@gentoo.org>
+  vanilla-prepatch-sources-2.4.25_pre*.ebuild removed,
+  vanilla-prepatch-sources-2.4.25_rc3.ebuild added,
+  files/vanilla-prepatch-sources.CAN-2004-0001.patch:
+  Version bump, removed stale pre-releases and added the fix for the ptrace
+  vulnerability for AMD64 platforms.
 
 *vanilla-prepatch-sources-2.4.25_rc2 (12 Feb 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-prepatch-sources/vanilla-prepatch-sources-2.4.25_pre8.ebuild,v 1.1 2004/01/30 23:54:03 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-prepatch-sources/vanilla-prepatch-sources-2.4.25_rc3.ebuild,v 1.1 2004/02/16 15:36:06 plasmaroo Exp $
 
 IUSE="build"
 
@@ -33,6 +33,7 @@ src_unpack() {
 
 	cd linux-${KV}
 	bzcat ${DISTDIR}/patch-${PV/_/-}.bz2|patch -p1 || die "Failed to apply patch!"
+	patch -p1 -f < ${FILESDIR}/${PN}.CAN-2004-0001.patch || die "Failed to apply AMD64 ptrace patch!"
 
 	kernel_universal_unpack
 }
