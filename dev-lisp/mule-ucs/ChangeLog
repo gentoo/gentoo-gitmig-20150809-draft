@@ -1,6 +1,6 @@
 # ChangeLog for dev-lisp/mule-ucs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/mule-ucs/ChangeLog,v 1.8 2003/08/14 08:56:13 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/mule-ucs/ChangeLog,v 1.9 2003/09/22 13:07:19 usata Exp $
 
 *mule-ucs-0.85_rc3 (18 May 2003)
 
@@ -22,6 +22,11 @@
   ebuild submitted by desperado <desperado@s17.xrea.com>
 
 *mule-ucs-0.84.ebuild (25 Jun 2002)
+
+  22 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> mule-ucs-0.84.ebuild:
+  Changed ~alpha, ~sparc and ~ppc keywords to stable.  Added Gentoo
+  Technologies, Inc. copyright. (I asked Moto Kawasaki to add it and
+  he generously agreed to do it.)
 
   20 Sep 2002; Mike Frysinger <vapier@gentoo.org> :
   Updated HOMEPAGE variable since the old mule homepage moved

@@ -1,6 +1,7 @@
-# Copyright 2002 moto kawasaki <kawasaki@kawasaki3.org>
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/mule-ucs/mule-ucs-0.84.ebuild,v 1.6 2003/08/14 08:56:13 usata Exp $
+# Copyright 2002 moto kawasaki <kawasaki@kawasaki3.org>
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/mule-ucs/mule-ucs-0.84.ebuild,v 1.7 2003/09/22 13:07:19 usata Exp $
 
 P="Mule-UCS-${PV}"
 S=${WORKDIR}/${P}
@@ -10,7 +11,7 @@ HOMEPAGE="http://www.m17n.org/mule/"
 DEPEND=">=app-editors/emacs-20.4"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~alpha ~sparc ~ppc"
+KEYWORDS="x86 alpha sparc ppc"
 
 src_compile() {
 #	cd ${S};
