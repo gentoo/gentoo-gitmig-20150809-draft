@@ -1,6 +1,6 @@
 service glftpd
 {
-    disable         = no
+    disable         = yes
     flags           = REUSE NAMEINARGS
     socket_type     = stream
     protocol        = tcp

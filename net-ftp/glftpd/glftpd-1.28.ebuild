@@ -1,11 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd/glftpd-1.27.ebuild,v 1.4 2003/01/12 18:31:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd/glftpd-1.28.ebuild,v 1.1 2003/01/12 18:31:31 vapier Exp $
 
+MY_P=${P/-/-LNX_}
 DESCRIPTION="a HIGHLY configurable ftp server"
 HOMEPAGE="http://www.glftpd.com/"
-MY_P=${P/-/-LNX_}
 SRC_URI="http://www.glftpd.com/files/${MY_P}.tgz"
+
 LICENSE="freedist"
 SLOT="0"
 KEYWORDS="~x86"
@@ -57,31 +58,31 @@ src_install() {
 	mv ${GLROOT}/glftpd.conf ${D}/etc/
 	ln -s /etc/glftpd.conf ${GLROOT}/glftpd.conf
 
-	#xinetd.d entry (use our custom one :])
+	# xinetd.d entry (use our custom one :])
 	insinto /etc/xinetd.d
 	newins ${FILESDIR}/glftpd.xinetd.d glftpd
 
-	#env entry to protect our ftp passwd/group files
+	# env entry to protect our ftp passwd/group files
 	insinto /etc/env.d
 	newins ${FILESDIR}/glftpd.env.d 99glftpd
 
-	#chmod the glftpd dir so that user files will work
+	# chmod the glftpd dir so that user files will work
 	chmod 711 ${D}/opt/glftpd
 }
 
 pkg_postinst() {
-	echo ""
+	echo
 	einfo "Read the documentation in /opt/glftpd/docs/"
 	einfo "After you setup your conf file, edit the xinetd"
 	einfo "entry in /etc/xinetd.d/glftpd to enable, then"
 	einfo "start xinetd: /etc/init.d/xinetd start"
-	echo ""
+	echo
 	einfo "To add glftpd to your services file and to"
 	einfo "create a cronjob for auto generating statistics,"
 	einfo "just run this command after you install:"
-	echo ""
+	echo
 	einfo "ebuild /var/db/pkg/${CATEGORY}/${P}/${P}.ebuild config"
-	echo ""
+	echo
 }
 
 pkg_config() {
@@ -93,6 +94,6 @@ pkg_config() {
 
 	einfo "Updating crontab"
 	{ crontab -l | grep -v "bin/reset"
-	  echo "0  0 * * *      $jaildir$glroot/bin/reset $confpath"
+	echo "0  0 * * *      $jaildir$glroot/bin/reset $confpath"
 	} | crontab - > /dev/null
 }
