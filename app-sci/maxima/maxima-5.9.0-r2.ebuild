@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/maxima/maxima-5.9.0-r2.ebuild,v 1.5 2004/05/17 15:29:12 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/maxima/maxima-5.9.0-r2.ebuild,v 1.6 2004/06/02 14:16:01 agriffis Exp $
 
 DESCRIPTION="Free computer algebra environment, based on Macsyma"
 HOMEPAGE="http://maxima.sourceforge.net/"
@@ -43,13 +43,13 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
-	if [ -n "`use emacs`" ]
+	if use emacs
 	then
 		elisp-install ${S}/interfaces/emacs/emaxima *.el *.elc
 		insinto /usr/share/emacs/site-lisp
 		doins ${S}/interfaces/emacs/emaxima/emaxima.lisp
 	fi
-	if [ -n "`use tetex`" ]
+	if use tetex
 	then
 		insinto /usr/share/texmf/tex/latex/emaxima
 		doins ${S}/interfaces/emacs/emaxima/emaxima.sty
@@ -60,17 +60,17 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [ -n "`use emacs`" ]
+	if use emacs
 	then
 		einfo "Running elisp-site-regen...."
 		elisp-site-regen
 	fi
-	if [ -n "`use tetex`" ]
+	if use tetex
 	then
 		einfo "Running mktexlsr to rebuild ls-R database...."
 		mktexlsr
 	fi
-	if [ -n "`use emacs`" ]
+	if use emacs
 	then
 		einfo "In order to use Maxima with emacs, add the following to your"
 		einfo ".emacs file:"

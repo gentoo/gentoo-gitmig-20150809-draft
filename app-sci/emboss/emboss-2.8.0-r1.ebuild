@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/emboss/emboss-2.8.0-r1.ebuild,v 1.1 2004/01/31 01:46:27 sediener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/emboss/emboss-2.8.0-r1.ebuild,v 1.2 2004/06/02 14:12:50 agriffis Exp $
 
 
 S=${WORKDIR}/EMBOSS-${PV}
@@ -21,11 +21,11 @@ DEPEND="X? ( virtual/x11
 src_compile() {
 
 	local myconf
-	if [ -z `use X` ]
+	if ! use X
 	then
 		myconf="--without-x --without-pngdriver"
 	else
-		if [ -z `use png` ]
+		if ! use png
 		then
 			myconf="${myconf} --without-pngdriver"
 		fi

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/predict/predict-2.2.2-r1.ebuild,v 1.3 2004/04/19 12:13:51 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/predict/predict-2.2.2-r1.ebuild,v 1.4 2004/06/02 14:21:06 agriffis Exp $
 
 DESCRIPTION="Satellite tracking and orbital prediction."
 HOMEPAGE="http://www.qsl.net/kd2bd/predict.html"
@@ -63,7 +63,7 @@ src_compile() {
 	${COMPILER} kep_reload.c -o kep_reload
 
 	# map
-	if [ "`use xforms`" ]; then
+	if use xforms; then
 		einfo "compiling map"
 		cd ${S}/clients/map
 		TCOMP="${COMPILER} -I/usr/X11R6/include -L/usr/X11R6/lib -lforms -lX11 -lm map.c map_cb.c map_main.c -o map"
@@ -71,7 +71,7 @@ src_compile() {
 	fi
 
 	# gsat
-	if [ "`use gtk`" ]; then
+	if use gtk; then
 		# note there are plugins for gsat but they are missing header files and wont compile
 		use nls || myconf="--disable-nls"
 		einfo "compiling gsat"
@@ -127,7 +127,7 @@ src_install() {
 	dodoc INSTALL.kep_reload README.kep_reload
 
 	# map
-	if [ "`use xforms`" ]; then
+	if use xforms; then
 		cd ${S}/clients/map
 		dobin map
 		for i in CHANGES README COPYING; do
@@ -137,7 +137,7 @@ src_install() {
 	fi
 
 	# gsat
-	if [ "`use gtk`" ]; then
+	if use gtk; then
 		# the install seems broken so do manually...
 		cd ${S}/clients/gsat-*
 		dodir /usr/lib/gsat/plugins

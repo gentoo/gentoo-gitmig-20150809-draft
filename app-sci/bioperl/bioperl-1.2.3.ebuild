@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl/bioperl-1.2.3.ebuild,v 1.5 2004/04/19 22:48:35 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl/bioperl-1.2.3.ebuild,v 1.6 2004/06/02 14:19:44 agriffis Exp $
 
 inherit perl-module eutils
 
@@ -38,7 +38,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	# remove interactiveness
-	[ -n "`use mysql`" ] && epatch ${FILESDIR}/biodbgff-enable-${PV}.patch
+	use mysql && epatch ${FILESDIR}/biodbgff-enable-${PV}.patch
 	# want man pages in addition to perldoc documentation??
 	#epatch ${FILESDIR}/domanpages-${PV}.patch
 }

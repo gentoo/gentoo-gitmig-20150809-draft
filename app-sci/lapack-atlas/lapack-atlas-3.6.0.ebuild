@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-atlas/lapack-atlas-3.6.0.ebuild,v 1.2 2004/05/12 19:28:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-atlas/lapack-atlas-3.6.0.ebuild,v 1.3 2004/06/02 14:17:14 agriffis Exp $
 
 inherit eutils
 
@@ -114,7 +114,7 @@ src_compile() {
 	make lib CC="${CC}" F77="libtool --mode=compile --tag=F77 g77" || die
 
 	cd ${S_LAPACK}
-	if [ "`use ifc`" ]
+	if use ifc
 	then
 		FC="ifc"
 		FFLAGS="${IFCFLAGS}"
@@ -133,7 +133,7 @@ src_compile() {
 	cp -sf ${S}/gentoo/liblapack.a/*.lo .
 	cp -sf ${S}/gentoo/liblapack.a/.libs/*.o .libs/
 
-	if [ "`use ifc`" ]
+	if use ifc
 	then
 		ifc ${FFLAGS} -shared .libs/*.o -Wl,-soname -Wl,liblapack.so.0 \
 			-o liblapack.so.0.0.0 -lblas -lcblas -latlas \
@@ -150,7 +150,7 @@ src_install () {
 	dodir ${RPATH}
 
 	cd ${S_LAPACK}/SRC
-	if [ "`use ifc`" ]
+	if use ifc
 	then
 		strip --strip-unneeded liblapack.so.0.0.0
 		strip --strip-debug liblapack.a
@@ -177,7 +177,7 @@ src_install () {
 	dodoc README
 	cd ${S}/doc
 	dodoc AtlasCredits.txt ChangeLog
-	if [ "`use doc`" ];
+	if use doc;
 	then
 		dodoc lapackqref.ps
 	fi
