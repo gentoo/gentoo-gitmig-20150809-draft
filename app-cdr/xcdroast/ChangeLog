@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/xcdroast
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.38 2004/09/29 23:06:43 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/ChangeLog,v 1.39 2004/10/31 03:41:24 pylon Exp $
+
+  31 Oct 2004; Lars Weiler <pylon@gentoo.org> metadata.xml,
+  -xcdroast-0.98_alpha15-r2.ebuild, xcdroast-0.98_alpha15-r3.ebuild:
+  Depend on virtual/cdrtools instead of app-cdr/cdrtools. Make this package a
+  member of the media-optical herd. Furthermore cleanup.
 
   17 Jun 2004; Lars Weiler <pylon@gentoo.org> xcdroast-0.98_alpha15-r3.ebuild:
   Edited the dependency list, so that GTK+ will not be installed, when GTK2+ is

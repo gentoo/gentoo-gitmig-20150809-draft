@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha15-r3.ebuild,v 1.9 2004/06/24 21:36:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha15-r3.ebuild,v 1.10 2004/10/31 03:41:24 pylon Exp $
 
 inherit eutils
 
@@ -21,9 +21,9 @@ DEPEND="
 
 RDEPEND="
 	dvdr? (
-		x86? ( >=app-cdr/cdrecord-prodvd-2.01_alpha24 )
+		x86? ( app-cdr/cdrecord-prodvd )
 	)
-	>=app-cdr/cdrtools-2.01_alpha17"
+	virtual/cdrtools"
 
 src_unpack() {
 	unpack ${P/_/}.tar.gz
