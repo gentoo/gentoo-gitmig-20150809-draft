@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-5.32.ebuild,v 1.1 2003/04/05 07:10:17 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-5.32.ebuild,v 1.2 2003/06/17 19:43:02 vapier Exp $
 
-S=${WORKDIR}/${P}
+inherit eutils
+
 DESCRIPTION="The most popular logfile analyser in the world"
 HOMEPAGE="http://www.analog.cx/"
 SRC_URI="http://www.analog.cx/${P}.tar.gz"
-IUSE=""
 
 SLOT="0"
 LICENSE="as-is"
@@ -18,14 +18,13 @@ DEPEND=">=dev-libs/libpcre-3.4
 	media-libs/jpeg"
 
 src_unpack() {
-	unpack ${A} || die
-	cd ${S} || die
+	unpack ${A} ; cd ${S}
 	mv src/Makefile src/Makefile.orig
 	sed -e "s:^CFLAGS.*:CFLAGS = ${CFLAGS}:" \
-		-e 's:^DEFS.*:DEFS = -DHAVE_GD -DHAVE_PCRE:' \
+		-e 's:^DEFS.*:DEFS = -DHAVE_GD -DHAVE_PCRE -DHAVE_ZLIB:' \
 		-e 's:^LIBS.*:LIBS = -lgd -lpng -ljpeg -lz -lpcre -lm:' \
 		src/Makefile.orig > src/Makefile
-	patch -p1 < ${FILESDIR}/${PN}-5.1-gentoo.diff
+	epatch ${FILESDIR}/${PN}-5.1-gentoo.diff
 }
 
 src_compile() {
@@ -37,9 +36,9 @@ src_install() {
 
 	dodoc README.txt Licence.txt analog.cfg
 	dohtml -a html,gif,css,ico docs/*
+	dohtml -r how-to
 	docinto examples ; dodoc examples/*
 	docinto cgi ; dodoc anlgform.pl
-	cp -a how-to ${D}/usr/share/doc/${PF}
 
 	insinto /usr/share/analog/images ; doins images/*
 	insinto /usr/share/analog/lang ; doins lang/*

@@ -1,8 +1,12 @@
 # ChangeLog for app-admin/analog
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/ChangeLog,v 1.15 2003/04/05 07:10:17 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/ChangeLog,v 1.16 2003/06/17 19:43:01 vapier Exp $
 
 *analog-5.32 (06 Apr 2003)
+
+  17 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Add -DHAVE_ZLIB to the Makefile ... after we require zlib in the DEPEND,
+  might as well use the damn thing ;)
 
   06 Apr 2003; Donny Davies <woodchip@gentoo.org> analog-5.32.ebuild:
   Bump, #18610.
