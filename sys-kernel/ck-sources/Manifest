@@ -2,8 +2,8 @@
 Hash: SHA1
 
 MD5 76b1482dfbccaced9d8fc541bdd21184 ck-sources-2.4.28-r1.ebuild 1089
-MD5 7086f7cc2573a4c6c2234051084fcc20 ck-sources-2.6.10-r2.ebuild 747
-MD5 923a18eda00fe45f79a07f205293dc37 ChangeLog 17116
+MD5 9d00f6ea2ca13444321ec9bccce65bab ck-sources-2.6.10-r2.ebuild 782
+MD5 7316f7df8d3230761084b187b20bc565 ChangeLog 17215
 MD5 7187b8c28501f454a2412c9e4a7fcf53 metadata.xml 421
 MD5 8c35751caf824a9dacb02e80d6189b2e files/ck-sources-2.4.28.CAN-2004-1137.patch 1764
 MD5 cd90102d73b2dbed58a9263901319844 files/ck-sources-2.6.10-disable-iopriowr.patch 912
@@ -18,7 +18,7 @@ MD5 45c159d1ec53d40f6d602733313523b5 files/digest-ck-sources-2.6.10-r2 131
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB3roLiJcSIUGNthERAo3sAJ9ajutqahgFD+49A0cR+GQBgUHGwQCfVLDn
-LOvMbfP52mmCMTG7wxRe4Ko=
-=wTBQ
+iD8DBQFB3u41iJcSIUGNthERAvOXAKCDT5w3yBuGJ2enOcrzdqbRH+tIkwCeIkaA
+XkkFwDjeIX/VSmdzlqp7Xyw=
+=Ccap
 -----END PGP SIGNATURE-----
