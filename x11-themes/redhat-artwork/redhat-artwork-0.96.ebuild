@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.96.ebuild,v 1.7 2004/10/04 05:51:36 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.96.ebuild,v 1.8 2004/10/17 20:08:57 liquidx Exp $
 
 inherit eutils rpm
 
@@ -153,7 +153,7 @@ src_install () {
 	cd ${D}/usr/share/gdm/themes/Bluecurve/
 
 	# replace redhat logo with gnome logo from happygnome theme
-	sed -e 's|<normal file="rh_logo-header.png"/>|<normal file="/usr/share/gdm/themes/happygnome/gnome-logo.png"/>|' \
+	sed -e 's|<normal file="rh_logo-header.png" />|<normal file="/usr/share/gdm/themes/happygnome/gnome-logo.png"/>|' \
 		-e 's|<pos x="3%" y="5%" width="398" height="128" anchor="nw"/>|<pos x="3%" y="3%"/>|' \
 		Bluecurve.xml > Bluecurve.xml.mod || die
 

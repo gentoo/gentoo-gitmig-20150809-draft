@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.73.ebuild,v 1.16 2004/10/04 05:51:36 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.73.ebuild,v 1.17 2004/10/17 20:08:57 liquidx Exp $
 
 inherit eutils rpm
 
@@ -49,7 +49,7 @@ src_unpack() {
 }
 
 src_compile() {
-
+	export WANT_AUTOMAKE=1.4
 	export WANT_AUTOCONF=2.5
 	# dies is LANG has UTF-8
 	export LANG=C

@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/redhat-artwork
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.39 2004/10/04 05:51:36 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.40 2004/10/17 20:08:57 liquidx Exp $
+
+  17 Oct 2004; Alastair Tse <liquidx@gentoo.org> redhat-artwork-0.73.ebuild,
+  redhat-artwork-0.96.ebuild:
+  add WANT_AUTOMAKE for 0.73 (#61364) fix redhat gdm theme (#61360)
 
   03 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
   redhat-artwork-0.73.ebuild, redhat-artwork-0.95.ebuild,
