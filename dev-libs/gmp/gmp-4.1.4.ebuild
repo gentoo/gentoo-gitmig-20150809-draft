@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.4.ebuild,v 1.11 2005/02/15 08:28:37 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gmp/gmp-4.1.4.ebuild,v 1.12 2005/02/15 09:01:37 eradicator Exp $
 
 inherit flag-o-matic libtool eutils multilib
 
@@ -37,9 +37,7 @@ src_unpack () {
 		epatch ${FILESDIR}/amd64.patch
 	fi
 
-	if has_multilib_profile; then
-		epatch ${FILESDIR}/${PN}-4.1.4-multilib.patch
-	fi
+	epatch ${FILESDIR}/${PN}-4.1.4-multilib.patch
 
 	if use ppc64 || has_multilib_profile; then
 		export WANT_AUTOCONF=2.5
@@ -63,11 +61,6 @@ src_compile() {
 		--enable-mpbsd \
 		${myconf} \
 		|| die "configure failed"
-	if use amd64; then
-		export ABI=64
-	else
-		export ABI=standard
-	fi
 	emake || die "emake failed"
 
 }
