@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/files/rc-conf-3,v 1.2 2004/03/06 03:52:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/files/rc-conf-3,v 1.3 2004/07/15 00:23:45 agriffis Exp $
 
 # Config file for kimset server
 
