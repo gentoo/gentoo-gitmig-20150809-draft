@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Craig Joly <joly@ee.ualberta.ca>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.29.ebuild,v 1.5 2001/10/06 15:30:16 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.29.ebuild,v 1.6 2001/10/19 21:46:03 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PCMCIA tools for Linux"
@@ -33,6 +33,7 @@ src_compile() {
 src_install () {
 	make PREFIX=${D} install || die "failed installing"
 	cd ${D}
+	rm -rf etc/rc*.d
 	#this will cause the /var/lib/pcmcia to not be auto-removed when you remerge 
 	#pcmcia-cs; this can migrate to baselayout eventually
 	touch var/lib/pcmcia/.keep
