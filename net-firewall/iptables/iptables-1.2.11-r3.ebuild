@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
-# Distributed under the terms of the GNU General Public License v1
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.11-r3.ebuild,v 1.10 2004/11/10 06:03:25 vapier Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.11-r3.ebuild,v 1.11 2004/11/10 11:31:04 mr_bones_ Exp $
 
 inherit eutils flag-o-matic
 
