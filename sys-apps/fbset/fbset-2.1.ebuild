@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fbset/fbset-2.1.ebuild,v 1.22 2004/03/22 03:04:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fbset/fbset-2.1.ebuild,v 1.23 2004/05/23 23:22:34 vapier Exp $
 
 inherit gcc
 
@@ -10,7 +10,7 @@ SRC_URI="http://home.tvd.be/cr26864/Linux/fbdev/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64 ppc sparc alpha hppa ia64 ppc64 s390"
+KEYWORDS="x86 ppc sparc alpha arm hppa amd64 ia64 ppc64 s390"
 
 DEPEND="virtual/glibc"
 
