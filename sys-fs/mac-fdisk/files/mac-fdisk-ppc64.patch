@@ -1,0 +1,121 @@
+Files mac-fdisk-0.1/fdisk and /root/mac-fdisk-0.1/fdisk differ
+diff -uNr mac-fdisk-0.1/fdisk.c /root/mac-fdisk-0.1/fdisk.c
+--- mac-fdisk-0.1/fdisk.c	2004-03-30 04:34:58.394924976 +0000
++++ /root/mac-fdisk-0.1/fdisk.c	2004-03-30 03:53:26.447986904 +0000
+@@ -59,9 +59,88 @@
+  */
+ 
+ 
++/* ----------- */
++#define _PPC64_TYPES_H
++#define BITS_PER_LONG 64
++
++typedef __signed__ char __s8;
++typedef signed char s8;
++typedef unsigned char u8;
++typedef unsigned char __u8;
++
++typedef __signed__ short __s16;
++typedef signed short s16;
++typedef unsigned short __u16;
++typedef unsigned short u16;
++
++typedef __signed__ int __s32;
++typedef signed int s32;
++typedef unsigned int __u32;
++typedef unsigned int u32;
++
++typedef __signed__ long __s64;
++typedef signed long s64;
++typedef unsigned long __u64;
++typedef unsigned long u64;
++
++typedef struct {
++        __u32 u[4];
++} __attribute((aligned(16))) __vector128;
++
++typedef __vector128 vector128;
++
++typedef u32 dma_addr_t;
++typedef u64 dma64_addr_t;
++
++typedef struct {
++        unsigned long entry;
++        unsigned long toc;
++        unsigned long env;
++} func_descr_t;
++
++typedef unsigned int umode_t;
++
++#define BITS_TO_LONGS(bits) \
++        (((bits)+BITS_PER_LONG-1)/BITS_PER_LONG)
++#define DECLARE_BITMAP(name,bits) \
++        unsigned long name[BITS_TO_LONGS(bits)]
++#define CLEAR_BITMAP(name,bits) \
++        memset(name, 0, BITS_TO_LONGS(bits)*sizeof(unsigned long))
++
++struct partition {
++        unsigned char boot_ind;         /* 0x80 - active */
++        unsigned char head;             /* starting head */
++        unsigned char sector;           /* starting sector */
++        unsigned char cyl;              /* starting cylinder */
++        unsigned char sys_ind;          /* What partition type */
++        unsigned char end_head;         /* end head */
++        unsigned char end_sector;       /* end sector */
++        unsigned char end_cyl;          /* end cylinder */
++        unsigned int start_sect;        /* starting sector counting from 0 */
++        unsigned int nr_sects;          /* nr of sectors in partition */
++} __attribute__((packed));
++
++
++struct hd_geometry {
++      unsigned char heads;
++      unsigned char sectors;
++      unsigned short cylinders;
++      unsigned long start;
++};
++
++/* hd/ide ctl's that pass (arg) ptrs to user space are numbered 0x030n/0x031n */
++#define HDIO_GETGEO             0x0301  /* get device geometry */
++
++#define BLKRRPART  _IO(0x12,95) /* re-read partition table */
++
++/* ---------- */
++
++typedef unsigned short kdev_t;	/* BAD hack; kdev_t is not exported */
++
++
+ #include <unistd.h>
+ #include <stdio.h>
+-#include <stdlib.h>
++#include <stdlib.h> 
+ #include <fcntl.h>
+ #include <ctype.h>
+ #include <setjmp.h>
+@@ -70,14 +149,6 @@
+ 
+ #include <sys/ioctl.h>
+ 
+-#include <linux/types.h>
+-
+-typedef unsigned short kdev_t;	/* BAD hack; kdev_t is not exported */
+-
+-#include <linux/genhd.h>
+-#include <linux/hdreg.h>
+-#include <linux/fs.h>
+-
+ #include "fdisk.h"
+ 
+ #define hex_val(c)	({ \
+Files mac-fdisk-0.1/fdisk.o and /root/mac-fdisk-0.1/fdisk.o differ
+diff -uNr mac-fdisk-0.1/fdisklabel.c /root/mac-fdisk-0.1/fdisklabel.c
+--- mac-fdisk-0.1/fdisklabel.c	2004-03-30 04:34:58.396924672 +0000
++++ /root/mac-fdisk-0.1/fdisklabel.c	2004-03-30 01:16:31.974999800 +0000
+@@ -46,6 +46,7 @@
+ #include <sys/ioctl.h>
+ #include <sys/param.h>
+ 
++#include <asm/types.h>
+ #include <linux/hdreg.h>
+ #include <linux/fs.h>
+ 
