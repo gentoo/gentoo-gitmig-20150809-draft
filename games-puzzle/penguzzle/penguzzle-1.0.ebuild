@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/penguzzle/penguzzle-1.0.ebuild,v 1.3 2004/05/02 05:21:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/penguzzle/penguzzle-1.0.ebuild,v 1.4 2004/06/04 20:57:52 jhuebel Exp $
 
 inherit games
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.naskita.com/linux/penguzzle/${PN}.zip"
 
 LICENSE="penguzzle"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 IUSE=""
 
 DEPEND="dev-tcltk/tclx"
