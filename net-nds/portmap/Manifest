@@ -3,7 +3,7 @@ Hash: SHA1
 
 MD5 f13b6d601c39db0135481be1039bf678 ChangeLog 3681
 MD5 9912426328376220914f7c645ae40f0d portmap-5b-r8.ebuild 1822
-MD5 c3cfc88210cf19cdb136b346f074a002 portmap-5b-r9.ebuild 1934
+MD5 f3558cee4cc3874781bfcc763f0c240c portmap-5b-r9.ebuild 1929
 MD5 b806d1f955acd4cdb322e74159cc17f5 files/portmap.confd 275
 MD5 887940376974bf01ecf94fd032f224eb files/portmap-5b-include-errno_h.patch 403
 MD5 a42b77e374c390069e747670ef0f76b2 files/portmap.rc6 1132
@@ -19,7 +19,7 @@ MD5 31bc2d6653a311e427f965214e803f30 files/portmap-5b-loopback-only.patch 1948
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBhH8OHTu7gpaalycRAqW8AKCokACgk1ARyNSdTJ9fTBCM/NAl7ACdGwvY
-KO4eOnghhLXJvhTo7s7bP/I=
-=e1Lc
+iD8DBQFBsIkcroRuSHgZdywRAjRgAJ9ur6FvOyV/nkAohLgYnOqySYI4QACgkdah
+dQ2WGPU5FM+FDWgtCT6cPKQ=
+=/pI+
 -----END PGP SIGNATURE-----
