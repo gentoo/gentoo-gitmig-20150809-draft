@@ -21,6 +21,12 @@
 ##   End example
 ##
 
+# <agenkin@gentoo.org> (1 Nov 2002)
+# Masking these two pending some issues to be fixed by the author.
+# See bug #5020.
+media-sound/beast
+media-sound/beast-data
+
 # <danarmak@gentoo.org> (1 Nov 2002)
 # old and broken. I hope there'll be a new release soon - there's a kwintv3 project that's basically
 # a rewrite and it's in alpha stages atm. I've a cs ebuild for it btw.
