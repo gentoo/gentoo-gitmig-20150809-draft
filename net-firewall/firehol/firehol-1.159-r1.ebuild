@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/firehol-1.159.ebuild,v 1.4 2004/05/02 15:22:09 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/firehol-1.159-r1.ebuild,v 1.1 2004/05/02 15:22:09 centic Exp $
 
 DESCRIPTION="iptables firewall generator"
 HOMEPAGE="http://firehol.sourceforge.net"
@@ -17,7 +17,8 @@ src_compile() {
 	sed -i firehol.sh \
 		-e 's|/etc/firehol.conf|/etc/firehol/firehol.conf|' \
 		-e 's|/sbin/ip|/usr/sbin/ip|' \
-		-e 's|/usr/sbin/iptables|/sbin/iptables|'
+		-e 's|/usr/sbin/iptables|/sbin/iptables|' \
+		-e 's|head -1|head -n 1|'
 }
 
 src_install() {
