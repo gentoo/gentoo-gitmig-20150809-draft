@@ -1,6 +1,6 @@
 MD5 8141ca24ab8ee5240c4ec15cfd7dcf38 ChangeLog 19414
 MD5 0feff9b09e482567359625301bddce1c metadata.xml 1329
-MD5 fe490d871f95429eebc900fa7452265c openssh-4.0_p1.ebuild 4202
+MD5 1f645580373e6125648dd7f30e17c1d8 openssh-4.0_p1.ebuild 4214
 MD5 52731cbb5903dc7b0ef3dca7ffd31bad openssh-3.9_p1-r1.ebuild 4349
 MD5 d1055a8536e068dc46b4c99f5bc8be04 openssh-3.8.1_p1-r1.ebuild 4239
 MD5 7c16095191b5dc9d653dcb658650c88c files/digest-openssh-3.8.1_p1-r1 141
@@ -14,7 +14,7 @@ MD5 6905aafd16d110e8e8b74cad4914ceb7 files/openssh-3.8.1_p1-largekey.patch.bz2 1
 MD5 328a5f063659ddb400d21201feb92170 files/openssh-3.8.1_p1-opensc.patch.bz2 1381
 MD5 a26faff36f0ec463cb4ef7366bfdc1e1 files/openssh-3.8.1_p1-resolv_functions.patch.bz2 315
 MD5 465aab818202ddb010f0bfca738e902a files/openssh-3.8.1_p1-skey.patch.bz2 270
-MD5 6c92c72a7cbec59eed493e728d14ad3c files/openssh-3.8.1p1-sftplogging-1.2-gentoo.patch.bz2 6164
+MD5 3a36e663618004d3c7f599fe43b100f3 files/openssh-3.9_p1-sftplogging-1.2-gentoo.patch.bz2 5964
 MD5 6d3c9b201c2e89b7156b2fc37ade9721 files/openssh-3.8_p1-chroot.patch.bz2 1119
 MD5 857f14fd111169d8838d07fb46769938 files/openssh-3.8_p1-kerberos.patch.bz2 465
 MD5 a26faff36f0ec463cb4ef7366bfdc1e1 files/openssh-3.8_p1-resolv_functions.patch.bz2 315
@@ -29,8 +29,7 @@ MD5 7937a17eb31fc6139ef42fa04521de27 files/openssh-3.9_p1-configure-openct.patch
 MD5 93d19c0ef91091a730510c46ab8e811e files/openssh-3.9_p1-selinux.diff.bz2 1307
 MD5 b86ae0c43a704c4ee2abd2ce5c955f8f files/sshd.pam 294
 MD5 0a1428803057b7d25e624c6b297980d8 files/sshd.rc6 1281
-MD5 3a36e663618004d3c7f599fe43b100f3 files/openssh-3.9_p1-sftplogging-1.2-gentoo.patch.bz2 5964
+MD5 2b40bc37836d6ad0054742844e7b4c8e files/openssh-4.0_p1-sftplogging-1.2-gentoo.patch.bz2 5774
 MD5 465aab818202ddb010f0bfca738e902a files/openssh-3.9_p1-skey.patch.bz2 270
 MD5 f58807d5d75bc9929883e6876c7ddd46 files/openssh-3.9_p1-terminal_restore.patch.bz2 332
 MD5 c326cd447fb5f86124295ef943d3bf35 files/openssh-3.9_p1-kerberos-detection.patch 593
-MD5 2b40bc37836d6ad0054742844e7b4c8e files/openssh-4.0_p1-sftplogging-1.2-gentoo.patch.bz2 5774
