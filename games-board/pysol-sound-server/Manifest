@@ -1,4 +1,14 @@
-MD5 1f7a8cda83d613f4515b2f6043dc3a09 pysol-sound-server-3.00.ebuild 721
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2d0755e3b938242802914861bde40aef ChangeLog 675
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 07ae3c43b2e72867d831ab4a87ba888b pysol-sound-server-3.00.ebuild 783
 MD5 026b7c98c7f90f70ea2d386201d7234a files/digest-pysol-sound-server-3.00 76
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB1yEtroRuSHgZdywRAqnlAJsF3fuHWMUIEvznBJc9H7IeW58iswCcDqZr
+EWget1pwgklhxuwZ8+FebVo=
+=ESXM
+-----END PGP SIGNATURE-----
