@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.1 2004/09/04 23:14:43 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.2 2004/09/05 16:30:03 lv Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -9,6 +9,7 @@ inherit eutils
 ECLASS=toolchain
 INHERITED="$INHERITED $ECLASS"
 DESCRIPTION="Based on the ${ECLASS} eclass"
+IUSE="nls uclibc hardened multilib"
 
 # BIG FAT WARNING!!!!!
 # NO EBUILDS IN THE TREE SHOULD USE THIS ECLASS UNTIL IT IS FINISHED AND
@@ -78,6 +79,8 @@ DESCRIPTION="Based on the ${ECLASS} eclass"
 #			default to ${PV}, but we may not want to pre-generate man pages
 #			for prerelease test ebuilds for example. This allows you to
 #			continue using pre-generated manpages from the last stable release.
+#			If set to "none", this will prevent the downloading of manpages,
+#			which is useful for individual library targets.
 #
 # Travis Tilley <lv@gentoo.org> (02 Sep 2004)
 #
@@ -102,7 +105,7 @@ get_gcc_src_uri() {
 	elif [ -n "${SNAPSHOT}" ] ; then
 		GCC_SRC_URI="ftp://sources.redhat.com/pub/gcc/snapshots/${SNAPSHOT}/gcc-${SNAPSHOT//-}.tar.bz2"
 	else
-		GCC_SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${PN}-${MAIN_BRANCH}.tar.bz2"
+		GCC_SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/gcc-${MAIN_BRANCH}.tar.bz2"
 		# we want all branch updates to be against the main release
 		if [ -n "${BRANCH_UPDATE}" ] ; then
 			GCC_SRC_URI="${GCC_SRC_URI}
@@ -125,8 +128,10 @@ get_gcc_src_uri() {
 	# PERL cannot be present at bootstrap, and is used to build the man pages.
 	# So... lets include some pre-generated ones, shall we?
 	GCC_MANPAGE_VERSION=${GCC_MANPAGE_VERSION:=${PV}}
-	GCC_SRC_URI="${GCC_SRC_URI}
-		${GENTOO_TOOLCHAIN_BASE_URI}/${PN}-${GCC_MANPAGE_VERSION}-manpages.tar.bz2"
+	if [ "${GCC_MANPAGE_VERSION}" != "none" ] ; then
+		GCC_SRC_URI="${GCC_SRC_URI}
+			${GENTOO_TOOLCHAIN_BASE_URI}/gcc-${GCC_MANPAGE_VERSION}-manpages.tar.bz2"
+	fi
 
 	# mmm... PIE =D
 	if [ -n "${PIE_CORE}" ] ; then
@@ -151,7 +156,7 @@ gcc_get_s_dir() {
 	elif [ -n "${SNAPSHOT}" ] ; then
 		GCC_S="${WORKDIR}/gcc-${SNAPSHOT//-}"
 	else
-		GCC_S="${WORKDIR}/${PN}-${MAIN_BRANCH}"
+		GCC_S="${WORKDIR}/gcc-${MAIN_BRANCH}"
 	fi
 
 	echo "${GCC_S}"
@@ -172,11 +177,11 @@ gcc_quick_unpack() {
 	elif [ -n "${SNAPSHOT}" ] ; then
 		unpack gcc-${SNAPSHOT//-}.tar.bz2
 	else
-		unpack ${PN}-${MAIN_BRANCH}.tar.bz2
+		unpack gcc-${MAIN_BRANCH}.tar.bz2
 		# We want branch updates to be against a release tarball
 		if [ -n "${BRANCH_UPDATE}" ] ; then
 			pushd ${S:="$(gcc_get_s_dir)"}
-			epatch ${DISTDIR}/${PN}-${MAIN_BRANCH}-branch-update-${BRANCH_UPDATE}.patch.bz2
+			epatch ${DISTDIR}/gcc-${MAIN_BRANCH}-branch-update-${BRANCH_UPDATE}.patch.bz2
 			popd
 		fi
 	fi
@@ -230,11 +235,26 @@ exclude_gcc_patches() {
 # patch in ProPolice Stack Smashing protection
 do_gcc_SSP_patches() {
 	epatch ${WORKDIR}/protector.dif
-	epatch ${FILESDIR}/pro-police-docs.patch
+	if [ "${PN}" == "gcc" ] ; then
+		epatch ${FILESDIR}/pro-police-docs.patch
+	fi
 
-	cp ${WORKDIR}/gcc/protector.c ${S}/gcc/ || die "protector.c not found"
-	cp ${WORKDIR}/gcc/protector.h ${S}/gcc/ || die "protector.h not found"
-	cp -R ${WORKDIR}/gcc/testsuite/* ${S}/gcc/testsuite/ || die "testsuite not found"
+	local ppunpackdir
+	if [ "${MY_PV}" == "3.3" ] ; then
+		ppunpackdir="${WORKDIR}"
+	else
+		ppunpackdir="${WORKDIR}/gcc/"
+	fi
+
+	cp ${ppunpackdir}/protector.c ${S}/gcc/ || die "protector.c not found"
+	cp ${ppunpackdir}/protector.h ${S}/gcc/ || die "protector.h not found"
+
+	if [ "${MY_PV}" != "3.3" ] ; then
+		# Etoh started including a testsuite with the gcc 3.4 release
+		cp -R ${ppunpackdir}/testsuite/* ${S}/gcc/testsuite/ \
+			|| die "testsuite not found"
+	fi
+
 	# we apply only the needed parts of protectonly.dif
 	sed -e 's|^CRTSTUFF_CFLAGS = |CRTSTUFF_CFLAGS = -fno-stack-protector-all |' \
 		-i gcc/Makefile.in || die "Failed to update crtstuff!"
@@ -242,7 +262,7 @@ do_gcc_SSP_patches() {
 	# if gcc in a stage3 defaults to ssp, is version 3.4.0 and a stage1 is built
 	# the build fails building timevar.o w/:
 	# cc1: stack smashing attack in function ix86_split_to_parts()
-	if gcc -dumpspecs | grep -q "fno-stack-protector:"
+	if gcc -dumpspecs | grep -q "fno-stack-protector:" && [ "${MY_PV}" != "3.3" ]
 	then
 		use build && epatch ${FILESDIR}/3.4.0/gcc-3.4.0-cc1-no-stack-protector.patch
 	fi
@@ -318,11 +338,18 @@ disgusting_gcc_multilib_HACK() {
 
 # generic GCC src_unpack, to be called from the ebuild's src_unpack.
 # BIG NOTE regarding hardened support: ebuilds with support for hardened are
-# expected to provide a function called hardened_gcc_works. An example:
+# expected to export the following variable:
 #
-# hardened_gcc_works() {
-# 	use x86 && true || false
-# }
+#	HARDENED_GCC_WORKS
+#			If set, then it is assumed that hardened gcc works for this
+#			release and version. If empty, the hardened USE flag has no
+#			effect.
+#
+# For example, the following would be useful:
+#
+#	pkg_setup() {
+#		use x86 || use amd64 && HARDENED_GCC_WORKS="true"
+#	}
 #
 # This allows for additional archs to be supported by hardened when ready.
 #
@@ -349,7 +376,7 @@ gcc_src_unpack() {
 	if [ -n "${PIE_VER}" ] ; then
 		do_gcc_PIE_patches
 	fi
-	if use hardened && hardened_gcc_works ; then
+	if use hardened && [ -n "${HARDENED_GCC_WORKS}" ] ; then
 		einfo "updating configuration to build hardened GCC"
 		make_gcc_hard || die "failed to make gcc hard"
 	fi
@@ -425,6 +452,7 @@ gcc_setup_variables() {
 	  get_libdir_override lib
 	  # GCC 3.4 no longer uses gcc-lib.
 	  LIBPATH="${LIBPATH:="${LOC}/$(get_libdir)/gcc/${CCHOST}/${MY_PV_FULL}"}"
+	  INCLUDEPATH="${INCLUDEPATH:="${LIBPATH}/include"}"
 	  BINPATH="${BINPATH:="${LOC}/${CCHOST}/gcc-bin/${MY_PV}"}"
 	  DATAPATH="${DATAPATH:="${LOC}/share/gcc-data/${CCHOST}/${MY_PV}"}"
 	  # Dont install in /usr/include/g++-v3/, but in gcc internal directory.
@@ -437,6 +465,7 @@ gcc_setup_variables() {
 	  # specific gcc targets, like ffcall. Note that we dont override the value
 	  # returned by get_libdir here.
 	  LIBPATH="${LIBPATH:="${LOC}/$(get_libdir)"}"
+	  INCLUDEPATH="${INCLUDEPATH:="${LOC}/include"}"
 	  BINPATH="${BINPATH:="${LOC}/bin/"}"
 	  DATAPATH="${DATAPATH:="${LOC}/share/"}"
 	  STDCXX_INCDIR="${STDCXX_INCDIR:="${LOC}/include/g++-v3/"}"
@@ -509,6 +538,7 @@ gcc_do_configure() {
 	[ "$1" != "versioned" -a "$1" != "non-versioned" ] && \
 		die "gcc_do_configure called without specifying versioned/non-versioned"
 	[ "$1" == "versioned" ] && confgcc="--enable-version-specific-runtime-libs"
+	[ "$1" == "non-versioned" ] && confgcc="--libdir=/usr/$(get_libdir)"
 	shift
 
 	# If we've forgotten to set the path variables, this will give us
@@ -519,7 +549,7 @@ gcc_do_configure() {
 	confgcc="${confgcc} \
 		--prefix=${LOC} \
 		--bindir=${BINPATH} \
-		--includedir=${LIBPATH}/include \
+		--includedir=${INCLUDEPATH} \
 		--datadir=${DATAPATH} \
 		--mandir=${DATAPATH}/man \
 		--infodir=${DATAPATH}/info \
@@ -571,7 +601,7 @@ gcc_do_configure() {
 	# uclibc uses --enable-clocale=uclibc (autodetected)
 	# --disable-libunwind-exceptions needed till unwind sections get fixed. see ps.m for details
 	if use !uclibc ; then
-		confgcc="${confgcc} --enable-__cxa_atexit"
+		confgcc="${confgcc} --enable-__cxa_atexit --enable-clocale=gnu"
 	else
 		confgcc="${confgcc} --disable-__cxa_atexit --enable-target-optspace \
 			--enable-sjlj-exceptions"
@@ -643,7 +673,7 @@ gcc_do_configure() {
 #	BOOT_CFLAGS
 #			CFLAGS to use during stages 2+3 of a gcc bootstrap.
 #
-# Travis Tiley <lv@gentoo.org> (04 Sep 2004)
+# Travis Tilley <lv@gentoo.org> (04 Sep 2004)
 #
 gcc_do_make() {
 	# Setup -j in MAKEOPTS
@@ -719,5 +749,26 @@ exec /usr/bin/gcc -m64 "$@"
 EOF
 chmod +x ${D}/${BINPATH}/gcc64
 	fi
+}
+
+
+# This function will add ${PV} to the names of all installed shared libraries
+# to avoid filename collisions between multiple slotted non-versioned gcc
+# targets.
+#
+# Travis Tilley <lv@gentoo.org> (05 Sep 2004)
+#
+add_version_to_shared() {
+	for sharedlib in `find ${D} -name *.so*` ; do
+		if [ ! -L "${sharedlib}" ] ; then
+			einfo "Renaming `basename "${sharedlib}"` to `basename "${sharedlib/.so*/}-${PV}.so.${sharedlib/*.so./}"`"
+			mv "${sharedlib}" "${sharedlib/.so*/}-${PV}.so.${sharedlib/*.so./}" \
+				|| die
+			pushd `dirname "${sharedlib}"` > /dev/null || die
+			ln -sf "`basename "${sharedlib/.so*/}-${PV}.so.${sharedlib/*.so./}"`" \
+				"`basename "${sharedlib}"`" || die
+			popd > /dev/null || die
+		fi
+	done
 }
 
