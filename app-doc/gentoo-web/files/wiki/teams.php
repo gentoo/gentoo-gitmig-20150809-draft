@@ -59,44 +59,44 @@
 	</tr>
 <?php if ( $team_num != 6 ) { ?>
 	<tr>
-		<td>Unassigned Stable:</td>
+		<td><a href="teamtasks.php?team=<?=$team_num;?>&q=us">Unassigned Stable:</a></td>
 		<td><?=$us;?></td>
 	</tr>
 	<tr>
-		<td>Outstanding Stable:</td>
+		<td><a href="teamtasks.php?team=<?=$team_num;?>&q=os">Outstanding Stable:</a></td>
 		<td><?=$os;?></td>
 	</tr>
 	<tr>
-		<td>Unassigned Unstable:</td>
+		<td><a href="teamtasks.php?team=<?=$team_num;?>&q=uu">Unassigned Unstable:</a></td>
 		<td><?=$uu;?></td>
 	</tr>
 	<tr>
-		<td>Outstanding Unstable:</td>
+		<td><a href="teamtasks.php?team=<?=$team_num;?>&q=ou">Outstanding Unstable:</a></td>
 		<td><?=$ou;?></td>
 	</tr>
 	<tr>
-		<td>Unassigned Neither:</td>
+		<td><a href="teamtasks.php?team=<?=$team_num;?>&q=un">Unassigned Neither:</a></td>
 		<td><?=$un;?></td>
 	</tr>
 	<tr>
-		<td>Outstanding Neither:</td>
+		<td><a href="teamtasks.php?team=<?=$team_num;?>&q=on">Outstanding Neither:</a></td>
 		<td><?=$on;?></td>
 	</tr>
 	<tr>
-		<td>Outstanding All:</th>
+		<td><a href="teamtasks.php?team=<?=$team_num;?>&q=u">Outstanding All:</a></td>
 		<td><?=$outstanding;?></td>
 	</tr>
 	<tr>
-		<td>Unassigned All:</th>
+		<td><a href="teamtasks.php?team=<?=$team_num;?>&q=u">Unassigned All:</a></td>
 		<td><?=$unassigned;?></td>
 	</tr>
 <?php } else { ?>
 	<tr>
-		<td>Outstanding:</th>
+		<td><a href="teamtasks.php?team=<?=$team_num;?>&q=o">Outstanding:</a></td>
 		<td><?=$outstanding;?></td>
 	</tr>
 	<tr>
-		<td>Unassigned:</th>
+		<td><a href="teamtasks.php?team=<?=$team_num;?>&q=u">Unassigned:</a></td>
 		<td><?=$unassigned;?></td>
 	</tr>
 <?php } ?>
