@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.00.08.ebuild,v 1.8 2004/03/10 04:32:22 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/lvm2-2.00.08.ebuild,v 1.9 2004/04/26 14:39:05 agriffis Exp $
 
 DESCRIPTION="User-land utilities for LVM2 (device-mapper) software."
 HOMEPAGE="http://sources.redhat.com/lvm2/"
@@ -17,7 +17,7 @@ RDEPEND="${DEPEND}
 S="${WORKDIR}/${PN/lvm/LVM}.${PV}"
 
 src_compile() {
-	econf
+	econf || die "econf failed"
 
 	# Parallel build doesn't work.
 	emake -j1 || die "compile problem"

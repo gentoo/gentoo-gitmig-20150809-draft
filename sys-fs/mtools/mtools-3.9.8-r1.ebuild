@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/mtools-3.9.8-r1.ebuild,v 1.4 2004/03/07 19:16:45 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/mtools-3.9.8-r1.ebuild,v 1.5 2004/04/26 14:39:57 agriffis Exp $
 
 DESCRIPTION="utilities to access MS-DOS disks from Unix without mounting them"
 SRC_URI="http://mtools.linux.lu/${P}.tar.gz"
@@ -13,7 +13,7 @@ KEYWORDS="x86 ppc sparc alpha ~amd64"
 DEPEND="sys-apps/texinfo"
 
 src_compile() {
-	econf --sysconfdir=/etc/mtools
+	econf --sysconfdir=/etc/mtools || die "econf failed"
 	make || die
 }
 
