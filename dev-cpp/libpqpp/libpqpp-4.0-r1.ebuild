@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libpqpp/libpqpp-4.0-r1.ebuild,v 1.5 2004/06/24 21:50:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libpqpp/libpqpp-4.0-r1.ebuild,v 1.6 2004/06/29 14:58:06 agriffis Exp $
 
 inherit eutils
 
@@ -13,7 +13,8 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc
+	>=sys-apps/sed-4"
 RDEPEND=">=dev-db/postgresql-7.3"
 
 src_unpack() {
