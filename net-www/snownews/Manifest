@@ -1,18 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e136ca3c4b8271f402724196edaa152f snownews-1.5.4.ebuild 700
-MD5 ef9f3c1eda5c047f7642c9c6dc8f65e6 snownews-1.5.6.ebuild 789
-MD5 977418dd2334ac426fa3fd90f6a68b13 snownews-1.5.5.1.ebuild 738
-MD5 53dc04478d3a00780d503a2b282f7f4e ChangeLog 2496
+MD5 51ed4f6f0eaffba0121c41202120a87f snownews-1.5.6.1.ebuild 791
+MD5 addaa6bbde3710c4c55c7c874bf0cb02 snownews-1.5.5.1.ebuild 737
+MD5 ce81b49ad9a669e9476e606689792f10 ChangeLog 2786
 MD5 817fc324e8ff21847c777fa4352c826c metadata.xml 259
 MD5 83d43c97303a6a50bac26cd0e5463afa files/digest-snownews-1.5.5.1 68
-MD5 d16418f7b262a83e005bc8cfbae29d04 files/digest-snownews-1.5.4 66
-MD5 722bf1c90ef5daeb134df2b203efd8ee files/digest-snownews-1.5.6 66
+MD5 a61b8a14e4b44e66dd64cc0bb92b9ac0 files/digest-snownews-1.5.6.1 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBt1ra/UDVUK2NELYRAliHAJ4oEEWglUALEp3RhbsWbFmw0B4n4QCgy5fl
-U7iXS/zyd1tdJtKczMn4SNI=
-=Z7Qo
+iD8DBQFBuIz2/UDVUK2NELYRApAxAJ9cVoPPZyuDk2W2l/xpt45J9zLIYwCg3efg
+k5+SsdERZT0c9Io7yOxvBWU=
+=iDdr
 -----END PGP SIGNATURE-----

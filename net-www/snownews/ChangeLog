@@ -1,6 +1,13 @@
 # ChangeLog for net-www/snownews
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/snownews/ChangeLog,v 1.15 2004/12/08 19:49:35 citizen428 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/snownews/ChangeLog,v 1.16 2004/12/09 17:35:39 citizen428 Exp $
+
+*snownews-1.5.6.1 (09 Dec 2004)
+
+  09 Dec 2004; Michael Kohl <citizen428@gentoo.org> -snownews-1.5.4.ebuild,
+  snownews-1.5.5.1.ebuild, +snownews-1.5.6.1.ebuild, -snownews-1.5.6.ebuild:
+  Version bump for the bugfix release. Marked 1.5.5.1 stable on x86 and
+  cleaned out 1.5.4 and 1.5.6.
 
 *snownews-1.5.6 (08 Dec 2004)
 
