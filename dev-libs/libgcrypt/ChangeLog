@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.7 2003/01/03 07:01:11 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.8 2003/02/04 16:21:36 ykoehler Exp $
+
+*libgcrypt-1.1.10 (4 Feb 2003)
+
+  04 Feb 2003; Yannick Koehler <ykoehler@gentoo.org> libgcrypt-1.1.10.ebuild
+  files/digest-libgcrypt-1.1.10 :
+
+  Version bump.
 
   03 Jan 2003; Matthew Turk <satai@gentoo.org> :
   Changed docbook2X dependency to docbook-sgml-utils, as both have the same
