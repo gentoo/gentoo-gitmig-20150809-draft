@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unlzx/unlzx-1.1.ebuild,v 1.7 2002/08/02 04:58:29 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unlzx/unlzx-1.1.ebuild,v 1.8 2002/08/14 08:27:12 pvdabeel Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Unarchiver for Amiga LZX archives"
@@ -9,7 +9,7 @@ HOMEPAGE="ftp://us.aminet.net/pub/aminet/misc/unix/${PN}.c.gz.readme"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 DEPEND="virtual/glibc"
 

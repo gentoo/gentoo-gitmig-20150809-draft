@@ -1,8 +1,12 @@
 # ChangeLog for app-arch/kfilecoder
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/kfilecoder/ChangeLog,v 1.2 2002/07/15 21:40:33 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/kfilecoder/ChangeLog,v 1.3 2002/08/14 08:28:50 pvdabeel Exp $
 
 *kfilecoder-0.6.0_pre1 (16 Jul 2002)
+
+  14 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> :
+
+  Added ppc keyword
 
   16 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 

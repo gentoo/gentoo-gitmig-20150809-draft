@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-arch/kfilecoder/kfilecoder-0.6.0_pre1.ebuild,v 1.4 2002/07/27 10:44:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/kfilecoder/kfilecoder-0.6.0_pre1.ebuild,v 1.5 2002/08/14 08:28:50 pvdabeel Exp $
 inherit kde-base || die
 
 S=${WORKDIR}/${P//_/-}
@@ -11,6 +11,6 @@ HOMEPAGE="http://kfilecoder.sourceforge.net"
 
 
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 need-kde 3

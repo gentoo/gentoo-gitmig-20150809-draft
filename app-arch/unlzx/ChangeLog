@@ -1,8 +1,12 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unlzx/ChangeLog,v 1.1 2002/02/24 03:54:35 tod Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unlzx/ChangeLog,v 1.2 2002/08/14 08:27:12 pvdabeel Exp $
 
 *unlzx-1.1 (23 Feb 2002)
+
+  14 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> :
+
+  Added ppc keyword
 
   23 Feb 2002; T.Neidt <tod@gentoo.org> ChangeLog, unlzx-1.1.ebuild, digest-unlzx-1.1 :
  

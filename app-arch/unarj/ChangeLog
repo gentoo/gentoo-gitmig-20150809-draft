@@ -1,8 +1,12 @@
 # ChangeLog for app-arch/unarj
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unarj/ChangeLog,v 1.1 2002/07/19 21:54:02 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unarj/ChangeLog,v 1.2 2002/08/14 08:25:52 pvdabeel Exp $
 
 *unarj-2.63a (19 Jul 2002)
+
+  14 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> :
+  
+  Added ppc keyword
 
   19 Jul 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
   
