@@ -65,6 +65,7 @@ sys-apps/sysklogd
 *app-shells/sash
 
 *sys-devel/perl
+*dev-perl/ExtUtils-MakeMaker
 *net-ftp/ftp
 *net-misc/dhcpcd
 *net-misc/netkit-telnetd

@@ -80,6 +80,7 @@
 *sys-devel/make
 *sys-devel/patch
 *sys-devel/perl
+*dev-perl/ExtUtils-MakeMaker
 *sys-devel/spython
 *sys-libs/cracklib  
 *sys-libs/db

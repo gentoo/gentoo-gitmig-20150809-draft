@@ -47,6 +47,7 @@
 *app-shells/sash
 
 *<sys-devel/perl-5.8.0
+*dev-perl/ExtUtils-MakeMaker
 *app-editors/nano
 #no real cost for nano, since we already have ncurses
 *net-ftp/ftp
