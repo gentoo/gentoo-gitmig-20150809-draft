@@ -1,9 +1,13 @@
 # ChangeLog for net-irc/dircproxy
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/dircproxy/ChangeLog,v 1.1 2002/04/13 22:57:53 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/dircproxy/ChangeLog,v 1.2 2002/10/31 04:13:51 nall Exp $
 
 
 *dircproxy-1.0.3 (14 April 2002)
+
+  30 Oct 2002; Jon Nall <nall@gentoo.org> dircproxy-1.0.3.ebuild :
+
+  Added ~ppc to KEYWORDS
 
   14 April 2002; Bart Verwilst <verwilst@gentoo.org> Changelog :
 
