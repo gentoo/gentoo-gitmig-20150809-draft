@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.11 2002/10/25 21:37:54 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.12 2002/10/26 12:36:53 lostlogic Exp $
 # This eclass contains the common functions to be used by all lostlogic
 # based kernel ebuilds
 
@@ -46,11 +46,6 @@ kernel_universal_unpack() {
 
 	find . -iname "*~" | xargs rm 2> /dev/null
 
-	#fix silly permissions in tarball
-	cd ${WORKDIR}
-	chown -R 0.0 *
-	chmod -R a+r-w+X,u+w *
-
 	# Gentoo Linux uses /boot, so fix 'make install' to work properly
 	# also fix the EXTRAVERSION
 	cd ${S}
@@ -87,6 +82,12 @@ kernel_src_compile() {
 }
 
 kernel_src_install() {
+	#fix silly permissions in tarball
+	cd ${WORKDIR}
+	chown -R root:root *
+	chmod -R a+r-w+X,u+w *
+
+	cd ${S}
 	if [ "$ETYPE" = "sources" ]
 	then
 		dodir /usr/src
