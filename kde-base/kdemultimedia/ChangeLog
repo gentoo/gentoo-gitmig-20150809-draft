@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.62 2003/11/01 15:14:01 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.63 2003/11/04 19:29:49 caleb Exp $
+
+  04 Nov 2003; Caleb Tennis <caleb@gentoo.org> kdemultimedia-3.2.0_beta1.ebuild:
+  Add gstreamer use flag and dependency
 
 *kdemultimedia-3.2.0_beta1 (01 Nov 2003)
 
