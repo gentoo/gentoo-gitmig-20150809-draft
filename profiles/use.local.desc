@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.474 2004/07/10 09:34:23 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.475 2004/07/10 09:54:34 hattya Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -152,7 +152,6 @@ dev-libs/libsqlora8:pthreads - specifies use of POSIX threads
 dev-libs/opensc:pcsc-lite - build with pcsc-lite instead of openct
 dev-libs/pwlib:ieee1394 - enable dv/firewire camera support
 dev-lisp/clisp:threads - build CLISP with support for (experimental threads)
-dev-lisp/gauche-gtk:glgd - enable GL graph draw
 dev-lisp/sbcl:nosource - don't include source code for SBCL in the installation
 dev-lisp/sbcl:threads - build SBCL with support for native threads (x86 only)
 dev-ml/lablgl:glut - Enable glut support.
@@ -169,6 +168,7 @@ dev-ruby/ruby-sdl:image - enable sdl-image support
 dev-ruby/ruby-sdl:mixer - enable sdl-mixer support
 dev-scheme/bigloo-lib:expat - enable expat support
 dev-scheme/bigloo-lib:ipcs - enable ipcs support
+dev-scheme/gauche-gtk:glgd - enable GL graph draw
 dev-tex/preview-latex:xemacs - Adds support for XEmacs
 dev-util/eric:idl - Enable omniorb support
 dev-util/glade:gnomedb - Enable gnomedb widgets for Glade.

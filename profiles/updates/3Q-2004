@@ -8,3 +8,4 @@ move net-im/guifications x11-plugins/guifications
 move net-im/gaim-encryption x11-plugins/gaim-encryption
 move net-www/memcached net-misc/memcached
 move net-misc/freeswan net-misc/openswan
+move dev-lisp/gauche-gtk dev-scheme/gauche-gtk
