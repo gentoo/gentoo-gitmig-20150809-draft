@@ -1,0 +1,35 @@
+--- src/fileactiondialog.gob        17 Jun 2004 20:42:55 -0000      1.2
++++ src/fileactiondialog.gob        8 Oct 2004 11:57:46 -0000
+@@ -51,13 +51,16 @@
+     private const gchar *fname;
+ 
+     private GdkPixbuf *icon = { gnomebt_icon (); }
+-        destroywith gdk_pixbuf_unref;
+-
++	destroywith g_object_unref;
++	
+     private GdkPixbuf *mimeicon = { NULL; }
+-        destroywith gdk_pixbuf_unref;
++	destroywith g_object_unref;
+ 
+-	private GnomeVFSFileInfo *vfsinf = { NULL; }
+-        destroywith gnome_vfs_file_info_unref;
++    private GnomeVFSFileInfo *vfsinf = { NULL; }
++        destroy {
++		gnome_vfs_file_info_unref (vfsinf);
++		vfsinf = NULL;
++	};
+ 
+     private gchar *uri = { NULL; }
+         destroywith g_free;
+	 
+--- src/permissiondialog.gob        17 Jun 2004 20:42:55 -0000      1.7
++++ src/permissiondialog.gob        29 Jul 2004 17:13:39 -0000      1.8
+@@ -43,7 +43,7 @@
+     private GtkWidget *rememberbutton;
+
+     private GdkPixbuf *icon = { gnomebt_icon (); }
+-        destroywith gdk_pixbuf_unref;
++        destroywith g_object_unref;
+
+     private gboolean remember = FALSE;
