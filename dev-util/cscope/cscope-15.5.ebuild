@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/cscope-15.5.ebuild,v 1.3 2004/03/09 18:01:38 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cscope/cscope-15.5.ebuild,v 1.4 2004/03/16 06:38:50 usata Exp $
 
 inherit gnuconfig elisp-common
 
-S=${WORKDIR}/${P}
 DESCRIPTION="CScope - interactively examine a C program"
 SRC_URI="mirror://sourceforge/cscope/${P}.tar.gz"
 HOMEPAGE="http://cscope.sourceforge.net"
@@ -47,7 +46,7 @@ src_install() {
 	if use emacs; then
 		cd ${S}/contrib/xcscope || die
 		elisp-install xcscope *.el *.elc || die
-		PN=xcscope elisp-site-file-install ${FILESDIR}/${SITEFILE} || die
+		elisp-site-file-install ${FILESDIR}/${SITEFILE} xcscope || die
 		dobin cscope-indexer || die
 	fi
 	cp -r ${S}/contrib/webcscope ${D}/usr/share/doc/${P}/ || die
