@@ -8,9 +8,9 @@ MD5 89bfa93308a46f45e9b41adb7747ad0f transcode-0.6.13-r1.ebuild 2843
 MD5 f77841db926b2a9c34209a63977a74ff transcode-0.6.10.ebuild 3763
 MD5 b2575706251f8d608ded9ce2eb4c3fd5 transcode-0.6.12-r1.ebuild 3683
 MD5 eda344d807415c77c785330edc8bb445 transcode-0.6.12.ebuild 2918
-MD5 7a841b5c41642cb0ce257656d17ab11f ChangeLog 16549
+MD5 c0c04696b944069c122879978c977ef1 ChangeLog 16666
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
-MD5 92aa2c66d0a90a70eee8dbae6d17ea2a transcode-0.6.14.ebuild 3575
+MD5 c4088e4db2092bd9ee9b3630cd2c8b42 transcode-0.6.14.ebuild 3581
 MD5 936b66bb309cb3c1dfa33924d3114fa9 files/transcode-0.6.13-r1-bitstream.patch 446
 MD5 b2561dbf66455c878a08afd19868dc5d files/transcode-0.6.12-gcc-3.4.patch 2503
 MD5 ef79fbe94405505c11c537e07b25c669 files/digest-transcode-0.6.10 69
@@ -28,7 +28,7 @@ MD5 2cb7b1a00a0529a8256fc0104b5f2a09 files/transcode-gcc34.patch 460
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCL0d/06ebR+OMO78RAjq1AJ9BV8jd3ags/EuJyqIXdaRid6uCKQCfeWWI
-VHy1ebujQiArQ626Kb8y2gY=
-=fXY9
+iD8DBQFCMFIQ06ebR+OMO78RAtsrAJwPU9YVnymoVhg1WExiIOWfFtWsHwCfaB/b
+X297KDNdHo7zWzWyIt3K7ZI=
+=qouW
 -----END PGP SIGNATURE-----
