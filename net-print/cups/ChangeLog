@@ -1,7 +1,12 @@
 # ChangeLog for net-print/cups
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.10 2002/04/30 11:32:08 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.11 2002/05/02 04:14:36 jnelson Exp $
 
+*cups-1.1.14-r3 (1 May 2002)
+  1 May 2002; Jon Nelson <jnelson@gentoo.org> :
+  Added patch to allow for unstripped builds
+
+*cups-1.1.14-r3 (30 Apr 2002)
   30 Apr 2002; Seemant Kulleen <seemant@gentoo.org> :
   removed LICENSE.html from dodoc statement because html docs should not
   be gzipped.  there is already a LICENSE.txt.gz file in docs.
