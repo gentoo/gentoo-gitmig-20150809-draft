@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/point2play/point2play-1.3.ebuild,v 1.2 2004/06/23 22:51:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/point2play/point2play-1.3b.ebuild,v 1.1 2004/06/25 00:13:20 vapier Exp $
 
 inherit eutils
 
-MY_P=${PN}-small-${PV}
+MY_P=${PN}-small-1.3-2
 DESCRIPTION="graphical frontend for WineX"
 HOMEPAGE="http://www.transgaming.com/"
 SRC_URI="${MY_P}.tgz"
@@ -31,7 +31,7 @@ pkg_nofetch() {
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${PV}-fix-sound-test.patch
+	epatch ${FILESDIR}/1.3-fix-sound-test.patch
 }
 
 src_install() {

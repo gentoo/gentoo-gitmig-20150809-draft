@@ -1,26 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d4db7af546aea12e5adda85c3db484e8 ChangeLog 1790
+MD5 cfeb6173a88efce4525fe7d128946f19 ChangeLog 2011
 MD5 086d7322b591c18822e6a6ef25213c3b metadata.xml 465
 MD5 399eb0652e453efce8c987716c1cbfef point2play-1.1.1-r1.ebuild 906
-MD5 5bf426bb09f8557e11cfb1d7fd9863cd point2play-1.2.ebuild 901
-MD5 76b3d98d84a14584b25d9e593575bbc4 point2play-1.2.1.ebuild 814
-MD5 159695e1ee9bc376b138b46741932548 point2play-1.3.ebuild 944
+MD5 2f39adc5ec11b8f42e97a73585c58f15 point2play-1.3b.ebuild 943
 MD5 7d243e640984795605b7c4d91200ad47 point2play-1.2.2b-r2.ebuild 1026
 MD5 e4ff3be195cda12b76cdca866100ecfb files/Point2Play 281
 MD5 8f95e756e8e01ff5a51b2f52b32b2cbc files/1.1.1-python2.2.patch 1280
 MD5 05ea2cfbc96c5b4ecc398ad829c45bba files/digest-point2play-1.1.1-r1 71
 MD5 8f95e756e8e01ff5a51b2f52b32b2cbc files/1.2-python2.2.patch 1280
-MD5 82ee0eecdabe531c9b1aabcd4c912548 files/digest-point2play-1.2 69
-MD5 ebd7763c0f49a9cedfc2cd931c328117 files/digest-point2play-1.2.1 71
-MD5 aacc93775598929262ccc93f7e7d91ae files/digest-point2play-1.3 69
 MD5 04e6a404729841723f5e82c2128f9337 files/1.3-fix-sound-test.patch 1070
 MD5 ea2e65abe17a6dd0a9b7a36742acbdbf files/digest-point2play-1.2.2b-r2 68
+MD5 4287bf7793c5a3328415568405faf290 files/digest-point2play-1.3b 71
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.8 (GNU/Linux)
 
-iD8DBQFA2glkHTu7gpaalycRAi/tAJ47zbpzsLPDZcpxcu63Y2Zpsww8EwCdHYBY
-1S9Q/OhfriHJAj5A57zgKqo=
-=6mvC
+iD8DBQFA224tHTu7gpaalycRAh4nAJ9sb9a8t/Hydh2rUt6Pld9lNZuarQCg7+CD
+T6fJG+lxrvDaEcUitT7LrZw=
+=EVNA
 -----END PGP SIGNATURE-----
