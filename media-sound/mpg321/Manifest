@@ -1,8 +1,18 @@
-MD5 042cca15a80c02201adcab606180c1ad ChangeLog 3724
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f1ac549997693307c4a7a3d9c04a19f6 mpg321-0.2.10-r2.ebuild 1496
+MD5 d2d4a067070da869474c0108908d64b9 ChangeLog 3829
 MD5 c5bd906366b8075e1e082915c601a051 mpg321-0.2.10-r1.ebuild 1411
-MD5 bc66b0adf8c160efe6e9144533c3736c mpg321-0.2.10-r2.ebuild 1497
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 330f91ff24a94b674063b6fc2d0e04af files/mpg321-0.2.10.diff 1862
+MD5 f69e111b891dc01d56fb394621897e0d files/mpg321-0.1.5-ao.diff 7909
 MD5 7f4e867ab9a86c4f3618228fdccc48f4 files/digest-mpg321-0.2.10-r1 65
 MD5 7f4e867ab9a86c4f3618228fdccc48f4 files/digest-mpg321-0.2.10-r2 65
-MD5 f69e111b891dc01d56fb394621897e0d files/mpg321-0.1.5-ao.diff 7909
-MD5 330f91ff24a94b674063b6fc2d0e04af files/mpg321-0.2.10.diff 1862
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCT/u0M+I1L6GK/u4RAs6HAJ90En237u+u1mYq6Ny91KzXHJDLsACdGKwJ
+p/7HuA8q1pxTcY6iW/exHDo=
+=tqEg
+-----END PGP SIGNATURE-----
