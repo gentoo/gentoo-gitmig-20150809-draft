@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/gtkmathview
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/ChangeLog,v 1.1 2003/10/21 22:20:35 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkmathview/ChangeLog,v 1.2 2003/11/15 01:13:40 matsuu Exp $
+
+*gtkmathview-0.5.2 (15 Nov 2003)
+
+  15 Nov 2003; MATSUU Takuto <matsuu@gentoo.org> gtkmathview-0.5.2.ebuild:
+  Version bumped.
 
 *gtkmathview-0.5.1 (21 Oct 2003)
 
