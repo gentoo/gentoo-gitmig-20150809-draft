@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcxml/libcxml-5.2.0.ebuild,v 1.3 2003/06/23 17:04:20 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcxml/libcxml-5.2.0.ebuild,v 1.4 2003/08/19 18:01:17 taviso Exp $
 
 S=${WORKDIR}/usr
 SRC_URI=""
 DESCRIPTION="Compaqs eXtended Math Library for linux alpha"
-HOMEPAGE="http://h18000.www1.hp.com/math/index.html"
+HOMEPAGE="ftp://ftp.compaq.com/pub/products/linuxdevtools/latest/downloads.html"
 DEPEND="virtual/glibc
 		app-arch/rpm2targz
 		dev-libs/libots
