@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.2.ebuild,v 1.17 2004/01/04 16:20:24 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.2.ebuild,v 1.18 2004/03/15 14:44:11 aliz Exp $
+
+inherit eutils
 
 DESCRIPTION="A simple utility to read the temperature of SMART capable hard drives"
 SRC_URI="http://coredump.free.fr/linux/${P}.tar.gz
