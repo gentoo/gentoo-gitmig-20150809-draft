@@ -1,25 +1,26 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostview/ghostview-1.5-r1.ebuild,v 1.4 2003/07/11 20:35:23 aliz Exp $ 
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostview/ghostview-1.5-r1.ebuild,v 1.5 2003/08/05 18:45:34 vapier Exp $ 
 
-S=${WORKDIR}/${P}
+inherit eutils
+
 DESCRIPTION="A PostScript viewer for X11"
-SRC_URI="ftp://ftp.gnu.org/gnu/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/ghostview/"
-KEYWORDS="x86 ~ppc ~sparc "
-SLOT="0"
+SRC_URI="ftp://ftp.gnu.org/gnu/${PN}/${P}.tar.gz"
+
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 ~ppc ~sparc"
 
 DEPEND="virtual/glibc
         virtual/x11"
-
 RDEPEND="${DEPEND}
 	>=app-text/ghostscript-6.50-r2"
 
 src_unpack() { 
 	unpack ${A}
 	# This patch contains all the Debian patches and enables anti-aliasing.
-	patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
+	epatch ${FILESDIR}/${PF}-gentoo.diff
 }
 
 src_compile() {
