@@ -364,7 +364,6 @@ sys-kernel/linux-sources-vanilla
 <app-text/pspell-0.12
 <app-text/aspell-0.33
 >=sys-libs/readline-4.2
->=app-text/ghostscript-7
 
 # Unmask these two, as the latest (automake-1.6-r1 and autoconf-2.53)
 # should do some autodetection magic.
