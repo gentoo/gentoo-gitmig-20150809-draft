@@ -1,8 +1,13 @@
 # ChangeLog for media-sound/bpmdj
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bpmdj/ChangeLog,v 1.5 2003/07/15 17:12:16 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bpmdj/ChangeLog,v 1.6 2003/08/21 12:23:18 usata Exp $
 
 *bpmdj-1.9 (15 Jul 2003)
+
+  21 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> bpmdj-1.5.ebuild,
+  bpmdj-1.6.ebuild, bpmdj-1.7.ebuild, bpmdj-1.8.ebuild, bpmdj-1.9.ebuild:
+  Added tetex to DEPEND list. Thanks to Rossen Apostolov
+  <rossen@protein.osaka-u.ac.jp> for reporting.  Closing bug #27031
 
   15 Jul 2003; root <root@gentoo.org> bpmdj-1.9.ebuild:
   yet another release
