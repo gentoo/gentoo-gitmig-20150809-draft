@@ -3,7 +3,7 @@
 # halt		Execute the halt command.
 #
 # Version:      @(#)halt  2.75  19-May-1998  miquels@cistron.nl
-#               modified by Holger Brueckner <darksi@gentoo.org>
+#               modified by Holger Brueckner <darks@gentoo.org>
 #               for apcupsd 28-June-2001
 
 PATH=/sbin:/bin:/usr/sbin:/usr/bin
