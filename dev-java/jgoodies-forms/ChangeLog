@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jgoodies-forms
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-forms/ChangeLog,v 1.3 2005/03/30 23:49:14 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-forms/ChangeLog,v 1.4 2005/04/03 09:13:57 sejo Exp $
+
+  03 Apr 2005; <SeJo@gentoo.org> jgoodies-forms-1.0.5.ebuild:
+  added ~ppc keyword
 
   30 Mar 2005; Saleem Abdulrasool <compnerd@gentoo.org> files/build.xml,
   metadata.xml, jgoodies-forms-1.0.5.ebuild:
