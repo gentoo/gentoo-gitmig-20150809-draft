@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.74 2004/02/05 16:41:48 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.75 2004/02/10 07:31:03 pylon Exp $
+
+  10 Feb 2004; Lars Weiler <pylon@gentoo.org> kdegraphics-3.2.0.ebuild:
+  Stable on ppc.
 
   05 Feb 2004; Luca Barbato <lu_zero@gentoo.org> kdegraphics-3.2.0.ebuild:
   Marked ~ppc

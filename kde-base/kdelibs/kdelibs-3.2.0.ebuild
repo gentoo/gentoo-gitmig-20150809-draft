@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0.ebuild,v 1.6 2004/02/09 14:24:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0.ebuild,v 1.7 2004/02/10 07:31:03 pylon Exp $
 inherit kde
 
 need-autoconf 2.5
@@ -12,7 +12,7 @@ SRC_URI="mirror://kde/stable/${PV/3.2.0/3.2}/src/${PN}-${PV}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.2"
-KEYWORDS="~x86 ~ppc ~sparc ~hppa ~amd64"
+KEYWORDS="~x86 ppc ~sparc ~hppa ~amd64"
 IUSE="alsa cups ipv6 ssl doc ldap"
 
 # kde.eclass has kdelibs in DEPEND, and we can't have that in here.
