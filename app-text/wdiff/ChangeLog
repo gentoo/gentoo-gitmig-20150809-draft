@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wdiff
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/ChangeLog,v 1.6 2004/06/24 22:55:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wdiff/ChangeLog,v 1.7 2004/06/28 04:18:57 ciaranm Exp $
+
+  28 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> wdiff-0.5.ebuild:
+  Added ~sparc, ~mips
 
   21 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> wdiff-0.5.ebuild:
   IUSE sync
