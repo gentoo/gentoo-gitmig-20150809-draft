@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.0_pre4-r2.ebuild,v 1.8 2002/08/19 17:59:21 cybersystem Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.0_pre4-r2.ebuild,v 1.9 2002/10/04 06:20:51 vapier Exp $
 
 NV=6.0-20020110.2-shared_qt.i386
 S=${WORKDIR}/opera-${NV}

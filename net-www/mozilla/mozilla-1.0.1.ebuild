@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0.1.ebuild,v 1.1 2002/09/28 19:22:09 azarah Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0.1.ebuild,v 1.2 2002/10/04 06:20:32 vapier Exp $
 
 # NOTE: to build without the mail and news component:  export NO_MAIL="YES"
 inherit flag-o-matic gcc makeedit

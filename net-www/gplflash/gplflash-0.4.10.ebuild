@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Id: gplflash-0.4.10.ebuild,v 1.6 2002/08/23 15:46:31 cybersystem Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Id: gplflash-0.4.10.ebuild,v 1.7 2002/10/04 06:19:32 vapier Exp $
 
 S=${WORKDIR}/flash-0.4.10
 DESCRIPTION="GPL Shockwave Flash Player/Plugin"

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0-r3.ebuild,v 1.11 2002/09/08 12:55:07 spider Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.0-r3.ebuild,v 1.12 2002/10/04 06:20:27 vapier Exp $
 
 inherit makeedit
 # NOTE: to build without the mail and news component:  export NO_MAIL="YES"

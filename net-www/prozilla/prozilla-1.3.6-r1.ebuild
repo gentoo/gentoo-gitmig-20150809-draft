@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-#$Header: /var/cvsroot/gentoo-x86/net-www/prozilla/prozilla-1.3.6-r1.ebuild,v 1.4 2002/09/26 21:14:31 blizzy Exp $
+# Distributed under the terms of the GNU General Public License v2
+#$Header: /var/cvsroot/gentoo-x86/net-www/prozilla/prozilla-1.3.6-r1.ebuild,v 1.5 2002/10/04 06:21:06 vapier Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="A download manager"

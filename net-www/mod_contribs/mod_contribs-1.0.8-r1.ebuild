@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_contribs/mod_contribs-1.0.8-r1.ebuild,v 1.3 2002/08/16 03:01:01 murphy Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_contribs/mod_contribs-1.0.8-r1.ebuild,v 1.4 2002/10/04 06:19:56 vapier Exp $
 
 # The mod_layout and mod_random that come in the archive are really old,
 # so I've replaced them with more current versions.

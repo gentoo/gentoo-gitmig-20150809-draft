@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.26-r4.ebuild,v 1.7 2002/10/02 13:01:43 woodchip Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.26-r4.ebuild,v 1.8 2002/10/04 06:18:59 vapier Exp $
 
 mod_ssl_ver=2.8.9-${PV}
 HARD_SERVER_LIMIT=512
