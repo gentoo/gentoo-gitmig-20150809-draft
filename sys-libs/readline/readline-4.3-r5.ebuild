@@ -1,22 +1,21 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r5.ebuild,v 1.2 2003/12/17 04:22:11 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r5.ebuild,v 1.3 2004/01/21 00:56:45 vapier Exp $
 
 inherit eutils
 
 # Official patches
 PLEVEL="x001 x002 x003 x004 x005"
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="Another cute console display library"
+HOMEPAGE="http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html"
 SRC_URI="ftp://ftp.gnu.org/gnu/readline/${P}.tar.gz
 	 ftp://gatekeeper.dec.com/pub/GNU/readline/${P}.tar.gz
 	 ${PLEVEL//x/ftp://ftp.gnu.org/gnu/${PN}/${PN}-${PV}-patches/${PN}${PV/\.}-}"
-HOMEPAGE="http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~x86 ~ppc ~sparc ~alpha ~hppa ~arm ~mips ~ia64 ppc64"
+SLOT="0"
+KEYWORDS="~amd64 ~x86 ~ppc ~sparc ~alpha hppa ~arm ~mips ~ia64 ppc64"
 
 # We must be sertain that we have a bash that is linked
 # to its internal readline, else we may get problems.
