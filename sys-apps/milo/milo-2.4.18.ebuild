@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/milo/milo-2.4.18.ebuild,v 1.2 2003/06/05 10:28:49 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/milo/milo-2.4.18.ebuild,v 1.3 2003/06/05 18:32:04 taviso Exp $
 
 # Currently tested Systems:
 # 	
@@ -100,6 +100,46 @@ src_compile() {
 	# no ccc sorry :(
 	is-ccc && die "sorry, ccc not supported."
 	
+	unset MILO_ARCH 
+	for arches in	"Alpha-XLT  XLT"		\
+					"Alpha-XL   XL"			\
+					"AlphaBook1 BOOK1"		\
+					"Avanti     AVANTI" 	\
+					"Cabriolet  CABRIOLET"	\
+					"EB66       EB66"		\
+					"EB66+      EB66P"		\
+					"EB64+      EB64P"		\
+					"EB164      EB164"		\
+					"PC164      PC164"		\
+					"LX164      LX164"		\
+					"SX164      SX164"		\
+					"Noname     NONAME"		\
+					"Takara     TAKARA"		\
+					"Mikasa     MIKASA"		\
+					"Alcor      ALCOR"		\
+					"Miata      MIATA"		\
+					"Ruffian    RUFFIAN"	\
+					"Platform2000   P2K"	\
+					"UDB        UDB"
+	do
+		if [ -z "${MILO_IMAGE}" ]; then
+			MILO_ARCH="${MILO_ARCH} ${arches}"
+		else
+			if echo ${arches} | grep -i ${MILO_IMAGE}; then
+				MILO_ARCH="${arches}"
+			fi
+		fi
+	done
+	
+	if [ -z "${MILO_ARCH}" ]; then
+		eerror "Sorry, but ${MILO_IMAGE} doesnt look valid to me"
+		eerror "Consult the Alpha installation guide, or the ebuild"
+		eerror "for a list of available Alphas."
+		die "${MILO_IMAGE} not supported, or not recognised."
+	fi
+	
+	export MILO_ARCH
+
 	ewarn
 	ewarn "seriously, this is going to take a while, go get some coffee..."
 	ewarn 

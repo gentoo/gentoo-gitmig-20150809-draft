@@ -10,31 +10,31 @@ int main()
 {
 	long long serial_no[2];
 	
-	/* 1) Linux_is_Great!		  	  */
+	/* 1) Linux_is_Great!             */
 	/*               s i _ x u n i L  */	
 	serial_no[0] = 0x73695f78756e694c;
 	/*                 ! t a e r G _  */
 	serial_no[1] = 0x002174616572475f; 
 
-	/* 2) Gentoo Linux.		  		  */
+	/* 2) Gentoo Linux.               */
 	/*               L   o o t n e G  */
 	serial_no[0] = 0x4c206f6f746e6547;
 	/*                     . x u n i  */
 	serial_no[1] = 0x0000002e78756e69;
 	
-	/* 3) Gentoo/Alpha.				  */
+	/* 3) Gentoo/Alpha.               */
 	/*                A / o o t n e G */	
 	 serial_no[0] = 0x412f6f6f746e6547;
 	/*                       .a h p l */
 	 serial_no[1] = 0x0000002e6168706c;
 
-	/* 4) Gentoo MILO.				  */
+	/* 4) Gentoo MILO.                */
 	/*               M   o o t n e G  */
 	serial_no[0] = 0x4d206f6f746e6547;
 	/*                        . O L I */
 	serial_no[1] = 0x000000002e4f4c49;
 
-	/* 5) |d|i|g|i|t|a|l|			  */
+	/* 5) |d|i|g|i|t|a|l|             */
 	/*               i | g | i | d |  */
 	serial_no[0] = 0x697c677c697c647c;
 	/*                 | l | a | t |  */
