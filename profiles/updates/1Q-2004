@@ -2,3 +2,4 @@ move app-misc/gtkdiff x11-misc/gtkdiff
 move app-misc/gcolor x11-misc/gcolor
 move dev-libs/libpq++ dev-cpp/libpqpp
 move dev-python/4Suite dev-python/4suite
+move dev-python/Cheetah dev-python/cheetah
