@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libcap
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.28 2004/07/16 01:38:37 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/ChangeLog,v 1.29 2004/10/01 14:35:52 blubb Exp $
+
+  01 Oct 2004; Simon Stelling <blubb@gentoo.org> libcap-1.10-r3.ebuild,
+  libcap-1.10-r4.ebuild:
+  get_libdir-ized
 
   15 Jul 2004; Tom Gall <tgall@gentoo.org> libcap-1.10-r4.ebuild:
   stable on ppc64, bug #55530

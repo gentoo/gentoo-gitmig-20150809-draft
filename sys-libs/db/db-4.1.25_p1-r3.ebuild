@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.25_p1-r3.ebuild,v 1.25 2004/09/09 12:36:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.25_p1-r3.ebuild,v 1.26 2004/10/01 14:33:56 blubb Exp $
 
 inherit eutils gnuconfig db
 
@@ -62,7 +62,7 @@ src_compile() {
 		|| myconf="${myconf} --disable-java"
 
 	use tcltk \
-		&& myconf="${myconf} --enable-tcl --with-tcl=/usr/lib" \
+		&& myconf="${myconf} --enable-tcl --with-tcl=/usr/$(get_libdir)" \
 		|| myconf="${myconf} --disable-tcl"
 
 	if use java && [ -n "${JAVAC}" ]; then

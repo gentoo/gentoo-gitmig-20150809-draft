@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10-r3.ebuild,v 1.14 2004/07/02 08:46:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10-r3.ebuild,v 1.15 2004/10/01 14:35:52 blubb Exp $
 
 inherit flag-o-matic eutils
 
@@ -34,7 +34,7 @@ src_compile() {
 	local PYTHONVER="`python -V 2>&1 | sed 's/^Python //'|sed 's/\([0-9]*\.[0-9]*\).*/\1/'`"
 	local myflags=""
 	if use python ; then
-		myflags="${myflags} PYTHON=1 PYTHONMODDIR=/usr/lib/python${PYTHONVER}/site-packages"
+		myflags="${myflags} PYTHON=1 PYTHONMODDIR=/usr/$(get_libdir)/python${PYTHONVER}/site-packages"
 		append-flags -I/usr/include/python${PYTHONVER}
 	fi
 
@@ -49,8 +49,8 @@ src_install() {
 	local PYTHONVER="`python -V 2>&1 | sed 's/^Python //'|sed 's/\([0-9]*\.[0-9]*\).*/\1/'`"
 	local myflags=""
 	if use python ; then
-		myflags="${myflags} PYTHON=1 PYTHONMODDIR=${D}/usr/lib/python${PYTHONVER}/site-packages"
+		myflags="${myflags} PYTHON=1 PYTHONMODDIR=${D}/usr/$(get_libdir)/python${PYTHONVER}/site-packages"
 	fi
-	make install FAKEROOT="${D}" man_prefix=/usr/share ${myflags} || die
+	make install FAKEROOT="${D}" man_prefix=/usr/share LIBDIR="${D}/$(get_libdir)" ${myflags} || die
 	dodoc CHANGELOG README pgp.keys.asc doc/capability.notes
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/device-mapper/device-mapper-1.00.19-r1.ebuild,v 1.3 2004/09/03 19:14:07 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/device-mapper/device-mapper-1.00.19-r1.ebuild,v 1.4 2004/10/01 14:34:31 blubb Exp $
 
 inherit eutils
 
@@ -11,6 +11,7 @@ SRC_URI="ftp://sources.redhat.com/pub/dm/${PN}.${PV}.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ppc ~sparc ~amd64 ppc64 ~alpha"
+IUSE=""
 
 DEPEND="virtual/linux-sources"
 
@@ -36,8 +37,8 @@ src_compile() {
 }
 
 src_install() {
-	einstall sbindir="${D}/sbin" libdir="${D}/lib"
-	dolib.a lib/ioctl/libdevmapper.a
+	einstall sbindir="${D}/sbin" libdir="${D}/$(get_libdir)"
+	dolib.a $(get_libdir)/ioctl/libdevmapper.a
 
 	# bug #4411
 	gen_usr_ldscript libdevmapper.so || die "gen_usr_ldscript failed"

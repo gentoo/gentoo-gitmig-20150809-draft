@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.1.ebuild,v 1.19 2004/09/27 21:30:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.1.ebuild,v 1.20 2004/10/01 14:34:57 blubb Exp $
 
 # Please use this variable to keep patch names sane for our patches!
 PATCH_VER="1.0"
@@ -55,8 +55,8 @@ src_compile() {
 src_install() {
 	einstall
 
-	chmod 755 ${D}/usr/lib/*
-	# Fix missing /usr/lib/libgpm.so.1
+	chmod 755 ${D}/usr/$(get_libdir)/*
+	# Fix missing /usr/$(get_libdir)/libgpm.so.1
 	preplib
 
 	dodoc BUGS COPYING ChangeLog Changes MANIFEST README TODO

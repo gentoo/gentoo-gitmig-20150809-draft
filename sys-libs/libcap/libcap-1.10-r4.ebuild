@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10-r4.ebuild,v 1.7 2004/07/16 01:38:37 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libcap/libcap-1.10-r4.ebuild,v 1.8 2004/10/01 14:35:52 blubb Exp $
 
 inherit flag-o-matic eutils
 
@@ -36,7 +36,7 @@ src_compile() {
 	local myflags=""
 	use static && CFLAGS="${CFLAGS} -static" && LDFLAGS="${LDFLAGS} -static"
 	if use python ; then
-		myflags="${myflags} PYTHON=1 PYTHONMODDIR=/usr/lib/python${PYTHONVER}/site-packages"
+		myflags="${myflags} PYTHON=1 PYTHONMODDIR=/usr/$(get_libdir)/python${PYTHONVER}/site-packages"
 		append-flags -I/usr/include/python${PYTHONVER}
 	fi
 
@@ -47,10 +47,10 @@ src_install() {
 	local PYTHONVER="`python -V 2>&1 | sed 's/^Python //'|sed 's/\([0-9]*\.[0-9]*\).*/\1/'`"
 	local myflags=""
 	if use python ; then
-		myflags="${myflags} PYTHON=1 PYTHONMODDIR=${D}/usr/lib/python${PYTHONVER}/site-packages"
+		myflags="${myflags} PYTHON=1 PYTHONMODDIR=${D}/usr/$(get_libdir)/python${PYTHONVER}/site-packages"
 	fi
-	make install FAKEROOT="${D}" man_prefix=/usr/share ${myflags} || die
-	dodir /usr/lib
-	mv ${D}/lib/libcap.a ${D}/usr/lib
+	make install FAKEROOT="${D}" man_prefix=/usr/share LIBDIR="${D}/$(get_libdir)" ${myflags} || die
+	dodir /usr/$(get_libdir)
+	mv ${D}/$(get_libdir)/libcap.a ${D}/usr/$(get_libdir)
 	dodoc CHANGELOG README pgp.keys.asc doc/capability.notes capfaq-0.2.txt
 }
