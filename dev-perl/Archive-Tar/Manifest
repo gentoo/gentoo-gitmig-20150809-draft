@@ -1,26 +1,16 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 178db9f07dba8881e3637f299b976965 Archive-Tar-0.22-r1.ebuild 543
-MD5 7a43d409eae626924151874abde50acd Archive-Tar-0.22.ebuild 540
-MD5 aac666fad95ef4bdc139903618f25a59 Archive-Tar-1.00.ebuild 603
 MD5 3109b96bc158387cee3c80744e3e0238 Archive-Tar-1.03.ebuild 640
 MD5 0e21f73698c54ac665d71cd9e14fce6c Archive-Tar-1.05.ebuild 651
-MD5 94611ea683065160aca85dd1e00f2095 ChangeLog 2556
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 a6942100e24ddecf09a22209e558d8fd Archive-Tar-1.09.ebuild 647
+MD5 aac666fad95ef4bdc139903618f25a59 Archive-Tar-1.00.ebuild 603
+MD5 d22499f51d2ee79be55d5b91462c940f Archive-Tar-1.09.ebuild 647
 MD5 be0cb46bf080767f52ebae7a33756179 Archive-Tar-1.10.ebuild 656
-MD5 72ec20dcefcab7ea32233243f74bd8e2 files/digest-Archive-Tar-0.22 67
+MD5 7a43d409eae626924151874abde50acd Archive-Tar-0.22.ebuild 540
+MD5 5762a87d9cc6eb2ba6614ba69417e5e2 ChangeLog 2664
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 178db9f07dba8881e3637f299b976965 Archive-Tar-0.22-r1.ebuild 543
 MD5 72ec20dcefcab7ea32233243f74bd8e2 files/digest-Archive-Tar-0.22-r1 67
+MD5 72ec20dcefcab7ea32233243f74bd8e2 files/digest-Archive-Tar-0.22 67
 MD5 d2a15c0f5c163430b9a19b866881db2e files/digest-Archive-Tar-1.00 67
 MD5 e03b12a0cf5a8e2ccb4ac1355844277b files/digest-Archive-Tar-1.03 67
 MD5 bf3c1aae9673ed24ae8ec3a323cd1050 files/digest-Archive-Tar-1.05 67
 MD5 01266b45c9ae333ac8ba534d17c7c6a0 files/digest-Archive-Tar-1.09 67
 MD5 0c776c93b2814f4eec0e5c449cd429b1 files/digest-Archive-Tar-1.10 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBnsu3mdTrptrqvGERAhzHAKCQvj7XlH3ZOtD95JddF6+Y1y7UIwCfQ8pr
-AfD9uEJEEzcp2KytWmAgua8=
-=OWTR
------END PGP SIGNATURE-----
