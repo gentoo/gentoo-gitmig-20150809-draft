@@ -1,0 +1,62 @@
+--- build.xml.orig	2005-03-28 20:13:10.394118008 +0200
++++ build.xml	2005-03-28 21:20:41.274290616 +0200
+@@ -62,9 +62,6 @@
+ 	<!-- Set the properties for library directories -->
+ 	<property name="library.directory" value="lib" />
+ 
+-      <taskdef name="jarbundler"
+-                  classpath="${library.directory}/jarbundler-1.4.jar"
+-                  classname="com.loomcom.ant.tasks.jarbundler.JarBundler" />
+ 
+ 
+ 
+@@ -73,6 +70,7 @@
+ 		<pathelement path="${build.classes}" />
+ 		<pathelement location="${library.directory}/commons-httpclient-2.0.jar" />
+ 		<pathelement location="${library.directory}/commons-logging.jar" />
++		<pathelement location="${library.directory}/forms.jar" />
+ 		<fileset dir="${library.directory}">
+ 			<include name="*.jar" />
+ 		</fileset>
+@@ -92,11 +90,11 @@
+ 			<exclude name="tests/**"/>
+ 			<classpath>
+ 				<pathelement path="${build.classes}" />
+-				<pathelement location="${library.directory}/commons-httpclient-2.0.jar" />
++				<pathelement location="${library.directory}/commons-httpclient.jar" />
+ 				<pathelement location="${library.directory}/commons-logging.jar" />
+ 				<pathelement location="${library.directory}/antlr.jar" />
+-				<pathelement location="${library.directory}/looks-1.2.2.jar" />
+-				<pathelement location="${library.directory}/forms-1.0.4.jar" />
++				<pathelement location="${library.directory}/looks.jar" />
++				<pathelement location="${library.directory}/forms.jar" />
+ 				<pathelement location="${library.directory}/spin.jar" />
+ 			</classpath>
+ 		</javac>
+@@ -225,12 +223,12 @@
+ 	<!-- Unpacks jar needed jar files from lib directory into temp directory. -->
+ 	<target name="unjarlib" description="Unpacks jars from library">
+ 		<mkdir dir="${build.tmp}"/>
+-		<unjar src="${library.directory}/commons-httpclient-2.0.jar" dest="${build.tmp}" />
++		<unjar src="${library.directory}/commons-httpclient.jar" dest="${build.tmp}" />
+ 		<unjar src="${library.directory}/commons-logging.jar" dest="${build.tmp}" />
+ 		<unjar src="${library.directory}/antlr.jar" dest="${build.tmp}" />
+ 		<!--                <unjar src="${library.directory}/plastic-1.2.1.jar" dest="${build.classes}" />-->
+-		<unjar src="${library.directory}/looks-1.2.2.jar" dest="${build.tmp}" />
+-		<unjar src="${library.directory}/forms-1.0.4.jar" dest="${build.tmp}" />
++		<unjar src="${library.directory}/looks.jar" dest="${build.tmp}" />
++		<unjar src="${library.directory}/forms.jar" dest="${build.tmp}" />
+ 		<unjar src="${library.directory}/spin.jar" dest="${build.tmp}" />
+ 		<delete dir="${build.tmp}/META-INF"/>
+ 	</target>
+@@ -360,8 +358,8 @@
+ 				<pathelement location="${library.directory}/commons-httpclient-2.0.jar" />
+ 				<pathelement location="${library.directory}/commons-logging.jar" />
+ 				<pathelement location="${library.directory}/antlr.jar" />
+-				<pathelement location="${library.directory}/looks-1.2.2.jar" />
+-				<pathelement location="${library.directory}/looks-1.2.2.jar" />
++				<pathelement location="${library.directory}/looks.jar" />
++				<pathelement location="${library.directory}/looks.jar" />
+ 				<pathelement location="${library.directory}/spin.jar" />
+ 			</classpath>
+ 
