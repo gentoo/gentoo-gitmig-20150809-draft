@@ -1,6 +1,11 @@
-# ChangeLog for x11-misc/xscreensaver
+ ChangeLog for x11-misc/xscreensaver
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.57 2004/07/24 05:43:09 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.58 2004/07/24 06:28:11 liquidx Exp $
+
+  24 Jul 2004; Alastair Tse <liquidx@gentoo.org>
+  +files/xscreensaver-4.16-nsfw.patch, xscreensaver-4.16.ebuild:
+  implemented a "offensive" USE flag to allow users to explicitly
+  enable questionable shapes in glsnakes (#46256)
 
 *xscreensaver-4.16 (24 Jul 2004)
 
