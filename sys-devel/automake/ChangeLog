@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/automake
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.3 2002/03/21 20:45:42 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/ChangeLog,v 1.4 2002/04/07 06:35:03 azarah Exp $
+
+automake-1.5d-r2 (21 March 2002)
+
+  7 April 2002; M.Schlemmer <azarah@gentoo.org> :
+
+  Change the names of the 1.5x binaries to foo-${PV}, since they do support
+  limited parallel versions, and foo-1.5x breaks recursion if they call
+  themselfs.  Fixed doc paths.
 
 *automake-1.6-r1 (21 March 2002)
 
