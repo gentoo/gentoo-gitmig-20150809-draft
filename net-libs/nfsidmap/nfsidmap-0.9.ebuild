@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/nfsidmap/nfsidmap-0.9.ebuild,v 1.1 2005/02/04 23:32:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/nfsidmap/nfsidmap-0.9.ebuild,v 1.2 2005/03/15 04:39:55 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -19,9 +19,9 @@ RDEPEND="${DEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
 
-	epatch ${FILESDIR}/0.7-optional-ldap.patch
+	epatch "${FILESDIR}"/${P}-optional-ldap.patch
 
 	use ldap \
 		&& append-flags -DENABLE_LDAP \
