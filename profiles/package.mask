@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2678 2004/02/05 08:00:11 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2679 2004/02/06 05:04:58 spider Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -190,10 +190,14 @@ app-portage/kportage
 
 # <seemant@gentoo.org> 12 Dec 2003)
 # All the sylpheed-gtk2 versions will be masked here together
+# The sylpheed-0.9.8-r2 is probably the ugliest ebuild I've ever made.
+# But it works. sorta. :)
 =net-mail/sylpheed-claws-0.9.5-r1
 =net-mail/sylpheed-0.9.4-r1
 =net-mail/sylpheed-0.9.5-r1
 =net-mail/sylpheed-0.9.8-r1
+=net-mail/sylpheed-0.9.8-r2
+
 
 # <solar@gentoo.org> (Dec 10 2003) 
 # masked for security reasons, see bug #30554 
