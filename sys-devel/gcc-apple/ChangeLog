@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc-apple
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/ChangeLog,v 1.1 2005/02/19 18:46:02 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/ChangeLog,v 1.2 2005/02/19 23:57:24 swegener Exp $
+
+  20 Feb 2005; Sven Wegener <swegener@gentoo.org> gcc-apple-1762.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
 *gcc-apple-1762 (19 Feb 2005)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-1762.ebuild,v 1.1 2005/02/19 18:46:02 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-apple/gcc-apple-1762.ebuild,v 1.2 2005/02/19 23:57:24 swegener Exp $
 
 S=${WORKDIR}/gcc-${PV}
 
@@ -15,13 +15,13 @@ KEYWORDS="-* ~ppc-macos"
 IUSE="build nls"
 
 RDEPEND="virtual/libc
-		>=sys-libs/zlib
+		sys-libs/zlib
 		!build? (
 			nls? ( sys-devel/gettext )
 			sys-libs/ncurses
 		)"
 
-DEPEND=">=sys-apps/texinfo
+DEPEND="sys-apps/texinfo
 		sys-devel/bison
 		sys-devel/cctools-extras
 		sys-libs/csu"
