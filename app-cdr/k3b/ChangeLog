@@ -1,6 +1,12 @@
 # ChangeLog for app-cdr/k3b
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.87 2005/01/13 13:29:32 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.88 2005/01/14 23:28:58 danarmak Exp $
+
+  15 Jan 2005; Dan Armak <danarmak@gentoo.org> k3b-0.11.17.ebuild,
+  k3b-0.11.18-r1.ebuild, k3b-0.11.18.ebuild:
+  Changed dep on kdebase to accept kdebase-meta, the split 'meta' package.
+  This dep will be narrowed down in the future to the precise split packages
+  required.
 
 *k3b-0.11.18-r1 (13 Jan 2005)
 

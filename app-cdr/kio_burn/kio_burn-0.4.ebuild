@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/kio_burn/kio_burn-0.4.ebuild,v 1.6 2005/01/01 12:16:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kio_burn/kio_burn-0.4.ebuild,v 1.7 2005/01/14 23:30:57 danarmak Exp $
 
 inherit kde eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE=""
 
-DEPEND=">=kde-base/kdebase-3.2.0
+DEPEND="|| ( kde-base/kdebase-meta >=kde-base/kdebase-3.2.0 )
 	virtual/cdrtools
 	media-libs/libvorbis
 	media-libs/audiofile"
