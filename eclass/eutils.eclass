@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.127 2004/12/11 21:09:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.128 2004/12/23 09:20:45 eradicator Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -50,6 +50,15 @@ ebeep() {
 # where lib is named directly with $(get_libdir) if possible.
 #
 # Travis Tilley <lv@gentoo.org> (24 Aug 2004)
+#
+# Jeremy Huddleston <eradicator@gentoo.org> (23 Dec 2004):
+#   Added support for ${ABI} and ${DEFAULT_ABI}.  If they're both not set,
+#   fall back on old behavior.  Any profile that has these set should also
+#   depend on a newer version of portage (not yet released) which uses these
+#   over CONF_LIBDIR in econf, dolib, etc...
+#
+#   For now, this is restricted to the sparc64-multilib ${PROFILE_ARCH} as it
+#   is still in testing.
 get_libdir() {
 	LIBDIR_TEST=$(type econf)
 	if [ ! -z "${CONF_LIBDIR_OVERRIDE}" ] ; then
@@ -64,6 +73,8 @@ get_libdir() {
 	#	# and friends from portage 2.0.50 wont be too happy otherwise.
 	#	CONF_LIBDIR="lib"
 	#fi
+	elif [ "${PROFILE_ARCH}" = "sparc64-multilib" ]; then # Using eradicator's LIBDIR_<abi> approach...
+		CONF_LIBDIR="$(get_abi_LIBDIR)"
 	elif [ "${LIBDIR_TEST/CONF_LIBDIR}" == "${LIBDIR_TEST}" ]; then # we don't have CONF_LIBDIR support
 		# will be <portage-2.0.51_pre20
 		CONF_LIBDIR="lib"
@@ -73,11 +84,10 @@ get_libdir() {
 	unset LIBDIR_TEST
 }
 
-
 get_multilibdir() {
+	[ "${PROFILE_ARCH}" = "sparc64-multilib" ] && die "get_multilibdir called, but it shouldn't be needed on sparc64-multilib"
 	echo ${CONF_MULTILIBDIR:=lib32}
 }
-
 
 # Sometimes you need to override the value returned by get_libdir. A good
 # example of this is xorg-x11, where lib32 isnt a supported configuration,
@@ -91,6 +101,7 @@ get_multilibdir() {
 #
 # Travis Tilley <lv@gentoo.org> (31 Aug 2004)
 get_libdir_override() {
+	[ "${PROFILE_ARCH}" = "sparc64-multilib" ] && die "get_libdir_override called, but it shouldn't be needed on sparc64-multilib..."
 	CONF_LIBDIR="$1"
 	CONF_LIBDIR_OVERRIDE="$1"
 }
@@ -1548,3 +1559,42 @@ epunt_cxx() {
 	done
 	eend 0
 }
+
+# get_abi_var <VAR> [<ABI>]
+# returns the value of ${<VAR>_<ABI>} which should be set in make.defaults
+#
+# This code is for testing purposes only with the sparc64-multilib ${PROFILE_ARCH}
+# and getting a more multilib-aware portage layout.  It may end up being used, but for now
+# it is subject to removal if a better way is worked out.
+# 
+# ex:
+# CFLAGS=$(get_abi_var CFLAGS sparc32) # CFLAGS=-m32
+#
+# Note that the prefered method is to set CC="$(tc-getCC) $(get_abi_CFLAGS)"
+# This will hopefully be added to portage soon...
+#
+# If <ABI> is not specified, ${ABI} is used.
+# If <ABI> is not specified and ${ABI} is not defined, ${DEFAULT_ABI} is used.
+# If <ABI> is not specified and ${ABI} and ${DEFAULT_ABI} are not defined, we return an empty string.
+#
+# Jeremy Huddleston <eradicator@gentoo.org>
+get_abi_var() {
+	local flag=$1
+	local abi
+	if [ $# -gt 1 ]; then
+		abi=$1
+	elif [ -n "${ABI}" ]; then
+		abi=${ABI}
+	elif [ -n "${DEFAULT_ABI}" ]; then
+		abi=${DEFAULT_ABI}
+	else
+		return ""
+	fi
+	eval echo \${${flag}_${abi}}
+}
+
+get_abi_CFLAGS() { get_abi_var CFLAGS $1; }
+get_abi_CXXFLAGS() { get_abi_var CXXFLAGS $1; }
+get_abi_ASFLAGS() { get_abi_var ASFLAGS $1; }
+get_abi_LIBDIR() { get_abi_var LIBDIR $1; }
+
