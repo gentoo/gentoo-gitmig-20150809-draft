@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.1.ebuild,v 1.5 2003/02/23 18:46:22 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.1.ebuild,v 1.6 2003/02/25 14:03:59 cretin Exp $
 
 # Maintainer: Stefan Jones <cretin@gentoo.org>
 # Author: Stefan Jones <cretin@gentoo.org>
@@ -77,9 +77,6 @@ src_unpack() {
 			
 	if [ ! -f ${DISTDIR}/${SRC_JAVA} ] ; then
 		eerror "Please download ${SRC_JAVA} from ${HOMEPAGE} to ${DISTDIR}"
-		einfo "The file is split into two parts on the sun site"
-		einfo "Join them together to form the file ${SRC_JAVA}"
-		einfo "Use \"cat j2sdk-1_4_1-src-scsl-a.zip j2sdk-1_4_1-src-scsl-b.zip > j2sdk-1_4_1-src-scsl.zip\""
 		die_flag=1
 	fi
 
