@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/files/speech-dispatcher,v 1.1 2004/03/31 02:36:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-dispatcher/files/speech-dispatcher,v 1.2 2004/03/31 02:43:28 eradicator Exp $
 
 depend() {
 	use alsasound esound festival speechd
@@ -20,7 +20,7 @@ stop() {
 }
 
 restart() {
-	svc_stop || die
-	sleep 1
-	svc_start || die
+	svc_stop || exit 1
+	sleep 2
+	svc_start || exit 1
 }
