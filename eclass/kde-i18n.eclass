@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-i18n.eclass,v 1.11 2002/01/23 13:45:35 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-i18n.eclass,v 1.12 2002/02/18 18:29:19 danarmak Exp $
 inherit kde kde.org 
 ECLASS=kde-i18n
 
@@ -15,8 +15,10 @@ myconf="$myconf --enable-final"
 
 SRC_URI="$SRC_URI http://www.ibiblio.org/gentoo/distfiles/kde-i18n-gentoo.patch"
 
-src_unpack() {
-    unpack ${A//kde-i18n-gentoo.patch}
+kde-i18n_src_unpack() {
+    unpack ${A//kde-i18n-gentoo.patch} || die
     cd ${S}
-    patch -p0 < ${DISTDIR}/kde-i18n-gentoo.patch
+    patch -p0 < ${DISTDIR}/kde-i18n-gentoo.patch || die
 }
+
+EXPORT_FUNCTIONS src_unpack

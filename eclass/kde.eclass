@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.40 2002/02/12 17:35:46 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.41 2002/02/18 18:29:19 danarmak Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 inherit base
 ECLASS=kde
@@ -38,11 +38,10 @@ kde_src_compile() {
 			# This can happen with e.g. a cvs snapshot			
 			if [ ! -f "./configure" ]; then
 			    for x in Makefile.cvs admin/Makefile.common; do
-				if [ -f "$x" ]; then
-				    emake -f $x
-				    break
-				fi
+				if [ -f "$x" ] && [ -z "$makefile" ]; then makefile="$x"; fi
 			    done
+			    debug-print "$FUNCNAME: configure: generating configure script, running make -f $makefile"
+			    emake -f $makefile
 			    [ -f "./configure" ] || die "no configure script found, generation unsuccessful"
 			fi
 
