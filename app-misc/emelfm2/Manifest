@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c26ac584b5d0af832166e150feba888a ChangeLog 631
 MD5 eea2633f17a169742bdc26557bea711d emelfm2-0.0.9.ebuild 1407
+MD5 5ce40b6588c64423ba7227a0c63a0207 emelfm2-0.0.9-r1.ebuild 946
+MD5 1028376bc616f49aff9bc775c15c18ff ChangeLog 742
 MD5 5d0c50012374761745d511ea0ff0fbb5 metadata.xml 195
-MD5 b5590dcee5fb7f2dd93f99910dcccaf6 emelfm2-0.0.9-r1.ebuild 937
-MD5 97bb852c320593564b70f34bea8b6532 files/digest-emelfm2-0.0.9 65
-MD5 97bb852c320593564b70f34bea8b6532 files/digest-emelfm2-0.0.9-r1 65
 MD5 5feae118f9304790adf4f1f9dbaad1d0 files/locale.patch 1725
+MD5 97bb852c320593564b70f34bea8b6532 files/digest-emelfm2-0.0.9-r1 65
+MD5 97bb852c320593564b70f34bea8b6532 files/digest-emelfm2-0.0.9 65
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBcvtfI1lqEGTUzyQRAh1lAJ93PZoZB/BTekW8ZDyu8kow5yjmrACdGO9A
-Kq1u7jq1lR/ZzG/tReklo3Y=
-=oPoG
+iD8DBQFBsFabCHk4+ZoBpvsRAnXGAJ9YfBrDpxZAw2fTelRRLFcgOiu9rgCdFhvP
+RcCgIg8EZOdbXMGJ62siXgA=
+=m+pe
 -----END PGP SIGNATURE-----
