@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.98 2004/10/06 20:05:32 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.99 2004/10/09 19:30:12 tgall Exp $
+
+  09 Oct 2004; Tom Gall <tgall@gentoo.org> cdrtools-2.01.ebuild:
+  stable on ppc64, bug #63187
 
   06 Oct 2004; Lars Weiler <pylon@gentoo.org> cdrtools-2.01.ebuild:
   Added !app-cdr/dvdrtools to the dependencies.  Resolves bug #66516.
