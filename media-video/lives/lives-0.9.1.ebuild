@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lives/lives-0.9.1.ebuild,v 1.1 2004/12/16 14:25:22 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lives/lives-0.9.1.ebuild,v 1.2 2005/01/11 02:45:26 lu_zero Exp $
+
+inherit flag-o-matic
 
 DESCRIPTION="Linux Video Editing System"
 
@@ -45,6 +47,7 @@ src_unpack() {
 }
 
 src_compile() {
+	use amd64 && append-flags -fPIC -DPIC
 	econf || die
 	emake || die
 }
