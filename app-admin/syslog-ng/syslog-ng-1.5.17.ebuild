@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.5.17.ebuild,v 1.4 2002/07/30 04:36:31 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.5.17.ebuild,v 1.5 2002/08/14 14:57:27 jmorgan Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Syslog-ng is a syslog replacement with advanced filtering features"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.balabit.hu/en/products/syslog-ng/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 -ppc"
+KEYWORDS="x86 -ppc sparc64"
 
 DEPEND=">=dev-libs/libol-0.3.2
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
