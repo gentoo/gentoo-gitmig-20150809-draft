@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/mpg321
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/ChangeLog,v 1.12 2003/12/01 22:38:11 agriffis Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/ChangeLog,v 1.13 2004/02/15 21:58:32 eradicator Exp $
+
+  15 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> metadata.xml,
+  mpg321-0.2.10-r1.ebuild:
+  PROVIDE="virtual/mpg123" for bug #14940.  Now using make DESTDIR=${D} install.
 
   01 Dec 2003; Aron Griffis <agriffis@gentoo.org> mpg321-0.2.10-r1.ebuild:
   Stable on alpha

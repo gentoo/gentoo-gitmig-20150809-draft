@@ -1,4 +1,5 @@
-MD5 67052e7e293a617bc463f609bdf1f12c ChangeLog 2028
-MD5 84b16f26fe1603bfdf4f8acbeab4bac4 mpg321-0.2.10-r1.ebuild 1130
+MD5 4bfd98145ae9496598d40223fe335b15 ChangeLog 2210
+MD5 02837e5e64010a9ba7fc5f437ef4c165 mpg321-0.2.10-r1.ebuild 1273
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 f69e111b891dc01d56fb394621897e0d files/mpg321-0.1.5-ao.diff 7909
 MD5 7f4e867ab9a86c4f3618228fdccc48f4 files/digest-mpg321-0.2.10-r1 65
