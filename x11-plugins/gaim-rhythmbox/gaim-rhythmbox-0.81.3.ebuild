@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-rhythmbox/gaim-rhythmbox-0.81.3.ebuild,v 1.5 2004/09/02 18:22:39 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-rhythmbox/gaim-rhythmbox-0.81.3.ebuild,v 1.6 2004/09/10 03:21:53 rizzo Exp $
 
 inherit debug
 
 DESCRIPTION="automatically update your Gaim profile with current info from Rhythmbox"
-HOMEPAGE="http://jon.oberheide.org/projects/gaim-rhythmbox/"
-SRC_URI="http://jon.oberheide.org/projects/${PN}/downloads/${P}.tar.gz"
+HOMEPAGE="http://gaim-rhythmbox.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
