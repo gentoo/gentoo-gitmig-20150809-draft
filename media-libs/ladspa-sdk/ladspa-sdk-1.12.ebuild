@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ladspa-sdk-1.12.ebuild,v 1.8 2003/06/19 20:32:19 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ladspa-sdk-1.12.ebuild,v 1.9 2004/02/07 04:17:06 eradicator Exp $
 
 IUSE=""
 
@@ -23,7 +23,9 @@ src_unpack() {
 	unpack ${A}
 	sed -i \
 		-e "/^CFLAGS/ s:-O3:${CFLAGS}:" ${S}/makefile || \
-			die "sed makefile failed"
+			die "sed makefile failed (CFLAGS)"
+	sed -i s:-mkdirhier:mkdir\ -p:g ${S}/makefile || \
+			die "sed makefile failed (mkdirhier)"
 }
 
 src_compile() {

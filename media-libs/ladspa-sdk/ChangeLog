@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/ladspa-sdk
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ChangeLog,v 1.10 2003/06/19 20:32:19 msterret Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-sdk/ChangeLog,v 1.11 2004/02/07 04:17:06 eradicator Exp $
+
+  06 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  ladspa-sdk-1.12.ebuild:
+  Makefile patch to allow compilation on systems without XFree86 installed.
+  Closes bug #34468.
 
   19 Jun 2003; <msterret@gentoo.org> ladspa-sdk-1.12.ebuild:
   use sed -i, emake, and dohtml (bug 23048)
