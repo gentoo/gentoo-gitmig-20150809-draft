@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0_rc10-r6.ebuild,v 1.2 2000/12/08 06:42:08 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.0_rc10-r6.ebuild,v 1.3 2000/12/08 12:23:44 achim Exp $
 
 S=${WORKDIR}/linux
 KV=2.4.0-test10
@@ -19,8 +19,7 @@ http://www.netroedge.com/~lm78/archive/i2c-2.5.4.tar.gz
 http://oss.software.ibm.com/developerworks/opensource/jfs/project/pub/jfs-0.0.18-patch.tar.gz 
 ftp://ftp.alsa-project.org/pub/driver/alsa-driver-0.5.9d.tar.bz2 
 ftp://ftp1.detonator.nvidia.com/pub/drivers/english/XFree86_40/0.9-5/NVIDIA_kernel-0.9-5.tar.gz 
-ftp://ftp.sistina.com/pub/LVM/0.9/lvm_0.9.tar.gz
-http://www.namesys.com/lexa/linux-2.4.0-test6-reiserfs-3.6.13-nfs.diff.gz"
+ftp://ftp.sistina.com/pub/LVM/0.9/lvm_0.9.tar.gz"
 
 HOMEPAGE="http://www.kernel.org/
 	  http://www.netroedge.com/~lm78/
@@ -29,44 +28,7 @@ HOMEPAGE="http://www.kernel.org/
 	  http://www.alsa-project.org
 	  http://www.nvidia.com"
 	
-src_compile() {
-	cd ${S}
-	try make symlinks
-	try make dep
-   	#time to do the special symlink tweak
-	if [ -e /usr/src/linux ]
-	then
-		readlink /usr/src/linux > ${T}/linuxlink
-	fi
-	rm /usr/src/linux
-	( cd /usr/src; ln -s ${S} linux )
-	#symlink tweak in place
-	cd ${S}/fs/reiserfs/utils
-    try make
-#    cd ${S}/lm_sensors-2.5.2
-#    try make
-#	cd ${S}/fs/jfs/utils
-#	try make
-	if [ "$PN" = "linux" ]
-	then
-		cd ${S}
-		try make bzImage
-		try make modules
-		cd ${S}/extras/NVIDIA_kernel-0.9-5
-		make NVdriver
-		cd ${S}/extras/alsa-driver-0.5.9d
-		try ./configure --with-kernel=${S} --with-isapnp=yes --with-sequencer=yes --with-oss=yes --with-cards=all
-		try make
-	fi
-	cd ${S}/extras/LVM/0.9
-	try ./configure --prefix=/
-	try make
-	#untweak the symlink
-	if [ -e ${T}/linuxlink ]
-	then
-		( cd /usr/src; rm linux; ln -s `cat ${T}/linuxlink` linux )
-	fi
-}
+
 
 src_unpack() {
 	if [ -e /usr/src/linux ]
@@ -89,11 +51,7 @@ src_unpack() {
 
     cd ${S}
     echo "Applying reiser-nfs patch..."
-    gzip -dc ${DISTDIR}/linux-2.4.0-test6-reiserfs-3.6.13-nfs.diff.gz | patch -p1
-    echo "Fixing failed super.c"
-    cd ${S}/fs/reiserfs
-    patch -p0 < ${FILESDIR}/${PV}/super.c.patch
-    cd ${S}
+    gzip -dc ${FILESDIR}/${PV}/linux-2.4.0-test10-reiserfs-3.6.22-nfs.diff.gz | patch -p1
     mkdir extras
 #	echo "Applying IBM JFS patch..."
 #	cd extras
@@ -145,6 +103,44 @@ src_unpack() {
 	chown -R root.root linux 
 }
 
+src_compile() {
+	cd ${S}
+	try make symlinks
+	try make dep
+   	#time to do the special symlink tweak
+	if [ -e /usr/src/linux ]
+	then
+		readlink /usr/src/linux > ${T}/linuxlink
+	fi
+	rm /usr/src/linux
+	( cd /usr/src; ln -s ${S} linux )
+	#symlink tweak in place
+	cd ${S}/fs/reiserfs/utils
+    try make
+#    cd ${S}/lm_sensors-2.5.2
+#    try make
+#	cd ${S}/fs/jfs/utils
+#	try make
+	if [ "$PN" = "linux" ]
+	then
+		cd ${S}
+		try make bzImage
+		try make modules
+		cd ${S}/extras/NVIDIA_kernel-0.9-5
+		make NVdriver
+		cd ${S}/extras/alsa-driver-0.5.9d
+		try ./configure --with-kernel=${S} --with-isapnp=yes --with-sequencer=yes --with-oss=yes --with-cards=all
+		try make
+	fi
+	cd ${S}/extras/LVM/0.9
+	try ./configure --prefix=/
+	try make
+	#untweak the symlink
+	if [ -e ${T}/linuxlink ]
+	then
+		( cd /usr/src; rm linux; ln -s `cat ${T}/linuxlink` linux )
+	fi
+}
 src_install() {                               
 	cd ${S}/fs/reiserfs/utils
 	dodir /usr/man/man8 /sbin
