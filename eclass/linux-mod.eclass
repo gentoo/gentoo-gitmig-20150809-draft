@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.27 2005/02/01 09:58:36 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.28 2005/02/01 10:02:02 johnm Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -195,7 +195,6 @@ generate_modulesd() {
 		module_config="${T}/modulesd-${currm}"
 
 		ebegin "Preparing file for modules.d"
-		einfo  "Using: ${module_config}"
 		#-----------------------------------------------------------------------
 		echo "# modules.d configuration file for ${currm}" >> ${module_config}
 		#-----------------------------------------------------------------------
