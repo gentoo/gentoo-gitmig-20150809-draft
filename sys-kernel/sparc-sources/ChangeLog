@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/sparc-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.65 2004/11/10 16:49:32 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.66 2004/11/12 22:20:22 joker Exp $
+
+*sparc-sources-2.4.27-r3 (12 Nov 2004)
+
+  12 Nov 2004; Christian Birchinger <joker@gentoo.org>
+  +files/gentoo-sources-2.4.27-binfmt_elf.patch,
+  +sparc-sources-2.4.27-r3.ebuild:
+  Added a security fix for the Linux kernel binfmt_elf loader vulnerabilities
 
 *sparc-sources-2.4.27-r2 (10 Nov 2004)
 
