@@ -191,3 +191,11 @@ move app-games/ut2003 games-fps/ut2003
 move app-games/ut2003-demo games-fps/ut2003-demo
 move app-games/vendetta-test games-fps/vendetta-test
 move app-games/wolfgl games-fps/wolfgl
+move app-games/childsplay games-kids/childsplay
+move app-games/gcompris games-kids/gcompris
+move app-games/lletters games-kids/lletters
+move app-games/matritsa games-kids/matritsa
+move app-games/stickers games-kids/stickers
+move app-games/tuxmath games-kids/tuxmath
+move app-games/tuxmathscrabble games-kids/tuxmathscrabble
+move app-games/tuxtype games-kids/tuxtype
