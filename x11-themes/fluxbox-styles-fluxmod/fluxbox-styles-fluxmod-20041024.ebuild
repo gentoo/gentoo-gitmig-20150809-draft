@@ -1,11 +1,11 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fluxbox-styles-fluxmod/fluxbox-styles-fluxmod-20041024.ebuild,v 1.4 2004/12/18 11:59:50 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fluxbox-styles-fluxmod/fluxbox-styles-fluxmod-20041024.ebuild,v 1.5 2005/02/01 20:24:01 ciaranm Exp $
 
 inherit eutils
 
 DESCRIPTION="A collection of FluxBox themes from FluxMod"
-HOMEPAGE="http://www.ikaro.dk"
+HOMEPAGE="http://www.fluxmod.dk"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 

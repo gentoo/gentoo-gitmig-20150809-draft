@@ -1,13 +1,19 @@
-MD5 c2e24f9ee217b8caed0a034d4d48308b fluxbox-styles-fluxmod-20041024.ebuild 1522
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 98874ccf392e89de5b219e72b1c6332f ChangeLog 2951
+MD5 47eccc89f0a0175e5d5bcdfbd665dcc2 fluxbox-styles-fluxmod-20040809.ebuild 1126
+MD5 c76d326d94f8d1fa289e1517c8a772cb fluxbox-styles-fluxmod-20041024.ebuild 1525
+MD5 ecf17869abac93adaba90121da9bc3c2 fluxbox-styles-fluxmod-20050128.ebuild 1784
 MD5 579076f73457df8c5cba170b0e99634d metadata.xml 163
-MD5 fd23bc942fc4fc187fc00a5225275754 ChangeLog 2610
-MD5 1fe08cdfef29e0804cc14ce914111132 fluxbox-styles-fluxmod-20040809.ebuild 1124
-MD5 49fb07313d7be9fd64c1c558e50eb9b0 fluxbox-styles-fluxmod-20040809-r1.ebuild 1521
-MD5 97752d92a14fb85fc2aa9855cb9566bf fluxbox-styles-fluxmod-20040912.ebuild 1525
-MD5 2a6014f6b89d43d6a80c35afe0b157d5 fluxbox-styles-fluxmod-20040502.ebuild 1157
 MD5 413ae7a600614b5e276f85a301529764 files/styles-menu-fluxmod 116
-MD5 b50910c56be08429bf6108427263f440 files/digest-fluxbox-styles-fluxmod-20040912 84
+MD5 6d917a0eead4cbcd5b236a22c20ba209 files/digest-fluxbox-styles-fluxmod-20050128 85
 MD5 65c95cf3bdb69ad4ca8132bc287ccda8 files/digest-fluxbox-styles-fluxmod-20040809 84
-MD5 55fa1dd03a7388feeffe711d7df293e4 files/digest-fluxbox-styles-fluxmod-20040502 85
-MD5 65c95cf3bdb69ad4ca8132bc287ccda8 files/digest-fluxbox-styles-fluxmod-20040809-r1 84
 MD5 37e5a66e1eca2a46e5d52696577e4499 files/digest-fluxbox-styles-fluxmod-20041024 84
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD4DBQFB/+VwLLFUmVNQ7rkRAsz0AJdYx4HKNsg2r6G3mcGHoFOrSvNBAJ4+yTlL
+sBgcyYlMl69EwBqF+lUEHw==
+=y2pk
+-----END PGP SIGNATURE-----
