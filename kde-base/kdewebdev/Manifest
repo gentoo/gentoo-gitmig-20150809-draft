@@ -1,11 +1,21 @@
-MD5 dc909c530b034dd53b64f3482435d323 ChangeLog 3146
-MD5 fb7f5f300e237aa67347783f483d53b1 kdewebdev-3.3.0-r1.ebuild 571
-MD5 b3d58c92751dce4b4bf6b5599c3dcf21 kdewebdev-3.3.0.ebuild 397
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 da4977718b30acb3d1752ec0ad396a90 kdewebdev-3.3.1.ebuild 419
-MD5 be4b4abbf32d9bbb9f93656ef8ce8cc1 kdewebdev-3.3.2.ebuild 423
+MD5 72b47f05908ddf4c66c18c1f7592c7a0 ChangeLog 3252
+MD5 b3d58c92751dce4b4bf6b5599c3dcf21 kdewebdev-3.3.0.ebuild 397
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
+MD5 fb7f5f300e237aa67347783f483d53b1 kdewebdev-3.3.0-r1.ebuild 571
+MD5 ab865249778d449e3ec84cae66c82c39 kdewebdev-3.3.2.ebuild 420
 MD5 3d2ad046ff83707b9267dc9a9bb36be2 files/3.3.0-kafka-configure.in.in.patch 485
 MD5 6cc96fa9a343126d0cf662767723c48b files/digest-kdewebdev-3.3.0 69
-MD5 6cc96fa9a343126d0cf662767723c48b files/digest-kdewebdev-3.3.0-r1 69
 MD5 5e1d564c67981383f6c070b65c3a4475 files/digest-kdewebdev-3.3.1 69
 MD5 5c18da2078103b3b7c13439cc5980e13 files/digest-kdewebdev-3.3.2 69
+MD5 6cc96fa9a343126d0cf662767723c48b files/digest-kdewebdev-3.3.0-r1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB0wabugEuf3OQ0akRAhsPAJ4tNgVH8kOCZdS0ivrO888Oau664wCeMH2I
+EEhRpoGgzV58Wib2DcFvZM8=
+=4QOv
+-----END PGP SIGNATURE-----
