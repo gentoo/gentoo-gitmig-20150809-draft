@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.1.ebuild,v 1.9 2003/07/18 22:01:13 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.1.ebuild,v 1.10 2003/09/05 02:10:35 msterret Exp $
 
 IUSE=""
 # Please use this variable to keep patch names sane for our patches!
@@ -23,7 +23,7 @@ HOMEPAGE="ftp://arcana.linux.it/pub/gpm/"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	sys-devel/autoconf"
-	
+
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc ~sparc alpha hppa arm amd64"
@@ -33,7 +33,7 @@ PATCHDIR=${WORKDIR}/patches
 src_unpack() {
 	unpack ${A}
 	unpack ${P}-patches-${PATCH_VER}.tar.bz2
-	
+
 	# This little hack turns off EMACS byte compilation.  We really
 	# don't want this thing auto-detecting emacs.
 	cd ${S}; epatch ${WORKDIR}/patches
@@ -57,11 +57,11 @@ src_compile() {
 
 src_install() {
 	einstall
-	
+
 	chmod 755 ${D}/usr/lib/*
 	# Fix missing /usr/lib/libgpm.so.1
 	preplib
-	
+
 	dodoc BUGS COPYING ChangeLog Changes MANIFEST README TODO
 	dodoc doc/Announce doc/FAQ doc/README*
 	doinfo doc/gpm.info

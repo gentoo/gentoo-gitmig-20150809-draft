@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.0-r6.ebuild,v 1.6 2003/06/22 05:10:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.20.0-r6.ebuild,v 1.7 2003/09/05 02:10:35 msterret Exp $
 
 IUSE=""
 
@@ -15,7 +15,7 @@ HOMEPAGE="ftp://arcana.linux.it/pub/gpm/"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	sys-devel/autoconf"
-	
+
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa arm"
@@ -47,11 +47,11 @@ src_compile() {
 
 src_install() {
 	einstall
-	
+
 	chmod 755 ${D}/usr/lib/*
 	# Fix missing /usr/lib/libgpm.so.1
 	preplib
-	
+
 	dodoc BUGS COPYING ChangeLog Changes MANIFEST README TODO
 	dodoc doc/Announce doc/FAQ doc/README*
 	doinfo doc/gpm.info
