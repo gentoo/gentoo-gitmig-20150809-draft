@@ -1,0 +1,12 @@
+# ChangeLog for app-sci/gempak
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gempak/ChangeLog,v 1.1 2004/02/29 00:01:22 spyderous Exp $
+
+*gempak-5.6m (28 Feb 2004)
+
+  28 Feb 2004; Donnie Berkholz <spyderous@gentoo.org>; gempak-5.6m.ebuild,
+  metadata.xml, files/5.6m-gui.c.patch, files/Makeinc.common,
+  files/gempak.env.d:
+  Initial commit. Submitted by Donald Giuliano <guido@ou.edu> with extensive
+  reworking by him and me.
+
