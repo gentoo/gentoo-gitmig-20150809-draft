@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <scox@gentoo.org> (03 Dec 2003)
+# see bug #33033
+=sys-kernel/xfs-sources-2.4.23
+
 # <iggy@gentoo.org> (02 Dec 2003)
 # preparing to drop
 sys-kernel/rsbac-sources
