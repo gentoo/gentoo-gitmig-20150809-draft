@@ -1,18 +1,19 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0.ebuild,v 1.4 2004/02/05 16:42:23 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0.ebuild,v 1.5 2004/02/09 14:15:19 vapier Exp $
 inherit kde
 
 need-autoconf 2.5
 set-kdedir ${PV}
 
-IUSE="alsa cups ipv6 ssl doc ldap"
 DESCRIPTION="KDE libraries needed by all kde programs"
-KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
 HOMEPAGE="http//www.kde.org/"
-SLOT="3.2"
-LICENSE="GPL-2 LGPL-2"
 SRC_URI="mirror://kde/stable/${PV/3.2.0/3.2}/src/${PN}-${PV}.tar.bz2"
+
+LICENSE="GPL-2 LGPL-2"
+SLOT="3.2"
+KEYWORDS="~x86 ~ppc ~sparc hppa ~amd64"
+IUSE="alsa cups ipv6 ssl doc ldap"
 
 # kde.eclass has kdelibs in DEPEND, and we can't have that in here.
 # so we recreate the entire DEPEND from scratch.
@@ -32,8 +33,7 @@ DEPEND=">=sys-devel/autoconf-2.58
 	sys-devel/gettext
 	~kde-base/arts-1.2.0
 	>=x11-libs/qt-3.2.0"
-
-RDEPEND="$DEPEND
+RDEPEND="${DEPEND}
 	app-text/sgml-common
 	cups? ( net-print/cups )
 	doc? ( app-doc/doxygen )
@@ -45,7 +45,6 @@ src_unpack() {
 }
 
 src_compile() {
-
 	kde_src_compile myconf
 
 	myconf="$myconf --with-distribution=Gentoo --enable-libfam --enable-dnotify"
