@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.2.ebuild,v 1.5 2003/02/21 21:23:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.2.ebuild,v 1.6 2003/02/22 07:52:32 zwelch Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -156,6 +156,11 @@ src_unpack() {
 	epatch ${FILESDIR}/3.2.1/gcc32-pr8213.patch
 	epatch ${FILESDIR}/3.2.1/gcc32-strip-dotdot.patch
 	epatch ${FILESDIR}/3.2.1/gcc32-athlon-alignment.patch
+
+	# Patches from debian-arm
+	if [ "${ARCH}" = "arm" ]; then
+		epatch ${FILESDIR}/3.2.1/gcc32-arm-reload1-fix.patch
+	fi
 
 	# Install our pre generated manpages if we do not have perl ...
 #	if [ ! -x /usr/bin/perl ]
