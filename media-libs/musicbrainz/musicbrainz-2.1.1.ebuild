@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-2.1.1.ebuild,v 1.11 2004/10/10 20:35:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-2.1.1.ebuild,v 1.12 2004/12/18 22:25:33 corsair Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="http://ftp.musicbrainz.org/pub/musicbrainz/lib${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="1"
-KEYWORDS="x86 ppc sparc hppa alpha amd64 ia64 ~ppc64"
+KEYWORDS="x86 ppc sparc hppa alpha amd64 ia64 ppc64"
 
 RDEPEND="dev-libs/expat"
 
