@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/xmail
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/xmail/ChangeLog,v 1.5 2003/07/21 07:17:04 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/xmail/ChangeLog,v 1.6 2003/07/24 03:06:51 raker Exp $
+
+  23 Jul 2003; Nick Hadaway <raker@gentoo.org> files/xmail.initd,
+  files/xmail.confd:
+  Made changes to the initd file as suggested on bug #24923.
+  Thanks to Sergey Ivanov for working out the quirks with this build.
+  Added a warn to postinst about needing iptables enabled in the kernel.
 
 *xmail-1.16 (21 Jul 2003)
 
