@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/php
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.81 2004/04/01 08:22:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.82 2004/04/05 20:55:09 robbat2 Exp $
+
+*php-4.3.6_rc2 (05 Apr 2004)
+
+  05 Apr 2004; Robin H. Johnson <robbat2@gentoo.org> php-4.3.6_rc2.ebuild:
+  bump to new rc as 4.3.5 has issues
 
 *php-4.3.5-r1 (01 Apr 2004)
 

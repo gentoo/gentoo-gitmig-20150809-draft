@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/php-cgi
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/ChangeLog,v 1.4 2004/03/29 00:26:38 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/ChangeLog,v 1.5 2004/04/05 20:56:12 robbat2 Exp $
+
+*php-cgi-4.3.6_rc2 (05 Apr 2004)
+
+  05 Apr 2004; Robin H. Johnson <robbat2@gentoo.org> php-cgi-4.3.6_rc2.ebuild:
+  bump to new rc as 4.3.5 has issues
 
 *php-cgi-4.3.5 (29 Mar 2004)
 

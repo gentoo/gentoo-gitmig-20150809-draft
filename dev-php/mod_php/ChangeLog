@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.134 2004/04/01 06:30:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.135 2004/04/05 20:55:33 robbat2 Exp $
+
+*mod_php-4.3.6_rc2 (05 Apr 2004)
+
+  05 Apr 2004; Robin H. Johnson <robbat2@gentoo.org> mod_php-4.3.6_rc2.ebuild:
+  bump to new rc as 4.3.5 has issues
 
   31 Mar 2004; Robin H. Johnson <robbat2@gentoo.org> mod_php-4.3.2-r1.ebuild,
   mod_php-4.3.2-r2.ebuild, mod_php-4.3.2-r3.ebuild, mod_php-4.3.2-r4.ebuild,
