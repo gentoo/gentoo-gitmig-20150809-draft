@@ -5,9 +5,10 @@ MD5 143110b2a988e0a383142062b0fa41b6 fluxbox-0.9.3.ebuild 2718
 MD5 584949bdc5b17f5f5219e820d739c815 fluxbox-0.9.4.ebuild 2718
 MD5 05b1b1b37d0da0bcbe5f826a04430791 fluxbox-0.9.5.ebuild 2718
 MD5 416452bedba085c06bd2502510370e1a metadata.xml 162
-MD5 3d674a98c9c755f2a020eb7520a1c241 ChangeLog 14686
+MD5 03094a615ac2a1943182b7168183000f ChangeLog 14807
 MD5 8d50756bc51e5476cc57811d42d27e3b fluxbox-0.9.6_pre5.ebuild 2742
 MD5 1efc373cf7a63af4c1ee7d93f96f8a51 fluxbox-0.9.6_pre6.ebuild 2742
+MD5 67e587b68c0b99e26519d7b1780913a2 fluxbox-0.9.6_pre7.ebuild 2742
 MD5 3661fa0f4811d5de5119163ee43ac690 files/digest-fluxbox-0.1.12-r1 132
 MD5 1c3ae2ce22f7f2a778a8ad5a5631df28 files/digest-fluxbox-0.1.14-r1 67
 MD5 224efa97a7e52718fb828c036c6d91d9 files/digest-fluxbox-0.9.0 65
@@ -28,3 +29,4 @@ MD5 7b7044a97f3d2f84897e7fddf925b309 files/fluxbox-0.1.14-toggledecor.patch 823
 MD5 ddf99954256a3dc12763651bbf63bf3a files/fluxbox-vano-gentoo.patch 1092
 MD5 060013fdc317caaf43dd90e5f0f2f9cf files/digest-fluxbox-0.9.6_pre5 134
 MD5 c1a9c0a8b2a4340ea6c0ac1b1a84e424 files/digest-fluxbox-0.9.6_pre6 134
+MD5 91ee6421aac6782e4b29bc7fdecc678d files/digest-fluxbox-0.9.6_pre7 134
