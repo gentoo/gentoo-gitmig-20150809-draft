@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/gringotts-1.2.8.ebuild,v 1.2 2004/04/18 18:05:12 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gringotts/gringotts-1.2.8.ebuild,v 1.3 2004/05/27 14:52:44 jhuebel Exp $
 
 DESCRIPTION="Utility that allows you to jot down sensitive data"
 SRC_URI="http://devel.pluto.linux.it/projects/Gringotts/current/${P}.tar.bz2"
@@ -9,7 +9,7 @@ LICENSE="GPL-2"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~amd64"
 
 RDEPEND=">=dev-libs/libgringotts-1.2
 	>=x11-libs/gtk+-2
