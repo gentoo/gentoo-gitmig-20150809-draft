@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ee9cdc674851a80aaac4ef315c26010e jai-bin-1.1.2-r2.ebuild 1346
+MD5 4382864a9be0847725cda01b363e4061 ChangeLog 999
+MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 e60e96e8d350d2e30cf45902dd277268 files/digest-jai-bin-1.1.2-r2 78
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBCqr0/rLF9B432nYRAufoAJ9ikdlj+9epyie8Sep4Fzqy/B5qjQCgifyX
+hIKFf2NNmx+4eMms1ISI9Lg=
+=Kl4S
+-----END PGP SIGNATURE-----

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jai
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jai/ChangeLog,v 1.6 2004/06/24 22:30:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jai-bin/ChangeLog,v 1.1 2004/07/30 20:07:34 axxo Exp $
+
+  30 Jul 2004; Thomas Matthijs <axxo@gentoo.org> :
+  move dev-java/jai dev-java/jai-bin
 
   03 Jun 2004; Karl Trygve Kalleberg <karltk@gentoo.org> jai-1.1.2.ebuild,
   jar-1.1.2-r1.ebuild: Removed. Fixed #52525.
