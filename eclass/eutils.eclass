@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.138 2005/01/07 12:04:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.139 2005/01/10 02:40:00 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -206,6 +206,7 @@ epatch() {
 			eerror "Cannot find \$EPATCH_SOURCE!  Value for \$EPATCH_SOURCE is:"
 			eerror
 			eerror "  ${EPATCH_SOURCE}"
+			eerror "  ( ${EPATCH_SOURCE##*/} )"
 			echo
 			die "Cannot find \$EPATCH_SOURCE!"
 		fi
