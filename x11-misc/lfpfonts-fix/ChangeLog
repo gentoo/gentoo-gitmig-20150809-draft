@@ -1,6 +1,8 @@
 # ChangeLog for x11-misc/lfpfonts-fix
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lfpfonts-fix/ChangeLog,v 1.5 2003/01/14 16:30:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lfpfonts-fix/ChangeLog,v 1.6 2003/01/14 16:30:31 agriffis Exp $
+
+*lfpfonts-fix-0.82-r1.ebuild (14 Jan 2003)
 
   14 Jan 2003; Aron Griffis <agriffis@gentoo.org> lfpfonts-fix-0.82-r1.ebuild :
   Build from bdf sources so we can add -C- (char-cell) to the FONT line.  This
