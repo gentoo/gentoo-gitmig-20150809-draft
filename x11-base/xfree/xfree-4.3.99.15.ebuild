@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.15.ebuild,v 1.4 2003/12/02 15:32:15 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.15.ebuild,v 1.5 2003/12/09 17:32:38 lanius Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -117,7 +117,7 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 	app-arch/unzip
 	pam? ( >=sys-libs/pam-0.75 )
 	truetype? ( app-arch/cabextract )
-	doc? ( app-text/ghostscript )
+	doc? ( virtual/ghostscript )
 	>=sys-apps/portage-2.0.49-r13
 	!x11-libs/xft"
 # RDEPEND="${DEPEND}"

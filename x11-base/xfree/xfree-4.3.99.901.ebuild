@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.901.ebuild,v 1.3 2003/12/06 02:47:36 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.901.ebuild,v 1.4 2003/12/09 17:32:38 lanius Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -410,7 +410,7 @@ src_unpack() {
 			local DOC="NO"
 		fi
 
-		# with USE="X doc' circular dep w/ app-text/ghostscript
+		# with USE="X doc' circular dep w/ virtual/ghostscript
 		# echo "#define HasGhostScript ${DOC}" >> config/cf/host.def
 		echo "#define BuildLinuxDocText ${DOC}" >> config/cf/host.def
 		echo "#define BuildLinuxDocHtml ${DOC}" >> config/cf/host.def
