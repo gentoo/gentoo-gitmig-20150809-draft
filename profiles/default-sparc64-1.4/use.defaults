@@ -1,5 +1,5 @@
 # Not recommended: mmx, 3dnow, sse, svga, directfb, alsa
-xinerama
+#xinerama
 ungif		media-libs/ungif
 gtkhtml		gnome-extra/gtkhtml
 gdbm		sys-libs/gdbm

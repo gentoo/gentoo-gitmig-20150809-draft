@@ -1,4 +1,4 @@
-xinerama
+#xinerama
 directfb	dev-libs/DirectFB
 ungif		media-libs/ungif
 gtkhtml		gnome-extra/gtkhtml
