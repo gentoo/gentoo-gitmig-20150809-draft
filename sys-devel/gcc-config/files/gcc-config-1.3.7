@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.7,v 1.5 2004/11/28 16:39:49 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.3.7,v 1.6 2004/12/03 02:43:33 vapier Exp $
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 
 trap ":" INT QUIT TSTP
@@ -87,14 +87,18 @@ cmd_setup() {
 get_real_chost() {
 	[ -n "${REAL_CHOST}" ] && return 0
 
-	# Use absolute path until all protage versions have portageq in /usr/bin
-	export REAL_CHOST="$(/usr/lib/portage/bin/portageq envvar CHOST)"
+	export REAL_CHOST="$(env -u CHOST portageq envvar CHOST)"
 
 	if [ -z "${REAL_CHOST}" ]
 	then
 		eerror "$0: Could not get portage CHOST!"
 		return 1
 	fi
+}
+
+is_cross_compiler() {
+	get_real_chost
+	[ "${CC_COMP/${REAL_CHOST}}" = "${CC_COMP}" ]
 }
 
 switch_profile() {
@@ -109,75 +113,78 @@ switch_profile() {
 		exit 1
 	fi
 
-	if [ -r "${GCC_ENV_D}/config" ]
-	then
-		source "${GCC_ENV_D}/config"
-
-		if [ -n "${CURRENT}" ]
-		then
-			OLD_CC_COMP="${CURRENT}"
-		fi
-	fi
-
 	ebegin "Switching to ${CC_COMP} compiler"
 
 	# Sourcing /etc/env.d/gcc/${CC_COMP} is going to mess up
 	# PATH among things...
 	cmd_setup
 
-	# Order our profiles to have the default first ...
-	# We do this so that we can have them ordered with default
-	# first in /etc/ld.so.conf, as the logical is that all
-	# compilers for default CHOST will be used to compile stuff,
-	# and thus we want all their lib paths in /etc/ld.so.conf ...
-	get_real_chost
-	GCC_PROFILES="$(${FIND} "${GCC_ENV_D}" -name "${REAL_CHOST}-*" -a ! -name "${CC_COMP}")"
-	GCC_PROFILES="${GCC_ENV_D}/${CC_COMP} ${GCC_PROFILES}"
+	if ! is_cross_compiler
+	then
+		# Order our profiles to have the default first ...
+		# We do this so that we can have them ordered with default
+		# first in /etc/ld.so.conf, as the logical is that all
+		# compilers for default CHOST will be used to compile stuff,
+		# and thus we want all their lib paths in /etc/ld.so.conf ...
+		get_real_chost
+		GCC_PROFILES="$(${FIND} "${GCC_ENV_D}" -name "${REAL_CHOST}-*" -a ! -name "${CC_COMP}")"
+		GCC_PROFILES="${GCC_ENV_D}/${CC_COMP} ${GCC_PROFILES}"
 
-	# Extract all LDPATH's for our CHOST
-	for x in ${GCC_PROFILES}
-	do
-		if [ -f "${x}" ]
-		then
-			source "${x}"
+		# Extract all LDPATH's for our CHOST
+		for x in ${GCC_PROFILES}
+		do
+			if [ -f "${x}" ]
+			then
+				source "${x}"
 
-			# Handle LDPATH's that have multiple directories
-			local old_IFS="${IFS}"
-			export IFS=":"
-			local sub_ldpath=
-			for sub_ldpath in ${LDPATH}
-			do
-				if [ -z "${MY_LDPATH}" ]
-				then
-					if [ -d "${sub_ldpath}" ]
+				# Handle LDPATH's that have multiple directories
+				local old_IFS="${IFS}"
+				export IFS=":"
+				local sub_ldpath=
+				for sub_ldpath in ${LDPATH}
+				do
+					if [ -z "${MY_LDPATH}" ]
 					then
-						MY_LDPATH="${sub_ldpath}"
+						if [ -d "${sub_ldpath}" ]
+						then
+							MY_LDPATH="${sub_ldpath}"
+						fi
+					else
+						if [ -d "${sub_ldpath}" ]
+						then
+							MY_LDPATH="${MY_LDPATH}:${sub_ldpath}"
+						fi
 					fi
-				else
-					if [ -d "${sub_ldpath}" ]
-					then
-						MY_LDPATH="${MY_LDPATH}:${sub_ldpath}"
-					fi
-				fi
-			done
-			export IFS="${old_IFS}"
-		fi
-	done
+				done
+				export IFS="${old_IFS}"
+			fi
+		done
+	fi
 
 	# Setup things properly again for this profile
 	source "${GCC_ENV_D}/${CC_COMP}"
+	OLD_CC_COMP=$(get_current_profile)
 
-	# Setup /etc/env.d/05gcc
-	${AWK} '!/^(STDCXX_INCDIR|LDPATH|CC|CXX|GCCBITS)=/ {print $0}' \
-		"${GCC_ENV_D}/${CC_COMP}" > "${ENV_D}/05gcc"
+	# What kind of env.d entry are we going to generate ?
+	if is_cross_compiler
+	then
+		# Only keep PATH/ROOTPATH
+		${AWK} '/^(PATH|ROOTPATH)=/ {print $0}' \
+			"${GCC_ENV_D}/${CC_COMP}" > "${ENV_D}/05gcc-${CTARGET}"
 
-	# Add our custom LDPATH
-	echo "LDPATH=\"${MY_LDPATH}\"" >> "${ENV_D}/05gcc"
+		echo "CURRENT=${CC_COMP}" > "${GCC_ENV_D}/config-${CTARGET}"
+	else
+		# Pass all by default
+		${AWK} '!/^(STDCXX_INCDIR|LDPATH|CC|CXX|CTARGET|GCCBITS|GCC_SPECS)=/ {print $0}' \
+			"${GCC_ENV_D}/${CC_COMP}" > "${ENV_D}/05gcc"
+		echo "LDPATH=\"${MY_LDPATH}\"" >> "${ENV_D}/05gcc"
+		if [[ -n ${GCC_SPECS} ]] && [[ -e ${ROOT}/${GCC_SPECS} ]]
+		then
+			echo "GCC_SPECS=\"${GCC_SPECS}\"" >> "${ENV_D}/05gcc"
+		fi
 
-	# Make sure we do not recreate /lib/cpp and /usr/bin/cc ...
-#	echo "DISABLE_GEN_GCC_WRAPPERS=\"yes\"" >> "${ENV_D}/05gcc"
-
-	echo "CURRENT=${CC_COMP}" > ${GCC_ENV_D}/config
+		echo "CURRENT=${CC_COMP}" > "${GCC_ENV_D}/config"
+	fi
 
 	# Save PATH
 	GCC_BIN_PATH="${PATH}"
@@ -185,31 +192,25 @@ switch_profile() {
 	source /etc/profile
 	umask 022
 
-	# These might not be installed, and we want to update the mtime
-	# for ccache and distcc anyhow ...
-	${RM} -f "${ROOT}/lib/cpp"
-	${CP} -f "${ROOT}/usr/lib/gcc-config/wrapper" "${ROOT}/lib/cpp"
-	for x in gcc cpp cc c++ g++ f77 g77 gcj \
-	         ${REAL_CHOST}-gcc ${REAL_CHOST}-c++ ${REAL_CHOST}-g++ \
-	         ${REAL_CHOST}-f77 ${REAL_CHOST}-g77 ${REAL_CHOST}-gcj
+	# Update the wrappers for this profile
+	local native="gcc cpp cc c++ g++ f77 g77 gcj"
+	is_cross_compiler && native=""
+	for x in ${native} ${CTARGET}-{gcc,c++,g++,f77,g77,gcj}
 	do
 		# Make sure we have no stale wrappers
 		${RM} -f "${ROOT}/usr/bin/${x}"
 		[ "${x:${#x}-3}" = "gcc" -o "${x:${#x}-3}" = "g++" ] \
 			&& ${RM} -f "${ROOT}/usr/bin/${x}"{32,64}
 
-		if [ -x "${ROOT}/${GCC_BIN_PATH}/${x}" -o \
-		     "${x}" = "c++" -o "${x}" = "${REAL_CHOST}-c++" -o \
-		     "${x}" = "cpp" -o "${x}" = "cc" ]
+		# Only install a wrapper if the binary exists ...
+		# If installing one of the C++ binaries, check to see
+		# if g++ exists so we don't install crappy wrappers
+		if [ -x "${ROOT}/${GCC_BIN_PATH}/${x}" -o "${x}" = "cc" ] || \
+		   ([ "${x}" = "c++" -o "${x}" = "${CTARGET}-c++" -o "${x}" = "cpp" ] && \
+		    [ -x "${ROOT}/${GCC_BIN_PATH}/${CTARGET}-g++" ])
 		then
-			# Only install a wrapper if the binary exists ...
 			${CP} -f "${ROOT}/usr/lib/gcc-config/wrapper" \
 			         "${ROOT}/usr/bin/${x}"
-
-			if [ "${OLD_CC_COMP}" != "${CC_COMP}" ]
-			then
-				${TOUCH} -m "${ROOT}/usr/bin/${x}"
-			fi
 
 			# Install 32bit and 64bit wrappers if need be
 			# This should probably get folded back into the wrapper ...
@@ -224,15 +225,21 @@ switch_profile() {
 			fi
 		fi
 	done
+	# Only install cpp if the toolchain supports C++
+	if ! is_cross_compiler && [ -x "${ROOT}/usr/bin/${REAL_CHOST}-g++" ]
+	then
+		${RM} -f "${ROOT}/lib/cpp"
+		${CP} -f "${ROOT}/usr/lib/gcc-config/wrapper" "${ROOT}/lib/cpp"
+	fi
 
-	if [ "${ROOT}" == "/" ]
+	if [ "${ROOT}" = "/" ] && [ "${OLD_CC_COMP}" != "${CC_COMP}" ]
 	then
 		${ENV_UPDATE} &> /dev/null
 	fi
 
 	eend 0
 
-	if [ "${ROOT}" == "/" ] && [ "${OLD_CC_COMP}" != "${CC_COMP}" ]
+	if [ "${ROOT}" = "/" ] && [ "${OLD_CC_COMP}" != "${CC_COMP}" ]
 	then
 		echo
 		ewarn "If you intend to use the gcc from the new profile in an already"
@@ -246,13 +253,16 @@ switch_profile() {
 }
 
 get_current_profile() {
-	if [ ! -f "${GCC_ENV_D}/config" ]
+	local conf="${GCC_ENV_D}/config"
+	[ -n "${CTARGET}" ] && conf="${GCC_ENV_D}/config-${CTARGET}"
+
+	if [[ ! -f ${conf} ]]
 	then
 		eerror "$0: No gcc profile is active!"
 		return 1
 	fi
 
-	source "${GCC_ENV_D}/config"
+	source "${conf}"
 
 	if [ -z "${CURRENT}" ]
 	then
@@ -281,10 +291,10 @@ list_profiles() {
 	fi
 	for x in "${GCC_ENV_D}"/*
 	do
-		if [ -f "${x}" -a "${x}" != "${GCC_ENV_D}/config" ]
+		if [ -f "${x}" -a "${x/\/config}" = "${x}" ]
 		then
 			x="${x##*/}"
-			[ "${x}" == "${CURRENT}" ] && x="${x} *"
+			[ "${x}" = "${CURRENT}" ] && x="${x} *"
 			echo "[${i}] ${x}"
 			i=$((i + 1))
 		fi
@@ -441,7 +451,7 @@ do
 					i=1
 					for y in "${GCC_ENV_D}"/*
 					do
-						[ "${y}" == "${GCC_ENV_D}/config" ] && continue
+						[ "${y/\/config}" != "${y}" ] && continue
 
 						if [ -f "${y}" ] && [ "${x}" -eq "${i}" ]
 						then

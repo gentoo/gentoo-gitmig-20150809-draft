@@ -1,10 +1,20 @@
-MD5 fb92a87e88e95710087422ef18122a62 ChangeLog 12390
-MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
-MD5 5e7e8f8d7232831caffe9be66ae6e6cc gcc-config-1.3.7-r2.ebuild 2237
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b6cf159c7fc6998244095afffd1c87c1 gcc-config-1.3.7-r3.ebuild 1426
+MD5 7d2fe90bde1fc09514181aafbcd340db ChangeLog 12772
 MD5 0a250a07d02f1343f64fe7f7bbdbd820 gcc-config-1.3.6-r4.ebuild 2636
-MD5 e64a89abafa7f6f7d16c2540fb0edcf4 files/wrapper-1.4.2.c 7381
-MD5 2902e905147ff6ba0703f0f72660aa9a files/wrapper-1.4.3.c 8434
-MD5 9e12dace91fe2992fd43427b5f686a49 files/gcc-config-1.3.7 11339
-MD5 5f5ba2d67203ed8386ae76352f15000d files/gcc-config-1.3.6 10285
+MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gcc-config-1.3.6-r4 0
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gcc-config-1.3.7-r2 0
+MD5 2902e905147ff6ba0703f0f72660aa9a files/wrapper-1.4.3.c 8434
+MD5 5f5ba2d67203ed8386ae76352f15000d files/gcc-config-1.3.6 10285
+MD5 124a5e345bbd70ad6cd9ca2b8e8d4e6d files/gcc-config-1.3.7 11797
+MD5 e64a89abafa7f6f7d16c2540fb0edcf4 files/wrapper-1.4.2.c 7381
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gcc-config-1.3.7-r3 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBr9LmroRuSHgZdywRAkE8AJ93tys8ySdf5h7i6NzIDvS5RTBiKQCfVcFi
+fIWIuB0dg0WwsGneimtClq0=
+=O/nb
+-----END PGP SIGNATURE-----
