@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-0.2.2-r1.ebuild,v 1.2 2005/01/01 15:26:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/tomboy-0.2.2-r1.ebuild,v 1.3 2005/03/11 03:23:26 latexer Exp $
 
 inherit gnome2 mono
 
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="doc"
 
-DEPEND=">=dev-dotnet/mono-1.0
+DEPEND=">=dev-lang/mono-1.0
 		>=dev-dotnet/gtk-sharp-1.0.4-r1
 		>=dev-dotnet/gnome-sharp-1.0.4
 		>=dev-dotnet/gconf-sharp-1.0.4
