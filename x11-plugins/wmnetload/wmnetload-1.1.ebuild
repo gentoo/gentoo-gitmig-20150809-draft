@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetload/wmnetload-1.1.ebuild,v 1.6 2004/06/24 23:15:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetload/wmnetload-1.1.ebuild,v 1.7 2004/07/15 01:00:53 agriffis Exp $
 
 IUSE=""
-
-S="${WORKDIR}/${P}"
 
 DESCRIPTION="Network interface monitor dockapp"
 HOMEPAGE="http://freshmeat.net/projects/wmnetload/"

@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/i8krellm/i8krellm-2.3.ebuild,v 1.6 2004/06/24 23:00:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/i8krellm/i8krellm-2.3.ebuild,v 1.7 2004/07/15 01:00:01 agriffis Exp $
 
 IUSE="gtk2"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="GKrellM2 Plugin for the Dell Inspiron and Latitude notebooks"
 SRC_URI="http://www.coding-zone.com/${P}.tar.gz"
 HOMEPAGE="http://www.coding-zone.com/i8krellm.phtml"
