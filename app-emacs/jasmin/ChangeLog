@@ -1,0 +1,10 @@
+# ChangeLog for app-emacs/jasmin
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/jasmin/ChangeLog,v 1.1 2003/10/31 22:36:00 mkennedy Exp $
+
+*jasmin-1.2 (31 Oct 2003)
+
+  31 Oct 2003; <mkennedy@gentoo.org> jasmin-1.2.ebuild, metadata.xml,
+  files/50jasmin-gentoo.el:
+  initial import. ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
