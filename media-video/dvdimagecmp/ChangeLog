@@ -1,0 +1,10 @@
+# ChangeLog for media-video/cxfe
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdimagecmp/ChangeLog,v 1.1 2004/09/06 22:20:01 arj Exp $
+
+*dvdimagecmp-0.2 (06 Sep 2004)
+
+  06 Sep 2004; Anders Rune Jensen <arj@gentoo.org> +dvdimagecmp-0.2.ebuild:
+  New package contributed by Stefan Briesenick <sbriesen@gmx.de>. Closes
+  #54803.
+	
