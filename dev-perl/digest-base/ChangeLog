@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/digest-base
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/digest-base/ChangeLog,v 1.6 2004/01/08 18:23:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/digest-base/ChangeLog,v 1.7 2004/02/15 00:57:45 mcummings Exp $
+
+  14 Feb 2004; Michael Cummings,,, <mcummings@gentoo.org>
+  digest-base-1.05.ebuild:
+  Removed commented arm - either it is or isn't
 
   08 Jan 2004; <gustavoz@gentoo.org> digest-base-1.05.ebuild:
   marked stable on hppa
