@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/shfs-0.32.ebuild,v 1.3 2003/11/11 19:28:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/shfs-0.32.ebuild,v 1.4 2003/12/30 01:02:52 lu_zero Exp $
 
 IUSE="amd doc"
 
@@ -95,9 +95,9 @@ pkg_postinst() {
 	echo " "
 	einfo " Note the following:                                      "
 	einfo "                                                          "
-	einfo "   1.  The shfs.o kernel module has to be loaded first    "
+	einfo "   1.  The shfs kernel module has to be loaded first    "
 	einfo "       before you can start mounting filesystems.         "
-	einfo "       Try: 'insmod shfs' as root.                        "
+	einfo "       Try: 'modprobe shfs' as root.                        "
 	einfo "                                                          "
 	einfo "   2.  When mounting, you must enter the absolute path of "
 	einfo "       the remote filesystem without any special chars,   "
