@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.9.1.ebuild,v 1.2 2005/01/29 05:12:51 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.9.1.ebuild,v 1.3 2005/02/07 10:57:19 eldad Exp $
 
 inherit eutils
 
@@ -18,6 +18,21 @@ DEPEND=">=gnome-base/libglade-2.0
 	virtual/libpcap
 	sys-devel/gettext
 	sys-devel/autoconf"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/${P}-res_mkquery.patch
+}
+
+src_compile() {
+	aclocal
+	autoconf
+
+	econf || die
+	emake || die
+}
 
 src_install() {
 	emake DESTDIR=${D} install || die "failed to install"
