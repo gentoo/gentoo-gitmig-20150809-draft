@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/ia64-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ia64-sources/ChangeLog,v 1.19 2004/07/10 06:05:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ia64-sources/ChangeLog,v 1.20 2004/07/21 22:34:05 plasmaroo Exp $
+
+*ia64-sources-2.4.24-r7 (21 Jul 2004)
+
+  21 Jul 2004; <plasmaroo@gentoo.org> -ia64-sources-2.4.24-r6.ebuild,
+  +ia64-sources-2.4.24-r7.ebuild,
+  +files/ia64-sources-2.4.24.CAN-2004-0447.patch,
+  +files/ia64-sources-2.4.24.CAN-2004-0565.patch:
+  Version bump - added CAN-2004-0447 and CAN-2004-0565.
 
   09 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
   ia64-sources-2.4.24-r6.ebuild:
