@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.9.ebuild,v 1.2 2004/02/04 20:32:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.9.ebuild,v 1.3 2004/02/06 11:10:13 liquidx Exp $
 
 inherit libtool gnome.org
 
@@ -38,15 +38,13 @@ src_unpack () {
 	unpack ${A}
 	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/gconfd-2-fix.patch
 	epatch ${FILESDIR}/${P}-locallock_mdk.patch
+	
+	mkdir ${S}/intl
+	touch ${S}/intl/libgettext.h	
 }
 
 src_compile() {
 	elibtoolize
-
-	use nls	\
-		&& mkdir intl			\
-		&& touch intl/libgettext.h
-
 	econf $(use_enable nls)
 	emake || die "make failed"
 }
