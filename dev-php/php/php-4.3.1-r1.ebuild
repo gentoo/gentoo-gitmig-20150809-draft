@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Update: Roman Weber <gentoo@gonzo.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.1-r1.ebuild,v 1.6 2003/03/03 09:23:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.1-r1.ebuild,v 1.7 2003/03/03 21:10:55 seemant Exp $
 
 IUSE="truetype postgres tiff libwww nls jpeg readline ssl oci8 mysql X gdbm curl imap xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam spell"
 
@@ -182,10 +182,8 @@ src_compile() {
 		--enable-inline-optimization \
 		--with-config-file-path=/etc/php4 \
 		--with-pear \
+		--enable-pcntl \
 		${myconf} || die "bad ./configure"
-		# Causing breakages -- fork not supported on this architecture
-		# messages, so disabling this option for now.
-		# --enable-pcntl \
 
 	make || die "compile problem"
 }
