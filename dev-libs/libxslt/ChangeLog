@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/libxslt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.96 2005/03/22 02:46:17 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.97 2005/03/25 02:00:53 obz Exp $
+
+*libxslt-1.1.13-r1 (25 Mar 2005)
+
+  25 Mar 2005; Mike Gardiner <obz@gentoo.org>
+  +files/libxslt-1.1.13-xslt.patch, +libxslt-1.1.13-r1.ebuild:
+  Applied fix for missing dictionary in xslt.c which was causing crashes in
+  kopete. Should be fixed in 1.1.14 (it's in CVS). See bug #86327, and the
+  linked upstream bug
 
   22 Mar 2005; Mike Gardiner <obz@gentoo.org> libxslt-1.1.13.ebuild:
   Requires >=dev-libs/libxml2-2.6.17, see bug #86157

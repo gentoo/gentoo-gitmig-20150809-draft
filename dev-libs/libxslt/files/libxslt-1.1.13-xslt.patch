@@ -1,0 +1,25 @@
+diff -ur libxslt-1.1.13/libxslt/xslt.c libxslt-1.1.13-patched/libxslt/xslt.c
+--- libxslt-1.1.13/libxslt/xslt.c	2005-01-23 04:58:02.000000000 +0800
++++ libxslt-1.1.13-patched/libxslt/xslt.c	2005-03-25 09:48:03.705023480 +0800
+@@ -1534,14 +1534,17 @@
+ 			while (text != NULL) {
+ 			    if ((text->content != NULL) &&
+ 			        (!xmlDictOwns(style->dict, text->content))) {
+-				xmlChar *old = (xmlChar *) text->content;
+ 
+ 				/*
+ 				 * internalize the text string
+ 				 */
+-				text->content = (xmlChar *)
+-					xmlDictLookup(style->dict, old, -1);
+-				xmlFree(old);
++				if (text->doc->dict != NULL) {
++				    xmlChar *old = (xmlChar *) text->content;
++				    text->content = 
++					(xmlChar *) xmlDictLookup(
++						text->doc->dict, old, -1);
++				    xmlFree(old);
++				}
+ 			    }
+ 
+ 			    next = text->next;
