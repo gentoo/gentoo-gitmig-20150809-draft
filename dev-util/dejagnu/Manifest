@@ -1,3 +1,5 @@
-MD5 6fe78902fe737fcc4ffc405da73a199e ChangeLog 508
 MD5 c449e56e11e7c5a4511e3d3c70198606 dejagnu-1.4.3.ebuild 906
+MD5 e125829f7c6ff27c2b7e136f0cd926f0 ChangeLog 631
+MD5 9002d55ce24da1494ec49b7718433649 dejagnu-1.4.4.ebuild 907
+MD5 93db6813e2b5581355a1dc6951391f50 files/digest-dejagnu-1.4.4 66
 MD5 b4e2328a46d8de317e6cfc4723031387 files/digest-dejagnu-1.4.3 66
