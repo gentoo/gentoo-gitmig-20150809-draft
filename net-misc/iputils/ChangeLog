@@ -1,14 +1,20 @@
 # ChangeLog for net-misc/iputils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.25 2004/04/09 04:55:15 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.26 2004/04/24 06:20:10 vapier Exp $
+
+*iputils-021109-r3 (24 Apr 2004)
+
+  24 Apr 2004; Mike Frysinger <vapier@gentoo.org> :
+  Remove racoon since (1) net-firewall/ipsec-tools installs this and
+  (2) the packaged racoon has a nice remote DoS #48847.
+
+*iputils-021109-r2 (07 Apr 2004)
 
   09 Apr 2004; Travis Tilley <lv@gentoo.org> iputils-021109-r1.ebuild:
   marked stable on amd64
 
   08 Apr 2004; Joshua Kinard <kumba@gentoo.org> iputils-020927.ebuild:
   Typo fix
-
-*iputils-021109-r2 (07 Apr 2004)
 
   07 Apr 2004; Mike Frysinger <vapier@gentoo.org> :
   Clean up src_unpack and src_compile steps and add flex/openssl to DEPEND #38774.

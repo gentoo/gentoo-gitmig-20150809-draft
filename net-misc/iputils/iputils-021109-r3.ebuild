@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109-r2.ebuild,v 1.2 2004/04/20 02:39:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109-r3.ebuild,v 1.1 2004/04/24 06:20:11 vapier Exp $
 
 inherit flag-o-matic gcc gnuconfig eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.inr.ac.ru/ip-routing/${PN}-ss${PV}-try.tar.bz2
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64 ~ppc64 ~s390"
+KEYWORDS="~x86 ppc ~sparc ~alpha ~hppa ~mips amd64 ~ia64 ppc64 s390"
 IUSE="static ipv6" #doc
 
 DEPEND="virtual/glibc
@@ -50,11 +50,6 @@ src_unpack() {
 	use ipv6 || sed -i -e 's:IPV6_TARGETS=:#IPV6_TARGETS=:' Makefile
 
 	sed -i "s:-ll:-lfl ${LDFLAGS}:" setkey/Makefile || die "sed setkey failed"
-
-	cd racoon
-	epatch ${FILESDIR}/${PV}-racoon-getifaddrs-fix.patch
-	sed -i '2323i\LIBS="$LIBS -lfl -lresolv"' configure || die "configure libs failed"
-	gnuconfig_update
 }
 
 src_compile() {
@@ -64,10 +59,6 @@ src_compile() {
 
 		cd ${S}/setkey
 		emake || die "setkey failed"
-
-		cd ${S}/racoon
-		econf || die
-		emake || die "make racoon failed"
 	fi
 
 	cd ${S}
@@ -81,9 +72,6 @@ src_compile() {
 
 src_install() {
 	if [ -e ${ROOT}/usr/include/linux/pfkeyv2.h ] ; then
-		dodir /usr/sbin /usr/share/man/man{5,8}
-		cd ${S}/racoon && einstall || die
-
 		into /usr
 		dobin ${S}/setkey/setkey
 	fi
