@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/clearsilver-0.9.7.ebuild,v 1.3 2004/04/29 07:41:23 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/clearsilver/clearsilver-0.9.7.ebuild,v 1.4 2004/05/05 07:38:59 dragonheart Exp $
+
+inherit eutils
 
 DESCRIPTION="Clearsilver is a fast, powerful, and language-neutral HTML template system."
 HOMEPAGE="http://www.clearsilver.net/"
@@ -20,8 +22,6 @@ IUSE="apache2 java perl python ruby zlib"
 # stuart@gentoo.org, 25th April 2004
 
 RESTRICT="nomirror"
-
-inherit eutils
 
 DEPEND="apache2? ( >=net-www/apache-2 )
 	java? ( virtual/jdk )
