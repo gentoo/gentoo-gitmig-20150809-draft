@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.61-r2.ebuild,v 1.10 2004/11/26 10:18:10 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/pine-4.61-r2.ebuild,v 1.11 2004/11/30 01:24:48 ticho Exp $
 
 inherit eutils
 
@@ -39,8 +39,6 @@ src_unpack() {
 
 	# Various fixes and features.
 	epatch "${WORKDIR}/${CHAPPA_PF}-chappa-all.patch"
-	# Fix Home and End keys. Seems to work anyway?
-	#epatch "${FILESDIR}/pine-4.21-fixhome.patch"
 	# UTF8 support. Not ported. 4.60 has utf8 some conversion.
 	#epatch "${DISTDIR}/${PN}${PV}-utf8-to-singlebyte.patch"
 	# Fix flock() emulation.

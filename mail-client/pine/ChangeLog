@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/pine
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.28 2004/11/30 01:16:10 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.29 2004/11/30 01:24:48 ticho Exp $
+
+  30 Nov 2004; Andrej Kacian <ticho@gentoo.org>
+  -files/imap-4.7c2-flock+maildir.patch, -files/pine-4.21-fixhome.patch,
+  -files/pine-4.21-passwd.patch, pine-4.61-r2.ebuild, pine-4.61-r3.ebuild,
+  pine-4.61-r4.ebuild:
+  Some more unused patches cleanup.
 
 *pine-4.61-r4 (30 Nov 2004)
 
