@@ -1,15 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-2.0.1.ebuild,v 1.3 2004/02/17 20:05:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glade/glade-2.0.1.ebuild,v 1.4 2004/02/21 03:41:09 vapier Exp $
 
 inherit gnome.org
 
 DESCRIPTION="a GUI Builder.  This release is for GTK+ 2 and GNOME 2."
 HOMEPAGE="http://glade.gnome.org/"
 
-SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc amd64 alpha ia64"
+SLOT="2"
+KEYWORDS="~x86 ppc ~sparc alpha ia64 amd64"
 IUSE="gnome gnomedb"
 
 RDEPEND="=x11-libs/gtk+-2*
@@ -19,12 +19,10 @@ RDEPEND="=x11-libs/gtk+-2*
 		>=gnome-base/libgnomecanvas-2.0.0
 		>=gnome-base/libbonoboui-2.0.0 )
 	gnomedb? ( >=gnome-extra/libgnomedb-0.11 )"
-
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	sys-devel/gettext
 	>=dev-util/intltool-0.11"
-
 
 src_unpack() {
 	unpack ${A}
