@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.2.20020511-r1.ebuild,v 1.5 2002/07/16 03:52:51 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.2.20020511-r1.ebuild,v 1.6 2002/07/24 16:27:38 spider Exp $
 
 MY_PV=${PV%.*}
 
@@ -18,6 +18,7 @@ RDEPEND="virtual/glibc"
 LICENSE="MIT"
 SLOT="5"
 KEYWORDS="x86 ppc"
+CXXFLAGS=${CXXFLAGS/-fno-exceptions/-fexceptions}
 
 src_unpack() {
 	unpack ${PN}-${MY_PV}.tar.gz ; cd ${S}
