@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.6c-r1.ebuild,v 1.6 2004/06/18 08:09:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.6c-r1.ebuild,v 1.7 2004/06/19 20:39:46 tgall Exp $
 
 DESCRIPTION="Network Audio System"
 SRC_URI="http://radscan.com/nas/${P}.src.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://radscan.com/nas.html"
 
 SLOT="0"
 LICENSE="X11"
-KEYWORDS="x86 ~sparc ~ppc ~hppa ~alpha amd64 ~ia64 ~mips"
+KEYWORDS="x86 ~sparc ~ppc ~hppa ~alpha amd64 ~ia64 ~mips ~ppc64"
 
 IUSE="static"
 
