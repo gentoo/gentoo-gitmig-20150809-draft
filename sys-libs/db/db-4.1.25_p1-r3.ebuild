@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.25_p1-r3.ebuild,v 1.18 2004/03/21 07:18:02 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.25_p1-r3.ebuild,v 1.19 2004/03/22 04:04:46 vapier Exp $
 
 IUSE="tcltk java doc"
 
@@ -81,9 +81,7 @@ src_compile() {
 		export JAVAC=`basename ${JAVAC}`
 	fi
 
-	if [ "${PROFILE_ARCH}" = "sparc64" ]; then
-		myconf="${myconf} --host=${CHOST}"
-	fi
+	[ -n "${CBUILD}" ] && myconf="${myconf} --build=${CBUILD}"
 
 	../dist/configure \
 		--prefix=/usr \
@@ -95,6 +93,7 @@ src_compile() {
 		--enable-compat185 \
 		--enable-cxx \
 		--with-uniquename \
+		--host=${CHOST} \
 		${myconf} || die
 
 	emake || make || die
