@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.11-r2.ebuild,v 1.5 2004/08/18 22:08:21 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.11-r2.ebuild,v 1.6 2004/08/19 21:59:53 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,8 +14,10 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa amd64 ~ia64"
 IUSE="ipv6 static extensions"
+
 DEPEND="virtual/os-headers
 	extensions? ( virtual/linux-sources )"
+RDEPEND=""
 
 pkg_setup() {
 	if use extensions; then

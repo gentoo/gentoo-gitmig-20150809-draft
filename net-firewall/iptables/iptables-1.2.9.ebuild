@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.9.ebuild,v 1.15 2004/07/02 10:31:32 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.9.ebuild,v 1.16 2004/08/19 21:59:54 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -15,6 +15,7 @@ IUSE="ipv6"
 
 # iptables is dependent on kernel sources.  Strange but true.
 DEPEND="virtual/os-headers"
+RDEPEND=""
 
 src_unpack() {
 	replace-flags -O0 -O2
