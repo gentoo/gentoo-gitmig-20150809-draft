@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.5-r1.ebuild,v 1.11 2004/04/11 06:06:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-mixer/sdl-mixer-1.2.5-r1.ebuild,v 1.12 2004/05/23 22:10:42 vapier Exp $
 
 inherit eutils
 
@@ -26,11 +26,11 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-gcc3.patch
-	autoreconf
+	autoreconf -i || die
 	sed -i \
 		-e 's:/usr/local/lib/timidity:/usr/share/timidity:' \
-			timidity/config.h \
-				|| die "sed timidity/config.h failed"
+		timidity/config.h \
+		|| die "sed timidity/config.h failed"
 }
 
 src_compile() {
