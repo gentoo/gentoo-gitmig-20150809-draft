@@ -1,10 +1,34 @@
 # ChangeLog for sys-kernel/lolo-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.15 2002/10/17 19:16:46 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.16 2002/10/23 18:18:21 lostlogic Exp $
+
+*lolo-sources-2.4.20.1_pre2 (23 Oct 2002)
+
+  23 Oct 2002; Brandon Low <lostlogic@gentoo.org> lolo-sources-2.4.20.1_pre2.ebuild:
+
+  Changes from _pre1:
+  - Update gentoo FB logos from seemant's sparc stuff
+  - Sort out some of the docs for patches.txt
+  - update grsecurity to 1.9.7d
+  - Fix the grsecurity security issue.
+  - Fix EVMS compilation
+  - I actually test compiled this one with a "all" configuration... only
+    a few problems in mostly unused drivers, please test this one.
+
+  Additional todo:
+  - Stuff from -aa and other sources from http://ohdarn.net/gentoo/used
+    thanks to MJC
+  - Figure out why the heck this thing breaks my VM like mad when using
+    accelerated nvidia-kernel drivers...
+  - <mjc> lostlogic: one of andreas patches adds CMPXCHG8 to the
+    processor stuff in config.in
+  - <mjc> the gcc31 options need it too
+  - <mjc>    define_bool CONFIG_X86_CMPXCHG8 y
+
 
 *lolo-sources-2.4.20.1_pre1 (16 Oct 2002)
 
-  16 Oct 2002; Brandon Low <lostlogic@gentoo.org> lolo-sources-2.4.20.11_pre1.ebuild:
+  16 Oct 2002; Brandon Low <lostlogic@gentoo.org> lolo-sources-2.4.20.1_pre1.ebuild:
 
   The long awaited of the 2.4.20 series of stuff, this one is still missing stuff.
 
