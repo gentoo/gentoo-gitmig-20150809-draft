@@ -1,11 +1,11 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3.ebuild,v 1.3 2001/08/17 16:47:54 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3.ebuild,v 1.4 2001/10/21 22:11:13 agriffis Exp $
 
 S=${WORKDIR}/${P}
-SRC_URI="prdownloads.sourceforge.net/sgmltools-lite/${P}.tar.gz
-	 prdownloads.sourceforge.net/sgmltools-lite/nw-eps-icons-0.0.1.tar.gz"
+SRC_URI="http://prdownloads.sourceforge.net/sgmltools-lite/${P}.tar.gz
+		 http://prdownloads.sourceforge.net/sgmltools-lite/nw-eps-icons-0.0.1.tar.gz"
 
 HOMEPAGE="sgmltools-lite.sourceforge.net"
 DESCRIPTION=""
@@ -19,41 +19,33 @@ DEPEND="virtual/python
 	net-www/lynx"
 
 src_unpack() {
-    
-    cd ${WORKDIR}
-    unpack ${P}.tar.gz 
-    cd ${S}
-    unpack nw-eps-icons-0.0.1.tar.gz
-    patch -p0 <${FILESDIR}/${P}-gentoo.diff
-    
+	cd ${WORKDIR}
+	unpack ${P}.tar.gz
+	cd ${S}
+	unpack nw-eps-icons-0.0.1.tar.gz
+	patch -p0 <${FILESDIR}/${P}-gentoo.diff
 }
 
 src_compile() {
-    
-    try ./configure --prefix=/usr
-    
-    try make
-
+	./configure --prefix=/usr || die
+	make || die
 }
 
 src_install () {
+	make DESTDIR=${D} install
 
-    try make DESTDIR=${D} install
-    
-    cd ${S}/bin
-    chmod a+x ./gensgmlenv
-    ./gensgmlenv
-    cd /etc/sgml
-    dodir /etc/env.d
-    cat sgml.env | grep = > ${D}/etc/env.d/93sgmltools-lite
-    rm sgml.env sgml.cenv
-    
-    cd ${S}/nw-eps-icons-0.0.1/images
-    insinto /usr/share/sgml/docbook/dsssl-stylesheets/images
-    doins *.eps
-    insinto /usr/share/sgml/docbook/dsssl-stylesheets/images/callouts
-    cd callouts
-    doins *.eps
-    
+	cd ${S}/bin
+	chmod a+x ./gensgmlenv
+	./gensgmlenv
+	cd /etc/sgml
+	dodir /etc/env.d
+	cat sgml.env | grep = > ${D}/etc/env.d/93sgmltools-lite
+	rm sgml.env sgml.cenv
+
+	cd ${S}/nw-eps-icons-0.0.1/images
+	insinto /usr/share/sgml/docbook/dsssl-stylesheets/images
+	doins *.eps
+	insinto /usr/share/sgml/docbook/dsssl-stylesheets/images/callouts
+	cd callouts
+	doins *.eps
 }
-
