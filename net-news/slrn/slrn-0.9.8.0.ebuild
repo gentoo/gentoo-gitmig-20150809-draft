@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Added ssl support and new patches
-# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/slrn-0.9.8.0.ebuild,v 1.2 2003/09/07 00:16:42 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/slrn-0.9.8.0.ebuild,v 1.3 2003/09/11 01:27:15 msterret Exp $
 
 IUSE="ssl nls"
 
@@ -38,8 +38,7 @@ src_unpack() {
 	for i in ${P}-{mem_leak,popup_win,po}.diff ; do
 		[ -f ${DISTDIR}/${i} ] &&
 			patch -p1 < ${DISTDIR}/${i}
-    done
-
+	done
 }
 
 src_compile() {

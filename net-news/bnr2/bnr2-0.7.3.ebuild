@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/bnr2/bnr2-0.7.3.ebuild,v 1.3 2003/02/13 15:15:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/bnr2/bnr2-0.7.3.ebuild,v 1.4 2003/09/11 01:27:15 msterret Exp $
 
 IUSE=""
 
@@ -23,7 +23,7 @@ src_unpack() {
 	cd ${WORKDIR}
 	for f in ${A}; do
 		cp ${DISTDIR}/$f .
-        	gunzip $f
+		gunzip $f
 	done
 }
 
