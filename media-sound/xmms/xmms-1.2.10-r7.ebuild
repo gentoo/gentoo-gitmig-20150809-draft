@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r6.ebuild,v 1.6 2004/10/04 05:08:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r7.ebuild,v 1.1 2004/10/08 21:55:33 eradicator Exp $
 
 IUSE="xml nls esd opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk alsa oss arts jack sndfile lirc flac"
 
 inherit flag-o-matic eutils libtool gnuconfig
 
-PATCHVER="1.2"
+PATCHVER="1.3"
 
 MY_P=${P/_pre/-pre}
 S=${WORKDIR}/${MY_P}
@@ -84,6 +84,7 @@ src_unpack() {
 #	elif use unicode; then
 	else
 		epatch ${PATCHDIR}/${P}-unicode.patch
+		epatch ${PATCHDIR}/${P}-unicode-sizefix.patch
 #	else
 #		# id3v2 editing support in mpg123 plugin
 #		epatch ${PATCHDIR}/${P}-id3v2edit.patch
