@@ -1,6 +1,11 @@
 # ChangeLog for media-video/kavi2svcd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kavi2svcd/ChangeLog,v 1.6 2004/07/03 21:53:29 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kavi2svcd/ChangeLog,v 1.7 2004/11/29 09:43:20 motaboy Exp $
+
+  29 Nov 2004; Simone Gotti <motaboy@gentoo.org>
+  +files/kavi2svcd-0.8.2-configure-arts.patch, kavi2svcd-0.8.2.ebuild:
+  Added a patch to the configure script to honor the arts USE flag. Fixes bug
+  #72567.
 
   03 Jul 2004; Carsten Lohrke <carlo@gentoo.org> kavi2svcd-0.8.2.ebuild:
   QA: need-kde after R/DEPEND, missing sed dependency
