@@ -30,7 +30,7 @@
 -edb_ed $DB add /elogin/session/8/path str "~/.xinitrc"
 -edb_ed $DB add /elogin/session/count int 9
 +
-+local count=-1
++count=-1
 +for ses in /etc/X11/Sessions/* ; do
 +	let "count++"
 +	edb_ed $DB add /elogin/session/${count}/name str "`basename ${ses}`"
