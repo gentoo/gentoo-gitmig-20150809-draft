@@ -1,0 +1,4 @@
+MD5 46f58c6e2c0837b4967ec8869b64a328 ChangeLog 762
+MD5 147cf98394a80fb357751d441dc6914d netperf-2.2.ebuild 898
+MD5 a3d32398b2de6ff285e374a73448d17b files/digest-netperf-2.2 68
+MD5 5b39a4d1bbad0a785afc512f8a35e87d files/netperf-2.2alpha.diff 686
