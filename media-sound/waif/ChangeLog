@@ -1,8 +1,13 @@
 # ChangeLog for media-sound/waif
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/waif/ChangeLog,v 1.1 2003/02/08 02:34:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/waif/ChangeLog,v 1.2 2003/02/08 08:45:09 seemant Exp $
 
 *waif-0.59.3 (07 Feb 2003)
+
+  08 Feb 2003; Seemant Kulleen <seemant@gentoo.org> files/LICENSE
+
+  Added license -- quote from an e-mail that Matthew Levine (the author of
+  waif and wfxmms) sent me.
 
   07 Feb 2003; Seemant Kulleen <seemant@gentoo.org> waif-0.59.3.ebuild
   ChangeLog files/digest-waif-0.59.3 :

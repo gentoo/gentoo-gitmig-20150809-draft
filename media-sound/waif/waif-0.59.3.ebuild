@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/waif/waif-0.59.3.ebuild,v 1.1 2003/02/08 02:34:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/waif/waif-0.59.3.ebuild,v 1.2 2003/02/08 08:45:09 seemant Exp $
 
 IUSE="X gnome"
 
@@ -50,6 +50,7 @@ src_install() {
 	doman waifsh.1
 	
 	dodoc CHANGES FAQ INSTALL README* TODO WHATSNEW
+	dodoc ${FILESDIR}/LICENSE
 	docinto Documentation
 	dodoc Documentation/*
 
