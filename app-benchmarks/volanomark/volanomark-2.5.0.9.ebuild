@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/volanomark/volanomark-2.5.0.9.ebuild,v 1.2 2004/02/11 19:22:09 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/volanomark/volanomark-2.5.0.9.ebuild,v 1.3 2004/04/14 01:32:49 dragonheart Exp $
 
 DESCRIPTION="Java server benchmark utility"
 HOMEPAGE="http://www.volano.com/benchmarks.html"
@@ -12,7 +12,7 @@ RESTRICT="nomirror"
 
 SLOT="0"
 
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 amd64"
 IUSE=""
 DEPEND="virtual/jre
 	>=sys-apps/sed-4
