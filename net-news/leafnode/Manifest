@@ -1,4 +1,3 @@
-MD5 5bf660d5a41e39f738a401387ac08da5 ChangeLog 3303
 MD5 5e8b756a4f9f56b9c5da23420a067db0 leafnode-1.9.24.ebuild 1670
 MD5 c062ee565c94b8384315f417a2b1412b leafnode-1.9.29.ebuild 1968
 MD5 49d1597e790ca7e59e396d9f54f6d501 leafnode-1.9.30-r1.ebuild 1721
@@ -6,6 +5,8 @@ MD5 b43ad10d2da4b75f6aa611562ab2a5ee leafnode-1.9.30.ebuild 1718
 MD5 28c953e96738c42e32f9e1664b88419f leafnode-1.9.31.ebuild 1803
 MD5 538d1cb45160279f7c4cdb8f3449be72 leafnode-1.9.33.ebuild 1698
 MD5 f7fb6a17e0354b13a208562f428c991a leafnode-1.9.36.ebuild 1804
+MD5 84d994f6eb32e5ba7665a0cd24d31d7d ChangeLog 3631
+MD5 898281ddfc93e1d065d7528879cce2ee leafnode-2.0.0_alpha20030621.ebuild 2331
 MD5 30bb0166f5d0c5104c5b9fc581c7e86a files/digest-leafnode-1.9.24 71
 MD5 d77361e3a74682f178524bf9745928f3 files/digest-leafnode-1.9.29 152
 MD5 8b670ed91965825ec7b7e077bae776dc files/digest-leafnode-1.9.30 152
@@ -16,3 +17,4 @@ MD5 a4f9f0d49a605aa811458ed8db567b05 files/digest-leafnode-1.9.36 72
 MD5 c9e3a9028be25e8e193bccd6a72179f0 files/fetchnews.cron 179
 MD5 510836c882c3365d0441ba7d8854ba6b files/leafnode.xinetd 230
 MD5 2f9497c399cca56885460b88ee53da0b files/texpire.cron 159
+MD5 06eec26c72070f70f182ebcf05cd22a3 files/digest-leafnode-2.0.0_alpha20030621 82

@@ -1,6 +1,15 @@
 # ChangeLog for net-news/leafnode
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/ChangeLog,v 1.14 2003/03/18 20:26:31 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/ChangeLog,v 1.15 2003/06/27 06:35:12 blkdeath Exp $
+
+*leafnode-2.0.0_alpha20030621 (27 Jun 2003)
+
+  27 Jun 2003; Stewart Honsberger <blkdeath@gentoo.org>
+  leafnode-2.0.0_alpha20030621.ebuild:
+  Initial ebuild for Leafnode 2. Functionality enhancements, etc.
+  NOTE: This is ALPHA software. Use/test at your own peril!
+  
+  Initial ebuild contributed by Torsten <t_veller@gmx.de>
 
 *leafnode-1.9.36 (18 Mar 2003)
 
