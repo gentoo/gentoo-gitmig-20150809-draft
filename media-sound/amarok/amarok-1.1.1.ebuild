@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.1.1.ebuild,v 1.2 2004/10/26 09:13:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.1.1.ebuild,v 1.3 2004/11/05 10:19:35 eradicator Exp $
 
-IUSE="noamazon cjk gstreamer xmms opengl xine arts"
+IUSE="noamazon cjk xmms opengl xine arts"
 
 inherit kde eutils
 
@@ -20,7 +20,6 @@ KEYWORDS="~x86 ~ppc ~amd64"
 
 DEPEND="=media-libs/libvisual-0.1.6
 	arts? ( >=kde-base/kdemultimedia-3.2 )
-	gstreamer? ( >=media-libs/gst-plugins-0.8.1 )
 	opengl? ( virtual/opengl )
 	xmms? ( >=media-sound/xmms-1.2 )
 	xine? ( >=media-libs/xine-lib-1_rc4 )
@@ -30,12 +29,16 @@ DEPEND="=media-libs/libvisual-0.1.6
 	>=kde-base/kdelibs-3.2
 	>=x11-libs/qt-3.3"
 
+# 100% CPU usage with gst... don't use it
+#	gstreamer? ( >=media-libs/gst-plugins-0.8.1 )
+
+
 need-kde 3.2
 
 src_unpack() {
-	if  ! use gstreamer && ! use xine && ! use arts
+	if  use !xine && use !arts
 	then
-		die "You must enable either Gstreamer, aRts or Xine"
+		die "You must enable either aRts or Xine"
 	fi
 
 	kde_src_unpack
@@ -46,10 +49,8 @@ src_unpack() {
 src_compile() {
 	PREFIX="`kde-config --prefix`"
 
-	myconf="`use_with arts` `use_with gstreamer`"
-	myconf="${myconf} `use_with opengl` `use_with xine` `use_enable !noamazon amazon`"
-
-	einfo "${myconf}"
+	myconf="`use_with arts` `use_with xine`"
+	myconf="${myconf} `use_with opengl` `use_enable !noamazon amazon`"
 
 	kde_src_compile myconf configure make || die
 }
