@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.902.ebuild,v 1.1 2003/02/25 00:20:47 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.902.ebuild,v 1.2 2003/02/25 00:52:22 seemant Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -54,7 +54,7 @@ SRC_PATH_SS="http://www.ibiblio.org/gentoo/gentoo-sources"
 HOMEPAGE="http://www.xfree.org"
 
 # Misc patches we may need to fetch ..
-X_PATCHES="mirror://gentoo/XFree86-${PV}-patches-${PATCH_VER}.tar.bz2"
+X_PATCHES="mirror://gentoo/XFree86-4.2.99.4-patches-${PATCH_VER}.tar.bz2"
 
 X_DRIVERS="http://people.mandrakesoft.com/~flepied/projects/wacom/xf86Wacom.c.gz
 	http://www.probo.com/timr/savage-${SAVDRV_VER}.zip
@@ -166,7 +166,7 @@ src_unpack() {
 	
 	# enable the nv driver on ppc
 	if use ppc; then
-		epatch ${FILESDIR}/${PV}/${PV}-enable-nv-on-ppc.patch || die
+		epatch ${FILESDIR}/${PV}-patches/XFree86-${PV}-enable-nv-on-ppc.patch || die
 	fi
 
 	# Fix HOME and END keys to work in xterm, bug #15254
