@@ -1,4 +1,14 @@
-MD5 ff0fd428f35ff7fcafff2d35995d60d3 ChangeLog 554
-MD5 6a37498874847d52b513a81d5d0c983e localizer-0.3.3.ebuild 695
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ae4e8893a49f2c9011f2b3648607d8df ChangeLog 651
+MD5 dd4025d30ce3d1426299cab32cc93140 localizer-0.3.3.ebuild 704
 MD5 25168b21c28ad10e3f2316e3d7e19a8a metadata.xml 270
 MD5 84d462fee97d9ac1ed9871c3760c4d2b files/digest-localizer-0.3.3 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB1x1L0K3RJaeXx6cRAgjnAKCmKL/SEUHgmLLzAPcOODkvliv0TgCgl97c
+wmXFNdbKxzKakIexCtb1J3A=
+=1bII
+-----END PGP SIGNATURE-----
