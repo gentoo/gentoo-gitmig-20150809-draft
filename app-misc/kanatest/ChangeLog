@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/kanatest
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kanatest/ChangeLog,v 1.4 2004/06/24 22:18:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kanatest/ChangeLog,v 1.5 2004/12/04 20:46:41 corsair Exp $
+
+  04 Dec 2004; Markus Rothe <corsair@gentoo.org> kanatest-0.3.6.ebuild:
+  Added ~ppc64 to KEYWORDS; bug #72914
 
   01 Apr 2004; Akinori Hattori <hattya@gentoo.org> kanatest-0.3.6.ebuild:
   marked stable on x86.
