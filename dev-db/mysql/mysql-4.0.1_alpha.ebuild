@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 
+IUSE="static readline innodb berkdb tcpd"
+
 SVER=${PV%.*}
 #for normal releases:
 SDIR=MySQL-${SVER}

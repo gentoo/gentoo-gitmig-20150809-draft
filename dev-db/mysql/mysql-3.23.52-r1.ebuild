@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.52-r1.ebuild,v 1.3 2002/10/04 19:19:46 kilroy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.52-r1.ebuild,v 1.4 2002/10/05 05:39:10 drobbins Exp $
+
+IUSE="static readline innodb berkdb tcpd"
 
 SVER=${PV%.*}
 #normal releases:

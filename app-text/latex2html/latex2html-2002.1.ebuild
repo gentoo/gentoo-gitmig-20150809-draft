@@ -3,6 +3,8 @@
 # Michael Conrad Tilstra <tadpol@gentoo.org> <tadpol@tadpol.org>
 # /space/gentoo/cvsroot/gentoo-x86/app-text/latex2html/latex2html-2002.ebuild,v 1.1 2002/04/27 09:22:19 seemant Exp
 
+IUSE="gif png"
+
 P="latex2html-2002-1"
 S=${WORKDIR}/${P}
 DESCRIPTION="LATEX2HTML is a convertor written in Perl that converts LATEX documents to HTML."

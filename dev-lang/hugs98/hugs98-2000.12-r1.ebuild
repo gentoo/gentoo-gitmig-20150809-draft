@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/hugs98-2000.12-r1.ebuild,v 1.3 2002/10/04 05:12:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/hugs98-2000.12-r1.ebuild,v 1.4 2002/10/05 05:39:10 drobbins Exp $
+
+IUSE="readline"
 
 MY_P="hugs98-Dec2001"
 S=${WORKDIR}/${MY_P}

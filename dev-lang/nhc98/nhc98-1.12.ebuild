@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # /space/gentoo/cvsroot/gentoo-x86/dev-lang/nhc98/nhc98-1.12.ebuild,v 1.1 2002/06/09 07:38:07 george Exp
 
+IUSE="readline"
+
 TARBALL=nhc98src-${PV}.tar.gz
 
 DESCRIPTION="Haskell 98 compiler"

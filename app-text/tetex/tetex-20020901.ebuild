@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-20020901.ebuild,v 1.6 2002/10/04 05:08:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-20020901.ebuild,v 1.7 2002/10/05 05:39:10 drobbins Exp $
+
+IUSE="ncurses X libwww png"
 
 TEXMFSRC="teTeX-texmfsrc-beta-20020829.tar.gz"
 TEXMF="teTeX-texmf-beta-20020901.tar.gz"

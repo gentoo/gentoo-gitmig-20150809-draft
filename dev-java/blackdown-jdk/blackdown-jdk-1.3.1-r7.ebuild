@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r7.ebuild,v 1.13 2002/10/04 05:10:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r7.ebuild,v 1.14 2002/10/05 05:39:10 drobbins Exp $
+
+IUSE="ppc doc sparc sparc64 x86"
 
 . /usr/portage/eclass/inherit.eclass
 inherit java
