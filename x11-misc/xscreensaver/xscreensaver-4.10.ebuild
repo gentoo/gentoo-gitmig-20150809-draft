@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.10.ebuild,v 1.6 2003/06/15 19:40:24 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.10.ebuild,v 1.7 2003/06/16 22:38:50 liquidx Exp $
 
 IUSE="pam kerberos gtk gtk2 gnome opengl jpeg xinerama"
 
@@ -18,10 +18,12 @@ SLOT="0"
 #        automatically over gtk1. we need to patch the autoconf stuff
 #        to correctly allow users to choose gtk1/gtk2. right now it
 #        only selects the deps.
+# NOTE: ignore app-games/fortune-mod as a dep. it is pluggable and won't
+#       really matter if it isn't there. Maybe we should have a 'games'
+#       USE flag
 
 RDEPEND="virtual/x11
 	media-libs/netpbm
-	app-games/fortune-mod	
 	>=sys-libs/zlib-1.1.4
 	gtk? ( >=dev-libs/libxml2-2.5 )
 	gtk? ( gtk2? ( >=x11-libs/gtk+-2
@@ -53,11 +55,8 @@ src_unpack() {
 	cd ${S}
 	# disable rpm -q checking, otherwise it breaks sandbox if rpm is installed
 	epatch ${FILESDIR}/${P}-norpm.patch
-	
-	# disabled this hack, don't know why it is needed.
-	#cp Makefile.in Makefile.in.orig
-	#sed "s:hacks/glx po:hacks/glx:" \
-	#	Makefile.in.orig > Makefile.in
+	# replace msdos formatted file with unix equiv, otherwise it breaks on gcc-2.95
+	cp ${FILESDIR}/${P}-klein.c ${S}/hacks/glx/klein.c
 }
 
 src_compile() {
