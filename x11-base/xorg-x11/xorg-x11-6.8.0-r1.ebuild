@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r1.ebuild,v 1.19 2004/10/11 09:14:03 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r1.ebuild,v 1.20 2004/10/11 13:38:56 vapier Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -76,8 +76,7 @@ SLOT="0"
 KEYWORDS="arm ~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc sparc ~x86"
 
 # Need portage-2.0.50_pre9 for `use !foo`
-DEPEND=">=sys-apps/baselayout-1.8.3
-	>=sys-libs/ncurses-5.1
+DEPEND=">=sys-libs/ncurses-5.1
 	>=sys-libs/zlib-1.1.3-r2
 	>=sys-devel/flex-2.5.4a-r5
 	>=dev-libs/expat-1.95.3

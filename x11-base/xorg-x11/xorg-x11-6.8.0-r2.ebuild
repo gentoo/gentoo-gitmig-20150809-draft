@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.11 2004/10/11 09:20:23 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.12 2004/10/11 13:38:56 vapier Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -95,7 +95,7 @@ DEPEND=">=sys-libs/ncurses-5.1
 	!virtual/x11"
 # x11-libs/xft -- blocked because of interference with xorg's
 
-RDEPEND="virtual/baselayout
+RDEPEND="
 		>=sys-libs/zlib-1.1.3-r2
 		>=sys-devel/flex-2.5.4a-r5
 		>=dev-libs/expat-1.95.3

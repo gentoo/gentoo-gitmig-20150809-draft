@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r7.ebuild,v 1.11 2004/09/22 16:10:33 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r7.ebuild,v 1.12 2004/10/11 13:38:28 vapier Exp $
 
 inherit eutils flag-o-matic gcc xfree
 
@@ -122,8 +122,7 @@ LICENSE="Adobe-X CID DEC DEC-2 IBM-X NVIDIA-X NetBSD SGI UCB-LBL XC-2
 SLOT="0"
 KEYWORDS="x86 alpha"
 
-DEPEND=">=sys-apps/baselayout-1.8.3
-	>=sys-apps/portage-2.0.50_pre9
+DEPEND=">=sys-apps/portage-2.0.50_pre9
 	>=sys-libs/ncurses-5.1
 	>=sys-libs/zlib-1.1.3-r2
 	>=sys-devel/flex-2.5.4a-r5

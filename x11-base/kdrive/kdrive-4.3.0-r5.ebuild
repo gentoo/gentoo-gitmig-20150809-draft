@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0-r5.ebuild,v 1.8 2004/07/26 20:11:34 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0-r5.ebuild,v 1.9 2004/10/11 13:39:06 vapier Exp $
 
 # If you don't want to build the Xvesa server, do this.
 # VESA="no" emerge kdrive
@@ -59,8 +59,7 @@ LICENSE="X11"
 SLOT="0"
 KEYWORDS="x86 amd64"
 # Need portage for USE_EXPAND
-DEPEND=">=sys-apps/baselayout-1.8.3
-	>=sys-libs/ncurses-5.1
+DEPEND=">=sys-libs/ncurses-5.1
 	>=sys-libs/zlib-1.1.3-r2
 	>=sys-devel/flex-2.5.4a-r5
 	>=dev-libs/expat-1.95.3
