@@ -1,9 +1,14 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.6 2002/12/13 11:00:04 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.7 2003/01/03 07:40:35 cretin Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+
+*libpcap-0.7.1-r2 (3 Jan 2003)
+
+  3 Jan 2003; Stefan Jones <cretin@gentoo.org> :
+  Added -fpic to the CFLAGS to aid prelinking.
+
 *libpcap-0.7.1-r1 (31 Aug 2002) 
 
   02 Nov 2002; Calum Selkirk <cselkirk@gentoo.org> libpcap-0.7.1-r1.ebuild :
