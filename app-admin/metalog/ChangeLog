@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/metalog
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.21 2003/11/30 20:44:30 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/metalog/ChangeLog,v 1.22 2003/12/01 13:18:30 lanius Exp $
+
+  01 Dec 2003; Heinrich Wendel <lanius@gentoo.org>
+  metalog-0.8_pre20031130.ebuild:
+  fixed automake line
 
   30 Nov 2003; Heinrich Wendel <lanius@gentoo.org> metalog-0.8_pre20031130.ebuild:
   added current cvs version to fix bug #8607
