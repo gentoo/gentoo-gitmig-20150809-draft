@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.0.1.ebuild,v 1.3 2002/07/21 03:07:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.0.1.ebuild,v 1.4 2002/07/21 15:44:12 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GTK+ based Audio CD Ripper"
@@ -42,11 +42,11 @@ src_compile() {
 }
 
 src_install () {
-	make prefix=${D}/usr \
-		mandir=${D}/usr/share/man \
-		infodir=${D}/usr/share/info \
-		sysconfdir=${D}/etc \
-		install || die
+#	make prefix=${D}/usr \
+#		mandir=${D}/usr/share/man \
+#		infodir=${D}/usr/share/info \
+#		sysconfdir=${D}/etc \
+		einstall || die
 
 	dodoc AUTHORS CREDITS COPYING ChangeLog README TODO NEWS
 }
