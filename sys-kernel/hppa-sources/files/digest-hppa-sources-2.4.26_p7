@@ -1,0 +1,4 @@
+MD5 88d7aefa03c92739cb70298a0b486e2c linux-2.4.26.tar.bz2 30772389
+MD5 993a9ea8c553f198ef62747bb7c9a7c4 patch-2.4.26-pa7.gz 725125
+MD5 010fe6b49e97365f12ce3f70376d5eb0 parisc-2.4.23-pa4-missing-ioctl-translations.diff 18091
+MD5 2758cec1dc37d4069a42fc7544599860 lasi-config-max-tag-queue-dep.patch 1455
