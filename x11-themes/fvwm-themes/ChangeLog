@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/fvwm-themes
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-themes/ChangeLog,v 1.1 2003/05/26 20:22:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fvwm-themes/ChangeLog,v 1.2 2003/05/26 20:23:13 agriffis Exp $
+
+  26 May 2003; Aron Griffis <agriffis@gentoo.org> fvwm-themes-0.6.2.ebuild:
+  Fix typo in ebuild; missing inherit eutils
 
 *fvwm-themes-0.6.2 (26 May 2003)
 
