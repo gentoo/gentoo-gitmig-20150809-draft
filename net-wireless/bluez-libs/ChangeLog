@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/bluez-libs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/ChangeLog,v 1.6 2004/01/30 16:53:07 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/ChangeLog,v 1.7 2004/02/12 18:29:21 ciaranm Exp $
+
+  12 Feb 2004; Ciaran McCreesh <ciaranm@gentoo.org> bluez-libs-2.4.ebuild:
+  Adding ~sparc (works with some kernels, see bug #39710)
 
   30 Jan 2004; Peter Johanson <latexer@gentoo.org> bluez-libs-2.4.ebuild,
   metadata.xml:
