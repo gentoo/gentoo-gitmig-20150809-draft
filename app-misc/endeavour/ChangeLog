@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/endeavour
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/ChangeLog,v 1.3 2002/11/07 09:30:53 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/ChangeLog,v 1.4 2002/11/07 20:02:48 seemant Exp $
+
+*endeavour-2.1.20 (07 Nov 2002)
+
+  07 Nov 2002; Seemant Kulleen <seemant@gentoo.org> endeavour-2.1.20.ebuild
+  files/digest-endeavour-2.1.20 :
+  
+  Version bump thanks to: autobot@midsouth.rr.com (AutoBot) in bug #10079
 
 *endeavour-2.1.14.ebuild (16 May 2002)
 
