@@ -1,0 +1,8 @@
+# ChangeLog for net-misc/lambdamoo
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lambdamoo/ChangeLog,v 1.1 2003/07/11 15:08:35 vapier Exp $
+
+*lambdamoo-1.8.1 (11 Jul 2003)
+
+  11 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Simon Koch <skoch@palisadescomputing.net> #14312.
