@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpufreqd/cpufreqd-1.1_rc1-r1.ebuild,v 1.2 2004/01/05 08:55:29 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cpufreqd/cpufreqd-1.1_rc1-r1.ebuild,v 1.3 2004/01/06 19:04:39 plasmaroo Exp $
+
+inherit eutils
 
 S=${WORKDIR}/${P/_/-}
 
@@ -10,8 +12,6 @@ HOMEPAGE="http://sourceforge.net/projects/cpufreqd/"
 KEYWORDS="~x86 ~ppc -*"
 LICENSE="GPL-2"
 SLOT="0"
-
-inherit eutils
 
 src_unpack() {
 	unpack ${A}
