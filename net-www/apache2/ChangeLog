@@ -1,8 +1,0 @@
-# ChangeLog for net-www/apache
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-
-*apache-2.0.40 (15 Aug 2002)
-
-  15 Aug 2002; Michael J. Cohen <mjc@gentoo.org> :
-  Initial release, needs a few modules cleaned up as well as paths
-
