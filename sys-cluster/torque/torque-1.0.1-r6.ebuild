@@ -9,7 +9,7 @@ SRC_URI="http://supercluster.org/downloads/torque/torque-1.0.1p6.tar.gz"
 LICENSE="openpbs"
 
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="X tcltk"
 
 DEPEND="virtual/glibc
