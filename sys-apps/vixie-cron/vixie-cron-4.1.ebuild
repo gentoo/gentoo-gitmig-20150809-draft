@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/vixie-cron-4.1.ebuild,v 1.3 2004/08/27 22:59:00 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/vixie-cron-4.1.ebuild,v 1.4 2004/08/28 00:23:41 ciaranm Exp $
 
 inherit eutils
 
@@ -67,6 +67,9 @@ src_install() {
 	insinto /etc
 	insopts -o root -g root -m 0644
 	newins  ${FILESDIR}/crontab-3.0.1-r4 crontab
+
+	touch cron.deny
+	doins cron.deny
 
 	dodoc ${FILESDIR}/crontab
 
