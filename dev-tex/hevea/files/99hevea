@@ -1,1 +1,1 @@
-LATEXINPUTS=/usr/lib/hevea/
+TEXINPUTS=/usr/lib/hevea:
