@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/qc-usb-0.6.2.ebuild,v 1.4 2005/03/09 15:10:55 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/qc-usb/qc-usb-0.6.2.ebuild,v 1.5 2005/03/09 15:16:27 liquidx Exp $
 
 inherit linux-mod eutils
 
@@ -35,11 +35,3 @@ src_install() {
 	doins quickcam.sh debug.sh freeshm.sh
 }
 
-pkg_postinst() {
-	if kernel-mod_is_2_4_kernel; then
-		/usr/sbin/update-modules
-	fi
-
-	einfo "The kernel module for quickcam.{o,ko} is installed for the"
-	einfo "kernel linked by /usr/src/linux."
-}

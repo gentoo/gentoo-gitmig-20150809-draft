@@ -4,7 +4,7 @@ Hash: SHA1
 MD5 6291508aa0ccc70678994e4111ff3ead ChangeLog 1310
 MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
 MD5 b8ec0739ec95e3d839773fb0820be3bc qc-usb-0.6.0.ebuild 1104
-MD5 ddd345899300aff83247e374476b8cba qc-usb-0.6.2.ebuild 1056
+MD5 5d25abbc890f550c9fe5f048098091cd qc-usb-0.6.2.ebuild 860
 MD5 66d41ed8b43340151cdad8ec9a47b7c9 files/digest-qc-usb-0.6.0 64
 MD5 97aa1789cc24610ba63d6d7a95ed8f15 files/qc-usb-0.6.0-gcc34.patch 343
 MD5 78d4eba7ae91c449034741053a53596c files/digest-qc-usb-0.6.2 64
@@ -12,7 +12,7 @@ MD5 1c7efb40ca2cfa4fec86da82641851cb files/0.6.2-linux-2.6.11.patch 495
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCLxIHRkyva5PS18kRAqfJAKCkaJClIsm7XxgR5WjxKQeD3/d87wCglYcz
-j/xgcrQWW/An/YLOJ/XVNu8=
-=6uSv
+iD8DBQFCLxOVRkyva5PS18kRAg5hAJwJGLP3OdLwQTKf2MayX94Gx2b81ACfcmxv
+ziDL8iEZhoR+4FPoFiVrvUk=
+=TGo0
 -----END PGP SIGNATURE-----
