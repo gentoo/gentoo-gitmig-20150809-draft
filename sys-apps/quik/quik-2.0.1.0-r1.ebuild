@@ -1,11 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Id: quik-2.0.1.0-r1.ebuild,v 1.4 2002/09/21 03:41:22 vapier Exp $
+# $Id: quik-2.0.1.0-r1.ebuild,v 1.5 2002/09/24 21:34:51 owen Exp $
 
 S="${WORKDIR}/quik-2.0"
 A="quik_2.0e.orig.tar.gz"
 
-HOMEPAGE="http://penguinppc.org/projects/quik/"
+echo "workdir is:"
+echo ${WORKDIR}
+HOMEPAGE=""
 SLOT="0"
 LICENSE="GPL-2"
 DEB_P="quik_2.0e-1.diff"
@@ -52,6 +54,13 @@ src_unpack() {
 	cd ${WORKDIR}
 	unpack ${A} || die
 	zcat ${DISTDIR}/${DEB_P}.gz | patch -p1 -d ${S}|| die
+	[ -z "${CC}" ] && CC=gcc
+	if [ "`${CC} -dumpversion | cut -d. -f1,2`" != "2.95" ] ; then
+		cd ${S}/second
+		cp Makefile Makefile.orig
+		sed -e s:'$(LD) $(LDFLAGS) -Bstatic -o second $(OBJS) -lext2fs':'$(LD) $(LDFLAGS) -Bstatic -o second $(OBJS) -lext2fs -lc -lgcc -L/usr/lib/gcc-lib/powerpc-unknown-linux-gnu/3.2/': Makefile.orig > Makefile
+
+	fi;
 }
 
 src_compile() {
