@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkbd/xkbd-0.8.12.ebuild,v 1.4 2004/04/26 14:53:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xkbd/xkbd-0.8.12.ebuild,v 1.5 2004/06/24 01:00:42 agriffis Exp $
 
 DESCRIPTION="Xkbd - onscreen soft keyboard for X11"
 HOMEPAGE="http://handhelds.org/~mallum/xkbd/"
@@ -27,7 +27,7 @@ src_compile() {
 
 	emake || die
 
-	if [ `use doc` ]; then
+	if use doc; then
 		docbook2html README
 	fi
 }
@@ -36,7 +36,7 @@ src_install() {
 	einstall || die
 	dodoc AUTHORS COPYING NEWS README
 
-	if [ `use doc` ]; then
+	if use doc; then
 		insinto /usr/share/doc/${PF}/html
 		doins *.html
 	fi

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmbdfed/xmbdfed-4.5.ebuild,v 1.7 2004/04/27 20:54:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmbdfed/xmbdfed-4.5.ebuild,v 1.8 2004/06/24 01:01:26 agriffis Exp $
 
 inherit eutils
 
@@ -36,7 +36,7 @@ src_compile() {
 	local incs="-I/usr/X11R6/include"
 	local libs="-L/usr/X11R6/lib -lXm -lXpm -lXmu -lXt -lXext -lX11 -lSM -lICE"
 
-	if [ `use truetype` ] ; then
+	if use truetype ; then
 		flags="FTYPE_DEFS=\"-DHAVE_FREETYPE\""
 		incs="${incs} -I/usr/include/freetype"
 		libs="${libs} -lttf"
