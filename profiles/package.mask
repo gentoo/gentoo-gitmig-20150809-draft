@@ -155,6 +155,7 @@ app-editors/kvim
 # <aliz@gentoo.org> (05 Aug 2002)
 # Masked for testing
 =sys-apps/util-linux-2.11t
+=sys-apps/util-linux-2.11u
 
 # <carpaski@gentoo.org) (05 Aug 2002)
 # Testing
