@@ -1,8 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 e0346452a480352da2e963e8ed8f4285 ChangeLog 2035
-MD5 d2da0e45d7e39184d1cb7abbe3879086 metadata.xml 159
+MD5 4b562dac77e8dcbc4aaea4b9bf4dbac2 metadata.xml 264
 MD5 0d045bcbc1fee7551e950e590d82184e mod_mp3-0.35-r1.ebuild 1373
 MD5 2820bd43230cefaf221a72f8ce2812b5 mod_mp3-0.35-r2.ebuild 1480
 MD5 7d91b582ee143471f7ff487f8fc6e895 mod_mp3-0.39.ebuild 1568
@@ -12,10 +9,3 @@ MD5 8a7822e7dc0ef7f482a9eea2f2dc7f99 files/digest-mod_mp3-0.35-r2 63
 MD5 eed7a5bfc98ac86ce87a0e8acc8cc63d files/digest-mod_mp3-0.39 63
 MD5 a87aa3881f9296ed5334e2bccf010ab1 files/digest-mod_mp3-0.40 63
 MD5 b5e3152aec6736c0cb2be7346b0423dd files/mod_mp3.conf 316
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBirxiI1lqEGTUzyQRAmwfAJ9yCnWQaDAdIN4Pn2gTpbOz3RidnACfaakj
-W0EKCAU5QYpjcGxEjwHEzh0=
-=zVwa
------END PGP SIGNATURE-----
