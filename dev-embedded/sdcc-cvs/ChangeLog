@@ -1,0 +1,11 @@
+# ChangeLog for dev-embedded/sdcc-cvs
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc-cvs/ChangeLog,v 1.1 2004/09/28 07:29:20 dragonheart Exp $
+
+*sdcc-cvs-2.4.0 (28 Sep 2004)
+
+  28 Sep 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  +sdcc-cvs-2.4.0.ebuild:
+  Initial version. Added due to the consistancy of dev-embedded/sdcc ebuilds.
+  Was initialy requested in bug #46315
+

@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0c1d30c5caa9ef4914154d892c696167 sdcc-cvs-2.4.0.ebuild 1084
+MD5 7d36efc2d3cf66fe798832feb7034d92 metadata.xml 254
+MD5 8d175a88c21c0901a4f23f672ede1d9b ChangeLog 463
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-sdcc-cvs-2.4.0 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBWRLXmdTrptrqvGERAqS3AJwPc5CCDXSbkPXev97cIKd37WvBDQCfQhXU
+/uHN7xE48eSuROuMRG/O4zE=
+=cvEj
+-----END PGP SIGNATURE-----
