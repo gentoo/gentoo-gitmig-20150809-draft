@@ -1,10 +1,15 @@
 # ChangeLog for dev-libs/gdome2
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/ChangeLog,v 1.12 2004/06/24 23:10:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/ChangeLog,v 1.13 2004/10/19 16:13:30 matsuu Exp $
+
+*gdome2-0.8.1-r1 (20 Oct 2004)
+
+  20 Oct 2004; MATSUU Takuto <matsuu@gentoo.org> +gdome2-0.8.1-r1.ebuild:
+  Fixed gdome-config script. Bug 53704.
 
 *gdome2-0.8.1 (03 Apr 2004)
 
-  03 Apr 2004; <matsuu@gentoo.org> gdome2-0.8.1.ebuild:
+  03 Apr 2004; MATSUU Takuto <matsuu@gentoo.org> gdome2-0.8.1.ebuild:
   Version bumped.
 
   24 Mar 2004; Jason Wever <weeve@gentoo.org> gdome2-0.7.4.ebuild:
