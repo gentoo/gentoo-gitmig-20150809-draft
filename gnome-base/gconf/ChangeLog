@@ -1,6 +1,17 @@
 # ChangeLog for gnome-base/gconf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.1 2002/02/01 21:53:29 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/ChangeLog,v 1.2 2002/02/22 22:35:34 drobbins Exp $
+
+*gconf-1.0.8-r1 (22 Feb 2002)
+
+  22 Feb 2002; Daniel Robbins <drobbins@gentoo.org>: fixed perms on
+  /etc/gconf/gconf.xml.mandatory; this closes bug #803.  Added a pkg_postinst()
+  fix so that upgraders can benefit from this fix as well.
+
+*gconf-1.0.8 (13 Feb 2002)
+
+  13 Feb 2002; G. Goodyear <g2boojum@gentoo.org>: Removed gnome-libs dependency
+  (not needed).
 
 *gconf-1.0.7-r2 (1 Feb 2002)
 
