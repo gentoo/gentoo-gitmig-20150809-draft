@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mikachan-font/mikachan-font-8.8.ebuild,v 1.2 2003/07/28 11:58:50 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mikachan-font/mikachan-font-8.8.ebuild,v 1.3 2003/07/31 00:04:13 usata Exp $
 
 IUSE=""
 
@@ -13,11 +13,11 @@ SRC_URI="mirror://sourceforge.jp/mikachan/2418/${MY_PN}-${PV}.tar.bz2
 	mirror://sourceforge.jp/mikachan/2421/${MY_PN}PS-${PV}.tar.bz2"
 HOMEPAGE="http://mikachan-font.com/"
 
-KEYWORDS="~x86 ~alpha"
+KEYWORDS="~x86 ~alpha ~sparc ~ppc"
 LICENSE="free-noncomm"
 SLOT="0"
 
-DEPEND=""
+DEPEND="virtual/x11"
 
 S="${WORKDIR}"
 
