@@ -386,7 +386,7 @@ diff -u -r1.31 -r1.32
  #include <GL/gl.h>
  #endif
  
-+#include "cssysdef.h"
++//#include "cssysdef.h"
 +
  /*
    Appear in the ARB_shader_objects ext spec.

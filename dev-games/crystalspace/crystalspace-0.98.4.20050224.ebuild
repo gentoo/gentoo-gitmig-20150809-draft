@@ -1,17 +1,18 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-0.98.4.ebuild,v 1.9 2005/02/24 21:52:55 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-0.98.4.20050224.ebuild,v 1.1 2005/02/24 21:52:55 lordvan Exp $
 
 inherit eutils
 
-MY_P="cs${PV:2:2}_00${PV:5:1}"
+#MY_P="cs${PV:2:2}_00${PV:5:1}"
+MY_P="${P}"
 DESCRIPTION="portable 3D Game Development Kit written in C++"
 HOMEPAGE="http://crystal.sourceforge.net/"
 SRC_URI="mirror://sourceforge/crystal/${MY_P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="ppc x86"
+KEYWORDS="~ppc ~x86"
 IUSE="3ds mikmod mng oggvorbis openal truetype"
 
 RDEPEND="sys-libs/zlib
@@ -22,6 +23,7 @@ RDEPEND="sys-libs/zlib
 	3ds? ( media-libs/lib3ds )
 	truetype? ( >=media-libs/freetype-2.0 )
 	openal? ( media-libs/openal )
+	cal3d? ( >=media-libs/cal3d-0.10.0 )
 	oggvorbis? (
 		>=media-libs/libogg-1.0
 		>=media-libs/libvorbis-1.0 )
@@ -39,12 +41,14 @@ CRYSTAL_PREFIX="/opt/crystal"
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	epatch "${FILESDIR}/${P}-gl.patch" #75702
 	echo "CRYSTAL=\"${CRYSTAL_PREFIX}\"" > 90crystalspace
 }
 
 src_compile() {
-	CONFIGURE_OPTS="--with-libcal3d=/home/andrew/development/cal3d"
+	CONFIGURE_OPTS=""
+	if use cal3d; then
+		CONFIGURE_OPTS=" --with-libcal3d=/home/andrew/development/cal3d "
+	fi
 	./configure --prefix=${CRYSTAL_PREFIX} ${CONFIGURE_OPTS} || die "configure failed"
 	jam all || die "compile failed"
 }
