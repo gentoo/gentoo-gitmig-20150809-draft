@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.298 2004/04/06 02:58:27 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.299 2004/04/06 12:21:35 lanius Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -9,6 +9,7 @@ app-accessibility/festival:asterisk - adds a new command named tts_textasterisk 
 app-accessibility/gnopernicus:brltty - Adds support for braille displays using brltty
 app-admin/lcap:lids - If you have the Linux Intrusion Detection System
 app-crypt/gnupg:idea - Use the patented IDEA algorithm
+app-cdr/k3b:monkey - Enable support for Monkey's audio codec
 app-editors/nano:justify - Toggle the justify option ...
 app-editors/nano:nomac - Turn off mac formatting output
 app-editors/nano:wsconvert - Turn on whitespace highlighting feature

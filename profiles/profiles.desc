@@ -11,7 +11,6 @@ ppc64	default-ppc64-1.4	dev
 sparc	default-sparc-1.4	stable
 mips	default-mips-1.4	stable
 alpha	default-alpha-1.4	stable
-arm	default-arm-1.4		stable
 hppa	default-hppa-1.4	stable
 amd64	default-amd64-1.4	stable
 ia64	default-ia64-1.4	stable
