@@ -1,8 +1,34 @@
 # ChangeLog for app-emulation/winex-cvs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/ChangeLog,v 1.1 2002/09/01 06:25:28 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/ChangeLog,v 1.2 2002/09/08 20:09:35 phoenix Exp $
 
-*winex-20020831 (01 September 2002)
+
+*winex-cvs-2.1 (08 September 20002)
+  08 Sep 2002; phoen][x <phoenix@gentoo.org> winex-cvs-2.1.ebuild,
+  files/digest-winex-cvs-2.1, files/winex-cvs-fake_windows.tar.bz2,
+  files/winex-cvs-regedit, files/winex-cvs-winex :
+
+  This is the new winex-2.1 CVS ebuild. Implemented Dan Armaks new ECVS_BRANCH setting. 
+  Thanks Dan. I overwrote the ECVS_TOP_DIR to be able to have multiple versions of
+  a local cvs tree on the users harddrive - each branch has its own tree. That should
+  speed things up if you often switch between branches; If you dont switch it won't
+  waste HD space because you didn't fetch different branches in the first place. :)
+
+*winex-cvs-2.0 (08 September 20002)
+  08 Sep 2002; phoen][x <phoenix@gentoo.org> winex-cvs-2.0.ebuild,
+  files/digest-winex-cvs-2.0, files/winex-cvs-fake_windows.tar.bz2,
+  files/winex-cvs-regedit, files/winex-cvs-winex :
+
+  This ebuild is identical to the winex-cvs-2.1 ebuild. The name of the ebuild 
+  tells portage to fetch the winex-2.0 branch instead. (A simple symlink would
+  have done the trick, yes)
+
+*winex-cvs-20020831 (01 September 2002)
+
+  08 Sep 2002; phoen][x <phoenix@gentoo.org> winex-cvs-20020831.ebuild :
+  
+  This ebuild is now obsolete. The name puzzled quite a few users.
+  There should be no problems with the new naming convention.
 
   01 Sep 2002; phoen][x <phoenix@gentoo.org> ChangeLog, winex-cvs-20020831.ebuild,
   files/winex-cvs-20020831-fake_windows.tar.bz2, files/winex-cvs-20020831-regedit,
@@ -12,4 +38,3 @@
   (the normal one and the cvs one) installed at the same time, i made this one go
   into /usr/lib/winex-cvs. The wrapper is called /usr/bin/winex-cvs and the 
   regedit is named /usr/bin/regedit-winex-cvs.
-

@@ -1,17 +1,23 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/winex-cvs-20020831.ebuild,v 1.1 2002/09/01 06:25:28 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/winex-cvs-2.0.ebuild,v 1.1 2002/09/08 20:09:35 phoenix Exp $
 
-# Modify this if you want some other branch. Possible values are:
-#  winex-2-1
-#  winex-2-0
-#  winex
-# You can find more branches on http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/winex/wine/
+# Dont modify the ECVS_BRANCH setting yourself.
+# Instead, make a backup of this ebuild and rename it to
+# winex-[your branch].ebuild. 
+#
+# Example:
+#   winex-kohan-2.1.ebuild
+#
+# You can find more branches on 
+# http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/winex/wine/
 
-WINEX_BRANCH="winex-2-1"
+
 ECVS_SERVER="cvs.winex.sourceforge.net:/cvsroot/winex"
 ECVS_MODULE="wine"
-ECVS_CVS_OPTIONS="-r${WINEX_BRANCH} -dP"
+ECVS_BRANCH=${PN/cvs/}${PV/./-}
+ECVS_TOP_DIR="${DISTDIR}/cvs-src/${ECVS_BRANCH}"
+mkdir -p ${ECVS_TOP_DIR}
 
 inherit cvs
 
@@ -47,11 +53,11 @@ src_compile() {
 	unset CXXFLAGS
 	
 	./configure --prefix=/usr/lib/winex-cvs \
-	--sysconfdir=/etc/winex-cvs \
-	--host=${CHOST} \
-	--enable-curses \
-	--with-x \
-	${myconf} || die "configure failed"
+		--sysconfdir=/etc/winex-cvs \
+		--host=${CHOST} \
+		--enable-curses \
+		--with-x \
+		${myconf} || die "configure failed"
 
 	# Fixes a winetest issue
 	cd ${S}/programs/winetest
@@ -82,7 +88,7 @@ src_install () {
 	# This is needed for our new winex-cvs wrapper script
 	mkdir ${D}/usr/lib/winex-cvs/.data
 	pushd ${D}/usr/lib/winex-cvs/.data
-	tar jxvf ${FILESDIR}/${P}-fake_windows.tar.bz2 
+	tar jxvf ${FILESDIR}/${PN}-fake_windows.tar.bz2 
 	popd
 	cp ${S}/documentation/samples/config ${S}/documentation/samples/config.orig
 	sed -e 's/"Path" = "\/c"/"Path" = "\$\{HOME\}\/.winex-cvs\/fake_windows"/' \
@@ -91,8 +97,8 @@ src_install () {
 	cp ${WORKDIR}/wine/winedefault.reg ${D}/usr/lib/winex-cvs/.data/winedefault.reg
 	# Install the wrapper script
 	mkdir ${D}/usr/bin
-	cp ${FILESDIR}/${P}-winex ${D}/usr/bin/winex-cvs
-	cp ${FILESDIR}/${P}-regedit ${D}/usr/bin/regedit-winex-cvs
+	cp ${FILESDIR}/${PN}-winex ${D}/usr/bin/winex-cvs
+	cp ${FILESDIR}/${PN}-regedit ${D}/usr/bin/regedit-winex-cvs
 
 	# Take care of the other stuff
 	cd ${S}
