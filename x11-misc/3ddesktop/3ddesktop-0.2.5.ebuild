@@ -7,7 +7,7 @@ HOMEPAGE="http://desk3d.sourceforge.net/"
 SRC_URI="mirror://sourceforge/desk3d/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 IUSE=""
 
 DEPEND="virtual/x11
