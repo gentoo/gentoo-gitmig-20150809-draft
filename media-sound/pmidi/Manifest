@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 31a45887006d9f6db078d08c881748b0 ChangeLog 1292
+MD5 a81c6204b7e493d3e890e903fc0a023a ChangeLog 1386
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 05db6b94d136582df237732ab46bd3b7 pmidi-1.6.0.ebuild 603
+MD5 845bf781c114ba84dede73a4885c675e pmidi-1.6.0.ebuild 602
 MD5 d5b7172c02c055df398d6f40054a3491 files/digest-pmidi-1.6.0 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBow2pArHZZzCEUG0RAlYPAJ969y8eCniwzU2LKQEmp8Pv94KDqACfYzet
-AcRqe1gB4rUDZ42msjgfBVA=
-=ivqb
+iD8DBQFBxRw/ArHZZzCEUG0RAnx5AJ9bLohEaLF3VJvMUnoqg/xPIaUhogCfabcl
+oiydxvHpRpJUI226a/jcNeA=
+=Q8f4
 -----END PGP SIGNATURE-----
