@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.2.ebuild,v 1.5 2003/10/17 07:38:24 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.2.ebuild,v 1.6 2003/11/14 16:39:05 brad_mssw Exp $
 
 DESCRIPTION="GTK+ version of wxWindows, a cross-platform C++ GUI toolkit."
 SRC_URI="mirror://sourceforge/wxwindows/${P}.tar.bz2"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.wxwindows.org/"
 
 LICENSE="wxWinLL-3"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha amd64"
 IUSE="nls odbc opengl gtk2 unicode debug"
 
 RDEPEND="virtual/x11
@@ -37,6 +37,7 @@ src_unpack() {
 	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${PN}-2.4.1-contrib.patch
 	# disable contrib/src/animate
 	EPATCH_OPTS="-d ${S}/contrib/src" epatch ${FILESDIR}/${PN}-2.4.2-contrib_animate.patch
+	use amd64 && EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${PN}-2.4.2-cleanup.patch
 }
 
 src_compile() {
