@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.137 2004/04/08 19:27:48 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.138 2004/04/14 05:01:34 weeve Exp $
+
+  13 Apr 2004; Jason Wever <weeve@gentoo.org> mod_php-4.3.6_rc2.ebuild:
+  Stable on sparc.
 
   08 Apr 2004; Stuart Herbert <stuart@gentoo.org> mod_php-4.3.6_rc2.ebuild:
   Marked as stable, because 4.3.5 has issues
