@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ipv6calc
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ChangeLog,v 1.7 2004/07/01 21:19:32 squinky86 Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipv6calc/ChangeLog,v 1.8 2005/01/06 22:50:27 hansmi Exp $
+
+  06 Jan 2005; Michael Hanselmann <hansmi@gentoo.org> ipv6calc-0.45.ebuild:
+  Stable on ppc.
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> ipv6calc-0.45.ebuild:
   change virtual/glibc to virtual/libc, add IUSE
