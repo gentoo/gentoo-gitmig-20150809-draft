@@ -1,13 +1,19 @@
-MD5 8450622d42e06fead77d1c251b1e225a ChangeLog 6473
-MD5 ce7e6ee71ad26511e209ec35f7651f39 gtk-gnutella-0.91.1.ebuild 864
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 525f40efe30add307b4ce1300da83c23 gtk-gnutella-0.95.ebuild 2173
 MD5 4dc203e83278b8ac3f22b6160b61c8c3 gtk-gnutella-0.93.3.ebuild 2170
-MD5 afaf7d6d89f1614db1ae7a1d1fe7f89b gtk-gnutella-0.93.4.ebuild 2266
 MD5 294bb31515a44112e192d5d2d49a8d50 gtk-gnutella-0.94.ebuild 2169
+MD5 9be670fbd93ca929d28d541023a5ac21 ChangeLog 6745
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
-MD5 dd86fcdefbd3fdb0a115c277b0087e60 files/0.93-Configure.patch 498
-MD5 777703229937bea0cf00343c10c186b6 files/0.93.4-gcc34.patch 3206
-MD5 f3ea5611e91933a99e10202e5b6860b1 files/digest-gtk-gnutella-0.91.1 71
 MD5 e65fa40ee2f1d02bdb6f329e7ed2f577 files/digest-gtk-gnutella-0.93.3 73
-MD5 f97705c20e81c1367a7563f35c5e8090 files/digest-gtk-gnutella-0.93.4 73
 MD5 0083753249fe618068f133b145544070 files/digest-gtk-gnutella-0.94 71
+MD5 4fe4d39aa46ee9377a21fd889a537111 files/digest-gtk-gnutella-0.95 71
 MD5 d567f5847cfc94df6b1c79436514016f files/gtk-gnutella.desktop 155
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBqkracAgAdbxYsnERAhdTAJ9AZodI+P8MmpcmOU6TwJjkdU6QQwCfWvzL
+AW9nbju9T+foZu4+ZKtYwxU=
+=F4a4
+-----END PGP SIGNATURE-----
