@@ -11,7 +11,7 @@ S=${WORKDIR}/${P}
 DEPEND=">=libraw1394-0.8"
 RDEPEND="${DEPEND}"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 src_compile() {
 	./configure \

@@ -3,6 +3,9 @@
 
 *libavc1394-0.3.1 (12 Jul 2002)
 
+  20 July 2002; Mark Guertin <gerk@gentoo.org> libavc1394-0.3.1.ebuild :
+  Adjusted keywords (added ppc)
+
   12 Jul 2002; Doug Goldstein <cardoe@gentoo.org> libavc1394-0.3.1.ebuild
   ChangeLog files/digest-libavc1394-0.3.1 :
 
