@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/silo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/ChangeLog,v 1.2 2003/12/09 08:55:58 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/ChangeLog,v 1.3 2003/12/27 16:12:44 weeve Exp $
+
+  27 Dec 2003; Jason Wever <weeve@gentoo.org> silo-1.3.1.ebuild:
+  Marked stable.
 
 *silo-1.3.1 (08 Dec 2003)
 
