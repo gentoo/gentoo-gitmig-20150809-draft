@@ -1,0 +1,81 @@
+# ChangeLog for app-sci/singular
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/singular/ChangeLog,v 1.1 2004/12/28 15:17:37 ribosome Exp $
+
+*singular-2.0.4-r1 (28 Dec 2004)
+
+  28 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +files/fake_ssh, +files/singular-2.0.4-gentoo.diff,
+  +files/singular-2.0.5-r3-gentoo.diff, +singular-2.0.4-r1.ebuild,
+  +singular-2.0.5-r4.ebuild:
+  Moved from app-sci/singular to sci-mathematics/singular.
+
+  17 May 2004; Patrick Kursawe <phosphan@gentoo.org> singular-2.0.5-r3.ebuild,
+  singular-2.0.5-r4.ebuild:
+  Going stable, cleanup
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> singular-2.0.5-r3.ebuild,
+  singular-2.0.5-r4.ebuild:
+  Add die following econf for bug 48950
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> singular-2.0.4-r1.ebuild:
+  Add die following econf for bug 48950
+
+  01 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> singular-2.0.4-r1.ebuild:
+  Inheriting eutils, removed S=...
+
+*singular-2.0.5-r4 (26 Mar 2004)
+
+  26 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> singular-2.0.5-r4.ebuild:
+  A few documentation fixes
+
+  24 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> singular-2.0.5-r3.ebuild:
+  Was using wrong patch file, corrected.
+
+*singular-2.0.5-r3 (24 Mar 2004)
+
+  24 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> singular-2.0.5-r1.ebuild,
+  singular-2.0.5-r2.ebuild, singular-2.0.5-r3.ebuild, singular-2.0.5.ebuild,
+  files/singular-2.0.5-gentoo.diff, files/singular-2.0.5-r1-gentoo.diff,
+  files/singular-2.0.5-r2-gentoo.diff, files/singular-2.0.5-r3-gentoo.diff:
+  Little path fix, see also bug #45446. Cleaning up.
+
+*singular-2.0.5-r2 (23 Mar 2004)
+
+  23 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> singular-2.0.5-r2.ebuild,
+  files/singular-2.0.5-r2-gentoo.diff:
+  Fixing some paths and installing more docs when doc is in USE.
+
+*singular-2.0.5-r1 (23 Mar 2004)
+
+  23 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> singular-2.0.5-r1.ebuild,
+  files/singular-2.0.5-r1-gentoo.diff:
+  Miscellaneous bugfixes provided by user in bug #45446 - thanks!
+
+*singular-2.0.5 (12 Mar 2004)
+
+  12 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> singular-2.0.5.ebuild,
+  files/singular-2.0.5-gentoo.diff:
+  New version for most parts, patch needed some update.
+
+  07 Nov 2003; Patrick Kursawe <phosphan@gentoo.org>
+  files/singular-2.0.4-gentoo.diff:
+  Forgot one patch (see bug 26115)
+
+  06 Nov 2003; Patrick Kursawe <phosphan@gentoo.org> singular-2.0.4-r1.ebuild:
+  Slight modifications to the install function - the singular.info file has a
+  directory index entry now. Added a better short description.
+
+*singular-2.0.4-r1 (29 Oct 2003)
+
+  29 Oct 2003; Patrick Kursawe <phosphan@gentoo.org> singular-2.0.4-r1.ebuild,
+  files/fake_ssh:
+  Docs will be installed now if USE="doc"
+
+*singular-2.0.4 (24 Oct 2003)
+
+  24 Oct 2003; Patrick Kursawe <phosphan@gentoo.org> singular-2.0.4.ebuild,
+  files/singular-2.0.4-gentoo.diff:
+  Initial import, based on the submission in bug 26115. Thanks to all
+  contributors.
+
