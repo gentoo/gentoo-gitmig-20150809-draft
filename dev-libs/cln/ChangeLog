@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/cln
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cln/ChangeLog,v 1.6 2003/07/12 09:22:21 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cln/ChangeLog,v 1.7 2004/03/14 12:14:40 mr_bones_ Exp $
+
+  14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> cln-1.1.5.ebuild:
+  Don't assign default to S; header fix
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

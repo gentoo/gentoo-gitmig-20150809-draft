@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-4.5.3-r2.ebuild,v 1.8 2004/01/04 17:27:55 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-4.5.3-r2.ebuild,v 1.9 2004/03/14 12:13:47 mr_bones_ Exp $
 
 IUSE=""
 
 inherit eutils
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="C++ STL library"
 SRC_URI="http://www.stlport.org/archive/${P}.tar.gz"
 HOMEPAGE="http://www.stlport.org"

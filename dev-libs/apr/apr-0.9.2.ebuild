@@ -1,12 +1,11 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-0.9.2.ebuild,v 1.4 2003/10/23 14:42:35 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/apr/apr-0.9.2.ebuild,v 1.5 2004/03/14 12:13:58 mr_bones_ Exp $
 
 inherit libtool
 
 P1="apr-${PV}-alpha.tar.gz"
 P2="apr-util-${PV}-alpha.tar.gz"
-S="${WORKDIR}/${P}"
 S2="${WORKDIR}/${PN}-util-${PV}"
 
 DESCRIPTION="Apache's Portable Runtime Library."

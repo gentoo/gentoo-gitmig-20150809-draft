@@ -1,8 +1,7 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/syncdir/syncdir-1.0.ebuild,v 1.7 2004/02/22 20:12:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/syncdir/syncdir-1.0.ebuild,v 1.8 2004/03/14 12:24:29 mr_bones_ Exp $
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="Provides an alternate implementation for open, link, rename, and unlink "
 HOMEPAGE="http://untroubled.org/syncdir"
 SRC_URI="http://untroubled.org/syncdir/${P}.tar.gz"

@@ -1,10 +1,9 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.15.2-r1.ebuild,v 1.9 2004/02/22 20:05:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.15.2-r1.ebuild,v 1.10 2004/03/14 12:22:52 mr_bones_ Exp $
 
 IUSE="readline"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Shared library implementing a Lisp dialect"
 SRC_URI="http://download.sourceforge.net/librep/${P}.tar.gz"
 HOMEPAGE="http://librep.sourceforge.net/"

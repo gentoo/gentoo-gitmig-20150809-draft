@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhtmlparse/libhtmlparse-0.1.12.ebuild,v 1.2 2003/02/13 10:43:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhtmlparse/libhtmlparse-0.1.12.ebuild,v 1.3 2004/03/14 12:22:07 mr_bones_ Exp $
 
 DESCRIPTION="libhtmlparse is a HTML parsing library. It takes HTML tags, text, etc and calls callbacks you define for each type of token in the document."
 HOMEPAGE="http://msalem.translator.cx/libhtmlparse.html"
@@ -11,8 +11,6 @@ KEYWORDS="x86"
 IUSE=""
 
 DEPEND="virtual/glibc"
-
-S=${WORKDIR}/${P}
 
 src_compile() {
 	./configure \

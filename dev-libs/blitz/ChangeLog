@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/blitz
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/ChangeLog,v 1.5 2004/03/02 22:11:41 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/ChangeLog,v 1.6 2004/03/14 12:14:09 mr_bones_ Exp $
+
+  14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> blitz-0.6.ebuild:
+  Don't assign default to S; header fix
 
   02 Mar 2004; David Holm <dholm@gentoo.org> blitz-0.7.ebuild:
   Added to ~ppc.

@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libole2/libole2-0.2.4-r1.ebuild,v 1.6 2004/03/05 13:20:48 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libole2/libole2-0.2.4-r1.ebuild,v 1.7 2004/03/14 12:17:34 mr_bones_ Exp $
 
 inherit gnome.org
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Library to manipulate OLE2 Structured Storage files"
 HOMEPAGE="http://www.gnome.org/"
 

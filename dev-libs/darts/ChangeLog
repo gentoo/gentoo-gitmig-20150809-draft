@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/darts
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/darts/ChangeLog,v 1.3 2004/03/07 22:09:27 avenj Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/darts/ChangeLog,v 1.4 2004/03/14 12:14:51 mr_bones_ Exp $
+
+  14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> darts-0.1.ebuild,
+  darts-0.2.ebuild:
+  Don't assign default to S; header fix
 
   07 Mar 2004; Jon Portnoy <avenj@gentoo.org> darts-0.2.ebuild :
   Stable on AMD64 to make repoman happy.

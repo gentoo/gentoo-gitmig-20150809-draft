@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cln/cln-1.1.5.ebuild,v 1.6 2004/02/22 20:01:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cln/cln-1.1.5.ebuild,v 1.7 2004/03/14 12:14:40 mr_bones_ Exp $
 
 inherit flag-o-matic
 
@@ -15,8 +15,6 @@ KEYWORDS="x86 ~ppc ~sparc"
 SRC_URI="ftp://ftp.santafe.edu/pub/gnu/${P}.tar.gz"
 #SRC_URI="ftp://ftpthep.physik.uni-mainz.de/pub/gnu/${P}.tar.gz"
 DEPEND="dev-libs/gmp"
-
-S=${WORKDIR}/${P}
 
 src_compile() {
 	# at least with gcc 2.95 and 3.1, cln won't like -O3 flag...
