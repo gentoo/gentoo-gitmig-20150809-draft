@@ -1,3 +1,16 @@
-MD5 9cdf5d2640462401f2d2ed642b9a1a31 ChangeLog 1322
-MD5 ac37588a4900369f4f49e06ee37693e6 ipcalc-0.37.ebuild 652
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 72fdcbbf1ef740571ab9bbe47e6036f7 ipcalc-0.37.ebuild 572
+MD5 3f69006815b204f579c0d33af44cbb04 ipcalc-0.38.ebuild 601
+MD5 5781e2108d046b98a2e63c4afd8d70cf ChangeLog 1488
+MD5 b12305fb89f104c432d327c2ed02eae0 metadata.xml 253
 MD5 db6d4e6711e63467c59f936c53991bd2 files/digest-ipcalc-0.37 61
+MD5 ea9621895b1a08581796e40e1f410968 files/digest-ipcalc-0.38 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCC6bGEZCkKN40op4RArEJAJwP3/oEXqpARGyPPwpfjGS5dyBfowCghePE
+CAuuJQGkrzr36jpPQRh3JS8=
+=5CRv
+-----END PGP SIGNATURE-----
