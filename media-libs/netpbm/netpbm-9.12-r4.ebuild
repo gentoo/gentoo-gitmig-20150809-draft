@@ -1,35 +1,33 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-9.12-r4.ebuild,v 1.14 2003/12/13 13:05:36 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-9.12-r4.ebuild,v 1.15 2004/01/14 04:24:43 vapier Exp $
 
-S=${WORKDIR}/${P}
+inherit flag-o-matic
+
 DESCRIPTION="A set of utilities for converting to/from the netpbm (and related) formats"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 HOMEPAGE="http://netpbm.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 ppc sparc amd64 hppa"
 
 DEPEND=">=media-libs/jpeg-6b
 	>=media-libs/tiff-3.5.5
 	>=media-libs/libpng-1.2.1"
 
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc amd64 hppa"
-
-# 13/May/2003: Fix for bug #14392  by Jason Wever <weeve@gentoo.org>
-# start fix
-inherit flag-o-matic
-if [ ${ARCH} = "sparc" ]
-then
-	filter-flags "-O3"
-	filter-flags "-O2"
-	filter-flags "-O"
-fi
-# end fix
-
-
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	# 13/May/2003: Fix for bug #14392  by Jason Wever <weeve@gentoo.org>
+	# start fix
+	if [ ${ARCH} = "sparc" ]
+	then
+		filter-flags "-O3"
+		filter-flags "-O2"
+		filter-flags "-O"
+	fi
+	# end fix
 	sed -e "s:-O3:${CFLAGS}:" ${FILESDIR}/${PV}/Makefile.config >Makefile.config
 }
 
@@ -42,7 +40,7 @@ src_compile() {
 	emake ${myopts}|| die "Make failed"
 }
 
-src_install () {
+src_install() {
 	make INSTALL_PREFIX="${D}/usr/" install || die "Install failed"
 
 	# fix broken symlinks

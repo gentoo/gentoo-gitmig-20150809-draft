@@ -1,38 +1,32 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.11.14.ebuild,v 1.3 2003/11/24 19:23:32 agriffis Exp $
-
-IUSE="svga"
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.11.14.ebuild,v 1.4 2004/01/14 04:24:43 vapier Exp $
 
 inherit flag-o-matic
 
 DESCRIPTION="A set of utilities for converting to/from the netpbm (and related) formats"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
-RESTRICT="nomirror"
 HOMEPAGE="http://netpbm.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm ~amd64 ia64"
+IUSE="svga"
+RESTRICT="nomirror"
 
 DEPEND=">=media-libs/jpeg-6b
 	>=media-libs/tiff-3.5.5
 	>=media-libs/libpng-1.2.1
-	x86? ( svga? ( media-libs/svgalib ) )"
-
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm ~amd64 ia64"
+	svga? ( media-libs/svgalib )"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	if [ "${ARCH}" != "x86" ] ; then
-			cfg="config"
+	if [ `use svga` ] ; then
+		cfg="svga"
 	else
-		if [ -n "`use svga`" ]
-		then
-			cfg="svga"
-		else
-			cfg="config"
-		fi
+		cfg="config"
 	fi
 
 	# Sparc support ...
@@ -48,7 +42,7 @@ src_compile() {
 	emake CC="${CC}" CXX="${CXX}"|| die "emake failed"
 }
 
-src_install () {
+src_install() {
 	make package pkgdir=${D}/usr/ || die "make package failed"
 
 	# Fix symlink not being created.

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.35 2003/12/13 13:05:36 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.36 2004/01/14 04:24:43 vapier Exp $
+
+  13 Jan 2004; Mike Frysinger <vapier@gentoo.org> :
+  Remove x86? ( svga? () ) crap.  svga works only on x86 so if someone has
+  svga in their USE on another arch, it's THEIR problem to fix.
 
   13 Dec 2003; Guy Martin <gmsoft@gentoo.org> netpbm-9.12-r4.ebuild:
   Marked stable on hppa.
