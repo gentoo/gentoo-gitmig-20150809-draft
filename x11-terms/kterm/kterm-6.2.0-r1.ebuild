@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/kterm-6.2.0-r1.ebuild,v 1.1 2003/06/20 13:49:22 yakina Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/kterm-6.2.0-r1.ebuild,v 1.2 2003/09/08 21:13:10 usata Exp $
+
+inherit eutils
 
 IUSE=""
 
@@ -12,7 +14,7 @@ SRC_URI="ftp://ftp.x.org/contrib/applications/${P}.tar.gz
 HOMEPAGE="http://www.asahi-net.or.jp/~hc3j-tkg/kterm/"
 LICENSE="X11"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86 ~sparc"
 
 S=${WORKDIR}/${P}
 
@@ -33,7 +35,7 @@ src_unpack(){
 
 src_compile(){
 
-	cat <<-EOF>>KTerm.ad
+	cat >>KTerm.ad<<-EOF
 
 	! default values added by portage
 	*VT100*kanjiMode:	euc
@@ -48,19 +50,16 @@ src_compile(){
 }
 
 src_install(){
-	einstall DESTDIR=${D} || die "install binary failed"
+
+	einstall DESTDIR=${D} BINDIR=/usr/bin || die
 
 	# install man pages
-	mv kterm.man kterm.1
-	doman kterm.1
-	mkdir -p ${D}/usr/share/man/ja/man1
-	nkf -e kterm.jman > kterm.jman.euc
-	install -c -m 644 kterm.jman.euc ${D}/usr/share/man/ja/man1/kterm.1 \
-		|| die "install jman failed"
+	newman kterm.man kterm.1
+	insinto /usr/share/man/ja/man1
+	nkf -e kterm.jman > kterm.ja.1
+	newins kterm.ja.1 kterm.1
 
-	if [ ! -e /usr/share/terminfo/k/kterm ];
-	then
-		cd {S}
+	if [ ! -e /usr/share/terminfo/k/kterm ]; then
 		tic terminfo.kt -o${D}/usr/share/terminfo || die "tic failed"
 	fi
 
@@ -68,15 +67,15 @@ src_install(){
 }
 
 pkg_postinst() {
-	einfo ""
+	einfo
 	einfo "KTerm wallpaper support is enabled."
 	einfo "In order to use this feature,"
 	einfo "you need specify favourite xpm file with -wp option"
-	einfo ""
-	einfo "    % kterm -wp filename.xpm"
-	einfo ""
+	einfo
+	einfo "\t% kterm -wp filename.xpm"
+	einfo
 	einfo "or set it with X resource"
-	einfo ""
-	einfo "    KTerm*wallPaper: /path/to/filename.xpm"
-	einfo ""
+	einfo
+	einfo "\tKTerm*wallPaper: /path/to/filename.xpm"
+	einfo
 }
