@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <mjc@gentoo.org> (15 Aug 2002)
+# new ebuild, thanks to carpaski =)
+net-www/apache2
+
 # <seemant@gentoo.org> (14 Aug 2002)
 # masked for b0rkage
 =app-cdr/cdrtools-1.11.29
