@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3ee4002af2131e5ac9af92bd1831a9b1 man-1.5p.ebuild 2598
 MD5 0d99dd6e4aa0b658bb8f597596737a87 ChangeLog 9848
+MD5 9c896566b39c57595f9b9c807aa05a00 man-1.5p.ebuild 2574
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 a1fe892ffb27e5e044ed342b611d2db1 files/makewhatis.cron 126
+MD5 6d6e219c5e8357b2d60e92e0ac88d76b files/digest-man-1.5p 60
+MD5 7b2b00aace5bcdb963286e235eaf22b2 files/man-1.5p-search-order.patch 519
 MD5 14e1c7533927dfb89900ee788666b342 files/man-1.5p-defmanpath-symlinks.patch 663
 MD5 148b7ee661e1e9384930fbd508dd5027 files/man-1.5p-parallel-make.patch 437
 MD5 80f2a25fb0b5692f39a1990527a93271 files/man-1.5m-groff-1.18.patch 923
-MD5 6d6e219c5e8357b2d60e92e0ac88d76b files/digest-man-1.5p 60
-MD5 a1fe892ffb27e5e044ed342b611d2db1 files/makewhatis.cron 126
-MD5 7b2b00aace5bcdb963286e235eaf22b2 files/man-1.5p-search-order.patch 519
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCKO/XLLFUmVNQ7rkRAnI0AJ97C7eh0Mqxxro8cyykafq51JQifgCeIp4h
-tgz23origqvJlhwrcZWKPnk=
-=YcpV
------END PGP SIGNATURE-----
