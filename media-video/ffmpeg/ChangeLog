@@ -1,6 +1,13 @@
 # ChangeLog for media-video/ffmpeg
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.15 2003/03/10 22:37:16 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ChangeLog,v 1.16 2003/06/26 18:29:12 raker Exp $
+
+*ffmpeg-0.4.7_pre20030624 (26 Jun 2003)
+
+  26 Jun 2003; Nick Hadaway <raker@gentoo.org> ffmpeg-0.4.7_pre20030624.ebuild:
+  As of June 9th, 0.4.6 is considered obsolete by the upstream author.
+  This build pulled from a cvs snapshot now has support for the dvd
+  and static use variables.  Also added faad as a local use variable.
 
 *ffmpeg-0.4.6-r1 (4 Jan 2003)
 
