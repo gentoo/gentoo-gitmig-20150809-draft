@@ -10,9 +10,10 @@ PID="/var/run/ypbind.pid"
 opts="start stop restart"
 
 start() {
+	ebegin "Starting ${SERVICE}"
 	if [ -n "$YP_DOMAIN" ]
 	then
-	ebegin "Starting ${SERVICE}"
+
 
 		ypdomainname "$YP_DOMAIN"
 		start-stop-daemon --start --quiet --exec $EXE 1>&2
@@ -33,7 +34,7 @@ start() {
 			eend $? "Error starting ${SERVICE}."
 		fi
 	else
-		eend $? "Error starting ${SERVICE}."
+		eend 1 "Error starting ${SERVICE}."
 	fi
 }
 
@@ -45,7 +46,7 @@ stop() {
 		eend $? "Error stopping ${SERVICE}."
 	        # Remove binding files, if ypbind "forget" it
 		rm -f /var/yp/binding/*
-		rm -f /var/lock/subsys/ypbind
+		#rm -f /var/lock/subsys/ypbind
 	fi
 }
 
