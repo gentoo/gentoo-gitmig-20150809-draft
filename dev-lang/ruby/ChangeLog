@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.109 2004/11/11 13:03:20 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.110 2004/11/11 15:33:21 tester Exp $
+
+  11 Nov 2004; Olivier Crete <tester@gentoo.org> ruby-1.8.2_pre3.ebuild:
+  Stable on x86, bug 69985
 
   11 Nov 2004; Ferris McCormick <fmccor@gentoo.org> ruby-1.6.8-r12.ebuild:
   Stable for sparc wrt Bug 69985.  Builds, installs, and runs tests.
