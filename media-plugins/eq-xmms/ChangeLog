@@ -1,0 +1,12 @@
+# ChangeLog for media-plugins/eq-xmms
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/eq-xmms/ChangeLog,v 1.1 2004/02/17 12:14:33 eradicator Exp $
+
+*eq-xmms-0.5 (17 Feb 2004)
+
+  17 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> eq-xmms-0.5.ebuild,
+  metadata.xml:
+  Graphical Equalizer for XMMS. The one builtin to xmms only supports mp3's.
+  This one supports any stream. Ebuild submitted by Konstantin Arkhipov
+  <voxus@infonet.ee> in bug #41805.
+
