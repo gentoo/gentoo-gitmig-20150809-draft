@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.2_pre2.ebuild,v 1.13 2004/10/03 13:32:40 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.2_pre2.ebuild,v 1.14 2004/10/06 03:41:08 usata Exp $
 
 ONIGURUMA="onigd2_3_2"
 MY_P=${P/_pre/-preview}
@@ -17,7 +17,7 @@ LICENSE="Ruby"
 SLOT="1.8"
 # please keep sorted
 KEYWORDS="alpha amd64 arm hppa -ia64 mips macos ppc ppc-macos ~s390 sparc x86"
-IUSE="socks5 tcltk cjk doc"
+IUSE="socks5 tcltk cjk doc threads"
 
 RDEPEND="virtual/libc
 	>=sys-libs/gdbm-1.8.0
@@ -72,8 +72,9 @@ src_compile() {
 	fi
 
 	econf --program-suffix=${SLOT/./} --enable-shared \
-		`use_enable socks5 socks` \
-		`use_enable doc install-doc` \
+		$(use_enable socks5 socks) \
+		$(use_enable doc install-doc) \
+		$(use_enable threads pthread) \
 		|| die "econf failed"
 	emake || die "emake failed"
 }
@@ -88,10 +89,7 @@ src_install() {
 
 	make DESTDIR=${D} install || die "make install failed"
 
-	if use macos ; then
-		dosym /usr/lib/libruby${SLOT/./}.${PV%_*}.dylib /usr/lib/libruby.${PV%.*}.dylib
-		dosym /usr/lib/libruby${SLOT/./}.${PV%_*}.dylib /usr/lib/libruby.${PV%_*}.dylib
-	elif use ppc-macos ; then
+	if use macos || use ppc-macos ; then
 		dosym /usr/lib/libruby${SLOT/./}.${PV%_*}.dylib /usr/lib/libruby.${PV%.*}.dylib
 		dosym /usr/lib/libruby${SLOT/./}.${PV%_*}.dylib /usr/lib/libruby.${PV%_*}.dylib
 	else
@@ -103,8 +101,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if ! use macos ; then
-	if ! use ppc-macos ; then
+	if ! ( use macos || use ppc-pacos ) ; then
 		ewarn
 		ewarn "Warning: Vim won't work if you've just updated ruby from"
 		ewarn "1.6.x to 1.8.x due to the library version change."
@@ -118,15 +115,12 @@ pkg_postinst() {
 		einfo "You can change the default ruby interpreter by ${ROOT}usr/sbin/ruby-config"
 		einfo
 	fi
-	fi
 }
 
 pkg_postrm() {
-	if ! use macos ; then
-	if ! use ppc-macos ; then
+	if ! ( use macos || use ppc-macos ) ; then
 		if [ ! -n "$(readlink ${ROOT}usr/bin/ruby)" ] ; then
 			${ROOT}usr/sbin/ruby-config ruby${SLOT/./}
 		fi
-	fi
 	fi
 }
