@@ -1,0 +1,8 @@
+# ChangeLog for app-dicts/stardict-quick-eng-jpn
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-quick-eng-jpn/ChangeLog,v 1.1 2003/07/11 18:44:28 aliz Exp $
+
+*stardict-quick-eng-jpn-2.1.0 (06 Jul 2003)
+
+  11 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing ChangeLog
