@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.22 2004/05/10 02:17:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.23 2004/05/14 04:03:34 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -41,7 +41,7 @@ fi
 # Where we work
 S=${WORKDIR}/${MY_P}
 
-IUSE="${IUSE} X crypt curl firebird flash freetds gd gd-external gdbm imap informix ipv6 java jpeg ldap mcal memlimit mysql nls oci8 odbc pam pdflib png postgres qt snmp spell ssl tiff truetype xml2 yaz fdftk doc gmp"
+IUSE="${IUSE} X crypt curl firebird flash freetds gd gd-external gdbm imap informix ipv6 java jpeg ldap mcal memlimit mysql nls oci8 odbc pam pdflib png postgres qt snmp spell ssl tiff truetype xml2 yaz fdftk doc gmp kerberos"
 
 # berkdb stuff is complicated
 # we need db-1.* for ndbm
@@ -207,19 +207,21 @@ php-sapi_check_java_config() {
 	fi
 
 	JDKVER="$(java-config --java-version 2>&1 | head -n1 | cut -d\" -f2)"
-	einfo "JDK version: ${JDKVER}"
-	if [ -n "${JDKVER/1.4.*}" -o -z "${JDKVER}" ]; then
-		eerror "Please ensure that you have a JDK with a version of at least"
-		eerror "1.4 selected using java-config"
-		die
-	fi
+	einfo "Active JDK version: ${JDKVER}"
+	case ${JDKVER} in
+		1.4.*) ;;
+		1.5.*) ewarn "Java 1.5 is NOT supported at this time, and might not work." ;;
+		*) eerror "A Java 1.4 JDK is required for Java support in PHP." ; die ;;
+	esac
 }
 
 php-sapi_src_unpack() {
-	use xml || \
-	( ewarn "You have the xml USE flag turned off. Previously this"
-	  ewarn "disabled XML support in PHP. However PEAR has a hard"
-	  ewarn "dependancy on it, so they are now enabled." )
+	# this is obsolete
+	# use xml || \
+	# ( ewarn "You have the xml USE flag turned off. Previously this"
+	#   ewarn "disabled XML support in PHP. However PEAR has a hard"
+	#   ewarn "dependancy on it, so they are now enabled." )
+	
 	if use fdftk; then
 		has_version app-text/fdftk || \
 		die "app-text/fdftk is required for FDF support! Portage isn't up to the DEPEND structure for it yet"
