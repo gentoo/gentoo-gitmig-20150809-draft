@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/netcat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/ChangeLog,v 1.21 2004/02/21 05:47:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/ChangeLog,v 1.22 2004/04/10 04:52:45 vapier Exp $
+
+*netcat-110-r5 (10 Apr 2004)
+
+  10 Apr 2004; Mike Frysinger <vapier@gentoo.org> :
+  Add -DTELNET to compile flags to have netcat compile w/telnet (-t)
+  support #47301 by Michael Leuchtenburg.
+
+*netcat-110-r4 (21 Aug 2003)
 
   21 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
   Add local use flag to control GAPING_SECURITY_HOLE #41843 by Mitchell.
@@ -12,8 +20,6 @@
   netcat-110-r4.ebuild:
   SRC_URI update, thanks to: Scott Alfter <gentoo@salfter.dyndns.org> in bug
   #29154
-
-*netcat-110-r4 (21 Aug 2003)
 
   21 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
   Grab debian patches to add support for broadcasting and -q #24236.
