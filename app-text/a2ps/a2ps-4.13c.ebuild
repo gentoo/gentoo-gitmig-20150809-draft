@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c.ebuild,v 1.10 2004/04/27 07:16:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13c.ebuild,v 1.11 2004/05/07 16:13:13 usata Exp $
 
 inherit gnuconfig eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips hppa amd64 ~ia64"
+KEYWORDS="x86 ~ppc ~sparc alpha ~mips hppa amd64 ~ia64"
 IUSE="nls tetex cjk"
 
 DEPEND=">=sys-devel/automake-1.6
