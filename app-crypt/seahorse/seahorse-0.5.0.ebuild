@@ -1,12 +1,13 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ben Lutgens <lamer@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.5.0.ebuild,v 1.9 2002/06/12 03:23:49 lamer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.5.0.ebuild,v 1.10 2002/07/07 01:34:55 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="gnome front end to gnupg"
 SRC_URI="http://download.sourceforge.net/seahorse/${P}.tar.gz"
 HOMEPGAE="http://seahorse.sourceforge.net/"
+LICENSE="GPL-2"
 
 DEPEND="virtual/glibc virtual/x11
 	>=app-crypt/gnupg-1.0.4

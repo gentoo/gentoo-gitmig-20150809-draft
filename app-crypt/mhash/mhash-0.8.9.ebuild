@@ -6,6 +6,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="mhash is a library providing a uniform interface to a large number of hash algorithms."
 SRC_URI="http://mhash.sourceforge.net/dl/${P}.tar.gz"
 HOMEPAGE="http://mhash.sourceforge.net/"
+LICENSE="GPL-2"
 
 DEPEND="virtual/glibc"
 
