@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.5-r1.ebuild,v 1.1 2004/04/05 11:24:32 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.5-r1.ebuild,v 1.2 2004/04/06 21:06:17 steel300 Exp $
 
 UNIPATCH_LIST="${DISTDIR}/${KV}.bz2"
 K_PREPATCHED="yes"
@@ -21,3 +21,10 @@ existing bug. Only create a new bug if you have not found one that matches
 your issue. It is best to do an advanced search as the initial search has a
 very low yield. Please assign your bugs to x86-kernel@gentoo.org.
 Please read the ChangeLog and associated docs for more information."
+
+pkg_postinst() {
+	ewarn ""
+	ewarn "If you use the nvidia-kernel binary module, please be sure to verify that"
+	ewarn "Kernel Hacking --> Use 4Kb for kernel stacks instead of 8Kb"
+	ewarn "is not selected."
+}

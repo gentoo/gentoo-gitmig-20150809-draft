@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.142 2004/04/05 11:24:32 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.143 2004/04/06 21:06:16 steel300 Exp $
+
+*mm-sources-2.6.5-r1 (06 Apr 2004)
+
+  06 Apr 2004; Jason Cox <steel300@gentoo.org> mm-sources-2.6.5-r1.ebuild:
+  Back out 4k-stack-always-on.patch and move-__this_module-to-modpost,patch
+  Add a warning for nvidia-kernel users
 
 *mm-sources-2.6.5-r1 (05 Apr 2004)
 
