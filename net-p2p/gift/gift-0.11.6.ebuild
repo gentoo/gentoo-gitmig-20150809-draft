@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/gift-0.11.6.ebuild,v 1.1 2004/02/11 19:57:15 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/gift-0.11.6.ebuild,v 1.2 2004/02/22 00:42:37 brad_mssw Exp $
 
 DESCRIPTION="A OpenFT, Gnutella and FastTrack p2p network client"
 HOMEPAGE="http://gift.sourceforge.net"
@@ -9,7 +9,7 @@ RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~alpha ~amd64"
+KEYWORDS="~x86 ~sparc ~ppc ~alpha amd64"
 
 DEPEND="virtual/glibc
 	!net-p2p/gift
