@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libextractor
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libextractor/ChangeLog,v 1.13 2004/03/25 03:19:59 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libextractor/ChangeLog,v 1.14 2004/03/30 09:42:47 aliz Exp $
+
+  30 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> libextractor-0.2.6.ebuild:
+  Adding amd64 keyword. Closing #44494.
 
   24 Mar 2004; Jason Wever <weeve@gentoo.org> libextractor-0.2.2.ebuild:
   Marked stable on sparc.
