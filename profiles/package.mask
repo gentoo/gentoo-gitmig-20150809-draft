@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <cretin@gentoo.org> (17 Nov 2002)
+# New version
+=sys-devel/binutils-2.13.90.0.14
+
 # <hanno@gentoo.org> (17 Nov 2002)
 # new ebuild for pcmcia-cs, changed a lot, must check if it doesn't break
 # things before unmasking.
