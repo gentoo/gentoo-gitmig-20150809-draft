@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/gst-plugins-flac
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-flac/ChangeLog,v 1.24 2005/03/11 19:30:51 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/gst-plugins-flac/ChangeLog,v 1.25 2005/03/13 02:33:38 obz Exp $
+
+  13 Mar 2005; Mike Gardiner <obz@gentoo.org> gst-plugins-flac-0.8.7.ebuild:
+  Keyworded ppc
 
   11 Mar 2005; Heinrich Wendel <lanius@gentoo.org>
   gst-plugins-flac-0.8.7.ebuild:
