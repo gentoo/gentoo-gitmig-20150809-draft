@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.953 2005/02/17 12:15:13 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.954 2005/02/17 18:26:58 eradicator Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -110,6 +110,7 @@ dev-db/postgresql:pg-hier - Enables recursive queries like Oracle's 'CONNECT BY'
 dev-db/postgresql:pg-intdatetime - Enables --enable-integer-datetimes configure option, which changes PG to use 64-bit integers for timestamp storage.
 dev-db/postgresql:pg-vacuumdelay - Adds in the vacuum inter-page delay feature.
 dev-db/rekall:xbase - Support for the Xbase db family, covering dBase, Clipper, FoxPro, Visual dBase/Objects/FoxPro plus some older products.
+dev-db/sqlite:utf8 - Enable UTF8 encoding
 dev-db/sqlite:nothreadsafe - turn off thread safe operation of sqlite
 dev-dotnet/gtk-sharp:gnomedb - Enable gnomedb support
 dev-games/clanlib:clanJavaScript - Enables javascript support in clanlib
