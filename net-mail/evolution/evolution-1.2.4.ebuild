@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.2.4.ebuild,v 1.15 2003/10/22 12:55:39 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.2.4.ebuild,v 1.16 2004/02/22 06:31:31 mr_bones_ Exp $
 
 IUSE="ssl nls mozilla ldap doc spell pda ipv6 kerberos kde crypt"
 
