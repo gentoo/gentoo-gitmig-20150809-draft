@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pygtk
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.38 2004/03/09 23:17:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/ChangeLog,v 1.39 2004/03/11 19:56:25 kloeri Exp $
+
+*pygtk-2.2.0 (11 Mar 2004)
+
+  11 Mar 2004; Bryan Østergaard,,, <kloeri@gentoo.org> pygtk-2.2.0.ebuild:
+  Version bump, bug #44378.
 
   09 Mar 2004; <agriffis@gentoo.org> pygtk-2.0.0.ebuild:
   stable on alpha and ia64
