@@ -1,5 +1,5 @@
 MD5 fe49e0dbeae105106e62674db274f26e files/digest-xhkeys-1.0.0 63
-MD5 263814a99f913e47d022dffaa9e3366d files/xhkeys 459
-MD5 736aec57a618e8e2940c9d53822097c2 xhkeys-1.0.0.ebuild 699
+MD5 0b1f961ea67df43bfc84cbd3dafda2da files/xhkeys 448
 MD5 6bd58cb0d08f1a963c4341ba33d90f12 ChangeLog 485
 MD5 fe402b096905cae8dcb4a503d3a838ac metadata.xml 173
+MD5 736aec57a618e8e2940c9d53822097c2 xhkeys-1.0.0.ebuild 699
