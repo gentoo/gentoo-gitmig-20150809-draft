@@ -1,21 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a3d52e5e6931179193fdc304caab6b5e trac-0.7.ebuild 1309
-MD5 ae86e3aa5afb4bf9f1e1491936880c0d trac-0.6.1.ebuild 1298
-MD5 edeaf8b84ebfc1a8a75557cff017addf ChangeLog 2158
+MD5 1eb53fca3e70952d4273d1de1f94e863 ChangeLog 2344
 MD5 4defd726d2b03decc5b7ff21b0aac1a3 metadata.xml 225
-MD5 a9c0a9fa5db09be42c6f20bee60fcf74 trac-0.7.1.ebuild 1344
+MD5 ae86e3aa5afb4bf9f1e1491936880c0d trac-0.6.1.ebuild 1298
+MD5 a3d52e5e6931179193fdc304caab6b5e trac-0.7.ebuild 1309
+MD5 b7143f40e1a92c998dab3d48f4bb572c trac-0.7.1.ebuild 1341
+MD5 344dd99d077afc90746aa9babb070f11 trac-0.8.ebuild 1565
+MD5 a09870b386d01a3599fd92521d0c5ce0 files/digest-trac-0.8 60
 MD5 e5e17601cd3677a53e87ea4887302f81 files/0.7-postinst-en.txt 1013
 MD5 043ef6a77428424a22fb762977533416 files/0.7.1-postinst-en.txt 1252
-MD5 51f89a9fb89c4b1433da0db051f04147 files/digest-trac-0.7 60
 MD5 e48341b7627ee627a13e0ea41a0ef826 files/digest-trac-0.6.1 62
+MD5 51f89a9fb89c4b1433da0db051f04147 files/digest-trac-0.7 60
 MD5 94e075de9e02819d253096d0527de6d8 files/digest-trac-0.7.1 62
 MD5 76a6e6911b2d58e07f08566da7298f3f files/postinst-en.txt 631
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBrPUiI1lqEGTUzyQRAi2qAKCpNlv1Q6pugTpA1lFN+WW03o1gzQCdGQui
-pyKzTGpxgK5VEn6uLJwaB2g=
-=rsLU
------END PGP SIGNATURE-----
+MD5 d9fb4f2a1d8f5d4653af732dd6504f7f files/0.8-postinst-en.txt 1242

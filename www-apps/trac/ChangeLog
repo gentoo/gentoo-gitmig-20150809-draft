@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/trac
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.6 2004/11/30 22:32:54 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/ChangeLog,v 1.7 2004/12/11 21:57:13 stuart Exp $
+
+*trac-0.8 (11 Dec 2004)
+
+  11 Dec 2004; Stuart Herbert <stuart@gentoo.org> +files/0.8-postinst-en.txt,
+  trac-0.7.1.ebuild, +trac-0.8.ebuild:
+  Version bump; thanks to dju` as always ;-)
 
   30 Nov 2004; Sven Wegener <swegener@gentoo.org> trac-0.7.1.ebuild:
   Fixed invalid atoms in *DEPEND.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.7.1.ebuild,v 1.5 2004/12/11 21:57:13 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/trac/trac-0.8.ebuild,v 1.1 2004/12/11 21:57:13 stuart Exp $
 
 inherit distutils webapp
 
@@ -9,18 +9,23 @@ HOMEPAGE="http://trac.edgewall.com/"
 SRC_URI="http://ftp.edgewall.com/pub/trac/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~sparc"
-IUSE=""
+KEYWORDS="x86 ~ppc ~sparc"
+IUSE="vhosts"
 
 DEPEND="$DEPEND
 	>=dev-lang/python-2.3
-	dev-python/docutils
-	>=dev-python/pysqlite-0.4.3
+	>=dev-python/docutils-0.3.3
+	=dev-db/sqlite-2.8*
+	<=dev-python/pysqlite-1.0*
 	>=dev-libs/clearsilver-0.9.3
 	app-text/silvercity
 	>=dev-util/subversion-1.0.3"
 
-DOCS="AUTHORS COPYING ChangeLog INSTALL PKG-INFO README RELEASE THANKS UPGRADE"
+# need choice between enscript/silvercity/nothing
+# need choice between sqlite-3 + pysqlite-1.1 / sqlite-2.8 + pysqlite-1.0
+# need choice between mod_python/nothing
+
+DOCS="AUTHORS COPYING ChangeLog INSTALL MANIFEST.in PKG-INFO README README.tracd RELEASE THANKS UPGRADE"
 
 src_install () {
 	webapp_src_preinst
