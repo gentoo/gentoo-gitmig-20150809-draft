@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.7.14.ebuild,v 1.3 2003/12/14 12:27:47 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.7.14.ebuild,v 1.4 2003/12/14 12:42:26 spyderous Exp $
 
 DESCRIPTION="Driver for Smart Link modem"
 HOMEPAGE="http://www.smlink.com/"
@@ -38,21 +38,25 @@ src_install() {
 
 pkg_postinst() {
 	# Make some devices if we aren't using devfs
-	if [ ! -e ${ROOT}dev/.devfsd ] ; then
+	# If we are using devfs, restart it
+	if [ ! -e ${ROOT}dev/.devfsd ]
+	then
 		ebegin "Creating /dev/ttySL* devices"
 		local C="0"
-		while [ "${C}" -lt "4" ]; do
-			if [ ! -c ${ROOT}dev/ttySL${C} ]; then
+		while [ "${C}" -lt "4" ]
+		do
+			if [ ! -c ${ROOT}dev/ttySL${C} ]
+			then
 				mknod ${ROOT}dev/ttySL${C} c 212 0
 			fi
 			C="`expr $C + 1`"
 		done
 		eend 0
+	else
+		ebegin "Restarting devfsd to create /dev/modem symlink"
+			killall -HUP devfsd
+		eend 0
 	fi
-
-	ebegin "Restarting devfsd to create /dev/modem symlink"
-		killall -HUP devfsd
-	eend 0
 
 	echo
 	einfo "You must edit /etc/modules.d/${PN} and run"
