@@ -1,8 +1,11 @@
 # ChangeLog for media-gfx/gimp-print
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/ChangeLog,v 1.6 2002/10/17 20:07:09 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/ChangeLog,v 1.7 2002/12/29 04:46:21 jmorgan Exp $
 
 *gimp-print-4.2.2 (25 Sep 2002)
+  
+  29 Dec 2002; Jack Morgan <jmorgan@gentoo.org> gimp-print-4.2*.ebuild :
+  Added sparc keywords
 
   17 Oct 2002; Nick Hadaway <raker@gentoo.org> gimp-print-4.2.2.ebuild :
   Added dependancy on foomatic and it now installs with a much simpler

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.2.4.ebuild,v 1.1 2002/12/27 17:08:46 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.2.4.ebuild,v 1.2 2002/12/29 04:46:21 jmorgan Exp $
 
 IUSE="cups doc nls"
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://gimp-print.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~alpha"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	=media-gfx/gimp-1.2*
