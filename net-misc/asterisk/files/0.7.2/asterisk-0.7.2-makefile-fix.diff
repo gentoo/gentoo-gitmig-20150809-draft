@@ -1,0 +1,11 @@
+--- asterisk-0.7.2/Makefile.orig	2004-02-14 02:38:48.000000000 +0100
++++ asterisk-0.7.2/Makefile	2004-02-14 02:39:58.000000000 +0100
+@@ -397,7 +397,7 @@
+ 	for x in vm-theperson digits/1 digits/2 digits/3 digits/4 vm-isunavail; do \
+ 		cat $(DESTDIR)$(ASTVARLIBDIR)/sounds/$$x.gsm >> $(DESTDIR)$(ASTSPOOLDIR)/voicemail/default/1234/unavail.gsm ; \
+ 	done
+-	:> $(DESTDIR)$(ASTVARLIBDIR)/sounds/voicemail/default/1234/busy.gsm
++	:> $(DESTDIR)$(ASTSPOOLDIR)/voicemail/default/1234/busy.gsm
+ 	for x in vm-theperson digits/1 digits/2 digits/3 digits/4 vm-isonphone; do \
+ 		cat $(DESTDIR)$(ASTVARLIBDIR)/sounds/$$x.gsm >> $(DESTDIR)$(ASTSPOOLDIR)/voicemail/default/1234/busy.gsm ; \
+ 	done
