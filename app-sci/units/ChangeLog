@@ -1,8 +1,11 @@
 # ChangeLog for app-misc/units
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/units/ChangeLog,v 1.1 2002/05/07 01:57:35 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/units/ChangeLog,v 1.2 2002/12/14 23:33:08 nall Exp $
 
 *units-1.74 (1 Feb 2002)
+
+  14 Dec 2002; Jon Nall <nall@gentoo.org> units-1.74.ebuild :
+  keyworded ppc
 
   06 May 2002; G. Shapovalov <george@gentoo.org> Changelog:
 

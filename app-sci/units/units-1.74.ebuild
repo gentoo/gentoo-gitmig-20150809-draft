@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/units/units-1.74.ebuild,v 1.6 2002/10/17 14:26:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/units/units-1.74.ebuild,v 1.7 2002/12/14 23:33:08 nall Exp $
 
 S=${WORKDIR}/${P}
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnu.org/software/units/units.html"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 DEPEND=">=sys-libs/readline-4.1-r2
 		>=sys-libs/ncurses-5.2-r3"
