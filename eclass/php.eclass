@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.38 2003/06/08 20:05:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.39 2003/06/10 16:29:43 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -236,7 +236,6 @@ php_src_compile() {
 	use firebird && myconf="${myconf} --with-interbase=/opt/interbase"
 	use flash && myconf="${myconf} --with-swf=/usr --with-ming=/usr"
 	use freetds && myconf="${myconf} --with-sybase=/usr"
-	use gd && myconf="${myconf} --with-gd"
 	use gdbm && myconf="${myconf} --with-gdbm=/usr"
 	use informix && [ -n "${INFORMIXDIR}" ] && myconf="${myconf} --with-informix=${INFORMIXDIR}"
 	use java && myconf="${myconf} --with-java=${JAVA_HOME}"
@@ -267,13 +266,12 @@ php_src_compile() {
 		myconf="${myconf} --without-mysql"
 	fi
 
-
-	
+	#use gd && myconf="${myconf} --with-gd"
 	#use nls && myconf="${myconf} --with-gettext" || myconf="${myconf} --without-gettext"
 	#use qt && myconf="${myconf} --with-qtdom" || myconf="${myconf} --without-qtdom"
 	#use spell && myconf="${myconf} --with-pspell"
 	#use ssl && myconf="${myconf} --with-openssl"
-	myconf="${myconf} `use_with nls gettext` `use_with qt qtdom` `use_with spell pspell` `use_with ssl openssl`"
+	myconf="${myconf} `use_with gd` `use_with nls gettext` `use_with qt qtdom` `use_with spell pspell` `use_with ssl openssl`"
 	#use curl && myconf="${myconf} --with-curl"
 	#use imap && myconf="${myconf} --with-imap"
 	#use ldap && myconf="${myconf} --with-ldap"
