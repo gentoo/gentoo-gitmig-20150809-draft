@@ -1,0 +1,7 @@
+MD5 140c15abc68387ba1194d4606bc5cb0c ChangeLog 1756
+MD5 3f9ba1c3fd96877cabad54273c3dcae1 xemacs-gtk-21.4.8-r2.ebuild 3646
+MD5 dab6654a79a7dc5af774c7a97efb00e2 xemacs-gtk-21.4.8-r3.ebuild 3638
+MD5 df382940daa67bb8888fbae22d617cb4 files/README.Gentoo 1426
+MD5 1aded704f3bee894201ed229a1438948 files/digest-xemacs-gtk-21.4.8-r2 273
+MD5 cc9ed40a631878d1c97fda74557f5a0a files/digest-xemacs-gtk-21.4.8-r3 273
+MD5 115eb28610752622c6d6e1189d9e5ec8 files/emodules.info-21.4.8-gentoo.patch 468
