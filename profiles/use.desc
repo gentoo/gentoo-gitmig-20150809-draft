@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.227 2005/02/27 13:13:45 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.228 2005/03/08 17:41:38 vapier Exp $
 
 # keep them sorted (excluding the special arch flags near the end).
 
@@ -90,7 +90,6 @@ evo - Adds support for evolution in gnumeric and multisync
 examples - Install example source code
 exif - Adds support for reading EXIF headers from JPEG and TIFF images
 expat - Enable the use of dev-libs/expat
-f77 - Adds support for f77
 fortran - Adds support for fortran (formally f77)
 fam - Enable FAM support
 fastcgi - Add support for the FastCGI interface
