@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.75-r1.ebuild,v 1.8 2004/06/24 23:49:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.75-r1.ebuild,v 1.9 2004/12/04 00:10:08 eradicator Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.alsaplayer.org/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc -sparc ~alpha ~amd64"
+KEYWORDS="x86 ~ppc ~alpha ~amd64"
 
 RDEPEND="alsa? ( >=media-libs/alsa-lib-0.9 )
 	doc? ( app-doc/doxygen )
