@@ -1,8 +1,12 @@
 # ChangeLog for net-mail/lbdb
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/ChangeLog,v 1.3 2002/07/17 04:20:06 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/lbdb/ChangeLog,v 1.4 2002/08/04 23:34:24 cselkirk Exp $
 
 *lbdb-0.26-r1 (16 Jul 2002)
+
+  02 Aug 2002; Calum Selkirk <cselkirk@gentoo.org> libdb-0.26-r1.ebuild :
+
+  Added ppc to KEYWORDS. 
 
   16 Jul 2002; Seemant Kulleen <seemant@gentoo.org> libdb-0.26-r1.ebuild
   files/digest-lbdb-0.26-r1 :
