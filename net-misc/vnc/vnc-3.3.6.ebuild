@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-3.3.6.ebuild,v 1.1 2002/12/11 22:54:14 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-3.3.6.ebuild,v 1.2 2002/12/21 21:11:14 raker Exp $
 
 IUSE="java tcpd"
 
@@ -34,10 +34,12 @@ src_compile() {
 		make \
 			EXTRA_LIBRARIES="-lwrap -lnss_nis" \
 			CDEBUGFLAGS="${CFLAGS}" \
+			CXXFLAGS="${CFLAGS}" \
 			World || die
 	else
 		make \
 			CDEBUGFLAGS="${CFLAGS}" \
+			CXXFLAGS="${CFLAGS}" \
 			World || die
 	fi
 
