@@ -70,3 +70,4 @@ move net-mail/qmail-ldap mail-mta/qmail-ldap
 move net-mail/qmail-mysql mail-mta/qmail-mysql
 move net-mail/postfix mail-mta/postfix
 move net-mail/mini-qmail mail-mta/mini-qmail
+move net-mail/amavis mail-filter/amavis
