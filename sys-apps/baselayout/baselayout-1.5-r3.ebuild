@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.5-r3.ebuild,v 1.1 2001/02/27 16:11:41 achim Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.5-r3.ebuild,v 1.2 2001/04/21 12:46:00 achim Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
 
 A=""
 S=${WORKDIR}/${P}
@@ -70,7 +70,7 @@ src_install()
 	for foo in services passwd shadow nsswitch.conf \
 	           inetd.conf ld.so.conf protocols fstab \
 		   hosts syslog.conf pwdb.conf filesystems \
-		   group profile crontab inputrc
+		   group profile crontab inputrc networks
 	do
 		doins ${FILESDIR}/${foo}
 	done
