@@ -1,4 +1,7 @@
+MD5 7e09f66604b1e790b9ae9f80d0eb1216 nxtvepg-2.5.1-r1.ebuild 833
+MD5 400a5f47f7a3b70a84f04c9d1df1d2ae emlog 31252
 MD5 bf3afe007005c4e6f4bd81197f5272c9 nxtvepg-2.5.1.ebuild 825
 MD5 b37f17055f097cdd4aec546e5cf18321 ChangeLog 568
 MD5 1f0171b21eac5e3c18f48e1e5ee20954 files/digest-nxtvepg-2.5.1 66
 MD5 1e4f8db2f6cc3e3a59befb1a6e3e0b2f files/nxtvepg-2.5.1.patch 638
+MD5 1f0171b21eac5e3c18f48e1e5ee20954 files/digest-nxtvepg-2.5.1-r1 66
