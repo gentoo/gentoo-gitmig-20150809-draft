@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sulu/sulu-0.15.ebuild,v 1.2 2003/03/02 05:27:44 alron Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sulu/sulu-0.15.ebuild,v 1.3 2003/03/02 08:23:19 alron Exp $
 
 DESCRIPTION="Samsung Uproar Linux Utility (sulu)"
 HOMEPAGE="http://www.cs.toronto.edu/~kal/sulu/index.html"
@@ -30,8 +30,8 @@ src_install() {
 		doexe sulu
 		exeinto /etc/hotplug/usb
 		doexe ${FILESDIR}/uproar
-		insinto /etc/hotplug
-		doins ${FILESDIR}/usb.usermap
+		insinto /etc/hotplug/usb
+		doins ${FILESDIR}/uproar.usermap
 }
 pkg_postinst() {
 		einfo "Remember to enable hotplug in your kernel and in"
