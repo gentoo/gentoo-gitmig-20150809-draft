@@ -1,6 +1,10 @@
 # ChangeLog for media-video/kaffeine
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.23 2004/11/08 20:57:43 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/ChangeLog,v 1.24 2004/11/23 22:46:42 carlo Exp $
+
+  23 Nov 2004; Carsten Lohrke <carlo@gentoo.org> kaffeine-0.4.3b-r1.ebuild,
+  kaffeine-0.5_rc1-r1.ebuild:
+  QA: missing "inherit eutils"
 
 *kaffeine-0.5_rc2 (08 Nov 2004)
 
