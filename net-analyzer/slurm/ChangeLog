@@ -1,13 +1,16 @@
 # ChangeLog for net-analyzer/slurm
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/slurm/ChangeLog,v 1.1 2003/04/30 11:25:02 killian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/slurm/ChangeLog,v 1.2 2003/06/10 08:26:43 msterret Exp $
+
+  10 Jun 2003; <msterret@gentoo.org> slurm-0.2.2.ebuild:
+  added src_unpack() so we can compile again and again.
 
 *slurm-0.2.2 (30 Apr 2003)
 
   30 Apr 2003;Chuck Brewer <killian@gentoo.org> slurm-0.2.2.ebuild,digest
   and files/*:
-  Credit goes to Jyrki Muukkonen <jyrki@kruu.org>. Initial import. His 
-  description follows (trimmed somewhat)- 
+  Credit goes to Jyrki Muukkonen <jyrki@kruu.org>. Initial import. His
+  description follows (trimmed somewhat)-
   Includes two patches. One for some typos and color usage bugs and another
   for alternative color set (red and white, instead of the rather ugly default
   colors). It can be used with USE="altcolors". Note that I made this patch
