@@ -6,7 +6,7 @@ diff -uNr sqlite.orig/src/vdbeInt.h sqlite/src/vdbeInt.h
    double r;           /* Real value */
    char *z;            /* String value */
 -  char zShort[NBFS];  /* Space for short strings */
-+  char zShort[NBFS]; __attribute__ ((__aligned__(16))); /* Space for short strings */
++  char zShort[NBFS] __attribute__ ((__aligned__(16))); /* Space for short strings */
  };
  typedef struct Mem Mem;
  

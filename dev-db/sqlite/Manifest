@@ -1,4 +1,4 @@
-MD5 b23a1576e40b1c704127df29d3ed9649 ChangeLog 6486
+MD5 68932a2c91443835a0c8d3c3c2442efb ChangeLog 6605
 MD5 4d4bfa913883e6229573e79b6f02aa3b metadata.xml 275
 MD5 3235f0fd8310d8ce90e553102a25dcdc sqlite-2.8.11.ebuild 847
 MD5 00e0463f6d3f9168161b5dbb2018eebf sqlite-2.8.12.ebuild 847
@@ -18,4 +18,4 @@ MD5 f7bc60995ba08caf434378acd04c1587 files/digest-sqlite-2.8.3 64
 MD5 c0fa9426ecddf2d2b555ebe660bc27d8 files/digest-sqlite-3.0.5 65
 MD5 5aeb0a32e55ac5562756134561b39dae files/digest-sqlite-3.0.6 65
 MD5 e92b7000fca35af325e2ac65bce666e0 files/digest-sqlite-3.0.7 65
-MD5 f772dd4c3a1ebe14719bda383b2cbae5 files/sqlite-2.8.15-alignement-fix.patch 539
+MD5 217c8f27a3185a30858423e31e1aa4d9 files/sqlite-2.8.15-alignement-fix.patch 538
