@@ -1,0 +1,9 @@
+# ChangeLog for net-misc/dhcpv6
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpv6/ChangeLog,v 1.1 2003/06/01 04:40:44 latexer Exp $
+
+*dhcpv6-0.7 (01 Jun 2003)
+
+  01 Jun 2003; Peter Johanson <latexer@gentoo.org> dhcpv6-0.7.ebuild:
+  Initial Import. Client and Server implementing DHCPv6 for IPv6.
+
