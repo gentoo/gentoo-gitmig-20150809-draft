@@ -1,0 +1,86 @@
+--- xpvm/src/Makefile.aimk	1998-04-09 23:11:22.000000000 +0200
++++ /opt/pvm3/xpvm/src/Makefile.aimk	2003-05-31 11:53:31.000000000 +0200
+@@ -25,8 +25,8 @@
+ CFLOPTS		=	-O
+ #CFLOPTS	=	-g
+ 
+-CC			=	cc
+-#CC			=	gcc
++#CC			=	cc
++CC			=	gcc
+ 
+ CFLAGS		=	$(CFLOPTS) $(PVMVERSION) -DIMA_$(PVM_ARCH) $(ARCHCFLAGS)
+ LFLAGS		=	$(ARCHCFLAGS)
+@@ -39,13 +39,13 @@
+ #
+ 
+ # Personal Installation
+-TCLTKHOME	=	$(HOME)/TCL
++TCLTKHOME	=	/usr/lib/
+ # System Installation
+ #TCLTKHOME	=	/usr/local/lib
+ 
+ # Tcl 7.5 / Tk 4.1 and above
+-TCLINCL		=	-I$(TCLTKHOME)/tcl/generic
+-TKINCL		=	-I$(TCLTKHOME)/tk/generic
++#TCLINCL		=	-I$(TCLTKHOME)/tcl8.3/include/generic
++#TKINCL		=	-I$(TCLTKHOME)/tk8.3/include/generic
+ # Tcl 7.4 / Tk 4.0 and below
+ #TCLINCL	=	-I$(TCLTKHOME)/tcl
+ #TKINCL		=	-I$(TCLTKHOME)/tk
+@@ -54,8 +54,8 @@
+ #TKINCL		=	-I$(TCLTKHOME)
+ 
+ # Tcl 7.5 / Tk 4.1 and above
+-TCLLIBDIR	=	-L$(TCLTKHOME)/tcl/unix/$(PVM_ARCH)
+-TKLIBDIR	=	-L$(TCLTKHOME)/tk/unix/$(PVM_ARCH)
++TCLLIBDIR	=	-L$(TCLTKHOME)/tcl8.3/unix/$(PVM_ARCH)
++TKLIBDIR	=	-L$(TCLTKHOME)/tk8.3/unix/$(PVM_ARCH)
+ # Tcl 7.4 / Tk 4.0 and below
+ #TCLLIBDIR	=	-L$(TCLTKHOME)/tcl/$(PVM_ARCH)
+ #TKLIBDIR	=	-L$(TCLTKHOME)/tk/$(PVM_ARCH)
+@@ -64,11 +64,11 @@
+ #TKLIBDIR	=	-L$(TCLTKHOME)
+ 
+ # Tcl / Tk 8.1
+-#TCLLIB		=	-ltcl8.1
+-#TKLIB		=	-ltk8.1
++TCLLIB		=	-ltcl8.3
++TKLIB		=	-ltk8.3
+ # Tcl / Tk 8.0
+-TCLLIB		=	-ltcl8.0
+-TKLIB		=	-ltk8.0
++#TCLLIB		=	-ltcl8.0
++#TKLIB		=	-ltk8.0
+ # Tcl 7.6 / Tk 4.2
+ #TCLLIB		=	-ltcl7.6
+ #TKLIB		=	-ltk4.2
+@@ -80,22 +80,22 @@
+ #TKLIB		=	-ltk
+ 
+ # Generic X11 System
+-XINCL		=
+-XLIBDIR		=
++#XINCL		=
++#XLIBDIR		=
+ # Default Locations...
+ #XINCL		=	-I/usr/include/X11
+ #XLIBDIR	=	-L/usr/lib
+ # Linux Like Systems
+-#XINCL		=	-I/usr/X11R6/include
+-#XLIBDIR	=	-L/usr/X11R6/lib
++XINCL		=	-I/usr/X11R6/include
++XLIBDIR	=	-L/usr/X11R6/lib
+ 
+ XLIB		=	-lX11 
+ #XLIB		=	-lX11 -lXpm
+ 
+ # Non-Shared Library Systems
+-SHLIB		=
++#SHLIB		=
+ # Linux, BSD, SunOS Shared Library Systems
+-#SHLIB		=	-ldl
++SHLIB		=	-ldl
+ # IBM Shared Library Systems
+ #SHLIB		=	-lld
+ # HP, Some Linux Shared Library Systems
