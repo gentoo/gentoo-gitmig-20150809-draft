@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/multiimonc/multiimonc-0.3.3.ebuild,v 1.3 2004/07/02 07:44:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/multiimonc/multiimonc-0.3.3.ebuild,v 1.4 2004/07/11 11:19:37 hansmi Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.hansmi.ch/software/multiimonc"
 
 S="${WORKDIR}/MultiImonC-${PV}"
 
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ppc"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
