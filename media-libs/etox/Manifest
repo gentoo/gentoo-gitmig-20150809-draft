@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 efc5052bc3efa0d451a88368b2d4e64f ChangeLog 549
-MD5 4116b7b4cda2e98499b32dac2b0ad73a etox-0.9.0.20040828.ebuild 473
+MD5 640a0aeb517b649880ed5bab932e8592 etox-0.9.0.20041016.ebuild 473
 MD5 3bacc650d85736d91378cd853ec699a2 metadata.xml 676
-MD5 c8f47e70d321b6329ac055e2603d1ef8 files/digest-etox-0.9.0.20040828 72
+MD5 ce9925aa89b3272886b90d7b1626cafa files/digest-etox-0.9.0.20041016 72
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBNRUKHTu7gpaalycRAoC5AKDhDP396PsYh8M0cRV+7y2mT29/bgCfSCqB
-0n8izHxMbXYw7/2jiEF+pNo=
-=qKh0
+iD8DBQFBc7wnHTu7gpaalycRAnsJAKDsuxk1kpqtJvuLoBFXcqDxUxj7tQCfTdHf
+WnsgHu5ou++m0oOFx7B3O0g=
+=9EZb
 -----END PGP SIGNATURE-----
