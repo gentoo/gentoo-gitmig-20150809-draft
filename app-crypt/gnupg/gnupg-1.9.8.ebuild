@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.8.ebuild,v 1.3 2004/05/31 20:34:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.8.ebuild,v 1.4 2004/06/02 00:31:06 vapier Exp $
 
 inherit eutils
 
@@ -11,15 +11,19 @@ SRC_URI="ftp://ftp.gnupg.org/gcrypt/alpha/gnupg/${P}.tar.gz"
 LICENSE="GPL-2 | GPL-2 IDEA"
 SLOT="0"
 KEYWORDS="~x86 ~mips ~alpha"
-IUSE="X ldap nls caps"
+IUSE="X ldap nls caps smartcard"
 
-RDEPEND="!static? ( ldap? ( net-nds/openldap )
+RDEPEND="
+	!static? (
+		ldap? ( net-nds/openldap )
 		caps? ( sys-libs/libcap )
-		sys-libs/zlib )
+		sys-libs/zlib
+	)
 	X? ( || ( media-gfx/xloadimage media-gfx/xli ) )
 	nls? ( sys-devel/gettext )
 	>=dev-libs/libgcrypt-1.1.42
 	>=dev-libs/libksba-0.4.7
+	smartcard? ( dev-libs/opensc )
 	virtual/glibc
 	dev-lang/perl
 	dev-libs/pth
@@ -30,23 +34,14 @@ DEPEND="caps? ( sys-libs/libcap )
 	>=dev-libs/libgcrypt-1.1.94
 	>=dev-libs/libksba-0.9.6
 	>=dev-libs/libassuan-0.6.5
+	smartcard? ( dev-libs/opensc )
 	sys-libs/zlib
 	virtual/glibc
 	dev-lang/perl
 	dev-libs/pth"
 
 src_compile() {
-	local myconf="--libexecdir=/usr/lib"
-
-	if ! use nls; then
-		myconf="${myconf} --disable-nls"
-	fi
-
-	if use ldap; then
-		myconf="${myconf} --enable-ldap"
-	else
-		myconf="${myconf} --disable-ldap"
-	fi
+	local myconf=""
 
 	if use X; then
 		local viewer
@@ -60,11 +55,13 @@ src_compile() {
 		myconf="${myconf} --disable-photo-viewers"
 	fi
 
-	if use caps; then
-		myconf="${myconf} --with-capabilities"
-	fi
-
-	econf ${myconf} || die
+	econf \
+		--libexecdir=/usr/lib \
+		`use_enable smartcard scdaemon` \
+		`use_enable nls` \
+		`use_enable ldap` \
+		`use_with caps capabilities` \
+		|| die
 	emake || die
 }
 
