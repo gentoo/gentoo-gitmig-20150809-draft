@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-extprefs/gaim-extprefs-0.3.ebuild,v 1.1 2004/09/18 14:50:05 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-extprefs/gaim-extprefs-0.3.ebuild,v 1.2 2004/09/30 21:09:29 gustavoz Exp $
 
 DESCRIPTION="Gaim Extended Preferences is a plugin that takes advantage of existing gaim functionality to provide preferences that are often desired but not are not considered worthy of inclusion in Gaim itself."
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 
 IUSE=""
 
