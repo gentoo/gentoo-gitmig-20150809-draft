@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/squid-graph/squid-graph-3.1.ebuild,v 1.3 2003/07/13 11:30:14 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/squid-graph/squid-graph-3.1.ebuild,v 1.4 2004/03/05 15:15:51 gustavoz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Squid logfile analyzer and traffic grapher"
@@ -9,7 +9,7 @@ SRC_URI="http://www.squid-graph.dhs.org/files/stable/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~ppc x86 ~sparc"
+KEYWORDS="~ppc x86 sparc"
 
 DEPEND="dev-perl/GD"
 
