@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.109 2004/02/24 05:10:32 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.110 2004/03/15 17:47:15 max Exp $
+
+*postfix-2.0.19-r1 (15 Mar 2004)
+
+  15 Mar 2004; Max Kalika <max@gentoo.org> postfix-2.0.19-r1.ebuild,
+  postfix-2.0.19.ebuild:
+  Bump to version 2.0.19 and mark stable x86. Add new testing version 2.0.19-r1
+  which includes some use command cleanup and the vda patch, fixing bug 31819.
 
   23 Feb 2004; Jason Wever <weeve@gentoo.org> postfix-2.0.16-r1.ebuild:
   Stable on sparc.
