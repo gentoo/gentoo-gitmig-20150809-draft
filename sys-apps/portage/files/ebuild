@@ -2,6 +2,11 @@
 # Copyright 1999-2000 Daniel Robbins, Gentoo Technologies, Inc.
 # Distributed under the GPL
 
+if [ ! -f "/usr/lib/portage/bin/python" ]
+then
+   cp /usr/bin/python /usr/lib/portage/bin/python
+fi
+
 if [ "`whoami`" != "root" ]
 then
 	echo "Since ebuild can modify critical system files, only root is"
