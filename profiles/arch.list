@@ -1,11 +1,12 @@
-x86
-ppc
-sparc
-mips
 alpha
+amd64
 arm
 hppa
-amd64
 ia64
+mips
+ppc
 ppc64
 s390
+sparc
+sparc64
+x86
