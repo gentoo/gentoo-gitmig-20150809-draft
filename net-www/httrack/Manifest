@@ -1,3 +1,5 @@
-MD5 8dffc958b568e65891b9a192d38e320d ChangeLog 692
+MD5 bacfb8122038596e53acee9586b9abb6 ChangeLog 803
 MD5 72b0eeb0d100f27febd79b70ad73fe5d httrack-3.23.ebuild 1164
+MD5 f89a94c647dbd8a65b2ccabbec429d81 httrack-3.30.ebuild 1181
 MD5 2d1981778d937bdda235adb91f403901 files/digest-httrack-3.23 64
+MD5 36573a44fc5c16e46aab2c991dac64ef files/digest-httrack-3.30 65
