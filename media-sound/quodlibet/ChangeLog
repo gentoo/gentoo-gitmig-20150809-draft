@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/quodlibet
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.1 2004/11/09 02:14:53 pkdawson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/ChangeLog,v 1.2 2004/11/12 21:07:58 pkdawson Exp $
+
+*quodlibet-0.4 (12 Nov 2004)
+
+  12 Nov 2004; Patrick Dawson <pkdawson@gentoo.org> +quodlibet-0.4.ebuild:
+  Version bump.
 
 *quodlibet-0.3 (08 Nov 2004)
 
