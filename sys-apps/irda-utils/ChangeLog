@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/irda-utils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/irda-utils/ChangeLog,v 1.5 2002/12/30 12:53:32 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/irda-utils/ChangeLog,v 1.6 2003/01/26 23:04:08 chadh Exp $
 
 *irda-utils-0.9.15 (15 Dec 2002)
+
+  26 Jan 2003; Chad Huneycutt <chadh@gentoo.org> irda-utils-0.9.15.ebuild :
+  Bug #12986 caught a missing dependence on glib-1.2
 
   30 Dec 2002; Martin Holzer <mholzer@gentoo.org> irda-utils-0.9.15.ebuild ChangeLog :
   Change SRC_URI to use mirror://sf

@@ -11,7 +11,7 @@ KEYWORDS="~x86 -ppc"
 SLOT="0"
 LICENSE="GPL-2"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc >=dev-libs/glib-1.2"
 
 src_compile() {
 	make ROOT="${D}" RPM_BUILD_ROOT="${D}" || die "Making failed."
