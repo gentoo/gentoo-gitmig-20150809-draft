@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.35-r1.ebuild,v 1.13 2004/12/07 07:26:57 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.35-r1.ebuild,v 1.14 2004/12/08 02:19:15 vapier Exp $
 
-inherit eutils flag-o-matic gnuconfig
+inherit eutils flag-o-matic gnuconfig toolchain-funcs
 
 DESCRIPTION="Standard EXT2 and EXT3 filesystem utilities"
 HOMEPAGE="http://e2fsprogs.sourceforge.net/"
@@ -47,6 +47,8 @@ src_compile() {
 	[ "${ARCH}" = "sparc" ] && filter-flags -fstack-protector
 
 	export LDCONFIG=/bin/true
+	export CC=$(tc-getCC)
+	export STRIP=/bin/true
 
 	local myconf
 	use static \
@@ -67,11 +69,6 @@ src_install() {
 	rm -rf ${D}/zapme
 
 	make DESTDIR=${D} install-libs || die
-
-	#There is .po file b0rkage with 1.33; commenting this out (drobbins, 21 Apr 2003)
-	#if use nls; then
-	#	make -C po DESTDIR=${D} install || die
-	#fi
 
 	dodoc ChangeLog README RELEASE-NOTES SHLIBS
 	docinto e2fsck

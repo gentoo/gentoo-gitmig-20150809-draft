@@ -4,7 +4,7 @@ Hash: SHA1
 MD5 37957ff070794e896cafa685d8a0e0cc ChangeLog 9116
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 3a25e968d4e9df1c0942bbd5ecc54c5a e2fsprogs-1.35.ebuild 2821
-MD5 2d3f2a306496793ef77c92c91dda2203 e2fsprogs-1.35-r1.ebuild 3465
+MD5 6d53382c32760b1d0955be374b693967 e2fsprogs-1.35-r1.ebuild 3378
 MD5 1a896f2697b055d4b8b4139c3482ac9e files/e2fsprogs-1.32-mk_cmds-cosmetic.patch 316
 MD5 f079047f6885f762f6fa838b55236cb2 files/e2fsprogs-sed-locale.patch 5989
 MD5 3d9735f2397680a4978124f6805219ae files/digest-e2fsprogs-1.35 67
@@ -12,7 +12,7 @@ MD5 3d9735f2397680a4978124f6805219ae files/digest-e2fsprogs-1.35-r1 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBtk5oroRuSHgZdywRAqs/AKCAriXXK2o8K02lLTOeWqXakFSJHACeOu7K
-eortxkBdFArZIZtbzqqJob8=
-=Uy4O
+iD8DBQFBtmStroRuSHgZdywRAvWGAJ94yYkLclIWreeDWOATNi8BRC8NigCcC3MX
+2Q2MQa/74857U+iaexy4vRA=
+=spY2
 -----END PGP SIGNATURE-----
