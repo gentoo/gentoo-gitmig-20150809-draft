@@ -3,8 +3,14 @@
 <pkgmetadata>
 <herd>netmon</herd>
 <maintainer>
+    <email>tomek@lutel.pl</email>
+    <name>Tomek Lutelmowski</name>
+    <description>LuteWall developer, third party maintainer</description>     
+</maintainer>
+<maintainer>
     <email>vanquirius@gentoo.org</email>
     <name>Marcelo Goes</name>
+    <description>Gentoo maintainer</description>
 </maintainer>
 <longdescription>
 LutelWall is high-level firewall configuration tool. It uses human-readable and easy 
