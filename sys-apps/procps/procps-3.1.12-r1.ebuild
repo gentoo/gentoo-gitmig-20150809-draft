@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.1.12-r1.ebuild,v 1.1 2003/12/08 11:50:27 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/procps-3.1.12-r1.ebuild,v 1.2 2003/12/08 11:51:53 seemant Exp $
 
 IUSE="selinux"
 
-SELINUX_PATCH="procps-3.1.12-selinux.diff.bz2"
+SELINUX_PATCH="${P}-selinux.diff.bz2"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard informational utilities and process-handling tools -ps top tload snice vmstat free w watch uptime pmap skill pkill kill pgrep sysctl"
