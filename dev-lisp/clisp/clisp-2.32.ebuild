@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.31-r1.ebuild,v 1.2 2004/01/11 09:50:39 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/clisp-2.32.ebuild,v 1.1 2004/01/11 09:50:39 mkennedy Exp $
 
 inherit flag-o-matic
 
-IUSE="X threads fastcgi postgres ldap nls"
+IUSE="X threads fastcgi postgres ldap nls berkdb"
 
 # Handle the case where the user has some other -falign-functions
 # option set.  Bug 34630.
@@ -43,17 +43,16 @@ DEPEND="dev-libs/libsigsegv
 	X? ( x11-base/xfree )
 	ldap? ( net-nds/openldap )
 	readline? ( sys-libs/readline )
-	nls? ( sys-devel/gettext )"
-
+	nls? ( sys-devel/gettext )
+	berkdb? ( =sys-libs/db-4* )"
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${PV}/bindings-glibc-linux.lisp-gentoo.patch
-	epatch ${FILESDIR}/${PV}/bindings-wildcard-fnmatch.c-gentoo.patch
 	epatch ${FILESDIR}/${PV}/fastcgi-Makefile.in-gentoo.patch
+	epatch ${FILESDIR}/${PV}/format.lisp-gentoo.patch
 }
 
 src_compile() {
@@ -71,14 +70,14 @@ src_compile() {
 	use X && myconf="${myconf} --with-module=clx/new-clx"
 	use postgres && myconf="${myconf} --with-module=postgresql"
 	use fastcgi && myconf="${myconf} --with-module=fastcgi"
-	# the following modules are not supported
-#	use ldap && myconf="${myconf} --with-module=dirkey"
-#	use threads && myconf="${myconf} --with-threads=POSIX_THREADS"
+#	use berkdb && myconf="${myconf} --with-module=berkeley-db" # needs work
+#	use ldap && myconf="${myconf} --with-module=dirkey"	# openldap is broken
+#	use threads && myconf="${myconf} --with-threads=POSIX_THREADS" # broken
 	./configure --prefix=/usr ${myconf} build || die "./configure failed"
 	cd build
 	./makemake ${myconf} >Makefile
 	make config.lisp
-	sed 's,"vi","nano",g' <config.lisp >config.gentoo && mv config.gentoo config.lisp || die
+	sed -i 's,"vi","nano",g' config.lisp
 	make || die
 }
 
