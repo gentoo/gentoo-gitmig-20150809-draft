@@ -1,27 +1,17 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cd23797541ff4bbc3da62538ae699dd1 lighttpd-1.3.13.ebuild 2138
-MD5 f244dad33f260b0794bec1f09288b2c2 lighttpd-1.3.10-r1.ebuild 2155
+MD5 ed23624abff2b8500071d95ef19d4efe ChangeLog 4843
+MD5 2ee7defa9578776786620b0864ca3bbc lighttpd-1.3.10-r1.ebuild 2160
 MD5 1012bda0e37285755f02211ea2ebff71 lighttpd-1.3.11.ebuild 2161
-MD5 a2dc656ec2319cf1f200d86accf425bf ChangeLog 4768
+MD5 cd23797541ff4bbc3da62538ae699dd1 lighttpd-1.3.13.ebuild 2138
 MD5 4a186842848d9c384e2d12785ba426bc metadata.xml 165
-MD5 1d925aed297ec4541fb230dd19e11bc1 files/spawn-fcgi.confd 1076
-MD5 e605a4ead0ce7b1e0788c0b0b1161871 files/spawn-fcgi.initd 1383
-MD5 8648177a5f9a79cd4ba0eaaa4e769fdc files/lighttpd-1.3.11-gentoo.diff 1784
-MD5 7a09197e7483749e8963e177138c7622 files/lighttpd-1.3.10.initd 661
 MD5 39a52ad2d8f21296e767ee2663243716 files/digest-lighttpd-1.3.10-r1 67
 MD5 19489693ecfbff88c20b9ef33fef1df6 files/digest-lighttpd-1.3.11 67
 MD5 77ba3937d1e8762f8d8b6b2ea9ee1aaa files/digest-lighttpd-1.3.13 67
-MD5 1b01aa98985e773539dc8b6dc0be977f files/lighttpd-1.3.10-upstream.diff 1974
-MD5 4bb3bdffa967a53d266668b1040f2678 files/lighttpd-1.3.10-php.diff 971
-MD5 353d4b620cc5f277554ac570d5e45b3c files/lighttpd-1.3.11-upstream.diff 786
-MD5 da762512b4ae8682e353873c4f9d31bd files/lighttpd-1.3.11-php.diff 1332
 MD5 faeefb6d35a7cd7b4a2b4b78d63622f7 files/lighttpd-1.3.10-gentoo.diff 1777
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCLC1kEZCkKN40op4RAt5zAJ9Dc64CZi+oWqm8pggnoz+F5pNaPwCfRATt
-svmfkfygn4EJz3oKyzXPpcw=
-=EIzx
------END PGP SIGNATURE-----
+MD5 4bb3bdffa967a53d266668b1040f2678 files/lighttpd-1.3.10-php.diff 971
+MD5 1b01aa98985e773539dc8b6dc0be977f files/lighttpd-1.3.10-upstream.diff 1974
+MD5 7a09197e7483749e8963e177138c7622 files/lighttpd-1.3.10.initd 661
+MD5 8648177a5f9a79cd4ba0eaaa4e769fdc files/lighttpd-1.3.11-gentoo.diff 1784
+MD5 da762512b4ae8682e353873c4f9d31bd files/lighttpd-1.3.11-php.diff 1332
+MD5 353d4b620cc5f277554ac570d5e45b3c files/lighttpd-1.3.11-upstream.diff 786
+MD5 1d925aed297ec4541fb230dd19e11bc1 files/spawn-fcgi.confd 1076
+MD5 e605a4ead0ce7b1e0788c0b0b1161871 files/spawn-fcgi.initd 1383

@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/lighttpd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.14 2005/03/07 10:30:45 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/lighttpd/ChangeLog,v 1.15 2005/03/22 16:36:25 blubb Exp $
+
+  22 Mar 2005; <blubb@gentoo.org> lighttpd-1.3.10-r1.ebuild:
+  added ~amd64
 
 *lighttpd-1.3.13 (07 Mar 2005)
 
