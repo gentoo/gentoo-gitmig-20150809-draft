@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/f-prot-4.5.3.ebuild,v 1.1 2005/01/06 19:42:01 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/f-prot/f-prot-4.5.3.ebuild,v 1.2 2005/01/11 11:11:36 eradicator Exp $
 
-IUSE=""
+IUSE="emul-linux-x86"
 
 MY_P="fp-linux-ws-${PV}"
 S=${WORKDIR}/${PN}
@@ -15,7 +15,7 @@ DEPEND=""
 RDEPEND=">=app-arch/unzip-5.42-r1
 	dev-lang/perl
 	dev-perl/libwww-perl
-	amd64? ( >=app-emulation/emul-linux-x86-baselibs-1.0 )"
+	emul-linux-x86? ( >=app-emulation/emul-linux-x86-baselibs-1.0 )"
 PROVIDE="virtual/antivirus"
 
 SLOT="0"
