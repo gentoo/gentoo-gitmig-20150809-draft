@@ -1,0 +1,11 @@
+# ChangeLog for net-misc/netgo
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netgo/ChangeLog,v 1.1 2005/01/29 14:32:35 genstef Exp $
+
+*netgo-0.5 (29 Jan 2005)
+
+  29 Jan 2005; Stefan Schweizer <genstef@gentoo.org> +metadata.xml,
+  +netgo-0.5.ebuild:
+  New ebuild thanks to Per Johansson <per.j@hjolug.org> and David Holm
+  <dholm@gentoo.org> in bug 61123
+
