@@ -1,0 +1,15 @@
+# ChangeLog for sys-apps/partimage
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/partimage/ChangeLog,v 1.1 2002/12/23 06:30:36 drobbins Exp $
+
+*partimage-0.6.2 (22 Dec 2002)
+
+  22 Dec 2002; Daniel Robbins <drobbins@gentoo.org>: added initial release. The
+  original version of this ebuild was submitted in bug #11804 by Derek Young
+  (d@young.hostforweb.com.) Thank you Derek for submitting this ebuild. Several
+  fixes were made to this ebuild but the basic approach remains intact. One
+  thing that make not be fully functional is the creation of SSL certificates,
+  which according to Derek requires the "partimag" user (hacked out of the
+  Makefile) to exist. Files originally intended to be owned by "partimag" are
+  owned by root in this ebuild.
+  
