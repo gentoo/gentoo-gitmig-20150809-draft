@@ -1,0 +1,34 @@
+# Anything that relies on vm86.h will not built on amd64
+# SVGAlib doesnt build
+svga
+
+# There is no JDK for x86_64 yet
+#java
+#jikes
+#junit
+
+# Update 10/02/03 Brad House <brad_mssw@gentoo.org> 
+#    arts patches are in, it builds now
+# KDE doesnt build
+# kde
+# arts
+
+# Too many packages assume that mmx/sse/sse2/3dnow are 86-32 only things to
+# make them useful on amd64. Anyway, all amd64 cpus have them, so they should
+# not be many flag dependant in this case
+mmx
+sse
+sse2
+3dnow
+
+icc
+
+# Firebird doesnt build on amd64
+firebird
+
+# DirectFB doesnt build on amd64
+directfb
+
+# Chris PeBenito <pebenito@gentoo.org>
+# must use a SELinux profile
+selinux
