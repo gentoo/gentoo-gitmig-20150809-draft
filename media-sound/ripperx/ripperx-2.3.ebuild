@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ripperx-2.3.ebuild,v 1.13 2005/01/19 15:44:19 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ripperx-2.3.ebuild,v 1.14 2005/03/21 20:01:40 luckyduck Exp $
+
+inherit eutils
 
 IUSE=""
 
@@ -16,17 +18,19 @@ DEPEND="=x11-libs/gtk+-1.2*
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~amd64"
 
 
 src_unpack () {
 	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/${P}-gcc34.patch
 }
 
 src_compile () {
-	cd ${S}
-	./configure
-	emake || die
+	econf || die "configure failed"
+	emake || die "make failed"
 }
 
 

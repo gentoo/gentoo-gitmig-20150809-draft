@@ -1,0 +1,30 @@
+diff -urpN ../ripperX-2.3.orig/src/cddbp.c src/cddbp.c
+--- ../ripperX-2.3.orig/src/cddbp.c	2005-03-21 20:44:05.709026752 +0100
++++ src/cddbp.c	2005-03-21 20:53:55.961294768 +0100
+@@ -62,7 +62,7 @@ int cddbp_handshake( FILE *socket, const
+ 
+ 
+ int cddbp_query( FILE *socket, const char *disk_id, int tracknum,
+-                 long int offset[ tracknum ], int duration, int *matches,
++                 long int offset[ MAX_NUM_TRACK ], int duration, int *matches,
+                  char ***category_buffer, char ***title_buffer,
+                  char ***id_buffer )
+ {
+@@ -244,7 +244,7 @@ void cddbp_signoff( FILE *socket )
+ 
+ 
+ int http_query( const char *server, int port, const char *URL,
+-                const char *cd_id, int tracknum, long int offset[ tracknum ],
++                const char *cd_id, int tracknum, long int offset[ MAX_NUM_TRACK ],
+                 int duration, int *matches,
+                 char ***category_buffer, char ***title_buffer,
+                 char ***id_buffer, const char *client, const char *version )
+@@ -354,7 +354,7 @@ int http_query( const char *server, int 
+ }
+ 
+ int http_query_proxy( const char *server, int port, const char *proxy_server, int proxy_port, const char *URL,
+-                      const char *cd_id, int tracknum, long int offset[ tracknum ],
++                      const char *cd_id, int tracknum, long int offset[ MAX_NUM_TRACK ],
+                       int duration, int *matches,
+                       char ***category_buffer, char ***title_buffer,
+                       char ***id_buffer, const char *client, const char *version )
