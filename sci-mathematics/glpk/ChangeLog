@@ -1,0 +1,33 @@
+# ChangeLog for app-sci/glpk
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/glpk/ChangeLog,v 1.1 2004/12/28 05:39:58 ribosome Exp $
+
+*glpk-4.7 (28 Dec 2004)
+
+  28 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +glpk-4.2.ebuild, +glpk-4.7.ebuild:
+  Moved from app-sci/glpk to sci-mathematics/glpk.
+
+  23 Nov 2004; Karol Wojtaszek <sekretarz@gentoo.org> glpk-4.7.ebuild:
+  Stable on amd64, bug #71862
+
+*glpk-4.7 (21 Nov 2004)
+
+  21 Nov 2004; Robin H. Johnson <robbat2@gentoo.org> +glpk-4.7.ebuild:
+  New version, Java support removed by upstream due to license issues.
+
+  17 Oct 2004; Thomas Matthijs <axxo@gentoo.org> glpk-4.2.ebuild:
+  dojar --> java-pkg_dojar
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> glpk-4.2.ebuild:
+  Added IUSE, fixed bugs #44467 and #46955.
+
+  09 Dec 2003; Heinrich Wendel <lanius@gentoo.org> glpk-4.2.ebuild:
+  changed app-text/ghostscript to virtual/ghostscript
+
+*glpk-4.2 (20 Nov 2003)
+
+  20 Nov 2003; Robin H. Johnson <robbat2@gentoo.org> glpk-4.2.ebuild,
+  metadata.xml:
+  Initial commit. ebuild written by robbat2@gentoo.org
+
