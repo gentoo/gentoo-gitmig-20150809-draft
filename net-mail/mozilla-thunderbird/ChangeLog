@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/mozilla-thunderbird
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/ChangeLog,v 1.15 2003/11/18 01:21:22 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/ChangeLog,v 1.16 2003/12/07 16:35:53 brad Exp $
+
+*mozilla-thunderbird-0.4 (07 Dec 2003)
+
+  07 Dec 2003; Brad Laue <brad@gentoo.org> mozilla-thunderbird-0.4.ebuild:
+  Bump to 0.4 - now supports URL handling under Linux, and other improvements.
 
   18 Nov 2003; Luca Barbato <lu_zero@gentoo.org>
   mozilla-thunderbird-0.3-r1.ebuild:
