@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.91 2005/01/19 19:49:19 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.92 2005/01/21 22:19:40 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -502,6 +502,12 @@ src_install() {
 		dosym gvim /usr/bin/gvimdiff
 		dosym gvim /usr/bin/evim
 		dosym gvim /usr/bin/eview
+		# bug #74349 says we should install these
+		if version_is_at_least "6.3-r4" ; then
+			dosym gvim /usr/bin/gview
+			dosym gvim /usr/bin/rgvim
+			dosym gvim /usr/bin/rgview
+		fi
 		insinto /etc/vim
 		doins ${FILESDIR}/gvimrc
 
