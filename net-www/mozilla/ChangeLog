@@ -1,6 +1,6 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.16 2002/05/29 00:22:06 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.17 2002/05/29 11:26:06 wmertens Exp $
 
 *mozilla-1.0_rc3-r2 (28 May 2002)
 
@@ -9,6 +9,10 @@
   Update to compile with freetype-2.0.9.
 
 *mozilla-1.0_rc{2,3}-r1 (26 May 2002)
+
+  29 May 2002; Wout Mertens< wmertens@gentoo.org> digest-mozilla-1.0_rc3-r1:
+
+  Committed new digest, since it seems the tarball changed
 
   26 May 2002; Martin Schlemmer <azarah@gentoo.org> :
 
