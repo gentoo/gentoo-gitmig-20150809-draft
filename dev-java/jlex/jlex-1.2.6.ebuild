@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jlex/jlex-1.2.6.ebuild,v 1.4 2004/03/19 01:19:03 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jlex/jlex-1.2.6.ebuild,v 1.5 2004/04/26 03:16:00 zx Exp $
 
 inherit java-pkg
 
@@ -22,7 +22,7 @@ src_install() {
 	dodoc LICENSE README Bugs
 	use doc && dohtml manual.html
 	use doc && dodoc sample.lex
-	zip jlex.jar *.class
+	mkdir JLex && mv *.class JLex/
+	zip -rq jlex.jar JLex/
 	java-pkg_doclass jlex.jar
 }
-
