@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.7-r3.ebuild,v 1.7 2002/04/30 00:27:41 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.7-r3.ebuild,v 1.8 2002/04/30 04:16:29 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Window manager based on BlackBox"
@@ -16,7 +16,7 @@ RDEPEND="${DEPEND}
 src_unpack() {
 	unpack ${P}.tar.gz
 	cd ${S}
-	patch -p1 < ${FILESDIR}/${P}-bugfix1.patch
+	patch -p1 < ${FILESDIR}/${P}-bugfix1.patch || die
 }
 
 PROVIDE="virtual/blackbox"
