@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libddmpeg/libddmpeg-1.5.ebuild,v 1.1 2004/02/06 14:10:41 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libddmpeg/libddmpeg-1.5.ebuild,v 1.2 2004/02/06 14:12:16 max Exp $
 
 inherit flag-o-matic
 
@@ -8,8 +8,8 @@ DESCRIPTION="VIA hardware MPEG decoder library."
 HOMEPAGE="http://www.ivor.it/cle266"
 SRC_URI="http://www.ivor.it/cle266/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="as-is"
+SLOT="0"
 KEYWORDS="~x86 -*"
 
 src_compile() {
