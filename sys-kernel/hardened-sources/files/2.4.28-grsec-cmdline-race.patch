@@ -1,0 +1,11 @@
+--- linux-2.4.28/fs/proc/base.c	2004-11-28 15:44:03.000000000 -0500
++++ linux-2.4.28-hardened/fs/proc/base.c	2004-11-28 16:02:18.439086184 -0500
+@@ -194,7 +194,7 @@
+ 	if (mm)
+ 		atomic_inc(&mm->mm_users);
+ 	task_unlock(task);
+-	if (mm) {
++	if (mm && mm->arg_end) {
+ 		int len = mm->arg_end - mm->arg_start;
+ 		if (len > PAGE_SIZE)
+ 			len = PAGE_SIZE;
