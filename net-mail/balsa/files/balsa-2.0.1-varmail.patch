@@ -1,0 +1,12 @@
+diff -rbu2 balsa-2.0.0.orig/libmutt/configure balsa-2.0.0/libmutt/configure
+--- balsa-2.0.1.orig/libmutt/configure	2002-06-03 00:15:54.000000000 +0200
++++ balsa-2.0.1/libmutt/configure	2002-06-03 00:22:42.000000000 +0200
+@@ -8639,7 +8639,5 @@
+ fi;
+ 	if test $mutt_cv_mailpath = no; then
+-		{ { echo "$as_me:8641: error: \"Could not determine where new mail is stored.\"" >&5
+-echo "$as_me: error: \"Could not determine where new mail is stored.\"" >&2;}
+-   { (exit 1); exit 1; }; }
++            echo "checking for... Yeah check your ass"
+ 	fi
+ 	cat >>confdefs.h <<EOF
