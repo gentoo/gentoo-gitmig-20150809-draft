@@ -1,6 +1,21 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.113 2004/04/24 14:00:06 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.114 2004/05/05 01:46:08 lv Exp $
+
+*binutils-2.15.90.0.1.1-r1 (04 May 2004)
+
+  04 May 2004; Travis Tilley <lv@gentoo.org>
+  +binutils-2.15.90.0.1.1-r1.ebuild:
+  added a more amd64-friendly revision of 2.15.90.0.1.1. besides the patches
+  included in the previous ebuild, the following have been added:
+  34_all_binutils-2.15.90.0.3-place-orphan.patch,
+  70_amd64_binutils_x86_64_testsuite.patch,
+  71_ppc_binutils-2.13-ppc32-fPIC.patch, 72_all_fde-alignment.patch,
+  73_amd64_x86-64-gotpcrel.patch, 74_all_gcc34-no-unit-at-a-time.patch,
+  75_amd64_sysenter-sysexit-are-valid-IA32e-assembly.patch,
+  76_all_use-new-ld-dtags.patch, 77_x86_via-padlock-gas.patch, and
+  78_x86_via-padlock-tests.patch. this ebuild /should/ work with gcc 3.4 more
+  consistantly than the previous one.
 
   24 Apr 2004; Travis Tilley <lv@gentoo.org> binutils-2.14.90.0.7-r1.ebuild,
   binutils-2.14.90.0.7-r2.ebuild, binutils-2.14.90.0.7-r3.ebuild,
