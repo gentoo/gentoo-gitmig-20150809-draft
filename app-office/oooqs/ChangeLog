@@ -1,6 +1,14 @@
 # ChangeLog for app-office/oooqs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/oooqs/ChangeLog,v 1.11 2004/08/25 11:14:15 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/oooqs/ChangeLog,v 1.12 2004/08/25 15:00:35 suka Exp $
+
+*oooqs-2.0.3-r1 (25 Aug 2004)
+
+  25 Aug 2004; suka@gentoo.org +files/fixxooo.patch, +oooqs-2.0.3-r1.ebuild:
+  New version: oooqs now also works with openoffice-ximian, thanks to jstubbs
+  for helping me out with the patch!
+  
+  This also closes bug #54403
 
   25 Aug 2004; suka@gentoo.org oooqs-2.0.3.ebuild:
   marking 2.0.3 stable on x86, add metadata.xml

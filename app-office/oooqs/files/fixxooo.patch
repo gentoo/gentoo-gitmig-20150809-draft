@@ -1,0 +1,29 @@
+--- src/oooqs.cpp 2004-08-25 13:57:33.801575240 +0200
++++ src/oooqs.cpp 2004-08-25 13:57:33.802575088 +0200
+@@ -3,6 +3,7 @@
+ */
+ 
+ #include <qdir.h>
++#include <qfile.h>
+ #include <qmap.h>
+ 
+ #include <kaboutdata.h>
+@@ -92,9 +93,15 @@
+ 	Try to autodetect settings if they aren't found in our own config.
+ 	*/
+ 	if ( _exec.length() < 2 ) {
+-		oooConfig = new KSimpleConfig(
+-		                QDir::homeDirPath() + QDir::separator()
+-		                + ".sversionrc", true );
++		if ( QFile::exists( QDir::homeDirPath() + QDir::separator() + ".xversionrc" ) ) {
++			oooConfig = new KSimpleConfig(
++   			QDir::homeDirPath() + QDir::separator()
++			+ ".xversionrc", true );
++ 			} else {
++			oooConfig = new KSimpleConfig(
++			QDir::homeDirPath() + QDir::separator()
++			+ ".sversionrc", true );
++}
+ 		oooConfig->setGroup( "Versions" );
+ 		versions = oooConfig->entryMap( "Versions" );
+ 		/**
