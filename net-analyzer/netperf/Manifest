@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f34e3c8858756da0001b12d2d3fa1af2 metadata.xml 159
-MD5 478b885055440adfafffcb9f6421db62 netperf-2.2.4.ebuild 1417
-MD5 838b75f935cc7442f4d17ddcaf36add0 netperf-2.2.ebuild 908
 MD5 b742a22485d4491ee330f8e18f0ff622 ChangeLog 2108
+MD5 838b75f935cc7442f4d17ddcaf36add0 netperf-2.2.ebuild 908
+MD5 c05052518b27c48aa4569aa07615c6a5 netperf-2.2.4.ebuild 1415
+MD5 f34e3c8858756da0001b12d2d3fa1af2 metadata.xml 159
 MD5 a3d32398b2de6ff285e374a73448d17b files/digest-netperf-2.2 68
+MD5 5b39a4d1bbad0a785afc512f8a35e87d files/netperf-2.2alpha.diff 686
 MD5 787949efbc227966fa6a5609799cbf97 files/digest-netperf-2.2.4 66
 MD5 f7a086a9cdee9e3d6ed0e8976b678dbf files/netperf-2.2-conf 103
 MD5 35791611e593b4e8cefdfd56031e759d files/netperf-2.2-init 434
-MD5 5b39a4d1bbad0a785afc512f8a35e87d files/netperf-2.2alpha.diff 686
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (Darwin)
-
-iD8DBQFBX8ygVWNWqTUmv+0RAivtAJ0d7b9qVSBTjNJUyxV9cvw7ttfsYwCfXrWx
-hy9IHjsAum10rba8ohCk/8Q=
-=ddDI
------END PGP SIGNATURE-----

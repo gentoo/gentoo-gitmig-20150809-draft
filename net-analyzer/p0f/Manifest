@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0c94bf7428ff57035132a1be189b820f p0f-2.0.3.ebuild 838
-MD5 a1ea6c567384353d10d03791960b87f5 p0f-1.8.2.ebuild 881
 MD5 d7754be65f973d0c7f7c3e667b601cb2 ChangeLog 1879
-MD5 a6504b2ab3f5f778d46643a087162f71 metadata.xml 250
+MD5 a1ea6c567384353d10d03791960b87f5 p0f-1.8.2.ebuild 881
+MD5 6dc57985b92bcc85f71ce115235e9d0f p0f-2.0.3.ebuild 837
 MD5 8be0f907669c375e52f9e1161ce27bfd p0f-2.0.2.ebuild 1090
+MD5 a6504b2ab3f5f778d46643a087162f71 metadata.xml 250
+MD5 f6ee2143700cca09dfededeef39ed216 files/digest-p0f-1.8.2 57
 MD5 f184953061e4a88dad985e15eb2b4f22 files/p0f-1.8.2-makefile.patch 377
 MD5 aec7b9a8cf64ab5785008f4f5fc64095 files/p0f-1.8.2.rc 1274
-MD5 f6ee2143700cca09dfededeef39ed216 files/digest-p0f-1.8.2 57
 MD5 5bf1dc20124f41cadbc7560bddfe875c files/digest-p0f-2.0.2 57
 MD5 d68117a6108bcd2769ac8128cec37896 files/digest-p0f-2.0.3 58
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBb6ADT+MN7JbqCpMRAqlpAJ9BcLLwhnSfu/wMVtHEqctb3/ENhgCfW319
-HyVIfnGrK4X1H8EG1uobhUo=
-=l0UV
------END PGP SIGNATURE-----
