@@ -1,8 +1,11 @@
 # ChangeLog for app-text/scrollkeeper
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.24 2003/02/22 03:40:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/ChangeLog,v 1.25 2003/07/01 21:39:37 gmsoft Exp $
 
 *scrollkeeper-0.3.12 (24 Jan 2003)
+
+  01 Jul 2003; Guy Martin <gmsoft@gentoo.org> scrollkeeper-0.3.12.ebuild :
+  Added hppa to KEYWORDS.
 
   21 Feb 2003; Aron Griffis <agriffis@gentoo.org> scrollkeeper-0.3.12.ebuild :
   Mark stable on Alpha
