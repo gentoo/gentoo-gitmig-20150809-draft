@@ -1,3 +1,4 @@
+virtual/dev-manager			sys-fs/devfsd
 virtual/kernel				sys-kernel/linux
 virtual/os-headers			sys-kernel/linux-headers
 virtual/modutils			sys-apps/modutils
