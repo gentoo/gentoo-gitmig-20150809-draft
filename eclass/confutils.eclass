@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/confutils.eclass,v 1.13 2005/02/21 14:52:05 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/confutils.eclass,v 1.14 2005/03/01 15:54:31 stuart Exp $
 #
 # eclass/confutils.eclass
 #		Utility functions to help with configuring a package
@@ -19,7 +19,7 @@ IUSE="$IUSE sharedext"
 # list of USE flags that need deps that aren't yet in Portage
 # this list was originally added for PHP
 
-CONFUTILS_MISSING_DEPS="adabas aolserver birdstep caudium continuity db2 dbmaker empress empress-bcs esoob frontbase hyperwave-api informix ingres interbase isapi mnogosearch msession msql nsapi oci8 oracle7 ovrimos pfpro phttpd pi3web sapdb solid sybase sybase-ct tux"
+CONFUTILS_MISSING_DEPS="adabas birdstep db2 dbmaker empress empress-bcs esoob frontbase hyperwave-api informix ingres interbase mnogosearch msession msql oci8 oracle7 ovrimos pfpro sapdb solid sybase sybase-ct"
 
 # ========================================================================
 # confutils_init ()
@@ -172,9 +172,9 @@ confutils_use_depend_any () {
 enable_extension_disable () {
 	if ! useq "$2" ; then
 		my_conf="${my_conf} --disable-$1"
-		[ -n "$3" ] && einfo "  Disabling $3"
+		[ -n "$3" ] && einfo "  Disabling $1"
 	else
-		[ -n "$3" ] && einfo "  Enabling $3"
+		[ -n "$3" ] && einfo "  Enabling $1"
 	fi
 }
 
@@ -211,10 +211,10 @@ enable_extension_enable () {
 
 	if useq $2 ; then
 		my_conf="${my_conf} --enable-$1$my_shared"
-		[ -n "$5" ] && einfo "  Enabling $5"
+		einfo "  Enabling $1"
 	else
 		my_conf="${my_conf} --disable-$1"
-		[ -n "$5" ] && einfo "  Disabling $5"
+		einfo "  Disabling $1"
 	fi
 }
 
@@ -251,10 +251,10 @@ enable_extension_enableonly () {
 
 	if useq $2 ; then
 		my_conf="${my_conf} --enable-$1$my_shared"
-		[ -n "$5" ] && einfo "  Enabling $5"
+		einfo "  Enabling $1"
 	else
 		# note: we deliberately do *not* use a --disable switch here
-		[ -n "$5" ] && einfo "  Disabling $5"
+		einfo "  Disabling $1"
 	fi
 }
 # ========================================================================
@@ -271,9 +271,9 @@ enable_extension_enableonly () {
 enable_extension_without () {
 	if ! useq "$2" ; then
 		my_conf="${my_conf} --without-$1"
-		[ -n "$3" ] && einfo "  Disabling $3"
+		einfo "  Disabling $1"
 	else
-		[ -n "$3" ] && einfo "  Enabling $3"
+		einfo "  Enabling $1"
 	fi
 }
 
@@ -309,10 +309,10 @@ enable_extension_with () {
 
 	if useq $2 ; then
 		my_conf="${my_conf} --with-$1$my_shared"
-		[ -n "$5" ] && einfo "  Enabling $5"
+		einfo "  Enabling $1"
 	else
 		my_conf="${my_conf} --without-$1"
-		[ -n "$5" ] && einfo "  Disabling $5"
+		einfo "  Disabling $1"
 	fi
 }
 
@@ -348,10 +348,10 @@ enable_extension_withonly () {
 
 	if useq $2 ; then
 		my_conf="${my_conf} --with-$1$my_shared"
-		[ -n "$5" ] && einfo "  Enabling $5"
+		einfo "  Enabling $1"
 	else
 		# note - we deliberately do *not* use --without here
-		[ -n "$5" ] && einfo "  Disabling $5"
+		einfo "  Disabling $1"
 	fi
 }
 
