@@ -1,0 +1,79 @@
+--- src/games/strategy/engine/framework/GameRunner.java	2004-10-11 23:21:36.000000000 +0200
++++ src/games/strategy/engine/framework/GameRunner.java	2004-12-17 14:03:11.741188160 +0100
+@@ -142,9 +142,11 @@
+    */
+   public static File getRootFolder()
+   {
+-    //TODO this is a bit hokey, we assume that we are running
+-    //from the bin directory.
+-      return new File("..");
++	  String rootFolder = System.getProperty("triplea.root");
++	  if (rootFolder != null)
++		  return new File(rootFolder);
++	  else
++		  return new File("..");
+   }
+ 
+ 
+--- src/games/strategy/engine/data/GameParser.java	2004-12-17 15:49:52.083188280 +0100
++++ src/games/strategy/engine/data/GameParser.java	2004-12-17 15:49:58.714180216 +0100
+@@ -107,7 +107,7 @@
+     factory.setValidating(true);
+ 
+     //get the dtd location
+-    URL url = GameParser.class.getResource("../xml/");
++    URL url = GameParser.class.getResource("/games/strategy/engine/xml/");
+     String system = url.toExternalForm();
+ 
+     DocumentBuilder builder = factory.newDocumentBuilder();
+--- build.xml	2004-12-17 13:18:51.315634320 +0100
++++ build.xml	2004-12-17 13:25:03.583041072 +0100
+@@ -7,7 +7,9 @@
+ 
+     <path id="full.path">
+         <pathelement path="${junit.jar}"/>
+-        <pathelement path="lib\plastic-1.2.0.jar"/>
++               <fileset dir="lib">
++                       <include name="**/*.jar"/>
++               </fileset>
+         <pathelement path="${classpath}"/>
+         <pathelement path="classes/"/>
+     </path>
+@@ -58,6 +60,26 @@
+     <target name="compileClean" depends="clean,compile" description="Clean then compile"/>
+ 
+ 
++       <!-- jar -->
++       <target name="jar" depends="init,compile" description="create a jar file">
++               <jar destfile="triplea.jar">
++                      <fileset dir=".">
++                               <include name="triplea.properties"/>
++                       </fileset>
++                       <fileset dir="classes/">
++                               <include name="**/*.class"/>
++                               <exclude name="**/*Test.class"/>  <!-- dont put Test classes in the main distribution -->
++                               <include name="**/*.dtd"/>
++                               <include name="**/*.gif"/>
++                               <include name="**/*.png"/>
++                               <include name="**/*.txt"/>
++                               <include name="**/*.wav"/>
++                       </fileset>
++
++               </jar>
++       </target>
++
++
+     <!-- zip -->
+     <target name="zip" depends="init,compile" description="create a zip file for end users">
+         <mkdir dir="release" />
+--- src/games/strategy/triplea/ui/TerritoryData.java	2004-12-17 16:04:50.570597432 +0100
++++ src/games/strategy/triplea/ui/TerritoryData.java	2004-12-17 16:05:14.404974056 +0100
+@@ -84,7 +84,7 @@
+     {
+         try
+ 	{
+-	    String prefix = "../image/images/maps/"+mapDir+"/";
++	    String prefix = "/games/strategy/triplea/image/images/maps/"+mapDir+"/";
+ 
+ 	    m_place   = PointFileReaderWriter.readOneToMany(this.getClass().getResourceAsStream(prefix+PLACEMENT_FILE));
+ 	    m_polys   = PointFileReaderWriter.readOneToManyPolygons(this.getClass().getResourceAsStream(prefix+POLYGON_FILE));
