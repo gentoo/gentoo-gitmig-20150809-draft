@@ -1,5 +1,8 @@
+# Security fix (reported by M0rpheus)
+<=net-mail/exim-3.33
+
 #previous versions had a security hole (bug #212)
-<=net/misc/stunnel-3.22
+<=net-misc/stunnel-3.22
 
 #we no longer use sysvinit (rolled into baselayout)
 sys-apps/sysvinit
@@ -252,7 +255,7 @@ gnome-apps/gnapster
 # a lot of unresolved libs), and will have to restart gnome first to test ;-)
 # Then there is the devel-doc issue .. I will have to talk to Hallski about it
 # ...
->=gnome-base/gnome-libs-1.4.1.3
+#>=gnome-base/gnome-libs-1.4.1.3
 
 # Moved, use from app-text instead:
 app-doc/gmanedit
