@@ -1,20 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.8.0.ebuild,v 1.1 2004/03/26 19:39:13 usata Exp $
-
-# TODO:	add GTK+ 2 patch
-#	stop 'main.c:333: main: get_command failed' warning when
-#	loading bookmark
+# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/dillo-0.8.0-r2.ebuild,v 1.1 2004/04/25 12:53:27 usata Exp $
 
 inherit flag-o-matic eutils
 
-S2=${WORKDIR}/dillo-gentoo-extras-patch3
-DILLO_I18N_P="${P}-i18n-misc-20040313"
+S2=${WORKDIR}/dillo-gentoo-extras-patch4
+DILLO_I18N_P="${P}-i18n-misc-20040329"
 
 DESCRIPTION="Lean GTK+-based web browser"
 HOMEPAGE="http://www.dillo.org/"
 SRC_URI="http://www.dillo.org/download/${P}.tar.bz2
-	mirror://gentoo/dillo-gentoo-extras-patch3.tar.bz2
+	mirror://gentoo/dillo-gentoo-extras-patch4.tar.bz2
 	http://teki.jpn.ph/pc/software/${DILLO_I18N_P}.diff.bz2"
 
 LICENSE="GPL-2"
@@ -32,7 +28,6 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ../${DILLO_I18N_P}.diff
-	epatch ${FILESDIR}/${DILLO_I18N_P%-*}-gentoo.diff
 
 	if [ "${DILLO_ICONSET}" = "kde" ]
 	then
@@ -46,6 +41,10 @@ src_unpack() {
 	then
 		einfo "Using Netscape style icon set"
 		cp ${S2}/pixmaps.netscape.h ${S}/src/pixmaps.h
+	elif [ "${DILLO_ICONSET}" = "cobalt" ]
+	then
+		einfo "Using Cobalt style icon set"
+		cp ${S2}/pixmaps.cobalt.h ${S}/src/pixmaps.h
 	elif [ "${DILLO_ICONSET}" = "bold" ]
 	then
 		einfo "Using bold style icon set"
@@ -54,6 +53,10 @@ src_unpack() {
 	then
 		einfo "Using transparent style icon set"
 		cp ${S2}/pixmaps.trans.h ${S}/src/pixmaps.h
+	elif [ "${DILLO_ICONSET}" = "trad" ]
+	then
+		einfo "Using the traditional icon set"
+		cp ${S2}/pixmaps.trad.h ${S}/src/pixmaps.h
 	else
 		einfo "Using default Dillo icon set"
 	fi
@@ -97,11 +100,17 @@ pkg_postinst() {
 	einfo "If you prefer ximian gnome style icons then try"
 	einfo "	DILLO_ICONSET=\"gnome\" emerge dillo"
 	einfo
+	einfo "If you prefer cobalt style icons then try"
+	einfo "	DILLO_ICONSET=\"cobalt\" emerge dillo"
+	einfo
 	einfo "If you prefer bold style icons then try"
 	einfo "	DILLO_ICONSET=\"bold\" emerge dillo"
 	einfo
 	einfo "If you prefer transparent style icons then try"
 	einfo "	DILLO_ICONSET=\"trans\" emerge dillo"
+	einfo
+	einfo "If you prefer the traditional icons then try"
+	einfo "	DILLO_ICONSET=\"trad\" emerge dillo"
 	einfo
 	einfo "If the DILLO_ICONSET variable is not set, you will get the"
 	einfo "default iconset"
