@@ -1,6 +1,6 @@
 # ChangeLog for app-dicts/babytrans-en2pt
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en2pt/Changelog,v 1.1 2004/09/10 05:42:52 angusyoung Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/babytrans-en2pt/ChangeLog,v 1.1 2004/09/11 05:50:53 angusyoung Exp $
 
   10 Oct 2004; Otavio Piske <angusyoung@gentoo.org> babytrans-en2pt-0.1.ebuild :
   Initial release (bug #26155)
