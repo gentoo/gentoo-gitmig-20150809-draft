@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 871dde11933c9a2ae1c94d203daac61d ChangeLog 634
+MD5 c76c34ce99cac114413f4e50b91d9c79 ChangeLog 409
 MD5 a6b87455345059b8524871b4023efe74 metadata.xml 391
-MD5 e2f3534a3b4399f62b832e07aa1abbbb selinux-snort-20040412.ebuild 382
-MD5 a9e1d9ae3aa93355788b13cdad297918 files/digest-selinux-snort-20040412 72
+MD5 4d7e7bdf7451151e49199ef4cb08cc26 selinux-snort-20041028.ebuild 381
+MD5 1ecd9206d089e822fff5f8b4a17d865f files/digest-selinux-snort-20041028 72
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBTjjvGFJQsIJWJy4RAlbbAJ9tNld/9CfQc9CQ1m+zUtW8gGOqcwCeNQTd
-PjBzeSxhGTIxa0N7eO9kX6A=
-=7Lfq
+iD8DBQFBljuEGSBEIeh4AEYRAlevAJ9LAfyiX5S7oZyrhaCBKdw8fBKaqgCgjSQN
+Bn3yZ4oPLusbPSylY9DueEA=
+=I1CM
 -----END PGP SIGNATURE-----
