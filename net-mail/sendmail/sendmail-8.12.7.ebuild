@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/sendmail-8.12.7.ebuild,v 1.2 2003/01/20 00:23:16 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/sendmail-8.12.7.ebuild,v 1.3 2003/01/20 01:59:24 raker Exp $
 
 IUSE="ssl ldap sasl berkdb tcpd gdbm"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.sendmail.org"
 
 LICENSE="Sendmail"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc "
+KEYWORDS="x86 ~ppc ~sparc "
 
 PROVIDE="virtual/mta"
 DEPEND="net-dns/hesiod
@@ -42,18 +42,6 @@ RDEPEND="${DEPEND}
 SRC_URI="ftp://ftp.sendmail.org/pub/${PN}/${PN}.${PV}.tar.gz"
 
 S=${WORKDIR}/${P}
-
-pkg_preinst() {
-	if ! grep -q ^smmsp: /etc/group
-	then
-		groupadd smmsp || die "problem adding group smmsp"
-	fi
-	if ! grep -q ^smmsp: /etc/passwd
-	then
-		useradd -d /var/spool/mqueue -g smmsp -s /dev/null smmsp \
-			|| die "problem adding user smmsp"
-	fi
-}
 
 src_unpack() {
 	unpack ${A}
