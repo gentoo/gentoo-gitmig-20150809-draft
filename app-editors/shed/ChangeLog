@@ -1,0 +1,11 @@
+# ChangeLog for app-editors/shed
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/shed/ChangeLog,v 1.1 2004/02/17 16:31:34 hattya Exp $
+
+*shed-1.10 (18 Feb 2004)
+
+  18 Feb 2004; Akinori Hattori <hattya@gentoo.org> metadata.xml,
+  shed-1.10.ebuild:
+  Initial revision. Ebuild submitted by Sven Wegener <sven.wegener@stealer.net>
+  in bug #41629.
+
