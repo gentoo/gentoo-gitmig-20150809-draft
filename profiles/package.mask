@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# J. Alberto Suárez L. <bass@gentoo.org> (31 Jul 2002)
+# Beta version of firestarter for Gnome2
+=net-misc/firestarter-0.9.0
+
 # Stuart Bouyer <stubear@gentoo.org> (1 Aug 2002)
 # initial ebuild masked for testing
 =app-i18n/xcin-2.5.2.3
@@ -33,7 +37,7 @@
 =media-libs/xine-lib-0.9.12-r2
 
 # Seemant Kulleen <seemant@gentoo.org> (31 Jul 2002)
-# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1140 2002/07/31 17:42:56 stubear Exp $
+# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1141 2002/07/31 18:11:41 bass Exp $
 # repoman had a field day
 sys-apps/discover
 sys-apps/discover-data
