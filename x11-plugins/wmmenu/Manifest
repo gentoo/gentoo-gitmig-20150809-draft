@@ -1,5 +1,5 @@
-MD5 0d24eff5f4af23d9a670b64b6290472e wmmenu-1.2.ebuild 1049
-MD5 a1c0fb78cf3c3e1e87b41585a77930c5 ChangeLog 362
+MD5 2304bcfd2eb2cc1579d35ff2901c7c13 wmmenu-1.2.ebuild 1048
+MD5 438c3e36a903f943e13b226b01928741 ChangeLog 474
 MD5 62ba71d3b2fa785a4cbd5d47fdbd0eb6 metadata.xml 165
 MD5 5477a4c7105bb065b867046de221b6f4 files/wmmenu-1.2-Makefile.patch 918
 MD5 75ce08b9efb5328f48a500ee9adc66e2 files/wmmenu-1.2-support-libdockapp-0.5.0.patch 506
