@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.6.6.ebuild,v 1.1 2004/06/05 07:58:55 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.6.6.ebuild,v 1.2 2004/06/07 04:39:28 kumba Exp $
 
 ETYPE="headers"
 inherit kernel eutils
@@ -52,6 +52,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.6.3-strict-ansi-fix.patch
 	epatch ${FILESDIR}/${PN}-2.6.0-sysctl_h-compat.patch
 	epatch ${FILESDIR}/${PN}-2.6.0-fb.patch
+
+	epatch ${FILESDIR}/${PN}-2.6.6-spaces_h-kernel.patch
 }
 
 src_compile() {

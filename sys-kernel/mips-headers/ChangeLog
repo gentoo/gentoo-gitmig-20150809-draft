@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/mips-headers
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/ChangeLog,v 1.18 2004/06/05 07:58:55 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/ChangeLog,v 1.19 2004/06/07 04:39:28 kumba Exp $
+
+  07 Jun 2004; Joshua Kinard <kumba@gentoo.org>
+  +files/mips-headers-2.6.6-spaces_h-kernel.patch, mips-headers-2.6.6.ebuild:
+  Added a patch from iluxa that moves an include of asm/spaces.h in asm/pages.h
+  into kernel space so userland programs don't get messed up.
 
 *mips-headers-2.6.6 (05 Jun 2004)
 
