@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.0.2.ebuild,v 1.1 2005/02/28 18:06:49 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-1.0.2.ebuild,v 1.2 2005/03/02 06:49:10 mrness Exp $
 
 inherit eutils
 
@@ -29,6 +29,8 @@ DEPEND="virtual/libc
 src_unpack() {
 	unpack ${P}.tar.gz
 	cd ${S}
+
+	epatch ${FILESDIR}/${P}-whole-archive-gentoo.patch
 
 	export WANT_AUTOCONF=2.1
 	autoconf
