@@ -1,10 +1,15 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.79 2004/11/29 19:04:06 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.80 2004/12/03 11:17:22 zypher Exp $
 
 *transcode-0.6.14 (15 Nov 2004)
 
-  29 Nov 2004; Marc Hildebrand <zypher@gentoo.org> transcode-0.6.13.ebuild:
+  03 Dec 2004; Marc Hildebrand <zypher@gentoo.org> transcode-0.6.14.ebuild:
+  Added -momit-leaf-frame-pointer to the list of filtered flags.
+  Removed mmx USE-flag. Apparently it won't compile without mmx.
+  Should satisfy bugs #72876, #72923 and #72121.
+   
+  29 Nov 2004; Marc Hildebrand <zypher@gentoo.org> transcode-0.6.14.ebuild:
   Version bump. Added new local USE-flags a52, dv, dvdread, freetype, lzo,
   mjpeg, network and v4l. Should fix bugs #69108, #72044, #72140 and 72633.
 

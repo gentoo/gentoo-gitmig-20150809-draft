@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.14.ebuild,v 1.1 2004/11/29 19:04:06 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.14.ebuild,v 1.2 2004/12/03 11:17:22 zypher Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -16,7 +16,9 @@ SRC_URI="http://www.jakemsr.com/transcode/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE="X 3dnow a52 avi altivec divx4linux dv dvdread encode fame freetype gtk imagemagick jpeg lzo mjpeg mmx mpeg network oggvorbis pvm quicktime sdl sse theora v4l xvid xml2"
+IUSE="X 3dnow a52 avi altivec divx4linux dv dvdread encode fame freetype \
+	gtk imagemagick jpeg lzo mjpeg mpeg network oggvorbis pvm quicktime \
+	sdl sse theora v4l xvid xml2"
 
 DEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 	=sys-devel/gcc-3*
@@ -47,7 +49,7 @@ DEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 	pvm? ( >=sys-cluster/pvm-3.4 )"
 
 src_compile() {
-	filter-flags -maltivec -mabi=altivec
+	filter-flags "-maltivec -mabi=altivec -momit-leaf-frame-pointer"
 	use ppc && append-flags -U__ALTIVEC__
 	# fix invalid paths in .la files of plugins
 	elibtoolize
@@ -79,7 +81,6 @@ src_compile() {
 		$(use_enable jpeg libjpeg) \
 		$(use_enable lzo) \
 		$(use_enable mjpeg mjpegtools) \
-		$(use_enable mmx) \
 		$(use_enable mpeg libmpeg3) \
 		$(use_enable network netstream) \
 		$(use_enable oggvorbis ogg) \
