@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/squirm/squirm-1.23.ebuild,v 1.1 2004/08/15 19:07:10 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/squirm/squirm-1.23.ebuild,v 1.2 2004/08/15 23:41:27 cyfred Exp $
 
 DESCRIPTION="A redirector for Squid"
 HOMEPAGE="http://squirm.foote.com.au"
@@ -11,7 +11,7 @@ KEYWORDS="x86"
 IUSE=""
 
 DEPEND=""
-RDEPEND="net-www/squid"
+RDEPEND="www-proxy/squid"
 
 S="${WORKDIR}/${P}"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/squidguard/squidguard-1.2.0-r1.ebuild,v 1.1 2004/08/15 19:04:44 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/squidguard/squidguard-1.2.0-r1.ebuild,v 1.2 2004/08/15 23:40:11 cyfred Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-RDEPEND="net-www/squid
+RDEPEND="www-proxy/squid
 	>=sys-libs/db-2"
 DEPEND="${RDEPEND}
 	sys-devel/bison
