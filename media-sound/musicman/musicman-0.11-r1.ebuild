@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musicman/musicman-0.11-r1.ebuild,v 1.1 2004/07/07 22:55:31 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musicman/musicman-0.11-r1.ebuild,v 1.2 2004/07/17 09:48:21 dholm Exp $
 
 inherit eutils kde
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/musicman/${P}.tar.gz"
 
 LICENSE="GPL-1"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE=""
 
 DEPEND=">=kde-base/kdebase-3.2.1 \
