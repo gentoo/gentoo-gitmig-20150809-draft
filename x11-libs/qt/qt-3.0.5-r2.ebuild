@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.5-r2.ebuild,v 1.16 2004/06/24 22:07:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.5-r2.ebuild,v 1.17 2004/06/28 19:20:40 agriffis Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-free-${PV}.tar.gz"
 LICENSE="QPL-1.0 | GPL-2"
 SLOT="3"
 KEYWORDS="x86 ppc sparc ia64 alpha"
-IUSE="nas nls postgres opengl mysql odbc gif"
+IUSE="debug gif mysql nas nls odbc opengl postgres"
 
 DEPEND="virtual/x11
 	media-libs/libpng

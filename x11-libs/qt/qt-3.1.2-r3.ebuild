@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.2-r3.ebuild,v 1.15 2004/06/24 22:07:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.2-r3.ebuild,v 1.16 2004/06/28 19:20:40 agriffis Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ LICENSE="QPL-1.0 | GPL-2"
 SLOT="3"
 # WARNING: do not give this ebuild keywords that >=kdelibs-3.1.1, >=kdebase-3.1.1-r1 don't have
 KEYWORDS="x86 ppc sparc alpha amd64 ia64"
-IUSE="cups nas postgres opengl mysql odbc gif debug"
+IUSE="cups debug doc gif mysql nas odbc opengl postgres"
 
 DEPEND="virtual/x11
 	media-libs/libpng
