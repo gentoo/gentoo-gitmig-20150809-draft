@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-cdaudio
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-cdaudio/ChangeLog,v 1.1 2005/02/12 02:26:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-cdaudio/ChangeLog,v 1.2 2005/02/13 20:59:01 eradicator Exp $
+
+  13 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-cdaudio-1.2.10-r1.ebuild, xmms-cdaudio-1.2.10.ebuild:
+  Fix bad reference to OSS headerfile.  Closes bug #81864.
 
 *xmms-cdaudio-1.2.10-r1 (11 Feb 2005)
 
