@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/beep-media-player
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.27 2004/11/24 17:15:13 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/ChangeLog,v 1.28 2004/12/03 17:48:49 slarti Exp $
+
+  03 Dec 2004; Tom Martin <slarti@gentoo.org>
+  beep-media-player-0.9.7_rc2-r3.ebuild:
+  Stable on amd64, resolves bug 73213.
 
   24 Nov 2004; Stephen P. Becker <geoman@gentoo.org>
   beep-media-player-0.9.7_rc2-r3.ebuild:
