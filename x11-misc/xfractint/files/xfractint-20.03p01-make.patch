@@ -1,0 +1,17 @@
+diff -Naur xfractint-20.03p01-orig/Makefile xfractint-20.03p01/Makefile
+--- xfractint-20.03p01-orig/Makefile	2004-02-08 15:24:31.000000000 +0100
++++ xfractint-20.03p01/Makefile	2004-04-25 16:05:41.501995544 +0200
+@@ -224,8 +224,11 @@
+ 	cp xfractint $(BINDIR)/xfractint
+ 	strip $(BINDIR)/xfractint
+ 	chmod a+x $(BINDIR)/xfractint
+-	cp fractint.hlp $(PARFILES) $(FRMFILES) $(IFSFILES) $(LFILES) ./maps/$(MAPFILES) $(SRCDIR)
+-	(cd $(SRCDIR); chmod a+r fractint.hlp $(PARFILES) $(FRMFILES) $(IFSFILES) $(LFILES) $(MAPFILES) )
++	cp fractint.hlp $(PARFILES) $(FRMFILES) $(IFSFILES) $(LFILES) $(SRCDIR)
++	mkdir $(SRCDIR)/maps
++	(cd maps; cp $(MAPFILES) $(SRCDIR)/maps )	
++	(cd $(SRCDIR); chmod a+r fractint.hlp $(PARFILES) $(FRMFILES) $(IFSFILES) $(LFILES) )
++	(cd $(SRCDIR)/maps; chmod a+r $(MAPFILES) )
+ 	cp xfractint.man $(MANDIR)/xfractint.1
+ 	chmod a+r $(MANDIR)/xfractint.1
+ 
