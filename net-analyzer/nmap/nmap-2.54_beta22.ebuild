@@ -3,7 +3,7 @@
 # Author Achim Gottinger <achim@gentoo.org>
 # $Heade
 
-P=nmap-2.53
+P=nmap-2.54BETA22
 A=${P}.tgz
 S=${WORKDIR}/${P}
 DESCRIPTION="Portscanner"
@@ -12,25 +12,14 @@ HOMEPAGE="http://www.insecure.org/nmap/"
 
 DEPEND=">=x11-libs/gtk+-1.2.8"
 
-src_unpack() {
-  unpack ${A}
-  if [ -n "`use glibc22`" ]
-  then
-	cd ${S}
-	cp ${FILESDIR}/tcpip.h ${S}/tcpip.h
-	cp ${FILESDIR}/nmap.h ${S}/nmap.h
-  fi
-}
 src_compile() {                           
-  cd ${S}
-  try ./configure --host=${CHOST} --prefix=/opt/gnome
+  try ./configure --host=${CHOST} --prefix=/usr --mandir=/usr/share/man
   try make
 }
 
 src_install() {                               
-  cd ${S}
-  try make prefix=${D}/opt/gnome install
-  prepman /opt/gnome
+
+  try make prefix=${D}/usr mandir=${D}/usr/share/man install
 
   dodoc CHANGELOG COPYING README
   cd docs
