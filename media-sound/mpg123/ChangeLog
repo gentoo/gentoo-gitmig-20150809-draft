@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/mpg123
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.14 2003/07/18 21:43:37 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/ChangeLog,v 1.15 2003/07/19 02:44:31 jje Exp $
+
+*mpg123-0.59s (19 Jul 2003)
+
+  19 Jul 2003; jje <jje@gentoo.org> mpg123-0.59s.ebuild:
+  Last development version. Adds support for id3_v2 tags. I'm a little nervous 
+  about adding this as it doesn't look like it is still being worked on 
+  upstream. If it proves to be stable it may be what we live with.
+  
+  Submitted by: Turambar <pete@SiliconMetrics.com>
 
   18 Jul 2003; Olivier Crete <tester@gentoo.org> mpg123-0.59r-r2.ebuild,
   files/mpg123-0.59r-amd64.diff:
