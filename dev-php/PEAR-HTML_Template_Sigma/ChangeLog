@@ -1,0 +1,10 @@
+# ChangeLog for dev-php/PEAR-HTML_Template_Flexy
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-HTML_Template_Sigma/ChangeLog,v 1.1 2003/05/07 20:51:26 method Exp $
+
+*PEAR-HTML_Template_Sigma-1.0 (07 May 2003)
+
+  07 May 2003; Joshua Brindle <method@gentoo.org>
+  PEAR-HTML_Template_Sigma-1.0.ebuild:
+  Initial import
+
