@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <mkennedy@gentoo.org> (12 Jan 2004)
+# rolled into dev-lisp/sbcl w/ a threads USE flag
+dev-lisp/sbcl-mt
+
 # <lanius@gentoo.org> (11 Jan 2004)
 # force downgrade
 >=x11-libs/openmotif-2.2.2
