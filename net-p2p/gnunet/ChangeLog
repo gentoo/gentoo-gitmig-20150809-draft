@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/gnunet
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.7 2003/03/23 10:06:58 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.8 2003/06/16 23:16:34 spider Exp $
+
+*gnunet-0.5.4 (17 Jun 2003)
+
+  17 Jun 2003; <spider@gentoo.org> gnunet-0.5.4.ebuild:
+  Update, added ipv6 support. added default config.
 
 *gnunet-0.5.2a (23 mar 2003)
 
