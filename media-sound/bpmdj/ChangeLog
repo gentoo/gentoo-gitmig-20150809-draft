@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/bpmdj
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/bpmdj/ChangeLog,v 1.15 2004/09/03 09:50:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bpmdj/ChangeLog,v 1.16 2004/10/20 04:00:05 eradicator Exp $
+
+*bpmdj-2.6 (19 Oct 2004)
+
+  19 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  -files/fabsl-1.7.patch, -files/fabsl-1.8.patch, -files/gcc.patch,
+  -files/makefile, -bpmdj-1.6.ebuild, -bpmdj-2.0.1.ebuild,
+  -bpmdj-2.3.ebuild, -bpmdj-2.4.ebuild, +bpmdj-2.6.ebuild:
+  Version bump closes bug #67539.  Removing old versions.
 
   03 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> bpmdj-2.5.ebuild:
   Stable x86.
