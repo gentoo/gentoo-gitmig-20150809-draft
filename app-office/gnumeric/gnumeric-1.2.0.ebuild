@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.2.0.ebuild,v 1.1 2003/09/17 20:19:32 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.2.0.ebuild,v 1.2 2003/09/21 17:33:54 foser Exp $
 
 #provide Xmake and Xemake
 inherit virtualx libtool gnome2 eutils debug
@@ -47,6 +47,8 @@ src_unpack() {
 	cd ${S}
 	# fixes a sandbox issue - foser <foser@gentoo.org>
 	epatch ${FILESDIR}/${P}-fix_doc_destdir_install.patch
+	# fixes gcc2 compile failure (#29181)
+	epatch ${FILESDIR}/${P}-gcc2_fix.patch
 
 }
 

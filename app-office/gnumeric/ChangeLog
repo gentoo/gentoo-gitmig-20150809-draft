@@ -1,8 +1,12 @@
 # ChangeLog for app-office/gnumeric
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.39 2003/09/17 20:19:32 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/ChangeLog,v 1.40 2003/09/21 17:33:54 foser Exp $
 
 *gnumeric-1.2.0 (17 Sep 2003)
+
+  21 Sep 2003; foser <foser@gentoo.org> gnumeric-1.2.0.ebuild :
+  Added patch to fix gcc2 compilation, provided by 
+  Tristan Henderson <T.Henderson@cs.ucl.ac.uk> (#29181)
 
   17 Sep 2003; Alastair Tse <liquidx@gentoo.org> gnumeric-1.2.0.ebuild,
   files/gnumeric-1.2.0-fix_doc_destdir_install.patch:
