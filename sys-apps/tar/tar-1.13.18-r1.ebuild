@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tar/tar-1.13.18.ebuild,v 1.3 2000/12/24 09:55:16 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tar/tar-1.13.18-r1.ebuild,v 1.1 2001/01/01 21:58:26 drobbins Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -21,6 +21,11 @@ src_install() {
 	dodir /bin
 	mv ${D}/usr/bin/tar ${D}/bin/tar
 	dodoc AUTHORS ChangeLog* COPYING NEWS README* PORTS THANKS
+
+	#we're using Schilly's enhanced rmt command included with star
+	rm -rf ${D}/usr/libexec/misc
+	rm -rf ${D}/usr/libexec
+	
 }
 
 
