@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.24-r2.ebuild,v 1.3 2004/08/09 13:17:31 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.24-r4.ebuild,v 1.1 2004/08/10 07:10:34 voxus Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -28,7 +28,7 @@ PROVIDE="virtual/linux-sources"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/ http://www.openmosix.org/"
 LICENSE="GPL-2"
 SLOT="${KV}"
-KEYWORDS="-* x86"
+KEYWORDS="-* ~x86"
 IUSE=""
 
 src_unpack() {
@@ -48,6 +48,8 @@ src_unpack() {
 	epatch ${FILESDIR}/openmosix-sources.CAN-2004-0495.patch || die "Security patch failed"
 	epatch ${FILESDIR}/openmosix-sources.CAN-2004-0497.patch || die "Security patch failed"
 	epatch ${FILESDIR}/openmosix-sources.CAN-2004-0535.patch || die "Security patch failed"
+	epatch ${FILESDIR}/openmosix-sources.CAN-2004-0685.patch || die "Security patch failed"
+	epatch ${FILESDIR}/cmdline-proc-fix.patch || die "Security patch failed"
 
 	epatch ${DISTDIR}/linux-2.4.23-CAN-2004-0415.patch || die "Failed to add CAN-2004-0415"
 
