@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hs-plugins/hs-plugins-0.9.6.ebuild,v 1.2 2004/10/20 23:15:01 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hs-plugins/hs-plugins-0.9.6.ebuild,v 1.3 2004/12/17 12:08:04 kosmikus Exp $
 
 inherit base
 
-IUSE=""
+IUSE="doc"
 
 DESCRIPTION="Dynamically Loaded Haskell Plugins"
 HOMEPAGE="http://www.cse.unsw.edu.au/~dons/hs-plugins/"
