@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/audacity
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.14 2003/07/19 19:39:02 raker Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/audacity/ChangeLog,v 1.15 2004/02/07 10:26:03 eradicator Exp $
+
+*audacity-1.2.0_pre3 (07 Feb 2004)
+
+  07 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  audacity-1.1.3.ebuild, audacity-1.2.0_pre3.ebuild, metadata.xml,
+  files/basecfg-1.1.1:
+  Version bump (Bug #35658). Fixed fftw DEP (Bug #34010). Updated ebuild to
+  correctly use USE flags. Now die only if wxGTK was compiled with unicode
+  support (Bug #32753).
 
   19 Jul 2003; Nick Hadaway <raker@gentoo.org>:
   Reverted to previous version
