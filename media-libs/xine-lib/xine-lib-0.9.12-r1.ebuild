@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.12-r1.ebuild,v 1.2 2002/07/20 04:12:05 seemant Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.12-r1.ebuild,v 1.3 2002/07/22 09:47:38 aliz Exp $ 
 
 inherit libtool
 
@@ -13,7 +13,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 
-DEPEND="media-libs/libvorbis
+DEPEND="oggvorbis? ( media-libs/libvorbis )
 	X? ( virtual/x11 )
 	avi? ( >=media-libs/win32codecs-0.50 
 	       media-libs/divx4linux )
@@ -69,8 +69,9 @@ src_compile() {
 	# the next release until then let it autodetect.  See bug #2377.
 	# use aalib  || myconf="${myconf} --disable-aalib --disable-aalibtest"
 
-	# In this release, oggvorbis is required, not optional.  upstream needs
-	# to start getting consistent.
+	# Configure script is broken, even if you pass the flags below it still assumes
+	# ogg is installed and tries to compile it, giving you bug #5244. But leaving
+	# ogg for autodetection works.
 	#use oggvorbis \
 	#	|| myconf="${myconf} \
 	#		 --disable-ogg \
