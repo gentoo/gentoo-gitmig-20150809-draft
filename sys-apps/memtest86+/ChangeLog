@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/memtest86+
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.4 2004/02/17 23:39:56 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.5 2004/02/26 10:58:07 spock Exp $
+
+*memtest86+-1.11 (26 Feb 2004)
+
+  26 Feb 2004; Michal Januszewski <spock@gentoo.org> memtest86+-1.11.ebuild:
+  Version bump, closes bug #42023. Thanks to Frank Dörfler and James Slater for
+  their work on the updated ebuild.
 
   18 Feb 2004; Michal Januszewski <spock@gentoo.org> memtest86+-1.0.ebuild:
   Moved to stable on x86.

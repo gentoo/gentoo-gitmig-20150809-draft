@@ -1,4 +1,6 @@
 MD5 76716e612b9b7491413bce1ca5910dee memtest86+-1.0.ebuild 1978
-MD5 35f9c31331a93a778c75b6bf21f80065 ChangeLog 790
+MD5 ca9cfe67ec79c9a7f137e983b4aa840e memtest86+-1.11.ebuild 2004
+MD5 de33c0f49990131f6f369a7217723ae1 ChangeLog 1016
 MD5 d94d306da3804e41296e1bf04c7c9cae metadata.xml 255
 MD5 0782c1c3a12f88f4b728016925d26bd3 files/digest-memtest86+-1.0 72
+MD5 f128d61e79967e3bc5f9f9beb73a4a23 files/digest-memtest86+-1.11 72
