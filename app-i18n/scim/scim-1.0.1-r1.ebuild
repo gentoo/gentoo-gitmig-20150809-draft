@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.0.0-r2.ebuild,v 1.3 2004/10/06 07:35:28 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim/scim-1.0.1-r1.ebuild,v 1.1 2004/11/14 05:44:22 usata Exp $
 
 inherit gnome2 eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://freedesktop.org/~suzhe/sources/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 alpha ppc ~amd64"
+KEYWORDS="~x86 ~alpha ~ppc ~amd64"
 IUSE="gnome gtk immqt immqt-bc"
 
 GTK_DEPEND=">=x11-libs/gtk+-2
@@ -43,6 +43,14 @@ has_gtk() {
 		true
 	else
 		false
+	fi
+}
+
+get_gtk_confdir() {
+	if useq amd64 || ( [ "${CONF_LIBDIR}" == "lib32" ] && useq x86 ) ; then
+		echo "/etc/gtk-2.0/${CHOST}"
+	else
+		echo "/etc/gtk-2.0"
 	fi
 }
 
@@ -99,10 +107,10 @@ pkg_postinst() {
 	einfo "	# emerge app-i18n/scim-m17n"
 	einfo
 
-	has_gtk && gtk-query-immodules-2.0 > ${ROOT}etc/gtk-2.0/gtk.immodules
+	has_gtk && gtk-query-immodules-2.0 > ${ROOT}$(get_gtk_confdir)/gtk.immodules
 }
 
 pkg_postrm() {
 
-	has_gtk && gtk-query-immodules-2.0 > ${ROOT}etc/gtk-2.0/gtk.immodules
+	has_gtk && gtk-query-immodules-2.0 > ${ROOT}$(get_gtk_confdir)/gtk.immodules
 }
