@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 68282fc301d5c63eb88d494c31f8e0cd kooka-3.4.0.ebuild 566
-MD5 cd3e38787d3b41f1c47b14274b65774a kooka-3.4.0_rc1.ebuild 564
-MD5 59c7dd4e03f049a67454e0793b012bd7 ChangeLog 1203
+MD5 e1919aa498e537b077243cf0f4cf659f ChangeLog 1293
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
+MD5 cd3e38787d3b41f1c47b14274b65774a kooka-3.4.0_rc1.ebuild 564
+MD5 49e20903a35f520bc93eb5e236eaaa79 kooka-3.4.0.ebuild 572
 MD5 4ac1ee7d57d8c40f18fe0d54cf80c8f5 files/digest-kooka-3.4.0_rc1 393
 MD5 e48f24f251a08d557aee3f0d60feb26d files/digest-kooka-3.4.0 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCOwEhUpKYMelfdYERAqdBAJ0QBazaozd8pstJLKYGEdXBiL+dAQCfc/yZ
-Mf+SoWZqn3VlePwb93sc6+o=
-=ATKI
------END PGP SIGNATURE-----
