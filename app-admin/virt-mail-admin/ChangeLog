@@ -1,0 +1,7 @@
+# ChangeLog for app-admin/virt-mail-admin
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/virt-mail-admin/ChangeLog,v 1.1 2004/04/09 22:19:45 klasikahl Exp $
+
+  09 Apr 2004; Zack Gilburd,,6023175429, <zack@gentoo.org> :
+  Initial import... Some stuff may be broken, so I'm hardmasking.
+
