@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/koctave/koctave-0.65.ebuild,v 1.1 2004/03/24 17:30:49 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/koctave/koctave-0.65.ebuild,v 1.2 2004/03/24 22:32:44 dholm Exp $
 
 inherit kde
 need-kde 3
@@ -13,7 +13,7 @@ SRC_URI="http://bubben.homelinux.net/~matti/koctave/${PN}3-0.65.tar.bz2"
 S=${WORKDIR}/${PN}3-${PV}
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="x86 ~amd64 ~ppc"
 
 DEPEND="virtual/glibc
 	app-sci/octave
