@@ -1,0 +1,280 @@
+--- svgalib-1.4.3.orig/src/Makefile	Tue May 29 07:36:53 2001
++++ svgalib-1.4.3/src/Makefile	Thu Jun 28 10:25:30 2001
+@@ -14,7 +14,7 @@
+ # Compiler Section (overrides Makefile.cfg)
+ #----------------------------------------------------------------------
+ 
+-INCLUDES += -I$(srcdir)/src
++INCLUDES += -I$(srcdir)/src -I$(srcdir)/src/config
+ 
+ #----------------------------------------------------------------------
+ # Rules Section
+--- svgalib-1.4.3.orig/utils/Makefile	Wed Jul 21 09:41:18 1999
++++ svgalib-1.4.3/utils/Makefile	Thu Jun 28 10:25:30 2001
+@@ -13,10 +13,11 @@
+ # Compiler Section (overrides Makefile.cfg)
+ #----------------------------------------------------------------------
+ 
+-CFLAGS = $(WARN) $(OPTIMIZE) -I../include
++INCLUDES=-I../include
++CFLAGS = $(WARN) $(OPTIMIZE) $(INCLUDES)
+ #Use the next one for the Alpha/AXP if you need it
+ #LDFLAGS = -L../staticlib 
+-LIBS = -lvga -lm
++LIBS = -L$(srcdir)/sharedlib -lvga -lm
+ 
+ #----------------------------------------------------------------------
+ # Rules Section
+@@ -56,7 +57,7 @@
+ 	$(INSTALLPROG) $(UTILPROGS) $(UTILINSTALLDIR)
+ 
+ .depend:
+-	gcc -MM $(patsubst %.o,$(srcdir)/utils/%.c,$(OBJECTS)) >.depend
++	gcc $(INCLUDES) -MM $(patsubst %.o,$(srcdir)/utils/%.c,$(OBJECTS)) >.depend
+ 
+ #
+ # include a dependency file if one exists
+--- svgalib-1.4.3.orig/Makefile	Wed Apr 18 10:35:51 2001
++++ svgalib-1.4.3/Makefile	Thu Jun 28 10:25:12 2001
+@@ -134,11 +134,11 @@
+ 		chmod a+r $(libdir)/$$foo; \
+ 	done
+ endif
+-	@if [ -f /usr/lib/libvga.sa ]; then \
+-		rm -f /usr/lib/libvga.sa /usr/lib/libvgagl.sa; \
+-		echo Old stubs in /usr/lib removed.; \
+-	fi
+-	@rm -f $(OBSOLETESHAREDIMAGES)
++#	@if [ -f /usr/lib/libvga.sa ]; then \
++#		rm -f /usr/lib/libvga.sa /usr/lib/libvgagl.sa; \
++#		echo Old stubs in /usr/lib removed.; \
++#	fi
++#	@rm -f $(OBSOLETESHAREDIMAGES)
+ ifndef KEEPSHAREDLIBS
+ 	@echo "Removing shared library images (old & current)..."
+ 	@for i in $(OBSOLETELDIRS); do \
+@@ -153,7 +153,7 @@
+ 		(cd $(sharedlibdir); \
+ 		 ln -sf $$foo `echo $$foo | sed 's/\.so\..*/.so/'` ); \
+ 	done
+-	@ldconfig
++#	@ldconfig
+ 
+ ifdef INSTALLAOUTDIR
+ 
+@@ -180,10 +180,10 @@
+ 
+ installstaticlib: static
+ 	@echo Installing static libraries in $(libdir).
+-	@rm -f /usr/lib/libvga.a
++#	@rm -f /usr/lib/libvga.a
+ 	@$(INSTALL_DATA) staticlib/libvga.a $(libdir)/libvga.a
+ 	@chmod a+r $(libdir)/libvga.a
+-	@rm -f /usr/lib/libvgagl.a
++#	@rm -f /usr/lib/libvgagl.a
+ 	@$(INSTALL_DATA) staticlib/libvgagl.a $(libdir)/libvgagl.a
+ 	@chmod a+r $(libdir)/libvgagl.a
+ 
+@@ -192,14 +192,14 @@
+ 		echo No $(bindir) directory, creating it.; \
+ 		mkdir $(bindir); \
+ 	fi
+-	@if [ -f /usr/bin/restorefont ]; then \
+-		echo Removing old utilities in /usr/bin.; \
+-		for x in $(UTILS); do rm -f /usr/bin/$$x; done; \
+-	fi
+-	@if [ -f /usr/bin/convfont ]; then \
+-		echo Removing inappropriate utilities in /usr/bin.; \
+-		rm -f /usr/bin/convfont /usr/bin/setmclk; \
+-	fi
++#	@if [ -f /usr/bin/restorefont ]; then \
++#		echo Removing old utilities in /usr/bin.; \
++#		for x in $(UTILS); do rm -f /usr/bin/$$x; done; \
++#	fi
++#	@if [ -f /usr/bin/convfont ]; then \
++#		echo Removing inappropriate utilities in /usr/bin.; \
++#		rm -f /usr/bin/convfont /usr/bin/setmclk; \
++#	fi
+ 	@echo Installing textmode utilities in $(bindir):
+ 	@echo "restorefont:      Save/restore textmode font."
+ 	@cp utils/restorefont $(bindir)
+@@ -225,22 +225,22 @@
+ 		mkdir $(datadir); \
+ 		chmod go-w $(datadir); \
+ 	fi
+-	@if [ \( -f /usr/local/lib/libvga.config -a ! -f $(datadir)/libvga.config \) ]; then \
+-		echo "Moving old config file /usr/local/lib/libvga.config to $(datadir)." ; \
+-		mv -f /usr/local/lib/libvga.config $(datadir)/libvga.config; \
+-	fi
+-	@if [ \( -f /usr/local/lib/libvga.et4000 -a ! -f $(datadir)/libvga.et4000 \) ]; then \
+-		echo "Moving old config file /usr/local/lib/libvga.et4000 to $(datadir)." ; \
+-		mv -f /usr/local/lib/libvga.et4000 $(datadir)/libvga.et4000; \
+-	fi
+-	@if [ \( -f /usr/local/lib/libvga.ega -a ! -f $(datadir)/libvga.ega \) ]; then \
+-		echo "Moving old config file /usr/local/lib/libvga.ega to $(datadir)." ; \
+-		mv -f /usr/local/lib/libvga.ega $(datadir)/libvga.ega; \
+-	fi
+-	@if [ \( -f /etc/mach32.eeprom -a ! -f $(datadir)/mach32.eeprom \) ]; then \
+-		echo Consider moving your /etc/mach32.eeprom file to $(datadir) ; \
+-		echo and changing $(datadir)/libvga.config appropriately. ; \
+-	fi
++#	@if [ \( -f /usr/local/lib/libvga.config -a ! -f $(datadir)/libvga.config \) ]; then \
++#		echo "Moving old config file /usr/local/lib/libvga.config to $(datadir)." ; \
++#		mv -f /usr/local/lib/libvga.config $(datadir)/libvga.config; \
++#	fi
++#	@if [ \( -f /usr/local/lib/libvga.et4000 -a ! -f $(datadir)/libvga.et4000 \) ]; then \
++#		echo "Moving old config file /usr/local/lib/libvga.et4000 to $(datadir)." ; \
++#		mv -f /usr/local/lib/libvga.et4000 $(datadir)/libvga.et4000; \
++#	fi
++#	@if [ \( -f /usr/local/lib/libvga.ega -a ! -f $(datadir)/libvga.ega \) ]; then \
++#		echo "Moving old config file /usr/local/lib/libvga.ega to $(datadir)." ; \
++#		mv -f /usr/local/lib/libvga.ega $(datadir)/libvga.ega; \
++#	fi
++#	@if [ \( -f /etc/mach32.eeprom -a ! -f $(datadir)/mach32.eeprom \) ]; then \
++#		echo Consider moving your /etc/mach32.eeprom file to $(datadir) ; \
++#		echo and changing $(datadir)/libvga.config appropriately. ; \
++#	fi
+ 	@if [ ! -f $(datadir)/libvga.config ]; then \
+ 		echo Installing default configuration file in $(datadir).; \
+ 		cp $(confdir)/libvga.config $(datadir)/libvga.config; \
+@@ -261,7 +261,7 @@
+ installman:
+ 	(cd doc; $(MAKE) -f $(srcdir)/doc/Makefile srcdir="$(srcdir)" install )
+ 	 
+-install: uninstall $(INSTALLAOUTLIB) installheaders $(INSTALLSHAREDLIB) installconfig \
++install: $(INSTALLAOUTLIB) installheaders $(INSTALLSHAREDLIB) installconfig \
+ 	$(INSTALLSTATICLIB) $(INSTALLUTILS) $(INSTALLMAN)
+ 	@echo
+ 	@echo
+@@ -402,15 +402,23 @@
+ 	@rm -f sharedlib/DISTRIBUTION
+ 	(cd $(dir $@); \
+ 	 $(MAKE) -f $(srcdir)/src/Makefile $(notdir $@) \
+-	 	srcdir="$(srcdir)" DLLFLAGS="$(DLLFLAGS)" \
++	 	srcdir="$(srcdir)" DLLFLAGS="$(DLLFLAGS)" ; \
++	 ln -sf libvga.so.$(VERSION) libvga.so \
+ 	)
+ 
+ endif	# a.out
+ 
+-sharedlib/libvgagl.a sharedlib/libvgagl.so.$(VERSION): $(SHAREDDIRS)
++sharedlib/libvgagl.a: $(SHAREDDIRS)
+ 	(cd $(dir $@); \
+ 	 $(MAKE) -f $(srcdir)/gl/Makefile $(notdir $@) \
+ 	 	srcdir="$(srcdir)" DLLFLAGS="$(DLLFLAGS)" \
++	)
++
++sharedlib/libvgagl.so.$(VERSION): $(SHAREDDIRS)
++	(cd $(dir $@); \
++	 $(MAKE) -f $(srcdir)/gl/Makefile $(notdir $@) \
++	 	srcdir="$(srcdir)" DLLFLAGS="$(DLLFLAGS)" ; \
++	 ln -sf libvgagl.so.$(VERSION) libvgagl.so \
+ 	)
+ 
+ demoprogs: $(PREDEMO) $(DEMODIRS)
+--- svgalib-1.4.3.orig/Makefile.cfg	Tue May 29 07:39:13 2001
++++ svgalib-1.4.3/Makefile.cfg	Thu Jun 28 10:25:12 2001
+@@ -25,7 +25,7 @@
+ # Common prefix for installation directories.
+ # NOTE: This directory must exist when you start the install.
+ TOPDIR=
+-prefix = $(TOPDIR)/usr/local
++prefix = $(TOPDIR)/usr
+ exec_prefix = $(prefix)
+ 
+ # Directory where the shared stubs and static library will be installed.
+@@ -38,13 +38,13 @@
+ bindir = $(exec_prefix)/bin
+ 
+ # Directory where the run-time configuration files will be installed.
+-datadir = $(TOPDIR)/etc/vga
++datadir = $(TOPDIR)/etc/svgalib
+ 
+ # Directory where the header files will be installed.
+ includedir = $(prefix)/include
+ 
+ # Directory where the man files will be installed.
+-mandir = $(prefix)/man
++mandir = $(prefix)/share/man
+ 
+ # Target binary format.
+ # TARGET_FORMAT = a.out
+@@ -82,7 +82,7 @@
+ # BACKGROUND = y
+ 
+ # Uncomment this if you want to compile and install the static libs.
+-# INSTALLSTATICLIB = installstaticlib
++INSTALLSTATICLIB = installstaticlib
+ 
+ # Comment this out if you don't want to install the shared libs.
+ # If you do not install the shared nor the static libs, 'make static'
+@@ -94,12 +94,12 @@
+ # a.out image is available install it in the first directory named something
+ # like *aout/ in /etc/ld.so.conf.
+ # If you want this, do not comment out the next line:
+-INSTALLAOUTLIB = installaoutcompat
++# INSTALLAOUTLIB = installaoutcompat
+ 
+ # Comment this out if you want to keep old shared images. Old header files,
+ # library stubs and static libraries CANNOT be kept in public locations
+ # except when you rename them yourself.
+-# KEEPSHAREDLIBS = keep
++KEEPSHAREDLIBS = keep
+ 
+ # Comment this out if you don't want to compile and install the utilities.
+ INSTALLUTILS = installutils
+@@ -126,15 +126,15 @@
+ INCLUDE_ET4000_DRIVER = y
+ INCLUDE_CIRRUS_DRIVER = y
+ INCLUDE_TVGA_DRIVER = y
+-#INCLUDE_OAK_DRIVER = y
+-#INCLUDE_EGA_DRIVER = y
++INCLUDE_OAK_DRIVER = y
++INCLUDE_EGA_DRIVER = y
+ INCLUDE_MACH32_DRIVER = y
+ INCLUDE_S3_DRIVER = y
+-#INCLUDE_ET3000_DRIVER = y
+-#INCLUDE_GVGA6400_DRIVER = y
+-#INCLUDE_ARK_DRIVER = y
+-#INCLUDE_ATI_DRIVER = y
+-#INCLUDE_ALI_DRIVER = y
++INCLUDE_ET3000_DRIVER = y
++INCLUDE_GVGA6400_DRIVER = y
++INCLUDE_ARK_DRIVER = y
++INCLUDE_ATI_DRIVER = y
++INCLUDE_ALI_DRIVER = y
+ INCLUDE_CHIPS_DRIVER = y
+ INCLUDE_APM_DRIVER = y
+ INCLUDE_NV3_DRIVER = y
+@@ -256,10 +256,8 @@
+ endif
+ 
+ 
+-ifndef CFLAGS
++ifndef OPTIMIZE
+ 	OPTIMIZE = -fomit-frame-pointer -O2 -fno-strength-reduce -pipe -g
+-else
+-	OPTIMIZE := $(CFLAGS)
+ endif
+ 
+ # You might want to add -m386 here if you have a recently installed 
+@@ -270,9 +268,9 @@
+ CFLAGS   = $(WARN) $(DLLFLAGS) $(INCLUDES) $(OPTIMIZE) $(DEFINES)
+ # ELF doesn't like -N. It is beneficial for small tools with a.out
+ ifeq (a.out, $(TARGET_FORMAT))
+-	LDFLAGS   = -N -s
++	LDFLAGS   = -N
+ else
+-	LDFLAGS   = -s
++	LDFLAGS   =
+ endif
+ 
+ # Uncomment the following if you are compiling a.out shared libraries
+@@ -289,6 +287,6 @@
+ 
+ # Utilites used.
+ AR	  = ar
+-INSTALL_PROGRAM	= install -c -s -m 755 -o root -g bin
++INSTALL_PROGRAM	= install -c -m 755 -o root -g bin
+ INSTALL_SHLIB	= install -c -m 755 -o root -g bin
+ INSTALL_DATA	= install -c -m 644 -o root -g bin
