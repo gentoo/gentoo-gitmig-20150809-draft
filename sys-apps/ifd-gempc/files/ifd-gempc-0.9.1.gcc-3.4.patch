@@ -1,0 +1,18 @@
+diff -uNr ifd-gempc-0.9.1.orig/GemPC430/libusb_wrap.h ifd-gempc-0.9.1/GemPC430/libusb_wrap.h
+--- ifd-gempc-0.9.1.orig/GemPC430/libusb_wrap.h	2004-01-20 13:39:05.000000000 +0000
++++ ifd-gempc-0.9.1/GemPC430/libusb_wrap.h	2004-12-30 16:54:58.249503400 +0000
+@@ -11,10 +11,10 @@
+ #ifndef _LIBUSB_WRAP_
+ #define _LIBUSB_WRAP_
+ 
+-gcore_t OpenUSB( DWORD lun, LPSTR device );
+-gcore_t WriteUSB( DWORD lun, DWORD length, unsigned char *Buffer );
+-gcore_t ReadUSB( DWORD lun, DWORD *length, unsigned char *Buffer );
+-gcore_t CloseUSB( DWORD lun );
++status_t OpenUSB( DWORD lun, LPSTR device );
++status_t WriteUSB( DWORD lun, DWORD length, unsigned char *Buffer );
++status_t ReadUSB( DWORD lun, DWORD *length, unsigned char *Buffer );
++status_t CloseUSB( DWORD lun );
+ 
+ #endif
+ 
