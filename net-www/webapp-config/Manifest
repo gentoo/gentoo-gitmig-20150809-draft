@@ -1,4 +1,6 @@
 MD5 3d182d43f7f0341a9a42f96694f04e72 metadata.xml 224
-MD5 240cba8f6fb8b4ea6d9c64e1fe06d651 ChangeLog 2745
+MD5 cf310357cc05c66e27ffad9a841ae6cc ChangeLog 2970
+MD5 cdd01e7ddad104772ad2f7e7f2a6c37a webapp-config-1.8-r1.ebuild 1051
 MD5 287f211ffb47d7e1740e0a4bf712b216 webapp-config-1.8.ebuild 1024
 MD5 cd13826ef979dfce18e7658dfbbb901f files/digest-webapp-config-1.8 69
+MD5 cd13826ef979dfce18e7658dfbbb901f files/digest-webapp-config-1.8-r1 69
