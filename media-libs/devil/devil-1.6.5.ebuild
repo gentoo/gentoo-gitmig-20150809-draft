@@ -1,20 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.6.5.ebuild,v 1.2 2003/02/13 12:41:58 vapier Exp $
-
-IUSE="gif png tiff sdl X opengl jpeg"
+# $Header: /var/cvsroot/gentoo-x86/media-libs/devil/devil-1.6.5.ebuild,v 1.3 2003/07/20 05:42:14 vapier Exp $
 
 inherit libtool
 
-S=${WORKDIR}/DevIL
 DESCRIPTION="DevIL image library"
 HOMEPAGE="http://www.imagelib.org/"
-SRC_URI="mirror://sourceforge/openil/DevIL-${PV}.tar.gz
-	 http://openil.sourceforge.net/ilu_region.h"
+SRC_URI="mirror://sourceforge/openil/DevIL-${PV}.tar.gz"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="~x86 ~sparc"
+IUSE="gif png tiff sdl X opengl jpeg"
 
 RDEPEND="X? ( x11-base/xfree )
 	gif? ( media-libs/giflib )
@@ -24,17 +21,7 @@ RDEPEND="X? ( x11-base/xfree )
 	tiff? ( media-libs/tiff )
 	opengl? ( virtual/opengl )"
 
-
-DEPEND="${RDEPEND}"
-
-
-src_unpack() {
-
-unpack DevIL-${PV}.tar.gz 
-cd ${S}
-cp ${DISTDIR}/ilu_region.h include
-
-}
+S=${WORKDIR}/DevIL
 
 src_compile() {
 	local myconf
@@ -55,7 +42,7 @@ src_compile() {
 	make || die
 }
 
-src_install () {
+src_install() {
 	make DESTDIR=${D} install || die
 	dodoc AUTHORS BUGS COPYING* CREDITS ChangeLog* INSTALL NEWS* README*
 }

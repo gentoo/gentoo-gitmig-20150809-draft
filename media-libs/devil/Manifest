@@ -1,5 +1,5 @@
 MD5 2082bbe75bcb4a6b2278d2b537d5a013 files/digest-devil-1.6.1 63
-MD5 201dfc482a1646f8623a7bc71cb2e549 files/digest-devil-1.6.5 117
+MD5 55dbf72e4f219d16206df409c7754cb8 files/digest-devil-1.6.5 63
 MD5 4f7000f95094881348fdc12ae0be6c87 devil-1.6.1.ebuild 1304
-MD5 65772fce25a24733096c67798d3cf4af devil-1.6.5.ebuild 1433
+MD5 4f0a24317364f4847d438f590cc88f54 devil-1.6.5.ebuild 1274
 MD5 3e3a60e0bfa7098b2f27438aacfe0ce8 ChangeLog 592
