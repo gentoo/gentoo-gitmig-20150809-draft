@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/rekall/rekall-2.2.0.ebuild,v 1.1 2004/07/20 16:59:17 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/rekall/rekall-2.2.0.ebuild,v 1.2 2004/07/21 18:30:42 dholm Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.rekallrevealed.org/packages/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="mysql odbc postgres xbase"
 
 DEPEND="virtual/python
