@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.2.ebuild,v 1.3 2005/03/14 23:18:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.2.ebuild,v 1.4 2005/04/03 19:05:36 j4rg0n Exp $
 
 inherit eutils toolchain-funcs mono libtool
 
@@ -85,7 +85,7 @@ src_install() {
 	if use ppc-macos; then
 		rm -f ${D}/usr/lib/charset.alias
 		if [ -e "${ROOT}"/usr/$(get_libdir)/libintl.2.dylib ] ; then
-			cp -a ${ROOT}/usr/$(get_libdir)/libintl.2.dylib ${D}/usr/$(get_libdir)/
+			cp -pPR ${ROOT}/usr/$(get_libdir)/libintl.2.dylib ${D}/usr/$(get_libdir)/
 			touch ${D}/usr/$(get_libdir)/libintl.2.dylib
 		fi
 	else
