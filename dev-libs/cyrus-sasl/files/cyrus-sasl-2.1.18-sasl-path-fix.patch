@@ -1,6 +1,6 @@
 diff -Naur cyrus-sasl-2.1.18-orig/lib/common.c cyrus-sasl-2.1.18/lib/common.c
 --- cyrus-sasl-2.1.18-orig/lib/common.c	2004-03-10 10:51:35.000000000 -0500
-+++ cyrus-sasl-2.1.18/lib/common.c	2004-07-06 22:34:22.335040502 -0400
++++ cyrus-sasl-2.1.18/lib/common.c	2004-07-07 12:15:19.570798953 -0400
 @@ -1794,9 +1794,11 @@
    if (! path)
      return SASL_BADPARAM;
@@ -8,10 +8,10 @@ diff -Naur cyrus-sasl-2.1.18-orig/lib/common.c cyrus-sasl-2.1.18/lib/common.c
 -  *path = getenv(SASL_PATH_ENV_VAR);
 -  if (! *path)
 -    *path = PLUGINDIR;
-+  if (getuid() != geteuid() || getgid() != getegid()) {
-+	  *path = getenv(SASL_PATH_ENV_VAR);
-+	  if (! *path)
-+	    *path = PLUGINDIR;
++  if (getuid() == geteuid() && getgid() == getegid()) {
++    *path = getenv(SASL_PATH_ENV_VAR);
++    if (! *path)
++      *path = PLUGINDIR;
 +  }
  
    return SASL_OK;

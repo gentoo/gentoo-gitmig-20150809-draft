@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cyrus-sasl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.80 2004/07/07 16:23:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/ChangeLog,v 1.81 2004/07/07 16:59:28 merlin Exp $
+
+  07 Jul 2004; Cory Visi <merlin@gentoo.org>
+  files/cyrus-sasl-2.1.18-sasl-path-fix.patch:
+  Fix mistake in boolean logic
 
   07 Jul 2004; Aron Griffis <agriffis@gentoo.org> cyrus-sasl-2.1.18-r1.ebuild:
   stable on alpha and ia64 #56016
