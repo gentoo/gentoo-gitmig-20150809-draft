@@ -726,9 +726,10 @@ net-www/opera
 # Arcady Genkin <agenkin@gentoo.org>
 # Aug 15 2002
 # Masking _rc3 pending some testing
-media-libs/alsa-lib-0.9.0_rc3*
-media-sound/alsa-driver-0.9.0_rc3*
-media-sound/alsa-utils-0.9.0_rc3*
+>=media-sound/alsa-driver-0.9.0_rc3
+>=media-libs/alsa-lib-0.9.0_rc3
+>=media-sound/alsa-utils-0.9.0_rc3
+
 
 # 18 Feb 2002, azarah.
 # Gnumeric needs 0.0.17, and most other stuff should work with this version
