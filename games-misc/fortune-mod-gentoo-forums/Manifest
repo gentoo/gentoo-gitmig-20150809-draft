@@ -1,4 +1,14 @@
-MD5 61d0a86ea1f9fe7913067073392604c9 fortune-mod-gentoo-forums-20040922.ebuild 890
-MD5 ef232b0c077d47db68ed139b3839d6ac ChangeLog 996
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 0b4015ed1ca4f4631caa755db0d1f30b metadata.xml 246
+MD5 d966352f00a5ccbf7ef88c319f154cfa fortune-mod-gentoo-forums-20040922.ebuild 895
+MD5 9b8a4679955972325d5ef17e398eaa2b ChangeLog 1121
 MD5 91dcd0a0a5de4ba3ff2ac2fd72f14ff3 files/digest-fortune-mod-gentoo-forums-20040922 146
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBdD2CugEuf3OQ0akRAodQAJ41mE70GmR05lSTNKtZ6f/UyZF2TACeL2yH
+B/AH65OYKdFYf4aaDk6vDGM=
+=HPCJ
+-----END PGP SIGNATURE-----

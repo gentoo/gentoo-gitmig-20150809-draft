@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-gentoo-forums
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-forums/ChangeLog,v 1.5 2004/10/18 07:58:39 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-gentoo-forums/ChangeLog,v 1.6 2004/10/18 22:02:07 kloeri Exp $
+
+  19 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
+  fortune-mod-gentoo-forums-20040922.ebuild:
+  Alpha keyword, bug 67731.
 
   18 Oct 2004; Hardave Riar <hardave@gentoo.org>
   fortune-mod-gentoo-forums-20040922.ebuild:
