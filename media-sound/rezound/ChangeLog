@@ -1,6 +1,15 @@
 # ChangeLog for media-sound/rezound
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.19 2004/10/20 05:47:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/ChangeLog,v 1.20 2004/11/17 06:30:55 eradicator Exp $
+
+*rezound-0.11.1_beta (16 Nov 2004)
+
+  16 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  -files/rezound-0.9.0_beta-libfox1.2-code.patch.gz,
+  -files/rezound-0.9.0_beta-libfox1.2-makefiles.patch.gz,
+  rezound-0.10.0_beta.ebuild, +rezound-0.11.1_beta.ebuild,
+  -rezound-0.9.0_beta-r1.ebuild, -rezound-0.9.0_beta.ebuild:
+  0.10 stable x86.  Version bump now with alsa support.
 
   19 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> :
   Removing old versions.

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.10.0_beta.ebuild,v 1.4 2004/11/17 06:30:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.11.1_beta.ebuild,v 1.1 2004/11/17 06:30:55 eradicator Exp $
 
-IUSE="oggvorbis jack nls oss portaudio flac soundtouch"
+IUSE="alsa oggvorbis jack nls oss portaudio flac soundtouch"
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc x86"
+KEYWORDS="~amd64 ~ppc ~x86"
 
 RDEPEND="virtual/x11
 	=dev-libs/fftw-2*
@@ -23,6 +23,7 @@ RDEPEND="virtual/x11
 	>=media-libs/audiofile-0.2.3
 	>=media-libs/ladspa-sdk-1.12
 	>=media-libs/ladspa-cmt-1.15
+	alsa? ( >=media-libs/alsa-lib-1.0 )
 	flac? ( >=media-libs/flac-1.1.0 )
 	oggvorbis? ( media-libs/libvorbis media-libs/libogg )
 	jack? ( media-sound/jack-audio-connection-kit )
@@ -50,6 +51,7 @@ src_compile() {
 
 	# enable/disable depending on USE flags
 	myconf="${myconf} `use_enable nls`"
+	myconf="${myconf} `use_enable alsa`"
 	myconf="${myconf} `use_enable oss`"
 	myconf="${myconf} `use_enable jack`"
 	myconf="${myconf} `use_enable portaudio`"

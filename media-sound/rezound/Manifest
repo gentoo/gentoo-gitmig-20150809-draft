@@ -1,20 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2936d6989b0cf7538692f2c102fe2d70 ChangeLog 3066
+MD5 b6b4822e3a4fd630bbaa428cf3e9483d ChangeLog 3447
 MD5 d0d7ea03e238a808414b4426394c100f metadata.xml 221
-MD5 92b4a6af505f1a7ad2013c59cf2aedb7 rezound-0.9.0_beta.ebuild 1230
-MD5 8aecfc68ecae7896c00744c1ed0b26e5 rezound-0.9.0_beta-r1.ebuild 1605
-MD5 28404e8a68db6191fee95174a330b758 rezound-0.10.0_beta.ebuild 1981
-MD5 c941294b2efff5b8fbfdfd448d48490f files/digest-rezound-0.9.0_beta 70
-MD5 c941294b2efff5b8fbfdfd448d48490f files/digest-rezound-0.9.0_beta-r1 70
-MD5 c35a871289dd109a8a4bda01c5e1ea9d files/rezound-0.9.0_beta-libfox1.2-code.patch.gz 7218
-MD5 717d127541994d62844dfec2bc446025 files/rezound-0.9.0_beta-libfox1.2-makefiles.patch.gz 3934
+MD5 8ab1ed976eb6835e792bbf307c144115 rezound-0.11.1_beta.ebuild 2061
+MD5 87686207ef11456860c1c0410311b010 rezound-0.10.0_beta.ebuild 1980
+MD5 e91a09314efa10c88b5ad68c8ced9be7 files/digest-rezound-0.11.1_beta 71
 MD5 918c9dd021033e4b01d639be84718c65 files/digest-rezound-0.10.0_beta 71
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBdfvrArHZZzCEUG0RAjyGAJ46UooOQY5ky7XS3VSP8TEzsV2ojQCffWB0
-1PRXNvu6lFAdKaFLA0WRFOI=
-=jt2k
+iD8DBQFBmvApArHZZzCEUG0RAgioAJ4qcJjx+PdqpTTKrIuY067umwnRdACbBRQg
+PAhphSQvpBzolJ9UkaOPL1A=
+=vuG8
 -----END PGP SIGNATURE-----
