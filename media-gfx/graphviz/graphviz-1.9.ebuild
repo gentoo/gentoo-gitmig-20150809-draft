@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-1.9.ebuild,v 1.4 2003/04/06 18:53:08 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-1.9.ebuild,v 1.5 2003/04/24 16:22:58 utx Exp $
 
 IUSE="tcltk"
 
@@ -18,7 +18,7 @@ DEPEND=">=sys-libs/zlib-1.1.3
 	>=media-libs/libpng-1.2*
 	>=media-libs/jpeg-6b
 	media-libs/freetype
-	tcltk? ( =dev-lang/tk-8.3* )"
+	tcltk? ( >=dev-lang/tk-8.3* )"
 
 src_unpack() {
 	unpack ${A}

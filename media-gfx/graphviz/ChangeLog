@@ -1,18 +1,18 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.13 2003/04/06 18:53:08 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.14 2003/04/24 16:22:58 utx Exp $
+
+*graphviz-1.9 (22 Feb 2003)
+
+  24 Apr 2003; Stanislav Brabec <utx@gentoo.org> graphviz-1.9.ebuild:
+  Fixed DEPEND for tk-8.4.
+
+  06 Apr 2003; Jason Wever <weeve@gentoo.org> graphviz-1.9.ebuild:
+  Added sparc to keywords.
 
   19 Mar 2003; George Shapovalov <george@gentoo.org> graphviz-1.9.ebuild :
   1.9 cannot be built with gcc-2.95.x. (#16018)
   added >=sys-devel/gcc-3.2* to DEPEND and <media-gfx/graphviz-1.9 to all gcc-2 based profiles
-
-  13 Mar 2003; Olivier Reisch <doctomoe@gentoo.org> graphviz-1.8.10-r3.ebuild :
-  Marked ppc stable
-
-*graphviz-1.9 (22 Feb 2003)
-
-  06 Apr 2003; Jason Wever <weeve@gentoo.org> graphviz-1.9.ebuild:
-  Added sparc to keywords.
 
   22 Feb 2003; George Shapovalov <george@gentoo.org> graphviz-1.9.ebuild :
   new version (#15923)
@@ -23,6 +23,9 @@
 
   19 Mar 2003; Jason Wever <weeve@gentoo.org> graphviz-1.8.10-r3.ebuild:
   Added ~sparc to keywords.
+
+  13 Mar 2003; Olivier Reisch <doctomoe@gentoo.org> graphviz-1.8.10-r3.ebuild :
+  Marked ppc stable
 
   21 Jan 2003; George Shapovalov <george@gentoo.org> graphviz-1.8.10-r3.ebuild :
   Another libpng-1.0 related fix. Now made sure all -lpng are replaced by lpng10, as quite often
