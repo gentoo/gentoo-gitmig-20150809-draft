@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.2.0.ebuild,v 1.3 2004/06/13 17:52:00 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.2.0.ebuild,v 1.4 2004/06/18 09:11:13 eradicator Exp $
 
 DESCRIPTION="GTK+ based Audio CD Player/Ripper."
 HOMEPAGE="http://www.nostatic.org/grip"
@@ -23,7 +23,7 @@ DEPEND=">=x11-libs/gtk+-2.2
 
 IUSE="nls oggvorbis"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~alpha ~amd64 ~hppa sparc"
+KEYWORDS="x86 ~ppc ~alpha amd64 ~hppa sparc"
 
 src_compile() {
 	econf --disable-dependency-tracking `use_enable nls` || die
