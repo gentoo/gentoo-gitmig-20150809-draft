@@ -1,0 +1,13 @@
+# ChangeLog for net-misc/radvd
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/radvd/ChangeLog,v 1.1 2002/10/18 18:59:40 hannes Exp $
+
+*radvd-0.7.1 (18th July 2002)
+
+  18 Oct 2002; Hannes Mehnert <hannes@gentoo.org> ChangeLog, radvd-0.7.1.ebuild:
+  Initial import.
+  ebuild submitted by Asbjorn Sannes <ace@sannes.org>
+
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way.
+  
