@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/foldingathome/foldingathome-3.24.ebuild,v 1.3 2003/07/02 12:33:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/foldingathome/foldingathome-3.24.ebuild,v 1.4 2004/03/26 12:13:49 phosphan Exp $
 
 # no version number on this install dir since upgrades will be using same dir
 # (data will be stored here too)
@@ -12,11 +12,11 @@ SRC_URI="http://www.stanford.edu/group/pandegroup/release/FAH3Console-v${PV/.}-L
 	http://www.stanford.edu/group/pandegroup/release/FAH3Console-v${PV/.}-Linux.exe"
 
 SLOT="0"
+IUSE=""
 LICENSE="as-is"
 KEYWORDS="x86"
 
 DEPEND=">=sys-apps/baselayout-1.8.0"
-S="${WORKDIR}/${P}"
 
 src_unpack() {
 	mkdir -p ${S} ; cd ${S}

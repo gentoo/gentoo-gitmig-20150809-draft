@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/foldingathome
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/foldingathome/ChangeLog,v 1.9 2004/03/09 14:02:23 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/foldingathome/ChangeLog,v 1.10 2004/03/26 12:13:49 phosphan Exp $
+
+  26 Mar 2004; Patrick Kursawe <phosphan@gentoo.org>
+  foldingathome-3.14.ebuild, foldingathome-3.24-r1.ebuild,
+  foldingathome-3.24.ebuild, foldingathome-4.0.0.ebuild:
+  Setting IUSE, removing S= where not necessary, declaring 4.0.0 stable for x86
 
   09 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> foldingathome-4.0.0.ebuild:
   Adding amd64 keyword. Closing #43779.
