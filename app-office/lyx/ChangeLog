@@ -1,6 +1,13 @@
 # ChangeLog for app-office/lyx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.26 2003/06/09 17:38:03 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/ChangeLog,v 1.27 2003/06/11 09:17:42 danarmak Exp $
+
+*lyx-1.3.2-r1 (11 Jun 2003)
+
+  11 Jun 2003; Dan Armak <danarmak@gentoo.org> lyx-1.3.2-r1.ebuild:
+  New revision that installs the bind file for Hebrew editing as well as a
+  sample preferences file for same. For more info, see
+  http://www.math.tau.ac.il/~dekelts/lyx/instructions2.html (items 5, 6).
 
   09 Jun 2003; satai <satai@gentoo.org> lyx-1.2.0.20020705.ebuild,
   lyx-1.2.1.ebuild, lyx-1.2.3.ebuild, lyx-1.3.0.ebuild, lyx-1.3.1.ebuild,
