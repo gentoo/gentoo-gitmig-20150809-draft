@@ -1,6 +1,9 @@
 # ChangeLog for app-text/lout
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lout/ChangeLog,v 1.13 2005/02/10 10:07:54 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lout/ChangeLog,v 1.14 2005/02/14 13:56:34 gustavoz Exp $
+
+  14 Feb 2005; Gustavo Zacarias <gustavoz@gentoo.org> lout-3.30.ebuild:
+  Stable on sparc
 
   10 Feb 2005; Mamoru KOMACHI <usata@gentoo.org> -lout-3.25-r1.ebuild,
   lout-3.30.ebuild:
