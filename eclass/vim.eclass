@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.36 2003/08/20 15:13:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.37 2003/09/09 21:53:01 drobbins Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -15,22 +15,30 @@ EXPORT_FUNCTIONS src_unpack
 IUSE="$IUSE ncurses nls"
 if [ ${PN} != vim-core ]; then
 	IUSE="$IUSE cscope gpm perl python ruby"
-	newdepend "
+	DEPEND="$DEPEND
 		cscope?  ( dev-util/cscope )
 		gpm?     ( >=sys-libs/gpm-1.19.3 )
 		perl?    ( dev-lang/perl )
 		python?  ( dev-lang/python )"
-	# Vim versions after 6.2d should work with Ruby 1.8 because of a local
+	RDEPEND="$RDEPEND
+		cscope?  ( dev-util/cscope )
+		gpm?     ( >=sys-libs/gpm-1.19.3 )
+		perl?    ( dev-lang/perl )
+		python?  ( dev-lang/python )"
+# Vim versions after 6.2d should work with Ruby 1.8 because of a local
 	# Gentoo patch; working on putting it upstream (22 May 2003 agriffis)
 	if [[ "$PV" < 6.2 || ( "$PV" == 6.2_pre* && "${PV#*pre}" -lt 4 ) ]]; then
-		newdepend "ruby? ( =dev-lang/ruby-1.6* )" # 1.8 doesn't work
+		DEPEND="$DEPEND ruby? ( =dev-lang/ruby-1.6* )" # 1.8 doesn't work
+		RDEPEND="$RDEPEND ruby? ( =dev-lang/ruby-1.6* )"
 	else
-		newdepend "ruby? ( dev-lang/ruby )"
+		DEPEND="$DEPEND ruby? ( dev-lang/ruby )"
+		RDEPEND="$RDEPEND ruby? ( dev-lang/ruby )"
 	fi
 
 	if [ ${PN} = vim ]; then
 		IUSE="$IUSE vim-with-x minimal"
-		newdepend "vim-with-x? ( virtual/x11 )"
+		DEPEND="$DEPEND vim-with-x? ( virtual/x11 )"
+		RDEPEND="$RDEPEND vim-with-x? ( virtual/x11 )"
 	elif [ ${PN} = gvim ]; then
 		IUSE="$IUSE gnome gtk gtk2 motif"
 	fi
@@ -41,12 +49,12 @@ SLOT="0"
 LICENSE="vim"
 
 # portage dependency is for use_with/use_enable
-newdepend "
-	>=sys-apps/portage-2.0.45-r3
+DEPEND="$DEPEND >=sys-apps/portage-2.0.45-r3
 	>=sys-apps/sed-4
 	sys-devel/autoconf
 	ncurses? ( >=sys-libs/ncurses-5.2-r2 ) : ( sys-libs/libtermcap-compat )
 	"
+RDEPEND="$RDEPEND ncurses? ( >=sys-libs/ncurses-5.2-r2 ) : ( sys-libs/libtermcap-compat )"
 
 apply_vim_patches() {
 	local p
