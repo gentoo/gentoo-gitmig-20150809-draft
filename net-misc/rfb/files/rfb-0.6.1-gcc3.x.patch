@@ -198,3 +198,14 @@
  	cd xvncconnect  &&  $(MAKE) -e $(ENVIRONMENT) $@
  
  clean:
+--- include/rfb.h.orig	2003-10-09 11:10:21.131479008 -0400
++++ include/rfb.h	2003-10-09 11:10:30.480057808 -0400
+@@ -21,6 +21,8 @@
+ #ifndef _hexonet_rfb_h_
+ #define _hexonet_rfb_h_
+ 
++using namespace std;
++
+ namespace rfb {
+ 
+ 
