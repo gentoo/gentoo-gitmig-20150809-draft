@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.76.ebuild,v 1.2 2004/04/02 14:32:34 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.76.ebuild,v 1.3 2004/04/02 17:49:04 rizzo Exp $
 
 inherit flag-o-matic eutils gcc
 use debug && inherit debug
@@ -42,6 +42,12 @@ pkg_setup() {
 		echo -ne "\a" ; sleep 1
 	done
 	sleep 8
+}
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	cp ${FILESDIR}/gevolution.h plugins/gevolution/
 }
 
 src_compile() {
