@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/rl
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rl/ChangeLog,v 1.1 2003/10/20 09:10:07 brandy Exp $
+
+*rl-0.2.2 (20 Oct 2003)
+
+  20 Oct 2003; Brandy Westcott brandy@gentoo.org rl-0.2.2.ebuild:
+  Initial import. Thanks to Sven Wegener <sven.wegener@stealer.net> for
+  submitting the ebuild. Closes #31518.
+
