@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.88.1-r1.ebuild,v 1.12 2003/02/13 09:15:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.88.1-r1.ebuild,v 1.13 2003/09/08 11:27:52 msterret Exp $
 
 DESCRIPTION="Diagram Creation Program"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
@@ -26,7 +26,7 @@ src_compile() {
 	use bonobo && myconf="--enable-gnome --enable-bonobo"
 #	use python && myconf="${myconf} --with-python"
 	use nls || myconf="${myconf} --disable-nls"
- 	use cups || myconf="${myconf} --disable-gnome-print"
+	use cups || myconf="${myconf} --disable-gnome-print"
 	econf ${myconf}
 	emake || die
 }

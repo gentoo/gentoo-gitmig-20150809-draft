@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.12.ebuild,v 1.10 2003/09/06 22:21:01 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.12.ebuild,v 1.11 2003/09/08 11:31:04 msterret Exp $
 
 inherit virtualx libtool gnome.org
 
@@ -55,32 +55,32 @@ src_compile() {
 	elibtoolize
 
 	local myconf=""
-  	if [ -n "`use gb`" ]; then
-    		myconf="${myconf} --with-gb"
-  	else
-    		myconf="${myconf} --without-gb"
-  	fi
+	if [ -n "`use gb`" ]; then
+		myconf="${myconf} --with-gb"
+	else
+		myconf="${myconf} --without-gb"
+	fi
 	#broken as we cannot use guile-1.5 (break gnucash)
 	if [ -n "`use guile`" ]; then
 		myconf="${myconf} --without-guile"
 	else
 		myconf="${myconf} --without-guile"
 	fi
-  	if [ -n "`use perl`" ]; then
-    		myconf="${myconf} --with-perl"
-  	else
-    		myconf="${myconf} --without-perl"
-  	fi
-  	if [ -n "`use python`" ]; then
-    		myconf="${myconf} --with-python"
-  	else
-    		myconf="${myconf} --without-python"
-  	fi
-  	if [ -n "`use libgda`" ]; then
-    		myconf="${myconf} --with-gda --with-bonobo"
-  	else
-    		myconf="${myconf} --without-gda"
-  	fi
+	if [ -n "`use perl`" ]; then
+		myconf="${myconf} --with-perl"
+	else
+		myconf="${myconf} --without-perl"
+	fi
+	if [ -n "`use python`" ]; then
+		myconf="${myconf} --with-python"
+	else
+		myconf="${myconf} --without-python"
+	fi
+	if [ -n "`use libgda`" ]; then
+		myconf="${myconf} --with-gda --with-bonobo"
+	else
+		myconf="${myconf} --without-gda"
+	fi
 	if [ -n "`use evo`" ]; then
 		myconf="${myconf} --with-evolution"
 	fi
@@ -109,7 +109,7 @@ src_install() {
 	# keep scrollkeeper happy
 	dodir /var/lib/scrollkeeper
 
-  	make prefix=${D}/usr \
+	make prefix=${D}/usr \
 		sysconfdir=${D}/etc \
 		scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper \
 		install || die
@@ -117,7 +117,7 @@ src_install() {
 	# regenerate docs later
 	rm -f ${D}/var/lib/scrollkeeper
 
-  	dodoc AUTHORS COPYING *ChangeLog HACKING NEWS README TODO
+	dodoc AUTHORS COPYING *ChangeLog HACKING NEWS README TODO
 }
 
 pkg_postinst() {

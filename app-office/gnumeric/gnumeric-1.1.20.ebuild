@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.1.20.ebuild,v 1.3 2003/09/06 22:21:01 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.1.20.ebuild,v 1.4 2003/09/08 11:31:04 msterret Exp $
 
 #provide Xmake and Xemake
 inherit virtualx libtool gnome2 eutils debug
@@ -45,7 +45,7 @@ src_unpack() {
 }
 
 src_compile() {
-  	econf `use_with bonobo` `use_with python` `use_with libgda gda`
+	econf `use_with bonobo` `use_with python` `use_with libgda gda`
 	# `use_with gnomedb gda`
 
 	#the build process have to be able to connect to X
