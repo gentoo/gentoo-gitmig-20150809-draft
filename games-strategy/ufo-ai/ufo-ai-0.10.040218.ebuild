@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-0.10.040218.ebuild,v 1.13 2004/07/16 22:42:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-0.10.040218.ebuild,v 1.14 2004/09/03 08:40:47 mr_bones_ Exp $
 
 inherit eutils games flag-o-matic
 
 DESCRIPTION="UFO: Alien Invasion - X-COM inspired strategy game"
-HOMEPAGE="http://ufo.myexp.de/"
+HOMEPAGE="http://www.ufoai.net/"
 SRC_URI="http://n.ethz.ch/student/dbeyeler/download/ufoai_source_040218.zip
 	http://people.ee.ethz.ch/~baepeter/linux_ufoaidemo.zip"
 
