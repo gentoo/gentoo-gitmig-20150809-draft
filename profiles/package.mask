@@ -28,7 +28,7 @@
 >=dev-util/guile-1.5
 dev-libs/libofx
 net-libs/openhbci
->=app-office/gnucash-1.8.2
+>=app-office/gnucash-1.8.2-r1
 
 # <liquidx@gentoo.org> (28 Apr 2003)
 # needs testing - new openjade does cell division.
