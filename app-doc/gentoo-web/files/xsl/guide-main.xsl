@@ -34,8 +34,8 @@
 		<tr>
 			<td valign="top" height="168" width="30%" bgcolor="#45347b">
 				<table cellspacing="0" cellpadding="0" border="0" width="100%">
-					<tr><td class="logobg" valign="top" align="center" height="120"><a href="/index.html"><img src="/images/gtop-new.jpg"/></a></td></tr>
-					<tr><td class="logobg" valign="top" align="center" height="48"><a href="/index.html"><img src="/images/gbot-new.gif"/></a></td></tr>
+					<tr><td class="logobg" valign="top" align="center" height="120"><a href="/index.html"><img border="0" src="/images/gtop-new.jpg"/></a></td></tr>
+					<tr><td class="logobg" valign="top" align="center" height="48"><a href="/index.html"><img border="0" src="/images/gbot-new.gif"/></a></td></tr>
 				</table>
 			</td>
 			<td valign="bottom" height="168" width="70%" bgcolor="#000000">
@@ -146,8 +146,8 @@
 		<tr>
 			<td rowspan="2" valign="top" height="168" width="30%" bgcolor="#45347b">
 				<table cellspacing="0" cellpadding="0" border="0" width="100%">
-					<tr><td class="logobg" valign="top" align="center" height="120"><a href="/index.html"><img src="/images/gtop-new.jpg"/></a></td></tr>
-					<tr><td class="logobg" valign="top" align="center" height="48"><a href="/index.html"><img src="/images/gbot-new.gif"/></a></td></tr>
+					<tr><td class="logobg" valign="top" align="center" height="120"><a href="/index.html"><img border="0" src="/images/gtop-new.jpg"/></a></td></tr>
+					<tr><td class="logobg" valign="top" align="center" height="48"><a href="/index.html"><img border="0" src="/images/gbot-new.gif"/></a></td></tr>
 				</table>
 			</td>
 			
@@ -203,38 +203,45 @@
 			<td valign="top" height="96" align="right" width="30%" bgcolor="#dddaec">
 				<!--<table width="100%" height="100%" cellspacing="0" cellpadding="0" border="0">-->
 				<table width="100%" cellspacing="0" cellpadding="0" border="0">
-					<tr><td height="1%" valign="top" align="right"><img src="/images/gridtest.gif"/></td></tr>
+					<tr><td height="1%" valign="top" align="right">
+						<table border="0" cellpadding="0" cellspacing="0">
+						<tr><td align="center" valign="middle">
+							<p bgcolor="#eeebfd" class="altmenu">Download Mirrors:<br/>
+							<a class="altlink" href="http://www.ibiblio.org/gentoo">ibiblio.org (USA)</a><br/>
+							<a class="altlink" href="http://download.sourceforge.net/pub/mirrors/metalab/Linux/distributions/gentoo/">SourceForge (USA)</a></p>
+						</td><td>
+							<img src="/images/gridtest.gif"/>
+						</td></tr>
+						</table>
+					</td></tr>
 					<tr><td height="99%" valign="top" align="center">
 						<!--info goes here-->			
 						<table width="90%" cellspacing="0" cellpadding="5" border="0">
 						<!--<table width="90%" height="100%" cellspacing="0" cellpadding="5" border="0">-->
-						<tr><td class="infotext" valign="top">
-						<p class="infosub">Download Sites:</p>
-						<p class="infolist"><a href="http://www.ibiblio.org/gentoo">ibiblio.org mirror</a></p>
-						<p class="infolist"><a href="http://download.sourceforge.net/pub/mirrors/metalab/Linux/distributions/gentoo/">SourceForge mirror</a></p>
-
-						<p class="infosub">User Documentation:</p>
-						<p class="infolist"><font color="#ff0000"><b>New!</b></font><a href="/doc/desktop.html">Gentoo Linux Desktop Guide</a></p>
-						<p class="infolist"><font color="#ff0000"><b>New!</b></font><a href="/doc/build.html">Gentoo Linux 1.0_rc5 Build CD Install Guide</a></p>
-						<p>(you can find the i686 Binary CD Install Guide <a href="/index-download.html">here</a>)</p>
-						<p class="infolist"><a href="/doc/faq.html">Gentoo Linux FAQ</a></p>
-						<p class="infolist"><a href="/doc/portage-user.html">Portage User Guide</a></p>
-						<p class="infolist"><a href="/doc/nvidia_tsg.html">nvidia Troubleshooting Guide</a></p>
+						<tr><td valign="top">
+						<p class="altmenu">User Docs:<br/>
+						<a class="altlink" href="/doc/faq.html">FAQ</a><br/>
+						<a class="altlink" href="/doc/desktop.html">Desktop Guide</a><br/>
+						<a class="altlink" href="/doc/portage-user.html">Portage User Guide</a><br/>
+						<a class="altlink" href="/doc/build.html">Build CD Install Guide</a><br/>
+						<a class="altlink" href="/index-download.html">Binary CD Install Guide</a><br/>
+						<a class="altlink" href="/doc/nvidia_tsg.html">nvidia Troubleshooting Guide</a><br/>
+						<br/>
 						
-						<p class="infosub">Developer Documentation:</p>
-						<p class="infolist"><a href="/doc/xml-guide.html">Gentoo Linux Documentation Guide</a></p>
-						<p class="infolist"><a href="/doc/gentoo-howto.html">Development HOWTO</a></p>
-
+						Developer Docs:<br/>
+						<a class="altlink" href="/doc/gentoo-howto.html">Development HOWTO</a><br/>
+						<a class="altlink" href="/doc/xml-guide.html">XML Documentation Guide</a><br/>
+						<br/>
 	
-						<p class="infosub">Mailing Lists (click to subscribe/access archive):</p>
-						<p class="infolist"><a href="http://cvs.gentoo.org/mailman/listinfo/gentoo-dev">Developer discussion</a></p>
-						<p class="infolist"><a href="http://cvs.gentoo.org/mailman/listinfo/gentoo-announce">Announcements</a></p>
-						<p class="infolist"><a href="http://cvs.gentoo.org/mailman/listinfo/gentoo-cvs">Daily CVS log</a></p>
-
-												<p class="infosub">Other Resources:</p>
-						<p class="infolist">Use <a href="http://cvs.gentoo.org/cgi-bin/cvsweb.cgi">cvsweb</a> to browse our repository</p>
-						<p class="infolist">IRC: #gentoo on <a href="http://www.openprojects.net/">irc.openprojects.net</a></p>
-						</td></tr></table>
+						Mailing Lists:<br/>
+						<a class="altlink" href="http://cvs.gentoo.org/mailman/listinfo/gentoo-dev">gentoo-dev</a><br/>
+						<a class="altlink" href="http://cvs.gentoo.org/mailman/listinfo/gentoo-announce">gentoo-announce</a><br/>
+						<a class="altlink" href="http://cvs.gentoo.org/mailman/listinfo/gentoo-cvs">gentoo-cvs</a><br/>
+						<br/>
+						Other Resources:<br/>
+						<a class="altlink" href="http://cvs.gentoo.org/cgi-bin/cvsweb.cgi">cvsweb</a> (browse our repository)<br/>
+						IRC: #gentoo on <a class="altlink" href="http://www.openprojects.net/">OPN</a><br/>
+						</p></td></tr></table>
 					</td></tr>
 				</table>
 			</td>

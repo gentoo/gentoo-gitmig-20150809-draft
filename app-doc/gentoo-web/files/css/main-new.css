@@ -46,6 +46,12 @@ a.oldlink:visited { color: #9090c0; text-decoration: none; }
 a.oldlink:hover { color: #00ff00; text-decoration: underline; }
 a.oldlink:active { color: #00ff00; text-decoration: underline; }
 
+a.altlink:link { color: #7a5ada; text-decoration: none; }
+a.altlink:visited { color: #5a3aba; text-decoration: none; }
+a.altlink:hover { color: #7a5ada; text-decoration: underline; }
+a.altlink:active { color: #7a5ada; text-decoration: underline; }
+
+
 .menu {
 	font-size: 0.75em;
 	font-weight: bold;
@@ -55,6 +61,16 @@ a.oldlink:active { color: #00ff00; text-decoration: underline; }
 	padding-right: 1.0em;
 	padding-top: 0.5em;
 	padding-bottom: 0.75em;
+/*	background: black; */
+}
+
+.altmenu {
+	font-size: 0.65em;
+	font-weight: bold;
+	font-family: Verdana, Arial, Helvetica;
+	color: #000000;
+	padding-left: 1.0em;
+	padding-right: 1.0em;
 /*	background: black; */
 }
 
