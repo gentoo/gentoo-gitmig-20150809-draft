@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/Imaging-py21
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Imaging-py21/ChangeLog,v 1.6 2004/04/15 20:25:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Imaging-py21/ChangeLog,v 1.7 2004/04/26 01:23:18 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org>
+  Imaging-py21-1.1.3-r1.ebuild, Imaging-py21-1.1.4.ebuild:
+  Add die following econf for bug 48950
 
   15 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org>
   Imaging-py21-1.1.3-r1.ebuild:

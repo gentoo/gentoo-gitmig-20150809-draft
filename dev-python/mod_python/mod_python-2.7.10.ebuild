@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-2.7.10.ebuild,v 1.2 2004/04/01 01:52:07 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-2.7.10.ebuild,v 1.3 2004/04/26 01:24:34 agriffis Exp $
 
 inherit python
 
@@ -29,7 +29,7 @@ src_compile() {
 	echo 'echo "configure done"' >> configure
 
 	export OPTFLAGS="`/usr/sbin/apxs -q CFLAGS`"
-	econf --with-apxs=/usr/sbin/apxs
+	econf --with-apxs=/usr/sbin/apxs || die "econf failed"
 
 	sed -e 's/LIBEXECDIR=\/usr\/lib\/apache/LIBEXECDIR=${D}\/usr\/lib\/apache-extramodules/' \
 		-e 's/PY_STD_LIB=/PY_STD_LIB=${D}/' \

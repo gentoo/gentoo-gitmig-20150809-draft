@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Imaging/Imaging-1.1.3-r2.ebuild,v 1.7 2004/03/28 13:25:15 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Imaging/Imaging-1.1.3-r2.ebuild,v 1.8 2004/04/26 01:22:11 agriffis Exp $
 
 inherit distutils
 
@@ -23,7 +23,7 @@ src_compile() {
 
 	#Build the core imaging library (libImaging.a)
 	cd ${S}/libImaging
-	econf
+	econf || die "econf failed"
 	cp Makefile Makefile.orig
 
 	#Not configured by configure

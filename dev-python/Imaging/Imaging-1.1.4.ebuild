@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Imaging/Imaging-1.1.4.ebuild,v 1.11 2004/04/18 17:09:46 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Imaging/Imaging-1.1.4.ebuild,v 1.12 2004/04/26 01:22:11 agriffis Exp $
 
 inherit distutils eutils
 
@@ -30,7 +30,7 @@ src_compile() {
 
 	#Build the core imaging library (libImaging.a)
 	cd ${S}/libImaging
-	econf
+	econf || die "econf failed"
 	#Not configured by configure
 	sed -e "s:\(JPEGINCLUDE=[[:blank:]]*/usr/\)local/\(include\).*:\1\2:" \
 		-i Makefile

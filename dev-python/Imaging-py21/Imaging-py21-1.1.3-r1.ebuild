@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Imaging-py21/Imaging-py21-1.1.3-r1.ebuild,v 1.9 2004/04/15 20:25:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Imaging-py21/Imaging-py21-1.1.3-r1.ebuild,v 1.10 2004/04/26 01:23:18 agriffis Exp $
 
 PYTHON_SLOT_VERSION="2.1"
 
@@ -27,7 +27,7 @@ src_compile() {
 
 	#Build the core imaging library (libImaging.a)
 	cd ${S}/libImaging
-	econf
+	econf || die "econf failed"
 	cp Makefile Makefile.orig
 
 	#Not configured by configure

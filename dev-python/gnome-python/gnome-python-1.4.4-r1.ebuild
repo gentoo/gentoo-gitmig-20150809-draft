@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-1.4.4-r1.ebuild,v 1.2 2004/04/01 01:36:40 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/gnome-python-1.4.4-r1.ebuild,v 1.3 2004/04/26 01:21:06 agriffis Exp $
 
 inherit gnome.org python
 
@@ -29,7 +29,7 @@ src_unpack() {
 
 src_compile() {
 	CFLAGS="${CFLAGS} `gnome-config capplet --cflags`" \
-		econf
+		econf || die "econf failed"
 
 	cd ${S}/pygnome
 	emake || die
