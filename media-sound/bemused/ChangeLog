@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/bemused
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/bemused/ChangeLog,v 1.1 2005/01/06 03:33:11 chriswhite Exp $
+
+*bemused-1.73 (06 Jan 2005)
+
+  06 Jan 2005; Chris White <chriswhite@gentoo.org> +metadata.xml,
+  +bemused-1.73.ebuild:
+  Initial import into the tree. Fixes bug #40581. Thanks to Dirk-Jan Heijs for
+  the ebuild.
+
