@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/xvidcap-1.1.3.ebuild,v 1.4 2004/06/24 22:46:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xvidcap/xvidcap-1.1.3.ebuild,v 1.5 2004/08/10 03:19:50 pkdawson Exp $
 
 inherit eutils
 
@@ -14,6 +14,7 @@ KEYWORDS="x86"
 LICENSE="GPL-2"
 RDEPEND="gtk? ( >=x11-libs/gtk+-2.0.0 )
 	>=media-video/ffmpeg-0.4.7
+	<media-video/ffmpeg-0.4.9_pre1
 	media-libs/libpng
 	media-libs/jpeg
 	sys-libs/zlib
