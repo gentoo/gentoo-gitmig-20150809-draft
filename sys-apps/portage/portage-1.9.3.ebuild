@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.9.3.ebuild,v 1.1 2002/04/25 05:41:16 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.9.3.ebuild,v 1.2 2002/04/26 02:44:09 drobbins Exp $
  
 S=${WORKDIR}/${P}
 SLOT="0"
@@ -129,8 +129,8 @@ pkg_postinst() {
 	#fix cache (could contain staleness)
 	if [ -d ${ROOT}var/cache/edb/dep ]
 	then
-		rm -rf ${ROOT}var/cache/edb/dep/*
-	else
-		install -d ${ROOT}var/cache/edb/dep
-	fi	
+		#remove the entire dir because using * can overload the commandline
+		rm -rf ${ROOT}var/cache/edb/dep
+	fi
+	install -d ${ROOT}var/cache/edb/dep
 }
