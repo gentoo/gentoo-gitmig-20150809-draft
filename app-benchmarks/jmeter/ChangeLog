@@ -1,6 +1,11 @@
 # ChangeLog for app-benchmarks/jmeter
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/ChangeLog,v 1.5 2003/12/16 02:30:39 strider Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/jmeter/ChangeLog,v 1.6 2004/02/26 05:17:17 zx Exp $
+
+*jmeter-1.9.1 (28 Feb 2004)
+
+  28 Feb 2004; Chris Aniszczyk <zx@gentoo.org> jmeter-1.9.1.ebuild:
+  Version bump + we can build from source ;)
 
   15 Dec 2003; Adrian Almenar <strider@gentoo.org> jmeter-1.8.1.ebuild:
   Fixes bug #35733. Cannot find patch. Masked packages on arches where sun-jdk doesnt work.
