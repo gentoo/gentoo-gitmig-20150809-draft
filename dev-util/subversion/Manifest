@@ -4,13 +4,13 @@ MD5 7ef79cc81f35b5ed07b25f1f9cafd716 subversion-0.30.0.ebuild 7573
 MD5 2dcd70147ce07436d36a32bb656abcff subversion-1.0.0.ebuild 8199
 MD5 4620171b66184476cedaaabb7a901e46 subversion-0.37.0.ebuild 8151
 MD5 8fbcd267012fd1eef74d5161888cc7b8 metadata.xml 222
-MD5 2ab06de8a84a3b0b9126d59d6f932ce3 ChangeLog 11778
+MD5 556bae20b8779e82d48bd24a04238b30 ChangeLog 11919
 MD5 6601903057f11ebfe20fb631477a2063 subversion-0.32.1.ebuild 8139
 MD5 4fe1c6e4550d30bf61d45b2268c1454f subversion-0.27.0.ebuild 7890
 MD5 0399b293e5d63540f0d58152f0d346b2 subversion-0.31.0.ebuild 8280
 MD5 72f3c7e4fa24cdca35fbefd5c3624ec7 subversion-1.0.0-r1.ebuild 8622
 MD5 48e87e9f0ce09bda6fdaff08cd99b29d subversion-0.35.1.ebuild 7737
-MD5 c675440853554dd07fbe255af15316fe subversion-1.0.1.ebuild 8690
+MD5 d5013e055ed23a713f6f9f59492a8b1a subversion-1.0.1.ebuild 8709
 MD5 c055aef559559580f75e60ede5051e79 files/digest-subversion-0.28.0 130
 MD5 335ccf779acbf11679a47b048afd56d0 files/digest-subversion-0.34.0 70
 MD5 2addfcd2a73da5548c1fcbb279794e8f files/digest-subversion-0.35.1 70

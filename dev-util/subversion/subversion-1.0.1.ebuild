@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.0.1.ebuild,v 1.2 2004/03/26 19:46:45 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.0.1.ebuild,v 1.3 2004/03/26 20:37:59 pauldv Exp $
 
 inherit elisp-common libtool python
 
@@ -165,6 +165,7 @@ src_install () {
 	fi
 
 	if use berkdb; then
+		dobin svn-config
 		if use python; then
 			make install-swig-py DESTDIR=${D} DISTUTIL_PARAM=--prefix=${D}  LD_LIBRARY_PATH="-L${D}/usr/lib" || die "Installation of subversion python bindings failed"
 			# install cvs2svn
