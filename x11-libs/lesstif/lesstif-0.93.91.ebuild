@@ -17,11 +17,6 @@ DEPEND="virtual/glibc
 src_compile() {
 	elibtoolize
 
-	einfo "Fixing Mwm app-defaults path"
-	sed -i -e 's:$(libdir)/X11/app-defaults:$(sysconfdir)/X11/app-defaults:' clients/Motif-1.2/mwm/Makefile.in
-	sed -i -e 's:$(libdir)/X11/app-defaults:$(sysconfdir)/X11/app-defaults:' clients/Motif-1.2/mwm/Makefile.am
-	sed -i -e 's:usr/X11R6/lib/X11/app-defaults/Mwm:etc/X11/app-defaults/Mwm' doc/lessdox/clients/mwm.1
-
 	econf \
 	  --enable-build-12 \
 	  --disable-build-20 \
@@ -98,5 +93,4 @@ src_install() {
 	rm -fR ${D}/usr/lib/LessTif
 	rm -fR ${D}/usr/lib/X11
 	rm -f  ${D}/bin/mxmkmf-1.2
-	rm -fR ${D}/etc
 }
