@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.5-r4.ebuild,v 1.1 2001/08/05 22:58:06 pete Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.5-r4.ebuild,v 1.2 2001/08/08 20:37:43 pete Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
 
 A=""
 S=${WORKDIR}/${P}
@@ -73,7 +73,11 @@ src_install()
 		dodir /usr/X11R6/lib /usr/X11R6/share/man
 		ln -s share/man ${D}/usr/X11R6/man
 	fi
-	dodir /var /var/run /var/log/news /var/lock/subsys
+	dodir /var /var/run /var/lock/subsys
+	if [ -z "`use bootcd`" ]
+	then
+		dodir /var/log/news
+	fi
 	touch ${D}/var/log/lastlog
 	touch ${D}/var/run/utmp
 	touch ${D}/var/log/wtmp
@@ -128,10 +132,13 @@ src_install()
 	dosym rcboot.d /etc/rc.d/rc0.d
 	dosym rchalt.d /etc/rc.d/rc6.d
 	
-	dodir /etc/pam.d
-	cd ${FILESDIR}/pam.d
-	insinto /etc/pam.d
-	doins *
+	if [ -z "`use bootcd`" ]
+	then
+		dodir /etc/pam.d
+		cd ${FILESDIR}/pam.d
+		insinto /etc/pam.d
+		doins *
+	fi
 	
 	dodir /etc/rc.d/init.d
 	dodir /etc/rc.d/config

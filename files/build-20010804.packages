@@ -24,3 +24,4 @@
 ./sys-devel/spython/spython-2.0-r7.ebuild
 ./net-misc/wget/wget-1.7-r1.ebuild
 ./net-misc/rsync/rsync-2.4.6-r4.ebuild
+./sys-kernel/linux-sources/linux-sources-2.4.6-r2.ebuild
