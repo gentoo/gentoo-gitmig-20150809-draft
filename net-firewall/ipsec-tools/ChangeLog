@@ -1,0 +1,13 @@
+# ChangeLog for net-firewall/ipsec-tools
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.1 2003/12/16 18:04:33 plasmaroo Exp $
+
+*ipsec-tools-0.2.2 (16 Dec 2003)
+
+  16 Dec 2003; <plasmaroo@gentoo.org> ipsec-tools-0.2.2.ebuild,
+  files/ipsec.conf.sample, files/racoon.conf.d, files/racoon.init.d:
+
+  This is the initial commit of ipsec-tools. Thanks for this ebuild go to all
+  those involved in testing and developing it, please see Gentoo bug #26796 for
+  details.
+

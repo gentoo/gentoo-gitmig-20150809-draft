@@ -1,0 +1,10 @@
+#!/usr/sbin/setkey -f
+
+flush;
+spdflush;
+
+spdadd xxx.xxx.xxx.xxx/32 0.0.0.0/0 any
+    -P out ipsec esp/tunnel/xxx.xxx.xxx.xxx-yyy.yyy.yyy.yyy/require;
+
+spdadd 0.0.0.0/0 xxx.xxx.xxx.xxx/32 any 
+    -P in ipsec esp/tunnel/yyy.yyy.yyy.yyy-xxx.xxx.xxx.xxx/require;

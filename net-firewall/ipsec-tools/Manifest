@@ -1,0 +1,6 @@
+MD5 2a388ec3796d055df69095a16ab8e181 ChangeLog 571
+MD5 8906ebdd50784b94d1611eeaeebf407b ipsec-tools-0.2.2.ebuild 1095
+MD5 880e14fe000918f6a94070c38a33d6fe files/racoon.conf.d 479
+MD5 84cffb83a2579976f872a29d42767714 files/ipsec.conf.sample 260
+MD5 e183eace529012c4d6d61282b643d757 files/digest-ipsec-tools-0.2.2 69
+MD5 1b92416a20f032c713fb26c9cdfe7413 files/racoon.init.d 1129
