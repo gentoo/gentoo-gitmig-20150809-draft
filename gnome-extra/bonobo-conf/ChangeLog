@@ -1,9 +1,12 @@
 # ChangeLog for gnome-extra/bonobo-conf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bonobo-conf/ChangeLog,v 1.2 2002/04/12 16:58:45 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/bonobo-conf/ChangeLog,v 1.3 2002/07/25 02:46:34 spider Exp $
 
 
 *bonobo-conf-0.14 (11 Apr 2002)
+  25 Jul 2002; Spider <spider@gentoo.org> 
+  SLOT KEYWORDS and LICENSE added
+  
   11 Apr 2002; Spider <spider@gentoo.org>
   Update all glib dependencies to use glib-1.2*  in preparation of unmasking the glib-2.0.1 packages
     
