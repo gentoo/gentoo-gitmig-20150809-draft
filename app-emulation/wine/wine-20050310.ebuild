@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050310.ebuild,v 1.5 2005/03/20 19:33:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20050310.ebuild,v 1.6 2005/03/29 01:35:08 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,7 +12,7 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 IUSE="X alsa arts cups debug nas opengl gif glut jack jpeg oss ncurses doc lcms"
-RESTRICT="maketest" #72375
+RESTRICT="test" #72375
 
 RDEPEND=">=media-libs/freetype-2.0.0
 	media-fonts/corefonts
