@@ -1,8 +1,9 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libapreq2/libapreq2-2.04.03.ebuild,v 1.1 2004/09/28 19:38:35 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libapreq2/libapreq2-2.04.03.ebuild,v 1.2 2004/09/30 19:40:44 mr_bones_ Exp $
 
 inherit libtool eutils flag-o-matic
+
 MY_P=${P/alpha/}
 S=${WORKDIR}/${MY_P%%.[0-9][0-9]}-dev
 DESCRIPTION="A Apache Request Perl Module"
