@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/blas-reference
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-reference/ChangeLog,v 1.9 2004/09/06 00:01:02 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-reference/ChangeLog,v 1.10 2004/10/21 21:43:53 george Exp $
+
+  21 Oct 2004; George Shapovalov <george@gentoo.org> blas-reference-19940131.ebuild-r1 :
+  moved to use fortran.eclass (and 64-bit.eclass), keymasked -* until fortran.eclass settles
 
   06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org>
   blas-reference-19940131.ebuild:
