@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Stefan Jones <cretin@gentoo.org>
 # Author: Stefan Jones <cretin@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.0-r1.ebuild,v 1.4 2002/11/08 20:13:23 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.0-r1.ebuild,v 1.5 2002/11/09 19:52:54 cretin Exp $
 
 # Based on http://tushar.lfsforum.org/javafromscratch.txt (LFS)
 # By Tushar Teredesai <Tush@Yahoo.Com>
@@ -39,7 +39,7 @@ RDEPEND="virtual/glibc
 	>=dev-java/java-config-0.1.3"
 DEPEND="${RDEPEND}
 	app-arch/unzip
-	virtual/jdk
+	virtual/jdk-1.4
 	>=x11-libs/lesstif-0.93.36
 	!x11-libs/openmotif"
 
@@ -49,8 +49,8 @@ PROVIDE="virtual/jre-1.4.0
 
 pkg_setup() {	
 	#Check if we have enough space
-	if [ `df /var/tmp/portage/ | tail -n 1 | awk '{ print $4 }'` -le 2097152 ] ; then
-		eerror "You need about 2G of disk space to compile this at /var/tmp/portage,"
+	if [ `df ${PORTAGE_TMPDIR} | tail -n 1 | awk '{ print $4 }'` -le 2097152 ] ; then
+		eerror "You need about 2G of disk space to compile this at ${PORTAGE_TMPDIR},"
 		eerror "it seems you don't have that much, quiting, sorry!"
 		die "Not enough disk space"
 	fi
