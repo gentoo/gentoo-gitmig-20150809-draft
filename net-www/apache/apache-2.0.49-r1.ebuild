@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r1.ebuild,v 1.1 2004/04/15 13:48:45 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r1.ebuild,v 1.2 2004/04/15 18:54:48 zul Exp $
 
 inherit flag-o-matic eutils fixheadtails
 
@@ -56,6 +56,10 @@ src_unpack() {
 	unpack ${A} || die
 	cd ${S} || die
 	epatch ${FILESDIR}/apache-2.0.49-gentoo.diff || die
+
+	if use ipv6; then
+		epatch ${FILESDIR}/httpd-2.0.49-ipv6.patch
+	fi
 
 	#avoid utf-8 charset problems
 	export LC_CTYPE=C
