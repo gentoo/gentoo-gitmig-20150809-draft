@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.25 2005/01/11 02:42:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.26 2005/01/11 11:53:05 eradicator Exp $
 
 inherit eutils flag-o-matic gcc versionator
 
@@ -53,7 +53,7 @@ LICENSE="LGPL-2"
 #~sparc: This is only used by the sparc64-multilib PROFILE_ARCH as versions
 #        after ~2.3.3.20040420 break blackdown-jdk on sparc.
 KEYWORDS="x86 amd64 hppa ppc64 ~ppc -mips ~sparc"
-IUSE="nls pic build nptl erandom hardened multilib debug userlocales"
+IUSE="nls pic build nptl erandom hardened multilib debug userlocales emul-linux-x86"
 RESTRICT="nostrip multilib-pkg" # we'll handle stripping ourself #46186
 
 # We need new cleanup attribute support from gcc for NPTL among things ...
@@ -70,7 +70,7 @@ RDEPEND="virtual/os-headers
 	sys-apps/baselayout
 	nls? ( sys-devel/gettext )"
 # until we compile the 32bit glibc here
-PDEPEND="amd64? ( multilib? ( app-emulation/emul-linux-x86-glibc ) )"
+PDEPEND="emul-linux-x86? ( multilib? ( app-emulation/emul-linux-x86-glibc ) )"
 
 PROVIDE="virtual/glibc virtual/libc"
 
@@ -609,13 +609,14 @@ src_unpack() {
 
 src_compile() {
 	if [ -n "${MULTILIB_ABIS}" -a -z "${OABI}" ] && ! hasq multilib-pkg ${FEATURES}; then
-		OABI="${ABI}"
+		local OABI="${ABI}"
 		for ABI in ${MULTILIB_ABIS}; do
 			export ABI
 			einfo "Compiling ${ABI} glibc"
 			src_compile && mv ${WORKDIR}/build ${WORKDIR}/build.${ABI}
 		done
 		ABI="${OABI}"
+		unset OABI
 		return 0
 	fi
 
@@ -674,7 +675,7 @@ src_compile() {
 
 src_install() {
 	if [ -n "${MULTILIB_ABIS}" -a -z "${OABI}" ] && ! hasq multilib-pkg ${FEATURES}; then
-		OABI="${ABI}"
+		local OABI="${ABI}"
 		for ABI in ${MULTILIB_ABIS}; do
 			export ABI
 			mv ${WORKDIR}/build.${ABI} ${WORKDIR}/build
@@ -691,8 +692,9 @@ src_install() {
 			fi
 
 		done
-		return 0
 		ABI="${OABI}"
+		unset OABI
+		return 0
 	fi
 
 	setup_flags
@@ -799,7 +801,7 @@ EOF
 	rm -f ${D}/etc/localtime
 
 	# Some things want this, notably ash.
-	dosym /usr/lib/libbsd-compat.a /usr/lib/libbsd.a
+	dosym /usr/$(get_libdir)/libbsd-compat.a /usr/$(get_libdir)/libbsd.a
 
 	# This is our new config file for building locales
 	insinto /etc

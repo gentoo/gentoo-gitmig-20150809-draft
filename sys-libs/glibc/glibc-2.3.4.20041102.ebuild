@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.19 2005/01/11 02:42:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.20 2005/01/11 11:53:06 eradicator Exp $
 
 inherit eutils flag-o-matic gcc versionator
 
@@ -53,7 +53,7 @@ LICENSE="LGPL-2"
 #-sparc: Compiled fine with 3.4.1-r1, but tar would consistantly bus error when untarring the
 #        samba-1.0.9 tarball.
 KEYWORDS="~amd64 ppc64 -hppa ~ia64 ~ppc ~x86 ~mips -sparc"
-IUSE="nls pic build nptl nptlonly erandom hardened multilib debug userlocales nomalloccheck"
+IUSE="nls pic build nptl nptlonly erandom hardened multilib debug userlocales nomalloccheck emul-linux-x86"
 RESTRICT="nostrip multilib-pkg" # we'll handle stripping ourself #46186
 
 # We need new cleanup attribute support from gcc for NPTL among things ...
@@ -70,7 +70,7 @@ RDEPEND="virtual/os-headers
 	sys-apps/baselayout
 	nls? ( sys-devel/gettext )"
 # until we compile the 32bit glibc here
-PDEPEND="amd64? ( multilib? ( app-emulation/emul-linux-x86-glibc ) )"
+PDEPEND="emul-linux-x86? ( multilib? ( app-emulation/emul-linux-x86-glibc ) )"
 
 PROVIDE="virtual/glibc virtual/libc"
 
@@ -451,7 +451,7 @@ do_arch_ppc64_patches() {
 	# Any needed patches for ppc64 go here
 
 	# setup lib -- seems like a good place to set this up
-	get_libdir_override lib64
+	[ -z "${MULTILIB_ABIS}" ] && get_libdir_override lib64
 }
 
 
@@ -693,13 +693,14 @@ glibc_do_configure() {
 
 src_compile() {
 	if [ -n "${MULTILIB_ABIS}" -a -z "${OABI}" ] && ! hasq multilib-pkg ${FEATURES}; then
-		OABI="${ABI}"
+		local OABI="${ABI}"
 		for ABI in ${MULTILIB_ABIS}; do
 			export ABI
 			einfo "Compiling ${ABI} glibc"
 			src_compile && mv ${WORKDIR}/build ${WORKDIR}/build.${ABI}
 		done
 		ABI="${OABI}"
+		unset OABI
 		return 0
 	fi
 
@@ -720,7 +721,7 @@ src_compile() {
 
 src_install() {
 	if [ -n "${MULTILIB_ABIS}" -a -z "${OABI}" ] && ! hasq multilib-pkg ${FEATURES}; then
-		OABI="${ABI}"
+		local OABI="${ABI}"
 		for ABI in ${MULTILIB_ABIS}; do
 			export ABI
 			mv ${WORKDIR}/build.${ABI} ${WORKDIR}/build
@@ -738,6 +739,7 @@ src_install() {
 
 		done
 		ABI="${OABI}"
+		unset OABI
 		return 0
 	fi
 
@@ -919,7 +921,7 @@ EOF
 	rm -f ${D}/etc/localtime
 
 	# Some things want this, notably ash.
-	dosym /usr/lib/libbsd-compat.a /usr/lib/libbsd.a
+	dosym /usr/$(get_libdir)/libbsd-compat.a /usr/$(get_libdir)/libbsd.a
 
 	insinto /etc
 	# This is our new config file for building locales
