@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.1.57-r1.ebuild,v 1.7 2004/07/01 11:53:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.1.57-r1.ebuild,v 1.8 2004/10/01 00:11:00 kugelfang Exp $
 
 inherit flag-o-matic
 
@@ -12,8 +12,7 @@ SRC_URI="ftp://ftp.octave.org/pub/octave/bleeding-edge/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~alpha ~sparc amd64"
-IUSE="emacs static readline zlib tetex hdf5 mpi"
-#IUSE="emacs static readline zlib tetex hdf5 mpi ifc blas" NOTE: Already added to use.local.desc.
+IUSE="emacs static readline zlib tetex hdf5 mpi ifc blas"
 
 DEPEND="virtual/libc
 	>=sys-libs/ncurses-5.2-r3
@@ -23,8 +22,8 @@ DEPEND="virtual/libc
 	zlib? ( sys-libs/zlib )
 	hdf5? ( dev-libs/hdf5 )
 	tetex? ( virtual/tetex )
-	x86? ( ifc? ( dev-lang/ifc ) )"
-#	blas? ( virtual/blas )" NOTE: Blas-* is not fully done.
+	x86? ( ifc? ( dev-lang/ifc ) )
+	blas? ( virtual/blas )"
 
 # NOTE: octave supports blas/lapack from intel but this is not open
 # source nor is it free (as in beer OR speech) Check out...
@@ -50,6 +49,11 @@ src_compile() {
 	use hdf5 || myconf="${myconf} --without-hdf5"
 	use mpi  || myconf="${myconf} --without-mpi"
 
+	# Only add -lz to LDFLAGS if we have zlib in USE !
+	# BUG #52604
+	# Danny van Dyk 2004/08/26
+	use zlib && LDFLAGS="${LDFLAGS} -lz"
+
 	# NOTE: This version actually works with gcc-3.x
 	./configure ${myconf} --prefix=/usr \
 		--sysconfdir=/etc \
@@ -61,7 +65,7 @@ src_compile() {
 		--target=${CHOST} \
 		--enable-rpath \
 		--enable-lite-kernel \
-		LDFLAGS=-lz || die "configure failed"
+		LDFLAGS=${LDFLAGS} || die "configure failed"
 
 	emake || die "emake failed"
 }
