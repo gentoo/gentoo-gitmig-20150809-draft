@@ -1,18 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 675ee4ca040bb12d32f2049462557ed3 snortsnarf-050314.1.ebuild 1543
 MD5 6e86358eb08cd4a104ae8699b16fb8a6 snortsnarf-021111.1-r4.ebuild 1509
 MD5 e9cf129ba77c0e4833d9f9fd3097f5d3 snortsnarf-021111.1-r3.ebuild 1472
-MD5 7bb34ad6af3e7601afd978a468d43670 ChangeLog 2093
+MD5 79b663c07427d7cec6533c25b5e570ea ChangeLog 2293
 MD5 7380609ed15e1e589ab8a1ac5edfc362 metadata.xml 278
 MD5 a3446421109ba3ee7f4fde3acdad7eac files/snortsnarf-021111.1-usage.patch 665
+MD5 589dee3c52380a72ecda273d1ac37ab8 files/digest-snortsnarf-050314.1 71
 MD5 a25e9ca70d5bf65e193bdbbe153ae7e2 files/digest-snortsnarf-021111.1-r3 71
 MD5 a25e9ca70d5bf65e193bdbbe153ae7e2 files/digest-snortsnarf-021111.1-r4 71
 MD5 cba2a821966b2abf0265fb38c18e5c9a files/snortsnarf-021111.1-fix-array-refs.diff 1554
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCFc1aEZCkKN40op4RAn6eAKC3GDKPVgtsMhlpT08O++r+WnwaiACffzNu
-f3pwK1AZIDp6Zsjig9sS4vI=
-=Hz3f
------END PGP SIGNATURE-----

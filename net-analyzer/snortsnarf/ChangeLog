@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/snortsnarf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsnarf/ChangeLog,v 1.13 2005/02/18 11:08:58 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsnarf/ChangeLog,v 1.14 2005/03/27 01:48:26 vanquirius Exp $
+
+*snortsnarf-050314.1 (26 Mar 2005)
+
+  26 Mar 2005; Marcelo Goes <vanquirius@gentoo.org>
+  +snortsnarf-050314.1.ebuild:
+  Version bump. Fixes bug 86814. Thanks to Marco Morales <soulse@gmail.com>.
 
 *snortsnarf-021111.1-r4 (18 Feb 2005)
 
