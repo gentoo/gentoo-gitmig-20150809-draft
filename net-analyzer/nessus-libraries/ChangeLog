@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/nessus-libraries
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.17 2003/10/13 11:44:49 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.18 2003/11/19 08:26:40 phosphan Exp $
+
+*nessus-libraries-2.0.9 (19 Nov 2003)
+
+  19 Nov 2003; Patrick Kursawe <phosphan@gentoo.org>
+  nessus-libraries-1.2.4.ebuild, nessus-libraries-1.2.7.ebuild,
+  nessus-libraries-2.0.6a.ebuild, nessus-libraries-2.0.9.ebuild:
+  Version bump + cleanup
 
 *nessus-libraries-2.0.8a (13 Oct 2003)
 
