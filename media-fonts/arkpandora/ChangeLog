@@ -1,0 +1,10 @@
+# ChangeLog for media-fonts/arkpandora
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/arkpandora/ChangeLog,v 1.1 2004/10/17 08:16:40 usata Exp $
+
+*arkpandora-2.04 (17 Oct 2004)
+
+  17 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +arkpandora-2.04.ebuild:
+  Initial import. This closes bug #30389.
+
