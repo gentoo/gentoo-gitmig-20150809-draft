@@ -5,7 +5,7 @@ MD5 9e59bdb3d630d3bb3dc4781c860c7475 nvidia-glx-1.0.5328-r2.ebuild 3228
 MD5 3be2c966884ee6dd95c2bff44780b636 nvidia-glx-1.0.6106-r3.ebuild 5351
 MD5 1436eb921459054e1a77df4a58ad4539 nvidia-glx-1.0.6111.ebuild 5345
 MD5 03058534db237898d41aed54b76de5dd nvidia-glx-1.0.4363-r1.ebuild 2984
-MD5 c89dd2ec3d92b34ddbaf55b363fd459f nvidia-glx-1.0.4499-r1.ebuild 2727
+MD5 0864f90201cabc385d1c1471340d8170 nvidia-glx-1.0.4499-r1.ebuild 2709
 MD5 ff6993d09167792f613205542ae2af46 ChangeLog 12559
 MD5 a877edb407b63894d17386ea0aaca151 metadata.xml 286
 MD5 97f35a7b23f2e60d2abc5eff121bea3f files/nvidia-glx-1.0.4499-defines.patch 437
