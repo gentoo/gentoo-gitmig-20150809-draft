@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20020710-r1.ebuild,v 1.4 2002/07/22 07:45:24 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20020710-r1.ebuild,v 1.5 2002/07/27 18:25:13 raker Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Wine is a free implementation of Windows on Unix."
@@ -86,6 +86,12 @@ src_install () {
 	
 	insinto /etc/env.d
 	doins ${FILESDIR}/80wine
+
+	# for some reason regapi isn't installing... 
+	insinto /usr/wine/bin
+	insopts -m 755
+	doins ${S}/programs/regapi/regapi
+
 }
 
 pkg_postinst() {
