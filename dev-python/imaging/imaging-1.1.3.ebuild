@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/imaging-1.1.3.ebuild,v 1.1 2004/07/19 21:50:44 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/imaging/imaging-1.1.3.ebuild,v 1.2 2004/08/20 15:29:45 pythonhead Exp $
 
 IUSE="tcltk"
 
@@ -14,6 +14,7 @@ HOMEPAGE="http://www.pythonware.com/downloads/#pil"
 DEPEND=">=dev-lang/python-2.0
 	>=media-libs/jpeg-6a
 	>=sys-libs/zlib-0.95
+	>=media-libs/freetype-2.1.5
 	tcltk? ( dev-lang/tk )"
 
 RDEPEND=""
