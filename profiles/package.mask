@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3562 2005/02/05 10:00:21 eradicator Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3563 2005/02/05 11:51:35 trapni Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,13 @@
 ##
 ##   End example
 ##
+
+# <trapni@gentoo.org> (4 Feb 2005)
+# Apache herd package refresh
+# These ebuilds are incompatible with new apache and related ebuilds.
+# See Meta-bug #76457.
+net-www/mod_protection
+net-www/mod_contribs
 
 # Mike Doty <kingtaco@gentoo.org> (4 Feb 2005)
 # masking due to replacment by media-video/spca5xx. due for
