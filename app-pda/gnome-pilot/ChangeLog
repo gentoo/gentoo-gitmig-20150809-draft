@@ -1,6 +1,12 @@
 # ChangeLog for app-pda/gnome-pilot
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.4 2003/09/12 19:31:11 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.5 2003/09/20 14:44:30 liquidx Exp $
+
+*gnome-pilot-2.0.10-r1 (20 Sep 2003)
+
+  20 Sep 2003; Alastair Tse <liquidx@gentoo.org> gnome-pilot-2.0.10-r1.ebuild,
+  files/gnome-pilot-2.0.10-memofile.patch:
+  added patch to fix memofile syncing problems (eg. it works now)
 
   12 Sep 2003; Alastair Tse <liquidx@gentoo.org> gnome-pilot-2.0.10.ebuild,
   gnome-pilot-2.0.9.ebuild:
