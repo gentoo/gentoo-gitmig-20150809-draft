@@ -1,11 +1,14 @@
 # ChangeLog for sys-apps/man
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.34 2003/06/24 14:29:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.35 2003/07/06 15:53:31 gmsoft Exp $
 
   24 Jun 2003; Aron Griffis <agriffis@gentoo.org> man-1.5l-r6.ebuild:
   Mark stable on alpha
 
 *man-1.5l-r6 (10 Jun 2003)
+
+  06 Jul 2003; Guy Martin <gmsoft@gentoo.org> man-1.5l-r6.ebuild :
+  Marked stable on hppa.
 
   22 Jun 2003; Joshua Kinard <kumba@gentoo.org> man-1.5l-r6.ebuild:
   Changed ~sparc & ~mips to sparc & mips in KEYWORDS

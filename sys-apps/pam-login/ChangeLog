@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/pam-login
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.19 2003/06/29 00:38:16 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.20 2003/07/06 15:48:01 gmsoft Exp $
 
   28 Jun 2003; Chris PeBenito <pebenito@gentoo.org> pam-login-3.11.ebuild,
   files/pam-login-3.11-selinux.diff:
@@ -10,6 +10,9 @@
   Mark stable on alpha
 
 *pam-login-3.11 (19 May 2003)
+
+  06 Jul 2003; Guy Martin <gmsoft@gentoo.org> pam-login-3.11.ebuild :
+  Marked stable on hppa.
 
   22 Jun 2003; Joshua Kinard <kumba@gentoo.org> pam-login-3.11.ebuild:
   Changed ~sparc & ~mips to sparc & mips

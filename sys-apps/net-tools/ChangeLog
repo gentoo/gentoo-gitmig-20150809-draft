@@ -1,11 +1,14 @@
 # ChangeLog for sys-apps/net-tools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.22 2003/06/23 22:22:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.23 2003/07/06 15:57:57 gmsoft Exp $
 
   23 Jun 2003; Aron Griffis <agriffis@gentoo.org> net-tools-1.60-r7.ebuild:
   Mark stable on alpha
 
 *net-tools-1.60-r7 (18 May 2003)
+
+  06 Jul 2003; Guy Martin <gmsoft@gentoo.org> net-tools-1.60-r7.ebuild :
+  Marked stable on hppa.
 
   22 Jun 2003; Joshua Kinard <kumba@gentoo.org> net-tools-1.60-r7.ebuild:
   Changed ~sparc & ~mips to sparc & mips
