@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0.ebuild,v 1.3 2003/08/03 04:43:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0.ebuild,v 1.4 2003/09/06 22:07:08 msterret Exp $
 
 # If you don't want to build the Xvesa server, do this.
 # VESA="no" emerge kdrive
@@ -72,7 +72,7 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 	dev-lang/perl
 	media-libs/libpng
 	app-arch/unzip
-	pam? ( >=sys-libs/pam-0.75 )" 
+	pam? ( >=sys-libs/pam-0.75 )"
 
 PROVIDE="virtual/x11"
 
@@ -113,10 +113,10 @@ src_unpack() {
 #define ServerXdmcpDefines         -DXDMCP
 #define BuildFonts                 NO" >>config/cf/host.def
 
-	# As far as I know, you can't use Xwrapper for multiple X servers, 
+	# As far as I know, you can't use Xwrapper for multiple X servers,
 	# so we have to suid Xfbdev and Xvesa. mharris (redhat) also does
 	# this.
-	echo "#define InstallXserverSetUID YES" >> config/cf/host.def	
+	echo "#define InstallXserverSetUID YES" >> config/cf/host.def
 	echo "#define BuildServersOnly YES" >> config/cf/host.def
 
 	# Bug #12775 .. fails with -Os.
@@ -208,7 +208,7 @@ src_unpack() {
 	if use xinerama &>/dev/null
 	then
 		echo "#define BuildXinerama YES" >> config/cf/host.def
-		# Don't know if this is necessary. Probably. 
+		# Don't know if this is necessary. Probably.
 		echo "#define BuildXineramaLibrary YES" >> config/cf/host.def
 	fi
 
@@ -231,37 +231,37 @@ src_unpack() {
 		echo "#define XSavageServer YES" >> config/cf/host.def
 	fi
 
-	if vcards trident &>/dev/null 
+	if vcards trident &>/dev/null
 	then
 		echo "#define XTridentServer YES" >> config/cf/host.def
 	fi
 
-	if vcards sis &>/dev/null 
+	if vcards sis &>/dev/null
 	then
 		echo "#define XSis530Server YES" >> config/cf/host.def
 	fi
 
-	if vcards trio &>/dev/null 
+	if vcards trio &>/dev/null
 	then
 		echo "#define XTrioServer YES" >> config/cf/host.def
 	fi
 
-	if vcards ts300 &>/dev/null 
+	if vcards ts300 &>/dev/null
 	then
 		echo "#define XTS300Server YES" >> config/cf/host.def
-	fi 
+	fi
 
-	if vcards igs &>/dev/null 
+	if vcards igs &>/dev/null
 	then
 		echo "#define XIgsServer YES" >> config/cf/host.def
-	fi 
+	fi
 
-	if vcards i810 &>/dev/null 
+	if vcards i810 &>/dev/null
 	then
 		echo "#define Xi810Server YES" >> config/cf/host.def
 	fi
 
-	if vcards mach64 &>/dev/null 
+	if vcards mach64 &>/dev/null
 	then
 		echo "#define Xmach64Server YES" >> config/cf/host.def
 	fi
@@ -321,37 +321,37 @@ src_install() {
 	fperms 4755 /usr/X11R6/bin/Xtrident
 	fi
 
-	if vcards sis &>/dev/null 
+	if vcards sis &>/dev/null
 	then
 	doexe programs/Xserver/Xsis530
 	fperms 4755 /usr/X11R6/bin/Xsis530
 	fi
 
-	if vcards trio &>/dev/null 
+	if vcards trio &>/dev/null
 	then
 	doexe programs/Xserver/Xtrio
 	fperms 4755 /usr/X11R6/bin/Xtrio
 	fi
 
-	if vcards ts300 &>/dev/null 
+	if vcards ts300 &>/dev/null
 	then
 	doexe programs/Xserver/Xts300
 	fperms 4755 /usr/X11R6/bin/Xts300
 	fi
 
-	if vcards igs &>/dev/null 
+	if vcards igs &>/dev/null
 	then
 	doexe programs/Xserver/Xigs
 	fperms 4755 /usr/X11R6/bin/Xigs
 	fi
 
-	if vcards i810 &>/dev/null 
+	if vcards i810 &>/dev/null
 	then
 	doexe programs/Xserver/Xi810
 	fperms 4755 /usr/X11R6/bin/Xi810
 	fi
 
-	if vcards mach64 &>/dev/null 
+	if vcards mach64 &>/dev/null
 	then
 	doexe programs/Xserver/Xmach64
 	fperms 4755 /usr/X11R6/bin/Xmach64

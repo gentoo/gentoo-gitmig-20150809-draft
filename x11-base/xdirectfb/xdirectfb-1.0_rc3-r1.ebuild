@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xdirectfb/xdirectfb-1.0_rc3-r1.ebuild,v 1.3 2003/03/11 21:11:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xdirectfb/xdirectfb-1.0_rc3-r1.ebuild,v 1.4 2003/09/06 22:07:08 msterret Exp $
 
 inherit eutils
 
@@ -31,16 +31,16 @@ DEPEND=">=sys-libs/ncurses-5.1
 	sys-devel/flex
 	dev-lang/perl
 	>=dev-libs/DirectFB-0.9.16"
-	
+
 src_unpack () {
 	unpack ${A}
 
 	cd ${X}
-	cp xc-directfb.diff ${S} 
+	cp xc-directfb.diff ${S}
 	cp -a programs/Xserver/hw/directfb ${S}/programs/Xserver/hw
 	cp ${X}/config/cf/* ${S}/config/cf
 	cp ${FILESDIR}/host.def ${S}/config/cf/
-	
+
 	cd ${S}
 	epatch ./xc-directfb.diff
 
@@ -54,7 +54,7 @@ src_unpack () {
 
 	sed "s:DSPF_RGB15:DSPF_ARGB1555:g" \
 		${T}/rootlessDirectFB.c > rootlessDirectFB.c
-	
+
 }
 
 src_compile() {
@@ -65,8 +65,8 @@ src_install() {
 #	make install DESTDIR=${D}
 
 	exeinto /usr/X11R6/bin
-	doexe ${S}/programs/Xserver/XDirectFB 
-	doexe ${FILESDIR}/startxdfb 
+	doexe ${S}/programs/Xserver/XDirectFB
+	doexe ${FILESDIR}/startxdfb
 
 	mv ${S}/programs/Xserver/hw/directfb/XDirectFB._man ./XDirectFB.1x
 	insinto /usr/X11R6/man/man1
@@ -75,9 +75,9 @@ src_install() {
 	dodir /etc/X11/xinit
 	cp ${FILESDIR}/.dfbserverrc ${D}/etc/skel
 	cp ${FILESDIR}/dfbserverrc ${D}/etc/X11/xinit
-	
+
 	dohtml ${S}/programs/Xserver/hw/directfb/XDirectFB.1x.html
-	
+
 	cd ${X}
 	dodoc AUTHORS ChangeLog INSTALL README TODO
 }
