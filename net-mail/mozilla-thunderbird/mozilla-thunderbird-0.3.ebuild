@@ -1,21 +1,27 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.2_alpha20030826.ebuild,v 1.3 2003/09/08 17:00:03 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.3.ebuild,v 1.1 2003/10/17 16:33:36 brad Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins
 
 # Added to get thunderbird to compile on sparc.
 replace-sparc64-flags
+if [ "`use ppc`" -a "$(gcc-major-version)" -eq "3" -a "$(gcc-minor-version)" -eq "3" ]
+then
+
+append-flags -fno-strict-aliasing
+
+fi
+
 
 S=${WORKDIR}/mozilla
-MOZ_CO_DATE="20030826"
 
 EMVER="0.81.latest"
 IPCVER="1.0.4"
 
 DESCRIPTION="Thunderbird Mail Client"
 HOMEPAGE="http://www.mozilla.org/projects/thunderbird/"
-SRC_URI="mirror://gentoo/MozillaThunderbird-${MOZ_CO_DATE}-source.tar.bz2
+SRC_URI="http://ftp.mozilla.org/pub/thunderbird/releases/${PV}/thunderbird-source-${PV}.tar.bz2
 	 crypt? ( mirror://gentoo/enigmail-${EMVER}.tar.gz
 	   		  http://downloads.mozdev.org/enigmail/src/ipc-${IPCVER}.tar.gz )"
 
@@ -48,9 +54,18 @@ DEPEND="${RDEPEND}
 export MOZ_THUNDERBIRD=1
 export MOZ_ENABLE_XFT=1
 
+pkg_setup() {
+	einfo "Please unmerge previous installs of Mozilla Thunderbird before"
+	einfo "merging this. Running emerge unmerge mozilla-thunderbird && rm -rf"
+	einfo "/usr/lib/MozillaThunderbird will ensure that all files are"
+	einfo "removed. If you need to do this, please press ctrl-c now and"
+	einfo "resume emerging once you're done."
+	sleep 5
+}
+
 src_unpack() {
 
-	unpack MozillaThunderbird-${MOZ_CO_DATE}-source.tar.bz2
+	unpack thunderbird-source-${PV}.tar.bz2
 
 	# Unpack the enigmail plugin
 	if use crypt
