@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/irqbalance
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/ChangeLog,v 1.1 2004/01/11 13:37:17 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/irqbalance/ChangeLog,v 1.2 2004/05/24 21:37:34 lv Exp $
+
+  24 May 2004; Travis Tilley <lv@gentoo.org> irqbalance-0.08.ebuild:
+  added ~amd64 keyword
 
 *irqbalance-0.08 (11 Jan 2004)
 
