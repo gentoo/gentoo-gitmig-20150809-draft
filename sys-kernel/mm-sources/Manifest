@@ -6,7 +6,7 @@ MD5 5e95fced23ea7c26d39274bc200dabd5 metadata.xml 351
 MD5 b9eb796023fdab38a56e30135dd57501 mm-sources-2.6.1_rc1-r2.ebuild 3109
 MD5 01a838b34918f69ee08e3674c2b3c6e7 files/digest-mm-sources-2.6.0-r1 124
 MD5 1ad49f2d7d99c775522b3e7b06f4e9de files/digest-mm-sources-2.6.0-r2 125
-MD5 05f3097edb6fd323d0ddf083fb25f838 files/mm-sources.CAN-2003-0985.patch 414
+MD5 5e4b24d4c540af721c5bc7e3ad77f40b files/mm-sources.CAN-2003-0985.patch 414
 MD5 c57fb303f389d1b448d8c5ffa004b58f files/apic.patch 533
 MD5 c2a85ee37f0ce1076159ec64b7c5a78d files/wpadded.patch 1751
 MD5 b5da5c743790e47591d9ae0dfd9ba795 files/digest-mm-sources-2.6.1_rc1-r1 192
