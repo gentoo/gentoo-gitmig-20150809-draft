@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/yaboot
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+
+*pbbuttons-0.4.9-r1 (Wed May 8 23:28:00 2002 EST); daybird <daybird@gentoo.org>:
+
+Wed May 8 23:28:00 2002 EST; daybird <daybird@gentoo.org>: 
+	
+	OK, so this is the second ebuild (forgot the changelog the first time).
+	It now installs sandbox-safe, and config file goes into /etc, not 
+	/usr/etc (so it willbe protected by config_protect).
