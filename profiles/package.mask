@@ -304,10 +304,6 @@ dev-lisp/cmucl-bin
 =kde-base/kdebase-3.2.0_rc1
 =kde-base/arts-1.2.0_rc1
 
-# <spider@gentoo.org> (01 Sep 2003)
-# This one requires more testing. Appears to be buggier than the i
-# previous version
-=media-video/totem-0.99.3
 
 # <liquidx@gentoo.org> (29 Aug 2003)
 # initial testing for python 2.3.x. do not unmask unless you
@@ -696,11 +692,6 @@ app-cdr/cddump
 # spider@gentoo.org 23 May 2002
 # This one doesn't build, looks abandondware
 app-arch/gnorpm
-
-# spider@gentoo.org 27 May 2002
-# Masked because it doesnt work properly
-# and because I'm not inclined to break that many users systems. see bug #3065
-x11-libs/gdkxft
 
 # stroke@gentoo.org 11 Jul 2002
 # app-cdr/eroaster-2.1.0 development branch #4250, masked for testing
