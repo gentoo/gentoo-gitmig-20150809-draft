@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-0.9.ebuild,v 1.2 2004/12/20 20:57:12 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird-bin/mozilla-thunderbird-bin-0.9.ebuild,v 1.3 2005/03/23 20:04:33 seemant Exp $
 
 inherit nsplugins eutils mozilla-launcher
 
@@ -29,7 +29,7 @@ RDEPEND="virtual/x11
 	dev-libs/expat
 	app-arch/zip
 	app-arch/unzip
-	>=net-www/mozilla-launcher-1.13"
+	>=www-client/mozilla-launcher-1.13"
 
 src_install() {
 	# Install thunderbird in /opt
