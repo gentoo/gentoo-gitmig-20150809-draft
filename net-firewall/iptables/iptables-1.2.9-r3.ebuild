@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.9-r3.ebuild,v 1.1 2004/06/28 20:36:52 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.9-r3.ebuild,v 1.2 2004/07/02 09:41:49 pylon Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.iptables.org/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~mips alpha arm hppa amd64 ia64"
+KEYWORDS="x86 ppc sparc ~mips alpha arm hppa amd64 ia64"
 IUSE="ipv6 static extensions"
 DEPEND="virtual/linux-sources"
 
