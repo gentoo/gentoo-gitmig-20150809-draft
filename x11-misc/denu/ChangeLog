@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/denu
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/denu/ChangeLog,v 1.1 2005/03/19 20:01:23 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/denu/ChangeLog,v 1.2 2005/03/19 20:26:21 blubb Exp $
+
+*denu-2.3.2 (19 Mar 2005)
+
+  19 Mar 2005; <blubb@gentoo.org> +denu-2.3.2.ebuild:
+  new version with support for gnome-2.10
 
   19 Mar 2005; <blubb@gentoo.org> :
   initial import

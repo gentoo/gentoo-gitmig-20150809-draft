@@ -1,4 +1,6 @@
 MD5 b7b382e1f07d6b3da50036e2b114b603 denu-2.2.3.ebuild 585
 MD5 9a98e005a0d77dd91841cc37e846a015 metadata.xml 221
-MD5 0201c909935236b097d96fe8e05e4047 ChangeLog 252
+MD5 3e501733955904cbea6a3b9e6f5494c1 ChangeLog 376
+MD5 07cd1570bd1aa3f4403c63d4a5e8c32e denu-2.3.2.ebuild 610
 MD5 b79f8ba2a18ee078ad8bd5c2e428735f files/digest-denu-2.2.3 62
+MD5 448c55ba28b8f4abc6ef20df233c9992 files/digest-denu-2.3.2 62
