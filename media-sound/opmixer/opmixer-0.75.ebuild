@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/opmixer/opmixer-0.75.ebuild,v 1.3 2002/10/04 05:54:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/opmixer/opmixer-0.75.ebuild,v 1.4 2002/10/04 19:23:27 vapier Exp $
 
 MY_P=${P/opm/opM}
 S=${WORKDIR}/${MY_P}
@@ -20,6 +20,13 @@ RDEPEND="${DEPEND}"
 
 src_compile() {
 	econf || die
+
+	#gcc3.2 fix for #8760
+	cd ${S}/src
+	cp volset.cc volset.cc.old
+	sed -e 's/ endl/ std::endl/' \
+		volset.cc.old > volset.cc
+
 	emake || die
 }
 

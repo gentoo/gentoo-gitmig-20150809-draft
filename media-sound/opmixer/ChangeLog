@@ -1,8 +1,11 @@
 # ChangeLog for media-sound/opmixer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/opmixer/ChangeLog,v 1.1 2002/07/11 22:05:13 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/opmixer/ChangeLog,v 1.2 2002/10/04 19:23:27 vapier Exp $
 
 *opmixer-0.75 (11 Jul 2002)
+
+  04 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Added a small gcc3.2 fix for #8760
 
   11 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> opmixer-0.75.ebuild :
   
