@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre3.ebuild,v 1.11 2004/02/26 19:58:11 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre3.ebuild,v 1.12 2004/02/27 16:24:07 weeve Exp $
 
 IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb gtk2 samba lirc matroska debug joystick"
 
@@ -70,7 +70,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ppc ~alpha ~amd64 ~ia64 ~hppa"
+KEYWORDS="~x86 ppc ~alpha ~amd64 ~ia64 ~hppa ~sparc"
 
 
 pkg_setup() {
