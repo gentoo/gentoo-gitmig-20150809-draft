@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/chessbrain
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/chessbrain/ChangeLog,v 1.5 2003/12/10 15:31:07 phosphan Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/chessbrain/ChangeLog,v 1.6 2004/04/19 09:36:22 phosphan Exp $
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> chessbrain-20304.ebuild,
+  chessbrain-20310.ebuild, chessbrain-20314.ebuild, chessbrain-20407.ebuild:
+  Cleanup, adding IUSE, latest bumped to stable
 
 *chessbrain-20407 (10 Dec 2003)
 
