@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ksms
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ksms/ChangeLog,v 1.8 2004/11/12 20:28:41 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ksms/ChangeLog,v 1.9 2004/11/23 21:39:46 carlo Exp $
+
+  23 Nov 2004; Carsten Lohrke <carlo@gentoo.org> ksms-0.1.2.4.ebuild:
+  stable on x86
 
   12 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> ksms-0.1.2.4.ebuild:
   Keyworded ~sparc
