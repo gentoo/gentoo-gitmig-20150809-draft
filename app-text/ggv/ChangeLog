@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ggv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.34 2003/09/10 22:07:48 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ChangeLog,v 1.35 2003/09/17 15:09:25 weeve Exp $
+
+  17 Sep 2003; Jason Wever <weeve@gentoo.org> ggv-2.0.0.ebuild:
+  Marked stable for sparc.
 
 *ggv-2.4.0.1 (11 Sep 2003)
 
