@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.4.7-r1.ebuild,v 1.5 2002/07/14 19:20:18 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.4.7-r2.ebuild,v 1.1 2002/07/30 00:25:47 drobbins Exp $
 
 S=${WORKDIR}/iproute2
 DESCRIPTION="Kernel 2.4 routing and traffic control utilities"
@@ -12,18 +12,18 @@ LICENSE="GPL-2"
 
 DEPEND="virtual/glibc"
 
+pkg_setup() {
+	check_KV
+}
+
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	
+	#This adds htb3 support -- drobbins
+	patch -p1 < ${FILESDIR}/htb3.6_tc.diff || die
 	#This should close bug #595 -- drobbins
 	patch -p1 < ${FILESDIR}/dead-route-fix.diff || die
-	
-	# we now install the kernel headers used for compiling glibc, directly into
-	# /usr/include/{asm,linux}; which is a good thing(tm). we need to patch
-	# iproute2's Makefile to thusly compile without a /usr/src/linux tree.
-	# ~woodchip
-	cd ${S}
-	patch -p0 < ${FILESDIR}/makefile-kernel-includes.diff || die
 	
 	# omits this protocol support from being built:  "__PF(PUP,pup)"
 	# the package builds fine without this patch. is there another concern?
