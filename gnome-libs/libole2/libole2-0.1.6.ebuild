@@ -16,13 +16,13 @@ src_unpack() {
 
 src_compile() {                           
   cd ${S}
-  ./configure --host=${CHOST} --prefix=/opt/gnome --with-catgets
-  make
+  try ./configure --host=${CHOST} --prefix=/opt/gnome --with-catgets
+  try make
 }
 
 src_install() {                               
   cd ${S}
-  make prefix=${D}/opt/gnome install
+  try make prefix=${D}/opt/gnome install
 
   dodoc AUTHORS COPYING ChangeLog NEWS README* TODO
 }
