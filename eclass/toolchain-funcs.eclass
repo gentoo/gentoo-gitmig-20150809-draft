@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.8 2004/10/29 04:13:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-funcs.eclass,v 1.9 2004/11/17 22:13:07 vapier Exp $
 #
 # Author: Toolchain Ninjas <ninjas@gentoo.org>
 #
@@ -24,13 +24,10 @@ tc-getPROG() {
 		return 0
 	fi
 
-	# how should we handle the host/target/build ?
 	if [ -n "${CTARGET}" ] ; then
 		search="$(type -p "${CTARGET}-${prog}")"
-	else
-		if [ -n "${CHOST}" ] ; then
-			search="$(type -p "${CHOST}-${prog}")"
-		fi
+	elif [ -n "${CHOST}" ] ; then
+		search="$(type -p "${CHOST}-${prog}")"
 	fi
 
 	if [ -n "${search}" ] ; then
@@ -66,14 +63,18 @@ tc-getBUILD_CC() {
 		return 0
 	fi
 
-	if [ -n "${CBUILD}" ] ; then
-		local cc="$(type -p "${CBUILD}-gcc")"
-		if [ -n "${cc}" ] ; then
-			echo "${cc}"
-		fi
+	local search=
+	if [ -n "${CTARGET}" ] ; then
+		search="$(type -p "${CTARGET}-gcc")"
+	elif [ -n "${CHOST}" ] ; then
+		search="$(type -p "${CHOST}-gcc")"
 	fi
 
-	echo "gcc"
+	if [ -n "${search}" ] ; then
+		echo "${search##*/}"
+	else
+		echo "gcc"
+	fi
 }
 
 
