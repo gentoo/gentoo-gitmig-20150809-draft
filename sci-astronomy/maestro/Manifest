@@ -1,4 +1,14 @@
-MD5 edfac1c0d01a85584fb331d3559f5544 ChangeLog 438
-MD5 52ba89dc083310100c1b94cc8fbed71c maestro-2004.ebuild 1109
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4c190088e061ba63349d2ff7ff445a9b maestro-2004.ebuild 1121
+MD5 ed640507dc2101b0241f68bc2ce5712a ChangeLog 633
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 a48acbcdd6c3b208041193e0ac79b5b7 files/digest-maestro-2004 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBzHSRI1lqEGTUzyQRAiepAKDN+OwOi4wDXc0fXXvUylHu5kHNVACfcSwh
+7CzbM+nnsSW3JG2ofn2KIv0=
+=WtOr
+-----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
-MD5 25890ed7bd38be23ed8ade8f50fd54aa setimgr-0.04e.ebuild 644
-MD5 d1dba02efc1c4b10ee92bbf8ec1ea3e8 ChangeLog 486
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 793ba1ba92aa1264e0981e384399c20c setimgr-0.04e.ebuild 650
+MD5 dddb40b22686399050b96591c652dfc0 ChangeLog 677
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 67c33323344646c8df00d04a1be8ee45 files/digest-setimgr-0.04e 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBzHUqI1lqEGTUzyQRAvGJAKDb2CruAtTdvyYV57xGkMs/rzkN/QCfXuzE
+mcg9QUxXFvn4kc7UpqHBzNM=
+=uyGR
+-----END PGP SIGNATURE-----

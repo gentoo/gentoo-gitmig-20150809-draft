@@ -1,4 +1,14 @@
-MD5 2b1bc6deb96de9cbe4fb96d969d1eef8 ChangeLog 1048
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 60ccd792458be2438d2ab918b9eeca78 ChangeLog 1053
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 4fc9491a939fb14e8accc69b69808734 tkseti-3.06.ebuild 728
 MD5 df08349f63df940d44956133e20122bd files/digest-tkseti-3.06 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBzHVoI1lqEGTUzyQRAsA1AJsFfgpOtZpb64DnPS5I12Mb801XLQCbBSUH
+iukAiWSsipfyiq1xIgLJcq8=
+=d69q
+-----END PGP SIGNATURE-----

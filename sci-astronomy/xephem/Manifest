@@ -1,6 +1,16 @@
-MD5 fa439cfce87bd1290541bca829f6eeca xephem-3.6.2.ebuild 1555
-MD5 8a6610556fda3b636310714492ad0c34 xephem-3.6.2-r1.ebuild 1514
-MD5 ce2edd10b0e376d7df09db50d2af5926 ChangeLog 2797
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 feee6cd26ca00622039f7727a2ed00c9 xephem-3.6.2.ebuild 1561
+MD5 84637247fb3839f9e493394331d5b91a xephem-3.6.2-r1.ebuild 1520
+MD5 0bc943bf5e37a7a95dff97a1b5100c82 ChangeLog 3008
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 794d26581242a5232557c0fc7ccb0d3d files/digest-xephem-3.6.2 65
 MD5 794d26581242a5232557c0fc7ccb0d3d files/digest-xephem-3.6.2-r1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBzHWKI1lqEGTUzyQRAn6TAKDKZPb5QUVruyTST8J50DOdARG6IwCghivk
+HongutuS3c0P6tZSGyWwiNI=
+=yVzC
+-----END PGP SIGNATURE-----
