@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50_pre20020815.ebuild,v 1.1 2002/08/16 07:10:19 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50_pre20020815.ebuild,v 1.2 2002/08/23 09:51:05 seemant Exp $
 
 inherit libtool
 
@@ -23,18 +23,6 @@ KEYWORDS="x86 ppc sparc sparc64"
 #
 CXXFLAGS="-O2"
 CFLAGS=${CXXFLAGS}
-
-# needed to compile
-
-if [ -e /lib/libc-2.2.5.so ] && [ `gcc -dumpversion` == "2.95.3" ]; then
-	if [ ! -f /etc/aspell/aspell.conf ]; then
-		mkdir -p /etc/aspell
-		touch /etc/aspell/aspell.conf
-	fi
-	if [ ! -f /root/.aspell.conf ]; then
-		touch /root/.aspell.conf
-	fi
-fi
 
 src_compile() {
 	elibtoolize
@@ -61,4 +49,10 @@ src_install () {
 	
 	dodoc README* TODO
 
+}
+
+pkg_postinst() {
+
+	einfo "You will need to install a dictionary now.  Please choose an"
+	einfo "aspell-<LANG> dictionary from the app-i18n category"
 }
