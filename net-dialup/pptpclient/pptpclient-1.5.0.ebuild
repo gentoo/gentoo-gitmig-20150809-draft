@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/pptpclient-1.5.0.ebuild,v 1.1 2004/09/27 13:16:32 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpclient/pptpclient-1.5.0.ebuild,v 1.2 2004/10/02 12:50:27 dragonheart Exp $
 
 MY_P=pptp-linux-${PV}
 S=${WORKDIR}/${MY_P}
@@ -34,8 +34,6 @@ src_install() {
 	cd ${FILESDIR}
 	insinto /etc/ppp
 	doins options.pptp
-	dosbin pptp-command pptp_fe.pl
+	dosbin ${DISTDIR}/pptp-command pptp_fe.pl
 	use tcltk && dosbin xpptp_fe.pl
-
-	doinitd ${FILESDIR}/pptp-init
 }
