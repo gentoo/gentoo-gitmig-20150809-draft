@@ -5,7 +5,7 @@
 
 A=${P}.gnome.tar.gz
 S=${WORKDIR}/${P}
-DESCRIPTION="The Gnome Application Libraries"
+DESCRIPTION="Unicode library"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${A}"
 
 HOMEPAGE="http://www.gnome.org/"
@@ -13,7 +13,8 @@ HOMEPAGE="http://www.gnome.org/"
 DEPEND="virtual/glibc"
 
 src_compile() {                           
-	./configure --host=${CHOST} --prefix=/opt/gnome || die
+	./configure --host=${CHOST} 					\
+		    --prefix=/usr || die
 
 	emake || die
 }
