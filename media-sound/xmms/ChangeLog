@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.68 2003/09/14 23:05:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.69 2003/09/15 11:26:14 seemant Exp $
+
+  15 Sep 2003; Seemant Kulleen <seemant@gentoo.org> xmms-1.2.8-r2.ebuild,
+  files/xmms-1.2.8-sid-songpos.patch:
+  the songpos patch is beneficial to users of xmms-sid, in that this allows
+  playing of sub-songs. The patch comes courtesy of: Christoph Richter
+  <toph@abi2ooo.org> in bug #21067
 
 *xmms-1.2.8-r2 (14 Sep 2003)
 
