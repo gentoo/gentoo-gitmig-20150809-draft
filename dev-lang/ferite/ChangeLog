@@ -1,0 +1,10 @@
+# ChangeLog for dev-lang/ferite
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+
+
+*ferite-0.99.4 (1 May 2002)
+
+  1 May 2002; G.Saraber <gsaraber@rarcoa.com> ChangeLog :
+
+  modified the glib ebuild into ferite :)
+  original by Achim Gottinger <achim@gentoo.org>
