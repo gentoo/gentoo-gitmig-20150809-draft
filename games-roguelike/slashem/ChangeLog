@@ -1,6 +1,10 @@
 # ChangeLog for games-roguelike/slashem
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/slashem/ChangeLog,v 1.4 2004/03/15 16:28:34 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/slashem/ChangeLog,v 1.5 2004/03/31 06:33:27 mr_bones_ Exp $
+
+  30 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> slashem-0.0.648.ebuild:
+  virtual/x11; error check sed; tidy DEPEND; tidy use; append-flags into
+  src_unpack
 
   15 Mar 2004; David Holm <dholm@gentoo.org> slashem-0.0.648.ebuild:
   Added to ~ppc.

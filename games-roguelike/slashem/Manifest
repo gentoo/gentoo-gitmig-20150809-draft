@@ -1,5 +1,5 @@
-MD5 7d62107c0a8ea887cf875caad6e01dad ChangeLog 652
-MD5 c4b0caafc73573c8bc37dac819765d3a slashem-0.0.648.ebuild 4489
+MD5 6b5c405285653daafc692ce0115db701 ChangeLog 822
+MD5 7577f5f7ad799cce0d80ba0cb99d39a3 slashem-0.0.648.ebuild 4539
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 7042d07dab18e8ce6bf5f99c2497db44 files/0.0.6E4F8-errno.patch 4788
 MD5 c0702cf01cb9b34fb41418616181e7e8 files/0.0.6E4F8-gentoo-paths.patch 818
