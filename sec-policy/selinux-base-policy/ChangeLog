@@ -1,6 +1,13 @@
 # ChangeLog for sec-policy/selinux-base-policy
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.30 2004/09/06 21:26:41 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.31 2004/10/23 13:16:50 pebenito Exp $
+
+*selinux-base-policy-20041023 (23 Oct 2004)
+
+  23 Oct 2004; Chris PeBenito <pebenito@gentoo.org>
+  +selinux-base-policy-20041023.ebuild:
+  New release with 1.16 merge. Tcpd and inetd have been deprecated since they
+  are not in the base system anymore, and probably no one uses them anyway.
 
 *selinux-base-policy-20040906 (06 Sep 2004)
 
