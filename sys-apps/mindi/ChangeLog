@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/mindi
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/ChangeLog,v 1.12 2004/08/12 21:30:21 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mindi/ChangeLog,v 1.13 2004/08/13 01:08:14 pfeifer Exp $
+
+  12 Aug 2004; Jay Pfeifer <pfeifer@gentoo.org>; mindi-1.03.ebuild:
+  Fix sweet little digest and file change for mindi-1.03.tgz.
 
 *mindi-1.10 (12 Aug 2004)
 
