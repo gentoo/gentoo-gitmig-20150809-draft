@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-logger/vanessa-logger-0.0.4_beta2.ebuild,v 1.9 2004/08/03 11:48:32 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-logger/vanessa-logger-0.0.4_beta2.ebuild,v 1.10 2005/01/21 19:23:17 xmerlin Exp $
 
 DESCRIPTION="Generic logging layer that may be used to log to one or more of syslog, an open file handle or a file name."
 HOMEPAGE="http://www.vergenet.net/linux/vanessa/"

@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/vanessa-logger
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-logger/ChangeLog,v 1.14 2004/12/29 22:44:51 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vanessa-logger/ChangeLog,v 1.15 2005/01/21 19:23:17 xmerlin Exp $
+
+*vanessa-logger-0.0.7 (21 Jan 2005)
+
+  21 Jan 2005; Christian Zoffoli <xmerlin@gentoo.org> +metadata.xml,
+  vanessa-logger-0.0.6.ebuild, +vanessa-logger-0.0.7.ebuild:
+  fixed copyright header, added metadata.xml, added new ebuild for
+  vanessa-logger-0.0.7, improved ebuild maintenability (in newer ebuilds >
+  0.0.6)
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
