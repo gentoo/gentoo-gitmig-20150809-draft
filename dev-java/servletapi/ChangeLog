@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/servletapi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/ChangeLog,v 1.26 2005/02/19 17:57:03 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/ChangeLog,v 1.27 2005/03/23 12:09:11 axxo Exp $
+
+  23 Mar 2005; Thomas Matthijs <axxo@gentoo.org> servletapi-2.2-r1.ebuild,
+  servletapi-2.3-r1.ebuild, servletapi-2.4.ebuild, servletapi-2.4-r1.ebuild:
+  dep ant -> ant-core
 
   19 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> servletapi-2.4-r1.ebuild:
   the api docs are now getting installed. fixes #82490

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/bsf-2.3.0-r2.ebuild,v 1.11 2005/01/29 21:23:54 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/bsf-2.3.0-r2.ebuild,v 1.12 2005/03/23 12:08:45 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -15,7 +15,7 @@ RDEPEND=">=virtual/jre-1.4
 	jython? ( >=dev-java/jython-2.1-r5 )
 	rhino? ( =dev-java/rhino-1.5* )
 	=dev-java/servletapi-2.3*
-	>=dev-java/ant-1.5.4"
+	>=dev-java/ant-core-1.5.4"
 DEPEND=">=virtual/jdk-1.4
 	jikes? ( >=dev-java/jikes-1.18 )
 	${RDEPEND}"
