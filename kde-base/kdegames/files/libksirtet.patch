@@ -1,0 +1,211 @@
+diff -Naur libksirtet/lib/meeting.cpp libksirtet_new/lib/meeting.cpp
+--- libksirtet/lib/meeting.cpp	2003-07-21 09:40:28.000000000 +0200
++++ libksirtet_new/lib/meeting.cpp	2004-02-04 23:04:56.433145441 +0100
+@@ -148,18 +148,18 @@
+ void NetMeeting::readData(uint i)
+ {
+ 	// get message type
+-	MeetingMsgFlag mt;
++	MeetingMsgFlags::MeetingMsgFlag mt;
+ 	sm[i]->readingStream() >> mt;
+ 	CHECK_READ(i);
+ 	switch (mt) {
+-	 case End:      endFlag(i);     break;
+-	 case New:      newFlag(i);     break;
+-	 case Mod_Text: modTextFlag(i); break;
+-	 case Mod_Type: modTypeFlag(i); break;
+-	 case Id:       idFlag(i);      break;
+-	 case Del:      delFlag(i);     break;
+-	 case Mod_Opt:  modOptFlag(i);  break;
+-	 case Play:     playFlag(i);    break;
++	 case MeetingMsgFlags::End:      endFlag(i);     break;
++	 case MeetingMsgFlags::New:      newFlag(i);     break;
++	 case MeetingMsgFlags::Mod_Text: modTextFlag(i); break;
++	 case MeetingMsgFlags::Mod_Type: modTypeFlag(i); break;
++	 case MeetingMsgFlags::Id:       idFlag(i);      break;
++	 case MeetingMsgFlags::Del:      delFlag(i);     break;
++	 case MeetingMsgFlags::Mod_Opt:  modOptFlag(i);  break;
++	 case MeetingMsgFlags::Play:     playFlag(i);    break;
+ 	 default:       dataError(i);
+ 	}
+ 
+@@ -194,7 +194,7 @@
+ void NetMeeting::reject()
+ {
+ 	// send an End flag
+-	sm.commonWritingStream() << End;
++	sm.commonWritingStream() << MeetingMsgFlags::End;
+ 	writeToAll();
+ 
+ 	cleanReject();
+@@ -252,7 +252,7 @@
+ 		removeLine(i-1);
+ 
+ 		// Send a Del message to all (other) clients
+-		sm.commonWritingStream() << Del << i;
++		sm.commonWritingStream() << MeetingMsgFlags::Del << i;
+ 		writeToAll();
+ 	}
+ 	players.remove(players.at(i));
+@@ -291,7 +291,7 @@
+ 
+ 	// send result to client
+ 	Stream &s = sm[i]->writingStream();
+-	s << Id << id;
++	s << MeetingMsgFlags::Id << id;
+ 	WRITE(i);
+ 
+ 	// if not accepted : remove socket and player from list
+@@ -322,18 +322,18 @@
+ 	// send to the new client already present lines including its own
+ 	// (New flag + MeetingLineData struct)
+ 	spl->data(pld.ed);
+-	sm[i]->writingStream() << New << pld.ed;
++	sm[i]->writingStream() << MeetingMsgFlags::New << pld.ed;
+ 	for(uint k=1; k<sm.size(); k++) {
+ 		wl->widget(k-1)->data(pld.ed);
+ 		pld.own = ( k==i );
+-		sm[i]->writingStream() << New << pld;
++		sm[i]->writingStream() << MeetingMsgFlags::New << pld;
+ 	}
+ 	WRITE(i);
+ 
+ 	// send to all other clients the new line (New flag + MeetingLineData struct)
+ 	wl->widget(i-1)->data(pld.ed);
+ 	pld.own = FALSE;
+-	sm.commonWritingStream() << New << pld;
++	sm.commonWritingStream() << MeetingMsgFlags::New << pld;
+ 	writeToAll(i);
+ }
+ 
+@@ -349,7 +349,7 @@
+ 	setText(ti);
+ 
+ 	// send it to all other clients (Mod_Text flag + TextInfo struct)
+-	sm.commonWritingStream() << Mod_Text << ti;
++	sm.commonWritingStream() << MeetingMsgFlags::Mod_Text << ti;
+ 	writeToAll(i);
+ }
+ 
+@@ -365,7 +365,7 @@
+ 	setType(ti);
+ 
+ 	// send it to all other clients (Mod_Type flag + TypeInfo struct)
+-	sm.commonWritingStream() << Mod_Type << ti;
++	sm.commonWritingStream() << MeetingMsgFlags::Mod_Type << ti;
+ 	writeToAll(i);
+ }
+ 
+@@ -373,7 +373,7 @@
+ {
+ 	// server line text changed : send to every clients (Mod_Text flag + TextInfo struct)
+ 	TextInfo ti; ti.i = 0; ti.text = text;
+-	sm.commonWritingStream() << Mod_Text << ti;
++	sm.commonWritingStream() << MeetingMsgFlags::Mod_Text << ti;
+ 	writeToAll();
+ }
+ 
+@@ -390,7 +390,7 @@
+ 	ty.i++;
+ 
+ 	// TCB change : send to every clients (Mod_Type flag + TypeInfo struct)
+-	sm.commonWritingStream() << Mod_Type << ty;
++	sm.commonWritingStream() << MeetingMsgFlags::Mod_Type << ty;
+ 	writeToAll();
+ 	if (server) enableButtonOK(ready());
+ }
+@@ -421,7 +421,7 @@
+ 
+ 			// send play message to client (Play flag
+ 			// + bool [accepted/rejected])
+-			sm[0]->writingStream() << Play << (Q_UINT8)willPlay;
++			sm[0]->writingStream() << MeetingMsgFlags::Play << (Q_UINT8)willPlay;
+ 			// if write failed and the client is not playing : silently
+ 			// put it aside ...
+ 			if ( !sm[0]->write() && willPlay ) {
+@@ -440,7 +440,7 @@
+ 
+ void ServerNetMeeting::optionsChanged()
+ {
+-	sm.commonWritingStream() << Mod_Opt;
++	sm.commonWritingStream() << MeetingMsgFlags::Mod_Opt;
+ 	ow->dataOut( sm.commonWritingStream() );
+ 	writeToAll();
+ }
+@@ -456,7 +456,7 @@
+ 	players.append(NewPlayer); // server player
+ 
+ 	// Send id to server (Id flag + Id struct)
+-	sm.commonWritingStream() << Id << id;
++	sm.commonWritingStream() << MeetingMsgFlags::Id << id;
+ 	writeToAll(); // what happens if there is a message box appearing before exec() call ??
+ }
+ 
+@@ -484,7 +484,7 @@
+ 	if ( !serverId.accepted() ) cleanReject(serverId.errorMessage(id));
+ 	else {
+ 		// send client info (New flag + GameData struct)
+-		sm.commonWritingStream() << New << bds;
++		sm.commonWritingStream() << MeetingMsgFlags::New << bds;
+ 		writeToAll();
+ 	}
+ }
+@@ -535,14 +535,14 @@
+ void ClientNetMeeting::textChanged(const QString &text)
+ {
+ 	// text changed : send to server (Mod_Text flag + QString)
+-	sm.commonWritingStream() << Mod_Text << text;
++	sm.commonWritingStream() << MeetingMsgFlags::Mod_Text << text;
+ 	writeToAll();
+ }
+ 
+ void ClientNetMeeting::typeChanged(MeetingCheckBox::Type type)
+ {
+ 	// type changed : send to server (Mod_Type flag + TCB)
+-	sm.commonWritingStream() << Mod_Type << type;
++	sm.commonWritingStream() << MeetingMsgFlags::Mod_Type << type;
+ 	writeToAll();
+ }
+ 
+diff -Naur libksirtet/lib/types.cpp libksirtet_new/lib/types.cpp
+--- libksirtet/lib/types.cpp	2002-07-15 12:01:48.000000000 +0200
++++ libksirtet_new/lib/types.cpp	2004-02-04 23:04:56.428146251 +0100
+@@ -50,16 +50,16 @@
+ }
+ 
+ //-----------------------------------------------------------------------------
+-QDataStream &operator << (QDataStream &s, const MeetingMsgFlag &f)
++QDataStream &operator << (QDataStream &s, const MeetingMsgFlags::MeetingMsgFlag &f)
+ {
+ 	s << (Q_UINT8)f;
+ 	return s;
+ }
+ 
+-QDataStream &operator >> (QDataStream &s, MeetingMsgFlag &f)
++QDataStream &operator >> (QDataStream &s, MeetingMsgFlags::MeetingMsgFlag &f)
+ {
+ 	Q_UINT8 i;
+-	s >> i; f = (MeetingMsgFlag)i;
++	s >> i; f = (MeetingMsgFlags::MeetingMsgFlag)i;
+ 	return s;
+ }
+ 
+diff -Naur libksirtet/lib/types.h libksirtet_new/lib/types.h
+--- libksirtet/lib/types.h	2001-09-01 13:52:21.000000000 +0200
++++ libksirtet_new/lib/types.h	2004-02-04 23:04:56.430145927 +0100
+@@ -31,10 +31,13 @@
+ QDataStream &operator >> (QDataStream &s, cId &id);
+ 
+ /** Flags used for the netmeeting. */
++namespace MeetingMsgFlags
++{
+ enum MeetingMsgFlag
+     { Id = 0, End, New, Del, Mod_Text, Mod_Type, Mod_Opt, Play };
+-QDataStream &operator << (QDataStream &s, const MeetingMsgFlag &f);
+-QDataStream &operator >> (QDataStream &s, MeetingMsgFlag &f);
++}
++QDataStream &operator << (QDataStream &s, const MeetingMsgFlags::MeetingMsgFlag &f);
++QDataStream &operator >> (QDataStream &s, MeetingMsgFlags::MeetingMsgFlag &f);
+ 
+ /** Internal class : used in netmeeting to transport text line. */
+ class TextInfo
