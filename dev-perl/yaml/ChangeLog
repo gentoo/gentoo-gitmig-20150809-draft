@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/yaml
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/ChangeLog,v 1.7 2004/11/21 21:36:25 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/yaml/ChangeLog,v 1.8 2004/12/22 11:55:42 nigoro Exp $
+
+  22 Dec 2004; Yuta SATOH <nigoro@gentoo.org> yaml-0.35.ebuild:
+  added ~ppc64
 
   21 Nov 2004; Hardave Riar <hardave@gentoo.org> yaml-0.35.ebuild:
   Stable on mips, dep for bug #68570

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Harness/Test-Harness-2.42.ebuild,v 1.4 2004/08/06 18:50:21 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Harness/Test-Harness-2.42.ebuild,v 1.5 2004/12/22 11:43:00 nigoro Exp $
 
 inherit perl-module
 
@@ -10,6 +10,6 @@ HOMEPAGE="http://search.cpan.org/search?dist=Test-Harness"
 IUSE=""
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~ppc64"
 
 mydoc="rfc*.txt"

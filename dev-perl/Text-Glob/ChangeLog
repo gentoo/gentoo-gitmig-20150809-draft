@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Text-Glob
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Glob/ChangeLog,v 1.6 2004/06/25 01:04:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Glob/ChangeLog,v 1.7 2004/12/22 11:49:05 nigoro Exp $
+
+  22 Dec 2004; Yuta SATOH <nigoro@gentoo.org> Text-Glob-0.06.ebuild:
+  added ~ppc64
 
   26 May 2004; Bryan Østergaard <kloeri@gentoo.org> Text-Glob-0.06.ebuild:
   Stable on alpha.

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/IO-Zlib
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Zlib/ChangeLog,v 1.5 2004/11/21 21:29:23 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Zlib/ChangeLog,v 1.6 2004/12/22 11:59:14 nigoro Exp $
+
+  22 Dec 2004; Yuta SATOH <nigoro@gentoo.org> IO-Zlib-1.01.ebuild:
+  added ~ppc64
 
   21 Nov 2004; Hardave Riar <hardave@gentoo.org> IO-Zlib-1.01.ebuild:
   Stable on mips, dep for bug #68570
