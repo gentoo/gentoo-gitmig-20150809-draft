@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.8-r6.ebuild,v 1.5 2003/09/08 20:22:25 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.8-r6.ebuild,v 1.6 2003/11/08 19:26:08 usata Exp $
 
 inherit eutils
 
@@ -32,6 +32,13 @@ src_unpack() {
 
 src_compile() {
 
+	local term
+	if [ -n "${RXVT_TERM}" ] ; then
+		term="${RXVT_TERM}"
+	else
+		term="rxvt"
+	fi
+
 	econf \
 		--enable-rxvt-scroll \
 		--enable-next-scroll \
@@ -48,6 +55,7 @@ src_compile() {
 		--enable-xim \
 		--enable-shared \
 		--enable-keepscrolling \
+		--with-term=${term} \
 		`use_enable xgetdefault` || die
 
 	emake || die
@@ -55,10 +63,20 @@ src_compile() {
 
 src_install() {
 
-	einstall \
-		mandir=${D}/usr/share/man/man1 || die
+	einstall mandir=${D}/usr/share/man/man1 || die
 
 	cd ${S}/doc
 	dodoc README* *.txt BUGS FAQ
 	dohtml *.html
+}
+
+pkg_postinst() {
+
+	einfo
+	einfo "If you want to change default TERM variable other than rxvt,"
+	einfo "set RXVT_TERM environment variable and then emerge rxvt."
+	einfo "Especially, if you use rxvt under monochrome X you might need to run"
+	einfo "\t RXVT_TERM=rxvt-basic emerge rxvt"
+	einfo "otherwise curses based program will not work."
+	einfo
 }
