@@ -1,18 +1,20 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/htmldoc-1.8.23.ebuild,v 1.5 2003/09/15 21:15:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmldoc/htmldoc-1.8.23.ebuild,v 1.6 2003/09/25 17:55:40 mholzer Exp $
 
 DESCRIPTION="Convert HTML pages into a PDF document"
 SRC_URI="ftp://ftp.easysw.com/pub/${PN}/${PV}/${P}-source.tar.bz2"
 HOMEPAGE="http://www.easysw.com/htmldoc/"
 
+IUSE="X ssl"
+
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~sparc ~ppc ~alpha"
 
-DEPEND="virtual/x11"
-RDEPEND=">=dev-libs/openssl-0.9.6e
-	>=x11-libs/fltk-1.0.11"
+DEPEND="X? ( virtual/x11 )"
+RDEPEND="ssl? ( >=dev-libs/openssl-0.9.6e )
+	X? ( >=x11-libs/fltk-1.0.11 )"
 
 src_unpack() {
 	unpack ${A}
@@ -22,17 +24,17 @@ src_unpack() {
 }
 
 src_compile() {
-	econf \
-		--with-x \
-		--with-gui \
-		--with-openssl-libs=/usr/lib \
-		--with-openssl-includes=/usr/include/openssl
+	local myconf
+	use X && myconf="--with-x --with-gui"
+	use ssl && myconf="${myconf} --with-openssl-libs=/usr/lib \
+		--with-openssl-includes=/usr/include/openssl"
+
+	econf ${myconf}
 
 	# Add missing -lfltk_images to LIBS
-	sed -i 's/-lfltk /-lfltk -lfltk_images /g' \
-		Makedefs || die "failed to detect -lfltk"
+	use X && sed -i 's/-lfltk /-lfltk -lfltk_images /g' Makedefs 
 
-	make || die
+	make || die "make failed"
 }
 
 src_install() {
