@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/monafont-2.30_pre2.ebuild,v 1.1 2003/08/20 14:58:34 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/monafont-2.30_pre2.ebuild,v 1.2 2003/09/11 22:04:44 usata Exp $
 
 MY_P=${P/_/}
 
@@ -20,6 +20,9 @@ S="${WORKDIR}/${MY_P}"
 FONTDIR=/usr/share/fonts/${PN}
 
 src_compile(){
+
+	PERL_BADLANG=0 ; LC_CTYPE=C
+	export PERL_BADLANG LC_CTYPE
 	emake || die
 }
 

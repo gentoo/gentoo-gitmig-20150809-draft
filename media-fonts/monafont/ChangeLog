@@ -1,6 +1,13 @@
 # ChangeLog for media-fonts/monafont
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/ChangeLog,v 1.6 2003/09/10 10:20:36 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/ChangeLog,v 1.7 2003/09/11 22:04:44 usata Exp $
+
+  11 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> metadata.xml,
+  monafont-2.22.ebuild, monafont-2.30_pre2.ebuild, monafont-2.90.ebuild:
+  Added `export PERL_BADLANG=0` because of the warnings you get when you
+  emerge the ebuilds with LC_CTYPE=*.UTF-8 (See Bug #28419)
+  Also added `export LC_CTYPE=C` as it fails to build if LANG variable
+  set. Thanks to Henry Yang <henryy@karajishi.org> for reporting the bug.
 
 *monafont-2.90 (10 Sep 2003)
 

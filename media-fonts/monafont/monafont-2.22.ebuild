@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/monafont-2.22.ebuild,v 1.4 2003/08/20 09:35:48 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/monafont/monafont-2.22.ebuild,v 1.5 2003/09/11 22:04:44 usata Exp $
 
 DESCRIPTION="Japanese bitmap fonts suitable for browsing 2ch"
 HOMEPAGE="http://monafont.sourceforge.net"
@@ -18,6 +18,9 @@ S="${WORKDIR}/${P}"
 FONTDIR=/usr/share/fonts/${PN}
 
 src_compile(){
+
+	PERL_BADLANG=0 ; LC_CTYPE=C
+	export PERL_BADLANG LC_CTYPE
 	emake || die
 }
 
