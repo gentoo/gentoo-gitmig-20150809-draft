@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.6.2.ebuild,v 1.1 2004/02/15 01:11:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.6.2.ebuild,v 1.2 2004/02/24 08:44:24 mr_bones_ Exp $
 
 IUSE="tcpd"
 # The release candidates are named syslog-ng-1.6.0rc1 for example
@@ -11,7 +11,7 @@ SRC_URI="http://www.balabit.com/downloads/syslog-ng/${PV%.*}/src/${MY_P}.tar.gz"
 HOMEPAGE="http://www.balabit.com/products/syslog_ng/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64 ~ppc64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64"
 
 # I don't know if 0.3.13 is really required but why not?  It's the
 # current version and I don't know if 0.3.9 is new enough.  
