@@ -33,6 +33,14 @@
 	</section>
 
 	<section>
+		<title>How do I install with no iso image?</title>
+		<body><p>You use the boot floopies and the sys and build
+tarballs as normal. Please read the <uri
+link="http://www.gentoo.org/doc/install.html">install guide</uri> for more
+information.</p> 
+	</section>
+
+	<section>
 		<title>What's the default root password after installation?</title>
 		<body><p>The default password is blank; hit enter.</p></body>
 	</section>
