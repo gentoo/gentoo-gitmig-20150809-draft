@@ -1,9 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.18 2002/07/12 15:24:36 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.19 2002/07/18 13:08:37 spider Exp $
 
 inherit libtool
+
+if [ -n "$DEBUG" ]
+then
 inherit debug
+fi
+
 # Authors:
 # Bruce A. Locke <blocke@shivan.org>
 # Spidler <spidler@gentoo.org>
@@ -11,8 +16,12 @@ inherit debug
 # Gnome 2 ECLASS
 ECLASS="gnome2"
 INHERITED="$INHERITED $ECLASS"
+G2CONF=""
 
-G2CONF="--enable-debug=yes"
+if [ -n "$DEBUG" ]; then
+  G2CONF="${G2CONF} --enable-debug=yes"
+fi
+
 ELTCONF=""
 SCROLLKEEPER_UPDATE="0"
 
