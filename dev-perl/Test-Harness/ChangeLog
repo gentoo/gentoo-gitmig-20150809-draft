@@ -1,6 +1,13 @@
 # ChangeLog for dev-perl/Test-Harness
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Harness/ChangeLog,v 1.28 2004/06/25 01:02:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Harness/ChangeLog,v 1.29 2004/08/06 18:50:21 mcummings Exp $
+
+  06 Aug 2004; Michael Cummings <mcummings@gentoo.org>
+  Test-Harness-2.42.ebuild:
+  Removed tests and dep for test-pod. The dependancy, which only satisfied
+  testing, was resulting in a loop of
+  test-harness->test-pod->test-builder-tester->test-simple->test-harness.
+  Esammer found this bug, just committing since I was on.
 
 *Test-Harness-2.42 (05 Jun 2004)
 

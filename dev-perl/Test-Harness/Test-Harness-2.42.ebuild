@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Harness/Test-Harness-2.42.ebuild,v 1.3 2004/07/14 20:38:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Harness/Test-Harness-2.42.ebuild,v 1.4 2004/08/06 18:50:21 mcummings Exp $
 
 inherit perl-module
 
@@ -11,9 +11,5 @@ IUSE=""
 SLOT="0"
 LICENSE="Artistic"
 KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha"
-SRC_TEST="do"
-
-DEPEND="dev-perl/Test-Pod
-	|| ( dev-perl/File-Spec >=dev-lang/perl-5.8.0-r12 )"
 
 mydoc="rfc*.txt"
