@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3406 2004/12/22 19:22:39 spyderous Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3407 2004/12/22 19:24:48 spyderous Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -250,12 +250,6 @@ sys-kernel/config-kernel
 # Related ebuilds that depped on config-kernel
 =sys-fs/submount-0.9
 <=sys-fs/lufs-0.9.7-r2
-
-# <spyderous@gentoo.org (12 Oct 2004)
-# work in progress
-=x11-base/xorg-x11-6.8.0-r2
-=x11-base/xorg-x11-6.8.0-r4
->=x11-base/opengl-update-1.99
 
 # <axxo@gentoo.org> (09 Oct 2004)
 # Needs testing
