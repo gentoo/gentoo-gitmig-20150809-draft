@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.9.3.ebuild,v 1.10 2004/10/28 16:33:08 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.9.3.ebuild,v 1.11 2005/02/17 16:31:39 hansmi Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils mozilla-launcher
 
