@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1015 2005/03/17 18:52:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1016 2005/03/17 22:08:43 agriffis Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -312,6 +312,7 @@ mail-client/evolution:nntp - Enable evolution nntp (news) functionality
 mail-client/mail-notification:gmail - Enable Gmail mailbox checking
 mail-client/mozilla-thunderbird:moznoxft - Disable XFT support in mozilla (also firefox, thunderbird)
 mail-client/mozilla-thunderbird:mozplaintext - Disallow HTML editing for email
+mail-client/mutt:buffysize - Enables buffysize workaround, see bug 72422
 mail-client/mutt:nntp - Adds support for nntp via patch
 mail-client/muttng:nntp - Enable support for nntp
 mail-client/muttng:gpgme - Enable support for gpgme
