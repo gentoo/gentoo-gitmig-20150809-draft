@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpfc/mpfc-1.3.2.ebuild,v 1.2 2004/09/30 02:47:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpfc/mpfc-1.3.2.ebuild,v 1.3 2004/10/17 09:55:31 dholm Exp $
 
 IUSE="alsa oss esd mad oggvorbis gpm"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://mpfc.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~sparc ~x86"
+KEYWORDS="~amd64 ~sparc ~x86 ~ppc"
 
 RDEPEND="alsa? ( >=media-libs/alsa-lib-0.9.0 )
 	esd? ( >=media-sound/esound-0.2.22 )
