@@ -11,14 +11,19 @@ SLOT="0"
 KEYWORDS="x86 sparc sparc64"
 
 src_compile() {
-	xmkmf
-	emake || die
+	xmkmf || die "xmkmf failed"
+	emake || die "emake failed"
 }
 
 src_install() {
-	dobin xtoolwait
-	mv xtoolwait.man xtoolwait.1
-	doman xtoolwait.1
-	dodoc README CHANGES COPYING-2.0
+	emake BINDIR=/usr/bin \
+		MANPATH=/usr/share/man \
+		DOCDIR=/usr/share/doc/${PF} \
+		DESTDIR=${D} install || die "emake install failed"
+	emake BINDIR=/usr/bin \
+		MANPATH=/usr/share/man \
+		DOCDIR=/usr/share/doc/${PF} \
+		DESTDIR=${D} install.man || die "emake install.man failed"
+	dodoc CHANGES COPYING-2.0 README || die "dodoc failed"
 }
 
