@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8b3a9921059333cd23a6edebf31e24c9 ChangeLog 1741
+MD5 681f9ada5ec6c3413b3f3995cd6a903b ChangeLog 1860
 MD5 dd301d3b0c4370817c888f5ef010a402 hmake-3.08.ebuild 1387
 MD5 e0ce59fd27b9382896cdb87d5fa48f89 metadata.xml 286
 MD5 cebcfca46a06fcb12daa8329c708b854 hmake-3.09.ebuild 1363
+MD5 2be0585b3db5731cb7ba2836d33faa37 hmake-3.10.ebuild 1370
 MD5 77342bba93c32304e51d32b4894dddf2 files/digest-hmake-3.08 61
 MD5 50a20e8dc3ef16030908acbe85b97f1b files/digest-hmake-3.09 62
+MD5 fdfe8526461bed837798b8d287cc82bb files/digest-hmake-3.10 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCLi9LBQBy/eDH5uERAuGJAJ9vkjBqhu0OmmEp8pNJabCxipcSKQCgiukW
-O3Qt7bvZZZyI6drdqUTwGhQ=
-=PivF
+iD8DBQFCQRzzBQBy/eDH5uERAhuYAJ4xLPsQ/xDetZuzck+J4pEo7nlX/QCgiwfy
+wA9ao5f9TPgXeAlZoVNKkL8=
+=uTAf
 -----END PGP SIGNATURE-----

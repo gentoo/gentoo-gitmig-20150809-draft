@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/hmake
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/ChangeLog,v 1.12 2005/03/08 23:03:12 araujo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/ChangeLog,v 1.13 2005/03/23 07:37:48 araujo Exp $
+
+*hmake-3.10 (23 Mar 2005)
+
+  23 Mar 2005; Luis F. Araujo <araujo@gentoo.org> +hmake-3.10.ebuild:
+  New hmake release.
 
 *hmake-3.09 (08 Mar 2005)
 
