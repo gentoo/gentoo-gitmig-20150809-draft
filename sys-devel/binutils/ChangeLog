@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.62 2003/07/24 03:42:24 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.63 2003/08/10 08:42:12 kumba Exp $
+
+*binutils-2.14.90.0.5-r1 (10 Aug 2003)
+
+  10 Aug 2003; Joshua Kinard <kumba@gentoo.org> binutils-2.14.90.0.5-r1.ebuild:
+  Moved binutils-2.14.90.0.5-r1 to mips unstable, since latest CVS this comes
+  from includes major mips updates.  And to test it in Stager.
+  Also moved it to sparc unstable for testing.
 
 
 *binutils-2.14.90.0.5 (23 Jul 2003)
