@@ -1,6 +1,11 @@
 # ChangeLog for app-text/docbook-xsl-stylesheets
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/ChangeLog,v 1.8 2002/12/20 07:14:01 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/ChangeLog,v 1.9 2003/02/09 07:35:04 satai Exp $
+
+*docbook-xsl-stylesheets-1.60.1 (09 Feb 2003)
+
+  09 Feb 2003; Matthew Turk <satai@gentoo.org> :
+  Version bump.  Still no xml-catalog.eclass, but it's coming.
 
 *docbook-xsl-stylesheets-1.57.0 (20 Dec 2002)
 
