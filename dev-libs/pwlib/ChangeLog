@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.44 2004/03/30 12:41:33 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.45 2004/03/30 14:20:22 pylon Exp $
+
+  30 Mar 2004; Lars Weiler <pylon@gentoo.org> pwlib-1.5.2-r3.ebuild:
+  stable on ppc
 
   30 Mar 2004; Sven Blumenstein <bazik@gentoo.org> pwlib-1.5.2-r3.ebuild:
   Stable on sparc, see #45846
