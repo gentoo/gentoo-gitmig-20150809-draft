@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ucd-snmp-4.2.6-r2.ebuild,v 1.4 2004/04/09 07:17:55 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ucd-snmp-4.2.6-r2.ebuild,v 1.5 2004/04/26 04:29:21 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -55,7 +55,7 @@ src_compile() {
 		--with-logfile=/var/log/ucd-snmpd.log \
 		--with-persistent-directory=/var/lib/ucd-snmp \
 		--with-zlib \
-		${myconf}
+		${myconf} || die "econf failed"
 
 	emake || die "compile problem"
 }

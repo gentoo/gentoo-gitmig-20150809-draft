@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/net-snmp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.41 2004/04/10 14:14:56 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/ChangeLog,v 1.42 2004/04/26 04:28:20 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> net-snmp-5.0.9-r1.ebuild,
+  net-snmp-5.0.9-r3.ebuild, net-snmp-5.1.1.ebuild, net-snmp-5.1.ebuild:
+  Add die following econf for bug 48950
 
 *net-snmp-5.1.1 (10 Apr 2004)
 

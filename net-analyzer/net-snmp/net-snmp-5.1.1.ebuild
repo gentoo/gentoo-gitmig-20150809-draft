@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.1.1.ebuild,v 1.1 2004/04/10 14:14:56 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.1.1.ebuild,v 1.2 2004/04/26 04:28:20 agriffis Exp $
 
 inherit eutils
 
@@ -46,7 +46,7 @@ src_compile() {
 		--enable-ucd-snmp-compatibility \
 		--enable-shared \
 		--with-zlib \
-		${myconf}
+		${myconf} || die "econf failed"
 
 	emake -j1 || die "compile problem"
 

@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nessus-libraries
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.19 2004/02/09 14:20:51 phosphan Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.20 2004/04/26 04:26:05 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org>
+  nessus-libraries-2.0.10a.ebuild, nessus-libraries-2.0.7.ebuild,
+  nessus-libraries-2.0.8a.ebuild, nessus-libraries-2.0.9.ebuild:
+  Add die following econf for bug 48950
 
 *nessus-libraries-2.0.10a (09 Feb 2004)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.6.10-r1.ebuild,v 1.4 2004/01/06 04:04:25 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.6.10-r1.ebuild,v 1.5 2004/04/26 04:24:11 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -35,7 +35,7 @@ src_compile() {
 		--enable-plugins \
 		--datadir=/etc \
 		--disable-debug \
-		--disable-gtk
+		--disable-gtk || die "econf failed"
 
 	sed -i	"s:/usr/share/ettercap/:/etc/ettercap/:; \
 		s:/usr/doc/${P}/:/usr/share/doc/${PF}/:" ettercap.8
