@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mpg123-el/mpg123-el-1.42.ebuild,v 1.2 2004/06/24 22:19:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mpg123-el/mpg123-el-1.42.ebuild,v 1.3 2004/10/09 20:04:24 usata Exp $
 
 inherit gcc elisp
 
@@ -19,7 +19,7 @@ RDEPEND="${DEPEND}
 
 SLOT="0"
 LICENSE="freedist"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 SITEFILE="50mpg123-el-gentoo.el"
 
