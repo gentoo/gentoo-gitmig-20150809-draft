@@ -1,16 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 66c1bcfeec8f58f5471f4e90cc2a94aa ChangeLog 7137
+MD5 f4f2b480903047a6b7d4750fafa68eae ChangeLog 7262
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 7b1d4a9e97831a6de6148c20f0308126 ochusha-0.5.5.ebuild 1013
-MD5 b472eb2a0e7128db394106f001b078b5 ochusha-0.5.7.ebuild 1035
+MD5 5ad0796799a720eb4bf2069800eb7446 ochusha-0.5.5.ebuild 1013
+MD5 7037b75a144210ade130723b93c8b30b ochusha-0.5.7.2.ebuild 1037
+MD5 a5186c1fb81b1cddc66aa9d0f9662b89 ochusha-0.5.7.ebuild 1033
 MD5 dd58bcdecc4c08b2a9361bbc2e91db8f files/digest-ochusha-0.5.5 67
 MD5 ea5f0bd472016d0a14a8843da2e05b35 files/digest-ochusha-0.5.7 67
+MD5 6da9ff06500be51b3da019a18c7a17df files/digest-ochusha-0.5.7.2 69
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBq+jEVWNWqTUmv+0RAvh1AJ46JQewfyDlNV9A5Eb8hBwByhxK4gCgqDV/
-hD0q186ul3NGjzzlcqatMh4=
-=TfSn
+iD8DBQFB1tQ4VWNWqTUmv+0RAtliAKCZOzLRqLS/KLuIBX5pPwZNj5qWgACdGzgc
+gwWxkSo/U2LIZ91KizKQNQA=
+=Ea10
 -----END PGP SIGNATURE-----
