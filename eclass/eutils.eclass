@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.67 2003/11/18 18:45:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.68 2003/11/26 20:15:10 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -964,28 +964,24 @@ unpack_makeself() {
 		debug-print "Detected Makeself version ${ver} ... using ${skip} as offset"
 	fi
 
-	# we do this because otherwise a failure in gzip will cause 0 bytes to be sent
-	# to tar which will make tar not extract anything and exit with 0
-	tail -n +${skip} ${src} 2>/dev/null \
-		| gzip -cd 2>/dev/null \
-		| tar -x --no-same-owner -f - 2>/dev/null
-	local pipestatus="${PIPESTATUS[*]}"
-	pipestatus="${pipestatus// }"
-	if [ "${pipestatus//0}" != "" ]
-	then
-		# maybe it isnt gzipped ... they usually are, but not always ...
-		tail -n +${skip} ${src} 2>/dev/null \
-			| tar -x --no-same-owner -f - 2>/dev/null
-		pipestatus="${pipestatus// }"
-		if [ "${pipestatus//0}" != "" ]
-		then
-			# and every once in a while they are bzipped2 ...
-			tail -n +${skip} ${src} 2>/dev/null \
-				| bunzip2 -c 2>/dev/null \
-				| tar -x --no-same-owner -f - 2>/dev/null \
-				|| die "failure unpacking makeself ${shrtsrc} ('${ver}' +${skip})"
-		fi
-	fi
+	# lets grab the first few bytes of the file to figure out what kind of archive it is
+	local tmpfile="`mymktemp ${T}`"
+	tail -n +${skip} ${src} 2>/dev/null | head -c 512 > ${tmpfile}
+	local filetype="`file -b ${tmpfile}`"
+	case ${filetype} in
+		*tar\ archive)
+			tail -n +${skip} ${src} | tar -xf -
+			;;
+		bzip2*)
+			tail -n +${skip} ${src} | bzip2 -dc | tar -xf -
+		gzip*)
+			tail -n +${skip} ${src} | tar -xzf -
+			;;
+		*)
+			false
+			;;
+	esac
+	assert "failure unpacking (${filetype}) makeself ${shrtsrc} ('${ver}' +${skip})"
 }
 
 # Display a license for user to accept.
