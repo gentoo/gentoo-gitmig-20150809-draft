@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/ogg-vorbis-header
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ogg-vorbis-header/ChangeLog,v 1.6 2004/06/25 00:51:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ogg-vorbis-header/ChangeLog,v 1.7 2004/12/30 19:06:22 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *ogg-vorbis-header-0.03 (06 Jun 2004)
 
@@ -8,7 +11,7 @@
   ogg-vorbis-header-0.03.ebuild:
   new version on cpan
 
-  30 May 2004; Bryan Østergaard <kloeri@gentoo.org>
+  30 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   ogg-vorbis-header-0.02.ebuild:
   Stable on alpha.
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/glib-perl
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.15 2004/12/22 01:32:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.16 2004/12/30 18:55:46 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   21 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org> glib-perl-1.042.ebuild:
   Stable on sparc
@@ -17,7 +20,7 @@
   13 Jun 2004; Michael Cummings <mcummings@gentoo.org> glib-perl-1.042.ebuild:
   update; dep for bug 52839
 
-  30 May 2004; Bryan Østergaard <kloeri@gentoo.org> glib-perl-1.040.ebuild:
+  30 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> glib-perl-1.040.ebuild:
   Stable on alpha.
 
   06 Apr 2004; Gustavo Zacarias <gustavoz@gentoo.org> glib-perl-1.040.ebuild:

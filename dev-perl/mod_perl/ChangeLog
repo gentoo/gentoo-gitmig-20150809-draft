@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/mod_perl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/ChangeLog,v 1.45 2004/11/14 02:10:02 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/ChangeLog,v 1.46 2004/12/30 19:03:27 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *mod_perl-1.99.17-r1 (13 Nov 2004)
 
@@ -32,7 +35,7 @@
   07 Aug 2004; Jason Wever <weeve@gentoo.org> mod_perl-1.99.11.ebuild:
   Added ~sparc keyword, resolves bug #59331.
 
-  30 May 2004; Bryan Østergaard <kloeri@gentoo.org> mod_perl-1.99.11.ebuild:
+  30 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> mod_perl-1.99.11.ebuild:
   Stable on alpha.
 
   20 Apr 2004; Michael Cummings <mcummings@gentoo.org>

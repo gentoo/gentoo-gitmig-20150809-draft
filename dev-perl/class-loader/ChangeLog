@@ -1,8 +1,11 @@
 # ChangeLog for dev-perl/class-loader
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/class-loader/ChangeLog,v 1.5 2004/06/25 00:13:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/class-loader/ChangeLog,v 1.6 2004/12/30 18:44:09 ciaranm Exp $
 
-  28 May 2004; Bryan Østergaard <kloeri@gentoo.org> class-loader-2.02.ebuild:
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
+
+  28 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> class-loader-2.02.ebuild:
   Stable on alpha.
 
   25 Feb 2004; Joshua Kinard <kumba@gentoo.org> class-loader-2.02.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/locale-maketext-lexicon
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/locale-maketext-lexicon/ChangeLog,v 1.8 2004/12/20 11:17:03 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/locale-maketext-lexicon/ChangeLog,v 1.9 2004/12/30 19:02:09 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *locale-maketext-lexicon-0.46 (20 Dec 2004)
 
@@ -20,7 +23,7 @@
   locale-maketext-lexicon-0.38.ebuild:
   new version on cpan
 
-  30 May 2004; Bryan Østergaard <kloeri@gentoo.org>
+  30 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   locale-maketext-lexicon-0.35.ebuild:
   Stable on alpha.
 

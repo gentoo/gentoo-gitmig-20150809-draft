@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-XUpdate-LibXML
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XUpdate-LibXML/ChangeLog,v 1.8 2004/06/25 01:15:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-XUpdate-LibXML/ChangeLog,v 1.9 2004/12/30 18:42:39 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *XML-XUpdate-LibXML-0.5.0 (11 Jun 2004)
 
@@ -8,7 +11,7 @@
   XML-XUpdate-LibXML-0.5.0.ebuild:
   new version on cpan
 
-  27 May 2004; Bryan Østergaard <kloeri@gentoo.org>
+  27 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   XML-XUpdate-LibXML-0.4.0-r1.ebuild:
   Stable on alpha.
 
