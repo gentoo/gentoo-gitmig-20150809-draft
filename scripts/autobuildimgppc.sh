@@ -38,6 +38,8 @@ emerge portage || cleanup 1
 emerge `cat /etc/make.profile/packages.build` || cleanup 1
 rm -rf "${ROOT}/tmp"
 mkdir -p ${ROOT}/tmp
+mkdir -p ${ROOT}/proc
+chown root.root ${ROOT}/proc
 chown root.root ${ROOT}/tmp
 chmod 1777 ${ROOT}/tmp
 mv ${ROOT}/var/db/pkg ${ROOT}/var/db/pkg.build
