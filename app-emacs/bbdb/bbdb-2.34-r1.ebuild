@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/bbdb-2.34-r1.ebuild,v 1.2 2003/12/04 23:58:34 jbms Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/bbdb/bbdb-2.34-r1.ebuild,v 1.3 2004/03/04 04:59:39 jhuebel Exp $
 
 inherit elisp
 
@@ -13,7 +13,7 @@ SRC_URI="http://bbdb.sourceforge.net/${P}.tar.gz
 	http://www.mit.edu/afs/athena/contrib/emacs-contrib/Fin/dates.el"
 LICENSE="GPL-2 as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 
 DEPEND="virtual/emacs
 crypt? app-emacs/mailcrypt"
