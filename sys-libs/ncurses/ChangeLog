@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.6 2002/05/26 10:18:51 prez Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.7 2002/06/08 22:32:14 danarmak Exp $
+
+*ncurses-5.2.20020511-r1 (9 Jun 2002)
+
+  9 Jun 2002; Dan Armak <danarmak@gentoo.org> :
+  
+  Add bzip2 as a dep so that said patch, which is compressed, can be applied.
 
 *ncurses-5.2.20020511-r1 (26 May 2002)
 
