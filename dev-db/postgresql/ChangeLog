@@ -1,6 +1,13 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.4 2002/02/15 16:22:09 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.5 2002/02/18 21:10:08 karltk Exp $
+
+
+*postgresql-7.2-r1 (18 Feb 2002)
+
+  18 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org> postgresql-7.2-r1.ebuild files/digest-postgresql-7.2-r1:
+
+  Now requires a jdk-1.3 instead of >=1.3, as 1.4 blows up when compiling.
 
 *postgresql-7.2 (15 Feb 2002)
 
