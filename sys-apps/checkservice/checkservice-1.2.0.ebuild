@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkservice/checkservice-1.2.0.ebuild,v 1.1 2004/10/10 02:35:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/checkservice/checkservice-1.2.0.ebuild,v 1.2 2004/10/10 02:36:52 vapier Exp $
 
 DESCRIPTION="Check the status of services running on local/remote machines"
 HOMEPAGE="http://www.linvision.com/checkservice/"
@@ -22,7 +22,7 @@ src_unpack() {
 	sed -i -e 's:/usr/local:/usr:g' $(grep -rl /usr/local *) || die "sed /usr/local"
 }
 
-src_install ()  {
+src_install() {
 	dodir /var/{log,lock,cache}/checkservice
 	dobin checkservice || die
 
@@ -40,7 +40,7 @@ src_install ()  {
 	doins config/plugins/warning/*
 
 	doman man/*
-	dodoc INSTALL README TODO checkservice.php cron/checkservice 
+	dodoc INSTALL README TODO checkservice.php cron/checkservice
 }
 
 pkg_postinst() {

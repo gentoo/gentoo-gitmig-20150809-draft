@@ -1,2 +1,13 @@
-MD5 948ab1ffd642b36f795dae9e51592534 checkservice-1.2.0.ebuild 1633
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ef8655a2337f3e75567d314bc9cf4f44 ChangeLog 362
+MD5 f4b1cc12100a5b174d480647537df3a0 checkservice-1.2.0.ebuild 1419
 MD5 90487cab684ee96661a995a23dde0e13 files/digest-checkservice-1.2.0 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBaKBWHTu7gpaalycRAk/FAJ4oogwDwtqrl19UrRMNXMWsh19OCQCgjdvG
+sshO7KPfVhkjJ8BE5oh4Vkg=
+=9Fs2
+-----END PGP SIGNATURE-----
