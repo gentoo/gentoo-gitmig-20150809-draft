@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/fetchmail
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.44 2004/03/26 21:43:14 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/ChangeLog,v 1.45 2004/03/26 23:42:00 jmaynard Exp $
+
+  26 Mar 2004; Jay Maynard <jmaynard@gentoo.org> fetchmail-6.2.5.ebuild:
+  Unable to reproduce header corruption on Alpha; marking 6.2.5 stable
 
   26 Mar 2004; Seemant Kulleen <seemant@gentoo.org> fetchmail-6.2.5.ebuild:
   mark stable on x86
