@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/redhat-sources/redhat-sources-2.4.20.2.48.ebuild,v 1.2 2003/09/07 07:26:01 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/redhat-sources/redhat-sources-2.4.20.2.48.ebuild,v 1.3 2003/10/03 22:31:07 plasmaroo Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
-inherit kernel
+inherit kernel rpm
 OKV=2.4.20
 KV=2.4.20-2.48
 EXTRAVERSION="-2.48-rhcustom"
@@ -27,10 +27,7 @@ S=${WORKDIR}/linux-${KV}
 # The easiest way to grab Red Hat kernel sources is from the rpm file
 # itself.  We used to generate a patch against vanilla sources trees but
 # the added dependency of rpm2targz is minimal compared with having to
-# generate a new diff for every minor version update.  (Also not to many
-# people have 2.4.18 vanilla source tarballs floating around these days)
-
-DEPEND="${DEPEND} app-arch/rpm2targz"
+# generate a new diff for every minor version update.
 
 DESCRIPTION="Kernel source tree used in Red Hat distributions (not supported by Red Hat)"
 SRC_URI="http://csociety-ftp.ecn.purdue.edu/pub/redhat/linux/beta/phoebe/en/os/i386/RedHat/RPMS/kernel-source-${KV}.i386.rpm"
@@ -39,15 +36,10 @@ KEYWORDS="~x86"
 SLOT="${KV}"
 
 src_unpack() {
-
+	rpm_unpack ${DISTDIR}/kernel-source-${KV}.i386.rpm
 	cd ${WORKDIR}
-	rpm2targz ${DISTDIR}/kernel-source-${KV}.i386.rpm
-	tar xvzf kernel-source-${KV}.i386.tar.gz
-
 	mv usr/src/linux-${KV} ${WORKDIR}
-
 	cd ${S}
-
 	kernel_universal_unpack
 }
 

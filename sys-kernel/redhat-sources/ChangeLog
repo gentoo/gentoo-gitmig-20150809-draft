@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/redhat-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/redhat-sources/ChangeLog,v 1.10 2003/03/01 11:43:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/redhat-sources/ChangeLog,v 1.11 2003/10/03 22:31:07 plasmaroo Exp $
+
+  03 Oct 2003; <plasmaroo@gentoo.org> redhat-sources-2.4.18.24.8.0.ebuild,
+  redhat-sources-2.4.20.2.48-r1.ebuild, redhat-sources-2.4.20.2.48.ebuild:
+  Fixed ebuilds to use the RPM eclass and not depend on rpm2targz. Thanks
+  to Georgi Georgiev <chutz@chubaka.net> for the suggestion! Bug #30221.
 
 *redhat-sources-2.4.20.2.48-r1 (01 Mar 2003)
 
