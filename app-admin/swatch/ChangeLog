@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/swatch
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/swatch/ChangeLog,v 1.8 2004/07/17 21:24:04 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/swatch/ChangeLog,v 1.9 2004/08/18 14:21:33 agriffis Exp $
+
+  18 Aug 2004; Aron Griffis <agriffis@gentoo.org> swatch-3.1.ebuild:
+  Add missing DateManip dependency to swatch-3.1
 
 *swatch-3.1 (31 May 2004)
 
