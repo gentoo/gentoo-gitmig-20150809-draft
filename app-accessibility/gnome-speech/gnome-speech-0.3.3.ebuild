@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.3.3.ebuild,v 1.1 2004/06/11 13:06:05 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.3.3.ebuild,v 1.2 2004/06/15 02:17:41 agriffis Exp $
 
 inherit java-pkg gnome2
 
@@ -28,7 +28,7 @@ DEPEND="${RDEPEND}
 DOCS="AUTHORS ChangeLog NEWS README"
 
 src_compile() {
-	if [ `use java` ] || [ `use freetts` ]
+	if use java || use freetts
 	then
 		if [ -z "${JDK_HOME}" ] || [ ! -d "${JDK_HOME}" ]
 		then
@@ -47,7 +47,7 @@ src_compile() {
 		export JAVAC=no
 	fi
 
-	if [ `use freetts` ]
+	if use freetts
 	then
 		G2CONF="${G2CONF} --with-freetts-dir=${ROOT}/usr/share/freetts/lib"
 	fi
@@ -58,7 +58,7 @@ src_compile() {
 src_install() {
 	gnome2_src_install
 
-	if [ `use java` ]
+	if use java
 	then
 		java-pkg_dojar ${D}/usr/share/jar/*.jar
 		rm -rf ${D}/usr/share/jar
