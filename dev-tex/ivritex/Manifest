@@ -1,6 +1,14 @@
-MD5 c5f564f771ec97ab4e6b3b23b8754417 ivritex-1.1.2.ebuild 553
-MD5 ef39512beeb3b5f423f8d5af4512d5e0 ivritex-1.1.1.ebuild 696
-MD5 7e622b45cf4002d57b31b2630d0cf950 ChangeLog 1048
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f17b79f9d90a04898d312cf2dec2931a ChangeLog 1159
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
-MD5 5f552deb29763de5c0cf1cc8e74494fe files/digest-ivritex-1.1.1 65
+MD5 01fdd642c8404939903b653193c80310 ivritex-1.1.2.ebuild 549
 MD5 356393b96e77c703ce7f9b5608f7e3ef files/digest-ivritex-1.1.2 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBaFLjVWNWqTUmv+0RArRKAKCKYAumkZqARNYIQ8qhKUKqGpVwSwCeIYKV
+yHOS29gbw8nNVfSsswa3+mE=
+=i011
+-----END PGP SIGNATURE-----
