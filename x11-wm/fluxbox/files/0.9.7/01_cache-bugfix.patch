@@ -87,10 +87,6 @@ RCS file: /cvsroot/fluxbox/fluxbox/src/FbTk/ImageControl.hh,v
 retrieving revision 1.8
 retrieving revision 1.9
 diff -r1.8 -r1.9
-25c25
-< // $Id: 01_cache-bugfix.patch,v 1.2 2004/01/11 18:28:54 ciaranm Exp $
----
-> // $Id: 01_cache-bugfix.patch,v 1.2 2004/01/11 18:28:54 ciaranm Exp $
 130c130
 <     typedef std::set<Cache *, ltCacheEntry> CacheList;
 ---
