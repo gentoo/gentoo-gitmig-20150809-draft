@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour-cvs/ardour-cvs-0.6.ebuild,v 1.3 2003/02/18 08:50:44 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour-cvs/ardour-cvs-0.6.ebuild,v 1.4 2003/03/09 13:07:05 jje Exp $
 
 inherit cvs            
 
@@ -16,7 +16,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86"
 
-DEPEND="dev-util/pkgconfig
+DEPEND="$DEPEND
+        dev-util/pkgconfig
 	>=media-libs/alsa-lib-0.9.0_rc7
 	media-sound/jack-cvs
 	=dev-libs/glib-1.2*
@@ -25,7 +26,7 @@ DEPEND="dev-util/pkgconfig
 	sys-libs/gdbm
 	>=media-libs/ladspa-sdk-1.12
 	>=media-libs/libsamplerate-0.0.14
-	>=media-libs/liblrdf-0.2.3"
+	>=media-libs/liblrdf-0.2.4"
 
 S="${WORKDIR}/${PN/-cvs/}"
 

@@ -1,8 +1,13 @@
 # ChangeLog for media-sound/ardour-cvs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour-cvs/ChangeLog,v 1.5 2003/02/18 08:50:44 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour-cvs/ChangeLog,v 1.6 2003/03/09 13:07:05 jje Exp $
 
 *ardour-cvs-0.6 (06 Jan 2003)
+
+  09 Mar 2003; jje <jje@gentoo.org> ardour-cvs-0.6.ebuild:
+  Fixed DEPEND to include $DEPEND from the parent cvs eclass.
+  
+  Updated the depends to lrdf-0.2.4.
 
   18 Feb 2003; Nick Hadaway <raker@gentoo.org> ardour-cvs-0.6.ebuild :
   Added a dependancy on media-libs/liblrdf and updated other depends
