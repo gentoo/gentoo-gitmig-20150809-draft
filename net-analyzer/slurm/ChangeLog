@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/slurm
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/slurm/ChangeLog,v 1.6 2004/06/24 22:18:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/slurm/ChangeLog,v 1.7 2004/07/10 11:30:47 eldad Exp $
+
+  10 Jul 2004; Eldad Zack <eldad@gentoo.org> +metadata.xml,
+  slurm-0.2.3.ebuild:
+  Marked x86 stable
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> slurm-0.2.2.ebuild,
   slurm-0.2.3.ebuild:
