@@ -1,0 +1,15 @@
+--- zaptel-1.0.1-orig/ztd-eth.c	2004-08-16 13:27:12.000000000 -0400
++++ zaptel/ztd-eth.c	2004-10-12 23:36:01.000000000 -0400
+@@ -86,7 +86,11 @@
+ 	struct zt_span *span;
+ 	struct ztdeth_header *zh;
+ 	zh = (struct ztdeth_header *)skb->nh.raw;
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,9)
++	span = ztdeth_getspan(eth_hdr(skb)->h_source, zh->subaddr);
++#else
+ 	span = ztdeth_getspan(skb->mac.ethernet->h_source, zh->subaddr);
++#endif	
+ 	if (span) {
+ 		skb_pull(skb, sizeof(struct ztdeth_header));
+ 		zt_dynamic_receive(span, (unsigned char *)skb->data, skb->len);
+

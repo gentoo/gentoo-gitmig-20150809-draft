@@ -1,6 +1,14 @@
 # ChangeLog for net-misc/zaptel
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.16 2004/10/04 04:09:48 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zaptel/ChangeLog,v 1.17 2004/10/26 01:42:03 stkn Exp $
+
+*zaptel-1.0.1 (24 Oct 2004)
+
+  24 Oct 2004; <stkn@gentoo.org> +files/zaptel-1.0.1-modulesd.diff,
+  +files/zaptel-1.0.1-skbuff.diff, +zaptel-1.0.1.ebuild:
+  New version, includes skbuff fixes for >=linux-2.6.9 (bug #66168, thx to Kevin
+  Daughtridge <kevin@kdau.ath.cx>), now using kernel-mod.eclass
+  (bug #68451, thx to Stefan Schweizer <sschweizer@gmail.com>)
 
   03 Oct 2004; <iggy@gentoo.org> zaptel-1.0.0.ebuild:
   switched custom ARCH setting code to use set_arch_to_* from eutils, also

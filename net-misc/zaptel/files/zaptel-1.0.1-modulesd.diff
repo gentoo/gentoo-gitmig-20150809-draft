@@ -1,0 +1,41 @@
+--- Makefile.orig	2004-10-02 18:18:32.384754608 -0400
++++ Makefile	2004-10-02 18:19:41.581235144 -0400
+@@ -37,7 +37,8 @@
+ CFLAGS+=-DZAPTEL_CONFIG=\"$(CONFIG_FILE)\"
+ 
+ BUILDVER=$(shell if uname -r | grep -q ^2.6; then echo "linux26"; else echo "linux24"; fi)
+-MODCONF=$(shell if [ -d $(INSTALL_PREFIX)/etc/modprobe.d ]; then echo "$(INSTALL_PREFIX)/etc/modprobe.d/zaptel"; elif [ -d $(INSTALL_PREFIX)/etc/modutils ]; then echo "$(INSTALL_PREFIX)/etc/modutils/zaptel"; elif [ -f $(INSTALL_PREFIX)/etc/modprobe.conf ]; then echo "$(INSTALL_PREFIX)/etc/modprobe.conf"; elif [ -f $(INSTALL_PREFIX)/etc/modules.conf ]; then echo "$(INSTALL_PREFIX)/etc/modules.conf"; else echo $(INSTALL_PREFIX)/etc/conf.modules ; fi)
++# Patch for Gentoo, uses modules.d
++MODCONF=$(INSTALL_PREFIX)/etc/modules.d/zaptel
+ 
+ ifeq (${BUILDVER},linux24)
+ #We only support DEVFS in linux 2.4 kernels, since its considered obsolete post 2.4
+@@ -72,8 +73,7 @@
+ 
+ linux26: 
+ linux26: prereq $(BINS)
+-	@if ! [ -d /usr/src/linux-2.6 ]; then echo "Link /usr/src/linux-2.6 to your kernel sources first!"; exit 1 ; fi
+-	make -C /usr/src/linux-2.6 SUBDIRS=$(PWD) modules
++	make -C /usr/src/linux SUBDIRS=$(PWD) modules
+ 
+ obj-m := $(MODULESO) ztdummy.o
+ 
+@@ -285,6 +285,7 @@
+ 	install -m 644 tonezone.h $(INSTALL_PREFIX)/usr/include
+ 	( cd $(INSTALL_PREFIX)/usr/lib ; rm -f libtonezone.so ; ln -sf $(LIBTONEZONE) libtonezone.so )
+ 	/sbin/ldconfig
++	mkdir -p $(INSTALL_PREFIX)/etc/modules.d
+ 	if [ -f $(MODCONF) ]; then mv -f $(MODCONF) $(MODCONF).bak ; fi
+ 	cat $(MODCONF).bak | grep -v "alias char-major-250" | \
+ 	grep -v "post-install torisa /sbin/ztcfg" | \
+@@ -309,10 +310,6 @@
+ 		fi; \
+ 	done
+ 
+-	if [ -d /etc/modutils ]; then \
+-		/sbin/update-modules ; \
+-	fi
+-	-/sbin/depmod -a
+ 	[ -f $(CONFIG_FILE) ] || install -m 644 zaptel.conf.sample $(CONFIG_FILE)
+ 
+ config:
