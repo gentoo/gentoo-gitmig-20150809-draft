@@ -22,7 +22,7 @@ diff -u -r1.8 chkname.c
  		if (!((*name >= 'a' && *name <= 'z') ||
  		      (*name >= '0' && *name <= '9') ||
  		      *name == '_' || *name == '-' ||
-+		      *Name == '.' ||
++		      *name == '.' ||
  		      (*name == '$' && *(name + 1) == '\0')))
  			return 0;
  	}
