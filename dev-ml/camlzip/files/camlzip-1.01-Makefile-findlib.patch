@@ -1,0 +1,23 @@
+--- Makefile.orig	2004-08-25 14:34:02.963205056 +0200
++++ Makefile	2004-08-25 14:35:28.916138224 +0200
+@@ -55,18 +55,8 @@
+ 	rm -f *.o *.a
+ 
+ install:
+-	mkdir -p $(INSTALLDIR)
+-	cp zip.cma zip.cmi gzip.cmi zip.mli gzip.mli libcamlzip.a $(INSTALLDIR)
+-	if test -f dllcamlzip.so; then \
+-	  cp dllcamlzip.so $(INSTALLDIR); \
+-          ldconf=`$(OCAMLC) -where`/ld.conf; \
+-          installdir=$(INSTALLDIR); \
+-          if test `grep -s -c $$installdir'$$' $$ldconf || :` = 0; \
+-          then echo $$installdir >> $$ldconf; fi \
+-        fi
+-
+-installopt:
+-	cp zip.cmxa zip.a zip.cmx gzip.cmx $(INSTALLDIR)
++	ocamlfind install camlzip META zip.cma zip.cmi gzip.cmi zip.mli gzip.mli libcamlzip.a dllcamlzip.so \
++		zip.cmxa zip.a zip.cmx gzip.cmx
+ 
+ depend:
+ 	gcc -MM -I$(ZLIB_INCLUDE) *.c > .depend

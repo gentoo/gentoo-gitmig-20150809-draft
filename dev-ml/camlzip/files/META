@@ -1,4 +1,4 @@
-version="1.01"
+version="VERSION"
 requires="unix"
 linkopts="-cclib -lz"
 archive(byte)="zip.cma"
