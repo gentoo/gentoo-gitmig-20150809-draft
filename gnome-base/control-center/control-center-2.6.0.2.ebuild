@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.5.4.ebuild,v 1.2 2004/03/28 23:14:01 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/control-center-2.6.0.2.ebuild,v 1.1 2004/03/31 22:55:25 foser Exp $
 
 # FIXME : double check all the acme stuff
 inherit gnome2 eutils
@@ -31,7 +31,7 @@ RDEPEND=">=x11-libs/gtk+-2.3
 	dev-libs/libxml2
 	media-sound/esound
 	>=x11-wm/metacity-2.4.5
-	>=x11-libs/libxklavier-0.97
+	>=x11-libs/libxklavier-1
 	alsa? ( >=media-libs/alsa-lib-0.9 )
 	gstreamer? ( >=media-libs/gst-plugins-0.8 )
 	!gnome-extra/fontilus
@@ -65,8 +65,5 @@ src_unpack() {
 	# temporary fix for icon installation adapted by <link@sub_pop.net> (#16928)
 	# FIXME : this broke again
 #	epatch ${FILESDIR}/${PN}-2.2-icons_install.patch
-
-	epatch ${FILESDIR}/${P}-fix_gst_0.8.patch
-	WANT_AUTOCONF=2.5 autoconf || die
 
 }
