@@ -1,6 +1,11 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.7 2003/12/26 18:23:25 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.8 2003/12/27 03:47:28 seemant Exp $
+
+  26 Dec 2003; Seemant Kulleen <seemant@gentoo.org> lvm2-2.00.06.ebuild,
+  lvm2-2.00.07.ebuild, lvm2-2.00.08.ebuild:
+  dependency to sys-fs/lvm-user instead of sys-apps/lvm-user. Closes bug #36534
+  by Adam Gelwarg <adam@gelwarg.net>
 
   26 Dec 2003; Ciaran McCreesh <ciaranm@gentoo.org> lvm2-2.00.08.ebuild:
   Added ~sparc keyword
