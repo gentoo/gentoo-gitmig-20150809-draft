@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/squidsites
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/squidsites/ChangeLog,v 1.6 2004/06/24 22:19:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/squidsites/ChangeLog,v 1.7 2004/07/01 20:23:43 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> squidsites-1.01.ebuild:
+  change sys-libs/glibc to virtual/libc, add IUSE
 
 *squidsites-1.01 (4 August 2002)
 
