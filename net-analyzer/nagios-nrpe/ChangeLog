@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nagios-nrpe
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/ChangeLog,v 1.10 2004/03/10 14:20:21 malverian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-nrpe/ChangeLog,v 1.11 2004/03/19 05:42:49 malverian Exp $
+
+  18 Mar 2004; Philip Walls <malverian@gentoo.org> nagios-nrpe-2.0.ebuild
+  Stable on x86 and amd64
 
 *nagios-nrpe-2.0 (10 Mar 2004)
   10 Mar 2004; Philip Walls <malverian@gentoo.org> nagios-nrpe-2.0.ebuild
