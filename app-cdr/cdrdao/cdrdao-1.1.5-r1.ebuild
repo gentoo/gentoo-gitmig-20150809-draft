@@ -1,13 +1,14 @@
 # Copyright 1999 - 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Peter Kadau <peter.kadau@web.de>
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.5-r1.ebuild,v 1.5 2002/04/06 21:33:53 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.5-r1.ebuild,v 1.6 2002/07/06 20:51:34 drobbins Exp $
 
 S=${WORKDIR}/cdrdao-1.1.5
 DESCRIPTION="Burn CDs in disk-at-once mode -- with optional GUI frontend"
 SRC_URI="http://download.sourceforge.net/${PN}/${P}.src.tar.gz"
 HOMEPAGE="http://cdrdao.sourceforge.net/"
 SLOT="0"
+LICENSE="GPL-2"
 RDEPEND="gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 
 	         >=x11-libs/gtkmm-1.2.5-r1
 	       	 >=gnome-extra/gnomemm-1.1.17 )"

@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/simplecdrx/simplecdrx-1.0_pre1.ebuild,v 1.3 2002/05/23 06:50:08 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/simplecdrx/simplecdrx-1.0_pre1.ebuild,v 1.4 2002/07/06 20:51:35 drobbins Exp $
 
 MY_P="${PN}-`echo ${PV} |sed -e 's:_:-:'`"
 S=${WORKDIR}/${MY_P}
@@ -9,6 +9,7 @@ DESCRIPTION="CD ripping/mastering"
 SRC_URI="http://ogre.rocky-road.net/files/${MY_P}.tar.bz2"
 HOMEPAGE="http://ogre.rocky-road.net/cdr.shtml"
 SLOT="0"
+LICENSE="GPL-2"
 #todo: add blade encoder
 DEPEND="sys-devel/gcc media-sound/mad app-cdr/cdrtools app-cdr/cdrdao 
 	media-sound/cdparanoia media-sound/lame media-libs/libogg

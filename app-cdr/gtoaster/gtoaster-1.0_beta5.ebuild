@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Nästén <pekdon@gmx.net>
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtoaster/gtoaster-1.0_beta5.ebuild,v 1.7 2002/06/30 17:51:11 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gtoaster/gtoaster-1.0_beta5.ebuild,v 1.8 2002/07/06 20:51:35 drobbins Exp $
 
 # Fix so that updating can only be done by 'cp old.ebuild new.ebuild'
 MY_P="`echo ${P} |sed -e 's:-::' -e 's:_b:B:'`"
@@ -10,6 +10,7 @@ DESCRIPTION="GTK+ Frontend for cdrecord"
 SRC_URI="http://gnometoaster.rulez.org/archive/${MY_P}.tgz"
 HOMEPAGE="http://gnometoaster.rulez.org/"
 SLOT="0"
+LICENSE="GPL-2"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.2 )

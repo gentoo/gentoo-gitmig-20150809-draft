@@ -4,12 +4,10 @@
 
 *xcdroast-0.98_alpha10 (16 Jun 2002)
   
-  16 Jun 2002; Doug Goldstein (Cardoe) <dougg@ufl.edu> xcdroast-0.98_alpha10-r2.ebuild:
-  
-  Changed the depends to the new version of cdrtools because of bugs reports and because
-  the xcdroast site says there are bugs unless you use the latest version.
-
-  Fixed lintool errors too. :)
+  16 Jun 2002; Doug Goldstein (Cardoe) <dougg@ufl.edu>
+  xcdroast-0.98_alpha10-r2.ebuild: Changed the depends to the new version of
+  cdrtools because of bugs reports and because the xcdroast site says there are
+  bugs unless you use the latest version.  Fixed lintool errors too. :)
 
   4 Jun 2002; Brandon Low <lostlogic@gentoo.org>  xcdroast-0.98_alpha10-r1.ebuild:
 
