@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.19.6.ebuild,v 1.1 2001/12/27 06:01:20 karltk Exp $
+# /space/gentoo/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.19.6.ebuild,v 1.1 2001/12/27 06:01:20 karltk Exp
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Console-based mouse driver"
@@ -31,19 +31,24 @@ src_compile() {
 	#-e '/$(EMACS)/c\' -e '	echo' 
 
 	emake || die
+	cd ${S}/doc
+	emake || die
 }
 
 src_install() {
-	make prefix=${D}/usr install || die
+	make prefix=${D}/usr sysconfdir=${D}/etc/gpm install || die
 	chmod 755 ${D}/usr/lib/libgpm.so.1.18.0
-	dodoc Announce COPYING ChangeLog FAQ MANIFEST README*
+	dodoc BUGS COPYING ChangeLog Changes MANIFEST README TODO
+	dodoc doc/Announce doc/FAQ doc/README*
 	doman doc/gpm.8 doc/mev.1 doc/gpm-root.1 doc/gpm-types.7 doc/mouse-test.1
 	doinfo doc/gpm.info
 	docinto txt
 	dodoc doc/gpmdoc.txt
+	docinto ps
+	dodoc doc/gpmdoc.ps
 
 	insinto /etc/gpm
-	doins gpm-root.conf
+	doins conf/gpm-*.conf
 
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/gpm.rc6 gpm
