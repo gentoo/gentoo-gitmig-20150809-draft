@@ -1,0 +1,55 @@
+--- src/Makefile.in.orig	2004-07-03 17:49:53.351333976 +0200
++++ src/Makefile.in	2004-07-03 17:51:00.034196640 +0200
+@@ -90,7 +90,7 @@
+ 
+ include_HEADERS = obex.h obex_const.h
+ 
+-lib_LTLIBRARIES = libopenobex.la
++lib_LTLIBRARIES = libopenobex.la libopenobex.so
+ 
+ libopenobex_la_SOURCES =  	obex.c 	obex_main.c obex_main.h 	obex_connect.c obex_connect.h 	obex_header.c obex_header.h 	obex_object.c obex_object.h 	obex_transport.c obex_transport.h 	obex_server.c obex_server.h 	obex_client.c obex_client.h 	irobex.c irobex.h 	inobex.c inobex.h 	btobex.c btobex.h 	netbuf.c netbuf.h 	irda.h irda_wrap.h
+ 
+@@ -132,7 +132,7 @@
+ SOURCES = $(libopenobex_la_SOURCES)
+ OBJECTS = $(libopenobex_la_OBJECTS)
+ 
+-all: all-redirect
++all: shared-dir all-redirect
+ .SUFFIXES:
+ .SUFFIXES: .S .c .lo .o .obj .s
+ $(srcdir)/Makefile.in: Makefile.am $(top_srcdir)/configure.in $(ACLOCAL_M4) 
+@@ -142,6 +142,8 @@
+ 	cd $(top_builddir) \
+ 	  && CONFIG_FILES=$(subdir)/$@ CONFIG_HEADERS= $(SHELL) ./config.status
+ 
++shared-dir:
++	mkdir -p shared
+ 
+ mostlyclean-libLTLIBRARIES:
+ 
+@@ -170,6 +172,7 @@
+ 
+ .c.o:
+ 	$(COMPILE) -c $<
++	$(COMPILE) -fPIC -o shared/$(basename $<).o -c $<
+ 
+ # FIXME: We should only use cygpath when building on Windows,
+ # and only if it is available.
+@@ -195,6 +198,7 @@
+ 
+ .c.lo:
+ 	$(LIBTOOL) --mode=compile $(COMPILE) -c $<
++	$(LIBTOOL) --mode=compile $(COMPILE) -fPIC -o shared/$(basename $<).lo -c $<
+ 
+ .s.lo:
+ 	$(LIBTOOL) --mode=compile $(COMPILE) -c $<
+@@ -215,6 +219,9 @@
+ libopenobex.la: $(libopenobex_la_OBJECTS) $(libopenobex_la_DEPENDENCIES)
+ 	$(LINK) -rpath $(libdir) $(libopenobex_la_LDFLAGS) $(libopenobex_la_OBJECTS) $(libopenobex_la_LIBADD) $(LIBS)
+ 
++libopenobex.so:
++	$(LINK) -rpath $(libdir) -shared $(libopenobex_la_LDFLAGS) shared/*.o
++
+ install-includeHEADERS: $(include_HEADERS)
+ 	@$(NORMAL_INSTALL)
+ 	$(mkinstalldirs) $(DESTDIR)$(includedir)
