@@ -1,13 +1,23 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 67d3e22cf50b9c7ce6b0b8dfb4dad401 modutils-2.4.27.ebuild 1360
+MD5 86bfa45d647797304a621d9afcb33a14 modutils-2.4.24.ebuild 1338
+MD5 72e66328e29bdfb9aababeda22db504b modutils-2.4.26.ebuild 1356
+MD5 d4a33b1256f83e56c79714caf37ac338 modutils-2.4.23.ebuild 1412
 MD5 fcf81441ee80fe94977018ebc588e2d3 ChangeLog 6730
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 d4a33b1256f83e56c79714caf37ac338 modutils-2.4.23.ebuild 1412
-MD5 86bfa45d647797304a621d9afcb33a14 modutils-2.4.24.ebuild 1338
 MD5 480bc0e8645af663fe575dcd958150bb modutils-2.4.25.ebuild 1342
-MD5 72e66328e29bdfb9aababeda22db504b modutils-2.4.26.ebuild 1356
-MD5 67d3e22cf50b9c7ce6b0b8dfb4dad401 modutils-2.4.27.ebuild 1360
 MD5 15611447c25c4be74563a4808c96aa9e files/alias.h.diff 255
 MD5 e2f752d73846ca0f1a0c6bef4e6cea96 files/digest-modutils-2.4.23 68
-MD5 440c0a070f677ba12ecc3a8d59af57c8 files/digest-modutils-2.4.24 195
+MD5 bc5b3a55268f80bf9f07ce9760ca2f80 files/digest-modutils-2.4.24 68
 MD5 bd23ddb87317bad29c6d70b7f0bfcede files/digest-modutils-2.4.25 68
 MD5 d836ad11c092b2c55cc5b398c2af485b files/digest-modutils-2.4.26 68
 MD5 123430bcca454dfee74acef6f3525a17 files/digest-modutils-2.4.27 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBo4tvI1lqEGTUzyQRAsAHAJ4mVCz6uwVF1AwMlthmS8V4IgCbRQCgvggV
+2YAp1ldQhjtfGi+GdH6MM/E=
+=Z4tB
+-----END PGP SIGNATURE-----
