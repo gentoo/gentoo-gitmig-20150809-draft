@@ -1,25 +1,28 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openpbs/openpbs-2.3.16-r1.ebuild,v 1.11 2004/08/08 00:39:46 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openpbs/openpbs-2.3.16-r1.ebuild,v 1.12 2004/11/24 08:19:05 mr_bones_ Exp $
 
 inherit eutils
 
-NAME=`echo ${P} | sed -e "s|openpbs-|OpenPBS_|; y|.|_|"`
-S="${WORKDIR}/${NAME}"
-
+NAME="${P/openpbs-/OpenPBS_}"
+NAME="${NAME//./_}"
 DESCRIPTION="The Portable Batch System (PBS) is a flexible batch queuing and workload management system"
 HOMEPAGE="http://www.openpbs.org/"
-LICENSE="openpbs"
 SRC_URI="${NAME}.tar.gz"
+
+LICENSE="openpbs"
 SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE="X tcltk crypt doc"
 RESTRICT="fetch"
+
 DEPEND="virtual/libc
 		X? ( virtual/x11 )
 		tcltk? ( dev-lang/tcl )"
 RDEPEND="${DEPEND}
 		crypt? ( net-misc/openssh )"
+
+S="${WORKDIR}/${NAME}"
 
 pkg_nofetch() {
 	einfo "Please visit http://www.openpbs.org/."
