@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libnet
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.26 2003/12/17 00:40:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/ChangeLog,v 1.27 2003/12/26 13:40:58 weeve Exp $
+
+  26 Dec 2003; Jason Wever <weeve@gentoo.org> libnet-1.1.1.ebuild:
+  Added ~sparc keyword.
 
 *libnet-1.1.1 (30 Nov 2003)
 
