@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/commons-beanutils-1.6.1-r1.ebuild,v 1.2 2004/01/21 05:06:27 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-beanutils/commons-beanutils-1.6.1-r1.ebuild,v 1.3 2004/06/03 02:04:11 agriffis Exp $
 
 inherit java-pkg
 
@@ -30,18 +30,18 @@ src_compile() {
 	echo "commons-collections.jar=`java-config --classpath=commons-collections`" > build.properties
 	echo "commons-logging.jar=`java-config --classpath=commons-logging`" | sed s/\=.*:/\=/ >> build.properties
 
-	if [ -n "`use jikes`" ] ; then
+	if use jikes ; then
 		myc="${myc} -Dbuild.compiler=jikes"
 	fi
 
-	if [ -n "`use junit`" ] ; then
+	if use junit ; then
 		echo "junit.jar=`java-config --classpath=junit`" | sed  s/:.*// >> build.properties
 		ANT_OPTS=${myc} ant test || die "Testing Classes Failed"
 	fi
 
 	ANT_OPTS=${myc} ant jar || die "Compilation Failed"
 
-	if [ -n "`use doc`" ] ; then
+	if use doc ; then
 		ANT_OPTS=${myc} ant javadoc || die "Unable to create documents"
 	fi
 }
@@ -51,7 +51,7 @@ src_install () {
 	dodoc RELEASE-NOTES.txt LICENSE
 	dohtml STATUS.html PROPOSAL.html
 
-	if [ -n "`use doc`" ] ; then
+	if use doc ; then
 		dohtml -r dist/docs/*
 	fi
 }

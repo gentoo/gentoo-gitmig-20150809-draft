@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0_beta1-r1.ebuild,v 1.1 2004/02/15 06:57:19 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.5.0_beta1-r1.ebuild,v 1.2 2004/06/03 02:09:08 agriffis Exp $
 
 IUSE="doc gnome kde mozilla"
 
@@ -9,9 +9,9 @@ inherit java
 amd64file="j2sdk-1_5_0-beta-linux-amd64.bin"
 x86file="j2sdk-1_5_0-beta-linux-i586.bin"
 
-if [ `use x86` ]; then
+if use x86; then
 	At=${x86file}
-elif [ `use amd64` ]; then
+elif use amd64; then
 	At=${amd64file}
 fi
 
@@ -91,7 +91,7 @@ src_install () {
 	dohtml README.html
 	dodir /opt/${P}/share/
 	cp -a demo src.zip ${D}/opt/${P}/share/
-	if [ "`use x86`" ]; then
+	if use x86; then
 		cp -a sample ${D}/opt/${P}/share/
 	fi
 
@@ -100,8 +100,8 @@ src_install () {
 		plugin_dir="ns7"
 	fi
 
-	if [ "`use mozilla`" ] ; then
-		if [ "`use x86`" ] ; then
+	if use mozilla ; then
+		if use x86 ; then
 			install_mozilla_plugin /opt/${P}/jre/plugin/i386/$plugin_dir/libjavaplugin_oji.so
 		else
 			eerror "No plugin available for amd64 arch"
@@ -117,15 +117,15 @@ src_install () {
 		${D}/opt/${P}/jre/plugin/desktop/sun_java.desktop > \
 		${T}/sun_java.desktop
 
-	if [ "`use x86`" ]; then
-		if [ "`use gnome`" ] ; then
+	if use x86; then
+		if use gnome ; then
 			#TODO check this on Gnome
 			dodir /usr/share/gnome/apps/Internet
 			insinto /usr/share/gnome/apps/Internet
 			doins ${T}/sun_java.desktop
 		fi
 
-		if [ "`use kde`" ] ; then
+		if use kde ; then
 			dodir /usr/share/applnk/Internet
 			insinto /usr/share/applnk/Internet
 			doins ${T}/sun_java.desktop

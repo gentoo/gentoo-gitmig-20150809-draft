@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-oracle/jdbc3-oracle-9.2.0.3.ebuild,v 1.5 2004/01/17 04:39:21 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-oracle/jdbc3-oracle-9.2.0.3.ebuild,v 1.6 2004/06/03 02:00:03 agriffis Exp $
 
 inherit java-pkg
 
@@ -71,7 +71,7 @@ src_compile() {
 }
 
 src_install() {
-	if [ -n "`use doc`" ] ; then
+	if use doc ; then
 		mkdir ${S}/javadoc
 		cd ${S}/javadoc
 		tar xf ${DISTDIR}/${FILE3}

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.03.ebuild,v 1.6 2004/02/22 19:51:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.03.ebuild,v 1.7 2004/06/03 02:09:08 agriffis Exp $
 
 IUSE="doc gnome kde mozilla"
 
@@ -83,7 +83,7 @@ src_install () {
 	if has_version '>=gcc-3.2*' ; then
 		plugin_dir="ns610-gcc32"
 	fi
-	if [ "`use mozilla`" ] ; then
+	if use mozilla ; then
 		install_mozilla_plugin /opt/${P}/jre/plugin/i386/$plugin_dir/libjavaplugin_oji.so
 	fi
 	inst_plugin /opt/${P}/jre/plugin/i386/$plugin_dir/libjavaplugin_oji.so

@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/sablecc
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sablecc/ChangeLog,v 1.3 2004/05/03 21:57:49 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sablecc/ChangeLog,v 1.4 2004/06/03 01:59:13 agriffis Exp $
+
+  02 Jun 2004; Aron Griffis <agriffis@gentoo.org> sablecc-2.18.2.ebuild:
+  Fix use invocation
 
   08 May 2004; Chris Aniszczyk <zx@gentoo.org> +files/sablecc,
   sablecc-2.18.2.ebuild:
