@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.1-r3.ebuild,v 1.5 2003/05/13 09:46:07 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.1-r3.ebuild,v 1.6 2003/05/14 10:12:37 robbat2 Exp $
 
 inherit php eutils
 
@@ -45,15 +45,16 @@ src_install() {
 	cp php.ini-dist php.ini
 	insinto /etc/php4
 	doins php.ini
-	dosym /usr/lib/apache-extramodules /etc/php4/lib
 
 	if [ "`use apache2`" ] ; then
+		dosym /usr/lib/apache2-extramodules /etc/php4/lib
 		exeinto /usr/lib/apache2-extramodules
 		doexe .libs/libphp4.so
 		insinto /etc/apache2/conf/modules.d
 		doins ${FILESDIR}/70_mod_php.conf
 		dosym /etc/php4/php.ini /etc/apache2/conf/php.ini
 	else
+		dosym /usr/lib/apache-extramodules /etc/php4/lib
 		exeinto /usr/lib/apache-extramodules
 		doexe .libs/libphp4.so
 		insinto /etc/apache/conf/addon-modules
