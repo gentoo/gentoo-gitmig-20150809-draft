@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2_pre20040902.ebuild,v 1.4 2004/09/06 20:51:19 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.2.ebuild,v 1.1 2004/09/07 14:44:18 lv Exp $
 
 IUSE="static nls bootstrap build multilib gcj gtk f77 objc hardened uclibc n32 n64"
 
@@ -10,7 +10,6 @@ DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie a
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
 
-# just till the toolchain eclass is 'ready'
 #KEYWORDS="-* amd64 ~mips ~ppc64 ~x86 -hppa ~ppc"
 KEYWORDS="-*"
 
@@ -46,13 +45,12 @@ RDEPEND="virtual/libc
 PDEPEND="sys-devel/gcc-config
 	!n32? ( !n64? ( !uclibc? ( !build ( sys-libs/libstdc++-v3 ) ) ) )"
 
-GENTOO_TOOLCHAIN_BASE_URI="http://dev.gentoo.org/~lv/"
+GENTOO_TOOLCHAIN_BASE_URI="http://dev.gentoo.org/~lv/GCC/"
 PATCH_VER="1.0"
 PIE_VER="8.7.6.5"
 PIE_CORE="gcc-3.4.0-piepatches-v${PIE_VER}.tar.bz2"
 PP_VER="3_4"
 PP_FVER="${PP_VER//_/.}-2"
-GCC_MANPAGE_VERSION="3.4.1"
 SRC_URI="$(get_gcc_src_uri)"
 
 S="$(gcc_get_s_dir)"
@@ -119,7 +117,6 @@ fi
 pkg_setup() {
 	gcc_setup_variables
 	PIEPATCH_EXCLUDE="upstream/04_all_gcc-3.4.0-v8.7.6.1-pie-arm-uclibc.patch.bz2"
-	GENTOO_PATCH_EXCLUDE="18_all_gcc34-c++-staticinit-threadsafe.patch.bz2"
 	(use x86 || use sparc || use amd64) && HARDENED_GCC_WORKS="true"
 }
 
@@ -185,6 +182,15 @@ src_unpack() {
 		autoreconf
 		cd ${S}
 	fi
+
+	# We dont want a multilib libjava, so lets use this hack taken from fedora
+	cd ${S}
+	sed -i -e 's/^all: all-redirect/ifeq (\$(MULTISUBDIR),)\nall: all-redirect\nelse\nall:\n\techo Multilib libjava build disabled\nendif/' libjava/Makefile.in
+	sed -i -e 's/^install: install-redirect/ifeq (\$(MULTISUBDIR),)\ninstall: install-redirect\nelse\ninstall:\n\techo Multilib libjava install disabled\nendif/' libjava/Makefile.in
+	sed -i -e 's/^check: check-redirect/ifeq (\$(MULTISUBDIR),)\ncheck: check-redirect\nelse\ncheck:\n\techo Multilib libjava check disabled\nendif/' libjava/Makefile.in
+	sed -i -e 's/^all: all-recursive/ifeq (\$(MULTISUBDIR),)\nall: all-recursive\nelse\nall:\n\techo Multilib libjava build disabled\nendif/' libjava/Makefile.in
+	sed -i -e 's/^install: install-recursive/ifeq (\$(MULTISUBDIR),)\ninstall: install-recursive\nelse\ninstall:\n\techo Multilib libjava install disabled\nendif/' libjava/Makefile.in
+	sed -i -e 's/^check: check-recursive/ifeq (\$(MULTISUBDIR),)\ncheck: check-recursive\nelse\ncheck:\n\techo Multilib libjava check disabled\nendif/' libjava/Makefile.in
 }
 
 src_compile() {

@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.319 2004/09/06 20:51:19 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.320 2004/09/07 14:44:18 lv Exp $
+
+*gcc-3.4.2 (07 Sep 2004)
+
+  07 Sep 2004; Travis Tilley <lv@gentoo.org> +gcc-3.4.2.ebuild,
+  -gcc-3.4.2_pre20040902.ebuild:
+  version bump. disabled building libjava multilib. this release is masked until
+  the uclibc patches are done, bootstrapping is tested, and the toolchain.eclass
+  changes are tested on ppc and ppc64.
 
   06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> gcc-3.4.1-r2.ebuild,
   gcc-3.4.1.ebuild, gcc-3.4.2_pre20040902.ebuild:
