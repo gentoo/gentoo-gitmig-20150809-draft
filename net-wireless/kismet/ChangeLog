@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/kismet
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.26 2004/02/03 21:00:31 gmsoft Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.27 2004/02/07 01:45:24 pylon Exp $
+
+  07 Feb 2004; Lars Weiler <pylon@gentoo.org> kismet-3.0.1-r1.ebuild:
+  stable on ppc
 
 *kismet-3.0.1-r1 (03 Feb 2004)
 
