@@ -1,9 +1,16 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.198 2005/01/13 07:37:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.199 2005/01/13 15:30:59 agriffis Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+*baselayout-1.9.4-r7 (13 Jan 2005)
+
+  13 Jan 2005; Aron Griffis <agriffis@gentoo.org>
+  +baselayout-1.9.4-r7.ebuild:
+  backport multilib patch from 1.11.8-r2 to 1.9.4-r7 for the sake of amd64
+  livecds; marked ~amd64 momentarily until tested
 
 *baselayout-1.11.8-r2 (12 Jan 2005)
 
