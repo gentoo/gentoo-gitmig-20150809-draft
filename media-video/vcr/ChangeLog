@@ -1,8 +1,12 @@
 # ChangeLog for media-video/vcr
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcr/ChangeLog,v 1.3 2002/10/21 20:11:30 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcr/ChangeLog,v 1.4 2002/10/22 17:17:00 raker Exp $
 
 *vcr-1.09-r2 (21 Oct 2002)
+
+  22 Oct 2002; Nick Hadaway <raker@gentoo.org> vcr-1.09-r2.ebuild :
+  Marked as stable now as patch has been tested on gcc3 and gcc2 systems
+  and compiles without errors.
 
   21 Oct 2002; Nick Hadaway <raker@gentoo.org> vcr-1.09-r2.ebuild,
   digest-vcr-1.09-r2, 1.09-r2-gentoo.diff :
@@ -13,7 +17,6 @@
 
   14 Sep 2002; Seemant Kulleen <seemant@gentoo.org> vcr-1.09-r1.ebuild
   files/digest-vcr-1.09-r1 :
-
   Fix for flipped vcr output submitted by gentoo@liquidx.net (Alastair Tse)
   in bug #7919.  Moved patches to one patchfile and it now resides on
   ibiblio instead.
@@ -22,13 +25,5 @@
 
   13 Jul 2002; phoen][x <phoenix@gentoo.org> ChangeLog, vcr-1.09.ebuild,
   files/digest-vcr-1.09, files/vcr-1.09-avifile-0.7x.patch :
-
   Initial cvs commit. Ebuild contributed by Alastair Tse <gentoo@liquidx.net>.
   Thanks for the contribution.
-
-  Added initial ChangeLog which should be updated whenever the package is
-  updated in any way. This changelog is targetted to users. This means that the
-  comments should well explained and written in clean English. The details about
-  writing correct changelogs are explained in the skel.ChangeLog file which you
-  can find in the root directory of the portage repository.
-
