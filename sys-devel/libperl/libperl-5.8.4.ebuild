@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.1.ebuild,v 1.3 2004/02/01 09:27:55 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.4.ebuild,v 1.1 2004/05/03 22:11:20 rac Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -53,7 +53,7 @@
 # Martin Schlemmer <azarah@gentoo.org> (28 Dec 2002).
 
 
-IUSE="berkdb gdbm"
+IUSE="berkdb gdbm threads"
 
 inherit eutils flag-o-matic
 
@@ -82,7 +82,7 @@ fi
 LIBPERL="libperl.so.${PERLSLOT}.${SHORT_PV}"
 
 LICENSE="Artistic GPL-2"
-KEYWORDS="~amd64 ~x86 ~sparc ~ppc ~alpha ~mips ~hppa ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390"
 
 DEPEND="sys-apps/groff
 	berkdb? ( sys-libs/db )
