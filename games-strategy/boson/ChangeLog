@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/boson
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/ChangeLog,v 1.7 2004/07/03 20:01:47 carlo Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/boson/ChangeLog,v 1.8 2005/01/14 23:38:07 danarmak Exp $
+
+  15 Jan 2005; Dan Armak <danarmak@gentoo.org> boson-0.9.1.ebuild:
+  Changed deps on kdegames, kdemultimedia to accept kdegames-meta and
+  kdemultimedia-meta, the split 'meta' packages. This dep will be narrowed
+  down in the future to the precise split packages required.
 
   03 Jul 2004; Carsten Lohrke <carlo@gentoo.org> boson-0.10.ebuild,
   boson-0.9.1.ebuild:
