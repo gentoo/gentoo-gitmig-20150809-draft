@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/skunkweb
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/skunkweb/ChangeLog,v 1.2 2004/03/25 08:16:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/skunkweb/ChangeLog,v 1.3 2004/04/10 16:58:56 kloeri Exp $
+
+  10 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> skunkweb-3.4_beta5.ebuild:
+  Stable on x86.
 
   25 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   skunkweb-3.4_beta5.ebuild:

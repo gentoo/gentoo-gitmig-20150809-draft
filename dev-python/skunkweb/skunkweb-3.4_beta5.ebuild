@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/skunkweb/skunkweb-3.4_beta5.ebuild,v 1.2 2004/03/25 08:16:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/skunkweb/skunkweb-3.4_beta5.ebuild,v 1.3 2004/04/10 16:58:56 kloeri Exp $
 
 
 DESCRIPTION="robust Python web application server"
@@ -10,7 +10,7 @@ S=${WORKDIR}/${NEWP}
 SRC_URI="mirror://sourceforge/skunkweb/${NEWP}.tar.gz"
 LICENSE="GPL-2 BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="${IUSE} apache1 apache2"
 DEPEND=">=dev-lang/python-2.2
 		>=dev-python/egenix-mx-base-2.0.4
