@@ -58,3 +58,4 @@ move dev-java/dbconnectionbroker dev-java/dbconnectionbroker-bin
 move dev-java/dbunit dev-java/dbunit-bin
 move dev-java/fesi dev-java/fesi-bin
 move dev-java/infobus dev-java/infobus-bin
+move dev-java/jad dev-java/jad-bin
