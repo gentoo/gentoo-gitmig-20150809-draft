@@ -3,7 +3,6 @@
 # Distributed under the GNU Public License
 # Version 1.0 7/31/2000
 
-
 import string,os
 from commands import *
 from stat import *
@@ -12,13 +11,6 @@ import sys
 import shlex
 import shutil
 import xpak
-
-# parsever:
-# This function accepts an 'inter-period chunk' such as
-# "3","4","3_beta5", or "2b" and returns an array of three
-# integers. "3_beta5" returns [ 3, -2, 5 ]
-# These values are used to determine which package is
-# newer.
 
 # master category list.  Any new categories should be added to this list to ensure that they all categories are read
 # when we check the portage directory for available ebuilds.
@@ -30,6 +22,12 @@ categories=("app-admin", "app-arch", "app-cdr", "app-doc", "app-editors", "app-e
 			"net-analyzer", "net-dialup", "net-fs", "net-ftp", "net-irc", "net-libs", "net-mail", "net-misc", "net-nds", 
 			"net-print", "net-www", "packages", "sys-apps", "sys-devel", "sys-kernel", "sys-libs", "x11-base", "x11-libs", 
 			"x11-terms", "x11-wm","virtual")
+
+# valid end of version components; integers specify offset from release version
+# pre=prerelease, p=patchlevel (should always be followed by an int), rc=release candidate
+# all but _p (where it is required) can be followed by an optional trailing integer
+
+endversion={"pre":-2,"p":0,"alpha":-4,"beta":-3,"rc":-1}
 
 #parse /etc/env.d and generate /etc/profile.env
 
@@ -422,52 +420,34 @@ def getconfig(mycfg):
 	return myconfigdict
 
 def relparse(myver):
+	"converts last version part into three components"
 	number=0
 	p1=0
 	p2=0
 	mynewver=string.split(myver,"_")
 	if len(mynewver)==2:
-		#alpha,beta or pre
+		#an endversion
 		number=string.atof(mynewver[0])
-		if "beta" == mynewver[1][:4]:
-			p1=-3
-			try:
-				p2=string.atof(mynewver[1][4:])
-			except:
-				p2=0
-		elif "alpha" == mynewver[1][:5]:
-			p1=-4
-			try:
-				p2=string.atof(mynewver[1][5:])
-			except:
-				p2=0
-		elif "pre" ==mynewver[1][:3]:
-			p1=-2
-			try:
-				p2=string.atof(mynewver[1][3:])
-			except:
-				p2=0
-		elif "rc" ==mynewver[1][:2]:
-			p1=-1
-			try:
-				p2=string.atof(mynewver[1][2:])
-			except:
-				p2=0
-
-		elif "p" ==mynewver[1][:1]:
-			try:
-				p1=string.atoi(mynewver[1][1:])
-			except:
-				p1=0
-	else:
-		#normal number or number with letter at end
-		divider=len(myver)-1
-		if myver[divider:] not in "1234567890":
-			#letter at end
-			p1=ord(myver[divider:])
-			number=string.atof(myver[0:divider])
-		else:
-			number=string.atof(myver)		
+		match=0
+		for x in endversion.keys():
+			elen=len(x)
+			if mynewver[1][:elen] == x:
+				match=1
+				p1=endversion[x]
+				try:
+					p2=string.atof(mynewver[1][elen:])
+				except:
+					p2=0
+				break
+		if not match:	
+			#normal number or number with letter at end
+			divider=len(myver)-1
+			if myver[divider:] not in "1234567890":
+				#letter at end
+				p1=ord(myver[divider:])
+				number=string.atof(myver[0:divider])
+			else:
+				number=string.atof(myver)		
 	return [number,p1,p2]
 
 
@@ -483,26 +463,37 @@ def revverify(myrev):
 	return 0
 
 #returns 1 if valid version string, else 0
-# valid string in format: <v1>.<v2>...<vx>[a-z,_{alpha,beta,pre}[vy]]
+# valid string in format: <v1>.<v2>...<vx>[a-z,_{endversion}[vy]]
 # ververify doesn't do package rev.
 
-def ververify(myval):
-	global ERRVER
-	ERRVER=""
-	myval=string.split(myval,'.')
+def ververify(myorigval,silent=1):
+	if len(myorigval)==0:
+		if not silent:
+			print "!!! Name error: package contains empty \"-\" part."
+		return 0
+	myval=string.split(myorigval,'.')
+	if len(myval)==0:
+		if not silent:
+			print "!!! Name error: empty version string."
+		return 0
 	for x in myval[1:]:
 		x="."+x
 	for x in myval[:-1]:
 		try:
 			foo=string.atof(x)
 		except:
-			ERRVER=x+" is not a valid version component."
+			if not silent:
+				print "!!! Name error in",myorigval+": \""+x+"\" is not a valid version component."
 			return 0
 	try:
 		string.atof(myval[-1])
 		return 1
 	except:
 		pass
+	if len(myval[-1])==0:
+		if not silent:
+			print "!!! Name error in",myorigval+": empty \"-\" part."
+		return 0
 	if myval[-1][-1] in "abcdefghijklmnopqrstuvwxyz":
 		try:
 			string.atof(myval[-1][:-1])
@@ -512,40 +503,42 @@ def ververify(myval):
 			pass
 	splits=string.split(myval[-1],"_")
 	if len(splits)!=2:
-		#not a valid _alpha, _beta, _pre or _p, so fail
-		ERRVER="Too many or too few \"_\" characters."
+		#not a valid endversion, so fail
+		if not silent:
+			print "!!! Name error in",myorigval+": Too many or too few \"_\" characters."
 		return 0
 	try:
 		string.atof(splits[0])
 	except:
 		#something like .asldfkj_alpha1 which is invalid :)
-		ERRVER=splits[0]+" is not a valid number."
+		if not silent:
+			print "!!! Name error in",myorigval+":",splits[0],"is not a valid integer."
 		return 0
-	valid=["alpha","beta","p","rc","pre"]
-	for x in valid:
+	ok=0
+	for x in endversion.keys():
 		if splits[1][0:len(x)]==x:
 			firpart=x
 			secpart=splits[1][len(x):]
 			ok=1
 	if not ok:
-		ERRVER='Did not find an "alpha", "beta", "pre" or "p" after trailing "_"'
+		if not silent:
+			print "!!! Name error in",myorigval+": Did not find an",endversion.keys(),"after trailing _."
 		return 0
 	if len(secpart)==0:
 		if firpart=="p":
-			#patchlevel requires an int
-			ERRVER='"p" (patchlevel) requires a trailing integer (i.e. "p3")'
-			return 0	
+			if not silent:
+				print "!!! Name error in",myorigval+": _p (patchlevel) requires a trailing integer."
+			return 0
 		else:
-			#alpha, beta and pre don't require an int
 			return 1
 	try:
 		string.atoi(secpart)
 		return 1
-		#the int after the "alpha", "beta" or "pre" was ok
+		#the int after the endversion component was OK 
 	except:
-		ERRVER=secpart+" is not a valid integer."
+		if not silent:
+			print "!!! Name error in",myorigval+":",secpart,"is not a valid integer."
 		return 0
-		#invalid number!
 
 def isjustname(mypkg):
 	myparts=string.split(mypkg,'-')
@@ -568,10 +561,17 @@ def isspecific(mypkg):
 # For foo-1.2-1, this list would be [ "foo", "1.2", "1" ].  For 
 # Mesa-3.0, this list would be [ "Mesa", "3.0", "0" ].
 
-def pkgsplit(mypkg):
+def pkgsplit(mypkg,silent=1):
 	myparts=string.split(mypkg,'-')
 	if len(myparts)<2:
+		if not silent:
+			print "!!! Name error in",mypkg+": missing a version or name part." 
 		return None
+	for x in myparts:
+		if len(x)==0:
+			if not silent:
+				print "!!! Name error in",mypkg+": empty \"-\" part."
+			return None
 	if revverify(myparts[-1]):
 		if ververify(myparts[-2]):
 			if len(myparts)==2:
@@ -585,23 +585,29 @@ def pkgsplit(mypkg):
 		else:
 			return None
 
-	elif ververify(myparts[-1]):
+	elif ververify(myparts[-1],silent):
 		if len(myparts)==1:
+			if not silent:
+				print "!!! Name error in",mypkg+": missing name part."
 			return None
 		else:
 			for x in myparts[:-1]:
 				if ververify(x):
+					if not silent:
+						print "!!! Name error in",mypkg+": multiple version parts."
 					return None
 			return [string.join(myparts[:-1],"-"),myparts[-1],"r0"]
 	else:
 		return None
 
-def catpkgsplit(mycatpkg):
+def catpkgsplit(mycatpkg,silent=1):
 	"""returns [cat, pkgname, version, rev ]"""
 	mysplit=string.split(mycatpkg,"/")
 	if len(mysplit)!=2:
+		if not silent:
+			print "!!! Name error in",mycatpkg+": category or package part missing."
 		return None
-	mysplit2=pkgsplit(mysplit[1])
+	mysplit2=pkgsplit(mysplit[1],silent)
 	if mysplit2==None:
 		return None
 	return [mysplit[0],mysplit2[0],mysplit2[1],mysplit2[2]]
@@ -657,14 +663,6 @@ def pkgcmp(pkg1,pkg2):
 	if r2>r1:
 		return -1
 	return 0
-
-def getgeneral(mycatpkg):
-	"""Takes a specific catpkg and returns the general version.  getgeneral("foo/bar-1.0") returns "foo/bar"""
-	mysplit=catpkgsplit(mycatpkg)
-	if not mysplit:
-		return None
-	else:
-		return string.join([mysplit[0],mysplit[1]],"/")
 
 def dep_parenreduce(mysplit,mypos=0):
 	"Accepts a list of strings, and converts '(' and ')' surrounded items to sub-lists"
@@ -830,46 +828,6 @@ def dep_print(deplist,mylevel=0):
 				print "  "*(mylevel)+"&& "+dep_catpkgstring(x)
 
 
-
-"""
-This is an early (semi-working) attempt at recursive ebuilding.  Commented out as
-we're getting ready for production use.
-
-def dep_print_resolve(deplist):
-	"Prints out list of things to do"
-	if (deplist==None) or (len(deplist)==0):
-		return
-	if deplist[0]=="||":
-		for x in deplist[1:]:
-			if type(x)==types.ListType:
-				dep_print(x)
-			else:
-				print "|| "+dep_catpkgstring(x)+' ('+porttree.dep_bestmatch(x)+')'
-		return
-	else:
-		for x in deplist:
-			if type(x)==types.ListType:
-				dep_print_resolve(x)
-			else:
-				mymatch=porttree.dep_bestmatch(x)
-				if mymatch=="":
-					print "!! "+dep_catpkgstring(x)
-					return
-				else:
-					print "Best match is",mymatch
-					mysplit=catpkgsplit(mymatch)
-					myebuild=getsetting("PORTDIR")+"/"+mysplit[0]+"/"+mysplit[1]+"/"+string.split(mymatch,"/")[1]+".ebuild"
-					print "ebuild file is",myebuild
-					result=doebuild(myebuild,"merge")
-					if result:
-						#error
-						print "STOPPING deep merge!"
-						sys.exit(1)
-		myebuild=getsetting("PORTDIR")+"/"+getsetting("CATEGORY")+"/"+getsetting("PN")+"/"+getsetting("PF")+".ebuild"
-		result=doebuild(myebuild,"merge")
-		return result
-"""
-
 def dep_zapdeps(unreduced,reduced):
 	"""Takes an unreduced and reduced deplist and removes satisfied dependencies.
 	Returned deplist contains steps that must be taken to satisfy dependencies."""
@@ -954,41 +912,7 @@ def dep_frontend(mytype,depstring):
 #		This is the semi-working auto-ebuild stuff, disabled for now
 #		dep_print_resolve(myparse[1])		
 	return 1
-"""
-def port_porttree():
-	
-	This function builds a dictionary of available ebuilds in the portage tree.
-	Dictionary format is:
-	mydict["cat/pkg"]=[
-					["cat/fullpkgname",["cat","pkg","ver","rev"]
-					["cat/fullpkgname",["cat","pkg","ver2","rev2"]
-					]
-	portagedict={}
-	mydir=getsetting("PORTDIR")
-	if not os.path.isdir(mydir):
-		return
-	origdir=os.getcwd()
-	os.chdir(mydir)
-	for x in categories:
-		if not os.path.isdir(os.getcwd()+"/"+x):
-			continue
-		for y in os.listdir(os.getcwd()+"/"+x):
-			if not os.path.isdir(os.getcwd()+"/"+x+"/"+y):
-				continue
-			if y=="CVS":
-				continue
-			for mypkg in os.listdir(os.getcwd()+"/"+x+"/"+y):
-				if mypkg[-7:] != ".ebuild":
-					continue
-				mypkg=mypkg[:-7]
-				mykey=x+"/"+y
-				fullpkg=x+"/"+mypkg
-				if not portagedict.has_key(mykey):
-					portagedict[mykey]=[]
-				portagedict[mykey].append([fullpkg,catpkgsplit(fullpkg)])
-	os.chdir(origdir)
-	return portagedict
-"""
+
 class packagetree:
 	def __init__(self):
 		self.tree={}
@@ -1001,7 +925,7 @@ class packagetree:
 		if not self.populated:
 			self.populate()
 		"this function tells you whether or not a specific package is installed"
-		cpsplit=catpkgsplit(catpkg)
+		cpsplit=catpkgsplit(catpkg,0)
 		if cpsplit==None:
 			return None 
 		if not self.tree.has_key(cpsplit[0]+"/"+cpsplit[1]):
@@ -1098,12 +1022,12 @@ class packagetree:
 					cpv=mypkgdep[1:]
 			if not isspecific(cpv):
 				return None
-			if self.hasnode(getgeneral(cpv)):
-				mycatpkg=catpkgsplit(cpv)
+			mycatpkg=catpkgsplit(cpv,0)
+			mykey=mycatpkg[0]+"/"+mycatpkg[1]
+			if self.hasnode(mykey):
 				if mycatpkg==None:
 					#parse error
 					return 0
-				mykey=mycatpkg[0]+"/"+mycatpkg[1]
 				if not self.hasnode(mykey):
 					return 0
 				for x in self.getnode(mykey):
@@ -1141,7 +1065,7 @@ class packagetree:
 				cpv=mypkgdep[1:]
 			if not isspecific(cpv):
 				return ""
-			mycatpkg=catpkgsplit(cpv)
+			mycatpkg=catpkgsplit(cpv,0)
 			mykey=mycatpkg[0]+"/"+mycatpkg[1]
 			if not self.hasnode(mykey):
 				return ""
@@ -1191,7 +1115,7 @@ class packagetree:
 				cpv=mypkgdep[1:]
 			if not isspecific(cpv):
 				return []
-			mycatpkg=catpkgsplit(cpv)
+			mycatpkg=catpkgsplit(cpv,0)
 			if mycatpkg==None:
 				#parse error
 				return []
@@ -1238,7 +1162,7 @@ class vartree(packagetree):
 						fullpkg=x+"/"+y
 				else:
 					fullpkg=x+"/"+y
-				mysplit=catpkgsplit(fullpkg)
+				mysplit=catpkgsplit(fullpkg,0)
 				if mysplit==None:
 					print "!!! Error:",self.root+"var/db/pkg/"+x+"/"+y,"is not a valid database entry, skipping..."
 					continue
@@ -1274,7 +1198,7 @@ class portagetree(packagetree):
 					fullpkg=x+"/"+mypkg
 					if not self.tree.has_key(mykey):
 						self.tree[mykey]=[]
-					mysplit=catpkgsplit(fullpkg)
+					mysplit=catpkgsplit(fullpkg,0)
 					if mysplit==None:
 						print "!!! Error:",self.root+"/"+x+"/"+y,"is not a valid Portage directory, skipping..."
 						continue	
@@ -1317,7 +1241,7 @@ class currenttree(packagetree):
 			if len(myline)!=3:
 				continue
 			fullpkg=string.join([myline[0],myline[2]],"/")
-			mysplit=catpkgsplit(fullpkg)
+			mysplit=catpkgsplit(fullpkg,0)
 			if mysplit==None:
 				print "!!! Error:",self.root+":"+fullpkg,"is not a valid current packages entry, skipping..."
 				continue
@@ -1347,7 +1271,7 @@ class binarytree(packagetree):
 				continue
 			mycat=string.strip(mycat)
 			fullpkg=mycat+"/"+mypkg[:-5]
-			cps=catpkgsplit(fullpkg)
+			cps=catpkgsplit(fullpkg,0)
 			if cps==None:
 				print "!!! Error:",mytbz2,"contains corrupt cat/pkg information, skipping..."
 				continue
