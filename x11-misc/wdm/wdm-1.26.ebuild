@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/wdm-1.26.ebuild,v 1.2 2004/04/11 17:26:25 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/wdm-1.26.ebuild,v 1.3 2004/06/10 22:17:03 jhuebel Exp $
 
 IUSE="truetype pam png jpeg gif tiff"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://voins.program.ru/wdm/"
 SRC_URI="http://voins.program.ru/${PN}/${P}.tar.bz2"
 
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 LICENSE="GPL-2"
 
 DEPEND="${RDEPEND}
