@@ -260,13 +260,13 @@ diff -ur linux-2.6.0/include/linux/time.h linux-2.6.0/include/linux.gentoo/time.
  
 +#ifndef _SYS_TIME_H
  #ifndef _STRUCT_TIMESPEC
-+#ifndef _timespec_defined
++#ifndef __timespec_defined
  #define _STRUCT_TIMESPEC
  struct timespec {
  	time_t	tv_sec;		/* seconds */
  	long	tv_nsec;	/* nanoseconds */
  };
-+#endif /* _timespec_defined */
++#endif /* __timespec_defined */
  #endif /* _STRUCT_TIMESPEC */
  
 +#ifndef _STRUCT_TIMEVAL
