@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeaccessibility-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-meta/ChangeLog,v 1.3 2005/02/05 11:39:14 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-meta/ChangeLog,v 1.4 2005/02/13 22:53:06 motaboy Exp $
+
+  13 Feb 2005; Simone Gotti <motaboy@gentoo.org>
+  kdeaccessibility-meta-3.4.0_beta2.ebuild:
+  Add arts use flag, pull in ksayit only if the arts use flag is enabled.
+  Fixes bug #81912.
 
 *kdeaccessibility-meta-3.4.0_beta2 (05 Feb 2005)
 
