@@ -1,6 +1,9 @@
 # ChangeLog for media-video/totem
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.45 2005/03/10 20:08:45 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/ChangeLog,v 1.46 2005/03/11 19:15:21 lanius Exp $
+
+  11 Mar 2005; Heinrich Wendel <lanius@gentoo.org> totem-0.100-r2.ebuild:
+  fix gst-plugins-ffmpeg dep
 
 *totem-1.0 (10 Mar 2005)
 

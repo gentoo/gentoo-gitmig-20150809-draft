@@ -1,8 +1,11 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9c6711a6d814960503907a66003a7de0 totem-0.99.19.ebuild 1742
 MD5 9f2858f2d0308b9b48262eb99a4efbd3 totem-0.99.15.1.ebuild 1589
 MD5 08730c9b7c620fd41869ac7a1abec080 totem-1.0.ebuild 2652
-MD5 e3aa0280acaa026c29a63476b939c91e totem-0.100-r2.ebuild 1989
-MD5 7b3a5fbdbd1b64950a70f7d5b1566623 ChangeLog 6397
+MD5 3160fc8b78ee5a74a654521257b0234c totem-0.100-r2.ebuild 1990
+MD5 bf961734b2a0a55ea07fcba986708d2b ChangeLog 6502
 MD5 74b9bd3cc5015b286abc33eb51408252 metadata.xml 521
 MD5 50a343412446e05871e042a7b5958c93 files/totem-0.100-fix_desktop_item.patch 558
 MD5 8dd0c2a14c9603045fb2eebd0ee50534 files/digest-totem-0.100-r2 65
@@ -12,3 +15,10 @@ MD5 eeba2ab1c3ed87a4a630addd709262ea files/digest-totem-0.99.19 67
 MD5 62cbcd8c86010195b8b70ee4d9703e84 files/totem-0.100-gst_backend_fixes-r1.patch 1036
 MD5 572a285ceed98dcaa61cf9520e7e59f7 files/totem-0.99.22-x_includes.patch 1330
 MD5 3d9e7881aa0ec7d110c1487cd95d6c40 files/digest-totem-0.99.15.1 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCMe5fevY57Fted3ERAv/DAJ4kw8dPiuTLRk2HU3KMTCaKVD6INgCg2Fdz
+LT+7sO5gu15kxO6fqKbGrs8=
+=4CKN
+-----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.100-r2.ebuild,v 1.4 2005/01/30 10:18:00 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.100-r2.ebuild,v 1.5 2005/03/11 19:15:21 lanius Exp $
 
 inherit gnome2 eutils
 
@@ -28,7 +28,7 @@ RDEPEND=">=dev-libs/glib-2.2
 				>=media-libs/gst-plugins-0.8.5
 				>=media-plugins/gst-plugins-gnomevfs-0.8.5
 				>=media-plugins/gst-plugins-xvideo-0.8.5
-				=media-plugins/gst-plugins-ffmpeg-0.8.3
+				>=media-plugins/gst-plugins-ffmpeg-0.8.3
 				mad? ( >=media-plugins/gst-plugins-mad-0.8.5 )
 				) )"
 
