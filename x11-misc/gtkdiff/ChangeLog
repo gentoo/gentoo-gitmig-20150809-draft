@@ -1,0 +1,25 @@
+# ChangeLog for app-misc/gtkdiff
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gtkdiff/ChangeLog,v 1.1 2004/01/02 19:08:05 port001 Exp $
+
+*gtkdiff-1.8.0-r2 (02 Jan 2004)
+
+  02 Jan 2004; Ian Leitch <port001@gentoo.org> gtkdiff-1.8.0-r2.ebuild:
+  Moved from app-misc/gtkdiff to x11-misc/gtkdiff.
+
+  29 May 2003; Alastair Tse <liquidx@gentoo.org> gtkdiff-1.8.0-r2.ebuild:
+  SRC_URI and HOMEPAGE update
+
+*gtkdiff-1.8.0-r2 (27 Mar 2002)
+
+  27 Mar 2002; Seemant Kulleen <seemant@gentoo.org> gtkdiff-1.8.0-r2.ebuild :
+
+  man page/LFH compliance fix submitted by Matthew Kennedy
+
+*gtkdiff-1.8.0-r1 (10 Mar 2002)
+
+  10 Mar 2002; Bruce A. Locke <blocke@shivan.org> gtkdiff-1.8.0-r1.ebuild :
+
+  - NLS fix submitted by seemant@rocketmail.com (Seemant Kulleen)
+  - added correct dependencies
+
