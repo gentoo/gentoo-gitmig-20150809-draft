@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/xscreensaver
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.61 2004/09/02 22:49:41 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/ChangeLog,v 1.62 2004/09/05 23:52:43 ciaranm Exp $
+
+  06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org>
+  xscreensaver-4.14-r2.ebuild, xscreensaver-4.15.ebuild,
+  xscreensaver-4.16.ebuild:
+  Switch to use epause and ebeep, bug #62950
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   xscreensaver-4.15.ebuild, xscreensaver-4.16.ebuild:
