@@ -1,13 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0_rc1.ebuild,v 1.2 2004/01/19 15:46:19 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0.ebuild,v 1.1 2004/02/02 12:24:34 caleb Exp $
 inherit kde
 
 need-autoconf 2.5
 set-kdedir ${PV}
-
-MY_PV=3.1.95
-S=${WORKDIR}/${PN}-${MY_PV}
 
 IUSE="alsa cups ipv6 ssl doc ldap"
 DESCRIPTION="KDE libraries needed by all kde programs"
@@ -15,7 +12,7 @@ KEYWORDS="~x86 ~sparc ~amd64"
 HOMEPAGE="http//www.kde.org/"
 SLOT="3.2"
 LICENSE="GPL-2 LGPL-2"
-SRC_URI="mirror://kde/unstable/${MY_PV}/src/${PN}-${MY_PV}.tar.bz2"
+SRC_URI="mirror://kde/stable/${PV}/src/${PN}-${PV}.tar.bz2"
 
 # kde.eclass has kdelibs in DEPEND, and we can't have that in here.
 # so we recreate the entire DEPEND from scratch.
@@ -33,7 +30,7 @@ DEPEND=">=sys-devel/autoconf-2.58
 	virtual/ghostscript
 	media-libs/libart_lgpl
 	sys-devel/gettext
-	~kde-base/arts-1.2.0_rc1
+	~kde-base/arts-1.2.0
 	>=x11-libs/qt-3.2.0"
 
 RDEPEND="$DEPEND
@@ -41,12 +38,6 @@ RDEPEND="$DEPEND
 	cups? ( net-print/cups )
 	doc? ( app-doc/doxygen )
 	dev-lang/python"
-
-src_unpack() {
-	kde_src_unpack
-	cd ${S} && make -f admin/Makefile.common && aclocal
-#	use alpha && cd ${S} && epatch ${FILESDIR}/${P}-kjs-alphaev6-gcc3-workaround.patch
-}
 
 src_compile() {
 
