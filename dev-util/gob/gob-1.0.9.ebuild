@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/gob-1.0.9.ebuild,v 1.1 2001/06/05 19:43:20 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/gob-1.0.9.ebuild,v 1.2 2001/06/24 02:20:30 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -21,7 +21,7 @@ src_compile() {
 src_install () {
 
     try make DESTDIR=${D} install
-    dodoc AUTHORS COPYING CHangeLog NEWS README TODO
+    dodoc AUTHORS COPYING ChangeLog NEWS README TODO
 
 }
 

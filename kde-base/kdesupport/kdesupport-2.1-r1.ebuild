@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesupport/kdesupport-2.1-r1.ebuild,v 1.4 2001/06/20 04:53:14 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdesupport/kdesupport-2.1-r1.ebuild,v 1.5 2001/06/24 02:20:30 achim Exp $
 
 V=2.1
 A=${PN}-${V}.tar.bz2
@@ -18,7 +18,7 @@ DEPEND=">=sys-devel/gcc-2.95.2
 	>=x11-libs/qt-x11-2.2.3"
 
 RDEPEND=">=sys-devel/gcc-2.95.2
-         ~kde-base/kde-env-2.1"
+         >=kde-base/kde-env-2.1"
 
 
 src_compile() {
