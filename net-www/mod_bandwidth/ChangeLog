@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mod_bandwidth
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_bandwidth/ChangeLog,v 1.9 2005/01/08 21:06:39 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_bandwidth/ChangeLog,v 1.10 2005/02/14 17:22:30 hollow Exp $
+
+  14 Feb 2005; Benedikt Boehm <hollow@gentoo.org>
+  -files/11_mod_bandwidth.conf, -files/mod_bandwidth-0.1-register.patch,
+  -mod_bandwidth-0.1.ebuild:
+  cleaning out 0.1 in favor of mod_bw
 
 *mod_bandwidth-2.0.5-r1 (08 Jan 2005)
 
