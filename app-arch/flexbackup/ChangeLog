@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/flexbackup
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/flexbackup/ChangeLog,v 1.11 2003/10/12 05:12:48 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/flexbackup/ChangeLog,v 1.12 2003/10/21 15:53:19 mholzer Exp $
+
+  22 Oct 2003; Martin Holzer <mholzer@gentoo.org> flexbackup-1.2.0-r1.ebuild,
+  flexbackup-1.2.1.ebuild:
+  adding RESTRICT="nomirror"
 
 *flexbackup-1.2.1 (11 Oct 2003)
 

@@ -1,10 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/flexbackup/flexbackup-1.2.1.ebuild,v 1.1 2003/10/12 05:12:48 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/flexbackup/flexbackup-1.2.1.ebuild,v 1.2 2003/10/21 15:53:19 mholzer Exp $
 
 DESCRIPTION="Flexible backup script using perl."
 HOMEPAGE="http://flexbackup.sourceforge.net/"
-SRC_URI="mirror://sourceforge/flexbackup/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -36,5 +37,4 @@ pkg_postinst() {
 	einfo "needs.  If you are using devfs, the tape device should"
 	einfo "be set to /dev/tapes/tape0/mtn.  If you need to use any"
 	einfo "archiver other than tar, please emerge it separately."
-	echo
 }
