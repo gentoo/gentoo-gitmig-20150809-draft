@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.46 2004/04/10 17:15:37 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.47 2004/04/12 02:33:29 swtaylor Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -232,7 +232,7 @@ strip-flags() {
 }
 
 test_flag() {
-	if gcc -S -xc "$@" -o /dev/null /dev/null >/dev/null 2>&1; then
+	if [ -z "`gcc -S -xc "$@" -o /dev/null /dev/null 2>&1`" ]; then
 		echo "$@"
 		return 0
 	fi
@@ -339,19 +339,17 @@ filter-ldflags() {
 etexec-flags() {
 	has_pie || has_pic
 	if [ $? == 0 ] ; then
-		if [ "`is-flag -yet_exec`" != "true" ]; then
-			debug-print ">>> appending flags -yet_exec" 
+		[ -z "`is-flag -yet_exec`" ] && 
 			export CFLAGS="${CFLAGS} `test_flag -yet_exec`"
-		fi
+		[ -z "`is-flag -nopie`" ] && 
+			export CFLAGS="${CFLAGS} `test_flag -nopie`"
 	fi
 }
 
 fstack-flags() {
 	has_ssp
 	if [ $? == 0 ] ; then
-		if [ "`is-flag -yno_propolice`" != "true" ]; then
-			debug-print ">>> appending flags -fno-stack-protector" 
+		[ -z "`is-flag -yno_propolice`" ] && 
 			export CFLAGS="${CFLAGS} `test_flag -fno-stack-protector`"
-		fi
 	fi
 }
