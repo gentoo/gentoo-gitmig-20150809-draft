@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/qtopia-desktop-bin
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/qtopia-desktop-bin/ChangeLog,v 1.8 2004/07/01 19:23:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/qtopia-desktop-bin/ChangeLog,v 1.9 2004/11/26 22:36:40 nerdboy Exp $
+
+  26 Nov 2004; Steve Arnold <nerdboy@gentoo.org>
+  qtopia-desktop-bin-1.6.2-r1.ebuild, qtopia-desktop-bin-1.7.0.ebuild:
+  fixed bug 70853
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   qtopia-desktop-bin-1.6.2-r1.ebuild, qtopia-desktop-bin-1.7.0.ebuild:

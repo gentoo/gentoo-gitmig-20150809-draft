@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/qtopia-desktop-bin/qtopia-desktop-bin-1.6.2-r1.ebuild,v 1.6 2004/07/13 18:34:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/qtopia-desktop-bin/qtopia-desktop-bin-1.6.2-r1.ebuild,v 1.7 2004/11/26 22:36:40 nerdboy Exp $
 
 IUSE=""
 
@@ -38,12 +38,10 @@ src_install() {
 
 pkg_postinst() {
 
-	einfo "******************************************************************"
 	einfo " Finished installing Qtopia Desktop into ${QD}"
 	einfo
 	einfo " To start Qtopia Desktop, run:"
 	einfo
 	einfo "   $ qtopiadesktop"
 	einfo
-	einfo "******************************************************************"
 }
