@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.1.9.ebuild,v 1.11 2004/07/27 13:30:31 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.1.9.ebuild,v 1.12 2004/11/08 08:55:06 mr_bones_ Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ DEPEND="virtual/libc
 RDEPEND="virtual/libc"
 
 SLOT="0"
-LICENSE="BSD | GPL-2"
+LICENSE="|| ( BSD GPL-2 )"
 
 # Should work on  alpha arm hppa i386 ia64 m68k mips mipsel powerpc s390 sparc
 # REF http://packages.debian.org/cgi-bin/search_packages.pl?searchon=names&version=all&exact=1&keywords=pdnsd

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.1.11.ebuild,v 1.9 2004/10/04 09:20:45 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.1.11.ebuild,v 1.10 2004/11/08 08:55:06 mr_bones_ Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ DESCRIPTION="Proxy DNS server with permanent caching"
 HOMEPAGE="http://www.phys.uu.nl/%7Erombouts/pdnsd.html http://home.t-online.de/home/Moestl"
 SRC_URI="http://www.phys.uu.nl/%7Erombouts/pdnsd/${MY_P}.tar.gz"
 
-LICENSE="BSD | GPL-2"
+LICENSE="|| ( BSD GPL-2 )"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~ppc ~s390 ~sparc ~x86 -x86-fbsd"
 IUSE="ipv6 debug isdn"
