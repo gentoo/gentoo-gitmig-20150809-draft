@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/libhtmlparse
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libhtmlparse/ChangeLog,v 1.1 2003/01/02 03:11:15 mkennedy Exp $
+
+*libhtmlparse-0.1.12 (01 Jan 2003)
+
+  01 Jab 2003; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  libhtmlparse-0.1.12.ebuild, files/digest-libhtmlparse-0.1.12 :
+
+  Initial import.
