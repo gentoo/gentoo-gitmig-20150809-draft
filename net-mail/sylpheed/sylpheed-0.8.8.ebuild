@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/sylpheed-0.8.8.ebuild,v 1.3 2003/01/08 20:17:41 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/sylpheed-0.8.8.ebuild,v 1.4 2003/01/08 22:11:01 bcowan Exp $
 
 IUSE="ssl xface ipv6 nls gnome ldap crypt pda"
 
@@ -17,6 +17,7 @@ KEYWORDS="x86"
 PROVIDE="virtual/sylpheed"
 
 DEPEND="=x11-libs/gtk+-1.2*
+	app-misc/mime-types
 	xface? ( >=media-libs/compface-1.4 )
 	ssl? ( dev-libs/openssl )
 	pda? ( app-misc/jpilot )
@@ -55,10 +56,6 @@ src_install () {
 	insinto /usr/share/pixmaps
 	doins *.png
 	
-	dodir /etc
-	insinto /etc
-	doins ${FILESDIR}/mime.types
-	
 	if use gnome
 	    then
 		dodir /usr/share/gnome/apps/Internet
@@ -68,4 +65,3 @@ src_install () {
 	
 	dodoc ABOUT-NLS AUTHORS COPYING ChangeLog* NEWS README* TODO*
 }
-

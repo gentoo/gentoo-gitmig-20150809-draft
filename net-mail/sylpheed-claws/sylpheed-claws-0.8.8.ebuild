@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.8.8.ebuild,v 1.6 2003/01/08 20:14:04 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.8.8.ebuild,v 1.7 2003/01/08 22:13:47 bcowan Exp $
 
 IUSE="nls gnome xface gtkhtml crypt spell imlib ssl ldap ipv6 pda"
 
@@ -17,6 +17,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86"
 
 DEPEND="=x11-libs/gtk+-1.2*
+	app-misc/mime-types
 	pda? ( >=app-misc/jpilot-0.99 )
 	ssl? ( >=dev-libs/openssl-0.9.6b )
 	ldap? ( >=net-nds/openldap-2.0.7 )
@@ -87,7 +88,6 @@ src_compile() {
 }
 
 src_install() {
-	dodir /etc
 	make DESTDIR=${D} install || die
 
 	local menuentry="/usr/share/gnome/apps/Internet/sylpheed.desktop"
@@ -101,9 +101,6 @@ src_install() {
 
 	mv ${D}/usr/share/pixmaps/sylpheed.png \
 		${D}/usr/share/pixmaps/sylpheed-claws.png
-	
-	insinto /etc
-	doins ${FILESDIR}/mime.types
 	
 	dodoc AUTHORS ChangeLog* INSTALL* NEWS README* TODO*  
 }
