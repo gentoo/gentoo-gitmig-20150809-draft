@@ -5,8 +5,10 @@
 media-libs/nurbs++
 
 # Just masked until more testing can be done. (sandymac, 24 May 2002)
+# If you unmask mozilla, please do so to galeon and nautilus as well
 >=net-www/mozilla-1.0_rc3
 =net-www/galeon-1.2.3
+>=gnome-base/nautilus-1.0.6-r9
 
 # devel branch of syslog-ng -- broken (blocke, May 21, 2002)
 >=app-admin/syslog-ng-1.5.17
