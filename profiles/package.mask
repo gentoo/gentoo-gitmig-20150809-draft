@@ -45,7 +45,6 @@
 >=x11-themes/gtk-engines-lighthouseblue-0.7.0
 >=x11-themes/gtk-engines-mac2-1.0.3-r1
 >=x11-themes/gtk-engines-mist-0.10
->=x11-themes/gtk-engines-smooth-0.5.2
 >=x11-themes/gtk-engines-thinice-2.0.2-r1
 >=x11-themes/gtk-engines-xenophilia-0.8-r1
 >=x11-themes/gtk-engines-xfce-2.1.1-r1
