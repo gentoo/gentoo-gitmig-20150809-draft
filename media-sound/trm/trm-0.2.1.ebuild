@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/trm/trm-0.2.1.ebuild,v 1.1 2004/05/27 22:48:20 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/trm/trm-0.2.1.ebuild,v 1.2 2004/05/31 06:48:31 eradicator Exp $
+
+IUSE=""
 
 LICENSE="GPL-2"
 
