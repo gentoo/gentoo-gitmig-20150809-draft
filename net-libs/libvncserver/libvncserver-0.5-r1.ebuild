@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/libvncserver-0.5.ebuild,v 1.1 2003/08/08 01:22:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/libvncserver-0.5-r1.ebuild,v 1.1 2003/08/12 05:01:38 vapier Exp $
 
 inherit eutils
 
@@ -46,5 +46,6 @@ src_compile() {
 
 src_install() {
 	make install DESTDIR=${D} || die
+	dobin examples/storepasswd
 	dodoc AUTHORS ChangeLog NEWS README TODO
 }

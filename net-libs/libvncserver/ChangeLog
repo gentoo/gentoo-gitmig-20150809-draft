@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libvncserver
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.1 2003/08/08 01:22:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libvncserver/ChangeLog,v 1.2 2003/08/12 05:01:38 vapier Exp $
+
+*libvncserver-0.5-r1 (12 Aug 2003)
+
+  12 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Make sure storepasswd binary is installed.
 
 *libvncserver-0.5 (07 Aug 2003)
 
