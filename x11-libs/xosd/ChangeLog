@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/xosd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.43 2005/02/25 16:56:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/ChangeLog,v 1.44 2005/03/25 11:46:20 lanius Exp $
+
+*xosd-2.2.14 (25 Mar 2005)
+
+  25 Mar 2005; Heinrich Wendel <lanius@gentoo.org>
+  -files/2.2.5-xmms-trackpos.patch, -xosd-2.2.12.ebuild, +xosd-2.2.14.ebuild,
+  -xosd-2.2.5-r1.ebuild:
+  version bump
 
 *xosd-2.2.10 (25 Feb 2005)
 
