@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/teapop-0.3.5.ebuild,v 1.1 2003/01/20 15:54:03 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/teapop-0.3.5.ebuild,v 1.2 2003/01/23 06:20:04 bcowan Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Tiny POP3 server"
@@ -30,12 +30,7 @@ src_compile() {
 }
 
 src_install () {
-	make \
-		prefix=${D}/usr \
-		mandir=${D}/usr/share/man \
-		infodir=${D}/usr/share/info \
-		sysconfdir=${D}/etc \
-		install || die
+	make DESTDIR=${D} install || die
 
 	dodir /usr/sbin
 	mv ${D}/usr/libexec/teapop ${D}/usr/sbin/

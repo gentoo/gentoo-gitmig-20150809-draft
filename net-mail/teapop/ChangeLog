@@ -1,8 +1,11 @@
 # ChangeLog for net-mail/teapop
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/ChangeLog,v 1.7 2003/01/20 15:54:03 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/ChangeLog,v 1.8 2003/01/23 06:20:04 bcowan Exp $
 
 *teapop-0.3.5 (20 Jan 2003)
+
+  23 Jan 2003; Brad Cowan <bcowan@gentoo.org> teapop-0.3.5.ebuild:
+  Fixed sandbox violations.
 
   20 Jan 2003; Nick Hadaway <raker@gentoo.org> teapop-0.3.5.ebuild,
   files/digest-teapop-0.3.5 :
