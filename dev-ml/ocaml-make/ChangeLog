@@ -1,0 +1,10 @@
+# ChangeLog for dev-ml/ocaml-make
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocaml-make/ChangeLog,v 1.1 2003/06/20 01:09:11 george Exp $
+
+*ocaml-make-5.04.0.ebuild (19 Jun 2003)
+
+  19 Jun 2003; George Shapovalov <george@gentoo.org> Manifest, ocaml-make-5.04.0.ebuild, files/{digest-ocaml-make-5.04.0} :
+  initial release (#22279)
+  Generic O'Caml Makefile for GNU Make
+  ebuild submitted by Bardur Arantsson <bardur-gta@odense.kollegienet.dk>
