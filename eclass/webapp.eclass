@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.22 2004/06/11 22:06:10 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.23 2004/06/14 23:35:24 stuart Exp $
 #
 # eclass/webapp.eclass
 #				Eclass for installing applications to run under a web server
@@ -53,7 +53,7 @@ function webapp_checkfileexists ()
 	[ -n "$2" ] && my_prefix="$2/" || my_prefix=
 
 	if [ ! -e "${my_prefix}$1" ]; then
-		msg="ebuild fault: file $1 not found"
+		msg="ebuild fault: file '$1' not found"
 		eerror "$msg"
 		eerror "Please report this as a bug at http://bugs.gentoo.org/"
 		die "$msg"
@@ -124,7 +124,7 @@ function webapp_configfile ()
 	echo $MY_FILE
 
 	einfo "(config) $MY_FILE"
-	echo "\"$MY_FILE\"" >> ${D}${WA_CONFIGLIST}
+	echo "$MY_FILE" >> ${D}${WA_CONFIGLIST}
 }
 
 # ------------------------------------------------------------------------
@@ -138,7 +138,7 @@ function webapp_configfile ()
 
 function webapp_hook_script ()
 {
-	webapp_checkfileexists "$2"
+	webapp_checkfileexists "$1"
 
 	einfo "(hook) $1"
 	cp "$1" "${D}${MY_HOOKSCRIPTSDIR}/`basename $1`" || die "Unable to install $1 into ${D}${MY_HOOKSCRIPTSDIR}/"
@@ -204,7 +204,7 @@ function webapp_serverowned ()
 	local MY_FILE="`webapp_strip_appdir \"$1\"`" 
 	
 	einfo "(server owned) $MY_FILE"
-	echo "\"$MY_FILE\"" >> "${D}${WA_SOLIST}"
+	echo "$MY_FILE" >> "${D}${WA_SOLIST}"
 }
 
 # ------------------------------------------------------------------------
