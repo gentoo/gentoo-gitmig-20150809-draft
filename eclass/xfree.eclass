@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfree.eclass,v 1.9 2003/09/30 07:22:40 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfree.eclass,v 1.10 2003/10/20 06:43:35 spyderous Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -13,7 +13,7 @@
 ECLASS=xfree
 INHERITED="${INHERITED} ${ECLASS}"
 
-EXPORT_FUNCTIONS vcards is_kernel strip_bins
+EXPORT_FUNCTIONS vcards is_kernel strip_bins strip_bins_x11r6
 
 vcards() {	
 	has "$1" ${VIDEO_CARDS} && return 0
@@ -28,8 +28,19 @@ filter-patch() {
 # Kernel checker is_kernel $1 $2 where $1 is KV_major and $2 is KV_minor.
 # is_kernel "2" "4" should map to a 2.4 kernel, etc.
 
+check_version_h() {
+	if [ ! -f "${ROOT}/usr/src/linux/include/linux/version.h" ]
+	then
+		eerror "Please verify that your /usr/src/linux symlink is pointing"
+		eerror "to your current kernel sources, and that you did run:"
+		eerror
+		eerror "  # make dep"
+		die "/usr/src/linux symlink not setup!"
+	fi
+}
+
 get_KV_info() {
-	check_KV
+	check_version_h
 
 	# Get the kernel version of sources in /usr/src/linux ...
 	export KV_full="$(awk '/UTS_RELEASE/ { gsub("\"", "", $3); print $3 }' \
