@@ -1,13 +1,9 @@
 # ChangeLog for media-video/spca5xx
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/spca5xx/ChangeLog,v 1.2 2005/02/05 02:23:31 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/spca5xx/ChangeLog,v 1.3 2005/02/05 19:39:01 kingtaco Exp $
 
-*spca5xx-20050109 (04 Feb 2005)
+*spca5xx-20050116 (05 Feb 2005)
 
-  04 Feb 2005; Mike Doty <kingtaco@gentoo.org> spca5xx-20041224.ebuild,
-  +spca5xx-20050109.ebuild:
-  20041224 stable on amd64.  20050109 marked testing for x86 and amd64
-
-  25 Dec 2004; Mike Doty <kingtaco@gentoo.org> :
-  Initial import
+  05 Feb 2005; Mike Doty <kingtaco@gentoo.org> +spca5xx-20050116.ebuild:
+  version bump
 
