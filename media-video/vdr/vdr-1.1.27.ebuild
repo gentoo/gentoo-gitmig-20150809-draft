@@ -1,25 +1,29 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.1.27.ebuild,v 1.2 2003/04/14 19:57:07 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vdr/vdr-1.1.27.ebuild,v 1.3 2003/06/18 12:39:33 seemant Exp $
 
 inherit eutils
 
-S="${WORKDIR}/${P}"
+IUSE="lirc"
+
+S=${WORKDIR}/${P}
 DESCRIPTION="Klaus Schmidingers Video Disk Recorder"
-SRC_URI="ftp://ftp.cadsoft.de/vdr/Developer/${P}.tar.bz2"
 HOMEPAGE="http://www.cadsoft.de/people/kls/vdr"
-LICENSE="GPL-2"
+SRC_URI="ftp://ftp.cadsoft.de/vdr/Developer/${P}.tar.bz2"
+
 SLOT="0"
+LICENSE="GPL-2"
 KEYWORDS="~x86"
-DEPEND="media-video/linuxtv-dvb
+
+DEPEND="media-tv/linuxtv-dvb
 	sys-libs/ncurses
 	lirc? ( app-misc/lirc )
 	media-libs/jpeg"
-IUSE="lirc"
+
 
 src_unpack() {
-	unpack "${P}.tar.bz2"
-	cd "${S}"
+	unpack ${A}
+	cd ${S}
 	epatch ${FILESDIR}/${P}-gentoo.diff
 }
 
