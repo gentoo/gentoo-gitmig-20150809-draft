@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc2.ebuild,v 1.18 2004/06/29 19:08:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc2.ebuild,v 1.19 2004/08/12 19:33:02 pvdabeel Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/xine/${PN}-${PV/_/-}${MY_PKG_SUFFIX}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="x86 ~ppc hppa ~sparc amd64 alpha ia64"
+KEYWORDS="x86 ppc hppa ~sparc amd64 alpha ia64"
 IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa gnome sdl speex"
 
 RDEPEND="oggvorbis? ( media-libs/libvorbis )
