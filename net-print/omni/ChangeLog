@@ -1,0 +1,9 @@
+# ChangeLog for net-print/omni
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/omni/ChangeLog,v 1.1 2003/07/16 14:54:54 lanius Exp $
+
+*omni-0.9.0 (16 Jul 2003)
+
+  16 Jul 2003; Heinrich Wendel <lanius@gentoo.org> omni-0.9.0.ebuild:
+  initial release, thx to SpanKY <vapier@gentoo.org>  (bug #6658)
+
