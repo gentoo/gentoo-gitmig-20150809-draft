@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.9_p1-r1.ebuild,v 1.8 2005/01/01 19:56:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.9_p1-r1.ebuild,v 1.9 2005/01/07 21:37:33 aliz Exp $
 
 inherit eutils flag-o-matic ccc gnuconfig
 
@@ -48,6 +48,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-largekey.patch.bz2
 	epatch ${FILESDIR}/${P}-fix_suid.patch.bz2
 	epatch ${FILESDIR}/${P}-infoleak.patch #59361
+	epatch ${FILESDIR}/${P}-terminal_restore.patch.bz2
 
 	use sftplogging && epatch ${FILESDIR}/${P}-sftplogging-1.2-gentoo.patch.bz2
 	use alpha && epatch ${FILESDIR}/${PN}-3.5_p1-gentoo-sshd-gcc3.patch.bz2
