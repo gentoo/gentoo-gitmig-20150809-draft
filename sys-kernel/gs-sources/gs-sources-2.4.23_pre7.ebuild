@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.21_pre7.ebuild,v 1.5 2003/09/10 04:29:07 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.23_pre7.ebuild,v 1.1 2003/10/14 22:35:33 livewire Exp $
 
 IUSE="build crypt"
 
@@ -18,27 +18,27 @@ IUSE="build crypt"
 ETYPE="sources"
 
 inherit kernel
-OKV=2.4.20
+PROVIDE="virtual/linux-sources virtual/winkernel"
+OKV=2.4.22
 EXTRAVERSION=_pre7-gss
-KV=2.4.21_pre7-gss
+KV=2.4.23_pre7-gss
 S=${WORKDIR}/linux-${KV}
 
 # Documentation on the patches contained in this kernel will be installed
 # to /usr/share/doc/gs-sources-${PV}/patches.txt.gz
 
 DESCRIPTION="This kernel stays up to date with current kernel -pres,
-		with recent acpi,evms,win3lin ,futexes,aic79xx,
-		superfreeswan,preempt/ll, and various hw fixes."
+	with recent acpi,evms,win3lin ,futexes,aic79xx,
+	superfreeswan,preempt/ll, and various hw fixes."
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-	 http://gentoo.lostlogicx.com/patches-${KV}.tar.bz2"
+	 mirror://gentoo/patches-${KV}.tar.bz2"
 KEYWORDS="x86 -ppc -sparc "
 SLOT="${KV}"
 
 src_unpack() {
 	unpack ${A}
 	mv linux-${OKV} linux-${KV} || die
-
-	cd ${KV}
+	cd ${KV} || die
 	# Kill patches we aren't suppposed to use, don't worry about
 	# failures, if they aren't there that is a good thing!
 	# This is the ratified crypt USE flag, enables IPSEC and patch-int
