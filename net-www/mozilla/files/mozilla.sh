@@ -41,13 +41,7 @@ ulimit -c 0
 ##
 MOZ_DIST_BIN="/usr/lib/mozilla"
 MOZ_PROGRAM="/usr/lib/mozilla/mozilla-bin"
-
-if [ -x /usr/lib/mozilla/mozilla-xremote-client ]
-then
-	MOZ_CLIENT_PROGRAM="/usr/lib/mozilla/mozilla-xremote-client"
-else
-	MOZ_CLIENT_PROGRAM="/usr/lib/mozilla/mozilla-bin"
-fi
+MOZ_CLIENT_PROGRAM="/usr/lib/mozilla/mozilla-xremote-client"
 
 ##
 ## Set MOZILLA_FIVE_HOME
@@ -174,15 +168,20 @@ function set_jvm_vars() {
 }
 
 function check_running() {
-    $MOZ_CLIENT_PROGRAM 'ping()' 2>/dev/null >/dev/null
-    RETURN_VAL=$?
-    if [ "$RETURN_VAL" -eq "2" ]; then
-      echo 0
-      return 0
-    else
-      echo 1
-      return 1
-    fi
+	if [ -x $MOZ_CLIENT_PROGRAM ]; then
+      $MOZ_CLIENT_PROGRAM 'ping()' 2>/dev/null >/dev/null
+      RETURN_VAL=$?
+      if [ "$RETURN_VAL" -eq "2" ]; then
+        echo 0
+        return 0
+      else
+        echo 1
+        return 1
+      fi
+	else
+	  echo 0
+	  return 0
+	fi
 }
 
 function open_mail() {
