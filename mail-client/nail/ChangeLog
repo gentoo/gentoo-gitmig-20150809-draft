@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/nail
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.13 2004/11/24 09:51:16 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.14 2004/11/25 17:16:35 weeve Exp $
+
+  25 Nov 2004; Jason Wever <weeve@gentoo.org> nail-11.1.ebuild:
+  Stable on sparc.
 
   24 Nov 2004; Andrej Kacian <ticho@gentoo.org> nail-11.1.ebuild:
   Stable on x86.
