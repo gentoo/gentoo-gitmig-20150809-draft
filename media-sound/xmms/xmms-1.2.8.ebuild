@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.8.ebuild,v 1.1 2003/09/12 17:36:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.8.ebuild,v 1.2 2003/09/12 17:38:44 seemant Exp $
 
 IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk"
 
@@ -127,8 +127,8 @@ src_install() {
 		sysdir=${D}/usr/share/applets/Multimedia \
 		GNOME_SYSCONFDIR=${D}/etc install || die "FOO"
 
-	dodoc AUTHORS ChangeLog COPYING FAQ NEWS README TODO 
-	
+	dodoc AUTHORS ChangeLog COPYING FAQ NEWS README TODO
+
 	keepdir /usr/share/xmms/Skins
 	insinto /usr/share/pixmaps/
 	donewins gnomexmms/gnomexmms.xpm xmms.xpm
