@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/gqview-1.5.3.ebuild,v 1.5 2004/10/19 10:27:35 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/gqview-1.5.3.ebuild,v 1.6 2005/01/02 17:43:11 hansmi Exp $
 
 DESCRIPTION="A GTK-based image browser"
 HOMEPAGE="http://gqview.sourceforge.net/"
