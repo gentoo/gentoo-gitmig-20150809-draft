@@ -6,7 +6,6 @@ mmx
 #objprelink
 #odbc
 #oss
-#qtmt
 #sse
 gnome-libs	gnome-base/gnome-libs
 aalib		media-libs/aalib	

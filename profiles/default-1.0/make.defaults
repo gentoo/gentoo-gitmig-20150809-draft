@@ -3,7 +3,7 @@
 
 USE="x86 oss 3dnow apm arts avi berkdb crypt cups encode gdbm gif gpm gtk imlib
 java jpeg kde libg++ libwww mikmod mmx motif  mpeg ncurses nls
-oggvorbis opengl pam pdflib png python qt qtmt quicktime readline sdl
+oggvorbis opengl pam pdflib png python qt quicktime readline sdl
 slang spell ssl svga tcpd truetype X xml2 xmms xv" 
 
 ARCH="x86"

@@ -5,7 +5,7 @@
 
 USE="oss 3dnow apm arts avi berkdb crypt cups encode gdbm gif gpm gtk imlib
 java jpeg kde libg++ libwww mikmod mmx motif  mpeg ncurses nls
-oggvorbis opengl pam pdflib png python qt qtmt quicktime readline sdl
+oggvorbis opengl pam pdflib png python qt quicktime readline sdl
 slang spell ssl svga tcpd truetype X xml2 xmms xv" 
 
 
@@ -13,9 +13,12 @@ slang spell ssl svga tcpd truetype X xml2 xmms xv"
 
 # These lines added by /usr/portage/profiles/default-sparc-1.0/scripts/generate-packages.sh
 #
-# $Id: make.defaults,v 1.17 2002/12/09 19:05:43 seemant Exp $
+# $Id: make.defaults,v 1.18 2003/02/27 17:30:52 hannes Exp $
 #
 # $Log: not supported by cvs2svn $
+# Revision 1.17  2002/12/09 19:05:43  seemant
+# added PROFILE_ARCH for sparc64
+#
 # Revision 1.16  2002/12/09 17:12:02  seemant
 # changed ARCH to sparc64
 #

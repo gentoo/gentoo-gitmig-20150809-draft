@@ -112,7 +112,6 @@ pnp - Adds support for PNP in pcmcia-cs (Plug-N-Play)
 postgres - Adds support for the postgresql database
 python - Adds support/bindings for the Python language
 qt - Adds support for the Qt library.
-qtmt - Adds support for multithreaded QT, I believe (drobbins wrote this)
 quicktime - Adds support for OpenQuickTime
 readline - enables support for libreadline, a GNU line-editing library that most everyone wants.
 ruby - Adds support/bindings for the Ruby language

@@ -6,7 +6,6 @@ mmx
 #objprelink
 #odbc
 #oss
-#qtmt
 #sse
 aalib		media-libs/aalib	
 alsa		media-libs/alsa-lib
