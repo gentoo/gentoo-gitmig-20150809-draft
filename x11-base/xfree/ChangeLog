@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.260 2003/12/14 09:39:38 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.261 2003/12/14 09:43:45 spyderous Exp $
+
+*xfree-4.1.0-r6 (14 Dec 2003)
+
+  14 Dec 2003; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.1.0-r6.ebuild,
+  files/4.1.0-r6/10xfree, files/4.1.0-r6/XftConfig, files/4.1.0-r6/Xsession,
+  files/4.1.0-r6/site.def, files/4.1.0-r6/xdm, files/4.1.0-r6/xdm.start,
+  files/4.1.0-r6/xfs.config, files/4.1.0-r6/xfs.start, files/4.1.0-r6/xinitrc:
+  Pulling 4.1.0 -- it's obsolete and should not be used by anyone.
 
   14 Dec 2003; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.2.0-r12.ebuild,
   files/4.2.0/XFree-4.2.0-imake-tmpdir.patch.bz2,
