@@ -1,6 +1,9 @@
 # ChangeLog for media-video/avifile
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.59 2003/12/14 20:29:42 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/ChangeLog,v 1.60 2003/12/26 23:34:51 weeve Exp $
+
+  26 Dec 2003; Jason Wever <weeve@gentoo.org> avifile-0.7.38.20030710.ebuild:
+  Added patch for sparc to fix bug #36040.
 
   14 Dec 2003; Martin Holzer <mholzer@gentoo.org> files/flvenc-patch:
   chaning patch. Closes #35802

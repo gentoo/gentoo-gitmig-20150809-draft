@@ -1,0 +1,22 @@
+---  avifile-0.7-0.7.38/ffmpeg/libavcodec/libpostproc/Makefile.am.orig	2003-12-26 17:34:26.000000000 -0500
++++  avifile-0.7-0.7.38/ffmpeg/libavcodec/libpostproc/Makefile.am	2003-12-26 17:34:43.000000000 -0500
+@@ -10,7 +10,7 @@
+ libpostproc_la_SOURCES = postprocess.c
+ 
+ AM_CPPFLAGS = $(LTNOPIC) -DHAVE_AV_CONFIG_H $(FFMPEG_CFLAGS) -I$(srcdir)/..
+-AM_CFLAGS = -O2 -fomit-frame-pointer -mno-omit-leaf-frame-pointer
++AM_CFLAGS = -O2 -fomit-frame-pointer
+ 
+ 
+ CLEANFILES = .depend *.a
+---  avifile-0.7-0.7.38/ffmpeg/libavcodec/libpostproc/Makefile.in.orig	2003-12-26 17:34:31.000000000 -0500
++++  avifile-0.7-0.7.38/ffmpeg/libavcodec/libpostproc/Makefile.in	2003-12-26 17:34:46.000000000 -0500
+@@ -138,7 +138,7 @@
+ libpostproc_la_SOURCES = postprocess.c
+ 
+ AM_CPPFLAGS = $(LTNOPIC) -DHAVE_AV_CONFIG_H $(FFMPEG_CFLAGS) -I$(srcdir)/..
+-AM_CFLAGS = -O2 -fomit-frame-pointer -mno-omit-leaf-frame-pointer
++AM_CFLAGS = -O2 -fomit-frame-pointer
+ 
+ CLEANFILES = .depend *.a
+ MAINTAINERCLEANFILES = Makefile.in
