@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bluej/bluej-1.3.5.ebuild,v 1.2 2004/03/02 13:53:34 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bluej/bluej-1.3.5.ebuild,v 1.3 2004/06/02 22:55:25 agriffis Exp $
 
 inherit java-pkg
 
@@ -24,7 +24,7 @@ DEPEND=">=virtual/jdk-1.4*"
 src_unpack()
 {
 	unzip ${DISTDIR}/${MY_P}.jar -d ${S}
-	if [ "`use doc`" ]; then
+	if use doc; then
 		cp ${DISTDIR}/manual.pdf ${S}
 		cp ${DISTDIR}/tutorial.pdf ${S}
 	fi
@@ -49,7 +49,7 @@ src_install()
 	mv ${D}/usr/share/bluej/lib/bluej.defs ${D}/etc
 	dosym /etc/bluej.defs /usr/share/bluej/lib/bluej.defs
 
-	if [ "`use doc`" ]; then
+	if use doc; then
 		dodoc tutorial.pdf BlueJ-referenc.pdf testing-tutorial.pdf
 	fi
 

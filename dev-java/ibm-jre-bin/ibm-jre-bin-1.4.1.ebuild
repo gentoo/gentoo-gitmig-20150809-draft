@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.1.ebuild,v 1.4 2004/05/01 20:55:51 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.1.ebuild,v 1.5 2004/06/02 22:51:43 agriffis Exp $
 IUSE="doc"
 
 inherit java nsplugins
@@ -21,7 +21,7 @@ DEPEND="virtual/glibc
 RDEPEND="${DEPEND}"
 
 
-if [ `use ppc` ]; then
+if use ppc; then
 	S=${WORKDIR}/IBMJava2-ppc-141
 else
 	S=${WORKDIR}/IBMJava2-141
