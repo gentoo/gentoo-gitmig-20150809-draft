@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.24 2004/01/12 01:55:53 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.25 2004/01/13 04:38:22 brad_mssw Exp $
+
+  12 Jan 2004; Brad House <brad_mssw@gentoo.org> genkernel-3.0.1_beta4.ebuild:
+  ok, people need to be using genkernel3 now on x86
 
 *genkernel-3.0.1_beta4 (11 Jan 2004)
 

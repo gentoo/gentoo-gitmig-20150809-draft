@@ -1,21 +1,18 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.0.1_beta4.ebuild,v 1.1 2004/01/12 01:55:53 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.0.1_beta4.ebuild,v 1.2 2004/01/13 04:38:22 brad_mssw Exp $
 
 DESCRIPTION="Gentoo autokernel script"
 HOMEPAGE="http://www.gentoo.org"
 SRC_URI="http://dev.gentoo.org/~brad_mssw/genkernel/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* amd64 ~x86 ~sparc hppa"
+KEYWORDS="-* amd64 x86 sparc hppa"
 IUSE=""
 
-if [ "${ARCH}" = "amd64" -o "${ARCH}" = "x86" -o "${ARCH}" = "ppc" -o "${ARCH}" = "ppc64" ]
-then
-	DEPEND="media-gfx/bootsplash"
-else
-	DEPEND=""
-fi
+DEPEND="amd64? ( media-gfx/bootsplash )
+	x86? ( media-gfx/bootsplash )
+	ppc? ( media-gfx/bootsplash )"
 
 src_unpack() {
 	unpack ${P}.tar.bz2
