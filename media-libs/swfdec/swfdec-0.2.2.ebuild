@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.2.2.ebuild,v 1.6 2004/06/24 23:23:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.2.2.ebuild,v 1.7 2004/07/14 20:30:26 agriffis Exp $
 
 inherit eutils
 
@@ -20,8 +20,6 @@ DEPEND=">=x11-libs/gtk+-2.0
 		media-sound/madplay
 		mozilla? ( >=net-www/mozilla-1.0.0 )"
 #RDEPEND=""
-
-S=${WORKDIR}/${P}
 
 src_unpack() {
 	unpack ${P}.tar.gz

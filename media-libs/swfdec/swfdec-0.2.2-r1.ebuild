@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.2.2-r1.ebuild,v 1.7 2004/06/24 23:23:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.2.2-r1.ebuild,v 1.8 2004/07/14 20:30:26 agriffis Exp $
 
 inherit eutils
 
@@ -62,4 +62,3 @@ pkg_postrm() {
 	use gtk && gdk-pixbuf-query-loaders > /etc/gtk-2.0/gdk-pixbuf.loaders
 
 }
-
