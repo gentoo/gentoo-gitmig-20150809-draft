@@ -1,9 +1,17 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.21 2002/10/27 18:45:10 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.22 2002/10/28 22:50:17 seemant Exp $
+
+*imagemagick-5.4.7.4 (28 Oct 2002)
+
+  28 Oct 2002; Seemant Kulleen <seemant@gentoo.org>
+  imagemagick-5.4.7.4.ebuild files/digest-imagemagick-5.4.7.4 :
+
+  Version bump on the 5.4.7 (stable KEYWORDS) version, as the old tarball is
+  no longer available.  Thanks to: ince@pacifier.com (Michael Labhard) in
+  bug #9848.
 
 *imagemagick-5.4.9.1 (22 Oct 2002)
-
 
   27 Oct 2002; <mcummings@gentoo.org> :
   Tested on x86 - there is no longer a tar ball for 5.4.7, testing required 
