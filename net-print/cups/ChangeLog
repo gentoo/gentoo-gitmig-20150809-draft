@@ -1,6 +1,10 @@
 # ChangeLog for net-print/cups
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.55 2003/12/09 17:58:40 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.56 2003/12/28 15:02:02 lanius Exp $
+
+  28 Dec 2003; Heinrich Wendel <lanius@gentoo.org> cups-1.1.19-r1.ebuild,
+  cups-1.1.20.ebuild:
+  fix newdepend, not allowed in ebuilds
 
   09 Dec 2003; Heinrich Wendel <lanius@gentoo.org> cups-1.1.19-r1.ebuild:
   changed app-text/ghostscript to virtual/ghostscript

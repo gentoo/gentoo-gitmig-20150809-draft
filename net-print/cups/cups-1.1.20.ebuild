@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.20.ebuild,v 1.4 2003/12/17 04:34:17 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.20.ebuild,v 1.5 2003/12/28 15:02:02 lanius Exp $
 
 inherit eutils flag-o-matic
 
@@ -22,7 +22,7 @@ DEPEND="virtual/glibc
 	>=media-libs/jpeg-6b"
 RDEPEND="${DEPEND} !virtual/lpr"
 
-has_version net-print/foomatic && newdepend ">=net-print/foomatic-3.0.0"
+has_version net-print/foomatic && DEPEND="${DEPEND} >=net-print/foomatic-3.0.0"
 
 LICENSE="GPL-2"
 SLOT="0"
