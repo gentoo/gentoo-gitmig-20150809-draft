@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.724 2004/11/08 00:22:07 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.725 2004/11/09 06:30:28 vapier Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -521,6 +521,7 @@ net-misc/knemo:wifi - wireless support
 net-misc/neon:expat - Use the expat xml library instead of libxml2
 net-misc/ntp:nodroproot - Disable support for running ntpd as a non-root user
 net-misc/ntp:parse-clocks - Add support for PARSE clocks
+net-misc/ntp:openntpd - Allow ntp to be installed alongside openntpd
 net-misc/openssh:X509 - Adds support for X.509 certificate authentication
 net-misc/openssh:chroot - Enable chrooting support.
 net-misc/openssh:sftplogging - Enables sftplogging patch
