@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/files/eflite.rc,v 1.1 2004/03/22 07:37:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/files/eflite.rc,v 1.2 2004/03/22 07:59:55 eradicator Exp $
 
 depend() {
 	need alsasound
@@ -16,7 +16,7 @@ start() {
 	[ ! -S ${SOCKET} ] && SOCKET=/tmp/es.socket
 
 	chown root.speech ${SOCKET}
-	chmod 666 ${SOCKET}
+	chmod 660 ${SOCKET}
 
 	eend $?
 }
