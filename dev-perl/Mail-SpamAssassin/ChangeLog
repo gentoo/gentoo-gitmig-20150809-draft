@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Net-DNS
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# /space/gentoo/cvsroot/gentoo-x86/dev-perl/Net-DNS/ChangeLog,v 1.2 2002/05/05 18:47:51 seemant Exp
+
+*Mail-SpamAssassin-2.20 (2 Jun 2002)
+
+  2 Jun 2002; Preston A. Elder <prez@gentoo.org> Mail-SpamAssassin-2.20.ebuild
+  files/digest-Mail-SpamAssassin-2.20
+
+  new ebuild
