@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.5.7-r1.ebuild,v 1.13 2003/07/18 21:55:45 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.5.7-r1.ebuild,v 1.14 2003/10/07 22:41:48 seemant Exp $
 
 MY_P=${P/tiff-/tiff-v}
 S=${WORKDIR}/${MY_P}
-DESCRIPTION="libtiff"
+DESCRIPTION="Library for manipulation of TIFF (Tag Image File Format) images."
 SRC_URI="ftp://ftp.remotesensing.org/pub/libtiff/${MY_P}.tar.gz"
 HOMEPAGE="http://www.libtiff.org/"
 
