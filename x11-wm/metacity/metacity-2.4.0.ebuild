@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.4.0.ebuild,v 1.4 2002/08/14 15:45:39 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.4.0.ebuild,v 1.5 2002/08/15 16:07:30 gerk Exp $
 
 inherit gnome2
 
@@ -27,4 +27,16 @@ DEPEND="${RDEPEND}
 
 G2CONF="${G2CONF} --enable-platform-gnome-2"
 DOCS="AUTHORS COPYING ChangeLog HACKING INSTALL NEWS README"
+
+src_unpack(){
+        unpack ${A}
+	# causes ICE on ppc w/ gcc 3.2_pre
+        use ppc && (
+                [ -z "${CC}" ] && CC=gcc
+                if [ "`${CC} -dumpversion | cut -d. -f1,2`" != "2.95" ] ; then
+                        patch -p0 < ${FILESDIR}/metacity-2.4.0-ppc-gcc3.2.diff || die "patch failed"
+                fi
+        )
+}
+
 
