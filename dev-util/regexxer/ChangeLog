@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/regexxer
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/regexxer/ChangeLog,v 1.1 2003/03/10 11:14:48 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/regexxer/ChangeLog,v 1.2 2003/07/13 12:28:56 mholzer Exp $
+
+  13 Jul 2003; Martin Holzer <mholzer@gentoo.org> regexxer-0.4.ebuild:
+  update x11-libs/gtkmm to dev-cpp/gtkmm
 
 *regexxer-0.4 (10 Mar 2003)
 
