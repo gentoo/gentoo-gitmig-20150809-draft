@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4349-r2.ebuild,v 1.1 2003/04/22 20:44:46 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4349-r2.ebuild,v 1.2 2003/04/23 04:33:52 azarah Exp $
 
 inherit eutils
 
@@ -64,36 +64,16 @@ src_unpack() {
 		EPATCH_SINGLE_MSG="Applying tasklet patch for kernel 2.5..." \
 		epatch ${FILESDIR}/${PV}/${NV_PACKAGE}-2.5-20030402.diff
 
-		EPATCH_SINGLE_MSG="Applying patch for devfs/irq changes in 2.5.68+..." \
-		epatch ${FILESDIR}/${PV}/${NV_PACKAGE}-2.5.68.diff
+		if [ "${KV_micro}" -ge 68 ] && \
+		   [ -n "`grep irqreturn_t /usr/src/linux/include/linux/interrupt.h`" ]
+		then
+			EPATCH_SINGLE_MSG="Applying patch for devfs/irq changes in 2.5.68+..." \
+			epatch ${FILESDIR}/${PV}/${NV_PACKAGE}-2.5.68.diff
+		fi
 
 		# Some problems with kbuild one ..
 		ln -s Makefile.nvidia Makefile
 	fi
-
-#	if [ "${KV_major}" -eq 2 -a "${KV_minor}" -eq 4 ] && \
-#	   [ -r /usr/src/linux/mm/rmap.c ]
-#	then
-#		einfo "Detected rmap enabled kernel."
-#		EPATCH_SINGLE_MSG="Applying rmap patch for kernel 2.4..." \
-#		epatch ${FILESDIR}/${NV_PACKAGE}-2.5-tl.diff
-#
-#	elif [ "${KV_major}" -eq 2 -a "${KV_minor}" -eq 5 ]
-#	then
-#		EPATCH_SINGLE_MSG="Applying tasklet patch for kernel 2.5..." \
-#		epatch ${FILESDIR}/${NV_PACKAGE}-2.5-tl.diff
-#
-#		if [ "${KV_micro}" -ge 54 ]
-#		then
-#			EPATCH_SINGLE_MSG="Applying module_loader_no_common_sections patch..." \
-#			epatch ${FILESDIR}/${NV_PACKAGE}-2.5.54.diff
-#		fi
-#		if [ "${KV_micro}" -ge 63 ]
-#		then
-#			EPATCH_SINGLE_MSG="Applying missing_modversion.h patch..." \
-#			epatch ${FILESDIR}/${NV_PACKAGE}-2.5.63.diff
-#		fi
-#	fi
 }
 
 src_compile() {
