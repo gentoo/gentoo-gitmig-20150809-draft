@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.96 2004/08/12 00:51:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.97 2004/08/23 11:54:09 pauldv Exp $
+
+  23 Aug 2004; <pauldv@gentoo.org> db-3.3.11.ebuild:
+  Add IUSE
+
+  23 Aug 2004; <pauldv@gentoo.org> db-3.2.9-r10.ebuild, -db-3.2.9-r9.ebuild:
+  Clean out the -r9 release
 
   11 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> db-3.2.9-r10.ebuild:
   gnuconfig_update in src_unpack
