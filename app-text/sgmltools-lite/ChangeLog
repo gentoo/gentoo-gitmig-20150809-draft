@@ -1,6 +1,10 @@
 # ChangeLog for app-text/sgmltools-lite
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.29 2004/09/09 11:03:50 tchiwam Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/ChangeLog,v 1.30 2004/09/09 20:37:34 hardave Exp $
+
+  09 Sep 2004; Hardave Riar <hardave@gentoo.org>
+  sgmltools-lite-3.0.3-r7.ebuild:
+  Added ~mips keyword
 
   08 Sep 2004; Philippe Trottier <tchiwam@gentoo.org> 
   sgmltools-lite-3.0.3-r7.ebuild, 
