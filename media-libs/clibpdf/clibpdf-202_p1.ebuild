@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clibpdf/clibpdf-202_p1.ebuild,v 1.1 2004/08/07 03:59:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clibpdf/clibpdf-202_p1.ebuild,v 1.2 2004/08/14 20:41:34 dholm Exp $
 
 inherit flag-o-matic eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.fastio.com/${SRC_URI_FN}
 		http://dev.gentoo.org/~robbat2/distfiles/${P}-buildfix.patch.gz"
 LICENSE="clibpdf"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 DEPEND="virtual/libc sys-devel/gcc"
 MY_PN="ClibPDF"
@@ -25,6 +25,7 @@ src_unpack() {
 
 src_compile() {
 	append-flags -Wall -DLinux
+	use ppc && append-flags -fPIC
 	cd ${S}/source
 	emake -f Makefile.Linux lib shlib || die "emake failed"
 }

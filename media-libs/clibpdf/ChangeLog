@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/clibpdf
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/clibpdf/ChangeLog,v 1.1 2004/08/07 03:59:34 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/clibpdf/ChangeLog,v 1.2 2004/08/14 20:41:34 dholm Exp $
+
+  14 Aug 2004; David Holm <dholm@gentoo.org> clibpdf-202_p1.ebuild:
+  Added to ~ppc.
 
 *clibpdf-202_p1 (06 Aug 2004)
 
