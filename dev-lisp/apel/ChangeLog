@@ -1,0 +1,14 @@
+# ChangeLog for dev-lisp/apel
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/apel/ChangeLog,v 1.1 2002/06/26 01:27:31 george Exp $
+
+*apel-2002.06.21.0106.ebuild (25 Jun 2002)
+
+  25 Jun 2002; G Shapovalov <george@gentoo.org> all :
+
+  initial release
+  form the web site:
+  APEL (A Portable Emacs Library) is a library to support to write 
+  portable Emacs Lisp programs. 
+
+  ebuild submitted by Moto Kawasaki <kawasaki@kawasaki3.org>
