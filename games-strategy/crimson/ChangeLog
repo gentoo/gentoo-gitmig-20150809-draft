@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/crimson
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/crimson/ChangeLog,v 1.4 2003/12/12 09:56:42 avenj Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/crimson/ChangeLog,v 1.5 2004/02/24 19:12:39 mr_bones_ Exp $
+
+*crimson-0.4.0 (24 Feb 2004)
+
+  24 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org> crimson-0.4.0.ebuild:
+  version bump
 
   12 Dec 2003; Jon Portnoy <avenj@gentoo.org> :
   AMD64 keywords.
