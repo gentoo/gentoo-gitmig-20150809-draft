@@ -183,7 +183,7 @@ net-www/galeon-cvs
 # <carpaski@gentoo.org> (08 Sep 2002)
 # Possible/likely fix for python compile issues
 # bug #7641
-=dev-lang/python-2.2.1-r4
+#=dev-lang/python-2.2.1-r4
 
 # <azarah@gentoo.org> (08 Sep 2002)
 # Get things ready for new xfree release.
