@@ -1,0 +1,9 @@
+# ChangeLog for net-dns/libidn
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/ChangeLog,v 1.1 2004/03/01 17:57:00 caleb Exp $
+
+*libidn-0.3.7 (01 Mar 2004)
+
+  01 Mar 2004; Caleb Tennis <caleb@gentoo.org> libidn-0.3.7.ebuild:
+  Initial import - see bug #41001
+
