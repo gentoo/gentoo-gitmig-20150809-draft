@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/sysklogd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.25 2004/01/14 02:59:55 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/ChangeLog,v 1.26 2004/02/08 00:42:56 plasmaroo Exp $
+
+  08 Feb 2004; <plasmaroo@gentoo.org> sysklogd-1.4.1-r10.ebuild,
+  files/sysklogd-1.4.1-2.6.headers.patch:
+  Added linux-headers-2.6.1 support. Closes bug #38357.
 
   13 Jan 2004; Jon Portnoy <avenj@gentoo.org> sysklogd-1.4.1-r10.ebuild :
   Stable on AMD64.

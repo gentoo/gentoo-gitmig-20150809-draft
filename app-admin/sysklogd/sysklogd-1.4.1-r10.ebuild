@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/sysklogd-1.4.1-r10.ebuild,v 1.7 2004/01/14 02:59:55 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sysklogd/sysklogd-1.4.1-r10.ebuild,v 1.8 2004/02/08 00:42:56 plasmaroo Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Standard log daemons"
@@ -24,6 +24,7 @@ src_unpack() {
 
 	# Handle SO_BSDCOMPAT being depricated in 2.5+ kernels.
 	cd ${S}; epatch ${FILESDIR}/${P}-SO_BSDCOMPAT.patch
+	cd ${S}; epatch ${FILESDIR}/${P}-2.6.headers.patch
 
 	if [ "${ARCH}" = "mips" ]
 	then
