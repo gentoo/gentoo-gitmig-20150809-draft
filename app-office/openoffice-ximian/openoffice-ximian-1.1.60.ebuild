@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.60.ebuild,v 1.2 2004/07/02 08:05:20 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.60.ebuild,v 1.3 2004/07/13 21:41:03 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -233,11 +233,11 @@ src_unpack() {
 	rm patches/OOO_1_1/print-fontconfig.diff || die
 	cp ${FILESDIR}/${OO_VER}/print-fontconfig.diff patches/OOO_1_1/ || die
 
-	rm patches/OOO_1_1/nativewidgets-vcl.diff || die
-	cp ${FILESDIR}/${OO_VER}/nativewidgets-vcl.diff patches/OOO_1_1/ || die
-
 	#Beginnings of our own patchset
 	epatch ${FILESDIR}/${OO_VER}/gentoo-${PV}.patch
+
+	cd ${PATCHDIR}/patches/OOO_1_1/
+	epatch ${FILESDIR}/${OO_VER}/nativefix.diff
 
 	#Still needed: The STLport patch
 	cd ${S}
