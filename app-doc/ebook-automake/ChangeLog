@@ -2,6 +2,16 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # /space/gentoo/cvsroot/gentoo-x86/skel.ChangeLog,v 1.3 2002/05/07 03:58:19 drobbins Exp
 
+*ebook-automake-1.7 (06 May 2003)
+
+  06 May 2003; Martin Holzer <mholzer@gentoo.org> ebook-automake-1.7.ebuild,
+  Version bumped.
+
+*ebook-automake-1.6.3 (06 May 2003)
+
+  06 May 2003; Martin Holzer <mholzer@gentoo.org> ebook-automake-1.6.3.ebuild:
+  Version bumped.
+
 *ebook-automake-1.4 (09 May 2002)
 
   06 May 2003; Martin Holzer <mholzer@gentoo.org> :

@@ -1,3 +1,7 @@
 MD5 a3acce5bf9a4f44ba53cc60d2a345128 ChangeLog 447
 MD5 88f800effb16fbd2636701013d0e9b97 ebook-automake-1.4.ebuild 347
+MD5 5054a032e12fc81b649cc4c7d0e56f41 ebook-automake-1.6.3.ebuild 313
+MD5 874193b33ed7a89c565cd8cee32a4fb5 ebook-automake-1.7.ebuild 313
 MD5 79b811479ef169fc63f01311d678e4ac files/digest-ebook-automake-1.4 59
+MD5 8b28fb9c8b144a6c5a0360d1dec052fb files/digest-ebook-automake-1.6.3 62
+MD5 8aefa9f4a75ed0f8cfc31cb374a8a6b3 files/digest-ebook-automake-1.7 60
