@@ -1,9 +1,15 @@
 # ChangeLog for app-misc/tomboy
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.1 2004/10/28 23:44:39 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tomboy/ChangeLog,v 1.2 2004/12/01 23:49:31 latexer Exp $
+
+*tomboy-0.2.2-r1 (01 Dec 2004)
+
+  01 Dec 2004; Peter Johanson <latexer@gentoo.org> +tomboy-0.2.2-r1.ebuild:
+  Revision bump with new split up gtk-sharp deps.
 
 *tomboy-0.2.2 (28 Oct 2004)
 
-  28 Oct 2004; <peter@gentoo.org> +metadata.xml, +tomboy-0.2.2.ebuild:
+  28 Oct 2004; Peter Johanson <latexer@gentoo.org> +metadata.xml,
+  +tomboy-0.2.2.ebuild:
   Initial commit. Ebuild simultaneously by yours truly. See bug #64554
 

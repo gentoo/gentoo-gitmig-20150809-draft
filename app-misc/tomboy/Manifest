@@ -1,4 +1,6 @@
+MD5 7016d3d51e30691be1e5f92f1a2bb8e0 tomboy-0.2.2-r1.ebuild 688
 MD5 a0c1fe4a956079c42348c151f4c650eb tomboy-0.2.2.ebuild 614
-MD5 e3607246ff3ffd1fa24c88b5beade492 ChangeLog 376
+MD5 986423ff168ab14895790782247ee9f8 ChangeLog 554
 MD5 a60fdfbce7c7cfc52187ff86a7f8bbf8 metadata.xml 222
+MD5 63af496a835d4816dc76a26ef1a847ff files/digest-tomboy-0.2.2-r1 64
 MD5 63af496a835d4816dc76a26ef1a847ff files/digest-tomboy-0.2.2 64
