@@ -1,6 +1,9 @@
 # ChangeLog for media-video/lsdvd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lsdvd/ChangeLog,v 1.10 2004/08/12 20:41:19 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lsdvd/ChangeLog,v 1.11 2004/10/31 16:54:17 iggy Exp $
+
+  31 Oct 2004; <iggy@gentoo.org> lsdvd-0.10.ebuild:
+  0.10 to x86
 
   13 Aug 2004; Chris White <chriswhite@gentoo.org> +metadata.xml:
   Adding missing metadata.xml.  Taking over as maintainer.
