@@ -2,6 +2,9 @@
 
 if [ ! -d ~/.mupen64/save ] ; then
 	mkdir -p ~/.mupen64/save
+	if [ -h ~/.mupen64/plugins ]; then
+		rm ~/.mupen64/plugins
+	fi
 	mkdir -p ~/.mupen64/plugins
 	cd ~/.mupen64
 	ln -s GENTOO_DIR/mupen64 mupen64
@@ -9,11 +12,17 @@ if [ ! -d ~/.mupen64/save ] ; then
 	cp GENTOO_DIR/mupen64.ini .
 fi
 
-cd ~/.mupen64
+cd ~/.mupen64/plugins
 
-cd plugins
 cleanlinks
-ln -s GENTOO_DIR/plugins/*.{so,ini} .
+ln -sf GENTOO_DIR/plugins/*.so .
+for i in GENTOO_DIR/plugins/*.{ini,conf}; do
+	lfile=`basename $i`
+	if [ -h $lfile ]; then
+		rm $lfile
+		cp $i .
+	fi
+done
 cd ..
 
 # We must execute ./blah not /foo/bar/blah because mupen64 tries to
