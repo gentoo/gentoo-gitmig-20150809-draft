@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/blassic
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/blassic/ChangeLog,v 1.10 2004/02/09 21:40:40 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/blassic/ChangeLog,v 1.11 2004/04/16 11:57:44 gmsoft Exp $
+
+  16 Apr 2004; Guy Martin <gmsoft@gentoo.org> blassic-0.8.1.ebuild:
+  Marked stable on hppa.
 
 *blassic-0.8.1 (09 Feb 2004)
 
