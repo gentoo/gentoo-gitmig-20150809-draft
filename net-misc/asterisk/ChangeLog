@@ -1,6 +1,21 @@
 # ChangeLog for net-misc/asterisk
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.35 2005/01/31 19:19:36 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/ChangeLog,v 1.36 2005/02/14 20:57:39 stkn Exp $
+
+*asterisk-1.0.5-r1 (14 Feb 2005)
+
+  14 Feb 2005; Stefan Knoblich <stkn@gentoo.org>
+  +files/1.0.0/asterisk-1.0.5-astcfg-0.0.2.diff,
+  +files/1.0.0/asterisk-1.0.5-speex.diff,
+  +files/1.0.0/asterisk-1.0.5-uclibc-dns.diff, +asterisk-1.0.5-r1.ebuild:
+  Fix detection problems w/ >=speex-1.1.0. Except for codec_gsm.so (needs some
+  more investigation), all plugins use -fPIC and are free from TEXT_RELocations.
+  Fixed uclibc patch (thanks to Ned Ludd <solar@gentoo.org>, closes #72984).
+  Added postgres use-flag and fixed postgres detection. Added use-flags and
+  sed-foo for voicemail database support (thx to Gustavo Zacarias
+  <gustavoz@gentoo.org> for pointing this out). Added experimental patch for
+  asterisk-config config script that should ease development / use of external
+  modules and extensions.
 
   31 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> asterisk-1.0.5.ebuild:
   Keyworded ~sparc
