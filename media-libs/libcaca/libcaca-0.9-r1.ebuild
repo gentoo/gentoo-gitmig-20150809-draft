@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.9-r1.ebuild,v 1.5 2004/11/08 15:17:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.9-r1.ebuild,v 1.6 2005/01/03 21:43:22 chriswhite Exp $
 
 inherit eutils
 
@@ -34,12 +34,21 @@ src_unpack() {
 src_compile() {
 	# temp font fix #44128
 	export VARTEXFONTS="${T}/fonts"
+
+	local myconf=""
+
+	if use X ; then
+		myconf="${myconf} --enable-x11 --with-x --x-libraries=/usr/$(get_libdir)"
+	else
+		myconf="${myconf} --disable-x11"
+	fi
+
 	econf \
 	    $(use_enable doc) \
 	    $(use_enable ncurses) \
 	    $(use_enable slang) \
 	    $(use_enable imlib imlib2) \
-		$(use_enable X x11) \
+		${myconf} \
 	    || die
 	emake || die
 	unset VARTEXFONTS
