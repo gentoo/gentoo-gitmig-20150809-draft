@@ -4,7 +4,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>Xx
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.9 2001/10/01 13:54:38 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.10 2001/10/03 17:10:16 danarmak Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 inherit autoconf base || die
 ECLASS=kde
@@ -26,13 +26,13 @@ kde_src_compile() {
 	case $1 in
 		myconf)
 			debug-print-section myconf
+			myconf="--host=${CHOST} --with-x --enable-mitshm --with-xinerama --prefix=${KDEDIR}"
 			use qtmt 	&& myconf="$myconf --enable-mt"
 			use objprelink	&& myconf="$myconf --enable-objprelink" || myconf="$myconf --disable-objprelink"
 			;;
 		configure)
 			debug-print-section configure
-			./configure --host=${CHOST} --with-x \
-			${myconf} --with-xinerama || die
+			./configure ${myconf} || die
 			;;
 		make)
 			debug-print-section make
@@ -59,11 +59,11 @@ kde_src_install() {
 	case $1 in
 	    make)
 			debug-print-section make
-			make install DESTDIR=${D} || die
+			make install DESTDIR=${D} destdir=${D} || die
 			;;
 	    dodoc)
 			debug-print-section dodoc
-			dodoc AUTHORS ChangeLog README*
+			dodoc AUTHORS ChangeLog README* COPYING NEWS TODO
 			;;
 	    all)
 			debug-print-section all

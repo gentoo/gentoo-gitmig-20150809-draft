@@ -10,7 +10,7 @@
    Dan Armak
   </author>
   <date>
-   Updated for eclasses v3
+   Updated for eclasses v3.2
   </date>
   <sect1>
    <title>
@@ -20,13 +20,13 @@
    eclasses are parts of ebuilds; that is, they have the same syntax ebuilds do, but do not define all the required variables and functions. ebuilds can inherit from eclasses, and eclasses can inherit from other eclasses. As in OOP, this is used to ensure maximum code reuse among similar ebuilds.
   </para>
   <para>
-   The most similar group of ebuilds is the kde apps. These have been selected to be the test case for this first incarnation of eclasses. Currently test ebuilds are available for all of kde-2.2.1 (as kde*-2.2.1-r1), kdevelop-2.0.1 and koffice-1.1. Many others will follow.
+   The most similar group of ebuilds is the kde apps. These have been selected to be the test case for the first incarnation of eclasses. Inheriting ebuilds are available for all of kde-2.2.1 (as kde*-2.2.1-r1), kdevelop-2.0.1 and koffice-1.1. Others will follow.
   </para>
   <para>
-   Please read news.txt for an astract of changes between versions of the eclasses.
+   Please read news.txt for an abstract of changes between versions of the eclasses.
   </para>
   <para>
-   Section two explains how eclasses work.Section three shows a sample inheriting ebuild.
+   Section two explains how eclasses work; section three explains how to write inheriting ebuilds.
   </para>
    <sect2>
     <title>
@@ -36,6 +36,11 @@
     <listitem>
     <para>
     ebuild variables/functions</emphasis> refers to those used in std. ebuilds e.g. &dollar;S, &dollar;P, src_unpack()...
+    </para>
+   </listitem>
+    <listitem>
+    <para>
+    Versioning: I suppose I could have made, instead of versions 1, 2, 3, 3.1, 3.1 versions 0.1, ... 0.3.1, or maybe 0.0.3-1. Usually I would. Not sure why I didn't. Too late to change it now.
     </para>
    </listitem>
    </itemizedlist>
@@ -71,15 +76,12 @@
     This function simply sources files from a hard-coded location. If, in the future, we will decide to move eclasses to a different location or to introduce more &ldquo;formats&rdquo; (like drobbins' projected <emphasis>xbuilds</emphasis>), any name-to-file resolution code will go in here.
    </para>
    <para>
-    This function is the entire contents of inherit.eclass. In the future, once eclasses are considered to be stable, this function will live in ebuild.sh, and every ebuild will be able to use it. For now, we don't want to make a new version of portage just for this, so we put this function in a separate eclass. Every inheriting ebuild begins with these two lines:
+    Every inheriting ebuild begins with these two lines:
    </para>
    <programlisting>
 <![ CDATA [. /usr/portage/eclass/inherit.eclass || die
-]]><![ CDATA [inherit kde-base || die
+]]><![ CDATA [inherit <list of eclasses> || die
 ]]>   </programlisting>
-   <para>
-    Once the inherit() function goes into ebuild.sh, we can drop the first line; there will be no further change necessary.
-   </para>
    <para>
     Eclasses do not need this first line, since they are always sourced from an ebuild which has it.
    </para>
@@ -202,10 +204,10 @@
      The only way to know what functions contain what sections is to read the eclasses.
     </para>
     <para>
-     A final note: not all functions execute all their sections when called with <emphasis>all</emphasis> or without parameters. Some sections may be non-standrd and must be called explicitly. Current examples inculde base_src_unpack<emphasis> patch </emphasis>and the upcoming kde_src_unpack <emphasis>objprelink-patch</emphasis> (whose name may change when I actually write it).
+     A final note: not all functions execute all their sections when called with <emphasis>all</emphasis> or without parameters. Some sections may be non-standard and must be called explicitly. Current examples include base_src_unpack<emphasis> patch.</emphasis>
     </para>
     <para>
-     A more final note: the eclasses also include some debug statements, which are not part of the function/section strufture. More on this at the debug.eclass section.
+     A more final note: the eclasses also include some debug statements, which are not part of the function/section structure. More on this at the debug.eclass section.
     </para>
     </sect3>
    </sect2>
@@ -244,10 +246,10 @@
     Read it to find out what it defines. It is quite self-explanatory.
    </para>
    <para>
-    Briefly, it handles all standard kde-2.1* and 2.2* apps that need configure/make/make install cycles. It handles all the std. configure options e.g. objprelink. It also adds kdelibs to DEPEND/RDEPEND.
+    Briefly, it handles all standard kde-2.1* and 2.2* apps that need configure/make/make install cycles. It handles all the std. configure options e.g. qtmt. It also adds kdelibs to DEPEND/RDEPEND.
    </para>
    <para>
-    Note: some kde apps, like widget styles and i18n packages, do not need to compile anything. Therefore kde.eclass does not inherit c and does not depend on qt. These packages can then inherit straight from here (or from kde-i18n.eclass, which also inherits from here). All other packages, which need to ompile c code and link against qt, should inhreit from kde-base.eclass.
+    Note: some kde apps, like widget styles and i18n packages, do not need to compile anything. Therefore kde.eclass does not inherit c and does not depend on qt. These packages can then inherit straight from here (or from kde-i18n.eclass, which also inherits from here). All other packages, which need to compile c code and link against qt, should inherit from kde-base.eclass.
    </para>
    </sect2>
    <sect2>
@@ -255,7 +257,7 @@
     kde-base.eclass
    </title>
    <para>
-    Meant for standard kde apps, of both 2.1 and 2.2 architectures. Inherits c,kde and adds objprelink and qt deps. Sets HOMEPAGE=apps.kde.com.
+    Meant for standard kde apps, of both 2.1 and 2.2 architectures. Inherits c,kde and adds qt deps. Sets HOMEPAGE=apps.kde.com.
    </para>
    </sect2>
    <sect2>
@@ -277,7 +279,7 @@
     kde-dist.eclass
    </title>
    <para>
-    Meant for the base kde distribution packages in kde-base/*. Inherits kde-base,kde.org. Adds the correct DESCRIPTION and HOMEPAGE and kdelibs-&dollar;&lcub;PV&rcub; deps. The simpler/smaller kde-base/ packages (e.g. kdetoys) make no changes at all; most of those that do only add deps.
+    Meant for the base kde distribution packages in kde-base/*. Inherits kde-base, kde.org and kde-objprelink. Adds the correct DESCRIPTION and HOMEPAGE and kdelibs-&dollar;&lcub;PV&rcub; deps. The simpler/smaller kde-base/ packages (e.g. kdetoys) make no changes at all; most of those that do only add deps.
    </para>
    </sect2>
    <sect2>
@@ -331,7 +333,7 @@
 ]]><![ CDATA [}
 ]]>   </programlisting>
    <para>
-    debug-print-function() prints &ldquo;now in function &dollar;1&rdquo;, &ldquo;parameters are &dollar;2...&rdquo; (all following aprameteres to the function).
+    debug-print-function() prints &ldquo;now in function &dollar;1&rdquo;, &ldquo;parameters are &dollar;2...&rdquo; (all following parameters to the function).
    </para>
    <para>
     debug-print-section() prints &ldquo;now in section &dollar;1&rdquo;.
@@ -343,7 +345,10 @@
     Inside debug.eclass are several settings, which can later be moved to some external config file. They include turning debug on or off and redirecting its output.
    </para>
    <para>
-    The functions are used in all ebuild functions/sections of all eclasses, and in the helper funcions inherit() and EXPORT_FUNCTIONS().
+    The functions are used in all ebuild functions/sections of all eclasses, and in the helper functions inherit() and EXPORT_FUNCTIONS().
+   </para>
+   <para>
+    Note that all debugging output is off by default. You can change this setting in debug.eclass (for now), but be careful not to commit the new setting to cvs. In addition, debug output is further disabled in inherit() in inherit.eclass to avoid extra-inheriting. You can enable it there by uncommenting the appropriate lines.
    </para>
    </sect2>
    <sect2>
@@ -351,7 +356,38 @@
     kde-objprelink.eclass
    </title>
    <para>
-    Will be written soon. Will provide the objprelink deps and the <emphasis>objprelink-patch</emphasis> src_unpack section.
+    Provides objprelink deps (&gt;=objprelink-0-r1). Also provides a function kde-objprelink-patch() that applies the kde-admin-acinclude patch. Call it and the end of your src_unpack if you need it.
+   </para>
+   <para>
+    Known issue: the actual --enable-objprelink option is passed to configure from kde.eclass, regardless of the inheritance of objprelink. Therefore if:
+   </para>
+   <orderedlist>
+    <listitem>
+    <para>
+    A package has builtin objprelink capability which can be activated from configure with --enable-objprelink
+    </para>
+   </listitem>
+    <listitem>
+    <para>
+    The package does not inherit from kde-objprelink (or kde-dist etc.)
+    </para>
+   </listitem>
+    <listitem>
+    <para>
+    USE objprelink is set
+    </para>
+   </listitem>
+    <listitem>
+    <para>
+    &gt;=objprelink-0-r1 is, incidentally, not installed
+    </para>
+   </listitem>
+   </orderedlist>
+   <para>
+    Then, the make process will try to use objprelink, but won't find it and will (may?) fail and abort.
+   </para>
+   <para>
+    However, because the package will depend on kdelibs, which inherits kde-objprelink through kde-dist, the chances of this happening are practically nil. In any case, I'll try to think of a better solution.
    </para>
    </sect2>
   </sect1>

@@ -1,3 +1,12 @@
+3/10
+v3.2
+Addition of kde-objprelink, further minor changes and fixes.
+You now inherit from kde-objprelink. If you need the admin patch, run kde-objprelink-patch()
+at the end of src_unpack. kde-dist inherits from kde-objprelink, other eclasses do not.
+
+2/10
+Unmasking of eclasses. Other developers test, but do not use in their work. Evaluation period.
+
 1/10
 v3.1
 Addition of debug.eclass.
