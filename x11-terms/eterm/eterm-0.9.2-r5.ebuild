@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.2-r5.ebuild,v 1.8 2004/06/25 03:02:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.2-r5.ebuild,v 1.9 2004/06/28 21:56:24 agriffis Exp $
 
 inherit eutils
 
@@ -24,7 +24,8 @@ DEPEND="virtual/x11
 	media-libs/imlib2
 	>=sys-devel/binutils-2.13*
 	etwin? ( app-misc/twin )
-	escreen? ( app-misc/screen )"
+	escreen? ( app-misc/screen )
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${MY_P}.tar.gz
