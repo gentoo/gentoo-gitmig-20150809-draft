@@ -1,6 +1,6 @@
-# ChangeLog for app-emacs/wl
+# ChangeLog for app-emacs/wanderlust
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/ChangeLog,v 1.1 2003/10/10 20:12:39 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/ChangeLog,v 1.2 2003/10/14 13:25:34 vapier Exp $
 
   11 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> metadata.xml,
   wanderlust-2.10.1-r1.ebuild, wanderlust-2.11.18.20031008.ebuild,
