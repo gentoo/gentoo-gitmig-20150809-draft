@@ -1,6 +1,9 @@
 # ChangeLog for net-www/dillo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/ChangeLog,v 1.21 2003/08/08 01:32:34 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/dillo/ChangeLog,v 1.22 2003/10/01 20:02:45 taviso Exp $
+
+  01 Oct 2003; Tavis Ormandy <taviso@gentoo.org> dillo-0.7.3-r1.ebuild:
+  Stable on alpha
 
 *dillo-0.7.3-r1 (07 Aug 2003)
 

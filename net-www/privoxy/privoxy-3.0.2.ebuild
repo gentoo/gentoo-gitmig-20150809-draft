@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/privoxy/privoxy-3.0.2.ebuild,v 1.3 2003/06/11 20:25:07 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/privoxy/privoxy-3.0.2.ebuild,v 1.4 2003/10/01 20:04:49 taviso Exp $
 
 S="${WORKDIR}/${P}-stable"
 HOMEPAGE="http://www.privoxy.org"
@@ -8,7 +8,7 @@ DESCRIPTION="A web proxy with advanced filtering capabilities for protecting pri
 SRC_URI="mirror://sourceforge/ijbswa/${P}-stable-src.tar.gz"
 
 SLOT="2"
-KEYWORDS="~x86 ~ppc ~alpha"
+KEYWORDS="~x86 ~ppc alpha"
 LICENSE="GPL-2"
 
 DEPEND=">=sys-apps/sed-4"
