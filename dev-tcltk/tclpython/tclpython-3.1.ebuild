@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclpython/tclpython-3.1.ebuild,v 1.4 2004/10/26 13:51:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclpython/tclpython-3.1.ebuild,v 1.5 2004/11/06 15:40:04 pyrania Exp $
 
 inherit distutils toolchain-funcs
 
@@ -10,7 +10,7 @@ SRC_URI="http://jfontain.free.fr/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~x86"
+KEYWORDS="~amd64 ~ppc x86"
 IUSE=""
 
 DEPEND=">=dev-lang/tcl-8.0

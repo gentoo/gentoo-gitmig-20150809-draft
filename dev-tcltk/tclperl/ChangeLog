@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tclperl
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclperl/ChangeLog,v 1.4 2004/10/21 15:35:06 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclperl/ChangeLog,v 1.5 2004/11/06 15:39:28 pyrania Exp $
+
+  06 Nov 2004; <pyrania@gentoo.org> tclperl-3.1.ebuild:
+  Marked stable on x86.
 
 *tclperl-3.1 (22 Oct 2004)
 
