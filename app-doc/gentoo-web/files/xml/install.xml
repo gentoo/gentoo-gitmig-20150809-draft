@@ -302,7 +302,7 @@ first three configuration lines for my example system configuration:
 </section>
 
 <section>
-<title>/etc/resolve.conf</title>
+<title>/etc/resolv.conf</title>
 <body>
 <p>This file contains DNS server and domain information.  Here's a template to follow:
 </p><pre>
