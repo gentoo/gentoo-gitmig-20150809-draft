@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Geert Bevin <gbevin@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.5.ebuild,v 1.1 2001/12/13 13:21:50 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.5.ebuild,v 1.2 2001/12/13 20:28:19 gbevin Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The ultimate emacs, IMO.  This is a non-FSF but still free for use version of the biggest text editor ever created."
@@ -80,15 +80,15 @@ src_install() {
 		install || die
 	
 	# Install the two packages
-#	dodir /usr/lib/xemacs/xemacs-packages/
-#	cd ${D}/usr/lib/xemacs/xemacs-packages/
-#	unpack efs-${EFS}-pkg.tar.gz
-#	unpack xemacs-base-${BASE}-pkg.tar.gz
+	dodir /usr/lib/xemacs/xemacs-packages/
+	cd ${D}/usr/lib/xemacs/xemacs-packages/
+	unpack efs-${EFS}-pkg.tar.gz
+	unpack xemacs-base-${BASE}-pkg.tar.gz
 	
 	#remove extraneous files
-#	cd ${D}/usr/share/info
-#	rm -f dir info.info texinfo* termcap*
-#	cd ${S}
-#	dodoc BUGS CHANGES-beta COPYING GETTING* INSTALL ISSUES PROBLEMS README*
+	cd ${D}/usr/share/info
+	rm -f dir info.info texinfo* termcap*
+	cd ${S}
+	dodoc BUGS CHANGES-beta COPYING GETTING* INSTALL ISSUES PROBLEMS README*
 }
 
