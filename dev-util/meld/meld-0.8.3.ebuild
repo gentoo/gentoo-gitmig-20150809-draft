@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-0.8.3.ebuild,v 1.4 2003/09/06 20:28:41 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/meld-0.8.3.ebuild,v 1.5 2003/09/17 08:37:45 liquidx Exp $
 
 DESCRIPTION="A graphical (GNOME 2) diff and merge tool"
 HOMEPAGE="http://meld.sourceforge.net/"
@@ -16,7 +16,7 @@ DEPEND=">=dev-lang/python-2.2
 	>=gnome-base/libgnome-2
 	>=dev-python/gnome-python-1.99.15
 	>=dev-python/pygtk-1.99.15
-	>=dev-python/orbit-python-1.99.0"
+	>=dev-python/pyorbit-1.99.0"
 
 src_unpack(){
 	unpack ${A} ; cd ${S}

@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/meld
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.5 2003/09/02 12:41:11 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/meld/ChangeLog,v 1.6 2003/09/17 08:37:45 liquidx Exp $
+
+  17 Sep 2003; Alastair Tse <liquidx@gentoo.org> meld-0.8.3.ebuild,
+  meld-0.8.5.ebuild:
+  changed orbit-python deps to pyorbit
 
 *meld-0.8.5 (02 Sep 2003)
 
