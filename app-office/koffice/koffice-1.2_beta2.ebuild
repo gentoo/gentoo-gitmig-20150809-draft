@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.2_beta2.ebuild,v 1.11 2003/09/06 22:21:01 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/koffice-1.2_beta2.ebuild,v 1.12 2003/09/09 08:42:52 msterret Exp $
 inherit kde-base
 
 need-kde 3
@@ -27,13 +27,12 @@ need-autoconf 2.5
 
 src_compile() {
 
-    kde_src_compile myconf configure
+	kde_src_compile myconf configure
 
-    #the dir kchar/kdchart cannot be compiled with the -fomit-frame-pointer flag present
-    kde_remove_flag kchart/kdchart -fomit-frame-pointer
-    kde_remove_flag kugar/kudesigner -fomit-frame-pointer # bug 4572
+	#the dir kchar/kdchart cannot be compiled with the -fomit-frame-pointer flag present
+	kde_remove_flag kchart/kdchart -fomit-frame-pointer
+	kde_remove_flag kugar/kudesigner -fomit-frame-pointer # bug 4572
 
-    kde_src_compile make
+	kde_src_compile make
 
 }
-
