@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e0cd83515d4b937d8b0c172aec3db999 monkeyd-0.8.3.ebuild 1682
-MD5 778885f921dedb1d4776025ac3b9aeb6 monkeyd-0.8.2.ebuild 1621
-MD5 d8e2d647d10389fab74963c08312296b monkeyd-0.8.4.ebuild 1691
-MD5 5f956fb542034fe825cbf2180d84feff ChangeLog 1848
 MD5 ab4178e5b874a3a51a0eeb8269338d1c metadata.xml 292
+MD5 778885f921dedb1d4776025ac3b9aeb6 monkeyd-0.8.2.ebuild 1621
+MD5 e0cd83515d4b937d8b0c172aec3db999 monkeyd-0.8.3.ebuild 1682
+MD5 d8e2d647d10389fab74963c08312296b monkeyd-0.8.4.ebuild 1691
+MD5 5bfad6edab2e12a370dd5de69e9dd18e ChangeLog 1933
 MD5 0a2562fa39c3652c8b13d2b246266db5 files/digest-monkeyd-0.8.2 63
 MD5 0977e8355534adfc8fd3571879d42fd1 files/digest-monkeyd-0.8.3 63
 MD5 b74df5e863a308f9817e6978496d3753 files/digest-monkeyd-0.8.4 65
@@ -14,7 +14,7 @@ MD5 69735945dc444164e7b9f11f4616a064 files/monkeyd.init.d 622
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBOfFq/rLF9B432nYRAuqMAJ4pfoHuRQ6RYPvrymZbFLRFvm77SQCdHhf/
-+UiTslMtAY+HXzI+uHpz52c=
-=IWr3
+iD8DBQFBOt8SI1lqEGTUzyQRAu1iAKCGv9q2XVoC6Gj7J3V3SFK025QluQCgtURI
+klV0f49hV1t8pxE8f/RxcOY=
+=GJN8
 -----END PGP SIGNATURE-----
