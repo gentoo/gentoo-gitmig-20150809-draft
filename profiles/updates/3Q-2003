@@ -52,3 +52,4 @@ move app-admin/kportage app-portage/kportage
 move app-admin/genlop app-portage/genlop
 move app-admin/generate-use app-portage/generate-use
 move app-admin/gentoolkit app-portage/gentoolkit
+move app-admin/gentoo-stats app-portage/gentoo-stats
