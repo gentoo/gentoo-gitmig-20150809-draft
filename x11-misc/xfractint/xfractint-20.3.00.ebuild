@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/xfractint-20.3.00.ebuild,v 1.13 2004/06/28 20:28:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/xfractint-20.3.00.ebuild,v 1.14 2004/07/03 12:18:52 spock Exp $
 
 inherit eutils flag-o-matic
 
@@ -35,7 +35,7 @@ src_compile() {
 	replace-flags "-funroll-all-loops" "-funroll-loops"
 	sed -e "s:CFLAGS = :CFLAGS = $CFLAGS :" Makefile.orig >Makefile
 
-	MAKEOPTS='-j1' emake
+	emake -j1
 }
 
 src_install() {
