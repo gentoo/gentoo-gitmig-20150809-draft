@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/nas
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.15 2004/03/26 17:04:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/ChangeLog,v 1.16 2004/03/26 21:14:32 eradicator Exp $
+
+  26 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> nas-1.6c-r1.ebuild:
+  /etc/nas/nasd.conf instead of /etc/nas/nasd.conf.eg in dosed line.
 
 *nas-1.6c-r1 (26 Mar 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.6c-r1.ebuild,v 1.1 2004/03/26 17:04:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/nas/nas-1.6c-r1.ebuild,v 1.2 2004/03/26 21:14:32 eradicator Exp $
 
 DESCRIPTION="Network Audio System"
 SRC_URI="http://radscan.com/nas/${P}.src.tar.gz"
@@ -42,7 +42,7 @@ src_install () {
 	# rename example nasd.conf.eg to nasd.conf and change it so that NAS
 	# doesn't change mixer's settings (inspired by Debian package):
 	mv ${D}/etc/nas/nasd.conf.eg ${D}/etc/nas/nasd.conf
-	dosed 's,\(MixerInit.*\)"\(.*\)",\1"no",' /etc/nas/nasd.conf.eg
+	dosed 's,\(MixerInit.*\)"\(.*\)",\1"no",' /etc/nas/nasd.conf
 
 	insinto /etc/conf.d
 	newins ${FILESDIR}/nas.conf.d nas
