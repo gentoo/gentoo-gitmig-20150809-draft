@@ -1,0 +1,75 @@
+# ChangeLog for dev-util/gnustep-gui
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/ChangeLog,v 1.1 2004/07/23 13:57:27 fafhrd Exp $
+
+*gnustep-gui-0.7.9 (23 Jul 2004)
+
+  23 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org> +metadata.xml,
+  +gnustep-gui-0.7.9.ebuild, +gnustep-gui-0.8.0.ebuild,
+  +gnustep-gui-0.8.3.ebuild, +gnustep-gui-0.8.5-r1.ebuild,
+  +gnustep-gui-0.8.5.ebuild, +gnustep-gui-0.8.7.ebuild,
+  +gnustep-gui-0.8.8.ebuild:
+  Moved from dev-util/gnustep-gui to gnustep-base/gnustep-gui.
+
+  22 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org>
+  gnustep-gui-0.8.5-r1.ebuild, gnustep-gui-0.8.7.ebuild,
+  gnustep-gui-0.8.8.ebuild:
+  Changing the eclass to gnustep-old
+
+  22 Jul 2004; Armando Di Cianno,,, <armando@gentoo.org>
+  gnustep-gui-0.8.5-r1.ebuild, gnustep-gui-0.8.7.ebuild,
+  gnustep-gui-0.8.8.ebuild:
+  Changing the eclass to gnustep-old
+
+  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> gnustep-gui-0.8.8.ebuild:
+  Stable on alpha.
+
+  06 Feb 2004; Aron Griffis <agriffis@gentoo.org> gnustep-gui-0.8.8.ebuild:
+  add ~alpha
+
+*gnustep-gui-0.8.8 (30 Jul 2003)
+
+  30 Jul 2003; Nick Hadaway <raker@gentoo.org> gnustep-gui-0.8.8.ebuild:
+  Version bump of the unstable series.
+
+  26 Jul 2003; Nick Hadaway <raker@gentoo.org> gnustep-gui-0.8.7.ebuild:
+  All arches marked -
+
+*gnustep-gui-0.8.7 (13 Jul 2003)
+
+  13 Jul 2003; Nick Hadaway <raker@gentoo.org> gnustep-gui-0.8.7.ebuild:
+  Added latest unstable build.
+
+*gnustep-gui-0.8.5-r1 (02 Jul 2003)
+
+  02 Jul 2003; Nick Hadaway <raker@gentoo.org> gnustep-gui-0.8.5-r1.ebuild:
+  New build which depends on the gnustep eclass.
+
+*gnustep-gui-0.8.5 (26 Jun 2003)
+
+  26 Jun 2003; Nick Hadaway <raker@gentoo.org> gnustep-gui-0.8.5.ebuild:
+  Version bump.  Marked stable for x86.
+
+*gnustep-gui-0.8.3 (04 Feb 2003)
+
+  14 Feb 2003; Nick Hadaway <raker@gentoo.org> gnustep-gui-0.8.3.ebuild :
+  Added a PDEPEND on >=gnustep-back-0.8.3 as suggested by Zhen Lin on
+  bug #15687.
+
+  04 Feb 2003; Nick Hadaway <raker@gentoo.org> gnustep-gui-0.8.3.ebuild,
+  files/digest-gnustep-gui-0.8.3 :
+  Version bump. (unstable)
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*gnustep-gui-0.8.0 (03 Aug 2002)
+
+  03 Aug 2002; Nick Hadaway <raker@gentoo.org> gnustep-gui-0.8.0.ebuild,
+  files/digest-gnustep-gui-0.8.0 :
+  Version bump.
+
+*gnustep-gui-0.7.9 (19 Jul 2002)
+
+  19 Jul 2002; Nick Hadaway <raker@gentoo.org>
+  gnustep-gui-0.7.9.ebuild, ChangeLog, files/digest-gnustep-gui-0.7.9 :
+  Initial ebuild.
