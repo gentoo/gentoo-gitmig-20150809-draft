@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kaptain/kaptain-0.71.ebuild,v 1.2 2004/06/21 08:23:53 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kaptain/kaptain-0.71.ebuild,v 1.3 2004/06/23 20:47:54 dholm Exp $
 
 inherit kde eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/kaptain/kaptain-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND=">=x11-libs/qt-2.3.1-r1"
 
