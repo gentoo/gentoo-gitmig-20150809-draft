@@ -1,3 +1,4 @@
 MD5 23a8ceb7bf84979da407bc2823368f6d files/digest-sonar-1.2.0 64
-MD5 68c40821b58ce635796842bb0a79a9a8 sonar-1.2.0.ebuild 600
-MD5 fb19e69cf48609d3e9db0ff5152c3a67 ChangeLog 380
+MD5 1961de63b171383399710077b1e67148 files/1.2.0-doc.patch 258
+MD5 218eedd502eccc66fbc760c008d6670b sonar-1.2.0.ebuild 676
+MD5 0a326699a5c1bdcbccfa2565053cef2f ChangeLog 500
