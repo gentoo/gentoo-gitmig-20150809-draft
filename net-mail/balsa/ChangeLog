@@ -1,7 +1,14 @@
 # ChangeLog for net-mail/balsa
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/ChangeLog,v 1.14 2002/06/10 00:32:22 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/ChangeLog,v 1.15 2002/06/18 01:47:39 spider Exp $
 
+
+*balsa-2.0.1 (17 Jun 2002)
+  17 Jun 2002; Spider< spider @gentoo.org> balsa-2.0.1.ebuild :
+  Updated the LIB patch to work
+  the varmail patch seems no longer actual 
+  new version
+  
 balsa-2.0.0_pre1-r1 (10 June 2002)
   10 Jun 2002; Gabriele Giorgetti <stroke@gentoo.org> balsa-2.0.0_pre1-r1.ebuild :
   Changed deps to match with the new location of libgnomeprint and libgnomeprintui 
