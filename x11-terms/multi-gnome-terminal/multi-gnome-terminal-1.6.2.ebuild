@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-gnome-terminal/multi-gnome-terminal-1.6.2.ebuild,v 1.8 2004/08/21 17:12:19 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/multi-gnome-terminal/multi-gnome-terminal-1.6.2.ebuild,v 1.9 2004/09/03 07:31:38 lu_zero Exp $
 
 IUSE="nls"
 
-inherit libtool
+inherit libtool eutils
 
 DESCRIPTION="Extended version of the Gnome Terminal."
 SRC_URI="mirror://sourceforge/multignometerm/${P}.tar.bz2"
@@ -23,7 +23,11 @@ DEPEND="=x11-libs/gtk+-1*
 
 RDEPEND="nls? ( sys-devel/gettext )"
 
+src_unpack() {
+	unpack ${A}
+	epatch "${FILESDIR}/${P}-gcc-3.4.patch"
 
+}
 src_compile() {
 
 	elibtoolize
