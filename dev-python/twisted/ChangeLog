@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/twisted
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.18 2003/05/09 15:47:04 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.19 2003/06/12 20:39:20 msterret Exp $
+
+  12 Jun 2003; <msterret@gentoo.org> twisted-1.0.2.ebuild:
+  add Header
 
 *twisted-1.0.5 (09 May 2003)
   09 May 2003; Thomas Raschbacher <lordvan@gentoo.org> twisted-1.0.5.ebuild:
