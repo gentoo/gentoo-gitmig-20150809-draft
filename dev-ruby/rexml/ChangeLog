@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/rexml
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexml/ChangeLog,v 1.5 2002/07/10 16:59:35 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rexml/ChangeLog,v 1.6 2002/12/15 00:13:59 rphillips Exp $
+
+*rexml-2.4.4 (5 Dec 2002)
+
+  5 Dec 2002; Sean Russell <ser@germane-software.com> rexml-2.4.4 files/digest-rexml-2.4.4 :
+
+  New version.  The patch hasn't been needed for several versions now; the install.rb script takes a -d argument that does the same thing as "make DESTDIR=${D} install".
 
 *rexml-2.4.0 (10 Jul 2002)
 
