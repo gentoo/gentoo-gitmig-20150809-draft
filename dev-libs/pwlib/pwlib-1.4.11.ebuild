@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.4.11.ebuild,v 1.9 2004/06/24 23:32:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.4.11.ebuild,v 1.10 2004/10/04 22:24:29 pvdabeel Exp $
 
 DESCRIPTION="Libs needed for GnomeMeeting"
 HOMEPAGE="http://www.openh323.org/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.openh323.org/bin/${PN}_${PV}.tar.gz"
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="x86 ~ppc -sparc"
+KEYWORDS="x86 ppc -sparc"
 IUSE="ssl"
 
 DEPEND=">=sys-devel/bison-1.28

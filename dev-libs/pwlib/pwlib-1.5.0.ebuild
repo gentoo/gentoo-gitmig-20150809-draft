@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.5.0.ebuild,v 1.12 2004/07/14 15:05:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.5.0.ebuild,v 1.13 2004/10/04 22:24:30 pvdabeel Exp $
 
 DESCRIPTION="Portable Multiplatform Class Libraries for OpenH323"
 HOMEPAGE="http://www.openh323.org/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.openh323.org/bin/${PN}_${PV}.tar.gz"
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="x86 ~ppc -sparc"
+KEYWORDS="x86 ppc -sparc"
 IUSE="ldap sdl ssl"
 
 DEPEND=">=sys-devel/bison-1.28
