@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/qmail-vmailmgr
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-vmailmgr/ChangeLog,v 1.7 2004/06/24 23:28:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-vmailmgr/ChangeLog,v 1.8 2004/08/08 00:15:38 slarti Exp $
+
+  08 Aug 2004; Tom Martin <slarti@gentoo.org> qmail-vmailmgr-0.0.1-r1.ebuild:
+  Typo in DESCRIPTION: enviroment -> environment. Bug 59717.
 
   26 Dec 2003; Jason Wever <weeve@gentoo.org> qmail-vmailmgr-0.0.1-r1.ebuild:
   Changed sparc keyword to ~sparc as not all dependencies could be met.
