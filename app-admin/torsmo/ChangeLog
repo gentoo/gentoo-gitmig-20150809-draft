@@ -1,0 +1,11 @@
+# ChangeLog for app-admin/torsmo
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/ChangeLog,v 1.1 2004/05/07 16:05:49 dragonheart Exp $
+
+*torsmo-0.13 (08 May 2004)
+
+  08 May 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  +torsmo-0.13.ebuild, +torsmo-0.14.ebuild:
+  Inital import thanks to ares <ares@serversecurity.org> in bug #50305. Version
+  bump notified by <revertex@revertex.trix.net> in bug #50352
+
