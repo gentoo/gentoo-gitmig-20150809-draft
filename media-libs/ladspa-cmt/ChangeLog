@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/ladspa-cmt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.12 2004/07/14 09:08:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.13 2004/09/01 16:56:37 eradicator Exp $
+
+  01 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  ladspa-cmt-1.15.ebuild:
+  Stable amd64 sparc.
 
   14 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   ladspa-cmt-1.15.ebuild:
