@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.5.ebuild,v 1.11 2004/01/16 07:08:37 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.5.ebuild,v 1.12 2004/01/23 11:00:42 seemant Exp $
 
 DESCRIPTION="Super-useful stream editor"
 SRC_URI="mirror://gnu/sed/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/sed/sed.html"
 
-KEYWORDS="x86 amd64 ppc sparc alpha hppa ~arm mips"
+KEYWORDS="x86 amd64 ppc sparc alpha hppa arm mips"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="nls static build"
