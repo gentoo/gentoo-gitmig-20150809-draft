@@ -1,6 +1,10 @@
 # ChangeLog for app-text/build-docbook-catalog
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/build-docbook-catalog/ChangeLog,v 1.9 2005/01/01 16:04:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/build-docbook-catalog/ChangeLog,v 1.10 2005/02/09 15:46:25 agriffis Exp $
+
+  09 Feb 2005; Aron Griffis <agriffis@gentoo.org>
+  -build-docbook-catalog-1.1.ebuild:
+  Trim old ebuilds
 
   10 Oct 2004; Tom Gall <tgall@gentoo.org> build-docbook-catalog-1.2.ebuild:
   stable on ppc64, bug #60792
