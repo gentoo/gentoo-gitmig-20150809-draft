@@ -1,7 +1,10 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.10 2002/12/01 05:24:15 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.11 2002/12/09 04:26:10 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *sane-backends-1.0.8 (01 Dec 2002)
 
   01 Dec 2002; Matt Keadle <mkeadle@gentoo.org> sane-backends-1.0.9.ebuild
