@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.8.3.ebuild,v 1.1 2004/06/29 15:51:47 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.8.3.ebuild,v 1.2 2004/06/29 17:42:25 foser Exp $
 
 inherit eutils flag-o-matic libtool gnome2
 
@@ -15,7 +15,7 @@ SRC_URI="http://gstreamer.freedesktop.org/src/gstreamer/${P}.tar.bz2"
 
 SLOT=${PV_MAJ_MIN}
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 ~mips"
-IUSE="doc debug"
+IUSE="doc"
 
 RDEPEND=">=dev-libs/glib-2.2
 	>=dev-libs/libxml2-2.4.9
@@ -38,7 +38,6 @@ src_compile() {
 		--with-configdir=/etc/gstreamer \
 		--disable-tests  \
 		--disable-examples \
-		`use_enable debug` \
 		`use_enable doc docs-build` \
 		|| die "./configure failed"
 
