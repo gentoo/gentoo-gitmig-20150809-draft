@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.1.10.ebuild,v 1.5 2004/04/03 02:42:42 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.1.10.ebuild,v 1.6 2004/04/09 03:29:32 dragonheart Exp $
 
 inherit eutils
 
@@ -57,10 +57,10 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
-
 	enewgroup pdnsd
 	enewuser pdnsd -1 /bin/false /var/lib/pdnsd pdnsd
+
+	emake DESTDIR=${D} install || die
 
 	# Copy cache from prev versions
 	[ -f ${ROOT}/var/lib/pdnsd/pdnsd.cache ] && \
