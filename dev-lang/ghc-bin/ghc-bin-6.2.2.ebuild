@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.2.2.ebuild,v 1.1 2004/10/18 17:03:04 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.2.2.ebuild,v 1.2 2004/12/09 15:18:21 chriswhite Exp $
 
 IUSE="" # opengl not included in binary
 
 S="${WORKDIR}/ghc-${PV}"
 DESCRIPTION="Glasgow Haskell Compiler"
-SRC_URI="http://www.haskell.org/ghc/dist/${PV}/ghc-${PV}-i386-unknown-linux.tar.bz2"
+SRC_URI="x86? ( http://www.haskell.org/ghc/dist/${PV}/ghc-${PV}-i386-unknown-linux.tar.bz2  )"
 HOMEPAGE="http://www.haskell.org"
 
 LICENSE="as-is"
@@ -49,7 +49,7 @@ src_install () {
 	doins ${FILESDIR}/10ghc
 }
 
-clean_wrappers () {
+clean_wrappers() {
 	for i in $*; do
 		mv ${i} ${i}-orig
 		sed -e "s:${D}::" ${i}-orig > ${i}

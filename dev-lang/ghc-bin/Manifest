@@ -1,13 +1,23 @@
-MD5 6bcb39e43042ae34b089d7ed5aff38b0 ghc-bin-6.2.2.ebuild 1375
-MD5 edc69204fadd8f6e9713b94f68aaa2be ghc-bin-6.2.1.ebuild 1636
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8823f1ceef6e0e5ade22704fcac2f8eb ChangeLog 3637
 MD5 08266b96fed68394570f9610a3e4e90b ghc-bin-5.04.3.ebuild 1504
 MD5 4e3dbc12aff326b145ce1d8a4ee4f9a0 ghc-bin-6.0.ebuild 1502
-MD5 f02e5257f5f426c5e5dda8f7db18b3dc ChangeLog 3480
-MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
+MD5 edc69204fadd8f6e9713b94f68aaa2be ghc-bin-6.2.1.ebuild 1636
+MD5 ad75ace73352a9f4d4e5e59ee6c57ca6 ghc-bin-6.2.2.ebuild 1386
 MD5 dc2076294cb2b94c5cfe811acf61ad68 ghc-bin-6.2.ebuild 1374
+MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
 MD5 a82ba08a8abb4ae38bcc8d467c665e7b files/10ghc 40
-MD5 42a1da9d86ec405ba28644ee8036a40c files/digest-ghc-bin-6.2.1 69
-MD5 f64b7d061f8c67720e33afb647de7486 files/digest-ghc-bin-6.2.2 83
 MD5 2b726390b70f784de758ee02184ef450 files/digest-ghc-bin-5.04.3 171
 MD5 981523171b835c239b68613e6080246d files/digest-ghc-bin-6.0 162
 MD5 7131d05db80999f47946fedb5083ad01 files/digest-ghc-bin-6.2 81
+MD5 42a1da9d86ec405ba28644ee8036a40c files/digest-ghc-bin-6.2.1 69
+MD5 f64b7d061f8c67720e33afb647de7486 files/digest-ghc-bin-6.2.2 83
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBuGzcFdQwWVoAgN4RAp0LAJoC4CggbJNSKLhDZdEj1PIUXiz80ACeIiRP
+BNHWbizETTHZTqtCaNDULy8=
+=R5vk
+-----END PGP SIGNATURE-----
