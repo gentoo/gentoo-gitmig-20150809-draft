@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ltsp-core-4.0.ebuild,v 1.1 2004/01/17 20:40:43 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ltsp-core/ltsp-core-4.0.ebuild,v 1.2 2004/01/31 20:04:54 lanius Exp $
 
 IUSE="X debug"
 
@@ -84,13 +84,21 @@ RDEPEND="X? ( x11-base/xfree )
 	net-fs/nfs-utils
 	net-nds/portmap"
 
-DEPEND="${RDEPEND}"
+DEPEND="app-arch/tar
+	virtual/gzip"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
 
 S=${WORKDIR}/ltsp
+
+pkg_setup() {
+	if `has_version net-misc/ltsp-core`; then
+		ewarn "Due to a portage bug you have to remove your old ltsp version before upgrading."
+		die
+	fi
+}
 
 src_unpack() {
 	# nothing to unpack
