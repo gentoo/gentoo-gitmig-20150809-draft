@@ -1,5 +1,5 @@
 # Config file for /etc/init.d/ypbind
+# NIS domain (not necessarily the same as DNS domain)
 
-# NIS domain (not necessary the same as DNS domain)
 
-#YP_DOMAIN=myYPdomain
+#YP_DOMAIN=my.yp.domain
