@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/webfs
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/webfs/ChangeLog,v 1.5 2004/12/29 01:57:00 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-servers/webfs/ChangeLog,v 1.6 2005/01/23 21:05:58 blubb Exp $
+
+  23 Jan 2005; Simon Stelling <blubb@gentoo.org> webfs-1.20.ebuild:
+  added ~amd64
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
