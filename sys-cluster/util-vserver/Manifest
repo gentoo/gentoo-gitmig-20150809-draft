@@ -2,10 +2,10 @@
 Hash: SHA1
 
 MD5 3d4dfb4356f56ee83e0f426163e3b6cf metadata.xml 231
-MD5 7df03d8655f3c4281661d6159ff47dd7 util-vserver-0.30.196.ebuild 1370
+MD5 18060dffe4845c51d8730b906f5b6dfb util-vserver-0.30.196.ebuild 1398
 MD5 db4295d67ea5ff66ec872fa3563f146c util-vserver-0.30.ebuild 1337
-MD5 a9ec36c359242af8264ef3aa8fdca722 ChangeLog 2405
-MD5 51c2c4ee6cf496ef9509e5a4d6751da3 util-vserver-0.30.204.ebuild 1386
+MD5 00aef72ca28150cac882735729f5a6d5 ChangeLog 2573
+MD5 272a29c603cbbfa65de69b652c50e008 util-vserver-0.30.204.ebuild 1414
 MD5 3fb961ce171c0f04c695c76f698daa94 files/rebootmgr.initd 966
 MD5 1cb2a7908a23ba002862f1885b136418 files/vservers.initd 2501
 MD5 0f34731a7d8119fc5e3f9322bf727521 files/digest-util-vserver-0.30.196 74
@@ -16,7 +16,7 @@ MD5 2763c7662087d1abeefacbdd25c1c4ad files/0.30.196/vservers.initd 1801
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCHtLXmPFBzbX68WERAmZUAJ4sn2nBU/0veX+nHoTXftSzTwPZRACgkjWI
-do3hjKziOjacWWUaun33DYo=
-=HhSc
+iD8DBQFCID78mPFBzbX68WERAiqHAJ9jBT/0wqD5WQzWtwtNmVOv0CMUTACghBdS
+Xvwx5+JJ841K/+NGAUbWmMw=
+=lTqP
 -----END PGP SIGNATURE-----
