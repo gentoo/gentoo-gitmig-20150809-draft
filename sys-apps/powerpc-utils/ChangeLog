@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/powerpc-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Id: ChangeLog,v 1.14 2004/09/03 21:03:24 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/powerpc-utils/ChangeLog,v 1.15 2004/10/02 15:34:36 swegener Exp $
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   powerpc-utils-1.1.3-r10.ebuild:
