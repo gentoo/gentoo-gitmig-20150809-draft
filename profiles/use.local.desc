@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.802 2004/12/17 03:33:43 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.803 2004/12/17 23:52:53 swegener Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -332,6 +332,7 @@ mail-client/mozilla-thunderbird:moznoxft - Disable XFT support in mozilla (also 
 mail-client/mozilla-thunderbird:mozplaintext - Disallow HTML editing for email
 mail-client/mutt:nntp - Adds support for nntp via patch
 mail-client/mutt:vanilla - Refrain from patching additional functionality into mutt
+mail-client/pine:largeterminal - Add support for large terminals by doubling the size of pine's internal display buffer
 mail-client/pine:passfile - Adds support for caching IMAP passwords into a file between sessions
 mail-client/squirrelmail:virus-scan - Install plugin to support virus scanning of email attachments
 mail-client/sylpheed-claws:clamav - Enables support for the Clam Antivirus, with a plugin
