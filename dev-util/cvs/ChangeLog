@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/cvs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.5 2002/07/21 01:09:58 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.6 2002/08/18 01:44:02 blocke Exp $
 
 *cvs-1.11.2 (26 Apr 2002)
  
@@ -13,5 +13,11 @@
 
 *cvs-1.11.1_p1 (16 Mar 2002)
 
+  17 Aug 2002; Bruce A. Locke <blocke@shivan.org> cvs-1.11.1_p1.ebuild, files/digest-cvs-1.11.1_p1:
+
+  Readded version to tree due to bug #6424 ("CVS 1.11.2 is an interim cvs 
+  release with busted server code.")
+
   16 Mar 2002; Bruce A. Locke <blocke@shivan.org> cvs-1.11.1_p1.ebuild : Update
   to cvs 1.11.1p1 with Redhat's external zlib linking patch
+
