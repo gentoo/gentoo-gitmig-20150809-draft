@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/maildrop
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/ChangeLog,v 1.17 2003/02/12 08:12:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/ChangeLog,v 1.18 2003/02/15 03:47:56 raker Exp $
+
+*maildir-1.5.2 (14 Feb 2003)
+
+  14 Feb 2003; Nick Hadaway <raker@gentoo.org> maildrop-1.5.2.ebuild,
+  files/digest-maildrop-1.5.2 :
+  Version bump.  Stable builds of gcc include the CXX environment
+  variable, so removed the fix.
 
 *maildrop-1.5.1 (01 Jan 2002)
 
