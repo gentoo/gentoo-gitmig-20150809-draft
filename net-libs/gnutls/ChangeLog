@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.4 2003/10/21 02:27:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.5 2003/11/21 20:07:33 weeve Exp $
+
+  21 Nov 2003; Jason Wever <weeve@gentoo.org> gnutls-0.8.10.ebuild:
+  Added ~sparc keyword.
 
   20 Oct 2003; Aron Griffis <agriffis@gentoo.org> gnutls-0.8.10.ebuild:
   Stable on alpha
