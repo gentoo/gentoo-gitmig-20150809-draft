@@ -1,4 +1,5 @@
 MD5 bad93bf7e78b3281811c26b79559a590 ck-sources-2.4.20-r4.ebuild 995
+MD5 bad93bf7e78b3281811c26b79559a590 ck-sources-2.4.20-r6.ebuild 995
 MD5 9c72294c7d49f4ef681a0823f2cda2db ck-sources-2.4.20-r1.ebuild 963
 MD5 fc050a026038a6ee3221bbdaeedf5dae manifest 772
 MD5 ecaba885def4f560274c2068a2b38217 ck-sources-2.4.20-r3.ebuild 992
@@ -8,3 +9,4 @@ MD5 b158b725603472e30e52f216600e5101 files/digest-ck-sources-2.4.20-r1 133
 MD5 fc91f35cb1ab07c4283c4f9876dafe27 files/digest-ck-sources-2.4.20-r2 133
 MD5 25ee4a049baf96d63956a0e51dfc8089 files/digest-ck-sources-2.4.20-r3 133
 MD5 245e5edd7489202b100cd540b571fc77 files/digest-ck-sources-2.4.20-r4 133
+MD5 9723426ba61fa56ab9447e17e4fec490 files/digest-ck-sources-2.4.20-r6 133
