@@ -1,0 +1,13 @@
+--- setup.py	2001-08-30 19:42:41.000000000 +0100
++++ setup.py.new	2003-12-06 02:33:12.874811216 +0000
+@@ -97,8 +97,8 @@
+ 				   'build_doc':build_doc,
+ #				   'build_clib':build_clib,
+ 				   'build_py':build_py,
+-				   'build_ext':togl_build,
+-				   'install':togl_install,
++#				   'build_ext':togl_build,
++#				   'install':togl_install,
+ 				   # the next line is very important
+ 				   # because we use another format for data_files
+ 				   'install_data': my_install_data},
