@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.12-r4.ebuild,v 1.1 2004/01/12 05:27:22 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.12-r4.ebuild,v 1.2 2004/01/17 04:07:05 brad_mssw Exp $
 
 # This ebuild needs to be merged "live".  You can't simply make a package
 # of it and merge it later.
@@ -8,7 +8,7 @@
 IUSE="bootstrap build static"
 
 SV="1.4.3.12"
-SVREV="p3"
+SVREV="p5"
 # SysvInit version
 SVIV="2.84"
 
@@ -333,7 +333,7 @@ src_install() {
 	dosym ../../sbin/modules-update /usr/sbin/update-modules
 	# These moved from /etc/init.d/ to /sbin to help newb systems
 	# from breaking
-	dosbin runscript.sh functions.sh
+	dosbin runscript.sh functions.sh livecd-functions.sh
 	exeinto /lib/rcscripts/sh
 	doexe rc-services.sh rc-daemon.sh rc-help.sh
 	cd ${S}/bin
@@ -369,6 +369,7 @@ src_install() {
 	dosym ../../sbin/depscan.sh /etc/init.d/depscan.sh
 	dosym ../../sbin/runscript.sh /etc/init.d/runscript.sh
 	dosym ../../sbin/functions.sh /etc/init.d/functions.sh
+	dosym ../../sbin/livecd-functions.sh /etc/init.d/livecd-functions.sh
 
 	cd ${S}/src
 	einfo "Installing utilities..."
@@ -492,6 +493,11 @@ pkg_preinst() {
 	   [ ! -L ${ROOT}/etc/init.d/functions.sh ]
 	then
 		rm -f ${ROOT}/etc/init.d/functions.sh
+	fi
+	if [ -e ${ROOT}/etc/init.d/livecd-functions.sh ] && \
+	   [ ! -L ${ROOT}/etc/init.d/livecd-functions.sh ]
+	then
+		rm -f ${ROOT}/etc/init.d/livecd-functions.sh
 	fi
 	if [ -e ${ROOT}/etc/init.d/rc-help.sh ]
 	then
