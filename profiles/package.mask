@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3283 2004/10/26 15:38:40 hattya Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3284 2004/10/26 17:59:48 lanius Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -329,7 +329,7 @@ app-office/gaby
 
 # <lanius@gentoo.org> (26 Aug 2004)
 # this is an technology preview
-=net-www/opera-7.60_alpha1
+=net-www/opera-7.60_alpha2
 
 # <chriswhite@gentoo.org> (25 Aug 2004)
 # alpha version, seems ok to ~arch, but just to be safe..
