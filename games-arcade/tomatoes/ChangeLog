@@ -1,6 +1,9 @@
 # ChangeLog for games-arcade/tomatoes
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tomatoes/ChangeLog,v 1.6 2004/12/31 01:32:34 vapier Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tomatoes/ChangeLog,v 1.7 2005/03/23 01:58:28 mr_bones_ Exp $
+
+  22 Mar 2005; Michael Sterrett <mr_bones_@gentoo.org> tomatoes-1.55.ebuild:
+  use doicon
 
   30 Dec 2004; Mike Frysinger <vapier@gentoo.org> tomatoes-1.55.ebuild:
   Make sure sdl-mixer has USE=mikmod #76128.

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tomatoes/tomatoes-1.55.ebuild,v 1.6 2005/02/10 20:10:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tomatoes/tomatoes-1.55.ebuild,v 1.7 2005/03/23 01:58:28 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -34,6 +34,7 @@ src_unpack() {
 	unpack ${A}
 	cd "${S}"
 	mv ../tomatoes-1.5/* . || die "mv failed"
+	mv icon.png ${PN}.png
 
 	sed -i \
 		-e '/^CC/d' \
@@ -56,9 +57,8 @@ src_install() {
 	cp -r tomatoes.mpk music/ "${D}${GAMES_DATADIR}/${PN}" \
 		|| die "failed to copy game data"
 
-	insinto /usr/share/icons/
-	newins icon.png ${PN}.png
-	make_desktop_entry tomatoes "I Have No Tomatoes" ${PN}.png
+	doicon ${PN}.png
+	make_desktop_entry tomatoes "I Have No Tomatoes"
 
 	touch "${D}${GAMES_STATEDIR}/${PN}/hiscore.lst" || die "touch failed"
 	fperms 660 "${GAMES_STATEDIR}/${PN}/hiscore.lst"
