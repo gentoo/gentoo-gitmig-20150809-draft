@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qmbtagger/qmbtagger-0.05.ebuild,v 1.1 2004/04/08 07:15:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qmbtagger/qmbtagger-0.05.ebuild,v 1.2 2004/04/09 14:00:36 dholm Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ DEPEND=">=x11-libs/qt-3.1.2
 
 IUSE="oggvorbis"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 src_install () {
 	make DESTDIR=${D} install || die
