@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/librep
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/ChangeLog,v 1.18 2004/03/14 12:22:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/ChangeLog,v 1.19 2004/04/19 16:04:43 dragonheart Exp $
+
+  20 Apr 2004; Daniel Black <dragonheart@gentoo.org> librep-0.15.2-r1.ebuild,
+  librep-0.16.1-r1.ebuild, librep-0.16.1.ebuild, librep-0.16.ebuild,
+  metadata.xml:
+  Removed old versions as they had bad runtime dependancies
 
   14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   librep-0.15.2-r1.ebuild, librep-0.16.1-r1.ebuild, librep-0.16.1.ebuild,
