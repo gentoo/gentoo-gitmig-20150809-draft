@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.8.1.ebuild,v 1.2 2004/03/01 04:55:10 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.8.1.ebuild,v 1.3 2004/03/22 11:23:17 phosphan Exp $
 
 IUSE="atlas X tcltk gnome"
-
-S=${WORKDIR}/${P}
 
 DESCRIPTION="R is GNU S - A language and environment for statistical computing and graphics."
 
@@ -37,6 +35,13 @@ DEPEND="virtual/glibc
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="~x86 ~sparc ~ppc ~amd64"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	sed -e 's/^#define NeedFunctionPrototypes 0/#define NeedFunctionPrototypes 1/' \
+	-i src/modules/X11/dataentry.c || die "sed failed"
+}
 
 src_compile() {
 
