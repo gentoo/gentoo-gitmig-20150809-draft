@@ -1,5 +1,5 @@
-MD5 dd3ada84dbae21967d56826e05511ca3 ChangeLog 1527
-MD5 743264a4cd3c17ed1131591633b1ffba bbapm-0.0.1-r3.ebuild 1101
+MD5 f0673433558fb8c6183754cc9f570040 bbapm-0.0.1-r3.ebuild 1087
+MD5 3359a91d0b69fc6486c0f2a11dee21bd ChangeLog 1624
 MD5 1371b1268e76e407acbe8e18c73dd48b metadata.xml 255
 MD5 aa5f809a06601db4880ae6f14b77e3eb files/bbapm-0.0.1-gcc3.patch 1984
 MD5 a81471db9dad8ee351970369ad4d8d42 files/digest-bbapm-0.0.1-r3 62

@@ -1,4 +1,4 @@
-MD5 45b3a5bbe206da11b86b9a9d1d88a3a6 files/digest-eosd-0.1.0 62
-MD5 2fdfd4cc68b4c853c1b912cc1ff37e56 ChangeLog 337
+MD5 d4b2d45d71ce78e2302e5bb596c20675 ChangeLog 417
 MD5 87cae94de91c3c8c639e8f0d08c02caa metadata.xml 507
-MD5 221373d9d51af855d01a9626d48627e5 eosd-0.1.0.ebuild 656
+MD5 134e1d75b2021372518d08d684f8f090 eosd-0.1.0.ebuild 661
+MD5 45b3a5bbe206da11b86b9a9d1d88a3a6 files/digest-eosd-0.1.0 62
