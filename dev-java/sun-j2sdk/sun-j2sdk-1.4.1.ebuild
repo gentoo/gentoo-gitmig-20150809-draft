@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.1.ebuild,v 1.2 2003/01/12 20:01:53 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.1.ebuild,v 1.3 2003/01/13 20:23:35 cretin Exp $
 
 # Maintainer: Stefan Jones <cretin@gentoo.org>
 # Author: Stefan Jones <cretin@gentoo.org>
@@ -38,11 +38,10 @@ RDEPEND="virtual/glibc
 	virtual/x11
 	>=dev-java/java-config-0.1.3"
 DEPEND="${RDEPEND}
+	sys-apps/cpio
 	app-arch/zip
 	app-arch/unzip
-	>=virtual/jdk-1.4
-	!x11-libs/lesstif
-	!x11-libs/openmotif"
+	>=virtual/jdk-1.4"
 
 PROVIDE="virtual/jre-1.4.1
 	virtual/jdk-1.4.1
@@ -114,12 +113,13 @@ src_compile () {
 
 	# Any CFLAGS will cause the build to fail! 
 	# If you don't believe me ...
-	#export OTHER_CFLAGS=${CFLAGS}
-	#export OTHER_CXXFLAGS=${CXXFLAGS}
-	unset CFLAGS CXXFLAGS
+	export OTHER_CFLAGS=${CFLAGS}
+	export OTHER_CXXFLAGS=${CXXFLAGS}
+	unset CFLAGS CXXFLAGS LDFLAGS
 	
 	export ALT_MOZILLA_PATH="${S}/mozilla"
 	export ALT_BOOTDIR=`java-config --jdk-home`
+	export ALT_CACERTS_FILE=${ALT_BOOTDIR}/jre/lib/security/cacerts
 	export ALT_MOTIF_DIR="${S}/motif"
 	export ALT_DEVTOOLS_PATH="/usr/bin"
 	export MILESTONE="gentoo"
