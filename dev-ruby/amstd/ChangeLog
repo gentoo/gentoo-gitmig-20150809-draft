@@ -1,25 +1,30 @@
 # ChangeLog for dev-ruby/amstd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amstd/ChangeLog,v 1.5 2003/02/12 06:35:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/amstd/ChangeLog,v 1.6 2003/05/12 20:25:45 twp Exp $
 
 *amstd-2.0.0 (07 Jan 2003)
 
-	07 Jan 2003; Aron Griffis <agriffis@gentoo.org> amstd-2.0.0.ebuild :
-	Update to latest version
+  12 May 2003; Tom Payne <twp@gentoo.org> amstd-2.0.0.ebuild :
+  Marked as stable on all ARCHes. Ebuild and ChangeLog tidying.
 
-	07 Jan 2003; Chris Houser <chouser@gentoo.org> amstd-1.9.5.ebuild :
-	Added "alpha" to KEYWORDS
+  07 Jan 2003; Aron Griffis <agriffis@gentoo.org> amstd-2.0.0.ebuild :
+  Update to latest version
 
-	07 Jul 2002; Aron Griffis <agriffis@gentoo.org> amstd-1.9.5.ebuild :
-	Updated with LICENSE, KEYWORDS, SLOT.
+  07 Jan 2003; Chris Houser <chouser@gentoo.org> amstd-1.9.5.ebuild :
+  Added "alpha" to KEYWORDS
+
+  07 Jul 2002; Aron Griffis <agriffis@gentoo.org> amstd-1.9.5.ebuild :
+  Updated with LICENSE, KEYWORDS, SLOT.
 
 *amstd-1.9.5 (1 Feb 2002)
 
-	01 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  12 May 2003; Tom Payne <twp@gentoo.org> :
+  Removed old version.
 
-	Added initial ChangeLog which should be updated whenever the package is
-	updated in any way. This changelog is targetted to users. This means that
-	the comments should well explained and written in clean English. The
-	details about writing correct changelogs are explained in the
-	skel.ChangeLog file which you can find in the root directory of the
-	portage repository.
+  01 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that
+  the comments should well explained and written in clean English. The
+  details about writing correct changelogs are explained in the
+  skel.ChangeLog file which you can find in the root directory of the
+  portage repository.
