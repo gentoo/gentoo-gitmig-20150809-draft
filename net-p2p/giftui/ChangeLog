@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/giftui
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftui/ChangeLog,v 1.13 2004/06/29 00:25:46 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftui/ChangeLog,v 1.14 2004/07/05 04:55:54 squinky86 Exp $
+
+  04 Jul 2004; Jon Hood <squinky86@gentoo.org> giftui-0.4.1.ebuild:
+  bump gtk+ dependency requirements irt #55784
 
   28 Jun 2004; Jon Hood <squinky86@gentoo.org> giftui-0.4.1.ebuild:
   fix header and add gconf to DEPEND

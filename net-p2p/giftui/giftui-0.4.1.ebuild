@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftui/giftui-0.4.1.ebuild,v 1.3 2004/06/29 00:25:46 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftui/giftui-0.4.1.ebuild,v 1.4 2004/07/05 04:55:54 squinky86 Exp $
 
 inherit gnome2 eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~sparc ~amd64 ~ppc"
 IUSE="debug"
 
-DEPEND=">=x11-libs/gtk+-2.0.3
+DEPEND=">=x11-libs/gtk+-2.4.3
 	net-p2p/gift
 	>=gconf-2.6.0"
 
