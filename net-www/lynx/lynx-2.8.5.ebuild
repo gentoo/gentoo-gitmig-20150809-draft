@@ -1,36 +1,26 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/lynx-2.8.5.ebuild,v 1.7 2004/04/27 20:39:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/lynx-2.8.5.ebuild,v 1.8 2004/05/25 01:35:07 vapier Exp $
 
-inherit eutils
-
-IUSE="ssl nls ipv6"
+inherit eutils flag-o-matic
 
 #MY_PV=${PV/.1d/rel.1}
-S=${WORKDIR}/${PN}${PV//./-}
 DESCRIPTION="An excellent console-based web browser with ssl support"
 HOMEPAGE="http://lynx.browser.org/"
 SRC_URI="ftp://lynx.isc.org/lynx/${PN}2.8.5/${PN}${PV}.tar.bz2"
-KEYWORDS="x86 ~ppc sparc ~alpha hppa ~mips ~ia64 amd64 ppc64"
-SLOT="0"
+
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 ~ppc sparc ~mips ~alpha arm hppa amd64 ~ia64 ppc64"
+IUSE="ssl nls ipv6"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	>=sys-libs/zlib-1.1.3
 	nls? ( sys-devel/gettext )
 	ssl? ( >=dev-libs/openssl-0.9.6 )"
-
 PROVIDE="virtual/textbrowser"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-
-	# GCC3.1 support -- check if it's really needed in
-	# future. Some users report complete success with -r3 --
-	# credit to lostlogix and carpaski. Resolves #3172
-#	epatch ${FILESDIR}/${P}-gentoo.patch
-}
+S=${WORKDIR}/${PN}${PV//./-}
 
 src_compile() {
 	local myconf
@@ -38,7 +28,7 @@ src_compile() {
 	use ssl && myconf="${myconf} --with-ssl=yes"
 	use ipv6 && myconf="${myconf} --enable-ipv6"
 
-	CFLAGS="${CFLAGS} -DANSI_VARARGS"
+	append-flags -DANSI_VARARGS
 
 	econf \
 		--libdir=/etc/lynx \
@@ -64,7 +54,7 @@ src_install() {
 
 	dosed "s|^HELPFILE.*$|HELPFILE:file://localhost/usr/share/doc/${PF}/lynx_help/lynx_help/lynx_help_main.html|" \
 			/etc/lynx/lynx.cfg
-	dodoc CHANGES COPYHEADER COPYING INSTALLATION PROBLEMS README
+	dodoc CHANGES COPYHEADER INSTALLATION PROBLEMS README
 	docinto docs
 	dodoc docs/*
 	docinto lynx_help
