@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aiksaurus/aiksaurus-1.0.1-r1.ebuild,v 1.4 2004/07/13 20:42:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aiksaurus/aiksaurus-1.0.1-r1.ebuild,v 1.5 2004/07/17 17:26:11 seemant Exp $
 
 inherit flag-o-matic eutils
 
@@ -13,7 +13,10 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc alpha"
 IUSE="gtk"
 
-DEPEND="sys-devel/gcc"
+RDEPEND=">=x11-libs/gtk+-2"
+
+DEPEND="sys-devel/gcc
+	dev-util/pkgconfig"
 
 src_unpack() {
 	unpack ${A}
