@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/swish-e/swish-e-2.2.2-r1.ebuild,v 1.3 2004/09/03 17:17:21 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/swish-e/swish-e-2.2.2-r1.ebuild,v 1.4 2004/10/21 23:46:29 mr_bones_ Exp $
 
-use perl && inherit perl-module
+inherit perl-module
 
 DESCRIPTION="Simple Web Indexing System for Humans - Enhanced"
 HOMEPAGE="http://www.swish-e.org/"

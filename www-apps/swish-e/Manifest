@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3e4175098b59025a64de2f805ee6ab20 swish-e-2.2.2-r1.ebuild 909
-MD5 00b66f111870f64d39953e4a7e4ca305 ChangeLog 1008
+MD5 47371d8dc29fc4146b4d72e1c1f3fa9e ChangeLog 1111
+MD5 fd29a2ea594430a7274c8d61f1182bb1 swish-e-2.2.2-r1.ebuild 898
 MD5 fc5a8d65b3761bfbd7f7744fda4c324e files/digest-swish-e-2.2.2-r1 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBOtZsI1lqEGTUzyQRAseNAKCZmHT+ye2J+pTQiBfFI/vSb1kEcgCdG2oR
-TvEQ5N8a+ko5UOlhhZKTYBI=
-=dkP9
------END PGP SIGNATURE-----
