@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/prelude-lml
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-lml/ChangeLog,v 1.2 2003/06/28 15:27:55 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/prelude-lml/ChangeLog,v 1.3 2003/06/30 14:15:04 solar Exp $
+
+  30 Jun 2003; <solar@gentoo.org> prelude-lml-0.8.3-r1.ebuild:
+  small fix for -doc option when used. No revision bump needed
 
 *prelude-lml-0.8.3-r1 (28 Jun 2003)
 
