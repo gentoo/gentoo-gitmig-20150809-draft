@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-0.11.0.ebuild,v 1.2 2003/04/09 09:40:15 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-0.11.0.ebuild,v 1.3 2003/04/22 22:52:53 lu_zero Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ DESCRIPTION="Library for writing gnome database programs"
 HOMEPAGE="http://www.gnome-db.org/"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 RDEPEND=">=gnome-extra/libgda-0.11.0
    >=x11-libs/gtk+-2.0.6
