@@ -3,3 +3,4 @@ MD5 7ba65d0bf885ab820235c8234fbccb44 patch-2.4.21-pa7.diff.gz 688086
 MD5 d23ac4f2d5e20cf3dbebe838ebe40fb8 patch-2.4.21-pa7-pa8.gz 5027
 MD5 6444f68f190a716185067ebb5af97669 patch-2.4.21-pa8-pa9.gz 471
 MD5 0668a1f27700ad3aecd2230349c48715 hppa-sources-dev-2.4.21-grsec-crypto.diff.bz2 461421
+MD5 7ce7e6e5c4a5ca1154fde7f4d0f0b372 hppa-sources-dev-grsec-hppa64-fix.patch 1399
