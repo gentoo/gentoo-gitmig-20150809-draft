@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.14.ebuild,v 1.2 2004/02/06 14:41:13 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/mythmusic-0.14.ebuild,v 1.3 2004/02/22 13:23:47 aliz Exp $
 
 inherit gcc flag-o-matic
 
@@ -39,7 +39,7 @@ src_compile() {
 	myconf="${myconf} `use_enable opengl`"
 	myconf="${myconf} `use_enable sdl`"
 
-	if [ "`gcc-version`" = "3.2" ] ; then
+	if [ "`gcc-version`" = "3.2" ] || [ "`gcc-version`" = "3.3" ] ; then
 		replace-flags mcpu=pentium4 mcpu=pentium3
 		replace-flags march=pentium4 march=pentium3
 	fi
