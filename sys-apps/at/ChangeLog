@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/at
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/ChangeLog,v 1.23 2005/01/02 23:12:40 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/ChangeLog,v 1.24 2005/02/11 05:49:23 vapier Exp $
+
+*at-3.1.8-r11 (11 Feb 2005)
+
+  11 Feb 2005; Mike Frysinger <vapier@gentoo.org> +at-3.1.8-r11.ebuild:
+  Fix #31310 again.
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
