@@ -1,48 +1,34 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vm-pop3d/vm-pop3d-1.1.6.ebuild,v 1.7 2003/02/13 14:43:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vm-pop3d/vm-pop3d-1.1.6.ebuild,v 1.8 2003/08/03 03:45:46 vapier Exp $
 
-S=${WORKDIR}/${P}
-
-DESCRIPTION="vm-pop3d - vm-pop3d is a POP3 server"
-SRC_URI="http://www.ibiblio.org/pub/Linux/system/mail/pop/${P}.tar.gz"
+DESCRIPTION="POP3 server"
 HOMEPAGE="http://www.reedmedia.net/software/virtualmail-pop3d/"
+SRC_URI="http://www.ibiblio.org/pub/Linux/system/mail/pop/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc "
+SLOT="0"
+KEYWORDS="x86 sparc"
+IUSE="pam debug"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc
+	pam? ( sys-libs/pam )"
 
 src_unpack() {
-
 	unpack ${A}
 	cd ${S}
-	patch -p1 < ${FILESDIR}/makefile.in.diff || die "patch failed"
-
+	epatch ${FILESDIR}/makefile.in.diff
 }
 
 src_compile() {
-
-	local myconf
-
-        use pam && myconf="${myconf} --enable-pam" \
-		|| myconf="${myconf} --disable-pam "
-
-	if [ -n "$DEBUG" ]; then
-		myconf="${myconf} --enable-debug"
-	else
-		myconf="${myconf} --disable-debug"
-	fi
-
-	econf ${myconf} || die "configure failed"
-
+	econf \
+		`use_enable pam` \
+		`use_enable debug` \
+		|| die "configure failed"
 	emake || die "make failed"
-
 }
 
-src_install () {
-
+src_install() {
 	einstall || die "make install failed"
 
 	dodoc AUTHORS CHANGES COPYING FAQ INSTALL README TODO
@@ -51,5 +37,4 @@ src_install () {
         newexe ${FILESDIR}/vm-pop3d.rc3 vm-pop3d
         insinto /etc/conf.d
         newins ${FILESDIR}/vm-pop3d.confd vm-pop3d
-
 }

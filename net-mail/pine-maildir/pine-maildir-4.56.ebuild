@@ -1,16 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine-maildir/pine-maildir-4.56.ebuild,v 1.3 2003/07/08 17:19:09 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine-maildir/pine-maildir-4.56.ebuild,v 1.4 2003/08/03 03:42:55 vapier Exp $
 
-inherit eutils
-
-DESCRIPTION="A tool for reading, sending and managing electronic messages."
+DESCRIPTION="tool for reading, sending and managing electronic messages"
+HOMEPAGE="http://www.washington.edu/pine/"
 SRC_URI="ftp://ftp.cac.washington.edu/pine/pine${PV}.tar.bz2
 	mirror://gentoo/${P}"
-HOMEPAGE="http://www.washington.edu/pine/"
 
-SLOT="0"
 LICENSE="PICO"
+SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc"
 IUSE="mbox ssl ldap"
 
@@ -29,7 +27,7 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${DISTDIR}/${P}
-	epatch ${FILESDIR}/imap-4.7c2-flock+maildir.patch || die
+	epatch ${FILESDIR}/imap-4.7c2-flock+maildir.patch
 
 	# fix for Home and End keys
 	epatch ${FILESDIR}/pine-4.21-fixhome.patch || die
@@ -65,7 +63,7 @@ src_unpack() {
 	# gets rid of a call to stripwhitespace()
 	epatch ${FILESDIR}/pine-4.33-whitespace.patch || die
 
-	if [ -n "$DEBUG" ]; then
+	if [ `use debug`" ]; then
 		cd ${S}/pine
 		sed -i "s:-g -DDEBUG -DDEBUGJOURNAL:${CFLAGS} -g -DDEBUG -DDEBUGJOURNAL:" \
 			makefile.lnx

@@ -1,18 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.50-r4.ebuild,v 1.6 2003/04/15 22:24:42 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.50-r4.ebuild,v 1.7 2003/08/03 03:40:26 vapier Exp $
 
 inherit eutils
 
-DESCRIPTION="A tool for reading, sending and managing electronic messages."
+DESCRIPTION="tool for reading, sending and managing electronic messages"
+HOMEPAGE="http://www.washington.edu/pine/"
 SRC_URI="ftp://ftp.cac.washington.edu/${PN}/${PN}${PV}.tar.gz
 	mirror://gentoo/pine-4.50-maildir.patch.gz"
-HOMEPAGE="http://www.washington.edu/pine/"
 
-SLOT="0"
 LICENSE="PICO"
+SLOT="0"
 KEYWORDS="x86 ppc sparc"
-IUSE="ssl ldap"
+IUSE="ssl ldap debug"
 
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.1
@@ -35,13 +35,13 @@ src_unpack() {
 	fi
 
 	# fix for Home and End keys
-        epatch ${FILESDIR}/pine-4.21-fixhome.patch
+	epatch ${FILESDIR}/pine-4.21-fixhome.patch
 
-        # flock() emulation
-        cp ${FILESDIR}/flock.c ${S}/imap/src/osdep/unix
+	# flock() emulation
+	cp ${FILESDIR}/flock.c ${S}/imap/src/osdep/unix
 
-        # change /bin/passwd to /usr/bin/passwd
-        epatch ${FILESDIR}/pine-4.21-passwd.patch
+	# change /bin/passwd to /usr/bin/passwd
+	epatch ${FILESDIR}/pine-4.21-passwd.patch
 
 	if [ "`use ldap`" ] ; then
 		# link to shared ldap libs instead of static
@@ -52,21 +52,21 @@ src_unpack() {
 	fi
 
 	# small flock() related fix
-        epatch ${FILESDIR}/pine-4.40-boguswarning.patch
+	epatch ${FILESDIR}/pine-4.40-boguswarning.patch
 
-        # segfix? not sure what this is for but it still applies
-        epatch ${FILESDIR}/pine-4.31-segfix.patch
+	# segfix? not sure what this is for but it still applies
+	epatch ${FILESDIR}/pine-4.31-segfix.patch
 
-        # change lock files from 0666 to 0600
-        epatch ${FILESDIR}/pine-4.40-lockfile-perm.patch
+	# change lock files from 0666 to 0600
+	epatch ${FILESDIR}/pine-4.40-lockfile-perm.patch
 
-        # add missing needed time.h includes
-        epatch ${FILESDIR}/imap-2000-time.patch
+	# add missing needed time.h includes
+	epatch ${FILESDIR}/imap-2000-time.patch
 
-        # gets rid of a call to stripwhitespace()
-        epatch ${FILESDIR}/pine-4.33-whitespace.patch
+	# gets rid of a call to stripwhitespace()
+	epatch ${FILESDIR}/pine-4.33-whitespace.patch
 
-	if [ -n "$DEBUG" ]; then
+	if [ `use debug` ]; then
 		cd ${S}/pine
 		cp makefile.lnx makefile.orig
 		sed -e "s:-g -DDEBUG -DDEBUGJOURNAL:${CFLAGS} -g -DDEBUG -DDEBUGJOURNAL:" \

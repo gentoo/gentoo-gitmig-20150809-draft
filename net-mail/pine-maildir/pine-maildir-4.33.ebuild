@@ -1,28 +1,28 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine-maildir/pine-maildir-4.33.ebuild,v 1.10 2003/04/21 23:33:53 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine-maildir/pine-maildir-4.33.ebuild,v 1.11 2003/08/03 03:42:55 vapier Exp $
 
-S=${WORKDIR}/pine${PV}
 DESCRIPTION="Pine, Pico, Pilot, imapd"
+HOMEPAGE="http://www.washington.edu/pine/"
 SRC_URI="ftp://ftp.cac.washington.edu/pine/pine${PV}.tar.gz
 	 http://qmail.nac.net/${P}"
-HOMEPAGE="http://www.washington.edu/pine/"
+
+LICENSE="PICO"
+SLOT="0"
+KEYWORDS="x86 sparc"
+IUSE="imap"
 
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.1
 	>=sys-libs/pam-0.72"
+[ `use imap` ] && PROVIDE="virtual/imap"
 
-SLOT="0"
-LICENSE="PICO"
-KEYWORDS="x86 sparc "
+S=${WORKDIR}/pine${PV}
 
-if [ "`use imap`" ] ; then
-	PROVIDE="virtual/imap"
-fi
 src_unpack() {
 	unpack pine${PV}.tar.gz
-	patch -p0 < ${DISTDIR}/${P}
-	patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
+	epatch ${DISTDIR}/${P}
+	epatch ${FILESDIR}/${PF}-gentoo.diff
 	cd ${S}/pine
 	cp makefile.lnx makefile.orig
 	sed -e "s:-g -DDEBUG:${CFLAGS}:" makefile.orig > makefile.lnx
@@ -30,7 +30,6 @@ src_unpack() {
 	cd ${S}/pico
 	cp makefile.lnx makefile.orig
 	sed -e "s:-g -DDEBUG:${CFLAGS}:" makefile.orig > makefile.lnx
-	
 }
 
 src_compile() {													 
@@ -38,7 +37,6 @@ src_compile() {
 }
 
 src_install() {															 
-	cd ${S}
 	into /usr
 	dobin bin/pine bin/pico bin/pilot bin/mtest
 	dosbin bin/imapd
