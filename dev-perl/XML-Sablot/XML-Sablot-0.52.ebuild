@@ -1,20 +1,19 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Sablot/XML-Sablot-0.52.ebuild,v 1.1 2001/05/06 18:24:17 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Sablot/XML-Sablot-0.52.ebuild,v 1.2 2002/04/27 11:07:14 seemant Exp $
 
-P=XML-Sablotron-${PV}
-A=${P}.tar.gz
-S=${WORKDIR}/${P}
+MY_P=${PN}ron-${PV}
+S=${WORKDIR}/${MY_P}
 CATEGORY="dev-perl"
 DESCRIPTION="Perl Module for Sablotron"
 #SRC_URI="http://www.gingerall.com/perl/rd?url=sablot/${A}"
 #HOMEPAGE="http://www.gingerall.com/charlie-bin/get/webGA/act/xml-sab.act"
-SRC_URI="http://cpan.valueclick.com/modules/by-category/11_String_Lang_Text_Proc/XML/${A}"
+SRC_URI="http://cpan.valueclick.com/modules/by-category/11_String_Lang_Text_Proc/XML/${MY_P}.tar.gz"
 HOMEPAGE="http://cpan.valueclick.com/modules/by-category/11_String_Lang_Text_Proc/XML/${PN}.${PV}.readme"
 
 DEPEND=">=sys-devel/perl-5
-	>=app-text/sablotron-0.44"
+	>=app-text/sablotron-0.60"
 
 src_unpack() {
 
@@ -24,20 +23,14 @@ src_unpack() {
 
 src_compile() {
 
-    perl Makefile.PL
-    try make
-    try make test
+	perl Makefile.PL
+	make || die
+	make test || die
 
 }
 
 src_install () {
 
-    try make PREFIX=${D}/usr INSTALLMAN3DIR=${D}/usr/share/man/man3 install
-    dodoc Changes README MANIFEST
+	make PREFIX=${D}/usr INSTALLMAN3DIR=${D}/usr/share/man/man3 install || die
+	dodoc Changes README MANIFEST
 }
-
-
-
-
-
-
