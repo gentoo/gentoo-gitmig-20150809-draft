@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.48 2004/07/28 07:01:48 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.49 2004/08/03 17:33:14 vapier Exp $
+
+  03 Aug 2004; Mike Frysinger <vapier@gentoo.org> gdb-6.0.ebuild,
+  gdb-6.1.1.ebuild:
+  Strip out LINGUAs that gdb doesnt support #59179 by Matthias Peick.
 
   28 Jul 2004; <solar@gentoo.org> gdb-6.1.1.ebuild, gdb-6.1.ebuild,
   files/gdb-6.1-uclibc.patch:

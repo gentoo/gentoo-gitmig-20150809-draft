@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.1.1.ebuild,v 1.7 2004/08/03 04:44:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.1.1.ebuild,v 1.8 2004/08/03 17:33:14 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -23,6 +23,7 @@ src_unpack() {
 	epatch ${FILESDIR}/gdb-6.1-ppc64-01.patch
 	epatch ${WORKDIR}/gdb-6.1-hppa-01.patch
 	epatch ${FILESDIR}/gdb-6.1-uclibc.patch
+	strip-linguas -u bfd/po opcodes/po
 }
 
 src_compile() {

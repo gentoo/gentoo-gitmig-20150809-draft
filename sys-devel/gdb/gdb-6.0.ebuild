@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.0.ebuild,v 1.13 2004/06/24 22:46:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-6.0.ebuild,v 1.14 2004/08/03 17:33:14 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -22,10 +22,8 @@ src_unpack() {
 	epatch ${FILESDIR}/gdb-6.0-threadver-aug2003.patch
 	epatch ${FILESDIR}/gdb-6.0-coreutils.patch
 	epatch ${FILESDIR}/gdb-6.0-info.patch
-
-	if [ "${ARCH}" = "sparc" ]; then
-		epatch ${FILESDIR}/${PN}-5.3-sparc-nat-asm.patch
-	fi
+	[ "${ARCH}" = "sparc" ] && epatch ${FILESDIR}/${PN}-5.3-sparc-nat-asm.patch
+	strip-linguas -u bfd/po opcodes/po
 }
 
 src_compile() {
