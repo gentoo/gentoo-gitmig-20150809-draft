@@ -1,0 +1,20 @@
+--- configure.old	2004-12-23 12:54:21.972480392 +0900
++++ configure	2004-12-23 12:55:46.216673328 +0900
+@@ -26103,17 +26103,6 @@
+ 	ac_im_usrlibdir=$ac_im_libdir; break
+       fi
+     done
+-    # Screen out bogus values from the imake configuration.  They are
+-    # bogus both because they are the default anyway, and because
+-    # using them would break gcc on systems where it needs fixed includes.
+-    case $ac_im_incroot in
+-	/usr/include) ;;
+-	*) test -f "$ac_im_incroot/X11/Xos.h" && ac_x_includes=$ac_im_incroot;;
+-    esac
+-    case $ac_im_usrlibdir in
+-	/usr/lib | /lib) ;;
+-	*) test -d "$ac_im_usrlibdir" && ac_x_libraries=$ac_im_usrlibdir ;;
+-    esac
+   fi
+   cd ..
+   rm -fr conftest.dir

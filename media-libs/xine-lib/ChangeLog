@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.159 2004/12/21 19:08:04 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.160 2004/12/23 04:42:07 chriswhite Exp $
+
+*xine-lib-1_rc8-r1 (23 Dec 2004)
+
+  23 Dec 2004; Chris White <chriswhite@gentoo.org>
+  +files/djb_demux_aiff.patch, +files/xine-lib-x11.patch,
+  +xine-lib-1_rc8-r1.ebuild:
+  Security fix #74475 on djbs overflows. Also fixed X11 lib detection. Stable on
+  x86 for security.
 
   22 Dec 2004; Chris White <chriswhite@gentoo.org> xine-lib-1_rc8.ebuild:
   Fixed Xv linking bug #75123.
