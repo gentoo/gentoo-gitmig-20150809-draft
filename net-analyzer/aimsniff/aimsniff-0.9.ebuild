@@ -1,10 +1,10 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/aimsniff-0.9.ebuild,v 1.1 2003/12/08 18:25:08 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/aimsniff-0.9.ebuild,v 1.2 2004/06/09 19:26:16 agriffis Exp $
 
 MY_P="${P}b"
 
-if [ `use apache2` ]
+if use apache2
 then
 	inherit webapp-apache
 fi
@@ -42,7 +42,7 @@ src_install() {
 	doins table.struct
 	dodoc README ChangeLog
 
-	if [ `use apache2` ]
+	if use apache2
 	then
 		webapp-detect || NO_WEBSERVER=1
 		dodir ${HTTPD_ROOT}
@@ -54,7 +54,7 @@ src_install() {
 
 pkg_setup ()
 {
-	if [ `use apache2` ]
+	if use apache2
 	then
 		webapp-detect || NO_WEBSERVER=1
 		webapp-pkg_setup $NO_WEBSERVER
@@ -63,11 +63,11 @@ pkg_setup ()
 
 pkg_postinst() {
 	echo
-	if [ `use mysql` ] ; then
+	if use mysql ; then
 		einfo "To create and enable the mysql database, please run: "
 		einfo "ebuild /var/db/pkg/net-analyzer/${P}/${P}.ebuild config"
 	fi
-	if [ `use apache2` ]
+	if use apache2
 	then
 		einfo "Go to http://${HOSTNAME}/was/admin.php to configure WAS."
 	fi

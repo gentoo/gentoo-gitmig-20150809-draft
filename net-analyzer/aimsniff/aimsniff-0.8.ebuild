@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/aimsniff-0.8.ebuild,v 1.5 2003/11/24 17:04:36 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/aimsniff/aimsniff-0.8.ebuild,v 1.6 2004/06/09 19:26:16 agriffis Exp $
 
 inherit webapp-apache
 
@@ -45,14 +45,14 @@ pkg_setup ()
 
 pkg_postinst() {
 	einfo "Go to http://${HOSTNAME}/was/ to check if everything works."
-	if [ `use mysql` ] ; then
+	if use mysql ; then
 		einfo "If you plan to use the database dump feature, you'll have to load the table.struct file into mysql."
 		einfo "To do this run the following command 'mysql < /etc/${PN}/table.struct'."
 		einfo "This will create a database named 'aim' with all the right tables."
 		einfo "After that use: 'GRANT ALL ON aim.* TO username@hostname IDENTIFIED BY 'password';'"
 		einfo "and go to http://${HOSTNAME}/was/admin.php to fill in the blanks."
 	fi
-	if [ `use samba` ] ; then
+	if use samba ; then
 		einfo "--SMB <-Turn SMB lookups 'on' to get NT domain usernames with AIM logins, Off by default."
 	fi
 }
