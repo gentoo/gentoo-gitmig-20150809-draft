@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/log4j
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.7 2003/02/12 05:53:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.8 2003/02/20 14:05:46 strider Exp $
+
+*log4j-1.2.8 (20 Feb 2003)
+
+  20 Feb 2003; Adrian Almenar <strider@gentoo.org> log4j-1.2.8.ebuild: New
 
 *log4j-1.2.7 (26 Oct 2002)
 
