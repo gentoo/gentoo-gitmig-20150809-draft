@@ -4,7 +4,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/files/java-config,v 1.11 2002/06/03 21:40:39 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/files/java-config,v 1.12 2002/06/24 21:38:37 karltk Exp $
 
 version=0.2.0
 all_params="$*"
@@ -269,12 +269,14 @@ while test $# -gt 0; do
 		;;
 		--list-available-packages)
 			# Old env var file
-			for i in `ls /usr/share/*/classpath.env` ; do
+			for i in /usr/share/*/classpath.env ; do
+				if [ ! -f $i ] ; then continue ; fi
 				dn=`dirname $i`
 				echo "[`basename $dn`] No description ($i)"
 			done
 			# New env var file
-			for i in `ls /usr/share/*/package.env` ; do
+			for i in /usr/share/*/package.env ; do
+				if [ ! -f $i ] ; then continue ; fi
 				dn=`dirname $i`
 				id=`basename $dn`
 				desc=`grep DESC $i | sed "s/DESCRIPTION=//"`
