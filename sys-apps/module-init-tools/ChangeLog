@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/module-init-tools
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.5 2002/12/29 10:14:13 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.6 2002/12/29 16:16:34 azarah Exp $
+
+  28 Dec 2002; Martin Schlemmer <azarah@gentoo.org> module-init-tools-0.9.7 :
+
+  Fix generate-modprobe.conf not adding the last ';' to commands in braces,
+  causing modprobe to fail do to its calling 'sh -c ...' failing ...
 
 *module-init-tools-0.9.7 (28 Dec 2002)
 
