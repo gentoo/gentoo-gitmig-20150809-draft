@@ -1,22 +1,25 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.7.0.ebuild,v 1.1 2002/01/19 04:57:21 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.7.1.ebuild,v 1.1 2002/02/06 01:47:35 azarah Exp $
 
-SV=1.2.4
+SV=1.2.6
 #sysvinit version
 SVIV=2.83
 S=${WORKDIR}/rc-scripts-${SV}
 S2=${WORKDIR}/sysvinit-${SVIV}/src
 DESCRIPTION="Base layout for Gentoo Linux filesystem (incl. initscripts and sysvinit)"
-SRC_URI="http://www.ibiblio.org/gentoo/distfiles/rc-scripts-${SV}.tar.bz2
-	 ftp://metalab.unc.edu/pub/Linux/system/daemons/init/sysvinit-${SVIV}.tar.gz"
+SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/daemons/init/sysvinit-${SVIV}.tar.gz"
+#	http://www.ibiblio.org/gentoo/distfiles/rc-scripts-${SV}.tar.bz2"
 HOMEPAGE="http://www.gentoo.org"
 
 #This ebuild needs to be merged "live".  You can't simply make a package of it and merge it later.
 
 src_unpack() {
 	unpack ${A}
+
+	echo ">>> Unpacking rc-scripts-${SV}.tar.bz2"
+	tar -jxf ${FILESDIR}/rc-scripts-${SV}.tar.bz2
 	
 	#fix CFLAGS for sysvinit stuff
 	cd ${S2}
@@ -92,7 +95,7 @@ src_install()
 	keepdir /var /var/run /var/lock/subsys
 	dosym ../var/tmp /usr/tmp
 	
-keepdir /home
+	keepdir /home
 	keepdir /usr/include /usr/src /usr/portage /usr/X11R6/include/GL
 	dosym ../X11R6/include/X11 /usr/include/X11
 	dosym ../X11R6/include/GL /usr/include/GL
@@ -124,7 +127,8 @@ keepdir /home
 	#end FHS compatibility symlinks stuff
 		
 	doman ${FILESDIR}/MAKEDEV.8 ${S}/man/*
-	dodoc ${FILESDIR}/copyright 
+	dodoc ${FILESDIR}/copyright
+	dodoc ${S}/ChangeLog
 	keepdir /usr/X11R6/lib /usr/X11R6/man
 	keepdir /var/log/news
 
@@ -288,7 +292,7 @@ pkg_postinst() {
 	#we create the /boot directory here so that /boot doesn't get deleted when a previous
 	#baselayout is unmerged with /boot unmounted.
 	install -d ${ROOT}/boot
-	dosym . ${ROOT}/boot/boot
+	ln -sf . ${ROOT}/boot/boot >/dev/null 2>/dev/null
 	#we create this here so we don't overwrite an existing /etc/hosts during bootstrap
 	if [ ! -e ${ROOT}/etc/hosts ]
 	then
@@ -336,25 +340,26 @@ EOF
 		fi
 	fi
 	
-	#force update of /etc/devfsd.conf
-	#just until everybody upgrade that is ...
-	if [ -e /etc/devfsd.conf ]
-	then
-		mv /etc/devfsd.conf /etc/devfsd.conf.old
-		install -m0644 ${S}/etc/devfsd.conf /etc/devfsd.conf
-
-		echo
-		echo "*********************************************************"
-		echo "* This release use a new form of /dev management, so    *"
-		echo "* /etc/devfsd.conf have moved from the devfsd package   *"
-		echo "* to this one.  Any old versions will be renamed to     *"
-		echo "* /etc/devfsd.conf.old.  Please verify that it actually *"
-		echo "* do not save your settings before adding entries, and  *"
-		echo "* if you really need to, just add missing entries and   *"
-		echo "* try not to delete lines from the new devfsd.conf.     *"
-		echo "*********************************************************"
-		echo
-	fi
+#it should be ok now, and gets irritating to revert my changes all the time ;/
+#	#force update of /etc/devfsd.conf
+#	#just until everybody upgrade that is ...
+#	if [ -e /etc/devfsd.conf ]
+#	then
+#		mv /etc/devfsd.conf /etc/devfsd.conf.old
+#		install -m0644 ${S}/etc/devfsd.conf /etc/devfsd.conf
+#
+#		echo
+#		echo "*********************************************************"
+#		echo "* This release use a new form of /dev management, so    *"
+#		echo "* /etc/devfsd.conf have moved from the devfsd package   *"
+#		echo "* to this one.  Any old versions will be renamed to     *"
+#		echo "* /etc/devfsd.conf.old.  Please verify that it actually *"
+#		echo "* do not save your settings before adding entries, and  *"
+#		echo "* if you really need to, just add missing entries and   *"
+#		echo "* try not to delete lines from the new devfsd.conf.     *"
+#		echo "*********************************************************"
+#		echo
+#	fi
 	
 	#restart devfsd
 	#we dont want to restart devfsd when bootstrapping, because it will
