@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3.20040420.ebuild,v 1.4 2004/06/09 03:19:33 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3.20040420.ebuild,v 1.5 2004/06/22 07:16:57 solar Exp $
 
-IUSE="nls pic build nptl erandom"
+IUSE="nls pic build nptl erandom debug"
 
 inherit eutils flag-o-matic gcc
 
@@ -445,6 +445,7 @@ src_unpack() {
 	fi
 
 	cd ${S}
+	epatch ${FILESDIR}/2.3.4/glibc-2.3.4-hardened-sysdep-shared.patch
 
 	# Fix permissions on some of the scripts
 	chmod u+x ${S}/scripts/*.sh

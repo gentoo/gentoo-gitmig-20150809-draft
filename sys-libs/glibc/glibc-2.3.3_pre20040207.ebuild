@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20040207.ebuild,v 1.9 2004/04/27 03:17:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20040207.ebuild,v 1.10 2004/06/22 07:16:57 solar Exp $
 
-IUSE="nls pic build nptl"
+IUSE="nls pic build nptl debug"
 
 inherit eutils flag-o-matic gcc
 

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20040529.ebuild,v 1.14 2004/06/10 19:53:16 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20040529.ebuild,v 1.15 2004/06/22 07:16:57 solar Exp $
 
-IUSE="nls pic build nptl erandom hardened multilib"
+IUSE="nls pic build nptl erandom hardened multilib debug"
 
 inherit eutils flag-o-matic gcc
 
