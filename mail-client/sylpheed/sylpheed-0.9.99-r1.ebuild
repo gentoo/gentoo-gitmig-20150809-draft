@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-0.9.99-r1.ebuild,v 1.2 2004/10/26 15:36:34 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-0.9.99-r1.ebuild,v 1.3 2004/12/19 09:19:59 hattya Exp $
 
 inherit eutils
 
-IUSE="crypt gnome gtk2 imlib ipv6 ldap nls pda ssl"
+IUSE="crypt gnome gtk2 imlib ipv6 ldap nls pda ssl xface"
 
 GTK2_PV="20041024"
 MY_P="${P}-gtk2-${GTK2_PV}"
@@ -26,12 +26,12 @@ DEPEND="gtk2? ( >=x11-libs/gtk+-2.2 )
 		gnome? ( media-libs/gdk-pixbuf )
 		imlib? ( media-libs/imlib )
 	)
-	>=media-libs/compface-1.4
 	!amd64? ( nls? ( >=sys-devel/gettext-0.12.1 ) )
-	ssl? ( dev-libs/openssl )
-	pda? ( app-pda/jpilot )
+	crypt? ( =app-crypt/gpgme-0.3.14-r1 )
 	ldap? ( >=net-nds/openldap-2.0.11 )
-	crypt? ( =app-crypt/gpgme-0.3.14-r1 )"
+	pda? ( app-pda/jpilot )
+	ssl? ( dev-libs/openssl )
+	xface? ( >=media-libs/compface-1.4 )"
 RDEPEND="${DEPEND}
 	app-misc/mime-types
 	x11-misc/shared-mime-info"
@@ -73,7 +73,7 @@ src_compile() {
 		`use_enable pda jpilot` \
 		`use_enable ldap` \
 		`use_enable ipv6` \
-		--enable-compface \
+		`use_enable xface compface` \
 		${myconf} \
 		|| die
 

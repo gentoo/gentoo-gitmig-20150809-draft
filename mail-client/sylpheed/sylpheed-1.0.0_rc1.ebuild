@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-1.0.0_rc1.ebuild,v 1.1 2004/12/17 13:25:58 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed/sylpheed-1.0.0_rc1.ebuild,v 1.2 2004/12/19 09:19:59 hattya Exp $
 
 inherit eutils
 
-IUSE="crypt gnome imlib ipv6 ldap nls pda ssl"
+IUSE="crypt gnome imlib ipv6 ldap nls pda ssl xface"
 
 MY_P="${P/_rc1/rc}"
 
@@ -21,13 +21,13 @@ PROVIDE="virtual/sylpheed"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	!amd64? ( nls? ( >=sys-devel/gettext-0.12.1 ) )
-	>=media-libs/compface-1.4
-	ssl? ( dev-libs/openssl )
-	pda? ( app-pda/jpilot )
-	ldap? ( >=net-nds/openldap-2.0.11 )
 	crypt? ( =app-crypt/gpgme-0.3.14-r1 )
 	gnome? ( media-libs/gdk-pixbuf )
-	imlib? ( media-libs/imlib )"
+	imlib? ( media-libs/imlib )
+	ldap? ( >=net-nds/openldap-2.0.11 )
+	pda? ( app-pda/jpilot )
+	ssl? ( dev-libs/openssl )
+	xface? ( >=media-libs/compface-1.4 )"
 RDEPEND="${DEPEND}
 	app-misc/mime-types
 	x11-misc/shared-mime-info"
@@ -55,7 +55,7 @@ src_compile() {
 		`use_enable ipv6` \
 		`use_enable imlib` \
 		`use_enable gnome gdk-pixbuf` \
-		--enable-compface \
+		`use_enable xface compface` \
 		|| die
 
 	emake || die
