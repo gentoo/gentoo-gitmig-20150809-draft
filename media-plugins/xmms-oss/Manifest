@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c0a5dd05bcfafe03bdb3d465857a0dd9 ChangeLog 611
 MD5 5a8290e44006ccff0dff3094555d6366 metadata.xml 257
-MD5 d5b710ddf6104f26f65271e25adb0612 xmms-oss-1.2.10.ebuild 604
+MD5 948b3084852a83640ef52d7f4e8ce4ef xmms-oss-1.2.10.ebuild 488
+MD5 2d2f74d1fe196ff903303ab56cb082ed ChangeLog 751
 MD5 f930420b092ea660e8da0c4b24e0f6a4 files/digest-xmms-oss-1.2.10 142
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCPH5IugEuf3OQ0akRAqIrAJ0QygNCdDSbLvtr7o9FS3yBTcfgxwCffJcp
-OEM+XEUc6tXxHqHVKR3Dg44=
-=AFRe
+iD8DBQFCPixqArHZZzCEUG0RAolXAJkBSvHokAzmgvDb1tjjfPU7GEnMqACfUXxX
+3cbwvq3mWlFvYWbMTbFmCz8=
+=bWDa
 -----END PGP SIGNATURE-----
