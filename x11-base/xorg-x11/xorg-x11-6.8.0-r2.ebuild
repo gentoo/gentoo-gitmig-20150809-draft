@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.45 2004/11/03 18:16:19 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.46 2004/11/03 18:24:01 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -1088,7 +1088,7 @@ migrate_usr_x11r6_lib() {
 	# Add symlink to reflect xkb move from /usr/X11R6/libdir/X11/xkb
 	# to /usr/libdir/xkb
 	[ ! -L ${ROOT}usr/X11R6/$(get_libdir)/X11/xkb ] \
-		&& ln -s ../../../$(get_libdir)/xkb \
+		&& ln -s ../../$(get_libdir)/xkb \
 		${ROOT}usr/X11R6/$(get_libdir)/X11/xkb
 }
 
