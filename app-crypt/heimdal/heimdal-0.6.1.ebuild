@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.1.ebuild,v 1.5 2004/04/08 16:09:58 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.1.ebuild,v 1.6 2004/04/08 17:05:44 weeve Exp $
 
 inherit libtool eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.pdc.kth.se/heimdal/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~sparc ppc alpha ~ia64 amd64 ~hppa mips"
+KEYWORDS="~x86 sparc ppc alpha ~ia64 amd64 ~hppa mips"
 IUSE="ssl ldap berkdb ipv6"
 PROVIDE="virtual/krb5"
 

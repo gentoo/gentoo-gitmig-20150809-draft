@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.28 2004/04/08 16:09:58 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.29 2004/04/08 17:05:44 weeve Exp $
+
+  08 Apr 2004; Jason Wever <weeve@gentoo.org> heimdal-0.6.1.ebuild:
+  Marked stable on sparc wrt bug #46950.
 
   08 Apr 2004; Luca Barbato <lu_zero@gentoo.org> heimdal-0.6.1.ebuild:
   Marked ppc
