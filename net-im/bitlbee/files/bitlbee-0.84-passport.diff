@@ -1,0 +1,31 @@
+--- bitlbee-0.84/protocols/msn/passport.c	Thu Feb 12 16:23:37 2004
++++ bitlbee-fixed/protocols/msn/passport.c	Tue Mar 16 21:00:37 2004
+@@ -236,25 +236,14 @@
+ 	if (dummy)
+ 		*dummy = 0;
+ 
+-	/* X509 stuff */
++	sd = tcp_connect(server, "443");
++	
+ 	gnutls_certificate_allocate_credentials(&xcred);
+-	/* initialize TLS session */
+ 	gnutls_init(&session, GNUTLS_CLIENT);
+-
+-	/* use the default priorities */
+-	gnutls_transport_set_lowat(session, 50);
+-
+ 	gnutls_set_default_priority(session);
+-	gnutls_certificate_type_set_priority(session,
+-					     pp_cert_type_priority);
+-	/* put the x509 credentials to the current session */
+ 	gnutls_credentials_set(session, GNUTLS_CRD_CERTIFICATE, xcred);
+-	
+-	/* create a connection to the server */
+-	sd = tcp_connect(server, "443");
+-	/* associate the connection to the session */
+ 	gnutls_transport_set_ptr(session, (gnutls_transport_ptr) sd);
+-	/* perform the TLS handshake */
++	
+ 	ret = gnutls_handshake(session);
+ 
+ 	if (ret < 0) {
