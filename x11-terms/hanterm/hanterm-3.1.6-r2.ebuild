@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/hanterm-3.1.6-r2.ebuild,v 1.17 2004/11/14 09:21:56 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/hanterm-3.1.6-r2.ebuild,v 1.18 2005/02/14 21:08:59 mr_bones_ Exp $
 
 IUSE=""
 
@@ -24,7 +24,7 @@ src_unpack() {
 	sed -i -e "s:extern char \*malloc();::" \
 		-e "s:extern char \*realloc();::" \
 		button.c charproc.c
-	if use ppc-macos || use macos ; then
+	if use ppc-macos ; then
 		sed -i -e "s:extern int sys_nerr;::" misc.c
 	fi
 }
