@@ -1,6 +1,11 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.31 2005/01/20 03:05:29 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.32 2005/01/25 11:21:50 lordvan Exp $
+
+  25 Jan 2005; Thomas Raschbacher <lordvan@gentoo.org> files/clamd.rc:
+  changed init script dependency from 'need net' to 'use net'. fixes bug
+  #76022, thanks to Thomas Bettler <bettlertho@sis.unibe.ch> for pointing this
+  out
 
   19 Jan 2005; Joshua Kinard <kumba@gentoo.org> clamav-0.75.1.ebuild:
   Untested on mips, someone wasn't paying attention when they added the mips
