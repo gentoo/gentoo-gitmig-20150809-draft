@@ -1,5 +1,6 @@
-# Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.48-r5.ebuild,v 1.2 2003/07/20 00:21:48 carpaski Exp $
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.48-r5.ebuild,v 1.3 2003/09/10 04:48:34 carpaski Exp $
 
 IUSE="build"
 
@@ -67,7 +68,7 @@ src_install() {
 		;;
 	esac
 	use build && [ -f /etc/make.conf ] && rm -f ${D}/etc/make.conf
-	
+
 	doins etc-update.conf dispatch-conf.conf
 	#python modules
 	cd ${S}/src/python-missingos
@@ -85,7 +86,7 @@ src_install() {
 	doexe *
 	dosym emake /usr/lib/portage/bin/pmake
 	doexe ${S}/src/tbz2tool
-	
+
 	#install sandbox
 	cd ${S}/src/sandbox-1.1
 	make DESTDIR=${D} install || die
@@ -99,7 +100,7 @@ src_install() {
 
 	dosym ../lib/portage/bin/etc-update /usr/sbin/etc-update
 	dosym ../lib/portage/bin/fixpackages /usr/sbin/fixpackages
-	
+
 	dosym ../lib/portage/bin/env-update /usr/sbin/env-update
 	dosym ../lib/portage/bin/xpak /usr/bin/xpak
 	dosym ../lib/portage/bin/repoman /usr/bin/repoman
@@ -113,15 +114,15 @@ src_install() {
 	dosym ../lib/portage/bin/dispatch-conf /usr/sbin/dispatch-conf
 
 	dosym newins /usr/lib/portage/bin/donewins
-	
+
 	# man pages
 	doman ${S}/man/*.[15]
-	
+
 	# temp dir creation
 	dodir /var/tmp
 	chmod 1777 ${D}/var/tmp
 	touch ${D}/var/tmp/.keep
-	
+
 	#documentation
 	dodoc ${S}/ChangeLog
 }
@@ -134,7 +135,7 @@ pkg_postinst() {
 		cp /etc/ld.so.preload ${T}
 		grep -v libsandbox ${T}/ld.so.preload > /etc/ld.so.preload
 	fi
-	
+
 	#remove possible previous sandbox files that could cause conflicts
 	if [ -d /usr/lib/sandbox ]; then
 		rm -f ${ROOT}/usr/lib/portage/bin/ebuild.sh.orig
@@ -142,7 +143,7 @@ pkg_postinst() {
 		rm -f ${ROOT}/usr/bin/sandbox
 		rm -rf ${ROOT}/usr/lib/sandbox
 	fi
-	
+
 	#yank old cache files
 	if [ -d /var/cache/edb ]
 	then
@@ -235,7 +236,7 @@ pkg_postinst() {
 	rm -f ${ROOT}usr/lib/python2.2/site-packages/emergehelp.py[co]
 	chmod 2775 ${ROOT}var/cache/edb/dep ${ROOT}var/cache/edb/dep/*
 	chown -R root.wheel ${ROOT}var/cache/edb/dep
-	
+
 	# we gotta re-compile these modules and deal with systems with clock skew (stale compiled files)
 	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/python2.2/site-packages/portage.py')" || die
 	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/python2.2/site-packages/portage.py')" || die
