@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/amaya-8.0.ebuild,v 1.6 2004/01/11 13:51:11 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/amaya-8.0.ebuild,v 1.7 2004/01/26 15:33:16 gustavoz Exp $
 
 inherit libtool
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.w3.org/pub/amaya/${PN}-src-${PV}.tgz
 	 ftp://ftp.w3.org/pub/amaya/old/${PN}-src-${PV}.tgz"
 HOMEPAGE="http://www.w3.org/Amaya/"
 
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc sparc"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="gtk"

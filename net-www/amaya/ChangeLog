@@ -1,6 +1,9 @@
 # ChangeLog for net-www/amaya
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/ChangeLog,v 1.18 2004/01/11 13:51:11 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/ChangeLog,v 1.19 2004/01/26 15:33:16 gustavoz Exp $
+
+  26 Jan 2004; <gustavoz@gentoo.org> amaya-8.0.ebuild:
+  stable on sparc - doesn't mean useful ;)
 
   11 Jan 2004; Heinrich Wendel <lanius@gentoo.org> amaya-6.1.ebuild,
   amaya-7.1.ebuild, amaya-7.2.ebuild, amaya-8.0.ebuild, amaya-8.1a.ebuild,
