@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Compress-Zlib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Compress-Zlib/ChangeLog,v 1.7 2003/02/12 06:14:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Compress-Zlib/ChangeLog,v 1.8 2003/06/07 11:29:02 mcummings Exp $
+
+*Compress-Zlib-1.21 (07 Jun 2003)
+
+  07 Jun 2003; Michael Cummings <mcummings@gentoo.org>
+  Compress-Zlib-1.21.ebuild:
+  CPAN update
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
