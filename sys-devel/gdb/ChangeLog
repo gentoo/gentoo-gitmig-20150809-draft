@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gdb
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.31 2004/03/05 04:53:24 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/ChangeLog,v 1.32 2004/03/09 22:18:48 agriffis Exp $
+
+  09 Mar 2004; <agriffis@gentoo.org> gdb-6.0.ebuild:
+  stable on ia64
 
 *gdb-6.0-r1 (05 Mar 2004)
 
