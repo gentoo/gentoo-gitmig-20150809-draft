@@ -1,12 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.88.ebuild,v 1.2 2003/11/12 09:04:28 tad Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.88.ebuild,v 1.3 2003/11/13 06:19:12 vapier Exp $
+
+inherit eutils rpm
 
 RH_EXTRAVERSION="1"
 
 DESCRIPTION="RedHat's Bluecurve theme for GTK1, GTK2, KDE3, GDM, Metacity and Nautilus"
 HOMEPAGE="http://www.redhat.com"
 SRC_URI="http://download.fedora.redhat.com/pub/fedora/linux/core/development/SRPMS/${P}-${RH_EXTRAVERSION}.src.rpm"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~alpha ~sparc"
@@ -26,10 +29,6 @@ DEPEND="sys-devel/autoconf
 # Because one may only want to use the theme with kde OR gtk OR Metacity
 # OR gdm, we don't want any run-time dependencies...
 RDEPEND=""
-
-inherit eutils rpm
-
-S="${WORKDIR}/${P}"
 
 # We need to change some RedHat-specific stuff to Gentoo-style...
 _replace() {
@@ -179,4 +178,3 @@ src_install () {
 	cd ${S}
 	dodoc AUTHORS NEWS README ChangeLog
 }
-
