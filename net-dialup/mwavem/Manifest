@@ -1,23 +1,23 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 752d07abf0e0b7bd91ea57fd6a6d06e8 ChangeLog 1291
-MD5 62bd2d669ff76fcf6145dd0f91deafa9 metadata.xml 379
+MD5 90b313aaa6f93360d4c8085983409978 mwavem-2.0.ebuild 1714
 MD5 9ae0fb9775da27912c535b31fcfffff8 mwavem-1.0.2.ebuild 1274
 MD5 1aaec0acc38a61ab87ef2f6101d20458 mwavem-1.0.4.ebuild 1997
-MD5 90b313aaa6f93360d4c8085983409978 mwavem-2.0.ebuild 1714
+MD5 c35c1279d27efbdb97ed6dce1a3780b8 ChangeLog 1295
+MD5 62bd2d669ff76fcf6145dd0f91deafa9 metadata.xml 379
+MD5 6a2110cacb03948288203ca53d4c9535 files/mwave.devfs 150
+MD5 201284b6e4d0b1db01e347aa7586bae7 files/mwavem-1.0.2-gentoo.diff 2178
+MD5 3763c7ee83d898c35fb878ead9398918 files/digest-mwavem-2.0 63
 MD5 ef5c0d9f57ca24c1eb1ab7b33df9d291 files/digest-mwavem-1.0.2 65
 MD5 1f1c427444c0684d7d1c8bc8146b9a3f files/digest-mwavem-1.0.4 65
 MD5 779ead17ce93702aa87513e41030ba40 files/mwave-dev-handler 210
-MD5 6a2110cacb03948288203ca53d4c9535 files/mwave.devfs 150
-MD5 8ceb387439cc272ebcfbf455eef22ec1 files/mwave.modules 30
-MD5 201284b6e4d0b1db01e347aa7586bae7 files/mwavem-1.0.2-gentoo.diff 2178
 MD5 63382db599ecae3e74b11e641249c93a files/mwavem-1.0.4-gentoo.diff 2255
-MD5 3763c7ee83d898c35fb878ead9398918 files/digest-mwavem-2.0 63
+MD5 8ceb387439cc272ebcfbf455eef22ec1 files/mwave.modules 30
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBstY+jtv59x0+BrURAt7SAJ9vGrmND4BJ2ekl95qY3j82H0t1/ACdF8XM
-dFmzonvz1nvKStM8IjZIeco=
-=DZ+I
+iD8DBQFBsyv0I1lqEGTUzyQRAsbEAJ9W/IYSajubRlOXQjuS27g4EFJPvQCgyWaq
+ui88/8tevndtvY50EYyR6MM=
+=qu9o
 -----END PGP SIGNATURE-----
