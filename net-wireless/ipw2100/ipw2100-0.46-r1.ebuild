@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-0.46-r1.ebuild,v 1.1 2004/06/08 01:15:31 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-0.46-r1.ebuild,v 1.2 2004/06/22 18:03:57 latexer Exp $
 
 inherit kernel-mod eutils
 
@@ -35,6 +35,11 @@ src_unpack() {
 
 	unpack ${A}
 	kernel-mod_getversion
+
+	if [ ${KV_MINOR} -gt 5 ] && [ ${KV_PATCH} -gt 5 ]
+	then
+		sed -i 's:SUBDIRS=:M=:g' ${S}/Makefile
+	fi
 
 	cd ${S}
 	mkdir -p hostap-driver-0.1.3/driver/modules
