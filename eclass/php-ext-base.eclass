@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-base.eclass,v 1.1 2003/07/24 15:15:50 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-base.eclass,v 1.2 2003/07/24 19:06:50 stuart Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 #
@@ -84,8 +84,6 @@ php-ext-base_inifileinimage () {
 	if [ ! -f $1 ]; then
 		mkdir -p `dirname $1`
 		cp /$1 $1
-		insinto /`dirname $1`
-		doins $1
 	fi
 }
 
@@ -101,13 +99,19 @@ php-ext-base_addtoinifile () {
 
 	php-ext-base_inifileinimage $3
 
+	echo "output to `pwd`/$3"
 	echo "$1=$2" >> $3
 
 	if [ -z "$4" ]; then
 		einfo "Added '$1=$2' to /$3"
 	else
-		einfo "$4 to $3"
+		einfo "$4 to /$3"
 	fi
+
+	# yes, this is inefficient - but it works every time ;-)
+
+	insinto /`dirname $3`
+	doins $3
 }
 
 php-ext-base_addtoinifiles () {
