@@ -1,22 +1,22 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.61 2003/10/13 18:59:11 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.62 2003/10/21 23:05:47 tseng Exp $
 
 *openbox-3.0_rc4 (13 Oct 2003)
 
-  13 Oct 2003; ,,, <brandon@gentoo.org> openbox-3.0_rc2.ebuild,
+  13 Oct 2003; Brandon Hale <tseng@gentoo.org> openbox-3.0_rc2.ebuild,
   openbox-3.0_rc4.ebuild:
   Version bump.
 
 *openbox-3.0_rc3 (09 Oct 2003)
 
-  09 Oct 2003; ,,, <brandon@gentoo.org> openbox-3.0_beta6.ebuild,
+  09 Oct 2003; Brandon Hale <tseng@gentoo.org> openbox-3.0_beta6.ebuild,
   openbox-3.0_rc1.ebuild, openbox-3.0_rc3.ebuild:
   Cleanup and bump.
 
 *openbox-3.0_rc2 (03 Oct 2003)
 
-  03 Oct 2003; ,,, <brandon@gentoo.org> openbox-3.0_rc2.ebuild:
+  03 Oct 2003; Brandon Hale <tseng@gentoo.org> openbox-3.0_rc2.ebuild:
   Vesion bump.
 
 *openbox-3.0_rc1 (29 Sep 2003)

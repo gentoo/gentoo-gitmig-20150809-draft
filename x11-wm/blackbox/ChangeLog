@@ -1,13 +1,13 @@
 # ChangeLog for x11-wm/blackbox
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.25 2003/10/11 14:10:10 hillster Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.26 2003/10/21 23:07:17 tseng Exp $
 
   11 Oct 2003; Joel Hill <hillster@gentoo.org> blackbox-0.65.0-r2.ebuild:
   typo, closes #30890
 
 *blackbox-0.65.0-r2 (09 Oct 2003)
 
-  09 Oct 2003; ,,, <brandon@gentoo.org> blackbox-0.65.0-r1.ebuild,
+  09 Oct 2003; Brandon Hale <tseng@gentoo.org> blackbox-0.65.0-r1.ebuild,
   blackbox-0.65.0-r2.ebuild, blackbox-0.65.0.ebuild, files/blackbox-gcc.patch:
   Cleanup and fix for gcc 3.3, closes #29633
 
