@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gstreamer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.93 2005/03/08 21:08:20 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/ChangeLog,v 1.94 2005/03/09 03:50:35 obz Exp $
+
+  09 Mar 2005; Mike Gardiner <obz@gentoo.org> gstreamer-0.8.8.ebuild:
+  Keyworded ppc
 
 *gstreamer-0.8.9-r2 (08 Mar 2005)
 
