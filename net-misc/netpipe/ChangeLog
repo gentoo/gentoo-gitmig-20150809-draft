@@ -1,0 +1,12 @@
+# ChangeLog for net-misc/netpipe
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netpipe/ChangeLog,v 1.1 2003/02/11 22:27:50 zwelch Exp $
+
+*netpipe-1.0.0_beta1 (08 Feb 2003)
+
+  08 Feb 2003; Zach Welch <zwelch@gentoo.org> :
+  Commit to portage
+
+  08 Feb 2003; Matthias Schwarzott <zzam@gmx.de> :
+  Submitted via bugs.gentoo.org, bug 15005
+
