@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc6.ebuild,v 1.15 2004/11/09 03:47:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc6.ebuild,v 1.16 2004/12/09 07:28:32 eradicator Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -59,7 +59,8 @@ src_unpack() {
 	# force 32 bit userland
 	[ ${ARCH} = "sparc" ] && epatch ${FILESDIR}/${P}-configure-sparc.patch
 
-	elibtoolize #40317
+	# bug #40317
+	elibtoolize
 
 	# Fix building on amd64, #49569
 	#use amd64 && epatch ${FILESDIR}/configure-64bit-define.patch
