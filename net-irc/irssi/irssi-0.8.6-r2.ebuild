@@ -1,18 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.6-r2.ebuild,v 1.8 2003/06/01 09:29:54 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.6-r2.ebuild,v 1.9 2003/06/19 21:55:11 msterret Exp $
 
 IUSE="nls ipv6 perl"
 
 inherit perl-module
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A modular textUI IRC client with IPv6 support."
 SRC_URI="http://irssi.org/files/${P}.tar.bz2"
 HOMEPAGE="http://irssi.org/"
 
 DEPEND=">=dev-libs/glib-1.2
 	sys-libs/ncurses
+	>=sys-apps/sed-4
 	perl? ( dev-lang/perl )" 
 	#socks? ( >=net-misc/dante-1.1.13 )
 RDEPEND="nls? ( sys-devel/gettext )"
@@ -20,6 +20,17 @@ RDEPEND="nls? ( sys-devel/gettext )"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc sparc ~alpha hppa ~mips"
+
+src_unpack() {
+	unpack ${A}
+
+	# Ugly hack to work around compression of the html files.
+	# Remove this if prepalldocs is changed to avoid gzipping html files.
+	cd ${S} && \
+	sed -i \
+		-e 's/[^ 	]\+\.html//g' docs/Makefile.in || \
+			die "sed doc/Makefile.in failed"
+}
 
 src_compile() {
 	# Note: there is an option to build a GUI for irssi, but according
@@ -78,4 +89,6 @@ src_install() {
 
 	prepalldocs
 	dodoc AUTHORS ChangeLog README TODO NEWS
+	cd docs && \
+		dohtml -r . || die "dohtml failed"
 }
