@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-0.25-r1.ebuild,v 1.3 2003/07/17 03:37:51 tberman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-0.25-r1.ebuild,v 1.4 2003/07/20 08:43:52 tberman Exp $
 
 inherit eutils mono
 
@@ -19,11 +19,12 @@ SLOT="0"
 KEYWORDS="~x86 -ppc"
 
 DEPEND="virtual/glibc
-	>=dev-libs/glib-2.0
-	!=dev-libs/libxml2-2.5.8"
+	>=dev-libs/glib-2.0"
 
 RDEPEND="${DEPEND}
-	dev-util/pkgconfig"
+	dev-util/pkgconfig
+	<=dev-libs/libxml2-2.5.7
+	dev-libs/libxslt"
 
 src_unpack() {
 	unpack ${A}

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/mono
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.26 2003/07/17 03:37:51 tberman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/ChangeLog,v 1.27 2003/07/20 08:43:52 tberman Exp $
+
+  20 Jul 2003; Todd Berman <tberman@gentoo.org> metadata.xml, mono-0.25-r1.ebuild:
+  Fixed up depend issues, thanks liquidx :)
 
   16 Jul 2003; Todd Berman <tberman@gentoo.org> mono-0.25-r1.ebuild:
   Changing to blocking libxml2-2.5.8, portage version with this fully working is
