@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jgraph
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgraph/ChangeLog,v 1.5 2004/10/16 17:23:52 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgraph/ChangeLog,v 1.6 2004/10/17 19:10:48 axxo Exp $
+
+  17 Oct 2004; Thomas Matthijs <axxo@gentoo.org> jgraph-3.2.ebuild:
+  keyword x86
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> jgraph-3.2.ebuild:
   use java-pkg_dohtml instead of dohtml to also install the package-list in

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgraph/jgraph-3.2.ebuild,v 1.4 2004/10/16 17:23:52 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgraph/jgraph-3.2.ebuild,v 1.5 2004/10/17 19:10:48 axxo Exp $
 
 inherit java-pkg
 
@@ -15,7 +15,7 @@ DEPEND=">=virtual/jdk-1.4
 RDEPEND=">=virtual/jdk-1.4"
 LICENSE="jgraph"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="x86 ~sparc ~ppc"
 
 S=${WORKDIR}
 
