@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.2.1.ebuild,v 1.4 2004/03/16 01:32:59 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.2.1.ebuild,v 1.5 2004/04/11 16:48:25 usata Exp $
 # TODO: add gnustep, objc bindings
 
 inherit kde-dist flag-o-matic
@@ -16,7 +16,7 @@ DEPEND="=kde-base/kdebase-${PV}
 	=dev-libs/glib-1.2*
 	python? ( dev-lang/python )
 	java? (	virtual/jdk )
-	ruby? ( dev-lang/ruby )
+	ruby? ( virtual/ruby )
 	mozilla? ( net-www/mozilla )"
 
 src_unpack() {
