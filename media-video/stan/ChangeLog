@@ -1,0 +1,9 @@
+# ChangeLog for media-video/stan
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/stan/ChangeLog,v 1.1 2005/01/17 18:12:44 kzimmerm Exp $
+
+*stan-0.4.1 (17 Jan 2005)
+
+	17 Jan 2005;  Kai Zimmermann <kzimmerm@gentoo.org> :
+	Initial import into the tree.  Closes bug #35553.  Thanks to 
+	Konrad Rieck <kr@roqe.org> for the ebuild submission.
