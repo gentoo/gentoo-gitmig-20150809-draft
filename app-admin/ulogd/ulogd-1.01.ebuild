@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-1.01.ebuild,v 1.12 2005/01/01 11:32:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ulogd-1.01.ebuild,v 1.13 2005/02/03 06:48:00 eradicator Exp $
 
 DESCRIPTION="iptables daemon for ULOG target for userspace iptables filter logging"
 SRC_URI="http://ftp.netfilter.org/pub/ulogd/${P}.tar.bz2"
@@ -21,11 +21,12 @@ src_compile() {
 src_install() {
 	# the Makefile seems to be "broken" -
 	# it relies on the existance of /usr, /etc ..
-	dodir /usr/sbin /etc/init.d
+	dodir /usr/sbin
 
 	make DESTDIR=${D} install || die "install failed"
 
-	cp ${FILESDIR}/ulogd-0.98 ${D}/etc/init.d/ulogd
+	exeinto /etc/init.d/
+	newexe ${FILESDIR}/ulogd-0.98 ulogd
 
 	dodoc README AUTHORS Changes
 	cd doc/
