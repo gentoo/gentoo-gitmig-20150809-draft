@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040602.ebuild,v 1.1 2004/06/03 21:38:34 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040602.ebuild,v 1.2 2004/06/03 22:08:15 lv Exp $
 
 IUSE="nls pic build nptl erandom hardened makecheck"
 
@@ -417,10 +417,10 @@ EOF
 		# we make the CVS snapshot info pages with -i, as they're occasionally
 		# broken and it really has zero functional effect on the glibc
 		# install other than a lack of documentation :)
-		einfo "Installing Info pages..."
-		make PARALLELMFLAGS="${MAKEOPTS}" \
-			install_root=${D} \
-			info -i
+		#einfo "Installing Info pages..."
+		#make PARALLELMFLAGS="${MAKEOPTS}" \
+		#	install_root=${D} \
+		#	info -i
 
 		setup_locales
 
