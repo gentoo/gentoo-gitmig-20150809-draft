@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/libedit-20040302.ebuild,v 1.1 2004/03/02 06:41:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libedit/libedit-20040302.ebuild,v 1.2 2004/04/19 06:30:28 vapier Exp $
 
 inherit eutils
 
@@ -11,6 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~x86"
+IUSE=""
 
 DEPEND="sys-libs/ncurses
 	virtual/glibc"
@@ -29,7 +30,7 @@ src_compile() {
 }
 
 src_install() {
-	dolib.so libedit.so
-	dolib.a libedit.a
+	dolib.so libedit.so || die
+	dolib.a libedit.a || die
 	doman *.[35]
 }
