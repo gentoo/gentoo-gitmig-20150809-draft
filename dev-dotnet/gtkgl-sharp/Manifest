@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 173244d7cbb1f859f0821a592f1a4593 ChangeLog 512
-MD5 65b5b65c3acd729d9da69e90914812c1 gtkgl-sharp-0.05.ebuild 635
+MD5 bf0a8542d15eb024f984d5b527a849ad gtkgl-sharp-0.05.ebuild 638
+MD5 27dd4a5458866851560e9e08f7887f91 ChangeLog 620
 MD5 a60fdfbce7c7cfc52187ff86a7f8bbf8 metadata.xml 222
 MD5 f9b116f07e7bdcac36cbef4edce15fd4 files/digest-gtkgl-sharp-0.05 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4X6IHTu7gpaalycRAiFZAJ9D+X6RGYdrcGEmJP2LaBP6MA7g/gCgscWG
-Os3YyRcfHXVNjycWB8Rx6PU=
-=7SzW
------END PGP SIGNATURE-----
