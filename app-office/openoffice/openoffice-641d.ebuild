@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Authors: Preston A. Elder <prez@goth.net>, Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-641d.ebuild,v 1.2 2002/04/17 23:46:32 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-641d.ebuild,v 1.3 2002/04/24 21:57:15 azarah Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -19,7 +19,8 @@
 # http://tools.openoffice.org/ext_comp.html
 #
 # todo:
-# Some kind of install process.
+# Some kind of install process.  Works mostly, but the xml registry
+# needs to be updated via a script or some program, not a tarball.
 
 LOC="/opt"
 MAIN_VER="`echo ${PV} |sed -e "s:[a-z]::g"`"
@@ -79,10 +80,20 @@ src_unpack() {
 	patch -p1 <${FILESDIR}/${PV}/${P}-configure.patch || die
 
 	# Fixes code errors that stop compile
-	patch -p1 <${FILESDIR}/${PV}/${P}-code_err.patch || die
+#	patch -p1 <${FILESDIR}/${PV}/${P}-code_err.patch || die
 
 	# This forces exceptions to always be enabled for gcc 3.0.x
-	patch -p1 <${FILESDIR}/${PV}/${P}-gcc3.patch || die
+#	patch -p1 <${FILESDIR}/${PV}/${P}-gcc3.patch || die
+
+	# Debian patches to fix build problems with gcc-3.0.4
+	#
+	# Azarah -- 23 April 2002
+	patch -p1 <${FILESDIR}/${PV}/${P}-exception-sprecs.patch || die
+	patch -p1 <${FILESDIR}/${PV}/${P}-clk-tck-gcc-3.patch || die
+	patch -p1 <${FILESDIR}/${PV}/${P}-define-XSetIMValues.patch || die
+	patch -p1 <${FILESDIR}/${PV}/${P}-use-libstdc++-3.0.4.patch || die
+	patch -p1 <${FILESDIR}/${PV}/${P}-class-SwpHtStart-SAR.patch || die
+
 
 	# Debian patch to enable build of zipdep
 	#
@@ -97,6 +108,12 @@ src_unpack() {
 	patch -p1 <${FILESDIR}/${PV}/${P}-set-compiler-vars.patch || die
 	patch -p1 <${FILESDIR}/${PV}/${P}-use-compiler-vars.patch || die
 	patch -p1 <${FILESDIR}/${PV}/${P}-ran-autoconf.patch || die
+
+	# Misc Debian patches to fixup build
+	#
+	# Azarah -- 22 April 2002
+#	patch -p1 <${FILESDIR}/${PV}/${P}-no-mozab.patch || die
+	patch -p1 <${FILESDIR}/${PV}/${P}-remove-libstdc-from-scp.patch || die
 
 	# Fix STLport to use gcc-3.x/g++-3.x as compilter when we have
 	# gcc-2.95.3 as base compiler.
@@ -165,13 +182,7 @@ src_compile() {
 	cd ${S}
 	./bootstrap || die "Bootstrap failed!"
 
-	BS=${S}/gentoo-build.csh
-	cat >${BS} <<EOT
-source LinuxIntelEnv.Set
-dmake
-EOT
-	chmod +x ${BS}
-	tcsh ${BS} || die "Build failed!"
+	tcsh -c "source LinuxIntelEnv.Set; dmake" || die "Build failed!"
 
 	GVERDIR="`grep GVERDIR LinuxIntelEnv.Set |awk '{print $3}'`"
 	[ -d ${S}/instsetoo/${GVERDIR} ] || die "Cannot find build dir!"
@@ -202,12 +213,12 @@ src_install() {
 	GVERDIR="`grep GVERDIR LinuxIntelEnv.Set |awk '{print $3}'`"
 
 	# This next lot is not really tested, and could fail horridly.
-	# what I basically do, is generate two scripts with
+	# what I basically do, is generate three scripts with
 	# Preston A. Elder's read_ins.pl script.  The first is just
 	# the install part extracted, with install location in ${D}.
-	# The second is just the db generation, and component registration,
-	# which will be done in pkg_postinst() and have the *live*
-	# ${ROOT} as target.
+	# The second is just the db generation, and third is component
+	# registration, which will be done in pkg_postinst() and have
+	# the *live* ${ROOT} as target.
 	#
 	# NOTE: this is just temporary until I can come up with a better
 	#       solution (or somebody else).  There is a way to make setup
@@ -216,28 +227,32 @@ src_install() {
 	#
 	# Azarah -- 16 April 2002
 
-	# Generate a install script template
+	# Generate a install script
 	PREFIX=${D}
 	REGCOMP=${S}/solver/${MAIN_VER}/${GVERDIR}/bin/regcomp
 	INSTDIR=${S}/instsetoo/${GVERDIR}/${LANGUAGE}/normal
 	DESTDIR=${D}${LOC}/OpenOffice-${PV}
 	export PREFIX REGCOMP INSTDIR DESTDIR
-	${FILESDIR}/${PV}/read_ins.pl >${S}/gentoo-install.sh.orig
+	export RUNARGS="install"
+	${FILESDIR}/${PV}/read_ins.pl >${S}/gentoo-install.sh
+	chmod 0755 ${S}/gentoo-install.sh
 
-	# Generate a register script template
+	# Generate createdb and register scripts
 	PREFIX=""
 	REGCOMP=${LOC}/OpenOffice-${PV}/program/regcomp
 	INSTDIR=${S}/instsetoo/${GVERDIR}/${LANGUAGE}/normal
 	DESTDIR=${LOC}/OpenOffice-${PV}
 	export PREFIX REGCOMP INSTDIR DESTDIR
-	${FILESDIR}/${PV}/read_ins.pl >${S}/gentoo-register.sh.orig
+	export RUNARGS="register"
+	${FILESDIR}/${PV}/read_ins.pl >${S}/gentoo-register.sh || die
+	chmod 0755 ${S}/gentoo-register.sh
+	export RUNARGS="createdb"
+	${FILESDIR}/${PV}/read_ins.pl >${S}/gentoo-createdb.sh || die
+	chmod 0755 ${S}/gentoo-createdb.sh
 
-	# Extract our install script
-	grep -v "^${S}" ${S}/gentoo-install.sh.orig | grep -v "^echo" > \
-		${S}/gentoo-install.sh
-	chmod 0755 ${S}/gentoo-install.sh
-	${S}/gentoo-install.sh
-
+	# Install to ${D}
+	${S}/gentoo-install.sh || die "Failed to install data to ${D}!"
+		
 	# Leave for now ... need for figuring the language selection
 	#
 	# Azarah -- 16 April 2002
@@ -249,23 +264,64 @@ src_install() {
 	mkdir -p ${D}${LOC}/OpenOffice-${PV}/program
 	cp bin/regcomp ${D}${LOC}/OpenOffice-${PV}/program
 
-	# Extract our register script
-	echo '#!/bin/sh' > ${D}${LOC}/OpenOffice-${PV}/program/gentoo-register.sh
-	grep "^echo" ${S}/gentoo-register.sh.orig >> \
-		${D}${LOC}/OpenOffice-${PV}/program/gentoo-register.sh
-	grep "^LD_LIBRARY_PATH" ${S}/gentoo-register.sh.orig \
-		${D}${LOC}/OpenOffice-${PV}/program/gentoo-register.sh
-	grep "^${LOC}/OpenOffice-${PV}/program/regcomp" \
-		${S}/gentoo-register.sh.orig >> \
-		${D}${LOC}/OpenOffice-${PV}/program/gentoo-register.sh
-	chmod 0755 ${D}${LOC}/OpenOffice-${PV}/program/gentoo-register.sh
+	# NOTE!!!! We need to fix the registry for network install somehow.
+	#
+	# Crappy solution for now:
+	# Unpack the registry needed for NETWORK installation.
+	# This my need to be updated for future versions of OO.
+	# Install binary with "./setup -net" to generate.
+	cd ${D}${LOC}/OpenOffice-${PV}/share/config/registry
+	rm -rf *
+	tar -jxpf ${FILESDIR}/${PV}/registry-${PV}.tbz2 || \
+		die "Could not unpack registry!"
+	# Fix paths
+	cd ${D}${LOC}/OpenOffice-${PV}/share/config/registry/instance/org/openoffice/Office
+	cp Common.xml Common.xml.orig
+	sed -e "s:/opt/OpenOffice.org641:${LOC}/OpenOffice-${PV}:g" \
+		Common.xml.orig >Common.xml
+	rm -f Common.xml.orig
+
+	# Generate ISO resource files.
+	cd ${D}${LOC}/OpenOffice-${PV}/program/resource
+	for x in ooo*.res
+	do
+		cp ${x} ${x/ooo/iso}
+	done
+
+	# Create the global fonts.dir file
+	cd ${D}${LOC}/OpenOffice-${PV}/share/fonts/truetype
+	cp -f fonts.dir  fonts_dir.global
+
+	# Create misc directories
+	cd ${D}${LOC}/OpenOffice-${PV}
+	mkdir -p user/config/registry/instance/org/openoffice/{Office,ucb}
+	mkdir -p user/psprint/{driver,fontmetric}
+	mkdir -p user/{autocorr,backup,plugin,store,temp,template}
+
+	# Move the register and createdb scripts to ${D}
+	cp -f ${S}/gentoo-register.sh ${D}${LOC}/OpenOffice-${PV}/program
+	cp -f ${S}/gentoo-createdb.sh ${D}${LOC}/OpenOffice-${PV}/program
 }
 
 pkg_postinst() {
-	# Register the components in the live $ROOT
-	if [ -x ${ROOT}${LOC}/OpenOffice-${PV}/program/gentoo-register.sh ]
+	if [ "${ROOT}" = "/" ]
 	then
-		${ROOT}${LOC}/OpenOffice-${PV}/program/gentoo-register.sh
+		for x in bootstraprc configmgrrc instdb.ins sofficerc unorc
+		do
+			if [ -e ${LOC}/OpenOffice-${PV}/program/${x} ]
+			then
+				rm -f ${LOC}/OpenOffice-${PV}/program/${x} >/dev/null
+			fi
+		done
+		${LOC}/OpenOffice-${PV}/program/gentoo-createdb.sh || die
+		echo ">>> Registering components (this may take a few minutes)..."
+		${LOC}/OpenOffice-${PV}/program/gentoo-register.sh &>/dev/null || die
 	fi
+
+	# Make sure these do not get nuked.
+	cd ${ROOT}${LOC}/OpenOffice-${PV}
+	mkdir -p user/config/registry/instance/org/openoffice/{Office,ucb}
+	mkdir -p user/psprint/{driver,fontmetric}
+	mkdir -p user/{autocorr,backup,plugin,store,temp,template}
 }
 
