@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/uade-0.81.ebuild,v 1.3 2004/03/02 08:00:56 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/uade-0.81.ebuild,v 1.4 2004/04/13 13:53:22 wolf31o2 Exp $
 
 DESCRIPTION="Unix Amiga Delitracker Emulator - plays old Amiga tunes through UAE emulation and cloned m68k-assembler Eagleplayer API"
 HOMEPAGE="http://uade.ton.tut.fi/"
 SRC_URI="http://uade.ton.tut.fi/uade/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="0"
 
 RDEPEND="dev-lang/perl

@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/uade
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/ChangeLog,v 1.3 2004/01/06 03:40:24 mr_bones_ Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/ChangeLog,v 1.4 2004/04/13 13:53:22 wolf31o2 Exp $
+
+  13 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org> uade-0.81.ebuild:
+  Marking stable on x86.  No bug reports in 99 days.
 
 *uade-0.81 (05 Jan 2004)
 
