@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/gnu-smalltalk-2.1.10.ebuild,v 1.2 2005/03/31 19:07:40 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/gnu-smalltalk-2.1.10.ebuild,v 1.3 2005/04/03 08:34:05 mkennedy Exp $
 
 inherit elisp-common flag-o-matic eutils gcc
 
@@ -52,6 +52,9 @@ src_compile() {
 		${myconf} \
 		|| die
 	emake || die "emake failed"
+	if use emacs; then
+		emacs --batch -f batch-byte-compile --no-site-file --no-init-file *.el
+	fi
 }
 
 src_install() {
@@ -60,7 +63,11 @@ src_install() {
 		${D}/usr/include/snprintfv \
 		${D}/usr/share/aclocal/snprintfv.m4
 	dodoc AUTHORS COPYING* ChangeLog NEWS PATCHES README THANKS TODO
-	use emacs && elisp-site-file-install ${FILESDIR}/${SITEFILE}
+	rm -rf ${D}/var
+	if use emacs; then
+		elisp-install ${PN} *.el *.elc
+		elisp-site-file-install ${FILESDIR}/${SITEFILE}
+	fi
 }
 
 pkg_postinst() {
