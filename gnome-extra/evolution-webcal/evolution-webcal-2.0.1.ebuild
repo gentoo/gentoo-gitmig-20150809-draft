@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-webcal/evolution-webcal-2.0.1.ebuild,v 1.4 2004/11/12 03:42:27 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/evolution-webcal/evolution-webcal-2.0.1.ebuild,v 1.5 2004/11/12 10:47:28 obz Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~ppc sparc ~mips ~hppa ~ia64"
+KEYWORDS="x86 ~amd64 ppc sparc ~mips ~hppa ~ia64"
 IUSE=""
 
 RDEPEND=">=x11-libs/gtk+-2.4

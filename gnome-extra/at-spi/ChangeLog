@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/at-spi
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.62 2004/11/12 03:19:17 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-spi/ChangeLog,v 1.63 2004/11/12 10:52:50 obz Exp $
+
+  12 Nov 2004; Mike Gardiner <obz@gentoo.org> at-spi-1.6.0.ebuild:
+  Keyworded ppc for GNOME 2.8
 
   12 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> at-spi-1.6.0.ebuild:
   Stable on sparc
