@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.39 2002/10/30 18:33:14 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.40 2002/11/05 22:22:58 azarah Exp $
+
+*baselayout-1.8.4.2 (5 Nov 2002)
+
+  5 Nov 2002; Martin Schlemmer <azarah@gentoo.org> baselayout-1.8.4.2.ebuild :
+
+  Another minor bugfix release to resolve current major show stoppers.
 
   30 Oct 2002; Martin Schlemmer <azarah@gentoo.org> baselayout-1.8.4.1.ebuild :
 
