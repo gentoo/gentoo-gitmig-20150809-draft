@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.13 2004/09/10 09:11:41 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.14 2004/10/08 19:09:23 axxo Exp $
 
 inherit base
 ECLASS=java-pkg
@@ -16,12 +16,12 @@ java-pkg_doclass()
 
 java-pkg_do_init_() {
 	debug-print-function ${FUNCNAME} $*
-	
+
 	if [ -z "${JARDESTTREE}" ] ; then
 		JARDESTTREE="lib"
 		SODESTTREE="lib"
 	fi
-	
+
 	# Set install paths
 	sharepath="${DESTTREE}/share"
 	if [ "$SLOT" == "0" ] ; then
@@ -29,7 +29,7 @@ java-pkg_do_init_() {
 	else
 		pkg_name="${PN}-${SLOT}"
 	fi
-		
+
 	shareroot="${sharepath}/${pkg_name}"
 	jardest="${shareroot}/${JARDESTTREE}"
 	sodest="/opt/${pkg_name}/${SODESTTREE}"
@@ -77,7 +77,7 @@ java-pkg_doso()
 	[ -z "$1" ]
 
 	java-pkg_do_init_
-	
+
 	# Check for arguments
 	if [ -z "$*" ] ; then
 		die "at least one argument needed"
@@ -95,7 +95,7 @@ java-pkg_doso()
 		install -m 0755 "${mysrc}" "${D}${sodest}" || die "${mysrc} not found"
 	done
 	lp_pkg="${sodest}"
-	
+
 	java-pkg_do_write_
 }
 
@@ -123,7 +123,7 @@ java-pkg_dojar()
 				die "Error in DEP_PREPEND."
 			fi
 			debug-print "cp_prepend=${cp_prepend}"
-			
+
 		done
 	fi
 
@@ -169,7 +169,7 @@ java-pkg_dojar()
 			cp_pkg="${cp_pkg}:${jardest}/"`/usr/bin/basename "${i}"`
 		fi
 	done
-	
+
 	java-pkg_do_write_
 }
 
@@ -177,16 +177,16 @@ java-pkg_dowar()
 {
 	debug-print-function ${FUNCNAME} $*
 	[ -z "$1" ]
-	
+
 	# Check for arguments
 	if [ -z "$*" ] ; then
 		die "at least one argument needed"
 	fi
-	
+
 	if [ -z "${WARDESTTREE}" ] ; then
 		WARDESTTREE="webapps"
 	fi
-	
+
 	sharepath="${DESTTREE}/share"
 	shareroot="${sharepath}/${PN}"
 	wardest="${shareroot}/${WARDESTTREE}"
@@ -201,7 +201,7 @@ java-pkg_dowar()
 	if [ ! -d "${D}${wardest}" ] ; then
 		install -d "${D}${wardest}"
 	fi
-	
+
 	for i in $* ; do
 		# Check for symlink
 		if [ -L "${i}" ] ; then
@@ -253,6 +253,6 @@ java-pkg_jar-from()
 	        return 0
 	else
 		return 1
-	fi	     
+	fi
 }
 
