@@ -1,6 +1,12 @@
 # ChangeLog for net-im/sim
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/ChangeLog,v 1.31 2004/04/01 07:36:05 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/ChangeLog,v 1.32 2004/04/02 19:51:56 aliz Exp $
+
+*sim-0.9.3-r1 (02 Apr 2004)
+
+  02 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> sim-0.9.3-r1.ebuild:
+  Bugfix: when receiving messages and open container minimized the messages
+  wasn't marked as read.
 
 *sim-0.9.3 (01 Apr 2004)
 
