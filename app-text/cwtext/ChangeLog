@@ -1,6 +1,9 @@
 # ChangeLog for app-text/cwtext
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/cwtext/ChangeLog,v 1.1 2004/02/21 17:48:01 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/cwtext/ChangeLog,v 1.2 2004/04/25 17:28:11 usata Exp $
+
+  26 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> cwtext-0.94.ebuild:
+  Stable on x86
 
 *cwtext-0.94 (22 Feb 2004)
 
