@@ -1,24 +1,13 @@
 # ChangeLog for media-libs/libpng
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.23 2003/01/21 21:22:10 vapier Exp $
-
-  21 Jan 2003; Mike Frysinger <vapier@gentoo.org> libpng-1.2.5-r4.ebuild :
-  Fixed 'doman' so that in doesn't mistakenly install library files.
-
-  19 Jan 2003; George Shapovalov <george@gentoo.org> libpng-1.2.5-r3.ebuild, libpng-1.0.15.ebuild :
-  update to libpng-1.0.15 may cause autocleaning of png.h if user did not remerge libpng-1.2.5 after
-  emerging 1.0.12. Revision bumped libpng-1.2.5-r3.ebuild to force remerge.
-  Also added warning to libpng-1.0.15.ebuild about this issue.
-
-  17 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> libpng-1.2.5-r2.ebuild :
-  Changed sed "/" to ":".
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/ChangeLog,v 1.24 2003/02/10 07:42:57 seemant Exp $
 
 *libpng-1.0.15 (14 Jan 2003)
 
-  16 Jan 2003; Seemant Kulleen <seemant@gentoo.org> libpng-1.0.15.ebuild
-  libpng-1.2.5-r2.ebuild files/libpng-1.0.15-gentoo.diff :
+  09 Feb 2003; Seemant Kulleen <seemant@gentoo.org> *.ebuild :
 
-  fixed the diff and using epatch
+  Sed delimiter to : from /, closing bug #15006 by Blu3
+  <david+gentoo.org@blue-labs.org>
 
   15 Jan 2003; Seemant Kulleen <seemant@gentoo.org>
   files/libpng-1.0.15-gentoo.diff :
@@ -34,6 +23,22 @@
 
 *libpng-1.2.5-r2 (08 Jan 2003)
 *libpng-1.0.12-r2 (08 Jan 2003)
+
+  21 Jan 2003; Mike Frysinger <vapier@gentoo.org> libpng-1.2.5-r4.ebuild :
+  Fixed 'doman' so that in doesn't mistakenly install library files.
+
+  19 Jan 2003; George Shapovalov <george@gentoo.org> libpng-1.2.5-r3.ebuild, libpng-1.0.15.ebuild :
+  update to libpng-1.0.15 may cause autocleaning of png.h if user did not remerge libpng-1.2.5 after
+  emerging 1.0.12. Revision bumped libpng-1.2.5-r3.ebuild to force remerge.
+  Also added warning to libpng-1.0.15.ebuild about this issue.
+
+  17 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> libpng-1.2.5-r2.ebuild :
+  Changed sed "/" to ":".
+
+  16 Jan 2003; Seemant Kulleen <seemant@gentoo.org> libpng-1.0.15.ebuild
+  libpng-1.2.5-r2.ebuild files/libpng-1.0.15-gentoo.diff :
+
+  fixed the diff and using epatch
 
   08 Jan 2003; Daniel Ahlberg <aliz@gentoo.rg> libpng-1.0.12-r2.ebuild, libpng-1.2.5-r2.ebuild :
   Applied Debian patch to fix buffer overflows.

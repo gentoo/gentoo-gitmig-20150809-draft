@@ -1,11 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.0.12-r2.ebuild,v 1.1 2003/01/08 14:26:45 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.0.12-r2.ebuild,v 1.2 2003/02/10 07:42:57 seemant Exp $
+
+inherit eutils
 
 S=${WORKDIR}/${P}
-DESCRIPTION="libpng"
+DESCRIPTION="Portable Network Graphics library"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.libpng.org/"
+
 SLOT="1.0"
 LICENSE="as-is"
 KEYWORDS="x86 ppc sparc "
@@ -16,14 +19,13 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	patch -p1 < ${FILESDIR}/${P}-gentoo.diff
+	epatch ${FILESDIR}/${P}-gentoo.diff
 
 	sed -e "s:ZLIBLIB=../zlib:ZLIBLIB=/usr/lib:" \
 		-e "s:ZLIBINC=../zlib:ZLIBINC=/usr/include:" \
 		-e "s:prefix=/usr:prefix=${D}/usr:" \
-		-e "s/-O3/${CFLAGS}/" \
+		-e "s:-O3:${CFLAGS}:" \
 		scripts/makefile.linux > Makefile
-
 }
 
 src_compile() {
