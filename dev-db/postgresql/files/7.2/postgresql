@@ -10,7 +10,7 @@ depend() {
 start()	{
 	ebegin "Starting postgres"
 	start-stop-daemon  --start --quiet --background --chuid postgres --exec \
-		/usr/bin/postmaster -- -D/var/lib/postgresql -N 1024 -B 2048
+		/usr/bin/postmaster -- -D/var/lib/postgresql/data -N 1024 -B 2048
 	eend $?
 }
 
