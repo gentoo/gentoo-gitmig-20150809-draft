@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/imaxima-0.9.ebuild,v 1.1 2004/10/09 11:37:42 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/imaxima-0.9.ebuild,v 1.2 2004/11/28 08:04:25 josejx Exp $
 
 inherit elisp
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.ifa.au.dk/~harder/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 DEPEND="virtual/emacs

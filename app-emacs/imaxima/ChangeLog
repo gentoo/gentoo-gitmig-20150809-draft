@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/imaxima
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/ChangeLog,v 1.1 2004/10/09 11:37:42 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/imaxima/ChangeLog,v 1.2 2004/11/28 08:04:25 josejx Exp $
+
+  28 Nov 2004; Joseph Jezak <josejx@gentoo.org> imaxima-0.9.ebuild:
+  Marked ~ppc for bug #72351.
 
 *imaxima-0.9 (09 Oct 2004)
 
