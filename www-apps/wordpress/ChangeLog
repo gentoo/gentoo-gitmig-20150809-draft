@@ -1,0 +1,46 @@
+# ChangeLog for net-www/wordpress
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/ChangeLog,v 1.1 2004/08/15 15:56:24 stuart Exp $
+
+*wordpress-1.2 (15 Aug 2004)
+
+  15 Aug 2004; Stuart Herbert <stuart@gentoo.org> +metadata.xml,
+  +files/wordpress-1.0.2.gentoo.diff, +files/1.2/login-patch.diff,
+  +files/1.2/postinstall-en.txt, +wordpress-1.0.2.ebuild,
+  +wordpress-1.2-r1.ebuild, +wordpress-1.2.ebuild:
+  Moved from net-www/wordpress to www-apps/wordpress.
+
+*wordpress-1.2-r1 (08 Aug 2004)
+
+  08 Aug 2004; Stuart Herbert <stuart@gentoo.org> files/1.2/login-patch.diff,
+  +wordpress-1.2-r1.ebuild:
+  Improved login patch; thanks to Kai Groner <kai@ubergeeks.com>
+
+  20 Jul 2004; Stuart Herbert <stuart@gentoo.org> files/1.2/login-patch.diff:
+  New login patch; this one works for me on Konquerer and Mozilla
+
+  20 Jul 2004; Stuart Herbert <stuart@gentoo.org> files/1.2/login-patch.diff,
+  wordpress-1.2.ebuild:
+  New version of the login patch, which now works w/ both Konquerer & Mozilla
+
+*wordpress-1.2 (11 Jul 2004)
+
+  11 Jul 2004; Stuart Herbert <stuart@gentoo.org> +files/1.2/login-patch.diff,
+  +files/1.2/postinstall-en.txt, +wordpress-1.2.ebuild:
+  Version bump; see bug #53563; thanks to Peter Westwood
+  <peter.westwood@ftwr.co.uk>
+
+  07 May 2004; Stuart Herbert <stuart@gentoo.org> wordpress-1.0.2.ebuild:
+  Removed SLOT= from ebuild - that's handled by the webapp eclass. Fixes bug
+  #50160
+
+  01 May 2004; Aron Griffis <agriffis@gentoo.org> wordpress-1.0.2.ebuild:
+  Add inherit eutils
+
+*wordpress-1.0.2 (01 May 2004)
+
+  01 May 2004; Stuart Herbert <stuart@gentoo.org> metadata.xml,
+  wordpress-1.0.2.ebuild, files/wordpress-1.0.2.gentoo.diff:
+  Initial import; thanks to Peter Westwood <peter.westwood@ftwr.co.uk>; see bug
+  #43025
+
