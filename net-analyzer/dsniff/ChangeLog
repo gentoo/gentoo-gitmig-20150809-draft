@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/dsniff
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/ChangeLog,v 1.1 2002/11/14 08:39:16 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/ChangeLog,v 1.2 2003/02/02 15:16:08 aliz Exp $
+
+  02 Feb 2003; Daniel Ahlberg <aliz@gentoo.org> dsniff-2.3.ebuild :
+  Closes #14689.
 
 *dsniff-2.3 (14 Nov 2002)
 
