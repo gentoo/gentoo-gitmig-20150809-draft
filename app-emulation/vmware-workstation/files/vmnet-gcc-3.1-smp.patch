@@ -1,0 +1,35 @@
+--- Makefile	Fri Apr  5 14:58:22 2002
++++ Makefile.new	Sun Aug  4 18:08:56 2002
+@@ -19,7 +19,7 @@
+ #### kernel (i.e. uniprocessor but with SMP support or more than
+ #### one processor) please uncomment the SUPPORT_SMP line.
+ ####
+-#SUPPORT_SMP=1
++SUPPORT_SMP=1
+ 
+ # Header directory for the running kernel
+ HEADER_DIR = /usr/src/linux/include
+@@ -33,18 +33,17 @@
+ DRIVERNAME = $(DRIVER)-up-$(shell uname -r)
+ endif
+ 
+-COMPILER_VERSION := $(shell $(CC) --version)
+-IS_GCC_30 := $(shell if echo $(COMPILER_VERSION) | $(GREP) -q '^3\.0'; then echo yes; else echo no; fi)
++COMPILER_VERSION := $(shell $(CC) -dumpversion)
++IS_GCC_30 := $(shell if echo $(COMPILER_VERSION) | $(GREP) -q '^3\.'; then echo yes; else echo no; fi)
+ 
+ CC_WARNINGS = -Wall -Wstrict-prototypes
+ # Don't use -pipe or egcs-2.91.66 (shipped with RedHat) will die
+-CC_KFLAGS = -D__KERNEL__ -DMODULE -fomit-frame-pointer -fno-strength-reduce \
+-            -malign-loops=2 -malign-jumps=2 -malign-functions=2 -DCPU=586
++CC_KFLAGS = -D__KERNEL__ -DMODULE -fomit-frame-pointer -fno-strength-reduce -DCPU=586
+ # Gcc 3.0 deprecates -m486 --hpreg
+ ifeq ($(IS_GCC_30),yes)
+-CC_KFLAGS += -march=i586
++CC_KFLAGS += -march=i586 -falign-loops=2 -falign-jumps=2 -falign-functions=2
+ else
+-CC_KFLAGS += -m486
++CC_KFLAGS += -m486 -malign-loops=2 -malign-jumps=2 -malign-functions=2
+ endif
+ INCLUDE = -I. -I$(HEADER_DIR)
+ 

@@ -1,0 +1,41 @@
+--- Makefile	Sun Aug  4 17:34:28 2002
++++ Makefile.new	Wed Jul 24 23:19:58 2002
+@@ -13,7 +13,7 @@
+ #### you don't, and you're lucky, the driver won't compile.  Otherwise
+ #### it'll compile but just be potentially rather broken.
+ ####
+-#SUPPORT_SMP=1
++SUPPORT_SMP=1
+ 
+ # Header directory for the running kernel
+ HEADER_DIR = /usr/src/linux/include
+@@ -47,8 +47,8 @@
+ ECHO = @echo
+ endif
+ 
+-COMPILER_VERSION := $(shell $(CC) --version)
+-IS_GCC_30 := $(shell if echo $(COMPILER_VERSION) | $(GREP) -q '^3\.0'; then echo yes; else echo no; fi)
++COMPILER_VERSION := $(shell $(CC) -dumpversion)
++IS_GCC_30 := $(shell if echo $(COMPILER_VERSION) | $(GREP) -q '^3\.'; then echo yes; else echo no; fi)
+ 
+ ####
+ #### You must compile with at least -O level of optimization
+@@ -58,14 +58,14 @@
+ ####
+ CC_WARNINGS = -Wall -Wstrict-prototypes 
+ # Don't use -pipe or egcs-2.91.66 (shipped with RedHat) will die
+-CC_KFLAGS = -D__KERNEL__ -fno-strength-reduce -malign-loops=2 \
+-            -malign-jumps=2 -malign-functions=2 -fno-omit-frame-pointer \
++CC_KFLAGS = -D__KERNEL__ -fno-strength-reduce \
++            -fno-omit-frame-pointer \
+ 	    -DCPU=586
+ # Gcc 3.0 deprecates -m486 --hpreg
+ ifeq ($(IS_GCC_30),yes)
+-CC_KFLAGS += -march=i586
++CC_KFLAGS += -march=i586 -falign-loops=2 -falign-jumps=2 -falign-functions=2
+ else
+-CC_KFLAGS += -m486
++CC_KFLAGS += -m486 -malign-loops=2 -malign-jumps=2 -malign-functions=2
+ endif
+ CC_OPTS = -O2 -DMODULE $(GLOBAL_DEFS) $(CC_KFLAGS) $(CC_WARNINGS) 
+ 
