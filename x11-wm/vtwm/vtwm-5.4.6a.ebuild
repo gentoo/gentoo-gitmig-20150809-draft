@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/vtwm/vtwm-5.4.6a.ebuild,v 1.3 2003/08/25 22:04:11 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/vtwm/vtwm-5.4.6a.ebuild,v 1.4 2003/09/04 07:32:14 msterret Exp $
 
 IUSE=""
 
@@ -11,16 +11,16 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~x86 ~alpha ~ppc ~sparc"
 DEPEND="virtual/x11"
-	
+
 S="${WORKDIR}/${P}"
 
 src_compile() {
 	xmkmf || die
-	make || die 
+	make || die
 }
 
 src_install() {
-	cp ${FILESDIR}/vtwmrc system.vtwmrc	
+	cp ${FILESDIR}/vtwmrc system.vtwmrc
 	make BINDIR=/usr/bin \
 		LIBDIR=/etc/X11 \
 		MANPATH=/usr/share/man \

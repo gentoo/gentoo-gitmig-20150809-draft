@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/kahakai-0.2.ebuild,v 1.1 2003/06/24 15:05:47 bcowan Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/kahakai/kahakai-0.2.ebuild,v 1.2 2003/09/04 07:38:04 msterret Exp $
 
 IUSE=""
 S=${WORKDIR}/${P}
@@ -29,12 +29,12 @@ src_compile() {
 }
 
 src_install() {
-        einstall
-        
-	cd doc                                                                                                                                   
-        dodoc AUTHORS INSTALL NEWS COPYING README ChangeLog TODO
-	
-	dodir /etc/X11/Sessions                                                 
-        echo "/usr/bin/kahakai" > ${D}/etc/X11/Sessions/kahakai                 
-        fperms 755 /etc/X11/Sessions/kahakai
+	einstall
+
+	cd doc
+	dodoc AUTHORS INSTALL NEWS COPYING README ChangeLog TODO
+
+	dodir /etc/X11/Sessions
+	echo "/usr/bin/kahakai" > ${D}/etc/X11/Sessions/kahakai
+	fperms 755 /etc/X11/Sessions/kahakai
 }

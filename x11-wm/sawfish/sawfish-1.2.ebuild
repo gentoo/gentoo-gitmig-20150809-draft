@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.2.ebuild,v 1.11 2003/02/13 17:54:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.2.ebuild,v 1.12 2003/09/04 07:39:15 msterret Exp $
 
 inherit base eutils
 
@@ -39,10 +39,10 @@ src_compile() {
 	local myconf=""
 	use esd && myconf="${myconf} --with-esd"
 	use esd || myconf="${myconf} --without-esd"
-	
+
 	use readline && myconf="${myconf} --with-readline"
 	use readline || myconf="${myconf} --without-readline"
-	
+
 	use nls || myconf="${myconf} --disable-linguas"
 
 	# Make sure we include freetype2 headers before freetype1 headers, else Xft2
@@ -72,7 +72,7 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 	dodoc AUTHORS BUGS COPYING ChangeLog DOC FAQ NEWS README THANKS TODO
-	
+
 	# Add to Gnome CC's Window Manager list
 	insinto /usr/share/gnome/wm-properties
 	doins ${FILESDIR}/Sawfish.desktop

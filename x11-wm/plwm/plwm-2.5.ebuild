@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/plwm/plwm-2.5.ebuild,v 1.2 2003/05/07 20:44:51 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/plwm/plwm-2.5.ebuild,v 1.3 2003/09/04 07:40:38 msterret Exp $
 
 DESCRIPTION="Python classes for, and an implementation of, a window manager."
 
@@ -26,7 +26,7 @@ src_install() {
 		prefix="${D}/usr" \
 		PLWM_PATH="${D}"'$(PYTHON_SITE_PATH)/plwm' \
 		install \
-    || die "make install failed for ${P}"
+			|| die "make install failed for ${P}"
 
 	# info page
 	make -C doc || die "make info docs failed for ${P}"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/pekwm-0.1.2.ebuild,v 1.4 2003/02/17 00:57:48 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pekwm/pekwm-0.1.2.ebuild,v 1.5 2003/09/04 07:41:11 msterret Exp $
 
 IUSE=""
 
@@ -23,28 +23,28 @@ src_compile() {
 	    then
 		myconf="${myconf} --disable-xft"
 	    else
-		myconf="${myconf} --enable-xft"	
+		myconf="${myconf} --enable-xft"
 	fi
-	
+
 	econf \
 	    --enable-xinerama \
 	    --enable-harbour \
-	    ${myconf} || die	
+	    ${myconf} || die
 	emake || die
 }
 
 src_install() {
 	exeinto /usr/bin
 	doexe src/pekwm
-	
+
 	insinto /usr/share/${PN}/themes/default
 	doins data/themes/default/*.xpm data/themes/default/theme
-	
+
 	insinto /usr/share/${PN}
 	cd ${S}/data
 	doins autoprops config keys menu mouse start
-	
+
 	cd ${S}
 	doman docs/pekwm.1
-	dodoc docs/pekwmdocs.txt AUTHORS ChangeLog* INSTALL LISCENCE README* NEWS ROADMAP TODO	
+	dodoc docs/pekwmdocs.txt AUTHORS ChangeLog* INSTALL LISCENCE README* NEWS ROADMAP TODO
 }

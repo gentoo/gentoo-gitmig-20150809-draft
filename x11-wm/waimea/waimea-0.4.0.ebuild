@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/waimea/waimea-0.4.0.ebuild,v 1.7 2003/06/22 23:23:50 vapier Exp $
- 
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/waimea/waimea-0.4.0.ebuild,v 1.8 2003/09/04 07:36:40 msterret Exp $
+
 DESCRIPTION="Window manager based on BlackBox"
 SRC_URI="http://www.waimea.org/files/stable/source/${P}.tar.bz2"
 HOMEPAGE="http://www.waimea.org/"
@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc"
 
-DEPEND="virtual/x11 
+DEPEND="virtual/x11
 	media-libs/imlib2
 	virtual/xft"
 PROVIDE="virtual/blackbox"

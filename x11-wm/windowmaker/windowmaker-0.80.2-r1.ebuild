@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.80.2-r1.ebuild,v 1.2 2003/06/12 22:28:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowmaker/windowmaker-0.80.2-r1.ebuild,v 1.3 2003/09/04 07:35:27 msterret Exp $
 
 IUSE="gif nls png kde oss jpeg gnome"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.windowmaker.org/"
 DEPEND="virtual/x11
 	media-libs/hermes
 	>=media-libs/tiff-3.5.5
-	gif? ( >=media-libs/giflib-4.1.0-r3 
+	gif? ( >=media-libs/giflib-4.1.0-r3
 		>=media-libs/libungif-4.1.0 )
 	png? ( >=media-libs/libpng-1.2.1 )
 	jpeg? ( >=media-libs/jpeg-6b-r2 )"
@@ -38,18 +38,18 @@ src_compile() {
 	use gnome \
 		&& myconf="${myconf} --enable-gnome" \
 		|| myconf="${myconf} --disable-gnome"
-	
+
 	use kde \
 		&& myconf="${myconf} --enable-kde" \
 		&& export KDEDIR=/usr/kde/2 \
 		|| myconf="${myconf} --disable-kde"
-	
+
 	if [ "$WITH_MODELOCK" ] ; then
 		myconf="${myconf} --enable-modelock"
 	else
 		myconf="${myconf} --disable-modelock"
 	fi
-	
+
 	use nls \
 		&& export LINGUAS="`ls po/*.po | sed 's:po/\(.*\)\.po$:\1:'`" \
 		|| myconf="${myconf} --disable-nls --disable-locale"
@@ -59,10 +59,10 @@ src_compile() {
 
 	use jpeg \
 		|| myconf="${myconf} --disable-jpeg"
-	
+
 	use png \
 		|| myconf="${myconf} --disable-png"
-		
+
 
 	use esd || use alsa || use oss \
 		&& myconf="${myconf} --enable-sound" \
@@ -77,7 +77,7 @@ src_compile() {
 		--with-appspath=/usr/lib/GNUstep \
 		--with-pixmapdir=/usr/share/pixmaps \
 		${myconf} || die
-	
+
 	cd ${S}/po
 	cp Makefile Makefile.orig
 	sed 's:zh_TW.*::' \
@@ -90,22 +90,22 @@ src_compile() {
 
 	cd ${S}
 	for file in ${S}/WindowMaker/*menu*; do
-        	if [ -r $file ]; then
-                	sed -e 's/\/usr\/local\/GNUstep/\/usr\/lib\/GNUstep/g;
-                        	s/\/usr\/local\/share\/WindowMaker/\/usr\/share\/WindowMaker/g;' < $file > $file.tmp;
-                	mv $file.tmp $file;
-        	fi;
+		if [ -r $file ]; then
+				sed -e 's/\/usr\/local\/GNUstep/\/usr\/lib\/GNUstep/g;
+						s/\/usr\/local\/share\/WindowMaker/\/usr\/share\/WindowMaker/g;' < $file > $file.tmp;
+				mv $file.tmp $file;
+		fi;
 	done;
-	
+
 	cd ${S}
 	#0.80.1-r2 did not work with make -j4 (drobbins, 15 Jul 2002)
 	#with future Portage, this should become "emake -j1"
 	make || die
-  
-  	# WindowMaker Extra
+
+	# WindowMaker Extra
 	cd ../WindowMaker-extra-0.1
 	econf || die
-		    
+
 	make || die
 }
 
@@ -125,7 +125,7 @@ src_install() {
 	# WindowMaker Extra
 	cd ../WindowMaker-extra-0.1
 	einstall || die
-	
+
 	newdoc README README.extra
 
 	echo "#!/bin/bash" > wmaker

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.0.1-r6.ebuild,v 1.6 2003/02/13 17:54:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.0.1-r6.ebuild,v 1.7 2003/09/04 07:39:15 msterret Exp $
 
 IUSE="gtk nls esd gnome"
 
@@ -40,16 +40,16 @@ src_unpack() {
 
 src_compile() {
 
-  	local myconf
-	
+	local myconf
+
 	use esd \
 		&& myconf="--with-esd" \
 		|| myconf="--without-esd"
-	
+
 	use gnome \
 		&& myconf="${myconf} --with-gnome-prefix=/usr --enable-gnome-widgets --enable-capplet" \
 		|| myconf="${myconf} --disable-gnome-widgets --disable-capplet"
-	
+
 	use nls || myconf="${myconf} --disable-linguas"
 
 	use gtk || use gnome \
@@ -74,7 +74,7 @@ src_install() {
 		install || die
 
 	use nls || rmdir ${D}/usr/share/locale
-		
+
 	dodoc AUTHORS BUGS COPYING ChangeLog
 	dodoc DOC FAQ NEWS README THANKS TODO
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.1.1.ebuild,v 1.8 2003/02/13 17:54:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.1.1.ebuild,v 1.9 2003/09/04 07:39:57 msterret Exp $
 
 DESCRIPTION="Ratpoison is an extremely light-weight and barebones wm modelled after screen."
 HOMEPAGE="http://ratpoison.sourceforge.net"
@@ -18,14 +18,14 @@ src_compile() {
 }
 
 src_install() {
-	einstall 
+	einstall
 
 	# handle docs/misc
 	dodoc INSTALL TODO README NEWS AUTHORS ChangeLog
-	docinto example 
+	docinto example
 	dodoc doc/ipaq.ratpoisonrc contrib/{genrpbindings,ratpoison.el,split.sh}
 	rm -Rf ${D}/usr/share/{doc/ratpoison,ratpoison}
 
-	insinto /etc 
+	insinto /etc
 	doins ${FILESDIR}/ratpoisonrc
 }
