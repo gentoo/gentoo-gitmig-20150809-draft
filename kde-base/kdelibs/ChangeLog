@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.160 2004/09/20 02:56:31 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.161 2004/10/04 14:45:12 gmsoft Exp $
+
+  04 Oct 2004; Guy Martin <gmsoft@gentoo.org> kdelibs-3.3.0.ebuild:
+  Stable on hppa.
 
   19 Sep 2004; Caleb Tennis <caleb@gentoo.org> kdelibs-3.3.0.ebuild:
   Add kerberos support (Bug #52994)

@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.151 2004/09/20 01:59:38 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.152 2004/10/04 14:49:28 gmsoft Exp $
+
+  04 Oct 2004; Guy Martin <gmsoft@gentoo.org> kdebase-3.3.0.ebuild:
+  Stable on hppa.
 
   19 Sep 2004; Malcolm Lashley <malc@gentoo.org> kdebase-3.3.0.ebuild:
   Stable on amd64
