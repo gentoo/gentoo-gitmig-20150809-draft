@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/DBD-mysql
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/ChangeLog,v 1.12 2003/04/03 22:40:30 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/DBD-mysql/ChangeLog,v 1.13 2003/04/06 16:17:22 zwelch Exp $
+
+*DBD-mysql-2.1013-r1 (29 Oct 2002)
+
+  05 Apr 2003; Zach Welch <zwelch@gentoo.org> DBD-mysql-2.1013-r1.ebuild:
+  add arm keyword
 
   20 Mar 2003; Guy Martin <gmsoft@gentoo.org> DBD-mysql-2.1013-r1.ebuild :
   Added hppa to KEYWORDS.
@@ -10,7 +15,7 @@
   29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
   forced version bump to install into correct locations
 
-*DBD-mysql-2.1013.ebuild (19 Sep 2002)
+*DBD-mysql-2.1013 (19 Sep 2002)
 
   19 Sep 2002; <mcummings@gentoo.org> DBD-mysql-2.1013.ebuild, 
   files/makemaker.patch: address and correct issues with makemaker in perl.

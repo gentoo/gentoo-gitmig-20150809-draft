@@ -1,41 +1,44 @@
 # ChangeLog for dev-perl/PlRPC
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PlRPC/ChangeLog,v 1.11 2003/03/20 18:26:17 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PlRPC/ChangeLog,v 1.12 2003/04/06 16:17:22 zwelch Exp $
+
+*PlRPC-0.2016-r1 (29 Oct 2002)
+
+  05 Apr 2003; Zach Welch <zwelch@gentoo.org> PlRPC-0.2016-r1.ebuild:
+  add arm keyword
 
   20 Mar 2003; Guy Martin <gmsoft@gentoo.org> PlRPC-0.2016-r1.ebuild : 
   Added hppa to KEYWORDS.
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : 
+  changed sparc ~sparc keywords
  
-  31 Oct 2002; <mcummings@gentoo.org> : added keywords sparc sparc64
+  31 Oct 2002; <mcummings@gentoo.org> : 
+  added keywords sparc sparc64
 
   29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
-
   forced version bump to install into correct locations
-# ChangeLog for dev-perl/PlRPC
 
-*P1RPC-0.2016 (8 Sep 2002)
-  
+*PlRPC-0.2016 (8 Sep 2002)
+
   8 Sep 2002; <mcummings@gentoo.org> PlRPC-0.2016.ebuild:
   Version bump to correct bugs
 
 *PlRPC-0.2014-r1 (5 May 2002)
 
   31 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> PlRPC-0.2014-r1.ebuild :
-
   Added ppc to KEYWORDS.
 
   5 May 2002; Seemant Kulleen <seemant@gentoo.org> PlRPC-0.2014-r1.ebuild
   files/digest-PlRPC-0.2014-r1 :
-
   eclassed.
 
 *PlRPC-0.2014 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
   writing correct changelogs are explained in the skel.ChangeLog file which you
   can find in the root directory of the portage repository.
+

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Daemon/Net-Daemon-0.36-r1.ebuild,v 1.5 2003/03/20 18:19:18 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Daemon/Net-Daemon-0.36-r1.ebuild,v 1.6 2003/04/06 16:17:22 zwelch Exp $
 
 inherit perl-module
 
@@ -12,4 +12,4 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/Net/${P}.readme"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 ppc sparc alpha hppa"
+KEYWORDS="x86 ppc sparc alpha hppa arm"

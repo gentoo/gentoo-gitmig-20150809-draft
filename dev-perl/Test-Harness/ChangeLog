@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Test-Harness
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Harness/ChangeLog,v 1.9 2003/04/03 23:40:56 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Harness/ChangeLog,v 1.10 2003/04/06 16:17:22 zwelch Exp $
+
+*Test-Harness-2.24-r1 (29 Oct 2002)
+
+  05 Apr 2003; Zach Welch <zwelch@gentoo.org> Test-Harness-2.24-r1.ebuild:
+  add arm keyword
 
   20 Mar 2003; Guy Martin <gmsoft@gentoo.org> Test-Harness-2.24-r1.ebuild :
   Added hppa to KEYWORDS.
