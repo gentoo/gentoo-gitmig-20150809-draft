@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header:
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/excido/excido-0.1.2.ebuild,v 1.3 2004/04/29 19:54:43 agriffis Exp $
 
 inherit games
 
