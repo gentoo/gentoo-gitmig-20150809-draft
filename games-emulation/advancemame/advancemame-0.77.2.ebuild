@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/advancemame-0.77.2.ebuild,v 1.3 2004/01/08 15:09:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/advancemame/advancemame-0.77.2.ebuild,v 1.4 2004/01/08 15:27:48 vapier Exp $
 
 inherit games eutils
 
@@ -11,12 +11,12 @@ SRC_URI="mirror://sourceforge/advancemame/${P}.tar.gz"
 LICENSE="GPL-2 xmame"
 SLOT="0"
 KEYWORDS="x86 ppc"
-IUSE="debug static svga fbcon alsa oss slang"
+IUSE="debug static svga fbcon alsa oss slang sdl"
 
 RDEPEND="virtual/glibc
 	app-arch/unzip
 	x86? ( >=dev-lang/nasm-0.98 )
-	media-libs/libsdl
+	sdl? ( media-libs/libsdl )
 	slang? ( sys-libs/slang )
 	alsa? ( media-libs/alsa-lib )
 	svga? ( >=media-libs/svgalib-1.9 )"
@@ -35,6 +35,7 @@ src_compile() {
 		`use_enable alsa` \
 		`use_enable oss` \
 		`use_enable slang` \
+		`use_enable sdl` \
 		--with-emu=${PN/advance} \
 		|| die
 	emake || die
