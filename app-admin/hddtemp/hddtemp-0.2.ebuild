@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.2.ebuild,v 1.3 2002/07/25 12:57:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.2.ebuild,v 1.4 2002/07/29 04:33:50 cselkirk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A simple utility, to read the temperature of SMART IDE hard drives."
@@ -9,9 +9,10 @@ HOMEPAGE="http://coredump.free.fr/linux/harddrive.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 DEPEND="virtual/glibc"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}

@@ -1,8 +1,12 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 2002 Imran Rafique; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.1 2002/06/22 06:05:31 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.2 2002/07/29 04:33:50 cselkirk Exp $
 
 *hddtemp-0.2 (10 Jun 2002)
+
+  29 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> hddtemp-0.2.ebuild :
+
+  Added ppc to KEYWORDS.
 
   21 June 2002; George Shapovalov <george@gentoo.org> hddtemp-0.2.ebuild :
   
