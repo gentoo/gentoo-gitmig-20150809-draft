@@ -19,6 +19,7 @@ DEPEND=">=sys-devel/gcc-2.95.2  sys-devel/perl
 	>=x11-libs/qt-x11-2.3.0
         >=sys-apps/bzip2-1.0.1
 	>=dev-libs/libpcre-3.4
+	>=gnome-libs/libxml2-2.4.1
 	ssl? ( >=dev-libs/openssl-0.9.6 )
 	mysql? ( >=dev-db/mysql-3.23.30 )
 	postgres? ( >=dev-db/postgresql-7.0.3 )
