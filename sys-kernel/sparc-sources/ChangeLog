@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/sparc-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.29 2003/09/03 19:24:02 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.30 2003/09/05 01:12:54 joker Exp $
+
+  05 Sep 2003; Christian Birchinger <joker@gentoo.org>
+  sparc-sources-2.2.21_pre3.ebuild, files/sparc-asm_offsets.h,
+  files/sparc64-asm_offsets.h:
+  Cleaned old ebuilds and files
 
 *sparc-sources-2.4.22 (03 Sep 2003)
 
