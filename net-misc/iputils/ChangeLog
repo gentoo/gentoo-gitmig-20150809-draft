@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/iputils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.31 2004/07/01 21:18:28 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.32 2004/08/04 18:51:46 avenj Exp $
+
+  04 Aug 2004; Jon Portnoy <avenj@gentoo.org> iputils-021109-r3.ebuild :
+  Fix bison sed line. Bugs 59414 and 59191.
 
   01 Jul 2004; Jon Hood <squinky86@gentoo.org> iputils-020927.ebuild,
   iputils-021109-r3.ebuild:
