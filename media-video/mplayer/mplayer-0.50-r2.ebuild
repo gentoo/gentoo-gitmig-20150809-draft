@@ -1,24 +1,16 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
+# Maintainer:  Desktop Team <desktop@cvs.gentoo.org>
 # Authors Bruce Locke <blocke@shivan.org>, Martin Schlemmer <azarah@gentoo.org>,
 #         Donny Davies <woodchip@gentoo.org>
 
 # Handle PREversions as well
 MY_PV="`echo ${PV} |sed -e 's/_//'`"
 S="${WORKDIR}/MPlayer-${MY_PV}"
-
 # Only install Skin if GUI should be build (gtk as USE flag)
-# NOTE: URC_URI="foo? ( ftp://ftp.foo.org/foo.tar.bz )" style will be used 
-# when included in release portage
-if [ "`use gtk`" ] ; then
-	SRC_URI="ftp://mplayerhq.hu/MPlayer/releases/MPlayer-${MY_PV}.tar.bz2
-		 ftp://mplayerhq.hu/MPlayer/releases/mp-arial-iso-8859-1.zip
-		 ftp://mplayerhq.hu/MPlayer/Skin/default.tar.bz2"
-else		  
-        SRC_URI="ftp://mplayerhq.hu/MPlayer/releases/MPlayer-${MY_PV}.tar.bz2
-                 ftp://mplayerhq.hu/MPlayer/releases/mp-arial-iso-8859-1.zip"
-fi
-
+SRC_URI="ftp://mplayerhq.hu/MPlayer/releases/MPlayer-${MY_PV}.tar.bz2
+	 ftp://mplayerhq.hu/MPlayer/releases/mp-arial-iso-8859-1.zip
+	 gtk? ( ftp://mplayerhq.hu/MPlayer/Skin/default.tar.bz2 )"
 DESCRIPTION="Media Player for Linux"
 HOMEPAGE="http://www.mplayerhq.hu"
 
@@ -26,10 +18,10 @@ HOMEPAGE="http://www.mplayerhq.hu"
 DEPEND="virtual/glibc
         dev-lang/nasm
         media-libs/win32codecs
-	>=media-libs/divx4linux-20010824
+	>=media-libs/divx4linux-20011010
         dvd? ( media-libs/libdvdread )
         decss? ( media-libs/libdvdcss )
-	opengl? ( media-libs/mesa )
+	opengl? ( virtual/opengl )
         sdl? ( media-libs/libsdl )
         ggi? ( media-libs/libggi )
         svga? ( media-libs/svgalib )
@@ -41,10 +33,10 @@ DEPEND="virtual/glibc
 
 RDEPEND="virtual/glibc
         media-libs/win32codecs
-        >=media-libs/divx4linux-20010824
+        >=media-libs/divx4linux-20011010
         dvd? ( media-libs/libdvdread )
         decss? ( media-libs/libdvdcss )
-	opengl? ( media-libs/mesa )
+	opengl? ( virtual/opengl )
         sdl? ( media-libs/libsdl )
         ggi? ( media-libs/libggi )
         svga? ( media-libs/svgalib )
@@ -70,7 +62,9 @@ src_compile() {
 	use 3dnow  || myconf="${myconf} --disable-3dnow --disable-3dnowex"
 	use mmx    || myconf="${myconf} --disable-mmx --disable-mmx2"
 	use X      || myconf="${myconf} --disable-x11 --disable-xv"
-	use gtk    && myconf="${myconf} --enable-gui"
+	# Try to fix bug where build will fail with gtk in USE, but not X
+	# NB: hope opengl, sdl, ggi build fine ... i will test later.
+	use gtk    && myconf="${myconf} --enable-gui --enable-x11 --enable-xv"
 	use oss    || myconf="${myconf} --disable-ossaudio"
 	use nls    || myconf="${myconf} --disable-nls"
 	use opengl || myconf="${myconf} --disable-gl"
@@ -89,7 +83,6 @@ src_compile() {
 		    ${myconf} || die
 		    
 	emake OPTFLAGS="${CFLAGS}" all || die
-	
 }
 
 src_install() {
@@ -124,16 +117,18 @@ src_install() {
 	# This tries setting up mplayer.conf automagically
 	local video="sdl" audio="sdl"
 	if [ "`use X`" ] ; then
-		if [ "`use sdl`" ] ; then
+		if [ "`use gtk`" ] ; then
+			video="xv"
+		elif [ "`use sdl`" ] ; then
 			video="sdl"
-		elif [ "`use ggi`" ] ; then
-			video="ggi"
 		elif [ "`use xv`" ] ; then
 			video="xv"
-                elif [ "`use dga`" ] ; then
-                        video="dga"
 		elif [ "`use opengl`" ] ; then
 			video="gl"
+		elif [ "`use ggi`" ] ; then
+			video="ggi"
+                elif [ "`use dga`" ] ; then
+                        video="dga"
 		else
 			video="x11"
 		fi
@@ -166,7 +161,6 @@ src_install() {
 	# Thanks goes to Mog for this one!
 	insinto /usr/share/mplayer
 	doins ${S}/etc/codecs.conf
-
 }
 
 pkg_postinst() {
@@ -179,7 +173,7 @@ pkg_postinst() {
 	echo '#   The GUI works best with mplayer -vo xv -gui, but since there is  #'
 	echo '#   no USE flag for XVideo, or for using the GUI, the autodetection  #'
 	echo '#   process cannot detect this by default (SDL will be used rather). #'
-	echo '#   So, if you setup supports XVideo (xvinfo should give output),    #'
+	echo '#   So, if your setup supports XVideo (xvinfo should give output),   #'
 	echo '#   maybe do something like:                                         #'
 	echo '#                                                                    #'
 	echo '#     echo "vo = xv" >~/.mplayer/config                              #'
@@ -190,6 +184,5 @@ pkg_postinst() {
 	echo '# NB: the GUI needs "gtk" as USE flag to build.                      #'
 	echo '######################################################################'
 	echo
-
 }
 
