@@ -21,6 +21,17 @@
 ##   End example
 ##
 
+# <foser@gentoo.org> 17 Jun 2003
+# experimental gst-plugins eclass stuff
+# needs testing
+=media-libs/gst-plugins-0.6.2-r5
+=media-libs/gst-plugins-oss
+=media-libs/gst-plugins-vorbis
+=media-libs/gst-plugins-mad
+=media-libs/gst-plugins-gnome_vfs
+=media-libs/gst-plugins-cdparanoia
+=media-sound/sound-juicer-0.3.0-r5
+
 # <pebenito@gentoo.org> 13 June 2003
 # needs testing, new patches, esp one to make it
 # play nice with glibc 2.3.2
