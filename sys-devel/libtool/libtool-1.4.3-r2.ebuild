@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.4.3-r2.ebuild,v 1.1 2003/09/24 18:13:53 azarah Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.4.3-r2.ebuild,v 1.2 2003/09/25 02:33:19 azarah Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 vapier Exp $
 
 IUSE=
 
@@ -54,9 +54,12 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${OLD_S}
+	echo
 	# Install updated missing script
-	echo; rm -f missing
-	automake --add-missing
+	portageq has_version / "sys-devel/automake" && {
+		rm -f missing
+		automake --add-missing
+	}
 
 	einfo "Patching ${OLD_S##*/} ..."
 	epatch ${FILESDIR}/${PV}/${PN}-1.2f-cache.patch
@@ -67,9 +70,12 @@ src_unpack() {
 	use hppa && S="${OLD_S}" gnuconfig_update
 
 	cd ${S}
+	echo
 	# Install updated missing script
-	echo; rm -f missing
-	automake --add-missing
+	portageq has_version / "sys-devel/automake" && {
+		rm -f missing
+		automake --add-missing
+	}
 
 	# Make sure non of the patches touch ltmain.sh, but rather ltmain.in
 	rm -f ltmain.sh*
