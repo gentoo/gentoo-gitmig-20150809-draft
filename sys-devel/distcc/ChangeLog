@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.56 2003/07/15 00:38:38 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.57 2003/07/17 22:12:20 lisa Exp $
 
 *distcc-2.8 (09 Jul 2003)
   10 Jul 2003: Lisa Marie Seelye <lisa@gentoo.org> :
@@ -21,6 +21,9 @@
 
 
 *distcc-2.7.1 (01 Jul 2003)
+
+  17 Jul 2003: Lisa Marie Seelye <lisa@gentoo.org> :
+  Changed gnome stuff to gtk. How on earth did this get missed??
 
   14 Jul 2003: Lisa Marie Seelye <lisa@gentoo.org> :
   Updated the "How-to" website URI in the .ebuild
