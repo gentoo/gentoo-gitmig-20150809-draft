@@ -1,6 +1,9 @@
 # ChangeLog for app-text/wv2
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.22 2004/11/30 23:44:37 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.23 2004/12/07 15:31:22 hanno Exp $
+
+  07 Dec 2004; Hanno Boeck <hanno@gentoo.org> wv2-0.2.2.ebuild:
+  Marked stable x86.
 
   01 Dec 2004; Carsten Lohrke <carlo@gentoo.org> metadata.xml:
   brain is not a dev anymore
