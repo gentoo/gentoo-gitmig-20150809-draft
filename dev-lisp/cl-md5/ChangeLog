@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-md5
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-md5/ChangeLog,v 1.7 2004/06/24 23:46:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-md5/ChangeLog,v 1.8 2004/10/15 03:52:11 mkennedy Exp $
+
+*cl-md5-1.8.4 (14 Oct 2004)
+
+  14 Oct 2004; <mkennedy@gentoo.org> +cl-md5-1.8.4.ebuild:
+  New upstream version.
 
 *cl-md5-1.8.3 (09 May 2004)
 

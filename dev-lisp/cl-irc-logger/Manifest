@@ -1,0 +1,6 @@
+MD5 9f51f11c22d496acddaefbc96dfc428e ChangeLog 378
+MD5 9d737c388796540941018f4c7323c64d cl-irc-logger-0.9.2.ebuild 936
+MD5 4faa8e6f2f10031e7ce3b0c333362a2e metadata.xml 639
+MD5 3aebf73387102557077ad83c3bcc58e6 files/README.Gentoo 124
+MD5 3974883a9fdb312e73095189179d02ca files/0.9.2-acl-compat-gentoo.patch 2746
+MD5 0716ee5c8857f4c0d2288ba19d0d0efc files/digest-cl-irc-logger-0.9.2 66

@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/cl-webactions
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-webactions/ChangeLog,v 1.1 2004/10/15 03:52:11 mkennedy Exp $
+
+*cl-webactions-1.2.35.20040924 (14 Oct 2004)
+
+  14 Oct 2004; <mkennedy@gentoo.org> +metadata.xml,
+  +cl-webactions-1.2.35.20040924.ebuild:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+

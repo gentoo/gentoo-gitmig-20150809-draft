@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-irc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-irc/ChangeLog,v 1.4 2004/06/24 23:44:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-irc/ChangeLog,v 1.5 2004/10/15 03:52:10 mkennedy Exp $
+
+*cl-irc-0.6.0 (14 Oct 2004)
+
+  14 Oct 2004; <mkennedy@gentoo.org> +cl-irc-0.6.0.ebuild:
+  New upstream version; Use Debian port temporarilly.
 
 *cl-irc-0.5.0-r1 (12 Feb 2004)
 
