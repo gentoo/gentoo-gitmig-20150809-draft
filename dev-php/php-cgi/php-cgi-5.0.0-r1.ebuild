@@ -1,9 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/php-cgi-5.0.0-r1.ebuild,v 1.1 2004/08/09 00:01:53 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/php-cgi-5.0.0-r1.ebuild,v 1.2 2004/08/09 09:49:51 robbat2 Exp $
 
 PHPSAPI="cgi"
-MY_P="php-${PVR}"
+MY_P="php-${PV}"
 
 inherit php5-sapi eutils
 
