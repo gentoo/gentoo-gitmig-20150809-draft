@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2859527d4a819a42e755fd53bcdeab4f junit-3.8.1-r1.ebuild 900
-MD5 b7308550e0b7bee5bd9725e01cf4ac31 ChangeLog 2588
+MD5 7969b489ae53a6868f9af6a3b0ff731a junit-3.8.1-r1.ebuild 880
+MD5 a6e19d39c0a344d990da0254fbcfff89 ChangeLog 2679
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 bab94fdc8a6c2abf20e0f2cee4849a4e files/digest-junit-3.8.1-r1 59
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBcVoW/rLF9B432nYRAt3FAJ0Uj4lgeDJqRIhX0C2B5nq7uHNi4QCfSq2Q
-IwJycRYX9LoeNatMsXRP1xU=
-=NM2K
+iD8DBQFBgjoC/rLF9B432nYRAnK3AKDKzzgu+YHEfajdCgFuWjSohh8AAACgh81P
+Wx96T+UI6nqRQ272XCysT0A=
+=MK5C
 -----END PGP SIGNATURE-----

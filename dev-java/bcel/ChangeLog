@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/bcel
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.18 2004/10/27 14:32:24 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.19 2004/10/29 12:37:30 axxo Exp $
+
+  29 Oct 2004; Thomas Matthijs <axxo@gentoo.org> bcel-5.1.ebuild:
+  removed nomirror
 
   26 Oct 2004; Thomas Matthijs <axxo@gentoo.org> bcel-5.1.ebuild:
   patch in src_unpack not src_compile

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jsx/jsx-1.0.7.5.ebuild,v 1.2 2004/10/22 11:17:57 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jsx/jsx-1.0.7.5.ebuild,v 1.3 2004/10/29 12:36:33 axxo Exp $
 
 inherit java-pkg
 
@@ -14,7 +14,6 @@ IUSE=""
 DEPEND=">=virtual/jdk-1.2
 	dev-java/java-config"
 RDEPEND=">=virtual/jre-1.2"
-RESTRICT="nomirror"
 
 S=${WORKDIR}
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-validator/commons-validator-1.0.2-r3.ebuild,v 1.7 2004/10/17 07:27:04 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-validator/commons-validator-1.0.2-r3.ebuild,v 1.8 2004/10/29 12:33:36 axxo Exp $
 
 inherit java-pkg
 
@@ -21,7 +21,6 @@ RDEPEND=">=virtual/jre-1.3
 	>=dev-java/xerces-2.6.2-r1"
 LICENSE="Apache-1.1"
 SLOT="0"
-RESTRICT="nomirror"
 KEYWORDS="x86 ~ppc ~sparc ~amd64"
 IUSE="doc jikes junit"
 
