@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/oww
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/oww/ChangeLog,v 1.1 2003/12/17 07:10:49 phosphan Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/oww/ChangeLog,v 1.2 2004/04/19 12:03:21 phosphan Exp $
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> oww-0.71.1.ebuild:
+  Adding IUSE
 
 *oww-0.71.1 (17 Dec 2003)
 
