@@ -1,12 +1,24 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a5e25b81128a838c19b68025a06ee6c2 ChangeLog 3542
 MD5 8c0e92be7a94c14807b8555e492ced49 gnome-themes-extras-0.5.ebuild 896
-MD5 27bd4b2da46466e67f9a974646eb1ece gnome-themes-extras-0.8.0.ebuild 746
 MD5 a687b55fa11e001a1287611e7d2b2878 gnome-themes-extras-0.7.ebuild 855
 MD5 76e7fe409f8570af61a5af6b0f31af8c gnome-themes-extras-0.8.0-r1.ebuild 893
-MD5 9f82d3ed4a5692f47fcb9fc2f8af4b52 ChangeLog 3379
+MD5 27bd4b2da46466e67f9a974646eb1ece gnome-themes-extras-0.8.0.ebuild 746
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 e34b5781bcf6b9aeeece58f4f64b42b0 files/gnome-themes-extras-0-smooth_engine_gtk_2.4.patch 872
-MD5 87553e94d3bef8af7a2313cb60745345 files/digest-gnome-themes-extras-0.8.0 79
+MD5 8efc26f7bd1c659d20a177173e030b1a gnome-themes-extras-0.8.1.ebuild 955
 MD5 623769c489254fc5862e52076e7148f4 files/digest-gnome-themes-extras-0.5 77
 MD5 2aa7c7554474bc2ef5f70098577f0f1e files/digest-gnome-themes-extras-0.7 77
-MD5 9ae6a37c4ea5cf1b24e203cc3d520a00 files/gnome-themes-extras-0.5-industrial_uncorrupt.patch 1488
+MD5 87553e94d3bef8af7a2313cb60745345 files/digest-gnome-themes-extras-0.8.0 79
 MD5 87553e94d3bef8af7a2313cb60745345 files/digest-gnome-themes-extras-0.8.0-r1 79
+MD5 e34b5781bcf6b9aeeece58f4f64b42b0 files/gnome-themes-extras-0-smooth_engine_gtk_2.4.patch 872
+MD5 9ae6a37c4ea5cf1b24e203cc3d520a00 files/gnome-themes-extras-0.5-industrial_uncorrupt.patch 1488
+MD5 6456d74d3e998566ec5018dcae9572b0 files/digest-gnome-themes-extras-0.8.1 79
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCUaB+XjcVihsel0ERAuf2AJ42O+VZqxZlPhwUfRjks+HXTaojxgCfS6oj
+YNYMf0kjhVU6aqCHJGKtbso=
+=FGr/
+-----END PGP SIGNATURE-----

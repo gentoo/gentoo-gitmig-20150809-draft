@@ -1,6 +1,12 @@
 # ChangeLog for x11-themes/gnome-themes-extras
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/ChangeLog,v 1.23 2004/12/08 03:00:34 obz Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/ChangeLog,v 1.24 2005/04/04 20:16:54 joem Exp $
+
+*gnome-themes-extras-0.8.1 (04 Apr 2005)
+
+  04 Apr 2005; Joe McCann <joem@gentoo.org>
+  +gnome-themes-extras-0.8.1.ebuild:
+  new version with icon-cache support
 
 *gnome-themes-extras-0.8.0-r1 (08 Dec 2004)
 
