@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdeartwork
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/ChangeLog,v 1.10 2002/08/19 09:36:04 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/ChangeLog,v 1.11 2002/08/26 17:36:54 danarmak Exp $
+
+  26 Aug 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Fix the dep on kdebase: make it a dep on the $PV version of kdebase,
+  i.e. kdeartwork's version.
 
 *kdeartwork-3.0.3 (19 Aug 2002)
 
