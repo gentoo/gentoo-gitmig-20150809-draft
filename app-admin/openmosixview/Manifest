@@ -1,6 +1,7 @@
 MD5 c28ae8db6bf0dc8bbec248ad9ec8be4a ChangeLog 1262
 MD5 1e0ad3951834300a076e67bc38af1594 openmosixview-1.4-r1.ebuild 2356
 MD5 31d6300f2432cc8404bcca110738a456 openmosixview-1.5.ebuild 1802
+MD5 beb9efce81ae2c582a621528fc783095 metadata.xml 373
 MD5 d5017d88ab775aaf821cb3e426827008 files/digest-openmosixview-1.4-r1 70
 MD5 40351f8cbabc76e8c9b6860e8d92025a files/openmosixcollector.init 499
 MD5 36d55cc173a3505d4605028e44916ae9 files/digest-openmosixview-1.5 69
