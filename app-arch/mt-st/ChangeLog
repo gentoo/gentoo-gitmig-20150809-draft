@@ -1,6 +1,12 @@
 # ChangeLog for app-arch/mt-st
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-arch/mt-st/ChangeLog,v 1.1 2002/02/01 21:52:59 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/mt-st/ChangeLog,v 1.2 2002/04/13 03:28:48 woodchip Exp $
+
+*mt-st-0.7 (12 Apr 2002)
+
+  12 Apr 2002; Donny Davies <woodchip@gentoo.org> :
+
+  Update to latest available release.
 
 *mt-st-0.6 (1 Feb 2002)
 
