@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/patch-2.5.4-r5.ebuild,v 1.2 2003/05/15 22:12:00 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/patch-2.5.4-r5.ebuild,v 1.3 2003/05/31 06:36:46 msterret Exp $
 
-IUSE="build"
+IUSE="build static"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Utility to apply diffs to files"
