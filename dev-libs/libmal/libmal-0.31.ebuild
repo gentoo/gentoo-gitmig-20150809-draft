@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmal/libmal-0.31.ebuild,v 1.2 2003/07/02 22:27:03 brain Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmal/libmal-0.31.ebuild,v 1.3 2003/07/04 16:12:04 brain Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://jasonday.home.att.net/code/libmal/${P}.tar.gz"
 
 LICENSE="MPL-1.0"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 DEPEND="virtual/glibc \
 		>=dev-libs/pilot-link-0.11.7-r1"
