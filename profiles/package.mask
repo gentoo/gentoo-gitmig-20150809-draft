@@ -89,7 +89,9 @@ media-libs/gst-plugins-vorbis
 media-libs/gst-plugins-mad
 media-libs/gst-plugins-gnomevfs
 media-libs/gst-plugins-cdparanoia
-=media-sound/sound-juicer-0.3-r5
+media-plugins/gst-plugins-esd
+media-plugins/gst-plugins-xvideo
+>=media-sound/sound-juicer-0.5.2
 
 # <spider@gentoo.org> (04 Sep 2003)
 # <spider@gentoo.org> (08 Sep 2003)
