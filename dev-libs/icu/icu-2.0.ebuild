@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-2.0.ebuild,v 1.8 2002/10/04 05:15:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/icu/icu-2.0.ebuild,v 1.9 2002/10/05 22:59:42 seemant Exp $
 
 S=${WORKDIR}/${PN}/source
 DESCRIPTION="IBM Internationalization Components for Unicode"
@@ -15,7 +15,7 @@ DEPEND="virtual/glibc"
 
 src_compile() {
 	econf --enable-layout || die
-	emake || die "emake failed"
+	make || die "emake failed"
 }
 
 src_install () {
