@@ -1,6 +1,9 @@
 # ChangeLog for app-text/spellutils
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/spellutils/ChangeLog,v 1.1 2003/03/10 12:51:38 seemant Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/spellutils/ChangeLog,v 1.2 2004/05/12 23:10:50 kloeri Exp $
+
+  13 May 2004; Bryan Østergaard <kloeri@gentoo.org> spellutils-0.7.ebuild:
+  Stable on alpha.
 
 *spellutils-0.7 (10 Mar 2003)
 

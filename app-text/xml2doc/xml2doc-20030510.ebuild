@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xml2doc/xml2doc-20030510.ebuild,v 1.4 2004/04/26 12:33:31 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xml2doc/xml2doc-20030510.ebuild,v 1.5 2004/05/12 23:19:57 kloeri Exp $
 
 IUSE="pdflib"
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64 ~ia64 ~ppc64"
+KEYWORDS="x86 ~ppc ~sparc alpha ~hppa ~mips ~amd64 ~ia64 ~ppc64"
 
 DEPEND=">=dev-libs/libxml2-2.5
 	pdflib? ( >=media-libs/pdflib-4 )"
