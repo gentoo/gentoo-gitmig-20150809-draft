@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.5.ebuild,v 1.4 2004/02/15 22:15:19 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.5.ebuild,v 1.5 2004/02/16 11:36:34 foser Exp $
 
 inherit eutils flag-o-matic
 
@@ -8,8 +8,7 @@ SPV="`echo ${PV} | cut -d. -f1,2`"
 
 DESCRIPTION="A high-quality and portable font engine"
 HOMEPAGE="http://www.freetype.org/"
-SRC_URI="mirror://sourceforge/freetype/${P/_/}.tar.bz2
-	doc? ( mirror://sourceforge/${PN}/ftdocs-${PV}.tar.bz2 )"
+SRC_URI="mirror://sourceforge/freetype/${P/_/}.tar.bz2"
 
 SLOT="2"
 LICENSE="FTL | GPL-2"
