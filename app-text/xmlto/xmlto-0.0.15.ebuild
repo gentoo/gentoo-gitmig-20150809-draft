@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/xmlto-0.0.15.ebuild,v 1.3 2003/10/24 00:03:46 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/xmlto-0.0.15.ebuild,v 1.4 2003/10/24 03:53:00 obz Exp $
 
 DESCRIPTION="A bash script for converting XML and DocBook formatted documents to a variety of output formats"
 HOMEPAGE="http://cyberelk.net/tim/xmlto/"
@@ -13,7 +13,7 @@ KEYWORDS="~x86 ~ppc"
 
 DEPEND="app-shells/bash
 	dev-libs/libxslt
-	app-text/docbook-xsl-stylesheets"
+	>=app-text/docbook-xsl-stylesheets-1.62.0"
 #	tetex? ( >=app-text/passivetex-1.4 )"
 # Passivetex/xmltex need some sorting out, we'll include pdf/dvi/tex 
 # support in the first revision to xmlto <obz@gentoo.org>
