@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13b-r5.ebuild,v 1.7 2003/09/26 20:40:50 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/a2ps-4.13b-r5.ebuild,v 1.8 2003/10/29 18:40:25 usata Exp $
 
 inherit gnuconfig eutils
 
@@ -8,8 +8,8 @@ S=${WORKDIR}/${P/b/}
 DESCRIPTION="Any to PostScript filter"
 SRC_URI="ftp://ftp.enst.fr/pub/unix/a2ps/${P}.tar.gz
 	cjk? ( http://www.on.cs.keio.ac.jp/~yasu/linux/GNU/a2ps-4.13-ja_nls.patch ) "
-PATCHES="${FILESDIR}/a2ps-4.13-stdout.diff
-	${FILESDIR}/a2ps-4.13-autoconf-gentoo.diff"
+PATCHES="${FILESDIR}/a2ps-4.13-autoconf-gentoo.diff
+	${FILESDIR}/a2ps-4.13-stdout.diff"
 
 if use cjk; then
 	PATCHES="${PATCHES} ${DISTDIR}/a2ps-4.13-ja_nls.patch"

@@ -1,4 +1,4 @@
-diff -urN a2ps-4.13.ORIG/ogonkify/configure.in a2ps-4.13/ogonkify/configure.in
+diff -urN a2ps-4.13.ORIG a2ps-4.13
 --- a2ps-4.13.ORIG/ogonkify/configure.in	2000-01-07 21:19:55.000000000 +0900
 +++ a2ps-4.13/ogonkify/configure.in	2003-09-16 06:33:29.000000000 +0900
 @@ -53,7 +53,7 @@
@@ -10,3 +10,15 @@ diff -urN a2ps-4.13.ORIG/ogonkify/configure.in a2ps-4.13/ogonkify/configure.in
  AC_OUTPUT(Makefile ogonkify.in
  	   doc/Makefile
  	   m4/Makefile)
+diff -urN a2ps-4.13.ORIG a2ps-4.13
+--- a2ps-4.13.ORIG/configure.in	2000-01-07 21:19:55.000000000 +0900
++++ a2ps-4.13/configure.in	2003-09-16 06:33:29.000000000 +0900
+@@ -82,7 +82,7 @@
+ AC_TYPE_PID_T
+ AC_TYPE_SIGNAL
+ AC_STRUCT_TM
+-AC_CHECK_MEMBERS((struct passwd.pw_gecos),,,
++dnl AC_CHECK_MEMBERS((struct passwd.pw_gecos),,,
+ [#if HAVE_PWD_H
+ # include <pwd.h>
+ #endif])
