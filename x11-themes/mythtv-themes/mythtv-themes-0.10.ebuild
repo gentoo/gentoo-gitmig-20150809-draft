@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/mythtv-themes-0.10.ebuild,v 1.1 2003/07/09 00:12:58 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mythtv-themes/mythtv-themes-0.10.ebuild,v 1.2 2003/09/04 07:05:02 msterret Exp $
 
 IUSE=""
 DESCRIPTION="A collection of themes for the MythTV project."
