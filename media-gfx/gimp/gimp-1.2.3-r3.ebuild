@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.3-r3.ebuild,v 1.4 2002/11/10 04:35:51 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.3-r3.ebuild,v 1.5 2002/12/04 22:25:22 seemant Exp $
 
 IUSE="python nls gnome aalib perl"
 
@@ -13,23 +13,19 @@ SLOT="1.2"
 KEYWORDS="x86 ppc"
 LICENSE="GPL-2"
 
-DEPEND="nls? ( sys-devel/gettext )
-	sys-devel/autoconf
-	sys-devel/automake
-	=x11-libs/gtk+-1.2*
-	>=media-libs/mpeg-lib-1.3.1
+RDEPEND="=x11-libs/gtk+-1.2*
 	aalib? ( >=media-libs/aalib-1.2 )
-	perl? ( >=dev-perl/PDL-2.2.1 
-		>=dev-perl/Parse-RecDescent-1.80 
+	perl? ( >=dev-perl/PDL-2.2.1
+		>=dev-perl/Parse-RecDescent-1.80
 		>=dev-perl/gtk-perl-0.7004 )
 	python? ( >=dev-lang/python-2.0 )
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )"
 
-RDEPEND="=x11-libs/gtk+-1.2*
-	aalib? ( >=media-libs/aalib-1.2 )
-	perl? ( >=dev-perl/PDL-2.2.1 >=dev-perl/Parse-RecDescent-1.80 >=dev-perl/gtk-perl-0.7004 )
-	python? ( >=dev-lang/python-2.0 )
-	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )"
+DEPEND="nls? ( sys-devel/gettext )
+	sys-devel/autoconf
+	sys-devel/automake
+	>=media-libs/mpeg-lib-1.3.1
+	${RDEPEND}"
 
 src_unpack() {
 	unpack ${A}
