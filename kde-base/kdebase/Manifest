@@ -31,7 +31,7 @@ MD5 9b4df4afee8c5f857c91799f415a4ab2 files/kdebase-3.1.5-amd64-accessviol.patch 
 MD5 c6866e71fa56d6d12a18e96499716d2c files/post-3.3.2-kdebase-htmlframes2.patch 1342
 MD5 a60fd1628607d4abdeb930662d126171 files/post-3.2.3-kdebase-htmlframes.patch 6728
 MD5 32b1688a08fad29a985e0d300828ccc8 files/post-3.2.3-kdebase-htmlframes2.patch 1414
-MD5 214a7e0819144b8ab6438d78ff41214a files/agent-startup.sh 537
+MD5 c1250a1da4ea1fd131b44ebc27f32f3f files/agent-startup.sh 551
 MD5 c6866e71fa56d6d12a18e96499716d2c files/post-3.3.1-kdebase-htmlframes2.patch 1342
 MD5 bdcd4a6adb000565cd34d09014c94eae files/agent-shutdown.sh 305
 MD5 da0c4a38966d05fee3adc5840187929c files/pgo.desktop 173
