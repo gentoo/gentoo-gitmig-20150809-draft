@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/gnome-netstatus
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/ChangeLog,v 1.4 2004/03/31 01:00:09 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/gnome-netstatus/ChangeLog,v 1.5 2004/03/31 22:18:28 foser Exp $
+
+*gnome-netstatus-2.6.0.1 (01 Apr 2004)
+
+  01 Apr 2004; foser <foser@gentoo.org> gnome-netstatus-2.6.0.1.ebuild :
+  Gnome 2.6 final final
 
 *gnome-netstatus-2.6.0 (30 Mar 2004)
 
