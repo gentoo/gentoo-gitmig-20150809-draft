@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3213 2004/10/03 04:39:47 vapier Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3214 2004/10/03 06:40:11 mr_bones_ Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -32,7 +32,9 @@ www-apps/spider-admin
 
 # Olivier Fisette <ribosome@gentoo.org> (30 Sep 2004)
 # Package has major QA (and other) problems (see bug #65941).
+# app-sci/bioperl-pipeline depends on it
 app-sci/ncbi-tools
+app-sci/bioperl-pipeline
 
 # Gustavo Felisberto <humpback@gentoo.org> (30 Sep 2004)
 # Skype is beta binary software and users complain in Gentoo Bugzilla
