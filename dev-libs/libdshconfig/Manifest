@@ -1,3 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 27ed900cdad3d3b6e09b8dd956579c9c ChangeLog 925
 MD5 73abe30cc9479d28a601c5875696b499 libdshconfig-0.20.8.ebuild 633
-MD5 90cf5dc4a91316e3f0f36eebb5cf6628 ChangeLog 770
+MD5 cf2628e39653d9711b7413652bf0ee49 libdshconfig-0.20.11.ebuild 585
 MD5 aea7fbb4a781f9d0bf4685d07e37968b files/digest-libdshconfig-0.20.8 71
+MD5 50402b38b198321f18d301e91ac0f6a4 files/digest-libdshconfig-0.20.11 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFBGBf+HTu7gpaalycRAqDEAJ4hxY5HmBVspiBMsvR6LiFSc0+kqgCg0mOV
+f+tBcMF6IdslM6mqu4Sai2k=
+=rcTi
+-----END PGP SIGNATURE-----
