@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsnarf/snortsnarf-021111.1-r1.ebuild,v 1.1 2004/05/23 01:44:28 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsnarf/snortsnarf-021111.1-r1.ebuild,v 1.2 2004/06/07 22:31:12 mr_bones_ Exp $
 
 DESCRIPTION="Snort Snarf parses Snort log files, and converts them into easy-to-read HTML files."
 HOMEPAGE="http://www.silicondefense.com/software/snortsnarf/"
@@ -42,6 +42,6 @@ src_install() {
 	cp -a include/* ${D}/usr/lib/perl5/site_perl/$PERL_V
 }
 
-src_postinst() {
+pkg_postinst() {
 	setup_anns_dir.pl /var/log/snortsnarf
 }
