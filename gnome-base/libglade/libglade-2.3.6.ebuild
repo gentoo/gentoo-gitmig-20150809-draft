@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-2.3.6.ebuild,v 1.3 2004/05/25 14:02:04 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-2.3.6.ebuild,v 1.4 2004/05/29 03:46:50 pvdabeel Exp $
 
 # FIXME : catalog stuff
 inherit gnome2
@@ -9,7 +9,7 @@ LICENSE="LGPL-2"
 DESCRIPTION="GLADE is a interface builder"
 HOMEPAGE="http://www.gnome.org/"
 
-KEYWORDS="x86 ~ppc ~sparc ~alpha hppa ~amd64 ~ia64 ~mips"
+KEYWORDS="x86 ppc ~sparc ~alpha hppa ~amd64 ~ia64 ~mips"
 SLOT="2.0"
 IUSE="doc"
 

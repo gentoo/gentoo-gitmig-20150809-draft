@@ -1,6 +1,10 @@
 # ChangeLog for gnome-base/libgtop
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/ChangeLog,v 1.45 2004/05/24 20:07:24 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgtop/ChangeLog,v 1.46 2004/05/29 03:46:50 pvdabeel Exp $
+
+  29 May 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  libgtop-2.6.0.ebuild:
+  Masked libgtop-2.6.0.ebuild stable for ppc
 
   24 May 2004; Guy Martin <gmsoft@gentoo.org> libgtop-2.6.0.ebuild:
   Marked stable on hppa.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.8-r5.ebuild,v 1.10 2004/04/27 21:08:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.8-r5.ebuild,v 1.11 2004/05/29 03:46:49 pvdabeel Exp $
 
 inherit libtool eutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.gnome.org/"
 
 SLOT="1"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ~ppc ~sparc alpha hppa amd64 ia64"
+KEYWORDS="x86 ppc ~sparc alpha hppa amd64 ia64"
 
 DEPEND="dev-util/indent
 	=dev-libs/glib-1.2*
