@@ -1,0 +1,44 @@
+diff -Naur kino-0.6.4-orig/src/avi.cc kino-0.6.4/src/avi.cc
+--- kino-0.6.4-orig/src/avi.cc	2003-02-21 20:17:58.000000000 +0200
++++ kino-0.6.4/src/avi.cc	2003-08-17 21:50:07.000000000 +0300
+@@ -112,6 +112,7 @@
+ #include <stdio.h>
+ #include <fcntl.h>
+ #include <unistd.h>
++#include <assert.h>
+ 
+ // local includes
+ 
+diff -Naur kino-0.6.4-orig/src/filehandler.cc kino-0.6.4/src/filehandler.cc
+--- kino-0.6.4-orig/src/filehandler.cc	2003-02-20 23:17:47.000000000 +0200
++++ kino-0.6.4/src/filehandler.cc	2003-08-17 21:48:52.000000000 +0300
+@@ -36,6 +36,7 @@
+ #include <unistd.h>
+ #include <fcntl.h>
+ #include <sys/stat.h>
++#include <assert.h>
+ 
+ #include "filehandler.h"
+ #include "error.h"
+diff -Naur kino-0.6.4-orig/src/page_export_1394.cc kino-0.6.4/src/page_export_1394.cc
+--- kino-0.6.4-orig/src/page_export_1394.cc	2003-02-18 23:03:14.000000000 +0200
++++ kino-0.6.4/src/page_export_1394.cc	2003-08-17 21:52:02.000000000 +0300
+@@ -28,6 +28,7 @@
+ #include <gnome.h>
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <assert.h>
+ 
+ #include "page_export_1394.h"
+ #include "preferences.h"
+diff -Naur kino-0.6.4-orig/src/riff.cc kino-0.6.4/src/riff.cc
+--- kino-0.6.4-orig/src/riff.cc	2003-01-28 17:28:47.000000000 +0200
++++ kino-0.6.4/src/riff.cc	2003-08-17 21:49:21.000000000 +0300
+@@ -74,6 +74,7 @@
+ 
+ #include <fcntl.h>
+ #include <unistd.h>
++#include <assert.h>
+ 
+ // local includes
+ 
