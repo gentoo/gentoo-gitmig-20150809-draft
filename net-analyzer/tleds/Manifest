@@ -1,5 +1,6 @@
 MD5 3d4308cff9d139626e70ccaa7ec9e4e8 tleds-1.05_beta11.ebuild 1145
-MD5 a30280c3670424c237d5e0fd8fb01849 ChangeLog 1543
+MD5 10d52137ccb8dcab005322f58352e0a9 ChangeLog 1618
+MD5 1c666943e2fd156b434ed7ca34a8691e metadata.xml 294
 MD5 4cc7bd9b7a7f34d47fc1232fc13ec10f tleds-1.04-r1.ebuild 873
 MD5 e9bf6ffef211a35d6b024bcd355e2cc3 files/digest-tleds-1.05_beta11 133
 MD5 edb4e2ecaceed873d3173f551afdd120 files/tleds.conf.d 260

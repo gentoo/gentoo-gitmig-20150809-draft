@@ -1,4 +1,5 @@
-MD5 89dfc1d4ce209ada906f5319a8e2ce32 scanlogd-2.2.ebuild 909
-MD5 acd5d44f3c3cceb286ee8dce4a3ffa89 ChangeLog 646
+MD5 eae175b2f7cc61b5b515bf18148c5915 scanlogd-2.2.ebuild 906
+MD5 37d50beaaf0811e72de808da2af1dbd9 ChangeLog 720
+MD5 ec2d6d79ae70a3531cc4c1349fbaec41 metadata.xml 237
 MD5 82113cd6f2e95211165f89d1ae122567 files/scanlogd.rc 503
 MD5 f3b5d3f3b476cf7d249d5063d9965cd4 files/digest-scanlogd-2.2 62

@@ -1,5 +1,6 @@
 MD5 bd33241679075e3e6867dbc4482e9815 traceroute-1.4_p12-r2.ebuild 1140
-MD5 c3297444b4e800ead6c299999a5ac0d9 ChangeLog 2706
+MD5 b99424f96cd2a838646908e36d89c8fe ChangeLog 2780
+MD5 7ed4ef8e3d3fd7d4c7e9682b2519d739 metadata.xml 235
 MD5 0502b89228de25efeefd5a95fcc58aeb files/traceroute-1.4a12.patch 1097
 MD5 32d8c8e06ae121436c95a2992552ab84 files/traceroute-1.4-target-resolv.patch 539
 MD5 fcda909e9a6d3cfd61a2ec945f439ef7 files/digest-traceroute-1.4_p12-r2 68
