@@ -1,4 +1,14 @@
-MD5 a821b80bd07c795c6f2bcb85e75e918d ChangeLog 491
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bdc108f892fcc1b3103f7d708b5f5edc ChangeLog 616
 MD5 d4764f5c17f5e0b416f7ddf271c77d71 metadata.xml 161
-MD5 be4cffaa480ecc4ca4d7a75bf81b76ae slrnconf-0.8.4.ebuild 809
+MD5 b5674e9dac678858c8fa9b8f1c3e4beb slrnconf-0.8.4.ebuild 832
 MD5 5987dc28a8ca15c7ae66b61550edaabc files/digest-slrnconf-0.8.4 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBEriOI1lqEGTUzyQRAnIFAJ4hJ1xjqwI+WhVrtNER5jS9hplIcgCeJ32b
+Zu5QOzQBC/5yoBTTKTJnZmw=
+=IC0F
+-----END PGP SIGNATURE-----
