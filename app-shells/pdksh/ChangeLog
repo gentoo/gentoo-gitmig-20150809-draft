@@ -1,8 +1,14 @@
 # ChangeLog for app-shells/pdksh
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-shells/pdksh/ChangeLog,v 1.4 2002/07/25 15:39:00 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/pdksh/ChangeLog,v 1.5 2002/07/29 02:24:21 cselkirk Exp $
 
 *pdksh-5.2.14-r4 (13 Apr 2002)
+
+  28 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> pdksh-5.2.14-r4.ebuild,
+  pdksh-5.2.14-r3.ebuild :
+
+  Added ppc to KEYWORDS.
+  Fixed date on copyright header.  
 
   25 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> pdksh-5.2.14-r4.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
