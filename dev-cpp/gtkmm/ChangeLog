@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/gtkmm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.24 2004/05/01 22:00:41 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gtkmm/ChangeLog,v 1.25 2004/05/09 13:41:02 khai Exp $
+
+  09 May 2004; Yi Qiang <khai@gentoo.org> :
+  Major version bump.
 
   01 May 2004; Gustavo Zacarias <gustavoz@gentoo.org> gtkmm-2.2.11.ebuild:
   Stable on sparc
