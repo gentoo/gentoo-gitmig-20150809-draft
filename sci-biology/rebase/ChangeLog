@@ -1,0 +1,52 @@
+# ChangeLog for app-sci/rebase
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/rebase/ChangeLog,v 1.1 2004/12/23 21:26:33 ribosome Exp $
+
+*rebase-412 (23 Dec 2004)
+
+  23 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +rebase-411.ebuild, +rebase-412.ebuild:
+  Moved from app-sci/rebase to sci-biology/rebase.
+
+  19 Dec 2004; Olivier Fisette <ribosome@gentoo.org> -rebase-409.ebuild:
+  Removed old version.
+
+*rebase-412 (13 Dec 2004)
+
+  13 Dec 2004; Olivier Fisette <ribosome@gentoo.org> rebase-411.ebuild,
+  +rebase-412.ebuild:
+  New version: 412. Added 411 to x86.
+
+  21 Nov 2004; Karol Wojtaszek <sekretarz@gentoo.org> rebase-411.ebuild:
+  Keyworded ~amd64, bug #71858
+
+*rebase-411 (30 Oct 2004)
+
+  30 Oct 2004; Olivier Fisette <ribosome@gentoo.org> -rebase-408.ebuild,
+  rebase-409.ebuild, +rebase-411.ebuild:
+  Removed obsolete version (408). Added to x86 (409). New version (411).
+
+*rebase-409 (29 Sep 2004)
+
+  29 Sep 2004; Olivier Fisette <ribosome@gentoo.org> -rebase-406.ebuild,
+  rebase-408.ebuild, +rebase-409.ebuild:
+  Added x86 to 408. New version 409. Removed old version.
+
+*rebase-408 (10 Aug 2004)
+
+  10 Aug 2004; Olivier Fisette <ribosome@gentoo.org>
+  rebase-406.ebuild:
+  Added to x86.
+  rebase-408.ebuild:
+  Updated package.
+
+  26 Jun 2004; David Holm <dholm@gentoo.org> rebase-406.ebuild:
+  Added to ~ppc.
+
+*rebase-406 (24 Jun 2004)
+
+  24 Jun 2004; Olivier Fisette <ribosome@gentoo.org>
+  rebase-406.ebuild, metadata.xml :
+  Initial import.  Ebuild submitted by Olivier Fisette <ribosome@gentoo.org>.
+  Reference: Gentoo Bugzilla, bug #45945
+
