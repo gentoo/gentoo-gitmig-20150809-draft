@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre2.ebuild,v 1.1 2002/07/10 00:18:15 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre2-r1.ebuild,v 1.1 2002/07/12 01:14:25 seemant Exp $
 
 DESCRIPTION="links is a fast lightweight text tand graphic web-browser"
 HOMEPAGE="http://atrey.karlin.mff.cuni.cz/~clock/twibright/links/"
@@ -85,7 +85,7 @@ src_install ()
 	
 	# links needs to be setuid for it to work with svga
 	use svga && ( \
-		fperms 4644 /usr/bin/links
+		fperms 4755 /usr/bin/links
 	)
 	
 	dodoc AUTHORS BUGS ChangeLog INSTALL NEWS README SITES TODO
