@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libxslt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.44 2003/10/22 11:56:28 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.45 2003/11/04 08:07:43 joker Exp $
+
+  04 Nov 2003; Christian Birchinger <joker@gentoo.org> libxslt-1.0.33.ebuild:
+  Added sparc stable keyword
 
   22 Oct 2003; Bartosch Pixa <darkspecter@gentoo.org> libxslt-1.0.33.ebuild:
   set ppc in keywords

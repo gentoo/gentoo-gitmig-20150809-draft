@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libmcrypt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/ChangeLog,v 1.18 2003/07/23 21:20:01 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/ChangeLog,v 1.19 2003/11/04 08:08:45 joker Exp $
+
+  04 Nov 2003; Christian Birchinger <joker@gentoo.org> libmcrypt-2.5.7.ebuild:
+  Added sparc stable keyword
 
 *libmcrypt-2.5.7 (24 Apr 2003)
 
@@ -75,7 +78,7 @@
 
   5 May 2002: Martin Schlemmer <azarah@gentoo.org> libmcrypt-2.4.19-r1.ebuild :
 
-  Resolve bug #2276.  Add $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/ChangeLog,v 1.18 2003/07/23 21:20:01 gmsoft Exp $.
+  Resolve bug #2276.  Add $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/ChangeLog,v 1.19 2003/11/04 08:08:45 joker Exp $.
 
 *libmcrypt-2.4.19 (1 Feb 2002)
 
