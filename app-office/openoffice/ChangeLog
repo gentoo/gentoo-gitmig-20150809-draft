@@ -1,6 +1,11 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.100 2005/01/16 20:07:53 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.101 2005/01/16 23:18:51 suka Exp $
+
+  17 Jan 2005; Andreas Proschofsky <suka@gentoo.org>
+  +files/1.1.4/hardened-link.patch, +files/1.1.4/pthreadlink-fix.patch:
+  Try to fix build problems with hardened-gccs, patches provided by
+  Kevin F. Quinn <co@kevquinn.com> in bug #52642
 
   16 Jan 2005; Andreas Proschofsky <suka@gentoo.org>
   openoffice-1.1.4.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.4.ebuild,v 1.7 2005/01/16 20:07:53 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.4.ebuild,v 1.8 2005/01/16 23:18:51 suka Exp $
 
 # Notes:
 #
@@ -26,7 +26,7 @@
 
 inherit flag-o-matic eutils toolchain-funcs
 
-IUSE="gnome kde java curl nptl zlib"
+IUSE="curl gnome hardened java kde nptl zlib"
 
 LOC="/opt"
 INSTDIR="${LOC}/OpenOffice.org"
@@ -241,6 +241,14 @@ src_unpack() {
 
 	#Another java problem
 	epatch ${FILESDIR}/${PV}/javafix.patch
+
+	#phtread-fix
+	epatch ${FILESDIR}/${PV}/pthreadlink-fix.patch
+
+	#Fix for hardened
+	if use hardened; then
+		epatch ${FILESDIR}/${PV}/hardened-link.patch
+	fi
 
 	# GCC 3.4.x fixes
 	if [ "$(gcc-version)" = "3.4" ]
