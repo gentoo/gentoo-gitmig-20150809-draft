@@ -1,6 +1,9 @@
 # ChangeLog for app-cdr/kover
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/kover/ChangeLog,v 1.5 2003/03/28 12:01:42 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/kover/ChangeLog,v 1.6 2003/06/09 13:35:17 seemant Exp $
+
+  09 Jun 2003; Seemant Kulleen <seemant@gentoo.org> kover-2.8.7.ebuild:
+  Corrected description, thanks to: roger <roger.miliker@gmx.at> in bug #22419
 
 *kover-2.8.7 (15 Feb 2003)
 
