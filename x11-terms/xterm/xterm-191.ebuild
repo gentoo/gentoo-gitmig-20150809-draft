@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-191.ebuild,v 1.2 2004/06/10 01:56:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-191.ebuild,v 1.3 2004/06/10 16:50:25 seemant Exp $
 
 inherit eutils flag-o-matic
 
@@ -17,6 +17,12 @@ KEYWORDS="~x86 ~ppc ~sparc ~hppa amd64 ~mips"
 DEPEND="virtual/x11
 	sys-apps/utempter
 	Xaw3d? ( x11-libs/Xaw3d )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-184-remove-termcap-breakage.patch
+}
 
 src_compile() {
 
