@@ -1,5 +1,6 @@
---- build.xml.orig	2004-12-23 19:06:16.941491664 +0100
-+++ build.xml	2004-12-23 19:56:58.669078784 +0100
+diff -uprN xmlunit.orig/build.xml xmlunit/build.xml
+--- xmlunit.orig/build.xml	2005-03-16 17:52:33.874787320 +0100
++++ xmlunit/build.xml	2005-03-16 17:52:59.151944608 +0100
 @@ -25,7 +25,7 @@
  
    <target name="compile" depends="init">
@@ -18,14 +19,9 @@
         basedir="${out.dir}"
         excludes="**/test_*.class"
      />
-@@ -138,4 +138,9 @@
+@@ -138,4 +138,4 @@
      <delete file="${dist.name}-src.tar" />
    </target>
  
 -</project>
-+  <target name="sourcezip">
-+	<zip destfile="xmlunit-src.zip">
-+		<zipfileset dir="${src.dir}/java" />
-+	</zip>
-+  </target>
 +  </project>

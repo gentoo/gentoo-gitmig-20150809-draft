@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlunit/xmlunit-1.0.ebuild,v 1.2 2005/02/18 16:03:55 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlunit/xmlunit-1.0.ebuild,v 1.3 2005/03/16 16:59:03 luckyduck Exp $
 
 inherit eutils java-pkg
 
@@ -36,7 +36,6 @@ src_compile() {
 	use doc && antflags="${antflags} docs"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	use junit && antflags="${antflags} test"
-	use source && antflags="${antflags} sourcezip"
 	ant ${antflags} || die "failed to build"
 }
 
@@ -45,8 +44,7 @@ src_install() {
 	dodoc LICENSE.txt README.txt
 
 	if use source; then
-		dodir /usr/share/doc/${PF}/source
-		cp ${PN}-src.zip ${D}usr/share/doc/${PF}/source
+		java-pkg_dosrc src/java/*
 	fi
 	if use doc; then
 		java-pkg_dohtml -r doc/*

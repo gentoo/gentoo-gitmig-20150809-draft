@@ -1,5 +1,15 @@
-MD5 ff596bf055ed7c57dec539fa6f4615d0 xmlunit-1.0.ebuild 1315
-MD5 9b4ed1957c21d5b19bf2cbf519ea7ced ChangeLog 537
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 33e51e52bd58335172ac722842f2a898 xmlunit-1.0.ebuild 1209
+MD5 fee456c9b7a941eae02e3f0109b593fe ChangeLog 685
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
-MD5 1b3700ac65082963cb2a5c7f75d9272b files/xmlunit-1.0-gentoo.patch 1056
+MD5 24c48410cf4978006c39c967ac7f834c files/xmlunit-1.0-gentoo.patch 993
 MD5 63b8d77876f744dcd11d9af97d0663e5 files/digest-xmlunit-1.0 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCOGXh06ebR+OMO78RAmXJAJ9JjW8tYGqX6HkWgUnCPt+n9FVqbACdEpo+
+S47sdWB8Nq+wh7P5oWptCpo=
+=wP9S
+-----END PGP SIGNATURE-----
