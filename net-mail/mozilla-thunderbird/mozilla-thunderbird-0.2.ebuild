@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.2.ebuild,v 1.2 2003/09/05 02:20:58 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.2.ebuild,v 1.3 2003/09/08 17:00:03 brad Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins
 
@@ -15,7 +15,7 @@ IPCVER="1.0.4"
 DESCRIPTION="Thunderbird Mail Client"
 HOMEPAGE="http://www.mozilla.org/projects/thunderbird/"
 SRC_URI="http://ftp.mozilla.org/pub/thunderbird/releases/0.2/thunderbird-source-0.2.tar.bz2
-	 crypt? ( http://downloads.mozdev.org/enigmail/src/enigmail-${EMVER}.tar.gz
+	 crypt? ( mirror://gentoo/enigmail-${EMVER}.tar.gz
 	   		  http://downloads.mozdev.org/enigmail/src/ipc-${IPCVER}.tar.gz )"
 
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
