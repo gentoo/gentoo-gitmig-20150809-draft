@@ -1,8 +1,12 @@
 # ChangeLog for net-firewall/shorewall
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.7 2003/04/14 18:44:45 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/shorewall/ChangeLog,v 1.8 2003/04/21 23:30:37 mholzer Exp $
 
 *shorewall-1.4.2 (14 Apr 2003)
+
+  22 Apr 2003; Martin Holzer <mholzer@gentoo.org> Manifest,
+  shorewall-1.4.1a.ebuild, shorewall-1.4.2.ebuild:
+  Remove to install a startup script through install.sh Closes #19208.
 
   14 Apr 2003; Martin Holzer <mholzer@gentoo.org> Manifest,
   shorewall-1.4.2.ebuild:
