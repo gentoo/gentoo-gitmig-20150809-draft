@@ -1,6 +1,6 @@
 # ChangeLog for sys-cluster/lam-mpi
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/ChangeLog,v 1.7 2004/02/17 19:31:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/lam-mpi/ChangeLog,v 1.8 2004/03/01 20:27:19 aliz Exp $
 
   17 Feb 2004; Aron Griffis <agriffis@gentoo.org> lam-mpi-7.0.3.ebuild:
   add ~alpha
@@ -28,7 +28,7 @@
   07 Jul 2003; George Shapovalov <george@gentoo.org> :
   moved from dev-libs into sys-cluster
 
-*lam-mpi-6.5.9-r1.ebuild (03 Jun 2003)
+*lam-mpi-6.5.9-r1 (03 Jun 2003)
 
   03 Jun 2003; Michael Imhof <imhofml@gentoo.org> lam-mpi-6.5.9-r1.ebuild, files/digest-lam-mpi-6.5.9-r1 :
   corrected ebuild submitted by Marc St-Pierre <marc@cyberlogic.ca>
