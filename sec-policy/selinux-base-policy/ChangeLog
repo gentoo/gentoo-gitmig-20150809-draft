@@ -1,0 +1,65 @@
+# ChangeLog for sys-apps/selinux-base-policy
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.1 2003/07/28 19:38:14 pebenito Exp $
+
+*selinux-base-policy-20030720 (20 Jul 2003)
+
+  20 Jul 2003; Chris PeBenito <pebenito@gentoo.org>
+  selinux-base-policy-20030720.ebuild:
+  Many fixes, including the syslog fix. File contexts have changed, so a relabel
+  is needed. You may encounter problems relabeling /usr/portage, as its file
+  context has changed, as files should not have the same type as a domain.
+  Relabelling in permissive will fix this, or temporarily give portage_t a
+  file_type attribute. Tightened the can_exec_any() macro. Moved staff.fc to
+  users.fc, since all users with SELinux identities should have their home
+  directories have the correct identity, not the generic identity.
+
+  06 Jun 2003; Chris PeBenito <pebenito@gentoo.org>
+  selinux-base-policy-20030604.ebuild:
+  Mark stable
+
+*selinux-base-policy-20030604 (04 Jun 2003)
+
+  04 Jun 2003; Chris PeBenito <pebenito@gentoo.org>
+  selinux-base-policy-20030604.ebuild:
+  Fix broken 20030603
+
+  04 Jun 2003; Chris PeBenito <pebenito@gentoo.org>
+  selinux-base-policy-20030603.ebuild:
+  Pulling 20030603, as there are problems, 20030604 later today
+
+*selinux-base-policy-20030603 (03 Jun 2003)
+
+  03 Jun 2003; Chris PeBenito <pebenito@gentoo.org>
+  selinux-base-policy-20030603.ebuild:
+  Numerous various fixes. Added staff role. Removed ipsec, gpm and gpg policies
+  as they are not appropriate for the base policy, and untested.
+
+*selinux-base-policy-20030522 (22 May 2003)
+
+  22 May 2003; Chris PeBenito <pebenito@gentoo.org>
+  selinux-base-policy-20030522.ebuild:
+  The policy is in pretty good shape now. I've been able to run in enforcing mode
+  with little problem. I've also been able to successfully merge and unmerge
+  packages in enforcing mode, with few exceptions (why does mysql need to run ps
+  during configure?).
+
+*selinux-base-policy-20030514 (14 May 2003)
+
+  14 May 2003; Chris PeBenito <pebenito@gentoo.org>
+  selinux-base-policy-20030514.ebuild:
+  Many improvements in many areas. Of note, rlogind policies were removed. Klogd
+  is being merged into syslogd. The portage policy is much more complete, but
+  still needs work. Its suggested that all changes be merged in, policy
+  reloaded, then relabel.
+
+*selinux-base-policy-20030419 (19 Apr 2003)
+
+  23 Apr 2003; Chris PeBenito <pebenito@gentoo.org>
+  selinux-base-policy-20030419.ebuild:
+  Marking stable for selinux-small stable usage
+
+  19 Apr 2003; Chris PeBenito <pebenito@gentoo.org> Manifest,
+  selinux-base-policy-20030419.ebuild:
+  Initial commit.  Base policies for SELinux, with Gentoo-specifics
+
