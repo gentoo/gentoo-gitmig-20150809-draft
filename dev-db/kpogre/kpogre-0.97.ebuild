@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/kpogre/kpogre-0.97.ebuild,v 1.5 2004/06/28 23:52:02 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/kpogre/kpogre-0.97.ebuild,v 1.6 2004/08/07 21:44:44 slarti Exp $
 
 inherit kde eutils
 
-DESCRIPTION="PostgreSQL grafical frontend for KDE"
+DESCRIPTION="PostgreSQL graphical frontend for KDE"
 HOMEPAGE="http://kpogre.sourceforge.net/"
 SRC_URI="mirror://sourceforge/kpogre/${P}.tar.gz"
 

@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/edb
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/ChangeLog,v 1.16 2004/06/29 15:18:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/ChangeLog,v 1.17 2004/08/07 21:42:44 slarti Exp $
+
+*edb-1.0.5.20040710 (07 Aug 2004)
+
+  07 Aug 2004; Tom Martin <slarti@gentoo.org> edb-1.0.3.ebuild,
+  edb-1.0.5.20040710.ebuild:
+  Typo in DESCRIPTION: Enlightment -> Enlightenment. Bug 59717.
 
 *edb-1.0.5.20040529 (29 Jun 2004)
 
