@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.94-r1.ebuild,v 1.4 2004/04/14 10:28:49 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.94-r1.ebuild,v 1.5 2004/05/06 22:34:36 vapier Exp $
 
 inherit mount-boot eutils flag-o-matic gcc
 
 DESCRIPTION="GNU GRUB boot loader"
 HOMEPAGE="http://www.gnu.org/software/grub/"
 SRC_URI="ftp://alpha.gnu.org/gnu/grub/${P}.tar.gz
-	http://dev.gentoo.org/~spock/portage/distfiles/${P}-splash.patch.bz2"
+	mirror://gentoo/${P}-splash.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,19 +19,11 @@ DEPEND=">=sys-libs/ncurses-5.2-r5
 PROVIDE="virtual/bootloader"
 
 src_unpack() {
-	unpack ${A} || die
-	cd ${S} || die
+	unpack ${A}
+	cd ${S}
 
 	epatch ${WORKDIR}/${P}-splash.patch
-
-	# grub-0.93.20030118-gentoo.diff; <woodchip@gentoo.org> (18 Jan 2003)
-	# -fixes from grub CVS pulled on 20030118
-	# -vga16 patches; mined from Debian's grub-0.93+cvs20030102-1.diff
-	# -special-raid-devices.patch
-	# -addsyncs.patch
-	# -splashimagehelp.patch
-	# -configfile.patch
-	# -installcopyonly.patch
+	epatch ${FILESDIR}/${P}-gcc3.4.patch
 
 	# This patchset is from SuSE -- hopefully fixes the acl symlink issue
 	# And should add some boot prettification
