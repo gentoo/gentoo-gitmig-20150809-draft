@@ -1,4 +1,4 @@
-MD5 416ad0ba1fa328e6edca21d800d420ff ChangeLog 14903
+MD5 0dce477f707ceb4d182648936f51c0c9 ChangeLog 15175
 MD5 38fe937e954ab7109395cefa86fcd2d4 metadata.xml 384
 MD5 783ac0764c54b652947786c83db46a81 php-4.3.4-r4.ebuild 1402
 MD5 959f6b3c182f6e9ea4dbc1d1f2c07ecf php-4.3.5-r1.ebuild 1076
@@ -9,8 +9,6 @@ MD5 503533de9e999f4bcdee4e9e9fe15fbf php-4.3.6_rc2.ebuild 1123
 MD5 2b4107bd48d5837d690a750a00e191a6 php-4.3.7-r1.ebuild 1074
 MD5 00f02cb212243a65f986a296d34ca927 php-4.3.7.ebuild 1078
 MD5 c06d94b314ffa0fd89bb2b26e60f7574 php-5.0.0.ebuild 521
-MD5 5fac6b65d72c24675e16ddd4c8b0867c php-5.0_beta1-r1.ebuild 1282
-MD5 6d2bf1b20c4fdbbaab606ab5159f2e12 php-5.0_beta1.ebuild 1157
 MD5 b56e1fe8a594347397a50b11a8bd0cb5 php-4.3.8.ebuild 1078
 MD5 bb70a1c76063845cc7a7aa8b1be746da files/digest-php-4.3.4-r4 131
 MD5 f2214a80da2f53f5a17caeddfc34876f files/digest-php-4.3.5 131
@@ -21,8 +19,6 @@ MD5 06b23ac6e8c9a6658fa121c1fed7ee02 files/digest-php-4.3.6_rc2 202
 MD5 1c8a4f1e84c9c40dd232bc40daafd0f4 files/digest-php-4.3.7 207
 MD5 1c8a4f1e84c9c40dd232bc40daafd0f4 files/digest-php-4.3.7-r1 207
 MD5 11f305b98b753ee023da8503a360762a files/digest-php-5.0.0 63
-MD5 2a7311fb659555c4711a4ed8b70e9594 files/digest-php-5.0_beta1 65
-MD5 2a7311fb659555c4711a4ed8b70e9594 files/digest-php-5.0_beta1-r1 65
 MD5 663577b8f4b90d61f245bb6052629194 files/pear_config.diff 422
 MD5 7515e9b1dc298a0fb1c12d35a58c265d files/php-4.3.4-amd64hack.diff 1028
 MD5 94bcbd53726fd6e56858274550dd3f3d files/digest-php-4.3.8 131

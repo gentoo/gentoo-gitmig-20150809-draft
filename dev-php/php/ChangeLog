@@ -1,6 +1,13 @@
 # ChangeLog for dev-php/php
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.101 2004/07/14 02:47:59 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.102 2004/07/14 13:18:16 stuart Exp $
+
+  14 Jul 2004; Stuart Herbert <stuart@gentoo.org> -php-5.0_beta1-r1.ebuild,
+  -php-5.0_beta1.ebuild:
+  Obsolete version; removed by eversionrm tool
+
+  14 Jul 2004; Stuart Herbert <stuart@gentoo.org> -php-5.0_beta1-r1.ebuild:
+  Obsolete version; removed by eversionrm tool
 
 *php-4.3.8 (13 Jul 2004)
 
