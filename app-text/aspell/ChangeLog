@@ -1,6 +1,10 @@
 # ChangeLog for app-text/aspell
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.58 2004/08/19 08:50:06 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.59 2004/09/05 23:30:01 ciaranm Exp $
+
+  06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> aspell-0.50.5-r2.ebuild,
+  aspell-0.50.5-r4.ebuild:
+  Switch to use epause and ebeep, bug #62950
 
   19 Aug 2004; Guy Martin <gmsoft@gentoo.org> aspell-0.50.5-r4.ebuild:
   Stable on hppa.

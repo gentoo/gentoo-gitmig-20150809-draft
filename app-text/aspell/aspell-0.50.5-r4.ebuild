@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.5-r4.ebuild,v 1.7 2004/08/20 02:38:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.5-r4.ebuild,v 1.8 2004/09/05 23:30:01 ciaranm Exp $
 
 inherit libtool eutils flag-o-matic
 
@@ -66,9 +66,5 @@ pkg_postinst() {
 	ewarn ""
 	ewarn "Please re-emerge ALL your aspell-LANG dictionaries"
 	ewarn ""
-	for TICKER in 1 2 3 4 5; do
-		# Double beep here.
-		echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
-		echo -ne "\a" ; sleep 1
-	done
+	ebeep 5
 }
