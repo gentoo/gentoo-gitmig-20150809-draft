@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/memtest86+-1.30.ebuild,v 1.2 2004/12/01 20:49:21 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/memtest86+-1.40.ebuild,v 1.1 2004/12/01 20:49:21 chainsaw Exp $
 
 inherit mount-boot
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.memtest.org/"
 SRC_URI="http://www.memtest.org/download/${PV}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE="serial"
 DEPEND="virtual/libc"
 

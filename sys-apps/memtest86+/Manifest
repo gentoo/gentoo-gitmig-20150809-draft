@@ -1,20 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e0428c648376a780fa499f56681e7866 memtest86+-1.30.ebuild 1855
+MD5 a1b284d2593321136f1face90a86f965 memtest86+-1.30.ebuild 1857
 MD5 5fe58a2c03fac6578148b4335f35f772 memtest86+-1.26.ebuild 1855
 MD5 033049c23ae11ee3f82ce929b6efdec3 memtest86+-1.11.ebuild 1989
+MD5 ea5322f9db28e821600317919fb10da6 memtest86+-1.40.ebuild 1858
 MD5 4738bd2a7dd1e67a315bf730c2775121 memtest86+-1.27.ebuild 1855
-MD5 f97deb29da4cb1c098560acf0f36b4a7 ChangeLog 2303
+MD5 44b82f10cda66842b1e9a49897890676 ChangeLog 2490
 MD5 d94d306da3804e41296e1bf04c7c9cae metadata.xml 255
 MD5 f128d61e79967e3bc5f9f9beb73a4a23 files/digest-memtest86+-1.11 72
 MD5 f00a219df1fdb262f52f3669746f3917 files/digest-memtest86+-1.26 67
 MD5 49a077fb5b0f3394596ba82f480424d5 files/digest-memtest86+-1.27 67
 MD5 79cd683a05c934276d754cf71e517cad files/digest-memtest86+-1.30 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBkTRvchej4aZK9/cRAvhpAJkBrCWD4/9WaCEqWexGGfBTKolhOwCfbckn
-J7WtRZh3OMHCD3+CLGAOhOs=
-=CDB5
------END PGP SIGNATURE-----
+MD5 dc79d231081f2951707b9336d2321dba files/digest-memtest86+-1.40 67
