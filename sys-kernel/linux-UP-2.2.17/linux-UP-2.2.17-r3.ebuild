@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-UP-2.2.17/linux-UP-2.2.17-r3.ebuild,v 1.1 2000/10/29 20:37:00 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-UP-2.2.17/linux-UP-2.2.17-r3.ebuild,v 1.2 2000/11/12 21:35:07 achim Exp $
 
 P=linux-UP-2.2.17
 A="linux-2.2.17.tar.bz2 i2c-2.5.2.tar.gz lm_sensors-2.5.2.tar.gz
@@ -38,6 +38,10 @@ src_compile() {
     unset CFLAGS
     unset CXXFLAGS
     try make dep
+    cd ${S}/arch/i386/lib
+    cp Makefile Makefile.orig
+    sed -e "s:-traditional::" Makefile.orig > Makefile
+    cd ${S}
     try make bzImage
     try make modules
     cd ${S}/fs/reiserfs/utils

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/textutils/textutils-2.0g.ebuild,v 1.2 2000/09/15 20:09:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/textutils/textutils-2.0g.ebuild,v 1.3 2000/11/12 21:35:07 achim Exp $
 
 P=textutils-2.0g
 A=${P}.tar.gz
@@ -11,7 +11,7 @@ DESCRIPTION="Standard GNU text utilities"
 SRC_URI="ftp://alpha.gnu.org/gnu/fetish/${A}"
 
 src_compile() {                           
-	try ./configure --prefix=/usr --host=${CHOST} \
+	try ./configure --prefix=/usr --host=${CHOST} --build=${CHOST} \
 	--with-catgets --without-included-regex
 	try make
 }

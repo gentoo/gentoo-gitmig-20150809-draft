@@ -1,10 +1,10 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-UP-2.4.0/linux-UP-2.4.0_rc9-r8.ebuild,v 1.2 2000/11/02 15:58:21 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-UP-2.4.0/linux-UP-2.4.0_rc9-r8.ebuild,v 1.3 2000/11/12 21:35:07 achim Exp $
 
 P=linux-UP-2.4.0_rc9-r7
-A="linux-2.4.0-test8.tar.bz2 linux-2.4.0-test8-reiserfs-3.6.16-patch.gz
+A="linux-2.4.0-test8.tar.bz2 linux-2.4.0-test9-reiserfs-3.6.18-patch.gz
 	ide.2.4.0-t9-6.task.0923.patch.gz test9-pre7.gz
 	i2c-2.5.2.tar.gz lm_sensors-2.5.2.tar.gz jfs-0.0.16-patch.tar.gz"
 #   pppoed0.47.tgz
@@ -14,9 +14,9 @@ S=${WORKDIR}/linux
 DESCRIPTION="Linux kernel for UP systems with reiserfs,usb,sensors,raid,udma,nfs3 and pppoe support"
 SRC_URI="ftp://ftp.uk.kernel.org/pub/linux/kernel/v2.4/linux-2.4.0-test8.tar.bz2
 	 ftp://ftp.de.kernel.org/pub/linux/kernel/v2.4/linux-2.4.0-test8.tar.bz2
-	 http://devlinux.com/pub/namesys/2.4-beta/linux-2.4.0-test8-reiserfs-3.6.16-patch.gz
+ 	 http://www.tux.org/pub/devel/reiserfs/2.4-beta/linux-2.4.0-test9-reiserfs-3.6.18-patch.gz
 	 ftp://ftp.kernel.org/pub/linux/kernel/people/hedrick/ide.2.4.0-t9/ide.2.4.0-t9-6.task.0923.patch.gz
-	 ftp://ftp.kernel.org/pub/linux/kernel/testing/test9-pre7.gz
+	 ftp://ftp.kernel.org/pub/linux/kernel/testing/old/test9-pre7.gz
   	 http://www.netroedge.com/~lm78/archive/lm_sensors-2.5.2.tar.gz
 	 http://www.netroedge.com/~lm78/archive/i2c-2.5.2.tar.gz
 	 http://oss.software.ibm.com/developerworks/opensource/jfs/project/pub/jfs-0.0.16-patch.tar.gz"
@@ -51,7 +51,7 @@ src_unpack() {
     echo "Applying UDMA patch..."
     gzip -dc ${DISTDIR}/ide.2.4.0-t9-6.task.0923.patch.gz | patch -p1
     echo "Applying reiserfs-patch..."
-    gzip -dc ${DISTDIR}/linux-2.4.0-test8-reiserfs-3.6.16-patch.gz | patch -p1
+    gzip -dc ${DISTDIR}/linux-2.4.0-test9-reiserfs-3.6.18-patch.gz | patch -p1
     cd ${S}/fs/reiserfs
     cp dir.c dir.c.orig
     sed -e "s:d_ino):d_ino ,DT_DIR):" dir.c.orig > dir.c

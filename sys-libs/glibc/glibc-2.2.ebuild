@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.ebuild,v 1.1 2000/11/11 19:01:57 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.ebuild,v 1.2 2000/11/12 21:30:43 achim Exp $
 
 A="$P.tar.gz glibc-linuxthreads-${PV}.tar.gz"
 S=${WORKDIR}/${P}
@@ -23,7 +23,7 @@ src_compile() {
 		--enable-add-ons=linuxthreads,crypt,localedata \
 		--disable-profile --prefix=/usr \
 		--enable-kernel=2.2.17
-	try make 
+	try make
 	make check
 }
 
@@ -38,7 +38,10 @@ src_install() {
     rm -rf ${D}
     mkdir ${D}	
     dodir /etc/rc.d/init.d
+    export LC_ALL=C
     try make install_root=${D} install -C buildhere
+    try make install_root=${D} info -C buildhere
+    try make install_root=${D} localedata/install-locales -C buildhere
     try make -C linuxthreads/man
     mkdir -p ${D}/usr/man/man3
     install -m 0644 linuxthreads/man/*.3thr ${D}/usr/man/man3
