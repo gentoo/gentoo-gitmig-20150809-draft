@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.1.37.ebuild,v 1.4 2004/01/07 14:12:11 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.1.38.ebuild,v 1.1 2004/01/07 21:05:00 agriffis Exp $
 
 DESCRIPTION="Collection of unofficial administration scripts for Gentoo"
 HOMEPAGE="http://www.gentoo.org/"
