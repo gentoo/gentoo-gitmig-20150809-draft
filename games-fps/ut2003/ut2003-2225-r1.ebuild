@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r1.ebuild,v 1.3 2004/02/27 16:47:23 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2003/ut2003-2225-r1.ebuild,v 1.4 2004/03/16 19:26:41 wolf31o2 Exp $
 
 inherit games
 
@@ -111,7 +111,7 @@ src_install() {
 	doins ${S}/README.linux ${S}/Unreal.xpm || die "copying readme/icon"
 
 	#sed -e "s:GENTOO_DIR:${dir}:" ${FILESDIR}/ucc > ucc
-	sed -e "s:GENTOO_DIR:${dir}:" ${FILESDIR}/ut2003 > ut2003
+	sed -e -i "s:GENTOO_DIR:${dir}:" ${FILESDIR}/ut2003
 	#dogamesbin ucc ut2003
 	dogamesbin ut2003
 
