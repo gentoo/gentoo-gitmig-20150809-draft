@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.14.90.ebuild,v 1.5 2004/10/11 04:26:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.14.90.ebuild,v 1.6 2004/10/11 18:51:35 vapier Exp $
 
 inherit flag-o-matic eutils gnuconfig
 
@@ -25,8 +25,9 @@ RDEPEND="${DEPEND}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PV}-remote-shell.patch
-	epatch ${FILESDIR}/${PV}-tests.patch
+	epatch ${FILESDIR}/${PV}-remote-shell.patch #66959
+	epatch ${FILESDIR}/${PV}-tests.patch #67023
+	epatch ${FILESDIR}/${PV}-gnulib.patch #67038
 	gnuconfig_update
 	use static && append-ldflags -static
 }

@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/tar
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.33 2004/10/11 04:28:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/ChangeLog,v 1.34 2004/10/11 18:51:35 vapier Exp $
+
+  11 Oct 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/1.14.90-gnulib.patch, tar-1.14.90.ebuild:
+  Add a patch from the gnulib cvs to fix #67038 by joecool.
 
   10 Oct 2004; Seemant Kulleen <seemant@gentoo.org> :
   add metadata

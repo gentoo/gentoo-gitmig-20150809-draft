@@ -1,5 +1,5 @@
-MD5 89138d740ee9b5e34a18900c69eb2fcd ChangeLog 7977
-MD5 dfb92b09ecfd54a64065228f1717709a tar-1.14.90.ebuild 1365
+MD5 4f15335c0586022183e5dfb2722fcacb ChangeLog 8138
+MD5 ea3d2702d01e4d8f7be7382005abc65e tar-1.14.90.ebuild 1424
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 d0b3e45115a461b08fc996e4036fa171 tar-1.14.ebuild 1337
 MD5 091a6972853071b4b764eddcdc658398 tar-1.13.92-r3.ebuild 1624
@@ -9,5 +9,6 @@ MD5 e4017a705a2d9950c025b458ead9ac79 files/digest-tar-1.13.92-r3 65
 MD5 4cdef5c71729b03a10fb5e066b358398 files/1.14.90-tests.patch 879
 MD5 5fbfc1df8f8641b9b99de73d8be1a4dc files/tar.1 7956
 MD5 e7c9ac5824e453f73a56032123c46f97 files/digest-tar-1.14 62
+MD5 404c6b2a90334fe682029e5d5771620d files/1.14.90-gnulib.patch 3403
 MD5 8adb291e1142c213ed26260319bef9f4 files/tar-1.13.92-dont-strip-dot_slash.patch 893
 MD5 e05d36a6f2aeb7f6374d04d61872bd53 files/tar-1.13.92-fix-one_file_system.patch 547
