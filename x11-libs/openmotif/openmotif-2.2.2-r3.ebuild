@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.2-r3.ebuild,v 1.3 2003/11/30 12:17:51 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.2-r3.ebuild,v 1.4 2003/12/01 15:25:03 lanius Exp $
 
 inherit libtool
 
@@ -112,6 +112,9 @@ src_install() {
 	mv ${D}/usr/X11R6/include/Mrm/*.h ${D}/usr/include/Mrm/2.2/Mrm
 	mv ${D}/usr/X11R6/include/Xm/*.h ${D}/usr/include/Xm/2.2/Xm
 	mv ${D}/usr/X11R6/include/uil/*.h ${D}/usr/include/uil/2.2/uil
+
+	cd ${D}/usr/include
+	motif_fix_headers 2.2
 
 	# bin
 	dodir /usr/bin

@@ -86,6 +86,9 @@ src_install() {
 	mv ${D}/usr/X11R6/include/Xm/*.h ${D}/usr/include/Xm/2.1/Xm
 	mv ${D}/usr/X11R6/include/uil/*.h ${D}/usr/include/uil/2.1/uil
 
+	cd ${D}/usr/include
+	motif_fix_headers 2.1
+
 	# bin
 	dodir /usr/bin
 	for file in `ls ${D}/usr/X11R6/bin`
