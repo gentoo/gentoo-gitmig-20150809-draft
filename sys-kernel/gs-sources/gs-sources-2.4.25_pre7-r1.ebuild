@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.23_pre8.ebuild,v 1.2 2004/01/06 19:32:38 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gs-sources/gs-sources-2.4.25_pre7-r1.ebuild,v 1.1 2004/01/24 05:27:37 livewire Exp $
 
 IUSE="build crypt"
 
@@ -19,20 +19,20 @@ ETYPE="sources"
 
 inherit kernel
 PROVIDE="virtual/linux-sources virtual/winkernel"
-OKV=2.4.22
-EXTRAVERSION=_pre8-gss
-KV=2.4.23_pre8-gss
+OKV=2.4.24
+EXTRAVERSION=_pre7-gss-r1
+KV=2.4.25_pre7-gss-r1
 S=${WORKDIR}/linux-${KV}
 
 # Documentation on the patches contained in this kernel will be installed
 # to /usr/share/doc/gs-sources-${PV}/patches.txt.gz
 
 DESCRIPTION="This kernel stays up to date with current kernel -pres,
-	with recent acpi,evms,win3lin ,futexes,aic79xx,
-	superfreeswan,preempt/ll, and various hw fixes."
+	with recent acpi,evms,win4lin ,futexes,aic79xx,
+	superfreeswan,preempt, and various hw fixes."
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	 mirror://gentoo/patches-${KV}.tar.bz2"
-KEYWORDS="x86 -ppc -sparc "
+KEYWORDS="~x86 -ppc -sparc "
 SLOT="${KV}"
 
 src_unpack() {
