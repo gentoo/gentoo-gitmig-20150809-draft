@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-symlinks/package.mask,v 1.3 2005/01/20 08:26:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-symlinks/package.mask,v 1.4 2005/01/22 02:05:33 eradicator Exp $
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # multilib aware versions (install to / look in proper $(get_libdir))
@@ -8,6 +8,7 @@
 <dev-tcltk/expect-5.42.1
 <net-libs/courier-authlib-0.52
 <sys-devel/flex-2.5.4a-r5
+<sys-apps/iproute2-2.6.10.20050112
 
 # Jeremy Huddleston <eradicator@gentoo.org>
 # Don't use packages which do ugly symlink hackery for lib/lib64
