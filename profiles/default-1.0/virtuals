@@ -24,3 +24,4 @@ sys-apps/reiserfs-utils sys-apps/reiserfsprogs
 virtual/xemacs		app-editors/xemacs
 virtual/pppd		net-dialup/ppp
 virtual/sylpheed	net-mail/sylpheed
+virtual/php         dev-php/mod_php

@@ -13,3 +13,4 @@ x11-libs/xaw			x11-libs/Xaw3d
 virtual/blackbox		x11-wm/blackbox
 virtual/cron			sys-apps/dcron
 sys-apps/reiserfs-utils sys-apps/reiserfsprogs
+virtual/php             dev-php/mod_php
