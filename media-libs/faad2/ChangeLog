@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/faad2
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.25 2004/04/26 02:41:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faad2/ChangeLog,v 1.26 2004/04/28 04:43:52 lv Exp $
+
+  28 Apr 2004; Travis Tilley <lv@gentoo.org> +files/faad2-2.0-gcc34.patch,
+  faad2-2.0-r1.ebuild:
+  added fix for compiling with gcc 3.4
 
   25 Apr 2004; Aron Griffis <agriffis@gentoo.org> faad2-1.1.ebuild:
   Add die following econf for bug 48950
