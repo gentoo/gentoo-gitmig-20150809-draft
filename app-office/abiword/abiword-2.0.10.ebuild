@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.0.10.ebuild,v 1.7 2004/12/20 11:39:03 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.0.10.ebuild,v 1.8 2004/12/21 14:02:31 foser Exp $
 
 inherit eutils
 
@@ -70,6 +70,7 @@ src_compile() {
 		--disable-debug \
 		--enable-all \
 		--with-abiword=${S} \
+		--without-wmf --disable-wmf \
 		--without-ImageMagick || die
 
 	emake || die
