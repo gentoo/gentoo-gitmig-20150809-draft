@@ -1,6 +1,15 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.3 2002/04/13 04:25:01 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.4 2002/04/24 18:27:26 seemant Exp $
+
+*tetex-1.0.7-r9 (24 Apr 2002)
+
+  24 Apr 2002; Seemant Kulleen <seemant@gentoo.org> tetex-1.0.7-r9.ebuild
+  files/digest-tetex-1.0.7-r9 :
+
+  Fixed the permissions problem so that 501.501 is not the owner on
+  /usr/share/texmf files.  The solution was presented in bug #1901 by
+  bardur-gta@odense.kollegienet.dk (Bardur Arantsson)
 
   13 Apr 2002; M.Schlemmer <azarah@gentoo.org> tetex-1.0.7-r8.ebuild :
 
