@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.22.ebuild,v 1.1 2003/09/28 05:20:56 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/gdesklets-core-0.23-r1.ebuild,v 1.1 2003/10/26 08:07:13 obz Exp $
 
 inherit gnome2
 
@@ -19,8 +19,8 @@ KEYWORDS="~x86 ~sparc"
 
 RDEPEND=">=dev-lang/python-2.2
 	>=gnome-base/gconf-2
-	>=dev-python/pygtk-1.99.14
-	>=dev-python/gnome-python-1.99.14
+	>=dev-python/pygtk-1.99.17
+	>=dev-python/gnome-python-1.99.17
 	>=x11-libs/gtk+-2"
 
 DEPEND="${RDEPEND}
@@ -30,7 +30,14 @@ DEPEND="${RDEPEND}
 USE_DESTDIR="1"
 DOCS="AUTHORS COPYING ChangeLog INSTALL NEWS README TODO"
 
-src_install( ) {
+src_unpack() {
+
+	unpack ${A}
+	epatch ${FILESDIR}/gdesklets-${PV}-fontselector.patch
+
+}
+
+src_install() {
 
 	gnome2_src_install
 	# there are two links that end up pointing inside the
@@ -45,7 +52,9 @@ src_install( ) {
 
 }
 
-pkg_postinst( ) {
+pkg_postinst() {
+
+	gnome2_pkg_postinst
 
 	echo ""
 	einfo "gDesklets Displays are required before the library"
