@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Jerry Alexandratos <jerry@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.35-r2.ebuild,v 1.1 2002/06/03 03:50:36 lamer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.35-r2.ebuild,v 1.2 2002/07/11 06:30:45 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A system to store and display time-series data"

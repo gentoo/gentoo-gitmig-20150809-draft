@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author: Aron Griffis <agriffis@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/geotrace/geotrace-0.0.4.ebuild,v 1.5 2002/06/30 02:44:58 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/geotrace/geotrace-0.0.4.ebuild,v 1.6 2002/07/11 06:30:43 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="geographical traceroute utility"

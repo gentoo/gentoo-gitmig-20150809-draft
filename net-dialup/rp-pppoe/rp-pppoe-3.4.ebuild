@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>, David Bresson <david.bresson@yale.edu>
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.4.ebuild,v 1.1 2002/06/21 20:21:52 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/rp-pppoe/rp-pppoe-3.4.ebuild,v 1.2 2002/07/11 06:30:45 drobbins Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}/src

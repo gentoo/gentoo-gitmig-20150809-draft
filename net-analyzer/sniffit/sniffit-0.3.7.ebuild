@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Ben Lutgens <lamer@gentoo.org>, Ferry Meyndert <m0rpheus@poseidon.mine.nu>, Bruce A. Locke <blocke@shivan.org>
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/sniffit-0.3.7.ebuild,v 1.2 2002/04/27 12:58:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sniffit/sniffit-0.3.7.ebuild,v 1.3 2002/07/11 06:30:45 drobbins Exp $
 
 MY_P=${P/-/.}.beta
 S=${WORKDIR}/${MY_P}

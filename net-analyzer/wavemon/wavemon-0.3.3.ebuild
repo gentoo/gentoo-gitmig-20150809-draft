@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author / Maintainer Ben Lutgens <lamer@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wavemon/wavemon-0.3.3.ebuild,v 1.1 2002/05/29 03:12:18 lamer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/wavemon/wavemon-0.3.3.ebuild,v 1.2 2002/07/11 06:30:45 drobbins Exp $
 
 DESCRIPTION="ncurses based monitor util for your wavelan cards"
 LICENSE="GPL-2"

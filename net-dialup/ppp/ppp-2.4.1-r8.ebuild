@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r8.ebuild,v 1.2 2002/04/27 23:34:20 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r8.ebuild,v 1.3 2002/07/11 06:30:45 drobbins Exp $
 
 # modified by Christian Loitsch <gentoo00@loitsch.org>
 

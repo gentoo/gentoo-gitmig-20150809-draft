@@ -1,7 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Ryan Tolboom ryan@gentoo.org
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/netcat-110.ebuild,v 1.1 2002/06/28 11:54:12 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/netcat-110.ebuild,v 1.2 2002/07/11 06:30:43 drobbins Exp $
 
 A="nc110.tgz"
 S=${WORKDIR}/nc-${PV}

@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.41-r3.ebuild,v 1.6 2002/04/27 13:05:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.41-r3.ebuild,v 1.7 2002/07/11 06:30:45 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Excellent program which automatically configures your PPP session"

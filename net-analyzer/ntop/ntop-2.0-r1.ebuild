@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>, Bruce A. Locke <blocke@shivan.org>
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-2.0-r1.ebuild,v 1.3 2002/04/27 14:02:50 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-2.0-r1.ebuild,v 1.4 2002/07/11 06:30:45 drobbins Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="ntop is a unix tool that shows network usage like top"

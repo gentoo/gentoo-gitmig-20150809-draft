@@ -1,7 +1,6 @@
 # Copyright 2000-2002 Achim Gottinger
 # Distributed under the GPL by Gentoo Technologies, Inc.
-# Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/nessus-1.2.0.ebuild,v 1.2 2002/05/23 06:50:15 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/nessus-1.2.0.ebuild,v 1.3 2002/07/11 06:30:43 drobbins Exp $
 
 
 S=${WORKDIR}

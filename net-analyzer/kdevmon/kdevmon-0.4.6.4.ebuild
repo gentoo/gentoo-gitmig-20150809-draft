@@ -1,7 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Christophe Vanfleteren <c.vanfleteren@pandora.be>
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/kdevmon/kdevmon-0.4.6.4.ebuild,v 1.3 2002/07/01 21:33:31 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/kdevmon/kdevmon-0.4.6.4.ebuild,v 1.4 2002/07/11 06:30:43 drobbins Exp $
 
 inherit kde-base || die
 

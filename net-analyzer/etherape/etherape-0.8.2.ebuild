@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Bruce A. Locke <blocke@shivan.org>
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.8.2.ebuild,v 1.4 2002/05/27 17:27:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.8.2.ebuild,v 1.5 2002/07/11 06:30:42 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A graphical network monitor for Unix modeled after etherman"

@@ -1,7 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Ben Lutgens <lamer@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/netperf-2.2.ebuild,v 1.1 2001/07/15 05:57:35 lamer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netperf/netperf-2.2.ebuild,v 1.2 2002/07/11 06:30:43 drobbins Exp $
 A=netperf-2.2alpha.tar.gz
 S=${WORKDIR}/${PN}-2.2alpha
 DESCRIPTION="This is a brief readme file for the netperf TCP/UDP/sockets/etc

@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author: Aubrey Kilian <aubrey@ebe.uct.ac.za>
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/trafshow-3.1.ebuild,v 1.1 2002/02/16 17:09:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/trafshow-3.1.ebuild,v 1.2 2002/07/11 06:30:45 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Full screen visualization of the network traffic"

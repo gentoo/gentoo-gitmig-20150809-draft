@@ -1,7 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Ben Lutgens <lamer@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portsentry/portsentry-1.1-r6.ebuild,v 1.1 2002/06/28 11:54:12 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portsentry/portsentry-1.1-r6.ebuild,v 1.2 2002/07/11 06:30:45 drobbins Exp $
 
 DESCRIPTION="Automated port scan detector and response tool"
 HOMEPAGE="http://www.psionic.com/abacus/portsentry/"

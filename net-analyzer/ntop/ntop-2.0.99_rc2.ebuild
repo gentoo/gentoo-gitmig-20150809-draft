@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>, Bruce A. Locke <blocke@shivan.org>
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-2.0.99_rc2.ebuild,v 1.1 2002/06/14 20:40:37 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-2.0.99_rc2.ebuild,v 1.2 2002/07/11 06:30:45 drobbins Exp $
 
 A=ntop-2.0.99-rc2.tgz
 S=${WORKDIR}/RC2/ntop
