@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/nedit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.4 2002/08/29 20:18:52 naz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nedit/ChangeLog,v 1.5 2002/10/23 02:31:35 seemant Exp $
+
+*nedit-5.3-r1 (22 Oct 2002)
+
+  22 Oct 2002; Seemant Kulleen <seemant@gentoo.org> nedit-5.3-r1.ebuild
+  files/digest-nedit-5.3-r1 :
+
+  /usr/bin/nc is now neditc as is its manpage.
 
 *nedit-5.3 (13 Jul 2002)
 
