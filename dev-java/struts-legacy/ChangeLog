@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/struts-legacy
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts-legacy/ChangeLog,v 1.8 2004/10/17 07:32:04 absinthe Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts-legacy/ChangeLog,v 1.9 2005/03/16 15:30:13 luckyduck Exp $
+
+  16 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  struts-legacy-1.0-r1.ebuild:
+  added has_version jdbc2-stdext call to avoid error messages, depend on
+  jdbc2-stdext is conditional. fixes #85415
 
   17 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
   struts-legacy-1.0-r1.ebuild:
