@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/mawk
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mawk/ChangeLog,v 1.5 2004/06/30 18:11:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mawk/ChangeLog,v 1.6 2004/08/24 03:19:47 swegener Exp $
+
+  24 Aug 2004; Sven Wegener <swegener@gentoo.org> mawk-1.3.3.ebuild:
+  Don't override MAKEOPTS, pass options directly do emake.
 
   30 Jun 2004; Aron Griffis <agriffis@gentoo.org> mawk-1.3.3.ebuild:
   glibc -> libc, update HOMEPAGE
