@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Archive-Tar
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Tar/ChangeLog,v 1.12 2003/08/26 17:23:47 mcummings Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Tar/ChangeLog,v 1.13 2004/01/18 20:01:34 gustavoz Exp $
+
+  18 Jan 2004; <gustavoz@gentoo.org> Archive-Tar-1.03.ebuild:
+  stable on sparc
 
 *Archive-Tar-1.05 (26 Aug 2003)
 
