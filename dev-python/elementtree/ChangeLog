@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/elementtree
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/elementtree/ChangeLog,v 1.2 2004/06/08 12:29:38 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/elementtree/ChangeLog,v 1.3 2004/06/24 23:00:30 lucass Exp $
+
+*elementtree-1.2 (25 Jun 2004)
+
+  25 Jun 2004; Lukasz Strzygowski <lucass@gentoo.org> +elementtree-1.2.ebuild:
+  Version bump. Removed unnecessary src_unpack, added commands
+  to install documentation in subdirectory docs/.
 
 *elementtree-1.2_beta3 (08 Jun 2004)
 
