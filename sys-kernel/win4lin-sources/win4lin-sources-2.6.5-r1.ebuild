@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.6.2-r1.ebuild,v 1.2 2004/04/12 16:36:23 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.6.5-r1.ebuild,v 1.1 2004/04/15 07:30:13 plasmaroo Exp $
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 inherit eutils
 
 OKV=${PV}
-KV=${PV}-win4lin
+KV=${PV}-win4lin-r1
 S=${WORKDIR}/linux-${OKV}
 
 ETYPE="sources"
@@ -14,7 +14,7 @@ DESCRIPTION="Full sources for the Development Branch of the Linux kernel"
 IUSE=""
 
 SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${OKV}.tar.bz2
-	 http://www.netraverse.com/member/downloads/files/mki-adapter26_1_3_3.patch
+	 http://www.netraverse.com/member/downloads/files/mki-adapter26_1_3_4.patch
 	 http://www.netraverse.com/member/downloads/files/Kernel-Win4Lin3-${OKV}.patch"
 
 HOMEPAGE="http://www.kernel.org/ http://www.netraverse.com/"
@@ -36,16 +36,13 @@ fi
 src_unpack() {
 	cd ${WORKDIR}
 	unpack linux-${OKV}.tar.bz2
-
 	cd ${S}
 
 	epatch ${DISTDIR}/Kernel-Win4Lin3-${OKV}.patch || die "Error: Failed to appky Win4Lin3 patch!"
 	ebegin "Applying mki-adapter26_1_3_3.patch"
 	patch -Np1 -i ${DISTDIR}/mki-adapter26_1_3_3.patch > /dev/null 2>&1 || die "Error: Failed to apply mki-adapter patch!"
 	eend $?
-
-	epatch ${FILESDIR}/${PN}-2.6.CAN-2003-0985.patch || die "Failed to patch mremap() vulnerability!"
-	epatch ${FILESDIR}/${PN}-2.6.munmap.patch || die "Failed to apply munmap patch!"
+	epatch ${FILESDIR}/${P}.CAN-2004-0109.patch || die "Failed to patch CAN-2004-0109 vulnerability!"
 
 	unset ARCH
 	# Sometimes we have icky kernel symbols; this seems to get rid of them
