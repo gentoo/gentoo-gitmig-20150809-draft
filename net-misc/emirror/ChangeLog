@@ -1,6 +1,6 @@
-# ChangeLog for net-misc/e100
+# ChangeLog for net-misc/emirror
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/emirror/ChangeLog,v 1.1 2003/05/19 18:22:41 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/emirror/ChangeLog,v 1.2 2003/06/20 04:18:34 vapier Exp $
 
 *emirror-2.1.21 (19 May 2003)
 
