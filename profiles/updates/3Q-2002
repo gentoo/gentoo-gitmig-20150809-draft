@@ -76,3 +76,5 @@ move media-sound/xmms-xosd media-plugins/xmms-xosd
 move media-video/avi-xmms media-plugins/avi-xmms
 move app-admin/kportagemaster app-admin/kportage
 move net-misc/nt net-misc/d4x
+move app-text/pspell app-text/aspell
+move app-text/pspell-ispell app-text/aspell
