@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/libwnck
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.2 2002/06/03 23:34:09 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/ChangeLog,v 1.3 2002/06/12 11:12:02 spider Exp $
+
+*libwnck-0.14 (12 Jun 2002)
+  12 Jun 2002; Spider <spider@gentoo.org> libwnck-0.14.ebuild:
+  new version
+  eclassed
 
 *libwnck-0.13 (4 June 2002)
   4 June 2002; Gabriele Giorgetti <stroke@gentoo.org> libwnck-0.13.ebuild:
