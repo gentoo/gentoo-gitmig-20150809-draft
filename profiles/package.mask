@@ -1,3 +1,6 @@
+# 19 Jan 2002 -- until at has a security fix, we need this:
+sys-apps/at
+
 # Security fix (reported by M0rpheus)
 <=net-mail/exim-3.33
 <=app-admin/sudo-1.6.4
