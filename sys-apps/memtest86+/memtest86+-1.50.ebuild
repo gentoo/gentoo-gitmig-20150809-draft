@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/memtest86+-1.50.ebuild,v 1.2 2005/01/24 10:37:47 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/memtest86+-1.50.ebuild,v 1.3 2005/01/24 20:32:22 mr_bones_ Exp $
 
 inherit mount-boot eutils
 
@@ -18,7 +18,7 @@ src_unpack() {
 	cd ${S}
 
 	# send the DOS newlines where they belong - /dev/null ;>
-	sed -e 's/\x0d//g' -i Makefile	
+	sed -e 's/\x0d//g' -i Makefile
 	epatch "${FILESDIR}"/${P}-hardened.patch
 	if use serial ; then
 		sed -e 's/#define SERIAL_CONSOLE_DEFAULT 0/#define SERIAL_CONSOLE_DEFAULT 1/' -i config.h
