@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmweather/wmweather-2.4.0.ebuild,v 1.1 2003/05/28 12:55:38 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmweather/wmweather-2.4.0.ebuild,v 1.2 2003/05/28 13:01:36 joker Exp $
 
 DESCRIPTION="Dockable applette for WindowMaker that shows weather."
 SRC_URI="http://www.godisch.de/debian/wmweather/${P}.tar.gz"
@@ -20,7 +20,7 @@ src_compile() {
 }
 
 src_install () {
+	dodoc CHANGES COPYING README
 	cd ${S}/src
 	make DESTDIR=${D} install || die
-	dodoc CHANGES COPYING README
 }
