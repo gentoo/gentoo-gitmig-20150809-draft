@@ -6,26 +6,41 @@ do
 	then
 		continue
 	fi
-	w=`echo ${x}/*.?`
-	if [ "${w}" = "${x}"'/*.?' ]
-	then
-		exit
-	fi
+	w=`echo ${x}/*`
 	for y in ${w}
 	do
 		if [ -L ${y} ]
 		then
 			#symlink
-			linkto=`ls -l ${y} | sed -e "s:${D}::" | awk '{ printf ("%s.gz",$11) } '`
-			echo "$linkto $y.gz"
-			ln -sf ${linkto} ${y}.gz
-			rm ${y}
-		else
-			gzip -f -9 ${y}
-			echo ${y}
+			mylink=${y}
+			linkto=`readlink ${y}`
+			if [ "${linkto:0:1}" == "/" ]
+			then
+				#absolute path; remove any weirdly embedded ${D}'s
+				linkto=${linkto/${D}/}
+			fi
+			if [ "${linkto##*.}" != "gz" ]
+			then
+				linkto=${linkto}.gz
+			fi
+			if [ "${mylink##*.}" != "gz" ]
+			then
+				mylink=${mylink}.gz
+			fi
+			echo "fixing man page symlink: ${mylink##*/}"
+			ln -sf ${linkto} ${mylink}
+			if [ ${y} != ${mylink} ]
+			then
+				echo "removing old symlink: ${y##*/}"
+				rm ${y}
+			fi
+		elif [ -f ${y} ]
+		then
+			if [ "${y##*.}" != "gz" ]
+			then
+				gzip -f -9 ${y}
+				echo "gzipping man page: ${y}"
+			fi
 		fi	
 	done
 done
-
-
-
