@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.0_pre4-r2.ebuild,v 1.1 2002/04/18 21:14:56 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.0_pre4-r2.ebuild,v 1.2 2002/05/03 00:39:22 seemant Exp $
 
 NV=6.0-20020110.2-shared_qt.i386
 S=${WORKDIR}/opera-${NV}
@@ -9,7 +9,8 @@ DESCRIPTION="Opera webbrowser, version 6.0 TP"
 SRC_URI="ftp://ftp.opera.com/pub/opera/linux/600/tp3/opera-${NV}.tar.gz"
 HOMEPAGE="http://www.opera.com"
 
-DEPEND="=x11-libs/qt-2*"
+DEPEND="=x11-libs/qt-2*
+	=media-libs/libpng-1.0.12*"
 
 src_install() {
 
