@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/egroupware
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/egroupware/ChangeLog,v 1.5 2003/11/04 23:17:09 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/egroupware/ChangeLog,v 1.6 2003/12/05 16:37:40 mholzer Exp $
+
+  05 Dec 2003; Martin Holzer <mholzer@gentoo.org>
+  egroupware-0.9.99.006.ebuild:
+  changing chown. closes #35127.
 
 *egroupware-0.9.99.006 (05 Nov 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/egroupware/egroupware-0.9.99.006.ebuild,v 1.3 2003/11/09 13:26:00 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/egroupware/egroupware-0.9.99.006.ebuild,v 1.4 2003/12/05 16:37:40 mholzer Exp $
 
 inherit webapp-apache
 
@@ -22,9 +22,6 @@ DEPEND="${RDEPEND}"
 
 webapp-detect || NO_WEBSERVER=1
 
-HTTPD_USER="apache"
-HTTPD_GROUP="apache"
-
 pkg_setup() {
 	if [ -L ${HTTPD_ROOT}/${PN} ] ; then
 		ewarn "You need to unmerge your old ${PN} version first."
@@ -43,7 +40,7 @@ src_install() {
 	dodir ${destdir}
 	cp -r . ${D}${destdir}
 	cd ${D}/${HTTPD_ROOT}
-	chown -R ${HTTPD_USER}.${HTTPD_GROUP} ${PN}
+	chown -R ${HTTPD_USER}:${HTTPD_GROUP} ${PN}
 	# Fix permissions
 	find ${D}${destdir} -type d | xargs chmod 755
 	find ${D}${destdir} -type f | xargs chmod 644
