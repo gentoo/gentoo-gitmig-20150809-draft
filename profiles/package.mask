@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <robbat2@gentoo.org> (23 July 2003)
+# Need to fix patches
+=dev-db/mysql-4.0.14
+
 # <carpaski@gentoo.org> (22 Jul 2003)
 # Masking 2.0.48-r6 for heavy+quick testing.
 >=sys-apps/portage-2.0.48-r6
