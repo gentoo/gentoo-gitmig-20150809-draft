@@ -1,6 +1,14 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.39 2003/10/05 15:01:09 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.40 2003/10/13 16:19:54 solar Exp $
+
+*proftpd-1.2.9_rc2-r1 (13 Oct 2003)
+
+  13 Oct 2003; <solar@gentoo.org> proftpd-1.2.9_rc2-r1.ebuild,
+  files/proftpd-1.2.9_rc2-dirtree-r118.patch:
+  Adding TJ Saunders directive lookup code patch from Comment #10
+  http://bugs.proftpd.org/show_bug.cgi?id=2183 for src/dirtree.c This should
+  close Gentoo Bug #29639
 
   05 Oct 2003; <solar@gentoo.org> proftpd-1.2.9_rc2.ebuild:
   reversed yet_exec workaround, changing solution to make proftpd compile for
