@@ -1,28 +1,24 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/orsa/orsa-0.3.0_rc3.ebuild,v 1.1 2003/07/09 22:26:59 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/orsa/orsa-0.3.0_rc3.ebuild,v 1.2 2003/07/19 20:50:48 vapier Exp $
 
-IUSE=""
+inherit base flag-o-matic
 
-#inherit sourceforge
-inherit base
-inherit flag-o-matic
+DESCRIPTION="Orbital Reconstruction, Simulation and Analysis"
+HOMEPAGE="http://orsa.sourceforge.net/"
+SRC_URI="mirror://sourceforge/orsa/${PN}_${PV}.tar.gz"
 
-Name=${P/_/-}
-S=${WORKDIR}/${Name}
-DESCRIPTION="ORSA Orbital Reconstruction Simulation Algorithym"
-SRC_URI="http://unc.dl.sourceforge.net/orsa/${Name}.tar.gz"
-HOMEPAGE="http://orsa.sourceforge.net"
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="~x86"
 
 DEPEND="virtual/glibc
-		dev-libs/fftw
-		dev-libs/gsl
-		x11-libs/qt
-		sys-libs/readline"
+	dev-libs/fftw
+	dev-libs/gsl
+	x11-libs/qt
+	sys-libs/readline"
 
+S=${WORKDIR}/${PN}_${PV}
 
 replace-flags k6-3 i586
 replace-flags k6-2 i586
@@ -33,7 +29,7 @@ src_compile() {
 	emake || die
 }
 
-src_install () {
+src_install() {
 	einstall || die
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README THANKS
+	dodoc AUTHORS ChangeLog INSTALL NEWS README THANKS
 }
