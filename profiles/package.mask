@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3475 2005/01/10 17:24:37 fafhrd Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3476 2005/01/11 01:17:24 trapni Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <trapni@gentoo.org> (jan 11 2005)
+# masked for testing, part of apache herd tree merge
+=www-apache/mod_dav_svn-1.1.2
 
 # <fafhrd@gentoo.org> (10 Jan 2005)
 # Masking version that needs to be removed soon;
