@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwox/netwox-5.6.0.ebuild,v 1.4 2004/03/21 12:53:39 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwox/netwox-5.6.0.ebuild,v 1.5 2004/05/22 03:12:13 weeve Exp $
 
 DESCRIPTION="Toolbox of over 400 utilities for testing Ethernet/IP networks"
 HOMEPAGE="http://www.laurentconstantin.com/en/netw/netwox/"

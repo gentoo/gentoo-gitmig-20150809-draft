@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/netwox
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwox/ChangeLog,v 1.4 2004/02/28 05:40:05 mboman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netwox/ChangeLog,v 1.5 2004/05/22 03:12:13 weeve Exp $
+
+  21 May 2004; Jason Wever <weeve@gentoo.org> netwox-5.9.0.ebuild:
+  Added ~sparc keyword.
 
 *netwox-5.9.0 (28 Feb 2004)
 
