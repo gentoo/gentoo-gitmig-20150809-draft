@@ -1,6 +1,9 @@
 # ChangeLog for xfce-base/libxfce4mcs
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4mcs/ChangeLog,v 1.28 2004/05/19 10:41:50 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/libxfce4mcs/ChangeLog,v 1.29 2004/06/23 09:02:44 malc Exp $
+
+  23 Jun 2004; <malc@gentoo.org> libxfce4mcs-4.0.5.ebuild:
+  Mark stable on amd64
 
   18 May 2004; Guy Martin <gmsoft@gentoo.org> libxfce4mcs-4.0.5.ebuild:
   Marked stable on hppa.
