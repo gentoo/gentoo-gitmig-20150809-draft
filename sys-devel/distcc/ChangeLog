@@ -1,8 +1,12 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.4 2002/07/12 03:11:44 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.5 2002/07/25 15:19:53 gerk Exp $
 
 *distcc-0.6 (12 Jul 2002)
+
+  25 Jul 2002; Mark Guertin <gerk@gentoo.org> :
+  
+  Added ppc to keywords
 
   12 Jul 2002; Maik Schreiber <blizzy@gentoo.org> :
 
