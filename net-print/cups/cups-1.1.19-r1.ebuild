@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.19-r1.ebuild,v 1.13 2004/01/30 18:25:43 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.19-r1.ebuild,v 1.14 2004/04/09 13:05:22 lanius Exp $
 
 inherit eutils flag-o-matic
 
@@ -9,7 +9,6 @@ IUSE="ssl slp pam"
 DESCRIPTION="The Common Unix Printing System"
 HOMEPAGE="http://www.cups.org"
 
-S=${WORKDIR}/${P}
 SRC_URI="ftp://ftp.easysw.com/pub/cups/${PV}/${P}-source.tar.bz2"
 PROVIDE="virtual/lpr"
 
