@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/kdeadmin-3.0.2.ebuild,v 1.5 2002/08/01 19:38:30 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/kdeadmin-3.0.2.ebuild,v 1.6 2002/08/14 13:08:53 murphy Exp $
 inherit kde-dist
 
 DESCRIPTION="KDE $PV - administration tools"
 
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 
 newdepend ">=app-arch/rpm-4.0.4-r1
 	dev-libs/popt
