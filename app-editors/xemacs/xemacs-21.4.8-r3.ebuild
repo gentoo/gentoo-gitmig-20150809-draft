@@ -1,9 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.8-r3.ebuild,v 1.2 2002/08/02 05:05:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.8-r3.ebuild,v 1.3 2002/08/04 17:29:55 azarah Exp $
 
 # this is just TEMPORARY until we can get to the core of the problem
-SANDBOX_DISABLED="1"
+#SANDBOX_DISABLED="1"
 
 LICENSE="GPL-2"
 
@@ -52,13 +52,13 @@ KEYWORDS="x86 ppc"
 
 
 src_unpack() {
-	cd ${WORKDIR}
 	unpack ${P}.tar.gz
+	
 	cd ${S}
-	patch -p0 <${FILESDIR}/emodules.info-21.4.8-gentoo.patch
+	patch -p0 <${FILESDIR}/emodules.info-21.4.8-gentoo.patch || die
 	
 	if [ ${ARCH} = "ppc" ] ; then
-		patch -p0 < ${FILESDIR}/${P}-ppc.diff
+		patch -p0 < ${FILESDIR}/${P}-ppc.diff || die
 	fi
 
 }
@@ -119,13 +119,15 @@ src_compile() {
 		--with-msw=no \
 		|| die
 
-	emake || die
+	# emake dont work on faster boxes it seems
+	# azarah (04 Aug 2002)
+	make || die
 }
 
 src_install() {                               
-	make prefix="${D}/usr" \
-		mandir="${D}/usr/share/man/man1" \
-		infodir="${D}/usr/share/info" \
+	make prefix=${D}/usr \
+		mandir=${D}/usr/share/man/man1 \
+		infodir=${D}/usr/share/info \
 		install gzip-el || die
 	
 	# install base packages
@@ -148,3 +150,4 @@ src_install() {
 	dodoc BUGS CHANGES-* COPYING ChangeLog GETTING* INSTALL PROBLEMS README*
 	dodoc ${FILESDIR}/README.Gentoo
 }
+
