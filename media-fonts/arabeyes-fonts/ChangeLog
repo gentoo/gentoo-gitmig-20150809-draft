@@ -1,0 +1,11 @@
+# ChangeLog for media-fonts/arabeyes-fonts
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/arabeyes-fonts/ChangeLog,v 1.1 2004/09/29 08:10:01 usata Exp $
+
+*arabeyes-fonts-1.1 (29 Sep 2004)
+
+  29 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +arabeyes-fonts-1.1.ebuild:
+  Initial import. Ebuild submitted by Ayman Hourieh <aymanh@gmail.com>.
+  Thanks to Stephen K. Benjamin <skbenja@negeko.net>. This closes bug #62312.
+
