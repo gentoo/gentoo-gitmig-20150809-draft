@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.8_p1.ebuild,v 1.4 2004/03/09 14:49:13 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.8_p1.ebuild,v 1.5 2004/03/18 13:23:34 aliz Exp $
 
 inherit eutils flag-o-matic ccc gnuconfig
 
@@ -118,17 +118,6 @@ src_install() {
 }
 
 pkg_postinst() {
-	# empty dir for the new priv separation auth chroot..
-	#install -d -m0755 -o root -g root ${ROOT}/var/empty
-	# install doesn't seem to be doing its job, on amd64 at least
-	# Brad House <brad_mssw@gentoo.org> 01/10/2004
-	if [ ! -d "${ROOT}/var/empty" ]
-	then
-		mkdir -p "${ROOT}/var/empty"
-		chmod 0755 "${ROOT}/var/empty"
-		chown root:root "${ROOT}/var/empty"
-	fi
-
 	enewgroup sshd 22
 	enewuser sshd 22 /bin/false /var/empty sshd
 

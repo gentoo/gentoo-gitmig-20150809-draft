@@ -1,10 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.74 2004/03/18 13:08:03 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.75 2004/03/18 13:23:34 aliz Exp $
 
-  18 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> files/sshd.rc6:
-  Add yet another mkdir -p /var/empty, this time to the initscript. Closing
-  #42936.
+  18 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> files/sshd.rc6, openssh-3.8_p1.ebuild:
+  Add mkdir -p /var/empty to initscript. Closing #42936.
 
   09 Mar 2004; <agriffis@gentoo.org> openssh-3.7.1_p2-r2.ebuild:
   stable on alpha and ia64
