@@ -1,0 +1,9 @@
+# ChangeLog for dev-db/jxtray
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/jxtray/ChangeLog,v 1.1 2004/12/23 00:05:13 karltk Exp $
+
+*jxtray-0.5 (23 Dec 2004)
+
+  23 Dec 2004; Karl Trygve Kalleberg <karltk@gentoo.org> jxtray-0.5.ebuild:
+  Initial import. Ebuild submitted by our very own Saleem 
+  A(too-long-a-name-anyway) <compnerd@compnerd.org>. Fixes #74247.
