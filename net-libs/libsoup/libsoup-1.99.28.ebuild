@@ -1,21 +1,20 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-1.99.28.ebuild,v 1.10 2004/07/28 03:18:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-1.99.28.ebuild,v 1.11 2004/11/08 19:44:44 vapier Exp $
 
 inherit gnome.org libtool eutils
 
 DESCRIPTION="Soup is a SOAP implementation"
 HOMEPAGE="http://www.gnome.org/"
 
-IUSE="gnutls"
-SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="x86 sparc ppc alpha hppa ia64 amd64"
+SLOT="0"
+KEYWORDS="alpha amd64 arm hppa ia64 ppc sparc x86"
+IUSE="gnutls"
 
 RDEPEND=">=dev-libs/glib-2.0
 	!gnutls? ( dev-libs/openssl )
 	gnutls?  ( net-libs/gnutls )"
-
 DEPEND=">=dev-util/pkgconfig-0.12.0
 	dev-libs/popt
 	sys-devel/automake
@@ -48,5 +47,5 @@ src_compile() {
 
 src_install() {
 	einstall || die "install failed"
-	dodoc AUTHORS COPYING* ChangeLog README* TODO
+	dodoc AUTHORS ChangeLog README* TODO
 }
