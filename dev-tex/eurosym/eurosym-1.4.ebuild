@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/eurosym/eurosym-1.4.ebuild,v 1.1 2004/09/01 08:50:17 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/eurosym/eurosym-1.4.ebuild,v 1.2 2004/09/04 23:01:12 dholm Exp $
 
 inherit latex-package
 
@@ -14,7 +14,7 @@ LICENSE="as-is"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="x86 amd64 sparc"
+KEYWORDS="x86 amd64 sparc ~ppc"
 
 SUPPLIER="public"
 
