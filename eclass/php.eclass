@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.74 2003/08/11 20:52:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.75 2003/08/17 06:06:23 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -40,7 +40,7 @@ if [ -z "${SRC_URI}" ]; then
 	#mirror://gentoo/${MY_P}-db4.diff.gz 
 fi
 # A patch for PHP for security
-SRC_URI="${SRC_URI} mirror://gentoo/${MY_P}-fopen-url-secure.patch"
+SRC_URI="${SRC_URI} mirror://gentoo/php-4.3.2-fopen-url-secure.patch"
 
 # Where we work
 S=${WORKDIR}/${MY_P}
@@ -463,7 +463,7 @@ php_src_install() {
 	fi
 
 	#url_fopen
-	patch ${phpinisrc} <${DISTDIR}/${MY_P}-fopen-url-secure.patch
+	patch ${phpinisrc} <${DISTDIR}/php-4.3.2-fopen-url-secure.patch
 
 	#prevent bugs with php-ext eclasses
 	mv $phpinisrc $phpinisrc.orig
