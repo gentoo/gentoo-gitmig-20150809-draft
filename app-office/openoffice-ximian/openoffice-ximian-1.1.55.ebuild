@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.55.ebuild,v 1.1 2004/05/06 21:21:54 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.55.ebuild,v 1.2 2004/05/06 22:24:25 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -53,14 +53,6 @@ PATCHLEVEL=OOO_1_1_1
 ICON_VER=OOO_1_1-9
 KDE_ICON_VER=OOO_1_1-0.1
 KDE_ICON_PATH=documents/159/1785
-if [ `use ooo-kde` ]; then
-	ICON=ooo-KDE_icons-${KDE_ICON_VER}
-	DISTRO=KDE
-else
-	ICON=ooo-icons-${ICON_VER}
-	DISTRO=Ximian
-fi
-
 INSTDIR="/opt/Ximian-OpenOffice"
 PATCHDIR=${WORKDIR}/ooo-build-${PV}
 ICONDIR=${WORKDIR}/${ICON}
@@ -68,8 +60,8 @@ S="${WORKDIR}/oo_${OO_VER}_src"
 DESCRIPTION="Ximian-ized version of OpenOffice.org, a full office productivity suite."
 SRC_URI="mirror://openoffice/stable/${OO_VER}/OOo_${OO_VER}p1_source.tar.bz2
 	http://ooo.ximian.com/packages/${PATCHLEVEL}/ooo-build-${PV}.tar.gz
-	ooo-kde? ( http://kde.openoffice.org/files/${KDE_ICON_PATH}/${ICON}.tar.gz )
-	!ooo-kde? ( http://ooo.ximian.com/packages/${ICON}.tar.gz )"
+	ooo-kde? ( http://kde.openoffice.org/files/${KDE_ICON_PATH}/ooo-KDE_icons-${KDE_ICON_VER}.tar.gz )
+	!ooo-kde? ( http://ooo.ximian.com/packages/ooo-icons-${ICON_VER}.tar.gz )"
 
 HOMEPAGE="http://ooo.ximian.com"
 
@@ -243,7 +235,7 @@ src_unpack() {
 	oo_setup
 
 	cd ${WORKDIR}
-	unpack OOo_${OO_VER}p1_source.tar.bz2 ooo-build-${PV}.tar.gz ${ICON}.tar.gz
+	unpack ${A}
 
 	#Fix Sandbox problems with scale-icons script
 	cd ${PATCHDIR}
@@ -268,6 +260,12 @@ src_unpack() {
 	fi
 
 	einfo "Applying Ximian OO.org Patches"
+	if [ `use ooo-kde` ]; then
+		DISTRO=KDE
+	else
+		DISTRO=Ximian
+	fi
+
 	${PATCHDIR}/patches/apply.pl ${PATCHDIR}/patches/${PATCHLEVEL} ${S} -f --distro=${DISTRO} || die "Ximian patches failed"
 
 	einfo "Installing / Scaling Icons"
