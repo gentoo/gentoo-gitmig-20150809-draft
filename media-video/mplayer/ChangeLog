@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.248 2004/12/29 01:17:02 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.249 2005/01/05 23:24:19 chriswhite Exp $
+
+  06 Jan 2005; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre6.ebuild:
+  MPlayer pre6 was missing docs upstream, adding an 'a' prefix to get the latest
+  alpha version that contains the docs. Note that none of the actual code was
+  changed.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
