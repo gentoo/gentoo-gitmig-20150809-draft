@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r3.ebuild,v 1.6 2003/07/22 16:47:00 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r3.ebuild,v 1.7 2003/07/22 17:46:30 pvdabeel Exp $
 
 # Small note:  we should prob consider using a DRM only tarball, as it will ease
 #              some of the overhead on older systems, and will enable us to
@@ -71,15 +71,15 @@ then
 fi
 
 # This builds everything if none of the cards are in USE.
-#if [ -z "${VIDCARDS}" ]
-#then
-#	if [ "${ARCH}" = "ppc" ]
-#	then
-#		VIDCARDS="r128.o radeon.o"
-#	else
-#		VIDCARDS="mga.o tdfx.o r128.o radeon.o sis.o i810.o i830.o gamma.o"
-#	fi
-#fi
+if [ -z "${VIDCARDS}" ]
+then
+	if [ "${ARCH}" = "ppc" ]
+	then
+		VIDCARDS="r128.o radeon.o"
+	else
+		VIDCARDS="mga.o tdfx.o r128.o radeon.o sis.o i810.o i830.o gamma.o"
+	fi
+fi
 
 src_unpack() {
 	if [ ! -f /usr/src/linux/include/config/MARKER ] ; then
