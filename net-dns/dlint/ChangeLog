@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/dlint
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dlint/ChangeLog,v 1.6 2004/10/19 14:10:26 ticho Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dlint/ChangeLog,v 1.7 2005/01/14 14:29:08 ticho Exp $
+
+  14 Jan 2005; Andrej Kacian <ticho@gentoo.org> dlint-1.4.0-r1.ebuild:
+  Use fixheadtails.eclass instead of arbitrary sed calls. Fix changelog.
+
+*dlint-1.4.0-r1 (19 Oct 2004)
 
   19 Oct 2004; Andrej Kacian <ticho@gentoo.org> :
   Fix deprecated use of head(1) and tail(1). Closes #67995, reported by Ray

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dlint/dlint-1.4.0.ebuild,v 1.12 2004/07/14 23:23:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dlint/dlint-1.4.0.ebuild,v 1.13 2005/01/14 14:29:08 ticho Exp $
 
 MY_P=${PN}${PV}
 S=${WORKDIR}/${MY_P}

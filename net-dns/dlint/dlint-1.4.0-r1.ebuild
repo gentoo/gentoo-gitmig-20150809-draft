@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dlint/dlint-1.4.0-r1.ebuild,v 1.1 2004/10/19 14:10:26 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dlint/dlint-1.4.0-r1.ebuild,v 1.2 2005/01/14 14:29:08 ticho Exp $
 
-inherit eutils
+inherit eutils fixheadtails
 
 S=${WORKDIR}/${P/-/}
 DESCRIPTION="Dlint analyzes any DNS zone you specify, and reports any problems it finds by displaying errors and warnings"
@@ -23,8 +23,7 @@ RDEPEND="sys-apps/coreutils
 src_compile() {
 	sed -i -e 's:rrfilt=\"/usr/local/bin/digparse\":rrfilt=\"/usr/bin/digparse\":' \
 		dlint
-	sed -i -e "s:head -:head -n :g" dlint
-	sed -i -e "s:tail +:tail -n +:g" dlint
+	ht_fix_file dlint
 }
 
 src_install () {
