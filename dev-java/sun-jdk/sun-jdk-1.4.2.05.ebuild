@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.04-r2.ebuild,v 1.3 2004/07/14 19:40:05 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.05.ebuild,v 1.1 2004/07/14 19:40:05 axxo Exp $
 
 IUSE="doc gnome kde mozilla jce"
 
@@ -20,7 +20,7 @@ SRC_URI="${At}
 		jce? ( ${jce_policy} )"
 SLOT="1.4"
 LICENSE="sun-bcla-java-vm"
-KEYWORDS="x86 -ppc -sparc -alpha -mips -hppa"
+KEYWORDS="~x86 -ppc -sparc -alpha -mips -hppa"
 RESTRICT="fetch"
 
 DEPEND=">=dev-java/java-config-1.1.5

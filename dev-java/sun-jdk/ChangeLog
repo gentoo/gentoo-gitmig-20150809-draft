@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/sun-jdk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.77 2004/07/02 04:23:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/ChangeLog,v 1.78 2004/07/14 19:40:05 axxo Exp $
+
+*sun-jdk-1.4.2.05 (14 Jul 2004)
+
+  14 Jul 2004; Thomas Matthijs <axxo@gentoo.org> +files/sun-jdk-1.4.2.05,
+  sun-jdk-1.4.2.04-r2.ebuild, +sun-jdk-1.4.2.05.ebuild:
+  src_uri clean up
+  version bump closed 55866
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   sun-jdk-1.3.1.09.ebuild, sun-jdk-1.3.1.10.ebuild:
