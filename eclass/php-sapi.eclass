@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.47 2004/08/07 20:21:23 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.48 2004/08/22 00:49:11 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -23,7 +23,7 @@ PHPMAJORVER=${MY_PV//\.*}
 [ -z "${MY_P}" ] && MY_P=${MY_PN}-${MY_PV}
 [ -z "${MY_PF}" ] && MY_PF=${MY_P}-${PR}
 [ -z "${HOMEPAGE}" ] && HOMEPAGE="http://www.php.net/"
-[ -z "${LICENSE}" ]	&& LICENSE="PHP"
+[ -z "${LICENSE}" ]	&& LICENSE="PHP-3"
 [ -z "${PROVIDE}" ]	&& PROVIDE="virtual/php-${PV}"
 # PHP.net does automatic mirroring from this URI
 [ -z "${SRC_URI_BASE}" ] && SRC_URI_BASE="http://www.php.net/distributions"
