@@ -1,4 +1,4 @@
-MD5 4508146737bb4f31170ac30cb8ced4d9 jasperreports-0.5.2.ebuild 1134
-MD5 0b4f61085f6e5fc3e0821dc36fc4ceb5 ChangeLog 463
+MD5 d3a4ef299cb13194777e4bbdadb8ac30 ChangeLog 628
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 a07858f3a049b62e26cd08aa8e9ac60e files/digest-jasperreports-0.5.2 78
+MD5 ceae573c161c954c19d2b333ef89e4f3 jasperreports-0.6.1.ebuild 1138
+MD5 7c129dc0ae90126adb4848378fe1b872 files/digest-jasperreports-0.6.1 78
