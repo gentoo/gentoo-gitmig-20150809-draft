@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.137 2004/02/21 15:52:57 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.138 2004/02/21 16:07:05 rizzo Exp $
 
 3dfx - Adds support for 3dfx video cards to XFree86. See: voodoo3
 3dnow - Adds support for 3dnow multimedia processor instructions
@@ -10,6 +10,7 @@ acl - Adds support for Access Control Lists
 acpi - Adds support for Advanced Configuration and Power Interface
 afs - Adds OpenAFS support (distributed file system)
 adns - Adds support for the adns DNS client library
+aim - Enable AIM IM protocol support
 alsa - Adds support for media-libs/alsa-lib (Advanced Linux Sound Architecture)
 altivec - Adds support for optimizations for G4 and G5/ppc970 processors
 apache2 - Chooses Apache2 support when a package supports both Apache1 and Apache2
@@ -71,6 +72,7 @@ gtkhtml - Adds support for gnome-extra/gtkhtml
 guile - Adds support for dev-util/guile (interpreter for Scheme)
 icc - Add support for the Intel C++ Compiler (does _not_ set $CC)
 icc-pgo - Enable PGO data generation or use when use icc.
+icq - Enable ICQ IM protocol support
 imap - Adds support for IMAP
 imagemagick - Enables support for Imagemagick (image converter)
 imlib - Adds support for media-libs/imlib (Image loading and rendering library)
