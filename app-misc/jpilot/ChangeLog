@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/jpilot
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jpilot/ChangeLog,v 1.8 2003/02/12 05:01:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jpilot/ChangeLog,v 1.9 2003/03/20 03:49:12 zwelch Exp $
+
+*jpilot-0.99.5 (19 Mar 2003)
+
+  19 Mar 2003; Zach Welch <zwelch@gentoo.org> jpilot-0.99.5.ebuild:
+  bump version; fix bug 14333
 
 *jpilot-0.99.3 (18 Nov 2002)
 
