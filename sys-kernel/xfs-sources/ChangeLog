@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/xfs-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.4 2002/09/03 19:26:45 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.5 2002/09/03 23:41:47 lostlogic Exp $
+
+*xfs-sources-2.4.19-r1 (03 Sep 2002)
+
+  03 Sep 2002; Brandon Low <lostlogic@gentoo.org> xfs-sources-2.4.19-r1.ebuild:
+
+  Add several patches to the code, also update 
+  the ebuild to handle revisoins more gracefully
+  for a complete list of patches, merge and see
+  /usr/share/doc/xfs-sources-2.4.19-r1/patches.txt.gz
 
 *xfs-sources-2.4.19 (03 Sep 2002)
 
