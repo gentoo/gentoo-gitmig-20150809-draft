@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a479449fe990a2fe0d05b4c9fd101d2b ChangeLog 582
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 e2f98ee543d26ddffdd74a26c780b5f2 vendetta-test-0.ebuild 1262
+MD5 f206c700cdce7b9f235f39537c99bc39 vendetta-test-0.ebuild 1261
 MD5 b84bbc8de417daa6ab13deba7cd35657 files/digest-vendetta-test-0 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBrU4ZroRuSHgZdywRAhcBAJoCO0/X6hoFWrXNbpl4Ce3nKHt6MwCfYKO5
+VZhIeBVeeGWXS+dsQpj8RDY=
+=N8R4
+-----END PGP SIGNATURE-----

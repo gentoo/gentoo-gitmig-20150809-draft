@@ -1,23 +1,24 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/vendetta-test/vendetta-test-0.ebuild,v 1.4 2004/06/24 22:50:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/vendetta-test/vendetta-test-0.ebuild,v 1.5 2004/12/01 04:52:31 vapier Exp $
 
 inherit eutils games
 
-S=${WORKDIR}
 DESCRIPTION="A testbed for a space-based MMORPG with amazing graphics"
 HOMEPAGE="http://www.guildsoftware.com/test.html"
 SRC_URI="vendetta-linux-installer.sh"
 
-RESTRICT="nomirror fetch"
 LICENSE="guild"
+SLOT="0"
 KEYWORDS="-* x86"
 IUSE=""
-SLOT="0"
+RESTRICT="nomirror fetch"
 
 RDEPEND="virtual/x11
 	virtual/opengl
 	=x11-libs/gtk+-1.2*"
+
+S=${WORKDIR}
 
 pkg_nofetch() {
 	einfo "Please download ${A} from Guild Software"
