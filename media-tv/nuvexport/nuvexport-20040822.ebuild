@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/nuvexport/nuvexport-20040822.ebuild,v 1.1 2004/09/29 20:44:35 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/nuvexport/nuvexport-20040822.ebuild,v 1.2 2004/11/30 22:07:55 swegener Exp $
 
 S=${WORKDIR}/nuvexport
 DESCRIPTION="Export from mythtv recorded NuppelVideo files"
@@ -13,7 +13,11 @@ IUSE=""
 
 KEYWORDS="~x86"
 DEPEND=""
-RDEPEND="DBI ffmpeg transcode mjpegtools mythtv"
+RDEPEND="dev-perl/DBI
+	media-video/ffmpeg
+	media-video/transcode
+	media-video/mjpegtools
+	media-tv/mythtv"
 
 src_install() {
 	dobin nuvexport nuvinfo

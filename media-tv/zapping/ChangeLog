@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/zapping
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/zapping/ChangeLog,v 1.9 2004/09/01 16:04:30 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/zapping/ChangeLog,v 1.10 2004/11/30 22:09:42 swegener Exp $
+
+  30 Nov 2004; Sven Wegener <swegener@gentoo.org> zapping-0.7.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
   01 Sep 2004; Martin Holzer <mholzer@gentoo.org> zapping-0.7.ebuild:
   correcting depend. closes 62404

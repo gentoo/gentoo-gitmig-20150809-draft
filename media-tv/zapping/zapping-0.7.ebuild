@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/zapping/zapping-0.7.ebuild,v 1.2 2004/09/01 16:04:30 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/zapping/zapping-0.7.ebuild,v 1.3 2004/11/30 22:09:42 swegener Exp $
 
 DESCRIPTION="TV- and VBI- viewer for the Gnome environment"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
@@ -15,7 +15,7 @@ DEPEND=">=gnome-base/libgnomeui-2.0
 	>=gnome-base/libglade-2.0
 	>=gnome-base/gconf-2.4
 	>=x11-libs/gtk+-2.0.0
-	>=dev-libs/libxml2
+	dev-libs/libxml2
 	>=sys-devel/gettext-0.10.36
 	>=media-libs/zvbi-0.2
 	>=media-libs/rte-0.5.2"
