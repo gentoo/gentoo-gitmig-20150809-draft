@@ -1,4 +1,6 @@
-MD5 e117546136cff8ffcffe35c6f879b80a ChangeLog 3918
+MD5 0b61d80b1d834d8c8f9564160b9126b3 ChangeLog 4071
+MD5 22314eff7a4f923601e6dba3863baf3d gdbm-1.8.0-r5.ebuild 1232
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 d316ae3f7b5f49d523ed8f783272e816 gdbm-1.8.3-r1.ebuild 1430
+MD5 017b1a2d0ae227d89ee16480e3129a3b files/digest-gdbm-1.8.0-r5 62
 MD5 c7bef9bbd37f161be399c58c61edef94 files/digest-gdbm-1.8.3-r1 62
