@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/gfs-6.1_pre21.ebuild,v 1.3 2005/03/22 13:59:10 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/gfs-6.1_pre21.ebuild,v 1.4 2005/03/25 15:56:05 xmerlin Exp $
 
 inherit linux-mod
 
@@ -46,18 +46,6 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 
-	exeinto /etc/init.d ; newexe ${FILESDIR}/gfs.rc gfs || die
+	newinitd ${FILESDIR}/${PN}.rc ${PN} || die
 }
 
-pkg_postinst() {
-	einfo "This package is a container package for all the GFS related utils/libs."
-	einfo "For more info see the following URLs:"
-	einfo "http://sources.redhat.com/cluster/doc/usage.txt"
-	einfo ""
-	einfo "Run the following commands on cluster nodes to get everything going:"
-	einfo "hint: you need to actually set things up before you do this, see the first URL above"
-	einfo "# ccsd"
-	einfo "# cman_tool join"
-	einfo "# fence_tool join"
-	einfo "# mount -t gfs /dev/sdd1 /mnt/gfs ...."
-}

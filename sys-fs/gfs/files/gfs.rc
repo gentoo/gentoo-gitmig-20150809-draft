@@ -1,21 +1,35 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/files/gfs.rc,v 1.4 2005/03/25 02:19:14 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/gfs/files/gfs.rc,v 1.5 2005/03/25 15:56:05 xmerlin Exp $
 
 opts="${opts} mountall"
 
 depend() {
-	use dns logger
-	use net
-	after gnbd-client clvmd
-	need cluster-manager cluster-locking-manager fenced
+	local myneed="cluster-manager cluster-locking-manager fenced"
+	local devices="$(awk '!/^#/ && $3 == "gfs" && $4 !~ /noauto/ {print $1 }' /etc/fstab)"
+
+	if [ -n "${devices}" ]; then
+		local device=""
+		for device in ${devices}; do
+			if [ -n "$(echo "${device}" | awk '$1 ~ /\/dev\/gnbd')" ]; then
+				myneed="${myneed} gnbd-client"
+			else
+				if [ -n "$(echo "${device}" | awk '$1 ~ /\/dev\/vg')" ]; then
+					myneed="${myneed} clvmd"
+				fi
+			fi
+		done
+	fi
+
+	use dns logger net
+	need ${myneed}
 	provide cluster
 }
 
 mount_gfs_filesystems() {
 	local remaining=""
-	remaining="$(awk '!/^#/ && $3 ~ /gfs/  { if ($4 !~ "noauto") print $1 }' /etc/fstab)"
+	remaining="$(awk '!/^#/ && $3 == "gfs"  { if ($4 !~ "noauto") print $1 }' /etc/fstab)"
 	
 	if [ -n "${remaining}" ]; then
 	
@@ -26,13 +40,7 @@ mount_gfs_filesystems() {
 			if [ -b ${device} ]; then
 				remaining_verified="${remaining_verified} ${device}"
 			else
-				if [ $(echo "${device}" | awk '$1 ~ /\/dev\/gnbd/') ]; then
-					ewarn "Please start /etc/init.d/gnbd-client before trying to mount GNBDs devices"
-				else
-					if [ $(echo "${device}" | awk '$1 ~ /\/dev\/vg/') ]; then
-						ewarn "Please start /etc/init.d/clvmd before trying to mount LVM volumes"
-					fi
-				fi
+				ewarn "Block device ${device} not found!!"
 			fi
 		done
 		
@@ -40,8 +48,8 @@ mount_gfs_filesystems() {
 			einfo "Mounting GFS filesystems"
 			device=""
 			for device in ${remaining_verified}; do
-				local target="$(awk '!/^#/ && $3 ~ /gfs/  { if ("$1" -eq "${device}" ) print $2 }' /etc/fstab)"
-				local mounted="$(awk '$3 ~ /gfs/  { if ("$1" -eq "${device}" ) print $2 }' /proc/mounts)"
+				local target="$(awk '!/^#/ && $3 == "gfs"  { if ("$1" -eq "${device}" ) print $2 }' /etc/fstab)"
+				local mounted="$(awk '$3 == "gfs"  { if ("$1" -eq "${device}" ) print $2 }' /proc/mounts)"
 				
 				# mount only filesystems not already mounted
 				if [ -z "${mounted}" ]; then
@@ -62,7 +70,7 @@ mount_gfs_filesystems() {
 
 umount_gfs_filesystems() {
 	local sig retry
-	local remaining="$(awk '$3 ~ /gfs/ { print $2 }' /proc/mounts | sort -r)"
+	local remaining="$(awk '$3 == "gfs" { print $2 }' /proc/mounts | sort -r)"
 
 	if [ -n "${remaining}" ]
 	then
@@ -80,7 +88,7 @@ umount_gfs_filesystems() {
 	                        umount ${remaining} &>/dev/null
 	                        eend $? "Failed to unmount GFS filesystems"
 	                fi
-	                remaining="$(awk '$3 ~ /gfs/ { if ($2 != "/") print $2 }' /proc/mounts | sort -r)"
+	                remaining="$(awk '$3 == "gfs" { if ($2 != "/") print $2 }' /proc/mounts | sort -r)"
 	                [ -z "${remaining}" ] && break
 	                /bin/fuser -k -m ${sig} ${remaining} &>/dev/null
 	                sleep 5
