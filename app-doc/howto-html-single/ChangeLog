@@ -1,6 +1,11 @@
 # ChangeLog for app-doc/howto-html-single
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html-single/ChangeLog,v 1.8 2003/10/06 13:16:45 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html-single/ChangeLog,v 1.9 2004/03/18 03:51:43 vapier Exp $
+
+*howto-html-single-20040317 (17 Mar 2004)
+
+  17 Mar 2004; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #44240 by Jaco Kroon.
 
 *howto-html-single-20031006 (06 Oct 2003)
 
