@@ -18,3 +18,4 @@ move app-admin/wasabi app-admin/tenshi
 move dev-python/pyOpenSSL dev-python/pyopenssl
 move dev-python/omniORBpy dev-python/omniorbpy
 move net-mail/qmail-scanner mail-filter/qmail-scanner
+move net-im/meanwhile-gaim net-im/gaim-meanwhile
