@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetload/wmnetload-1.0.ebuild,v 1.5 2003/04/01 22:14:50 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetload/wmnetload-1.0.ebuild,v 1.6 2003/10/16 16:10:23 drobbins Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://truffula.com/pub/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 -ppc -sparc "
+KEYWORDS="x86 -ppc -sparc amd64"
 
 DEPEND="virtual/glibc
 	virtual/x11

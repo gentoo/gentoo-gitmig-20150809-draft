@@ -12,7 +12,7 @@ DEPEND="virtual/x11"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~alpha"
+KEYWORDS="~x86 ~sparc ~alpha amd64"
 
 S=${WORKDIR}/${P/wm/WM}
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmget/wmget-0.5.0.ebuild,v 1.1 2003/03/09 20:11:53 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmget/wmget-0.5.0.ebuild,v 1.2 2003/10/16 16:10:23 drobbins Exp $
 
 S="${WORKDIR}/${PN}"
 
@@ -10,7 +10,7 @@ SRC_URI="http://amtrickey.net/download/${P}-src.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 amd64"
 
 DEPEND="virtual/x11
 	>=net-ftp/curl-7.9.7"

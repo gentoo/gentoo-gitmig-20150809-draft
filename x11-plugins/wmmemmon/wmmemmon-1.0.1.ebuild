@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemmon/wmmemmon-1.0.1.ebuild,v 1.1 2003/10/16 07:02:44 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemmon/wmmemmon-1.0.1.ebuild,v 1.2 2003/10/16 16:10:23 drobbins Exp $
 
 S=${WORKDIR}/${P}
 
@@ -9,7 +9,7 @@ SRC_URI="http://www.sh.rim.or.jp/~ssato/src/${P}.tar.gz"
 HOMEPAGE="http://www.sh.rim.or.jp/~ssato/dockapp/index.shtml#wmmemmon"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc amd64"
 SLOT="0"
 
 DEPEND="virtual/glibc x11-base/xfree"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcms/wmcms-0.3.5.ebuild,v 1.6 2003/09/29 21:53:44 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcms/wmcms-0.3.5.ebuild,v 1.7 2003/10/16 16:10:23 drobbins Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ DEPEND="x11-libs/libdockapp"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc"
+KEYWORDS="x86 sparc amd64"
 
 src_compile() {
 	make || die

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetselect/wmnetselect-0.8-r1.ebuild,v 1.4 2003/02/13 17:32:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetselect/wmnetselect-0.8-r1.ebuild,v 1.5 2003/10/16 16:10:23 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="WindowMaker browser launcher doclette"
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp11.freebsd.org/pub/FreeBSD/ports/distfiles/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc amd64"
 
 DEPEND="virtual/x11"
 
