@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.5.3.ebuild,v 1.7 2003/09/06 01:54:09 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.5.3.ebuild,v 1.8 2003/12/14 23:19:22 spider Exp $
 
 IUSE="pam ldap ssl sasl snmp debug"
 
@@ -129,7 +129,7 @@ src_install() {
 
 	#--enable-icmp
 	#make -C src install-pinger libexecdir=${D}/usr/lib/squid || die
-	#chown root.squid ${D}/usr/lib/squid/pinger
+	#chown root:squid ${D}/usr/lib/squid/pinger
 	#chmod 4750 ${D}/usr/lib/squid/pinger
 
 	#some clean ups

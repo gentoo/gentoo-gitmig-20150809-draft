@@ -1,6 +1,10 @@
 # ChangeLog for net-www/squid
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/ChangeLog,v 1.27 2003/11/05 10:00:22 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/ChangeLog,v 1.28 2003/12/14 23:19:22 spider Exp $
+
+  15 Dec 2003; <spider@gentoo.org> squid-2.4.7.ebuild, squid-2.5.3.ebuild,
+  squid-2.5.4.ebuild:
+  QA: fixing chown user.group to user:group, bug #35127
 
   05 Nov 2003; Christian Birchinger <joker@gentoo.org> squid-2.5.4.ebuild:
   Added sparc stable keyword

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.4.7.ebuild,v 1.7 2003/08/03 04:26:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.4.7.ebuild,v 1.8 2003/12/14 23:19:22 spider Exp $
 
 IUSE="snmp pam ldap debug"
 
@@ -88,11 +88,11 @@ src_install() {
 		install || die
 
 	#make -C src install-pinger libexecdir=${D}/usr/lib/squid || die
-	#chown root.squid ${D}/usr/lib/squid/pinger
+	#chown root:squid ${D}/usr/lib/squid/pinger
 	#chmod 4750 ${D}/usr/lib/squid/pinger
 
 	mv ${D}/usr/sbin/{*_auth*,Run*} ${D}/usr/lib/squid
-	chown root.squid ${D}/usr/lib/squid/pam_auth
+	chown root:squid ${D}/usr/lib/squid/pam_auth
 	chmod 2750 ${D}/usr/lib/squid/pam_auth
 
 	rm -rf ${D}/etc/squid/errors ${D}/var/logs
