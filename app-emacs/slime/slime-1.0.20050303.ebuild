@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-1.0.20050303.ebuild,v 1.1 2005/03/03 17:12:51 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/slime-1.0.20050303.ebuild,v 1.2 2005/03/18 08:21:50 mkennedy Exp $
 
 inherit elisp cvs eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.common-lisp.net/project/slime/slime-${MY_PV_BASE}.tar.gz
 	mirror://gentoo/slime-${MY_PV_BASE}-CVS-${MY_PV_CVS}-gentoo.patch.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="doc"
 
 DEPEND="virtual/emacs

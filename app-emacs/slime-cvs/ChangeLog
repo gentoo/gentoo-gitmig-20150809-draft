@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/slime-cvs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime-cvs/ChangeLog,v 1.15 2005/02/21 07:16:48 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime-cvs/ChangeLog,v 1.16 2005/03/18 08:22:27 mkennedy Exp $
+
+  18 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org> slime-cvs-0-r3.ebuild:
+  Keywording for ~amd64
 
   21 Feb 2005; Matthew Kennedy <mkennedy@gentoo.org> slime-cvs-0-r3.ebuild:
   For some odd reason, process substitution seems to hang.

@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/slime
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.12 2005/03/03 17:12:51 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.13 2005/03/18 08:21:50 mkennedy Exp $
+
+  18 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  slime-1.0.20050303.ebuild:
+  Keywording for ~amd64
 
 *slime-1.0.20050303 (03 Mar 2005)
 
