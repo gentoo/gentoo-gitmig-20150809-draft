@@ -1,0 +1,18 @@
+# ChangeLog for app-sci/comedilib
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/comedilib/ChangeLog,v 1.1 2004/12/28 18:47:08 ribosome Exp $
+
+*comedilib-0.7.21 (28 Dec 2004)
+
+  28 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +comedilib-0.7.21.ebuild:
+  Moved from app-sci/comedilib to sci-libs/comedilib.
+
+  01 Mar 2004; Caleb Tennis <caleb@gentoo.org> comedilib-0.7.21.ebuild:
+  Add keepdir for /var/calibrations
+
+*comedilib-0.7.21 (20 Nov 2003)
+
+  20 Nov 2003; Caleb Tennis <caleb@gentoo.org> comedilib-0.7.21.ebuild, metadata.xml:
+  Initial import.  Will require some more work yet.
+
