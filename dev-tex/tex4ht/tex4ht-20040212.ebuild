@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/tex4ht-20040212.ebuild,v 1.2 2004/08/30 23:37:14 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/tex4ht-20040212.ebuild,v 1.3 2004/11/21 06:12:53 kingtaco Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.cse.ohio-state.edu/~gurari/TeX4ht/"
 SRC_URI="http://www.cse.ohio-state.edu/~gurari/TeX4ht/${P}.zip"
 
 LICENSE="LPPL-1.2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 SLOT="0"
 
 DEPEND="virtual/tetex
