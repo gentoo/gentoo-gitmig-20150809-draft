@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icemc/icemc-1.9.ebuild,v 1.1 2004/07/27 09:52:06 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icemc/icemc-1.9.ebuild,v 1.2 2004/08/03 11:37:34 dholm Exp $
 
 DESCRIPTION="IceWM menu/toolbar editor"
 HOMEPAGE="http://icecc.sourceforge.net/"
 SRC_URI="mirror://sourceforge/icecc/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 DEPEND=">=x11-libs/qt-3.0.0"
 

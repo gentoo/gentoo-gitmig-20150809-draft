@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icewm-tools/icewm-tools-2.7.1.ebuild,v 1.1 2004/08/03 07:15:46 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icewm-tools/icewm-tools-2.7.1.ebuild,v 1.2 2004/08/03 11:37:57 dholm Exp $
 
 DESCRIPTION="Convenience package for IceWM control center and tools"
 SRC_URI=""
 HOMEPAGE="http://icecc.sourceforge.net/"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 DEPEND=">=x11-misc/icebgset-1.1
