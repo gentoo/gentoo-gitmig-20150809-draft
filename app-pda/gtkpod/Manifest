@@ -2,17 +2,17 @@
 Hash: SHA1
 
 MD5 50b72dc36a1b67c4f473a91cbf985f30 metadata.xml 214
-MD5 e594e48b6e84dd751c2cc998a595b835 gtkpod-0.88.ebuild 767
-MD5 ddb337e57eeaff222ae9610dcb31d0df ChangeLog 3027
+MD5 913b12fe9e545bd283681e18546308c6 ChangeLog 3169
 MD5 8269ea9285fc428dcc472692c09a0d5b gtkpod-0.80.2.ebuild 930
+MD5 1b12fd51498e5d2b5d59b000c397118a gtkpod-0.88.1.ebuild 769
 MD5 9545dd2d2b37bb94f54aca514bad13cb gtkpod-0.85.0.ebuild 622
 MD5 74f81179cf2e5095dacc9ecd08805acb files/digest-gtkpod-0.85.0 65
-MD5 cb1d21ce92d76586a55d795392c7dea5 files/digest-gtkpod-0.88 63
+MD5 7d2e7c7d98ab0dc42b948ecce7f606ba files/digest-gtkpod-0.88.1 65
 MD5 f79519e3920b49df9f578cb8798a32c7 files/digest-gtkpod-0.80.2 192
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCMLTKmOfEJZHYOKcRAkIPAJ9A3f1m9wJsV44WtJNMefrX84fWggCeNJ0+
-u5HnmNkPPMBjfKwDWx6Li0Q=
-=xA/j
+iD8DBQFCOY++mOfEJZHYOKcRAsuQAKCRWdH/FaEU3u0f5bLelyTZBR9hSgCgqk6x
+nEQA1Jdjo1zF81xQPf5LS0I=
+=Cu7j
 -----END PGP SIGNATURE-----
