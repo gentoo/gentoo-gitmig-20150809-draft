@@ -1645,3 +1645,29 @@ diff -ur linux-2.6.8.1/include/asm-ppc64/page.h linux-2.6.8.1-gentoo/include/asm
  typedef unsigned int  pmd_t;
  typedef unsigned int  pgd_t;
  typedef unsigned long pgprot_t;
+diff -ur linux-2.6.8.1/include/asm-sparc64/signal.h linux-2.6.8.1-gentoo/include/asm-sparc64/signal.h
+--- linux-2.6.8.1/include/asm-sparc64/signal.h	2004-07-10 01:47:34.000000000 +0100
++++ linux-2.6.8.1-gentoo/include/asm-sparc64/signal.h	2004-10-03 14:09:31.434460808 +0100
+@@ -110,7 +110,9 @@
+ 
+ #ifndef __ASSEMBLY__
+ 
++#ifndef __sigset_t_defined
+ typedef unsigned long __old_sigset_t;            /* at least 32 bits */
++#endif
+ 
+ typedef struct {
+        unsigned long sig[_NSIG_WORDS];
+diff -ur linux-2.6.8.1/include/asm-sparc/signal.h linux-2.6.8.1-gentoo/include/asm-sparc/signal.h
+--- linux-2.6.8.1/include/asm-sparc/signal.h	2004-07-10 01:47:34.000000000 +0100
++++ linux-2.6.8.1-gentoo/include/asm-sparc/signal.h	2004-10-03 14:09:31.434460808 +0100
+@@ -105,7 +105,9 @@
+ 
+ #ifndef __ASSEMBLY__
+ 
++#ifndef __sigset_t_defined
+ typedef unsigned long __old_sigset_t;
++#endif
+ 
+ typedef struct {
+ 	unsigned long	sig[_NSIG_WORDS];
