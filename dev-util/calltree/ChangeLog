@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/calltree
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/calltree/ChangeLog,v 1.10 2003/11/14 18:55:04 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/calltree/ChangeLog,v 1.11 2003/12/23 20:15:06 plasmaroo Exp $
+
+*calltree-0.9.6 (23 Dec 2003)
+
+  23 Dec 2003; <plasmaroo@gentoo.org> calltree-0.9.6.ebuild:
+  Changed the '>=' valgrind dependency to a '=' as calltree does not support
+  valgrind-2.1.0, which was pulled in by the '>=' dependency.
 
   14 Nov 2003; Caleb Tennis <caleb@gentoo.org> :
   New version, for valgrind 2.0.0
