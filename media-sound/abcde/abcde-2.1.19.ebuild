@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/abcde-2.1.19.ebuild,v 1.2 2004/04/20 17:12:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/abcde-2.1.19.ebuild,v 1.3 2004/04/21 14:19:09 gustavoz Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.hispalinux.es/~data/abcde.php"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64"
+KEYWORDS="x86 amd64 sparc"
 
 RDEPEND=">=media-sound/id3-0.12
 	>=media-sound/cd-discid-0.6
