@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/netpipes
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netpipes/ChangeLog,v 1.1 2005/01/13 10:03:15 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netpipes/ChangeLog,v 1.2 2005/01/13 12:16:55 swegener Exp $
+
+  13 Jan 2005; Sven Wegener <swegener@gentoo.org> :
+  Added missing digest entries.
 
 *netpipes-4.2 (13 Jan 2005)
 
