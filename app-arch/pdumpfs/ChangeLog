@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/pdumpfs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/pdumpfs/ChangeLog,v 1.12 2004/12/20 15:57:46 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/pdumpfs/ChangeLog,v 1.13 2004/12/24 15:30:07 matsuu Exp $
+
+  25 Dec 2004; MATSUU Takuto <matsuu@gentoo.org> pdumpfs-1.3.ebuild:
+  Fixed digest because tarball was replaced by upstream.
 
 *pdumpfs-1.3 (21 Dec 2004)
 
