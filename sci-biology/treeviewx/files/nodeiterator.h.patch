@@ -3,7 +3,7 @@
 @@ -20,7 +20,7 @@
   */
  
-  // $Id: nodeiterator.h.patch,v 1.2 2005/02/20 23:00:19 ribosome Exp $
+  // $Id: nodeiterator.h.patch,v 1.3 2005/02/20 23:03:36 ribosome Exp $
 - 
 +
  /**
