@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/xxdiff
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/ChangeLog,v 1.15 2004/04/27 21:03:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/ChangeLog,v 1.16 2004/06/03 18:19:51 agriffis Exp $
+
+  03 Jun 2004; Aron Griffis <agriffis@gentoo.org> xxdiff-2.9.2-r1.ebuild,
+  xxdiff-3.0.2.ebuild:
+  Fix use invocation
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> xxdiff-2.9.2-r1.ebuild,
   xxdiff-3.0.2.ebuild:

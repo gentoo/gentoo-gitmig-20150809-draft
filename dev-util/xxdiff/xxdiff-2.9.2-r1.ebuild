@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-2.9.2-r1.ebuild,v 1.8 2004/04/27 21:03:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/xxdiff-2.9.2-r1.ebuild,v 1.9 2004/06/03 18:19:51 agriffis Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ IUSE="kde"
 src_unpack()
 {
 	unpack ${A}
-	if [ `use kde` ]; then
+	if use kde; then
 		cd ${S}/src
 		cp ${FILESDIR}/kdesupport.patch .
 		sed -e "s:/usr/kde/3.1:`ls -d /usr/kde/* | tail -n 1`:g" -i kdesupport.patch
