@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r7.ebuild,v 1.2 2002/04/12 19:12:03 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r7.ebuild,v 1.3 2002/04/14 09:28:18 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The GIMP Toolkit"
@@ -32,8 +32,9 @@ src_unpack() {
 
 src_compile() {
 
-	local myconf
+	libtoolize --copy --force
 
+	local myconf
 	use nls || myconf="${myconf} --disable-nls"
 
 	if [ "${DEBUG}" ]
@@ -43,13 +44,13 @@ src_compile() {
 		myconf="${myconf} --enable-debug=no"
 	fi
 
-	./configure --host=${CHOST} 					\
-		    --prefix=/usr 					\
-		    --mandir=/usr/share/man 				\
-		    --sysconfdir=/etc/X11 				\
-		    --with-xinput=xfree 				\
-		    --with-x 						\
-		    ${myconf} || die
+	./configure --host=${CHOST} \
+		--prefix=/usr \
+		--mandir=/usr/share/man \
+		--sysconfdir=/etc/X11 \
+		--with-xinput=xfree \
+		--with-x \
+		${myconf} || die
 
 	emake || die
 }
