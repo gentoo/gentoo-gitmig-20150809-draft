@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.9-r1.ebuild,v 1.14 2004/11/05 01:44:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.9-r1.ebuild,v 1.15 2004/11/05 01:53:16 vapier Exp $
 
 inherit eutils
 
@@ -44,7 +44,7 @@ src_compile() {
 
 src_install() {
 	make install install-elf DESTDIR=${D} || die "make install failed"
-	chmod "${D}"/usr/$(get_libdir)/libslang.so.*
+	chmod a+rx "${D}"/usr/$(get_libdir)/libslang.so.*
 
 	if use unicode ; then
 		for i in ${D}/usr/$(get_libdir)/libslang-utf8* ; do
