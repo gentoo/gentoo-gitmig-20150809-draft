@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3455 2005/01/07 06:31:54 bcowan Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3456 2005/01/07 17:26:22 solar Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,18 @@
 ##
 ##   End example
 ##
+
+# <solar@gentoo> (07 Jan 2005)
+# Masked for security reasons. Requested by <koon@gentoo>. Upstream 
+# appears to be dead / not responding to emails. So this package is
+# now marked as removal pending. See bug #74478 for more details.
+app-text/o3read
+
+# <solar@gentoo> (07 Jan 2005)
+# Masked for security reasons. Requested by <koon@gentoo>. Upstream 
+# appears to be dead / not responding to emails. So this package is 
+# now marked as removal pending. See bug #74703 for more details.
+net-p2p/napshare
 
 # <battousai@gentoo.org> (06 Jan 2005)
 # Needs testing before release.
