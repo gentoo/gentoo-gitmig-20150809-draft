@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-midi/xmms-midi-0.03.ebuild,v 1.6 2004/03/29 23:27:12 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-midi/xmms-midi-0.03.ebuild,v 1.7 2004/04/16 12:17:55 lv Exp $
+
+inherit gnuconfig
 
 DESCRIPTION="Timidity++ Dependent MIDI Plugun for XMMS"
 HOMEPAGE="http://ban.joh.cam.ac.uk/~cr212/xmms-midi/"
@@ -8,12 +10,13 @@ SRC_URI="http://ban.joh.cam.ac.uk/~cr212/xmms-midi/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~amd64"
 
 DEPEND="media-sound/xmms
 	media-sound/timidity++"
 
 src_compile() {
+	gnuconfig_update
 	econf \
 		--prefix=/usr/lib
 		--with-xmms-prefix=/usr/include/xmms
