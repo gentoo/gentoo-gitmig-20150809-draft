@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.3.ebuild,v 1.7 2003/08/10 20:35:23 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zinf/zinf-2.2.4.ebuild,v 1.1 2003/08/16 06:34:06 jje Exp $
 
 IUSE="esd X gtk oggvorbis gnome arts"
 
@@ -8,7 +8,7 @@ inherit kde-functions
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An extremely full-featured mp3/vorbis/cd player with ALSA support, previously called FreeAmp"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="http://telia.dl.sourceforge.net/sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.zinf.org/"
 
 RDEPEND="=dev-libs/glib-1.2*
@@ -17,6 +17,7 @@ RDEPEND="=dev-libs/glib-1.2*
 	>=sys-libs/ncurses-5.2
 	=media-libs/freetype-1* 
 	>=media-libs/musicbrainz-1.0.1
+	>=media-libs/id3lib-3.8.0
 	X? ( virtual/x11 ) 
 	esd? ( media-sound/esound ) 
 	gtk? ( >=media-libs/gdk-pixbuf-0.8 )
@@ -33,31 +34,18 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
 
-# Unfortunately you can't selectively build a lot of the features. Therefore
-# this whole package is essentially a judgement call. However, I've made the
-# DEPEND in a strategic manner to ensure that your USE variable is respected
-# when the knobs are *set*.
-
 src_unpack() {
-
     unpack ${A}
-    
-#    if [ "`use arts`" ]; then
-#	cd ${S}/io/arts/src
-#	cp artspmo.cpp 1
-#	sed -e 's:artsc/artsc.h:artsc.h:g' -e 's:artspmo.h:../include/artspmo.h:g' 1 > artspmo.cpp
-#    fi
-
+    cd ${S}
+    epatch ${FILESDIR}/zinf-2.2.4-pref.patch
 }
 
 src_compile() {
-
 	set-kdedir 3
 
-	local myconf
-	#use alsa || 
-	myconf="${myconf} --disable-alsa"
+	local myconf="--disable-alsa --enable-debug --enable-cmdline"
 	use esd  || myconf="${myconf} --disable-esd"
+	use gnome && myconf="${myconf} --enable-corba"
 	
 	if [ -n "`use arts`" ]; then
 	    export ARTSCCONFIG="$KDEDIR/bin/artsc-config"
@@ -66,25 +54,15 @@ src_compile() {
 	    myconf="$myconf --disable-arts"
 	fi
 
-	./configure --prefix=/usr --host=${CHOST} --enable-cmdline ${myconf} || die
+	econf ${myconf} || die
 	make || die
-	
-	if [ -n "`use arts`" ]; then
-	    export CPATH="${CPATH}:${KDEDIR}/include/artsc:${S}/io/arts/include"
-	    cp Makefile.header 1
-	    sed -e "s:ARTS_LIBS =:ARTS_LIBS = -lartsc -L${KDEDIR}/lib:" 1 > Makefile.header
-	    make -f Makefile-plugins plugins/arts.pmo || die
-	fi
-
 }
 
 src_install() {
-
-	into /usr ; dobin zinf
+	into /usr ; dobin base/zinf
 	exeinto /usr/lib/zinf/plugins  ; doexe plugins/*
 	insinto /usr/share/zinf/themes ; doins themes/*
-	dodir /usr/share/zinf/fonts
 
-	dodoc AUTHORS CHANGES COPYING NEWS README README.linux
-
+	dodoc AUTHORS COPYING NEWS README
 }
+

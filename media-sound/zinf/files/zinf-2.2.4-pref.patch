@@ -1,0 +1,18 @@
+--- base/unix/src/unixprefs.cpp   2003-03-17 19:24:56.000000000 +0000
++++ base/unix/src/unixprefs.cpp    2003-08-05 17:51:17.000000000 +0000
+@@ -456,13 +456,13 @@
+         SetPrefString(kWatchThisDirectoryPref, tempdir);
+     }
+
+-    // Initialize the library path structures
+-    GetLibPath();
+-
+ #define ZINF_PREF(T,V) setDefault(k##T##Pref,V);
+ #include "prefs.def"
+ #undef ZINF_PREF
+
++    // Initialize the library path structures
++    GetLibPath();
++
+     return kError_NoErr;
+
