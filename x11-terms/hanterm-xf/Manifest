@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 dfb82a51ce5b72d33fcc612bf9494ad6 ChangeLog 576
-MD5 eabf6e9fc08663682c417fdc0c14136f hanterm-xf-2.0.5.ebuild 1336
+MD5 148f40e578ac245143c60d390dabb9df hanterm-xf-2.0.5.ebuild 1345
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 b74a67f9897e00915b00337a5803e4ed files/digest-hanterm-xf-2.0.5 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBaDY7VWNWqTUmv+0RAnqGAJ9F4vSVOJNmKdbyym4DZT55mfCwEwCePn+L
-XAphHayaCbn+qkm1J4oT3Ic=
-=e405
------END PGP SIGNATURE-----
