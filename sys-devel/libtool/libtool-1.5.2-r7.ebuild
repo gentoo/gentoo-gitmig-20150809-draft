@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.2-r7.ebuild,v 1.4 2004/11/30 04:03:23 vapier Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.2-r7.ebuild,v 1.5 2004/12/17 07:00:24 vapier Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 kloeri Exp $
 
 inherit eutils gnuconfig
 
@@ -105,7 +105,6 @@ src_unpack() {
 	epatch ${FILESDIR}/1.4.3/${PN}-1.4.2-archive-shared.patch
 	epatch ${FILESDIR}/1.4.3/${PN}-1.4.3-ltmain-SED.patch
 	epatch ${FILESDIR}/1.4.3/${PN}-1.4.2-expsym-linux.patch
-	epatch ${FILESDIR}/1.4.3/${PN}-1.4.3-amd64-alias.patch
 	epatch ${FILESDIR}/1.4.3/${PN}-1.4.3-libtoolize--config-only.patch
 	epatch ${FILESDIR}/1.4.3/${PN}-1.4.3-pass-thread-flags.patch
 
