@@ -1,18 +1,30 @@
-MD5 f0a8062f23b497a4f1381026034fc01a libgcrypt-1.1.92.ebuild 963
-MD5 224aebf2dfa89a0bd08246d111303cd2 ChangeLog 6208
-MD5 920e0225ba1939f28b51a13ee4f21de6 libgcrypt-1.2.0-r2.ebuild 1180
-MD5 ecdc2a61e94402741d64e37d35c8d8c7 libgcrypt-1.1.91.ebuild 752
-MD5 73f68c7d706cb6699cb5c5616359c7b8 libgcrypt-1.2.0-r1.ebuild 1122
-MD5 e7cc39058b6e7f07ec3c3310506249a8 libgcrypt-1.1.94.ebuild 977
-MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
-MD5 f767f553c0e007e37f4c03e74424d468 libgcrypt-1.2.0.ebuild 1051
-MD5 9002e4a8f3c814e7bbb8f1abdeccd217 libgcrypt-1.1.12.ebuild 1132
-MD5 16b1f5ae3cd2e7678379e1c6be616455 files/digest-libgcrypt-1.2.0-r2 67
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7fadae808571bed44bfb7fcfe8cf4a58 ChangeLog 6429
+MD5 d7afc8024da44bc7a81cf54e540323f5 libgcrypt-1.1.12.ebuild 1135
+MD5 4b045d98f7dd780f16b596d38b13e7ce libgcrypt-1.2.1.ebuild 1060
+MD5 3140b3c7a0b227a0e6b53921f607ede3 libgcrypt-1.1.91.ebuild 755
+MD5 918a1b851dd53568897b4fc7c503912e metadata.xml 276
+MD5 f4b6e2534669c8210944701fccf0d87a libgcrypt-1.1.92.ebuild 966
+MD5 93846c9c62ea103e8ea5590014e4df3b libgcrypt-1.1.94.ebuild 981
+MD5 ca0fe24417f2e96f1599d6c93bb0b1cf libgcrypt-1.2.0.ebuild 1056
+MD5 5331e994a936dd68ca700bce1d7a5e8a libgcrypt-1.2.0-r1.ebuild 1127
+MD5 e93d7dddec83b9c8922d5995f5a7daf2 libgcrypt-1.2.0-r2.ebuild 1186
+MD5 9bf9811b5db655640e7f280bb9bab24c files/digest-libgcrypt-1.1.12 68
 MD5 42e08103310c04095c58c5070ab8690c files/libgcrypt-hppa.patch 1099
-MD5 2b7ce42f9b49ecbeddca76b1edc5699d files/libgcrypt-rijndael.patch 13132
+MD5 eb84241995268ddf928f15c1fc43f5ff files/digest-libgcrypt-1.1.91 68
+MD5 90f8d641fd24175958583ca806913d81 files/digest-libgcrypt-1.1.92 68
 MD5 9f546283fe69d56096f3707d52a4668a files/digest-libgcrypt-1.1.94 68
 MD5 16b1f5ae3cd2e7678379e1c6be616455 files/digest-libgcrypt-1.2.0 67
 MD5 16b1f5ae3cd2e7678379e1c6be616455 files/digest-libgcrypt-1.2.0-r1 67
-MD5 eb84241995268ddf928f15c1fc43f5ff files/digest-libgcrypt-1.1.91 68
-MD5 9bf9811b5db655640e7f280bb9bab24c files/digest-libgcrypt-1.1.12 68
-MD5 90f8d641fd24175958583ca806913d81 files/digest-libgcrypt-1.1.92 68
+MD5 16b1f5ae3cd2e7678379e1c6be616455 files/digest-libgcrypt-1.2.0-r2 67
+MD5 2b7ce42f9b49ecbeddca76b1edc5699d files/libgcrypt-rijndael.patch 13132
+MD5 1c871fcf508869ff09d46782655c3ca5 files/digest-libgcrypt-1.2.1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB5Tg6mdTrptrqvGERAr8qAJ9bDYozwcrMdWZz2ki+wiHXz+dfaQCfR+tE
+meBCmGHZ1DF42J3F/BLU9Ik=
+=mKwv
+-----END PGP SIGNATURE-----

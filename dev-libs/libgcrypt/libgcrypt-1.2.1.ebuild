@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.2.0-r1.ebuild,v 1.5 2005/01/12 14:46:12 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/libgcrypt-1.2.1.ebuild,v 1.1 2005/01/12 14:46:12 dragonheart Exp $
 
 inherit eutils
 
@@ -10,18 +10,11 @@ SRC_URI="ftp://ftp.gnupg.org/gcrypt/libgcrypt/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 arm hppa ia64 ~mips ~ppc ppc64 ~ppc-macos s390 sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~ppc-macos ~s390 ~sparc ~x86"
 IUSE="nls"
 
 DEPEND="dev-libs/libgpg-error"
 RDEPEND="nls? ( sys-devel/gettext )"
-
-src_unpack() {
-
-	unpack ${A}
-	epatch ${FILESDIR}/${PN}-hppa.patch
-
-}
 
 src_compile() {
 	econf $(use_enable nls) --disable-dependency-tracking || die
