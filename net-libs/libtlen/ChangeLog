@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libtlen
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libtlen/ChangeLog,v 1.1 2003/11/15 07:18:55 seemant Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libtlen/ChangeLog,v 1.2 2004/04/28 19:30:34 spock Exp $
+
+  28 Apr 2004; Michal Januszewski <spock@gentoo.org> libtlen-20031114.ebuild:
+  Stable on x86.
 
 *libtlen-20031114 (14 Nov 2003)
 
