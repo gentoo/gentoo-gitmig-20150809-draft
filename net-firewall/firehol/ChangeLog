@@ -1,0 +1,10 @@
+# ChangeLog for net-firewall/firehol
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.1 2003/04/05 19:20:22 cybersystem Exp $
+
+*firehol-1.91 (05 April 2003)
+
+  05 April 2003; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog, firehol-1.91.ebuild, files/digest-firehol-1.91 :
+
+  Initial commit, made by Maik Schreiber <blizzy@blizzy.de> in bug #18808
+
