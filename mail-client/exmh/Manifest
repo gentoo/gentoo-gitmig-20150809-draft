@@ -1,25 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4db89d291036109aa5a7f68f38b600e8 ChangeLog 2265
-MD5 6ca36ec56f921869c0da0d583ea727f1 exmh-2.6.3.ebuild 1298
+MD5 6597336a1f592fca9356a4e3f6cd9077 ChangeLog 2361
 MD5 097a201ea4368573bb798efe3fc4d186 exmh-2.5-r1.ebuild 1345
-MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
-MD5 5bfce206db96808e0a37897d70256088 exmh-2.6.3-r1.ebuild 1392
-MD5 55ae831b47c80de35044c66b3b489262 exmh-2.7.0.ebuild 1391
 MD5 f33f607875a0abe9122c10bed2cefa91 exmh-2.5.ebuild 1265
-MD5 8106e98e35ec1d7d72054893d4a2a543 files/exmh-2.5-conf.patch 3161
-MD5 b48060d14d101afe5e5a3584ce24265b files/exmh-2.7.0-conf.patch 2876
+MD5 5bfce206db96808e0a37897d70256088 exmh-2.6.3-r1.ebuild 1392
+MD5 6ca36ec56f921869c0da0d583ea727f1 exmh-2.6.3.ebuild 1298
+MD5 2050d1ce429e2417d973d5b2ee443587 exmh-2.7.0.ebuild 1393
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 3a53f493fcbb3584e5425aeeaac9d983 files/digest-exmh-2.5 60
+MD5 3a53f493fcbb3584e5425aeeaac9d983 files/digest-exmh-2.5-r1 60
 MD5 fa868a8e004f8b256d8891a396de40bd files/digest-exmh-2.6.3 62
 MD5 fa868a8e004f8b256d8891a396de40bd files/digest-exmh-2.6.3-r1 62
-MD5 37e66dfd152725e587a2ac03b0cc505e files/exmh-2.6.3-conf.patch 2876
-MD5 3a53f493fcbb3584e5425aeeaac9d983 files/digest-exmh-2.5-r1 60
-MD5 3a53f493fcbb3584e5425aeeaac9d983 files/digest-exmh-2.5 60
 MD5 63bc6ee357c3b85d805f23d7bb34afcc files/digest-exmh-2.7.0 63
+MD5 8106e98e35ec1d7d72054893d4a2a543 files/exmh-2.5-conf.patch 3161
+MD5 37e66dfd152725e587a2ac03b0cc505e files/exmh-2.6.3-conf.patch 2876
+MD5 b48060d14d101afe5e5a3584ce24265b files/exmh-2.7.0-conf.patch 2876
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBviiGQlM6RnzZP+IRAhUgAJwJncCe3pcXOjbBiiMTyTqCDKG8qACgvW/v
-a4cAmngBMJhBb6/yaylN/14=
-=Yjtj
+iD8DBQFBwxmUKRy60XGEcJIRArBJAJwOS4x/H8S8zgPHhrHG8JNKCIMoWwCgkI5r
+O+4AS7cwICxW3fHVxpW9TS4=
+=V2Sj
 -----END PGP SIGNATURE-----
