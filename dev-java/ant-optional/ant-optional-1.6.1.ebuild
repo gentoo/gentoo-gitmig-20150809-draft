@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-optional/ant-optional-1.6.1.ebuild,v 1.1 2004/03/11 02:47:52 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-optional/ant-optional-1.6.1.ebuild,v 1.2 2004/03/11 02:48:55 zx Exp $
 
 inherit java-pkg
 
