@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.1-r1.ebuild,v 1.3 2004/01/16 09:22:36 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.1-r1.ebuild,v 1.4 2004/01/16 09:31:01 darkspecter Exp $
 
 inherit eutils
 
@@ -55,7 +55,7 @@ src_unpack() {
 	#Next one is from eger@cc.gatech.edu :)
 	patch -p1 <${FILESDIR}/samba-3.0.0-python-setup.patch || die
 	#Fix for bug #27858
-	if [ "${ARCH}" = "sparc" -o "${arch}" = "ppc" ]
+	if [ "${ARCH}" = "sparc" -o "${ARCH}" = "ppc" ]
 	then
 		cd ${S}/source/include
 		epatch ${FILESDIR}/samba-2.2.8-statfs.patch

@@ -3,7 +3,7 @@ MD5 11978d96cfebe10cabfbc2c6da2f04ee samba-2.2.8a.ebuild 10853
 MD5 30190ad2dc86a988bb9ac7021e728577 samba-3.0.0-r1.ebuild 10882
 MD5 eeb3ec0ae25e9d4f7ce62c32b52d5996 metadata.xml 466
 MD5 c60dc84e4426dc9c0dd4a350f15caed5 samba-3.0.1.ebuild 11341
-MD5 8684ebb98d95fa02fee1a232a50dd10e samba-3.0.1-r1.ebuild 11370
+MD5 8f1579315a066964e53ecf5f4870b4d1 samba-3.0.1-r1.ebuild 11370
 MD5 fd2382184b6a07e63cb07ff26b578fd2 files/config-svc-smbd+nmbd 784
 MD5 b610fd35d7a0a9de510e31d85345d14a files/lmhosts 124
 MD5 f402c2c4103f4c13ac3cc5fa165940db files/nonroot-bind.diff 757
