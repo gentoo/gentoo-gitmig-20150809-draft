@@ -1,0 +1,16 @@
+--- Makefile	2003-06-30 05:45:19.000000000 +0200
++++ Makefile.new	2003-07-14 11:03:36.000000000 +0200
+@@ -100,11 +100,11 @@
+ HFILES=bdata.h bitmap.h boot.h bsect.h cfg.h common.h config.h device.h \
+   edit.h geometry.h identify.h lilo.h loader.h map.h md-int.h partition.h \
+   probe.h raid.h shs2.h temp.h version.h vesainfo.h
+-#BOOTS=boot-text.b boot-menu.b boot-bmp.b chain.b os2_d.b mbr.b mbr2.b
++BOOTS=boot-text.b boot-menu.b boot-bmp.b chain.b os2_d.b mbr.b mbr2.b
+ 
+ .SUFFIXES:	.img .b .com .S .s
+ 
+-all:	lilo bootsect.b disk.com pseudo.b  # $(BOOTS) edit dparam.com activate
++all:	lilo bootsect.b disk.com pseudo.b  $(BOOTS) # edit dparam.com activate
+ 	if [ -x /usr/bin/bcc -o -x /usr/local/bin/bcc ]; then make diagnostic; fi
+ 
+ #

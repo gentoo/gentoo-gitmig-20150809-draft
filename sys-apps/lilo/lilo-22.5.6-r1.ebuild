@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-22.5.6.ebuild,v 1.2 2003/07/11 06:24:29 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/lilo-22.5.6-r1.ebuild,v 1.1 2003/07/14 09:12:32 phosphan Exp $
 
 inherit mount-boot eutils
 
@@ -23,11 +23,8 @@ PROVIDE="virtual/bootloader"
 src_unpack() {
 	unpack ${P}.tar.gz || die
 	cd ${S}
+	patch -p0 < ${FILESDIR}/dot-b-files.patch || die "patch failed"
 
-	# Get all the loaders to install
-#	cp Makefile Makefile.orig
-#	sed -e 's:# $(BOOTS): $(BOOTS):' Makefile.orig > Makefile
-	
 	# This bootlogo patch is borrowed from SuSE Linux.
 	# You should see Raphaël Quinet's (quinet@gamers.org) website,
 	# http://www.gamers.org/~quinet/lilo/index.html
@@ -38,7 +35,7 @@ src_compile() {
 	[ -z "${CC}" ] && CC="gcc"
 
 	emake CC="${CC}" OPT="-O1" \
-		lilo bootsect.b edit activate \
+		lilo edit activate \
 		$(grep '^BOOTS' Makefile | sed -e 's:^BOOTS=::') || die
 }
 
@@ -175,7 +172,9 @@ pkg_postinst() {
 		if lilocheck
 		then
 			einfo "Running LILO to complete the install ..."
-			/sbin/lilo &> /dev/null
+			# do not redirect to /dev/null because it may display some input
+			# prompt
+			/sbin/lilo 
 			if [ "$?" -ne 0 ]
 			then
 				echo
