@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 079c49d01d3acc881b54b90ce138e0c0 ChangeLog 3592
-MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
-MD5 a97c311f84054823768b6a575bb1967e htmltidy-4.8.6.ebuild 2530
+MD5 95a661a8aedb59fb6fc1ac61d7a57c71 ChangeLog 3691
+MD5 8690c5055294018956d39a53e9aac8b2 htmltidy-4.8.6.ebuild 2533
 MD5 de1eaa439d32075bd4a0eb92fd87c2e5 htmltidy-3.10.29.ebuild 2524
-MD5 501b4fb1a986d22c54e6e00429ebcf56 files/digest-htmltidy-3.10.29 186
+MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 47ad3e22b233024cc46fa12e2e56656b files/03-html2db-null.patch 4249
 MD5 2fe7c73c1e39e2714ee35931b23b0b22 files/03-htmltidy-docbook.patch 2948
-MD5 77631526ec9513a440167223556fb2f8 files/digest-htmltidy-4.8.6 186
+MD5 501b4fb1a986d22c54e6e00429ebcf56 files/digest-htmltidy-3.10.29 186
 MD5 3e05bf3979c6a34b1b4166a2caee4024 files/04-htmltidy-docbook.patch 2975
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBYAj8VWNWqTUmv+0RApOWAJoDnrPtV8fzdZh++ALpEcti7/D/+gCeMflO
-bpuo7fxT1Jm7NOUYjbaXqX4=
-=xDZR
------END PGP SIGNATURE-----
+MD5 77631526ec9513a440167223556fb2f8 files/digest-htmltidy-4.8.6 186
