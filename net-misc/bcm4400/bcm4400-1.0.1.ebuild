@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/bcm4400/bcm4400-1.0.1.ebuild,v 1.9 2004/06/24 23:36:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/bcm4400/bcm4400-1.0.1.ebuild,v 1.10 2004/07/15 02:39:47 agriffis Exp $
 
 inherit eutils
 
@@ -11,6 +11,7 @@ LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 S=${WORKDIR}/src
 
@@ -34,5 +35,3 @@ src_compile() {
 src_install() {
 	make PREFIX=${D} install || die
 }
-
-
