@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/xscorch/xscorch-0.1.16_rc2.ebuild,v 1.3 2004/02/03 20:35:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/xscorch/xscorch-0.1.16_rc2.ebuild,v 1.4 2004/03/10 21:14:32 wolf31o2 Exp $
 
 inherit eutils games
 
@@ -12,7 +12,7 @@ SRC_URI="http://chaos2.org/xscorch/${PN}-0.1.15.tar.gz
 	http://chaos2.org/xscorch/xscorch-0.1.15-0.1.16pre2.patch.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~alpha"
+KEYWORDS="~x86 ~ppc ~alpha ~amd64"
 SLOT="0"
 
 IUSE="gtk mikmod readline gnome"
