@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.9-r2.ebuild,v 1.1 2004/08/13 12:59:34 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.9-r2.ebuild,v 1.2 2004/08/13 20:06:12 kloeri Exp $
 
 inherit kmod eutils
 
@@ -117,9 +117,9 @@ src_install() {
 	# udev
 		# check Symlink
 		dodir /etc/udev/rules.d/
-		echo 'KERNEL="slamr", NAME="slamr0" > \
+		echo 'KERNEL="slamr", NAME="slamr0"' > \
 			 ${D}/etc/udev/rules.d/55-${PN}.rules
-		echo 'KERNEL="slusb", NAME="slusb0" >> \
+		echo 'KERNEL="slusb", NAME="slusb0"' >> \
 			 ${D}/etc/udev/rules.d/55-${PN}.rules
 		dodir /etc/udev/permissions.d
 		echo 'slamr*:root:dialout:0660' > \
