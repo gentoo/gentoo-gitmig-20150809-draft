@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/memcached-api-php/memcached-api-php-1.0.6-r1.ebuild,v 1.1 2003/07/31 02:33:58 lisa Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/memcached-api-php/memcached-api-php-1.0.6-r1.ebuild,v 1.2 2003/08/08 20:23:42 lisa Exp $
 
 DESCRIPTION="PHP API for memcached"
 
@@ -8,13 +8,11 @@ HOMEPAGE="http://www.danga.com/memcached/"
 SRC_URI="http://www.danga.com/memcached/dist/php-memcached-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
-DEPEND=">=net-www/memcached-1.1.7"
+DEPEND=""
 
-#This RDEPEND is debatable.  It might not even be necessary or wanted
-#But to *run* this you need a PHP interpretter. -lisa (29 jul 03)
-RDEPEND="virtual/php"
+RDEPEND=""
 
 S=${WORKDIR}/php-memcached-${PV}
 
