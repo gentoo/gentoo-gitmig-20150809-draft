@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gnome-spell
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/ChangeLog,v 1.43 2004/03/22 02:48:23 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/ChangeLog,v 1.44 2004/04/24 17:20:48 khai Exp $
+
+  24 Apr 2004; Yi Qiang <khai@gentoo.org> gnome-spell-1.0.5.ebuild:
+  Pushed the gtk24 fix into stable.
 
 *gnome-spell-1.0.5-r2 (22 Mar 2004)
 
