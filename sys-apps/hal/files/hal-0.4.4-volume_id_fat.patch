@@ -1,0 +1,25 @@
+Index: hald/linux/volume_id/volume_id.c
+===================================================================
+RCS file: /cvs/hal/hal/hald/linux/volume_id/volume_id.c,v
+retrieving revision 1.45.2.2
+diff -u -p -r1.45.2.2 volume_id.c
+--- hald/linux/volume_id/volume_id.c	7 Jan 2005 03:26:51 -0000	1.45.2.2
++++ hald/linux/volume_id/volume_id.c	9 Jan 2005 13:04:30 -0000
+@@ -78,7 +78,7 @@
+ /* size of superblock buffer, reiserfs block is at 64k */
+ #define SB_BUFFER_SIZE				0x11000
+ /* size of seek buffer 4k */
+-#define SEEK_BUFFER_SIZE			0x1000
++#define SEEK_BUFFER_SIZE			0x10000
+ 
+ 
+ static void set_label_raw(struct volume_id *id,
+@@ -832,7 +832,7 @@ static int probe_vfat(struct volume_id *
+ 	__u16 dir_entries;
+ 	__u32 sect_count;
+ 	__u16 reserved;
+-	__u16 fat_size;
++	__u32 fat_size;
+ 	__u32 root_cluster;
+ 	__u32 dir_size;
+ 	__u32 cluster_count;

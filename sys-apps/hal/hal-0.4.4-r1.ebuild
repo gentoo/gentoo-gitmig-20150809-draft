@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.4.4.ebuild,v 1.1 2005/01/08 13:18:18 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hal/hal-0.4.4-r1.ebuild,v 1.1 2005/01/09 21:19:44 foser Exp $
 
 inherit eutils python
 
@@ -40,6 +40,10 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-0.4.1-old_storage_policy.patch
 	# support IDE zip drives as floppy
 	epatch ${FILESDIR}/${P}-check_ide_floppy_for_zip_fdi.patch
+	# fix joliet label (#77140)
+	epatch ${FILESDIR}/${P}-iso_label.patch
+	# fix fat on large volumes
+	epatch ${FILESDIR}/${P}-volume_id_fat.patch
 
 }
 
