@@ -1,15 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2.ebuild,v 1.6 2003/09/24 08:39:47 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2.ebuild,v 1.7 2003/10/18 03:25:49 raker Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
 #	theora - package not in portage yet - experimental
 #	tremor - package not in portage yet - experimental
 
-
 inherit gcc
-
 
 IUSE="arts qt ncurses dvd gtk nls 3dfx svga fbcon esd kde X alsa ggi
 	oggvorbis gnome xv oss sdl aalib slp truetype v4l xvid lirc
@@ -21,13 +19,13 @@ HOMEPAGE="http://www.videolan.org/vlc"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~mips ~hppa"
 
 DEPEND="X? ( virtual/x11 )
 	aalib? ( >=media-libs/aalib-1.4_rc4-r2 )
 	alsa? ( >=media-libs/alsa-lib-0.9_rc2 )
 	arts? ( kde-base/kdelibs )
-	dvb? ( media-libs/libdvb
+	dvb? ( media-video/libdvb
 		media-tv/linuxtv-dvb )
 	dvd? ( >=media-libs/libdvdread-0.9.3
 		>=media-libs/libdvdcss-1.2.8
