@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/fxruby
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.5 2003/05/13 12:08:46 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/fxruby/ChangeLog,v 1.6 2003/05/23 11:56:17 twp Exp $
+
+*fxruby-1.0.23 (23 May 2003)
+
+  23 May 2003; Tom Payne <twp@gentoo.org> fxruby-1.0.23.ebuild :
+  Version bump. Added IUSE.
 
 *fxruby-1.0.22 (24 Apr 2003)
 
