@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.223 2004/02/01 06:50:40 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.224 2004/02/01 07:55:04 usata Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -85,6 +85,7 @@ dev-php/PEAR-Log:pear-db - Use the PEAR-DB package
 dev-python/anygui:wxwin - enable wxwin support
 dev-python/skunkweb:apache1 - enable apache1 support if internal server and apache2 support not wanted
 dev-python/wxPython:unicode - enable unicode support (must be enabled in wxGTK as well)
+dev-tex/preview-latex:xemacs - Adds support for XEmacs
 dev-util/eric:idl - Enable omniorb support
 dev-util/glade:gnomedb - Enable gnomedb widgets for Glade.
 dev-util/pbuilder:uml - Enable pbuilder user mode linux support
