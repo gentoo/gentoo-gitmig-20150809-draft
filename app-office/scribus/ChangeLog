@@ -1,6 +1,11 @@
 # ChangeLog for app-office/scribus
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.28 2004/02/09 22:03:48 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/scribus/ChangeLog,v 1.29 2004/02/19 21:12:03 hanno Exp $
+
+*scribus-1.1.5 (19 Feb 2004)
+
+  19 Feb 2004; Hanno Boeck <hanno@gentoo.org> scribus-1.1.5.ebuild:
+  Version bump.
 
   09 Feb 2004; Hanno Boeck <hanno@gentoo.org> scribus-1.1.4.ebuild:
   Mark x86 stable.
