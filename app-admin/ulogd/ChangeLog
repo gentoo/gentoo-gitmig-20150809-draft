@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/ulogd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.20 2004/06/24 21:41:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.21 2004/07/13 16:32:25 aliz Exp $
+
+  13 Jul 2004; Daniel Ahlberg <aliz@gentoo.org> files/ulogd:
+  Rewrote initscript, use killall instead of killproc. Closing #55504.
 
   01 Jun 2004; Aron Griffis <agriffis@gentoo.org> ulogd-0.98.ebuild,
   ulogd-1.01.ebuild, ulogd-1.02.ebuild:

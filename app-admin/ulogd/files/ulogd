@@ -1,47 +1,36 @@
 #!/sbin/runscript
-#
-# chkconfig: - 91 35
-# description: Starts and stops the ulogd daemon
-#
-# pidfile: /var/lock/samba/ulogd.pid
-# config:  /usr/local/etc/ulogd.conf
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/files/ulogd,v 1.2 2004/07/13 16:32:25 aliz Exp $
 
-
-#opts="start stop restart status"
+opts="reload"
 
 depend() {
 	need net
 }
 
-initService() {
-# Avoid using root's TMPDIR
-unset TMPDIR
-
-# Check that ulogd.conf exists.
-[ -f /etc/ulogd.conf ] || exit 0
-
-RETVAL=0
+checkconfig() {
+	if [ ! -e /etc/ulogd.conf ]; then
+		eerror "You need /etc/ulogd.conf"
+		return 1
+	fi
 }
 
 start() {
-	initService
+	checkconfig || return 1
 	ebegin "Starting ulogd"
 	start-stop-daemon --start --quiet --exec /usr/sbin/ulogd >/dev/null 2>&1
 	eend $?
 }	
 
 stop() {
-	initService
 	ebegin "Stopping ulogd"
 	start-stop-daemon --stop --quiet --exec /usr/sbin/ulogd >/dev/null 2>&1
 	eend $?
 }	
 
 reload() {
-	initService
         ebegin "Reloading ulogd.conf file"
-	killproc ulogd -HUP
-	RETVAL=$?
-	echo
-	return $RETVAL
+	killall -HUP ulogd &>/dev/null
+	eend $?
 }	
