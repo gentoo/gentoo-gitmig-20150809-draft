@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/lwp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lwp/ChangeLog,v 1.18 2005/01/03 00:22:56 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lwp/ChangeLog,v 1.19 2005/03/19 13:07:38 kloeri Exp $
+
+  19 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> lwp-1.12.ebuild:
+  Stable on alpha.
 
   03 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
