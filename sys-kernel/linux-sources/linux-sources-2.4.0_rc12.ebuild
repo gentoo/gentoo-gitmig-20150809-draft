@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.0_rc12.ebuild,v 1.1 2000/12/29 17:07:41 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.0_rc12.ebuild,v 1.2 2001/01/04 21:12:14 drobbins Exp $
 
 S=${WORKDIR}/linux
 KV=2.4.0-test12
@@ -76,16 +76,16 @@ src_unpack() {
 	echo '#define mem_map_dec_count(p) atomic_dec(&(p->count))' >> nv.c
 	cat nv.c.orig >> nv.c
 	cd ${S}/extras
-	for x in i2c lm_sensors
-	do
-		echo "Unpacking and applying $x patch..."
-		cd ${S}/extras
-		unpack ${x}-2.5.4.tar.gz
-		cd ${x}-2.5.4
-		mkpatch/mkpatch.pl . ${S} > ${S}/${x}-patch
-		cd ${S}
-		patch -p1 < ${x}-patch
-	done
+#	for x in i2c lm_sensors
+#	do
+#		echo "Unpacking and applying $x patch..."
+#		cd ${S}/extras
+#		unpack ${x}-2.5.4.tar.gz
+#		cd ${x}-2.5.4
+#		mkpatch/mkpatch.pl . ${S} > ${S}/${x}-patch
+#		cd ${S}
+#		patch -p1 < ${x}-patch
+#	done
 	cd ${S}/extras
 #	echo "Applying LVM 0.9 patch..."
 #	one patch will fail, this is OK (it was applied earlier probably by the JFS patch)
@@ -119,8 +119,8 @@ src_compile() {
 	#symlink tweak in place
 	cd ${S}/fs/reiserfs/utils
     try make
-    cd ${S}/lm_sensors-2.5.4
-    try make
+#   cd ${S}/lm_sensors-2.5.4
+#	try make
     if [ "`use jfs`" ]
     then
 	cd ${S}/fs/jfs/utils
