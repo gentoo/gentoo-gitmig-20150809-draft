@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <micke@hallendal.net>
-# $Header: /var/cvsroot/gentoo-x86/app-office/mrproject/mrproject-0.4.0.ebuild,v 1.1 2001/09/22 00:35:23 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mrproject/mrproject-0.4.0.ebuild,v 1.2 2001/09/28 11:08:45 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -11,7 +11,7 @@ HOMEPAGE="http://mrproject.codefactory.se/"
 
 RDEPEND=">=media-libs/gdk-pixbuf-0.8.0
 	 >=gnome-base/ORBit-0.5.7
-         >=gnome-base/gal-0.11.2
+         >=gnome-base/gal-0.12
 	 >=gnome-base/bonobo-1.0.7
 	 >=gnome-base/libglade-0.14
 	 >=gnome-base/libxml-1.8.14
