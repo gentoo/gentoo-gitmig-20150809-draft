@@ -1,6 +1,12 @@
 # ChangeLog for gnustep-apps/gnumail
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/ChangeLog,v 1.13 2005/01/10 16:23:48 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-apps/gnumail/ChangeLog,v 1.14 2005/01/18 21:59:15 fafhrd Exp $
+
+*gnumail-1.2.0_pre20050106-r1 (18 Jan 2005)
+
+  18 Jan 2005; Armando Di Cianno <fafhrd@gentoo.org>
+  +files/Emoticon-dont-break-C.patch, +gnumail-1.2.0_pre20050106-r1.ebuild:
+  Fixed emoticon bundle that would mangle some embedded C/C++/ObjC code
 
 *gnumail-1.2.0_pre20050106 (10 Jan 2005)
 
