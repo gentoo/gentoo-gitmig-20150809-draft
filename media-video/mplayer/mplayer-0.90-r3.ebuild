@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90-r3.ebuild,v 1.4 2003/07/16 17:16:23 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90-r3.ebuild,v 1.5 2003/07/17 16:23:04 mholzer Exp $
 
 IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb"
 
@@ -71,12 +71,28 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc"
 
-pkg_setup() {
-	if [ "`use svga`" ]
-	then
-		einfo "Modprobing svgalib_helper"
-		modprobe svgalib_helper
+svgalib_helper_setup() {
+	einfo "Compiling svgalib_helper to enable vidix non-root mode."
+	# Unpack source archive and patch Makefile
+	unpack svgalib_helper-1.9.17-mplayer.tar.bz2
+	mv ${WORKDIR}/svgalib_helper ${S}/libdha
+	cd ${S}/libdha
+	mv Makefile Makefile.orig
+	sed -e "s/^#CFLAGS/CFLAGS/" Makefile.orig > Makefile
+
+	# Build svgalib_helper
+	cd svgalib_helper
+	make
+
+	# Modprobe svgalib_helper
+	if([ "`grep '^svgalib_helper' /proc/modules`" ]) ; then
+		ewarn "Unloading already loaded svgalib_helper"
+		modprobe -r svgalib_helper
 	fi
+	ewarn "Modprobing svgalib_helper"
+	addwrite /proc/sys/kernel/tainted
+	insmod svgalib_helper.o		
+	cd ${WORKDIR}
 }
 
 src_unpack() {
@@ -85,12 +101,7 @@ src_unpack() {
 
 	if [ "`use svga`" ]
 	then
-		unpack svgalib_helper-1.9.17-mplayer.tar.bz2
-		mv ${WORKDIR}/svgalib_helper ${S}/libdha
-		cd ${S}/libdha
-		mv Makefile Makefile.orig
-		sed -e "s/^#CFLAGS/CFLAGS/" Makefile.orig > Makefile
-		cd ${WORKDIR}
+		svgalib_helper_setup
 	fi
 
 	use truetype || \
