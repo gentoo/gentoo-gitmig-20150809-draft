@@ -1,7 +1,12 @@
 # ChangeLog for net-mail/pop3vscan
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # AUTHOR: José Alberto Suárez López <bass@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pop3vscan/ChangeLog,v 1.5 2003/03/11 22:14:14 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pop3vscan/ChangeLog,v 1.6 2003/12/07 03:02:57 wesolows Exp $
+
+  06 Dec 2003; Keith M Wesolowski <wesolows@gentoo.org> pop3vscan-0.4.ebuild:
+  Remove prebuilt x86 binaries so it can build on other platforms.
+  Depend on pcre since it won't build without it.
+
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 
