@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.20.5.ebuild,v 1.11 2004/10/17 21:44:41 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/fop-0.20.5.ebuild,v 1.12 2004/12/14 15:17:51 axxo Exp $
 
 inherit java-pkg
 
@@ -23,8 +23,8 @@ S=${WORKDIR}/${P/_/}
 src_unpack() {
 	unpack ${A}
 	cd ${S}/lib
-	jai && java-pkg_jar-from jai-bin
-	jimi && java-pkg_jar-from jimi
+	use jai && java-pkg_jar-from jai-bin
+	use jimi && java-pkg_jar-from jimi
 }
 
 src_compile() {
