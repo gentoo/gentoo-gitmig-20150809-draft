@@ -1,4 +1,6 @@
+MD5 9c6a6446bf61be764069141fa1d5f807 xfce4-base-4.0.1.ebuild 1210
 MD5 f5191fc253858023db937bf80fbe3e43 xfce4-base-4.0.0.ebuild 1207
 MD5 f6052d1b143d396b4bce20e1caa6ee75 ChangeLog 487
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-xfce4-base-4.0.0 0
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-xfce4-base-4.0.1 0
