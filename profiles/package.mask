@@ -41,10 +41,6 @@ games-fps/enemy-territory
 =kde-base/kdenetwork-3.2.0_alpha1
 =kde-base/kdepim-3.2.0_alpha1
 =kde-base/arts-1.2.0_alpha1
-=app-doc/kdelibs-apidocs-3.1.4
-=kde-base/kdelibs-3.1.4
-=kde-base/kdebase-3.1.4
-=kde-base/arts-1.1.4
 
 # <foser@gentoo.org> (07 Sept 2003)
 # Gnome 2.4 RC mask
