@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/cdw-0.2.0_pre3.ebuild,v 1.2 2003/11/03 19:55:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdw/cdw-0.2.0_pre3.ebuild,v 1.3 2004/03/12 12:02:37 mr_bones_ Exp $
 
 DESCRIPTION="gtk2 and ncurses-based console frontend to cdrecord and mkisofs"
 HOMEPAGE="http://cdw.sourceforge.net"

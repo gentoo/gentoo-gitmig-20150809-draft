@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc., 2002-2003 Mike Frysinger
+# Copyright 1999-2004 Gentoo Technologies, Inc., 2002-2003 Mike Frysinger
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/cdemu-0.6_beta.ebuild,v 1.1 2004/03/10 21:49:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/cdemu-0.6_beta.ebuild,v 1.2 2004/03/12 12:02:37 mr_bones_ Exp $
 
 inherit gcc flag-o-matic python
 
