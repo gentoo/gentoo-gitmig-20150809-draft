@@ -1,8 +1,11 @@
 # ChangeLog for net-irc/epic4
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.26 2004/01/03 17:40:05 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.27 2004/01/11 23:08:46 gmsoft Exp $
 
 *epic4-1.1.16-r1 (03 Jan 2004)
+
+  11 Jan 2003; Guy martin <gmsoft@gentoo.org> epic4-1.1.16-r1.ebuild :
+  Marked stable on hppa.
 
   03 Jan 2004; Chuck Short <zul@gentoo.org> epic4-1.1.10.ebuild,
   epic4-1.1.11.ebuild, epic4-1.1.12.ebuild, epic4-1.1.14-r1.ebuild,
