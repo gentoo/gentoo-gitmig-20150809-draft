@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xft/xft-2.0.1-r1.ebuild,v 1.6 2003/02/04 18:13:25 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xft/xft-2.0.1-r1.ebuild,v 1.7 2003/02/08 12:07:21 weeve Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://fontconfig.org/"
 
 LICENSE="fontconfig"
 SLOT="0"
-KEYWORDS="~x86 ~ppc alpha ~sparc"
+KEYWORDS="~x86 ~ppc alpha sparc"
 
 RDEPEND="x11-base/xfree
 	>=media-libs/fontconfig-2.1-r1"
