@@ -1,12 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: system@gentoo.org
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.9-r2.ebuild,v 1.3 2002/04/16 03:49:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/DirectFB/DirectFB-0.9.9-r2.ebuild,v 1.4 2002/04/16 04:51:05 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="DirectFB is a thin library on top of the Linux framebuffer devices"
-SRC_URI="http://www.directfb.org/download/DirectFB/${P}.tar.gz
-	mpeg? http://heroinewarrior.com/libmpeg3-1.5.tar.gz"
+SRC_URI="http://www.directfb.org/download/DirectFB/${P}.tar.gz"
 HOMEPAGE="http://www.directfb.org"
 
 DEPEND="sys-devel/perl
@@ -22,13 +21,6 @@ RDEPEND="${DEPEND}"
 
 src_compile() {
 	
-	# If user wants libmpeg3 support, then compile that first
-	use mpeg && ( \
-		cd ${WORKDIR}/libmpeg3
-		make
-		cd ${S}
-	)
-
 	local myconf
 	
 	use mmx	\
@@ -44,7 +36,7 @@ src_compile() {
 	myconf="${myconf} --disable-avifile"
     
 	use mpeg \
-		&& myconf="${myconf} --with-libmpeg3=${WORKDIR}/libmpeg3" \
+		&& myconf="${myconf} --with-libmpeg3=/usr/include/libmpeg3" \
 		|| myconf="${myconf} --disable-libmpeg3"
 
 	use jpeg \
@@ -63,16 +55,15 @@ src_compile() {
 		&& myconf="${myconf} --enable-freetype" \
 		|| myconf="${myconf} --disable-freetype"
 	
-	if [ "$DEBUG" ] ; then
-      myconf="${myconf} --enable-debug"
-    else
-      myconf="${myconf} --disable-debug"
-    fi
-
-	
     ./configure	\
 		--prefix=/usr \
 		${myconf} || die
+
+	use mpeg && ( \
+		cd ${S}/interfaces/IDirectFBVideoProvider
+		patch < ${FILESDIR}/${PN}-gentoo-patch Makefile
+		cd ${S}
+	)
 
 	make || die
 
