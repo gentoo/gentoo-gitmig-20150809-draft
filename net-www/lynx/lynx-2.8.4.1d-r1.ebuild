@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/lynx-2.8.4.1d-r1.ebuild,v 1.4 2003/09/18 17:51:59 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/lynx/lynx-2.8.4.1d-r1.ebuild,v 1.5 2004/01/19 13:14:30 aliz Exp $
 
 IUSE="ssl nls ipv6"
 
@@ -8,12 +8,12 @@ MY_PV=${PV/.1d/rel.1}
 S=${WORKDIR}/${PN}2-8-4
 DESCRIPTION="An excellent console-based web browser with ssl support"
 HOMEPAGE="http://lynx.browser.org/"
-SRC_URI="ftp://lynx.isc.org/${PN}/${PN}2.8.4/${PN}${MY_PV}.tar.bz2
+SRC_URI="ftp://lynx.isc.org/lynx/${PN}2.8.4/${PN}${MY_PV}.tar.bz2
 	ftp://lynx.isc.org/lynx/lynx2.8.4/patches/${PN}${MY_PV}a.patch
 	ftp://lynx.isc.org/lynx/lynx2.8.4/patches/${PN}${MY_PV}b.patch
 	ftp://lynx.isc.org/lynx/lynx2.8.4/patches/${PN}${MY_PV}c.patch
 	ftp://lynx.isc.org/lynx/lynx2.8.4/patches/${PN}${MY_PV}d.patch"
-KEYWORDS="~x86 ppc ~sparc alpha hppa ~mips ia64"
+KEYWORDS="~x86 ppc ~sparc alpha hppa ~mips ia64 ~amd64"
 SLOT="0"
 LICENSE="GPL-2"
 
@@ -28,15 +28,15 @@ src_unpack() {
 	unpack ${PN}${MY_PV}.tar.bz2
 	cd ${S}
 
-	patch -p1 < ${DISTDIR}/${PN}${MY_PV}a.patch || die
-	patch -p1 < ${DISTDIR}/${PN}${MY_PV}b.patch || die
-	patch -p1 < ${DISTDIR}/${PN}${MY_PV}c.patch || die
-	patch -p1 < ${DISTDIR}/${PN}${MY_PV}d.patch || die
+	epatch ${DISTDIR}/${PN}${MY_PV}a.patch
+	epatch ${DISTDIR}/${PN}${MY_PV}b.patch
+	epatch ${DISTDIR}/${PN}${MY_PV}c.patch
+	epatch ${DISTDIR}/${PN}${MY_PV}d.patch
 
 	# GCC3.1 support -- check if it's really needed in
 	# future. Some users report complete success with -r3 --
 	# credit to lostlogix and carpaski. Resolves #3172
-	patch -p0 < ${FILESDIR}/${P}-gentoo.patch || die
+	epatch ${FILESDIR}/${P}-gentoo.patch
 }
 
 src_compile() {
