@@ -1,5 +1,5 @@
-MD5 60b64f375bec2c1e3a5592073f798a3e bc-1.06-r5.ebuild 1923
-MD5 0aa322b4bb144a476dbdd3172e7987bd ChangeLog 1872
+MD5 b468e7093ce904cbb9dc3b48db66c9d2 bc-1.06-r5.ebuild 1924
+MD5 7525c5f10a77a587bad7fcc7d97e9a15 ChangeLog 1969
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 c6bc9e8c6698c429c778901b2d353c3f files/bc-1.06-info-fix.diff 3182
 MD5 ab5dc8993a9b72c7a4f4160c6a6348ac files/digest-bc-1.06-r5 59
