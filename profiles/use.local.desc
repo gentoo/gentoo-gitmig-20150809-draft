@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.640 2004/09/23 15:03:13 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.641 2004/09/24 23:30:18 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -222,6 +222,8 @@ dev-util/eric:idl - Enable omniorb support
 dev-util/glade:gnomedb - Enable gnomedb widgets for Glade.
 dev-util/monodevelop:nptl - Enable or disable nptl support (mainly for mono-debugger)
 dev-util/pbuilder:uml - Enable pbuilder user mode linux support
+dev-util/xmingw-gcc:f77 - Build support for the f77 language
+dev-util/xmingw-gcc:gcj - Build gcj (java compiler included with gcc package)
 games-action/d2x:cdinstall - Enables copying files from the CD
 games-arcade/tuxracer:stencil-buffer - Enables use of stencil-buffer
 games-board/crafty:no-opts - Don't try to enable crazy CFLAG options
@@ -248,22 +250,22 @@ games-strategy/wesnoth:server - Enable compilation of server
 games-strategy/wesnoth:tools - Enable compilation of translation tools
 games-util/aabrowse:geoip - lookup countries by IP addresses via the GeoIP library
 games-util/xqf:geoip - Add geoip support
-gnome-base/gnome:hal - Enable Hardware Abstraction Layer (HAL) support
 gnome-base/gnome-panel:eds - Enable Evolution Data Server (EDS) support
 gnome-base/gnome-vfs:hal - Enable Hardware Abstraction Layer (HAL) support
-gnome-extra/nautilus-cd-burner:hal - Enable Hardware Abstraction Layer (HAL) support
+gnome-base/gnome:hal - Enable Hardware Abstraction Layer (HAL) support
 gnome-extra/libgda:mdb - Enable Microsoft Access DB support for GnomeDB.
+gnome-extra/nautilus-cd-burner:hal - Enable Hardware Abstraction Layer (HAL) support
 gnustep-apps/gnumail:emoticon - Enable extra Emoticon Bundle to see smiley's in e-mail messages.
 gnustep-apps/gworkspace:imagekits - Enable support for ImageKits Bundle (mainly for PDF previewing)
 gnustep-base/gnustep-back-art:xim - Enable X11 XiM input method
 gnustep-base/gnustep-back-xlib:xim - Enable X11 XiM input method
 gnustep-base/gnustep-gui:gsnd - Enable GNUstep sound server
 kde-base/arts:artswrappersuid - Set artswrapper suid for realtime playing, which is a security hazard
-kde-base/kdeartwork:xscreensaver - Builds xscreensavers as compile time
 kde-base/kdeadmin:foreign-package - Enable building of kpackage, which manages rpm and deb stuff
 kde-base/kdeadmin:foreign-sysvinit - Enable building of ksysv, which manages SysV-style initscripts
-kde-base/kdegraphics:povray - Enable povray dependency - needed for kpovmodeler
+kde-base/kdeartwork:xscreensaver - Builds xscreensavers as compile time
 kde-base/kdegraphics:jpeg2k - Enable support for jpeg2k (jasper)
+kde-base/kdegraphics:povray - Enable povray dependency - needed for kpovmodeler
 kde-base/kdemultimedia:cdparanoia - Enables build support for the cdparanoia package
 kde-base/kdenetwork:wifi - Enable wireless network functions in kde
 kde-base/kdepim:gnokii - Enable address synchronization with mobile phones with gnokii
@@ -560,10 +562,10 @@ sys-kernel/wolk-sources:wolk-bootsplash - If you want WOLK's own bootsplash patc
 sys-kernel/wolk-sources:wolk-supermount - If you want to use supermount (deprecated)
 sys-libs/glibc:erandom - Enable erandom/frandom support in glibc for ssp
 sys-libs/glibc:makecheck - makes glibc perform a 'make check' before merging and prevents it from installing unless all the tests pass
-sys-libs/glibc:nptl - If you want the Native POSIX Threading Library built into glibc.
-sys-libs/glibc:userlocales - build only the locales specified in /etc/locales.build
 sys-libs/glibc:n32 - Enable n32 ABI support on mips
 sys-libs/glibc:n64 - Enable n64 ABI support on mips
+sys-libs/glibc:nptl - If you want the Native POSIX Threading Library built into glibc.
+sys-libs/glibc:userlocales - build only the locales specified in /etc/locales.build
 sys-libs/pam:pwdb - If you want pam_pwdb.so installed to use pwdb as passwd db
 www-apps/horde-passwd:clearpasswd - Enables cleartext password storage in the vpopmail files
 www-apps/nut:cgi - Add CGI script support
