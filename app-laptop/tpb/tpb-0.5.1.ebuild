@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpb/tpb-0.5.1.ebuild,v 1.2 2004/04/06 04:07:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/tpb/tpb-0.5.1.ebuild,v 1.3 2004/04/25 22:12:18 agriffis Exp $
 
 inherit eutils
 
@@ -22,7 +22,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf `use_enable X xosd` `use_enable nls`
+	econf `use_enable X xosd` `use_enable nls` || die "econf failed"
 
 	emake || die
 }
