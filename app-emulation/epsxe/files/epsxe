@@ -1,0 +1,30 @@
+#!/bin/sh
+
+if [ ! -f ~/.epsxe ]; then
+	echo You are running ePSXe for the first time.
+	echo Setting up your ePSXe environment... Please wait...
+	
+	mkdir -p $HOME/.epsxe
+	cd $HOME/.epsxe
+	mkdir memcards bios cfg cheats snap sstates patches plugins
+
+	ln -s /usr/lib/psemu/plugins/* plugins/
+	ln -s /opt/epsxe/epsxe epsxe
+
+	cd bios
+	if [ -f /usr/lib/psemu/bios/scph1001.bin ]; then
+		ln -s /usr/lib/psemu/bios/scph1001.bin .
+	else
+		wget http://aral3uz.tripod.com/sc.zip
+		unzip -L sc.zip
+		rm -f sc.zip
+	fi
+fi
+
+cd $HOME/.epsxe
+
+ln -s /usr/lib/psemu/plugins/* plugins/
+ln -s /usr/lib/psemu/cfg/* cfg/
+ln -s /usr/lib/psemu/cheats/* cheats/
+
+./epsxe
