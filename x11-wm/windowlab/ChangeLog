@@ -1,0 +1,10 @@
+# ChangeLog for x11-wm/windowlab
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowlab/ChangeLog,v 1.1 2003/06/20 18:14:43 mkeadle Exp $
+
+*windowlab-1.07 (20 Jun 2003)
+
+  20 Jun 2003; mkeadle <mkeadle@gentoo.org> windowlab-1.07.ebuild:
+  initial import. thank go to Bjorn Lindstrom <bkhl@privat.utfors.se> for the
+  ebuild submission in bug #17617.
+
