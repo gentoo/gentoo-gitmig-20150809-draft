@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/pgeasy
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgeasy/ChangeLog,v 1.2 2003/07/11 21:04:13 aliz Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgeasy/ChangeLog,v 1.3 2004/03/14 13:18:38 mr_bones_ Exp $
+
+  14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> pgeasy-3.0.1.ebuild:
+  Don't assign default to S; header fix
 
 *pgeasy-3.0.1 (04 Apr 2003)
 
