@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.8 2003/04/13 13:11:40 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.9 2003/04/13 13:16:35 seemant Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -503,11 +503,11 @@ src_install() {
 	# Change the silly red pointer to a white one ...
 	if [ -f "${D}/usr/X11R6/lib/X11/icons/default/index.theme" ]
 	then
-		dosed 's:redglass:whiteglass:' /usr/X11R6/lib/X11/icons/default/index.theme
+		dosed 's:core:whiteglass:' /usr/X11R6/lib/X11/icons/default/index.theme
 	
 	elif [ -f "${D}/usr/share/cursors/xfree/default/index.theme" ]
 	then
-		dosed 's:redglass:whiteglass:'/usr/share/cursors/xfree/default/index.theme
+		dosed 's:core:whiteglass:'/usr/share/cursors/xfree/default/index.theme
 	fi
 
 	# Standard symlinks
@@ -695,10 +695,6 @@ src_install() {
 		fi
 	done
 
-	ebegin "Setting Default Cursor Theme to whiteglass"
-	sed -i "s:core:whiteglass:" \
-		${D}/usr/share/cursors/xfree/default/index.theme
-	eend 0
 }
 
 pkg_preinst() {
