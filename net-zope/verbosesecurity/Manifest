@@ -1,4 +1,14 @@
-MD5 69fa42eab601daf3d5a5b848798d8f8e verbosesecurity-0.5.ebuild 934
-MD5 4ad9fe8e29097b66a5282560b927c9e9 ChangeLog 403
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9dedb207404d2a3d68ea96affb4e22bf ChangeLog 530
 MD5 7890d88c5c6d189fbe6b187a3ebb6532 metadata.xml 161
+MD5 f478c2888485e8ce6a59b276c4660bdd verbosesecurity-0.5.ebuild 796
 MD5 b22a0d364d55fc3174c3b211d67b1dc0 files/digest-verbosesecurity-0.5 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBO7RNLLFUmVNQ7rkRAnCYAKCvu3lI1DSkzuHNF6ZFmfG4A5I3wACgpBii
+b9xO3LIhzDlyOtnROjLMvvg=
+=ybB1
+-----END PGP SIGNATURE-----
