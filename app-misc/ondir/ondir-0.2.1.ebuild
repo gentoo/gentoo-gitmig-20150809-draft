@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ondir/ondir-0.2.1.ebuild,v 1.5 2004/06/28 04:06:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ondir/ondir-0.2.1.ebuild,v 1.6 2004/07/10 14:45:53 slarti Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://ondir.sourceforge.net/${PV}/ondir-${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 IUSE=""
 
 DEPEND=""
