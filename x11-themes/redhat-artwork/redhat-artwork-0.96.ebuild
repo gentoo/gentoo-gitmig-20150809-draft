@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.96.ebuild,v 1.9 2004/11/07 19:54:05 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.96.ebuild,v 1.10 2004/12/28 11:24:26 mr_bones_ Exp $
 
 inherit eutils rpm
 
@@ -182,4 +182,3 @@ src_install () {
 	cd ${S}
 	dodoc AUTHORS NEWS README ChangeLog
 }
-

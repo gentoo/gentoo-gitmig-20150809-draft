@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.120.1.2.ebuild,v 1.1 2004/12/20 18:24:37 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.120.1.2.ebuild,v 1.2 2004/12/28 11:24:26 mr_bones_ Exp $
 
 inherit eutils rpm libtool versionator
 
@@ -101,7 +101,7 @@ src_compile() {
 	)
 
 	if ! use kde || ! use gtk ; then
-		aclocal 
+		aclocal
 		libtoolize --copy --force
 		autoconf && automake --add-missing || die "auto* failed"
 	fi
@@ -187,4 +187,3 @@ src_install () {
 	cd ${S}
 	dodoc AUTHORS NEWS README ChangeLog
 }
-
