@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 98d7b5bc80d5893bdde23612845358e1 ChangeLog 4656
-MD5 e7e8912bc8096114347c8e0dbcf56831 dcron-2.9-r2.ebuild 1812
+MD5 ea9cef28a9b389a91dfa9d141d930edd dcron-2.9-r2.ebuild 1829
 MD5 d0dad7daa0e6d356fc35f778fed36006 metadata.xml 225
 MD5 562feacfdde7b16558e57b142a98326f files/crontab 824
 MD5 bedf02492e4cc8875b735c6a4bcdd272 files/dcron 614
 MD5 932978359b7a3b3a2d29a96827ceca83 files/dcron-2.7-Makefile-gentoo.diff 534
 MD5 a82da32a58b097ea2ccd1b7a4aed72f3 files/dcron-2.9-ldflags.patch 590
 MD5 2db10e843ecdf10a2b3aa5f70322310b files/digest-dcron-2.9-r2 55
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBYprXHTu7gpaalycRAu8mAKCLKbsl/Cic+8GkV0vtx9H2X4LG4gCgpBlT
-Vx2JVUdukJlaXRPRCG6XgUU=
-=PM2O
------END PGP SIGNATURE-----

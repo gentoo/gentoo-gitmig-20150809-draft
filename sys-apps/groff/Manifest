@@ -1,10 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 c6f0bec2c536e327415b376b5eb527d9 ChangeLog 6458
+MD5 6095957ce1651ff7d72b6c285cddfbd9 groff-1.18.1-r4.ebuild 3140
+MD5 34bd5bc3f8f3ad9c7538351de5a3a4b6 groff-1.19.1-r1.ebuild 3067
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 0731e5193754b6fcbc962d13f0eef29b groff-1.18.1-r4.ebuild 3146
-MD5 31d752b8c3432c0d30aed0d2636dc0e0 groff-1.19.1-r1.ebuild 3057
 MD5 c43ddaf604dd389afc6107d79b90ce6c files/groff-1.18-infoext.patch 673
 MD5 ab6a81383557e8cf8eed1e9b15d45540 files/groff-1.18-no-netpbm-depend.patch 367
 MD5 98060417290f3c427f5a3406b21f8da9 files/groff-1.18.1-no-color-segfault.patch 896
@@ -13,10 +10,3 @@ MD5 a94a3de58bb54769a2793e1f8602a618 files/groff_1.18.1-7-fix.patch 551
 MD5 b887e99fa5e1252f1bf827af9892a238 files/digest-groff-1.18.1-r4 132
 MD5 b79e74dab8ceadf74f153032ad30eea3 files/digest-groff-1.19.1-r1 65
 MD5 b70471bdc7015ddf030d176b3a0f2d5f files/groff-1.19.1-stack.patch 3659
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBYTvOHTu7gpaalycRAiblAJ0blWrJJHRsHMGKEfZq+wfSoSHPUACdEI7u
-ww4DGnA63oXuJWLgeGtqluE=
-=RvSv
------END PGP SIGNATURE-----
