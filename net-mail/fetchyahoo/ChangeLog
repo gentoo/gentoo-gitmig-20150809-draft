@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/fetchyahoo
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchyahoo/ChangeLog,v 1.13 2004/06/25 01:21:13 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchyahoo/ChangeLog,v 1.14 2004/07/07 01:09:27 kanaka Exp $
+
+  06 Jul 2004; Joel Martin <kanaka@gentoo.org> fetchyahoo-2.8.2.ebuild:
+  Marked 2.82 stable on x86. Only in tree for 2 weeks, but no bugs and this
+  should be moved to stable faster than normal because of nature of ebuild.
 
 *fetchyahoo-2.8.2 (24 Jun 2004)
 
