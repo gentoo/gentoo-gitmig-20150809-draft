@@ -1,0 +1,10 @@
+--- drivers/net/sunhme.c.orig	Mon Jul 15 02:38:27 2002
++++ drivers/net/sunhme.c	Mon Jul 15 03:09:03 2002
+@@ -1983,6 +1983,7 @@
+ 	}
+ 	hp->tx_old = elem;
+ 	TXD((">"));
++	udelay(1);
+ 
+ 	if (netif_queue_stopped(dev) &&
+ 	    TX_BUFFS_AVAIL(hp) > (MAX_SKB_FRAGS + 1))
