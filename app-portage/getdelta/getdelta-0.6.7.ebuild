@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/getdelta/getdelta-0.6.7.ebuild,v 1.1 2005/03/05 09:34:04 genstef Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/app-portage/getdelta/getdelta-0.6.7.ebuild,v 1.2 2005/03/05 09:46:05 genstef Exp $
 
 DESCRIPTION="dynamic deltup client"
 RESTRICT="nomirror"
