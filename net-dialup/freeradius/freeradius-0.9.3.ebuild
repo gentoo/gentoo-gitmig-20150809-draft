@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-0.9.3.ebuild,v 1.5 2004/03/06 12:52:35 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-0.9.3.ebuild,v 1.6 2004/06/09 19:25:40 agriffis Exp $
 
 IUSE="snmp mysql postgres ldap kerberos ssl pam"
 
@@ -38,36 +38,36 @@ src_unpack() {
 src_compile() {
 	local myconf=""
 
-	if [ -z "`use snmp`" ]; then
+	if ! use snmp; then
 		myconf="--without-snmp"
 	fi
-	if [ "`use frascend`" ]; then
+	if use frascend; then
 		myconf="${myconf} --with-ascend-binary"
 	fi
-	if [ "`use frlargefiles`" ]; then
+	if use frlargefiles; then
 		myconf="${myconf} --with-large-files"
 	fi
-	if [ "`use frnothreds`" ]; then
+	if use frnothreds; then
 		myconf="${myconf} --without-threads"
 	fi
-	if [ "`use frxp`" ]; then
+	if use frxp; then
 		myconf="${myconf} --with-experimental-modules"
 	fi
 
 	# kill modules we don't use
-	if [ -z "`use ssl`" ]; then
+	if ! use ssl; then
 		einfo "removing rlm_eap_tls and rlm_x99_token (no use ssl)"
 		rm -rf src/modules/rlm_eap/types/rlm_eap_tls src/modules/rlm_x99_token
 	fi
-	if [ -z "`use ldap`" ]; then
+	if ! use ldap; then
 		einfo "removing rlm_ldap (no use ldap)"
 		rm -rf src/modules/rlm_ldap
 	fi
-	if [ -z "`use kerberos`" ]; then
+	if ! use kerberos; then
 		einfo "removing rlm_krb5 (no use kerberos)"
 		rm -rf src/modules/rlm_krb5
 	fi
-	if [ -z "`use pam`" ]; then
+	if ! use pam; then
 		einfo "removing rlm_pam (no use pam)"
 		rm -rf src/modules/rlm_pam
 	fi
