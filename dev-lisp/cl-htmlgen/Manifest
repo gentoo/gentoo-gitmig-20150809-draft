@@ -2,9 +2,9 @@ MD5 873aa6af102faa04e1f8e7535e554c1e cl-htmlgen-1.2.35.20040609.ebuild 945
 MD5 7f036d2c57f3a5fa31715a4106bd7dfd cl-htmlgen-1.2.33.20040118.ebuild 940
 MD5 3a83cb73c6492f2cccde58f787928e4c cl-htmlgen-1.2.27.20030919.ebuild 977
 MD5 89bdc6e6a54aad460dec09e4ea39fdba cl-htmlgen-1.2.35.20040426.ebuild 945
-MD5 873aa6af102faa04e1f8e7535e554c1e cl-htmlgen-1.2.35.20040804.ebuild 945
+MD5 3e293f6c96f0afd542864c53453c2208 cl-htmlgen-1.2.35.20040804.ebuild 945
 MD5 9c011d51d090d4503a47cbc3f6cadb4d cl-htmlgen-1.2.33.20031205.ebuild 977
-MD5 fd24c3b5763d833b9de227c934abfa1f ChangeLog 1373
+MD5 209fdd841dfd549e3e5ebce0cf7a471f ChangeLog 1599
 MD5 bfd863c89a614c123c4fbd67c4ed0e0c cl-htmlgen-1.2.35.20040316b.ebuild 941
 MD5 298d6eb1cbd712a0b8ce12c9e5f3f6d8 cl-htmlgen-1.2.12c.ebuild 810
 MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
