@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/powertweak-0.99.5-r1.ebuild,v 1.3 2004/05/31 19:21:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/powertweak-0.99.5-r1.ebuild,v 1.4 2004/06/06 02:56:05 dragonheart Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/powertweak/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc -sparc -alpha"
+KEYWORDS="x86 ~ppc -sparc -alpha"
 IUSE="gtk"
 
 DEPEND="gtk? ( =x11-libs/gtk+-1.2* )

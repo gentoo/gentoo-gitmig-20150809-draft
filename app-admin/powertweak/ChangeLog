@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/powertweak
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/ChangeLog,v 1.16 2004/05/12 04:58:49 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/powertweak/ChangeLog,v 1.17 2004/06/06 02:56:05 dragonheart Exp $
+
+  06 Jun 2004; Daniel Black <dragonheart@gentoo.org> powertweak-0.99.5-r1.ebuild:
+  x86 keyword
 
   12 May 2004; Daniel Black <dragonheart@gentoo.org> files/powertweakd.rc6:
   Fixed initscript to insert module as required. Bug #48837 by Rico Schiekel
