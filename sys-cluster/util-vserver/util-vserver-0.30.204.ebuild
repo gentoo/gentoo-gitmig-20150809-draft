@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.204.ebuild,v 1.2 2005/02/26 09:16:29 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/util-vserver-0.30.204.ebuild,v 1.3 2005/02/26 09:36:09 hollow Exp $
 
 inherit eutils
 
@@ -15,7 +15,8 @@ KEYWORDS="~x86"
 IUSE=""
 DEPEND=">=dev-libs/dietlibc-0.26-r1
 	sys-apps/iproute2
-	net-misc/vconfig"
+	net-misc/vconfig
+	net-firewall/iptables"
 
 src_compile() {
 	local myconf="--localstatedir=/var --with-initrddir=/etc/init.d"
@@ -27,11 +28,10 @@ src_compile() {
 src_install() {
 	emake DESTDIR=${D} install || die "install failed"
 
-	# keep state dir
+	# keep dirs
 	keepdir /var/run/vservers
 	keepdir /var/lock/vservers
-
-	# keep & secure /vservers
+	keepdir /var/run/vshelper
 	keepdir /vservers
 	fperms 000 /vservers
 
@@ -40,18 +40,11 @@ src_install() {
 
 	# and install gentoo'ized ones:
 	exeinto /etc/init.d/
-	newexe ${FILESDIR}/${PV}/vservers.initd vservers
+	newexe ${FILESDIR}/0.30.196/vservers.initd vservers
 
 	# install conf.d files
 	insinto /etc/conf.d
-	newins ${FILESDIR}/${PV}/vservers.confd vservers
+	newins ${FILESDIR}/0.30.196/vservers.confd vservers
 
 	dodoc README ChangeLog NEWS AUTHORS INSTALL THANKS util-vserver.spec
-}
-
-pkg_postinst() {
-	einfo
-	einfo "To make use of the tools in this package"
-	einfo "you need to run a vserver-enabled kernel"
-	einfo
 }
