@@ -1,6 +1,13 @@
 # ChangeLog for app-text/pdftk
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/ChangeLog,v 1.1 2004/03/14 18:49:33 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/ChangeLog,v 1.2 2004/06/05 18:34:46 usata Exp $
+
+*pdftk-0.94.1 (06 Jun 2004)
+
+  06 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> pdftk-0.93.ebuild,
+  +pdftk-0.94.1.ebuild:
+  Version bumped. Corrected pkg_setup() message, thanks to antoine
+  marmingnon <antoine.marmingnon@wanadoo.fr>. Closing bug #52898
 
 *pdftk-0.93 (15 Mar 2004)
 

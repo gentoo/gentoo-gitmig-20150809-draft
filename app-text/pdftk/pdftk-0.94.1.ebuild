@@ -1,17 +1,19 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/pdftk-0.93.ebuild,v 1.2 2004/06/05 18:34:46 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pdftk/pdftk-0.94.1.ebuild,v 1.1 2004/06/05 18:34:46 usata Exp $
+
+MY_P="${PN}-${PV%.*}${PV##*.}"	# 0.94.1 -> 0.941
 
 DESCRIPTION="A tool for manipulating PDF documents"
 HOMEPAGE="http://www.accesspdf.com/pdftk"
-SRC_URI="http://www.accesspdf.com/pdftk/${P}.tar.gz"
+SRC_URI="http://www.accesspdf.com/pdftk/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 IUSE=""
 DEPEND="virtual/glibc
 	>=sys-devel/gcc-3.3"
-S=${WORKDIR}/${P}/${PN}
+S=${WORKDIR}/${MY_P}/${PN}
 
 pkg_setup() {
 	if [ -z "$(which gcj 2>/dev/null)" ]; then
@@ -25,7 +27,7 @@ src_unpack() {
 	unpack ${A}
 	# force usage of custom CFLAGS.
 	mv ${S}/Makefile.Generic ${T}/Makefile.Generic.orig
-	sed 's:-O3:\$(CFLAGS):' \
+	sed 's:-O2:\$(CFLAGS):g' \
 		< ${T}/Makefile.Generic.orig > ${S}/Makefile.Generic
 }
 
