@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/lapack-reference
 # Copyright 2004-2004 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-reference/ChangeLog,v 1.1 2004/06/15 02:02:27 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-reference/ChangeLog,v 1.2 2004/06/18 19:02:17 agriffis Exp $
+
+  18 Jun 2004; Aron Griffis <agriffis@gentoo.org> lapack-reference-3.0.ebuild:
+  Fix use invocation
 
   14 Jun 2004; George Shapovalov <george@gentoo.org> lapack-reference-3.0.ebuild, files/{digest-lapack-reference-3.0,f77-reference} :
   initial release (#30463)

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-reference/lapack-reference-3.0.ebuild,v 1.1 2004/06/15 02:02:27 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/lapack-reference/lapack-reference-3.0.ebuild,v 1.2 2004/06/18 19:02:17 agriffis Exp $
 
 inherit eutils
 
@@ -67,7 +67,7 @@ src_compile() {
 	# Library will be installed in RPATH:
 	RPATH=${TOP_PATH}/reference
 
-	if [ "`use ifc`" ]
+	if use ifc
 	then
 		FC="ifc"
 		FFLAGS="${IFCFLAGS}"
@@ -91,7 +91,7 @@ src_compile() {
 		NOOPT="${NOOPT}" \
 		|| die
 
-	if [ "`use ifc`" ]
+	if use ifc
 	then
 		${FC} -shared ${FFLAGS} *.lo ${DEP_LIBS} \
 			-Wl,-soname -Wl,liblapack.so.0 -o liblapack.so.0.0.0 \
@@ -109,7 +109,7 @@ src_install() {
 
 	cd ${S}/SRC
 
-	if [ "`use ifc`" ]
+	if use ifc
 	then
 		strip --strip-unneeded liblapack.so.0.0.0
 		strip --strip-debug liblapack.a
