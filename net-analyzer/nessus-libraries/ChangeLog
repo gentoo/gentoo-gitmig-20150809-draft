@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nessus-libraries
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.36 2004/08/12 22:39:53 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-libraries/ChangeLog,v 1.37 2004/08/13 10:08:12 eldad Exp $
+
+  13 Aug 2004; Eldad Zack <eldad@gentoo.org> nessus-libraries-2.0.12.ebuild,
+  nessus-libraries-2.1.1.ebuild:
+  Changed optional ssl support to mandatory, since without it libnasl will not
+  compile.
 
   13 Aug 2004; Bryan Østergaard <kloeri@gentoo.org>
   nessus-libraries-2.0.12.ebuild:
