@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.6.0.1.ebuild,v 1.11 2004/07/04 19:25:33 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.8.1-r1.ebuild,v 1.1 2004/11/21 17:40:50 foser Exp $
 
-inherit gnome2 eutils
+inherit gnome2 eutils flag-o-matic
 
 DESCRIPTION="Collection of games for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
 
 LICENSE="GPL-2 FDL-1.1"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc mips alpha hppa amd64"
-IUSE="guile"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~hppa ~amd64 ~ia64"
+IUSE="guile artworkextra"
 
 RDEPEND=">=x11-libs/gtk+-2.3
 	>=gnome-base/gconf-1.2
@@ -18,7 +18,9 @@ RDEPEND=">=x11-libs/gtk+-2.3
 	>=gnome-base/libgnome-2
 	>=gnome-base/libgnomeui-2
 	>=gnome-base/librsvg-2
-	guile? ( dev-util/guile )"
+	guile? ( dev-util/guile )
+	artworkextra? ( gnome-extra/gnome-games-extra-data )"
+
 DEPEND=">=dev-util/pkgconfig-0.12.0
 	>=dev-util/intltool-0.29
 	>=sys-devel/gettext-0.10.40
@@ -27,16 +29,26 @@ DEPEND=">=dev-util/pkgconfig-0.12.0
 
 DOCS="AUTHORS ChangeLog HACKING INSTALL MAINTAINERS NEWS README TODO"
 
+G2CONF="${G2CONF} --disable-setgid"
+
 src_unpack() {
+
 	unpack ${A}
 
-	cd ${S}/aisleriot
-	# fix aisleriot crash #46738
-	epatch ${FILESDIR}/${P}-aisleriot.patch
+	# fix theme settings (#71294)
+	cd ${S}/glines
+	epatch ${FILESDIR}/${PN}-2.8.1-fix_upgrade.patch
+	cd ${S}
+	epatch ${FILESDIR}/${PN}-2.8.0-pkgconfig_gconf.patch
+
+	autoconf || die
 
 }
 
 src_install() {
+
+	# FIXME : for some reason this doesn't get picked up
+	append-ldflags "-Wl,-z,now"
 
 	gnome2_src_install
 	cd ${S}
@@ -60,5 +72,16 @@ src_install() {
 		rm ${scorefile}
 	fi
 	done
+
+}
+
+pkg_postinst() {
+
+	gnome2_pkg_postinst
+
+	einfo "For security reasons system wide scores are disabled by default from"
+	einfo "now on. To re-enable them, do 'chmod +s <exec>', where <exec> is all"
+	einfo "executables that 'qpkg -l -nc gnome-games | grep /usr/bin/' yields"
+	einfo "(requires gentoolkit)."
 
 }
