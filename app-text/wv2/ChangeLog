@@ -1,6 +1,15 @@
 # ChangeLog for app-text/wv2
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.2 2003/04/05 22:02:43 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.3 2003/04/13 21:09:57 danarmak Exp $
+
+  14 Apr 2003; Dan Armak <danarmak@gentoo.org> wv2-0.0.8.ebuild,
+  wv2-0.0.9.ebuild:
+  Mask back to ~x86 because the libgsf dependancy is masked that way.
+
+*wv2-0.0.9 (13 Apr 2003)
+
+  13 Apr 2003; Dan Armak <danarmak@gentoo.org> wv2-0.0.9.ebuild:
+  A new upstream version.
 
 *wv2-0.0.8 (06 Apr 2003)
 
