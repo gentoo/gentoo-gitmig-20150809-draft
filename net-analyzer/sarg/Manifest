@@ -1,19 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 78a9920b3855ca90f16687d9f68e2467 sarg-1.4.1-r2.ebuild 1118
 MD5 07cdf2982d97010cf3fdddbab2fd8f9f ChangeLog 1489
 MD5 2c3158204cfb4b9c36b8bc78e8421b16 metadata.xml 223
-MD5 6f124fc646d2c74c5ce9b3ca2bc29b5e sarg-1.2.2.ebuild 826
-MD5 78a9920b3855ca90f16687d9f68e2467 sarg-1.4.1-r2.ebuild 1118
-MD5 f4f17fe87e0e8cd101dc37277bd6aedb sarg-1.4.1.ebuild 903
-MD5 b60741cb2874bce6ba11ed9ab30de7ac files/digest-sarg-1.2.2 62
-MD5 d0d0e64d8851d613b34982597a1d1cee files/digest-sarg-1.4.1 62
-MD5 c1d5675a58b98064b57ce771a2ecd4b8 files/digest-sarg-1.4.1-r2 132
 MD5 4ce75e6dba68e51c94d8fb4b47a5ed9f files/sarg-1.4.1-2.6.fix.patch 1556
+MD5 c1d5675a58b98064b57ce771a2ecd4b8 files/digest-sarg-1.4.1-r2 132
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBXshHI1lqEGTUzyQRAoGYAKCzTXtKRTCaBHHwKz4stE2Jlmxg8wCfVIUs
-uDgzJBqgWbm9lupR9Po5RUg=
-=B2sB
+iD8DBQFBjNSlT+MN7JbqCpMRAp7CAJ9ZUjEARASfEebOGuWl6aIYaNcPUwCbB/uO
+MKbX23Y2bitFcg/aPdbldnI=
+=foqx
 -----END PGP SIGNATURE-----
