@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/texinfo
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.39 2004/07/01 21:40:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.40 2004/07/04 17:46:00 solar Exp $
+
+  04 Jul 2004; <solar@gentoo.org> texinfo-4.6.ebuild:
+  added static USE flag to help assist when porting to new arches/libc's
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> texinfo-4.5.ebuild,
   texinfo-4.6.ebuild:

@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.6.ebuild,v 1.16 2004/07/01 21:40:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.6.ebuild,v 1.17 2004/07/04 17:46:00 solar Exp $
+
+inherit flag-o-matic
 
 DESCRIPTION="The GNU info program and utilities"
 HOMEPAGE="http://www.gnu.org/software/texinfo/"
@@ -9,12 +11,12 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc ppc64 sparc mips alpha arm hppa amd64 ia64 s390"
-IUSE="nls build"
+IUSE="nls build static"
 
 DEPEND="virtual/libc
 	!build? ( >=sys-libs/ncurses-5.2-r2
-		>=sys-apps/sed-4.0.5
-		nls? ( sys-devel/gettext ) )"
+	>=sys-apps/sed-4.0.5
+	nls? ( sys-devel/gettext ) )"
 
 RDEPEND="virtual/libc
 	!build? ( >=sys-libs/ncurses-5.2-r2 )"
@@ -38,9 +40,10 @@ src_compile() {
 		myconf="--disable-nls"
 	fi
 
+	use static && append-ldflags -static
+
 	export WANT_AUTOMAKE_1_6=1
 	econf ${myconf} || die
-
 	emake || die
 }
 
