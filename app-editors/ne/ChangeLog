@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/ne
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ChangeLog,v 1.1 2003/03/21 23:18:06 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ChangeLog,v 1.2 2003/08/23 17:34:26 zul Exp $
+
+  23 Aug 2003; <chuck@gentoo.org> ne-1.19.ebuild:
+  Fix typo in Homepage, closes bug #27102.
 
 *ne-1.19 (21 Mar 2003)
 

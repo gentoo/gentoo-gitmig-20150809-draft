@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ne-1.19.ebuild,v 1.2 2003/06/29 18:24:08 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ne/ne-1.19.ebuild,v 1.3 2003/08/23 17:34:26 zul Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="ne is the nice editor, easy to use for the beginner and powerful for the wizard"
 SRC_URI="http://ne.dsi.unimi.it/${P}.tar.gz"
-HOMEPAGE="http://ne.dsi.unimi.ti/"
+HOMEPAGE="http://ne.dsi.unimi.it/"
 
 DEPEND="ncurses? ( >=sys-libs/ncurses-5.2 )"
 PROVIDE="virtual/editor"
