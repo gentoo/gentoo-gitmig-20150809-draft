@@ -1,0 +1,11 @@
+# ChangeLog for app-vim/cecutil
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/cecutil/ChangeLog,v 1.1 2004/08/25 17:16:05 ciaranm Exp $
+
+*cecutil-3 (25 Aug 2004)
+
+  25 Aug 2004; Ciaran McCreesh <ciaranm@gentoo.org> +metadata.xml,
+  +cecutil-3.ebuild:
+  New package. This is required by newer versions of some other app-vim
+  packages.
+
