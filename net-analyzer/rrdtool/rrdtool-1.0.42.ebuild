@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.42.ebuild,v 1.4 2003/05/30 13:20:32 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.42.ebuild,v 1.5 2003/07/22 13:11:58 aliz Exp $
 
 inherit perl-module
 
@@ -13,7 +13,8 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc ~sparc"
 IUSE="tcltk perl"
 
-filter-flags "-mfpmath=sse -ffast-math"
+filter-mfpmath "sse"
+filter-flags "-ffast-math"
 
 DEPEND="perl? ( dev-lang/perl )
 	sys-apps/gawk
