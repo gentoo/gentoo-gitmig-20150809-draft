@@ -1,6 +1,6 @@
 # ChangeLog for media-video/avidemux
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.41 2004/06/09 16:54:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.42 2004/06/23 15:08:30 zypher Exp $
 
   09 Jun 2004; Aron Griffis <agriffis@gentoo.org> avidemux-0.9-r1.ebuild,
   avidemux-2.0.18.ebuild, avidemux-2.0.20.ebuild, avidemux-2.0.22.ebuild,
@@ -9,6 +9,9 @@
 
 *avidemux-2.0.24 (08 May 2004)
 
+  23 Jun 2004; Marc Hildebrand <zypher@gentoo.org> avidemux-2.0.24.ebuild:
+  Marked stable for x86.
+  
   08 May 2004; Marc Hildebrand <zypher@gentoo.org> avidemux-2.0.24.ebuild:
   Version bump.
   
