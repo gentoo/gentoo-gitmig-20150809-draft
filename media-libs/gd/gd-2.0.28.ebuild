@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.28.ebuild,v 1.4 2004/10/31 11:07:35 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.28.ebuild,v 1.5 2004/11/01 01:53:32 vapier Exp $
 
 inherit gnuconfig
 
@@ -35,7 +35,7 @@ src_compile() {
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die
+	make DESTDIR=${D} install || die
 	dodoc INSTALL README*
 	dohtml -r ./
 }

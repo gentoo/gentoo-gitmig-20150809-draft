@@ -1,0 +1,16 @@
+--- gd-2.0.30/testtr.c	2004-10-27 13:01:03.000000000 -0400
++++ gd-2.0.30.fixed/testtr.c	2004-10-31 20:33:49.621525120 -0500
+@@ -37,9 +37,13 @@
+ 
+ 	gdImageSaveAlpha (im, TRUE);
+ 
++#ifdef HAVE_LIBPNG
+ 	out = fopen ("testtr.png", "wb");
+ 	gdImagePng (im, out);
+ 	fclose (out);
++#else
++	fprintf(stderr, "Compiled without png support\n");
++#endif
+ 
+ 	gdImageDestroy (im);
+ 

@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/gd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.11 2004/10/31 16:13:02 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.12 2004/11/01 01:53:32 vapier Exp $
+
+*gd-2.0.31 (31 Oct 2004)
+
+  31 Oct 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/2.0.31-png-check.patch, -gd-2.0.30.ebuild, +gd-2.0.31.ebuild:
+  Version bump to fix png building #69611 by Tomasz Sterna.
 
   31 Oct 2004; Jason Wever <weeve@gentoo.org> gd-2.0.30.ebuild:
   Stable on sparc wrt securit bug #69070.

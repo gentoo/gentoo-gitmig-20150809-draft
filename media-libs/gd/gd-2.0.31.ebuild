@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.30.ebuild,v 1.4 2004/10/31 16:13:02 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/gd-2.0.31.ebuild,v 1.1 2004/11/01 01:53:32 vapier Exp $
 
-inherit gnuconfig
+inherit gnuconfig eutils
 
 DESCRIPTION="A graphics library for fast image creation"
 HOMEPAGE="http://www.boutell.com/gd/"
@@ -21,21 +21,22 @@ DEPEND="jpeg? ( >=media-libs/jpeg-6b )
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	epatch ${FILESDIR}/${PV}-png-check.patch
 	gnuconfig_update
 }
 
 src_compile() {
 	econf \
-		`use_with png` \
-		`use_with truetype freetype` \
-		`use_with jpeg` \
-		`use_with X xpm` \
+		$(use_with png) \
+		$(use_with truetype freetype) \
+		$(use_with jpeg) \
+		$(use_with X xpm) \
 		|| die
 	emake || die
 }
 
 src_install() {
-	emake DESTDIR=${D} install || die
+	make DESTDIR=${D} install || die
 	dodoc INSTALL README*
 	dohtml -r ./
 }
