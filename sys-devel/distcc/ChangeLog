@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.37 2003/03/19 19:11:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.38 2003/04/01 22:16:26 zwelch Exp $
+
+*distcc-2.0.1 (31 Mar 2003)
+
+  31 Mar 2003; Zach Welch <zwelch@gentoo.org> distcc-2.0.1.ebuild,
+  files/1.2.3/distcc-config:
+  bump version to close bug 18566; masquerade patch now mainlined
+  info file removed upstream; add --help to distcc-config
 
 *distcc-1.2.3-r3 (17 Mar 2003)
 

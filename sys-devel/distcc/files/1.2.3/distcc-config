@@ -115,13 +115,12 @@ dccc_install_env() {
 DISTCC_HOSTS="localhost"
 # DISTCC_VERBOSE is not set
 # DISTCC_LOG is not set
-# PATH is not set
-# ROOTPATH is not set
+# DCCC_PATH is not set
 _EOF_
 }
 
 dccc_show_env() {
-	grep -v '^#' ${DCCC_ENV_FILE}
+	grep -v '^#' ${DCCC_ENV_FILE} | sed -e 's,^,export ,'
 }
 
 dccc_test_env() {
@@ -243,16 +242,14 @@ case "${1}" in
 		eval "dccc_${SET_FUNC} ${*}"
 		;;
 	--has-path )
-		dccc_test_env PATH
+		dccc_test_env DCCC_PATH
 		;;
 	--add-path )
-		dccc_set_env PATH "/usr/lib/distcc/bin"
-		dccc_set_env ROOTPATH "/usr/lib/distcc/bin"
+		dccc_set_env DCCC_PATH "/usr/lib/distcc/bin"
 		dccc_regen_env
 		;;
 	--no-path )
-		dccc_set_env PATH ""
-		dccc_set_env ROOTPATH ""
+		dccc_set_env DCCC_PATH ""
 		dccc_regen_env
 		;;
 	--show-env )
