@@ -1,0 +1,83 @@
+# to update the database after changing this file, run:
+# tcprules /etc/tcprules.d/tcp.qmail-smtp.cdb /etc/tcprules.d/.tcp.qmail-smtp.tmp < /etc/tcprules.d/tcp.qmail-smtp
+#------------------------------------------------------
+# DESCRIPTION OF THE RULES TO REMIND ME OF HOW THIS FILE WORKS
+#
+# If you set 'allow', this means that our mail server will allow
+# the specified IP range to make a TCP connection to our server
+#
+# If you set 'deny', this means that our mail server will not allow
+# the specified IP range to make a TCP connection to our server
+#
+# If you set RELAYCLIENT="", this means that the listed IP range is 
+# allowed to relay mail through our server
+#
+# If you dont set RELAYCLIENT="", this means that the listed IP range
+# will not be able to relay mail through our server
+#
+# If you set RBLSMTPD="", this means that the listed IP ranges will
+# not be checked against any of the RBL databases
+#
+# If you set RBLSMTPD="some text here", this means that an RBL lookup
+# wont be performed, but the mail will be rejected with the specified
+# text as a 4xx temp error message
+#
+# If you set RBLSMTPD="-some text here", this means that an RBL lookup
+# wont be performed, but the mail will be rejected with the specified
+# text as a 5xx perm error message
+#
+# If you do not set RBLSMTPD="" or ="some text", then an RBL lookup
+# will be performed. If the lookup is successful, then RBLSMTPD will
+# return your custom error message (as specified in the -r parameter
+# in smtpd supervise script)
+#
+#-----------------------------------------------------
+# HERE ARE THE RULES! :
+#-----------------------------------------------------
+# BYPASS OPEN RELAY CHECKING FOR THESE IPS :
+#
+# These IPs are ones that we have setup so that they arent RBL checked.
+# We have done this because these particular servers are RBL listed,
+# and for whatever reason they can't/won't fix their open relay problem,
+# and we still want to be able to receive mail from them.
+# 
+# reminder text goes here for this entry so we know the story...
+#111.111.111.111:allow,RBLSMTPD=""
+# reminder text goes here for this entry so we know the story...
+#222.222.222.222:allow,RBLSMTPD=""
+#
+#-----------------------------------------------------------------
+# DONT ALLOW THESE IPS TO SEND MAIL TO US :
+#
+# mailXX.offermail.net connecting regularly and sending invalid
+# format messages causing exit with status 256 (bare linefeed normally)
+# entry added 15/12/2001
+# after looking at the mail coming from these servers it was found to be spam
+#216.242.75.100-116:allow,RBLSMTPD="-Connections from this IP have been banned."
+#
+# heaps of spam from replyto of *@freeamateurhotties.com dec2001
+#64.228.127.:allow,RBLSMTPD="-Connections refused due to spam from freeamateurhotties.com"
+#154.20.94.:allow,RBLSMTPD="-Connections refused due to spam from freeamateurhotties.com"
+#209.151.132.:allow,RBLSMTPD="-Connections refused due to spam from freeamateurhotties.com"
+#216.18.85.:allow,RBLSMTPD="-Connections refused due to spam from freeamateurhotties.com"
+#
+#-----------------------------------------------------------------
+# ALLOW THESE IPS TO RELAY MAIL THROUGH OUR SERVER
+#
+# Local class-c's from our LAN are allowed to relay,
+# and we wont bother doing any RBL checking.
+#123.123.123.:allow,RELAYCLIENT="",RBLSMTPD=""
+#123.111.111.:allow,RELAYCLIENT="",RBLSMTPD=""
+#
+# Connections from localhost are allowed to relay 
+# (because the WebMail server runs on localhost),
+# and obviously there is no point trying to perform an RBL check.
+127.0.0.1:allow,RELAYCLIENT="",RBLSMTPD=""
+#
+#-----------------------------------------------------------------
+# ALLOW EVERYONE ELSE TO SEND US MAIL
+#
+# Everyone else can make connections to our server,
+# but not allowed to relay
+# RBL lookups are performed
+:allow

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+    <herd>net-mail</herd>
+    <maintainer>
+        <email>sj7trunks@gentoo.org></email>
+        <description>qmail-ldap maintainer for the ldap stuff</description>
+    </maintainer>
+    <maintainer>
+        <email>robbat2@gentoo.org</email>
+        <name>Robin H. Johnson</name>
+        <description>maintainer for the standard qmail part</description>
+    </maintainer>
+</pkgmetadata>

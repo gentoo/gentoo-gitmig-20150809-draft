@@ -1,0 +1,27 @@
+#!/bin/sh
+# Gentoo Startup script for qmail's SMTP daemon
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-ldap/files/1.03-r3/run-qmailsmtpd,v 1.1 2004/01/11 07:08:52 robbat2 Exp $
+#
+# If you need to edit this file, please look at editing conf-smtpd and
+# conf-common first.  If you still need to change this file, you should
+# probably file a bug on the bugzilla saying what you wanted to change so that
+# modification can be make possible via the configuration files
+
+# This is to make life easier
+SERVICE=smtp
+
+# this is to inherit QMAIL_CONTROLDIR
+. /etc/profile
+
+[ -s ${QMAIL_CONTROLDIR}/conf-common ] && source ${QMAIL_CONTROLDIR}/conf-common
+[ -s ${QMAIL_CONTROLDIR}/conf-${SERVICE}d ] && source ${QMAIL_CONTROLDIR}/conf-${SERVICE}d
+[ -s /var/qmail/bin/config-sanity-check ] && source /var/qmail/bin/config-sanity-check
+
+# Now run it all
+exec /usr/bin/softlimit ${SOFTLIMIT_OPTS} \
+    ${QMAIL_TCPSERVER_PRE} \
+    /usr/bin/tcpserver ${TCPSERVER_OPTS} -x /etc/tcp.${SERVICE}.cdb \
+    -c ${MAXCONN} -u ${QMAILDUID} -g ${NOFILESGID} \
+    ${TCPSERVER_HOST} ${TCPSERVER_PORT} \
+    ${QMAIL_SMTP_PRE} /var/qmail/bin/qmail-${SERVICE}d ${QMAIL_SMTP_POST} \
+    2>&1

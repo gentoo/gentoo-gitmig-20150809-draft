@@ -1,0 +1,29 @@
+# Common Configuration file for all qmail daemons
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-ldap/files/1.03-r3/conf-common,v 1.1 2004/01/11 07:08:52 robbat2 Exp $
+
+# Qmail User IDS to run daemons as
+QMAILDUID=`id -u qmaild`
+NOFILESGID=`id -g qmaild`
+
+# Qmail Control Dir (this is actually set in /etc/env.d/99qmail)
+#QMAIL_CONTROLDIR=/var/qmail/control
+
+# Host and port to listen on
+# We listen on the IPv4 local ip by default
+TCPSERVER_HOST=0.0.0.0
+TCPSERVER_PORT=${SERVICE}
+
+# you do not need to specify -x, -c, -u or -g in this variable as those are
+# added later
+TCPSERVER_OPTS="-p -v"
+
+# we limit data and stack segments to 8mbytes, you may need to raise this if
+# you are using a filter in QMAILQUEUE
+SOFTLIMIT_OPTS="-m 8000000"
+
+# We don't have anything to set QMAILQUEUE to at the moment, so we leave it alone
+#QMAILQUEUE=""
+
+# tcpserver maximum concurrency, defaults to 40 in tcpserver
+# this controls the maximum number of incoming connections that it will accept
+[ -e ${QMAIL_CONTROLDIR}/concurrencyincoming ] && MAXCONN=$(<${QMAIL_CONTROLDIR}/concurrencyincoming) || MAXCONN=40

@@ -1,0 +1,30 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-ldap/files/1.03-r3/qmail-control,v 1.1 2004/01/11 07:08:52 robbat2 Exp $
+
+opts="start stop restart reload"
+
+start() {
+    ebegin "Starting qmail mta ..."
+    svc -u /service/qmail-{smtpd,send,qmqp,qmtp}
+    eend $?
+    ebegin "Starting qmail mta logging ..."
+    svc -u /service/qmail-{smtpd,send,qmqp,qmtp}/log
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping qmail mta ..."
+    svc -d /service/qmail-{smtpd,send,qmqp,qmtp}
+    eend $?
+    ebegin "Stopping qmail mta logging ..."
+    svc -d /service/qmail-{smtpd,send,qmqp,qmtp}/log
+    eend $?
+}
+
+reload() {
+    ebegin "Reloading 'locals' and 'virtualdomains' control files."
+    svc -h /service/qmail-send
+    eend $?
+}

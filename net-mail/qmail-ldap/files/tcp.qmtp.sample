@@ -1,0 +1,8 @@
+# to update the database after changing this file, run:
+# tcprules /etc/tcprules.d/tcp.qmail-qmtp.cdb /etc/tcprules.d/.tcp.qmail-qmtp.tmp < /etc/tcprules.d/tcp.qmail-qmtp
+# We trust QMTP connections just as SMTP by default
+# see /etc/tcprules.d/tcp.qmail-smtp for more info
+# allow relaying from localhost
+127.0.0.1:allow,RELAYCLIENT="",RBLSMTPD=""
+# everybody else is not allowed to relay, and is subject to RBLSMTPD checks
+:allow

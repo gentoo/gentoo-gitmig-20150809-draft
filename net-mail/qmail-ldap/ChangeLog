@@ -1,6 +1,27 @@
 # ChangeLog for net-mail/qmail-ldap
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-ldap/ChangeLog,v 1.4 2004/01/05 23:32:13 robbat2 Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-ldap/ChangeLog,v 1.5 2004/01/11 07:08:52 robbat2 Exp $
+
+*qmail-ldap-1.03-r3 (10 Jan 2004)
+
+  10 Jan 2004; Robin H. Johnson <robbat2@gentoo.org>
+  qmail-ldap-1.03-r2.ebuild, qmail-ldap-1.03-r3.ebuild, files/gentoo.patch,
+  files/qmail-link-sync-gentoo.patch, files/tcp.pop3.sample,
+  files/tcp.qmqp.sample, files/tcp.qmtp.sample, files/tcp.smtp.sample,
+  files/1.03-r2/samples.ldif, files/1.03-r3/99qmail,
+  files/1.03-r3/conf-common, files/1.03-r3/conf-pop3d,
+  files/1.03-r3/conf-qmqpd, files/1.03-r3/conf-qmtpd,
+  files/1.03-r3/conf-smtpd, files/1.03-r3/config-sanity-check,
+  files/1.03-r3/dot_qmail, files/1.03-r3/mkservercert,
+  files/1.03-r3/qmail-control, files/1.03-r3/qmail-genrsacert.sh,
+  files/1.03-r3/rc, files/1.03-r3/run-qmailpop3d,
+  files/1.03-r3/run-qmailpop3dlog, files/1.03-r3/run-qmailqmqpd,
+  files/1.03-r3/run-qmailqmqpdlog, files/1.03-r3/run-qmailqmtpd,
+  files/1.03-r3/run-qmailqmtpdlog, files/1.03-r3/run-qmailsend,
+  files/1.03-r3/run-qmailsendlog, files/1.03-r3/run-qmailsmtpd,
+  files/1.03-r3/run-qmailsmtpdlog, files/1.03-r3/servercert.cnf:
+  close bug #36828 with sj7trunks@gentoo.org's new stuff, including adding him
+  as a maintainer
 
   05 Jan 2004; Robin H. Johnson <robbat2@gentoo.org>
   qmail-ldap-1.03-r1.ebuild, files/supervise/run-qmailpop3d:
