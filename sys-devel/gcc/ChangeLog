@@ -1,9 +1,12 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.46 2002/12/09 04:37:27 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.47 2002/12/09 22:23:07 azarah Exp $
 
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  10 Dec 2002; Martin Schlemmer <azarah@gentoo.org> gcc-3.2.1.ebuild :
+  Mark as stable for x86.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> :
+  Changed sparc ~sparc keywords.
  
   03 Dec 2002; Martin Schlemmer <azarah@gentoo.org> :
   Also set CC and CXX in /etc/env.d/05gcc.
