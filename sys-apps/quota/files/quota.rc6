@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/quota/files/quota.rc,v 1.3 2004/03/06 18:52:14 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/quota/files/quota.rc6,v 1.1 2004/03/06 18:52:14 mholzer Exp $
 
 depend() {
 	need localmount
@@ -9,26 +9,26 @@ depend() {
 
 start() {
 	ebegin "Starting Quota"
-	if [ -x /sbin/quotacheck ]
+	if [ -x /usr/sbin/quotacheck ]
 	then
 		echo "Checking quotas. This may take some time."
-		/sbin/quotacheck -avug
+		/usr/sbin/quotacheck -avug
 		echo "Done."
 	fi
-	if [ -x /sbin/quotaon ]
+	if [ -x /usr/sbin/quotaon ]
 	then
 		echo "Turning on quota"
-		/sbin/quotaon -avug
+		/usr/sbin/quotaon -avug
 	fi
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping quota"
-	if [ -x /sbin/quotaoff ]
+	if [ -x /usr/sbin/quotaoff ]
 	then
 		echo "Turning quota off"
-		/sbin/quotaoff -avug
+		/usr/sbin/quotaoff -avug
 	fi
 	eend $?
 }

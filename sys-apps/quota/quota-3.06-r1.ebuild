@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/quota/quota-3.06-r1.ebuild,v 1.9 2003/12/10 10:18:57 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/quota/quota-3.06-r1.ebuild,v 1.10 2004/03/06 18:52:14 mholzer Exp $
 
 IUSE="nls"
 
