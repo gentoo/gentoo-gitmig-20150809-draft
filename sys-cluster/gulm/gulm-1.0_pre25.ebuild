@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gulm/gulm-1.0_pre25.ebuild,v 1.1 2005/03/19 16:12:41 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gulm/gulm-1.0_pre25.ebuild,v 1.2 2005/03/19 21:39:56 xmerlin Exp $
 
 inherit linux-mod
 
@@ -38,4 +38,6 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
+
+	rm -f ${D}/etc/init.d/lock_gulmd
 }
