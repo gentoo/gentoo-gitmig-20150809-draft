@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/smssend/smssend-3.2.ebuild,v 1.4 2004/04/18 08:45:09 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/smssend/smssend-3.2.ebuild,v 1.5 2004/06/06 09:37:58 dragonheart Exp $
 
 DESCRIPTION="Universal SMS sender."
 HOMEPAGE="http://zekiller.skytech.org/smssend_menu_en.html"
@@ -9,7 +9,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~sparc"
 DEPEND=">=dev-libs/skyutils-2.4"
-
+IUSE=""
 #RDEPEND=""
 
 src_compile() {
