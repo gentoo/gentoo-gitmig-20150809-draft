@@ -1,6 +1,9 @@
 # ChangeLog for games-action/spacearyarya-kxl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/spacearyarya-kxl/ChangeLog,v 1.5 2004/06/24 21:59:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/spacearyarya-kxl/ChangeLog,v 1.6 2004/12/28 22:52:52 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *spacearyarya-kxl-1.0.2-r1 (31 Dec 2003)
 
@@ -13,7 +16,7 @@
   spacearyarya-kxl-1.0.2.ebuild:
   use games eclass
 
-  17 jul 2002; Jose Alberto Su·rez LÛpez <bass@gentoo.org> spacearyarya-kxl-1.0.2.ebuild :
+  17 jul 2002; Jose Alberto Su√°rez L√≥pez <bass@gentoo.org> spacearyarya-kxl-1.0.2.ebuild :
   Added KEYWORDS, SLOT.
   files/digest-spacearyarya-kxl-1.0.2, ChangeLog :
   New Package

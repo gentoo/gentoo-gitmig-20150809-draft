@@ -1,6 +1,9 @@
 # ChangeLog for games-action/chromium
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/ChangeLog,v 1.10 2004/06/24 21:53:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/ChangeLog,v 1.11 2004/12/28 22:50:37 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   14 Apr 2004; Jason Wever <weeve@gentoo.org> chromium-0.9.12-r5.ebuild:
   Added ~sparc keyword.
@@ -61,7 +64,7 @@
 
 *chromium-0.9.12 (28 Mar 2002)
 
-  17 jul 2002; Jose Alberto Su·rez LÛpez <bass@gentoo.org> chromium-0.9.12.ebuild :
+  17 jul 2002; Jose Alberto Su√°rez L√≥pez <bass@gentoo.org> chromium-0.9.12.ebuild :
   Added LICENSE, KEYWORDS.
 
   28 Mar 2002; Seemant Kulleen <seemant@gentoo.org> chromium-0.9.12.ebuild :

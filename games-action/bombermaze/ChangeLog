@@ -1,6 +1,9 @@
 # ChangeLog for games-action/bombermaze
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/bombermaze/ChangeLog,v 1.5 2004/06/24 21:52:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/bombermaze/ChangeLog,v 1.6 2004/12/28 22:50:03 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   03 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
   bombermaze-0.6.6.ebuild:
@@ -15,12 +18,12 @@
 
 *bombermaze-0.6.6 (23 May 2002)
 
-  06 Oct 2002; Jose Alberto Suárez López <bass@gentoo.org>
+  06 Oct 2002; Jose Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org>
   bombermaze-0.6.6.ebuild:
   Changed DEPEND, gnome-core to gnome-libs. It prevents the error
   masked of the game. thanks David Vollbracht for the email.
 
-  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> bombermaze-0.6.6.ebuild :
+  17 jul 2002; Jose Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org> bombermaze-0.6.6.ebuild :
   Added KEYWORDS, SLOT.
 
   23 May 2002; Ryan Phillips <rphillips@gentoo.org> Changelog :

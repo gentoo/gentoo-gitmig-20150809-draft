@@ -1,6 +1,9 @@
 # ChangeLog for games-action/maelstrom
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/ChangeLog,v 1.13 2004/08/31 21:58:44 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/maelstrom/ChangeLog,v 1.14 2004/12/28 22:52:18 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   31 Aug 2004; Karol Wojtaszek <sekretarz@gentoo.org>
   maelstrom-3.0.6-r1.ebuild:
@@ -44,7 +47,7 @@
   05 Mar 2003; Bartosch Pixa <darkspecter@gentoo.org> maelstrom-3.0.5.ebuild:
   set ~ppc in keywords
 
-  17 jul 2002; Jose Alberto Su·rez LÛpez <bass@gentoo.org> maelstrom-3.0.5.ebuild :
+  17 jul 2002; Jose Alberto Su√°rez L√≥pez <bass@gentoo.org> maelstrom-3.0.5.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
 
   26 Apr 2002; Seemant Kulleen <seemant@gentoo.org> maelstrom-3.0.5.ebuild

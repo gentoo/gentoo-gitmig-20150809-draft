@@ -1,6 +1,9 @@
 # ChangeLog for games-action/geki2-KXL
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/geki2-KXL/ChangeLog,v 1.4 2004/06/24 21:55:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/geki2-KXL/ChangeLog,v 1.5 2004/12/28 22:51:13 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *geki2-KXL-2.0.3-r1 (13 Nov 2002)
 
@@ -9,7 +12,7 @@
 
 *geki2-KXL-2.0.3 (06 Jul 2002)
 
-  17 jul 2002; Jose Alberto Su·rez LÛpez <bass@gentoo.org> geki2-KXL-2.0.3.ebuild :
+  17 jul 2002; Jose Alberto Su√°rez L√≥pez <bass@gentoo.org> geki2-KXL-2.0.3.ebuild :
   Added KEYWORDS, SLOT.
 
   06 Jul 2002; Ben Lutgens <lamer@gentoo.org> geki2-KXL-2.0.3.ebuild,
