@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/twin/twin-0.4.6.ebuild,v 1.3 2004/06/25 03:03:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/twin/twin-0.4.6.ebuild,v 1.4 2004/06/28 13:00:58 vapier Exp $
 
 inherit fixheadtails
 
@@ -64,7 +64,7 @@ src_install() {
 
 	rm -rf ${D}/usr/share/twin/{BUGS,docs,COP*,READ*,Change*,INSTALL*}
 
-	dodoc BUGS COPYING* Change* README* TODO/TODO TODO/twin-thoughts
+	dodoc BUGS Change* README* TODO/TODO TODO/twin-thoughts
 	doman docs/twin.1; rm -rf docs/twin.1
 	dodoc docs/*
 
