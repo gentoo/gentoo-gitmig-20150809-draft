@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/dar
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dar/ChangeLog,v 1.21 2005/03/03 17:42:15 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dar/ChangeLog,v 1.22 2005/03/03 17:47:03 ciaranm Exp $
+
+  03 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> dar-2.1.6.ebuild:
+  Dependency update: sys-apps/at -> sys-process/at.
 
   03 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> dar-2.1.5-r1.ebuild:
   Dependency update: sys-apps/at -> sys-process/at.
