@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <mkennedy@gentoo.org> (15 Sep 2002)
+# Upstream too buggy to use. Doesn't seem to be a stable or pre
+# release that actually works.
+x11-terms/powershell
+
 # <phoenix@gentoo.org> (15 Sep 2002)
 # Masking the ut2003-demo for testing
 app-games/ut2003-demo
