@@ -1,34 +1,27 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.7-r2.ebuild,v 1.8 2003/03/30 00:49:42 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.7-r2.ebuild,v 1.9 2003/04/24 11:26:56 vapier Exp $
 
-IUSE="pdflib"
-
-S=${WORKDIR}/${P}
-DESCRIPTION="Grace is a WYSIWYG 2D plotting tool for the X Window System"
+DESCRIPTION="WYSIWYG 2D plotting tool for the X Window System"
 SRC_URI="ftp://plasma-gate.weizmann.ac.il/pub/grace/src/${P}.tar.gz"
 HOMEPAGE="http://plasma-gate.weizmann.ac.il/Grace/"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
+IUSE="pdflib"
 
 DEPEND="virtual/x11
 	virtual/motif
 	media-libs/libpng
 	>=media-libs/tiff-3.5
 	pdflib? ( >=media-libs/pdflib-3.0.2 )"
-	
-	
-src_compile() {
 
-	local myconf
-	
-	use pdflib || myconf="--disable-pdfdrv"
-	
+src_compile() {
 	econf \
 		--with-grace-home=/usr/share/grace \
-		${myconf} || die
+		`use_enable pdflib pdfdrv` \
+		|| die
 	
 	cp doc/Makefile doc/Makefile.orig
 	sed -e 's:$(GRACE_HOME)/doc:$(PREFIX)/share/doc/$(PF)/html:g' \
@@ -60,7 +53,6 @@ src_compile() {
 }
 
 src_install() {
-
 	make GRACE_HOME=${D}/usr/share/grace \
 		PREFIX=${D}/usr \
     		install || die

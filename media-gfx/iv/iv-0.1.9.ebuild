@@ -1,11 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/iv/iv-0.1.9.ebuild,v 1.7 2003/02/13 12:36:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/iv/iv-0.1.9.ebuild,v 1.8 2003/04/24 11:29:57 vapier Exp $
 
-S=${WORKDIR}/${P}
-DESCRIPTION="This is an image viewer"
+DESCRIPTION="a basic image viewer"
 SRC_URI="ftp://wolfpack.twu.net/users/wolfpack/iv-0.1.9.tar.bz2"
-HOMEPAGE="http://wolfpack.twu.net"
+HOMEPAGE="http://wolfpack.twu.net/utilities.html"
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -19,7 +18,7 @@ src_compile() {
 	emake || die
 }
 
-src_install () {
+src_install() {
 	dobin iv/iv
 	dodir /usr/share/icons
 	insinto /usr/share/icons
