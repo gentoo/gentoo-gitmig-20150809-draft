@@ -996,8 +996,6 @@ x11-base/xdirectfb
 # masking unstable gnustep builds
 >=dev-util/gnustep-make-1.3.0
 >=dev-util/gnustep-base-1.3.0
-# test this build.  doesn't require gnustep-env :)
-#>=x11-wm/WindowMaker-0.80.1-r2
 
 # agriffis@gentoo.org 06 Jul 2002
 # ruby-libglade-1.2 is OLD.  The 0.2[789] versions represent new
@@ -1013,11 +1011,6 @@ x11-base/xdirectfb
 # lostlogic@gentoo.org 17 Jul 2002
 # masked because of sandbox problems in 2.0.12 and dep problems in 2.1.0
 app-cdr/eroaster
-
-# raker@gentoo.org 13 Jul 2002
-# sys-apps/baselayout-1.7.9-r2 with a modified /etc/services
-# waiting for approval from aliz@gentoo.org for cyrus-imapd additions
-=sys-apps/baselayout-1.7.9-r2
 
 # stroke@gentoo.org 16 Jul 2002
 # app-editors/bluefish-2002.06.23 gtk+2 port snapshot masked. (#5034)
