@@ -1,6 +1,10 @@
 # ChangeLog for net-print/pdq
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/pdq/ChangeLog,v 1.4 2004/04/09 13:03:28 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pdq/ChangeLog,v 1.5 2004/06/15 02:49:15 agriffis Exp $
+
+  14 Jun 2004; Aron Griffis <agriffis@gentoo.org> pdq-2.2.1-r1.ebuild:
+  Fix use invocation, use econf, add error-checking, get rid of broken subshells
+  so that die is possible, etc
 
   09 Apr 2004; Heinrich Wendel <lanius@gentoo.org> pdq-2.2.1-r1.ebuild:
   remove S=${WORKDIR}/${P}
