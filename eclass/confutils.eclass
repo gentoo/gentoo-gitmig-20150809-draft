@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/confutils.eclass,v 1.10 2004/08/13 20:49:36 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/confutils.eclass,v 1.11 2004/08/21 09:46:18 stuart Exp $
 #
 # eclass/confutils.eclass
 #		Utility functions to help with configuring a package
@@ -108,10 +108,10 @@ confutils_use_depend_all () {
 		eerror "  $my_missing"
 		eerror
 		eerror "You can do this by enabling these flags in /etc/portage/package.use:"
-		eerror "    =$CATEGORY/$PN-$PVR: $my_missing"
+		eerror "    =$CATEGORY/$PN-$PVR $my_missing"
 		eerror
 		eerror "You could disable this flag instead in /etc/portage/package.use:"
-		eerror "	=$CATEGORY/$PN-$PVR: -$my_flag"
+		eerror "	=$CATEGORY/$PN-$PVR -$my_flag"
 		echo
 
 		die "Need missing USE flags"
