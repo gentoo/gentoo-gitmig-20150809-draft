@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/sendmail-8.12.11.ebuild,v 1.2 2004/02/12 04:37:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/sendmail-8.12.11.ebuild,v 1.3 2004/02/12 05:05:26 vapier Exp $
 
 DESCRIPTION="Widely-used Mail Transport Agent (MTA)"
 HOMEPAGE="http://www.sendmail.org/"
@@ -53,7 +53,9 @@ src_unpack() {
 		&& conf_sendmail_LIBS="${conf_sendmail_LIBS} -lssl -lcrypto"
 	use ldap && confMAPDEF="${confMAPDEF} -DLDAPMAP" \
 		&& confLIBS="${confLIBS} -lldap -llber"
-	use gdbm && confLIBS="${confLIBS} -lgdbm"
+	if use gdbm || ! use berkdb ; then
+		confLIBS="${confLIBS} -lgdbm"
+	fi
 	sed -e "s:@@confCCOPTS@@:${confCCOPTS}:" \
 		-e "s/@@confMAPDEF@@/${confMAPDEF}/" \
 		-e "s/@@confENVDEF@@/${confENVDEF}/" \

@@ -1,17 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/sendmail-8.12.10.ebuild,v 1.4 2004/02/12 04:37:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sendmail/sendmail-8.12.10.ebuild,v 1.5 2004/02/12 05:05:26 vapier Exp $
 
-IUSE="ssl ldap sasl berkdb tcpd gdbm mbox"
-
-DESCRIPTION="Widely-used Mail Transport Agent (MTA)."
-HOMEPAGE="http://www.sendmail.org"
+DESCRIPTION="Widely-used Mail Transport Agent (MTA)"
+HOMEPAGE="http://www.sendmail.org/"
+SRC_URI="ftp://ftp.sendmail.org/pub/${PN}/${PN}.${PV}.tar.gz"
 
 LICENSE="Sendmail"
 SLOT="0"
 KEYWORDS="x86 ppc sparc hppa amd64"
+IUSE="ssl ldap sasl berkdb tcpd gdbm mbox"
 
-PROVIDE="virtual/mta"
 DEPEND="!amd64? ( net-dns/hesiod )
 	net-mail/mailbase
 	sys-libs/gdbm
@@ -20,32 +19,16 @@ DEPEND="!amd64? ( net-dns/hesiod )
 	tcpd? ( sys-apps/tcp-wrappers )
 	ssl? ( dev-libs/openssl )
 	ldap? ( net-nds/openldap )"
-
-
-PDEPEND="!mbox? ( net-mail/procmail )"
-
-
-# We need some db; pick gdbm if none in USE
-if [ -n "`use gdbm`" ]
-then
-	DEPEND="${DEPEND}
-			sys-libs/gdbm"
-elif [ -n "`use berkdb`" ]
-then
-	DEPEND="${DEPEND}
-			>=sys-libs/db-3.2"
-else
-	DEPEND="${DEPEND}
-			sys-libs/gdbm"
-fi
-
+	|| (
+		gdbm? ( sys-libs/gdbm )
+		berkdb? ( >=sys-libs/db-3.2 )
+		sys-libs/gdbm
+	)"
 RDEPEND="${DEPEND}
 		>=net-mail/mailbase-0.00
 		!virtual/mta"
-
-SRC_URI="ftp://ftp.sendmail.org/pub/${PN}/${PN}.${PV}.tar.gz"
-
-S=${WORKDIR}/${P}
+PDEPEND="!mbox? ( net-mail/procmail )"
+PROVIDE="virtual/mta"
 
 src_unpack() {
 	unpack ${A}
@@ -70,7 +53,9 @@ src_unpack() {
 		&& conf_sendmail_LIBS="${conf_sendmail_LIBS} -lssl -lcrypto"
 	use ldap && confMAPDEF="${confMAPDEF} -DLDAPMAP" \
 		&& confLIBS="${confLIBS} -lldap -llber"
-	use gdbm && confLIBS="${confLIBS} -lgdbm"
+	if use gdbm || ! use berkdb ; then
+		confLIBS="${confLIBS} -lgdbm"
+	fi
 	sed -e "s:@@confCCOPTS@@:${confCCOPTS}:" \
 		-e "s/@@confMAPDEF@@/${confMAPDEF}/" \
 		-e "s/@@confENVDEF@@/${confENVDEF}/" \
