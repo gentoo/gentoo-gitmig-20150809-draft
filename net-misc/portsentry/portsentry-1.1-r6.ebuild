@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ben Lutgens <lamer@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/portsentry/portsentry-1.1.ebuild,v 1.3 2001/10/17 16:07:11 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/portsentry/portsentry-1.1-r6.ebuild,v 1.1 2001/10/17 16:07:11 woodchip Exp $
 
 DESCRIPTION="Automated port scan detector and response tool"
 HOMEPAGE="http://www.psionic.com/abacus/portsentry/"
@@ -45,5 +45,5 @@ src_install () {
 	newins portsentry.ignore portsentry.ignore.sample
 	newins portsentry.conf portsentry.conf.sample
 
-	exeinto /etc/rc.d/init.d ; newexe ${FILESDIR}/portsentry.rc5 portsentry
+	exeinto /etc/init.d ; newexe ${FILESDIR}/portsentry.rc6 portsentry
 }
