@@ -1,8 +1,13 @@
 # ChangeLog for gnome-base/gnome-panel
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.16 2002/07/24 07:34:03 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-panel/ChangeLog,v 1.17 2002/08/05 18:29:17 spider Exp $
 
-  
+ 
+*gnome-panel-2.0.4 (05 Aug 2002)
+  05 Aug 2002; Spider <spider@gentoo.org> gnome-panel-2.0.4.ebuild
+    updated version (latest released) and now depends on higher version on glib and gtk+ to avoid libtool problems
+    
+ 
 *gnome-panel-2.0.2-r1 (24 Jul 2002)
   24 Jul 2002; Spider <spider@gentoo.org> gnome-panel-2.0.2-r1.ebuild: 
   it seems this build didn't perform well in paralell at all times, patched to change this
