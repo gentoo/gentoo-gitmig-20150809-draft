@@ -1,5 +1,15 @@
-MD5 325c9baa48d00d9bd2c863bddf36f462 ChangeLog 1060
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 72d5f04f565fdcb7727cf8b76e1636f6 ChangeLog 1150
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 ee4958bbaab264bb9cfaf96b214e8fca xli-1.17.0.ebuild 1922
-MD5 88664b266f34957e871e07457c605227 files/Xli.ad 123
+MD5 e1aacf69f8d77bb15493f31a7d40672d xli-1.17.0.ebuild 2090
 MD5 56c2673ad567dbf5ca2163c932571234 files/digest-xli-1.17.0 62
+MD5 88664b266f34957e871e07457c605227 files/Xli.ad 123
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (Darwin)
+
+iD8DBQFBkR/bVWNWqTUmv+0RAjjtAKCqraSQghYVi0PfDQnZtpZHzf98FwCZAVO/
+YiGaThZx7wA1kHXlieaATkY=
+=aIyk
+-----END PGP SIGNATURE-----

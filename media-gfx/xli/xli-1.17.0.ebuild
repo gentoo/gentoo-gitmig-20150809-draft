@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/xli-1.17.0.ebuild,v 1.14 2004/07/14 18:33:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/xli-1.17.0.ebuild,v 1.15 2004/11/09 19:51:45 usata Exp $
 
 inherit alternatives
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://pantransit.reptiles.org/prog/"
 
 SLOT="0"
 LICENSE="X11"
-KEYWORDS="x86 ppc hppa ~amd64"
+KEYWORDS="x86 ppc hppa ~amd64 ~ppc-macos"
 IUSE=""
 
 DEPEND="virtual/x11
@@ -23,6 +23,12 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
+
+	if use ppc-macos ; then
+		for f in $(grep zopen * | cut -d':' -f1 | uniq); do
+			sed -i "s:zopen:xli_zopen:g" $f
+		done
+	fi
 
 	sed -i Imakefile \
 		-e "/^DEFINES =/s/$/ -DHAVE_GUNZIP/" \
@@ -74,9 +80,9 @@ update_alternatives() {
 }
 
 pkg_postinst() {
-	update_alternatives
+	use ppc-macos || update_alternatives
 }
 
 pkg_postrm() {
-	update_alternatives
+	use ppc-macos || update_alternatives
 }
