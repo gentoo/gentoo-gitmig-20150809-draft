@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.0.ebuild,v 1.5 2003/03/24 23:52:31 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.0.ebuild,v 1.6 2003/04/09 21:02:36 latexer Exp $
 
 
 IUSE="apm build nocardbus pcmcia pnp trusted usb"
@@ -42,6 +42,7 @@ fi
 
 src_unpack() {
 
+	check_KV
 	unpack ${A}
 	cd ${S}
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.0-r1.ebuild,v 1.3 2003/04/09 21:02:36 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.2.1_pre1.ebuild,v 1.1 2003/04/09 21:02:36 latexer Exp $
 
 
 inherit eutils
@@ -12,9 +12,12 @@ PATCH_3_2_2="pcmcia-cs-3.2.1-3.2.2.diff.gz"
 PATCH_3_2_3="pcmcia-cs-3.2.1-3.2.3.diff.gz"
 PATCH_3_2_4="pcmcia-cs-3.2.1-3.2.4.diff.gz"
 PCMCIA_DIR="${WORKDIR}/${PCMCIA_CS}"
+MY_P=${PN}-${PV/_/-}
+S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="The linux-wlan Project"
-SRC_URI="ftp://ftp.linux-wlan.org/pub/linux-wlan-ng/${P}.tar.gz 
+SRC_URI="ftp://ftp.linux-wlan.org/pub/linux-wlan-ng/${MY_P}.tar.gz 
+		mirror://gentoo/${PN}-gentoo-init.gz
 		pcmcia?	( mirror://sourceforge/pcmcia-cs/${PCMCIA_CS}.tar.gz )
 		pcmcia? ( mirror://gentoo/${PATCH_3_2_2} )
 		pcmcia? ( mirror://gentoo/${PATCH_3_2_3} )
@@ -44,7 +47,10 @@ fi
 
 src_unpack() {
 
-	unpack ${P}.tar.gz
+	unpack ${MY_P}.tar.gz
+	unpack ${PN}-gentoo-init.gz
+	cp ${WORKDIR}/${PN}-gentoo-init ${S}/etc/rc.wlan
+
 	if [ -n "`use pcmcia`" ]; then
 		check_KV
 		unpack ${PCMCIA_CS}.tar.gz
@@ -165,8 +171,9 @@ src_compile() {
 
 	# compile add-on keygen program.  It seems to actually provide usable keys.
 	cd ${S}/add-ons/keygen
-
 	emake || die "Failed to compile add-on keygen program"
+	cd ${S}/add-ons/lwepgen
+	emake || die "Failed to compile add-on lwepgen program"
 }
 
 src_install () {
@@ -190,6 +197,7 @@ src_install () {
 
 	exeinto /sbin
 	doexe add-ons/keygen/keygen
+	doexe add-ons/lwepgen/lwepgen
 
 }
 
@@ -208,8 +216,8 @@ pkg_postinst() {
 	einfo "Modify /etc/conf.d/wlancfg-* to set individual card parameters."
 	einfo "There are detailed instructions in these config files."
 	einfo ""
-	einfo "Two keygen programs are included: nwepgen and keygen.  keygen seems"
-	einfo "provide more usable keys at the moment."
+	einfo "Three keygen programs are included: nwepgen, keygen, and lwepgen."
+	einfo "keygen seems provide more usable keys at the moment."
 	einfo ""
 	einfo "Be sure to add iface_wlan0 parameters to /etc/conf.d/net."
 	einfo ""

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.1.16_pre8.ebuild,v 1.3 2003/03/08 22:59:45 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/linux-wlan-ng/linux-wlan-ng-0.1.16_pre8.ebuild,v 1.4 2003/04/09 21:02:36 latexer Exp $
 
 IUSE="apm build nocardbus pcmcia pnp trusted usb"
 
@@ -36,6 +36,10 @@ fi
 # unpack/configure it in WORKDIR.  No need to compile it though.
 
 src_unpack() {
+	if [ -n "`use pcmcia`" ]; then
+		check_KV
+	fi
+
 	unpack ${A}
 	cd ${S}
 
