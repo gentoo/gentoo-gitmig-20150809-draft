@@ -1,7 +1,8 @@
 MD5 a755d5dc9a82e073ed64df88133c09c4 parted-1.6.6.ebuild 1332
 MD5 7bee0a9898b291cd400289f05ee4c579 parted-1.6.20.ebuild 1415
+MD5 3ff1f6ca94e512e76bf892f67bf76b00 parted-1.6.22.ebuild 1152
 MD5 00e4c00119b7b037d217ecc4baf6ac06 parted-1.6.18.ebuild 1416
-MD5 37d0ef2f0a8bb3b9545db3ee45428ace ChangeLog 10320
+MD5 9aecc2c91ace69aa5d7184bf5bb10912 ChangeLog 10659
 MD5 6a60a479b678b4e38ea1dfd7db3d04d8 parted-1.6.15.ebuild 1410
 MD5 cc3fe980186b567eed98f76d37dfc14a parted-1.6.10-r2.ebuild 1326
 MD5 d86e5b5e47260e5a965eae2afe6d6d40 metadata.xml 159
@@ -10,3 +11,5 @@ MD5 b020ac3a8080ad690bb3ce376e5273bb files/digest-parted-1.6.6 136
 MD5 73a4f22213522b9db8d93884318e917b files/digest-parted-1.6.15 138
 MD5 83f1e4911362a823713e87148f166278 files/digest-parted-1.6.18 138
 MD5 5e556d20415f027814924e2a17b18ccb files/digest-parted-1.6.20 138
+MD5 d766d64a911c4a7efc8b87e16bf84aa6 files/digest-parted-1.6.22 66
+MD5 b2b5bb6b91f1db8dd5b437e74c2153bc files/005_all_parted-1.6.3-pyparted.patch 433

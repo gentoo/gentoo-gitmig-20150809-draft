@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/parted
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.65 2005/01/21 21:32:11 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.66 2005/03/20 04:24:22 allanonjl Exp $
+
+*parted-1.6.22 (19 Mar 2005)
+
+  19 Mar 2005; John N. Laliberte <allanonjl@gentoo.org>
+  +files/005_all_parted-1.6.3-pyparted.patch, +parted-1.6.22.ebuild:
+  Updated ebuild from <agaffney@gentoo.org>. removed HFS patch ( in upstream ),
+  removed aclocal/libtoolize/automake/autoconf ( no longer needed ), removed
+  myconf from econf line
 
   21 Jan 2005; Chris Gianelloni <wolf31o2@gentoo.org> parted-1.6.20.ebuild:
   Marking stable on x86 and amd64.
