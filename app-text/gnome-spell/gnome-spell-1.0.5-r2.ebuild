@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-1.0.5-r2.ebuild,v 1.1 2004/03/22 02:48:23 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-1.0.5-r2.ebuild,v 1.2 2004/03/22 03:34:02 liquidx Exp $
 
 inherit gnome.org gnome2 libtool
 
@@ -15,6 +15,7 @@ RDEPEND=">=gnome-base/libgnomeui-2.2
 	>=gnome-base/libbonoboui-2.0
 	>=gnome-base/libglade-2.0
 	>=gnome-base/libbonobo-2.0
+	>=x11-libs/gtk+-2.4
 	>=gnome-base/ORBit2-2.0
 	>=app-text/enchant-1"
 DEPEND="${RDEPEND}
