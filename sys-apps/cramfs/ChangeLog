@@ -1,8 +1,10 @@
 # ChangeLog for sys-apps/cramfs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/cramfs/ChangeLog,v 1.2 2002/12/30 12:46:57 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cramfs/ChangeLog,v 1.3 2003/01/17 04:04:23 manson Exp $
 
 *cramfs-1.1 (19 Jul 2002)
+  16 Jan 2003; Rodney Rees <manson@gentoo.org> added ~sparc keyword to
+  cramfs-1.1.ebuild and updated ChangeLog
 
   30 Dec 2002; Martin Holzer <mholzer@gentoo.org> cramfs-1.1.ebuild ChangeLog :
   Change SRC_URI to use mirror://sf
