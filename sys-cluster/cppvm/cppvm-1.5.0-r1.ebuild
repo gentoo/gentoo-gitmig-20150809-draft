@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cppvm/cppvm-1.5.0-r1.ebuild,v 1.2 2003/08/27 21:53:14 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cppvm/cppvm-1.5.0-r1.ebuild,v 1.3 2004/04/25 22:02:21 spyderous Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="CPPVM: A C++ Interface to PVM"
@@ -26,7 +26,8 @@ src_compile() {
 #	export PVM_ROOT="/usr/local/pvm3"
 #	export PVM_ARCH="LINUX"
 
-	emake || die
+	# Doesn't build in parallel (#47556)
+	emake -j1 || die
 }
 
 src_install() {

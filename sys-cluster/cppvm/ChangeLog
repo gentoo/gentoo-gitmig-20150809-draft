@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/cppvm
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cppvm/ChangeLog,v 1.2 2003/08/27 21:53:14 tantive Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cppvm/ChangeLog,v 1.3 2004/04/25 22:02:21 spyderous Exp $
+
+  25 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; cppvm-1.5.0-r1.ebuild:
+  Doesn't build in parallel (#47556).
 
   27 Aug 2003; Michael Imhof <tantive@gentoo.org> cppvm-1.5.0-r1.ebuild:
   Marked stable for x86.
