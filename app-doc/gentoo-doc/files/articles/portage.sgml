@@ -45,8 +45,7 @@
             <simplesect><title>gnome-office</title><para>office packages for gnome</para></simplesect>
         </sect2>
         <sect2><title>KDE</title>
-            <simplesect><title>kde-apps</title><para>applications for kde</para></simplesect>
-            <simplesect><title>kde-base</title><para>base kde packages</para></simplesect>
+            <simplesect><title>kde-base</title><para>main kde distribution</para></simplesect>
             <simplesect><title>kde-i18n</title><para>kde internationalization packages</para></simplesect>
         </sect2>
         <sect2><title>Multimedia</title>

@@ -430,7 +430,7 @@ KDE has some nice sound utilities, including the KDE sound mixer
 <c>kmix</c>.  
 </p>
 <pre>
-# <i>cd /usr/portage/kde-apps/kdemultimedia</i>
+# <i>cd /usr/portage/kde-base/kdemultimedia</i>
 # <i>emerge --pretend kdemultimedia-x.y.z.ebuild</i>
  
 These are the packages that I would merge, in order.
@@ -441,7 +441,7 @@ Calculating dependencies...... done!
 [ebuild N  ] media-libs/libvorbis-1.0_beta4 to /
 [ebuild N  ] dev-libs/glib-1.2.10 to /
 [ebuild N  ] x11-libs/gtk+-1.2.10-r1 to /
-[ebuild N  ] kde-apps/kdemultimedia-2.1.1 to /
+[ebuild N  ] kde-base/kdemultimedia-2.1.1 to /
 
 # <i>emerge kdemultimedia-x.y.z.ebuild</i>
 # <i>kmix</i>
