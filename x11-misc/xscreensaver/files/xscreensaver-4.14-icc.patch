@@ -1,0 +1,205 @@
+--- driver/Makefile.in.org	2003-12-17 14:18:31.515037306 -0500
++++ driver/Makefile.in	2003-12-17 14:19:29.077690589 -0500
+@@ -896,10 +896,10 @@
+ 	$(XDPMS_LIBS) -lXext $(X_EXTRA_LIBS)
+ 
+ xscreensaver-getimage: $(GETIMG_OBJS)
+-	$(CC) $(LDFLAGS) -o $@ $(GETIMG_OBJS) $(GETIMG_LIBS) -lm
++	$(CC) $(LDFLAGS) -o $@ $(GETIMG_OBJS) $(GETIMG_LIBS) -lm -lsvml
+ 
+ pdf2jpeg: $(PDF2JPEG_OBJS)
+-	$(OBJCC) $(LDFLAGS) -o $@ $(PDF2JPEG_OBJS) $(PDF2JPEG_LIBS) -lm
++	$(OBJCC) $(LDFLAGS) -o $@ $(PDF2JPEG_OBJS) $(PDF2JPEG_LIBS) -lm -lsvml
+ 
+ 
+ TEST_PASSWD_OBJS = test-passwd.o $(LOCK_OBJS_1) $(PASSWD_OBJS) \
+@@ -939,7 +939,7 @@
+ xdpyinfo: xdpyinfo.o
+ 	$(CC) $(LDFLAGS) -o $@ xdpyinfo.o \
+ 		$(LIBS) $(X_LIBS) @GL_LIBS@ \
+-		$(X_PRE_LIBS) -lX11 -lXext $(X_EXTRA_LIBS) -lm
++		$(X_PRE_LIBS) -lX11 -lXext $(X_EXTRA_LIBS) -lm -lsvml
+ 
+ 
+ ##############################################################################
+--- hacks/glx/Makefile.in.org	2003-12-17 14:18:00.067691449 -0500
++++ hacks/glx/Makefile.in	2003-12-17 14:18:12.535449647 -0500
+@@ -47,7 +47,7 @@
+ # Note: see comment in ../../driver/Makefile.in for explanation of X_LIBS, etc.
+ #
+ HACK_PRE	= $(LIBS) $(X_LIBS)
+-HACK_POST     = $(X_PRE_LIBS) -lXt -lX11 $(XMU_LIBS) -lXext $(X_EXTRA_LIBS) -lm
++HACK_POST     = $(X_PRE_LIBS) -lXt -lX11 $(XMU_LIBS) -lXext $(X_EXTRA_LIBS) -lm -lsvml
+ HACK_POST2	= @GL_LIBS@ @HACK_LIBS@ $(HACK_POST)
+ HACK_LIBS	= $(HACK_PRE)                       $(HACK_POST2)
+ XPM_LIBS	= $(HACK_PRE)            @XPM_LIBS@ $(HACK_POST2)
+--- hacks/Makefile.in.org	2003-12-17 14:17:34.705252362 -0500
++++ hacks/Makefile.in	2003-12-17 14:17:48.963688184 -0500
+@@ -49,7 +49,7 @@
+ # Note: see comment in ../driver/Makefile.in for explanation of X_LIBS, etc.
+ #
+ HACK_PRE	= $(LIBS) $(X_LIBS)
+-HACK_POST     = $(X_PRE_LIBS) -lXt -lX11 $(XMU_LIBS) -lXext $(X_EXTRA_LIBS) -lm
++HACK_POST     = $(X_PRE_LIBS) -lXt -lX11 $(XMU_LIBS) -lXext $(X_EXTRA_LIBS) -lm -lsvml
+ HACK_LIBS	= $(HACK_PRE)            @HACK_LIBS@ $(HACK_POST)
+ XPM_LIBS	= $(HACK_PRE) @XPM_LIBS@ @HACK_LIBS@ $(HACK_POST)
+ JPEG_LIBS	= @JPEG_LIBS@
+--- configure.in.org	2003-12-17 13:11:05.092684538 -0500
++++ configure.in	2003-12-17 14:12:27.912148086 -0500
+@@ -67,7 +67,7 @@
+ 
+   if test -n "$GCC"; then
+     AC_MSG_RESULT(Turning on gcc compiler warnings.)
+-    CC="$CC -pedantic -Wall -Wstrict-prototypes -Wnested-externs"
++    CC="$CC"
+     OBJCC="$OBJCC -Wall"
+     # supposedly gcc 3.4 will have "-Wdeclaration-after-statement"
+     # and then perhaps we can do without -pedantic?
+@@ -145,7 +145,7 @@
+      # before they were in the ANSI C 99 spec...  (gcc 2.96 permits //
+      # with -std=gnu89 but not with -std=c89.)
+      #
+-     CC="$CC -std=c89 -U__STRICT_ANSI__"
++     CC="$CC"
+    else
+      # The old way:
+      CC="$CC -Wp,-lang-c89"
+@@ -922,7 +922,7 @@
+                     # Note: this trick never works!  (Generally.)
+                     # We're only getting away with using AC_TRY_LINK
+                     # with X libraries because we know it's SunOS.
+-                    LDFLAGS="$LDFLAGS -lXmu -lXt -lX11 -lXext -lm"
++                    LDFLAGS="$LDFLAGS -lXmu -lXt -lX11 -lXext -lm -lsvml"
+                     AC_TRY_LINK(,,
+                                 [ac_cv_sunos_xmu_bug=no],
+                                 [ac_cv_sunos_xmu_bug=yes])
+@@ -1090,14 +1090,14 @@
+   # scrnsaver.h, but doesn't include the code in libXext.a, the idiots!
+   #
+   if test "$have_mit" = yes; then
+-    AC_CHECK_X_LIB(Xext, XScreenSaverRegister, [true], [have_mit=no], -lm)
++    AC_CHECK_X_LIB(Xext, XScreenSaverRegister, [true], [have_mit=no], -lm -lsvml)
+ 
+     if test "$have_mit" = no; then
+       # Fuck!  Looks like XF86Free-3.3 actually puts it in XExExt instead
+       # of in Xext.  Thank you master, may I have another.
+       AC_CHECK_X_LIB(XExExt, XScreenSaverRegister,
+                      [have_mit=yes; SAVER_LIBS="$SAVER_LIBS -lXExExt"],
+-                     [true], -lX11 -lXext -lm)
++                     [true], -lX11 -lXext -lm -lsvml)
+     fi
+ 
+     if test "$have_mit" = no; then
+@@ -1107,7 +1107,7 @@
+       #  may I have another.
+       AC_CHECK_X_LIB(Xss, XScreenSaverRegister,
+                      [have_mit=yes; SAVER_LIBS="$SAVER_LIBS -lXss"],
+-                     [true], -lX11 -lXext -lm)
++                     [true], -lX11 -lXext -lm -lsvml)
+     fi
+ 
+   if test "$have_mit" = yes; then
+@@ -2570,7 +2570,7 @@
+    have_xp_ext=no
+    AC_CHECK_X_LIB(Xp, XpQueryExtension,
+                   [have_xp_ext=yes; MOTIF_LIBS="$MOTIF_LIBS -lXp"],
+-                  [true], -lX11 -lXext -lm)
++                  [true], -lX11 -lXext -lm -lsvml)
+ fi
+ 
+ 
+@@ -2583,7 +2583,7 @@
+ have_xintl=no
+ if test "$have_motif" = yes ; then
+   AC_CHECK_X_LIB(Xintl, _Xsetlocale, [have_xintl=yes], [have_xintl=no],
+-                 -lX11 -lXext -lm)
++                 -lX11 -lXext -lm -lsvml)
+   if test "$have_xintl" = yes; then
+     MOTIF_LIBS="$MOTIF_LIBS -lXintl"
+   fi
+@@ -2654,14 +2654,14 @@
+       AC_CHECK_X_LIB(MesaGL, glXCreateContext, 
+                      [gl_lib_1="MesaGL"
+                       GL_LIBS="-lMesaGL -lMesaGLU $GL_LIBS"],
+-                     [], -lMesaGLU $GL_LIBS -lX11 -lXext -lm)
++                     [], -lMesaGLU $GL_LIBS -lX11 -lXext -lm -lsvml)
+     fi
+ 
+     if test "$gl_lib_1" = "" ; then
+       AC_CHECK_X_LIB(GL, glXCreateContext, 
+                      [gl_lib_1="GL"
+                       GL_LIBS="-lGL -lGLU $GL_LIBS"],
+-                     [], -lGLU $GL_LIBS -lX11 -lXext -lm)
++                     [], -lGLU $GL_LIBS -lX11 -lXext -lm -lsvml)
+     fi
+ 
+     if test "$gl_lib_1" = "" ; then
+@@ -2767,7 +2767,7 @@
+     # Check for OpenGL 1.1 features.
+     #
+     AC_CHECK_X_LIB($gl_lib_1, glBindTexture, [AC_DEFINE(HAVE_GLBINDTEXTURE)],
+-                   [true], $GL_LIBS -lX11 -lXext -lm)
++                   [true], $GL_LIBS -lX11 -lXext -lm -lsvml)
+   fi
+ 
+ elif test "$with_gl" != no; then
+@@ -2816,7 +2816,7 @@
+     gle_halfassed=yes
+     AC_CHECK_X_LIB(gle, gleCreateGC, 
+                    [have_gle=yes; gle_halfassed=no; GLE_LIBS="-lgle"],
+-                   [], $GL_LIBS -lX11 -lXext -lm)
++                   [], $GL_LIBS -lX11 -lXext -lm -lsvml)
+   fi
+   if test "$have_gle" = yes ; then
+     have_gle=no
+@@ -2830,21 +2830,21 @@
+ #
+ #    AC_CHECK_X_LIB(gle, uview_direction_d, 
+ #                   [have_gle=yes; gle_halfassed=no],
+-#                   [], $GL_LIBS -lX11 -lXext -lm)
++#                   [], $GL_LIBS -lX11 -lXext -lm -lsvml)
+ 
+     # As of GLE 3 this is in libgle, and has changed name to uview_direction!
+     # *sigh*
+     if test "$have_gle3" = yes ; then
+       AC_CHECK_X_LIB(gle, uview_direction, 
+                      [have_gle=yes; gle_halfassed=no],
+-                    [], $GL_LIBS -lX11 -lXext -lm)
++                    [], $GL_LIBS -lX11 -lXext -lm -lsvml)
+     fi
+     # if it wasn't in libgle, then look in libmatrix.
+     if test "$have_gle" = no ; then
+       AC_CHECK_X_LIB(matrix, uview_direction_d, 
+                      [have_gle=yes; gle_halfassed=no;
+                       GLE_LIBS="$GLE_LIBS -lmatrix"],
+-                    [], $GL_LIBS -lX11 -lXext -lm)
++                    [], $GL_LIBS -lX11 -lXext -lm -lsvml)
+     fi
+   fi
+ 
+@@ -3079,14 +3079,14 @@
+ 
+     # library A...
+     AC_CHECK_X_LIB(c, gdk_pixbuf_new_from_file, [have_gdk_pixbuf=yes],,
+-                   $ac_gdk_pixbuf_config_libs -lX11 -lXext -lm)
++                   $ac_gdk_pixbuf_config_libs -lX11 -lXext -lm -lsvml)
+     # library B...
+     if test "$have_gdk_pixbuf" = yes; then
+       have_gdk_pixbuf=no
+       AC_CHECK_X_LIB(c, gdk_pixbuf_xlib_init,
+                      [have_gdk_pixbuf=yes
+                       gdk_pixbuf_halfassed=no],,
+-                     $ac_gdk_pixbuf_config_libs -lX11 -lXext -lm)
++                     $ac_gdk_pixbuf_config_libs -lX11 -lXext -lm -lsvml)
+     fi
+   fi
+ 
+@@ -3183,7 +3183,7 @@
+         have_xshm=no
+         AC_CHECK_X_LIB(XextSam, XShmQueryExtension,
+                        [have_xshm=yes; X_EXTRA_LIBS="$X_EXTRA_LIBS -lXextSam"],
+-                       [true], -lX11 -lXext -lm)
++                       [true], -lX11 -lXext -lm -lsvml)
+       fi
+     ;;
+   esac

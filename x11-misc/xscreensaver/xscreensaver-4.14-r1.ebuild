@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.14-r1.ebuild,v 1.4 2004/01/08 17:20:07 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xscreensaver/xscreensaver-4.14-r1.ebuild,v 1.5 2004/01/09 03:13:29 liquidx Exp $
 
-IUSE="pam kerberos krb4 gtk gtk2 gnome opengl jpeg xinerama"
+IUSE="pam kerberos krb4 gtk gtk2 gnome opengl jpeg xinerama icc"
 
 DESCRIPTION="a modular screensaver for X11"
 SRC_URI="http://www.jwz.org/xscreensaver/${P}.tar.gz"
@@ -67,6 +67,8 @@ src_unpack() {
 	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${PN}-4.10-norpm.patch
 	# set default fortune to /usr/bin/fortune even if one can't be found
 	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${PN}-4.14-fortune.patch
+	use icc && EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${P}-icc.patch
+
 }
 
 src_compile() {
@@ -102,13 +104,16 @@ src_compile() {
 		&& myconf="${myconf} --enable-nls" \
 		|| myconf="${myconf} --disable-nls"
 
+
 	if [ -z "`use gtk2`" -a -n "`use gtk`" ]; then
 		if [ -n "`use gnome`" ]; then
 			myconf="${myconf} --with-gnome --with-pixbuf"
 		fi
 	fi
 
-	#export C_INCLUDE_PATH="/usr/include/libxml2/"
+	use icc && export CC=icc
+	use icc && autoconf
+
 	econf \
 		--enable-hackdir=/usr/lib/xscreensaver \
 		--x-libraries=/usr/X11R6/lib \
