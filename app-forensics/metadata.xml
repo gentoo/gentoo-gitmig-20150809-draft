@@ -5,5 +5,9 @@
 		The app-forensics category contains software which helps detect and
 		analyse security breaches.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie app-forensics enthält Programme welche beim Erkennen
+		und Analysieren von Sicherheitsbrüchen helfen.
+	</longdescription>
 </catmetadata>
 
