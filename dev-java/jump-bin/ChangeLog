@@ -1,0 +1,15 @@
+# ChangeLog for dev-java/jump
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jump-bin/ChangeLog,v 1.1 2004/07/30 20:59:52 axxo Exp $
+
+*jump-bin-0.4.1 (30 Jul 2004)
+
+  30 Jul 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
+  +jump-bin-0.4.1.ebuild:
+  move dev-java/jump dev-java/jump-bin
+
+*jump-0.4.1 (14 May 2003)
+
+  14 May 2003; Dylan Carlson <absinthe@gentoo.org> jump-0.4.1.ebuild:
+  Initial import.
+
