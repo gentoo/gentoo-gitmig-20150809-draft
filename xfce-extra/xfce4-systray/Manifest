@@ -1,4 +1,6 @@
 MD5 57e3757ccec378def44c77a83f3e71a9 xfce4-systray-4.0.0.ebuild 797
+MD5 bc605688c4b0eaf1d53e7749c8b8eca3 xfce4-systray-4.0.1.ebuild 800
 MD5 aea00035ec9b5701f9ed6051dd7b72d5 ChangeLog 1048
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 1b8176c9c00582be5bd88d84144d35e7 files/digest-xfce4-systray-4.0.0 71
+MD5 56e3998d01a9dfe5cf883bc563ddc90d files/digest-xfce4-systray-4.0.1 71
