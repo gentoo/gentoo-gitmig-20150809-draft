@@ -1,6 +1,12 @@
 # ChangeLog for app-misc/kdirstat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kdirstat/ChangeLog,v 1.2 2002/03/05 18:54:44 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kdirstat/ChangeLog,v 1.3 2002/05/04 11:36:25 danarmak Exp $
+
+*kdirstat-2.1.1_neta0 (4 May 2002)
+
+  4 May 2002; Dan Armak <danarmak@gentoo.org> Changelog:
+  
+  New upstream version, first kde3 version.
 
 *kdirstat-2.0.0 (5 Mar 2002)
 
