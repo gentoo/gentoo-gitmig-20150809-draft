@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/ucd-snmp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ChangeLog,v 1.21 2004/04/27 21:28:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ChangeLog,v 1.22 2004/06/05 15:55:01 kloeri Exp $
+
+  05 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> ucd-snmp-4.2.6-r2.ebuild:
+  Stable on alpha.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> ucd-snmp-4.2.6-r2.ebuild:
   Add inherit eutils
