@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.24 2004/07/24 04:43:43 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.25 2004/07/29 18:35:00 geoman Exp $
+
+  29 Jul 2004; Stephen P. Becker <geoman@gentoo.org> gnutls-1.0.4.ebuild:
+  Stable on mips.
 
   24 Jul 2004; Alastair Tse <liquidx@gentoo.org>
   +files/gnutls-1.0.14-extra.h.patch, gnutls-1.0.14.ebuild:
