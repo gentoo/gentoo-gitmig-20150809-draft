@@ -6,6 +6,8 @@ ZETADIR=/opt/zetagrid/
 start() {
         ebegin "Starting zetagrid"
         cd ${ZETADIR}
+	JAVA_HOME="/bin/grep -e "JAVA_HOME" /etc/profile.env | sed -e "s/^.*'\(.*\)'$/\1/""
+	export PATH=$PATH:$JAVA_HOME/bin
         ./zeta.sh >/dev/null
         eend $? "Failed to start zetagrid"
 }
