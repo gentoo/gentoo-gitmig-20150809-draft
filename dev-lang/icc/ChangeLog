@@ -1,12 +1,16 @@
 # ChangeLog for dev-lang/icc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.14 2003/04/12 02:57:06 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/ChangeLog,v 1.15 2003/05/26 01:19:11 avenj Exp $
 
 *icc-7.1.006 (11 April 2003)
 
   11 April 2003; Jon Portnoy <avenj@gentoo.org> icc-7.1.006.ebuild :
 
   Version bump.
+
+  25 May 2003; Jon Portnoy <avenj@gentoo.org> icc-7.1.006.ebuild :
+
+  Added icpc wrapper.
 
 *icc-7.0.065-r2 (20 Dec 2002)
 

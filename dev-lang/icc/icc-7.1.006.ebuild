@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-7.1.006.ebuild,v 1.2 2003/05/10 22:51:35 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/icc/icc-7.1.006.ebuild,v 1.3 2003/05/26 01:19:11 avenj Exp $
 
 S=${WORKDIR}
 
@@ -25,6 +25,8 @@ RDEPEND="virtual/linux-sources
 SLOT="7"
 KEYWORDS="-* x86"
 IUSE=""
+
+RESTRICT="nostrip"
 
 src_compile() {
 	# Keep disk space to a minimum
@@ -71,6 +73,7 @@ src_install () {
 	# fix the issue with the primary icc executable
 	exeinto /opt/intel/compiler70/ia32/bin
 	doexe ${FILESDIR}/${PVR}/icc
+	doexe ${FILESDIR}/${PVR}/icpc
 }
 
 pkg_postinst () {
