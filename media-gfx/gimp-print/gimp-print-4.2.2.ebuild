@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.2.2.ebuild,v 1.2 2002/09/30 03:46:16 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.2.2.ebuild,v 1.3 2002/10/03 21:37:02 owen Exp $
 
 inherit libtool
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://gimp-print.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 DEPEND="=media-gfx/gimp-1.2*
 	app-text/ghostscript
