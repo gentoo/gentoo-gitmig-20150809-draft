@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/slocate
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.44 2004/06/24 22:26:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.45 2004/07/22 04:31:51 vapier Exp $
+
+  22 Jul 2004; Mike Frysinger <vapier@gentoo.org> files/updatedb.conf:
+  Add subfs to the prune list #56432 by Andreas Simon.
 
   16 Jun 2004; Daniel Black <dragonheart@gentoo.org> slocate-2.7-r5.ebuild:
   uclibc patch is in DISTDIR. Thanks Mr Bones

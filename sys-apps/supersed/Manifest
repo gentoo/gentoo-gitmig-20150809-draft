@@ -1,8 +1,18 @@
-MD5 ff3ee7f458dae74a3d7e87d2684cad8a supersed-3.58-r2.ebuild 1863
-MD5 fafa2b8eb2d08fd70bb44662d4af330d supersed-3.58-r1.ebuild 1263
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 bda14e0d243ee67400d097bbcd0a626d ChangeLog 2066
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 e5722abe31948480faac0bbc28c07788 supersed-3.60.ebuild 1225
-MD5 442bd9c5adb144210908f46fb44c3636 files/digest-supersed-3.60 60
+MD5 37e7b7f3bd2863d6bca9c8374726ab66 supersed-3.58-r1.ebuild 1243
+MD5 dd221bf8331fa39af42ce0484a1f00d4 supersed-3.58-r2.ebuild 1844
+MD5 00751003032e39da1f36d4d144466d74 supersed-3.60.ebuild 1215
 MD5 35a6ff3ee1e21220eb6fa6533238a56f files/digest-supersed-3.58-r1 60
 MD5 35a6ff3ee1e21220eb6fa6533238a56f files/digest-supersed-3.58-r2 60
+MD5 442bd9c5adb144210908f46fb44c3636 files/digest-supersed-3.60 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA/0O3HTu7gpaalycRAjeeAJ93j7J0vgpI9n4uV/ptD0Hb6RPEGwCfU9zP
+gsrBoSG6kns1piyFjWBSd7Y=
+=pEYL
+-----END PGP SIGNATURE-----
