@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl-glade/gtk-perl-glade-0.7004-r2.ebuild,v 1.7 2002/08/14 04:32:35 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl-glade/gtk-perl-glade-0.7004-r2.ebuild,v 1.8 2002/09/21 01:42:34 vapier Exp $
 
 inherit perl-module
 
@@ -8,7 +8,7 @@ MY_P=Gtk-Perl-${PV}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Perl bindings for GTK"
 SRC_URI="ftp://ftp.rz.ruhr-uni-bochum.de/pub/CPAN/authors/id/L/LU/LUPUS/${MY_P}.tar.gz"
-HOEMPAGE="http://www.perl.org/"
+HOMEPAGE="http://www.perl.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
