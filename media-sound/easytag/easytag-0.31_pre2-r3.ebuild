@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-0.31_pre2-r3.ebuild,v 1.1 2004/04/27 18:38:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-0.31_pre2-r3.ebuild,v 1.2 2004/04/30 01:36:27 eradicator Exp $
 
 inherit eutils
 
@@ -36,6 +36,7 @@ src_unpack() {
 
 	if use gtk2; then
 		epatch ${DISTDIR}/${DSD_PATCH}
+		epatch ${FILESDIR}/${P}-gcc2.patch
 
 		export WANT_AUTOMAKE=1.7
 		export WANT_AUTOCONF=2.5
