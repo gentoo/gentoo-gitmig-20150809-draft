@@ -11,7 +11,6 @@ MD5 9d0457271fd1f3afdcf4f7ee602d3b34 metadata.xml 414
 MD5 a728d28dca69f5ae16aab56cd2fc6110 files/digest-xfs-sources-2.4.20 139
 MD5 26b986cdd4c24df8ad3d0f0b21e802be files/digest-xfs-sources-2.4.22 139
 MD5 f296f6804e8a1b632ff0939c10c66ea5 files/digest-xfs-sources-2.4.23 141
-MD5 35277b6ee7e51d90fed6b55ca46c4eca files/xconfig_target_fix.patch 1500
 MD5 e637c6fa41097ea2c4693d0766f2e1c5 files/do_brk_fix.patch 242
 MD5 3afd3962750ab6706f9a9878a94cfd8d files/xfs-sources-2.4.20-gcc33.patch 10849
 MD5 b0c3e68e37892be35fc1c33723bbbdc3 files/xfs-sources-2.4.19.patch 497
