@@ -3,10 +3,10 @@ MD5 45b09c4b687508552c48d2700280adec cherokee-0.4.4.ebuild 656
 MD5 a35bf1afadd3f5b8c3cbaa4d172af3b9 cherokee-0.4.10.ebuild 1716
 MD5 9460fd6433cde10bf9a219f48f7639e4 cherokee-0.4.1.ebuild 722
 MD5 575117dbbef7e53e43420f2c095e5e7f cherokee-0.4.14.ebuild 1722
-MD5 1c50429247191448ee1197760ae3e2c6 cherokee-0.4.16.ebuild 1722
+MD5 c8b8b953dc19b07a89fbc49839540f1c cherokee-0.4.16.ebuild 1349
 MD5 d93ff9506456e2ed1a463a8559b1122a cherokee-0.4.5.ebuild 1741
 MD5 9c2d0a7311b83d11f447d8a15f8ff628 cherokee-0.4.0.ebuild 665
-MD5 1ff26922e7ac9eadb5918ca8d36d69c4 ChangeLog 2086
+MD5 ea27d492bc20aa2059827ddcffa0f209 ChangeLog 2558
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
 MD5 88661e2618ec207291c2a9948ee90d73 files/cherokee-0.4.1-gcc3.patch 674
 MD5 8278b4acda7637c68885863ddd58f712 files/cherokee-0.4.5-cherokee.conf 2769
