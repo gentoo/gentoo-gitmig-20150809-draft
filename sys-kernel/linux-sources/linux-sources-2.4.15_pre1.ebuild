@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.15_pre1.ebuild,v 1.2 2001/11/16 23:10:14 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.15_pre1.ebuild,v 1.3 2001/11/17 07:35:22 drobbins Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -33,7 +33,7 @@ fi
 # lm-sensors           N         lm_sensors        Need to move this to its own ebuild
 
 # Patch Versions
-ACPIV=20011102
+ACPIV=20011109
 LVMV=1.0.1-rc4
 EXT3V=0.9.15
 LOWLV=2.4.14

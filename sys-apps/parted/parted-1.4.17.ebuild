@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Peter Gavin <pete@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.4.17.ebuild,v 1.2 2001/08/05 22:58:06 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.4.17.ebuild,v 1.3 2001/11/17 07:35:22 drobbins Exp $
 
 #P=
 A=${P}.tar.gz
@@ -16,9 +16,7 @@ RDEPEND="virtual/glibc
 	nls? ( sys-devel/gettext-0.10.38 )
 	python? ( >=dev-lang/python-2.0 )"
 
-DEPEND="${RDEPEND}
-	>=sys-devel/autoconf-2.50
-	>=sys-devel/automake-1.4_p5"
+DEPEND="${RDEPEND}"
 
 src_unpack() {
     unpack ${A}
