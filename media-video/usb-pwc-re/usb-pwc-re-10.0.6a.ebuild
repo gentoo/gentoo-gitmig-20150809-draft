@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwc-re/usb-pwc-re-10.0.6a.ebuild,v 1.5 2005/03/16 06:44:16 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/usb-pwc-re/usb-pwc-re-10.0.6a.ebuild,v 1.6 2005/03/17 14:10:58 phosphan Exp $
 
 
-inherit linux-info eutils
+inherit linux-info toolchain-funcs eutils
 
 DESCRIPTION="A fork of the discontinuity pwc driver made by Nemosoft Unv. Most of the pwcx functionality has been reverse engineered."
 HOMEPAGE="http://www.saillard.org/pwc/"
@@ -17,7 +17,7 @@ DEPEND=""
 S=${WORKDIR}/pwc-${PV}
 
 src_compile() {
-	set_arch_to_kernel
+	export ARCH="$(tc-arch-kernel)"
 	emake || die "make failed"
 }
 
