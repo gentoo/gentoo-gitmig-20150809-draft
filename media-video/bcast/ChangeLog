@@ -1,6 +1,9 @@
 # ChangeLog for media-video/bcast
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/bcast/ChangeLog,v 1.6 2004/06/25 00:36:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/bcast/ChangeLog,v 1.7 2004/08/12 20:15:40 chriswhite Exp $
+
+  13 Aug 2004; Chris White <chriswhite@gentoo.org> +metadata.xml:
+  Added missing metadata.xml.  Taking over as maintainer.
 
 *bcast-2000c-r2 (11 Apr 2002)
 
