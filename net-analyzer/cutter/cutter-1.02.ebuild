@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cutter/cutter-1.02.ebuild,v 1.1 2003/07/02 07:30:48 aliz Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/cutter/cutter-1.02.ebuild,v 1.2 2003/09/05 23:44:49 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="TCP/IP Connection cutting on Linux Firewalls and Routers"

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/barnyard-0.1.0.ebuild,v 1.1 2003/08/10 01:23:54 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/barnyard/barnyard-0.1.0.ebuild,v 1.2 2003/09/05 23:44:49 msterret Exp $
 
 IUSE="mysql"
 
