@@ -1,0 +1,10 @@
+# ChangeLog for xfce-extra/xfce4-appfinder
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-appfinder/ChangeLog,v 1.1 2004/10/04 18:41:03 bcowan Exp $
+
+*xfce4-appfinder-4.1.90 (04 Oct 2004)
+
+  04 Oct 2004; Brad Cowan <bcowan@gentoo.org> +metadata.xml,
+  +xfce4-appfinder-4.1.90.ebuild:
+  Beta version of new 4.2 release. Contains too numerous improvements to list.
+
