@@ -1,13 +1,15 @@
 # ChangeLog for dev-libs/libmcrypt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/ChangeLog,v 1.6 2002/06/24 12:28:04 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/ChangeLog,v 1.7 2002/06/24 14:09:40 seemant Exp $
+
+*libmcrypt-2.5.1-r2 (24 Jun 2002)
+
+  24 Jun 2002; Seemant Kulleen <seemant@gentoo.org>
+  libmcrypt-2.5.1-r2.ebuild files/digest-libmcrypt-2.5.1-r2.ebuild :
+
+  elibtoolize
 
 *libmcrypt-2.5.1-r1 (21 Jun 2002)
-
-  24 Jun 2002: Gabriele Giorgetti <stroke@gentoo.org> ChangeLog:
-
-  lintool fixes applied (SLOT, LICENSE). automake dependece was added.
-  Closes bug #4068
 
   21 Jun 2002: Gabriele Giorgetti <stroke@gentoo.org> libmcrypt-2.5.1-r1.ebuild
 
@@ -30,7 +32,7 @@
 
   5 May 2002: Martin Schlemmer <azarah@gentoo.org> libmcrypt-2.4.19-r1.ebuild :
 
-  Resolve bug #2276.  Add $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/ChangeLog,v 1.6 2002/06/24 12:28:04 stroke Exp $.
+  Resolve bug #2276.  Add $Header: /var/cvsroot/gentoo-x86/dev-libs/libmcrypt/ChangeLog,v 1.7 2002/06/24 14:09:40 seemant Exp $.
 
 *libmcrypt-2.4.19 (1 Feb 2002)
 
