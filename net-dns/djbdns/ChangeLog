@@ -1,6 +1,10 @@
 # ChangeLog for net-dns/djbdns
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.54 2005/03/03 18:26:14 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/ChangeLog,v 1.55 2005/03/20 09:41:57 hansmi Exp $
+
+  20 Mar 2005; Michael Hanselmann <hansmi@gentoo.org>
+  djbdns-1.05-r14.ebuild:
+  Added to ~hppa.
 
   03 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> djbdns-1.05-r14.ebuild:
   Dependency update: sys-apps/daemontools -> sys-process/daemontools.
