@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.4-r1.ebuild,v 1.4 2001/04/29 02:55:01 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux/linux-2.4.4-r2.ebuild,v 1.1 2001/04/29 03:08:38 drobbins Exp $
 
 #OKV=original kernel version, KV=patched kernel version
 OKV=2.4.4
@@ -133,129 +133,112 @@ src_unpack() {
 }
 
 src_compile() {
-    
     if [ "${PN}" = "linux" ] || [ "${PN}" = "linux-sources" ]
     then
-	try make symlinks
+		try make symlinks
+		#LVM tools are included in the linux and linux-extras pakcages
+		cd ${S}/extras/LVM/${LVMV}
+		# I had to hack this in so that LVM will look in the current linux
+		# source directory instead of /usr/src/linux for stuff - pete
+		try CFLAGS=\""${CFLAGS} -I${S}/include"\" ./configure --prefix=/ --mandir=/usr/share/man --with-kernel_dir="${S}"
+		try make
 	
-	#LVM tools are included in the linux and linux-extras pakcages
-	cd ${S}/extras/LVM/${LVMV}
+		cd ${S}/extras/lm_sensors-${SENV}
+		try make
 	
-	# I had to hack this in so that LVM will look in the current linux
-	# source directory instead of /usr/src/linux for stuff - pete
-	try CFLAGS=\""${CFLAGS} -I${S}/include"\" ./configure --prefix=/ --mandir=/usr/share/man --with-kernel_dir="${S}"
-	
-	try make
-	
-	cd ${S}/extras/lm_sensors-${SENV}
-	try make
-	
-	cd ${S}
-
-	if [ "$PN" == "linux" ]
-	then
-	    try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" dep
-	    try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" bzImage
-	    try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" modules
+		cd ${S}
+		if [ "$PN" == "linux" ]
+		then
+			try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" dep
+			try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" bzImage
+			try make HOSTCFLAGS=\""${LINUX_HOSTCFLAGS}"\" modules
 	    
+			if [ "`use alsa`" ]
+			then
+				cd ${S}/extras/alsa-driver-${AV}
+				try ./configure --with-kernel=\"${S}\" --with-isapnp=yes --with-sequencer=yes --with-oss=yes --with-cards=all
+				try make
+			fi
+		fi
 	fi
-fi
-	if [ "$PN" = "linux" ]
-then 
-	if [ "`use alsa`" ]
-	then
-	    cd ${S}/extras/alsa-driver-${AV}
-	    try ./configure --with-kernel=\"${S}\" --with-isapnp=yes --with-sequencer=yes --with-oss=yes --with-cards=all
-	    try make
-	fi
-    fi
 }
 
 src_install() {
     dodir /usr/src
-    
     if [ "${PN}" = "linux" ] || [ "${PN}" = "linux-extras" ]
     then
-	dodir /usr/lib
-	cd ${S}/extras/LVM/${LVMV}/tools
+		dodir /usr/lib
+		cd ${S}/extras/LVM/${LVMV}/tools
 	
-	try CFLAGS=\"${CFLAGS} -I${S}/include\" make install -e prefix=${D} mandir=${D}/usr/share/man \
+		try CFLAGS=\"${CFLAGS} -I${S}/include\" make install -e prefix=${D} mandir=${D}/usr/share/man \
 	    sbindir=${D}/sbin libdir=${D}/lib
-	#no need for a static library in /lib
-	mv ${D}/lib/liblvm*.a ${D}/usr/lib
+		#no need for a static library in /lib
+		mv ${D}/lib/liblvm*.a ${D}/usr/lib
 	
-	#install sensors tools
-	cd ${S}/extras/lm_sensors-${SENV}
-	make install
+		#install sensors tools
+		cd ${S}/extras/lm_sensors-${SENV}
+		make install
 	
         #install ALSA progs
         cd ${S}/extras/alsa-driver-${AV}
         into /usr
         dosbin snddevices
-	
+	fi	
 	if [ "$PN" = "linux" ]
 	then
- 	    if [ "`use alsa`" ]
-            then
-  	        #install ALSA modules
- 	        cd ${S}/extras/alsa-driver-${AV}
-	        dodir /lib/modules/${KV}/misc
-	        cp modules/*.o ${D}/lib/modules/${KV}/misc
+		if [ "`use alsa`" ]
+		then
+			#install ALSA modules
+			cd ${S}/extras/alsa-driver-${AV}
+			dodir /lib/modules/${KV}/misc
+			cp modules/*.o ${D}/lib/modules/${KV}/misc
+		fi
 	
-            fi
+		dodir /usr/src/linux-${KV}
+		cd ${D}/usr/src
+		#grab includes and documentation only
+		cp -ax ${S}/include ${D}/usr/src/linux-${KV}
+		cp -ax ${S}/Documentation ${D}/usr/src/linux-${KV}
+	
+		#grab compiled kernel
+		dodir /boot/boot
+		insinto /boot/boot
+		cd ${S}
+		doins arch/i386/boot/bzImage
 	    
-	    dodir /usr/src/linux-${KV}
-	    cd ${D}/usr/src
-	    #grab includes and documentation only
-#	    dodir /usr/src/linux-${KV}/include/linux
-#	    dodir /usr/src/linux-${KV}/include/asm-i386
-	    cp -ax ${S}/include ${D}/usr/src/linux-${KV}
-	    cp -ax ${S}/Documentation ${D}/usr/src/linux-${KV}
-#	    dodir /usr/include
-#	    dosym ../src/linux/include/linux /usr/include/linux
-#	    dosym ../src/linux/include/asm-i386 /usr/include/asm
-	    
-	    #grab compiled kernel
-	    dodir /boot/boot
-	    insinto /boot/boot
-	    cd ${S}
-	    doins arch/i386/boot/bzImage
-	    
-	    #grab modules
-	    # Do we have a bug in modutils ?
-	    # Meanwhile we use this quick fix (achim)
-	    
-	    install -d ${D}/lib/modules/`uname -r`
-	    try make INSTALL_MOD_PATH=${D} modules_install
-#	    rm -r ${D}/lib/modules/`uname -r`		
+		#grab modules
+		# Do we have a bug in modutils ?
+		# Meanwhile we use this quick fix (achim)
+	
+		install -d ${D}/lib/modules/`uname -r`
+		try make INSTALL_MOD_PATH=${D} modules_install
+		# rm -r ${D}/lib/modules/`uname -r`		
 
-	    #fix symlink
-	    cd ${D}/lib/modules/${KV}
-	    rm build
-	    ln -sf /usr/src/linux-${KV} build
+		#fix symlink
+		cd ${D}/lib/modules/${KV}
+		rm build
+		ln -sf /usr/src/linux-${KV} build
+	elif [ "${PN}" = "linux-sources" ]
+	then
+		cd ${S}
+		make mrproper
+		cd ${WORKDIR}
+	
+		cd ${S}/extras/LVM/${LVMV}
+		make distclean
+	
+		cd ${S}/extras/lm_sensors-${SENV}
+		make clean
+		cp -ax ${S} ${D}/usr/src
 	fi
-    elif [ "${PN}" = "linux-sources" ]
-    then
-	cd ${S}
-	make mrproper
-	cd ${WORKDIR}
-	
-	cd ${S}/extras/LVM/${LVMV}
-	make distclean
-	
-	cd ${S}/extras/lm_sensors-${SENV}
-	make clean
-	cp -ax ${S} ${D}/usr/src
-    fi
-	
-    if [ "`use alsa`" ]
-    then
-	# get alsa includes
-	cd ${S}/extras/alsa-driver-${AV}
-	insinto /usr/src/linux-${KV}/include/linux
-	cd include
-	doins asound.h asoundid.h asequencer.h ainstr_*.h
-    fi 
+	if [ "`use alsa`" ]
+	then
+		# get alsa includes
+		cd ${S}/extras/alsa-driver-${AV}
+		insinto /usr/src/linux-${KV}/include/linux
+		cd include
+		doins asound.h asoundid.h asequencer.h ainstr_*.h
+	fi 
 
 	#don't overwrite existing .config if present
 	cd ${D}/usr/src/linux
@@ -266,14 +249,15 @@ src_install() {
 }
 
 pkg_postinst() {
-    if [  "${ROOT}" = "/" ]
-    then
-	if [ "`use alsa`"  ] ; then
-	    echo "Creating sounddevices..."
-	    /usr/sbin/snddevices
-		#needs to get fixed for devfs
-	fi
-    fi
+# snddevices no longer exists -- DR
+#    if [  "${ROOT}" = "/" ]
+#    then
+#	if [ "`use alsa`"  ] ; then
+#	    echo "Creating sounddevices..."
+#	    /usr/sbin/snddevices
+#		#needs to get fixed for devfs
+#	fi
+#    fi
     rm -f ${ROOT}/usr/src/linux
     ln -sf linux-${KV} ${ROOT}/usr/src/linux
 
