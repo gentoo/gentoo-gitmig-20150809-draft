@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.5-r2.ebuild,v 1.11 2004/10/16 23:08:50 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.5-r2.ebuild,v 1.12 2004/11/04 03:28:49 vapier Exp $
 
 inherit eutils gnuconfig flag-o-matic java-pkg
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://postgresql/source/v${PV}/${PN}-base-${PV}.tar.bz2
 
 LICENSE="POSTGRESQL"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~mips alpha ~arm hppa amd64 ia64 ~s390 ppc64"
+KEYWORDS="x86 ppc sparc ~mips alpha arm hppa amd64 ia64 s390 ppc64"
 IUSE="ssl nls java python tcltk perl libg++ pam readline zlib doc pg-hier pg-vacuumdelay pg-intdatetime"
 
 DEPEND="virtual/libc
