@@ -1,6 +1,9 @@
 # ChangeLog for app-text/htag
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htag/ChangeLog,v 1.5 2004/06/28 02:58:11 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htag/ChangeLog,v 1.6 2004/10/21 15:10:01 ka0ttic Exp $
+
+  21 Oct 2004; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml:
+  Add metadata (shell-tools)
 
   28 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> htag-0.0.22.ebuild:
   Added ~sparc, ~mips

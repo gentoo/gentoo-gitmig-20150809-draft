@@ -1,6 +1,9 @@
 # ChangeLog for app-text/duconv
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/duconv/ChangeLog,v 1.8 2004/06/28 02:37:17 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/duconv/ChangeLog,v 1.9 2004/10/21 15:07:44 ka0ttic Exp $
+
+  21 Oct 2004; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml:
+  Add metadata (shell-tools)
 
   28 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> duconv-1.1.ebuild:
   Added ~mips. Fixed CXXFLAGS so that non-x86 builds work. QA: added IUSE.
