@@ -1,6 +1,9 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.31 2003/08/17 11:56:35 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.32 2003/08/17 18:03:39 pauldv Exp $
+
+  17 Aug 2003; <paul@gentoo.org> openoffice-1.1_rc1.ebuild:
+  Also fix mirrors in rc1
 
   17 Aug 2003; <paul@gentoo.org> openoffice-1.1_rc2.ebuild:
   Use the updated openoffice mirror list
