@@ -1,0 +1,10 @@
+# ChangeLog for net-news/newspost
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-news/newspost/ChangeLog,v 1.1 2002/07/28 22:04:05 danarmak Exp $
+
+*newspost-1.20 (29 Jul 2002)
+
+  29 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  User submission by Richard Jackson (#4936). newspost is a CL usenet binary
+  autoposter.
