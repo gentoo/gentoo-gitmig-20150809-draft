@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.2.0_alpha1.ebuild,v 1.1 2003/09/16 03:25:55 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.2.0_alpha2.ebuild,v 1.1 2003/09/26 02:01:53 caleb Exp $
 inherit kde-dist
 
 IUSE="slp"
@@ -12,7 +12,7 @@ use slp 	&& myconf="$myconf --enable-slp"	|| myconf="$myconf --disable-slp"
 
 src_compile()
 {
-	kde_src_compile myconf configure make
+	kde_src_compile
 }
 
 
