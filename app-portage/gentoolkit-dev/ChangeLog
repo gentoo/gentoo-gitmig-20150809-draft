@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/gentoolkit-dev
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.16 2005/03/12 16:37:26 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit-dev/ChangeLog,v 1.17 2005/04/01 03:38:28 agriffis Exp $
+
+  31 Mar 2005; Aron Griffis <agriffis@gentoo.org>
+  gentoolkit-dev-0.2.0_pre4.ebuild:
+  stable on ia64
 
 *gentoolkit-dev-0.2.3 (12 Mar 2005)
 
