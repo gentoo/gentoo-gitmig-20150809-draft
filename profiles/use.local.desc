@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.374 2004/05/17 00:28:07 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.375 2004/05/17 01:01:18 solar Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -328,6 +328,7 @@ sys-apps/tcng:tcsim - enable traffic simulator
 sys-apps/tinylogin:uclibc - Compile with uclibc
 sys-boot/lilo:devmap - Compile with support for device-mapper
 sys-cluster/heartbeat:ldirectord - Adds support for ldiretord, use enabled because it has a lot of deps
+sys-devel/binutils:multitarget - Adds support to binutils for canadian cross compiling. (does not work with gas)
 sys-devel/gcc:f77 - Build support for the f77 language
 sys-devel/gcc:gcj - Build gcj (java compiler included with gcc package)
 sys-devel/gcc:hardened - activate default PIE (position independent executables) and SSP (stack smashing protector)
