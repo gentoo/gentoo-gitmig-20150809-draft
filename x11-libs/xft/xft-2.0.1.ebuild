@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xft/xft-2.0.1.ebuild,v 1.3 2003/02/13 17:04:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xft/xft-2.0.1.ebuild,v 1.4 2003/03/11 11:07:50 gmsoft Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://fontconfig.org/"
 
 LICENSE="fontconfig"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc hppa"
 
 RDEPEND="x11-base/xfree
 	>=media-libs/fontconfig-2.1"
