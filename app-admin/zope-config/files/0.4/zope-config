@@ -9,7 +9,7 @@
 #
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/files/0.4/zope-config,v 1.4 2004/07/24 23:20:46 batlogg Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/files/0.4/zope-config,v 1.5 2004/09/11 20:38:48 lanius Exp $
 #
 #
 # Notes:
@@ -239,8 +239,8 @@ zinst_dir_set()
 
 	while : ; do
 		ZINST_DIR=$(dialog --stdout \
-			--backtitle "Need a uniqe name for zinstance directory.(Also the name of the rcscript.)" \
-			--inputbox "Enter a new zinstance name:" 0 0 ${DEFAULT_ZINSTANCENAME} )
+			--backtitle "We need a unique name for the zinstance directory. (This will be the name of the rcscript.)" \
+			--inputbox  "Enter a new zinstance name:" 0 0 ${DEFAULT_ZINSTANCENAME} )
 		RESULT=$?
                 if [ ${RESULT} -ne 0 ] ; then
                         break
@@ -295,7 +295,7 @@ zinst_default_set()
 	local RESULT=
 
         if [ -z ${ZINST_DIR} ] ; then
-            zinst_dir_get || { echo 'Canceled: zinst_dir_get' ; exit 1 ; }
+            zinst_dir_get || { echo 'Cancelled: zinst_dir_get' ; exit 1 ; }
         fi
 	RESULT=$?
 	if [ ${RESULT} -eq 0 ] ; then
@@ -325,7 +325,7 @@ zinst_zgid_set()
 	local RESULT=
 	while : ; do
 		ZGID_NAME=$(dialog --stdout \
-			--backtitle "Need to create/assign a zinstance group name." \
+			--backtitle "We need to create and/or assign a zinstance group name." \
 			--inputbox "Enter a group name:" \
 			0 0 $(basename ${ZIRC_NAME}))			
 		RESULT=$?
@@ -335,7 +335,7 @@ zinst_zgid_set()
 			dialog --msgbox "Error: empty string." 0 0
 			continue
 		elif groupmod ${ZGID_NAME} >/dev/null 2>&1 ; then
-			dialog --yesno "${ZGID_NAME} already exists, use it?" 0 0
+			dialog --yesno "The group ${ZGID_NAME} already exists. Do you want to use it?" 0 0
 			RESULT=$?
 			[ ${RESULT} -ne 0 ] && continue 
 		fi
@@ -356,12 +356,12 @@ zinst_zpasswd_set()
 
         zserv_is_2.7_or_newer ${ZSERV_DIR}
         if [ $NEWZOPE = 1 ] ; then
-            echo ">>> Create Zope inituser for \"$(basename ${ZINST_DIR})\"..."
+            echo ">>> Creating a Zope inituser for \"$(basename ${ZINST_DIR})\"..."
 			/usr/bin/python ${BIN}/zpasswd.py ${ZINST_DIR}/inituser
             # If zpasswd is aborted it creates a blank inituser
             chown ${ZUID} ${ZINST_DIR}/inituser
         else
-            echo ">>> Create Zope inituser for \"$(basename ${ZINST_DIR})\"..."
+            echo ">>> Creating a Zope inituser for \"$(basename ${ZINST_DIR})\"..."
             /usr/bin/python ${ZSERV_DIR}/zpasswd.py ${ZINST_DIR}/inituser
             # If zpasswd is aborted it creates a blank inituser
             chown ${ZUID} ${ZINST_DIR}/inituser
@@ -373,7 +373,7 @@ zinst_zpasswd_set()
 usage()
 {
 	echo "$(basename $0) version ${VERSION}"
-	echo "A Gentoo Zope Instance configure tool."
+	echo "A Gentoo Zope instance configuration tool."
 	echo
 	echo "Interactive usage:"
 	echo -e "\t$(basename $0)"
@@ -421,20 +421,20 @@ done
 
 # if ZSERV_DIR isn't set by command line, call zserv_dir_get to set it
 if [ -z ${ZSERV_DIR} ] ; then
-	zserv_dir_get || { echo 'Canceled: zserv_dir_get' ; exit 1 ; }
+	zserv_dir_get || { echo 'Cancelled: zserv_dir_get' ; exit 1 ; }
 	zserv_version_detect
 fi
 
 # if ZINST_DIR passed by command line, call zinst_dir_set to set it
 if [ -z ${ZINST_DIR} ] ; then
-	zinst_dir_set || { echo 'Canceled: zinst_dir_set' ; exit 1 ; }
+	zinst_dir_set || { echo 'Cancelled: zinst_dir_set' ; exit 1 ; }
 fi
 
 # if ZIRC_NAME isn't set then use the base of the ZINST_DIR for ZIRC_NAME
 [ -z ${ZIRC_NAME} ] && ZIRC_NAME=$(basename ${ZINST_DIR})
 
 if [ -z ${ZGID_NAME} ] ; then
-	zinst_zgid_set || { echo 'Canceled: zinst_zgid_set' ; exit 1 ; }
+	zinst_zgid_set || { echo 'Cancelled: zinst_zgid_set' ; exit 1 ; }
 fi
 zserv_is_2.7_or_newer ${ZSERV_DIR}
 
@@ -446,7 +446,6 @@ zinst_rc_setup ${ZSERV_DIR} ${ZINST_DIR} ${ZIRC_NAME}
 gpasswd -a zope ${ZGID_NAME}
 
 zinst_security_setup ${ZINST_DIR} ${ZGID_NAME}
-
 # TODO: see about adding interactive configuration of ZOPE_OPTS
 if [ ${ZOPE27} ] ; then
 	echo "Note: Review settings in ${ZINST_DIR}/etc/zope.conf."
