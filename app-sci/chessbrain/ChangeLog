@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/chessbrain
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/chessbrain/ChangeLog,v 1.10 2004/11/07 19:16:41 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/chessbrain/ChangeLog,v 1.11 2004/11/18 13:47:54 ribosome Exp $
+
+  18 Nov 2004; Olivier Fisette <ribosome@gentoo.org> -chessbrain-20314.ebuild,
+  -chessbrain-20407.ebuild:
+  Removed insecure versions. (See GLSA 200411-26.)
 
 *chessbrain-20407-r1 (07 Nov 2004)
 
