@@ -1,6 +1,6 @@
-# ChangeLog for dev-perlDBD-PgChangeLog/dev-perlDate-ISOChangeLog
+# ChangeLog for dev-perl/Date-ISO
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-ISO/ChangeLog,v 1.5 2002/12/13 10:56:34 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-ISO/ChangeLog,v 1.6 2002/12/17 19:22:10 vapier Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
