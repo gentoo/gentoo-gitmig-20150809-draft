@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/latex-package.eclass,v 1.13 2003/02/16 04:26:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/latex-package.eclass,v 1.14 2003/06/09 07:14:03 satai Exp $
 #
 # Author Matthew Turk <satai@gentoo.org>
 #
@@ -37,8 +37,8 @@
 # TeX files that come with the source.  Note that we break TeX layout standards 
 # by placing documentation in /usr/share/doc/${PN}
 #
-# For examples of basic installations, check out app-text/latex-aastex and
-# app-text/latex-leaflet.
+# For examples of basic installations, check out dev-tex/aastex and
+# dev-tex/leaflet .
 #
 # NOTE: The CTAN "directory grab" function creates files with different MD5
 # signatures EVERY TIME.  For this reason, if you are grabbing from the CTAN,
