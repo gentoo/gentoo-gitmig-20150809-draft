@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.22-r1.ebuild,v 1.2 2003/03/31 12:27:10 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.22-r1.ebuild,v 1.3 2003/05/25 14:51:36 mholzer Exp $
 
 inherit eutils
 
 DESCRIPTION="A minimal libc"
-SRC_URI="mirror://kernel/libs/dietlibc/${P}.tar.bz2"
+SRC_URI="mirror://kernel/linux/libs/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.fefe.de/dietlibc/"
 
 SLOT="0"
