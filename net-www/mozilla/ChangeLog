@@ -1,6 +1,15 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.153 2004/03/23 21:00:16 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.154 2004/03/28 16:43:34 agriffis Exp $
+
+*mozilla-1.7_beta-r1 (27 Mar 2004)
+
+  27 Mar 2004; Aron Griffis <agriffis@gentoo.org> mozilla-1.7_beta-r1.ebuild:
+  Add dependency on mozilla-launcher to bring this up to par with firefox
+  capabilities.  Shorten the ebuild from 621 to 553 lines.  Also update
+  syntax: replace [...] with [[...]]; replace backticks with $(...); replace
+  if [ -n `use ...` ] with if use ...; employ use_enable/use_with when
+  possible
 
 *mozilla-1.7_beta (23 Mar 2004)
 
