@@ -1,5 +1,5 @@
-MD5 c8597307fa3837f704be6c526e4ec3de ChangeLog 1870
-MD5 2be691bf06db3cc6d737cf806b4f0c1a shorewall-1.4.3.ebuild 803
+MD5 1b53673fd9d8f4aabf0251adc6e93c19 ChangeLog 2023
+MD5 bdecb6b9b58b6a994cb0fae92719b149 shorewall-1.4.3.ebuild 802
 MD5 d3d7d1d95ca81411229b63b9640012cc shorewall-1.4.2.ebuild 879
 MD5 2be691bf06db3cc6d737cf806b4f0c1a shorewall-1.4.3a.ebuild 803
 MD5 6fbbe1678c89dbabaa4c9f0dcb5a8656 files/digest-shorewall-1.4.3 65
