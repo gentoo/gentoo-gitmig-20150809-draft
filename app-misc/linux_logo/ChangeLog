@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/linux_logo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux_logo/ChangeLog,v 1.5 2002/09/06 21:24:13 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux_logo/ChangeLog,v 1.6 2002/10/13 01:46:19 seemant Exp $
+
+*linux_logo-4.05 (12 Oct 2002)
+
+  12 Oct 2002; Seemant Kulleen <seemant@gentoo.org> linux_logo-4.05.ebuild
+  files/digest-linux_logo-4.05 :
+
+  Version bump, thanks to: jmarcet@pobox.com (Javier Marcet) in bug #7336.
 
 *linux_logo-4.02 (04 Jun 2002)
   06 Sep 2002; Owen Stampflee <owen@gentoo.org> linux_logo-4.02.ebuild :
