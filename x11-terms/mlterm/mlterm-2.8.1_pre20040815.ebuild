@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.8.1_pre20040815.ebuild,v 1.2 2004/09/01 13:40:19 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mlterm/mlterm-2.8.1_pre20040815.ebuild,v 1.3 2004/09/07 09:06:31 usata Exp $
 
 IUSE="truetype gtk imlib bidi nls uim"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P/-*_pre/-}.tar.gz
 	http://dev.gentoo.org/~usata/distfiles/${P/-*_pre/-}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 LICENSE="BSD"
 
 DEPEND="gtk? ( >=x11-libs/gtk+-2 )
