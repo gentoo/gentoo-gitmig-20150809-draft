@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-0.55-r2.ebuild,v 1.1 2004/10/01 20:36:36 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2100/ipw2100-0.55-r2.ebuild,v 1.2 2004/10/01 21:49:38 brix Exp $
 
 inherit kernel-mod eutils
 
@@ -10,7 +10,8 @@ DESCRIPTION="Driver for the Intel Centrino wireless chipset"
 
 HOMEPAGE="http://ipw2100.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tgz
-		mirror://gentoo/${PN}-fw-${FW_VERSION}.tgz"
+		mirror://gentoo/${PN}-fw-${FW_VERSION}.tgz
+		mirror://gentoo/${P}-2.4.patch.gz"
 
 LICENSE="GPL-2 ipw2100-fw"
 SLOT="0"
@@ -61,7 +62,7 @@ src_unpack() {
 
 	unpack ${A}
 
-	epatch ${FILESDIR}/ipw2100-0.55-2.4.patch.gz
+	epatch ${WORKDIR}/ipw2100-0.55-2.4.patch
 
 	cd ${S}
 	epatch ${FILESDIR}/ipw2100-0.55_manual-disable.patch
