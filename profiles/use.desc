@@ -29,6 +29,7 @@ avi - Adds Win32 AVI support and also adds avifile (Library for avi) support
 berkdb - Adds support for sys-libs/db (Berkeley DB for MySQL)
 bonobo - Adds support for gnome-base/bonobo (Gnome CORBA interfaces)
 canna - Adds supprt for the Canna kana to kanji conversion engine
+cjk - Adds support for Multi-byte character languages (Chinese, Japanese, Korean)
 crypt - Add support for encryption -- using mcrypt or gpg where applicable
 cups - Add support for CUPS (Common Unix Printing System)
 dga - Adds DGA Support (Xfree86 ) (DGA=Direct Graphic Access)
