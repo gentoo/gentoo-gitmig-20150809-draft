@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50_pre20020811.ebuild,v 1.1 2002/08/14 02:56:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50_pre20020811.ebuild,v 1.2 2002/08/14 13:04:48 seemant Exp $
 
-inherit libtool
+#inherit libtool
 
 MY_P=${P/_pre/-}
 S=${WORKDIR}/${MY_P}
@@ -10,8 +10,7 @@ DESCRIPTION="A spell checker replacement for ispell"
 SRC_URI="http://savannah.gnu.org/download/aspell/${MY_P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/aspell/index.html"
 
-DEPEND=">=app-text/pspell-0.12
-	>=sys-libs/ncurses-5.2"
+DEPEND=">=sys-libs/ncurses-5.2"
 
 SLOT="0"
 LICENSE="LGPL-2"
@@ -42,7 +41,8 @@ src_compile() {
 
 	econf \
 		--disable-static \
-		--sysconfdir=/etc/aspell || die
+		--sysconfdir=/etc/aspell \
+		--enable-docdir=/usr/share/doc/${PF} || die
 	
 	emake || die
 
@@ -57,7 +57,8 @@ src_install () {
 	dodoc man-text
 	cd ${S}
 	
+	dosym /usr/lib/libpspell.so.15 /usr/lib/libpspell.so
+	
 	dodoc README* TODO
 
 }
-
