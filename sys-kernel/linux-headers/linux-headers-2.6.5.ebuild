@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.5.ebuild,v 1.6 2004/04/14 22:01:01 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.5.ebuild,v 1.7 2004/04/24 07:49:49 vapier Exp $
 
 ETYPE="headers"
 inherit kernel
@@ -21,7 +21,7 @@ HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 LICENSE="GPL-2"
 SLOT="0"
 PROVIDE="virtual/kernel virtual/os-headers"
-KEYWORDS="-*"
+KEYWORDS="-* arm"
 
 
 pkg_setup() {
