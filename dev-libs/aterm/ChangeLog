@@ -1,7 +1,12 @@
 # ChangeLog for dev-libs/aterm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/aterm/ChangeLog,v 1.9 2004/02/17 01:18:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/aterm/ChangeLog,v 1.10 2004/02/17 20:36:38 karltk Exp $
 
+*aterm-2.0 (17 Feb 2004)
+
+  17 Feb 2004; Karl Trygve Kalleberg <karltk@gentoo.org> aterm-2.0.ebuild :
+  New upstream version.
+  
   16 Feb 2004; Aron Griffis <agriffis@gentoo.org> aterm-1.6.7.ebuild:
   add ~alpha and ~ia64
 
