@@ -1,6 +1,6 @@
 # ChangeLog for app-emulation/emul-linux-x86-baselibs
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.17 2004/09/27 07:20:42 lv Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-baselibs/ChangeLog,v 1.18 2005/01/01 14:10:07 eradicator Exp $
 
 *emul-linux-x86-baselibs-1.2.2-r1 (26 Sep 2004)
 

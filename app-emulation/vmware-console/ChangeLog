@@ -1,6 +1,6 @@
 # ChangeLog for app-emulation/vmware-console
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-console/ChangeLog,v 1.9 2004/08/09 12:31:47 sejo Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-console/ChangeLog,v 1.10 2005/01/01 14:19:18 eradicator Exp $
 
 *vmware-console-2.1.0.7728 (09 Aug 2004)
 

@@ -1,6 +1,6 @@
 # ChangeLog for app-emulation/emul-linux-x86-gtklibs
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.5 2004/08/29 03:45:50 lv Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/ChangeLog,v 1.6 2005/01/01 14:10:53 eradicator Exp $
 
   28 Aug 2004; Travis Tilley <lv@gentoo.org>
   emul-linux-x86-gtklibs-1.2.ebuild:

@@ -1,6 +1,6 @@
 # ChangeLog for app-emulation/uade
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/ChangeLog,v 1.19 2004/11/06 14:16:24 spock Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/ChangeLog,v 1.20 2005/01/01 14:18:13 eradicator Exp $
 
   06 Nov 2004; Michal Januszewski <spock@gentoo.org> uade-1.00.ebuild:
   Removed unnecessary DESTDIR option from make install. Closes #70209.

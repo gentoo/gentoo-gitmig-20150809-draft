@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mips64emul/mips64emul-0.2.ebuild,v 1.1 2004/09/11 05:14:53 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mips64emul/mips64emul-0.2.ebuild,v 1.2 2005/01/01 14:14:37 eradicator Exp $
 
 DESCRIPTION="MIPS Machine Emulator, Emulates many machines/CPUs/OSes"
 HOMEPAGE="http://www.mdstud.chalmers.se/~md1gavan/${PN}/index.html"

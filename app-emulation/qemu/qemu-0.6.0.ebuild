@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.6.0.ebuild,v 1.7 2004/11/08 23:55:56 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/qemu/qemu-0.6.0.ebuild,v 1.8 2005/01/01 14:16:15 eradicator Exp $
 
 inherit eutils
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/glukalka/glukalka-0.90.1.ebuild,v 1.3 2004/06/27 23:04:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/glukalka/glukalka-0.90.1.ebuild,v 1.4 2005/01/01 14:13:08 eradicator Exp $
 
 # set MY_P to glukalka-0.90-1 instead of original glukalka-0.90.1
 MY_P=${PN}-${PV%.*}-${PV##*.}

@@ -1,6 +1,6 @@
 # ChangeLog for app-emulation/basiliskII
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/ChangeLog,v 1.14 2004/09/28 09:20:43 dragonheart Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/basiliskII/ChangeLog,v 1.15 2005/01/01 14:08:14 eradicator Exp $
 
   28 Sep 2004; Daniel Black <dragonheart@gentoo.org>
   basiliskII-1.0.0_pre20020115.ebuild:

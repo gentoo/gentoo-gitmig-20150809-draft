@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-1.0.ebuild,v 1.1 2004/09/11 12:15:39 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-soundlibs/emul-linux-x86-soundlibs-1.0.ebuild,v 1.2 2005/01/01 14:11:47 eradicator Exp $
 
 DESCRIPTION="Sound libraries for emulation of 32bit x86 on amd64"
 HOMEPAGE="http://www.gentoo.org/"

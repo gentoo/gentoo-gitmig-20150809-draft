@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/winex-cvs-3000.ebuild,v 1.5 2004/08/14 13:25:23 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/winex-cvs-3000.ebuild,v 1.6 2005/01/01 14:20:38 eradicator Exp $
 
 DESCRIPTION="Winex - fake ebuild!"
 HOMEPAGE="http://www.transgaming.com/"

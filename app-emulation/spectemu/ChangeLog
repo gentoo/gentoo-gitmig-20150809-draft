@@ -1,6 +1,6 @@
 # ChangeLog for app-emulation/spectemu
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spectemu/ChangeLog,v 1.8 2004/06/24 22:34:29 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spectemu/ChangeLog,v 1.9 2005/01/01 14:17:00 eradicator Exp $
 
   30 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; spectemu-0.9.4.ebuild:
   Change x11-base/xfree dependency to virtual/x11.

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/pose/pose-3.5-r1.ebuild,v 1.10 2004/06/27 23:05:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/pose/pose-3.5-r1.ebuild,v 1.11 2005/01/01 14:16:02 eradicator Exp $
 
 S=${WORKDIR}/Emulator_Src_3.5
 FLTK_PV=1.0.11

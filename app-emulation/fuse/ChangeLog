@@ -1,6 +1,6 @@
 # ChangeLog for app-emulation/fuse
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/ChangeLog,v 1.10 2004/06/24 22:32:06 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/ChangeLog,v 1.11 2005/01/01 14:12:48 eradicator Exp $
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> fuse-0.6.2.1.ebuild,
   +metadata.xml:

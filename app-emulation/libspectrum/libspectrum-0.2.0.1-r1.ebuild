@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/libspectrum/libspectrum-0.2.0.1-r1.ebuild,v 1.6 2004/06/24 22:33:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/libspectrum/libspectrum-0.2.0.1-r1.ebuild,v 1.7 2005/01/01 14:14:23 eradicator Exp $
 
 DESCRIPTION="Spectrum emulation library"
 HOMEPAGE="http://www.srcf.ucam.org/~pak21/spectrum/libspectrum.html"

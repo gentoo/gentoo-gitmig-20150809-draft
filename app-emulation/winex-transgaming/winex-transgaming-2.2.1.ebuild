@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-transgaming/winex-transgaming-2.2.1.ebuild,v 1.9 2004/11/30 20:41:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-transgaming/winex-transgaming-2.2.1.ebuild,v 1.10 2005/01/01 14:21:00 eradicator Exp $
 
 DESCRIPTION="WineX is a distribution of Wine with enhanced DirectX for gaming"
 HOMEPAGE="http://www.transgaming.com/"

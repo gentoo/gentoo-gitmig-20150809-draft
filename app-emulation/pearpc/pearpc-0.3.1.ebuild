@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/pearpc/pearpc-0.3.1.ebuild,v 1.2 2004/09/22 18:46:37 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/pearpc/pearpc-0.3.1.ebuild,v 1.3 2005/01/01 14:15:09 eradicator Exp $
 
 IUSE="debug jit sdl"
 #IUSE="debug qt gtk jit sdl"

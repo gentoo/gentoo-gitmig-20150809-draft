@@ -1,6 +1,6 @@
 # ChangeLog for app-emulation/vmips-cross-bin
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmips-cross-bin/ChangeLog,v 1.2 2004/06/24 22:35:58 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmips-cross-bin/ChangeLog,v 1.3 2005/01/01 14:19:05 eradicator Exp $
 
 *vmips-cross-bin-1.0 (08 Jun 2004)
 

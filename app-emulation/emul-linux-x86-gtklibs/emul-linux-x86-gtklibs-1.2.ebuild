@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-1.2.ebuild,v 1.2 2004/08/29 03:45:50 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-gtklibs/emul-linux-x86-gtklibs-1.2.ebuild,v 1.3 2005/01/01 14:10:53 eradicator Exp $
 
 DESCRIPTION="Gtk+ 1/2 for emulation of 32bit x86 on amd64"
 SRC_URI="http://dev.gentoo.org/~lv/emul-linux-x86-gtklibs-${PV}.tar.bz2"

@@ -1,6 +1,6 @@
 # ChangeLog for app-emulation/emul-linux-x86-xlibs
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.14 2004/09/05 23:31:43 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.15 2005/01/01 14:12:01 eradicator Exp $
 
   06 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org>
   emul-linux-x86-xlibs-1.2-r1.ebuild:

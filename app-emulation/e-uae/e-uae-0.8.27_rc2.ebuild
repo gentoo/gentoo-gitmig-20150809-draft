@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.27_rc2.ebuild,v 1.1 2004/11/22 14:45:38 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.27_rc2.ebuild,v 1.2 2005/01/01 14:12:15 eradicator Exp $
 
 inherit eutils flag-o-matic
 
