@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/scsh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/scsh/ChangeLog,v 1.8 2003/03/16 05:37:15 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/scsh/ChangeLog,v 1.9 2003/04/15 21:34:03 mkennedy Exp $
+
+*scsh-0.6.4 (15 Apr 2003)
+
+  15 Apr 2003; Matthew Kennedy <mkennedy@gentoo.org> scsh-0.6.4.ebuild:
+  minor version bump
 
 *scsh-0.6.3 (15 Mar 2003)
 
