@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-0.5.ebuild,v 1.6 2004/06/02 21:48:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-0.5.ebuild,v 1.7 2004/06/24 22:14:55 agriffis Exp $
 #
 # USE variable summary:
 #   doc    - Build extra documenation from DocBook sources,

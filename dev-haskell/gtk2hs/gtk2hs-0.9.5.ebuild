@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.5.ebuild,v 1.1 2004/05/17 11:55:46 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.5.ebuild,v 1.2 2004/06/24 22:14:44 agriffis Exp $
 
 DESCRIPTION="GTK+-2.x bindings for Haskell"
 HOMEPAGE="http://gtk2hs.sourceforge.net/"

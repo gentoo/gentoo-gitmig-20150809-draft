@@ -1,6 +1,6 @@
 # ChangeLog for dev-haskell/hugs98-graphics
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hugs98-graphics/ChangeLog,v 1.1 2003/07/28 14:21:34 kosmikus Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hugs98-graphics/ChangeLog,v 1.2 2004/06/24 22:15:38 agriffis Exp $
 
 *hugs98-graphics-2.0.4 (28 Jul 2003)
 
