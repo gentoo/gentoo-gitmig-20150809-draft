@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2-r1.ebuild,v 1.10 2004/03/17 20:38:54 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2-r1.ebuild,v 1.11 2004/05/04 02:18:16 eradicator Exp $
 
 inherit libtool
 
@@ -46,7 +46,7 @@ RDEPEND="X? ( virtual/x11 )
 	imlib? ( >=media-libs/imlib2-1.0.6 )
 	kde? ( kde-base/kdelibs )
 	lirc? ( app-misc/lirc )
-	mad? ( >=media-sound/mad-0.14.2b )
+	mad? ( >=media-sound/madplay-0.14.2b )
 	matroska? ( >=media-libs/libmatroska-0.4.4 )
 	mozilla? ( >=net-www/mozilla-1.4 )
 	ncurses? ( sys-libs/ncurses )

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.9.2.ebuild,v 1.4 2004/03/30 04:56:45 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle/ogle-0.9.2.ebuild,v 1.5 2004/05/04 02:19:05 eradicator Exp $
 
 inherit libtool
 
@@ -16,7 +16,7 @@ IUSE="oss mmx alsa xv"
 DEPEND=">=media-libs/libdvdcss-1.2.2
 	media-libs/jpeg
 	>=media-libs/libdvdread-0.9.4
-	media-sound/mad
+	media-sound/madplay
 	virtual/x11
 	>=dev-libs/libxml2-2.4.19
 	>=media-libs/a52dec-0.7.3
