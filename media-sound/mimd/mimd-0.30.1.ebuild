@@ -1,6 +1,6 @@
-# Copyright 1999-2005 Gentoo Foundation.
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mimd/mimd-0.30.1.ebuild,v 1.1 2005/01/18 23:39:52 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mimd/mimd-0.30.1.ebuild,v 1.2 2005/03/19 01:11:59 swegener Exp $
 
 DESCRIPTION="Multicast streaming server for MPEG1/2 and MP3 files."
 
