@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.9.ebuild,v 1.4 2004/02/06 19:51:17 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.9.ebuild,v 1.5 2004/03/06 12:54:54 liquidx Exp $
 
 inherit libtool gnome.org
 
@@ -19,7 +19,7 @@ SRC_URI="mirror://gnome/sources/${MY_PN}/${PVP[0]}.${PVP[1]}/${MY_P}.tar.bz2"
 
 SLOT="1"
 LICENSE="LGPL-2.1"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64"
 
 DEPEND="dev-util/indent
 	=dev-libs/glib-1.2*
