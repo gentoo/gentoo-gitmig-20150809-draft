@@ -1,0 +1,77 @@
+--- build.py.orig	2003-04-11 23:47:44.000000000 +0200
++++ build.py	2003-04-11 23:50:31.000000000 +0200
+@@ -646,31 +646,6 @@
+         licType = "GPL"
+         licname = "GNU General Public License"
+ 
+-    inform("This is the %s version of PyQt and is licensed under the %s." % (licType,licname),0)
+-
+-    print
+-    print "Type 'L' to view the license."
+-    print "Type 'yes' to accept the terms of the license."
+-    print "Type 'no' to decline the terms of the license."
+-    print
+-
+-    while 1:
+-        try:
+-            resp = raw_input("Do you accept the terms of the license? ")
+-        except:
+-            resp = ""
+-
+-        resp = resp.strip().lower()
+-
+-        if resp == "yes":
+-            break
+-
+-        if resp == "no":
+-            sys.exit(0)
+-
+-        if resp == "l":
+-            os.system("more LICENSE")
+-
+     inform("Building the %s version of PyQt 3.5 for Python %s on %s." % (licType,pyFullVers,sys.platform))
+ 
+     if licType != "GPL":
+@@ -1382,7 +1357,8 @@
+         0x030006: "Qt_3_0_5",
+         0x030100: "Qt_3_0_6",
+         0x030101: "Qt_3_1_0",
+-        0x040000: "Qt_3_1_1"
++	0x030102: "Qt_3_1_1",
++        0x040000: "Qt_3_1_2"
+     }
+ 
+     global qtVersion
+--- sip/qdatetimeedit.sip.orig	2003-04-11 16:46:14.000000000 +0200
++++ sip/qdatetimeedit.sip	2003-04-11 17:20:03.000000000 +0200
+@@ -1,7 +1,7 @@
+ // This is the SIP interface definition for QDateEdit, QDateTimeEdit and
+ // QTimeEdit.
+ //
+-// Copyright (c) 2002 
++// Copyright (c) 2003
+ // 	Riverbank Computing Limited <info@riverbankcomputing.co.uk>
+ // 
+ // This file is part of PyQt.
+@@ -231,7 +231,9 @@
+ protected:
+ 	void init();
+ 	void resizeEvent(QResizeEvent *);
+-	void layoutEditors();
++%If (- Qt_3_1_2)
++        void layoutEditors();
++%End
+ 
+ protected slots:
+ 	void newValue(const QDate &);
+--- sip/versions.sip.orig	2003-04-11 16:46:29.000000000 +0200
++++ sip/versions.sip	2003-04-11 16:46:41.000000000 +0200
+@@ -26,7 +26,7 @@
+ %Timeline	{Qt_1_43
+ 		 Qt_2_00 Qt_2_1_0 Qt_2_2_0 Qt_2_3_0 Qt_2_3_1
+ 		 Qt_3_0_0 Qt_3_0_1 Qt_3_0_2 Qt_3_0_4 Qt_3_0_5 Qt_3_0_6
+-		 Qt_3_1_0 Qt_3_1_1}
++		 Qt_3_1_0 Qt_3_1_1 Qt_3_1_2}
+ 
+ 
+ // Specify the platforms.

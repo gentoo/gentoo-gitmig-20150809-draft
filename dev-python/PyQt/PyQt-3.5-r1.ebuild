@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.5-r1.ebuild,v 1.3 2003/02/28 16:54:59 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-3.5-r1.ebuild,v 1.4 2003/04/12 14:12:13 brain Exp $
+
+inherit eutils
 
 S="${WORKDIR}/PyQt-x11-gpl-${PV}"
 DESCRIPTION="PyQt is a set of Python bindings for the QT 3.x Toolkit"
@@ -14,15 +16,13 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 DEPEND="virtual/glibc
 	sys-devel/libtool
 	>=x11-libs/qt-3.0.4.1
-    	>=dev-lang/python-2.2.1
-    	=dev-python/sip-${PV}"
+	>=dev-lang/python-2.2.1
+	=dev-python/sip-${PV}"
 
 src_unpack() {
-
-        unpack PyQt-x11-gpl-${PV}.tar.gz
-        cd ${S}
-        patch -p0 < ${FILESDIR}/license-3.5.diff
-
+	unpack PyQt-x11-gpl-${PV}.tar.gz
+	cd ${S}
+	epatch $FILESDIR/qt3.1.2-compilation-fix-3.5.diff
 }
 
 
