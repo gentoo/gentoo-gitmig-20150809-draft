@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3-svn/ion3-svn-20040412.ebuild,v 1.1 2004/04/12 11:50:56 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3-svn/ion3-svn-20040412.ebuild,v 1.2 2004/06/17 01:43:51 mr_bones_ Exp $
 
-inherit eutils
-inherit subversion
+inherit eutils subversion
 
 DESCRIPTION="A tiling tabbed window manager designed with keyboard users in mind"
 HOMEPAGE="http://www.iki.fi/tuomov/ion/"
