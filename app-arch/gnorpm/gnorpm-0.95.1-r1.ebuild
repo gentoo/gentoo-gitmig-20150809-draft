@@ -3,33 +3,32 @@
 # Author Achim Gottinger <achim@gentoo.org>
 # $Header
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="A Gnome RPM Frontend"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${A}"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
 
-DEPEND="virtual/glibc nls? ( sys-devel/gettext )
-        >=gnome-base/gnome-libs-1.2.4 >=sys-libs/db-3.2.3h
-	>=gnome-base/libghttp-1.0.7
+RDEPEND="virtual/glibc
+        >=gnome-base/gnome-libs-1.4.1.2-r1
+	>=sys-libs/db-3.2.3h
+	>=gnome-base/libghttp-1.0.9-r1
 	>=app-arch/rpm-3.0.5"
 
-RDEPEND="virtual/glibc
-        >=gnome-base/gnome-libs-1.2.4 >=sys-libs/db-3.2.3h
-	>=gnome-base/libghttp-1.0.7
-	>=app-arch/rpm-3.0.5"
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )"
 
 src_compile() {
-  try ./configure --host=${CHOST} --prefix=/opt/gnome --disable-rpmfind
-  try make # Doesn't work with make -j 4 (hallski)
+	./configure --host=${CHOST}					\
+		    --prefix=/usr					\
+		    --sysconfdir=/etc					\
+		    --disable-rpmfind
+	assert
+
+	make || die # Doesn't work with make -j 4 (hallski)
 }
 
 src_install() {
-  try make prefix=${D}/opt/gnome install
+	make prefix=${D}/usr sysconfdir=${D}/etc install || die
 
-  dodoc AUTHORS COPYING ChangeLog NEWS README TODO
+	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
 }
-
-
-
-
