@@ -1,17 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdbakeoven/cdbakeoven-1.8.9-r1.ebuild,v 1.3 2003/02/13 05:59:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdbakeoven/cdbakeoven-1.8.9-r1.ebuild,v 1.4 2003/06/25 22:35:29 vapier Exp $
 
-inherit kde-base || die
+inherit kde-base
 
 need-kde 3
 
 DESCRIPTION="CDBakeOven, KDE CD Writing Software"
 SRC_URI="mirror://sourceforge/cdbakeoven/${P}.tar.bz2"
-HOMEPAGE="http://cdbakeoven.sourceforge.net"
-S=${WORKDIR}/${P}
+HOMEPAGE="http://cdbakeoven.sourceforge.net/"
+
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc"
 
 newdepend ">=media-libs/libogg-1.0_rc2
 	>=media-sound/mpg123-0.59
@@ -23,4 +23,3 @@ src_unpack() {
 	cd ${S}
 	patch -p0 <${FILESDIR}/cdbakeoven-1.8.9-gcc3-gentoo.patch
 }
-
