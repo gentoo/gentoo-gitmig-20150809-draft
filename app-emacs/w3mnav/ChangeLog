@@ -1,8 +1,13 @@
 # ChangeLog for app-emacs/w3mnav
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/w3mnav/ChangeLog,v 1.1 2003/10/31 23:03:07 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/w3mnav/ChangeLog,v 1.2 2003/11/05 18:33:02 usata Exp $
 
 *w3mnav-0.5 (31 Oct 2003)
+
+  06 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> metadata.xml,
+  w3mnav-0.5.ebuild:
+  Moved long DESCRITION to metadata.xml. Removed unnecessary
+  app-emacs/w3mnav from DEPEND list.
 
   31 Oct 2003; <mkennedy@gentoo.org> w3mnav-0.5.ebuild,
   files/60w3mnav-gentoo.el:
