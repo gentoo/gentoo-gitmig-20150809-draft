@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.9 2004/02/11 17:31:37 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.10 2004/02/26 02:43:45 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -29,8 +29,11 @@ PHPMAJORVER=${MY_PV//\.*}
 if [ -z "${SRC_URI}" ]; then
 	SRC_URI="${SRC_URI_BASE}/${MY_P}.tar.bz2"
 fi
-# A patch for PHP for security
-SRC_URI="${SRC_URI} mirror://gentoo/php-4.3.2-fopen-url-secure.patch"
+# A patch for PHP for security. PHP-CLI interface is exempt, as it cannot be
+# fed bad data from outside.
+if [ "${PHPSAPI}" != "cli" ]; then
+	SRC_URI="${SRC_URI} mirror://gentoo/php-4.3.2-fopen-url-secure.patch"
+fi
 
 # Where we work
 S=${WORKDIR}/${MY_P}
@@ -504,8 +507,11 @@ php-sapi_src_install() {
 		dosym ${PHPEXTDIR}/java.so ${PHPEXTDIR}/libphp_java.so
 	fi
 
-	#url_fopen
-	patch ${phpinisrc} <${DISTDIR}/php-4.3.2-fopen-url-secure.patch
+	# A patch for PHP for security. PHP-CLI interface is exempt, as it cannot be
+	# fed bad data from outside.
+	if [ "${PHPSAPI}" != "cli" ]; then
+		patch ${phpinisrc} <${DISTDIR}/php-4.3.2-fopen-url-secure.patch
+	fi
 
 	# A lot of ini file funkiness
 	insinto ${PHPINIDIRECTORY}

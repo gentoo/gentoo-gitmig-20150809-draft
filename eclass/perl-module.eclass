@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.55 2003/12/22 20:40:05 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.56 2004/02/26 02:43:45 robbat2 Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -27,7 +27,6 @@ POD_DIR=""
 MMSIXELEVEN=`perl -e 'use ExtUtils::MakeMaker; print( $ExtUtils::MakeMaker::VERSION ge "6.11" )'`
 
 perl-module_src_prep() {
-
 	SRC_PREP="yes"
 	if [ "${style}" == "builder" ]; then
 		perl ${S}/Build.PL installdirs=vendor destdir=${D}
