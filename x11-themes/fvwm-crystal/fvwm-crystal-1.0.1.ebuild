@@ -29,7 +29,17 @@ src_compile() {
 	automake || die
 	eend $?
 
-	econf --prefix=${D} || die
+	# doesnt make any difference with this version but if xmms 
+	# support controls any features in future, we shouldnt leave 
+	# it up to configure to enable it.
+	#
+	#if ! use xmms; then
+	#	sed -i 's#test -z "$XMMS_SHELL";#false;#g' ${S}/configure.in
+	#	sed -i 's#test -z "$XMMS";#false;#g' ${S}/configure.in
+	#	autoconf || die
+	#fi
+
+	econf || die
 	emake || die
 }
 
