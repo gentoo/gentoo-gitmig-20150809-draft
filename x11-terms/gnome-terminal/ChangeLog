@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.43 2003/11/11 23:17:55 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.44 2003/11/13 01:47:53 todd Exp $
+
+  12 Nov 2003; Todd Sunderlin <todd@gentoo.org> gnome-terminal-2.4.1.ebuild:
+  changed to stable on sparc
 
   11 Nov 2003; Alastair Tse <liquidx@gentoo.org> gnome-terminal-2.4.1.ebuild:
   bump 2.4.1 to stable
