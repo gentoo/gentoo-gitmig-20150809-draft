@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/cel-20030413-r2.ebuild,v 1.2 2003/07/13 04:56:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/cel-20030413-r2.ebuild,v 1.3 2003/07/13 04:59:38 vapier Exp $
 
 inherit games
 
+DESCRIPTION="A game entity layer based on Crystal Space"
 HOMEPAGE="http://cel.sourceforge.net/"
 SRC_URI="mirror://gentoo/distfiles/${P}.tar.gz"
-DESCRIPTION="A game entity layer based on Crystal Space"
 
 LICENSE="LGPL-2"
 SLOT="0"
@@ -29,7 +29,8 @@ src_unpack() {
 
 src_compile() {
 	./autogen.sh || die
-	PATH="${CEL_PREFIX}/bin:${PATH}" ./configure --prefix=${CEL_PREFIX} --with-cs-prefix=${CEL_PREFIX} || die
+	env PATH="${CEL_PREFIX}/bin:${PATH}" ./configure \
+		--prefix=${CEL_PREFIX} --with-cs-prefix=${CEL_PREFIX} || die
 	jam || die
 }
 
