@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openal
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.18 2004/03/31 17:31:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.19 2004/04/08 07:07:23 eradicator Exp $
+
+  08 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  openal-20040303.ebuild:
+  Stable x86.
 
   31 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
   openal-20040218.ebuild:
