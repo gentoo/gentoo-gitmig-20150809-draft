@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.8.5-r1.ebuild,v 1.1 2003/11/25 23:44:55 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.8.5-r1.ebuild,v 1.2 2003/11/25 23:45:48 mkennedy Exp $
 
 inherit common-lisp-common
 
@@ -19,7 +19,7 @@ SRC_URI="http://ftp.debian.org/debian/pool/main/s/sbcl/sbcl_${PV}.orig.tar.gz
 	mips? ( mirror://sourceforge/sbcl/${PN}-${BV_MIPS}-mips-linux-binary.tar.gz )"
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips"
+KEYWORDS="x86 ~ppc ~sparc ~mips"
 PROVIDE="virtual/commonlisp"
 # the SRC_URI trickery needs this
 DEPEND=">=sys-apps/portage-2.0.27
