@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/digikam
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.20 2005/01/04 22:12:13 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/digikam/ChangeLog,v 1.21 2005/01/14 23:43:32 danarmak Exp $
+
+  15 Jan 2005; Dan Armak <danarmak@gentoo.org> digikam-0.6.2.ebuild:
+  Changed dep on kdesdk to accept kdesdk-misc, the split package containing
+  xml2pot.
 
 *digikam-0.7.1 (04 Jan 2005)
 
