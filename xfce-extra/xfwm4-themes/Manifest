@@ -2,9 +2,9 @@ MD5 76252841ff9963517f9190b1fa710e6f ChangeLog 4165
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
 MD5 83225fdc586f97decb6df8b7d2146b6c xfwm4-themes-4.0.4.ebuild 666
 MD5 c34e03cccba4e5bc7716c224e2b3c2df xfwm4-themes-4.0.5.ebuild 686
+MD5 17a638572a05cfe0a434f1348c166721 xfwm4-themes-4.1.90.ebuild 858
+MD5 abf14315313f64fecff79cab0597bfb8 xfwm4-themes-4.1.91.ebuild 819
 MD5 2289b0f99b595f937c8ebb9176196af1 xfwm4-themes-4.0.6.ebuild 748
-MD5 39882d4f05b5af3fafd378f2b5403d1f xfwm4-themes-4.1.90.ebuild 853
-MD5 5479f7d1d99d32d7dec37769ab6419a9 xfwm4-themes-4.1.91.ebuild 814
 MD5 c535fd1820bd5d978c8c805fdaef41c4 files/digest-xfwm4-themes-4.0.4 70
 MD5 601331b558fbbc127cba1fe31c1b869e files/digest-xfwm4-themes-4.0.5 70
 MD5 94f03e5cc6d8a4acfa777856df167e00 files/digest-xfwm4-themes-4.0.6 70
