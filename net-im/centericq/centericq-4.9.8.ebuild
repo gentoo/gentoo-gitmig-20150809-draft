@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.9.8.ebuild,v 1.3 2003/10/26 10:05:49 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/centericq/centericq-4.9.8.ebuild,v 1.4 2003/11/06 20:54:25 coronalvr Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ DEPEND="virtual/glibc
 	=dev-libs/libsigc++-1.0*
 	=dev-libs/glib-1.2*
 	ssl? ( >=dev-libs/openssl-0.9.6g )
-	nls? ( dev-libs/fribidi )"
+	bidi? ( dev-libs/fribidi )"
 
 RDEPEND="nls? ( sys-devel/gettext )"
 
@@ -45,7 +45,7 @@ src_compile() {
 
 	use nls || myopts="${myopts} --disable-nls"
 
-	use nls && myopts="${myopts} --with-fribidi"
+	use bidi && myopts="${myopts} --with-fribidi"
 
 	use ssl && myopts="${myopts} --with-ssl"
 
