@@ -1,12 +1,14 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/xcircuit/ChangeLog,v 1.5 2002/10/15 19:34:56 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/xcircuit/ChangeLog,v 1.6 2002/10/16 03:45:03 george Exp $
 
 *xcircuit-2.5.4 (5 Apr 2003)
 
   15 Oct 2002; George Shapovalov <george@gentoo.org> xcircuit-2.5.4.ebuild
   
   changed ~x86 to x86 and added ~ppc upon some test reports
+  updated HOMEPAGE and SRC_URI to point to the present location (package hosting 
+  seem to have moved a lot over last few month)
   
   14 Oct 2002; George Shapovalov <george@gentoo.org> xcircuit-2.5.4.ebuild, files/xcircuit-2.5.4-*.patch :
 
