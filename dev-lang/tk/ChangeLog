@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/tk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.14 2003/04/04 21:33:45 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.15 2003/04/17 17:26:26 utx Exp $
+
+*tk-8.4.2 (17 Apr 2003)
+
+  17 Apr 2003; Stanislav Brabec <utx@gentoo.org> tk-8.4.2.ebuild,
+  files/remove-control-v-8.4.diff:
+  Updated to version 8.4.2 (bug #18483) and updated Control-V remove patch.
 
 *tk-8.3.4-r1 (28 Mar 2003)
 

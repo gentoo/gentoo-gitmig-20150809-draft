@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.12 2003/04/04 21:12:44 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.13 2003/04/17 17:22:44 utx Exp $
+
+*tcl-8.4.2 (17 Apr 2003)
+
+  17 Apr 2003; Stanislav Brabec <utx@gentoo.org> tcl-8.4.2.ebuild:
+  Updated to version 8.4.2 (bug #18483).
 
 *tcl-8.3.4 (18 Dec 2002)
 

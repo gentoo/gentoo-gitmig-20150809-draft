@@ -1,0 +1,17 @@
+--- library/text.tcl	2002-09-02 19:39:20.000000000 +0200
++++ library/text.tcl	2003-02-26 15:08:02.000000000 +0100
+@@ -347,14 +347,6 @@
+     catch { %W edit redo }
+ }
+ 
+-if {[string compare $tcl_platform(platform) "windows"]} {
+-bind Text <Control-v> {
+-    if {!$tk_strictMotif} {
+-	tk::TextScrollPages %W 1
+-    }
+-}
+-}
+-
+ bind Text <Meta-b> {
+     if {!$tk_strictMotif} {
+ 	tk::TextSetCursor %W [tk::TextPrevPos %W insert tcl_startOfPreviousWord]
