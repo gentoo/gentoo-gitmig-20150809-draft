@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/dcron
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/ChangeLog,v 1.23 2003/12/29 03:33:04 kumba Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/ChangeLog,v 1.24 2004/02/25 19:16:56 solar Exp $
+
+*dcron-2.9-r2 (25 Feb 2004)
+
+  25 Feb 2004; <solar@gentoo.org> dcron-2.9-r2.ebuild:
+  reset execopts after setuid install of crontab to prevent init.d/dcron from
+  being installed setuid as well
 
   28 Dec 2003; Joshua Kinard <kumba@gentoo.org> dcron-2.9.ebuild:
   Move to mips stable (~mips -> mips)
