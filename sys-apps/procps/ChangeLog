@@ -1,9 +1,13 @@
 # ChangeLog for sys-apps/procps
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.6 2002/10/31 13:38:34 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/procps/ChangeLog,v 1.7 2002/10/31 17:27:28 bcowan Exp $
 
-*procps-2.0.10 (31 Oct 2002)
+*procps-2.0.10-r1 (31 Oct 2002)
 
+  31 Oct 2002; Brad Cowan <bcowan@gentoo.org> procps-2.0.10-r1.ebuild :
+  
+  Added einfo about threads default behavior thanks to j2ee.
+  
   31 Oct 2002; Brandon Low <lostlogic@gentoo.org> procps-2.0.10.ebuild :
 
   Fix /lib/libproc.so symlink.
