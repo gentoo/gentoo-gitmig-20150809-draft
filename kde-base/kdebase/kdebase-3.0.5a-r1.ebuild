@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.5a-r1.ebuild,v 1.2 2002/12/25 04:40:19 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.5a-r1.ebuild,v 1.3 2002/12/25 20:43:13 azarah Exp $
 
 inherit eutils flag-o-matic kde-dist
 
@@ -174,9 +174,12 @@ src_install() {
 	kde_src_install
 
 	# cf bug #5953
-	insinto /etc/pam.d
-	newins ${FILESDIR}/kscreensaver.pam kscreensaver
-	newins ${FILESDIR}/kde.pam kde
+	if [ "`use pam`" ]
+	then
+		insinto /etc/pam.d
+		newins ${FILESDIR}/kscreensaver.pam kscreensaver
+		newins ${FILESDIR}/kde.pam kde
+	fi
 
 	# startkde script
 	cd ${D}/${KDEDIR}/bin
@@ -197,7 +200,6 @@ ${KDEDIR}/bin/startkde" > kde-${PV}
 	doexe kde-${PV}
 
 	cd ${D}/${PREFIX}/share/config/kdm || die
-	mv kdmrc kdmrc.orig
 	dosed "s:SessionTypes=:SessionTypes=kde-${PV},:" \
 		${PREFIX}/share/config/kdm/kdmrc
 	dosed "s:Session=${PREFIX}/share/config/kdm/Xsession:Session=/etc/X11/xdm/Xsession:" \
