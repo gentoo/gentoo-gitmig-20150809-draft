@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/sitecopy
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/ChangeLog,v 1.25 2005/01/04 20:14:03 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/ChangeLog,v 1.26 2005/01/30 11:54:06 slarti Exp $
+
+  30 Jan 2005; Tom Martin <slarti@gentoo.org> sitecopy-0.14.3.ebuild:
+  Marked ~amd64.
 
 *sitecopy-0.14.3 (05 Jan 2005)
 

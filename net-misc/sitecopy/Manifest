@@ -1,30 +1,30 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b9b59117fb94bf5781b920623f415f76 ChangeLog 3973
+MD5 d113303e627fe93f5e2acfd4f5409dc6 ChangeLog 4057
+MD5 c10a3f88d16f4f8362713b2e67da7819 sitecopy-0.13.4-r1.ebuild 1797
+MD5 c18e86bcfbcff4453e8fab1e21006828 sitecopy-0.13.4.ebuild 1123
+MD5 23d7221e79fb41bc66a1331a25910a50 sitecopy-0.12.1.ebuild 1125
+MD5 bbfe5ddadf3db2c87e363c97bceec92b sitecopy-0.14.2.ebuild 1499
 MD5 f5f1522837a3398846f77d381fda47ec metadata.xml 226
 MD5 3bbc7854d9970468fa600c574754acd0 sitecopy-0.10.12-r1.ebuild 977
-MD5 23d7221e79fb41bc66a1331a25910a50 sitecopy-0.12.1.ebuild 1125
-MD5 c10a3f88d16f4f8362713b2e67da7819 sitecopy-0.13.4-r1.ebuild 1797
 MD5 d3286f6a00ba6935bf983d28040f63d0 sitecopy-0.13.4-r2.ebuild 1951
-MD5 c18e86bcfbcff4453e8fab1e21006828 sitecopy-0.13.4.ebuild 1123
 MD5 2fbf9f996b007377f17c7c9c56347c92 sitecopy-0.14.1.ebuild 1564
-MD5 bbfe5ddadf3db2c87e363c97bceec92b sitecopy-0.14.2.ebuild 1499
-MD5 a720f20b61e73dc8d3212562b8ada8c2 sitecopy-0.14.3.ebuild 1636
-MD5 09b3e7444248285b787fa3635d41aedc files/digest-sitecopy-0.10.12-r1 68
-MD5 3ee0433186f6f3224dff93ab6818a119 files/digest-sitecopy-0.12.1 67
+MD5 1271754e148b8069eaf418273140abe8 sitecopy-0.14.3.ebuild 1639
 MD5 2181dd9a02cbcac0257406ff7a30a37b files/digest-sitecopy-0.13.4 67
+MD5 3ee0433186f6f3224dff93ab6818a119 files/digest-sitecopy-0.12.1 67
+MD5 1dfe28809075352e0eed13c4a713b728 files/sitecopy-gcc3.4.patch 493
+MD5 d4ee82cb6aac0ea4d36d55c0194229df files/digest-sitecopy-0.14.3 67
 MD5 2181dd9a02cbcac0257406ff7a30a37b files/digest-sitecopy-0.13.4-r1 67
 MD5 2181dd9a02cbcac0257406ff7a30a37b files/digest-sitecopy-0.13.4-r2 67
-MD5 4d13e53c5bae73ede477e5e63cfc3aa1 files/digest-sitecopy-0.14.1 67
-MD5 288fac1555c5aa6689f3e3e4e9e2c5e9 files/digest-sitecopy-0.14.2 67
 MD5 9d2f1b627c2e64ada7b81ea3fa5ee51d files/sitecopy-0.14.1-nls.patch 598
-MD5 d4ee82cb6aac0ea4d36d55c0194229df files/digest-sitecopy-0.14.3 67
-MD5 1dfe28809075352e0eed13c4a713b728 files/sitecopy-gcc3.4.patch 493
+MD5 288fac1555c5aa6689f3e3e4e9e2c5e9 files/digest-sitecopy-0.14.2 67
+MD5 4d13e53c5bae73ede477e5e63cfc3aa1 files/digest-sitecopy-0.14.1 67
+MD5 09b3e7444248285b787fa3635d41aedc files/digest-sitecopy-0.10.12-r1 68
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB2vgNFdQwWVoAgN4RAuUNAKCSLtX4vmPaqVC42X70Be+9TUSvkwCaA8V5
-TlSgVgBCN+RmcSErkdTrZSY=
-=94kN
+iD8DBQFB/MttCHk4+ZoBpvsRAtsnAJ0fGSwVcASfEAX4qHidBaBF6N1OEgCfeBnZ
+DenzOXDMmvjSaEekFFYN0Cg=
+=zo2c
 -----END PGP SIGNATURE-----
