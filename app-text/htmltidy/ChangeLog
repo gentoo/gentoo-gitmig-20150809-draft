@@ -1,6 +1,9 @@
 # ChangeLog for app-text/htmltidy
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/ChangeLog,v 1.27 2004/11/03 06:46:21 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/ChangeLog,v 1.28 2004/11/07 14:50:58 corsair Exp $
+
+  07 Nov 2004; Markus Rothe <corsair@gentoo.org> htmltidy-4.8.6.ebuild:
+  Stable on ppc64; bug #60442
 
   03 Nov 2004; Bret Curtis <psi29a@gentoo.org> htmltidy-4.8.6.ebuild:
   added to ~mips for testing
