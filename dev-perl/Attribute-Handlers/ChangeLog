@@ -1,0 +1,10 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Attribute-Handlers/ChangeLog,v 1.1 2002/11/26 15:26:07 mcummings Exp $
+
+*Attribute-Handlers-0.78 (26 Nov 2002)
+
+  26 Nov 2002; Michael Cummings <mcummings@gentoo.org> 
+  Attribute-Handlers-0.78:
+  Initial import, resolves missind dep for Params-Validate which is used by 
+  HTML-Mason among others
