@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.7.ebuild,v 1.2 2004/10/23 18:18:47 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda/coda-6.0.7.ebuild,v 1.3 2004/11/06 22:48:33 griffon26 Exp $
 
 inherit eutils
 
@@ -94,6 +94,9 @@ src_install () {
 
 	sed -i -e "s,^#mountpoint=/.*,mountpoint=/mnt/coda," \
 		${D}/etc/coda/venus.conf.ex
+
+	# Fix conflict with backup.sh from tar
+	mv -f ${D}/usr/sbin/backup{,-coda}.sh
 
 	dodir /var/lib/vice
 	dodir /mnt/coda
