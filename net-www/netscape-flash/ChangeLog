@@ -1,6 +1,10 @@
 # ChangeLog for net-www/netscape-flash
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/ChangeLog,v 1.25 2005/01/09 11:38:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/ChangeLog,v 1.26 2005/02/11 09:13:49 dragonheart Exp $
+
+  11 Feb 2005; Daniel Black <dragonheart@gentoo.org>
+  netscape-flash-7.0.25.ebuild:
+  x86 keyword as per bug #81355 thanks to Pablo Trabajos <guaje1985@hotmail.com>
 
   09 Jan 2005; Sven Wegener <swegener@gentoo.org>
   netscape-flash-6.0.79.ebuild, netscape-flash-6.0.81.ebuild,
