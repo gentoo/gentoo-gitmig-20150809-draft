@@ -49,19 +49,27 @@ start() {
 	done
 
 	for x in ${PAGE_EXEC_EXEMPT} ; do
-		/sbin/chpax -p ${x}
+		if [ -f ${x} ]; then
+			/sbin/chpax -p ${x}
+		fi
 	done
 
 	for x in ${TRAMPOLINE_EXEMPT} ; do
-		/sbin/chpax -e ${x}
+		if [ -f ${x} ]; then
+			/sbin/chpax -e ${x}
+		fi
 	done
 
 	for x in ${MPROTECT_EXEMPT} ; do
-		/sbin/chpax -m ${x}
+		if [ -f ${x} ]; then
+			/sbin/chpax -m ${x}
+		fi
 	done
 
 	for x in ${MMAP_EXEMPT} ; do
-		/sbin/chpax -r ${x}
+		if [ -f ${x} ]; then
+			/sbin/chpax -r ${x}
+		fi
 	done
 
 	if [ -d ${PROCDIR}/grsec_lock ] ; then

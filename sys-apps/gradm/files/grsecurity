@@ -2,7 +2,7 @@
 #
 
 # Files that we should remove PAGE_EXEC enforcement from
-PAGE_EXEC_EXEMPT="/usr/X11R6/bin/XFree86"
+PAGE_EXEC_EXEMPT="/usr/X11R6/bin/XFree86 /usr/bin/wine"
 
 # Files we should turn off trampoline emmulation for
 TRAMPOLINE_EXEMPT=""
