@@ -1,21 +1,19 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-0.11.ebuild,v 1.5 2003/12/04 15:52:38 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-0.11.ebuild,v 1.6 2004/05/31 22:12:03 vapier Exp $
 
-IUSE="nls spell"
-
-DESCRIPTION="A GTK HTML editor for the experienced web designer or programmer."
-SRC_URI="http://pkedu.fbt.eitn.wau.nl/~olivier/downloads/${P}.tar.bz2"
+DESCRIPTION="A GTK HTML editor for the experienced web designer or programmer"
 HOMEPAGE="http://bluefish.openoffice.nl/"
+SRC_URI="http://pkedu.fbt.eitn.wau.nl/~olivier/downloads/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc"
 SLOT="0"
+KEYWORDS="x86 ~ppc sparc"
+IUSE="nls spell"
 
 RDEPEND=">=x11-libs/gtk+-2
 	dev-libs/libpcre
 	spell? ( app-text/aspell )"
-
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"

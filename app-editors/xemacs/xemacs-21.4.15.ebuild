@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.15.ebuild,v 1.1 2004/05/21 23:19:31 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.15.ebuild,v 1.2 2004/05/31 22:12:04 vapier Exp $
 
 inherit eutils
 
@@ -84,13 +84,13 @@ src_compile() {
 		myconf="${myconf} --with-dialogs=lucid"
 		myconf="${myconf} --with-scrollbars=lucid"
 		myconf="${myconf} --with-menubars=lucid"
-		if [ "`use motif`" ] ; then
+		if use motif ; then
 			myconf="--with-widgets=motif"
 			myconf="${myconf} --with-dialogs=motif"
 			myconf="${myconf} --with-scrollbars=motif"
 			myconf="${myconf} --with-menubars=lucid"
 		fi
-		if [ "`use athena`" ] ; then
+		if use athena ; then
 			myconf="--with-widgets=athena"
 			if [ "`use Xaw3d`" ] ; then
 				myconf="${myconf} --with-athena=xaw3d"
@@ -195,8 +195,7 @@ src_install() {
 	cd ${D}/usr/share/info
 	rm -f dir info.info texinfo* termcap*
 	cd ${S}
-	dodoc BUGS CHANGES-* COPYING ChangeLog GETTING* INSTALL PROBLEMS README*
+	dodoc BUGS CHANGES-* ChangeLog GETTING* INSTALL PROBLEMS README*
 	dodoc ${FILESDIR}/README.Gentoo
 	rm -f ${D}/usr/share/info/emodules.info~*
 }
-

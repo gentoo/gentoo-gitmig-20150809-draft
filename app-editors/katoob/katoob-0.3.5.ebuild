@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/katoob-0.3.5.ebuild,v 1.5 2004/05/30 21:38:47 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/katoob-0.3.5.ebuild,v 1.6 2004/05/31 22:12:03 vapier Exp $
 
 inherit eutils
 
@@ -9,8 +9,8 @@ HOMEPAGE="http://www.arabeyes.org/project.php?proj=katoob"
 SRC_URI="mirror://sourceforge/arabeyes/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86"
 SLOT="0"
+KEYWORDS="x86"
 IUSE="debug spell"
 
 DEPEND=">=x11-libs/gtk+-2
@@ -39,7 +39,5 @@ src_compile() {
 
 src_install() {
 	einstall
-	dodoc AUTHORS ChangeLog COPYING GPL.ar NEWS README RELEASE_NOTES \
-		THANKS TODO
+	dodoc AUTHORS ChangeLog NEWS README RELEASE_NOTES THANKS TODO
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gtk/xemacs-gtk-21.4.8-r2.ebuild,v 1.14 2004/04/06 03:43:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gtk/xemacs-gtk-21.4.8-r2.ebuild,v 1.15 2004/05/31 22:12:04 vapier Exp $
 
 inherit eutils
 
@@ -146,6 +146,6 @@ src_install() {
 	cd ${D}/usr/share/info
 	rm -f dir info.info texinfo* termcap*
 	cd ${S}
-	dodoc BUGS CHANGES-* COPYING ChangeLog GETTING* INSTALL PROBLEMS README*
+	dodoc BUGS CHANGES-* ChangeLog GETTING* INSTALL PROBLEMS README*
 	dodoc ${FILESDIR}/README.Gentoo
 }

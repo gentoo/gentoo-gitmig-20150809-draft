@@ -1,11 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xvile/xvile-9.3h.ebuild,v 1.7 2004/03/13 23:00:56 mr_bones_ Exp $
-
-IUSE="perl"
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xvile/xvile-9.3h.ebuild,v 1.8 2004/05/31 22:12:04 vapier Exp $
 
 S=${WORKDIR}/vile-9.3
 DESCRIPTION="VI Like Emacs -- yet another full-featured vi clone"
+HOMEPAGE="http://www.clark.net/pub/dickey/vile/vile.html"
 SRC_URI="ftp://ftp.phred.org/pub/vile/vile-9.3.tgz
 	ftp://ftp.phred.org/pub/vile/patches/vile-9.3a.patch.gz
 	ftp://ftp.phred.org/pub/vile/patches/vile-9.3b.patch.gz
@@ -16,18 +15,16 @@ SRC_URI="ftp://ftp.phred.org/pub/vile/vile-9.3.tgz
 	ftp://ftp.phred.org/pub/vile/patches/vile-9.3g.patch.gz
 	ftp://ftp.phred.org/pub/vile/patches/vile-9.3h.patch.gz"
 
-HOMEPAGE="http://www.clark.net/pub/dickey/vile/vile.html"
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 ~ppc ~sparc alpha"
+IUSE="perl"
 
 DEPEND="virtual/glibc
 	sys-devel/flex
 	virtual/x11
 	=app-editors/vile-9.3h"
-
 RDEPEND="perl? ( dev-lang/perl )"
-
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc alpha"
 
 src_unpack() {
 	unpack vile-9.3.tgz
@@ -52,8 +49,8 @@ src_compile() {
 	emake || die
 }
 
-src_install () {
+src_install() {
 	dobin xvile
 	make DESTDIR=${D} install || die
-	dodoc CHANGES* COPYING MANIFEST INSTALL README* doc/*
+	dodoc CHANGES* MANIFEST INSTALL README* doc/*
 }

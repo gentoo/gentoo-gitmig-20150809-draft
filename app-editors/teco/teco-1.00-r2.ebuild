@@ -1,18 +1,18 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/teco/teco-1.00-r2.ebuild,v 1.1 2003/09/08 13:08:17 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/teco/teco-1.00-r2.ebuild,v 1.2 2004/05/31 22:12:04 vapier Exp $
 
 inherit ccc
 
-DESCRIPTION="Classic TECO editor, Predecessor to EMACS."
+DESCRIPTION="Classic TECO editor, Predecessor to EMACS"
 HOMEPAGE="http://www.ibiblio.org/pub/linux/apps/editors/tty/ http://www.ibiblio.org/pub/academic/computer-science/history/pdp-11/teco"
 SRC_URI="http://www.ibiblio.org/pub/linux/apps/editors/tty/teco.tar.gz
 	doc? ( mirror://gentoo/tecolore.txt.gz
 		mirror://gentoo/tech.txt.gz
 		mirror://gentoo/teco.doc.gz
 		mirror://gentoo/tecoprog.doc.gz )"
-LICENSE="freedist"
 
+LICENSE="freedist"
 SLOT="0"
 KEYWORDS="alpha x86"
 IUSE="doc"

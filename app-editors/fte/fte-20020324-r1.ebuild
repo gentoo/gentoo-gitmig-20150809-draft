@@ -1,39 +1,30 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20020324-r1.ebuild,v 1.4 2004/03/13 22:29:59 mr_bones_ Exp $
-
-IUSE="gpm slang X"
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20020324-r1.ebuild,v 1.5 2004/05/31 22:12:03 vapier Exp $
 
 DESCRIPTION="Lightweight text-mode editor"
+HOMEPAGE="http://fte.sourceforge.net"
 SRC_URI="mirror://sourceforge/fte/${P}-src.zip
 	mirror://sourceforge/fte/${P}-common.zip"
-HOMEPAGE="http://fte.sourceforge.net"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 ~ppc sparc"
+IUSE="gpm slang X"
 
 RDEPEND=">=sys-libs/ncurses-5.2
 	gpm? ( >=sys-libs/gpm-1.20 )"
-
 DEPEND="${RDEPEND}
 	slang? ( sys-libs/slang )
 	app-arch/unzip
 	X? ( virtual/x11 )"
 
-TARGETS=""
-
-if [ "`use slang`" ] ; then
-	TARGETS="${TARGETS} sfte"
-fi
-
-if [ "`use X`" ] ; then
-	TARGETS="${TARGETS} xfte"
-fi
-
-if [ "`use gpm`" ] ; then
-	TARGETS="${TARGETS} vfte"
-fi
+set_targets() {
+	export TARGETS=""
+	use slang && TARGETS="$TARGETS sfte"
+	use X && TARGETS="$TARGETS xfte"
+	use gpm && TARGETS="$TARGETS vfte"
+}
 
 src_unpack() {
 
@@ -47,6 +38,7 @@ src_unpack() {
 
 	cp src/fte-unix.mak src/fte-unix.mak.orig
 
+	set_targets
 	sed \
 		-e "s:@targets@:${TARGETS}:" \
 		-e "s:@cflags@:${CFLAGS}:" \
@@ -57,16 +49,18 @@ src_compile() {
 	DEFFLAGS="PREFIX=/usr CONFIGDIR=/usr/share/fte \
 		DEFAULT_FTE_CONFIG=../config/main.fte OPTIMIZE="
 
-	emake $DEFFLAGS TARGETS="$TARGETS" all || die
+	set_targets
+	emake $DEFFLAGS TARGETS="${TARGETS}" all || die
 
 	cd config
 	../src/cfte main.fte ../src/system.fterc
 }
 
-src_install () {
+src_install() {
 	local files
 	into /usr
 
+	set_targets
 	files="${TARGETS} cfte compkeys"
 
 	for i in ${files} ; do
@@ -75,7 +69,7 @@ src_install () {
 
 	dobin ${FILESDIR}/fte
 
-	dodoc Artistic CHANGES BUGS COPYING HISTORY README TODO
+	dodoc Artistic CHANGES BUGS HISTORY README TODO
 
 	dodir etc/fte
 	cp src/system.fterc ${D}/etc/fte/system.fterc

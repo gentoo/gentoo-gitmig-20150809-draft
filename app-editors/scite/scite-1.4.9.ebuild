@@ -1,20 +1,21 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.4.9.ebuild,v 1.3 2003/09/05 23:05:05 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.4.9.ebuild,v 1.4 2004/05/31 22:12:04 vapier Exp $
 
 S=${WORKDIR}/$PN/gtk
 MY_PV=149
 DESCRIPTION="A very powerful editor for programmers"
+HOMEPAGE="http://www.scintilla.org/"
 SRC_URI="http://www.scintilla.org/${PN}${MY_PV}.tgz"
-HOMEPAGE="http://www.scintilla.org"
+
+LICENSE="PYTHON"
+SLOT="0"
+KEYWORDS="x86 ppc sparc"
+IUSE=""
 
 DEPEND="virtual/glibc
 	=x11-libs/gtk+-1.2*"
 RDEPEND=""
-
-SLOT="0"
-LICENSE="PYTHON"
-KEYWORDS="x86 ppc sparc "
 
 src_compile() {
 	make -C ../../scintilla/gtk || die
@@ -28,7 +29,7 @@ src_compile() {
 	emake || die
 }
 
-src_install () {
+src_install() {
 	dodir /usr
 	dodir /usr/bin
 	dodir /usr/share
@@ -48,4 +49,3 @@ src_install () {
 		rm -rf ${D}/usr/share/gnome
 	fi
 }
-
