@@ -1,8 +1,11 @@
 # ChangeLog for net-www/mplayerplug-in
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.1 2003/02/16 16:53:51 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.2 2003/02/19 23:39:47 azarah Exp $
 
 *mplayerplug-in-0.40 (16 Feb 2003)
+
+  19 Feb 2003; Martin Schlemmer <azarah@gentoo.org> mplayerplug-in-0.40.ebuild :
+  Set CC to "gcc" if not set, closing bug #15817.
 
   16 Feb 2003; Martin Schlemmer <azarah@gentoo.org> mplayerplug-in-0.40.ebuild :
   Initial ebuild, thanks to Bret Towe <btowe@gbis.com> and

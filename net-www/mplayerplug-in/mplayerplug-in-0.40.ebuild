@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-0.40.ebuild,v 1.1 2003/02/16 16:53:51 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-0.40.ebuild,v 1.2 2003/02/19 23:39:47 azarah Exp $
 
 IUSE=""
 
@@ -19,6 +19,7 @@ KEYWORDS="~x86 ~ppc"
 DEPEND=">=media-video/mplayer-0.90_rc4"
 
 src_compile() {
+	[ -z "${CC}" ] && CC="gcc"
 	emake CC="${CC}" OPTIMIZER="${CFLAGS}" || die
 }
 
