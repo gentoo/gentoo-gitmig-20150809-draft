@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r3.ebuild,v 1.17 2005/03/13 12:55:11 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r3.ebuild,v 1.18 2005/03/15 20:03:24 lu_zero Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -35,7 +35,6 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${P}-fPIC.patch
 	epatch ${FILESDIR}/${P}-gcc34.patch
-	epatch ${FILESDIR}/${P}-gcc34-altivec.patch
 	epatch ${FILESDIR}/${P}-dv.patch
 
 	# remove checks for gtk in configure in
@@ -46,6 +45,10 @@ src_unpack() {
 		# in the compiler
 		epatch "${FILESDIR}/altivec-fix-${PV}.patch"
 		sed -i 's:-O3::' configure.in
+		#Worst workaround ever...
+		sed -i \
+		-e "s/const vector signed short /vector signed short /g" \
+		${S}/utils/altivec/fdct_idct.c
 	fi
 
 	aclocal
