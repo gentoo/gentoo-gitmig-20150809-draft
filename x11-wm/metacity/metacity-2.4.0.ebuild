@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.4.0.ebuild,v 1.2 2002/08/12 11:06:27 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.4.0.ebuild,v 1.3 2002/08/13 19:08:24 pvdabeel Exp $
 
 inherit gnome2
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://people.redhat.com/~hp/metacity/"
 
 SLOT="1"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 RDEPEND=">=dev-libs/glib-2.0.4
 	>=x11-libs/pango-1.0.2

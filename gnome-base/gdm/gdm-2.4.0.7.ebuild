@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.0.7.ebuild,v 1.1 2002/08/09 00:52:31 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.0.7.ebuild,v 1.2 2002/08/13 19:08:24 pvdabeel Exp $
 
 DESCRIPTION="GNOME2 Display Manager"
 HOMEPAGE="http://www.gnome.org/"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 MY_V="`echo ${PV} |cut -b -5`"
 S=${WORKDIR}/${P}
