@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/expat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.44 2005/01/15 22:02:58 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.45 2005/01/16 15:13:17 gmsoft Exp $
+
+  16 Jan 2005; Guy Martin <gmsoft@gentoo.org> expat-1.95.8.ebuild:
+  Stable on hppa.
 
   15 Jan 2005; Lina Pezzella <j4rg0n@gentoo.org> expat-1.95.8.ebuild:
   Stable ppc-macos.
