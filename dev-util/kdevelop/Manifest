@@ -8,7 +8,7 @@ MD5 2f03008af7532a56a7266ac9be886da9 kdevelop-3.2.0_beta2.ebuild 2477
 MD5 3671ce4be8663e11ded0302b60dfad1e kdevelop-3.2.0_rc1.ebuild 2520
 MD5 6393f5f130b072cd76d80e44e8c0662a files/digest-kdevelop-3.2.0_beta2 69
 MD5 dcdcaf1dea68db854de8dad4df83c096 files/kdevelop-3.1_beta1-bdb-fPIC.patch 391
-MD5 f9a96733f1894b309f01d8535606d690 files/digest-kdevelop-3.2.0_rc1 72
+MD5 203fe27f59e4d848f8a150d5160f70e6 files/digest-kdevelop-3.2.0_rc1 72
 MD5 1f01fc9fe5e094574c3ab227ce5b58be files/digest-kdevelop-3.1.1 68
 MD5 9baadc6b0dcbb08db8c865897cf4cf43 files/kdevelop-3.1.0-bdb-mutex.patch 656
 MD5 80d98eb60c504fd1996723b467343948 files/digest-kdevelop-3.2.0_beta1 69
