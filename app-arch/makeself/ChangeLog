@@ -1,0 +1,8 @@
+# ChangeLog for app-arch/makeself
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/makeself/ChangeLog,v 1.1 2003/06/27 22:29:25 vapier Exp $
+
+*makeself-2.1.1 (27 Jun 2003)
+
+  27 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.
