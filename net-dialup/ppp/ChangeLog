@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.96 2005/01/08 08:51:22 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.97 2005/01/09 13:54:23 mrness Exp $
+
+*ppp-2.4.3-r1 (09 Jan 2005)
+
+  09 Jan 2005; Alin Nastac <mrness@gentoo.org>
+  +files/2.4.3/fixes-from-upstream-cvs.patch, +ppp-2.4.3-r1.ebuild:
+  Add fixes from upstream CVS for bug IDs 1103-1106. See bug #58275 and #74093..
 
   08 Jan 2005; Alin Nastac <mrness@gentoo.org> -files/ppp-2.4.1-r10.patch,
   -ppp-2.4.2-r9.ebuild:
