@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.359 2004/05/07 01:03:37 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.360 2004/05/07 20:59:44 rizzo Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -213,6 +213,7 @@ net-dns/djbdns:roundrobin - enables round robin patch
 net-dns/pdnsd:isdn - enable isdn features
 net-fs/samba:oav - Adds support for anti-virus from the openantivirus.org project
 net-fs/shfs:amd - Enable automounter support
+net-im/gaim:gnutls - Use GnuTLS for SSL support
 net-im/gnugadu:tlen - Enable Tlen.pl protocol support
 net-im/kadu:kadu-modules - Enables modules in kadu
 net-im/kadu:kadu-voice - Enables voice chat in kadu
