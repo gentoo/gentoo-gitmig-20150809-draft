@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Strip/HTML-Strip-1.02.ebuild,v 1.5 2004/10/10 11:26:19 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Strip/HTML-Strip-1.02.ebuild,v 1.6 2004/10/17 21:24:25 mcummings Exp $
 
 inherit perl-module
 
@@ -11,5 +11,5 @@ HOMEPAGE="http://search.cpan.org/~kilinrax/${P}"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc ~amd64 ~sparc"
 IUSE=""

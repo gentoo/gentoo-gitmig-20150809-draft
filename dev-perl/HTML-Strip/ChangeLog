@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/HTML-Strip
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Strip/ChangeLog,v 1.4 2004/10/10 11:26:19 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Strip/ChangeLog,v 1.5 2004/10/17 21:24:25 mcummings Exp $
+
+  17 Oct 2004; Michael Cummings <mcummings@gentoo.org> HTML-Strip-1.02.ebuild:
+  Keywording for ~sparc
 
   10 Oct 2004; Tom Martin <slarti@gentoo.org> HTML-Strip-1.02.ebuild:
   Marked ~amd64.
