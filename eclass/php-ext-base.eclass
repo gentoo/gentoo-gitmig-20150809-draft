@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-base.eclass,v 1.15 2004/09/05 20:57:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext-base.eclass,v 1.16 2005/02/14 19:39:03 sebastian Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 # Author: Stuart Herbert <stuart@gentoo.org>
@@ -54,6 +54,10 @@ php-ext-base_buildinilist () {
 	for x in ${PHPSAPILIST} ; do
 		if [ -f /etc/php/${x}-php4/php.ini ]; then
 			PHPINIFILELIST="${PHPINIFILELIST} etc/php/${x}-php4/php.ini"
+		fi
+
+		if [ -f /etc/php/${x}-php5/php.ini ]; then
+			PHPINIFILELIST="${PHPINIFILELIST} etc/php/${x}-php5/php.ini"
 		fi
 	done
 	
