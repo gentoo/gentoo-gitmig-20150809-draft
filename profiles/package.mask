@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <spider@gentoo.org> (04 Sep 2003)
+# Experimental gtk2 support
+=net-mail/sylpheed-0.9.4-r1
+
 # <msterret@gentoo.org> (04 Sep 2003)
 # segfaults on some input that used to work fine.
 =dev-lang/nasm-0.98.37
