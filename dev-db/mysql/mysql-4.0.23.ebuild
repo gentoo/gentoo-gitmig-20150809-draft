@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.7.ebuild,v 1.3 2004/12/23 10:56:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.23.ebuild,v 1.1 2004/12/23 10:56:52 robbat2 Exp $
 
 inherit eutils gnuconfig
 #to accomodate -laadeedah releases
@@ -20,22 +20,19 @@ SRC_URI="mirror://mysql/Downloads/${SDIR}/${NEWP}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86"
-IUSE="static readline innodb berkdb tcpd ssl perl ruby selinux debug cluster"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+IUSE="static readline innodb berkdb tcpd ssl perl debug selinux"
 RESTRICT="nomirror"
 
-DEPEND="
-	!<dev-db/mysql-4.1*
-	readline? ( >=sys-libs/readline-4.1 )
+DEPEND="readline? ( >=sys-libs/readline-4.1 )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r6 )
 	ssl? ( >=dev-libs/openssl-0.9.6d )
 	perl? ( dev-lang/perl )
 	>=sys-libs/zlib-1.1.3
+	>=sys-apps/texinfo-4.7-r1
 	sys-apps/procps
-	>=sys-apps/texinfo-4.7
 	>=sys-apps/sed-4"
-PDEPEND="perl? ( >=dev-perl/DBD-mysql-2.9004 )
-		 ruby? ( >=dev-ruby/mysql-ruby-2.5 )"
+PDEPEND="perl? ( dev-perl/DBI dev-perl/DBD-mysql )"
 RDEPEND="${DEPEND} selinux? ( sec-policy/selinux-mysql )"
 
 warning() {
@@ -46,7 +43,6 @@ warning() {
 	ewarn "of packages for your system, you may use 'revdep-rebuild' from"
 	ewarn "app-portage/gentoolkit."
 	ewarn
-	ewarn "TODO: you must also follow the official upgrade instructions (research and write this up here)"
 	epause 5
 }
 
@@ -64,7 +60,7 @@ src_unpack() {
 
 	#zap startup script messages
 	EPATCH_OPTS="-p1 -d ${S}" \
-	epatch ${FILESDIR}/${PN}-4.0.21-install-db-sh.diff
+	epatch ${FILESDIR}/${PN}-4.0.23-install-db-sh.diff
 	#zap binary distribution stuff
 	EPATCH_OPTS="-p1 -d ${S}" \
 	epatch ${FILESDIR}/${PN}-4.0.18-mysqld-safe-sh.diff
@@ -88,6 +84,11 @@ src_unpack() {
 		EPATCH_OPTS="-p1 -d ${S}" \
 		epatch ${FILESDIR}/${PN}-4.0.14-r1-tcpd-vars-fix.diff
 	fi
+
+	# security fix from http://lists.mysql.com/internals/15185
+	# gentoo bug #60744
+	#EPATCH_OPTS="-p1 -d ${S}" epatch ${FILESDIR}/${PN}-4.0-mysqlhotcopy-security.patch
+	# Already included upstream in 4.0.21
 
 	cd ${S}
 	autoreconf --install --force
@@ -128,11 +129,6 @@ src_compile() {
 		|| myconf="${myconf} --without-openssl"
 
 	myconf="${myconf} `use_with debug`"
-
-	# MySQL CLuster UseFlag
-	if use cluster; then
-		myconf="${myconf} --with-ndbcluster"
-	fi
 
 	#glibc-2.3.2_pre fix; bug #16496
 	export CFLAGS="${CFLAGS} -DHAVE_ERRNO_AS_DEFINE=1"
@@ -197,7 +193,7 @@ src_install() {
 
 	dohtml Docs/*.html
 	rm -f Docs/*.html
-	dodoc README COPYING COPYING.LIB Docs/manual.*
+	dodoc README COPYING Docs/manual.*
 	docinto conf-samples
 	dodoc support-files/my-*.cnf
 
@@ -206,27 +202,36 @@ src_install() {
 	doins scripts/mysqlaccess.conf
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/mysql-4.0.15.rc6 mysql
+
+	insinto /etc/logrotate.d
+	newins ${FILESDIR}/logrotate.mysql mysql
 }
 
 pkg_config() {
-	if [ ! -d ${ROOT}/var/lib/mysql/mysql ] ; then
+	local DATADIR=""
+	if [ -f '/etc/mysql/my.cnf' ] ; then
+		#DATADIR=`grep ^datadir /etc/mysql/my.cnf | sed -e 's/.*= //'`
+		#DATADIR=`/usr/sbin/mysqld  --help |grep '^datadir' | awk '{print $2}'`
+		#DATADIR=`my_print_defaults mysqld | grep -- '^--datadir' | tail -n1 | sed -e 's|^--datadir=||'`
+		DATADIR=`my_print_defaults mysqld | sed -ne '/datadir/s|^--datadir=||p' | tail -n1`
+	fi
+	if [ -z "${DATADIR}" ]; then
+		DATADIR="/var/lib/mysql/"
+		einfo "Using default DATADIR"
+	fi
+	einfo "MySQL DATADIR is ${DATADIR}"
+
+	if [ ! -d ${ROOT}/${DATADIR}/mysql ] ; then
 		einfo "Press ENTER to create the mysql database and set proper"
 		einfo "permissions on it, or Control-C to abort now..."
 		read
 		${ROOT}/usr/bin/mysql_install_db #>>/var/log/mysql/mysql.err 2>&1
 		# changing ownership of newly created databases to mysql.mysql
-		local DATADIR=""
-		if [ -f '/etc/mysql/my.cnf' ] ; then
-			#DATADIR=`grep ^datadir /etc/mysql/my.cnf | sed -e 's/.*= //'`
-			#DATADIR=`/usr/sbin/mysqld  --help |grep '^datadir' | awk '{print $2}'`
-			#DATADIR=`my_print_defaults mysqld | grep -- '^--datadir' | tail -n1 | sed -e 's|^--datadir=||'`
-			DATADIR=`my_print_defaults mysqld | sed -ne '/datadir/s|^--datadir=||p' | tail -n1`
-		fi
-		if [ -z "${DATADIR}" ]; then
-			DATADIR="/var/lib/mysql/"
-		fi
-		chown -R mysql:mysql ${DATADIR}
-		chmod 0750 ${DATADIR}
+		chown -R mysql:mysql ${ROOT}/${DATADIR}
+		chmod 0750 ${ROOT}/${DATADIR}
+		ewarn "For security reasons you should set your MySQL root"
+		ewarn "password as soon as possible."
+
 	else
 		einfo "Hmm, it appears as though you already have the mysql"
 		einfo "database in place.  If you are having problems trying"

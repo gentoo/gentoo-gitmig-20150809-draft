@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.7.ebuild,v 1.3 2004/12/23 10:56:52 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.1.8.ebuild,v 1.1 2004/12/23 10:56:52 robbat2 Exp $
 
 inherit eutils gnuconfig
 #to accomodate -laadeedah releases
@@ -64,7 +64,7 @@ src_unpack() {
 
 	#zap startup script messages
 	EPATCH_OPTS="-p1 -d ${S}" \
-	epatch ${FILESDIR}/${PN}-4.0.21-install-db-sh.diff
+	epatch ${FILESDIR}/${PN}-4.0.23-install-db-sh.diff
 	#zap binary distribution stuff
 	EPATCH_OPTS="-p1 -d ${S}" \
 	epatch ${FILESDIR}/${PN}-4.0.18-mysqld-safe-sh.diff
@@ -90,6 +90,7 @@ src_unpack() {
 	fi
 
 	cd ${S}
+	# this does the libtoolize stuff
 	autoreconf --install --force
 	# Saving this for a rainy day, in case we need it again
 	#WANT_AUTOMAKE=1.7 automake
@@ -206,27 +207,36 @@ src_install() {
 	doins scripts/mysqlaccess.conf
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/mysql-4.0.15.rc6 mysql
+
+	insinto /etc/logrotate.d
+	newins ${FILESDIR}/logrotate.mysql mysql
 }
 
 pkg_config() {
-	if [ ! -d ${ROOT}/var/lib/mysql/mysql ] ; then
+	local DATADIR=""
+	if [ -f '/etc/mysql/my.cnf' ] ; then
+		#DATADIR=`grep ^datadir /etc/mysql/my.cnf | sed -e 's/.*= //'`
+		#DATADIR=`/usr/sbin/mysqld  --help |grep '^datadir' | awk '{print $2}'`
+		#DATADIR=`my_print_defaults mysqld | grep -- '^--datadir' | tail -n1 | sed -e 's|^--datadir=||'`
+		DATADIR=`my_print_defaults mysqld | sed -ne '/datadir/s|^--datadir=||p' | tail -n1`
+	fi
+	if [ -z "${DATADIR}" ]; then
+		DATADIR="/var/lib/mysql/"
+		einfo "Using default DATADIR"
+	fi
+	einfo "MySQL DATADIR is ${DATADIR}"
+
+	if [ ! -d ${ROOT}/${DATADIR}/mysql ] ; then
 		einfo "Press ENTER to create the mysql database and set proper"
 		einfo "permissions on it, or Control-C to abort now..."
 		read
 		${ROOT}/usr/bin/mysql_install_db #>>/var/log/mysql/mysql.err 2>&1
 		# changing ownership of newly created databases to mysql.mysql
-		local DATADIR=""
-		if [ -f '/etc/mysql/my.cnf' ] ; then
-			#DATADIR=`grep ^datadir /etc/mysql/my.cnf | sed -e 's/.*= //'`
-			#DATADIR=`/usr/sbin/mysqld  --help |grep '^datadir' | awk '{print $2}'`
-			#DATADIR=`my_print_defaults mysqld | grep -- '^--datadir' | tail -n1 | sed -e 's|^--datadir=||'`
-			DATADIR=`my_print_defaults mysqld | sed -ne '/datadir/s|^--datadir=||p' | tail -n1`
-		fi
-		if [ -z "${DATADIR}" ]; then
-			DATADIR="/var/lib/mysql/"
-		fi
-		chown -R mysql:mysql ${DATADIR}
-		chmod 0750 ${DATADIR}
+		chown -R mysql:mysql ${ROOT}/${DATADIR}
+		chmod 0750 ${ROOT}/${DATADIR}
+		ewarn "For security reasons you should set your MySQL root"
+		ewarn "password as soon as possible."
+
 	else
 		einfo "Hmm, it appears as though you already have the mysql"
 		einfo "database in place.  If you are having problems trying"

@@ -1,6 +1,14 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.149 2004/11/17 22:25:22 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.150 2004/12/23 10:56:51 robbat2 Exp $
+
+*mysql-4.1.8 (23 Dec 2004)
+*mysql-4.0.23 (23 Dec 2004)
+
+  23 Dec 2004; Robin H. Johnson <robbat2@gentoo.org> +files/logrotate.mysql,
+  +files/mysql-4.0.23-install-db-sh.diff, +mysql-4.0.23.ebuild,
+  +mysql-4.1.7.ebuild, +mysql-4.1.8.ebuild:
+  New versions, and bugs fixed 74248, 74742, 70122, 58469, 50921, 60869.
 
 *mysql-4.1.7 (17 Nov 2004)
 
