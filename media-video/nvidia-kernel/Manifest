@@ -7,7 +7,7 @@ MD5 1e48aaa4989010b59109e1c81cd9741f nvidia-kernel-1.0.6111.ebuild 3723
 MD5 f189c720f21a41c73a6c292ffec6cdfd nvidia-kernel-1.0.5328-r1.ebuild 4461
 MD5 20f6ae4f9076cd8f5dd1d2383d0eaca7 nvidia-kernel-1.0.4496-r3.ebuild 4286
 MD5 d5bc3ba053815cd1b559cba6bbd36452 nvidia-kernel-1.0.4363-r3.ebuild 4071
-MD5 3fcb8dbee827f3cf93162615f7c05123 ChangeLog 22211
+MD5 c48678134e8b2bfdab6383ed28c127d1 ChangeLog 22381
 MD5 c84a79e7d9b69a204003fb8c2dbaad01 metadata.xml 297
 MD5 cc0512640bc35c3419b55a455c480d9f nvidia-kernel-1.0.5336-r4.ebuild 4782
 MD5 497ffcbd6a91ed9447dfdf7b736925bd files/digest-nvidia-kernel-1.0.5328-r1 80
@@ -38,7 +38,7 @@ MD5 5dc4b9a2463cb459721ae3e642f6239f files/1.0.5336/NVIDIA_kernel-1.0-5336-fix-m
 MD5 7bf40e44b8f2181a1047ddfd13acd6b3 files/1.0.5336/NVIDIA_kernel-1.0-5336-basic-sysfs-support.patch 5439
 MD5 bc61be48f85d84f91d2035fa3cc92a47 files/1.0.6106/NVIDIA_kernel-1.0-6106-koutput-support.patch 6659
 MD5 762e6f6e16aa6dd5b2469e99fe8decd3 files/1.0.6111/nv-pci_find_class.patch 2903
-MD5 335be8e5143f2227bcf74718de074343 files/1.0.6111/power-suspend-2.6.9-changes.patch 606
+MD5 14924b09123b075f910c73316baff848 files/1.0.6111/power-suspend-2.6.9-changes.patch 856
 MD5 5177339888e44bb5f4b6124fa5830e7f files/1.0.6111/vmalloc-reserve.patch 542
 MD5 29eafcaf7ab5d59dd90d3d3243bf57c3 files/1.0.6111/nv_enable_pci.patch 3640
 MD5 c2b155f40d7b904f07550e8e326969c2 files/1.0.6111/nv-remap-range.patch 5715

@@ -18,3 +18,15 @@
              nv_printf(NV_DBG_INFO, "NVRM: ACPI: received standby event\n");
              status = rm_power_management(nv, 0, NV_PM_ACPI_STANDBY);
              break;
+--- usr/src/nv/nv.c.orig	2004-10-14 13:48:52.673241000 -0400
++++ usr/src/nv/nv.c	2004-10-14 14:00:05.168006416 -0400
+@@ -3745,7 +3745,7 @@
+     u32 state
+ )
+ {
+-    return nv_acpi_event(dev, state);
++    return nv_acpi_event(dev, PM_TMP);
+ }
+ 
+ int
+
