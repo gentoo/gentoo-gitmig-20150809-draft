@@ -1,6 +1,14 @@
 # ChangeLog for app-antivirus/clamav
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.46 2005/02/08 18:02:22 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/ChangeLog,v 1.47 2005/02/13 17:51:30 ticho Exp $
+
+*clamav-0.82-r1 (13 Feb 2005)
+
+  13 Feb 2005; Andrej Kacian <ticho@gentoo.org>
+  +files/clamav-0.82-MS05-002-false-positive-fix.patch,
+  +clamav-0.82-r1.ebuild:
+  Apply patch to prevent false positives. See bug #81477 for more info.
+  Reported by Jakub Moc <jakub.moc@seznam.cz>.
 
   08 Feb 2005; Gustavo Zacarias <gustavoz@gentoo.org> clamav-0.82.ebuild:
   Stable on sparc
