@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/silc-plugin-1.0.1.ebuild,v 1.1 2004/08/31 15:11:48 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-plugin/silc-plugin-1.0.1.ebuild,v 1.2 2004/08/31 16:59:14 ticho Exp $
 
 IRSSI_PV=0.8.9
 
@@ -8,7 +8,7 @@ DESCRIPTION="A SILC plugin for Irssi"
 HOMEPAGE="http://penguin-breeder.org/silc/"
 SRC_URI="http://irssi.org/files/irssi-${IRSSI_PV}.tar.bz2
 	http://silcnet.org/download/client/sources/silc-client-${PV}.tar.gz
-	http://penguin-breeder.org/silc/download/silc-plugin-${PV}.tar.gz"
+	http://penguin-breeder.org/silc/download/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
@@ -23,11 +23,6 @@ S_SILC="${S}/../silc-client-${PV}"
 S_IRSSI="${S}/../irssi-${IRSSI_PV}"
 
 src_compile() {
-    local myconf
-
-    echo ${S_SILC}
-    use debug && myconf="${myconf} --enable-debug"
-    use pic && myconf="${myconf} --with-pic"
 
     echo
     einfo "Preparing silc-client\n"
@@ -35,33 +30,34 @@ src_compile() {
     econf --with-helpdir=${D}/usr/share/irssi/help/silc/ \
 	--without-libtoolfix \
 	--enable-static \
-	${myconf}
-    make -C lib
+	`use_with pic` \
+	`use_enable debug` || die "silc-client configure failed"
+    make -C lib || die "silc-client's lib compilation failed"
 
     echo
     einfo "Patching irssi source for silc-plugin\n"
     cd ${S}
-    make patch IRSSI=${S_IRSSI} SILC=${S_SILC}
+    make patch IRSSI=${S_IRSSI} SILC=${S_SILC} || die "patching irssi sources failed"
 
     echo
     einfo "Configuring irssi\n"
     cd ${S_IRSSI}
-    econf --sysconfdir=/etc
+    econf --sysconfdir=/etc || die "irssi configure failed"
     echo
     einfo "Compiling silc-plugin\n"
-    make -C src/perl
-    make -C src/fe-common/silc
-    make -C src/silc/core
+    make -C src/perl || die "irssi's src/perl compilation failed"
+    make -C src/fe-common/silc || die "irssi's src/fe-common/silc compilation failed"
+    make -C src/silc/core || die "irssi's src/silc/core compilation failed"
 }
 
 src_install() {
     cd ${S_IRSSI}
-    make -C src/perl/silc DESTDIR=${D} install
-    make -C src/fe-common/silc DESTDIR=${D} install
-    make -C src/silc/core install DESTDIR=${D} install
+    make -C src/perl/silc DESTDIR=${D} install || die "irssi's src/perl/silc installation failed"
+    make -C src/fe-common/silc DESTDIR=${D} install || die "irssi's src/fe-common/silc installation failed"
+    make -C src/silc/core install DESTDIR=${D} install ||  die "irssi's src/silc/core installation failed"
 
     cd ${S_SILC}
-    make -C irssi/docs/help install
+    make -C irssi/docs/help install || die "silc-client's helpfiles installation failed"
 
     cd ${S}
     insinto /usr/share/irssi/scripts
