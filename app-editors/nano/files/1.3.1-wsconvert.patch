@@ -1,6 +1,6 @@
-diff -ur nano-1.3.0.orig/doc/nanorc.sample nano-1.3.0/doc/nanorc.sample
---- nano-1.3.0.orig/doc/nanorc.sample	2003-10-25 01:13:28.280054984 -0400
-+++ nano-1.3.0/doc/nanorc.sample	2003-10-25 01:16:13.805891232 -0400
+diff -ur nano-1.3.1.orig/doc/nanorc.sample nano-1.3.1/doc/nanorc.sample
+--- nano-1.3.1.orig/doc/nanorc.sample	2004-01-10 03:04:04.105882992 -0500
++++ nano-1.3.1/doc/nanorc.sample	2004-01-10 03:04:29.507021432 -0500
 @@ -86,6 +86,16 @@
  ## Use this tab size instead of the default; it must be greater than 0
  # set tabsize 8
@@ -18,9 +18,9 @@ diff -ur nano-1.3.0.orig/doc/nanorc.sample nano-1.3.0/doc/nanorc.sample
  ## Save automatically on exit, don't prompt
  # set tempfile
  
-diff -ur nano-1.3.0.orig/src/global.c nano-1.3.0/src/global.c
---- nano-1.3.0.orig/src/global.c	2003-10-25 01:13:28.287053920 -0400
-+++ nano-1.3.0/src/global.c	2003-10-25 01:14:47.756972656 -0400
+diff -ur nano-1.3.1.orig/src/global.c nano-1.3.1/src/global.c
+--- nano-1.3.1.orig/src/global.c	2004-01-10 03:04:04.115881472 -0500
++++ nano-1.3.1/src/global.c	2004-01-10 03:05:01.991083104 -0500
 @@ -84,6 +84,9 @@
  int tabsize = -1;		/* Our internal tabsize variable.  The
  				   default value 8 is set in main(). */
@@ -48,18 +48,18 @@ diff -ur nano-1.3.0.orig/src/global.c nano-1.3.0/src/global.c
  #ifdef ENABLE_COLOR
      toggle_syntax_msg = _("Color syntax highlighting");
  #endif
-@@ -273,6 +277,7 @@
+@@ -275,6 +279,7 @@
+ #endif
+     toggle_init_one(TOGGLE_CONST_KEY, toggle_const_msg, CONSTUPDATE);
      toggle_init_one(TOGGLE_AUTOINDENT_KEY, toggle_autoindent_msg, AUTOINDENT);
-     toggle_init_one(TOGGLE_SUSPEND_KEY, toggle_suspend_msg, SUSPEND);
-     toggle_init_one(TOGGLE_NOHELP_KEY, toggle_nohelp_msg, NO_HELP);
 +    toggle_init_one(TOGGLE_WSCONVERT_KEY, toggle_wsconvert_msg, WS_CONVERT);
  #ifndef DISABLE_WRAPPING
      toggle_init_one(TOGGLE_WRAP_KEY, toggle_wrap_msg, NO_WRAP);
  #endif
-diff -ur nano-1.3.0.orig/src/nano.c nano-1.3.0/src/nano.c
---- nano-1.3.0.orig/src/nano.c	2003-10-25 01:13:28.288053768 -0400
-+++ nano-1.3.0/src/nano.c	2003-10-25 01:21:58.101550336 -0400
-@@ -3009,6 +3009,9 @@
+diff -ur nano-1.3.1.orig/src/nano.c nano-1.3.1/src/nano.c
+--- nano-1.3.1.orig/src/nano.c	2004-01-10 03:04:04.140877672 -0500
++++ nano-1.3.1/src/nano.c	2004-01-10 03:04:29.511020824 -0500
+@@ -3035,6 +3035,9 @@
  	edit_refresh();
  	break;
  #endif
@@ -69,18 +69,18 @@ diff -ur nano-1.3.0.orig/src/nano.c nano-1.3.0/src/nano.c
      }
  
      /* We are assuming here that shortcut_init() above didn't free and
-diff -ur nano-1.3.0.orig/src/nano.h nano-1.3.0/src/nano.h
---- nano-1.3.0.orig/src/nano.h	2003-10-25 01:13:28.288053768 -0400
-+++ nano-1.3.0/src/nano.h	2003-10-25 01:15:49.714553672 -0400
-@@ -272,6 +272,7 @@
+diff -ur nano-1.3.1.orig/src/nano.h nano-1.3.1/src/nano.h
+--- nano-1.3.1.orig/src/nano.h	2004-01-10 03:04:04.139877824 -0500
++++ nano-1.3.1/src/nano.h	2004-01-10 03:04:29.512020672 -0500
+@@ -289,6 +289,7 @@
  #define HISTORY_CHANGED		(1<<28)
  #define HISTORYLOG		(1<<29)
  #define JUSTIFY_MODE		(1<<30)
 +#define WS_CONVERT		(1<<31)
  
- /* Control key sequences, changing these would be very very bad */
- 
-@@ -427,6 +428,7 @@
+ /* Control key sequences, changing these would be very very bad. */
+ #define NANO_CONTROL_SPACE 0
+@@ -451,6 +452,7 @@
  #define TOGGLE_MAC_KEY		NANO_ALT_O
  #define TOGGLE_SMOOTH_KEY	NANO_ALT_S
  #define TOGGLE_NOCONVERT_KEY	NANO_ALT_N
@@ -88,9 +88,9 @@ diff -ur nano-1.3.0.orig/src/nano.h nano-1.3.0/src/nano.h
  #define TOGGLE_BACKUP_KEY	NANO_ALT_B
  #define TOGGLE_SYNTAX_KEY	NANO_ALT_Y
  #endif /* !NANO_SMALL */
-diff -ur nano-1.3.0.orig/src/proto.h nano-1.3.0/src/proto.h
---- nano-1.3.0.orig/src/proto.h	2003-10-25 01:13:28.288053768 -0400
-+++ nano-1.3.0/src/proto.h	2003-10-25 01:16:41.660656664 -0400
+diff -ur nano-1.3.1.orig/src/proto.h nano-1.3.1/src/proto.h
+--- nano-1.3.1.orig/src/proto.h	2004-01-10 03:04:04.140877672 -0500
++++ nano-1.3.1/src/proto.h	2004-01-10 03:04:29.513020520 -0500
 @@ -41,7 +41,7 @@
  extern long totsize;
  extern int temp_opt;
@@ -100,9 +100,9 @@ diff -ur nano-1.3.0.orig/src/proto.h nano-1.3.0/src/proto.h
  extern int search_last_line;
  extern int search_offscreen;
  extern int currslen;
-diff -ur nano-1.3.0.orig/src/rcfile.c nano-1.3.0/src/rcfile.c
---- nano-1.3.0.orig/src/rcfile.c	2003-10-25 01:13:28.288053768 -0400
-+++ nano-1.3.0/src/rcfile.c	2003-10-25 01:29:20.587282280 -0400
+diff -ur nano-1.3.1.orig/src/rcfile.c nano-1.3.1/src/rcfile.c
+--- nano-1.3.1.orig/src/rcfile.c	2004-01-10 03:04:04.140877672 -0500
++++ nano-1.3.1/src/rcfile.c	2004-01-10 03:04:29.514020368 -0500
 @@ -60,6 +60,7 @@
  #endif
  #ifndef NANO_SMALL
@@ -166,10 +166,10 @@ diff -ur nano-1.3.0.orig/src/rcfile.c nano-1.3.0/src/rcfile.c
  			} else
  			    SET(rcopts[i].flag);
  #ifdef DEBUG
-diff -ur nano-1.3.0.orig/src/winio.c nano-1.3.0/src/winio.c
---- nano-1.3.0.orig/src/winio.c	2003-10-25 01:13:28.289053616 -0400
-+++ nano-1.3.0/src/winio.c	2003-10-25 01:27:12.934688424 -0400
-@@ -471,11 +471,12 @@
+diff -ur nano-1.3.1.orig/src/winio.c nano-1.3.1/src/winio.c
+--- nano-1.3.1.orig/src/winio.c	2004-01-10 03:04:04.138877976 -0500
++++ nano-1.3.1/src/winio.c	2004-01-10 03:04:29.516020064 -0500
+@@ -773,11 +773,12 @@
      index = 0;
  
      for (; index < alloc_len; buf++) {
@@ -186,7 +186,7 @@ diff -ur nano-1.3.0.orig/src/winio.c nano-1.3.0/src/winio.c
  	    converted[index++] = '^';
  	    if (*buf == '\n')
  		/* Treat newlines embedded in a line as encoded nulls;
-@@ -487,7 +488,7 @@
+@@ -789,7 +790,7 @@
  	    else
  		converted[index++] = *buf + 64;
  	} else
