@@ -1,0 +1,10 @@
+# ChangeLog for app-emacs/howm
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/howm/ChangeLog,v 1.1 2004/05/16 15:32:49 usata Exp $
+
+*howm-1.1.2.1 (17 May 2004)
+
+  17 May 2004; Mamoru KOMACHI <usata@gentoo.org> howm-1.1.2.1.ebuild,
+  files/50howm-gentoo.el:
+  Initial import. Thanks to kohei and a5hr <a5hr@cibicc.org>.
+
