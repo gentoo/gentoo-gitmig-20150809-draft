@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.194 2004/03/22 16:58:03 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.195 2004/03/23 13:03:21 lu_zero Exp $
+
+*gcc-3.3.3_pre20040322 (23 Mar 2004)
+
+  23 Mar 2004; Luca Barbato <lu_zero@gentoo.org> gcc-3.3.3_pre20040322.ebuild,
+  files/3.3.3/gcc333_pre20040322-gentoo-branding.patch:
+  New snapshot from the hammer branch.
 
   22 Mar 2004; Luca Barbato <lu_zero@gentoo.org> gcc-3.3.3_pre20040215.ebuild:
   Marked again -ppc since it is still too much problematic.

@@ -3,7 +3,7 @@ MD5 d298d409298ee47b3312de4394b10e3d gcc-2.95.3-r8.ebuild 9206
 MD5 49cb9ba82bff346c132f237af2f0e731 gcc-3.2.2-r2.ebuild 15846
 MD5 f539da121685c516d4b2a8d153061879 gcc-3.2.2.ebuild 16080
 MD5 09f727e23e8e67b725a009dffd73a8c4 gcc-3.1.1-r1.ebuild 9590
-MD5 4f120c09f3c8ef048268480951f8644b ChangeLog 40654
+MD5 f9b557330beebdb6397388455071ec08 ChangeLog 40867
 MD5 bbc60cbe0460a1cec31b80bc65718f47 gcc-3.3.2-r6.ebuild 21216
 MD5 34aee8f0efd5964d5bc242f7181173ea gcc-3.2-r5.ebuild 12881
 MD5 d074f186ab0db250869f09edc25d0c0f gcc-3.2.3-r4.ebuild 20096
@@ -20,6 +20,7 @@ MD5 420966112e30a244c961b292b1365e50 gcc-3.3.2-r3.ebuild 20486
 MD5 f33425008e87845287a5f69d1d2ea37e gcc-3.3.3_pre20040215.ebuild 22194
 MD5 ea8c3589eed3504396a33587a88d82d9 gcc-3.3.2-r5.ebuild 21475
 MD5 885148d907420e8c0bdf162f0a7e29f6 gcc-2.95.3-r7.ebuild 5432
+MD5 081a54271ce55aabec1930da28bf0c74 gcc-3.3.3_pre20040322.ebuild 22189
 MD5 bfa85ae7972954247c91ed2ce9eeb101 gcc-3.2.3-r3.ebuild 19840
 MD5 b6b5635701d756ec15e8d155f9e444df gcc-3.3.3_pre20040130.ebuild 21519
 MD5 3692fd52b3bd395dc8a21178624aa2f5 gcc-3.2.3-r2.ebuild 17301
@@ -48,6 +49,7 @@ MD5 73da03a8bd40327709e7850d9e2158e6 files/gcc-2.95.3-destructor-atexit.diff 389
 MD5 35f63854b7b4d5ab1ed1489e517f8e24 files/digest-gcc-3.3.3 361
 MD5 6e83bfb958e1aa7564eae72b9014980f files/digest-gcc-3.3.3-r1 444
 MD5 dcf3646d19d351cc4d95a8096c6eaf58 files/cpp 20
+MD5 9996ea8d65888808363832ea1571fe0a files/digest-gcc-3.3.3_pre20040322 138
 MD5 01c41c9e6857eb40d402f2acb2bd96f9 files/digest-gcc-3.3.2-r5 361
 MD5 cf81ae4b2da79c34a005da1182c40134 files/digest-gcc-3.3.2 130
 MD5 33df162e1767e168f4f39442785071af files/texinfo-4.0-no-ncurses-gentoo.diff 51748
@@ -93,6 +95,7 @@ MD5 f055e4ef28077477e8d64c6a985b1ad4 files/3.2.2/gcc322-pr9888.patch 9771
 MD5 9f5b59d7567b90894d8d32cf99f910cc files/3.2.2/gcc32-pr8213.patch 2036
 MD5 4b249bff27ab6328436e6289ac9f9cfc files/3.3.3/gcc333_pre20040215-gentoo-branding.patch 839
 MD5 cd87c02e4896f47bf6029eef0dc29468 files/3.3.3/gcc333-gentoo-branding.patch 874
+MD5 f317331e0b196ca455ca9554479cd8eb files/3.3.3/gcc333_pre20040322-gentoo-branding.patch 817
 MD5 0e8d94bbc14fbb3fbad1df4f404b39ef files/3.3.3/gcc333-ssp-3.3_7-fixup.patch 2616
 MD5 24642b902b9937cdebeb14063859135f files/3.1/gcc31-c++-tsubst-asm.patch.bz2 703
 MD5 8b4c6af1c730dcdd843a77e8095d312b files/3.1/gcc31-attr-visibility2.patch.bz2 2341
