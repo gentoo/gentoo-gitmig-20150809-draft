@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/simgear-0.3.7.ebuild,v 1.1 2004/10/21 19:41:10 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/simgear-0.3.7.ebuild,v 1.2 2004/10/22 11:57:24 mholzer Exp $
 
 MY_P="SimGear-${PV}"
 DESCRIPTION="Development library for simulation games"
@@ -14,6 +14,7 @@ IUSE=""
 
 DEPEND=">=media-libs/plib-1.6.0
 	dev-db/metakit
+	media-libs/openal
 	media-libs/glut"
 
 S=${WORKDIR}/${MY_P}

@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/simgear
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.11 2004/10/21 19:42:50 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/simgear/ChangeLog,v 1.12 2004/10/22 11:57:24 mholzer Exp $
+
+  22 Oct 2004; Martin Holzer <mholzer@gentoo.org> simgear-0.3.6.ebuild:
+  adding forgotten depend
 
 *simgear-0.3.6 (21 Oct 2004)
 
