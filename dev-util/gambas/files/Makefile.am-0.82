@@ -1,0 +1,35 @@
+SUBDIRS = libltdl src
+EXTRA_DIST = TODO reconf app examples help README.REDHAT
+##AUTOMAKE_OPTIONS = dist-bzip2
+
+install-exec-local:
+	@echo
+	@echo "Installing the development environment..."
+	@(cd $(srcdir)/app; d=`pwd`; for p in *; do echo "Compiling $$p..."; cd $$d/$$p; \
+	  gbc -ag; gba; rm -rf .gambas; $(INSTALL) $$p $(bindir); done)
+
+	@echo
+	@echo "Creating the library info files..."
+	@$(INSTALL) -d $(libdir)/info
+	@$(bindir)/gbi -a
+	@rm -f $(libdir)/lib.gb.la
+	@rm -f $(libdir)/lib.gb.so*
+
+	@echo
+	@echo "Installing the gambas help files..."
+	@$(INSTALL) -d $(datadir)/help
+	@rm -rf $(datadir)/help
+	@cp -R $(srcdir)/help $(datadir)
+
+	@echo
+	@echo "Installing the gambas examples..."
+	@rm -rf $(datadir)/examples
+	@$(INSTALL) -d $(datadir)/examples
+	@cp -R $(srcdir)/examples $(datadir)
+	@(cd $(datadir)/examples; d=`pwd`; for p in *; do echo "Compiling $$p..."; cd $$d/$$p; \
+	  gbc -ag; gba; done)
+
+dist-hook:
+	@(cd $(distdir)/app; for p in *; do rm -rf $$p/.gambas $$p/.xvpics $$p/*/.xvpics $$p/*/*/.xvpics $$p/*~ $$p/.*.out $$p/*.out $$p/.lang/*.pot $$p/$$p; done)
+	@(cd $(distdir)/examples; for p in *; do rm -rf $$p/.gambas $$p/.xvpics  $$p/*/.xvpics $$p/*/*/.xvpics $$p/*~ $$p/.*.out $$p/*.out $$p/.lang/*.pot $$p/$$p; done)
+

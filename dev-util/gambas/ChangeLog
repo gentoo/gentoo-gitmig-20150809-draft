@@ -1,6 +1,15 @@
-# ChangeLog for dev-util/gambas
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.2 2003/12/02 07:13:39 genone Exp $
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gambas/ChangeLog,v 1.3 2004/02/05 04:09:02 genone Exp $
+
+*gambas-0.82 (05 Feb 2004)
+
+  05 Feb 2004; Marius Mauch <genone@gentoo.org> gambas-0.82.ebuild, 
+  files/Makefile.am-0.82, files/non-symlink-0.82.patch:
+  version bump. Added --enable-optimization swtich to configure, still have to
+  patch it so it uses the CFLAGS from make.conf. Made API docs and examples
+  depend on the "doc" USE flag and install them in the right location.
+  Replaced the Makefile patching with regenerating it from a new Makefile.am
 
 *gambas-0.72 (02 Dec 2003)
 
