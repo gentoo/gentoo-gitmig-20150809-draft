@@ -1,12 +1,6 @@
 # ChangeLog for sys-fs/e2fsprogs
-# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.49 2005/03/18 02:28:55 robbat2 Exp $
-
-*e2fsprogs-1.36-r3 (17 Mar 2005)
-
-  17 Mar 2005; Robin H. Johnson <robbat2@gentoo.org>
-  +e2fsprogs-1.36-r3.ebuild:
-  Fix USE=static to actually build this as static again!
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.50 2005/03/18 13:58:19 vapier Exp $
 
 *e2fsprogs-1.36-r2 (10 Mar 2005)
 
