@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/darcs
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/ChangeLog,v 1.6 2003/09/22 09:06:58 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/darcs/ChangeLog,v 1.7 2003/10/22 09:45:36 kosmikus Exp $
+
+  22 Oct 2003; Andres Loeh <kosmikus@gentoo.org> darcs-0.9.13.ebuild:
+  Corrected dependency to teTeX.
 
 *darcs-0.9.13 (22 Sep 2003)
 
