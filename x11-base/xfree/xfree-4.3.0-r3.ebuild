@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.10 2003/05/30 09:57:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.11 2003/06/01 05:36:26 seemant Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -129,7 +129,8 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 # unzip - needed for savage driver (version 1.1.27t)
 # x11-libs/xft -- blocked because of interference with xfree's
  	
-PDEPEND="3dfx? ( >=media-libs/glide-v3-3.10 )"
+PDEPEND="x11-terms/xterm
+	3dfx? ( >=media-libs/glide-v3-3.10 )"
 
 PROVIDE="virtual/x11
 	virtual/opengl
