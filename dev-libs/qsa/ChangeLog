@@ -1,11 +1,11 @@
 # ChangeLog for dev-libs/qsa
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/qsa/ChangeLog,v 1.2 2003/07/03 13:34:39 brain Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/qsa/ChangeLog,v 1.3 2003/07/03 16:31:46 brain Exp $
 
 *qsa-1.0.0 (03 Jul 2003)
   
   23 Jul 2003; Michele Balistreri <brain@gentoo.org> qsa-1.0.0.ebuild:
-  Version bump, total restyle.
+  Version bump, total restyle. Added ~ppc flag
 
 *qsa-1.0_pre20030513 (24 May 2003)
 
