@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.52 2004/06/25 00:52:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.53 2004/06/25 21:11:36 kanaka Exp $
+
+  25 Jun 2004; Joel Martin <kanaka@gentoo.org> vlc-0.7.2.ebuild:
+  Add depend on automake 1.7.9 to close bug 54498. No version bump necessary,
+  this is a getting it to build type fix
 
   09 Jun 2004; Aron Griffis <agriffis@gentoo.org> vlc-0.6.0-r1.ebuild,
   vlc-0.6.1.ebuild, vlc-0.6.2-r1.ebuild, vlc-0.6.2.ebuild, vlc-0.7.1.ebuild:

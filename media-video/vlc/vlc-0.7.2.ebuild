@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.7.2.ebuild,v 1.3 2004/06/25 00:52:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.7.2.ebuild,v 1.4 2004/06/25 21:11:36 kanaka Exp $
 
 inherit libtool gcc eutils
 
@@ -66,7 +66,8 @@ RDEPEND="X? ( virtual/x11 )
 	>=media-plugins/live-2004.03.05
 	>=media-libs/flac-1.1.0"
 
-DEPEND="$RDEPEND >=sys-devel/autoconf-2.5.8"
+DEPEND="$RDEPEND >=sys-devel/autoconf-2.5.8
+	>=sys-devel/automake-1.7.9"
 
 src_unpack() {
 	unpack ${A}
