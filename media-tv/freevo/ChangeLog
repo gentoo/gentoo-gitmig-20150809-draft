@@ -1,0 +1,11 @@
+# ChangeLog for media-tv/freevo
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/ChangeLog,v 1.1 2003/09/10 18:57:14 max Exp $
+
+*freevo-1.3.4 (10 Sep 2003)
+
+  10 Sep 2003; Max Kalika <max@gentoo.org> freevo-1.3.4.ebuild, metadata.xml,
+  files/freevo-record.rc6, files/freevo-setup.patch, files/freevo-web.rc6,
+  files/freevo.rc6:
+  Initial version.
+
