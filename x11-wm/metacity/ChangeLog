@@ -1,9 +1,12 @@
 # ChangeLog for x11-wm/metacity
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.7 2002/06/27 05:02:45 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/ChangeLog,v 1.8 2002/08/02 19:49:17 gerk Exp $
 
 
 *metacity-2.3.987-r2 (27 Jun 2002)
+  02 Aug 2002; Mark Guertin <gerk@gentoo.org>:
+  Added ppc to keywords
+
   27 Jun 2002; Spider <spider@gentoo.org> metacity-2.3.987-r2.ebuild :
   a quick update to depend on libglade as supposed, and also moving to gnome2.eclass
   
