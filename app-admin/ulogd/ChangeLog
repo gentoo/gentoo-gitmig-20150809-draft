@@ -1,7 +1,13 @@
 # ChangeLog for app-admin/ulogd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.1 2002/05/25 04:50:25 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.2 2002/06/21 01:53:31 nitro Exp $
 
+
+*ulogd-0.97-r1,  (20 Jun 2002)
+
+  20 Jun 2002; George Shapovalov <george@gentoo.org> Changelog :
+
+  Added a sed script to fix paths in ulogd.conf
 
 *ulogd-0.97,  (23 May 2002)
 
