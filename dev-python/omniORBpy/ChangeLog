@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/omniORBpy
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/omniORBpy/ChangeLog,v 1.4 2003/07/12 12:49:26 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/omniORBpy/ChangeLog,v 1.5 2003/10/03 13:40:21 lanius Exp $
+
+*omniORBpy-2.2 (03 Oct 2003)
+
+  03 Oct 2003; Heinrich Wendel <lanius@gentoo.org> omniORBpy-2.2.ebuild:
+  version bump
 
 *omniORBpy-2.0 (03 Jul 2003)
  
