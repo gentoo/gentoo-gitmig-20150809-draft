@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.28-r1.ebuild,v 1.1 2004/12/06 11:36:36 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.28-r2.ebuild,v 1.1 2004/12/08 09:16:40 voxus Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -38,5 +38,6 @@ src_unpack() {
 	cd linux-${KV}
 	epatch ${DISTDIR}/patch-${OKV}-om-migshm-${TIMESTAMP}.bz2 || die "openMosix patch failed."
 	epatch ${FILESDIR}/${PN}-binfmt_aout.patch || die "Security patch for binfmt_aout failed."
+	epatch ${FILESDIR}/${PN}-dn_neigh.patch || ewarn "dn_neigh patch failed."
 	kernel_universal_unpack
 }

@@ -1,0 +1,10 @@
+--- net/decnet/dn_neigh.c.orig	2004-12-08 12:07:15.607589856 +0300
++++ net/decnet/dn_neigh.c	2004-12-08 12:07:22.207586504 +0300
+@@ -26,6 +26,7 @@
+ 
+ #include <linux/config.h>
+ #include <linux/net.h>
++#include <linux/module.h>
+ #include <linux/socket.h>
+ #include <linux/if_arp.h>
+ #include <linux/if_ether.h>
