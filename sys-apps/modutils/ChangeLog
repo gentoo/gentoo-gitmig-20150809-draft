@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/modutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/ChangeLog,v 1.3 2002/06/20 19:30:29 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/modutils/ChangeLog,v 1.4 2002/06/24 02:58:53 azarah Exp $
+
+*modutils-2.4.16-r2 (24 Jun 2002)
+
+  24 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
+  Seems like a statically linked insmod do not load modules
+  on demand :(
 
 *modutils-2.4.16-r1 (20 Jun 2002)
 
