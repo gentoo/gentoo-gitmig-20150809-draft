@@ -39,6 +39,7 @@ dvd - Adds support for DVDs
 encode - Adds support for MEncoder
 esd - Adds support for media-sound/esound (Enlightened Sound Daemon)
 evo - Adds support for evolution in gnumeric
+fb - Adds framebuffer support and replaces fbcon, fbdev, directfb flags
 fbcon - Adds framebuffer support
 fbdev - Adds framebuffer support
 flash - Adds support for creating flash files using Ming
