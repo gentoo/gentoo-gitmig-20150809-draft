@@ -1,0 +1,37 @@
+# ChangeLog for dev-games/ode
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ode/ChangeLog,v 1.1 2003/07/20 05:13:41 vapier Exp $
+
+*ode-0.039 (20 Jul 2003)
+
+  20 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump + remove filter-flags + redo flag manipulation.
+
+*ode-0.035-r1 (23 Jun 2003)
+
+  01 Jul 2003; George Shapovalov <george@gentoo.org> ode-0.035-r1.ebuild :
+  package build fails with >=gcc-3.3 (#22071)
+  I added pkg_setup which checks gcc version and if 3.3* is found
+  outputs explanation and possible resolutions and then dies.
+
+  23 Jun 2003; George Shapovalov <george@gentoo.org> ode-0.035-r1.ebuild :
+  see (#22071)
+  made configuring sed construct more readable and "standard"
+  fixed Makefile to honor user defined CFLAGS instead of throwing them out
+
+*ode-0.035 (02 Apr 2003)
+
+  02 Apr 2003; Philip Walls <malverian@gentoo.org> ode-0.035.ebuild :
+  Version bump
+
+*ode-0.03 (07 Nov 2002)
+
+  28 Mar 2003; Seemant Kulleen <seemant@gentoo.org> ode-0.03.ebuild:
+  HOMEPAGE fix thanks to: Frantz Dhin <tragedy_rm@hotmail.com> in bug #18299
+
+  07 Nov 2002; George Shapovalov <george@gentoo.org> ode-0.03.ebuild :
+
+  Initial release
+  Open Dynamics Engine 0.03
+
+  ebuild submitted by Julien Cayzac <gentoo@brainlex.com>
