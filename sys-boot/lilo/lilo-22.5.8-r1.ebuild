@@ -1,10 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.5.8-r1.ebuild,v 1.6 2004/04/21 02:13:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.5.8-r1.ebuild,v 1.7 2004/04/21 02:15:54 eradicator Exp $
 
-inherit mount-boot eutils
+inherit mount-boot eutils flag-o-matic
 
-S="${WORKDIR}/${P}"
+IUSE=""
+
 DESCRIPTION="Standard Linux boot loader"
 HOMEPAGE="http://lilo.go.dyndns.org/pub/linux/lilo/"
 SRC_URI="http://home.san.rr.com/johninsd/pub/linux/lilo/${P}.tar.gz
