@@ -2,10 +2,10 @@ MD5 9a90e9c8660c023e22cdf9aafe04c99d ChangeLog 3631
 MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
 MD5 b0d9f8e0edfd95052b195e00c237f57a realplayer-8-r5.ebuild 3575
 MD5 995ad4a44983c1d735c9d1cf5bb76467 realplayer-8-r6.ebuild 3922
-MD5 9467055149c51fdcce86ad82b327f9c6 realplayer-8-r7.ebuild 2835
+MD5 2c9ebba9fcb593a26c7ea589cc50e7e7 realplayer-8-r7.ebuild 2834
 MD5 5770afeac4496095cec26d13745be3b4 files/10realplayer 48
 MD5 b1f07ef9de78ae97ad9d42a6971b0d40 files/digest-realplayer-8-r5 357
 MD5 b1f07ef9de78ae97ad9d42a6971b0d40 files/digest-realplayer-8-r6 357
+MD5 17ab63668e0e7e3ddf931fe0985e085f files/digest-realplayer-8-r7 290
 MD5 db1abde793632464b694bc07794630a5 files/mimeinfo 367
 MD5 cc3251234e6be88a6554a5f08c0f98d9 files/realplayer.desktop 359
-MD5 17ab63668e0e7e3ddf931fe0985e085f files/digest-realplayer-8-r7 290
