@@ -3,14 +3,14 @@ Hash: SHA1
 
 MD5 1bb2217fe22953b0f3df04f9b4bc54dd fujaba-4.1.0.ebuild 1092
 MD5 e317ad61d9390f1e0e21f62f76c991f0 fujaba-4.0.1.ebuild 878
-MD5 003e3a8a1fbaf77a45ef91862eefb5be ChangeLog 838
+MD5 ef2429efb705dcbc37b7ad1b0da62059 ChangeLog 853
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 bc7d3c5a2391e2ca7a7370c94a862989 files/digest-fujaba-4.0.1 81
 MD5 5d139b04e0178ac6209b48123ca329df files/digest-fujaba-4.1.0 81
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBfklL/rLF9B432nYRAuReAKDDOAAh8zSJN/N6Kvn2rzQfPyFOfACfUY9h
-FvXbsnenw38Zn/xjmket/lo=
-=0ecC
+iD8DBQFBf7Ma/rLF9B432nYRAhXWAJ9ZjlB8DBMHOEn+g1S/EqLG8WlRMgCfVwLN
+NC4uDHy6OEOBvzi/b7jOrG8=
+=ji/1
 -----END PGP SIGNATURE-----
