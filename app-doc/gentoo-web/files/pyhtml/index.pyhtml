@@ -21,7 +21,8 @@
 						Alt. Download:<br>
 						CVSWeb:<br>
 						Mailing Lists:<br><br><br>
-						rsync:</b>
+						rsync:<br>
+						IRC channel</b>:
 					</td>
 					<td align="left" valign="top">
 						<a href="http://www.ibiblio.org/gentoo">http://www.ibiblio.org/gentoo</a><br>
@@ -31,6 +32,7 @@
 						announcements (<a href="http://www.gentoo.org/mailman/listinfo/gentoo-announce">click to subscribe</a>)<br>
 						<b>NEW!</b> 1/day CVS-log (<a href="http://www.gentoo.org/mailman/listinfo/gentoo-cvs">click to subscribe</a>)<br>
 						rsync://cvs.gentoo.org<br>
+						<b>#gentoo on <a href="http://www.openprojects.net/">irc.openprojects.net (OPN)</a></b>
 					</td>
 					<td align="left" valign="top">
 						<b>
