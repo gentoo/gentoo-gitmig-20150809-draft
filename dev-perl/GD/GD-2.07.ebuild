@@ -1,21 +1,19 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-2.07.ebuild,v 1.4 2004/02/17 22:31:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-2.07.ebuild,v 1.5 2004/02/22 09:32:41 vapier Exp $
 
 inherit eutils perl-module
-CATEGORY="dev-perl"
 
 DESCRIPTION="interface to Thomas Boutell's gd library"
-SRC_URI="http://www.cpan.org/modules/by-module/GD/${P}.tar.gz"
 HOMEPAGE="http://www.cpan.org/modules/by-module/GD/${P}.readme"
+SRC_URI="http://www.cpan.org/modules/by-module/GD/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc alpha ia64"
+SLOT="0"
+KEYWORDS="x86 ppc ~sparc alpha hppa ia64 ~amd64"
 IUSE="jpeg truetype X gif"
 
-DEPEND="${DEPEND}
-	>=media-libs/libgd-2.0.5
+DEPEND=">=media-libs/libgd-2.0.5
 	media-libs/libpng
 	sys-libs/zlib
 	jpeg? ( media-libs/jpeg )
