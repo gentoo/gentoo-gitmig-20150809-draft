@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/crimson/crimson-0.4.7.ebuild,v 1.1 2005/02/23 03:32:07 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/crimson/crimson-0.4.7.ebuild,v 1.2 2005/03/04 19:05:01 gustavoz Exp $
 
 inherit eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="http://crimson.seul.org/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc ~sparc x86"
+KEYWORDS="amd64 ppc sparc x86"
 IUSE="zlib"
 
 RDEPEND=">=media-libs/libsdl-1.1.5
