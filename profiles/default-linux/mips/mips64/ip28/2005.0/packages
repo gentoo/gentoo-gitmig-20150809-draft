@@ -1,0 +1,13 @@
+# Copyright 2004 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/mips64/ip28/2005.0/packages,v 1.1 2005/01/09 18:45:51 kumba Exp $
+
+# mips64 o32 packages
+
+# Since we're running a mips64 kernel w/ 32bit (o32) userland,
+# we need gcc-mips64 for kernels
+*sys-devel/gcc-mips64
+
+# Sometimes necessary to trick programs into thinking we're really
+# a mips32 system.
+*sys-devel/mips32
