@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/dcopjava
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopjava/ChangeLog,v 1.1 2004/11/06 17:23:32 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/dcopjava/ChangeLog,v 1.2 2004/11/12 14:04:31 danarmak Exp $
+
+  12 Nov 2004; Dan Armak <danarmak@gentoo.org> dcopjava-3.3.1.ebuild:
+  Don't run java-config in the global part of the ebuild.
 
 *dcopjava-3.3.1 (06 Nov 2004)
 
