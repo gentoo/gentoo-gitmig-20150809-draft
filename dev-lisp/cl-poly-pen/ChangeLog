@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/cl-poly-pen
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-poly-pen/ChangeLog,v 1.1 2005/03/20 21:23:24 mkennedy Exp $
+
+*cl-poly-pen-0.3.1 (20 Mar 2005)
+
+  20 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org> +metadata.xml,
+  +cl-poly-pen-0.3.1.ebuild:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
