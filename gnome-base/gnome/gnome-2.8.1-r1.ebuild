@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.1-r1.ebuild,v 1.1 2004/12/08 04:42:31 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.1-r1.ebuild,v 1.2 2004/12/11 03:15:25 obz Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop"
@@ -42,7 +42,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/libgnome-2.8
 	>=gnome-base/libgnomeui-2.8
 	>=gnome-base/libgnomecanvas-2.8
-	>=gnome-base/libglade-2.4.1
+	>=gnome-base/libglade-2.4
 
 	>=gnome-extra/bug-buddy-2.8
 	>=gnome-base/control-center-2.8.1-r1
