@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.2-r1.ebuild,v 1.3 2003/10/09 15:46:58 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.2-r1.ebuild,v 1.4 2003/11/01 20:15:46 liquidx Exp $
 
 inherit flag-o-matic python
 
@@ -23,15 +23,15 @@ KEYWORDS="~x86"
 
 DEPEND="virtual/glibc
 	>=sys-libs/zlib-1.1.3
-	readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.2 )
-	berkdb? ( >=sys-libs/db-3 )
-	tcltk? ( >=dev-lang/tk-8.0 )
-	||	( dev-libs/expat
-	     ( !build?     ( dev-libs/expat ) )
-	     ( !bootstrap? ( dev-libs/expat ) )
-		)"
-# This is a hairy one.  Basically depend on dev-libs/expat
-# if "build" or "bootstrap" not in USE.
+	>=sys-libs/zlib-1.1.3
+	!build? ( 	tcltk? ( >=dev-lang/tk-8.0 )
+				ncurses? ( >=sys-libs/ncurses-5.2 readline? ( >=sys-libs/readline-4.1 ) )
+				berkdb? ( >=sys-libs/db-3 )
+				dev-libs/expat
+				sys-libs/gdbm
+				ssl? ( dev-libs/openssl )
+				doc? ( =dev-python/python-docs-${PV}* )
+	)"	
 
 RDEPEND="${DEPEND} dev-python/python-fchksum"
 
@@ -44,6 +44,7 @@ PROVIDE="virtual/python"
 src_unpack() {
 	unpack ${A}
 	# adds /usr/lib/portage/pym to sys.path - liquidx (08 Oct 03)
+	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${PN}-2.3.2-disable_modules_and_ssl.patch
 	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${PN}-2.3-add_portage_search_path.patch
 	# adds support for PYTHON_DONTCOMPILE shell environment to
 	# supress automatic generation of .pyc and .pyo files - liquidx (08 Oct 03)
@@ -62,6 +63,24 @@ src_compile() {
 	if [ "`use build`" -a ! "`use bootstrap`" ]
 	then
 		myconf="--with-cxx=no"
+	fi
+
+	# disable extraneous modules with extra dependencies
+	if [ -n "`use build`" ]; then
+		export PYTHON_DISABLE_MODULES="readline pyexpat dbm gdbm bsddb _socket _curses _curses_panel _tkinter"
+		export PYTHON_DISABLE_SSL=1
+	else
+		use berkdb \
+			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} dbm bsddb"
+		use readline \
+			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} readline"
+		use tcltk \
+			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} _tkinter"
+		use ncurses \
+			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} _curses _curses_panel"
+		use ssl \
+			|| export PYTHON_DISABLE_SSL=1
+		export PYTHON_DISABLE_MODULES
 	fi
 
 	# FIXME: (need to verify the consequences of this, probably breaks tkinter?)
@@ -88,8 +107,8 @@ src_install() {
 	exeinto /usr/bin
 	newexe ${FILESDIR}/python-config-${PV} python-config
 
-	# This stuff below extends from 2.1, and should be deprecated in 2.3,
-	# or possibly can wait till 2.4
+	# The stuff below this line extends from 2.1, and should be deprecated 
+	# in 2.3, or possibly can wait till 2.4
 
 	# seems like the build do not install Makefile.pre.in anymore
 	# it probably shouldn't - use DistUtils, people!
@@ -111,7 +130,7 @@ pkg_postrm() {
 pkg_postinst() {
 	python_makesym
 	python_mod_optimize
-	python_mod_optimize -x site-packages ${ROOT}usr/lib/python${PYVER}
+	python_mod_optimize -x site-packages -x test ${ROOT}usr/lib/python${PYVER}
 
 	echo
 	ewarn
@@ -124,7 +143,7 @@ pkg_postinst() {
 	ewarn
 	ewarn "Python 2.2 is still installed and can be accessed via /usr/bin/python2.2."
 	ewarn "Portage-2.0.49-r8 and below will continue to use python-2.2.x, so"
-	ewarn "think twice about uninstalling it otherwise your system will break."
+	ewarn "think twice about uninstalling it, otherwise your system will break."
 	ewarn
 	echo -ne "\a"; sleep 1
 	echo -ne "\a"; sleep 1

@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r5.ebuild,v 1.1 2003/10/27 09:21:51 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r5.ebuild,v 1.2 2003/11/01 20:15:46 liquidx Exp $
 
 inherit flag-o-matic eutils python
 
-IUSE="readline tcltk berkdb bootstrap build doc"
+IUSE="readline tcltk berkdb build doc ssl"
 
 PYVER_MAJOR="`echo ${PV%_*} | cut -d '.' -f 1`"
 PYVER_MINOR="`echo ${PV%_*} | cut -d '.' -f 2`"
@@ -18,17 +18,16 @@ HOMEPAGE="http://www.python.org"
 LICENSE="PSF-2.2"
 KEYWORDS="~amd64 ~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm ~ia64"
 
-DEPEND="virtual/glibc >=sys-libs/zlib-1.1.3
-	doc? ( =dev-python/python-docs-${PV}* )
-	readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.2 )
-	berkdb? ( >=sys-libs/db-3 )
-	tcltk? ( >=dev-lang/tk-8.0 )
-	|| ( dev-libs/expat
-	     ( !build?     ( dev-libs/expat ) )
-	     ( !bootstrap? ( dev-libs/expat ) )
-	    )"
-# This is a hairy one.  Basically depend on dev-libs/expat
-# if "build" or "bootstrap" not in USE.
+DEPEND="virtual/glibc
+	>=sys-libs/zlib-1.1.3
+	!build? ( 	tcltk? ( >=dev-lang/tk-8.0 )
+				ncurses? ( >=sys-libs/ncurses-5.2 readline? ( >=sys-libs/readline-4.1 ) )
+				berkdb? ( >=sys-libs/db-3 )
+				dev-libs/expat
+				sys-libs/gdbm
+				ssl? ( dev-libs/openssl )
+				doc? ( =dev-python/python-docs-${PV}* )
+	)"
 
 RDEPEND="${DEPEND} dev-python/python-fchksum"
 
@@ -41,7 +40,8 @@ SLOT="2.2"
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-db4.patch
+	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${P}-db4.patch
+	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${P}-disable_modules_and_ssl.patch
 	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${PN}-2.3-add_portage_search_path.patch
 	epatch ${FILESDIR}/${PN}-2.2.3-gentoo_py_dontcompile.patch
 }
@@ -63,6 +63,24 @@ src_compile() {
 	if [ "`use build`" -a ! "`use bootstrap`" ]
 	then
 		myopts="--with-cxx=no"
+	fi
+
+	# disable extraneous modules with extra dependencies
+	if [ -n "`use build`" ]; then
+		export PYTHON_DISABLE_MODULES="readline pyexpat dbm gdbm bsddb _socket _curses _curses_panel _tkinter"
+		export PYTHON_DISABLE_SSL=1
+	else
+		use berkdb \
+			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} dbm bsddb"
+		use readline \
+			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} readline"
+		use tcltk \
+			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} _tkinter"
+		use ncurses \
+			|| PYTHON_DISABLE_MODULES="${PYTHON_DISABLE_MODULES} _curses _curses_panel"
+		use ssl \
+			|| export PYTHON_DISABLE_SSL=1
+		export PYTHON_DISABLE_MODULES
 	fi
 
 	# build python with threads support
@@ -103,12 +121,13 @@ src_install() {
 		cp -r "${S}/Tools/idle" "${D}/usr/lib/python${PYVER}/tools/"
 		dosym /usr/lib/python${PYVER}/tools/idle/idle.py /usr/bin/idle.py
 	fi
+	use ncurses || rm -rf ${D}/usr/lib/python${PYVER}/curses
 }
 
 pkg_postinst() {
 	python_makesym
 	PYTHON_OVERRIDE_PYVER="2.2" python_mod_optimize
-	PYTHON_OVERRIDE_PYVER="2.2" python_mod_optimize -x site-packages ${ROOT}usr/lib/python${SLOT}
+	PYTHON_OVERRIDE_PYVER="2.2" python_mod_optimize -x site-packages -x test ${ROOT}usr/lib/python${SLOT}
 }
 
 pkg_postrm() {
