@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/help2man
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.15 2004/08/11 07:44:42 gongloo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/help2man/ChangeLog,v 1.16 2004/08/24 03:16:37 swegener Exp $
+
+  24 Aug 2004; Sven Wegener <swegener@gentoo.org> help2man-1.29.ebuild:
+  Don't set RDEPEND="${DEPEND}"
 
   11 Aug 2004; Hasan Khalil <gongloo@gentoo.org> help2man-1.29.ebuild:
   Stable on macos.

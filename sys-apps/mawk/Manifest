@@ -1,4 +1,14 @@
-MD5 0d4ad30f6be9214890c12d06c85a8908 mawk-1.3.3.ebuild 863
-MD5 96d8add9ad7071a7f35556a90a043a0f ChangeLog 565
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8f8b17eb5d8224bca2e9fd5fa77a3efd ChangeLog 694
+MD5 9c5fcb02174d3857d894952a387b01c1 mawk-1.3.3.ebuild 840
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 422a47be83c17ea21f474137dd4021b2 files/digest-mawk-1.3.3 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+
+iD8DBQFBKrPiI1lqEGTUzyQRAtuuAKDMifToxOvyZxRkAfky0VteW4XIlwCfRQl2
+HYqQrrN63+7t9Di4KewlXx0=
+=uLC5
+-----END PGP SIGNATURE-----
