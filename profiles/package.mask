@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <method@gentoo.org> (05 Mar 2003)
+# gcc with optimizations
+=gcc-3.2.2-r3
+
 # <lordvan@gentoo.org> (05 Mar 2003)
 # breaks ghostscript 7.05.[56]
 >=net-print/gimp-print-cups-4.3.10
