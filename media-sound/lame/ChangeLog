@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/lame
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.12 2002/12/12 17:56:15 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.13 2002/12/13 10:59:42 blizzy Exp $
 
 *lame-3.93.1 (11 Dec 2002)
 
@@ -13,7 +13,7 @@
   patches is gone now. 
 
 * Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *lame-3.93.0-r1 (23 Nov 2002)
 
