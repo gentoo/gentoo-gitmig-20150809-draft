@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/libgtkhtml
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/ChangeLog,v 1.83 2004/07/11 20:19:21 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgtkhtml/ChangeLog,v 1.84 2004/07/28 03:19:56 agriffis Exp $
+
+  27 Jul 2004; <agriffis@gentoo.org> libgtkhtml-3.0.10.ebuild:
+  stable on ia64
 
   11 Jul 2004; <spider@gentoo.org> :
   versionbump
