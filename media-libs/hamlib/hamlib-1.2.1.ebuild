@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.2.1.ebuild,v 1.6 2004/06/30 17:30:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/hamlib-1.2.1.ebuild,v 1.7 2004/07/29 01:24:57 killsoft Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha"
+KEYWORDS="x86 ~ppc alpha"
 IUSE="doc gd X"
 
 RDEPEND="virtual/libc
@@ -61,9 +61,3 @@ src_install() {
 	doins 73hamlib
 }
 
-pkg_postinst() {
-	echo
-	einfo "Add \"hamlib\" to your /etc/make.conf USE flags"
-	einfo "to enable applications to use hamlib libraries."
-	echo
-}

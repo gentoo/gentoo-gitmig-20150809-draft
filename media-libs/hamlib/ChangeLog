@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/hamlib
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/ChangeLog,v 1.7 2004/06/30 00:13:06 killsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/hamlib/ChangeLog,v 1.8 2004/07/29 01:24:57 killsoft Exp $
+
+  28 Jul 2004; Robb Romans <killsoft@gentoo.org> hamlib-1.2.1.ebuild:
+  Mark stable on x86, alpha.
 
   29 Jun 2004; Robb Romans <killsoft@gentoo.org> -hamlib-1.1.4.ebuild:
   Remove crufty 1.1.4 ebuild
