@@ -1,8 +1,11 @@
 # ChangeLog for media-libs/libdvdcss
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.7 2002/08/11 19:15:41 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.8 2002/08/13 04:01:39 gerk Exp $
 
 *libdvdcss-1.2.2 (11 Aug 2002)
+
+  12 Aug 2002; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords
 
   11 Aug 2002; Martin Schlemmer <azarah@gentoo.org> :
 

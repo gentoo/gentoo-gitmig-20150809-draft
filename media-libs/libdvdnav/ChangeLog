@@ -1,8 +1,11 @@
 # ChangeLog for media-lib/libdvdnav
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/ChangeLog,v 1.6 2002/08/06 15:57:49 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/ChangeLog,v 1.7 2002/08/13 04:03:44 gerk Exp $
 
 *libdvdnav-0.1.3 (06 Aug 2002)
+
+  12 Agu 2002; Mark Guertin <gerk@gentoo.org> libdvdnav-0.1.3.ebuild :
+  Added ppc to keywords
 
   06 Aug 2002; Brandon Low <lostlogic@gentoo.org> libdvdnav-0.1.3.ebuild
 
