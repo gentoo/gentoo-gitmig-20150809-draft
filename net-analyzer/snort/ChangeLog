@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.26 2003/12/17 00:31:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.27 2003/12/20 16:48:53 mboman Exp $
+
+  20 Dec 2003; Michael Boman <mboman@gentoo.org> snort-2.0.5-r2.ebuild:
+  Bump to stable on x86
+  Added ~amd64 to KEYWORDS (fixes bug #36098)
 
   16 Dec 2003; Mike Frysinger <vapier@gentoo.org> :
   Port the libnet-1.0 patch to snort-2.0.0 to help out the sparc peeps.
