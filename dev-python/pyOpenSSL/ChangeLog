@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyOpenSSL
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyOpenSSL/ChangeLog,v 1.6 2004/01/16 00:30:33 blauwers Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyOpenSSL/ChangeLog,v 1.7 2004/03/06 09:36:39 dholm Exp $
+
+  06 Mar 2004; David Holm <dholm@gentoo.org> pyOpenSSL-0.5.1.ebuild:
+  Added to ~ppc.
 
   16 Jan 2004; Bart Lauwers <blauwers@gentoo.org) pyOpenSSL-0.5.1.ebuild, ChangeLog :
   addwrite to fix bug #37835, added missing changelog entry

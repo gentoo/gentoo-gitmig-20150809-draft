@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycrypto
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.4 2003/12/17 00:11:23 weeve Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrypto/ChangeLog,v 1.5 2004/03/06 09:39:30 dholm Exp $
+
+  06 Mar 2004; David Holm <dholm@gentoo.org> pycrypto-1.9_alpha6.ebuild:
+  Added to ~ppc.
 
   16 Dec 2003; Jason Wever <weeve@gentoo.org> pycrypto-1.9_alpha6.ebuild:
   Added ~sparc to keywords to fix the broken dependencies of dev-python/twisted.
