@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.7.ebuild,v 1.3 2004/09/09 20:13:25 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.7.ebuild,v 1.4 2004/09/17 21:40:39 plasmaroo Exp $
 
 inherit flag-o-matic eutils
 
@@ -18,7 +18,8 @@ KEYWORDS="-ppc -sparc x86 ~amd64"
 IUSE=""
 LICENSE="GPL-2"
 
-DEPEND=">=sys-apps/i2c-${PV}"
+DEPEND=">=sys-apps/i2c-${PV}
+	rrdtool? ( net-analyzer/rrdtool )"
 
 src_unpack() {
 	unpack ${A} || die
@@ -28,6 +29,9 @@ src_unpack() {
 	# Get the right I2C includes without dropping the kernel includes
 	mkdir -p ${MYI2C}/linux
 	cp /usr/include/linux/i2c* ${MYI2C}/linux/
+
+	# Add sensord to the make targets if the rrdtool USE flag is on...
+	use rrdtool && sed -i -e 's:# PROG_EXTRA:PROG_EXTRA:' Makefile
 }
 
 src_compile()  {
