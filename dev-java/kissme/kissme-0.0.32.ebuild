@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kissme/kissme-0.0.32.ebuild,v 1.1 2004/04/06 02:03:22 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kissme/kissme-0.0.32.ebuild,v 1.2 2004/05/05 16:52:28 sejo Exp $
 
 DESCRIPTION="Tiny, JITless JVM"
 SRC_URI="mirror://sourceforge/kissme/${P}.tar.gz"
@@ -14,7 +14,7 @@ RDEPEND=""
 IUSE="doc"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 src_compile() {
 	econf \
