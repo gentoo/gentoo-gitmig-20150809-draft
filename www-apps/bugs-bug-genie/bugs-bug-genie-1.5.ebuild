@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/bugs-bug-genie/bugs-bug-genie-1.5.ebuild,v 1.2 2004/08/30 19:04:39 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/bugs-bug-genie/bugs-bug-genie-1.5.ebuild,v 1.3 2004/09/02 13:40:02 dholm Exp $
 
 inherit webapp
 MY_PV=${PV/./_}
@@ -12,7 +12,7 @@ DESCRIPTION="BUGS - The Bug Genie"
 HOMEPAGE="http://bugs-bug-genie.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/bugs_${MY_PV}.zip"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 RDEPEND="
 	>=net-www/apache-1.3
