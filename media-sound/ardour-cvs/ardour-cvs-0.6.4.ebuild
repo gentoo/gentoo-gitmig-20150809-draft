@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour-cvs/ardour-cvs-0.6.4.ebuild,v 1.5 2003/05/14 09:03:23 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour-cvs/ardour-cvs-0.6.4.ebuild,v 1.6 2003/05/25 13:05:37 jje Exp $
 
 IUSE="nls"
 
@@ -96,7 +96,7 @@ pkg_postinst() {
 	einfo "to get ardour to run you will need to copy the file sample_ardour.rc"
 	einfo "from /usr/share/doc/${P}/sample_ardour.rc to your homedirectory"
 	einfo "and set two environment variables."
-	einfo "ARDOURRC should point to your where-ever you put your ardour.rc file"
+	einfo "ARDOUR_RC should point to your where-ever you put your ardour.rc file"
 	einfo "ARDOUR_SYSTEM_RC should point to /usr/share/ardour/ardour_system.rc"
 	einfo ""
 
