@@ -1,7 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-4.1.29.ebuild,v 1.1 2004/02/16 01:04:02 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/tomcat-4.1.29.ebuild,v 1.2 2004/02/22 07:32:48 zx Exp $
 
+
+At="jakarta-tomcat-${PV}.tar.gz"
 DESCRIPTION="Apache Servlet-2.3/JSP-1.2 Container"
 SRC_URI="http://apache.sunsite.ualberta.ca/jakarta/tomcat-4/v4.1.29/bin/${At}"
 HOMEPAGE="http://jakarta.apache.org/tomcat"
@@ -10,9 +12,9 @@ LICENSE="Apache-1.1"
 SLOT="0"
 DEPEND="sys-apps/sed"
 RDEPEND=">=virtual/jdk-1.2"
+IUSE=""
 
 S=${WORKDIR}/jakarta-${P}
-At="jakarta-tomcat-${PV}.tar.gz"
 
 src_unpack() {
 	tar xzf ${DISTDIR}/${At} || die

@@ -1,6 +1,9 @@
 # ChangeLog for net-www/tomcat
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/ChangeLog,v 1.25 2004/02/22 07:27:17 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/ChangeLog,v 1.26 2004/02/22 07:32:48 zx Exp $
+
+  24 Feb 2004; Chris Aniszczyk <zx@gentoo.org> tomcat-4.1.29.ebuild:
+  Heh, variable order fix ;) Bug #42071
 
   24 Feb 2004; Chris Aniszczyk <zx@gentoo.org> tomcat-5.0.18.ebuild,
   files/5.0.18/jikes.diff, files/5.0.18/tomcat.conf:
