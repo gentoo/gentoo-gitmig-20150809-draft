@@ -6,6 +6,15 @@
 # Fails to compile... <Verwilst, 6 april 2002>
 =dev-libs/pwlib-1.2.13
 
+#/bin/login from shadow had a root exploit when
+#pam_limits was in use.  We now use /bin/login
+#from util-linux-2.11o which have this fixed.
+#Thanks to Jared H. Hudson for this fix
+#
+#Azarah -- 8 April 2002
+<sys-apps/shadow-4.0.2-r4
+<sys-apps/util-linux-2.11o
+
 #Seems to cause binary incompatibility problems
 #(gbevin, 05 Apr 2002)
 =glibc-2.2.5-r3
