@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-bdb
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bdb/ChangeLog,v 1.1 2003/10/03 10:14:13 twp Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-bdb/ChangeLog,v 1.2 2004/03/13 20:04:19 usata Exp $
+
+*ruby-bdb-0.5.0 (14 Mar 2004)
+
+  14 Mar 2004; Mamoru KOMACHI <usata@gentoo.org> ruby-bdb-0.4.8.ebuild,
+  ruby-bdb-0.5.0.ebuild:
+  Version bumped. Marked previous version stable.
 
 *ruby-bdb-0.4.8 (03 Oct 2003)
 
