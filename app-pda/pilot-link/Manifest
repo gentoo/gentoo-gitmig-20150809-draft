@@ -1,10 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 8467971ae95d21456dddb773449ff77d ChangeLog 5258
 MD5 075fea99b82d61028585dc3e42f00466 metadata.xml 156
 MD5 b73905861514b491883690aef061bd9b pilot-link-0.11.3.ebuild 1127
 MD5 f93bbd87447f6bca5a28e97a56a38fe4 pilot-link-0.11.5-r2.ebuild 2798
 MD5 2bf1ee7a53bd23f0849c2fbfeac1b2ee pilot-link-0.11.7-r1.ebuild 1792
 MD5 8b31910518ba856b8cce83c1633bc41c pilot-link-0.11.8.ebuild 1878
-MD5 2c20fd586962cdb39ab3a93f622344ba pilot-link-0.11.8-r1.ebuild 2035
+MD5 18f8f277a9e6708c9c7100b1832e292c pilot-link-0.11.8-r1.ebuild 2040
 MD5 4ed5cde53dbd9e15bb794538763b55eb files/digest-pilot-link-0.11.3 70
 MD5 6d5485ccfa72ceeae0193839586e7252 files/digest-pilot-link-0.11.5-r2 70
 MD5 6ba6541a846ca65d5b4985c0b3e63707 files/digest-pilot-link-0.11.7-r1 70
@@ -14,3 +17,10 @@ MD5 90560348093b5a7b47849896f35b4d54 files/pilot-link-0.11.8-javapath.patch 562
 MD5 c7eea8e9fc52ce118ca126979309da45 files/digest-pilot-link-0.11.8-r1 70
 MD5 73901859bb01a4c7aa0dbddf1d6e898a files/pilot-link-0.11.8-javappc.patch 560
 MD5 cc5d291e67e5ebc1caa5cc3c401f3ced files/pilot-link-0.11.8-netsync.patch 4371
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBdVpgHTu7gpaalycRAtmFAJ9GyOZCwEpidZM2nyXMXi8+fXPtVACghV2y
+up7a4jMPlOdEGIg2tw6Aeak=
+=eyVb
+-----END PGP SIGNATURE-----
