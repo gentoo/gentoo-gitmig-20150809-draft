@@ -1,0 +1,10 @@
+# ChangeLog for games-puzzle/torrent
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/torrent/ChangeLog,v 1.1 2004/03/05 09:16:25 mr_bones_ Exp $
+
+*torrent-0.8 (05 Mar 2004)
+
+  05 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> metadata.xml,
+  torrent-0.8.ebuild:
+  initial commit
+
