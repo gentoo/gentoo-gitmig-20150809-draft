@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/slocate
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.17 2003/04/17 16:34:48 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.18 2003/04/18 02:42:14 lostlogic Exp $
 
 *slocate-2.7-r2 (17 Apr 2003)
+
+  17 Apr 2003; Brandon Low <lostlogic@gentoo.org> files/updatedb.conf:
+  Add ncpfs to default pruned filesystems
 
   17 Apr 2003; Brandon Low <lostlogic@gentoo.org> slocate-2.7-r2.ebuild:
   Apply patch from bug 19279, ebuild fixes, and install a working updatedb.conf
