@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/bfr
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bfr/ChangeLog,v 1.10 2004/12/03 17:59:09 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bfr/ChangeLog,v 1.11 2004/12/16 10:56:11 corsair Exp $
+
+  16 Dec 2004; Markus Rothe <corsair@gentoo.org> bfr-1.6.ebuild:
+  Stable on ppc64
 
   03 Dec 2004; Tom Martin <slarti@gentoo.org> bfr-1.5.ebuild,
   bfr-1.6.ebuild:
