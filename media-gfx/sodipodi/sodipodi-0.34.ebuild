@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sodipodi/sodipodi-0.34.ebuild,v 1.2 2004/05/10 23:21:51 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sodipodi/sodipodi-0.34.ebuild,v 1.3 2004/05/12 00:58:09 lv Exp $
 
-inherit gnome2
+inherit gnome2 64-bit
 
 DESCRIPTION="vector-based drawing program for GNOME"
 HOMEPAGE="http://sodipodi.sourceforge.net/"
@@ -35,3 +35,10 @@ G2CONF="${G2CONF} --with-xft --with-popt"
 G2CONF="${G2CONF} --without-mlview --without-kde"
 
 DOCS="AUTHORS ChangeLog HACKING NEWS README TODO"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	64-bit && epatch ${FILESDIR}/sodipodi-0.34.64bit.diff
+}
+
