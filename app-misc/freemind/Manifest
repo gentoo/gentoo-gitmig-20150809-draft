@@ -1,4 +1,6 @@
+MD5 d945e6d458d7e2a8df3869db4afbcec8 freemind-0.7.1.ebuild 1020
 MD5 a0cf285a2ce9991ce75fe05b5f4fed9f freemind-0.6.7.ebuild 874
-MD5 373a70b43dcf38e2931a9a90e9a03fb6 ChangeLog 342
+MD5 2120340868059660e16881b33a0e7a10 ChangeLog 459
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 757ad598a45e68dcd9eb1cfc2cedae7c files/digest-freemind-0.6.7 70
+MD5 615ccb469eb93e22c5e84358d55e6c0f files/digest-freemind-0.7.1 70
