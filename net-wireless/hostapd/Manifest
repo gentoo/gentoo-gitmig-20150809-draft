@@ -1,5 +1,6 @@
 MD5 ffda06509787f2a0d4d8687072ab000d hostapd-0.2.5.ebuild 1020
 MD5 feb89da2edf4b93eade9e0047ac0b00a hostapd-0.3.3.ebuild 2120
+MD5 e9e9fc7dfe0c05796b31d733d0a9b637 hostapd-0.3.5.ebuild 2034
 MD5 b733acbe99189b72d6990d7b189cabd4 hostapd-0.3.0.ebuild 1690
 MD5 09e2d9ad85fb49139f417b838bbd4280 hostapd-0.2.4.ebuild 1031
 MD5 74003a0d736b70612e159e99f38ace6d hostapd-0.3.2.ebuild 1895
@@ -16,4 +17,5 @@ MD5 3545835b787224800fe3423a60f29808 files/digest-hostapd-0.3.1 149
 MD5 30d8ea24bfd552e0638487411450495e files/digest-hostapd-0.3.2 149
 MD5 f713d9fe7806353e0d9a06dd39d389c4 files/digest-hostapd-0.3.3 149
 MD5 7b6b425aae76d68299b011725e1de3b7 files/digest-hostapd-0.3.4 150
+MD5 057577db7f5bc827f3866eb1160986ee files/digest-hostapd-0.3.5 150
 MD5 cf287b50f0ccd832a08fb3031281cd4f files/hostapd.init.d 858
