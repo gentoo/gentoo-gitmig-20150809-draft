@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/amavisd-new
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.8 2004/07/29 11:51:01 merlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/amavisd-new/ChangeLog,v 1.9 2004/07/29 17:32:18 merlin Exp $
+
+  29 Jul 2004; Cory Visi <merlin@gentoo.org> files/amavisd.conf:
+  Removed stray character from amavisd.conf, closing Bug 58697
 
   29 Jul 2004; Cory Visi <merlin@gentoo.org> amavisd-new-20040701.ebuild:
   Fix sed logic on init script, closing Bug 58727
