@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808.ebuild,v 1.22 2004/09/29 05:24:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808.ebuild,v 1.23 2004/10/01 10:24:09 lu_zero Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -56,8 +56,6 @@ DEPEND=">=sys-devel/gcc-3.2.3-r1
 RDEPEND="virtual/os-headers
 	sys-apps/baselayout
 	nls? ( sys-devel/gettext )"
-# until we compile the 32bit glibc here
-PDEPEND="amd64? ( multilib? ( app-emulation/emul-linux-x86-glibc ) )"
 
 PROVIDE="virtual/glibc virtual/libc"
 
@@ -363,12 +361,14 @@ do_arch_mips_patches() {
 
 do_arch_ppc_patches() {
 	cd ${S};
+	epatch ${FILESDIR}/2.3.4/glibc-2.3.4-getcontext.patch
 	# Any needed patches for ppc go here
 }
 
 
 do_arch_ppc64_patches() {
 	cd ${S};
+	epatch ${FILESDIR}/2.3.4/glibc-2.3.4-getcontext.patch
 	# Any needed patches for ppc64 go here
 }
 
@@ -622,11 +622,11 @@ EOF
 		doman ${S}/man/*.3thr
 
 		# Install nscd config file
-		insinto /etc ; doins ${FILESDIR}/nscd.conf
-		exeinto /etc/init.d ; doexe ${FILESDIR}/nscd
+		insinto /etc
+		doins ${FILESDIR}/nscd.conf
 
 		cd ${S}
-		dodoc BUGS ChangeLog* CONFORMANCE FAQ INTERFACE \
+		dodoc BUGS ChangeLog* CONFORMANCE COPYING* FAQ INTERFACE \
 			NEWS NOTES PROJECTS README*
 	else
 		rm -rf ${D}/usr/share ${D}/usr/lib/gconv

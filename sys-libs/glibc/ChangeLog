@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.260 2004/09/29 05:24:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.261 2004/10/01 10:24:09 lu_zero Exp $
+
+  01 Oct 2004; Luca Barbato <lu_zero@gentoo.org>
+  +files/2.3.4/glibc-2.3.4-getcontext.patch, glibc-2.3.4.20040808.ebuild:
+  Fixed getcontext behaviour, the 20040928 has that fixed already
 
   29 Sep 2004; Mike Frysinger <vapier@gentoo.org> files/nscd,
   glibc-2.2.5-r9.ebuild, glibc-2.3.2-r11.ebuild,
