@@ -1,17 +1,34 @@
 # ChangeLog for sys-kernel/lolo-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.47 2003/03/03 04:50:08 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.48 2003/03/13 21:55:58 pfeifer Exp $
 
   TODO:
-  * Solve the no priorities issue (pfeifer seems to have this nailed)
   * Keep grabbing hardware stuff from xfs-sources
-  * Look into the new IDE core for this set maybe
   * Update iptables a few more times (just for good measure)
+  * Updated chipset support (including new ide-core)
+  * Update SuperFreeS/WAN
   * Maybe:
     RSBAC
     Win4Lin
     Optional RMAP
+    skas
     Re-add XFS
+    ht support
+    new O(1) sched stuff from linus & mingo
+
+*lolo-sources-2.4.20.2_pre5 (13 Mar 2003)
+
+  13 Mar 2002; Jay Pfeifer <pfeifer@gentoo.org> lolo-sources-2.4.20.2_pre5.ebuild:
+  Changes from _pre4:
+  * Process priorities are now obeyed. :)
+  * pom updated to 20030310
+  * removed aavm
+  * removed ck4 O(1) sched, ll, preempt patch
+  * added rml preempt & ll
+  * update xattr+acl to xattr+acl+trusted 0.8.55
+  * update usbdnet
+  * add dac960 root fix
+  * add sim710 compile fix
 
 *lolo-sources-2.4.20.2_pre4 (28 Feb 2003)
 
