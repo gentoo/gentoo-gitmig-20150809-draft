@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/rdtool-0.6.14-r1.ebuild,v 1.6 2004/04/10 21:12:55 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rdtool/rdtool-0.6.14-r1.ebuild,v 1.7 2004/06/03 17:38:56 agriffis Exp $
 
 IUSE="emacs"
 
@@ -34,7 +34,7 @@ src_install() {
 	dodir /usr/bin
 	ruby_src_install
 
-	if [ -n "`use emacs`" ] ; then
+	if use emacs ; then
 		elisp-install . utils/rd-mode.el
 		elisp-site-file-install ${FILESDIR}/50rdtool-gentoo.el
 	fi
