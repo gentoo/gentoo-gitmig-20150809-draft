@@ -1,0 +1,12 @@
+# ChangeLog for dev-libs/cdk
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cdk/ChangeLog,v 1.1 2002/06/11 10:37:20 seemant Exp $
+
+*cdk-4.9.10.20020430 (11 Jun 2002)
+
+  11 Jun 2002; Seemant Kulleen <seemant@gentoo.org>
+  cdk-4.9.10.20020430.ebuild, ChangeLog, files/digest-cdk-4.9.10.20020430 :
+  08 Jun 2002;
+
+  Initial version submitted by  M.Krainer <markus-krainer@chello.at> in bug
+  #3529
