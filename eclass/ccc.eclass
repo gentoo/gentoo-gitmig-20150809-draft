@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ccc.eclass,v 1.1 2003/05/26 15:33:35 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ccc.eclass,v 1.2 2003/05/26 15:53:04 taviso Exp $
 # 
 # Authors:	Tavis Ormandy <taviso@gentoo.org>
 #			Aron Griffis <agriffis@gentoo.org>
@@ -216,15 +216,29 @@ append-ldflags()
 	LDFLAGS="${LDFLAGS} ${1}"
 }
 
-is-ldflags()
-{
+# flag-o-matic clone
+# 
+#is-ldflags()
+#{
+#	for x in ${LDFLAGS}
+#	do
+#		if [ "${x}" = "${1}" ]; then
+#			echo true
+#			break
+#		fi
+#	done
+#}
+
+is-ldflags() {
+	local x
 	for x in ${LDFLAGS}
 	do
-		if [ "${x}" = "${1}" ]; then
-			echo true
-			break
+		if [ "${x}" == "${1}" ]; then
+			tty --quiet < /dev/stdout || echo "true"
+			return 0
 		fi
 	done
+	return 1
 }
 
 filter-ldflags()
