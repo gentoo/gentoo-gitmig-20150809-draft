@@ -17,6 +17,7 @@ app-sci
 app-shells 
 app-text 
 app-xemacs
+dev-ada
 dev-cpp
 dev-db 
 dev-haskell 
