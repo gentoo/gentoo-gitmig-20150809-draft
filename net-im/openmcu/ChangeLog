@@ -1,0 +1,9 @@
+# ChangeLog for sys-cluster/gomd-cvs
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-im/openmcu/ChangeLog,v 1.1 2003/09/11 23:25:40 tantive Exp $
+
+*openmcu-1.1.7 (12 Sep 2003)
+
+  12 Sep 2003; Michael Imhof <tantive@gentoo.org> :
+  Initial release.
+
