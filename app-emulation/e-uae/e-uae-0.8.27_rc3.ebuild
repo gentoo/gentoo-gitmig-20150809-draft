@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.27_rc1.ebuild,v 1.2 2004/10/22 17:31:35 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/e-uae/e-uae-0.8.27_rc3.ebuild,v 1.1 2004/12/01 12:04:24 dholm Exp $
 
 inherit eutils flag-o-matic
 
-MY_PV="0.8.27-RC1"
+MY_PV="0.8.27-RC3"
 S="${WORKDIR}/${PN}-${MY_PV}"
 DESCRIPTION="The Eggplant Umiquious Amiga Emulator"
 HOMEPAGE="http://www.rcdrummond.net/uae/"
@@ -27,12 +27,6 @@ DEPEND="virtual/libc
 	sdl? ( media-libs/libsdl )
 	app-cdr/cdrtools
 	games-emulation/caps"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-keymap-fix.diff
-}
 
 src_compile() {
 	# -O3 breaks compilation, GCC will eat all your RAM + Swap and die
