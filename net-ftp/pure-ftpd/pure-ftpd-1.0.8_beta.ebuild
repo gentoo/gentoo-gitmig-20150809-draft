@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bart Verwilst <verwilst@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.8_beta.ebuild,v 1.2 2002/01/19 14:14:57 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pure-ftpd/pure-ftpd-1.0.8_beta.ebuild,v 1.3 2002/01/19 15:05:37 verwilst Exp $
 
 S="${WORKDIR}/pure-ftpd-1.0.8"
 SRC_URI="http://prdownloads.sourceforge.net/pureftpd/pure-ftpd-1.0.8-beta.tar.gz"
@@ -37,7 +37,7 @@ src_install() {
 	cp ${FILESDIR}/ftpusers ${D}/etc/ftpusers
 	mkdir -p ${D}/etc/conf.d
 	cp ${FILESDIR}/pure-ftpd.conf_d ${D}/etc/conf.d/pure-ftpd.conf
-	mkdir -p ${P}/etc/init.d
+	mkdir -p ${D}/etc/init.d
 	cp ${FILESDIR}/pure-ftpd.rc6 ${D}/etc/init.d/pure-ftpd		
 	chmod 644 ${D}/etc/init.d/pure-ftpd
 	
