@@ -1,25 +1,25 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/industri/industri-1.01.ebuild,v 1.2 2003/11/03 16:05:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/industri/industri-1.01.ebuild,v 1.3 2004/02/03 21:40:31 mr_bones_ Exp $
 
-inherit games
+inherit eutils games
 
+S="${WORKDIR}/industri_BIN"
 DESCRIPTION="Quake/Tenebrae based, single player game"
 HOMEPAGE="http://industri.sourceforge.net/"
 SRC_URI="mirror://sourceforge/industri/industri_BIN-${PV}-src.tar.gz
 	mirror://sourceforge/industri/industri-1.00.zip"
 
+KEYWORDS="x86"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+IUSE=""
 
 DEPEND="virtual/opengl
 	virtual/x11
 	sdl? ( media-libs/libsdl )
 	media-libs/libpng
 	sys-libs/zlib"
-
-S=${WORKDIR}/industri_BIN
 
 src_unpack() {
 	unpack ${A}

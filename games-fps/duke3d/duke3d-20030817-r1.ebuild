@@ -1,11 +1,11 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20030817-r1.ebuild,v 1.5 2003/11/28 21:37:34 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20030817-r1.ebuild,v 1.6 2004/02/03 21:42:05 mr_bones_ Exp $
 
 ECVS_PASS="anonymous"
 ECVS_SERVER="icculus.org:/cvs/cvsroot"
 ECVS_MODULE="duke3d"
-inherit flag-o-matic cvs games
+inherit eutils flag-o-matic cvs games
 
 DESCRIPTION="port of the original DukeNukem 3D"
 HOMEPAGE="http://icculus.org/projects/duke3d/"
@@ -26,7 +26,7 @@ DEPEND="virtual/x11
 	opengl? ( virtual/opengl )"
 #	!nophysfs? ( dev-games/physfs )"
 
-S=${WORKDIR}/${ECVS_MODULE}
+S="${WORKDIR}/${ECVS_MODULE}"
 
 use_tf() { [ `use ${1}` ] && echo true || echo false; }
 use_ft() { [ `use ${1}` ] && echo false || echo true; }

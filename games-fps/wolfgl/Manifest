@@ -1,5 +1,6 @@
 MD5 abafd8e50167299620183c706a5cfbf0 ChangeLog 706
-MD5 431a58d025aacb5d97aa5af386fa3416 wolfgl-0.93-r1.ebuild 1488
+MD5 f43c4ee28a204f04b0e23d73a654748e wolfgl-0.93-r1.ebuild 1506
+MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
 MD5 bdf14265188a44d2ad2e2ba26985767a files/0.93-gcc.patch 5571
 MD5 25782479460bbc5030e527cab7abe564 files/0.93-sample-rate.patch 345
 MD5 37e2f5d86bf9d3c54d15cdef39cf4897 files/0.93-sprite.patch 2320

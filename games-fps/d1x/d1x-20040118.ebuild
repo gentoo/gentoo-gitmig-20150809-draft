@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/d1x/d1x-20040118.ebuild,v 1.1 2004/01/19 08:28:36 jbms Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/d1x/d1x-20040118.ebuild,v 1.2 2004/02/03 21:43:35 mr_bones_ Exp $
 
-inherit games
+inherit eutils games
 
 DESCRIPTION="Descent 1 Source Project"
 HOMEPAGE="http://d1x.warpcore.org"
@@ -13,8 +13,12 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE="opengl"
 DEPEND=">=dev-lang/nasm-0.97
-media-libs/libsdl
-opengl? ( virtual/opengl media-libs/libpng sys-libs/zlib )"
+	media-libs/libsdl
+	opengl? (
+		virtual/opengl
+		media-libs/libpng
+		sys-libs/zlib
+	)"
 
 S="${WORKDIR}/d1x"
 
