@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.3.ebuild,v 1.3 2004/10/12 14:58:10 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.3.ebuild,v 1.4 2004/10/15 15:40:33 suka Exp $
 
 # Notes:
 #
@@ -26,7 +26,7 @@
 
 inherit flag-o-matic eutils gcc
 
-IUSE="gnome kde java"
+IUSE="gnome kde java curl"
 
 LOC="/opt"
 INSTDIR="${LOC}/OpenOffice.org"
@@ -59,7 +59,7 @@ DEPEND="${RDEPEND}
 	>=sys-apps/findutils-4.1.20-r1
 	app-shells/tcsh
 	dev-util/pkgconfig
-	net-misc/curl
+	curl? ( net-misc/curl )
 	sys-libs/pam
 	sys-libs/zlib
 	!dev-util/dmake
@@ -298,11 +298,18 @@ src_compile() {
 	local buildcmd=""
 	export MYCONF=""
 
+	#Check if we use java
 	if use java
 	then
 		MYCONF="${MYCONF} --with-jdk-home=${JAVA_HOME}"
 	else
 		MYCONF="${MYCONF} --disable-java"
+	fi
+
+	#See if we use system-curl
+	if use curl
+	then
+		MYCONF="${MYCONF} --with-system-curl"
 	fi
 
 	# Do NOT compile with a external STLport, as gcc-2.95.3 users will
@@ -321,8 +328,7 @@ src_compile() {
 		--enable-libsn \
 		--without-fonts \
 		--with-system-zlib \
-		--with-system-freetype \
-		--with-system-curl"
+		--with-system-freetype"
 
 	./configure ${MYCONF} || die
 
