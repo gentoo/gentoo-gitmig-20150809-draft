@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.197 2004/08/18 06:24:01 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.198 2004/08/19 17:58:13 chriswhite Exp $
+
+*mplayer-1.0_pre5-r3 (20 Aug 2004)
+
+  20 Aug 2004; Chris White <chriswhite@gentoo.org> mplayer-1.0_pre5-r2.ebuild,
+  mplayer-1.0_pre5-r3.ebuild:
+  Fixed 3dnowex logic in -r3.  Fixed some bad patch logic as well.
 
   18 Aug 2004; Chris White <chriswhite@gentoo.org> :
   I added some xvmc related USE flags. Fixed matroska and live versions. Added a

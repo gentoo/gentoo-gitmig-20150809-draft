@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r3.ebuild,v 1.1 2004/08/18 06:24:01 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre5-r3.ebuild,v 1.2 2004/08/19 17:58:13 chriswhite Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -15,7 +15,6 @@ S="${WORKDIR}/MPlayer-${MY_PV}"
 SRC_URI="mirror://mplayer/MPlayer/releases/MPlayer-${MY_PV}.tar.bz2
 	mirror://mplayer/releases/fonts/font-arial-iso-8859-1.tar.bz2
 	mirror://mplayer/releases/fonts/font-arial-iso-8859-2.tar.bz2
-	mirror://gentoo/mplayer-1.0_pre4-mga-kernel2.6.patch.tar.bz2
 	mirror://gentoo/${P}-alsa-gui.patch.tar.bz2
 	svga? ( http://mplayerhq.hu/~alex/svgalib_helper-${SVGV}-mplayer.tar.bz2 )
 	gtk? ( mirror://mplayer/Skin/Blue-${BLUV}.tar.bz2 )"
@@ -315,7 +314,7 @@ src_compile() {
 	myconf="${myconf} $(use_enable sse2)";
 	myconf="${myconf} $(use_enable mmx)"
 	myconf="${myconf} $(use_enable mmx2)"
-	myconf="${myconf} $(use_enable 3dnow) $(use_enable 3dnow 3dnowex)"
+	myconf="${myconf} $(use_enable 3dnow)"
 	myconf="${myconf} $(use_enable altivec)"
 	myconf="${myconf} $(use_enable debug)"
 	myconf="${myconf} $(use_enable nls i18n)"
