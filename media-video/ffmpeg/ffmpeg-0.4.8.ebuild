@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.8.ebuild,v 1.14 2005/02/06 18:30:56 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.8.ebuild,v 1.15 2005/02/24 16:19:57 luckyduck Exp $
 
 inherit eutils flag-o-matic
 
@@ -25,8 +25,6 @@ DEPEND="encode? ( >=media-sound/lame-3.92 )
 src_unpack() {
 	unpack ${A} || die
 	cd ${S}
-
-	epatch ${FILESDIR}/${P}.diff
 
 	# for some reason it tries to #include <X11/Xlib.h>,b ut doesn't use it
 	cd ${S}
