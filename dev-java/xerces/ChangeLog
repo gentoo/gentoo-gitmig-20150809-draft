@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xerces
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.13 2003/12/02 04:18:31 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/ChangeLog,v 1.14 2003/12/16 02:11:31 strider Exp $
+
+  15 Dec 2003; Adrian Almenar <strider@gentoo.org> xerces-2.5.0.ebuild:
+  Moving 2.6 to stable since 2.5 doesnt compile with blackdown.
 
 *xerces-2.6.0 (01 Dec 2003)
 
