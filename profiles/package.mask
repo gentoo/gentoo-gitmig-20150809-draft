@@ -689,10 +689,6 @@ app-admin/va-systemimager-client
 # not fit for release (working on it though)
 app-cdr/cddump
 
-# spider@gentoo.org 23 May 2002
-# This one doesn't build, looks abandondware
-app-arch/gnorpm
-
 # stroke@gentoo.org 11 Jul 2002
 # app-cdr/eroaster-2.1.0 development branch #4250, masked for testing
 # lostlogic@gentoo.org 17 Jul 2002
