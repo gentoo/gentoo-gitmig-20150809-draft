@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/celestia/celestia-1.2.5.ebuild,v 1.2 2003/02/13 08:54:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/celestia/celestia-1.2.5.ebuild,v 1.3 2003/04/05 21:52:42 danarmak Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic kde-functions
 
-IUSE="gtk gnome"
+IUSE="gnome"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Celestia is a free real-time space simulation that lets you experience our universe in three dimensions"
@@ -15,20 +15,15 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
 
-DEPEND="gtk? ( =x11-libs/gtk+-1.2*
-	<x11-libs/gtkglarea-1.99.0 )
-	gnome? ( =gnome-base/gnome-libs-1.4* )
-	>=media-libs/glut-3.7-r2
+# gnome and kde interfaces are exlcusive; gnome takes precedence
+DEPEND=">=media-libs/glut-3.7-r2
 	virtual/glu
 	media-libs/jpeg
-	media-libs/libpng"
-
-#src_unpack() {
-#	unpack ${A}
-#	cd ${S}
-#
-#	patch -p1 < ${FILESDIR}/celestia-gcc3.patch
-#}
+	media-libs/libpng
+	gnome? ( =x11-libs/gtk+-1.2*
+		<x11-libs/gtkglarea-1.99.0 
+		=gnome-base/gnome-libs-1.4* )
+	!gnome? ( >=kde-base/kdelibs-3.0.5 )"
 
 pkg_setup() {
 	einfo	"Please note:"
@@ -37,6 +32,13 @@ pkg_setup() {
 	einfo	"opengl-update xfree"
 	einfo	"emerge celestia"
 	einfo	"opengl-update nvidia"
+	einfo	"------------"
+	einfo	"NOTE: the gnome and kde GUIs are mutually exclusive. If you're getting"
+	einfo 	"the wrong one, run either:"
+	einfo	"'USE=gnome emerge celestia' (for the gnome interface)"
+	einfo	"or:"
+	einfo	"'USE=-gnome emerge celestia' (for the kde interface)"
+	einfo	"as appropriate."
 }
 
 src_compile() {
@@ -45,8 +47,15 @@ src_compile() {
 	filter-flags "-funroll-loops -frerun-loop-opt"
 
 	# currently celestia's "gtk support" requires gnome
-	use gtk || myconf="--without-gtk"
-	use gnome || myconf="--without-gtk"
+	if [ -n "`use gnome`" ]; then
+	    myconf="$myconf --with-gtk --withou-kde"
+	else
+	    myconf="--with-kde --without-gtk"
+	    # fix for badly written configure script
+	    set-kdedir 3
+	    set-qtdir 3
+	    export kde_widgetdir="$KDEDIR/lib/kde3/plugins/designer"
+	fi
 
 	./configure --prefix=/usr ${myconf} || die
 
