@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/xparts/xparts-3.3.1.ebuild,v 1.6 2005/02/05 11:39:28 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/xparts/xparts-3.3.1.ebuild,v 1.7 2005/03/23 16:17:14 seemant Exp $
 
 KMNAME=kdebindings
 KMEXTRACTONLY="dcopc"
@@ -15,7 +15,7 @@ KEYWORDS="~x86"
 IUSE="mozilla"
 DEPEND="=dev-libs/glib-1.2*
 	=x11-libs/gtk+-1.2*
-	mozilla? ( net-www/mozilla )"
+	mozilla? ( www-client/mozilla )"
 PATCHES="$FILESDIR/no-gtk-glib-check.diff"
 
 pkg_setup() {
