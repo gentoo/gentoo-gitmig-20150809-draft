@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ez-ipupdate-3.0.11_beta7.ebuild,v 1.6 2002/10/04 06:03:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ez-ipupdate-3.0.11_beta7.ebuild,v 1.7 2002/12/09 04:33:11 manson Exp $
 
 S="${WORKDIR}/${PN}-3.0.11b7"
 SRC_URI="http://gusnet.cx/proj/ez-ipupdate/dist/${PN}-3.0.11b7.tar.gz"
@@ -9,7 +9,7 @@ DESCRIPTION="Dynamic DNS client for lots of dynamic dns services"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc sparc64"
+KEYWORDS="x86 ppc sparc "
 
 DEPEND="virtual/glibc"
 

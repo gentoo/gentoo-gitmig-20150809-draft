@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r4.ebuild,v 1.3 2002/10/19 23:07:28 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r4.ebuild,v 1.4 2002/12/09 04:33:11 manson Exp $
 
 DESCRIPTION="Excellent high-performance DNS services"
 SRC_URI="http://cr.yp.to/djbdns/${P}.tar.gz
@@ -8,7 +8,7 @@ SRC_URI="http://cr.yp.to/djbdns/${P}.tar.gz
 	http://www.skarnet.org/software/djbdns-fwdzone/djbdns-1.04-fwdzone.patch"
 HOMEPAGE="http://cr.yp.to/djbdns.html"
 LICENSE="as-is"
-KEYWORDS="~x86 ~sparc ~sparc64"
+KEYWORDS="~x86 ~sparc "
 SLOT="0"
 IUSE="ipv6"
 

@@ -17,7 +17,7 @@ HOMEPAGE="http://www.openafs.org/"
 
 SLOT="0"
 LICENSE="IPL-1"
-KEYWORDS="x86 -ppc -sparc -sparc64"
+KEYWORDS="x86 -ppc -sparc "
 
 DEPEND=">=sys-libs/ncurses-5.2
 	>=sys-libs/pam-0.75"

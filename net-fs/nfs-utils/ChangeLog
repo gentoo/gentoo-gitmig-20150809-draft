@@ -1,7 +1,10 @@
 # ChangeLog for net-fs/nfs-utils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.6 2002/12/07 06:49:56 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/ChangeLog,v 1.7 2002/12/09 04:33:11 manson Exp $
 
+\* Autoupdate keywords (12-6-02)
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+ 
 *nfs-utils-1.0.1 (13 Oct 2002)
  
   07 Dec 2002; Jack Morgan <jmorgan@gentoo.org> nfs-utils-1.0.1.ebuild :

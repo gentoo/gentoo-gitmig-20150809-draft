@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r5.ebuild,v 1.2 2002/11/18 06:11:59 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r5.ebuild,v 1.3 2002/12/09 04:33:11 manson Exp $
 
 DESCRIPTION="Excellent high-performance DNS services"
 SRC_URI="http://cr.yp.to/djbdns/${P}.tar.gz
@@ -8,7 +8,7 @@ SRC_URI="http://cr.yp.to/djbdns/${P}.tar.gz
 	mirror://${P}-ipv6-gentoo.diff.bz2"
 HOMEPAGE="http://cr.yp.to/djbdns.html"
 LICENSE="as-is"
-KEYWORDS="~x86 ~sparc ~sparc64"
+KEYWORDS="~x86 ~sparc "
 SLOT="0"
 IUSE="ipv6 static"
 
