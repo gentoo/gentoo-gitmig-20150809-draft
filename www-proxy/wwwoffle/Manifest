@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b403b31be93a4407a2e48e9fba565a99 ChangeLog 4068
-MD5 b9f9491ced5882f6eeb01b8298c8cf12 wwwoffle-2.7h.ebuild 1853
-MD5 2e4b46ecde2ad33d6da74c054c508e3d wwwoffle-2.8b.ebuild 4536
+MD5 cd312e386bd0b6b98cd96d4a987ced44 ChangeLog 4618
 MD5 1d58b504a9415220f2ee8c3b62e27aa9 metadata.xml 500
-MD5 6d83ded8196e666519a23307700946a8 files/wwwoffled-online-2.8b 524
+MD5 07fd41412527be803f47bc33f655d04a wwwoffle-2.7h.ebuild 1851
+MD5 f22ae7381da1e4ad894c3cfd1f0d6cb9 wwwoffle-2.8b.ebuild 4534
 MD5 a6914435a2f1de064fcdc7c784a2b85f files/digest-wwwoffle-2.7h 62
-MD5 bf1c6e8219020e70da1bcf518f74d31c files/wwwoffled 506
-MD5 0bff71cfc0b74ff4146055a6105d04cd files/wwwoffled-online 510
 MD5 009de7420924ad30ca9611df2d1d6299 files/digest-wwwoffle-2.8b 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBBwOfmdTrptrqvGERAj8xAKCIWNik8QJof4gr9beXJUapkTQ7TACeLH8Z
-8B0YGxqUYZAh++dyH9sOYMo=
-=A5LK
------END PGP SIGNATURE-----
+MD5 6cf4ab4a8f2db9c8e503aac035d38eae files/wwwoffled 506
+MD5 ecf6ff07d66bdc91ff7ff6014ab5c016 files/wwwoffled-online 510
+MD5 a426ce505020deefa18627d26d04eed0 files/wwwoffled-online-2.8b 524
