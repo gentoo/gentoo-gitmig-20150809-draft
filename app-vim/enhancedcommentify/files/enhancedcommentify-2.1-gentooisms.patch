@@ -1,5 +1,5 @@
---- plugin/EnhancedCommentify.vim.orig	2005-01-23 02:10:53.374885896 -0500
-+++ plugin/EnhancedCommentify.vim	2005-01-23 02:11:01.890591312 -0500
+--- plugin/EnhancedCommentify.vim.orig	2005-01-27 00:20:00.049461056 -0500
++++ plugin/EnhancedCommentify.vim	2005-01-27 00:17:57.617073608 -0500
 @@ -628,6 +628,10 @@
      " letter.
      if match(synFiletype, '\l\+\u') == 0
@@ -7,7 +7,7 @@
 +    " work-around for gentoo-syntax stuff ; won't work with the above
 +    " case, since all the identifiers start with a capital 'G'
 +    elseif synFiletype =~ "GentooPackage*"
-+	let ft = "gentoo-package"
++	let ft = "gentoo"
      endif
  
      if ft == ""
@@ -15,7 +15,7 @@
  		\ 'wget\|wml\|xf86conf\|xmath\)$'
  	let b:ECcommentOpen = '#'
  	let b:ECcommentClose = ''
-+    elseif fileType =~ 'gentoo-package'
++    elseif fileType =~ 'gentoo'
 +	let b:ECcommentOpen = '#'
 +	let b:ECcommentClose = ''
      elseif fileType == 'webmacro'
