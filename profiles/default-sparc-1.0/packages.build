@@ -10,7 +10,7 @@ sys-apps/fileutils
 sys-apps/findutils
 sys-apps/gawk
 sys-apps/grep
-sys-apps/gzip
+app-arch/gzip
 sys-apps/portage
 sys-apps/supersed
 sys-apps/sh-utils

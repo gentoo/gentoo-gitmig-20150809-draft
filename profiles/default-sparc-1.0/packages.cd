@@ -9,7 +9,7 @@ sys-apps/net-tools
 sys-apps/modutils
 sys-apps/grep
 app-arch/bzip2
-sys-apps/gzip
+app-arch/gzip
 sys-apps/textutils
 sys-apps/sh-utils
 app-editors/levee

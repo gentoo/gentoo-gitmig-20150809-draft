@@ -72,7 +72,7 @@
 *sys-apps/gawk
 *sys-apps/grep
 *sys-apps/groff
-*sys-apps/gzip
+*app-arch/gzip
 *sys-apps/hdparm
 *sys-apps/kbd
 *sys-apps/less

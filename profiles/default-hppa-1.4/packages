@@ -60,7 +60,7 @@
 *sys-apps/grep
 *sys-apps/groff
 *virtual/bootloader
-*sys-apps/gzip
+*app-arch/gzip
 *sys-apps/hdparm
 *sys-apps/less
 *sys-apps/man

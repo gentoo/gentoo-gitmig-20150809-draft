@@ -68,7 +68,7 @@
 *sys-apps/grep
 *sys-apps/groff
 *sys-apps/grub
-*sys-apps/gzip
+*app-arch/gzip
 *sys-apps/hdparm
 *sys-apps/less
 *sys-apps/man

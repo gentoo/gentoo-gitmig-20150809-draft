@@ -39,7 +39,7 @@ sys-apps/kbd
 *sys-apps/gluelog
 *sys-apps/grep
 *sys-apps/groff
-*sys-apps/gzip
+*app-arch/gzip
 *sys-apps/hdparm
 *sys-apps/less
 *virtual/bootloader

@@ -20,7 +20,7 @@ sys-apps/gawk
 sys-apps/grep
 sys-fs/hfsutils
 sys-apps/yaboot
-sys-apps/gzip
+app-arch/gzip
 sys-apps/hdparm
 sys-apps/less
 sys-apps/modutils
