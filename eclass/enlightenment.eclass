@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.25 2004/10/21 19:54:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.26 2004/10/21 19:59:40 vapier Exp $
 #
 # Author: vapier@gentoo.org
 
@@ -12,6 +12,7 @@ EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_postinst
 ECVS_STATE="release"
 if [ "${PV/9999}" != "${PV}" ] ; then
 	ECVS_MODULE="${ECVS_MODULE:-${PN}}"
+	ECVS_SERVER="cvs.sourceforge.net:/cvsroot/enlightenment"
 	ECVS_STATE="live"
 	inherit cvs
 elif [ "${PV/.200?????/}" != "${PV}" ] ; then
