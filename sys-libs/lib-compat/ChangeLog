@@ -1,11 +1,17 @@
 # ChangeLog for sys-libs/lib-compat
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat/ChangeLog,v 1.13 2003/10/26 18:30:59 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lib-compat/ChangeLog,v 1.14 2003/10/28 22:07:41 vapier Exp $
+
+*lib-compat-1.3 (28 Oct 2003)
+
+  28 Oct 2003; Mike Frysinger <vapier@gentoo.org> :
+  Let's add libsmpeg to the horde since many binary games need an old school glibc-2.2 
+  version.  Most binary games come with their own copy, but not all.
+
+*lib-compat-1.2-r1 (11 Oct 2003)
 
   26 Oct 2003; Martin Schlemmer <azarah@gentoo.org> lib-compat-1.2-r1.ebuild:
   Mark stable for all archs.
-
-*lib-compat-1.2-r1 (11 Oct 2003)
 
   11 Oct 2003; Martin Schlemmer <azarah@gentoo.org> lib-compat-1.2-r1.ebuild:
   Cleanup the filename s to be a bit more uniform, and fix warning forwith
