@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.20 2003/06/06 08:01:07 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.21 2003/06/06 19:15:31 seemant Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -207,7 +207,11 @@ src_unpack() {
 	then
 		# Do not apply this patch for gcc-2.95.3, as it cause compile to fail,
 		# closing bug #10146.
-		EPATCH_EXCLUDE="107_all_4.2.1-gcc32-internal-compiler-error.patch"
+		mv -f ${PATCH_DIR}/0138_all_4.2.1-gcc32-internal-compiler-error.patch \
+			${PATCHDIR}/excluded
+
+		mv -f ${PATCH_DIR}/0260_ia64_4.2.99.1-gcc3.1.patch \
+			${PATCH_DIR}/excluded
 	fi
 
 	if [ -z "`use debug`" ]
