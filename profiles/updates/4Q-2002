@@ -72,3 +72,4 @@ move app-text/dictd-misc app-dicts/dictd-misc
 move app-text/dictd-vera app-dicts/dictd-vera
 move app-text/dictd-web1913 app-dicts/dictd-web1913
 move app-text/dictd-wn app-dicts/dictd-wn
+move sys-apps/atitvout media-video/atitvout
