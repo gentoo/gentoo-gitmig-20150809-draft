@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-stats/gentoo-stats-0.2.ebuild,v 1.1 2002/10/05 03:38:11 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-stats/gentoo-stats-0.2.ebuild,v 1.2 2002/10/10 00:05:50 blizzy Exp $
 
 DESCRIPTION="Gentoo Linux usage statistics client daemon"
 HOMEPAGE="http://stats.gentoo.org"
@@ -9,7 +9,7 @@ LICENSE="GPL-2"
 SLOT="0"
 
 # devs: please do not change this, it wouldn't make much sense right now
-KEYWORDS="x86 -ppc -sparc -sparc64"
+KEYWORDS="x86 -ppc -sparc -sparc64 -alpha"
 
 RDEPEND=">=sys-devel/perl-5.6.1
 	dev-perl/libwww-perl
