@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/vcdimager-0.7.12.ebuild,v 1.3 2002/07/19 11:28:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/vcdimager-0.7.12.ebuild,v 1.4 2002/08/17 12:05:25 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU VCDimager"
@@ -12,7 +12,7 @@ LICENSE="GPL"
 KEYWORDS="x86"
 
 # Ideally this would also include help2man, but it's not yet in portage.
-DEPENDS="xml2 ? ( >= dev-libs/libxml2-2.3.8 )"
+DEPEND="xml2? ( >=dev-libs/libxml2-2.3.8 )"
 
 src_compile() {
 
@@ -25,14 +25,7 @@ src_compile() {
 	&& myopts="${myopts} --with-xml-prefix=/usr --disable-xmltest" \
 	|| myopts="${myopts} --without-xml-frontend"
 
-	./configure \
-		--host=${CHOST} \
-		--prefix=/usr \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man \
-		${myopts} \
-		|| die "./configure failed"
-
+	econf $myopts || die
 	emake || die
 }
 
@@ -42,5 +35,7 @@ src_install () {
 		mandir=${D}/usr/share/man \
 		infodir=${D}/usr/share/info \
 		install || die
-}
 
+	dodoc AUTHORS BUGS COPYING ChangeLog FAQ HACKING INSTALL
+	dodoc NEWS README THANKS TODO
+}
