@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.336 2004/05/03 22:10:30 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.337 2004/05/03 22:54:05 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -179,10 +179,10 @@ media-tv/xawdecode:ffmpeg - Enable ffmpeg support
 media-tv/xawtv:zvbi - Enable VBI Decoding Library for Zapping
 media-video/ffmpeg:faad - Enables faad2 support
 media-video/mjpegtools:dv - Enables libdv support
+media-video/mplayer:live - Enables live.com streaming media support
 media-video/mplayer:matroska - Enables support for the matroska video format
 media-video/mplayer:v4l - Enables video4linux support
 media-video/mplayer:v4l2 - Enables video4linux2 support
-media-video/mplayer:live - Enables live.com streaming media support
 media-video/vlc:matroska - Enables support for the matroska video format
 media-video/vlc:v4l - Enables video4linux support
 media-video/vlc:xvid - Enables xvid codec support
@@ -200,9 +200,9 @@ net-dialup/gnokii:irda - Enable Infrared Support
 net-dialup/ppp:activefilter - enable activefilter support
 net-dialup/ppp:atm - enable support for pppoatm
 net-dns/djbdns:fwdzone - enables forward zone patch
-net-dns/djbdns:roundrobin - enables round robin patch
 net-dns/djbdns:ipv6arpa - enables ipv6 arpa patch
 net-dns/djbdns:multipleip - enables multi-IP patch
+net-dns/djbdns:roundrobin - enables round robin patch
 net-dns/pdnsd:isdn - enable isdn features
 net-fs/ftpfs:autofs - Adds support for autofs mounting
 net-fs/samba:oav - Adds support for anti-virus from the openantivirus.org project
@@ -310,13 +310,13 @@ sys-apps/tcng:tcsim - enable traffic simulator
 sys-apps/tinylogin:uclibc - Compile with uclibc
 sys-apps/tpctl:tpctlir - enable support for thinkpad models 760 and 765
 sys-cluster/heartbeat:ldirectord - Adds support for ldiretord, use enabled because it has a lot of deps
-sys-devel/gcc:hardened - improve PIE (position independent executables) and SSP (stack smashing protector) building of executables and libraries
-sys-devel/gcc:multilib - On 64bit systems, if you want to be able to compile 32bit and 64bit binaries
+sys-devel/gcc-config:debug - activate verbose commandline output of the wrapper in gcc-config
+sys-devel/gcc-config:hardened - enable environment aware wrapper for comfortable PIE and SSP building
 sys-devel/gcc:f77 - Build support for the f77 language
 sys-devel/gcc:gcj - Do not build gcj (java compiler included with gcc package)
+sys-devel/gcc:hardened - improve PIE (position independent executables) and SSP (stack smashing protector) building of executables and libraries
+sys-devel/gcc:multilib - On 64bit systems, if you want to be able to compile 32bit and 64bit binaries
 sys-devel/gcc:objc - Build support for the Objective C code language
-sys-devel/gcc-config:hardened - enable environment aware wrapper for comfortable PIE and SSP building
-sys-devel/gcc-config:debug - activate verbose commandline output of the wrapper in gcc-config
 sys-devel/gdb:objc - Build support for the Objective C code language
 sys-devel/hardened-gcc:debug - activate verbose commandline output of the default PIE SSP hardened-gcc wrapper
 sys-devel/libperl:threads - Enable Perl threads, has some compatibility problems
@@ -331,6 +331,7 @@ sys-devel/uclibc-buildroot:propolice - Stack-Smashing Protecton
 sys-devel/uclibc-buildroot:savedconfig - Adds support to user defined configs
 sys-devel/uclibc-buildroot:softfloat - software floating point calculations for FPU lacking processors
 sys-fs/lufs:lufsusermount - allow users to mount LUFS filesystems
+sys-kernel/development-sources:ultra1 - If you have a SUN Ultra 1 with a HME interface
 sys-kernel/development-sources:vanilla - keep the kernel sources in a vanilla state and do not apply anything from genpatches.
 sys-kernel/gentoo-sources:aavm - adds Andrea Arcangeli's vm support (removes rmap by Rik van Riel which is the default)
 sys-kernel/gentoo-sources:acpi4linux - If you want ACPI support
@@ -367,8 +368,8 @@ x11-misc/rss-glx:openal - Adds OpenAL (sound) support to certain screensavers
 x11-terms/eterm:escreen - enable built in screen support
 x11-terms/eterm:etwin - enable twin support
 x11-terms/mlterm:uim - Enable uim support
-x11-terms/rxvt:xgetdefault - Enable resources via X instead of rxvt small version
 x11-terms/rxvt-unicode:xgetdefault - Enable resources via X instead of rxvt small version
+x11-terms/rxvt:xgetdefault - Enable resources via X instead of rxvt small version
 x11-wm/fvwm:nosm - Disable support for Session Management (xsm protocol)
 x11-wm/fvwm:noxpm - Disable XPM image support (when no images, or just png images are to be used)
 x11-wm/fvwm:rplay - Enable rplay support
