@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-1.16.7-r4.ebuild,v 1.10 2004/08/22 11:48:19 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/debianutils/debianutils-1.16.7-r4.ebuild,v 1.11 2004/09/12 19:22:10 pvdabeel Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE="static build"
 
 DEPEND="virtual/libc"
 RDEPEND="app-arch/bzip2
-	sys-apps/coreutils"
+	!macos? ( sys-apps/coreutils )"
 
 src_unpack() {
 	unpack ${A}
