@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.200 2004/04/04 17:48:30 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.201 2004/04/05 20:31:00 iggy Exp $
+
+  05 Apr 2004; Brian Jackson <iggy@gentoo.org> gcc-3.3.3.ebuild:
+  add s390 to keywords
 
   04 Apr 2004; Travis Tilley <lv@gentoo.org> gcc-3.3.3.ebuild:
   added avenjs amd64 fixes to gcc-3.3.3.ebuild
