@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0-r1.ebuild,v 1.9 2005/03/24 04:46:06 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0-r1.ebuild,v 1.10 2005/03/25 10:06:07 kloeri Exp $
 
 inherit eutils linux-mod flag-o-matic
 
@@ -43,7 +43,7 @@ HOMEPAGE="http://www.lirc.org"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="debug doc streamzap"
-KEYWORDS="x86 ppc ~alpha ~ia64 amd64 ppc64"
+KEYWORDS="x86 ppc alpha ~ia64 amd64 ppc64"
 
 RDEPEND="virtual/libc
 	X11? ( virtual/x11 )"
