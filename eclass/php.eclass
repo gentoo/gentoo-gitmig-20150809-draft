@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.62 2003/06/30 10:06:07 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.63 2003/07/12 20:21:59 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -141,6 +141,14 @@ PHP_INSTALLTARGETS="${PHP_INSTALLTARGETS} install-modules install-pear install-b
 #install-cli install-sapi install-modules install-pear install-build install-headers install-programs
 
 PHPMAJORVER=${PV//\.*}
+
+# These are quick fixups for older ebuilds that didn't have PHPSAPI defined.
+[ -z "${PHPSAPI}" ] && [ "${PN}" -eq "php" ] && PHPSAPI="cli"
+if [ -z "${PHPSAPI}" ] && [ "${PN}" -eq "mod_php" ]; then
+	use apache2 && PHPSAPI="apache2" || PHPSAPI="apache1"
+fi
+
+# Now enforce existance of PHPSAPI
 if [ -z "${PHPSAPI}" ]; then
 	msg="The PHP eclass needs a PHPSAPI setting!"
 	eerror "${msg}"
