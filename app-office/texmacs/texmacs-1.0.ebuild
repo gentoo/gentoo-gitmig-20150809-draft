@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.ebuild,v 1.3 2002/08/01 13:09:07 seemant Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/texmacs/texmacs-1.0.ebuild,v 1.4 2002/10/04 04:59:53 vapier Exp $
 
 S=${WORKDIR}/TeXmacs-${PV}-src
 DESCRIPTION="GNU TeXmacs is a free GUI scientific editor, inspired by TeX and GNU Emacs."

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.90.ebuild,v 1.3 2002/08/06 17:40:50 gerk Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/dia/dia-0.90.ebuild,v 1.4 2002/10/04 04:58:54 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Diagram Creation Program"
