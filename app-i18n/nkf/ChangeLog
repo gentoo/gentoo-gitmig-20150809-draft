@@ -1,8 +1,11 @@
 # ChangeLog for app-i18n/nkf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/ChangeLog,v 1.12 2004/01/04 16:56:11 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/nkf/ChangeLog,v 1.13 2004/01/05 15:52:54 matsuu Exp $
 
 *nkf-2.0.4 (04 Jan 2004)
+
+  06 Jan 2004; MATSUU Takuto <matsuu@gentoo.org> nkf-2.0.4.ebuild:
+  Added ~amd64 to KEYWORDS.
 
   04 Jan 2004; Masatomo Nakano <nakano@gentoo.org> nkf-1.92.ebuild,
   nkf-2.0.2.ebuild, nkf-2.0.4.ebuild:
