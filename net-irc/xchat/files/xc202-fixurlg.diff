@@ -1,0 +1,23 @@
+--- xchat-2.0.2/src/fe-gtk/urlgrab.c	2003-04-19 01:44:01.000000000 +1000
++++ xchat-2.0.2p1/src/fe-gtk/urlgrab.c	2003-04-22 14:43:09.000000000 +1000
+@@ -169,6 +169,13 @@
+ 	}
+ }
+ 
++static int
++populate_cb (char *urltext, gpointer userdata)
++{
++	fe_url_add (urltext);
++	return TRUE;
++}
++
+ void
+ url_opengui ()
+ {
+@@ -202,5 +209,5 @@
+ 
+ 	gtk_widget_show (urlgrabberwindow);
+ 
+-	tree_foreach (url_tree, (tree_traverse_func *)fe_url_add, NULL);
++	tree_foreach (url_tree, (tree_traverse_func *)populate_cb, NULL);
+ }

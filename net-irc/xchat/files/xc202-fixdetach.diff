@@ -1,0 +1,11 @@
+--- xchat-2.0.2/src/fe-gtk/tabs.c	2003-04-13 18:26:02.000000000 +1000
++++ xchat-2.0.2p1/src/fe-gtk/tabs.c	2003-04-25 02:00:24.000000000 +1000
+@@ -404,8 +406,6 @@
+ {
+ 	int i, max;
+ 
+-	while (g_main_pending ())
+-		g_main_iteration (TRUE);
+ 
+ 	tab_group_resize (group);
+ 
