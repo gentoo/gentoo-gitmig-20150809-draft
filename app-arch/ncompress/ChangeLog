@@ -1,6 +1,13 @@
 # ChangeLog for app-arch/ncompress
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ncompress/ChangeLog,v 1.13 2004/06/24 21:33:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ncompress/ChangeLog,v 1.14 2004/10/07 03:36:17 solar Exp $
+
+*ncompress-4.2.4-r1 (06 Oct 2004)
+
+  06 Oct 2004; <solar@gentoo.org> +metadata.xml, +ncompress-4.2.4-r1.ebuild:
+  This update adds bounds checking to command line options used by ncompress bug
+  #66251. Also minor clode cleanups and a bugfixes by using debian patch from
+  http://packages.qa.debian.org/n/ncompress.html
 
   15 Jun 2004; <solar@gentoo.org> ncompress-4.2.4.ebuild:
   skip manfile when USE=build is set
