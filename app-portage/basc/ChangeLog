@@ -1,12 +1,17 @@
 # ChangeLog for app-portage/basc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/basc/ChangeLog,v 1.18 2005/01/12 17:43:23 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/basc/ChangeLog,v 1.19 2005/01/18 15:46:43 pvdabeel Exp $
+
+
+*basc-1.5.7 (18 Jan 2005)
+  
+  18 Jan 2005; Pieter Van den Abeele <pvdabeel@gentoo.org>  basc-1.5.7.ebuild :
+  New version with improvements suggested in 77736, 77737 and 78103
 
 *basc-1.5.6 (12 Jan 2005) 
 
   12 Jan 2005; Pieter Van den Abeele <pvdabeel@gentoo.org>  basc-1.5.6.ebuild :
   Made X an optional dependency. Fixed bug 77198 , 77245
-
 
 *basc-1.5.4 (09 Jan 2005)
 
