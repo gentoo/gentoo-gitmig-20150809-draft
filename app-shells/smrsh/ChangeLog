@@ -1,0 +1,9 @@
+# ChangeLog for app-shells/smrsh
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-shells/smrsh/ChangeLog,v 1.1 2003/07/21 22:02:47 max Exp $
+
+*smrsh-8.12.9 (21 Jul 2003)
+
+  21 Jul 2003; Max Kalika <max@gentoo.org> smrsh-8.12.9.ebuild:
+  Initial import.
+
