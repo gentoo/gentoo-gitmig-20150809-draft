@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r9.ebuild,v 1.3 2002/04/07 20:25:46 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.0-r9.ebuild,v 1.4 2002/04/16 00:28:35 seemant Exp $
 
 MY_V="`echo ${PV} |sed -e 's:\.::g'`"
 S=${WORKDIR}/xc
@@ -27,7 +27,7 @@ DEPEND=">=sys-libs/ncurses-5.1
 	>=sys-libs/zlib-1.1.3-r2
 	sys-devel/flex
 	sys-devel/perl
-	glide? ( >=media-libs/glide-v3-3.10 )"
+	3dfx? ( >=media-libs/glide-v3-3.10 )"
 	
 RDEPEND=">=sys-libs/ncurses-5.1"
 
@@ -64,7 +64,7 @@ src_unpack () {
 	fi
 
 	# build with glide3 support? (build the tdfx_dri.o module)
-	if [ -n "`use glide`" ]
+	if [ -n "`use 3dfx`" ]
 	then
 		echo "#define HasGlide3 YES" >> config/cf/host.def
 	fi
