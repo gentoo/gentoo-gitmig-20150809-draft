@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Bit-Vector
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bit-Vector/ChangeLog,v 1.14 2005/01/22 00:59:43 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Bit-Vector/ChangeLog,v 1.15 2005/01/22 13:16:17 gustavoz Exp $
+
+  22 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org> Bit-Vector-6.4.ebuild:
+  Stable on sparc
 
   22 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> Bit-Vector-6.4.ebuild:
   Add ~alpha keyword.
