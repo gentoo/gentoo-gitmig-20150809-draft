@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/sylpheed-claws
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.15 2004/08/25 17:50:54 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.16 2004/09/08 13:56:23 usata Exp $
+
+  08 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> sylpheed-claws-0.9.10.ebuild,
+  sylpheed-claws-0.9.11.ebuild, sylpheed-claws-0.9.12a-r1.ebuild,
+  sylpheed-claws-0.9.12a.ebuild, sylpheed-claws-0.9.7.ebuild:
+  Moved net-www/dillo to www-client/dillo.
 
 *sylpheed-claws-0.9.12a-r1 (25 Aug 2004)
 
