@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.4 2003/04/30 23:37:52 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.5 2003/05/07 11:18:18 liquidx Exp $
+
+*libsoup-1.99.20 (07 May 2003)
+
+  07 May 2003; Alastair Tse <liquidx@gentoo.org> libsoup-1.99.20.ebuild:
+  version bump
 
   01 May 2003; Alastair Tse <liquidx@gentoo.org> libsoup-1.99.17.ebuild:
   remove ssl option. ssl is now compulsory
