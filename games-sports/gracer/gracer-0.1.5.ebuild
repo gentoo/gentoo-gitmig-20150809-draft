@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/gracer/gracer-0.1.5.ebuild,v 1.3 2004/03/20 12:59:58 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/gracer/gracer-0.1.5.ebuild,v 1.4 2004/03/24 04:54:25 mr_bones_ Exp $
 
 inherit games eutils
 
@@ -13,21 +13,22 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="gif jpeg png joystick"
 
-DEPEND="virtual/x11
+RDEPEND="virtual/x11
 	virtual/glu
-	virtual/opengl
 	virtual/glut
+	virtual/opengl
 	dev-lang/tcl
-	>=sys-apps/sed-4
 	gif? ( media-libs/giflib )
 	jpeg? ( media-libs/jpeg )
 	png? ( media-libs/libpng )
 	media-libs/plib"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PV}-gldefs.patch
+	epatch "${FILESDIR}/${PV}-gldefs.patch"
 }
 
 src_compile() {
@@ -36,8 +37,10 @@ src_compile() {
 		`use_enable gif` \
 		`use_enable jpeg` \
 		`use_enable png` \
-		|| die
-	sed -i 's:-lplibsl:-lplibsl -lplibul:' `find -name Makefile`
+			|| die
+	sed -i \
+		-e 's:-lplibsl:-lplibsl -lplibul:' `find -name Makefile` \
+			|| die "sed Makefiles failed"
 	emake || die "emake failed"
 }
 

@@ -1,6 +1,9 @@
 # ChangeLog for games-sports/torcs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/torcs/ChangeLog,v 1.4 2004/02/27 10:59:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/torcs/ChangeLog,v 1.5 2004/03/24 04:57:29 mr_bones_ Exp $
+
+  23 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> torcs-1.2.1.ebuild:
+  don't rdepend on sed
 
   27 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org> torcs-1.2.2.ebuild:
   MAKEOPTS="-j1" to fix bug #43071
