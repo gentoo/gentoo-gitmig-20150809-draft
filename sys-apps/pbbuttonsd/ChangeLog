@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/pbbuttonsd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pbbuttonsd/ChangeLog,v 1.11 2003/03/15 03:25:21 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pbbuttonsd/ChangeLog,v 1.12 2003/05/08 19:49:30 heim Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+*pbbuttonsd-0.5.3a (08 May 2003)
+
+  08 May 2003; Todd Heim <heim@gentoo.org> pbbuttonsd-0.5.3a.ebuild:
+  version bumped, removed keywords for !ppc archs
  
 *pbbuttonsd-0.5.2-r1 (17 Dec 2002)
 
@@ -33,6 +36,8 @@
 
   24 Feb 2003; Nicholas Wourms <dragon@gentoo.org>  pbbuttonsd-0.4.10a.ebuild :
   This is definitely not for mips.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
   28 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> pbbuttonsd-0.4.10a.ebuild :
 
