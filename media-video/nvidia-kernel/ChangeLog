@@ -1,6 +1,13 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.83 2004/08/02 10:53:55 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.84 2004/08/06 01:01:00 cyfred Exp $
+
+*nvidia-kernel-1.0.6111 (06 Aug 2004)
+
+  06 Aug 2004; Andrew Bevitt <cyfred@gentoo.org>;
+  +nvidia-kernel-1.0.6111.ebuild:
+  NEW Version 6111; This version has koutput support working properly so not
+  bringing the patch over.
 
   02 Aug 2004; Andrew Bevitt <cyfred@gentoo.org>;
   nvidia-kernel-1.0.6106-r1.ebuild, -nvidia-kernel-1.0.6106.ebuild:
