@@ -1,25 +1,25 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.0.3.ebuild,v 1.1 2004/04/19 19:44:27 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.0.3.ebuild,v 1.2 2004/05/12 15:25:13 caleb Exp $
 
 inherit python kde
-need-kde 3.1
 
 IUSE="doc java python ruby"
 DESCRIPTION="KDevelop is an easy to use C/C++ IDE for Unix. It supports KDE/Qt, GNOME, plain C and C++ projects."
 SRC_URI="mirror://kde/stable/3.2.2/src/${P}.tar.bz2"
 HOMEPAGE="http://www.kdevelop.org"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~ppc ~amd64"
+KEYWORDS="x86 ~sparc ~ppc ~amd64"
 SLOT=3
 
-DEPEND=">=kde-base/kdebase-3.1.0
-	dev-lang/perl
+DEPEND="dev-lang/perl
 	sys-devel/flex
 	sys-devel/gdb
 	java? ( virtual/jdk dev-java/ant )
 	python? ( dev-lang/python )
 	doc? ( app-doc/doxygen )"
+RDEPEND="$DEPEND"
+need-kde 3.1
 
 myconf="$myconf --with-kdelibsdoxy-dir=${KDEDIR}/share/doc/HTML/en/kdelibs-apidocs"
 
@@ -56,3 +56,4 @@ einfo "Support for GNU-style make, tmake, qmake and probably jam and other syste
 einfo "There is also php, fortran, etc. support - use your favourite package, I suppose."
 
 }
+
