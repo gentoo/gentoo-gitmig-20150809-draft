@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/bass/bass-0.ebuild,v 1.6 2004/06/24 23:14:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/bass/bass-0.ebuild,v 1.7 2004/11/03 00:30:08 vapier Exp $
 
 inherit games
 
@@ -10,10 +10,12 @@ SRC_URI="mirror://sourceforge/scummvm/BASS-CD.zip"
 
 LICENSE="bass"
 SLOT="0"
-KEYWORDS="x86 ppc amd64 ~sparc"
+KEYWORDS="amd64 ppc ~sparc x86"
 IUSE=""
 
-DEPEND=">=games-engines/scummvm-0.5.0"
+RDEPEND=">=games-engines/scummvm-0.5.0"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 S="${WORKDIR}/sky-cd"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.0.0.ebuild,v 1.2 2004/08/27 20:10:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/eternal-lands-1.0.0.ebuild,v 1.3 2004/11/03 00:30:58 vapier Exp $
 
 inherit games
 
@@ -15,13 +15,15 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="virtual/x11
+RDEPEND="virtual/x11
 	virtual/opengl
 	>=media-libs/libsdl-1.2.5
 	>=media-libs/sdl-net-1.2.5
 	>media-libs/openal-20020127
 	media-libs/libvorbis
 	>=dev-libs/libxml2-2.6.7"
+DEPEND="${RDEPEND}
+	app-arch/unzip"
 
 S="${WORKDIR}/elc"
 
