@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Distributed under the terms of the GNU General Public License v2
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.44 2003/06/14 03:39:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.45 2003/06/16 20:48:57 vapier Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -50,46 +50,48 @@ IUSE="${IUSE} X cjk crypt curl firebird flash freetds gd gdbm imap informix java
 RDEPEND="
 	>=sys-libs/cracklib-2.7-r7
 	sys-apps/bzip2
-    X? ( virtual/x11 )
-    crypt? ( >=dev-libs/libmcrypt-2.4 >=app-crypt/mhash-0.8 )
-    curl? ( >=net-ftp/curl-7.10.2 )
-    firebird? ( >=dev-db/firebird-1.0 )
-    flash? ( media-libs/libswf >=media-libs/ming-0.2a )
-    freetds? ( >=dev-db/freetds-0.53 )
-    gd? ( media-libs/libgd >=media-libs/jpeg-6b >=media-libs/libpng-1.2.5 )
-    gdbm? ( >=sys-libs/gdbm-1.8.0 )
+	X? ( virtual/x11 )
+	crypt? ( >=dev-libs/libmcrypt-2.4 >=app-crypt/mhash-0.8 )
+	curl? ( >=net-ftp/curl-7.10.2 )
+	firebird? ( >=dev-db/firebird-1.0 )
+	flash? ( media-libs/libswf >=media-libs/ming-0.2a )
+	freetds? ( >=dev-db/freetds-0.53 )
+	gd? ( media-libs/libgd >=media-libs/jpeg-6b >=media-libs/libpng-1.2.5 )
+	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	java? ( =virtual/jdk-1.4* dev-java/java-config )
-    jpeg? ( >=media-libs/jpeg-6b )
-    ldap? ( >=net-nds/openldap-1.2.11 )
-    mysql? ( >=dev-db/mysql-3.23.26 )
-    nls? ( sys-devel/gettext )
-    odbc? ( >=dev-db/unixODBC-1.8.13 )
-    pam? ( >=sys-libs/pam-0.75 )
-    pdflib? ( >=media-libs/pdflib-4.0.3 >=media-libs/jpeg-6b >=media-libs/libpng-1.2.5 )
-    png? ( >=media-libs/libpng-1.2.5 )
-    postgres? ( >=dev-db/postgresql-7.1 )
-    qt? ( >=x11-libs/qt-2.3.0 )
-    snmp? ( || ( >=net-analyzer/net-snmp-5.0.6-r1 net-analyzer/ucd-snmp ) )
-    spell? ( app-text/aspell )
-    ssl? ( >=dev-libs/openssl-0.9.5 )
-    tiff? ( >=media-libs/tiff-3.5.5 )
+	jpeg? ( >=media-libs/jpeg-6b )
+	ldap? ( >=net-nds/openldap-1.2.11 )
+	mysql? ( >=dev-db/mysql-3.23.26 )
+	nls? ( sys-devel/gettext )
+	odbc? ( >=dev-db/unixODBC-1.8.13 )
+	pam? ( >=sys-libs/pam-0.75 )
+	pdflib? ( >=media-libs/pdflib-4.0.3 >=media-libs/jpeg-6b >=media-libs/libpng-1.2.5 )
+	png? ( >=media-libs/libpng-1.2.5 )
+	postgres? ( >=dev-db/postgresql-7.1 )
+	qt? ( >=x11-libs/qt-2.3.0 )
+	snmp? ( || ( >=net-analyzer/net-snmp-5.0.6-r1 net-analyzer/ucd-snmp ) )
+	spell? ( app-text/aspell )
+	ssl? ( >=dev-libs/openssl-0.9.5 )
+	tiff? ( >=media-libs/tiff-3.5.5 )
 	xml2? ( dev-libs/libxml2 >=dev-libs/libxslt-1.0.30 )
-    >=net-libs/libwww-5.3.2 >=app-text/sablotron-0.97 dev-libs/expat
+	>=net-libs/libwww-5.3.2
+	>=app-text/sablotron-0.97
+	dev-libs/expat
 	sys-libs/zlib 
 	virtual/mta"
 	
 	# Testing per bug #13382
 if runningunstable; then
-    RDEPEND="${RDEPEND}
+	RDEPEND="${RDEPEND}
 		truetype? ( >=media-libs/freetype-2 )"
 else
-    RDEPEND="${RDEPEND}
+	RDEPEND="${RDEPEND}
 		truetype? ( ~media-libs/freetype-1.3.1 >=media-libs/t1lib-1.3.1 )"
 fi
 
 # These are extra bits we need only at compile time
 DEPEND="${RDEPEND} ${DEPEND}
-    imap? ( >=net-mail/uw-imap-2001a-r1 )
+	imap? ( >=net-mail/uw-imap-2001a-r1 )
 	mcal? ( dev-libs/libmcal )"
 #9libs causes a configure error
 DEPEND="${DEPEND} !dev-libs/9libs"
@@ -157,15 +159,15 @@ php_src_unpack() {
 
 	use java && ewarn "Java support may be somewhat flakey, but it shouldn't break anything."
 	
-    unpack ${MY_P}.tar.bz2
-    cd ${S}
+	unpack ${MY_P}.tar.bz2
+	cd ${S}
 
-    # Configure Patch for wired uname -a
-    mv configure configure.old
-    cat configure.old | sed "s/PHP_UNAME=\`uname -a\`/PHP_UNAME=\`uname -s -n -r -v\`/g" > configure
-    chmod 755 configure
+	# Configure Patch for wired uname -a
+	mv configure configure.old
+	cat configure.old | sed "s/PHP_UNAME=\`uname -a\`/PHP_UNAME=\`uname -s -n -r -v\`/g" > configure
+	chmod 755 configure
 
-    # fix PEAR installer
+	# fix PEAR installer
 	cp pear/PEAR/Registry.php pear/PEAR/Registry.old
 	sed "s:\$pear_install_dir\.:\'$D/usr/lib/php/\' . :g" pear/PEAR/Registry.old > pear/PEAR/Registry.php
 }
@@ -360,7 +362,6 @@ php_src_install() {
 	doins build/* acinclude.m4 configure.in Makefile.global scan_makefile_in.awk
 	# Deprecated : pear/pear.m4
 
-    
 	#revert Pear patch
 	rm ${D}/usr/lib/php/PEAR/Registry.php
 	#should this possibly result to the SAME original value it was ? (\$pear_install_dir)
