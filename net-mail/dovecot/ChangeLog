@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/dovecot
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.13 2004/08/17 16:05:24 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/dovecot/ChangeLog,v 1.14 2004/08/31 19:07:19 ticho Exp $
+
+*dovecot-0.99.10.9-r1 (31 Aug 2004)
+
+  31 Aug 2004; <ticho@gentoo.org> +dovecot-0.99.10.9-r1.ebuild:
+  Applied patch to add mysql USE flag, committed by pille <pille@struction.de>.
+  Closes #61297.
 
 *dovecot-0.99.10.9 (17 Aug 2004)
 
