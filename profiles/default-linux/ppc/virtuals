@@ -1,0 +1,14 @@
+virtual/bootloader	sys-boot/yaboot
+virtual/cdrtools	app-cdr/cdrtools
+virtual/commonlisp	dev-lisp/sbcl
+virtual/cron	    	sys-apps/dcron
+virtual/glu	     	x11-base/xorg-x11
+virtual/jdk	     	dev-java/ibm-jdk-bin
+virtual/jre	     	dev-java/ibm-jre-bin
+virtual/linux-sources   sys-kernel/ppc-sources
+virtual/modutils 	sys-apps/modutils
+virtual/opengl	  	x11-base/xorg-x11
+virtual/os-headers	sys-kernel/linux-headers
+virtual/x11		x11-base/xorg-x11
+virtual/xft	     x11-base/xorg-x11
+virtual/dev-manager	sys-fs/devfsd
