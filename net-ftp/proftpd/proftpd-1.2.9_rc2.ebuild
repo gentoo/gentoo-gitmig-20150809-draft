@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.9_rc2.ebuild,v 1.4 2003/09/30 08:25:51 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.9_rc2.ebuild,v 1.5 2003/10/05 10:05:42 pappy Exp $
 
 IUSE="ldap pam postgres mysql ssl tcpd ipv6"
 
@@ -58,6 +58,8 @@ src_compile() {
 	# modules="${modules}:mod_radius"
 	# modules="${modules}:mod_rewrite"
 
+	has_version sys-devel/hardened-gcc && append-flags "-yet_exec"
+
 	econf \
 		--sbindir=/usr/sbin \
 		--localstatedir=/var/run \
@@ -67,6 +69,8 @@ src_compile() {
 		--enable-autoshadow \
 		--with-modules=${modules} \
 		${myconf} $( use_enable ipv6 ) || die "bad ./configure"
+
+	has_version "sys-devel/hardened-gcc" && find ${WORKDIR} -name Makefile -type f -exec sed -i "s,-yet_exec,," {} \;
 
 	make || die "compile problem"
 }
