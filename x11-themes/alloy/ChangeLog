@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/alloy
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/ChangeLog,v 1.8 2004/06/28 20:49:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/ChangeLog,v 1.9 2004/07/03 20:04:55 carlo Exp $
+
+  03 Jul 2004; Carsten Lohrke <carlo@gentoo.org> +metadata.xml,
+  alloy-0.3.ebuild, alloy-0.4.1a.ebuild, alloy-0.5.ebuild:
+  QA: missing metadata.xml, need-kde after R/DEPEND
 
   28 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> alloy-0.3.ebuild:
   kde-base is deprecated
