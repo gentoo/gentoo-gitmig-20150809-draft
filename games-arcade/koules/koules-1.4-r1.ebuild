@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/koules/koules-1.4-r1.ebuild,v 1.1 2003/09/10 19:29:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/koules/koules-1.4-r1.ebuild,v 1.2 2003/09/18 15:13:22 vapier Exp $
 
 inherit games eutils
 
 DESCRIPTION="fast action arcade-style game w/sound and network support"
-HOMEPAGE="http://www.paru.cas.cz/~hubicka/koules/English/"
+HOMEPAGE="http://www.ucw.cz/~hubicka/koules/English/"
 SRC_URI="http://www.ucw.cz/~hubicka/koules/packages/koules${PV}-src.tar.gz"
 
 LICENSE="GPL-2"
