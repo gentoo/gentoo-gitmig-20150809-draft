@@ -1,13 +1,13 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/sylpheed-0.5.0_pre2.ebuild,v 1.2 2001/07/29 10:56:02 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/sylpheed-0.5.0_pre2.ebuild,v 1.3 2001/08/02 20:16:48 danarmak Exp $
 
 #P=
 A=${PN}-0.5.0pre2.tar.bz2
 S=${WORKDIR}/${PN}-0.5.0pre2
 DESCRIPTION="A lightweight email client and newsreader"
-SRC_URI="http://sylpheed.good-day.net/sylpheed/${A}"
+SRC_URI="http://sylpheed.good-day.net/sylpheed/v0.4/${A}"
 HOMEPAGE="http://sylpheed.good-day.net"
 
 DEPEND=">=x11-libs/gtk+-1.2
