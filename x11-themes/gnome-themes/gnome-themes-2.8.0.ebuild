@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/gnome-themes-2.8.0.ebuild,v 1.5 2004/11/11 18:20:56 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes/gnome-themes-2.8.0.ebuild,v 1.6 2004/11/12 03:03:33 gustavoz Exp $
 
 # FIXME : the engines in here should probably be disabled and done in seperate ebuilds
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnome.org/softwaremap/projects/gnome-themes"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 ~mips ~ppc64 ~arm"
+KEYWORDS="x86 ppc sparc ~alpha ~hppa ~amd64 ~ia64 ~mips ~ppc64 ~arm"
 IUSE="accessibility"
 
 RDEPEND=">=x11-libs/gtk+-2
