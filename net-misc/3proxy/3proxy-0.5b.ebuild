@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/3proxy/3proxy-0.5b.ebuild,v 1.1 2004/12/11 17:19:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/3proxy/3proxy-0.5b.ebuild,v 1.2 2005/03/14 23:10:56 vapier Exp $
 
 inherit toolchain-funcs
 
@@ -11,10 +11,10 @@ SRC_URI="mirror://gentoo/${P}.tgz"
 
 LICENSE="3proxy"
 SLOT="0"
-KEYWORDS="~ppc ~x86"
+KEYWORDS="ppc x86"
 IUSE=""
 
-DEPEND="virtual/libc"
+DEPEND=""
 
 S=${WORKDIR}
 
@@ -25,7 +25,7 @@ src_unpack() {
 		-e "/^CFLAGS/s:-O2:${CFLAGS}:" \
 		Makefile.unix || die "sed Makefile"
 	sed -i 's:/usr/local::' src/stringtable.c || die "sed stringtable"
-	find -type f | xargs chmod a-x
+	find . -type f -print0 | xargs -0 chmod a-x
 }
 
 src_compile() {
