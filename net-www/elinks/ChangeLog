@@ -1,6 +1,14 @@
 # ChangeLog for net-www/elinks
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/elinks/ChangeLog,v 1.36 2004/10/31 19:56:46 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/elinks/ChangeLog,v 1.37 2004/10/31 20:20:38 spock Exp $
+
+*elinks-0.10_pre2 (31 Oct 2004)
+
+  31 Oct 2004; Michal Januszewski <spock@gentoo.org>
+  +elinks-0.10_pre2.ebuild, elinks-0.9.2.ebuild:
+  Added an ebuild for the current unstable version. Marked the current stable
+  version (0.9.2) stable on x86. There have been only minor changes since
+  _rc4, so it doesn't need a long testing period.
 
 *elinks-0.9.2 (31 Oct 2004)
 

@@ -1,18 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bdcb46cc905bd3a2991844394f6682a9 elinks-0.9.2.ebuild 2975
+MD5 524106cbc42ab82d6af470a9e3f19397 elinks-0.10_pre2.ebuild 3108
+MD5 1905fb9008631e77a502ce8869a953f6 elinks-0.9.2.ebuild 2974
 MD5 d4d9b30bbe7e0ff194ef37c76f3a6213 elinks-0.9.2_rc4.ebuild 2975
 MD5 3e10f9ecea76df7f2144e1c89fd84dbf elinks-0.9.1-r1.ebuild 3266
-MD5 06f3e0fc7ba327d491e8b3fdb015a78d ChangeLog 5678
+MD5 dc5b26dd4163829b5f2c81e5aa13c5b3 ChangeLog 6016
 MD5 d94d306da3804e41296e1bf04c7c9cae metadata.xml 255
 MD5 8d417e936e8b11e07900bb9986a612f0 files/digest-elinks-0.9.2 130
+MD5 079fff42e084de90d11f05e64c0b9b14 files/digest-elinks-0.10_pre2 133
 MD5 40264c1b77fa85cf762b84c042837d8f files/digest-elinks-0.9.1-r1 130
 MD5 271888a6851bdc7605e06e3501d9c571 files/digest-elinks-0.9.2_rc4 133
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBhUOWchej4aZK9/cRAhRjAJ0TEF1e9zkJLIZfOKWf2HuA+avjIwCfQD7q
-Stej/peGCnEt6WCtldg8Alc=
-=NiEl
+iD8DBQFBhUltchej4aZK9/cRAhflAJ47ZDWwttUePCN5IX6Xx8ACJ+/TrACdFMed
+sMqSC1kmerRJ7E/bKfPRW6w=
+=or6E
 -----END PGP SIGNATURE-----

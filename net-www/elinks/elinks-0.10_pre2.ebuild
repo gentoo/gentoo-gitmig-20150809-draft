@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/elinks/elinks-0.9.2.ebuild,v 1.2 2004/10/31 20:20:38 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/elinks/elinks-0.10_pre2.ebuild,v 1.1 2004/10/31 20:20:38 spock Exp $
 
 IUSE="gpm zlib ssl ipv6 X lua guile"
 
@@ -13,7 +13,7 @@ SRC_URI="http://elinks.or.cz/download/${MY_P}.tar.bz2
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~amd64 ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~alpha"
 
 DEPEND="virtual/libc
 	>=app-arch/bzip2-1.0.2*
@@ -32,7 +32,11 @@ src_unpack() {
 	cd ${WORKDIR}
 
 	mv "${PN}-0.9.1.conf" "${PN}.conf"
-	sed -i -e 's:/\* #define CONFIG_256_COLORS \*/:#define CONFIG_256_COLORS:' ${S}/feature.h
+	sed -i \
+		-e 's:CONFIG_256_COLORS=.*:CONFIG_256_COLORS=yes:' \
+		-e 's:CONFIG_LEDS=.*:CONFIG_LEDS=yes:' \
+		-e 's:CONFIG_HTML_HIGHLIGHT=.*:CONFIG_HTML_HIGHLIGHT=yes:' \
+		${S}/features.conf
 }
 
 src_compile() {
@@ -55,7 +59,7 @@ src_compile() {
 
 src_install() {
 
-	einstall || die
+	make DESTDIR="${D}" install || die
 
 	insopts -m 644 ; insinto /etc/elinks
 	doins ${WORKDIR}/elinks.conf
@@ -73,17 +77,18 @@ pkg_postinst() {
 	einfo "This ebuild provides a default config for ELinks."
 	einfo "Please check /etc/elinks/elinks.conf"
 	einfo
-	einfo "You may want to convert your html.cfg and links.cfg of Links or older ELinks versions"
-	einfo "to the new ELinks elinks.conf using /usr/share/doc/${PF}/contrib/conv/conf-links2elinks.pl"
+	einfo "You may want to convert your html.cfg and links.cfg of"
+	einfo "Links or older ELinks versions to the new ELinks elinks.conf"
+	einfo "using /usr/share/doc/${PF}/contrib/conv/conf-links2elinks.pl"
 	einfo
 	einfo "Please have a look at /etc/elinks/keybind-full.sample and"
 	einfo "/etc/elinks/keybind.conf.sample for some bindings examples."
 	einfo
 	einfo "If you have compiled ELinks with Guile support, you will have to"
-	einfo "copy internal-hooks.scm and user-hooks.scm from /usr/share/doc/${PF}/contrib/guile/"
-	einfo "to ~/.elinks/"
+	einfo "copy internal-hooks.scm and user-hooks.scm from"
+	einfo "/usr/share/doc/${PF}/contrib/guile/ to ~/.elinks/"
 	einfo
-	einfo "You will have to set your TERM variable to 'xterm-256color' to be able to"
-	einfo "see 256 colors in elinks."
+	einfo "You will have to set your TERM variable to 'xterm-256color'"
+	einfo "to be able to use 256 colors in elinks."
 	echo
 }
