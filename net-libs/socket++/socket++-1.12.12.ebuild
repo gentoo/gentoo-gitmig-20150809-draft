@@ -1,29 +1,26 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/socket++/socket++-1.12.12.ebuild,v 1.2 2005/01/10 11:13:50 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/socket++/socket++-1.12.12.ebuild,v 1.3 2005/01/17 13:56:16 ka0ttic Exp $
 
 DESCRIPTION="C++ Socket Library"
 HOMEPAGE="http://www.linuxhacker.at/socketxx/"
 SRC_URI="http://www.linuxhacker.at/linux/downloads/src/${P}.tar.gz"
+
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="debug doc"
 
-DEPEND="=sys-devel/automake-1.7*
-	=sys-devel/autoconf-2.59*
+DEPEND="sys-devel/automake
+	sys-devel/autoconf
 	sys-devel/libtool
 	sys-apps/texinfo"
 RDEPEND=""
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-
-	WANT_AUTOMAKE=1.7 WANT_AUTOCONF=2.5  ./autogen || die "./autogen failed"
-}
-
 src_compile() {
+	einfo "Running autogen"
+	./autogen || die "autogen failed"
+
 	econf $(use_enable debug) || die "econf failed"
 	emake || die "emake failed"
 
@@ -43,7 +40,7 @@ src_test() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "install failed"
+	make DESTDIR="${D}" install || die "install failed"
 	dodoc AUTHORS ChangeLog NEWS README* THANKS || die "dodoc failed"
 
 	if use doc ; then
