@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.0.ebuild,v 1.1 2003/11/04 11:11:58 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.0.ebuild,v 1.2 2003/11/04 11:16:19 pauldv Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -161,7 +161,7 @@ set_languages () {
 			;;
 		30 | GREEK ) LANGNO=30; LANGNAME=GREEK; LFULLNAME=Greek
 			;;
-		31 | DTCH ) LANGNO=03; LANGNAME=DTCH; LFULLNAME=Dutch
+		31 | DTCH ) LANGNO=31; LANGNAME=DTCH; LFULLNAME=Dutch
 			;;
 		33 | FREN ) LANGNO=33; LANGNAME=FREN; LFULLNAME=French
 			;;
