@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.76 2004/09/17 13:30:08 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.77 2004/10/03 21:08:44 kito Exp $
+
+  03 Oct 2004; Kito <kito@gentoo.org> gnupg-1.2.6.ebuild:
+  added ~ppc-macos keyword
 
   17 Sep 2004; Tavis Ormandy <taviso@gentoo.org> gnupg-1.2.6.ebuild:
   add back silently removed virtual/mta dep (it's not a mistake! 
