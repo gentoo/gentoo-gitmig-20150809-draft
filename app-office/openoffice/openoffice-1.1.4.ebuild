@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.4.ebuild,v 1.3 2005/01/07 02:56:37 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.4.ebuild,v 1.4 2005/01/07 08:56:36 josejx Exp $
 
 # Notes:
 #
@@ -33,7 +33,10 @@ INSTDIR="${LOC}/OpenOffice.org"
 S="${WORKDIR}"
 DESCRIPTION="OpenOffice.org, a full office productivity suite."
 SRC_URI="mirror://openoffice/stable/${PV}/OOo_${PV}_source.tar.gz
-		http://www.stlport.org/archive/STLport-4.6.2.tar.gz"
+		http://www.stlport.org/archive/STLport-4.6.2.tar.gz
+		ppc? ( http://www.openoffice.org/files/documents/111/2112/LINUXGCCPinc.zip
+			   http://www.openoffice.org/files/documents/111/2113/LINUXGCCPlib.zip
+			   http://www.openoffice.org/files/documents/111/2114/LINUXGCCPruntime.zip )"
 
 HOMEPAGE="http://www.openoffice.org/"
 
