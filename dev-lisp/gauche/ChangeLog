@@ -1,11 +1,13 @@
 # ChangeLog for dev-lisp/gauche
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche/ChangeLog,v 1.3 2002/07/22 11:23:05 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/gauche/ChangeLog,v 1.4 2002/12/07 06:23:13 jmorgan Exp $
 
 *gauche-0.6 (19 Jul 2002)
 
-  19 Jul 2002; Karl Trygve Kalleberg <karltk@gentoo.org> gauche-0.6.ebuild files/digest-gauche-0.6:
+  07 Dec 2002; Jack Morgan <jmorgan@gentoo.org> gauche-0.5.7.ebuild, gauche-0.6.ebuild :
+  Changed sparc64 to sparc keyword
 
+  19 Jul 2002; Karl Trygve Kalleberg <karltk@gentoo.org> gauche-0.6.ebuild files/digest-gauche-0.6:
   New upstream version.
 
 *gauche-0.5.7 (12 Jul 2002)
