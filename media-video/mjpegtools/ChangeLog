@@ -1,9 +1,16 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.6 2002/07/08 04:20:42 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.7 2002/07/26 12:48:15 aliz Exp $
 
+*mjpegtools-1.6.0-r3 (26 Jul 2002)
+
+  26 Jul 2002; Daniel AHlberg <aliz@gentoo.org> mjpegtools-1.6.0-r3.ebuild :
+
+  Closes #4702. Also added nasm to dependancy list (if 3dnow, sse or mmx are in USE)
+  to make mjpegtools more optimized.
 
 *mjpegtools-1.6.0-r2 (08 Jul 2002)
+
   08 Jul 2002; Spider <spider@gentoo.org> mjpegtools-1.6.0-r2.ebuild :
   fixed remnants of ${D} in .la files
   
