@@ -1,0 +1,21 @@
+# ChangeLog for sys-apps/kbd
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/ChangeLog,v 1.1 2002/03/23 01:01:19 seemant Exp $
+
+*kbd-1.06-r1  (22 Mar 2002)
+
+  22 Mar 2002; Seemant Kulleen <seemant@gentoo.org> kbd-1.06-r1.ebuild :
+
+  Added USE dependent nls support from a patch sent in by Matthew Kennedy.
+
+*kbd-1.06  (1 Feb 2002)
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  
+  This changelog is targetted to users. This means that the comments should be
+  well explained and written in clean English. 
+  
+  Every new version or revision of the package has to be marked by a '*'
+  seperator line as above. Changements since the last revision have to be
+  added to the top of the file, underneath the initial copyright and cvs header
+  comments, in exactly the same format as this comment.
