@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.5 2002/05/05 17:12:35 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.6 2002/06/24 02:06:01 azarah Exp $
 # This eclass can be used for packages that needs a working X environment to build
 ECLASS=virtualx
 newdepend virtual/x11
@@ -19,7 +19,7 @@ virtualmake() {
 		# The following is derived from Mandrake's hack to allow
 		# compiling without the X display
 
-		echo ">>> Scanning for a open DISPLAY to start Xvfb..."
+		einfo "Scanning for a open DISPLAY to start Xvfb..."
 		
 		local i=0
 		XDISPLAY=$(i=0; while [ -f /tmp/.X${i}-lock ] ; do i=$((${i}+1));done; echo ${i})
@@ -41,7 +41,7 @@ virtualmake() {
 			sleep 2
 		done
 
-		echo ">>> Starting Xvfb on \$DISPLAY=${XDISPLAY} ..."
+		einfo "Starting Xvfb on \$DISPLAY=${XDISPLAY} ..."
 		
 		export DISPLAY=:${XDISPLAY}
 		#Do not break on error, but setup $retval, as we need

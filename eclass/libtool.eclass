@@ -2,7 +2,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.6 2002/06/18 08:43:28 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.7 2002/06/24 02:06:01 azarah Exp $
 # This eclass patches ltmain.sh distributed with libtoolized packages with the
 # relink and portage patch
 ECLASS=libtool
@@ -18,6 +18,7 @@ elibtoolize() {
 	local dopatch="no"
 	local dotest="yes"
 	local dorelink="yes"
+	local dotmp="yes"
 	local doportage="yes"
 	local portage="no"
 	local mylist=""
@@ -52,9 +53,10 @@ elibtoolize() {
 		dopatch="yes"
 		dotest="yes"
 		dorelink="yes"
+		dotmp="yes"
 		doportage="yes"
 
-		for y in test_patch relink_patch portage_patch
+		for y in test_patch relink_patch tmp_patch portage_patch
 		do
 			if ! eval ${y} --test $>${T}/libtool.foo
 			then
@@ -72,6 +74,10 @@ elibtoolize() {
 						fi
 						dorelink="no"
 						;;
+					tmp_patch)
+						# non critical patch
+						dotmp="no"
+						;;
 					portage_patch)
 						# critical patch
 						if [ "${portage}" = "yes" ]
@@ -87,7 +93,7 @@ elibtoolize() {
 			fi
 		done
 
-		for y in test_patch relink_patch portage_patch
+		for y in test_patch relink_patch tmp_patch portage_patch
 		do
 			if [ "${dopatch}" = "yes" ]
 			then
@@ -100,6 +106,12 @@ elibtoolize() {
 						;;
 					relink_patch)
 						if [ "${dorelink}" = "no" ]
+						then
+							continue
+						fi
+						;;
+					tmp_patch)
+						if [ "${dotmp}" = "no" ]
 						then
 							continue
 						fi
@@ -121,6 +133,11 @@ elibtoolize() {
 			fi
 		done
 	done
+
+	if [ -f libtool ]
+	then
+		rm -f libtool
+	fi
 
 	# We need to change the pwd back to $S, as we may be called in
 	# src_compile()
@@ -331,6 +348,34 @@ relink_patch() {
 		 	  fi
 		 	fi
 		 
+	ENDPATCH
+
+    retval=$?
+
+    # This one dont apply clean to libtool-1.4.2a, so do it manually.
+    if [ "${1}" != "--test" ] && [ "${retval}" -eq 0 ]
+    then
+        cp ltmain.sh ltmain.sh.orig
+        sed -e 's:cd `pwd`; $SHELL $0 --mode=relink $libtool_args:cd `pwd`; $SHELL $0 --mode=relink $libtool_args @inst_prefix_dir@:' \
+            ltmain.sh.orig > ltmain.sh
+        rm -f ltmain.sh.orig
+    fi
+
+    return ${retval}
+}
+
+tmp_patch() {
+
+	local opts=""
+
+	if [ "${1}" = "--test" ]
+	then
+		opts="--force --dry-run"
+	fi
+	
+	patch ${opts} -p0 <<-"ENDPATCH"
+		--- ltmain.sh   Sun Aug 12 18:08:05 2001
+		+++ ltmain-relinkable.sh    Tue Aug 28 18:55:13 2001
 		@@ -4782,7 +4829,11 @@
 		 	    if test "$finalize" = yes && test -z "$run"; then
 		 	      tmpdir="/tmp"
@@ -345,19 +390,6 @@ relink_patch() {
 		 	      else
 		 		$echo "$modename: error: cannot create temporary directory \`$tmpdir'" 1>&2
 	ENDPATCH
-
-	retval=$?
-
-	# This one dont apply clean to libtool-1.4.2a, so do it manually.
-	if [ "${1}" != "--test" ] && [ "${retval}" -eq 0 ]
-	then
-		cp ltmain.sh ltmain.sh.orig
-		sed -e 's:cd `pwd`; $SHELL $0 --mode=relink $libtool_args:cd `pwd`; $SHELL $0 --mode=relink $libtool_args @inst_prefix_dir@:' \
-			ltmain.sh.orig > ltmain.sh
-		rm -f ltmain.sh.orig
-	fi
-
-	return ${retval}
 }
 
 test_patch() {
