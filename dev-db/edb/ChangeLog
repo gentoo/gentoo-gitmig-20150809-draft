@@ -1,28 +1,27 @@
 # ChangeLog for dev-db/edb
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/ChangeLog,v 1.6 2003/02/12 05:47:49 vapier Exp $
-   
-  24 Jan 2003; Jason Wever <weeve@gentoo.org> edb-1.0.3.ebuild :
-  Added ~sparc to keywords
+# $Header: /var/cvsroot/gentoo-x86/dev-db/edb/ChangeLog,v 1.7 2003/02/20 11:41:12 vapier Exp $
 
+*edb-1.0.3.20030220 (20 Feb 2003)
+
+  20 Feb 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bumpage (bug fixes from CVS).
+   
 *edb-1.0.3 (3 Jun 2002)
 
   26 Aug 2002; Ryan Phillips <rphillips@gentoo.org> :
-
   Removed gtk dependency. Fixes #6998. Submitted by vapier at netzero.com
 
   24 Jul 2002; Mark Guertin <gerk@gentoo.org> :
   Added ppc to keywords
 
   3 Jun 2002; Brandon Low <lostlogic@gentoo.org> ChangeLog :
-
   Updated to 1.0.3, and added scripts to ensure correct compilation on all
   compiler versions
 
 *edb-1.0.2-r1 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
