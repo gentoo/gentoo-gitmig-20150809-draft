@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/cman-1.0_pre31.ebuild,v 1.2 2005/03/19 21:36:45 xmerlin Exp $
-
-inherit linux-mod
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/cman/cman-1.0_pre31.ebuild,v 1.3 2005/03/23 02:37:10 xmerlin Exp $
 
 MY_PV="${PV/_/-}"
 MY_P="${PN}-${MY_PV}"
@@ -28,10 +26,7 @@ RDEPEND="virtual/libc"
 S="${WORKDIR}/${MY_P}"
 
 src_compile() {
-	check_KV
-	set_arch_to_kernel
-
-	./configure --kernel_src=${KERNEL_DIR} || die
+	./configure || die
 	emake || die
 }
 

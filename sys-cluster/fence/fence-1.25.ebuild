@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fence/fence-1.25.ebuild,v 1.3 2005/03/22 13:42:07 xmerlin Exp $
-
-inherit linux-mod
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/fence/fence-1.25.ebuild,v 1.4 2005/03/23 02:41:47 xmerlin Exp $
 
 DESCRIPTION="I/O fencing system"
 HOMEPAGE="http://sources.redhat.com/cluster/"
@@ -21,10 +19,7 @@ DEPEND=">=sys-cluster/ccs-0.24
 
 
 src_compile() {
-	check_KV
-	set_arch_to_kernel
-
-	./configure --kernel_src=${KERNEL_DIR} || die
+	./configure || die
 	emake || die
 }
 

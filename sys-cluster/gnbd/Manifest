@@ -5,14 +5,14 @@ MD5 c7e771c0b7eea2659db6e06f10271214 ChangeLog 430
 MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
 MD5 c7ba717a3b75ff11e83930fab4188fa3 gnbd-1.0_pre13.ebuild 1042
 MD5 4480c0d828fbe2e7ffc41b0145ae1bbc files/gnbd-client.rc 1269
-MD5 ec5670eaf2caecdf5af8078e453326a8 files/gnbd-srv.rc 1941
+MD5 ac0809e436b7f6081623f9678a4cc449 files/gnbd-srv.rc 1947
 MD5 a96ced2be5dbc837a2d23bd3fbecaa12 files/gnbd.devfs 332
 MD5 79b84f9fc4b7bdee59dd1211663aef8d files/gnbdtab 177
 MD5 59f3ca3db34191305528a95653f41692 files/digest-gnbd-1.0_pre13 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCQNnWgMUyd/cdjWsRAsbpAJsEq+9+wsevPRjkKeOxV1tLTYPT9QCeOEAz
-4htOR9Ck2RgMsZVaOPN5p3k=
-=OXqN
+iD8DBQFCQN2ngMUyd/cdjWsRAldIAJ4mMMpdUgUHThflC5le6oM4kc6gJgCfWQmu
+W8zpimlaNiu6sveQ5EHHCVg=
+=Ujnn
 -----END PGP SIGNATURE-----

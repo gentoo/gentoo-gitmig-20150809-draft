@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/iddev/iddev-1.9.ebuild,v 1.1 2005/03/19 16:58:05 xmerlin Exp $
-
-inherit linux-mod
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/iddev/iddev-1.9.ebuild,v 1.2 2005/03/23 02:43:43 xmerlin Exp $
 
 DESCRIPTION="iddev"
 HOMEPAGE="http://sources.redhat.com/cluster/"
@@ -21,10 +19,7 @@ DEPEND=""
 
 
 src_compile() {
-	check_KV
-	set_arch_to_kernel
-
-	./configure --kernel_src=${KERNEL_DIR} || die
+	./configure || die
 	emake || die
 }
 
