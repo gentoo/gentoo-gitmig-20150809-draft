@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2.ebuild,v 1.1 2003/04/28 01:10:16 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3.2.ebuild,v 1.2 2003/05/02 11:40:48 liquidx Exp $
 
 inherit libtool sgml-catalog
 
@@ -80,7 +80,7 @@ src_install() {
 	dohtml doc/*.htm
 	
 	insinto /usr/share/doc/${PF}/jadedoc
-	doins jadedoc/*.html
+	doins jadedoc/*.htm
 	insinto /usr/share/doc/${PF}/jadedoc/images
 	doins jadedoc/images/*
 }
