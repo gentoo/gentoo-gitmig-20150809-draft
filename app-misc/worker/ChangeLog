@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/worker
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.18 2004/08/18 15:05:34 hillster Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/worker/ChangeLog,v 1.19 2004/09/24 18:30:47 swegener Exp $
+
+  24 Sep 2004; Sven Wegener <swegener@gentoo.org> worker-2.8.5.ebuild:
+  Fixed CVS keyword replacement.
 
 *worker-2.8.5 (18 Aug 2004)
 
