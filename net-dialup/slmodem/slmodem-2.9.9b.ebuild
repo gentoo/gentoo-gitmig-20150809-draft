@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.9b.ebuild,v 1.1 2005/03/14 15:42:32 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/slmodem/slmodem-2.9.9b.ebuild,v 1.2 2005/03/14 15:44:13 genstef Exp $
 
 inherit eutils linux-mod
 
@@ -130,7 +130,4 @@ pkg_postinst() {
 	fi
 
 	einfo "You need to be in the uucp AND dialout group to make calls as a user."
-
-	# Fixing /var/lock permissions
-	chmod 774 ${ROOT}/var/lock
 }
