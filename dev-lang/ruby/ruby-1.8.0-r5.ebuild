@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.0-r5.ebuild,v 1.5 2004/03/10 20:38:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.0-r5.ebuild,v 1.6 2004/03/25 08:35:01 kumba Exp $
 
 IUSE="socks5 tcltk cjk"
 
@@ -17,7 +17,7 @@ SRC_URI="mirror://ruby/${PV%.*}/${P/_pre/-preview}.tar.gz
 
 LICENSE="Ruby"
 SLOT="1.8"
-KEYWORDS="alpha ~hppa ia64 ~mips ~ppc sparc x86"
+KEYWORDS="alpha ~hppa ia64 mips ~ppc sparc x86"
 
 DEPEND=">=sys-libs/glibc-2.1.3
 	>=sys-libs/gdbm-1.8.0
