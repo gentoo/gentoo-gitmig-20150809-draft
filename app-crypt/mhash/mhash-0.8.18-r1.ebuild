@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mhash/mhash-0.8.18-r1.ebuild,v 1.10 2004/06/24 21:34:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mhash/mhash-0.8.18-r1.ebuild,v 1.11 2004/06/27 21:33:02 vapier Exp $
 
 DESCRIPTION="library providing a uniform interface to a large number of hash algorithms"
 HOMEPAGE="http://mhash.sourceforge.net/"
@@ -11,7 +11,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 s390"
 IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 RDEPEND=""
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/shash/shash-0.2.6.ebuild,v 1.4 2004/06/24 21:38:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/shash/shash-0.2.6.ebuild,v 1.5 2004/06/27 21:36:10 vapier Exp $
 
 DESCRIPTION="Generate or check digests or MACs of files"
 HOMEPAGE="http://mcrypt.hellug.gr/shash/"
@@ -11,9 +11,8 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="static"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	>=app-crypt/mhash-0.8.18-r1"
-
 DEPEND="${RDEPEND}
 	sys-devel/libtool
 	sys-devel/automake

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/bcwipe-1.3_p1.ebuild,v 1.5 2004/06/24 21:30:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bcwipe/bcwipe-1.3_p1.ebuild,v 1.6 2004/06/27 21:27:59 vapier Exp $
 
 DESCRIPTION="BCWipe secure file removal utility"
 HOMEPAGE="http://www.jetico.com/"
@@ -12,7 +12,7 @@ SLOT="0"
 IUSE=""
 KEYWORDS="x86"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 RDEPEND=""
 
 S=${WORKDIR}/${PN}

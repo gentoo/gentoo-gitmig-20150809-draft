@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.0.ebuild,v 1.6 2004/06/24 21:31:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.9.0.ebuild,v 1.7 2004/06/27 21:29:39 vapier Exp $
 
 inherit eutils
 
@@ -20,7 +20,7 @@ RDEPEND="!static? ( ldap? ( net-nds/openldap )
 	nls? ( sys-devel/gettext )
 	>=dev-libs/libgcrypt-1.1.42
 	>=dev-libs/libksba-0.4.7
-	virtual/glibc
+	virtual/libc
 	dev-lang/perl
 	dev-libs/pth
 	virtual/mta"
@@ -31,7 +31,7 @@ DEPEND="caps? ( sys-libs/libcap )
 	>=dev-libs/libksba-0.4.7
 	dev-libs/libassuan
 	sys-libs/zlib
-	virtual/glibc
+	virtual/libc
 	dev-lang/perl
 	dev-libs/pth"
 

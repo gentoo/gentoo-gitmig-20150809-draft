@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/keynote/keynote-2.3.ebuild,v 1.5 2004/06/24 21:33:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/keynote/keynote-2.3.ebuild,v 1.6 2004/06/27 21:32:11 vapier Exp $
 
 DESCRIPTION="The KeyNote Trust-Management System"
 HOMEPAGE="http://www1.cs.columbia.edu/~angelos/keynote.html"
@@ -11,34 +11,27 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="ssl"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	ssl? ( dev-libs/openssl )"
 
 src_compile() {
-
 	econf || die
 	if use ssl; then
 		make || die
 	else
 		make nocrypto || die
 	fi
-
 }
 
 src_install() {
+	dobin keynote || die
 
-	dobin keynote
-
-	doman man/keynote.1
-	doman man/keynote.3
-	doman man/keynote.4
-	doman man/keynote.5
+	doman man/keynote.[1345]
 
 	dolib.a libkeynote.a
 
 	insinto /usr/include
 	doins keynote.h
 
-	dodoc README HOWTO.add.crypto TODO LICENSE
-
+	dodoc README HOWTO.add.crypto TODO
 }

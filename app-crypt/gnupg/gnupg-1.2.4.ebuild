@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.4.ebuild,v 1.19 2004/06/24 21:31:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.4.ebuild,v 1.20 2004/06/27 21:29:39 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -20,7 +20,7 @@ RDEPEND="!static? ( ldap? ( net-nds/openldap )
 		sys-libs/zlib )
 	X? ( || ( media-gfx/xloadimage media-gfx/xli ) )
 	nls? ( sys-devel/gettext )
-	virtual/glibc
+	virtual/libc
 	dev-lang/perl"
 # XXX: libpcap earlier than 1.10-r3 did not provide libcap.a
 #	DEPEND="caps? ( static? ( >=sys-libs/libcap-1.10-r3 )
@@ -30,7 +30,7 @@ DEPEND="caps? ( sys-libs/libcap )
 	nls? ( sys-devel/gettext )
 	!static? ( sys-libs/zlib )
 	app-arch/bzip2
-	virtual/glibc
+	virtual/libc
 	dev-lang/perl"
 
 src_unpack() {
