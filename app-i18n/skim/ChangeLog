@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/skim
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/ChangeLog,v 1.17 2005/02/11 15:42:59 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/ChangeLog,v 1.18 2005/02/19 16:01:16 greg_g Exp $
+
+  19 Feb 2005; Gregorio Guidi <greg_g@gentoo.org> skim-1.1.0.ebuild:
+  Fix usage of kde eclasses.
 
 *skim-1.1.0 (12 Feb 2005)
 

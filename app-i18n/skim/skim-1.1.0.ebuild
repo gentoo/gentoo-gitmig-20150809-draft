@@ -1,10 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/skim-1.1.0.ebuild,v 1.1 2005/02/11 15:42:59 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skim/skim-1.1.0.ebuild,v 1.2 2005/02/19 16:01:16 greg_g Exp $
 
 inherit kde-base
-
-need-kde 3
 
 DESCRIPTION="Smart Common Input Method (SCIM) optimized for KDE"
 HOMEPAGE="http://www.scim-im.org/"
@@ -17,6 +15,8 @@ KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 
 DEPEND="|| ( >=app-i18n/scim-1.1 >=app-i18n/scim-cvs-1.1 )"
+
+need-kde 3
 
 src_install() {
 	kde_src_install
