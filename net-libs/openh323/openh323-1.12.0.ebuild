@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.12.0.ebuild,v 1.1 2003/06/27 12:26:30 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.12.0.ebuild,v 1.2 2003/06/27 23:58:03 liquidx Exp $
 
 IUSE="ssl"
 
@@ -68,11 +68,12 @@ src_install() {
 	insinto /usr/share/openh323/src
 	newins ${FILESDIR}/openh323-1.11.7-emptyMakefile Makefile
 
-	#if [ ${ARCH} = "ppc" ] ; then
-	#	dosym libh323_linux_ppc_r.so.${PV} /usr/lib/libopenh323.so
-	#else
-	#	dosym libh323_linux_x86_r.so.${PV} /usr/lib/libopenh323.so
-	#fi
+	rm ${D}/usr/lib/libopenh323.so
+	if [ ${ARCH} = "ppc" ] ; then
+		dosym libh323_linux_ppc_r.so.${PV} /usr/lib/libopenh323.so
+	else
+		dosym libh323_linux_x86_r.so.${PV} /usr/lib/libopenh323.so
+	fi
 
 
 }
