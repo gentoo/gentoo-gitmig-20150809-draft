@@ -14,7 +14,7 @@ HOMEPAGE="http://www.nomachine.com/"
 IUSE=""
 LICENSE="nomachine"
 SLOT="0"
-KEYWORDS="x86 -ppc-sparc -alpha -mips"
+KEYWORDS="x86 -ppc -sparc -alpha -mips"
 RESTRICT="mirror fetch nostrip"
 
 MY_PV="${PV}-72"
