@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.070.ebuild,v 1.1 2003/02/21 17:25:49 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.070.ebuild,v 1.2 2003/02/22 18:03:03 aliz Exp $
 
 IUSE="ssl"
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.webmin.com/"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc sparc"
 
 DEPEND="sys-devel/perl
 	ssl? ( dev-perl/Net-SSLeay )"
