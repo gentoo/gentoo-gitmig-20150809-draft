@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r30.ebuild,v 1.1 2004/12/24 18:23:50 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r31.ebuild,v 1.1 2005/01/08 21:29:55 plasmaroo Exp $
 
 IUSE="aavm crypt evms2 usagi"
 
@@ -30,9 +30,9 @@ S=${WORKDIR}/linux-${KV}
 
 DESCRIPTION="Full sources for the Gentoo Kernel."
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-	 http://dev.gentoo.org/~plasmaroo/patches/kernel/gentoo-sources/patches-${KV/30/28}.tar.bz2
+	 http://dev.gentoo.org/~plasmaroo/patches/kernel/gentoo-sources/patches-${KV/31/28}.tar.bz2
 	 http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/${P}-CAN-2004-0415.patch
-	 http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/${P}-CAN-2004-0814.patch"
+	 http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/${P}-CAN-2004-0814.2.patch"
 HOMEPAGE="http://www.gentoo.org/ http://www.kernel.org/"
 LICENSE="GPL-2"
 KEYWORDS="x86 -ppc -sparc -alpha -hppa -mips"
@@ -42,7 +42,7 @@ src_unpack() {
 	unpack ${A}
 	mv linux-${OKV} linux-${KV} || die "Error moving kernel source tree to linux-${KV}"
 
-	cd ${WORKDIR}/${KV/r30/r28}
+	cd ${WORKDIR}/${KV/r31/r28}
 
 	# This is the *ratified* aavm USE flag, enables aavm support in this kernel
 	if ! use aavm; then
@@ -144,7 +144,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.4.CAN-2004-0497.patch || die "Failed to add the CAN-2004-0497 patch!"
 	epatch ${FILESDIR}/${PN}-2.4.CAN-2004-0535.patch || die "Failed to add the CAN-2004-0535 patch!"
 	epatch ${FILESDIR}/${P}-CAN-2004-0685.patch || die "Failed to add the CAN-2004-0685 patch!"
-	epatch ${DISTDIR}/${P}-CAN-2004-0814.patch || die "Failed to add the CAN-2004-0814 patch!"
+	epatch ${DISTDIR}/${P}-CAN-2004-0814.2.patch || die "Failed to add the CAN-2004-0814 patch!"
 	epatch ${FILESDIR}/${PN}-2.4.I2C_Limits.patch || die "Failed to patch the I2C i2cdev_ioctl() kmalloc() bug!"
 	epatch ${FILESDIR}/${PN}-2.4.FPULockup-53804.patch || die "Failed to apply FPU-lockup patch!"
 	epatch ${FILESDIR}/${PN}-2.4.cmdlineLeak.patch || die "Failed to apply the /proc/cmdline patch!"
@@ -156,6 +156,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.4.vma.patch || die "Failed to apply the VMA patch!"
 	epatch ${FILESDIR}/${PN}-2.4.22-CAN-2004-1016.patch || die "Failed to apply the CAN-2004-1016 patch!"
 	epatch ${FILESDIR}/${P}-CAN-2004-1056.patch || die "Failed to apply the CAN-2004-1056 patch!"
+	epatch ${FILESDIR}/${PN}-2.4.77094.patch || die "Failed to apply bug #77094 patch!"
+	epatch ${FILESDIR}/${PN}-2.4.brk-locked.patch || die "Failed to apply do_brk_locked() patch!"
 }
 
 pkg_postinst() {
