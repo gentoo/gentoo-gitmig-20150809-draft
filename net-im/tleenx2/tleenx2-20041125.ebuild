@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tleenx2/tleenx2-20041125.ebuild,v 1.1 2004/11/26 21:12:28 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/tleenx2/tleenx2-20041125.ebuild,v 1.2 2005/01/11 23:52:48 spock Exp $
 
 IUSE=""
 LICENSE="GPL-2"
@@ -11,7 +11,7 @@ DESCRIPTION="A client for Polish Tlen.pl instant messenging system."
 HOMEPAGE="http://tleenx.sourceforge.net/"
 SRC_URI="mirror://sourceforge/tleenx/${MY_P}.tar.gz"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 S="${WORKDIR}/${MY_P}"
 
 DEPEND="net-libs/libtlen
