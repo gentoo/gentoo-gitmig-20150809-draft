@@ -1,0 +1,8 @@
+# ChangeLog for net-p2p/pyslsk
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/pyslsk/ChangeLog,v 1.1 2002/12/17 21:29:58 blauwers Exp $
+
+*pyslsk-0.4.9b (17 Dec 2002)
+
+  17 Dec 2002; B.Lauwers <blauwers@gentoo.org> :
+  Initial import. Ebuild submitted by Eelco Wesemann.
