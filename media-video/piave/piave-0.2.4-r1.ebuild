@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/piave/piave-0.2.4-r1.ebuild,v 1.4 2004/10/18 15:11:29 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/piave/piave-0.2.4-r1.ebuild,v 1.5 2004/10/26 22:01:45 malc Exp $
 
 inherit eutils gcc
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/modesto/${P}.tar.gz"
 IUSE="nls"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 
 DEPEND="virtual/x11
 	>=dev-util/pkgconfig-0.15.0
