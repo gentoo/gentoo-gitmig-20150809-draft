@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49.ebuild,v 1.13 2004/05/16 14:10:48 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49.ebuild,v 1.14 2004/05/29 16:39:44 zul Exp $
 
 inherit flag-o-matic eutils
 
@@ -36,6 +36,7 @@ src_unpack() {
 	unpack ${A} || die
 	cd ${S} || die
 	patch -p1 <${FILESDIR}/apache-2.0.49-gentoo.diff || die
+	epatch ${FILESDIR}/httpd-2.0.49-ssl_engine_kernel.patch || die
 	epatch ${FIESDIR}/httpd-2.0.49-cgi.patch || die
 
 	# integrated upstream

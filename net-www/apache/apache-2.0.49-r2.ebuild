@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r2.ebuild,v 1.9 2004/05/26 12:24:16 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r2.ebuild,v 1.10 2004/05/29 16:39:44 zul Exp $
 
 inherit flag-o-matic eutils fixheadtails gnuconfig
 
@@ -62,6 +62,7 @@ src_unpack() {
 	epatch ${FILESDIR}/patches/${PVR}/03_redhat_xfsz.patch || die
 	epatch ${FILESDIR}/patches/${PVR}/01_gentoo_cgi.patch || die
 	epatch ${FILESDIR}/patches/${PVR}/04_ssl_makefile.patch || die
+	epatch ${FILESDIR}/patches/${PVR}/01_ssl_engine_kernel.patch || die
 
 	if use ipv6; then
 		epatch ${FILESDIR}/patches/${PVR}/01_gentoo_ipv6.patch || die
