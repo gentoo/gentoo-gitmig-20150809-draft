@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/yaboot
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/yaboot/ChangeLog,v 1.14 2003/03/11 06:23:14 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/yaboot/ChangeLog,v 1.15 2003/03/15 23:25:42 gerk Exp $
+
+*yaboot-1.3.10-r1 (15 Mar 2003)
+
+  15 Mar 2003; Mark Guertin <gerk@gentoo.org> yaboot-1.3.10-r1.ebuild,
+  files/yabootconfig-1.3.10.patch:
+  fixed typo in yabootconfig which caused invalid macosx= in yaboot.conf, rev
+  bumped to ensure people update
 
 *yaboot-1.3.10 (26 Feb 2003)
 
