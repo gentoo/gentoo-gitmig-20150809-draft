@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lvm-user/lvm-user-1.0.3.ebuild,v 1.8 2003/02/13 16:04:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lvm-user/lvm-user-1.0.3.ebuild,v 1.9 2003/02/25 18:58:08 lostlogic Exp $
 
 NV=1.0.3
 S=${WORKDIR}/LVM/${NV}
@@ -19,7 +19,9 @@ src_compile() {
 	cd ${S}
 	#This ebuild doesn't like this opt setting; closes bug #598
 	export CFLAGS="${CFLAGS/-fomit-frame-pointer/}"
-	[ -f "Makefile" ] && ( make clean || die )
+	if [ -f "Makefile" ]; then
+		make clean || die
+	fi
 	CFLAGS="${CFLAGS} -I${KS}/include" \
 		./configure --prefix=/ \
 		--mandir=/usr/share/man \

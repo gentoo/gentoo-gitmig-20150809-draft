@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/e2fsprogs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/ChangeLog,v 1.18 2003/02/23 19:35:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/ChangeLog,v 1.19 2003/02/25 18:58:08 lostlogic Exp $
 
 *e2fsprogs-1.32-r2 (31 Dec 2002)
 
@@ -35,6 +35,9 @@
   Changed sparc ~sparc keywords
  
 *e2fsprogs-1.32 (11 Nov 2002)
+
+  25 Feb 2003; Brandon Low <lostlogic@gentoo.org> e2fsprogs-1.27-r1.ebuild e2fsprogs-1.27.ebuild e2fsprogs-1.29-r1.ebuild e2fsprogs-1.29.ebuild e2fsprogs-1.32-r1.ebuild e2fsprogs-1.32.ebuild :
+  Fix nesteddies
 
   18 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
   Added mips to keywords

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsprogs/xfsprogs-1.3.13.ebuild,v 1.10 2003/02/13 16:22:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsprogs/xfsprogs-1.3.13.ebuild,v 1.11 2003/02/25 18:58:08 lostlogic Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="xfs filesystem utilities"
@@ -25,7 +25,11 @@ src_compile() {
 	# 3) we remove a hard-coded "-O1"
 	# 4) we fix some Makefile-created library symlinks that contains absolute paths
 	cp include/builddefs include/builddefs.orig
-	sed -e 's:^PKG_\(.*\)_DIR = \(.*\)$:PKG_\1_DIR = ${DESTDIR}\2:' -e "s:/usr/share/doc/${PN}:/usr/share/doc/${PF}:" -e 's:-O1::' -e '/-S $(PKG/d' include/builddefs.orig > include/builddefs || die
+	sed -e 's:^PKG_\(.*\)_DIR = \(.*\)$:PKG_\1_DIR = ${DESTDIR}\2:' \
+	    -e "s:/usr/share/doc/${PN}:/usr/share/doc/${PF}:" \
+	    -e 's:-O1::' \
+	    -e '/-S $(PKG/d' \
+	    include/builddefs.orig > include/builddefs || die
 	emake || die
 }
 
