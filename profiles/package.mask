@@ -40,6 +40,7 @@
 =kde-base/kdesdk-3.1.2
 =kde-base/kdetoys-3.1.2
 =kde-base/kdeutils-3.1.2
+=app-doc/kdelibs-apidocs-3.1.2
 
 # <lu_zero@gentoo.org> (6 May 2003)
 # new binutils to be tested
