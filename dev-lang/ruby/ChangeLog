@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.53 2004/03/30 10:30:03 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.54 2004/04/07 16:49:56 iggy Exp $
+
+  07 Apr 2004; Brian Jackson <iggy@gentoo.org> ruby-1.8.1-r2.ebuild:
+  added s390 keyword
 
   30 Mar 2004; Joshua Kinard <kumba@gentoo.org> ruby-1.6.8-r6.ebuild:
   Marking stable on mips to remove a repoman dep.
