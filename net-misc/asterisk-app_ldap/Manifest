@@ -1,0 +1,5 @@
+MD5 de41c503f05f5f99a8635b0e333729a5 metadata.xml 217
+MD5 77d034e261e7399eee2814abdb420947 asterisk-app_ldap-0.9.3.ebuild 875
+MD5 e3e2acb59ce3d8551589523388baf122 ChangeLog 416
+MD5 da5efba979b764c22cbab1818e68dfe8 files/app_ldap-0.9.3-astcfg.diff 938
+MD5 f82fd8387708115040b7e9150ac8e645 files/digest-asterisk-app_ldap-0.9.3 61
