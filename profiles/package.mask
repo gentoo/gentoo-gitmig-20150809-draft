@@ -61,7 +61,6 @@ media-video/avi-xmms
 app-text/sgml2x
 >=sys-apps/procps-2.0.7
 >=kde-apps/quanta-2.0_pre2
-=gnome-base/ORBit-0.5.10
 
 # unfinished
 app-admin/va-systemimager-server
@@ -128,8 +127,7 @@ app-admin/va-systemimager-client
 =x11-wm/asclock-2.0.12
 
 # Don't use these.
-# They are masked until I'm finished with the big GNOME move.
-# I'll unmask these and mask the old locations when I'm done.
+# These are the old locations. Will be removed when new locations are tested.
 # /Hallski
 
 app-office/abiword
