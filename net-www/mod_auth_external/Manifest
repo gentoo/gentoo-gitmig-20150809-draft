@@ -1,20 +1,24 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 6bdc9ae0db5ec0b0c8d6b645b870456b ChangeLog 1725
+MD5 4aa0a7876c02d9231e28fe3c1bb40f05 ChangeLog 1930
 MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
 MD5 35d1441e1be7ffa60d4077bd08255651 mod_auth_external-2.2.7-r1.ebuild 1814
 MD5 1c956e895c2bd977c9d0e3e45aea8def mod_auth_external-2.2.7.ebuild 1776
+MD5 b30cbcb4357cdc51312837847f92ac27 mod_auth_external-2.2.9.ebuild 697
+MD5 0b50642c1fd91970a0e07a5104881f6c mod_auth_external-2.1.19.ebuild 682
 MD5 dcccde2ac96e98d941240a2dc8c83120 files/10_mod_auth_external.conf 1240
 MD5 4eece529a11bcc39843827ab95d062a5 files/mod_auth_external-2.2.7-gentoo.diff 3505
 MD5 d0cb338160e3be8790524af8071cc4df files/pwauth.pam 380
 MD5 0682340a42fcdf3d43f063ef6174bdcc files/digest-mod_auth_external-2.2.7-r1 74
 MD5 0682340a42fcdf3d43f063ef6174bdcc files/digest-mod_auth_external-2.2.7 74
+MD5 07bc3a6f49dfe0c257265b3415514855 files/digest-mod_auth_external-2.2.9 74
+MD5 41437f04920e955288894fa12a000559 files/digest-mod_auth_external-2.1.19 75
 MD5 14e8c984c2bdaa0e441e2d694bfe5ef0 files/2.2.7-r1/10_mod_auth_external.conf 1230
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCFGdMmPFBzbX68WERAvxkAJ9KbeYTGCpNumMOiD+1pYRSO5PsxACfRr5O
-8SZjnW9E8c1ljl92DInkXeQ=
-=tORy
+iD8DBQFCFG7NmPFBzbX68WERAnRLAKCNv2Eeei3b8EE5y1DPyH16kOZwwwCdGUhm
+h8Gmso6fXev511yhrFIDhxE=
+=ARpN
 -----END PGP SIGNATURE-----
