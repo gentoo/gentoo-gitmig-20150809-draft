@@ -1,0 +1,132 @@
+diff -Nur libcap-1.10-14.static/libcap/include/sys/capability.h libcap-1.10-14.static.python/libcap/include/sys/capability.h
+--- libcap-1.10-14.static/libcap/include/sys/capability.h	2004-09-16 02:45:13.000000000 +0200
++++ libcap-1.10-14.static.python/libcap/include/sys/capability.h	2004-09-16 02:52:58.000000000 +0200
+@@ -15,12 +15,23 @@
+ extern "C" {
+ #endif
+ 
++#ifdef SWIG
++%module libcap
++#endif
++
+ /*
+  * This file complements the kernel file by providing prototype
+  * information for the user library.
+  */
+ 
++#ifdef SWIG
++%{
++#include <sys/types.h>
++#include "libcap.h"
++%}
++#else
+ #include <sys/types.h>
++#endif
+ /*
+  * This is <linux/capability.h>
+  *
+@@ -52,6 +63,7 @@
+  
+ #define _LINUX_CAPABILITY_VERSION  0x19980330
+ 
++#ifndef SWIG
+ typedef struct __user_cap_header_struct {
+ 	__u32 version;
+ 	int pid;
+@@ -62,6 +74,7 @@
+         __u32 permitted;
+         __u32 inheritable;
+ } *cap_user_data_t;
++#endif
+   
+ #ifdef __KERNEL__
+ 
+@@ -354,10 +367,12 @@
+ int     cap_clear(cap_t);
+ 
+ /* libcap/cap_file.c */
++#ifndef SWIG
+ cap_t   cap_get_fd(int);
+ cap_t   cap_get_file(const char *);
+ int     cap_set_fd(int, cap_t);
+ int     cap_set_file(const char *, cap_t);
++#endif
+ 
+ /* libcap/cap_proc.c */
+ cap_t   cap_get_proc(void);
+@@ -377,6 +392,7 @@
+  * if the following _POSIX_SOURCE is _undefined_
+  */
+ 
++#ifndef SWIG
+ #if !defined(_POSIX_SOURCE)
+ 
+ extern int capset(cap_user_header_t header, cap_user_data_t data);
+@@ -386,6 +402,7 @@
+ extern char const *_cap_names[];
+ 
+ #endif /* !defined(_POSIX_SOURCE) */
++#endif
+ 
+ #ifdef __cplusplus
+ }
+diff -Nur libcap-1.10-14.static/libcap/Makefile libcap-1.10-14.static.python/libcap/Makefile
+--- libcap-1.10-14.static/libcap/Makefile	2004-09-16 02:48:30.000000000 +0200
++++ libcap-1.10-14.static.python/libcap/Makefile	2004-09-16 03:01:06.000000000 +0200
+@@ -34,6 +34,8 @@
+ #
+ LIBNAME=libcap
+ STATLIBNAME=$(LIBNAME).a
++PYTHONMODNAME=_$(LIBNAME).so
++PYTHONPYNAME=$(LIBNAME).py
+ #
+ 
+ FILES=cap_alloc cap_proc cap_extint cap_flag cap_text cap_sys
+@@ -47,7 +49,11 @@
+ MAJLIBNAME=$(LIBNAME).so.$(VERSION)
+ MINLIBNAME=$(MAJLIBNAME).$(MINOR)
+ 
++ifdef PYTHON
++all: $(MINLIBNAME) $(STATLIBNAME) $(PYTHONMODNAME)
++else
+ all: $(MINLIBNAME) $(STATLIBNAME)
++endif
+ 
+ _makenames: _makenames.c cap_names.sed
+ 	$(CC) $(CFLAGS) $(LDFLAGS) $< -o $@
+@@ -67,6 +73,18 @@
+ 	ln -sf $(MINLIBNAME) $(MAJLIBNAME)
+ 	ln -sf $(MAJLIBNAME) $(LIBNAME).so
+ 
++libcap_wrap.c: include/sys/capability.h
++	swig -python -o libcap_wrap.c include/sys/capability.h
++
++$(PYTHONMODNAME): $(OBJS) libcap_wrap.o
++	$(LD) -x -shared -o $@ libcap_wrap.o $(OBJS)
++
++libcap_wrap.c: include/sys/capability.h
++	swig -python -o libcap_wrap.c include/sys/capability.h
++
++$(PYTHONMODNAME): $(OBJS) libcap_wrap.o
++	$(LD) -x -shared -o $@ libcap_wrap.o $(OBJS)
++
+ %.o: %.c $(INCLS)
+ 	$(CC) $(CFLAGS) -c $< -o $@
+ 
+@@ -83,10 +101,15 @@
+ 	ln -sf $(MINLIBNAME) $(LIBDIR)/$(MAJLIBNAME)
+ 	ln -sf $(MAJLIBNAME) $(LIBDIR)/$(LIBNAME).so
+ 	-/sbin/ldconfig
++ifdef PYTHON
++	mkdir -p $(PYTHONMODDIR)
++	install -m 0644 $(PYTHONMODNAME) $(PYTHONMODDIR)/$(PYTHONMODNAME)
++	install -m 0644 $(PYTHONPYNAME) $(PYTHONMODDIR)/$(PYTHONPYNAME)
++endif
+ 
+ clean:
+ 	$(LOCALCLEAN)
+ 	rm -f $(OBJS) $(LOBJS) $(STATLIBNAME) $(LIBNAME).so*
+-	rm -f cap_names.h cap_names.sed _makenames
++	rm -f cap_names.h cap_names.sed _makenames libcap_wrap.c
+ 	cd include/sys && $(LOCALCLEAN)
+ 
