@@ -1,10 +1,13 @@
 # ChangeLog for net-analyzer/fping
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.7 2003/02/12 07:44:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fping/ChangeLog,v 1.8 2004/01/15 16:02:33 gmsoft Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *fping-2.4_beta2-r1 (23 Jul 2002)
+
+  15 Jan 2004; Guy Martin <gmsoft@gentoo.org> fping-2.4_beta2-r1.ebuild :
+  Marked stable on hppa.
 
   Added ppc to KEYWORDS.
 
