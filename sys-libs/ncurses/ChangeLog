@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.13 2002/09/03 21:11:29 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.14 2002/10/17 17:52:14 raker Exp $
+
+*ncurses-5.3 (17 Oct 2002)
+
+  17 Oct 2002; Nick Hadaway <raker@gentoo.org> ncurses-5.3.ebuild,
+  files/digest-ncurses-5.3 :
+  New version of ncurses.  Many years worth of fixes culminating to a
+  new release.
 
 *ncurses-5.2.20020511-r2 (3 Sep 2002)
 *ncurses-5.2-r6 (3 Sep 2002)
