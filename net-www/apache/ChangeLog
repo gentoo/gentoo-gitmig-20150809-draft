@@ -1,6 +1,10 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.115 2004/04/04 01:52:12 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.116 2004/04/04 17:59:30 zul Exp $
+
+  04 Apr 2004; Chuck Short <zul@gentoo.org> files/conf/apache.conf:
+  Added LimitRequestBody directive, commented out ofcourse, since it 
+  might affect other applications if it wasnt. Closes #34516.
 
   03 Apr 2004; Chuck Short <zul@gentoo.org> apache-2.0.48.ebuild,
   files/conf/commonapache.conf:
