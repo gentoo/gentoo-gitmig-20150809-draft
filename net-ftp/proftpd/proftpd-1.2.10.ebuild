@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.10.ebuild,v 1.6 2004/10/19 10:47:48 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.10.ebuild,v 1.7 2004/11/01 00:51:09 kloeri Exp $
 
 inherit flag-o-matic eutils
 
@@ -18,7 +18,7 @@ HOMEPAGE="http://www.proftpd.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc hppa ~alpha ppc ~mips amd64"
+KEYWORDS="x86 sparc hppa alpha ppc ~mips amd64"
 
 DEPEND="pam? ( >=sys-libs/pam-0.75 )
 	mysql? ( >=dev-db/mysql-3.23.26 )
