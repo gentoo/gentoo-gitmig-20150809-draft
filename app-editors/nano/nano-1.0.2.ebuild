@@ -1,6 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Prakash Shetty (Crux) <ps@gnuos.org>
+#$HEADER:$
 
 #Note: ${A} is now auto-generated from SRC_URI; you shouldn't set it manually
 #A=${P}.tar.gz
