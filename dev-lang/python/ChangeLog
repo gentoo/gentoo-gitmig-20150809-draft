@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.14 2002/09/08 08:12:25 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.15 2002/10/03 14:15:25 aliz Exp $
+
+*python-2.2.1-r5 (03 Oct 2002)
+
+  03 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> :
+  Security update.
 
 *python-2.2.1-r4 (7 Sep 2002)
   7 Sep 2002; Nicholas Jones <carpaski@gentoo.org> python-2.2.1-r4.ebuild
