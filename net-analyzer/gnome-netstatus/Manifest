@@ -1,4 +1,4 @@
-MD5 f979a8b60478dd39df1e01eaa98af1b7 ChangeLog 657
-MD5 671659b8d0a929fabecbc6408ce3dd57 gnome-netstatus-2.5.92.ebuild 653
+MD5 b2688c242eec58e3c29c9243043ec1d9 gnome-netstatus-2.6.0.ebuild 653
+MD5 207e8989a67f6ede8588026afe4ae5b7 ChangeLog 658
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 9ed81f9dde1fd4e6ce00882d0917d6ef files/digest-gnome-netstatus-2.5.92 75
+MD5 d878316a13b962c0fcf264981e1d1736 files/digest-gnome-netstatus-2.6.0 74
