@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/java-wakeonlan/java-wakeonlan-0.3.0.ebuild,v 1.1 2004/02/15 05:23:26 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/java-wakeonlan/java-wakeonlan-0.3.0.ebuild,v 1.2 2004/02/18 20:00:27 zx Exp $
 
 inherit java-pkg
 
@@ -25,19 +25,16 @@ src_compile() {
 	rm lib/commons-cli-1.0.jar
 	rm lib/commons-logging.jar
 
-	CLASSPATH=`java-config --classpath=commons-logging`
-	CLASSPATH=${CLASSPATH}:`java-config --classpath=commons-cli
+	CLASSPATH=`java-config --classpath=commons-logging,commons-cli`
 	ant -Dbuild.classpath=${CLASSPATH} deploy || die
-	use doc && ant -Dbuild.classpath=${CLASSPATH} javadoc || die
+	use doc && ant -Dbuild.classpath=${CLASSPATH} javadoc
 }
 
 src_install() {
 	java-pkg_dojar deploy/wakeonlan.jar
 
 	local my_cp
-	my_cp=`java-config --classpath=commons-logging
-	my_cp=${my_cp}:`java-config --classpath=commons-cli`
-	my_cp=${my_cp}:`java-config --classpath=java-wakeonlan`
+	my_cp=`java-config --classpath=commons-logging,commons-cli,java-wakeonlan`
 
 	echo "#!/bin/sh" > ${PN}
 	echo '${JAVA_HOME}'/bin/java -cp ${my_cp} wol.WakeOnLan '$*' >> ${PN}

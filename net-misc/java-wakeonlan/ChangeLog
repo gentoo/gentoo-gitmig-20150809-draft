@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/java-wakeonlan
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/java-wakeonlan/ChangeLog,v 1.1 2004/02/15 05:23:26 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/java-wakeonlan/ChangeLog,v 1.2 2004/02/18 20:00:27 zx Exp $
+
+  18 Feb 2004; Chris Aniszczyk <zx@gentoo.org> java-wakeonlan-0.3.0.ebuild:
+  Bug Fix #41663
 
 *java-wakeonlan-0.3.0 (15 Feb 2004)
 
