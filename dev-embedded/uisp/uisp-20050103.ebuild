@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/uisp/uisp-20050103.ebuild,v 1.1 2005/01/02 23:39:50 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/uisp/uisp-20050103.ebuild,v 1.2 2005/03/21 03:21:48 vapier Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE=""
 S=${WORKDIR}/${PN}
 
