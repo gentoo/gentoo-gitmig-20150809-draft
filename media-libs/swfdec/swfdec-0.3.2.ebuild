@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.3.2.ebuild,v 1.2 2004/11/23 21:18:19 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/swfdec-0.3.2.ebuild,v 1.3 2005/03/23 16:18:18 seemant Exp $
 
 inherit eutils
 
@@ -21,7 +21,7 @@ RDEPEND=">=dev-libs/glib-2
 	sdl? ( media-libs/libsdl )
 	mad? ( media-sound/madplay )
 	>=sys-libs/zlib-1.1.4
-	mozilla? ( >=net-www/mozilla-1.0.0 )"
+	mozilla? ( >=www-client/mozilla-1.0.0 )"
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"

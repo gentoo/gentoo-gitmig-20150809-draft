@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/swfdec
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/ChangeLog,v 1.12 2004/11/23 21:18:19 sekretarz Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/swfdec/ChangeLog,v 1.13 2005/03/23 16:18:18 seemant Exp $
+
+  23 Mar 2005; Seemant Kulleen <seemant@gentoo.org> swfdec-0.2.2.ebuild,
+  swfdec-0.2.2-r1.ebuild, swfdec-0.3.1.ebuild, swfdec-0.3.2.ebuild:
+  change dep from net-www/mozilla to www-client/mozilla
 
   23 Nov 2004; Karol Wojtaszek <sekretarz@gentoo.org> swfdec-0.3.2.ebuild:
   Keyworded ~amd64, bug #71270

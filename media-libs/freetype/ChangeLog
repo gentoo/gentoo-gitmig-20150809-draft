@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freetype
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.72 2005/03/18 19:47:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.73 2005/03/23 16:18:01 seemant Exp $
+
+  23 Mar 2005; Seemant Kulleen <seemant@gentoo.org>
+  freetype-2.1.9-r1.ebuild:
+  change dep from net-www/mozilla to www-client/mozilla
 
   18 Mar 2005; Seemant Kulleen <seemant@gentoo.org>
   freetype-2.1.9-r1.ebuild:
