@@ -1,14 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/cm-2.4.0.ebuild,v 1.6 2004/03/01 04:18:01 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cm/cm-2.4.2.ebuild,v 1.1 2004/03/01 04:18:01 eradicator Exp $
 
 DESCRIPTION="Common Music: An object oriented music composition environment in LISP/scheme"
-HOMEPAGE="http://www-ccrma.stanford.edu/software/cm/doc/cm.html"
-SRC_URI="ftp://ftp-ccrma.stanford.edu/pub/Lisp/cm/sources/${P}.tar.gz"
+HOMEPAGE="http://commonmusic.sourceforge.net"
+SRC_URI="mirror://sourceforge/commonmusic/${P}.tar.gz"
+RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 DEPEND=">=guile-1.6.4"
 RDEPEND="${DEPEND}"
@@ -44,7 +45,7 @@ pkg_postinst() {
 	chmod +x /usr/bin/cm
 }
 
-# This will break upgrades... find a better way
+#This will break upgrades
 #pkg_prerm() {
 #	if [ -e /usr/bin/cm ]; then
 #	    rm /usr/bin/cm
