@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptplug/cryptplug-0.3.16-r1.ebuild,v 1.1 2004/08/08 03:19:52 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptplug/cryptplug-0.3.16-r1.ebuild,v 1.2 2004/08/16 11:48:33 dragonheart Exp $
 
 inherit eutils
 
@@ -18,19 +18,17 @@ RDEPEND="=app-crypt/gpgme-0.3.14-r1
 
 DEPEND="${RDEPEND}
 	sys-apps/gawk
-	sys-apps/grep
-	sys-devel/autoconf"
+	sys-apps/grep"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/cryptplug-0.3.16-64bit.dif
 	epatch ${FILESDIR}/cryptplug-0.3.16-initialize-fix.diff
-	epatch ${FILESDIR}/gpgme3.patch
 }
 
 src_compile() {
-	autoconf || die "autoconfigure failed"
+	export GPGME_CONFIG=${ROOT}/usr/bin/gpgme3-config
 	econf || "configure failed"
 	emake || "make failed"
 }
