@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_rc1000.ebuild,v 1.1 2001/07/01 18:39:34 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_rc1000.ebuild,v 1.2 2001/09/02 19:36:48 lamer Exp $
 
 P=dhcp-3.0rc10
 A="${P}.tar.gz"
@@ -92,6 +92,8 @@ src_install () {
     dodoc ANONCVS CHANGES COPYRIGHT README RELNOTES
     docinto doc
     dodoc  doc/*
+	 insinto /etc/rc.d/init.d
+	 doexe ${FILESDIR}/dhcp
 }
 
 
