@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-back/gnustep-back-0.8.8.ebuild,v 1.3 2004/02/07 00:59:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-back/gnustep-back-0.8.8.ebuild,v 1.4 2004/04/03 23:06:03 spyderous Exp $
 
 IUSE=""
 
@@ -18,7 +18,7 @@ DEPEND="=dev-util/gnustep-gui-${PV}*
 	>=media-libs/tiff-3.5.7
 	>=media-libs/jpeg-6b-r2
 	>=media-libs/freetype-2*
-	>=x11-base/xfree-4.3.0
+	virtual/x11
 	>=x11-wm/windowmaker-0.80.1"
 
 PATCHES1="${FILESDIR}/${PN}-0.8.5.xft2.patch"

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-back/gnustep-back-0.7.9.ebuild,v 1.6 2003/09/06 20:28:40 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-back/gnustep-back-0.7.9.ebuild,v 1.7 2004/04/03 23:06:03 spyderous Exp $
 
 DESCRIPTION="GNUstep GUI backend"
 HOMEPAGE="http://www.gnustep.org"
@@ -11,7 +11,7 @@ KEYWORDS="x86 -ppc -sparc "
 DEPEND=">=dev-util/gnustep-gui-0.7.9
 	>=media-libs/tiff-3.5.7
 	>=media-libs/jpeg-6b-r2
-	x11-base/xfree
+	virtual/x11
 	>=x11-wm/windowmaker-0.80.1"
 S=${WORKDIR}/${P}
 
