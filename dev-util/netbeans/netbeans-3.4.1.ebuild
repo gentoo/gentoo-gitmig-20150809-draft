@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-3.4.1.ebuild,v 1.3 2003/02/15 07:31:23 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-3.4.1.ebuild,v 1.4 2003/05/26 10:49:11 absinthe Exp $
 
-IUSE=""
+IUSE="kde gnome"
 
 MY_BUILD=200301202341
 MY_P=NetBeansIDE-release341
@@ -12,7 +12,7 @@ SRC_URI="http://www.netbeans.org/download/release341/night/build${MY_BUILD}/${MY
 HOMEPAGE="http://www.netbeans.org"
 
 SLOT="0"
-LICENSE="GPL-2 Apache-1.1 sun-bcla JPython SPL"
+LICENSE="GPL-2 Apache-1.1 sun-bcla-j2ee JPython SPL"
 KEYWORDS="x86 sparc alpha ppc"
 #still need to add JPython, Sun Public and DynamicJava licenses
 #sun-j2ee actually contains Sun Binary Code license
@@ -57,6 +57,9 @@ src_install() {
 	dohtml CHANGES.html CREDITS.html README.html netbeans.css
 	# note: docs/ are docs used internally by the IDE
 	cp -Rdp beans bin docs lib modules sources system ${D}/opt/${P}
+	cp ${FILEDIR}/netbeans ${S}/netbeans
+	echo "/opt/${P}/bin/runide.sh \$*" >> ${S}/netbeans
+	dobin ${S}/netbeans
 
 	# If either Gnome or KDE are installed, then install the icons.
 	if [ "`use gnome || use kde`" ] ; then
@@ -86,7 +89,7 @@ src_install() {
 		insinto ${DESKTOP_DIR}
 		doins ${FILESDIR}/${DESKTOP_FILE}
 		echo "Name=NetBeans ${PV}" >> ${D}/${DESKTOP}
-		echo "Exec=/opt/${P}/bin/runide.sh" >> ${D}/${DESKTOP}
+		echo "Exec=/usr/bin/netbeans" >> ${D}/${DESKTOP}
 		echo "Icon=/usr/share/pixmaps/netbeans.png" >> ${D}/${DESKTOP}
 		echo >> ${D}/${DESKTOP}
 	fi
