@@ -1,0 +1,10 @@
+# ChangeLog for app-editor/mp
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.1 2002/04/22 01:52:55 mkennedy Exp $
+
+*mp-3.1.9 (21 Apr 2002)
+
+  21 Apr 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  mp-3.1.9.ebuild, files/digest-mp-3.1.9 :
+  
+  New ebuild. Rsolves bug #1885.
