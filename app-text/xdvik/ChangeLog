@@ -1,6 +1,12 @@
 # ChangeLog for app-text/xdvik
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.7 2004/03/07 21:54:30 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xdvik/ChangeLog,v 1.8 2004/05/05 11:29:01 usata Exp $
+
+*xdvik-22.40y-r2 (05 May 2004)
+
+  05 May 2004; Mamoru KOMACHI <usata@gentoo.org> xdvik-22.40y-r2.ebuild,
+  xdvik-22.40y.ebuild:
+  Version bumped.
 
   07 Mar 2004; Jon Portnoy <avenj@gentoo.org> xdvik-22.40y-r1.ebuild :
   AMD64 keywords.
