@@ -54,3 +54,4 @@ move app-sci/vienna-rna sci-biology/vienna-rna
 move app-sci/treeviewx sci-biology/treeviewx
 move app-sci/tree-puzzle sci-biology/tree-puzzle
 move app-sci/readseq sci-biology/readseq
+move app-sci/elph sci-biology/elph
