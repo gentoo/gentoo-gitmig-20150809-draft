@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/tkabber-0.9.5b.ebuild,v 1.8 2004/06/24 23:00:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/tkabber-0.9.5b.ebuild,v 1.9 2004/11/26 17:32:15 tester Exp $
 
 DESCRIPTION="Featurefull Jabber client for tcl/tk."
 HOMEPAGE="http://tkabber.jabber.ru/"
@@ -24,6 +24,11 @@ SLOT="0"
 MY_P="$(echo ${P}|sed 's/b$/beta/')"
 SRC_URI="http://www.jabberstudio.org/files/tkabber/${MY_P}.tar.gz"
 S=${WORKDIR}/${MY_P}
+
+src_compile() {
+	# dont run make, because the Makefile is broken with all=install
+	echo -n
+}
 
 src_install() {
 	make DESTDIR=${D} PREFIX=/usr install || die

@@ -1,6 +1,15 @@
 # ChangeLog for net-im/tkabber
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/ChangeLog,v 1.17 2004/08/08 00:02:07 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/ChangeLog,v 1.18 2004/11/26 17:32:15 tester Exp $
+
+*tkabber-0.9.7 (26 Nov 2004)
+
+  26 Nov 2004; Olivier Crete <tester@gentoo.org> -tkabber-0.9.3b-r1.ebuild,
+  -tkabber-0.9.4b.ebuild, +tkabber-0.9.7.ebuild:
+  Bumped to 0.9.7 (thanks to mikovits christian <gaelic@cargal.org>) 
+  Fixed compilation with portage 2.0.51 (thanks to Alexander Kreuzer
+  <a_kreuzer@gmx.de> and Rob Orlowsky <rob_is_not@hotmail.com>)
+  Marked 0.9.6_beta stable on x86 and cleaned up old versions
 
   08 Aug 2004; Tom Martin <slarti@gentoo.org> tkabber-0.9.6_beta.ebuild:
   Typo in DESCRIPTION: writen -> written. Bug 59717.

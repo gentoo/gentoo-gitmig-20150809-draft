@@ -1,13 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/tkabber-0.9.3b-r1.ebuild,v 1.10 2004/06/24 23:00:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/tkabber-0.9.7.ebuild,v 1.1 2004/11/26 17:32:15 tester Exp $
 
-DESCRIPTION="Featurefull Jabber client for tcl/tk."
+DESCRIPTION="Tkabber is a Free and Open Source client for the Jabber instant messaging system, written in Tcl/Tk."
 HOMEPAGE="http://tkabber.jabber.ru/"
+SRC_URI="http://www.jabberstudio.org/files/tkabber/${P}.tar.gz"
 IUSE="crypt ssl"
 
-DEPEND=">=dev-lang/tcl-8.3*
-	>=dev-lang/tk-8.3*
+DEPEND=">=dev-lang/tcl-8.3.3
+	>=dev-lang/tk-8.3.3
 	dev-tcltk/tclxml-expat
 	crypt? ( >=dev-tcltk/tclgpgme-1.0 )
 	>=dev-tcltk/tcllib-1.3
@@ -17,13 +18,13 @@ DEPEND=">=dev-lang/tcl-8.3*
 	>=dev-tcltk/tkTheme-1.0"
 
 LICENSE="GPL-2"
-KEYWORDS="x86"
-
+KEYWORDS="~x86 ~alpha ~sparc"
 SLOT="0"
 
-MY_P="$(echo ${P}|sed 's/b$/beta/')"
-SRC_URI="http://www.jabber.ru/projects/tkabber/tkabber-0.9beta/${MY_P}.tar.gz"
-S=${WORKDIR}/${MY_P}
+src_compile() {
+	# dont run make, because the Makefile is broken with all=install
+	echo -n
+}
 
 src_install() {
 	make DESTDIR=${D} PREFIX=/usr install || die

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/tkabber-0.9.6_beta.ebuild,v 1.5 2004/08/08 00:02:07 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/tkabber/tkabber-0.9.6_beta.ebuild,v 1.6 2004/11/26 17:32:15 tester Exp $
 
 MY_PV="${PV/_beta/beta}"
 DESCRIPTION="Tkabber is a Free and Open Source client for the Jabber instant messaging system, written in Tcl/Tk."
@@ -19,10 +19,15 @@ DEPEND=">=dev-lang/tcl-8.3*
 	>=dev-tcltk/tkTheme-1.0"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~alpha ~sparc"
+KEYWORDS="x86 ~alpha ~sparc"
 SLOT="0"
 
 S="${WORKDIR}/${PN}-${MY_PV}"
+
+src_compile() {
+	# dont run make, because the Makefile is broken with all=install
+	echo -n
+}
 
 src_install() {
 	make DESTDIR=${D} PREFIX=/usr install || die

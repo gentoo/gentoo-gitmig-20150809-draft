@@ -1,10 +1,18 @@
-MD5 c3bf2184cf6cf8b3d26ed55e3405c2b4 tkabber-0.9.5b.ebuild 877
-MD5 94f69c8269f2bedf3016d234ddd2a563 tkabber-0.9.6_beta.ebuild 953
-MD5 6a8fa0cb47f01cd490ee925e88d750b2 tkabber-0.9.4b.ebuild 882
-MD5 5b28a646c25934d9a934e7592e9d08f6 tkabber-0.9.3b-r1.ebuild 886
-MD5 5c7219aa2c7b5851424bf36a32910aa7 ChangeLog 2102
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 661a038d0d892b626002516b93d7f1b3 ChangeLog 2523
 MD5 ea5253373c33b0d50fa8a18d3616c4ba metadata.xml 494
-MD5 a5bfd86cd0c8ead9467cf5f893511aba files/digest-tkabber-0.9.3b-r1 69
+MD5 611739e24bbf4ca611f519b38bdfcdbc tkabber-0.9.5b.ebuild 969
+MD5 9ac0609bbb9bea2419322284d1d90aa9 tkabber-0.9.6_beta.ebuild 1046
+MD5 e0fe8a0ec07042691245d3d372f66fb5 tkabber-0.9.7.ebuild 978
 MD5 7157d1f9fa47d3801d41735957b78e4c files/digest-tkabber-0.9.6_beta 69
-MD5 2de4b5cb9d0e786da7346ec6b85e4ba0 files/digest-tkabber-0.9.4b 69
 MD5 7602cd4d7daafafe0bf585fa67b29bed files/digest-tkabber-0.9.5b 69
+MD5 4e2858f909c71b96869a466c000cc7cd files/digest-tkabber-0.9.7 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBp2jCwDHaUUJ0mYMRAoKjAJ92QpIq2RVt+BSqp+NelgvKeSGKPACdEHfb
+wpScinpXNdDOE2PspY960rU=
+=nsND
+-----END PGP SIGNATURE-----
