@@ -1,3 +1,5 @@
+Note: this is outdated. Do not rely on it!
+
 Notes about moving deps from ebuilds into eclasses
 --------------------------------------------------
 
