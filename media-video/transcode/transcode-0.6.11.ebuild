@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.11.ebuild,v 1.12 2005/02/20 00:14:45 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.11.ebuild,v 1.13 2005/03/09 18:59:01 luckyduck Exp $
 
 inherit libtool flag-o-matic eutils gcc
 
 MY_P="${P/_pre/.}"
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="video stream processing tool"
-HOMEPAGE="http://zebra.fh-weingarten.de/~transcode/"
+HOMEPAGE="http://www.transcoding.org/cgi-bin/transcode"
 SRC_URI="http://www.zebra.fh-weingarten.de/~transcode/pre/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"

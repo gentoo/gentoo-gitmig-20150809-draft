@@ -1,6 +1,13 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.89 2005/02/20 00:14:45 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.90 2005/03/09 18:59:01 luckyduck Exp $
+
+  09 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> transcode-0.6.10.ebuild,
+  transcode-0.6.11.ebuild, transcode-0.6.12-r1.ebuild,
+  transcode-0.6.12-r2.ebuild, transcode-0.6.12.ebuild,
+  transcode-0.6.13-r1.ebuild, transcode-0.6.13.ebuild,
+  transcode-0.6.14.ebuild:
+  updated HOMEPAGE, fixes #84327
 
   20 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> transcode-0.6.11.ebuild,
   transcode-0.6.12-r1.ebuild, transcode-0.6.12-r2.ebuild,
