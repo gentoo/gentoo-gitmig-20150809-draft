@@ -4,10 +4,27 @@
 <author title="Author"><mail link="drobbins@gentoo.org">Daniel Robbins</mail></author>
 
 <version>1.0.3</version>
-<date>16 Aug 2001</date>
+<date>21 Aug 2001</date>
 
 <newsitems>
 	<news align="left" graphic="/images/icon-linux.png">
+		<poster>drobbins</poster>
+		<date>21 Aug 2001</date>
+		<title>Keychain, Hackfest/Development update</title>
+		<body>
+		<p><b>I've now added a <uri link="/projects/keychain">Keychain</uri> project page to the site</b>.  For those who don't
+		know, <c>keychain</c> is a special <uri link="http://www.openssh.com">OpenSSH</uri>-compatible key management app
+		that interfaces with <c>ssh-agent</c> and makes it possible to set up secure connections easily and conveniently
+		-- without typing in a passphrase every time.  The second part of my RSA/DSA authentication article will appear soon
+		on <uri link="http://www.ibm.com/developerworks/linux">IBM developerWorks</uri>.  In the mean time, you may want to check out <uri link="http://www-106.ibm.com/developerworks/library/l-keyc.html">my first RSA/DSA article</uri>, which covers
+		OpenSSH RSA/DSA key-based authentication basics.</p>
+		<p><b>Also, the Hackfest was a big success!</b>  Tons of bugs were stomped, and we now have the second revision of
+		our experimental Gentoo Linux 1.0_rc6 build image (with <e>glibc 2.2.4</e>) so that developers can continue their testing.  Revision three should
+		be out in the next few days and should contain <e>kernel 2.4.8-rc6+</e>.  Along the way, we continue to wipe out huge numbers of bugs, and Gentoo Linux 1.0_rc6 certainly looks like it's going to be the most refined version of Gentoo Linux yet.
+		</p>
+		</body>
+	</news>
+	<news align="right" graphic="/images/icon-linux.png">
 		<poster>drobbins</poster>
 		<date>16 Aug 2001</date>
 		<title>New IBM dW tutorial, Hackfest, LWN</title>
@@ -18,7 +35,7 @@
 		<p>And third, <b>a new issue of <uri link="http://www.lwn.net">the Linux Weekly News</uri> is now online</b>.  I'm a big fan of LWN, and if you want to keep up with what is going on in the Linux world, it's always a good idea to head over to <uri>http://www.lwn.net</uri> every Thursday and give it a read.</p>
 		</body>
 	</news>
-<news align="right" graphic="/images/icon-stick1.png">
+<news align="left" graphic="/images/icon-stick1.png">
 		<poster>drobbins</poster>
 		<date>14 Aug 2001</date>
 		<title>Web site updates</title>
@@ -55,7 +72,7 @@ Right now, the XML component of the news system is complete, and Thread (dev-wik
 		</p>
 		</body>
 	</news>
-	<news align="left" graphic="/images/icon-clock.png">
+	<news align="right" graphic="/images/icon-clock.png">
 		<poster>drobbins</poster>
 		<date>14 Aug 2001</date>
 		<title>Gentoo Linux 1.0_rc6 status update</title>

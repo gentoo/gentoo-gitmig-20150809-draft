@@ -1,0 +1,89 @@
+<?xml version='1.0'?>
+<guide type="project" link="/projects/keychain.html">
+<title>Keychain</title>
+<author title="Author"><mail link="drobbins@gentoo.org">Daniel Robbins</mail></author>
+
+<abstract>
+This page contains information about Keychain, an OpenSSH-compatible RSA/DSA key management
+application for bash.
+</abstract>
+
+<version>1.0</version>
+<date>21 Aug 2001</date>
+
+<chapter>
+<title>Keychain Intro</title>
+<section>
+<body>
+<p>
+Many of us use the excellent <uri
+link="http://www.openssh.com">OpenSSH</uri> as a secure, encrypted replacement
+for the venerable telnet and rsh commands.  One of OpenSSH's more intriguing
+features is its ability to authenticate users using the RSA and DSA
+authentication protocols, which are based upon a pair of complementary
+numerical "keys".  And one of the main appeals of RSA and DSA authentication is the
+promise of being able to establish connections to remote systems <e>without
+supplying a password</e>.  The <c>keychain</c> bash script makes handling RSA and
+DSA keys both convenient and secure.  It acts as a front-end to <c>ssh-agent</c>,
+but allows you to easily have one long-running <c>ssh-agent</c> process <e>per system</e>,
+rather than per login session.  This dramatically reduces the number of times you need
+to enter your passphrase from once per new login session to once <e>every time your local
+machine is rebooted.</e>
+</p>
+</body>
+</section>
+</chapter>
+<chapter>
+<title>The screenshot</title>
+<section>
+<body>
+<figure link="/images/keychain-2.gif" caption="Keychain in action"/>
+
+<p>Above, <c>drobbins</c> logs in to <c>cvs.gentoo.org</c>, and <c>keychain</c>
+(called from <path>~/.bash_profile</path>) starts up.  <c>keychain</c> detects
+a long-running <c>ssh-agent</c> process that already holds <c>drobbins</c>'
+private keys and configures the shell environment appropriately.  Because
+<c>keychain</c> "hooks in" to an existing <c>ssh-agent</c> process,
+<c>drobbins</c> gains access to his keys without typing in his
+passphrases, even though he just opened a brand new login session.  He can now
+establish secure passwordless connections with any host configured to recognize
+these keys.  In fact, <c>drobbins</c> will only need to enter his
+passphrases again after <c>cvs.gentoo.org</c> is rebooted.  That's the only
+time you really need to reinitialize the long-running <c>ssh-agent</c> process.
+</p>
+</body>
+</section>
+</chapter>
+<chapter>
+<title>The IBM developerWorks articles</title>
+<section>
+<body>
+
+<p><c>keychain</c> was first introduced in a series of <uri
+link="http://www.ibm.com/developerworks">IBM developerWorks</uri> articles.
+<b><uri link="http://www-106.ibm.com/developerworks/library/l-keyc.html">The first
+keychain article</uri></b> introduces the concepts behind RSA/DSA key
+authentication and shows you how to set up primitive (with passphrase) RSA/DSA
+authentication, while the <b>second article</b> (<e>coming soon!</e>) shows you how to
+use <c>keychain</c> to set up secure, <e>passwordless</e> <c>ssh</c> access in an
+extremely convenient way.  <c>keychain</c> also provides a clean, secure way for
+<c>cron</c> jobs to take advantage of RSA/DSA keys without having to use insecure
+unencrypted private keys.
+</p>
+</body>
+</section>
+</chapter>
+<chapter>
+<title>The source</title>
+<section>
+<body>
+
+<p>
+The most recent release of <c>keychain</c> can be found here:<br/><br/>
+<uri>http://www.ibiblio.org/gentoo/distfiles/keychain-1.0.tar.bz2</uri>
+</p>
+</body>
+</section>
+</chapter>
+</guide>
+
