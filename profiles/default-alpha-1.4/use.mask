@@ -84,3 +84,6 @@ gnustep
 mzscheme
 
 emul-linux-x86
+
+# Mask intel fortran compiler
+ifc
