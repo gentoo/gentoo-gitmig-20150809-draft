@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.4.0-r1.ebuild,v 1.1 2002/06/18 03:46:41 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.4.0-r1.ebuild,v 1.2 2002/06/18 15:09:15 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="VideoLAN Client - DVD/video player"
@@ -50,12 +50,6 @@ src_unpack() {
 	fi
 	)
 }
-		
-			
-			
-	
-		
-
 
 src_compile(){
 
@@ -125,6 +119,8 @@ src_compile(){
 	# and forcing custom ones generally fails building
 	export CXXFLAGS=""
 	export CFLAGS=""
+	
+	autoconf || die
 	
 	./configure \
 		--prefix=/usr \
