@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.64 2004/07/22 15:29:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.65 2004/07/27 19:25:49 vapier Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -79,9 +79,15 @@ setup-allowed-flags() {
 			amd64)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -fPIC -m64" ;;
 			x86)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -m32" ;;
 			alpha)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -fPIC" ;;
-			ia64)   ALLOWED_FLAGS="${ALLOWED_FLAGS} -fPIC" ;;
+			ia64)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -fPIC" ;;
 		esac
 	fi
+	# allow a bunch of flags that negate features / control ABI
+	ALLOWED_FLAGS="${ALLOWED_FLAGS} -fno-stack-protector -fno-stack-protector-all"
+	case "${ARCH}" in
+		x86|amd64|ia64) ALLOWED_FLAGS="${ALLOWED_FLAGS} -mno-mmx -mno-sse -mno-sse2 -mno-sse3 -mno-3dnow" ;;
+	esac
+	ALLOWED_FLAGS="${ALLOWED_FLAGS} -mregparm -mno-app-regs -mapp-regs -msoft-float -mflat -mno-faster-structs -mfaster-structs -mlittle-endian -mbig-endian -mlive-g0 -mcmodel -mno-stack-bias -mstack-bias"
 
 	# C[XX]FLAGS that we are think is ok, but needs testing
 	# NOTE:  currently -Os have issues with gcc3 and K6* arch's
@@ -223,7 +229,7 @@ strip-flags() {
 	for x in ${CFLAGS}; do
 		for y in ${ALLOWED_FLAGS}; do
 			flag=${x%%=*}
-			if [ "${flag%%${y}}" = "" ] || [ "${flag:0:5}" = "-fno-" ] || [ "${flag:0:5}" = "-mno-" ] ; then
+			if [ "${flag%%${y}}" = "" ] ; then
 				NEW_CFLAGS="${NEW_CFLAGS} ${x}"
 				break
 			fi
@@ -233,7 +239,7 @@ strip-flags() {
 	for x in ${CXXFLAGS}; do
 		for y in ${ALLOWED_FLAGS}; do
 			flag=${x%%=*}
-			if [ "${flag%%${y}}" = "" ] || [ "${flag:0:5}" = "-fno-" ] || [ "${flag:0:5}" = "-mno-" ] ; then
+			if [ "${flag%%${y}}" = "" ] ; then
 				NEW_CXXFLAGS="${NEW_CXXFLAGS} ${x}"
 				break
 			fi
