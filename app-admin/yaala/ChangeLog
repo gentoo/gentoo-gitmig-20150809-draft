@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/yaala
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/yaala/ChangeLog,v 1.7 2004/06/24 21:43:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/yaala/ChangeLog,v 1.8 2004/11/22 22:42:34 swegener Exp $
+
+  22 Nov 2004; Sven Wegener <swegener@gentoo.org> yaala-0.4.2.ebuild,
+  yaala-0.6.3.ebuild:
+  Fixed SRC_URI because it pointed to the wrong file.
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   yaala-0.4.2.ebuild, yaala-0.6.3.ebuild, yaala-0.7.2.ebuild:
