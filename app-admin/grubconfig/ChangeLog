@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/grubconfig
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/grubconfig/ChangeLog,v 1.12 2005/01/01 11:04:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/grubconfig/ChangeLog,v 1.13 2005/01/02 20:17:41 ciaranm Exp $
+
+  02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *grubconfig-1.24 (31 Dec 2004)
 
@@ -14,7 +17,7 @@
 
   13 May 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   +grubconfig-1.22.ebuild:
-  version bump thanks to Dennis Nienhüser <fragfred@gmx.de> in bug #49683
+  version bump thanks to Dennis NienhÃ¼ser <fragfred@gmx.de> in bug #49683
 
 *grubconfig-1.19 (02 Jul 2003)
 
