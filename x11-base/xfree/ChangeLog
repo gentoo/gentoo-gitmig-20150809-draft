@@ -1,8 +1,13 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.22 2002/06/02 21:07:31 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.23 2002/06/06 19:33:10 azarah Exp $
 
 *xfree-4.2.0-r11 (28 May 2002)
+
+  6 Jun 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.0-r11.ebuild :
+
+  Update grep expression to determine if the "xfs" user exist in
+  /etc/init.d/xfs; bug #3314.
 
   2 Jun 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.0-r11.ebuild :
 
