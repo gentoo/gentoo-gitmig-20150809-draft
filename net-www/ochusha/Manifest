@@ -4,7 +4,9 @@ MD5 b4fe2975901591d2cf0bf3322dad6376 ChangeLog 915
 MD5 82312b149570ce80eaa2906b902b5284 ochusha-0.4.4.2.ebuild 721
 MD5 7928a2879da0e7526dcdfdc00d9fe95f ochusha-0.4.5.ebuild 815
 MD5 f87d0f6acda572a753adac50696584cb ochusha-0.4.4.8.ebuild 817
+MD5 5a5d494ca117fb8d040de465d89fc014 ochusha-0.4.5.1.ebuild 815
 MD5 1759a44ef5a502fab7bb3a6c4675e5e7 files/digest-ochusha-0.4.4.1 68
 MD5 026f2b5cb2e9c8a7cede12618933b37e files/digest-ochusha-0.4.4.2 68
 MD5 90fa7bc64322c3e83c28340e282368d4 files/digest-ochusha-0.4.4.8 68
 MD5 b9d154269e48c59d48ec672d92890818 files/digest-ochusha-0.4.5 66
+MD5 c9187f06fef4d6b1cd8c759c0737dd5d files/digest-ochusha-0.4.5.1 68
