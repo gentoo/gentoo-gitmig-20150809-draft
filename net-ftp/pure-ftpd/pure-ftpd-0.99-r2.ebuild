@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Parag Mehta <pm@gentoo.org>
-#$HEADER$
+#$HEADER:$
 
 A=pure-ftpd-0.99.tar.gz
 S=${WORKDIR}/${P}
@@ -29,25 +29,20 @@ src_install () {
     dodoc COPYING ChangeLog README README.Configuration-File 
     dodoc README.Contrib README.LDAP README.Netfilter
     dodir /etc/pure-ftpd
+    dodir /home/ftp	
+    dodir /home/ftp/pub
+    dodir /home/ftp/incoming
     cp $S/configuration-file/*.pl ${D}/usr/sbin/
     cp $S/configuration-file/*.py ${D}/usr/sbin/
     cp $S/configuration-file/pure-ftpd.conf ${D}/etc/pure-ftpd/pure-ftpd.conf
     cp ${FILESDIR}/ftpusers ${D}/etc
     cp ${FILESDIR}/pure-ftpwho_html.py ${D}/usr/sbin/
     cp ${FILESDIR}/pure-ftp_xml_python.py ${D}/usr/sbin/
-    dodir /home/ftp	
-    dodir /home/ftp/pub
-    dodir /home/ftp/incoming
-    chown ftp.bin /home/ftp
-    chown ftp.bin /home/ftp/incoming
-    chmod 757 /home/ftp/incoming
-    chown -R root.root /home/ftp/pub
-    dosym /dev/null /etc/pure-ftpd/127.0.0.1
-    cp ${FILESDIR}/welcome.msg /home/ftp/
+    cp ${FILESDIR}/welcome.msg ${D}/home/ftp/
     echo -e "\033[1;42m\033[1;33m Please do no forget to run, the following syntax : \033[0m"
     echo -e "\033[1;42m\033[1;33m ebuild pure-ftpd-0.99-r1.ebuild config \033[0m"
     echo -e "\033[1;42m\033[1;33m This will add the necessary post install config to your system. \033[0m"
-    read
+    dosym /dev/null /etc/pure-ftpd/127.0.0.1
 }
 
 pkg_config() {
@@ -57,6 +52,10 @@ pkg_config() {
 	read
 	cat ${FILESDIR}/pftpd.inetd >> ${ROOT}/etc/inetd.conf
 	/etc/rc.d/init.d/svc-xinetd restart
+	chown ftp.bin /home/ftp
+    	chown ftp.bin /home/ftp/incoming
+    	chmod 757 /home/ftp/incoming
+    	chown -R root.root /home/ftp/pub
 	echo "Modifications applied."
 }
 
