@@ -1,12 +1,22 @@
-MD5 5dedc02fa91830a13d4317f59bc462cf dbh-1.0.19.ebuild 677
-MD5 f6dd5651873b759082059a16ab8261b4 dbh-1.0.14.ebuild 638
-MD5 42c14a24c51227c0fe68edb2c81a5deb dbh-1.0.20.ebuild 627
-MD5 b8523b5892624deb7ecf013b756fb9b2 dbh-1.0.18.ebuild 677
-MD5 b92a545611bf8409d66f61b5ab72be36 dbh-1.0.15.ebuild 661
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3ce1c6e9ff2dee7f7c6f98a9069d530e ChangeLog 1820
+MD5 f6dd5651873b759082059a16ab8261b4 dbh-1.0.14.ebuild 638
+MD5 b92a545611bf8409d66f61b5ab72be36 dbh-1.0.15.ebuild 661
 MD5 c390804e060ffd11a5bbb143434b2b2d metadata.xml 157
+MD5 824508faddeb96350782210d02218dc8 dbh-1.0.18.ebuild 679
+MD5 5dedc02fa91830a13d4317f59bc462cf dbh-1.0.19.ebuild 677
+MD5 3aa4d9987e9e7213c6337f0eee20375c dbh-1.0.20.ebuild 622
 MD5 afd8debfb4666f9cc38537457bf67cba files/digest-dbh-1.0.14 59
 MD5 b84ef6b6284e6ea8799d5f45bee1e1ba files/digest-dbh-1.0.15 62
 MD5 c5edcef391cd67cc38620b9f097a415a files/digest-dbh-1.0.18 63
 MD5 1e11b57442cfb77f6781374a8c52252e files/digest-dbh-1.0.19 63
 MD5 45e44ad1ac67a3245c5496671ae21ab2 files/digest-dbh-1.0.20 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBiqvJHTu7gpaalycRAtpGAJ4yX6YQ71T32dpAKZ+lGq2sW68k5ACfYg2S
+C0msLkHO83oBU+CYsNKZBiY=
+=aav1
+-----END PGP SIGNATURE-----
