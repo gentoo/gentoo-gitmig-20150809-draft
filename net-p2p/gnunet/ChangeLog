@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/gnunet
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.20 2004/04/26 12:47:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/ChangeLog,v 1.21 2004/04/28 18:41:41 squinky86 Exp $
+
+  28 Apr 2004; Jon Hood <squinky86@gentoo.org> gnunet-0.5.4-r1.ebuild,
+  gnunet-0.5.5.ebuild, gnunet-0.6.0.ebuild, gnunet-0.6.1b.ebuild,
+  gnunet-0.6.1c.ebuild:
+  fix DEPEND for libextractor
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> gnunet-0.5.4-r1.ebuild,
   gnunet-0.5.5.ebuild:

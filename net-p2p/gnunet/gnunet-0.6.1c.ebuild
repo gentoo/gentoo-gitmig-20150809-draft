@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.6.1c.ebuild,v 1.2 2004/03/23 07:08:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.6.1c.ebuild,v 1.3 2004/04/28 18:41:41 squinky86 Exp $
 
 inherit libtool
 
@@ -21,7 +21,7 @@ DEPEND=">=dev-libs/openssl-0.9.6d
 	crypt? ( dev-libs/libgcrypt )
 	gtk? ( =x11-libs/gtk+-1.2* )
 	mysql? ( dev-db/mysql )
-	>=dev-libs/libextractor-0.2.6"
+	>=media-libs/libextractor-0.2.6"
 
 src_compile() {
 	elibtoolize
