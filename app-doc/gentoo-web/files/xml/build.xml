@@ -281,13 +281,14 @@ add a <c>-h myhostname</c> flag to the dhcpcd command line above.
 <body>
 <p>
 We need to setup just enough networking so that we can download
-sources for the system build.  Type in the following commands, replacing
+sources for the system build, as well as the required localhost interface.  Type in the following commands, replacing
 $IFACE with your network interface (typically <c>eth0</c>), $IPNUM
 with your IP address, $BCAST with your broadcast address, and $NMASK
 with your network mask.  For the <c>route</c> command, replace 
 $GTWAY with your default gateway.
 </p>
 <pre>
+# <i>/sbin/ifconfig lo 127.0.0.1 up
 # <i>/sbin/ifconfig $IFACE $IPNUM broadcast $BCAST netmask $NMASK</i>
 # <i>/sbin/route add -net default gw $GTWAY netmask 0.0.0.0 metric 1</i>
 </pre>
