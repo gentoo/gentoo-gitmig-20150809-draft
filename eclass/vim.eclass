@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.93 2005/01/22 19:45:55 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.94 2005/01/22 20:41:11 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -685,7 +685,7 @@ src_test() {
 	ewarn "If the tests fail, your terminal may be left in a strange "
 	ewarn "state. Usually, running 'reset' will fix this."
 	ewarn " "
-	epause 5
+	echo
 
 	# Don't let vim talk to X
 	unset DISPLAY
@@ -704,10 +704,23 @@ src_test() {
 	cd ${S}/src/testdir
 
 	# Test 49 won't work inside a portage environment
+	einfo "Test 49 isn't sandbox-friendly, so it will be skipped."
 	sed -i -e 's~test49.out~~g' Makefile
+
+	# TODO: Find out why this test doesn't work with vim7. Hopefully it'll get
+	# fixed fairly soon. Not worth tracking it down until the hashtables code
+	# stabilises though.. (22 Jan 2005 ciaranm)
+	if version_is_at_least "7.0_alpha20050122" ; then
+		einfo "Test 55 shows some known bugs in new vim7 features. It will"
+		einfo "fail with a segfault, so it will be skipped for now."
+		sed -i -e 's~test55.out~~g' Makefile
+	fi
 
 	# We don't want to rebuild vim before running the tests
 	sed -i -e 's,: \$(VIMPROG),: ,' Makefile
+
+	# Give the user time to read the "what to do if these break" messages
+	epause 10
 
 	# Don't try to do the additional GUI test
 	make VIMPROG=${testprog} nongui \
