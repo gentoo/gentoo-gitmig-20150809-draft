@@ -1,15 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-1.99.12.ebuild,v 1.1 2003/03/14 00:16:56 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/libsoup-1.99.12.ebuild,v 1.2 2003/03/19 14:36:49 liquidx Exp $
 
 IUSE="ssl"
 
-inherit libtool
+inherit gnome.org libtool
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Soup is a SOAP implementation"
 HOMEPAGE="http://www.gnome.org/"
-SRC_URI="ftp://ftp.ximian.com/pub/ximian-evolution-beta/source/${P}.tar.gz"
 
 SLOT="2"
 RDEPEND=">=dev-libs/glib-2.0
