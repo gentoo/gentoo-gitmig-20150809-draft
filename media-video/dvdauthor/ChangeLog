@@ -1,6 +1,11 @@
 # ChangeLog for media-video/dvdauthor
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/ChangeLog,v 1.9 2004/05/16 14:59:22 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/ChangeLog,v 1.10 2004/05/18 18:53:22 vapier Exp $
+
+  18 May 2004; Mike Frysinger <vapier@gentoo.org> metadata.xml,
+  +files/0.6.10-gcc34.patch, dvdauthor-0.6.10.ebuild, -dvdauthor-0.6.8.ebuild,
+  -dvdauthor-0.6.9.ebuild:
+  Add gcc-3.4 patch and clean up old ebuilds.
 
 *dvdauthor-0.6.10 (16 May 2004)
 
