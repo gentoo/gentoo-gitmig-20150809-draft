@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/scim-tables
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/ChangeLog,v 1.3 2003/11/09 12:40:05 liquidx Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-tables/ChangeLog,v 1.4 2004/02/07 07:18:20 liquidx Exp $
+
+*scim-tables-0.3.1 (07 Feb 2004)
+
+  07 Feb 2004; Alastair Tse <liquidx@gentoo.org> scim-tables-0.3.1.ebuild:
+  version bump for scim-0.9.0
 
 *scim-tables-0.3.0 (09 Nov 2003)
 
