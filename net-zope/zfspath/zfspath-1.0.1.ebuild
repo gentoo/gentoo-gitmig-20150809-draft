@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zfspath/zfspath-1.0.1.ebuild,v 1.1 2004/09/25 21:13:06 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zfspath/zfspath-1.0.1.ebuild,v 1.2 2004/09/25 21:19:10 radek Exp $
 
 inherit zproduct
 
@@ -9,6 +9,7 @@ HOMEPAGE="http://zope.org/Members/asterisk/ZFSPath/"
 SRC_URI="http://zope.org/Members/asterisk/ZFSPath/${PV}/ZFSPath-${PV}.tgz"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
+IUSE=""
 RDEPEND=">=net-zope/zope-2.6.4
 	    ${RDEPEND}"
 
