@@ -1,8 +1,13 @@
 # ChangeLog for media-video/avidemux
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.2 2002/11/22 16:29:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.3 2002/12/09 08:06:44 vapier Exp $
 
-*avidemux-0.9-pre18 (06 Okt 2002)
+*avidemux-0.9-pre24 (09 Dec 2002)
+
+  09 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  version bump #11776
+
+*avidemux-0.9-pre22 (22 Nov 2002)
 
   22 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
   version bump #11024
