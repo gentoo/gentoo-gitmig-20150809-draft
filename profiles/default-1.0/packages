@@ -113,6 +113,7 @@
 *<sys-libs/db-3.2.10
 *sys-libs/gdbm  
 <sys-libs/ncurses-5.2.20020112a
+<app-misc/lcdproc-0.4.3
 # Removed since it's really no need for this to be default, and it together 
 # with defaulting to db in /etc/nsswitch.conf breaks evolution >= 0.11.
 # sys-libs/nss-db 
