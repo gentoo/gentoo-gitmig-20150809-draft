@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/fcron-2.0.0-r4.ebuild,v 1.4 2004/04/18 21:14:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/fcron-2.0.0-r4.ebuild,v 1.5 2004/06/09 18:32:46 vapier Exp $
 
 inherit eutils
 
@@ -67,7 +67,7 @@ src_install() {
 	newexe ${FILESDIR}/fcron.rc6 fcron
 
 	dodir /etc
-	install -o root -g root -m 0644 ${FILESDIR}/crontab-2.0.0-r4 ${D}/etc/crontab
+	install -o root -g root -m 0644 ${FILESDIR}/crontab ${D}/etc/crontab
 }
 
 pkg_postinst() {
