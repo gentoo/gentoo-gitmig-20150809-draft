@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/cdtool
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdtool/ChangeLog,v 1.7 2004/09/14 07:25:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdtool/ChangeLog,v 1.8 2004/10/22 02:45:36 pylon Exp $
+
+  22 Oct 2004; Lars Weiler <pylon@gentoo.org> cdtool-2.1.5.ebuild:
+  Stable on ppc.
 
   14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> cdtool-2.1.5.ebuild:
   Stable amd64, sparc.
