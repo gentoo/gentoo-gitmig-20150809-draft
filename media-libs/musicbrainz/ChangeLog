@@ -1,11 +1,16 @@
 # ChangeLog for media-libs/musicbrainz
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.6 2003/01/10 16:49:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/ChangeLog,v 1.7 2003/02/07 22:23:17 rphillips Exp $
 
   10 Jan 2003; Aron Griffis <agriffis@gentoo.org> musicbrainz-1.0.1-r1.ebuild :
   add alpha to KEYWORDS
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+*musicbrains-1.1.0 (07 Feb 2003)
+
+  07 Feb 2003; Ryan Phillips <rphillips@gentoo.org>
+  new version
  
 *musicbrainz-1.0.1-r1 (3 May 2002)
   
