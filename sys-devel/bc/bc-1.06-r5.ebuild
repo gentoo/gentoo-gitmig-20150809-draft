@@ -1,18 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/bc-1.06-r5.ebuild,v 1.2 2003/02/20 10:11:10 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/bc-1.06-r5.ebuild,v 1.3 2003/03/15 02:12:01 seemant Exp $
 
 IUSE="readline"
 
 inherit flag-o-matic
 
-S="${WORKDIR}/${P}"
+S=${WORKDIR}/${P}
 DESCRIPTION="Handy console-based calculator utility"
 SRC_URI="ftp://prep.ai.mit.edu/pub/gnu/bc/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/bc/bc.html"
 
-LICENSE="GPL-2 & LGPL-2.1"
 SLOT="0"
+LICENSE="GPL-2 & LGPL-2.1"
 KEYWORDS="x86 ppc sparc alpha hppa arm"
 
 RDEPEND="readline? ( >=sys-libs/readline-4.1 
@@ -48,6 +48,9 @@ src_compile() {
 
 	# -O2 causes segafults on ppc with zero backtrace :/
 	use ppc && filter-flags "-O2"
+
+	# -Os causes segfaults on x86
+	use x86 && replace-flags "-Os" "-O2"
 	local myconf=""
 	use readline && myconf="--with-readline"
 

@@ -1,8 +1,12 @@
 # ChangeLog for sys-devel/bc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/ChangeLog,v 1.9 2003/02/20 10:11:10 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/ChangeLog,v 1.10 2003/03/15 02:12:01 seemant Exp $
 
 *bc-1.06-r5 (19 Feb 2003)
+
+  14 Mar 2003; Seemant Kulleen <seemant@gentoo.org> bc-1.06-r3.ebuild,
+  bc-1.06-r3.ebuild, bc-1.06-r4.ebuild, bc-1.06-r4.ebuild, bc-1.06-r5.ebuild:
+  change -Os to -O2 on x86.  Closes bug #17536 by frank <frbiscani@libero.it>
 
   19 Feb 2003; Mark Guertin <gerk@gentoo.org> bc-1.06-r5.ebuild 
   files/digest-bc-1.06-r5 :
