@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/galan
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/ChangeLog,v 1.13 2004/06/25 00:00:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/galan/ChangeLog,v 1.14 2004/09/22 20:27:27 eradicator Exp $
+
+  22 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  -galan-0.3.0_beta3.ebuild, -galan-0.3.0_beta5.ebuild:
+  Added ~sparc.  Removed old versions.
 
 *galan-0.3.0_beta6 (23 Jun 2004)
 
