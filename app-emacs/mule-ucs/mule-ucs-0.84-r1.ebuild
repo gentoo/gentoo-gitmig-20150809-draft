@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mule-ucs/mule-ucs-0.84-r1.ebuild,v 1.1 2003/12/14 18:27:34 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mule-ucs/mule-ucs-0.84-r1.ebuild,v 1.2 2004/04/06 03:47:37 vapier Exp $
 
-inherit elisp-common
+inherit elisp-common eutils
 
 MY_PN="Mule-UCS"
 MY_P="${MY_PN}-${PV}"
@@ -10,26 +10,23 @@ MY_PATCH="${P}+tats20021216"
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="A character code translator."
+HOMEPAGE="http://www.m17n.org/mule/ http://tats.iris.ne.jp/mule-ucs/"
 SRC_URI="ftp://ftp.m17n.org/pub/mule/Mule-UCS/${MY_P}.tar.gz
 	http://tats.iris.ne.jp/mule-ucs/${MY_PATCH}.diff.gz"
-HOMEPAGE="http://www.m17n.org/mule/
-	http://tats.iris.ne.jp/mule-ucs/"
 
-DEPEND="virtual/emacs"
-SLOT="0"
 LICENSE="GPL-2"
-
+SLOT="0"
 KEYWORDS="x86 alpha sparc ppc"
 
-src_unpack() {
+DEPEND="virtual/emacs"
 
+src_unpack() {
 	unpack ${MY_P}.tar.gz
 	cd ${S}
 	epatch ${DISTDIR}/${MY_PATCH}.diff.gz
 }
 
 src_compile() {
-
 	emacs -q --no-site-file -batch -l mucs-comp.el || die
 	pushd lisp/big5conv
 	emacs -q --no-site-file -batch -l big5-comp.el || die
@@ -40,7 +37,6 @@ src_compile() {
 }
 
 src_install() {
-
 	elisp-install ${MY_PN} lisp/*.el{,c}
 	elisp-install ${MY_PN}/big5conv lisp/big5conv/*.el{,c}
 	elisp-install ${MY_PN}/jisx0213 lisp/jisx0213/*.el{,c}

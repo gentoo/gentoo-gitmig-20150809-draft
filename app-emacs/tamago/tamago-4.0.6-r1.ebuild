@@ -1,19 +1,18 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tamago/tamago-4.0.6-r1.ebuild,v 1.4 2003/11/14 21:23:15 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tamago/tamago-4.0.6-r1.ebuild,v 1.5 2004/04/06 03:48:55 vapier Exp $
 
-inherit elisp
-
-IUSE="canna"
+inherit elisp eutils
 
 DESCRIPTION="Emacs Backend for Sj3 Ver.2, FreeWnn, Wnn6 and Canna"
+HOMEPAGE="http://www.m17n.org/tamago/"
 SRC_URI="ftp://ftp.m17n.org/pub/tamago/${P}.tar.gz
 	http://cgi18.plala.or.jp/nyy/canna/canna-20011204.diff.gz"
-HOMEPAGE="http://www.m17n.org/tamago/"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 ppc sparc alpha"
+IUSE="canna"
 
 DEPEND="virtual/emacs
 	app-arch/gzip
@@ -21,11 +20,9 @@ DEPEND="virtual/emacs
 RDEPEND="virtual/emacs
 	canna? ( app-i18n/canna )"
 
-S="${WORKDIR}/${P}"
 SITEFILE=50tamago-gentoo.el
 
 src_unpack() {
-
 	unpack ${A}
 
 	epatch ${FILESDIR}/${P}-canna-gentoo.patch
@@ -33,13 +30,11 @@ src_unpack() {
 }
 
 src_compile() {
-
 	./configure --prefix=/usr || die
 	emake || die
 }
 
 src_install() {
-
 	dodir ${SITELISP}/${PN}
 	emake prefix=${D}/usr \
 		infodir=${D}/usr/share/info \
@@ -48,7 +43,7 @@ src_install() {
 
 
 	cp ${FILESDIR}/${SITEFILE} ${SITEFILE}
-	if [ -n "`use canna`" ] ; then
+	if use canna ; then
 		cat >>${SITEFILE}<<-EOF
 		(set-language-info "Japanese" 'input-method "japanese-egg-canna")
 
@@ -57,16 +52,15 @@ src_install() {
 
 	elisp-site-file-install ${SITEFILE} || die
 
-	dodoc README.ja.txt COPYING AUTHORS PROBLEMS TODO ChangeLog
+	dodoc README.ja.txt AUTHORS PROBLEMS TODO ChangeLog
 }
 
 pkg_postinst() {
-
 	elisp-site-regen
 
-	if ! grep -q inet /etc/conf.d/canna ; then
+	if ! grep -q inet ${ROOT}/etc/conf.d/canna ; then
 		sed -i -e '/CANNASERVER_OPTS/s/"\(.*\)"/"\1 -inet"/' \
-			/etc/conf.d/canna
+			${ROOT}/etc/conf.d/canna
 
 		einfo
 		einfo "Enabled inet domain socket for tamago."
