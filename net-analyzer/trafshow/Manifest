@@ -1,8 +1,18 @@
-MD5 06a732df181e79d498bd07ecf947d383 trafshow-4.0.ebuild 1026
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 57b33fbb04849ae3b79a22ce0f330868 trafshow-4.0.ebuild 1024
 MD5 a3fdba20f067a10f8271f2facd4b687e trafshow-3.1-r1.ebuild 1027
-MD5 351fa92a71928a4a1888a94d431b254e ChangeLog 1631
+MD5 9424ecb7f6d50e6473e55f989b01eb36 ChangeLog 1629
 MD5 8e8b9393d38df263f07c394765553b01 metadata.xml 243
 MD5 d8609a48097c656e14cb38dc49dbf629 files/digest-trafshow-3.1-r1 60
 MD5 0eaa3123d4ab8173d4f7a1a4be4e1e0f files/digest-trafshow-4.0 60
 MD5 de937e07ac952efc66dbe67616befc58 files/trafshow-3.1-gentoo.patch 492
 MD5 18731bc84348a4cbb851177332ba3596 files/trafshow-4.0-gentoo.patch 745
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCHxi9EZCkKN40op4RAsRXAKDD0sqkfU3zLeI4d32izem6p+odbQCgsoeQ
+PamHNc61RlIrYqJpdl1Ufxk=
+=xMT8
+-----END PGP SIGNATURE-----

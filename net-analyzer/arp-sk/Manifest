@@ -1,6 +1,16 @@
-MD5 cb4a8580acd853df2cfa8a121927fd4b arp-sk-0.0.16.ebuild 714
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 46558dea9c0da1e7b56fd14d7bc819de arp-sk-0.0.16.ebuild 714
 MD5 d924808949cb1a3df3bd76821db8461c arp-sk-0.0.15.ebuild 714
-MD5 72d4b910cad374b5d5ce3bf3cb343fe1 ChangeLog 810
+MD5 3cb5c3faceaf58d88bba0e20c9a40b60 ChangeLog 810
 MD5 26ae62794a9b834a8ec78fcdbedca88f metadata.xml 221
 MD5 2d852875fb5ea2225be214220aeaa83a files/digest-arp-sk-0.0.15 62
 MD5 e2694840772561f489bc2c3b0b48b4ad files/digest-arp-sk-0.0.16 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCHxmAEZCkKN40op4RAkXpAJ4wAVUlrWTbJ5qrPPWnEMyEyafNBQCfQgVH
+SNtiHk1r54RXUk+/yiRT7MM=
+=v2wQ
+-----END PGP SIGNATURE-----
