@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.24 2003/07/14 18:59:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.25 2003/07/18 20:06:03 tester Exp $
+
+  18 Jul 2003; root <root@gentoo.org> ruby-1.6.8-r1.ebuild,
+  files/ruby-1.6.8-fix-x86_64.patch:
+  Added x86_64 patch from redhat, marked stable
 
   14 Jul 2003; Aron Griffis <agriffis@gentoo.org> ruby-1.8.0_pre3.ebuild:
   Fix compilation on newer alpha platforms
