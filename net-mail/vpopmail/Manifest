@@ -1,5 +1,5 @@
-MD5 f97b704e6e990a08f8876556345425a3 ChangeLog 2095
-MD5 f8c674748391f00d1bee16c065a3fcd0 vpopmail-5.2.1-r5.ebuild 5932
+MD5 96fd4a92dca19ab79ac86bbf74f3a12e ChangeLog 2204
+MD5 384c0474695d2b10997d3a6ace64b0b9 vpopmail-5.2.1-r5.ebuild 6040
 MD5 78bfb4b023bf0ac233ceea999da2ab0a files/vpopmail.conf 417
 MD5 9aeca181f86314f09d9cfe99ebe8b7d0 files/vpopmail.diff 2101
 MD5 d388c60820d1ce87e90cbc46a89c6a77 files/digest-vpopmail-5.2.1-r5 327

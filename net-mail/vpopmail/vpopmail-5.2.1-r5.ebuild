@@ -1,18 +1,19 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r5.ebuild,v 1.1 2003/04/04 08:28:58 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r5.ebuild,v 1.2 2003/05/22 22:56:31 mholzer Exp $
+
+IUSE="mysql ipalias"
 
 inherit eutils
 
 # TODO: all ldap, sybase support
 HOMEPAGE="http://www.inter7.com/vpopmail"
 DESCRIPTION="A collection of programs to manage virtual email domains and accounts on your Qmail or Postfix mail servers."
-SRC_URI="http://www.inter7.com/vpopmail/${P}.tar.gz
-	mysql? ( http://gentoo.twobit.net/misc/vpopmail-5.2.1-mysql.diff )"
+SRC_URI="http://www.inter7.com/${PN}/${P}.tar.gz
+	mysql? ( http://gentoo.twobit.net/misc/{P}-mysql.diff )"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc"
-IUSE="mysql"
 DEPEND="sys-apps/sed
 	sys-apps/ucspi-tcp
 	mysql? ( >=dev-db/mysql-3.23* )"
@@ -51,7 +52,6 @@ pkg_setup() {
 }
 
 src_unpack() {
-
 	cd ${WORKDIR}
 	unpack ${P}.tar.gz
 	cd ${S}
@@ -65,11 +65,13 @@ src_unpack() {
 	# Thanks to Vadim Berezniker (vadim@berezniker.com)
 	# This patch backports a bug fix from the devel version re: logons
 	epatch ${FILESDIR}/vpopmail.diff
-
 }
 
 src_compile() {
 	vpopmail_set_homedir
+
+	use ipalias && myopts="${myopts} --enable-ip-alias-domains=y" \
+		|| myopts="${myopts} --enable-ip-alias-domains=n"
 
 	use mysql && myopts="${myopts} --enable-mysql=y \
 			--enable-libs=/usr/include/mysql \
@@ -108,7 +110,6 @@ src_compile() {
 	[ "`use mysql`" ] && echo '#define MYSQL_PASSWORD_FILE "/etc/vpopmail.conf"' >> config.h
 
 	emake || die "Make failed."
-
 }
 
 src_install () {
@@ -171,12 +172,10 @@ pkg_postinst() {
 }
 
 pkg_postrm() {
-
 	vpopmail_set_homedir
 
 	sed "/^40.*\/usr\/bin\/clearopensmtp.*null$/d" /var/spool/cron/crontabs/root > /var/spool/cron/crontabs/root.new
 	mv --force /var/spool/cron/crontabs/root.new /var/spool/cron/crontabs/root
 	einfo "The vpopmail DATA will NOT be removed automatically."
 	einfo "You can delete them manually by removing the ${VPOP_HOME} directory."
-
 }
