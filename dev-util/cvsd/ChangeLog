@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/cvsd
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsd/ChangeLog,v 1.1 2003/07/26 17:31:24 g2boojum Exp $
+
+*cvsd-0.9.19 (26 Jul 2003)
+
+  26 Jul 2003; Grant Goodyear <g2boojum@gentoo.org> cvsd-0.9.19.ebuild,
+  files/cvsd.confd, files/cvsd.init:
+  New package, long overdue, with many thanks to Enrico Morelli (Bug 18380).
+
