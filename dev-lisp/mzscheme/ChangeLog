@@ -1,12 +1,12 @@
 # ChangeLog for dev-lisp/mzscheme
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/mzscheme/ChangeLog,v 1.3 2002/09/08 19:48:50 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/mzscheme/ChangeLog,v 1.4 2002/09/08 19:49:53 karltk Exp $
 
 *mzscheme-201 ( 17 Feb 2002 )
 
   08 Sep 2002; Karl Trygve Kalleberg <karltk@gentoo.org> mzscheme-201.ebuild files/digest-mzscheme-201 :
   New version that actually works. It has potentially some issues with the 
-  collects.
+  collects. Ebuild submitted by Jeremiah Mahler <jmahler@pacbell.net>.
 
 *mzscheme-103_pre1 ( 17 Feb 2002 )
 
