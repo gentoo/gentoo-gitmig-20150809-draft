@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.8.1.ebuild,v 1.8 2004/10/12 03:05:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/opensc/opensc-0.8.1-r1.ebuild,v 1.1 2004/10/13 12:56:24 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="SmartCard library and applications"
 HOMEPAGE="http://www.opensc.org/"
@@ -20,7 +22,9 @@ RDEPEND="ldap? ( net-nds/openldap )
 
 src_unpack() {
 	unpack ${A}
-	use X || echo 'all:'$'\n''install:' > ${S}/src/signer/Makefile.in
+	cd ${S}
+	use X || echo 'all:'$'\n''install:' > src/signer/Makefile.in
+	epatch ${FILESDIR}/${PV}-64bit.patch
 }
 
 src_compile() {
