@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7-r1.ebuild,v 1.4 2003/08/14 12:01:26 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7-r1.ebuild,v 1.5 2003/09/01 10:42:57 taviso Exp $
 
 inherit gnuconfig
 
-IUSE="readline ncurses gtk stroke gnome rplay xinerama cjk perl nls png bidi imlib tcltk debug"
+IUSE="readline ncurses gtk stroke gnome rplay xinerama cjk perl nls png bidi imlib tcltk debug gtk2"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An extremely powerful ICCCM-compliant multiple virtual desktop window manager"
@@ -37,6 +37,8 @@ RDEPEND="readline? ( >=sys-libs/readline-4.1
 		>=dev-libs/expat-1.95.6-r1
 		virtual/x11
 		virtual/xft"
+# XXX: gtk2 perl bindings require dev-perl/gtk2-perl, worth a dependency?
+# XXX: gtk perl bindings require dev-perl/gtk-perl, worth a dependency?
 DEPEND="${RDEPEND} 
 	>=sys-apps/sed-4
 	sys-devel/automake
@@ -183,15 +185,18 @@ src_install() {
 			rm -f ${D}/usr/share/fvwm/perllib/FVWM/Module/Tk.pm
 			toolkits=${toolkits/tcltk/}
 		fi
-		if ! use gtk2; then
-			# Remove the gtk2 bindings (requires gtk2-perl)
+		if ! use gtk; then 
+			# Remove gtk bindings (requires gtk-perl/gtk2-perl)
+			rm -f ${D}/usr/share/fvwm/perllib/FVWM/Module/Gtk.pm
 			rm -f ${D}/usr/share/fvwm/perllib/FVWM/Module/Gtk2.pm
 			toolkits=${toolkits/gtk2/}
-		fi
-		if ! use gtk; then
-			# Remove gtk1 bindings (requires gtk-perl)
-			rm -f ${D}/usr/share/fvwm/perllib/FVWM/Module/Gtk.pm
 			toolkits=${toolkits/gtk/}
+		else
+			if ! use gtk2; then
+				# Just remove the gtk2 bindings (requires gtk2-perl)
+				rm -f ${D}/usr/share/fvwm/perllib/FVWM/Module/Gtk2.pm
+				toolkits=${toolkits/gtk2/}
+			fi
 		fi
 		toolkits=${toolkits// /}
 		if ! test "${toolkits}"; then
