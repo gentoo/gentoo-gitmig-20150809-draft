@@ -1,18 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.0-r1.ebuild,v 1.2 2003/07/20 07:45:01 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.0-r1.ebuild,v 1.3 2003/07/21 06:37:23 raker Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet
 #	theora - package not in portage yet
 #	tremor - package not in portage yet
-#	matroska - talking with vlc developers
+#	matroska - not working yet
 #	gtk2 - still experimental? - need more info
 
 
-IUSE="arts qt ncurses dvd gtk nls 3dfx matrox svga fbcon esd kde X alsa \ 
-      ggi oggvorbis gnome xv oss sdl aalib slp truetype v4l xvid lirc  \
-      wxwindows imlib mozilla dvb"
+IUSE="arts qt ncurses dvd gtk nls 3dfx svga fbcon esd kde X alsa ggi \ 
+      oggvorbis gnome xv oss sdl aalib slp truetype v4l xvid lirc  \
+      wxwindows imlib mozilla dvb matroska debug"
 
 S=${WORKDIR}/${P}
 
@@ -99,7 +99,7 @@ src_unpack() {
 
 src_compile(){
 	local myconf
-	myconf="--enable-release --enable-faad --enable-a52 --enable-dvbpsi"
+	myconf="--enable-faad --enable-a52 --enable-dvbpsi --disable-mga"
 
 	use X || myconf="${myconf} --disable-x11"
 
@@ -108,8 +108,6 @@ src_compile(){
 	use ggi && myconf="${myconf} --enable-ggi"
 
         use 3dfx && myconf="${myconf} --enable-glide"
-
-        use matrox && myconf="${myconf} --enable-mga"
 
         use svga && myconf="${myconf} --enable-svgalib"
 
@@ -175,6 +173,12 @@ src_compile(){
 
 	# Coming in 0.6.1 - For enabling subtitling code
 	# use truetype && myconf="${myconf} --enable-freetype"
+
+	# Matroska support doesn't appear to compile properly yet
+	# use matroska && myconf="${myconf} --enable-mkv"
+
+	use debug && myconf="${myconf} --enable-debug" \
+		|| myconf="${myconf} --enable-release"
 
 	# vlc uses its own ultraoptimized CXXFLAGS
 	# and forcing custom ones generally fails building

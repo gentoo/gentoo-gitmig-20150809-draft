@@ -1,6 +1,15 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.27 2003/07/20 07:45:01 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.28 2003/07/21 06:37:23 raker Exp $
+
+  21 Jul 2003; Nick Hadaway <raker@gentoo.org> vlc-0.6.0-r1.ebuild:
+  Removed the matrox use variable and forced disable-mga as the
+  module is known not to work, slower than other rendering, and will
+  not be updated upstream anymore.
+
+  20 Jul 2003; Nick Hadaway <raker@gentoo.org> vlc-0.6.0-r1.ebuild:
+  Added support for the debug USE variable.  Added the matroska
+  local USE variable.
 
   19 Jul 2003; Nick Hadaway <raker@gentoo.org> vlc-0.6.0-r1.ebuild:
   Added the dvb USE variable.  Added a comment re: truetype for 0.6.1
