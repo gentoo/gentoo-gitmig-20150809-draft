@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.2.4.ebuild,v 1.9 2003/06/07 01:36:56 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.2.4.ebuild,v 1.10 2003/06/10 15:10:00 liquidx Exp $
 
 IUSE="ssl nls mozilla ldap doc spell pda ipv6 kerberos kde"
 
@@ -22,7 +22,7 @@ RDEPEND="app-text/scrollkeeper
 	>=gnome-extra/bonobo-conf-0.16
 	>=gnome-base/bonobo-1.0.21
 	>=gnome-base/gnome-common-1.2
-	>=gnome-extra/gal-0.24
+	=gnome-extra/gal-0.24*
 	=gnome-base/gconf-1.0*
 	>=gnome-extra/gtkhtml-1.1.10
 	>=gnome-base/oaf-0.6.10
@@ -37,9 +37,9 @@ RDEPEND="app-text/scrollkeeper
 	doc?	 ( >=app-text/scrollkeeper-0.3.10-r1 )
 	ssl? ( mozilla? ( >=net-www/mozilla-0.9.9 ) : ( >=dev-libs/openssl-0.9.5 ) )
 	ldap?    ( >=net-nds/openldap-2.0 )
-	pda?     ( >=gnome-extra/gnome-pilot-0.1.61-r2
+	pda?     ( =gnome-extra/gnome-pilot-0.1*
 			>=dev-libs/pilot-link-0.11.5 )
-	spell?   ( >=app-text/gnome-spell-0.5 )
+	spell?   ( <app-text/gnome-spell-1.0 )
 	kerberos? ( app-crypt/mit-krb5 )"
 
 # the pilot-link dep is normally covered by gnome-pilot, but evo
