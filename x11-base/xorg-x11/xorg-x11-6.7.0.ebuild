@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.28 2004/04/18 21:07:28 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.29 2004/04/19 00:36:16 spyderous Exp $
 
 # This is a snapshot of the XORG-RELEASE-1 branch.
 
@@ -139,6 +139,7 @@ DEPEND=">=sys-apps/baselayout-1.8.3
 	dev-lang/perl
 	media-libs/libpng
 	>=sys-apps/portage-2.0.50_pre9
+	!x11-base/xfree
 	!virtual/xft
 	!virtual/x11"
 # x11-libs/xft -- blocked because of interference with xorg's
