@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/ucspi-tcp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.6 2002/09/25 16:52:37 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.7 2002/10/08 13:30:55 raker Exp $
 
 *ucspi-tcp-0.88-r4 (25 Sep 2002)
 
@@ -9,6 +9,10 @@
   New ipv6 patch.  It squashes the ssl patch though. :~| Masked.
 
 *ucspi-tcp-0.88-r3 (02 Sep 2002)
+
+  08 Oct 2002; Nick Hadaway <raker@gentoo.org> ucspi-tcp-0.88-r3.ebuild,
+  files/digest-ucspi-tcp-0.88-r3 :
+  Recreated digest file to hopefully resolve bug #8314 and add RDEPEND.
 
   04 Sep 2002; Nick Hadaway <raker@gentoo.org> ucspi-tcp-0.88-r3.ebuild :
   Updated SRC_URI stanza to support conditional URLs as suggested in bug

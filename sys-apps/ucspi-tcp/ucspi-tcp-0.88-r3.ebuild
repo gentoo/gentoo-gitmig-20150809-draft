@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r3.ebuild,v 1.4 2002/10/05 05:39:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ucspi-tcp-0.88-r3.ebuild,v 1.5 2002/10/08 13:30:55 raker Exp $
 
 IUSE="ssl ipv6"
 
@@ -14,6 +14,7 @@ HOMEPAGE="http://cr.yp.to/${PN}/"
 
 DEPEND="virtual/glibc
 	ssl? ( >=dev-libs/openssl-0.9.6g )"
+RDEPEND="${DEPEND}"
 
 SLOT="0"
 KEYWORDS="x86 sparc sparc64"
