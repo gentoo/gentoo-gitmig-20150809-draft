@@ -1,6 +1,11 @@
 # ChangeLog for net-news/leafnode
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/ChangeLog,v 1.15 2003/06/27 06:35:12 blkdeath Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/ChangeLog,v 1.16 2003/06/28 21:48:16 aliz Exp $
+
+*leafnode-1.9.42 (28 Jun 2003)
+
+  28 Jun 2003; Daniel Ahlberg <aliz@gentoo.org> leafnode-1.9.42.ebuild :
+  Comitting directly to stable becuse of severe loss of data bugfixes. Closing #21599.
 
 *leafnode-2.0.0_alpha20030621 (27 Jun 2003)
 
