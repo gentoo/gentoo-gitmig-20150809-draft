@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/drip/drip-0.8.1-r5.ebuild,v 1.10 2004/11/01 01:08:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/drip/drip-0.8.1-r5.ebuild,v 1.11 2005/03/13 01:51:22 luckyduck Exp $
 
 DESCRIPTION="A DVD to DIVX convertor frontend"
 HOMEPAGE="http://drip.sourceforge.net/"
@@ -69,6 +69,7 @@ src_unpack() {
 	aclocal -I macros
 	automake --add-missing
 	autoconf
+	elibtoolize
 }
 
 src_compile() {

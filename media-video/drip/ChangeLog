@@ -1,6 +1,9 @@
 # ChangeLog for media-video/drip
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/drip/ChangeLog,v 1.17 2004/10/13 18:25:40 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/drip/ChangeLog,v 1.18 2005/03/13 01:51:22 luckyduck Exp $
+
+  13 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> drip-0.8.1-r5.ebuild:
+  added libtoolize call, fixes #80904
 
 *drip-0.9.0 (13 Oct 2004)
 
