@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.2-r4.ebuild,v 1.2 2000/11/19 12:17:29 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.2-r4.ebuild,v 1.3 2000/11/30 23:15:06 achim Exp $
 
 P=gcc-2.95.2
 A="gcc-2.95.2.tar.gz 
@@ -31,6 +31,9 @@ SRC_URI="ftp://prep.ai.mit.edu/gnu/gcc/gcc-2.95.2.tar.gz
          ftp://ftp.freesoftware.com/pub/sourceware/gcc/infrastructure/libg++-2.8.1.3-20000914.diff.gz"
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
+DEPEND=">=sys-libs/glibc-2.1.3"
+RDEPEND="$DEPEND
+	 >=sys-apps/bash-2.04"
 
 src_unpack() {
     unpack gcc-2.95.2.tar.gz
@@ -62,19 +65,60 @@ src_compile() {
 	try ${S}/configure --prefix=${T} --enable-version-specific-runtime-libs \
 		       --host=${CHOST} --enable-threads --enable-shared \
 		        --with-local-prefix=${T}/local --enable-nls 
-					       
-	try make bootstrap-lean
+	# Parallel build does not work				       
+	try make ${MAKEOPTS} bootstrap-lean
 }
 
-src_install() {      
+src_install() { 
+  
 	try make install prefix=${D}${T} mandir=${D}${T}/man 
-        FULLPATH=${D}${T}/lib/gcc-lib/i686-pc-linux-gnu/2.95.2
+        FULLPATH=${D}${T}/lib/gcc-lib/${CHOST}/${PV}
 	cd ${FULLPATH}
 	dodir /lib
-	dosym	${T}/lib/gcc-lib/i686-pc-linux-gnu/2.95.2/cpp /lib/cpp
+	dosym	${T}/lib/gcc-lib/${CHOST}/${PV}/cpp /lib/cpp
 	dosym   /usr/bin/gcc /usr/bin/cc
+
+	
 	cd ${S}
-	dodoc COPYING COPYING.LIB README FAQ MAINTAINERS
+	dodoc COPYING COPYING.LIB README* FAQ MAINTAINERS
+	docinto html
+	dodoc faq.html
+	docinto gcc
+	cd ${S}/gcc
+	dodoc BUGS ChangeLog* COPYING* FSFChangeLog* \
+	      LANGUAGES NEWS PROBLEMS README* \
+	      SERVICE TESTS.FLUNK
+	cd ${S}/libchill
+	docinto libchill
+	dodoc ChangeLog
+	cd ${S}/libf2c
+	docinto libf2c
+	dodoc ChangeLog changes.netlib README TODO
+	cd ${S}/libg++
+	docinto libg++
+	dodoc ChangeLog g++FAQ.txt NEWS README* TODO
+	cd ${S}/libiberty
+	docinto libiberty
+	dodoc ChangeLog COPYING.LIB README
+	cd ${S}/libio
+	docinto libio
+	dodoc ChangeLog NEWS README
+	cd dbz
+	docinto libio/dbz
+	dodoc README
+	cd ../stdio
+	docinto libio/stdio
+	dodoc ChangeLog*
+	cd ${S}/libobjc
+	docinto libobjc
+	dodoc ChangeLog README* THREADS*
+	cd ${S}/librx
+	docinto librx
+	dodoc ChangeLog COPYING.LIB DOC
+	cd ${S}/libstdc++
+	docinto libstdc++
+	dodoc ChangeLog NEWS  
+	
 }
 
 
