@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.4.2.ebuild,v 1.4 2004/02/10 14:18:20 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.4.2.ebuild,v 1.5 2004/02/10 22:18:33 spider Exp $
 
 inherit gnome2
 
@@ -40,6 +40,7 @@ RDEPEND=">=dev-libs/glib-2
 DEPEND="${RDEPEND}
 	>=app-text/scrollkeeper-0.3.11
 	>=dev-util/pkgconfig-0.12.0
+	>=dev-util/intltool-0.29
 	>=sys-devel/autoconf-2.58"
 
 PDEPEND="x11-themes/gnome-icon-theme
