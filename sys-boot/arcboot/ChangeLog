@@ -1,6 +1,9 @@
 # ChangeLog for sys-boot/arcboot
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcboot/ChangeLog,v 1.1 2004/08/04 05:32:43 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcboot/ChangeLog,v 1.2 2004/08/13 08:17:17 kumba Exp $
+
+  13 Aug 2004; Joshua Kinard <kumba@gentoo.org> arcboot-0.3.8.2.ebuild:
+  Typo fixes.
 
 *arcboot-0.3.8.2 (04 Aug 2004)
 

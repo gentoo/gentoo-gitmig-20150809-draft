@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcboot/arcboot-0.3.8.2.ebuild,v 1.1 2004/08/04 05:32:43 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/arcboot/arcboot-0.3.8.2.ebuild,v 1.2 2004/08/13 08:17:17 kumba Exp $
 
 inherit eutils
 
@@ -24,9 +24,9 @@ pkg_setup() {
 	# arcboot is for SGI mips machines only, so exclude everyone but them
 	if use mips; then
 		if [ "${PROFILE_ARCH}" = "cobalt" ]; then
-			error "arcboot is a bootloader only for MIPS machines running"
-			error "ARCS firmware, such as SGI Machines.  It is not intended"
-			error "for other kinds of MIPS machines."
+			eerror "arcboot is a bootloader only for MIPS machines running"
+			eerror "ARCS firmware, such as SGI Machines.  It is not intended"
+			eerror "for other kinds of MIPS machines."
 			die "Wrong MIPS Machine Type"
 		fi
 	fi
@@ -37,8 +37,8 @@ pkg_setup() {
 		"SGI IP32"|"SGI O2")		SGI_TARGET="ip32" ;;
 		"SGI Indy"|"SGI Indigo2")	SGI_TARGET="ip22" ;;
 		*)
-			error "Unknown SGI Machine type.  It's possible arcboot is not usable for this machine"
-			error "type yet.  Feel free to make it work and send patches!"
+			eerror "Unknown SGI Machine type.  It's possible arcboot is not usable for this machine"
+			eerror "type yet.  Feel free to make it work and send patches!"
 			die "Unknown SGI Machine Type"
 			;;
 	esac
