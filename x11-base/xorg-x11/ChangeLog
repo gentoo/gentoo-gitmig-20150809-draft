@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.128 2004/09/22 16:11:24 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.129 2004/09/22 16:12:42 spyderous Exp $
+
+  22 Sep 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  -xorg-x11-6.7.99.902.ebuild, -xorg-x11-6.7.99.903.ebuild,
+  -xorg-x11-6.7.99.904.ebuild:
+  Drop 6.7.99.x builds.
 
   22 Sep 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.7.0-r2.ebuild:
