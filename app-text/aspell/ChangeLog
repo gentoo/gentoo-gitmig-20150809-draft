@@ -1,8 +1,13 @@
 # ChangeLog for app-text/aspell
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.12 2002/09/03 10:48:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/ChangeLog,v 1.13 2002/09/09 23:29:19 cselkirk Exp $
 
 *aspell-0.50.1 (03 Sep 2002)
+
+  10 Sep 2002; Calum Selkirk <cselkirk@gentoo.org> aspell-0.50.1.ebuild :
+
+  Added a if ARCH = ppc and set CXXFLAGS to be less aggressive (it segfaults
+  on ppc with higher opts).
 
   03 Sep 2002; Seemant Kulleen <seemant@gentoo.org> aspell-0.50.1.ebuild
   files/digest-aspell-0.50.1 :
