@@ -1,5 +1,7 @@
 # /lib/rcscripts/addons/raid-start.sh:  Setup raid volumes at boot
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/raidtools/files/raid-start.sh,v 1.1 2005/03/02 04:29:58 vapier Exp $
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/raidtools/files/raid-start.sh,v 1.2 2005/03/02 15:20:35 vapier Exp $
 
 [[ -f /proc/mdstat ]] || exit 0
 

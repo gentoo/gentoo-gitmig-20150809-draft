@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/raidtools/raidtools-1.00.3-r4.ebuild,v 1.1 2005/03/02 04:29:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/raidtools/raidtools-1.00.3-r4.ebuild,v 1.2 2005/03/02 15:20:35 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -44,8 +44,8 @@ src_compile() {
 
 src_install() {
 	make install ROOTDIR="${D}" || die
-	exeinto /$(get_libdir)/rcscripts/addons
-	doexe "${FILESDIR}"/raid-start.sh || die "addon failed"
+	insinto /$(get_libdir)/rcscripts/addons
+	doins "${FILESDIR}"/raid-start.sh || die "addon failed"
 
 	if ! use build ; then
 		exeinto /etc/cron.daily
