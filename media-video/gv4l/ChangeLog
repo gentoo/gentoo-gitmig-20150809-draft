@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gv4l
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gv4l/ChangeLog,v 1.1 2004/04/20 22:54:37 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gv4l/ChangeLog,v 1.2 2004/04/21 13:43:32 kanaka Exp $
+
+  21 Apr 2004; Joel Martin <kanaka@gentoo.org> gv4l-2.2.2.ebuild:
+  Updates from btowe@gbis.com and warder@warder.ath.cx
 
 *gv4l-2.2.2 (20 Apr 2004)
 
