@@ -1,6 +1,12 @@
 # ChangeLog for sci-biology/staden
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/staden/ChangeLog,v 1.7 2005/01/15 02:37:04 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/staden/ChangeLog,v 1.8 2005/01/18 00:18:29 ribosome Exp $
+
+  17 Jan 2005; Olivier Fisette <ribosome@gentoo.org>
+  +files/staden-1.5.3-mutscan.patch, +files/staden-1.5.3-prefinish.patch,
+  files/staden-1.5.3-tk_utils.patch, +files/staden-1.5.3-tracediff.patch,
+  staden-1.5.3.ebuild:
+  Fixed a few compilation bugs.
 
 *staden-1.5.3 (14 Jan 2005)
 
