@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gai/gai-0.5.0_pre6.ebuild,v 1.2 2004/01/11 01:04:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gai/gai-0.5.0_pre6.ebuild,v 1.3 2004/01/11 01:18:50 seemant Exp $
 
 IUSE="opengl gnome"
 
@@ -21,10 +21,24 @@ S=${WORKDIR}/${MY_P}
 
 src_compile() {
 	# works with just set prefix (doesn't hardcode the prefix anywhere)!
+	local myconf
+
+	# Someone please tell upstream that the way to enable/disable things in
+	# configure scripts should be bloody well consistent -- it's in poor taste
+	# and downright incompetent to have to use --with if you want something
+	# and --disable if you don't
+
+	use opengl \
+		&& myconf="${myconf} --with-gl" \
+		|| myconf="${myconf} --disable-gl"
+
+	use gnome \
+		&& myconf="${myconf} --with-gnome" \
+		|| myconf="${myconf} --disable-gnome"
+
 	econf \
 		--prefix=${D}/usr \
-		`use_enable opengl gl` \
-		`use_enable gnome` || die
+		${myconf} || die
 
 	emake || die
 }

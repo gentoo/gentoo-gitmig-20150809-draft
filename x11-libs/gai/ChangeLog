@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/gai
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gai/ChangeLog,v 1.2 2004/01/11 01:04:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gai/ChangeLog,v 1.3 2004/01/11 01:18:50 seemant Exp $
+
+  10 Jan 2004; Seemant Kulleen <seemant@gentoo.org> gai-0.5.0_pre6.ebuild:
+  Upstream needs to learn the definition of consistency -- use_enable and
+  use_with can not be used, unfortunately, because to enable, you have to issue
+  --with and to disable, you have to issue --disable. That's plainly
+  incompetent.
 
   10 Jan 2004; Seemant Kulleen <seemant@gentoo.org> gai-0.5.0_pre6.ebuild:
   switch to use_enable and other cleanups. Thanks to Charles Allen
