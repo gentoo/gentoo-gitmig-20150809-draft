@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.6-r6.ebuild,v 1.10 2004/12/11 23:28:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-1.0.6-r6.ebuild,v 1.11 2005/01/15 19:02:44 solar Exp $
 
 inherit gnuconfig eutils
 
@@ -22,6 +22,10 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/nfs-utils-1.0.6-usn36.patch.gz
+
+	# getrpcbynumber_r is not in the SuSv3 spec. disable it for uClibc
+	cd ${S}
+	epatch ${FILESDIR}/nfs-utils-1.0.6-uclibc.patch
 
 	# rphillips - the rquotad patch is found within the usn36.patch.gz
 	# epatch ${FILESDIR}/nfs-utils-0.3.3-rquotad-overflow.patch
