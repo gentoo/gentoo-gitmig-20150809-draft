@@ -1,10 +1,13 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.10 2003/01/12 14:20:57 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.11 2003/01/30 16:30:06 gerk Exp $
 
 *netpbm-10.11.4 (04 Jan 2002)
 
-  12 Jan 2003; Martin Holzer <mholzer@gentoo.org netpbm-10.11.4.ebuild :
+  30 Jan 2003; Mark Guertin <gerk@gentoo.org> netpbm-10.11.4.ebuild :
+  Set to stable ppc keyword.  Works great here, no more svgalib issues.
+
+  12 Jan 2003; Martin Holzer <mholzer@gentoo.org> netpbm-10.11.4.ebuild :
   Added Prelink ability. Closes #13650
 
   07 Jan 2003; Martin Holzer <mholzer@gentoo.org> netpbm-10.11.4.ebuild :

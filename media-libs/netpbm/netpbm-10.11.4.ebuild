@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.11.4.ebuild,v 1.5 2003/01/12 14:20:57 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.11.4.ebuild,v 1.6 2003/01/30 16:30:06 gerk Exp $
 
 IUSE="svga pic"
 
@@ -16,7 +16,7 @@ DEPEND=">=media-libs/jpeg-6b
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ppc ~sparc"
 
 src_unpack() {
 	unpack ${A}
