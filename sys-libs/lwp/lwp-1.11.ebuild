@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lwp/lwp-1.11.ebuild,v 1.4 2004/07/02 08:49:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lwp/lwp-1.11.ebuild,v 1.5 2004/08/25 23:16:04 griffon26 Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ RDEPEND="virtual/libc"
 src_unpack() {
 	unpack ${A} ; cd ${S}
 
-	use amd64 && epatch ${FILESDIR}/${P}-amd64.patch
+	use amd64 && epatch ${FILESDIR}/lwp-1.10-amd64.patch
 }
 
 src_install() {
