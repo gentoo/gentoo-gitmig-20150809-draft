@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e3fbd9297f37c3e09e596d7c7e27cd18 ChangeLog 787
-MD5 9c7238c314fcf327a963b48c1944c7ca Net-Jabber-1.30.ebuild 550
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 dad27208ae533de3f331ac63648f9844 ChangeLog 860
+MD5 c7a9d828a44f56d37afbdcce6ebafccf Net-Jabber-1.30.ebuild 545
 MD5 0b51403727bf8135dbd58bbc64bcd0e2 Net-Jabber-2.0.ebuild 548
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 35b36fc2bc6259aedc5e9d8c66551214 files/digest-Net-Jabber-1.30 67
 MD5 5b0bcf68557e835b2a811155e8e0ac28 files/digest-Net-Jabber-2.0 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCLHZetG5z4I8BtQoRApS1AJ9gKKATEZoV6Zqu3uIzSgoARI8ndgCfeyNG
-5AXPflU/pAWI7MLweeqwQyk=
-=GA1n
------END PGP SIGNATURE-----
