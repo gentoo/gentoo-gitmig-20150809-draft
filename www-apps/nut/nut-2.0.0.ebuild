@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nut/nut-2.0.0.ebuild,v 1.6 2004/11/08 09:17:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nut/nut-2.0.0.ebuild,v 1.7 2004/11/12 20:14:59 blubb Exp $
 
 inherit fixheadtails
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://nut/source/${PV%.*}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ppc ~alpha"
+KEYWORDS="x86 sparc ppc ~alpha ~amd64"
 IUSE="cgi snmp usb"
 
 RDEPEND="cgi? ( media-libs/gd )
