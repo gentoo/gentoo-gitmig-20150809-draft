@@ -1,8 +1,18 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d91fc6efffe0b18c5e28e1c95505d164 blas-reference-19940131.ebuild 2486
 MD5 f920c1fd6acacbbd0d233918cca37738 blas-reference-19940131-r1.ebuild 2608
-MD5 b253b0759b0066732eb98814cd5f33ac ChangeLog 2538
+MD5 4e67378f3bb4d9cdc38cbc0cb3bf1d46 ChangeLog 2539
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 ba7949ab229d3b52516732fc47caebeb files/digest-blas-reference-19940131-r1 52
 MD5 d5cd617fba85f0c278240f7446ca52c8 files/Makefile.gz 986
 MD5 2d7bae33a1553ed8eccbdb971a459ff2 files/f77-reference 396
 MD5 ba7949ab229d3b52516732fc47caebeb files/digest-blas-reference-19940131 52
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB0yeeI1lqEGTUzyQRAvDWAJ9y0wGV0oUR63xckYWq5u1U3tIbBACdGd3/
+uOYaMleQgxv0kplSlz8Ddi8=
+=QFg6
+-----END PGP SIGNATURE-----
