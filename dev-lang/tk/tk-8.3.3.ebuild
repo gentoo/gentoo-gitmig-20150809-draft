@@ -13,7 +13,7 @@ DESCRIPTION="Tk Widget Set"
 
 DEPEND="virtual/glibc
 		virtual/x11
-		=dev-lang/tcl-${PV}"
+		=dev-lang/tcl-${PV}*"
 
 # hyper-optimizations untested...
 #

@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/tk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.1 2002/02/01 21:53:11 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/ChangeLog,v 1.2 2002/04/26 03:46:18 seemant Exp $
+
+  25 Apr 2002; Seemant Kulleen <seemant@gentoo.org> tk-8.3.3.ebuild :
+
+  Fixed bug #2112 from arndtc@theeggbeater.dyndns.org (Chris Arndt) to reflect
+  that the required tcl version may have a revision number on its ebuild
 
 *tk-8.3.3 (1 Feb 2002)
 
