@@ -1,5 +1,4 @@
 MD5 de6cfa3a8d9b38831705a6438d0c6c6e mplayer-1.0_pre3-r2.ebuild 11240
-MD5 2d23c2a645687d95406c6a7227ab67a3 mplayer-1.0_pre1-r1.ebuild 11452
 MD5 fba3cddc229a860ee10243c57a9e7bcb mplayer-1.0_pre3-r1.ebuild 12055
 MD5 7283c56dd4492e77d4cb57fcdbfc5073 mplayer-1.0_pre2.ebuild 11644
 MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
@@ -12,7 +11,6 @@ MD5 deb1dbbf5879ed31e1b83fb7def5b600 files/digest-mplayer-0.92 355
 MD5 a71fc9832d953424652af1125fb7ea64 files/mplayer-0.90-coreutils-fixup.patch 1857
 MD5 fef9f0571da54ae3df2e804100bd2632 files/vuln01-fix.diff 1231
 MD5 c2d65649f15837c5a326557ded4e47c5 files/mplayer.desktop 119
-MD5 89440216f99b2e09265d46fead5363fb files/digest-mplayer-1.0_pre1-r1 358
 MD5 d74f7136fa5b4fa7d9ef13f8193dfe7c files/digest-mplayer-1.0_pre3-r2 358
 MD5 d74f7136fa5b4fa7d9ef13f8193dfe7c files/digest-mplayer-1.0_pre3 358
 MD5 26a52f084f4d177580ed9ea0187f54e7 files/mplayer-0.90-ppc-benh-2.patch 2049
