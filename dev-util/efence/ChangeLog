@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/efence
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/efence/ChangeLog,v 1.15 2005/02/13 13:06:54 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/efence/ChangeLog,v 1.16 2005/03/02 19:33:59 g2boojum Exp $
+
+  02 Mar 2005; Grant Goodyear <g2boojum@gentoo.org>
+  files/efence-2.4.13-gentoo.diff, efence-2.4.13.ebuild:
+  New patch from ka0ttic for .13 to fix the minor CPPFLAGS where the software 
+  author uses CPPFLAGS instead of CXXFLAGS.
 
 *efence-2.4.13 (13 Feb 2005)
 

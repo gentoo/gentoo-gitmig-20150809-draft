@@ -1,6 +1,5 @@
-diff --exclude='*~' -urN efence.orig/Makefile efence/Makefile
---- efence.orig/Makefile	2005-02-13 07:58:10.983741525 -0500
-+++ efence/Makefile	2005-02-13 08:01:31.238275782 -0500
+--- efence.orig/Makefile	2005-03-01 06:34:34.366480336 -0500
++++ efence/Makefile	2005-03-01 06:37:37.352033238 -0500
 @@ -27,8 +27,8 @@
    endif
  else
@@ -8,7 +7,7 @@ diff --exclude='*~' -urN efence.orig/Makefile efence/Makefile
 -  CFLAGS= -g $(PIC) $(EF_OPTIONS)
 -  CPPFLAGS= -g $(PIC) $(EF_OPTIONS)
 +  CFLAGS+= -g $(PIC) $(EF_OPTIONS)
-+#   CPPFLAGS= -g $(PIC) $(EF_OPTIONS)
++  CXXFLAGS+= -g $(PIC) $(EF_OPTIONS)
    LIBS=-lpthread
    EFENCESO=libefence.so.0.0
  endif
@@ -49,3 +48,18 @@ diff --exclude='*~' -urN efence.orig/Makefile efence/Makefile
  endif
  
  efence_config.h: createconf
+@@ -113,7 +118,7 @@
+ 
+ eftestpp: libefence.a eftestpp.o efencepp.h
+ 	- rm -f eftestpp
+-	$(CXX) $(CPPFLAGS) eftestpp.o libefence.a -o eftestpp $(LIBS)
++	$(CXX) $(CXXFLAGS) eftestpp.o libefence.a -o eftestpp $(LIBS)
+ 
+ $(OBJECTS) tstheap.o eftest.o eftestpp.o: efence.h
+ 
+@@ -121,4 +126,4 @@
+ 	$(CC) $(CFLAGS) -c $< -o $@
+ 
+ .cpp.o:
+-	$(CXX) $(CPPFLAGS) -c $< -o $@
++	$(CXX) $(CXXFLAGS) -c $< -o $@
