@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.203 2005/03/04 13:32:14 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.204 2005/03/15 00:09:42 greg_g Exp $
+
+  15 Mar 2005; Gregorio Guidi <greg_g@gentoo.org> qt-3.3.4-r3.ebuild:
+  Fix compilation when Qt is not already installed (#85076). Use the 'examples'
+  flag to decide whether to build examples and tutorials.
 
   04 Mar 2005; Gregorio Guidi <greg_g@gentoo.org> qt-3.3.4-r3.ebuild:
   Compile tutorials and examples when doc is in USE.

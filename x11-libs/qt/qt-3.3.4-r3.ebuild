@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r3.ebuild,v 1.2 2005/03/04 13:32:14 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.4-r3.ebuild,v 1.3 2005/03/15 00:09:42 greg_g Exp $
 
 inherit eutils flag-o-matic
 
@@ -18,7 +18,7 @@ SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-${SRCTYPE}-${PV}.tar.bz2
 LICENSE="|| ( QPL-1.0 GPL-2 )"
 SLOT="3"
 KEYWORDS="~x86 ~amd64 ~hppa ~mips ~ppc64 ~sparc ~ia64 ~ppc ~alpha"
-IUSE="cups debug doc firebird gif ipv6 mysql nas odbc opengl postgres sqlite xinerama zlib immqt immqt-bc"
+IUSE="cups debug doc examples firebird gif ipv6 mysql nas odbc opengl postgres sqlite xinerama zlib immqt immqt-bc"
 
 DEPEND="virtual/x11 virtual/xft
 	media-libs/libpng
@@ -142,10 +142,13 @@ src_compile() {
 		-fast ${myconf} -dlopen-opengl || die
 
 	emake src-qmake src-moc sub-src || die
-	DYLD_LIBRARY_PATH="${S}/lib:/usr/X11R6/lib:${DYLD_LIBRARY_PATH}" \
-	LD_LIBRARY_PATH="${S}/lib:${LD_LIBRARY_PATH}" emake sub-tools || die
 
-	if use doc; then
+	export DYLD_LIBRARY_PATH="${S}/lib:/usr/X11R6/lib:${DYLD_LIBRARY_PATH}"
+	export LD_LIBRARY_PATH="${S}/lib:${LD_LIBRARY_PATH}"
+
+	emake sub-tools || die
+
+	if use examples; then
 		emake sub-tutorial sub-examples || die
 	fi
 }
@@ -236,7 +239,9 @@ src_install() {
 
 	if use doc; then
 		cp -r ${S}/doc ${D}/${QTBASE}
+	fi
 
+	if use examples; then
 		cd ${S}/examples
 		find . -name Makefile | while read MAKEFILE
 		do
