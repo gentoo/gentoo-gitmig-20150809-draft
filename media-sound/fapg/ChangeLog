@@ -1,0 +1,9 @@
+# ChangeLog for media-sound/fapg
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fapg/ChangeLog,v 1.1 2004/08/09 19:29:49 pkdawson Exp $
+
+*fapg-0.22 (09 Aug 2004)
+
+  09 Aug 2004; Patrick Dawson <pkdawson@gentoo.org> fapg-0.22.ebuild :
+  Initial import.  Ebuild submitted by Dennis Nienhüser <fragfred@gmx.de>.
+  Closes bug #37842.
