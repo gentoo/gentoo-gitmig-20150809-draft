@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metisse/metisse-0.3.3.ebuild,v 1.1 2004/09/03 13:59:25 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metisse/metisse-0.3.3.ebuild,v 1.2 2004/10/03 13:51:23 usata Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ RDEPEND="${DEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ppc"
 
 src_unpack() {
 	unpack ${A}
