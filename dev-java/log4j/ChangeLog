@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/log4j
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.9 2003/12/16 14:41:25 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.10 2003/12/25 20:00:10 weeve Exp $
+
+  25 Dec 2003; Jason Wever <weeve@gentoo.org> log4j-1.2.8.ebuild:
+  Marked stable on sparc due to numerous other packages depending on it that
+  were inappropriately marked stable on sparc.
 
   16 Dec 2003; Jason Wever <weeve@gentoo.org> log4j-1.2.8.ebuild:
   Added ~sparc keyword to fix broken dependencies in dev-java/common-*.
