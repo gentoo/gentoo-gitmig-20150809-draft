@@ -1,0 +1,27 @@
+--- ntfsprogs-1.8.0/ntfsprogs/mkntfs.c.old	2003-11-19 10:31:26.000000000 +0000
++++ ntfsprogs-1.8.0/ntfsprogs/mkntfs.c	2004-02-01 12:57:46.000000000 +0000
+@@ -78,10 +78,22 @@
+ #	define MAJOR(dev)	((dev) >> 8)
+ #	define MINOR(dev)	((dev) & 0xff)
+ #endif
++
++#ifndef SCSI_DISK_MAJOR
++#ifdef SCSI_DISK8_MAJOR
++#define SCSI_DISK_MAJOR(M) ((M) == SCSI_DISK0_MAJOR || \
++	((M) >= SCSI_DISK1_MAJOR && (M) <= SCSI_DISK7_MAJOR) || \
++	((M) >= SCSI_DISK8_MAJOR && (M) <= SCSI_DISK15_MAJOR))
++#else
++#define SCSI_DISK_MAJOR(M) ((M) == SCSI_DISK0_MAJOR || \
++	((M) >= SCSI_DISK1_MAJOR && (M) <= SCSI_DISK7_MAJOR))
++#endif
++#endif
++
+ #ifndef SCSI_BLK_MAJOR
+-#	define SCSI_BLK_MAJOR(m)	((m) == SCSI_DISK_MAJOR || \
+-					 (m) == SCSI_CDROM_MAJOR)
++#define SCSI_BLK_MAJOR(M)  (SCSI_DISK_MAJOR(M) || (M) == SCSI_CDROM_MAJOR)
+ #endif
++
+ #include <limits.h>
+ 
+ #if defined(linux) && defined(_IO) && !defined(BLKSSZGET)

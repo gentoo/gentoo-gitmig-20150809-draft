@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ntfsprogs-1.7.1.ebuild,v 1.3 2003/10/30 02:16:40 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ntfsprogs-1.7.1.ebuild,v 1.4 2004/02/01 13:20:39 plasmaroo Exp $
 
 DESCRIPTION="User tools for NTFS filesystems -- includes: ntsresize, mkntfs,
 ntfsfix, ntfsdefrag"

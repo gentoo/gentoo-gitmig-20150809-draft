@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/ntfsprogs
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.4 2003/11/25 10:25:30 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ChangeLog,v 1.5 2004/02/01 13:20:39 plasmaroo Exp $
+
+  01 Feb 2004; <plasmaroo@gentoo.org> ntfsprogs-1.8.0.ebuild,
+  files/ntfsprogs-1.8.0-2.6-headers.patch:
+  Added a patch to get ntfsprogs to compile on 2.6 headers; closes bug #39106.
 
 *ntfsprogs-1.8.0 (25 Nov 2003)
 

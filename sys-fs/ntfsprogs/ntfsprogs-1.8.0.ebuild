@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ntfsprogs-1.8.0.ebuild,v 1.1 2003/11/25 10:25:30 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/ntfsprogs/ntfsprogs-1.8.0.ebuild,v 1.2 2004/02/01 13:20:39 plasmaroo Exp $
 
 DESCRIPTION="User tools for NTFS filesystems -- includes: ntsresize, mkntfs,
 ntfsfix, ntfsdefrag"
@@ -16,6 +16,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~amd64"
 
 src_compile() {
+	epatch ${FILESDIR}/${P}-2.6-headers.patch
 	sed -i 's:head -1:head -n 1:g' configure getgccver
 
 	econf `use_enable gnome gnome-vfs` || die "Configure failed"
