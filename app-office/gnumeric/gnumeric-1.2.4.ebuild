@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.2.4.ebuild,v 1.2 2004/01/07 23:32:44 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.2.4.ebuild,v 1.3 2004/01/08 00:18:49 foser Exp $
 
 #provide Xmake and Xemake
 inherit virtualx libtool gnome2 eutils
@@ -48,8 +48,12 @@ src_unpack() {
 	cd ${S}
 	# fix problems with libtool-0.28 generated stuff
 	intltoolize --force
+
+	export WANT_AUTOMAKE=1.7
+	export WANT_AUTOCONF=2.5
 	aclocal || die
 	autoconf || die
+	automake -a || die
 
 }
 
