@@ -1,0 +1,10 @@
+# ChangeLog for app-dicts/stardict-oxford-en-zh-gb
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict-oxford-en-zh-gb/ChangeLog,v 1.1 2003/06/04 13:41:13 liquidx Exp $
+
+*stardict-oxford-en-zh-gb-2.1.0 (04 Jun 2003)
+
+  04 Jun 2003; Alastair Tse <liquidx@gentoo.org>
+  stardict-oxford-en-zh-gb-2.1.0.ebuild:
+  new stardict dictionary. see app-dict/stardict's ChangeLog for more.
+
