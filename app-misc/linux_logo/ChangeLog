@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/linux_logo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/linux_logo/ChangeLog,v 1.10 2003/06/07 23:12:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/linux_logo/ChangeLog,v 1.11 2003/08/13 02:14:52 blkdeath Exp $
+
+  12 Aug 2003; Stewart <stewart@gentoo.org> linux_logo-4.07-r1.ebuild:
+  Marked testing for ppc - compled on a PowerMac and all seems well. Please test
+  and report.
 
 *linux_logo-4.07-r1 (07 Jun 2003)
 
