@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Archive-Zip
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Zip/ChangeLog,v 1.26 2005/02/06 23:09:49 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Zip/ChangeLog,v 1.27 2005/03/29 18:32:38 corsair Exp $
+
+  29 Mar 2005; Markus Rothe <corsair@gentoo.org> Archive-Zip-1.14.ebuild:
+  Stable on ppc64
 
   06 Feb 2005; Joshua Kinard <kumba@gentoo.org> Archive-Zip-1.14.ebuild:
   Added ~mips to keywords.

@@ -3,8 +3,8 @@ MD5 4faac4a933cdf9290abee0e9d066048a Archive-Zip-1.05.ebuild 570
 MD5 ebfdaf5e287b89947ea15223ec28998d Archive-Zip-1.06.ebuild 578
 MD5 15c888296d987c52487aa83703461a4e Archive-Zip-1.10.ebuild 594
 MD5 3d0dc9566546c19a80f2a0e6ca291e6b Archive-Zip-1.12.ebuild 581
-MD5 b73d7a60565d8371f978ccd60dc39931 Archive-Zip-1.14.ebuild 582
-MD5 5d1311e8f93462d3c76bdb9ed2022194 ChangeLog 2590
+MD5 c3a158562d0094cdb2dc2b4c60525f8b Archive-Zip-1.14.ebuild 583
+MD5 c75c37d85654194c170321ecfdec3244 ChangeLog 2685
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 0028ec63dd29512330ad2167159d2ba7 files/digest-Archive-Zip-1.05 67
 MD5 0028ec63dd29512330ad2167159d2ba7 files/digest-Archive-Zip-1.05-r1 67
