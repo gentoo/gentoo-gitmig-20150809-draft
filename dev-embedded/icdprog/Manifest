@@ -1,4 +1,4 @@
-MD5 0485693f75dadcdc9339897ad331c9a2 files/digest-icdprog-0.3 61
-MD5 b6fcc153f4910c118731df27c6d199d4 ChangeLog 380
+MD5 90e43d2758b878497bf5126f144aa46e ChangeLog 481
+MD5 7f19840b7130d8e213bc260f8b1bbf60 icdprog-0.3.ebuild 937
 MD5 440de90e4b4f892d4833edbb7b73e841 metadata.xml 402
-MD5 8183188e4e7ab6ddfca0cb27a46bf183 icdprog-0.3.ebuild 929
+MD5 0485693f75dadcdc9339897ad331c9a2 files/digest-icdprog-0.3 61
