@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/eternal-lands
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/ChangeLog,v 1.1 2004/08/27 16:40:01 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/eternal-lands/ChangeLog,v 1.2 2004/08/27 20:10:47 mr_bones_ Exp $
+
+  27 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  eternal-lands-1.0.0.ebuild:
+  unpack in src_unpack; use games.eclass functions; tidy
 
 *eternal-lands-1.0.0 (17 Aug 2004)
 
