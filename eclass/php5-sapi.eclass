@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.37 2005/02/03 11:53:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.38 2005/02/03 21:16:52 robbat2 Exp $
 #
 # eclass/php5-sapi.eclass
 #		Eclass for building different php5 SAPI instances
@@ -196,7 +196,7 @@ php5-sapi_check_awkward_uses() {
 		# this is a PITA to deal with
 		if useq ssl ; then
 			#if [ -n "`strings ${ROOT}/usr/$(get_libdir)/c-client.* 2>/dev/null | grep ssl_onceonlyinit`" ]; then
-			if ! built_with_use virtual/imap-c-client ssl ; then
+			if built_with_use virtual/imap-c-client ssl ; then
 				# the IMAP-SSL arg doesn't parse 'shared,/usr/lib' right
 				enable_extension_with 	"imap-ssl" 		"ssl" 		0
 			else
