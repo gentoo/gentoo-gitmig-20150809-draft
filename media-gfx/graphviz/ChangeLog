@@ -1,6 +1,6 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.10 2003/03/13 10:19:17 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.11 2003/03/19 12:24:43 weeve Exp $
 
   13 Mar 2003; Olivier Reisch <doctomoe@gentoo.org> graphviz-1.8.10-r3.ebuild :
   Marked ppc stable
@@ -13,6 +13,9 @@
   ebuild submitted by Tom Payne <gentoo@tompayne.org>
 
 *graphviz-1.8.10-r3 (21 Jan 2003)
+
+  19 Mar 2003; Jason Wever <weeve@gentoo.org> graphviz-1.8.10-r3.ebuild:
+  Added ~sparc to keywords.
 
   21 Jan 2003; George Shapovalov <george@gentoo.org> graphviz-1.8.10-r3.ebuild :
   Another libpng-1.0 related fix. Now made sure all -lpng are replaced by lpng10, as quite often
