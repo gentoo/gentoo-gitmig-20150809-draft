@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/slocate
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.40 2004/05/22 22:52:04 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/ChangeLog,v 1.41 2004/06/16 01:12:46 mr_bones_ Exp $
+
+  15 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> files/updatedb.conf:
+  Added nnpfs to the PRUNEFS line. (bug #54035)
 
   22 May 2004; Robert Coie <rac@gentoo.org> slocate-2.7-r5.ebuild:
   Add shadow to RDEPEND, it's used in postinst
