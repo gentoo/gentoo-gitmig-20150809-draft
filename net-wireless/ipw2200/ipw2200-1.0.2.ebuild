@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200/ipw2200-1.0.1.ebuild,v 1.4 2005/03/25 18:47:39 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ipw2200/ipw2200-1.0.2.ebuild,v 1.1 2005/03/25 18:47:39 brix Exp $
 
 inherit linux-mod
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="~x86 ~amd64"
 
 IUSE="debug"
 RDEPEND="=net-wireless/ipw2200-firmware-${FW_VERSION}
@@ -63,15 +63,11 @@ src_unpack() {
 		-e "s:^\(CONFIG_IEEE80211_DEBUG\)=.*:\1=$debug:" \
 		${S}/Makefile
 
-	einfo "Patching Makefile to enable WPA"
-	sed -i "s:^# CONFIG_IEEE80211_WPA=:CONFIG_IEEE80211_WPA=:" \
-		${S}/Makefile
-
 	convert_to_m ${S}/Makefile
 }
 
 src_install() {
 	linux-mod_src_install
 
-	dodoc ISSUES CHANGES
+	dodoc CHANGES ISSUES
 }
