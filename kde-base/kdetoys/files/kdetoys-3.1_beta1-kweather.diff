@@ -1,0 +1,11 @@
+diff -ur kdetoys-3.0.7.org/kweather/weatherservice.cpp kdetoys-3.0.7/kweather/weatherservice.cpp
+--- kweather/weatherservice.cpp	Sat Aug 24 09:21:15 2002
++++ kweather/weatherservice.cpp	Sat Aug 24 09:21:50 2002
+@@ -121,6 +121,6 @@
+ 
+ bool WeatherService::exit()
+ {
+-	return kapp->quit();
++	kapp->quit();
+ }
+ 
