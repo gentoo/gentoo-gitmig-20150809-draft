@@ -1,0 +1,32 @@
+# ChangeLog for dev-libs/pnetc
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/pnetc/ChangeLog,v 1.1 2003/07/25 01:03:17 scandium Exp $
+
+*pnetc-0.5.8 (25 Jul 2003)
+
+  25 Jul 2003; Rainer Groesslinger <scandium@gentoo.org> metadata.xml,
+  pnetc-0.5.8.ebuild:
+  Move to dev-dotnet
+
+*pnetc-0.5.8 (17 Jun 2003)
+
+  17 Jun 2003; Rainer Groesslinger <scandium@gentoo.org> pnetc-0.5.8.ebuild:
+  new version
+
+*pnetc-0.5.6 (03 May 2003)
+
+  03 May 2003; Rainer Groesslinger <scandium@gentoo.org> pnetc-0.5.6.ebuild,
+  version bump
+
+*pnetc-0.5.4 (19 Apr 2003)
+
+  19 Apr 2003; Rainer Groesslinger <scandium@gentoo.org> pnetc-0.5.4.ebuild:
+  Version bump to version 0.5.4, please see bug #18635
+
+*pnetc-0.5.0 (24 Feb 2003)
+
+  24 Feb 2003; foser <foser@gentoo.org> pnetc-0.5.0.ebuild ChangeLog :
+  Initial commit
+  Ebuild adapted from the ones provided by 
+  Rainer Groesslinger <rainer.groesslinger@gmx.net> in bug #14148
+
