@@ -1,5 +1,13 @@
 # ChangeLog for app-pda/plptools
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+
+*plptools-0.12 (11 Jan 2004)
+
+  11 Jan 2004; Troy Dack <tad@gentoo.org> plptools-0.11-r1.ebuild,
+  plptools-0.11.ebuild, plptools-0.12.ebuild,
+  files/plptools-0.12-gentoo.patch:
+  Version bump. Addition of kde USE flag. Thanks to Denis Treskunov
+  <daen@list.ru> for the patch. Closes Bug #25170.
 
 *plptools-0.11-r1 (19 Apr 2003)
 
