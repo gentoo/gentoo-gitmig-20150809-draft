@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/horde-3.0.ebuild,v 1.2 2004/12/24 07:24:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/horde/horde-3.0.ebuild,v 1.3 2004/12/27 16:47:40 vapier Exp $
 
 inherit horde
 
@@ -19,7 +19,7 @@ RDEPEND=">=dev-php/mod_php-4.1.0
 
 pkg_setup() {
 	has_version '>=dev-php/mod_php-5' \
-		&& HORDE_PHP_FEATURES="nls session" \
+		&& HORDE_PHP_FEATURES="nls session xml" \
 		|| HORDE_PHP_FEATURES="nls"
 	horde_pkg_setup
 }
