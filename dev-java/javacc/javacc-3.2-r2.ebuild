@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/javacc-3.2-r2.ebuild,v 1.5 2004/10/17 07:28:30 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/javacc-3.2-r2.ebuild,v 1.6 2005/02/04 23:27:29 luckyduck Exp $
 
 inherit java-pkg
 

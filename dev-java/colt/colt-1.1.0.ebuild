@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/colt/colt-1.1.0.ebuild,v 1.8 2005/01/01 18:14:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/colt/colt-1.1.0.ebuild,v 1.9 2005/02/04 23:31:53 luckyduck Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www-itg.lbl.gov/~hoschek/colt/"
 LICENSE="colt"
 IUSE="doc jikes"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~ppc ~amd64"
+KEYWORDS="x86 ~sparc ~ppc amd64"
 
 DEPEND=">=virtual/jdk-1.4
 		dev-java/ant
