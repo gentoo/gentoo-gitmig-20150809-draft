@@ -1,6 +1,10 @@
 # ChangeLog for xfce-base/xffm
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xffm/ChangeLog,v 1.15 2004/03/03 00:54:10 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xffm/ChangeLog,v 1.16 2004/03/03 14:56:32 bcowan Exp $
+
+  03 Mar 2004; Brad Cowan <bcowan@gentoo.org> xffm-4.0.1.ebuild,
+  xffm-4.0.3.ebuild:
+  Added dbh RDEPEND.
 
   02 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org> xffm-4.0.3.ebuild:
   stable on sparc
