@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # Updated by Sebastian Werner <sebastian@werner-productions.de>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.6-r9.ebuild,v 1.2 2002/06/01 11:01:51 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-1.0.6-r9.ebuild,v 1.3 2002/06/01 20:55:10 mkennedy Exp $
 
 
 S=${WORKDIR}/${P}
@@ -26,8 +26,6 @@ DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )
 	>=app-text/scrollkeeper-0.2
 	>=dev-util/intltool-0.11"
-
-SLOT="0"
 
 src_unpack() {
 
@@ -59,6 +57,12 @@ src_unpack() {
 	# 26 May 2002
 
 	patch -p1 < ${FILESDIR}/${P}-mozilla-1.0_rc3.diff || die
+
+	# Here's another patch to fix it for gcc3.1. This is one I
+	# made, and it probably needs to sail upstream
+	# (mkennedy@gentoo.org)
+
+	patch -p1 < ${FILESDIR}/${P}-mozilla-embed-1.0_rc3.diff || die
 	
 
 	# Add missing files
