@@ -1,4 +1,14 @@
-MD5 d1d0b035e190ca8090316200e2003b7a iksemel-1.2.ebuild 761
-MD5 075eb6c042239c7ae656671f3b1920a2 ChangeLog 426
-MD5 c8d58cd9f290135be02110ca872a95eb metadata.xml 224
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5bfb634f47d152d41f199c9252b3b272 iksemel-1.2.ebuild 760
+MD5 d0e7de9cbd10e1961d77d87ef708c194 ChangeLog 511
+MD5 48d1d2ae5f0ce9b82c2d449a4bb89721 metadata.xml 247
 MD5 b19e9299350afa56d319623102bbe0c1 files/digest-iksemel-1.2 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBS7qfcAgAdbxYsnERAkxPAJ4uGn1aE07h8KTCxlNskW9g434NxQCeKvHb
+sl3wRcFVNXnMhkoRvSq6+NM=
+=Qf8m
+-----END PGP SIGNATURE-----
