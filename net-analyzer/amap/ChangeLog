@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/amap
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/ChangeLog,v 1.1 2003/08/03 22:01:50 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/ChangeLog,v 1.2 2003/10/04 15:34:57 iggy Exp $
+
+*amap-4.3 (04 Oct 2003)
+
+  04 Oct 2003; <iggy@gentoo.org> amap-2.7.ebuild, amap-4.3.ebuild:
+  version bump, added a few kewords for testing
 
 *amap-2.7 (03 Aug 2003)
 
