@@ -1,4 +1,4 @@
-MD5 260b251fac07ed1d3ad18d42250c02fc ChangeLog 4085
+MD5 ab7dd6c4ac7ef7bd0ddb76be661d325e ChangeLog 4337
 MD5 bf6f7af7e329d28d0901e174574ae2a9 groff-1.16.1-r1.ebuild 814
 MD5 640fd03ef49ddaab33e8b5427c6e2337 groff-1.18-r3.ebuild 1967
 MD5 5b9b7e3806356dd1d7d4b97056e56b70 groff-1.18-r2.ebuild 1864
@@ -6,7 +6,7 @@ MD5 ef01fb3ceb14724af378c2428d91d2d7 groff-1.17.2-r3.ebuild 2059
 MD5 0687ef3cac785b4ab6c086d5ebe323e2 groff-1.18.1-r1.ebuild 2370
 MD5 1edddbdaef45729082b39ae7efab6d52 groff-1.18.1.ebuild 2015
 MD5 12809870341a9930118762947988cc33 groff-1.18.1-r2.ebuild 2937
-MD5 12809870341a9930118762947988cc33 groff-1.18.1-r3.ebuild 2937
+MD5 075a3080cfa278a8323b22e25b37bf29 groff-1.18.1-r3.ebuild 2933
 MD5 3de83707a0c25509fdb6630bd90e947a files/digest-groff-1.16.1-r1 65
 MD5 e35d3d0986726ce27b9392409d9f6476 files/digest-groff-1.18.1 65
 MD5 2ee48e4557f0e2ca8d674ee94873839e files/digest-groff-1.18-r2 63
