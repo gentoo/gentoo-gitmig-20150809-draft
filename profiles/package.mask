@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <danarmak@gentoo.org> (21 Dec 2002)
+# mask all 3.0.x versions of kdebindings because it doesn't work with qt 3.1.0, which is now
+# in the stable profiles. Use kdebindings 3.1x for qt 3.1x.
+=kde-base/kdebindings-3.0*
+
 # <carpaski@gentoo.org> (21 Dec 2002)
 # Testing for UserPriv compile
 >=sys-apps/portage-2.0.47_pre1
