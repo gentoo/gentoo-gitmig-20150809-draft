@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.13.6.ebuild,v 1.1 2001/04/15 21:45:13 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/librep-0.13.6.ebuild,v 1.2 2001/05/18 21:32:48 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -31,9 +31,10 @@ src_compile() {
 }
 
 src_install() {
-  cd ${S}
-  try make prefix=${D}/usr aclocaldir=/${D}/usr/share/aclocal \
-	   libexecdir=${D}/usr/lib infodir=${D}/usr/share/info install
+  try make DESTDIR=${D} install
+	#	prefix=${D}/usr aclocaldir=/${D}/usr/share/aclocal \
+	#   libexecdir=${D}/usr/lib infodir=${D}/usr/share/info \
+	#   datadir=${D}/usr/share install
 
   insinto /usr/include
   doins src/rep_config.h
