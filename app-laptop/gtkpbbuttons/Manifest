@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e18a67a7d3a479cb52292746369dfb3b ChangeLog 1885
-MD5 758150e4129b6a5f6887433b609fa0a8 gtkpbbuttons-0.4.6b.ebuild 716
-MD5 f9c2cd90b22a6b8fbcf5fc5be38094b5 gtkpbbuttons-0.5.2.ebuild 715
+MD5 3deb023e01f02d5c38ed8e1261efe795 ChangeLog 1974
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 897a9ee3546cc42f25166a5f4fe44ce6 gtkpbbuttons-0.6.3.ebuild 726
-MD5 76bb9f1edead8b5ffb2127b7eceacad5 files/digest-gtkpbbuttons-0.4.6b 71
+MD5 f9c2cd90b22a6b8fbcf5fc5be38094b5 gtkpbbuttons-0.5.2.ebuild 715
+MD5 56c817212bdb062039132066054245c8 gtkpbbuttons-0.6.3.ebuild 726
+MD5 758150e4129b6a5f6887433b609fa0a8 gtkpbbuttons-0.4.6b.ebuild 716
 MD5 827f772a3f1f106036098d403362631b files/digest-gtkpbbuttons-0.5.2 70
+MD5 76bb9f1edead8b5ffb2127b7eceacad5 files/digest-gtkpbbuttons-0.4.6b 71
 MD5 7e032d534717854928b847cc47b399cc files/digest-gtkpbbuttons-0.6.3 70
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA34PtHTu7gpaalycRAqDYAJwMXZCm1NypkyfSZHJHsuB8hMSVIgCg+R+s
-EgBEugahQ0dAPKyD6KEvvlA=
-=cbxE
------END PGP SIGNATURE-----
