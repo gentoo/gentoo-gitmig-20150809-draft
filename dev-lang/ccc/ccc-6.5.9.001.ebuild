@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ccc/ccc-6.5.9.001.ebuild,v 1.1 2003/04/15 01:09:37 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ccc/ccc-6.5.9.001.ebuild,v 1.2 2003/04/18 17:37:05 agriffis Exp $
 #
 # Ebuild contributed by Tavis Ormandy <taviso@sdf.lonestar.org>
 # and edited by Aron Griffis <agriffis@gentoo.org>
@@ -20,16 +20,18 @@ SLOT="0"
 # NOTE: ALPHA Only!
 KEYWORDS="-* ~alpha"
 
-DEPEND="sys-devel/gcc-config
+RDEPEND="virtual/glibc
+	dev-libs/libots
+	>=dev-libs/libcpml-5.2.01-r2"
+
+DEPEND="${RDEPEND}
+	sys-devel/gcc-config
 	app-arch/rpm2targz
 	>=sys-apps/sed-4
 	app-crypt/gnupg
 	>=app-shells/bash-2.05b
+	>=dev-libs/libcpml-5.2.01-r2
 	"
-
-RDEPEND="virtual/glibc
-	dev-libs/libots
-	>=dev-libs/libcpml-5.2.01-r2"
 
 # These variables are not used by Portage, but is used by the functions
 # below.
@@ -55,10 +57,18 @@ src_unpack() {
 
 	# :-NULL safeguards against bash bug.
 	einfo "Decrypting ccc distribution..."
-	gpg --quiet --passphrase-fd 0 --output ${ccc_rpm} \
+	gpg --quiet \
+		--homedir=${T} --no-permission-warning \
+		--no-mdc-warning \
+		--passphrase-fd 0 \
+		--output ${ccc_rpm} \
 		--decrypt ${DISTDIR}/${ccc_rpm}.crypt \
-		<<< ${CCC_LICENSE_KEY:-NULL} >/dev/null 2>&1 || \
+		<<< ${CCC_LICENSE_KEY:-NULL}
+	
+	# Test PIPESTATUS for gpg result since last thing in pipeline is grep
+	if [ ${PIPESTATUS[0]} -ne 0 ]; then
 		die "Sorry, your license key doesnt seem to unlock the distribution"
+	fi
 	
 	ebegin "Unpacking ccc distribution..."
 	# This is the same as using rpm2targz then extracting 'cept that
