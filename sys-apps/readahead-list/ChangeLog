@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/readahead-list
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/readahead-list/ChangeLog,v 1.2 2005/03/23 08:33:12 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/readahead-list/ChangeLog,v 1.3 2005/03/28 10:01:11 robbat2 Exp $
+
+*readahead-list-0.20050328.0142 (28 Mar 2005)
+
+  28 Mar 2005; Robin H. Johnson <robbat2@gentoo.org>
+  +readahead-list-0.20050328.0142.ebuild:
+  New upstream version. Add manpages. Build filelist-order with large file
+  support. Code cleanup.
 
 *readahead-list-0.20050323.0658 (23 Mar 2005)
 
