@@ -1,0 +1,9 @@
+# ChangeLog for app-i18n/manpages-ru
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ru/ChangeLog,v 1.1 2002/11/02 07:22:01 agenkin Exp $
+
+*manpages-ru-0.7 (02 Nov 2002)
+
+  02 Nov 2002; Arcady Genkin <agenkin@gentoo.org> manpages-ru-0.7.ebuild :
+
+  Initial version, submitted by R.a E <raer@mail.ru>.
