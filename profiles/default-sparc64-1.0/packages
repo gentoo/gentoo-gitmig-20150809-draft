@@ -1,4 +1,4 @@
-# This file created automagically by /usr/portage/profiles/default-sparc-1.0/scripts/generate-packages.sh on Wed May  8 02:42:24 CEST 2002
+# This file created automagically by /usr/portage/profiles/default-sparc-1.0/scripts/generate-packages.sh on Wed May  8 23:44:03 CEST 2002
 
 # IMPORTANT: In order to parse this new format, you need Portage 1.6 or later!
 
@@ -169,7 +169,7 @@
 <=sys-apps/tcp-wrappers-7.6-r3
 
 # These lines added by /usr/portage/profiles/default-sparc-1.0/scripts/generate-packages.sh
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc64-1.0/packages,v 1.9 2002/05/08 21:02:13 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc64-1.0/packages,v 1.10 2002/05/08 22:12:56 murphy Exp $
 #
 # Please edit the file packages.sparc, it will be included in
 # packages the next time you run generate-packages.sh
