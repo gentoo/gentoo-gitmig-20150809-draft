@@ -1,4 +1,54 @@
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-mips64-1.4/use.mask,v 1.2 2004/03/14 17:13:46 kumba Exp $
+
 
 # Chris PeBenito <pebenito@gentoo.org>
 # must use a SELinux profile
 selinux
+
+# Paul de Vrieze <pauldv@gentoo.org>
+# There is no java in this profile (if there is it must be available). Without
+# this repoman will fail on apps like sys-libs/db
+java
+
+# Aron Griffis <agriffis@gentoo.org>
+# acl doesn't build on mips atm.  Mask it so that vim quits
+# complaining
+acl
+
+
+# Flags which aren't applicable to mips (Mostly copied from sparc)
+3dfx
+3dnow
+acpi
+afs
+altivec
+apm
+arts
+directfb
+icc
+icc-pgo
+informix
+firebird
+ggi
+lirc
+mmx
+oci8
+sse
+svga
+tcc
+trusted
+voodoo3
+
+
+# And arch keyword flags that don't work
+
+x86
+ppc
+alpha
+hppa
+arm
+amd64
+ia64
+ppc64
+s390
+
