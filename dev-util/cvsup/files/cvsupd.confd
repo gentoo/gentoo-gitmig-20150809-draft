@@ -1,0 +1,7 @@
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsup/files/cvsupd.confd,v 1.1 2003/01/26 20:16:52 g2boojum Exp $
+
+# Passed to /usr/bin/cvsupd
+MYCVSUPD_OPTS="-i unix /dev/log -i linux"
+
