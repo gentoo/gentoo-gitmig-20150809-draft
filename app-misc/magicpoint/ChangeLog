@@ -1,8 +1,12 @@
 # ChangeLog for app-misc/magicpoint
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/magicpoint/ChangeLog,v 1.8 2003/08/15 06:31:40 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/magicpoint/ChangeLog,v 1.9 2003/08/24 20:42:16 usata Exp $
 
 *magicpoint-1.10a (06 Aug 2003)
+
+  25 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> magicpoint-1.10a.ebuild:
+  Fixed emacs dependency problem with inherit elisp.  Added ~alpha,
+  ~ppc and ~sparc keywords.  Changed ~x86 to x86.  Simplified conditionals.
 
   06 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> magicpoint-1.10a.ebuild,
   files/50mgp-mode-gentoo.el, files/magicpoint-1.10a-gentoo.diff:

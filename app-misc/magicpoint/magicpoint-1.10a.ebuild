@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/magicpoint/magicpoint-1.10a.ebuild,v 1.1 2003/08/06 02:11:54 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/magicpoint/magicpoint-1.10a.ebuild,v 1.2 2003/08/24 20:42:16 usata Exp $
 
-use emacs && inherit elisp
+inherit eutils
 
 IUSE="cjk emacs truetype gif nls imlib"
 
@@ -12,15 +12,15 @@ HOMEPAGE="http://www.mew.org/mgp/"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~x86"
+KEYWORDS="x86 ~alpha ~sparc ~ppc"
 
 DEPEND="virtual/x11
+	emacs? ( virtual/emacs )
 	gif? ( >=media-libs/libungif-4.0.1 )
 	imlib? ( media-libs/imlib )
 	cjk? ( truetype? ( >=media-libs/vflib-2.25.6-r1 )
 		: ( =media-libs/freetype-1* ) )
 	truetype? ( =media-libs/freetype-1* )"
-
 RDEPEND="${DEPEND}
 	nls? ( sys-devel/gettext )"
 
@@ -29,6 +29,7 @@ LICENSE="Sleepycat"
 KEYWORDS="~x86"
 
 S=${WORKDIR}/${P}
+SITELISP=/usr/share/emacs/site-lisp
 SITEFILE=50mgp-mode-gentoo.el
 
 src_unpack() {
@@ -42,31 +43,18 @@ src_compile() {
 	local myconf
 
 	if [ -n "`use cjk`" -a -n "`use truetype`" ] ; then
-		myconf="${myconf}
-			--enable-vflib
+		myconf="--enable-vflib
 			--with-vfontcap=/usr/share/VFlib/2.25.6/vfontcap.mgp"
 	else
-		myconf="${myconf} --disable-vflib"
-
-		if [ -n "`use cjk`" ] ; then
-			myconf="${myconf} --enable-freetype-charset16"
-		elif [ -n "`use truetype`" ] ; then
-			myconf="${myconf} --enable-freetype"
-		else
-			myconf="${myconf} --disable-freetype"
-		fi
+		myconf="--disable-vflib
+			`use_enable cjk freetype-charset16`
+			`use_enable truetype freetype`"
 	fi
 
-
-	if [ -n "`use nls`" ] ; then
-		myconf="${myconf} --enable-locale"
-	else
-		myconf="${myconf} --disable-locale"
-	fi
-	
 	econf \
 		`use_enable gif` \
 		`use_enable imlib` \
+		`use_enable nls locale` \
 		--disable-xft2 \
 		${myconf} || die
 
@@ -93,8 +81,8 @@ src_install() {
 	doexe contrib/{mgp2html.pl,mgp2latex.pl}
 
 	if [ -n "`use emacs`" ] ; then
-		elisp-site-file-install contrib/mgp-mode.el
-		elisp-site-file-install ${FILESDIR}/${SITEFILE}
+		insinto ${SITELISP}
+		doins contrib/mgp-mode.el ${FILESDIR}/${SITEFILE}
 	fi
 
 	insinto /usr/share/${PF}/sample
@@ -106,4 +94,20 @@ src_install() {
 	cd -
 
 	dodoc COPYRIGHT* FAQ README* RELNOTES SYNTAX TODO* USAGE*
+}
+
+pkg_postinst() {
+
+	if [ -n "`use emacs`" ] ; then
+		inherit elisp
+		elisp-site-regen
+	fi
+}
+
+pkg_postrm() {
+
+	if [ -n "`use emacs`" ] ; then
+		inherit elisp
+		elisp-site-regen
+	fi
 }
