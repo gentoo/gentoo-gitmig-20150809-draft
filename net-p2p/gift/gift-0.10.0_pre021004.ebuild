@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/gift-0.10.0_pre021004.ebuild,v 1.1 2002/10/05 10:27:33 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/gift-0.10.0_pre021004.ebuild,v 1.2 2002/10/12 03:24:37 jmorgan Exp $
 
 S=${WORKDIR}/giFT
 DESCRIPTION="Lets you connect to OpenFT, a decentralised p2p network like FastTrack"
@@ -8,7 +8,7 @@ SRC_URI="http://dshieldpy.sourceforge.net/${P}.tgz"
 HOMEPAGE="http://gift.sourceforge.net"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc sparc64"
 
 DEPENDS="virtual/glibc
 	zlib? ( >=sys-libs/zlib-1.1.4 )"

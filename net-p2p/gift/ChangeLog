@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/gift
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/ChangeLog,v 1.21 2002/10/05 10:27:33 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift/ChangeLog,v 1.22 2002/10/12 03:24:37 jmorgan Exp $
+
+*gift-0.10.0_pre021004 (12 Oct 2002)
+
+  12 Oct 2002; Jack Morgan <jmorgan@gentoo.org> :
+  Added sparc/sparc64 keywords
 
 *gift-0.10.0_pre021004 (5 Okt 2002) Bart Verwilst <verwilst@gentoo.org>
 

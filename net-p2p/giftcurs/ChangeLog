@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/giftcurs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftcurs/ChangeLog,v 1.8 2002/09/25 22:07:00 sunflare Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftcurs/ChangeLog,v 1.9 2002/10/12 03:27:51 jmorgan Exp $
+
+*giftcurs-0.5.* (25 Sep 2002)
+  
+  12 Oct 2002; Jack Morgan <jmorgan@gentoo.org> giftcurs-0.5.*.ebuild :
+  Added sparc/sparc64 keywords 
 
 *giftcurs-0.5.2 (25 Sep 2002)
   25 Sep 2002; Phil Bordelon <sunflare@gentoo.org> giftcurs-0.5.2.ebuild :
