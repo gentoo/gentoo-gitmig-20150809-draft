@@ -1,0 +1,65 @@
+--- ion-devel-20031211/ion/ion.c	2003-12-09 20:05:34.000000000 +0100
++++ ion/ion/ion.c	2003-12-11 19:03:07.000000000 +0100
+@@ -101,7 +101,7 @@
+ 	 * but that would mean yet another script...
+ 	 */
+ 	mkdir(userdir, 0700);
+-	if(open(oldbeard, O_CREAT|O_RDWR)<0)
++	if(open(oldbeard, O_CREAT|O_RDWR, 0600)<0)
+ 		warn_err_obj(oldbeard);
+ }
+ 
+--- ion-devel-20031211/ioncore/eventh.c	2003-12-01 20:09:50.000000000 +0100
++++ ion/ioncore/eventh.c	2003-12-14 12:52:23.000000000 +0100
+@@ -412,10 +412,10 @@
+ 		return;
+ 
+ 	do{
+-		/*if(eev->mode!=NotifyNormal && !wglobal.warp_enabled)
+-            return;*/
++		if(eev->mode!=NotifyNormal && !wglobal.warp_enabled)
++            continue;
+ 		/*if(eev->detail==NotifyNonlinearVirtual)
+-		    return;*/
++		    continue;*/
+ 
+ 		reg=FIND_WINDOW_T(eev->window, WRegion);
+ 		
+--- ion-devel-20031211/query/querylib.lua	2003-12-07 23:01:37.000000000 +0100
++++ ion/query/querylib.lua	2003-12-11 22:31:54.000000000 +0100
+@@ -152,20 +152,23 @@
+ -- Parameter & Description \\
+ -- \hline
+ -- \var{prompt} & The prompt \\
+--- \var{init} & A function that returns initial input when called. \\
++-- \var{dflt} & Default value to call \var{prog} with \\
+ -- \var{prog} & Program name or a function that returns it when called. \\
+ -- \var{completor} & A completor function. \\
+ -- \end{tabularx}
+-function querylib.make_execwith_fn(prompt, init, prog, completor)
++function querylib.make_execwith_fn(prompt, dflt, prog, completor)
+     local function handle_execwith(frame, str)
+         local p, err=getprog(prog)
+         if p then
++            if not str or str=="" then
++                str=dflt
++            end
+             exec_in(frame, p.." "..string.shell_safe(str))
+         else
+             query_fwarn(frame, err)
+         end
+     end
+-    return querylib.make_frame_fn(prompt, init, handle_execwith, completor)
++    return querylib.make_frame_fn(prompt, nil, handle_execwith, completor)
+ end
+ 
+ --DOC
+@@ -554,7 +557,7 @@
+ --}
+ --\end{verbatim}
+ querylib.query_man=querylib.make_execwith_fn(
+-    "Manual page (ion):", nil,
++    "Manual page (ion):", "ion",
+     querylib.make_script_lookup_fn("ion-man"),
+     querylib.man_completor
+ )
