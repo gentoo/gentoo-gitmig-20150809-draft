@@ -1,5 +1,7 @@
 MD5 3f91ab5fec8022d8221bcca3c17bd4e3 rhythmbox-0.5.1.ebuild 1470
+MD5 58ac622d89f043f7906496cf2e62325a rhythmbox-0.5.3.ebuild 1153
 MD5 d348c2782328bd866222526442ea9447 rhythmbox-0.5.0.ebuild 1482
 MD5 e54a957396305bf5a42f29f6b8b7ddd7 ChangeLog 727
 MD5 ab865b430e07f028d861503a1669dc97 files/digest-rhythmbox-0.5.0 68
 MD5 44fc4699d370d1b03eb5d60c273f755f files/digest-rhythmbox-0.5.1 68
+MD5 a5cac79c211eb4eebac4e1f056736e65 files/digest-rhythmbox-0.5.3 69
