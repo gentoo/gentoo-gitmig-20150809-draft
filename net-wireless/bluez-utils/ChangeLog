@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/bluez-utils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.21 2004/06/15 03:13:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.22 2004/06/17 00:40:08 eradicator Exp $
+
+  16 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  bluez-utils-2.7.ebuild:
+  Readding ~amd64.
 
   14 Jun 2004; Aron Griffis <agriffis@gentoo.org> bluez-utils-2.3-r1.ebuild,
   bluez-utils-2.3-r2.ebuild, bluez-utils-2.3.ebuild, bluez-utils-2.5.ebuild,
