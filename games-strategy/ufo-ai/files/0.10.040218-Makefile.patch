@@ -1,6 +1,21 @@
---- Makefile.orig	2004-02-18 16:37:38.000000000 -0500
-+++ Makefile	2004-03-07 00:56:10.980247752 -0500
-@@ -54,8 +54,8 @@
+--- Makefile.orig	2004-03-11 13:22:44.000000000 +0100
++++ Makefile	2004-03-11 13:25:04.000000000 +0100
+@@ -20,9 +20,14 @@
+ ARCH=axp
+ RPMARCH=alpha
+ else
++ifneq (,$(findstring ppc,$(shell uname -m)))
++ARCH=ppc
++RPMARCH=ppc
++else
+ ARCH=i386
+ RPMARCH=i386
+ endif
++endif
+ NOARCH=noarch
+ 
+ MOUNT_DIR=..
+@@ -54,8 +59,8 @@
  RELEASE_CFLAGS=$(BASE_CFLAGS) -O6 -ffast-math -funroll-loops \
  	-fomit-frame-pointer -fexpensive-optimizations
  else
@@ -11,7 +26,7 @@
  endif
  
  DEBUG_CFLAGS=$(BASE_CFLAGS) -g
-@@ -64,9 +64,9 @@
+@@ -64,9 +69,9 @@
  XLDFLAGS=-L/usr/X11R6/lib -lX11 -lXext -lXxf86dga
  XCFLAGS=
  
@@ -24,7 +39,7 @@
  
  SHLIBEXT=so
  
-@@ -100,6 +100,8 @@
+@@ -100,6 +105,8 @@
  	$(BUILDDIR)/ref_gl.$(SHLIBEXT)
  endif
  
@@ -33,3 +48,14 @@
  build_debug:
  	@-mkdir $(BUILD_DEBUG_DIR) \
  		$(BUILD_DEBUG_DIR)/client \
+--- sys_linux.c.orig	2004-03-11 13:22:48.000000000 +0100
++++ sys_linux.c	2004-03-11 13:22:53.000000000 +0100
+@@ -223,6 +223,8 @@
+ 	const char *gamename = "gamei386.so";
+ #elif defined __alpha__
+ 	const char *gamename = "gameaxp.so";
++#elif defined __powerpc__
++	const char *gamename = "gameppc.so";
+ #else
+ #error Unknown arch
+ #endif
