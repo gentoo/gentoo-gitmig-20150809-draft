@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r8.ebuild,v 1.2 2004/12/14 15:14:03 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r8.ebuild,v 1.3 2004/12/15 06:32:54 lanius Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -88,7 +88,7 @@ src_unpack() {
 	if use gtk; then
 		sed -i -e "s:gmodule:gmodule-2.0:" configure.ac
 		sed -i -e "s:glib-config:pkgconfig:" configure.ac
-		sed -i -e "s:gtk-config:pkg-config gtk-2.0:" src/unix-dll.mak
+		sed -i -e "s:gtk-config:pkg-config gtk+-2.0:g" src/unix-dll.mak
 		sed -i -e "s:CFLAGS_SO=-fPIC:CFLAGS_SO=-fPIC -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include:" Makefile.in
 	else
 		epatch ${FILESDIR}/gs${PV}-nogtk2.patch
