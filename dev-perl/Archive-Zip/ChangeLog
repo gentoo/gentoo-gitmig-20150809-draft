@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Archive-Zip
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Zip/ChangeLog,v 1.25 2004/12/29 22:50:43 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Zip/ChangeLog,v 1.26 2005/02/06 23:09:49 kumba Exp $
+
+  06 Feb 2005; Joshua Kinard <kumba@gentoo.org> Archive-Zip-1.14.ebuild:
+  Added ~mips to keywords.
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
