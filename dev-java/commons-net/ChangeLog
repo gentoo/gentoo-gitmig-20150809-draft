@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/commons-net
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-net/ChangeLog,v 1.19 2004/12/18 09:36:16 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-net/ChangeLog,v 1.20 2004/12/22 20:29:44 karltk Exp $
+
+  22 Dec 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  commons-net-1.3.0.ebuild:
+  Disabled unit tests by default, they can be selectively enabled using the
+  junit useflag. Partial fix for #74541.
 
   18 Dec 2004; Markus Rothe <corsair@gentoo.org> commons-net-1.3.0.ebuild:
   added ~ppc64 to KEYWORDS

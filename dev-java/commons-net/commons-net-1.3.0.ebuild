@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-net/commons-net-1.3.0.ebuild,v 1.2 2004/12/18 09:36:16 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-net/commons-net-1.3.0.ebuild,v 1.3 2004/12/22 20:29:44 karltk Exp $
 
 inherit eutils java-pkg
 
@@ -8,13 +8,13 @@ DESCRIPTION="The purpose of the library is to provide fundamental protocol acces
 HOMEPAGE="http://jakarta.apache.org/commons/net/"
 SRC_URI="mirror://apache/jakarta/commons/net/source/${P}-src.tar.gz"
 DEPEND=">=virtual/jdk-1.3
-		>=dev-java/ant-core-1.5.4
-		>=dev-java/oro-2.0.7"
+	>=dev-java/ant-core-1.5.4
+	>=dev-java/oro-2.0.7"
 RDEPEND=">=virtual/jdk-1.3"
 LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc ~amd64 ~ppc64"
-IUSE="jikes doc"
+IUSE="jikes doc junit"
 
 S=${WORKDIR}/${P}-src
 
@@ -25,6 +25,12 @@ src_unpack() {
 	mkdir -p target/lib
 	cd target/lib
 	java-pkg_jar-from oro
+
+	cd ${S}
+	if ! use junit ; then
+		sed -i 's/depends="compile,test"/depends="compile"/' \
+			build.xml || die "Failed to disable junit"
+	fi
 }
 
 src_compile() {
