@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.1.38.ebuild,v 1.3 2004/06/24 21:49:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.1.38.ebuild,v 1.4 2004/07/13 20:08:37 agriffis Exp $
 
 DESCRIPTION="Collection of unofficial administration scripts for Gentoo"
 HOMEPAGE="http://www.gentoo.org/"
@@ -9,6 +9,7 @@ SRC_URI=""
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc alpha mips hppa amd64 ia64 ppc64"
+IUSE=""
 
 DEPEND=">=dev-lang/python-2.0
 	>=dev-util/dialog-0.7

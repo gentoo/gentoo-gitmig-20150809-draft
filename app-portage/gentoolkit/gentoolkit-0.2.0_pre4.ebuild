@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.2.0_pre4.ebuild,v 1.4 2004/06/24 21:49:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.2.0_pre4.ebuild,v 1.5 2004/07/13 20:08:37 agriffis Exp $
 
 DESCRIPTION="Collection of administration scripts for Gentoo"
 HOMEPAGE="http://www.gentoo.org/~karltk/projects/gentoolkit/"
@@ -11,6 +11,7 @@ SLOT="0"
 LICENSE="GPL-2"
 #KEYWORDS="x86 ppc sparc alpha mips hppa arm amd64 ia64 ppc64"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~amd64 ~ia64 ~ppc64"
+IUSE=""
 
 DEPEND=">=sys-apps/portage-2.0.50_pre9
 	>=dev-lang/python-2.0

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/lintool/lintool-0.2.4-r1.ebuild,v 1.8 2004/07/13 04:43:24 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/lintool/lintool-0.2.4-r1.ebuild,v 1.9 2004/07/13 20:11:50 agriffis Exp $
 
 inherit python eutils
 
@@ -11,6 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~hppa ~alpha ~amd64 macos"
+IUSE=""
 
 DEPEND=">=dev-lang/python-2.2"
 
