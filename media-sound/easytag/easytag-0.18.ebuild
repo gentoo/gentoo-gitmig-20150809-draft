@@ -1,14 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Ryan Phillips <rphillips@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-0.18.ebuild,v 1.2 2002/04/26 21:02:32 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/easytag/easytag-0.18.ebuild,v 1.3 2002/05/23 06:50:13 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="EasyTAG mp3/ogg tag editor"
 SRC_URI="http://prdownloads.sourceforge.net/easytag/${P}.tar.gz"
 HOMEPAGE="http://easytag.sourceforge.net/"
 
-RDEPEND=">=x11-libs/gtk+-1.2.10-r4
+RDEPEND="=x11-libs/gtk+-1.2*
 	     >=media-libs/id3lib-3.7.13
 	     oggvorbis? ( >=media-libs/libvorbis-1.0_beta4 )"
 	

@@ -1,14 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r3.ebuild,v 1.3 2002/04/12 05:15:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r3.ebuild,v 1.4 2002/05/23 06:50:14 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="X MultiMedia System"
 SRC_URI="ftp://ftp.xmms.org/xmms/1.2.x/${P}.tar.gz http://www.openface.ca/~nephtes/plover-xmms127.tar.gz"
 HOMEPAGE="http://www.xmms.org/"
 
-DEPEND=">=x11-libs/gtk+-1.2.10-r4
+DEPEND="=x11-libs/gtk+-1.2*
 	>=dev-libs/libxml-1.8.15
 	>=media-libs/libmikmod-3.1.9
 	esd? ( >=media-sound/esound-0.2.22 )

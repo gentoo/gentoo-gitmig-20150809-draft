@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.7-r3.ebuild,v 1.1 2001/12/23 23:01:00 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.7-r3.ebuild,v 1.2 2002/05/23 06:50:13 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Aumix volume/mixer control program."
@@ -12,7 +12,7 @@ DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2
 	>=sys-libs/gpm-1.19.3
 	alsa? ( >=media-libs/alsa-lib-0.5.10 )
-	gtk? ( >=x11-libs/gtk+-1.2.10-r4 )
+	gtk? ( =x11-libs/gtk+-1.2* )
 	nls? ( sys-devel/gettext )"
 
 

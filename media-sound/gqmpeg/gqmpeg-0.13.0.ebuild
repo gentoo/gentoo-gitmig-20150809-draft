@@ -9,7 +9,7 @@ DESCRIPTION="front end to various audio players, including mpg123"
 SRC_URI="http://prdownloads.sourceforge.net/gqmpeg/${P}.tar.gz"
 HOMEPAGE="http://gqmpeg.sourceforge.net/"
 
-DEPEND=">=x11-libs/gtk+-1.2.10-r4
+DEPEND="=x11-libs/gtk+-1.2*
 		>=media-libs/gdk-pixbuf-0.13.0
 		nls? ( sys-devel/gettext )"
 

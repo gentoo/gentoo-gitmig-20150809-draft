@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r5.ebuild,v 1.1 2002/05/19 19:03:41 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r5.ebuild,v 1.2 2002/05/23 06:50:14 seemant Exp $
 
 PLO_VER="$(echo ${PV} | sed -e "s:\.::g")"
 S=${WORKDIR}/${P}
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.xmms.org/xmms/1.2.x/${P}.tar.gz
 	avi? ( http://www.openface.ca/~nephtes/plover-xmms${PLO_VER}.tar.gz )"
 HOMEPAGE="http://www.xmms.org/"
 
-RDEPEND=">=x11-libs/gtk+-1.2.10-r4
+RDEPEND="=x11-libs/gtk+-1.2*
 	>=media-libs/libmikmod-3.1.9
 	avi? ( >=media-video/avifile-0.7.4.20020426 )
 	esd? ( >=media-sound/esound-0.2.22 )

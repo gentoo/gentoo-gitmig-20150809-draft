@@ -1,14 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Bruce A. Locke <blocke@shivan.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-2.98.6.ebuild,v 1.1 2002/02/11 19:18:28 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-2.98.6.ebuild,v 1.2 2002/05/23 06:50:14 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GTK+ based Audio CD Ripper"
 SRC_URI="http://www.nostatic.org/grip/${P}.tar.gz"
 HOMEPAGE="http://www.nostatic.org/grip"
 
-DEPEND=">=x11-libs/gtk+-1.2.10
+DEPEND="=x11-libs/gtk+-1.2*
 	media-sound/lame
 	media-sound/cdparanoia
 	media-libs/id3lib

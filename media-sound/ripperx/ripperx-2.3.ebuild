@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jonathan Gonzalez <ciberscroll@uole.com>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ripperx-2.3.ebuild,v 1.1 2002/05/20 00:28:55 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ripperx/ripperx-2.3.ebuild,v 1.2 2002/05/23 06:50:14 seemant Exp $
 
 PN=ripperX
 A=${PN}-${PV}.tar.gz
@@ -9,7 +9,7 @@ S=${WORKDIR}/${PN}-${PV}
 DESCRIPTION="RipperX is a program to rip CD and enconde mp3s"
 HOMEPAGE="http://ripperx.sf.net/"
 SRC_URI="http://telia.dl.sourceforge.net/ripperx/${A}"
-DEPEND=">=x11-libs/gtk+-1.2.10
+DEPEND="=x11-libs/gtk+-1.2*
 		media-sound/lame
 		media-sound/cdparanoia
 		media-libs/id3lib"
