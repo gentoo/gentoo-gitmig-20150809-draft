@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.97 2004/10/20 17:02:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.98 2004/10/27 08:12:46 usata Exp $
+
+  27 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> ruby-1.8.2_pre2.ebuild:
+  Fixed bug #68901.
 
   20 Oct 2004; <agriffis@gentoo.org> files/ruby-rdoc-gentoo.diff:
   Fix rdoc patch to build all documentation instead of just part of it. This is

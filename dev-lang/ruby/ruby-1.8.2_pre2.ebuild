@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.2_pre2.ebuild,v 1.18 2004/10/27 04:51:18 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.2_pre2.ebuild,v 1.19 2004/10/27 08:12:46 usata Exp $
 
 ONIGURUMA="onigd2_3_2"
 MY_P=${P/_pre/-preview}
@@ -40,7 +40,7 @@ src_unpack() {
 	if use cjk ; then
 		einfo "Applying ${ONIGURUMA}"
 		pushd ${WORKDIR}/oniguruma
-		if use ppc || use ppc64 ; then
+		if use ppc || use ppc64 || use alpha ; then
 			epatch ${FILESDIR}/oniguruma-2.3.1-fix-ppc.patch
 		fi
 		econf --with-rubydir=${S} || die "econf failed"
@@ -84,7 +84,7 @@ src_compile() {
 
 src_install() {
 	LD_LIBRARY_PATH=${D}/usr/lib
-	RUBYLIB=${D}/usr/lib/ruby/${SLOT}
+	RUBYLIB="${S}:${D}/usr/lib/ruby/${SLOT}"
 	for d in $(find ${S}/ext -type d) ; do
 		RUBYLIB="${RUBYLIB}:$d"
 	done
