@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-1.41.ebuild,v 1.2 2003/09/11 01:12:59 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-1.41.ebuild,v 1.3 2003/09/21 18:43:49 vapier Exp $
 
 inherit perl-module eutils
 CATEGORY="dev-perl"
@@ -9,9 +9,9 @@ DESCRIPTION="The Perl DBI Module"
 SRC_URI="http://www.cpan.org/modules/by-module/GD/${P}.tar.gz"
 HOMEPAGE="http://www.cpan.org/modules/by-module/GD/${P}.readme"
 
-SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha"
+SLOT="0"
+KEYWORDS="x86 amd64 ppc sparc alpha"
 IUSE="X jpeg gif truetype"
 
 DEPEND="${DEPEND}
@@ -43,13 +43,13 @@ src_unpack() {
 		&& freetype=1 \
 		|| freetype=0
 
-	cp Makefile.PL{,.orig}
-	sed \
+	sed -i \
 		-e "s:GENTOO_JPEG:${jpeg}:" \
-		-e "s:GENTOO_FREETYPE:${freetype}:" \
+		-e "s:GENTOO_TTF:${freetype}:" \
 		-e "s:GENTOO_XPM:${x}:" \
 		-e "s:GENTOO_GIF:${gif}:" \
-		Makefile.PL.orig > Makefile.PL
+		-e 's:-I/usr/local/include/gd:-I/usr/include/gd-1:' \
+		Makefile.PL
 
 	perl-module_src_prep
 }
