@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unrar
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.31 2004/07/12 03:01:52 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unrar/ChangeLog,v 1.32 2004/07/26 18:06:44 alexander Exp $
+
+  26 Jul 2004; Alexander Plank <alexander@gentoo.org> unrar-3.4.1.ebuild:
+  stable on macos bug #58361
 
   11 Jul 2004; Tom Gall <tgall@gentoo.org> unrar-3.4.1.ebuild: 
   stable on ppc64 bug #55408
