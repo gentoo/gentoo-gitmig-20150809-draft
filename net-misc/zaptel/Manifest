@@ -3,9 +3,9 @@ MD5 7245a92de844119cd4351807007616f0 zaptel-1.0.3.ebuild 3532
 MD5 89874e5cbdf7262fe23db47cdb5a538e zaptel-1.0.4.ebuild 4473
 MD5 cfce09091affa8e8668e7a22801ac097 zaptel-1.0.1.ebuild 3186
 MD5 44cf247f04cc83413fcb40ed59d0847a metadata.xml 248
-MD5 789528cbe51e16f726db21485c74f019 ChangeLog 5759
+MD5 e5584ab8a023ba2bafe2fdcdd0b0d639 ChangeLog 5857
 MD5 eaa764a27a800be752aba85a7df8d342 zaptel-1.0.2.ebuild 3127
-MD5 fe73558d34acf8531da6a5b41b84b75e zaptel-1.0.6.ebuild 6221
+MD5 410aa41544b87d614528da99d0debabd zaptel-1.0.6.ebuild 6228
 MD5 8d66c378ea6b3b3f7bb2ee1fd2b6e51c zaptel-0.9.1.ebuild 3526
 MD5 0edad95ac20c6e43ea6ee933e25ac23a files/zaptel-1.0.1-skbuff.diff 564
 MD5 9cf4f1d646d216441b7f4508ac7c0e8b files/digest-zaptel-1.0.0 64
