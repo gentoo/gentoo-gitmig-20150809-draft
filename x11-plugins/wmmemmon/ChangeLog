@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmmemmon
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemmon/ChangeLog,v 1.10 2004/09/02 18:22:40 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemmon/ChangeLog,v 1.11 2004/12/23 15:02:23 corsair Exp $
+
+  23 Dec 2004; Markus Rothe <corsair@gentoo.org> wmmemmon-1.0.1.ebuild:
+  Added ~ppc64 to KEYWORDS; bug #74952
 
   02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   wmmemmon-1.0.1.ebuild:
