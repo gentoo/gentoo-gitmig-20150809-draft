@@ -1,6 +1,12 @@
 # ChangeLog for x11-misc/bbweather
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbweather/ChangeLog,v 1.6 2003/02/12 09:27:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbweather/ChangeLog,v 1.7 2003/06/19 17:11:15 mkeadle Exp $
+
+*bbweather-0.6 (19 Jun 2003)
+
+  19 Jun 2003; mkeadle <mkeadle@gentoo.org> bbweather-0.3-r2.ebuild,
+  bbweather-0.3-r2.ebuild, bbweather-0.6.ebuild:
+  bump to latest upstream stable. remove old versions.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
