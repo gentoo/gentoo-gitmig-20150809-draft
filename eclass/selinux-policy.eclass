@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy.eclass,v 1.11 2004/09/06 01:09:02 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy.eclass,v 1.12 2004/10/08 01:36:47 pebenito Exp $
 
 # Eclass for installing SELinux policy, and optionally
 # reloading the policy
@@ -64,20 +64,24 @@ selinux-policy_src_install() {
 
 selinux-policy_pkg_postinst() {
 	if has "loadpolicy" $FEATURES ; then
-		ebegin "Automatically loading policy"
-		make -C ${POLICYDIR} load
-		eend $?
+		if [ -x /usr/bin/checkpolicy -a -x /usr/sbin/load_policy -a -x /usr/sbin/setfiles ]; then
+			# only do this if all tools are installed
 
-		ebegin "Regenerating file contexts"
-		[ -f ${POLICYDIR}/file_contexts/file_contexts ] && \
-			rm -f ${POLICYDIR}/file_contexts/file_contexts
-		make -C ${POLICYDIR} file_contexts/file_contexts &> /dev/null
+			ebegin "Automatically loading policy"
+			make -C ${POLICYDIR} load
+			eend $?
 
-		# do a test relabel to make sure file
-		# contexts work (doesnt change any labels)
-		echo "/etc/passwd" | /usr/sbin/setfiles \
-			${POLICYDIR}/file_contexts/file_contexts -sqn
-		eend $?
+			ebegin "Regenerating file contexts"
+			[ -f ${POLICYDIR}/file_contexts/file_contexts ] && \
+				rm -f ${POLICYDIR}/file_contexts/file_contexts
+			make -C ${POLICYDIR} file_contexts/file_contexts &> /dev/null
+
+			# do a test relabel to make sure file
+			# contexts work (doesnt change any labels)
+			echo "/etc/passwd" | /usr/sbin/setfiles \
+				${POLICYDIR}/file_contexts/file_contexts -sqn
+			eend $?
+		fi
 	else
 		echo
 		echo
