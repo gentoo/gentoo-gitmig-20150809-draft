@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyzor
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/ChangeLog,v 1.4 2003/10/28 18:52:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyzor/ChangeLog,v 1.5 2004/01/02 02:10:52 kloeri Exp $
+
+  02 Jan 2004; Bryan Østergaard,,, <kloeri@gentoo.org> pyzor-0.4.0-r1.ebuild:
+  Mark 0.4.0-r1 x86, fixing bug #36962
 
 *pyzor-0.4.0-r1 (28 Oct 2003)
 
