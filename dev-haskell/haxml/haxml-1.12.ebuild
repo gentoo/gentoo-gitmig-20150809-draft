@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/haxml-1.12.ebuild,v 1.1 2005/04/05 13:45:53 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haxml/haxml-1.12.ebuild,v 1.2 2005/04/05 16:23:19 kosmikus Exp $
 
 inherit ghc-package fixheadtails
 
 MY_PN=HaXml
 MY_P=${MY_PN}-${PV}
 
-DESCRIPTION="Haskell utilities for parsing, filtering, transforming and generating XML documentss."
+DESCRIPTION="Haskell utilities for parsing, filtering, transforming and generating XML documents"
 HOMEPAGE="http://www.haskell.org/HaXml/"
 SRC_URI="http://www.haskell.org/HaXml/${MY_P}.tar.gz"
 LICENSE="LGPL-2.1"
