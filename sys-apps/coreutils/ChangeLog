@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.118 2005/02/07 20:26:49 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.119 2005/03/03 17:50:15 ciaranm Exp $
+
+  03 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  coreutils-5.2.1-r4.ebuild:
+  Dependency update: sys-apps/at -> sys-process/at.
 
   07 Feb 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   coreutils-5.2.1-r4.ebuild:
