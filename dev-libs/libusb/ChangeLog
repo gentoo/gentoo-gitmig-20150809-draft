@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libusb
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.22 2004/08/06 03:59:00 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/ChangeLog,v 1.23 2004/10/04 03:10:25 weeve Exp $
+
+  03 Oct 2004; Jason Wever <weeve@gentoo.org> libusb-0.1.8.ebuild:
+  Stable on sparc.
 
   05 Aug 2004; Alastair Tse <liquidx@gentoo.org> libusb-0.1.8.ebuild:
   adding macos. adding macos specific changes like glibtoolize
