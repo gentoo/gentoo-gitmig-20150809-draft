@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gplflash/gplflash-0.4.10-r1.ebuild,v 1.13 2003/09/06 01:54:08 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gplflash/gplflash-0.4.10-r1.ebuild,v 1.14 2003/10/03 22:58:04 hillster Exp $
 
 S=${WORKDIR}/flash-0.4.10
 DESCRIPTION="GPL Shockwave Flash Player/Plugin"
-SRC_URI="http://www.swift-tools.com/Flash/flash-0.4.10.tgz"
-HOMEPAGE="http://www.swift-tools.com/Flash"
+SRC_URI="http://www.swift-tools.net/Flash/flash-0.4.10.tgz"
+HOMEPAGE="http://www.swift-tools.net/Flash"
 
 SLOT="0"
 LICENSE="GPL-2"
