@@ -16,7 +16,7 @@ DEPEND="nls? ( sys-devel/gettext )
 	python? ( >=dev-lang/python-2.0 )
 	bonobo? ( >=gnome-base/bonobo-0.37 )"
 
-RDEPEND=">=gnome-base/gdk-pixbuf-0.11.0 
+RDEPEND=">=media-libs/gdk-pixbuf-0.11.0 
 	>=dev-util/guile-1.4
         >=gnome-base/gnome-print-0.29
 	bonobo? ( >=gnome-base/bonobo-0.37 )"

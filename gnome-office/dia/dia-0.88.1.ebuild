@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-office/dia/dia-0.88.1.ebuild,v 1.4 2001/06/21 20:15:00 lamer Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-office/dia/dia-0.88.1.ebuild,v 1.5 2001/07/29 10:29:28 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${A}"
 HOMEPAGE="http://www.gnome.org/gnome-office/dia.shtml"
 
 DEPEND=">=gnome-base/libxml-1.8.13 nls? ( sys-devel/gettext )
-        >=gnome-base/gdk-pixbuf-0.11.0
+        >=media-libs/gdk-pixbuf-0.11.0
         >=dev-libs/popt-1.5
 	bonobo? ( >=gnome-base/bonobo-1.0.4 )
 	python? ( dev-lang/python-2.0 )"
