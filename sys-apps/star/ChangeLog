@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/star
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/star/ChangeLog,v 1.6 2002/08/27 17:53:30 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/star/ChangeLog,v 1.7 2002/10/26 21:35:54 raker Exp $
+
+*star-1.5_alpha06-r1 (26 Oct 2002)
+
+  26 Oct 2002; Nick Hadaway <raker@gentoo.org> star-1.5_alpha06.ebuild :
+  Now installing mt as mt.star instead of just removing it due to 
+  conflicts with mt-st.  See bug #9442
 
 *star-1.5_alpha06 (27 Aug 2002) 
 
