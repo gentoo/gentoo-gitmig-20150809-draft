@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/qgo/qgo-0.2.2.ebuild,v 1.2 2004/10/25 23:38:49 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/qgo/qgo-0.2.2.ebuild,v 1.3 2005/03/31 17:36:05 mr_bones_ Exp $
 
 inherit kde-functions eutils
 need-qt 3

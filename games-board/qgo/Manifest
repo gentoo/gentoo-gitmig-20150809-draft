@@ -1,17 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f6f45113c63efd6e620fe2649fe35245 ChangeLog 1167
+MD5 fd6d84da2fdb0a64380040391f3740bc ChangeLog 1284
 MD5 7be057a9771e6eb03103063d47a366b8 metadata.xml 388
-MD5 f742498b316eee7393ef8ddb3324f337 qgo-0.2.2.ebuild 779
-MD5 f11765b85acb6b79bc6c8b2b947c26e5 qgo-1.0.0.ebuild 674
-MD5 c8d87e22089221af58773e0115d51003 files/0.2.2-gcc.patch 520
+MD5 b037afd8f715cef5bec3488108693c52 qgo-1.0.1.ebuild 677
+MD5 7eaa58aab26271bcd719ac40bae9136b qgo-0.2.2.ebuild 782
+MD5 69b51720a37e3351bc2e0da1850651db qgo-1.0.0.ebuild 677
+MD5 27e98c0c98b8d714580d36f4b28f3542 files/digest-qgo-1.0.1 62
 MD5 ff7cfb7f58299a4302de40ad6c385127 files/digest-qgo-0.2.2 65
+MD5 c8d87e22089221af58773e0115d51003 files/0.2.2-gcc.patch 520
 MD5 fb4f5ca754283eed5aeceed2ff0bc054 files/digest-qgo-1.0.0 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBwPWZroRuSHgZdywRAqVTAJ9c3zDVhYXQQgMPvYmW9wGWDNwRHQCfdAs+
-H/d0uiLkQFp0D4myAG10aUc=
-=k54J
------END PGP SIGNATURE-----
