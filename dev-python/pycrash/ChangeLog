@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pycrash
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrash/ChangeLog,v 1.4 2004/08/25 17:31:46 lucass Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycrash/ChangeLog,v 1.5 2004/11/29 12:09:35 genone Exp $
+
+  29 Nov 2004; Marius Mauch <genone@gentoo.org> pycrash-0.4_pre3.ebuild:
+  Marked ~amd64.
 
 *pycrash-0.4_pre3 (25 Aug 2004)
 

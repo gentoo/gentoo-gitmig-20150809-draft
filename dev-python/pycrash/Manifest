@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1ba3f5796c275fec7fa169d534827293 pycrash-0.4_pre2.ebuild 555
-MD5 3f186844dd3634ff8079013944a1eb5e ChangeLog 725
 MD5 027c165840625801bd9c13f18179e236 metadata.xml 665
-MD5 747c687cf347b07a420fe9585944d828 pycrash-0.4_pre3.ebuild 643
+MD5 1ba3f5796c275fec7fa169d534827293 pycrash-0.4_pre2.ebuild 555
+MD5 c15229bebbcd5f2168ccfef1caecee2d ChangeLog 816
+MD5 7b093a9459a657bd3d8baa38c7379858 pycrash-0.4_pre3.ebuild 650
 MD5 46404d56ce59a154184f3c8544c8065b files/digest-pycrash-0.4_pre2 67
 MD5 426895b78c68fcdd4d3ef690dbaa7458 files/digest-pycrash-0.4_pre3 67
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBLM2T2jLqHNfbg2URAkA5AJ9pVka9LqXsdjkIBXJNUH+yoVagsQCgpysW
-3prdNPnOH2LgK77Za+IJRy4=
-=9FjO
+iD8DBQFBqx/Y6J2i8a8J4okRAm+ZAJ93HWErVNf4G1E1kfPAraqyDJTMqQCeIZ/D
+3YtWQTEK5BsHAiHDSehZur8=
+=P20a
 -----END PGP SIGNATURE-----
