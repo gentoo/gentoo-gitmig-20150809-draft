@@ -1,16 +1,17 @@
-<diff -Naur lilo-22.5.8/Makefile lilo-22.5.8-devmapper/Makefile
---- lilo-22.5.8/Makefile	2003-10-10 18:58:35.000000000 +0200
-+++ lilo-22.5.8-devmapper/Makefile	2004-04-13 10:48:31.000000000 +0200
-@@ -53,7 +53,7 @@
+diff -uNr lilo-22.5.9.orig/Makefile lilo-22.5.9/Makefile
+--- lilo-22.5.9.orig/Makefile	2004-06-09 22:41:24.519057048 +0100
++++ lilo-22.5.9/Makefile	2004-06-09 22:42:25.269821528 +0100
+@@ -53,7 +53,8 @@
  #   XL_SECS=n	  Support for extra large (non-standard) floppies.
  
  CONFIG=-DBDATA -DDSECS=3 -DEVMS -DIGNORECASE -DLVM -DONE_SHOT -DPASS160 \
--   -DREISERFS -DREWRITE_TABLE -DSOLO_CHAIN -DVERSION -DVIRTUAL
-+   -DREISERFS -DREWRITE_TABLE -DSOLO_CHAIN -DVERSION -DVIRTUAL -DDEVMAPPER
+-   -DREISERFS -DREWRITE_TABLE -DSOLO_CHAIN -DVERSION -DVIRTUAL -DATARAID
++   -DREISERFS -DREWRITE_TABLE -DSOLO_CHAIN -DVERSION -DVIRTUAL -DATARAID \
++   -DDEVMAPPER
  
  # set the compiler optimization level
  
-@@ -88,6 +88,8 @@
+@@ -88,6 +89,8 @@
  LDFLAGS=#-Xlinker -qmagic
  LIBS=
  
@@ -19,7 +20,7 @@
  OBJS=lilo.o raid.o map.o geometry.o boot.o device.o common.o bsect.o cfg.o \
    temp.o partition.o identify.o probe.o shs2.o loader.o edit.o
  
-@@ -241,7 +243,11 @@
+@@ -255,7 +258,11 @@
  		cp -p dparam.S dparam.s
  
  lilo:		$(OBJS)
@@ -29,11 +30,11 @@
  		$(CC) -o lilo $(LDFLAGS) $(OBJS) $(LIBS)
 +endif
  
- boot-text.b:	first.b second.b
- 		(dd if=first.b bs=512 conv=sync; dd if=second.b) >boot-text.b
-diff -Naur lilo-22.5.8/geometry.c lilo-22.5.8-devmapper/geometry.c
---- lilo-22.5.8/geometry.c	2003-10-10 01:59:07.000000000 +0200
-+++ lilo-22.5.8-devmapper/geometry.c	2004-04-13 10:47:35.000000000 +0200
+ lilo-static:	$(OBJS)
+ 		$(CC) -o lilo-static -static $(LDFLAGS) $(OBJS) $(LIBS)
+diff -uNr lilo-22.5.9.orig/geometry.c lilo-22.5.9/geometry.c
+--- lilo-22.5.9.orig/geometry.c	2004-06-09 22:41:24.526055984 +0100
++++ lilo-22.5.9/geometry.c	2004-06-09 22:41:42.016397048 +0100
 @@ -14,6 +14,9 @@
  #include <stdio.h>
  #include <fcntl.h>
@@ -81,7 +82,7 @@ diff -Naur lilo-22.5.8/geometry.c lilo-22.5.8-devmapper/geometry.c
  #ifdef LCF_LVM
  struct lv_bmap {
      __u32 lv_block;
-@@ -114,6 +140,12 @@
+@@ -121,6 +147,12 @@
  {
      FILE *file;
      char line[MAX_LINE+1];
@@ -94,7 +95,7 @@ diff -Naur lilo-22.5.8/geometry.c lilo-22.5.8-devmapper/geometry.c
      char *here;
      DT_ENTRY *entry;
      int disk_section,items;
-@@ -122,29 +154,69 @@
+@@ -129,29 +161,69 @@
  	if ((file = fopen(name,"r")) == NULL)
  	    die("open %s: %s",name,strerror(errno));
      }
@@ -184,7 +185,7 @@ diff -Naur lilo-22.5.8/geometry.c lilo-22.5.8-devmapper/geometry.c
  }
  
  
-@@ -768,6 +840,161 @@
+@@ -775,6 +847,161 @@
  {
      DT_ENTRY *walk;
      int inherited,keep_cyls,is_raid=0;
@@ -346,7 +347,7 @@ diff -Naur lilo-22.5.8/geometry.c lilo-22.5.8-devmapper/geometry.c
  
      if (verbose>=5) printf("geo_get: device %04X, all=%d\n", device, all);
  #ifdef LCF_LVM
-@@ -1130,14 +1357,50 @@
+@@ -1146,14 +1373,50 @@
              die("EVMS boot volume cannot be on multiple disks.\n");
          sector = ebm.rsector + ((offset/SECTOR_SIZE) % geo->spb) + geo->start;
      }

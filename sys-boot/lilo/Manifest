@@ -6,7 +6,7 @@ MD5 b62ac7c19b9163b3b4fb17d9da33a3f3 lilo-22.5.1.ebuild 4395
 MD5 00a0ca339c35dfa56cdbc374a8adedb1 lilo-22.5.6-r2.ebuild 3190
 MD5 b0ecf6d774e388fb6f13c869c9915270 lilo-22.5.8-r3.ebuild 4639
 MD5 d504f429b27f9ba59a96fff3b81e1293 lilo-22.5.8.ebuild 4050
-MD5 b2e9ac8f689e9bb75cec47c6ecec10d5 ChangeLog 8627
+MD5 9b3469b4bc8afc7f5bbd08ff2f9641ef ChangeLog 8794
 MD5 eeee4743c4e463eeed3a7a4c15380e0d metadata.xml 254
 MD5 45847050f78ebbd2b2d89c03f6a08fb4 files/lilo-22.5.8-devmapper_gentoo.patch 11889
 MD5 ab2657bc635313522eb791e30b1166ef files/lilo-22.5.9-correct-usage-info.patch 683
@@ -23,6 +23,6 @@ MD5 89d3f49772308bc3fb195f51c9ff1035 files/digest-lilo-22.5.7.2 65
 MD5 2419c22323e1cfdbbc1ca149cb05e74d files/lilo-22.5.8-create-install-dirs.patch 970
 MD5 90ff63638cb8b46b9e6f3c5231bd464e files/lilo.conf 1719
 MD5 348f7a96783361cf8f0a0703bfeaa03a files/lilo-22.5.9-lvm.2-6headers.patch 470
-MD5 45847050f78ebbd2b2d89c03f6a08fb4 files/lilo-22.5.9-devmapper_gentoo.patch 11889
+MD5 fae76ec2aab0220700b2c4a2a6881793 files/lilo-22.5.9-devmapper_gentoo.patch 11877
 MD5 348f7a96783361cf8f0a0703bfeaa03a files/lilo-22.5.8.lvm.2-6headers.patch 470
 MD5 ca44cc6ec0aecfe30c49c455f74aacec files/lilo-glibc233.patch 640
