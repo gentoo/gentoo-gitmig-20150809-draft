@@ -1,24 +1,24 @@
 # ChangeLog for media-libs/pdflib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/ChangeLog,v 1.6 2002/09/07 17:33:27 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/ChangeLog,v 1.7 2002/10/29 17:31:20 vapier Exp $
 
 *pdflib-4.0.1-r3 (3 Apr 2002)
+
+  28 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Links libpng against zlib and libstdc++ to fix #9793
 
   7 Sep 2002; Owen Stampflee <owen@gentoo.org> :
   Added PPC to KEYWORDS.
 
   14 Aug 2002; Seemant Kulleen <seemant@genoo.org> pdflib-4.0.1-r1.ebuild :
-
   Added libpng as a dependency.  Closes bug #6480 by bar4ka@bol.com.br
   (bar4ka)
 
   08 Aug 2002; Seemant Kulleen <seemant@gentoo.org> pdflib-4.0.1-r3.ebuild :
-
   Added "--with-zlib" configure flag.  Closes bug #6205 by sponge80@msn.com
   (Nicholas)
 
   7 Aug 2002; Ryan Phillips <rphillips@gentoo.org> : 
-
   Changed package to use system libpng. PHP doesn't like being
   linked to two separate places.
   
@@ -36,7 +36,6 @@
 *pdflib-4.0.1-r2 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about

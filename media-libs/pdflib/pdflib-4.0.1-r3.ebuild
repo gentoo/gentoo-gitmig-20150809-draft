@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-4.0.1-r3.ebuild,v 1.10 2002/10/05 05:39:15 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/pdflib-4.0.1-r3.ebuild,v 1.11 2002/10/29 17:31:20 vapier Exp $
 
 IUSE="python tcltk java perl"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A library for generating PDF on the fly"
 SRC_URI="http://www.pdflib.com/pdflib/download/${P}.tar.gz"
-HOMEPAGE="http://www.pdflib.com"
+HOMEPAGE="http://www.pdflib.com/"
 
 SLOT="4"
 LICENSE="Aladdin"
@@ -17,11 +17,10 @@ DEPEND="tcltk? ( >=dev-lang/tk-8.2 )
 	perl? ( >=sys-devel/perl-5.1 )
 	python? ( >=dev-lang/python-2.0 )
 	java? ( >=virtual/jdk-1.3 )
-	media-libs/libpng"
-
+	media-libs/libpng
+	sys-libs/zlib"
 
 src_compile() {
-
 	# fix sandbox violations
 	# NOTE: the basic theory is to not compile pdflib.java during
 	# src_compile() or src_install(), but rather in pkg_postinstall(),
@@ -51,18 +50,21 @@ src_compile() {
 		&& myconf="${myconf} --with-java=${JAVA_HOME}" \
 		|| myconf="${myconf} --with-java=no"
 		
+	# libpng-1.2.5 needs to be linked against stdc++ and zlib
+	cp configure configure.old
+	sed -e 's:-lpng:-lpng -lz -lstdc++:' configure.old > configure
+
 	econf \
 		--enable-cxx \
 		--disable-php \
 		--with-pnglib \
 		--with-zlib \
 		${myconf} || die
-		
+	
 	emake || die
 }
 
 src_install() {
-
 	# fix sandbox violations
 	# NB: do this *after* build, otherwise we will get linker problems.
 	# all we basically do here is modify the install path for Makefiles that
