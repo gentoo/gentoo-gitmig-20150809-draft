@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mc/mc-4.5.55-r5.ebuild,v 1.3 2002/08/16 04:14:00 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/mc/mc-4.5.55-r6.ebuild,v 1.1 2002/08/23 17:50:37 naz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNOME Midnight Commander"
@@ -13,6 +13,7 @@ DEPEND="virtual/glibc
 	>=sys-devel/automake-1.5d-r1
 	gpm? ( >=sys-libs/gpm-1.19.3 )
 	pam? ( >=sys-libs/pam-0.72 )
+	ncurses? ( >=sys-libs/ncurses-5.2 )
 	slang? ( >=sys-libs/slang-1.4.2 )
 	nls? ( sys-devel/gettext )
 	samba? ( >=net-fs/samba-2.2.3a-r1 )
@@ -30,8 +31,10 @@ src_compile() {
 	use pam && myconf="${myconf} --with-pam"
 	use pam || myconf="${myconf} --without-pam"
 
+	use ncurses && myconf="${myconf} --with-ncurses" || ( \
 	use slang && myconf="${myconf} --with-slang"
 	use slang || myconf="${myconf} --with-included-slang"
+	)
 
 #currently broken
 #	use gnome && myconf="${myconf} --with-gnome"
@@ -46,6 +49,7 @@ src_compile() {
 	use X && myconf="${myconf} --with-tm-x-support"
 	use X || myconf="${myconf} --without-tm-x-support"
 
+	use samba && myconf="${myconf} --with-samba"
 	use samba && ( \
 		cd ${S}/vfs
 		cp smbfs.c smbfs.c.orig
@@ -54,7 +58,6 @@ src_compile() {
 		cp Makefile.in Makefile.in.orig
 		sed -e 's:$(LIBDIR)\(/codepages\):/var/lib/samba\1:' \
 			Makefile.in.orig > Makefile.in
-		myconf="${myconf} --with-samba"
 	)
 
 	cd ${S}
@@ -64,7 +67,7 @@ src_compile() {
 #	autoconf
 	automake --add-missing
 
-	LDFLAGS="-lcrypt -lncurses" ./configure --host=${CHOST} 	 \
+	./configure --host=${CHOST} 	 \
 						--prefix=/usr		 \
 						--mandir=/usr/share/man	 \
 						--sysconfdir=/etc	 \
