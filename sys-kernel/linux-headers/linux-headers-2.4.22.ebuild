@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.22.ebuild,v 1.10 2004/01/16 13:05:07 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.22.ebuild,v 1.11 2004/01/16 22:27:56 darkspecter Exp $
 
 ETYPE="headers"
 inherit kernel
@@ -38,7 +38,6 @@ if [ "${ARCH}" = "mips" ] || [ "${ARCH}" = "mips64" ]; then
 	eerror "Please use sys-kernel/${ARCH/64/}-headers instead."
 	die
 fi
-
 
 
 src_unpack() {
