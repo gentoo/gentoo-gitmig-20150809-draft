@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/fscript
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fscript/ChangeLog,v 1.8 2005/01/01 18:25:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fscript/ChangeLog,v 1.9 2005/01/20 18:31:25 luckyduck Exp $
+
+  20 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> fscript-1.14.ebuild,
+  fscript-1.15.ebuild:
+  added missing jikes dependency. see #78819.
 
   29 Oct 2004; Thomas Matthijs <axxo@gentoo.org> fscript-1.15.ebuild:
   remove nomirror

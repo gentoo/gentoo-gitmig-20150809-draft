@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/commons-modeler-1.1.ebuild,v 1.7 2005/01/01 18:18:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-modeler/commons-modeler-1.1.ebuild,v 1.8 2005/01/20 18:26:55 luckyduck Exp $
 
 inherit java-pkg
 
@@ -10,10 +10,12 @@ HOMEPAGE="http://jakarta.apache.org/commons/modeler/"
 LICENSE="Apache-1.1"
 SLOT="0"
 DEPEND=">=virtual/jdk-1.4
-		>=dev-java/jmx-1.2.1
-		>=dev-java/commons-logging-1.0.3
-		>=dev-java/commons-digester-1.4.1
-		>=dev-java/xalan-2.5.1"
+	>=dev-java/jmx-1.2.1
+	>=dev-java/commons-logging-1.0.3
+	>=dev-java/commons-digester-1.4.1
+	>=dev-java/xalan-2.5.1
+	jikes? ( dev-java/jikes )"
+RDEPEND=">=virtual/jre-1.4"
 KEYWORDS="x86 ~amd64"
 IUSE="doc jikes"
 

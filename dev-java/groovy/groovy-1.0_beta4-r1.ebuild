@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/groovy-1.0_beta4-r1.ebuild,v 1.6 2005/01/05 22:16:31 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/groovy/groovy-1.0_beta4-r1.ebuild,v 1.7 2005/01/20 18:29:26 luckyduck Exp $
 
 inherit java-pkg
 
@@ -20,7 +20,8 @@ DEPEND="=dev-java/xerces-2.6* \
 	=dev-java/mockobjects-0.0*
 	=dev-java/bsf-2.3*
 	=dev-java/servletapi-2.4*
-	=dev-java/xmojo-bin-5.0*"
+	=dev-java/xmojo-bin-5.0*
+	jikes? ( dev-java/jikes )"
 # karltk:
 # xmojo-bin is a JMX provider, we should add a list of alternatives
 

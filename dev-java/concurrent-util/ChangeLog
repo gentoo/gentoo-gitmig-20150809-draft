@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/concurrent-util
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/concurrent-util/ChangeLog,v 1.2 2005/01/01 18:20:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/concurrent-util/ChangeLog,v 1.3 2005/01/20 18:20:41 luckyduck Exp $
+
+  20 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  concurrent-util-1.3.4.ebuild:
+  added missing jikes dependency. see #78819.
 
 *concurrent-util-1.3.4 (30 Oct 2004)
 
