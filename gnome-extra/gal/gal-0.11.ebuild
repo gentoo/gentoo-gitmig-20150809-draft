@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.11.ebuild,v 1.1 2001/08/23 10:08:16 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/gal-0.11.ebuild,v 1.2 2001/08/31 21:47:40 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -19,21 +19,23 @@ DEPEND="nls? ( sys-devel/gettext )
 	>=gnome-base/libxml-1.8.8"
 
 src_compile() {
-  local myconf
-  if [ -z "`use nls`" ]
-  then                                                                                       
-    myconf="--disable-nls"
-  fi
-  try ./configure --host=${CHOST} --prefix=/opt/gnome --sysconfdir=/etc/opt/gnome ${myconf}
-  try make # Doesn't work with -j 4 (hallski)
+	local myconf
+
+	if [ -z "`use nls`" ]
+	then
+		myconf="--disable-nls"
+	fi
+
+	./configure --host=${CHOST} --prefix=/opt/gnome 		\
+		    --sysconfdir=/etc/opt/gnome ${myconf} || die
+
+	make || die # Doesn't work with -j 4 (hallski)
 }
 
 src_install() {
+	make prefix=${D}/opt/gnome sysconfdir=${D}/etc/opt/gnome install || die
 
-  try make prefix=${D}/opt/gnome sysconfdir=${D}/etc/opt/gnome install
-
-  dodoc AUTHORS COPYING ChangeLog NEWS README
-
+	dodoc AUTHORS COPYING ChangeLog NEWS README
 }
 
 
