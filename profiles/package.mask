@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <azarah@gentoo.org> (27 Sep 2002)
+#latest gnome-spell
+=app-text/gnome-spell-0.5
+
 # <bcowan@gentoo.org> (26 Sep 2002)
 #version bump. needs testing to see if patches need to be re-applied
 =net-misc/vnc-3.3.4
