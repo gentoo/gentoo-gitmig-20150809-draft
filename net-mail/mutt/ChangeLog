@@ -1,8 +1,13 @@
 # ChangeLog for net-mail/mutt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.18 2003/02/12 08:13:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.19 2003/02/13 04:02:27 seo Exp $
 
 *mutt-1.4-r3 (03 Sept 2002) 
+
+  14 Feb 2003; Jungmin Seo <seo@gentoo.org> mutt-1.4-r3.ebuild :
+  added pkg_setup. Now it needs WANT_JA variable to use the
+  japanese patch.  This is to avoid the patch for korean or
+  chinese.
 
   28 Jan 2003; Martin Holzer <mholzer@gentoo.org> mutt-1.4-r3.ebuild :
   Added mbox support. Closes #13234.

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.4-r3.ebuild,v 1.8 2003/01/28 21:00:16 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.4-r3.ebuild,v 1.9 2003/02/13 04:02:27 seo Exp $
 
 IUSE="ssl nls slang cjk mbox"
 
@@ -20,6 +20,23 @@ RDEPEND="nls? ( sys-devel/gettext )"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc ~alpha"
+
+pkg_setup() {
+
+	if [ "`use cjk`" -a "${WANT_JA}" != "yes" ]
+		then
+			echo
+			eerror "The cjk USE option is only available for japanese support"
+			eerror "If you want japanese support in mutt, please do:"
+			eerror
+			eerror "  # WANT_JA=\"yes\" emerge mutt"
+			eerror
+			eerror "Otherwise, (such as Korean or Chinese)"
+			eerror 
+			eerror "  # USE=\"-cjk\" emerge mutt"
+			die "Wont build cjk support without being forced"
+		fi
+}
 
 src_unpack() { 
 	unpack ${P}i.tar.gz 
