@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/snes9x/snes9x-139-r1.ebuild,v 1.7 2002/10/05 05:39:07 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/snes9x/snes9x-139-r1.ebuild,v 1.8 2002/10/17 01:01:11 vapier Exp $
 
-IUSE="X svga glide opengl"
+IUSE="X svga 3dfx opengl"
 
 DESCRIPTION="Super Nintendo Entertainment System (SNES) emulator"
 HOMEPAGE="http://www.snes9x.com/"
@@ -14,19 +14,19 @@ DEPEND="dev-lang/nasm
 	X? ( virtual/x11 )
 	svga? ( media-libs/svgalib )
 	opengl? ( virtual/opengl )
-	glide? ( media-libs/glide-v3 )"
+	3dfx? ( media-libs/glide-v3 )"
 RDEPEND="${DEPEND}"
 S="${WORKDIR}/release"
 
 pkg_setup() {
 	local mydisp
-	mydisp="`use X``use svga``use opengl``use glide`"
+	mydisp="`use X``use svga``use opengl``use 3dfx`"
 	if [ -z "${mydisp}" ] ; then
 		eerror "Unable to find a display mode"
 		echo
 		eerror "You must have at least 1 of the following"
 		eerror "in your USE variable:"
-		eerror "X   svga   opengl   glide"
+		eerror "X   svga   opengl   3dfx"
 		die "unable to compile targets"
 	fi
 }
@@ -49,7 +49,7 @@ src_compile() {
 	use opengl		&& emake osnes9x
 	[ -x ${S}/snes9x ]	|| die "unable to compile for opengl"
 
-	use glide		&& emake gsnes9x
+	use 3dfx		&& emake gsnes9x
 	[ -x ${S}/snes9x ]	|| die "unable to compile for glide"
 }
 
@@ -57,6 +57,6 @@ src_install() {
 	use X		&&	dobin snes9x
 	use svga	&&	dobin ssnes9x
 	use opengl	&&	dobin osnes9x
-	use glide	&&	dobin gsnes9x
+	use 3dfx	&&	dobin gsnes9x
 	dodoc {COPYRIGHT,CHANGES,README,PROBLEMS,TODO,HARDWARE,HOW2PORT}.TXT
 }
