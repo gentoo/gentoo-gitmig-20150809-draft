@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rename/rename-1.3.ebuild,v 1.10 2004/12/11 18:09:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rename/rename-1.3.ebuild,v 1.11 2004/12/16 00:48:14 vapier Exp $
 
 inherit toolchain-funcs
 
@@ -25,7 +25,7 @@ src_unpack() {
 
 src_install() {
 	newbin rename xmrename || die
-	doman rename.1
+	newman rename.1 xmrename.1
 	dodoc README ChangeLog
 }
 
