@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/ucspi-tcp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.17 2004/02/04 04:45:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.18 2004/02/18 14:13:46 agriffis Exp $
+
+  18 Feb 2004; Aron Griffis <agriffis@gentoo.org> ucspi-tcp-0.88-r5.ebuild,
+  ucspi-tcp-0.88-r6.ebuild, ucspi-tcp-0.88-r7.ebuild,
+  ucspi-tcp-0.88-r8.ebuild:
+  add ia64/~ia64 keywords
 
 *ucspi-tcp-0.88-r8 (20 Jan 2004)
 
