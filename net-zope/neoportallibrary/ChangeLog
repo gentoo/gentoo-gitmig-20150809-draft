@@ -1,9 +1,12 @@
 # ChangeLog for net-zope/neoportallibrary
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/neoportallibrary/ChangeLog,v 1.1 2003/04/07 03:58:06 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/neoportallibrary/ChangeLog,v 1.2 2003/06/23 06:12:55 kutsuya Exp $
+
+  22 Jun 2003; Jason Shoemaker <kustsuya@gentoo.org>
+  neoportallibrary-0.9b.ebuild: ~x86 ~ppc -> x86 ppc. Added MYDOC variable.
 
 *neoportallibrary-0.9b (06 Apr 2003)
 
-  06 Apr 2003; Jason Shoemaker <kutsuya@gentoo.org> neoportallibrary-0.9b.ebuild:
-  Initial import.
+  06 Apr 2003; Jason Shoemaker <kutsuya@gentoo.org> 
+  neoportallibrary-0.9b.ebuild: Initial import.
 
