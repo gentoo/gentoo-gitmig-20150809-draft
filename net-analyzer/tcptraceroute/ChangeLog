@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tcptraceroute
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/ChangeLog,v 1.16 2004/08/16 11:05:34 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcptraceroute/ChangeLog,v 1.17 2004/08/20 04:02:04 weeve Exp $
+
+  19 Aug 2004; Jason Wever <weeve@gentoo.org> tcptraceroute-1.5_beta5.ebuild:
+  Stable on sparc.
 
   16 Aug 2004; Eldad Zack <eldad@gentoo.org> tcptraceroute-1.5_beta5.ebuild:
   x86 stable
