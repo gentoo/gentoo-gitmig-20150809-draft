@@ -81,7 +81,7 @@
 *sys-apps/less
 *sys-apps/man
 *sys-apps/man-pages
-*virtuals/modutils
+*virtual/modutils
 *sys-apps/net-tools
 *sys-apps/procps
 *sys-apps/psmisc
