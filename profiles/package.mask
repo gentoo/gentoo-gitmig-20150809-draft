@@ -1,3 +1,4 @@
->=sys-apps/bash-2.05
+>sys-apps/bash-2.04
 >=sys-devel/gcc-2.96
->=sys-libs/readline-4.2
+>sys-libs/readline-4.1
+>sys-devel/automake-1.4
