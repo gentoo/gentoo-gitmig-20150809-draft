@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.72.ebuild,v 1.1 2004/06/03 21:43:13 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.72.ebuild,v 1.2 2004/06/10 21:00:20 lordvan Exp $
 
 inherit eutils flag-o-matic
 
@@ -44,6 +44,10 @@ src_install() {
 }
 
 pkg_postinst() {
+	einfo ""
+	ewarn "Warning: clamd and/or freshclam have not been restarted."
+	ewarn "You should restar them with: /etc/init.d/clamd restart"
+	einfo ""
 	if use milter ; then
 		einfo "For simple instructions howto setup the clamav-milter..."
 		einfo ""
