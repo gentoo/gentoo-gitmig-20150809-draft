@@ -1,6 +1,11 @@
 # ChangeLog for dev-haskell/haddock
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.19 2005/02/23 19:32:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/ChangeLog,v 1.20 2005/03/23 14:03:58 kosmikus Exp $
+
+  23 Mar 2005; Andres Loeh <kosmikus@gentoo.org> haddock-0.6-r2.ebuild,
+  haddock-0.6-r3.ebuild:
+  haddock is currently blocked by ghc-6.4, and haddock-0.6-r3 now inherits
+  ghc-package.eclass, hopefully fixing bug #86214.
 
   23 Feb 2005; Michael Sterrett <mr_bones_@gentoo.org> haddock-0.6-r2.ebuild,
   haddock-0.6-r3.ebuild:

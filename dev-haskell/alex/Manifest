@@ -1,4 +1,16 @@
-MD5 cedee965652f741e3e98328bb42b092e ChangeLog 996
-MD5 9583507bc7b241f82ab2f80676e22523 alex-2.0.ebuild 2165
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 becc0aeac0301718ffdd85aefaf4d647 alex-2.0.ebuild 2185
+MD5 b2e1cda171e0b3839fcc0887b6d42a8b alex-2.0.1.ebuild 1784
+MD5 637e3cb68bc9e6e808f5e3280b2e48a1 ChangeLog 1199
 MD5 a769ecfcd1cdd2d40986627df7dfb249 metadata.xml 224
 MD5 382124e3a01f9c689abce012ade88a67 files/digest-alex-2.0 65
+MD5 630f9dad69d0e845886e2401d2db1c06 files/digest-alex-2.0.1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCQXl2OKSBj1ObwosRAlkTAJ9zzCO2USHykGcImwtI/c9M3xZdAACgnAyK
+f7T0/IMBYjsaGMw3PBxx8mM=
+=XNlH
+-----END PGP SIGNATURE-----
