@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/libgnomeuimm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/ChangeLog,v 1.1 2003/06/20 23:44:44 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/ChangeLog,v 1.2 2003/08/31 06:22:36 obz Exp $
+
+*libgnomeuimm-1.3.17 (31 Aug 2003)
+
+  31 Aug 2003; Mike Gardiner <obz@gentoo.org> libgnomeuimm-1.3.17.ebuild:
+  New version
 
 *libgnomeuimm-1.3.16 (26 Apr 2003)
 
