@@ -1,10 +1,10 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-0.8.10.ebuild,v 1.9 2003/12/26 12:33:15 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/gnutls-0.8.10.ebuild,v 1.10 2004/01/04 11:10:21 aliz Exp $
 
 DESCRIPTION="A TLS 1.0 and SSL 3.0 implementation for the GNU project"
 HOMEPAGE="http://www.gnutls.org/"
-SRC_URI="ftp://ftp.gnutls.org/pub/gnutls/${P}.tar.gz"
+SRC_URI="ftp://ftp.gnutls.org/pub/gnutls/attic/${P}.tar.gz"
 
 IUSE="zlib doc crypt"
 LICENSE="LGPL-2.1"
