@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/alsa-tools
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.43 2004/04/04 19:11:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.44 2004/04/16 11:19:58 lv Exp $
+
+  16 Apr 2004; Travis Tilley <lv@gentoo.org> alsa-tools-1.0.4.ebuild:
+  added ~amd64 keyword and a gnuconfig_update needed to get alsa-tools to
+  recognise x86_64-unknown-linux-gnu as a valid arch
 
 *alsa-tools-1.0.4 (04 Apr 2004)
 

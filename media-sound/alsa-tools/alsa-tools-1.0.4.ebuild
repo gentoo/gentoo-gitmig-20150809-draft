@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.4.ebuild,v 1.1 2004/04/04 19:11:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-1.0.4.ebuild,v 1.2 2004/04/16 11:19:58 lv Exp $
+
+inherit gnuconfig
 
 IUSE=""
 
@@ -50,6 +52,8 @@ src_unpack() {
 }
 
 src_compile() {
+	gnuconfig_update
+
 	# hdspmixer requires fltk
 	export LDFLAGS="-L/usr/lib/fltk-1.1"
 	export CPPFLAGS="-I/usr/include/fltk-1.1"
