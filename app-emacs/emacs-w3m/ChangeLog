@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/emacs-w3m
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/ChangeLog,v 1.7 2004/01/18 19:41:27 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/ChangeLog,v 1.8 2004/01/21 16:37:01 usata Exp $
+
+*emacs-w3m-1.3.80-r1 (21 Jan 2004)
+
+  21 Jan 2004; Mamoru KOMACHI <usata@gentoo.org> emacs-w3m-1.3.80-r1.ebuild:
+  Changed net-www/w3mmee to virtual/w3m. Note: You cannot use async
+  enabled w3m with emacs-w3m. Please make sure you don't have "async"
+  in your USE flags.
 
   19 Jan 2004; Mamoru KOMACHI <usata@gentoo.org> emacs-w3m-1.3.80.ebuild:
   Forced w3mmee version because emacs-w3m needs to have multilingualised w3mmee,
