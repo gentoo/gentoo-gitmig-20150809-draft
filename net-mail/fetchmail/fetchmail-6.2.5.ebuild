@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.2.5.ebuild,v 1.1 2003/10/21 18:28:38 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-6.2.5.ebuild,v 1.2 2003/11/12 18:10:36 mkennedy Exp $
 
 IUSE="ssl nls ipv6 kerberos krb4"
 
@@ -41,8 +41,8 @@ src_compile() {
 		--enable-NTLM \
 		--enable-SDPS \
 		${myconf} || die "Configuration failed."
-
-	emake || die "Compilation failed."
+	# wont compile reliably on smp (mkennedy@gentoo.org 2003-11-12)
+	make || die "Compilation failed."
 }
 
 src_install() {
