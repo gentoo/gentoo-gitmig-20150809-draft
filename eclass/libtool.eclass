@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.29 2004/09/22 16:00:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.30 2004/09/22 18:33:47 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -115,7 +115,7 @@ elibtoolize() {
 
 	my_dirlist="$(ELT_find_ltmain_sh)"
 
-	for x in $*
+	for x in "$@"
 	do
 		case "${x}" in
 			"--portage")
@@ -256,4 +256,24 @@ elibtoolize() {
 	fi
 
 	cd "${start_dir}"
+
+	uclibctoolize
+}
+
+uclibctoolize() {
+	local targets=""
+	local x
+
+	if [ -z "$@" ] ; then
+		targets="$(find ${S} -name configure)"
+	fi
+
+	einfo "Applying uClibc/libtool patches ..."
+	for x in ${targets} ; do
+		if grep 'Transform linux' "${x}" >/dev/null ; then
+			ebegin " Fixing \${S}${x/${S}}"
+			patch -p0 "${x}" "${ELT_PATCH_DIR}/uclibc/configure.patch" > /dev/null
+			eend $? "PLEASE CHECK ${x}"
+		fi
+	done
 }
