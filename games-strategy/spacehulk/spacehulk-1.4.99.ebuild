@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/spacehulk/spacehulk-1.4.99.ebuild,v 1.3 2004/04/13 10:20:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/spacehulk/spacehulk-1.4.99.ebuild,v 1.4 2004/04/16 18:51:31 vapier Exp $
 
-inherit games
+inherit games kde-functions
 
 DESCRIPTION="A boardgame in the world of Warhammer 40k"
 HOMEPAGE="http://r.vinot.free.fr/spacehulk/"
@@ -21,8 +21,10 @@ DEPEND=">=x11-libs/qt-3
 	media-libs/nas"
 
 src_compile() {
+	set-qtdir 3
 	egamesconf \
-		$(use_with xinerama) || die
+		`use_with xinerama` \
+		|| die
 	emake || die "emake failed"
 }
 
