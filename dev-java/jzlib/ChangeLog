@@ -1,10 +1,11 @@
 # ChangeLog for dev-java/jzlib
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jzlib/ChangeLog,v 1.1 2004/02/14 04:42:26 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jzlib/ChangeLog,v 1.2 2004/02/14 04:43:57 strider Exp $
 
 *jzlib-1.0.3 (14 Feb 2004)
 
   14 Feb 2004; Adrian Almenar <strider@gentoo.org> jzlib-1.0.3.ebuild,
   metadata.xml, files/jzlib_build.xml:
   Initial import of jzlib, needed for jsch.
+  jzlib_build.xml taken from jzlib SRC RPM from Jpackage.org.
 
