@@ -1,0 +1,13 @@
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/make.defaults,v 1.1 2005/01/06 10:49:42 gmsoft Exp $
+#
+# System-wide defaults for the Portage system
+# See portage(5) manpage
+
+# System-wide defaults for the Portage system
+
+ARCH="hppa"
+ACCEPT_KEYWORDS="hppa"
+
+FEATURES="sandbox sfperms strict"
