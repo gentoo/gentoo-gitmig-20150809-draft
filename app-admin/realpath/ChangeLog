@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/realpath
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/realpath/ChangeLog,v 1.8 2004/11/15 19:37:27 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/realpath/ChangeLog,v 1.9 2004/11/21 04:55:11 ndimiduk Exp $
+
+  20 Nov 2004; Nick Dimiduk <ndimiduk@gentoo.org> realpath-1.9.10.ebuild:
+  Provided support for ppc-macos's case-insensative file system.
 
   15 Nov 2004; Markus Rothe <corsair@gentoo.org> realpath-1.9.10.ebuild:
   Marked ~ppc64; bug #71163
