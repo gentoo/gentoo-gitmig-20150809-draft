@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.698 2004/10/24 07:12:31 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.699 2004/10/24 13:21:40 lu_zero Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -37,6 +37,7 @@ app-editors/xemacs:athena - Chooses the MIT Athena widget set
 app-editors/xemacs:dnd - Enables support for the x11-libs/dnd drag-n-drop library
 app-editors/xemacs:lucid - Chooses the lucid widget set (default, deprecated)
 app-editors/xemacs:neXt - Chooses the neXt L&F widget set
+app-emulation/bochs:debugger - Enable the bochs debugger
 app-emulation/fuse:libdsk - Enable support for the floppy disk emulation library
 app-emulation/mips64emul:cacheemu - Enables support for cache emulation
 app-emulation/mips64emul:delays - Enables instruction latency/delay emulation
