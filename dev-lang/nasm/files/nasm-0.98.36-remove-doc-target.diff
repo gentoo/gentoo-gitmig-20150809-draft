@@ -1,0 +1,39 @@
+--- Makefile.in.orig	Sun Sep  8 03:43:30 2002
++++ Makefile.in	Sun Sep  8 03:46:45 2002
+@@ -32,8 +32,8 @@
+ 
+ .SUFFIXES: .c .i .s .$(O) .1 .man
+ 
+-.PHONY: all doc rdf install clean distclean cleaner spotless install_rdf
+-.PHONY: install_doc everything install_everything strip perlreq dist
++.PHONY: all rdf install clean distclean cleaner spotless install_rdf
++.PHONY: everything install_everything strip perlreq dist
+ 
+ .c.$(O):
+ 	$(CC) -c $(CFLAGS) -o $@ $<
+@@ -135,7 +135,6 @@
+ 
+ cleaner: clean
+ 	rm -f $(PERLREQ) *.man nasm.spec
+-	cd doc && $(MAKE) clean
+ 
+ spotless: distclean cleaner
+ 
+@@ -148,15 +147,9 @@
+ rdf_install install_rdf:
+ 	cd rdoff && $(MAKE) install
+ 
+-doc:
+-	cd doc && $(MAKE) all
++everything: all rdf
+ 
+-doc_install install_doc:
+-	cd doc && $(MAKE) install
+-
+-everything: all doc rdf
+-
+-install_everything: everything install install_doc install_rdf
++install_everything: everything install install_rdf
+ 
+ dist: spotless perlreq
+ 	autoconf
