@@ -1,6 +1,11 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.30 2003/03/11 05:12:59 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.31 2003/03/15 19:46:31 aliz Exp $
+
+*samba-2.2.8 (15 Mar 2003)
+
+  15 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Security update.
 
 *samba-3.0_alpha22 (11 Mar 2003)
 
