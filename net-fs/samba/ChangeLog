@@ -1,6 +1,15 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.39 2003/07/21 02:47:08 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.40 2003/08/22 04:41:37 woodchip Exp $
+
+*samba-3.0.0_rc1-r1 (21 Aug 2003)
+
+  21 Aug 2003; Donny Davies <woodchip@gentoo.org> samba-3.0.0_rc1-r1.ebuild,
+  files/samba-3.0.0-python-setup.patch:
+  SAMBA_3_0 CVS snapshot from 20030821 plus the latest samba-vscan CVS
+  snapshot 0.3.4beta2cvs.  USE flags python and oav appear to be
+  casualties of recent changes; patches welcome.  The "Using Samba"
+  book moved to it's own CVS module, it's not in here anymore.
 
 *samba-3.0.0_beta3-r1 (20 Jul 2003)
 
