@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2908 2004/06/03 21:45:26 lv Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2909 2004/06/04 07:23:30 mr_bones_ Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -22,13 +22,14 @@
 ##   End example
 ##
 
+# <mr_bones_@gentoo.org> (04 June 2004)
+# until =dev-util/eclipse-sdk-3.0* is unmasked
+dev-util/eclipse-emf-bin
+dev-util/ecletex
+
 # <klieber@gentoo.org> (01 June 2004)
 # security masked due to issue described in #51586
 =dev-util/tla-1.2.1_pre1
-
-# <mr_bones_@gentoo.org> (01 June 2004)
-# until =dev-util/eclipse-sdk-3.0* is unmasked
-dev-util/ecletex
 
 # <twp@gentoo.org> (31 May 2004)
 # Pending resolution of bug # 52544
