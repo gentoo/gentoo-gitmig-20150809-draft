@@ -1,22 +1,20 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camserv/camserv-0.5.0.ebuild,v 1.10 2004/04/27 20:52:02 agriffis Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/media-video/camserv/camserv-0.5.0.ebuild,v 1.11 2004/06/11 13:53:20 vapier Exp $
 
 inherit eutils
 
-S=${WORKDIR}/${P}
-DESCRIPTION="A streaming video server."
-SRC_URI="http://cserv.sourceforge.net/current/${P}.tar.gz"
+DESCRIPTION="A streaming video server"
 HOMEPAGE="http://cserv.sourceforge.net/"
+SRC_URI="http://cserv.sourceforge.net/current/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86"
+IUSE=""
 
 DEPEND=">=media-libs/jpeg-6b-r2
 	>=media-libs/imlib-1.9.13-r2"
-
 
 src_unpack() {
 	unpack ${A}
@@ -24,18 +22,9 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-0.5-errno.patch
 }
 
-src_compile() {
-
-	econf || die
-	emake || die
-
-}
-
-src_install () {
-
+src_install() {
 	einstall datadir=${D}/usr/share/${PN} || die
 
-	dodoc AUTHORS BUGS ChangeLog COPYING NEWS README TODO javascript.txt
+	dodoc AUTHORS BUGS ChangeLog NEWS README TODO javascript.txt
 	dohtml defpage.html
-
 }
