@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.10.ebuild,v 1.2 2002/01/15 00:32:54 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.10-r1.ebuild,v 1.1 2002/01/15 01:27:50 gbevin Exp $
 
 S=${WORKDIR}/SWIG-${PV}
 DESCRIPTION="Simplied Wrapper and Interface Generator"

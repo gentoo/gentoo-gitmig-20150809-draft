@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Authors Ben Beuchler <insyte@mazer.squad51.net> 
 #	  and Aron Griffis <agriffis@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.0-r3.ebuild,v 1.2 2002/01/15 00:32:54 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/vim-6.0-r4.ebuild,v 1.1 2002/01/15 01:27:50 gbevin Exp $
 
 # Please name the ebuild as follows.  If this is followed, there
 # should be no need to modify this ebuild when the Vim version is

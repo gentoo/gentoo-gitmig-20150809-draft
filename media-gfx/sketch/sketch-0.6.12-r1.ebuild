@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Chouser <chouser@gentoo.com> 
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sketch/sketch-0.6.12.ebuild,v 1.3 2002/01/15 00:32:54 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sketch/sketch-0.6.12-r1.ebuild,v 1.1 2002/01/15 01:27:50 gbevin Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="interactive X11 vector drawing program"
