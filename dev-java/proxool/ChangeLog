@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/proxool
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/proxool/ChangeLog,v 1.2 2004/12/27 15:24:29 st_lim Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/proxool/ChangeLog,v 1.3 2005/01/20 19:49:39 luckyduck Exp $
+
+  20 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> proxool-0.8.3.ebuild:
+  added missing jikes dependency. see #78819.
 
   27 Dec 2004; Lim Swee Tat <st_lim@gentoo.org> proxool-0.8.3.ebuild:
   Removed the version number from the jar
