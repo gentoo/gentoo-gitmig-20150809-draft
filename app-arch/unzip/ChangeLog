@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/unzip
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.18 2003/10/03 12:42:42 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/ChangeLog,v 1.19 2004/03/14 19:28:42 tgall Exp $
+
+  14 Mar 2004; Tom Gall <tgall@gentoo.org> unzip-5.50-r2.ebuild:
+  ppc64 marked stable
 
   03 Oct 2003; Christian Birchinger <joker@gentoo.org> unzip-5.50-r2.ebuild:
   Added sparc stable keyword

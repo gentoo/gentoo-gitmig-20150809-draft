@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/unzip-5.50-r2.ebuild,v 1.7 2004/02/22 05:50:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/unzip/unzip-5.50-r2.ebuild,v 1.8 2004/03/14 19:28:42 tgall Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.info-zip.org/pub/infozip/src/${PN}${PV/.}.tar.gz"
 
 LICENSE="Info-ZIP"
 SLOT="0"
-KEYWORDS="x86 ppc alpha hppa mips amd64 ia64 sparc"
+KEYWORDS="x86 ppc alpha hppa mips amd64 ia64 sparc ppc64"
 
 DEPEND="virtual/glibc
 	>=sys-apps/sed-4"
