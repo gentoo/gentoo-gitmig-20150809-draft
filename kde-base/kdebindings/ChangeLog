@@ -1,6 +1,10 @@
-# ChangeLog for kde-base/kdebindings
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/ChangeLog,v 1.23 2003/02/01 20:30:58 jmorgan Exp $
+# ChangeLog for kde-basekdebindingsChangeLog/
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/ChangeLog,v 1.24 2003/02/11 20:59:45 danarmak Exp $
+
+  11 Feb 2003; Dan Armak <danarmak@gentoo.org> kdegraphics-3.1.ebuild  :
+
+  Fix #14756: enforce make -j1.
 
   01 Feb 2003; Jack Morgan <jmorgan@gentoo.org> kdebindings-3.1.ebuild:
   added ~sparc to keywords

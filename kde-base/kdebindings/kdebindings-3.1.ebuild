@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.1.ebuild,v 1.8 2003/02/01 19:01:21 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.1.ebuild,v 1.9 2003/02/11 20:59:45 danarmak Exp $
 # TODO: add gnustep, objc bindings
 inherit kde-dist 
 
@@ -27,6 +27,9 @@ use java	&& myconf="$myconf --with-java=$(java-config --jdk-home)"	|| myconf="$m
 export DO_NOT_COMPILE="$DO_NOT_COMPILE qtsharp"
 
 export LIBPYTHON="`python-config`"
+
+# fix bug #14756 fex. Doesn't compile well with -j2.
+export MAKEOPTS="$MAKEOPTS -j1"
 
 src_unpack()
 {
