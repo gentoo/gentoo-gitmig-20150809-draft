@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.11.7-r1.ebuild,v 1.1 2003/08/30 10:06:05 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/pilot-link/pilot-link-0.11.7-r1.ebuild,v 1.2 2003/09/17 01:39:23 weeve Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.pilot-link.org/"
 
 SLOT="0"
 LICENSE="GPL-2 | LGPL-2"
-KEYWORDS="x86 ppc ~sparc ~alpha"
+KEYWORDS="x86 ppc sparc ~alpha"
 IUSE="perl java tcltk python png readline"
 
 DEPEND="virtual/glibc
