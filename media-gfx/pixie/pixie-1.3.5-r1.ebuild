@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-1.3.5.ebuild,v 1.2 2004/04/30 14:04:20 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixie/pixie-1.3.5-r1.ebuild,v 1.1 2004/05/02 01:38:00 eradicator Exp $
 
 inherit eutils
 
@@ -31,9 +31,19 @@ src_unpack() {
 	WANT_AUTOMAKE=1.4 automake
 }
 
+src_compile() {
+	./configure --prefix=/opt/pixie || die
+	emake || die
+}
+
 src_install() {
 	make DESTDIR=${D} install || die
 	dodoc AUTHORS ChangeLog DEVNOTES NEWS README
 
-	mv ${D}/usr/share/doc/pixie ${D}/usr/share/doc/${PF}/html
+	insinto /etc/env.d
+	doins ${FILESDIR}/50pixie
+
+	edos2unix ${D}/opt/pixie/shaders/*
+
+	mv ${D}/opt/pixie/doc ${D}/usr/share/doc/${PF}/html
 }

@@ -21,6 +21,6 @@
 -
 -
 -
-+	@INSTALL@ -d $(DESTDIR)$(datadir)/doc/pixie && cp -rf $(srcdir)/doc/. $(DESTDIR)$(datadir)/doc/pixie
-+	@INSTALL@ -d $(DESTDIR)$(libdir)/shaders && cp -rf $(srcdir)/shaders/. $(DESTDIR)$(libdir)/shaders
++	cp -rf $(srcdir)/doc $(DESTDIR)$(prefix)
++	cp -rf $(srcdir)/shaders $(DESTDIR)$(prefix)
  
