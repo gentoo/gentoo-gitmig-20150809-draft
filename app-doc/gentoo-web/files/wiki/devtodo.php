@@ -39,7 +39,7 @@
 			$team = team_num_name( $todo['team'] );
 			$branch = '';
 			if ( $team != 'Infrastructure' ) {
-				$branch = '-'.branch_num_name( $todo['branch'] );
+				$branch = '/'.branch_num_name( $todo['branch'] );
 			}
 ?>
 <tr>
@@ -74,7 +74,7 @@
 			$team = team_num_name( $todo['team'] );
 			$branch = '';
 			if ( $team != 'Infrastructure' ) {
-				$branch = '-'.branch_num_name( $todo['branch'] );
+				$branch = '/'.branch_num_name( $todo['branch'] );
 			}
 ?>
 <tr>

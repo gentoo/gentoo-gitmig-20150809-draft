@@ -214,7 +214,7 @@ global $uid, $dbusername, $show_privates, $list; ?>
 	$team = team_num_name( $team );
 	$branch = '';
 	if ( $team != 'Infrastructure' ) {
-		$branch = '-'.branch_num_name( $branch );
+		$branch = '/'.branch_num_name( $branch );
 	}
 		
 	?>
@@ -231,7 +231,7 @@ global $uid, $dbusername, $show_privates, $list; ?>
 	</tr>
 	<tr>
 		<td bgcolor="#e0e0e0"><p><?php if ($uid && $public == 1) { print "<a href=\"index.php?action=grab_todo&tid=$tid\">I'll do it</a> | "; } ?><a href="single.php?tid=<?=$tid;?>">details</a> (<?=$followups;?>)</td>
-		<td bgcolor="#e0e0e0" align="right"><p><?php if ( $public ) print 'Posted'; else print 'Owned'; ?> by <a href="devtodo.php?devid=<?=$owner;?>"><b><?=$developer;?></b></a> on <?=$team;?><?=$branch;?></p></td>
+		<td bgcolor="#e0e0e0" align="right"><p><?php if ( $public ) print 'Posted'; else print 'Owned'; ?> by <a href="devtodo.php?devid=<?=$owner;?>"><b><?=$developer;?></b></a> (team: <?=$team.$branch;?>)</p></td>
 	</tr>
 	</table>
 	</td></tr></table>
