@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.24 2003/10/13 00:27:31 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.25 2003/12/18 22:13:29 latexer Exp $
+
+  18 Dec 2003; Peter Johanson <latexer@gentoo.org> metadata.xml:
+  Added metadata.xml so seemant will still love me
 
   12 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> kismet-3.0.1.ebuild:
   fix autoconf build issue, bug #30160
