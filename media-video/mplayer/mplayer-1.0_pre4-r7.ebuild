@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r7.ebuild,v 1.1 2004/07/24 08:28:13 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r7.ebuild,v 1.2 2004/07/24 10:22:00 ferringb Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -142,44 +142,40 @@ src_unpack() {
 		sed -i -e \
 		"s:^#KERNEL_OUTPUT_PATH=: \
 		KERNEL_OUTPUT_PATH =${KV_OUTPUT}:" \
-		${S}/Makefile
+		${S}/Makefile || die "failed to sed ${S}/Makefile"
 	fi # end of matrox related stuff
 
 	# Fix hppa compilation
-	[ "${ARCH}" = "hppa" ] && sed -i -e "s/-O4/-O1/" "${S}/configure"
+	if use hppa; then
+		sed -i -e "s/-O4/-O1/" "${S}/configure" || die "failed to sed configure"
+	fi
 
-	if use svga
-	then
+	if use svga; then
 		echo
 		einfo "Enabling vidix non-root mode."
 		einfo "(You need a proper svgalib_helper.o module for your kernel"
 		einfo " to actually use this)"
 		echo
 
-		mv ${WORKDIR}/svgalib_helper ${S}/libdha
+		mv "${WORKDIR}/svgalib_helper" "${S}/libdha"
 	fi
 	#Remove kernel-2.6 workaround as the problem it works around is
 	#fixed, and the workaround breaks sparc
-	use sparc && sed -i 's:#define __KERNEL__::' osdep/kerneltwosix.h
+	if use sparc; then
+		dosed -i -e 's:#define __KERNEL__::' osdep/kerneltwosix.h || die "failed to apply kernel-2.6 workarround"
+	fi
 }
 
 src_compile() {
 
 	filter-flags -fPIE
 	local myconf=
-	################
-	#Optional features#
-	###############
-	myconf="${myconf} $(use_enable bidi fribidi)"
-	myconf="${myconf} $(use_enable cdparanoia)"
 
 	if use dvd; then
 		myconf="${myconf} $(use_enable dvdread) $(use_enable !dvdread mpdvdkit)"
 	else
 		myconf="${myconf} --disable-dvdread --disable-mpdvdkit"
 	fi
-	myconf="${myconf} $(use_enable edl)"
-	myconf="${myconf} $(use_enable encode mencoder)"
 
 	if use !gtk && use !X && use !xv && use !xinerama; then
 		myconf="${myconf} --disable-gui --disable-x11 --disable-xv --disable-xmga --disable-xinerama --disable-vm --disable-xvmc"
@@ -194,9 +190,6 @@ src_compile() {
 	else
 		myconf="${myconf} $(use_enable png)"
 	fi
-	myconf="${myconf} $(use_enable ipv6 inet6)"
-	myconf="${myconf} $(use_enable joystick)"
-	myconf="${myconf} $(use_enable lirc)"
 
 	if use ia64; then
 		myconf="${myconf} --disable-live"
@@ -204,150 +197,131 @@ src_compile() {
 		myconf="${myconf} $(use_enable live)"
 	fi
 
-	myconf="${myconf} $(use_enable network) $(use_enable network ftp)"
-	myconf="${myconf} $(use_enable rtc)"
-	myconf="${myconf} $(use_enable samba smb)"
-	myconf="${myconf} $(use_enable truetype freetype)"
-	myconf="${myconf} $(use_enable v4l tv-v4l)"
-	myconf="${myconf} $(use_enable v4l tv-v4l2)"
-
-	#########
-	# Codecs #
-	########
-	myconf="${myconf} $(use_enable divx4linux)"
-	myconf="${myconf} $(use_enable gif)"
-	myconf="${myconf} $(use_enable jpeg)"
-	myconf="${myconf} $(use_enable lzo liblzo)"
-	myconf="${myconf} $(use_enable matroska external-matroska) $(use_enable !matroska internal-matroska)"
-	myconf="${myconf} $(use_enable mpeg external-faad)         $(use_enable !mpeg internal-faad)"
-	myconf="${myconf} $(use_enable oggvorbis vorbis)"
 	if use ia64; then
 		myconf="${myconf} --disable-theora"
 	else
 		myconf="${myconf} $(use_enable theora)"
 	fi
-	myconf="${myconf} $(use_enable xmms)"
-	myconf="${myconf} $(use_enable xvid)"
 
-	#############
-	# Video Output #
-	#############
-	myconf="${myconf} $(use_enable 3dfx)"
 	if use xvid && use 3dfx; then
 		myconf="${myconf} --enable-tdfxvid"
 	else
 		myconf="${myconf} --disable-tdfxvid"
 	fi
-	myconf="${myconf} $(use_enable aalib aa)"
-	myconf="${myconf} $(use_enable directfb)"
-	myconf="${myconf} $(use_enable dvb)"
-	myconf="${myconf} $(use_enable fbdev)"
-	myconf="${myconf} $(use_enable ggi)"
-	myconf="${myconf} $(use_enable libcaca caca)"
 	if use matrox && use X; then
 		myconf="${myconf} $(use_enable matrox xmga)"
 	fi
-	myconf="${myconf} $(use_enable opengl gl)"
-	myconf="${myconf} $(use_enable sdl)"
-	myconf="${myconf} $(use_enable svga)"
-	myconf="${myconf} $(use_enable tga)"
 
-	#############
-	# Audio Output #
-	#############
-	myconf="${myconf} $(use_enable alsa)"
-	myconf="${myconf} $(use_enable arts)"
-	myconf="${myconf} $(use_enable esd)"
-	myconf="${myconf} $(use_enable mad)"
-	myconf="${myconf} $(use_enable nas)"
-	myconf="${myconf} $(use_enable oss ossaudio)"
-
-	#################
-	# Advanced Options #
-	#################
 	if ! use 3dnow; then
 		myconf="${myconf} --disable-3dnow --disable-3dnowex";
 	fi
+
 	if ! use sse; then
 		myconf="${myconf} --disable-sse --disable-sse2";
 	fi
 	if use !mmx && use !3dnow && use !sse; then
 		myconf="${myconf} --disable-mmx --disable-mmx2";
 	fi
-	myconf="${myconf} $(use_enable altivec)"
-	myconf="${myconf} $(use_enable debug)"
-	myconf="${myconf} $(use_enable nls i18n)"
 
-	if [ -d /opt/RealPlayer9/Real/Codecs ]
-	then
+	if [ -d /opt/RealPlayer9/Real/Codecs ]; then
 		einfo "Setting REALLIBDIR to /opt/RealPlayer9/Real/Codecs..."
 		REALLIBDIR="/opt/RealPlayer9/Real/Codecs"
-	elif [ -d /opt/RealPlayer8/Codecs ]
-	then
+	elif [ -d /opt/RealPlayer8/Codecs ]; then
 		einfo "Setting REALLIBDIR to /opt/RealPlayer8/Codecs..."
 		REALLIBDIR="/opt/RealPlayer8/Codecs"
 	else
 		REALLIBDIR="/usr/lib/real"
 	fi
 
-	if [ -e /dev/.devfsd ]
-	then
+	if [ -e /dev/.devfsd ]; then
 		myconf="${myconf} --enable-linux-devfs"
 	fi
 
 	# Build the matrox driver before mplayer configuration.
 	# That way the configure script sees it and builds the support
 	#build the matrox driver before the 
-	if use matrox ; then
-		if use x86 ; then
-			check_KV
-			cd ${S}/drivers
-			# bad hack, will be fixed later
-			addwrite /usr/src/linux/
-			unset ARCH
-			make all || die "Matrox build failed!  Your kernel may need to have `make mrproper` run on it before trying to use matrox support in this ebuild again."
-			cd ${S}
-		else
-			einfo "Not building matrox driver.  It doesn't seem to like other archs.  Please let me know at chriswhite@gentoo.org if you find out otherwise."
-		fi
+	if use matrox && use x86; then
+		check_KV
+		cd ${S}/drivers
+		# bad hack, will be fixed later
+		addwrite ${ROOT}/usr/src/linux/
+		unset ARCH
+		make all || die "Matrox build failed!  Your kernel may need to have `make mrproper` run on it before trying to use matrox support in this ebuild again."
+		cd ${S}
 	fi
 
-	# leave this in place till the configure/compilation borkage is completely corrected back to pre4-r4 levels.
-	# it's intended for debugging so we can get the options we configure mplayer w/, rather then hunt about.
-	# it *will* be removed asap; in the meantime, doesn't hurt anything.
-	echo "${myconf}" > ${T}/configure-options
 	unset CFLAGS CXXFLAGS
-	./configure --prefix=/usr \
-		--confdir=/usr/share/mplayer \
-		--datadir=/usr/share/mplayer \
-		--disable-runtime-cpudetection \
-		--enable-largefiles \
-		--enable-menu \
-		--enable-real \
-		--with-reallibdir=${REALLIBDIR} \
-		--with-x11incdir=/usr/X11R6/include \
-		${myconf} || die
+	./configure --prefix=/usr 		\
+		--confdir=/usr/share/mplayer	\
+		--datadir=/usr/share/mplayer	\
+		--disable-runtime-cpudetection	\
+		--enable-largefiles		\
+		--enable-menu			\
+		--enable-real			\
+		--with-reallibdir=${REALLIBDIR} 	\
+		--with-x11incdir=/usr/X11R6/include	\
+		${myconf} 			\
+		$(use_enable bidi fribidi)	\
+		$(use_enable cdparanoia)	\
+		$(use_enable edl)		\
+		$(use_enable encode mencoder)	\
+		$(use_enable ipv6 inet6)	\
+		$(use_enable joystick)		\
+		$(use_enable lirc)		\
+		$(use_enable network) 		\
+		$(use_enable network ftp)	\
+		$(use_enable rtc)		\
+		$(use_enable samba smb)		\
+		$(use_enable truetype freetype)	\
+		$(use_enable v4l tv-v4l)	\
+		$(use_enable v4l tv-v4l2)	\
+		$(use_enable divx4linux)	\
+		$(use_enable gif)		\
+		$(use_enable jpeg)		\
+		$(use_enable lzo liblzo)	\
+		$(use_enable matroska external-matroska) $(use_enable !matroska internal-matroska)	\
+		$(use_enable mpeg external-faad)         $(use_enable !mpeg internal-faad)		\
+		$(use_enable oggvorbis vorbis)	\
+		$(use_enable xmms)		\
+		$(use_enable xvid)		\
+		$(use_enable 3dfx)		\
+		$(use_enable aalib aa)		\
+		$(use_enable directfb)		\
+		$(use_enable dvb)		\
+		$(use_enable fbdev)		\
+		$(use_enable ggi)		\
+		$(use_enable libcaca caca) 	\
+		$(use_enable opengl gl) 	\
+		$(use_enable sdl) 		\
+		$(use_enable svga) 		\
+		$(use_enable tga) 		\
+		$(use_enable alsa) 		\
+		$(use_enable arts) 		\
+		$(use_enable esd) 		\
+		$(use_enable mad) 		\
+		$(use_enable nas) 		\
+		$(use_enable oss ossaudio) 	\
+		$(use_enable altivec) 		\
+		$(use_enable debug) 		\
+		$(use_enable nls i18n) 		\
+		|| die
 
 		# when gif is autodetected, GIF_LIB is set correctly.  We're explicitly controlling it, and it doesn't behave correctly.
 		# so... we have to help it along.
 		if use gif; then
-			sed -e "s:GIF_LIB =:GIF_LIB = -lungif:" -i config.mak
+			sed -e "s:GIF_LIB =:GIF_LIB = -lungif:" -i config.mak || die "failed to apply GIF_LIB fix"
 		fi
 
-	einfo "Make"
 	make all || die "Failed to build MPlayer!"
-	einfo "Make completed"
 
 	# We build the shared libpostproc.so here so that our
 	# mplayer binary is not linked to it, ensuring that we
 	# do not run into issues ... (bug #14479)
-	cd ${S}/libavcodec/libpostproc
+	cd "${S}/libavcodec/libpostproc"
 	make SHARED_PP="yes" || die "Failed to build libpostproc.so!"
 }
 
 src_install() {
-
-	einfo "Make install"
 	make prefix=${D}/usr \
 	     BINDIR=${D}/usr/bin \
 		 LIBDIR=${D}/usr/lib \
@@ -355,27 +329,22 @@ src_install() {
 	     DATADIR=${D}/usr/share/mplayer \
 	     MANDIR=${D}/usr/share/man \
 	     install || die "Failed to install MPlayer!"
-	einfo "Make install completed"
 
 	if use matrox; then
 		cd ${S}/drivers
-		insinto /lib/modules/${KV}/kernel/drivers/char
-		doins mga_vid.${KV_OBJ}
+		insinto "/lib/modules/${KV}/kernel/drivers/char"
+		doins "mga_vid.${KV_OBJ}"
 	fi
 
 	dodoc AUTHORS ChangeLog README
 
 	# Install the documentation; DOCS is all mixed up not just html
-	find "${S}/DOCS" -type d | xargs -- chmod 0755
-	find "${S}/DOCS" -type f | xargs -- chmod 0644
 	cp -r "${S}/DOCS" "${D}/usr/share/doc/${PF}/" || die
-
-	# Copy misc tools to documentation path, as they're not installed
-	# directly
-	# and yes, we are nuking the +x bit.
-	find "${S}/TOOLS" -type d | xargs -- chmod 0755
-	find "${S}/TOOLS" -type f | xargs -- chmod 0644
 	cp -r "${S}/TOOLS" "${D}/usr/share/doc/${PF}/" || die
+
+	find "${D}/usr/share/doc/${PF}" -type d | xargs -- chmod 0755
+	# and yes, we are nuking the +x bit.
+	find "${D}/usr/share/doc/${PF}" -type f | xargs -- chmod 0644
 
 
 	# Install the default Skin and Gnome menu entry
@@ -399,9 +368,10 @@ src_install() {
 	local x=
 	# Do this generic, as the mplayer people like to change the structure
 	# of their zips ...
+	#this is ugly, fix it at some point.
 	for x in $(find ${WORKDIR}/ -type d -name 'font-arial-??-iso-*')
 	do
-		cp -Rd ${x} ${D}/usr/share/mplayer/fonts
+		cp -Rd "${x}" "${D}/usr/share/mplayer/fonts"
 	done
 	# Fix the font symlink ...
 	rm -rf ${D}/usr/share/mplayer/font
@@ -409,28 +379,24 @@ src_install() {
 
 	insinto /etc
 	newins ${S}/etc/example.conf mplayer.conf
-	dosed -e 's/include =/#include =/' /etc/mplayer.conf
-	dosed -e 's/fs=yes/fs=no/' /etc/mplayer.conf
+	dosed 	-i /etc/mplayer.conf \
+		-e 's/include =/#include =/' \
+		-e 's/fs=yes/fs=no/' || die "failed to fix the default mplayer.conf"
+
 	dosym ../../../etc/mplayer.conf /usr/share/mplayer/mplayer.conf
 
 	insinto /usr/share/mplayer
-	doins ${S}/etc/codecs.conf
-	doins ${S}/etc/input.conf
-	doins ${S}/etc/menu.conf
+	doins "${S}/etc/codecs.conf" "${S}/etc/input.conf" "${S}/etc/menu.conf"
 }
 
 pkg_preinst() {
-
-	if [ -d "${ROOT}/usr/share/mplayer/Skin/default" ]
-	then
+	if [ -d "${ROOT}/usr/share/mplayer/Skin/default" ]; then
 		rm -rf ${ROOT}/usr/share/mplayer/Skin/default
 	fi
 }
 
 pkg_postinst() {
-
-	if use ppc
-	then
+	if use ppc; then
 		echo
 		einfo "When you see only GREEN salad on your G4 while playing"
 		einfo "a DivX, you should recompile _without_ altivec enabled."
@@ -444,22 +410,18 @@ pkg_postinst() {
 	fi
 
 	if use matrox; then
-		depmod -a &>/dev/null || :
+		depmod -a &>/dev/null || true
 	fi
 }
 
 pkg_postrm() {
 
 	# Cleanup stale symlinks
-	if [ -L ${ROOT}/usr/share/mplayer/font -a \
-	     ! -e ${ROOT}/usr/share/mplayer/font ]
-	then
+	if [ -L ${ROOT}/usr/share/mplayer/font -a ! -e ${ROOT}/usr/share/mplayer/font ]; then
 		rm -f ${ROOT}/usr/share/mplayer/font
 	fi
 
-	if [ -L ${ROOT}/usr/share/mplayer/subfont.ttf -a \
-	     ! -e ${ROOT}/usr/share/mplayer/subfont.ttf ]
-	then
+	if [ -L ${ROOT}/usr/share/mplayer/subfont.ttf -a ! -e ${ROOT}/usr/share/mplayer/subfont.ttf ]; then
 		rm -f ${ROOT}/usr/share/mplayer/subfont.ttf
 	fi
 }
