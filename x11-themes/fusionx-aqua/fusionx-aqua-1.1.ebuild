@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/fusionx-aqua/fusionx-aqua-1.1.ebuild,v 1.9 2004/07/03 20:11:39 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/fusionx-aqua/fusionx-aqua-1.1.ebuild,v 1.10 2005/01/10 21:55:15 greg_g Exp $
 
 inherit kde
 
@@ -19,12 +19,12 @@ IUSE=""
 DEPEND="kde-base/kdebase"
 need-kde 3.1
 
-src_compile(){
+src_compile() {
 	# nothing to compile, but don't want the eclass to try to compile anything
 	return 0
 }
 
-src_install(){
+src_install() {
 	mkdir -p ${D}/${KDEDIR}/share/apps/kstyle
 	cp -R -f ${WORKDIR}/${MY_P}/pixmaps ${D}/${KDEDIR}/share/apps/kstyle/ || die
 	cp -R -f ${WORKDIR}/${MY_P}/themes ${D}/${KDEDIR}/share/apps/kstyle/ || die
@@ -35,7 +35,7 @@ src_install(){
 	dodoc ${WORKDIR}/${MY_P}/{CREDITS,README,CHANGELOG}
 }
 
-pkg_postinst(){
+pkg_postinst() {
 	einfo "This theme is an IceWM pixmap theme for KDE."
 	einfo ""
 	einfo "To use this theme set the following options in the"
@@ -45,8 +45,7 @@ pkg_postinst(){
 	einfo "   - Window Decorations = \"IceWM\""
 	einfo "     - Configuration [IceWM] = \"fusionX-aqua\""
 	einfo ""
-	einfo "To make the theme visible in any currently running KDE session"
-	einfo "execute the following command from a shell or the"
-	einfo "KDE \"Run Command\" dialog:"
+	einfo "To make the theme visible execute the following command"
+	einfo "from a shell or the KDE \"Run Command\" dialog:"
 	einfo "   kinstalltheme"
 }
