@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.105 2004/12/29 09:26:35 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.106 2004/12/29 14:30:41 corsair Exp $
+
+  29 Dec 2004; Markus Rothe <corsair@gentoo.org> openssh-3.9_p1-r1.ebuild:
+  Stable for security; bug #59361
 
   29 Dec 2004; <SeJo@gentoo.org> openssh-3.9_p1-r1.ebuild:
   stable on ppc glsa: 59361
