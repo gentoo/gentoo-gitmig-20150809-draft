@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Michael Nygard <michael.nygard@halleysfifth.com>
-# $ Header: $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/magic/magic-7.1.ebuild,v 1.3 2002/05/13 00:35:52 rphillips Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The VLSI design CAD tool"
