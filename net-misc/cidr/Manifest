@@ -1,3 +1,6 @@
-MD5 8c89feb9b9545984a6e431335f353c2e ChangeLog 851
 MD5 c142a89b021be5e8807a8d2483ef1d52 cidr-2.3.1.ebuild 626
+MD5 07864336037173207b800c7219cfcf66 cidr-2.3.1-r1.ebuild 709
+MD5 8c89feb9b9545984a6e431335f353c2e ChangeLog 851
+MD5 9b40c019a40f162c064b5d51eb73dd85 files/digest-cidr-2.3.1-r1 63
+MD5 0214de5ab88bfffe5c4759a5600b8e3b files/cidr-2.3.1.patch 841
 MD5 9b40c019a40f162c064b5d51eb73dd85 files/digest-cidr-2.3.1 63
