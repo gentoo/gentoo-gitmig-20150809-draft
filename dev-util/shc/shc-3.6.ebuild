@@ -1,15 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/shc/shc-3.6.ebuild,v 1.2 2003/07/12 14:28:13 aliz Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/shc/shc-3.6.ebuild,v 1.3 2003/08/07 03:31:15 vapier Exp $
 
-IUSE=""
-
-DESCRIPTION="A (shell-) script compiler/scrambler."
-SRC_URI="http://www.datsi.fi.upm.es/~frosal/sources/${P}.tgz"
+DESCRIPTION="A (shell-) script compiler/scrambler"
 HOMEPAGE="http://www.datsi.fi.upm.es/~frosal"
+SRC_URI="http://www.datsi.fi.upm.es/~frosal/sources/${P}.tgz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc ~alpha"
 
 DEPEND="virtual/glibc"
@@ -20,9 +18,8 @@ src_compile() {
 	make shc || die
 }
 
-src_install () {
-	exeinto /usr/bin
-	doexe shc
+src_install() {
+	dobin shc
 	doman shc.1
 	dodoc shc.README CHANGES
 }

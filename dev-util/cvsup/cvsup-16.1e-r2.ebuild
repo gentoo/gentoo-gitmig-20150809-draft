@@ -1,25 +1,27 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsup/cvsup-16.1e-r2.ebuild,v 1.5 2003/07/12 14:28:13 aliz Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvsup/cvsup-16.1e-r2.ebuild,v 1.6 2003/08/07 03:28:12 vapier Exp $
 
-S=${WORKDIR}
 MY_P="${P/-/-snap-}"
 EZM3="ezm3-1.0"
 EZM3_TARGET="LINUXLIBC6"
 EZM3_INSTALL="${S}/${EZM3}-install"	#// anywhere or having a trailing / makes the compile dies
 
 DESCRIPTION="a faster alternative to cvs"
+HOMEPAGE="http://www.cvsup.org/"
 SRC_URI="http://people.freebsd.org/~jdp/s1g/${MY_P}.tar.gz
 	ftp://ftp.freebsd.org/pub/FreeBSD/development/CVSup/ezm3/${EZM3}-src.tar.bz2
 	ftp://ftp.freebsd.org/pub/FreeBSD/development/CVSup/ezm3/${EZM3}-${EZM3_TARGET}-boot.tar.bz2"
-HOMEPAGE="http://www.cvsup.org/"
 
-SLOT="0"
 LICENSE="BSD"
+SLOT="0"
 KEYWORDS="x86"
+
 DEPEND="virtual/glibc
 	dev-util/yacc"
 RDEPEND="virtual/glibc"
+
+S=${WORKDIR}
 
 seduse() {
 	[ -z "`use ${1}`" ] && echo "${2}" || echo ":"
