@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 dce7479f64b78b1ec687e2361a1c97c6 enscript-1.6.3-r2.ebuild 919
+MD5 d4d67eb8335ba7b9d123e65ec858b06a enscript-1.6.3-r3.ebuild 919
 MD5 b2e93a545ae790fb6fb3f5109e60923a enscript-1.6.3.ebuild 696
 MD5 0db790ea45572b922465082d97fe6488 enscript-1.6.3-r1.ebuild 813
-MD5 4874d16a3c49fe84b71f80807d4c833c ChangeLog 2502
+MD5 1e119b88e96fc3cfc5c54bbf7673565e ChangeLog 2704
 MD5 528d3e39a7e18ff200cccfd037ee0422 files/digest-enscript-1.6.3-r1 66
-MD5 528d3e39a7e18ff200cccfd037ee0422 files/digest-enscript-1.6.3-r2 66
+MD5 528d3e39a7e18ff200cccfd037ee0422 files/digest-enscript-1.6.3-r3 66
 MD5 528d3e39a7e18ff200cccfd037ee0422 files/digest-enscript-1.6.3 66
-MD5 90c2dfb225dc7d363155d6315aa2ca0d files/enscript-1.6.3-security.patch 6043
+MD5 e105a37406fc2ff7aa4895780e4b5a66 files/enscript-1.6.3-security.patch 5447
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iQCVAwUBQfERbJ4WFLgrx1GWAQIWUwQAp+KAiQLCUQdeD90ABD/lb01WUz+ZPBwY
-rH3CBiOHbkX6KFHtqOfZxhKDp4EBsl7eWlML9cS5WtQmzRbNkBdl3lxLPSgxXHR/
-SsQ5dkbBvrXJHaRlblFcgtwaNrQuLN98kq4atYZkXnfotlZHeTp2bfRvle0cE6v7
-udHHDtruqlc=
-=kgUZ
+iQCVAwUBQfkPk54WFLgrx1GWAQJ2DQQAqMVMcETkKrrJuCG3+ci6oBHd18Mk1d6Z
+q+wDIsVBxkPjQ9ltdcF2sy+qHtHQEPtG1PDgHQRO6emEHzTSaL2ChAvgsnIlyYLK
+4v6esbHFy2vbg1BO3rAx0pvmrMlCXnyxg3vcTtbigU0EfwUQ0JW2XFp3G2vL5/Sb
+a/A/MOcnM4w=
+=GkR1
 -----END PGP SIGNATURE-----

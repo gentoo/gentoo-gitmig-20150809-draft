@@ -1,6 +1,12 @@
 # ChangeLog for app-text/enscript
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enscript/ChangeLog,v 1.22 2005/01/21 14:31:27 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enscript/ChangeLog,v 1.23 2005/01/27 15:58:18 solar Exp $
+
+*enscript-1.6.3-r3 (27 Jan 2005)
+
+  27 Jan 2005; <solar@gentoo.org> files/enscript-1.6.3-security.patch,
+  -enscript-1.6.3-r2.ebuild, +enscript-1.6.3-r3.ebuild:
+  - update security patch for bug 77408
 
 *enscript-1.6.3-r2 (21 Jan 2005)
 

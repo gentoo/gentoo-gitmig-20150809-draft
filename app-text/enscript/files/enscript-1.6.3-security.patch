@@ -174,16 +174,4 @@ diff -u -p -Nr --exclude CVS enscript-1.6.3.CAN-2004-1185/src/psgen.c enscript-1
      }
  
    if (nup > 1)
-diff -u -p -Nr --exclude CVS enscript-1.6.3.CAN-2004-1185/src/util.c enscript-1.6.3.CAN-2004-1186/src/util.c
---- enscript-1.6.3.CAN-2004-1185/src/util.c	2005-01-05 10:43:23.000000000 +0100
-+++ enscript-1.6.3.CAN-2004-1186/src/util.c	2005-01-05 15:22:23.000000000 +0100
-@@ -2003,7 +2003,8 @@ is_getc (InputStream *is)
- 	return EOF;
- 
-       /* Read more data. */
--      is->data_in_buf = fread (is->buf, 1, sizeof (is->buf), is->fp);
-+      memset (is->buf, 0, sizeof (is->buf));
-+      is->data_in_buf = fread (is->buf, 1, sizeof (is->buf)-1, is->fp);
-       is->bufpos = 0;
-       is->nreads++;
  
