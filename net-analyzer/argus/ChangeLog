@@ -1,6 +1,6 @@
 # ChangeLog for net-analyzer/argus
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/ChangeLog,v 1.1 2003/01/03 19:13:42 aliz Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/argus/ChangeLog,v 1.2 2003/02/12 07:43:13 vapier Exp $
 
 *argus-2.0.5 (17 Dec 2002)
 

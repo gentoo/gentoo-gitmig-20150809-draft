@@ -1,6 +1,6 @@
 # ChangeLog for net-analyzer/xnetload
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xnetload/ChangeLog,v 1.1 2002/11/07 07:43:54 seemant Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/xnetload/ChangeLog,v 1.2 2003/02/12 07:51:29 vapier Exp $
 
 *xnetload-1.11.3 (06 Nov 2002)
 

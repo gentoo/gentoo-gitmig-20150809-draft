@@ -1,6 +1,6 @@
 # ChangeLog for net-analyzer/arping
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.7 2003/02/04 15:54:32 nall Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arping/ChangeLog,v 1.8 2003/02/12 07:43:19 vapier Exp $
 
 *arping-1.05 (09 Jan 2003)
 

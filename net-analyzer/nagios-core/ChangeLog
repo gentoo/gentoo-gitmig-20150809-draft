@@ -1,6 +1,6 @@
 # ChangeLog for net-analyzer/nagios-core
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.7 2003/02/12 06:32:53 alron Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.8 2003/02/12 07:46:49 vapier Exp $
 
 *nagios-core-1.0-r1	(11 Feb 2003)
   11 Feb 2003; Dean Bailey <alron@gentoo.org> nagios-core-1.0-r1 :
