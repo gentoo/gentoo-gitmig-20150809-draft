@@ -1,6 +1,12 @@
 # ChangeLog for dev-games/crystalspace
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.5 2004/06/03 21:46:19 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.6 2004/06/05 13:02:40 lordvan Exp $
+
+*crystalspace-20040604 (05 Jun 2004)
+
+  05 Jun 2004; Thomas Raschbacher <lordvan@gentoo.org>
+  +crystalspace-20040604.ebuild:
+  new version (cvs snapshot)
 
   03 Jun 2004; Thomas Raschbacher <lordvan@gentoo.org>
   crystalspace-20030413-r1.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-games/cel
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/ChangeLog,v 1.4 2004/03/26 10:33:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/ChangeLog,v 1.5 2004/06/05 13:05:03 lordvan Exp $
+
+  05 Jun 2004; Thomas Raschbacher <lordvan@gentoo.org> cel-20040604.ebuild:
+  new snapshot version
 
   26 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> cel-20030413-r2.ebuild:
   >=sys-apps/sed-4; IUSE
