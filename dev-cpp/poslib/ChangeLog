@@ -1,6 +1,13 @@
 # ChangeLog for dev-cpp/poslib
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/poslib/ChangeLog,v 1.10 2004/12/14 09:32:26 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/poslib/ChangeLog,v 1.11 2004/12/31 13:39:49 matsuu Exp $
+
+*poslib-1.0.6 (31 Dec 2004)
+
+  31 Dec 2004; MATSUU Takuto <matsuu@gentoo.org> -poslib-1.0.2.ebuild,
+  +poslib-1.0.6.ebuild:
+  Version bumped.
+  Removed old versions.
 
   14 Dec 2004; MATSUU Takuto <matsuu@gentoo.org> poslib-1.0.4.ebuild:
   Marked as stable.

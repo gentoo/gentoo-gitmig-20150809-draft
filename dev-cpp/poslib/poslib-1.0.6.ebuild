@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/poslib/poslib-1.0.2.ebuild,v 1.5 2004/06/29 15:16:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/poslib/poslib-1.0.6.ebuild,v 1.1 2004/12/31 13:39:49 matsuu Exp $
+
+inherit flag-o-matic
 
 DESCRIPTION="A library for creating C++ programs using the Domain Name System"
 HOMEPAGE="http://www.posadis.org/projects/poslib.php"
@@ -8,14 +10,16 @@ SRC_URI="mirror://sourceforge/posadis/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 IUSE="ipv6"
 
 DEPEND="virtual/libc"
 
 src_compile() {
+	append-flags -funsigned-char
+
 	econf \
-		--with-cxxflags="${CXXFLAGS} -funsigned-char" \
+		--with-cxxflags="${CXXFLAGS}" \
 		`use_enable ipv6` || die
 	emake || die
 }
