@@ -66,12 +66,6 @@ app-emulation/winex-transgaming
 # <mholzer@gentoo.org> (09 Feb 2003)
 >=media-video/mjpegtools-1.6.1
 
-# <hannes@gentoo.org> (09 Feb 2003)
-# doesn't work with kde, bug #15245
-# added libxslt-1.0.25 cause it depends on libxml2-2.5.2
-=dev-libs/libxml2-2.5.2
-=dev-libs/libxslt-1.0.25
-
 # <satai@gentoo.org> (05 Feb 2003)
 # Trying some new stuff with sgml-common.
 >=app-text/sgml-common-0.6.3-r4
