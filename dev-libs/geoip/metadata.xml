@@ -3,7 +3,7 @@
 <pkgmetadata>
 	<herd>hardened</herd>
 	<maintainer>
-		<email>solar@gentoo.org</email>
+		<email>mboman@gentoo.org</email>
 		<description>Primary Maintainer</description>
 	</maintainer>
 	<longdescription>Geo-IP enables you to easily look up countries by IP addresses, even when reverse DNS entries don't exist. There is a free database that is updated yearly, and there are a number of open source APIs available.</longdescription>
