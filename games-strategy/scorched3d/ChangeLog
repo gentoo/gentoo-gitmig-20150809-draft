@@ -1,6 +1,11 @@
 # ChangeLog for games-strategy/scorched3d
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.13 2004/07/04 09:59:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/ChangeLog,v 1.14 2004/12/05 11:14:52 mr_bones_ Exp $
+
+*scorched3d-38 (05 Dec 2004)
+
+  05 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org> +scorched3d-38.ebuild:
+  version bump
 
   04 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
   -scorched3d-37.1.ebuild, scorched3d-37.2.ebuild, -scorched3d-37.ebuild:
