@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/redhat-artwork
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.40 2004/10/17 20:08:57 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.41 2004/11/07 19:54:05 pyrania Exp $
+
+  07 Nov 2004; <pyrania@gentoo.org> redhat-artwork-0.96.ebuild:
+  Added dev-util/intltool dependency.
 
   17 Oct 2004; Alastair Tse <liquidx@gentoo.org> redhat-artwork-0.73.ebuild,
   redhat-artwork-0.96.ebuild:

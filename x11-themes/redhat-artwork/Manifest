@@ -1,20 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d286c51403ca320a6722a2c3311676eb ChangeLog 5988
+MD5 f08c01602542e61bcc16135817cdc71e ChangeLog 6091
+MD5 a7822d51918f2b3c1a3f434adc9b650f redhat-artwork-0.95.ebuild 5102
+MD5 befd73f22745041af1b47aeaabcb2c8d redhat-artwork-0.96.ebuild 5277
 MD5 8f906ffe0aa837e5e26fe03af3043461 metadata.xml 219
 MD5 efd29c3934b6fbdb6a551b862a623bd3 redhat-artwork-0.73.ebuild 5220
-MD5 a7822d51918f2b3c1a3f434adc9b650f redhat-artwork-0.95.ebuild 5102
-MD5 8fb544e6ad9ae7374dfc16efa7e6319f redhat-artwork-0.96.ebuild 5258
-MD5 927835d1878c71d197a09b5ec12f145d files/digest-redhat-artwork-0.73 75
 MD5 17e6ab0b628ed039eb471b3dba20157a files/digest-redhat-artwork-0.95 75
-MD5 bd1e13df0214635279d65b8c6c245759 files/digest-redhat-artwork-0.96 75
-MD5 dd889dbdcebae49dc59d0d60dff259de files/redhat-artwork-0.63-cursors.patch 1071
 MD5 9912a3c64a0b848f2ccf2673f2b3093d files/redhat-artwork-0.63-gcc2.patch 483
+MD5 927835d1878c71d197a09b5ec12f145d files/digest-redhat-artwork-0.73 75
+MD5 dd889dbdcebae49dc59d0d60dff259de files/redhat-artwork-0.63-cursors.patch 1071
+MD5 bd1e13df0214635279d65b8c6c245759 files/digest-redhat-artwork-0.96 75
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBctGLRkyva5PS18kRAkCbAJ4mwOwBnyJxd+f9UCJknXRD7gyr4ACeMUYk
-qslgcFH+pkJjST8UoiFwiwk=
-=feRI
+iD8DBQFBjn11I7fK2cqeyXkRAsRTAJ4nGVHWo+BZjhR41KXoiw05VQ+26gCg1ecv
+OJ1Zip/740a5GgJZyRVgBbk=
+=urq1
 -----END PGP SIGNATURE-----
