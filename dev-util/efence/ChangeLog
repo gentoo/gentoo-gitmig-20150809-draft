@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/efence
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/efence/ChangeLog,v 1.7 2004/06/25 22:44:52 vapier Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/efence/ChangeLog,v 1.8 2004/07/14 22:10:14 agriffis Exp $
 
   10 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> efence-2.2.2.ebuild:
   error messages; IUSE; doc tidy

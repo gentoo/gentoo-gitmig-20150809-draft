@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/perforce-server/files/perforce-2003.2/init.d/perforce,v 1.1 2004/04/18 18:52:50 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/perforce-server/files/perforce-2003.2/init.d/perforce,v 1.2 2004/07/14 22:12:59 agriffis Exp $
 #
 # NB: Configuration is in /etc/conf.d/perforce
 
