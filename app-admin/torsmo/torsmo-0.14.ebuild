@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/torsmo-0.14.ebuild,v 1.1 2004/05/07 16:05:49 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/torsmo-0.14.ebuild,v 1.2 2004/05/08 17:08:41 dholm Exp $
 
 DESCRIPTION="Torsmo is a system monitor that sits in the corner of your desktop."
 HOMEPAGE="http://torsmo.sourceforge.net/"
@@ -9,7 +9,7 @@ RESTRICT="nomirror"
 IUSE=""
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 RDEPEND="virtual/glibc
 	virtual/x11"
