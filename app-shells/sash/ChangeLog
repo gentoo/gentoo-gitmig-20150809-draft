@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/sash
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.24 2004/06/01 23:19:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/ChangeLog,v 1.25 2004/06/02 14:56:17 agriffis Exp $
+
+  02 Jun 2004; Aron Griffis <agriffis@gentoo.org> sash-3.6.ebuild:
+  Fix use invocation
 
   01 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> sash-3.4-r3.ebuild,
   sash-3.4-r4.ebuild, sash-3.4-r5.ebuild:

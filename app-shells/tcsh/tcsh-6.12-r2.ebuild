@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.12-r2.ebuild,v 1.9 2004/04/26 16:21:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/tcsh/tcsh-6.12-r2.ebuild,v 1.10 2004/06/02 14:59:23 agriffis Exp $
 
 MY_P="${PN}-${PV}.00"
 DESCRIPTION="Enhanced version of the Berkeley C shell (csh)"
@@ -22,7 +22,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	patch -p0 < ${FILESDIR}/${P}-tc.os.h-gentoo.diff || die
-	if [ "`use cjk`" ]
+	if use cjk
 	then
 		patch -p0 < ${FILESDIR}/tcsh_enable_kanji.diff || die
 	fi
@@ -36,7 +36,7 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install install.man || die
 
-	if [ "`use perl`" ] ; then
+	if use perl ; then
 		perl tcsh.man2html || die
 		dohtml tcsh.html/*.html
 	fi

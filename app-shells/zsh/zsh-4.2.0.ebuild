@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.0.ebuild,v 1.4 2004/05/12 22:25:21 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.0.ebuild,v 1.5 2004/06/02 14:55:43 agriffis Exp $
 
 IUSE="maildir ncurses static doc pcre cap"
 
@@ -61,7 +61,7 @@ src_compile() {
 		`use_enable cap` \
 		${myconf} || die "configure failed"
 
-	if [ -n "`use static`" ] ; then
+	if use static ; then
 		# compile all modules statically, see Bug #27392
 		sed -i -e "s/link=no/link=static/g" \
 			-e "s/load=no/load=yes/g" \
@@ -97,7 +97,7 @@ src_install() {
 
 	dodoc ChangeLog* META-FAQ README INSTALL LICENCE config.modules
 
-	if [ "`use doc`" ] ; then
+	if use doc ; then
 		dohtml Doc/*
 		insinto /usr/share/doc/${PF}
 		doins Doc/zsh{.dvi,_us.ps,_a4.ps}
