@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rox/rox-2.1.2-r1.ebuild,v 1.1 2004/08/02 08:07:33 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rox/rox-2.1.2-r1.ebuild,v 1.2 2004/09/25 15:27:10 weeve Exp $
 
 inherit eutils
 
@@ -28,6 +28,13 @@ src_unpack() {
 
 src_compile() {
 #	rm ROX-Filer/src/configure # see bug #26162
+
+	# If the env variable PLATFORM is set, rox will build using that
+	# string.  This causes issues as while the package will compile fine,
+	# it will try to rebuild it the first time rox is run because it will
+	# not be able to find a proper executable to run.
+	use sparc && unset PLATFORM
+
 	ROX-Filer/AppRun --compile || die "make failed"
 	(cd ROX-Filer/src; make clean) > /dev/null
 }

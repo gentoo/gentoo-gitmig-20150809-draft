@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/rox
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rox/ChangeLog,v 1.33 2004/08/13 21:38:55 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rox/ChangeLog,v 1.34 2004/09/25 15:27:10 weeve Exp $
+
+  25 Sep 2004; Jason Wever <weeve@gentoo.org> rox-2.1.1.ebuild,
+  rox-2.1.2-r1.ebuild, rox-2.1.2.ebuild:
+  Added fixes for sparc as having PLATFORM set causes problems between how rox
+  is built and how it is run.
 
   13 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> rox-2.1.2.ebuild:
   Stable on alpha.

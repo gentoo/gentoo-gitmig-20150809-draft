@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rox/rox-2.1.1.ebuild,v 1.6 2004/06/24 22:31:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rox/rox-2.1.1.ebuild,v 1.7 2004/09/25 15:27:10 weeve Exp $
 
 DESCRIPTION="ROX is a desktop environment, like GNOME, KDE and XFCE.  It is an attempt to bring some of the good features from RISC OS to Unix and Linux."
 HOMEPAGE="http://rox.sourceforge.net/"
@@ -18,6 +18,13 @@ DEPEND=">=x11-libs/gtk+-2.0.5
 
 src_compile() {
 #	rm ROX-Filer/src/configure # see bug #26162
+
+	# If the env variable PLATFORM is set, rox will build using that
+	# string.  This causes issues as while the package will compile fine,
+	# it will try to rebuild it the first time rox is run because it will
+	# not be able to find a proper executable to run.
+	use sparc && unset PLATFORM
+
 	ROX-Filer/AppRun --compile || die "make failed"
 	(cd ROX-Filer/src; make clean) > /dev/null
 }
