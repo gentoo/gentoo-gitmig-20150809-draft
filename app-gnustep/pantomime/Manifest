@@ -1,4 +1,5 @@
-MD5 93442e13aedb931612e3ebaa749fa84e ChangeLog 489
-MD5 b176ceda779cf69a6d97e25d1f5ecbb6 pantomime-1.1.0_pre2.ebuild 550
+MD5 b1f4554f1a42ca02a420dc0ad0c65402 ChangeLog 600
+MD5 79c5bd8e2e4849733e11813180d10954 pantomime-1.1.0_pre2.ebuild 603
 MD5 80699754a7e9adb6c02df33c8fa16fd6 metadata.xml 161
 MD5 29c520038205a746e1f9e00360489b19 files/digest-pantomime-1.1.0_pre2 71
+MD5 c28a7f65a7973b51d359e26af1adc764 files/pantomime-1.1.0_pre2-compilation-fix.diff 312

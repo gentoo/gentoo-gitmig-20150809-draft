@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-gnustep/pantomime/pantomime-1.1.0_pre2.ebuild,v 1.2 2003/07/16 16:35:06 brain Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-gnustep/pantomime/pantomime-1.1.0_pre2.ebuild,v 1.3 2003/07/17 12:05:51 brain Exp $
 
-inherit gnustep
+inherit base gnustep
 
 DESCRIPTION="A set of Objective-C classes that model a mail system"
 HOMEPAGE="http://www.collaboration-world.com/pantomime/"
@@ -11,3 +11,4 @@ SRC_URI="http://www.collaboration-world.com/pantomime.data/releases/Stable/${PN/
 KEYWORDS="x86"
 SLOT="0"
 S=${WORKDIR}/${PN/p/P}
+PATCHES="${FILESDIR}/${P}-compilation-fix.diff"

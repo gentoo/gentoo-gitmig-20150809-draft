@@ -1,9 +1,12 @@
 # ChangeLog for app-gnustep/pantomime
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-gnustep/pantomime/ChangeLog,v 1.2 2003/07/16 16:35:06 brain Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-gnustep/pantomime/ChangeLog,v 1.3 2003/07/17 12:05:51 brain Exp $
 
 *pantomime-1.1.0_pre2 (15 Jul 2003)
-  
+
+  17 Jul 2003; Michele Balistreri <brain@gentoo.org> pantomime-1.1.0_pre2.ebuild:
+  Fixing compilation problems
+
   16 Jul 2003; Michele Balistreri <brain@gentoo.org> pantomime-1.1.0_pre2.ebuild:
   Changing license information as they were invalid
   

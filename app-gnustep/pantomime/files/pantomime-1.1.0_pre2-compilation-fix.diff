@@ -1,0 +1,10 @@
+--- Source/NSString+Extensions.m.orig	2003-07-17 13:02:25.000000000 +0200
++++ Source/NSString+Extensions.m	2003-07-17 13:22:41.000000000 +0200
+@@ -28,6 +28,7 @@
+ #ifdef MACOSX
+ #import <CoreFoundation/CoreFoundation.h>
+ #else
++#include <Foundation/Foundation.h>
+ #include <gnustep/base/GSCategories.h>
+ #endif
+ 
