@@ -3,7 +3,7 @@ MD5 10b40c899182d0c206fe659c8824fa26 tcpdump-3.6.2-r1.ebuild 987
 MD5 761ad863f28e416530e56acb554582c9 tcpdump-3.7.1.ebuild 855
 MD5 d122b959c5ec12f60a86073d3740f511 tcpdump-3.7.2.ebuild 979
 MD5 76e594eebb116a5e76ac99b56ffda913 tcpdump-3.8.1.ebuild 919
-MD5 5845b73c60663cfa57fd526a4943cc04 tcpdump-3.8.3.ebuild 921
+MD5 40b598f039d21c0c808e743ee9485245 tcpdump-3.8.3.ebuild 922
 MD5 f5295cc511894293cef91f09dd9d9d43 files/digest-tcpdump-3.6.2-r1 65
 MD5 ad3cc121211e6bbf52b9e6b882396856 files/digest-tcpdump-3.7.1 65
 MD5 e70e627b145b5d2aa274d4c955a2f8fe files/digest-tcpdump-3.7.2 65
