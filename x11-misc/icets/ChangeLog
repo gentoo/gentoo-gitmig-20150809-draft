@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/icets
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icets/ChangeLog,v 1.16 2004/09/02 22:49:41 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icets/ChangeLog,v 1.17 2004/11/02 14:29:32 phosphan Exp $
+
+  02 Nov 2004; Patrick Kursawe <phosphan@gentoo.org> -icets-1.1.ebuild,
+  -icets-1.2.ebuild, icets-1.4.ebuild:
+  Cleanup; latest version declared stable for x86.
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> icets-1.2.ebuild,
   icets-1.4.ebuild:
