@@ -21,6 +21,13 @@
 ##   End example
 ##
 
+# <lanius@gentoo.org> (31 Dec 2003)
+# fix version scheme
+# (accidently commited 3.0.20031018 as 20031018)
+>=net-print/foomatic-2000
+>=net-print/foomatic-db-engine-2000
+>=net-print/foomatic-filters-2000
+
 # <lanius@gentoo.org> (26 Dec 2003)
 # this is an alpha
 =net-www/opera-7.50_alpha1
