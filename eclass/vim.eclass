@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.50 2004/03/21 04:51:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.51 2004/03/21 05:19:51 agriffis Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -58,11 +58,13 @@ DEPEND="$DEPEND
 	>=sys-apps/portage-2.0.45-r3
 	>=sys-apps/sed-4
 	sys-devel/autoconf
-	ncurses? ( >=sys-libs/ncurses-5.2-r2 ) : ( sys-libs/libtermcap-compat )
+	ncurses?  ( >=sys-libs/ncurses-5.2-r2 )
+	!ncurses? ( sys-libs/libtermcap-compat )
 	dev-util/ctags
 	"
 RDEPEND="$RDEPEND 
-	ncurses? ( >=sys-libs/ncurses-5.2-r2 ) : ( sys-libs/libtermcap-compat )
+	ncurses?  ( >=sys-libs/ncurses-5.2-r2 )
+	!ncurses? ( sys-libs/libtermcap-compat )
 	dev-util/ctags
 	"
 
