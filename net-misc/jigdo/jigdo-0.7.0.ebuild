@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/jigdo/jigdo-0.7.0.ebuild,v 1.2 2003/09/05 22:01:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/jigdo/jigdo-0.7.0.ebuild,v 1.3 2003/10/31 22:01:32 weeve Exp $
 
 inherit eutils
 
@@ -10,25 +10,33 @@ SRC_URI="http://home.in.tum.de/~atterer/jigdo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 ~sparc ~ppc"
 
-IUSE="gtk nls"
+IUSE="gtk nls berkdb"
 
 DEPEND="gtk? ( >=gtk+-2.0.6 )
 	nls? ( sys-devel/gettext )
+	berkdb? ( =sys-libs/db-3* )
 	>=libwww-5.3.2"
 
 src_compile() {
-local myconf
+	local myconf
 
-	use nls || myconf="--disable-nls"
-	use gtk || myconf="--without-libdb --without-gui"
+	# Fix for bug #32029.
+	if [ `use berkdb` ]; then
+		cd ${S}
+		epatch ${FILESDIR}/jigdo-gentoo-db3.patch
+	fi
+
+	use nls || myconf="${myconf} --disable-nls"
+	use gtk || myconf="${myconf} --without-libdb --without-gui"
+	use berkdb || myconf="${myconf} --without-libdb"
 
 	./configure \
 		--host=${CHOST} \
 		--prefix=/usr \
 		--infodir=/usr/share/info \
-		--mandir=/usr/share/man $myconf \
+		--mandir=/usr/share/man ${myconf} \
 		--datadir=/usr/share || die "./configure failed"
 
 	# Patch the Makefile so that when jidgo is installed, jigdo-lite has
