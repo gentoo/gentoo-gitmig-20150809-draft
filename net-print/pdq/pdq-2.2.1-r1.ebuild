@@ -1,11 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-print/pdq/pdq-2.2.1-r1.ebuild,v 1.4 2002/07/11 06:30:49 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pdq/pdq-2.2.1-r1.ebuild,v 1.5 2002/07/14 20:41:22 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A non-daemon-centric print system which has a built-in, and sensible, driver configuration syntax."
 SRC_URI="http://pdq.sourceforge.net/ftp/${P}.tgz"
 HOMEPAGE="http://pdq.sourceforge.net"
+KEYWORDS="x86"
+SLOT="0"
+LICENSE="GPL-2"
 
 DEPEND="gtk? ( =x11-libs/gtk+-1.2* )"
 

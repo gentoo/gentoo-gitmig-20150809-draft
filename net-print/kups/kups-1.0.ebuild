@@ -1,11 +1,14 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-print/kups/kups-1.0.ebuild,v 1.5 2002/07/11 06:30:49 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/kups/kups-1.0.ebuild,v 1.6 2002/07/14 20:41:22 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A CUPS front-end for KDE"
 SRC_URI="ftp://cups.sourceforge.net/pub/cups/kups/${P}.tar.gz"
 HOMEPAGE="http://cups.sourceforge.net/kups/"
+KEYWORDS="x86"
+SLOT="0"
+LICENSE="GPL-2"
 
 DEPEND=">=kde-base/kdelibs-2.1.1 sys-devel/autoconf
 	>=net-print/qtcups-2.0"

@@ -1,14 +1,20 @@
 # ChangeLog for net-print/cups
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.14 2002/06/24 20:21:48 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.15 2002/07/14 20:41:21 aliz Exp $
 
 *cups-1.1.15 (17 Jun 2002)
+
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> cups-1.1.15.ebuild :
+  Added KEYWORDS.
 
   17 Jun 2002; mjc <mjc@gentoo.org> :
 
   New CUPS.
 
 *cups-1.1.14-r4 (4 May 2002)
+
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> cups-1.1.14-r4.ebuild :
+  Added KEYWORDS.
 
   4 May 2002; Donny Davies <woodchip@gentoo.org> :
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-print/hp-web-jetadmin/hp-web-jetadmin-6.5-r2.ebuild,v 1.1 2002/05/04 22:45:53 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hp-web-jetadmin/hp-web-jetadmin-6.5-r2.ebuild,v 1.2 2002/07/14 20:41:22 aliz Exp $
 
 # This package, in its most basic form (no optional components) will install
 # some 4300 files, totalling some 45MB. According to HP the minimum system
@@ -8,6 +8,7 @@
 
 DESCRIPTION="Remotely install, monitor, and troubleshoot network-connected printers"
 HOMEPAGE="http://www.hp.com/go/webjetadmin/"
+KEYWORDS="x86"
 
 # Optional files, just over 8MB. Havent worked them in yet.
 # o wjarda_linux_bundle.fpb: HP Remote Discovery Agent Component

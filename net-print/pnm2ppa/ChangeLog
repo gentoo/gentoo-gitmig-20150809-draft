@@ -1,8 +1,14 @@
 # ChangeLog for net-print/pnm2ppa
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/ChangeLog,v 1.4 2002/04/17 08:42:15 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/pnm2ppa/ChangeLog,v 1.5 2002/07/14 20:41:22 aliz Exp $
 
 *pnm2ppa-1.0.91-r3 (17 Apr 2002)
+
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> pnm2ppa-1.0.91.ebuild :
+  Added KEYWORDS, SLOT.
+
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> pnm2ppa-1.0.91-r3.ebuild :
+  Added KEYWORDS, SLOT.
 
   17 Apr 2002; Seemant Kulleen <seemant@gentoo.org> pnm2ppa-1.0.91-r3.ebuild
   files/digest-pnm2ppa--1.0.91-r2 files/pnm2ppa-1.0.91-r3-gentoo.diff :
@@ -12,6 +18,9 @@
 
 *pnm2ppa-1.0.91-r2 (14 Apr 2002)
 
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> pnm2ppa-1.0.91-r2.ebuild :
+  Added KEYWORDS, SLOT.
+
   14 Apr 2002; Seemant Kulleen <seemant@gentoo.org> pnm2ppa-1.0.91-r2.ebuild
   files/digest-pnm2ppa-1.0.91-r2 files/pnm2ppa-1.0.91-r2-gentoo.diff
 
@@ -19,6 +28,9 @@
   for an upstream issue with memory allocation.
 
 *pnm2ppa-1.0.91-r1 (11 Apr 2002)
+
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> pnm2ppa-1.0.91-r1.ebuild :
+  Added KEYWORDS, SLOT.
 
   11 Apr 2002; Seemant Kulleen <seemant@gentoo.org> pnm2ppa-1.0.91-r1.ebuild
   files/digest-pnm2ppa-1.0.91-r1 files/pnm2ppa-1.0.91.-r1-gentoo.diff

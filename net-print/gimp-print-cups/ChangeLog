@@ -1,8 +1,14 @@
 # ChangeLog for net-print/gimp-print-cups
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-print/gimp-print-cups/ChangeLog,v 1.6 2002/07/01 09:20:10 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gimp-print-cups/ChangeLog,v 1.7 2002/07/14 20:41:22 aliz Exp $
 
 *gimp-print-cups-4.3.0-r2 (1 Jul 2002)
+
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> gimp-print-cups-4.3.0.ebuild :
+  Added KEYWORDS.
+
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> gimp-print-cups-4.3.0-r2.ebuild :
+  Added KEYWORDS.
 
   1 Jul 2002; Seemant Kulleen <seemant@gentoo.org>
   gimp-print-cups-4.3.0-r2.ebuild files/digest-gimp-print-cups-4.3.0-r2 :
@@ -11,6 +17,9 @@
   which showed how GTK can be made into an optional dependency
 
 *gimp-print-cups-4.3.0-r1 (28 Jun 2002)
+
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> gimp-print-cups-4.3.0-r1.ebuild :
+  Added KEYWORDS.
 
   28 Jun 2002; Brandon Low <lostlogic@gentoo.org> :
 
@@ -25,6 +34,9 @@
   Chase latest release + some cleanups.
 
 *gimp-print-cups-4.2.0-r1 (4 May 2002)
+
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> gimp-print-cups-4.2.0-r1.ebuild :
+  Added KEYWORDS.
 
   4 May 2002; Donny Davies <woodchip@gentoo.org> :
 
