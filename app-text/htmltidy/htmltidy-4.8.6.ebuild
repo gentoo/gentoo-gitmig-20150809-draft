@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-4.8.6.ebuild,v 1.1 2004/08/18 00:01:21 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/htmltidy/htmltidy-4.8.6.ebuild,v 1.2 2004/09/08 03:23:48 vapier Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ RDEPEND="virtual/libc"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~macos"
+KEYWORDS="~alpha ~amd64 ~ia64 ~macos ~ppc ~sparc ~x86"
 IUSE="debug doc xml"
 
 src_unpack() {
