@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-javamail-bin/sun-javamail-bin-1.3.1.ebuild,v 1.4 2004/10/16 17:38:03 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-javamail-bin/sun-javamail-bin-1.3.1.ebuild,v 1.5 2004/12/07 14:59:44 axxo Exp $
 
 inherit java-pkg
 
@@ -19,12 +19,15 @@ IUSE="doc"
 DEP_APPEND="sun-jaf-bin"
 RESTRICT="fetch"
 
+DOWNLOAD_URL="http://javashoplm.sun.com/ECom/docs/Welcome.jsp?StoreId=22&PartDetailId=7515-java_mail-1.3.1-oth-JPR&SiteId=JSC&TransactionId=noreg"
+
 pkg_nofetch() {
 	einfo " "
 	einfo " Due to license restrictions, we cannot fetch the"
 	einfo " distributables automagically."
 	einfo " "
 	einfo " 1. Visit ${HOMEPAGE}"
+	einfo "   Direct link: ${DOWNLOAD_URL}"
 	einfo " 2. Download ${At}"
 	einfo " 3. Move file to ${DISTDIR}"
 	einfo " "

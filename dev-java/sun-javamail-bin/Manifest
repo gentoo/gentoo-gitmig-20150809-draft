@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1b184f131c002f7286336206a1bf4712 sun-javamail-bin-1.3.1.ebuild 1638
+MD5 e128c5c1c9a1b1e9ef5fee9c79e515be sun-javamail-bin-1.3.1.ebuild 1827
 MD5 13a725c5ed76025f73c2bc4dd4e16936 ChangeLog 1511
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 dd665b1760dca083a08a11f57efee8de files/digest-sun-javamail-bin-1.3.1 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD4DBQFBcVyD/rLF9B432nYRAhiJAJiH3KQ50slJeTE1CEhcnhkAI/4jAKCeZ04x
-RXyYdniY0EZnvSQ99cLh1A==
-=LOtH
+iD8DBQFBtcV3/rLF9B432nYRAjvRAJ9sOJke3SbRfgTcwGjqmyAC3IuFzwCeMkSv
+UGuZ/u8gjSPDUg6ocon6kJU=
+=gGsy
 -----END PGP SIGNATURE-----
