@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/kismet
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.38 2004/09/24 17:20:40 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/ChangeLog,v 1.39 2004/10/18 14:56:51 brix Exp $
+
+*kismet-2004.04.1-r1 (18 Oct 2004)
+
+  18 Oct 2004; Henrik Brix Andersen <brix@gentoo.org>
+  +kismet-2004.04.1-r1.ebuild:
+  Added DEPEND on dev-perl/libwww-perl for USE=gps (bug #67204), updated to
+  build against ethereal-0.10.5.
 
   24 Sep 2004; Luca Barbato <lu_zero@gentoo.org> files/kismet_gcc34.gz:
   Updated the gcc-3.4 fixes
