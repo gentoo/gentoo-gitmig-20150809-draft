@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.147 2005/02/03 23:46:40 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.148 2005/02/03 23:55:05 azarah Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -34,6 +34,10 @@ DESCRIPTION="Based on the ${ECLASS} eclass"
 # Chris White <chriswhite@gentoo.org> (03 Feb 2005)
 
 ecpu_check() {
+	# Think about changing below to: if [ "${CROSSCOMPILE}" -ne 1 -a -e "/proc/cpuinfo" ]
+	# and dropping the else if you do not plan on adding anything to that
+	# empty block ....
+	# PS: also try to add some quoting, and consider rather using ${foo} than $foo ...
 	if [ $CROSSCOMPILE -eq 1 ] || [ ! -e /proc/cpuinfo ]
 	then
 		:
