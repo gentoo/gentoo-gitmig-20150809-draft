@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.48 2004/08/28 00:47:59 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.49 2004/08/28 14:10:43 tgall Exp $
+
+  28 Aug 2004; Tom Gall <tgall@gentoo.org> xemacs-21.4.15-r2.ebuild:
+  stable on ppc64, bug #58350, 61099 (functional xemacs on ppc64 again)
 
 *xemacs-21.4.15-r2 (27 Aug 2004)
 
