@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.97 2005/01/30 19:09:27 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.98 2005/02/01 19:03:13 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -718,7 +718,12 @@ src_test() {
 	# TODO: Find out why this test doesn't work with vim7. Hopefully it'll get
 	# fixed fairly soon. Not worth tracking it down until the hashtables code
 	# stabilises though.. (22 Jan 2005 ciaranm)
-	if version_is_at_least "7.0_alpha20050122" ; then
+	if version_is_at_least "7.0_alpha20050201" ; then
+		einfo "Test 55, which checks various new vim7 features, is believed"
+		einfo "to be working again. If it fails with a segfault, please"
+		einfo "let ciaranm know by email or on IRC."
+
+	elif version_is_at_least "7.0_alpha20050122" ; then
 		einfo "Test 55 shows some known bugs in new vim7 features. It will"
 		einfo "fail with a segfault, so it will be skipped for now."
 		sed -i -e 's~test55.out~~g' Makefile
