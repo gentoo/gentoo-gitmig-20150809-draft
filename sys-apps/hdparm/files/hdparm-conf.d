@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/files/hdparm-conf.d,v 1.2 2004/03/06 04:09:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hdparm/files/hdparm-conf.d,v 1.3 2004/07/15 00:43:00 agriffis Exp $
 
 # You can either set hdparm arguments for each drive using disc*_args and cdrom*_args..
 # eg.

@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/files/pcmcia.rc,v 1.6 2004/03/19 03:21:25 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/files/pcmcia.rc,v 1.7 2004/07/15 00:46:44 agriffis Exp $
 
 RUN=/var/run
 SC=${RUN}/pcmcia-scheme
