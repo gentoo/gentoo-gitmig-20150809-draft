@@ -1,16 +1,24 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.8 2002/09/25 13:00:32 mjc Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.9 2002/10/08 22:52:46 bcowan Exp $
+
+*distcc-0.12 (07 Oct 2002)
+
+  22 Sep 2002; Brad Cowan <bcowan@gentoo.org> distcc-0.12.ebuild :
+  
+  Version bump.
 
 *distcc-0.11 (25 Sep 2002)
 
-  22 Sep 2002; Brad Cowan <bradlyatc@cowancomputers.com> : New release.
+  22 Sep 2002; Brad Cowan <bcowan@gentoo.org> distcc-0.11.ebuild : 
+  
+  Version bump.
 
 *distcc-0.10.1 (17 Sep 2002)
 
-  17 Sep 2002; Brad Cowan <bradlyatc@cowancomputers.com> : New release.
+  17 Sep 2002; Brad Cowan <bcowan@gentoo.org> distcc-0.10.1.ebuild : 
   
-  updated docs
+  Version bump, updated docs.
 
 *distcc-0.8 (20 Aug 2002)
 
