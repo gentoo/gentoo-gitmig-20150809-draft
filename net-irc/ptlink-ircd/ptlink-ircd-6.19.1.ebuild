@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-ircd/ptlink-ircd-6.19.1.ebuild,v 1.2 2004/11/25 20:31:53 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-ircd/ptlink-ircd-6.19.1.ebuild,v 1.3 2004/11/25 21:32:02 swegener Exp $
 
-inherit eutils
+inherit eutils ssl-cert
 
 MY_P="PTlink${PV}"
 
@@ -13,8 +13,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc"
 
-IUSE=""
-DEPEND="sys-libs/zlib"
+IUSE="ssl"
+DEPEND="sys-libs/zlib
+	ssl? ( dev-libs/openssl )"
 
 S=${WORKDIR}/${MY_P}
 
@@ -26,6 +27,7 @@ src_unpack() {
 src_compile() {
 	econf \
 		--disable-ipv6 \
+		$(use_with ssl ssl openssl) \
 		|| die "econf failed"
 	emake CFLAGS="${CFLAGS}" || die "emake failed"
 }
@@ -55,13 +57,22 @@ src_install() {
 
 	newinitd ${FILESDIR}/ptlink-ircd.init.d ptlink-ircd || die "newinitd failed"
 	newconfd ${FILESDIR}/ptlink-ircd.conf.d ptlink-ircd || die "newconfd failed"
+
+	use ssl && (
+		insinto /etc/ptlink-ircd
+		docert server || die "docert failed"
+		mv ${D}/etc/ptlink-ircd/server.crt ${D}/etc/ptlink-ircd/server.cert.pem
+		mv ${D}/etc/ptlink-ircd/server.csr ${D}/etc/ptlink-ircd/server.req.pem
+		mv ${D}/etc/ptlink-ircd/server.key ${D}/etc/ptlink-ircd/server.key.pem
+	)
 }
 
 pkg_postinst() {
 	enewuser ptlink-ircd
 
 	chown ptlink-ircd \
-		${ROOT}/{etc,var/{log,lib}}/ptlink-ircd
+		${ROOT}/{etc,var/{log,lib}}/ptlink-ircd \
+		${ROOT}/etc/ptlink-ircd/server.key.pem
 
 	einfo
 	einfo "PTlink IRCd will run without configuration, although this is strongly"
