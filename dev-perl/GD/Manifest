@@ -1,23 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 e00864af9dcbb2cb6accb99eeea39b24 ChangeLog 3073
-MD5 5ba0ad22879d4e262dee6731c4337ad4 GD-1.41.ebuild 1155
-MD5 ba95667aaec2828ea9ae5321a41d262d GD-2.07.ebuild 1183
+MD5 73e5673a0a47dedadf0f010eb24ae71a GD-1.41.ebuild 1157
+MD5 791fcf6af28e21add0b60161dd925850 GD-2.07.ebuild 1186
+MD5 9a428df59ace225062e2bbb53ac389ea GD-2.12.ebuild 1191
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 363b0d4d250076e6b5b5d178a68174ff GD-2.12.ebuild 1189
 MD5 065c81a3514e7e1cfd94bac1db4549bb files/1.41-makefile-opts.patch 706
 MD5 b51ab87c113e42bd5560824fc63bc2bc files/2.07-gif-support.patch 21921
 MD5 e6903f48f6e8261afb3b2e964b400c0b files/2.07-makefile-opts.patch 1746
-MD5 411e0281d6e0bf68ac6d1b61a71bd863 files/digest-GD-1.41 59
-MD5 cf9127479253ccf83984029239c00ea1 files/digest-GD-2.07 59
 MD5 b51ab87c113e42bd5560824fc63bc2bc files/2.12-gif-support.patch 21921
 MD5 d3ec1d86076b989f9b63c3f04270a3f6 files/2.12-makefile-opts.patch 1743
+MD5 411e0281d6e0bf68ac6d1b61a71bd863 files/digest-GD-1.41 59
+MD5 cf9127479253ccf83984029239c00ea1 files/digest-GD-2.07 59
 MD5 7eb7412d4e5148d2fda9df7bb29eae59 files/digest-GD-2.12 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4vXzHTu7gpaalycRAs84AKDJ6W1kqfOl4Xq7oR+27jzFEgHutQCg4vU+
-Y8ptvHvYh5Kw9UptflL2ddk=
-=faZU
------END PGP SIGNATURE-----

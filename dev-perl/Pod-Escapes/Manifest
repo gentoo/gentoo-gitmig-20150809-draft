@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 f6d49f599ab467a089261bf3dbe22e41 ChangeLog 671
-MD5 e5f8888b27178ae792efaf53bf2965f0 Pod-Escapes-1.03.ebuild 539
-MD5 c373d7c93ff2dff30a1f8a61a63b93c1 Pod-Escapes-1.04.ebuild 526
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 78fa5b7550534de1556e73d41552b959 Pod-Escapes-1.03.ebuild 539
+MD5 7633d5ae75c1cee587f39ea0e26d4ad7 Pod-Escapes-1.04.ebuild 525
 MD5 bd81570999c2c34e53f08b99b0f361c9 files/digest-Pod-Escapes-1.03 66
 MD5 3224f58f6aafe49bcea1d3dbdd06dd1b files/digest-Pod-Escapes-1.04 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBYB5GtG5z4I8BtQoRAsqTAJ9jS9cyheLny8iAGjQcQBCpUyuHtQCfRXIU
-WEnn1ev9WeQHuYLY/mO7u1o=
-=nImK
------END PGP SIGNATURE-----

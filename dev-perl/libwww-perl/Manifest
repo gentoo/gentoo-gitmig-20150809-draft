@@ -1,30 +1,20 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0a975f378cf495f6828d05895bb6ab82 libwww-perl-5.64.ebuild 836
-MD5 97ad79cc4fe55585f7e1da4c71e326fa libwww-perl-5.64-r1.ebuild 838
-MD5 daad992fb0bb155c51909748407ef255 libwww-perl-5.76.ebuild 1385
 MD5 1f83a2ae3762392728b68579cd4fc189 ChangeLog 4985
-MD5 a0423349ad6e986ff1efe4d9aa4c0165 libwww-perl-5.68.ebuild 840
-MD5 b949201d9f4500a603baf80410e176a2 libwww-perl-5.79.ebuild 835
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 cec3e1f2e5492cee0c981b856b3dd8a0 libwww-perl-5.69-r2.ebuild 1400
-MD5 5faa9a0765f17aa8555e3eee92637df7 libwww-perl-5.800.ebuild 842
+MD5 97ad79cc4fe55585f7e1da4c71e326fa libwww-perl-5.64-r1.ebuild 838
+MD5 0a975f378cf495f6828d05895bb6ab82 libwww-perl-5.64.ebuild 836
+MD5 a0423349ad6e986ff1efe4d9aa4c0165 libwww-perl-5.68.ebuild 840
 MD5 c81da9e3a23d8cebb3643eef0900d109 libwww-perl-5.69-r1.ebuild 880
+MD5 2292e63d81858e2026ccf57872557409 libwww-perl-5.69-r2.ebuild 1401
 MD5 549df0dd6dcd0c25d35581643996a7e0 libwww-perl-5.69.ebuild 842
-MD5 47777f0e64db12c588bc86937fabafac files/digest-libwww-perl-5.800 69
-MD5 bcd87a63a62f50fa70d043523e18f953 files/digest-libwww-perl-5.76 68
-MD5 f462924c8fa6dc5e8b140245bf1a8d5e files/digest-libwww-perl-5.68 134
-MD5 a672dd749bc524ce5d83135e3a3bc987 files/digest-libwww-perl-5.64 68
-MD5 c91b25c42b7cc429f2008e230801c2d1 files/digest-libwww-perl-5.79 68
+MD5 a2003d303d5f2d262481792f41c6fff6 libwww-perl-5.76.ebuild 1387
+MD5 ea8723bf369192b749809cb6edc0ab94 libwww-perl-5.79.ebuild 837
+MD5 7f250eebf076e42503f1d16e4b5b9ee2 libwww-perl-5.800.ebuild 841
 MD5 a672dd749bc524ce5d83135e3a3bc987 files/digest-libwww-perl-5.64-r1 68
+MD5 a672dd749bc524ce5d83135e3a3bc987 files/digest-libwww-perl-5.64 68
+MD5 addab4081dd22418ead48ed701bfd6d7 files/digest-libwww-perl-5.69-r1 68
+MD5 f462924c8fa6dc5e8b140245bf1a8d5e files/digest-libwww-perl-5.68 134
 MD5 addab4081dd22418ead48ed701bfd6d7 files/digest-libwww-perl-5.69 68
 MD5 addab4081dd22418ead48ed701bfd6d7 files/digest-libwww-perl-5.69-r2 68
-MD5 addab4081dd22418ead48ed701bfd6d7 files/digest-libwww-perl-5.69-r1 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBPLFrLLFUmVNQ7rkRArqjAJ4zowYaXOqMuaC2GJW1RcCqg4RcsQCfZn1G
-x26YqxX9+iC5qtHbNEupQzo=
-=4BQY
------END PGP SIGNATURE-----
+MD5 bcd87a63a62f50fa70d043523e18f953 files/digest-libwww-perl-5.76 68
+MD5 c91b25c42b7cc429f2008e230801c2d1 files/digest-libwww-perl-5.79 68
+MD5 47777f0e64db12c588bc86937fabafac files/digest-libwww-perl-5.800 69
