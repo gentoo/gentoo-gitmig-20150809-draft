@@ -1,11 +1,18 @@
 # ChangeLog for media-libs/libungif
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/ChangeLog,v 1.6 2003/03/11 11:38:23 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/ChangeLog,v 1.7 2003/03/26 01:11:39 seemant Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
 *libungif-4.1.0 (21 Mar 2002)
 
+  23 Mar 2003; Seemant Kulleen <seemant@gentoo.org>
+  libungif-4.1.0-r1.ebuild :
+
+  Changed SRC_URI thanks to Rob Davies <Rob_Davies@NTLworld.com> in bug
+  #18170
+ 
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : 
+  changed sparc ~sparc keywords
+ 
   11 Mar 2003; Guy Martin <gmsoft@gentoo.org> libungif-4.1.0-r1.ebuild :
   Added hppa to keywords.
 
