@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.3.ebuild,v 1.5 2004/05/31 22:16:26 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.3.ebuild,v 1.6 2004/06/01 05:35:43 vapier Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -97,6 +97,8 @@ src_unpack() {
 }
 
 src_compile() {
+	# Arm and -O do not mix :)
+	use arm && replace-flags -O? -O1
 	# Perl has problems compiling with -Os in your flags
 	replace-flags "-Os" "-O2"
 	# This flag makes compiling crash in interesting ways
