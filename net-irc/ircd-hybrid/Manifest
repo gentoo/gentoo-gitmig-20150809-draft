@@ -1,18 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2546b84e87b612282f80d9aec86c4e6b ChangeLog 2162
-MD5 b1bb5cb4e048444d9f36a7a4faaff944 ircd-hybrid-7.0.ebuild 8199
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 fa492e566f3dc2477590d0a4d8554db2 ircd-hybrid-7.0-r1.ebuild 10252
 MD5 f54547aaa9e353a6c6a0ee5ebd235666 ircd-hybrid-7.0.3.ebuild 10127
+MD5 27c92b58384cd92f3f61d955c50de839 ChangeLog 2384
 MD5 bbff507a3a8a5c62db2a709a5efdc659 files/conf.d_ircd 410
-MD5 8f8feafbeb742e46390b85dd10182aeb files/config-ipv4.diff 2819
-MD5 64d0c6f903b43a388beecfe51d8a8905 files/config-ipv6.diff 2819
-MD5 c45ce5f5427c5d0fcbbc5561c79efbfe files/digest-ircd-hybrid-7.0 65
 MD5 3f12014580f2adb00660a1e7d9c25189 files/init.d_ircd 1399
-MD5 57d177a5eeca8deb8c3609ac3cbc2884 files/ircd-hybrid-7.0.diff 2538
-MD5 c45ce5f5427c5d0fcbbc5561c79efbfe files/digest-ircd-hybrid-7.0-r1 65
 MD5 3fa170737a52ed587dfede306e503dcd files/config-ipv4-7.0.3.diff 4227
 MD5 a60d0a00176f6ce75b380697db667e95 files/config-ipv6-7.0.3.diff 4227
 MD5 12b134810a484d2ec3480bd5cdf8be76 files/digest-ircd-hybrid-7.0.3 67
@@ -20,7 +13,7 @@ MD5 8281bd4963f1a3b0168065602952946f files/ircd-hybrid-7.0.3.diff 2606
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBcW5sHTu7gpaalycRAnakAKCnI0lsLpcPFpVbZYK3adJRK9idkgCdGK4o
-70zqIbDz8F0+7s92Rat9RbM=
-=AQPF
+iD8DBQFBcchZI1lqEGTUzyQRAkR5AJ9ofaoC+D9vJyoTIBmHGWns2QyRdwCfZgJF
+E+r4+JopShUPmOFF+g7iKsA=
+=Xn+5
 -----END PGP SIGNATURE-----
