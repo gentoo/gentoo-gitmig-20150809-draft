@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r1.ebuild,v 1.6 2004/04/19 06:43:50 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r1.ebuild,v 1.7 2004/04/28 19:39:43 lv Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -35,6 +35,7 @@ src_unpack() {
 	# This breaks compilation on x86 architecture
 	# See bug #36502, comment 8
 	[ "$ARCH" != x86 ] && epatch ${FILESDIR}/${P}-fPIC.patch
+	epatch ${FILESDIR}/${P}-gcc34.patch
 
 	use X || epatch "${FILESDIR}/no-x11-lib-2.patch"
 }

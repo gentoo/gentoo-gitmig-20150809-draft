@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.59 2004/04/27 20:58:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.60 2004/04/28 19:39:43 lv Exp $
+
+  28 Apr 2004; Travis Tilley <lv@gentoo.org>
+  +files/mjpegtools-1.6.2-gcc34.patch, mjpegtools-1.6.2-r1.ebuild:
+  added fix for compiling with gcc 3.4. thanks go to Igor V. Kovanlenko and
+  "LordKow". MOOOO!
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org>
   mjpegtools-1.6.1.90-r1.ebuild, mjpegtools-1.6.1.90-r2.ebuild,
