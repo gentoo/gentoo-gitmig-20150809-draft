@@ -1,0 +1,128 @@
+diff -u teco_4_69.orig/makefile teco_4_69/makefile
+--- teco_4_69.orig/makefile	1994-09-21 07:37:34.000000000 +0100
++++ teco_4_69/makefile	2003-04-28 15:57:36.000000000 +0100
+@@ -5,20 +5,21 @@
+ # $Locker:  $
+ 
+ # DEBUG_STUFF = -g -DDEBUG_FORMAT_LINE_STRUCTURES -DDEBUG1 -DDEBUG2
+-DEBUG_STUFF = -g
+-# DEBUG_STUFF = -O
++# DEBUG_STUFF = -g
++DEBUG_STUFF = -g ${CFLAGS}
++
+ # DEBUG_STUFF = -DINSERT_RANDOM_MALLOC_ERRORS
+ 
+ MACHINE_DEF =
+-CFLAGS = ${MACHINE_DEF} -DCREATE_OLD_FILES \
+-	-UINTERACTIVE_FS ${INCLUDE_STUFF}
++G_CFLAGS = ${MACHINE_DEF} -DCREATE_OLD_FILES \
++	-UINTERACTIVE_FS ${INCLUDE_STUFF} 
+ LINK_MAGIC =
+ LIBS = -ltermcap
+ 
+ #Change the -ltermcap to -lxtermcap on the INTEL 386 System V system
+ #Change the -ltermcap to -llcurses on the Stardent System V.4 system
+ #
+-teco.default:	teco.posix.aux
++teco.default:	teco.linux
+ 
+ teco.posix.aux:
+ 	make teco MACHINE_DEF="-DAUX -D_POSIX_SOURCE" LIBS=-ltermcap CC=gcc
+@@ -54,7 +55,7 @@
+ 	make teco LIBS=-lcurses MACHINE_DEF="-DSUNV" CC=/usr/5bin/cc
+ 
+ teco.linux:
+-	make teco MACHINE_DEF="-DLINUX -D_POSIX_SOURCE" LIBS=-ltermcap
++	make teco MACHINE_DEF="-DLINUX -D_MISC_SOURCE" LIBS=-ltermcap
+ 
+ teco.solaris2:
+ 	make teco MACHINE_DEF="-DSOLARIS2" LINK_MAGIC= LIBS=-lcurses CC=gcc
+@@ -72,50 +73,50 @@
+ 
+ teco:	teco.o tecparse.o tecstate.o tecexec.o tecundo.o tecbuf.o \
+ 	tecdisp.o tecterm.o teccmd.o tecmem.o tecdebug.o
+-	${CC} ${DEBUG_STUFF} ${LINK_MAGIC} -o teco teco.o tecparse.o \
++	${CC} ${G_CFLAGS} ${DEBUG_STUFF} ${LINK_MAGIC} -o teco teco.o tecparse.o \
+ 		tecstate.o tecexec.o \
+ 		tecundo.o tecbuf.o tecdisp.o tecterm.o teccmd.o tecmem.o \
+ 		tecdebug.o ${LIBS}
+ 
+ tecdisp.o: tecdisp.c teco.h
+-	${CC} ${CFLAGS} ${DEBUG_STUFF} -c tecdisp.c
++	${CC} ${G_CFLAGS} ${DEBUG_STUFF} -c tecdisp.c
+ 
+ tecterm.o: tecterm.c teco.h
+-	${CC} ${CFLAGS} ${DEBUG_STUFF} -c tecterm.c
++	${CC} ${G_CFLAGS} ${DEBUG_STUFF} -c tecterm.c
+ 
+ teccmd.o: teccmd.c teco.h
+-	${CC} ${CFLAGS} ${DEBUG_STUFF} -c teccmd.c
++	${CC} ${G_CFLAGS} ${DEBUG_STUFF} -c teccmd.c
+ 
+ tecmem.o: tecmem.c teco.h
+-	${CC} ${CFLAGS} ${DEBUG_STUFF} -c tecmem.c
++	${CC} ${G_FLAGS} ${DEBUG_STUFF} -c tecmem.c
+ 
+ tecbuf.o: tecbuf.c teco.h
+-	${CC} ${CFLAGS} ${DEBUG_STUFF} -c tecbuf.c
++	${CC} ${G_CFLAGS} ${DEBUG_STUFF} -c tecbuf.c
+ 
+ tecparse.o: tecparse.h tecparse.c teco.h
+-	${CC} ${CFLAGS} ${DEBUG_STUFF} -c tecparse.c
++	${CC} ${G_CFLAGS} ${DEBUG_STUFF} -c tecparse.c
+ 
+ tecstate.o: tecparse.h teco.h tecstate.c
+-	${CC} ${CFLAGS} ${DEBUG_STUFF} -c tecstate.c
++	${CC} ${G_CFLAGS} ${DEBUG_STUFF} -c tecstate.c
+ 
+ tecexec.o: tecparse.h teco.h tecexec.c
+-	${CC} ${CFLAGS} ${DEBUG_STUFF} -c tecexec.c
++	${CC} ${G_CFLAGS} ${DEBUG_STUFF} -c tecexec.c
+ 
+ tecundo.o: tecparse.h teco.h tecundo.c
+-	${CC} ${CFLAGS} ${DEBUG_STUFF} -c tecundo.c
++	${CC} ${G_CFLAGS} ${DEBUG_STUFF} -c tecundo.c
+ 
+ teco.o:	teco.c teco.h
+-	${CC} ${CFLAGS} ${DEBUG_STUFF} -c teco.c
++	${CC} ${G_CFLAGS} ${DEBUG_STUFF} -c teco.c
+ 
+ tecdebug.o:	tecdebug.c teco.h
+-	${CC} ${CFLAGS} ${DEBUG_STUFF} -c tecdebug.c
++	${CC} ${G_CFLAGS} ${DEBUG_STUFF} -c tecdebug.c
+ 
+ teco.lint.locus_i386:
+ 	make teco.lint MACHINE_DEF=-DLOCUS_MACH_i386
+ 
+ teco.lint: tecparse.h teco.h tecparse.c tecstate.c tecexec.c tecundo.c teco.c \
+ 		tecdisp.c tecterm.c tecbuf.c teccmd.c tecmem.c tecdebug.c
+-	lint ${CFLAGS} tecparse.c tecstate.c tecexec.c \
++	lint ${G_CFLAGS} tecparse.c tecstate.c tecexec.c \
+ 		tecundo.c teco.c tecdisp.c \
+ 		tecterm.c tecbuf.c teccmd.c tecmem.c tecdebug.c \
+ 		> teco.lint
+Only in teco_4_69: tecdebug.o
+diff -u teco_4_69.orig/tecdisp.c teco_4_69/tecdisp.c
+--- teco_4_69.orig/tecdisp.c	1994-09-21 07:37:02.000000000 +0100
++++ teco_4_69/tecdisp.c	2003-04-28 15:42:06.000000000 +0100
+@@ -988,7 +988,7 @@
+  * position.
+  */
+     switch(data){
+-	case NULL:
++	case '\0':
+ 
+ /*
+  * If we are on a high-speed line, do the reverse-video space trick to
+diff -u teco_4_69.orig/teco.c teco_4_69/teco.c
+--- teco_4_69.orig/teco.c	1994-09-21 07:37:16.000000000 +0100
++++ teco_4_69/teco.c	2003-04-28 15:58:53.000000000 +0100
+@@ -1773,7 +1773,7 @@
+ {
+ 
+ #ifdef UNIX
+-extern char *sys_errlist[];
++//extern char *sys_errlist[];
+ extern int sys_nerr;
+ #endif
+ 
