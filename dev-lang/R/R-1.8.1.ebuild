@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.8.1.ebuild,v 1.12 2004/08/11 15:39:15 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.8.1.ebuild,v 1.13 2004/08/21 15:54:33 foser Exp $
 
 IUSE="X atlas f77 gnome tcltk"
 
@@ -27,7 +27,7 @@ DEPEND="virtual/libc
 		gnome? ( >=gnome-base/gnome-libs-1.4.1.4
 			=gnome-base/libglade-0.17*
 			>=dev-libs/libxml-1.8.16
-			>=gnome-base/ORBit-0.5.12
+			=gnome-base/orbit-0*
 			>=media-libs/imlib-1.9.10
 			>=x11-libs/gtk+-1.2.10
 			>=dev-libs/glib-1.2.10
