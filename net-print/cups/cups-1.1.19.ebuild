@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.19.ebuild,v 1.2 2003/07/18 21:24:27 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.19.ebuild,v 1.3 2003/07/29 15:19:30 lanius Exp $
 
 inherit eutils flag-o-matic
 
@@ -34,7 +34,7 @@ src_unpack() {
 	cd ${S} || die
 
 	#make sure libcupsimage gets linked with libjpeg 
-	epatch ${FILESDIR}/configure-jpeg-buildfix-1.1.15.diff || die
+	epatch ${FILESDIR}/configure-jpeg-buildfix.diff || die
 
 	epatch ${FILESDIR}/disable-strip.patch || die
 
