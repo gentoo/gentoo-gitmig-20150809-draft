@@ -1,7 +1,10 @@
 # ChangeLog for media-libs/gst-plugins
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.19 2002/12/27 18:14:07 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/ChangeLog,v 1.20 2003/01/04 14:28:50 foser Exp $
+
+  04 Jan 2003; foser <foser@gentoo.org> gst-plugins-0.4.2-r2.ebuild :
+  Added MAKEOPTS on make to fix bug #12485
 
 *gst-plugins-0.4.2-r2 (27 Dec 2002)
 *gst-plugins-0.5.0-r1 (27 Dec 2002)
