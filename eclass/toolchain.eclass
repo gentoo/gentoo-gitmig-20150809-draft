@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.32 2004/10/22 17:50:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.33 2004/10/25 06:00:15 vapier Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -11,25 +11,14 @@ INHERITED="$INHERITED $ECLASS"
 DESCRIPTION="Based on the ${ECLASS} eclass"
 EXPORT_FUNCTIONS src_unpack pkg_setup src_compile src_install
 
-[ ! -n "${CCHOST}" ] && export CCHOST="${CHOST}"
+export CTARGET="${CTARGET:-${CHOST}}"
 
 if [ "${ETYPE}" == "gcc-library" ] ; then
 	IUSE="nls build uclibc"
-	if [ -n "${SO_VERSION_SLOT}" ] ; then
-		if [ "${CHOST}" == "${CCHOST}" ] ; then
-			SLOT="5"
-		else
-			SLOT="${CCHOST}-5"
-		fi
-	fi
+	SLOT="${CTARGET}-${SO_VERSION_SLOT:-5}"
 else
 	IUSE="static nls bootstrap build multilib gcj gtk f77 nocxx objc hardened uclibc n32 n64 boundschecking"
-
-	if [ "${CHOST}" == "${CCHOST}" ] ; then
-		SLOT="${PV%.*}"
-	else
-		SLOT="${CCHOST}-${PV%.*}"
-	fi
+	SLOT="${CTARGET}-${PV%.*}"
 fi
 
 
@@ -47,9 +36,6 @@ gcc_setup_static_vars() {
 		PRERELEASE=${PV/_pre/-}
 	fi
 
-	# Theoretical cross compiler support
-	[ ! -n "${CCHOST}" ] && export CCHOST="${CHOST}"
-
 	GCCMAJOR="$(get_version_component_range 1)"
 	GCCMINOR="$(get_version_component_range 2)"
 	GCCMICRO="$(get_version_component_range 3)"
@@ -61,10 +47,10 @@ gcc_setup_path_vars() {
 
 	if [ "$1" == "versioned" ] ; then
 		# GCC 3.4 no longer uses gcc-lib.
-		LIBPATH="${LIBPATH:="${PREFIX}/lib/gcc/${CCHOST}/${MY_PV_FULL}"}"
+		LIBPATH="${LIBPATH:="${PREFIX}/lib/gcc/${CTARGET}/${MY_PV_FULL}"}"
 		INCLUDEPATH="${INCLUDEPATH:="${LIBPATH}/include"}"
-		BINPATH="${BINPATH:="${PREFIX}/${CCHOST}/gcc-bin/${MY_PV}"}"
-		DATAPATH="${DATAPATH:="${PREFIX}/share/gcc-data/${CCHOST}/${MY_PV}"}"
+		BINPATH="${BINPATH:="${PREFIX}/${CTARGET}/gcc-bin/${MY_PV}"}"
+		DATAPATH="${DATAPATH:="${PREFIX}/share/gcc-data/${CTARGET}/${MY_PV}"}"
 		# Dont install in /usr/include/g++-v3/, but in gcc internal directory.
 		# We will handle /usr/include/g++-v3/ with gcc-config ...
 		STDCXX_INCDIR="${STDCXX_INCDIR:="${LIBPATH}/include/g++-v${MY_PV/\.*/}"}"
@@ -105,12 +91,12 @@ gcc_setup_variables() {
 
 gcc-compiler-pkg_setup() {
 	# Must compile for mips64-linux target if we want n32/n64 support
-	case "${CCHOST}" in
+	case "${CTARGET}" in
 		mips64-*) ;;
 		*)
 			if use n32 || use n64; then
 				eerror "n32/n64 can only be used when target host is mips64-*-linux-*";
-				die "Invalid USE flags for CCHOST ($CCHOST)";
+				die "Invalid USE flags for CTARGET ($CTARGET)";
 			fi
 		;;
 	esac
@@ -544,7 +530,7 @@ split_out_specs_files() {
 do_gcc_config() {
 	# we only want to switch compilers if installing to / and we're not
 	# building a cross-compiler.
-	! [ "${ROOT}" == "/" -a "${CHOST}" == "${CCHOST}" ] && return 0
+	! [ "${ROOT}" == "/" -a "${CHOST}" == "${CTARGET}" ] && return 0
 
 	# the grep -v is in there to filter out informational messages >_<
 	local current_gcc_config="$(gcc-config -c | grep -v ^\ )"
@@ -569,7 +555,7 @@ do_gcc_config() {
 				einfo "automatically switched for you. If you would like to switch"
 				einfo "to the newly installed gcc version, do the following:"
 				echo
-				einfo "gcc-config ${CCHOST}-${MY_PV_FULL}${use_specs}"
+				einfo "gcc-config ${CTARGET}-${MY_PV_FULL}${use_specs}"
 				einfo "source /etc/profile"
 				echo
 				ebeep
@@ -582,7 +568,7 @@ do_gcc_config() {
 		fi
 	fi
 
-	if [ -n "${use_specs}" -a ! -e ${ROOT}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}${use_specs} ] ; then
+	if [ -n "${use_specs}" -a ! -e ${ROOT}/etc/env.d/gcc/${CTARGET}-${MY_PV_FULL}${use_specs} ] ; then
 		ewarn "The currently selected specs-specific gcc config,"
 		ewarn "${current_specs}, doesn't exist anymore. This is usually"
 		ewarn "due to enabling/disabling hardened or switching to a version"
@@ -592,12 +578,12 @@ do_gcc_config() {
 		epause
 	fi
 
-	if [ -e ${ROOT}/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}${use_specs} ] ; then
+	if [ -e ${ROOT}/etc/env.d/gcc/${CTARGET}-${MY_PV_FULL}${use_specs} ] ; then
 		# we dont want to lose the current specs setting!
-		gcc-config --use-portage-chost ${CCHOST}-${MY_PV_FULL}${use_specs}
+		gcc-config --use-portage-chost ${CTARGET}-${MY_PV_FULL}${use_specs}
 	else
 		# ...unless of course the specs-specific entry doesnt exist :)
-		gcc-config --use-portage-chost ${CCHOST}-${MY_PV_FULL}
+		gcc-config --use-portage-chost ${CTARGET}-${MY_PV_FULL}
 	fi
 }
 
@@ -800,17 +786,17 @@ gcc-compiler-configure() {
 	# Travis Tilley <lv@gentoo.org>  (11 Jul 2004)
 	if ! use build && use gcj && use gtk
 	then
-		myconf="${myconf} --enable-java-awt=gtk"
+		confgcc="${confgcc} --enable-java-awt=gtk"
 	fi
 
 	use build || use !gcj && confgcc="${confgcc} --disable-libgcj"
 
 	# Add --with-abi flags to enable respective MIPS ABIs
-	case "${CCHOST}" in
+	case "${CTARGET}" in
 		mips*)
-		use multilib && myconf="${myconf} --with-abi=32"
-		use n64 && myconf="${myconf} --with-abi=n64"
-		use n32 && myconf="${myconf} --with-abi=n32"
+		use multilib && confgcc="${confgcc} --with-abi=32"
+		use n64 && confgcc="${confgcc} --with-abi=n64"
+		use n32 && confgcc="${confgcc} --with-abi=n32"
 		;;
 	esac
 
@@ -833,7 +819,7 @@ gcc-compiler-configure() {
 # Other than the variables described for gcc_setup_variables, the following
 # will alter tha behavior of gcc_do_configure:
 #
-#	CCHOST
+#	CTARGET
 #	CBUILD
 #			Enable building for a target that differs from CHOST
 #
@@ -872,26 +858,23 @@ gcc_do_configure() {
 
 	# Incredibly theoretical cross-compiler support
 	confgcc="${confgcc} --host=${CHOST}"
-	if [ "${CCHOST}" != "${CHOST}" -a "${CCHOST}" != "" ] ; then
+	if [ "${CTARGET}" != "${CHOST}" -a "${CTARGET}" != "" ] ; then
 		# Straight from the GCC install doc:
 		# "GCC has code to correctly determine the correct value for target 
 		# for nearly all native systems. Therefore, we highly recommend you
 		# not provide a configure target when configuring a native compiler."
-		confgcc="${confgcc} --target=${CCHOST}"
+		confgcc="${confgcc} --target=${CTARGET}"
 	fi
 	if [ "${CBUILD}" != "" ] ; then
 		confgcc="${confgcc} --build=${CBUILD}"
 	fi
 
-	# altivec support
-	if use ppc || use ppc64 ; then
-		use altivec && confgcc="${confgcc} --enable-altivec"
-		use !altivec && confgcc="${confgcc} --disable-altivec"
-	fi
+	# ppc altivec support
+	confgcc="${confgcc} $(use_enable altivec)"
 
 	# Fix linking problem with c++ apps which where linked
 	# against a 3.2.2 libgcc
-	[ "${ARCH}" = "hppa" ] && myconf="${myconf} --enable-sjlj-exceptions"
+	[ "${ARCH}" = "hppa" ] && confgcc="${confgcc} --enable-sjlj-exceptions"
 
 	# Native Language Support
 	if use nls && use !build ; then
@@ -954,8 +937,8 @@ gcc_do_configure() {
 
 	# and now to do the actual configuration
 	addwrite "/dev/zero"
-	${S}/configure ${confgcc} ${@} ${EXTRA_ECONF} || \
-		die "failed to run configure"
+	${S}/configure ${confgcc} "${@}" ${EXTRA_ECONF} \
+		|| die "failed to run configure"
 
 	# return to whatever directory we were in before
 	popd > /dev/null
@@ -964,7 +947,7 @@ gcc_do_configure() {
 
 # This function accepts one optional argument, the make target to be used.
 # If ommitted, gcc_do_make will try to guess whether it should use all,
-# profiledbootstrap, or bootstrap-lean depending on CCHOST and arch. An
+# profiledbootstrap, or bootstrap-lean depending on CTARGET and arch. An
 # example of how to use this function:
 #
 #	gcc_do_make all-target-libstdc++-v3
@@ -995,7 +978,7 @@ gcc_do_make() {
 	
 	STAGE1_CFLAGS="${STAGE1_CFLAGS:="-O"}"
 
-	if [ -z "${CCHOST}" -o "${CCHOST}" == "${CHOST}" ] ; then
+	if [ -z "${CTARGET}" -o "${CTARGET}" == "${CHOST}" ] ; then
 		# we only want to use the system's CFLAGS if not building a
 		# cross-compiler.
 		BOOT_CFLAGS="${BOOT_CFLAGS:="${CFLAGS}"}"
@@ -1010,7 +993,7 @@ gcc_do_make() {
 	# Set make target to $1 if passed
 	[ "$1" != "" ] && GCC_MAKE_TARGET="$1"
 	# default target
-	if [ "${CCHOST}" != "${CHOST}" ] ; then
+	if [ "${CTARGET}" != "${CHOST}" ] ; then
 		# 3 stage bootstrapping doesnt quite work when you cant run the
 		# resulting binaries natively ^^;
 		GCC_MAKE_TARGET="${GCC_MAKE_TARGET:=all}"
@@ -1192,7 +1175,7 @@ gcc-library-src_install() {
 
 create_gcc_env_entry() {
 	dodir /etc/env.d/gcc
-	local gcc_envd_base="/etc/env.d/gcc/${CCHOST}-${MY_PV_FULL}"
+	local gcc_envd_base="/etc/env.d/gcc/${CTARGET}-${MY_PV_FULL}"
 
 	if [ "$1" == "" ] ; then
 		gcc_envd_file="${D}${gcc_envd_base}"
