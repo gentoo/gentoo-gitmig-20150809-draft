@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pilot-link/pilot-link-0.11.0.ebuild,v 1.1 2002/07/15 02:57:42 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pilot-link/pilot-link-0.11.0.ebuild,v 1.2 2002/07/22 16:56:47 owen Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A suite of tools contains a series of conduits for moving
@@ -13,7 +13,7 @@ DEPEND="virtual/glibc"
 
 SLOT="0"
 LICENSE="GPL-2 | LGPL"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 src_compile() {
 

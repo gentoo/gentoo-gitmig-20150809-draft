@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/pilot-link
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pilot-link/ChangeLog,v 1.5 2002/07/21 17:02:09 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pilot-link/ChangeLog,v 1.6 2002/07/22 16:56:47 owen Exp $
+
+  22 Jul 2002; Owen Stampflee <owen@gentoo.org> :
+
+  Added PPC to KEYWORDS.
 
 *pilot-link-0.11.1 (21 Jul 2002)
 
