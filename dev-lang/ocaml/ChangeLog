@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ocaml
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.25 2004/04/22 11:27:03 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ChangeLog,v 1.26 2004/05/09 01:25:48 gmsoft Exp $
+
+  08 May 2004; Guy Martin <gmsoft@gentoo.org> ocaml-3.07-r1.ebuild:
+  Added support for native hppa compiler. Marked ~hppa.
 
   22 Apr 2004; Matthieu Sozeau <mattam@gentoo.org> ocaml-3.07-r1.ebuild:
   Fix unpacking of patch file (bug #48485).

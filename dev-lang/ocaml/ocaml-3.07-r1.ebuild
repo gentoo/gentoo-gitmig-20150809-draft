@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.07-r1.ebuild,v 1.6 2004/04/22 11:27:03 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.07-r1.ebuild,v 1.7 2004/05/09 01:25:48 gmsoft Exp $
 
 inherit flag-o-matic eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://caml.inria.fr/distrib/${P}/${P}.tar.gz
 
 LICENSE="QPL-1.0 LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~alpha ~ia64 ~amd64"
+KEYWORDS="~x86 ~sparc ~ppc ~alpha ~ia64 ~amd64 ~hppa"
 IUSE="tcltk"
 
 DEPEND="virtual/glibc
@@ -21,6 +21,7 @@ DEPEND="virtual/glibc
 src_unpack() {
 	unpack ${P}.tar.gz
 	cd ${S}
+	use hppa && epatch ${FILESDIR}/${P}-hppa.patch
 	epatch ${DISTDIR}/${P}-patch2.diffs
 	grep -rle "head -1" . | xargs sed -i "s:head -1:head -n 1:g"
 }
