@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-2.45.ebuild,v 1.1 2004/03/03 10:54:14 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/mplayerplug-in-2.45.ebuild,v 1.2 2004/03/03 16:13:06 lu_zero Exp $
 
 inherit nsplugins
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz
 HOMEPAGE="http://mplayerplug-in.sourceforge.net/"
 RESTRICT="nomirror"
 
-KEYWORDS="~x86 ~amd64 ~ia64 ~ppc ~sparc ~alpha ~hppa ~mips"
+KEYWORDS="~x86" #~amd64 ~ia64 ~ppc ~sparc ~alpha ~hppa ~mips"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE=""
