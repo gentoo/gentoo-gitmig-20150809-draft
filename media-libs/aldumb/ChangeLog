@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/aldumb
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/aldumb/ChangeLog,v 1.8 2004/09/01 16:51:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/aldumb/ChangeLog,v 1.9 2004/11/09 07:10:27 josejx Exp $
+
+  09 Nov 2004; Joseph Jezak <josejx@gentoo.org> aldumb-0.9.2-r1.ebuild:
+  Marked ppc stable.
 
   01 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   aldumb-0.9.2-r1.ebuild:
