@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Geert Bevin <gbevin@uwyn.com>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/sather/sather-1.3.ebuild,v 1.1 2002/03/19 14:48:58 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/sather/sather-1.3.ebuild,v 1.2 2002/03/19 14:50:52 gbevin Exp $
 
 S="${WORKDIR}/Sather-1.3"
 DESCRIPTION="Sather is an object oriented language designed to be simple, efficient, safe, flexible and non-proprietary."
@@ -59,11 +59,11 @@ src_install () {
 	
 	dodir /etc/env.d
 cat >> ${D}/etc/env.d/05sather <<EOF
-	export SATHER_HOME="/usr/sather"
-	export LOCALE="en_NZ"
-	export SATHER_ENV="/usr/sather/resources/en_NZ/bin/LIBCHARS-posix"
-	export SATHER_RESOURCES="/usr/sather/resources/en_NZ"
-	export PATH="/usr/sather/bin"
+SATHER_HOME="/usr/sather"
+LOCALE="en_NZ"
+SATHER_ENV="/usr/sather/resources/en_NZ/bin/LIBCHARS-posix"
+SATHER_RESOURCES="/usr/sather/resources/en_NZ"
+PATH="/usr/sather/bin"
 EOF
 
 }
