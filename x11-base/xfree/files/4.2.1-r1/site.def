@@ -53,6 +53,10 @@
 #define BuildXF86DGA           YES
 #define BuildRender            YES
 
+/* Need this to build libs with -fPIC */
+#define StaticNeedsPicForShared YES
+#define BuildLibGlxWithoutPIC   NO
+
 /* Broken in 4.x */
 #define JoystickSupport        NO
 
