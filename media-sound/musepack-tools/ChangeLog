@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/musepack-tools
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.11 2004/11/27 20:18:01 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/musepack-tools/ChangeLog,v 1.12 2004/12/04 21:49:24 eradicator Exp $
+
+  04 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  musepack-tools-1.15r-r2.ebuild, musepack-tools-1.15s-r1.ebuild:
+  Added missing esd? around esound DEPEND.  Closes bug #72287.
 
 *musepack-tools-1.15s-r1 (27 Nov 2004)
 
