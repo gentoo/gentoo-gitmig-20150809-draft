@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.3-r3.ebuild,v 1.1 2003/10/31 15:46:04 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.2.3-r3.ebuild,v 1.2 2003/10/31 22:03:10 taviso Exp $
 
 DESCRIPTION="The GNU Privacy Guard, a GPL pgp replacement"
 HOMEPAGE="http://www.gnupg.org/"
@@ -9,15 +9,15 @@ SRC_URI="ftp://ftp.gnupg.org/gcrypt/gnupg/${P}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~alpha ~sparc ~hppa"
-IUSE="X ldap nls static cap"
+IUSE="X ldap nls static caps"
 
 RDEPEND="!static? ( ldap? ( net-nds/openldap )
-		cap? ( sys-libs/libcap )
+		caps? ( sys-libs/libcap )
 		sys-libs/zlib )
 	X? ( x11-misc/xloadimage )
 	nls? ( sys-devel/gettext )"
 
-DEPEND="cap? ( static? ( >=sys-libs/libcap-1.10-r3 )
+DEPEND="caps? ( static? ( >=sys-libs/libcap-1.10-r3 )
 		!static? ( sys-libs/libcap ) )
 	ldap? ( net-nds/openldap )
 	nls? ( sys-devel/gettext )
@@ -59,7 +59,7 @@ src_compile() {
 
 	# use the linux capability library to minimise security
 	# risks of running setuid root.
-	if use cap; then
+	if use caps; then
 		myconf="${myconf} --with-capabilities"
 	fi
 
@@ -94,7 +94,7 @@ pkg_postinst() {
 	einfo "This is needed in order to have a secure place to store your"
 	einfo "passphrases, etc. This may make some sysadmins nervous."
 
-	if use cap; then
+	if use caps; then
 		echo
 		einfo "gpg will use Linux capabilities to set the permitted"
 		einfo "operations, this will minimise the security risks"
