@@ -1,6 +1,9 @@
 # ChangeLog for dev-scheme/bigloo
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/ChangeLog,v 1.3 2004/06/25 02:06:04 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-scheme/bigloo/ChangeLog,v 1.4 2005/01/22 21:27:36 karltk Exp $
+
+  22 Jan 2005; Karl Trygve Kalleberg <karltk@gentoo.org> bigloo-2.6a.ebuild:
+  Marking as stable, since 2.5c sure isn't. Fixes #68896.
 
   16 Dec 2003; Jason Wever <weeve@gentoo.org> bigloo-2.5c.ebuild:
   Added ~sparc keyword to fix broken dependencies in dev-lisp/bigloo-lib.
