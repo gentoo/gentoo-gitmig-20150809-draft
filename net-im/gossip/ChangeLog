@@ -1,6 +1,11 @@
 # ChangeLog for net-im/gossip
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/ChangeLog,v 1.11 2004/02/29 19:28:53 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/ChangeLog,v 1.12 2004/04/07 11:03:36 foser Exp $
+
+*gossip-0.7.4 (07 Apr 2004)
+
+  07 Apr 2004; foser <foser@gentoo.org> gossip-0.7.4.ebuild :
+  New release (#46717)
 
   29 Feb 2004; Jason Wever <weeve@gentoo.org> gossip-0.7.2.ebuild:
   It's been a hard day's night, and I've been ~sparc'in like a dog.

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/gossip-0.6-r1.ebuild,v 1.1 2003/12/07 17:23:58 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/gossip-0.6-r1.ebuild,v 1.2 2004/04/07 11:03:36 foser Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.imendio.com/projects/gossip/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 RDEPEND=">=dev-libs/glib-2.0.3
