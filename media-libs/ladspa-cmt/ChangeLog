@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ladspa-cmt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.4 2003/07/07 18:07:53 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ChangeLog,v 1.5 2003/07/08 17:15:14 raker Exp $
+
+  08 Jul 2003; Nick Hadaway <raker@gentoo.org> ladspa-cmt-1.15.ebuild:
+  Fixed a little error with P.
 
 *ladspa-cmt-1.15 (07 Jul 2003)
 
