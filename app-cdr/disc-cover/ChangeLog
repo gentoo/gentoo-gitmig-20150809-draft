@@ -1,6 +1,11 @@
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# ChangeLog for app-cdr/disc-cover
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# /space/gentoo/cvsroot/gentoo-x86/skel.ChangeLog,v 1.4 2002/05/30 01:54:49 sandymac Exp
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/disc-cover/ChangeLog,v 1.2 2002/06/19 00:27:28 agenkin Exp $
+
+*disc-cover-1.3.1 (18 Jun 2002)
+  18 Jun 2002; Arcady Genkin <agenkin@thpoon.com>
+	disc-cover-1.3.1.ebuild:
+  Rewrite of the package by Felix Kurth <felix@fkurth.de>.
 
 *disc-cover-1.1.1 (05 Jun 2002)
   05 Jun 2002; C.Morey <peitolm@gentoo.org> disc-cover-1.1.1.ebuild
