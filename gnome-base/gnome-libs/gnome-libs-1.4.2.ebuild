@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.2.ebuild,v 1.13 2003/10/17 04:13:39 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-libs/gnome-libs-1.4.2.ebuild,v 1.14 2003/10/17 04:26:12 brad_mssw Exp $
 
 IUSE="doc nls kde"
 
@@ -19,7 +19,7 @@ RDEPEND=">=media-libs/imlib-1.9.10
 		>=media-sound/esound-0.2.23
 		>=gnome-base/ORBit-0.5.12
 		=x11-libs/gtk+-1.2*
-		amd64? <=sys-libs/db-2
+		<=sys-libs/db-2
 		doc? ( app-text/docbook-sgml
 		       dev-util/gtk-doc )"
 
