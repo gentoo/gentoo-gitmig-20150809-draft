@@ -1,7 +1,20 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 168a24fcb5cb54bb4afe3aa4a7ebe2ff ChangeLog 1201
 MD5 e594f0558d344ec47d43bca1260d4211 gcvs-1.0_beta3.ebuild 1445
-MD5 7651e920c2802d206983450b10fd614e gcvs-1.0_beta3-r1.ebuild 1547
-MD5 df33a91ac811b2c5f5fac8dcef8faf5c ChangeLog 937
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 6a7336f5073178e653bb3a6be16991d9 files/digest-gcvs-1.0_beta3-r1 63
+MD5 b6a2ea8799efa67afa05ed2020e74023 gcvs-1.0.ebuild 1554
+MD5 7651e920c2802d206983450b10fd614e gcvs-1.0_beta3-r1.ebuild 1547
 MD5 6a7336f5073178e653bb3a6be16991d9 files/digest-gcvs-1.0_beta3 63
+MD5 6a7336f5073178e653bb3a6be16991d9 files/digest-gcvs-1.0_beta3-r1 63
 MD5 25b3544a50e02eadc90e1d04c456d417 files/gcvs-1.0b3-gcc3-gentoo.patch 515
+MD5 8529b8c76ecb8a2304a02cc925185f1e files/gcvs-1.0-gentoo.patch 1465
+MD5 b46de350733aa42dc126b049b44ec87a files/digest-gcvs-1.0 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBctTYRkyva5PS18kRArCiAJwMXI02GnftkoX1Ttxm55j8FmK9WgCgmE35
+6tUmX2C/csHo7IoN+DcGzLI=
+=qiQ+
+-----END PGP SIGNATURE-----

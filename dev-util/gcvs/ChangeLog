@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/gcvs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gcvs/ChangeLog,v 1.8 2004/06/25 02:32:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gcvs/ChangeLog,v 1.9 2004/10/17 20:22:52 liquidx Exp $
+
+*gcvs-1.0 (17 Oct 2004)
+
+  17 Oct 2004; Alastair Tse <liquidx@gentoo.org>
+  +files/gcvs-1.0-gentoo.patch, +gcvs-1.0.ebuild:
+  version bump with patch for gcc3.4, removed make_configure and use autoconf
+  (#8331,#53911), thanks to Daren Hayward <drak@vodafone.net>
 
 *gcvs-1.0_beta3-r1 (24 Jul 2002)
 
