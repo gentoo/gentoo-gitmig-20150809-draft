@@ -1,0 +1,401 @@
+diff -ruN kon2-0.3.9b.orig/font/bdf.c kon2-0.3.9b/font/bdf.c
+--- kon2-0.3.9b.orig/font/bdf.c	2003-04-10 15:43:45.000000000 +0900
++++ kon2-0.3.9b/font/bdf.c	2003-04-10 15:43:58.000000000 +0900
+@@ -41,6 +41,12 @@
+ extern struct fontInfo fi;
+ extern forceLoad;
+ 
++int buffer_error()
++{
++  fprintf(stderr,"buffer overflow\n");
++  exit(1);  
++}
++
+ u_char	*FontLoadBdf(fp)
+ FILE *fp;
+ {
+@@ -61,23 +67,37 @@
+ 	    p = line + sizeof("FONTBOUNDINGBOX");
+ 	    sscanf(p, "%d %d", &width, &high);
+ 	} else if (!strncmp("CHARSET_REGISTRY", line, 16)) {
+-	    p = line + sizeof("CHARSET_REGISTRY");
+-	    while(*p != '"') p ++;
++	    p = line + sizeof("CHARSET_REGISTRY") - 1;
++	    while(*p != '"') {
++	      p ++;
++	      if (p - line > 255) buffer_error();
++	    }
+ 	    w = ++p;
+-	    while(*p != '"') p ++;
++	    while(*p != '"') {
++	      p ++;
++	      if (p - line > 255) buffer_error();
++	    }
+ 	    *p = '\0';
+-	    strcpy(reg, w);
++	    strncpy(reg, w, sizeof(reg));
+ 	} else if (!strncmp("CHARSET_ENCODING", line, 16)) {
+-	    p = line + sizeof("CHARSET_ENCODING");
+-	    while(*p != '"') p ++;
++	    p = line + sizeof("CHARSET_ENCODING") - 1;
++	    while(*p != '"') {
++	      p ++;
++	      if (p - line > 255) buffer_error();
++	    }
+ 	    w = ++p;
+-	    while(*p != '"') p ++;
++	    while(*p != '"') {
++	      p ++;
++	      if (p - line > 255) buffer_error();
++	    }
+ 	    *p = '\0';
+-	    strcat(reg, "-");
+-	    strcat(reg, w);
++	    if (strlen(reg) + 1 + strlen(w) + 1 < sizeof(reg)) {
++	      strcat(reg, "-");
++	      strcat(reg, w);
++	    } else buffer_error();
+ 	    fi.type = CodingByRegistry(reg);
+ 	} else if (!num && !strncmp("CHARS ", line, 6)) {
+-	    p = line + sizeof("CHARS");
++	    p = line + sizeof("CHARS") - 1;
+ 	    sscanf(p, "%d", &num);
+ 	    break;
+ 	}
+@@ -162,3 +182,4 @@
+     exit(0);
+ }
+ #endif
++
+diff -ruN kon2-0.3.9b.orig/kbiff/kbiff.c kon2-0.3.9b/kbiff/kbiff.c
+--- kon2-0.3.9b.orig/kbiff/kbiff.c	2003-04-10 15:43:45.000000000 +0900
++++ kon2-0.3.9b/kbiff/kbiff.c	2003-04-10 15:43:58.000000000 +0900
+@@ -24,13 +24,15 @@
+     time_t old_mtime=0;
+     int n, update=1;
+     struct stat st;
++    int bufflen;
+ 
+     if ((term = getenv("TERM")) == NULL
+ 	|| (mail = getenv("MAIL")) == NULL) exit(1);
+     setupterm(term, 1, &n);
+     if (n != 1) exit(1);
+     if (!has_status_line) exit(1);
+-    if ((buff = calloc(columns + 1, 1)) == NULL) exit(1);
++    bufflen = columns + 1;
++    if ((buff = calloc(bufflen, 1)) == NULL) exit(1);
+     putp(tparm(to_status_line, 0, 0));
+     putp(from_status_line);
+     fflush(stdout);
+@@ -39,14 +41,14 @@
+     while (1) {
+ 	if (!stat(mail, &st) && st.st_size) {
+ 	    if (st.st_mtime > old_mtime) {
+-		sprintf(buff, "New mail received %s",
+-			ctime(&st.st_mtime));
++		snprintf(buff, bufflen, "New mail received %s",
++			 ctime(&st.st_mtime));
+ 		update = 1;
+ 		old_mtime = st.st_mtime;
+ 	    }
+ 	} else {
+ 	    if (st.st_mtime > old_mtime) {
+-		sprintf(buff, "No mail");
++		snprintf(buff, bufflen, "No mail");
+ 		update = 1;
+ 		old_mtime = st.st_mtime;
+ 	    }
+diff -ruN kon2-0.3.9b.orig/lib/getcap.c kon2-0.3.9b/lib/getcap.c
+--- kon2-0.3.9b.orig/lib/getcap.c	2003-04-10 15:43:45.000000000 +0900
++++ kon2-0.3.9b/lib/getcap.c	2003-04-10 15:43:58.000000000 +0900
+@@ -73,6 +73,12 @@
+ 		fprintf(stderr, "cap %s redefined (default %s)\r\n", name,
+ 			def_value ? def_value : "None");
+ #endif
++		/* release previous value - ukai */
++		if (cp->name)
++		    free(cp->name);
++		if (cp->def_value)
++		    free(cp->def_value);
++
+ 		cp->name = strdup(name);
+ 		cp->func = func;
+ 		if (def_value)
+@@ -223,6 +229,9 @@
+ 		/* Protected capability. */
+ 		return FAILURE;
+ 	}
++	/* release previous value - ukai */
++	if (cp->arg)
++	    free(cp->arg);
+ 	cp->arg = strdup(value);
+ #ifdef	DEBUG
+ 	fprintf(stderr, "Setting arg for %s to %s\r\n", capName, value);
+@@ -234,15 +243,18 @@
+ 
+ bool BoolConf(const char *confstr)
+ {
+-	char name[MAX_COLS];
+-	sscanf(confstr, "%s", name);
++  	char *name;
++  	name = (char*)malloc(strlen(confstr) + 1);
++	sscanf(confstr, "%s", name);	/* its safe because name[strlen(confstr)+1] */
+ 	if (strcasecmp(name, "On") == 0 ||
+ 	    strcasecmp(name, "True") == 0) {
++		free(name);
+ 		return TRUE;
+ 	} else if (strcasecmp(name, "Off") != 0 &&
+ 		   strcasecmp(name, "False") != 0) {
+ 		fprintf(stderr, "Warning: value `%s' unrecognized as boolean; assuming `Off'\r\r\n",
+ 		     name);
+ 	}
++	free(name);
+ 	return FALSE;
+ }
+diff -ruN kon2-0.3.9b.orig/lib/sockface.c kon2-0.3.9b/lib/sockface.c
+--- kon2-0.3.9b.orig/lib/sockface.c	2003-04-10 15:43:45.000000000 +0900
++++ kon2-0.3.9b/lib/sockface.c	2003-04-10 15:43:58.000000000 +0900
+@@ -86,9 +86,11 @@
+ 	if (ioctl(fd, VT_GETSTATE, &vs) < 0) {
+ 		return EOF;
+ 	}
+-	sprintf(sa->sa_data, "%s%d", SOCKET_BASENAME, vs.v_active);
++	snprintf(sa->sa_data, sizeof(sa->sa_data),
++		 "%s%d", SOCKET_BASENAME, vs.v_active);
+ #elif defined(__FreeBSD__)
+-	sprintf(sa->sa_data, "%s", SOCKET_BASENAME);
++	snprintf(sa->sa_data, sizeof(sa->sa_data),
++		 "%s", SOCKET_BASENAME);
+ #endif
+ 	return(0);
+ }
+diff -ruN kon2-0.3.9b.orig/src/child.c kon2-0.3.9b/src/child.c
+--- kon2-0.3.9b.orig/src/child.c	2003-04-10 15:43:45.000000000 +0900
++++ kon2-0.3.9b/src/child.c	2003-04-10 15:43:58.000000000 +0900
+@@ -46,7 +46,12 @@
+ {
+ 	int i=0;
+ 	execProg = strdup(string);
+-	while(args[i]) execProgArgs[i] = args[i++];
++	for (i = 0; i < 256; i++) {
++	  if (args[i]) 
++	      execProgArgs[i] = args[i];
++	  else
++	      break;
++	}
+ 	execProgArgs[i]=NULL;
+ 	return SUCCESS;
+ }
+@@ -63,6 +68,7 @@
+ {
+ 	char *p;
+ 
++	/* run as user, not effective user root, see ChildStart() */
+ 	p = strtok(startupStr, "\n");
+ 	while(p) {
+ 		system(p);
+@@ -101,18 +107,19 @@
+ 	char	*shell;
+ 	setgid(getgid());
+ 	setuid(getuid());
++	/* run as user, not effective user root */
+ 
+ 	RunStartupCmd();
+ #endif
+ 
+ #if defined(linux)
+ #ifdef	MINI_KON
+-	strcpy(buff, "TERM=linux");
++	strcpy(buff, "TERM=linux");	/* ok - buff[256] */
+ #else
+-	strcpy(buff, "TERM=kon");
++	strcpy(buff, "TERM=kon");	/* ok - buff[256] */
+ #endif
+ #elif defined(__FreeBSD__)
+-	sprintf(buff,"TERM=vt100");
++	sprintf(buff,"TERM=vt100");	/* ok - buff[256] */
+ #endif
+ 
+ 	tcap = strdup(buff);
+@@ -143,7 +150,7 @@
+ 		execProg = "/bin/sh";
+ 	    if ((tail = rindex(execProg, '/')) == NULL)
+ 		tail = " sh";
+-	    sprintf(buff, "-%s", tail + 1);
++	    snprintf(buff, sizeof(buff), "-%s", tail + 1);
+ 	    execl(execProg, buff, 0);
+ 	}
+ 	fprintf(errfp, "KON> couldn't exec shell\r\n");
+diff -ruN kon2-0.3.9b.orig/src/errors.c kon2-0.3.9b/src/errors.c
+--- kon2-0.3.9b.orig/src/errors.c	2003-04-10 15:43:45.000000000 +0900
++++ kon2-0.3.9b/src/errors.c	2003-04-10 15:43:58.000000000 +0900
+@@ -50,7 +50,7 @@
+ 		vfprintf(stderr, format, args);
+ 	} else {
+ 		VtEmu(head, strlen(head));
+-		vsprintf(buf, format, args);
++		vsnprintf(buf, MAX_MSGLEN, format, args);
+ 		VtEmu(buf, strlen(buf));
+ 	}
+ #endif
+diff -ruN kon2-0.3.9b.orig/src/mouse.c kon2-0.3.9b/src/mouse.c
+--- kon2-0.3.9b.orig/src/mouse.c	2003-04-10 15:43:45.000000000 +0900
++++ kon2-0.3.9b/src/mouse.c	2003-04-10 15:43:58.000000000 +0900
+@@ -159,7 +159,7 @@
+ 	char *name;
+ 
+ 	name = malloc(strlen(config) + 1);
+-	sscanf(config, "%s", name);
++	sscanf(config, "%s", name);	/* ok, name[strlen(config)+1] */
+ 
+ 	if (mouseDev) free(mouseDev);
+ 	mouseDev = strdup(name);
+@@ -183,7 +183,7 @@
+ 	mouseType = MOUSE_NONE;
+ 	mInfo.has_mouse = FALSE;
+ 	name = malloc(strlen(config) + 1);
+-	sscanf(config, "%s", name);
++	sscanf(config, "%s", name);	/* ok, name[strlen(config)+1] */
+ 	for (p = mice; p->name != NULL; p++) {
+ 		if (strcasecmp(name, p->name) == 0) {
+ 			mouseType = p->type;
+diff -ruN kon2-0.3.9b.orig/src/sock.c kon2-0.3.9b/src/sock.c
+--- kon2-0.3.9b.orig/src/sock.c	2003-04-10 15:43:45.000000000 +0900
++++ kon2-0.3.9b/src/sock.c	2003-04-10 15:43:58.000000000 +0900
+@@ -86,9 +86,9 @@
+     struct	sockaddr sinfo;
+ 
+ #if defined(linux)
+-    sprintf(sinfo.sa_data, "/tmp/.kon%s", tty);
++    snprintf(sinfo.sa_data, sizeof(sinfo.sa_data), "/tmp/.kon%s", tty);
+ #elif defined(__FreeBSD__)
+-    sprintf(sinfo.sa_data, "/tmp/.kon");
++    snprintf(sinfo.sa_data, sizeof(sinfo.sa_data), "/tmp/.kon");
+ #endif
+     unlink(sinfo.sa_data);
+     if ((sfd = socket(AF_UNIX, SOCK_STREAM, 0)) < 0) {
+diff -ruN kon2-0.3.9b.orig/src/term.c kon2-0.3.9b/src/term.c
+--- kon2-0.3.9b.orig/src/term.c	2003-04-10 15:43:45.000000000 +0900
++++ kon2-0.3.9b/src/term.c	2003-04-10 15:43:58.000000000 +0900
+@@ -395,7 +395,7 @@
+     /* Open PTY(master) */
+     for (ls = 'p'; ls <= 's'; ls ++) {
+ 	for (ln = 0; ln <= 0xF; ln ++) {
+-	    sprintf(ptyName, "/dev/pty%1c%1x", ls, ln);
++	    snprintf(ptyName, sizeof(ptyName), "/dev/pty%1c%1x", ls, ln);
+ 	    if ((masterPty = open(ptyName, O_RDWR)) >= 0) break;
+ 	}
+ 	if (masterPty >= 0) break;
+@@ -573,9 +573,9 @@
+     }
+     setsid();
+ #if defined(linux)
+-    sprintf(vtty, "/dev/tty%d", vtNum);
++    snprintf(vtty, sizeof(vtty), "/dev/tty%d", vtNum);
+ #elif defined(__FreeBSD__)
+-    sprintf(vtty, "/dev/ttyv%d", vtNum);
++    snprintf(vtty, sizeof(vtty), "/dev/ttyv%d", vtNum);
+ #endif
+     if ((vfd = open(vtty, O_RDWR)) < 0)
+ 	KonFatal("can't open %s", vtty);
+diff -ruN kon2-0.3.9b.orig/src/vc.c kon2-0.3.9b/src/vc.c
+--- kon2-0.3.9b.orig/src/vc.c	2003-04-10 15:43:45.000000000 +0900
++++ kon2-0.3.9b/src/vc.c	2003-04-10 15:43:58.000000000 +0900
+@@ -830,7 +830,7 @@
+     char *name;
+     
+     name = malloc(strlen(config) + 1);
+-    sscanf(config, "%s", name);
++    sscanf(config, "%s", name);	/* ok, name[strlen(config)+1] */
+     for (v = videos; v->name != NULL; v++) {
+ 	if (strcasecmp(name, v->name) == 0) {
+ 	    config = strchr(config, '\n');
+diff -ruN kon2-0.3.9b.orig/src/vt.c kon2-0.3.9b/src/vt.c
+--- kon2-0.3.9b.orig/src/vt.c	2003-04-10 15:43:45.000000000 +0900
++++ kon2-0.3.9b/src/vt.c	2003-04-10 15:47:21.000000000 +0900
+@@ -212,12 +212,12 @@
+ 	if (arg == 6) {
+ 	    int x = (con.x < con.xmax) ? con.x : con.xmax;
+ 	    int y = (con.y < con.ymax) ? con.y : con.ymax;
+-	    sprintf(report, "\x1B[%d;%dR", y + 1, x + 1);
++	    snprintf(report, sizeof(report), "\x1B[%d;%dR", y + 1, x + 1);
+ 	} else if (arg == 5)
+-	    strcpy(report, "\x1B[0n\0");
++	    strcpy(report, "\x1B[0n\0");	/* ok */
+ 	break;
+     case 'c':
+-	if (arg == 0) strcpy(report, "\x1B[?6c\0");
++	if (arg == 0) strcpy(report, "\x1B[?6c\0");	/* ok */
+ 	break;
+     }
+     write(masterPty, report, strlen(report));
+@@ -303,7 +303,7 @@
+     if (ch >= '0' && ch <= '9') {
+ 	varg[narg] = (varg[narg] * 10) + (ch - '0');
+     } else if (ch == ';') {
+-	/* 引数は MAX_NARG までしかサポートしない!! */
++	/* only support as args less than MAX_NARG */
+ 	if (narg < MAX_NARG) {
+ 	    narg ++;
+ 	    varg[narg] = 0;
+@@ -688,11 +688,13 @@
+ 
+ static int	ConfigCoding(const char *confstr)
+ {
+-    char reg[3][MAX_COLS];
++    char *reg[3];
+     int n, i;
+ 
++    for (i = 0; i < 3; i++)
++	reg[i] = malloc (strlen (confstr) + 1);
+     *reg[0] = *reg[1] = *reg[2] = '\0';
+-    sscanf(confstr, "%s %s %s", reg[0], reg[1], reg[2]);
++    sscanf(confstr, "%s %s %s", reg[0], reg[1], reg[2]); /* safe, enough space allocated for reg[0,1,2] */
+     for (i = 0; i < 3 && *reg[i]; i ++) {
+ 	n = (int)CodingByRegistry(reg[i]);
+ 	if (n < 0) {
+diff -ruN kon2-0.3.9b.orig/tools/logto.c kon2-0.3.9b/tools/logto.c
+--- kon2-0.3.9b.orig/tools/logto.c	2003-04-10 15:43:45.000000000 +0900
++++ kon2-0.3.9b/tools/logto.c	2003-04-10 15:43:58.000000000 +0900
+@@ -21,7 +21,7 @@
+ 		len = 0;
+ 	} else {
+ 		getcwd(path, _POSIX_PATH_MAX);
+-		sprintf(name, "%s/%s", path, argv[1]);
++		snprintf(name, sizeof(name), "%s/%s", path, argv[1]);
+ 		len = strlen(name) + 1;
+ 	}
+ 	SocketSendStr(s, STR_LOGTO);
+diff -ruN kon2-0.3.9b.orig/tools/newvc.c kon2-0.3.9b/tools/newvc.c
+--- kon2-0.3.9b.orig/tools/newvc.c	2003-04-10 15:43:45.000000000 +0900
++++ kon2-0.3.9b/tools/newvc.c	2003-04-10 15:43:58.000000000 +0900
+@@ -96,7 +96,7 @@
+     if (newVcNum < 0) {
+ 	error("can't find unused virtual console", NULL);
+     }
+-    sprintf(newTtyName, "/dev/tty%d", newVcNum);
++    snprintf(newTtyName, sizeof(newTtyName), "/dev/tty%d", newVcNum);
+ 
+     setsid();
+     
+@@ -135,6 +135,7 @@
+ 
+ 	setuid(getuid());
+ 	setgid(getgid());
++	/* now run as user, not effective uid 0 */
+ 
+ 	if ((shell = getenv("SHELL")) == NULL) {
+ 	    shell = "/bin/sh";
+@@ -152,8 +153,10 @@
+ 
+ 	    command = argv[1];
+ 	    for (i = 1; i < argc; i++) {
+-		strncat(cmdBuf, argv[i], MAXCMDLEN);
+-		strncat(cmdBuf, " ", MAXCMDLEN);
++		if (strlen(cmdBuf) + strlen(argv[i]) + 2 < sizeof(cmdBuf)) {
++		    strcat(cmdBuf, argv[i]);
++		    strcat(cmdBuf, " ");
++		}
+ 	    }
+ 	}
+ 	newArgv[0] = command;

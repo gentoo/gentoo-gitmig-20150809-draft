@@ -1,0 +1,88 @@
+diff -urN kon2-0.3.9b.orig/src/child.c kon2-0.3.9b/src/child.c
+--- kon2-0.3.9b.orig/src/child.c	Wed Jul 19 04:03:07 2000
++++ kon2-0.3.9b/src/child.c	Thu Jul 20 15:48:45 2000
+@@ -39,6 +39,11 @@
+ #include	<version.h>
+ #include	<vc.h>
+ 
++#define _USE_BSD
++#include <sys/types.h>
++#include <sys/resource.h>
++#include <sys/wait.h>
++
+ static char *startupStr, *execProg;
+ static char *execProgArgs[256];
+ 
+@@ -64,15 +69,42 @@
+ 	return SUCCESS;
+ }
+ 
+-static void	RunStartupCmd(void)
++void	RunStartupCmd(void)
+ {
+ 	char *p;
++	int StartupPid;
++	int stat;
+ 
+-	/* run as user, not effective user root, see ChildStart() */
+ 	p = strtok(startupStr, "\n");
+ 	while(p) {
+-		system(p);
+-		p = strtok(NULL, "\n");
++	  /* fork handler */
++	  if ((StartupPid = fork()) < 0) {
++	    PerrorExit("fork");
++	  }
++	  if (StartupPid != 0) {
++	    /* I'm parent. */
++
++	    wait4(StartupPid, &stat, 0, 0);
++	    if(WIFEXITED(stat) == 0)
++	      PerrorExit("StartupCmd");
++
++	  } else {
++
++	    /* I'm child */
++	    char *argv[4];
++
++	    /* run as user, not effective user root */
++	    setgid(getgid());
++	    setuid(getuid());
++
++	    argv[0] = "sh";
++	    argv[1] = "-c";
++	    argv[2] = p;
++	    argv[3] = NULL;
++	    execv("/bin/sh", argv);
++	    _exit(0);
++	  }
++	  p = strtok(NULL, "\n");
+ 	}
+ }
+ 
+@@ -105,11 +137,9 @@
+ 
+ #ifndef	MINI_KON
+ 	char	*shell;
+-	setgid(getgid());
+-	setuid(getuid());
++        setgid(getgid());
++        setuid(getuid());
+ 	/* run as user, not effective user root */
+-
+-	RunStartupCmd();
+ #endif
+ 
+ #if defined(linux)
+diff -urN kon2-0.3.9b.orig/src/term.c kon2-0.3.9b/src/term.c
+--- kon2-0.3.9b.orig/src/term.c	Wed Jul 19 04:03:07 2000
++++ kon2-0.3.9b/src/term.c	Wed Jul 19 04:04:03 2000
+@@ -390,6 +390,8 @@
+     char	ls, ln;
+ #ifdef	MINI_KON
+     extern void LoadMiniFont();
++#else
++    RunStartupCmd();
+ #endif
+     
+     /* Open PTY(master) */
