@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/getmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/ChangeLog,v 1.52 2005/02/09 08:01:29 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/getmail/ChangeLog,v 1.53 2005/02/09 08:24:46 ticho Exp $
+
+*getmail-4.2.5-r1 (09 Feb 2005)
+
+  09 Feb 2005; Andrej Kacian <ticho@gentoo.org> +files/python2.4-fix.patch,
+  +getmail-4.2.5-r1.ebuild, +getmail-4.3.1-r1.ebuild, getmail-4.3.2.ebuild:
+  Fix deprecation warnings for "strict" usage in python 2.4. Patch submitted
+  by Marien Zwart <m_zwart@123mail.org>, bug #80073.
 
 *getmail-4.3.2 (09 Feb 2005)
 
