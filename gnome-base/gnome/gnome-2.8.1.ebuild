@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.1.ebuild,v 1.3 2004/11/30 07:16:21 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.1.ebuild,v 1.4 2004/12/01 03:23:21 joem Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop"
@@ -125,8 +125,8 @@ RDEPEND="!gnome-base/gnome-core
 #		>=app-accessibility/gnome-speech-0.3.5
 
 
-# need a decision.. lets see how this goes
-#	>=net-analyzer/gnome-nettool-0.99.3
+
+
 
 
 # unrelated
