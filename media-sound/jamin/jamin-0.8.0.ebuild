@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jamin/jamin-0.8.0.ebuild,v 1.1 2004/01/19 09:23:26 torbenh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jamin/jamin-0.8.0.ebuild,v 1.2 2004/04/18 16:39:00 aliz Exp $
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 DESCRIPTION="JAMin is the JACK Audio Connection Kit (JACK) Audio Mastering interface"
 HOMEPAGE="http://jamin.sourceforge.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
