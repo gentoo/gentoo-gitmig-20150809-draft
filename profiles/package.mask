@@ -196,6 +196,7 @@ media-video/kxine
 # <blizzy@gentoo.org> (28 Jul 2002)
 # new version, please test!
 # tested on 05 Aug 2002 on ppc by pvdabeel@gentoo.org
+# make test failed on ppc
 =sys-devel/perl-5.8.0
 
 # <raker@gentoo.org> (26 Jul 2002)
