@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.42 2004/12/07 01:07:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.43 2004/12/07 07:26:57 josejx Exp $
+
+  07 Dec 2004; Joseph Jezak <josejx@gentoo.org> e2fsprogs-1.35-r1.ebuild:
+  Marked ppc stable for bug #73605.
 
   06 Dec 2004; Mike Frysinger <vapier@gentoo.org> e2fsprogs-1.35-r1.ebuild:
   Make sure kernel defines dont clash with internal defines #48829.
