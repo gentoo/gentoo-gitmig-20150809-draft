@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.29 2002/01/01 21:05:02 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.30 2002/01/03 20:31:10 danarmak Exp $
 # The kde eclass is inherited by all kde-* eclasses. Few ebuilds inherit straight from here.
 inherit autoconf base || die
 ECLASS=kde
@@ -151,7 +151,7 @@ qtver-from-kdever() {
 
 	case $1 in
 		2*)	ver=2.3.1;;
-		3.0*)	ver=3.0.1;;
+		3*)	ver=3.0.1;;
 		*)		echo "!!! error: qtver-from-kdever() (kde.eclass) called with invalid parameter: \"$1\", please report bug" && exit 1;;
 	esac
 
