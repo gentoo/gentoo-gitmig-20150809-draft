@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.8.ebuild,v 1.1 2004/02/10 07:21:13 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-0.8.ebuild,v 1.2 2004/02/10 07:26:25 brad Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils
 
@@ -236,7 +236,7 @@ src_install() {
 		cp mozilla.desktop mozillafirefox.desktop
 		perl -pi -e 's:Name=Mozilla:Name=Mozilla Firefox:' mozillafirefox.desktop
 		perl -pi -e 's:Comment=Mozilla:Comment=Mozilla Firefox Web Browser:' mozillafirefox.desktop
-		perl -pi -e 's:Exec=/usr/bin/mozilla:Exec=/usr/bin/MozillaFirefox:' mozillafirefox.desktop
+		perl -pi -e 's:Exec=/usr/bin/mozilla:Exec=/usr/bin/firefox:' mozillafirefox.desktop
 		cd ${S}
 		insinto /usr/share/gnome/apps/Internet
 		doins ${S}/build/package/rpm/SOURCES/mozillafirefox.desktop
