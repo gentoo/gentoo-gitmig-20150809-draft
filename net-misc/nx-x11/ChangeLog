@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/nx-x11
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nx-x11/ChangeLog,v 1.7 2005/01/02 10:32:42 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nx-x11/ChangeLog,v 1.8 2005/02/19 10:11:54 stuart Exp $
+
+*nx-x11-1.4.0-r4 (19 Feb 2005)
+
+  19 Feb 2005; Stuart Herbert <stuart@gentoo.org> +nx-x11-1.4.0-r4.ebuild:
+  Bug 81583: new release; Urs Joss <tschenturs@gmx.ch>
+  Bug 78881: missing dep; Joe Kowalski <joek@pckconsult.com>
 
   02 Jan 2005; Stuart Herbert <stuart@gentoo.org> -nx-x11-1.4.0-r1.ebuild,
   -nx-x11-1.4.0-r2.ebuild, -nx-x11-1.4.0.ebuild:
