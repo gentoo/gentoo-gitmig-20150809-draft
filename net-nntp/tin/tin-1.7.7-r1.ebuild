@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/tin-1.7.7.ebuild,v 1.1 2005/02/17 04:20:34 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nntp/tin/tin-1.7.7-r1.ebuild,v 1.1 2005/02/20 23:16:15 agriffis Exp $
+
+inherit eutils
 
 DESCRIPTION="A threaded NNTP and spool based UseNet newsreader"
 HOMEPAGE="http://www.tin.org/"
@@ -15,6 +17,12 @@ DEPEND="ncurses? ( sys-libs/ncurses )
 	X? ( virtual/x11 )
 	nls? ( sys-devel/gettext )
 	crypt? ( app-crypt/gnupg )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/tin-1.7.7-mbox-mmdf.patch
+}
 
 src_compile() {
 	local myconf=""
