@@ -1,6 +1,11 @@
 # ChangeLog for net-print/oidentd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.4 2002/09/29 19:25:09 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/oidentd/ChangeLog,v 1.5 2002/10/23 15:22:01 phoenix Exp $
+
+*oidentd-2.0.4-r1 (23 Oct 2002)
+
+  23 Oct 2002; phoen][x <phoenix@gentoo.org> oidentd-2.0.4-r1.ebuild:
+  Added ipv6 support.
 
 *oidentd-2.0.4 (29 Sep 2002)
 
