@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/libdsp
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/libdsp/ChangeLog,v 1.1 2004/07/29 06:08:02 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/libdsp/ChangeLog,v 1.2 2004/07/29 06:15:26 chriswhite Exp $
+
+  29 Jul 2004; Chris White <chriswhite@gentoo.org> libdsp-4.9.2.ebuild:
+  Somehow the DEPEND got deleted, added it back.
 
 *libdsp-4.9.2 (29 Jul 2004)
 
