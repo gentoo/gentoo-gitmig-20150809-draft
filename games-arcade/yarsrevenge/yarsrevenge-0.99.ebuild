@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/yarsrevenge/yarsrevenge-0.99.ebuild,v 1.1 2004/06/02 08:05:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/yarsrevenge/yarsrevenge-0.99.ebuild,v 1.2 2004/06/02 18:18:27 vapier Exp $
 
 inherit eutils games
 
@@ -20,7 +20,7 @@ S="${WORKDIR}/yar-${PV}"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	#epatch "${FILESDIR}/${PV}-gcc-typecast.patch"
+	epatch ${FILESDIR}/${PV}-math.patch
 }
 
 src_install() {
