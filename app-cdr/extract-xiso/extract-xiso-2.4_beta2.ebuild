@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/extract-xiso/extract-xiso-2.4_beta2.ebuild,v 1.5 2004/10/16 14:57:22 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/extract-xiso/extract-xiso-2.4_beta2.ebuild,v 1.6 2004/10/23 08:18:27 mr_bones_ Exp $
 
 MY_PV=${PV/_beta/b}
 S=${WORKDIR}/${PN}
@@ -10,7 +10,7 @@ HOMEPAGE="http://sourceforge.net/projects/extract-xiso"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 ~ppc macos ppc-macos"
+KEYWORDS="x86 ~ppc ppc-macos"
 IUSE=""
 DEPEND=""
 
