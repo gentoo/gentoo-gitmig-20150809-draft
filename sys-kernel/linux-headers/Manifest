@@ -2,7 +2,7 @@ MD5 6b83f7aa542efd2300f1118e7b538dd7 linux-headers-2.4.21-r1.ebuild 3897
 MD5 bf6e6b071b2023071d07b40a3e948448 linux-headers-2.4.26.ebuild 3416
 MD5 a54c368d10a7f8c5d828b1342385d83a linux-headers-2.4.21.ebuild 3683
 MD5 35118ba67519a422ed91c7e961e0dc96 linux-headers-2.4.23.ebuild 3435
-MD5 67e67c1e966d016baa704e3e05d9c683 linux-headers-2.6.99.ebuild 540
+MD5 00ec974719b8ee7681cb5bdb6837acb1 linux-headers-2.6.99.ebuild 534
 MD5 52114348e5d7c7e2a2ffebad943050fd linux-headers-2.4.25.ebuild 3409
 MD5 61a1c31ebea9eedaa4bf39459ec1b170 linux-headers-2.2.26.ebuild 2497
 MD5 8e5935c3810b1924dc28e648fc86bde1 ChangeLog 20434
