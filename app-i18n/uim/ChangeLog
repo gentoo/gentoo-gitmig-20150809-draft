@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/uim
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.48 2004/05/02 11:47:50 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.49 2004/05/02 12:04:06 usata Exp $
+
+  02 May 2004; Mamoru KOMACHI <usata@gentoo.org> uim-0.3.5.ebuild:
+  Applied a patch to fix IM switch. Also, uim-0.3.5 requires
+  >=app-i18n/prime-0.8
 
 *uim-0.3.5 (02 May 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.3.5.ebuild,v 1.1 2004/05/02 11:47:50 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.3.5.ebuild,v 1.2 2004/05/02 12:04:06 usata Exp $
 
 inherit eutils flag-o-matic
 
@@ -25,6 +25,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-gtk-query-immodules-gentoo.diff
+	epatch ${FILESDIR}/${P}-engines.diff
 }
 
 src_compile() {
@@ -51,7 +52,7 @@ pkg_postinst() {
 	einfo
 	einfo "To use uim-anthy you should emerge app-i18n/anthy or app-i18n/anthy-ss."
 	einfo "To use uim-skk you should emerge app-i18n/skk-jisyo (uim doesn't support skkserv)."
-	einfo "To use uim-prime you should emerge app-i18n/prime."
+	einfo "To use uim-prime you should emerge >=app-i18n/prime-0.8."
 	einfo
 
 	use gtk && gtk-query-immodules-2.0 > ${ROOT}/etc/gtk-2.0/gtk.immodules
