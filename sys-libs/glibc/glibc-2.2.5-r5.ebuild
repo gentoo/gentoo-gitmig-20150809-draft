@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r5.ebuild,v 1.1 2002/07/06 23:56:15 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r5.ebuild,v 1.2 2002/07/07 00:02:05 azarah Exp $
 inherit flag-o-matic
 
 filter-flags "-fomit-frame-pointer -malign-double"
@@ -10,17 +10,24 @@ DESCRIPTION="GNU libc6 (also called glibc2) C library"
 SRC_URI="ftp://sources.redhat.com/pub/glibc/releases/glibc-${PV}.tar.bz2
 	 ftp://sources.redhat.com/pub/glibc/releases/glibc-linuxthreads-${PV}.tar.bz2"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
+KEYWORDS="*"
+LICENSE="GPL-2"
+SLOT="2.2"
 
 #portage-1.8.9 needed for smart library merging feature (avoids segfaults on glibc upgrade)
 #drobbins, 18 Mar 2002: we now rely on the system profile to select the correct linus-headers
-DEPEND="sys-kernel/linux-headers nls? ( sys-devel/gettext )"
+DEPEND="sys-kernel/linux-headers
+	nls? ( sys-devel/gettext )"
 RDEPEND="sys-kernel/linux-headers"
 
 if [ -z "`use build`" ]
 then
-	RDEPEND="$RDEPEND sys-apps/baselayout"
+	RDEPEND="${RDEPEND}
+		sys-apps/baselayout"
 else
-	RDEPEND="$RDEPEND >=sys-apps/portage-1.8.9_pre1 sys-apps/baselayout"
+	RDEPEND="${RDEPEND}
+		>=sys-apps/portage-1.8.9_pre1
+		sys-apps/baselayout"
 fi
 
 PROVIDE="virtual/glibc"
@@ -79,19 +86,28 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf
+	local myconf=""
 	# If we build for the build system we use the kernel headers from the target
-	[ "`use build`" ] && myconf="--with-header=${ROOT}usr/include"
-	[ -z "`use nls`" ] && myconf="${myconf} --disable-nls"
+	use build && myconf="${myconf} --with-header=${ROOT}usr/include"
+	use nls || myconf="${myconf} --disable-nls"
+	
 	rm -rf buildhere
 	mkdir buildhere
 	cd buildhere
-	../configure --host=${CHOST} --with-gd=no --without-cvs --enable-add-ons=linuxthreads --disable-profile --prefix=/usr \
-		--mandir=/usr/share/man --infodir=/usr/share/info --libexecdir=/usr/lib/misc ${myconf} || die
-	
+	../configure --host=${CHOST} \
+		--with-gd=no \
+		--without-cvs \
+		--enable-add-ons=linuxthreads \
+		--disable-profile \
+		--prefix=/usr \
+		--mandir=/usr/share/man \
+		--infodir=/usr/share/info \
+		--libexecdir=/usr/lib/misc \
+		${myconf} || die
 	#This next option breaks the Sun JDK and the IBM JDK
 	#We should really keep compatibility with older kernels, anyway
 	#--enable-kernel=2.4.0
+	
 	make PARALLELMFLAGS="${MAKEOPTS}" || die
 	make check
 }
@@ -99,19 +115,30 @@ src_compile() {
 
 src_install() {
 	export LC_ALL=C
-	make PARALLELMFLAGS="${MAKEOPTS}" install_root=${D} install -C buildhere || die
+	make PARALLELMFLAGS="${MAKEOPTS}" \
+		install_root=${D} \
+		install -C buildhere || die
+		
 	if [ -z "`use build`" ]
 	then
-		make PARALLELMFLAGS="${MAKEOPTS}" install_root=${D} info -C buildhere || die
-		make PARALLELMFLAGS="${MAKEOPTS}" install_root=${D} localedata/install-locales -C buildhere || die
+		make PARALLELMFLAGS="${MAKEOPTS}" \
+			install_root=${D} \
+			info -C buildhere || die
+			
+		make PARALLELMFLAGS="${MAKEOPTS}" \
+			install_root=${D} \
+			localedata/install-locales -C buildhere || die
+			
 		#install linuxthreads man pages
 		dodir /usr/share/man/man3
 		doman ${S}/man/*.3thr	
 		install -m 644 nscd/nscd.conf ${D}/etc
-		dodoc BUGS ChangeLog* CONFORMANCE COPYING* FAQ INTERFACE NEWS NOTES PROJECTS README*
+		dodoc BUGS ChangeLog* CONFORMANCE COPYING* FAQ INTERFACE \
+			NEWS NOTES PROJECTS README*
 	else
 		rm -rf ${D}/usr/share ${D}/usr/lib/gconv
 	fi
+	
 	if [ "`use pic`" ] 
 	then
 		find ${S}/buildhere -name "*_pic.a" -exec cp {} ${D}/lib \;
@@ -121,6 +148,7 @@ src_install() {
 			mv ${i} ${i%.map}_pic.map
 		done
 	fi
+	
 	#is this next line actually needed or does the makefile get it right?
 	#It previously has 0755 perms which was killing things.
 	chmod 4755 ${D}/usr/lib/misc/pt_chown
@@ -134,8 +162,7 @@ src_install() {
 	dosym /usr/lib/libbsd-compat.a /usr/lib/libbsd.a
 }
 
-pkg_postinst()
-{
+pkg_postinst() {
 	# Correct me if I am wrong here, but my /etc/localtime is a file
 	# created by zic ....
 	# I am thinking that it should only be recreated if no /etc/localtime
@@ -152,3 +179,4 @@ pkg_postinst()
 		ln -s ../usr/share/zoneinfo/Factory ${ROOT}/etc/localtime
 	fi
 }
+
