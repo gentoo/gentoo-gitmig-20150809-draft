@@ -1,15 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/phpldapadmin-0.9.3.ebuild,v 1.2 2004/04/19 19:09:54 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/phpldapadmin-0.9.3.ebuild,v 1.3 2004/04/19 19:24:57 rizzo Exp $
 
 DESCRIPTION="phpLDAPadmin is a web-based tool for managing all aspects of your LDAP server."
 HOMEPAGE="http://phpldapadmin.sourceforge.net"
 SRC_URI="mirror://sourceforge/phpldapadmin/${P}.tar.gz"
-RESTRICT="nomirror"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+IUSE=""
 
 DEPEND="virtual/php"
 
