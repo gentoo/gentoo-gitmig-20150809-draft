@@ -1,6 +1,8 @@
 # ChangeLog for app-misc/mc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
 
+*mc-4.6.0-r8 (24 May 2004)
+
   24 May 2004; Heinrich Wendel <lanius@gentoo.org> :
   add support for cons.saver, bug #51506, remove samba 2.x support
 
