@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Time-modules
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-modules/ChangeLog,v 1.8 2004/12/23 10:26:49 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-modules/ChangeLog,v 1.9 2004/12/30 00:45:49 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   23 Dec 2004; Yuta SATOH <nigoro@gentoo.org> Time-modules-2003.1126.ebuild:
   added ~ppc64
@@ -11,7 +14,7 @@
   Time-modules-2003.1126.ebuild:
   new version on cpan
 
-  26 May 2004; Bryan Østergaard <kloeri@gentoo.org>
+  26 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   Time-modules-2003.0211.ebuild:
   Stable on alpha.
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-DT
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DT/ChangeLog,v 1.24 2004/12/23 11:16:53 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-DT/ChangeLog,v 1.25 2004/12/30 00:55:02 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   23 Dec 2004; Michael Cummings <mcummings@gentoo.org> XML-DT-0.37.ebuild:
   Fixing bad homepage typo. bug 73969
@@ -10,13 +13,13 @@
   04 Dec 2004; Michael Cummings <mcummings@gentoo.org> +XML-DT-0.37.ebuild:
   New version on CPAN
 
-  19 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> XML-DT-0.32.ebuild:
+  19 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> XML-DT-0.32.ebuild:
   Stable on alpha.
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> XML-DT-0.32.ebuild:
   KEYWORDS ~amd64.
 
-  10 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> XML-DT-0.32.ebuild:
+  10 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> XML-DT-0.32.ebuild:
   Add ~alpha keyword.
 
   03 Oct 2004; Michael Cummings <mcummings@gentoo.org> XML-DT-0.32.ebuild:
@@ -33,7 +36,7 @@
   arch's could support the deps at this time. This does not mean they won't
   support it, but they couldn't at the time of commit.
 
-  04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> XML-DT-0.24.1.ebuild:
+  04 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> XML-DT-0.24.1.ebuild:
   Stable on alpha.
 
 *XML-DT-0.30 (11 Jun 2004)

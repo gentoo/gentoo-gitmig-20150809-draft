@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Term-ReadLine-Perl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ReadLine-Perl/ChangeLog,v 1.10 2004/10/15 22:44:03 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Term-ReadLine-Perl/ChangeLog,v 1.11 2004/12/30 00:36:14 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   16 Oct 2004; Guy Martin <gmsoft@gentoo.org>
   Term-ReadLine-Perl-1.0203.ebuild:
@@ -10,7 +13,7 @@
   Term-ReadLine-Perl-1.0203.ebuild:
   Stable sparc.
 
-  26 May 2004; Bryan Østergaard <kloeri@gentoo.org>
+  26 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   Term-ReadLine-Perl-1.0203.ebuild:
   Stable on alpha.
 

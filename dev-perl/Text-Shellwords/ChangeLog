@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Text-Shellwords
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Shellwords/ChangeLog,v 1.6 2004/06/25 01:05:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Shellwords/ChangeLog,v 1.7 2004/12/30 00:43:39 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *Text-Shellwords-1.07 (06 Jun 2004)
 
@@ -8,7 +11,7 @@
   Text-Shellwords-1.07.ebuild:
   new version on cpan
 
-  05 May 2004; Bryan Østergaard <kloeri@gentoo.org>
+  05 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   Text-Shellwords-1.00.ebuild:
   Stable on alpha.
 

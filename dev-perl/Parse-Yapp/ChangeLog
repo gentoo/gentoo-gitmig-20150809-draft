@@ -1,11 +1,14 @@
 # ChangeLog for dev-perl/Parse-Yapp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-Yapp/ChangeLog,v 1.13 2004/12/23 16:41:38 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-Yapp/ChangeLog,v 1.14 2004/12/30 00:18:07 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   24 Dec 2004; Yuta SATOH <nigoro@gentoo.org> Parse-Yapp-1.05-r1.ebuild:
   added ~ppc64
 
-  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> Parse-Yapp-1.05-r1.ebuild:
+  04 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> Parse-Yapp-1.05-r1.ebuild:
   Stable on alpha.
 
   06 Oct 2003; Michael Cummings <mcummings@gentoo.org>

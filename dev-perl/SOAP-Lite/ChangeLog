@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/SOAP-Lite
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/ChangeLog,v 1.11 2004/12/23 23:04:44 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/ChangeLog,v 1.12 2004/12/30 00:24:45 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   24 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
   SOAP-Lite-0.60a-r1.ebuild:
@@ -36,7 +39,7 @@
   06 Jun 2004; Michael Cummings <mcummings@gentoo.org> SOAP-Lite-0.60a.ebuild:
   new version on cpan, added missing deps
 
-  05 May 2004; Bryan �stergaard <kloeri@gentoo.org> SOAP-Lite-0.55.ebuild:
+  05 May 2004; Bryan Østergaard <kloeri@gentoo.org> SOAP-Lite-0.55.ebuild:
   Stable on alpha.
 
   09 Jun 2003; <rac@gentoo.org> SOAP-Lite-0.55.ebuild:

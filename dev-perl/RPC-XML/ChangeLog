@@ -1,13 +1,16 @@
 # ChangeLog for dev-perl/RPC-XML
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/ChangeLog,v 1.14 2004/06/25 00:57:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/RPC-XML/ChangeLog,v 1.15 2004/12/30 00:22:37 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *RPC-XML-0.54 (06 Jun 2004)
 
   06 Jun 2004; Michael Cummings <mcummings@gentoo.org> RPC-XML-0.54.ebuild:
   new version on cpan
 
-  26 May 2004; Bryan Østergaard <kloeri@gentoo.org> RPC-XML-0.53.ebuild:
+  26 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> RPC-XML-0.53.ebuild:
   Stable on alpha.
 
   25 Feb 2004; Sven Blumenstein <bazik@gentoo.org> RPC-XML-0.53.ebuild:

@@ -1,8 +1,11 @@
 # ChangeLog for dev-perl/MLDBM
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/MLDBM/ChangeLog,v 1.16 2004/06/25 00:46:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/MLDBM/ChangeLog,v 1.17 2004/12/29 23:58:48 ciaranm Exp $
 
-  26 May 2004; Bryan Østergaard <kloeri@gentoo.org> MLDBM-2.01.ebuild:
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
+
+  26 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> MLDBM-2.01.ebuild:
   Stable on alpha.
 
   17 Apr 2004; Michael McCabe <randy@gentoo.org> MLDBM-2.01.ebuild:

@@ -1,11 +1,14 @@
 # ChangeLog for dev-perl/Text-Glob
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Glob/ChangeLog,v 1.7 2004/12/22 11:49:05 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-Glob/ChangeLog,v 1.8 2004/12/30 00:42:04 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   22 Dec 2004; Yuta SATOH <nigoro@gentoo.org> Text-Glob-0.06.ebuild:
   added ~ppc64
 
-  26 May 2004; Bryan Østergaard <kloeri@gentoo.org> Text-Glob-0.06.ebuild:
+  26 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> Text-Glob-0.06.ebuild:
   Stable on alpha.
 
   07 May 2004; Gustavo Zacarias <gustavoz@gentoo.org> Text-Glob-0.06.ebuild:

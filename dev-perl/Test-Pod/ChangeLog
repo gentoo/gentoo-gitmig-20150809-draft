@@ -1,11 +1,14 @@
 # ChangeLog for dev-perl/Test-Pod
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Pod/ChangeLog,v 1.10 2004/12/23 08:44:42 nigoro Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Pod/ChangeLog,v 1.11 2004/12/30 00:39:14 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   23 Dec 2004; Yuta SATOH <nigoro@gentoo.org> Test-Pod-1.20.ebuild:
   added ~ppc64
 
-  19 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> Test-Pod-1.20.ebuild:
+  19 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> Test-Pod-1.20.ebuild:
   Stable on alpha.
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> Test-Pod-1.20.ebuild:

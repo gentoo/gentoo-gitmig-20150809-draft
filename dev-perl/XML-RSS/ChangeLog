@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-RSS
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS/ChangeLog,v 1.6 2004/06/25 01:13:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-RSS/ChangeLog,v 1.7 2004/12/30 01:01:02 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   11 Jun 2004; David Holm <dholm@gentoo.org> XML-RSS-1.04.ebuild:
   Added to ~ppc.
@@ -10,7 +13,7 @@
   10 Jun 2004; Michael Cummings <mcummings@gentoo.org> XML-RSS-1.04.ebuild:
   new version on cpan
 
-  06 May 2004; Bryan Østergaard <kloeri@gentoo.org> XML-RSS-1.02.ebuild:
+  06 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> XML-RSS-1.02.ebuild:
   Added ~alpha.
 
   31 Dec 2003; Michael Cummings,,, <mcummings@gentoo.org> XML-RSS-1.02.ebuild:

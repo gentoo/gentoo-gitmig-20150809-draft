@@ -1,13 +1,16 @@
 # ChangeLog for dev-perl/Socket6
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Socket6/ChangeLog,v 1.5 2004/06/25 00:59:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Socket6/ChangeLog,v 1.6 2004/12/30 00:33:17 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *Socket6-0.17 (06 Jun 2004)
 
   06 Jun 2004; Michael Cummings <mcummings@gentoo.org> Socket6-0.17.ebuild:
   new version on cpan
 
-  26 May 2004; Bryan Østergaard <kloeri@gentoo.org> Socket6-0.11.ebuild:
+  26 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> Socket6-0.11.ebuild:
   Stable on alpha.
 
   25 Feb 2004; Sven Blumenstein <bazik@gentoo.org> Socket6-0.11.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-Netmask
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Netmask/ChangeLog,v 1.12 2004/06/25 00:48:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Netmask/ChangeLog,v 1.13 2004/12/30 00:07:38 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *Net-Netmask-1.9011 (06 Jun 2004)
 
@@ -8,7 +11,7 @@
   Net-Netmask-1.9011.ebuild:
   new version on cpan
 
-  26 May 2004; Bryan Østergaard <kloeri@gentoo.org> Net-Netmask-1.9004.ebuild:
+  26 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> Net-Netmask-1.9004.ebuild:
   Stable on alpha.
 
   07 May 2004; Gustavo Zacarias <gustavoz@gentoo.org>

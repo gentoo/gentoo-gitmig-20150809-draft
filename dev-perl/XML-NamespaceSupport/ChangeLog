@@ -1,8 +1,11 @@
 # ChangeLog for dev-perl/XML-NamespaceSupport
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-NamespaceSupport/ChangeLog,v 1.18 2004/06/25 01:12:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-NamespaceSupport/ChangeLog,v 1.19 2004/12/30 00:59:17 ciaranm Exp $
 
-  27 May 2004; Bryan Østergaard <kloeri@gentoo.org>
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
+
+  27 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org>
   XML-NamespaceSupport-1.08.ebuild:
   Stable on alpha.
 

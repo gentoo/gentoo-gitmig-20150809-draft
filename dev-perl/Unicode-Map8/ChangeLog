@@ -1,8 +1,11 @@
 # ChangeLog for dev-perl/Unicode-Map8
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-Map8/ChangeLog,v 1.14 2004/07/04 08:13:07 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Unicode-Map8/ChangeLog,v 1.15 2004/12/30 00:49:19 ciaranm Exp $
 
-  04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> Unicode-Map8-0.12.ebuild:
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
+
+  04 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> Unicode-Map8-0.12.ebuild:
   Stable on alpha.
 
   18 Jan 2004; <gustavoz@gentoo.org> Unicode-Map8-0.12.ebuild:

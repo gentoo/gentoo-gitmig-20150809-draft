@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Simple
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Simple/ChangeLog,v 1.18 2004/06/25 22:37:22 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Simple/ChangeLog,v 1.19 2004/12/30 01:05:28 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   26 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> XML-Simple-2.09.ebuild:
   Marked stable on amd64.
@@ -10,7 +13,7 @@
   11 Jun 2004; Michael Cummings <mcummings@gentoo.org> XML-Simple-2.12.ebuild:
   new version on cpan
 
-  27 May 2004; Bryan Østergaard <kloeri@gentoo.org> XML-Simple-2.09.ebuild:
+  27 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> XML-Simple-2.09.ebuild:
   Stable on alpha.
 
   07 Jan 2004; <gustavoz@gentoo.org> XML-Simple-2.09.ebuild:

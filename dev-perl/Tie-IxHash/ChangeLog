@@ -1,11 +1,14 @@
 # ChangeLog for dev-perl/Tie-IxHash
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-IxHash/ChangeLog,v 1.11 2004/07/08 23:35:58 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-IxHash/ChangeLog,v 1.12 2004/12/30 00:44:22 ciaranm Exp $
 
-  09 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> Tie-IxHash-1.21-r1.ebuild:
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
+
+  09 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> Tie-IxHash-1.21-r1.ebuild:
   Stable on alpha.
 
-  05 May 2004; Bryan Østergaard <kloeri@gentoo.org> Tie-IxHash-1.21-r1.ebuild:
+  05 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> Tie-IxHash-1.21-r1.ebuild:
   Keyword ~alpha.
 
 *Tie-IxHash-1.21-r1 (21 Jun 2003)

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Net-IRC
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IRC/ChangeLog,v 1.16 2004/10/19 07:51:53 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-IRC/ChangeLog,v 1.17 2004/12/30 00:06:43 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> Net-IRC-0.74.ebuild:
   Stable on amd64.
@@ -10,7 +13,7 @@
   06 Jun 2004; Michael Cummings <mcummings@gentoo.org> Net-IRC-0.75.ebuild:
   new version on cpan
 
-  26 May 2004; Bryan Østergaard <kloeri@gentoo.org> Net-IRC-0.74.ebuild:
+  26 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> Net-IRC-0.74.ebuild:
   Stable on alpha.
 
   21 Jan 2004; <gustavoz@gentoo.org> Net-IRC-0.74.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/URI
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.35 2004/12/05 23:08:17 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.36 2004/12/30 00:48:22 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *URI-1.35 (05 Dec 2004)
 
@@ -18,7 +21,7 @@
   08 Oct 2004; Guy Martin <gmsoft@gentoo.org> URI-1.31.ebuild:
   Marked stable on hppa.
 
-  06 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> URI-1.31.ebuild:
+  06 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> URI-1.31.ebuild:
   Stable on alpha.
 
 *URI-1.33 (26 Sep 2004)

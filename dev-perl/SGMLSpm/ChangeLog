@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/SGMLSpm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/ChangeLog,v 1.28 2004/11/28 20:30:00 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SGMLSpm/ChangeLog,v 1.29 2004/12/30 00:23:30 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   28 Nov 2004; Luca Barbato <lu_zero@gentoo.org> SGMLSpm-1.03-r5.ebuild:
   Marked ppc
@@ -29,7 +32,7 @@
   29 Jun 2004; Tom Gall <tgall@gentoo.org> SGMLSpm-1.03-r5.ebuild:
   stable on ppc64, bug #54799
 
-  26 May 2004; Bryan Østergaard <kloeri@gentoo.org> SGMLSpm-1.03-r5.ebuild:
+  26 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> SGMLSpm-1.03-r5.ebuild:
   Stable on alpha.
 
   16 Apr 2004; Michael Cummings <mcummings@gentoo.org> SGMLSpm-1.03-r5.ebuild:
