@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/freeradius-dialupadmin/freeradius-dialupadmin-1.0.2.ebuild,v 1.1 2005/03/28 22:58:29 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/freeradius-dialupadmin/freeradius-dialupadmin-1.0.2.ebuild,v 1.2 2005/03/28 23:40:35 mrness Exp $
 
 inherit webapp
 
@@ -29,6 +29,7 @@ src_unpack() {
 		-e 's:/usr/etc/raddb:${general_raddb_dir}:' \
 		-e 's:/usr/radiusd::' \
 			conf/admin.conf
+	sed -i -e 's:/usr/local:/usr:' bin/*
 
 	#rename files .php3 -> .php
 	(find . -iname '*.php3' | (
@@ -48,11 +49,13 @@ src_install() {
 	doins -r htdocs/*
 	insinto ${MY_HOSTROOTDIR}
 	doins -r conf html lib
+	exeinto ${MY_HOSTROOTDIR}/bin
+	doexe bin/[a-z]*
 
 	insinto ${MY_SQLSCRIPTSDIR}
 	doins sql/*
 
-	dodoc Changelog README doc/*
+	dodoc Changelog bin/Changelog* README doc/*
 
 	webapp_hook_script ${FILESDIR}/setrootpath
 
@@ -60,6 +63,7 @@ src_install() {
 	local CONFFILE
 	for CONFFILE in conf/* ; do
 		webapp_configfile ${MY_HOSTROOTDIR}/${CONFFILE}
+		webapp_serverowned ${MY_HOSTROOTDIR}/${CONFFILE}
 	done
 
 	webapp_src_install

@@ -1,5 +1,6 @@
 #!/bin/sh
 
 if [ "$1" = "install" ]; then
-	sed -i -e "s:/usr/dialup_admin:${VHOST_ROOT}:" ${VHOST_ROOT}/conf/{._*admin.conf,admin.conf}
+	sed -i -e "s:/usr/dialup_admin:${VHOST_ROOT}:" ${VHOST_ROOT}/{conf/._*admin.conf,conf/admin.conf,bin/*}
+	chmod -R o-rwx ${VHOST_ROOT}/conf
 fi
