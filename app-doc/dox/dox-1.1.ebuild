@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/dox/dox-1.1.ebuild,v 1.10 2003/09/06 22:17:40 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/dox/dox-1.1.ebuild,v 1.11 2004/03/14 00:14:29 mr_bones_ Exp $
 
 DESCRIPTION="graphical documentation browser for Unix/X11"
 SRC_URI="http://download.berlios.de/dox/${P}.tar.gz"

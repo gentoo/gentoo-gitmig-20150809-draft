@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html-single/howto-html-single-20021121.ebuild,v 1.5 2004/02/22 18:40:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html-single/howto-html-single-20021121.ebuild,v 1.6 2004/03/14 00:14:30 mr_bones_ Exp $
 
 MY_P="Linux-html-single-HOWTOs-${PV}"
 S=${WORKDIR}
