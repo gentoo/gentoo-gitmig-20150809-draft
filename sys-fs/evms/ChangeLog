@@ -1,6 +1,13 @@
 # ChangeLog for sys-fs/evms
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.5 2003/12/22 16:50:28 iggy Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.6 2004/01/24 08:37:30 seemant Exp $
+
+*evms-2.2.2 (24 Jan 2004)
+
+  24 Jan 2004; Seemant Kulleen <seemant@gentoo.org> evms-2.2.1.ebuild,
+  evms-2.2.2.ebuild, files/evms2-init:
+  version bump, and initscript fix (the stop function was calling the absent
+  evms_deactivate, which apparently doesn't need to exist)
 
   22 Dec 2003; Brian Jackson <iggy@gentoo.org> evms-2.1.1.ebuild,
   evms-2.2.1.ebuild:
