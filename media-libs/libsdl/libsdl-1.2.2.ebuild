@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.0.ebuild,v 1.4 2001/08/05 23:38:28 lordjoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.2.ebuild,v 1.1 2001/08/05 23:38:28 lordjoe Exp $
 
 A=SDL-${PV}.tar.gz
 S=${WORKDIR}/SDL-${PV}
@@ -40,34 +40,34 @@ src_compile() {
   then
     myconf="--disable-esd"
   else
-  	myconf="--enable-esd"
+    myconf="--enable-esd"
   fi
 
   if [ -z "`use arts`" ]
   then
     myconf="${myconf} --disable-arts"
   else
-  	myconf="${myconf} --enable-arts"
+    myconf="${myconf} --enable-arts"
   fi
 
   if [ -z "`use nas`" ]
   then
     myconf="${myconf} --disable-nas"
   else
-  	myconf="${myconf} --enable-nas"
+    myconf="${myconf} --enable-nas"
   fi
 
   if [ -z "`use X`" ]
   then
     myconf="${myconf} --disable-video-x11"
   else
-  	myconf="${myconf} --enable-video-x11"
+    myconf="${myconf} --enable-video-x11"
   fi
   if [ "`use svga`" ]
   then
     myconf="${myconf} --enable-video-svga"
   else
-  	myconf="${myconf} --disable-video-svga"
+    myconf="${myconf} --disable-video-svga"
   fi
   if [ -z "`use fbcon`" ]
   then
@@ -100,7 +100,7 @@ src_compile() {
     myconf="${myconf} --disable-alsa"
   fi	
 
-  try ./configure --host=${CHOST} --prefix=/usr --mandir=/usr/share/man ${myconf}
+  try ./configure --host=${CHOST} --enable-input-events --prefix=/usr --mandir=/usr/share/man ${myconf}
 
   try make
 

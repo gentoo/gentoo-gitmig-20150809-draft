@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-net/sdl-net-1.2.0.ebuild,v 1.1 2001/05/22 01:27:07 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-net/sdl-net-1.2.0.ebuild,v 1.2 2001/08/05 23:38:28 lordjoe Exp $
 
 A=SDL_net-${PV}.tar.gz
 S=${WORKDIR}/SDL_net-${PV}
@@ -23,10 +23,3 @@ src_install() {
   preplib /usr
   dodoc CHANGES COPYING README  
 }
-
-pkg_postinst() {
- ldconfig -r ${ROOT}
-}
-
-
-
