@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <azarah@gentoo.org> (24 Feb 2003)
+# This one is a fix that I did not think about
+# and could be a security hole.
+=sys-apps/shadow-4.0.3-r4
+
 # <woodchip@gentoo.org> (23 Feb 2003)
 # It is alpha after all.
 >=net-fs/samba-3.0_alpha
