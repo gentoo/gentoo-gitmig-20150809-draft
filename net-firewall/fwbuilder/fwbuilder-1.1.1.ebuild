@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-1.1.1.ebuild,v 1.7 2004/06/24 22:39:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwbuilder/fwbuilder-1.1.1.ebuild,v 1.8 2004/07/14 23:42:20 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -8,7 +8,6 @@ DESCRIPTION="A firewall GUI"
 SRC_URI="mirror://sourceforge/fwbuilder/${P}.tar.gz"
 HOMEPAGE="http://www.fwbuilder.org/"
 RESTRICT="nomirror"
-S=${WORKDIR}/${P}
 
 KEYWORDS="x86 ~sparc amd64"
 LICENSE="GPL-2"
@@ -59,4 +58,3 @@ pkg_postinst() {
 	einfo "You may have to install iproute on the machine that"
 	einfo "will run the firewall script."
 }
-
