@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/inkscape
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.14 2005/02/28 18:05:17 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/ChangeLog,v 1.15 2005/03/22 18:00:42 sekretarz Exp $
+
+*inkscape-0.41 (22 Mar 2005)
+
+  22 Mar 2005; Karol Wojtaszek <sekretarz@gentoo.org>
+  +files/inkscape-0.41_gnome-print.patch, +inkscape-0.41.ebuild:
+  Version bump, bug #81529
 
   28 Feb 2005; Markus Rothe <corsair@gentoo.org> inkscape-0.40-r1.ebuild:
   Added ~ppc64 to KEYWORDS

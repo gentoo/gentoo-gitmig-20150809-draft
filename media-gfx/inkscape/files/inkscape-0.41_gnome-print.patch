@@ -1,0 +1,16 @@
+--- src/extension/internal/gnome.cpp
++++ src/extension/internal/gnome.cpp
+@@ -183,6 +183,13 @@
+     return 0;
+ }
+ 
++unsigned int PrintGNOME::comment (Inkscape::Extension::Print * module,
++		                  const char * comment)
++{
++	// ignore comment
++	return 0;
++}
++
+ unsigned int
+ PrintGNOME::fill(Inkscape::Extension::Print *mod,
+ 		 NRBPath const *bpath, NRMatrix const *ctm, SPStyle const *style,
