@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.73.ebuild,v 1.1 2002/12/17 05:21:09 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.73.ebuild,v 1.2 2002/12/18 12:16:18 seemant Exp $
 
 IUSE="nas nls esd opengl doc oss gtk oggvorbis alsa"
 
@@ -57,8 +57,8 @@ src_compile() {
 		&& myconf="${myconf} --enable-nls" \
 		|| myconf="${myconf} --disable-nls"
 
-	if use sparc \
-		&& myconf="${myconf} --enable-sparc"
+	use sparc \
+		&& myconf="${myconf} --enable-sparc" \
 		|| myconf="${myconf} --disable-sparc"
 	
 	export CPPFLAGS="${CPPFLAGS} -I/usr/X11R6/include"

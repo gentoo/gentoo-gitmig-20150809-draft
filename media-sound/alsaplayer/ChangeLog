@@ -1,9 +1,15 @@
 # ChangeLog for media-sound/alsaplayer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.11 2002/12/17 05:21:09 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/ChangeLog,v 1.12 2002/12/18 12:16:18 seemant Exp $
 
 
 *alsaplayer-0.99.73 (16 Dec 2002)
+
+  18 Dec 2002; Seemant Kulleen <seemant@gentoo.org>
+  alsaplayer-0.99.73.ebuild :
+
+  I screwed up with some syntax (left a hanging if).  Closes bug #12372 by
+  hertog@home.nl (Gert-Jan Rodenburg)
 
   16 Dec 2002; Seemant Kulleen <seemant@gentoo.org>
   alsaplayer-0.99.73.ebuild files/digest-alsaplayer-0.99.73 :
