@@ -1,4 +1,4 @@
-MD5 ecb5baf6ab74ff57500eef984bcd05d0 ChangeLog 1648
-MD5 c0d2de1e873cd87f82b432edb95e3f91 emacs-cvs-21.3.50.ebuild 2193
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-emacs-cvs-21.3.50 0
+MD5 a04de07a2892706b18a05bcd2425b087 ChangeLog 1778
+MD5 91bb29f51b4f54e866b9e11113008ee3 emacs-cvs-21.3.50.ebuild 2265
 MD5 0e5a4a35651f5365c6191636a2c26eb7 files/emacs.desktop 190
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-emacs-cvs-21.3.50 0

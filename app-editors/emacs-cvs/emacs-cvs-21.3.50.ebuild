@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-21.3.50.ebuild,v 1.11 2003/06/04 18:54:36 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-21.3.50.ebuild,v 1.12 2003/06/27 20:10:52 mkennedy Exp $
 
 ECVS_SERVER="subversions.gnu.org:/cvsroot/emacs"
 ECVS_MODULE="emacs"
@@ -18,6 +18,7 @@ HOMEPAGE="http://www.gnu.org/software/emacs"
 
 # Never use the sandbox, it causes Emacs to segfault on startup
 SANDBOX_DISABLED="1"
+RESTRICT="$RESTRICT nostrip"
 
 DEPEND=">=sys-libs/ncurses-5.3
 	sys-libs/gdbm
@@ -71,11 +72,14 @@ src_compile() {
 		myconf="${myconf} --without-x"
 	fi
 
+	unset CFLAGS CPPFLAGS
+
 	./configure --host=${CHOST} \
 		--prefix=/usr \
 		--libexecdir=/usr/lib \
 		--mandir=/usr/share/man \
 		--infodir=/usr/share/info \
+		--enable-debug \
 		${myconf} || die
 
 	make bootstrap || die
