@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.134 2005/01/10 22:52:52 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.135 2005/01/18 19:29:13 pauldv Exp $
+
+*subversion-1.1.3 (18 Jan 2005)
+
+  18 Jan 2005; Paul de Vrieze <pauldv@gentoo.org> +subversion-1.1.3.ebuild:
+  New upstream version
 
 *subversion-1.1.2-r1 (10 Jan 2005)
 
