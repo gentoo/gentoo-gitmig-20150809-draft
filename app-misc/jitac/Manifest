@@ -1,4 +1,4 @@
-MD5 8dcdfdedcc6a0d4523838724b5cb4191 files/digest-jitac-0.2.0 60
-MD5 321ad138aa5c899eb9a0e16c125c5623 jitac-0.2.0.ebuild 722
-MD5 ecdc80c4d0491705a98eef0b21c3152a ChangeLog 316
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 9cafc500aab532142782952867e5719f ChangeLog 412
+MD5 a9e45b071bee9ac13b0c23a6c88df8cd jitac-0.2.0.ebuild 725
+MD5 8dcdfdedcc6a0d4523838724b5cb4191 files/digest-jitac-0.2.0 60
