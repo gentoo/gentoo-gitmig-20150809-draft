@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/junit-3.8.1.ebuild,v 1.7 2003/04/23 15:11:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/junit/junit-3.8.1.ebuild,v 1.8 2003/10/04 02:33:55 strider Exp $
 
 NP=${P/-/}
 S=${WORKDIR}/${NP}
@@ -33,5 +33,6 @@ src_install() {
 	dojar junit.jar
 	dodir /usr/share/ant/lib
 	dosym /usr/share/junit/lib/junit.jar /usr/share/ant/lib/
-	dohtml -r README.html cpl-v10.html doc  javadoc
+	dohtml -r README.html cpl-v10.html doc javadoc
+	cp javadoc/package-list ${D}/usr/share/doc/${PN}-${PV}/html/javadoc/package-list
 }
