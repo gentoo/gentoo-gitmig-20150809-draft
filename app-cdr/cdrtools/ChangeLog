@@ -1,6 +1,6 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.44 2003/04/14 15:28:05 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.45 2003/04/25 21:04:35 agenkin Exp $
 
   04 Mar 2003; Arcady Genkin <agenkin@gentoo.org> :
   Providing virtual/cdrtools.
@@ -11,14 +11,19 @@
   05 Feb 2003; Martin Schlemmer <azarah@gentoo.org> :
   Add support for 2.5 kernel.
 
+*cdrtools-2.01_alpha11 (25 Apr 2003)
+
+  25 Apr 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Version bump.
+
 *cdrtools-2.01_alpha10 (14 Apr 2003)
 
-  14 Apr 2003; Arcady Genkin <agenkin@getoo.org> :
+  14 Apr 2003; Arcady Genkin <agenkin@gentoo.org> :
   Version bump.
 
 *cdrtools-2.01_alpha09 (11 Apr 2003)
 
-  11 Apr 2003; Arcady Genkin <agenkin@getoo.org> :
+  11 Apr 2003; Arcady Genkin <agenkin@gentoo.org> :
   Version bump.
 
 *cdrtools-2.01_alpha08 (02 Apr 2003)
@@ -26,50 +31,50 @@
   11 Apr 2003; Guy Martin <gmsoft@gentoo.org> cdrtools-2.01_alpha08.ebuild :
   Added hppa to KEYWORDS.
 
-  02 Apr 2003; Arcady Genkin <agenkin@getoo.org> :
+  02 Apr 2003; Arcady Genkin <agenkin@gentoo.org> :
   Version bump.
 
 *cdrtools-2.01_alpha07 (27 Mar 2003)
 
-  27 Mar 2003; Arcady Genkin <agenkin@getoo.org> :
+  27 Mar 2003; Arcady Genkin <agenkin@gentoo.org> :
   Version bump.
 
 *cdrtools-2.01_alpha05 (11 Mar 2003)
 
-  27 Mar 2003; Arcady Genkin <agenkin@getoo.org> :
+  27 Mar 2003; Arcady Genkin <agenkin@gentoo.org> :
   Marked stable for x86.
 
   23 Mar 2003; Lars Weiler <pylon@gentoo.org> cdrtools-2.0.ebuild,
   cdrtools-2.01_alpha05.ebuild:
   Set ppc in KEYWORDS
 
-  11 Mar 2003; Arcady Genkin <agenkin@getoo.org> :
+  11 Mar 2003; Arcady Genkin <agenkin@gentoo.org> :
   Version bump.
 
 
 *cdrtools-2.01_alpha04 (03 Mar 2003)
 
-  03 Mar 2003; Arcady Genkin <agenkin@getoo.org> :
+  03 Mar 2003; Arcady Genkin <agenkin@gentoo.org> :
   Version bump.
 
 *cdrtools-2.01_alpha03 (17 Feb 2003)
 
-  17 Feb 2003; Arcady Genkin <agenkin@getoo.org> :
+  17 Feb 2003; Arcady Genkin <agenkin@gentoo.org> :
   Version bump.
 
 *cdrtools-2.01_alpha02 (29 Jan 2003)
 
-  29 Jan 2003; Arcady Genkin <agenkin@getoo.org> :
+  29 Jan 2003; Arcady Genkin <agenkin@gentoo.org> :
   Version bump.
 
 *cdrtools-2.01_alpha01 (21 Jan 2003)
 
-  21 Jan 2003; Arcady Genkin <agenkin@getoo.org> :
+  21 Jan 2003; Arcady Genkin <agenkin@gentoo.org> :
   Version bump.
 
 *cdrtools-2.0 (26 Dec 2002)
 
-  26 Dec 2002; Arcady Genkin <agenkin@getoo.org> cdrtools-2.0.ebuild :
+  26 Dec 2002; Arcady Genkin <agenkin@gentoo.org> cdrtools-2.0.ebuild :
   Version bump.  Closes #12710.
 
 *cdrtools-2.0_preX (2 Dec 2002)
@@ -80,21 +85,21 @@
   17 Dec 2002; Matt Keadle <mkeadle@gentoo.org> cdrtools-2.0_pre3.ebuild :
   Corrected SRC_URI
 
-  16 Dec 2002; Arcady Genkin <agenkin@getoo.org> cdrtools-2.0_pre3.ebuild :
+  16 Dec 2002; Arcady Genkin <agenkin@gentoo.org> cdrtools-2.0_pre3.ebuild :
   Version bump.
 
-  9 Dec 2002; Arcady Genkin <agenkin@getoo.org> cdrtools-2.0_pre2.ebuild :
+  9 Dec 2002; Arcady Genkin <agenkin@gentoo.org> cdrtools-2.0_pre2.ebuild :
   Version bump.
 
-  2 Dec 2002; Arcady Genkin <agenkin@getoo.org> cdrtools-2.0_pre1.ebuild :
+  2 Dec 2002; Arcady Genkin <agenkin@gentoo.org> cdrtools-2.0_pre1.ebuild :
   Version bump.
 
 *cdrtools-1.11.40 (25 Nov 2002)
-  25 Nov 2002; Arcady Genkin <agenkin@getoo.org> cdrtools-1.11.40.ebuild :
+  25 Nov 2002; Arcady Genkin <agenkin@gentoo.org> cdrtools-1.11.40.ebuild :
   Version bump.
 
 *cdrtools-1.11.39 (28 Oct 2002)
-  28 Oct 2002; Arcady Genkin <agenkin@getoo.org> cdrtools-1.11.39.ebuild :
+  28 Oct 2002; Arcady Genkin <agenkin@gentoo.org> cdrtools-1.11.39.ebuild :
   Version bump.
 
 *cdrtools-1.11.38 (22 Oct 2002)
