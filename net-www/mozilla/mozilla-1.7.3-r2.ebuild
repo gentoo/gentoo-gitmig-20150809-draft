@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7.3-r2.ebuild,v 1.1 2004/11/14 03:29:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7.3-r2.ebuild,v 1.2 2004/11/16 16:07:57 agriffis Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic gcc eutils nsplugins mozilla-launcher mozconfig makeedit
 
-IUSE="java crypt gtk2 ssl moznomail"
+IUSE="java crypt ssl moznomail"
 
 EMVER="0.86.0"
 IPCVER="1.0.8"

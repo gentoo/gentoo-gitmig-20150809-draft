@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mozilla-firefox
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.81 2004/11/15 23:14:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.82 2004/11/16 16:06:12 agriffis Exp $
+
+  16 Nov 2004; Aron Griffis <agriffis@gentoo.org>
+  mozilla-firefox-1.0-r2.ebuild, mozilla-firefox-1.0-r3.ebuild:
+  Remove IUSE=gtk2 because we always depend on gtk2 now
 
   15 Nov 2004; Aron Griffis <agriffis@gentoo.org>
   +files/mozilla-firefox-1.0-kp_separator.patch,
