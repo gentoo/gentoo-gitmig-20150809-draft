@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/gq/gq-1.0_beta1.ebuild,v 1.4 2004/07/01 22:37:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/gq/gq-1.0_beta1.ebuild,v 1.5 2004/10/26 19:48:31 slarti Exp $
 
 S=${WORKDIR}/${PN}-${PV/_/}
 DESCRIPTION="GTK-based LDAP client"
@@ -12,7 +12,7 @@ IUSE="kerberos jpeg nls ssl"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 
 RDEPEND=">=x11-libs/gtk+-2
 	>=net-nds/openldap-2
@@ -38,6 +38,11 @@ src_unpack() {
 	cd ${S}  || die
 	# Fix timestamp skews
 	touch aclocal.m4 configure `find . -name Makefile.in`
+
+	if use amd64 ; then
+		rm config.sub config.guess
+		automake --add-missing --copy
+	fi
 }
 
 src_compile() {

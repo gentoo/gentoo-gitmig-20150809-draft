@@ -1,8 +1,18 @@
-MD5 0e961eb59ee5658525d0bd51ad9fe334 ChangeLog 1234
-MD5 8e774b1aa7e1243f6dc3fffff793a11d gq-0.6.0.ebuild 993
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e8ccbb7105138618f707f1860bc9d209 gq-1.0_beta1.ebuild 1495
 MD5 796ca60722115f9972056fc6368feef4 gq-0.7.0_beta2.ebuild 1172
-MD5 f1c8226a56b81e1e42e8e8cca15cd2af gq-1.0_beta1.ebuild 1405
+MD5 3c3807b56cded3474e828d7aa7bb2a1e ChangeLog 1471
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
+MD5 8e774b1aa7e1243f6dc3fffff793a11d gq-0.6.0.ebuild 993
 MD5 828702cac79a6948709d36296923765d files/digest-gq-0.6.0 60
-MD5 2f8e4cb0c6e455c499981e4b9151fc08 files/digest-gq-0.7.0_beta2 65
 MD5 1c71ab6ac87b29de15f92040e36d9ada files/digest-gq-1.0_beta1 63
+MD5 2f8e4cb0c6e455c499981e4b9151fc08 files/digest-gq-0.7.0_beta2 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBfpxhCHk4+ZoBpvsRAgK/AJ0RuU1cT2Nc1a0vsFAZkqxR89Wt0gCgoTnQ
+wBmMRkEZt4mSmEGQ3aOwLYo=
+=/eOD
+-----END PGP SIGNATURE-----

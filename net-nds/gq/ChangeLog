@@ -1,6 +1,11 @@
 # ChangeLog for net-nds/gq
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/gq/ChangeLog,v 1.10 2004/07/01 22:37:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/gq/ChangeLog,v 1.11 2004/10/26 19:48:31 slarti Exp $
+
+  26 Oct 2004; Tom Martin <slarti@gentoo.org> gq-1.0_beta1.ebuild:
+  Resolved bug 68605 by regenerating config.sub and config.guess. Thanks to
+  Daniel Lawson <daniel@meta.net.nz> for reporting and also for the fix.
+  Added ~amd64 keyword.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> gq-1.0_beta1.ebuild:
   virtual/glibc -> virtual/libc
