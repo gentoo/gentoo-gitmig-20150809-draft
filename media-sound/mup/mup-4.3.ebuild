@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Geert Bevin <gbevin@uwyn.com>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-4.3.ebuild,v 1.1 2002/02/26 07:31:02 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mup/mup-4.3.ebuild,v 1.2 2002/02/26 07:32:33 gbevin Exp $
 
 S=${WORKDIR}/${P}
 
@@ -12,6 +12,11 @@ HOMEPAGE="http://www.arkkra.com"
 DEPEND="virtual/glibc
 	virtual/x11
 	>=media-libs/svgalib-1.4.3"
+
+RDEPEND="virtual/glibc
+	virtual/x11
+	>=media-libs/svgalib-1.4.3
+	>=app-text/ghostview-1.5"
 
 src_unpack() {
 
