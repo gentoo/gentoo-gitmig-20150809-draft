@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gal
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/ChangeLog,v 1.18 2003/03/04 18:17:50 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gal/ChangeLog,v 1.19 2003/03/04 18:23:05 liquidx Exp $
+
+*gal-0.23 (04 Mar 2003)
+
+  04 Mar 2003; Alastair Tse <liquidx@gentoo.org> gal-0.23.ebuild files/digest-gal-0.23 :
+  version bump. deps cleaned and enabled 'doc' USE flag. resolves #16816
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
