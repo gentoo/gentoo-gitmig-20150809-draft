@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jai/jai-1.1.2.ebuild,v 1.1 2003/12/18 21:44:26 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jai/jai-1.1.2.ebuild,v 1.2 2004/02/22 19:51:08 agriffis Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://java.sun.com/products/java-media/jai/index.jsp"
 SRC_URI=${At}
 SLOT="0"
 LICENSE="sun-bcla-jai"
-KEYWORDS="~x86 -ppc -sparc -alpha -mips -hppa -arm"
+KEYWORDS="~x86 -ppc -sparc -alpha -mips -hppa"
 RESTRICT="fetch"
 
 DEPEND="|| ( >=dev-java/sun-jdk-1.4 >=dev-java/sun-jre-1.4 )

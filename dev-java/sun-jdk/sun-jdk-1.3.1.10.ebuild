@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.10.ebuild,v 1.1 2004/02/15 06:57:19 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.10.ebuild,v 1.2 2004/02/22 19:51:48 agriffis Exp $
 
 IUSE="doc"
 
@@ -20,7 +20,7 @@ PROVIDE="virtual/jre-1.3.1
 	virtual/java-scheme-2"
 LICENSE="sun-bcla-java-vm"
 SLOT="1.3"
-KEYWORDS="~x86 -ppc -sparc -alpha -mips -hppa -arm"
+KEYWORDS="~x86 -ppc -sparc -alpha -mips -hppa"
 RESTRICT="fetch"
 
 # this is needed for proper operating under a PaX kernel without activated grsecurity acl
