@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.0.1.ebuild,v 1.4 2002/05/23 06:50:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.0.1.ebuild,v 1.5 2002/05/24 11:40:43 danarmak Exp $
 
 inherit kde-dist
 
@@ -55,8 +55,11 @@ src_unpack() {
 
 pkg_postinst() {
 
-[ -n "`use alsa`" ] &&  einfo "WARNING: alsa support has been removed becuase of a bug in kdemm sources.
+    if [ -n "`use alsa`" ]; then
+	einfo "WARNING: alsa support has been removed becuase of a bug in kdemm sources.
 For further information see bug #2324 on bugs.gentoo.org and bug #39574 on bugs.kde.org.
 Meanwhile, you can use the alsa oss emulation."
+    fi
+    return true
 
 }
