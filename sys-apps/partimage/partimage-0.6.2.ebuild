@@ -1,13 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/partimage/partimage-0.6.2.ebuild,v 1.6 2003/06/21 21:19:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/partimage/partimage-0.6.2.ebuild,v 1.7 2003/07/18 20:40:57 tester Exp $
+
+inherit gnuconfig
 
 DESCRIPTION="Console-based application to efficiently save raw partition data to an image file. Optional encryption/compression support."
 HOMEPAGE="http://www.partimage.org/"
 SRC_URI="mirror://sourceforge/partimage/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="x86 ~amd64"
 IUSE="ssl"
 
 RDEPEND="virtual/glibc
@@ -26,6 +28,8 @@ src_unpack() {
 	# Patch Makefile.am so we can take over some of is install work
 	#patch -p1 < ${FILESDIR}/${PF}-gentoo.patch || die "patch failed"
 	autoconf
+
+	use amd64 && gnuconfig_update
 }
 
 src_compile() {
