@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r2.ebuild,v 1.3 2003/04/24 19:02:29 leahcim Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r2.ebuild,v 1.4 2003/06/14 09:01:24 seemant Exp $
 
 # Small note:  we should prob consider using a DRM only tarball, as it will ease
 #              some of the overhead on older systems, and will enable us to
@@ -20,7 +20,8 @@ SNAPSHOT="20030306"
 S="${WORKDIR}/drm"
 DESCRIPTION="Xfree86 Kernel DRM modules"
 HOMEPAGE="http://www.xfree.org"
-SRC_URI="mirror://gentoo/linux-drm-${PV}-kernelsource-${SNAPSHOT}.tar.gz"
+SRC_URI="mirror://gentoo/linux-drm-${PV}-kernelsource-${SNAPSHOT}.tar.gz
+	mirror://gentoo/${PF}-gentoo.tar.bz2"
 # Latest tarball of DRM sources can be found here:
 #
 #   http://www.xfree86.org/~alanh/
@@ -28,7 +29,7 @@ SRC_URI="mirror://gentoo/linux-drm-${PV}-kernelsource-${SNAPSHOT}.tar.gz"
 
 LICENSE="X11"
 SLOT="${KV}"
-KEYWORDS="~x86 ~ppc ~alpha"
+KEYWORDS="x86 ppc ~alpha"
 
 DEPEND=">=x11-base/xfree-${PV}
 		virtual/linux-sources"
@@ -75,10 +76,12 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	epatch ${FILESDIR}/${PF}-gentoo-Makefile-fixup.patch
-	epatch ${FILESDIR}/${PF}-drm-ioremap.patch
-	epatch ${FILESDIR}/${PF}-radeon-resume-v8.patch
-	epatch ${FILESDIR}/${PF}-dristat.patch
+	local PATCHDIR=${WORKDIR}/patch
+
+	epatch ${PATCHDIR}/${PF}-gentoo-Makefile-fixup.patch
+	epatch ${PATCHDIR}/${PF}-drm-ioremap.patch
+	epatch ${PATCHDIR}/${PF}-radeon-resume-v8.patch
+	epatch ${PATCHDIR}/${PF}-dristat.patch
 }
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0.ebuild,v 1.9 2003/04/23 02:37:43 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r3.ebuild,v 1.1 2003/06/14 09:01:24 seemant Exp $
 
 # Small note:  we should prob consider using a DRM only tarball, as it will ease
 #              some of the overhead on older systems, and will enable us to
@@ -15,22 +15,25 @@ inherit eutils
 DEBUG="yes"
 RESTRICT="nostrip"
 
-SNAPSHOT="20030306"
+SNAPSHOT="20030504"
 
 S="${WORKDIR}/drm"
 DESCRIPTION="Xfree86 Kernel DRM modules"
 HOMEPAGE="http://www.xfree.org"
-SRC_URI="mirror://gentoo/linux-drm-${PV}-kernelsource-${SNAPSHOT}.tar.gz"
+SRC_URI="mirror://gentoo/linux-drm-${PV}-kernelsource-${SNAPSHOT}.tar.gz
+	mirror://gentoo/${PF}-gentoo.tar.bz2"
 # Latest tarball of DRM sources can be found here:
 #
 #   http://www.xfree86.org/~alanh/
-#
+# 
+# We now use Daenzer's sources at http://people.debian.org/~daenzer/
 
-LICENSE="X11"
 SLOT="${KV}"
-KEYWORDS="x86"
+LICENSE="X11"
+KEYWORDS="~x86 ~ppc ~alpha"
 
-DEPEND=">=x11-base/xfree-${PV} "
+DEPEND=">=x11-base/xfree-${PV}
+	virtual/linux-sources"
 
 PROVIDE="virtual/drm"
 
@@ -40,69 +43,79 @@ VIDCARDS=""
 if [ "`use matrox`" ]
 then
 	VIDCARDS="${VIDCARDS} mga.o"
-elif [ "`use 3dfx`" ]
+fi
+if [ "`use 3dfx`" ]
 then
 	VIDCARDS="${VIDCARDS} tdfx.o"
-elif [ "`use rage128`" ]
+fi
+if [ "`use rage128`" ]
 then
 	VIDCARDS="${VIDCARDS} r128.o"
-elif [ "`use radeon`" ]
+fi
+if [ "`use radeon`" ]
 then
 	VIDCARDS="${VIDCARDS} radeon.o"
-elif [ "`use sis`" ]
+fi
+if [ "`use sis`" ]
 then
 	VIDCARDS="${VIDCARDS} sis.o"
-elif [ "`use i8x0`" ]
+fi
+if [ "`use i8x0`" ]
 then
 	VIDCARDS="${VIDCARDS} i810.o i830.o"
-elif [ "`use gamma`" ]
+fi
+if [ "`use gamma`" ]
 then
 	VIDCARDS="${VIDCARDS} gamma.o"
-else
-	VIDCARDS=""
+fi
+if [ -z "${VIDCARDS}" ]
+then
+	if [ "${ARCH}" = "ppc" ]
+	then
+		VIDCARDS="r128.o radeon.o"
+	else
+		VIDCARDS="mga.o tdfx.o r128.o radeon.o sis.o i810.o i830.o gamma.o"
+	fi
 fi
 
 src_unpack() {
+	if [ ! -f /usr/src/linux/include/config/MARKER ] ; then
+		die "Please compile kernel sources"
+	fi
 
 	unpack ${A}
 	cd ${S}
 
-	epatch ${FILESDIR}/${P}-gentoo-Makefile-fixup.patch
+	local PATCHDIR=${WORKDIR}/patch
+
+	epatch ${PATCHDIR}/${PF}-gentoo-Makefile-fixup.patch
+	epatch ${PATCHDIR}/${PF}-drm-ioremap.patch
+#	This patch is irrelevant but it was in Daenzer's stuff
+#	epatch ${PATCHDIR}/${PF}-radeon-resume-v8.patch
+	epatch ${PATCHDIR}/${PF}-dristat.patch
 }
 
 src_compile() {
 	check_KV
 	ln -sf Makefile.linux Makefile
 	einfo "Building DRM..."
-	if [ -z "${VIDCARDS}" ]
-	then
-		make  \
-			TREE="/usr/src/linux/include" KV="${KV}"
-	else
-		make ${VIDCARDS} \
-			TREE="/usr/src/linux/include" KV="${KV}"
-	fi
+	make ${VIDCARDS} \
+		TREE="/usr/src/linux/include" KV="${KV}"
+	make dristat || die
 }
 
 src_install() {
 
 	einfo "installing DRM..."
-	if [ -z "${VIDCARDS}" ]
-	then
-		make \
-			TREE="/usr/src/linux/include" \
-			KV="${KV}" \
-			DESTDIR="${D}" \
-			install || die
-	else
-		make \
-			TREE="/usr/src/linux/include" \
-			KV="${KV}" \
-			DESTDIR="${D}" \
-			MODS="${VIDCARDS}" \
-			install || die
-	fi
+	make \
+		TREE="/usr/src/linux/include" \
+		KV="${KV}" \
+		DESTDIR="${D}" \
+		MODS="${VIDCARDS}" \
+		install || die
 	dodoc README*
+	exeinto /usr/X11R6/bin
+	doexe dristat
 }
 
 pkg_postinst() {
