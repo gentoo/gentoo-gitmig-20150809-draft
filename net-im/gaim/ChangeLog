@@ -1,6 +1,9 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.308 2005/02/26 08:17:13 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.309 2005/02/27 03:26:39 geoman Exp $
+
+  26 Feb 2005; Stephen P. Becker <geoman@gentoo.org> gaim-1.1.4.ebuild:
+  stable on mips wrt bug 83253
 
   26 Feb 2005; Markus Rothe <corsair@gentoo.org> gaim-1.1.4.ebuild:
   Stable on ppc64; bug #83253
