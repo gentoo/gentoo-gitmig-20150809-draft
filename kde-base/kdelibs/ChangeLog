@@ -1,8 +1,12 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.84 2003/07/31 02:11:12 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.85 2003/08/05 13:01:34 pauldv Exp $
 
+*kdelibs-3.1.3-r1 (05 Aug 2003)
 
+  05 Aug 2003; Paul de Vrieze <pauldv@gentoo.org> kdelibs-3.1.3-r1.ebuild,
+  files/kdelibs-3.1.3-render_root.patch:
+  Fix the horizontal scrollbar issue with khtml-3.1.3
 
 *kdelibs-3.0.5b-r1 (20 Jul 2003)
 *kdelibs-3.1.2-r1 (20 Jul 2003)
