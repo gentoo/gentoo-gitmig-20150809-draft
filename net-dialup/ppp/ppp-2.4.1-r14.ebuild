@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r14.ebuild,v 1.7 2003/08/04 21:42:32 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r14.ebuild,v 1.8 2003/09/05 20:51:11 mholzer Exp $
 
 IUSE="crypt ipv6 activefilter"
 S=${WORKDIR}/${P}.pppoe4
@@ -113,7 +113,6 @@ src_install() {
 	dolib.so pppd/plugins/minconn.so
 	dolib.so pppd/plugins/passprompt.so
 	dolib.so pppd/plugins/pppoe/pppoe.so
-	newlib.so ${FILESDIR}/pppoatm.so pppoatm.so
 	dodir /usr/lib/pppd/$(awk -F '"' '/VERSION/ {print $2}' pppd/patchlevel.h)
 	mv ${D}/usr/lib/*.so ${D}/usr/lib/pppd/$(awk -F '"' '/VERSION/ {print $2}' pppd/patchlevel.h)
 	insinto /etc/modules.d
