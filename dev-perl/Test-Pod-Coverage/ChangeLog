@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Test-Pod-Coverage
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Pod-Coverage/ChangeLog,v 1.1 2004/09/22 14:25:06 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Pod-Coverage/ChangeLog,v 1.2 2004/10/01 20:20:25 mcummings Exp $
+
+  01 Oct 2004; <mcummings@gentoo.org> Test-Pod-Coverage-1.06.ebuild:
+  Added ~sparc for dep in XML-DT. Passed tests on sparc.
 
 *Test-Pod-Coverage-1.06 (22 Sep 2004)
 
