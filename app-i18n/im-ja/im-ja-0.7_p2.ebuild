@@ -1,13 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-0.7_p2.ebuild,v 1.1 2003/08/20 00:56:40 yakina Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/im-ja/im-ja-0.7_p2.ebuild,v 1.2 2003/09/13 01:33:13 yakina Exp $
 
-inherit gnome2
+inherit base gnome2
 
 DESCRIPTION="A Japanese input module for GTK2"
 HOMEPAGE="http://im-ja.sourceforge.net/"
 SRC_URI="${HOMEPAGE}${P/_p/-}.tar.gz
 	${HOMEPAGE}old/${P/_p/-}.tar.gz"
+PATCHES1=${FILESDIR}/${PN}-0.6-gentoo.diff
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~sparc"
 SLOT=0
