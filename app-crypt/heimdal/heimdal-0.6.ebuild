@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.ebuild,v 1.8 2004/02/17 22:09:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.ebuild,v 1.9 2004/02/21 22:34:20 aliz Exp $
 
 inherit libtool
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.pdc.kth.se/heimdal/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 -sparc ppc alpha ia64"
+KEYWORDS="x86 -sparc ppc alpha ia64 ~amd64"
 IUSE="ssl ldap berkdb ipv6"
 PROVIDE="virtual/krb5"
 
@@ -24,8 +24,10 @@ DEPEND="
 	# -- Kain <kain@kain.org> 05 Dec 2002
 
 src_unpack() {
-	unpack ${A} || die
-	epatch ${FILESDIR}/heimdal-0.6-gcc3.patch || die
+	unpack ${A} ; cd ${S}
+
+	epatch ${FILESDIR}/${P}-gcc3.patch
+	epatch ${FILESDIR}/${P}-rxapps.patch
 
 	# Um, I don't think the below is doing anything since automake is
 	# run in src_compile(), but I'll leave it alone since this ebuild
