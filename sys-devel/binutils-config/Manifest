@@ -2,11 +2,12 @@
 Hash: SHA1
 
 MD5 77032215f7b1d5e6564ce3252f0629ee binutils-config-1.0.ebuild 599
-MD5 ce5f961c8390c41c69598ee763226a89 ChangeLog 983
+MD5 1e278e45901fb13d42e874c3262f34c2 ChangeLog 1194
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 MD5 0bee95c4faa1cb7bf5586f59ccc18f23 binutils-config-1.1.ebuild 599
 MD5 d38fcb3dfb9aab1c305578144ee8cf04 binutils-config-1.2.ebuild 599
 MD5 13cac863aa2be230b24efa45d6eec904 binutils-config-1.3.ebuild 599
+MD5 bd539973a95279630df011bdfe24f552 binutils-config-1.4.ebuild 599
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-binutils-config-1.0 0
 MD5 dd51688a6f468831e3f796500a83267e files/binutils-config-1.2 5819
 MD5 e76151a1ce45a03054ec865c4cef7dfd files/binutils-config-1.1 5656
@@ -15,10 +16,12 @@ MD5 89f444ee1aafa7cbc86ceea992fcb3c3 files/binutils-config-1.0 4353
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-binutils-config-1.2 0
 MD5 194c77e52d3e896888220e8ccd985ae1 files/binutils-config-1.3 6057
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-binutils-config-1.3 0
+MD5 1166a8d4a5379f21f219178f9a6176cc files/binutils-config-1.4 6605
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-binutils-config-1.4 0
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBwPNmroRuSHgZdywRAql8AJsEWLl2x0jQjKOm5rPZE3N79c5m6gCdGc6X
-PioQgCIy0EecEEhFt3wQ+QY=
-=dTHX
+iD8DBQFBznaproRuSHgZdywRAhkhAJ0YnZfozjPafSBpT8i2hseMZ31clwCfTNEP
+OUkAdbUj2gTolkqESbSwe6A=
+=nwqr
 -----END PGP SIGNATURE-----
