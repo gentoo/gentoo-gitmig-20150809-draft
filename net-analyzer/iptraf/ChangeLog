@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/iptraf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.7 2002/12/13 10:59:47 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.8 2003/02/02 15:13:47 aliz Exp $
+
+  02 Feb 2003; Daniel Ahlberg <aliz@gentoo.org> iptraf-2.7.0.ebuild :
+  Closes #14654.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
