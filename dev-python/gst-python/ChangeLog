@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/gst-python
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.1 2005/03/16 00:07:32 zaheerm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gst-python/ChangeLog,v 1.2 2005/03/16 10:33:03 zaheerm Exp $
+
+*gst-python-0.8.1 (16 Mar 2005)
+
+  16 Mar 2005; <zaheerm@gentoo.org> gst-python-0.8.1.ebuild:
+  Cosmetic changes
 
   16 Mar 2005; <zaheerm@gentoo.org> :
   Initial Commit
