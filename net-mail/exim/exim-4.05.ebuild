@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Updated to exim-4 by Ben Lutgens <lamer@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.05.ebuild,v 1.1 2002/08/30 04:19:37 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.05.ebuild,v 1.2 2002/08/30 04:42:14 raker Exp $
 
 S=${WORKDIR}/${P}
 
@@ -163,11 +163,8 @@ src_install () {
 	#	doexe $i
 	#done
 
-	dodir /etc/exim #/etc/exim/samples
+	dodir /etc/exim
 	
-	#insopts -o root -g root -m 0644
-	#insinto /etc/exim/samples
-	#doins ${FILESDIR}/smtp-auth-tls-client-configure
 	cd ${S}/src
 	insopts -o root -g root -m 0644
 	insinto /etc/exim
@@ -199,5 +196,4 @@ pkg_postinst() {
 	einfo "Read the bottom of /etc/exim/system_filter.exim for usage."
 	einfo "/usr/share/doc/${P}/auth_conf.sub.gz contains the configuration sub for using smtp auth."
 	einfo "Please create /etc/exim/configure from /etc/exim/configure.default."
-	einfo "Also see /etc/exim/samples dir for example configs."
 }

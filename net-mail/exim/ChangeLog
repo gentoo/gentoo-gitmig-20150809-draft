@@ -1,14 +1,18 @@
 # ChangeLog for net-mail/exim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.8 2002/08/30 04:19:37 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.9 2002/08/30 04:42:14 raker Exp $
 
 *exim-4.05 (29 Aug 2002)
 
   29 Aug 2002; Nick Hadaway <raker@gentoo.org>
   exim-4.05.ebuild, files/digest-exim-4.05 :
   Version bump.  Currently masked for portage tree freeze.
+  Removed nonexistant sample config.
 
 *exim-4.04-r2 (20 Aug 2002)
+
+  29 Aug 2002; Nick Hadaway <raker@gentoo.org> exim-4.04-r2.ebuild :
+  Removed nonexistant sample config.
 
   20 Aug 2002; Nick Hadaway <raker@gentoo.org>
   exim-4.04-r2.ebuild, files/digest-exim-4.04-r2 :
