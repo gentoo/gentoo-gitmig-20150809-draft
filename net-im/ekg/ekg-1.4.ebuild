@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ekg-1.4.ebuild,v 1.1 2003/12/01 19:53:17 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ekg/ekg-1.4.ebuild,v 1.2 2004/01/16 10:24:10 spock Exp $
 
 IUSE="ssl ncurses zlib python"
 
