@@ -1,0 +1,10 @@
+# ChangeLog for net-www/bugport
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/bugport/ChangeLog,v 1.1 2004/07/22 13:21:00 jmglov Exp $
+
+*bugport-1.125 (22 Jul 2004)
+
+  22 Jul 2004; Josh Glover <jmglov@gentoo.org> bugport-1.125.ebuild,
+  metadata.xml:
+  This package was submitted by Josh Glover in bug #35056
+
