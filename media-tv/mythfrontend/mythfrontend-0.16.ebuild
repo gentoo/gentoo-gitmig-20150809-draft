@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/mythfrontend-0.16.ebuild,v 1.1 2004/09/10 17:37:46 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythfrontend/mythfrontend-0.16.ebuild,v 1.2 2004/09/10 18:01:54 aliz Exp $
 
 inherit myth
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.mythtv.org/mc/mythtv-${PV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64"
-IUSE="alsa arts dvb directfb lcd lirc nvidia cle266 opengl X xv oss debug mmx"
+IUSE="alsa arts dvb directfb lcd lirc nvidia cle266 opengl X xv oss debug mmx nls"
 
 DEPEND="virtual/x11
 	>=x11-libs/qt-3.1
