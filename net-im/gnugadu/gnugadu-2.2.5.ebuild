@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.2.5.ebuild,v 1.1 2005/04/01 19:35:25 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.2.5.ebuild,v 1.2 2005/04/02 01:57:42 weeve Exp $
 
 IUSE="debug tlen esd oss xosd arts jabber perl spell"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://gadu.gnu.pl/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
 
 DEPEND=">=x11-libs/gtk+-2.4.0
 	sys-devel/gettext
