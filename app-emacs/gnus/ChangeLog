@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/gnus
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus/ChangeLog,v 1.9 2004/06/18 06:42:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus/ChangeLog,v 1.10 2004/06/20 02:02:50 weeve Exp $
+
+  19 Jun 2004; Jason Wever <weeve@gentoo.org> gnus-5.10.6.ebuild:
+  Stable on sparc.
 
   17 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> gnus-5.10.3.ebuild,
   gnus-5.10.6.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/w3
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/w3/ChangeLog,v 1.7 2004/03/08 21:12:07 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/w3/ChangeLog,v 1.8 2004/06/20 02:01:54 weeve Exp $
+
+  19 Jun 2004; Jason Wever <weeve@gentoo.org> w3-4.0_pre47-r1.ebuild:
+  Stable on sparc.
 
   08 Mar 2004; Jon Portnoy <avenj@gentoo.org> w3-4.0_pre47-r1.ebuild :
   AMD64 keywords.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus/gnus-5.10.6.ebuild,v 1.8 2004/06/18 06:42:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus/gnus-5.10.6.ebuild,v 1.9 2004/06/20 02:02:50 weeve Exp $
 
 inherit elisp
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gnus.org/"
 SRC_URI="http://quimby.gnus.org/gnus/dist/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc alpha ~sparc ~amd64"
+KEYWORDS="x86 ~ppc alpha sparc ~amd64"
 
 DEPEND="virtual/emacs
 	emacs-w3? ( app-emacs/w3 )"
