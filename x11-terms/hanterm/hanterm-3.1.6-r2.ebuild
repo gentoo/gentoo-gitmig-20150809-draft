@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/hanterm-3.1.6-r2.ebuild,v 1.9 2004/05/01 19:27:31 pvdabeel Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/hanterm/hanterm-3.1.6-r2.ebuild,v 1.10 2004/06/20 18:44:26 port001 Exp $ 
 
 IUSE=""
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Hanterm -- Korean terminal"
 HOMEPAGE="http://www.hanterm.org/"
 SRC_URI="http://download.kldp.net/hanterm/${P}.tar.gz"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/kterm-6.2.0-r1.ebuild,v 1.6 2004/04/27 21:13:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/kterm/kterm-6.2.0-r1.ebuild,v 1.7 2004/06/20 18:46:01 port001 Exp $
 
 inherit eutils
 
@@ -15,8 +15,6 @@ HOMEPAGE="http://www.asahi-net.or.jp/~hc3j-tkg/kterm/"
 LICENSE="X11"
 SLOT="0"
 KEYWORDS="x86 ~sparc -alpha ppc"
-
-S=${WORKDIR}/${P}
 
 DEPEND="${RDEPEND}
 	app-i18n/nkf"

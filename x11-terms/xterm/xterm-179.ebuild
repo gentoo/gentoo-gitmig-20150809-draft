@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-179.ebuild,v 1.13 2004/04/19 02:15:39 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xterm/xterm-179.ebuild,v 1.14 2004/06/20 18:49:48 port001 Exp $
 
 IUSE="truetype"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Terminal Emulator for X Windows"
 HOMEPAGE="http://dickey.his.com/xterm/"
 SRC_URI="ftp://invisible-island.net/${PN}/${P}.tgz"
