@@ -1,6 +1,9 @@
 # ChangeLog for net-im/amsn
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/ChangeLog,v 1.16 2003/09/23 11:27:09 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/amsn/ChangeLog,v 1.17 2003/10/08 11:45:46 tester Exp $
+
+  08 Oct 2003; Olivier Crete <tester@gentoo.org> amsn-0.82.ebuild:
+  Mark 0.82 stable
 
   23 Sep 2003; Olivier Crete <tester@gentoo.org> amsn-0.82.ebuild,
   metadata.xml:
