@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.138 2003/10/12 03:02:17 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.139 2003/10/14 07:59:24 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -16,13 +16,13 @@ app-editors/xemacs:neXt - Chooses the neXt L&F widget set
 app-emulation/fuse:libdsk - Enable support for the floppy disk emulation library
 app-emulation/mol:oldworld - Includes Macintosh's OldWorld support
 app-misc/grass:nviz - support GLw functionality
+app-misc/workrave:distribution - Enable networking. See http://www.workrave.org/features/
 app-misc/workrave:no-exercises - Disable exercises support
 app-misc/workrave:no-experimental - Compile without experimental features
-app-misc/workrave:distribution - Enable networking. See http://www.workrave.org/features/
 app-office/gnucash:hbci - Enable HBCI support, for connecting to some internet banks
 app-office/gnucash:ofx - Enable OFX support, for importing OFX data files.
-app-pda/multisync:opie - Adds support for PDAs based on the OPIE distribution (eg: Zaurus)
 app-pda/multisync:irmc - Adds support for Mobile Client synchronization via IrDa/IrMC/Bluetooth (eg: SonyEricsson T39/T68i)
+app-pda/multisync:opie - Adds support for PDAs based on the OPIE distribution (eg: Zaurus)
 app-sci/gmt:gmtfull - Full resolution bathimetry database;
 app-sci/gmt:gmthigh - Adds high resolution bathimetry database
 app-sci/gmt:gmtsuppl - Supplement functions for GMT;
@@ -36,15 +36,15 @@ app-sci/octave-forge:ginac - Adds app-sci/ginac (symbolic math) support
 app-sci/octave-forge:qhull - Adds media-libs/qhull (geometric extentions) support
 app-text/namazu:chasen - Enable chasen support for namazu
 app-text/namazu:kakasi - Enable kakasi support for namazu
-dev-lang/perl:threads - Enable Perl threads, has some compatibility problems
 dev-games/clanlib:clanJavaScript - Enables javascript support in clanlib
 dev-games/clanlib:clanVoice - Enables voice support in clanlib
 dev-games/crystalspace:3ds - Enables support for .3DS files in CrystalSpace
 dev-games/crystalspace:mng - Enables mng support in CrystalSpace
 dev-games/crystalspace:openal - Enables Open Audio Library support in CrystalSpace
+dev-lang/perl:threads - Enable Perl threads, has some compatibility problems
 dev-lang/ruby:ruby18 - Use ruby-1.8 as default ruby
-dev-lips/bigloo-lib:ipcs - enable ipcs support
 dev-lips/bigloo-lib:expat - enable expat support
+dev-lips/bigloo-lib:ipcs - enable ipcs support
 dev-php/mod_php:gd-external - Use the external version of libgd rather than the bundled one
 dev-php/php:gd-external - Use the external version of libgd rather than the bundled one
 dev-python/anygui:wxwin - enable wxwin support
@@ -72,11 +72,12 @@ media-gfx/imagemagick:jbig - enables jbig-kit, support for fax and similar forma
 media-gfx/nvidia-cg-toolkit:glut - enable glut support
 media-libs/dumb:dumb-allegro - Compile in support for allegro sound cards
 media-libs/libgd:freetype-version-1 - if for some reason you want to use freetype v1 instead of v2
+media-libs/sdl-sound:flac - Enable flac support
 media-plugins/mythdvd:transcode - Enable DVD ripping and transcoding
 media-sound/alsa-patch-bay:fltk - Compile with fltk interface and not with gtkmm2 interface
 media-sound/ardour-cvs:ardour-ksi - Build ksi interface for ardour
-media-sound/jack-cvs:jack-tmpfs - Compile in a tmpf path
 media-sound/jack-audio-connection-kit:jack-caps - enable capabilities
+media-sound/jack-cvs:jack-tmpfs - Compile in a tmpf path
 media-sound/lilypond:nopfa - disable building pfa fonts
 media-sound/museseq:fluidsynth - compile with support for fluidsynth
 media-sound/rhythmbox:flac - Enable flac support
@@ -92,11 +93,11 @@ media-video/transcode:altivec - Enable Altivec code portions
 media-video/vlc:matroska - Enables support for the matroska video format
 media-video/vlc:v4l - Enables video4linux support
 media-video/vlc:xvid - Enables xvid codec support
-net-analyzer/slurm:altcolors - Use alternative color set
 net-analyzer/nstat:pcap - enable pcap support
-net-dialup/ppp:activefilter - enable activefilter support
+net-analyzer/slurm:altcolors - Use alternative color set
 net-dialup/gnokii:bluetooth - Enable Bluetooth Support
 net-dialup/gnokii:irda - Enable Infrared Support
+net-dialup/ppp:activefilter - enable activefilter support
 net-fs/ftpfs:autofs - Adds support for autofs mounting
 net-fs/samba:oav - Adds support for anti-virus from the openantivirus.org project
 net-fs/shfs:amd - Enable automounter support
@@ -105,33 +106,33 @@ net-im/jabber-server:j-nojud - If you do NOT want the Jabber User Directory buil
 net-im/jabber-server:j-nomsn - If you do NOT want the MSN transport built with jabber-server
 net-im/jabber-server:j-nomuconf - If you do NOT want the mu-conference addon built with jabber-server
 net-im/jabber-server:j-noyahoo - If you do NOT want the Yahoo transport built with jabber-server (removes glib dependency)
-net-irc/xchat:xchattext - Enables the text/console front end to XChat.
 net-irc/xchat:xchatnogtk - Disables building the GTK front end to XChat
-net-libs/libnvcserver:nobackchannel - disable backchannel support
+net-irc/xchat:xchattext - Enables the text/console front end to XChat.
 net-libs/libnvcserver:no24bpp - disable 24bpp support
+net-libs/libnvcserver:nobackchannel - disable backchannel support
 net-libs/libsoup:gnutls - Use GnuTLS instead of OpenSSL for SSL support.
 net-mail/amavisd-new:milter - Enable Sendmail milter support
-net-mail/courier:fax - Enables fax support in the courier mail server
 net-mail/courier-imap:fam - Enable FAM support
+net-mail/courier:fax - Enables fax support in the courier mail server
 net-mail/exim:exiscan - Patch providing support for content scanning backward-compatability
 net-mail/exim:exiscan-acl - Patch providing support for content scanning
 net-mail/exim:lmtp - Adds support for lmtp
 net-mail/pine:passfile - Adds support for caching IMAP passwords into a file between sessions
 net-mail/ssmtp:md5sum - Enables MD5 summing for ssmtp
 net-mail/sylpheed-claws:clamav - Enables support for the Clam Antivirus, with a plugin
-net-mail/vpopmail:ipalias - Enables enable-ip-alias-domains
 net-mail/vpopmail:clearpasswd - Enables cleartext password sortage in the vpasswd files
+net-mail/vpopmail:ipalias - Enables enable-ip-alias-domains
 net-misc/ntp:parse-clocks - Add parse clock support
 net-misc/openssh:X509 - Adds support for X.509 certificate authentication
 net-misc/openssh:skey - Enable S/Key (Single use password) authentication support
-net-misc/ssh:openssh - Allow ssh and openssh to be installed side by side
 net-misc/pxes:ltsp - Enable support for Linux Terminal Server Project
+net-misc/ssh:openssh - Allow ssh and openssh to be installed side by side
 net-misc/zebra:ospfapi - An API for the Zebra OSPF daemon
 net-p2p/bittorrent-theshadow:nopsyco - Disable PSYCO usage even if psyco is installed
 net-p2p/bittorrent-theshadow:psyco - Depend on PSYCO
 net-p2p/mldonkey:mldonkeypango - enable pango patches for mldonkey
-net-p2p/pysoulseek:hyriand - Enables usage of the hyriand patch
 net-p2p/nicotine:geoip - Enable GeoIP support
+net-p2p/pysoulseek:hyriand - Enables usage of the hyriand patch
 net-wireless/hostap:hostap-nopci - Set to not install hostap_pci driver
 net-wireless/hostap:hostap-noplx - Set to not install hostap_plx driver
 net-www/elinks:lua - enable lua support
@@ -149,12 +150,12 @@ net-www/mozilla:mozp3p - blank
 net-www/mozilla:mozsvg - blank
 net-www/mozilla:mozxmlterm - blank
 net-www/tinyproxy:transparent-proxy - enable support for transparent proxies
-net-www/w3m:nopixbuf - If you do NOT want to link gdk_pixbuf against w3mimgdisplay
-net-www/w3m:imlib2 - If you want to link imlib2 instead of imlib against w3mimgdisplay
-net-www/w3m:migemo - Enables migemo support
-net-www/w3m-m17n:nopixbuf - If you do NOT want to link gdk_pixbuf against w3mimgdisplay
 net-www/w3m-m17n:imlib2 - If you want to link imlib2 instead of imlib against w3mimgdisplay
 net-www/w3m-m17n:migemo - Enables migemo support
+net-www/w3m-m17n:nopixbuf - If you do NOT want to link gdk_pixbuf against w3mimgdisplay
+net-www/w3m:imlib2 - If you want to link imlib2 instead of imlib against w3mimgdisplay
+net-www/w3m:migemo - Enables migemo support
+net-www/w3m:nopixbuf - If you do NOT want to link gdk_pixbuf against w3mimgdisplay
 sys-apps/busybox:diet - Compile and link with dietlibc
 sys-apps/busybox:uclibc - Compile with uclibc :)
 sys-apps/pcmcia-cs:wavelan - Use the wavelan and not the orinoco wireless drivers
@@ -175,13 +176,13 @@ sys-kernel/sparc-sources:ultra1 - If you have a SUN Ultra 1 with a HME interface
 sys-libs/glibc:nptl - If you want the Native POSIX Threading Library built into glibc.
 sys-libs/glibc:pic - If you want prelink support built into glibc
 x11-base/kdrive:fbdev - Enables framebuffer kdrive server
-x11-base/xfree:gatos - Builds the SDK (alternate flag)
-x11-base/xfree:sdk - Builds the SDK
 x11-base/xfree-drm:gamma - If you have a 3dlabs video card
 x11-base/xfree-drm:i8x0 - If you have an ibm i810 or i830 video card
 x11-base/xfree-drm:radeon - If you have an ATI Radeon video card
 x11-base/xfree-drm:rage128 - If you have an ATI Rage128 based video card
 x11-base/xfree-drm:sis - If you have an SiS video card
+x11-base/xfree:gatos - Builds the SDK (alternate flag)
+x11-base/xfree:sdk - Builds the SDK
 x11-libs/wxGTK:unicode - Adds Unicode support. Must be used in combination with gtk2
 x11-terms/eterm:etwin - enable twin support
 x11-terms/rxvt:xgetdefault - Enable resources via X instead of rxvt small version
@@ -191,4 +192,3 @@ x11-wm/fvwm:nosm - Disable support for Session Management (xsm protocol)
 x11-wm/fvwm:noxpm - Disable XPM image support (when no images, or just png images are to be used)
 x11-wm/fvwm:rplay - Enable rplay support
 x11-wm/fvwm:stroke - Mouse Gesture support
-
