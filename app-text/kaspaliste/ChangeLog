@@ -1,0 +1,10 @@
+# ChangeLog for app-text/kaspaliste
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/kaspaliste/ChangeLog,v 1.1 2003/10/11 19:19:10 lanius Exp $
+
+*kaspaliste-0.94 (11 Oct 2003)
+
+  11 Oct 2003; Heinrich Wendel <lanius@gentoo.org> kaspaliste-0.94.ebuild,
+  metadata.xml:
+  initial ebuild, thx to Sidoine Mosiah PIERREL <sip@teamlog.fr>
+
