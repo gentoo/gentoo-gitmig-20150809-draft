@@ -406,10 +406,6 @@ dev-php/php-cvs
 # accordingly.
 media-plugins/avi-xmms
 
-# <mkeadle@gentoo.org> (22 Apr 2003)
-# new fluxbox dev series. no guarentees.
->=x11-wm/fluxbox-0.9.0
-
 # <danarmak@gentoo.org> (16 Apr 2003)
 # beta, so masked
 =app-office/koffice-1.3_beta1
