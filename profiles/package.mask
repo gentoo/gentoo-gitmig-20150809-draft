@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3256 2004/10/17 12:11:47 usata Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3257 2004/10/17 16:04:52 chriswhite Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -43,11 +43,6 @@ net-wireless/bluez-pan
 # <seemant@gentoo.org> (15 Oct 2004)
 # This seems to want gcc-3.4.3 which does not even exist in portage yet!
 >=dev-lang/maude-2.1.1-r2
-
-# <chriswhite@gentoo.org> (14 Oct 2004)
-# This is a rather large program that will remained
-# masked until I can verify it doesn't break * :)
-net-www/nvu
 
 # <suka@gentoo.org> (13 Oct 2004)
 # Masking until a new upstream package comes out, this has one has security problems
