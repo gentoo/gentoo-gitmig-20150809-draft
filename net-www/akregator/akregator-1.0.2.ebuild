@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/akregator/akregator-1.0.1.ebuild,v 1.1 2005/03/22 08:47:39 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/akregator/akregator-1.0.2.ebuild,v 1.1 2005/03/24 18:35:31 greg_g Exp $
 
 inherit kde
 
 DESCRIPTION="KDE RSS aggregator."
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
-HOMEPAGE="http://akregator.sf.net/"
+HOMEPAGE="http://akregator.sourceforge.net/"
 LICENSE="GPL-2"
 
 IUSE=""
