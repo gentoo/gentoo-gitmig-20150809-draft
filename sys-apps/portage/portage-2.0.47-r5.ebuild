@@ -1,5 +1,5 @@
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.47-r5.ebuild,v 1.2 2003/02/26 12:06:21 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.47-r5.ebuild,v 1.3 2003/02/26 12:41:01 carpaski Exp $
 
 IUSE="build"
 
@@ -250,5 +250,9 @@ pkg_postinst() {
 		rm -f functions.sh~ functions.sh.rej
 	fi
 	cd ${S}
+
+	mkdir            ${DISTDIR}/cvs-src &>/dev/null
+	chgrp -R portage ${DISTDIR}/cvs-src &>/dev/null
+	chmod -R g+rw    ${DISTDIR}/cvs-src &>/dev/null
 
 }
