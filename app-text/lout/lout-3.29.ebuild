@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lout/lout-3.29.ebuild,v 1.1 2004/06/06 15:58:17 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lout/lout-3.29.ebuild,v 1.2 2004/06/08 12:33:57 dholm Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/lout/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND="zlib? ( >=sys-libs/zlib-1.1.4 )"
 
