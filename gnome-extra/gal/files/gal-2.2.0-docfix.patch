@@ -1,0 +1,98 @@
+--- docs/Makefile.am.orig	2004-08-25 19:40:39.835722184 -0500
++++ docs/Makefile.am	2004-08-25 19:49:07.564535672 -0500
+@@ -1,6 +1,6 @@
+ DOC_MODULE = $(GETTEXT_PACKAGE)
+ 
+-DOC_MAIN_SGML_FILE=gal-api.sgml
++DOC_MAIN_SGML_FILE=$(DOC_MODULE)-api.sgml
+ 
+ DOC_SOURCE_DIR=$(top_srcdir)/gal
+ 
+@@ -14,26 +14,26 @@
+ gal_docdir = $(TARGET_DIR)
+ 
+ gal_doc_DATA =			\
+-	gal-api.sgml		\
+-	gal-api.html		\
+-	gal.hierarchy		\
+-	gal.signals		\
+-	gal.types		\
+-	gal-decl.txt		\
+-	gal-sections.txt
++	$(DOC_MODULE)-api.sgml		\
++	$(DOC_MODULE)-api.html		\
++	$(DOC_MODULE).hierarchy		\
++	$(DOC_MODULE).signals		\
++	$(DOC_MODULE).types		\
++	$(DOC_MODULE)-decl.txt		\
++	$(DOC_MODULE)-sections.txt
+ 
+ if ENABLE_GTK_DOC
+-gal-api.html: html/book1.html
+-	-cp $(srcdir)/html/book1.html $(srcdir)/gal-api.html
++$(DOC_MODULE)-api.html: html/book1.html
++	-cp $(srcdir)/html/book1.html $(srcdir)/$(DOC_MODULE)-api.html
+ else
+ gal-api.html:
+ 	touch $(srcdir)/gal-api.html
+ endif
+ 
+-html/book1.html: sgml/gal-api-doc.bottom
++html/book1.html: sgml/$(DOC_MODULE)-doc.bottom
+ 	$(MAKE) html
+ 
+-sgml/gal-api-doc.bottom: $(tmpl_sources)
++sgml/$(DOC_MODULE)-api-doc.bottom: $(tmpl_sources)
+ 	$(MAKE) sgml
+ 
+ scan:
+--- docs/Makefile.in.orig	2004-08-13 09:01:38.000000000 -0500
++++ docs/Makefile.in	2004-08-25 19:53:16.467696640 -0500
+@@ -161,13 +161,13 @@
+ gal_docdir = $(TARGET_DIR)
+ 
+ gal_doc_DATA = \
+-	gal-api.sgml		\
+-	gal-api.html		\
+-	gal.hierarchy		\
+-	gal.signals		\
+-	gal.types		\
+-	gal-decl.txt		\
+-	gal-sections.txt
++	$(DOC_MODULE)-api.sgml		\
++	$(DOC_MODULE)-api.html		\
++	$(DOC_MODULE).hierarchy		\
++	$(DOC_MODULE).signals		\
++	$(DOC_MODULE).types		\
++	$(DOC_MODULE)-decl.txt		\
++	$(DOC_MODULE)-sections.txt
+ 
+ 
+ EXTRA_DIST = $(gal_doc_DATA)
+@@ -328,14 +328,14 @@
+ 
+ 
+ @ENABLE_GTK_DOC_TRUE@gal-api.html: html/book1.html
+-@ENABLE_GTK_DOC_TRUE@	-cp $(srcdir)/html/book1.html $(srcdir)/gal-api.html
++@ENABLE_GTK_DOC_TRUE@	-cp $(srcdir)/html/book1.html $(srcdir)/$(DOC_MODULE)-api.html
+ @ENABLE_GTK_DOC_FALSE@gal-api.html:
+ @ENABLE_GTK_DOC_FALSE@	touch $(srcdir)/gal-api.html
+ 
+-html/book1.html: sgml/gal-api-doc.bottom
++html/book1.html: sgml/$(DOC_MODULE)-api-doc.bottom
+ 	$(MAKE) html
+ 
+-sgml/gal-api-doc.bottom: $(tmpl_sources)
++sgml/$(DOC_MODULE)-api-doc.bottom: $(tmpl_sources)
+ 	$(MAKE) sgml
+ 
+ scan:
+@@ -374,8 +374,6 @@
+ 	  done; \
+ 	  echo '-- Installing $(srcdir)/html/index.sgml' ; \
+ 	  $(INSTALL_DATA) $(srcdir)/html/index.sgml $(DESTDIR)$(TARGET_DIR); \
+-	  echo '-- Fixing Crossreferences' ; \
+-	  gtkdoc-fixxref --module=$(DOC_MODULE) --html-dir=$(HTML_DIR)|| true; \
+ 	fi)
+ 
+ dist-hook:
