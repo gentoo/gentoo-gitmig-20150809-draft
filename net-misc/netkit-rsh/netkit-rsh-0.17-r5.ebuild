@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/netkit-rsh-0.17-r5.ebuild,v 1.7 2004/07/15 03:07:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/netkit-rsh-0.17-r5.ebuild,v 1.8 2004/07/23 02:38:29 avenj Exp $
 
 inherit eutils
 
-IUSE=""
+IUSE="pam"
 
 DESCRIPTION="Netkit's Remote Shell Suite: rexec{,d} rlogin{,d} rsh{,d}"
 SRC_URI="mirror://debian/pool/main/n/${PN}/${PN}_${PV}.orig.tar.gz"
@@ -15,7 +15,7 @@ LICENSE="BSD"
 KEYWORDS="x86 sparc ppc alpha mips amd64 ppc64"
 
 DEPEND=">=sys-libs/ncurses-5.2
-	>=sys-libs/pam-0.72"
+	pam? ( >=sys-libs/pam-0.72 )"
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
@@ -23,7 +23,9 @@ src_unpack() {
 }
 
 src_compile() {
-	./configure || die
+	local myconf
+	use pam || myconf="--without-pam"
+	./configure ${myconf} || die
 
 	cp MCONFIG MCONFIG.orig
 	sed -e "s:-pipe -O2:${CFLAGS}:" \
