@@ -1,10 +1,8 @@
 eval `dircolors -b`
 alias d="ls --color"
 alias ll="ls --color -l"
-alias newenv="eval `/usr/sbin/env-update echo`"
 
-# Using an alias does not work for xdm
-eval `/usr/sbin/env-update echo`
+source /etc/profile.env
 
 if [ `/usr/bin/whoami` == 'root' ] ; then
 	export PS1='\[\033[01;32;40m\]\u@\h \[\033[01;34;40m\]\W > \[\033[00m\]'

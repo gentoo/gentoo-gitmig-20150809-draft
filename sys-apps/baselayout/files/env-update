@@ -65,10 +65,8 @@ if not os.getuid():
 
 if portage.root!="/":
 	sys.exit(0)
-if len(sys.argv)<2:
-	sys.exit(0)
-if sys.argv[1]!="echo":
-	sys.exit(0)
+
+outfile=open(portage.root+"/etc/profile.env","w")
 
 for path in specials.keys():
 	if len(specials[path])==0:
@@ -77,11 +75,13 @@ for path in specials.keys():
 	for x in specials[path][:-1]:
 		outstring=outstring+x+":"
 	outstring=outstring+specials[path][-1]+"'"
-	print outstring
+	outfile.write(outstring+"\n")
 	#get it out of the way
 	del specials[path]
 
+#create /etc/profile.env
 for x in env.keys():
 	if type(env[x])!=types.StringType:
 		continue
-	print "export "+x+"='"+env[x]+"'"
+	outfile.write("export "+x+"='"+env[x]+"'\n")
+outfile.close()
