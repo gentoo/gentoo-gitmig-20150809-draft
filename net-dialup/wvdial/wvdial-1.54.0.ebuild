@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.54.0.ebuild,v 1.12 2004/12/27 19:49:11 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.54.0.ebuild,v 1.13 2005/01/04 20:31:22 sekretarz Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://open.nit.ca/download/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc alpha ~amd64 hppa"
+KEYWORDS="x86 sparc alpha amd64 hppa"
 IUSE=""
 
 DEPEND="virtual/libc
