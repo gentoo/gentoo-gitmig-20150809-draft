@@ -1,7 +1,17 @@
-MD5 03f0a8f5fd00b7baa9bab0a5724f4b9b ChangeLog 3468
-MD5 a5e6fc5b53b896faeab070b389a14532 sysstat-5.0.4.ebuild 961
-MD5 e330cfe0d5657c497ae7c18de73c00e5 sysstat-5.0.5-r1.ebuild 1117
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3bb0932066238b9cf40b84c1f543ad39 ChangeLog 3565
 MD5 675ff477bc1593491723b612471e4e54 sysstat-5.0.2.ebuild 961
+MD5 a5e6fc5b53b896faeab070b389a14532 sysstat-5.0.4.ebuild 961
+MD5 411015f55afc515251a68b53a2d5509d sysstat-5.0.5-r1.ebuild 1115
 MD5 fb5bff216a55ef8704f4946af00ed172 files/digest-sysstat-5.0.2 65
 MD5 53d6bd1111ffa77e7b53d51b96b5d812 files/digest-sysstat-5.0.4 65
 MD5 d63e5ccba8489c1875bb404a477ed9f0 files/digest-sysstat-5.0.5-r1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB+nU9KRy60XGEcJIRAhgXAJ9OoSOP/S434o3tJjdjMCwqrFQ88QCglg2Y
+HsqoQ2/Ui8ZgmEAM5sXdCUg=
+=NDsW
+-----END PGP SIGNATURE-----
