@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/rskkserv
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/ChangeLog,v 1.9 2004/06/24 21:53:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/rskkserv/ChangeLog,v 1.10 2004/11/03 09:07:07 usata Exp $
+
+  03 Nov 2004; Mamoru KOMACHI <usata@gentoo.org>
+  -files/rskkserv-2.94.12a-gentoo.diff, -files/rskkserv-skk-jisyo-extra.diff,
+  files/rskkserv.initd, -rskkserv-2.94.12a.ebuild, rskkserv-2.94.13-r2.ebuild:
+  Added to ~alpha and ~ppc.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> rskkserv-2.94.13-r2.ebuild:
   Add inherit eutils
