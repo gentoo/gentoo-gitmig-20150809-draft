@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/uulib
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uulib/ChangeLog,v 1.8 2004/07/17 11:40:17 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uulib/ChangeLog,v 1.9 2004/07/24 01:48:30 pylon Exp $
+
+  24 Jul 2004; Lars Weiler <pylon@gentoo.org> uulib-0.5.20.ebuild:
+  Stable on ppc.
 
   17 Jul 2004; Sven Wegener <swegener@gentoo.org> uulib-0.5.20.ebuild:
   Marked stable on x86.
