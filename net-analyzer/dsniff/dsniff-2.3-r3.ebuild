@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.3-r3.ebuild,v 1.1 2005/03/07 10:55:58 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.3-r3.ebuild,v 1.2 2005/03/29 22:47:05 vanquirius Exp $
 
 inherit eutils
 
@@ -69,6 +69,6 @@ src_compile() {
 src_install() {
 	make install install_prefix=${D} || die
 	dodir /etc/dsniff
-	mv ${D}/usr/lib/{dnsspoof.hosts,dsniff.{magic,services}} ${D}/etc/dsniff/
+	mv ${D}/usr/{dnsspoof.hosts,dsniff.{magic,services}} ${D}/etc/dsniff/
 	dodoc CHANGES README TODO
 }
