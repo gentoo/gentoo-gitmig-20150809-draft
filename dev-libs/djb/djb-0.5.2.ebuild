@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/djb/djb-0.5.2.ebuild,v 1.1 2004/03/04 08:32:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/djb/djb-0.5.2.ebuild,v 1.2 2004/03/04 22:06:05 dholm Exp $
 
 inherit gcc fixheadtails
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.fefe.de/djb/djb-${PV}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND="virtual/glibc"
 
