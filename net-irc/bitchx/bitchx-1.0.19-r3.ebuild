@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r3.ebuild,v 1.4 2002/12/21 07:19:40 seo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r3.ebuild,v 1.5 2003/02/13 14:13:53 vapier Exp $
 
 IUSE="ssl esd gnome xmms ncurses ipv6 gtk cjk"
 

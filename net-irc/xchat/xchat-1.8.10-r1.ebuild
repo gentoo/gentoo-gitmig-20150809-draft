@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.10-r1.ebuild,v 1.9 2002/12/16 23:15:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.10-r1.ebuild,v 1.10 2003/02/13 14:17:00 vapier Exp $
 
 IUSE="ssl nls mmx gnome ipv6 python kde gtk perl"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/scrollz-1.8m.ebuild,v 1.1 2002/12/11 16:39:24 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/scrollz-1.8m.ebuild,v 1.2 2003/02/13 14:16:48 vapier Exp $
 
 IUSE="ipv6 socks5"
 

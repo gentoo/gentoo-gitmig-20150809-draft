@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/net-irc/dircproxy/dircproxy-1.0.5.ebuild,v 1.1 2003/02/03 06:50:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/dircproxy/dircproxy-1.0.5.ebuild,v 1.2 2003/02/13 14:14:42 vapier Exp $
 
 DESCRIPTION="an IRC proxy server"
 SRC_URI="http://www.dircproxy.net/download/stable/${P}.tar.gz"
