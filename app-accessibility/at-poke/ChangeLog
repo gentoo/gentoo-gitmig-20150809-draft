@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/at-poke
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-poke/ChangeLog,v 1.1 2004/03/18 00:06:56 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/at-poke/ChangeLog,v 1.2 2004/04/18 17:41:28 leonardop Exp $
+
+  18 Apr 2004; L. Boshell <leonardop@gentoo.org> at-poke-0.2.2.ebuild:
+  Marked stable on x86.
 
   17 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org> at-poke-0.2.1.ebuild:
   stable on sparc
