@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.10.ebuild,v 1.5 2004/09/01 17:30:34 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/libsndfile-1.0.10.ebuild,v 1.6 2004/09/02 13:29:57 tgall Exp $
 
 DESCRIPTION="A C library for reading and writing files containing sampled sound"
 HOMEPAGE="http://www.mega-nerd.com/libsndfile/"
 SRC_URI="http://www.mega-nerd.com/libsndfile/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~alpha ~ia64 sparc amd64"
+KEYWORDS="x86 ~ppc ~alpha ~ia64 sparc amd64 ~ppc64"
 IUSE="static pic"
 DEPEND="virtual/libc"
 
