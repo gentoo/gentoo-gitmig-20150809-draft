@@ -21,6 +21,26 @@
 ##   End example
 ##
 
+# <danarmak@gentoo.org> (2 Oct 2002)
+# kde 3.1 beta2: masked permanently
+=kde-base/arts-1.1.0
+=kde-base/kde-3.1_beta2
+=kde-base/kdeaddons-3.1_beta2
+=kde-base/kdeadmin-3.1_beta2
+=kde-base/kdeartwork-3.1_beta2
+=kde-base/kdebase-3.1_beta2
+=kde-base/kdebindings-3.1_beta2
+=kde-base/kdeedu-3.1_beta2
+=kde-base/kdegames-3.1_beta2
+=kde-base/kdegraphics-3.1_beta2
+=kde-base/kdelibs-3.1_beta2
+=kde-base/kdemultimedia-3.1_beta2
+=kde-base/kdenetwork-3.1_beta2
+=kde-base/kdepim-3.1_beta2
+=kde-base/kdesdk-3.1_beta2
+=kde-base/kdetoys-3.1_beta2
+=kde-base/kdeutils-3.1_beta2
+
 # <tantive@gentoo.org> (02 Oct 2002)
 # Initial release, masked due to freeze and for testing.
 =app-admin/openmosixtest-0.1-r1
