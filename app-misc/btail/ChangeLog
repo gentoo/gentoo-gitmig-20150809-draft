@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/btail
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/btail/ChangeLog,v 1.1 2005/01/02 17:11:15 stuart Exp $
+
+*btail-0.2 (02 Jan 2005)
+
+  02 Jan 2005; Stuart Herbert <stuart@gentoo.org> +metadata.xml,
+  +btail-0.2.ebuild:
+  Initial import
+
