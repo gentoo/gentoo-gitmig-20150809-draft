@@ -1,4 +1,4 @@
-MD5 446b8269432bc233e006e1da112f51ff ChangeLog 555
-MD5 f6e0b33b712a478471af5cc0be839262 telnet-bsd-1.0.ebuild 763
+MD5 ed5f042c316aa4d1fde82af6b15ff0c6 ChangeLog 654
+MD5 893a545b27a8dc6f9aebe7095a964eb0 telnet-bsd-1.0.ebuild 769
 MD5 311eccbf485f973d2274c49343611051 files/digest-telnet-bsd-1.0 67
 MD5 6e9abbecabfaa06ac7bc61e1fc8ce862 files/telnet-bsd_gentoo.diff.gz 689

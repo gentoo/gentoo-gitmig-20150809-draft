@@ -1,11 +1,14 @@
 # ChangeLog for net-misc/telnet-bsd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/ChangeLog,v 1.3 2003/06/28 22:44:46 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/telnet-bsd/ChangeLog,v 1.4 2003/08/03 15:26:42 gmsoft Exp $
 
   28 Jun 2003; Jason Wever <weeve@gentoo.org> telnet-bsd-1.0.ebuild:
   Added ~sparc to keywords.
 
 *telnet-bsd-1.0 (11 Dec 2002)
+
+  03 Aug 2003; Guy Martin <gmsoft@gentoo.org> telnet-bsd-1.0.ebuild :
+  Added hppa to KEYWORDS.
 
   11 Dec 2002; Brad Cowan <bcowan@gentoo.org> telnet-bsd-1.0.ebuild,
   ChangeLog, files/digest-telnet-bsd-1.0, telnet-bsd_gentoo.diff.gz:
