@@ -1,0 +1,133 @@
+#ifndef __NET_PFKEYV2_H_
+#define __NET_PFKEYV2_H_ 1
+
+#include <stdint.h>
+#include <linux/pfkeyv2.h>
+
+#ifndef SADB_X_AALG_NULL
+#  define SADB_X_AALG_NULL	5	/*251*/	/* null authentication */
+#endif
+#ifndef SADB_AALG_SHA2_256
+#  define SADB_AALG_SHA2_256           5
+#endif
+#ifndef SADB_AALG_SHA2_384
+#  define SADB_AALG_SHA2_384           6
+#endif
+#ifndef SADB_AALG_SHA2_512
+#  define SADB_AALG_SHA2_512           7
+#endif
+#ifndef SADB_X_AALG_SHA2_256
+#  define SADB_X_AALG_SHA2_256		SADB_AALG_SHA2_256
+#endif
+#ifndef SADB_X_AALG_SHA2_384
+#  define SADB_X_AALG_SHA2_384		SADB_AALG_SHA2_384
+#endif
+#ifndef SADB_X_AALG_SHA2_512
+#  define SADB_X_AALG_SHA2_512		SADB_AALG_SHA2_512
+#endif
+#ifndef SADB_AALG_RIPEMD160HMAC
+#  define SADB_AALG_RIPEMD160HMAC      8
+#endif
+#ifndef SADB_X_AALG_MD5
+#  define SADB_X_AALG_MD5              249
+#endif
+#ifndef SADB_X_AALG_SHA
+#  define SADB_X_AALG_SHA              250
+#endif
+
+/* private allocations - based on RFC2407/IANA assignment */
+#ifndef SADB_X_EALG_CAST128CBC
+#  define SADB_X_EALG_CAST128CBC	5	/*6*/
+#endif
+#ifndef SADB_X_EALG_BLOWFISHCBC
+#  define SADB_X_EALG_BLOWFISHCBC	4	/*7*/
+#endif
+#ifndef SADB_X_EALG_RIJNDAELCBC
+#  define SADB_X_EALG_RIJNDAELCBC	12
+#endif
+#ifndef SADB_X_EALG_AES
+#  define SADB_X_EALG_AES		12
+#endif
+
+#ifndef SADB_X_CALG_NONE
+#  define SADB_X_CALG_NONE	0
+#endif
+#ifndef SADB_X_CALG_OUI
+#  define SADB_X_CALG_OUI		1
+#endif
+#ifndef SADB_X_CALG_DEFLATE
+#  define SADB_X_CALG_DEFLATE	2
+#endif
+#ifndef SADB_X_CALG_LZS
+#  define SADB_X_CALG_LZS		3
+#endif
+#ifndef SADB_X_CALG_MAX
+#  define SADB_X_CALG_MAX		4
+#endif
+
+#ifndef SADB_X_ENT_NONE
+#  define SADB_X_EXT_NONE		0x0000	/* i.e. new format. */
+#endif
+#ifndef SADB_X_EXT_OLD
+#  define SADB_X_EXT_OLD		0x0001	/* old format. */
+#endif
+
+#ifndef SADB_X_EXT_IV48
+#  define SADB_X_EXT_IV4B		0x0010	/* IV length of 4 bytes in use */
+#endif
+#ifndef SADB_X_EXT_DERIV
+#  define SADB_X_EXT_DERIV	0x0020	/* DES derived */
+#endif
+#ifndef SADB_X_EXT_CYCSEQ
+#  define SADB_X_EXT_CYCSEQ	0x0040	/* allowing to cyclic sequence. */
+#endif
+
+	/* three of followings are exclusive flags each them */
+#ifndef SADB_X_EXT_PSEQ
+#  define SADB_X_EXT_PSEQ		0x0000	/* sequencial padding for ESP */
+#endif
+#ifndef SADB_X_EXT_PRAND
+#  define SADB_X_EXT_PRAND	0x0100	/* random padding for ESP */
+#endif
+#ifndef SADB_X_EXT_PZERO
+#  define SADB_X_EXT_PZERO	0x0200	/* zero padding for ESP */
+#endif
+#ifndef SADB_X_EXT_PMASK
+#  define SADB_X_EXT_PMASK	0x0300	/* mask for padding flag */
+#endif
+#ifndef SADB_X_EXT_RAWCPI
+#  define SADB_X_EXT_RAWCPI	0x0080	/* use well known CPI (IPComp) */
+#endif
+
+#ifndef PFKEY_SOFT_LIFETIME_RATE
+#  define PFKEY_SOFT_LIFETIME_RATE	80
+#endif
+
+#ifndef SADB_X_LIFETIME_ALLOCATIONS
+#  define SADB_X_LIFETIME_ALLOCATIONS	0
+#endif
+#ifndef SADB_X_LIFETIME_BYTES
+#  define SADB_X_LIFETIME_BYTES		1
+#endif
+#ifndef SADB_X_LIFETIME_ADDTIME
+#  define SADB_X_LIFETIME_ADDTIME		2
+#endif
+#ifndef SADB_X_LIFETIME_USETIME
+#  define SADB_X_LIFETIME_USETIME		3
+#endif
+
+#define PFKEY_ALIGN8(a) (1 + (((a) - 1) | (8 - 1)))
+#define	PFKEY_EXTLEN(msg) \
+	PFKEY_UNUNIT64(((struct sadb_ext *)(msg))->sadb_ext_len)
+#define PFKEY_ADDR_PREFIX(ext) \
+	(((struct sadb_address *)(ext))->sadb_address_prefixlen)
+#define PFKEY_ADDR_PROTO(ext) \
+	(((struct sadb_address *)(ext))->sadb_address_proto)
+#define PFKEY_ADDR_SADDR(ext) \
+	((struct sockaddr *)((caddr_t)(ext) + sizeof(struct sadb_address)))
+
+/* in 64bits */
+#define	PFKEY_UNUNIT64(a)	((a) << 3)
+#define	PFKEY_UNIT64(a)		((a) >> 3)
+
+#endif

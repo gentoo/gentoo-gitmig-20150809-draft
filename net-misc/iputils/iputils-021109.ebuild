@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109.ebuild,v 1.2 2003/12/17 04:31:19 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109.ebuild,v 1.3 2003/12/31 17:09:40 plasmaroo Exp $
 
 DESCRIPTION="Network monitoring tools including ping and ping6"
 HOMEPAGE="ftp://ftp.inr.ac.ru/ip-routing"
@@ -22,20 +22,25 @@ RDEPEND="virtual/glibc"
 S="${WORKDIR}/${PN}"
 
 src_unpack() {
+
 	unpack ${A}
 	cd ${S}
 
-	mv Makefile Makefile.orig
-	sed "27s:-O2:${CFLAGS}:" Makefile.orig >Makefile
+	cp ${FILESDIR}/${P}-pfkey.patch include-glibc/net/pfkeyv2.h || die
+	sed -e "27s:-O2:${CFLAGS}:" -i Makefile
+	sed -e "10s:-ll:-lfl:" -i setkey/Makefile
+
 }
 
 src_compile() {
+
 	use static && LDFLAGS="${LDFLAGS} -static"
 	make KERNEL_INCLUDE="/usr/include" || die
 #	if [ "`use doc`" ]; then
 #		make html || die
 #	fi
 	make man || die
+
 }
 
 src_install() {
