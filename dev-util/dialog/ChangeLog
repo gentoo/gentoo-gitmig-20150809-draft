@@ -1,6 +1,15 @@
 # ChangeLog for dev-util/dialog
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.15 2003/03/29 19:32:48 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.16 2003/04/19 00:44:17 lostlogic Exp $
+
+*dialog-0.9_beta20030130 (18 Apr 2003)
+
+  18 Apr 2003; Brandon Low <lostlogic@gentoo.org> Manifest,
+  dialog-0.9_beta20020814.ebuild, dialog-0.9_beta20030130.ebuild,
+  dialog-0.9_beta20030130.ebuild, dialog-0.9_beta20030308.ebuild,
+  dialog-0.9_beta20030308.ebuild:
+  So the 2003 versions were for some reason installing wrong versions of stuff,
+  but the latest version here now works. Enjoy.
 
 *dialog-0.9_beta20030308 (25 Mar 2003)
 
