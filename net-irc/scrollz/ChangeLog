@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/scrollz
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/ChangeLog,v 1.7 2004/05/29 16:16:27 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/scrollz/ChangeLog,v 1.8 2004/06/20 04:22:54 swegener Exp $
+
+*scrollz-1.9.3 (20 Jun 2004)
+
+  20 Jun 2004; Sven Wegener <swegener@gentoo.org> +scrollz-1.9.3.ebuild:
+  Version bump.
 
   29 May 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> scrollz-1.9.ebuild:
   Masked scrollz-1.9.ebuild testing for ppc
