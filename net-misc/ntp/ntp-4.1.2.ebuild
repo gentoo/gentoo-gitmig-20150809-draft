@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.2.ebuild,v 1.27 2004/02/15 00:01:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.2.ebuild,v 1.28 2004/02/15 00:36:16 vapier Exp $
 
 inherit eutils
 
@@ -101,10 +101,10 @@ src_install() {
 
 	[ ! -e /etc/ntp.conf ] && insinto /etc && doins ${FILESDIR}/ntp.conf
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/ntpd.rc ntpd
+	newexe ${FILESDIR}/ntpd-${PV}.rc ntpd
 	newexe ${FILESDIR}/ntp-client.rc ntp-client
 	insinto /etc/conf.d
-	newins ${FILESDIR}/ntpd.confd ntpd
+	newins ${FILESDIR}/ntpd-${PV}.confd ntpd
 	newins ${FILESDIR}/ntp-client.confd ntp-client
 
 	dodir /var/lib/ntp
