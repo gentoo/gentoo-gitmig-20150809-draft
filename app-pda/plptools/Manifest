@@ -1,23 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b2b720a405b54d4a00b56e9989ce0450 ChangeLog 1259
+MD5 9334d39340d685196aaba77867ed98cf ChangeLog 1261
 MD5 8f1a395f7ca3054f5cd79687dbda0881 metadata.xml 216
-MD5 a3e90f33bb64acdbc9ff7199418c7c4b plptools-0.11-r1.ebuild 859
-MD5 744cb0220a789a326bf2b74663060541 plptools-0.11.ebuild 857
-MD5 36ccd8a2e61f5c8f4cc80d5da419b54f plptools-0.12.ebuild 1010
+MD5 b854d97359695ba2b16d3e51219d3264 plptools-0.11-r1.ebuild 862
+MD5 c387ceb6421b35a45048944ad6fd5a9e plptools-0.11.ebuild 859
+MD5 824412da105209f40abcedc7773ee35e plptools-0.12.ebuild 1013
 MD5 ada7c64a2c3655d40ddb78570ac41671 files/digest-plptools-0.11 65
 MD5 ada7c64a2c3655d40ddb78570ac41671 files/digest-plptools-0.11-r1 65
 MD5 d96984b93d3435d81a37b8b0f6bed2bf files/digest-plptools-0.12 65
 MD5 b3ce73e6781d2293d40d0048fcb48c84 files/plptools-0.11-gentoo.patch 516
-MD5 269a36c59ac1b22d516036062c4c1d97 files/plptools-0.12-assert.h.patch 1024
 MD5 1534eb395b69672eeca9811a91419817 files/plptools-0.12-gentoo.patch 446
 MD5 ab42a6f1d4c18d5eee94ce1cb6ba971d files/psion 1113
 MD5 26b69a1efa7dd33edd7beb83ba2b15cd files/psion.conf 94
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBW0hxI1lqEGTUzyQRAomxAKCHsmJC4gjWOmZVasSAHltkAt9JYwCfSfxH
-4o432acNNz1dMOn6WlNHsoQ=
-=/hC7
------END PGP SIGNATURE-----
+MD5 269a36c59ac1b22d516036062c4c1d97 files/plptools-0.12-assert.h.patch 1024

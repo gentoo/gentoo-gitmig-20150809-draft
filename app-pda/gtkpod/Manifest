@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 8c893ad7aef309e486ee1eb7eeaf169e ChangeLog 2661
+MD5 567f4d1679e037df22612e6944c0b4ce gtkpod-0.72.ebuild 814
 MD5 50b72dc36a1b67c4f473a91cbf985f30 metadata.xml 214
-MD5 c7c12baa559d57e4afee3c6fd8079ef6 gtkpod-0.72.ebuild 813
-MD5 d9ee349aace68af54c466d9fd80e90d5 ChangeLog 2657
-MD5 e2eb2e110029380c1c7d3a935189edce gtkpod-0.80.2.ebuild 930
-MD5 b3b3c7f88500ac390447ae02fb4009a2 gtkpod-0.85.0.ebuild 618
+MD5 9545dd2d2b37bb94f54aca514bad13cb gtkpod-0.85.0.ebuild 622
+MD5 8269ea9285fc428dcc472692c09a0d5b gtkpod-0.80.2.ebuild 930
 MD5 74f81179cf2e5095dacc9ecd08805acb files/digest-gtkpod-0.85.0 65
 MD5 92603f4d2d8a0b96d273c6b8b7fffcc0 files/digest-gtkpod-0.72 116
+MD5 088b3dbbc030a735776a312cd68cca03 files/gtkpod-0.72-c89_fix.patch 587
 MD5 5f7578af27cf2dd6523b3c038d52be63 files/gtkpod-0.72-faad2.patch 947
 MD5 f79519e3920b49df9f578cb8798a32c7 files/digest-gtkpod-0.80.2 192
-MD5 088b3dbbc030a735776a312cd68cca03 files/gtkpod-0.72-c89_fix.patch 587
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBxoFKwDHaUUJ0mYMRAm9yAJ0ZTUU+bssv/iNiWNYOZ5PPsY73VQCgkMMi
-s7iuk50p9TXtGeVMIjsio9I=
-=DcKN
------END PGP SIGNATURE-----
