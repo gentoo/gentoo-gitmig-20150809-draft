@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/linesrv/linesrv-2.1.8.ebuild,v 1.3 2004/07/01 21:24:26 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/linesrv/linesrv-2.1.8.ebuild,v 1.4 2004/09/17 22:49:35 squinky86 Exp $
+
+inherit eutils
 
 IUSE="pam"
 
@@ -22,6 +24,8 @@ KEYWORDS="~x86 ~sparc"
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PV}-gcc34.patch
 }
 
 src_compile() {

@@ -1,0 +1,64 @@
+diff -Naur linesrv-2.1.vanilla/server/cfg.c linesrv-2.1/server/cfg.c
+--- linesrv-2.1.vanilla/server/cfg.c	2002-02-17 06:15:11.000000000 -0600
++++ linesrv-2.1/server/cfg.c	2004-09-17 17:45:52.167059584 -0500
+@@ -605,6 +605,7 @@
+ 		}
+ 		break;
+ 	    default:
++	    	;
+ 	}
+     }
+  }
+diff -Naur linesrv-2.1.vanilla/server/html_status.c linesrv-2.1/server/html_status.c
+--- linesrv-2.1.vanilla/server/html_status.c	2002-02-17 02:44:38.000000000 -0600
++++ linesrv-2.1/server/html_status.c	2004-09-17 17:45:52.169059280 -0500
+@@ -18,10 +18,10 @@
+ {
+     fprintf(where, "<html><head><style type=\"text/css\">\n\
+ p, table, br { align: center; font-family: Arial, Helvetica }\n\
+-body, td { font-family: Arial, Helvetica }\n\
+-A { text-decoration: none;\n\
+-font-style: italic;\n\
+-font-family: Arial, Helvetica }\n\
++body, td { font-family: Arial, Helvetica }\n\
++A { text-decoration: none;\n\
++font-style: italic;\n\
++font-family: Arial, Helvetica }\n\
+ </style></head><body bgcolor=\"#ffffff\" text=\"000080\">\n");
+     fprintf(where, "<center><p><a href=\"http://homepage.swissonline.ch/allenfuchs/stefan/lc/\">\
+ <img src=\"/lclog/lc-logo-01.gif\" width=\"246\" height=\"53\" border=\"0\"></a></p>\n\
+diff -Naur linesrv-2.1.vanilla/server/proc.c linesrv-2.1/server/proc.c
+--- linesrv-2.1.vanilla/server/proc.c	2001-02-01 10:55:22.000000000 -0600
++++ linesrv-2.1/server/proc.c	2004-09-17 17:45:52.171058976 -0500
+@@ -224,7 +224,7 @@
+ 		 }
+ 	         break;
+ 	     default:
+-	     // uh... don't dial -> status would be incorrect
++	     ; // uh... don't dial -> status would be incorrect
+ 	 }
+ 	 if ( who->status == CLT_ONLINE )
+ 	 {
+diff -Naur linesrv-2.1.vanilla/server/proc_lcp3.c linesrv-2.1/server/proc_lcp3.c
+--- linesrv-2.1.vanilla/server/proc_lcp3.c	2001-10-28 12:48:52.000000000 -0600
++++ linesrv-2.1/server/proc_lcp3.c	2004-09-17 17:45:52.172058824 -0500
+@@ -158,7 +158,7 @@
+ 			    who->status = CLT_OFFLINE;
+ 			    break;
+ 			default:
+-			    // uh... don't dial -> status would be incorrect
++			    ; // uh... don't dial -> status would be incorrect
+ 	    }
+ 	    lcp3_cmd_queue(CMD3_CLIENTSTAT, who, NULL, 0);
+ 	    break; // CMD3_ONLINE
+diff -Naur linesrv-2.1.vanilla/server/user_pam.c linesrv-2.1/server/user_pam.c
+--- linesrv-2.1.vanilla/server/user_pam.c	2001-06-30 14:38:41.000000000 -0500
++++ linesrv-2.1/server/user_pam.c	2004-09-17 17:45:52.173058672 -0500
+@@ -31,6 +31,7 @@
+ 		rsp[i].resp = strdup("!!");
+ 		break;
+ 	    default:
++	    	;
+ 	}
+ 	rsp[i].resp_retcode = PAM_SUCCESS;
+     }
