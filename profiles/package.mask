@@ -541,5 +541,5 @@ dev-lang/tcl-tk
 >=ispell-3.2.06.ebuild
 
 #seemant@gentoo.org 17 Apr 2002
-#masking so that some users can test it first
-=media-video/mplayer-0.60-r6
+# ispell-de needs to be checked
+=ispell-de-20011124
