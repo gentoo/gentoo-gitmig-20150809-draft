@@ -1,10 +1,24 @@
 # ChangeLog for app-emulation/wine
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.20 2002/10/12 13:12:23 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.21 2002/10/15 14:55:37 phoenix Exp $
 
-*wine-20020904-r1 (12 Oct 2002)
+*wine-20021007 (12 Oct 2002)
 
-  12 Oct 2002; phoen][x <phoenix@gentoo.org> wine-20020 .ebuild, ChangeLog :
+  15 Oct 2002; phoen][x <phoenix@gentoo.org> wine-20021007.ebuild, ChangeLog,
+  files/wine-20021007-fake_windows.tar.bz2, files/wine-20021007-misc.tar.bz2 :
+
+  Major rewrite:
+  - config, regedit-wine and wine are now in a tarball called ${P}-misc.tar.bz2
+  - the fake_windows tarball ( ${P}-fake_windows.tar.bz2 ) goes to ${FILESDIR} now
+  - regedit-wine uses the new bin/regedit instead of bin/regapi ( see bug #9001 )
+  - the default config is useful now ( running stuff outta the box should work )
+  - the wine wrapper ( /usr/bin/wine ) uses /usr/bin/regedit for the initial 
+    import of winedefault.reg
+  - using do{ins,bin} over mv/cp
+  - fixed permissions in /usr/lib/wine/.data
+  - added lots of comments
+
+  12 Oct 2002; phoen][x <phoenix@gentoo.org> wine-20021007.ebuild, ChangeLog :
 
   Bumped to new version.
 

@@ -1,17 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20021007.ebuild,v 1.1 2002/10/12 13:12:23 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20021007.ebuild,v 1.2 2002/10/15 14:55:37 phoenix Exp $
 
 IUSE="nas arts cups opengl alsa"
 
-DESCRIPTION="Wine is a free implementation of Windows on Unix."
+DESCRIPTION="Wine is a free implementation of Windows(tm) on Unix."
 SRC_URI="ftp://metalab.unc.edu/pub/Linux/ALPHA/wine/development/Wine-${PV}.tar.gz"
 HOMEPAGE="http://www.winehq.com/"
-
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 -ppc -sparc -sparc64"
-
 DEPEND="virtual/x11
 	sys-devel/gcc
 	sys-devel/flex
@@ -47,41 +45,56 @@ src_compile() {
 	cp Makefile 1
 	sed -e 's:wine.pm:include/wine.pm:' 1 > Makefile
 	
+	# No parallel make
 	cd ${S}	
 	make depend all || die
 	cd programs && emake || die
-	
 }
 
 src_install () {
-
 	local WINEMAKEOPTS="prefix=${D}/usr/lib/wine"
 	
+	### Install wine to ${D}
 	cd ${S}
 	make ${WINEMAKEOPTS} install || die
 	cd ${S}/programs
 	make ${WINEMAKEOPTS} install || die
 	
-	# Creates /usr/lib/wine/.data with fake_windows in it
-	# This is needed for our wine wrapper script
+	# Needed for later installation
+	mkdir -p ${D}/usr/bin
+ 
+	### Creation of /usr/lib/wine/.data 
+	# Setting up fake_windows
 	mkdir ${D}/usr/lib/wine/.data
-	cp -R ${WORKDIR}/fake_windows ${D}/usr/lib/wine/.data
-	cp ${FILESDIR}/${P}-config ${D}/usr/lib/wine/.data/config
-	cp ${WORKDIR}/${P}/winedefault.reg ${D}/usr/lib/wine/.data/winedefault.reg
+	cd ${D}/usr/lib/wine/.data
+	tar jxvf ${FILESDIR}/${P}-fake_windows.tar.bz2
+	chown root:root fake_windows/ -R
 
-	# Install the wrapper script
-	mkdir ${D}/usr/bin
-	cp ${FILESDIR}/${P}-wine ${D}/usr/bin/wine
-	cp ${FILESDIR}/${P}-regedit ${D}/usr/bin/regedit-wine
+	# Unpacking the miscellaneous files
+	tar jxvf ${FILESDIR}/${P}-misc.tar.bz2
+	chown root:root config
 
+	# moving the wrappers to bin/
+	insinto /usr/bin
+	dobin regedit-wine wine
+	rm regedit-wine wine
+
+	# copying the winedefault.reg into .data
+	insinto /usr/lib/wine/.data
+	doins ${WORKDIR}/${P}/winedefault.reg
+
+	# Set up this dynamic data
+	cd ${S}
+	insinto /usr/lib/wine/.data/fake_windows/Windows
+	doins documentation/samples/system.ini
+	doins documentation/samples/generic.ppd
+	## Setup of .data complete
+
+	### Misc tasks
 	# Take care of the documentation
 	cd ${S}
 	dodoc ANNOUNCE AUTHORS BUGS ChangeLog DEVELOPERS-HINTS LICENSE README
 
-	insinto /usr/lib/wine/.data/fake_windows/Windows
-	doins documentation/samples/system.ini
-	doins documentation/samples/generic.ppd
-	
 	# Manpage setup
 	cp ${D}/usr/lib/${PN}/man/man1/wine.1 ${D}/usr/lib/${PN}/man/man1/${PN}.1
 	doman ${D}/usr/lib/${PN}/man/man1/${PN}.1
@@ -100,9 +113,5 @@ pkg_postinst() {
 	einfo "*       wine registry.                                               *"
 	einfo "*       If you have further questions, enhancements or patches       *"
 	einfo "*       send an email to phoenix@gentoo.org                          *"
-	einfo "*                                                                    *"
-	einfo "*       Manpage has been installed to the system.                    *"
-	einfo "*       \"man wine\" should show it.                                   *"
 	einfo "**********************************************************************"
 }
-
