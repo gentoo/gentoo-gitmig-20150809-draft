@@ -1,6 +1,15 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.27 2002/09/10 09:17:58 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.28 2002/09/11 10:30:38 seemant Exp $
+
+*fluxbox-0.1.11-r3 (11 Sep 2002)
+
+  11 Sep 2002; Seemant Kulleen <seemant@gentoo.org> fluxbox-0.1.11-r3.ebuild
+  files/digest-fluxbox-0.1.11-r3 :
+
+  New bugfix2 patch which fixes all the bugs from bugfix1, and the deadlock
+  bug introduced by bugfix1.  Thanks to: gentoobug@tobij.de (Tobias) in bug
+  #7772
 
 *fluxbox-0.1.11-r2 (10 Sep 2002)
 
