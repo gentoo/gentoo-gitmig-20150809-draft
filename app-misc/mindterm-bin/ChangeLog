@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/mindterm-bin
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mindterm-bin/ChangeLog,v 1.1 2004/02/15 01:31:52 zx Exp $
+
+*mindterm-bin-2.4.1 (14 Feb 2004)
+
+  14 Feb 2004; <zx@gentoo.org> mindterm-bin-2.4.1.ebuild:
+  Initial Import.
+  Thanks to Thiemo Kellner <thiemo@thiam.ch> for initial bug report. Bug #21621
+
