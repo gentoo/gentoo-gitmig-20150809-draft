@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <foser@gentoo.org> (27 Feb 2003)
+# Doesnt work with new gst versions, waiting for new version to appear
+dev-util/gst-editor
+
 # <alain@gentoo.org> (26 Feb 2003)
 # New syntax - not meant for distribution.
 =sys-apps/portage-2.0.47-r5
