@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3ee15c36d270d04bad5c1b59e7c0d9d2 vis5d+-1.2.1.ebuild 771
-MD5 5d1957256a77ee2e53f7b64fc6702279 ChangeLog 820
+MD5 973a5afecc26da6be2c402d79a4a191f ChangeLog 828
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 4ba00dc3561f9518c8cbdf91d83e1b5b files/digest-vis5d+-1.2.1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB0oPTI1lqEGTUzyQRAoN9AKC2ob2NOJcfKRRwFsFR9sfoDWL0NQCgpYvm
+haWnSJ49/gyCsTwE46nCUPo=
+=6uWu
+-----END PGP SIGNATURE-----
