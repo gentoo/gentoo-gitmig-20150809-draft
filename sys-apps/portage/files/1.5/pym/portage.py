@@ -236,7 +236,7 @@ def gen_archnames():
 	print "A='"+returnme[1:]+"'"
 
 def doebuild(myebuild,mydo):
-	return os.system("/usr/bin/ebuild "+myebuild+" "+mydo)
+	return os.system("/usr/sbin/ebuild "+myebuild+" "+mydo)
 
 def isdev(x):
 	mymode=os.stat(x)[ST_MODE]
@@ -276,7 +276,7 @@ def pathstrip(x,mystart):
     return [root+x[len(cpref)+1:],x[len(cpref):]]
 
 def pkgscript(x,myebuildfile):
-	myresult=getstatusoutput("/usr/bin/ebuild "+myebuildfile+" "+x)
+	myresult=getstatusoutput("/usr/sbin/ebuild "+myebuildfile+" "+x)
 	if myresult[0] or myresult[1]:
 		print
 	if myresult[0]:
