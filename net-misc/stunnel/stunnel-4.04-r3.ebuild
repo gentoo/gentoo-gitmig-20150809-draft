@@ -1,11 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-4.04-r3.ebuild,v 1.6 2004/07/01 22:00:33 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/stunnel/stunnel-4.04-r3.ebuild,v 1.7 2004/07/15 03:38:18 agriffis Exp $
 
 inherit ssl-cert eutils
 
 IUSE="static"
-S=${WORKDIR}/${P}
 DESCRIPTION="TLS/SSL - Port Wrapper"
 SRC_URI="http://www.stunnel.org/download/stunnel/src/${P}.tar.gz"
 HOMEPAGE="http://stunnel.mirt.net"
