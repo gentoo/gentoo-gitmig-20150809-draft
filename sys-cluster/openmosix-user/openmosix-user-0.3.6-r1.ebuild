@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/openmosix-user-0.3.6-r1.ebuild,v 1.1 2004/08/05 15:02:54 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/openmosix-user-0.3.6-r1.ebuild,v 1.2 2004/08/06 07:11:44 voxus Exp $
 
 PV=0.3.6-2
 S=${WORKDIR}/openmosix-tools-${PV}
@@ -15,7 +15,7 @@ RDEPEND="${DEPEND}
 	dev-lang/perl"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* x86"
 IUSE=""
 
 pkg_setup() {
