@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.170-r1.ebuild,v 1.4 2004/12/28 17:12:32 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/webmin/webmin-1.170-r2.ebuild,v 1.1 2004/12/31 22:14:12 eradicator Exp $
 
 IUSE="ssl apache2 webmin-minimal"
 
@@ -80,16 +80,14 @@ src_install() {
 	newins ${FILESDIR}/webmin-pam webmin
 	echo gentoo > ${D}/usr/libexec/webmin/install-type
 
-	exeinto /etc/webmin
-	doexe ${FILESDIR}/uninstall.sh
-}
+	# Fix ownership
+	chown -R root:root ${D}
 
-pkg_postinst() {
-	${ROOT}/etc/init.d/webmin stop >/dev/null 2>&1
-	stopstatus=$?
-	cd ${ROOT}/usr/libexec/webmin
-	config_dir=${ROOT}/etc/webmin
-	var_dir=${ROOT}/var/log/webmin
+	dodir /etc/webmin
+	dodir /var/log/webmin
+
+	config_dir=${D}/etc/webmin
+	var_dir=${D}/var/log/webmin
 	perl=${ROOT}/usr/bin/perl
 	autoos=1
 	port=10000
@@ -103,18 +101,31 @@ pkg_postinst() {
 	autothird=1
 	nouninstall=1
 	noperlpath=1
-	export config_dir var_dir perl autoos port login crypt host ssl nochown autothird nouninstall nostart noperlpath
-	perl ${ROOT}/usr/libexec/webmin/maketemp.pl
-	./setup.sh > ${ROOT}/tmp/.webmin/webmin-setup.out 2>&1
+	tempdir="${T}"
+	export config_dir var_dir perl autoos port login crypt host ssl nochown autothird nouninstall nostart noperlpath tempdir
+	${D}/usr/libexec/webmin/setup.sh > ${T}/webmin-setup.out 2>&1 || die "Failed to create initial webmin configuration."
 
+	# Fixup the config files to use their real locations
+	sed -i 's:^pidfile=.*$:pidfile=/var/run/webmin.pid:' ${D}/etc/webmin/miniserv.conf
+	find ${D}/etc/webmin -type f -exec sed -i "s:${D}:${ROOT}:g" {} \;
+
+	# Cleanup from the config script
+	rm -rf ${D}/var/log/webmin
+	keepdir /var/log/webmin/
+
+	exeinto /etc/webmin
+	doexe ${FILESDIR}/uninstall.sh
+}
+
+pkg_postinst() {
+	${ROOT}/etc/init.d/webmin stop >/dev/null 2>&1
+	stopstatus=$?
 	if [ "$stopstatus" = "0" ]; then
 		# Start if it was running before
 		${ROOT}/etc/init.d/webmin start
 	fi
 
-	sed -i 's:^pidfile=.*$:pidfile=/var/run/webmin.pid:' ${ROOT}/etc/webmin/miniserv.conf
-
-	einfo "Add webmin to your boot-time services with 'rc-update add webmin'."
+	einfo "To make webmin start at boot time, run: 'rc-update add webmin default'."
 	einfo "Point your web browser to http://localhost:10000 to use webmin."
 }
 
