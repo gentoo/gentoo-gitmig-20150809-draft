@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/fakeroot
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.1 2002/08/13 14:20:36 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fakeroot/ChangeLog,v 1.2 2002/09/30 03:53:22 mkennedy Exp $
+
+*fakeroot-0.4.4-r1 (29 Sep 2002)
+
+  29 Sep 2002; Matthew Kennedy <mkennedy@gentoo.org>
+  files/digest-fakeroot-0.4.4-r1, files/fakeroot-gcc3-gentoo.patch,
+  fakeroot-0.4.4-r1.ebuild, ChangeLog :
+
+  C++ patch for GCC3.2. Resolves bug #8538.
 
 *fakeroot-0.4.4 (13 Aug 2002)
 
