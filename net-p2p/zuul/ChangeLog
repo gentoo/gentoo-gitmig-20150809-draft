@@ -1,0 +1,9 @@
+# ChangeLog for net-p2p/zuul
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header $
+
+*zuul-1.0.0 (16 Jul 2003)
+
+  16 Jul 2003; Don Seiler <rizzo@gentoo.org>; zuul-1.0.0.ebuild:
+  Initial import.  Submitted by me
+
