@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <pebenito@gentoo.org> (13 July 2003)
+# new upstream release, mask for testing
+>=sys-apps/selinux-small-2003071106
+
 # <spyderous@gentoo.org> (11 July 2003)
 # xfree development series
 >=x11-base/xfree-4.3.99
