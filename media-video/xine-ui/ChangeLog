@@ -1,6 +1,10 @@
 # ChangeLog for media-video/xine-ui
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.37 2003/10/21 15:04:02 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/ChangeLog,v 1.38 2003/10/31 15:48:42 mholzer Exp $
+
+  31 Oct 2003; Martin Holzer <mholzer@gentoo.org> xine-ui-0.9.21.ebuild,
+  xine-ui-0.9.22.ebuild:
+  doesn't work without aalib.
 
   22 Oct 2003; Martin Holzer <mholzer@gentoo.org> xine-ui-0.9.13.ebuild,
   xine-ui-0.9.21.ebuild, xine-ui-0.9.22.ebuild:

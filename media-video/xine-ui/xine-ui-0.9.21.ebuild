@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.9.21.ebuild,v 1.8 2003/10/27 15:58:52 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xine-ui/xine-ui-0.9.21.ebuild,v 1.9 2003/10/31 15:48:42 mholzer Exp $
 
 DESCRIPTION="Skinned front end for Xine movie player."
 HOMEPAGE="http://xine.sourceforge.net/"
@@ -11,13 +11,13 @@ DEPEND="media-libs/libpng
 	>=net-ftp/curl-7.10.2
 	lirc? ( app-misc/lirc )
 	X? ( virtual/x11 )
-	aalib? ( media-libs/aalib )
+	media-libs/aalib
 	gnome? ( gnome-base/ORBit )
 	directfb? ( media-libs/aalib
 		>=dev-libs/DirectFB-0.9.9 )"
 RDEPEND="nls? ( sys-devel/gettext )"
 
-IUSE="X aalib gnome nls directfb lirc"
+IUSE="X gnome nls directfb lirc"
 
 SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc"
