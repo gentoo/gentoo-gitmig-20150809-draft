@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre3-r5.ebuild,v 1.7 2004/04/19 22:34:26 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre3-r5.ebuild,v 1.8 2004/04/28 05:16:51 lv Exp $
 
 IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb samba lirc matroska debug joystick theora ipv6 v4l v4l2"
 
@@ -113,6 +113,10 @@ src_unpack() {
 
 	#Add support for another G3 cpu
 	epatch ${FILESDIR}/ppc750FX-fix.patch
+
+	# GCC 3.4 fixes
+	epatch ${FILESDIR}/${P}-libavcodec-gcc34.patch
+	epatch ${FILESDIR}/${P}-alsa-gcc34.patch
 
 	# Fix hppa detection
 	[ "${ARCH}" = "hppa" ] && sed -i -e "s/9000*/parisc*/" "${S}/configure"

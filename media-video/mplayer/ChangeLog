@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.122 2004/04/19 22:34:26 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.123 2004/04/28 05:16:51 lv Exp $
+
+  28 Apr 2004; Travis Tilley <lv@gentoo.org>
+  +files/mplayer-1.0_pre3-alsa-gcc34.patch,
+  +files/mplayer-1.0_pre3-libavcodec-gcc34.patch, mplayer-1.0_pre3-r5.ebuild:
+  added a fix for compiling with gcc 3.4. yaaay! =)
 
   19 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org> mplayer-0.92-r1.ebuild,
   mplayer-1.0_pre2-r1.ebuild, mplayer-1.0_pre3-r3.ebuild,
