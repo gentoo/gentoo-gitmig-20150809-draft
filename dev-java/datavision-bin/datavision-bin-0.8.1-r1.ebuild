@@ -1,9 +1,9 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/datavision-bin/datavision-bin-0.8.1-r1.ebuild,v 1.3 2005/01/01 18:22:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/datavision-bin/datavision-bin-0.8.1-r1.ebuild,v 1.4 2005/03/14 11:40:52 sejo Exp $
 
 DESCRIPTION="DataVision is an Open Source reporting tool similar to Crystal Reports"
-SRC_URI="mirror:///sourceforge/datavision/${P/-bin}.tar.gz"
+SRC_URI="mirror://sourceforge/datavision/${P/-bin}.tar.gz"
 HOMEPAGE="http://datavision.sourceforge.net/"
 
 IUSE="mysql postgres"
