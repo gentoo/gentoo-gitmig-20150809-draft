@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.25_p1-r3.ebuild,v 1.2 2003/11/04 14:12:22 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.25_p1-r3.ebuild,v 1.3 2003/12/15 02:09:57 weeve Exp $
 
 IUSE="tcltk java doc"
 
@@ -30,7 +30,7 @@ done
 HOMEPAGE="http://www.sleepycat.com"
 SLOT="4.1"
 LICENSE="DB"
-KEYWORDS="ia64 ~x86 ~ppc ~alpha ~amd64"
+KEYWORDS="ia64 ~x86 ~ppc ~alpha ~amd64 ~sparc"
 
 DEPEND="tcltk? ( dev-lang/tcl )
 	java? ( virtual/jdk )"
@@ -63,6 +63,10 @@ src_compile() {
 	if use java && [ -n "${JAVAC}" ]; then
 		export PATH=`dirname ${JAVAC}`:${PATH}
 		export JAVAC=`basename ${JAVAC}`
+	fi
+
+	if [ "${PROFILE_ARCH}" = "sparc64" ]; then
+		myconf="${myconf} --host=${CHOST}"
 	fi
 
 	../dist/configure \

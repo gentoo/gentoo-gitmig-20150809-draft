@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.68 2003/11/06 10:46:10 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.69 2003/12/15 02:09:57 weeve Exp $
+
+*db-4.1.25_p1-r3 (14 Dec 2003)
+
+  14 Dec 2003; Jason Wever <weeve@gentoo.org> db-4.1.25_p1-r3.ebuild:
+  Added sparc64 fix and and ~sparc keyword.
 
   06 Nov 2003; Paul de Vrieze <pauldv@gentoo.org> db-4.0.14-r3.ebuild:
   Add the fix for the ibm jdk
