@@ -3,7 +3,8 @@
 
 # unreproducable weird problems so we are trying new ximian and redhat
 # patches -- blocke, 5/27/02
->=x11-libs/gtk+-1.2.10-r8
+# Changed this to not block gtk+ 2.
+=x11-libs/gtk+-1.2.10-r8
 
 # old version isn't available, new version doesn't compile
 media-libs/nurbs++
@@ -21,9 +22,10 @@ media-libs/nurbs++
 
 # Just masked until more testing can be done. (sandymac, 24 May 2002)
 # If you unmask mozilla, please do so to galeon and nautilus as well
+# changed nautilus mask to not block natuils 1.1.18 
 >=net-www/mozilla-1.0_rc3
 =net-www/galeon-1.2.3
->=gnome-base/nautilus-1.0.6-r9
+=gnome-base/nautilus-1.0.6-r9
 
 # devel branch of syslog-ng -- broken (blocke, May 21, 2002)
 >=app-admin/syslog-ng-1.5.17
