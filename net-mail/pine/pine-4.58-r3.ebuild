@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.58-r3.ebuild,v 1.1 2003/11/09 07:46:59 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.58-r3.ebuild,v 1.2 2003/11/10 14:21:58 vapier Exp $
 
 inherit eutils
 
@@ -137,5 +137,4 @@ src_install() {
 
 	docinto html/tech-notes
 	dohtml -r doc/tech-notes/
-	die
 }
