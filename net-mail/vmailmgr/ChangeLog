@@ -1,13 +1,18 @@
 # ChangeLog for net-mail/vmailmgr
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/ChangeLog,v 1.3 2002/04/29 08:49:21 bangert Exp $
-
-  29 Apr 2002; Thilo Bangert <bangert@gentoo.org> ChangeLog :
-
-  fix install locations for the courier-imap auth lib and php and cgi scripts
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/ChangeLog,v 1.4 2002/09/28 10:03:32 raker Exp $
 
 *vmailmgr-0.96.9-r1 (16 Apr 2002)
 
-  16 Apr 2002; Thilo Bangert <bangert@gentoo.org> ChangeLog :
+  28 Sep 2002; Nick Hadaway <raker@gentoo.org>
+  vmailmgr-0.96.9-r1.ebuild, files/vmailmgr-0.96.9-gentoo-r1.diff :
+  Updated diff from bug #8445.  Added CXX="g++" to solve compile
+  problems with gcc3 and added -lsupc++ to LIBS so linked code will
+  understand the new, delete, etc. operator functions.  Changed to
+  econf and einstall.  Whew!
 
+  29 Apr 2002; Thilo Bangert <bangert@gentoo.org> ChangeLog :
+  fix install locations for the courier-imap auth lib and php and cgi scripts
+
+  16 Apr 2002; Thilo Bangert <bangert@gentoo.org> ChangeLog :
   initial release ;-)

@@ -1,8 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/vmailmgr-0.96.9-r1.ebuild,v 1.6 2002/08/14 12:05:25 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/vmailmgr-0.96.9-r1.ebuild,v 1.7 2002/09/28 10:03:32 raker Exp $
 
 S=${WORKDIR}/${P}
+
 DESCRIPTION="vmailmgr - virtual domains for qmail"
 SRC_URI="http://www.vmailmgr.org/current/${P}.tar.gz"
 HOMEPAGE="http://www.vmailmgr.org"
@@ -17,26 +18,26 @@ LICENSE="GPL-2"
 KEYWORDS="x86 sparc sparc64"
 
 src_unpack() {
-	unpack ${A} ; cd ${S}
 
-	#make sure stuff get's installed the right places
-	patch -p1 < ${FILESDIR}/${P}-gentoo.diff || die
+	unpack ${A} ; cd ${S}
+	patch -p1 < ${FILESDIR}/${P}-gentoo-r1.diff || die
 
 }
 
 src_compile() {
 
-	./configure \
-		--host=${CHOST} \
-		--prefix=/usr \
-		--infodir=/usr/share/info \
-		--mandir=/usr/share/man || die "./configure failed"
-	emake || die
+	export CXX=g++
+	export LIBS="-lcrypt -lsupc++"
+
+	econf || die "./configure failed"
+
+	emake || die "parallel make failed"
+
 }
 
 src_install () {
 
-	make DESTDIR=${D} install || die
+	einstall || die "make install failed"
 
 	dodoc AUTHORS INSTALL README TODO NEWS
 
@@ -58,6 +59,8 @@ src_install () {
 }
 
 pkg_postinst() {
+
 	einfo "To start vmailmgrd you need to link"
 	einfo "/var/lib/supervise/vmailmgrd to /service"
+
 }
