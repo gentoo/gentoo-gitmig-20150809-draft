@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/LinNeighborhood
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/LinNeighborhood/ChangeLog,v 1.7 2003/02/15 07:57:08 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/LinNeighborhood/ChangeLog,v 1.8 2003/12/13 19:40:19 zul Exp $
+
+  13 Dec 2003; Chuck Short <zul@gentoo.org> LinNeighborhood-0.6.5.ebuild:
+  Added amd64 keyword.
+  Closes bug #35692
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
