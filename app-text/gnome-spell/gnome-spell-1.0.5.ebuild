@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-1.0.5.ebuild,v 1.11 2004/06/24 22:36:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gnome-spell/gnome-spell-1.0.5.ebuild,v 1.12 2004/07/14 01:59:43 agriffis Exp $
 
 IUSE=""
 
 inherit gnome.org gnome2 libtool debug # because this an unstable package
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="Gnome spellchecking component."
 HOMEPAGE="http://www.gnome.org/"
 
