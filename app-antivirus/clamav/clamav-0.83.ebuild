@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.82-r1.ebuild,v 1.2 2005/02/14 01:47:19 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/clamav/clamav-0.83.ebuild,v 1.1 2005/02/14 01:47:19 ticho Exp $
 
 inherit eutils flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/clamav/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~amd64 ~hppa ~alpha ~ppc64"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~hppa ~alpha ~ppc64"
 IUSE="crypt milter selinux"
 
 DEPEND="virtual/libc
@@ -26,12 +26,6 @@ pkg_setup() {
 	enewgroup clamav
 	enewuser clamav -1 /bin/false /dev/null clamav
 	pwconv || die
-}
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-MS05-002-false-positive-fix.patch || die
 }
 
 src_compile() {
