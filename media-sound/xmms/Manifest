@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 86444a8b167b25bc06cc0cc7ca93fe87 ChangeLog 29935
 MD5 5a8290e44006ccff0dff3094555d6366 metadata.xml 257
 MD5 33b564ef94a980547348ae5478c6fd24 xmms-1.2.10-r5.ebuild 5545
+MD5 cdc71627194b5c84ec6aed68da7bfd08 xmms-1.2.10-r13.ebuild 4975
 MD5 1f4aab1f3653bb6e5fb441d038160e52 xmms-1.2.8-r4.ebuild 5246
-MD5 86444a8b167b25bc06cc0cc7ca93fe87 ChangeLog 29935
-MD5 63752f3f1f3d987c375cca6713dd12bc xmms-1.2.10-r13.ebuild 4983
 MD5 aa46b23a1cf0655c7f09adbdd623d49f files/digest-xmms-1.2.10-r5 219
 MD5 f52f09b25da87c876de70b6177292f2e files/digest-xmms-1.2.8-r4 216
 MD5 7d2f3807ebbff435b909ecf0539cbf4f files/xmms.desktop 722
-MD5 4190322696afc5e46dac14804b8aef70 files/po-update.pl 10510
 MD5 4414d53b65874ac2c610a3f2396654cd files/digest-xmms-1.2.10-r13 354
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCNNyIArHZZzCEUG0RAkuAAJ47MiFqYQoHNHQDDz5BghafpzeWtgCcD5uK
-iCqDl7mA1aijpZVZLNYNj6Y=
-=z0ms
------END PGP SIGNATURE-----
+MD5 4190322696afc5e46dac14804b8aef70 files/po-update.pl 10510
