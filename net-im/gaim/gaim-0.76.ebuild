@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.76.ebuild,v 1.1 2004/04/02 14:28:55 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.76.ebuild,v 1.2 2004/04/02 14:32:34 rizzo Exp $
 
 inherit flag-o-matic eutils gcc
 use debug && inherit debug
@@ -20,7 +20,6 @@ DEPEND=">=x11-libs/gtk+-2.0
 	nas? ( >=media-libs/nas-1.4.1-r1 )
 	sys-devel/gettext
 	media-libs/libao
-	>=sys-apps/sed-4.0.0
 	>=media-libs/audiofile-0.2.0
 	perl? ( >=dev-lang/perl-5.6.1 )
 	spell? ( >=app-text/gtkspell-2.0.2 )
