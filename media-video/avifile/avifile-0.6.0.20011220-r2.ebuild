@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author:  Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.6.0.20011220-r2.ebuild,v 1.3 2002/04/14 02:37:18 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.6.0.20011220-r2.ebuild,v 1.4 2002/04/14 16:26:23 seemant Exp $
 
 MY_P=${P/.200/-200}
 MY_S=${MY_P/avifile-/avifile}
@@ -14,7 +14,7 @@ HOMEPAGE="http://divx.euro.ru/"
 DEPEND=">=media-libs/divx4linux-20011025
 	media-libs/jpeg
 	media-libs/win32codecs
-	qt? ( =x11-libs/qt-2.3.2* )
+	qt? ( x11-libs/qt )
 	nas? ( >=media-libs/nas-1.4.2 )
 	sdl? ( >=media-libs/libsdl-1.2.2 )
 	oggvorbis? ( media-libs/libvorbis )"
