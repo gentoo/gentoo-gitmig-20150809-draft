@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/mplus-fonts
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/mplus-fonts/ChangeLog,v 1.1 2003/07/26 18:32:12 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/mplus-fonts/ChangeLog,v 1.2 2003/07/27 09:13:58 usata Exp $
+
+*mplus-fonts-2.0.2 (27 Jul 2003)
+
+  27 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> mplus-fonts-2.0.2.ebuild:
+  Version bump. Added ~alpha, ~ppc and ~sparc keywords.
 
 *mplus-fonts-2.0.1 (27 Jul 2003)
 

@@ -1,4 +1,6 @@
 MD5 308322dbf939fb814b5abb3460051679 mplus-fonts-2.0.1.ebuild 1073
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 6db8180c3220f4ebc6395f48d2f34ed1 ChangeLog 460
+MD5 a5f8e9cb7e58f873d4b200b97bdc1b05 ChangeLog 626
+MD5 cdb5536ee53c28116fb7d3fd4f3ca995 mplus-fonts-2.0.2.ebuild 1121
 MD5 19c022a4d037ea8be8724203aead1918 files/digest-mplus-fonts-2.0.1 76
+MD5 399f7fca1a01bdbb46ad5d78f5627917 files/digest-mplus-fonts-2.0.2 76
