@@ -1,8 +1,15 @@
-MD5 98fc24ea0a803431e2bd8533477f0175 memtest86-3.1a.ebuild 1935
-MD5 41a59f005c9232d174d4595b0c72eb87 memtest86-3.2.ebuild 1935
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e0d4b12d48ff97d1278fd932f114dffe ChangeLog 3636
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 9b8f71a15e2d7236b658f1f9e0fb79df files/memtest86-3.2-test-pic.patch 641
-MD5 979465b1a112b7a052c36a57b8878867 files/memtest86-3.1a-test-pic.patch 606
+MD5 257bd95abb74ad08d91cc86bc48996d6 memtest86-3.2.ebuild 1932
 MD5 64a30db4579e12539572f71ca895e1ed files/digest-memtest86-3.2 65
-MD5 1a7396d4f6539280d03b33e8047f9cd9 files/digest-memtest86-3.1a 66
+MD5 9b8f71a15e2d7236b658f1f9e0fb79df files/memtest86-3.2-test-pic.patch 641
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.14 (GNU/Linux)
+
+iD8DBQFB4y0uroRuSHgZdywRAly+AJ9YEXlEtd7/MBWeXE/R8VmERULoFQCfUewI
+aFxp97l2Tj2oEF8ZXlKG7nI=
+=bQOz
+-----END PGP SIGNATURE-----
