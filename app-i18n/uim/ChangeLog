@@ -1,6 +1,13 @@
 # ChangeLog for app-i18n/uim
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.4 2003/08/31 21:54:38 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.5 2003/09/05 00:03:43 usata Exp $
+
+*uim-0.0.3 (05 Sep 2003)
+
+  05 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> uim-0.0.2.1.ebuild,
+  uim-0.0.3.ebuild:
+  Version bumped. Removed unused canna USE flag (uim-canna have never
+  worked, anyway). Fixed gtk USE flag (it hadn't worked since uim-2018).
 
 *uim-0.0.2.1 (01 Sep 2003)
 
