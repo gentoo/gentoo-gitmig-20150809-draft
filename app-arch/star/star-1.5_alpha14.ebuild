@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/star/star-1.5_alpha14.ebuild,v 1.2 2003/11/23 02:35:56 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/star/star-1.5_alpha14.ebuild,v 1.3 2003/12/26 11:13:22 plasmaroo Exp $
 
 S=${WORKDIR}/${P/_alpha[0-9][0-9]}
 
@@ -20,8 +20,8 @@ DEPEND="virtual/glibc"
 src_unpack() {
 	unpack ${A}
 	cd ${S}/DEFAULTS
-	cp Defaults.linux Defaults.linux.orig
-	sed -e 's:/opt/schily:/usr:g' -e 's:bin:root:g' Defaults.linux.orig > Defaults.linux
+	sed -e 's:/opt/schily:/usr:g' -e 's:bin:root:g' -i Defaults.linux
+	sed -e 's:/usr/src/linux/include:/usr/include:' -i Defaults.linux
 
 	if [ "${ARCH}" = "amd64" ]
 	then

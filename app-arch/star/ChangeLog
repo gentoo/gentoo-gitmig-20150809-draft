@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/star
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.2 2003/11/23 02:35:56 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/star/ChangeLog,v 1.3 2003/12/26 11:13:22 plasmaroo Exp $
+
+  26 Dec 2003; <plasmaroo@gentoo.org> star-1.5_alpha14.ebuild:
+  Updated the ebuild, the Makefiles are now patched to use global linux 
+  headers - which are patched to support this - this should resolve bug 
+  #35225.
 
   22 Nov 2003; Jason Wever <weeve@gentoo.org> star-1.5_alpha14.ebuild:
   Marked stable on sparc.
