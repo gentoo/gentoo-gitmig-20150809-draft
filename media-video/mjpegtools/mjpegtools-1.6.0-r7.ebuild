@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.0-r7.ebuild,v 1.20 2004/03/30 04:44:11 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.0-r7.ebuild,v 1.21 2004/06/09 17:09:41 agriffis Exp $
 
 inherit eutils gcc libtool flag-o-matic base
 
@@ -49,7 +49,7 @@ src_unpack() {
 		sed -i "s:\"jpeg/jpeglib.h\":<jpeglib.h>:" libmjpeg.h
 		sed -i "s:\"jpeg/jpeglib.h\":<jpeglib.h>:" jpeg_old.h
 
-		if [ "`gcc-major-version`" -eq "3" ] ; then
+		if [ $(gcc-major-version) -eq 3 ] ; then
 		# Don't remove this - contact phoen][x <phoenix@gentoo.org> if you have problems with it.
 		cd ${S}/lavtools
 		sed -i "s/dv_decoder_new(0,0,0)\;/dv_decoder_new()\;/" lav_common.c

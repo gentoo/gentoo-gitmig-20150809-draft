@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r3.ebuild,v 1.9 2004/06/08 05:50:35 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r3.ebuild,v 1.10 2004/06/09 17:05:36 agriffis Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -403,7 +403,7 @@ pkg_preinst() {
 
 pkg_postinst() {
 
-	if [ -n "`use ppc`" ]
+	if use ppc
 	then
 		echo
 		einfo "When you see only GREEN salad on your G4 while playing"

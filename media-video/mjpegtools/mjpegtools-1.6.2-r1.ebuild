@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r1.ebuild,v 1.8 2004/05/12 13:46:27 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r1.ebuild,v 1.9 2004/06/09 17:09:41 agriffis Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -43,24 +43,24 @@ src_unpack() {
 src_compile() {
 	local myconf
 
-	[ `gcc-major-version` -eq 3 ] && [ "${ARCH}" == "x86" ] && append-flags -mno-sse2
+	[ $(gcc-major-version) -eq 3 ] && [ "${ARCH}" == "x86" ] && append-flags -mno-sse2
 
-	myconf="${myconf} `use_with X x`"
-	myconf="${myconf} `use_with quicktime`"
-	myconf="${myconf} `use_enable x86 cmov-extensions`"
+	myconf="${myconf} $(use_with X x)"
+	myconf="${myconf} $(use_with quicktime)"
+	myconf="${myconf} $(use_enable x86 cmov-extensions)"
 
 	# Fix for Via C3-1, see #30345
 	grep -q cmov /proc/cpuinfo || myconf="${myconf} --enable-cmov-extension=no"
 
-	if [ "`use dv`" ] ; then
+	if use dv ; then
 		myconf="${myconf} --with-dv=/usr"
 	fi
 
-	if [ "`use x86`" ]; then
-		if [ "`use mmx`" -o "`use 3dnow`" -o "`use sse`" ] ; then
+	if use x86; then
+		if use mmx || use 3dnow || use sse; then
 			myconf="${myconf} --enable-simd-accel"
 		fi
-		if [ "`use mmx`" ] ; then
+		if use mmx ; then
 			myconf="${myconf} --with-jpeg-mmx=/usr/include/jpeg-mmx"
 		fi
 	fi

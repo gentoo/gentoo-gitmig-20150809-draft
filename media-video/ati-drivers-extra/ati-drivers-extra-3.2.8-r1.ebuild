@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers-extra/ati-drivers-extra-3.2.8-r1.ebuild,v 1.3 2004/06/02 14:47:16 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers-extra/ati-drivers-extra-3.2.8-r1.ebuild,v 1.4 2004/06/09 17:01:27 agriffis Exp $
 
 IUSE="qt kde gnome"
 
@@ -54,7 +54,7 @@ src_compile() {
 	cd ${WORKDIR}/fglrxgears
 	make -f Makefile.Linux || ewarn "fgl_glxgears sample not build"
 
-	if [ "`use qt`" ]
+	if use qt
 	then
 	einfo "building the qt fglx panel"
 		cd ${WORKDIR}/fglrx_panel
@@ -70,7 +70,7 @@ src_install() {
 	doexe fglrxgears/fgl_glxgears
 	rm usr/X11R6/bin/*
 
-	if [ "`use qt`" ]
+	if use qt
 	then
 		doexe fglrx_panel/fireglcontrol
 	fi

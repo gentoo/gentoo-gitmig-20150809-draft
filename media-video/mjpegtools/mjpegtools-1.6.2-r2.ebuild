@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r2.ebuild,v 1.1 2004/05/17 09:27:13 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.2-r2.ebuild,v 1.2 2004/06/09 17:09:42 agriffis Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -43,11 +43,11 @@ src_unpack() {
 src_compile() {
 	local myconf
 
-	[ `gcc-major-version` -eq 3 ] && [ "${ARCH}" == "x86" ] && append-flags -mno-sse2
+	[ $(gcc-major-version) -eq 3 ] && [ "${ARCH}" == "x86" ] && append-flags -mno-sse2
 
-	myconf="${myconf} `use_with X x`"
-	myconf="${myconf} `use_with quicktime`"
-	myconf="${myconf} `use_enable x86 cmov-extensions`"
+	myconf="${myconf} $(use_with X x)"
+	myconf="${myconf} $(use_with quicktime)"
+	myconf="${myconf} $(use_enable x86 cmov-extensions)"
 
 	# Fix for Via C3-1, see #30345
 	grep -q cmov /proc/cpuinfo || myconf="${myconf} --enable-cmov-extension=no"

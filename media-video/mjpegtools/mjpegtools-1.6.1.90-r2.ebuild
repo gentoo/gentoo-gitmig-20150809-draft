@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.1.90-r2.ebuild,v 1.6 2004/05/12 12:40:14 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.1.90-r2.ebuild,v 1.7 2004/06/09 17:09:41 agriffis Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -37,19 +37,19 @@ src_compile() {
 
 	filter-flags -fPIC
 
-	[ `use x86` ] && [ `gcc-major-version` -eq 3 ] && append-flags -mno-sse2
+	use x86 && [ $(gcc-major-version) -eq 3 ] && append-flags -mno-sse2
 
-	myconf="${myconf} `use_with X x`"
-	myconf="${myconf} `use_with quicktime`"
-	myconf="${myconf} `use_enable x86 cmov-extensions`"
+	myconf="${myconf} $(use_with X x)"
+	myconf="${myconf} $(use_with quicktime)"
+	myconf="${myconf} $(use_enable x86 cmov-extensions)"
 
-	if [ "`use dv`" ] ; then
+	if use dv ; then
 		myconf="${myconf} --with-dv=/usr"
 	fi
-	if [ "`use mmx`" -o "`use 3dnow`" -o "`use sse`" ] ; then
+	if use mmx || use 3dnow || use sse; then
 		myconf="${myconf} --enable-simd-accel"
 	fi
-	if [ "`use mmx`" ] ; then
+	if use mmx ; then
 		myconf="${myconf} --with-jpeg-mmx=/usr/include/jpeg-mmx"
 	fi
 

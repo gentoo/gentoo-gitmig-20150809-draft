@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.92-r1.ebuild,v 1.3 2004/05/12 12:46:33 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.92-r1.ebuild,v 1.4 2004/06/09 17:05:36 agriffis Exp $
 
 IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb samba lirc"
 
@@ -113,7 +113,7 @@ src_unpack() {
 		einfo "Old DivX Api found"
 	fi
 
-	if [ "`use svga`" ]
+	if use svga
 	then
 		echo
 		einfo "Enabling vidix non-root mode."
@@ -302,7 +302,7 @@ src_compile() {
 	cd ${S}/postproc.so
 	make SHARED_PP="yes" || die "Failed to build libpostproc.so!"
 
-	if [ -n "`use matrox`" ]
+	if use matrox
 	then
 		cd ${S}/drivers
 		make all || die "Failed to build matrox driver!"
@@ -349,7 +349,7 @@ src_install() {
 	cp -r ${S}/TOOLS ${D}/usr/share/doc/${PF} || die
 
 	# Install the default Skin and Gnome menu entry
-	if [ -n "`use gtk`" ]
+	if use gtk
 	then
 		dodir /usr/share/mplayer/Skin
 		cp -r ${WORKDIR}/Blue ${D}/usr/share/mplayer/Skin/default || die
@@ -359,7 +359,7 @@ src_install() {
 		dosym mplayer /usr/bin/gmplayer
 	fi
 
-	if [ -n "`use gnome`" ]
+	if use gnome
 	then
 		insinto /usr/share/pixmaps
 		newins ${S}/Gui/mplayer/pixmaps/logo.xpm mplayer.xpm
@@ -390,7 +390,7 @@ src_install() {
 	doins ${S}/etc/input.conf
 	doins ${S}/etc/menu.conf
 
-	if [ -n "`use matrox`" ]
+	if use matrox
 	then
 		check_KV
 		insinto /lib/modules/${KV}/kernel/drivers/char
@@ -408,7 +408,7 @@ pkg_preinst() {
 
 pkg_postinst() {
 
-	if [ -n "`use ppc`" ]
+	if use ppc
 	then
 		echo
 		einfo "When you see only GREEN salad on your G4 while playing"
