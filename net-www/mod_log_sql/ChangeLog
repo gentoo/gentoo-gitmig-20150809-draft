@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_log_sql
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_log_sql/ChangeLog,v 1.15 2005/01/30 14:03:20 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_log_sql/ChangeLog,v 1.16 2005/02/05 09:57:50 trapni Exp $
+
+  05 Feb 2005; Christian Parpart <trapni@gentoo.org>
+  mod_log_sql-1.100.ebuild:
+  added ~amd64 to keywords
 
 *mod_log_sql-1.100 (30 Jan 2005)
 
