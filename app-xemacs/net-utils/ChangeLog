@@ -1,6 +1,11 @@
 # ChangeLog for app-xemacs/net-utils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/net-utils/ChangeLog,v 1.4 2003/10/03 02:32:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/net-utils/ChangeLog,v 1.5 2003/10/27 18:36:49 rac Exp $
+
+*net-utils-1.32 (27 Oct 2003)
+
+  27 Oct 2003; <rac@gentoo.org> net-utils-1.32.ebuild:
+  New upstream, needed for oort gnus
 
   02 Oct 2003; Aron Griffis <agriffis@gentoo.org> net-utils-1.31.ebuild:
   Stable on alpha
