@@ -1,5 +1,18 @@
-MD5 cb8811daa102701312ef7b47cac69e38 ChangeLog 624
-MD5 41bbb72e2d5a56f8446b18931f49c48a metadata.xml 236
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6f05050ec19ea40d649a3bf46b2e6dac tct-1.15-r1.ebuild 2507
 MD5 1bb4a5dbd19cd3607064aaad65cab831 tct-1.15.ebuild 2343
-MD5 149e3bd10ce891ee1dd2ad2522a705f0 files/digest-tct-1.15 60
+MD5 69c4b7a5be4e4390d1a23a5bda6bff7f ChangeLog 874
+MD5 41bbb72e2d5a56f8446b18931f49c48a metadata.xml 236
 MD5 c0948c285663f6861c03580bdd352d61 files/tct-1.15-gentoo.diff 5214
+MD5 149e3bd10ce891ee1dd2ad2522a705f0 files/digest-tct-1.15 60
+MD5 ba49bff0b5ebda0a767b57f11b8ff140 files/tct-1.15-r1-gentoo.diff 5908
+MD5 149e3bd10ce891ee1dd2ad2522a705f0 files/digest-tct-1.15-r1 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBje9/EZCkKN40op4RAgOgAKCHqbCbmPaszIcRKyEa0POu2oNslwCgneCl
+Hd1v477rzfXE6sS+XlK0bOY=
+=vbfN
+-----END PGP SIGNATURE-----
