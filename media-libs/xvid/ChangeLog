@@ -1,12 +1,16 @@
 # ChangeLog for media-libs/xvid
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.2 2002/12/13 10:18:42 azarah Exp $
-
-  13 Dec Martin Schlemmer <azarah@gentoo.org> xvid-0.9.0.ebuild :
-
-  Fix to install with divx4linux installed.
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/ChangeLog,v 1.3 2002/12/20 01:30:26 rajiv Exp $
 
 *xvid-0.9.0 (02 Dec 2002)
+
+  19 Dec 2002; Rajiv Manglani <rajiv@gentoo.org> xvid-0.9.0.ebuild :
+
+  fixed ppc src_compile(). now builds properly on ppc. see bug #12257.
+
+  13 Dec 2002; Martin Schlemmer <azarah@gentoo.org> xvid-0.9.0.ebuild :
+
+  Fix to install with divx4linux installed.
 
   02 Dec 2002; Martin Schlemmer <azarah@gentoo.org> :
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Georgi Georgiev <chutz@chubaka.net>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-0.9.0.ebuild,v 1.2 2002/12/13 10:18:42 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xvid/xvid-0.9.0.ebuild,v 1.3 2002/12/20 01:30:26 rajiv Exp $
 
 S="${WORKDIR}/${PN}core-${PV}"
 DESCRIPTION="XviD, a high performance/quality MPEG-4 video de-/encoding solution."
@@ -22,8 +22,6 @@ src_unpack() {
 	if use ppc; then
 		sed -e "s:^CC:#CC:" \
 			-e "s:^LIBDIR:#LIBDIR:" \
-			-e "s:^CFLAGS +=:#CFLAGS +=:" \
-			-e "s:^CFLAGS =:CFLAGS +=:" \
 			Makefile.linuxppc > Makefile
 	elif use x86; then
 		sed -e "s:^LIBDIR:#LIBDIR:" \
