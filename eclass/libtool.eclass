@@ -2,7 +2,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.10 2002/06/29 23:50:56 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.11 2002/07/03 19:11:27 azarah Exp $
 # This eclass patches ltmain.sh distributed with libtoolized packages with the
 # relink and portage patch
 ECLASS=libtool
@@ -102,6 +102,14 @@ elibtoolize() {
 			fi
 		done
 
+# Only apply portage patch ... I think if other can apply, they should.
+#		if [ "${portage}" = "yes" ]
+#		then
+#			dotest="no"
+#			dorelink="no"
+#			dotmp="no"
+#		fi
+
 		for y in test_patch relink_patch tmp_patch portage_patch
 		do
 			if [ "${dopatch}" = "yes" ]
@@ -198,7 +206,7 @@ portage_patch() {
 	patch ${opts} -p0 <<-"ENDPATCH"
 		--- ltmain.sh.orig	Wed Apr  3 01:19:37 2002
 		+++ ltmain.sh	Sun May 26 19:50:52 2002
-		@@ -3940,9 +3940,41 @@
+		@@ -3940,9 +3940,46 @@
 		 		  $echo "$modename: \`$deplib' is not a valid libtool archive" 1>&2
 		 		  exit 1
 		 		fi
@@ -206,7 +214,7 @@ portage_patch() {
 		+		# We do not want portage's install root ($D) present.  Check only for
 		+		# this if the .la is being installed.
 		+		if test "$installed" = yes && test "$D"; then
-		+		  mynewdependency_lib="`echo "$libdir/$name" |sed -e "s:$D::g" -e 's://:/:g'`"
+		+		  eval mynewdependency_lib="`echo "$libdir/$name" |sed -e "s:$D::g" -e 's://:/:g'`"
 		+		else
 		+		  mynewdependency_lib="$libdir/$name"
 		+		fi
@@ -217,14 +225,19 @@ portage_patch() {
 		+		  fi
 		+		fi
 		+		;;
-		+	      *)
-		+	      	if test "$installed" = yes; then
+		+		  *)
+		+		if test "$installed" = yes; then
+		+		  # Rather use S=WORKDIR if our version of portage supports it.
+		+		  # This is because some ebuild (gcc) do not use $S as buildroot.
+		+		  if test "$PWORKDIR"; then
+		+		    S="$PWORKDIR"
+		+		  fi
 		+		  # We do not want portage's build root ($S) present.
-		+	          if test -n "`echo $deplib |grep -e "$S"`" && test "$S"; then
-		+		    newdependency_libs=""
+		+		  if test -n "`echo $deplib |grep -e "$S"`" && test "$S"; then
+		+		    mynewdependency_lib=""
 		+		  # We do not want portage's install root ($D) present.
 		+		  elif test -n "`echo $deplib |grep -e "$D"`" && test "$D"; then
-		+		    mynewdependency_lib="`echo "$deplib" |sed -e "s:$D::g" -e 's://:/:g'`"
+		+		    eval mynewdependency_lib="`echo "$deplib" |sed -e "s:$D::g" -e 's://:/:g'`"
 		+		  else
 		+		    mynewdependency_lib="$deplib"
 		+		  fi
@@ -234,7 +247,7 @@ portage_patch() {
 		+		# Do not add duplicates
 		+		if test "$mynewdependency_lib"; then
 		+		  if test -z "`echo $newdependency_libs |grep -e "$mynewdependency_lib"`"; then
-		+			newdependency_libs="$newdependency_libs $mynewdependency_lib"
+		+		    newdependency_libs="$newdependency_libs $mynewdependency_lib"
 		+		  fi
 		+		fi
 		 		;;
