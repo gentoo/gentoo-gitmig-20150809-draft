@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/popa3d
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/ChangeLog,v 1.1 2003/09/11 17:36:43 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/ChangeLog,v 1.2 2003/10/22 02:32:00 port001 Exp $
+
+  22 Oct 2003; Ian Leitch <port001@gentoo.org> popa3d-0.6.3.ebuild:
+  PAM support now works like it should have done from the start, thanks to
+  Robert Kerr <LittleThor@xsw.terminator.net> for pointing that one out -
+  #31506. Also fixed a few grammatical errors.
 
 *popa3d-0.6.3 (11 Sep 2003)
 

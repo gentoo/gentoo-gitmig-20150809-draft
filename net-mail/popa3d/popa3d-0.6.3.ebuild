@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/popa3d-0.6.3.ebuild,v 1.1 2003/09/11 17:36:44 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/popa3d/popa3d-0.6.3.ebuild,v 1.2 2003/10/22 02:32:00 port001 Exp $
 
 #
 # Mailbox format is determined by the 'mbox' and 'maildir'
@@ -65,9 +65,9 @@ pkg_setup() {
 	echo
 	ewarn
 	ewarn "You can customize this ebuild with environmental variables."
-	ewarn "If you don't I'll assume sensible defaults."
+	ewarn "If you don't set any I'll assume sensible defaults."
 	ewarn
-	ewarn "See inside for details."
+	ewarn "See inside this ebuild for details."
 	ewarn
 	echo
 	sleep 5
@@ -124,8 +124,8 @@ src_compile() {
 	elif use pam ; then
 		einfo "Authentication method: PAM."
 		LIBS="${LIBS} -lpam"
-		sed -i -e "s:^#define AUTH_SHADOW .*$:#define AUTH_SHADOW 0:" params.h
-		sed -i -e "s:^#define AUTH_PAM .*$:#define AUTH_PAM 1:" params.h
+		sed -i -e "s:^#define AUTH_SHADOW\t\t\t1$:#define AUTH_SHADOW\t\t\t0:" params.h
+		sed -i -e "s:^#define AUTH_PAM\t\t\t0$:#define AUTH_PAM\t\t\t1:" params.h
 	else
 		einfo "Authentication method: Shadow."
 	fi
