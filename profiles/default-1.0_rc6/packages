@@ -148,3 +148,4 @@
 >=net-misc/dhcp-3.0_rc12-r6
 >=net-misc/bind-9.1.3-r6
 #bind is another package that seems to maintain multiple versions
+>=net-misc/netkit-timed-0.17-r6
