@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/straw/straw-0.22.1.ebuild,v 1.3 2004/03/30 09:16:58 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/straw/straw-0.22.1.ebuild,v 1.4 2004/04/09 23:05:17 liquidx Exp $
 
 inherit gnome2 python distutils
 
@@ -27,6 +27,14 @@ RDEPEND="${DEPEND}
 # pre 0.22 straw databases. It should be removed at some point.
 # foser <foser@gentoo.org> 18 Feb 2004
 
+pkg_setup() {
+	if ! python -c 'import gtk; import gtkhtml2'; then
+		eerror "The gnome-python gtkhtml2 module was not found."
+		eerror "Rebuild gnome-python using:"
+		eerror "  USE=\"gtkhtml\" emerge gnome-python"
+		die "missing gtkhtml2 python module"
+	fi
+}
 
 src_install() {
 
