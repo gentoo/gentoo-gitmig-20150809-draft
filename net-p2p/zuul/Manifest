@@ -1,5 +1,6 @@
 MD5 07942936b14ce221c70c5c407366ffdf zuul-1.0.0.ebuild 1431
 MD5 b43b1f23e5a7c7f9087dd625a7154d03 zuul-1.1.2.ebuild 1436
 MD5 f37d6e8f6e98fb8a6ec7e94ad8ae5d3d ChangeLog 384
+MD5 b55e7bc8fa0de44dffb6301e159ff8fc metadata.xml 534
 MD5 79aebd3adca669a7baa793ff03748417 files/digest-zuul-1.0.0 61
 MD5 cd4f98be101a25b70d78c04ce72d6981 files/digest-zuul-1.1.2 61
