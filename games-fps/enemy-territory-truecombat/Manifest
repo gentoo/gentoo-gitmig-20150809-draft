@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 34b204b719fa4bd661554e35a216dd2d ChangeLog 777
+MD5 dd4bc169b8866b26c1e8d2020f3e3f5f ChangeLog 926
 MD5 11a7e1491b1ac042ac7216b26b4ad1fb metadata.xml 254
-MD5 45edc8084c524ccb4607af3eb5481dfb enemy-territory-truecombat-1.0_alpha2.ebuild 488
+MD5 01b725d1e4fe856de5491a871ae9518e enemy-territory-truecombat-1.0_alpha2.ebuild 552
 MD5 a38379edca9d2af3411f89a81946fc3c files/digest-enemy-territory-truecombat-1.0_alpha2 123
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFB1yOBroRuSHgZdywRAgvYAKCLrnlj05XFSEUtqF88pi87SWQgsgCfWX1i
-3xEbZOR/w1xLkzdFVIY/f1c=
-=yV/K
------END PGP SIGNATURE-----
