@@ -1,14 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.2.1.ebuild,v 1.1 2002/08/13 20:35:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg2/libmpeg2-0.2.1.ebuild,v 1.2 2002/08/13 21:18:19 azarah Exp $
 
 inherit libtool
 
 MY_P="${P/libmpeg2/mpeg2dec}"
 S="${WORKDIR}/${MY_P}"
 DESCRIPTION="This is a sample skeleton ebuild file"
-HOMEPAGE="http://foo.bar.com"
 SRC_URI="http://libmpeg2.sourceforge.net/files/${MY_P}.tar.gz"
+HOMEPAGE="http://libmpeg2.sourceforge.net/"
 
 LICENSE="GPL-2"
 SLOT="0"
