@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.8.5.ebuild,v 1.3 2005/03/21 08:46:35 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/scim-qtimm/scim-qtimm-0.8.5.ebuild,v 1.4 2005/03/22 16:39:22 usata Exp $
 
 inherit kde-functions
 
@@ -34,7 +34,7 @@ src_compile() {
 	fi
 
 	econf $(use_enable nls) \
-		$(use_enable arts) || die
+		$(use_with arts) || die
 	emake -j1 || die "make failed."
 }
 
