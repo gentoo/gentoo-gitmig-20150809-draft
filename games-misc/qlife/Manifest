@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 98f0e659ff319c2afd2db918c868e384 ChangeLog 459
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 ce569033d3a2b8b89ef022090696a9f9 qlife-0.7.ebuild 734
+MD5 70ac27053bf628471758cdf733b1415d qlife-0.7.ebuild 739
 MD5 78d09783ef7c9a7a34dc99f083461e44 files/digest-qlife-0.7 60
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB2Kv/roRuSHgZdywRAruoAJ4s7bmGJby0FBvf0lyO8+jhUz/oyACfZQCS
+liV1Qmw5nvyFQtYyLfEMSkc=
+=Qdgq
+-----END PGP SIGNATURE-----
