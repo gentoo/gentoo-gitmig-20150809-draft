@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libmatroska
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.17 2004/03/16 04:44:12 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmatroska/ChangeLog,v 1.18 2004/04/04 04:08:31 weeve Exp $
+
+  03 Apr 2004; Jason Wever <weeve@gentoo.org> libmatroska-0.6.3.ebuild:
+  Added ~sparc keyword.
 
   15 Mar 2004; Stephen P. Becker <geoman@gentoo.org> libmatroska-0.6.3.ebuild:
   Added ~mips keyword.
