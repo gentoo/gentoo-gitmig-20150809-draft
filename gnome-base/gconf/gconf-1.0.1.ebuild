@@ -7,8 +7,7 @@ P=GConf-${PV}
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Gconf"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/GConf/${A}
-         ftp://gnome.eazel.com/pub/gnome/unstable/sources/GConf/${A}"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/GConf/${A}"
 
 HOMEPAGE="http://www.gnome.org/"
 

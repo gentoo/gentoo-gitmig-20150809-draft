@@ -1,14 +1,13 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.4.ebuild,v 1.1 2001/08/20 08:26:02 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.0.4.ebuild,v 1.2 2001/08/23 10:08:55 hallski Exp $
 
 P=GConf-${PV}
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Gconf"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/GConf/${A}
-         ftp://gnome.eazel.com/pub/gnome/unstable/sources/GConf/${A}"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/GConf/${A}"
 
 HOMEPAGE="http://www.gnome.org/"
 

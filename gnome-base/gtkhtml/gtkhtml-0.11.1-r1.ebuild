@@ -1,13 +1,12 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Authour: Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gtkhtml/gtkhtml-0.11.1-r1.ebuild,v 1.2 2001/08/15 22:40:27 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gtkhtml/gtkhtml-0.11.1-r1.ebuild,v 1.3 2001/08/23 10:12:08 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="gtkhtml"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/gtkhtml/${A}
-         ftp://gnome.eazel.com/pub/gnome/unstable/sources/${PN}/${A}"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${A}"
 HOMEPAGE="http://www.gnome.org/"
 
 DEPEND="sys-devel/gettext
