@@ -1,8 +1,13 @@
 # ChangeLog for dev-util/eclipse-SDK
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-SDK/ChangeLog,v 1.10 2003/04/23 14:21:16 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-SDK/ChangeLog,v 1.11 2003/04/27 06:26:18 tberman Exp $
 
 *eclipse-SDK-2.1 (12 Apr 2003)
+
+  27 Apr 2003; <tberman@gentoo.org> eclipse-SDK-2.1.ebuild,
+  files/eclipse.desktop:
+  Added an eclipse.desktop file to show eclipse in gnome applications menu.
+  Closed bug #17141
 
   23 Apr 2003; foser <foser@gentoo.org> eclipse-SDK-2.1.ebuild :
   Fix gtk dep to be 2.2.1-r1+ (#19084)
