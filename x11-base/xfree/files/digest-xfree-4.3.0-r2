@@ -127,7 +127,7 @@ MD5 b2c509837ddfbd12d8f1ed9b50254f01 /files/4.2.1-r2/lib/libOSMesa.la 788
 MD5 18e1ac4e97a57fdba470897aa2cb452e /files/4.2.1-r2/lib/libGLU.la 769
 MD5 ee55a387073cca1b14f1b285e1cf33a9 /files/4.2.1-r2/lib/libGL.la 777
 MD5 a0ce0f1c8a5771a1194f5895211a3f66 /files/4.2.1-r2/Sessions/Xsession 2187
-MD5 db0c0502a916e477361f9b50763953b8 /xfree-4.3.0-r2.ebuild 28941
+MD5 d6c66c07087cbe57174a3c4ee8e276d2 /xfree-4.3.0-r2.ebuild 29116
 MD5 4f241a4f867363f40efa2b00dca292af X430src-1.tgz 10993622
 MD5 844c2ee908d21dbf8911fd13115bf8b4 X430src-2.tgz 7962239
 MD5 b82a0443e1b7bf860e4343e6b6766cb6 X430src-3.tgz 12366363
@@ -143,6 +143,10 @@ MD5 3001d660c8d43a6da0c53737d969424d sis_drv_src_060403-1.tar.gz 378880
 MD5 3d4ee581df78c9dacc6e97aa07a1af72 gemini-koi8-u.tar.bz2 439173
 MD5 4d7d5fdc4ed56c144ef998302581478c eurofonts-X11.tar.bz2 8811
 MD5 cfdef5d00cd4a7937ff4bc136dab1932 xfsft-encodings.tar.bz2 11811
+MD5 794107aa54dda238ab1ab4776b36274d XFree86-compose.dir.bz2 1883
+MD5 aafd74e26c541382bb382ff338f81f87 XFree86-en_US.UTF-8.old.bz2 7068
+MD5 2e2263bb4adaee6f959fbb6c8df5336a XFree86-locale.alias.bz2 3592
+MD5 d4402be729da91e849aa5b9f506bda06 XFree86-locale.dir.bz2 2094
 MD5 cbdc2fdd7d2ed0832795e86a8b9ee19a andale32.exe 198384
 MD5 9637df0e91703179f0723ec095a36cb5 arial32.exe 554208
 MD5 c9089ae0c3b3d0d8c4b0a95979bb9ff0 arialb32.exe 168176

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.2 2003/04/08 22:35:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r2.ebuild,v 1.3 2003/04/08 23:36:35 seemant Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -96,6 +96,10 @@ SRC_URI="${SRC_URI}
 	mirror://gentoo/gemini-koi8-u.tar.bz2
 	mirror://gentoo/eurofonts-X11.tar.bz2
 	mirror://gentoo/xfsft-encodings.tar.bz2
+	mirror://gentoo/XFree86-compose.dir.bz2
+	mirror://gentoo/XFree86-en_US.UTF-8.old.bz2
+	mirror://gentoo/XFree86-locale.alias.bz2
+	mirror://gentoo/XFree86-locale.dir.bz2
 	truetype? ( ${MS_FONT_URLS} )"
 
 LICENSE="X11 MSttfEULA"
@@ -142,7 +146,7 @@ src_unpack() {
 	unpack XFree86-${PV}-patches-${PATCH_VER}.tar.bz2
 
 	# Unpack extra fonts stuff from Mandrake
-	unpack gemini-koi8-u.tar.bz2
+	unpack gemini-koi8-u.tar.bz2 || die
 	unpack eurofonts-X11.tar.bz2
 	unpack xfsft-encodings.tar.bz2
 	
