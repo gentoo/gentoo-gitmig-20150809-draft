@@ -1,6 +1,9 @@
 # ChangeLog for net-www/nvu
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/nvu/ChangeLog,v 1.8 2004/10/23 01:38:03 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/nvu/ChangeLog,v 1.9 2004/11/27 14:51:05 chriswhite Exp $
+
+  27 Nov 2004; Chris White <chriswhite@gentoo.org> nvu-0.50.ebuild:
+  Fixed LICENSE per bug #72559.
 
   23 Oct 2004; Simon Stelling <blubb@gentoo.org> nvu-0.50.ebuild:
   added ~amd64

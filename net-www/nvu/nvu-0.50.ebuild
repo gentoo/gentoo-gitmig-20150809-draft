@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/nvu/nvu-0.50.ebuild,v 1.7 2004/10/23 01:38:03 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/nvu/nvu-0.50.ebuild,v 1.8 2004/11/27 14:51:05 chriswhite Exp $
 
 inherit eutils mozilla flag-o-matic
 
 DESCRIPTION="A WYSIWG web editor for linux similiar to Dreamweaver"
 HOMEPAGE="http://www.nvu.com/"
 SRC_URI="http://cvs.nvu.com/download/${P}-sources.tar.bz2"
-LICENSE="GPL-2"
+LICENSE="MPL-1.1"
 SLOT="0"
 
 KEYWORDS="~x86 ~ppc ~sparc ~amd64"
