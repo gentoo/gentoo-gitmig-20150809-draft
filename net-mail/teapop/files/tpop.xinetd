@@ -5,7 +5,7 @@ service pop-3
         protocol        = tcp
         wait            = no
         user            = root
-        server          = /usr/libexec/teapop
+        server          = /usr/sbin/teapop
         server_args     = teapop
         disable         = no
 }

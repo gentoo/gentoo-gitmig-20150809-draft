@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/teapop
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/ChangeLog,v 1.2 2002/03/23 23:26:30 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/teapop/ChangeLog,v 1.3 2002/05/09 17:02:59 bangert Exp $
+
+  09 May 2002; Thilo Bangert <bangert@gentoo.org> files/tpop.xinetd
+  
+  fixed path for teapop - closes bug #2612
+
 
 *teapop-0.3.3 (23 Mar 2002)
 
