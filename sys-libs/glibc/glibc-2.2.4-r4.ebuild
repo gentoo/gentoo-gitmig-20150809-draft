@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.4-r4.ebuild,v 1.2 2001/12/07 19:15:45 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.4-r4.ebuild,v 1.3 2001/12/08 15:59:02 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
@@ -118,34 +118,38 @@ src_install() {
 
 pkg_preinst()
 {
-	# Check if we run under X
-	if [ -e /usr/X11R6/bin/X ] && [ "`/sbin/pidof /usr/X11R6/bin/X`" ] && [ "${ROOT}" = "/" ]
-	then
-		echo "glibc can not be installed while X is running!!"
-		exit 1
-	fi
-    
-	echo "Saving ld-linux,libc6 and libpthread"
+	local mytarget	
+	echo "Backing up existing critical libraries..."
+	[ ! -d ${ROOT}lib/old ] && mkdir ${ROOT}lib/old
 	for file in ld-linux.so.2 libc.so.6 libpthread.so.0
 	do
 		if [ -f ${ROOT}lib/${file} ]
 		then
-			/bin/cp ${ROOT}lib/${file} ${ROOT}tmp
-			/sbin/sln ${ROOT}tmp/${file} ${ROOT}lib/${file}
+			#all this "mytarget" stuff allows us to create a backup
+			#library in /lib/old with the *real* version name
+			#rather than the *generic* version name.
+	
+			mytarget="`readlink ${ROOT}lib/${file}`"
+			mytarget="`basename $mytarget`"
+			/bin/cp ${ROOT}lib/${file} ${ROOT}lib/old/${mytarget}
+			/sbin/sln ${ROOT}lib/old/${mytarget} ${ROOT}lib/${file}
 		fi
 	done
     
-   [ ! -e ${ROOT}etc/localtime ] && echo "Please remember to set your timezone using the zic command."
+	[ ! -e ${ROOT}etc/localtime ] && echo "Please remember to set your timezone using the zic command."
+	return 0
 }
 
 pkg_postinst()
 {
-	echo "Setting ld-linux,libc6 and libpthread"
-	/sbin/sln ${ROOT}lib/ld-${PV}.so ${ROOT}lib/ld-linux.so.2
-	/sbin/sln ${ROOT}lib/libc-${PV}.so ${ROOT}lib/libc.so.6
-	/sbin/sln ${ROOT}lib/libpthread-0.9.so ${ROOT}lib/libpthread.so.0
-	/bin/rm -f ${ROOT}tmp/ld-linux.so.2
-	/bin/rm -f ${ROOT}tmp/libc.so.6
-	/bin/rm -f ${ROOT}tmp/libpthread.so.0
+	/sbin/sln ld-${PV}.so ${ROOT}lib/ld-linux.so.2
+	/sbin/sln libc-${PV}.so ${ROOT}lib/libc.so.6
+	/sbin/sln libpthread-0.9.so ${ROOT}lib/libpthread.so.0
+	#we used to delete the backup libraries; we don't do this anymore.
+	#other apps may still have them mapped into their address space,
+	#but this shouldn't be a problem.  The main reason is if something
+	#goes wrong with the new lib install.	It's just a nicer way of
+	#handling things, imho.
 	/sbin/ldconfig -r ${ROOT}
+	return 0
 }
