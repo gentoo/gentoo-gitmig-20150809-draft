@@ -1,6 +1,6 @@
 # ChangeLog for app-emacs/wl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wl/ChangeLog,v 1.13 2003/08/13 06:23:22 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wl/ChangeLog,v 1.14 2003/08/24 18:10:53 usata Exp $
 
 *wl-2.11.7.20030812 (13 Aug 2003)
 
@@ -18,6 +18,10 @@
   New beta version (This branch, 2.11.x, shouldn't be marked as stable).
 
 *wl-2.10.1-r1 (09 Jul 2003)
+
+  25 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> wl-2.10.1-r1.ebuild,
+  wl-2.10.1.ebuild:
+  Changed DEPEND to virtual/{flim,semi}
 
   09 Jul 2003; Masatomo Nakano <nakano@gentoo.org> wl-2.10.1-r1.ebuild:
   Marked as stable.

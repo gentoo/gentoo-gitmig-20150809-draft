@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wl/wl-2.10.1-r1.ebuild,v 1.1 2003/07/09 18:37:03 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wl/wl-2.10.1-r1.ebuild,v 1.2 2003/08/24 18:10:53 usata Exp $
 
 inherit elisp
 
@@ -14,11 +14,9 @@ SLOT="0"
 KEYWORDS="x86 alpha sparc ppc"
 
 DEPEND="virtual/emacs
-         >=app-emacs/apel-10.3
-         >=app-emacs/flim-1.14.3
-         >=app-emacs/semi-1.14.3"
-#        >=virtual/flim-1.14.3
-#        >=virtual/semi-1.14.3
+         >=app-emacs/apel-10.6
+         virtual/flim
+	 virtual/semi"
 
 S="${WORKDIR}/${P}"
 
