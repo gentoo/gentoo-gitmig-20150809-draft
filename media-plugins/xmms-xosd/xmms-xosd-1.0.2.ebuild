@@ -15,11 +15,6 @@ LICENSE="GPL"
 SLOT="0"
 KEYWORDS="x86"
 
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-}
-
 src_compile() {
 	econf || die
 	make || die
