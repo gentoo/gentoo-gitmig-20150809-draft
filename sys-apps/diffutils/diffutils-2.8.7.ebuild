@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.7.ebuild,v 1.6 2004/06/28 16:04:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/diffutils/diffutils-2.8.7.ebuild,v 1.7 2004/07/28 04:17:33 vapier Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic gnuconfig
 
 DESCRIPTION="Tools to make diffs and compare files"
 HOMEPAGE="http://www.gnu.org/software/diffutils/diffutils.html"
@@ -24,6 +24,8 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
+	gnuconfig_update
+
 	if use build ; then
 		#disable texinfo building so we can remove the dep
 		sed -i -e 's:SUBDIRS = doc:SUBDIRS =:' \
