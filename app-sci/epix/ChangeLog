@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/epix
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/epix/ChangeLog,v 1.9 2004/11/22 13:26:40 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/epix/ChangeLog,v 1.10 2004/11/24 00:54:28 ribosome Exp $
+
+*epix-1.0.0 (23 Nov 2004)
+
+  23 Nov 2004; Olivier Fisette <ribosome@gentoo.org> +epix-1.0.0.ebuild:
+  New version. Credits go to Marcus Hanwell <gentoo@cryos.net>.
 
   22 Nov 2004; Patrick Kursawe <phosphan@gentoo.org> epix-0.8.10a-r1.ebuild:
   Using tc-getCXX now (bug #71849). Cleanup.
