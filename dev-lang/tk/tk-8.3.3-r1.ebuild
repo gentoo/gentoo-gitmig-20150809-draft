@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.3.3.ebuild,v 1.5 2002/07/13 22:21:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tk/tk-8.3.3-r1.ebuild,v 1.1 2002/07/13 22:21:33 seemant Exp $
 
 
 S=${WORKDIR}/${PN}${PV}
@@ -60,7 +60,8 @@ src_install() {
 	rm -f ${D}/usr/lib/tk${v1}/include/generic/tkPlatDecls.h	
 
 	# install symlink for libraries
-	dosym /usr/lib/libtk${v1}.a /usr/lib/libtk.a
+	#dosym /usr/lib/libtk${v1}.a /usr/lib/libtk.a
+	dosym /usr/lib/libtk${v1}.so /usr/lib/libtk.so
 	dosym /usr/lib/libtkstub${v1}.a /usr/lib/libtkstub.a
 	
 	ln -sf wish${v1} ${D}/usr/bin/wish
