@@ -1,11 +1,11 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/kdeedu-3.1.4.ebuild,v 1.7 2003/11/29 23:19:55 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/kdeedu-3.1.4.ebuild,v 1.8 2004/01/13 16:52:13 agriffis Exp $
 inherit kde-dist flag-o-matic
 
 IUSE=""
 DESCRIPTION="KDE educational apps"
-KEYWORDS="x86 ppc sparc hppa amd64"
+KEYWORDS="x86 ppc sparc hppa amd64 alpha"
 
 if [ "`gcc -dumpversion`" == "2.95.3" ]; then
 	filter-flags "-fomit-frame-pointer"

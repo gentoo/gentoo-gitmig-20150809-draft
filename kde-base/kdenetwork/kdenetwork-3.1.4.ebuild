@@ -1,11 +1,11 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.1.4.ebuild,v 1.8 2003/12/28 03:43:36 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.1.4.ebuild,v 1.9 2004/01/13 16:43:47 agriffis Exp $
 inherit kde-dist
 
 IUSE=""
 DESCRIPTION="KDE network apps: kmail, kppp, knode..."
-KEYWORDS="x86 ppc sparc hppa amd64"
+KEYWORDS="x86 ppc sparc hppa amd64 alpha"
 DEPEND="~kde-base/kdebase-${PV}"
 RDEPEND="$DEPEND"
 
