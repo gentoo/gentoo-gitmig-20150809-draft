@@ -1,8 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/snavigator/snavigator-5.0.ebuild,v 1.9 2003/02/13 12:01:02 vapier Exp $
-
-S=${WORKDIR}/build
+# $Header: /var/cvsroot/gentoo-x86/dev-util/snavigator/snavigator-5.0.ebuild,v 1.10 2003/04/24 11:02:41 vapier Exp $
 
 DESCRIPTION="Source-Navigator is a source code analysis tool"
 SRC_URI="http://mirrors.rcn.com/pub/sourceware/sourcenav/releases/SN50-010322-source.tar.gz"
@@ -10,15 +8,17 @@ HOMEPAGE="http://sources.redhat.com/sourcenav/"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc"
 
 DEPEND=">=sys-libs/glibc-2.2.4"
+
+S=${WORKDIR}/build
 
 SN="/usr/snavigator"
 
 src_unpack() {
 	mkdir build
-	unpack  ${A}
+	unpack ${A}
 }
 
 src_compile() {

@@ -1,8 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5-r1.ebuild,v 1.1 2003/04/03 19:07:18 azarah Exp $
-
-IUSE="X"
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5-r1.ebuild,v 1.2 2003/04/24 11:01:46 vapier Exp $
 
 #SNAPSHOT="20020825"
 TVISIONVER="2.0.1"
@@ -11,7 +9,7 @@ SETEDIT_S="setedit"
 # RHIDE is _very_ picky about the GDB used, so dont put GDB in DEPEND
 GDBVER="5.3"
 
-DESCRIPTION="RHIDE is a console IDE for various languages."
+DESCRIPTION="console IDE for various languages"
 if [ -z "${SNAPSHOT}" ]
 then
 	S="${WORKDIR}/${P}"
@@ -30,6 +28,7 @@ HOMEPAGE="http://www.rhide.com/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
+IUSE="X"
 
 DEPEND="virtual/glibc
 	>=app-text/recode-3.6
@@ -44,11 +43,8 @@ DEPEND="virtual/glibc
 	aalib? ( media-libs/aalib )
 	X? ( virtual/x11 )"
 
-
 src_unpack() {
-	
 	unpack ${A}
-
 	cd ${S}
 
 	# Get it to work with rhtvision-2.0
@@ -282,4 +278,3 @@ pkg_postinst() {
 		echo
 	fi
 }
-
