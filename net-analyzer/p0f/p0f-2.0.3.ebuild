@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/p0f-2.0.3.ebuild,v 1.7 2004/08/06 13:56:39 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/p0f-2.0.3.ebuild,v 1.8 2004/09/16 02:11:18 pvdabeel Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://lcamtuf.coredump.cx/p0f/${P}.tgz"
 HOMEPAGE="http://lcamtuf.coredump.cx/p0f.shtml"
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 ~amd64 sparc macos"
+KEYWORDS="x86 ~amd64 sparc macos ppc-macos"
 IUSE=""
 S=${WORKDIR}/${PN}
 
