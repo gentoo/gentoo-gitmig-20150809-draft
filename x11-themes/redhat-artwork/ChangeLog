@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/redhat-artwork
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.42 2004/12/04 16:32:27 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.43 2004/12/20 18:24:37 liquidx Exp $
+
+*redhat-artwork-0.120.1.2 (20 Dec 2004)
+
+  20 Dec 2004; Alastair Tse <liquidx@gentoo.org>
+  +redhat-artwork-0.120.1.2.ebuild:
+  added smarter version handing, hence bumping version number. fix libtool
+  problems (#74729)
 
 *redhat-artwork-0.120 (04 Dec 2004)
 
