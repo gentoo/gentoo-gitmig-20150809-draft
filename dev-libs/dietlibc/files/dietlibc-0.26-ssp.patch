@@ -19,7 +19,7 @@ diff -Nrup dietlibc-0.26.orig/sparc/start.S dietlibc-0.26/sparc/start.S
     be NULL.  */
  
  /* Let libc do the rest of the initialization, and call main.  */
-+#ifdef __dietlibc__
++#if 0 /* FIXME: __dietlibc__ */
 +	call    __guard_setup
 +#endif
  #ifdef WANT_DYNAMIC
@@ -32,7 +32,7 @@ diff -Nrup dietlibc-0.26.orig/sparc64/start.S dietlibc-0.26/sparc64/start.S
     be NULL.  */
  
  /* Let libc do the rest of the initialization, and call main.  */
-+#ifdef __dietlibc__
++#if 0 /* FIXME: __dietlibc__ */
 +	call    __guard_setup
 +#endif
  #ifdef WANT_DYNAMIC
@@ -45,7 +45,7 @@ diff -Nrup dietlibc-0.26.orig/x86_64/start.S dietlibc-0.26/x86_64/start.S
  	popq	%rdi
  #endif
  
-+#ifdef __dietlibc__
++#if 0 /* FIXME: __dietlibc__ */
 +	call	__guard_setup
 +#endif
 +

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.26-r1.ebuild,v 1.1 2004/08/07 23:30:19 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.26-r1.ebuild,v 1.2 2004/08/21 21:25:36 solar Exp $
 
 inherit eutils flag-o-matic fixheadtails gcc
 
@@ -28,16 +28,17 @@ src_unpack() {
 	# depending on glibc to provide guard symbols, does not work with -nostdlib building
 	filter-flags -fstack-protector -fstack-protector-all
 
-	# Ok so let's make dietlibc ssp aware (Aug 7 2004) -solar
-	ebegin "Making dietlibc ssp aware"
-	cp ${FILESDIR}/ssp.c ${S}/lib/ || die "Failed to copy ssp.c into lib for compile"
-	eend $?
+	if use x86 ; then
+		# Ok so let's make dietlibc ssp aware (Aug 7 2004) -solar
+		ebegin "Making dietlibc ssp aware"
+		cp ${FILESDIR}/ssp.c ${S}/lib/ || die "Failed to copy ssp.c into lib for compile"
+		eend $?
 
-	# start with sparc/sparc64/x86_64/i386 for now.
-	epatch ${FILESDIR}/dietlibc-0.26-ssp.patch
-	append-flags -D__dietlibc__
-	# end ssp block code
-
+		# start with sparc/sparc64/x86_64/i386 for now.
+		epatch ${FILESDIR}/dietlibc-0.26-ssp.patch
+		append-flags -D__dietlibc__
+		# end ssp block code
+	fi
 	# Fix for 45716
 	replace-sparc64-flags
 

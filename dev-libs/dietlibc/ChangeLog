@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/dietlibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.35 2004/08/14 04:58:49 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.36 2004/08/21 21:25:36 solar Exp $
+
+*dietlibc-0.26-r1 (21 Aug 2004)
+
+  21 Aug 2004; <solar@gentoo.org> files/dietlibc-0.26-ssp.patch,
+  dietlibc-0.26-r1.ebuild:
+  more patch work needed for ssp on sparc/sparc64. sparc64 is building sparc32
+  crt files. x86_64 seems more like a gcc-3.4.x compile problem. For now we will
+  only patch for x86
 
   13 Aug 2004; Jason Wever <weeve@gentoo.org> dietlibc-0.25.ebuild:
   Stable on sparc.
