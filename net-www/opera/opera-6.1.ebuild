@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.1.ebuild,v 1.1 2002/10/31 22:25:56 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-6.1.ebuild,v 1.2 2002/10/31 22:26:48 agenkin Exp $
 #
 # By default, the statically compiled version of opera will be
 # installed.  There are two other variations of the package that this
@@ -21,7 +21,7 @@
 #   env OPERA_VARIANT=shared-3.2 emerge opera
 #
 
-DESCRIPTION="Opera web browser, statically built."
+DESCRIPTION="Opera web browser."
 HOMEPAGE="http://www.opera.com/linux/"
 LICENSE="OPERA"
 
