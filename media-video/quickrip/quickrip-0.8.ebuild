@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/quickrip/quickrip-0.8.ebuild,v 1.3 2004/06/25 00:48:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/quickrip/quickrip-0.8.ebuild,v 1.4 2004/06/27 21:20:55 kugelfang Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://quickrip.sourceforge.net/"
 SRC_URI="mirror://sourceforge/quickrip/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 -ppc -mips"
+KEYWORDS="~x86 -ppc -mips ~amd64"
 IUSE=""
 DEPEND="virtual/glibc
 	>=dev-lang/python-2.2
