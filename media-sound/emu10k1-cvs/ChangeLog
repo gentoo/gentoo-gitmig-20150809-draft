@@ -1,6 +1,6 @@
-# ChangeLog for media-sound/emu10k1
+# ChangeLog for media-sound/emu10k1-cvs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1-cvs/ChangeLog,v 1.1 2003/04/16 22:28:44 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/emu10k1-cvs/ChangeLog,v 1.2 2003/04/22 10:23:49 vapier Exp $
 
   16 April 2003; John Mylchreest <johnm@gentoo.org> :
   Initial import.  Contributers (myself):
