@@ -102,5 +102,5 @@
       <secret>test</secret>
     </connect>
   </service>
-
+<pidfile>/var/log/jabber/msnt.pid</pidfile>
 </jabber>
