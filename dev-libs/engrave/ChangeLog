@@ -1,0 +1,8 @@
+# ChangeLog for dev-libs/engrave
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/engrave/ChangeLog,v 1.1 2005/01/10 07:08:26 vapier Exp $
+
+*engrave-0.1.0.* (10 Jan 2005)
+
+  10 Jan 2005; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me.
