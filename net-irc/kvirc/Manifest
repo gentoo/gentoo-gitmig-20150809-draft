@@ -1,8 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d27add1e6903eb38c52f70d93d71a920 ChangeLog 3878
 MD5 4fe0629bae3b60b2368b63df28f80147 kvirc-3.0.1.ebuild 1810
-MD5 3669f51ff4ff7a39229afb964b88e674 kvirc-3.0.0.ebuild 1687
-MD5 6e6aaf3b459ece88b12c6c14e74931c5 kvirc-3.0.0_beta2-r1.ebuild 2304
-MD5 238d0a2984989eda518bac9b3ba1f0cf ChangeLog 3749
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 68d2153371007bdad609f225fdba63be files/digest-kvirc-3.0.0_beta2-r1 70
-MD5 4b55df13a25bb1556fa285ede1be937e files/digest-kvirc-3.0.0 65
 MD5 39628ba5cdeb5e3b6957d6a49bfd8e51 files/digest-kvirc-3.0.1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+
+iD8DBQFBMTmXI1lqEGTUzyQRAnU+AJ9Pe0E2cp1s1wxv0s8AtwvsxPzYaQCeOfO5
+A669F2JI3qNHF9UGKDMTz4A=
+=rGkB
+-----END PGP SIGNATURE-----

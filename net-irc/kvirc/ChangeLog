@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/kvirc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.18 2004/08/24 11:08:23 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.19 2004/08/29 02:04:03 swegener Exp $
+
+  29 Aug 2004; Sven Wegener <swegener@gentoo.org> -kvirc-3.0.0.ebuild,
+  -kvirc-3.0.0_beta2-r1.ebuild:
+  Removed old ebuilds.
 
   24 Aug 2004; Heinrich Wendel <lanius@gentoo.org> kvirc-3.0.1.ebuild:
   mark stable on x86

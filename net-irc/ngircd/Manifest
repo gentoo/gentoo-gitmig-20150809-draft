@@ -1,17 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4a5320be5d88ac2d07020d30c72ae5a2 ChangeLog 1000
+MD5 455c821f9f806d2abc8116ffb2dc00e4 ChangeLog 1095
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 cc4f05db0de7388e163e196fe7dee193 ngircd-0.7.7.ebuild 621
 MD5 c95f11def00be7322a3a0a3b8483a992 ngircd-0.8.0.ebuild 1291
-MD5 a3a523dfbf1853555c797713c5c45866 files/digest-ngircd-0.7.7 64
 MD5 ebc2472c14cff12e0907bbdfafab981a files/digest-ngircd-0.8.0 64
 MD5 fa4e12b2d48dabe2da1de13d80c3266c files/ngircd.init.d 521
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.2.5 (GNU/Linux)
 
-iD8DBQFBHf9PI1lqEGTUzyQRAgzPAJ9spAzdQWVziYGKET16kxMuBy/5fQCZAWWh
-o2paZOIMLo2V78tMoir9v98=
-=748D
+iD8DBQFBMToiI1lqEGTUzyQRAjCYAJ9BY7ZPJnd4WTqb8Bf86FmalBCxMwCeLUse
+HDYwLvZSwFBhZ7NbrYVip7Q=
+=FAkU
 -----END PGP SIGNATURE-----
