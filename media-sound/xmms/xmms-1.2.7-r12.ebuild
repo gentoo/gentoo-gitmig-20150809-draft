@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r12.ebuild,v 1.3 2002/07/21 19:47:13 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r12.ebuild,v 1.4 2002/07/21 21:23:49 spider Exp $
 
 inherit libtool
 
@@ -23,8 +23,7 @@ RDEPEND="app-arch/unzip
 	avi? ( >=media-video/avifile-0.7.4.20020426-r2 )
 	esd? ( >=media-sound/esound-0.2.22 )
 	xml? ( >=dev-libs/libxml-1.8.15 )
-	gnome? ( >=gnome-base/gnome-panel-1.4.1 
-		 <gnome-base/gnome-panel-1.5.0 )
+	gnome? ( <gnome-base/gnome-panel-1.5.0 )
 	opengl? ( virtual/opengl )
 	oggvorbis? ( >=media-libs/libvorbis-1.0_beta4 )"
 	
