@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/point2play/point2play-1.2.ebuild,v 1.2 2004/02/20 06:08:34 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/point2play/point2play-1.2.ebuild,v 1.3 2004/04/06 03:50:38 vapier Exp $
+
+inherit eutils
 
 MY_P=${PN}-small-${PV}
 DESCRIPTION="graphical frontend for WineX"
