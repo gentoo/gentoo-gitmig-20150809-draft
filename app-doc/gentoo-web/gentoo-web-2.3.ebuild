@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.3.ebuild,v 1.2 2002/06/22 00:10:46 peitolm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.3.ebuild,v 1.3 2002/06/22 03:19:24 peitolm Exp $
  
  
 S=${WORKDIR}/gentoo-src/gentoo-web
@@ -142,13 +142,20 @@ src_install() {
 	xsltproc $TEMPLATE xml/main-contract.xml > ${D}${WEBROOT}/index-contract.html || die
 	xsltproc $TEMPLATE xml/main-graphics.xml > ${D}${WEBROOT}/index-graphics.html || die
 	OLDROOT=${ROOT} ; unset ROOT
-	mkdir xml/packages
+	
+	mkdir -p xml/packages
+	dodir ${WEBROOT}/packages/
+	insinto ${WEBROOT}/packages/
 	python python/genpkgxml-v2.py ${T}/main-packages.xml || die
-	for dir in `ls -1 xml/packages/`
+	for DIR in `ls xml/packages`
 	do
-		for file in `ls xml/packages/$dir/| sed 's/.xml//g'`
-			do mkdir -p ${D}${WEBROOT}/packages/$dir/
-			xsltproc $TEMPLATE xml/packages/$dir/$file.xml >${D}${WEBROOT}/packages/$dir/$file.html 
+		echo "Making dir: (${DIR}) ${D}/${WEBROOT}/${DIR}/"
+					   	 dodir ${WEBROOT}/packages/${DIR}
+		for FILE in  `ls xml/packages/${DIR} | sed 's/.xml//'`
+		do
+			echo ${FILE}
+			echo "xsltproc $TEMPLATE xml/packages/${DIR}/${FILE}.xml > ${D}/${WEBROOT}/packages/${DIR}/${FILE}.html"
+				  xsltproc $TEMPLATE xml/packages/${DIR}/${FILE}.xml > ${D}/${WEBROOT}/packages/${DIR}/${FILE}.html
 		done
 	done
 
