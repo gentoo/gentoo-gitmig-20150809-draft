@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libwww
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.31 2004/06/24 23:15:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.32 2004/07/01 13:33:52 tgall Exp $
+
+  01 Jul 2004; Tom Gall <tgall@gentoo.org> libwww-5.4.0-r2.ebuild:
+  stable on ppc64, bug #54799
 
   10 May 2004; Mamoru KOMACHI <usata@gentoo.org> libwww-5.4.0-r1.ebuild,
   libwww-5.4.0-r2.ebuild, files/libwww-5.4.0-disable-ndebug-gentoo.diff:
