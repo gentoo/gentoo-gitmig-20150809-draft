@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/ctrlproxy
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ctrlproxy/ChangeLog,v 1.2 2003/04/16 15:57:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ctrlproxy/ChangeLog,v 1.3 2003/07/08 01:47:09 agriffis Exp $
+
+  26 May 2003; Aron Griffis <agriffis@gentoo.org> ctrlproxy-2.2.ebuild:
+  Fix bug 20934 by adding glib to DEPEND
 
 *ctrlproxy-2.2 (16 Apr 2003)
 
