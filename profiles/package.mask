@@ -83,3 +83,7 @@ app-editors/gtk-xemacs
 
 # Until new Galon that works with 0.9.3
 >=net-www/mozilla-0.9.3
+
+# ebuild badly broken.  When author fixes, I will remove
+# contact chadh@gentoo with questions
+=dev-python/PyQt-2.4
