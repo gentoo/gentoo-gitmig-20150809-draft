@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-4.6.2-r2.ebuild,v 1.1 2004/07/06 22:03:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/STLport/STLport-4.6.2-r2.ebuild,v 1.2 2004/07/14 02:06:42 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.stlport.org/archive/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="x86 ppc sparc amd64"
 IUSE=""
 
 DEPEND="virtual/libc"

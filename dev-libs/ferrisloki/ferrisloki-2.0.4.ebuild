@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ferrisloki/ferrisloki-2.0.4.ebuild,v 1.4 2004/07/05 07:37:02 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ferrisloki/ferrisloki-2.0.4.ebuild,v 1.5 2004/07/14 02:03:45 vapier Exp $
 
 DESCRIPTION="Loki C++ library from Modern C++ Design"
 HOMEPAGE="http://witme.sourceforge.net/libferris.web/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/witme/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ppc"
 
 DEPEND=">=dev-libs/STLport-4.5.3-r3
 	=dev-libs/libsigc++-1.2*"
