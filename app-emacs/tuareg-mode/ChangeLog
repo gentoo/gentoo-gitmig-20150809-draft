@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/tuareg-mode
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/tuareg-mode/ChangeLog,v 1.1 2003/10/28 07:36:39 usata Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/tuareg-mode/ChangeLog,v 1.2 2004/01/20 13:08:52 mattam Exp $
+
+  20 Jan 2004; Matthieu Sozeau <mattam@gentoo.org> tuareg-mode-1.40.5.ebuild:
+  Changed KEYWORDS to "x86 ~ppc" as there were no bug reports for 84 days, and
+  it works on ~ppc.
 
 *tuareg-mode-1.40.5 (28 Oct 2003)
 
