@@ -1,7 +1,9 @@
 # ChangeLog for app-shells/bash
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.22 2003/10/20 06:11:57 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.23 2003/10/22 11:50:51 darkspecter Exp $
 
+  22 Oct 2003; Bartosch Pixa <darkspecter@gentoo.org> bash-2.05b-r7.ebuild:
+  set ppc in keywords
 
 *bash-2.05b-r8 (13 Oct 2003)
 
