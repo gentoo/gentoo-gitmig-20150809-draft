@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/krusader/krusader-1.50_beta1.ebuild,v 1.1 2004/10/18 15:42:11 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/krusader/krusader-1.50_beta1.ebuild,v 1.2 2004/10/28 15:56:06 caleb Exp $
 
 inherit flag-o-matic kde
 
@@ -23,7 +23,7 @@ need-kde 3.2
 
 src_compile() {
 	use amd64 && append-flags -fPIC
-	kde_src_compile	configure make
+	kde_src_compile
 }
 
 pkg_postinst() {
