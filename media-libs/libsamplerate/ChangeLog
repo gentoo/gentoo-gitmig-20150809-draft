@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsamplerate
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/ChangeLog,v 1.26 2005/03/28 19:31:40 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsamplerate/ChangeLog,v 1.27 2005/03/31 19:13:21 luckyduck Exp $
+
+  31 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  libsamplerate-0.1.1-r1.ebuild, libsamplerate-0.1.2.ebuild:
+  pkgconfig now only in DPEND, a few cleanup. fixes #87398
 
   28 Mar 2005; Michael Hanselmann <hansmi@gentoo.org>
   libsamplerate-0.1.2.ebuild:
