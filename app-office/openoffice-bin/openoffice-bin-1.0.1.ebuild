@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.0.1.ebuild,v 1.6 2002/10/05 05:39:09 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.0.1.ebuild,v 1.7 2002/10/05 17:50:20 gerk Exp $
 
-IUSE="ppc kde x86 gnome"
+IUSE="kde gnome"
 
 inherit virtualx
 
