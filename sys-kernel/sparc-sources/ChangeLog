@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/sparc-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.70 2004/12/03 02:11:12 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.71 2004/12/16 15:29:54 joker Exp $
+
+*sparc-sources-2.4.28-r2 (15 Dec 2004)
+
+  15 Dec 2004; Christian Birchinger <joker@gentoo.org>
+  +sparc-sources-2.4.28-r2.ebuild:
+  Updated squashfs to 2.1. Added security fixes for CAN-2004-1016 and
+  CAN-2004-1137
 
   02 Dec 2004; Christian Birchinger <joker@gentoo.org> :
   Security fix for CAN-2004-1074 (Bug #72452).
