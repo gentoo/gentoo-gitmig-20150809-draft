@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/cdemu-0.6_beta.ebuild,v 1.8 2004/07/12 04:29:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/cdemu-0.6_beta.ebuild,v 1.9 2004/11/09 23:59:31 vapier Exp $
 
 inherit gcc flag-o-matic python
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ppc"
 IUSE=""
 
-DEPEND="virtual/kernel"
+DEPEND="virtual/linux-sources"
 RDEPEND="dev-lang/python"
 
 src_compile() {
