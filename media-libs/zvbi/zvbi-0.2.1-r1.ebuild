@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/zvbi/zvbi-0.2.1-r1.ebuild,v 1.9 2004/06/24 23:26:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/zvbi/zvbi-0.2.1-r1.ebuild,v 1.10 2004/07/14 20:39:45 agriffis Exp $
 
 IUSE="nls"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="VBI Decoding Library for Zapping"
 SRC_URI="mirror://sourceforge/zapping/${P}.tar.bz2"
 HOMEPAGE="http://zapping.sourceforge.net"
