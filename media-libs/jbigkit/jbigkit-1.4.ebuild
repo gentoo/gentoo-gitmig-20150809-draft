@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/jbigkit-1.4.ebuild,v 1.19 2004/07/01 07:56:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jbigkit/jbigkit-1.4.ebuild,v 1.20 2004/07/14 19:50:27 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -11,6 +11,7 @@ SRC_URI="http://www.cl.cam.ac.uk/~mgk25/download/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc mips alpha hppa amd64"
+IUSE=""
 
 DEPEND="virtual/libc
 	>=sys-apps/sed-4"

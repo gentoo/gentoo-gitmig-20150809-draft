@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/glut-3.7-r2.ebuild,v 1.15 2004/06/25 03:07:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/glut-3.7-r2.ebuild,v 1.16 2004/07/14 19:41:21 agriffis Exp $
 
 MESA_VER="4.0.1"
 S=${WORKDIR}/Mesa-${MESA_VER}
@@ -12,6 +12,7 @@ HOMEPAGE="http://www.opengl.org/developers/documentation/glut/"
 SLOT="0"
 LICENSE="X11 | GPL-2"
 KEYWORDS="x86 ppc sparc alpha"
+IUSE=""
 
 DEPEND="virtual/opengl
 	virtual/glu"
