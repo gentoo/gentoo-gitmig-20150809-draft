@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-0.6.11.ebuild,v 1.14 2004/05/07 20:35:31 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pygtk/pygtk-0.6.11.ebuild,v 1.15 2004/06/25 03:16:27 agriffis Exp $
 
 DESCRIPTION="GTK+ bindings for Python"
 HOMEPAGE="http://www.daa.com.au/~james/pygtk/"
