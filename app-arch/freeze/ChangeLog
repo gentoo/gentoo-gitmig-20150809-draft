@@ -1,0 +1,9 @@
+# ChangeLog for app-arch/freeze
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/freeze/ChangeLog,v 1.1 2004/03/11 09:43:55 zypher Exp $
+
+*freeze-2.5.0.ebuild (10 Mar 2004)
+
+  10 Mar 2004; Marc Hildebrand <zypher@gentoo.org> :
+  Initial ebuild.
+  Submitted by Cory Visi, bug #44301
