@@ -5,23 +5,25 @@ HOWTO upgrade from 2004.3 and 2004.3/lib64 to 2005.0
  3) emerge -v '>=sys-devel/distcc-2.18.3-r1'
  4) emerge unmerge linux26-headers
  5) emerge -v linux-headers
- 6) emerge unmerge emul-linux-x86-glibc
+ 6) (If you choose option 1 for step 13) emerge -v emul-linux-x86-glibc
  7) rm /lib32 /usr/lib32 /usr/X11R6/lib32
  8) mkdir /lib32 /usr/lib32 /usr/X11R6/lib32
  9) cp /emul/linux/x86/lib32/libsandbox.so /lib32
-10) rm /etc/make.profile
-11) ln -s /usr/portage/profiles/default-linux/amd64/2005.0 /etc/make.profile
--- Recommended --
-12) emerge -v glibc
--- Or if you want to use eradicator's prebuilt glibc (see note below first) --
-12a) mkdir /usr/tmp/All
-12b) cd /usr/tmp/All
-12c) wget http://dev.gentoo.org/~eradicator/grp/amd64/2005.0/glibc-2.3.4.20040808-r1.tbz2
-12d) lynx -source http://dev.gentoo.org/~eradicator/grp/amd64/2005.0/glibc-2.3.4.20040808-r1.tbz2.md5sum | md5sum -c -
-12e) PKGDIR=/usr/tmp emerge -vk glibc
+10) env-update
+11) rm /etc/make.profile
+12) ln -s /usr/portage/profiles/default-linux/amd64/2005.0 /etc/make.profile
+-- Option 1: Recommended --
+13a) emerge -O -v glibc
+13b) emerge unmerge emul-linux-x86-glibc
+-- Option 2: Or if you want to use eradicator's prebuilt glibc (see note below first) --
+13a) mkdir /usr/tmp/All
+13b) cd /usr/tmp/All
+13c) wget http://dev.gentoo.org/~eradicator/grp/amd64/2005.0/glibc-2.3.4.20040808-r1.tbz2
+13d) lynx -source http://dev.gentoo.org/~eradicator/grp/amd64/2005.0/glibc-2.3.4.20040808-r1.tbz2.md5sum | md5sum -c -
+13e) PKGDIR=/usr/tmp emerge -O -vk glibc
 --
-13) emerge -upv system
-14) emerge -uv system
+14) emerge -upv system
+15) emerge -uv system
 
 Notes:
 The order is VERY important.
