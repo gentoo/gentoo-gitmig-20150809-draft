@@ -1,6 +1,6 @@
 # ChangeLog for gnome-extra/libgnomecanvasmm
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomecanvasmm/ChangeLog,v 1.6 2002/12/22 19:11:03 foser Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomecanvasmm/ChangeLog,v 1.7 2003/02/12 06:54:59 vapier Exp $
 
 *libgnomecanvas-2.0.0 (22 Dec 2002)
 

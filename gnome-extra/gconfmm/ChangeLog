@@ -1,6 +1,6 @@
 # ChangeLog for gnome-extra/gconfmm
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconfmm/ChangeLog,v 1.7 2002/12/22 18:58:12 foser Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconfmm/ChangeLog,v 1.8 2003/02/12 06:52:48 vapier Exp $
 
 *gconfmm-2.0.0 (22 Dec 2002)
 
