@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/sqlite-ruby
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite-ruby/ChangeLog,v 1.5 2004/08/05 23:32:58 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite-ruby/ChangeLog,v 1.6 2004/11/19 20:36:17 usata Exp $
+
+*sqlite-ruby-2.2.2 (20 Nov 2004)
+
+  20 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> +sqlite-ruby-2.2.2.ebuild:
+  Version bumped. Thanks to Thomas Kirchner <gentoo@halffull.org>; bug #71769.
 
   05 Aug 2004; Anders Rune Jensen <arj@gentoo.org> sqlite-ruby-1.0.ebuild:
   Depend on version 2 of sqlite.

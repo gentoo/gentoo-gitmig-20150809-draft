@@ -1,4 +1,16 @@
-MD5 695bef19ea85cc1d0cee8ed8ee01cddf ChangeLog 689
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f488f6eae89312fa865e5b35ed6781e4 ChangeLog 881
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 MD5 dc1ab53caa12d762d710878856d292ce sqlite-ruby-1.0.ebuild 632
+MD5 30fd7705b390bd6e40f9d9d009a6ef5a sqlite-ruby-2.2.2.ebuild 1022
 MD5 470b6f7b0ac0760bf720c14e802e4055 files/digest-sqlite-ruby-1.0 66
+MD5 cebb7186058a6704c874654d77f343a9 files/digest-sqlite-ruby-2.2.2 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBnllEVWNWqTUmv+0RAiTyAKCJHFxr5Vf/YO6db4acpRDqymmnTgCdGthW
+vNF67CEQ53EeuQGscktWbyg=
+=Ya8g
+-----END PGP SIGNATURE-----
