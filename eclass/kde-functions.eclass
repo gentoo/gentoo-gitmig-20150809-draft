@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.91 2005/02/05 12:28:34 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.92 2005/02/05 18:03:01 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -14,6 +14,7 @@ INHERITED="$INHERITED $ECLASS"
 # the relationships between them
 KDE_DERIVATION_MAP='
 kde-base/kdeaccessibility kde-base/kbstateapplet
+kde-base/kdeaccessibility kde-base/kdeaccessibility-iconthemes
 kde-base/kdeaccessibility kde-base/kmag
 kde-base/kdeaccessibility kde-base/kmousetool
 kde-base/kdeaccessibility kde-base/kmouth
@@ -45,6 +46,7 @@ kde-base/kdeaddons kde-base/kfile-desktop
 kde-base/kdeaddons kde-base/kfile-folder
 kde-base/kdeaddons kde-base/kfile-html
 kde-base/kdeaddons kde-base/kfile-lnk
+kde-base/kdeaddons kde-base/kfile-mhtml
 kde-base/kdeaddons kde-base/kfile-txt
 kde-base/kdeaddons kde-base/kicker-kbinaryclock
 kde-base/kdeaddons kde-base/kicker-kolourpicker
