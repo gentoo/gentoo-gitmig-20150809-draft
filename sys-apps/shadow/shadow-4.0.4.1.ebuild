@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.4.1.ebuild,v 1.4 2004/02/08 20:36:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.4.1.ebuild,v 1.5 2004/02/15 22:14:12 azarah Exp $
 
 inherit eutils libtool gnuconfig
 
@@ -97,9 +97,9 @@ src_install() {
 	dosed "s:/lib/:/usr/lib/:g" /usr/lib/libshadow.la
 	dosed "s:/lib':/usr/lib':g" /usr/lib/libmisc.la
 	dosed "s:/lib/:/usr/lib/:g" /usr/lib/libmisc.la
-	dosym /usr/bin/newgrp /usr/bin/sg
-	dosym /usr/sbin/useradd /usr/sbin/adduser
-	dosym /usr/sbin/vipw /usr/sbin/vigr
+	dosym newgrp /usr/bin/sg
+	dosym useradd /usr/sbin/adduser
+	dosym vipw /usr/sbin/vigr
 	# Remove dead links
 	rm -f ${D}/bin/{sg,vipw,vigr}
 
