@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.1-r1.ebuild,v 1.4 2004/01/16 09:31:01 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.1-r1.ebuild,v 1.5 2004/01/16 20:51:42 darkspecter Exp $
 
 inherit eutils
 
@@ -38,7 +38,7 @@ DEPEND="sys-devel/autoconf
 #IDEALX scripts are now using Net::LDAP
 RDEPEND="ldap? dev-perl/perl-ldap ${_COMMON_DEPS}"
 
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~hppa ~amd64 ~ppc64 ia64 ~alpha"
+KEYWORDS="~x86 ppc ~sparc ~mips ~hppa ~amd64 ~ppc64 ia64 ~alpha"
 LICENSE="GPL-2"
 SLOT="0"
 
