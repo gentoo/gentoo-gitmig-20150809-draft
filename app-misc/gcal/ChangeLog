@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/gcal
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gcal/ChangeLog,v 1.2 2003/02/12 04:58:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gcal/ChangeLog,v 1.3 2003/08/04 18:28:08 mholzer Exp $
+
+*gcal-3.01-r1 (04 Aug 2003)
+
+  04 Aug 2003; Martin Holzer <mholzer@gentoo.org> gcal-3.01-r1.ebuild:
+  Fixing some problems. Submitted by Matsuu Takuto <matsuu@gentoo.org> in #25866.
 
 *gcal-3.01 (24 Aug 2002)
 
