@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.26 2003/05/27 11:07:46 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.27 2003/05/27 21:06:21 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -27,9 +27,11 @@ S=${WORKDIR}/${MY_P}
 [ -z "$LICENSE" ]	&& LICENSE="PHP"
 [ -z "$PROVIDE" ]	&& PROVIDE="virtual/php"
 # PHP does automatic mirroring from this URI
-[ -z "$SRC_URI" ] 	&& SRC_URI="http://www.php.net/distributions/${MY_P}.tar.bz2
-				mirror://gentoo/php-${PV}-db4.diff.gz"
-
+if [ -z "$SRC_URI" ]; then
+	SRC_URI="http://www.php.net/distributions/${MY_P}.tar.bz2 
+		mirror://gentoo/${MY_P}-db4.diff.gz 
+		http://cvs.gentoo.org/~robbat2/distfiles/${MY_P}-db4.diff.gz"
+fi
 
 IUSE="${IUSE} X berkdb cjk crypt curl firebird flash freetds gd gdbm imap informix java jpeg ldap mcal mysql nls oci8 odbc pam pdflib memlimit pic png postgres qt snmp spell ssl tiff truetype xml xml2 zlib "
 #removed: gmp
