@@ -625,9 +625,6 @@ app-admin/va-systemimager-client
 # untested
 =app-editors/fte-20010819
 
-#older versions were reported as broken, 0.30 works fine (george)
-<=media-gfx/autotrace-0.28
-
 # have to fix the patches and dependencies
 =app-editors/fte-20010819
 
