@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/ratpoison
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.26 2004/10/14 03:29:33 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ChangeLog,v 1.27 2004/12/12 04:52:36 weeve Exp $
+
+  11 Dec 2004; Jason Wever <weeve@gentoo.org> ratpoison-1.3.0.ebuild:
+  Updated HOMEPAGE and SRC_URI to reflect recent move to savannah.nongnu.org.
 
   13 Oct 2004; Jason Wever <weeve@gentoo.org> -ratpoison-1.2.2-r1.ebuild,
   ratpoison-1.3.0.ebuild, -ratpoison-1.3.0_rc1.ebuild:

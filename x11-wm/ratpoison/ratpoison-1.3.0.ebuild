@@ -1,14 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.3.0.ebuild,v 1.4 2004/10/14 03:29:33 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ratpoison/ratpoison-1.3.0.ebuild,v 1.5 2004/12/12 04:52:36 weeve Exp $
 
 inherit elisp-common eutils
 
 DESCRIPTION="Ratpoison is an extremely light-weight and barebones wm modelled after screen"
-HOMEPAGE="http://ratpoison.sourceforge.net/"
+HOMEPAGE="http://www.nongnu.org/ratpoison/"
 LICENSE="GPL-2"
 
-SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="http://savannah.nongnu.org/download/${PN}/${P}.tar.gz"
 
 SLOT="0"
 KEYWORDS="x86 sparc ppc ~amd64"
