@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/esdl/esdl-0.93.0909.ebuild,v 1.1 2003/09/12 02:54:17 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/esdl/esdl-0.93.0909.ebuild,v 1.2 2003/10/24 11:32:27 lanius Exp $
+
+inherit fixheadtails
 
 IUSE=""
 
@@ -16,6 +18,7 @@ DEPEND=">=dev-lang/erlang-9b
 	>=media-libs/libsdl-1.2.4"
 
 src_compile() {
+	ht_fix_all
 	cp c_src/Makefile{,.orig}
 	sed -e "/^CFLAGS.*/s:\\\\$: ${CFLAGS} \\\\:" \
 		c_src/Makefile.orig > c_src/Makefile
