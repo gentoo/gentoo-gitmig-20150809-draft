@@ -1,0 +1,65 @@
+--- mod/Makefile	2004-02-10 10:32:19.000000000 +0000
++++ mod/Makefile	2004-03-27 13:40:22.811483270 +0000
+@@ -42,7 +42,8 @@
+ 
+ CFLAGS = -c -D__KERNEL__ -DMODULE 
+ 
+-KVER = $(shell uname -r | sed 's/\(.\..\).*/\1/')
++KVER = $(shell readlink /usr/src/linux|sed -e "s:.*linux-\([0-9]\+\.[0-9]\+\)\..*:\1:")
++KNAME = $(shell readlink /usr/src/linux|sed "s:linux-::")
+ 
+ OBJS = bc_dev22.o
+ KEXT = o
+@@ -66,7 +67,7 @@
+ #	Linux 2.4.x 
+ #######################################################################
+ ifeq ($(KVER), 2.4)
+-KERNEL_DIR = /lib/modules/$(shell uname -r)/build
++KERNEL_DIR = /lib/modules/$(KNAME)/build
+ OBJS = bc_dev24.o
+ SYMSRC = bc_dev24.c
+ CFLAGS += $(shell $(CC) -I$(KERNEL_DIR)/include/ -c test_nice.c -o /dev/null 2>/dev/null && echo "-D_NICE_PRESENT_")
+@@ -84,7 +85,7 @@
+ #	Linux 2.6.x 
+ #######################################################################
+ ifeq ($(KVER), 2.6)
+-KERNEL_DIR = /lib/modules/$(shell uname -r)/build
++KERNEL_DIR = /lib/modules/$(KNAME)/build
+ OBJS = bc_dev26.o
+ CFLAGS += -I$(KERNEL_DIR)/include/asm/mach-default/ -DKBUILD_BASENAME=BestCrypt
+ KEXT = ko
+@@ -92,13 +93,7 @@
+ 
+ CFLAGS += -I$(CUR_DIR)/../include/ -I$(KERNEL_DIR)/include/
+ 
+-ifeq ($(ARCH), alpha)
+-CFLAGS += -O2 -pipe -fno-strict-aliasing -fno-common -mno-fp-regs -ffixed-8 -mcpu=ev5
+-else
+-#ifeq ($(ARCH), i386)
+-CFLAGS += -O6 -fno-strength-reduce -fno-strict-aliasing 
+-# -Wall
+-endif
++CFLAGS += $(EXTRA_CFLAGS)
+ 
+ LDFLAGS = -d -r
+ 
+--- src/Makefile	2004-03-27 14:02:53.281310545 +0000
++++ src/Makefile	2004-03-27 14:03:09.227381640 +0000
+@@ -24,6 +24,7 @@
+ CFLAGS += -L../lib -I../include/ 
+ CFLAGS += -Wall -O2 -fno-strict-aliasing
+ #CFLAGS += -g -static -O6
++CFLAGS += $(EXTRA_CFLAGS)
+ LDFLAGS =
+ 
+ TARGETS = bctool
+--- kgsha/Makefile	2004-03-27 14:04:43.074259248 +0000
++++ kgsha/Makefile	2004-03-27 14:05:03.033341700 +0000
+@@ -20,6 +20,7 @@
+ 
+ CPP=g++
+ CPPFLAGS = -Wall -Werror -fno-strength-reduce -I../include -g 
++CPPFLAGS += $(EXTRA_CXXFLAGS)
+ 
+ TARGET = libkgsha.a
+ HEADERS = kg_defs.h kgsha.h kblock.h sha1.h random.h
