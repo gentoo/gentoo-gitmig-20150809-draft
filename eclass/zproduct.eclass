@@ -1,13 +1,10 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Jason Shoemaker <kutsuya@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/zproduct.eclass,v 1.6 2003/04/04 00:53:12 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/zproduct.eclass,v 1.7 2003/06/26 15:52:05 kutsuya Exp $
 
 # This eclass is designed to streamline the construction of
 # ebuilds for new zope products
-
-# 2003/04/03 - Added DOTTXT_PROTEXT variable..
-#            - Removed from EXPORT_FUNCTIONS: dottxt_protect, dottxt_unprotect
 
 ECLASS=zproduct
 INHERITED="${INHERITED} ${ECLASS}"
@@ -21,49 +18,12 @@ RDEPEND=">=net-zope/zope-2.6.0-r2
 	app-admin/zprod-manager"
 IUSE=""
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 S=${WORKDIR}
 
 ZI_DIR="${ROOT}/var/lib/zope/"
 ZP_DIR="${ROOT}/usr/share/zproduct"
 DOT_ZFOLDER_FPATH="${ZP_DIR}/${PF}/.zfolder.lst"
-DOTTXT_PROTECT="refresh.txt version.txt"
-
-
-# Temporarily rename .txt files that we don't want ripped out by do_doc.
-# Parameters:
-#   $1 = list of .txt files(without .txt) to protect from do_docs 
-#		 (can be empty)
-#   $2 = src
-# Returns: a list of path(s) of where item should go, along with tmp file name
-
-dottxt_protect()
-{
-	local RESULT=0
-	local LIST_MKTEMP=""
-  
-	[ -z "$1" ] && return 
-	for N in $1 ; do
-		if [ -f "${2}/${N}" ] ; then
-			TMPFILE=$(mktemp ${S}/${N}.XXXXXXXXXX) || die 'mktemp error'
-			LIST_MKTEMP="${2}/$(basename $TMPFILE) $LIST_MKTEMP"
-			mv -f ${2}/$N $TMPFILE
-		fi
-	done
-	echo "$LIST_MKTEMP"
-}
-
-# Parameters:
-#   $1 = list of tmp files(produced by dottxt_protect)
-
-dottxt_unprotect()
-{
-	local N=""
-	for N in $1 ; do
-		local SRC=${S}/$(basename $N)
-		mv -f ${SRC} ${N%.*}
-	done
-}
 
 zproduct_src_install()
 {
@@ -90,26 +50,9 @@ zproduct_src_install()
 			do_docs)
 				#*Moves txt docs 
 				debug-print-section do_docs 
-				LIST_OUTER="$(dottxt_protect "$DOTTXT_PROTECT" ${S})"
-				docinto / 
-				dodoc *.txt >/dev/null
-				rm -f *.txt
-				dodoc *.txt.* >/dev/null
-				rm -f *.txt.*
-				dottxt_unprotect "$LIST_OUTER"
-				for N in ${ZPROD_LIST} ; do
-					LIST_INNER="$(dottxt_protect "$DOTTXT_PROTECT" ${S}/${N})"
-					docinto ${N}
-					dodoc ${N}/*.txt >/dev/null
-					rm -f ${N}/*.txt
-					dodoc ${N}/*.txt.* >/dev/null
-					rm -f ${N}/*.txt.*
-					if [ -d "${N}/docs" ] ; then
-						docinto ${N}/docs
-						dodoc ${N}/docs/*
-						rm -Rf ${N}/docs
-					fi
-					dottxt_unprotect "$LIST_INNER" $N
+				docs_move
+				for ZPROD in ${ZPROD_LIST} ; do
+					docs_move ${ZPROD}/
 				done ;;
 			do_install)
 				debug-print-section do_install
@@ -125,6 +68,23 @@ zproduct_src_install()
 	debug-print "${FUNCNAME}: result is ${RESULT}"
 }
 
+docs_move()
+{
+    # if $1 == "/", then this breaks.
+	if [ -n "$1" ] ; then
+		docinto $1
+	else 
+		docinto /
+	fi
+    dodoc $1HISTORY.txt $1README{.txt,} $1INSTALL{.txt,} > /dev/null
+	dodoc $1AUTHORS $1COPYING $1CREDITS.txt $1TODO{.txt,} > /dev/null
+	dodoc $1LICENSE{.GPL,.txt,} $1CHANGES{.txt,} > /dev/null
+	dodoc $1DEPENDENCIES.txt $1FAQ.txt $1UPGRADE.txt > /dev/null
+	for item in ${MYDOC} ; do
+		dodoc ${1}${item} > /dev/null
+	done
+}
+
 zproduct_pkg_postinst()
 {
     #*check for multiple zinstances, if several display install help msg.
@@ -135,6 +95,8 @@ zproduct_pkg_postinst()
 	einfo ">>> Installing ${PF} into the \"$(zope-config --zidef-get)\" zinstance..."
 	${ROOT}/usr/sbin/zprod-manager add ${ZP_DIR}/${PF} 
 }
+
+# This function is deprecated! Still used, until a new system developed.
 
 zproduct_pkg_prerm()
 {
