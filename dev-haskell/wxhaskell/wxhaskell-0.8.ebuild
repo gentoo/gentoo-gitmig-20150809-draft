@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/wxhaskell-0.8.ebuild,v 1.1 2004/08/23 13:15:43 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/wxhaskell-0.8.ebuild,v 1.2 2004/08/30 09:03:02 kosmikus Exp $
+
+inherit wxwidgets
 
 DESCRIPTION="a portable and native GUI library for Haskell"
 HOMEPAGE="http://wxhaskell.sourceforge.net/"
@@ -10,16 +12,22 @@ SLOT="0"
 
 KEYWORDS="~x86"
 
-IUSE="doc"
+IUSE="doc gtk2"
 
 DEPEND="${DEPEND}
 	>=virtual/ghc-6.2
-	>=x11-libs/wxGTK-2.4.1
+	>=x11-libs/wxGTK-2.4.2-r2
 	doc? ( >=dev-haskell/haddock-0.6-r2 )"
 
 # the variable ghc_version is used to store the ghc version we are building against
 
 src_compile() {
+	#wxhaskell supports gtk or gtk2, but not unicode yet:
+	if ! use gtk2; then
+		need-wxwidgets gtk
+	else
+		need-wxwidgets gtk2
+	fi
 	# non-standard configure, so econf is not an option
 	mv configure configure.orig
 	# adapt to Gentoo path convention
@@ -31,11 +39,15 @@ src_compile() {
 	# (so that it's possible to install the library for
 	# multiple versions of ghc)
 	local myopts
+	local wxconfig
 	ghc_version=`best_version virtual/ghc | sed "s:.*/::"`
 	test -n ${ghc_version} && ghclibdir="/usr/lib/${ghc_version}"
 	test -n ${ghclibdir} || ghclibdir="/usr/lib"
 	test -n ${ghclibdir} && myopts="${myopts} --libdir=${D}/${ghclibdir}"
+	wxconfig="${WX_CONFIG}"
+	# --wx-config must appear first according to configure file comments 
 	./configure \
+		--wx-config=${wxconfig} \
 		--prefix=${D}/usr \
 		--hcpkg=/bin/true \
 		--with-opengl \
