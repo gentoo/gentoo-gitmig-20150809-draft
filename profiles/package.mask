@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2983 2004/07/05 04:35:01 langthang Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2984 2004/07/05 10:11:31 hanno Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -482,12 +482,6 @@ x11-misc/med
 # <tseng@gentoo.org> (11 Oct 2003)
 # Mask pending a solution to bsetroot
 =x11-misc/commonbox-utils-0.5
-
-# <hanno@gentoo.org> (7 Oct 2003)
-# Old and broken cvs-releases of sidplay, to be removed soon.
-# sidplay-libs-2.1.0 and sidplay-2.0.8 should replace everything
-=media-libs/libsidplay-2.1.0.20021111
-=media-sound/sidplay-2.0.8.20021111
 
 # <games@gentoo.org> (06 Oct 2003)
 # needs an update ... currently broken #30452
