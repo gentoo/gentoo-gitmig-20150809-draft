@@ -1,6 +1,8 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.4.1.ebuild,v 1.1 2002/11/01 22:55:19 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.4.1.ebuild,v 1.2 2002/11/26 04:30:22 strider Exp $
+
+inherit virtualx
 
 DESCRIPTION="XSLT processor"
 HOMEPAGE="http://xml.apache.org/xalan-j/index.html"
@@ -14,24 +16,24 @@ SRC_URI="http://xml.apache.org/dist/xalan-j/${PN}-j_2_4_1-src.tar.gz"
 S=${WORKDIR}/${PN}-j_2_4_1
 LICENSE="Apache-1.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc ~sparc64"
-IUSE="jikes"
+KEYWORDS="~x86"
+#IUSE="jikes"
+IUSE=""
 
 src_compile() {
-	local myc
+#	local myc
+	export maketype="ant"
 
-	# FIXME: Compiling with Jikes does not work properly yet.
+# FIXME: Compiling with Jikes does not work properly yet.
+#	use jikes && \
+#		myc="${myc} -Dbuild.compiler=jikes" ||
+#		myc="${myc} -Dbuild.compiler=classic"
 
-	use jikes && \
-		myc="${myc} -Dbuild.compiler=jikes" ||
-		myc="${myc} -Dbuild.compiler=classic"
-
-	ant jar docs javadocs ${myc} || die "build failed"
+	virtualmake jar docs ${myc} || die "build failed"
 }
 
 src_install () {
 	dojar build/xalan.jar
-
 	dohtml readme.html
 	dohtml -r build/docs/*
 }

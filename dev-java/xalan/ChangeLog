@@ -1,8 +1,14 @@
 # ChangeLog for dev-java/xalan
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.5 2002/11/01 22:55:19 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.6 2002/11/26 04:30:22 strider Exp $
 
 *xalan-2.4.1 (01 Nov 2002)
+
+  26 Nov 2002; Adrian Almenar <strider@gentoo.org> xalan-2.4.1.ebuild:
+  This ebuild doesnt compile well with jikes. Also to create xdocs i needed to
+  use virtualx.class cause needs to connect to xserver. Removed generation
+  of javadocs since i cant figure out why they dont get generated.
+  This ebuild its still masked on packages.mask.
 
   01 Nov 2002; Karl Trygve Kalleberg <karltk@gentoo.org> xalan-2.4.1.ebuild files/digest-xalan-2.4.1 :
   New upstream version. Ebuild submitted by Adrian Almenar
