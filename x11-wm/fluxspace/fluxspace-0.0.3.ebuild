@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxspace/fluxspace-0.0.3.ebuild,v 1.3 2003/06/12 19:04:18 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxspace/fluxspace-0.0.3.ebuild,v 1.4 2003/08/29 20:33:28 liquidx Exp $
 
 IUSE=""
 S=${WORKDIR}/${P}
@@ -12,7 +12,7 @@ DEPEND="x11-wm/fluxbox
 		app-misc/rox
 		media-libs/imlib2
 		dev-lang/python
-		dev-python/PyXML
+		dev-python/pyxml
 		dev-lang/swig"
 SLOT="0"
 LICENSE="GPL-2"
