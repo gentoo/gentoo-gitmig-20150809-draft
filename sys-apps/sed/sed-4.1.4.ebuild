@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.1.4.ebuild,v 1.1 2005/02/19 18:26:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.1.4.ebuild,v 1.2 2005/03/13 08:47:33 vapier Exp $
 
 inherit flag-o-matic
 
@@ -33,6 +33,12 @@ src_bootstrap_cleanup() {
 	if [[ -n ${NO_SYS_SED} ]] ; then
 		make clean || die "couldnt clean"
 	fi
+}
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-makeinfo-c-locale.patch
 }
 
 src_compile() {
