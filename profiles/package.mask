@@ -46,7 +46,8 @@
 
 # <cretin@gentoo.org> (17 Nov 2002)
 # New version
-=sys-devel/binutils-2.13.90.0.14
+# Test ok for me. <azarah@gentoo.org> (21 Nov 2002)
+#=sys-devel/binutils-2.13.90.0.14
 
 # <phoenix@gentoo.org> (17 Nov 2002)
 # sawfish-1.2 is newer - masking 2.0
