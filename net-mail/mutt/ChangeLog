@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mutt
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.52 2004/03/09 12:27:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.53 2004/03/26 20:51:24 tuxus Exp $
+
+  26 Mar 2004; <tuxus@gentoo.org> mutt-1.5.6.ebuild:
+  Added mips to KEYWORDS.
 
   09 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> mutt-1.5.6.ebuild:
   Bumping amd64 to stable. Closing #43469.

@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.115 2004/03/22 21:33:51 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.116 2004/03/26 20:48:17 tuxus Exp $
+
+  26 Mar 2004; <tuxus@gentoo.org> postfix-2.0.19.ebuild:
+  Added mips to KEYWORDS.
 
   22 Mar 2004; Max Kalika <max@gentoo.org> postfix-2.0.19-r1.ebuild,
   postfix-2.0.19-r2.ebuild, postfix-2.0.19.ebuild:
