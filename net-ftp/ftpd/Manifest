@@ -1,5 +1,5 @@
-MD5 c988d71961f933bb3de7801eea82d97d ChangeLog 975
-MD5 c6cc295a7cd16c7a5408f2701ea7cafb ftpd-0.17.ebuild 1460
+MD5 50f3106c96f5ca40fda115d127daeec1 ChangeLog 976
+MD5 df9e07d0ac0ecac665cdf556dda6dc43 ftpd-0.17.ebuild 1461
 MD5 1185c6db5ae646d809d0c757f02d8e35 files/digest-ftpd-0.17 66
 MD5 e9e77d723b87be9b3f8b6bff9deb87c3 files/ftp.xinetd 219
 MD5 0630d5a4a420220cc8b912bdad705f6c files/ssl.diff.gz 10444

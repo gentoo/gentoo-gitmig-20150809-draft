@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpd/ftpd-0.17.ebuild,v 1.6 2003/02/13 14:03:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ftpd/ftpd-0.17.ebuild,v 1.7 2003/04/18 23:56:09 mholzer Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ KEYWORDS="x86"
 DEPEND="ssl? ( dev-libs/openssl )"
 
 RDEPEND="${DEPEND}
-	sys-apps/xinetd"
+	virtual/inetd"
 
 src_unpack() {
 	unpack ${A}
