@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.0.5.ebuild,v 1.9 2004/06/24 22:38:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.0.5.ebuild,v 1.10 2004/06/29 16:49:11 kugelfang Exp $
 
-inherit eutils
+inherit eutils 64-bit
 
 IUSE="spell jpeg xml2 gnome doc"
 
@@ -42,10 +42,9 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 
-	# Abiword is not 64-bit safe.  This is a patch for AMD64.
-	if [ $ARCH = "amd64" ] ; then
-		epatch ${FILESDIR}/${PN}-2.0.3-amd64.patch || die
-	fi
+	# Abiword is not 64-bit safe.
+	# ${ARCH} = "*64" -> 64-bit, see BUG #55238.
+	64-bit && epatch ${FILESDIR}/${PN}-2.0.3-amd64.patch || die
 
 	# this is a hack since I don't want to go hack in the gnome-vfs headerfiles.
 	# The issue is about gnome-vfs containing "long long" which makes gcc 3.3.1 balk
