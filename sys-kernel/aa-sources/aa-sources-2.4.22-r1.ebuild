@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/aa-sources-2.4.22-r1.ebuild,v 1.1 2003/09/02 09:08:55 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/aa-sources-2.4.22-r1.ebuild,v 1.2 2003/09/07 19:01:56 mholzer Exp $
 
 IUSE="build"
 
@@ -32,12 +32,12 @@ BASE="`echo ${KV}|sed -e s:${EXTRAVERSION}::`"
 # ourkernel is the stable kernel we'll be working with (previous or current)
 if [ ${PRERC} ]; then
         OURKERNEL="2.4.${OKVLASTPR}"
-        SRC_URI="mirror:/kernel/linux/kernel/v2.4/linux-${OURKERNEL}.tar.bz2
+        SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OURKERNEL}.tar.bz2
                 mirror://kernel/linux/kernel/people/andrea/kernels/v2.4/${KV/-}.bz2
                 mirror://kernel/linux/kernel/v2.4/testing/patch-${PV/_/-}.bz2"
 else
         OURKERNEL="2.4.${OKVLAST}"
-        SRC_URI="mirror:/kernel//linux/kernel/v2.4/linux-${OURKERNEL}.tar.bz2
+        SRC_URI="mirror://kernel//linux/kernel/v2.4/linux-${OURKERNEL}.tar.bz2
                 mirror://kernel/linux/kernel/people/andrea/kernels/v2.4/${KV/-}.bz2"
 fi
 
@@ -62,4 +62,3 @@ src_unpack() {
 
         kernel_universal_unpack
 }
-

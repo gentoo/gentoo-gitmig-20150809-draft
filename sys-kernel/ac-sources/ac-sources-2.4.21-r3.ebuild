@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ac-sources/ac-sources-2.4.21-r3.ebuild,v 1.3 2003/09/07 07:26:00 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ac-sources/ac-sources-2.4.21-r3.ebuild,v 1.4 2003/09/07 19:02:33 mholzer Exp $
 
 IUSE="build"
 
@@ -34,13 +34,13 @@ DESCRIPTION="Full sources for Alan Cox's Linux kernel"
 # ourkernel is the stable kernel we'll be working with (previous or current)
 if [ ${PRERC} ]; then
 OURKERNEL="2.4.${OKVLASTPR}"
-SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OURKERNEL}.tar.bz2
-http://www.kernel.org/pub/linux/kernel/people/alan/linux-2.4/${BASE}/patch-${KV}.bz2
-http://www.kernel.org/pub/linux/kernel/v2.4/testing/patch-${PV/_/-}.bz2"
+SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OURKERNEL}.tar.bz2
+mirror://kernel/linux/kernel/people/alan/linux-2.4/${BASE}/patch-${KV}.bz2
+mirror://kernel/linux/kernel/v2.4/testing/patch-${PV/_/-}.bz2"
 else
 OURKERNEL="2.4.${OKVLAST}"
-SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OURKERNEL}.tar.bz2
-http://www.kernel.org/pub/linux/kernel/people/alan/linux-2.4/${BASE}/patch-${KV}.bz2"
+SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OURKERNEL}.tar.bz2
+mirror://kernel/linux/kernel/people/alan/linux-2.4/${BASE}/patch-${KV}.bz2"
 fi
 
 KEYWORDS="x86"
