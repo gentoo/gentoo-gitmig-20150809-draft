@@ -1,6 +1,6 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-1.5.2.ebuild,v 1.2 2002/03/06 18:55:22 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-1.5.2.ebuild,v 1.3 2002/04/27 13:34:35 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="kernel level implementation of the AppleTalk Protocol Suite"
@@ -15,9 +15,9 @@ DEPEND="virtual/glibc
 	>=sys-libs/db-3"
 
 src_compile() {
-	use pam  && myconf="$myconf --with-pam"
-	use tcpd && myconf="$myconf --with-tcp-wrappers"
-	use ssl  || myconf="$myconf --disable-ssl"
+	use pam  && myconf="${myconf} --with-pam"
+	use tcpd && myconf="${myconf} --with-tcp-wrappers"
+	use ssl  || myconf="${myconf} --disable-ssl"
 	./configure \
 		--host=${CHOST} \
 		--prefix=/usr \
@@ -25,7 +25,7 @@ src_compile() {
 		--enable-fhs \
 		--with-shadow \
 		--with-db3 \
-		$myconf || die "netatalk configure failed"
+		${myconf} || die "netatalk configure failed"
 
 	emake || die "netatalk emake failed"
 }
