@@ -1,6 +1,11 @@
 # ChangeLog for net-dns/dnsmasq
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.38 2004/06/06 20:57:27 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.39 2004/06/23 19:53:54 avenj Exp $
+
+*dnsmasq-2.9 (23 Jun 2004)
+
+  23 Jun 2004; Jon Portnoy <avenj@gentoo.org> dnsmasq-2.9.ebuild :
+  Version bump.
 
   06 Jun 2004; Jason Wever <weeve@gentoo.org> dnsmasq-2.8-r1.ebuild:
   Stable on sparc.
