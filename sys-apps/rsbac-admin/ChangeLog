@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/rsbac-admin
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/ChangeLog,v 1.10 2004/09/28 01:55:43 swegener Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/rsbac-admin/ChangeLog,v 1.11 2005/01/19 13:58:00 kang Exp $
+
+  19 Jan 2005; Guillaume Destuynder <kang@gentoo.org>
+  -rsbac-admin-1.2.1.ebuild, rsbac-admin-1.2.3.ebuild,
+  -rsbac-admin-1.2.3_pre5.ebuild:
+  Cleaned dir, marked ~ppc
 
   28 Sep 2004; Sven Wegener <swegener@gentoo.org> :
   Gentoo Technologies, Inc. -> Gentoo Foundation
