@@ -1,6 +1,9 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.108 2004/03/28 22:38:30 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.109 2004/03/29 13:19:26 zul Exp $
+
+  29 Mar 2004; Chuck Short <zul@gentoo.org> files/conf/Vhosts.conf:
+  Fixed typo in Vhosts.conf config file, closes #34335.
 
   28 Mar 2004; <randy@gentoo.org> apache-2.0.48-r4.ebuild:
   adding s390 keywords
