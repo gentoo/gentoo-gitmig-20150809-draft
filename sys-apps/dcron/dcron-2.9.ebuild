@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.9.ebuild,v 1.8 2003/07/25 05:05:33 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/dcron-2.9.ebuild,v 1.9 2003/09/02 12:14:59 vapier Exp $
 
 # to use this, you must be part of the "cron" group
 
@@ -48,7 +48,7 @@ src_install() {
 	install -o root -g wheel -m 0700 crond ${D}/usr/sbin
 	install -o root -g cron -m 4750 crontab ${D}/usr/bin
 
-	dodoc CHANGELOG README {FILESDIR}/crontab
+	dodoc CHANGELOG README ${FILESDIR}/crontab
 	doman crontab.1 crond.8
 
 	exeinto /etc/init.d ; newexe ${FILESDIR}/dcron.rc6 dcron
