@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Spider <spider@gentoo.org>
 # Maintainer: Spider  <spider@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit2/ORBit2-2.4.0-r2.ebuild,v 1.1 2002/06/28 08:25:59 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit2/ORBit2-2.4.0-r2.ebuild,v 1.2 2002/07/04 13:03:34 azarah Exp $
 
 inherit debug 
 inherit libtool
@@ -13,7 +13,7 @@ SRC_URI="mirror://gnome/sources/ORBit2/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
 
 
-RDEPEND=">=dev-libs/glib-2.0.0
+RDEPEND=">=dev-libs/glib-2.0.4-r1
 		>=dev-libs/popt-1.6.3
 		>=dev-libs/libIDL-0.7.4
 		>=net-libs/linc-0.5.0-r2"
