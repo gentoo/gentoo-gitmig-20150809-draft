@@ -1,17 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f747abf1a8a181fa03a742ec5d1eade3 rasmol-2.7.2.1.1.ebuild 1397
-MD5 c963fa2cac6fb554d1410ef7ffc10787 rasmol-2.7.1.1.ebuild 1420
-MD5 a098906037e97b4ed8c2a2b170426e12 ChangeLog 2141
+MD5 a91c35e51a60263d8d7a3313be4dc641 rasmol-2.7.2.1.1.ebuild 1406
+MD5 ae994b95b88dad8ef987b03dad1763b9 ChangeLog 2318
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
 MD5 d141a35d345c54bb3694ed83ba91b40a files/rasmol.sh.debian 830
-MD5 cb90fa78d1f80a9d6f84e3fcc228175e files/digest-rasmol-2.7.1.1 67
 MD5 5bfaa68da594b02ca585dcfa3fd29426 files/digest-rasmol-2.7.2.1.1 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBzHnXI1lqEGTUzyQRArsYAJ9QJQlLJKYE5e5KbWrOihT5WjgWeQCfSRxf
-Cf8HSlqCRV8gAlo1wtT29tw=
-=+/6k
------END PGP SIGNATURE-----

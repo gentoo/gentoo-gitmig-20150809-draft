@@ -1,8 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/rasmol-2.7.2.1.1.ebuild,v 1.1 2004/12/24 17:03:16 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/rasmol/rasmol-2.7.2.1.1.ebuild,v 1.2 2005/01/03 02:49:11 ribosome Exp $
 
-inherit gcc
+inherit toolchain-funcs
 
 MY_P="RasMol_${PV}"
 
@@ -31,17 +31,17 @@ src_unpack() {
 src_compile() {
 	cd src
 	xmkmf || die "xmkmf failed"
-	make DEPTHDEF=-DEIGHTBIT CC="$(gcc-getCC)" \
+	make DEPTHDEF=-DEIGHTBIT CC="$(tc-getCC)" \
 		CDEBUGFLAGS="${CFLAGS}" \
 		|| die "8-bit make failed"
 	mv rasmol rasmol.8
 	make clean
-	make DEPTHDEF=-DSIXTEENBIT CC="$(gcc-getCC)" \
+	make DEPTHDEF=-DSIXTEENBIT CC="$(tc-getCC)" \
 		CDEBUGFLAGS="${CFLAGS}" \
 		|| die "16-bit make failed"
 	mv rasmol rasmol.16
 	make clean
-	make DEPTHDEF=-DTHIRTYTWOBIT CC="$(gcc-getCC)" \
+	make DEPTHDEF=-DTHIRTYTWOBIT CC="$(tc-getCC)" \
 		CDEBUGFLAGS="${CFLAGS}" \
 		|| die "32-bit make failed"
 	mv rasmol rasmol.32
