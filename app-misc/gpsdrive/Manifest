@@ -1,27 +1,27 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 daca97141aed3e72f999f50dcd75243f ChangeLog 3016
 MD5 8ba4384fb6deae4dfa354f2eae080ef4 gpsdrive-1.33.ebuild 870
+MD5 fc7b449fafa4644c63f743079916bec5 gpsdrive-2.08.ebuild 641
 MD5 86dd9d576fcc490ab8d89fbbfed3c220 gpsdrive-2.03.ebuild 888
 MD5 8d5986f3f5ca7585eac2bd6af921bdd3 gpsdrive-2.04-r1.ebuild 824
-MD5 b87a21c5613e647ac67bd582e92dfebc gpsdrive-2.04.ebuild 904
 MD5 2fb09a44d8c1efb50ac88abbbf16f156 gpsdrive-2.05.ebuild 805
-MD5 fc7b449fafa4644c63f743079916bec5 gpsdrive-2.08.ebuild 641
-MD5 6474837998c706fe9082b610889c181b gpsdrive-2.09.ebuild 645
+MD5 11a4619f59a44fab868e298a95898cf9 ChangeLog 3124
+MD5 7768cccef3570d35ad2d9c8f666cd222 gpsdrive-2.09.ebuild 645
+MD5 b87a21c5613e647ac67bd582e92dfebc gpsdrive-2.04.ebuild 904
 MD5 32831d719499c83f7942f6432ef58278 metadata.xml 252
 MD5 ad8ae06576c6678d0a4a4cb61014fb18 files/digest-gpsdrive-1.33 65
 MD5 f4b01a7657415f3a8caf2422a5f715aa files/digest-gpsdrive-2.03 66
 MD5 f4224a709bbce5bff625332f19761c3d files/digest-gpsdrive-2.04 66
-MD5 f4224a709bbce5bff625332f19761c3d files/digest-gpsdrive-2.04-r1 66
 MD5 00e72d5a967348cc0832549f76d79dd8 files/digest-gpsdrive-2.05 66
 MD5 e34ba74b6c93ad9807358fd5532a2240 files/digest-gpsdrive-2.08 66
 MD5 147e1a7fef96bb7dce82526d869fd003 files/digest-gpsdrive-2.09 66
+MD5 f4224a709bbce5bff625332f19761c3d files/digest-gpsdrive-2.04-r1 66
 MD5 e7ce43c5ded7e00c82286c1b403f6477 files/gpsd.higher_serial_speeds.patch 764
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB963t0K3RJaeXx6cRAhMCAJ9LVuXDDpG4gY6tAzwf1WQOC/ghgACfaU0c
-nDDL9ROymJquru/X6jrqdck=
-=HU4X
+iD8DBQFCVDk006ebR+OMO78RApatAJ0eyxPxPLeL4dKneGlJn8aypX4VMQCfQ2wf
+8aFoGhdPvqofqPKNPlPr9AM=
+=sC8Y
 -----END PGP SIGNATURE-----
