@@ -1,8 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/sylpheed-0.8.9.ebuild,v 1.1 2003/01/17 15:00:06 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/sylpheed-0.8.9.ebuild,v 1.2 2003/01/17 19:14:53 bcowan Exp $
 
 IUSE="ssl xface ipv6 nls gnome ldap crypt pda"
+
+inherit eutils
 
 S=${WORKDIR}/${P}
 
@@ -17,13 +19,19 @@ KEYWORDS="~x86"
 PROVIDE="virtual/sylpheed"
 
 DEPEND="=x11-libs/gtk+-1.2*
-	app-misc/mime-types
 	xface? ( >=media-libs/compface-1.4 )
 	ssl? ( dev-libs/openssl )
 	pda? ( app-misc/jpilot )
 	crypt? ( >=app-crypt/gnupg-1.0.6 >=app-crypt/gpgme-0.2.3 )
 	ldap? ( >=net-nds/openldap-2.0.11 )
-	gnome? ( >=media-libs/gdk-pixbuf-0.11.0-r1 )"
+	gnome? ( >=media-libs/gdk-pixbuf-0.11.0-r1 )
+	x11-misc/shared-mime-info"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/shared-mime.patch
+}
 
 src_compile() {
 	local myconf
