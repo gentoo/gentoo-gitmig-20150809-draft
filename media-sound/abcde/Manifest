@@ -1,3 +1,4 @@
+MD5 658806f11ca0306818b933d16a5dfe7d abcde-2.1.9.ebuild 864
 MD5 4b3aec9e5ecb099d75e82006b65e12a8 abcde-2.1.4.ebuild 863
 MD5 58a33f0934a35896d27e906a28dd8a30 abcde-2.0.3.ebuild 818
 MD5 8b49d0404d48c17982c086c649684af5 ChangeLog 1674
@@ -10,3 +11,5 @@ MD5 376209a5c71ff7221753b499cd656501 files/abcde-2.1.4-gentoo.diff 743
 MD5 60d60afd57309ef7488531c447e6b2ae files/digest-abcde-2.0.3 67
 MD5 9e878360a0394ec596c61934a3d876cf files/digest-abcde-2.1.4 67
 MD5 6cc3c1a5c3d553cb63fecb8b19288e26 files/digest-abcde-2.1.6 67
+MD5 25b33b09dc6ed31413a1082a5350e872 files/digest-abcde-2.1.9 67
+MD5 b210e264481836469de91373769abfbf files/abcde-2.1.9-gentoo.diff 898
