@@ -12,3 +12,10 @@ kde
 arts
 qt
 
+# Too many packages assume that mmx/sse/sse2/3dnow are 86-32 only things to
+# make them useful on amd64. Anyway, all amd64 cpus have them, so they should
+# not be many flag dependant in this case
+mmx
+sse
+sse2
+3dnow
