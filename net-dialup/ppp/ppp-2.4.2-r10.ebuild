@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r10.ebuild,v 1.7 2005/02/06 09:22:13 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2-r10.ebuild,v 1.8 2005/02/12 07:52:04 mrness Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -83,9 +83,9 @@ src_compile() {
 	gnuconfig_update
 	# compile radius better than their makefile does
 	append-ldflags -Wl,-z,now
-	(cd pppd/plugins/radius/radiusclient && econf && emake) || die
-	./configure --prefix=/usr || die
-	emake COPTS="${CFLAGS}" || die
+	(cd pppd/plugins/radius/radiusclient && econf && emake -j1 ) || die "radiusclient build has failed"
+	./configure --prefix=/usr || die "configure failed"
+	emake COPTS="${CFLAGS}" || die "build has failed"
 }
 
 src_install() {
