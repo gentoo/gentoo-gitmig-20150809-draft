@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/fop
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.5 2004/08/24 04:11:10 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop/ChangeLog,v 1.6 2004/09/06 08:46:14 axxo Exp $
+
+  06 Sep 2004; Thomas Matthijs <axxo@gentoo.org> fop-0.20.5.ebuild:
+  depend on ant-tasks
 
   24 Aug 2004; Chris Aniszczyk <zx@gentoo.org> fop-0.20.5.ebuild:
   Marking x86
