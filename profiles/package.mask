@@ -57,7 +57,6 @@ net-p2p/lmule
 # the cvs of gift is broken
 net-p2p/gift-cvs
 net-p2p/giftui
-net-p2p/giftcurs
 net-p2p/giftoxic
 
 # <coredumb@gentoo.org> (14 July 2003)
