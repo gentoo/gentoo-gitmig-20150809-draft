@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.89 2004/01/26 00:34:09 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde.eclass,v 1.90 2004/01/26 00:44:21 caleb Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -148,12 +148,13 @@ configure_die()
 	eerror
 	eerror  "If the error was related to not finding the STL, you have a gcc error"
 	eerror  "that is easily fixed by re-emerging the latest version of gcc"
+	eerror  "See http://forums.gentoo.org/viewtopic.php?p=790048#790048"
+	eerror  "or http://bugs.gentoo.org/show_bug.cgi?id=38634"
 	eerror
 	eerror
 	eerror	"If the error died during the check for Qt, and you have Qt installed, the problem"
-	eerror	"is most likely due to your nvidia drivers being configured improperly."
-	eerror
-	eerror	"Search forums.gentoo.org for help in setting them up properly.  This is NOT a kde bug."
+	eerror	"is most likely due to your nvidia drivers being configured improperly.  See the
+	eerror  "forums, or try reconfiguring using: opengl-update xfree"
 	eerror
 	die
 }
