@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 a6e811b7b46245f37e9efd6b95bb34fc skel.ebuild 347
-MD5 7c28a054f6d9e2fe8f53dc41009ee6e4 IniConf-1.03.ebuild 441
+MD5 7dd172e2acf1e8acab4d735687f28687 IniConf-1.03.ebuild 557
+MD5 b40b9a0db07d9de6dcb32eaaf8ea074a ChangeLog 344
 MD5 ebe11ac9ab1e8b6f3ef2c72e2e3a5192 files/digest-IniConf-1.03 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCB2DOtG5z4I8BtQoRAnqKAJ4rRkft8DRQL+NlyVWMe+nFhF2YLwCdFAe3
+W6cnZPvSrpXbc+d45kkOgzo=
+=WEon
+-----END PGP SIGNATURE-----

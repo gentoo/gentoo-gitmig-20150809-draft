@@ -1,2 +1,14 @@
-MD5 f465489bddf767befb564a0ca9f1dee0 Business-FedEx-DirectConnect-0.19.ebuild 467
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fe75010ad0640b2661b87cc16993f2f7 Business-FedEx-DirectConnect-0.19.ebuild 605
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 95974aa904c9cdfb60c2670f41f90bb1 ChangeLog 428
 MD5 3c793de78bb04d46561da7c0f0b7c0ae files/digest-Business-FedEx-DirectConnect-0.19 84
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCB2JytG5z4I8BtQoRAoNiAJ0frnNxM/fO15TgzAS6OpgqmxPZsACcC7RJ
+HigsPMfWVAGKS4NmDSlcWok=
+=UYcQ
+-----END PGP SIGNATURE-----

@@ -1,2 +1,14 @@
-MD5 0c8c451548a57c818e4c589313d21638 Tie-StrictHash-1.0.ebuild 405
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 05a5d72701d689b962700a411d5098e3 Tie-StrictHash-1.0.ebuild 519
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 d918741504fd7001aa895dd16aed224b ChangeLog 370
 MD5 b8f9f260f9d3ebdbd923ce2db968fbdf files/digest-Tie-StrictHash-1.0 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCB2INtG5z4I8BtQoRAtwQAJ413nLExqiWqoI/MXjZM7v4anOJtQCfY6fV
+xAjcYJ4KKf0PsDNrXUlp3m0=
+=Ehlc
+-----END PGP SIGNATURE-----
