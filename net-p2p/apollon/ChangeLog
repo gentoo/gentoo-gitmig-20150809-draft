@@ -1,0 +1,10 @@
+# ChangeLog for net-p2p/apollon
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/apollon/ChangeLog,v 1.1 2003/10/18 10:43:55 sergey Exp $
+
+*apollon-0.9 (18 Oct 2003)
+
+  18 Oct 2003; Sergey Kuleshov <svyatogor@gentoo.org> apollon-0.9.ebuild,
+  metadata.xml:
+  Initial commit of the ebuild. Thus closing bugs #27186 and #30377.
+
