@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/crypt-dsa
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-dsa/ChangeLog,v 1.1 2003/06/23 16:38:01 mcummings Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/crypt-dsa/ChangeLog,v 1.2 2004/02/26 05:19:08 kumba Exp $
+
+  25 Feb 2004; Joshua Kinard <kumba@gentoo.org> crypt-dsa-0.12.ebuild:
+  Added ~mips to KEYWORDS to satisfy repoman deps.
 
 *crypt-dsa-0.12 (23 Jun 2003)
 
