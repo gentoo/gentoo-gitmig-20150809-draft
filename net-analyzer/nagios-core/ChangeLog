@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nagios-core
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.8 2003/02/12 07:46:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/ChangeLog,v 1.9 2003/06/10 21:12:44 alron Exp $
+
+*nagios-core-1.1	(10 Jun 2003)
+  10 Jun 2003; Dean Bailey <alron@gentoo.org> nagios-core-1.1 :
+  Version bump with small patches added in. Apache2 useflag support
+  also added in.
 
 *nagios-core-1.0-r1	(11 Feb 2003)
   11 Feb 2003; Dean Bailey <alron@gentoo.org> nagios-core-1.0-r1 :
