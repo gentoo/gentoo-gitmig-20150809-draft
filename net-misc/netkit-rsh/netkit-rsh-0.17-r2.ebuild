@@ -1,32 +1,33 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/netkit-rsh-0.17-r2.ebuild,v 1.2 2001/09/29 21:52:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rsh/netkit-rsh-0.17-r2.ebuild,v 1.3 2002/04/27 21:04:36 seemant Exp $
 
-P=netkit-rsh-0.17
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Netkit - rshd"
-SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${A}"
+SRC_URI="http://ftp.debian.org/debian/pool/main/n/${PN}/${PN}_${PV}.orig.tar.gz"
 
 DEPEND="virtual/glibc
-        >=sys-libs/ncurses-5.2
+	>=sys-libs/ncurses-5.2
 	>=sys-libs/pam-0.72"
 
 src_unpack () {
-    unpack ${A}
-    cd ${S}
-    patch -p0 < ${O}/files/rlogind-auth.diff || die
+	unpack ${A}
+	cd ${S}
+	patch -p0 < ${O}/files/rlogind-auth.diff || die
 }
 
 src_compile() {
-    ./configure || die
-    cp MCONFIG MCONFIG.orig
-    sed -e "s/-pipe -O2/${CFLAGS}/" -e "s:-Wpointer-arith::" MCONFIG.orig > MCONFIG
-    make || die
+	./configure || die
+	cp MCONFIG MCONFIG.orig
+	sed -e "s/-pipe -O2/${CFLAGS}/" \
+		-e "s:-Wpointer-arith::" \
+		MCONFIG.orig > MCONFIG
+
+	make || die
 }
 
-src_install() {                               
+src_install() {							   
 	into /usr
 	dobin  rcp/rcp
 	fperms 4755 /usr/bin/rcp

@@ -1,27 +1,27 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-fingerd/netkit-fingerd-0.17-r2.ebuild,v 1.1 2001/04/29 21:53:54 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-fingerd/netkit-fingerd-0.17-r2.ebuild,v 1.2 2002/04/27 20:59:30 seemant Exp $
 
-P=netkit-fingerd-0.17
-A=bsd-finger-0.17.tar.gz
-S=${WORKDIR}/bsd-finger-0.17
+MY_PN=${PN/netkit/bsd}
+MY_PN=${MY_PN/rd/r}
+S=${WORKDIR}/${MY_PN}-${PV}
 DESCRIPTION="Netkit - fingerd"
-SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${A}"
-
+SRC_URI="http://ftp.debian.org/debian/pool/main/b/${MY_PN}/${MY_PN}_${PV}.orig.tar.gz"
+HOMEPAGE="http://packages.debian.org/unstable/net/fingerd.html"
 DEPEND=">=sys-libs/glibc-2.1.3"
 
 src_unpack() {
-    unpack ${A}
-    patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
+	unpack ${A}
+	patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
 }
 
-src_compile() {     
-    try ./configure
-    try make
+src_compile() {	 
+	./configure || die
+	make || die
 }
 
-src_install() {                               
+src_install() {							   
 	into /usr
 	dobin  finger/finger
 	dosbin fingerd/fingerd
@@ -31,6 +31,3 @@ src_install() {
 	dosym  fingerd.8.gz /usr/man/man8/in.fingerd.8.gz
 	dodoc  README ChangeLog BUGS
 }
-
-
-

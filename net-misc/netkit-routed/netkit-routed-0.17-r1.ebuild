@@ -1,22 +1,21 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-routed/netkit-routed-0.17-r1.ebuild,v 1.4 2000/11/01 04:44:21 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-routed/netkit-routed-0.17-r1.ebuild,v 1.5 2002/04/27 21:01:44 seemant Exp $
 
-P=netkit-routed-0.17
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Netkit - routed"
-SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${A}"
+SRC_URI="http://ftp.debian.org/debian/pool/main/n/netkit-routed/${PN}_${PV}.orig.tar.gz"
+HOMEPAGE="http://packages.debian.org/unstable/net/routed.html"
 
 DEPEND=">=sys-libs/glibc-2.1.3"
 
 src_compile() {  
-    try ./configure                         
-    try make
+	./configure	|| die
+	make || die
 }
 
-src_install() {                               
+src_install() {							   
 	into /usr
 	dosbin ripquery/ripquery
 	doman  ripquery/ripquery.8
@@ -27,5 +26,3 @@ src_install() {
 	dodoc  README ChangeLog
 	newdoc routed/README README.routed
 }
-
-
