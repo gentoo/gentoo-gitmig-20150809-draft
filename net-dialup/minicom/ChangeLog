@@ -1,7 +1,10 @@
 # ChangeLog for net-dialup/minicom
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.22 2004/10/28 02:52:21 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/ChangeLog,v 1.23 2004/11/07 10:43:16 mrness Exp $
 
+  07 Nov 2004; Alin Nastac <mrness@gentoo.org> minicom-2.1.ebuild, minicom-2.1-r1.ebuild:
+  Added net-misc/lrzsz to RDEPEND, which closes bug #36133
+  
   27 Oct 2004; Jason Wever <weeve@gentoo.org> minicom-2.1-r1.ebuild:
   Stable on sparc.
 

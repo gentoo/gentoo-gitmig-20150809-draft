@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-2.1-r1.ebuild,v 1.7 2004/10/28 02:52:21 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/minicom/minicom-2.1-r1.ebuild,v 1.8 2004/11/07 10:43:16 mrness Exp $
 
 inherit eutils
 
@@ -14,6 +14,8 @@ KEYWORDS="alpha ~amd64 hppa ~mips ~ppc sparc x86"
 IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.2-r3"
+RDEPEND="${DEPEND}
+	net-misc/lrzsz"
 
 src_unpack() {
 	unpack ${A}
@@ -35,13 +37,4 @@ src_install() {
 	doins ${FILESDIR}/minirc.dfl
 
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README
-}
-
-pkg_postinst() {
-	einfo "Minicom relies on the net-misc/lrzsz package to transfer"
-	einfo "files using the XMODEM, YMODEM and ZMODEM protocols."
-	echo
-	einfo "If you need the capability of using the above protocols,"
-	einfo "make sure to install net-misc/lrzsz."
-	echo
 }
