@@ -1,23 +1,24 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/zip-2.3-r2.ebuild,v 1.15 2004/01/16 20:57:17 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/zip/zip-2.3-r2.ebuild,v 1.16 2004/01/29 07:28:44 vapier Exp $
 
-IUSE="crypt"
+inherit gcc
 
 DESCRIPTION="Info ZIP (encryption support)"
 HOMEPAGE="ftp://ftp.freesoftware.com/pub/infozip/Zip.html"
 SRC_URI="mirror://gentoo/${PN}${PV/./}.tar.gz
 	crypt? ( ftp://ftp.icce.rug.nl/infozip/src/zcrypt29.zip )"
 
-SLOT="0"
 LICENSE="Info-ZIP"
+SLOT="0"
 KEYWORDS="x86 ppc sparc alpha amd64 ia64 hppa"
+IUSE="crypt"
 
 DEPEND="crypt? ( app-arch/unzip )"
 
 src_unpack() {
 	unpack ${A}
-	if [ "`use crypt`" ]; then
+	if [ `use crypt` ]; then
 		mv -f crypt.h ${S}
 		mv -f crypt.c ${S}
 	fi
@@ -26,7 +27,11 @@ src_unpack() {
 }
 
 src_compile() {
-	emake -f unix/Makefile generic_gcc || die
+	emake \
+		-f unix/Makefile \
+		CC="$(gcc-getCC)" \
+		CPP="$(gcc-getCXX)" \
+		generic_gcc || die
 }
 
 src_install() {
