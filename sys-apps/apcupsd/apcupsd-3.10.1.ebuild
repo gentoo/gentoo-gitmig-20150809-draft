@@ -1,17 +1,18 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.1.ebuild,v 1.1 2002/10/21 04:45:53 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.1.ebuild,v 1.2 2002/10/26 11:26:39 zwelch Exp $
 
 S=${WORKDIR}/${P}
-DESCRIPTION="APC UPS daemon with integrated tcp/ip remote shutdown (*ALPHA*)"
+DESCRIPTION="APC UPS daemon with integrated tcp/ip remote shutdown"
 SRC_URI="ftp://ftp.apcupsd.com/pub/apcupsd/development/${P}.tar.gz \
 	ftp://ftp.apcupsd.com/pub/apcupsd/contrib/gd1.2.tar.gz"
 HOMEPAGE="http://www.sibbald.com/apcupsd/"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 SLOT="0"
 LICENSE="GPL-2"
  
-DEPEND="virtual/glibc
+DEPEND=">=sys-apps/baselayout-1.8.4
+	virtual/glibc
 	virtual/mta
 	sys-libs/ncurses"
  
@@ -25,12 +26,14 @@ src_unpack() {
 	unpack ${A}
 
 	cp -a ${WORKDIR}/gd1.2 ${S}/src/
-	cp -a ${S} ${S}-orig
-	ln -s /usr/portage/sys-apps/apcupsd/files ${WORKDIR}/files
+#	cp -a ${S} ${S}-orig
+	cd ${S}
+	sed -e 's:gentoo-version:gentoo-release:' configure >configure.1
+	sed -e '10627s:DISTVER=`uname -r`:DISTVER=$(sed -e "s/Gentoo Base System version//" /etc/gentoo-release):' configure.1 >configure
+	rm configure.1
 }
 
 src_compile() {
-	# --with-distname redundant for >=baselayout-1.8.4, but req'd for prev.
 	MAIL=/usr/sbin/sendmail ./configure \
 		--prefix=/usr \
 		--sbindir=/usr/sbin \
@@ -39,7 +42,6 @@ src_compile() {
 		--with-lock-dir=${XLOCKDIR} \
 		--with-pid-dir=${XPIDDIR} \
 		--with-log-dir=${XLOGDIR} \
-		--with-distname=gentoo \
 		--with-upstype=usb \
 		--with-upscable=usb \
 		--with-serial-dev=/dev/usb/hid/hiddev[0-9] \

@@ -1,8 +1,12 @@
 # ChangeLog for sys-apps/apcupsd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/ChangeLog,v 1.4 2002/10/21 04:45:53 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/ChangeLog,v 1.5 2002/10/26 11:26:39 zwelch Exp $
 
 *apcupsd-3.10.1 (20 Oct 2002)
+
+  25 Oct 2002; Zach Welch <zwelch@gentoo.org> :
+  Update ebuild to patch configure to use correct system version.
+  Sucessfully merged on ppc, added ~ppc
 
   20 Oct 2002; Zach Welch <zwelch@gentoo.org> :
   New version incorporating changes made by Superlucidity Services, LLC, to
