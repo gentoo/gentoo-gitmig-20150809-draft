@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/sparc-sources-2.4.20.ebuild,v 1.1 2002/12/01 01:03:10 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/sparc-sources-2.4.20.ebuild,v 1.2 2002/12/01 01:05:31 seemant Exp $
 
 IUSE="build"
 
@@ -30,7 +30,7 @@ inherit kernel || die
 
 DESCRIPTION="Full sources for the Gentoo Linux kernel"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-	http://cvs.gentoo.org/~seemant/patches-${PV}-sparc.tar.bz2"
+	mirror://gentoo/patches-${PV}-sparc.tar.bz2"
 KEYWORDS="~x86 -ppc ~sparc ~sparc64"
 
 src_unpack() {
