@@ -5,5 +5,9 @@
 		The dev-cpp category contains libraries and utilities relevant to the
 		c++ programming language.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie dev-cpp enthält Bibliotheken und Werkzeuge für die 
+		Programmiersprache C++.
+	</longdescription>
 </catmetadata>
 
