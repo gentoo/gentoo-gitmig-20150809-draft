@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libsndfile
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.19 2004/05/06 16:25:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsndfile/ChangeLog,v 1.20 2004/05/23 00:31:12 kugelfang Exp $
+
+  23 May 2004; Danny van Dyk <kugelfang@gentoo.org> libsndfile-1.0.9.ebuild:
+  Marked ~amd64.
 
   06 May 2004; Jeremy Huddleston <eradicator@gentoo.org>
   libsndfile-1.0.4.ebuild:
