@@ -87,7 +87,9 @@ def movefile(src,dest):
 	if dest!="/bin/cp":
 		if os.path.exists(dest):
 			os.unlink(dest)
+	mymode=os.lstat(src)[ST_MODE]
 	a=getstatusoutput("/bin/cp -a "+"'"+src+"' '"+dest+"'")	
+	os.chmod(dest,mymode)
 	os.unlink(src)
 	if a[0]==0:
 		return 1
