@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ksimus/ksimus-0.3.6-r1.ebuild,v 1.8 2004/06/24 22:05:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ksimus/ksimus-0.3.6-r1.ebuild,v 1.9 2004/06/29 11:51:44 carlo Exp $
 
-inherit kde-base eutils
-need-kde 3
+inherit kde eutils
 
 MY_PATCH="ksimus-patch-0.3.6-2"
 DESCRIPTION="KSimus is a KDE tool for simulation, automatization and visualization of technical processes."
@@ -19,6 +18,7 @@ IUSE=""
 DEPEND=">=sys-apps/sed-4
 	sys-devel/autoconf"
 RDEPEND=""
+need-kde 3
 
 src_unpack() {
 	unpack ${A}
