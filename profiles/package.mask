@@ -36,7 +36,9 @@
 =app-editors/xemacs-21.4.10-r2
 
 # <carpaski@gentoo.org> (24 Dec 2002)
-# Testing for UserPriv compile
+# Testing some fixups. Includes sparc and alpha configs.
+>=sys-apps/portage-2.0.46-r5
+# Testing for UserPriv compile (broken-ish)
 >=sys-apps/portage-2.0.47_pre1
 
 # <blizzy@gentoo.org> (23 Dec 2002)
