@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.82 2004/06/06 22:01:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.83 2004/06/15 06:32:44 solar Exp $
+
+  15 Jun 2004; <solar@gentoo.org> openssl-0.9.7d.ebuild:
+  remove dep of bc when uclibc is used
 
   06 Jun 2004; Aron Griffis <agriffis@gentoo.org> openssl-0.9.7c-r1.ebuild,
   openssl-0.9.7d.ebuild:
