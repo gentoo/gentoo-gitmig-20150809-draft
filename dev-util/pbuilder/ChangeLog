@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/pbuilder
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pbuilder/ChangeLog,v 1.16 2004/11/10 21:55:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pbuilder/ChangeLog,v 1.17 2004/11/11 15:16:47 lanius Exp $
+
+  11 Nov 2004; <heino@gentoo.org> pbuilder-0.110.ebuild,
+  pbuilder-0.114.ebuild, pbuilder-0.99.ebuild:
+  uml on ppc not available
 
   10 Nov 2004; Michael Sterrett <mr_bones_@gentoo.org> pbuilder-0.110.ebuild,
   pbuilder-0.114.ebuild:
