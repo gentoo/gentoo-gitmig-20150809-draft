@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/vim-core
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.92 2004/06/28 19:24:54 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim-core/ChangeLog,v 1.93 2004/07/07 21:22:44 agriffis Exp $
+
+*vim-core-6.3-r1 (07 Jul 2004)
+
+  07 Jul 2004; Aron Griffis <agriffis@gentoo.org> vim-core-6.3-r1.ebuild:
+  Bump runtime snapshot to fix netrw problems with rsync-over-ssh
 
   28 Jun 2004; Tom Gall <tgall@gentoo.org> vim-core-6.2-r9.ebuild:
   stable on ppc64
