@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1029 2005/03/22 17:57:52 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1030 2005/03/22 22:50:07 plasmaroo Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -755,11 +755,9 @@ sys-kernel/development-sources:ultra1 - If you have a SUN Ultra 1 with a HME int
 sys-kernel/genkernel:bootsplash - Installs bootsplash support if you request it and it is not already available.
 sys-kernel/gentoo-dev-sources:ultra1 - If you have a SUN Ultra 1 with a HME interface
 sys-kernel/gentoo-sources:aavm - adds Andrea Arcangeli's vm support (removes rmap by Rik van Riel which is the default)
-sys-kernel/gentoo-sources:acpi4linux - If you want ACPI support
 sys-kernel/gentoo-sources:evms2 - adds EVMS 2.0 support drop EVMS 1.2.1
 sys-kernel/gentoo-sources:ultra1 - If you have a SUN Ultra 1 with a HME interface
 sys-kernel/gentoo-sources:usagi - adds USAGI (Linux IPv6 Development Project) support drops {superfreeswan/patch-int/loop-jari}
-sys-kernel/gentoo-sources:xfs - If you want XFS filesystem support
 sys-kernel/mips-headers:cobalt - Enables support for Cobalt Microserver hardware (Qube2/RaQ2)
 sys-kernel/mips-headers:ip30 - Enables support for SGI Octane (IP30, 'Speedracer')
 sys-kernel/mips-sources:cobalt - Enables support for Cobalt Microserver hardware (Qube2/RaQ2)
