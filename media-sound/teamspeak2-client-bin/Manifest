@@ -3,14 +3,14 @@ Hash: SHA1
 
 MD5 df3184430a379bfee6b0d2cf01a9780b ChangeLog 2575
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 a0afe6c3085dcead29b767dc56044d17 teamspeak2-client-bin-2.0.32.60-r3.ebuild 2680
+MD5 468d86747891d5cd4c9dbb36e7226a53 teamspeak2-client-bin-2.0.32.60-r3.ebuild 2682
 MD5 a913652aee03ba33bf2daf0273d0f574 files/TeamSpeak 102
 MD5 7d8bc1b4187d9a6e2e08d18a8a11e1a9 files/digest-teamspeak2-client-bin-2.0.32.60-r3 73
 MD5 b48712e5232569498000c8cb3dd943ef files/teamspeak.protocol 149
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBacL4ArHZZzCEUG0RAkgkAJ9o8az7AfqRhgMuQR37DYh8SYs/2QCggZwv
-GybZguW/NSnBEe4jaa1A1YE=
-=YL2c
+iD8DBQFBcv4RI1lqEGTUzyQRAhGmAJ9D2+qzFDJ4dY4p/2QX7ZnjIFCMAQCgxZQx
+83Xb6gQro+pnwYjOqMBHdQg=
+=zhiZ
 -----END PGP SIGNATURE-----
