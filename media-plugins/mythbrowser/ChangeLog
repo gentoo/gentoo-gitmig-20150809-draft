@@ -1,9 +1,15 @@
 # ChangeLog for media-plugins/mythbrowser
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythbrowser/ChangeLog,v 1.10 2005/01/28 18:35:37 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythbrowser/ChangeLog,v 1.11 2005/02/11 07:28:55 cardoe Exp $
 
   26 Jan 2005; Gregorio Guidi <greg_g@gentoo.org> mythbrowser-0.16.ebuild:
   Use kde eclasses, to make sure KDEDIR is defined.
+
+*mythbrowser-0.17 (11 Feb 2005)
+
+  11 Feb 2005; Doug Goldstein <cardoe@gentoo.org> +mythbrowser-0.17.ebuild:
+  revision bump
+  inherit kde-functions to properly set $KDEDIR
 
   22 Jan 2005; Doug Goldstein <cardoe@gentoo.org> -mythbrowser-0.14.ebuild,
   -mythbrowser-0.15.ebuild:
