@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/birthday
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/birthday/ChangeLog,v 1.8 2004/07/10 10:29:46 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/birthday/ChangeLog,v 1.9 2004/07/12 03:10:40 tgall Exp $
+
+  11 Jul 2004; Tom Gall <tgall@gentoo.org> birthday-1.5.ebuild:
+  stable on ppc64, bug #56607
 
   10 Jul 2004; Tom Martin <slarti@gentoo.org> birthday-1.5.ebuild:
   Marked ~amd64.
