@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.4.1.ebuild,v 1.1 2004/05/04 22:35:52 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.4.1.ebuild,v 1.2 2004/05/05 12:25:48 foser Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -19,6 +19,7 @@ RDEPEND="virtual/x11
 	>=x11-libs/pango-1.4
 	>=media-libs/libpng-1.2.1
 	>=x11-themes/gnome-icon-theme-1.2
+	x11-misc/shared-mime-info
 	jpeg? ( >=media-libs/jpeg-6b-r2 )
 	tiff? ( >=media-libs/tiff-3.5.7 )"
 
