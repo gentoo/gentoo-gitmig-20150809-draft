@@ -1,0 +1,25 @@
+#!/bin/bash
+if [ ${#} -lt 1 ]
+then
+	echo "${0}: at least one argument needed"
+	return
+fi
+if [ ! -d ${D}${DESTTREE}/lib ]
+then
+	install -d ${D}${DESTTREE}/lib
+fi
+for x in "$@"
+do
+	if [ -e ${x} ]
+	then
+	    if [ -n "$DEBUG" ]
+	    then
+		strip --strip-unneeded ${x}
+	    fi
+	    install -m0644 ${x} ${D}${DESTTREE}/lib
+	else
+	    echo "${0}: ${x} does not exist"
+	fi
+done
+
+

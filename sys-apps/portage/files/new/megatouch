@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+export PATH="/usr/lib/portage/bin:${PATH}"
+eval `import-settings DISTDIR PORTDIR`
+echo -n "Source archive pruning started "
+date
+touch ${DISTDIR}/.cleaned 
+sleep 1
+cd ${PORTDIR}
+for x in `find ${PORTDIR}/ -iname '*.ebuild'` 
+do
+	echo "touching files for ${x}"
+	ebuild ${x} touch
+done
+if [ ! -d ${DISTDIR}-old ]
+then
+	mkdir ${DISTDIR}-old
+fi
+cd ${DISTDIR}
+for x in `find ! -newer .cleaned | grep ./` 
+do
+	mv $x ${DISTDIR}-old
+done
+du -k ${DISTDIR}
+du -k ${DISTDIR}-old
+echo -n "Source archive pruning completed "
+date

@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+source /etc/make.conf 
+echo -n "MD5 digest analysis started "
+date
+echo
+for x in `find /usr/portage/ -iname *.ebuild` 
+do
+	ebuild ${x} batchdigest
+done
+echo
+echo -n "MD5 digest analysis completed "
+date

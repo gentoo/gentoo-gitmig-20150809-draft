@@ -1,0 +1,13 @@
+#!/bin/sh
+
+
+filelist=`sed "s/['\"]/\\\&/g"`
+
+for f in $filelist; do
+    file=`grep -r "$f ->" /var/db/pkg/*/*/CONTENTS`
+    file=${file#/*/*/*/*/}
+    file=${file%*/CONTENTS:*}
+    echo $file
+done | sort -u 
+
+

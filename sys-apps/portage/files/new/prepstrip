@@ -1,0 +1,9 @@
+#!/bin/bash
+if [ -n "${DEBUG}" ]
+then
+	exit
+fi	
+for x in $@
+do
+	strip ${D}${x}/*
+done

@@ -1,0 +1,12 @@
+#!/usr/bin/env python
+import sys,portage
+for x in sys.argv[1:]:
+	mysetting=portage.getconfigsetting(x)
+	if x=="ROOT":
+		#make sure path ends with a "/"
+		if len(mysetting)==0:
+			mysetting="/"
+		elif mysetting[-1]!="/":
+			mysetting=mysetting+"/"
+	print "export "+x+"='"+mysetting+"'"
+
