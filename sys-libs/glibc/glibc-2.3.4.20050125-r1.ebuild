@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.23 2005/03/15 20:00:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20050125-r1.ebuild,v 1.24 2005/03/15 23:01:31 vapier Exp $
 
 # Here's how the cross-compile logic breaks down ...
 #  CTARGET - machine that will target the binaries
@@ -236,7 +236,7 @@ toolchain-glibc_src_compile() {
 		make PARALLELMFLAGS="${MAKEOPTS}" || die
 	fi
 	if want_nptl ; then
-		# ...and then do the optional nptl build
+		# ... and then do the optional nptl build
 		unset LD_ASSUME_KERNEL || :
 		glibc_do_configure nptl
 		einfo "Building GLIBC with NPTL..."
@@ -713,7 +713,6 @@ check_nptl_support() {
 want_nptl() {
 	want_tls || return 1
 	use nptl || return 1
-	is_crosscompile && use build && return 1
 
 	# Archs that can use NPTL
 	case $(tc-arch) in
@@ -754,7 +753,7 @@ want_tls() {
 			esac
 		;;
 		x86)
-			case ${CHOST/-*} in
+			case ${CTARGET/-*} in
 				i486|i586|i686)	return 0 ;;
 			esac
 		;;
@@ -1061,18 +1060,6 @@ pkg_setup() {
 	if use nptlonly && ! use nptl ; then
 		eerror "If you want nptlonly, add nptl to your USE too ;p"
 		die "nptlonly without nptl"
-	fi
-
-	if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] && ! has_version "${CATEGORY}/${PN}"; then
-		ewarn "This is your first install of ${CATEGORY}/${PN}, so we"
-		ewarn "must disable some configure checks to get glibc to compile.  You should"
-		ewarn "re-emerge ${CATEGORY}/${PN} after this one installs to"
-		ewarn "have the correct libs."
-
-		want_nptl && die "You need to set USE=\"build\" when emerging a cross-compile toolchain glibc for the first time."
-
-		ebeep
-		epause 5
 	fi
 
 	# give some sort of warning about the nptl logic changes...
