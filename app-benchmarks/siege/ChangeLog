@@ -1,6 +1,10 @@
 # ChangeLog for app-benchmarks/siege
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/ChangeLog,v 1.3 2003/02/12 03:04:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/siege/ChangeLog,v 1.4 2003/10/16 21:04:02 pyrania Exp $
+
+  16 Oct 2003; Markus Nigbur <pyrania@gentoo.org> siege-2.55.ebuild:
+  Added patch to support openssl >=0.9.7. Thanks to kloeri for tracking it down
+  (bug 31126).
 
 *siege-2.55 (20 Jul 2002)
 
