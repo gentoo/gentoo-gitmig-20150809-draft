@@ -1,3 +1,6 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f3472d881eb2f7607e6f0285f96b66d6 ChangeLog 36571
 MD5 e72d8cbf7beac0c9b6fcdc31a483db77 binutils-2.15.92.0.2-r2.ebuild 4496
 MD5 49e852b8fe8101cd814b93eac95326eb binutils-2.14.90.0.6-r6.ebuild 6613
@@ -13,7 +16,7 @@ MD5 bee87af2b20fa4a86ccd53ba750bb1a9 binutils-2.15.91.0.1-r1.ebuild 4694
 MD5 a60b3fe5c1bbfb769311f07174840465 binutils-2.15.91.0.1-r2.ebuild 5034
 MD5 47b50dfab666ec01e53e417deeb957d5 binutils-2.15.91.0.2.ebuild 5161
 MD5 76228e4ad667857b1d8d271548dbf345 binutils-2.15.92.0.2.ebuild 5188
-MD5 944b015b6428e9f413dd9fd1e57d9000 binutils-2.15.92.0.2-r1.ebuild 4860
+MD5 4a290c83045b36c0ad2b2b0a412912e8 binutils-2.15.92.0.2-r1.ebuild 4867
 MD5 1b43962f0560663b6b0f58ffa918a8ff files/digest-binutils-2.15.92.0.2-r2 242
 MD5 e3effee7a8054f5e0344034c596cb6fc files/binutils-2.14.amd64-32bit-path-fix.patch 456
 MD5 3b32997c2ca6b9893839c439e077e82d files/digest-binutils-2.14.90.0.6-r6 75
@@ -81,3 +84,10 @@ MD5 8dfe15fc6599a60b3330ab9fdabaf60f files/2.14/binutils-2.14.90.0.6-debian.patc
 MD5 907ce8c972e2a984590d4bfc04181c1d files/2.15/40_all_binutils-uclibc-linker.patch 530
 MD5 bad6ba9f63eb3a86d7006191848a47b8 files/2.15/52_all_binutils-20040527-uclibc-100-conf.patch 21576
 MD5 8f619fc0c409a5ba768f126f172ee6bc files/2.15/05_all_binutils-2.15-elf32-arm-textrel.patch 2009
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBlxLrHTu7gpaalycRAoI/AKCkdhYufbPAuwMaI9lI3Go10j3JDgCg7pH5
+GTT9Bx7xGT3N2NOipAp3RvQ=
+=nRQK
+-----END PGP SIGNATURE-----
