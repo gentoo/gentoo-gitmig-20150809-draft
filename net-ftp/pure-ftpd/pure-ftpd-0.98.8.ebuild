@@ -1,10 +1,10 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Prakash Shetty (Crux) <ps@gnuos.org>
+# Author Parag Mehta <pm@gentoo.org>
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
-DESCRIPTION="A Fast Production Quality FTP Server"
+DESCRIPTION="A Fast Production Quality FTP Server - Bug fixes backported from 0.99 . No new feature. Use this version on production servers."
 SRC_URI="http://prdownloads.sourceforge.net/pureftpd/${A}"
 HOMEPAGE="http://pureftpd.sourceforge.net"
 
@@ -15,7 +15,7 @@ src_compile() {
 
     cd ${S}
     try ./configure --prefix=/usr  --with-throttling --with-virtualhosts\
-	--with-ratios --with-largefile
+	--with-ratios --with-largefile --with-cookie --with-welcomemsg 
     try make
 
 }
@@ -27,6 +27,13 @@ src_install () {
     dodoc COPYING ChangeLog README README.Configuration-File 
     dodoc README.Contrib README.LDAP README.Netfilter
     dodir /etc/pure-ftpd
+    cp $S/configuration-file/*.pl ${D}/usr/sbin/
+    cp $S/configuration-file/*.py ${D}/usr/sbin/
+    cp $S/configuration-file/pure-ftpd.conf ${D}/etc/pure-ftpd/pure-ftpd.conf
+    cp ${FILESDIR}/ftpusers ${D}/etc
+    echo "Please do no forget to run, the following syntax :"
+    echo "ebuild pure-ftpd-0.98.8.ebuild config"
+    echo "This will add the necessary post install config to your system."
 }
 
 pkg_config() {
@@ -34,7 +41,7 @@ pkg_config() {
 	echo "Press control-C to abort, hit Enter to continue."
 	echo
 	read
-	cat ${FILESDIR}/pftpd.xinetd >> ${ROOT}etc/xinetd.conf
+	cat ${FILESDIR}/pftpd.inetd >> ${ROOT}etc/inetd.conf
 	ln -s /dev/null /etc/pure-ftpd/127.0.0.1
 	/etc/rc.d/init.d/svc-xinetd restart
 	echo "Modifications applied."

@@ -37,9 +37,6 @@ app-editors/gtk-xemacs
 >=sys-apps/vcron-3.0_p1-r2
 >=media-video/mpeg2-movie-1.5
 >=media-gfx/autotrace-0.26
-# Added by PM
-=net-ftp/pure-ftpd-0.98.7-r1
-=app-shells/zsh-4.0.2
 
 # untested
 >=x11-base/xfree-4.1.0-r1
