@@ -1,0 +1,11 @@
+# ChangeLog for dev-tex/tth
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/tth/ChangeLog,v 1.1 2005/02/12 14:23:11 usata Exp $
+
+*tth-3.66 (12 Feb 2005)
+
+  12 Feb 2005; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +tth-3.66.ebuild:
+  Initial import. Ebuild submitted by Niels Laukens <nielchiano@skynet.be>;
+  bug #70442.
+
