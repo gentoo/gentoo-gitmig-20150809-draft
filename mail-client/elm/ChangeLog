@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/elm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/elm/ChangeLog,v 1.1 2004/05/30 02:40:30 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/elm/ChangeLog,v 1.2 2004/06/04 18:20:05 kloeri Exp $
+
+  04 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> elm-2.4_rc100.ebuild:
+  Stable on alpha.
 
 *elm-2.4_rc100 (29 May 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/mailx-8.1.2.20021129-r2.ebuild,v 1.2 2004/05/30 08:02:30 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/mailx-8.1.2.20021129-r2.ebuild,v 1.3 2004/06/04 18:26:49 kloeri Exp $
 
 inherit ccc eutils
 
@@ -20,7 +20,7 @@ DEPEND=">=net-libs/liblockfile-1.03
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc ~alpha ~mips hppa ia64 amd64"
+KEYWORDS="x86 ~ppc sparc alpha ~mips hppa ia64 amd64"
 
 src_unpack() {
 

@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/mailx-support
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx-support/ChangeLog,v 1.1 2004/05/30 02:46:58 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx-support/ChangeLog,v 1.2 2004/06/04 18:23:39 kloeri Exp $
+
+  04 Jun 2004; Bryan Østergaard <kloeri@gentoo.org>
+  mailx-support-20030215.ebuild:
+  Stable on alpha.
 
 *mailx-support-20030215 (29 May 2004)
 

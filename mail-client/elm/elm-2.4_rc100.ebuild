@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/elm/elm-2.4_rc100.ebuild,v 1.1 2004/05/30 02:40:30 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/elm/elm-2.4_rc100.ebuild,v 1.2 2004/06/04 18:20:05 kloeri Exp $
 
 # HORRIBLY SORRY FOR THIS!  BUT I WANT THE EBUILD AND IT DOESN'T
 # HURT ANYTHING!  I PROMISE! :) - raker@gentoo.org
@@ -12,7 +12,7 @@ SRC_URI="http://www.ozone.fmi.fi/KEH/elm-2.4ME+100.tar.gz"
 
 LICENSE="Elm"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~ppc ~alpha"
+KEYWORDS="x86 ~sparc ~ppc alpha"
 
 IUSE="spell"
 
