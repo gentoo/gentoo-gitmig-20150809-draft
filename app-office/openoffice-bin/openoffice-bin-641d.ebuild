@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-641d.ebuild,v 1.1 2002/04/20 21:59:14 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-641d.ebuild,v 1.2 2002/04/20 22:12:00 azarah Exp $
 
 # NOTE:  There are two big issues that should be addressed.
 #
@@ -73,6 +73,12 @@ src_install() {
 	rm -rf *
 	tar -jxpf ${FILESDIR}/${PV}/registry-${PV}.tbz2 || \
 		die "Could not unpack registry!"
+	# Fix paths
+	cd ${D}${LOC}/OpenOffice-${PV}/share/config/registry/instance/org/openoffice/Office
+	cp Common.xml Common.xml.orig
+	sed -e "s:/opt/OpenOffice.org641:${LOC}/OpenOffice-${PV}:g" \
+		Common.xml.orig >Common.xml
+	rm -f Common.xml.orig
 
 	# Generate ISO resource files.
 	cd ${D}${LOC}/OpenOffice-${PV}/program/resource
