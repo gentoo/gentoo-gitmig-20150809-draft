@@ -1,0 +1,10 @@
+# ChangeLog for x11-themes/gtk-qt-engine
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-qt-engine/ChangeLog,v 1.1 2004/08/23 05:38:55 brad Exp $
+
+*gtk-qt-engine-0.5 (23 Aug 2004)
+
+  23 Aug 2004; Brad Laue <brad@gentoo.org> +metadata.xml,
+  +gtk-qt-engine-0.5.ebuild:
+  New package - gtk-qt-engine, which maps QT widgets onto GTK+ applications.
+
