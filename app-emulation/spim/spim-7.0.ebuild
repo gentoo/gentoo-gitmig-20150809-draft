@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/spim-7.0.ebuild,v 1.2 2004/09/05 23:31:39 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/spim-7.0.ebuild,v 1.3 2004/09/07 09:07:53 mr_bones_ Exp $
 
 inherit eutils
 
@@ -33,8 +33,8 @@ src_compile() {
 		-e 's/@make/@$(MAKE)/' \
 		-e "s:\(BIN_DIR = \).*$:\1/usr/bin:" \
 	    -e "s:\(MAN_DIR = \).*$:\1/usr/share/bin:" \
-        -e "s:\(EXCEPTION_DIR = \).*$:\1/var/lib/spim:" Imakefile \
-			|| die "sed Makefile failed"
+		-e "s:\(EXCEPTION_DIR = \).*$:\1/var/lib/spim:" Imakefile \
+		|| die "sed Makefile failed"
 	xmkmf
 	emake spim || die "make spim failed"
 	if use X ; then
