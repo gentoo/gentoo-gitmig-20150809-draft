@@ -79,9 +79,9 @@
 *sys-apps/kbd
 *sys-apps/cpio
 *sys-apps/debianutils
-*sys-apps/devfsd
+*sys-fs/devfsd
 *sys-apps/diffutils
-*sys-apps/e2fsprogs
+*sys-fs/e2fsprogs
 *sys-apps/ed
 *sys-apps/fbset
 *sys-apps/file

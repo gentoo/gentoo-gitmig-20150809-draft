@@ -52,9 +52,9 @@
 *sys-apps/bzip2
 *sys-apps/cpio
 *sys-apps/debianutils
-*>=sys-apps/devfsd-1.3.20
+*>=sys-fs/devfsd-1.3.20
 *sys-apps/diffutils
-*sys-apps/e2fsprogs
+*sys-fs/e2fsprogs
 *sys-apps/ed
 *sys-apps/eject
 *sys-apps/fbset
@@ -64,7 +64,7 @@
 *sys-apps/groff
 *sys-apps/gzip
 *sys-apps/hdparm
-*sys-apps/hfsutils
+*sys-fs/hfsutils
 *sys-apps/kbd
 *sys-apps/less
 *sys-apps/net-tools

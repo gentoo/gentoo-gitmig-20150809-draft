@@ -1,5 +1,5 @@
 sys-apps/console-tools  sys-apps/kbd
-sys-apps/reiserfs-utils sys-apps/reiserfsprogs
+sys-apps/reiserfs-utils sys-fs/reiserfsprogs
 virtual/alsa            media-sound/alsa-driver    
 virtual/antivirus	net-mail/clamav
 virtual/aspell-dict	app-dicts/aspell-en
