@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.5328-r1.ebuild,v 1.2 2004/02/01 02:51:10 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.5328-r1.ebuild,v 1.3 2004/04/13 16:50:09 cyfred Exp $
 
 PKG_V="pkg1"
 NV_V="${PV/1.0./1.0-}"
@@ -28,6 +28,8 @@ src_unpack() {
 
 	# Use the correct defines to make gtkglext build work
 	cd ${S}; epatch ${FILESDIR}/${P}-defines.patch
+	# Correct API for gl.h
+	epatch ${FILESDIR}/${P}-glheader.patch
 }
 
 src_install() {
@@ -64,6 +66,9 @@ src_install() {
 	doins usr/X11R6/lib/libXvMCNVIDIA.a
 	exeinto /usr/X11R6/lib
 	doexe usr/X11R6/lib/libXvMCNVIDIA.so.${PV}
+
+	# Closing bug #37517 
+	rm -f usr/include/GL/glext.h
 
 	# Includes
 	insinto ${NV_ROOT}/include

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.5336-r2.ebuild,v 1.2 2004/04/13 16:28:21 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.5336-r2.ebuild,v 1.3 2004/04/13 16:50:09 cyfred Exp $
 
 PKG_V="pkg1"
 NV_V="${PV/1.0./1.0-}"
@@ -38,6 +38,8 @@ src_unpack() {
 
 	# Use the correct defines to make gtkglext build work
 	cd ${S}; epatch ${FILESDIR}/${PN}-1.0.5328-defines.patch
+	# Use correct glext API
+	epatch ${FILESDIR}/${P}-glheader.patch
 }
 
 src_install() {

@@ -1,6 +1,15 @@
 # ChangeLog for media-video/nvidia-glx 
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.41 2004/04/13 16:28:21 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/ChangeLog,v 1.42 2004/04/13 16:50:09 cyfred Exp $
+
+  13 May 2004; Andrew Bevitt <cyfred@gentoo.org>;
+  nvidia-glx-1.0.5328-r1.ebuild, nvidia-glx-1.0.5332-r2.ebuild,
+  nvidia-glx-1.0.5336-r2.ebuild, files/nvidia-glx-1.0.4180-defines.patch,
+  files/nvidia-glx-1.0.4191-defines.patch,
+  files/nvidia-glx-1.0.5328-glheader.patch,
+  files/nvidia-glx-1.0.5332-glheader.patch,
+  files/nvidia-glx-1.0.5336-glheader.patch:
+  Adding patchset that fixes api breakage as mentioned in bug #37517
 
   13 May 2004; Andrew Bevitt <cyfred@gentoo.org>;
   nvidia-glx-1.0.5332-r2.ebuild, nvidia-glx-1.0.5336-r2.ebuild:
