@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.1-r4.ebuild,v 1.1 2002/06/18 17:50:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/eterm/eterm-0.9.1-r4.ebuild,v 1.2 2002/06/21 14:37:11 seemant Exp $
 
 MY_PN=${PN/et/Et}
 MY_P=${MY_PN}-${PV}
@@ -9,7 +9,7 @@ DESCRIPTION="A vt102 terminal emulator for X"
 SRC_URI="http://www.eterm.org/download/${MY_P}.tar.gz
 		 http://www.eterm.org/download/${MY_PN}-bg-${PV}.tar.gz
 		 http://www.eterm.org/themes/0.9.1/glass-${MY_PN}-theme.tar.gz"
-HOMEPAGE="http://eterm.sourceforge.net"
+HOMEPAGE="http://eterm.org/"
 
 SLOT=""
 LICENSE="GPL-2"
