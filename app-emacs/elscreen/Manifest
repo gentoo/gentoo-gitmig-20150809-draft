@@ -1,5 +1,5 @@
-MD5 143e78787e0568db21a63a895a5aaa69 ChangeLog 369
-MD5 0d17ae81c62135e70678d0d1b3b7288b elscreen-1.2.4.ebuild 811
+MD5 ad89bae85138912f3790a0ca90d28aba ChangeLog 458
+MD5 4c4792652baa1790929be38a3a0ff078 elscreen-1.2.4.ebuild 813
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
 MD5 60dbc5dfdd0b6cac43c6017b75657794 files/60elscreen-gentoo.el 99
 MD5 75d785c3ad6d4cab241756c71cdb75e6 files/digest-elscreen-1.2.4 64
