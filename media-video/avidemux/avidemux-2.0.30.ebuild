@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.30.ebuild,v 1.1 2004/10/18 11:12:48 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.30.ebuild,v 1.2 2004/10/19 20:36:27 zypher Exp $
 
 inherit eutils flag-o-matic
 
@@ -43,6 +43,10 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/avidemux-2.0.30_fixes.patch
+	if use amd64 ; then
+	    cd ${S}/adm_lavcodec/i386
+	    epatch ${FILESDIR}/avidemux-2.0.30_amd64_cpuutil.patch
+	fi
 }
 
 src_compile() {

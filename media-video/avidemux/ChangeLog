@@ -1,6 +1,9 @@
 # ChangeLog for media-video/avidemux
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.54 2004/10/18 11:12:48 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/ChangeLog,v 1.55 2004/10/19 20:36:27 zypher Exp $
+
+  19 Okt 2004; Marc Hildebrand <zypher@gentoo.org> avidemux-2.0.30.ebuild:
+  Added amd64-patch, closes bug #68052.
 
 *avidemux-2.0.39 (15 Okt 2004)
 
