@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b714e13fa21c53f81ce106e3b6f402b3 ChangeLog 2207
+MD5 794372013b090312631cde0d68e7c381 ChangeLog 2319
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 bd8a47424721fd8df78dfc8afd7c350a quick-lounge-applet-2.2.0.ebuild 772
 MD5 ab8d2be66d8c7b05d0a8ae9c5ec2b068 quick-lounge-applet-2.0.3.ebuild 747
 MD5 fd23a9403a88f9570d249e011e8d30ef quick-lounge-applet-2.1.1.ebuild 755
-MD5 c953f96636df8ea49a3f37eb269f884f quick-lounge-applet-2.2.0.ebuild 763
-MD5 69b43b9da3d500333967bd90d6a3d818 files/digest-quick-lounge-applet-2.0.3 78
 MD5 d9c7c910ff5bb92a4e87aaaf3d85c37f files/digest-quick-lounge-applet-2.2.0 78
+MD5 69b43b9da3d500333967bd90d6a3d818 files/digest-quick-lounge-applet-2.0.3 78
 MD5 4c41c4372d9df0674f8f23288160d814 files/digest-quick-lounge-applet-2.1.1 78
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB4/LBCHk4+ZoBpvsRAl2sAKC8FEMne2n1QSuj8u87ap7e3roBVgCgsimI
-uPgaX8XbljjW5w7gFNeWcQ8=
-=d23W
+iD8DBQFB+oJPKRy60XGEcJIRAiXjAKCVofMZ+bcO2LTv9erHxKgGOFm66wCfUI4Y
+z5WK9N2YUTTEvrxOW0njrRk=
+=ap7v
 -----END PGP SIGNATURE-----
