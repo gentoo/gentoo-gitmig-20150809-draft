@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.11.51.ebuild,v 1.4 2004/06/24 22:12:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/gentoo-0.11.51.ebuild,v 1.5 2004/06/25 23:25:55 kugelfang Exp $
 
 IUSE="nls gnome"
 
@@ -13,7 +13,7 @@ RDEPEND="nls? ( sys-devel/gettext )"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc ~alpha ~hppa ~amd64 ~ia64"
+KEYWORDS="x86 ~ppc sparc ~alpha ~hppa amd64 ~ia64"
 
 src_compile() {
 
