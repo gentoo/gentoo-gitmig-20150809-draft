@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.1.ebuild,v 1.2 2004/03/09 12:32:03 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.1.ebuild,v 1.3 2004/03/10 13:35:42 vapier Exp $
 
 inherit kde
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://kde/stable/${PV}/src/${PN}-${PV}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="3.2"
-KEYWORDS="~x86 ~ppc ~sparc ~hppa ~amd64 ~alpha ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc hppa ~amd64 ~alpha ~ia64"
 IUSE="alsa cups ipv6 ssl doc ldap"
 
 # kde.eclass has kdelibs in DEPEND, and we can't have that in here.
@@ -66,7 +66,7 @@ src_install() {
 	kde_src_install
 	dohtml *.html
 
-	if [ `use doc` ]; then
+	if use doc ; then
 		einfo "Copying API documentation..."
 		dodir ${KDEDIR}/share/doc/HTML/en/kdelibs-apidocs
 		cp -r ${S}/apidocs/* ${D}/$KDEDIR/share/doc/HTML/en/kdelibs-apidocs
@@ -76,7 +76,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	if [ `use doc` ]; then
+	if use doc ; then
 		rm $KDEDIR/share/doc/HTML/en/kdelibs-apidocs/common
 		ln -sf $KDEDIR/share/doc/HTML/en/common \
 			$KDEDIR/share/doc/HTML/en/kdelibs-apidocs/common
