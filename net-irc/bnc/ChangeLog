@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/bnc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/ChangeLog,v 1.16 2004/11/10 20:13:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bnc/ChangeLog,v 1.17 2004/11/11 04:31:47 weeve Exp $
+
+  10 Nov 2004; Jason Wever <weeve@gentoo.org> bnc-2.9.1.ebuild:
+  Stable on sparc wrt security bug #70674.
 
 *bnc-2.9.1 (10 Nov 2004)
 
