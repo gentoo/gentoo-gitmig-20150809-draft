@@ -1,9 +1,9 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jerry Alexandratos <jerry@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-20010229.1.ebuild,v 1.1 2001/04/29 21:51:11 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-20010228.2.ebuild,v 1.1 2001/05/06 14:49:06 achim Exp $
 
-P=${PN}-20010228-pl01
+P=${PN}-20010228-pl02
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="A fast and secure drop-in replacement for sendmail"
@@ -41,8 +41,15 @@ PROVIDE="virtual/mta"
 
 src_unpack() {
     unpack ${A}
+    cd ${S}/conf
+    cp main.cf main.cf.orig
+    sed -e "s:/usr/libexec/postfix:/usr/lib/postfix:" \
+	main.cf.orig > main.cf
+    cd ${S}/src/global
+    cp mail_params.h mail_params.h.orig
+    sed -e "s:/usr/libexec/postfix:/usr/lib/postfix:" \
+        mail_params.h.orig > mail_params.h
     cd ${S}
-
     CCARGS="-I/usr/include -DHAS_PCRE"
     AUXLIBS="-L/usr/lib -lpcre"
 
@@ -82,9 +89,9 @@ src_install () {
     dosym /usr/sbin/sendmail /usr/lib/sendmail
 
     cd ${S}/libexec
-    dodir /usr/libexec/postfix
+    dodir /usr/lib/postfix
     insopts -o root -g root -m 0755
-    insinto /usr/libexec/postfix
+    insinto /usr/lib/postfix
     doins *
 
     cd ${S}
