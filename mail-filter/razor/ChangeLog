@@ -1,6 +1,9 @@
 # ChangeLog for mail-filter/razor
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/ChangeLog,v 1.6 2004/07/18 15:40:36 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/ChangeLog,v 1.7 2004/07/23 08:46:47 eradicator Exp $
+
+  23 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> razor-2.40-r1.ebuild:
+  Stable amd64.
 
   09 Jul 2004; Tuan Van <langthang@gentoo.org> :
   Remove old ebuilds razor-{2.12,2.14,2.20,2.36,2.40}. added IUSE.
