@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/amaya-4.1.ebuild,v 1.4 2001/06/03 09:54:22 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/amaya-4.1-r1.ebuild,v 1.1 2001/10/06 11:33:58 verwilst Exp $
 
 #P=
 A=${PN}-src-${PV}.tgz
@@ -18,20 +18,19 @@ src_compile() {
     mkdir ${S}
     cd ${S}
 
-    try ../configure --prefix=/usr/X11R6 --host=${CHOST}
+    try ../configure --prefix=/usr --host=${CHOST}
     try make
 
 }
 
 src_install () {
 
-    dodir /usr/X11R6
-    try make prefix=${D}/usr/X11R6 install
-    rm ${D}/usr/X11R6/bin/amaya
-    rm ${D}/usr/X11R6/bin/print
-    dosym /usr/X11R6/Amaya/applis/bin/amaya /usr/X11R6/bin/amaya
-    dosym /usr/X11R6/Amaya/applis/bin/print /usr/X11R6/bin/print
-    dodoc README*
-
+    dodir /usr
+    try make prefix=${D}/usr install
+    rm ${D}/usr/bin/amaya
+    rm ${D}/usr/bin/print
+    dosym /usr/Amaya/applis/bin/amaya /usr/bin/amaya
+    dosym /usr/Amaya/applis/bin/print /usr/bin/print
+    
 }
 
