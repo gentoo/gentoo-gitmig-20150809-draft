@@ -1,9 +1,13 @@
 # ChangeLog for gnome-extra/gconfmm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconfmm/ChangeLog,v 1.6 2002/12/13 10:56:56 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconfmm/ChangeLog,v 1.7 2002/12/22 18:58:12 foser Exp $
+
+*gconfmm-2.0.0 (22 Dec 2002)
+
+  22 Dec 2002; foser <foser@gentoo.org> gconfmm-2.0.0.ebuild :
+  New version, first stable gnome2 release
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
 
 *gconfmm-1.3.7 (13 Sep 2002)
   13 Sep 2002; Spider <spider@gentoo.org> gconfmm-1.3.7.ebuild :
