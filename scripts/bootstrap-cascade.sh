@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2004 Gento Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-cascade.sh,v 1.5 2004/07/17 21:28:12 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap-cascade.sh,v 1.6 2004/07/18 15:55:18 solar Exp $
 
 # drobbins optimized this script at some point which made a bootstrap
 # to complete 20 mins to 2 hours faster, depending on CPU. He did this
@@ -154,7 +154,7 @@ n=${n%%-[0-9]*}; echo "my$(tr a-z- A-Z_ <<<$n)=$p; "; done)
 [ "${myBINUTILS}" = "" ] && myBINUTILS="binutils"
 [ "${myGCC}" = "" ] && myGCC="gcc"
 #[ "${myGETTEXT}" = "" ] && myGETTEXT="gettext" ; # We only gettext if nls is desired.
-[ "${myLIBC}" = "" ] && myLIBC="$(portageq best_version / virtual/libc)"
+[ "${myLIBC}" = "" ] && myLIBC="virtual/libc"
 # texinfo; category/PN combo due to app-xemacs/texinfo
 [ "${myTEXINFO}" = "" ] && myTEXINFO="sys-apps/texinfo"
 [ "${myZLIB}" = "" ] && myZLIB="zlib"
