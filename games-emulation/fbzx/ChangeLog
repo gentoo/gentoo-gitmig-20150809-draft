@@ -1,6 +1,10 @@
 # ChangeLog for games-emulation/fbzx
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fbzx/ChangeLog,v 1.3 2004/06/24 22:26:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fbzx/ChangeLog,v 1.4 2004/08/27 02:58:10 vapier Exp $
+
+  26 Aug 2004; Mike Frysinger <vapier@gentoo.org> +files/1.4-endian.patch,
+  fbzx-1.4.ebuild:
+  Fix endian issues (like on ppc) #61531 by Maciej J. Woloszyk.
 
   22 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> fbzx-1.4.ebuild:
   keyword for x86; depend on sed >= 4; use games eclass; error check; tidy

@@ -1,0 +1,13 @@
+--- fbzx/Z80.h	2003-12-19 21:37:22.000000000 +0100
++++ fbzx.new/Z80.h	2004-08-24 18:26:50.696481080 +0200
+@@ -12,7 +12,10 @@
+ /*************************************************************/
+ #ifndef Z80_H
+ #define Z80_H
++#include <endian.h>
++#if __BYTE_ORDER == __LITTLE_ENDIAN
+ #define LSB_FIRST
++#endif
+                                /* Compilation options:       */
+ /* #define DEBUG */            /* Compile debugging version  */
+ /* #define LSB_FIRST */        /* Compile for low-endian CPU */
