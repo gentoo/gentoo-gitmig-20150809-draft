@@ -1,7 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# Authore: Tom von Schwerdtner <tvon@etria.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_CSSML/PEAR-XML_CSSML-1.1.ebuild,v 1.6 2004/06/25 01:21:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_CSSML/PEAR-XML_CSSML-1.1.ebuild,v 1.7 2004/07/12 05:51:30 robbat2 Exp $
 
 MY_P=${PN/PEAR-//}-${PV}
 DESCRIPTION="A template system for generating cascading style sheets (CSS)"
