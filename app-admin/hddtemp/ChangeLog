@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/hddtemp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.13 2004/01/11 03:16:07 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/ChangeLog,v 1.14 2004/02/11 15:37:04 aliz Exp $
+
+*hddtemp-0.3_beta11 (11 Feb 2004)
+
+  11 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> hddtemp-0.3_beta11.ebuild,
+  files/hddtemp-conf.d, files/hddtemp-init, files/hddtemp.db:
+  Version bump, added init script and conf.d script by Sam Wouters
+  <sam@ericom.be> in #36047. Also updated hddtemp.db
 
   10 Jan 2004; Jason Wever <weeve@gentoo.org> hddtemp-0.3_beta10.ebuild:
   Changed ~sparc keyword to -sparc as src/backtrace.c only works for x86 and

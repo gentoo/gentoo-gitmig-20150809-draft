@@ -1,3 +1,4 @@
+MD5 711aafa5f3641a9589f2cf16b9e4cc20 hddtemp-0.3_beta11.ebuild 1284
 MD5 aa07929960900de6e228505a40a82d08 hddtemp-0.2.ebuild 888
 MD5 8a2032d01e9d0e0af6de397f32bc0c52 hddtemp-0.3_beta6-r1.ebuild 1122
 MD5 e6cfe3db892faf936d189cdcaaca0371 hddtemp-0.3_beta10.ebuild 1151
@@ -7,8 +8,11 @@ MD5 37236013e0d26d43c6bff35a8a48e8ec metadata.xml 220
 MD5 768a98916fe918986c0b2d845e2d1d10 hddtemp-0.3_beta8.ebuild 1157
 MD5 e42a32b0df5005090c105881a4cb02cc files/digest-hddtemp-0.3_beta6-r1 133
 MD5 fb10a6dcf20731e49bdd8a408702e27a files/digest-hddtemp-0.3_beta10 70
+MD5 f9c75dfa602045fbaff0c841ee327006 files/digest-hddtemp-0.3_beta11 70
 MD5 0441f48755331a54d70ab13db98b4117 files/digest-hddtemp-0.3_beta6 121
 MD5 0a2d5f9cdc1a222625e215b2b4025bb5 files/digest-hddtemp-0.3_beta8 70
-MD5 cf2e7fe80d99ed9dc9af37af25bb7692 files/hddtemp.db 11208
+MD5 f816512c3feee3cc9a92a9a8d27e9cff files/hddtemp.db 11325
+MD5 4b79bd09018628d6f5e1e59e07eb5d61 files/hddtemp-conf.d 248
 MD5 06b275391f52469a2773a41b9ccc48d6 files/digest-hddtemp-0.2 115
+MD5 257bbfe8fb729e539649a128cb12368d files/hddtemp-init 446
 MD5 a4e0540c259f86b5ed2c4af2a7ead160 files/hddtemp-0.2-db_location.patch 593
