@@ -1,6 +1,13 @@
 # ChangeLog for www-client/raggle
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/raggle/ChangeLog,v 1.5 2004/10/14 19:50:09 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/raggle/ChangeLog,v 1.6 2004/12/01 21:00:29 citizen428 Exp $
+
+*raggle-0.3.2 (01 Dec 2004)
+
+  01 Dec 2004; Michael Kohl <citizen428@gentoo.org> +raggle-0.3.2.ebuild:
+  Version bump; submitted by Thomas Kirchner <gentoo@halffull.org in bug
+  #73024. Additionally the ebuild now depends on Ruby >=1.8, because we
+  currently lack a yaml implementation for Ruby 1.6.*
 
   14 Oct 2004; David Holm <dholm@gentoo.org> raggle-0.3.1.ebuild:
   Added to ~ppc.
