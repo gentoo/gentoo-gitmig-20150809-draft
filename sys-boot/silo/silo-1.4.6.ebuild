@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/silo-1.4.6.ebuild,v 1.1 2004/06/22 17:55:22 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/silo-1.4.6.ebuild,v 1.2 2004/06/24 22:36:09 agriffis Exp $
 
 inherit mount-boot flag-o-matic
 

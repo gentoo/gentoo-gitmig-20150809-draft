@@ -1,6 +1,6 @@
 # ChangeLog for sys-boot/quik
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/quik/ChangeLog,v 1.4 2004/04/27 21:40:36 agriffis Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/quik/ChangeLog,v 1.5 2004/06/24 22:35:57 agriffis Exp $
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> quik-2.0.1k.ebuild:
   Add inherit eutils

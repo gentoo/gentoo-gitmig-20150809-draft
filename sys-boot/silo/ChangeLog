@@ -1,6 +1,6 @@
 # ChangeLog for sys-boot/silo
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/ChangeLog,v 1.14 2004/06/22 17:55:22 gustavoz Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/ChangeLog,v 1.15 2004/06/24 22:36:09 agriffis Exp $
 
 *silo-1.4.6 (22 Jun 2004)
 

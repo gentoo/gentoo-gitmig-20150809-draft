@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.5.8-r2.ebuild,v 1.4 2004/05/12 12:11:54 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.5.8-r2.ebuild,v 1.5 2004/06/24 22:35:13 agriffis Exp $
 
 inherit mount-boot eutils flag-o-matic
 
