@@ -1,6 +1,6 @@
-# ChangeLog for app-text/chktex
+# ChangeLog for dev-tex/chktex
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/ChangeLog,v 1.1 2003/06/09 13:11:26 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/chktex/ChangeLog,v 1.2 2003/06/20 04:15:40 vapier Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
