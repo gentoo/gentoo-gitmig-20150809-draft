@@ -1,6 +1,14 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.39 2005/01/20 01:20:54 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.40 2005/01/21 15:39:00 st_lim Exp $
+
+*dspam-3.4_beta1 (21 Jan 2005)
+
+  21 Jan 2005; Lim Swee Tat <st_lim@gentoo.org> dspam-3.2.4.ebuild,
+  dspam-3.2.6.ebuild, dspam-3.3.11.ebuild, dspam-3.3.8.ebuild,
+  dspam-3.4_beta1.ebuild:
+  Trying to fix bug #78768
+  Changing dspam to a userid of 26, one after 25.
 
   20 Jan 2005; Lim Swee Tat <st_lim@gentoo.org> :
   Added courier as a dependency for maildrop
