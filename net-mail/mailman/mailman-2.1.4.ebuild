@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.4.ebuild,v 1.7 2004/02/23 18:57:30 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.4.ebuild,v 1.8 2004/03/12 18:38:51 mholzer Exp $
 
 IUSE="apache2"
 
@@ -114,7 +114,7 @@ pkg_postinst() {
 	einfo ""
 	if [ ! "`use apache2`" ]; then
 		einfo "It appears that you aren't running apache2..."
-		einfo "ebuild /var/db/pkg/net-mail/mailman/mailman-2.1.2-r1.ebuild config"
+		einfo "ebuild /var/db/pkg/net-mail/${PN}/${PF}.ebuild config"
 		einfo "to add the mailman hooks to your config"
 	fi
 }

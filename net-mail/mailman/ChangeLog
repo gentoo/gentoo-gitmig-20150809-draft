@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mailman
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.30 2004/02/23 18:57:30 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.31 2004/03/12 18:38:51 mholzer Exp $
+
+  12 Mar 2004; Martin Holzer <mholzer@gentoo.org> mailman-2.1.4.ebuild:
+  correcting version in einfo. closes 44464.
 
   23 Feb 2004; Sven Blumenstein <bazik@gentoo.org> mailman-2.1.4.ebuild:
   Stable on sparc. Thanks to Josh Grebe <josh@brokedown.net> for testing!
