@@ -1,6 +1,12 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.20 2003/04/15 21:19:15 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.21 2003/04/24 18:08:57 killian Exp $
+
+*ppp-2.4.1-r13 (24 Apr 2003)
+  
+  24 Apr 2003; Chuck Brewer <killian@gentoo.org> ppp-2.4.1-r13.ebuild:
+  Added ppp-2.4.1-r13.ebuild and digest to include support for p* and 
+  ip-* scripts, perms fix, details in bug #18264
 
   15 Apr 2003; Tavis Ormandy <taviso@gentoo.org> ppp-2.4.1-r12.ebuild:
   Adding ~alpha keyword.
