@@ -1,0 +1,8 @@
+# ChangeLog for dev-ruby/sqlite-ruby
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/sqlite-ruby/ChangeLog,v 1.1 2003/06/26 16:49:39 twp Exp $
+
+*sqlite-ruby-1.0 (26 Jun 2003)
+
+  26 Jun 2003; Tom Payne <twp@gentoo.org> sqlite-ruby-1.0.ebuild :
+  Initial version. Ebuild submitted by Alexander Kellett. Bug # 23381.
