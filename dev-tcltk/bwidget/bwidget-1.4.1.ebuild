@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/bwidget/bwidget-1.4.1.ebuild,v 1.7 2003/12/16 02:25:34 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/bwidget/bwidget-1.4.1.ebuild,v 1.8 2004/01/15 04:24:27 agriffis Exp $
 
 DESCRIPTION="high-level widget set for Tcl/Tk completely written in Tcl"
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/tcllib/${MY_P}.tar.gz"
 
 LICENSE="BWidget"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc"
+KEYWORDS="x86 ppc ~sparc ~alpha"
 
 DEPEND="dev-lang/tk
 	dev-lang/tcl"
