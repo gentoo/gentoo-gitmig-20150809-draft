@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/prothon
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/prothon/ChangeLog,v 1.4 2004/06/24 22:54:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/prothon/ChangeLog,v 1.5 2004/07/02 04:30:07 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  prothon-0.0.3_p282.ebuild, prothon-0.0.4_p328.ebuild,
+  prothon-0.1.0_p532.ebuild:
+  virtual/glibc -> virtual/libc
 
 *prothon-0.0.4_p328 (16 Apr 2004)
 

@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ccc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ccc/ChangeLog,v 1.8 2004/06/24 22:47:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ccc/ChangeLog,v 1.9 2004/07/02 04:24:41 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> ccc-6.5.6.002.ebuild,
+  ccc-6.5.9.001-r1.ebuild, ccc-6.5.9.001-r2.ebuild, ccc-6.5.9.001-r3.ebuild,
+  ccc-6.5.9.001.ebuild:
+  virtual/glibc -> virtual/libc
 
 *ccc-6.5.9.001-r3 (19 Feb 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/helium-1.1.ebuild,v 1.11 2004/06/24 22:50:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/helium/helium-1.1.ebuild,v 1.12 2004/07/02 04:27:20 eradicator Exp $
 
 DESCRIPTION="Helium (for learning Haskell)"
 HOMEPAGE="http://www.cs.uu.nl/helium"
@@ -12,10 +12,10 @@ SLOT="0"
 KEYWORDS="x86 ~sparc"
 IUSE="readline"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	virtual/ghc
 	readline? ( sys-libs/readline )"
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	virtual/jdk
 	dev-libs/gmp
 	readline? ( sys-libs/readline )"

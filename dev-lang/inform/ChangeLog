@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/inform
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/inform/ChangeLog,v 1.3 2004/06/24 22:51:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/inform/ChangeLog,v 1.4 2004/07/02 04:27:47 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> inform-6.21.3.ebuild,
+  inform-6.21.4.ebuild:
+  virtual/glibc -> virtual/libc
 
 *inform-6.21.4 (17 Aug 2003)
 

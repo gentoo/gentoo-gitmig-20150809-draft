@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/maude/maude-2.1.ebuild,v 1.2 2004/06/24 22:51:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/maude/maude-2.1.ebuild,v 1.3 2004/07/02 04:28:16 eradicator Exp $
 
 DESCRIPTION="Maude - A high-level specification language"
 HOMEPAGE="http://maude.cs.uiuc.edu/"
@@ -19,7 +19,7 @@ KEYWORDS="~x86"
 
 IUSE=""
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	dev-libs/buddy
 	dev-libs/libtecla
 	dev-libs/gmp"

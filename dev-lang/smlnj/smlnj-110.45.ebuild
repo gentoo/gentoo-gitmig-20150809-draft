@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/smlnj-110.45.ebuild,v 1.2 2004/06/24 22:56:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/smlnj-110.45.ebuild,v 1.3 2004/07/02 04:31:27 eradicator Exp $
 
 inherit eutils
 
@@ -24,7 +24,7 @@ SLOT="0"
 KEYWORDS="-* ~ppc ~x86"
 IUSE=""
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 SMLNJ_DEST="/usr/lib/smlnj"
 SMLNJ_TARGETS="./config/targets"

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/swig
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.38 2004/06/25 03:14:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/ChangeLog,v 1.39 2004/07/02 04:32:10 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> swig-1.3.21.ebuild:
+  virtual/glibc -> virtual/libc
 
   23 Jun 2004; Mike Frysinger <vapier@gentoo.org> swig-1.3.21.ebuild:
   Add optional php support for #47513 by Diego Pettenò.

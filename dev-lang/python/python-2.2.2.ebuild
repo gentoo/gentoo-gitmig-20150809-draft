@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.2.ebuild,v 1.14 2004/06/25 18:13:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.2.ebuild,v 1.15 2004/07/02 04:30:36 eradicator Exp $
 
 IUSE="readline tcltk berkdb bootstrap"
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.python.org"
 LICENSE="PSF-2.2"
 KEYWORDS="x86 ppc sparc alpha mips hppa"
 
-DEPEND="virtual/glibc >=sys-libs/zlib-1.1.3
+DEPEND="virtual/libc >=sys-libs/zlib-1.1.3
 	readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.2 )
 	berkdb? ( >=sys-libs/db-3 )
 	tcltk? ( >=dev-lang/tk-8.0 )

@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/hugs98
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/ChangeLog,v 1.13 2004/06/24 22:50:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/hugs98/ChangeLog,v 1.14 2004/07/02 04:27:34 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  hugs98-2002.11-r1.ebuild, hugs98-2002.11.ebuild, hugs98-2003.11.ebuild:
+  virtual/glibc -> virtual/libc
 
   03 Jun 2004; Aron Griffis <agriffis@gentoo.org> hugs98-2003.11.ebuild:
   Fix use invocation

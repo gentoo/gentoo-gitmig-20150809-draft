@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/squeak
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/ChangeLog,v 1.13 2004/06/24 22:56:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/ChangeLog,v 1.14 2004/07/02 04:31:41 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> squeak-3.2.5.ebuild,
+  squeak-3.4.1-r1.ebuild, squeak-3.4.1-r2.ebuild, squeak-3.4.1.ebuild,
+  squeak-3.6_p3.ebuild:
+  virtual/glibc -> virtual/libc
 
   03 Jun 2004; Aron Griffis <agriffis@gentoo.org> squeak-3.2.5.ebuild,
   squeak-3.4.1-r1.ebuild, squeak-3.4.1-r2.ebuild, squeak-3.4.1.ebuild,

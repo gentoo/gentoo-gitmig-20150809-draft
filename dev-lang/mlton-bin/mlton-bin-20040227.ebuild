@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mlton-bin/mlton-bin-20040227.ebuild,v 1.3 2004/06/24 22:51:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mlton-bin/mlton-bin-20040227.ebuild,v 1.4 2004/07/02 04:28:42 eradicator Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="-* ~x86"
 
 IUSE="doc"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 dev-libs/gmp"
 
 src_install() {

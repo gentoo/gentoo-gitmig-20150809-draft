@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-20040516.ebuild,v 1.4 2004/06/24 22:49:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-20040516.ebuild,v 1.5 2004/07/02 04:26:54 eradicator Exp $
 
 inherit eutils flag-o-matic
 
@@ -22,7 +22,7 @@ SLOT="0"
 KEYWORDS="~x86 ~sparc ~amd64"
 IUSE="nls"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 		=sys-devel/gcc-${GCC_PV}*"
 
 S="${WORKDIR}/gcc-${GCC_PV}"

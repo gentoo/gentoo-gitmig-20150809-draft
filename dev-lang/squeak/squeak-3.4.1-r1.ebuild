@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.4.1-r1.ebuild,v 1.8 2004/06/24 22:56:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/squeak/squeak-3.4.1-r1.ebuild,v 1.9 2004/07/02 04:31:41 eradicator Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -18,10 +18,10 @@ KEYWORDS="~x86"
 IUSE="X oss mmx mozilla"
 # a ffi flag would be nice
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	X? ( virtual/x11 )"
 RDEPEND="virtual/squeak-image
-		virtual/glibc
+		virtual/libc
 		X? ( virtual/x11 )"
 
 S="${WORKDIR}/Squeak-${NV}"

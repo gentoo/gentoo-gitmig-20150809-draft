@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/bigwig/bigwig-2.0-r7.ebuild,v 1.6 2004/06/24 22:46:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/bigwig/bigwig-2.0-r7.ebuild,v 1.7 2004/07/02 04:24:25 eradicator Exp $
 
 IUSE="odbc mysql libwww java ssl"
 
@@ -14,7 +14,7 @@ DEPEND=">=net-www/apache-1.3
 	java? ( virtual/jre )
 	ssl? ( dev-libs/openssl )
 	sys-libs/zlib
-	virtual/glibc"
+	virtual/libc"
 
 SLOT="0"
 SRC_URI="http://www.brics.dk/bigwig/dist/${P}-7.tar.gz"

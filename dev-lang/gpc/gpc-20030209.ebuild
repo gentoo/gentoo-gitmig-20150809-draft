@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-20030209.ebuild,v 1.8 2004/06/24 22:49:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-20030209.ebuild,v 1.9 2004/07/02 04:26:54 eradicator Exp $
 
 inherit flag-o-matic
 
@@ -18,7 +18,7 @@ SLOT="0"
 KEYWORDS="~x86 ~sparc"
 IUSE="nls"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 		>=sys-devel/gcc-2.95.3"
 
 S="${WORKDIR}/gcc-${GCC_PV}"

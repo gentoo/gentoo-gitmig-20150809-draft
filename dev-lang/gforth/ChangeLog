@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/gforth
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gforth/ChangeLog,v 1.8 2004/06/24 22:48:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gforth/ChangeLog,v 1.9 2004/07/02 04:26:05 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> gforth-0.5.0.ebuild,
+  gforth-0.6.1-r1.ebuild, gforth-0.6.1.ebuild, gforth-0.6.2.ebuild:
+  virtual/glibc -> virtual/libc
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> gforth-0.6.1-r1.ebuild,
   gforth-0.6.2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.3.4.ebuild,v 1.13 2004/06/24 22:58:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/tcl-8.3.4.ebuild,v 1.14 2004/07/02 04:32:39 eradicator Exp $
 
 IUSE="threads"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://dev.scriptics.com/software/tcltk/"
 
 DESCRIPTION="Tool Command Language"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 SLOT="0"
 LICENSE="BSD"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.2.ebuild,v 1.3 2004/06/24 22:49:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc-bin/ghc-bin-6.2.ebuild,v 1.4 2004/07/02 04:26:35 eradicator Exp $
 
 IUSE="" # opengl not included in binary
 
@@ -15,7 +15,7 @@ SLOT="0"
 
 LOC="/opt/ghc"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 RDEPEND=">=dev-lang/perl-5.6.1
 	>=sys-devel/gcc-2.95.3
 	>=dev-libs/gmp-4.1"

@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.35 2004/06/24 22:58:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.36 2004/07/02 04:32:39 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> tcl-8.3.4.ebuild,
+  tcl-8.4.6.ebuild:
+  virtual/glibc -> virtual/libc
 
   15 Jun 2004; Ferris McCormick <fmccor@gentoo.org> tcl-8.4.6.ebuild:
   Marked stable for sparc.

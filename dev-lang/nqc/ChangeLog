@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/nqc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/ChangeLog,v 1.4 2004/06/24 22:52:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nqc/ChangeLog,v 1.5 2004/07/02 04:29:27 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> nqc-2.5.1.ebuild:
+  virtual/glibc -> virtual/libc
 
   01 Jan 2004; Luca Barbato <lu_zero@gentoo.org> nqc-2.5.1.ebuild:
   Marked ~ppc

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ccc/ccc-6.5.6.002.ebuild,v 1.3 2004/06/24 22:47:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ccc/ccc-6.5.6.002.ebuild,v 1.4 2004/07/02 04:24:41 eradicator Exp $
 #
 # Ebuild contributed by Tavis Ormandy <taviso@sdf.lonestar.org>
 # and edited by Aron Griffis <agriffis@gentoo.org>
@@ -25,7 +25,7 @@ DEPEND="sys-devel/gcc-config
 	app-arch/rpm2targz
 	>=sys-apps/sed-4"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	dev-libs/libots
 	dev-libs/libcpml"
 

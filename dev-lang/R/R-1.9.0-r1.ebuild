@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.9.0-r1.ebuild,v 1.4 2004/07/01 21:34:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/R/R-1.9.0-r1.ebuild,v 1.5 2004/07/02 04:24:12 eradicator Exp $
 
 IUSE="atlas X tcltk gnome zlib bzlib pcre"
 
@@ -13,7 +13,7 @@ SRC_URI="http://cran.r-project.org/src/base/${P}.tgz"
 
 HOMEPAGE="http://www.r-project.org/"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 		>=dev-lang/perl-5.6.1-r3
 		>=sys-libs/readline-4.1-r3
 		zlib? ( >=sys-libs/zlib-1.1.3-r2 )

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-1.0.10.ebuild,v 1.6 2004/06/24 22:48:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/fpc/fpc-1.0.10.ebuild,v 1.7 2004/07/02 04:25:51 eradicator Exp $
 
 DESCRIPTION="The Free Pascal compiler"
 HOMEPAGE="http://www.freepascal.org/"
@@ -9,9 +9,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 -*"
 IUSE=""
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	app-arch/rpm2targz"
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 S=${WORKDIR}
 
 src_unpack() {

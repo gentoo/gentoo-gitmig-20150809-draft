@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.21.ebuild,v 1.18 2004/06/25 03:14:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3.21.ebuild,v 1.19 2004/07/02 04:32:10 eradicator Exp $
 
 inherit mono #48511
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 s390"
 IUSE="java guile python tcltk ruby perl php"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	python? ( >=dev-lang/python-2.0 )
 	java? ( virtual/jdk )
 	ruby? ( virtual/ruby )

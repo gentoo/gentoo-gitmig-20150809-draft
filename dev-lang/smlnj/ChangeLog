@@ -1,6 +1,10 @@
 # ChangeLog for dev-lang/smlnj
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/ChangeLog,v 1.9 2004/06/24 22:56:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/ChangeLog,v 1.10 2004/07/02 04:31:27 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> smlnj-110.0.7.ebuild,
+  smlnj-110.45.ebuild:
+  virtual/glibc -> virtual/libc
 
   10 Jun 2004; Matthieu Sozeau <mattam@gentoo.org> smlnj-110.42.ebuild,
   smlnj-110.43.ebuild, files/smlnj-110.43-gcc33-quirk-fix.patch:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/smarteiffel/smarteiffel-1.0.ebuild,v 1.8 2004/06/24 22:56:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/smarteiffel/smarteiffel-1.0.ebuild,v 1.9 2004/07/02 04:31:03 eradicator Exp $
 
 IUSE="doc"
 #IUSE="doc tcc"
@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS="x86 ~ppc ~alpha ~sparc"
 
 #DEPEND="tcc? ( >=dev-lang/tcc-0.9.14 )"
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 S="${WORKDIR}/SmartEiffel"
 # Destination directory to hold most of the SmartEiffel distribution.
