@@ -47,3 +47,5 @@ fdftk
 djbfft
 qdbm
 mzscheme
+
+directfb
