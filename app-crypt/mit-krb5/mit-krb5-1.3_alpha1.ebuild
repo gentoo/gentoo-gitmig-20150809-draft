@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.3_alpha1.ebuild,v 1.2 2003/08/05 15:07:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.3_alpha1.ebuild,v 1.3 2003/09/05 01:36:51 msterret Exp $
 
 inherit eutils
 
@@ -22,23 +22,23 @@ src_unpack() {
 	unpack ${A} || die
 	cd ${S} || die
 
-        # Fix bad errno definitions (bug #16450 and #16267)
-        ebegin Fixing errno definitions
-        find . -name '*.[ch]' | xargs grep -l 'extern.*int.*errno' \
-          | xargs -n1 perl -pi.orig -e '
-                $.==1 && s/^/#include <errno.h>\n/;
-                s/extern\s+int\s+errno\s*\;//;'
-        eend $?
+	# Fix bad errno definitions (bug #16450 and #16267)
+	ebegin Fixing errno definitions
+	find . -name '*.[ch]' | xargs grep -l 'extern.*int.*errno' \
+		| xargs -n1 perl -pi.orig -e '
+			$.==1 && s/^/#include <errno.h>\n/;
+			s/extern\s+int\s+errno\s*\;//;'
+	eend $?
 }
 
 src_compile() {
 	local myconf
-	
+
 	use krb4 && myconf="${myconf} --with-krb4 --enable-krb4" \
 		|| myconf="${myconf} --without-krb4 --disable-krb4"
 
- 	use static && myconf="${myconf} --disable-shared --enable-static" \
- 		|| myconf="${myconf} --enable-shared --disable-static"
+	use static && myconf="${myconf} --disable-shared --enable-static" \
+		|| myconf="${myconf} --enable-shared --disable-static"
 
 	CFLAGS=`echo ${CFLAGS} | xargs`
 	CXXFLAGS=`echo ${CXXFLAGS} | xargs`
@@ -67,7 +67,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
-	
+
 	cd ..
 	dodoc README
 	dohtml doc/*.html
@@ -83,7 +83,7 @@ src_install() {
 		mv ${D}/usr/share/man/man1/${i}.1 ${D}/usr/share/man/man1/k${i}.1
 		mv ${D}/usr/bin/${i} ${D}/usr/bin/k${i}
 	done
-										
+
 	insinto /etc
 		newins ${FILESDIR}/krb5.conf krb5.conf
 	insinto /etc/krb5kdc

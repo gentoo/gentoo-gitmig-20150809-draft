@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.2.6-r3.ebuild,v 1.6 2003/08/05 15:07:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.2.6-r3.ebuild,v 1.7 2003/09/05 01:36:51 msterret Exp $
 
 inherit eutils
 
@@ -30,7 +30,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	
+
 	use krb4 && myconf="${myconf} --with-krb4 --enable-krb4" \
 		|| myconf="${myconf} --without-krb4 --disable-krb4"
 
@@ -63,7 +63,7 @@ src_install() {
 		mv ${D}/usr/share/man/man1/${i}.1.gz ${D}/usr/share/man/man1/k${i}.1.gz
 		mv ${D}/usr/bin/${i} ${D}/usr/bin/k${i}
 	done
-										
+
 	insinto /etc
 	newins ${FILESDIR}/krb5.conf krb5.conf
 	insinto /etc/krb5kdc

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6-r1.ebuild,v 1.3 2003/02/28 23:07:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6-r1.ebuild,v 1.4 2003/09/05 01:33:49 msterret Exp $
 
 inherit eutils
 
@@ -28,7 +28,7 @@ DEPEND=">=sys-devel/binutils-2.8.1.0.15"
 src_unpack() {
 	unpack ${A}
 	epatch ${WORKDIR}/${DEBPATCH}
-	cd ${S}/src 
+	cd ${S}/src
 	epatch ${DISTDIR}/${MY_P}.skey.patch-1
 	cd ${S}
 #	use mysql && epatch ${DISTDIR}/${MY_P}-mysql-1.diff
@@ -69,9 +69,9 @@ src_install() {
 	doman debian/*.1
 	dosbin run/john debian/mailer debian/john-cronjob
 
-	dosym john /usr/sbin/unafs 
-	dosym john /usr/sbin/unique 
+	dosym john /usr/sbin/unafs
+	dosym john /usr/sbin/unique
 	dosym john /usr/sbin/unshadow
 
-	dodoc debian/{CONFIG.mailer,copyright} doc/* 
+	dodoc debian/{CONFIG.mailer,copyright} doc/*
 }

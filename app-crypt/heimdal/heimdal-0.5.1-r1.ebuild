@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.5.1-r1.ebuild,v 1.7 2003/06/29 22:18:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.5.1-r1.ebuild,v 1.8 2003/09/05 01:33:12 msterret Exp $
 
 inherit libtool
 
@@ -34,7 +34,7 @@ src_unpack() {
 src_compile() {
 
 	elibtoolize
-	
+
 	aclocal -I cf || die "configure problem"
 	autoheader || die "configure problem"
 	automake -a || die "configure problem"
@@ -72,15 +72,15 @@ src_install() {
 
 	dodoc COPYRIGHT ChangeLog README NEWS PROBLEMS TODO
 
-    # Begin client rename and install
-    for i in {telnetd,ftpd}
-    do
-        mv ${D}/usr/share/man/man8/${i}.8.gz ${D}/usr/share/man/man8/k${i}.8.gz
-        mv ${D}/usr/sbin/${i} ${D}/usr/sbin/k${i}
-    done
-    for i in {rcp,rsh,telnet,ftp,rlogin}
-    do
-        mv ${D}/usr/share/man/man1/${i}.1.gz ${D}/usr/share/man/man1/k${i}.1.gz
-        mv ${D}/usr/bin/${i} ${D}/usr/bin/k${i}
-    done
+	# Begin client rename and install
+	for i in {telnetd,ftpd}
+	do
+		mv ${D}/usr/share/man/man8/${i}.8.gz ${D}/usr/share/man/man8/k${i}.8.gz
+		mv ${D}/usr/sbin/${i} ${D}/usr/sbin/k${i}
+	done
+	for i in {rcp,rsh,telnet,ftp,rlogin}
+	do
+		mv ${D}/usr/share/man/man1/${i}.1.gz ${D}/usr/share/man/man1/k${i}.1.gz
+		mv ${D}/usr/bin/${i} ${D}/usr/bin/k${i}
+	done
 }

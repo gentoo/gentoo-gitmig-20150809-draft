@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6.ebuild,v 1.15 2003/03/28 12:23:47 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6.ebuild,v 1.16 2003/09/05 01:33:50 msterret Exp $
 
 inherit eutils
 
@@ -45,9 +45,9 @@ src_install() {
 	doman debian/*.1
 	dosbin run/john debian/mailer debian/john-cronjob
 
-	dosym john /usr/sbin/unafs 
-	dosym john /usr/sbin/unique 
+	dosym john /usr/sbin/unafs
+	dosym john /usr/sbin/unique
 	dosym john /usr/sbin/unshadow
 
-	dodoc debian/{CONFIG.mailer,copyright} doc/* 
+	dodoc debian/{CONFIG.mailer,copyright} doc/*
 }

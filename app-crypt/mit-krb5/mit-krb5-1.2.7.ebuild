@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.2.7.ebuild,v 1.5 2003/08/05 15:07:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.2.7.ebuild,v 1.6 2003/09/05 01:36:51 msterret Exp $
 
 inherit eutils
 
@@ -9,9 +9,9 @@ S=${WORKDIR}/${MY_P}/src
 DESCRIPTION="MIT Kerberos V"
 HOMEPAGE="http://web.mit.edu/kerberos/www/"
 SRC_URI="http://www.mirrors.wiretapped.net/security/cryptography/apps/kerberos/krb5-mit/unix/${MY_P}.tar.gz
-        http://www.galiette.com/krb5/${MY_P}.tar.gz
-        http://munitions.vipul.net/software/system/auth/kerberos/${MY_P}.tar.gz
-        http://web.mit.edu/kerberos/www/advisories/2003-004-krb4_patchkit.tar.gz"
+	http://www.galiette.com/krb5/${MY_P}.tar.gz
+	http://munitions.vipul.net/software/system/auth/kerberos/${MY_P}.tar.gz
+	http://web.mit.edu/kerberos/www/advisories/2003-004-krb4_patchkit.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
@@ -24,30 +24,30 @@ DEPEND="virtual/glibc"
 src_unpack() {
 	unpack ${A} ; cd ${S}
 
-        EPATCH_SINGLE_MSG="Applying MIT krb5 Security Advisory 2003-003 fix"
-        epatch ${FILESDIR}/${MY_P}-xdr.patch
-        EPATCH_SINGLE_MSG="Applying MIT krb5 Security Advisory 2003-004 fix"
-        epatch ${WORKDIR}/2003-004-krb4_patchkit/patch.${PV}
-        EPATCH_SINGLE_MSG="Applying MIT krb5 Security Advisory 2003-005 fix"
-        epatch ${FILESDIR}/${MY_P}-principal_name_handling.patch
+	EPATCH_SINGLE_MSG="Applying MIT krb5 Security Advisory 2003-003 fix"
+	epatch ${FILESDIR}/${MY_P}-xdr.patch
+	EPATCH_SINGLE_MSG="Applying MIT krb5 Security Advisory 2003-004 fix"
+	epatch ${WORKDIR}/2003-004-krb4_patchkit/patch.${PV}
+	EPATCH_SINGLE_MSG="Applying MIT krb5 Security Advisory 2003-005 fix"
+	epatch ${FILESDIR}/${MY_P}-principal_name_handling.patch
 
-        # Fix bad errno definitions (bug #16450 and #16267)
-        ebegin Fixing errno definitions
-        find . -name '*.[ch]' | xargs grep -l 'extern.*int.*errno' \
-          | xargs -n1 perl -pi.orig -e '
-                $.==1 && s/^/#include <errno.h>\n/;
-                s/extern\s+int\s+errno\s*\;//;'
-        eend 0
+	# Fix bad errno definitions (bug #16450 and #16267)
+	ebegin Fixing errno definitions
+	find . -name '*.[ch]' | xargs grep -l 'extern.*int.*errno' \
+		| xargs -n1 perl -pi.orig -e '
+			$.==1 && s/^/#include <errno.h>\n/;
+			s/extern\s+int\s+errno\s*\;//;'
+	eend 0
 }
 
 src_compile() {
 	local myconf
-	
+
 	use krb4 && myconf="${myconf} --with-krb4 --enable-krb4" \
 		|| myconf="${myconf} --without-krb4 --disable-krb4"
 
 	econf \
-                --with-ccopts="${CFLAGS}" \
+		--with-ccopts="${CFLAGS}" \
 		--mandir=/usr/share/man \
 		--localstatedir=/etc \
 		--enable-shared \
@@ -75,7 +75,7 @@ src_install() {
 		mv ${D}/usr/share/man/man1/${i}.1.gz ${D}/usr/share/man/man1/k${i}.1.gz
 		mv ${D}/usr/bin/${i} ${D}/usr/bin/k${i}
 	done
-										
+
 	insinto /etc
 	newins ${FILESDIR}/krb5.conf krb5.conf
 	insinto /etc/krb5kdc
