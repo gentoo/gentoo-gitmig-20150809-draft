@@ -1,4 +1,6 @@
+MD5 c2473c92e67c605bbfdcd24bbf16e9a0 darkice-0.13.2.ebuild 1363
 MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
 MD5 8d7dc60bb1182cce085454dc323281b7 darkice-0.13.ebuild 1360
-MD5 74b9c9230cde3ed978a722f8a20f90ed ChangeLog 722
+MD5 22b126ab272f79f59855e4a03541c4bf ChangeLog 858
+MD5 eab656d99709f96c8a402d5d77b71d99 files/digest-darkice-0.13.2 66
 MD5 43a06c201266d5d52ea3b5c034678f7f files/digest-darkice-0.13 64
