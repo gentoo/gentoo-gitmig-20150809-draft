@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later Author Daniel Robbins
 # <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.0-r4.ebuild,v 1.2 2000/11/02 03:57:15 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-1.0-r4.ebuild,v 1.3 2000/11/02 15:58:21 drobbins Exp $
  
 A=""
 S=${WORKDIR}/${P}
@@ -30,7 +30,7 @@ src_install() {
   insinto /usr/lib/python1.5
   doins portage.py
   exeinto /usr/lib/portage/bin
-  doexe bin/* mega*
+  doexe bin/* mega* portage-maintain
   dosym /usr/lib/portage/bin/pkgmerge /usr/sbin/pkgmerge
   dosym /usr/lib/portage/bin/portage-maintain /usr/sbin/portage-maintain
 }

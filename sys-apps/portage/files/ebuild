@@ -123,6 +123,16 @@ dyn_digest() {
     echo ">>> Computed message digests."
 }
 
+merge_check() {
+	if [ -d ${ROOT}var/db/pkg/${CATEGORY}/${PF} ]
+    then
+		echo 
+		echo '!!!' "${PF} already merged -- unmerge first" 
+		echo
+		exit 1
+    fi
+}
+
 digest_check() {
 	if [ ! -e ${FILESDIR}/digest-${PF} ]
 	then
@@ -751,7 +761,8 @@ src_menu() {
 	    dyn_merge
 	    ;;
  	merge)
-        dopython portage.dep_frontend
+        merge_check
+		dopython portage.dep_frontend
 		if [ $? -ne 0 ]
 		then
 			exit $?
