@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-0.9.3.ebuild,v 1.1 2003/10/28 07:16:23 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-0.9.3.ebuild,v 1.2 2003/10/28 07:59:05 seemant Exp $
 
 inherit games
 
@@ -29,7 +29,7 @@ src_unpack() {
 }
 
 src_compile() {
-	econf \
+	egamesconf \
 		--with-multiplayer \
 		--with-network-olk \
 		--with-threads \
