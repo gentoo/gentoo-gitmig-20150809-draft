@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.8.5.ebuild,v 1.1 2004/04/01 09:36:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.8.5.ebuild,v 1.2 2004/04/21 22:05:45 mr_bones_ Exp $
 
 inherit games
 
@@ -25,6 +25,6 @@ DEPEND="virtual/glibc
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-	dodoc AUTHORS ChangeLog NEWS README TODO
+	dodoc AUTHORS README TODO
 	prepgamesdirs
 }
