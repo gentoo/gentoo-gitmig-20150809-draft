@@ -1,6 +1,10 @@
 # ChangeLog for app-accessibility/gnopernicus
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/ChangeLog,v 1.37 2005/03/11 00:05:37 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnopernicus/ChangeLog,v 1.38 2005/03/20 18:14:41 kloeri Exp $
+
+  20 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
+  gnopernicus-0.9.19.ebuild:
+  Stable on alpha.
 
 *gnopernicus-0.10.4 (10 Mar 2005)
 
