@@ -1,6 +1,13 @@
 # ChangeLog for games-fps/ut2004
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.9 2004/06/16 12:17:33 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ChangeLog,v 1.10 2004/06/17 02:03:56 wolf31o2 Exp $
+
+*ut2004-3236 (16 Jun 2004)
+
+  16 Jun 2004; Chris Gianelloni <wolf31o2@gentoo.org> ut2004-3204.ebuild,
+  +ut2004-3236.ebuild:
+  Modified 3204 ebuild to hopefully fix problems with merging on amd64. Also
+  adding 3236 ebuild to portage.
 
   16 Jun 2004; Chris Gianelloni <wolf31o2@gentoo.org> ut2004-3204.ebuild:
   Moved patch and amd64 ucc-bin/ut2004-bin renames to before uncompressing to

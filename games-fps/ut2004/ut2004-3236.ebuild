@@ -1,16 +1,20 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3204.ebuild,v 1.10 2004/06/17 02:03:56 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3236.ebuild,v 1.1 2004/06/17 02:03:56 wolf31o2 Exp $
 
 inherit games
 
 DESCRIPTION="Unreal Tournament 2004 - follow-up to the 2003  multi-player first-person shooter"
 HOMEPAGE="http://www.unrealtournament2004.com/"
-SRC_URI="http://mirror1.icculus.org/ut2004/ut2004-lnxpatch3204.tar.bz2"
+SRC_URI="http://mirror1.icculus.org/${PN}/${PN}-lnxpatch${PV}.tar.bz2
+	http://ftp4.3dgamers.com/pub/3dgamers/games/unrealtourn2k4/${PN}-lnxpatch${PV}.tar.bz2
+	http://3dgamers.intelenet.net/pub/3dgamers/games/unrealtourn2k4/${PN}-lnxpatch${PV}.tar.bz2
+	ftp://3dgamers.in-span.net/pub/3dgamers5/games/unrealtourn2k4/${PN}-lnxpatch${PV}.tar.bz2
+	http://iadfillvip.xlontech.net/100083/games/unrealtourn2k4/${PN}-lnxpatch${PV}.tar.bz2"
 
 LICENSE="ut2003"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="~x86 ~amd64"
 RESTRICT="nostrip"
 IUSE="opengl dedicated"
 
@@ -147,7 +151,7 @@ src_install() {
 	done
 
 	# Installing patch files
-	for p in {Help,System,Textures}; do
+	for p in {Help,System,Textures,Web}; do
 		cp -r ${S}/UT2004-Patch/${p}/* ${Ddir}/${p} \
 			|| die "copying ${p} from patch."
 	done
