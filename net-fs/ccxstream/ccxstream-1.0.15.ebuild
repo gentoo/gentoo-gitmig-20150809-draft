@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
+inherit eutils
+
 DESCRIPTION="XStream Server"
 HOMEPAGE="http://xbplayer.sourceforge.net"
 SRC_URI="mirror://sourceforge/xbplayer/${P}.tar.gz"
