@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.22.ebuild,v 1.7 2003/12/28 14:24:55 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.22.ebuild,v 1.8 2004/01/30 18:16:00 lanius Exp $
 
 inherit eutils flag-o-matic
 
@@ -15,20 +15,17 @@ KEYWORDS="x86 ppc sparc alpha hppa amd64"
 SRC_URI="ftp://ftp.lprng.com/pub/${MY_PN}/${MY_PN}/${MY_PN}-${PV}.tgz"
 
 PROVIDE="virtual/lpr"
+
 DEPEND="virtual/glibc
-	nls? ( sys-devel/gettext )
-	sys-apps/procps"
+	sys-apps/procps
+	nls? ( sys-devel/gettext )"
+
 RDEPEND="virtual/glibc
 	sys-apps/procps
 	!virtual/lpr"
+
 LICENSE="GPL-2 | Artistic"
 SLOT="0"
-
-has_version net-print/foomatic && DEPEND="${DEPEND} >=net-print/foomatic-3.0.0"
-
-src_unpack() {
-	unpack ${A} ; cd ${S}
-}
 
 src_compile() {
 	local myconf
