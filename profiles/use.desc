@@ -120,8 +120,7 @@ sse - fast floating point optimisation for Pentium class chips
 ssl - Adds support for Secure Socket Layer connections
 static - Causes things to be statically linked instead of dynamically.
 svga
-tcl
-tcltk
+tcltk - Support for Tcl and/or Tk
 tcpd - Adds support for TCP wrappers
 tetex - Adds support for teTeX
 truetype - Adds support for FreeType and/or FreeType2 fonts
