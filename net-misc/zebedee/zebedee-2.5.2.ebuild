@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/zebedee/zebedee-2.5.2.ebuild,v 1.1 2004/02/20 03:18:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebedee/zebedee-2.5.2.ebuild,v 1.2 2004/02/20 22:53:46 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A simple, free, secure TCP and UDP tunnel program"
@@ -45,10 +45,11 @@ src_install() {
 	make \
 		ROOTDIR=${D}/usr \
 		MANDIR=${D}/usr/share/man/man1 \
+		ZBDDIR=${D}/etc/zebedee \
 		OS=linux \
 		install || die
 
-	rm -f ${D}/usr/lib/zebedee/*.{txt,html}
+	rm -f ${D}/etc/zebedee/*.{txt,html}
 
 	dodoc *.txt
 	dohtml *.html
@@ -56,15 +57,15 @@ src_install() {
 	exeinto /etc/init.d
 	doexe ${FILESDIR}/zebedee
 
-	insinto /etc/zebedee
-	doins server.zbd vncviewer.zbd vncserver.zbd
-	newins server.id server.id.example
-
-	insopts -m 600
-	newins server.key server.key.example
-	newins client1.key client1.key.example
-	newins client2.key client2.key.example
-	newins clients.id clients.id.example
+#	insinto /etc/zebedee
+#	doins server.zbd vncviewer.zbd vncserver.zbd
+#	newins server.id server.id.example
+#
+#	insopts -m 600
+#	newins server.key server.key.example
+#	newins client1.key client1.key.example
+#	newins client2.key client2.key.example
+#	newins clients.id clients.id.example
 }
 
 pkg_postinst() {
