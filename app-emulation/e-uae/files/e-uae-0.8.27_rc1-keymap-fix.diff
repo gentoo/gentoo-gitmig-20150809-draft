@@ -1,0 +1,19 @@
+--- /home/evilrich/e-uae-0.8.27-RC1/src/keymap/keymap.c	2004-10-06 04:01:47.000000000 -0500
++++ src/keymap/keymap.c	2004-10-18 00:39:18.000000000 -0500
+@@ -168,13 +168,15 @@
+     count = i;
+ 
+     trans = (struct uae_input_device_kbr_default*)
+-	    malloc (sizeof (struct uae_input_device_kbr_default) * count);
++	    malloc (sizeof (struct uae_input_device_kbr_default) * (count + 1));
+ 
+     if (trans) {
+ 	for (i = 0; i < count; i++) {
+ 	    trans[i].scancode = hostkeys[i].hostkey;
+ 	    trans[i].event    = default_keymap[hostkeys[i].uaekey];
+ 	}
++        trans[i].scancode = -1;
+     }
++
+     return trans;
+ };
