@@ -1,8 +1,15 @@
 # ChangeLog for x11-misc/xosview
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/ChangeLog,v 1.10 2004/06/24 22:43:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xosview/ChangeLog,v 1.11 2004/09/04 01:09:11 s4t4n Exp $
 
-xosview-1.8.0 (28 Aug 2003)
+*xosview-1.8.2 (04 Sep 2004)
+
+  04 Sep 2004; Michele Noberasco <s4t4n@gentoo.org> xosview-1.8.2.ebuild:
+  Version bump. Closes #62758. Remove 2.6 kernel related stuff as the
+  compatibility issues have been fixed upstream. Other minor ebuild
+  clean ups...
+  xosview-1.8.0.ebuild:
+  Remove older ebuild.
 
   12 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> xosview-1.8.1.ebuild:
   Stable on alpha.
