@@ -1,0 +1,9 @@
+# ChangeLog for dev-libs/redland-bindings
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland-bindings/ChangeLog,v 1.1 2004/08/16 04:55:10 vapier Exp $
+
+*redland-bindings-0.9.18.1 (15 Aug 2004)
+
+  15 Aug 2004; Mike Frysinger <vapier@gentoo.org>
+  +redland-bindings-0.9.18.1.ebuild:
+  Version bump #60037 by Russell Cloran.
