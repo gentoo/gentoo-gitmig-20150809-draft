@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7.ebuild,v 1.3 2004/06/20 18:57:57 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7.ebuild,v 1.4 2004/06/22 15:32:29 brad Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome debug xinerama xprint"
 # Internal USE flags that I do not really want to advertise ...
@@ -506,7 +506,7 @@ src_install() {
 		insinto /usr/share/pixmaps
 		doins ${FILESDIR}/icon/mozilla-icon.png
 
-		insinto /usr/share/gnome/apps/Internet
+		insinto /usr/share/applications
 		doins ${FILESDIR}/icon/mozilla.desktop
 	fi
 

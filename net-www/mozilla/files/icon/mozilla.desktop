@@ -5,3 +5,4 @@ Exec=/usr/bin/mozilla
 Icon=mozilla-icon.png
 Terminal=0
 Type=Application
+Categories=Application;Network;

@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.175 2004/06/20 18:57:57 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.176 2004/06/22 15:32:29 brad Exp $
+
+  22 Jun 2004; Brad Laue <brad@gentoo.org> files/icon/mozilla.desktop,
+  mozilla-1.7.ebuild:
+  Move the Mozilla .desktop menu entry to the freedesktop compliant location.
+  Further enhancement including translations to follow.
 
   20 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> mozilla-1.7.ebuild:
   Disabled the amd64 patch as it is not necessary any longer.
