@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7-r2.ebuild,v 1.5 2003/09/02 09:17:57 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7-r2.ebuild,v 1.6 2003/09/02 09:25:26 taviso Exp $
 
 inherit gnuconfig
 
@@ -40,8 +40,9 @@ RDEPEND="readline? ( >=sys-libs/readline-4.1
 		virtual/x11"
 # XXX:	gtk2 perl bindings require dev-perl/gtk2-perl, worth a dependency?
 # XXX:	gtk perl bindings require dev-perl/gtk-perl, worth a dependency?
-# XXX:	netpbm is used for some of the dynamic menu scripts features, assuming 
-# 		anyone with noxpm will not want them.
+# XXX:	netpbm is used for some of the dynamic menu scripts, which can 
+# 		generate mini icons or thumbnails using netpbm utilities... im 
+# 		assuming anyone with `use noxpm` will not want them.
 DEPEND="${RDEPEND} 
 	>=sys-apps/sed-4
 	sys-devel/automake
@@ -64,6 +65,10 @@ src_compile() {
 	local myconf="--libexecdir=/usr/lib --with-imagepath=/usr/include/X11/bitmaps:/usr/include/X11/pixmaps:/usr/share/icons/fvwm"
 
 	# ImagePath should include /usr/share/icons/fvwm (x11-themes/fvwm_icons) 
+	#
+	# Another iconset for fvwm, wm-icons, includes configurations and user
+	# configuration utilities to make them easy to use with fvwm, no need
+	# to put them in the default ImagePath.
 
 	# use readline in FvwmConsole.
 	if ! use readline; then
