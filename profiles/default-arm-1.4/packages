@@ -36,7 +36,7 @@
 *>=sys-apps/portage-2.0.26-r11
 *>=sys-devel/binutils-2.13.90.0.4
 *>=sys-devel/gcc-3.2.2
-*=sys-libs/glibc-2.2.5-r8
+*=sys-libs/glibc-2.2.5-r7
 =sys-kernel/linux-headers-2.4.19-r1
 >=sys-apps/sysklogd-1.4.1
 *dev-lang/python
@@ -92,7 +92,6 @@
 *sys-devel/autoconf
 *>=sys-devel/automake-1.6.1-r5
 *sys-devel/bc
-*sys-devel/bin86
 *sys-devel/bison
 *sys-devel/flex
 *sys-devel/gettext
