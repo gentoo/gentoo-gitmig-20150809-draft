@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/netkit-base-0.17-r8.ebuild,v 1.3 2003/06/30 08:29:54 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/netkit-base/netkit-base-0.17-r8.ebuild,v 1.4 2003/07/04 05:26:43 kumba Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${P}.tar.gz"
 HOMEPAGE="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/"
 
 # Only keyword for your arch if you have iputils in your default profile!
-KEYWORDS="x86 amd64 alpha ppc"
+KEYWORDS="x86 amd64 alpha ppc mips"
 SLOT="0"
 LICENSE="BSD"
 
