@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.6 2002/12/13 10:56:51 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.7 2003/01/02 14:07:45 danarmak Exp $
+
+*valgrind-1.0.4-r1 (02 Jan 2003)
+
+  02 Jan 2003; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Add a patch for support of call tree tracing, from the kcachegrind
+  site. Please test. Closes several bugs.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
