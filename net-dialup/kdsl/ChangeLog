@@ -1,0 +1,10 @@
+# ChangeLog for net-dialup/kdsl
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/kdsl/ChangeLog,v 1.1 2004/11/15 19:39:40 mrness Exp $
+
+*kdsl-0.5 (15 Nov 2004)
+
+  15 Nov 2004; Alin Nastac <mrness@gentoo.org> +metadata.xml,
+  +kdsl-0.5.ebuild:
+  Initial import. See bug #67178.
+
