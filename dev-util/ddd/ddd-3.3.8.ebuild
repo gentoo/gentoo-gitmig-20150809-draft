@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.8.ebuild,v 1.8 2004/07/14 23:11:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.8.ebuild,v 1.9 2004/10/21 20:28:05 pvdabeel Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ RESTRICT="nomirror"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1 FDL-1.1"
-KEYWORDS="~x86 ~ppc sparc alpha amd64 ~ia64"
+KEYWORDS="~x86 ppc sparc alpha amd64 ~ia64"
 IUSE=""
 
 DEPEND="virtual/x11
