@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2004.10.1.ebuild,v 1.1 2004/10/26 09:49:12 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2004.10.1.ebuild,v 1.2 2004/10/26 14:40:11 brix Exp $
 
 inherit gnuconfig
 
@@ -70,8 +70,18 @@ src_install () {
 	dodoc CHANGELOG README TODO docs/*
 
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/rc-script-3 kismet
+	newexe ${FILESDIR}/${P}-init.d kismet
 
 	insinto /etc/conf.d
-	newins ${FILESDIR}/rc-conf-3 kismet
+	newins ${FILESDIR}/${P}-conf.d kismet
+}
+
+pkg_postinst() {
+	einfo ""
+	einfo "Please notice that the config file location has changed from"
+	einfo "/etc/kismet to /etc/"
+	einfo ""
+	einfo "For usage instructions please see"
+	einfo "/usr/share/doc/${PF}/README.gz"
+	einfo ""
 }
