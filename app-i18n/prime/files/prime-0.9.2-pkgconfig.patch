@@ -1,0 +1,51 @@
+--- prime.pc.in	2004-03-26 02:19:47.000000000 +0900
++++ prime.pc	2004-11-30 15:40:21.000000000 +0900
+@@ -1,27 +1,28 @@
+-prefix=@prefix@
++prefix=/usr/local
++exec_prefix=${prefix}
+ 
+-bindir=@bindir@
+-sbindir=@sbindir@
+-libexecdir=@libexecdir@
+-datadir=@datadir@
+-sysconfdir=@sysconfdir@
+-sharedstatedir=@sharedstatedir@
+-localstatedir=@localstatedir@
+-libdir=@libdir@
+-includedir=@includedir@
+-oldincludedir=@oldincludedir@
+-infodir=@infodir@
+-mandir=@mandir@
++bindir=${exec_prefix}/bin
++sbindir=${exec_prefix}/sbin
++libexecdir=${exec_prefix}/libexec
++datadir=${prefix}/share
++sysconfdir=${prefix}/etc
++sharedstatedir=${prefix}/com
++localstatedir=${prefix}/var
++libdir=${exec_prefix}/lib
++includedir=${prefix}/include
++oldincludedir=/usr/include
++infodir=${prefix}/info
++mandir=${prefix}/man
+ 
+-date=@DATE@
+-rubydir=@rubydir@
+-prime-configdir=@PRIME_CONFIG_DIR@
+-prime-grammardir=@PRIME_GRAMMAR_DIR@
+-prime-docdir=@PRIME_DOC_DIR@
+-prime-command=@PRIME_COMMAND@
++date=2004-08-29
++rubydir=$(libdir)/site_ruby/$(ruby_version)
++prime-configdir=/usr/local/etc/prime
++prime-grammardir=/usr/local/share/prime/grammar
++prime-docdir=/usr/local/share/doc/prime
++prime-command=prime
+ 
+ Name: PRIME
+ Description: PRedictive Input Method Editor
+-Version: @VERSION@
++Version: 0.9.2
+ Cflags:
+ Libs:

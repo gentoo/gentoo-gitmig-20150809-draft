@@ -1,6 +1,14 @@
 # ChangeLog for app-i18n/prime
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/ChangeLog,v 1.36 2004/09/07 07:56:14 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/ChangeLog,v 1.37 2004/11/30 06:46:16 usata Exp $
+
+*prime-0.9.2-r1 (30 Nov 2004)
+
+  30 Nov 2004; Mamoru KOMACHI <usata@gentoo.org>
+  +files/prime-0.9.2-pkgconfig.patch, prime-0.8.4.ebuild,
+  +prime-0.9.2-r1.ebuild, prime-0.9.2.ebuild:
+  Added a patch to fix prime.pc for gtkimprime.
+  Fixed compilation with parallel build.
 
   07 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> prime-0.8.3.1.ebuild,
   prime-0.8.4.ebuild, prime-0.9.1.ebuild, prime-0.9.2.ebuild:

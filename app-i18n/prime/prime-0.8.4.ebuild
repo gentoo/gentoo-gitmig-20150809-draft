@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/prime-0.8.4.ebuild,v 1.4 2004/11/23 10:13:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/prime-0.8.4.ebuild,v 1.5 2004/11/30 06:46:16 usata Exp $
 
 inherit ruby
 
@@ -24,6 +24,10 @@ S="${WORKDIR}/${P/_/-}"
 
 RUBY_ECONF="--with-prime-docdir=/usr/share/doc/${PF}/html
 	--with-rubydir=/usr/lib/ruby/site_ruby"
+
+src_compile() {
+	ruby_src_compile -j1
+}
 
 src_install() {
 	make DESTDIR=${D} install || die

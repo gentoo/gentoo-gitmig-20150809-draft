@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/prime-0.9.2.ebuild,v 1.5 2004/11/30 06:46:16 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/prime/prime-0.9.2-r1.ebuild,v 1.1 2004/11/30 06:46:16 usata Exp $
 
-inherit ruby
+inherit ruby eutils
 
 DESCRIPTION="Japanese PRedictive Input Method Editor"
 HOMEPAGE="http://taiyaki.org/prime/"
@@ -20,6 +20,8 @@ DEPEND="virtual/ruby
 	>=dev-libs/suikyo-1.3.0
 	dev-ruby/ruby-progressbar"
 PDEPEND="emacs? ( app-emacs/prime-el )"
+
+PATCHES="${FILESDIR}/${P}-pkgconfig.patch"
 
 S="${WORKDIR}/${P/_/-}"
 
