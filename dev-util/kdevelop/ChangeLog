@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.67 2004/09/24 02:05:02 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.68 2004/09/26 03:39:38 weeve Exp $
+
+  25 Sep 2004; Jason Wever <weeve@gentoo.org> kdevelop-3.1.0.ebuild:
+  Stable on sparc.
 
   23 Sep 2004; Caleb Tennis <caleb@gentoo.org> kdevelop-3.1.0.ebuild:
   x86 stable
