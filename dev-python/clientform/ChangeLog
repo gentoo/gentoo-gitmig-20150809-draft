@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/clientform
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/clientform/ChangeLog,v 1.2 2004/03/10 00:20:18 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/clientform/ChangeLog,v 1.3 2004/04/01 00:12:15 kloeri Exp $
+
+  01 Apr 2004; Bryan Østergaard <kloeri@gentoo.org> clientform-0.1.7b.ebuild:
+  Stable on x86.
 
 *clientform-0.1.15 (10 Mar 2004)
 
