@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/mandrake-artwork
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mandrake-artwork/ChangeLog,v 1.10 2004/02/29 16:45:27 aliz Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mandrake-artwork/ChangeLog,v 1.11 2004/03/20 06:52:29 brad Exp $
+
+*mandrake-artwork-1.0.0 (20 Mar 2004)
+
+  20 Mar 2004; Brad Laue <brad@gentoo.org> mandrake-artwork-1.0.0.ebuild,
+  files/galaxy-gtk24.patch:
+  Update to Galaxy theme version 1.0. Still not sure on the KDE thing. Report
+  bugs.
 
   18 Nov 2003; Brad Laue <brad@gentoo.org> mandrake-artwork-0.9.6.ebuild:
   Mask 0.9.6, doesn't like KDE yet
