@@ -1,4 +1,6 @@
 MD5 6a3fa497b137e9be79094d7abace6e50 ChangeLog 475
-MD5 5d2e62551065cd6665251e41ad2678c6 nxserver-business-1.2.2.ebuild 279
+MD5 549f204b15316d481f0f74f2ec01962f nxserver-business-1.2.2.ebuild 370
+MD5 b8afaec2aaee8af43badb95fe2f0b3a5 nxserver-business-1.2.2-r1.ebuild 398
 MD5 d698349629896a24617eaf0952be85f1 files/digest-nxserver-business-1.2.2 72
+MD5 4bcc0fdcbb033ab9ece493b8667595cb files/digest-nxserver-business-1.2.2-r1 72
 MD5 3d3179cfb8373d562ceb43a610c1ba7d files/1.2.2/50nxserver 84
