@@ -1,9 +1,19 @@
-MD5 c5b8c646dab384927f0421ffea05dd71 tix-8.2.0-r2.ebuild 1125
-MD5 20620c4338e4cc767d14b90cd128d970 tix-8.2.0.ebuild 1122
-MD5 45cf2ba93665890e6a396ac9963aedf0 tix-8.2.0-r1.ebuild 1123
-MD5 0d3c36bfd9db1a33dbd30f1edca3762f ChangeLog 1792
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c5a8b609a654bc52491d5da502000d90 tix-8.2.0-r2.ebuild 1135
+MD5 c6fef53b335b06b39d3fc77922daf928 tix-8.2.0.ebuild 1123
+MD5 3966141a2ccf534122aa1f54ce3d4139 tix-8.2.0-r1.ebuild 1126
+MD5 543356e14f8b2dee45e567de48a5f974 ChangeLog 1906
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 ea64edb8aaac879cf4c5d01ee6349394 files/digest-tix-8.2.0-r1 63
 MD5 ea64edb8aaac879cf4c5d01ee6349394 files/digest-tix-8.2.0-r2 63
 MD5 19bebbc485fa998898efa8592573adc5 files/tix-8.2.0-gentoo.diff 9779
 MD5 ea64edb8aaac879cf4c5d01ee6349394 files/digest-tix-8.2.0 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCLzlw06ebR+OMO78RAuB4AJ4wL+AizNQ5Ux4xzySmPWr4Y0G/QgCeN8Sv
+4Rhs3F9QYo6sHkybMw1qHdM=
+=D7Mx
+-----END PGP SIGNATURE-----
