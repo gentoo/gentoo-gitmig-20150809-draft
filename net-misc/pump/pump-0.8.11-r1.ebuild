@@ -1,16 +1,18 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/pump-0.8.19.ebuild,v 1.2 2003/10/27 10:51:04 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pump/pump-0.8.11-r1.ebuild,v 1.1 2004/03/09 00:06:53 seemant Exp $
 
 DESCRIPTION="This is the DHCP/BOOTP client written by RedHat"
-SRC_URI="mirror://debian/pool/main/p/${PN}/${PN}_${PV}.orig.tar.gz"
 HOMEPAGE="http://ftp.debian.org/debian/pool/main/p/pump/"
+SRC_URI="mirror://debian/pool/main/p/${PN}/${PN}_${PV}.orig.tar.gz"
 
-KEYWORDS="~x86 ~ppc ~sparc ~hppa ~amd64"
-LICENSE="GPL-2"
 SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86 ppc sparc"
 
 DEPEND=">=dev-libs/popt-1.5"
+
+PROVIDE="virtual/dhcpc"
 
 src_compile() {
 	make pump || die
