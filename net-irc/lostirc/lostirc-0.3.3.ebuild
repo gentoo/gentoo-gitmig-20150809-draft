@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/lostirc-0.3.3.ebuild,v 1.3 2004/05/12 04:06:21 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/lostirc-0.3.3.ebuild,v 1.4 2004/05/30 19:53:39 khai Exp $
 
 inherit base
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
 S=${WORKDIR}/${P}
 DEPEND=">=sys-apps/sed-4*
-	>=dev-cpp/gtkmm-2.0
+	=dev-cpp/gtkmm-2.2.11
 	>=dev-libs/libsigc++-1.2"
 
 src_compile() {
