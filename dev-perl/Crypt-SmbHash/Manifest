@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 1fab05da688390bd870e1ec10dcf97a1 ChangeLog 1085
+MD5 82956c5a07ad9b9ab87eb3a71b96337a ChangeLog 1230
 MD5 5b8880819029138a0f8a678f9a7bf54a Crypt-SmbHash-0.02.ebuild 619
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 8a0c429d491a34aa247fe84cb42339d1 Crypt-SmbHash-0.12.ebuild 657
 MD5 67e2c7586f975dec66f6a8e20127c58a files/digest-Crypt-SmbHash-0.02 68
+MD5 604c6164377f80bda6c88f6c3e88c377 files/digest-Crypt-SmbHash-0.12 68
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBUkdxHTu7gpaalycRAs05AJsG8prXbYEDvijzXgZjnRNoRcHy6wCgu0pS
-kyShCKOQOTh7zN7a4IiD58Y=
-=WApX
+iD8DBQFBgOa6tG5z4I8BtQoRAjLqAJ0SSv+7Nu7st3OEYgwpKX/8ybhcIQCfQBMG
+zBV8wwKRf3wVncRR1amH5ko=
+=GF/D
 -----END PGP SIGNATURE-----
