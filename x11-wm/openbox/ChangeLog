@@ -1,8 +1,15 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.9 2002/09/05 04:34:53 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.10 2002/09/25 22:44:33 mkeadle Exp $
 
+*openbox-2.1.1 (25 Sep 2002)
 
+  25 Sep 2002; Matt Keadle <mkeadle@gentoo.org> openbox-2.1.1.ebuild
+  files/digest-openbox-2.1.1 :
+
+  version bump, placed in slot "1" as this is the stable version now, also 
+  removed the -dev from the binary. Thanks for the ebuild Brad. New
+  fieron theme has been merged into commonbox-styles.
 
 *openbox-2.0.0-r2 (04 Sep 2002)
 
