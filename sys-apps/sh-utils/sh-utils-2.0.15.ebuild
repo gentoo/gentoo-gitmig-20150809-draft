@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/sh-utils-2.0.15.ebuild,v 1.3 2002/10/05 05:39:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/sh-utils-2.0.15.ebuild,v 1.4 2002/10/11 05:59:52 seemant Exp $
 
 IUSE="nls static build"
 
@@ -22,10 +22,11 @@ src_unpack() {
 	# patch to remove Stallman's su/wheel group rant and to add processor
 	# information in uname output
 	patch -p1 < ${FILESDIR}/${P}-gentoo.diff || die
-	#rm doc/coreutils.info
-	#This next line prevents our patched (and updated-mtime) uname.c from forcing a
-	#uname.1 man page regeneration, which requires perl (not available when creating
-	#a new build image... and we don't want this package dependent on perl anyway.
+
+	# This next line prevents our patched (and updated-mtime) uname.c 
+	# from forcing a uname.1 man page regeneration, which requires perl 
+	# (not available when creating a new build image... and we don't want 
+	# this package dependent on perl anyway.
 	#This problem can be fixed by fixing our patch at a future date.
 	touch -d "20 Aug 1999" src/uname.c
 }
@@ -48,6 +49,7 @@ src_compile() {
 }
 
 src_install() {
+
 	einstall || die
 		
 	rm -rf ${D}/usr/lib
@@ -67,10 +69,10 @@ src_install() {
 	rm ${D}/usr/bin/hostname
 	#we use the /bin/su from the sys-apps/shadow package
 	rm ${D}/bin/su
-	rm ${D}/usr/share/man/man1/su.1.gz
+	rm ${D}/usr/share/man/man1/su*
 	#we use the /usr/bin/uptime from the sys-apps/procps package
 	rm ${D}/usr/bin/uptime
-	rm ${D}/usr/share/man/man1/uptime.1.gz
+	rm ${D}/usr/share/man/man1/uptime*
 }
 
 pkg_postinst() {
