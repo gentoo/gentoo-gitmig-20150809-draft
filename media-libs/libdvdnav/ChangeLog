@@ -1,0 +1,9 @@
+# ChangeLog for media-lib/libdvdnav
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdnav/ChangeLog,v 1.1 2002/05/01 03:07:14 agenkin Exp $
+
+*libdvdnav-0.1.0 (30 Apr 2002)
+
+  30 April 2002; Arcady Genkin <agenkin@thpoon.com> libdvdnav-0.1.0.ebuild:
+
+  Initial version.
