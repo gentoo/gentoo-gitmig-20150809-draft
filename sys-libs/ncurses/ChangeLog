@@ -1,6 +1,6 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.11 2002/08/01 03:27:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.12 2002/08/04 16:25:48 spider Exp $
 
 
 *ncurses-5.2.20020511-r1 (9 Jun 2002)
@@ -55,7 +55,9 @@
   New version that compiles w/ gcc3.
 	
 *ncurses-5.2-r5 (21 Mar 2002)
-
+  04 Aug 2002; Spider <spider@gentoo.org> ncurses-5.2-r5.ebuild :
+  filter out -fno-exceptions from this build as well.
+  
   12 Mar 2002; Seemant Kulleen <seemant@gentoo.org> ncurses-5.2-r5.ebuild :
 	
   stefan@mdy.univie.ac.at pointed out html documentation getting gzipped

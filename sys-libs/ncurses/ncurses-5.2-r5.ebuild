@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.2-r5.ebuild,v 1.4 2002/07/11 06:30:56 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.2-r5.ebuild,v 1.5 2002/08/04 16:25:48 spider Exp $
+
+inherit flag-o-matic
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Linux console display libarary"
@@ -10,6 +12,8 @@ DEPEND="virtual/glibc"
 KEYWORDS="x86"
 LICENSE="MIT"
 SLOT="5"
+
+filter-flags -fno-exceptions
 
 src_compile() {
 	if [ -z "$DEBUG" ]
