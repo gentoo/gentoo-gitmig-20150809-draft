@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.8 2005/01/07 22:14:07 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.9 2005/01/08 00:19:36 hansmi Exp $
 
 inherit toolchain-funcs eutils fixheadtails
 
@@ -203,9 +203,9 @@ src_unpack() {
 	epatch ${FILESDIR}/${MY_PVR}/qmail-pop3d-stat.tls.patch
 
 	# this can unintentionally leak information about your system!
-	EPATCH_SINGLE_MSG="Branding qmail with Gentoo identifier 'Gentoo Linux ${PF}'" \
-	epatch ${FILESDIR}/${MY_PVR}/qmail-gentoo-branding.patch
-	sed -e "s/__PF__/${PF}/" -i ${S}/qmail-smtpd.c
+	#EPATCH_SINGLE_MSG="Branding qmail with Gentoo identifier 'Gentoo Linux ${PF}'" \
+	#epatch ${FILESDIR}/${MY_PVR}/qmail-gentoo-branding.patch
+	#sed -e "s/__PF__/${PF}/" -i ${S}/qmail-smtpd.c
 
 	EPATCH_SINGLE_MSG="qmail-pop3d fix for top output so Evolution doesn't barf" \
 	epatch ${FILESDIR}/${PV}-r15/qmail-pop3d-top-outputfix.patch
