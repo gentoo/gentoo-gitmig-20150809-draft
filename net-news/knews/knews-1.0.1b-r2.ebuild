@@ -1,7 +1,7 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Michael Conrad Tilstra <michael@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/net-news/knews/knews-1.0.1b-r2.ebuild,v 1.6 2004/03/20 07:32:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/knews/knews-1.0.1b-r2.ebuild,v 1.7 2004/03/31 19:46:58 jhuebel Exp $
 
 IUSE="xface png jpeg"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.matematik.su.se/~kjj/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 amd64"
 
 DEPEND="virtual/x11
 	virtual/mta
