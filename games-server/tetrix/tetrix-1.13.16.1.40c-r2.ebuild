@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/tetrix/tetrix-1.13.16.1.40c-r2.ebuild,v 1.1 2003/09/21 04:47:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/tetrix/tetrix-1.13.16.1.40c-r2.ebuild,v 1.2 2003/12/21 03:13:48 vapier Exp $
 
 inherit games gcc
 
@@ -52,6 +52,6 @@ src_install() {
 	touch ${GAMES_LOGDIR}/${PN}.log
 
 	prepgamesdirs
-	fowners ${GAMES_USER_DED}:${GAMES_GROUP} ${GAMES_STATEDIR}/${PN}
-	fowners ${GAMES_USER_DED}:${GAMES_GROUP} ${GAMES_LOGDIR}/${PN}.log
+	fowners ${GAMES_USER_DED}:${GAMES_GROUP} ${D}/${GAMES_STATEDIR}/${PN}
+	fowners ${GAMES_USER_DED}:${GAMES_GROUP} ${D}/${GAMES_LOGDIR}/${PN}.log
 }
