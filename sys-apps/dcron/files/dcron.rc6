@@ -1,0 +1,17 @@
+#!/sbin/runscript
+
+depend() {
+	need clock
+}
+
+start() {
+	ebegin "Starting dcron"
+	start-stop-daemon --start --quiet --exec /usr/sbin/crond
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping dcron"
+	start-stop-daemon --stop --quiet --exec /usr/sbin/crond
+	eend $?
+}

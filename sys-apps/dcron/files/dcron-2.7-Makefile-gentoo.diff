@@ -23,37 +23,3 @@
  
  protos.h: ${SRCS} ${D_SRCS}
  	fgrep -h Prototype ${SRCS} ${D_SRCS} >protos.h
-@@ -31,18 +31,21 @@
- 	rm -f *.o dcron.tgz $(PROTOS)
- 
- install:
--	rm -f /usr/bin/crond /usr/bin/crontab
--	cp crond crontab /usr/bin
--	chown root.wheel /usr/bin/crond
--	chown root.cron /usr/bin/crontab
--	chmod 700 /usr/bin/crond
--	chmod 4750 /usr/bin/crontab
--	-mkdirs /usr/man/man1
--	-mkdirs /usr/man/man8
--	cp crontab.1 /usr/man/man1
--	cp crond.8 /usr/man/man8
--	chmod 444 /usr/man/man1/crontab.1
--	chmod 444 /usr/man/man8/crond.8
-+	mkdir $(DESTDIR)/usr
-+	mkdir $(DESTDIR)/usr/bin
-+	cp crond crontab $(DESTDIR)/usr/bin
-+	chown root.wheel $(DESTDIR)/usr/bin/crond
-+	chown root.cron $(DESTDIR)/usr/bin/crontab
-+	chmod 700 $(DESTDIR)/usr/bin/crond
-+	chmod 4750 $(DESTDIR)/usr/bin/crontab
-+	mkdir $(DESTDIR)/usr/share
-+	mkdir $(DESTDIR)/usr/share/man
-+	mkdir $(DESTDIR)/usr/share/man/man1
-+	mkdir $(DESTDIR)/usr/share/man/man8
-+	cp crontab.1 $(DESTDIR)/usr/share/man/man1
-+	cp crond.8 $(DESTDIR)/usr/share/man/man8
-+	chmod 444 $(DESTDIR)/usr/share/man/man1/crontab.1
-+	chmod 444 $(DESTDIR)/usr/share/man/man8/crond.8
- 
- # dillon-specific
- #
