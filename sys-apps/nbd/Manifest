@@ -1,11 +1,21 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 31ca77290b26376760bbe7477a85d816 ChangeLog 1711
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 7d72774d4a5e1921448e981852601c2c nbd-2.0-r1.ebuild 708
 MD5 244cde1f3935f9d803cd60f6dfffcb48 nbd-2.6.0.ebuild 791
-MD5 4943b28359b69eb98eff4f1f4a2a02bb nbd-2.7.1.ebuild 993
-MD5 72e5f76ef01f2de3ab00115892c61a2c files/digest-nbd-2.0-r1 58
-MD5 d958e9b80c8885d0368dfe2fe4b3ad37 files/digest-nbd-2.6.0 60
-MD5 61d64bd0afc3756d1b8848e9204f6bb8 files/digest-nbd-2.7.1 127
-MD5 3c92585e853a1de0f617fc02554655a4 files/docbook2man.patch 585
+MD5 163865fa3877aba4bf0c0e39d123e011 nbd-2.7.1.ebuild 989
+MD5 7d72774d4a5e1921448e981852601c2c nbd-2.0-r1.ebuild 708
 MD5 f897737fcb8999f6281a2df960b05119 files/nbd-client.8 3095
 MD5 df04bcd5d2490ea5fc2bfffdddd74172 files/nbd-server.1 4432
+MD5 d958e9b80c8885d0368dfe2fe4b3ad37 files/digest-nbd-2.6.0 60
+MD5 72e5f76ef01f2de3ab00115892c61a2c files/digest-nbd-2.0-r1 58
+MD5 61d64bd0afc3756d1b8848e9204f6bb8 files/digest-nbd-2.7.1 127
+MD5 3c92585e853a1de0f617fc02554655a4 files/docbook2man.patch 585
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBhyh1HTu7gpaalycRAn0BAKDUlTHXX2sxKWz8W2XbZ6GYXnnLSgCbBgjA
+Ai2m21AW7jAe6T8r4pcgxtM=
+=0KqF
+-----END PGP SIGNATURE-----
