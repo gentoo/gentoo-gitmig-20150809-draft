@@ -1,6 +1,9 @@
 # ChangeLog for mail-client/sylpheed-claws
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.39 2005/03/12 19:35:17 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.40 2005/03/15 08:08:50 s4t4n Exp $
+
+  15 Mar 2005; Michele Noberasco <s4t4n@gentoo.org> sylpheed-claws-1.0.1.1.ebuild:
+  Added ~x86 keyword. This is the first gtk2 version that actually works for me :-)
 
   12 Mar 2005; Jason Wever <weeve@gentoo.org> sylpheed-claws-1.0.3.ebuild:
   Stable on sparc wrt security bug #84056.
