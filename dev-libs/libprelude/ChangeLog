@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libprelude
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/ChangeLog,v 1.1 2003/06/21 17:12:35 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libprelude/ChangeLog,v 1.2 2003/06/29 20:49:57 solar Exp $
+
+*libprelude-0.8.5-r1 (29 Jun 2003)
+
+  29 Jun 2003; Ned Ludd <solar@gentoo.org> libprelude-0.8.5-r1.ebuild:
+  Fix for configure when -doc -ssl are used Closes Bug#: 23672
 
 *libprelude-0.8.5 (21 Jun 2003)
 
