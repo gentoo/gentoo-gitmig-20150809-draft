@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-200a.ebuild,v 1.5 2004/03/02 14:31:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/americas-army/americas-army-200a.ebuild,v 1.6 2004/03/13 23:45:02 wolf31o2 Exp $
 
 inherit games
 
@@ -17,10 +17,13 @@ SLOT="0"
 KEYWORDS="x86"
 RESTRICT="nostrip nomirror"
 
+# dedicated is unused at this time until I can find some good generic dedicated
+# server scripts to include.
+IUSE="opengl dedicated"
+
 DEPEND="virtual/glibc"
-RDEPEND="media-sound/esound
-	virtual/x11
-	virtual/opengl"
+RDEPEND="virtual/glibc
+	opengl? ( virtual/opengl )"
 
 S=${WORKDIR}
 
