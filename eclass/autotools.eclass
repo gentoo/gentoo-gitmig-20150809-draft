@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.2 2002/01/04 12:06:28 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.3 2002/07/12 15:24:36 danarmak Exp $
 # The autotools eclass enables building of the apps that needs the latest autconf/automake.
 #
 # NOTES:
@@ -22,7 +22,7 @@
 #    # Copyright 1999-2002 Gentoo Technologies, Inc.
 #    # Distributed under the terms of the GNU General Public License, v2 or later
 #    # Maintainer:  John Doe <john@foo.com>
-#    # $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.2 2002/01/04 12:06:28 danarmak Exp $
+#    # $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.3 2002/07/12 15:24:36 danarmak Exp $
 #
 #    # If you need to set the versions different from in here, it *must*
 #    # be done before inherit.eclass is sourced
@@ -72,6 +72,7 @@
 
 
 ECLASS=AutoTools
+INHERITED="$INHERITED $ECLASS"
 
 #[ -z "$ACONFVER" ] && ACONFVER=2.52f
 #[ -z "$AMAKEVER" ] && AMAKEVER=1.5b

@@ -1,10 +1,10 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-child.eclass,v 1.1 2002/05/10 12:07:56 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-child.eclass,v 1.2 2002/07/12 15:24:36 danarmak Exp $
 # Inherited by children ebuilds, which must specify their $PARENT ebuild before inheriting.
 ECLASS=kde-child
-
+INHERITED="$INHERITED $ECLASS"
 #TODO: prevent $S/README, etc. from being dodoc'd
 
 # determine settings

@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/debug.eclass,v 1.16 2002/06/24 05:37:57 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/debug.eclass,v 1.17 2002/07/12 15:24:36 danarmak Exp $
 
 # Author: Spider
 # A general DEBUG eclass to ease inclusion of debugging information and to remove "bad" flags from CFLAGS
 
 # Debug ECLASS
 ECLASS="debug"
-
+INHERITED="$INHERITED $ECLASS"
 # Do _NOT_ strip symbols in the build! Need both lines for Portage 1.8.9+
 DEBUG="yes"
 RESTRICT="nostrip"

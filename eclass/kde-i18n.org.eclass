@@ -1,9 +1,10 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-i18n.org.eclass,v 1.1 2002/07/05 11:36:45 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-i18n.org.eclass,v 1.2 2002/07/12 15:24:36 danarmak Exp $
 # Contains the locations of i18n ftp.kde.org packages and their mirrors
 ECLASS=kde.org
+INHERITED="$INHERITED $ECLASS"
 
 SRC_PATH="kde/stable/${PV}/src/${P}.tar.bz2"
 

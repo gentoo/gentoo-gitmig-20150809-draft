@@ -3,7 +3,7 @@
 # Author Bart Verwilst <verwilst@gentoo.org>
 # /space/gentoo/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass
 ECLASS=flag-o-matic
-
+INHERITED="$INHERITED $ECLASS"
 #
 #### filter-flags <flag> ####
 # Remove particular flags from C[XX]FLAGS

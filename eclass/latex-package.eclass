@@ -4,6 +4,7 @@
 # the src_install function as-is if the system is single-directory.
 
 inherit base
+INHERITED="$INHERITED $ECLASS"
 
 newdepend ">=app-text/tetex-1.0.7"
 ECLASS=latex-package

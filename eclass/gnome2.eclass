@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.17 2002/06/29 23:50:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.18 2002/07/12 15:24:36 danarmak Exp $
 
 inherit libtool
 inherit debug
@@ -10,6 +10,7 @@ inherit debug
 
 # Gnome 2 ECLASS
 ECLASS="gnome2"
+INHERITED="$INHERITED $ECLASS"
 
 G2CONF="--enable-debug=yes"
 ELTCONF=""

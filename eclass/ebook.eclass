@@ -5,7 +5,7 @@
 # The ebook eclass defines some default functions and variables to 
 # install ebooks. 
 ECLASS=ebook
-
+INHERITED="$INHERITED $ECLASS"
 HOMEPAGE="http://lidn.sourceforge.net"
 # ebook eclass user guide:
 # -vars
