@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/hostap-driver
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/ChangeLog,v 1.20 2004/11/27 12:50:48 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap-driver/ChangeLog,v 1.21 2004/11/29 17:41:10 wschlich Exp $
+
+  29 Nov 2004; Wolfram Schlich <wschlich@gentoo.org> metadata.xml,
+  hostap-driver-0.2.5-r1.ebuild:
+  Update metadata.xml, add firmware warning message to ebuild
 
   27 Nov 2004; Sven Wegener <swegener@gentoo.org> :
   Added missing digest entries.
