@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.390 2005/03/19 01:46:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.391 2005/03/20 20:35:26 vapier Exp $
+
+*gcc-3.4.3.20050110-r1 (20 Mar 2005)
+
+  20 Mar 2005; Mike Frysinger <vapier@gentoo.org>
+  +gcc-3.4.3.20050110-r1.ebuild:
+  Fix visibility patches #78720, update uclibc support, and add support for
+  arm bigendian.
 
   19 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
   gcc-3.4.3-r1.ebuild, gcc-3.4.3.20050110.ebuild:
