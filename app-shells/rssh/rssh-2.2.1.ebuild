@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/rssh-2.1.1.ebuild,v 1.5 2004/04/25 22:59:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/rssh/rssh-2.2.1.ebuild,v 1.1 2004/06/22 23:25:53 vapier Exp $
 
 DESCRIPTION="Restricted shell for SSHd."
 HOMEPAGE="http://rssh.sourceforge.net/"
@@ -13,6 +13,12 @@ IUSE="static"
 
 RDEPEND="virtual/ssh"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	sed -i 's:chmod u+s $(:chmod u+s $(DESTDIR)$(:' Makefile.in
+}
+
 src_compile() {
 	econf \
 		--libexecdir=/usr/lib/misc \
@@ -23,6 +29,6 @@ src_compile() {
 }
 
 src_install() {
-	einstall libexecdir="${D}/usr/lib/misc"
+	make install DESTDIR=${D} || die
 	dodoc AUTHORS ChangeLog CHROOT INSTALL README TODO
 }
