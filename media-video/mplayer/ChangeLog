@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.205 2004/09/28 07:07:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.206 2004/10/03 22:43:03 lu_zero Exp $
+
+  04 Oct 2004; Luca Barbato <lu_zero@gentoo.org>
+  +files/mplayer-1.0_pre5-yuv2rbg_fix.patch, mplayer-1.0_pre5-r4.ebuild:
+  Eventually I fixed the yuv2rgb_altivec for vo_x11, the other scalers could
+  have wrong colours
 
   27 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   mplayer-1.0_pre5-r3.ebuild:
