@@ -1,12 +1,18 @@
 # ChangeLog for x11-wm/blackbox
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.23 2003/09/25 18:05:31 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/blackbox/ChangeLog,v 1.24 2003/10/09 17:17:40 tseng Exp $
+
+*blackbox-0.65.0-r2 (09 Oct 2003)
+
+  09 Oct 2003; ,,, <brandon@gentoo.org> blackbox-0.65.0-r1.ebuild,
+  blackbox-0.65.0-r2.ebuild, blackbox-0.65.0.ebuild, files/blackbox-gcc.patch:
+  Cleanup and fix for gcc 3.3, closes #29633
 
   26 Sep 2003; Martin Holzer <mholzer@gentoo.org> blackbox-0.65.0-r1.ebuild:
   added more docs. Closes #29560.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+
 *blackbox-0.65.0-r1 (26 Oct 2002)
 
   5 Nov 2002; Matt Keadle <mkeadle@gentoo.org> blackbox-0.65.0-r1
@@ -22,10 +28,10 @@
   Patch created by Michael Langley (ownx).
 
 *blackbox-0.65.0 (19 Sep 2002)
-  
+
   19 Sep 2002; Spider <spider@gentoo.org> blackbox-0.65.0.ebuild : bump version
   this is it, the final one
-  
+
 *blackbox-0.65.0_beta7 (05 Sep 2002)
   05 Sep 2002; Spider <spider@gentoo.org> blackbox-0.65.0_beta7.ebuild :
   version bump, sorry for the delay
@@ -33,7 +39,7 @@
 *blackbox-0.65.0_beta5 (09 aug 2002)
   09 Aug 2002 ; Spider <spider@gentoo.org> blackbox-0.65.0_beta5.ebuild :
   version bump
-  
+
 *blackbox-0.65.0_beta3-r1 (18 Jul 2002)
     18 Jul 2002; Spider <spider@gentoo.org> blackbox-0.65.0_beta3-r1.ebuild :
     and the eclass version
@@ -42,7 +48,7 @@
 *blackbox-0.65.0_beta3 (18 Jul 2002)
   18 Jul 2002; Spider <spider@gentoo.org> blackbox-0.65.0_beta3.ebuild :
   new version
-  repomaned 
+  repomaned
 
 *blackbox-0.62.1-r3 (14 Jul 2002)
 
@@ -55,14 +61,14 @@
   eclassed.
 
 *blackbox-0.65.0_alpha8 (17 Jun 2002)
-  17 Jun 2002; Spider <spider@gentoo.org> blackbox-0.65.0_alpha8.ebuild: 
+  17 Jun 2002; Spider <spider@gentoo.org> blackbox-0.65.0_alpha8.ebuild:
   new version. forgot to add this about a week ago ;)
 
 *blackbox-0.65.0_alpha7 (02 Jun 2002)
   02 May 2002; Spider <spider@gentoo.org> blackbox-0.65.0_alpha7.ebuild:
    bump said the alpha and version updated
 
-    
+
 *blackbox-0.65.0_alpha6 (22 May 2002)
   22 May 2002; Spider <spider@gentoo.org> blackbox-0.65.0_alpha6.ebuild:
   latest, greatest, better than ever, and compiles on gcc 3.x
@@ -74,7 +80,7 @@
 
 *blackbox-0.65.0_alpha2-r1 (27 Apr 2002)
   27 Apr 2002; Spider <spider@gentoo.org> blackbox-0.65.0_alpha2-r1.ebuild:
-  fix $P Mangling to use MY_P and be nice to portage  
+  fix $P Mangling to use MY_P and be nice to portage
 
 *blackbox-0.65.0_alpha2 (26 Apr 2002)
   26 Apr 2002; Spider <spider@gentoo.org> blackbox-0.65.0_alpha2.ebuild:
@@ -91,7 +97,7 @@
 *blackbox-0.62.1-r1 (14 Feb 2002)
 
   14 Feb 2002; Dan Armak <danarmak@gentoo.org> ChangeLog :
-  Added /etc/X11/Sessions/blackbox, which adds blackbox to the auto-updated session 
+  Added /etc/X11/Sessions/blackbox, which adds blackbox to the auto-updated session
   list in kdm and gdm.
 
 *blackbox-0.62.1 (2 Feb 2002)
@@ -103,7 +109,7 @@
 *blackbox-0.61.1-r1 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
+
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
