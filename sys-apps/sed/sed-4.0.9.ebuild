@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.9.ebuild,v 1.18 2004/09/16 02:23:44 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.9.ebuild,v 1.19 2004/09/16 13:48:16 usata Exp $
 
 inherit gnuconfig
 
@@ -45,8 +45,6 @@ src_install() {
 	fi
 
 	rm -f ${D}/usr/bin/sed
-	use macos && cd ${D} && for x in `find . -name 'sed*' -print`; do mv "$x" "${x//sed/gsed}"; done && cd ${WORKDIR}/${P}
-	use macos && dosym ../../bin/gsed /usr/bin/gsed || dosym ../../bin/sed /usr/bin/sed
-	use ppc-macos && cd ${D} && for x in `find . -name 'sed*' -print`; do mv "$x" "${x//sed/gsed}"; done && cd ${WORKDIR}/${P}
-	use ppc-macos && dosym ../../bin/gsed /usr/bin/gsed || dosym ../../bin/sed /usr/bin/sed
+	( use macos || use ppc-macos ) && cd ${D} && for x in `find . -name 'sed*' -print`; do mv "$x" "${x//sed/gsed}"; done && cd ${WORKDIR}/${P}
+	( use macos || use ppc-macos ) && dosym ../../bin/gsed /usr/bin/gsed || dosym ../../bin/sed /usr/bin/sed
 }
