@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.ebuild,v 1.5 2004/12/29 20:06:45 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1.0.ebuild,v 1.6 2004/12/30 05:14:46 chriswhite Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -17,7 +17,7 @@ SLOT="1"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa gnome sdl speex
 	theora ipv6 altivec opengl aac fb xv xvmc nvidia i8x0 libcaca
-	samba dxr3 vidix png mng pic mmx"
+	samba dxr3 vidix png mng pic"
 
 RDEPEND="oggvorbis? ( media-libs/libvorbis )
 	!amd64? ( X? ( virtual/x11 ) )
@@ -77,14 +77,7 @@ src_unpack() {
 	#use amd64 && epatch ${FILESDIR}/configure-64bit-define.patch
 
 	use pic && epatch ${FILESDIR}/${PN}-1_rc7-pic.patch
-	if use pic && use !mmx
-	then
-		# mmx doesn't play nice with hardened gcc
-		# but only on x86 works for some.. works
-		# for others, so I'm going to do this
-		# with a flag to make things easier...
-		epatch ${FILESDIR}/${PN}-1_rc7-mmx.patch
-	fi
+	use x86 && epatch ${FILESDIR}/${PN}-hardened-mmx.patch
 
 	# Fix detection of hppa2.0 and hppa1.1 CHOST
 	use hppa && sed -e 's/hppa-/hppa*-linux-/' -i ${S}/configure
