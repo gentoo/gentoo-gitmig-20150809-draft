@@ -59,3 +59,4 @@ virtual/lapack		sci-libs/lapack-atlas
 virtual/cdrtools		app-cdr/cdrtools
 virtual/mailx		mail-client/mailx
 virtual/w3m		www-client/w3m
+virtual/motif          x11-libs/openmotif

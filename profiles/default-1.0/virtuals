@@ -56,3 +56,4 @@ virtual/blas		sci-libs/blas-atlas
 virtual/lapack		sci-libs/lapack-atlas
 virtual/mailx           mail-client/mailx
 virtual/w3m		www-client/w3m
+virtual/motif          x11-libs/openmotif

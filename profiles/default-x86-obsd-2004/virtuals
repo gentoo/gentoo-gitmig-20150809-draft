@@ -58,3 +58,4 @@ virtual/blas			sci-libs/blas-atlas
 virtual/lapack		sci-libs/lapack-atlas
 virtual/m3			dev-lang/cm3
 virtual/w3m		www-client/w3m
+virtual/motif          x11-libs/openmotif

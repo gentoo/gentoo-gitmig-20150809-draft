@@ -52,3 +52,4 @@ virtual/dev-manager	sys-fs/devfsd
 virtual/blas		sci-libs/blas-atlas
 virtual/lapack		sci-libs/lapack-atlas
 virtual/w3m		www-client/w3m
+virtual/motif          x11-libs/openmotif

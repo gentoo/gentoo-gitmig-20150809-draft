@@ -64,3 +64,4 @@ virtual/fam             app-admin/fam
 virtual/gnustep-back    gnustep-base/gnustep-back-art
 virtual/gsasl 		net-libs/libgsasl
 virtual/libpcap		net-libs/libpcap
+virtual/motif          x11-libs/openmotif
