@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Distributed under the terms of the GNU General Public License v2
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.17-r5.ebuild,v 1.5 2002/03/22 05:26:09 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.17-r5.ebuild,v 1.6 2002/03/26 00:20:07 drobbins Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -127,4 +127,10 @@ pkg_postinst() {
 	#this will generate include/linux/modversions.h, among other things:
 	cd ${ROOT}/usr/src/linux-${KV}
 	make dep
+	#This next line forces the next "make dep" to run in non-fastdep mode, calling
+	#genksyms and recalculating things correctly for us.  This prevents users from
+	#bumping into problems when the default config is in SMP mode, they turn it off,
+	#they build and they get smp_num_cpus redefined errors.  A full (non-fastdep)
+	#"make dep" appears to be needed between SMP<->UP switches.
+	find -iname *.stamp -exec rm {} \;
 }
