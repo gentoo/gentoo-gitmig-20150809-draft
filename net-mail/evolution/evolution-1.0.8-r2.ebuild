@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.0.8-r2.ebuild,v 1.1 2002/10/16 17:01:17 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/evolution/evolution-1.0.8-r2.ebuild,v 1.2 2002/10/20 15:13:06 foser Exp $
 
 IUSE="ssl nls mozilla ldap doc spell pda"
 
@@ -18,7 +18,7 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz
 HOMEPAGE="http://www.ximian.com"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64"
+KEYWORDS="x86 ppc sparc sparc64"
 
 RDEPEND="app-text/scrollkeeper
 	>=gnome-extra/bonobo-conf-0.14
