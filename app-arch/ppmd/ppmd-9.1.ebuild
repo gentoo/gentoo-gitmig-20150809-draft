@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ppmd/ppmd-9.1.ebuild,v 1.6 2004/03/22 10:18:02 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ppmd/ppmd-9.1.ebuild,v 1.7 2004/04/06 03:19:45 zx Exp $
 
 inherit eutils flag-o-matic
 
@@ -17,7 +17,7 @@ SRC_URI="http://http.us.debian.org/debian/pool/main/p/ppmd/${MY_P}.orig.tar.gz
 
 SLOT="0"
 LICENSE="public-domain"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips amd64 ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha hppa ~mips amd64 ~ia64"
 
 DEPEND=">=sys-apps/sed-4
 	app-arch/gzip

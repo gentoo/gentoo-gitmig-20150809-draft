@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/ppmd
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/ppmd/ChangeLog,v 1.4 2004/03/22 10:18:02 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/ppmd/ChangeLog,v 1.5 2004/04/06 03:19:45 zx Exp $
+
+  05 Apr 2004; Chris Aniszczyk <zx@gentoo.org> ppmd-9.1.ebuild:
+  Stable on hppa
 
   22 Mar 2004; Seemant Kulleen <seemant@gentoo.org> ppmd-9.1.ebuild:
   filter out -O3 flag, replace with -O2 flag. Also, replaced the head && mv
