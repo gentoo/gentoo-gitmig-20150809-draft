@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/mt-st/mt-st-0.7.ebuild,v 1.12 2003/02/13 05:55:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/mt-st/mt-st-0.7.ebuild,v 1.13 2003/03/25 14:06:06 gmsoft Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Enhanced mt command for Linux, supporting Linux 2.4 ioctls"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnu.org/software/tar/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha hppa"
 
 DEPEND="virtual/glibc"
 
