@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.81 2005/01/13 07:49:29 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.82 2005/01/14 00:43:45 johnm Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -301,7 +301,6 @@ install_headers() {
 		dodir ${ddir}/asm-sparc64
 		cp -ax ${S}/include/asm-sparc/* ${D}/usr/include/asm-sparc
 		cp -ax ${S}/include/asm-sparc64/* ${D}/usr/include/asm-sparc64
-
 		#generate_sparc_asm ${D}/usr/include
 		create_ml_includes /usr/include/asm __sparc__:/usr/include/asm-sparc __sparc64__:/usr/include/asm-sparc64
 	elif [ "${ARCH}" = "amd64" ]; then
@@ -906,7 +905,6 @@ kernel-2_src_unpack() {
 }
 
 kernel-2_src_compile() {
-	detect_version
 	cd ${S}
 	[ "${ETYPE}" == "headers" ] && compile_headers
 	[ "${ETYPE}" == "sources" ] && \
@@ -914,29 +912,23 @@ kernel-2_src_compile() {
 }
 
 kernel-2_pkg_preinst() {
-	detect_version
 	[ "${ETYPE}" == "headers" ] && preinst_headers
 }
 
 kernel-2_src_install() {
-	detect_version
 	install_universal
 	[ "${ETYPE}" == "headers" ] && install_headers
 	[ "${ETYPE}" == "sources" ] && install_sources
 }
 
 kernel-2_pkg_postinst() {
-	detect_version
 	[ "${ETYPE}" == "headers" ] && postinst_headers
 	[ "${ETYPE}" == "sources" ] && postinst_sources
 }
 
 kernel-2_pkg_setup() {
-	detect_version
 	[ "${ETYPE}" == "headers" ] && setup_headers
 
 	# This is to fix some weird portage bug? in stable versions of portage.
 	[ "${ETYPE}" == "sources" ] && echo ">>> Preparing to unpack ..."
 }
-
-
