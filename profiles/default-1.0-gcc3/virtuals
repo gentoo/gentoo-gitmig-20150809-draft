@@ -12,7 +12,6 @@ virtual/glut		media-libs/glut
 virtual/imapd		net-mail/courier-imap
 virtual/imapUW		net-mail/uw-imap
 x11-libs/xaw		x11-libs/Xaw3d
-sys-apps/texinfo	sys-devel/gcc	
 virtual/jdk		dev-java/blackdown-jdk
 virtual/jre		dev-java/blackdown-jre
 virtual/imapd		net-mail/courier-imap

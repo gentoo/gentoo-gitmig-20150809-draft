@@ -91,8 +91,7 @@
 *sys-apps/tar
 #only needed by xinetd, and it's out.  So tcp-wrappers is out too
 #sys-apps/tcp-wrappers
-#texinfo is now provided by gcc
-#*sys-apps/texinfo
+*>=sys-apps/texinfo-4.2-r1
 *sys-apps/textutils
 *sys-apps/util-linux
 *sys-apps/which
