@@ -1,0 +1,62 @@
+# ChangeLog for sys-apps/filelight
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/filelight/ChangeLog,v 1.1 2004/10/30 18:00:42 carlo Exp $
+
+*filelight-0.6.4.1 (30 Oct 2004)
+
+  30 Oct 2004; Carsten Lohrke <carlo@gentoo.org> +metadata.xml,
+  +filelight-0.6.4.1-r1.ebuild, +filelight-0.6.4.1.ebuild,
+  +filelight-1.0_beta1.ebuild, +filelight-1.0_beta2-r1.ebuild,
+  +filelight-1.0_beta2-r2.ebuild, +filelight-1.0_beta2.ebuild:
+  Moved from sys-apps/filelight to kde-misc/filelight.
+
+*filelight-1.0_beta2-r2 (30 Aug 2004)
+
+  30 Aug 2004; Guy Martin <gmsoft@gentoo.org> +filelight-1.0_beta2-r2.ebuild:
+  Unconditionally use -fPIC for libs (#55238). Marked ~hppa.
+
+  11 Jul 2004; Carsten Lohrke <carlo@gentoo.org> filelight-0.6.4.1-r1.ebuild:
+  stable on x86
+
+*filelight-1.0_beta2-r1 (01 Jul 2004)
+
+  01 Jul 2004; Carsten Lohrke <carlo@gentoo.org>
+  +filelight-1.0_beta2-r1.ebuild:
+  -fPIC for amd64
+
+*filelight-1.0_beta2 (30 Jun 2004)
+
+  30 Jun 2004; Carsten Lohrke <carlo@gentoo.org> +filelight-1.0_beta2.ebuild:
+  version bump
+
+  28 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  filelight-0.6.4.1.ebuild:
+  kde-base is deprecated
+
+*filelight-1.0_beta1 (12 Jun 2004)
+
+  12 Jun 2004; Carsten Lohrke <carlo@gentoo.org> filelight-1.0_beta1.ebuild:
+  version bump
+
+*filelight-0.6.4.1-r1 (25 May 2004)
+
+  25 May 2004; Caleb Tennis <caleb@gentoo.org> metadata.xml,
+  +filelight-0.6.4.1-r1.ebuild:
+  Modified ebuild by Andrej Kacian (bug #47853)
+
+  16 May 2004; Dominik Stadler <centic@gentoo.org> filelight-0.6.4.1.ebuild:
+  Marking stable on x86.
+
+  13 Apr 2004; Dominik Stadler <centic@gentoo.org> filelight-0.6.4.1.ebuild:
+  Add missing IUSE in ebuild
+
+*filelight-0.6.4.1 (09 Mar 2004)
+
+  09 Mar 2004; David Holm <dholm@gentoo.org> filelight-0.6.4.1.ebuild:
+  Added to ~ppc.
+
+*filelight-0.4.6.1 (04 Mar 2004)
+
+  04 Mar 2004: Dominik Stadler <centic@gentoo.org> :
+  Initial ebuild, submitted by Alexandre Parente Lima <alexandre_parente@yahoo.com.br>,
+  Christoph von Kruechten <cvk@gmx.net> and others in Bug 27926, 30273 and 39661.
