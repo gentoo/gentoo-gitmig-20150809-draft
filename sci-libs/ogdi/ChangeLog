@@ -1,0 +1,22 @@
+# ChangeLog for dev-libs/ogdi
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/ogdi/ChangeLog,v 1.1 2004/12/28 22:57:03 ribosome Exp $
+
+*ogdi-3.1.4 (28 Dec 2004)
+
+  28 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +ogdi-3.1.1.ebuild, +ogdi-3.1.4.ebuild:
+  Moved from dev-libs/ogdi to sci-libs/ogdi.
+
+*ogdi-3.1.4 (18 Dec 2004)
+
+  18 Dec 2004; Steve Arnold <nerdboy@gentoo.org> +metadata.xml,
+  ogdi-3.1.1.ebuild, +ogdi-3.1.4.ebuild:
+  bumped 3.1.1 to x86 and added cleaned-up 3.1.4 to ~
+
+*ogdi-3.1.1 (04 Jan 2003)
+
+  04 Jan 2003; George Shapovalov <george@gentoo.org> ChangeLog, ogdi-3.1.1.ebuild, files/digest-ogdi-3.1.1 :
+  initial release
+  open geographical datastore interface
+  ebuild submitted by Nathaniel C. Domingo  <nathaniel.domingo@upd.edu.ph>
