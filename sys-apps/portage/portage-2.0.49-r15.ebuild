@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.49-r15.ebuild,v 1.2 2003/11/01 06:37:51 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.49-r15.ebuild,v 1.3 2003/11/03 07:51:49 mr_bones_ Exp $
 
 IUSE="build"
 
@@ -206,7 +206,7 @@ pkg_postinst() {
 		cd ${ROOT}var/cache/edb/dep
 		#Nick, I changed the following to deal with situations where stderr spits out stuff like: "!!! CANNOT IMPORT FTPLIB:"
 		#which causes an infinite loop. (drobbins)
-		python -c 'import portage; myf=open("/tmp/auxdbkl","w"); myf.write(str(len(portage.auxdbkeys))); myf.close()' 
+		python -c 'import portage; myf=open("/tmp/auxdbkl","w"); myf.write(str(len(portage.auxdbkeys))); myf.close()'
 		AUXDBKEYLEN=`cat /tmp/auxdbkl`
 		rm -f /tmp/auxdbkl
 		find ${ROOT}var/cache/edb/dep -type f -exec wc -l {} \; | egrep -v "^ *${AUXDBKEYLEN}" | sed 's:^ \+[0-9]\+ \+\([^ ]\+\)$:\1:' 2>/dev/null | xargs -n 50 -r rm -f
@@ -266,5 +266,3 @@ fi # PORTAGE_TESTING
 		chmod -R g+rws /var/tmp/ccache &>/dev/null
 	fi
 }
-
-
