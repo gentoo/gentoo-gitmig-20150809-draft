@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/Socket6
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Socket6/ChangeLog,v 1.1 2003/06/01 01:03:18 mcummings Exp $
+
+*Socket6-0.11 (31 May 2003)
+
+  31 May 2003; Michael Cummings <mcummings@gentoo.org> Socket6-0.11.ebuild:
+  ipv6 dep for POE
+
