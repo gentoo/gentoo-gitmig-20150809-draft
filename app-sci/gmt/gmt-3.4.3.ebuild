@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gmt/gmt-3.4.3.ebuild,v 1.7 2004/08/07 21:18:32 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gmt/gmt-3.4.3.ebuild,v 1.8 2004/12/28 19:00:04 ribosome Exp $
 
 DESCRIPTION="Powerful map generator"
 HOMEPAGE="http://gmt.soest.hawaii.edu/"
@@ -21,7 +21,7 @@ KEYWORDS="x86"
 IUSE="gmtsuppl gmtfull gmthigh gmttria doc"
 
 #Need to include gcc and bzip??
-DEPEND=">=app-sci/netcdf-3.5.0"
+DEPEND=">=sci-libs/netcdf-3.5.0"
 #RDEPEND=""
 
 S="${WORKDIR}/GMT${PV}"

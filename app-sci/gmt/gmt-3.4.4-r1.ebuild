@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/gmt/gmt-3.4.4-r1.ebuild,v 1.5 2004/08/07 21:18:33 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/gmt/gmt-3.4.4-r1.ebuild,v 1.6 2004/12/28 19:00:04 ribosome Exp $
 
 MAINV="${PV:0:1}"
 
@@ -23,7 +23,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="gmtsuppl gmtfull gmthigh gmttria doc"
 
-RDEPEND=">=app-sci/netcdf-3.5.0"
+RDEPEND=">=sci-libs/netcdf-3.5.0"
 DEPEND="${RDEPEND}
 	gmtsuppl? ( >=sys-devel/autoconf-2.58 )"
 
