@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.1-r1.ebuild,v 1.11 2003/04/08 15:29:44 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/fontconfig-2.1-r1.ebuild,v 1.12 2003/05/21 15:09:35 taviso Exp $
 
 inherit debug eutils
 
@@ -46,6 +46,9 @@ src_unpack() {
 
 src_compile() {
 	fc_setup
+	
+	[ "${ARCH}" == "alpha" -a "${CC}" == "ccc" ] && \
+		die "Dont compile fontconfig with ccc, it doesnt work very well"
 	
 	econf \
 		--x-includes=/usr/X11R6/include \
