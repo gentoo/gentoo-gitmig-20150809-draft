@@ -1,12 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4b4daf459341f2321a41c583aa99ede3 flac-1.1.1.ebuild 2268
+MD5 896446ca4bca06518a482882a81b80ea flac-1.1.1.ebuild 2350
 MD5 29a7092d6fe3a8aa79b2f20461d20a1c flac-1.1.0-r1.ebuild 1529
 MD5 3214d685136ef7a1d3f2d010b5b43acb flac-1.1.0.ebuild 1517
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 369bfeb73338c8a5d0e28f5613d869c7 flac-1.1.0-r2.ebuild 1334
-MD5 645d7f8d8cc4cdd1e859f4f17471522f ChangeLog 4675
+MD5 fdf093e5e77044f6918fb2b4e68746c0 ChangeLog 4811
 MD5 c10f4a7334db0c8eab9fbc5111363490 files/digest-flac-1.1.0 63
 MD5 c10f4a7334db0c8eab9fbc5111363490 files/digest-flac-1.1.0-r1 63
 MD5 efbd988ef5877a8f1f4018cfaa97b378 files/flac-1.1.0-libtool.patch 3831
@@ -18,7 +18,7 @@ MD5 bf28df385b4747a614fb93e31411b5de files/flac-1.1.1-libtool.patch 4041
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBXnq6ArHZZzCEUG0RAi3LAJ0QSUfSGLKeAFYTdc8GhLs99tQF0QCeOW1k
-uCCWNVEDZZ+4lyXdGLOYgrw=
-=s5Wj
+iD8DBQFBX0CLArHZZzCEUG0RAvP5AJ9YQYBgmSYGbFvCJV1Tn2o7xnfLYACfUmAZ
+6Gjm1uXogOXRXVhfdYXR43I=
+=A2J3
 -----END PGP SIGNATURE-----

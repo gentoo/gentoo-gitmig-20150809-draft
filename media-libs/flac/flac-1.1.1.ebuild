@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.1.ebuild,v 1.1 2004/10/02 09:53:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.1.ebuild,v 1.2 2004/10/02 23:56:46 eradicator Exp $
 
 IUSE="sse xmms"
 
@@ -50,20 +50,22 @@ src_compile() {
 }
 
 src_install() {
+	make DESTDIR="${D}" install || die
+	dodoc AUTHORS README
+
 	# Keep around old lib
-	if [ -f /usr/$(get_libdir)/libFLAC.so.4 ]; then
-		cp /usr/$(get_libdir)/libFLAC.so.4 ${D}/usr/$(get_libdir)
+	if [ -f ${ROOT}/usr/$(get_libdir)/libFLAC.so.4 ]; then
+		dodir /usr/$(get_libdir)
+		cp ${ROOT}/usr/$(get_libdir)/libFLAC.so.4 ${D}/usr/$(get_libdir)
 		touch ${D}/usr/$(get_libdir)/libFLAC.so.4
 		fperms 755 /usr/$(get_libdir)/libFLAC.so.4
 	fi
-	if [ -f /usr/$(get_libdir)/libFLAC++.so.2 ]; then
-		cp /usr/$(get_libdir)/libFLAC++.so.2 ${D}/usr/$(get_libdir)
+	if [ -f ${ROOT}/usr/$(get_libdir)/libFLAC++.so.2 ]; then
+		dodir /usr/$(get_libdir)
+		cp ${ROOT}/usr/$(get_libdir)/libFLAC++.so.2 ${D}/usr/$(get_libdir)
 		touch ${D}/usr/$(get_libdir)/libFLAC++.so.2
 		fperms 755 /usr/$(get_libdir)/libFLAC++.so.2
 	fi
-
-	make DESTDIR="${D}" install || die
-	dodoc AUTHORS README
 }
 
 pkg_postinst() {
@@ -71,7 +73,7 @@ pkg_postinst() {
 		einfo "An old version of libFLAC was detected on your system."
 		einfo "In order to avoid conflicts, we've kept the old lib"
 		einfo "around.  In order to make full use of the new version"
-		einfo "of libexif, you will need to do the following:"
+		einfo "of libFLAC, you will need to do the following:"
 		einfo "  revdep-rebuild --soname libFLAC.so.4"
 		einfo "  revdep-rebuild --soname libFLAC++.so.2"
 		einfo
