@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.41-r3.ebuild,v 1.4 2001/05/28 05:24:13 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/wvdial-1.41-r3.ebuild,v 1.5 2001/06/13 11:53:23 achim Exp $
 
 P=wvdial-1.41
 A=${P}.tar.gz
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.worldvisions.ca/wvdial/"
 
 DEPEND=">=sys-devel/gcc-2.95.2
 	virtual/glibc"
-RDEPEND="$DEPEND net-dialup/pppd"
+RDEPEND="$DEPEND net-dialup/ppp"
 
 src_compile() {                           
     try make
