@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/xshipwars-1.34.0.ebuild,v 1.3 2004/02/20 06:13:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/xshipwars/xshipwars-1.34.0.ebuild,v 1.4 2004/02/22 15:51:36 mr_bones_ Exp $
 
 inherit gcc games eutils
 
@@ -67,9 +67,12 @@ pkg_postinst() {
 	einfo "global XShipWars client configuration file and copy it to "
 	einfo "your home directory: "
 	echo
+	einfo "# mkdir ~/.shipwars/"
 	einfo "# cd /usr/share/games/xshipwars/etc/ "
 	einfo "# cp xshipwarsrc ~/.shipwars/xshipwarsrc "
 	einfo "# cp universes ~/.shipwars/universes "
+	echo
+	einfo "You will probably need to edit the xshipwarsrc to fit your needs."
 	echo
 	einfo "Then type 'xsw &' to start the game"
 	echo
