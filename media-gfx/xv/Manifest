@@ -2,23 +2,16 @@
 Hash: SHA1
 
 MD5 df330c53edeffb578273e1fda1a00b78 xv-3.10a-r8.ebuild 2175
-SHA1 a237e255d87fabc3de3d724c85fa4b871d765fa8 xv-3.10a-r8.ebuild 2175
 MD5 a865819a6140397cef4c7eff8cfa10c1 ChangeLog 6480
-SHA1 ce8eb6c9d059029656897943bcfab288e2186a01 ChangeLog 6480
 MD5 8fc22f08ecb2e292e60ce7553c58d0c2 metadata.xml 222
-SHA1 0e397b85d03a60d7919b1a5181146c74b5fbc5a4 metadata.xml 222
-MD5 99adc89175d7ad97a6dfcb385e5e97bd files/digest-xv-3.10a-r8 272
-SHA1 69f7d2b71d6ade4d8842a908178166dd93b0ec7f files/digest-xv-3.10a-r8 272
+MD5 3b193d08268519822ea55ef0534c805a files/digest-xv-3.10a-r8 127
 MD5 4b034e22d5bb0502e383afcfeb8ea4b0 files/xv-3.10a-ppc.patch 359
-SHA1 37b5844e98c8aeffcebebacefee340cfaef9bb6d files/xv-3.10a-ppc.patch 359
 MD5 123bdb40134767bb438eeaccb50f1646 files/xv-3.10a-security.diff 4079
-SHA1 f174acea0151e500bf6e8ac7f00e0e65526358a3 files/xv-3.10a-security.diff 4079
 MD5 cda66dd1f3a032802881a6ae4430e0d6 files/xv-use-getcwd.patch 222
-SHA1 bbd1a2f8c55ad97dcf56db5e1927eb8a9d15e3fb files/xv-use-getcwd.patch 222
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBbTWJ94CCfB4KcwwRAqwWAKCmpWzESfnriyk5nJWzhbTTDLnLvACfXqQR
-y+V7HIevM+LRsAnVgPehmds=
-=vm9q
+iD8DBQFBbaGn94CCfB4KcwwRAqa7AJ4/UusWdJtH27FaRMlqoXtDJ2ffCQCeIB5O
+kTrMiKlW7BYUmG6pDmfp3Yg=
+=RjS5
 -----END PGP SIGNATURE-----
