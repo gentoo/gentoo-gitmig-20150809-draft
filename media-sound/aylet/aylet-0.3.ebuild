@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aylet/aylet-0.3.ebuild,v 1.6 2004/07/06 01:14:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aylet/aylet-0.3.ebuild,v 1.7 2004/09/14 07:23:33 eradicator Exp $
 
 DESCRIPTION="Aylet plays music files in the .ay format"
 HOMEPAGE="http://rus.members.beeb.net/aylet.html"
 SRC_URI="ftp://ftp.ibiblio.org/pub/Linux/apps/sound/players/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64 ~sparc"
+KEYWORDS="x86 ~ppc amd64 sparc"
 IUSE="gtk"
 
 DEPEND="sys-libs/ncurses

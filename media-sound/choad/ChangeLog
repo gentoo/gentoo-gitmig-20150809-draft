@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/choad
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/choad/ChangeLog,v 1.4 2004/06/24 23:55:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/choad/ChangeLog,v 1.5 2004/09/14 07:26:01 eradicator Exp $
+
+  14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> choad-0.822.ebuild:
+  Stable amd64, sparc.
 
   15 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> choad-0.822.ebuild:
   Stable x86.  Added ~amd64 and ~sparc.

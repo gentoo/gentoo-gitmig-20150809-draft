@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/albumart/albumart-1.3.1.ebuild,v 1.5 2004/08/16 21:33:28 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/albumart/albumart-1.3.1.ebuild,v 1.6 2004/09/14 07:19:46 eradicator Exp $
 
 DESCRIPTION="Album Cover Art Downloader"
 SRC_URI="http://kempele.fi/~skyostil/projects/albumart/dist/${P}.tar.gz"
 HOMEPAGE="http://kempele.fi/~skyostil/projects/albumart/"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~amd64 ~sparc"
+KEYWORDS="x86 ~ppc amd64 sparc"
 IUSE=""
 SLOT="0"
 

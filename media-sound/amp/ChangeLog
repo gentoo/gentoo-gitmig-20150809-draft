@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/amp
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amp/ChangeLog,v 1.7 2004/07/07 22:31:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amp/ChangeLog,v 1.8 2004/09/14 07:21:02 eradicator Exp $
+
+  14 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> amp-0.7.6.ebuild:
+  Stable amd64, sparc.
 
   07 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   +files/amp-0.7.6-gcc34.patch, -files/amp-0.7.6-gentoo.diff:
