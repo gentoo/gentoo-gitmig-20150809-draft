@@ -1,12 +1,12 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ddskk-12.2.0_p20030810.ebuild,v 1.1 2003/12/08 22:56:54 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ddskk-12.2.1_pre20040309.ebuild,v 1.1 2004/03/13 18:00:18 usata Exp $
 
 inherit elisp
 
 IUSE=""
 
-MY_P="${PN}-${PV/*_p/}"
+MY_P="${PN}-${PV/*_pre/}"
 
 DESCRIPTION="SKK is one of Japanese input methods on Emacs"
 SRC_URI="http://openlab.ring.gr.jp/skk/maintrunk/${MY_P}.tar.gz
@@ -26,7 +26,7 @@ RDEPEND="virtual/emacs
 
 SITEFILE=50ddskk-gentoo.el
 
-S=${WORKDIR}/${MY_P}
+S=${WORKDIR}/main
 
 src_unpack() {
 
