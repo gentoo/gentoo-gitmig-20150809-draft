@@ -1,6 +1,38 @@
 # ChangeLog for media-radio/xlog
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xlog/ChangeLog,v 1.6 2004/12/09 00:23:25 killsoft Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xlog/ChangeLog,v 1.7 2005/02/16 06:11:00 killsoft Exp $
+
+*xlog-1.1 (16 Feb 2005)
+
+  16 Feb 2005; Robb Romans <killsoft@gentoo.org> +xlog-1.1.ebuild:
+  - Changes for xlog version 1.1
+  * Several cleanups in the function which creates the main window, the toolbar
+    now uses the GtkAction API, toolbar items are now also accessable through
+    the edit menu and the vertical handlebar can move freely to the left.
+  * "Tab" in the menu has been renamed to "Page".
+  * You can hide the number column by using the log-editor and entering a zero
+    column width for this column.
+  * The BUGS file has been added to the help menu, with a description on how to
+    report bugs.
+  * The logeditor has been redesigned so it fits on a 800x600 display.
+  * Most of the dialogs have been cleaned up and partly rewritten, so they
+    will load faster.
+  * Xlog now correctly recognizes the 60 meters band. Thanks to Harv Nelson,
+    AI9NL for notifying. 
+  * At ADIF import, frequencies with a comma are converted to a dot.
+  * A gtk+ version check has been added, which will display an error at
+    startup if the version is below 2.4.
+  * An error will be displayed when trying to load a non-xlog file.
+  * The labels export format has been renamed TSV (Tab Separated Value).
+  * You can decide which fields to export in the TSV format (used by glabels),
+    by going to Settings->Dialogs and checking wanted the fields in the
+    "Save As" page.
+  * When hamlib is enabled, rounding of the digits is now also possible when
+    the s-meter is not visible.
+  * When entering a logname in the new log dialog, dash (-) and underscore (_)
+    are now also allowed.
+  * Polish MANUAL and FAQ added by Boguslaw Ciastek, SQ5TB.
+  * The position of the paned window is now remembered at program exit.
 
   08 Dec 2004; Robb Romans <killsoft@gentoo.org> :
   Changes for xlog version 0.9.12
