@@ -675,10 +675,6 @@ x11-libs/gdkxft
 # unstable package... masked for future use and testing
 =net-fs/openafs-1.3.2
 
-# naz@gentoo.org 4 Aug 2002
-# masked for testing
->=media-sound/ecasound-2.0.4
-
 # jnelson@gentoo.org 24 Sep 2002
 # mask todo-manager because it's really busted
 app-misc/todo-manager-bronze
