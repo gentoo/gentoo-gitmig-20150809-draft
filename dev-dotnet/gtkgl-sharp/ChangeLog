@@ -1,0 +1,10 @@
+# ChangeLog for dev-dotnet/gtkgl-sharp
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtkgl-sharp/ChangeLog,v 1.1 2004/06/02 17:16:47 latexer Exp $
+
+*gtkgl-sharp-0.05 (02 Jun 2004)
+
+  02 Jun 2004; Peter Johanson <latexer@gentoo.org> gtkgl-sharp-0.05.ebuild,
+  metadata.xml:
+  Initial import. Ebuild by yours truly, simultaneously as work in bug #36629.
+
