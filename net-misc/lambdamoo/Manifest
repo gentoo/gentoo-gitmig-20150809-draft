@@ -3,4 +3,4 @@ MD5 4b918fff63c103c64a5862f561bc3b58 files/lambdamoo.conf 185
 MD5 fc4b10da13ac2b1667f12da98bfbfe27 files/lambdamoo.rc 1265
 MD5 53d94549a025c89635911877d75068ba files/digest-lambdamoo-1.8.1-r1 67
 MD5 3b9fdebdc6426dbceac6f711795d3183 files/1.8.1-enable-outbound.patch 451
-MD5 ee2743caf9936d0c8046b88c597b8e67 lambdamoo-1.8.1-r1.ebuild 949
+MD5 6e8dfeb67f61b5f37588539efd0c5741 lambdamoo-1.8.1-r1.ebuild 954
