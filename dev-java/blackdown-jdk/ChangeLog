@@ -1,8 +1,11 @@
 # ChangeLog for dev-java/blackdown-jdk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.19 2002/09/08 16:00:26 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.20 2002/09/14 18:10:53 murphy Exp $
 
 *blackdown-jdk-1.3.1-r7 (16 Jul 2002)
+
+  14 Sep 2002; Maarten Thibaut <murphy@gentoo.org> blackdown-jdk-1.3.1-r7.ebuild :
+  Added sparc and sparc64 keywords.
 
   08 Sep 2002; Karl Trygve Kalleberg <karltk@gentoo.org> blackdown-jdk-1.3.1-r7.ebuild :
   Now installs the plugin correctly again. It still won't work when
