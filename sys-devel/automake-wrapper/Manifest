@@ -5,11 +5,11 @@ MD5 0dfe60f44a425d88456e93514bb89ac4 automake-wrapper-1.ebuild 752
 MD5 e35adb9d986d73a30339f4f5fcea3c5c ChangeLog 584
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-automake-wrapper-1 0
-MD5 e5683a0dfee85131c39d65accdbfeb06 files/am-wrapper-1.sh 3141
+MD5 e144cb70829218ab9da4e7d05412e4b0 files/am-wrapper-1.sh 3393
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBlvFMHTu7gpaalycRAiWrAKDqCr4WYznYlsygapJc6fg8iN3pcwCfReSI
-hKaFTwj7jzpkogdgXuqLVR8=
-=Us+B
+iD8DBQFBl/82HTu7gpaalycRAtIuAJ0e02a8fs12rgDksuldlTRw5gM9VACfYhso
+pdnRwHYvGhKEnR+bfwJRnrs=
+=AcNi
 -----END PGP SIGNATURE-----
