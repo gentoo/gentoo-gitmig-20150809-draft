@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/ghostwhitecrab
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/ghostwhitecrab/ChangeLog,v 1.1 2004/11/25 00:35:10 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/ghostwhitecrab/ChangeLog,v 1.2 2004/11/30 19:38:12 squinky86 Exp $
+
+  30 Nov 2004; Jon Hood <squinky86@gentoo.org> ghostwhitecrab-0.9.1.ebuild:
+  Marked ~hppa.
 
 *ghostwhitecrab-0.9.1 (24 Nov 2004)
 
