@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pam-login
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.22 2003/07/13 20:13:17 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.23 2003/07/18 20:40:13 tester Exp $
+
+  18 Jul 2003; Olivier Crete <tester@gentoo.org> pam-login-3.11-r1.ebuild,
+  pam-login-3.11.ebuild:
+  GCC 3.3 patch is required to amd64
 
   13 Jul 2003; Martin Schlemmer <azarah@gentoo.org> pam-login-3.11-r1.ebuild,
   files/pam-login-3.11-selinux-gcc33.patch:
