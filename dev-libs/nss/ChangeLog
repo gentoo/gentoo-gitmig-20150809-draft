@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nss
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.7 2003/07/13 01:05:28 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/ChangeLog,v 1.8 2003/07/18 04:38:33 brad Exp $
+
+  18 Jul 2003; Brad Laue <brad@gentoo.org> nss-3.8.ebuild:
+  Build fix on 2.6 series kernels.
 
   13 Jul 2003; Alastair Tse <liquidx@gentoo.org> nss-3.8.ebuild:
   add zip dep

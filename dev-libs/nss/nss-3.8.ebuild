@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.8.ebuild,v 1.7 2003/07/13 01:05:28 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nss/nss-3.8.ebuild,v 1.8 2003/07/18 04:38:33 brad Exp $
 
 S=${WORKDIR}/${P}
 
@@ -40,6 +40,10 @@ src_unpack() {
 
 src_compile() {
 	cd ${S}/mozilla/security/coreconf
+
+	# Fix for Linux 2.6
+	cp Linux2.5.mk Linux2.6.mk
+
 	emake BUILD_OPT=1 || die "coreconf make failed"
 	cd ${S}/mozilla/security/dbm
 	emake BUILD_OPT=1 || die "dbm make failed"
