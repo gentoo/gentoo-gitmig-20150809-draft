@@ -16,4 +16,5 @@ start() {
 stop() {
 	ebegin "Stopping Timidity"
 	start-stop-daemon --stop --quiet --pidfile /var/run/timidity.pid
+	eend $?
 }
