@@ -1,0 +1,12 @@
+--- balsa-2.0.0-orig/configure	Mon Mar 25 00:34:33 2002
++++ balsa-2.0.0/configure	Tue Apr 23 02:15:35 2002
+@@ -6629,7 +6629,7 @@
+ #define $ac_tr_lib 1
+ EOF
+ 
+-  LIBS="-lpspell $LIBS"
++  LIBS="-lpspell -lstdc++ $LIBS"
+ 
+ else
+   echo "$ac_t""no" 1>&6
+
