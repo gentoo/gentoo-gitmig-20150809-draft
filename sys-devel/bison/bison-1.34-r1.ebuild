@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.34-r1.ebuild,v 1.14 2004/02/01 10:54:01 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.34-r1.ebuild,v 1.15 2004/06/24 03:35:06 agriffis Exp $
 
 IUSE="nls static build"
 
@@ -27,7 +27,7 @@ src_compile() {
 		--host=${CHOST} \
 		${myconf} || die
 
-	if [ -z "`use static`" ]
+	if ! use static
 	then
 		emake ${MAKEOPTS} || die
 	else
@@ -43,7 +43,7 @@ src_install() {
 		infodir=/usr/share/info \
 		install || die
 
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		dodoc COPYING AUTHORS NEWS ChangeLog README REFERENCES OChangeLog
 		docinto txt

@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/bison
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.28 2004/06/16 03:11:51 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.29 2004/06/24 03:35:06 agriffis Exp $
+
+  23 Jun 2004; Aron Griffis <agriffis@gentoo.org> bison-1.34-r1.ebuild,
+  bison-1.35.ebuild, bison-1.75.ebuild:
+  QA - fix use invocation
 
   16 Jun 2004; Daniel Black <dragonheart@gentoo.org> bison-1.875.ebuild:
   syntax fix on 3.4 compare condition
