@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/lighttpd/lighttpd-1.1.8.ebuild,v 1.1 2004/04/23 17:30:26 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/lighttpd/lighttpd-1.1.8.ebuild,v 1.2 2004/04/23 22:36:29 stuart Exp $
 
 DESCRIPTION="lighttpd is intented to be a frontend for ad-servers which have to deliver small files concurrently to many connections."
 HOMEPAGE="http://jan.kneschke.de/projects/lighttpd"
@@ -12,11 +12,16 @@ IUSE="mysql ssl"
 DEPEND="virtual/glibc
 		>=dev-libs/libpcre-3.1
 		>=sys-libs/zlib-1.1
-		>=sys-devel/libtool-1.4"
+		>=sys-devel/libtool-1.4
+		mysql? ( >=dev-db/mysql-4.0.0 )
+		ssl?   ( >=dev-libs/openssl-0.9.7 )"
 RDEPEND=">=sys-libs/zlib-1.1
-		 >=sys-devel/libtool-1.4"
+		 >=sys-devel/libtool-1.4
+		 mysql? ( >=dev-db/mysql-4.0.0 )
+		 ssl?   ( >=dev-libs/openssl-0.9.7 )"
 S=${WORKDIR}/${P}
-LIGHTTPD_DIR="/home/lighttpd"
+LIGHTTPD_DIR="/var/www/localhost/htdocs/"
+LOG_DIR="/var/log/lighttpd/"
 
 pkg_setup() {
 	if ! grep -q ^lighttpd: /etc/passwd ; then
@@ -30,7 +35,7 @@ src_compile() {
 	if [ `use ssl` ]; then
 		USE_SSL="--with-openssl"
 	fi
-	econf \
+	econf --libdir=/usr/lib/${PN} \
 		`use_with mysql` \
 		${USE_SSL} \
 		|| die "econf failed"
@@ -39,12 +44,17 @@ src_compile() {
 }
 
 src_install() {
-	einstall || die
+	einstall DESTDIR=${D} || die
 	dodoc README COPYING
 	newdoc doc/lighttpd.conf lighttpd.conf.example
 	dodoc doc/fastcgi.txt doc/authentification.txt
 	insinto /etc/conf.d/;  doins doc/lighttpd.conf
 	exeinto /etc/init.d;   newexe ${FILESDIR}/lighttpd.initd lighttpd
-	dodir ${LIGHTTPD_DIR} ${LIGHTTPD_DIR}/logs
-	chown lighttpd:root ${D}/${LIGHTTPD_DIR} ${D}/${LIGHTTPD_DIR}/logs
+	dodir ${LIGHTTPD_DIR} ${LOG_DIR}
+	chown lighttpd:root ${D}/${LOG_DIR}
+}
+
+pkg_postinst() {
+	einfo "In order to use fast-cgi for php you have to emerge dev-php/php-cgi and"
+	einfo "please read /usr/share/doc/lighttpd-1.1.8/fastcgi.txt.gz for more information"
 }

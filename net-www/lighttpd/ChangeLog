@@ -1,6 +1,11 @@
 # ChangeLog for net-www/lighttpd
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/lighttpd/ChangeLog,v 1.1 2004/04/23 17:30:26 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/lighttpd/ChangeLog,v 1.2 2004/04/23 22:36:29 stuart Exp $
+
+  23 Apr 2004; Stuart Herbert <stuart@gentoo.org> lighttpd-1.1.8.ebuild,
+  metadata.xml, files/lighttpd-1.1.8-gentoo.diff:
+  Fixes to get the server running; thanks to Boris Wachtmeister
+  <sirro@nurfuerspam.de> once again
 
 *lighttpd-1.1.8 (23 Apr 2004)
 

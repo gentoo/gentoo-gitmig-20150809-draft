@@ -9,7 +9,7 @@
  
  ## where to send error-messages to
 -server.errorlog            = "/www/logs/lighttpd.error.log"
-+server.errorlog            = "/var/logs/lighttpd/error.log"
++server.errorlog            = "/var/log/lighttpd/error.log"
  
  # files to check for if .../ is requested
  server.indexfiles          = ( "index.php", "index.html", 
@@ -18,7 +18,7 @@
  
  #### accesslog module
 -accesslog.filename          = "/www/logs/access.log"
-+accesslog.filename          = "/var/logs/lighttpd/access.log"
++accesslog.filename          = "/var/log/lighttpd/access.log"
  
  ## deny access the file-extensions
  #
