@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/mutt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.8 2002/07/28 14:45:48 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.9 2002/09/03 16:46:02 cselkirk Exp $
+
+*mutt-1.4-r3 (03 Sept 2002) Calum Selkirk <cselkirk@gentoo.org>
+   mutt-1.4-r3.ebuild files/digest-mutt-1.4-r3 :
+
+   Added the compressed folder patch. This closes bug #7398
 
 *mutt-1.4-r2 (28 Jul 2002) 
 
