@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemontools/daemontools-0.76-r1.ebuild,v 1.8 2002/10/04 06:23:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/daemontools/daemontools-0.76-r1.ebuild,v 1.9 2002/10/19 01:52:44 vapier Exp $
 
 S=${WORKDIR}/admin/${P}
 
@@ -10,13 +10,12 @@ HOMEPAGE="http://cr.yp.to/daemontools.html"
 
 KEYWORDS="x86 ppc sparc sparc64"
 SLOT="0"
-LICENSE="Freeware"
+LICENSE="freedist"
 
 DEPEND="virtual/glibc"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
-
 	unpack ${A}
 	cd ${S}
 
@@ -26,18 +25,14 @@ src_unpack() {
 	echo "gcc ${CFLAGS}" > src/conf-cc
 	echo "gcc ${LDFLAGS}" > src/conf-ld
 	echo ${S} > src/home
-
 }
 
 src_compile() {
-
 	cd ${S}/src
 	emake || die "make failed"
-
 }
 
 src_install() {
-
 	einfo "Creating service directory ..."
 	dodir /service
 	touch ${D}/service/.keep
@@ -56,6 +51,4 @@ src_install() {
 	insinto /etc/init.d
 	insopts -m755
 	doins ${FILESDIR}/svscan
-
 }
-

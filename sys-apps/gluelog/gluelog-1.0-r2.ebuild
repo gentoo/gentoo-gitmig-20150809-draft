@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gluelog/gluelog-1.0-r2.ebuild,v 1.7 2002/10/04 06:25:06 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gluelog/gluelog-1.0-r2.ebuild,v 1.8 2002/10/19 01:52:44 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Pipe and socket fittings for the system and kernel logs"
@@ -11,9 +11,9 @@ LICENSE="GPL-2"
 SRC_URI=""
 
 DEPEND="virtual/glibc"
+RDEPEND="${DEPEND}"
 
 src_compile() {
-
 	mkdir ${S}
 
 	cd ${FILESDIR}
@@ -22,7 +22,6 @@ src_compile() {
 }
 
 src_install() {
-
 	dodir /usr/sbin
 	dosbin ${S}/gluelog ${S}/glueklog
 	exeopts -m0750 -g wheel
@@ -37,6 +36,5 @@ src_install() {
 		doexe ${FILESDIR}/svc-${x}
 	done
 
-        dodoc ${FILESDIR}/README
+	dodoc ${FILESDIR}/README
 }
-

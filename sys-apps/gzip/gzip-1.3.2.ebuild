@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gzip/gzip-1.3.2.ebuild,v 1.10 2002/10/05 05:39:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gzip/gzip-1.3.2.ebuild,v 1.11 2002/10/19 01:52:44 vapier Exp $
 
 IUSE="nls build"
 
@@ -25,10 +25,8 @@ src_compile() {
 	[ -z "`use nls`" ] && myconf="--disable-nls"
 
 	# Compiling with gcc3 and higher level of optimization seems to
-    # cause a segmentation fault in some very rare cases on alpha. 
-    if [ ${ARCH} == "alpha" ]; then
-        CFLAGS="-O -pipe"
-    fi
+	# cause a segmentation fault in some very rare cases on alpha. 
+	[ ${ARCH} == "alpha" ] && CFLAGS="-O -pipe"
 	
 	./configure --host=${CHOST} \
 		--prefix=/usr \

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/e2fsprogs-1.27-r1.ebuild,v 1.10 2002/10/05 05:39:24 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/e2fsprogs-1.27-r1.ebuild,v 1.11 2002/10/19 01:52:44 vapier Exp $
 
 IUSE="nls acl"
 
@@ -17,12 +17,11 @@ DEPEND="virtual/glibc
 	nls? ( sys-devel/gettext )
 	sys-apps/debianutils
 	sys-apps/texinfo"
-	
 RDEPEND="virtual/glibc"
 
 src_unpack() {
-	unpack $A &&
-	cd $S
+	unpack ${A}
+	cd ${S}
 	use acl && patch -p1 < ${FILESDIR}/e2fsprogs-1.27ea-0.8.21.diff
 }
 
@@ -98,11 +97,10 @@ src_install() {
         # a 'make install'.  They are the template files for
         # /bin/compile_et.
 
-        cd ${S}/lib/et
-        insinto /usr/share/et
-        doins et_c.awk et_h.awk
-        cd ${S}/lib/ss
-        insinto /usr/share/ss
-        doins ct_c.awk
+	cd ${S}/lib/et
+	insinto /usr/share/et
+	doins et_c.awk et_h.awk
+	cd ${S}/lib/ss
+	insinto /usr/share/ss
+	doins ct_c.awk
 }
-

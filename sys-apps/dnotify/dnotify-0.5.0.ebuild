@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dnotify/dnotify-0.5.0.ebuild,v 1.6 2002/10/04 06:24:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dnotify/dnotify-0.5.0.ebuild,v 1.7 2002/10/19 01:52:44 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Execute a command when the contents of a directory change"
@@ -10,23 +10,17 @@ KEYWORDS="x86 ppc sparc sparc64"
 SLOT="0"
 LICENSE="GPL-2"
 
-src_unpack() {
-
-        unpack ${A}
-		cd ${S}
-}
-
 src_compile() {
-	       ./configure --host=${CHOST} \
-		                --prefix=/usr \
-		                --mandir=/usr/share/man \
-		                --sysconfdir=/etc \
-		    make || die
+	./configure --host=${CHOST} \
+		--prefix=/usr \
+		--mandir=/usr/share/man \
+		--sysconfdir=/etc
+	make || die
 }
 
 src_install() {
-			make prefix=${D}/usr \
-            mandir=${D}/usr/share/man \
-            install || die
-	        dodoc AUTHORS ChangeLog COPYING* NEWS README 
+	make prefix=${D}/usr \
+		mandir=${D}/usr/share/man \
+		install || die
+	dodoc AUTHORS ChangeLog COPYING* NEWS README 
 }

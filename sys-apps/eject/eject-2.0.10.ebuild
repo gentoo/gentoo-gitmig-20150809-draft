@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# /space/gentoo/cvsroot/gentoo-x86/sys-apps/eject/eject-2.0.6.ebuild,v 1.3 2001/12/31 23:47:55 azarah Exp
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/eject-2.0.10.ebuild,v 1.8 2002/10/19 01:52:44 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A command to eject a disc from the CD-ROM drive"

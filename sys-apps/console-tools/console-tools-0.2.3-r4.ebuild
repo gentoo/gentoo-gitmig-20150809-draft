@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-tools/console-tools-0.2.3-r4.ebuild,v 1.10 2002/10/05 05:39:24 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/console-tools/console-tools-0.2.3-r4.ebuild,v 1.11 2002/10/19 01:52:44 vapier Exp $
 
 IUSE="nls bootcd"
 
@@ -13,12 +13,11 @@ SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND="virtual/glibc
-        sys-devel/autoconf sys-devel/automake sys-devel/libtool
-        nls? ( sys-devel/gettext )"
+	sys-devel/autoconf sys-devel/automake sys-devel/libtool
+	nls? ( sys-devel/gettext )"
 RDEPEND="virtual/glibc"
 
 src_unpack() {
-
 	unpack ${A}
 	cd ${S}
 	patch -p1 < ${FILESDIR}/${P}.patch || die
@@ -31,16 +30,9 @@ src_unpack() {
 }
 
 src_compile() {
-
 	local myconf=""
-	if [ "$DEBUG" ]
-	then
-		myconf="--enable-debugging"
-	fi
-	if [ -z "`use nls`" ]
-	then
-		myconf="${myconf} --disable-nls"
-	fi
+	[ "$DEBUG" ] && myconf="--enable-debugging"
+	[ -z "`use nls`" ] && myconf="${myconf} --disable-nls"
 
 	./configure --prefix=/usr \
 		--mandir=/usr/share/man \
@@ -50,7 +42,6 @@ src_compile() {
 }
 
 src_install() {
-
 	# DESTDIR does not work correct
 	make DESTDIR=${D} install || die
 

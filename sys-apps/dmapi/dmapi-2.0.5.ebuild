@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/dmapi-2.0.5.ebuild,v 1.5 2002/10/13 08:42:10 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dmapi/dmapi-2.0.5.ebuild,v 1.6 2002/10/19 01:52:44 vapier Exp $
 
 S=${WORKDIR}/${P}
 
@@ -40,5 +40,5 @@ src_install() {
 
 	dosym /lib/libdm.a /usr/lib/libdm.a
 	dosym /lib/libdm.la /usr/lib/libdm.la
-        dosym /usr/lib/libdm.so /lib/libdm.so
+	dosym /usr/lib/libdm.so /lib/libdm.so
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iptables/iptables-1.2.7.ebuild,v 1.2 2002/10/04 06:26:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iptables/iptables-1.2.7.ebuild,v 1.3 2002/10/19 01:52:44 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Kernel 2.4 firewall, NAT and packet mangling tools"
@@ -10,6 +10,7 @@ KEYWORDS="x86 ppc sparc sparc64"
 SLOT="0"
 # iptables is dependent on kernel sources.  Strange but true.
 DEPEND="virtual/glibc"
+RDEPEND="${DEPEND}"
 LICENSE="GPL-2"
 
 src_unpack() {
@@ -26,7 +27,7 @@ src_compile() {
 	
 	# use make, not emake
 	make \
-		LIBDIR=/lib	\
+		LIBDIR=/lib \
 		BINDIR=/sbin \
 		MANDIR=/usr/share/man \
 		INCDIR=/usr/include \
