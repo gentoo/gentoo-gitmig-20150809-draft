@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.8-r3.ebuild,v 1.2 2003/11/11 15:21:42 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.8-r3.ebuild,v 1.3 2003/11/21 16:42:01 mholzer Exp $
 
 IUSE="xml nls esd gnome opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk"
 
@@ -38,6 +38,9 @@ src_unpack() {
 
 	# Save playlist, etc on SIGTERM and SIGINT, bug #13604.
 	epatch ${FILESDIR}/${P}-sigterm.patch
+
+	#shadow Patch, bug #30420.
+	epatch ${FILESDIR}/${P}-shadow.patch
 
 	# Patch for mpg123 to convert Japanese character code of MP3 tag info
 	# the Japanese patch and the Russian one overlap, so its one or the other

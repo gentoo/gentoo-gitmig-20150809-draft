@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.76 2003/11/11 15:21:42 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.77 2003/11/21 16:42:01 mholzer Exp $
+
+  21 Nov 2003; Martin Holzer <mholzer@gentoo.org> xmms-1.2.8-r3.ebuild,
+  files/xmms-1.2.8-shadow.patch:
+  Closing #30420.
 
   11 Nov 2003; Daniel Ahlberg <aliz@gentoo.org> xmms-1.2.8-r3.ebuild :
   Disable simd on amd64.
