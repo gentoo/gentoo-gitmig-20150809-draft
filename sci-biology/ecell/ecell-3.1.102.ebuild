@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ecell/ecell-3.1.102.ebuild,v 1.1 2004/12/23 22:20:10 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ecell/ecell-3.1.102.ebuild,v 1.2 2004/12/28 20:27:57 ribosome Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ IUSE="doc gtk"
 DEPEND="dev-libs/boost
 	dev-lang/python
 	dev-python/numeric
-	dev-libs/gsl
+	sci-libs/gsl
 	dev-python/empy
 	gtk? ( gnome-base/libglade )
 	doc? ( media-gfx/graphviz app-doc/doxygen )"
