@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.1.5.ebuild,v 1.7 2004/08/30 15:45:01 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.1.5.ebuild,v 1.8 2004/10/19 14:26:47 vapier Exp $
 # TODO: add gnustep, objc bindings
 inherit kde-dist
 
@@ -16,19 +16,6 @@ DEPEND="=kde-base/kdebase-${PV}*
 	=dev-libs/glib-1.2*
 	~kde-base/kdenetwork-${PV}
 	mozilla? ( net-www/mozilla )"
-
-use python	|| myconf="$myconf --without-python"
-
-# obj bindings are officially broken
-#myconf="$myconf --enable-objc"
-
-# we need to have csant (from pnet, from portable.NET) in portage for qtsharp
-export DO_NOT_COMPILE="$DO_NOT_COMPILE qtsharp"
-
-export LIBPYTHON="`python-config`"
-
-# fix bug #14756 fex. Doesn't compile well with -j2.
-export MAKEOPTS="$MAKEOPTS -j1"
 
 src_unpack()
 {
@@ -47,6 +34,19 @@ src_unpack()
 
 src_compile()
 {
+	use python	|| myconf="$myconf --without-python"
+
+	# obj bindings are officially broken
+	#myconf="$myconf --enable-objc"
+
+	# we need to have csant (from pnet, from portable.NET) in portage for qtsharp
+	export DO_NOT_COMPILE="$DO_NOT_COMPILE qtsharp"
+
+	export LIBPYTHON="`python-config`"
+
+	# fix bug #14756 fex. Doesn't compile well with -j2.
+	export MAKEOPTS="$MAKEOPTS -j1"
+
 	use java	&& myconf="$myconf --with-java=`java-config --jdk-home`"	|| myconf="$myconf --without-java"
 	kde_src_compile
 }
