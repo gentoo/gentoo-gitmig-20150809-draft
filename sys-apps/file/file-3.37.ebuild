@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-3.37.ebuild,v 1.8 2002/09/14 15:51:24 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-3.37.ebuild,v 1.9 2002/09/21 03:11:10 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Program to identify a file's format by scanning binary data for patterns"
 SRC_URI="ftp://ftp.gw.com/mirrors/pub/unix/file/${P}.tar.gz
 	ftp://ftp.astron.com/pub/file/${P}.tar.gz"
 LICENSE="as-is"
-HOMEPAGE=""
+HOMEPAGE="ftp://ftp.astron.com/pub/file/"
 KEYWORDS="x86 ppc sparc sparc64 alpha"
 SLOT="0"
 DEPEND="virtual/glibc"
