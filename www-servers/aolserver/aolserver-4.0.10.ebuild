@@ -1,8 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/aolserver/aolserver-4.0.10.ebuild,v 1.1 2005/01/27 20:55:47 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/aolserver/aolserver-4.0.10.ebuild,v 1.2 2005/02/25 16:11:00 port001 Exp $
 
 inherit eutils
+
+IUSE="nptl"
 
 DESCRIPTION="Webserver with Tcl page scripting"
 HOMEPAGE="http://www.aolserver.com/"
@@ -11,8 +13,6 @@ SRC_URI="mirror://sourceforge/aolserver/${P}-src.tar.gz"
 LICENSE="MPL-1.1"
 SLOT="0"
 KEYWORDS="~x86"
-
-IUSE="nptl"
 
 DEPEND=">=dev-lang/tcl-8.4.3"
 
@@ -51,30 +51,16 @@ ns_inst_docs="ChangeLog
 
 check_tcl_threads() {
 
-	local threads_found=""
-
-	for tcl_install in /var/db/pkg/dev-lang/tcl*; do
-
-		# find the version of tcl installed
-		# in slot 0
-		if grep 0 ${tcl_install}/SLOT > /dev/null; then
-			# check that tcl was compiled with threads
-			# enabled
-			for candidate_flag in `cat ${tcl_install}/USE`; do
-				if [ ${candidate_flag} == threads ]; then
-					threads_found="true"
-				fi
-			done
-		fi
-	done
-
-	if [ -n "${threads_found}" ]; then
-		einfo "tcl was merged with threading enabled"
-	else
-		eerror "tcl was not merged with threading enabled."
-		eerror "please re-emerge tcl with USE=threads"
-		die "threading not enabled in tcl"
+	if ! built_with_use dev-lang/tcl threads;
+	then
+		echo
+		eerror
+		eerror "dev-lang/tcl was not merged with threading enabled."
+		eerror "please re-emerge dev-lang/tcl with USE=threads"
+		eerror
+		die "threading not enabled in dev-lang/tcl"
 	fi
+
 }
 
 pkg_setup() {

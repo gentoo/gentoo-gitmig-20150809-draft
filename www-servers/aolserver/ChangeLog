@@ -1,6 +1,10 @@
 # ChangeLog for www-servers/aolserver
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/aolserver/ChangeLog,v 1.6 2005/01/27 20:55:47 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/aolserver/ChangeLog,v 1.7 2005/02/25 16:11:00 port001 Exp $
+
+  25 Feb 2005; <port001@gentoo.org> aolserver-4.0.10.ebuild,
+  -aolserver-4.0.8.ebuild, -aolserver-4.0.9.ebuild:
+  Updated to use built_with_use. Removed old versions 4.0.8 and 4.0.9.
 
 *aolserver-4.0.10 (27 Jan 2005)
 
