@@ -2,8 +2,6 @@ MD5 d4d22f3ce10ea0967685d7cad11d292c checkpolicy-1.8.ebuild 723
 MD5 199bc25a85ca52952bbecbe3c4333eda ChangeLog 2206
 MD5 927093fd813bc45afc77ef11c9258e91 metadata.xml 360
 MD5 4207899e51f6e6eaa447140cbf0ee593 checkpolicy-1.4-r1.ebuild 776
-MD5 b631b1b730bae99a2afdcf120806b1f3 checkpolicy-1.6.ebuild 723
 MD5 344c1bdea2908053273f77fb584a7074 files/digest-checkpolicy-1.4-r1 63
 MD5 66e39152aa61af44ae6671a355da6959 files/checkpolicy-1.4-negset.diff 2482
 MD5 175aeea1fa0a73771d67b595b4525d5f files/digest-checkpolicy-1.8 63
-MD5 f8fd49251b09b935dd87583226e7de1d files/digest-checkpolicy-1.6 63
