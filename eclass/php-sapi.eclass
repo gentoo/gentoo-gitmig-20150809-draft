@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.10 2004/02/26 02:43:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.11 2004/03/10 07:51:19 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -38,7 +38,7 @@ fi
 # Where we work
 S=${WORKDIR}/${MY_P}
 
-IUSE="${IUSE} X crypt curl firebird flash freetds gd gd-external gdbm imap informix ipv6 java jpeg ldap mcal memlimit mysql nls oci8 odbc pam pdflib png postgres qt snmp spell ssl tiff truetype xml2 yaz"
+IUSE="${IUSE} X crypt curl firebird flash freetds gd gd-external gdbm imap informix ipv6 java jpeg ldap mcal memlimit mysql nls oci8 odbc pam pdflib png postgres qt snmp spell ssl tiff truetype xml2 yaz fdftk"
 
 # berkdb stuff is complicated
 # we need db-1.* for ndbm
@@ -88,7 +88,15 @@ RDEPEND="${RDEPEND}
    dev-libs/expat
    sys-libs/zlib 
    virtual/mta
+   sys-apps/file
    yaz? ( dev-libs/yaz )"
+
+
+# USE structure doesn't support ~x86
+#if hasq '~x86' $ACCEPT_KEYWORDS; then
+	# FDFTK only available for x86 type hardware
+	#RDEPEND="${RDEPEND} x86? ( fdftk? ( app-text/fdftk ) )"
+#fi
 
 # libswf is ONLY available on x86
 RDEPEND="${RDEPEND} flash? ( 
@@ -204,6 +212,10 @@ php-sapi_src_unpack() {
 	( ewarn "You have the xml USE flag turned off. Previously this"
 	  ewarn "disabled XML support in PHP. However PEAR has a hard"
 	  ewarn "dependancy on it, so they are now enabled." )
+	if use fdftk; then
+		has_version app-text/fdftk || \
+		die "app-text/fdftk is required for FDF support! Portage isn't up to the DEPEND structure for it yet"
+	fi
 
 	unpack ${MY_P}.tar.bz2
 	cd ${S}
@@ -258,6 +270,7 @@ php-sapi_src_compile() {
 	use x86 && myconf="${myconf} `use_with flash swf /usr`"
 	myconf="${myconf} `use_with freetds sybase /usr`"
 	myconf="${myconf} `use_with gdbm gdbm /usr`"
+	use x86 && myconf="${myconf} `use_with fdftk fdftk /opt/fdftk-6.0`"
 	use !alpha && myconf="${myconf} `use_with java java ${JAVA_HOME}`"
 	myconf="${myconf} `use_with mcal mcal /usr`"
 	[ -n "${INFORMIXDIR}" ] && myconf="${myconf} `use_with informix informix ${INFORMIXDIR}`"
@@ -400,7 +413,7 @@ php-sapi_src_compile() {
 	myconf="${myconf} --enable-dbase"
 	myconf="${myconf} --enable-filepro"
 	myconf="${myconf} --enable-ftp"
-	myconf="${myconf} --with-mime-magic"
+	myconf="${myconf} --with-mime-magic=/usr/share/misc/file/magic.mime"
 	myconf="${myconf} --enable-sockets"
 	myconf="${myconf} --enable-sysvsem --enable-sysvshm --enable-sysvipc"
 	myconf="${myconf} --with-iconv"
