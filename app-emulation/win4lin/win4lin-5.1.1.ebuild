@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/win4lin-5.1.1.ebuild,v 1.3 2004/12/24 10:30:42 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/win4lin/win4lin-5.1.1.ebuild,v 1.4 2004/12/24 10:34:21 bass Exp $
 
 inherit eutils
 
@@ -78,6 +78,7 @@ pkg_prerm() {
 }
 
 pkg_config() {
+	chown -R bin:bin /opt/win4lin
 	loadwindowsCD cddevice /dev/cdrom
 	cp /opt/win4lin/win4lin.initd.new /etc/init.d/Win4Lin
 	chmod +x /etc/init.d/Win4Lin
