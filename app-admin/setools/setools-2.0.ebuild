@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-2.0.ebuild,v 1.1 2005/03/04 13:59:21 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/setools-2.0.ebuild,v 1.2 2005/03/05 02:48:01 pebenito Exp $
 
 DESCRIPTION="SELinux policy tools"
 HOMEPAGE="http://www.tresys.com/selinux_policy_tools.html"
@@ -14,7 +14,6 @@ IUSE="X debug selinux"
 DEPEND="sys-devel/bison
 	sys-devel/flex
 	dev-libs/libxml2
-	dev-util/bitkeeper
 	dev-util/pkgconfig
 	selinux? ( sys-libs/libselinux )
 	X? (
