@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/diradm
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/ChangeLog,v 1.1 2003/07/05 08:52:49 robbat2 Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/ChangeLog,v 1.2 2004/03/12 10:32:03 mr_bones_ Exp $
+
+  12 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> diradm-1.1.ebuild:
+  Don't assign default to S; header fix
 
 *diradm-1.1 (05 Jul 2003)
 

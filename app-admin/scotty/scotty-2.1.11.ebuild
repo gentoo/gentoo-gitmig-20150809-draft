@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/scotty/scotty-2.1.11.ebuild,v 1.4 2003/10/17 03:27:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/scotty/scotty-2.1.11.ebuild,v 1.5 2004/03/12 10:33:16 mr_bones_ Exp $
 
 DESCRIPTION="tcl network management extension"
 HOMEPAGE="http://wwwhome.cs.utwente.nl/~schoenw/scotty"
@@ -15,8 +15,6 @@ DEPEND="virtual/glibc
 	dev-lang/perl
 	dev-lang/tcl
 	dev-lang/tk"
-
-S="${WORKDIR}/${P}"
 
 src_compile() {
 	cd ${S}/unix

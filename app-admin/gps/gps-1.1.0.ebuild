@@ -1,8 +1,7 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gps/gps-1.1.0.ebuild,v 1.5 2003/09/20 19:56:29 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gps/gps-1.1.0.ebuild,v 1.6 2004/03/12 10:32:27 mr_bones_ Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Graphical (GTK+1.2) Process Statistics.  Like top, but can show
 processes for machines on the network as well."
 HOMEPAGE="http://gps.seul.org/"
