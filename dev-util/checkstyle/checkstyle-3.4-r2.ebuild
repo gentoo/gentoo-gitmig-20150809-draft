@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/checkstyle-3.4-r1.ebuild,v 1.1 2004/09/12 20:03:36 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/checkstyle/checkstyle-3.4-r2.ebuild,v 1.1 2004/09/17 18:16:13 axxo Exp $
 
 inherit java-pkg
 
@@ -52,8 +52,8 @@ src_compile() {
 
 src_install() {
 	insinto /usr/share/checkstyle
-	jar cfm ${P}.jar config/manifest.mf -C target/checkstyle .
-	java-pkg_dojar ${P}.jar
+	jar cfm ${PN}.jar config/manifest.mf -C target/checkstyle .
+	java-pkg_dojar ${PN}.jar
 	use doc && dohtml -r docs/*
 	dodoc README RIGHTS.antlr TODO
 	mv docs/checkstyle_checks.xml ${D}/usr/share/checkstyle/checkstyle_checks.xml
