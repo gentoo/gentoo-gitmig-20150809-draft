@@ -1,0 +1,7 @@
+# ChangeLog for x11-libs/libxsettings-client
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxsettings-client/ChangeLog,v 1.1 2003/12/16 01:21:17 port001 Exp $
+
+  16 Dec 2003; Ian Leitch <port001@gentoo.org> : libxsettings-client-0.10.ebuild
+  Initial commit, thanks to Rene Wagner <reenoo@gmx.de>. #29008
+
