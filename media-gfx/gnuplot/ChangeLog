@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/gnuplot
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/ChangeLog,v 1.2 2002/02/12 22:55:30 tod Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/ChangeLog,v 1.3 2002/04/12 23:32:02 seemant Exp $
+
+*gnuplot-3.7.1-r3 (12 Apr 2002)
+
+  12 Apr 2002; Seemant Kulleen <seemant@gentoo.org> gnuplot-3.7.1-r3.ebuild :
+
+  Compile against newer libpng
 
 *gnuplot-3.7.1-r2 (12 Feb 2002)
 
