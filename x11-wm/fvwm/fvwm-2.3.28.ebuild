@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Peter Gavin <pete@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.3.28.ebuild,v 1.2 2001/05/07 15:45:41 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.3.28.ebuild,v 1.3 2001/05/15 22:21:40 achim Exp $
 
 #P=
 A=${P}.tar.bz2
@@ -17,12 +17,15 @@ DEPEND=">=x11-base/xfree-4.0
 	gnome? ( >=gnome-base/gnome-libs-1.2.8 )"
 
 src_compile() {
+    local myconf
     if [ -n "$( use gnome )" ]
     then
-	try ./configure --prefix=/usr/X11R6 --host=${CHOST} --with-gnome
+	myconf="--with-gnome"
     else
-	try ./configure --prefix=/usr/X11R6 --host=${CHOST} --without-gnome
+	myconf="--without-gnome"
     fi
+    try ./configure --prefix=/usr/X11R6 --libexecdir=/usr/X11R6/lib \
+	--host=${CHOST} ${myconf}
     try make
 }
 
