@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.0.7-r1.ebuild,v 1.2 2000/08/16 04:38:14 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-2.0.7-r1.ebuild,v 1.3 2000/08/17 15:37:33 achim Exp $
 
 P=samba-2.0.7
 A=${P}.tar.gz
@@ -32,10 +32,8 @@ src_install() {
   make install prefix=${D}/usr BASEDIR=${D}/usr LIBDIR=${D}/etc/smb VARDIR=${D}/var/log \
 		PRIVATEDIR=${D}/etc/smb SWATDIR=${D}/usr/share/swat \
 		LOCKDIR=${D}/var/lock SBINDIR=${D}/usr/sbin
-  for i in 1 5 7 8
-  do
-    gzip ${D}/usr/man/man$i/*.$i
-  done
+  prepman
+
   into /usr
   cd ${S}
   dodoc COPYING Manifest README README-smbmount Roadmap WHATSNEW.txt
@@ -57,7 +55,7 @@ src_install() {
   docinto textdocs
   dodoc textdocs/*
   cd ${S}
-  cp -a examples ${D}/usr/doc/${P}
+  cp -a examples ${D}/usr/doc/${PF}
   cp examples/smb.conf.default ${D}/etc/smb/smb.conf
   dodir /etc/rc.d/init.d
   cp ${O}/files/samba ${D}/etc/rc.d/init.d
@@ -72,6 +70,7 @@ pkg_config() {
     ${ROOT}/usr/sbin/rc-update add samba
 
 }
+
 
 
 

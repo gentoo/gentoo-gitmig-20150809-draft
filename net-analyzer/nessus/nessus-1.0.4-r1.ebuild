@@ -92,7 +92,9 @@ src_install() {
   cd ${S}/nessus-plugins
   docinto nessus-plugins
   dodoc docs/*.txt plugins/accounts/accounts.txt
+  prepman
 }
+
 
 
 

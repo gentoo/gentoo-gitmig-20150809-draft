@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-1.92-r1.ebuild,v 1.2 2000/08/16 04:38:06 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-1.92-r1.ebuild,v 1.3 2000/08/17 15:37:33 achim Exp $
 
 P=kdelibs-1.92
 A=${P}.tar.bz2
@@ -20,7 +20,7 @@ src_compile() {
 
 src_install() {                 
   make install prefix=${D}/opt/kde bindir=${D}/opt/kde/bin
-  dodoc AUTHORS ChnageLog COMPILING COPYING* NAMING NEWS README
+  dodoc AUTHORS ChangeLog COMPILING COPYING* NAMING NEWS README
   docinto html
   dodoc *.html
 }

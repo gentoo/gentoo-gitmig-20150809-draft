@@ -22,12 +22,14 @@ src_compile() {
 src_install() {                               
   cd ${S}
   make prefix=${D}/usr install
+  prepman
   dodoc COPYING Changes KNOWN_PROBLEMS Miro_gpio.txt Programming-FAQ
   dodoc README* Sound-FAQ TODO Trouble-Shooting UPDATE_TO_v3.0
   insinto /usr/local/httpd/cgi-bin
   insopts -m 755 
   doins webcam/webcam.cgi
 }
+
 
 
 
