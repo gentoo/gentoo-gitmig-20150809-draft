@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.13.ebuild,v 1.2 2004/10/27 15:25:55 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.13.ebuild,v 1.3 2004/10/28 12:14:31 zypher Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -34,31 +34,29 @@ DEPEND=">=media-libs/a52dec-0.7.4
 	mpeg? ( media-libs/libmpeg3 )
 	encode? ( >=media-sound/lame-3.93 )
 	sdl? ( media-libs/libsdl )
-	quicktime? ( virtual/quicktime )"
+	quicktime? ( >=media-libs/libquicktime-0.9.3 )"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-
 }
 
 src_compile() {
 	filter-flags -maltivec -mabi=altivec
 
-	local myconf="--with-dvdread --enable-mjpegtools  --with-mjpegtools --enable-imagemagick --enable-lzo"
+	local myconf="--with-dvdread --enable-mjpegtools  --with-mjpegtools \
+		--enable-imagemagick --enable-lzo --enable-a52 --enable-fame"
 
 	# fix invalid paths in .la files of plugins
 	elibtoolize
 
-	has_version 'media-libs/a52dec' && myconf="${myconf} --enable-a52"
+	use quicktime && myconf="${myconf} --enable-libquicktime"
 
-	has_version 'media-libs/libfame' && myconf="${myconf} --enable-fame"
-
-	if use quicktime; then
-		has_version 'media-libs/libquicktime' \
-		&& myconf="${myconf} --enable-libquicktime" \
-		|| einfo "Libquicktime needed for quicktime support"
-	fi
+#	if use quicktime; then
+#		has_version 'media-libs/libquicktime' \
+#		&& myconf="${myconf} --enable-libquicktime" \
+#		|| einfo "Libquicktime needed for quicktime support"
+#	fi
 
 	if use avi; then
 		myconf="${myconf} --enable-avifile --with-avifile"
@@ -89,10 +87,7 @@ src_compile() {
 		${myconf} \
 		|| die
 
-
-
 	emake -j1 all || die
-
 }
 
 src_install () {
@@ -101,5 +96,4 @@ src_install () {
 		install || die
 
 	dodoc AUTHORS COPYING ChangeLog README TODO
-
 }

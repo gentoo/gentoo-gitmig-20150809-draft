@@ -2,8 +2,8 @@
 Hash: SHA1
 
 MD5 9dcab1f0d57db45c8f624fb66ff026dc transcode-0.6.12-r2.ebuild 4358
-MD5 d66d9277a99b7299beb8f3e4409e1f5f ChangeLog 14009
-MD5 0d0807749bf30428cff56af00b1c1db9 transcode-0.6.13.ebuild 2596
+MD5 c80f5ba2b8c5e29550c8e7e464840fe9 ChangeLog 14209
+MD5 7a090c4dcdb2fa5b11c303eedcc40d05 transcode-0.6.13.ebuild 2561
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
 MD5 d1c7003902b194931e4fcf7994105fb5 transcode-0.6.10.ebuild 3758
 MD5 f9eec7a52a7ed77258780fe2864a6a68 transcode-0.6.11.ebuild 3824
@@ -23,7 +23,7 @@ MD5 b2561dbf66455c878a08afd19868dc5d files/transcode-0.6.12-gcc-3.4.patch 2503
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBf735RPjscZbntocRArnSAJ9peukwd/1P9uVxaXduc0/8b0asOwCfTccs
-V3d35cAZRomt3dVR6SwY5Qc=
-=/DEG
+iD8DBQFBgOKVRPjscZbntocRAnLdAJ4in1hP3YbYwCCVUYC78axMuI8itQCfW+57
+85aM6JP3fgT+f/AABvVREd0=
+=MBKE
 -----END PGP SIGNATURE-----

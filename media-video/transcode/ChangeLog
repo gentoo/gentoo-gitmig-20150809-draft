@@ -1,6 +1,10 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.75 2004/10/27 15:05:03 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.76 2004/10/28 12:14:31 zypher Exp $
+
+  28 Oct 2004; Marc Hildebrand <zypher@gentoo.org> transcode-0.6.13.ebuild:
+  Configure cleanups, changed virtual/quicktime to media-libs/libquicktime as
+  quicktime-support wouldn't work otherwise.
 
 *transcode-0.6.13 (27 Oct 2004)
 
