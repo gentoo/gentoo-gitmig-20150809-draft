@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-optional/ant-optional-1.6.2-r2.ebuild,v 1.3 2004/07/30 21:38:25 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-optional/ant-optional-1.6.2-r2.ebuild,v 1.4 2004/07/31 11:32:29 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -44,7 +44,7 @@ src_compile() {
 		export THREADS_FLAG="green"
 	fi
 
-	packages="ant,antlr,bcel,bsh,commons-beanutils,commons-net,commons-logging,jdepend,jsch,junit,jython,log4j,oro,regexp,rhino,xalan,xerces-2"
+	packages="ant,antlr,bcel,bsh,commons-beanutils,commons-net,commons-logging,jdepend,jsch,junit,jython,log4j,oro,regexp-bin,rhino,xalan,xerces-2"
 	use javamail && packages="${packages},sun-javamail-bin,sun-jaf-bin"
 
 	libs=$(java-config -p ${packages})

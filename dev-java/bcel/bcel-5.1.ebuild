@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/bcel-5.1.ebuild,v 1.14 2004/07/30 21:35:04 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/bcel-5.1.ebuild,v 1.15 2004/07/31 11:31:05 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -16,7 +16,7 @@ DEPEND=">=virtual/jdk-1.2
 	>=dev-java/regexp-bin-1.2
 	jikes? ( dev-java/jikes )"
 RDEPEND="${DEPEND}"
-DEP_APPEND="regexp"
+DEP_APPEND="regexp-bin"
 
 src_unpack() {
 	unpack ${A}
@@ -26,7 +26,7 @@ src_unpack() {
 
 src_compile() {
 	ANT_OPTS="${myc}"
-	CLASSPATH="${CLASSPATH}:`/usr/bin/java-config --classpath=regexp`"
+	CLASSPATH="${CLASSPATH}:`/usr/bin/java-config --classpath=regexp-bin`"
 	epatch ${FILESDIR}/${P}-gentoo.diff
 
 	use jikes && export ANT_OPTS="${ANT_OPTS} -Dbuild.compiler=jikes"

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-optional/ant-optional-1.6.0-r2.ebuild,v 1.12 2004/07/30 21:38:25 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-optional/ant-optional-1.6.0-r2.ebuild,v 1.13 2004/07/31 11:32:29 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -44,7 +44,7 @@ src_compile() {
 		export THREADS_FLAG="green"
 	fi
 
-	for i in "ant,antlr,bcel,bsh,commons-beanutils,commons-logging,sun-javamail-bin,sun-jaf-bin,jdepend,jsch,junit,jython,log4j,oro,regexp,rhino,xalan,xerces"; do
+	for i in "ant,antlr,bcel,bsh,commons-beanutils,commons-logging,sun-javamail-bin,sun-jaf-bin,jdepend,jsch,junit,jython,log4j,oro,regexp-bin,rhino,xalan,xerces"; do
 		export CLASSPATH="${CLASSPATH}`java-config --classpath=${i}`"
 	done
 	./build.sh -Ddist.dir=${D}/usr/share/ant || die
