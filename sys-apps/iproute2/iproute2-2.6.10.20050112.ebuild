@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.10.20050112.ebuild,v 1.1 2005/01/13 04:35:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.6.10.20050112.ebuild,v 1.2 2005/01/15 00:55:24 vapier Exp $
 
 inherit eutils toolchain-funcs
 
@@ -57,6 +57,7 @@ src_install() {
 		return 0
 	fi
 
+	dodir /usr/share/man/man3
 	make \
 		DESTDIR="${D}" \
 		SBINDIR=/sbin \
