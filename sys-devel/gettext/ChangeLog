@@ -1,6 +1,15 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.2 2002/03/27 11:35:32 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.3 2002/04/16 14:30:30 seemant Exp $
+
+*gettext-0.11.1-r1 (16 Apr 2002)
+
+  16 Apr 2002; Seemant Kulleen <seemant@gentoo.org> gettext-0.11.1-r1.ebuild
+  files/digest-gettext-0.11.1-r1 :
+
+  Since glibc does not seem to be providing the header files and such, I have
+  enabled gettext to install them instead.  Hopefully this solves the
+  intermittent php emerge bug.
 
 *gettext-0.11.1
 
