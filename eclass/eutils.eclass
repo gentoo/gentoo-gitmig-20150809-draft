@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.9 2002/12/01 15:48:27 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.10 2002/12/01 23:22:50 azarah Exp $
 # This eclass is for general purpose functions that most ebuilds
 # have to implement themselves.
 #
@@ -308,6 +308,54 @@ epatch() {
 	if [ "${SINGLE_PATCH}" = "no" ]
 	then
 		einfo "Done with patching"
+	fi
+}
+
+# This function check how many cpu's are present, and then set
+# -j in MAKEOPTS accordingly.
+#
+# Thanks to nall <nall@gentoo.org> for this.
+#
+get_number_of_jobs() {
+	if [ ! -r /proc/cpuinfo ]
+	then
+		return 1
+	fi
+
+	export MAKEOPTS="`echo ${MAKEOPTS} | sed -e 's:-j[0-9]*::g'`"
+	
+	if [ "${ARCH}" = "x86" ]
+	then
+		# x86 always has "processor"
+		export MAKEOPTS="${MAKEOPTS} -j$((`grep -c ^processor /proc/cpuinfo` * 2))"
+	
+	elif [ "${ARCH}" = "sparc" -o "${ARCH}" = "sparc64" ]
+	then
+		# sparc always has "ncpus active"
+		export MAKEOPTS="${MAKEOPTS} -j$((`grep "^ncpus active" /proc/cpuinfo | sed -e "s/^.*: //"` * 2))"
+	
+	elif [ "${ARCH}" = "alpha" ]
+	then
+		# alpha has "cpus active", but only when compiled with SMP
+		if [ "`grep -c "^cpus active" /proc/cpuinfo`" = "1" ]
+		then
+			export MAKEOPTS="${MAKEOPTS} -j$((`grep "^cpus active" /proc/cpuinfo | sed -e "s/^.*: //"` * 2))"
+		else
+			export MAKEOPTS="${MAKEOPTS} -j2"
+		fi
+		
+	elif [ "${ARCH}" = "ppc" ]
+	then
+		# ppc has "processor", but only when compiled with SMP
+		if [ "`grep -c "^processor" /proc/cpuinfo`" = "1" ]
+		then
+			export MAKEOPTS="${MAKEOPTS} -j$((`grep -c ^processor /proc/cpuinfo` * 2))"
+		else
+			export MAKEOPTS="${MAKEOPTS} -j2"
+		fi
+	else
+		export MAKEOPTS="${MAKEOPTS} -j$((`grep -c ^cpu /proc/cpuinfo` * 2))"
+		die "Unknown ARCH -- ${ARCH}!"
 	fi
 }
 
