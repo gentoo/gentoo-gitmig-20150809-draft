@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r2.ebuild,v 1.1 2003/02/23 22:16:16 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.9-r2.ebuild,v 1.2 2003/02/25 01:53:42 lostlogic Exp $
 
 IUSE=""
 
@@ -41,10 +41,10 @@ src_unpack() {
 
 	# We should get dump185 to link against system db1 ..
 	# <azarah@gentoo.org> (23 Feb 2003)
-	cp ${S}/dist/Makefile.in ${S}/dist/Makefile.in.orig
+	mv ${S}/dist/Makefile.in ${S}/dist/Makefile.in.orig
 	sed -e 's:DB185INC=:DB185INC= -I/usr/include/db1:' \
 		-e 's:DB185LIB=:DB185LIB= -ldb1:' \
-		${S}/dist/Makefile.in.orig > ${S}/dist/Makefile.in
+		${S}/dist/Makefile.in.orig > ${S}/dist/Makefile.in || die "Failed to sed"
 
 	# Fix invalid .la files
 	cd ${WORKDIR}/${P}/dist
