@@ -1,4 +1,4 @@
-MD5 6fe68fd682fa4d56ec44e0a034c20e01 ChangeLog 9082
+MD5 d8761390259390d08e771b0f7e41a8a2 ChangeLog 9381
 MD5 e7e31f6f265883cdf48d812f42a9f856 metadata.xml 235
 MD5 1e445af737490687247c95904ad89f24 pwlib-1.3.11-r1.ebuild 1834
 MD5 008f3ace779ffbd91a77dfdd48a157b0 pwlib-1.4.11.ebuild 2159
@@ -11,7 +11,7 @@ MD5 8dbc8816810f569b5bec54514e1177d8 pwlib-1.5.2.ebuild 2596
 MD5 ad68150136005ec2407691456e990fa3 pwlib-1.6.3-r1.ebuild 3980
 MD5 6a2c90bc5e2b006cd0a23721a4591231 pwlib-1.6.3-r2.ebuild 3944
 MD5 21199978809de871ebcfbedc9bdedca8 pwlib-1.6.3.ebuild 3806
-MD5 497b564f64a499691adf84fde2785379 pwlib-1.6.6.ebuild 3933
+MD5 8f9d22987901946d9913bbdf13834c7b pwlib-1.6.6.ebuild 4073
 MD5 0c5d290a2ad15d1e8b2ae85365a83bd6 files/digest-pwlib-1.3.11-r1 64
 MD5 c1a54c4c742e40812c02bea08e570604 files/digest-pwlib-1.4.11 64
 MD5 67bcec54ffa82d8da3b0c0e2f23daf7e files/digest-pwlib-1.5.0 64
@@ -27,3 +27,4 @@ MD5 3057a7e05b6e701041865f26fd1fb8c3 files/digest-pwlib-1.6.6 69
 MD5 91035c6391e112595e0003cebda275f6 files/pwlib-1.3.11-r1.diff 2260
 MD5 0a9a8c5a1417127269e2e0f24ded1b2c files/pwlib-1.5.0-r1-gentoo.diff 391
 MD5 8c6469f000dea2a13869631fcedbe0ff files/pwlib-1.5.2-asnparser-secfix.diff 1299
+MD5 7f8e2afcc5e33833c4dbce58db7a4f67 files/pwlib-1.6.6-ieee1394dc-fix.diff 8052

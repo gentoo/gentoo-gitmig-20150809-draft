@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.6.6.ebuild,v 1.5 2004/08/13 22:24:10 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.6.6.ebuild,v 1.6 2004/08/30 01:38:47 stkn Exp $
+
+inherit eutils
 
 IUSE="ssl sdl ieee1394 alsa esd"
 
@@ -23,7 +25,8 @@ DEPEND=">=sys-devel/bison-1.28
 	alsa? ( media-libs/alsa-lib )
 	ieee1394? ( media-libs/libdv
 		sys-libs/libavc1394
-		sys-libs/libraw1394 )
+		sys-libs/libraw1394
+		media-plugins/libdc1394 )
 	esd? ( media-sound/esound )"
 
 MAKEOPTS="${MAKEOPTS} -j1"
@@ -38,6 +41,10 @@ src_unpack() {
 		-e "s:-mcpu=\$(CPUTYPE)::" \
 		-e "s:-O3 -DNDEBUG:-DNDEBUG:" \
 		unix.mak
+
+	# small fix for firewire dc (camera) plugin
+	cd ${S}
+	epatch ${FILESDIR}/${P}-ieee1394dc-fix.diff
 }
 
 src_compile() {
@@ -61,7 +68,7 @@ src_compile() {
 	plugins="oss v4l"
 
 	use ieee1394 \
-		&& plugins="${plugins} avc"
+		&& plugins="${plugins} avc dc"
 
 	use alsa \
 		&& plugins="${plugins} alsa"
