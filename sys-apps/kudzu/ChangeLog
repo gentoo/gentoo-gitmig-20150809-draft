@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/kudzu
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/ChangeLog,v 1.2 2003/04/22 10:26:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kudzu/ChangeLog,v 1.3 2003/07/29 15:35:22 tester Exp $
+
+*kudzu-0.99.99 (29 Jul 2003)
+
+  29 Jul 2003; Olivier Crete <tester@gentoo.org> kudzu-0.99.66.ebuild,
+  kudzu-0.99.99.ebuild:
+  Add newer version with amd64 support
 
 *kudzu-0.99.66 (02 March 2003)
 
