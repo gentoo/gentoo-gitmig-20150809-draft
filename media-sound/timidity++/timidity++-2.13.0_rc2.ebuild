@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.0_rc2.ebuild,v 1.8 2004/04/16 05:37:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.0_rc2.ebuild,v 1.9 2004/04/16 09:40:02 eradicator Exp $
 
 inherit gnuconfig
 
@@ -29,10 +29,13 @@ RDEPEND=">=sys-libs/ncurses-5.0
 	jack? ( !sparc? ( virtual/jack ) )
 	portaudio? ( !ppc? ( media-libs/portaudio ) )
 	oggvorbis? ( >=media-libs/libvorbis-1.0_beta4 )"
-	tcltk? ( >=dev-lang/tk-8.1 )
-	emacs? ( virtual/emacs )"
+
 DEPEND="${RDEPEND}
 	sys-devel/autoconf"
+
+RDEPEND="${RDEPEND}
+        tcltk? ( >=dev-lang/tk-8.1 )
+        emacs? ( virtual/emacs )"
 
 src_compile() {
 	local myconf
