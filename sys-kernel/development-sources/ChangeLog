@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/development-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.40 2003/09/11 22:15:41 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.41 2003/09/17 12:26:50 johnm Exp $
+
+*development-sources-2.6.0_beta5-r4 (17 Sep 2003)
+
+  17 Sep 2003; John Mylchreest <johnm@gentoo.org>;
+  development-sources-2.6.0_beta5-r4.ebuild, metadata.xml:
+  adding metadata
+
+*development-sources-2.6.0_beta5-r4 (17 Sep 2003)
+
+  17 Sep 2003; John Mylchreest <johnm@gentoo.org>;
+  development-sources-2.6.0_beta5-r4.ebuild:
+  bk bump
 
   11 Sep 2003; <plasmaroo@gentoo.org> development-sources-2.5.70.ebuild,
   development-sources-2.5.71.ebuild, development-sources-2.5.72.ebuild,
