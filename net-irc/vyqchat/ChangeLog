@@ -1,6 +1,13 @@
 # ChangeLog for net-irc/vyqchat
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/vyqchat/ChangeLog,v 1.1 2003/10/05 17:40:22 gregf Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/vyqchat/ChangeLog,v 1.2 2003/12/28 20:32:03 zul Exp $
+
+*vyqchat-0.2.3 (28 Dec 2003)
+
+  28 Dec 2003; Chuck Short <zul@gentoo.org> vyqchat-0.1.1.ebuild,
+  vyqchat-0.2.3.ebuild, files/vyqchat_packet_id.patch:
+  0.1.1 marked stable 0.2.3 version bump, added patch, removed emake because it
+  did not compile properly.
 
 *vyqchat-0.1.1 (05 Oct 2003)
 
