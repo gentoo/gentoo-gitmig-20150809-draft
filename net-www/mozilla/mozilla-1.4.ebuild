@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.4.ebuild,v 1.7 2003/07/11 17:55:13 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.4.ebuild,v 1.8 2003/07/12 09:12:48 brad Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome"
 # Internal USE flags that I do not really want to advertise ...
@@ -280,12 +280,11 @@ src_compile() {
 	else
 		myconf="${myconf} --disable-svg"
 	fi
-# This puppy needs libical, which is not in portage yet.  Also make mozilla
-# depend on swig, so not sure if its the best idea around to enable ...
-#	if [ -n "`use mozcalendar`" ]
-#	then
-#		myconf="${myconf} --enable-calendar"
-#	fi
+	# re-enable calendar for 1.4, builds autonomously (no dependencies anymore)
+	if [ -n "`use mozcalendar`" ]
+	then
+		myconf="${myconf} --enable-calendar"
+	fi
 	
 	if [ -n "`use moznomail`" ]
 	then
