@@ -1,17 +1,27 @@
-MD5 2a89e9137278eaa507b3fea5ad85b747 ChangeLog 2128
-MD5 4bd5440762c1f43ccd040cf1271abe43 gcc-sparc64-3.2.3.ebuild 2855
-MD5 4bc385df59a1ed5314a48505c9e55b1f gcc-sparc64-3.3.1.ebuild 2856
-MD5 ed7a92fe75577ce58fca597f0ed41eb6 gcc-sparc64-3.3.2.ebuild 2856
-MD5 7859cd15f09c7ae1180c6b1ddd6d8cc4 gcc-sparc64-3.3.3.ebuild 3042
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ced7fb24da16bd570473d849139dc098 ChangeLog 2359
+MD5 c5c038e17d062eb44339c0de0f97603c gcc-sparc64-3.3.2.ebuild 2856
+MD5 43879ce10ef92d0b730418d17e997b9e gcc-sparc64-3.3.1.ebuild 2856
 MD5 f826fcca414fc0c05030db1f99e479d8 metadata.xml 360
-MD5 c79798f8a75531ae05c5333d4ef61442 gcc-sparc64-3.3.4.ebuild 3050
-MD5 098c115531e90608348818f9bdb3faac files/digest-gcc-sparc64-3.2.3 64
+MD5 e071c88505d0f0e9d64599546ec32291 gcc-sparc64-3.2.3.ebuild 2855
+MD5 4ec0bc5c6dbf77c7cddc22dbe6474980 gcc-sparc64-3.3.3.ebuild 3042
+MD5 0de3e1559bdceac75c0382411da4d143 gcc-sparc64-3.3.4.ebuild 3050
+MD5 d9ae122db2768f8e504dfef256d4991f files/gcc-3.3.2-gentoo-branding.patch 874
+MD5 d3e53318166d71a05d2b51bd44502270 files/gcc-3.3.1-gentoo-branding.patch 874
 MD5 12e3974934d4a83bf4540c3e0592b226 files/digest-gcc-sparc64-3.3.1 64
 MD5 006481ae255582fae4fa22107dfb359e files/digest-gcc-sparc64-3.3.2 64
-MD5 6c081be1d52e43fcf80a52040e7c3312 files/digest-gcc-sparc64-3.3.3 151
-MD5 99db7c1a41babe024f0c6859c30a87ee files/gcc-3.2.3-gentoo-branding.patch 2058
-MD5 d3e53318166d71a05d2b51bd44502270 files/gcc-3.3.1-gentoo-branding.patch 874
-MD5 d9ae122db2768f8e504dfef256d4991f files/gcc-3.3.2-gentoo-branding.patch 874
 MD5 cd87c02e4896f47bf6029eef0dc29468 files/gcc-3.3.3-gentoo-branding.patch 874
+MD5 99db7c1a41babe024f0c6859c30a87ee files/gcc-3.2.3-gentoo-branding.patch 2058
 MD5 af241dd07c46bc5b0c2d54eac803f1f3 files/digest-gcc-sparc64-3.3.4 151
+MD5 098c115531e90608348818f9bdb3faac files/digest-gcc-sparc64-3.2.3 64
 MD5 e411938ca2908079a2359fed5cb3b442 files/gcc-3.3.4-gentoo-branding.patch 874
+MD5 6c081be1d52e43fcf80a52040e7c3312 files/digest-gcc-sparc64-3.3.3 151
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBPM3jLLFUmVNQ7rkRAmkgAJ4+je5GpcIzSideL50DN7WQ1xD2ngCdGFlM
+tACdpuJuPgKqNezeuq8LX3Q=
+=KZiP
+-----END PGP SIGNATURE-----
