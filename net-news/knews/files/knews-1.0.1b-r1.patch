@@ -1,38 +1,32 @@
-diff -urP knews-1.0b.1.orig/configure.h knews-1.0b.1/configure.h
---- knews-1.0b.1.orig/configure.h	Tue Dec 29 04:47:02 1998
-+++ knews-1.0b.1/configure.h	Sun Apr 22 19:42:04 2001
-@@ -16,6 +16,7 @@
-  */
- /* #define MAIL_COMMAND "/usr/sbin/sendmail -t" */
- /* #define MAIL_COMMAND "/usr/lib/sendmail -t"  */
-+#define MAIL_COMMAND "/bin/false"
+--- /util/knewsd.c	Mon Aug 31 15:40:05 1998
++++ util/knewsd.c	Thu Aug  1 18:16:04 2002
+@@ -619,6 +619,7 @@
+     FILE	*fp = NULL;
+     long	first, last, no;
+     char	*c;
++    char	*lfl = NULL;
  
+     if (!group_path) {
+ 	printf(CODE_TO_STR(NNTP_ERR_NCING) " Not in a newsgroup.\r\n");
+@@ -677,15 +678,18 @@
+ 	    if (no > last)
+ 		break;
  
++	    lfl = strchr(buffer, '\n');
++	    if (lfl)
++		lfl[0]=0;
+ 	    fputs(buffer, stdout);
+-	    if (!strchr(buffer, '\n')) {
++	    if (!lfl) {
+ 		int	ch;
  
-@@ -84,9 +85,9 @@
-  *  libcompface.
-  */
- 
--#define HAVE_JPEG	0
--#define HAVE_PNG	0
--#define HAVE_COMPFACE	0
-+#define HAVE_JPEG	1
-+#define HAVE_PNG	1
-+#define HAVE_COMPFACE	1
- 
- 
- 
-diff -urP knews-1.0b.1.orig/knews.tmpl knews-1.0b.1/knews.tmpl
---- knews-1.0b.1.orig/knews.tmpl	Tue Dec 29 05:14:55 1998
-+++ knews-1.0b.1/knews.tmpl	Sun Apr 22 19:42:04 2001
-@@ -83,4 +83,9 @@
-  *  If you need to add include paths for e.g. libjpeg, libpng or libzlib
-  *  include files, do it here.
-  */
--KNEWS_INCLUDES	=
-+KNEWS_INCLUDES = -I/usr/include
+ 		while ((ch = getc(fp)) != EOF && ch != '\n')
+ 		    putchar(ch);
+-
+-		printf("\r\n");
+ 	    }
 +
-+CC		= gcc
-+CCOPTIONS	= -Wall
-+CDEBUGFLAGS	= -O2
-+
++	    printf("\r\n");
+ 	}
+ 
+ 	fclose(fp);

@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Michael Conrad Tilstra <michael@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/net-news/knews/knews-1.0.1b-r1.ebuild,v 1.4 2002/07/17 02:39:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/knews/knews-1.0.1b-r1.ebuild,v 1.5 2002/09/27 12:09:02 seemant Exp $
 
 MY_P=${PN}-1.0b.1
 S=${WORKDIR}/${MY_P}
@@ -19,11 +19,6 @@ DEPEND=">=x11-base/xfree-4.0
 	>=media-libs/compface-1.4"
 
 # If knews used autoconf, we wouldn't need this patch.
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	patch -p1 < ${FILESDIR}/${P}.patch
-}
 
 src_compile() {
 	xmkmf || die

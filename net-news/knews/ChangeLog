@@ -1,6 +1,16 @@
 # ChangeLog for net-news/knews
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-news/knews/ChangeLog,v 1.1 2002/04/12 21:38:58 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/knews/ChangeLog,v 1.2 2002/09/27 12:09:01 seemant Exp $
+
+*knews-1.0.1b-r2 (27 Sep 2002)
+
+  27 Sep 2002; Seemant Kulleen <seemant@gentoo.org> knews-1.0.1b-r2.ebuild
+  files/digest-knews-1.0.1b-r2 :
+
+  Applied a set of debian patches to make this more solid.  Also, changed
+  configure flags depending on USE flags. (of course, there is no
+  ./configure script -- why would there be? that's just silly...)  Thanks
+  to: achim.linder@nikocity.de (Achim Linder) in bug #7506 
 
 *knews-1.0.1b-r1 (12 Apr 2002)
   12 Apr 2002; Spider <spider@gentoo.org>:
