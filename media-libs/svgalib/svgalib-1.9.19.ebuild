@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.19.ebuild,v 1.1 2004/06/23 02:56:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.19.ebuild,v 1.2 2004/06/23 23:29:38 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -31,6 +31,7 @@ src_unpack() {
 
 	# Get it to work with kernel 2.6
 	epatch ${FILESDIR}/${P}-linux2.6.patch
+	sed -i '/^KDIR/s:=.*:=/usr/src/linux:' ${S}/kernel/svgalib_helper/Makefile
 
 	# Fix include bug #54198
 	epatch ${FILESDIR}/${PN}-1.9.18-utils-include.patch
@@ -94,7 +95,8 @@ src_install() {
 
 	dodir /etc/svgalib /usr/{include,lib,bin,share/man}
 
-	make TOPDIR=${D} OPTIMIZE="${CFLAGS}" \
+	make \
+		TOPDIR=${D} OPTIMIZE="${CFLAGS}" INSTALLMODULE="" \
 		install || die "Failed to install svgalib!"
 	if ! use build && kernel_supports_modules
 	then
