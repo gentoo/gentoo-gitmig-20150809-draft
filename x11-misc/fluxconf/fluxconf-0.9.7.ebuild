@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxconf/fluxconf-0.9.7.ebuild,v 1.1 2003/12/18 23:51:30 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fluxconf/fluxconf-0.9.7.ebuild,v 1.2 2004/03/28 21:46:22 avenj Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://devaux.fabien.free.fr/flux/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
 
 DEPEND="=x11-libs/gtk+-1.2*"
 
