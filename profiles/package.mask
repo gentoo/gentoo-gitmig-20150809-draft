@@ -2,6 +2,7 @@
 #explanation of why something is getting masked
 
 #testing only (drobbins, 25 Jun 2002)
+=sys-apps/portage-2.0.8
 =sys-apps/portage-2.0.6
 
 #masked for testing (drobbins, 19 Jun 2002)
