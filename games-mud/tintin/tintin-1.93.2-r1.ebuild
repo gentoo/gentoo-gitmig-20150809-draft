@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/tintin-1.93.1.ebuild,v 1.1 2004/08/27 10:05:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tintin/tintin-1.93.2-r1.ebuild,v 1.1 2004/09/08 09:10:01 mr_bones_ Exp $
 
 inherit games
 
@@ -14,10 +14,17 @@ KEYWORDS="x86 sparc amd64"
 IUSE=""
 
 DEPEND="virtual/libc
+	sys-libs/zlib
 	sys-libs/readline
 	sys-libs/ncurses"
 
 S="${WORKDIR}/tt/src"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	rm -f *.o tt++
+}
 
 src_compile() {
 	egamesconf || die
@@ -26,7 +33,7 @@ src_compile() {
 
 src_install () {
 	dogamesbin tt++ || die "dobin failed"
-	dodoc ../{BUGS,CHANGES,CREDITS,FAQ,INSTALL,README,TODO,docs/*}
+	dodoc ../{BUGS,CREDITS,FAQ,INSTALL,README,TODO,docs/*}
 	prepgamesdirs
 }
 
