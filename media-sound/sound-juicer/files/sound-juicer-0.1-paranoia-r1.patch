@@ -1,0 +1,121 @@
+Only in sound-juicer-0.1: .tm_project.cache
+Only in sound-juicer-0.1: AC_PACKAGE_NAME.prj
+Only in sound-juicer-0.1: AC_PACKAGE_NAME.prj.bak
+Only in sound-juicer-0.1: AC_PACKAGE_NAME.pws
+Only in sound-juicer-0.1.unpatched/: configure
+diff -ur sound-juicer-0.1.unpatched/data/sound-juicer.schemas.in sound-juicer-0.1/data/sound-juicer.schemas.in
+--- sound-juicer-0.1.unpatched/data/sound-juicer.schemas.in	2003-04-10 19:30:59.000000000 +0200
++++ sound-juicer-0.1/data/sound-juicer.schemas.in	2003-04-22 19:36:47.000000000 +0200
+@@ -38,5 +38,18 @@
+       </locale>
+     </schema>
+ 
++    <schema>
++      <key>/schemas/apps/sound-juicer/paranoia</key>
++      <applyto>/apps/sound-juicer/paranoia</applyto>
++      <type>int</type>
++      <owner>sound-juicer</owner>
++      <locale name="C">
++        <short>The paranoia mode to use</short>
++        <long>
++          Paranoia mode, 3 settings. 0 (no paranoia), 4 (cdda2wav-style overlap checking) and 255 (full paranoia)
++        </long>
++      </locale>
++    </schema>
++
+   </schemalist>
+ </gconfschemafile>
+diff -ur sound-juicer-0.1.unpatched/src/sj-extractor.c sound-juicer-0.1/src/sj-extractor.c
+--- sound-juicer-0.1.unpatched/src/sj-extractor.c	2003-04-11 10:51:36.000000000 +0200
++++ sound-juicer-0.1/src/sj-extractor.c	2003-04-22 19:45:01.000000000 +0200
+@@ -192,7 +192,7 @@
+                  _("Could not create cdparanoia element"));
+     return;
+   }
+-  g_object_set (G_OBJECT (priv->cdparanoia), "paranoia_mode", 0, NULL);
++
+   /* Get the track format for seeking later */
+   priv->track_format = gst_format_get_by_nick ("track");
+   g_assert (priv->track_format != 0); /* TODO: GError */
+@@ -275,6 +275,15 @@
+   g_object_set (G_OBJECT (extractor->priv->cdparanoia), "location", device, NULL);
+ }
+ 
++void sj_extractor_set_paranoia (SjExtractor *extractor, const gint paranoia_mode)
++{
++  g_return_if_fail (extractor != NULL);
++  g_return_if_fail (SJ_IS_EXTRACTOR (extractor));
++  g_return_if_fail (paranoia_mode != NULL);
++
++  g_object_set (G_OBJECT (extractor->priv->cdparanoia), "paranoia-mode", paranoia_mode, NULL);
++}
++
+ void sj_extractor_extract_track (SjExtractor *extractor, const TrackDetails *track, const char* path, GError **error)
+ {
+   GstEvent *event;
+diff -ur sound-juicer-0.1.unpatched/src/sj-extractor.h sound-juicer-0.1/src/sj-extractor.h
+--- sound-juicer-0.1.unpatched/src/sj-extractor.h	2003-04-07 23:01:02.000000000 +0200
++++ sound-juicer-0.1/src/sj-extractor.h	2003-04-22 18:46:22.000000000 +0200
+@@ -63,6 +63,8 @@
+ 
+ void sj_extractor_set_device (SjExtractor *extractor, const char* device);
+ 
++void sj_extractor_set_paranoia (SjExtractor *extractor, const gint paranoia_mode);
++
+ void sj_extractor_extract_track (SjExtractor *extractor, const TrackDetails *track, const char* path, GError **error);
+ 
+ void sj_extractor_cancel_extract (SjExtractor *extractor);
+diff -ur sound-juicer-0.1.unpatched/src/sj-main.c sound-juicer-0.1/src/sj-main.c
+--- sound-juicer-0.1.unpatched/src/sj-main.c	2003-04-11 10:43:41.000000000 +0200
++++ sound-juicer-0.1/src/sj-main.c	2003-04-22 19:40:35.000000000 +0200
+@@ -54,10 +54,12 @@
+ static const char *device;
+ gboolean extracting = FALSE;
+ 
++#define DEFAULT_PARANOIA 4
+ #define GCONF_ROOT "/apps/sound-juicer"
+ #define GCONF_DEVICE GCONF_ROOT "/device"
+ #define GCONF_BASEPATH GCONF_ROOT "/base_path"
+ #define GCONF_FORMAT GCONF_ROOT "/format"
++#define GCONF_PARANOIA GCONF_ROOT "/paranoia"
+ 
+ /**
+  * Clicked Quit
+@@ -277,6 +279,20 @@
+ }
+ 
+ /**
++ * The GConf key for the paranoia mode has changed
++ */
++void paranoia_changed_cb (GConfClient *client, guint cnxn_id, GConfEntry *entry, gpointer user_data)
++{
++  g_assert (strcmp (entry->key, GCONF_PARANOIA) == 0);
++  if (entry->value == NULL) {
++    sj_extractor_set_paranoia (extractor, DEFAULT_PARANOIA);
++  } else {
++    sj_extractor_set_paranoia (extractor, gconf_value_get_int (entry->value));
++  }
++  /* TODO: sanity check the paranoia somewhat (0,4,255 are valid) */
++}
++
++/**
+  * Utility function to reread a CD
+  */
+ void reread_cd (void)
+@@ -427,6 +443,7 @@
+   gconf_client_notify_add (gconf_client, GCONF_DEVICE, device_changed_cb, NULL, NULL, NULL);
+   gconf_client_notify_add (gconf_client, GCONF_BASEPATH, basepath_changed_cb, NULL, NULL, NULL);
+   gconf_client_notify_add (gconf_client, GCONF_FORMAT, format_changed_cb, NULL, NULL, NULL);
++  gconf_client_notify_add (gconf_client, GCONF_PARANOIA, paranoia_changed_cb, NULL, NULL, NULL);
+ 
+   glade_init ();
+   glade = glade_xml_new (DATADIR"/sound-juicer.glade", NULL, NULL);
+@@ -499,6 +516,8 @@
+   basepath_changed_cb (gconf_client, -1, gconf_client_get_entry (gconf_client, GCONF_BASEPATH, NULL, TRUE, NULL), NULL);
+   device_changed_cb (gconf_client, -1, gconf_client_get_entry (gconf_client, GCONF_DEVICE, NULL, TRUE, NULL), NULL);
+   format_changed_cb (gconf_client, -1, gconf_client_get_entry (gconf_client, GCONF_FORMAT, NULL, TRUE, NULL), NULL);
++  paranoia_changed_cb (gconf_client, -1, gconf_client_get_entry (gconf_client, GCONF_PARANOIA, NULL, TRUE, NULL), NULL);
++  
+     
+   gtk_widget_show_all (main_window);
+   gtk_main ();

@@ -1,0 +1,83 @@
+Only in sound-juicer-0.1.patched/: .tm_project.cache
+diff -ur sound-juicer-0.1/src/sj-extractor.c sound-juicer-0.1.patched/src/sj-extractor.c
+--- sound-juicer-0.1/src/sj-extractor.c	2003-04-11 10:51:36.000000000 +0200
++++ sound-juicer-0.1.patched/src/sj-extractor.c	2003-04-22 23:50:55.000000000 +0200
+@@ -136,10 +136,11 @@
+   GError *error = NULL;
+   extractor->priv = g_new0 (SjExtractorPrivate, 1);  
+   build_pipeline(extractor, &error);
+-  if (error) {
++
++/*  if (error) {
+     g_error (_("Could not create pipeline: %s"), error->message);
+     g_error_free (error);
+-  }
++  } */
+ }
+ 
+ #if 0
+@@ -182,8 +183,6 @@
+ 
+   priv = extractor->priv;
+ 
+-  priv->pipeline = gst_pipeline_new ("pipeline");
+-
+   /* Read from CD */
+   priv->cdparanoia = gst_element_factory_make ("cdparanoia", "cdparanoia");
+   if (priv->cdparanoia == NULL) {
+@@ -220,6 +219,8 @@
+     return;
+   }
+ 
++  priv->pipeline = gst_pipeline_new ("pipeline");
++
+   /* Add the elements to the pipeline */
+   gst_bin_add (GST_BIN (priv->pipeline), priv->cdparanoia);
+   gst_bin_add (GST_BIN (priv->pipeline), priv->vorbisenc);
+@@ -359,3 +360,13 @@
+   g_return_val_if_fail (SJ_IS_EXTRACTOR (extractor), NULL);
+   return extractor->priv->track_details;
+ }
++
++gboolean sj_extractor_pipeline_constructed (SjExtractor *extractor)
++{
++  g_return_val_if_fail (extractor != NULL, FALSE);
++  g_return_val_if_fail (SJ_IS_EXTRACTOR (extractor), FALSE);
++
++  if (extractor->priv->pipeline == NULL)
++     return FALSE;
++  return TRUE;
++}
+diff -ur sound-juicer-0.1/src/sj-extractor.h sound-juicer-0.1.patched/src/sj-extractor.h
+--- sound-juicer-0.1/src/sj-extractor.h	2003-04-07 23:01:02.000000000 +0200
++++ sound-juicer-0.1.patched/src/sj-extractor.h	2003-04-22 23:38:59.000000000 +0200
+@@ -69,6 +69,8 @@
+ 
+ const TrackDetails *sj_extractor_get_track_details (SjExtractor *extractor);
+ 
++gboolean sj_extractor_pipeline_constructed (SjExtractor *extractor);
++
+ G_END_DECLS
+ 
+ #endif /* SJ_EXTRACTOR_H */
+diff -ur sound-juicer-0.1/src/sj-main.c sound-juicer-0.1.patched/src/sj-main.c
+--- sound-juicer-0.1/src/sj-main.c	2003-04-11 10:43:41.000000000 +0200
++++ sound-juicer-0.1.patched/src/sj-main.c	2003-04-22 23:54:56.000000000 +0200
+@@ -417,6 +417,17 @@
+ 
+   extractor = SJ_EXTRACTOR (sj_extractor_new());
+ 
++  if ( !sj_extractor_pipeline_constructed( extractor))
++  {
++    GtkWidget *dialog;
++
++    dialog = gtk_message_dialog_new ( NULL, GTK_DIALOG_MODAL, GTK_MESSAGE_ERROR,
++        GTK_BUTTONS_OK, "Could not create pipeline, exiting.\n\nSome required gstreamer plugins are missing,\nplease read the documentation for more information." );
++
++    gtk_dialog_run( GTK_DIALOG( dialog));
++    exit (1);
++  }
++
+   gconf_client = gconf_client_get_default ();
+   if (gconf_client == NULL) {
+     g_print (_("Could not create GConf client.\n"));
