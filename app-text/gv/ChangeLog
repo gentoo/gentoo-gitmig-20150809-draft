@@ -1,6 +1,11 @@
 # ChangeLog for app-text/gv
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.4 2002/08/08 14:03:34 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gv/ChangeLog,v 1.5 2002/10/03 09:25:07 aliz Exp $
+
+*gv-3.5.8-r2 (03 Oct 2002)
+
+  03 Oct 2002; Daneil Ahlberg <aliz@gentoo.org> gv-3.5.8-r2.ebuild :
+  Security update.
 
 *gv-3.5.8-r1 (1 Feb 2002)
 
