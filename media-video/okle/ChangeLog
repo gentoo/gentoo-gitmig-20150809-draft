@@ -1,6 +1,9 @@
 # ChangeLog for media-video/okle
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/okle/ChangeLog,v 1.4 2004/06/28 20:46:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/okle/ChangeLog,v 1.5 2004/07/03 21:46:56 carlo Exp $
+
+  03 Jul 2004; Carsten Lohrke <carlo@gentoo.org> okle-0.4.ebuild:
+  QA: need-kde after R/DEPEND
 
   28 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> okle-0.4.ebuild:
   kde-base is deprecated
