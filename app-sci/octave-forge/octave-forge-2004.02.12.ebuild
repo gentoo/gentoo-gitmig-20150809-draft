@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave-forge/octave-forge-2004.02.12.ebuild,v 1.3 2004/03/23 08:55:57 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave-forge/octave-forge-2004.02.12.ebuild,v 1.4 2004/06/06 16:57:31 kugelfang Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://octave.sourceforge.net/"
 SRC_URI="mirror://sourceforge/octave/${P}.tar.gz"
 
 LICENSE="as-is"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc amd64"
 SLOT="0"
 IUSE="ginac qhull"
 
