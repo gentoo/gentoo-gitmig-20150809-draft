@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/jikes
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/ChangeLog,v 1.12 2003/02/12 05:53:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jikes/ChangeLog,v 1.13 2003/04/06 09:00:24 absinthe Exp $
 
   05 Jan 2003; Rodney Rees <manson@gentoo.org> jikes-1.1*.ebuild
   changed keywords from ~sparc to sparc
@@ -9,6 +9,9 @@
   Added ~ppc to keywords
 
 *jikes-1.18 (22 Nov 2002)
+
+  06 Apr 2003; Dylan Carlson <absinthe@gentoo.org> jikes-1.18.ebuild:
+  moved to stable for x86 ppc.
 
   31 Dec 2002; Joshua Brindle <method@gentoo.org> jikes-1.18.ebuild:
   added ~sparc
