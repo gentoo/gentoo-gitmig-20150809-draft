@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.31 2003/08/07 22:29:53 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.32 2003/08/26 09:22:16 aliz Exp $
 #
 # This eclass contains the common functions to be used by all lostlogic
 # based kernel ebuilds
@@ -127,7 +127,9 @@ kernel_src_install() {
 			echo "XX_${file}*" >> patches.txt
 			cat ${WORKDIR}/${KV}/docs/${file} >> patches.txt
 		done
-		dodoc patches.txt
+		if [ -f patches.txt ]; then
+			dodoc patches.txt
+		fi
 		mv ${WORKDIR}/linux* ${D}/usr/src
 	else
 		#linux-headers
