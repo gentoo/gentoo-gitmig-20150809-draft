@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/chessbrain
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/chessbrain/ChangeLog,v 1.7 2004/06/24 21:55:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/chessbrain/ChangeLog,v 1.8 2004/07/28 03:34:18 ribosome Exp $
+
+  27 Jul 2004; Olivier Fisette <ribosome@gentoo.org> files/cb-conf.d:
+  Changed erroneous reference to the setiathome project.
 
   19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> chessbrain-20304.ebuild,
   chessbrain-20310.ebuild, chessbrain-20314.ebuild, chessbrain-20407.ebuild:
