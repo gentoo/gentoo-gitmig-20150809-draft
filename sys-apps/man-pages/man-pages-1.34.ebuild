@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-1.34.ebuild,v 1.1 2001/02/07 15:51:27 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man-pages/man-pages-1.34.ebuild,v 1.2 2001/04/06 18:45:25 drobbins Exp $
 
 A="${P}.tar.gz netman-20000610.tgz"
 S=${WORKDIR}/${P}
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.kernel.org/pub/linux/docs/manpages/${P}.tar.gz
 	 ftp://ftp.uk.kernel.org/pub/linux/docs/manpages/${P}.tar.gz
 	 ftp://ftp.suse.com/pub/people/ak/netman/netman-20000610.tgz"
 
-DEPEND=""
+RDEPEND="sys-apps/man"
 
 
 src_unpack() {
