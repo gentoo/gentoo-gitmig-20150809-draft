@@ -1,11 +1,16 @@
 # ChangeLog for sys-apps/module-init-tools
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.12 2003/02/28 05:20:05 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.13 2003/03/02 22:30:28 azarah Exp $
+
+*module-init-tools-0.9.10-r1 (02 March 2003)
+
+  02 March 2003; Martin Schlemmer <azarah@gentoo.org> module-init-tools-0.9.10-r1 :
+  Fix '-q' to be really quiet.  Patch generate-modprobe.conf to create sub
+  install commands with 'modprobe -q'.
 
 *module-init-tools-0.9.10 (27 Feb 2003)
 
-  27 Feb 2003; Brandon Low <lostlogic@gentoo.org>
-  module-init-tools-0.9.10.ebuild:
+  27 Feb 2003; Brandon Low <lostlogic@gentoo.org> module-init-tools-0.9.10 :
   Bump, and drop a patch that is now merged mainline
 
 *module-init-tools-0.9.9 (01 Feb 2003)
