@@ -1,6 +1,11 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.47 2004/09/26 09:51:15 radek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.48 2004/09/26 18:12:47 radek Exp $
+
+  26 Sep 2004; Radoslaw Stachowiak <radek@gentoo.org> zope-2.6.4-r1.ebuild:
+  Fixed permission problem (775/664 or 755/644 depending on new/present
+  installation). Removed default instance creation at emerge time (zope-config
+  gives errors).
 
   26 Sep 2004; Radoslaw Stachowiak <radek@gentoo.org> zope-2.7.2-r2.ebuild:
   fixed bug #65254, removed init.d dir creation, changed --prefix to .

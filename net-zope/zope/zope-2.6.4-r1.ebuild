@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.4-r1.ebuild,v 1.11 2004/09/06 00:29:39 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.4-r1.ebuild,v 1.12 2004/09/26 18:12:47 radek Exp $
 
 inherit eutils
 
@@ -57,6 +57,10 @@ RCNAME=zope.initd
 # * Other's should not have any access to ${ZSERVDIR},
 #   because they can work through the Zope web interface.
 #   This should protect our code/data better.
+#
+# UPDATE: ${ZSERVDIR} is a lib directory and should be world readable
+# like e.g /usr/lib/python we do not store any user data there,
+# currently removed all custom permission stuff, for ${ZSERVDIR}
 
 # Parameters:
 #  $1 = instance directory
@@ -65,14 +69,13 @@ RCNAME=zope.initd
 setup_security() {
 	chown -R ${ZUID}:${2} ${1}
 	chmod -R g+u ${1}
-	chmod -R o-rwx ${1}
+	# 20040926 <radek@gentoo.org> changed, due to errors in ebuild and policy
+	chmod -R go+rX ${1}
 }
 
 install_help() {
-	einfo "Need to setup an inituser (admin) before executing zope:"
-		einfo "\tzope-config --zpasswd"
-		einfo "To execute default Zope instance:"
-		einfo "\t/etc/init.d/${ZGID} start"
+	einfo "Be warned that you need at least one zope instance to run zope."
+	einfo "Please emerge zope-config for futher instance management."
 }
 
 pkg_preinst() {
@@ -165,8 +168,8 @@ src_install() {
 
 pkg_postinst() {
 	# Here we add our default zope instance.
-	/usr/sbin/zope-config --zserv=${ZSERVDIR} --zinst=${ZINSTDIR} \
-		--zgid=${ZGID}
+	# UPDATE 20040925: disabled due to zope-config, errors
+	#/usr/sbin/zope-config --zserv=${ZSERVDIR} --zinst=${ZINSTDIR} --zgid=${ZGID}
 	install_help
 }
 
