@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-apps/nautilus/nautilus-0.8.2.ebuild,v 1.1 2001/03/06 06:05:34 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-apps/nautilus/nautilus-0.8.2.ebuild,v 1.2 2001/03/07 11:19:58 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -12,6 +12,7 @@ SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${A}
 HOMEPAGE="http://www.gnome.org/"
 
 DEPEND="nls? ( sys-devel/gettext )
+	mozilla? ( >=net-www/mozilla-0.8-r1 )
         >=media-libs/freetype-2.0
         >=sys-libs/pam-0.73
 	>=gnome-base/bonobo-0.37
@@ -25,6 +26,17 @@ src_compile() {
   if [ -z "`use nls`" ]
   then
     myconf="--disable-nls"
+  fi
+  if [ "`use mozilla`" ]
+  then
+#    MOZILLA=${S}/../../../mozilla-0.8-r2/work/mozilla/dist
+    MOZILLA=/opt/mozilla
+    myconf="${myconf} --with-mozilla-lib-place=$MOZILLA \
+		--with-mozilla-include-place=$MOZILLA/include"
+    export MOZILLA_FIVE_HOME=$MOZILLA
+    export LD_LIBRARY_PATH=$MOZILLA_FIVE_HOME
+  else
+    myconf="${myconf} --disable-mozilla-component"
   fi
   try ./configure --host=${CHOST} --prefix=/opt/gnome \
         --sysconfdir=/etc/opt/gnome --infodir=/opt/gnome/share/info \
