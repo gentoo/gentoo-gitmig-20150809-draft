@@ -1,13 +1,11 @@
 # ChangeLog for net-printcupsChangeLog/
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.23 2002/10/25 18:51:32 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.24 2002/10/25 18:58:04 woodchip Exp $
 
 *cups-1.1.17_pre20021025 (25 Oct 2002)
 
   25 Oct 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
-
-  cvs version to fix latest problems
-# ChangeLog for net-print/cups
+  cvs version to fix latest problems.
 
   25 Oct 2002; Donny Davies <woodchip@gentoo.org> cups-1.1.16.ebuild : fix #9188.
 
