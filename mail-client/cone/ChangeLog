@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/cone
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/ChangeLog,v 1.6 2004/07/17 22:08:37 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/ChangeLog,v 1.7 2004/11/29 22:57:13 ticho Exp $
+
+  29 Nov 2004; Andrej Kacian <ticho@gentoo.org> cone-0.56.ebuild,
+  cone-0.57-r1.ebuild, cone-0.57.ebuild:
+  app-admin/fam -> virtual/fam, for bug #67170.
 
 *cone-0.57-r1 (07 Jul 2004)
 

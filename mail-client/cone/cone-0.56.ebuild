@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/cone-0.56.ebuild,v 1.6 2004/09/24 00:02:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/cone-0.56.ebuild,v 1.7 2004/11/29 22:57:13 ticho Exp $
 
 DESCRIPTION="COnsole News reader and Emailer"
 HOMEPAGE="http://www.courier-mta.org/cone/"
@@ -14,7 +14,7 @@ IUSE="crypt fam spell"
 RDEPEND="virtual/libc
 	>=dev-libs/openssl-0.9.6
 	dev-libs/libxml2
-	fam? ( app-admin/fam )
+	fam? ( virtual/fam )
 	crypt? ( >=app-crypt/gnupg-1.0.4 )
 	spell? ( virtual/aspell-dict )"
 DEPEND="${RDEPEND}
