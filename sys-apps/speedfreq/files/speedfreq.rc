@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/speedfreq/files/speedfreq.rc,v 1.1 2003/08/21 02:31:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/speedfreq/files/speedfreq.rc,v 1.2 2003/11/18 07:08:02 vapier Exp $
 
 depend() {
 	need modules logger
@@ -24,7 +24,7 @@ start() {
 	check_acpi
 
 	ebegin "Starting speedfreq"
-	/usr/sbin/speedfreqd -P -p ${SPEEDFREQ_SPEED}
+	/usr/sbin/speedfreqd -P -p ${SPEEDFREQ_SPEED} ${SPEEDFREQ_OPTS}
 	eend $?
 }
 
