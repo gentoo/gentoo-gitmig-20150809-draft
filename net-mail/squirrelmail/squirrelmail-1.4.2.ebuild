@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.4.2.ebuild,v 1.1 2003/10/01 20:46:20 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.4.2.ebuild,v 1.2 2003/10/15 17:52:02 brad_mssw Exp $
 
 DESCRIPTION="Webmail for nuts!"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.squirrelmail.org/"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
 
 RDEPEND="virtual/php
 	dev-perl/DB_File"
