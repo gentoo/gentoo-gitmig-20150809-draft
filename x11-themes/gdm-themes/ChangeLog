@@ -1,6 +1,9 @@
 # ChangeLog for x11-themes/gdm-themes
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/ChangeLog,v 1.4 2003/07/04 20:28:20 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/ChangeLog,v 1.5 2003/09/08 22:31:29 todd Exp $
+
+  08 Sep 2003; Todd Sunderlin <todd@gentoo.org> gdm-themes-1.0-r1.ebuild:
+  marked unstable on sparc
 
 *gdm-themes-1.0-r1 (5 May 2003)
   
