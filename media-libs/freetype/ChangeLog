@@ -1,8 +1,20 @@
 # ChangeLog for media-libs/freetype
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.4 2002/04/04 15:00:14 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.5 2002/07/17 03:28:03 raker Exp $
 
-  04 Apr 2002; M.Schlemmer <azarah@gentoo.org> freetype-2.0.9 :
+*freetype-2.1.2 (16 Jul 2002)
+
+  16 Jul 2002; Nick Hadaway <raker@gentoo.org> freetype-2.1.2.ebuild :
+
+  Added latest build of freetype.
+  Quoted directly from freetype homepage...
+  "That's probably the first release of FreeType in the 2.1.x
+  development branch that can safely replace 2.0.9 on any
+  system."
+
+*freetype-2.0.9 (04 Apr 2002)
+
+  04 Apr 2002; M.Schlemmer <azarah@gentoo.org> freetype-2.0.9.ebuild :
 
   Resolve "file not found" in dodoc; bug #1065.
 
