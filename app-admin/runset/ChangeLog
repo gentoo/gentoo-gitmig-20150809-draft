@@ -1,12 +1,15 @@
 # ChangeLog for app-admin/runset
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/runset/ChangeLog,v 1.5 2003/02/12 02:26:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/runset/ChangeLog,v 1.6 2003/03/28 10:04:31 pvdabeel Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *runset-1.4 (1 Feb 2002)
 
-  20 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> runet-1.4.ebuild :
+  28 Mar 2003; Pieter Van den Abeele <pvdabeel@gentoo.org> runset-1.4.ebuild
+  Moved to ~ppc
+
+  20 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> runset-1.4.ebuild :
 
   Fixed the .info file before installing the package to avoid errors after
   merge.
