@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.10_pre1.ebuild,v 1.12 2003/05/08 11:17:53 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.10_pre1.ebuild,v 1.13 2003/05/12 20:52:38 mholzer Exp $
 
 S=${WORKDIR}/svn
 S_APACHE=${WORKDIR}/httpd-2.0
@@ -14,7 +14,7 @@ I_BDB=${WORKDIR}/tmpinstall_db-4.0.14
 I_SVN=${WORKDIR}/tmpinstall_svn
 
 DESCRIPTION="A compelling replacement for CVS"
-SRC_URI="http://www.sleepycat.com/update/4.0.14/db-4.0.14.tar.gz
+SRC_URI="http://www.sleepycat.com/update/snapshot/db-4.0.14.tar.gz
 	ftp://ftp.gnu.org/gnu/autoconf/autoconf-2.52.tar.bz2
 	http://www.gbevin.com/gentoo/apr-subversion-200202261456.tar.bz2
 	http://www.gbevin.com/gentoo/apr-util-subversion-200202261456.tar.bz2

@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.20.1.ebuild,v 1.4 2003/04/29 11:14:22 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-0.20.1.ebuild,v 1.5 2003/05/12 20:52:38 mholzer Exp $
 
 
 DESCRIPTION="A compelling replacement for CVS"
-SRC_URI="http://www.sleepycat.com/update/4.0.14/db-4.0.14.tar.gz
+SRC_URI="http://www.sleepycat.com/update/snapshot/db-4.0.14.tar.gz
 	http://subversion.tigris.org/files/documents/15/3440/${P}.tar.gz"
 HOMEPAGE="http://subversion.tigris.org/"
 
@@ -153,7 +153,7 @@ pkg_postinst() {
 	einfo "Subversion has multiple server types. To enable the http based version"
 	einfo "you must edit /etc/conf.d/apache2 to include both \"-D DAV\" and \"-D SVN\""
 	einfo ""
-	einfo "A repository needs to be created using the ebuild ${N} config command"
+	einfo "A repository needs to be created using the ebuild ${PN} config command"
 	einfo "To allow web access a htpasswd file needs to be created using the"
 	einfo "following command:"
 	einfo "   htpasswd2 -m -c /home/svn/conf/svnusers USERNAME"
