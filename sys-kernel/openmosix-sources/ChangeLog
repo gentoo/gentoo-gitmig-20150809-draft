@@ -1,13 +1,17 @@
 # ChangeLog for sys-kernel/openmosix-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.14 2002/12/18 00:12:48 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.15 2002/12/20 10:16:06 tantive Exp $
+
+*openmosix-sources-2.4.20-r1 (20 Dec 2002)
+
+  20 Dec 2002; Michael Imhof <tantive@gentoo.org>
+  Version bumped: Including openmosix-2.4.20-1 and evms 1.2.1
 
   17 Dec 2002; Brandon Low <lostlogic@gentoo.org>:
   Make all kernel-sources SLOT="${KV}"
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-
 *openmosix-sources-2.4.19-r8 (19 Nov 2002)
 
   19 Nov 2002; Michael Imhof <tantive@gentoo.org>
