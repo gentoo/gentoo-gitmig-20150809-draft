@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.27 2004/02/04 01:50:06 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.28 2004/02/18 09:30:29 augustus Exp $
+
+  18 Feb 2004; <augustus@gentoo.org> blender-2.32.ebuild:
+  Made 2.32 testing ~amd64.
 
 *blender-2.32 (04 Feb 2004)
 

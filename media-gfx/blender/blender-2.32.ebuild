@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.32.ebuild,v 1.1 2004/02/04 01:50:06 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.32.ebuild,v 1.2 2004/02/18 09:30:29 augustus Exp $
 
 inherit flag-o-matic
 replace-flags -march=pentium4 -march=pentium3
@@ -15,7 +15,7 @@ SRC_URI="http://download.blender.org/source/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2 | BL"
-KEYWORDS="~x86 ~ppc" # ~amd64"
+KEYWORDS="~x86 ~ppc ~amd64"
 
 DEPEND="virtual/x11
 	blender-game? ( dev-games/ode )
