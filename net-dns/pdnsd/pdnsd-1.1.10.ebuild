@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.1.10.ebuild,v 1.2 2004/02/23 00:01:31 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/pdnsd/pdnsd-1.1.10.ebuild,v 1.3 2004/02/24 01:59:25 dragonheart Exp $
 
 DESCRIPTION="Proxy DNS server with permanent caching"
 
@@ -72,6 +72,11 @@ src_install() {
 	docinto txt ; dodoc doc/txt/*
 	newdoc doc/pdnsd.conf pdnsd.conf.sample
 
+	# Remind users that the cachedir has moved to /var/cache
+	[ -f /etc/pdnsd/pdnsd.conf ] && \
+		sed -e "s#/var/lib#/var/cache#g" /etc/pdnsd/pdnsd.conf \
+		> ${D}/etc/pdnsd/pdnsd.conf
+
 	exeinto /etc/init.d
 	newexe ${FILESDIR}/pdnsd.rc6 pdnsd
 	newexe ${FILESDIR}/pdnsd.online pdnsd-online
@@ -83,9 +88,10 @@ src_install() {
 	local config=${D}/etc/conf.d/pdnsd-online
 
 	${D}/usr/sbin/pdnsd --help | sed "s/^/# /g" > ${config}
-	echo "# Enter the interface that connects you to the dns servers" >> ${config}
+	echo -e "\n\n# Enter the interface that connects you to the dns servers" >> ${config}
 	echo "# This will correspond to /etc/init.d/net.${IFACE}" >> ${config}
 	echo "IFACE=ppp0" >> ${config}
+	echo "# Command line options" >> ${config}
 	use ipv6 && echo PDNSDCONFIG="-6" >> ${config} \
 		|| echo PDNSDCONFIG="" >> ${config}
 
