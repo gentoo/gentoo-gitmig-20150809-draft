@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-sparc64/gcc-sparc64-3.2.3.ebuild,v 1.2 2003/12/16 03:22:32 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-sparc64/gcc-sparc64-3.2.3.ebuild,v 1.3 2004/01/07 20:49:49 weeve Exp $
 
 
 # Variables 
@@ -17,11 +17,12 @@ SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${TMP_P}/${TMP_P}.tar.bz2"
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
 
-KEYWORDS="~sparc"
+KEYWORDS="sparc"
 
 DEPEND="virtual/glibc
 	>=sys-devel/binutils-2.14.90.0.7
-	>=sys-devel/gcc-config-1.3.1"
+	>=sys-devel/gcc-config-1.3.1
+	!sys-devel/egcs64-sparc"
 
 RDEPEND="virtual/glibc
 	>=sys-devel/gcc-config-1.3.1
