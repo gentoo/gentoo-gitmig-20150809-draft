@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.831 2005/01/02 13:14:40 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.832 2005/01/03 14:48:43 luckyduck Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -166,6 +166,7 @@ dev-java/quartz:servlet-2.4 - Enable servlet-2.4 support
 dev-java/quartz:struts - Enable struts support
 dev-java/sun-jdk:jce - Enable Java Cryptographic Extension Unlimited Strength Policy files
 dev-java/velocity:j2ee - Add j2ee support
+dev-java/xml-xmlbeans:source - Zip the sources and install them
 dev-lang/R:blas - Use the blas library. (virtual/blas)
 dev-lang/R:f2c - Use f2c to translate FORTRAN sources to C sources.
 dev-lang/R:f77 - Use f77 to compile FORTRAN sources.
