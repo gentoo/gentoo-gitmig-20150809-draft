@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre2-r1.ebuild,v 1.2 2002/07/16 04:54:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre2-r1.ebuild,v 1.3 2002/07/21 15:53:46 seemant Exp $
 
 DESCRIPTION="links is a fast lightweight text tand graphic web-browser"
 HOMEPAGE="http://atrey.karlin.mff.cuni.cz/~clock/twibright/links/"
@@ -36,7 +36,7 @@ src_compile ()
 
 	use png \
 		&& myconf="${myconf} --enable-graphics --with-libpng" \
-		|| myconf="${myconf} --disable-graphics --without-libpng"
+		|| myconf="${myconf} --without-graphics --without-libpng"
 
 	use jpeg \
 		&& myconf="${myconf} --with-libjpeg" \
