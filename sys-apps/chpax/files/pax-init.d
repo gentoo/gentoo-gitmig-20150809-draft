@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 
 depend() {
@@ -31,11 +31,12 @@ chpax_flag() {
 		for i in $CHPAX; do
 			#einfo "    with $i"
 			# nonverbose is ultraquiet
-			if [ "$VERBOSE" = "yes" ]; then
+			if [ "$VERBOSE" = "yes" -a -x ${fname} ]; then
+				einfo "-${flag} flagging ${fname} with $i"
 				$i -$flag ${fname}
 				[ $? != 0 ] && eerror "error: $i -$flag ${fname}"
 			else
-				$i -$flag ${fname} 2>/dev/null >/dev/null
+				[ -x ${fname} ] && $i -$flag ${fname} 2>/dev/null >/dev/null
 			fi
 		done
 	#fi
