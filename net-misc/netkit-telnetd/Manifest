@@ -1,14 +1,24 @@
-MD5 a743eed2bc608df6b29baa69e550f968 ChangeLog 4661
-MD5 18641d94839066e87b8be43bbb27fd47 metadata.xml 408
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4f54d37023d8ef903ba4e19a4280edb9 ChangeLog 4799
 MD5 52e0448fc3169d4271ca2725ab28b27c netkit-telnetd-0.17-r3.ebuild 1485
+MD5 18641d94839066e87b8be43bbb27fd47 metadata.xml 408
 MD5 813c0a4e32a41651ad59a56a7dbe0b5c netkit-telnetd-0.17-r4.ebuild 2210
 MD5 e286a898f5dcedfd88328321001d9a17 netkit-telnetd-0.17-r5.ebuild 2217
-MD5 b2d4ab2c718317319cc4d14a2644d5a7 netkit-telnetd-0.17-r6.ebuild 2216
+MD5 deb960fa50c8d82e1d3bfcc85e264b79 netkit-telnetd-0.17-r6.ebuild 2217
 MD5 248ab0551e59a480cbe3d64657fa586f files/digest-netkit-telnetd-0.17-r3 70
-MD5 a766f52cf4ac7ed020e1c3ba2816f4e5 files/digest-netkit-telnetd-0.17-r4 143
-MD5 70a74deba066ae505a7ae79a04559986 files/digest-netkit-telnetd-0.17-r5 143
 MD5 6d23345a3ccb8e7b572752f14aee4860 files/net.issue.sample 117
-MD5 7dbf060bb9168e5f98621fe7c13a4965 files/netkit-telnetd-0.17-cflags-gnu_source.patch 830
 MD5 d741260d55b46b1e6ae6cf923b4542e5 files/netkit-telnetd-0.17-gentoo.patch 3155
 MD5 0bdd0131a5803a2e4a4ec8b3b9fb5039 files/telnetd.xinetd 205
+MD5 a766f52cf4ac7ed020e1c3ba2816f4e5 files/digest-netkit-telnetd-0.17-r4 143
+MD5 7dbf060bb9168e5f98621fe7c13a4965 files/netkit-telnetd-0.17-cflags-gnu_source.patch 830
+MD5 70a74deba066ae505a7ae79a04559986 files/digest-netkit-telnetd-0.17-r5 143
 MD5 999ed3fb65fa707dce76bca8f7f6727a files/digest-netkit-telnetd-0.17-r6 143
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCSmEe5mJXAu5GbtIRAiwrAJ91Jp7FVPaz1TaWV3idefY1lztXOgCcD5do
+1oy64IVfoBQdfxzGaxExioM=
+=Yc7U
+-----END PGP SIGNATURE-----

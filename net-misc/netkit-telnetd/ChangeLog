@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/netkit-telnetd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/ChangeLog,v 1.32 2005/03/30 07:07:22 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-telnetd/ChangeLog,v 1.33 2005/03/30 08:13:47 kugelfang Exp $
+
+  30 Mar 2005; Danny van Dyk <kugelfang@gentoo.org>
+  netkit-telnetd-0.17-r6.ebuild:
+  Marked stable on amd64 wrt Security BUG #87211.
 
   30 Mar 2005; Markus Rothe <corsair@gentoo.org>
   netkit-telnetd-0.17-r6.ebuild:
