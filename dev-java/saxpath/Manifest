@@ -1,4 +1,15 @@
-MD5 497fcf9970eee77d1cb1dd78faed5464 saxpath-1.0.ebuild 987
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 56e78fa864bc057568894df0ece39111 saxpath-1.0.ebuild 1094
+MD5 4f8ef5077f28b1501f81da247e331b0f ChangeLog 378
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 MD5 3d3ef900f2efc99e36d9d4f87026d5b2 files/digest-saxpath-1.0 64
 MD5 cb58720b66697c1ef1f47de80c839e00 files/MANIFEST.MF 276
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBSu3T/rLF9B432nYRAp3CAKClYpimufDypYV8z/1rj+v+10ZWcACcCmhi
+RKjW93jNlnyJ17WYrV9v3Jg=
+=XWEr
+-----END PGP SIGNATURE-----
