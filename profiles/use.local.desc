@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.572 2004/08/19 23:05:47 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.573 2004/08/19 23:55:20 pvdabeel Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -37,6 +37,7 @@ app-emulation/mips64emul:cacheemu - Enables support for cache emulation
 app-emulation/mips64emul:delays - Enables instruction latency/delay emulation
 app-emulation/mips64emul:mips16 - Enables MIPS16 instruction support
 app-emulation/mol:oldworld - Includes Macintosh's OldWorld support
+app-emulation/mol:vnc - Includes vnc support
 app-emulation/mol:sheep - Support for the sheep net driver
 app-emulation/pearpc:jit - Use the JITC-X86 CPU
 app-emulation/qemu:qemu-fast - Enables the vl/qemu-fast on the x86 cpu
