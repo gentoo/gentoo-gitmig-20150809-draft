@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Array-Window/Array-Window-0.4.ebuild,v 1.3 2004/06/25 00:06:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Array-Window/Array-Window-0.4.ebuild,v 1.4 2004/07/14 16:35:01 agriffis Exp $
 
 inherit perl-module
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Array::Window - Calculate windows/subsets/pages of arrays"
 SRC_URI="http://www.cpan.org/modules/by-module/Array/${P}.tar.gz"
 HOMEPAGE="http://www.cpan.org/modules/by-module/Array/${P}.readme"
