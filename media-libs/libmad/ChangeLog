@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/libmad
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/ChangeLog,v 1.1 2003/07/17 09:27:33 raker Exp $
+
+*libmad-0.15.0b (17 Jul 2003)
+
+  17 Jul 2003; Nick Hadaway <raker@gentoo.org> libmad-0.15.0b.ebuild:
+  New ebuild.  Conflicts with media-sound/mad as this does not contain
+  any userland binaries but just a library.  libmad will most likely
+  replace mad in the near future as this is the newer code base.
