@@ -25,4 +25,4 @@ fi
 
 [ -f /etc/init.d/firewall ] && /etc/init.d/firewall start
 
-[ -f /etc/ppp/ip-up.local ] && . /etc/ppp/ip-up.local
+[ -f /etc/ppp/ip-up.local ] && . /etc/ppp/ip-up.local $1 $2 $3 $4 $5 $6

@@ -24,4 +24,4 @@ fi
 
 [ -f /etc/init.d/firewall ] && /etc/init.d/firewall stop
 
-[ -f /etc/ppp/ip-down.local ] && . /etc/ppp/ip-down.local
+[ -f /etc/ppp/ip-down.local ] && . /etc/ppp/ip-down.local $1 $2 $3 $4 $5 $6

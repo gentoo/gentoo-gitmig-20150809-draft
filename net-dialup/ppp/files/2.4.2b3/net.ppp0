@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/files/2.4.2b3/net.ppp0,v 1.2 2003/12/22 15:16:18 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/files/2.4.2b3/net.ppp0,v 1.3 2003/12/22 15:20:43 lanius Exp $
 
 # Misc internal variables
 CMD_LINE=""
@@ -31,7 +31,7 @@ start() {
 
 		if [ "${DEFROUTE}" = "yes" ]
 		then
-			[ -n "$(/sbin/route | egrep 'default')" ] && route del default
+			[ -n "$(/sbin/route -n | egrep '0.0.0.0')" ] && route del default
 		fi
 		# Added hide-password here, can't be too sure...
 		/usr/sbin/pppd ${CMD_LINE} ${MODEMPORT} ${LINESPEED} \
