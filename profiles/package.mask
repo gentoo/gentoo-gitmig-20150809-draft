@@ -252,18 +252,6 @@ gnome-apps/gwcc
 gnome-apps/netleds_applet
 gnome-apps/gnapster
 
-# Breaks Evolution (gonna test to rebuild evo, just don't have time just now).
-# Hope 1.0.7 fixes the problem like stated by the author -- Azarah
-#>=gnome-base/gconf-1.0.5
-
-# Needs newer evo
->=gnome-extra/gal-0.14
-
-# Untested
->=gnome-base/bonobo-1.0.11
->=gnome-base/ORBit-0.5.12
-
-
 # Added this to fix ext3 kernel oops for me.  If drobbins
 # will have a look at it and verify
 =sys-kernel/linux-sources-2.4.13
