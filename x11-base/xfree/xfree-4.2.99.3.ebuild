@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.3.ebuild,v 1.15 2002/12/21 21:09:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.3.ebuild,v 1.16 2002/12/21 21:13:00 seemant Exp $
 
 IUSE="nls 3dfx pam truetype 3dnow sse mmx"
 
@@ -459,7 +459,7 @@ src_install() {
 	ebegin "Moving libGL for dynamic switching"
 	dodir /usr/lib/opengl/xfree/{lib,extensions,include}
 	local x=""
-	for x in ${S}/usr/X11R6/lib/libGL.so* \
+	for x in ${D}/usr/X11R6/lib/libGL.so* \
 		${D}/usr/X11R6/lib/libGL.la \
 		${D}/usr/X11R6/lib/libGL.a \
 		${D}/usr/X11R6/lib/libMesaGL.so
