@@ -1,6 +1,13 @@
 # ChangeLog for net-wireless/bluez-libs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/ChangeLog,v 1.16 2004/08/21 04:26:37 puggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-libs/ChangeLog,v 1.17 2004/09/13 09:23:33 kugelfang Exp $
+
+*bluez-libs-2.10 (13 Sep 2004)
+
+  13 Sep 2004; Danny van Dyk <kugelfang@gentoo.org> bluez-libs-2.10.ebuild,
+  bluez-libs-2.7.ebuild:
+  Removed the -fPIC sed magic for amd64. Not necessary anymore, shared libs now
+  get build with -fPIC. 2.7 stable on amd64.
 
   21 Aug 2004; Douglas Russell,,, <puggy@gentoo.org> -bluez-libs-2.4.ebuild,
   -bluez-libs-2.5.ebuild, bluez-libs-2.7.ebuild:
