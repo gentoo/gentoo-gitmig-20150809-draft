@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/regexxer/regexxer-0.4.ebuild,v 1.6 2004/06/25 02:45:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/regexxer/regexxer-0.4.ebuild,v 1.7 2004/11/30 05:09:19 joem Exp $
 
 DESCRIPTION="An interactive tool for performing search and replace operations"
 HOMEPAGE="http://regexxer.sourceforge.net/"
@@ -12,7 +12,7 @@ IUSE=""
 SLOT="0"
 KEYWORDS="x86 ~ppc"
 
-DEPEND="=dev-cpp/gtkmm-2.2.11
+DEPEND="=dev-cpp/gtkmm-2.2.1*
 		>=dev-libs/libpcre-3.9-r2"
 
 

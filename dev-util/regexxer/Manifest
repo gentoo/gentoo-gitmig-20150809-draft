@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c87b82fe19c915d261ca352b7968c6cf regexxer-0.5.ebuild 764
-MD5 5e5e960e5339c4abfc0a43cb414ced8c regexxer-0.4.ebuild 621
-MD5 98ce0d3bc9aa07ee572aa673f09a2f9f regexxer-0.6.ebuild 857
-MD5 ef0e9cde3c380868ea7d02617be91997 ChangeLog 1200
+MD5 e03854426c39c4f2521824db6fe33950 ChangeLog 1355
 MD5 9ba3ceca3ae81ec759fbb9a277c0e45c metadata.xml 165
+MD5 ab41b98a81b360cfa373a620eff6dd49 regexxer-0.6.ebuild 850
+MD5 ca538753224908357e33b3aad5c24630 regexxer-0.5.ebuild 760
+MD5 4ad26f7ae35f8a7a954983e5d8ce9816 regexxer-0.4.ebuild 617
 MD5 3ac12c5f2b8e2e58b961252d400f2c9b files/digest-regexxer-0.4 64
 MD5 76d865f39afa1066c7a923808c9e058c files/digest-regexxer-0.5 64
 MD5 b4cafef08f3ba8c3ec97e302a3902662 files/digest-regexxer-0.6 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBpP0wI1lqEGTUzyQRAr1+AJ4qkU9BdKYq7dFYIbOLhqfdKXZaiACfYRkg
-8S6wgl3JuJRalMk4xi6QMKo=
-=UL5K
------END PGP SIGNATURE-----
