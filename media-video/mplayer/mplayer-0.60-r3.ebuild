@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.60-r3.ebuild,v 1.1 2002/03/03 21:55:22 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.60-r3.ebuild,v 1.2 2002/03/28 23:06:39 seemant Exp $
 
 # Handle PREversions as well
 MY_PV=${PV/_/}
@@ -32,7 +32,8 @@ RDEPEND="virtual/glibc
 	          media-libs/libpng )
 	esd?    ( media-sound/esound )
 	alsa?   ( media-libs/alsa-lib )
-	ogg?    ( media-libs/libogg )
+	oggvorbis?    ( media-libs/libogg 
+			media-libs/libvorbis )
 	encode? ( media-sound/lame )"
 
 DEPEND="${RDEPEND}
@@ -100,7 +101,7 @@ src_compile() {
 	use svga          || myconf="${myconf} --disable-svga"
 	use fbcon         && myconf="${myconf} --enable-fbdev"
 	use alsa          || myconf="${myconf} --disable-alsa"
-	use ogg           || myconf="${myconf} --disable-vorbis"
+	use oggvorbis     || myconf="${myconf} --disable-vorbis"
 	use encode        && myconf="${myconf} --enable-mencoder --enable-tv"
 	use encode        || myconf="${myconf} --disable-mencoder"
 	use css           && myconf="${myconf} --enable-dvdread --enable-css"

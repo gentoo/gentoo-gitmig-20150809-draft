@@ -1,6 +1,12 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.4 2002/03/03 21:55:22 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.5 2002/03/28 23:06:39 seemant Exp $
+
+*mplayer-0.60-r3 (28 Mar 2002)
+
+  28 Mar 2002; Seemant Kulleen <seemant@gentoo.org> mplayer-0.60-r3.ebuild :
+
+  ogg and vorbis USE flags combined to have oggvorbis USE flag instead.
 
 *mplayer-0.60-r3 (3 March 2002)
 
