@@ -9,3 +9,14 @@
 
  libirmc_sync_la_SOURCES = \
         interface.c interface.h \
+--- plugins/irmc_sync/src/Makefile.am.orig	2004-10-02 01:01:29.897143248 +0100
++++ plugins/irmc_sync/src/Makefile.am	2004-10-02 01:01:47.574455888 +0100
+@@ -21,7 +21,7 @@
+ libirmc_bluetooth_la_SOURCES = \
+ 	irmc_bluetooth.c irmc_bluetooth.h
+ 
+-libirmc_bluetooth_la_LIBADD = -lbluetooth -lsdp -lpthread
++libirmc_bluetooth_la_LIBADD = -lbluetooth -lpthread
+ 
+ libirmc_sync_la_SOURCES = \
+ 	interface.c interface.h \
