@@ -1,6 +1,11 @@
 # ChangeLog for net-www/w3m
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/ChangeLog,v 1.25 2003/06/24 08:24:12 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/ChangeLog,v 1.26 2003/06/29 21:26:31 agriffis Exp $
+
+*w3m-0.4.1-r2 (29 Jun 2003)
+
+  29 Jun 2003; Aron Griffis <agriffis@gentoo.org> w3m-0.4.1-r2.ebuild:
+  Fix bug 23714 by setting set "use_ssl_verify=y" when USE=ssl
 
   24 Jun 2003; Patrick Kursawe <phosphan@gentoo.org> w3m-0.4.1-r1.ebuild:
   Stable for x86, ~alpha (alpha reported working on stable.gentoo.org)
