@@ -1,37 +1,39 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-0.10.040218.ebuild,v 1.7 2004/04/14 20:27:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-0.10.040218.ebuild,v 1.8 2004/05/16 06:08:12 vapier Exp $
 
-inherit eutils games
+inherit eutils games flag-o-matic
 
 DESCRIPTION="UFO: Alien Invasion - X-COM inspired strategy game"
 HOMEPAGE="http://ufo.myexp.de/"
 SRC_URI="http://n.ethz.ch/student/dbeyeler/download/ufoai_source_040218.zip
-	     http://people.ee.ethz.ch/~baepeter/linux_ufoaidemo.zip"
+     http://people.ee.ethz.ch/~baepeter/linux_ufoaidemo.zip"
 
-KEYWORDS="~x86 ~ppc"
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
-S="${WORKDIR}"
 
 DEPEND="virtual/glibc
-	    virtual/x11
-		media-libs/jpeg
-		media-libs/libvorbis
-		media-libs/libogg"
+	virtual/x11
+	media-libs/jpeg
+	media-libs/libvorbis
+	media-libs/libogg"
+
+S=${WORKDIR}
 
 src_unpack() {
-	unpack ${A} || die "unpacking"
+	unpack ${A}
 	cd source/linux
 	epatch ${FILESDIR}/${PV}-Makefile.patch
 }
 
 src_compile() {
+	filter-flags -fstack-protector #51116
 	cd ${S}/source/linux
 	make build_release \
-		 OPTCFLAGS="${CFLAGS}" \
-		 || die "make failed"
+		OPTCFLAGS="${CFLAGS}" \
+		|| die "make failed"
 }
 
 src_install() {
@@ -42,7 +44,7 @@ src_install() {
 	fi
 	exeinto ${GAMES_DATADIR}/${PN}
 	doexe ${S}/source/linux/release${ARCH}-glibc/{ref_gl.so,ref_glx.so,ufo} \
-		|| "doexe ufo"
+		|| "doexe ufo"
 	exeinto ${GAMES_DATADIR}/${PN}/base
 	doexe ${S}/source/linux/release${ARCH}-glibc/game${ARCH}.so \
 		|| die "doexe game${ARCH}.so"
