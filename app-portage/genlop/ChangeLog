@@ -1,6 +1,6 @@
-# ChangeLog for app-admin/genlop
+# ChangeLog for app-portage/genlop
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.1 2003/08/15 12:09:30 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/genlop/ChangeLog,v 1.2 2003/08/16 05:36:20 vapier Exp $
 
 *genlop-0.16.1 (15 Aug 2003)
 
