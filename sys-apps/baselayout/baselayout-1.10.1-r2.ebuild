@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.10.1-r2.ebuild,v 1.2 2004/07/28 00:04:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.10.1-r2.ebuild,v 1.3 2004/07/29 20:02:00 mr_bones_ Exp $
 
 inherit flag-o-matic eutils
 
@@ -24,8 +24,8 @@ DEPEND="virtual/os-headers"
 # a c++ compiler during bootstrap, we cannot depend on it if "bootstrap"
 # or "build" are in USE.
 RDEPEND="${DEPEND}
-	!build? ( !bootstrap? ( 
-		>=sys-apps/gawk-3.1.1-r2 
+	!build? ( !bootstrap? (
+		>=sys-apps/gawk-3.1.1-r2
 		>=sys-apps/util-linux-2.11z-r6
 	) )
 	>=sys-apps/sysvinit-2.84"
@@ -344,7 +344,7 @@ pkg_postinst() {
 	einfo "filesystems, for example /dev or /proc.  That's okay!"
 	source ${ROOT}/usr/share/baselayout/mkdirs.sh
 
-	# This could be done in src_install, which would have the benefit of 
+	# This could be done in src_install, which would have the benefit of
 	# (1) devices.tar.bz2 would show up in CONTENTS
 	# (2) binary installations would be faster... just untar the devices tarball
 	#     instead of needing to run MAKEDEV
