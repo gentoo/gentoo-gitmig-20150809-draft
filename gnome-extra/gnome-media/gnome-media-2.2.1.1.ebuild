@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.2.1.1.ebuild,v 1.4 2003/03/01 14:45:24 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-media/gnome-media-2.2.1.1.ebuild,v 1.5 2003/05/18 10:03:00 liquidx Exp $
 
 inherit gnome2
 
@@ -33,19 +33,4 @@ DEPEND=">=dev-util/pkgconfig-0.12.0
 	${RDEPEND}"
 
 DOCS="AUTHORS COPYING* ChangeLog INSTALL NEWS README TODO"
-
-
-
-src_install() {
-	[ -x ${ROOT}/bin/wc ] && dodir /var/lib/scrollkeeper
-	export GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1"
-	make DESTDIR=${D} install scrollkeeper_localstate_dir=${D}/var/lib/scrollkeeper/
-	if [ -n "${DOCS}" ]
-		then dodoc ${DOCS}
-	fi
-	[ -x ${ROOT}/bin/wc ] && [ `ls -al ${D}/var/lib/scrollkeeper | wc -l` -eq 3 ] && \
-		rm -rf ${D}/var/lib/scrollkeeper
-		# only update scrollkeeper if this package needs it
-	[ ! -d ${D}/var/lib/scrollkeeper ] && SCROLLKEEPER_UPDATE="0"
-}
-		
+USE_DESTDIR="1"
