@@ -1,8 +1,11 @@
 # ChangeLog for net-mail/pine
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/ChangeLog,v 1.3 2002/04/15 20:14:57 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/ChangeLog,v 1.4 2002/08/13 01:49:43 gerk Exp $
 
 *pine-4.44-r4 (15 Apr 2002)
+
+  12 Aug 2002; Mark Guertin <gerk@gentoo.org> :
+  Added ppc to keywords
 
   15 Apr 2002; Jared H. Hudson <jhhudso@gentoo.org> :
 

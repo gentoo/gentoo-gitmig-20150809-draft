@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.44-r4.ebuild,v 1.4 2002/08/01 11:59:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.44-r4.ebuild,v 1.5 2002/08/13 01:49:43 gerk Exp $
 
 S=${WORKDIR}/${PN}${PV}
 DESCRIPTION="A tool for reading, sending and managing electronic messages."
@@ -15,7 +15,7 @@ DEPEND="virtual/glibc
 
 SLOT="0"
 LICENSE="PICO"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 
 src_unpack() {
