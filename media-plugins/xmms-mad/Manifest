@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1d6aa14a2b53e43365d3c7b084d19a2a ChangeLog 5331
+MD5 c2ba462e29fb4cc18daf5099e72e12ae ChangeLog 5433
 MD5 05ab4d4775083f0930841e415df18ad6 metadata.xml 160
 MD5 3983d8ac1250f6d3434194875ba618ff xmms-mad-0.5.6-r1.ebuild 795
-MD5 e00bbedbea48066d78ed7d48e7df2290 xmms-mad-0.8.ebuild 826
 MD5 d77d58fbe6b12f9ce25c814390a8ae3f xmms-mad-0.7.ebuild 824
-MD5 dc0c4dffd9c6efe9761cd017af5975af files/digest-xmms-mad-0.7 64
-MD5 a67a8be5b9a6f622f7edea90002e7bf7 files/xmms-mad-0.5.6-mp3header.patch 448
+MD5 7c1ed1a305415041429df2d5b9d02aea xmms-mad-0.8.ebuild 826
 MD5 350dfbdff3b0bd886ccf5901867a30e3 files/digest-xmms-mad-0.5.6-r1 66
+MD5 dc0c4dffd9c6efe9761cd017af5975af files/digest-xmms-mad-0.7 64
 MD5 fd47546527740710d5314aff9bc28f6e files/digest-xmms-mad-0.8 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCQ+W7ugEuf3OQ0akRAkOIAJ0QY3v3bvPZIWhnsozgPg6ugy5ZrgCeO0S/
-XEjGFRYlsyqnEwkx/B3D6mo=
-=PHja
------END PGP SIGNATURE-----
+MD5 a67a8be5b9a6f622f7edea90002e7bf7 files/xmms-mad-0.5.6-mp3header.patch 448
