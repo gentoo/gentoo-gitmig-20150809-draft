@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/zope/zope-2.6.0-r1.ebuild,v 1.1 2002/11/23 16:58:23 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/zope/zope-2.6.0-r1.ebuild,v 1.2 2002/11/23 17:01:42 g2boojum Exp $
 
 S="${WORKDIR}/Zope-${PV}-src"
 
@@ -57,7 +57,7 @@ src_install() {
 
 pkg_postinst() {
 	einfo "To get zope running you must execure the following:"
-	einfo "\tebuild /var/db/pkg/net-www/${PF}/${P}.ebuild config"
+	einfo "\tebuild /var/db/pkg/net-www/${PF}/${PF}.ebuild config"
 }
 
 pkg_config() {	
