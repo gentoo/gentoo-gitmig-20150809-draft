@@ -1,0 +1,2 @@
+# Masked until bug #60413 is fixed.
+media-libs/xine-lib

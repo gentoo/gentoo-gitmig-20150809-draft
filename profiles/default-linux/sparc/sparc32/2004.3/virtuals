@@ -1,0 +1,11 @@
+sys-apps/reiserfs-utils 	sys-fs/reiserfsprogs
+virtual/bootloader		sys-boot/silo
+virtual/cron			sys-apps/dcron
+virtual/jdk			dev-java/blackdown-jdk
+virtual/jre			dev-java/blackdown-jre
+virtual/kernel			sys-kernel/linux-headers
+virtual/linux-sources		sys-kernel/sparc-sources
+virtual/logger			app-admin/sysklogd
+virtual/mta			mail-mta/ssmtp
+virtual/os-headers		sys-kernel/linux-headers
+x11-libs/xaw			x11-libs/Xaw3d

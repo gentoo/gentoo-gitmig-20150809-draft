@@ -1,0 +1,14 @@
+# Copyright 2004 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc32/2004.3/packages,v 1.1 2004/11/29 00:18:24 eradicator Exp $
+
+*>=sys-libs/glibc-2.3.1-r2
+*net-misc/dhcpcd
+*sys-apps/fbset
+*sys-apps/setserial
+*<sys-apps/shadow-5
+*sys-apps/pam-login
+*app-arch/sharutils
+*sys-libs/gdbm  
+*sys-libs/pam
+*net-misc/openssh
