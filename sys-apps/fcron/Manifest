@@ -8,7 +8,7 @@ MD5 a5be30c509bd6cc09d3857f9342b36d1 files/fcron.conf 743
 MD5 695716cda70606ea9792d7269859fe60 files/fcron.deny 372
 MD5 068bd306e10da92d3c159ee12be338bb files/digest-fcron-2.9.4 67
 MD5 618ee227782ad9a3939c89e932eb2d2e files/fcron.pam 296
-MD5 404125de1cf5587adb06ec1d4924a972 files/fcron.rc6 708
+MD5 f628f56b1098617aed6cf78f13463571 files/fcron.rc6 702
 MD5 f5fbd4d1733d97b08034756b0e9bf3c2 files/fcron-2.0.0-gentoo.diff 492
 MD5 a53b0877ab44c0b8626fbda12bee74e3 files/fcron.allow 370
 MD5 f659349d3f24fa1b57684af8f495efe6 files/fcrontab.pam 506

@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 509892586ab02e3812035b41e20f88c7 ChangeLog 415
 MD5 cb2f6f105e7f8478a5bf659665f2ed49 clrngd-1.0.3.ebuild 774
+MD5 509892586ab02e3812035b41e20f88c7 ChangeLog 415
 MD5 21cd68602737d7c996bceabf6e62c468 metadata.xml 223
-MD5 54f5d5baa13952af62e5a75ae4d89c01 files/clrngd-conf.d 496
-MD5 3a2261f5d5b2b9aa5f5d0045940ce7b5 files/clrngd-init.d 509
+MD5 2547fefbb82be0e3c0ff51ddce43fb2d files/clrngd-conf.d 489
+MD5 4cdd916672c420b4c8bf90bffcf10ea1 files/clrngd-init.d 502
 MD5 08adeed9571a7bc44a80c7ba1c7a1614 files/digest-clrngd-1.0.3 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4EEJHTu7gpaalycRAhBXAJ9Ne5JORYwKeRkI6rxWYtTG0RXUYQCfXxje
-xDXWBK388O4A1OTxAiu2xYg=
-=pQBc
------END PGP SIGNATURE-----

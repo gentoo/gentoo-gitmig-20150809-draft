@@ -6,7 +6,7 @@ MD5 c699d919f1c3463ae0e91f2c28c8b687 metadata.xml 184
 MD5 7bb0220959a949bad3d9726cf05ebcf9 files/digest-apmd-3.0.2-r3 61
 MD5 648c4b025de00c2bf42aafaebed2f4ef files/digest-apmd-3.2.1_p4 130
 MD5 ad21c10734c08e19968e2c8c9560957c files/apmsleep.c.diff 367
-MD5 5bac5591d7c3d1ecc7991860412ef3a8 files/apmd.rc6 678
+MD5 bdb989641f5be7797a3232a8691ebc66 files/apmd.rc6 672
 MD5 02fc246d5b2fde52708927cb672239f1 files/apmd.kernel26x.patch 644
 MD5 253b79375ab72606e4fdf89109ed2c03 files/apmsleep.c.diff.3.2.0 301
 MD5 bed1c6668552bbf528df267c302a75eb files/apmd-3.2.0.kernel26x.patch 627

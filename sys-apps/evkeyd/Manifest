@@ -3,7 +3,7 @@ MD5 bb1dd0a201eb07491b0fcee7f317f7da ChangeLog 571
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 d60a1813b5cdb1b9d88f8aea6655c695 evkeyd-0.1_pre7.ebuild 712
 MD5 884522895a837ba9bb3e9ed77b0370cd evkeyd-0.1_pre2.ebuild 674
-MD5 7ca1e12b70d38f8577c6da9c2843a504 files/evkeyd.rc 494
+MD5 1dfda5c692189c84a1a314f42ace9402 files/evkeyd.rc 488
 MD5 64ad3c5dd053ec5ce8e96dab1748e145 files/digest-evkeyd-0.1_pre2 65
 MD5 0a4ff20cc722d6f82f5e9ad48bedcea8 files/digest-evkeyd-0.1_pre3 65
 MD5 c27007872204d890c558963ce1d0b716 files/digest-evkeyd-0.1_pre7 65

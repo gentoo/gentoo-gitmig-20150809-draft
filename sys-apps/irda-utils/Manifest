@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 5a5540bf9644f2b9e6ee6cd4d57d36f1 ChangeLog 2002
 MD5 e05a80e0d29c4528339a1f5223098d9e irda-utils-0.9.13.ebuild 1198
 MD5 524a8c0eb8b855c4030cd2b362bb6301 irda-utils-0.9.15.ebuild 1584
+MD5 5a5540bf9644f2b9e6ee6cd4d57d36f1 ChangeLog 2002
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 10a500d681ec4e01d3d614987d5c9068 files/digest-irda-utils-0.9.13 69
 MD5 b853c309634581523261878b433cc4ac files/digest-irda-utils-0.9.15 69
-MD5 88bd74309d1676c338e161afc7bdacdf files/irda.conf 321
-MD5 b9d42674fa97997929679735c5417bf1 files/irda.rc 978
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4ikTHTu7gpaalycRAqW7AJ97LxTDKHEo5YwF1/2hhQbnkT8F3ACdHMa8
-ogUkeV8Jy/wZ/++sQ0ZaDjQ=
-=LPJ8
------END PGP SIGNATURE-----
+MD5 d42ec5ba9fd3d9607c498ec0b26dab0e files/irda.conf 313
+MD5 e91114de20b0c54e25886f7a5e7b8a39 files/irda.rc 970

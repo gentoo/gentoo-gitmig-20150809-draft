@@ -2,7 +2,7 @@ MD5 ab92eebd6e80bf6a4778036e26b6918e pcmcia-cs-tools-3.2.3.ebuild 3881
 MD5 d80df0b3bb5e5a3200452ce5f6abdda9 pcmcia-cs-tools-3.2.4.ebuild 3924
 MD5 8192b17a78f2c9eec5cff376ede22bc2 ChangeLog 1924
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 f164e6b2e6e2011b3dbf54c1b6af231c files/pcmcia.rc 1760
+MD5 ad15b8d12fe7a2918eb0507aa54658c3 files/pcmcia.rc 1754
 MD5 da3f5dc50768f0a5d9868dd5bd227329 files/network 768
 MD5 2c8afb6aa4a3d4b602daa1e63b1cb3ee files/pcmcia.conf 308
 MD5 66f0bd315dfa4ce02d104bae08395ef6 files/digest-pcmcia-cs-tools-3.2.3 68

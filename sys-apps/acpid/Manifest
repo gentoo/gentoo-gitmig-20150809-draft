@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7f87ba021e502f28ada350d3930b6b24 ChangeLog 2118
 MD5 f36145bfb43bffa92b213b98cbdf029b acpid-1.0.1.ebuild 979
 MD5 59dafcbde974c87be5ed6c7df71aeb5f acpid-1.0.2-r1.ebuild 1092
-MD5 181626193da65fce4562bb8e2921411b acpid-1.0.2-r2.ebuild 1230
+MD5 7f87ba021e502f28ada350d3930b6b24 ChangeLog 2118
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 6e64405e4d1b9267149008840cfe6c78 files/acpid.rc6 653
+MD5 181626193da65fce4562bb8e2921411b acpid-1.0.2-r2.ebuild 1230
 MD5 3cc2de9822a0f65e061e31184ad2e91f files/default.sh-gentoo.patch 550
+MD5 ee393ad4dd2a122f9382473999330386 files/acpid.rc6 646
 MD5 1ad4b7deead64fc207ea20bd1c340973 files/digest-acpid-1.0.1 62
 MD5 4bf4b207e7f3c9f7a966c62236dd73be files/digest-acpid-1.0.2-r1 62
 MD5 4bf4b207e7f3c9f7a966c62236dd73be files/digest-acpid-1.0.2-r2 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4EAMHTu7gpaalycRAm+0AJ43f4ozdE2K9bf+/K/EmkRjleVJWwCgofSP
-2MWZhk7LDYIZw+6qA9cA8hU=
-=qXHt
------END PGP SIGNATURE-----

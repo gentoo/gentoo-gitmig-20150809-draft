@@ -9,8 +9,8 @@ MD5 f926c1d95d3ae944a569d1688d8b6a0c cpudyn-0.5.0.ebuild 1048
 MD5 66cafade66033a014e49e2b1b8c6957c files/cpudyn-0.5.0-init_conf_updates.patch 1307
 MD5 1d3f888c7c5af12d57517e8c7ebb27d8 files/cpudyn-0.99.0-init_conf_updates.patch 816
 MD5 ea25db65a0cf5097ff0d6c2eddd2665d files/digest-cpudyn-0.4.7-r1 60
-MD5 7177b71403ded492e472013faffff6e2 files/cpudyn.init 2273
-MD5 00b7fb3c4169482415ad673254646773 files/cpudyn.init-0.99.0 3154
+MD5 392491f8ed9f64101ab309e302a7b057 files/cpudyn.init 2266
+MD5 34e7f53e2ddc7769cc24b7eccb2e560a files/cpudyn.init-0.99.0 3147
 MD5 14510794829fd0435f8342da60c5ba46 files/digest-cpudyn-0.99.0 61
 MD5 5a7b58f7786e6926c3a9dc4f6520e09d files/cpudyn.conf.extra 424
 MD5 b013c06b8e09ed9137d72775c991aff1 files/digest-cpudyn-0.4.6 60

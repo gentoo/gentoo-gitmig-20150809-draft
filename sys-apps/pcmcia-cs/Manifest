@@ -6,7 +6,7 @@ MD5 a9e6d70d9212f23d87c40dfb28fbfad4 pcmcia-cs-3.2.7.ebuild 4736
 MD5 4ce7f82001b1ac11ff0a01959a48a10b ChangeLog 15043
 MD5 19fd766bac8e110b4620363a1ace26dd metadata.xml 159
 MD5 157ac5bc22e938e1c2268c1f2610420c files/digest-pcmcia-cs-3.2.5-r1 379
-MD5 7dc151ec146de860d0a1228fd32467f9 files/pcmcia.rc 2045
+MD5 693d508b7dd24e64735b5ba4a16e699b files/pcmcia.rc 2038
 MD5 8662e0e954d0cde8b84f76691c910e7a files/digest-pcmcia-cs-3.2.4 652
 MD5 f8f190b2ddbf95e58f3abf55fc303d27 files/digest-pcmcia-cs-3.2.5 150
 MD5 310551d0852ba9c1fe5c0f8c231c3589 files/digest-pcmcia-cs-3.2.7 287

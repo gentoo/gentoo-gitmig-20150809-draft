@@ -1,25 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 1d98f7de5e130ea07a5987e6a053db91 gawk-3.1.2-r3.ebuild 2899
+MD5 ab06affa77d2bd6d7c7747d9e5ef4b42 gawk-3.1.3-r1.ebuild 3274
 MD5 aac45cec6e6998aa3ceaadffe9f6df94 ChangeLog 6830
 MD5 1a7531ea27e6c20b108152ba125844d5 gawk-3.1.1-r2.ebuild 2386
-MD5 1d98f7de5e130ea07a5987e6a053db91 gawk-3.1.2-r3.ebuild 2899
-MD5 69ede783b7b65505cc6e9eb6108e952d gawk-3.1.3.ebuild 2532
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 ab06affa77d2bd6d7c7747d9e5ef4b42 gawk-3.1.3-r1.ebuild 3274
+MD5 69ede783b7b65505cc6e9eb6108e952d gawk-3.1.3.ebuild 2532
+MD5 9f439b073b0d1903a54a04dca5aa44af files/gawk-3.1.2-input-filesize.patch 13485
 MD5 9ee5f35f388bc0943f9f1df199bdd64d files/digest-gawk-3.1.1-r2 63
 MD5 0a6cc5ae974c8876f6c3e975d7fb95e3 files/digest-gawk-3.1.2-r3 63
-MD5 a3d79dbed6a930b14071084a6c2dbcc7 files/digest-gawk-3.1.3 63
-MD5 1a6ff83a6dd7c5f300803cae1cabd4ae files/gawk-3.1.2-dec-alpha-compiler.diff 461
-MD5 9f439b073b0d1903a54a04dca5aa44af files/gawk-3.1.2-input-filesize.patch 13485
 MD5 a3d79dbed6a930b14071084a6c2dbcc7 files/digest-gawk-3.1.3-r1 63
+MD5 1a6ff83a6dd7c5f300803cae1cabd4ae files/gawk-3.1.2-dec-alpha-compiler.diff 461
+MD5 a3d79dbed6a930b14071084a6c2dbcc7 files/digest-gawk-3.1.3 63
 MD5 c40ec6dfabda5864b7f62fa57d2329bd files/64bitnumfile.patch 340
-MD5 85f970eb9b9224f3ac876b577fb506b7 files/filefuncs/Makefile 950
-MD5 6329d35b6c81a6fd70ab4a902af8e0bd files/filefuncs/filefuncs.c 11028
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4iXZHTu7gpaalycRAqyqAJ4nnvBd3R6b2GKLiUQsvCbBN+GtkwCg2/+K
-msMkGztPPNmSdxLD1FY+E7Q=
-=NfjZ
------END PGP SIGNATURE-----
+MD5 36b5ebb691c9060f293762de7adc9d50 files/filefuncs/Makefile 943
+MD5 4cb59bd814987bd7f2e4d2f8deca16ae files/filefuncs/filefuncs.c 11027

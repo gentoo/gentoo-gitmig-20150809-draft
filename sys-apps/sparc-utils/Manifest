@@ -5,5 +5,5 @@ MD5 1281e21ae801232cac21628092fbc7f9 metadata.xml 420
 MD5 0acc90454a685b5633e6a1e109ec3e9b sparc-utils-1.9-r1.ebuild 1983
 MD5 783037e3661cca44a73e38b5fd112166 files/digest-sparc-utils-1.9-r1 141
 MD5 783037e3661cca44a73e38b5fd112166 files/digest-sparc-utils-1.9-r2 141
-MD5 b894e66f5e82dd597841841e88b88dbd files/audioctl.init 576
+MD5 90419bd873d8ef797f6ac6f982c3bcbf files/audioctl.init 571
 MD5 783037e3661cca44a73e38b5fd112166 files/digest-sparc-utils-1.9 141

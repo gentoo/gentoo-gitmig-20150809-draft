@@ -12,5 +12,5 @@ MD5 a3281f5b866be688f79d9a46d060180a files/digest-hotplug-20030805-r2 151
 MD5 a3281f5b866be688f79d9a46d060180a files/digest-hotplug-20030805-r3 151
 MD5 d8a0d8878d8904a779bda401d86268b1 files/firmware.agent 1188
 MD5 7c4681458effb34f299cbc4b9245098c files/hotplug.functions.patch 522
-MD5 aadc43ca2282b0bb62cbfbc4d027b0d5 files/hotplug.rc 842
+MD5 9e8f03a1ff1b97ad47b38b337d13064f files/hotplug.rc 836
 MD5 92547b2263d5423d874565504d2324f7 files/usb.agent.diff 886

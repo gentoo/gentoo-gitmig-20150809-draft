@@ -4,7 +4,7 @@ MD5 333e61674edc896a286fd728aa025174 daemontools-0.76-r3.ebuild 1229
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 3f0f5c5f8ae8169640d4dff02605d25e files/digest-daemontools-0.76-r3 67
 MD5 3f0f5c5f8ae8169640d4dff02605d25e files/digest-daemontools-0.76-r4 67
-MD5 c329a69905525152503eea37b5880184 files/svscan-0.76-r4 896
-MD5 6e371cd4153175759c52d77f64ef99a1 files/svscan 865
+MD5 282b1da21e9ea8ba89d5e3e3a4f35e8f files/svscan-0.76-r4 890
+MD5 7a9635c4207b2bfd8afc7468b0fa0d28 files/svscan 859
 MD5 c75438b1c3b9d9f67691bd10cf3c8e52 files/0.76-errno.patch 246
 MD5 6ce7442b288dd69b4e456d00690a8344 files/0.76-head-1.patch 791
