@@ -1,11 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20030328.ebuild,v 1.3 2003/06/08 14:36:48 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/winex-20030328.ebuild,v 1.4 2003/06/08 14:42:16 mholzer Exp $
 
 inherit base
 
 DESCRIPTION="distribution of Wine with enhanced DirectX for gaming"
 SRC_URI="mirror://gentoo/${P}.tar.bz2
+	mirror://gentoo/${P}-fake_windows.tar.bz2
+	mirror://gentoo/${P}-misc.tar.bz2
 	mirror://gentoo/${P}-xopenfont.patch"
 HOMEPAGE="http://www.transgaming.com/"
 
@@ -26,21 +28,20 @@ DEPEND="sys-devel/gcc
 	cups? ( net-print/cups )
 	!app-emulation/winex-transgaming"
 
-S=${WORKDIR}/wine
+S=${WORKDIR}/${PN}
 
 src_unpack() {
 	base_src_unpack
 	# Unpacking the miscellaneous files
 	mkdir misc
 	cd misc
-	tar jxvf ${FILESDIR}/${P}-misc.tar.bz2 &> /dev/null
+	tar jxvf ${DISTDIR}/${P}-misc.tar.bz2 &> /dev/null
 	chown root:root *
 	cd ${S}
 	epatch ${DISTDIR}/${P}-xopenfont.patch
 }
 
 src_compile() {
-    
 	cd ${S}
 	local myconf
 
@@ -77,7 +78,6 @@ src_compile() {
 }
 
 src_install () {
-
 	local WINEXMAKEOPTS="prefix=${D}/usr/lib/${PN}"
 	
 	# Installs winex to ${D}/usr/lib/${PN}
@@ -93,7 +93,7 @@ src_install () {
 	# winex wrapper script
 	dodir /usr/lib/winex/.data
 	cd ${D}/usr/lib/winex/.data
-	tar jxvf ${FILESDIR}/${P}-fake_windows.tar.bz2
+	tar jxvf ${DISTDIR}/${P}-fake_windows.tar.bz2
 	chown root:root fake_windows/ -R
 
 	# moving the wrappers to bin/
@@ -125,7 +125,6 @@ src_install () {
 	# Remove the executable flag from those libraries.
 	cd ${D}/usr/lib/${PN}/bin
 	chmod a-x *.so
-		
 }
 
 pkg_postinst() {
@@ -137,4 +136,3 @@ pkg_postinst() {
 	einfo "Manpage has been installed to the system."
 	einfo "\"man winex\" should show it."
 }
-
