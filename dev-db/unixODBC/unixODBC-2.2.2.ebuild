@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.2.ebuild,v 1.1 2002/07/09 18:41:21 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.2.ebuild,v 1.2 2002/07/23 03:08:12 rphillips Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="ODBC Interface for Linux"
@@ -11,6 +11,8 @@ DEPEND="virtual/glibc
 		>=sys-libs/ncurses-5.2
 		qt? ( >=x11-libs/qt-3.0* )"
 LICENSE="GPL-2"
+KEYWORDS="x86"
+SLOT="0"
 
 src_unpack() {
 	unpack ${A}
