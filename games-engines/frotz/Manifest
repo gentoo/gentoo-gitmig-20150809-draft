@@ -1,5 +1,5 @@
-MD5 8c2f7c8bbb5044d7ed6c0f5138d4335d ChangeLog 931
-MD5 ecf7ac4ae90c503d9a49c79a1e25bee5 frotz-2.43.ebuild 909
+MD5 bad092da45234fb67e5b018dd4cac159 frotz-2.43.ebuild 908
+MD5 56ab35a9086f920015507d476220033a ChangeLog 1054
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 32133b094b45d1db7b013484450dc127 files/digest-frotz-2.43 62
 MD5 a4000400c7a971ee3ff869b4f55ef2a3 files/frotz-2.42-makefile.patch 527
