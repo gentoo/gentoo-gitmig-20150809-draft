@@ -3,8 +3,8 @@ MD5 69962f7d89d738c1151fa15491e3eb7f pure-ftpd-1.0.12.ebuild 1978
 MD5 347009af58280306b542bf15394b1b0a pure-ftpd-1.0.14.ebuild 2083
 MD5 0252a914ff69f2e3b4e82eaf78fdb607 pure-ftpd-1.0.11-r1.ebuild 1698
 MD5 fb4de1fa12d896d1126ae2d6a8d9f50e pure-ftpd-1.0.8-r1.ebuild 1433
-MD5 7dfa2a77530f22f6c3079bb61c943ae6 pure-ftpd-1.0.16a.ebuild 2246
-MD5 8a46853af2d2d868ea89e3ca4dd07f15 ChangeLog 2455
+MD5 99583bffef65d64d19b61a7e7da45d4f pure-ftpd-1.0.16a.ebuild 2241
+MD5 45fda41c57b3c1e08cd06a9d0a13740b ChangeLog 2683
 MD5 9d7d0fa7c682d2a7923e2754dc9de95a pure-ftpd-1.0.15.ebuild 2089
 MD5 fc9bcedcf23457ad3f51e5929b443c37 pure-ftpd-1.0.13a.ebuild 1881
 MD5 f754dfcdc5e62960e7edf751ef27ef2b files/digest-pure-ftpd-1.0.13a 70
