@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/dvorak7min
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dvorak7min/ChangeLog,v 1.8 2005/02/09 21:35:06 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dvorak7min/ChangeLog,v 1.9 2005/03/10 01:38:45 j4rg0n Exp $
+
+  09 Mar 2005; Lina Pezzella <j4rg0n@gentoo.org> dvorak7min-1.6.1.ebuild:
+  Stable ppc-macos
 
   09 Feb 2005; Lina Pezzella <j4rg0n@gentoo.org> dvorak7min-1.6.1.ebuild:
   Unstable ppc-macos
