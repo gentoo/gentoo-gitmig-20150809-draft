@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.36 2003/07/08 02:27:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.37 2003/07/08 17:42:36 vapier Exp $
 #
 # devlist: {bass,phoenix,vapier}@gentoo.org
 #
@@ -106,7 +106,7 @@ games_pkg_setup() {
 
 games_src_compile() {
 	[ -x ./configure ] && { egamesconf || die "egamesconf failed"; }
-	[ -e [Mm]akefile] && { emake || die "emake failed"; }
+	[ -e [Mm]akefile ] && { emake || die "emake failed"; }
 }
 
 # pkg_postinst function ... create env.d entry and warn about games group
