@@ -1,5 +1,5 @@
 MD5 c6c85d3ec6fc1a2446f71745893dd476 iputils-020927.ebuild 1387
-MD5 2e82fd5df38a1182b82d9bc83f718db1 iputils-021109-r3.ebuild 2552
+MD5 c363f90dc3b4545899767fde9c3445a3 iputils-021109-r3.ebuild 2548
 MD5 7b43e6ce2d3e4735cb133cd5738240e8 ChangeLog 4599
 MD5 b4615612d4514f12b35fbaf27d3e04fe files/iputils-20020927-no-ether_ntohost.patch 635
 MD5 d6d6f3cb8ff77c826d432ed7eb394c43 files/digest-iputils-020927 68

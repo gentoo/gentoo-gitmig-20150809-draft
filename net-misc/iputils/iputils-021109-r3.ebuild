@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109-r3.ebuild,v 1.6 2004/07/01 21:18:28 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109-r3.ebuild,v 1.7 2004/07/09 20:56:11 kloeri Exp $
 
 inherit flag-o-matic gcc gnuconfig eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.inr.ac.ru/ip-routing/${PN}-ss${PV}-try.tar.bz2
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc ~mips ~alpha arm hppa amd64 ~ia64 ppc64 s390"
+KEYWORDS="x86 ppc ~sparc ~mips alpha arm hppa amd64 ~ia64 ppc64 s390"
 IUSE="static ipv6 uclibc" #doc
 
 DEPEND="virtual/libc
