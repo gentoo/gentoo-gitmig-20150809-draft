@@ -1156,7 +1156,7 @@ gnome-extra/gal2
 >=dev-util/glademm-1.1.0
 
 media-libs/monkey-sound
-media-sound/rhythmbox
+<=media-sound/rhythmbox-0.4.0
 
 # Gabriele Giorgetti <stroke@gentoo.org> ; 12 Aug 2002;
 # gnomeicu for gnome2. Masked for testing 
