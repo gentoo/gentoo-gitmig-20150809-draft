@@ -3,14 +3,14 @@ Hash: SHA1
 
 MD5 71f5da2457b3035539b6012b56c9959d nanoblogger-3.1-r3.ebuild 1670
 MD5 74196f52660799849161f4c759d8d28a ChangeLog 1312
-MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
+MD5 c08d190785ce2e73bba9042c2decf264 metadata.xml 1082
 MD5 1c213e50a94f5d19d1aa1fb5edd93721 files/nb.bashcomp 1389
 MD5 1ab32e1e0e5fef5232ec0b69d002f8eb files/digest-nanoblogger-3.1-r3 66
 MD5 67755be92a7c9db9f65d470a5bd5cc6f files/nanoblogger-3.1-fix-rss2.diff 1204
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCHw8DEZCkKN40op4RAjS4AJ9yOad/c77NYYQypClN9si/ENbPnwCff6mv
-JdsbLIO2j2dFVMx6Q+8uiRI=
-=Aqyy
+iD8DBQFCTUsFEZCkKN40op4RAoBxAJ0YA48IkuADIAYTrqwjTFmwwoCtpACgj+XU
+00X3bXW5xPYi0eHrVCv/MuM=
+=4Yf/
 -----END PGP SIGNATURE-----
