@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/slib/slib-2.4.3.ebuild,v 1.11 2003/03/25 14:18:22 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/slib/slib-2.4.3.ebuild,v 1.12 2003/07/24 18:39:39 taviso Exp $
 
 MY_P=${PN}2d5
 S=${WORKDIR}/${PN}
@@ -10,7 +10,7 @@ HOMEPAGE="http://swissnet.ai.mit.edu/~jaffer/SLIB.html"
 
 SLOT="0"
 LICENSE="public-domain BSD"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="x86 ppc sparc ~alpha"
 
 RDEPEND=">=dev-util/guile-1.4"
 DEPEND="${RDEPEND}
