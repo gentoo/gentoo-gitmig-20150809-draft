@@ -1,24 +1,23 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-build/module-build-0.25.ebuild,v 1.4 2004/10/23 22:44:22 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-build/module-build-0.25.ebuild,v 1.5 2004/10/31 08:49:41 vapier Exp $
 
 inherit perl-module
 
 MY_P="Module-Build-${PV}"
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Build and install Perl modules"
-SRC_URI="mirror://cpan/authors/id/K/KW/KWILLIAMS/${MY_P}.tar.gz"
 HOMEPAGE="http://search.cpan.org/~kwilliams/${MY_P}/"
+SRC_URI="mirror://cpan/authors/id/K/KW/KWILLIAMS/${MY_P}.tar.gz"
 
-SLOT="0"
 LICENSE="|| ( Artistic GPL-2 )"
-KEYWORDS="x86 alpha ~hppa ~mips ~ppc sparc ~amd64"
+SLOT="0"
+KEYWORDS="alpha ~amd64 hppa ~mips ~ppc sparc x86"
 IUSE=""
 
 style="builder"
 
 DEPEND="dev-perl/module-info
-		dev-perl/yaml
-		dev-perl/extutils-parsexs
-		>=dev-perl/Archive-Tar-1.09"
-
+	dev-perl/yaml
+	dev-perl/extutils-parsexs
+	>=dev-perl/Archive-Tar-1.09"
