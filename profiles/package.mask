@@ -1,9 +1,12 @@
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 
+<<<<<<< package.mask
+=======
 #per jnelson's request (30 Jan 2002, drobbins)
 =net-www/boa-0.94.12_pre3
 
+>>>>>>> 1.321
 #mesa 3.5 apparently breaks source compatibilty with 3.4.2 and we should
 #stay with 3.4.2 'cause so many apps depend on it.  (drobbins, 26 Jan 2002)
 #sad but true, we're stuck at 3.4.2.
@@ -345,3 +348,7 @@ dev-lang/tcl-tk
 # instead. Also, this release hasn't been tested with xfs yet, only with
 # reiserfs
 >=sys-apps/grub-0.91
+
+# 1 Feb 2002; Bevin <gbeivn@gentoo.org> : seems not to work for a number
+# of people, should be investigated
+=perl-5.6.1-r2
