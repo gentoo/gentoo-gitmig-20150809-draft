@@ -1,6 +1,6 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.35 2003/05/26 11:14:13 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.36 2003/05/29 21:28:39 method Exp $
 
   26 May 2003; Patrick Kursawe <phosphan@gentoo.org>
   util-linux-2.11z-r3.ebuild:
@@ -16,6 +16,9 @@
   pam fix
 
 *util-linux-2.11z-r3 (24 May 2003)
+
+  29 May 2003; Joshua Brindle <method@gentoo.org> util-linux-2.11z-r3.ebuild:
+  fixed selinux dependancy issue
 
   24 May 2003; Joshua Brindle <method@gentoo.org> util-linux-2.11z-r3.ebuild:
   added support for pam optionally
