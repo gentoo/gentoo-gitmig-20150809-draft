@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/scramble/scramble-0.9.3.ebuild,v 1.1 2005/01/30 06:11:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/scramble/scramble-0.9.5.ebuild,v 1.1 2005/04/02 05:55:00 mr_bones_ Exp $
 
 inherit games
 
