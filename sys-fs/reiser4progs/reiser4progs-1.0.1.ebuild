@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/reiser4progs-1.0.1.ebuild,v 1.4 2004/09/19 21:22:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/reiser4progs-1.0.1.ebuild,v 1.5 2004/09/24 14:52:53 vapier Exp $
 
 DESCRIPTION="reiser4progs: mkfs, fsck, etc..."
 HOMEPAGE="http://www.namesys.com/v4/v4.html"
@@ -13,6 +13,15 @@ IUSE="static debug readline"
 
 DEPEND=">=sys-libs/libaal-${PV}
 	readline? ( sys-libs/readline )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	cat << EOF > run-ldconfig
+#!/bin/sh
+true
+EOF
+}
 
 src_compile() {
 	econf \

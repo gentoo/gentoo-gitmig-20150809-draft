@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/reiser4progs-1.0.2_pre1.ebuild,v 1.1 2004/09/19 21:49:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiser4progs/reiser4progs-1.0.2_pre1.ebuild,v 1.2 2004/09/24 14:52:53 vapier Exp $
 
 inherit eutils
 
@@ -19,6 +19,15 @@ DEPEND=">=sys-libs/libaal-${PV}
 	readline? ( sys-libs/readline )"
 
 S="${WORKDIR}/${MY_P}"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	cat << EOF > run-ldconfig
+#!/bin/sh
+true
+EOF
+}
 
 src_compile() {
 	econf \
