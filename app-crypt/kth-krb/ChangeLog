@@ -1,6 +1,11 @@
 # ChangeLog for app-crypt/kth-krb
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/ChangeLog,v 1.4 2002/10/18 09:04:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/ChangeLog,v 1.5 2002/10/26 15:24:01 aliz Exp $
+
+*kth-krb 1.2.1 (26 Oct 2002)
+
+  26 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> :
+  Security update. Found by Ian <ian@stacken.kth.se>.
 
 *kth-krb 1.2 (18 Oct 2002)
 
