@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.7.ebuild,v 1.4 2004/06/25 00:44:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.7.ebuild,v 1.5 2004/06/27 02:57:07 liquidx Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 IUSE="gtk"
 RDEPEND=">=net-wireless/bluez-libs-2.7
-	!bluez-pan
+	!net-wireless/bluez-pan
 	gtk? ( >=dev-python/pygtk-2 )"
 
 DEPEND="sys-devel/bison
