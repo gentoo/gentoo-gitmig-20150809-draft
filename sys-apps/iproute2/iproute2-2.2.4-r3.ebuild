@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.2.4-r3.ebuild,v 1.1 2001/07/06 05:17:15 jerry Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.2.4-r3.ebuild,v 1.2 2001/08/19 07:00:08 chadh Exp $
 
 A=iproute2-2.2.4-now-ss001007.tar.gz
 S=${WORKDIR}/iproute2
@@ -13,9 +13,13 @@ DEPEND="virtual/glibc tex? ( app-text/tetex )"
 src_unpack() {
     unpack ${A}
 
+    cd ${S}
+    cp Makefile Makefile.orig
+    sed -e '/^KERNEL_INCLUDE/c\' -e 'KERNEL_INCLUDE=/usr/include' Makefile.orig > Makefile
+
     cd ${S}/lib
     cp ll_proto.c ll_proto.c.orig
-    sed -e "36 d" ll_proto.c.orig >| ll_proto.c
+    sed -e "36 d" ll_proto.c.orig > ll_proto.c
 
 #    cp Makefile Makefile.orig
 #    sed -e "s/-O2/${CFLAGS}/g" Makefile.orig > Makefile
