@@ -1,0 +1,8 @@
+# ChangeLog for app-gnustep/gridlock
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-gnustep/gridlock/ChangeLog,v 1.1 2003/07/17 17:08:48 brain Exp $
+
+*gridlock-1.6.1 (17 Jul 2003)
+
+  17 Jul 2003; Michele Balistreri <brain@gentoo.org> gridlock-1.6.1.ebuild:
+  New ebuild.
