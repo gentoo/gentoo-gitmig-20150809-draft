@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/libmustux-0.16.0.ebuild,v 1.5 2004/02/09 12:24:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmustux/libmustux-0.16.0.ebuild,v 1.6 2004/02/09 13:06:35 eradicator Exp $
 
 inherit kde-functions
 
@@ -14,9 +14,13 @@ KEYWORDS="x86"
 
 S="${WORKDIR}/${P}"
 
-DEPEND="virtual/x11
+RDEPEND="virtual/x11
 	>=x11-libs/qt-3
 	media-libs/alsa-lib"
+
+DEPEND="${RDEPEND}
+	sys-devel/automake
+	sys-devel/autoconf"
 
 set-qtdir 3
 
@@ -30,6 +34,8 @@ src_unpack() {
 src_compile() {
 	export QT_MOC=${QTDIR}/bin/moc
 	cd ${S}
+	export WANT_AUTOMAKE=1.4
+	export WANT_AUTOCONF=2.1
 	make -f admin/Makefile.common
 	econf
 	emake || die
