@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/dchub
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dchub/ChangeLog,v 1.15 2004/08/09 02:56:24 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dchub/ChangeLog,v 1.16 2004/11/06 16:53:04 squinky86 Exp $
+
+  06 Nov 2004; Jon Hood <squinky86@gentoo.org> -dchub-0.4.2.ebuild,
+  -dchub-0.4.5.ebuild, dchub-0.5.2.ebuild:
+  Fix homepage irt #70088, thanks Daniel Armyr <daniel.armyr@home.se>, remove
+  old versions.
 
   08 Aug 2004; Jon Hood <squinky86@gentoo.org> dchub-0.5.2.ebuild:
   Stable on x86.
