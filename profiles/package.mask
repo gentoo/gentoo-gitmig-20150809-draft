@@ -8,6 +8,13 @@
 # on libshadow from other ebuilds.  (drobbins, 19 Jan 2002)
 <=sys-apps/shadow-5
 
+# mask older packages due to version change .. new one will be seen
+# by portage as older ....
+#>=net-mail/postfix-2001000
+
+# add GLU and DRI to xfree .. need some testing first
+>=x11-base/xfree-4.2.0-r4
+
 # earlier versions are exploitable
 <sys-apps/at-3.1.8-r7
 
@@ -192,7 +199,8 @@ app-admin/va-systemimager-client
 >=net-dialup/isdn4k-utils-3.1_p1-r2
 >=net-news/knews-1.0.1b
 >=net-www/konqueror-embedded-20010207
->=sys-apps/vcron-3.0_p1-r2
+=sys-apps/vcron-3.0_p1-r2
+=sys-apps/vcron-3.0_p1-r6
 >=media-video/mpeg2-movie-1.5
 >=media-gfx/autotrace-0.26
 =net-ftp/lftp-2.4.3
