@@ -191,7 +191,8 @@ sys-apps/fakeroot
 
 # <george@gentoo.org> (06 Aug 2002)
 # new version, masked for testing
-=dev-libs/gsl-1.2
+# tested Ok
+#=dev-libs/gsl-1.2
 
 # <george@gentoo.org> (06 Aug 2002)
 # new version, masked for testing.
