@@ -1,0 +1,7 @@
+MD5 c8596ae374b674c04d8fa970622d8685 pwdb-0.61-r4.ebuild 1595
+MD5 d9a454d78f5b53f9f25b99baacb52bc7 pwdb-0.61-r3.ebuild 1117
+MD5 9bbe7452503292cd5cbe83ce27db5fdb ChangeLog 1827
+MD5 cd2a9858f40c4a6e7098424f5785b7bc files/pwdb-0.61-hppa.patch 487
+MD5 bfc6ac3622c2b25c39d9f48d8474c2dc files/digest-pwdb-0.61-r3 61
+MD5 bfc6ac3622c2b25c39d9f48d8474c2dc files/digest-pwdb-0.61-r4 61
+MD5 0d0c7a6216f5cf079472dfe36ea9d71c files/passwd 143

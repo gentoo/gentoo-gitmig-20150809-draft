@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.61-r4.ebuild,v 1.9 2003/05/19 00:43:19 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.61-r4.ebuild,v 1.10 2003/05/20 19:25:33 taviso Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Password database"
@@ -24,6 +24,10 @@ src_unpack () {
 }	
 
 src_compile() {
+	# author has specified application to be compiled with `-g` 
+	# no problem, but with ccc `-g` disables optimisation to make
+	# debugging easier, `-g3` enables debugging and optimisation
+	[ "${ARCH}" = "alpha" -a "${CC}" = "ccc" ] && append-flags -g3
 	cp Makefile Makefile.orig
 	cp default.defs default.defs.orig
 	sed -e "s/^DIRS = .*/DIRS = libpwdb/" -e "s:EXTRAS += :EXTRAS += ${CFLAGS} :" \
