@@ -1,6 +1,18 @@
-MD5 c2e8b6c0f9611bd566697585c2816443 ChangeLog 827
-MD5 35b6781a38abce59b92bb4d9000d7f25 pyparsing-1.2.2.ebuild 627
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 878deeed80c774c76ab85da67b14901e ChangeLog 1008
 MD5 2870d314879cf39beb863549b6012a25 pyparsing-1.1.2.ebuild 623
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 6dcae7f668af18f48e66aa8af99ace33 files/digest-pyparsing-1.1.2 67
+MD5 81534ade3c2b4b3042ed6f89b5e020e9 pyparsing-1.3.ebuild 633
+MD5 8bd9226a510a8e8bd6209595d1776e40 pyparsing-1.2.2.ebuild 626
 MD5 3442c5888263e1b113c24c00fd545bca files/digest-pyparsing-1.2.2 67
+MD5 6dcae7f668af18f48e66aa8af99ace33 files/digest-pyparsing-1.1.2 67
+MD5 8832dcfe78c5e16564a520717c76af27 files/digest-pyparsing-1.3 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCTnBUKf2g/qXtneoRAq44AJ91Aa7oDZgaZmcMqFz34uBdaCcxUwCfXRLM
++PD0FBVZlY1XIUpZxK6/iYk=
+=U0TL
+-----END PGP SIGNATURE-----
