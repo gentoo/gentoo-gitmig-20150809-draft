@@ -1,6 +1,13 @@
 # ChangeLog for dev-util/rootstrap
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rootstrap/ChangeLog,v 1.2 2003/11/03 10:54:26 lanius Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rootstrap/ChangeLog,v 1.3 2004/03/02 13:58:51 lanius Exp $
+
+*rootstrap-0.3.18 (02 Mar 2004)
+
+  02 Mar 2004; Heinrich Wendel <lanius@gentoo.org> rootstrap-0.3.13.ebuild,
+  rootstrap-0.3.18.ebuild:
+  version bump
+  use mirror://debian instead of absolute url
 
   28 Sep 2003; Heinrich Wendel <lanius@gentoo.org> rootstrap-0.3.13.ebuild:
   stable bump
