@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-3.6-r1.ebuild,v 1.3 2004/06/25 02:41:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/netbeans-3.6-r1.ebuild,v 1.4 2005/01/25 15:45:37 greg_g Exp $
 
 IUSE="kde gnome"
 
@@ -84,7 +84,7 @@ src_install() {
 	if use kde ; then
 		einfo "Adding KDE support...."
 		DESKTOP_FILE=netbeans-KDE.desktop
-		DESKTOP_DIR=${KDEDIR}/share/applnk/Development
+		DESKTOP_DIR=/usr/share/applnk/Development
 		DESKTOP=${DESKTOP_DIR}/${DESKTOP_FILE}
 		insinto ${DESKTOP_DIR}
 		doins ${FILESDIR}/${DESKTOP_FILE}

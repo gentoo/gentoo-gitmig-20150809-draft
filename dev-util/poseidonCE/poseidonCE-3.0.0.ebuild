@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/poseidonCE/poseidonCE-3.0.0.ebuild,v 1.2 2005/01/10 04:16:22 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/poseidonCE/poseidonCE-3.0.0.ebuild,v 1.3 2005/01/25 15:43:33 greg_g Exp $
 
 IUSE="doc gnome kde"
 DESCRIPTION="A UML CASE-Tool powered by Java"
@@ -67,7 +67,7 @@ src_install() {
 		echo "Exec=/opt/bin/${PN}" >> ${PN}-kde.desktop
 		echo "Icon=/opt/${PN}/lib/poseidon.ico" >> ${PN}-kde.desktop
 		echo "Type=Application" >> ${PN}-kde.desktop
-		insinto ${KDEDIR}/share/applnk/Development
+		insinto /usr/share/applnk/Development
 		doins ${PN}-kde.desktop
 	fi
 
