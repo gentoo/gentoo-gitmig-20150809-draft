@@ -1,16 +1,16 @@
 # ChangeLog for sys-kernel/ck-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.14 2003/12/04 21:42:03 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ck-sources/ChangeLog,v 1.15 2003/12/04 22:37:41 plasmaroo Exp $
 
 *ck-sources-2.4.23-r1 (04 Dec 2003)
 
   04 Dec 2003; Brian Jackson <iggy@gentoo.org> ck-sources-2.4.23-r1.ebuild:
-  add 2.4.23-ck1 fixes 35081, thanks to dominik.stadler@gmx.at
+  Add 2.4.23-ck1 as per bug #35081, thanks to dominik.stadler <at> gmx.at.
 
 *ck-sources-2.4.22-r3 (02 Dec 2003)
 
   02 Dec 2003; Brian Jackson <iggy@gentoo.org> ck-sources-2.4.22-r3.ebuild:
-  version bump for do_brk vuln
+  Version bumped for 'do_brk' vulnerability.
 
 *ck-sources-2.4.20-r2 (01 Dec 2003)
 
@@ -19,15 +19,15 @@
   ck-sources-2.4.20-r4.ebuild, ck-sources-2.4.20-r6.ebuild,
   ck-sources-2.4.22-r1.ebuild, ck-sources-2.4.22-r2.ebuild,
   files/do_brk_fix.patch:
-  fix do_brk vuln
+  Fix the 'do_brk' vulnerability
 
   21 Oct 2003; <iggy@gentoo.org> ck-sources-2.4.22-r2.ebuild:
-  the ck2 ebuild wasn't applying the fixes correctly
+  The -ck2 ebuild wasn't applying the fixes correctly.
 
 *ck-sources-2.4.22-r2 (20 Sep 2003)
 
   20 Sep 2003; <iggy@gentoo.org> ck-sources-2.4.22-r2.ebuild:
-  version bump, plus fixes
+  Version bump, plus fixes.
 
 *ck-sources-2.4.22-r1 (02 Sep 2003)
 
@@ -38,23 +38,22 @@
 
   15 Apr 2003; Brandon Low <lostlogic@gentoo.org> Manifest,
   ck-sources-2.4.20-r6.ebuild:
-  Bump
+  Bump.
 
 *ck-sources-2.4.20-r5 (09 Apr 2003)
   12 Apr 2003; Bob Johnson <livewire@gentoo.org>
-  remove ck5, totally broken.  Con has pulled patch
+  Remove ck5 as it was totally broken. Con has pulled patch.
 
   09 Apr 2003; Brandon Low <lostlogic@gentoo.org> ck-sources-2.4.20-r5.ebuild,
-  manifest:
-  Bump from the legendary Con
+  Manifest: Bump from the legendary Con.
 
 *ck-sources-2.4.20-r4 (27 Feb 2003)
 
   27 Feb 2003; Brandon Low <lostlogic@gentoo.org> ck-sources-2.4.20-r4.ebuild:
-  bump
+  Bump.
 
   17 Dec 2002; Brandon Low <lostlogic@gentoo.org>:
-  Make all kernel-sources SLOT="${KV}"
+  Make all kernel-sources SLOT="${KV}".
 
 *ck-sources-2.4.20-r1 (08 Dec 2002)
 

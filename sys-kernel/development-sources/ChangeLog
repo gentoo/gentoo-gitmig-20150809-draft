@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/development-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.60 2003/12/03 15:36:51 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.61 2003/12/04 22:42:37 plasmaroo Exp $
 
 *development-sources-2.6.0_beta11 (26 Nov 2003)
 
@@ -10,26 +10,26 @@
 
   26 Nov 2003; Brad House <brad_mssw@gentoo.org>
   development-sources-2.6.0_beta11.ebuild:
-  bump to _beta11
+  Bump to _beta11.
 
 *development-sources-2.6.0_beta10 (24 Nov 2003)
 
   24 Nov 2003; Brad House <brad_mssw@gentoo.org>
   development-sources-2.6.0_beta10.ebuild:
-  version bump
+  Version bump.
 
   02 Nov 2003; Brad House <brad_mssw@gentoo.org>
   development-sources-2.6.0_beta9.ebuild:
-  bring development-sources back to vanilla
+  Bring development-sources back to vanilla.
 
   26 Oct 2003; Brad House <brad_mssw@gentoo.org>
   development-sources-2.6.0_beta9.ebuild:
-  did not build on amd64. Patch to enable building, also promise pdc20378 patch.
+  Did not build on amd64. Patch to enable building, also promise pdc20378 patch.
 
   26 Oct 2003; John Mylchreest <johnm@gentoo.org>;
   development-sources-2.6.0_beta9.ebuild:
-  adding a local use to prevent the application of genpatches. this may change
-  in future
+  Adding a local use to prevent the application of genpatches. This may 
+  change in future.
 
 *development-sources-2.6.0_beta9 (26 Oct 2003)
 
@@ -37,11 +37,11 @@
 	
   24 Oct 2003; Brad House <brad_mssw@gentoo.org>
   development-sources-2.6.0_beta8.ebuild:
-  mark as stable on amd64
+  Mark as stable on 'amd64'
 
   24 Oct 2003; John Mylchreest <johnm@gentoo.org>;
   development-sources-2.6.0_beta8.ebuild:
-  Fixing broken symlink, making alsa virtual explicit
+  Fixing broken symlink, making alsa virtual explicit.
 
 *development-sources-2.6.0_beta5-r11 (22 Oct 2003)
 
@@ -55,76 +55,78 @@
   development-sources-2.6.0_beta6.ebuild,
   development-sources-2.6.0_beta7-r5.ebuild,
   development-sources-2.6.0_beta8.ebuild:
-  tidy up and ebuild modifications on test8. unmasking to x86
+  Tidy up and ebuild modifications on test8. Unmasking to 'x86'.
 
   18 Oct 2003; Brad House <brad_mssw@gentoo.org>
   development-sources-2.6.0_beta8.ebuild:
-  patch hasn't made it to the mirrors, put alt location in there until it does
+  Patch hasn't made it to the mirrors, putting in an alternative 
+  location in there until it does.
 
 *development-sources-2.6.0_beta8 (18 Oct 2003)
 
   18 Oct 2003; Brad House <brad_mssw@gentoo.org>
   development-sources-2.6.0_beta8.ebuild:
-  add beta8 ebuild for -test8 kernel + driver patches not yet in mainline
+  Add beta8 ebuild for -test8 kernel + driver patches not yet in mainline.
 
 *development-sources-2.6.0_beta7-r5 (14 Oct 2003)
 
   14 Oct 2003; Brad House <brad_mssw@gentoo.org>
   development-sources-2.6.0_beta7-r5.ebuild:
-  add ebuild for bk5 and additional patches for drivers, especially
+  Add ebuild for bk5 and additional patches for drivers, especially
   those specific to amd64.
 
 *development-sources-2.6.0_beta7-r3 (12 Oct 2003)
 
   12 Oct 2003; John Mylchreest <johnm@gentoo.org>;
   development-sources-2.6.0_beta7-r3.ebuild:
-  bumping, this fixes any oss direct-device errors
+  Bumping, this fixes any oss direct-device errors.
 
 *development-sources-2.6.0_beta7-r2 (10 Oct 2003)
 
   10 Oct 2003; John Mylchreest <johnm@gentoo.org>;
   development-sources-2.6.0_beta7-r2.ebuild:
-  bk bump
+  -bk bump.
 
 *development-sources-2.6.0_beta6-r8 (06 Oct 2003)
 
   06 Oct 2003; John Mylchreest <johnm@gentoo.org>;
   development-sources-2.6.0_beta5-r14.ebuild,
   development-sources-2.6.0_beta6-r8.ebuild:
-  Bumping bk
+  Bumping -bk.
 
 *development-sources-2.6.0_beta6 (28 Sep 2003)
 
   28 Sep 2003; Daniel Ahlberg <aliz@gentoo.org> development-sources-2.6.0_beta6.ebuild:
-  Version bump
+  Version bump.
 
   28 Sep 2003; John Mylchreest <johnm@gentoo.org>;
   development-sources-2.6.0_beta5-r14.ebuild:
-  changing ALSA provide to strict. bumping to test6
+  Changing ALSA provide to strict. Bumping to -test6.
 
 *development-sources-2.6.0_beta5-r14 (27 Sep 2003)
 
   27 Sep 2003; John Mylchreest <johnm@gentoo.org>;
   development-sources-2.6.0_beta5-r14.ebuild:
-  bk bump - alsa-emu10k1 has been updated so you may experience state problems
+  -bk bump - alsa-emu10k1 has been updated so you may experience state 
+  problems.
 
 *development-sources-2.6.0_beta5-r8 (21 Sep 2003)
 
   21 Sep 2003; John Mylchreest <johnm@gentoo.org>;
   development-sources-2.6.0_beta5-r8.ebuild:
-  bk bump. adds synaptic(sp?) touchpad support
+  -bk bump. Adds synaptics touchpad support.
 
 *development-sources-2.6.0_beta5-r4 (17 Sep 2003)
 
   17 Sep 2003; John Mylchreest <johnm@gentoo.org>;
   development-sources-2.6.0_beta5-r4.ebuild, metadata.xml:
-  adding metadata
+  Adding metadata.xml.
 
 *development-sources-2.6.0_beta5-r4 (17 Sep 2003)
 
   17 Sep 2003; John Mylchreest <johnm@gentoo.org>;
   development-sources-2.6.0_beta5-r4.ebuild:
-  bk bump
+  -bk bump.
 
   11 Sep 2003; <plasmaroo@gentoo.org> development-sources-2.5.70.ebuild,
   development-sources-2.5.71.ebuild, development-sources-2.5.72.ebuild,
@@ -143,7 +145,7 @@
 
   02 Sep 2003; John Mylchreest <johnm@gentoo.org>;
   development-sources-2.6.0_beta4-r3.ebuild:
-  bk bump
+  -bk bump.
 
 *development-sources-2.6.0_beta2-r* (28 Aug 2003)
 
@@ -154,65 +156,65 @@
 
   22 Aug 2003; Peter Johanson <latexer@gentoo.org>
   development-sources-2.6.0_beta4.ebuild:
-  Bumpity bump
+  Bumpity bump.
 
 *development-sources-2.6.0_beta3-r9 (22 Aug 2003)
 
   22 Aug 2003; John Mylchreest <johnm@gentoo.org>;
   development-sources-2.6.0_beta3-r9.ebuild:
-  bk bump - conflicted with -r8 bump
+  -bk bump - conflicted with -r8 bump.
 
 *development-sources-2.6.0_beta3-r8 (20 Aug 2003)
 
   20 Aug 2003; Preston A. Elder <prez@gentoo.org>;
   development-sources-2.6.0_beta3-r8.ebuild:
-  bk bump
+  -bk bump.
 
 *development-sources-2.6.0_beta3-r7 (19 Aug 2003)
 
   19 Aug 2003; John Mylchreest <johnm@gentoo.org>;
   development-sources-2.6.0_beta3-r7.ebuild:
-  bk bump
+  -bk bump.
 
 *development-sources-2.6.0_beta3-r6 (18 Aug 2003)
 
   18 Aug 2003; John Mylchreest <johnm@gentoo.org>;
   development-sources-2.6.0_beta3-r6.ebuild:
-  bk bump
+  -bk bump.
 
 *development-sources-2.6.0_beta3-r3 (15 Aug 2003)
 
   15 Aug 2003; John Mylchreest <johnm@gentoo.org>;
   development-sources-2.6.0_beta3-r3.ebuild:
-  bk snapshot bump
+  -bk snapshot bump.
 
   14 Aug 2003; John Mylchreest <johnm@gentoo.org>;
   development-sources-2.6.0_beta3-r1.ebuild:
-  Linking to linux-beta properly now closes #26590
+  Linking to linux-beta properly; now closes bug #26590.
 
 *development-sources-2.6.0_beta3-r1 (11 Aug 2003)
 
   11 Aug 2003; John Mylchreest <johnm@gentoo.org>;
   development-sources-2.6.0_beta3-r1.ebuild:
-  bk bump
+  -bk bump.
 
 *development-sources-2.6.0_beta3 (09 Aug 2003)
 
   09 Aug 2003; Peter Johanson <latexer@gentoo.org>
   development-sources-2.6.0_beta3.ebuild:
-  Bump
+  Bump.
 
 *development-sources-2.6.0_beta2-r8 (09 Aug 2003)
 
   09 Aug 2003; John Mylchreest <johnm@gentoo.org>;
   development-sources-2.6.0_beta2-r8.ebuild:
-  bk update
+  -bk update.
 
 *development-sources-2.6.0_beta2-r7 (08 Aug 2003)
 
   08 Aug 2003; John Mylchreest <johnm@gentoo.org>;
   development-sources-2.6.0_beta2-r7.ebuild:
-  Adding bk pull ebuilds from now on too. bk7 baby :)
+  Adding -bk pull ebuilds from now on too.
 
 *development-sources-2.6.0_beta2 (27 Jul 2003)
 
@@ -244,13 +246,13 @@
 
   03 Jul 2003; Peter Johanson <latexer@gentoo.org>
   development-sources-2.5.74.ebuild:
-  bump
+  Bump.
 
 *development-sources-2.5.73 (22 Jun 2003)
 
   22 Jun 2003; Peter Johanson <latexer@gentoo.org>
   development-sources-2.5.73.ebuild:
-  Bump
+  Bump.
 
   18 Jun 2003; Peter Johanson <latexer@gentoo.org>
   development-sources-2.5.70.ebuild, development-sources-2.5.71.ebuild,
@@ -261,7 +263,7 @@
 
   17 Jun 2003; Brandon Low <lostlogic@gentoo.org>
   development-sources-2.5.72.ebuild:
-  Bump
+  Bump.
 
 *development-sources-2.5.71 (16 Jun 2003)
 
@@ -270,40 +272,39 @@
   development-sources-2.5.65.ebuild, development-sources-2.5.66.ebuild,
   development-sources-2.5.67.ebuild, development-sources-2.5.68.ebuild,
   development-sources-2.5.69.ebuild, development-sources-2.5.71.ebuild:
-  Bump and cleanup
+  Bump and cleanup.
 
 *development-sources-2.5.70 (28 May 2003)
 
   28 May 2003; Robin Johnson <robbat2@gentoo.org> development-sources-2.5.70.ebuild:
-  Bump
+  Bump.
 
 *development-sources-2.5.69 (05 May 2003)
 
   05 May 2003; Brandon Low <lostlogic@gentoo.org>
   development-sources-2.5.69.ebuild:
-  Bump
+  Bump.
 
 *development-sources-2.5.68 (19 Apr 2003)
 
   19 Apr 2003; root <root@gentoo.org> development-sources-2.5.68.ebuild:
-  bump
+  Bump.
 
 *development-sources-2.5.65 (18 Mar 2003)
 
   18 Mar 2003; Seth Chandler <sethbc@gentoo.org>;
   development-sources-2.5.65.ebuild:
-  added 2.5.65 to portage
+  Added 2.5.65 to portage...
 
 *development-sources-2.5.64 (05 Mar 2003)
 
   05 Mar 2003; Brandon Low <lostlogic@gentoo.org>
-  development-sources-2.5.64.ebuild:
-  bump
+  development-sources-2.5.64.ebuild: Bump.
 
 *development-sources-2.5.63 (25 Feb 2003)
 
   25 Feb 2003; Brandon Low <lostlogic@gentoo.org> development-sources-2.5.60.ebuild development-sources-2.5.61.ebuild development-sources-2.5.62.ebuild development-sources-2.5.63.ebuild :
-  Fix ebuild now that mm-sources has been created
+  Fix ebuild now that mm-sources has been created.
 
   25 Feb 2003; Brandon Low <lostlogic@gentoo.org> *-r[0-9].ebuild,
   digest-*-r[0-9]:
@@ -318,7 +319,7 @@
 *development-sources-2.5.58 (15 Jan 2003)
 
   15 Jan 2003; Daniel Robbins <drobbins@gentoo.org>: New development-sources
-  release with akpm patches (mm)
+  Release with akpm patches (mm).
 
   17 Dec 2002; Brandon Low <lostlogic@gentoo.org>: Make all kernel-sources
   SLOT="${KV}"
@@ -326,18 +327,15 @@
 *development-sources-2.5.38 (21 Sep 2002)
 
   18 Sep 2002; Brandon Low <lostlogic@gentoo.org>
-
   Just a version bump, and removed old ebuilds...
 
 *development-sources-2.5.36 (18 Sep 2002)
 
   18 Sep 2002; Brandon Low <lostlogic@gentoo.org>
-
-  Just a version bump
+  Just a version bump.
 
 *development-sources-2.5.30 (02 Sep 2002)
 
   02 Sep 2002; Michael Cohen <mjc@gentoo.org>
-  new development kernel.  remind me if this is more 
-  than two upstream versions old..
+  New development kernel.
 
