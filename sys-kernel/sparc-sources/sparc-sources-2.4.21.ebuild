@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/sparc-sources-2.4.21.ebuild,v 1.3 2003/06/22 19:32:07 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/sparc-sources-2.4.21.ebuild,v 1.4 2003/06/22 19:39:26 joker Exp $
 
 IUSE="build ultra1"
 
@@ -11,15 +11,11 @@ KV=${PV}
 # Kernel ebuilds using the kernel.eclass can remove any patch that you
 # do not want to apply by simply setting the KERNEL_EXCLUDE shell
 # variable to the string you want to exclude (for instance
-# KERNEL_EXCLUDE="evms" would not patch any patches whose names match
-# *evms*).  Kernels are only tested in the default configuration, but
+# KERNEL_EXCLUDE="grsecurity" would not patch any patches whose names match
+# *grsecurity*).  Kernels are only tested in the default configuration, but
 # this may be useful if you know that a particular patch is causing a
 # conflict with a patch you personally want to apply, or some other
 # similar situation.
-
-# This kernel also has support for the local USE flag acpi4linux which
-# activates the latest code from acpi.sourceforge.net instead of the
-# very out of date vanilla version
 
 ETYPE="sources"
 
@@ -28,7 +24,7 @@ inherit kernel || die
 # Documentation on the patches contained in this kernel will be installed
 # to /usr/share/doc/sparc-sources-${PV}/patches.txt.gz
 
-DESCRIPTION="Full sources for the Gentoo Linux kernel"
+DESCRIPTION="Full sources for the Gentoo Sparc Linux kernel"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	mirror://gentoo/patches-${PVR}-sparc.tar.bz2"
 KEYWORDS="~x86 -ppc sparc"
