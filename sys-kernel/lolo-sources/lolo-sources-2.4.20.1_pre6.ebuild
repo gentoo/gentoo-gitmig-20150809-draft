@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/lolo-sources-2.4.20.1_pre3.ebuild,v 1.3 2002/12/18 00:12:48 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/lolo-sources-2.4.20.1_pre6.ebuild,v 1.1 2002/12/20 08:49:15 lostlogic Exp $
 
-IUSE="crypt build"
+IUSE="build crypt"
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -18,14 +18,14 @@ IUSE="crypt build"
 ETYPE="sources"
 
 inherit kernel || die
-OKV="2.4.19"
+OKV="2.4.20"
 # Documentation on the patches contained in this kernel will be installed
 # to /usr/share/doc/lolo-sources-${PV}/patches.txt.gz
 
 DESCRIPTION="Full sources for lostlogic's Gentoo Linux kernel"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	 http://lostlogicx.com/gentoo/patches-${KV}.tar.bz2"
-KEYWORDS="x86 -ppc -sparc "
+KEYWORDS="~x86 -ppc -sparc"
 SLOT="${KV}"
 
 src_unpack() {
@@ -40,4 +40,16 @@ src_unpack() {
 	[ `use crypt` ] || rm 8*
 
 	kernel_src_unpack
+}
+
+pkg_postinst() {
+
+	kernel_pkg_postinst
+
+	einfo "Please be warned, you have just installed a very beta"
+	einfo "patchset of the linux kernel sources."
+	einfo "If there are problems with it, please report them"
+	einfo "by assigning bugs on bugs.gentoo.org to"
+	einfo "lostlogic@gentoo.org"
+
 }

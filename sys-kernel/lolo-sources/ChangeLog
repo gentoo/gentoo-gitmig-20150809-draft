@@ -1,6 +1,24 @@
 # ChangeLog for sys-kernel/lolo-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.23 2002/12/19 23:46:32 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.24 2002/12/20 08:49:15 lostlogic Exp $
+
+*lolo-sources-2.4.20.1_pre6 (20 Dec 2002)
+
+  20 Dec 2002; Brandon Low <lostlogic@gentoo.org> lolo-sources-2.4.20.1_pre6.ebuild:
+  Changes from _pre5:
+  * Upgrade EVMS to 1.2.1
+  * Fix the iptables patches I had and add a bunch more
+  * Start documenting this bloody thing
+  * add CryptoAPI and encrypted loop support
+  * move around some of the quickfixes so they only apply when needed
+
+  TODO for _rc/final:
+  * Figure out the unresolved __br_unlock_usage_bug() issue
+  * Add more hardware support patches
+  * Add FreeS/WAN or Super FreeS/WAN
+  * More documentation
+  * Testing and more testing
+  * Possibly others, what am I forgetting?
 
 *lolo-sources-2.4.20.1_pre5 (19 Dec 2002)
 
