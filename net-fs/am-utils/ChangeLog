@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/am-utils
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/am-utils/ChangeLog,v 1.1 2003/04/10 22:06:42 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/am-utils/ChangeLog,v 1.2 2003/06/03 07:35:22 absinthe Exp $
+
+  03 Jun 2003; Dylan Carlson <absinthe@gentoo.org> am-utils-6.0.9.ebuild:
+  Unmasking x86.
 
 *am-utils-6.0.9 (10 Apr 2003)
 
