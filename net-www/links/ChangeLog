@@ -1,8 +1,11 @@
 # ChangeLog for net-www/links
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/ChangeLog,v 1.22 2003/02/12 08:49:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/ChangeLog,v 1.23 2003/03/01 00:39:55 gmsoft Exp $
 
 *links-2.1_pre7 (30 Jan 2003)
+
+  29 Feb 2003; Guy Martin <gmsoft@gentoo.org> links-2.1_pre7.ebuild :
+  Added ~hppa to keywords.
 
   30 Jan 2003; foser <foser@gentoo.org> links-2.1_pre7.ebuild :
   New version
@@ -10,6 +13,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *links-2.1_pre6 (04 Nov 2002)
+
+  29 Feb 2003; Guy Martin <gmsoft@gentoo.org> links-2.1_pre6.ebuild :
+  Added ~hppa to keywords.
 
   15 Dec 2002; Bjoern Brauel <bjb@gentoo.org> links-2.1_pre6.ebuild :
   Add alpha to KEYWORDS
@@ -20,6 +26,9 @@
   Version bump thanks to: autobot@midsouth.rr.com (AutoBot) in bug #10226.
 
 *links-2.1_pre3 (30 Sep 2002)
+
+  29 Feb 2003; Guy Martin <gmsoft@gentoo.org> links-2.1_pre3.ebuild :
+  Added hppa to keywords.
 
   30 Sep 2002; Seemant Kulleen <seemant@gentoo.org> links-2.1_pre3.ebuild
   files/digest-links-2.1_pre3 :

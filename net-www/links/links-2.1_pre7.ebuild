@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre7.ebuild,v 1.2 2003/02/13 15:36:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/links/links-2.1_pre7.ebuild,v 1.3 2003/03/01 00:39:55 gmsoft Exp $
 
 IUSE="ssl java png X gpm tiff fbcon svga jpeg"
 
@@ -14,7 +14,7 @@ SRC_URI="${HOMEPAGE}/download/${MYP}.tar.bz2"
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa"
 
 # Note: if X or fbcon usegflag are enabled, links will be built in graphic
 # mode. libpng is required to compile links in graphic mode 
