@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/openmosix-user
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/ChangeLog,v 1.23 2004/08/07 16:04:02 voxus Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/ChangeLog,v 1.24 2005/01/18 16:35:21 tantive Exp $
+
+  18 Jan 2005; Michael Imhof <tantive@gentoo.org>
+  openmosix-user-0.3.6-r2.ebuild:
+  Changed CC=gcc to tc-getCC. Closes #70144.
 
 *openmosix-user-0.3.6-r2 (07 Aug 2004)
 

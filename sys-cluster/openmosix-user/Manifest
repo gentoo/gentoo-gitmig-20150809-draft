@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 20c9e3afe3d9d3450221b2fc31c70c80 openmosix-user-0.3.6-r2.ebuild 2456
-MD5 24d8ce242f4d5d7f66a1751d28211ccd ChangeLog 4552
 MD5 41664043c4624dedcfeeb07950f08d13 metadata.xml 312
-MD5 8bba8ee22957c18e2fce4c810644323e files/openmosix.map 382
+MD5 2342b3d222d1985658bb5a0544bb78c9 openmosix-user-0.3.6-r2.ebuild 2491
+MD5 c6e4fa9cfe0a9a03f047fb1dc2800d44 ChangeLog 4684
 MD5 7f4416fd3fa777945fd838f447b7b977 files/openmosix.init 2851
 MD5 2cd0de3f32bf02aa324ddc84dd3a33e6 files/digest-openmosix-user-0.3.6-r2 75
+MD5 8bba8ee22957c18e2fce4c810644323e files/openmosix.map 382
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD4DBQFBw2rcI1lqEGTUzyQRAsg2AJd7dv6yljn9gAaZfeV9JVYmZCIrAKDO3IEL
-Z45u9S4Equf+xo7tBdvAYw==
-=BEDn
+iD8DBQFB7TrkKtJO8LeSoosRAgbWAJ9BbnfxEEfGNAG7kHEeUALOfvok6QCfU+A2
+XLEv1CDkM/EOM6ORzCGyZtc=
+=tNZP
 -----END PGP SIGNATURE-----

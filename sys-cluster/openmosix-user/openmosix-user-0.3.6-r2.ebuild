@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/openmosix-user-0.3.6-r2.ebuild,v 1.1 2004/08/07 16:02:35 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/openmosix-user/openmosix-user-0.3.6-r2.ebuild,v 1.2 2005/01/18 16:35:21 tantive Exp $
+
+inherit toolchain-funcs
 
 OMRELEASE=2
 S=${WORKDIR}/openmosix-tools-${PV}-${OMRELEASE}
@@ -36,7 +38,7 @@ src_unpack() {
 OPENMOSIX=/usr/src/linux
 PROCDIR=/proc/hpc
 MONNAME=mmon
-CC=gcc
+CC=$(tc-getCC)
 INSTALLDIR=/usr
 CFLAGS=-I/m/include -I./ -I/usr/include -I\${OPENMOSIX}/include -I${S}/moslib ${CFLAGS}
 INSTALL=/usr/bin/install
