@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/rpm2targz-8.0.ebuild,v 1.15 2003/05/21 16:17:33 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm2targz/rpm2targz-8.0.ebuild,v 1.16 2003/07/18 19:14:23 tester Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Convert a .rpm file to a .tar.gz archive"
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.slackware.com/config/packages.php"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 sparc ppc alpha hppa"
+KEYWORDS="x86 sparc ppc alpha hppa amd64"
 
 DEPEND="virtual/glibc
 	sys-apps/cpio"
