@@ -1,6 +1,9 @@
 # ChangeLog for www-proxy/squid
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/ChangeLog,v 1.36 2005/02/17 00:10:39 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/ChangeLog,v 1.37 2005/02/17 22:43:28 kloeri Exp $
+
+  17 Feb 2005; Bryan Østergaard <kloeri@gentoo.org> squid-2.5.8.ebuild:
+  Stable on alpha, bug 81997.
 
   16 Feb 2005; Jason Wever <weeve@gentoo.org> squid-2.5.8.ebuild:
   Stable on sparc wrt security bug #81997.
