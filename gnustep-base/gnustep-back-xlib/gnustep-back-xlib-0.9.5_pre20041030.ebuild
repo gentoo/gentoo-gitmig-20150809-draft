@@ -1,16 +1,23 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-xlib/gnustep-back-xlib-0.9.4_pre20040920.ebuild,v 1.2 2004/09/25 16:27:52 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-back-xlib/gnustep-back-xlib-0.9.5_pre20041030.ebuild,v 1.1 2004/10/31 05:40:32 fafhrd Exp $
 
-inherit gnustep
+ECVS_CVS_COMMAND="cvs -q"
+ECVS_SERVER="savannah.gnu.org:/cvsroot/gnustep"
+ECVS_USER="anoncvs"
+ECVS_AUTH="ext"
+ECVS_MODULE="gnustep/core/back"
+ECVS_CO_OPTS="-P -D ${PV/*_pre}"
+ECVS_UP_OPTS="-dP -D ${PV/*_pre}"
+ECVS_TOP_DIR="${DISTDIR}/cvs-src/savannah.gnu.org-gnustep"
+inherit gnustep cvs
 
-S=${WORKDIR}/back
+S=${WORKDIR}/${ECVS_MODULE}
 
 DESCRIPTION="Default X11 back-end component for the GNUstep GUI Library."
-
 HOMEPAGE="http://www.gnustep.org"
-SRC_URI="mirror://gentoo/gnustep-back-${PV}.tar.gz"
-KEYWORDS="~x86"
+
+KEYWORDS="~ppc"
 SLOT="0"
 LICENSE="LGPL-2.1"
 
@@ -18,7 +25,7 @@ PROVIDE="virtual/gnustep-back"
 
 IUSE="${IUSE} opengl xim doc"
 DEPEND="${GNUSTEP_GUI_DEPEND}
-	=gnustep-base/gnustep-gui-0.9.4_pre20040920
+	=gnustep-base/gnustep-gui-${PV}
 	opengl? ( virtual/opengl virtual/glu )
 	virtual/xft
 	=media-libs/freetype-2.1*"
