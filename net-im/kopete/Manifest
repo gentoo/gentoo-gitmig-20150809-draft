@@ -1,8 +1,18 @@
-MD5 bc0929c4c421a5a8957e1e0d409bc666 ChangeLog 5641
-MD5 a1dcb925aebf16c8417cfdc6cd8f128f kopete-0.9.0.ebuild 661
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9adeebd45895a02c1cc8067b91ec191e ChangeLog 5661
 MD5 647223fea91f8588858e175dc584d569 kopete-0.8.0.ebuild 661
-MD5 c449be6a59f3b1bcfbc0d2771a5d8bbd metadata.xml 255
 MD5 85c4d22bc4a395c10045ee1c3b2bf50e kopete-0.8.4.ebuild 639
-MD5 90ef52acdf5af7228f01275d3ee76658 files/digest-kopete-0.9.0 66
+MD5 c449be6a59f3b1bcfbc0d2771a5d8bbd metadata.xml 255
+MD5 a1dcb925aebf16c8417cfdc6cd8f128f kopete-0.9.0.ebuild 661
 MD5 5c3eb8ed77ca4ad237afb16d1ba2879e files/digest-kopete-0.8.0 66
 MD5 e889cac3f5f56a4f88349496d02dd6d6 files/digest-kopete-0.8.4 66
+MD5 90ef52acdf5af7228f01275d3ee76658 files/digest-kopete-0.9.0 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBcv62I1lqEGTUzyQRAnSfAJ4j32KxVYx14rQ7Pa97ClMIlYcc8QCgrJA1
+zV742JUTerb3ubddW/f8bvU=
+=oAax
+-----END PGP SIGNATURE-----
