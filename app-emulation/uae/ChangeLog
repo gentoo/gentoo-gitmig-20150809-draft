@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/uae
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/ChangeLog,v 1.14 2004/03/04 21:04:12 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/ChangeLog,v 1.15 2004/03/05 13:29:09 dholm Exp $
+
+  05 Mar 2004; David Holm <dholm@gentoo.org> uae-0.8.25_pre20040302.ebuild,
+  files/split_cpuemu.pl:
+  Added split script from Michal Januszewski which reduces the amount of time
+  and memory needed to compile the CPU-core.
 
   04 Mar 2004; David Holm <dholm@gentoo.org> uae-0.8.25_pre20040302.ebuild,
   files/install_libscg_gentoo:

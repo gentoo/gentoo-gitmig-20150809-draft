@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.25_pre20040302.ebuild,v 1.2 2004/03/04 21:04:12 dholm Exp $
-
-inherit flag-o-matic
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.25_pre20040302.ebuild,v 1.3 2004/03/05 13:29:09 dholm Exp $
 
 MY_PV="0.8.25-20040302"
 S="${WORKDIR}/${PN}-${MY_PV}"
@@ -22,17 +20,24 @@ DEPEND="X? ( virtual/x11 gtk? x11-libs/gtk+ ) :
 	games-emulation/caps"
 
 src_compile() {
-	ewarn "Compiling the CPU-core requires a substantial amount of RAM."
-	ewarn "Make sure that you have at least 512MB of RAM+SWAP available."
-
-	replace-flags "-O3" "-O2"
 	use sdl && myconf="--with-sdl-sound --with-sdl-gfx"
+
+	cp ${FILESDIR}/split_cpuemu.pl ${S}/src
+	chmod +x ${S}/src/split_cpuemu.pl
 
 	econf ${myconf} \
 		--enable-threads \
 		--enable-scsi-device \
 		--with-libscg-includedir=/usr/include/scsilib \
 		|| die "./configure failed"
+
+	cd ${S}/src
+
+	sed -ir 's#cpuemu_6.\([a-z]*\)#cpuemu_6.\1 cpuemu_7.\1#g' Makefile
+	sed -ir 's#cpuemu_nf_6.\([a-z]*\)#cpuemu_nf_6.\1 cpuemu_nf_7.\1#g' Makefile
+	sed -ir 's#\(./tools/build68k <../src/table68k >cpudefs.c\)#\1\n	./split_cpuemu.pl; mv cpuemu_6.t cpuemu_6.c#' Makefile
+
+	cd ${S}
 
 	emake -j1 || die "emake failed"
 }
