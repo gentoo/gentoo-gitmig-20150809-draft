@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/gentoo-rsync-mirror
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/ChangeLog,v 1.9 2003/09/20 06:16:15 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-rsync-mirror/ChangeLog,v 1.10 2003/12/06 13:11:07 tantive Exp $
+
+  06 Dec 2003; Michael Imhof <tantive@gentoo.org> :
+  Changed the script to log to /var/log.
 
   19 Sep 2003; Seemant Kulleen <seemant@gentoo.org>
   gentoo-rsync-mirror-1.0-r2.ebuild:
