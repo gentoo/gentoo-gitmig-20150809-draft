@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.0.2-r1.ebuild,v 1.7 2003/10/07 20:46:40 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.0.2-r1.ebuild,v 1.8 2003/11/12 21:49:13 usata Exp $
 
 inherit eutils flag-o-matic
 filter-flags "-fstack-protector"
@@ -22,6 +22,7 @@ LICENSE="GPL-2"
 IUSE="X"
 
 DEPEND="!app-text/ptex
+	!app-text/cstetex
 	sys-apps/ed
 	sys-libs/zlib
 	X? ( virtual/x11 )
