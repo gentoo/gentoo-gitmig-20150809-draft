@@ -1,6 +1,6 @@
 # ChangeLog for media-gfx/xv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.15 2003/07/31 21:22:52 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.16 2003/08/03 05:04:18 rphillips Exp $
 
   27 May 2003; Tavis Ormandy <taviso@gentoo.org> xv-3.10a-r3.ebuild:
   ccc support
@@ -11,6 +11,9 @@
   Marked x86 as stable.
 
 *xv-3.10a-r4 (31 Jul 2003)
+
+  02 Aug 2003; Ryan Phillips <rphillips@gentoo.org> xv-3.10a-r4.ebuild :
+  included Martin Ehmsen's patch to the ebuild added jpg, png and tiff support
 
   31 Jul 2003; Ryan Phillips <rphillips@gentoo.org> xv-3.10a-r4.ebuild :
   Added Dean Baender's contribution of changes #20092.  Patch to read photoCDs,

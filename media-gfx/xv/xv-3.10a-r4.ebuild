@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r4.ebuild,v 1.1 2003/07/31 21:22:52 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r4.ebuild,v 1.2 2003/08/03 05:04:18 rphillips Exp $
 
 IUSE="jpeg tiff png zlib X"
 
@@ -34,6 +34,20 @@ src_unpack() {
 }
 
 src_compile() {
+	if [ `use jpeg` ]
+	then
+		export CFLAGS="${CFLAGS} -DDOJPEG"
+	fi
+
+	if [ `use png` ]
+	then
+		export CFLAGS="${CFLAGS} -DDOPNG"
+	fi
+
+	if [ `use tiff` ]
+	then
+		export CFLAGS="${CFLAGS} -DDOTIFF"
+	fi
 	mv Makefile Makefile.orig
 	sed -e "s:CCOPTS = -O:CCOPTS = ${CFLAGS}:" \
 		Makefile.orig > Makefile
