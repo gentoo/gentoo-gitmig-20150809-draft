@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdist/rdist-6.1.5.ebuild,v 1.7 2004/03/10 14:36:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdist/rdist-6.1.5-r1.ebuild,v 1.1 2004/03/10 14:36:58 agriffis Exp $
 
 DESCRIPTION="Remote software distribution system"
 HOMEPAGE="http://www.magnicomp.com/rdist/rdist.shtml"
@@ -8,13 +8,22 @@ SRC_URI="http://www.magnicomp.com/download/rdist/${P}.tar.gz"
 
 LICENSE="RDist"
 SLOT="1"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc alpha ia64"
 
-DEPEND="sys-devel/bison"
-RDEPEND=""  # bison only needed for compile
+DEPEND="dev-util/yacc >=sys-apps/sed-4"
+RDEPEND=""  # yacc only needed for compile
+
+src_unpack() {
+	unpack ${A} && cd ${S} || die
+
+	# Fix for bug 41781: Build with yacc instead of bison and change
+	# the following #define (10 Mar 2004 agriffis)
+	sed -i -e 's/^\(#define ARG_TYPE\).*/\1 ARG_STDARG/' config/os-linux.h
+	assert "sed ARG_TYPE failed"
+}
 
 src_compile() {
-	emake YACC="bison -y" || die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install() {
