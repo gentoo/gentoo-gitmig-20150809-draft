@@ -1,0 +1,9 @@
+# ChangeLog for net-www/mod_watch
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_watch/ChangeLog,v 1.1 2003/06/22 19:19:53 woodchip Exp $
+
+*mod_watch-3.18 (22 Jun 2003)
+
+  22 Jun 2003; Donny Davies <woodchip@gentoo.org> mod_watch-3.18.ebuild,
+  files/mod_watch.conf:
+  Initial import; from #14806.
