@@ -1,0 +1,11 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/ChangeLog,v 1.1 2002/05/21 08:30:32 blocke Exp $
+
+*vilistextum-2.6.2 (21 May 2002)
+
+  21 May 2002; Bruce A. Locke <blocke@shivan.org> vilistextum-2.6.2.ebuild :
+
+  Update to 2.6.2
+
+
