@@ -1,4 +1,0 @@
-probeall /dev/dvb dvb-ttpci
-alias /dev/dvb/* /dev/dvb
-below dvb-ttpci alps_bsrv2 grundig_29504-401 grundig_29504-491 \
-                ves1820 alps_tdmb7 alps_tdlb7 stv0299 evdev
