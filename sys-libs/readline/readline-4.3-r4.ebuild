@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r4.ebuild,v 1.3 2002/12/15 10:44:24 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.3-r4.ebuild,v 1.4 2002/12/25 23:05:29 azarah Exp $
 
 inherit eutils
 
 # Official patches
 PLEVEL="x001 x002"
 
-S=${WORKDIR}/${P}
+S="${WORKDIR}/${P}"
 DESCRIPTION="Another cute console display library"
 SRC_URI="ftp://ftp.gnu.org/gnu/readline/${P}.tar.gz
 	 ftp://gatekeeper.dec.com/pub/GNU/readline/${P}.tar.gz
@@ -30,11 +30,12 @@ src_unpack() {
 	cd ${S}
 	for x in ${PLEVEL//x}
 	do
-		patch -p0 < ${DISTDIR}/${PN}${PV/\.}-${x} || die
+		epatch ${DISTDIR}/${PN}${PV/\.}-${x}
 	done
-	cat ${FILESDIR}/readline4.3-mbutil.patch | patch -p0
 
-
+	# Fix segfaults in Python when using latin-1 chars in interactive mode
+	# (bug #11762).
+	epatch ${FILESDIR}/readline4.3-mbutil.patch
 }
 
 src_compile() {

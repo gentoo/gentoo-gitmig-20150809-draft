@@ -1,15 +1,20 @@
 # ChangeLog for sys-libs/readline
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.13 2002/12/13 11:00:46 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.14 2002/12/25 23:05:29 azarah Exp $
 
- 12 Dec 2002; Jan Seidel <tuxus@gentoo.org> readline-4.2a-r1.ebuild :
-   Added mips to keywords.
+  12 Dec 2002; Jan Seidel <tuxus@gentoo.org> readline-4.2a-r1.ebuild :
+  
+  Added mips to keywords.
 
 *readline-4.3-r4 (09 Dec 2002)
+
   09 Dec 2002; Jon Portnoy <avenj@gentoo.org> readline-4.3-r4.ebuild :
 
   Added a patch from upstream maintainer to fix bug:
-  http://bugs.gentoo.org/show_bug.cgi?id=11762
+  
+    http://bugs.gentoo.org/show_bug.cgi?id=11762
+
+  (Python segfaults when using latin-1 chars in interactive mode)
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
