@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/snavigator/snavigator-5.0.ebuild,v 1.6 2002/10/30 21:48:52 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/snavigator/snavigator-5.0.ebuild,v 1.7 2002/11/17 09:17:42 vapier Exp $
 
 S=${WORKDIR}/build
 
@@ -17,14 +17,11 @@ DEPEND=">=sys-libs/glibc-2.2.4"
 SN="/usr/snavigator"
 
 src_unpack() {
-
-    mkdir build
-    unpack  ${A}
-
+	mkdir build
+	unpack  ${A}
 }
 
 src_compile() {
-
 	../source/configure \
 		--host=${CHOST} \
 		--prefix=${SN} \
@@ -33,7 +30,6 @@ src_compile() {
 		--datadir=${SN}/share || die
 
 	make all-snavigator || die
-
 }
 
 fix_makefile() {
@@ -51,8 +47,7 @@ fix_destdir_bindir() {
 	fix_makefile "$1" "\$(DESTDIR)\$(bindir)" "${D}${SN}/bin"
 }
 
-src_install () {
-
+src_install() {
 	# don't know why the DESTDIR var isn't propagated
 	fix_destdir snavigator/misc/libutils
 	fix_destdir snavigator/db
@@ -65,7 +60,7 @@ src_install () {
 	fix_destdir snavigator/demo
 	fix_destdir snavigator/etc/sn_toolchains
 	fix_destdir snavigator/etc
-	
+
 	# some strange propagation goes on here, just replacing it away
 	fix_destdir_bindir snavigator/db
 	fix_destdir_bindir snavigator/snavigator/unix
@@ -78,7 +73,7 @@ src_install () {
 	fix_destdir_bindir snavigator/parsers/cobol
 	fix_destdir_bindir snavigator/parsers/python
 	fix_destdir_bindir snavigator/parsers/tcl
-	
+
 	fix_makefile snavigator/sdk/api/c/database/examples   "\$(DESTDIR)\$(cdbdir)"           "${D}/usr/snavigator/share/sdk/api/c/database/examples"
 	fix_makefile snavigator/sdk/api/tcl/database/examples "\$(DESTDIR)\$(tcldbdir)"         "${D}/usr/snavigator/share/sdk/api/tcl/database/examples"
 	fix_makefile snavigator/sdk/api/tcl/misc              "\$(DESTDIR)\$(misctcldir)"       "${D}/usr/snavigator/share/sdk/api/tcl/misc"
@@ -118,9 +113,8 @@ src_install () {
 
 	make DESTDIR=${D} \
 		install-snavigator || die
-	
+
 	chmod -Rf 755 ${D}/usr/share/doc/${P}/demos
-	mkdir -p ${D}/etc/env.d
+	dodir /etc/env.d
 	echo "PATH=/usr/snavigator/bin" > ${D}/etc/env.d/10snavigator
-	
 }
