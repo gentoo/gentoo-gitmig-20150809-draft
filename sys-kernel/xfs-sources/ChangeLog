@@ -1,7 +1,25 @@
 # ChangeLog for sys-kernel/xfs-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.10 2002/12/23 00:42:06 viz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/xfs-sources/ChangeLog,v 1.11 2002/12/24 02:13:30 viz Exp $
 
+*xfs-sources-2.4.29_pre2 (24 Dec 2002)
+
+  24 Dec 2002; Tobias Eichert <viz@gentoo.org> xfs-sources-2.4.20_pre2.ebuild:
+
+  New version.
+
+  Since my first version broke some stuff I made a new
+  one containing minor bugfixes. Now it should compile
+  all the way through..
+
+  New from xfs-sources-2.4.20_pre1:
+
+  - Update imon to recent version
+  - Removed openwall for further testing
+  - I tried several configs this time ;)
+
+  Please test and send bugreports.
+  
 *xfs-sources-2.4.20_pre1 (22 Dec 2002)
 
   22 Dec 2002; Tobias Eichert <viz@gentoo.org> xfs-sources-2.4.20_pre1.ebuild:
