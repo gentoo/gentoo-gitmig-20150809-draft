@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/latex2html-2002.2.ebuild,v 1.7 2004/06/25 02:14:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/latex2html/latex2html-2002.2.ebuild,v 1.8 2004/07/23 19:51:51 tgall Exp $
 
 MY_P=${P/./-}
 S=${WORKDIR}/${MY_P}
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.latex2html.org/"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc alpha amd64"
+KEYWORDS="x86 ppc sparc alpha amd64 ppc64"
 IUSE="gif png"
 
 DEPEND="virtual/ghostscript
