@@ -1,6 +1,13 @@
 # ChangeLog for net-news/pan
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-news/pan/ChangeLog,v 1.8 2002/06/08 05:05:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/pan/ChangeLog,v 1.9 2002/06/19 16:49:48 stroke Exp $
+
+*pan-0.12.0 (19 Jun 2002)
+
+  19 Jun 2002; Gabriele Giorgetti <stroke@gentoo.org> pan-0.12.0.ebuild:
+
+  New version, and dependencies update.
+
 
 *pan-0.11.94 (7 Jun 2002)
 
