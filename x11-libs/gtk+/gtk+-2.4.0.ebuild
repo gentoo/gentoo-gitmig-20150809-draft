@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.4.0.ebuild,v 1.2 2004/03/30 05:22:29 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.4.0.ebuild,v 1.3 2004/04/05 21:13:28 vapier Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.4/${P}.tar.bz2"
 
 LICENSE="LGPL-2"
 SLOT="2"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc ~amd64 ~hppa ~ia64 ~mips"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha hppa ~amd64 ~ia64"
 IUSE="doc tiff jpeg"
 
 RDEPEND="virtual/x11
@@ -20,7 +20,6 @@ RDEPEND="virtual/x11
 	>=media-libs/libpng-1.2.1
 	jpeg? ( >=media-libs/jpeg-6b-r2 )
 	tiff? ( >=media-libs/tiff-3.5.7 )"
-
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	doc? ( >=dev-util/gtk-doc-1 )"
@@ -71,7 +70,7 @@ src_install() {
 	dodir /etc/env.d
 	echo "GDK_USE_XFT=1" >${D}/etc/env.d/50gtk2
 
-	dodoc AUTHORS COPYING ChangeLog* HACKING INSTALL NEWS* README*
+	dodoc AUTHORS ChangeLog* HACKING INSTALL NEWS* README*
 
 }
 
@@ -83,13 +82,5 @@ pkg_postinst() {
 	einfo "For gtk themes to work correctly after an update, you might have to rebuild your theme engines."
 	einfo "Executing 'qpkg -f -nc /usr/lib/gtk-2.0/2.2.0/engines | xargs emerge' should do the trick if"
 	einfo "you upgrade from gtk+-2.2 to 2.4 (requires gentoolkit)."
-
-	env-update
-
-}
-
-pkg_postrm() {
-
-	env-update
 
 }
