@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/aumix
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/ChangeLog,v 1.22 2004/04/26 03:55:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/ChangeLog,v 1.23 2004/04/26 22:31:04 geoman Exp $
+
+  26 Apr 2004; Stephen P. Becker <geoman@gentoo.org> aumix-2.8-r1.ebuild,
+  aumix-2.8.ebuild:
+  2.8 stable on mips, ~mips keyword added to 2.8-r1
 
   25 Apr 2004; Aron Griffis <agriffis@gentoo.org> aumix-2.7-r4.ebuild:
   Add die following econf for bug 48950

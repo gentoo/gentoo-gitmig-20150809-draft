@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.8-r1.ebuild,v 1.1 2004/04/18 08:44:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/aumix-2.8-r1.ebuild,v 1.2 2004/04/26 22:31:04 geoman Exp $
 
 IUSE="gtk gtk2 gnome gpm nls"
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://jpj.net/~trevor/aumix/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~hppa ~amd64 ~sparc ~alpha ~ia64"
+KEYWORDS="~x86 ~hppa ~amd64 ~sparc ~alpha ~ia64 ~mips"
 
 #alsa support is broken in 2.8	alsa? ( >=media-libs/alsa-lib-0.9.0_rc1 )
 DEPEND=">=sys-libs/ncurses-5.2
