@@ -52,3 +52,5 @@ move net-misc/ksambaplugin kde-base/kdenetwork
 move media-gfx/kolourpaint kde-base/kdegraphics
 move x11-misc/kmousetool kde-base/kdeaccessibility
 move net-www/drupal www-apps/drupal
+slotmove sys-libs/chipcard-client 0 2
+slotmove sys-libs/chipcard-server 0 2
