@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.71 2003/11/30 11:42:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.72 2003/12/01 04:51:14 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -998,7 +998,7 @@ unpack_pdv() {
 		if [ ${istar} -eq 1 ] ; then
 			tail -c +$((${tailskip}+1)) ${src} 2>/dev/null \
 				| head -c $((${metaskip}-${tailskip})) \
-				| tar -xf -
+				| tar -xf --no-same-owner -
 		else
 			tail -c +$((${tailskip}+1)) ${src} 2>/dev/null \
 				| head -c $((${metaskip}-${tailskip})) \
@@ -1065,13 +1065,13 @@ unpack_makeself() {
 	local filetype="`file -b ${tmpfile}`"
 	case ${filetype} in
 		*tar\ archive)
-			tail -n +${skip} ${src} | tar -xf -
+			tail -n +${skip} ${src} | tar -xf --no-same-owner -
 			;;
 		bzip2*)
-			tail -n +${skip} ${src} | bzip2 -dc | tar -xf -
+			tail -n +${skip} ${src} | bzip2 -dc | tar -xf --no-same-owner -
 			;;
 		gzip*)
-			tail -n +${skip} ${src} | tar -xzf -
+			tail -n +${skip} ${src} | tar -xzf --no-same-owner -
 			;;
 		*)
 			false
