@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Joe Bormolini <lordjoe@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbkeysconf/bbkeysconf-1.3.ebuild,v 1.1 2001/08/31 00:29:07 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbkeysconf/bbkeysconf-1.3.ebuild,v 1.2 2001/09/02 05:51:01 lordjoe Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -11,7 +11,7 @@ HOMEPAGE="http://movingparts.thelinuxcommunity.org"
 
 DEPEND=">=x11-libs/qt-x11-2.3.0
 	>=x11-wm/blackbox-0.61
-	>=x11-wm/bbkeys-0.8.2"
+	>=x11-misc/bbkeys-0.8.2"
 
 src_compile() {
 
