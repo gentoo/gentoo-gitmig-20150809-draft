@@ -1,8 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-2.6-r1.ebuild,v 1.3 2004/03/30 18:46:34 eradicator Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnump3d/gnump3d-2.7.ebuild,v 1.1 2004/03/30 18:46:34 eradicator Exp $
 
 DESCRIPTION="A streaming server for MP3, OGG vorbis and other streamable files"
 HOMEPAGE="http://www.gnump3d.org/"
@@ -10,7 +8,7 @@ SRC_URI="http://savannah.gnu.org/download/${PN}/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 IUSE=""
 
@@ -20,9 +18,12 @@ RDEPEND=">=dev-lang/perl-5.8.0"
 
 LIBDIR=/usr/lib/gnump3d
 
+pkg_setup() {
+	enewuser gnump3d '' '' '' nogroup || die
+}
+
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-gentoo.patch
 	cd ${S}/bin
 	for binary in gnump3d-index gnump3d2; do
 		sed -i "s,#!/usr/bin/perl,#!/usr/bin/perl -I${LIBDIR},g" $binary
@@ -39,14 +40,14 @@ src_install() {
 	dodir /usr/share/gnump3d; cp -R templates/* ${D}/usr/share/gnump3d/
 	insinto /etc/gnump3d
 	doins etc/mime.types
-	sed -e "s,PLUGINDIR,${LIBDIR},g" \
-		-e 's,^user *= *\(.*\)$,user = gnump3d,g' \
-		etc/gnump3d.conf >${D}/etc/gnump3d/gnump3d.conf
+	doins etc/gnump3d.conf
+	dosed "s,PLUGINDIR,${LIBDIR},g" /etc/gnump3d/gnump3d.conf
+	dosed 's,^user *= *\(.*\)$,user = gnump3d,g' /etc/gnump3d/gnump3d.conf
 
 	dodoc AUTHORS ChangeLog README COPYING TODO
 
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/${P}-initd gnump3d
+	newexe ${FILESDIR}/${PN}.init.d gnump3d
 	dodir /etc/env.d
 	cat >${D}/etc/env.d/50gnump3d <<EOF
 # PERL5LIB="${LIBDIR}"
@@ -62,9 +63,8 @@ EOF
 }
 
 pkg_postinst() {
-	enewuser gnump3d '' '' '' nogroup
-	chown -R gnump3d /var/log/gnump3d
-	chown -R gnump3d /var/cache/gnump3d
+	chown -R gnump3d:nogroup /var/log/gnump3d
+	chown -R gnump3d:nogroup /var/cache/gnump3d
 	while read line; do einfo "${line}"; done <<EOF
 
 Please edit your /etc/gnump3d/gnump3d.conf before running
