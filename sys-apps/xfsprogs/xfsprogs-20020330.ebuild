@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsprogs/xfsprogs-20020330.ebuild,v 1.1 2002/03/31 01:21:16 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsprogs/xfsprogs-20020330.ebuild,v 1.2 2002/03/31 04:20:26 drobbins Exp $
 
 S=${WORKDIR}/cmd/${PN}
 DESCRIPTION="xfs filesystem utilities"
@@ -22,10 +22,20 @@ src_compile() {
 	# 3) we remove a hard-coded "-O1"
 	# 4) we fix some Makefile-created library symlinks that contains absolute paths
 	cp include/builddefs include/builddefs.orig
-	sed -e 's:^PKG_\(.*\)_DIR = \(.*\)$:PKG_\1_DIR = ${DESTDIR}\2:' -e "s:/usr/share/doc/${PN}:/usr/share/doc/${PF}:" -e 's:-O1::' -e '/-S $(PKG/d' include/builddefs.orig > include/builddefs || die
+	sed -e "s:/usr/share/doc/${PN}:/usr/share/doc/${PF}:" \
+	-e 's:-O1::' \
+	-e '/-S $(PKG/d' \
+	-e 's:^PKG_\(.*\)_DIR = \(.*\)$:PKG_\1_DIR = ${DESTDIR}\2:' \
+	include/builddefs.orig > include/builddefs || die
 	emake || die
 }
 
 src_install() {
 	make DESTDIR=${D} DK_INC_DIR=${D}/usr/include/disk install install-dev || die
+	insinto /usr/lib
+	doins ${S}/libhandle/libhandle.la
+	cd ${D}/lib
+	ln -s ../usr/lib/libhandle.a libhandle.a
+	cd ${D}/usr/lib
+	ln -s ../../lib/libhandle.so libhandle.so
 }
