@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/sed
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.19 2003/02/24 22:34:59 dragon Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.20 2003/03/04 21:34:05 lostlogic Exp $
+
+*sed-4.0.5-r1 (04 Mar 2002)
+
+  04 Mar 2003; Brandon Low <lostlogic@gentoo.org> sed-4.0.5-r1.ebuild :
+  Install nls files with sed, clean up the install for USE=build.
+  This is marked unstable on all arches, but can and should VERY quickly 
+  be moved to stable.
 
   20 Feb 2003; Zach Welch <zwelch@gentoo.org> sed-4.0.5.ebuild :
   Added arm to keywords.
