@@ -1,6 +1,11 @@
 # ChangeLog for net-im/mu-conference
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/mu-conference/ChangeLog,v 1.13 2004/07/05 16:38:40 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/mu-conference/ChangeLog,v 1.14 2004/07/06 18:07:27 humpback Exp $
+
+  06 Jul 2004; Gustavo Felisberto <humpback@gentoo.org>;
+  +files/mu-conference-conf.d, +files/muc-transport.init-r2,
+  mu-conference-0.6.0-r2.ebuild:
+  Now it gets the config file and pid from the configuration in conf.d
 
   05 Jul 2004; David Holm <dholm@gentoo.org> mu-conference-0.6.0-r2.ebuild:
   Added to ~ppc.
