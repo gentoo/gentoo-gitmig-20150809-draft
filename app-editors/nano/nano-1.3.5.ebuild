@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.3.5.ebuild,v 1.3 2005/01/01 13:31:57 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.3.5.ebuild,v 1.4 2005/01/16 10:58:47 vapier Exp $
 
 inherit eutils
 
@@ -62,4 +62,9 @@ src_install() {
 
 	dodir /usr/bin
 	dosym /bin/nano /usr/bin/nano
+}
+
+pkg_postinst() {
+	einfo "More helpful info about nano, visit the GDP page:"
+	einfo "http://www.gentoo.org/doc/en/nano-basics-guide.xml"
 }
