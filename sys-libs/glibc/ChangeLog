@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.219 2004/08/05 17:19:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.220 2004/08/05 18:53:55 slarti Exp $
+
+  05 Aug 2004; Tom Martin <slarti@gentoo.org> glibc-2.3.2-r11.ebuild:
+  Stable on amd64 for bug 59526.
 
 *glibc-2.3.2-r11 (05 Aug 2004)
 
