@@ -1,3 +1,4 @@
-MD5 e278f07586d398fede2b10acf2a83f55 ChangeLog 970
-MD5 cc51bf6e16c6339c9838c9dfb3fe64af psemu-cdriso-1.2.ebuild 777
-MD5 e51e423f100f932126df8e1728a59db1 files/digest-psemu-cdriso-1.2 58
+MD5 8bf7b590c0c6f744b566d2a335078b39 files/digest-psemu-cdriso-1.4 59
+MD5 ce620a6a8f6cf5455642414b35bb3c86 files/1.4-makefile-cflags.patch 454
+MD5 9b342ccbd8c234f56cb0b65dd8f2b253 psemu-cdriso-1.4.ebuild 869
+MD5 e2e48fa1fa9413582e6f93220d54aa81 ChangeLog 1091

@@ -1,3 +1,4 @@
-MD5 0533478da4c93ccb5b86f104c4b3db23 files/digest-psemu-cdr-1.62 56
-MD5 73905b9a08322b752b78ca752e361cf4 psemu-cdr-1.62.ebuild 740
-MD5 b3a4295454e67c15112dd29a6f0d73e8 ChangeLog 903
+MD5 cebe9fccfb101907d3a8588f1b5870c6 files/digest-psemu-cdr-1.8 58
+MD5 169244f21e87968b8b24a2156c6ea257 files/1.8-makefile-cflags.patch 317
+MD5 27a36e0fe6ec7ea32d85cdc9671d56ab ChangeLog 997
+MD5 eefa226eaccd46ac75dfc6b938e37c33 psemu-cdr-1.8.ebuild 1073

@@ -1,3 +1,4 @@
-MD5 e1cfaede9076779145de206f56058ef4 ChangeLog 1257
-MD5 ccbbc9e4a663a332be6ada2af5c222bb psemu-padjoy-0.62.ebuild 842
-MD5 ea796400c09d90a2592c27ab5895d250 files/digest-psemu-padjoy-0.62 57
+MD5 9854361bcecd3f8f3c4a3f6b4820b9f8 files/digest-psemu-padjoy-0.81 57
+MD5 e4171d0010309486d615bb721570a2ff files/0.81-makefile-cflags.patch 386
+MD5 fd932ffe336fbd077d5caf39b4c3cc77 psemu-padjoy-0.81.ebuild 856
+MD5 e00ae4d57c8aac45b97fd1a9b2350266 ChangeLog 1343
