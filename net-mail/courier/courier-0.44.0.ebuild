@@ -13,20 +13,20 @@ HOMEPAGE="http://www.courier-mta.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 -ppc -sparc"
-IUSE="gdbm tcltk postgres ldap mysql pam nls tcltk ipv6 spell fax crypt"
+KEYWORDS="~x86 -ppc -sparc ~amd64 ~ia64"
+IUSE="tcltk postgres ldap mysql pam nls tcltk ipv6 spell fax crypt"
 
 PROVIDE="virtual/mta
 	 virtual/imapd"
 
 RDEPEND="virtual/glibc
 	>=dev-libs/openssl-0.9.6
+	>=sys-libs/gdbm-1.8.0
 	crypt? ( >=app-crypt/gnupg-1.0.4 )
 	fax? (	>=media-libs/netpbm-9.12
 		>=app-text/ghostscript-7.05.5
 		>=net-dialup/mgetty-1.1.28 )
 	pam? ( >=sys-libs/pam-0.75 )
-	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	mysql? ( >=dev-db/mysql-3.23.36 )
 	ldap? ( >=net-nds/openldap-1.2.11 )
 	postgres? ( >=dev-db/postgresql-7.1.3 )
@@ -39,11 +39,15 @@ RDEPEND="virtual/glibc
 	#>=dev-tcltk/expect-5.33.0
 	#tcltk? ( >=dev-tcltk/expect-5.33.0 )
 
-
 DEPEND="${RDEPEND}
 	app-admin/fam-oss
 	dev-lang/perl
 	sys-apps/procps"
+
+src_unpack() {
+	unpack ${A} ; cd ${S}
+	epatch ${FILESDIR}/gentoo.diff.bz2
+}
 
 src_compile() {
 	local myconf
@@ -51,14 +55,6 @@ src_compile() {
 	use ldap || myconf="${myconf} --without-authldap"
 	use mysql || myconf="${myconf} --without-authmysql"
 	use postgres || myconf="${myconf} --without-authpostgresql"
-
-# courier does not work well with db4, and we don't have a working fix yet to
-# make it use db3
-#	use berkdb \
-#                && myconf="${myconf} --with-db=db" \
-#                || myconf="${myconf} --with-db=gdbm"
-	myconf="${myconf} --with-db=gdbm"
-
 	use ipv6 || myconf="${myconf} --without-ipv6"
 	use spell \
 		&& myconf="${myconf} --with-ispell" \
@@ -102,6 +98,7 @@ src_compile() {
 		--with-mailgroup=mail \
 		--with-paranoid-smtpext \
 		--disable-autorenamesent \
+		--with-db=gdbm \
 		--enable-mimetypes=/etc/apache/conf/mime.types \
 		--enable-workarounds-for-imap-client-bugs \
 		--host=${CHOST} ${myconf} || die "bad ./configure"
@@ -171,7 +168,7 @@ src_install() {
 	keepdir /var/run/courier
 	# make install creates a ton of dirs that we want to keep
 	# and we don't want to run keepdir 900 times
-	find ${D} -type d -exec touch {}/.keep
+	find ${D} -type d -exec touch {}/.keep \;
 
 	local f
 	cd ${D}/etc/courier
@@ -195,28 +192,21 @@ src_install() {
 	diropts -m 755 -o root -g root
 	insinto /etc/skel
 	${D}/usr/bin/maildirmake ${D}/etc/skel/.maildir
-	newins ${FILESDIR}/dot_courier .courier
-	fperms 644 /etc/skel/.courier
+	# we're going to try this out for a while -20031107
+	#newins ${FILESDIR}/dot_courier .courier
+	#fperms 644 /etc/skel/.courier
 	${D}/usr/bin/maildirmake ${D}/var/spool/mail/.maildir
 	insinto /etc/courier
 	newins ${FILESDIR}/bofh bofh
 	newins ${FILESDIR}/locallowercase locallowercase
-	newins ${FILESDIR}/sizelimit sizelimit
 	newins ${FILESDIR}/apache-sqwebmail.inc apache-sqwebmail.inc
+	echo 0 > ${D}/etc/courier/sizelimit
 
-	touch ${D}/var/lib/courier/webmail-logincache/.keep
-	touch ${D}/var/lib/courier/tmp/broken/.keep
-	touch ${D}/var/lib/courier/msgs/.keep
-	touch ${D}/var/lib/courier/msgq/.keep
-	touch ${D}/var/lib/courier/filters/.keep
-	touch ${D}/var/lib/courier/faxtmp/.keep
-	touch ${D}/var/lib/courier/calendar/public/.keep
-	touch ${D}/var/lib/courier/calendar/private/.keep
-	touch ${D}/var/lib/courier/calendar/localcache/.keep
-	touch ${D}/var/lib/courier/calendar/.keep
-	touch ${D}/var/lib/courier/allfilters/.keep
-
+	cd ${S}
 	dodoc AUTHORS BENCHMARKS ChangeLog* NEWS README TODO
+	dodoc authlib/README.authmysql.myownquery authlib/README.ldap courier/doc/*.txt
+	echo "See /usr/share/courier/htmldoc/index.html for docs in html format" \
+		>>${D}/usr/share/doc/${P}/README.htmldocs
 
 	# See bug #10574
 	# file which describes the webadmin password file
@@ -224,9 +214,8 @@ src_install() {
 	insopts -m 400 -o mail -g mail
 	doins ${FILESDIR}/password.dist
 
-	# fixes bug#25028 courier doesn't symlink sendmail to /usr/sbin
+	# fixes bug #25028 courier doesn't symlink sendmail to /usr/sbin
 	dosym /usr/bin/sendmail /usr/sbin/sendmail
-
 }
 
 pkg_preinst() {
@@ -263,10 +252,12 @@ pkg_postinst() {
 
 	# fixes bug #15873 for upgrades, should be able to yank this sometime in
 	# the future
-	chown --recursive mail.mail ${ROOT}/var/run/courier
+	chown --recursive mail:mail ${ROOT}/var/run/courier
 
 	# need to do this for new installs to be able to start courier
 	# without having to run rc-update ...
+	# NOTE: not needed with new portages, but I'll leave it for a while for
+	# old portages
 	/etc/init.d/depscan.sh
 
 	einfo "The following command will setup courier for you system:"
@@ -276,17 +267,21 @@ pkg_postinst() {
 	einfo "$ echo \"Include /etc/courier/apache-sqwebmail.inc\" >> /etc/apache*/conf/apache.conf"
 	einfo "$ chmod a+rx /usr/lib/courier/courier/webmail"
 	einfo "Then visit: http(s)://localhost/courier/webmail"
-
+	echo
+	einfo "imap behavior has changed, you may need to have you imap clients logoff"
+	einfo "and back on again"
+	echo
+	echo
 	ewarn "The init scripts for courier have changed."
 	ewarn "There is now one init script (/etc/init.d/courier). The rest"
 	ewarn "are obsolete. You can remove /etc/init.d/courier-*. You also"
 	ewarn "need to edit the following files in /etc/courier to enable"
 	ewarn "the different services:"
 	ewarn "imapd"
+	ewarn "imapd-ssl"
 	ewarn "pop3d"
 	ewarn "pop3d-ssl"
 	ewarn "esmtpd"
-	ewarn "imapd-ssl"
 	ewarn "esmtpd-msa"
 	ewarn "esmtpd-ssl"
 	ewarn "hint: look for a line at the bottom of the file that looks like so"

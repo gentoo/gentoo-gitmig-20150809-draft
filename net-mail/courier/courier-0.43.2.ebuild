@@ -13,7 +13,7 @@ HOMEPAGE="http://www.courier-mta.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 -ppc -sparc"
+KEYWORDS="x86 -ppc -sparc"
 IUSE="gdbm tcltk postgres ldap mysql pam nls tcltk ipv6 spell fax crypt"
 
 PROVIDE="virtual/mta
@@ -44,6 +44,11 @@ DEPEND="${RDEPEND}
 	app-admin/fam-oss
 	dev-lang/perl
 	sys-apps/procps"
+
+src_unpack() {
+	unpack ${A} ; cd ${S}
+	epatch ${FILESDIR}/gentoo.diff.bz2
+}
 
 src_compile() {
 	local myconf

@@ -2,6 +2,9 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: /home/cvsroot/gentoo-x86/net-mail/courier/courier-0.41.0.ebuild
 
+# NOTE:
+# leaving this ebuild indefinitely, since it's the last one that uses the old init scripts
+
 inherit flag-o-matic eutils
 
 filter-flags -fomit-frame-pointer
@@ -41,7 +44,7 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A} ; cd ${S}
-	epatch ${FILESDIR}/${PF}-gentoo.diff.bz2
+	epatch ${FILESDIR}/gentoo.diff.bz2
 }
 
 src_compile() {
