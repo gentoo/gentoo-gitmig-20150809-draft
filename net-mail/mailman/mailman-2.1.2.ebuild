@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.2.ebuild,v 1.9 2004/01/04 18:34:29 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.2.ebuild,v 1.10 2004/01/10 00:18:46 mholzer Exp $
 
 IUSE="apache2"
 
@@ -86,7 +86,7 @@ src_install () {
 		einfo "A new config has been installed as mm_cfg.py.dist"
 	fi
 	if [ -f ${ROOT}/usr/local/mailman/Mailman/mm_cfg.py ]; then
-		cp${ROOT}/usr/local/mailman/Mailman/mm_cfg.py \
+		cp ${ROOT}/usr/local/mailman/Mailman/mm_cfg.py \
 			${D}/usr/local/mailman/Mailman/mm_cfg.py
 		einfo "Your old config has been saved as mm_cfg.py"
 		einfo "A new config has been installed as mm_cfg.py.dist"

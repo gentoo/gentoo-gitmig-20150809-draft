@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.4.ebuild,v 1.4 2004/01/09 02:18:23 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.4.ebuild,v 1.5 2004/01/10 00:18:46 mholzer Exp $
 
 IUSE="apache2"
 
@@ -50,18 +50,15 @@ src_compile() {
 src_install () {
 	ID=${D}${INSTALLDIR}
 
-	dodir ${ID}/logs
-	keepdir ${ID}/logs
-	dodir ${ID}/locks
-	keepdir ${ID}/locks
+	make prefix=${ID} var_prefix=${ID} doinstall || die
 
-	dodir ${ID}/spam
-	keepdir ${ID}/spam
+	keepdir ${INSTALLDIR}/logs
+	keepdir ${INSTALLDIR}/locks
+	keepdir ${INSTALLDIR}/spam
+	keepdir ${INSTALLDIR}/archives/public
 
 	chown -R mailman:mailman ${ID}
 	chmod 2775 ${ID}
-
-	make prefix=${ID} var_prefix=${ID} doinstall || die
 
 	if [ "`use apache2`" ]; then
 		dodir /etc/apache2/conf/modules.d
@@ -96,7 +93,7 @@ src_install () {
 		einfo "A new config has been installed as mm_cfg.py.dist"
 	fi
 	if [ -f ${ROOT}/usr/local/mailman/Mailman/mm_cfg.py ]; then
-		cp${ROOT}/usr/local/mailman/Mailman/mm_cfg.py \
+		cp ${ROOT}/usr/local/mailman/Mailman/mm_cfg.py \
 			${D}/usr/local/mailman/Mailman/mm_cfg.py
 		einfo "Your old config has been saved as mm_cfg.py"
 		einfo "A new config has been installed as mm_cfg.py.dist"

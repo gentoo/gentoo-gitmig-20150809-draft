@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mailman
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.27 2004/01/08 23:27:13 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.28 2004/01/10 00:18:46 mholzer Exp $
+
+  10 Jan 2004; Martin Holzer <mholzer@gentoo.org> mailman-2.1.4.ebuild:
+  typo in config_protection. doing needed keepdir to work
 
   09 Jan 2004; Martin Holzer <mholzer@gentoo.org> mailman-2.1.4.ebuild:
   disabling python languages. Closes 34727
