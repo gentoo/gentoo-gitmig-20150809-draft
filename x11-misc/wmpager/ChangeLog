@@ -1,6 +1,6 @@
 # ChangeLog for x11-misc/wmpager
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmpager/ChangeLog,v 1.3 2003/11/02 23:34:50 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmpager/ChangeLog,v 1.4 2003/11/02 23:36:23 seemant Exp $
 
 *wmpager-1.2-r1 (02 Nov 2003)
 
@@ -9,7 +9,7 @@
   changed ebuild to get rid of superfluous sed statement. Also, the Makefile
   installs the .1x man page into /usr/man, so use doman instead. Also the DEPEND
   on x11-base/xfree is now an RDEPEND on virtual/X11. The last thanks to Ciaran
-  McReesh <ciaranm@firedrop.org.uk> in #gentoo-sparc
+  McCreesh <ciaranm@firedrop.org.uk> in #gentoo-sparc
 
 *wmpager-1.2 (27 Oct 2002)
 
