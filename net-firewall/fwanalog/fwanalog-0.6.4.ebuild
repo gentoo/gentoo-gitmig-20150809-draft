@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwanalog/fwanalog-0.6.4.ebuild,v 1.3 2004/06/16 06:41:15 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/fwanalog/fwanalog-0.6.4.ebuild,v 1.4 2004/06/24 22:39:10 agriffis Exp $
 
 DESCRIPTION="Script to parse firewall logs and analyze them with Analog"
 HOMEPAGE="http://tud.at/programm/fwanalog/"

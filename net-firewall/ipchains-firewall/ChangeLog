@@ -1,6 +1,6 @@
 # ChangeLog for net-firewall/ipchains-firewall
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipchains-firewall/ChangeLog,v 1.4 2003/02/24 19:38:41 mholzer Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipchains-firewall/ChangeLog,v 1.5 2004/06/24 22:40:36 agriffis Exp $
 
 *ipchains-firewall-1.7.3 (24 Feb 2003)
 

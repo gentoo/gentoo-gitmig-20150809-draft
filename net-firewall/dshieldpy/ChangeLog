@@ -1,6 +1,6 @@
 # ChangeLog for net-firewall/dshieldpy
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/dshieldpy/ChangeLog,v 1.1 2003/08/15 14:52:13 aliz Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/dshieldpy/ChangeLog,v 1.2 2004/06/24 22:38:17 agriffis Exp $
 
 *dshieldpy-3.2 (15 Aug 2003)
 

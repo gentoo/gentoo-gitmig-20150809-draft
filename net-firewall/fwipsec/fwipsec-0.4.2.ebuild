@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Id: fwipsec-0.4.2.ebuild,v 1.1 2004/06/04 19:51:08 seemant Exp $
+# $Id: fwipsec-0.4.2.ebuild,v 1.2 2004/06/24 22:39:32 agriffis Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Firewall scripts that control iptables, FreeS/WAN, and squid."

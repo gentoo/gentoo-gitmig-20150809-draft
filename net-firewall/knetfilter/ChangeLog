@@ -1,6 +1,6 @@
 # ChangeLog for net-firewall/knetfilter
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/knetfilter/ChangeLog,v 1.8 2004/03/14 17:25:26 mr_bones_ Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/knetfilter/ChangeLog,v 1.9 2004/06/24 22:41:31 agriffis Exp $
 
   14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
   knetfilter-3.0.2.ebuild, knetfilter-3.0.3.ebuild, knetfilter-3.1.0.ebuild,

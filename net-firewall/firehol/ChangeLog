@@ -1,6 +1,6 @@
 # ChangeLog for net-firewall/firehol
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.6 2004/05/18 18:43:52 centic Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.7 2004/06/24 22:38:38 agriffis Exp $
 
 *firehol-1.191 (18 May 2004)
 

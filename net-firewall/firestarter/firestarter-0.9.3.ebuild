@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firestarter/firestarter-0.9.3.ebuild,v 1.1 2004/06/04 18:56:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firestarter/firestarter-0.9.3.ebuild,v 1.2 2004/06/24 22:38:49 agriffis Exp $
 
 inherit gnome2
 

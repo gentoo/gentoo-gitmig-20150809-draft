@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/gshield/gshield-2.8-r2.ebuild,v 1.2 2004/03/15 07:55:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/gshield/gshield-2.8-r2.ebuild,v 1.3 2004/06/24 22:39:53 agriffis Exp $
 
 # re-capitalize gShield
 S=${WORKDIR}/gShield-${PV}
