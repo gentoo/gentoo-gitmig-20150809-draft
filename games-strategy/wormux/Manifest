@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ab2262333c2c555df6052f2b0f0815c5 wormux-0.5.0.ebuild 1074
-MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 eb42ae43863008a08875f02c9147ecc9 ChangeLog 363
+MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 93c7c9b049ae06c6c7a6bdd8c46114d7 wormux-0.5.0.ebuild 1069
 MD5 47eeba14c04c6ee99e7b1f99dfad9efa files/digest-wormux-0.5.0 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBwg1yroRuSHgZdywRArZqAJ0Tpwj21bd1rEcnKsOdAoWrF45A8ACggJiT
-BdKUe/Zv1X6+O1Xu8/v3nvI=
-=JcY0
------END PGP SIGNATURE-----
