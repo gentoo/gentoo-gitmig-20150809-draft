@@ -1,6 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.2 2003/06/10 03:14:59 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.3 2003/06/16 04:08:44 zhen Exp $
+
+*xerces-c-2.3.0-r2 (16 Jun 2003)
+
+  16 Jun 2003; <zhen@gentoo.org> xerces-c-2.3.0-r2.ebuild:
+  Removed the old xerces-c-2.3.0.ebuild because it was majorly borked. I added a
+  simple dolib statement to the -r2 to install the libraries (duh). Thanks to
+  Apache XML for their great docs (right, b0rked).
 
   09 Jun 2003; <zhen@gentoo.org> xerces-c-2.3.0.ebuild:
   Fixed a major prob w/ 2.3.0 installing into /include ::oops::. I marked it
