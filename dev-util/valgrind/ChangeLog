@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/valgrind
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.38 2004/09/24 01:44:17 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/ChangeLog,v 1.39 2004/10/28 19:33:05 griffon26 Exp $
+
+  28 Oct 2004; Maurice van der Pot <griffon26@gentoo.org> metadata.xml:
+  Taken up maintenance of valgrind.
 
   23 Sep 2004; Caleb Tennis <caleb@gentoo.org> valgrind-2.2.0.ebuild:
   Marking x86 stable

@@ -1,17 +1,27 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 87ba65472b071a1a696226f0e36937d5 valgrind-2.0.0.ebuild 1173
-MD5 36b52cc7f792a5f6944af5e3488fc3cd valgrind-2.1.1-r1.ebuild 1140
 MD5 f07a6833b689f5e27ddc6f11cce48fbb valgrind-2.1.0.ebuild 1018
-MD5 74af16c4f9ed08248153f39e9181c7be valgrind-2.1.2.ebuild 1099
-MD5 f89777a4817a47cc876c1a51cf1b2298 valgrind-2.2.0.ebuild 1384
-MD5 ddda30e081c28534436faadc7ee6b6cc ChangeLog 1773
+MD5 36b52cc7f792a5f6944af5e3488fc3cd valgrind-2.1.1-r1.ebuild 1140
 MD5 a0b171b6dab7cb44a9eab9bf70738b7c valgrind-2.1.1.ebuild 926
-MD5 f4b910c589410d7ec055b9bda08a32b1 metadata.xml 1001
-MD5 96f4ea73f94e4b969cd764574aeef978 files/valgrind-2.1.2-kernel-headers.patch 826
-MD5 95845f5c26fd00027163547288c17e54 files/valgrind-configure.in-2.6.diff 336
+MD5 74af16c4f9ed08248153f39e9181c7be valgrind-2.1.2.ebuild 1099
+MD5 799f0b61a3a686b4074bd61acc572c5c metadata.xml 1003
+MD5 ae6e19ad890434e670e098263cd07f2c ChangeLog 1886
+MD5 f89777a4817a47cc876c1a51cf1b2298 valgrind-2.2.0.ebuild 1384
 MD5 286d10f4514e8a85360ce6ba5654ae93 files/digest-valgrind-2.0.0 67
 MD5 a69fe5652a8ca5fb1d04521fe0c56850 files/digest-valgrind-2.1.0 138
 MD5 f50184c09d0376e66b1b79d0b45e94c2 files/digest-valgrind-2.1.1 67
-MD5 dd98566219aee764f036fae263b1ce61 files/digest-valgrind-2.1.2 67
-MD5 26192577445b467e528408118f7ee6ec files/digest-valgrind-2.2.0 139
-MD5 1ba26123d6543d9b4faa808595fbb5b8 files/valgrind-2.1.1-pic.patch 8338
 MD5 f50184c09d0376e66b1b79d0b45e94c2 files/digest-valgrind-2.1.1-r1 67
+MD5 dd98566219aee764f036fae263b1ce61 files/digest-valgrind-2.1.2 67
+MD5 1ba26123d6543d9b4faa808595fbb5b8 files/valgrind-2.1.1-pic.patch 8338
+MD5 96f4ea73f94e4b969cd764574aeef978 files/valgrind-2.1.2-kernel-headers.patch 826
+MD5 95845f5c26fd00027163547288c17e54 files/valgrind-configure.in-2.6.diff 336
+MD5 26192577445b467e528408118f7ee6ec files/digest-valgrind-2.2.0 139
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBgUl6MGnpIbeahxwRAj2hAJ9+l+lF6HBdSv+P5JYDPnCAQix0GACgrZmn
+X5p09MmDSLHlXugFIHa2+BI=
+=m/m+
+-----END PGP SIGNATURE-----
