@@ -8,9 +8,9 @@ DESCRIPTION="CScope - interactively examine a C program"
 SRC_URI="http://download.sourceforge.net/cscope/${A}"
 HOMEPAGE="http://cscope.sourceforge.net"
 
-DEPEND="virtual/glibc
+RDEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2"
-
+DEPEND="$RDEPEND sys-devel/flex"
 src_compile() {                           
    try ./configure --prefix=/usr/ --mandir=/usr/share/man --infodir=/usr/share/info
    try make clean

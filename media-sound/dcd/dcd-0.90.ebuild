@@ -10,7 +10,7 @@ HOMEPAGE="http://www.technopagan.org/dcd"
 
 DESCRIPTION="A simple command-line based CD Player"
 
-DEPEND=">=sys-libs/glibc-2.1.3"
+DEPEND="virtual/glibc"
 
 src_unpack() {
 
@@ -25,7 +25,7 @@ src_unpack() {
  
 src_compile() {
 
-    try make
+    try make EXTRA_CFLAGS=\"$CFLAGS\"
 
 }
 

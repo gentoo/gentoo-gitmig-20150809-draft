@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Peter Gavin <pbg1854@garnet.acns.fsu.edu>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/id3/id3-0.12-r1.ebuild,v 1.1 2001/04/23 01:00:39 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/id3/id3-0.12-r1.ebuild,v 1.2 2001/05/28 05:24:13 achim Exp $
 
 A=${PN}_${PV}.orig.tar.gz
 S=${WORKDIR}/${P}
@@ -17,7 +17,7 @@ src_compile() {
 
 src_install () {
 
-    try make DESTDIR=${D} install
+    try make DESTDIR=${D} INSTALL=\"/bin/install -c\" install
     dodoc COPYING README
 
 }

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ipchains-firewall/ipchains-firewall-1.7.0-r1.ebuild,v 1.3 2000/11/01 04:44:21 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ipchains-firewall/ipchains-firewall-1.7.0-r1.ebuild,v 1.4 2001/05/28 05:24:13 achim Exp $
 
 P=ipchains-firewall-1.7.0
 A=${P}.tar.gz
@@ -10,7 +10,7 @@ DESCRIPTION="IP-Chains Firewall Script "
 SRC_URI="http://firewall.langistix.com/download/"${A}
 HOMEPAGE="http://firewall.langistix.com/"
 
-DEPEND=">=sys-apps/bash-2.04"
+RDEPEND="sys-devel/perl"
 
 src_compile() {                           
   cd ${S}

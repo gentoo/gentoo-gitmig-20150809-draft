@@ -12,16 +12,15 @@ physical terminal between several processes"
 SRC_URI="ftp://ftp.uni-erlangen.de/pub/utilities/screen/${A}"
 HOMEPAGE="http://www.gnu.org/software/screen/"
 
-DEPEND=">=sys-libs/glibc-2.1.3
-        >=sys-libs/gpm-1.19.3
+DEPEND="virtual/glibc
         >=sys-libs/ncurses-5.2"
 
 src_compile() {
 
-    try ./configure --prefix=/usr --host=${CHOST}\
+    try ./configure --prefix=/usr --host=${CHOST} --with-sys-screenrc=/etc/screen/screenrc \
 	--mandir=/usr/share --libexecdir=/usr/lib/misc\
 	--host=${CHOST}
-    try make
+    try make CFLAGS=\"$CFLAGS\"
 
 }
 
@@ -33,14 +32,15 @@ src_install () {
     dodir
     insinto /usr/share/terminfo
     doins terminfo/screencap
-    insinto /etc
+    insinto /etc/screen
     doins etc/screenrc
     dodoc README ChangeLog INSTALL COPYING TODO
     docinto doc
     cd doc
     dodoc FAQ README.DOTSCREEN 
     docinto print
-    cd print
     dodoc fdpat.ps window_to_display.ps
+    doinfo *.info*
+    doman screen.1
 }
 

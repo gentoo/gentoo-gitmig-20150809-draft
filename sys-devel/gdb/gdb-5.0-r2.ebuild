@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.0-r2.ebuild,v 1.6 2001/05/16 14:16:48 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.0-r2.ebuild,v 1.7 2001/05/28 05:24:13 achim Exp $
 
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
@@ -9,10 +9,10 @@ DESCRIPTION="GNU debugger"
 SRC_URI="ftp://sourceware.cygnus.com/pub/gdb/releases/${A}
 	 ftp://ftp.freesoftware.com/pub/sourceware/gdb/releases/${A}"
 
-DEPEND=">=sys-libs/ncurses-5.2-r2
+DEPEND="virtual/glibc >=sys-libs/ncurses-5.2-r2
         nls? ( sys-devel/gettext )"
 
-RDEPEND=">=sys-libs/ncurses-5.2-r2"
+RDEPEND="virtual/glibc >=sys-libs/ncurses-5.2-r2"
 
 HOMEPAGE="http://www.gnu.org/software/gdb/gdb.html"
 

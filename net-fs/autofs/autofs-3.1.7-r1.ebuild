@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-3.1.7-r1.ebuild,v 1.1 2001/01/18 18:22:11 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/autofs/autofs-3.1.7-r1.ebuild,v 1.2 2001/05/28 05:24:13 achim Exp $
 
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
@@ -10,8 +10,8 @@ SRC_URI="ftp://ftp.kernel.org/pub/linux/daemons/autofs/${A}
 	 ftp://ftp.de.kernel.org/pub/linux/daemons/autofs/${A}
 	 ftp://ftp.uk.kernel.org/pub/linux/daemons/autofs/${A}"
 
-DEPEND=">=sys-libs/glibc-2.1.3
-	>=net-nds/openldap-1.2"
+DEPEND="virtual/glibc
+        ldap? ( =net-nds/openlpad-1.2.11-r2 )"
 
 src_unpack() {
   unpack ${A}
@@ -19,14 +19,17 @@ src_unpack() {
   patch -p0 < ${FILESDIR}/automount.diff
 }
 
-src_compile() {                           
-  cd ${S}
-  try ./configure --host=${HOST} --prefix=/usr
+src_compile() {
+  local myconf
+  if [ -z "`use ldap`" ] ; then
+    myconf="--without-openldap"
+  fi
+  try ./configure --host=${HOST} --prefix=/usr $myconf
   try make
 }
 
-src_install() {                               
-  cd ${S}
+src_install() {
+
   into /usr
   dosbin daemon/automount
   insinto /usr/lib/autofs

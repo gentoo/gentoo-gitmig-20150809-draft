@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Michael Conrad Tilstra <michael@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.5.5.ebuild,v 1.2 2001/04/24 22:58:35 michael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.5.5.ebuild,v 1.3 2001/05/28 05:24:13 achim Exp $
 
 #P=
 A=${P}.tar.gz
@@ -10,11 +10,11 @@ DESCRIPTION="Dictionary Client/Server for the DICT protocol"
 SRC_URI="ftp://ftp.dict.org/pub/dict/${A}"
 HOMEPAGE="http://www.dict.org"
 
-DEPEND="virtual/glibc
-        >=sys-devel/gettext-0.10.35"
+DEPEND="virtual/glibc"
 
 
 src_compile() {
+    
     try ./configure --prefix=/usr --mandir=/usr/share \
         --with-etcdir=/etc/dict --host=${CHOST}
     try make

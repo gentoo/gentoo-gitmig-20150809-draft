@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.0-r2.ebuild,v 1.2 2001/02/27 12:11:44 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.0-r2.ebuild,v 1.3 2001/05/28 05:24:13 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -9,10 +9,10 @@ DESCRIPTION="The GNU info program and utilities"
 SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/texinfo/${A}
 	 ftp://ftp.gnu.org/pub/gnu/texinfo/${A}"
 
-DEPEND=">=sys-libs/ncurses-5.2-r2
+DEPEND="virtual/glibc >=sys-libs/ncurses-5.2-r2
         nls? ( sys-devel/gettext )"
 
-RDEPEND=">=sys-libs/ncurses-5.2-r2"
+RDEPEND="virtual/glibc >=sys-libs/ncurses-5.2-r2"
 
 src_compile() {
     local myconf

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/berlin-base/omniORB/omniORB-303.ebuild,v 1.6 2001/05/03 19:33:52 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/berlin-base/omniORB/omniORB-303.ebuild,v 1.7 2001/05/28 05:24:13 achim Exp $
 
 A="${PN}_${PV}.tar.gz omniORBpy_1_3.tar.gz"
 S=${WORKDIR}/omni
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.uk.research.att.com/pub/omniORB/omniORB3/${PN}_${PV}.tar.gz
 	 ftp://ftp.uk.research.att.com/pub/omniORB/omniORBpy/${PN}py_1_3.tar.gz"
 HOMEPAGE="http://www.uk.research.att.com/omniORB/"
 
-DEPEND=""
+DEPEND="virtual/glibc dev-lang/python"
 
 PLT="i586_linux_2.0_glibc2.1"
 

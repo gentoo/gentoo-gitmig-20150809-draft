@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/djbdns/djbdns-1.05.ebuild,v 1.1 2001/03/21 08:22:47 ryan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/djbdns/djbdns-1.05.ebuild,v 1.2 2001/05/28 05:24:13 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -9,7 +9,8 @@ DESCRIPTION="Excellent high-performance DNS services"
 SRC_URI="http://cr.yp.to/djbdns/${A}"
 HOMEPAGE="http://cr.yp.to/djbdns.html"
 
-DEPEND=">=sys-libs/glibc-2.1.3 >=sys-apps/daemontools-0.70"
+DEPEND="virtual/glibc"
+RDEPEND="virtual/glibc >=sys-apps/daemontools-0.70"
 
 src_unpack() {
 	unpack ${A}

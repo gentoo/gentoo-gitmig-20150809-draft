@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/clockspeed-0.62-r1.ebuild,v 1.2 2001/05/01 22:24:04 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/clockspeed/clockspeed-0.62-r1.ebuild,v 1.3 2001/05/28 05:24:13 achim Exp $
 
 #P=
 A=${P}.tar.gz
@@ -10,7 +10,9 @@ DESCRIPTION="a simple ntp client"
 SRC_URI="http://cr.yp.to/clockspeed/clockspeed-0.62.tar.gz"
 HOMEPAGE="http://cr.yp.to/"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc sys-apps/groff"
+
+RDEPEND="virtual/glibc"
 
 src_unpack() {
     unpack ${A}

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r3.ebuild,v 1.1 2000/12/18 21:24:16 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r3.ebuild,v 1.2 2001/05/28 05:24:13 achim Exp $
 
 S=${WORKDIR}/qmail-1.03
 DESCRIPTION="A modern replacement for sendmail which uses maildirs"
@@ -13,8 +13,8 @@ QMAIL_SRC="http://cr.yp.to/software/qmail-1.03.tar.gz
 MYSQL_SRC="http://iain.cx/unix/qmail/qmail-mysql.patch"
 LDAP_SRC="http://www.nrg4u.com/qmail/qmail-ldap-1.03-20001201.patch.gz"
 
-QMAIL_DEP=">=sys-apps/bash-2.04
-           >=sys-libs/glibc-2.1.3"
+QMAIL_DEP="virtual/glibc"
+
 MYSQL_DEP=">=dev-db/mysql-3.23.28"
 LDAP_DEP=">=net-nds/openldap-1.2.11"
 
@@ -38,6 +38,9 @@ else
 fi
 
 PROVIDE="virtual/mta"
+RDEPEND="$DEPEND"
+DEPEND="$DEPEND sys-apps/groff"
+
 
 
 src_unpack() {

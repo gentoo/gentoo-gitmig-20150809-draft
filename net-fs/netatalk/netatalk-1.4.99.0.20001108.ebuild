@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-1.4.99.0.20001108.ebuild,v 1.1 2000/11/26 20:54:18 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/netatalk-1.4.99.0.20001108.ebuild,v 1.2 2001/05/28 05:24:13 achim Exp $
 
 P=netatalk-1.4.99-0.20001108
 A=${P}.tar.gz
@@ -10,11 +10,14 @@ DESCRIPTION="Apple-Talk"
 SRC_URI="http://download.sourceforge.net/netatalk/${A}"
 HOMEPAGE="http://netatakl.sourceforge.net"
 
-DEPEND=">=sys-apps/bash-2.04
-	>=sys-libs/glibc-2.1.3"
+DEPEND="virtual/glibc
+        pam? ( sys-libs/pam-0.7 )
+        tcpd? ( sys-apps/tcp-wrappers )
+        sys-apps/shadow"
 
-src_compile() {                           
-  cd ${S}
+src_compile() {
+
+
   try ./configure --prefix=/usr --host=${CHOST} \
   		--with-pam --with-shadow --with-tcp-wrappers
 	

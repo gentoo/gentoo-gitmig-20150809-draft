@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-0.2.1-r3.ebuild,v 1.2 2001/04/23 17:29:38 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/nfs-utils-0.2.1-r3.ebuild,v 1.3 2001/05/28 05:24:13 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -9,8 +9,8 @@ DESCRIPTION="Kernel NFS-Server"
 SRC_URI="ftp://ftp.linuxnfs.sourceforge.org/pub/nfs/"${A}
 HOMEPAGE="http://nfs.sourceforge.net"
 
-DEPEND=">=sys-apps/bash-2.04
-	>=sys-libs/glibc-2.1.3"
+DEPEND="virtual/glibc
+        tcpd? ( sys-apps/tcp-wrappers )"
 
 src_unpack() {
     unpack ${A}
@@ -20,15 +20,20 @@ src_unpack() {
 src_compile() {
     try ./configure --mandir=${D}/usr/share/man --with-statedir=/var/lib/nfs \
 	--prefix=${D} --exec-prefix=${D}
+    if [ -z "`use tcpd`" ] ; then
+      cp config.mk config.mk.orig
+      sed -e "s:-lwrap::" -e "s:-DHAVE_TCP_WRAPPER::" \
+        config.mk.orig > config.mk
+    fi
     try make
 }
 
-src_install() {                 
-	cd ${S}
+src_install() {
+
 	try make install STATEDIR=${D}/var/lib/nfs
 	dodir /etc/rc.d/init.d
-	cp ${O}/files/nfs       ${D}/etc/rc.d/init.d
-	cp ${O}/files/exports	${D}/etc
+	cp ${FILESDIR}/nfs       ${D}/etc/rc.d/init.d
+	cp ${FILESDIR}/exports	${D}/etc
 	dodoc ChangeLog COPYING README
 	docinto linux-nfs
 	dodoc linux-nfs/*

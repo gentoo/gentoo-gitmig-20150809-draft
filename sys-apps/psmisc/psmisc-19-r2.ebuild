@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-19-r2.ebuild,v 1.1 2001/02/07 15:51:28 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-19-r2.ebuild,v 1.2 2001/05/28 05:24:13 achim Exp $
 
 #from Debian ;)
 
@@ -9,7 +9,7 @@ A=${P}.tar.gz
 S=${WORKDIR}/psmisc
 DESCRIPTION="Handy process-related utilities from Debian"
 SRC_URI="ftp://lrcftp.epfl.ch/pub/linux/local/psmisc/"${A}
-DEPEND=">=sys-libs/ncurses-5.2-r2"
+DEPEND="virtual/glibc >=sys-libs/ncurses-5.2-r2"
 
 src_unpack() {
     unpack ${A}

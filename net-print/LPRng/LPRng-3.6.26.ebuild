@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-print/LPRng/LPRng-3.6.26.ebuild,v 1.3 2001/02/01 19:30:33 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/LPRng/LPRng-3.6.26.ebuild,v 1.4 2001/05/28 05:24:13 achim Exp $
 
 A=${P}.tgz
 S=${WORKDIR}/${P}
@@ -11,8 +11,8 @@ HOMEPAGE="http://www.astart.com/LPRng/LPRng.html"
 
 PROVIDE="virtual/lpr"
 
-DEPEND=">=sys-libs/glibc-2.1.3"
-
+DEPEND="virtual/glibc >=sys-libs/ncurses-5.2 >=sys-apps/procps-2.0.6"
+RDEPEND="virtual/glibc >=sys-libs/ncurses-5.2"
 src_unpack() {
   unpack ${A}
   cd ${S}/po
@@ -21,14 +21,14 @@ src_unpack() {
   rm -rf ${S}/intl
 }
 
-src_compile() {                           
+src_compile() {
   cd ${S}
   try ./configure --host=${CHOST} --prefix=/usr --sysconfdir=/etc/lprng \
 	--enable-nls --with-included-gettext
   try make
 }
 
-src_install() {                               
+src_install() {
   cd ${S}
   try make INSTALL_PREFIX=${D} datadir=${D}/usr/share \
 		gnulocaledir=${D}/usr/share/locale \

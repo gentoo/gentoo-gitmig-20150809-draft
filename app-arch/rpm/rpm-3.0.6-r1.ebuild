@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-3.0.6-r1.ebuild,v 1.3 2001/04/30 10:59:02 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-3.0.6-r1.ebuild,v 1.4 2001/05/28 05:24:13 achim Exp $
 
 A="${P}.tar.gz"
 S=${WORKDIR}/${P}
@@ -9,14 +9,11 @@ DESCRIPTION="Red Hat Package Management Utils"
 SRC_URI="ftp://ftp.rpm.org/pub/rpm/dist/rpm-3.0.x/${A}"
 HOMEPAGE="http://www.rpm.org/"
 
-DEPEND="nls? ( sys-devel/gettext )
-    sys-libs/db
+RDEPEND="=sys-libs/db-1.85-r1
 	>=sys-libs/zlib-1.1.3
 	>=sys-apps/bzip2-1.0.1"
 
-REPEND=">=sys-libs/zlib-1.1.3
-	sys-libs/db
-    sys-devel/perl"
+DEPEND="$RDEPEND nls? ( sys-devel/gettext )"
 
 src_unpack() {
 

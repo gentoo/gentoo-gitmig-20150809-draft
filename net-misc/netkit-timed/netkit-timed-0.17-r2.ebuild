@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-timed/netkit-timed-0.17-r2.ebuild,v 1.2 2001/05/09 04:37:31 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-timed/netkit-timed-0.17-r2.ebuild,v 1.3 2001/05/28 05:24:13 achim Exp $
 
 P=netkit-timed-0.17
 A=${P}.tar.gz
@@ -9,8 +9,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Netkit - timed"
 SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${A}"
 
-DEPEND=">=sys-apps/bash-2.04
-	>=sys-libs/glibc-2.1.3"
+DEPEND="virtual/glibc"
 
 src_unpack() {
     unpack ${A}

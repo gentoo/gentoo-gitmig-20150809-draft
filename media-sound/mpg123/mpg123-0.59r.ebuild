@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59r.ebuild,v 1.4 2000/11/02 02:17:13 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59r.ebuild,v 1.5 2001/05/28 05:24:13 achim Exp $
 
 P=mpg123-0.59r
 A=${P}.tar.gz
@@ -10,7 +10,7 @@ DESCRIPTION="Real Time mp3 player"
 SRC_URI="http://www.mpg123.de/mpg123/${A}"
 HOMEPAGE="http://www.mpg123.de/"
 
-DEPEND=">=sys-libs/glibc-2.1.3"
+DEPEND="virtual/glibc"
 
 src_unpack () {
     unpack ${A}
@@ -21,14 +21,12 @@ src_unpack () {
 
 src_compile() {
 
-    cd ${S}
     try make linux-i486
 
 }
 
 src_install () {
 
-    cd ${S}
     into /usr
     dobin mpg123
     doman mpg123.1
