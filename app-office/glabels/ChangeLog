@@ -1,6 +1,9 @@
 # ChangeLog for app-office/glabels
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.7 2004/11/25 16:47:09 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.8 2004/11/29 15:35:34 gustavoz Exp $
+
+  29 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> glabels-2.0.1.ebuild:
+  Stable on sparc
 
   25 Nov 2004; Leonardo Boshell <leonardop@gentoo.org> glabels-2.0.1.ebuild:
   Marked stable on x86. Added support for the `static' USE flag.
