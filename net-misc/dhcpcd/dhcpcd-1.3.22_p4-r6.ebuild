@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r5.ebuild,v 1.13 2004/11/04 03:24:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4-r6.ebuild,v 1.1 2004/11/04 03:24:53 vapier Exp $
 
 inherit gnuconfig flag-o-matic eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.phystech.com/pub/${P/_p/-pl}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="build static"
 
 DEPEND="virtual/libc"
@@ -44,20 +44,14 @@ src_unpack() {
 
 src_compile() {
 	use static && append-flags -static
-
-	./configure \
-		--prefix="" \
-		--sysconfdir=/var/lib \
-		--mandir=/usr/share/man || die
-
+	econf || die
 	emake || die
 }
 
 src_install() {
-	einstall sbindir=${D}/sbin || die "Install failed"
-	rmdir ${D}/etc/dhcpc
-	if ! use build
-	then
+	make install DESTDIR=${D} || die "Install failed"
+	rm -rf "${D}"/etc
+	if ! use build ; then
 		dodoc AUTHORS ChangeLog NEWS README
 	else
 		rm -rf ${D}/usr/share
