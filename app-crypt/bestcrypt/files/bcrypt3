@@ -4,7 +4,7 @@
 #
 # Version:      1.2
 #
-# Revision:  $Id: bcrypt3,v 1.1 2004/10/31 15:06:06 lostlogic Exp $
+# Revision:  $Id: bcrypt3,v 1.2 2005/01/07 08:55:43 dragonheart Exp $
 #
 # Author:       Jetico Inc. (support@jetico.com)
 #
@@ -45,7 +45,7 @@ start() {
          mknod -m 666 /dev/bcrypt14 b 7 142
          mknod -m 666 /dev/bcrypt15 b 7 143
         else
-	  if [ ! -c /dev/.devfsd ]
+	  if [ ! -c /dev/.devfsd ] && [ ! -e /dev/.udev ];
 	  then
             mknod -m 666 /dev/bcrypt0 b 188 0
             mknod -m 666 /dev/bcrypt1 b 188 1
@@ -95,7 +95,10 @@ stop() {
 	for i in `lsmod |egrep "^bc_.*" |awk '{print $1}' `; do 
 		rmmod $i
 	done
-	rm -f /dev/bcrypt?* 2>/dev/null
+	if [ ! -c /dev/.devfsd ] && [ ! -e /dev/.udev ];
+	then
+		rm -f /dev/bcrypt?* 2>/dev/null
+	fi
 	rmmod bc
 	eend $?
 }

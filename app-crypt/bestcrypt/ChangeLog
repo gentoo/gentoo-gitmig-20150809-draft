@@ -1,6 +1,16 @@
 # ChangeLog for app-crypt/bestcrypt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.25 2005/01/04 06:07:29 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/ChangeLog,v 1.26 2005/01/07 08:55:43 dragonheart Exp $
+
+*bestcrypt-1.5_p10 (07 Jan 2005)
+
+  07 Jan 2005; Daniel Black <dragonheart@gentoo.org> files/bcrypt3,
+  +files/bestcrypt-1.5_p10-makefile_fix.patch, +files/bestcrypt.devfs,
+  +bestcrypt-1.5_p10.ebuild, bestcrypt-1.5_p9-r1.ebuild:
+  Version bump. Fixes to eliminate stackprotector from the kernel. init script
+  updated to not create modules on udev. Small devfs conf added. Stop
+  bestcrypt-1.5_p9-r1 from installing on 2.6.10 kernels that breaks. CFLAGS and
+  CXXFLAGS used by ebuild now.
 
 *bestcrypt-1.5_p9-r1 (04 Jan 2005)
 

@@ -1,0 +1,8 @@
+# Under development. bctool needs /dev/bcrypt[0-9] and /dev/bcrypt/disc0/disc entries (same)
+# look at man devfsd devfsd.conf, and /usr/share/doc/devfsd*/devfsd.conf and submit an
+# answer to bugs.gentoo.org
+#
+# Of course the simplier solution is to migrate to udev.
+# http://www.gentoo.org/doc/en/udev-guide.xml
+#
+#LOOKUP ^bcrypt0$ CFUNCTION GLOBAL mksymlink ${mntpnt}/bcrypt/disc0/disc $devpath

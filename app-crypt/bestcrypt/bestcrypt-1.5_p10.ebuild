@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.5_p9-r1.ebuild,v 1.2 2005/01/07 08:55:43 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.5_p10.ebuild,v 1.1 2005/01/07 08:55:43 dragonheart Exp $
 
 inherit flag-o-matic eutils linux-mod toolchain-funcs
 
@@ -35,12 +35,6 @@ MODULE_NAMES="bc(block:${S}/mod)
 		bc_twofish(block:${S}/mod/twofish)"
 
 src_unpack() {
-
-	if kernel_is ge 2.6.10;
-	then
-		die "Don't work with 2.6.10 - blkdev_open nolonger included and bestcrypt needs it"
-	fi
-
 	unpack BestCrypt-${PV/_p/-}.tar.gz
 	cd ${S}
 
@@ -71,7 +65,6 @@ src_install() {
 	linux-mod_src_install
 
 	cd ${S}
-
 	dodir /etc
 	cp etc/bc.conf ${D}/etc/bc.conf
 
@@ -88,9 +81,20 @@ src_install() {
 	newinitd ${FILESDIR}/bcrypt3 bcrypt
 	dodoc README LICENSE HIDDEN_PART
 
+	insinto /etc/devfs.d
+	doins files/bestcrypt.devfs
+}
+
+
+pkg_postinst() {
+
 	einfo "If you are using the serpent or rc6 encryption modules and have any problems,"
 	einfo "please submit bugs to http://bugs.gentoo.org because these modules are not part"
 	einfo "of the standard distribution of BestCrypt for Linux released by Jetico."
 	einfo "For more information on these additional modules:"
 	einfo "visit http://www.carceri.dk/index.php?redirect=other_bestcrypt"
+
+	einfo
+	ewarn "The BestCrypt drivers are not free - Please purchace a license from "
+	ewarn "http://www.jetico.com/"
 }
