@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/openmosix-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.68 2004/11/12 07:30:29 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/ChangeLog,v 1.69 2004/11/15 16:52:16 voxus Exp $
+
+*openmosix-sources-2.4.24-r6 (15 Nov 2004)
+*openmosix-sources-2.4.27-r4 (15 Nov 2004)
+
+  15 Nov 2004; Konstantin Arkhipov <voxus@gentoo.org>:
+  -openmosix-sources-2.4.27-r3.ebuild,
+  +openmosix-sources-2.4.27-r4.ebuild,
+  +openmosix-sources-2.4.24-r6.ebuild:
+  Security patch for binfmt_elf, closing bug #70681.
 
   12 Nov 2004; Konstantin Arkhipov <voxus@gentoo.org>:
   -openmosix-sources-2.4.24-r4.ebuild:
