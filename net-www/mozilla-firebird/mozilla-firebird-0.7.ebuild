@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/mozilla-firebird-0.7.ebuild,v 1.4 2003/11/12 13:00:21 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/mozilla-firebird-0.7.ebuild,v 1.5 2003/11/14 03:55:45 brad_mssw Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils
 
@@ -59,7 +59,7 @@ src_unpack() {
 	# alpha stubs patch from lfs project.
 	# <taviso@gentoo.org> (26 Jun 2003)
 	use alpha && epatch ${FILESDIR}/mozilla-1.3-alpha-stubs.patch
-
+	use amd64 && epatch ${FILESDIR}/mozilla-firebird-amd64.patch
 }
 
 src_compile() {
@@ -94,11 +94,20 @@ src_compile() {
 		--enable-strip-libs \
 		--enable-cpp-rtti \
 		--enable-xterm-updates \
-		--enable-optimize=-O2 \
 		--disable-ldap \
 		--disable-toolkit-qt \
 		--disable-toolkit-xlib \
 		--enable-extensions=default,-inspector,-irc,-venkman,-content-packs,-help"
+
+	# On amd64 we statically set 'safe' CFLAGS. Use those only.
+	# using the standard -O2 will cause segfaults on startup for amd64
+	if [ "${ARCH}" = "amd64" ]
+	then
+		myconf="${myconf} --enable-optimize=-O"
+	else
+		myconf="${myconf} --enable-optimize=-O2"
+	fi
+
 
 	if [ -n "`use gtk2`" ] ; then
 		myconf="${myconf} --enable-toolkit-gtk2 \

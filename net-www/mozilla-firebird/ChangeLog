@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mozilla-firebird
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/ChangeLog,v 1.22 2003/11/12 13:00:21 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/ChangeLog,v 1.23 2003/11/14 03:55:45 brad_mssw Exp $
+
+  13 Nov 2003; Brad House <brad_mssw@gentoo.org> mozilla-firebird-0.7.ebuild,
+  files/mozilla-firebird-amd64.patch:
+  amd64 patch by augustus@linuxhardware.org
 
   12 Nov 2003; Sven Blumenstein <bazik@gentoo.org>
   mozilla-firebird-0.7.ebuild:
