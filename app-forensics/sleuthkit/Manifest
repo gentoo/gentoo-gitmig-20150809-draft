@@ -1,8 +1,18 @@
-MD5 08a1b49802df62f6be02903bda714eec ChangeLog 2076
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 20ee07270b7eadc3659cd96a982e460f metadata.xml 230
 MD5 589ec8c678b46958c7511a76fb925994 sleuthkit-1.69.ebuild 1041
 MD5 4a52a02c47459f215919b29ac6ccaac6 sleuthkit-1.70.ebuild 1294
 MD5 9fa93e5a73880e192341e1f3fb040c25 sleuthkit-1.72.ebuild 1446
+MD5 d1f4bdeeb94f4951f1f6fc2d3cf82617 ChangeLog 2162
 MD5 d3ac0995a6995b69b23d6a7392e41035 files/digest-sleuthkit-1.69 66
 MD5 78513b8353019a07577b105b5d9460c3 files/digest-sleuthkit-1.70 66
 MD5 02411e8cd1953fcea0e99626e5d0d8b7 files/digest-sleuthkit-1.72 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBTK80I1lqEGTUzyQRAsniAKCcyQtjysKV24oujDqZNUJwDW+/FgCgwfnK
+48ndnam+o+ui3ACHtRfsKzM=
+=SW3r
+-----END PGP SIGNATURE-----
