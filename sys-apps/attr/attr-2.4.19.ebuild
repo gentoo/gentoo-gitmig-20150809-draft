@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.19.ebuild,v 1.10 2004/12/30 11:17:50 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/attr-2.4.19.ebuild,v 1.11 2004/12/30 20:34:47 vapier Exp $
 
 inherit eutils
 
@@ -12,7 +12,6 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="nls debug"
-RESTRICT="nomirror" # to let new digests propogate #70997
 
 DEPEND=">=sys-apps/portage-2.0.47-r10
 	>=sys-apps/sed-4.0.5

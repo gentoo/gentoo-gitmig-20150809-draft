@@ -1,18 +1,18 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.2.27.ebuild,v 1.11 2004/12/16 06:13:06 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acl/acl-2.2.27.ebuild,v 1.12 2004/12/30 20:38:23 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="Access control list utilities, libraries and headers"
 HOMEPAGE="http://oss.sgi.com/projects/xfs/"
-SRC_URI="ftp://oss.sgi.com/projects/xfs/download/cmd_tars/${P}.src.tar.gz"
+SRC_URI="ftp://oss.sgi.com/projects/xfs/download/cmd_tars/${P}.src.tar.gz
+	ftp://xfs.org/mirror/SGI/cmd_tars/${P}.src.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 ~mips ppc ppc64 s390 sh sparc x86"
 IUSE="nls debug"
-RESTRICT="nomirror" # to let new digests propogate #70997
 
 RDEPEND=">=sys-apps/attr-2.4
 	nls? ( sys-devel/gettext )"
