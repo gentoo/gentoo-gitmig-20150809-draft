@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 7ffa1c2c4576c1ef9e1e5c68a1d2f23e extutils-pkgconfig-1.05.ebuild 611
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 1f293ecd537a82aaccdd4a08c83b0212 extutils-pkgconfig-1.03.ebuild 601
-MD5 4f5b67422692428c06e33a16e4eaaf47 ChangeLog 1710
+MD5 f5037a3e820cfe71f8e46b70bfbb67fc ChangeLog 1805
 MD5 41f300c97f1d4a4f7891c041808e1a68 extutils-pkgconfig-1.02.ebuild 593
-MD5 44282d3d80786550c9fefe385bc8fbf1 extutils-pkgconfig-1.07.ebuild 598
+MD5 1f293ecd537a82aaccdd4a08c83b0212 extutils-pkgconfig-1.03.ebuild 601
+MD5 7ffa1c2c4576c1ef9e1e5c68a1d2f23e extutils-pkgconfig-1.05.ebuild 611
+MD5 4237d7a188526a1af04e83567d05df22 extutils-pkgconfig-1.07.ebuild 595
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 134f43b6ad21f65524d605a8a6b307c7 files/digest-extutils-pkgconfig-1.02 73
-MD5 4e1daf1288c0a8286f35bafb57aae939 files/digest-extutils-pkgconfig-1.07 73
 MD5 b8fdb7c294f9e548cf4612e83cd22c72 files/digest-extutils-pkgconfig-1.03 73
 MD5 dc721520775714dd4d316255786c8787 files/digest-extutils-pkgconfig-1.05 73
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCMfymKRy60XGEcJIRAs4ZAJ4uVYEmH4SaDoFKex2uZPMEXNBALgCfZgwj
-AXMT2u8qREf2EtAl/laDF10=
-=8sZA
------END PGP SIGNATURE-----
+MD5 4e1daf1288c0a8286f35bafb57aae939 files/digest-extutils-pkgconfig-1.07 73
