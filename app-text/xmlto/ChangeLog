@@ -1,6 +1,9 @@
 # ChangeLog for app-text/xmlto
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.6 2003/11/17 04:31:02 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.7 2003/11/22 17:44:55 weeve Exp $
+
+  22 Nov 2003; Jason Wever <weeve@gentoo.org> xmlto-0.0.15.ebuild:
+  Added ~sparc keyword.
 
   17 Nov 2003; Mike Gardiner <obz@gentoo.org> xmlto-0.0.15.ebuild:
   Added MAKEOPTS restriction to -j1 as the build isnt parrallel safe, thanks to
