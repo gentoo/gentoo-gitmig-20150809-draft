@@ -2,10 +2,10 @@
 Hash: SHA1
 
 MD5 c0e0b430578e177a32295ce8f365302d boost-1.31.0.ebuild 3967
-MD5 adcfa013de73a1a08b310a06fdb64aab boost-1.32.0.ebuild 2254
+MD5 a2509f5dd5a2d51aa783863481aea4e9 boost-1.32.0.ebuild 2253
 MD5 7a5736de479368e026895776885a1f4c boost-1.29.0.ebuild 1428
 MD5 c38336b27cb2a10759ade6f16799d051 boost-1.30.0.ebuild 2977
-MD5 69e371ab7163e4ab352bfeba9235d3f1 ChangeLog 4236
+MD5 613950434e5fa901042c8cc215f4f7cd ChangeLog 4332
 MD5 19f97285acdda370e331ee909e26df4c metadata.xml 340
 MD5 6fd34399d93efc1de1221666ed6d37d1 boost-1.30.2.ebuild 2964
 MD5 ed187a2b2048776a7e5b27060d96938c files/digest-boost-1.29.0 65
@@ -16,7 +16,7 @@ MD5 1d06245b53e5677556ae22e5f60f0df3 files/digest-boost-1.32.0 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBu0idUpKYMelfdYERAktxAJ4pRxiNo3NEVV80e+7ZhnNJPRRjAACghwSJ
-/jgQvZV2s13SPMUZt/k7i5Y=
-=LBR/
+iD8DBQFBu0jpUpKYMelfdYERAhZ3AJ4iAgPpmE8MTbgTYnwXVqHlETc4bwCfVrFw
+8p3Vez6mwihdYeP6HHVisc8=
+=ywb3
 -----END PGP SIGNATURE-----
