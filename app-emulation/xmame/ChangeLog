@@ -1,6 +1,12 @@
 # ChangeLog for app-games/xmame
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xmame/ChangeLog,v 1.7 2002/07/24 03:10:38 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xmame/ChangeLog,v 1.8 2002/08/07 07:50:24 rphillips Exp $
+
+*xmame-0.60.1-r3 (7 Aug 2002)
+
+  7 Aug 2002; Ryan Phillips <rphillips@gentoo.org> xmame-0.60.1-r3.ebuild :
+
+  Included sed for use var 'opengl'
 
 *xmame-0.60.1-r2 (13 June 2002)
 
