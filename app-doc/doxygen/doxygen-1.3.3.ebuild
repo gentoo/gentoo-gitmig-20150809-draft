@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.3.3.ebuild,v 1.4 2003/10/08 05:45:32 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.3.3.ebuild,v 1.5 2003/10/17 03:53:21 agriffis Exp $
 
 IUSE="doc qt"
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.stack.nl/pub/users/dimitri/${P}.src.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa"
+KEYWORDS="x86 ~ppc ~sparc alpha ~hppa"
 
 RDEPEND="media-gfx/graphviz
 	qt? ( x11-libs/qt )
