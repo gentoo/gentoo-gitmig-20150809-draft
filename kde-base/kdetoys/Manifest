@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 fa66735fe64da5a79984a2397e2718f3 ChangeLog 9955
-MD5 b98885cd9f73b4ae9a6b07caae93b346 kdetoys-3.3.0.ebuild 312
+MD5 38795087a4499e981de98f63bee9e7e1 ChangeLog 10066
+MD5 d6a13b5c3bb1a33baae8cbbf8b4c9ec7 kdetoys-3.1.5.ebuild 317
+MD5 069bec57e9885cd900b3fb509aa3b0f9 kdetoys-3.2.0.ebuild 320
+MD5 3b46bc6cbe4167f3116dce6b5480ab66 kdetoys-3.3.1.ebuild 323
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 3776b31dd27f1098979ab2527415582b kdetoys-3.2.2.ebuild 320
-MD5 062495c3facdcf7c980cb17261aa3aca kdetoys-3.3.1.ebuild 325
+MD5 b98885cd9f73b4ae9a6b07caae93b346 kdetoys-3.3.0.ebuild 312
 MD5 54bedce773297c6efa071ec0af5d1dae kdetoys-3.2.3.ebuild 321
-MD5 069bec57e9885cd900b3fb509aa3b0f9 kdetoys-3.2.0.ebuild 320
-MD5 d6a13b5c3bb1a33baae8cbbf8b4c9ec7 kdetoys-3.1.5.ebuild 317
 MD5 3a6b7f9c9d0c67b230ead9cce1683c44 files/digest-kdetoys-3.2.3 67
 MD5 8f38e38d1f3663ca582f8d8626000b81 files/digest-kdetoys-3.1.5 67
 MD5 60e3b9141f17e9707121ed0b5c0e7239 files/digest-kdetoys-3.2.0 67
-MD5 6e221742cfa60708048f262283068e53 files/digest-kdetoys-3.2.2 67
 MD5 1c250f3c0eb43e5ae1c5ac2e17a633f6 files/digest-kdetoys-3.3.1 67
+MD5 6e221742cfa60708048f262283068e53 files/digest-kdetoys-3.2.2 67
 MD5 5ad4ecaa91d614d8c9dbcc3a1164bd55 files/digest-kdetoys-3.3.0 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBiTMiugEuf3OQ0akRAjuFAJ9h/MYiKAVU0ktYAivTOA6sxRxz0gCaAkcl
-VjzZ6H0tmc/0YxGiVvpfE5E=
-=01i2
------END PGP SIGNATURE-----
