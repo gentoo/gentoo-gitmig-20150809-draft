@@ -1,6 +1,13 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.99 2005/02/28 22:16:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.100 2005/03/21 01:04:19 robbat2 Exp $
+
+*openldap-2.2.24 (20 Mar 2005)
+
+  20 Mar 2005; Robin H. Johnson <robbat2@gentoo.org>
+  +openldap-2.2.24.ebuild:
+  New upstream version. Fixed Bugs #82584, #85974. Ebuild now checks properly
+  for upgrading.
 
   28 Feb 2005; Aron Griffis <agriffis@gentoo.org> openldap-2.1.30-r2.ebuild,
   openldap-2.1.30-r3.ebuild, openldap-2.1.30-r4.ebuild,
