@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ja/manpages-ja-20040415.ebuild,v 1.4 2004/06/24 21:51:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ja/manpages-ja-20040415.ebuild,v 1.5 2004/06/25 10:10:20 gmsoft Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.linux.or.jp/JM/${MY_P}.tar.gz
 	http://dev.gentoo.org/~usata/distfiles/portage-${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~sparc alpha ~mips ~hppa ~amd64"
+KEYWORDS="x86 ppc ~sparc alpha ~mips hppa ~amd64"
 SLOT="0"
 S="${WORKDIR}/${MY_P}"
 
