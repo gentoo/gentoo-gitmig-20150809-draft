@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gecko-sdk
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/ChangeLog,v 1.3 2004/11/09 21:36:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gecko-sdk/ChangeLog,v 1.4 2004/12/02 15:20:00 chriswhite Exp $
+
+  03 Dec 2004; Chris White <chriswhite@gentoo.org> gecko-sdk-1.7.3.ebuild:
+  Added ~x86 keywords.
 
 *gecko-sdk-1.7.3 (09 Nov 2004)
 

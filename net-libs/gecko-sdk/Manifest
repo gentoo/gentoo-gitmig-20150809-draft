@@ -1,6 +1,16 @@
-MD5 811707643963cd48ed2466c3eca33ade ChangeLog 477
-MD5 dc46045bd70b934a6ea0f97be7d74461 gecko-sdk-1.7.3.ebuild 2030
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 71d75685e9cf3a2bbf5e18e8fbcf4af0 ChangeLog 578
+MD5 aa2e24d9a0c6b5873d50c406b2136452 gecko-sdk-1.7.3.ebuild 2037
 MD5 66c156160ef60780ee4c80a28873e766 metadata.xml 250
 MD5 640ad02464c41c9b820db9b59c7eeaec files/digest-gecko-sdk-1.7.3 75
 MD5 068edb8c46e34027f9c3febc19656c70 files/mozilla-1.3-fix-RAW-target.patch 328
 MD5 23d6b685fd5e49a07cc4a1786871bf47 files/mozilla-alpha-xpcom-subs-fix.patch 4953
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBrzLOFdQwWVoAgN4RAtEbAKDrkDbnh5bCC+H1mFKfpcSRx4xqEACgjKrP
+cvfKRvqhbP8sjMGWcPINzm0=
+=SSMf
+-----END PGP SIGNATURE-----
