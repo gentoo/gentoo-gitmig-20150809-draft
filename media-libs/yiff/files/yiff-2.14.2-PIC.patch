@@ -1,0 +1,30 @@
+diff -Naur yiff-2.14.2.orig/libY2/Makefile yiff-2.14.2/libY2/Makefile
+--- yiff-2.14.2.orig/libY2/Makefile	2003-08-06 14:04:35.000000000 -0700
++++ yiff-2.14.2/libY2/Makefile	2004-07-12 19:56:22.000000000 -0700
+@@ -136,9 +136,9 @@
+ OBJ_C   = $(SRC_C:.c=.o)
+ OBJ_CPP = $(SRC_CPP:.cpp=.o)
+ .c.o:
+-	+$(CC) -c $*.c $(INC_DIRS) $(CFLAGS)
++	+$(CC) -c $*.c $(INC_DIRS) $(CFLAGS) -fPIC -DPIC
+ .cpp.o:
+-	+$(CPP) -c $*.cpp $(INC_DIRS) $(CFLAGS) $(CPPFLAGS)
++	+$(CPP) -c $*.cpp $(INC_DIRS) $(CFLAGS) $(CPPFLAGS) -fPIC -DPIC
+ 
+ $(LIB): $(OBJ_C) $(OBJ_CPP)
+ 	$(CPP) $(OBJ_C) $(OBJ_CPP) -shared -o $(LIB) $(LIBS) $(LIB_DIRS)
+diff -Naur yiff-2.14.2.orig/libY2/Makefile.Linux yiff-2.14.2/libY2/Makefile.Linux
+--- yiff-2.14.2.orig/libY2/Makefile.Linux	2003-08-06 14:04:35.000000000 -0700
++++ yiff-2.14.2/libY2/Makefile.Linux	2004-07-12 19:58:37.000000000 -0700
+@@ -136,9 +136,9 @@
+ OBJ_C   = $(SRC_C:.c=.o)
+ OBJ_CPP = $(SRC_CPP:.cpp=.o)
+ .c.o:
+-	+$(CC) -c $*.c $(INC_DIRS) $(CFLAGS)
++	+$(CC) -c $*.c $(INC_DIRS) $(CFLAGS) -fPIC -DPIC
+ .cpp.o:
+-	+$(CPP) -c $*.cpp $(INC_DIRS) $(CFLAGS) $(CPPFLAGS)
++	+$(CPP) -c $*.cpp $(INC_DIRS) $(CFLAGS) $(CPPFLAGS) -fPIC -DPIC
+ 
+ $(LIB): $(OBJ_C) $(OBJ_CPP)
+ 	$(CPP) $(OBJ_C) $(OBJ_CPP) -shared -o $(LIB) $(LIBS) $(LIB_DIRS)

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/yiff
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/yiff/ChangeLog,v 1.6 2004/07/09 11:35:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/yiff/ChangeLog,v 1.7 2004/07/13 03:02:17 eradicator Exp $
+
+  12 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/yiff-2.14.2-PIC.patch:
+  Added USE=alsa support.  Added PIC patch.  Added ~amd64.
 
   09 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> yiff-2.14.2.ebuild:
   Removing mikmod dependency stuff as it is borked... does not provide libkmid.h

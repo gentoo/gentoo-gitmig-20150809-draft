@@ -6,7 +6,7 @@ MD5 da7f9752e5dc201a33462453c1808c67 alsa-lib-1.0.2.ebuild 1622
 MD5 30c24770677d9b2cd942438b6e46761e alsa-lib-1.0.3b-r2.ebuild 1329
 MD5 2236aa4afa6a060c354d1b7e0d90b1e8 alsa-lib-1.0.4.ebuild 1714
 MD5 60e98bd5e8fe3c26aa3162a591ddb58e alsa-lib-1.0.5.ebuild 1718
-MD5 e1147a642867b3b3ea43518a1376f6d2 metadata.xml 250
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 dbb4cb95b5429eabec8faf6b74e67ab6 ChangeLog 11410
 MD5 59ef099c56483b6ea1afbbc4c8450abe alsa-lib-1.0.5-r2.ebuild 3744
 MD5 7866cccb2308203280e2a4382cbddee4 files/alsa-lib-1.0.3b-rate-capture.patch 565
