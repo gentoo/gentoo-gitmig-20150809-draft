@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/dgen-sdl/dgen-sdl-1.23.ebuild,v 1.1 2002/08/02 04:17:39 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/dgen-sdl/dgen-sdl-1.23.ebuild,v 1.2 2002/08/02 08:21:08 rphillips Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="DGen/SDL is a Linux/SDL-Port of the famous DGen MegaDrive/Genesis-Emulator"
@@ -10,7 +10,7 @@ SRC_URI="http://www.pknet.com/~joe/${P}.tar.gz"
 SLOT="0"
 KEYWORDS="x86"
 
-RDEPEND="media-libs/libsdl
+DEPEND="media-libs/libsdl
 		X? (virtual/X11)
 		opengl? (virtual/opengl)"
 RDEPEND="${DEPEND}
