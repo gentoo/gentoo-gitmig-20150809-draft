@@ -1,0 +1,9 @@
+# ChangeLog for x11-misc/temperature-app
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/temperature-app/ChangeLog,v 1.1 2003/12/13 23:38:00 port001 Exp $
+
+*temperature-app-1.4 (13 Dec 2003)
+
+  13 Dec 2003; Ian Leitch <port001@gentoo.org> temperature-app-1.4.ebuild:
+  Initial commit, thanks to Jeff Stuart <jstuart@computer-city.net> - #21279
+
