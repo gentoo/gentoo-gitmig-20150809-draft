@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/brutefir/brutefir-1.0a.ebuild,v 1.1 2004/08/17 22:55:24 fvdpol Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/brutefir/brutefir-1.0a.ebuild,v 1.2 2004/08/28 18:14:24 dholm Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.ludd.luth.se/~torger/files/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 
 DEPEND="virtual/libc
 	>=media-libs/alsa-lib-0.9.1
