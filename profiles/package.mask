@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3526 2005/01/24 02:12:17 joem Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3527 2005/01/24 18:52:19 ciaranm Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -60,10 +60,6 @@ mail-client/sylpheed-claws-vcalendar
 # Jeremy Huddleston <eradicator@gentoo.org> (21 Jan 2005)
 # ICE problems found in this branch update.  See bug #78666
 =sys-devel/gcc-3.4.3.20050110
-
-# <ciaranm@gentoo.org> (20 Jan 2005)
-# broken tabs, see bug #78794
-=x11-wm/fluxbox-0.9.12
 
 # <kosmikus@gentoo.org> (19 Jan 2005)
 # several compilation problems using current gcc's,
