@@ -40,8 +40,6 @@ src_compile() {
     
     cd source
 
-    sleep 15s    
-
     cp Makefile 1
     cat 1 | sed -e 's/install.man:: gv.man/install.man::/' \
 		-e 's/all:: gv./\#all:: gv./' \
