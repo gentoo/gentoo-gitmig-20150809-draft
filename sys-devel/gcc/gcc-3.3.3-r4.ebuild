@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r4.ebuild,v 1.1 2004/05/01 05:41:55 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r4.ebuild,v 1.2 2004/05/02 18:44:55 solar Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj f77 objc hardened uclibc debug"
 
@@ -142,6 +142,7 @@ DEPEND="virtual/glibc
 	!amd64? ( hardened? ( >=sys-libs/glibc-2.3.3_pre20040207 ) )
 	( !sys-devel/hardened-gcc )
 	>=sys-devel/binutils-2.14.90.0.6-r1
+	hardened? ( >=sys-devel/binutils-2.15.90.0.3-r1 )
 	>=sys-devel/bison-1.875
 	>=sys-devel/gcc-config-1.3.1
 	amd64? ( multilib? ( >=app-emulation/emul-linux-x86-baselibs-1.0 ) )
@@ -353,17 +354,23 @@ src_unpack() {
 		update_gcc_for_libc_ssp
 	fi
 
-	# This patch enables improved PIE and SSP behaviour but does not
-	# enable it by default ...
-
 	cd ${WORKDIR}/${P}
-	epatch ${DISTDIR}/${PIE_SSP_PATCH}
-	use uclibc || epatch ${DISTDIR}/${PIE_EXCLUSION_PATCH}
-	use uclibc || epatch ${DISTDIR}/${SSP_EXCLUSION_PATCH}
 
-	release_version="${release_version}, pie-${PIE_VER}"
+	# ARM is having issues with static linking as the spec file
+	# calls for crtbeginT.o vs crtbeginS.o. SpanKY looked through
+	# the gcc/config/arm/t-* files, it's appears that it's not meant
+	# to build crtbeginT.o (May 2 2004)
+	if [ "${ARCH}" != "arm" ]
+	then
+		# This patch enables improved PIE and SSP behaviour but does not
+		# enable it by default ...
+		epatch ${DISTDIR}/${PIE_SSP_PATCH}
+		use uclibc || epatch ${DISTDIR}/${PIE_EXCLUSION_PATCH}
+		use uclibc || epatch ${DISTDIR}/${SSP_EXCLUSION_PATCH}
+		release_version="${release_version}, pie-${PIE_VER}"
+	fi
 
-	if [ -n "`use hardened`" -a "${ARCH}" != "sparc" ]
+	if [ -n "`use hardened`" -a "${ARCH}" != "arm" ]
 	then
 		einfo "Updating gcc to use automatic PIE + SSP building ..."
 		sed -e 's|^ALL_CFLAGS = |ALL_CFLAGS = -DEFAULT_PIE_SSP|' \
