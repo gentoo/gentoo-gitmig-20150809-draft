@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ntp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.34 2003/10/04 09:37:59 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.35 2003/10/09 12:18:49 tuxus Exp $
+
+  09 Oct 2003; <tuxus@gentoo.org> ntp-4.1.2.ebuild:
+  stable on mips
 
   04 Oct 2003; Markus Nigbur <pyrania@gentoo.org> ntp-4.1.2.ebuild:
   Added dependency for >=sys-devel/automake-1.7 (bug 30293).
