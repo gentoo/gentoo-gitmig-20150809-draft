@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/bcel
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bcel/ChangeLog,v 1.1 2003/05/15 06:58:30 absinthe Exp $
+
+*bcel-5.1 (15 May 2003)
+
+  15 May 2003; Dylan Carlson <absinthe@gentoo.org> bcel-5.1.ebuild,
+  files/bcel-5.1-gentoo.diff:
+  Initial import.
+
