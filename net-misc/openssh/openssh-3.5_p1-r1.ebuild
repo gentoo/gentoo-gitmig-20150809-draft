@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.5_p1-r1.ebuild,v 1.4 2003/02/13 15:03:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.5_p1-r1.ebuild,v 1.5 2003/03/01 22:12:47 lostlogic Exp $
 
 IUSE="ipv6 static pam tcpd kerberos"
 
@@ -73,8 +73,8 @@ src_compile() {
 		# statically link to libcrypto -- good for the boot cd
 		perl -pi -e "s|-lcrypto|/usr/lib/libcrypto.a|g" Makefile
 	fi
-
-	make || die " compile problem"
+	
+	emake || die "compile problem"
 }
 
 src_install() {                               
