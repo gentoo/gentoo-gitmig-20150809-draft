@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/tcpdump
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.30 2004/06/24 22:20:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/ChangeLog,v 1.31 2004/07/14 23:32:48 lv Exp $
+
+  14 Jul 2004; Travis Tilley <lv@gentoo.org> tcpdump-3.8.3-r1.ebuild:
+  fix gcc 3.4 fix so that it works with gcc 3.4.1 too
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> tcpdump-3.7.2.ebuild:
   Add inherit eutils

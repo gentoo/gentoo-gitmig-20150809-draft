@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.8.3-r1.ebuild,v 1.12 2004/06/24 22:20:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tcpdump/tcpdump-3.8.3-r1.ebuild,v 1.13 2004/07/14 23:32:48 lv Exp $
 
 inherit flag-o-matic gcc
 
@@ -21,7 +21,11 @@ DEPEND=">=net-libs/libpcap-0.8.3-r1
 src_compile() {
 	replace-flags -O[3-9] -O2
 	filter-flags -finline-functions
-	[ "`gcc-fullversion`" == "3.4.0" ] && append-flags -fno-unit-at-a-time
+
+	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]; then
+		filter-flags -funit-at-a-time
+		append-flags -fno-unit-at-a-time #48747
+	fi
 
 	econf `use_with ssl crypto` `use_enable ipv6` || die
 	make CCOPT="$CFLAGS" || die
