@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.65-r1.ebuild,v 1.2 2003/07/17 16:34:54 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.65-r1.ebuild,v 1.3 2003/07/18 09:41:27 seemant Exp $
 
 IUSE="nls perl spell nas ssl cjk"
 
@@ -32,7 +32,7 @@ src_unpack() {
 		cd ${S}/plugins
 		unpack encrypt-${EV}.tar.gz
 		cd encrypt
-		patch -p0 < patchfile.${PV} || die "Encryption patch failed"
+		epatch patchfile.${PV}
 		touch aclocal.m4 \
 		      config.h.in \
 		      Makefile.in \
@@ -57,7 +57,7 @@ src_compile() {
 	use nas && myconf="${myconf} --enable-nas" || myconf="${myconf} --disable-nas"
 
 	econf ${myconf} || die "Configuration failed"
-	emake || die "Make failed"
+	emake || make || die "Make failed"
 }
 
 src_install() {
