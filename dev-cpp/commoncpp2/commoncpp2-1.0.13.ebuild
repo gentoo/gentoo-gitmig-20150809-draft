@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/commoncpp2-1.0.13.ebuild,v 1.4 2004/06/24 21:47:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/commoncpp2/commoncpp2-1.0.13.ebuild,v 1.5 2004/08/02 08:01:40 lanius Exp $
 
 IUSE="doc xml2"
 
@@ -41,5 +41,5 @@ src_install () {
 
 	# Only install html docs
 	# man and latex available, but seems a little wasteful
-	use doc && dohtml docs/html/*
+	use doc && dohtml doc/html/*
 }

@@ -2,6 +2,10 @@
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
 # $Header:
 
+  02 Aug 2004; Heinrich Wendel <lanius@gentoo.org> commoncpp2-1.0.12.ebuild,
+  commoncpp2-1.0.13.ebuild, commoncpp2-1.0.9.ebuild:
+  remove old ebuilds; fix html documentation installation, bug #58063
+
   15 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> commoncpp2-1.0.13.ebuild:
   x86 unmask.
 
