@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 01ac54d4073c773bb642f3577b05a356 ChangeLog 5408
+MD5 cdab858c87d7322263a9004b40db203d metadata.xml 270
 MD5 5a86c6bfdbea7a98e99fab7be4373565 riece-1.0.8.ebuild 809
 MD5 6ce57482a5015f1e75c1a53ff79bc674 riece-1.0.6.ebuild 785
-MD5 456fe35dae85bb5c25edc865eadfc909 ChangeLog 5313
-MD5 cdab858c87d7322263a9004b40db203d metadata.xml 270
-MD5 90b700e204c434f9c0924e6b46debc5f riece-1.0.7b.ebuild 808
-MD5 75dc1dbc8bab636c5c11a32c0ca9cb59 files/digest-riece-1.0.6 63
+MD5 b55f9e48f58e9a66a7d708a6af5bbda0 riece-1.0.7b.ebuild 808
 MD5 2d740bbd802c090ca4c3bc62be35be6a files/digest-riece-1.0.7b 64
+MD5 75dc1dbc8bab636c5c11a32c0ca9cb59 files/digest-riece-1.0.6 63
 MD5 bac5b7d5667951eb43049ca1ae13a07c files/50riece-gentoo.el 117
 MD5 7d148eea17e4b101f8978c627257edc2 files/digest-riece-1.0.8 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCR86YVWNWqTUmv+0RAn/MAKCHy1SwSz/Kgw3vuON2vqJTxaoe+ACgjqtH
-jybk2pWWc84P19Rzoo8BeJg=
-=Uu4l
+iD8DBQFCTDsbKf2g/qXtneoRAuFGAJ9uq2vE0Y4j68PcNZWtN0p7KHvctQCcC04L
+mYJqO5jjPcODpuc1HFCkGvw=
+=VEB5
 -----END PGP SIGNATURE-----
