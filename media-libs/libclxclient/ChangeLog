@@ -1,0 +1,11 @@
+# ChangeLog for media-libs/libclxclient
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libclxclient/ChangeLog,v 1.1 2004/10/09 22:14:49 trapni Exp $
+
+*libclxclient-1.0.0 (10 Oct 2004)
+
+  10 Oct 2004; Christian Parpart <trapni@gentoo.org> +metadata.xml,
+  +files/libclxclient-1.0.0-makefile.patch, +libclxclient-1.0.0.ebuild:
+  Ebuild and patch submitted by ron widler <ron@einfach.org> (bug #66616)
+  just very minor changes be me
+

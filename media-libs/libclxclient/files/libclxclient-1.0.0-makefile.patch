@@ -1,0 +1,26 @@
+--- clxclient-1.0.0.orig/Makefile	2004-08-24 00:41:48.080726216 +0200
++++ clxclient-1.0.0/Makefile	2004-08-24 00:43:09.451356000 +0200
+@@ -3,10 +3,8 @@
+ LDLIBS +=
+ 
+ 
+-#CLXCLIENT_LIBDIR = /usr/local/lib
+-#CLXCLIENT_INCDIR = /usr/local/include
+-CLXCLIENT_LIBDIR = /usr/lib
+-CLXCLIENT_INCDIR = /usr/include
++CLXCLIENT_LIBDIR = ${DESTDIR}/usr/lib
++CLXCLIENT_INCDIR = ${DESTDIR}/usr/include
+ CLXCLIENT_SO = libclxclient.so
+ CLXCLIENT_MAJ = $(CLXCLIENT_SO).1
+ CLXCLIENT_MIN = $(CLXCLIENT_MAJ).0.0
+@@ -21,8 +19,8 @@
+ 
+ 
+ install:	$(CLXCLIENT_MIN)
+-	cp -f $(CLXCLIENT_H) $(CLXCLIENT_INCDIR)
+-	cp -f $(CLXCLIENT_MIN) $(CLXCLIENT_LIBDIR)
++	install -D $(CLXCLIENT_H) $(CLXCLIENT_INCDIR)/$(CLXCLIENT_H)
++	install -D $(CLXCLIENT_MIN) $(CLXCLIENT_LIBDIR)/$(CLXCLIENT_MIN)
+ 	/sbin/ldconfig -n $(CLXCLIENT_LIBDIR)
+ 	ln -sf $(CLXCLIENT_MIN) $(CLXCLIENT_LIBDIR)/$(CLXCLIENT_SO)
+ 
