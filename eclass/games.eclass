@@ -1,6 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.13 2002/11/27 19:49:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.14 2002/11/28 16:25:21 vapier Exp $
 
 # devlist: {bass,phoenix,vapier}@gentoo.org
 # This is the games ebuild for standardizing the install of games ...
@@ -20,7 +20,7 @@ export GAMES_STATEDIR="/var/games"
 export GAMES_LIBDIR="/usr/games/lib"
 export GAMES_BINDIR="/usr/games/bin"
 export GAMES_ENVD="90games"
-export GAMES_USER="root"
+export GAMES_USER="games"
 export GAMES_GROUP="games"
 
 egamesconf() {
