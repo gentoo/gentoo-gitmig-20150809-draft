@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.4.ebuild,v 1.3 2004/10/30 20:47:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.6.ebuild,v 1.1 2004/11/08 16:14:28 agriffis Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
-SV=1.6.4		# rc-scripts version
+SV=1.6.6		# rc-scripts version
 SVREV=			# rc-scripts rev
 
 S="${WORKDIR}/rc-scripts-${SV}${SVREV}"
