@@ -1,17 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/libnids-1.16.ebuild,v 1.8 2003/02/13 14:19:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/libnids-1.16.ebuild,v 1.9 2003/03/07 23:16:27 mholzer Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Libnids is an implementation of an E-component of Network Intrusion Detection System. It emulates the IP stack of Linux 2.0.x. Libnids offers IP defragmentation, TCP stream assembly and TCP port scan detection."
-SRC_URI="http://www.packetfactory.net/Projects/Libnids/dist/${P}.tar.gz"
-HOMEPAGE="http://www.packetfactory.net/Projects/Libnids/"
+SRC_URI="http://www.packetfactory.net/Projects/libnids/dist/${P}.tar.gz"
+HOMEPAGE="http://www.packetfactory.net/Projects/libnids/"
 
-DEPEND="net-libs/libpcap net-libs/libnet"
+DEPEND="net-libs/libpcap
+	=net-libs/libnet-1.0*"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc"
 
 src_compile() {
 	
