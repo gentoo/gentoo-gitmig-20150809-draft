@@ -1,6 +1,6 @@
 # ChangeLog for net-dns/ez-ipupdate
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ChangeLog,v 1.6 2003/06/29 20:51:01 aliz Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ChangeLog,v 1.7 2004/06/24 22:35:34 agriffis Exp $
 
 *ez-ipupdate-3.0.11_beta8 (29 Jun 2003)
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/odsclient/odsclient-1.02.ebuild,v 1.2 2003/09/07 00:09:56 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/odsclient/odsclient-1.02.ebuild,v 1.3 2004/06/24 22:37:21 agriffis Exp $
 
 inherit eutils
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/posadis/posadis-0.60.2.ebuild,v 1.2 2004/04/22 23:12:00 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/posadis/posadis-0.60.2.ebuild,v 1.3 2004/06/24 22:37:54 agriffis Exp $
 
 DESCRIPTION="An authoritive/caching Domain Name Server"
 HOMEPAGE="http://www.posadis.org/projects/posadis.php"

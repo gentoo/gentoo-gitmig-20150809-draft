@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.2.2_rc1.ebuild,v 1.9 2004/04/27 02:43:56 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.2.2_rc1.ebuild,v 1.10 2004/06/24 22:33:44 agriffis Exp $
 
 MY_P=${P//-tools}
 MY_P=${MY_P/_}

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/mfedit/mfedit-0.60.4.ebuild,v 1.2 2004/04/23 10:33:54 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/mfedit/mfedit-0.60.4.ebuild,v 1.3 2004/06/24 22:36:38 agriffis Exp $
 
 DESCRIPTION="A graphical editor for DNS master files"
 HOMEPAGE="http://www.posadis.org/projects/mfedit.php"

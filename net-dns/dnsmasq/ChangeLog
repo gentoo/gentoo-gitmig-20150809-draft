@@ -1,6 +1,6 @@
 # ChangeLog for net-dns/dnsmasq
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.39 2004/06/23 19:53:54 avenj Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/ChangeLog,v 1.40 2004/06/24 22:34:51 agriffis Exp $
 
 *dnsmasq-2.9 (23 Jun 2004)
 

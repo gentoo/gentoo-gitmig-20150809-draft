@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.8-r1.ebuild,v 1.4 2004/06/06 20:57:27 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsmasq/dnsmasq-2.8-r1.ebuild,v 1.5 2004/06/24 22:34:51 agriffis Exp $
 
 MY_P="${P/_/}"
 MY_PV="${PV/_rc*/}"

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnswalk/dnswalk-2.0.2.ebuild,v 1.10 2003/09/07 00:09:56 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnswalk/dnswalk-2.0.2.ebuild,v 1.11 2004/06/24 22:35:23 agriffis Exp $
 
 S=${WORKDIR}
 DESCRIPTION="dnswalk is a DNS database debugger"

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ez-ipupdate-3.0.11_beta8.ebuild,v 1.2 2003/08/21 06:15:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ez-ipupdate/ez-ipupdate-3.0.11_beta8.ebuild,v 1.3 2004/06/24 22:35:34 agriffis Exp $
 
 MY_PV=${PV/_beta/b}
 S="${WORKDIR}/${PN}-${MY_PV}"
