@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.6.6.ebuild,v 1.4 2004/07/15 03:53:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-headers/mips-headers-2.6.6-r1.ebuild,v 1.1 2004/08/30 22:59:20 kumba Exp $
 
 ETYPE="headers"
 inherit kernel eutils
@@ -58,25 +58,40 @@ src_unpack() {
 }
 
 src_compile() {
-	# Avoid issues w/ ARCH
-	MY_ARCH=${ARCH}
-	unset ${ARCH}
+	local my_defconfig hcflags
 
-	# Build the right defconfig
+	# Avoid issues w/ ARCH
+	set_arch_to_kernel
+
+	# Imported from linux26-headers
+	# autoconf.h isnt generated unless it already exists. plus, we have no guarentee that 
+	# any headers are installed on the system...
+	[ -f ${ROOT}/usr/include/linux/autoconf.h ] || touch ${S}/include/linux/autoconf.h
+
+	# CFLAGS for the kernel defconfig
+	hcflags="-Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -I${S}/include/"
+
+	# Set the right defconfig
 	if [ "${PROFILE_ARCH}" = "cobalt" ]; then
-		make cobalt_defconfig
+		my_defconfig="cobalt_defconfig"
 	else
 		# SGI Machine?
 		case "$(uname -i)" in
-			"SGI Indy"|"SGI Indigo2"|"SGI IP22")	make ip22_defconfig ;;
-			"SGI Origin"|"SGI IP27")		make ip27_defconfig ;;
-#			"SGI Octane"|"SGI IP30")		make ip30_defconfig ;;	# Not available yet
-			"SGI O2"|"SGI IP32")			make ip32_defconfig ;;
+			"SGI Indy"|"SGI Indigo2"|"SGI IP22")	my_defconfig="ip22_defconfig" ;;
+			"SGI Origin"|"SGI IP27")		my_defconfig="ip27_defconfig" ;;
+			"SGI Octane"|"SGI IP30")		my_defconfig="ip30_defconfig" ;;
+			"SGI O2"|"SGI IP32")			my_defconfig="ip32_defconfig" ;;
 		esac
 	fi
 
+	# Run defconfig
+	make ${my_defconfig} HOSTCFLAGS="${hcflags}"
+
+	# "Prepare" certain files
+	make prepare HOSTCFLAGS="${hcflags}"
+
 	# Back to normal
-	ARCH=${MY_ARCH}
+	set_arch_to_portage
 }
 
 src_install() {
