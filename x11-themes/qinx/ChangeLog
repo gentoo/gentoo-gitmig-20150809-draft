@@ -1,6 +1,13 @@
 # ChangeLog for x11-themes/qinx
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qinx/ChangeLog,v 1.17 2004/08/17 19:49:53 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qinx/ChangeLog,v 1.18 2004/11/15 13:43:10 motaboy Exp $
+
+*qinx-1.2 (15 Nov 2004)
+
+  15 Nov 2004; Simone Gotti <motaboy@gentoo.org>
+  +files/qinx-1.2-configure-arts.patch, +qinx-1.2.ebuild:
+  Version bump. Added a patch to the configure script to honor the arts USE
+  flag. Closes bug #70423.
 
   17 Aug 2004; Dominik Stadler <centic@gentoo.org> qinx-1.1.ebuild:
   Mark stable on x86
