@@ -2,4 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>text-markup</herd>
+<maintainer>
+  <email>pylon@gentoo.org</email>
+  <name>Lars Weiler</name>
+</maintainer>
 </pkgmetadata>
