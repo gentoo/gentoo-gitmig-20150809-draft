@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/gnustep-gui-0.9.4.ebuild,v 1.10 2005/01/10 20:28:41 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnustep-base/gnustep-gui/gnustep-gui-0.9.4.ebuild,v 1.11 2005/04/04 20:40:09 gustavoz Exp $
 
 inherit gnustep
 
@@ -8,7 +8,7 @@ DESCRIPTION="It is a library of graphical user interface classes written complet
 HOMEPAGE="http://www.gnustep.org"
 SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/core/${P}.tar.gz"
 
-KEYWORDS="ppc x86 amd64 ~sparc ~alpha"
+KEYWORDS="ppc x86 amd64 sparc ~alpha"
 SLOT="0"
 LICENSE="LGPL-2.1"
 
