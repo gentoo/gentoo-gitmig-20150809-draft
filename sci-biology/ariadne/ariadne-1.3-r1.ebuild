@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ariadne/ariadne-1.3.ebuild,v 1.1 2005/03/05 21:24:53 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ariadne/ariadne-1.3-r1.ebuild,v 1.1 2005/03/06 14:50:14 ribosome Exp $
 
 inherit toolchain-funcs
 
@@ -14,7 +14,7 @@ IUSE=""
 KEYWORDS="~x86"
 
 DEPEND="virtual/libc
-	sci-biology/ncbi-tools"
+	>=sci-biology/ncbi-tools-20041020-r1"
 
 S=${WORKDIR}/SRC-${PV}
 
@@ -36,6 +36,5 @@ src_install() {
 	dolib Linux/libseq.a
 	insinto /usr/include/${PN}
 	doins Include/*.h
-	newenvd ${FILESDIR}/${PN}-env 22ariadne
 	dodoc README
 }
