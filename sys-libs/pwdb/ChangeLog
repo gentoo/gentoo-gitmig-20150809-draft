@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/pwdb
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/ChangeLog,v 1.24 2004/02/09 21:13:22 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/ChangeLog,v 1.25 2004/02/27 19:30:35 seemant Exp $
+
+  27 Feb 2004; Seemant Kulleen <seemant@gentoo.org> pwdb-0.61-r4.ebuild,
+  pwdb-0.62.ebuild:
+  move the filter-flags statement into src_compile
 
   09 Feb 2004; <gustavoz@gentoo.org> pwdb-0.62.ebuild:
   stable on sparc

@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.61-r4.ebuild,v 1.20 2004/02/22 12:33:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.61-r4.ebuild,v 1.21 2004/02/27 19:30:35 seemant Exp $
 
 inherit eutils flag-o-matic
-filter-flags "-fstack-protector"
 
 IUSE="selinux"
 
@@ -29,6 +28,8 @@ src_unpack () {
 }
 
 src_compile() {
+	filter-flags "-fstack-protector"
+
 	# author has specified application to be compiled with `-g` 
 	# no problem, but with ccc `-g` disables optimisation to make
 	# debugging easier, `-g3` enables debugging and optimisation
