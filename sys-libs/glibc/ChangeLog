@@ -1,6 +1,14 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.121 2004/01/20 00:48:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.122 2004/01/26 16:14:28 solar Exp $
+
+*glibc-2.3.3_pre20040117-r1 (26 Jan 2004)
+
+  26 Jan 2004; <solar@gentoo.org> glibc-2.3.3_pre20040117-r1.ebuild,
+  files/2.3.3/glibc-2.3.3-owl-malloc-unlink-sanity-check.diff,
+  files/2.3.3/glibc-2.3.3_pre20040117-pt_pax.diff,
+  files/2.3.3/glibc-2.3.3_pre20040117-signal-ssp.diff:
+  added ptpax flags. cosmetic ssp patch and owl unlink sanity to testing
 
   19 Jan 2004; Mike Frysinger <vapier@gentoo.org> glibc-2.3.2-r9.ebuild :
   Remove nptl support since people dont understand nptl and this is now x86 stable.
