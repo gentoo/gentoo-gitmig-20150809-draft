@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11u.ebuild,v 1.1 2002/08/14 14:41:42 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11u.ebuild,v 1.2 2002/08/14 15:17:32 aliz Exp $
 
 CRYPT_PATCH_P=${PN}-${PV/1u/1r}
 S=${WORKDIR}/${P}
@@ -29,6 +29,8 @@ src_unpack() {
 	then
 		gunzip -c ${DISTDIR}/${CRYPT_PATCH_P}.patch.gz | patch -p1 || die
 	fi
+
+	patch -p0 < ${FILESDIR}/${P}-gentoo.patch
 
 	cp MCONFIG MCONFIG.orig
 	sed -e "s:-pipe -O2 \$(CPUOPT) -fomit-frame-pointer:${CFLAGS}:" \
