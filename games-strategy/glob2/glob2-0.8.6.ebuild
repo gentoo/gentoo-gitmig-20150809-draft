@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.8.6.ebuild,v 1.4 2004/06/24 23:28:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/glob2/glob2-0.8.6.ebuild,v 1.5 2004/07/01 05:34:11 mr_bones_ Exp $
 
 inherit games
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 ~ppc ~amd64"
 #IUSE="opengl" #opengl not ready yet.
 IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=media-libs/libsdl-1.2.0
 	media-libs/libpng
 	media-libs/sdl-net

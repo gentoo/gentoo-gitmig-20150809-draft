@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/asc-1.15.0.0.ebuild,v 1.3 2004/06/24 23:25:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/asc/asc-1.15.0.0.ebuild,v 1.4 2004/07/01 05:34:11 mr_bones_ Exp $
 
 inherit games
 
@@ -16,7 +16,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	app-arch/bzip2
 	>=media-libs/libsdl-1.2
 	media-libs/sdl-image

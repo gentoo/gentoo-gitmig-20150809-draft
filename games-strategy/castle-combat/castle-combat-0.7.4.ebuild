@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/castle-combat/castle-combat-0.7.4.ebuild,v 1.4 2004/06/24 23:26:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/castle-combat/castle-combat-0.7.4.ebuild,v 1.5 2004/07/01 05:34:11 mr_bones_ Exp $
 
 inherit games
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86"
 IUSE=""
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	sys-libs/zlib
 	media-libs/libpng
 	media-libs/libsdl

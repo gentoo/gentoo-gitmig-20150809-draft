@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/uqm-0.3.ebuild,v 1.6 2004/06/24 23:30:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/uqm/uqm-0.3.ebuild,v 1.7 2004/07/01 05:34:11 mr_bones_ Exp $
 
 inherit games
 
@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 IUSE="opengl"
 SLOT="0"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	virtual/x11
 	media-libs/libvorbis
 	media-libs/jpeg
