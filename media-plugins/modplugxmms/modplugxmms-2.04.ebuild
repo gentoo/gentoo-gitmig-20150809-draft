@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/modplugxmms/modplugxmms-2.04.ebuild,v 1.2 2003/07/12 18:40:40 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/modplugxmms/modplugxmms-2.04.ebuild,v 1.3 2004/02/25 17:41:18 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="XMMS plugin for MOD-like music files"
@@ -9,14 +9,16 @@ HOMEPAGE="http://modplug-xmms.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 
 DEPEND=">=media-sound/xmms-1.2.5-r1"
 
 src_unpack() {
-	unpack ${A}
-	cd ${S}
+	unpack ${A} ; cd ${S}
 	epatch ${FILESDIR}/${P}.patch
+
+	cd ${S}/libmodplug
+	epatch ${FILESDIR}/${P}-amd64.patch
 }
 
 src_compile() {

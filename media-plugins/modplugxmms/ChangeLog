@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/modplugxmms
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/modplugxmms/ChangeLog,v 1.5 2003/06/03 12:50:17 robh Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/modplugxmms/ChangeLog,v 1.6 2004/02/25 17:41:18 aliz Exp $
+
+  25 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> modplugxmms-2.04.ebuild,
+  files/modplugxmms-2.04-amd64.patch:
+  Adding amd64 keyword. Closing #42074.
 
 *modplugxmms-2.04 (03 Jun 2003)
 
