@@ -502,3 +502,4 @@ move app-admin/dosfstools sys-fs/dosfstools
 move app-admin/mtools sys-fs/mtools
 move sys-fs/mtoolsfm app-misc/mtoolsfm
 move app-cdr/virtualcd app-cdr/cdemu
+move net-firewall/bastille app-admin/bastille
