@@ -1,6 +1,11 @@
 # ChangeLog for net-www/spawn-fcgi
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/spawn-fcgi/ChangeLog,v 1.5 2004/09/28 01:44:05 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/spawn-fcgi/ChangeLog,v 1.6 2004/11/02 20:09:47 stuart Exp $
+
+*spawn-fcgi-1.2.0 (02 Nov 2004)
+
+  02 Nov 2004; Stuart Herbert <stuart@gentoo.org> +spawn-fcgi-1.2.0.ebuild:
+  Version bump; stable on x86
 
   28 Sep 2004; Sven Wegener <swegener@gentoo.org>
   files/spawn-fcgi-1.1.0.conf, files/spawn-fcgi-1.1.0.initd:
