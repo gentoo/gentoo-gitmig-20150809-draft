@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsprogs/xfsprogs-2.2.2-r1.ebuild,v 1.1 2002/10/29 06:17:07 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsprogs/xfsprogs-2.2.2-r1.ebuild,v 1.2 2002/10/30 05:44:02 bcowan Exp $
 
 DESCRIPTION="xfs filesystem utilities"
 
@@ -24,9 +24,12 @@ src_compile() {
 	
 	autoconf || die
 	
-	./configure --prefix=/ \
-		    --libexecdir=/lib/ \
-		    --mandir=/usr/share/man/ || die "config failed"
+	./configure --prefix=/usr \
+			--bindir=/bin \
+			--sbindir=/sbin \
+			--libdir=/lib \
+		    --libexecdir=/lib \
+		    --mandir=/usr/share/man || die "config failed"
 		    
 	cp include/builddefs include/builddefs.orig
 	sed -e "s:/usr/share/doc/${PN}:/usr/share/doc/${PF}:" \
@@ -39,9 +42,9 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} DK_INC_DIR=${D}/include/disk install install-dev || die "make install failed"
+	make DESTDIR=${D} DK_INC_DIR=${D}/usr/include/disk install install-dev || die "make install failed"
 	
-	cat ${S}/libhandle/.libs/libhandle.la | sed -e 's:installed=no:installed=yes:g' > ${D}/usr/lib/libhandle.la
+	cat ${S}/libhandle/.libs/libhandle.la | sed -e 's:installed=no:installed=yes:g' > ${D}/lib/libhandle.la
 	
 	dosym /lib/libhandle.so.1 /lib/libhandle.so	
 }
