@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.49 2004/07/02 11:54:57 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.50 2004/07/10 23:54:52 wolf31o2 Exp $
+
+*vmware-workstation-4.5.2.8848-r1 (10 Jul 2004)
+
+  10 Jul 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  -vmware-workstation-4.5.1.7568-r1.ebuild,
+  +vmware-workstation-4.5.2.8848-r1.ebuild,
+  vmware-workstation-4.5.2.8848.ebuild:
+  Removing 4.5.1 ebuilds, marking 4.5.2 stable on x86, and adding a -r1 ebuild
+  for 4.5.2 that adds amd64 support. Closing bug #53879.
 
   02 Jul 2004; Chris Gianelloni <wolf31o2@gentoo.org> :
   Fixing digest files and closing bug #55785.
