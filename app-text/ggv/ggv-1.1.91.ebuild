@@ -1,12 +1,12 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ggv-1.0.1.ebuild,v 1.9 2001/10/12 13:02:28 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ggv/ggv-1.1.91.ebuild,v 1.1 2001/11/09 02:18:31 hallski Exp $
 
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gnome Ghostview"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
 
 RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
@@ -24,25 +24,30 @@ src_compile() {
 
 	if [ "`use bonobo`" ] ; then
 		myconf="$myconf --with-bonobo"
+		CFLAGS="${CFLAGS} `gnome-config --cflags bonobo bonobox`"
 	else
 		myconf="$myconf --without-bonobo"
-		cp configure configure.orig
-		sed -e "s/BONOBO_TRUE/BONOBO_FALSE/" configure.orig > configure
 	fi
 
-	CFLAGS="${CFLAGS} `gnome-config --cflags bonobo bonobox`"
+	CFLAGS="$CFLAGS `gdk-pixbuf-config --cflags`"
 
 	./configure --host=${CHOST}					\
 		    --prefix=/usr					\
 		    --sysconfdir=/etc					\
+		    --localstatedir=/var/lib				\
 		    $myconf || die
 
-	# bonobo support does not work yet
 	emake || die
 }
 
 src_install() {
-	make prefix=${D}/usr sysconfdir=${D}/etc install || die
+	gconftool --shutdown
+
+	make prefix=${D}/usr						\
+	     sysconfdir=${D}/etc					\
+	     localstatedir=${D}/var/lib					\
+	     install || die
 
 	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
 }
+
