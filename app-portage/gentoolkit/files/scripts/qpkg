@@ -9,8 +9,8 @@
 # Additional code thanks to:
 #	      Josh Goebel <dreamer@firesedge.org>
 #
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/files/scripts/qpkg,v 1.1 2003/08/15 12:23:44 lanius Exp $
-ID='$Id: qpkg,v 1.1 2003/08/15 12:23:44 lanius Exp $'
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/files/scripts/qpkg,v 1.2 2003/08/23 23:28:55 lanius Exp $
+ID='$Id: qpkg,v 1.2 2003/08/23 23:28:55 lanius Exp $'
 VERSION=0.`echo ${ID} | cut -d\  -f3`
 
 PROG=`basename ${0}`
@@ -165,7 +165,7 @@ of installed packages, and do other queries against installed or
 uninstalled packages.
 
 ${BR}Usage:
-${T}${CY}${PROG}${NO} [${BR}options${NO}] [${YL}pkgname${NO}] [${BL}-g${YL} group${NO}] [${BL}-f${YL} <file>${NO}|${BL}-fp${YL} <patern>${NO}]
+${T}${CY}${PROG}${NO} [${BR}options${NO}] [${YL}pkgname${NO}] [${BL}-g${YL} group${NO}] [${BL}-f${YL} <file>${NO}|${BL}-fp${YL} <pattern>${NO}]
 ${T}${CY}${PROG}${NO} ${BL}--dups${NO} [${BL}--slot${NO}]
 ${T}${CY}${PROG}${NO} ${BL}--help${NO}
 
@@ -176,11 +176,11 @@ ${BR}Duplicate Locating:
 ${BR}Package Selection:
   ${BL}-f,  --find-file${NO}${T}finds package that owns file <file>
   ${BL}-fp, --find-pattern${NO}${T}finds to package that owns file matching *<pattern>*
-  ${BL}-m,  --masked${NO}${T}Include${YL} only${NO} masked packages
+  ${BL}-m,  --masked${NO}${T}${T}Include${YL} only${NO} masked packages
   ${BL}-n,  --non-masked${NO}${T}Include${YL} only${NO} non-masked packages
   ${BL}-I,  --installed${NO}${T}Include${YL} only${NO} installed packages
   ${BL}-U,  --uninstalled${NO}${T}Include${YL} only${NO} uninstalled packages
-  ${BL}-g,  --group${NO}${T}${T}Find by goup (can be combined with other searches)
+  ${BL}-g,  --group${NO}${T}${T}Find by group (can be combined with other searches)
 
 ${BR}Information Selection:
   ${BL}-l,  --list${NO}${T}${T}List package content
@@ -195,7 +195,7 @@ ${T}${T}${T}depending on selected packages
 
 ${BR}Operation Modifiers:
   ${BL}-nc, --no-color${NO}${T}don't use colors
-  ${BL}-v,  --verbose${NO}${T}Be more verbose [ can be repeated twise ]
+  ${BL}-v,  --verbose${NO}${T}Be more verbose [ can be repeated twice ]
   ${BL}-vv${NO}${T}${T}${T}Same as ${BL}-v -v${NO}
 
 ${YL}Notes${NO}: 
@@ -216,8 +216,8 @@ ${YL}Examples${NO}:
   ${PROG} porta -I		print versions of installed portage
   ${PROG} porta -i		.. + versions in portage tree + descriptions 
 			and homepages
-  ${PROG} gawk -c -v	check integrity all installed versions of gawk
-			the older will have \"damaged\" files.
+  ${PROG} gawk -c -v	check integrity of all installed versions of gawk
+			the older ones will have \"damaged\" files.
   ${PROG} -f /bin/ls	print package(s) that own /bin/ls
 "
 	exit
