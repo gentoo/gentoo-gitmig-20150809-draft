@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.1 2002/03/27 23:52:40 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.2 2002/03/28 22:20:13 danarmak Exp $
 # This contains everything except things that modify ebuild variables and functions (e.g. $P, src_compile() etc.)
 ECLASS=kde-functions
 
@@ -27,6 +27,14 @@ need-kde() {
 set-kdedir() {
 
 	debug-print-function $FUNCNAME $*
+	
+	# something's wrong with my writing an if for this
+	case "$1" in
+	    3*)	
+	    export WANT_AUTOCONF_2_5=1
+	    export WANT_AUTOMAKE_1_4=1
+	    ;;
+	esac
 	
 	# default settings for older make.globals versions which don't include the default KDE?DIR settings
 	[ -z "$KDE2DIR" ] && export KDE2DIR="/usr/kde/2"
@@ -90,7 +98,7 @@ qtver-from-kdever() {
 
 	case $1 in
 		2*)	ver=2.3.1;;
-		3*)	ver=3.0.1;;
+		3*)	ver=3.0.3;;
 		*)	echo "!!! error: $FUNCNAME() called with invalid parameter: \"$1\", please report bug" && exit 1;;
 	esac
 
@@ -131,6 +139,34 @@ min-qt-ver() {
 	    3*)	selected_version="3";;
 	    *)	echo "!!! error: $FUNCNAME() called with invalid parameter: \"$1\", please report bug" && exit 1;;
 	esac
+
+}
+
+
+# generic makefile sed for sandbox compatibility. for some reason when the kde makefiles (of many packages
+# and versions) try to chown root and chmod 4755 some binaries (after installing, target isntall-exec-local),
+# they do it to the files in $(bindir), not $(DESTDIR)/$(bindir). I've fild a report on bugs.kde.org but no
+# response so far.
+# Pass a list of dirs to sed, Makefile.{am,in} in these dirs will be sed'ed.
+# This should be harmless if the makefile doesn't need fixing.
+kde_sandbox_patch() {
+
+    debug-print-function $FUNCNAME $*
+    
+    while [ -n "$1" ]; do
+	# can't use dosed, because it only works for things in ${D}, not ${S}
+	cd $1
+	for x in Makefile.am Makefile.in Makefile
+	do
+	    if [ -f "$x" ]; then
+		echo Running sed on $x
+		cp $x ${x}.orig
+		sed -e 's: $(bindir): $(DESTDIR)/$(bindir):g' -e 's: $(kde_datadir): $(DESTDIR)/$(kde_datadir):g' ${x}.orig > ${x}
+		rm ${x}.orig
+	    fi
+	done
+	shift
+    done
 
 }
 
