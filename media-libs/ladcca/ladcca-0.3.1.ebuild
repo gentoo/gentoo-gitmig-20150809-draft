@@ -7,10 +7,12 @@ HOMEPAGE="http://pkl.net/~node/ladcca.html"
 SRC_URI="http://pkl.net/~node/software/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
-DEPEND="virtual/jack" 
+DEPEND="media-libs/alsa-lib \
+	virtual/jack \
+	>=x11-libs/gtk+-2.0" 
 
 S=${WORKDIR}/${P}
 
