@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041002.ebuild,v 1.2 2004/10/04 22:59:27 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041006.ebuild,v 1.1 2004/10/07 18:01:56 lv Exp $
 
 inherit eutils flag-o-matic gcc
 
 # Branch update support.  Following will disable:
 #  BRANCH_UPDATE=
-BRANCH_UPDATE="20041002"
+BRANCH_UPDATE="20041006"
 
 # Minimum kernel version we support
 # (Recent snapshots fails with 2.6.5 and earlier)
@@ -767,7 +767,7 @@ EOF
 		cd ${WORKDIR}/${MYMAINBUILDDIR}
 		make PARALLELMFLAGS="${MAKEOPTS}" \
 			install_root=${D} \
-			timezone/install-others -C ${MYMAINBUILDDIR} || die
+			timezone/install-others || die
 	fi
 
 	if use pic && ! use amd64 ; then

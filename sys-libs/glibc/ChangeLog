@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.266 2004/10/04 22:59:27 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.267 2004/10/07 18:01:56 lv Exp $
+
+*glibc-2.3.4.20041006 (07 Oct 2004)
+
+  07 Oct 2004; Travis Tilley <lv@gentoo.org> -glibc-2.3.4.20041002.ebuild,
+  +glibc-2.3.4.20041006.ebuild:
+  fixed a small bootstrap timezone bug and the group permissions bug (66392)
 
   04 Oct 2004; Travis Tilley <lv@gentoo.org>
   +files/2.3.4/glibc-2.3.3-mdns-resolver.diff, glibc-2.3.4.20041002.ebuild:
