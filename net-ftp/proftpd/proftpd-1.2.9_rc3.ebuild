@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.9_rc3.ebuild,v 1.1 2003/10/16 06:05:13 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.9_rc3.ebuild,v 1.2 2003/10/21 09:57:42 raker Exp $
 
 inherit flag-o-matic
 
@@ -24,6 +24,12 @@ DEPEND="net-libs/libpcap
 	postgres? ( >=dev-db/postgresql-7.3 )
 	ssl? ( >=dev-libs/openssl-0.9.6f )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r3 )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/1.2.9_rc3-reversedns.diff
+}
 
 src_compile() {
 	local modules myconf
