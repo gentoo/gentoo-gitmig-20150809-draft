@@ -1,3 +1,14 @@
-MD5 3d7aa5135e4fcb87dbb3c083d752228d jnlp-bin-1.2.ebuild 729
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b4a8a967be02978c35738d4851c59b6a jnlp-bin-1.2.ebuild 826
+MD5 a0934cf311c752a890822f8ea755dd28 ChangeLog 372
 MD5 4dad079a28768d183022cff420f01281 metadata.xml 220
 MD5 dc9d20db2b9457f82f07972080a2b717 files/digest-jnlp-bin-1.2 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBUIJA/rLF9B432nYRAuN4AJwPPDujOgx1Z2IUzg+YcdfBpT+TCwCeOzga
+1YAtTXBLzNzCl1ugAJ+v+TU=
+=AmKL
+-----END PGP SIGNATURE-----
