@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.5.2.8848-r1.ebuild,v 1.3 2004/08/19 01:54:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.5.2.8848-r1.ebuild,v 1.4 2004/08/19 02:04:23 eradicator Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -48,7 +48,9 @@ src_unpack() {
 		unpack ${N26KernSupport}.tar.gz
 		mv -f ${N26KernSupport}/*.tar ${S}/lib/modules/source/
 		cd ${N26KernSupport}
-		./update vmware ../lib/bin/vmware || die
+		chmod 755 ../lib/bin/vmware ../bin/vmnet-bridge ../lib/bin/vmware-vmx ../lib/bin-debug/vmware-vmx
+		# update75 doesn't patch vmware
+		# ./update vmware ../lib/bin/vmware || die
 		./update bridge ../bin/vmnet-bridge || die
 		./update vmx ../lib/bin/vmware-vmx || die
 		./update vmxdebug ../lib/bin-debug/vmware-vmx || die
