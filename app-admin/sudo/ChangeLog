@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/sudo
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.20 2004/03/21 10:57:08 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/ChangeLog,v 1.21 2004/04/02 01:23:46 iggy Exp $
+
+  01 Apr 2004; Brian Jackson <iggy@gentoo.org> sudo-1.6.7_p5.ebuild:
+  add s390 to keywords
 
   21 Mar 2004; Joshua Kinard <kumba@gentoo.org> sudo-1.6.7_p5.ebuild:
   Marked stable on mips.

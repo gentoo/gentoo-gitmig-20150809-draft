@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.7_p5.ebuild,v 1.11 2004/03/21 10:57:08 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sudo/sudo-1.6.7_p5.ebuild,v 1.12 2004/04/02 01:23:46 iggy Exp $
 
 DESCRIPTION="Allows certain users/groups to run commands as root"
 SRC_URI="ftp://ftp.sudo.ws/pub/sudo/${P/_/}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.sudo.ws/"
 
 SLOT="0"
 LICENSE="Sudo"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips s390"
 IUSE="pam"
 
 S=${WORKDIR}/${P/_/}
