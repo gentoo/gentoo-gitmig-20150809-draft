@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r1.ebuild,v 1.28 2003/10/08 02:42:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r1.ebuild,v 1.29 2003/10/09 19:20:15 pappy Exp $
 
 IUSE="nls pic build nptl"
 
@@ -395,6 +395,11 @@ src_compile() {
 		else
 			myconf="${myconf} --enable-kernel=2.2.5"
 		fi
+	fi
+
+	if [ "${ARCH}" == "sparc" ] || [ "${ARCH}" == "sparc64" ] || [ "${ARCH}" == "ppc" ] || [ "${ARCH}" == "ppc64" ]
+	then
+		has_version "sys-devel/hardened-gcc" && export CC="${CC} -yet_exec -fstack-protector"
 	fi
 
 	einfo "Configuring GLIBC..."
