@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.10.ebuild,v 1.5 2001/09/28 05:48:58 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.10.ebuild,v 1.1 2001/09/28 05:48:56 drobbins Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
