@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.6.6.ebuild,v 1.1 2002/03/28 09:07:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.6.6.ebuild,v 1.2 2002/04/01 04:05:59 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A personal finance manager"
@@ -11,9 +11,9 @@ HOMEPAGE="http://gnucash.sourceforge.net"
 RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
 	 >=dev-libs/libxml-1.8.10
 	 >=gnome-extra/gtkhtml-0.14.0-r1
-	 >=gnome-base/gnome-print-0.30
 	 >=gnome-extra/gal-0.13-r1
-	 >=gnome-extra/guppi-0.35.5-r2"
+	 >=gnome-extra/guppi-0.35.5-r2
+	 cups? ( >=gnome-base/gnome-print-0.30 )"
 
 DEPEND="${RDEPEND}
 	>=sys-devel/perl-5
@@ -36,7 +36,7 @@ src_compile() {
 	local myconf
 
 	if [ -z "`use nls`" ] ; then
-        	myconf="--disable-nls"
+		myconf="--disable-nls"
 	fi
 
 	./configure --host=${CHOST}		\
@@ -52,7 +52,4 @@ src_install () {
     make DESTDIR=${D} install || die
 
     dodoc AUTHORS COPYING ChangeLog NEWS README TODO
-
-	
 }
-
