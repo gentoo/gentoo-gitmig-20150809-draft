@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/gentoo-syntax-20041227.ebuild,v 1.3 2005/01/02 17:52:49 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/gentoo-syntax-20041227.ebuild,v 1.4 2005/01/13 11:26:13 ciaranm Exp $
 
 inherit eutils vim-plugin
 
@@ -8,12 +8,12 @@ DESCRIPTION="vim plugin: Gentoo Ebuild, Eclass, GLEP, ChangeLog and Portage
 Files syntax highlighting, filetype and indent settings"
 HOMEPAGE="http://developer.berlios.de/projects/gentoo-syntax"
 LICENSE="vim"
-KEYWORDS="x86 sparc mips ~amd64 ~ppc ~ppc64 ~alpha ~ia64"
+KEYWORDS="x86 sparc mips ~amd64 ~ppc ~ppc64 ~alpha ~ia64 ~arm ~hppa ~s390"
 SRC_URI="http://download.berlios.de/gentoo-syntax/${P}.tar.bz2"
 
 # For gathering stats. Evil, I know, but I need to know whether I can
 # reasonably add this package in as a PDEPEND of vim-core. -- ciaranm
-RESTRICT="nomirror"
+RESTRICT="primaryuri"
 
 IUSE="ignore-glep31"
 VIM_PLUGIN_HELPFILES="gentoo-syntax"

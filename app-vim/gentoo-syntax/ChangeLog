@@ -1,6 +1,13 @@
 # ChangeLog for app-vim/gentoo-syntax
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.29 2005/01/02 17:52:49 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/ChangeLog,v 1.30 2005/01/13 11:26:13 ciaranm Exp $
+
+  13 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  gentoo-syntax-20041009.ebuild, -gentoo-syntax-20041113.ebuild,
+  gentoo-syntax-20041202.ebuild, gentoo-syntax-20041227.ebuild:
+  Remove unnecessary versions. Tested on ~arm and ~hppa. Also added ~s390,
+  since no-one's maintaining it and it's needed for a dep. Changed nomirror to
+  primaryuri now that portage supports it.
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org>
   gentoo-syntax-20041227.ebuild:

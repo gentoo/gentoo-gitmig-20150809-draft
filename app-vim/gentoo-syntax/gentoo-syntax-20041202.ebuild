@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/gentoo-syntax-20041202.ebuild,v 1.6 2005/01/02 17:47:30 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/gentoo-syntax/gentoo-syntax-20041202.ebuild,v 1.7 2005/01/13 11:26:13 ciaranm Exp $
 
 inherit eutils vim-plugin
 
@@ -13,7 +13,7 @@ SRC_URI="http://download.berlios.de/gentoo-syntax/${P}.tar.bz2"
 
 # For gathering stats. Evil, I know, but I need to know whether I can
 # reasonably add this package in as a PDEPEND of vim-core. -- ciaranm
-RESTRICT="nomirror"
+RESTRICT="primaryuri"
 
 IUSE="ignore-glep31"
 VIM_PLUGIN_HELPFILES="gentoo-syntax"
