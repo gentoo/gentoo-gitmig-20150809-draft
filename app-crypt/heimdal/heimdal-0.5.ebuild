@@ -1,16 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.5.ebuild,v 1.3 2002/10/17 13:23:59 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.5.ebuild,v 1.4 2002/11/30 20:25:51 vapier Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Kerberos 5 implementation from KTH"
 SRC_URI="ftp://ftp.pdc.kth.se/pub/${PN}/src/${P}.tar.gz"
 HOMEPAGE="http://www.pdc.kth.se/heimdal/"
-IUSE="ssl ldap berkdb ipv6"
 
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86"
+IUSE="ssl ldap berkdb ipv6"
 
 DEPEND=">=app-crypt/kth-krb-1.1-r1
 	ssl? ( dev-libs/openssl )
@@ -23,7 +22,6 @@ src_unpack() {
 	cd ${S}/lib/krb5
 	mv Makefile.in Makefile.in.bak
 	sed "s:LIB_crypt = @LIB_crypt@:LIB_crypt = -lssl @LIB_crypt@:g" Makefile.in.bak >Makefile.in
-
 }
 
 src_compile() {
@@ -37,18 +35,16 @@ src_compile() {
 
 	use berkdb || myconf="${myconf} --without-berkely-db"
 
-echo $myconf
-
 	./configure --host=${CHOST} \
 		--prefix=/usr/heimdal \
 		--sysconfdir=/etc \
 		--with-krb4=/usr/athena \
-		${myconf} || die
+		${myconf}
 
 	make || die
 }
 
-src_install () {
+src_install() {
 	make prefix=${D}/usr/heimdal \
 		sysconfdir=${D}/etc \
 		install || die

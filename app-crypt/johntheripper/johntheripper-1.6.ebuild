@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6.ebuild,v 1.4 2002/10/17 13:23:59 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6.ebuild,v 1.5 2002/11/30 20:32:53 vapier Exp $
 
 PN0="john"
 S=${WORKDIR}/${PN0}-${PV}
@@ -8,11 +8,12 @@ DEBPATCH=${PN0}_${PV}-17.diff.gz
 DESCRIPTION="John the Ripper is a fast password cracker."
 HOMEPAGE="http://www.openwall.com/${PN0}/"
 SRC_URI="${HOMEPAGE}/${PN0}-${PV}.tar.gz
-		 http://ftp.debian.org/debian/pool/main/j/${PN0}/${DEBPATCH}"
-IUSE="mmx"
+	 http://ftp.debian.org/debian/pool/main/j/${PN0}/${DEBPATCH}"
+
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc sparc64"
+IUSE="mmx"
 
 DEPEND=">=sys-devel/binutils-2.8.1.0.15"
 
@@ -26,15 +27,14 @@ src_compile() {
 	mv Makefile Makefile.orig
 	sed -e "s/-m486//" -e "s/-Wall -O2/${CFLAGS}/" \
 		Makefile.orig > Makefile
-	if [ -z "`use mmx`" ]
-	then
-		emake generic
+	if [ `use mmx` ] ; then
+		emake linux-x86-mmx-elf || die
 	else
-		emake linux-x86-mmx-elf
+		emake generic || die
 	fi
 }
 
-src_install () {
+src_install() {
 	dodir /usr/share/${PN0} /etc
 	insinto /etc
 	doins run/john.ini debian/john-mail.msg debian/john-mail.conf

@@ -1,10 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/kth-krb-1.1.1.ebuild,v 1.3 2002/10/05 05:39:05 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/kth-krb/kth-krb-1.1.1.ebuild,v 1.4 2002/11/30 20:36:18 vapier Exp $
 
-IUSE="ssl afs"
-
-S=${WORKDIR}/krb4-${PV}
 DESCRIPTION="Kerberos 4 implementation from KTH"
 SRC_URI="ftp://ftp.pdc.kth.se/pub/krb/src/krb4-${PV}.tar.gz"
 HOMEPAGE="http://www.pdc.kth.se/kth-krb/"
@@ -12,9 +9,12 @@ HOMEPAGE="http://www.pdc.kth.se/kth-krb/"
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 sparc sparc64"
+IUSE="ssl afs"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6b )
 	afs? ( >=net-fs/openafs-1.2.2-r7 )"
+
+S=${WORKDIR}/krb4-${PV}
 
 src_compile() {
 	local myconf=""
@@ -32,7 +32,7 @@ src_compile() {
 	make || die
 }
 
-src_install () {
+src_install() {
 	make prefix=${D}/usr/athena \
 		sysconfdir=${D}/etc \
 		install || die
