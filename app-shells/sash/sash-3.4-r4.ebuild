@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/sash-3.4-r4.ebuild,v 1.13 2004/02/10 22:22:46 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/sash-3.4-r4.ebuild,v 1.14 2004/02/22 07:18:08 mr_bones_ Exp $
 
 IUSE="readline"
 
@@ -17,7 +17,7 @@ DEPEND="virtual/glibc
 	readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.2 )"
 
 RDEPEND=""
-KEYWORDS="x86 ppc sparc mips arm alpha hppa amd64 ia64"
+KEYWORDS="x86 ppc sparc mips alpha hppa amd64 ia64"
 
 src_unpack() {
 	unpack ${P}.tar.gz
