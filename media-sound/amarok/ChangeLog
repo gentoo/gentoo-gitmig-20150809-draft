@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.28 2004/09/28 17:59:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.29 2004/09/30 23:35:34 eradicator Exp $
+
+  30 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> amarok-1.1.ebuild:
+  Removed noamazon support as it is broken in this version. Fixed upstream for
+  next release.
 
   28 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> amarok-1.1.ebuild:
   Added noamazon USE flag to turn off support for downloading covers from
