@@ -3,9 +3,9 @@ MD5 9cf506f1bd70203ac5ceb7c29120b7d3 ChangeLog 35158
 MD5 7c90e1ccb807e874f4bfa5796d3c513d mozilla-1.6-r1.ebuild 16979
 MD5 21fbce86f739b098e11b5225b58f452d mozilla-1.7-r1.ebuild 16620
 MD5 aa7166da0319e88d9ad909403631ab70 mozilla-1.7.2-r1.ebuild 8874
-MD5 fe197a7b5151fd692a8e12f1bf8e0ee9 mozilla-1.7.3-r1.ebuild 9950
 MD5 f4b18993ea4e902777640a7afe26b4de mozilla-1.7.3.ebuild 8822
 MD5 9320e2015bdfdecec9c9bcd3a6f65cfb mozilla-1.7.ebuild 16477
+MD5 fe197a7b5151fd692a8e12f1bf8e0ee9 mozilla-1.7.3-r2.ebuild 9950
 MD5 b99dabe3c40cfafe2e63bdef95815596 files/10mozilla 105
 MD5 11cae063228d9997b2cf9f150d9837fe files/digest-mozilla-1.6-r1 201
 MD5 c3b63fbbf42894e19fff553092660af6 files/digest-mozilla-1.7-r1 204
@@ -28,7 +28,7 @@ MD5 7d244b888dbd302c14414cbfc1f62501 files/xft.js 135
 MD5 c3b63fbbf42894e19fff553092660af6 files/digest-mozilla-1.7 204
 MD5 a5fb876c8ca4e8dbd0208db31897f39d files/ipc-1.0.7-nsPipeChannel.patch 445
 MD5 a56a4dca744d428bef57871c21c54be7 files/digest-mozilla-1.7.3 281
-MD5 a56a4dca744d428bef57871c21c54be7 files/digest-mozilla-1.7.3-r1 281
+MD5 a56a4dca744d428bef57871c21c54be7 files/digest-mozilla-1.7.3-r2 281
 MD5 8803e1d528f2f49a3f3fa98ba14d9ff0 files/1.2/mozilla-1.2-branch-update.patch.bz2 8240
 MD5 83da5242120c74b0ca6cceae9d6cf237 files/1.2/mozilla-1.2-cutnpaste-limit-fix.patch.bz2 2838
 MD5 4877db25d49b916e55a5d11238c63d8c files/1.2/mozilla-1.2-image-reload-memleak.patch 1489

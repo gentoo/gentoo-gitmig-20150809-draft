@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-1.0-r1.ebuild,v 1.1 2004/11/13 23:27:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/mozilla-firefox-1.0-r2.ebuild,v 1.1 2004/11/14 03:27:04 agriffis Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins eutils mozconfig mozilla-launcher
 
@@ -71,8 +71,8 @@ src_compile() {
 	mozconfig_use_extension gnome gnomevfs
 	mozconfig_annotate '' --with-default-mozilla-five-home=/usr/lib/MozillaFirefox
 
-	# Report settings
-	mozconfig_explain
+	# Finalize and report settings
+	mozconfig_final
 
 	# hardened GCC uses -fstack-protector-all by default, and this breaks
 	# firefox.

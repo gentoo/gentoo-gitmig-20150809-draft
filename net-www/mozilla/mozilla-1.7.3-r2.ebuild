@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7.3-r1.ebuild,v 1.1 2004/11/13 23:29:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7.3-r2.ebuild,v 1.1 2004/11/14 03:29:50 agriffis Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic gcc eutils nsplugins mozilla-launcher mozconfig makeedit
@@ -114,8 +114,8 @@ src_compile() {
 		mozconfig_annotate "-mozsvg" --disable-svg
 	fi
 
-	# Report settings
-	mozconfig_explain
+	# Finalize and report settings
+	mozconfig_final
 
 	####################################
 	#
