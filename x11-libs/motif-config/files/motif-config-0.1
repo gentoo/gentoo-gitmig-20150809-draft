@@ -8,7 +8,17 @@ source /etc/init.d/functions.sh || {
     echo "$0: Could not source /etc/init.d/functions.sh!"
     exit 1
 }
+source /etc/make.profile/make.defaults || {
+	echo "$0: Could not source /etc/make.profile/make.defaults!"
+	exit 1
+}
 umask 022
+
+# functions.sh returns a wrong libdir on multilib architectures
+get_libdir() {
+	libdirvar="LIBDIR_${DEFAULT_ABI}"
+	echo ${!libdirvar}
+}
 
 PROFILE_PATH=/usr/$(get_libdir)/motif
 CONFIG_FILE=${PROFILE_PATH}/current
@@ -23,6 +33,8 @@ Options:
   -c, --get-current-profile  Print current used motif profile.
   
   -l, --list-profiles        Print a list of available profiles.
+
+  -s, --set-profile          Set the current profile.
 
   -L, --get-lib-path         Print path where libraries of the given/current
                              profile are located.
@@ -46,8 +58,95 @@ USAGE_END
 [[ $# -lt 1 ]] && usage 1
 [[ $# -gt 2 ]] && usage 1
 
-switch_profile() {
+
+_activate_profile() {
+	if [[ "$(id -u)" -ne 0 ]] ; then
+		eerror "$0: Must be root."
+		exit 1
+	fi
+
+	new=${1}
+	# libs
+	for file in `ls /usr/$(get_libdir)/${new}/`; do
+		ln -s /usr/$(get_libdir)/${new}/${file} /usr/$(get_libdir)/${file}
+	done
+	# includes
+	for file in `ls /usr/include/${new}/`; do
+		ln -s /usr/include/${new}/${file} /usr/include/${file}
+	done
+	# binaries
+	for file in `find /usr/bin/ -name "*-${new}"`; do
+		ln -s ${file} ${file/-${new}/}
+	done
+	# man pages
+	for file in `find /usr/share/man -name "*-${new}.*"`; do
+		ln -s ${file} ${file/-${new}/}
+	done
+
+	# set new profile as default
+	rm -f ${CONFIG_FILE}
+	cat ${PROFILE_PATH}/${new} > ${CONFIG_FILE}
+
 	exit 0
+}
+
+_deactivate_profile() {
+	if [[ "$(id -u)" -ne 0 ]] ; then
+		eerror "$0: Must be root."
+		exit 1
+	fi
+
+	current=`cat ${CONFIG_FILE}`
+
+	if [ -z "$current" ]; then
+		exit 0
+	fi
+
+	# libs
+	for file in `ls /usr/$(get_libdir)/${current}/`; do
+		rm -f /usr/$(get_libdir)/${file}
+	done
+	# includes
+	for file in `ls /usr/include/${current}/`; do
+		rm -f /usr/include/${file}
+	done
+	# binaries
+	for file in `find /usr/bin/ -name "*-${current}"`; do
+		rm -f ${file/-${current}/}
+	done
+	# man pages
+	for file in `find /usr/share/man -name "*-${current}.*"`; do
+		rm -f ${file/-${current}/}
+	done
+}
+
+switch_profile() {
+	if [[ "$(id -u)" -ne 0 ]] ; then
+		eerror "$0: Must be root."
+		exit 1
+	fi
+
+	_deactivate_profile
+
+	if [ -n "$1" ]; then
+		if [ ! -e ${PROFILE_PATH}/${1} ]; then
+			eerror "$0: no such profile ${1}"
+		else
+			_activate_profile $1
+		fi
+	else
+		for x in `ls ${PROFILE_PATH}`; do
+			if [ "${x}" != "current" ]; then
+				_activate_profile ${x}
+				break
+			fi
+		done
+	fi
+	if [ -z ${x} ]; then
+		error "$0: no profile to activate"
+	else
+		exit 0
+	fi
 }
 
 get_current_profile() {
@@ -57,7 +156,7 @@ get_current_profile() {
 list_profiles() {
 	i=1
 	for x in `ls ${PROFILE_PATH}`; do
-		current=`ls -l --full-time ${CONFIG_FILE} 2> /dev/null | awk '{ print $11 }' | sed -e "s:${PROFILE_PATH}/::"`
+		current=`cat ${CONFIG_FILE}`
 		if [ "${x}" != "current" ]; then
 			output=`cat ${PROFILE_PATH}/${x}`;
 			output="[${i}] $output";
@@ -68,22 +167,67 @@ list_profiles() {
 			i=$((i + 1))
 		fi
 	done
+	exit 0
 }
 
 get_lib_path() {
-	exit 0
+	if [ "$1" != "" ]; then
+		profile=${1}
+	else
+		profile="current"
+	fi
+	name=`cat ${PROFILE_PATH}/${profile} 2> /dev/null`
+	if [ $? -eq 1 ]; then
+		eerror "motif-config: No such profile: $profile"
+	else
+		echo "/usr/$(get_libdir)/${name}/"
+		exit 0
+	fi
 }
 
 get_inc_path() {
-	exit 0
+	if [ "$1" != "" ]; then
+		profile=${1}
+	else
+		profile="current"
+	fi
+	name=`cat ${PROFILE_PATH}/${profile} 2> /dev/null`
+	if [ $? -eq 1 ]; then
+		eerror "motif-config: No such profile: $profile"
+	else
+		echo "/usr/include/${name}/"
+		exit 0
+	fi
 }
 
 get_cflags() {
-	exit 0
+	if [ "$1" != "" ]; then
+		profile=${1}
+	else
+		profile="current"
+	fi
+	name=`cat ${PROFILE_PATH}/${profile} 2> /dev/null`
+	if [ $? -eq 1 ]; then
+		eerror "motif-config: No such profile: $profile"
+	else
+		echo "-I/usr/include/${name}/"
+		exit 0
+	fi
 }
 
-get_ldflags() {
-	exit 0
+get_libs() {
+	if [ "$1" != "" ]; then
+		profile=${1}
+	else
+		profile="current"
+	fi
+	name=`cat ${PROFILE_PATH}/${profile} 2> /dev/null`
+	if [ $? -eq 1 ]; then
+		eerror "motif-config: No such profile: $profile"
+	else
+		echo "-L/usr/$(get_libdir)/${name}/"
+		exit 0
+	fi
 }
 
 install_profile() {
@@ -96,7 +240,11 @@ install_profile() {
 	echo ${1} > ${PROFILE_PATH}/${1}
 
 	# make it default if no profile is activated
-	switch_profile
+	if [ ! -e $CONFIG_FILE ]; then
+		switch_profile
+	fi
+
+	exit 0
 }
 
 uninstall_profile() {
@@ -109,7 +257,11 @@ uninstall_profile() {
 	rm -f ${PROFILE_PATH}/${1} 2> /dev/null
 
 	# activate next profile if non is activated
-	switch_profile
+	if [ "`cat $CONFIG_FILE`" == "${1}" ]; then
+		switch_profile
+	fi
+
+	exit 0
 }
 
 for x in "$@"; do
@@ -124,16 +276,30 @@ for x in "$@"; do
 			list_profiles
 		;;
 
+		-s|--set-profile)
+			# switch profile 
+			[[ $# -ne 2 ]] && usage 1
+			switch_profile $2
+		;;
+
 		-L|--get-lib-path)
+			[[ $# -gt 2 ]] && usage 1
+			get_lib_path $2
 		;;
 
 		-I|--get-inc-path)
+			[[ $# -gt 2 ]] && usage 1
+			get_lib_path $2
 		;;
 
-		--clfags)
+		--cflags)
+			[[ $# -gt 2 ]] && usage 1
+			get_cflags $2
 		;;
 
-		--ldflags)
+		--libs)
+			[[ $# -gt 2 ]] && usage 1
+			get_libs $2
 		;;
 
 		--install)
@@ -148,22 +314,19 @@ for x in "$@"; do
 
 		-h|--help)
 			usage 0
-			exit 0
 		;;
 
 		-v|--version)
 			echo "motif-config-0.1"
-			exit 0
 		;;
 
 		-*)
-			eerror "$0: Invalid switch! Run $0 without parameters for help."
-			exit 1
+			usage 1
 		;;
 
 
 		*)
-			# switch profile 
+			usage 1
 		;;
 	esac
 done
