@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/memtest86+
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.15 2004/12/01 20:49:21 chainsaw Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.16 2005/01/22 15:16:13 spock Exp $
+
+*memtest86+-1.50 (22 Jan 2005)
+
+  22 Jan 2005; Michał Januszewski <spock@gentoo.org>
+  -memtest86+-1.26.ebuild, -memtest86+-1.27.ebuild, memtest86+-1.40.ebuild,
+  +memtest86+-1.50.ebuild:
+  Version bump. Marked 1.40 stable on x86. Removed old ebuilds.
 
 *memtest86+-1.40 (01 Dec 2004)
 
