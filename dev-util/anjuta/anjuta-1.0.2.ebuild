@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.0.2.ebuild,v 1.9 2004/06/25 02:19:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/anjuta-1.0.2.ebuild,v 1.10 2004/07/14 22:35:29 agriffis Exp $
 
-IUSE=""
-S=${WORKDIR}/${P}
+IUSE="nls"
 DESCRIPTION="A versatile Integrated Development Environment (IDE) for C and C++."
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://anjuta.sourceforge.net/"
