@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r4.ebuild,v 1.5 2004/05/04 14:58:18 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r4.ebuild,v 1.6 2004/05/04 17:26:25 solar Exp $
 
 IUSE="static nls bootstrap java build X multilib gcj f77 objc hardened uclibc debug"
 
@@ -370,11 +370,11 @@ src_unpack() {
 	use uclibc || epatch ${DISTDIR}/${SSP_EXCLUSION_PATCH}
 
 	release_version="${release_version}, pie-${PIE_VER}"
-
-	if [ -n "`use hardened`" -a "${ARCH}" != "sparc" -a "${ARCH}" != "ppc64" -a "${ARCH}" != "s390" ]
+	if  ( use x86 && use hardened )
 	then
+		# [ "${ARCH}" != "sparc" && "${ARCH}" != "ppc64" && "${ARCH}" != "s390" ]
 		einfo "Updating gcc to use automatic PIE + SSP building ..."
-		sed -e 's|^ALL_CFLAGS = |ALL_CFLAGS = -DEFAULT_PIE_SSP|' \
+		sed -e 's|^ALL_CFLAGS = |ALL_CFLAGS = -DEFAULT_PIE_SSP |' \
 			-i ${S}/gcc/Makefile.in || die "Failed to update gcc!"
 
 		# rebrand to make bug reports easier
@@ -402,7 +402,6 @@ src_unpack() {
 	# gcc 3.4.1 cvs has patches that need back porting.. 
 	# http://gcc.gnu.org/bugzilla/show_bug.cgi?id=14992 (May 3 2004)
 	sed -i -e s/HAVE_LD_AS_NEEDED/USE_LD_AS_NEEDED/g ${S}/gcc/config.in
-	sed -i -e 's|^#define HAVE_LD_AS_NEEDED 1.*$|/* #undef HAVE_LD_AS_NEEDED */|' -i gcc/auto-host.h
 
 	cd ${S}; ./contrib/gcc_update --touch &> /dev/null
 }
@@ -611,7 +610,7 @@ src_install() {
 
 	# Make sure we dont have stuff lying around that
 	# can nuke multiple versions of gcc
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		cd ${D}${LIBPATH}
 
@@ -682,13 +681,10 @@ src_install() {
 	fi
 
 	# This one comes with binutils
-	if [ -f "${D}${LOC}/lib/libiberty.a" ]
-	then
-		rm -f ${D}${LOC}/lib/libiberty.a
-	fi
+	[ -f "${D}${LOC}/lib/libiberty.a" ] && rm -f ${D}${LOC}/lib/libiberty.a
 
 	cd ${S}
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		cd ${S}
 		docinto /${CCHOST}
