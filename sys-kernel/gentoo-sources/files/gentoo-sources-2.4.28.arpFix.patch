@@ -1,0 +1,28 @@
+*** linux-2.4.28-gentoo-r5/net/core/neighbour.c	Mon Jan 17 13:16:22 2005
+--- linux-2.4.28-gentoo-r5/net/core/neighbour.c	Fri Jan 21 15:33:56 2005
+***************
+*** 427,437 ****
+  
+  	n->confirmed = jiffies - (n->parms->base_reachable_time<<1);
+  
+- 	hash_val = tbl->hash(pkey, dev) & tbl->hash_mask;
+- 
+  	write_lock_bh(&tbl->lock);
+  	if (atomic_read(&tbl->entries) > (tbl->hash_mask + 1))
+  		neigh_hash_grow(tbl, (tbl->hash_mask + 1) << 1);
+  	for (n1 = tbl->hash_buckets[hash_val]; n1; n1 = n1->next) {
+  		if (dev == n1->dev &&
+  		    memcmp(n1->primary_key, pkey, key_len) == 0) {
+--- 427,438 ----
+  
+  	n->confirmed = jiffies - (n->parms->base_reachable_time<<1);
+  
+  	write_lock_bh(&tbl->lock);
+  	if (atomic_read(&tbl->entries) > (tbl->hash_mask + 1))
+  		neigh_hash_grow(tbl, (tbl->hash_mask + 1) << 1);
++ 
++ 	hash_val = tbl->hash(pkey, dev) & tbl->hash_mask;
++ 
+  	for (n1 = tbl->hash_buckets[hash_val]; n1; n1 = n1->next) {
+  		if (dev == n1->dev &&
+  		    memcmp(n1->primary_key, pkey, key_len) == 0) {

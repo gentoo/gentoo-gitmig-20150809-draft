@@ -1,0 +1,10 @@
+--- 1.4/net/decnet/dn_neigh.c	2005-02-17 10:05:41 -08:00
++++ 1.5/net/decnet/dn_neigh.c	2005-02-17 10:05:41 -08:00
+@@ -26,6 +26,7 @@
+ 
+ #include <linux/config.h>
+ #include <linux/net.h>
++#include <linux/module.h>
+ #include <linux/socket.h>
+ #include <linux/if_arp.h>
+ #include <linux/if_ether.h>

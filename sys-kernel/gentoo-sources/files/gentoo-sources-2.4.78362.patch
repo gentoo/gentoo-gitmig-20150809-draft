@@ -1,0 +1,274 @@
+# This is a BitKeeper generated diff -Nru style patch.
+#
+# ChangeSet
+#   2004/12/08 13:33:08-08:00 davem@nuts.davemloft.net 
+#   [NET]: CMSG compat code needs signedness fixes too.
+#   
+#   Signed-off-by: David S. Miller <davem@davemloft.net>
+# 
+# arch/ia64/ia32/sys_ia32.c
+#   2004/12/08 13:32:46-08:00 davem@nuts.davemloft.net +6 -4
+#   [NET]: CMSG compat code needs signedness fixes too.
+# 
+# arch/mips64/kernel/linux32.c
+#   2004/12/08 13:32:46-08:00 davem@nuts.davemloft.net +7 -5
+#   [NET]: CMSG compat code needs signedness fixes too.
+# 
+# arch/parisc/kernel/sys_parisc32.c
+#   2004/12/08 13:32:46-08:00 davem@nuts.davemloft.net +6 -5
+#   [NET]: CMSG compat code needs signedness fixes too.
+# 
+# arch/ppc64/kernel/sys_ppc32.c
+#   2004/12/08 13:32:46-08:00 davem@nuts.davemloft.net +6 -5
+#   [NET]: CMSG compat code needs signedness fixes too.
+# 
+# arch/s390x/kernel/linux32.c
+#   2004/12/08 13:32:46-08:00 davem@nuts.davemloft.net +6 -5
+#   [NET]: CMSG compat code needs signedness fixes too.
+# 
+# arch/sparc64/kernel/sys_sparc32.c
+#   2004/12/08 13:32:46-08:00 davem@nuts.davemloft.net +6 -5
+#   [NET]: CMSG compat code needs signedness fixes too.
+# 
+# arch/x86_64/ia32/socket32.c
+#   2004/12/08 13:32:46-08:00 davem@nuts.davemloft.net +2 -5
+#   [NET]: CMSG compat code needs signedness fixes too.
+# 
+# include/asm-x86_64/socket32.h
+#   2004/12/08 13:32:46-08:00 davem@nuts.davemloft.net +5 -0
+#   [NET]: CMSG compat code needs signedness fixes too.
+# 
+# ChangeSet
+#   2004/12/15 09:25:31-02:00 marcelo@logos.cnet 
+#   [PATCH] Make sure VC resizing fits in s16
+#   
+#   Noted by George Guninski
+# 
+# drivers/char/console.c
+#   2004/12/15 10:58:17-02:00 marcelo@logos.cnet +6 -0
+#   Import patch vc-patch
+# 
+diff -Nru a/arch/ia64/ia32/sys_ia32.c b/arch/ia64/ia32/sys_ia32.c
+--- a/arch/ia64/ia32/sys_ia32.c	2005-02-15 11:50:28 -08:00
++++ b/arch/ia64/ia32/sys_ia32.c	2005-02-15 11:50:28 -08:00
+@@ -1369,6 +1369,11 @@
+ #define __CMSG32_FIRSTHDR(ctl,len) \
+ 	((len) >= sizeof(struct cmsghdr32) ? (struct cmsghdr32 *)(ctl) : (struct cmsghdr32 *)NULL)
+ #define CMSG32_FIRSTHDR(msg)	__CMSG32_FIRSTHDR((msg)->msg_control, (msg)->msg_controllen)
++#define CMSG32_OK(ucmlen, ucmsg, mhdr) \
++	((ucmlen) >= sizeof(struct cmsghdr) && \
++	 (ucmlen) <= (unsigned long) \
++	 ((mhdr)->msg_controllen - \
++	  ((char *)(ucmsg) - (char *)(mhdr)->msg_control)))
+ 
+ static inline struct cmsghdr32 *
+ __cmsg32_nxthdr (void *ctl, __kernel_size_t size, struct cmsghdr32 *cmsg, int cmsg_len)
+@@ -1429,10 +1434,7 @@
+ 			return -EFAULT;
+ 
+ 		/* Catch bogons. */
+-		if (CMSG32_ALIGN(ucmlen) < CMSG32_ALIGN(sizeof(struct cmsghdr32)))
+-			return -EINVAL;
+-		if ((unsigned long)(((char *)ucmsg - (char *)kmsg->msg_control) + ucmlen)
+-		    > kmsg->msg_controllen)
++		if (!CMSG32_OK(ucmlen, ucmsg, kmsg))
+ 			return -EINVAL;
+ 
+ 		tmp = ((ucmlen - CMSG32_ALIGN(sizeof(*ucmsg))) +
+diff -Nru a/arch/mips64/kernel/linux32.c b/arch/mips64/kernel/linux32.c
+--- a/arch/mips64/kernel/linux32.c	2005-02-15 11:50:28 -08:00
++++ b/arch/mips64/kernel/linux32.c	2005-02-15 11:50:28 -08:00
+@@ -2483,6 +2483,12 @@
+ 				    (struct cmsghdr32 *)(ctl) : \
+ 				    (struct cmsghdr32 *)NULL)
+ #define CMSG32_FIRSTHDR(msg)	__CMSG32_FIRSTHDR((msg)->msg_control, (msg)->msg_controllen)
++#define CMSG32_OK(ucmlen, ucmsg, mhdr) \
++	((ucmlen) >= sizeof(struct cmsghdr) && \
++	 (ucmlen) <= (unsigned long) \
++	 ((mhdr)->msg_controllen - \
++	  ((char *)(ucmsg) - (char *)(mhdr)->msg_control)))
++
+ 
+ __inline__ struct cmsghdr32 *__cmsg32_nxthdr(void *__ctl, __kernel_size_t __size,
+ 					      struct cmsghdr32 *__cmsg, int __cmsg_len)
+@@ -2623,11 +2629,7 @@
+ 			return -EFAULT;
+ 
+ 		/* Catch bogons. */
+-		if(CMSG32_ALIGN(ucmlen) <
+-		   CMSG32_ALIGN(sizeof(struct cmsghdr32)))
+-			return -ENOBUFS;
+-		if((unsigned long)(((char *)ucmsg - (char *)kmsg->msg_control)
+-				   + ucmlen) > kmsg->msg_controllen)
++		if (!CMSG32_OK(ucmlen, ucmsg, kmsg))
+ 			return -EINVAL;
+ 
+ 		tmp = ((ucmlen - CMSG32_ALIGN(sizeof(*ucmsg))) +
+diff -Nru a/arch/parisc/kernel/sys_parisc32.c b/arch/parisc/kernel/sys_parisc32.c
+--- a/arch/parisc/kernel/sys_parisc32.c	2005-02-15 11:50:28 -08:00
++++ b/arch/parisc/kernel/sys_parisc32.c	2005-02-15 11:50:28 -08:00
+@@ -1814,6 +1814,11 @@
+ 				    (struct cmsghdr32 *)(ctl) : \
+ 				    (struct cmsghdr32 *)NULL)
+ #define CMSG32_FIRSTHDR(msg)	__CMSG32_FIRSTHDR((msg)->msg_control, (msg)->msg_controllen)
++#define CMSG32_OK(ucmlen, ucmsg, mhdr) \
++	((ucmlen) >= sizeof(struct cmsghdr) && \
++	 (ucmlen) <= (unsigned long) \
++	 ((mhdr)->msg_controllen - \
++	  ((char *)(ucmsg) - (char *)(mhdr)->msg_control)))
+ 
+ __inline__ struct cmsghdr32 *__cmsg32_nxthdr(void *__ctl, __kernel_size_t __size,
+ 					      struct cmsghdr32 *__cmsg, int __cmsg_len)
+@@ -1940,11 +1945,7 @@
+ 			return -EFAULT;
+ 
+ 		/* Catch bogons. */
+-		if(CMSG32_ALIGN(ucmlen) <
+-		   CMSG32_ALIGN(sizeof(struct cmsghdr32)))
+-			return -EINVAL;
+-		if((unsigned long)(((char *)ucmsg - (char *)kmsg->msg_control)
+-				   + ucmlen) > kmsg->msg_controllen)
++		if (!CMSG32_OK(ucmlen, ucmsg, kmsg))
+ 			return -EINVAL;
+ 
+ 		tmp = ((ucmlen - CMSG32_ALIGN(sizeof(*ucmsg))) +
+diff -Nru a/arch/ppc64/kernel/sys_ppc32.c b/arch/ppc64/kernel/sys_ppc32.c
+--- a/arch/ppc64/kernel/sys_ppc32.c	2005-02-15 11:50:28 -08:00
++++ b/arch/ppc64/kernel/sys_ppc32.c	2005-02-15 11:50:28 -08:00
+@@ -3273,6 +3273,11 @@
+ 				    (struct cmsghdr32 *)(ctl) : \
+ 				    (struct cmsghdr32 *)NULL)
+ #define CMSG32_FIRSTHDR(msg)	__CMSG32_FIRSTHDR((msg)->msg_control, (msg)->msg_controllen)
++#define CMSG32_OK(ucmlen, ucmsg, mhdr) \
++	((ucmlen) >= sizeof(struct cmsghdr) && \
++	 (ucmlen) <= (unsigned long) \
++	 ((mhdr)->msg_controllen - \
++	  ((char *)(ucmsg) - (char *)(mhdr)->msg_control)))
+ 
+ struct msghdr32
+ {
+@@ -3448,11 +3453,7 @@
+ 			return -EFAULT;
+ 
+ 		/* Catch bogons. */
+-		if(CMSG32_ALIGN(ucmlen) <
+-		   CMSG32_ALIGN(sizeof(struct cmsghdr32)))
+-			return -EINVAL;
+-		if((unsigned long)(((char *)ucmsg - (char *)kmsg->msg_control)
+-				   + ucmlen) > kmsg->msg_controllen)
++		if (!CMSG32_OK(ucmlen, ucmsg, kmsg))
+ 			return -EINVAL;
+ 
+ 		tmp = ((ucmlen - CMSG32_ALIGN(sizeof(*ucmsg))) +
+diff -Nru a/arch/s390x/kernel/linux32.c b/arch/s390x/kernel/linux32.c
+--- a/arch/s390x/kernel/linux32.c	2005-02-15 11:50:28 -08:00
++++ b/arch/s390x/kernel/linux32.c	2005-02-15 11:50:28 -08:00
+@@ -2306,6 +2306,11 @@
+ 				    (struct cmsghdr32 *)(ctl) : \
+ 				    (struct cmsghdr32 *)NULL)
+ #define CMSG32_FIRSTHDR(msg)	__CMSG32_FIRSTHDR((msg)->msg_control, (msg)->msg_controllen)
++#define CMSG32_OK(ucmlen, ucmsg, mhdr) \
++	((ucmlen) >= sizeof(struct cmsghdr) && \
++	 (ucmlen) <= (unsigned long) \
++	 ((mhdr)->msg_controllen - \
++	  ((char *)(ucmsg) - (char *)(mhdr)->msg_control)))
+ 
+ __inline__ struct cmsghdr32 *__cmsg32_nxthdr(void *__ctl, __kernel_size_t __size,
+ 					      struct cmsghdr32 *__cmsg, int __cmsg_len)
+@@ -2432,11 +2437,7 @@
+ 			return -EFAULT;
+ 
+ 		/* Catch bogons. */
+-		if(CMSG32_ALIGN(ucmlen) <
+-		   CMSG32_ALIGN(sizeof(struct cmsghdr32)))
+-			return -EINVAL;
+-		if((unsigned long)(((char *)ucmsg - (char *)kmsg->msg_control)
+-				   + ucmlen) > kmsg->msg_controllen)
++		if (!CMSG32_OK(ucmlen, ucmsg, kmsg))
+ 			return -EINVAL;
+ 
+ 		tmp = ((ucmlen - CMSG32_ALIGN(sizeof(*ucmsg))) +
+diff -Nru a/arch/sparc64/kernel/sys_sparc32.c b/arch/sparc64/kernel/sys_sparc32.c
+--- a/arch/sparc64/kernel/sys_sparc32.c	2005-02-15 11:50:28 -08:00
++++ b/arch/sparc64/kernel/sys_sparc32.c	2005-02-15 11:50:28 -08:00
+@@ -2354,6 +2354,11 @@
+ 				    (struct cmsghdr32 *)(ctl) : \
+ 				    (struct cmsghdr32 *)NULL)
+ #define CMSG32_FIRSTHDR(msg)	__CMSG32_FIRSTHDR((msg)->msg_control, (msg)->msg_controllen)
++#define CMSG32_OK(ucmlen, ucmsg, mhdr) \
++	((ucmlen) >= sizeof(struct cmsghdr) && \
++	 (ucmlen) <= (unsigned long) \
++	 ((mhdr)->msg_controllen - \
++	  ((char *)(ucmsg) - (char *)(mhdr)->msg_control)))
+ 
+ __inline__ struct cmsghdr32 *__cmsg32_nxthdr(void *__ctl, __kernel_size_t __size,
+ 					      struct cmsghdr32 *__cmsg, int __cmsg_len)
+@@ -2480,11 +2485,7 @@
+ 			return -EFAULT;
+ 
+ 		/* Catch bogons. */
+-		if(CMSG32_ALIGN(ucmlen) <
+-		   CMSG32_ALIGN(sizeof(struct cmsghdr32)))
+-			return -EINVAL;
+-		if((unsigned long)(((char *)ucmsg - (char *)kmsg->msg_control)
+-				   + ucmlen) > kmsg->msg_controllen)
++		if (!CMSG32_OK(ucmlen, ucmsg, kmsg))
+ 			return -EINVAL;
+ 
+ 		tmp = ((ucmlen - CMSG32_ALIGN(sizeof(*ucmsg))) +
+diff -Nru a/arch/x86_64/ia32/socket32.c b/arch/x86_64/ia32/socket32.c
+--- a/arch/x86_64/ia32/socket32.c	2005-02-15 11:50:28 -08:00
++++ b/arch/x86_64/ia32/socket32.c	2005-02-15 11:50:28 -08:00
+@@ -136,12 +136,9 @@
+ 			return -EFAULT;
+ 
+ 		/* Catch bogons. */
+-		if(CMSG32_ALIGN(ucmlen) <
+-		   CMSG32_ALIGN(sizeof(struct cmsghdr32)))
+-			return -EINVAL;
+-		if((unsigned long)(((char *)ucmsg - (char *)kmsg->msg_control)
+-				   + ucmlen) > kmsg->msg_controllen)
++		if (!CMSG32_OK(ucmlen, ucmsg, kmsg))
+ 			return -EINVAL;
++
+ 		if (kmsg->msg_controllen > 65536) 
+ 			return -EINVAL;
+ 
+diff -Nru a/include/asm-x86_64/socket32.h b/include/asm-x86_64/socket32.h
+--- a/include/asm-x86_64/socket32.h	2005-02-15 11:50:28 -08:00
++++ b/include/asm-x86_64/socket32.h	2005-02-15 11:50:28 -08:00
+@@ -45,6 +45,11 @@
+ 				    (struct cmsghdr32 *)(ctl) : \
+ 				    (struct cmsghdr32 *)NULL)
+ #define CMSG32_FIRSTHDR(msg)	__CMSG32_FIRSTHDR((msg)->msg_control, (msg)->msg_controllen)
++#define CMSG32_OK(ucmlen, ucmsg, mhdr) \
++	((ucmlen) >= sizeof(struct cmsghdr) && \
++	 (ucmlen) <= (unsigned long) \
++	 ((mhdr)->msg_controllen - \
++	  ((char *)(ucmsg) - (char *)(mhdr)->msg_control)))
+ 
+ __inline__ struct cmsghdr32 *__cmsg32_nxthdr(void *__ctl, __kernel_size_t __size,
+ 					      struct cmsghdr32 *__cmsg, int __cmsg_len)
+diff -Nru a/drivers/char/console.c b/drivers/char/console.c
+--- a/drivers/char/console.c	2005-02-15 11:52:04 -08:00
++++ b/drivers/char/console.c	2005-02-15 11:52:04 -08:00
+@@ -705,6 +705,9 @@
+ 	return 0;
+ }
+ 
++#define VC_RESIZE_MAXCOL (32767)
++#define VC_RESIZE_MAXROW (32767)
++
+ /*
+  * Change # of rows and columns (0 means unchanged/the size of fg_console)
+  * [this is to be used together with some user program
+@@ -716,6 +719,9 @@
+ 	unsigned int cc, ll, ss, sr, todo = 0;
+ 	unsigned int currcons = fg_console, i;
+ 	unsigned short *newscreens[MAX_NR_CONSOLES];
++
++	if (cols > VC_RESIZE_MAXCOL || lines > VC_RESIZE_MAXROW)
++		return -EINVAL;
+ 
+ 	cc = (cols ? cols : video_num_columns);
+ 	ll = (lines ? lines : video_num_lines);

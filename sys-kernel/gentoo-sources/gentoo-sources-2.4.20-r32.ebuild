@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r31.ebuild,v 1.1 2005/01/08 21:29:55 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r32.ebuild,v 1.1 2005/02/17 18:12:52 plasmaroo Exp $
 
 IUSE="aavm crypt evms2 usagi"
 
@@ -30,7 +30,7 @@ S=${WORKDIR}/linux-${KV}
 
 DESCRIPTION="Full sources for the Gentoo Kernel."
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-	 http://dev.gentoo.org/~plasmaroo/patches/kernel/gentoo-sources/patches-${KV/31/28}.tar.bz2
+	 http://dev.gentoo.org/~plasmaroo/patches/kernel/gentoo-sources/patches-${KV/32/28}.tar.bz2
 	 http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/${P}-CAN-2004-0415.patch
 	 http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/${P}-CAN-2004-0814.2.patch"
 HOMEPAGE="http://www.gentoo.org/ http://www.kernel.org/"
@@ -42,7 +42,7 @@ src_unpack() {
 	unpack ${A}
 	mv linux-${OKV} linux-${KV} || die "Error moving kernel source tree to linux-${KV}"
 
-	cd ${WORKDIR}/${KV/r31/r28}
+	cd ${WORKDIR}/${KV/r32/r28}
 
 	# This is the *ratified* aavm USE flag, enables aavm support in this kernel
 	if ! use aavm; then
@@ -158,6 +158,10 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-CAN-2004-1056.patch || die "Failed to apply the CAN-2004-1056 patch!"
 	epatch ${FILESDIR}/${PN}-2.4.77094.patch || die "Failed to apply bug #77094 patch!"
 	epatch ${FILESDIR}/${PN}-2.4.brk-locked.patch || die "Failed to apply do_brk_locked() patch!"
+	epatch ${FILESDIR}/${PN}-2.4.77666.patch || die "Failed to apply #77666 patch!"
+	epatch ${FILESDIR}/${P}.78362.patch || die "Failed to apply #78362 patch!"
+	epatch ${FILESDIR}/${PN}-2.4.78363.patch || die "Failed to apply #78363 patch!"
+	epatch ${FILESDIR}/${PN}-2.4.81106.patch || die "Failed to apply #81106 patch!"
 }
 
 pkg_postinst() {
