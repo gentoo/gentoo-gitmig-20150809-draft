@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: 
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.4.28.ebuild,v 1.3 2004/11/28 18:14:57 solar Exp $
 
 IUSE="selinux"
 ETYPE="sources"

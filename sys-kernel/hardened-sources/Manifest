@@ -1,6 +1,6 @@
 MD5 ec13a8435dc6785ca17db91918579f3d hardened-sources-2.4.27-r2.ebuild 1027
 MD5 91d88b3126d4cc0b7cc5a22819808e68 hardened-sources-2.4.27-r3.ebuild 1028
-MD5 2f6def20c521c4ce8251c90d6558630a hardened-sources-2.4.28.ebuild 897
+MD5 a045036dc5a56f3c2ade069f576ee453 hardened-sources-2.4.28.ebuild 1017
 MD5 f3bea2d5bd85f8589c10bd306d29a377 ChangeLog 10444
 MD5 0a473e60c059cb41c96a6bbcbff84769 metadata.xml 459
 MD5 073eb0c263e55f7f1d72d14c8957f4e2 files/digest-hardened-sources-2.4.27-r2 145
