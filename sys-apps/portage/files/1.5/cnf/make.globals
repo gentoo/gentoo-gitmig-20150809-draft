@@ -10,7 +10,7 @@ GENTOO_MIRRORS="ftp://ftp.ibiblio.org/pub/Linux"
 # Host-type
 CHOST=i686-pc-linux-gnu
 
-PORTAGE_TMPDIR=/tmp
+PORTAGE_TMPDIR=${ROOT}/tmp
 # Directory used for the build process 
 BUILD_PREFIX=${PORTAGE_TMPDIR}/portage
 PKG_TMPDIR=${PORTAGE_TMPDIR}/portage-pkg
