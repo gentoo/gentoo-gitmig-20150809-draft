@@ -1,6 +1,10 @@
 # ChangeLog for sci-libs/fftw
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.4 2005/01/03 09:41:02 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/ChangeLog,v 1.5 2005/01/13 17:23:46 spyderous Exp $
+
+  13 Jan 2005; Donnie Berkholz <spyderous@gentoo.org>; fftw-2.1.5-r1.ebuild:
+  Change insinto "${D}usr/include" to insinto /usr/include, thanks to Seemant
+  Kulleen <seemant@gentoo.org>.
 
   03 Jan 2005; Markus Rothe <corsair@gentoo.org> fftw-3.0.1-r1.ebuild:
   Added ~ppc64 to KEYWORDS

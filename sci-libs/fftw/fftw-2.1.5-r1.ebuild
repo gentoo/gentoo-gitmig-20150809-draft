@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r1.ebuild,v 1.2 2005/01/03 09:41:02 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/fftw/fftw-2.1.5-r1.ebuild,v 1.3 2005/01/13 17:23:46 spyderous Exp $
 
 inherit flag-o-matic
 
@@ -136,6 +136,6 @@ src_install () {
 	fi
 
 	cd "${S}-single/fortran"
-	insinto "${D}usr/include"
+	insinto usr/include
 	doins fftw_f77.i
 }
