@@ -26,6 +26,11 @@ DEPEND=">=kde-base/kdelibs-${PV}
 #	tcltk? ( =dev-lang/tcl-tk.8.0.5-r2 )
 
 RDEPEND=$DEPEND
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
+}
 
 src_compile() {
 
