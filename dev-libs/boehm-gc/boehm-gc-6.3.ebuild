@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/boehm-gc-6.3.ebuild,v 1.1 2004/07/09 22:49:07 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boehm-gc/boehm-gc-6.3.ebuild,v 1.2 2004/07/19 10:52:02 usata Exp $
 
 MY_P=gc${PV/_/}
 S=${WORKDIR}/${MY_P}
@@ -11,7 +11,7 @@ SRC_URI="http://www.hpl.hp.com/personal/Hans_Boehm/gc/gc_source/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~alpha ~ppc ~amd64 ~hppa"
+KEYWORDS="~x86 ~sparc ~alpha ~ppc ~amd64 ~hppa ~macos"
 IUSE=""
 
 DEPEND="virtual/libc"
