@@ -1,6 +1,8 @@
 # ChangeLog for net-im/msn4lin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-im/msn4lin/ChangeLog,v 1.1 2002/04/24 20:52:37 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/msn4lin/ChangeLog,v 1.2 2002/06/25 17:45:54 verwilst Exp $
+
+*msn4lin-0.4 (25 June 2002) Bart Verwilst <verwilst@gentoo.org>
 
 *msn4lin-0.2e (24 April 2002)
 
