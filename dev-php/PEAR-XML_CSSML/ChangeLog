@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/PEAR-XML_CSSML
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_CSSML/ChangeLog,v 1.13 2004/08/03 17:11:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-XML_CSSML/ChangeLog,v 1.14 2004/10/23 02:26:11 weeve Exp $
+
+  22 Oct 2004; Jason Wever <weeve@gentoo.org> PEAR-XML_CSSML-1.1-r2.ebuild:
+  Stable on sparc.
 
   03 Aug 2004; <agriffis@gentoo.org> PEAR-XML_CSSML-1.1-r2.ebuild:
   add ia64 keywords #56295
