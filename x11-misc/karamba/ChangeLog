@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/karamba
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/karamba/ChangeLog,v 1.11 2004/06/28 19:59:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/karamba/ChangeLog,v 1.12 2004/07/06 11:42:58 carlo Exp $
+
+  06 Jul 2004; Carsten Lohrke <carlo@gentoo.org> karamba-0.17-r1.ebuild:
+  dump newdepend() usage
 
   20 Jun 2004; Ian Leitch <port001@gentoo.org> karamba-0.17-r1.ebuild:
   Added IUSE
