@@ -1,6 +1,6 @@
 # Copyright 1999 - 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.5-r1.ebuild,v 1.9 2002/07/18 17:27:47 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.5-r1.ebuild,v 1.10 2002/08/02 05:01:06 seemant Exp $
 
 S=${WORKDIR}/cdrdao-1.1.5
 DESCRIPTION="Burn CDs in disk-at-once mode -- with optional GUI frontend"
@@ -72,7 +72,7 @@ src_install() {
 
 		# binary
 		into /usr
-        	dobin xdao/gcdmaster
+		dobin xdao/gcdmaster
 		
 		# pixmaps for gcdmaster in /usr/share/pixmaps/gcdmaster
 		insinto /usr/share/pixmaps/gcdmaster

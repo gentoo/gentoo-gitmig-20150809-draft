@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/eroaster-2.1.0.ebuild,v 1.3 2002/07/28 15:22:46 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/eroaster-2.1.0.ebuild,v 1.4 2002/08/02 05:01:06 seemant Exp $
 
 DESCRIPTION="A graphical frontend for cdrecord and mkisofs written in gnome-python"
 HOMEPAGE="http://eroaster.sourceforge.net"
@@ -37,7 +37,7 @@ src_install () {
 }
 
 pkg_postinst() {
-        einfo
+	einfo
 	einfo "The following binaries are needed to make full use of this program:"
 	einfo
 	einfo "mpg123   For converting MP3s to WAVs and playing MP3s"
@@ -47,5 +47,5 @@ pkg_postinst() {
 	einfo "lame     For Encoding MP3s"
 	einfo "ogginfo  For Getting OGG ID3 information"
 	einfo "ogg123   For converting OGGs to WAVs"
-        einfo
+	einfo
 }

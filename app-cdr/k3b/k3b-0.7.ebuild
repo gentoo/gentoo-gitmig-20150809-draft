@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.7.ebuild,v 1.4 2002/07/22 01:39:12 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.7.ebuild,v 1.5 2002/08/02 05:01:06 seemant Exp $
 
 inherit kde-base || die
 
@@ -26,22 +26,22 @@ myconf="$myconf --enable-sso"
 
 src_compile() {
 
-    kde_src_compile myconf configure
-    
-    cd ${S}
-    for x in Makefile src/Makefile; do
+	kde_src_compile myconf configure
+	
+	cd ${S}
+	for x in Makefile src/Makefile; do
 	mv $x $x.orig
 	sed -e 's:CDPARANOIA_LIBS = =:CDPARANOIA_LIBS = -lcdda_interface -lcdda_paranoia:' $x.orig > $x
-    done
-    
-    kde_src_compile make
+	done
+	
+	kde_src_compile make
 
 }
 
 src_install() {
 
-    dodir ${KDEDIR}/share/apps/k3b/pics
-    
-    kde_src_install
+	dodir ${KDEDIR}/share/apps/k3b/pics
+	
+	kde_src_install
 
 }

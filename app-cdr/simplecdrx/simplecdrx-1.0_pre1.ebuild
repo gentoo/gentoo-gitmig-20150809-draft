@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/simplecdrx/simplecdrx-1.0_pre1.ebuild,v 1.6 2002/07/22 01:39:12 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/simplecdrx/simplecdrx-1.0_pre1.ebuild,v 1.7 2002/08/02 05:01:06 seemant Exp $
 
 MY_P="${PN}-`echo ${PV} |sed -e 's:_:-:'`"
 S=${WORKDIR}/${MY_P}
@@ -36,7 +36,7 @@ src_compile() {
 		--mandir=/usr/share/man \
 		--infodir=/usr/share/info \
 		|| die
-    
+	
 	emake || die
 }
 
