@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/xfractint
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/ChangeLog,v 1.5 2004/02/01 18:14:50 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/ChangeLog,v 1.6 2004/02/02 17:37:52 spock Exp $
+
+  02 Feb 2004; Michal Januszewski <spock@gentoo.org> xfractint-20.2.04.ebuild,
+  xfractint-20.2.05.ebuild:
+  Fixed SRC_URI, closes #40181.
 
 *xfractint-20.2.05 (01 Feb 2004)
 

@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/xfractint-20.2.04.ebuild,v 1.8 2004/02/01 18:14:50 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xfractint/xfractint-20.2.04.ebuild,v 1.9 2004/02/02 17:37:52 spock Exp $
 
 MY_P=xfract${PV}
 
 S=${WORKDIR}
 DESCRIPTION="The best fractal generator for X."
 HOMEPAGE="http://www.fractint.org"
-SRC_URI="http://www.fractint.org/ftp/current/linux/${MY_P}.zip"
+SRC_URI="http://www.fractint.org/ftp/old/linux/${MY_P}.zip"
 
 KEYWORDS="x86 sparc "
 SLOT="0"
