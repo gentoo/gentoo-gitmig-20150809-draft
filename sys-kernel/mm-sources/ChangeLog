@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.69 2003/08/29 15:53:14 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.70 2003/08/29 21:25:46 plasmaroo Exp $
+
+*mm-sources-2.6.0_beta4-r3 (29 Aug 2003)
+
+  29 Aug 2003; <plasmaroo@gentoo.org> mm-sources-2.6.0_beta4-r3.ebuild:
+  Fixed a moved PATCH_URI, see bug #27546.
 
 *mm-sources-2.6.0_beta4-r3 (29 Aug 2003)
 
