@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.3.ebuild,v 1.4 2003/07/19 10:10:57 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/nspr-4.3.ebuild,v 1.5 2003/07/31 18:10:56 rizzo Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Netscape Portable Runtime"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.mozilla.org/projects/nspr/"
 
 SLOT="0"
 LICENSE="MPL-1.1"
-KEYWORDS="x86 ~sparc ~ppc ~alpha"
+KEYWORDS="x86 ~sparc ppc ~alpha"
 
 DEPEND="virtual/glibc"
 

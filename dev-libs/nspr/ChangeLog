@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/nspr
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.8 2003/07/19 10:10:56 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/nspr/ChangeLog,v 1.9 2003/07/31 18:10:56 rizzo Exp $
+
+  31 Jul 2003; Don Seiler <rizzo@gentoo.org>; nspr-4.3.ebuild:
+  Bumping to stable on ppc for gaim-encryption.
 
   19 Jul 2003; Alastair Tse <liquidx@gentoo.org> nspr-4.3.ebuild:
   express to stable because evo 1.4.3 needs it
