@@ -21,6 +21,9 @@
 ##   End example
 ##
 
+# lanius@gentoo.org (15 Aug 2003)
+>net-misc/ltsp-core-3.0.9-r3
+
 
 # pebenito@gentoo.org (14 Aug 2003)
 # more masking for new selinux api
