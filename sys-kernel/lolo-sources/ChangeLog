@@ -1,6 +1,27 @@
 # ChangeLog for sys-kernel/lolo-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.24 2002/12/20 08:49:15 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.25 2002/12/24 08:19:19 lostlogic Exp $
+
+*lolo-sources-2.4.20.1_pre6 (20 Dec 2002)
+
+  24 Dec 2002; Brandon Low <lostlogic@gentoo.org> lolo-sources-2.4.20.1_pre7.ebuild :
+  Changes from _pre6:
+  * MPPE support
+  * Some more iptables patches including pptp support
+  * Tekram SCSI Support
+  * Add Free S/WAN
+  * Switch to Super FreeS/WAN
+  * Revert to older elevator.c for better IDE latencies
+  * Fix the __br_unlock_usage_bug issue
+  * Did some testing
+
+  TODO before _rc/final:
+  * Documentation
+  * Make sure hardware support is synched with xfs-sources
+  * Test away
+  * Possibly switch encrypted loopback patches?
+  * Possibly make the elevator.c changes a configurable option
+  * Whatever else I'm forgetting
 
 *lolo-sources-2.4.20.1_pre6 (20 Dec 2002)
 
