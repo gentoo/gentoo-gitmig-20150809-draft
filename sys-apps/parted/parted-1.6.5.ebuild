@@ -1,22 +1,25 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.5.ebuild,v 1.2 2003/03/25 14:00:54 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.5.ebuild,v 1.3 2003/03/26 02:44:23 seemant Exp $
 
 IUSE="nls static readline"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Create, destroy, resize, check, copy partitions and file systems"
-SRC_URI="ftp://ftp.gnu.org/gnu/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/parted"
-KEYWORDS="~x86 ~ppc ~sparc ~hppa"
-DEPEND="virtual/glibc
-	>=sys-apps/e2fsprogs-1.27
+SRC_URI="ftp://ftp.gnu.org/gnu/${PN}/${P}.tar.gz"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86 ppc sparc hppa"
+
+DEPEND=">=sys-apps/e2fsprogs-1.27
 	>=sys-libs/ncurses-5.2
 	nls? ( sys-devel/gettext )
 	readline? ( >=sys-libs/readline-4.1-r4 )"
-RDEPEND="${DEPEND} =dev-libs/progsreiserfs-0.3.0*"
-LICENSE="GPL-2"
-SLOT="0"
+
+RDEPEND="${DEPEND}
+	=dev-libs/progsreiserfs-0.3.0*"
 
 src_compile() {
 	local myconf
