@@ -182,7 +182,7 @@ class depgraph:
 				if retval:
 					print "!!! emerge aborting on ",y,"."
 					sys.exit(1)
-opts=["--help","--pretend","--buildpkg","--usepkg","--autoclean"]
+opts=["--help","--pretend","--buildpkg","--usepkg","--autoclean","--clean"]
 modes=["rsync","system","update","config"]
 myopts=[]
 mymode=[]
@@ -221,8 +221,7 @@ if "--help" in myopts:
 		print
 		print "Usage: \x1b[36;01memerge\x1b[0m [ \x1b[32;01moptions\x1b[0m ] [ \x1b[36;01mebuildfile\x1b[0m | \x1b[36;01mtbz2file\x1b[0m ] ..."
 		print "       \x1b[36;01memerge\x1b[0m [ \x1b[32;01moptions\x1b[0m ] \x1b[36;01msystem\x1b[0m"
-		print "       \x1b[36;01memerge rsync"
-		print "       emerge rsync clean\x1b[0m"
+		print "       \x1b[36;01memerge\x1b[0m [ \x1b[32;01m--clean\x1b[0m ] \x1b[36;01mrsync"
 		print
 		print "Options:"
 		print "       \x1b[32;01m--help\x1b[0m [ mode ]"
@@ -261,12 +260,12 @@ if "--help" in myopts:
 	elif "rsync" in mymode:
 		print
 		print "       \x1b[36;01memerge rsync"
-		print "       emerge rsync clean\x1b[0m"
+		print "       emerge \x1b[32;01m--clean\x1b[36;01m rsync\x1b[0m"
 		print
 		print "       \"emerge rsync\" initiates an rsync update with cvs.gentoo.org,"
 		print "       updating your Portage tree (typically in /usr/portage).  This option"
 		print "       will erase any changes that you have made to existing Portage files"
-		print "       so be careful.  \"emerge rsync clean\" does the same thing as \"emerge"
+		print "       so be careful.  \"emerge --clean rsync\" does the same thing as \"emerge"
 		print "       rsync\", but files that no longer exist on our server are removed."
 		print
 	elif "system" in mymode:
@@ -338,8 +337,7 @@ if "rsync" in mymode:
 	if not os.path.exists(myportdir):
 		print ">>>",myportdir,"not found, creating it."
 		os.makedirs(myportdir,0755)	
-	if len(sys.argv)>2:
-		if sys.argv[2]=="clean":
+	if "--clean" in myopts:
 			#we'll --delete files when we rsync
 			rclean=1
 	mycommand="/usr/bin/rsync -av --stats --progress "
