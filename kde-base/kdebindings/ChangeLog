@@ -1,7 +1,10 @@
 # ChangeLog for kde-basekdebindingsChangeLog/
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/ChangeLog,v 1.25 2003/02/12 06:57:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/ChangeLog,v 1.26 2003/02/12 16:40:50 hannes Exp $
 
+  12 Feb 2003; Hannes Mehnert <hannes@gentoo.org> kdebindings-3.0.2.ebuild,
+  kdebindings-3.0.3.ebuild, kdebindings-3.1_rc6.ebuild: removed old ebuilds
+  
   11 Feb 2003; Dan Armak <danarmak@gentoo.org> kdegraphics-3.1.ebuild  :
 
   Fix #14756: enforce make -j1.

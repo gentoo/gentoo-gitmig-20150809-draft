@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-2.2.2.ebuild,v 1.14 2002/12/09 04:25:04 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-2.2.2.ebuild,v 1.15 2003/02/12 16:40:50 hannes Exp $
 
 IUSE="python java"
 inherit kde-dist
@@ -29,6 +29,5 @@ src_compile() {
     
 	# the library_path is a kludge for a strange bug
 	LIBRARY_PATH=${QTDIR}/lib LIBPYTHON=\"`python-config`\" make || die
-	
 }
 

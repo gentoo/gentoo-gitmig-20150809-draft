@@ -1,11 +1,11 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.1.ebuild,v 1.9 2003/02/11 20:59:45 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.1.ebuild,v 1.10 2003/02/12 16:40:50 hannes Exp $
 # TODO: add gnustep, objc bindings
 inherit kde-dist 
 
+IUSE="mozilla java python"
 DESCRIPTION="KDE library bindings for languages other than c++"
-
 KEYWORDS="x86 ~sparc"
 
 newdepend "~kde-base/kdebase-${PV}
@@ -33,15 +33,14 @@ export MAKEOPTS="$MAKEOPTS -j1"
 
 src_unpack()
 {
-    kde_src_unpack
-    
-    if [ -z "`use mozilla`" ]; then
+	kde_src_unpack
+
+	if [ -z "`use mozilla`" ]; then
 	# disable mozilla bindings/xpart, because configure doesn't seem to do so
 	# even when it doesn't detect the mozilla headers
 	cd ${S}/xparts
 	cp Makefile.am Makefile.am.orig
 	sed -e 's:mozilla::' Makefile.am.orig > Makefile.am
-    fi
-    
+	fi
 }
 

@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.0.4.ebuild,v 1.5 2003/01/30 19:40:19 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.0.4.ebuild,v 1.6 2003/02/12 16:40:50 hannes Exp $
 # TODO: add gnustep bindings
 inherit kde-dist
 
+IUSE="mozilla python java"
 DESCRIPTION="KDE $PV - kde library bindings for languages other than c++"
-
 KEYWORDS="x86 ppc alpha"
 
 newdepend ">=kde-base/kdebase-${PV}
@@ -26,13 +26,13 @@ export LIBPYTHON="`python-config`"
 
 src_unpack()
 {
-    kde_src_unpack
-    
-    if [ -z "`use mozilla`" ]; then
+	kde_src_unpack
+
+	if [ -z "`use mozilla`" ]; then
 	# disable mozilla bindings/xpart
 	cd ${S}
 	cp configure configure.orig
 	sed -e 's:mozilla_incldirs=:# mozilla_incldirs=:' configure.orig > configure
 	chmod +x configure
-    fi
+	fi
 }

@@ -1,10 +1,10 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/kdeedu-3.1-r1.ebuild,v 1.3 2003/02/09 18:55:36 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeedu/kdeedu-3.1-r1.ebuild,v 1.4 2003/02/12 16:45:02 hannes Exp $
 inherit kde-dist flag-o-matic
 
+IUSE=""
 DESCRIPTION="KDE educational apps"
-
 KEYWORDS="x86 ~ppc ~sparc"
 
 # patch to fix bug #51708 on bugs.kde.org, from kstars developer
