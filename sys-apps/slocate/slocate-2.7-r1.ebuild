@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r1.ebuild,v 1.2 2003/04/13 01:07:45 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r1.ebuild,v 1.3 2003/04/13 02:22:01 lostlogic Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Secure locate provides a secure way to index and quickly search for files on your system (drop-in replacement for 'locate')"
@@ -57,8 +57,10 @@ src_install() {
 }
 
 pkg_postinst() {
+	touch /var/lib/slocate/slocate.db
+
 	# /var/lib/slocate is owned by group slocate and so is the executable
-	groupadd slocate
+	[ -z `grep slocate /etc/group` ] && groupadd slocate
 
 	chown root.slocate /usr/bin/slocate
 	chmod 2755 /usr/bin/slocate
