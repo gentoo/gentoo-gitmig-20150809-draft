@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20040218.ebuild,v 1.11 2004/06/24 23:17:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/openal-20040218.ebuild,v 1.12 2004/08/17 15:06:15 wolf31o2 Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ DESCRIPTION="OpenAL, the Open Audio Library, is an open, vendor-neutral, cross-p
 SRC_URI="mirror://gentoo/openal-20040218.tar.bz2"
 HOMEPAGE="http://opensource.creative.com/"
 
-LICENSE="GPL-2"
+LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="x86 amd64"
 
