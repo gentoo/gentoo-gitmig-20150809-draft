@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-optional/ant-optional-1.6.2.ebuild,v 1.4 2004/07/23 21:28:29 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant-optional/ant-optional-1.6.2-r1.ebuild,v 1.1 2004/07/23 21:28:29 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~amd64"
 IUSE="javamail"
 
-DEPEND="=dev-java/ant-${PV}
+DEPEND="=dev-java/ant-${PVR}
 	>=dev-java/java-config-1.2
 	>=dev-java/log4j-1.2.8
 	>=dev-java/xerces-2.6.1
