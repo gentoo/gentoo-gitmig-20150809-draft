@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/libgnomeprint-2.2.1.3.ebuild,v 1.1 2003/06/25 12:20:25 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/libgnomeprint-2.2.1.3.ebuild,v 1.2 2003/07/01 22:04:06 gmsoft Exp $
 
 inherit gnome2
 
@@ -8,7 +8,7 @@ IUSE="cups doc"
 DESCRIPTION="Printer handling for Gnome"
 HOMEPAGE="http://www.gnome.org/"
 SLOT="2.2"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa"
 LICENSE="GPL-2 LGPL-2.1"
 
 RDEPEND=">=dev-libs/glib-2

@@ -1,8 +1,11 @@
 # ChangeLog for gnome-base/libgnomeprint
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/ChangeLog,v 1.24 2003/06/25 12:20:25 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/ChangeLog,v 1.25 2003/07/01 22:04:06 gmsoft Exp $
 
 *libgnomeprint-2.2.1.3 (25 Jun 2003)
+
+  01 Jul 2003; Guy Martin <gmsoft@gentoo.org> libgnomeprint-2.2.1.3.ebuild :
+  Added ~hppa to KEYWORDS.
 
   25 Jun 2003; foser <foser@gentoo.org> libgnomeprint-2.2.1.3.ebuild :
   New version
@@ -14,6 +17,9 @@
   Changed ~sparc keyword to sparc to fix broken balsa dependencies.
 
 *libgnomeprint-2.2.1.2 (12 Mar 2003)
+
+  01 Jul 2003; Guy Martin <gmsoft@gentoo.org> libgnomeprint-2.2.1.2.ebuild :
+  Added hppa to KEYWORDS.
 
   19 Mar 2003; Aron Griffis <agriffis@gentoo.org>
   libgnomeprint-2.2.1.2.ebuild:
