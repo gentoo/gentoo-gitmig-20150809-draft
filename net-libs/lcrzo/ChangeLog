@@ -1,11 +1,11 @@
 # ChangeLog for net-libs/lcrzo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-libs/lcrzo/ChangeLog,v 1.8 2002/05/04 03:44:40 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/lcrzo/ChangeLog,v 1.9 2002/06/06 19:18:27 woodchip Exp $
+
+*lcrzo-4.10 (6 Jun 2002)
 
 *lcrzo-4.09-r1 (3 May 2002)
-  
   3 May 2002; Donny Davies <woodchip@gentoo.org> :
-  
   Added LICENSE, SLOT.
 
 *lcrzo-4.09 (29 Apr 2002)
@@ -21,11 +21,3 @@
 *lcrzo-4.04 (18 Feb 2002)
 
 *lcrzo-4.03 (1 Feb 2002)
-
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
-  Added initial ChangeLog which should be updated whenever the package is
-  updated in any way. This changelog is targetted to users. This means that the
-  comments should well explained and written in clean English. The details about
-  writing correct changelogs are explained in the skel.ChangeLog file which you
-  can find in the root directory of the portage repository.
