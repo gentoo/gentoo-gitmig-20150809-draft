@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-1.4-r3.ebuild,v 1.13 2004/04/27 19:05:17 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-1.4-r3.ebuild,v 1.14 2004/06/24 21:55:51 agriffis Exp $
 
 S=${WORKDIR}
 DESCRIPTION="GNOME 1.4 - merge this package to merge all GNOME base packages"

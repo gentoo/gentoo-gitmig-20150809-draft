@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mime-data/gnome-mime-data-2.4.1.ebuild,v 1.9 2004/04/28 01:12:44 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-mime-data/gnome-mime-data-2.4.1.ebuild,v 1.10 2004/06/24 21:57:46 agriffis Exp $
 
 inherit gnome2
 

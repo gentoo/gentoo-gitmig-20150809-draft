@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit/ORBit-0.5.16.ebuild,v 1.13 2004/06/03 22:33:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit/ORBit-0.5.16.ebuild,v 1.14 2004/06/24 22:01:37 agriffis Exp $
 
 inherit gnome.org
 
