@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libtasn1
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.1 2003/09/02 22:16:31 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libtasn1/ChangeLog,v 1.2 2003/11/23 01:38:25 liquidx Exp $
+
+*libtasn1-0.2.6 (23 Nov 2003)
+
+  23 Nov 2003; Alastair Tse <liquidx@gentoo.org> libtasn1-0.2.6.ebuild:
+  version bump (#33931)
 
 *libtasn1-0.2.5 (02 Sep 2003)
 
