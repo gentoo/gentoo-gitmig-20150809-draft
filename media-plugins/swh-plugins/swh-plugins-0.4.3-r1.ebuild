@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/swh-plugins-0.4.3-r1.ebuild,v 1.2 2004/06/24 23:35:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/swh-plugins/swh-plugins-0.4.3-r1.ebuild,v 1.3 2004/06/29 16:18:53 dholm Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://plugin.org.uk/releases/${PV}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 
 DEPEND="media-libs/ladspa-sdk
 	dev-libs/fftw
@@ -20,6 +20,7 @@ DEPEND="media-libs/ladspa-sdk
 src_unpack() {
 	unpack ${A} || die
 	epatch ${FILESDIR}/${P}-compile.patch
+	use ppc && epatch ${FILESDIR}/${P}-ppc.patch
 
 	cd ${S}
 	sed -i '/MACHINE=/s/.*/MACHINE=""/' configure
