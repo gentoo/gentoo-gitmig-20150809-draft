@@ -1,6 +1,6 @@
-# ChangeLog for app-games/koth
+# ChangeLog for games-action/koth
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/koth/ChangeLog,v 1.1 2003/09/10 19:29:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/koth/ChangeLog,v 1.2 2003/09/10 20:27:51 vapier Exp $
 
   12 Jul 2003; Michael Sterrett <msterret@gentoo.org> koth-0.7.7.ebuild,
   koth-0.8.0.ebuild:
