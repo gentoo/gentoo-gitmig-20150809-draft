@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.0.9.ebuild,v 1.1 2002/11/21 01:16:28 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.0.9.ebuild,v 1.2 2002/11/21 19:51:00 azarah Exp $
 
-inherit libtool flag-o-matic
+inherit eutils libtool flag-o-matic
 
 IUSE="tiff doc jpeg directfb"
 
-S=${WORKDIR}/${P}
+S="${WORKDIR}/${P}"
 DESCRIPTION="Gimp ToolKit + "
 SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.0/${P}.tar.bz2"
 HOMEPAGE="http://www.gtk.org/"
@@ -27,6 +27,14 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	 doc? ( >=dev-util/gtk-doc-0.9 
 		app-text/sgmltools-lite )"
+
+src_unpack() {
+	unpack ${A}
+
+	# Turn of --export-symbols-regex for now, since it removes
+	# the wrong symbols
+#	cd ${S}; epatch ${FILESDIR}/gtk+-2.0.6-exportsymbols.patch
+}
 
 src_compile() {
 	# see bug 8762

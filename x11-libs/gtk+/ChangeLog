@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.37 2002/11/21 01:16:28 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.38 2002/11/21 19:51:00 azarah Exp $
+
+  21 Nov 2002; Martin Schlemmer <azarah@gentoo.org> gtk+-2.1.2.ebuild,
+  gtk+-2.0.9.ebuild :
+
+  Turn of --export-symbols-regex for now, since it removes
+  the wrong symbols.  Patch from Redhat.
 
 *gtk+-2.0.9 (20 Nov 2002)
 
