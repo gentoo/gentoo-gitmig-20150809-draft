@@ -2,8 +2,8 @@
 Hash: SHA1
 
 MD5 6ea5e30e15875911760f85ec13706d85 log4cxx-0.9.7-r1.ebuild 1848
-MD5 500df1ceb8e4f1a53a7dc4090ee9b397 log4cxx-0.9.5.ebuild 882
-MD5 2123ed4cdde0b2e11c08873ca6c785fa ChangeLog 1685
+MD5 acdf5c918d02c97d984332414891678e log4cxx-0.9.5.ebuild 881
+MD5 49bc19d5be06b21e31755bfff5309879 ChangeLog 1782
 MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
 MD5 58ee85872eea9711c59ddaeeb2f09568 files/log4cxx-0.9.7-gentoo.diff 1037
 MD5 b11a3e797b67c6aea1bb82f6473890df files/log4cxx-0.9.7-use-SQLWCHAR.diff 967
@@ -13,7 +13,7 @@ MD5 1135167eb4745c4a16791f44317ba88b files/digest-log4cxx-0.9.5 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB3m/4EZCkKN40op4RApxIAKCj6Fpwd5fNACCOpspkF1xf2I0RlQCgi2dh
-LMqUZjXV3miQ0of4WS76kSs=
-=xYjb
+iD8DBQFB5RMBEZCkKN40op4RAi3HAKC5SfAE4N4nppQRPVZGG+N0U0k9JwCgpszI
+ArmeqOYB3fPOmv2zwOJg1X4=
+=wcrd
 -----END PGP SIGNATURE-----
