@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-1.0.ebuild,v 1.3 2004/06/24 22:38:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtranslator/gtranslator-1.0.ebuild,v 1.4 2004/07/14 02:10:03 agriffis Exp $
 
 inherit gnome2
 
@@ -25,4 +25,3 @@ DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
 DOCS="AUTHORS COPYING ChangeLog HACKING INSTALL NEWS README THANKS TODO"
-
