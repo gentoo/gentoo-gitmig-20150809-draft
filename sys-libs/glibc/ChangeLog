@@ -1,6 +1,6 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.22 2002/10/29 09:17:34 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.23 2002/10/30 02:44:58 nall Exp $
 
 *glibc-2.3.1-r1 (26 Oct 2002)
 
@@ -14,6 +14,11 @@
   We should think about remoing it in the future after things have settled.
 
 *glibc-2.2.5-r7 (13 Oct 2002)
+
+  29 Oct 2002; Jon Nall <nall@gentoo.org> glibc-2.2.5-r7.ebuild :
+
+  Added sqrtl patch for ppc. This closes bug #9796. Also added semctl
+  patch for ppc.
 
   29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> glibc-2.2.5-r7.ebuild :
 

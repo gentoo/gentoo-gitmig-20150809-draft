@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r7.ebuild,v 1.19 2002/10/29 09:17:34 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r7.ebuild,v 1.20 2002/10/30 02:44:58 nall Exp $
 
 IUSE="nls pic build"
 
@@ -99,6 +99,19 @@ src_unpack() {
 		einfo "Applying divdi3 patch..."
 		cd ${S}; patch -p1 < ${FILESDIR}/${PV}/${P}-divdi3.diff > /dev/null || die
 	fi
+
+	if [ "${ARCH}" = "ppc" ]; then
+	        # This patch fixes the absence of sqrtl on PPC
+	        # http://sources.redhat.com/ml/libc-hacker/2002-05/msg00012.html
+	        einfo "Applying ppc-sqrtl patch..."
+	        cd ${S}; patch -p0 < ${FILESDIR}/${PV}/${P}-ppc-sqrtl.diff > /dev/null || die
+	
+	        # This patch fixes a SIGSEGV in semctl's va_arg processing
+	        # http://sources.redhat.com/ml/libc-alpha/2002-05/msg00065.html
+	        einfo "Applying ppc-semctl patch..."
+	        cd ${S}; patch -p0 < ${FILESDIR}/${PV}/${P}-ppc-semctl.diff > /dev/null || die
+	fi
+
 	
 	# Some gcc-3.1.1 fixes.  This works fine for other versions of gcc as well,
 	# and should generally be ok, as it just fixes define order that causes scope
