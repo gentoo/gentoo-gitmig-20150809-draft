@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/muttprint-0.72a.ebuild,v 1.1 2004/08/17 18:09:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/muttprint/muttprint-0.72a.ebuild,v 1.2 2004/08/30 16:33:42 dholm Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/muttprint/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~alpha ~amd64 ~ia64"
+KEYWORDS="~x86 ~alpha ~amd64 ~ia64 ~ppc"
 IUSE=""
 
 RDEPEND="virtual/tetex
