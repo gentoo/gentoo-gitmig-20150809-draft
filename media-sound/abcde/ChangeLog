@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/abcde
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/ChangeLog,v 1.6 2003/02/12 07:23:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/ChangeLog,v 1.7 2003/06/21 04:21:04 jje Exp $
+
+*abcde-2.1.4 (21 Jun 2003)
+
+  21 Jun 2003; jje <jje@gentoo.org> abcde-2.1.4.ebuild,
+  files/abcde-2.1.4-gentoo.diff:
+  Version bump.
+  
+  Submitted by: Slaterson <ruppie30@yahoo.com>
 
   18 Jan 2003; Bryon Roche <kain@kain.org> abcde-2.0.3.ebuild :
 
