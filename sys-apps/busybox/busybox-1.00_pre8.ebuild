@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00_pre8.ebuild,v 1.5 2004/06/17 11:03:44 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00_pre8.ebuild,v 1.6 2004/06/23 20:32:30 solar Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://www.busybox.net/downloads/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc arm ~amd64"
+KEYWORDS="~x86 ~ppc arm ~amd64 ~mips"
 IUSE="debug static uclibc savedconfig make-busybox-symlinks"
 
 DEPEND="virtual/glibc
