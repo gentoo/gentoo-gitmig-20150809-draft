@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/mmucl/mmucl-1.5.2.ebuild,v 1.3 2004/08/07 22:24:48 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/mmucl/mmucl-1.5.2.ebuild,v 1.4 2004/08/08 04:46:48 vapier Exp $
 
 inherit games
 
 DESCRIPTION="Marks Mud CLient - A mud client written completely in tcl/tk"
-HOMEPAGE="http://mmucl.sourceforge.net"
+HOMEPAGE="http://mmucl.sourceforge.net/"
 SRC_URI="mirror://sourceforge/mmucl/${P}.tar.gz"
 
-KEYWORDS="~x86"
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="~x86"
 IUSE="readline"
 
 RDEPEND=">=dev-lang/tk-8.4
@@ -26,7 +26,7 @@ src_unpack() {
 		-e "/^BIN_DIR/ s:=.*:=${GAMES_BINDIR}:" \
 		-e "/^LIB_DIR/ s:=.*:=${GAMES_LIBDIR}/${PN}:" \
 		-e "" "${S}/Makefile" \
-			|| die "sed Makefile failed"
+		|| die "sed Makefile failed"
 }
 
 src_install () {
@@ -50,8 +50,8 @@ src_install () {
 	dohtml mmucl.html                 || die "dohtml failed"
 	prepgamesdirs
 }
+
 pkg_postinst() {
 	einfo "You must be in the 'games' group to run this application."
 	einfo "The executable for this is mmucl2."
 }
-
