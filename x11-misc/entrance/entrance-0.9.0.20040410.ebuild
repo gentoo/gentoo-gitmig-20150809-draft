@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/entrance/entrance-0.9.0.20040410.ebuild,v 1.1 2004/04/11 01:47:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/entrance/entrance-0.9.0.20040410.ebuild,v 1.2 2004/04/12 18:37:59 vapier Exp $
 
 inherit enlightenment eutils
 
@@ -64,7 +64,7 @@ src_install() {
 		count=$((${count} - 1))
 	done
 	count=0
-	for s in Default * failsafe ; do
+	for s in default * failsafe ; do
 		[ "${s}" == "Xsession" ] && continue
 		icon="`find ${datadir} -iname ${s}.png -printf %f`"
 		if [ -z "${icon}" ] ; then
