@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Date-Calc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Calc/ChangeLog,v 1.11 2003/04/03 22:45:26 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Date-Calc/ChangeLog,v 1.12 2003/06/07 13:33:02 mcummings Exp $
+
+*Date-Calc-5.3 (07 Jun 2003)
+
+  07 Jun 2003; Michael Cummings <mcummings@gentoo.org> Date-Calc-5.3.ebuild:
+  CPAN update
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
