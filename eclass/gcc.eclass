@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/gcc.eclass,v 1.7 2002/10/25 19:55:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gcc.eclass,v 1.8 2002/11/10 15:15:02 azarah Exp $
 # This eclass contains (or should) functions to get common info about gcc
 
 ECLASS=gcc
@@ -116,4 +116,32 @@ gcc-libstdcxx-major-version() {
 
 	echo "$(echo $(gcc-libstdcxx-version) | cut -f1 -d.)"
 }
+
+# This is thanks to great work from Paul de Vrieze <gentoo-user@devrieze.net>,
+# bug #9016.
+#
+# Export CFLAGS and CXXFLAGS that are compadible with gcc-2.95.3
+gcc2_flags() {
+	CFLAGS=${CFLAGS//pentium-mmx/i586}
+	CFLAGS=${CFLAGS//pentiumpro/i686}
+	CFLAGS=${CFLAGS//pentium?/i686}
+	CFLAGS=${CFLAGS//k6-?/k6}
+	CFLAGS=${CFLAGS//athlon-tbird/i686}
+	CFLAGS=${CFLAGS//athlon-4/i686}
+	CFLAGS=${CFLAGS//athlon-xp/i686}
+	CFLAGS=${CFLAGS//athlon-mp/i686}
+	CFLAGS=${CFLAGS//athlon/i686}
+
+	CXXFLAGS=${CXXFLAGS//pentium-mmx/i586}
+	CXXFLAGS=${CXXFLAGS//pentiumpro/i686}
+	CXXFLAGS=${CXXFLAGS//pentium?/i686}
+	CXXFLAGS=${CXXFLAGS//k6-?/k6}
+	CXXFLAGS=${CXXFLAGS//athlon-tbird/i686}
+	CXXFLAGS=${CXXFLAGS//athlon-4/i686}
+	CXXFLAGS=${CXXFLAGS//athlon-xp/i686}
+	CXXFLAGS=${CXXFLAGS//athlon-mp/i686}
+	CXXFLAGS=${CXXFLAGS//athlon/i686}
+	
+	export CFLAGS CXXFLAGS
+} 
 
