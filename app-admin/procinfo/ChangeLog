@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/procinfo
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/procinfo/ChangeLog,v 1.7 2004/01/18 20:36:30 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/procinfo/ChangeLog,v 1.8 2004/06/06 11:19:16 dragonheart Exp $
+
+  06 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  procinfo-18.ebuild:
+  QA - IUSE fix
 
   18 Jan 2004; Chuck Short <zul@gentoo.org> procinfo-18.ebuild:
   Added amd64 keyword closes 37548.
