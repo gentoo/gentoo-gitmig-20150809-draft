@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Template-Toolkit
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Template-Toolkit/ChangeLog,v 1.1 2003/05/07 18:25:36 rac Exp $
+
+*Template-Toolkit-2.09 (07 May 2003)
+
+  07 May 2003; <rac@gentoo.org> Template-Toolkit-2.09.ebuild:
+  Initial import. Ebuild submitted by Mark Leverentz <mark-leverentz@bethel.edu>
+  in bug #18236. Thanks also to acme@astray.com in bug #4750.
+
