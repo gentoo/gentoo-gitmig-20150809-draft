@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-meta/kdeartwork-meta-3.4.0_beta2.ebuild,v 1.1 2005/02/05 11:39:14 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork-meta/kdeartwork-meta-3.4.0_beta2.ebuild,v 1.2 2005/02/05 18:44:31 danarmak Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -13,6 +13,7 @@ KEYWORDS="~x86"
 IUSE=""
 
 RDEPEND="
+$(deprange $PV $MAXKDEVER kde-base/kdeartwork-emoticons)
 $(deprange $PV $MAXKDEVER kde-base/kdeartwork-iconthemes)
 $(deprange $PV $MAXKDEVER kde-base/kdeartwork-icewm-themes)
 $(deprange $PV $MAXKDEVER kde-base/kdeartwork-kscreensaver)
