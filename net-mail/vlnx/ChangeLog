@@ -1,8 +1,11 @@
 # ChangeLog for net-mail/vlnx
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vlnx/ChangeLog,v 1.4 2002/10/13 08:06:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vlnx/ChangeLog,v 1.5 2002/11/07 19:37:18 gerk Exp $
 
 *vlnx-416 (13 Oct 2002)
+
+  07 Nov 2002; Mark Guertin <gerk@gentoo.org> vlnx-414e-r2.ebuild :
+  removed depreciated ld.so
 
   13 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
   Version bump to fix #1132 ... also cleaned up ebuild and stuff
