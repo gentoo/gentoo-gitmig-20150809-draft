@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51-r11.ebuild,v 1.2 2005/01/14 14:32:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51-r11.ebuild,v 1.3 2005/01/14 15:12:10 eradicator Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -137,16 +137,17 @@ src_install() {
 		OABI="${ABI}"
 		for ABI in ${MULTILIB_ABIS}; do
 			cp libsandbox.so.${ABI} libsandbox.so
+			touch libsandbox.so
 			make DESTDIR="${D}" install || \
 			die "Failed to install sandbox"
 			if [ "$(get_libdir)" = "lib" ]; then
-				mv ${D}/lib/libsandbox.so ${D}/lib/libsandbox.so.real 
+				mv ${D}/lib/libsandbox.so ${D}/lib/libsandbox.so.lib
 			else
 				dodir /$(get_libdir)
 				mv ${D}/lib/libsandbox.so ${D}/$(get_libdir)
 			fi
 		done
-		[ -f "${D}/lib/libsandbox.so.real" ] && mv ${D}/lib/libsandbox.so.real ${D}/lib/libsandbox.so
+		[ -f "${D}/lib/libsandbox.so.lib" ] && mv ${D}/lib/libsandbox.so.lib ${D}/lib/libsandbox.so
 		ABI="${OABI}"
 	elif [ "${ARCH}" == "amd64" -a -z "${MULTILIB_ABIS}" ]; then
 		check_multilib
