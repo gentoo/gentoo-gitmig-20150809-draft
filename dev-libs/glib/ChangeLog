@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/glib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.93 2004/08/31 18:52:02 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/ChangeLog,v 1.94 2004/09/05 23:38:08 kloeri Exp $
+
+  06 Sep 2004; Bryan Østergaard <kloeri@gentoo.org> glib-2.4.5.ebuild:
+  Stable on alpha.
 
   31 Aug 2004; Michael Hanselmann <hansmi@gentoo.org> glib-1.2.10-r5.ebuild:
   Fixed bug #61490 by using glibtoolize on Mac OS X instead of elibtoolize.
