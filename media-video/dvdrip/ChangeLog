@@ -1,6 +1,10 @@
 # ChangeLog for media-video/dvdrip
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.21 2003/08/25 17:09:41 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.22 2003/08/31 04:10:03 lu_zero Exp $
+
+  31 Aug 2003; Luca Barbato <lu_zero@gentoo.org> ddvdrip-0.50.14.ebuild,
+  dvdrip-0.50.15.ebuild:
+  Marked ~ppc
 
 *dvdrip-0.50.15 (25 Aug 2003)
 
