@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hlfl/hlfl-0.60.1.ebuild,v 1.4 2003/10/25 15:52:46 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hlfl/hlfl-0.60.1.ebuild,v 1.5 2003/10/26 09:34:44 lanius Exp $
 
 DESCRIPTION="High Level Firewall Language"
 SRC_URI="ftp://ftp.hlfl.org/pub/hlfl/${P}.tar.gz"
@@ -12,6 +12,7 @@ SLOT="0"
 DEPEND="virtual/glibc"
 
 src_compile() {
+	sed -i -e 's:${datadir}/hlfl:${datadir}:' configure
 	econf --datadir=/usr/share/doc/${P} || die "./configure failed"
 	emake || die
 }
