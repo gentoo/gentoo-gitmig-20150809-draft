@@ -1,20 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 df4d554b38d71a5dd6ff8193fcbb54be getmail-4.0.6.ebuild 1413
 MD5 821f8506642ad867a99f337be131eaa0 getmail-3.2.4.ebuild 941
 MD5 40fa089fe8eaa04a4acb613dbe571b56 getmail-3.2.1.ebuild 940
 MD5 dd1fdd7c80d518711b1fde2a6784ee99 getmail-4.0.2-r1.ebuild 1406
-MD5 f3f2eb576371ace8d5b0787e6b821b2e ChangeLog 1982
+MD5 6b8c0c9e0e67b98071ebddcc4b70b2cf ChangeLog 2140
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 87d126cb233d900a20274ee09c8cf904 getmail-3.1.7.ebuild 930
 MD5 84bd6cedb9212fef5bc6ffb6c653736c files/digest-getmail-4.0.2-r1 65
 MD5 caec3387c9daa726c3e2a68ae906e5ba files/digest-getmail-3.1.7 64
 MD5 02e47482585d06da914552e487232ceb files/digest-getmail-3.2.1 64
 MD5 998916c10355bce7b9a852cd17a7fc9e files/digest-getmail-3.2.4 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBDn2K5FrxP71izLARAjB8AJ9MvQHFoT4VPElJGcNUdeG3wM+TqgCgsgW8
-4NUGdiPYtjisrRFegil6Y2M=
-=JOAM
------END PGP SIGNATURE-----
+MD5 64c5ee686032d37be077b5d3899e7aea files/digest-getmail-4.0.6 65
