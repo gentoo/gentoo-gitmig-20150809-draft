@@ -6,7 +6,7 @@ MD5 984625d8f77c1bd841adc67a0e9186dd common-lisp-controller-3.64.ebuild 3606
 MD5 d7d5dcb17bcbea9dab4e9ad14556c620 common-lisp-controller-3.76-r2.ebuild 3174
 MD5 f7c973768d7421a03561176457e85b75 ChangeLog 3195
 MD5 56d54f6f994cccab3c0325af6aa85173 metadata.xml 510
-MD5 5bf97083352d7931ceadf945c4f70fea common-lisp-controller-4.12.ebuild 3305
+MD5 3976acbf0e76aa8c534aa87c42f5c480 common-lisp-controller-4.12.ebuild 3307
 MD5 921243e5d85f2160df66d30768b7fb6a files/clc-send-command 3932
 MD5 e5d6d4f73e65082fae7961087dc7f681 files/digest-common-lisp-controller-3.76-r1 80
 MD5 e5d6d4f73e65082fae7961087dc7f681 files/digest-common-lisp-controller-3.76-r2 80

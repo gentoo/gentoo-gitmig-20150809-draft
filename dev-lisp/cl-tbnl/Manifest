@@ -1,5 +1,5 @@
-MD5 2befbeadcc1d5c7f61406e6307d45cdb cl-tbnl-0.3.10.ebuild 873
-MD5 1845cbbbc9f5e35a01a9fa3da5569eab cl-tbnl-0.2.12.ebuild 829
+MD5 42ec923c61a1bba220fd682e4a6cdc45 cl-tbnl-0.3.10.ebuild 873
+MD5 c485ca659aa5d13aa93b3da500d11ceb cl-tbnl-0.2.12.ebuild 829
 MD5 d869b5f9c94bb5285b7e92ebd5f55816 ChangeLog 392
 MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
 MD5 8bc422e5dac6886c3c688ffd6ed93dd6 files/digest-cl-tbnl-0.2.12 62
