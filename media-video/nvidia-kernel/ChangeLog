@@ -1,6 +1,12 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.40 2003/07/14 22:10:42 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.41 2003/07/18 21:43:03 tester Exp $
+
+*nvidia-kernel-1.0.4180 (18 Jul 2003)
+
+  18 Jul 2003; Olivier Crete <tester@gentoo.org>
+  nvidia-kernel-1.0.4180.ebuild:
+  Added amd64 version of the driver
 
   14 Jul 2003; Martin Schlemmer <azarah@gentoo.org>
   nvidia-kernel-1.0.4363-r3.ebuild,
