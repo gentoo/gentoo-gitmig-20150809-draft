@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Array-Window
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Array-Window/ChangeLog,v 1.1 2003/06/01 03:13:06 mcummings Exp $
+
+*Array-Window-0.1 (31 May 2003)
+
+  31 May 2003; Michael Cummings <mcummings@gentoo.org>
+  Array-Window-0.1.ebuild:
+  New ebuild for bug 21791. Ebuild submitted by solar, fixed by mcummings
+
