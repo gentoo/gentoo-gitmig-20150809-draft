@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/inform/inform-6.21.4.ebuild,v 1.6 2004/08/06 19:04:17 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/inform/inform-6.21.4.ebuild,v 1.7 2004/12/12 17:33:01 weeve Exp $
 
 MY_PV=6.21
 LIB_V=610
@@ -13,7 +13,7 @@ SRC_URI="http://mirror.ifarchive.org/if-archive/unprocessed/${P}.tar.gz
 
 LICENSE="Inform"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="x86 ~amd64 ~sparc"
 IUSE=""
 
 DEPEND="virtual/libc"
