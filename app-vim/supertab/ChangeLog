@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/supertab
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/supertab/ChangeLog,v 1.5 2003/12/05 03:35:54 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/supertab/ChangeLog,v 1.6 2003/12/05 04:13:45 ciaranm Exp $
+
+  05 Dec 2003; Ciaran McCreesh <ciaranm@gentoo.org> supertab-0.32.ebuild:
+  Added amd64 keyword
 
   05 Dec 2003; Ciaran McCreesh <ciaranm@gentoo.org> supertab-0.32.ebuild:
   Added ~ppc to keywords
