@@ -1,6 +1,10 @@
 # ChangeLog for net-print/gtklp
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/ChangeLog,v 1.10 2004/03/02 08:14:43 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/gtklp/ChangeLog,v 1.11 2004/04/09 13:04:40 lanius Exp $
+
+  09 Apr 2004; Heinrich Wendel <lanius@gentoo.org> gtklp-0.9m.ebuild,
+  gtklp-0.9p.ebuild:
+  mark stable on x86, remove S=${WORKDIR}/${P}
 
 *gtklp-0.9p (04 Oct 2003)
 
