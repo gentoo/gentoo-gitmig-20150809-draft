@@ -1,6 +1,14 @@
 # ChangeLog for net-www/opera
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.19 2003/04/15 17:23:07 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.20 2003/04/19 16:11:13 lostlogic Exp $
+
+*opera-7.10_beta1-r1 (19 Apr 2003)
+
+  19 Apr 2003; Brandon Low <lostlogic@gentoo.org> Manifest,
+  opera-7.10_beta1-r1.ebuild:
+  Various ebuild fixage (actually I've had a 7.10_beta ebuild sitting around for
+  a while, but couldn't get it to runtill we updated fontconfig so didn't merge
+  it), and actually get the release snapshots, not random snapshots.
 
 *opera-7.10_beta1 (15 Apr 2003)
 
