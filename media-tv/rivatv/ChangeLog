@@ -1,0 +1,37 @@
+# ChangeLog for media-tv/rivatv
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/rivatv/ChangeLog,v 1.1 2003/06/18 11:59:36 seemant Exp $
+
+*rivatv-0.8.1 (18 Jun 2003)
+
+  18 Jun 2003; Seemant Kulleen <seemant@gentoo.org> rivatv-0.8.0-r1.ebuild,
+  rivatv-0.8.1.ebuild, rivatv-0.8.2.ebuild:
+  moved to media-tv
+
+  12 Jun 2003; <msterret@gentoo.org> rivatv-0.8.0-r1.ebuild,
+  rivatv-0.8.1.ebuild:
+  fix Header
+
+*rivatv-0.8.2 (10 Feb 2003)
+
+  10 Feb 2003; B.Lauwers <blauwers@gentoo.org> rivatv-0.8.2.ebuild:
+  Version bump from old ebuild to add new driver support and bugfixes
+
+*rivatv-0.8.1 (09 Dec 2002)
+
+  9 Dec 2002; B.Lauwers <blauwers@gentoo.org> rivatv-0.8.1.ebuild:
+
+  Version bump from old ebuild to add new driver support and bugfixes
+
+*rivatv-0.8.0 (16 Jun 2002)
+
+  16 June 2002; Doug Goldstein (Cardoe) <dougg@ufl.edu> rivatv-0.8.0-r1.ebuild:
+ 
+  cleaned up ebuild and fixed it so it'll actually emerge without giving a whole long error msg
+  about how we changed the kernel ebuild names and then need to be emerged --nodeps to get it to work
+
+*rivatv-0.8.0-0 (07/06/2002)
+
+  7 Jun 2002; B.Lauwers <blauwers@gentoo.org> ChangeLog, rivatv-0.8.0.ebuild :
+  
+  Intial ebuild for rivatv from http://drama.obuda.kando.hu/~fero/cgi-bin/rivatv.php
