@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.8.1.1.ebuild,v 1.6 2005/01/08 23:21:09 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/gnome-applets-2.8.1.1.ebuild,v 1.7 2005/01/22 06:45:18 vapier Exp $
 
 inherit gnome2 eutils
 
 DESCRIPTION="Applets for the Gnome2 Desktop and Panel"
 HOMEPAGE="http://www.gnome.org/"
 
-IUSE="doc apm acpi ipv6 gstreamer"
-SLOT="2"
 LICENSE="GPL-2 FDL-1.1"
-KEYWORDS="x86 ppc alpha sparc hppa amd64 ~ia64 ~mips ~ppc64"
+SLOT="2"
+KEYWORDS="x86 ppc alpha sparc hppa amd64 ia64 ~mips ~ppc64"
+IUSE="doc apm acpi ipv6 gstreamer"
 
 RDEPEND=">=x11-libs/gtk+-2.1
 	>=gnome-base/gail-1.3
@@ -44,7 +44,7 @@ src_unpack() {
 
 }
 
-src_install () {
+src_install() {
 
 	gnome2_src_install
 
