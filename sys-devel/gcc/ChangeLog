@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.184 2004/02/26 21:07:14 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.185 2004/02/26 22:35:36 pappy Exp $
+
+  26 Feb 2004; Alexander Gabert <pappy@gentoo.org> gcc-3.3.3-r1.ebuild:
+  added IUSE hardened flag (thx swtaylor)
 
   26 Feb 2004; Alexander Gabert <pappy@gentoo.org> gcc-3.3.3-r1.ebuild:
   changed typo in FVER of SSP, fixed up release_version logic a bit
