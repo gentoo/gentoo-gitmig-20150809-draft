@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r4.ebuild,v 1.11 2004/06/17 16:21:07 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r4.ebuild,v 1.12 2004/06/17 17:08:13 seemant Exp $
 
 inherit eutils flag-o-matic kmod
 
@@ -99,7 +99,7 @@ src_unpack() {
 
 	use svga && unpack svgalib_helper-1.9.17-mplayer.tar.bz2
 
-	use gtk && unpack Blue-1.0.tar.bz2
+	use gtk && unpack Blue-1.4.tar.bz2
 
 	cd ${S}
 
