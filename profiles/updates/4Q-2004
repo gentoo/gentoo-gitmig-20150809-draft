@@ -159,3 +159,4 @@ move app-sci/iverilog sci-electronics/iverilog
 move app-sci/lard sci-electronics/lard
 move app-sci/magic sci-electronics/magic
 move app-sci/modelsim sci-electronics/modelsim
+move app-sci/ng-spice-rework sci-electronics/ng-spice-rework
