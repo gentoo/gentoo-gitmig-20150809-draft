@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77.ebuild,v 1.1 2003/11/09 23:46:00 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77.ebuild,v 1.2 2003/11/10 18:23:13 azarah Exp $
 
 # Note that we link to static versions of glib (pam_console.so)
 # and pwdb (pam_pwdb.so) ...
@@ -79,6 +79,8 @@ pkg_setup() {
 			die "Could not find /usr/lib/${x} needed to build Linux-PAM!"
 		}
 	done
+
+	return 0
 }
 
 src_unpack() {
