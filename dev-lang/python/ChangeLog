@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/python
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.92 2004/04/27 14:08:34 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/ChangeLog,v 1.93 2004/05/15 21:05:17 kumba Exp $
+
+*python-2.3.4_rc1 (15 May 2004)
+
+  15 May 2004; Joshua Kinard <kumba@gentoo.org> python-2.3.3-r1.ebuild,
+  python-2.3.4_rc1.ebuild:
+  Marking 2.3.3 stable on mips (someone yanked the ~mips keyword at some
+  point...), and 2.3.4 unstable.
 
   27 Apr 2004; Michael McCabe <randy@gentoo.org> python-2.3.3-r1.ebuild:
   Marked stable on s390
