@@ -1,6 +1,6 @@
 MD5 4a30b6a1c307d7a431a14e8388a31af0 rails-0.9.5.ebuild 917
 MD5 a6e754318a80140bbb332a5db6247778 ChangeLog 476
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 ce7ea8ad16323fdc3f2b6d3161abfe3d rails-0.10.0.ebuild 915
+MD5 fc4603d6ca31baf684ea8494d33e7168 rails-0.10.0.ebuild 950
 MD5 937edc8b22617c57edda938e9d6e5445 files/digest-rails-0.9.5 59
 MD5 0765d3bb82b84d629878ce878637e94a files/digest-rails-0.10.0 60
