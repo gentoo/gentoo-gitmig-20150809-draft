@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-3.9.13-r1.ebuild,v 1.1 2002/12/16 19:36:07 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-3.9.13-r1.ebuild,v 1.2 2002/12/20 16:15:30 blizzy Exp $
 
 inherit flag-o-matic
 
@@ -20,11 +20,13 @@ src_unpack() {
 	unpack ${A} && cd ${S}
 
 	# Fix manpage.
-	sed -i "s:/usr/local/etc/screenrc:/etc/screenrc:g;
-	s:/usr/local/screens:/var/run/screen:g;
-	s:/local/etc/screenrc:/etc/screenrc:g;
-	s:/etc/utmp:/var/run/utmp:g;
-	s:/local/screens/S-:/var/run/screen/S-:g" doc/screen.1
+	mv doc/screen.1 doc/screen.1.orig
+	sed <doc/screen.1.orig >doc/screen.1 \
+		-e "s:/usr/local/etc/screenrc:/etc/screenrc:g;
+		s:/usr/local/screens:/var/run/screen:g;
+		s:/local/etc/screenrc:/etc/screenrc:g;
+		s:/etc/utmp:/var/run/utmp:g;
+		s:/local/screens/S-:/var/run/screen/S-:g"
 }
 
 src_compile() {

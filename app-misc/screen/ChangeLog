@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/screen
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.19 2002/12/19 17:27:44 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/ChangeLog,v 1.20 2002/12/20 16:15:30 blizzy Exp $
+
+  20 Dec 2002; Maik Schreiber <blizzy@gentoo.org> screen-3.9.13-r1.ebuild,
+  screen-3.9.13-r2.ebuild: Fixed sed calls to work with <sed-4.
 
   19 Dec 2002; Maik Schreiber <blizzy@gentoo.org> files/screenrc: Changed
   scrollback buffer to 1000 lines per default. Also removed version output
