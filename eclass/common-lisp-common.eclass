@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/common-lisp-common.eclass,v 1.4 2004/02/27 03:38:25 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/common-lisp-common.eclass,v 1.5 2004/03/21 07:08:03 mkennedy Exp $
 #
 # Author Matthew Kennedy <mkennedy@gentoo.org>
 #
@@ -164,11 +164,24 @@ impl-remove-timestamp-hack() {
 	rm -rf /usr/lib/${impl} &>/dev/null || true
 }
 
+test-in() {
+	local symbol=$1
+	shift
+	for i in $@; do
+		if [ $i == ${symbol} ]; then
+			return 0			# true
+		fi
+	done
+	false
+}
+
 standard-impl-postinst() {
 	local impl=$1
 	rm -rf /usr/lib/common-lisp/${impl}/* &>/dev/null || true
 	chown cl-builder:cl-builder /usr/lib/common-lisp/${impl}
-	impl-restore-timestamp-hack ${impl}
+	if test-in ${impl} cmucl sbcl; then
+		impl-restore-timestamp-hack ${impl}
+	fi
 	chown -R root:root /usr/lib/${impl}
 	/usr/bin/clc-autobuild-impl ${impl} yes
 	register-common-lisp-implementation ${impl}
@@ -179,11 +192,12 @@ standard-impl-postrm() {
 	# Since we keep our own time stamps we must manually remove them
 	# here.
 	if [ ! -x ${impl_binary} ]; then
-		impl-remove-timestamp-hack ${impl}
+		if test-in ${impl} cmucl sbcl; then
+			impl-remove-timestamp-hack ${impl}
+		fi
 		rm -rf /usr/lib/common-lisp/${impl}/*
 	fi
 }
-
 
 # Local Variables: ***
 # mode: shell-script ***
