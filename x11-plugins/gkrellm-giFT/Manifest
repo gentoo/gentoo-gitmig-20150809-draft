@@ -1,19 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d7377d497917f1f3d49dcb260b9f20ee gkrellm-giFT-0.2.3.ebuild 698
-MD5 e4871aa492e7a74308a82472a081272b gkrellm-giFT-0.2.2.ebuild 828
-MD5 47049880a49dbee04471d5cfba6e0224 ChangeLog 1193
-MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
+MD5 cf36f192e75efeb449824d5e903e1dba ChangeLog 1279
 MD5 ec195c0b215dd08ccf8566074857479f gkrellm-giFT-0.2.1.ebuild 651
+MD5 e4871aa492e7a74308a82472a081272b gkrellm-giFT-0.2.2.ebuild 828
+MD5 86a47a1e511f2f5caab87c3277a0030a gkrellm-giFT-0.2.3.ebuild 699
+MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
 MD5 79bb8dedf4e3fe409a12e45341c99cc4 files/digest-gkrellm-giFT-0.2.1 70
 MD5 fdd8b5c2ace5046c4b048c241ea0189c files/digest-gkrellm-giFT-0.2.2 136
-MD5 5b4dcd6562bc0f4d82e7834a82d6c93a files/digest-gkrellm-giFT-0.2.3 70
 MD5 ee4b37fceca0148a8b06a2e93faa7d96 files/gkrellm-gift-0.2.2.patch 354
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBKV5XcAgAdbxYsnERArcjAKCGOE8ZKOY6S2U4ZHXL8zgDYD011gCgi/ag
-woFTZqf9wi5K65k0H2IRuWE=
-=Xio7
------END PGP SIGNATURE-----
+MD5 5b4dcd6562bc0f4d82e7834a82d6c93a files/digest-gkrellm-giFT-0.2.3 70
