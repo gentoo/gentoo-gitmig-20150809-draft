@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/mplinuxman
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mplinuxman/ChangeLog,v 1.1 2004/02/15 11:33:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mplinuxman/ChangeLog,v 1.2 2004/03/24 17:43:43 eradicator Exp $
+
+  24 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  mplinuxman-1.4.ebuild:
+  stable x86.
 
 *mplinuxman-1.4 (15 Feb 2004)
 
