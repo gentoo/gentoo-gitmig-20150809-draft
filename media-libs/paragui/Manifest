@@ -1,3 +1,5 @@
+MD5 9534d30864250e81bfaa47900c5c7061 files/digest-paragui-1.0.4 66
 MD5 06d1937e624bcd85e8a55f54e294cd3c files/digest-paragui-1.0.3 66
-MD5 f7c35f16d1bcccb5dbee20a4d8ea83f7 paragui-1.0.3.ebuild 793
-MD5 e74089f476e1939d8337fe9be6d7a33d ChangeLog 1389
+MD5 a78ffcb5164974c55fb85784eccb7061 paragui-1.0.4.ebuild 790
+MD5 cbd0c3c40a6c13ea3556afe0e6bb2731 paragui-1.0.3.ebuild 787
+MD5 91a7c5aab8fa1a1302d1e3ae81554bbb ChangeLog 1665
