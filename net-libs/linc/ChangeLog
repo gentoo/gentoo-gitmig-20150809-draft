@@ -1,7 +1,10 @@
 # ChangeLog for net-libs/linc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/linc/ChangeLog,v 1.4 2002/06/26 23:08:15 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/linc/ChangeLog,v 1.5 2002/06/28 08:25:59 spider Exp $
 
+linc-0.5.0-r2 (27 Jun 2002)
+  28 Jun 2002; Spider <spider@gentoo.org> linc-0.5.0-r2.ebuild :
+  libtoolizing this and ORBit2 at the same time works.  doing that now.
 
 linc-0.5.0-r1 (27 Jun 2002)
   27 Jun 2002; Spider <spider@gentoo.org> linc-0.5.0-r1.ebuild :
