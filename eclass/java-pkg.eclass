@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.6 2004/01/25 03:56:09 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/java-pkg.eclass,v 1.7 2004/03/31 00:19:30 karltk Exp $
 
 inherit base
 ECLASS=java-pkg
@@ -193,11 +193,17 @@ java-pkg_jar-from()
 			eerror "Installation problems with jars in ${pkg} - is it installed?"
 			return 1
 		fi
-		if [ "`basename ${x}`" == "${jar}" ] ; then
+		if [ -z "${jar}" ] ; then
+			ln -sf ${x} $(basename ${x})
+		elif [ "`basename ${x}`" == "${jar}" ] ; then
 			ln -sf ${x} ${destjar}
 			return 0
 		fi
 	done
-        return 1
+	if [ -z "${jar}" ] ; then
+	        return 0
+	else
+		return 1
+	fi	     
 }
 
