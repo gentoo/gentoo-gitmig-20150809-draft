@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-034-r1.ebuild,v 1.1 2004/10/10 04:19:46 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/udev-034-r1.ebuild,v 1.2 2004/10/10 04:23:34 gregkh Exp $
 
 # Note: Cannot use external libsysfs with klibc ..
 USE_KLIBC="no"
@@ -8,7 +8,7 @@ USE_KLIBC="no"
 inherit eutils
 
 DESCRIPTION="Linux dynamic and persistent device naming support (aka userspace devfs)"
-HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev-FAQ"
+HOMEPAGE="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html"
 SRC_URI="mirror://kernel/linux/utils/kernel/hotplug/${P}.tar.bz2"
 
 LICENSE="GPL-2"
