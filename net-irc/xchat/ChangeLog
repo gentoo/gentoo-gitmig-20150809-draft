@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.135 2004/11/22 20:53:34 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.136 2004/11/24 22:47:17 swegener Exp $
+
+*xchat-2.4.1 (24 Nov 2004)
+
+  24 Nov 2004; Sven Wegener <swegener@gentoo.org> +xchat-2.4.1.ebuild:
+  Version bump. Thanks to Lars (Polynomial-C) <polynomial-C@gmx.de> for
+  notification. Closes bug #72291.
 
   22 Nov 2004; Stephen P. Becker <geoman@gentoo.org> xchat-2.4.0-r1.ebuild,
   xchat-2.4.0.ebuild:
