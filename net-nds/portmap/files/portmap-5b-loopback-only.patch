@@ -1,0 +1,62 @@
+diff -u portmap_5beta/pmap_check.c portmap_5beta_elros/pmap_check.c
+--- portmap_5beta/pmap_check.c	1996-07-07 10:49:10.000000000 +0200
++++ portmap_5beta_elros/pmap_check.c	2004-09-24 01:56:47.000000000 +0200
+@@ -63,6 +63,7 @@
+ static void logit();
+ static void toggle_verboselog();
+ int     verboselog = 0;
++int	listenonlyloopback = 0;
+ int     allow_severity = LOG_INFO;
+ int     deny_severity = LOG_WARNING;
+ 
+diff -u portmap_5beta/pmap_check.h portmap_5beta_elros/pmap_check.h
+--- portmap_5beta/pmap_check.h	1996-07-06 23:06:23.000000000 +0200
++++ portmap_5beta_elros/pmap_check.h	2004-09-24 01:55:24.000000000 +0200
+@@ -7,6 +7,7 @@
+ extern int check_privileged_port();
+ extern int check_callit();
+ extern int verboselog;
++extern int listenonlyloopback;
+ extern int allow_severity;
+ extern int deny_severity;
+ 
+diff -u portmap_5beta/portmap.c portmap_5beta_elros/portmap.c
+--- portmap_5beta/portmap.c	1996-07-06 23:06:24.000000000 +0200
++++ portmap_5beta_elros/portmap.c	2004-09-24 01:49:47.000000000 +0200
+@@ -158,7 +158,7 @@
+ 	int len = sizeof(struct sockaddr_in);
+ 	register struct pmaplist *pml;
+ 
+-	while ((c = getopt(argc, argv, "dv")) != EOF) {
++	while ((c = getopt(argc, argv, "dvl")) != EOF) {
+ 		switch (c) {
+ 
+ 		case 'd':
+@@ -169,10 +169,15 @@
+ 			verboselog = 1;
+ 			break;
+ 
++		case 'l':
++			listenonlyloopback = 1;
++			break;
++
+ 		default:
+ 			(void) fprintf(stderr, "usage: %s [-dv]\n", argv[0]);
+ 			(void) fprintf(stderr, "-d: debugging mode\n");
+ 			(void) fprintf(stderr, "-v: verbose logging\n");
++			(void) fprintf(stderr, "-l: listen only on loopback address (not on external address)\n");
+ 			exit(1);
+ 		}
+ 	}
+@@ -201,6 +206,11 @@
+ 	addr.sin_addr.s_addr = 0;
+ 	addr.sin_family = AF_INET;
+ 	addr.sin_port = htons(PMAPPORT);
++
++	if (listenonlyloopback) {
++		addr.sin_addr.s_addr = htonl(INADDR_LOOPBACK);
++	}
++
+ 	if (bind(sock, (struct sockaddr *)&addr, len) != 0) {
+ 		syslog(LOG_ERR, "cannot bind udp: %m");
+ 		exit(1);

@@ -1,11 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d6b1be51edb14cea7264848f6c07d19e ChangeLog 3384
-MD5 2cc9ee030123783580c9c97bb20a7acf portmap-5b-r8.ebuild 1903
-MD5 52c732b046eb02bb6a0dd5017d5f95a6 portmap-5b-r9.ebuild 2529
+MD5 f13b6d601c39db0135481be1039bf678 ChangeLog 3681
+MD5 9912426328376220914f7c645ae40f0d portmap-5b-r8.ebuild 1822
+MD5 c3cfc88210cf19cdb136b346f074a002 portmap-5b-r9.ebuild 1934
+MD5 b806d1f955acd4cdb322e74159cc17f5 files/portmap.confd 275
 MD5 887940376974bf01ecf94fd032f224eb files/portmap-5b-include-errno_h.patch 403
-MD5 3efd943304c00e9b9cd468e62adf96bb files/portmap.rc6 1111
+MD5 a42b77e374c390069e747670ef0f76b2 files/portmap.rc6 1132
 MD5 0ec47652f96bfda762a2ffc72a78f002 files/portmap_5beta.dif 8871
 MD5 44dae63001c0ad007604a7ba55403838 files/digest-portmap-5b-r8 64
 MD5 c4cab1b374730a709460d95211200852 files/portmap-4.0-cleanup.patch 2193
@@ -13,10 +14,12 @@ MD5 7667fe1c5070f9f57c1beb25015bb7be files/portmap-4.0-malloc.patch 9067
 MD5 49ef87c468b07ca837a1282faca5647b files/portmap-4.0-rpc_user.patch 1779
 MD5 d0820fd449ae88e56f2a3e78b96bb9d1 files/portmap-4.0-sigpipe.patch 353
 MD5 44dae63001c0ad007604a7ba55403838 files/digest-portmap-5b-r9 64
+MD5 8b7fc4f54e294754bbd464ec3b6f919b files/portmap-5b-optional-tcpd.patch 1066
+MD5 31bc2d6653a311e427f965214e803f30 files/portmap-5b-loopback-only.patch 1948
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBTx+WHTu7gpaalycRAocTAKDdutWNFFjjyqEXeAerYgLfzYtMjQCbBMJF
-PzE65wX4Y5sR90ZQ99kWci8=
-=rLrI
+iD8DBQFBhH8OHTu7gpaalycRAqW8AKCokACgk1ARyNSdTJ9fTBCM/NAl7ACdGwvY
+KO4eOnghhLXJvhTo7s7bP/I=
+=e1Lc
 -----END PGP SIGNATURE-----

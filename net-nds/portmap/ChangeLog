@@ -1,6 +1,12 @@
 # ChangeLog for net-nds/portmap
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/ChangeLog,v 1.24 2004/08/02 04:21:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/ChangeLog,v 1.25 2004/10/31 05:58:05 vapier Exp $
+
+  31 Oct 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/portmap-5b-loopback-only.patch,
+  +files/portmap-5b-optional-tcpd.patch, +files/portmap.confd,
+  files/portmap.rc6, portmap-5b-r8.ebuild, portmap-5b-r9.ebuild:
+  Clean up ebuilds and add support for loopback-only #65199 by Elros Cyriatan.
 
   02 Aug 2004; Aron Griffis <agriffis@gentoo.org> portmap-5b-r8.ebuild,
   portmap-5b-r9.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-5b-r8.ebuild,v 1.16 2004/09/20 18:20:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/portmap-5b-r8.ebuild,v 1.17 2004/10/31 05:58:05 vapier Exp $
 
 inherit eutils
 
@@ -12,12 +12,18 @@ SRC_URI="ftp://ftp.porcupine.org/pub/security/${MY_P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE="selinux"
 
 DEPEND="virtual/libc
-	>=sys-apps/tcp-wrappers-7.6-r7"
+	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r7 )
+	>=sys-apps/portage-2.0.51"
 RDEPEND="selinux? ( sec-policy/selinux-portmap )"
+
+pkg_setup() {
+	enewgroup rpc 111
+	enewuser rpc 111 /bin/false /dev/null rpc
+}
 
 src_unpack() {
 	unpack ${A}
@@ -53,20 +59,12 @@ src_compile() {
 }
 
 src_install() {
-	into / ; dosbin portmap
-	into /usr ; dosbin pmap_dump pmap_set
+	into /
+	dosbin portmap || die "portmap"
+	into /usr
+	dosbin pmap_dump pmap_set || die "pmap"
+
 	doman portmap.8 pmap_dump.8 pmap_set.8
-
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/portmap.rc6 portmap
-
-	# Is this really the sort of thing we wanna be doing? :)
-	# ln -s ../../init.d/portmap ${D}/etc/runlevels/default/portmap
-
 	dodoc BLURB CHANGES README
-}
-
-pkg_postinst() {
-	enewgroup rpc 111
-	enewuser rpc 111 /bin/false /dev/null rpc
+	newinitd ${FILESDIR}/portmap.rc6 portmap
 }

@@ -1,0 +1,6 @@
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-nds/portmap/files/portmap.confd,v 1.1 2004/10/31 05:58:05 vapier Exp $
+
+# Listen on localhost only by default
+#PORTMAP_OPTS="-l"
