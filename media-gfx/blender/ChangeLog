@@ -1,6 +1,6 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.14 2003/05/27 12:49:27 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.15 2003/07/12 16:44:48 aliz Exp $
 
   27 May 2003; Hanno Boeck <hanno@gentoo.org> blender-2.26.ebuild,
   blender-2.27.ebuild:
@@ -32,6 +32,11 @@
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
+*blender-2.23-r1 (13 Feb 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
+
 *blender-2.23 (15 Oct 2002)
 
   15 Oct 2002; Matt Keadle <mkeadle@gentoo.org> blender-2.23-r1.ebuild

@@ -1,6 +1,6 @@
 # ChangeLog for media-gfx/pixieplus-kde
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixieplus-kde/ChangeLog,v 1.8 2003/04/05 22:20:27 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pixieplus-kde/ChangeLog,v 1.9 2003/07/12 16:44:48 aliz Exp $
 
 *pixieplus-kde-0.5.4 (07 Mar 2003)
 
@@ -21,7 +21,7 @@
 
   Latest version for KDE-3.1.
 
-*pixieplus-kde-0.3_pre1 (26 May 2002)
+*pixieplus-kde-0.3-r1 (26 May 2002)
 
   26 May 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
   pixieplus-kde-0.3-r1.ebuild, files/pixieplus-kde-0.3-r1,

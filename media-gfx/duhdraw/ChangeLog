@@ -1,8 +1,8 @@
 # ChangeLog for media-gfx/duhdraw
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/duhdraw/ChangeLog,v 1.1 2003/05/12 12:11:59 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/duhdraw/ChangeLog,v 1.2 2003/07/12 16:44:48 aliz Exp $
 
-*media-gfx/duhdraw-2.8.12 (12 May 2003)
+*duhdraw-2.8.12 (12 May 2003)
 
   12 May 2003; Hanno Boeck <hanno@gentoo.org> duhdraw-2.8.12 :
   Initial import.
