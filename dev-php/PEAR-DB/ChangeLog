@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/PEAR-DB
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/ChangeLog,v 1.13 2004/07/30 14:18:26 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/PEAR-DB/ChangeLog,v 1.14 2004/08/03 20:07:44 agriffis Exp $
+
+  03 Aug 2004; <agriffis@gentoo.org> PEAR-DB-1.6.4.ebuild,
+  PEAR-DB-1.6.5.ebuild:
+  Mark 1.6.4 stable on alpha, add ia64 keywords #56295
 
 *PEAR-DB-1.6.5 (30 Jul 2004)
 
