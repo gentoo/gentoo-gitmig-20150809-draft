@@ -1,6 +1,19 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.16 2002/05/31 01:14:06 jayskwak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.17 2002/06/08 10:56:07 danarmak Exp $
+
+*qt-3.0.4.20020606-r1 (8 Jun 2002)
+
+  8 Jun 2002; Mark Guertin <gerk@gentoo.org> (changelog written by Dan Armak <danarmak@gentoo.org):
+
+  Fix SRC_URI for the patch included.  
+
+*qt-3.0.4.20020606 (7 Jun 2002)
+
+  7 Jun 2002; Mark Guertin <gerk@gentoo.org> (changelog written by Dan Armak <danarmak@gentoo.org):
+  
+  Add patches from the 20020606 qt cvs which fix, among other things,
+  the qt 3.0.4* ppc slowdown bug.
 
 *qt-3.0.4.1-r1 (31 May 2002)
 
