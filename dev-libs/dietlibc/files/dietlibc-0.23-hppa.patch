@@ -1,0 +1,152 @@
+Only in dietlibc-0.23-test: bin-parisc
+diff -aur dietlibc-0.23/contrib/elftrunc.c dietlibc-0.23-test/contrib/elftrunc.c
+--- dietlibc-0.23/contrib/elftrunc.c	2001-10-09 18:02:10.000000000 +0000
++++ dietlibc-0.23-test/contrib/elftrunc.c	2003-11-11 21:49:40.000000000 +0000
+@@ -54,7 +54,6 @@
+   len -= n;
+ 
+   eh32.e_shoff=0;
+-  eh32.e_shentsize=0;
+   eh32.e_shnum=0;
+   eh32.e_shstrndx=0;
+ 
+@@ -109,7 +108,6 @@
+   len -= n;
+ 
+   eh64.e_shoff=0;
+-  eh64.e_shentsize=0;
+   eh64.e_shnum=0;
+   eh64.e_shstrndx=0;
+ 
+@@ -121,8 +119,8 @@
+   {
+     if ((n=read(in,buf,sizeof(buf)))>0)
+     {
+-      write(out,buf,(size_t)((len<(size_t)n)?len:n));
+-      len-=(len<(size_t)n)?len:n;
++      write(out,buf,(size_t)((len<(size_t)n)?len:(size_t)n));
++      len-=(len<(size_t)n)?len:(size_t)n;
+     } else die(2,"read error");
+   }
+ 
+diff -aur dietlibc-0.23/parisc/setjmp.S dietlibc-0.23-test/parisc/setjmp.S
+--- dietlibc-0.23/parisc/setjmp.S	2002-01-11 18:06:53.000000000 +0000
++++ dietlibc-0.23-test/parisc/setjmp.S	2003-11-11 21:22:06.000000000 +0000
+@@ -52,7 +52,7 @@
+ 	stw %sp,  0x4c(%sr0, %r26)
+ 	stw %rp,  0x50(%sr0, %r26)
+ 	/* Floating point stack in %r19 */
+-	ldo 58(%r26), %r19
++	ldo 0x58(%r26), %r19
+ 	/* Save Floating point registers */
+ 	fstd,ma %fr12, 8(%sr0, %r19)
+ 	fstd,ma %fr13, 8(%sr0, %r19)
+diff -aur dietlibc-0.23/parisc/strchr.S dietlibc-0.23-test/parisc/strchr.S
+--- dietlibc-0.23/parisc/strchr.S	2003-09-04 01:50:50.000000000 +0000
++++ dietlibc-0.23-test/parisc/strchr.S	2003-11-11 21:24:59.000000000 +0000
+@@ -23,7 +23,7 @@
+ 	b,n .Lfoobar
+ 	uxor,sbz %r0, %r20, %r0
+ 	b,n .Lmdoit
+-	bv,n %r0(%rp)
++	bv %r0(%rp)
+ 	or %r0, %r0, %r28
+ .Lfoobar:
+ 	addi -4, %r26, %r26
+diff -aur dietlibc-0.23/parisc/strlen.S dietlibc-0.23-test/parisc/strlen.S
+--- dietlibc-0.23/parisc/strlen.S	2003-09-04 01:50:50.000000000 +0000
++++ dietlibc-0.23-test/parisc/strlen.S	2003-11-11 21:25:23.000000000 +0000
+@@ -10,40 +10,41 @@
+       than the HP-UX libc implementation, which is also uxor-based.
+ */
+ 
+-.LEVEL	1.1
++.LEVEL  1.1
+ 
+ .text
+ .globl strlen
+ 
+ strlen:
+-	.PROC
+-	.CALLINFO
+-	.ENTRY
+-	xor %r28, %r28, %r28
+-	ldi 3, %r19
+-	and,<> %r26, %r19, %r20
+-	b,n .Lstrlen17
+-	sub %r19, %r20, %r20
+-	addi 1, %r20, %r20
++        .PROC
++        .CALLINFO
++        .ENTRY
++        xor %r28, %r28, %r28
++        ldi 3, %r19
++        and,<> %r26, %r19, %r20
++        b,n .Lstrlen17
++        sub %r19, %r20, %r20
++        addi 1, %r20, %r20
+ .Lstrlen23:
+-	ldb,ma 1(%r26), %r19
+-	cmpb,= %r0, %r19, .Lstrlen42
+-	addi 1, %r28, %r28
+-	addi,= -1, %r20, %r20
+-	b,n .Lstrlen23
++        ldb,ma 1(%r26), %r19
++        cmpb,=,n %r0, %r19, .Lstrlen42
++        addi 1, %r28, %r28
++        addi,= -1, %r20, %r20
++        b,n .Lstrlen23
+ .Lstrlen17:
+-	ldw,ma 4(%r26), %r19
+-	uxor,sbz %r19, %r0, %r0
+-	b .Lstrlen17
+-	addi 4, %r28, %r28
+-	addi -4, %r28, %r28
++        ldw,ma 4(%r26), %r19
++        uxor,sbz %r19, %r0, %r0
++        b .Lstrlen17
++        addi 4, %r28, %r28
++        addi -5, %r28, %r28
+ .Lstrlen72:
+-	depw %r19, 23, 24, %r19
+-	extrs,= %r19, 7, 8, %r20
+-	cmpb,<> %r0, %r20, .Lstrlen72
+-	addi 1, %r28, %r28
++        extrs %r19, 7, 8, %r20
++        addi 1, %r28, %r28
++        cmpb,<> %r0, %r20, .Lstrlen72
++        depw %r19, 23, 24, %r19
+ .Lstrlen42:
+-	bv,n %r0(%rp)
+-	.EXIT
+-	.PROCEND
+-	.EXPORT strlen
++        bv,n %r0(%rp)
++        .EXIT
++        .PROCEND
++        .EXPORT strlen
++
+diff -aur dietlibc-0.23/parisc/strstr.S dietlibc-0.23-test/parisc/strstr.S
+--- dietlibc-0.23/parisc/strstr.S	2003-09-04 01:50:50.000000000 +0000
++++ dietlibc-0.23-test/parisc/strstr.S	2003-11-11 21:50:34.000000000 +0000
+@@ -10,7 +10,7 @@
+ 	ldb,ma 1(%r26), %r19
+ 	ldi 2, %ret0
+ .L1:
+-	cmpb,=,n %r0, %r19, .Lret
++	cmpb,=,n %r0, %r19, .Lret2
+ 	cmpb,<> %r20, %r19, .L1
+ 	ldb,ma 1(%r26), %r19
+ 	copy %r19, %r24
+@@ -25,8 +25,10 @@
+ 	cmpb,<>,n %r21, %r0, .Lloop
+ 	nop
+ .Lret:
++	addi 0, %r26, %ret0
++.Lret2:
+ 	bv %r0(%rp)
+-	addi -2, %r26, %ret0
++	addi -2, %ret0, %ret0
+ 	.EXIT
+ 	.PROCEND
+ 	.EXPORT strstr
