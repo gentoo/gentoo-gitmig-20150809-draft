@@ -1,4 +1,4 @@
-MD5 49acbd99c8295c950132a36db6522ce9 peksystray-0.2.ebuild 774
-MD5 236fe6248500085cd10704fbf00b830e ChangeLog 471
-MD5 65914961157e06b6a6c208934e37e76e files/digest-peksystray-0.2 65
+MD5 d6f944dc63a5d3758101e159f1d78725 ChangeLog 568
+MD5 790714c5e62804d2cba4d0c3940a60b3 peksystray-0.2.ebuild 764
 MD5 235ebfa6792cba5ba808e21cc0ea76b4 files/peksystray-gcc3-mlsl.diff 1323
+MD5 65914961157e06b6a6c208934e37e76e files/digest-peksystray-0.2 65
