@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.3-r2.ebuild,v 1.1 2002/06/09 07:34:26 naz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.3-r2.ebuild,v 1.2 2002/07/04 08:19:12 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Text based WWW browser, supports tables and frames"
@@ -106,6 +105,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
-	dodoc doc/* README*
+	dohtml -r doc
+	dodoc README* doc/{HISTORY,README*,keymap*,menu*}
 	doman doc/w3m.1
 }
