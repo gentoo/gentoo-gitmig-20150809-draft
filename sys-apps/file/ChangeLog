@@ -1,7 +1,15 @@
 # ChangeLog for sys-apps/file
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.25 2003/10/20 06:08:26 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.26 2003/11/02 07:21:20 seemant Exp $
 
+*file-4.03 (01 Nov 2003)
+
+  01 Nov 2003; Seemant Kulleen <seemant@gentoo.org> file-3.37.ebuild,
+  file-3.39.ebuild, file-4.01.ebuild, file-4.02.ebuild, file-4.03.ebuild,
+  file-4.05.ebuild:
+  removed old versions, and also changed SRC_URI on file-4.02 point to Gentoo
+  mirrors, since upstream doesn't have it available any more. Thanks to: Stony
+  Yakovac <stonyy@tek.com> in bug #32513
 
 *file-4.06 (17 Oct 2003)
 
