@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/karamba-test/karamba-test-0.17.ebuild,v 1.1 2003/05/04 05:47:56 prez Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/karamba-test/karamba-test-0.17.ebuild,v 1.2 2003/05/04 05:51:44 prez Exp $
 
 DESCRIPTION="Samba status plugin for Karamba"
 HOMEPAGE="http://www.efd.lth.se/~d98hk/karamba/"
@@ -24,6 +24,4 @@ src_install () {
 	dodir /usr/share/karamba/themes/test
 	cp -r * ${D}/usr/share/karamba/themes/test/
 	chmod -R go=u,go-w ${D}/usr/share/karamba/themes/test
-
-	dodoc README
 }
