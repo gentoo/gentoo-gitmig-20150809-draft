@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/grabc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grabc/ChangeLog,v 1.4 2004/06/24 22:20:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grabc/ChangeLog,v 1.5 2004/11/01 21:00:04 corsair Exp $
+
+  01 Nov 2004; Markus Rothe <corsair@gentoo.org>
+
+  grabc-1.1.ebuild:
+  Marked ~ppc64; bug #67103
 
   06 May 2004; Brandon Hale <tseng@gentoo.org> grabc-1.1.ebuild:
   Add IUSE=
