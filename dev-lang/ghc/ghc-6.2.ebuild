@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.ebuild,v 1.3 2003/12/22 09:15:50 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.ebuild,v 1.4 2004/02/20 13:10:56 kosmikus Exp $
 
 #Some explanation of bootstrap logic:
 #
@@ -90,6 +90,11 @@ src_compile() {
 		echo "SRC_CC_OPTS+=-yet_exec -yno_propolice" >> mk/build.mk
 		echo "SRC_HC_OPTS+=-optc-yet_exec -optc-yno_propolice" >> mk/build.mk
 	fi
+
+	# force the config variable ArSupportsInput to be unset;
+	# ar in binutils >= 2.14.90.0.8-r1 seems to be classified
+	# incorrectly by the configure script
+	echo "ArSupportsInput:=" >> mk/build.mk
 
 	# unset SGML_CATALOG_FILES because documentation installation
 	# breaks otherwise ...

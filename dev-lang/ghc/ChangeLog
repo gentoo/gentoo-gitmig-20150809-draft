@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.26 2004/01/11 21:26:11 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.27 2004/02/20 13:10:56 kosmikus Exp $
+
+  20 Feb 2004; Andres Loeh <kosmikus@gentoo.org> ghc-6.2.ebuild:
+  Fixed a problem building libraries using recent binutils (#40128).
 
   11 Jan 2004; Andres Loeh <kosmikus@gentoo.org> ghc-5.04.3-r1.ebuild:
   moved setup checks to pkg_setup (bug #33962).
