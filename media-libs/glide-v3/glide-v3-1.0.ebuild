@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Peter Gavin <your email>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-1.0.ebuild,v 1.2 2001/08/21 01:24:01 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glide-v3/glide-v3-1.0.ebuild,v 1.3 2001/08/21 01:25:51 drobbins Exp $
 
 S=${WORKDIR}/glide3
 DESCRIPTION="the glide library (for voodoo3 cards)"
@@ -11,9 +11,9 @@ DEPEND=""
 RDEPEND=""
 
 src_install () {
-	insinto /usr/include/glide
+	insinto /usr/include/glide3
 	doins ${S}/*.h
-	into /usr/X11R6/lib
+	into /usr/X11R6
 	newlib.so ${S}/libglide3.so-voodoo3 libglide3.so
 }
 
