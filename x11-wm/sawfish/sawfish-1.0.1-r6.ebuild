@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.0.1-r6.ebuild,v 1.8 2004/04/27 17:50:37 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.0.1-r6.ebuild,v 1.9 2004/04/27 18:13:16 pvdabeel Exp $
 
 IUSE="gtk nls esd gnome"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://sawmill.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc ppc alpha"
+KEYWORDS="x86 sparc -ppc alpha"
 
 DEPEND="=x11-libs/rep-gtk-0.15*
 	>=dev-libs/librep-0.14

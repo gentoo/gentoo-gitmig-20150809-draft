@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3.ebuild,v 1.6 2004/04/27 17:50:37 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish/sawfish-1.3.ebuild,v 1.7 2004/04/27 18:13:16 pvdabeel Exp $
 
 inherit base eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/sawmill/${P}.tar.gz"
 HOMEPAGE="http://sawmill.sourceforge.net/"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~alpha ppc"
+KEYWORDS="x86 ~alpha -ppc"
 
 DEPEND=">=dev-util/pkgconfig-0.12.0
 	>=x11-libs/rep-gtk-0.17
