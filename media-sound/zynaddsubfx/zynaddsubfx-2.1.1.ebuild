@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/zynaddsubfx-2.1.1.ebuild,v 1.1 2004/10/18 05:15:15 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/zynaddsubfx/zynaddsubfx-2.1.1.ebuild,v 1.2 2004/10/18 18:09:06 mr_bones_ Exp $
 
 inherit eutils
 
@@ -33,7 +33,7 @@ src_compile() {
 	local FFTW_VERSION=3
 	local ASM_F2I=NO
 	local LINUX_MIDIIN=NONE
-    local LINUX_AUDIOOUT=NONE
+	local LINUX_AUDIOOUT=NONE
 
 	if use oss ; then
 		LINUX_MIDIIN=OSS
@@ -42,7 +42,7 @@ src_compile() {
 	else
 		use jack && LINUX_AUDIOOUT=JACK
 	fi
-	
+
 	use alsa && LINUX_MIDIIN=ALSA
 #	use portaudio && LINUX_AUDIOOUT=PA
 #	use mmx && ASM_F2I=YES
