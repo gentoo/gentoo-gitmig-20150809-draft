@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/timidity++
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.44 2005/02/28 10:35:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/ChangeLog,v 1.45 2005/03/21 22:57:36 eradicator Exp $
+
+*timidity++-2.13.2-r1 (21 Mar 2005)
+
+  21 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +timidity++-2.13.2-r1.ebuild:
+  Revbump to fix a handful of bugs including 76361, 76654, 77286, 83018, and
+  84752. Thanks Flameeyes for the ebuild.
 
   28 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
   -files/long-64bit.patch, -files/timidity++-2.12.0-alsalib-fix.patch,
