@@ -1,6 +1,14 @@
 # ChangeLog for app-emacs/semi
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/semi/ChangeLog,v 1.1 2002/11/01 02:52:01 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/semi/ChangeLog,v 1.2 2002/12/26 09:01:08 mkennedy Exp $
+
+*semi-1.14.5 (31 Oct 2002)
+
+  31 Oct 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  semi-1.14.5.ebuild, files/65semi-gentoo.el, 
+  files/digest-semi-1.14.5 :
+
+  Version bump. Resolves1 #12175.
 
 *semi-1.14.4 (31 Oct 2002)
 
