@@ -54,27 +54,6 @@
 # Masked for a quick test period. GLSA on local DoS. Version bump.
 =net-www/apache-1.3.27
 
-# <danarmak@gentoo.org> (5 Oct 2002)
-# kde 3.0.4: NOT YET RELEASED, so don't unmask locally because there's no way for you
-# to get the sources. This is in portage for easier collaboration between me and Verwilst.
-=kde-base/arts-1.0.4
-=kde-base/kde-3.0.4
-=kde-base/kdeaddons-3.0.4
-=kde-base/kdeadmin-3.0.4
-=kde-base/kdeartwork-3.0.4
-=kde-base/kdebase-3.0.4
-=kde-base/kdebindings-3.0.4
-=kde-base/kdeedu-3.0.4
-=kde-base/kdegames-3.0.4
-=kde-base/kdegraphics-3.0.4
-=kde-base/kdelibs-3.0.4
-=kde-base/kdemultimedia-3.0.4
-=kde-base/kdenetwork-3.0.4
-=kde-base/kdepim-3.0.4
-=kde-base/kdesdk-3.0.4
-=kde-base/kdetoys-3.0.4
-=kde-base/kdeutils-3.0.4
-
 # <tantive@gentoo.org> (05 Oct 2002)
 # Version bumped, masked for testing, supporting evms-1.2
 =sys-kernel/openmosix-sources-2.4.19-r6
