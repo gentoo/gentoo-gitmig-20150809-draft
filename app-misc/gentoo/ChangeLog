@@ -1,6 +1,14 @@
 # ChangeLog for app-misc/gentoo
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.1 2002/02/01 21:53:08 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gentoo/ChangeLog,v 1.2 2002/02/02 08:40:03 aeoo Exp $
+
+*gentoo-0.11.18 (2 Feb 2002)
+
+  2 Feb 2002; Leo Lipelis <aeoo@gentoo.org> ChangeLog :
+
+  New ebuild for new release of Gentoo File Manager.  Everything should work
+  now.  System-wide config files are in /etc/gentoo/ directory.  User config
+  files are in ~/.gentoorc file.
 
 *gentoo-0.11.16-r1 (1 Feb 2002)
 
