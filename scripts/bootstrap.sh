@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.51 2003/10/30 23:42:17 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.52 2003/10/31 20:03:13 rac Exp $
 
 # IMPORTANT NOTE:
 # This script no longer accepts an optional argument.
@@ -208,7 +208,7 @@ then
 fi
 
 export USE="${ORIGUSE} bootstrap"
-emerge ${STRAP_EMERGE_OPTS} ${myTEXINFO} ${myGETTEXT} ${myBINUTILS} ${myGCC} || cleanup 1
+emerge ${STRAP_EMERGE_OPTS} ${myTEXINFO} ${myGETTEXT} ${myBINUTILS} || cleanup 1
 
 # We used to call emerge once, but now we call it twice. Why? Because gcc may
 # have been built to use a different LDPATH. We want subsequent packages merged
@@ -223,6 +223,19 @@ emerge ${STRAP_EMERGE_OPTS} ${myTEXINFO} ${myGETTEXT} ${myBINUTILS} ${myGCC} || 
 # fixed or didn't fix the "zlib undefined symbol: xmalloc_set_program_name"
 # issue, please email rac@gentoo.org, drobbins@gentoo.org and
 # azarah@gentoo.org.
+
+# rac 2003.10.31
+# addendum - now it's three times, with a clean in the middle.
+# failure to do this was causing two sets of binutils to hang around,
+# and if they had different targets, the /usr/bin symlinks get
+# confused.
+
+if [ -n "$STRAP_RUN" ]
+then
+    emerge clean || cleanup 1
+fi
+
+emerge ${STRAP_EMERGE_OPTS} ${myGCC} || cleanup 1
 
 emerge ${STRAP_EMERGE_OPTS} ${myGLIBC} ${myBASELAYOUT} ${myZLIB} || cleanup 1
 # ncurses-5.3 and up also build c++ bindings, so we need to rebuild it
