@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/gnome-core-1.4.0.4.ebuild,v 1.5 2001/08/23 10:09:39 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-core/gnome-core-1.4.0.4.ebuild,v 1.6 2001/08/31 19:00:30 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -14,10 +14,10 @@ RDEPEND=">=gnome-base/control-center-1.2.4 >=gnome-base/libglade-0.16-r1"
 #gtkhtml? ( >=gnome-base/gtkhtml-0.7 )
 DEPEND="${RDEPEND}
         nls? ( sys-devel/gettext )
+	>=gnome-base/gnome-libs-1.2.13
         >=sys-apps/tcp-wrappers-7.6
         >=gnome-base/scrollkeeper-0.2
 	>=dev-util/xml-i18n-tools-0.8.4"
-
 
 src_compile() {
   local myconf
