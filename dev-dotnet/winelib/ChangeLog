@@ -1,6 +1,9 @@
 # ChangeLog for dev-dotnet/winelib
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/winelib/ChangeLog,v 1.3 2004/06/21 16:28:37 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/winelib/ChangeLog,v 1.4 2004/06/21 16:36:36 latexer Exp $
+
+  21 Jun 2004; Peter Johanson,,, <peter@gentoo.org> winelib-0.3.ebuild:
+  Fixed dodoc stuff.
 
   21 Jun 2004; Peter Johanson, <latexer@gentoo.org> winelib-0.3.ebuild:
   Added RDEPEND on libgdiplus. See bug #54613.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/winelib/winelib-0.3.ebuild,v 1.3 2004/06/21 16:28:37 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/winelib/winelib-0.3.ebuild,v 1.4 2004/06/21 16:36:36 latexer Exp $
 
 DESCRIPTION="Library for using Windows.Forms with Mono"
 HOMEPAGE="http://www.go-mono.com/"
@@ -44,8 +44,8 @@ src_install() {
 	dosym ${ROOT}/usr/lib/wine/lib/libwine_unicode.so.1 /usr/lib
 
 	dodoc ChangeLog
-	docinto /usr/share/doc/${P}/winelib/
-	dodoc ChangeLog
+	docinto winelib/
+	dodoc winelib/ChangeLog
 }
 
 pkg_postinst() {
