@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libkipi
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libkipi/ChangeLog,v 1.3 2004/12/31 18:25:19 weeve Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libkipi/ChangeLog,v 1.4 2005/02/09 21:12:31 centic Exp $
+
+  09 Feb 2005; Dominik Stadler <centic@gentoo.org> libkipi-0.1.ebuild:
+  Mark 0.1 stable on x86
+
+*libkipi-0.1.1 (09 Feb 2005)
+
+  09 Feb 2005; Dominik Stadler <centic@gentoo.org> +libkipi-0.1.1.ebuild:
+  Add new version 0.1.1
 
   31 Dec 2004; Jason Wever <weeve@gentoo.org> libkipi-0.1.ebuild:
   Added ~sparc keyword.
