@@ -1,6 +1,11 @@
 # ChangeLog for xfce-base/xfce4
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/ChangeLog,v 1.47 2005/03/17 02:56:31 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-base/xfce4/ChangeLog,v 1.48 2005/03/24 03:39:18 dostrow Exp $
+
+*xfce4-4.2.1.1 (23 Mar 2005)
+
+  23 Mar 2005; Daniel Ostrow <dostrow@gentoo.org> +xfce4-4.2.1.1.ebuild:
+  Version bump and associated fixes.
 
 *xfce4-4.2.1 (17 Mar 2005)
 
