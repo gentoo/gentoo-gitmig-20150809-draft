@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ppc-sources-2.4.21-r2.ebuild,v 1.7 2004/01/08 06:22:58 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ppc-sources-2.4.21-r2.ebuild,v 1.8 2004/02/22 23:32:31 agriffis Exp $
 
 IUSE="build crypt"
 
@@ -33,7 +33,7 @@ SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	mirror://gentoo/patches-${KV}.tar.bz2"
 HOMEPAGE="http://www.gentoo.org/ http://www.kernel.org/"
 LICENSE="GPL-2"
-KEYWORDS="-x86 ppc -sparc -alpha -hppa -mips -arm"
+KEYWORDS="-x86 ppc -sparc -alpha -hppa -mips "
 SLOT="${KV}"
 
 

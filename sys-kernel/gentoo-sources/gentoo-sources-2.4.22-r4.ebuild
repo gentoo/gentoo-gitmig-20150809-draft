@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.22-r4.ebuild,v 1.4 2004/02/18 08:17:18 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.22-r4.ebuild,v 1.5 2004/02/22 23:31:43 agriffis Exp $
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -22,7 +22,7 @@ SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	http://dev.gentoo.org/~iggy/${PF}.patch.bz2"
 HOMEPAGE="http://www.gentoo.org/ http://www.kernel.org/"
 LICENSE="GPL-2"
-KEYWORDS="x86 -ppc -sparc -alpha -hppa -mips -arm -amd64 -ia64"
+KEYWORDS="x86 -ppc -sparc -alpha -hppa -mips -amd64 -ia64"
 SLOT="${KV}"
 
 src_unpack() {

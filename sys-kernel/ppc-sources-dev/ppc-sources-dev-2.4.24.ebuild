@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-dev/ppc-sources-dev-2.4.24.ebuild,v 1.1 2004/02/06 19:29:26 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-dev/ppc-sources-dev-2.4.24.ebuild,v 1.2 2004/02/22 23:32:55 agriffis Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -35,7 +35,7 @@ PROVIDE="virtual/linux-sources"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 LICENSE="GPL-2"
 SLOT="${KV}"
-KEYWORDS="~ppc -x86 -sparc -mips -hppa -alpha -arm"
+KEYWORDS="~ppc -x86 -sparc -mips -hppa -alpha "
 DEPEND=">=sys-devel/binutils-2.11.90.0.31"
 RDEPEND=">=sys-libs/ncurses-5.2 dev-lang/perl virtual/modutils sys-devel/make"
 

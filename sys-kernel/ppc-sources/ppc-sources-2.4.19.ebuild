@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ppc-sources-2.4.19.ebuild,v 1.18 2004/01/08 06:22:58 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources/ppc-sources-2.4.19.ebuild,v 1.19 2004/02/22 23:32:31 agriffis Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -29,7 +29,7 @@ PROVIDE="virtual/linux-sources"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 LICENSE="GPL-2"
 SLOT="${KV}"
-KEYWORDS="ppc -x86 -sparc  -alpha"
+KEYWORDS="ppc -x86 -sparc -alpha"
 
 XFSV=20020124
 
