@@ -1,0 +1,10 @@
+# ChangeLog for www-misc/multisort
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-misc/multisort/ChangeLog,v 1.1 2005/01/22 09:06:35 hollow Exp $
+
+*multisort-1.1 (22 Jan 2005)
+
+  22 Jan 2005; Benedikt Boehm <hollow@gentoo.org> +metadata.xml,
+  +multisort-1.1.ebuild:
+  Initial revision
+
