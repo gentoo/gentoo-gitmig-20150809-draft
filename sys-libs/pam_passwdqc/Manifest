@@ -1,6 +1,16 @@
-MD5 b8c82436e5507633b933feb64c911e99 ChangeLog 681
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4b1ab2706f0d342c18d07128d5006405 ChangeLog 781
 MD5 ec4f5fb3c6d93c84cb759e875e4e7895 metadata.xml 416
-MD5 8b0d0a36044aa2212bdf832797ea4d01 pam_passwdqc-0.7.4.ebuild 954
-MD5 b418628365c2a09797d6b1fd7161d2ab pam_passwdqc-0.7.5.ebuild 952
+MD5 eb475307e60f0bb7a19e32308a6eb168 pam_passwdqc-0.7.4.ebuild 955
+MD5 618b413ca3861cea22fed647a5eadd85 pam_passwdqc-0.7.5.ebuild 960
 MD5 e3d7aa9025162d36d5bc3829f777b8bb files/digest-pam_passwdqc-0.7.4 69
 MD5 19ecb00c4a2b281ebb587a61eb197aaa files/digest-pam_passwdqc-0.7.5 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCJ6Xr5mJXAu5GbtIRAqkcAJ460lEW95UZCfuHMV+2X5SNdA+tPwCeJX7u
+ZtUpEiqQM8Thf0kcOQZNrnw=
+=700q
+-----END PGP SIGNATURE-----
