@@ -1,6 +1,9 @@
 # ChangeLog for games-board/knights
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/knights/ChangeLog,v 1.3 2003/11/14 01:47:25 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/knights/ChangeLog,v 1.4 2003/12/06 16:29:20 weeve Exp $
+
+  06 Dec 2003; Jason Wever <weeve@gentoo.org> knights-0.6.ebuild:
+  Marked stable on sparc.
 
   13 Nov 2003; Jason Wever <weeve@gentoo.org> knights-0.6.ebuild:
   Added ~sparc keyword, fixes bug #33295.
