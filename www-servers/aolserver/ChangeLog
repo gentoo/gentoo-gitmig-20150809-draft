@@ -1,6 +1,9 @@
 # ChangeLog for www-servers/aolserver
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/aolserver/ChangeLog,v 1.1 2004/12/19 02:56:09 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/aolserver/ChangeLog,v 1.2 2004/12/19 18:07:07 swegener Exp $
+
+  19 Dec 2004; Sven Wegener <swegener@gentoo.org> aolserver-4.0.8.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
 *aolserver-4.0.8 (17 Dec 2004)
 

@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/aolserver/aolserver-4.0.8.ebuild,v 1.1 2004/12/19 02:56:09 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/aolserver/aolserver-4.0.8.ebuild,v 1.2 2004/12/19 18:07:07 swegener Exp $
 
 inherit eutils
 
 DESCRIPTION="Webserver with Tcl page scripting"
-HOMEPAGE="http://www.aolserver.com"
+HOMEPAGE="http://www.aolserver.com/"
 SRC_URI="mirror://sourceforge/aolserver/${P}-src.tar.gz"
 
 LICENSE="MPL-1.1"
@@ -14,8 +14,7 @@ KEYWORDS="~x86"
 
 IUSE="nptl"
 
-DEPEND=">=tcl-8.4.3"
-RDEPEND=">=tcl-8.4.3"
+DEPEND=">=dev-lang/tcl-8.4.3"
 
 ns_host="ns-localhost"
 ns_etc=/etc/${PN}

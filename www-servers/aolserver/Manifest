@@ -1,8 +1,8 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c298d00278be5a447f14f920f118677d aolserver-4.0.8.ebuild 4657
-MD5 912eea389348e362031620b067d7dfd1 ChangeLog 684
+MD5 64da22ec0d9cbd39ef22da4f3cc02c8c aolserver-4.0.8.ebuild 4646
+MD5 47d6a39a90c49051b05d29871a03462e ChangeLog 794
 MD5 c47b641a14c525426948f6d60a4f6fae metadata.xml 403
 MD5 c1fe74d26475526223d11f1768983faa files/aolserver-4.0.8-nptl.patch 398
 MD5 fbf53d85d098f4b3782760c5c8b90b63 files/digest-aolserver-4.0.8 71
@@ -10,9 +10,9 @@ MD5 ef896c9186113d2882eb14aeb7a0e0a6 files/4.0.8/aolserver.init 475
 MD5 b3cffc02111c3f39b41c85e69163cdca files/4.0.8/Makefile.global 109
 MD5 13793c3ec7d4fd46a2d4933030862abe files/4.0.8/config.tcl 16784
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBwv1lefZ4eWAXRGIRAhpfAJ4p3uAzPVtMk7FTd8EM8O0aX/NlZgCdHi7d
-vlXlzrbDNRus5oPv1ekfomU=
-=HAeo
+iD8DBQFBxcNVI1lqEGTUzyQRAuAMAJ93JfjwOycDPAtN82TJI78fGR5WxgCgzVDi
+VPAVBlJ56zrE3t8f0vAiaDs=
+=3jXj
 -----END PGP SIGNATURE-----
