@@ -1,6 +1,12 @@
 # ChangeLog for sys-apps/ucspi-tcp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.1 2002/02/01 21:53:37 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ucspi-tcp/ChangeLog,v 1.2 2002/07/12 21:05:53 g2boojum Exp $
+
+*ucspi-tcp-0.88-r2 (12 Jul 2002)
+
+  12 Jul 2002; Grant Goodyear <g2boojum@gentoo.org> ChangeLog  :
+
+  added ipv6 patch if ipv6 in USE; thanks to Sascha Silbe for the suggestion
 
 *ucspi-tcp-0.88-r1 (1 Feb 2002)
 
