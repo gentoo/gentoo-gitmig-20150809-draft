@@ -1008,3 +1008,7 @@ net-mail/spamassassin
 # app-editors/bluefish-2002.06.23 gtk+2 port snapshot masked. (#5034)
 =app-editors/bluefish-2002.06.23
 	
+
+# g2boojum@gentoo.org 16 Jul 2002
+# new net-tools ; needs testing
+=sys-apps/net-tools-1.60-r5
