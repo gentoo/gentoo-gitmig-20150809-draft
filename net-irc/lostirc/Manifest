@@ -1,18 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
+MD5 0ae19f80abcd5ae0d3aef065bfe8eccc ChangeLog 5466
 MD5 c7a033ddb0ceb3753224c5848e9cc65e lostirc-0.3.2.ebuild 900
 MD5 1561d0fc3e8cb549ff739349c48a9f1a lostirc-0.3.3.ebuild 917
 MD5 687eb0a4c8de155a75acc3a4c0b97dba lostirc-0.4.0.ebuild 868
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 f696325ac1fcf2805892cde420f5d0b5 ChangeLog 5265
+MD5 0b83dc37e6935c1eb263ab7bdb45e5d6 lostirc-0.4.1.ebuild 873
 MD5 81e4b2de5e440105990c7c27392bb2f3 files/digest-lostirc-0.3.2 65
 MD5 62b3f1c905921567201c5bc240b16bdc files/digest-lostirc-0.3.3 65
 MD5 8a52897ced324e66bfc83b393b24ba13 files/digest-lostirc-0.4.0 65
+MD5 452a32d1609fd1a8d4e39c2fb5a9dbfe files/digest-lostirc-0.4.1 65
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFA+TEVAXomK8S72HoRAjqZAJsF7o3SrnjdZsBavEZgAqq/teMvhgCdGNJR
-DlywKeG/JTDp/vvjhlnVy8o=
-=3u4u
+iD8DBQFBHgK7I1lqEGTUzyQRAorOAJ92hE8GqHMpTw6KLG45Z1zeUvv/sgCgzaHE
+tOfYgX8dGZQyt1TgroASW1c=
+=PQn9
 -----END PGP SIGNATURE-----
