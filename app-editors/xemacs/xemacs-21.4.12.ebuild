@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.12.ebuild,v 1.11 2004/01/05 23:35:09 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.12.ebuild,v 1.12 2004/01/26 13:45:26 weeve Exp $
 
 inherit eutils
 
@@ -59,7 +59,7 @@ PROVIDE="virtual/xemacs virtual/editor"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc alpha ~sparc"
+KEYWORDS="x86 ~ppc alpha sparc"
 
 src_unpack() {
 	unpack ${P}.tar.gz
