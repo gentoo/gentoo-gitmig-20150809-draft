@@ -1,0 +1,6 @@
+MD5 09912681f5fced2d15a87b2017e20f1a ChangeLog 748
+MD5 09d5aa0c01728c9c60bb03adb5d6a560 gnuserv-3.12.4.ebuild 1089
+MD5 be871996ff6b30254bdb5d0284e7bc56 gnuserv-3.12.5.ebuild 1085
+MD5 374a2ba319308cf76a0601098bf12ed3 files/50gnuserv-gentoo.el 241
+MD5 8a4e2838b960391e0f9adab4847042df files/digest-gnuserv-3.12.4 65
+MD5 4cea46596a8648eeaaa085ddc1e906d8 files/digest-gnuserv-3.12.5 65
