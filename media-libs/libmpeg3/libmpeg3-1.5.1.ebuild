@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5.1.ebuild,v 1.1 2003/07/26 22:34:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5.1.ebuild,v 1.2 2003/07/28 13:22:26 vapier Exp $
 
 inherit flag-o-matic
 
@@ -32,6 +32,8 @@ src_unpack() {
 	# Add in support for mpeg3split
 	epatch ${FILESDIR}/${PV}-gentoo-mpeg3split.patch
 	epatch ${FILESDIR}/${PV}-pthread.patch
+	[ ${ARCH} = ppc ] && epatch ${FILESDIR}/${PV}-ppc-largefile.patch
+	epatch ${FILESDIR}/${PV}-proper-c.patch
 }
 
 src_compile() {

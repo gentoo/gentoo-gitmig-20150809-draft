@@ -1,0 +1,13 @@
+--- mpeg3toc.c.orig	2003-07-28 09:04:05.000000000 -0400
++++ mpeg3toc.c	2003-07-28 09:06:26.000000000 -0400
+@@ -196,9 +196,9 @@
+ 				if(!mpeg3_end_of_audio(input, j))
+ 				{
+ // Don't want to maintain separate vectors for offset and title.
+-					title_number = mpeg3demux_tell_title(input->atrack[j]->demuxer);
+ 					int64_t position = mpeg3demux_tell(input->atrack[j]->demuxer);
+ 					int64_t result;
++					title_number = mpeg3demux_tell_title(input->atrack[j]->demuxer);
+ 					if(position < MPEG3_IO_SIZE) position = MPEG3_IO_SIZE;
+ 					result = (title_number << 56) | (position - MPEG3_IO_SIZE);
+ 
