@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.47.20041129.ebuild,v 1.3 2004/12/06 00:05:07 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.47.20041129.ebuild,v 1.4 2004/12/06 01:48:12 swtaylor Exp $
 
 inherit eutils
 
@@ -28,7 +28,6 @@ DEPEND="virtual/libc
 	ldap? ( >=net-nds/openldap-1.2.11 )
 	postgres? ( >=dev-db/postgresql-7.1.3 )
 	spell? ( virtual/aspell-dict )
-	mailwrapper? ( >=net-mail/mailwrapper-0.2 )
 	!mailwrapper? ( !virtual/mta )
 	!virtual/mda
 	!virtual/imapd"
@@ -37,6 +36,8 @@ RDEPEND="${DEPEND}
 	virtual/fam
 	dev-lang/perl
 	sys-apps/procps"
+
+PDEPEND="mailwrapper? ( >=net-mail/mailwrapper-0.2 )"
 
 src_unpack() {
 	unpack ${A}
