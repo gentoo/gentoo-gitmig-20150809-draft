@@ -1,32 +1,46 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.6.0.ebuild,v 1.1 2003/02/04 10:49:25 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.6.0-r1.ebuild,v 1.1 2003/02/04 15:11:34 foser Exp $
 
 inherit eutils flag-o-matic libtool
 
+# Create a major/minor combo for our SLOT and executables suffix
+PVP=($(echo " $PV " | sed 's:[-\._]: :g'))
+PV_MAJ_MIN=${PVP[0]}.${PVP[1]}
+
 IUSE="doc"
 
-S="${WORKDIR}/${P}"
+S=${WORKDIR}/${P}
 DESCRIPTION="Streaming media framework"
 SRC_URI="mirror://sourceforge/gstreamer/${P}.tar.bz2"
 HOMEPAGE="http://gstreamer.sourceforge.net"
 
-SLOT="0"
+SLOT=${PV_MAJ_MIN}
 LICENSE="LGPL-2"
-KEYWORDS="~x86 ~ppc ~sparc "
+KEYWORDS="~x86 ~ppc ~sparc"
 
 DEPEND=">=dev-libs/glib-2.0.4
 	>=dev-libs/libxml2-2.4
 	>=dev-libs/popt-1.5
-	doc? ( >=dev-util/gtk-doc-0.9
-		media-gfx/transfig
-		dev-libs/libxslt
-		app-text/docbook-xsl-stylesheets
-		app-text/passivetex
-		app-text/xpdf
-		app-text/ghostscript )
 	x86? ( >=dev-lang/nasm-0.90 )
 	>=sys-libs/zlib-1.1.4"
+
+# disable docs for now
+#	doc? ( >=dev-util/gtk-doc-0.9
+#		media-gfx/transfig
+#		dev-libs/libxslt
+#		app-text/docbook-xsl-stylesheets
+#		app-text/passivetex
+#		app-text/xpdf
+#		app-text/ghostscript )
+
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}
+	# some extra error feedback
+	epatch ${FILESDIR}/${PN}-error_report.patch
+}
 	
 src_compile() {
 	elibtoolize
@@ -35,11 +49,13 @@ src_compile() {
 	replace-flags "-O3" "-O2"
 
 	local myconf=""
-	use doc \
-		&& myconf="${myconf} --enable-docs-build" \
-		|| myconf="${myconf} --disable-docs-build"
+#	use doc \
+#		&& myconf="${myconf} --enable-docs-build" \
+#		|| myconf="${myconf} --disable-docs-build"
+	myconf="${myconf} --disable-docs-build"
 
 	econf \
+		--program-suffix=-${PV_MAJ_MIN} \
 		--with-configdir=/etc/gstreamer \
 		--disable-tests  --disable-examples \
 		${myconf} || die "./configure failed"
@@ -55,5 +71,5 @@ src_install () {
 }
 
 pkg_postinst () {
-	gst-register
+	gst-register-${PV_MAJ_MIN}
 }
