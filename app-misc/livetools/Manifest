@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 90088201d1c5633fd03131bf86b18e30 ChangeLog 682
+MD5 328678ca5c0d071eb0951e4fff5c8508 ChangeLog 768
 MD5 cc6b404db11ffe6a71afd8821d221f94 livetools-1.1.ebuild 1014
-MD5 663136b738b42413674daad9f0682963 livetools-1.2.3.ebuild 1018
+MD5 1f742d989340995a5e4f7162096125d7 livetools-1.2.3.ebuild 1022
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 4798e5f22ef14b03267f13a8156ccce5 files/digest-livetools-1.1 66
 MD5 7c5f46bd76ffbe5bb79328d5d1a158e9 files/digest-livetools-1.2.3 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBW0f0I1lqEGTUzyQRArDUAJ9WlCOm1vHQ+psfesr+7cNwduH6GQCgveqN
-BbWGlTEgQamJnAsEeH1/3iA=
-=Tyee
------END PGP SIGNATURE-----
