@@ -1,6 +1,11 @@
 # ChangeLog for net-www/screem
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/screem/ChangeLog,v 1.14 2004/02/23 19:31:44 bazik Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/screem/ChangeLog,v 1.15 2004/04/24 02:22:34 khai Exp $
+
+*screem-0.10.2 (23 Apr 2004)
+
+  23 Apr 2004; <khai@gentoo.org> +screem-0.10.2.ebuild:
+  Version bump. This version fixes the gtk deprecation problems.
 
   23 Feb 2004; Sven Blumenstein <bazik@gentoo.org> screem-0.8.1.ebuild:
   Stable on sparc. Thanks to Lars Weiler <pylon@gentoo.org> for testing!
