@@ -1,17 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.7-r2.ebuild,v 1.12 2004/02/25 12:07:53 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.7-r2.ebuild,v 1.13 2004/05/31 20:14:54 vapier Exp $
 
 inherit flag-o-matic eutils
 
 DESCRIPTION="Burn CDs in disk-at-once mode -- with optional GUI frontend"
 HOMEPAGE="http://cdrdao.sourceforge.net/"
 SRC_URI="mirror://sourceforge/cdrdao/${P}.src.tar.gz"
-RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc alpha hppa ia64 amd64"
+KEYWORDS="~x86 ~ppc alpha hppa amd64 ia64"
 IUSE="gnome oggvorbis perl"
 
 RDEPEND="gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1
@@ -31,7 +30,7 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${PF}-mp32dao-gentoo.diff
 
-	if [ ! "`use oggvorbis`" ]; then
+	if ! use oggvorbis ; then
 		cd ${S}/contrib/mp32dao
 		sed -i '22s/^/#/' MediaHandler.pm
 	fi
@@ -50,7 +49,7 @@ src_unpack() {
 src_compile() {
 	local mygnome=""
 
-	if [ "`use gnome`" ] ; then
+	if use gnome ; then
 		mygnome=" --with-gnome"
 		append-flags $( /usr/bin/gtkmm-config --cflags ) -fno-exceptions
 	fi
@@ -90,10 +89,10 @@ src_install() {
 
 	# documentation
 	docinto ""
-	dodoc COPYING CREDITS INSTALL README* Release*
+	dodoc CREDITS INSTALL README* Release*
 
 	# and now the optional GNOME frontend
-	if [ "`use gnome`" ] ; then
+	if use gnome ; then
 		# binary
 		into /usr
 		dobin xdao/gcdmaster

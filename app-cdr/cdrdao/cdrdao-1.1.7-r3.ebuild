@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.7-r3.ebuild,v 1.9 2004/04/27 08:05:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.7-r3.ebuild,v 1.10 2004/05/31 20:14:54 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -31,7 +31,7 @@ src_unpack() {
 	epatch ${FILESDIR}/1.1.8-gcc34.patch
 	epatch ${FILESDIR}/${P}-r2-mp32dao-gentoo.diff
 
-	if [ ! "`use oggvorbis`" ]; then
+	if ! use oggvorbis ; then
 		cd ${S}/contrib/mp32dao
 		sed -i '22s/^/#/' MediaHandler.pm
 	fi
@@ -58,7 +58,7 @@ src_unpack() {
 src_compile() {
 	local mygnome=
 
-	if [ "`use gnome`" ] ; then
+	if use gnome ; then
 		mygnome=" --with-gnome"
 		append-flags "$( /usr/bin/gtkmm-config --cflags ) -fno-exceptions"
 	fi
@@ -98,10 +98,10 @@ src_install() {
 
 	# documentation
 	docinto ""
-	dodoc COPYING CREDITS INSTALL README* Release*
+	dodoc CREDITS INSTALL README* Release*
 
 	# and now the optional GNOME frontend
-	if [ "`use gnome`" ] ; then
+	if use gnome ; then
 		# binary
 		into /usr
 		dobin xdao/gcdmaster

@@ -1,14 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.5-r1.ebuild,v 1.29 2004/02/22 18:01:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.5-r1.ebuild,v 1.30 2004/05/31 20:14:54 vapier Exp $
 
 inherit flag-o-matic eutils
-strip-flags -funroll-loops
 
 DESCRIPTION="Burn CDs in disk-at-once mode -- with optional GUI frontend"
 HOMEPAGE="http://cdrdao.sourceforge.net/"
 SRC_URI="mirror://sourceforge/cdrdao/${P}.src.tar.gz"
-RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,7 +17,6 @@ RDEPEND="gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1
 	<dev-cpp/gtkmm-1.3.0
 	>=dev-cpp/gnomemm-1.1.17 )
 	x86? ( perl? ( oggvorbis? ( dev-perl/libvorbis-perl ) ) )"
-
 DEPEND=">=dev-util/pccts-1.33.24-r1
 	${RDEPEND}"
 
@@ -28,7 +25,7 @@ src_unpack() {
 
 	epatch ${FILESDIR}/${P}-c++.patch
 
-	[ ! "`use gnome`" ] && epatch ${FILESDIR}/${P}-gentoo.diff
+	use gnome || epatch ${FILESDIR}/${P}-gentoo.diff
 
 	cd ${S}/dao
 	wget http://cdrdao.sourceforge.net/${P}.drivers
@@ -39,6 +36,8 @@ src_unpack() {
 }
 
 src_compile() {
+	filter-flags -funroll-loops
+
 	local mygnome=""
 
 	# Gtk version is broken :(
@@ -72,7 +71,7 @@ src_install() {
 	newman dao/cdrdao.man cdrdao.1
 
 	# documentation
-	dodoc COPYING CREDITS INSTALL README* Release*
+	dodoc CREDITS INSTALL README* Release*
 
 	# and now the optional GNOME frontend
 	#	if [ "`use gnome`" ]

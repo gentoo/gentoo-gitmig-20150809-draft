@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.6.ebuild,v 1.9 2004/05/04 02:22:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.6.ebuild,v 1.10 2004/05/31 20:14:54 vapier Exp $
 inherit kde
 
 DESCRIPTION="K3b, KDE CD Writing Software"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.k3b.org/"
 SRC_URI="mirror://sourceforge/k3b/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc ~amd64 ~sparc"
+KEYWORDS="x86 ppc ~sparc ~amd64"
 IUSE="debug dvdr kde oggvorbis mad flac encode"
 
 DEPEND="kde? ( >=kde-base/kdebase-3.1 )
@@ -84,7 +84,7 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 
-	dodoc AUTHORS COPYING ChangeLog FAQ README TODO
+	dodoc AUTHORS ChangeLog FAQ README TODO
 
 	if [ -n "${LINGUAS}" -a -d "${WORKDIR}/${I18N}" ]; then
 		cd ${WORKDIR}/${I18N}

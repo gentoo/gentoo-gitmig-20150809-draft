@@ -1,14 +1,14 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/simplecdrx/simplecdrx-1.3.1.ebuild,v 1.7 2004/05/04 02:23:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/simplecdrx/simplecdrx-1.3.1.ebuild,v 1.8 2004/05/31 20:14:54 vapier Exp $
 
 DESCRIPTION="CD ripping/mastering"
 HOMEPAGE="http://ogre.rocky-road.net/cdr.shtml"
 SRC_URI="http://ogre.rocky-road.net/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc"
 SLOT="0"
+KEYWORDS="x86 ~ppc sparc"
 IUSE="gnome"
 
 #todo: add blade encoder
@@ -42,10 +42,10 @@ src_install() {
 	doins pixmaps/simplecdr.xpm ${FILESDIR}/simplecdrx.png
 
 	# Add the Gnome menu entry
-	if [ `use gnome` ] ; then
+	if use gnome ; then
 		insinto /usr/share/gnome/apps/Applications/
 		doins ${FILESDIR}/simplecdrx.desktop
 	fi
 
-	dodoc AUTHORS COPYING ChangeLog INSTALL README
+	dodoc AUTHORS ChangeLog INSTALL README
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha25.ebuild,v 1.14 2004/05/15 23:54:49 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha25.ebuild,v 1.15 2004/05/31 20:14:54 vapier Exp $
 
 inherit eutils gcc
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/alpha/${P/_alpha/a}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha arm hppa amd64 ia64 mips"
+KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64"
 IUSE="dvdr"
 
 DEPEND="virtual/glibc"
@@ -74,7 +74,7 @@ src_install() {
 	doins include/scg/*.h
 
 	cd ${S}
-	dodoc Changelog COPYING PORTING README* START
+	dodoc Changelog PORTING README* START
 
 	cd ${S}/doc
 	dodoc cdrecord-1.8.1_de-doc_0.1.tar

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.8-r1.ebuild,v 1.4 2004/05/14 01:32:35 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.8-r1.ebuild,v 1.5 2004/05/31 20:14:54 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/cdrdao/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 IUSE="gnome debug"
 RESTRICT="nostrip"
 
@@ -65,7 +65,7 @@ src_install() {
 	cd ${S}
 
 	# Desktop Icon
-	if [ -n "`use gnome`" ]
+	if use gnome
 	then
 		insinto /usr/share/pixmaps
 		doins xdao/stock/gcdmaster.png
@@ -74,6 +74,6 @@ src_install() {
 	fi
 
 	# Documentation
-	dodoc AUTHORS COPYING CREDITS ChangeLog NEWS README*
+	dodoc AUTHORS CREDITS ChangeLog NEWS README*
 }
 

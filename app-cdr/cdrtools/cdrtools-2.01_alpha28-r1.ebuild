@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha28-r1.ebuild,v 1.3 2004/05/31 16:58:39 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha28-r1.ebuild,v 1.4 2004/05/31 20:14:54 vapier Exp $
 
 inherit eutils gcc gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/alpha/${P/_alpha/a}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~hppa sparc ~alpha ~amd64 ~ia64 ppc64"
+KEYWORDS="x86 ppc sparc sparc ~alpha hppa ~amd64 ~ia64 ppc64"
 IUSE=""
 
 DEPEND="virtual/glibc"
@@ -74,7 +74,7 @@ src_install() {
 	doins include/scg/*.h
 
 	cd ${S}
-	dodoc ABOUT Changelog COPYING README README.{ATAPI,audio,cdplus,cdrw,cdtext,cdclone,copy,DiskT@2,linux,linux-shm,multi,parallel,raw,rscsi,sony,verify} START
+	dodoc ABOUT Changelog README README.{ATAPI,audio,cdplus,cdrw,cdtext,cdclone,copy,DiskT@2,linux,linux-shm,multi,parallel,raw,rscsi,sony,verify} START
 	doman */*.1
 	doman */*.8
 
@@ -87,4 +87,3 @@ src_install() {
 pkg_postinst() {
 	einfo "The command line option 'dev=ATAPI:' should be added for IDE CD writers."
 }
-
