@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.140 2005/04/03 17:52:58 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.141 2005/04/04 22:30:57 eradicator Exp $
+
+  04 Apr 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  -alsa-driver-1.0.5a.ebuild, -alsa-driver-1.0.6a.ebuild,
+  -alsa-driver-1.0.7-r3.ebuild, alsa-driver-1.0.7-r4.ebuild,
+  -alsa-driver-1.0.8_rc1.ebuild, alsa-driver-1.0.8.ebuild,
+  alsa-driver-1.0.9_rc2.ebuild:
+  Removing old versions and adding /dev/null redirect for rmdir messages.
 
   03 Apr 2005; Chris Bainbridge <chrb@gentoo.org> +files/xbox-1.0.8.patch,
   alsa-driver-1.0.8.ebuild:

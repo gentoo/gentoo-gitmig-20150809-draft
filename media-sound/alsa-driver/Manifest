@@ -1,34 +1,36 @@
-MD5 63200593b956f6870a2f53f9a6119e82 ChangeLog 24216
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 57c6706a8709cabb84985c93fff4b549 ChangeLog 24564
 MD5 d417126925406313a627c240a60c480f alsa-driver-0.9.8.ebuild 2315
 MD5 3c0f4daec01807f3cce65c8fff87ff3f alsa-driver-1.0.3.ebuild 3366
-MD5 59bef0f889afb94c05fb75ce5bb587fb alsa-driver-1.0.8.ebuild 4615
-MD5 9b2cf1594fd2216b4c6ce2e0f26616fb alsa-driver-1.0.5a.ebuild 3609
-MD5 ebbacca951ebb440e5236ada4a110783 alsa-driver-1.0.6a.ebuild 3531
-MD5 37ec8a5ebd0f6a68e2ea0c5ab9a421d8 alsa-driver-1.0.7-r3.ebuild 3824
-MD5 dd9beca8be6b9eb6c3f3266ed81a2776 alsa-driver-1.0.7-r4.ebuild 4758
-MD5 bb1d66bcbe75c22ab458272c4f893754 alsa-driver-1.0.8_rc1.ebuild 3549
-MD5 054f7b0317205e52863896c56164a5f1 alsa-driver-1.0.9_rc2.ebuild 4407
-MD5 27ccbe36406f145c1d63725a53517233 files/makefile.patch 1122
-MD5 b2791ec892d9be6952fe139cc2309abf files/xbox-1.0.8.patch 1525
-MD5 5445a523e0e8aa31b9f293b1ac380b37 files/1.0.8-msi_audigyls.patch 1771
+MD5 9ea52b4adac3f201b06229c3fa431da9 alsa-driver-1.0.7-r4.ebuild 4692
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 6f09dc63bc18f2d9e3369dc425211b62 alsa-driver-1.0.8.ebuild 4634
+MD5 7338cce87f62f2ee545092945b74eb18 alsa-driver-1.0.9_rc2.ebuild 4402
 MD5 8c120f7730b91118d0a8148d2deb3a43 files/alsa-driver-0.9.8-au-fix.patch 1267
-MD5 8cfc2afad77baecf06694bee8bd67d4a files/alsa-driver-1.0.7-xbox.patch 645
-MD5 27684bd356b1a43809d3f8c847a6abce files/alsa-driver-1.0.6a-kbuild.patch 575
 MD5 1d70561326ef89e94179634d92782610 files/alsa-driver-1.0.4-devfix.patch 2756
 MD5 08af7cfec9cd33819c62880d6219f3a5 files/alsa-driver-1.0.5-devfix.patch 763
-MD5 8bb31a005a1db2e306c51d017fd44e70 files/alsa-driver-1.0.5a-xbox-ac97.patch 721
-MD5 4d7c4de4eaa3007e13360d7434ecb284 files/alsa-driver-1.0.7-ioctl32.patch-r2 44165
-MD5 831a1a1097613c2444cc3e512ff09a01 files/alsa-driver-1.0.7-audigy71.patch 643
 MD5 a2ee6fa920bbac70835b4a58e5759e8c files/alsa-driver-1.0.5a-cs46xx-passthrough.patch 446
-MD5 bc0105e64f35a41aa0602c43e7f09733 files/alsa-driver-1.0.7-configure.patch 21924
+MD5 8bb31a005a1db2e306c51d017fd44e70 files/alsa-driver-1.0.5a-xbox-ac97.patch 721
 MD5 f9d35aa6adca1137e05b1cb8852ff672 files/alsa-driver-1.0.6a-emu10k1-passthrough.patch 658
-MD5 deb0bfd8e2cfe0ba434fb5a820294502 files/digest-alsa-driver-1.0.5a 72
-MD5 e1b13905eac70fe728dcb85fcaac27a9 files/digest-alsa-driver-1.0.6a 72
-MD5 479ee887025f4ce7944adee1e4a6fdf3 files/digest-alsa-driver-1.0.7-r3 71
-MD5 479ee887025f4ce7944adee1e4a6fdf3 files/digest-alsa-driver-1.0.7-r4 71
-MD5 178c3d0a289f3998f750d292905084a9 files/digest-alsa-driver-1.0.8_rc1 74
-MD5 69d2d3b5885887bee01a6d6ab37c1aed files/digest-alsa-driver-1.0.9_rc2 74
-MD5 938a2ee36c54416322d1acd47b249c99 files/digest-alsa-driver-1.0.3 71
+MD5 27684bd356b1a43809d3f8c847a6abce files/alsa-driver-1.0.6a-kbuild.patch 575
+MD5 831a1a1097613c2444cc3e512ff09a01 files/alsa-driver-1.0.7-audigy71.patch 643
+MD5 bc0105e64f35a41aa0602c43e7f09733 files/alsa-driver-1.0.7-configure.patch 21924
+MD5 4d7c4de4eaa3007e13360d7434ecb284 files/alsa-driver-1.0.7-ioctl32.patch-r2 44165
+MD5 8cfc2afad77baecf06694bee8bd67d4a files/alsa-driver-1.0.7-xbox.patch 645
 MD5 439dab13c036317c9b308b234ecf7290 files/digest-alsa-driver-0.9.8 71
+MD5 938a2ee36c54416322d1acd47b249c99 files/digest-alsa-driver-1.0.3 71
+MD5 479ee887025f4ce7944adee1e4a6fdf3 files/digest-alsa-driver-1.0.7-r4 71
 MD5 14b6c8d954e36bb9d40c97cf051220f0 files/digest-alsa-driver-1.0.8 71
+MD5 27ccbe36406f145c1d63725a53517233 files/makefile.patch 1122
+MD5 5445a523e0e8aa31b9f293b1ac380b37 files/1.0.8-msi_audigyls.patch 1771
+MD5 69d2d3b5885887bee01a6d6ab37c1aed files/digest-alsa-driver-1.0.9_rc2 74
+MD5 b2791ec892d9be6952fe139cc2309abf files/xbox-1.0.8.patch 1525
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCUcArArHZZzCEUG0RAhEMAJ9FR9O2aLef4x33+8XO506G96PJHwCeOAvY
+o6BNzkyDWbhR/ib0od3kLVA=
+=7Apq
+-----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7-r4.ebuild,v 1.9 2005/01/18 10:07:19 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7-r4.ebuild,v 1.10 2005/04/04 22:30:57 eradicator Exp $
 
 IUSE="oss doc"
 inherit linux-mod flag-o-matic eutils
@@ -14,9 +14,7 @@ SRC_URI="mirror://alsaproject/driver/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-#KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~sparc ~x86"
-# This just has updates for xbox over -r3
-KEYWORDS="x86 ~ppc"
+KEYWORDS="~alpha amd64 ~ia64 ~mips ~ppc sparc x86"
 
 RDEPEND="virtual/modutils
 	 ~media-sound/alsa-headers-${PV}"

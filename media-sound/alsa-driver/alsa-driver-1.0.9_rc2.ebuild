@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.9_rc2.ebuild,v 1.1 2005/03/31 03:32:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.9_rc2.ebuild,v 1.2 2005/04/04 22:30:57 eradicator Exp $
 
 IUSE="oss doc"
 inherit linux-mod flag-o-matic eutils
@@ -40,7 +40,7 @@ pkg_setup() {
 	# Which drivers need PNP
 	local PNP_DRIVERS="interwave interwave-stb"
 
-	CONFIG_CHECK="SOUND !SND !SOUND_PRIME"
+	CONFIG_CHECK="SOUND"
 	SND_ERROR="ALSA is already compiled into the kernel."
 	SOUND_ERROR="Your kernel doesn't have sound support enabled."
 	SOUND_PRIME_ERROR="Your kernel is configured to use the deprecated OSS drivers.  Please disable them and re-emerge alsa-driver."
@@ -154,7 +154,7 @@ pkg_postinst() {
 		done
 
 		for dir in $(find ${ROOT}/lib/modules/${KV_FULL}/kernel/sound -type d | tac); do
-			rmdir ${dir}
+			rmdir ${dir} &> /dev/null
 		done
 	fi
 }
