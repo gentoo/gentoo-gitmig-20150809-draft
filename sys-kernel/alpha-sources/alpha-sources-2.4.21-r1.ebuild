@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/alpha-sources-2.4.21-r1.ebuild,v 1.7 2003/11/20 07:43:38 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/alpha-sources-2.4.21-r1.ebuild,v 1.8 2003/12/02 03:31:08 iggy Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -51,6 +51,8 @@ src_unpack() {
 			rm -f ${file}
 		done
 	fi
+
+	epatch ${FILESDIR}/do_brk_fix.patch || die "failed to patch for do_brk vuln"
 
 	kernel_src_unpack
 }

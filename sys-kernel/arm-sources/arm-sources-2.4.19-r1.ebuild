@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/arm-sources/arm-sources-2.4.19-r1.ebuild,v 1.4 2003/10/27 13:49:11 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/arm-sources/arm-sources-2.4.19-r1.ebuild,v 1.5 2003/12/02 03:26:57 iggy Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 IUSE=""
@@ -89,6 +89,8 @@ src_unpack() {
 	epatch "${WORKDIR}/${ARM_KERNEL_PATCH}" || die
 	[ -n "${SUBARCH_KERNEL_PATCH}" ] && \
 		{ epatch "${WORKDIR}/${SUBARCH_KERNEL_PATCH}" || die; }
+
+	epatch ${FILESDIR}/do_brk_fix.patch || die "failed to patch for do_brk vuln"
 
 	kernel_universal_unpack
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.4.21.ebuild,v 1.1 2003/09/14 18:07:06 frogger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.4.21.ebuild,v 1.2 2003/12/02 03:33:44 iggy Exp $
 
 IUSE="build selinux"
 
@@ -43,6 +43,8 @@ src_unpack() {
 			rm -f ${file}
 		done
 	fi
+
+	epatch ${FILESDIR}/do_brk_fix.patch || die "failed to patch for do_brk vuln"
 
 	kernel_src_unpack
 }
