@@ -1,6 +1,9 @@
 # ChangeLog for sys-kernel/ksymoops
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ksymoops/ChangeLog,v 1.12 2004/01/08 07:13:09 iggy Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ksymoops/ChangeLog,v 1.13 2004/03/09 16:57:19 agriffis Exp $
+
+  09 Mar 2004; <agriffis@gentoo.org> ksymoops-2.4.9.ebuild:
+  Add ia64 keyword
 
   08 Jan 2004; Brian Jackson <iggy@gentoo.org> ksymoops-2.4.5.ebuild,
   ksymoops-2.4.7.ebuild, ksymoops-2.4.8.ebuild, ksymoops-2.4.9.ebuild,
