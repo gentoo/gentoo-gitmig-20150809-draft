@@ -1,11 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-2.0.0-r1.ebuild,v 1.2 2002/10/04 05:05:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/gtkspell-2.0.0-r1.ebuild,v 1.3 2002/10/17 14:31:19 aliz Exp $
 
 DESCRIPTION="GtkSpell is a spell library for GTK2"
 
 SRC_URI="http://gtkspell.sourceforge.net/download/${P}.tar.gz"
 HOMEPAGE="http://gtkspell.sourceforge.net/"
+IUSE="nls"
 
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc sparc64"

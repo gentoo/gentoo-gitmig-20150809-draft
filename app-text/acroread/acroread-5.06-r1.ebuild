@@ -1,12 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.06-r1.ebuild,v 1.4 2002/10/04 05:03:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.06-r1.ebuild,v 1.5 2002/10/17 14:31:19 aliz Exp $
 
 MY_P=linux-${PV/./}
 S=${WORKDIR}
 DESCRIPTION="Adobe's PDF reader"
 SRC_URI="ftp://ftp.adobe.com/pub/adobe/acrobatreader/unix/5.x/${MY_P}.tar.gz"
 HOMEPAGE="http://www.adobe.com/products/acrobat/"
+IUSE="mozilla"
 
 SLOT="0"
 LICENSE="Adobe"

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/gocr-0.3.6-r2.ebuild,v 1.4 2002/10/04 05:05:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/gocr-0.3.6-r2.ebuild,v 1.5 2002/10/17 14:31:19 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Converts PNM to ASCII"
@@ -12,6 +12,7 @@ RDEPEND=">=media-libs/netpbm-9.12-r1"
 DEPEND="${RDEPEND}
 	app-text/tetex
 	app-text/ghostscript"
+IUSE="tetex"
 
 SLOT="0"
 LICENSE="GPL-2"

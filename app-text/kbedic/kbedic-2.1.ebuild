@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/kbedic-2.1.ebuild,v 1.7 2002/10/04 05:06:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/kbedic-2.1.ebuild,v 1.8 2002/10/17 14:31:19 aliz Exp $
 
 use kde && inherit kde
 
@@ -12,6 +12,7 @@ HOMEPAGE="http://kbedic.sourceforge.net"
 KEYWORDS="x86 sparc sparc64"
 SLOT="0"
 LICENSE="GPL-2"
+IUSE="kde"
 
 if [ "`use kde`" ]
 then
