@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/gd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.13 2004/11/01 02:39:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gd/ChangeLog,v 1.14 2004/11/02 20:23:42 eradicator Exp $
+
+  02 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org> gd-2.0.31.ebuild:
+  Stable amd64
 
   31 Oct 2004; Mike Frysinger <vapier@gentoo.org>
   +files/1.8.4-png-overflows.patch, gd-1.8.4-r2.ebuild:
