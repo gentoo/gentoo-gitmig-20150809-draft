@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/cdstatus
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdstatus/ChangeLog,v 1.5 2004/07/01 07:49:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdstatus/ChangeLog,v 1.6 2004/07/08 08:39:52 eradicator Exp $
+
+  08 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  cdstatus-0.94a.ebuild:
+  -amd64 -sparc
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   cdstatus-0.94a.ebuild:

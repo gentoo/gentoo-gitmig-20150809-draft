@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdstatus/cdstatus-0.94a.ebuild,v 1.7 2004/07/01 07:49:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdstatus/cdstatus-0.94a.ebuild,v 1.8 2004/07/08 08:39:52 eradicator Exp $
 
 inherit eutils
 
@@ -8,11 +8,11 @@ MY_P="cdstatus${PV}"
 DESCRIPTION="Tool for diagnosing cdrom drive and digital data (audio) extraction"
 HOMEPAGE="http://cdstatus.sourceforge.net/"
 SRC_URI="mirror://sourceforge/cdstatus/${MY_P}.tar.gz"
-RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+#-sparc -amd64: 0.94a: Generates bad wav files  x86 is good...
+KEYWORDS="x86 -amd64 -sparc"
 IUSE=""
 
 DEPEND="virtual/libc"
