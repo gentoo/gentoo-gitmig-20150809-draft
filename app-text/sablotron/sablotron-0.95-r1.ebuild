@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-0.95-r1.ebuild,v 1.1 2002/07/13 21:54:22 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-0.95-r1.ebuild,v 1.2 2002/08/05 15:42:42 seemant Exp $
 
 MY_P="Sablot-${PV}"
 S=${WORKDIR}/${MY_P}
@@ -12,9 +12,7 @@ SLOT="0"
 LICENSE="MPL-1.1"
 KEYWORDS="x86"
 
-DEPEND=">=sys-devel/gcc-2.95.2 
-		>=dev-libs/expat-1.95.1 
-		virtual/glibc"
+DEPEND=">=dev-libs/expat-1.95.1 
 
 src_unpack() {
 	unpack ${A}
@@ -24,7 +22,7 @@ src_unpack() {
 
 src_compile() {
 	econf || die
-	emake || die
+	emake || make || die
 }
 
 src_install () {
