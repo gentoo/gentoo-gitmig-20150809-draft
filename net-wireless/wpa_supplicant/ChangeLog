@@ -1,6 +1,15 @@
 # ChangeLog for net-wireless/wpa_supplicant
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.2 2004/12/11 01:06:40 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wpa_supplicant/ChangeLog,v 1.3 2004/12/11 14:39:12 brix Exp $
+
+*wpa_supplicant-0.3.0 (11 Dec 2004)
+
+  11 Dec 2004; Henrik Brix Andersen <brix@gentoo.org>
+  +files/wpa_supplicant-0.3.0-conf.d, +files/wpa_supplicant-0.3.0-init.d,
+  +wpa_supplicant-0.3.0.ebuild:
+  Version bump. Please note that version 0.3.0 is a development snapshot.
+  USE=gsm is removed in 0.3.0 due to a bug in the code, should be back with next
+  release.
 
 *wpa_supplicant-0.2.5 (10 Dec 2004)
 

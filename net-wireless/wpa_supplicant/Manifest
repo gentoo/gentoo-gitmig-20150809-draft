@@ -1,9 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 1b0071ea237d4b8c4334ae80fd1e8ddf wpa_supplicant-0.2.5.ebuild 1844
+MD5 c3cec75d7e12b74c46d32639369084e2 wpa_supplicant-0.3.0.ebuild 2872
 MD5 de54ed7b83a5d2ee0324a140c6c7db8b wpa_supplicant-0.2.4.ebuild 1439
-MD5 aba4ccc0058bfefc2bae08e6fb00bf54 ChangeLog 1645
+MD5 8825024ebaea3898a61be89cf28a2bfc ChangeLog 2005
 MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
 MD5 2bc46403d4bf3ae6e68ae82693a23914 files/wpa_supplicant-0.2.5-pkg-config.patch 1669
 MD5 8ce172f90e194edc1d06ac18b81a7301 files/wpa_supplicant-0.2.5-conf.d 398
@@ -11,11 +9,7 @@ MD5 b2bb8e6d5a1663945c4ce0d9b4c70ba1 files/wpa_supplicant-0.2.5-config 606
 MD5 4bec60e49c33275fa8e21d27c3909cc5 files/wpa_supplicant-0.2.5-init.d 974
 MD5 1f91b0edd54ee435426f50cd10807c6d files/digest-wpa_supplicant-0.2.4 156
 MD5 a9249a7ed61a912ddd1b561317e76f43 files/digest-wpa_supplicant-0.2.5 235
+MD5 1b08e42f180b3bee6247776212a5fb4f files/digest-wpa_supplicant-0.3.0 156
+MD5 6dbdde5c93f286b00afacc10673e4de7 files/wpa_supplicant-0.3.0-conf.d 398
+MD5 4290cd41db8ead604b3096f53d6795e4 files/wpa_supplicant-0.3.0-init.d 975
 MD5 a0d0816840e412152255c4a62bfde94c files/wpa_supplicant-0.2.4-config 582
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBukgpI1lqEGTUzyQRAhKjAKCwEQ2JarwOM+u5P7c0EnSwCJQrJQCfa8fe
-z7OIngMsHSYjtmjXxyY/25g=
-=Cv7O
------END PGP SIGNATURE-----
