@@ -96,4 +96,18 @@ move kde-base/kate-tabbarextension kde-base/kate-plugins
 move kde-base/kate-textfilter kde-base/kate-plugins
 move kde-base/kate-xmlcheck kde-base/kate-plugins
 move kde-base/kate-xmltools kde-base/kate-plugins
-
+move kde-base/noatun-alsaplayer kde-base/noatun-plugins
+move kde-base/noatun-blurscope kde-base/noatun-plugins
+move kde-base/noatun-charlatan kde-base/noatun-plugins
+move kde-base/noatun-dub kde-base/noatun-plugins
+move kde-base/noatun-ffrs kde-base/noatun-plugins
+move kde-base/noatun-luckytag kde-base/noatun-plugins
+move kde-base/noatun-lyrics kde-base/noatun-plugins
+move kde-base/noatun-nexscope kde-base/noatun-plugins
+move kde-base/noatun-noatunmadness kde-base/noatun-plugins
+move kde-base/noatun-oblique kde-base/noatun-plugins
+move kde-base/noatun-pitchablespeed kde-base/noatun-plugins
+move kde-base/noatun-synaescope kde-base/noatun-plugins
+move kde-base/noatun-tippercanoe kde-base/noatun-plugins
+move kde-base/noatun-tyler kde-base/noatun-plugins
+move kde-base/noatun-wavecapture kde-base/noatun-plugins
