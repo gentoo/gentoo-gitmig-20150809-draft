@@ -20,7 +20,7 @@ BINDIR = ${D}/usr/bin
 
 # Where do you put local perl5 libaries?
 PERL5DIR = ${D}/usr/lib/perl5
-MODULEDIR = ${PERL5DIR}/site_perl/5.6.0/SGMLS
+MODULEDIR = ${PERL5DIR}/site_perl/5.6.1/SGMLS
 
 # Where do you want to put sgmlspl specifications?
 SPECDIR = ${PERL5DIR}
