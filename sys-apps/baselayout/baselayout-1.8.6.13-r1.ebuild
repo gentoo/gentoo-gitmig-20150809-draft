@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.13-r1.ebuild,v 1.2 2004/02/27 19:08:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.13-r1.ebuild,v 1.3 2004/02/28 00:30:33 azarah Exp $
 
 IUSE="bootstrap build livecd static selinux"
 
@@ -302,7 +302,7 @@ src_install() {
 		#dosym ../../sbin/MAKEDEV /lib/dev-state/MAKEDEV
 		# This is not needed anymore...
 		#keepdir /lib/dev-state/pts /lib/dev-state/shm
-		keepdir_mount /dev /dev/pts /dev/shm
+		keepdir_mount /dev /dev/shm # /dev/pts
 	else
 		# Normal
 		keepdir_mount /dev /dev/pts /dev/shm
