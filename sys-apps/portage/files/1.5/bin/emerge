@@ -139,6 +139,7 @@ if len(sys.argv)>=2:
 		mydepgraph=depgraph()
 		print "Calculating system dependencies",
 		mydepgraph.syscreate(mylines)
+		print " done!"
 		if pretend:
 			mydepgraph.display(mydepgraph.altlist())
 		else:
