@@ -1,10 +1,19 @@
 # ChangeLog for dev-util/netbeans
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.7 2002/12/17 19:38:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/netbeans/ChangeLog,v 1.8 2003/01/23 06:44:27 mkennedy Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+*netbeans-3.4.1 (23 Jan 2003)
+
+  23 Jan 2003; Matthew Kennedy <mkennedy@gentoo.org>
+  netbeans-3.4.1.ebuild, file/digest-netbeans-3.4.1, ChangeLog:
+
+  Minor version bump (thanks to Douglas Pollock <pollockd@magma.ca>,
+  bug #14395). Ebuild and ChangeLog clean up.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc
+  keywords
  
-*netbeans-3.4.ebuild (14 Sep 2002)
+*netbeans-3.4 (14 Sep 2002)
 
   14 Sep 2002; Matthew Kennedy <mkennedy@gentoo.org>
   netbeans-3.4.ebuild, files/digest-netbeans-3.4 :
@@ -13,9 +22,10 @@
   contributed by Douglas Pollock <desudation@yahoo.ca>. Added support
   for KDE menus. Updated desktop icon to new dark blue logo.
 
-*netbeans-3.3.2.ebuild ( 28 Jun 2002 )
+*netbeans-3.3.2 ( 28 Jun 2002 )
 
-  28 Jun 2002; George Shapovalov <george@gentoo.org> netbeans-3.3.2.ebuild, files/digest-3.3.2 :
+  28 Jun 2002; George Shapovalov <george@gentoo.org>
+  netbeans-3.3.2.ebuild, files/digest-3.3.2 :
 
   new version released, updated ebuild to comply with present requirements;
   (updated versions were submitted by Tejaswi Kasturi <tej@kasturi.org>
@@ -28,14 +38,17 @@
 
 *netbeans-3.3.1 ( 6 Feb 2002 )
 
-  6 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org> files/netbeans.desktop files/netbeans.png :
+  6 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org>
+  files/netbeans.desktop files/netbeans.png :
  
   Minor fix in netbeans.desktop so that NetBeans integrates properly with 
   GNOME now.
 
 *netbeans-3.3.1 ( 5 Feb 2002 )
 
-  5 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org> netbeans-3.3.1.ebuild, files/digest-3.3.1 files/netbeans.desktop files/netbeans.png :
+  5 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org>
+  netbeans-3.3.1.ebuild, files/digest-3.3.1 files/netbeans.desktop
+  files/netbeans.png : 
  
   NetBeans is an Open Source Java IDE. 
 
