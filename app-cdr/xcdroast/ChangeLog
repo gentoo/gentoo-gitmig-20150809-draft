@@ -4,6 +4,10 @@
 
 *xcdroast-0.98_alpha15-r1 (02 Nov 2003)
 
+  02 Nov 2003; Luca Barbato <lu_zero@gentoo.org> 
+  files/xcdroast-0.98alpha15-dvd.patch :
+  Added the patch to let xcdroast use cdrtools + dvdr patches for dvd burning.
+
   02 Nov 2003; Lars Weiler <pylon@gentoo.org> xcdroast-0.98_alpha15-r1.ebuild:
   DVD-support uses cdrecord-ProDVD. This is closed-source software, but it works
   and free for use for educational, research and private purposes. A key has to

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha15-r1.ebuild,v 1.1 2003/11/02 20:15:26 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha15-r1.ebuild,v 1.2 2003/11/02 22:02:30 lu_zero Exp $
 
 inherit eutils
 
@@ -37,24 +37,24 @@ src_compile() {
 	local myconf
 	use nls || myconf="${myconf} --disable-nls"
 	use gtk2 && myconf="${myconf} --enable-gtk2"
-	
-	econf ${myconf} || die 
-	make PREFIX=/usr || die 
+
+	econf ${myconf} || die
+	make PREFIX=/usr || die
 }
 
 src_install() {
 	make PREFIX=/usr DESTDIR=${D} install || die
-	
+
 	cd doc
 	dodoc DOCUMENTATION FAQ README* TRANSLATION.HOWTO
 	cd ..
-	
+
 	# move man pages to /usr/share/man to be LFH compliant
 	mv ${D}/usr/man ${D}/usr/share
-	
+
 	#remove extraneous directory
 	rm ${D}/usr/etc -rf
-	
+
 	#install cdrecord.prodvd
 	if use dvdr; then
 		into /usr/lib/xcdroast-0.98
