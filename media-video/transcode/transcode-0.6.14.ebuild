@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.14.ebuild,v 1.5 2005/01/10 04:16:36 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/transcode-0.6.14.ebuild,v 1.6 2005/01/17 16:26:19 luckyduck Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -16,7 +16,7 @@ SRC_URI="http://www.jakemsr.com/transcode/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
-IUSE="X 3dnow a52 avi altivec divx4linux dv dvdread encode fame freetype \
+IUSE="X 3dnow a52 avi altivec divx4linux dv dvdread encode fame truetype \
 	gtk imagemagick jpeg lzo mjpeg mpeg network oggvorbis pvm quicktime \
 	sdl sse theora v4l xvid xml2"
 
@@ -45,7 +45,7 @@ DEPEND="a52? ( >=media-libs/a52dec-0.7.4 )
 	theora? ( media-libs/libtheora )
 	jpeg? ( media-libs/jpeg )
 	gtk? ( x11-libs/gtk+ )
-	freetype? ( >=media-libs/freetype-2 )
+	truetype? ( >=media-libs/freetype-2 )
 	pvm? ( >=sys-cluster/pvm-3.4 )"
 
 src_compile() {
@@ -75,7 +75,7 @@ src_compile() {
 		$(use_enable dvdread libdvdread) \
 		$(use_enable encode lame) \
 		$(use_enable fame libfame) \
-		$(use_enable freetype freetype2) \
+		$(use_enable truetype freetype2) \
 		$(use_enable gtk) \
 		$(use_enable imagemagick) \
 		$(use_enable jpeg libjpeg) \

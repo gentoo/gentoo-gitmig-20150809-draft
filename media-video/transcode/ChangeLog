@@ -1,6 +1,10 @@
 # ChangeLog for media-video/transcode
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.84 2005/01/10 04:16:36 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.85 2005/01/17 16:26:19 luckyduck Exp $
+
+  17 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> transcode-0.6.11.ebuild,
+  transcode-0.6.14.ebuild:
+  changed useflag freetype to truetype. fixes bug #75757.
 
   09 Jan 2005; <augustus@gentoo.org> transcode-0.6.14.ebuild:
   Added ~amd64.
