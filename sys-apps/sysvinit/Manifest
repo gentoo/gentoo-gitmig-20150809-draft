@@ -3,20 +3,14 @@ Hash: SHA1
 
 MD5 0d7c267c0c504f5e5a322ae34f402552 ChangeLog 1943
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 3003e070f46d5a0c9a2a4d8753c67801 sysvinit-2.84.ebuild 2003
 MD5 4bb35af95759582d45324cdf3bc237b7 sysvinit-2.85-r1.ebuild 2545
-MD5 06f8b8527ed3a08f86f531232d6ea9ba sysvinit-2.85.ebuild 1887
-MD5 76a07c8f9b30bd607a50b2b3eba0ebd8 files/digest-sysvinit-2.84 64
 MD5 6e4627df68938fb6fd18afb1aea2bb8a files/inittab 1561
-MD5 d50ca91cbb58c7528a60ddf5bb172956 files/sysvinit-2.84-selinux.patch 3206
-MD5 adc667ea815b256d6f39259f4134f6df files/sysvinit-2.84-selinux1.patch 3556
-MD5 38c0059ecfaa1b09e59a75cc2780aa94 files/digest-sysvinit-2.85 64
 MD5 38c0059ecfaa1b09e59a75cc2780aa94 files/digest-sysvinit-2.85-r1 64
 MD5 3c171d9c843284ce606663e4e6da26e9 files/sysvinit-2.85-selinux.patch 6448
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBxu5+roRuSHgZdywRAoisAJ0WJC9Y2F/9UlVHu1jlEdTWcRHQeACfdLGy
-YWvxPKVe3cFmWkK6+jAt+5U=
-=mSYD
+iD8DBQFBxvD7roRuSHgZdywRAv48AJ4zU5TGLKHzyoTn47VjahfjRBg+PQCfaflc
+phe7xGKxGrRh5w+6PN3AF48=
+=QvwE
 -----END PGP SIGNATURE-----
