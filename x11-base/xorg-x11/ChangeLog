@@ -1,6 +1,30 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.228 2004/12/05 01:28:00 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.229 2004/12/05 01:35:56 spyderous Exp $
+
+  04 Dec 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.0-r4.ebuild:
+  PATCH_VER 0.2.10. Add 0450_all_6.8.0-set-default-xkbmodel-to-pc105.patch. In
+  the old 'keyboard' driver, pc105 was the default. Restore the new 'kbd'
+  driver to the same. This is from upstream CVS. It may fix some bugs relating
+  to certain keys not working. Add
+  0455_all_6.8.0-prevent-keyboard-hardware-repeat.patch. (fd.o #1651) Filter
+  out autorepeat scancodes from the keyboard, because X does this already.
+  This is from upstream CVS. Add
+  6200_all_6.8.0-fix-glxquerycontextinfo-libgl-segfault.patch. (fd.o #1672)
+  Ian Romanick: the request structure for this case is never allocated, so we
+  write through an uninitialized pointer if glx version > 1.2. This is from
+  upstream CVS. Move 9930_all_6.8.1-xpm-secfix-CAN-2004-0914.patch from
+  xpm-secfix-thomas.diff in FILESDIR. Add
+  9930_all_6.8.1-xpm-secfix-CAN-2004-0914.patch. (fd.o #1924, #71842) The new
+  sanity checks prevent using file names that start with a "/" which along
+  with other checks wouldn't let you use libXpm to write files that aren't in
+  or beneath the process's current working directory. This breaks GIMP's xpm
+  plugin, among other things. Add 9945_all_6.8.1-xmodmap-overflows.patch.
+  (fd.o #1818) Fix overflow in xmodmap. A less user-visible change is the
+  switch from PatchChangelog to the DESCRIPTIONS file, which aims to describe
+  the reason for every patch being applied. It's far from complete, but it's
+  something.
 
   04 Dec 2004; Donnie Berkholz <spyderous@gentoo.org>;
   -xorg-x11-6.8.0-r2.ebuild:
