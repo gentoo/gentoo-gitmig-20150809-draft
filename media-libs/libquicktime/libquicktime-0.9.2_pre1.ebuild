@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.2_pre1.ebuild,v 1.3 2002/12/13 18:28:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libquicktime/libquicktime-0.9.2_pre1.ebuild,v 1.4 2003/01/12 04:27:33 seemant Exp $
 
 inherit libtool
 
@@ -21,6 +21,8 @@ DEPEND="media-libs/libdv
 	png? ( media-libs/libpng )
 	jpeg ( media-libs/jpeg )
 	oggvorbis? ( media-libs/libvorbis )"
+
+PROVIDE="virtual/quicktime"
 
 src_compile() {
 

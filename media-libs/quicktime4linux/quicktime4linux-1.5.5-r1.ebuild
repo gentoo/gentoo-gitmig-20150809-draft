@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/quicktime4linux-1.5.5-r1.ebuild,v 1.5 2002/12/09 04:26:13 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/quicktime4linux/quicktime4linux-1.5.5-r1.ebuild,v 1.6 2003/01/12 04:28:17 seemant Exp $
 
 S=${WORKDIR}/quicktime
 DESCRIPTION="quicktime library for linux"
@@ -14,6 +14,7 @@ KEYWORDS="x86 sparc  ppc"
 DEPEND="media-libs/jpeg
 	media-libs/libpng"
 
+PROVIDE="virtual/quicktime"
 
 src_unpack() {
 	unpack ${P}.tar.gz
