@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/wdm-1.22.ebuild,v 1.2 2003/04/02 21:42:42 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wdm/wdm-1.22.ebuild,v 1.3 2003/04/18 01:50:16 foser Exp $
 IUSE="truetype pam png jpeg gif tiff"
 
 DESCRIPTION="WINGs Display Manager"
@@ -16,7 +16,7 @@ RDEPEND=">=x11-wm/WindowMaker-0.65.1"
 DEPEND="${RDEPEND}
 	virtual/x11
     sys-devel/gettext
-	truetype? ( x11-libs/xft )"
+	truetype? ( virtual/xft )"
 
 src_compile() {
 	local myconf=""
