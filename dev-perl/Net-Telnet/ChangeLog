@@ -1,18 +1,13 @@
 # ChangeLog for dev-perlNet-DNSChangeLog/dev-perlNet-TelnetChangeLog
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Telnet/ChangeLog,v 1.4 2002/10/30 07:20:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Net-Telnet/ChangeLog,v 1.5 2002/12/04 18:39:56 mcummings Exp $
+
+  04 Dev 2002; Michael Cummings <mcummings@gentoo.org>
+  Net-Telnet-3.03-r1
+
+  added sparc (tested)
 
   29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : : : :
 
   forced version bump to install into correct locations
 # ChangeLog for dev-perl/Net-Telnet
