@@ -1,6 +1,9 @@
 # ChangeLog for games-roguelike/falconseye
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/falconseye/ChangeLog,v 1.6 2004/06/24 23:12:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/falconseye/ChangeLog,v 1.7 2004/12/28 23:14:42 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   10 May 2004; Travis Tilley <lv@gentoo.org> falconseye-1.9.4a.ebuild:
   added ~amd64 keyword
@@ -12,10 +15,10 @@
 
 *falconseye-1.9.3-r1 (11 Jul 2002)
 
-  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> falconseye-1.9.3.ebuild :
+  17 jul 2002; Jose Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org> falconseye-1.9.3.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
 
-  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> falconseye-1.9.3-r1.ebuild :
+  17 jul 2002; Jose Alberto SuÃ¡rez LÃ³pez <bass@gentoo.org> falconseye-1.9.3-r1.ebuild :
   Added KEYWORDS.
 
   11 Jul 2002; Dan <overridex@punkass.com> falconseye-1.9.3.ebuild-r1:

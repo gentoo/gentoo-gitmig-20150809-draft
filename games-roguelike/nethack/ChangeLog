@@ -1,6 +1,9 @@
 # ChangeLog for games-roguelike/nethack
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/ChangeLog,v 1.12 2004/09/24 10:01:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/ChangeLog,v 1.13 2004/12/28 23:15:11 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   24 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org>
   nethack-3.4.3-r1.ebuild:
@@ -86,17 +89,17 @@
 
 *nethack-3.4.0-r3 (23 Apr 2002)
 
-  17 jul 2002; Jose Alberto Su醨ez L髉ez <bass@gentoo.org> nethack-3.4.0-r3.ebuild :
+  17 jul 2002; Jose Alberto Su谩rez L贸pez <bass@gentoo.org> nethack-3.4.0-r3.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
 
-  17 jul 2002; Jose Alberto Su醨ez L髉ez <bass@gentoo.org> nethack-3.4.0.ebuild :
+  17 jul 2002; Jose Alberto Su谩rez L贸pez <bass@gentoo.org> nethack-3.4.0.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
   23 Apr 2002; Spider <spider@gentoo.org> nethack-3.4.0-r3.ebuild:
   Fix qt dependency
 
 *nethack-3.4.0-r2 (17 Apr 2002)
 
-  17 jul 2002; Jose Alberto Su醨ez L髉ez <bass@gentoo.org> nethack-3.4.0-r2.ebuild :
+  17 jul 2002; Jose Alberto Su谩rez L贸pez <bass@gentoo.org> nethack-3.4.0-r2.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
   17 Apr 2002; Spider <spider@gentoo.org> nethack-3.4.0-r2.ebuild:
   Here is the bulk message from Jason Ritchie <jasonr@myrealbox.com>
@@ -120,7 +123,7 @@
 
 *nethack-3.4.0-r1 (13 Apr 2002)
 
-  17 jul 2002; Jose Alberto Su醨ez L髉ez <bass@gentoo.org> nethack-3.4.0-r1.ebuild :
+  17 jul 2002; Jose Alberto Su谩rez L贸pez <bass@gentoo.org> nethack-3.4.0-r1.ebuild :
   Added LICENSE, KEYWORDS, SLOT.
   13 Apr 2002; Spider <spider@gentoo.org> nethack-3.4.0-r1.ebuild :
   Adding comment on how to get colour support thanks to Ryan Phillips
