@@ -1,5 +1,5 @@
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.48-r4.ebuild,v 1.3 2003/07/18 19:32:48 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.49_pre14.ebuild,v 1.1 2003/07/24 09:11:09 carpaski Exp $
 
 IUSE="build"
 
@@ -12,8 +12,8 @@ SLOT="0"
 DESCRIPTION="Portage ports system"
 SRC_URI="http://gentoo.twobit.net/portage/${PF}.tar.bz2 mirror://gentoo/${PF}.tar.bz2"
 HOMEPAGE="http://www.gentoo.org"
-#KEYWORDS="alpha amd64 arm hppa mips ppc sparc x86"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~sparc ~x86"
+KEYWORDS="alpha amd64 arm hppa mips ppc sparc x86"
+#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~mips ~ppc ~sparc ~x86"
 LICENSE="GPL-2"
 RDEPEND="!build? ( >=sys-apps/sed-4.0.5 dev-python/python-fchksum >=dev-lang/python-2.2.1 sys-apps/debianutils >=app-shells/bash-2.05a )"
 
@@ -75,7 +75,7 @@ src_install() {
 	./setup.py install --root ${D} || die
 	cd ${S}/pym
 	insinto /usr/lib/python2.2/site-packages
-	doins xpak.py portage.py output.py cvstree.py
+	doins xpak.py portage.py output.py cvstree.py getbinpkg.py
 
 
 	#binaries, libraries and scripts
@@ -153,9 +153,12 @@ pkg_postinst() {
 	if [ ! -f "/etc/portage/package.mask" ]; then
 	  if [ -f "/etc/portage/profiles/package.mask" ]; then
 			ln /etc/portage/profiles/package.mask /etc/portage/package.mask
+			einfo "/etc/portage/profiles/package.mask is now /etc/portage/package.mask"
+			einfo "a hardlink has been created to the new location if it exists in profiles"
+			einfo "already."
+			echo
 		fi
 	fi
-
 	echo
 	eerror "NOTICE: PLEASE *REPLACE* your make.globals. All user changes to variables"
 	eerror "in make.globals should be placed in make.conf. DO NOT MODIFY make.globals."
@@ -164,10 +167,6 @@ pkg_postinst() {
 	einfo "them using 'etc-update' please. Maintaining current configs for portage"
 	einfo "and other system packages is fairly important for the continued health"
 	einfo "of your system."
-	echo
-	einfo "/etc/portage/profiles/package.mask has been moved to /etc/portage/package.mask"
-	einfo "a hardlink has been created to the new location if the file exists in profiles"
-	einfo "already."
 	echo
 	if [ -z "$PORTAGE_TEST" ]; then
 		echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
@@ -232,6 +231,7 @@ pkg_postinst() {
 	rm -f ${ROOT}usr/lib/python2.2/site-packages/portage.py[co]
 	rm -f ${ROOT}usr/lib/python2.2/site-packages/output.py[co]
 	rm -f ${ROOT}usr/lib/python2.2/site-packages/cvstree.py[co]
+	rm -f ${ROOT}usr/lib/python2.2/site-packages/getbinpkg.py[co]
 	rm -f ${ROOT}usr/lib/python2.2/site-packages/emergehelp.py[co]
 	chmod 2775 ${ROOT}var/cache/edb/dep ${ROOT}var/cache/edb/dep/*
 	chown -R root.wheel ${ROOT}var/cache/edb/dep
@@ -243,6 +243,8 @@ pkg_postinst() {
 	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/python2.2/site-packages/output.py')" || die
 	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/python2.2/site-packages/cvstree.py')" || die
 	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/python2.2/site-packages/cvstree.py')" || die
+	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/python2.2/site-packages/getbinpkg.py')" || die
+	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/python2.2/site-packages/getbinpkg.py')" || die
 	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/bin/emergehelp.py')" || die
 	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/bin/emergehelp.py')" || die
 

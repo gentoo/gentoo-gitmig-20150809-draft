@@ -1,5 +1,5 @@
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.49_pre11.ebuild,v 1.1 2003/07/17 04:49:49 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.48-r7.ebuild,v 1.1 2003/07/24 09:11:09 carpaski Exp $
 
 IUSE="build"
 
@@ -19,7 +19,8 @@ RDEPEND="!build? ( >=sys-apps/sed-4.0.5 dev-python/python-fchksum >=dev-lang/pyt
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}/pym
+
+	cd ${S}/bin
 }
 
 src_compile() {
@@ -75,7 +76,7 @@ src_install() {
 	./setup.py install --root ${D} || die
 	cd ${S}/pym
 	insinto /usr/lib/python2.2/site-packages
-	doins xpak.py portage.py output.py cvstree.py getbinpkg.py
+	doins xpak.py portage.py output.py cvstree.py
 
 
 	#binaries, libraries and scripts
@@ -150,29 +151,25 @@ pkg_postinst() {
 		rm -f /var/cache/edb/mtimes
 	fi
 
+	if [ ! -f "/etc/portage/package.mask" ]; then
+	  if [ -f "/etc/portage/profiles/package.mask" ]; then
+			ln /etc/portage/profiles/package.mask /etc/portage/package.mask
+			einfo "/etc/portage/profiles/package.mask is now /etc/portage/package.mask"
+			einfo "a hardlink has been created to the new location if it exists in profiles"
+			einfo "already."
+			echo
+		fi
+	fi
 	echo
 	eerror "NOTICE: PLEASE *REPLACE* your make.globals. All user changes to variables"
 	eerror "in make.globals should be placed in make.conf. DO NOT MODIFY make.globals."
-	echo
-	eerror "NOTICE: The wheel group requirement for non-root users has been changed to"
-	eerror "group portage. Group portage must be a valid group for user to use portage."
 	echo
 	einfo "Feature additions are noted in help and make.conf descriptions. Update"
 	einfo "them using 'etc-update' please. Maintaining current configs for portage"
 	einfo "and other system packages is fairly important for the continued health"
 	einfo "of your system."
 	echo
-	einfo "A worldfile rebuilding script is available to regenerate entries that"
-	einfo "should be in your worldfile but were removed by a recently discovered"
-	einfo "'-e bug' or if you deleted it: run 'regenworld' as root."
-	echo
-	eerror "The late 2.0.48 portages contains Manifest files which contain all"
-	eerror "the files and ebuilds used, not just the archives extracted. This is to"
-	eerror "help discovering corruption and increasing security and should require"
-	eerror "no extra work from end-users. If portage reports a bad file that is not"
-	eerror "in the distfiles directory, after you've deleted it an re-sync'd, report it."
-	echo
-	if [ -z $PORTAGE_TEST ]; then
+	if [ -z "$PORTAGE_TEST" ]; then
 		echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
 		echo -ne "\a" ; sleep 1
 		echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
@@ -235,7 +232,6 @@ pkg_postinst() {
 	rm -f ${ROOT}usr/lib/python2.2/site-packages/portage.py[co]
 	rm -f ${ROOT}usr/lib/python2.2/site-packages/output.py[co]
 	rm -f ${ROOT}usr/lib/python2.2/site-packages/cvstree.py[co]
-	rm -f ${ROOT}usr/lib/python2.2/site-packages/getbinpkg.py[co]
 	rm -f ${ROOT}usr/lib/python2.2/site-packages/emergehelp.py[co]
 	chmod 2775 ${ROOT}var/cache/edb/dep ${ROOT}var/cache/edb/dep/*
 	chown -R root.wheel ${ROOT}var/cache/edb/dep
@@ -247,8 +243,6 @@ pkg_postinst() {
 	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/python2.2/site-packages/output.py')" || die
 	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/python2.2/site-packages/cvstree.py')" || die
 	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/python2.2/site-packages/cvstree.py')" || die
-	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/python2.2/site-packages/getbinpkg.py')" || die
-	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/python2.2/site-packages/getbinpkg.py')" || die
 	python -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/bin/emergehelp.py')" || die
 	python -O -c "import py_compile; py_compile.compile('${ROOT}usr/lib/portage/bin/emergehelp.py')" || die
 
