@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 44897abbf08c8660be2a5ddb36428216 jmdns-0.2.ebuild 1109
-MD5 f6dbae104e59a9a6f1ec5393c3a97d65 ChangeLog 655
+MD5 866806628cc2b008ec8390bd9736d311 ChangeLog 732
+MD5 5b8dfaca0044bc431e2bd7ea8316df44 jmdns-0.2.ebuild 1120
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 b95344c2a95e2466f57e5f49ada39097 files/digest-jmdns-0.2 60
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBcVlq/rLF9B432nYRAnjgAJ9Wop6snbxPCThh0v9xm8D23QTUygCgrJZ8
-z5bjdgZeLKDuJfcD8iqYCdM=
-=C1lK
------END PGP SIGNATURE-----
