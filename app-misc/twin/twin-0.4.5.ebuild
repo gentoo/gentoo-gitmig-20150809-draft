@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/twin/twin-0.4.5.ebuild,v 1.10 2004/02/17 23:00:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/twin/twin-0.4.5.ebuild,v 1.11 2004/02/17 23:48:08 vapier Exp $
 
 DESCRIPTION="A text-mode window environment"
-SRC_URI="mirror://sourceforge/twin/${P}.tar.gz"
 HOMEPAGE="http://twin.sourceforge.net/"
+SRC_URI="mirror://sourceforge/twin/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2 LGPL-2"
+SLOT="0"
 KEYWORDS="x86 sparc ~amd64 hppa alpha ia64"
 IUSE="X gtk ggi"
 
@@ -22,15 +22,12 @@ src_compile() {
 
 	use X \
 		&& myconf="--with-x --enable-hw-x11=yes"
-
 	use ggi \
 		&& myconf="${myconf} --enable-hw-ggi=yes" \
 		|| myconf="${myconf} --enable-hw-ggi=no"
-
 	use gtk \
 		&& myconf="${myconf} --enable-tt-hw-gtk=yes" \
 		|| myconf="${myconf} --enable-tt-hw-gtk=no"
-
 	econf \
 		--enable-shlibs=yes \
 		--enable-modules=yes \
@@ -41,13 +38,13 @@ src_compile() {
 		--enable-socket-alien=yes \
 		--enable-h2-tty-termcap=yes \
 		--enable-term=yes \
-		${myconf}
-
+		${myconf} \
+		|| die
 	make || die
 }
 
 src_install() {
-	einstall
+	einstall || die
 
 	if [ `use X` ] ; then
 		insinto /usr/X11R6/lib/X11/fonts/misc
