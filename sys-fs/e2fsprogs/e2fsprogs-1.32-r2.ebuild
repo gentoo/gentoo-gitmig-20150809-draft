@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.32-r2.ebuild,v 1.3 2004/01/15 14:05:31 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.32-r2.ebuild,v 1.4 2004/02/22 12:42:44 mr_bones_ Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="Standard EXT2 and EXT3 filesystem utilities"
 HOMEPAGE="http://e2fsprogs.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
-KEYWORDS="x86 amd64 ppc sparc alpha hppa arm mips"
+KEYWORDS="x86 amd64 ppc sparc alpha hppa mips"
 SLOT="0"
 LICENSE="GPL-2"
 IUSE="nls"
