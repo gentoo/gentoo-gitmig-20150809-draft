@@ -1,0 +1,251 @@
+Index: sysdeps/unix/sysv/linux/mips/sysdep.h
+===================================================================
+RCS file: /cvs/glibc/libc/sysdeps/unix/sysv/linux/mips/sysdep.h,v
+retrieving revision 1.2
+diff -u -u -r1.2 sysdep.h
+--- libc/sysdeps/unix/sysv/linux/mips/sysdep.h	6 Jul 2001 04:56:18 -0000	1.2
++++ libc/sysdeps/unix/sysv/linux/mips/sysdep.h	21 Oct 2002 10:33:16 -0000
+@@ -33,4 +33,243 @@
+ # define SYS_ify(syscall_name)	__NR_/**/syscall_name
+ #endif
+ 
++#undef INLINE_SYSCALL
++#define INLINE_SYSCALL(name, nr, args...) inline_syscall##nr(name, args)
++
++#define __SYSCALL_CLOBBERS "$1", "$8", "$9", "$10", "$11", "$12", "$13", "$14", "$15", "$24", "$25"
++
++#define inline_syscall0(name,dummy...) 					\
++({ 									\
++	register unsigned long __v0 asm("$2") = SYS_ify(name); 		\
++	register unsigned long __a3 asm("$7"); 				\
++	unsigned long _sys_result;					\
++									\
++	__asm__ volatile ( 						\
++	".set\tnoreorder\n\t" 						\
++	"li\t$2, %2\t\t\t# " #name "\n\t"				\
++	"syscall\n\t" 							\
++	".set reorder" 							\
++	: "=&r" (__v0), "=r" (__a3) 					\
++	: "i" (SYS_ify(name))						\
++	: "$4", "$5", "$6", __SYSCALL_CLOBBERS);				\
++									\
++	if ( __a3 ) {							\
++		unsigned long _sys_error = __v0;			\
++		__set_errno(_sys_error); 				\
++		_sys_result = (unsigned long)(-1);			\
++	} else								\
++		_sys_result = __v0;					\
++	_sys_result;							\
++})
++
++#define inline_syscall1(name,arg1) 					\
++({ 									\
++	register unsigned long __v0 asm("$2") = SYS_ify(name); 		\
++	register unsigned long __a0 asm("$4") = (unsigned long) arg1; 	\
++	register unsigned long __a3 asm("$7"); 				\
++	unsigned long _sys_result;					\
++									\
++	__asm__ volatile ( 						\
++	".set\tnoreorder\n\t" 						\
++	"li\t$2, %3\t\t\t# " #name "\n\t"				\
++	"syscall\n\t" 							\
++	".set reorder" 							\
++	: "=&r" (__v0), "=r" (__a3) 					\
++	: "r" (__a0), "i" (SYS_ify(name)) 				\
++	: "$5", "$6", __SYSCALL_CLOBBERS);					\
++									\
++	if ( __a3 ) {							\
++		unsigned long _sys_error = __v0;			\
++		__set_errno(_sys_error); 				\
++		_sys_result = (unsigned long)(-1);			\
++	} else								\
++		_sys_result = __v0;					\
++	_sys_result;							\
++})
++
++
++
++#define inline_syscall2(name,arg1,arg2) 				\
++({ 									\
++	register unsigned long __v0 asm("$2") = SYS_ify(name); 		\
++	register unsigned long __a0 asm("$4") = (unsigned long) arg1; 	\
++	register unsigned long __a1 asm("$5") = (unsigned long) arg2; 	\
++	register unsigned long __a3 asm("$7"); 				\
++	unsigned long _sys_result;					\
++									\
++	__asm__ volatile ( 						\
++	".set\tnoreorder\n\t" 						\
++	"li\t$2, %4\t\t\t# " #name "\n\t" 				\
++	"syscall\n\t" 							\
++	".set\treorder" 						\
++	: "=&r" (__v0), "=r" (__a3) 					\
++	: "r" (__a0), "r" (__a1), "i" (SYS_ify(name))			\
++	: "$6", __SYSCALL_CLOBBERS); 					\
++									\
++	if ( __a3  ) {							\
++		unsigned long _sys_error = __v0;			\
++		__set_errno(_sys_error); 				\
++		_sys_result = (unsigned long)(-1);			\
++	} else								\
++		_sys_result = __v0;					\
++	_sys_result;							\
++})
++
++#define inline_syscall3(name,arg1,arg2,arg3) 				\
++({ 									\
++	register unsigned long __v0 asm("$2") = SYS_ify(name); 		\
++	register unsigned long __a0 asm("$4") = (unsigned long) arg1; 	\
++	register unsigned long __a1 asm("$5") = (unsigned long) arg2; 	\
++	register unsigned long __a2 asm("$6") = (unsigned long) arg3; 	\
++	register unsigned long __a3 asm("$7"); 				\
++	unsigned long _sys_result;					\
++									\
++	__asm__ volatile ( 						\
++	".set\tnoreorder\n\t" 						\
++	"li\t$2, %5\t\t\t# " #name "\n\t" 				\
++	"syscall\n\t" 							\
++	".set\treorder" 						\
++	: "=&r" (__v0), "=r" (__a3) 					\
++	: "r" (__a0), "r" (__a1), "r" (__a2), "i" (SYS_ify(name)) 	\
++	: __SYSCALL_CLOBBERS); 						\
++									\
++	if (__a3 ) {							\
++		unsigned long _sys_error = __v0;			\
++		__set_errno(_sys_error); 				\
++		_sys_result = (unsigned long)(-1);			\
++	} else								\
++		_sys_result = __v0;					\
++	_sys_result;							\
++})
++
++#define inline_syscall4(name,arg1,arg2,arg3,arg4) 			\
++({ 									\
++	register unsigned long __v0 asm("$2") = SYS_ify(name); 		\
++	register unsigned long __a0 asm("$4") = (unsigned long) arg1; 	\
++	register unsigned long __a1 asm("$5") = (unsigned long) arg2; 	\
++	register unsigned long __a2 asm("$6") = (unsigned long) arg3; 	\
++	register unsigned long __a3 asm("$7") = (unsigned long) arg4; 	\
++	unsigned long _sys_result;					\
++									\
++	__asm__ volatile ( 						\
++	".set\tnoreorder\n\t" 						\
++	"li\t$2, %5\t\t\t# " #name "\n\t" 				\
++	"syscall\n\t" 							\
++	".set\treorder" 						\
++	: "=&r" (__v0), "+r" (__a3) 					\
++	: "r" (__a0), "r" (__a1), "r" (__a2), "i" (SYS_ify(name)) 	\
++	: __SYSCALL_CLOBBERS); 						\
++									\
++	if ( __a3 ) {							\
++		unsigned long _sys_error = __v0;			\
++		__set_errno(_sys_error);				\
++		_sys_result = (unsigned long)(-1);			\
++	} else								\
++		_sys_result = __v0;					\
++	_sys_result;							\
++})
++
++#define inline_syscall5(name,arg1,arg2,arg3,arg4,arg5) 			\
++({ 									\
++	register unsigned long __v0 asm("$2") = SYS_ify(name); 		\
++	register unsigned long __a0 asm("$4") = (unsigned long) arg1; 	\
++	register unsigned long __a1 asm("$5") = (unsigned long) arg2; 	\
++	register unsigned long __a2 asm("$6") = (unsigned long) arg3; 	\
++	register unsigned long __a3 asm("$7") = (unsigned long) arg4; 	\
++	unsigned long _sys_result;					\
++									\
++	__asm__ volatile ( 						\
++	".set\tnoreorder\n\t" 						\
++	"lw\t$2, %6\n\t" 						\
++	"subu\t$29, 32\n\t" 						\
++	"sw\t$2, 16($29)\n\t" 						\
++	"li\t$2, %5\t\t\t# " #name "\n\t" 				\
++	"syscall\n\t" 							\
++	"addiu\t$29, 32\n\t" 						\
++	".set\treorder" 						\
++	: "=&r" (__v0), "+r" (__a3) 					\
++	: "r" (__a0), "r" (__a1), "r" (__a2), "i" (SYS_ify(name)), 	\
++	  "m" ((unsigned long)arg5) 					\
++	: __SYSCALL_CLOBBERS); 						\
++									\
++	if (__a3 != 0) {						\
++		unsigned long _sys_error = __v0;			\
++		__set_errno(_sys_error); 				\
++		_sys_result = (unsigned long)(-1);			\
++	} else								\
++		_sys_result = __v0;					\
++	_sys_result;							\
++})
++
++#define inline_syscall6(name,arg1,arg2,arg3,arg4,arg5,arg6) 		\
++({ 									\
++	register unsigned long __v0 asm("$2") = SYS_ify(name); 		\
++	register unsigned long __a0 asm("$4") = (unsigned long) arg1; 	\
++	register unsigned long __a1 asm("$5") = (unsigned long) arg2; 	\
++	register unsigned long __a2 asm("$6") = (unsigned long) arg3; 	\
++	register unsigned long __a3 asm("$7") = (unsigned long) arg4; 	\
++	unsigned long _sys_result;					\
++									\
++	__asm__ volatile ( 						\
++	".set\tnoreorder\n\t" 						\
++	"lw\t$2, %6\n\t" 						\
++	"lw\t$8, %7\n\t" 						\
++	"subu\t$29, 32\n\t" 						\
++	"sw\t$2, 16($29)\n\t" 						\
++	"sw\t$8, 20($29)\n\t" 						\
++	"li\t$2, %5\t\t\t# " #name "\n\t" 				\
++	"syscall\n\t" 							\
++	"addiu\t$29, 32\n\t" 						\
++	".set\treorder" 						\
++	: "=&r" (__v0), "+r" (__a3) 					\
++	: "r" (__a0), "r" (__a1), "r" (__a2), "i" (SYS_ify(name)), 	\
++	  "m" ((unsigned long)arg5), "m" ((unsigned long)arg6)		\
++	: __SYSCALL_CLOBBERS); 						\
++									\
++	if ( __a3 ) {							\
++		unsigned long _sys_error = __v0;			\
++		__set_errno(_sys_error);				\
++		_sys_result = (unsigned long)(-1);			\
++	} else								\
++		_sys_result = __v0;					\
++	_sys_result;							\
++})
++
++#define inline_syscall7(name,arg1,arg2,arg3,arg4,arg5,arg6,arg7) 	\
++({ 									\
++	register unsigned long __v0 asm("$2") = SYS_ify(name); 		\
++	register unsigned long __a0 asm("$4") = (unsigned long) arg1; 	\
++	register unsigned long __a1 asm("$5") = (unsigned long) arg2; 	\
++	register unsigned long __a2 asm("$6") = (unsigned long) arg3; 	\
++	register unsigned long __a3 asm("$7") = (unsigned long) arg4; 	\
++	unsigned long _sys_result;					\
++									\
++	__asm__ volatile ( 						\
++	".set\tnoreorder\n\t" 						\
++	"lw\t$2, %6\n\t" 						\
++	"lw\t$8, %7\n\t" 						\
++	"lw\t$9, %8\n\t" 						\
++	"subu\t$29, 32\n\t" 						\
++	"sw\t$2, 16($29)\n\t" 						\
++	"sw\t$8, 20($29)\n\t" 						\
++	"sw\t$9, 24($29)\n\t" 						\
++	"li\t$2, %5\t\t\t# " #name "\n\t" 				\
++	"syscall\n\t" 							\
++	"addiu\t$29, 32\n\t" 						\
++	".set\treorder" 						\
++	: "=&r" (__v0), "+r" (__a3) 					\
++	: "r" (__a0), "r" (__a1), "r" (__a2), "i" (SYS_ify(name)), 	\
++	  "m" ((unsigned long)arg5), "m" ((unsigned long)arg6),		\
++	  "m" ((unsigned long)arg7)					\
++	: __SYSCALL_CLOBBERS); 						\
++									\
++	if ( __a3 ) {							\
++		unsigned long _sys_error = __v0;			\
++		__set_errno(_sys_error); 				\
++		_sys_result = (unsigned long)(-1);			\
++	} else								\
++		_sys_result = __v0;					\
++	_sys_result;							\
++})
++
+ #endif /* linux/mips/sysdep.h */

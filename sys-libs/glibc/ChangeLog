@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.36 2002/12/29 09:38:06 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.37 2003/01/15 00:36:35 azarah Exp $
+
+  15 Jan 2003; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.1-r2.ebuild :
+
+  Fix 'locale -a' not listing all locales.  This to Stefan Jones
+  <cretin@gentoo.org> for this fix, bug #13240.
+
+  Add MIPS patches, thanks to <tuxus@gentoo.org> and <dragon@gentoo.org>.
 
   28 Dec 2002; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.1-r3.ebuild :
 

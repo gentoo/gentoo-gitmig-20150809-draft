@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r2.ebuild,v 1.14 2002/12/17 12:45:51 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r2.ebuild,v 1.15 2003/01/15 00:36:35 azarah Exp $
 
 IUSE="nls pic build"
 
@@ -44,7 +44,7 @@ SRC_URI="http://ftp.gnu.org/gnu/glibc/glibc-${PV}.tar.gz
 	http://ftp.gnu.org/gnu/glibc/glibc-linuxthreads-${PV}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha mips"
 # Is 99% compadible, just some .a's bork
 SLOT="2.2"
 LICENSE="GPL-2"
@@ -93,7 +93,7 @@ src_unpack() {
 	# Thanks to Jan Gutter <jangutter@tuks.co.za> for reporting it.
 	#
 	# <azarah@gentoo.org> (26 Oct 2002).
-	cd ${S}; epatch ${FILESDIR}/${PV}/${P}-ctype-compat-v2.patch
+	cd ${S}; epatch ${FILESDIR}/${PV}/${P}-ctype-compat-v3.patch
 
 	# One more compat issue which breaks sun-jdk-1.3.1.  See bug #8766 for more
 	# info, and also:
@@ -117,6 +117,27 @@ src_unpack() {
 	# http://sources.redhat.com/ml/libc-alpha/2002-11/msg00151.html
 	# <cretin@gentoo.org> (17 Nov 2002).
 	cd ${S}; epatch ${FILESDIR}/${PV}/${P}-prelinkfix.patch
+
+	# Fix 'locale -a' not listing all locales.  This to Stefan Jones
+	# <cretin@gentoo.org> for this fix, bug #13240.
+	cd ${S}; epatch ${FILESDIR}/${PV}/${P}-locale.patch
+
+	# A few patches only for the MIPS platform.  Descriptions of what they
+	# do can be found in the patch headers.
+	# <tuxus@gentoo.org> thx <dragon@gentoo.org> (11 Jan 2003)
+	if [ "${ARCH}" = "mips" ]
+	then
+		cd ${S}
+		epatch ${FILESDIR}/${PV}/${P}-elf-machine-rela-mips.patch
+		epatch ${FILESDIR}/${PV}/${P}-exit-syscall-mips.patch
+		epatch ${FILESDIR}/${PV}/${P}-fpu-cw-mips.patch
+#		epatch ${FILESDIR}/${PV}/${P}-inline-syscall-mips.patch
+		epatch ${FILESDIR}/${PV}/${P}-libgcc-compat-mips.patch
+		epatch ${FILESDIR}/${PV}/${P}-librt-mips.patch
+		epatch ${FILESDIR}/${PV}/${P}-tst-rndseek-mips.patch
+		epatch ${FILESDIR}/${PV}/${P}-ulps-mips.patch
+	fi
+
 }
 
 src_compile() {
