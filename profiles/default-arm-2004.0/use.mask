@@ -47,3 +47,7 @@ qdbm
 mzscheme
 # aqua USE flag is only valid on Mac OS X
 aqua
+
+# rizzo@gentoo.org
+# masking per Bug 73135 per vapier's recommendation.
+mozilla
