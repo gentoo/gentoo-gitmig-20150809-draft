@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines.eclass,v 1.19 2003/02/16 04:26:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gtk-engines.eclass,v 1.20 2003/02/23 19:25:23 foser Exp $
 #
 # The gtk-engines eclass is inherited by all gtk-engines-* ebuilds.
 #
@@ -72,7 +72,6 @@ case "${ENGINE}" in
 		MY_PN="gtk-engines"
 		if [ "$SLOT" -eq "2" ]
 		then
-			newdepend media-libs/gdk-pixbuf
 			DEPEND="${DEPEND} >=dev-util/pkgconfig-0.12.0"
 
 			# Do _NOT_ strip symbols in the build! Need both lines for Portage
