@@ -1,6 +1,10 @@
 # ChangeLog for app-sci/blas-atlas
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-atlas/ChangeLog,v 1.19 2004/11/29 01:41:04 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-atlas/ChangeLog,v 1.20 2004/12/19 10:42:57 kloeri Exp $
+
+  19 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
+  blas-atlas-3.6.0.ebuild:
+  Stable on alpha.
 
   28 Nov 2004; Daniel Goller <morfic@gentoo.org> blas-atlas-3.6.0.ebuild:
   Fix clobbering of bx register, reference bug 56842 for more information
