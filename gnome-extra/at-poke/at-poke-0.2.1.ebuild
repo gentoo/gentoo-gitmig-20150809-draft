@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-poke/at-poke-0.2.1.ebuild,v 1.1 2003/07/05 10:15:43 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/at-poke/at-poke-0.2.1.ebuild,v 1.2 2003/07/06 10:22:00 liquidx Exp $
 
 inherit gnome2
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2 LGPL-2.1"
 KEYWORDS="~x86 ~sparc"
 SLOT="0"
 
-RDEPEND=">=gnome-extra/at-spi-0.12.1
+RDEPEND=">=gnome-extra/at-spi-1.1.5
 	>=gnome-base/libglade-2
 	>=x11-libs/gtk+-2
 	>=gnome-base/libgnomeui-2
