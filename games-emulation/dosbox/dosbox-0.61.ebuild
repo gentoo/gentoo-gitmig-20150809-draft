@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/dosbox-0.61.ebuild,v 1.10 2004/06/24 22:25:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/dosbox/dosbox-0.61.ebuild,v 1.11 2004/07/01 03:20:01 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="alsa opengl"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	alsa? ( media-libs/alsa-lib )
 	opengl? ( virtual/opengl )
 	>=media-libs/libsdl-1.2.0
