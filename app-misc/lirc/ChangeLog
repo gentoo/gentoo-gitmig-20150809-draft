@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/lirc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.39 2004/09/25 15:10:07 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/ChangeLog,v 1.40 2004/09/26 18:31:14 lanius Exp $
+
+  26 Sep 2004; Heinrich Wendel <lanius@gentoo.org> lirc-0.7.0_pre7-r1.ebuild:
+  make streamzap driver depend on a use flag, because it can break other things,
+  bug #64557
 
   25 Sep 2004; Heinrich Wendel <lanius@gentoo.org>
   +files/lirc-0.7.0_pre7-configure.patch, lirc-0.7.0_pre7-r1.ebuild,
