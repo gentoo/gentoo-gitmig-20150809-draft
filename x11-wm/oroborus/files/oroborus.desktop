@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Oroborus
+Exec=oroborus
+TryExec=oroborus
+
+[Window Manager]
+SessionManaged=false
