@@ -1,5 +1,5 @@
 --- flvenc.c.org	2003-09-06 17:56:37.000000000 +0000
-+++ ffmpeg/libavformat/flvenc.c	2003-09-06 17:51:55.000000000 +0000
++++ avifile-0.7-0.7.38/ffmpeg/libavformat/flvenc.c	2003-09-06 17:51:55.000000000 +0000
 @@ -224,13 +224,15 @@
  
  static int flv_write_trailer(AVFormatContext *s)
