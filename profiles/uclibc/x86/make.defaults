@@ -5,25 +5,5 @@ ARCH="x86"
 COMPILER="gcc3"
 ACCEPT_KEYWORDS="x86"
 
-# 
-# FEATURES are settings that affect the functionality of portage. Most of
-#     these settings are for developer use, but some are available to non-
-#     developers as well. 
-#
-#  'sandbox'     enable sandbox-ing when running emerge and ebuild
-#  'sfperms'     feature for security minded people that causes portage to 
-#                remove group+other readable bits on setuid files and
-#                remove the other readable bits on setgid files.
-#  'strict'      causes portage to react strongly to conditions that
-#                have the potential to be dangerous -- like missing or
-#                incorrect Manifest files.
-#  'userpriv'    allows portage to drop root privleges while it is compiling
-#                as a security measure, and as a side effect this can remove 
-#                sandbox access violations for users.
-#  'usersandbox' enables sandboxing while portage is running under userpriv.
-#                unpack -- for debugging purposes only.
-#
-
 FEATURES="sandbox sfperms strict"
 #FEATURES="sandbox sfperms strict userpriv usersandbox"
-
