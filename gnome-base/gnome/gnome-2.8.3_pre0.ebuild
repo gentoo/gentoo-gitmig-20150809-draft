@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.3_pre0.ebuild,v 1.4 2005/02/17 05:59:25 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.8.3_pre0.ebuild,v 1.5 2005/02/17 06:58:46 joem Exp $
 
 DESCRIPTION="Meta package for the GNOME desktop"
 HOMEPAGE="http://www.gnome.org/"
@@ -32,7 +32,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=media-libs/libart_lgpl-2.3.16
 
 	>=dev-libs/libIDL-0.8.5
-	>=gnome-base/orbit-2.12
+	>=gnome-base/orbit-2.12.1
 
 	>=gnome-base/gconf-2.8.1-r1
 	>=gnome-base/gnome-keyring-0.4
@@ -43,7 +43,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/libgnome-2.8
 	>=gnome-base/libgnomeui-2.8
 	>=gnome-base/libgnomecanvas-2.8
-	>=gnome-base/libglade-2.4
+	>=gnome-base/libglade-2.4.2
 
 	>=gnome-extra/bug-buddy-2.8
 	>=gnome-base/control-center-2.8.1-r1
@@ -83,7 +83,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-base/libgnomeprintui-2.8.2
 
 	>=gnome-extra/gnome-utils-2.8.1
-	>=gnome-extra/gnome-games-2.8.2
+	>=gnome-extra/gnome-games-2.8.3
 
 	>=gnome-base/libgtop-2.8.3
 	>=gnome-extra/gnome-system-monitor-2.8.3
@@ -99,10 +99,10 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-extra/zenity-2.8.2
 	>=net-analyzer/gnome-netstatus-2.8
 
-	cdr? ( >=gnome-extra/nautilus-cd-burner-2.8.6 )
-	dvdr? ( >=gnome-extra/nautilus-cd-burner-2.8.6 )
+	cdr? ( >=gnome-extra/nautilus-cd-burner-2.8.7 )
+	dvdr? ( >=gnome-extra/nautilus-cd-burner-2.8.7 )
 
-	hal? ( >=gnome-base/gnome-volume-manager-1.0.2-r1 )
+	hal? ( >=gnome-base/gnome-volume-manager-1.0.3 )
 
 	>=gnome-extra/evolution-data-server-1.0.3
 	>=mail-client/evolution-2.0.3
