@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.23 2003/07/18 20:11:22 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.24 2003/07/22 12:48:11 aliz Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -45,6 +45,26 @@ esac
 # C[XX]FLAGS that we are think is ok, but needs testing
 # NOTE:  currently -Os have issues with gcc3 and K6* arch's
 UNSTABLE_FLAGS="-Os -O3 -freorder-blocks -fprefetch-loop-arrays"
+
+filter-mfpmath() {
+	for a in $CFLAGS; do
+		if [ "${a:0:8}" == "-mfpmath" ]; then
+			orig_mfpmath=$a
+		fi
+	done
+
+	mfpmath="$( echo $orig_mfpmath | awk -F '=' '{print $2}' | tr "," " " )"
+	for b in $@; do
+		mfpmath="${mfpmath/$b}"
+	done
+
+	if [ -z "${mfpmath/ }" ]; then
+		filter-flags "$orig_mfpmath"
+	else
+		new_mfpmath="-mfpmath=$( echo $mfpmath | sed -e "s/ /,/g" -e "s/,,/,/g" )"
+		replace-flags "$orig_mfpmath" "$new_mfpmath"
+	fi
+}
 
 filter-flags() {
 	# we do this fancy spacing stuff so as to not filter
