@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.4.1.ebuild,v 1.8 2005/02/01 14:46:00 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.4.1.ebuild,v 1.9 2005/03/28 19:11:00 hansmi Exp $
 
 inherit virtualx gnome2 eutils flag-o-matic
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/projects/gnumeric/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc hppa ~amd64 ~alpha ~ia64 ~ppc64"
+KEYWORDS="x86 ppc sparc hppa ~amd64 ~alpha ~ia64 ~ppc64"
 
 #IUSE="libgda gnomedb python bonobo"
 IUSE="libgda python gnome"
