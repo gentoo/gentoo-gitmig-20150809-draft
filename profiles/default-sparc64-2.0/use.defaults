@@ -24,7 +24,7 @@ tex		app-text/tetex
 aalib		media-libs/aalib	
 nas		media-libs/nas
 bonobo		gnome-base/bonobo
-svga		media-libs/svgalib
+#svga
 ggi		media-libs/libggi
 tcltk		dev-lang/tcl dev-lang/tk
 java		virtual/jre
