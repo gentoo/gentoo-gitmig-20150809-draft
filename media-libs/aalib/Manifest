@@ -1,4 +1,4 @@
-MD5 3a87f68b7696053de66d475417363981 ChangeLog 1356
-MD5 27cdc1a335315e162bcd05081db41aec aalib-1.4_rc4-r2.ebuild 1235
-MD5 e779a066ecb08c532a46af5638d7fe40 files/aalib-1.4_rc4-gentoo.diff 1391
 MD5 ffa1e1a7420535a1fe146ae5145ddbd6 files/digest-aalib-1.4_rc4-r2 64
+MD5 e779a066ecb08c532a46af5638d7fe40 files/aalib-1.4_rc4-gentoo.diff 1391
+MD5 9f3bf19ec6e6a76dc6f608f07e707892 aalib-1.4_rc4-r2.ebuild 1218
+MD5 3a87f68b7696053de66d475417363981 ChangeLog 1356
