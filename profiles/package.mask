@@ -579,10 +579,6 @@ x11-themes/gtk-xfce-engine
 # Has non-ratified use flags.
 =dev-lisp/bigloo-lib-0.17
 
-# Seemant Kulleen <seemant@gentool.org> (01 Aug 2002)
-# the dependency is on an old, now removed version of PyQt
-dev-python/anygui
-
 # Chad Huneycutt <chadh@gentoo.org> (31 Jul 2002)
 # new package. needs testing
 app-office/ical
@@ -1072,7 +1068,6 @@ gnome-extra/libglademm
 gnome-extra/gal2
 >=app-office/gnumeric-1.1.3
 
->=dev-python/pygtk-1.99.0
 >=net-irc/xchat-1.9.1
 
 >=dev-util/glade-1.1.0
