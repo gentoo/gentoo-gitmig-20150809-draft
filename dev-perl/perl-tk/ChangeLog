@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/perl-tk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.27 2004/10/10 18:10:55 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/perl-tk/ChangeLog,v 1.28 2004/10/19 08:21:34 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> perl-tk-804.027.ebuild:
+  Stable on amd64.
 
   10 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> perl-tk-804.027.ebuild:
   Stable on alpha.

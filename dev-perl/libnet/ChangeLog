@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/libnet
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libnet/ChangeLog,v 1.26 2004/08/31 13:29:05 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libnet/ChangeLog,v 1.27 2004/10/19 08:19:31 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> libnet-1.16.ebuild:
+  Stable on amd64.
 
   31 Aug 2004; Michael Cummings <mcummings@gentoo.org> libnet-1.11-r1.ebuild,
   libnet-1.11.ebuild, libnet-1.13.ebuild, libnet-1.16.ebuild,

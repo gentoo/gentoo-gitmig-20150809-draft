@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libnet/libnet-1.16.ebuild,v 1.9 2004/08/31 13:29:05 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libnet/libnet-1.16.ebuild,v 1.10 2004/10/19 08:19:31 absinthe Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/~gbarr/${P}/"
 
 SLOT="0"
 LICENSE="Artistic"
-KEYWORDS="x86 ~amd64 ~ppc sparc ~alpha hppa ~mips"
+KEYWORDS="x86 amd64 ~ppc sparc ~alpha hppa ~mips"
 IUSE=""
 
 src_compile() {
