@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.4.ebuild,v 1.4 2004/03/14 12:32:15 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.4-r1.ebuild,v 1.1 2004/03/14 12:32:15 lanius Exp $
 
 inherit eutils
-
-S="${WORKDIR}/Zope-${PV}-src"
 
 DESCRIPTION="Zope is a web application platform used for building high-performance, dynamic web sites."
 HOMEPAGE="http://www.zope.org"
@@ -12,7 +10,8 @@ SRC_URI="http://www.zope.org/Products/Zope/${PV}/Zope-${PV}-src.tgz"
 LICENSE="ZPL"
 SLOT="${PV}"
 
-KEYWORDS="x86 ~sparc"
+KEYWORDS="~x86 ~sparc"
+IUSE="utf8"
 
 # This is for developers that wish to test Zope with virtual/python.
 # If this is a problem, let me know right away. --kutsuya@gentoo.org
@@ -21,23 +20,25 @@ KEYWORDS="x86 ~sparc"
 # ebuilds to build extensions for python2.1.
 
 if [ "${PYTHON_SLOT_VERSION}" = 'VIRTUAL' ] ; then
-	RDEPEND="virtual/python"
-	python='python'
+RDEPEND="virtual/python"
+python='python'
 elif [ "${PYTHON_SLOT_VERSION}" != '' ] ; then
-	RDEPEND="=dev-lang/python-${PYTHON_SLOT_VERSION}*"
-	python="python${PYTHON_SLOT_VERSION}"
+RDEPEND="=dev-lang/python-${PYTHON_SLOT_VERSION}*"
+python="python${PYTHON_SLOT_VERSION}"
 else
-	RDEPEND="=dev-lang/python-2.1.3*"
-	python='python2.1'
+RDEPEND="=dev-lang/python-2.1.3*"
+python='python2.1'
 fi
 
 RDEPEND="${RDEPEND}
-	!net-zope/verbosesecurity"
+!net-zope/verbosesecurity"
 
 DEPEND="${RDEPEND}
-	virtual/glibc
-	>=sys-apps/sed-4.0.5
-	>=app-admin/zope-config-0.3"
+virtual/glibc
+>=sys-apps/sed-4.0.5
+>=app-admin/zope-config-0.3"
+
+S="${WORKDIR}/Zope-${PV}-src"
 
 ZUID=zope
 ZGID=$(echo ${P} |sed -e "s:\.:_:g")
@@ -45,6 +46,7 @@ ZS_DIR=${ROOT}/usr/share/zope/
 ZI_DIR=${ROOT}/var/lib/zope/
 ZSERVDIR=${ZS_DIR}/${PF}/
 ZINSTDIR=${ZI_DIR}/${ZGID}
+ZOPEOPTS="\"-u zope\""
 CONFDIR=${ROOT}/etc/conf.d/
 RCNAME=zope.initd
 
@@ -68,23 +70,22 @@ setup_security() {
 
 install_help() {
 	einfo "Need to setup an inituser (admin) before executing zope:"
-	einfo "\tzope-config --zpasswd"
-	einfo "To execute default Zope instance:"
-	einfo "\t/etc/init.d/${ZGID} start"
+		einfo "\tzope-config --zpasswd"
+		einfo "To execute default Zope instance:"
+		einfo "\t/etc/init.d/${ZGID} start"
 }
 
 pkg_setup() {
 	if [ "${PYTHON_SLOT_VERSION}" != '' ] ; then
 		ewarn "WARNING: You set PYTHON_SLOT_VERSION=${PYTHON_SLOT_VERSION}."
-		if [ "${PYTHON_SLOT_VERSION}" = 'VIRTUAL' ] ; then
-			ewarn "So this ebuild will use virtual/python."
-		else
-			ewarn "So this ebuild will use python-${PYTHON_SLOT_VERSION}*."
-		fi
-		ewarn "Zope Corp. only recommends using python-2.1.3 "
-		ewarn "with this version of zope. Emerge at your own risk."
-		ewarn "Python-2.3 is known NOT to work."
-		sleep 12
+			if [ "${PYTHON_SLOT_VERSION}" = 'VIRTUAL' ] ; then
+				ewarn "So this ebuild will use virtual/python."
+			else
+				ewarn "So this ebuild will use python-${PYTHON_SLOT_VERSION}*."
+					fi
+					ewarn "Zope Corp. only recommends using python-2.1.3 "
+					ewarn "with this version of zope. Emerge at your own risk."
+					sleep 12
 	fi
 	enewgroup ${ZGID}
 	enewuser ${ZUID} 261 /bin/bash ${ZS_DIR} ${ZGID}
@@ -100,6 +101,30 @@ src_install() {
 	docinto doc/PLATFORMS ; dodoc doc/PLATFORMS/*
 	docinto doc/changenotes ; dodoc doc/changenotes/*
 
+	# Patched StructuredText will accept source text formatted in utf-8 encoding, 
+	# apply all formattings and output utf-8 encoded text.
+	# if you want to use this option you need to set your
+	# system python encoding to utf-8 (create the file sitecusomize.py inside
+	# your site-packages, add the following lines
+	# 	import sys
+	# 	sys.setdefaultencoding('utf-8')
+	# If this is a problem, let me know right away. --batlogg@solution2u.net
+	# I wondering if we need a USE flag for this and wheter we can set the
+	# sys.encoding automtically
+	# so i defined a use flag utf-8
+
+	if use utf8; then
+		einfo "Patching structured text"
+		einfo "make sure you have set the system pythong encoding to utf-8"
+		einfo "create the file sitecusomize.py inside your site-packages"
+	 	einfo "import sys"
+		einfo "sys.setdefaultencoding('utf8')"
+		cd ${S}/lib/python/StructuredText/
+		epatch ${FILESDIR}/i18n-1.0.0.patch
+	    cd ${S}
+	fi
+
+
 	# using '/etc/init.d/zope'
 	rm -Rf start stop LICENSE.txt README.txt doc/
 
@@ -112,7 +137,7 @@ src_install() {
 
 	# Add conf.d script.
 	dodir /etc/conf.d
-	cp ${FILESDIR}/2.6.1/zope.envd .templates/zope.confd
+	cp ${FILESDIR}/${PV}/zope.confd .templates/zope.confd
 
 	# Fill in environmental variables
 	sed -i \
@@ -121,10 +146,12 @@ src_install() {
 		-e "/SOFTWARE_HOME=/ c\\SOFTWARE_HOME=${ZSERVDIR}/lib/python\\ " \
 		.templates/zope.confd
 
-	# Add rc-script.
-	#!! TODO: fill in $python in zope-r2.initd
-	sed -e "/python=/ c\\python=\"${python}\"\\ " ${FILESDIR}/2.6.1/${RCNAME} \
-		> .templates/zope.initd
+	# Add conf.d script.
+	dodir /etc/init.d
+	cp ${FILESDIR}/${PV}/zope.initd .templates/zope.initd
+	# Fill in rc-script.
+	sed -i -e "/python=/ c\\python=\"${python}\"\\ " \
+		.templates/zope.initd
 
 	# Copy the remaining contents of ${S} into the ${D}.
 	dodir ${ZSERVDIR}
