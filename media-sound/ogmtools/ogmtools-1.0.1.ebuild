@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ogmtools/ogmtools-1.0.1.ebuild,v 1.1 2003/04/16 16:27:11 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ogmtools/ogmtools-1.0.1.ebuild,v 1.2 2003/05/09 16:49:57 mholzer Exp $
 
 IUSE="dvd"
 
 DESCRIPTION="These tools allow information about (ogminfo) or extraction from (ogmdemux) or creation of (ogmmerge) OGG media streams."
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 HOMEPAGE="http://www.bunkus.org/videotools/ogmtools/"
 SRC_URI="http://www.bunkus.org/videotools/${PN}/${P}.tar.bz2"
 
