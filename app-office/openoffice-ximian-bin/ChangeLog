@@ -1,0 +1,13 @@
+# ChangeLog for app-office/openoffice-ximian-bin
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian-bin/ChangeLog,v 1.1 2004/04/02 14:15:43 suka Exp $
+
+*openoffice-ximian-bin-1.1.52 (02 Apr 2004)
+
+  02 Apr 2004; suka@gentoo.org metadata.xml,
+  openoffice-ximian-bin-1.1.52.ebuild, files/1.1.1/DicOOo.sxw,
+  files/1.1.1/ximian-openoffice.applications,
+  files/1.1.1/ximian-openoffice.keys, files/1.1.1/xooffice-wrapper-1.3:
+  Initial commit. This provides the wonderful openoffice-ximian without the need
+  to compile it
+
