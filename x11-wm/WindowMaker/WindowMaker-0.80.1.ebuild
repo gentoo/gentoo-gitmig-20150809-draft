@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/WindowMaker-0.80.1.ebuild,v 1.3 2002/07/02 16:50:36 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/WindowMaker-0.80.1.ebuild,v 1.4 2002/07/08 13:47:11 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Window Maker"
@@ -20,6 +20,7 @@ RDEPEND="nls? ( >=sys-devel/gettext-0.10.39 )"
 
 SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86"
 
 #NOTE: the default menu has the wrong path for the WMPrefs utility.  
 # Needs fixing.

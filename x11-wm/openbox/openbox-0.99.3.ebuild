@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Seemant Kulleen <seemant@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-0.99.3.ebuild,v 1.1 2002/05/26 00:38:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/openbox-0.99.3.ebuild,v 1.2 2002/07/08 13:47:11 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Window manager based on BlackBox"
@@ -17,6 +17,7 @@ PROVIDE="virtual/blackbox"
 
 SLOT="0"
 LICENSE="Artistic"
+KEYWORDS="x86"
 
 src_compile() {
 	local myconf

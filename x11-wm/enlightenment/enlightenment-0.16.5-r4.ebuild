@@ -1,12 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.5-r4.ebuild,v 1.5 2002/05/21 02:53:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.5-r4.ebuild,v 1.6 2002/07/08 13:47:11 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Enlightenment Window Manager"
 SRC_URI="ftp://ftp.enlightenment.org/enlightenment/enlightenment/${P}.tar.gz"
 HOMEPAGE="http://www.enlightenment.org/"
+LICENSE="as-is"
+SLOT="0"
+KEYWORDS="x86"
 
 DEPEND=">=media-libs/fnlib-0.5
 	>=media-sound/esound-0.2.19

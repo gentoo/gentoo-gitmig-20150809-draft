@@ -8,6 +8,9 @@ SRC_URI="http://www.students.tut.fi/~tuomov/dl/${P}.tar.gz"
 HOMEPAGE="http://www.students.tut.fi/~tuomov/ion/"
 DEPEND="virtual/glibc"
 RDEPEND="virtual/x11"
+LICENSE="Artistic"
+SLOT="0"
+KEYWORDS="x86"
 
 src_compile() {
 	cd ${S}

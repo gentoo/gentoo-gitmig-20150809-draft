@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.9-r1.ebuild,v 1.1 2002/06/18 23:12:51 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/fluxbox-0.1.9-r1.ebuild,v 1.2 2002/07/08 13:47:11 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Window manager based on BlackBox"
@@ -8,6 +8,9 @@ SRC_URI="http://download.sourceforge.net/${PN}/${P}.tar.gz
 http://fluxbox.sourceforge.net/download/patches/${P}-bugfix2.patch"
 
 HOMEPAGE="http://fluxbox.sf.net"
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86"
 
 DEPEND="virtual/x11"
 	

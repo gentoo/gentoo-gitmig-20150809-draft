@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Spider <spider@gentoo.org>
 # Maintainer: Spider <spider@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/waimea/waimea-0.3.2.ebuild,v 1.1 2002/05/23 03:57:22 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/waimea/waimea-0.3.2.ebuild,v 1.2 2002/07/08 13:47:11 aliz Exp $
  
 S=${WORKDIR}/${P}
 DESCRIPTION="Window manager based on BlackBox"
@@ -10,6 +10,8 @@ SRC_URI="http://download.sourceforge.net/${PN}/${P}.tar.gz
 http://130.239.134.83/waimea/files/unstable/source/${P}.tar.gz"
 HOMEPAGE="http://waimea.sf.net"
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86"
 
 DEPEND="virtual/x11 media-libs/imlib2"
 	

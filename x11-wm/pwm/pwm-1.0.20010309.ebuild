@@ -1,13 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/pwm/pwm-1.0.20010309.ebuild,v 1.2 2001/12/21 16:07:31 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/pwm/pwm-1.0.20010309.ebuild,v 1.3 2002/07/08 13:47:11 aliz Exp $
 
 NPV=20010309
 S=${WORKDIR}/pwm-${NPV}
 DESCRIPTION="A lightweight window manager"
 SRC_URI="http://www.students.tut.fi/~tuomov/dl/pwm-${NPV}.tar.gz"
 HOMEPAGE="http://www.students.tut.fi/~tuomov/pwm"
+LICENSE="Artistic"
+SLOT="0"
+KEYWORDS="x86"
 
 DEPEND="virtual/x11"
 

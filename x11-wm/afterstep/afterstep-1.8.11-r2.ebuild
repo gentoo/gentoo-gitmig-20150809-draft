@@ -6,6 +6,9 @@ S=${WORKDIR}/AfterStep-${PV}
 DESCRIPTION="A window manager based on the NeXTStep interface."
 SRC_URI="ftp://ftp.afterstep.org/stable/AfterStep-${PV}.tar.bz2"
 HOMEPAGE="http://www.afterstep.org/"
+LICENSE="AFTERSTEP"
+SLOT="0"
+KEYWORDS="x86"
 
 DEPEND="virtual/glibc virtual/x11
 	>=media-libs/jpeg-6b

@@ -1,12 +1,15 @@
 # Copyright 2001 theLeaf sprl/bvba
 # Author Geert Bevin <gbevin@theleaf.be>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish-merlin/sawfish-merlin-1.0.1-r2.ebuild,v 1.2 2002/05/27 17:27:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/sawfish-merlin/sawfish-merlin-1.0.1-r2.ebuild,v 1.3 2002/07/08 13:47:11 aliz Exp $
 
 MY_P=${P/-merlin/}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Extensions for sawfish which provide pages, iconbox and other nice things."
 SRC_URI="mirror://sourceforge/sawmill/${MY_P}.tar.gz"
 HOMEPAGE="http://www.merlin.org/sawfish"
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86"
 
 DEPEND=">=x11-libs/rep-gtk-0.15-r1
 	>=dev-libs/librep-0.14

@@ -1,13 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Michael Conrad Tilstra <tadpol@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/flwm/flwm-1.00-r2.ebuild,v 1.2 2002/04/12 20:25:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/flwm/flwm-1.00-r2.ebuild,v 1.3 2002/07/08 13:47:11 aliz Exp $
 
 S=${WORKDIR}/${P}
 
 SRC_URI="http://flwm.sourceforge.net/${P}.tgz"
 
 HOMEPAGE="http://flwm.sourceforge.net"
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86"
 
 DESCRIPTION="A lightweight window manager based on fltk"
 
