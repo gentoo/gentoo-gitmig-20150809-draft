@@ -1,20 +1,18 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.0.2.ebuild,v 1.8 2004/12/27 14:38:06 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/spamassassin/spamassassin-3.0.2.ebuild,v 1.9 2005/01/22 06:27:46 vapier Exp $
 
 inherit perl-module
 
-DESCRIPTION="SpamAssassin is an extensible email filter which is used to identify spam."
-HOMEPAGE="http://spamassassin.apache.org/"
-LICENSE="Apache-2.0"
-
 MY_P=Mail-SpamAssassin-${PV//_/-}
 S=${WORKDIR}/${MY_P}
-
+DESCRIPTION="SpamAssassin is an extensible email filter which is used to identify spam."
+HOMEPAGE="http://spamassassin.apache.org/"
 SRC_URI="http://www.apache.org/dist/spamassassin/${MY_P}.tar.bz2"
 
+LICENSE="Apache-2.0"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa ~ia64 amd64 ppc64"
+KEYWORDS="x86 ppc sparc alpha hppa ia64 amd64 ppc64"
 IUSE="berkdb qmail ssl doc"
 
 DEPEND=">=dev-lang/perl-5.8.2-r1
@@ -203,4 +201,3 @@ pkg_postinst() {
 	ewarn "configured to do so"
 	ewarn
 }
-
