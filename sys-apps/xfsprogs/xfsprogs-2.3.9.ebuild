@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsprogs/xfsprogs-2.3.9.ebuild,v 1.4 2003/06/09 19:57:59 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xfsprogs/xfsprogs-2.3.9.ebuild,v 1.5 2003/06/10 16:16:45 bcowan Exp $
 
 inherit flag-o-matic
 
@@ -26,6 +26,7 @@ src_unpack() {
 	    -e 's:-O1::' -e '/-S $(PKG/d' \
 	    -e 's:^PKG_\(.*\)_DIR[[:space:]]*= \(.*\)$:PKG_\1_DIR = $(DESTDIR)\2:' \
 	    include/builddefs.in.orig > include/builddefs.in || die "sed failed"
+	chmod u+w include/builddefs.in
 }	
 
 src_compile() {
