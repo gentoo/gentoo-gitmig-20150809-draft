@@ -1,0 +1,70 @@
+diff --exclude=Makefile.in -Nrc -x *~ gtk+-1.2.10.orig/gtk/gtkfilesel.c gtk+-1.2.10/gtk/gtkfilesel.c
+*** gtk+-1.2.10.orig/gtk/gtkfilesel.c	Fri Apr 13 02:25:17 2001
+--- gtk+-1.2.10/gtk/gtkfilesel.c	Fri Apr 13 02:24:52 2001
+***************
+*** 2081,2086 ****
+--- 2081,2088 ----
+  
+  static GtkWindowClass *parent_class = NULL;
+  
++ static char *last_dir = NULL;
++ 
+  /* Saves errno when something cmpl does fails. */
+  static gint cmpl_errno;
+  
+***************
+*** 2347,2353 ****
+      }
+    else
+      {
+!       gtk_file_selection_populate (filesel, "", FALSE);
+      }
+  
+    gtk_widget_grab_focus (filesel->selection_entry);
+--- 2349,2362 ----
+      }
+    else
+      {
+!       if (last_dir) 
+! 	{
+! 	  gtk_file_selection_populate (filesel, last_dir, FALSE);
+! 	}
+!       else
+! 	{
+! 	  gtk_file_selection_populate (filesel, "", FALSE);
+! 	}
+      }
+  
+    gtk_widget_grab_focus (filesel->selection_entry);
+***************
+*** 3309,3314 ****
+--- 3318,3325 ----
+  
+    if (!did_recurse)
+      {
++       char *dirname;
++       struct stat ent_sbuf;
+        if (fs->selection_entry)
+  	gtk_entry_set_position (GTK_ENTRY (fs->selection_entry), selection_index);
+  
+***************
+*** 1467,1472 ****
+--- 1478,1495 ----
+  	  gtk_file_selection_update_history_menu (fs, cmpl_reference_position (cmpl_state));
+  	}
+  
++       dirname = cmpl_reference_position (cmpl_state);
++       if(dirname && stat(dirname, &ent_sbuf) >= 0 && S_ISDIR(ent_sbuf.st_mode))
++         {
++           if (last_dir) 
++             {
++               g_free (last_dir);
++             }
++
++
++           
++           last_dir = g_strdup_printf ("%s%c", dirname, G_DIR_SEPARATOR);
++         }
+      }
+  }
+  
