@@ -1,0 +1,17 @@
+--- groff-1.18/doc/Makefile.sub.orig	2002-12-27 22:10:47.000000000 +0200
++++ groff-1.18/doc/Makefile.sub	2002-12-27 22:11:18.000000000 +0200
+@@ -60,12 +60,12 @@
+ HTMLDOCIMAGEFILES=\
+   pic*
+ 
+-EXAMPLEFILES=\
++EXAMPLEFILES=#\
+   webpage.ms \
+   grnexmpl.g \
+   grnexmpl.me
+ 
+-PROCESSEDEXAMPLEFILES=\
++PROCESSEDEXAMPLEFILES=#\
+   webpage.ps \
+   gnu.eps \
+   gnu.png \
