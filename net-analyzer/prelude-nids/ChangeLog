@@ -1,0 +1,10 @@
+# ChangeLog for net-analyzer/prelude-nids
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nids/ChangeLog,v 1.1 2003/06/21 17:16:05 solar Exp $
+
+*prelude-nids-0.8.1 (21 Jun 2003)
+
+  21 Jun 2003; Ned Ludd <solar@gentoo.org> Manifest,
+  prelude-nids-0.8.1.ebuild, files/gentoo.conf, files/gentoo.init:
+  Initial ebuild contributed by Michael Boman, SecureCiRT Pte Ltd
+
