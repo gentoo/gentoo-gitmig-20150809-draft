@@ -1,0 +1,8 @@
+# ChangeLog for x11-misc/skippy
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/skippy/ChangeLog,v 1.1 2004/06/02 12:25:40 port001 Exp $
+
+  02 Jun 2004; Ian Leitch <port001@gentoo.org> :
+  Initial commit. Thanks to Roshan Sembacuttiaratchy
+  <rns.gentoobugzilla.n.semba@xoxy.net> for the ebuild. #51595
+
