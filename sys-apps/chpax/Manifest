@@ -1,3 +1,6 @@
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/Manifest,v 1.25 2003/12/09 05:49:54 solar Exp $
 MD5 6ac60e5d68731642288e56e2feed339a ChangeLog 1748
 MD5 e6543624c262cae90cc830cde90ad3ae metadata.xml 165
 MD5 0ff6b5cc322eacad2902b4c8fb538da8 chpax-0.5.ebuild 952
