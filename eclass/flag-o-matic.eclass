@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.72 2004/10/09 18:28:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.73 2004/10/13 14:11:52 vapier Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -439,4 +439,35 @@ fstack-flags() {
 			export CFLAGS="${CFLAGS} `test_flag -fno-stack-protector`"
 	fi
 	return 0
+}
+
+# This is thanks to great work from Paul de Vrieze <gentoo-user@devrieze.net>,
+# bug #9016.  Also thanks to Jukka Salmi <salmi@gmx.net> (bug #13907) for more
+# fixes.
+#
+# Export CFLAGS and CXXFLAGS that are compadible with gcc-2.95.3
+gcc2-flags() {
+	CFLAGS=${CFLAGS//pentium-mmx/i586}
+	CFLAGS=${CFLAGS//pentium[234]/i686}
+	CFLAGS=${CFLAGS//k6-[23]/k6}
+	CFLAGS=${CFLAGS//athlon-tbird/i686}
+	CFLAGS=${CFLAGS//athlon-4/i686}
+	CFLAGS=${CFLAGS//athlon-[xm]p/i686}
+	CFLAGS=${CFLAGS//athlon/i686}
+
+	CXXFLAGS=${CXXFLAGS//pentium-mmx/i586}
+	CXXFLAGS=${CXXFLAGS//pentium[234]/i686}
+	CXXFLAGS=${CXXFLAGS//k6-[23]/k6}
+	CXXFLAGS=${CXXFLAGS//athlon-tbird/i686}
+	CXXFLAGS=${CXXFLAGS//athlon-4/i686}
+	CXXFLAGS=${CXXFLAGS//athlon-[xm]p/i686}
+	CXXFLAGS=${CXXFLAGS//athlon/i686}
+
+	if [ "$ARCH" = alpha ]; then
+		CHOST=${CHOST/#alphaev6[78]/alphaev6}
+		CFLAGS=${CFLAGS//ev6[78]/ev6}
+		CXXFLAGS=${CXXFLAGS//ev6[78]/ev6}
+	fi
+
+	export CFLAGS CXXFLAGS
 }
