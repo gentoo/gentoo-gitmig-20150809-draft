@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/cmucl-18e-r1.ebuild,v 1.1 2003/11/25 07:20:13 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cmucl/cmucl-18e-r1.ebuild,v 1.2 2003/11/25 17:40:20 mkennedy Exp $
 
 # This package is a port of the Debian package of the same name.
 DEB_PV=7
@@ -15,7 +15,7 @@ DEPEND="dev-lisp/common-lisp-controller
 #	X? ( x11-libs/lesstif )"
 IUSE="doc X"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SRC_URI="http://ftp.debian.org/debian/pool/main/c/cmucl/cmucl_${PV}.orig.tar.gz
 	http://ftp.debian.org/debian/pool/main/c/cmucl/cmucl_${PV}-${DEB_PV}.diff.gz
 	http://cmucl.cons.org/ftp-area/cmucl/release/18e/cmucl-${PV}-x86-linux.tar.bz2"
