@@ -1,0 +1,184 @@
+diff -urN ppp-2.4.1.pppoe4-orig/chat/Makefile.linux ppp-2.4.1.pppoe4/chat/Makefile.linux
+--- ppp-2.4.1.pppoe4-orig/chat/Makefile.linux	1999-08-12 21:54:32.000000000 -0400
++++ ppp-2.4.1.pppoe4/chat/Makefile.linux	2002-10-04 12:46:49.000000000 -0400
+@@ -6,14 +6,14 @@
+ CDEF4=	-DFNDELAY=O_NDELAY		# Old name value
+ CDEFS=	$(CDEF1) $(CDEF2) $(CDEF3) $(CDEF4)
+ 
+-CFLAGS=	-O2 -g -pipe $(CDEFS)
++CFLAGS=	$(COPTS) $(CDEFS)
+ 
+ INSTALL= install
+ 
+ all:	chat
+ 
+ chat:	chat.o
+-	$(CC) -o chat chat.o
++	$(CC) $(LDFLAGS) -o chat chat.o
+ 
+ chat.o:	chat.c
+ 	$(CC) -c $(CFLAGS) -o chat.o chat.c
+diff -urN ppp-2.4.1.pppoe4-orig/pppd/options.c ppp-2.4.1.pppoe4/pppd/options.c
+--- ppp-2.4.1.pppoe4-orig/pppd/options.c	2001-03-30 19:33:55.000000000 -0500
++++ ppp-2.4.1.pppoe4/pppd/options.c	2002-10-04 12:48:21.000000000 -0400
+@@ -67,6 +67,9 @@
+ char	user[MAXNAMELEN];	/* Username for PAP */
+ char	passwd[MAXSECRETLEN];	/* Password for PAP */
+ bool	persist = 0;		/* Reopen link after it goes down */
++bool	killoldaddr = 0;		/* If our IP is reassigned on
++				    reconnect, kill active TCP
++				     connections using the old IP. */
+ char	our_name[MAXNAMELEN];	/* Our name for authentication purposes */
+ bool	demand = 0;		/* do dial-on-demand */
+ char	*ipparam = NULL;	/* Extra parameter for ip up/down scripts */
+@@ -186,6 +189,11 @@
+     { "demand", o_bool, &demand,
+       "Dial on demand", OPT_INITONLY | 1, &persist },
+ 
++    { "killoldaddr", o_bool, &killoldaddr,
++      "Kill connections from an old source address", 1},
++    { "nokilloldaddr", o_bool,&killoldaddr,
++      "Don't kill connections from an old source address" },
++
+     { "--version", o_special_noarg, (void *)showversion,
+       "Show version number" },
+     { "--help", o_special_noarg, (void *)showhelp,
+diff -urN ppp-2.4.1.pppoe4-orig/pppd/pppd.h ppp-2.4.1.pppoe4/pppd/pppd.h
+--- ppp-2.4.1.pppoe4-orig/pppd/pppd.h	2001-04-01 15:06:17.000000000 -0400
++++ ppp-2.4.1.pppoe4/pppd/pppd.h	2002-10-04 12:46:49.000000000 -0400
+@@ -252,6 +252,9 @@
+ extern char	remote_name[MAXNAMELEN]; /* Peer's name for authentication */
+ extern bool	explicit_remote;/* remote_name specified with remotename opt */
+ extern bool	demand;		/* Do dial-on-demand */
++extern bool	killoldaddr;	/* If our IP is reassigned on
++				    reconnect, kill active TCP
++				     connections using the old IP. */
+ extern char	*ipparam;	/* Extra parameter for ip up/down scripts */
+ extern bool	cryptpap;	/* Others' PAP passwords are encrypted */
+ extern int	idle_time_limit;/* Shut down link if idle for this long */
+diff -urN ppp-2.4.1.pppoe4-orig/pppd/sys-linux.c ppp-2.4.1.pppoe4/pppd/sys-linux.c
+--- ppp-2.4.1.pppoe4-orig/pppd/sys-linux.c	2001-07-26 16:19:33.000000000 -0400
++++ ppp-2.4.1.pppoe4/pppd/sys-linux.c	2002-10-04 12:46:49.000000000 -0400
+@@ -114,6 +114,10 @@
+ 
+ #endif /* INET6 */
+ 
++#ifndef SIOCKILLADDR
++#define SIOCKILLADDR	0x8939
++#endif
++
+ /* We can get an EIO error on an ioctl if the modem has hung up */
+ #define ok_error(num) ((num)==EIO)
+ 
+@@ -151,6 +155,7 @@
+ static u_int32_t proxy_arp_addr;	/* Addr for proxy arp entry added */
+ static char proxy_arp_dev[16];		/* Device for proxy arp entry */
+ static u_int32_t our_old_addr;		/* for detecting address changes */
++static u_int32_t our_current_addr;
+ static int	dynaddr_set;		/* 1 if ip_dynaddr set */
+ static int	looped;			/* 1 if using loop */
+ static int	link_mtu;		/* mtu for the link (not bundle) */
+@@ -504,6 +509,27 @@
+     return -1;
+ }
+ 
++static void do_killaddr(u_int32_t oldaddr)
++{
++    struct ifreq   ifr; 
++
++    memset(&ifr,0,sizeof ifr);
++
++    SET_SA_FAMILY (ifr.ifr_addr,    AF_INET); 
++    SET_SA_FAMILY (ifr.ifr_dstaddr, AF_INET); 
++    SET_SA_FAMILY (ifr.ifr_netmask, AF_INET); 
++    
++    SIN_ADDR(ifr.ifr_addr) = oldaddr;
++
++    strlcpy(ifr.ifr_name, ifname, sizeof (ifr.ifr_name));
++    
++    if(ioctl(sock_fd,SIOCKILLADDR,&ifr) < 0) {
++      if (!ok_error (errno))
++	error("ioctl(SIOCKILLADDR): %m(%d)", errno);
++      return;
++    }
++}
++
+ /********************************************************************
+  *
+  * tty_disestablish_ppp - Restore the serial port to normal operation.
+@@ -2290,21 +2316,29 @@
+ 	}
+     }
+ 
+-    /* set ip_dynaddr in demand mode if address changes */
+-    if (demand && tune_kernel && !dynaddr_set
+-	&& our_old_addr && our_old_addr != our_adr) {
++    if(persist && our_old_addr && our_old_addr != our_adr) {
++
++      if(killoldaddr)
++	do_killaddr(our_old_addr);
++
++	
++      /* set ip_dynaddr in persist mode if address changes */
++      if (tune_kernel && !dynaddr_set) {
+ 	/* set ip_dynaddr if possible */
+ 	char *path;
+ 	int fd;
+ 
+ 	path = path_to_procfs("/sys/net/ipv4/ip_dynaddr");
+ 	if (path != 0 && (fd = open(path, O_WRONLY)) >= 0) {
+-	    if (write(fd, "1", 1) != 1)
+-		error("Couldn't enable dynamic IP addressing: %m");
+-	    close(fd);
++	  if (write(fd, "1", 1) != 1)
++	    error("Couldn't enable dynamic IP addressing: %m");
++	  close(fd);
+ 	}
+ 	dynaddr_set = 1;	/* only 1 attempt */
++      }
+     }
++
++    our_current_addr = our_adr;
+     our_old_addr = 0;
+ 
+     return 1;
+@@ -2360,7 +2394,8 @@
+     }
+ 
+     our_old_addr = our_adr;
+-
++    our_current_addr = 0;
++    
+     return 1;
+ }
+ 
+diff -urN ppp-2.4.1.pppoe4-orig/pppdump/Makefile.linux ppp-2.4.1.pppoe4/pppdump/Makefile.linux
+--- ppp-2.4.1.pppoe4-orig/pppdump/Makefile.linux	1999-07-26 07:09:29.000000000 -0400
++++ ppp-2.4.1.pppoe4/pppdump/Makefile.linux	2002-10-04 12:46:49.000000000 -0400
+@@ -1,4 +1,4 @@
+-CFLAGS= -O -I../include/net
++CFLAGS= $(COPTS) -I../include/net
+ OBJS = pppdump.o bsd-comp.o deflate.o zlib.o
+ 
+ INSTALL= install
+@@ -6,7 +6,7 @@
+ all:	pppdump
+ 
+ pppdump: $(OBJS)
+-	$(CC) -o pppdump $(OBJS)
++	$(CC) $(LDFLAGS) -o pppdump $(OBJS)
+ 
+ clean:
+ 	rm -f pppdump $(OBJS) *~
+diff -urN ppp-2.4.1.pppoe4-orig/pppstats/Makefile.linux ppp-2.4.1.pppoe4/pppstats/Makefile.linux
+--- ppp-2.4.1.pppoe4-orig/pppstats/Makefile.linux	1998-03-24 21:21:19.000000000 -0500
++++ ppp-2.4.1.pppoe4/pppstats/Makefile.linux	2002-10-04 12:46:49.000000000 -0400
+@@ -22,7 +22,7 @@
+ 	$(INSTALL) -c -m 444 pppstats.8 $(MANDIR)/man8/pppstats.8
+ 
+ pppstats: $(PPPSTATSRCS)
+-	$(CC) $(CFLAGS) -o pppstats pppstats.c $(LIBS)
++	$(CC) $(CFLAGS) $(LDFLAGS) -o pppstats pppstats.c $(LIBS)
+ 
+ clean:
+ 	rm -f pppstats *~ #* core

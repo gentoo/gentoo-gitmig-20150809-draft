@@ -1,0 +1,28 @@
+#!/bin/sh
+
+# this is a script which is executed after connecting the ppp interface.
+# look at man pppd for details
+
+# the followings parameters are available:
+# $1 = interface-name
+# $2 = tty-device
+# $3 = speed
+# $4 = local-IP-address
+# $5 = remote-IP-address
+# $6 = ipparam
+
+if [ "$USEPEERDNS" ]; then
+
+	# add the server supplied DNS entries to /etc/resolv.conf
+	/bin/cp -f /etc/resolv.conf /etc/resolv.conf.old
+	/bin/cat /etc/ppp/resolv.conf >> /etc/resolv.conf
+
+	# Change perms because it b0rked kppp
+	chmod 640 /etc/resolv.conf
+	chown root:users /etc/resolv.conf
+
+fi
+
+[ -f /etc/init.d/firewall ] && /etc/init.d/firewall start
+
+[ -f /etc/ppp/ip-up.local ] && . /etc/ppp/ip-up.local

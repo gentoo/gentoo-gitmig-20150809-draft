@@ -1,0 +1,80 @@
+diff -Naur ppp-2.4.2b3-orig/pppd/Makefile.linux ppp-2.4.2b3/pppd/Makefile.linux
+--- ppp-2.4.2b3-orig/pppd/Makefile.linux	2003-12-08 15:38:14.000000000 -0500
++++ ppp-2.4.2b3/pppd/Makefile.linux	2003-12-08 15:41:52.000000000 -0500
+@@ -31,7 +31,7 @@
+ 
+ # CC = gcc
+ #
+-COPTS = -O2 -pipe -Wall -g
++COPTS = $(COPTS) -Wall
+ LIBS =
+ 
+ # Uncomment the next 2 lines to include support for Microsoft's
+diff -Naur ppp-2.4.2b3-orig/pppd/plugins/Makefile ppp-2.4.2b3/pppd/plugins/Makefile
+--- ppp-2.4.2b3-orig/pppd/plugins/Makefile	2002-12-06 04:48:53.000000000 -0500
++++ ppp-2.4.2b3/pppd/plugins/Makefile	2003-12-08 15:42:40.000000000 -0500
+@@ -1,5 +1,5 @@
+ CC	= gcc
+-CFLAGS	= -g -O2 -I.. -I../../include -fPIC
++CFLAGS	= $(COPTS) -I.. -I../../include -fPIC
+ LDFLAGS	= -shared
+ INSTALL	= install -o root
+ 
+diff -Naur ppp-2.4.2b3-orig/pppd/plugins/Makefile.linux ppp-2.4.2b3/pppd/plugins/Makefile.linux
+--- ppp-2.4.2b3-orig/pppd/plugins/Makefile.linux	2002-12-06 04:48:53.000000000 -0500
++++ ppp-2.4.2b3/pppd/plugins/Makefile.linux	2003-12-08 15:42:40.000000000 -0500
+@@ -1,5 +1,5 @@
+ CC	= gcc
+-CFLAGS	= -g -O2 -I.. -I../../include -fPIC
++CFLAGS	= $(COPTS) -I.. -I../../include -fPIC
+ LDFLAGS	= -shared
+ INSTALL	= install -o root
+ 
+diff -Naur ppp-2.4.2b3-orig/pppd/plugins/radius/Makefile ppp-2.4.2b3/pppd/plugins/radius/Makefile
+--- ppp-2.4.2b3-orig/pppd/plugins/radius/Makefile	2002-11-09 06:24:42.000000000 -0500
++++ ppp-2.4.2b3/pppd/plugins/radius/Makefile	2003-12-08 15:43:02.000000000 -0500
+@@ -5,7 +5,7 @@
+ 
+ MANDIR=/usr/man
+ PLUGIN=radius.so radattr.so radrealms.so
+-CFLAGS=-I../.. -I../../../include -Iradiusclient/include -O2
++CFLAGS=$(COPTS) -I../.. -I../../../include -Iradiusclient/include
+ 
+ # Uncomment the next line to include support for Microsoft's
+ # MS-CHAP authentication protocol.
+diff -Naur ppp-2.4.2b3-orig/pppd/plugins/radius/Makefile.linux ppp-2.4.2b3/pppd/plugins/radius/Makefile.linux
+--- ppp-2.4.2b3-orig/pppd/plugins/radius/Makefile.linux	2002-11-09 06:24:42.000000000 -0500
++++ ppp-2.4.2b3/pppd/plugins/radius/Makefile.linux	2003-12-08 15:43:02.000000000 -0500
+@@ -5,7 +5,7 @@
+ 
+ MANDIR=/usr/man
+ PLUGIN=radius.so radattr.so radrealms.so
+-CFLAGS=-I../.. -I../../../include -Iradiusclient/include -O2
++CFLAGS=$(COPTS) -I../.. -I../../../include -Iradiusclient/include
+ 
+ # Uncomment the next line to include support for Microsoft's
+ # MS-CHAP authentication protocol.
+diff -Naur ppp-2.4.2b3-orig/pppd/plugins/rp-pppoe/Makefile ppp-2.4.2b3/pppd/plugins/rp-pppoe/Makefile
+--- ppp-2.4.2b3-orig/pppd/plugins/rp-pppoe/Makefile	2001-12-13 21:55:20.000000000 -0500
++++ ppp-2.4.2b3/pppd/plugins/rp-pppoe/Makefile	2003-12-08 15:43:28.000000000 -0500
+@@ -16,7 +16,7 @@
+ # Version is set ONLY IN THE MAKEFILE!  Don't delete this!
+ VERSION=3.3
+ 
+-CFLAGS+=-I../../../include/linux
++CFLAGS+=$(COPTS) -I../../../include/linux
+ all: rp-pppoe.so
+ 
+ rp-pppoe.so: libplugin.a plugin.o
+diff -Naur ppp-2.4.2b3-orig/pppd/plugins/rp-pppoe/Makefile.linux ppp-2.4.2b3/pppd/plugins/rp-pppoe/Makefile.linux
+--- ppp-2.4.2b3-orig/pppd/plugins/rp-pppoe/Makefile.linux	2001-12-13 21:55:20.000000000 -0500
++++ ppp-2.4.2b3/pppd/plugins/rp-pppoe/Makefile.linux	2003-12-08 15:43:28.000000000 -0500
+@@ -16,7 +16,7 @@
+ # Version is set ONLY IN THE MAKEFILE!  Don't delete this!
+ VERSION=3.3
+ 
+-CFLAGS+=-I../../../include/linux
++CFLAGS+=$(COPTS) -I../../../include/linux
+ all: rp-pppoe.so
+ 
+ rp-pppoe.so: libplugin.a plugin.o

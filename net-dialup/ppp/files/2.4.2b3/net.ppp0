@@ -1,0 +1,206 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/files/2.4.2b3/net.ppp0,v 1.1 2003/12/22 15:05:26 lanius Exp $
+
+# Misc internal variables
+CMD_LINE=""
+FUNCT="$2"
+TEMPLATEDIR="/etc/ppp"
+
+checkconfig() {
+
+	if [ -e "/var/run/ppp-${IFACE}.pid" -o -e "/var/run/${IFACE}.pid" ] && \
+	   [ "${FUNCT}" = "start" ]
+	then
+		eerror "${IFACE} is already up"
+		return 1
+	fi
+}
+
+start() {
+
+	checkconfig || return 1
+
+	setup_cmd_line
+	setup_cfg_files
+
+	ebegin "Bringing ${IFACE} up"
+	if [ -x "$(which pppd)" ]
+	then
+
+		if [ "${DEFROUTE}" = "yes" ]
+		then
+			[ -n "$(/sbin/route | egrep 'default')" ] && route del default
+		fi
+		# Added hide-password here, can't be too sure...
+		/usr/sbin/pppd ${CMD_LINE} ${MODEMPORT} ${LINESPEED} \
+			ipparam ${IFACE} linkname ${IFACE} call ${PEER} \
+			noauth ${PPPOPTIONS} hide-password
+	fi
+	eend
+}
+
+stop() {
+
+	checkconfig || return 1
+
+	ebegin "Bringing ${IFACE} down"
+	if [ -x "$(which ifconfig)" ]
+	then
+
+		# Obtain interface name from pid file (IFACE is actually linkname)
+		if [ -e /var/run/ppp-${IFACE}.pid ]
+		then
+			IFNAME=$(egrep "ppp" /var/run/ppp-${IFACE}.pid)
+		fi
+		if [ -z "${IFNAME}" ]
+		then
+			IFNAME=${IFACE}
+		fi
+
+		if [ -z "$(/sbin/ifconfig | egrep "${IFNAME}")" ]
+		then
+			# Link is not up but pppd may be running
+			ewarn "Interface seems to be down already"
+		fi
+		
+		if [ -e /var/run/ppp-${IFACE}.pid ]
+		then
+			PID=$(egrep -v "${IFNAME}" /var/run/ppp-${IFACE}.pid)
+		elif [ -e /var/run/${IFACE}.pid ]
+		then
+			PID=$(egrep -v "${IFNAME}" /var/run/${IFACE}.pid)
+		fi
+
+		if [ -n "${PID}" ]
+		then
+			kill ${PID}
+			sleep 0.5
+
+			# Try to kill pppd repeatedly (sometimes, (e.g. if connection
+			# is not established) pppd ignores SIGTERM for a while)
+			PID_TMP=`pstree -p ${PID}`
+			PID_TMP=`echo ${PID_TMP} | sed -e 's:^.*pppd(\|).*::g'`
+			COUNT=0
+			while [ -n "${PID_TMP}" ] && [ ${COUNT} -lt 10 ]
+			do
+				kill ${PID}
+				sleep 0.5
+				PID_TMP=`pstree -p ${PID}`
+				PID_TMP=`echo ${PID_TMP} | sed -e 's:^.*pppd(\|).*::g'`
+				let COUNT++
+			done
+		fi
+
+		if [ -n "${PID_TMP}" ]
+		then
+			eend 1 "Error stopping pppd"
+		fi
+
+	fi
+	eend
+}
+
+setup_cmd_line() {
+
+	CMD_LINE="lock"
+	
+	if [ "${DEBUG}" = "yes" ]
+	then
+		CMD_LINE="${CMD_LINE} debug"
+	fi
+
+	if [ "${PERSIST}" = "yes" ]
+	then
+		CMD_LINE="${CMD_LINE} persist holdoff ${RETRYTIMEOUT}"
+	fi
+
+	if [ "${DEFROUTE}" = "yes" ]
+	then
+		CMD_LINE="${CMD_LINE} defaultroute"
+	fi
+
+	if [ "${HARDFLOWCTL}" = "yes" ]
+	then
+		CMD_LINE="${CMD_LINE} modem crtscts"
+	fi
+
+	if [ "${ESCAPECHARS}" = "yes" ]
+	then
+		CMD_LINE="${CMD_LINE} asyncmap 00000000"
+	fi
+
+	if [ "${PEERDNS}" = "yes" ]
+	then
+		CMD_LINE="${CMD_LINE} usepeerdns"
+	fi
+
+	if [ -n "${IPADDR}${REMIP}" ]
+	then
+		CMD_LINE="${CMD_LINE} ${IPADDR}:${REMIP}"
+	fi
+
+	if [ -n "${NETMASK}" ]
+	then
+		CMD_LINE="${CMD_LINE} netmask ${NETMASK}"
+	fi
+
+	if [ -n "${MRU}" ]
+	then
+		CMD_LINE="${CMD_LINE} mru ${MRU}"
+	fi
+	
+	if [ -n "${MTU}" ]
+	then
+		CMD_LINE="${CMD_LINE} mtu ${MTU}"
+	fi
+	    
+	if [ -n "${USERNAME}" ]
+	then
+		CMD_LINE="${CMD_LINE} user ${USERNAME} remotename ${PEER}"
+	fi
+
+	if [ "${ONDEMAND}" = "yes" ]
+	then
+		CMD_LINE="${CMD_LINE} demand ktune idle ${IDLETIMEOUT}"
+		CMD_LINE="${CMD_LINE} holdoff ${RETRYTIMEOUT}"
+	fi
+}
+
+setup_cfg_files() {
+
+	if [ "${AUTOCFGFILES}" = "yes" ]
+	then
+		if [ -n "${NUMBER}" ]
+		then
+			# Setup the peers file
+			echo "connect '/usr/sbin/chat -f /etc/ppp/chat-${PEER}'" \
+				>/etc/ppp/peers/${PEER}
+		fi
+
+		# Setup the secrets files
+		echo "\"${USERNAME}\" ${PEER} \"${PASSWORD}\"" >/etc/ppp/chap-secrets
+		chmod 600 /etc/ppp/chap-secrets
+		echo "\"${USERNAME}\" ${PEER} \"${PASSWORD}\"" >/etc/ppp/pap-secrets
+		chmod 600 /etc/ppp/pap-secrets
+
+		# Setup the chat file
+		if [ "${AUTOCHATSCRIPT}" = "yes" ]
+		then
+			if [ -n "${INITSTRING}" ]
+			then
+				sed -e "12i\\'OK\' \'${INITSTRING}\'" \
+					-e "s:\$NUMBER:${NUMBER}:" \
+					${TEMPLATEDIR}/chat-default \
+					>/etc/ppp/chat-${PEER}
+			else
+				sed -e "s:\$NUMBER:${NUMBER}:" \
+					${TEMPLATEDIR}/chat-default \
+					>/etc/ppp/chat-${PEER}
+			fi
+		fi
+	fi
+}
+
+# vim:ts=4

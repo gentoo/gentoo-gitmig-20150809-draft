@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+            
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+            
+  <meta name="GENERATOR" content="Mozilla/4.75 [en] (X11; U; Linux 2.2.16-22 i686) [Netscape]">
+  <title>Index of /~mostrows</title>
+</head>
+ <body text="#000000" bgcolor="#ffffff" link="#0000ef" vlink="#51188e" alink="#ff0000">
+   <b><font face="Arial,Helvetica"><font size="+4">PPPoE for Linux 2.4</font></font></b>
+     
+<p><font size="+0">This is a driver for PPPoE for Linux 2.4.</font> </p>
+   
+<p><font size="+0">This driver is for 2.4 kernels only.&nbsp; For a driver 
+ for 2.2 kernels, the <a href="http://www.roaringpenguin.com">Roaring Penguin</a><br>
+  package is recommended.<br>
+  </font></p>
+   
+<p>The software on this page is currently required if you wish to use kernel-mode<br>
+  PPPoE with Roaring Penguin (see the Roaring Penguin documentation for details),<br>
+  though this functionality is currently recommended for experts only.<br>
+  </p>
+   
+<p><font size="+0">Files:</font> </p>
+   
+<p><font size="+0"> &nbsp; &nbsp; &nbsp; &nbsp; <a href="ppp-2.4.1-pppoe.patch4">
+  ppp-2.4.1-pppoe.patch4</a> &nbsp; Patch for ppp-2.4.1</font><br>
+  <font size="+0"> &nbsp; &nbsp; &nbsp; &nbsp; <a href="ppp-2.4.1-pppoe4.tgz">
+  ppp-2.4.1-pppoe4.tgz</a> &nbsp; &nbsp; &nbsp; Source of ppp-2.4.1 with patches  applied.
+</font> <br>
+  <font size="+0"> &nbsp; &nbsp; &nbsp; &nbsp; <a href="ppp-cvs.pppoe1.tgz">
+  ppp-cvs.pppoe1.tgz</a> &nbsp; &nbsp; &nbsp; Source of ppp CVS repository with patches  applied.
+</font> <br>
+  &nbsp; </p>
+   
+<p><b><font size="+0">Installation &amp; Usage:</font></b> </p>
+   
+<p><font size="+0">1.&nbsp; Configure, compile and install a 2.4 kernel.</font>
+   <br>
+  <font size="+0"><br>
+ &nbsp;&nbsp;&nbsp;&nbsp; Make sure to enable PPP over Ethernet in the kernel 
+configuration, as</font> <br>
+  <font size="+0">&nbsp;&nbsp;&nbsp;&nbsp; well as as the "Packet Socket" 
+option.&nbsp; You must also enable support</font> <br>
+  <font size="+0">&nbsp;&nbsp;&nbsp;&nbsp; for experimental drivers.</font></p>
+ 
+<p><font size="+0">&nbsp;&nbsp;&nbsp; &nbsp;If you are compiling as a module, 
+add the line "alias net-pf-24 pppoe" to<br>
+ &nbsp;&nbsp;&nbsp; &nbsp; /etc/modules.conf.</font></p>
+ 
+<p><font size="+0">&nbsp; &nbsp; &nbsp; Make sure that the /dev/ppp device 
+exists: &nbsp;"mknod /dev/ppp c 108 0"<br>
+ </font>  </p>
+   
+<p><font size="+0">2.&nbsp; Configure, compile and install the modified pppd 
+package.</font> <br>
+  <font size="+0">&nbsp;&nbsp;&nbsp;&nbsp; Links to the patch, or the complete 
+ patched source are available above.</font> </p>
+   
+<p><font size="+0">3.&nbsp; Include the following line in your ppp options 
+ file:</font> </p>
+   
+<p><font size="+0">&nbsp;&nbsp;&nbsp; plugin pppoe</font> </p>
+   
+<p><font size="+0">&nbsp;&nbsp;&nbsp; If you experience problems, try replacing 
+ the "pppoe" with the</font> <br>
+  <font size="+0">&nbsp;&nbsp;&nbsp; full path and file name of the "pppoe.so" 
+ file that is installed</font> <br>
+  <font size="+0">&nbsp;&nbsp;&nbsp; by the pppd installation.</font> </p>
+   
+<p><font size="+0">&nbsp;&nbsp;&nbsp; Following these two lines should be 
+ your other ppp options.&nbsp; My</font> <br>
+  <font size="+0">&nbsp;&nbsp;&nbsp; options file includes only one other 
+line; a "name" statement for</font> <br>
+  <font size="+0">&nbsp;&nbsp;&nbsp; PAP.</font> </p>
+   
+<p><font size="+0">4.&nbsp; Invoke pppd (e.g.: "pppd eth0").&nbsp; Before 
+ doing this, make sure the ethernet</font> <br>
+  <font size="+0">&nbsp;&nbsp;&nbsp;&nbsp; device is up ("ifconfig eth0 up"
+ has been executed).</font> <br>
+  <font size="+0"></font>&nbsp; <br>
+  &nbsp; </p>
+   
+<p><b><font size="+0">Other Stuff:</font></b> </p>
+   
+<p><font size="+0">1.&nbsp; You can restrict pppd to connect to specific access-concentrators</font>
+  <br>
+  <font size="+0">&nbsp;&nbsp;&nbsp; or specific services by addin "pppoe_ac_name" 
+ and "pppoe_srv_name"</font> <br>
+  <font size="+0">&nbsp;&nbsp;&nbsp; options (respectively) to your options 
+ file.&nbsp; Each of these options is</font> <br>
+  <font size="+0">&nbsp;&nbsp;&nbsp; followed by a string specifying the
+conecntrator  or service name that</font> <br>
+  <font size="+0">&nbsp;&nbsp;&nbsp; is to be matched. Most people should 
+not need this.</font> <br>
+  &nbsp; </p>
+   
+<p><font size="+0">2.&nbsp; Here's how I've configured things to get a server 
+ working:</font> </p>
+   
+<p><font size="+0">&nbsp;&nbsp;&nbsp; client's /etc/ppp/options:</font> </p>
+   
+<p><font size="+0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; plugin /usr/lib/pppd/plugins/pppoe.so</font>
+   <br>
+  <font size="+0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; name papname</font>
+   </p>
+   
+<p><font size="+0">&nbsp;&nbsp;&nbsp; client's /etc/ppp/pap-secrets:</font>
+   </p>
+   
+<p><font size="+0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; papname * papsecret</font>
+   </p>
+   
+<p><font size="+0">&nbsp;&nbsp;&nbsp; server's /etc/ppp/options:</font> </p>
+   
+<p><font size="+0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; plugin /usr/lib/pppd/plugins/pppoe.so</font>
+   <br>
+  <font size="+0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pppoe_server</font>
+   <br>
+  <font size="+0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +pap</font>
+<br>
+  <font size="+0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10.10.10.1:</font>
+   </p>
+   
+<p><font size="+0">&nbsp;&nbsp;&nbsp; server's /etc/ppp/pap-secrets:</font>
+   </p>
+   
+<p><font size="+0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; papname * papsecret 
+ 10.10.10.0/24+ !10.10.10.1</font> <br>
+  &nbsp; </p>
+   
+<p><font size="+0">&nbsp;&nbsp;&nbsp; On both the client and the server, pppd
+is invoked as "pppd eth0".</font> <br>
+  <font size="+0">&nbsp;&nbsp;&nbsp; With this setup you will have to invoke 
+ a new pppd on the server for</font> <br>
+  <font size="+0">&nbsp;&nbsp;&nbsp; each session.</font> </p>
+   
+<p><font size="+0">&nbsp;&nbsp;&nbsp; The patched pppd also builds a new pppoed
+which can be used to create</font> <br>
+  <font size="+0">&nbsp;&nbsp;&nbsp; a PPPoE server capable of serving multiple
+ clients.&nbsp; To use this ,</font> <br>
+  <font size="+0">&nbsp;&nbsp;&nbsp; remove the "pppoe_server" line from
+the  server's /etc/ppp/options</font> <br>
+  <font size="+0">&nbsp;&nbsp;&nbsp; file.&nbsp; Invoke pppoed as: "pppoed 
+-S -I eth0 -A ac_name -S srv_name".</font> <br>
+  <font size="+0">&nbsp;&nbsp;&nbsp; pppoed will now create a new pppd process
+ for each incoming connection.</font> <br>
+  <font size="+0">&nbsp;&nbsp;&nbsp; Note: this is still rather flaky, use
+ with caution&nbsp; If pppoed seems to jam,</font> <br>
+  <font size="+0">&nbsp;&nbsp;&nbsp; restarting it will not affect existing 
+ connections.</font> <br>
+  &nbsp; </p>
+   
+<p>3.&nbsp; If you're trying to run masquerading over your PPPoE link, check
+ out&nbsp; <a href="http://www.hgfelger.de/mss/mss.html">this</a> <br>
+  &nbsp;&nbsp;&nbsp;&nbsp; page for instructions on how to ensure that path
+ MTU's are properly <br>
+  &nbsp;&nbsp;&nbsp;&nbsp; reported across your network.&nbsp;&nbsp; Without
+ this your masquerading will <br>
+  &nbsp;&nbsp;&nbsp;&nbsp; not work. </p>
+   
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <a href="http://www.hgfelger.de/mss/mss.html">
+  http://www.hgfelger.de/mss/mss.html</a> <br>
+  &nbsp; </p>
+   
+<p><font size="+0">Michal Ostrowski</font> <br>
+  <font size="+0"><a href="mailto:mostrows@styx.uwaterloo.ca">mostrows@styx.uwaterloo.ca</a></font>
+   <br>
+  &nbsp; <br>
+  &nbsp; </p>
+   
+</body>
+</html>
