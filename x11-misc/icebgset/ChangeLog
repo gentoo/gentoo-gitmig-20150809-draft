@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/icebgset
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icebgset/ChangeLog,v 1.8 2003/07/30 10:16:00 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icebgset/ChangeLog,v 1.9 2004/02/04 10:15:17 phosphan Exp $
+
+*icebgset-1.1 (04 Feb 2004)
+
+  04 Feb 2004; Patrick Kursawe <phosphan@gentoo.org> icebgset-1.1.ebuild:
+  Version bump.
 
 *icebgset-1.0 (30 Jul 2003)
 
