@@ -1,6 +1,16 @@
-MD5 135f9b8a7a15e371ff6539b0f9d16105 ChangeLog 6691
-MD5 9e36ef1a47e8b93851a7f7f8f31f2190 acroread-5.09.ebuild 2142
-MD5 72a62111082d2e11d012a833750a8bec acroread-5.09-r1.ebuild 2334
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6dcd851661865f8547fc615b2181092a ChangeLog 6827
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
+MD5 9178090775aeac98ce721ded58a99b88 acroread-5.09.ebuild 2166
+MD5 c9fc7a5209e46cef66d68e327c11ddd9 acroread-5.09-r1.ebuild 2358
 MD5 b27aee5f7e9cf1c2026531792e263b1c files/digest-acroread-5.09-r1 62
 MD5 b27aee5f7e9cf1c2026531792e263b1c files/digest-acroread-5.09 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBfKqRVWNWqTUmv+0RAn41AKCyRw7Tc1bSGBvDWNYTr2VTPw2Q0ACfcLL1
+ImgBEEKd+SDWqRDd9SHuYng=
+=xhwP
+-----END PGP SIGNATURE-----

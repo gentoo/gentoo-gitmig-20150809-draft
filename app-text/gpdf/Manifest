@@ -1,13 +1,23 @@
-MD5 eb4e93a87c65996d466c6730fddc23d9 gpdf-0.112.ebuild 899
-MD5 3afd71baf8b818d0b24f72cee546eca9 gpdf-0.112.1.ebuild 938
-MD5 50452b7faf985a4e5ab1f120f780e0cb gpdf-0.132.ebuild 843
-MD5 d0708df9ac3ee05a391bac4188855787 gpdf-0.131.ebuild 896
-MD5 a8453e6edc2846be7da007c1057fc96a ChangeLog 4522
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c023f4b86542d55d2a1af1da0f53d0f1 ChangeLog 4713
+MD5 446cf9562c58fcc1c7b091e8bf5079b3 gpdf-2.8.0.ebuild 877
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 9150b4905c0bd7d3e573939e9705cf88 gpdf-2.8.0.ebuild 848
-MD5 5eb7a7d4c21d5b8d0b5c4aaa6cf48497 files/digest-gpdf-0.112.1 65
+MD5 97f8e33871a879694072ecbcb15f8109 gpdf-0.112.1.ebuild 964
+MD5 feb7fdf2f480631492191491302c0812 gpdf-0.112.ebuild 925
+MD5 38550e0c3c0410b03f5dde6dd1f0b3ce gpdf-0.131.ebuild 925
+MD5 5907625e80bdb0965456f467553857e6 gpdf-0.132.ebuild 872
+MD5 f61386d00d5674f3bbb80b181e8cea3a files/digest-gpdf-2.8.0 64
 MD5 a257b05533ebd7ecff92c22511880be3 files/digest-gpdf-0.112 63
+MD5 5eb7a7d4c21d5b8d0b5c4aaa6cf48497 files/digest-gpdf-0.112.1 65
+MD5 9336bbbfbb54ba88fb5e4aba2da1833f files/gpdf-0.112-remove_gtk24_call.patch 607
 MD5 cee45d187382024b10b02c4c577a7546 files/digest-gpdf-0.131 64
 MD5 167bcfd9a6e435acc241c07dc522b562 files/digest-gpdf-0.132 64
-MD5 f61386d00d5674f3bbb80b181e8cea3a files/digest-gpdf-2.8.0 64
-MD5 9336bbbfbb54ba88fb5e4aba2da1833f files/gpdf-0.112-remove_gtk24_call.patch 607
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBfKq/VWNWqTUmv+0RAnm7AKCM9bp/TL9gSg493JD6C3TTThHeGQCfSkCs
+GtVTdM8Cn3kI+/UlFMXS3vo=
+=O4we
+-----END PGP SIGNATURE-----

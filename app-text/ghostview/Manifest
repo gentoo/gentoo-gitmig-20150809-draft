@@ -1,7 +1,17 @@
-MD5 a4d084affad97ee612920394e4c6d576 ghostview-1.5.ebuild 1018
-MD5 6ba7da78b4db473a7ad1d69023ae38b9 ghostview-1.5-r1.ebuild 1106
-MD5 3d0a9184c9bb0e91ea26ac4bfeb347ea ChangeLog 1696
-MD5 a964b4a03027f0ef87901d43921e0eef files/ghostview-1.5-gentoo.diff 7765
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8940c595c1e367281595ff195ca4829c ChangeLog 1831
+MD5 15c3b544cac5eb58e6e1dcc664d7604b ghostview-1.5-r1.ebuild 1131
+MD5 0d23a2d691b39205b4860511e44b2774 ghostview-1.5.ebuild 1043
 MD5 0a6983343be936ed5c9144c59a9bca0c files/digest-ghostview-1.5 65
 MD5 0a6983343be936ed5c9144c59a9bca0c files/digest-ghostview-1.5-r1 65
+MD5 a964b4a03027f0ef87901d43921e0eef files/ghostview-1.5-gentoo.diff 7765
 MD5 a964b4a03027f0ef87901d43921e0eef files/ghostview-1.5-r1-gentoo.diff 7765
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBfKsqVWNWqTUmv+0RAjNgAKCPZzo5hJmQO2pAcOUgQ1//ySmNBQCZAeIb
+0FMZYjBAo/axgFYTbjVc39k=
+=7oMc
+-----END PGP SIGNATURE-----
