@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc7.ebuild,v 1.2 2004/12/09 07:28:32 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc7.ebuild,v 1.3 2004/12/09 08:50:55 eradicator Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -57,6 +57,9 @@ src_unpack() {
 
 	# force 32 bit userland
 	[ ${ARCH} = "sparc" ] && epatch ${FILESDIR}/${P}-configure-sparc.patch
+
+	# Bad version included... may drop .so
+	libtoolize --copy --force
 
 	# bug #40317
 	elibtoolize

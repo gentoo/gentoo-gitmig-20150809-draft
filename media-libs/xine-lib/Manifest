@@ -2,8 +2,8 @@
 Hash: SHA1
 
 MD5 af08cabbae4b191018ca153392a86bea metadata.xml 304
-MD5 b89fc1bf2480d2622c4272920a11f8fa xine-lib-1_rc7.ebuild 5259
-MD5 7408bbe92cfccf8c31f236044eb6a765 ChangeLog 26600
+MD5 d2d62f59048715eaf85d88a90842729d xine-lib-1_rc7.ebuild 5327
+MD5 ac1a534d59cb6629f271cad36e984369 ChangeLog 26712
 MD5 b25152bddc933afdf390149b07f2ff43 xine-lib-1_rc5-r3.ebuild 5473
 MD5 a53b6f55661ef41e343932ceb7108cc3 xine-lib-1_rc6.ebuild 5358
 MD5 bcd5f2b8999f92c2f7215009f5ae1490 files/configure-64bit-define.patch 221
@@ -38,7 +38,7 @@ MD5 a11a93cf97cecb7c1c2b24e11a5419ae files/xine-lib-1_rc6-ffmpeg.patch 1279
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBt/6vArHZZzCEUG0RAj6lAJ0ZCeoWqqFkzs6F3SO7faJUVR8CgACggM6m
-C2pv3MwUnEJw1DQ+n9jxu48=
-=HPu0
+iD8DBQFBuBKiArHZZzCEUG0RArO0AJ9d7vje5NHmO8jSL5nOGtRD9OvQMACfe02q
+ULS9Iq4AcNap2eCKH/8SYjs=
+=mG3J
 -----END PGP SIGNATURE-----
