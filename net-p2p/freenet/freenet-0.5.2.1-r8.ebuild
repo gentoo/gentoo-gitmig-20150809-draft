@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r8.ebuild,v 1.1 2004/02/27 00:40:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r8.ebuild,v 1.2 2004/02/28 09:32:43 eradicator Exp $
 
 IUSE=""
 
@@ -39,17 +39,8 @@ src_install() {
 }
 
 pkg_preinst() {
-	if ! groupmod freenet > /dev/null 2>&1; then
-		groupadd freenet 2> /dev/null || \
-		die "Failed to create freenet group"
-	fi
-	if ! usermod freenet > /dev/null 2>&1; then
-		useradd -g freenet -s /bin/bash -d /var/empty \
-			-c "freenet" freenet 2> /dev/null || \
-			die "Failed to create freenet user"
-	else
-		usermod -s /bin/bash freenet
-	fi
+	enewgroup freenet
+	enewuser freenet -1 /bin/bash /var/freenet freenet
 }
 
 pkg_postinst() {
