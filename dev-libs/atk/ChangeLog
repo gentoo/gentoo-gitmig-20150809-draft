@@ -1,8 +1,14 @@
 # ChangeLog for dev-libs/atk
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.62 2004/12/24 00:24:44 kloeri Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.63 2005/03/07 04:09:18 leonardop Exp $
 
-  24 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> :
+*atk-1.8.0-r1 (06 Mar 2005)
+
+  06 Mar 2005; Leonardo Boshell <leonardop@gentoo.org> atk-1.8.0-r1.ebuild:
+  New revision, includes support for the `static' USE flag. Resolves bug
+  #83121.
+
+  24 Dec 2004; Bryan Ãstergaard <kloeri@gentoo.org> :
   Stable on alpha.
 
   23 Dec 2004; Guy Martin <gmsoft@gentoo.org> atk-1.8.0.ebuild:
@@ -11,7 +17,7 @@
   16 Dec 2004; Dylan Carlson <absinthe@gentoo.org> atk-1.8.0.ebuild:
   Stable on amd64.
 
-  11 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> atk-1.8.0.ebuild:
+  11 Dec 2004; Bryan Ãstergaard <kloeri@gentoo.org> atk-1.8.0.ebuild:
   Stable on alpha.
 
   11 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> atk-1.8.0.ebuild:
@@ -39,7 +45,7 @@
   05 Aug 2004; Guy Martin <gmsoft@gentoo.org> atk-1.6.1.ebuild:
   Stable on hppa.
 
-  04 Jul 2004; Bryan �stergaard <kloeri@gentoo.org> atk-1.6.1.ebuild:
+  04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> atk-1.6.1.ebuild:
   Stable on alpha.
 
   28 Jun 2004; Tom Gall <tgall@gentoo.org> atk-1.6.1.ebuild:
@@ -98,7 +104,7 @@
 
 *atk-1.4.1 (09 Oct 2003)
 
-  15 Oct 2003; Guy Martin <gmsoft�gentoo.org> atk-1.4.1.ebuild :
+  15 Oct 2003; Guy Martin <gmsoftégentoo.org> atk-1.4.1.ebuild :
   Marked stable on hppa.
 
   09 Oct 2003; Mike Gardiner <obz@gentoo.org> atk-1.4.1.ebuild:
