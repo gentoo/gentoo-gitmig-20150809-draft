@@ -1,57 +1,10 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/uclibc/README,v 1.5 2004/07/06 20:33:32 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/uclibc/README,v 1.6 2004/07/29 05:13:49 solar Exp $
 #
-# This subdir contains the cascading profiles for native uclibc environments
+# This subdir contains the cascading profiles for native uclibc environments.
 
-###############################################################################
-# This profile is *not* production ready and may damage your systems
-# integrity if used. It is therefore recomened to wait before trying to
-# use this.
-#
-# In case you want try anyway.. 
-# ACCEPT_KEYWORDS="~x86" emerge -pve system
-# unmask anything portage is yelling at you about 
-# You will need to unmask binutils as well. Bug #54059
-# echo '=sys-devel/binutils-2.15.91.0.1-r2 -* x86 ~x86' >> /etc/portage/packge.unmask
-###############################################################################
+##############################################################################
+#  These profiles is *not* production ready and may damage your systems
+#  integrity if used. It is therefore recomened to wait before trying to
+#  use these in production envionments.
+##############################################################################
 
-
-mkdir -p /etc/portage/
-cat <<EOF>> /etc/portage/package.keywords
-
-# faulty on uclibc
-#app-arch/tar ~x86
-#app-arch/gzip ~x86
-dev-libs/uclibc ~x86
-#net-misc/iputils ~x86
-#net-misc/openssh ~x86
-#sys-apps/file ~x86
-sys-apps/modutils ~x86
-#sys-apps/portage ~x86
-#sys-apps/shadow ~x86
-sys-devel/binutils -* ~x86 x86
-sys-devel/gcc -* ~x86 x86
-# stable libtool works too
-sys-devel/libtool ~x86
-sys-devel/automake ~x86
-sys-fs/devfsd ~x86
-#sys-libs/zlib ~x86
-#sys-libs/db ~x86
-sys-libs/ncurses ~x86
-sys-devel/libperl ~x86
-dev-lang/perl ~x86
-sys-libs/cracklib ~x86
-dev-util/catalyst ~x86
-sys-apps/busybox ~x86
-
-=net-analyzer/net-snmp-5.1.1 ~x86
-=net-irc/bnc-2.8.6-r1 ~x86
-=net-misc/quagga-0.96.4-r6 ~x86
-=net-wireless/ndiswrapper-0.6-r1 ~x86
-=sys-apps/paxctl-0.2 ~x86
-=sys-boot/lilo-22.5.9-r1 ~x86
-=sys-fs/cramfs-1.1 ~x86
-=sys-fs/jfsutils-1.1.5 ~x86
-
-=net-wireless/chillispot-0.94 ~x86
-
-EOF
