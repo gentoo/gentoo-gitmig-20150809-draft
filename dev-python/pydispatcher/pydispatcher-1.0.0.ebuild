@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pydispatcher/pydispatcher-1.0.0.ebuild,v 1.1 2004/07/22 06:32:24 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pydispatcher/pydispatcher-1.0.0.ebuild,v 1.2 2004/07/22 20:59:23 dholm Exp $
 
 inherit distutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_PN}-${PV}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 IUSE=""
 DEPEND="virtual/python"
