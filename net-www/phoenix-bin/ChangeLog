@@ -1,8 +1,13 @@
 # ChangeLog for net-www/phoenix-bin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/ChangeLog,v 1.17 2003/02/12 08:52:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/ChangeLog,v 1.18 2003/03/05 13:03:49 phoenix Exp $
 
 *phoenix-bin-0.5 (30 Dec 2002)
+
+  05 Mar 2003; phoen][x <phoenix@gentoo.org> phoenix-bin-0.5.ebuild
+  Updated the gtk dependencies. See bug #13112 for further details.
+  Thanks to Max Kalika <alkern23@yahoo.com> for the contribution.
+
   30 Dec 2002; Thomas Raschbacher <lordvan@gentoo.org> phoenix-bin-0.5.ebuild
   unmasked 0.5 for x86
 	

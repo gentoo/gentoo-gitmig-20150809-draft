@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/phoenix-bin-0.5.ebuild,v 1.3 2003/02/13 15:42:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/phoenix-bin-0.5.ebuild,v 1.4 2003/03/05 13:03:49 phoenix Exp $
 
 IUSE=""
 
@@ -17,7 +17,8 @@ LICENSE="MPL-1.1 NPL-1.1"
 
 DEPEND="virtual/glibc"
 RDEPEND=">=sys-libs/lib-compat-1.0-r2
-	 >=x11-libs/gtk+-1.2.10-r9
+	( gtk2? >=x11-libs/gtk+-2.0.8 :
+			=x11-libs/gtk+-1.2* )
 	 virtual/x11"
 
 src_install() {
