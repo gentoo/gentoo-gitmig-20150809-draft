@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Tar/Archive-Tar-1.10.ebuild,v 1.3 2004/11/20 04:44:33 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Tar/Archive-Tar-1.10.ebuild,v 1.4 2005/01/21 19:21:03 mcummings Exp $
 
 inherit perl-module
 
