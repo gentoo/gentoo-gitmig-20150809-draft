@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/aterm
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.60 2005/02/07 05:07:50 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/ChangeLog,v 1.61 2005/02/13 12:42:32 kloeri Exp $
+
+  13 Feb 2005; Bryan Østergaard <kloeri@gentoo.org> aterm-0.4.2-r11.ebuild:
+  Stable on alpha.
 
   07 Feb 2005; Sven Wegener <swegener@gentoo.org> aterm-0.4.2-r11.ebuild,
   aterm-0.4.2-r12.ebuild, aterm-0.4.2-r7.ebuild, aterm-0.4.2-r9.ebuild:

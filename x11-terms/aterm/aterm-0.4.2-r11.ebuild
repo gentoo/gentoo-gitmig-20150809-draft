@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r11.ebuild,v 1.12 2005/02/07 05:07:50 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r11.ebuild,v 1.13 2005/02/13 12:42:32 kloeri Exp $
 
 inherit eutils flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/aterm/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm hppa ~ia64 ~mips ppc ~ppc64 ~ppc-macos sparc x86"
+KEYWORDS="alpha ~amd64 ~arm hppa ~ia64 ~mips ppc ~ppc64 ~ppc-macos sparc x86"
 IUSE="cjk"
 
 DEPEND="media-libs/jpeg
