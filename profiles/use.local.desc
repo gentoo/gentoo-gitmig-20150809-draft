@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1044 2005/03/25 21:39:40 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.1045 2005/03/26 12:20:42 ferdy Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -591,6 +591,8 @@ net-mail/dovecot:nopop3d - Do not build pop3d support
 net-mail/dovecot:vpopmail - Add vpopmail support
 net-mail/gnubiff:password - Enable save passwords to connect mail servers in user space
 net-mail/hotwayd:smtp - Build SMTP proxy (hotsmtpd)
+net-mail/lbdb:finger - Enables finger support
+net-mail/lbdb:abook - Enables app-misc/abook support
 net-mail/poppassd_ceti:cracklib - Support for cracklib strong password checking
 net-mail/qpopper:mailbox - Enables mail spool file is in home directory ~/Mailbox
 net-mail/qpopper:xinetd - If you want inetd version instead of standalone
