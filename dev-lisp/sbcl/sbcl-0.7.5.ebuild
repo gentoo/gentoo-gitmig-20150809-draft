@@ -1,16 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Copyright 2002 Marius Bernklev <mariube@unixcore.com>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.7.5.ebuild,v 1.2 2002/07/19 23:19:53 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.7.5.ebuild,v 1.3 2002/08/09 13:49:31 karltk Exp $
 
 DESCRIPTION="Steel Bank Common Lisp"
 HOMEPAGE="http://sbcl.sf.net/"
 BOOTSTRAPPER="0.7.2"
 BIN=${PN}-${BOOTSTRAPPER}
 SRC_URI="mirror://sourceforge/sbcl/${P}-source.tar.bz2
-	 mirror://sourceforge/sbcl/${BIN}-x86-linux-binary.tar.bz2
-	 mirror://sourceforge/sbcl/${P}-html.tar.bz2"
-LICENSE="PD"
+	mirror://sourceforge/sbcl/${BIN}-x86-linux-binary.tar.bz2
+	mirror://sourceforge/sbcl/${P}-html.tar.bz2"
+LICENSE="MIT"
 SLOT="0"
 # 2002.07.19 -- karltk:
 # Requires x86-only binary for bootstrapping

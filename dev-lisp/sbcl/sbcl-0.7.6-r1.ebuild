@@ -1,42 +1,32 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Copyright 2002 Marius Bernklev <mariube@unixcore.com>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.7.6.ebuild,v 1.3 2002/07/29 15:56:25 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.7.6-r1.ebuild,v 1.1 2002/08/09 13:49:31 karltk Exp $
 
 DESCRIPTION="Steel Bank Common Lisp"
 HOMEPAGE="http://sbcl.sourceforge.net/"
-
-# ugly kludge, note that KEYWORDS should prevent sparc
-
-TARCH=$([ $(arch) = ppc ] && echo "ppc" || echo "x86")
-
-if [ ${TARCH} = "x86" ]; then
-    BOOTSTRAPPER="0.7.2";
-elif [ ${TARCH} = "ppc" ]; then
-    BOOTSTRAPPER="0.7.6";
-fi
-
-BIN=${PN}-${BOOTSTRAPPER}
-
 SRC_URI="mirror://sourceforge/sbcl/${P}-source.tar.bz2
-	 mirror://sourceforge/sbcl/${BIN}-${TARCH}-linux-binary.tar.bz2
+	 x86? ( mirror://sourceforge/sbcl/${PN}-0.7.2-x86-linux-binary.tar.bz2 )
+         ppc? ( mirror://sourceforge/sbcl/${PN}-0.7.6-ppc-linux-binary.tar.bz2 )
 	 mirror://sourceforge/sbcl/${P}-html.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
 
-# Digest doesn't work on x86
-KEYWORDS="-x86 ppc -sparc -sparc64" 
+KEYWORDS="x86 ppc -sparc -sparc64" 
 PROVIDE="virtual/commonlisp"
-DEPEND=""
+# the SRC_URI trickery needs this
+DEPEND=">=sys-apps/portage-2.0.27"
 RDEPEND="${DEPEND}"
 
 src_unpack() {
-	unpack ${BIN}-${TARCH}-linux-binary.tar.bz2
-	if [ ${ARCH} == "x86" ] ; then
-		mv ${BIN} ${BIN}-binary
-	elif [ ${ARCH} == "ppc" ] ; then
-		mv ${BIN}-${TARCH}-linux ${BIN}-binary
+	
+	if ( use x86 ) ; then
+		unpack ${PN}-0.7.2-x86-linux-binary.tar.bz2
+		mv ${PN}-0.7.2 x86-binary
+	elif ( use ppc ) ; then
+		unpack ${PN}-0.7.6-ppc-linux-binary.tar.bz2
+		mv ${PN}-0.7.6-ppc-linux ppc-binary
 	fi
     
 	unpack ${P}-source.tar.bz2
@@ -44,10 +34,14 @@ src_unpack() {
 }
 
 src_compile() {
-	export SBCL_HOME="../${BIN}-binary/output/" 
+	local bindir
+	use x86 && bindir=x86-binary
+	use ppc && bindir=ppc-binary
+
+	export SBCL_HOME="../${bindir}/output/" 
 	export GNUMAKE="make"
     
-	sh make.sh "../${BIN}-binary/src/runtime/sbcl" || die
+	sh make.sh "../${bindir}/src/runtime/sbcl" || die
 }
 
 src_install() {
