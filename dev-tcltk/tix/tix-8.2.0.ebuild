@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/tix-8.2.0.ebuild,v 1.1 2002/10/31 22:31:16 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/tix-8.2.0.ebuild,v 1.2 2002/10/31 22:32:08 karltk Exp $
 
 IUSE="gcc tcl tk threads shared"
 MY_P=${PN}${PV}
@@ -15,7 +15,7 @@ HOMEPAGE="http://sourceforge.net/projects/tixlibrary/"
 
 LICENSE="as-is BSD"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND="dev-lang/tk"
 #RDEPEND=""
