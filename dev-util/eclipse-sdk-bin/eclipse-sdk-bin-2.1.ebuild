@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk-bin/eclipse-sdk-bin-2.1.ebuild,v 1.7 2004/04/19 05:32:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk-bin/eclipse-sdk-bin-2.1.ebuild,v 1.8 2004/06/03 18:28:12 agriffis Exp $
 
 DESCRIPTION="Eclipse Tools Platform, full binary"
 HOMEPAGE="http://www.eclipse.org/"
@@ -27,7 +27,7 @@ S=${WORKDIR}/eclipse
 
 src_compile() {
 
-	if [ "`use ppc`" ]
+	if use ppc
 	then
 		# build the SWT library
 		library_dir=${S}/plugins/org.eclipse.platform.linux.gtk.source_2.1.0/src/org.eclipse.swt.gtk_2.1.0/ws/gtk/library

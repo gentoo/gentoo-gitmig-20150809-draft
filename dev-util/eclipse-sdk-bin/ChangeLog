@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/eclipse-sdk-bin
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk-bin/ChangeLog,v 1.4 2003/12/04 08:27:11 karltk Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk-bin/ChangeLog,v 1.5 2004/06/03 18:28:12 agriffis Exp $
+
+  03 Jun 2004; Aron Griffis <agriffis@gentoo.org> eclipse-sdk-bin-2.1.ebuild:
+  Fix use invocation
 
   04 Dec 2003; Karl Trygve Kalleberg <karltk@gentoo.org> 
   eclipse-sdk-bin-2.1.ebuild:
