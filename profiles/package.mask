@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <lu_zero@gentoo.org> (6 May 2003)
+# new binutils to be tested
+=sys-devel/binutils-2.14.90.0.1
+
 # <pauldv@gentoo.org> (2 May 2003)
 # depreciated packages
 net-misc/kpopper
