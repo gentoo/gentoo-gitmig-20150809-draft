@@ -1,6 +1,15 @@
 # ChangeLog for www-servers/aolserver
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/aolserver/ChangeLog,v 1.3 2005/01/05 04:18:56 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/aolserver/ChangeLog,v 1.4 2005/01/05 19:49:09 port001 Exp $
+
+*aolserver-4.0.9 (05 Jan 2005)
+
+  05 Jan 2005; Ian Leitch <port001@gentoo.org>
+  -files/aolserver-4.0.8-nptl.patch,
+  +files/4.0.8/aolserver-4.0.8-nptl.patch, +files/4.0.9/Makefile.global,
+  +files/4.0.9/aolserver-4.0.9-nptl.patch, +files/4.0.9/aolserver.init,
+  +files/4.0.9/config.tcl, aolserver-4.0.8.ebuild, +aolserver-4.0.9.ebuild:
+  Bumped to 4.0.9. files/ reorganized a little also
 
   05 Jan 2005; Ian Leitch <port001@gentoo.org> files/4.0.8/Makefile.global,
   aolserver-4.0.8.ebuild:
