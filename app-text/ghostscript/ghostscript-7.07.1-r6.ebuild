@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r6.ebuild,v 1.1 2004/09/29 10:15:49 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r6.ebuild,v 1.2 2004/09/30 19:38:43 mr_bones_ Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -25,7 +25,7 @@ RDEPEND="virtual/libc
 		media-fonts/baekmuk-fonts )
 	cups? ( net-print/cups )
 	!virtual/ghostscript
-	media-libs/fontconfig 
+	media-libs/fontconfig
 	media-fonts/gnu-gs-fonts-std"
 
 DEPEND="${RDEPEND}
