@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gdesklets-core
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.2 2003/09/09 05:05:53 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gdesklets-core/ChangeLog,v 1.3 2003/09/10 12:47:12 obz Exp $
+
+*gdesklets-core-0.21 (10 Sep 2003)
+
+  10 Sep 2003; Mike Gardiner <obz@gentoo.org> gdesklets-core-0.21.ebuild:
+  New version, added gtk+-2 dep (new) and ewarn for upgrading
 
   09 Sep 2003; Mike Gardiner <obz@gentoo.org> gdesklets-core-0.20.ebuild,
   files/gdesklets-displays.desktop:
