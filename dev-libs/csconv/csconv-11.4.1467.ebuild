@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/csconv/csconv-11.4.1467.ebuild,v 1.3 2004/03/10 20:33:08 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/csconv/csconv-11.4.1467.ebuild,v 1.4 2004/04/16 02:33:44 vapier Exp $
 
-inherit iiimf
+inherit iiimf eutils
 
 DESCRIPTION="A code conversion library for IIIMF"
 
@@ -12,13 +12,11 @@ KEYWORDS="~x86"
 S="${WORKDIR}/${IMSDK}/lib/CSConv"
 
 src_unpack() {
-
 	unpack ${A}
 	epatch ${FILESDIR}/${P}-gentoo.diff
 }
 
 src_compile() {
-
 	econf --prefix=/usr/lib/im \
 		--enable-optimize \
 		`use_enable debug` || die
@@ -27,7 +25,6 @@ src_compile() {
 }
 
 src_install() {
-
 	einstall prefix=${D}/usr/lib/im || die
 
 	cd ${WORKDIR}/${IMSDK}/doc/conv

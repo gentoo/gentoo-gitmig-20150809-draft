@@ -1,10 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ffcall/ffcall-1.8d.ebuild,v 1.12 2004/02/15 12:08:52 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ffcall/ffcall-1.8d.ebuild,v 1.13 2004/04/16 02:35:35 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="foreign function call libraries"
-SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/libs/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/directory/ffcall.html"
+SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/libs/${P}.tar.gz"
 
 # "Ffcall is under GNU GPL. As a special exception, if used in GNUstep
 # or in derivate works of GNUstep, the included parts of ffcall are
@@ -15,12 +17,10 @@ KEYWORDS="x86 sparc ~hppa ~alpha ~ppc"
 
 DEPEND="virtual/glibc"
 
-
 src_unpack() {
 	unpack ${A}
-	#Fix hppa asm
-	use hppa && (cd ${S}; epatch ${FILESDIR}/ffcall_hppa_1.8-4.2.diff.gz)
-
+	cd ${S}
+	use hppa && epatch ${FILESDIR}/ffcall_hppa_1.8-4.2.diff.gz
 }
 
 src_compile() {
@@ -28,13 +28,13 @@ src_compile() {
 	# alphaev67-unknown-linux-gnu, CPU gets set to alphaev67 which
 	# doesn't work in the Makefile (29 Jan 2004 agriffis)
 	local cpu_setting
-	[[ $ARCH == alpha ]] && cpu_setting='CPU=alpha'
+	[ "${ARCH}" == "alpha" ] && cpu_setting='CPU=alpha'
 
 	econf || die "./configure failed"
 	make ${cpu_setting} || die
 }
 
-src_install () {
+src_install() {
 	dodoc ChangeLog NEWS README
 	dohtml avcall/avcall.html \
 		callback/callback.html \

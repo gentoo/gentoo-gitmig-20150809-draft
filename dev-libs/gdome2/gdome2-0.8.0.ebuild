@@ -1,18 +1,19 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/gdome2-0.8.0.ebuild,v 1.3 2004/03/14 12:28:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gdome2/gdome2-0.8.0.ebuild,v 1.4 2004/04/16 02:35:59 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="The DOM C library for the GNOME project"
 HOMEPAGE="http://gdome2.cs.unibo.it/"
 SRC_URI="http://gdome2.cs.unibo.it/tarball/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="LGPL-2.1"
+SLOT="0"
 KEYWORDS="~x86 ~sparc ~ppc"
 
 DEPEND=">=dev-libs/libxml2-2.4.21
 	=dev-libs/glib-1.2*"
-
 
 src_unpack() {
 	unpack ${A}
@@ -20,8 +21,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-libxml.patch
 }
 
-# has the option of using glib-2 by using --enable-glib-2
 src_compile() {
+	# has the option of using glib-2 by using --enable-glib-2
 	econf \
 		--with-html-dir=${D}/usr/share/doc || die "configure problem"
 	emake || die "compile problem"
@@ -29,5 +30,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die "install problem"
-	dodoc AUTHORS ChangeLog COPYING* INSTALL MAINTAINERS README
+	dodoc AUTHORS ChangeLog INSTALL MAINTAINERS README
 }

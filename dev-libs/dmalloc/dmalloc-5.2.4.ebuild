@@ -1,23 +1,23 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/dmalloc-5.2.4.ebuild,v 1.3 2004/02/22 20:02:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/dmalloc-5.2.4.ebuild,v 1.4 2004/04/16 02:34:16 vapier Exp $
 
-inherit debug
+inherit debug eutils
 
 DESCRIPTION="A Debug Malloc Library"
-SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 HOMEPAGE="http://dmalloc.com/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 
-IUSE=""
-SLOT="0"
 LICENSE="as-is"
+SLOT="0"
 KEYWORDS="~x86 ~sparc"
+IUSE=""
 
 DEPEND="virtual/glibc"
 
 src_unpack() {
-	unpack ${A} ; cd ${S}
-
+	unpack ${A}
+	cd ${S}
 	epatch ${FILESDIR}/${P}-fpic.patch
 }
 

@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfsh/elfsh-0.51_beta3.ebuild,v 1.2 2003/11/11 13:02:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfsh/elfsh-0.51_beta3.ebuild,v 1.3 2004/04/16 02:34:48 vapier Exp $
+
+inherit eutils
 
 MY_PV=${PV/_beta/b}
 S=${WORKDIR}/${PN}-${MY_PV}
