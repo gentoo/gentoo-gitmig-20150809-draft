@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/geekcredit
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/geekcredit/ChangeLog,v 1.10 2004/07/21 20:36:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/geekcredit/ChangeLog,v 1.11 2004/07/21 20:38:09 mr_bones_ Exp $
+
+  21 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  geekcredit-0.016.ebuild:
+  tidy
 
   21 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
   -geekcredit-0.015.ebuild:
