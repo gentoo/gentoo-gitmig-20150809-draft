@@ -1,0 +1,15 @@
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/files/isdnlog.logrotated,v 1.1 2005/03/29 08:40:14 mrness Exp $
+
+# isdnlog logrotate snippet for Gentoo Linux
+# contributed by Stefan Briesenick
+
+/var/log/isdn.log {
+    compress
+    rotate 99
+    size=4096k
+    notifempty
+    missingok
+    copytruncate
+}

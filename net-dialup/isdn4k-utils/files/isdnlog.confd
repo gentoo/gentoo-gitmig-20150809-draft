@@ -1,0 +1,10 @@
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/files/isdnlog.confd,v 1.1 2005/03/29 08:40:14 mrness Exp $
+
+# here you can add some switches not covered by the
+# corresponding /etc/isdnlog.options.contrX file.
+#
+# see "man (8) isdnlog" for further informations
+
+ISDNLOG_OPTIONS=""

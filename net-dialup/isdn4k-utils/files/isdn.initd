@@ -1,0 +1,98 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/files/isdn.initd,v 1.1 2005/03/29 08:40:14 mrness Exp $
+
+opts="start stop save reload info show cards"
+
+depend() {
+	use capi hisax
+}
+
+check_cards() {
+	local -a _idxa
+	local _it _lin _idx=0
+	read _it _lin < <(/usr/bin/head 2>/dev/null -n1 /dev/isdninfo) || return 1
+	read -a _idxa < <(echo $_lin)
+	while [ $_idx -lt 65 ]; do
+		[ "${_idxa[$_idx]}" = "-" ] || return 0
+		: $((_idx+=2)); [ -z "${_idxa[$_idx]}" ] && break
+	done
+	return 1
+}
+
+check_module() {
+	/bin/grep 2>/dev/null -q "^${1} " /proc/modules
+}
+
+start() {
+	/sbin/modprobe -s isdn && check_module isdn
+	if [ $? -ne 0 ]; then
+		eerror "ERROR: could not load ISDN driver"
+		/sbin/modprobe -sqr isdn
+		return 1
+	fi
+
+	if ! check_cards; then
+		eerror "ERROR: no ISDN cards available"
+		/sbin/modprobe -sqr isdn
+		return 1
+	fi
+
+	ebegin "Loading isdnctrl configuration"
+	[ ! -f "${ISDNCTRL_CONFIG}" ] || /usr/sbin/isdnctrl readconf "${ISDNCTRL_CONFIG}" >/dev/null
+	eend $?
+	
+	if [ -n "${IPROFD_SETTINGS}" ]; then
+		ebegin "Starting modem-register daemon"
+		start-stop-daemon --start --quiet --exec /usr/sbin/iprofd -- "${IPROFD_SETTINGS}"
+		eend $?
+	fi
+}
+
+stop() {
+	if [ -n "${IPROFD_SETTINGS}" ]; then
+		ebegin "Stopping modem-register daemon"
+		start-stop-daemon --stop --quiet --retry 5 --exec /usr/sbin/iprofd
+		eend $?
+	fi
+
+	ebegin "Unloading isdnctrl configuration"
+	/usr/sbin/isdnctrl reset force >/dev/null
+	eend $?
+}
+
+save() {
+	ebegin "Saving isdnctrl configuration"
+	/usr/sbin/isdnctrl writeconf "${ISDNCTRL_CONFIG}" >/dev/null
+	eend $?
+}
+
+reload() {
+	ebegin "Reloading isdnctrl configuration"
+	/usr/sbin/isdnctrl reset >/dev/null
+	[ ! -f "${ISDNCTRL_CONFIG}" ] || /usr/sbin/isdnctrl readconf "${ISDNCTRL_CONFIG}" >/dev/null
+	eend $?
+}
+
+cards() {
+	local -a _idxa
+	local _it _lin _idx=0
+        if ! read _it _lin < <(/usr/bin/head 2>/dev/null -n1 /dev/isdninfo); then
+		eerror "ERROR: no ISDN cards available"
+                return 1
+        fi
+	read -a _idxa < <(echo $_lin)
+	while [ $_idx -lt 65 ]; do
+		[ "${_idxa[$_idx]}" = "-" ] || einfo "$((_idx / 2)) ${_idxa[$_idx]}"
+                : $((_idx+=2)); [ -z "${_idxa[$_idx]}" ] && break
+        done
+}
+
+info() {
+	/usr/sbin/isdnctrl status all
+}
+
+show() {
+        /usr/sbin/isdnctrl list all
+}

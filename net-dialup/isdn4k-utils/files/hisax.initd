@@ -1,0 +1,212 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/files/hisax.initd,v 1.1 2005/03/29 08:40:14 mrness Exp $
+
+opts="start stop"
+
+depend() {
+        use isapnp pcmcia
+}
+
+check_module() {
+	/bin/grep 2>/dev/null -q "^${1} " /proc/modules
+}
+
+get_first_free_idx() {
+	local -a _idxa
+	local _it _lin _idx=-1
+	if ! read _it _lin < <(/usr/bin/head 2>/dev/null -n1 /dev/isdninfo); then
+		echo "0"; return
+	fi
+	read -a _idxa < <(echo $_lin)
+	while [ $_idx -lt 65 ]; do
+		: $((_idx++))
+		if [ "${_idxa[$_idx]}" = "-" ]; then
+			echo $((_idx / 2)); return
+		fi
+	done
+}
+
+read_config() {
+	HISAX_TYPE=""
+	HISAXFC_TYPE=""
+	HISAX_DEBUG=""
+	HISAX_FIRMWARE=""
+	HISAX_CNT=$(get_first_free_idx)
+	while read H_TYPE H_PROTO H_IO H_IRQ H_MEM H_DEBUG H_ID; do
+
+		# check and set card id
+		case ${H_TYPE} in
+			99)	# AVM Fritz PCI/PnP
+				H_ID="#<FC>#"  # fixed later
+				;;
+			*)	# all others
+				[ -z "${H_ID}" -o "${H_ID}" = "-" ] && H_ID="hisax${HISAX_CNT}"
+				H_ID="${H_ID//\%/-}"; H_ID="${H_ID// /_}"
+				;;
+		esac
+    
+		# convert protocol to number
+		case "$H_PROTO" in
+			[eE][dD][sS][sS]1)        H_PROTO_NR=2 ;;  # EDSS1
+			[eE][uU][rR][oO])         H_PROTO_NR=2 ;;  # EDSS1
+			[dD][sS][sS]1)            H_PROTO_NR=2 ;;  # EDSS1
+			1[tT][rR]6)               H_PROTO_NR=1 ;;  # 1TR6
+			[nN][iI]1)                H_PROTO_NR=4 ;;  # NI1
+			[lL][eE][aA][sS][eE][dD]) H_PROTO_NR=3 ;;  # leased
+			*)                        return 1 ;;      # error!
+		esac
+    
+		# split IO option (needed for Teles PnP)
+		if [ "${H_IO/,}" = "${H_IO}" ]; then
+			H_IO0="-"
+			H_IO1="-"
+		else
+			H_IO0="${H_IO%%,*}"
+			H_IO1="${H_IO##*,}"
+			H_IO="-"
+		fi
+
+		# check debug option and build list
+		[ -z "${H_DEBUG}" -o "${H_DEBUG}" = "-" ] && H_DEBUG=4
+		[ -z "${HISAX_DEBUG}" ] \
+			&& HISAX_DEBUG="${H_ID}%${H_DEBUG//\%}" \
+			|| HISAX_DEBUG="${HISAX_DEBUG} ${H_ID}%${H_DEBUG//\%}"
+
+		# build list of cards which needs ISAR.BIN firmware
+		case ${H_TYPE} in
+			28|29) [ -z "${HISAX_FIRMWARE}" ] \
+				&& HISAX_FIRMWARE="${H_ID}" \
+				|| HISAX_FIRMWARE="${HISAX_FIRMWARE} ${H_ID}"
+				;;
+		esac
+                
+		# build options
+		case ${H_TYPE} in
+			99)	# AVM Fritz PCI/PnP
+				if [ -z "${HISAXFC_TYPE}" ]; then
+					HISAXFC_TYPE="${H_TYPE}"
+					HISAXFC_PROTO="${H_PROTO_NR}"
+                                else
+					HISAXFC_TYPE="${HISAXFC_TYPE},${H_TYPE}"
+                                        HISAXFC_PROTO="${HISAXFC_PROTO},${H_PROTO_NR}"
+                                fi
+				;;
+			*)	# all others
+				: $((HISAX_CNT++))
+				if [ -z "${HISAX_TYPE}" ]; then
+					HISAX_TYPE="${H_TYPE}"
+					HISAX_IRQ="${H_IRQ//-}"
+					HISAX_MEM="${H_MEM//-}"
+					HISAX_IO="${H_IO//-}"
+					HISAX_IO0="${H_IO0//-}"
+					HISAX_IO1="${H_IO1//-}"
+					HISAX_ID="${H_ID}"
+					HISAX_PROTO="${H_PROTO_NR}"
+					HISAX_DUMMY=""
+				else
+					HISAX_TYPE="${HISAX_TYPE},${H_TYPE}"
+					HISAX_IRQ="${HISAX_IRQ},${H_IRQ//-}"
+					HISAX_IO="${HISAX_IO},${H_IO//-}"
+					HISAX_IO0="${HISAX_IO0},${H_IO0//-}"
+					HISAX_IO1="${HISAX_IO1},${H_IO1//-}"
+					HISAX_MEM="${HISAX_MEM},${H_MEM//-}"
+					HISAX_ID="${HISAX_ID}%${H_ID}"
+					HISAX_PROTO="${HISAX_PROTO},${H_PROTO_NR}"
+					HISAX_DUMMY="${HISAX_DUMMY},"
+				fi
+				;;
+		esac
+
+	done < <(/bin/sed 2>/dev/null -ne "s:^[[:space:]]*\([1-9][0-9]\?[[:space:]]\+[^#]*\)[#]*.*$:\1:p" "$@")
+
+	# build final hisax options
+	if [ -n "$HISAX_TYPE" ]; then
+		HISAX_OPTIONS="type=${HISAX_TYPE}"
+		[ "$HISAX_IRQ" = "$HISAX_DUMMY" ] || HISAX_OPTIONS="${HISAX_OPTIONS} irq=${HISAX_IRQ}"
+		[ "$HISAX_IO"  = "$HISAX_DUMMY" ] || HISAX_OPTIONS="${HISAX_OPTIONS} io=${HISAX_IO}"
+		[ "$HISAX_IO0" = "$HISAX_DUMMY" ] || HISAX_OPTIONS="${HISAX_OPTIONS} io0=${HISAX_IO0}"
+		[ "$HISAX_IO1" = "$HISAX_DUMMY" ] || HISAX_OPTIONS="${HISAX_OPTIONS} io1=${HISAX_IO1}"
+		[ "$HISAX_MEM" = "$HISAX_DUMMY" ] || HISAX_OPTIONS="${HISAX_OPTIONS} mem=${HISAX_MEM}"
+		HISAX_OPTIONS="${HISAX_OPTIONS} protocol=${HISAX_PROTO} id=${HISAX_ID}"
+	fi
+
+	# build final hisax_fcpcipnp options
+	if [ -n "$HISAXFC_TYPE" ]; then
+		HISAXFC_OPTIONS="protocol=${HISAXFC_PROTO}"
+	fi
+
+	return 0
+}
+
+start() {
+	if [ ! -e /etc/hisax.conf ]; then
+		eerror "You're missing /etc/hisax.conf"
+		return 1
+	fi
+
+	if ! read_config /etc/hisax.conf; then
+		eerror "You have an configuration error in /etc/hisax.conf"
+		return 1
+	fi
+
+	if [ -z "${HISAX_TYPE}" -a -z "${HISAXFC_TYPE}" ]; then
+		eerror "You have not configured /etc/hisax.conf"
+		return 1
+	fi
+
+	ebegin "Loading HiSax driver"
+	if [ -n "${HISAX_TYPE}" ]; then
+		/sbin/modprobe -s hisax ${HISAX_OPTIONS} && check_module hisax
+		if [ $? -ne 0 ]; then
+			/sbin/modprobe -sqr hisax_fcpcipnp
+			/sbin/modprobe -sqr hisax
+			eend 1; return 1
+		fi
+	fi
+	if [ -n "${HISAXFC_TYPE}" ]; then
+		/sbin/modprobe -s hisax_fcpcipnp ${HISAXFC_OPTIONS} && check_module hisax_fcpcipnp
+		if [ $? -ne 0 ]; then 
+			/sbin/modprobe -sqr hisax_fcpcipnp
+			/sbin/modprobe -sqr hisax
+			eend 1; return 1
+		fi
+	fi
+	eend $?
+
+	if [ -n "${HISAX_FIRMWARE}" ]; then
+		for ID in ${HISAX_FIRMWARE}; do
+			ebegin "Loading firmware to ${ID}"
+			/usr/sbin/hisaxctrl ${ID} 9 /lib/firmware/ISAR.BIN
+			if ! eend $?; then
+				/sbin/modprobe -sqr hisax_fcpcipnp
+				/sbin/modprobe -sqr hisax
+				return 1
+			fi
+		done
+	fi
+
+	CARDS=""
+	if [ -n "${HISAX_DEBUG}" ]; then
+		for DBG in ${HISAX_DEBUG}; do
+			ID="${DBG%%\%*}"
+			VAL="${DBG##*\%}"
+			if [ "${ID}" = "#<FC>#" ]; then
+				ID="fcpcipnp${HISAX_CNT}"
+				: $((HISAX_CNT++))
+			fi
+			/usr/sbin/hisaxctrl ${ID} 1 ${VAL}
+			[ -z "${CARDS}" ] && CARDS="${ID}" || CARDS="${CARDS} ${ID}"
+		done
+	fi
+
+	[ -n "${CARDS}" ] && einfo "HiSax cards: ${CARDS}"
+}
+
+stop() {
+	ebegin "Unloading HiSax driver"
+	/sbin/modprobe -sqr hisax_fcpcipnp && /sbin/modprobe -sqr hisax
+	eend $?
+}
+

@@ -1,10 +1,26 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2095b24ef9d659aba0e72f092f5df8ce ChangeLog 10650
+MD5 7aeedfc11c7f11f8fc569a4cd2209aed isdn4k-utils-3.7_pre20050329.ebuild 7179
+MD5 f7a17127bae62f8a2fd5f3b9bbc8d0ce ChangeLog 11114
 MD5 bab835f739889e139f5acaf397d3d875 metadata.xml 215
 MD5 5eeb7174364e6bddb64a87d746660f78 isdn4k-utils-3.6_pre20041219-r1.ebuild 7145
+MD5 710720ec1e40152a168e5a1e610c8eed files/isdnlog.confd 399
+MD5 f8f6a4d5dd4e75950256ccf5c8c2bd39 files/isdnlog.initd 1031
+MD5 83190cfc02f5adac34d8c9dbeaa5c6e3 files/ioptions 307
 MD5 6896aa81dfefd061abda1c5a4e6576a0 files/digest-isdn4k-utils-3.6_pre20041219-r1 81
+MD5 ea30a6607264a8e7b46e63591e849701 files/isdnlog.logrotated 422
+MD5 7df3c56ec0ce4ec5f0b5cfa041429596 files/hisax.initd 5801
+MD5 620a852c37aaa852e5089d22b3a5a14d files/isdn.blacklist 504
+MD5 21b03f01f94e8b006d19e7fe137e4648 files/options.ippp0 669
+MD5 9c63ee81524f51cd1b9f419f00708195 files/hisax.usermap 188
+MD5 521e30e785f269e397b134eaaedb9072 files/net.ippp0 2412
+MD5 aeecbcf03cb762b60e670eee70fc4913 files/isdn.confd 484
+MD5 a0abd85a99ac6b2faf4cae7b05c013e8 files/isdn.initd 2394
+MD5 daa2198f59b2708507b5ff681ebd4ab7 files/hisax.conf 1325
+MD5 01e75c203125d9976400683136a21687 files/config-3.7_pre20050329 2872
+MD5 a077770a61b46a7dbedad0213e5b14c3 files/auerswald.usermap 752
+MD5 3ffe8175b16f619144c182f11e3df55d files/digest-isdn4k-utils-3.7_pre20050329 81
 MD5 f26cdb4ad4237c11b371a7dcb2d89d17 files/3.6_pre20041219/isdnlog.confd 415
 MD5 3f7c76a6d63f3677b81157bf9a7e84cd files/3.6_pre20041219/isdnlog.initd 1047
 MD5 875318ba2ae375b068d0c7a7c1607e52 files/3.6_pre20041219/ioptions 323
@@ -20,9 +36,9 @@ MD5 229cfd79f14eb291f6bb46b1275d4e0c files/3.6_pre20041219/isdn.initd 2410
 MD5 673179cfabf5a9839cfbf81bc2eeb34e files/3.6_pre20041219/hisax.conf 1341
 MD5 a077770a61b46a7dbedad0213e5b14c3 files/3.6_pre20041219/auerswald.usermap 752
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCHBogjiC39V7gKu0RAlwGAJ9YXfp4owN7Wwh0Uc+4AFeBstRlFACgwNk8
-J+K/ubO9SW5TPHP76PSII1Y=
-=QuW7
+iD8DBQFCSRSAjiC39V7gKu0RApcFAJ0baV+UazTfH/Njtkt8Pqtcgqua9ACgsaPs
+w9e5l7oJbsqnJSOBdi6BjJs=
+=LdW6
 -----END PGP SIGNATURE-----

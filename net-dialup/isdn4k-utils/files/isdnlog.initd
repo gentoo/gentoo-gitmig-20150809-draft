@@ -1,0 +1,33 @@
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/files/isdnlog.initd,v 1.1 2005/03/29 08:40:14 mrness Exp $
+
+opts="start stop"
+
+depend() {
+	need isdn
+}
+
+start() {
+	local CONTR="${myservice#*.contr}" CTRL=$((CONTR * 2))
+	local CONFIG="/etc/isdn/isdnlog.isdnctrl${CTRL}.options"
+	[ -e "$CONFIG" ] || CONFIG="/etc/isdn/isdnlog.options.contr${CONTR}"
+ 
+	if [ ! -e "$CONFIG" ] ; then
+		eerror "You're missing ${CONFIG}"
+		return 1
+	fi
+
+	ebegin "Starting ISDNLOG for controller #${CONTR}"
+	start-stop-daemon --start --quiet --pidfile "/var/run/isdnlog.isdnctrl${CTRL}.pid" \
+		--exec /usr/sbin/isdnlog -- ${ISDNLOG_OPTIONS} -f "${CONFIG}" "/dev/isdnctrl${CTRL}"
+	eend $?
+}
+
+stop() {
+        local CONTR="${myservice#*.contr}" CTRL=$((CONTR * 2))
+	ebegin "Stopping ISDNLOG for controller #${CONTR}"
+	start-stop-daemon --stop --quiet --retry 5 --pidfile "/var/run/isdnlog.isdnctrl${CTRL}.pid"
+	eend $?
+}

@@ -1,6 +1,16 @@
 # ChangeLog for net-dialup/isdn4k-utils
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.39 2005/02/23 05:52:20 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.40 2005/03/29 08:40:14 mrness Exp $
+
+*isdn4k-utils-3.7_pre20050329 (29 Mar 2005)
+
+  29 Mar 2005; Alin Nastac <mrness@gentoo.org> +files/auerswald.usermap,
+  +files/config-3.7_pre20050329, +files/hisax.conf, +files/hisax.initd,
+  +files/hisax.usermap, +files/ioptions, +files/isdn.blacklist,
+  +files/isdn.confd, +files/isdn.initd, +files/isdnlog.confd,
+  +files/isdnlog.initd, +files/isdnlog.logrotated, +files/net.ippp0,
+  +files/options.ippp0, +isdn4k-utils-3.7_pre20050329.ebuild:
+  Version bump.
 
 *isdn4k-utils-3.6_pre20041219-r1 (23 Feb 2005)
 
