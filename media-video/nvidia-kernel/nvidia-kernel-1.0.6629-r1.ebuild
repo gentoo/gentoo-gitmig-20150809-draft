@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.6629-r1.ebuild,v 1.3 2004/12/21 00:59:42 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.6629-r1.ebuild,v 1.4 2004/12/27 00:46:54 cyfred Exp $
 
 inherit eutils linux-mod
 
@@ -94,12 +94,11 @@ src_unpack() {
 
 	# Patches from Zander (http://www.minion.de/files/1.0-6629/)
 	epatch ${FILESDIR}/${PV}/NVIDIA_kernel-1.0-6629-1155389.patch
-	# Fix a limitation on available video memory bug #71684
-	epatch ${FILESDIR}/${PV}/NVIDIA_kernel-1.0-6629-1161283.patch
 	epatch ${FILESDIR}/${PV}/NVIDIA_kernel-1.0-6629-1162524.patch
 	epatch ${FILESDIR}/${PV}/NVIDIA_kernel-1.0-6629-1165235.patch
 	epatch ${FILESDIR}/${PV}/NVIDIA_kernel-1.0-6629-1171869.patch
 	epatch ${FILESDIR}/${PV}/NVIDIA_kernel-1.0-6629-1175225.patch
+	epatch ${FILESDIR}/${PV}/NVIDIA_kernel-1.0-6629-1182399.patch
 
 	# Now any patches specific to the 2.6 kernel should go here
 	if kernel_is 2 6
@@ -109,6 +108,8 @@ src_unpack() {
 		epatch ${FILESDIR}/${PV}/conftest_koutput_includes.patch
 		# Fix calling of smp_processor_id() when preempt is enabled
 		epatch ${FILESDIR}/${PV}/nv-disable-preempt-on-smp_processor_id.patch
+		# Fix a limitation on available video memory bug #71684
+		epatch ${FILESDIR}/${PV}/NVIDIA_kernel-1.0-6629-1161283.patch
 	fi
 
 	# if you set this then it's your own fault when stuff breaks :)
