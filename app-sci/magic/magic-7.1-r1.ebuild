@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/magic/magic-7.1-r1.ebuild,v 1.2 2002/10/17 14:26:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/magic/magic-7.1-r1.ebuild,v 1.3 2002/11/04 15:41:50 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The VLSI design CAD tool"
 SRC_URI="http://vlsi.cornell.edu/${PN}/${P}.tar.gz"
 HOMEPAGE="http://vlsi.cornell.edu/magic/"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 LICENSE="as-is"
 DEPEND="sys-apps/findutils
 	sys-devel/perl	

@@ -251,10 +251,6 @@ x11-libs/gtkmm-addons
 # Newer ppc kernel; wants more testing.
 =sys-kernel/ppc-sources-2.4.20-r1
 
-# <aliz@gentoo.org> (3 Oct 2002)
-# Masked for testing
-=app-sci/magic-7.1-r1
-
 # <danarmak@gentoo.org> (2 Oct 2002)
 # kde 3.1 beta2: masked permanently
 =kde-base/arts-1.1.0
@@ -412,10 +408,6 @@ x11-terms/powershell
 # Masked for testing
 >=net-www/apache-2.0.0
 
-# <aliz@gentoo.org> (12 Sep 2002)
-# Masked for testing
-=net-misc/freeswan-1.98b-r1
-
 # <raker@gentoo.org> (11 Sep 2002)
 # New qmail ebuild.  Please test tls, smtp-auth, and ldap support
 =net-mail/qmail-1.03-r9
@@ -438,10 +430,6 @@ net-www/galeon-cvs
 # <azarah@gentoo.org> (08 Sep 2002)
 # Get things ready for new xfree release.
 #=x11-base/xfree-4.2.1
-
-# <aliz@gentoo.org> (05 Sep 2002)
-# Masked for testing
-=sys-apps/console-data-1999.08.29-r3
 
 # <phoenix@gentoo.org> (02 Sep 2002)
 # This needs a lot of testing
