@@ -1,12 +1,19 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.4.ebuild,v 1.7 2002/10/22 14:00:53 peitolm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.4.ebuild,v 1.8 2002/10/23 22:51:51 peitolm Exp $
  
 S=${WORKDIR}/gentoo-src/gentoo-web
 TEMPLATE=${S}/xsl/guide-main.xsl
 DESCRIPTION="www.gentoo.org website"
 SRC_URI="http://www.red-bean.com/cvs2cl/cvs2cl.pl"
 HOMEPAGE="http://www.gentoo.org"
+##################
+# This Ebuild will require the following _enviroment_ variables to be set
+#
+# GENTOO_SRCDIR - the directory you have extracted the xml-guide-latest.tar.gz or checked out gentoo-src/gentoo-web
+#                 from CVS
+#
+# WEBROOT - The top directory you want the website to be built into (eg /home/httpd/htdocs)
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -85,11 +92,6 @@ src_install() {
 		sed -e "s:TITLE:${x}:" -e "s:IMG:http\://www.ibiblio.org/gentoo/images/${x}:" ${S}/html/shell.html > ${D}${WEBROOT}/images/${x%.png}.html
 	done
 	
-	for line in `cat /usr/portage/profiles/use.desc | grep -v \# | sed 's/ /___/g'|sed 's/___-___/\<\/ti>\<ti\>/'`
-	do 
-		echo "<tr><ti>$line </ti></tr>" | sed 's/___/ /g'>> ${T}/main-use.xml
-	done
-
 	insinto ${WEBROOT}
 	doins favicon.ico
 	
@@ -129,11 +131,15 @@ src_install() {
 		xsltproc xsl/guide-main.xsl $x > ${D}/${WEBROOT}/news/${myext}.html
 	done
 	echo "</newsitems></mainpage>" >> ${T}/main-news.xml
+	# Lets create the use description page,
+	
 	echo "<?xml version='1.0'?>" > ${T}/main-use.xml
 	echo '<guide link="/use.html"><title>Gentoo Linux Use Variable Descriptions</title><author title="Author"><mail link="peitolm@gentoo.org">Colin Morey</mail></author>' >> ${T}/main-use.xml
 	echo "<version>1.0</version><date>${mydate}</date><chapter><title>Use Descriptions</title>" >> ${T}/main-use.xml
 	echo "<section><body><p>A small table of currently available use variables and a short description of each</p><table>" >> ${T}/main-use.xml
 	echo '<tr><th>Variable</th><th>Description</th></tr>' >> ${T}/main-use.xml
+	
+	# The following line is not the most elegant, but in this instance we go for readability over compactness
 	for line in `cat /usr/portage/profiles/use.desc | grep -v \# | sed 's/ /___/g'|sed 's/___-___/\<\/ti>\<ti\>/'`
 	do
 		echo "<tr><ti>$line </ti></tr>" | sed 's/___/ /g'>> ${T}/main-use.xml
@@ -149,7 +155,7 @@ src_install() {
 	xsltproc $TEMPLATE xml/main-articles.xml > ${D}${WEBROOT}/index-articles.html || die
 	xsltproc $TEMPLATE xml/main-contract.xml > ${D}${WEBROOT}/index-contract.html || die
 	xsltproc $TEMPLATE xml/main-graphics.xml > ${D}${WEBROOT}/index-graphics.html || diea
-	xsltproc $TEMPLATE ${T}/main-use.xml > ${D}${WEBROOT}/use.html || die
+	xsltproc $TEMPLATE ${T}/main-use.xml > ${D}${WEBROOT}/doc/use.html || die
 	OLDROOT=${ROOT} ; unset ROOT
 	
 	ROOT=${OLDROOT}
@@ -201,6 +207,9 @@ pkg_preinst() {
 	#This can only be done in ${T} since ${S} may be a live CVS tree
 	python ${S}/python/gendevlistxml.py ${S}/txt/devlist.txt ${T}/main-devlist.xml || die
 	xsltproc $TEMPLATE ${T}/main-devlist.xml > ${D}${WEBROOT}/index-devlist.html || die
+	
+	# now we make the package tree(this is what takes the time)
+	
 	cd ${T}
 	mkdir -p xml/packages
 	dodir ${WEBROOT}/packages/
