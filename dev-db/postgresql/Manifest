@@ -7,9 +7,9 @@ MD5 3bcf33a005b527699fe803ca40c0e014 postgresql-7.4.6.ebuild 10141
 MD5 f09416694117e0a0cee33645c684ff35 postgresql-7.3.7-r2.ebuild 7954
 MD5 867641bb7281f098bc2aacc094ac1c77 postgresql-7.4.3.ebuild 9766
 MD5 99537073b08406950be7655e973b307d postgresql-7.4.5-r1.ebuild 10089
-MD5 f6d6146587a12ece4fa91c67967e57e9 postgresql-8.0.0_rc3.ebuild 7251
+MD5 bdfd4a43640f16a47557c34dc6bc618c postgresql-8.0.0_rc3.ebuild 7247
 MD5 7de4b12d2bbae3e1ab01a33a287972fe postgresql-7.4.5.ebuild 10077
-MD5 bcf58c2364f2b3484a5a2345187943d5 ChangeLog 29206
+MD5 68b27dc62ce1ead2a2e9367a2dd9d820 ChangeLog 29457
 MD5 f8d3d207746da2a3cd14dcaab8daab76 metadata.xml 163
 MD5 cd9e32f5a21def1a4e2d1ac0e042aa47 files/postgresql-7.3.7-gentoo.patch 529
 MD5 e9a2e5278a70bebace44f1ecf38129e6 files/postgresql-7.4.6-gentoo.patch 1160
@@ -39,9 +39,9 @@ MD5 999379432735e7e6a71ec6ccd5a784e1 files/pg_autovacuum.conf-7.4.5 302
 MD5 999379432735e7e6a71ec6ccd5a784e1 files/pg_autovacuum.conf-7.4.6 302
 MD5 bd8092be6ccc6918973d9654caacbfab files/postgresql-7.4.3-hppa-testandset.patch 1596
 MD5 2e87af398df0a957bf2f2dff754ac174 files/postgresql-7.4.3-vacuum-delay.patch 8918
-MD5 7d08673ece0283b78b6ecb6490405e95 files/postgresql-8.0.0_rc3-gentoo.patch 820
+MD5 5a330cf4dd59f98fc49470a893c34b14 files/postgresql-8.0.0_rc3-gentoo.patch 820
 MD5 c2f44bdcd8b789284cf3369fa3abbd34 files/pg_autovacuum.init-8.0.0_rc2 1418
-MD5 c2f44bdcd8b789284cf3369fa3abbd34 files/pg_autovacuum.init-8.0.0_rc3 1418
+MD5 3635d516cea3fef226fd5d01ed008143 files/pg_autovacuum.init-8.0.0_rc3 1418
 MD5 bd8092be6ccc6918973d9654caacbfab files/postgresql-7.4.5-hppa-testandset.patch 1596
 MD5 bd8092be6ccc6918973d9654caacbfab files/postgresql-7.4.6-hppa-testandset.patch 1596
 MD5 6bf6311cd97a1d682f91b0a5d9bb015a files/digest-postgresql-8.0.0_rc2 232
