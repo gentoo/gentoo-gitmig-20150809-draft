@@ -1,8 +1,10 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-kdeplugins/lineak-kdeplugins-0.8.2.ebuild,v 1.1 2004/11/29 20:09:08 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-kdeplugins/lineak-kdeplugins-0.8.2.ebuild,v 1.2 2005/01/03 14:00:58 genstef Exp $
 
 inherit kde
+
+need-kde 3.2
 
 MY_PV=${PV/_/}
 MY_P=${PN/-/_}-${MY_PV}

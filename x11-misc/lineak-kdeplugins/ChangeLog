@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/lineak-kdeplugins
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-kdeplugins/ChangeLog,v 1.1 2004/11/29 20:09:08 genstef Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lineak-kdeplugins/ChangeLog,v 1.2 2005/01/03 14:00:58 genstef Exp $
+
+  03 Jan 2005; Stefan Schweizer <genstef@gentoo.org>
+  lineak-kdeplugins-0.8.2.ebuild:
+  Adding needed "need-kde 3.2" line to install in /usr/share/man instead of
+  /man, thanks to Daniel Drake <dsd@gentoo.org> for helping!
 
 *lineak-kdeplugins-0.8.2 (29 Nov 2004)
 
