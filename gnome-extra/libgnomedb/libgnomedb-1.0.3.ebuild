@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-1.0.3.ebuild,v 1.7 2004/08/08 14:36:33 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgnomedb/libgnomedb-1.0.3.ebuild,v 1.8 2004/10/23 13:20:11 liquidx Exp $
 
 inherit gnome2 eutils
 
@@ -28,8 +28,15 @@ DEPEND=">=dev-util/pkgconfig-0.8
 
 src_unpack() {
 	unpack ${A}
-	gnome2_omf_fix ${S}/doc/Makefile.in
+
+	# needed for intltool-0.30
 	cd ${S}; intltoolize --force || die
+	# needed for inttool 0.31.3, alternative to running aclocal which
+	# requires cvs files not in release tarball.
+	sed -e 's/@INTLTOOL_ICONV@/iconv/' -i intltool-merge.in
+
+	gnome2_omf_fix ${S}/doc/Makefile.in
+
 	# Avoid documentation problems. See bug #46275.
 	epatch ${FILESDIR}/${P}-gtkdoc_fix.patch
 	# Fix GCC 3.4 compilation. See bug #49236.
