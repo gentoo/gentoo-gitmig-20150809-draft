@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.70 2004/10/10 03:29:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.71 2004/10/10 06:14:49 vapier Exp $
+
+  10 Oct 2004; Mike Frysinger <vapier@gentoo.org> shadow-4.0.4.1-r3.ebuild,
+  shadow-4.0.4.1-r4.ebuild:
+  Move /usr/bin/passwd -> /bin/passwd to aid system recovery #64441.
 
   09 Oct 2004; Mike Frysinger <vapier@gentoo.org> shadow-4.0.4.1-r4.ebuild:
   Clean up the manpage fixes and change setuid perms to 4711 by default #47208.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.4.1-r3.ebuild,v 1.6 2004/10/08 04:53:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.4.1-r3.ebuild,v 1.7 2004/10/10 06:14:49 vapier Exp $
 
 inherit eutils libtool gnuconfig flag-o-matic
 
@@ -124,6 +124,9 @@ src_install() {
 	doins ${FILESDIR}/default/useradd
 	# From sys-apps/pam-login now
 	#insopts -m0644 ; doins ${FILESDIR}/login.defs
+
+	# move passwd to / to help recover broke systems #64441
+	mv ${D}/usr/bin/passwd ${D}/bin/
 
 	if use pam; then
 		insinto /etc/pam.d ; insopts -m0644
