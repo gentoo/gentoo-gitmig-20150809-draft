@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/guarddog
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/guarddog/ChangeLog,v 1.13 2004/10/11 16:16:04 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/guarddog/ChangeLog,v 1.14 2004/11/23 21:55:13 carlo Exp $
+
+  23 Nov 2004; Carsten Lohrke <carlo@gentoo.org> guarddog-2.2.0.ebuild:
+  stable on x86
 
 *guarddog-2.3.2 (11 Oct 2004)
 

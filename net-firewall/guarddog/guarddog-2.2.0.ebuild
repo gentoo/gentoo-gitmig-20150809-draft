@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/guarddog/guarddog-2.2.0.ebuild,v 1.5 2004/10/11 16:16:04 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/guarddog/guarddog-2.2.0.ebuild,v 1.6 2004/11/23 21:55:13 carlo Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.simonzone.com/software/guarddog/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 ~sparc"
 IUSE=""
 
 RDEPEND=">=net-firewall/iptables-1.2.5"
