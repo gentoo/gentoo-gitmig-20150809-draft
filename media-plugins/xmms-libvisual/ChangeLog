@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/xmms-libvisual
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-libvisual/ChangeLog,v 1.5 2004/11/10 01:34:00 eradicator Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-libvisual/ChangeLog,v 1.6 2005/03/02 16:42:22 greg_g Exp $
+
+*xmms-libvisual-0.2.0 (02 Mar 2005)
+
+  02 Mar 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +xmms-libvisual-0.2.0.ebuild:
+  New version (#81432).
 
   09 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-libvisual-0.1.7.ebuild:
