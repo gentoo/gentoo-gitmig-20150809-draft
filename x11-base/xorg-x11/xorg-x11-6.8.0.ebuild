@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0.ebuild,v 1.7 2004/09/09 20:42:42 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0.ebuild,v 1.8 2004/09/09 22:19:50 seemant Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -817,7 +817,7 @@ update_config_files() {
 				then
 					# "keyboard" driver is deprecated and will be removed,
 					# switch to "kbd"
-					sed -i 's~^\([ \t]*Driver[ \t]\+\)"keyboard"~\1"kbd"~' \
+					sed -i 's~^\([ \t]*Driver[ \t]\+\)"[kK]eyboard"~\1"kbd"~' \
 						${IMAGE}${FILE}
 
 					# Work around upgrade problem where people have
