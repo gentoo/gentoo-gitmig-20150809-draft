@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.7.0.ebuild,v 1.6 2003/01/20 20:15:10 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/lm_sensors-2.7.0.ebuild,v 1.7 2003/02/27 23:29:30 lostlogic Exp $
 
 inherit flag-o-matic
 
@@ -13,14 +13,14 @@ SLOT="0"
 # gentoo-sources-2.4.20-r1 and xfs-sources-2.4.20-r1 will
 # have support for this package, do not change these to ~ 
 # until your arch has i2c-2.7.0 in it's kernel.
-KEYWORDS="~x86 -ppc -sparc"
+KEYWORDS="x86 -ppc -sparc"
 LICENSE="GPL-2"
 
 DEPEND="|| (
+	     >=sys-apps/i2c-2.7.0
 	     >=sys-kernel/gentoo-sources-2.4.20-r1
 	     >=sys-kernel/lolo-sources-2.4.20.1
 	     >=sys-kernel/xfs-sources-2.4.20_pre4
-	     >=sys-apps/i2c-2.7.0
 	   )"
 
 src_compile()  {
