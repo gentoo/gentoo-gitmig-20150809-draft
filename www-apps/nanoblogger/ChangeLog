@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/nanoblogger
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoblogger/ChangeLog,v 1.5 2005/02/18 20:27:42 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoblogger/ChangeLog,v 1.6 2005/02/21 17:00:16 ka0ttic Exp $
+
+*nanoblogger-3.1-r3 (21 Feb 2005)
+
+  21 Feb 2005; Aaron Walker <ka0ttic@gentoo.org> -nanoblogger-3.1-r2.ebuild,
+  +nanoblogger-3.1-r3.ebuild:
+  Add to the sed to fix the --manual option for bug 82750.
 
   19 Feb 2005; Anders Rune Jensen <arj@gentoo.org> nanoblogger-3.1-r2.ebuild:
   add ~amd64

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoblogger/nanoblogger-3.1-r2.ebuild,v 1.2 2005/02/18 20:27:42 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nanoblogger/nanoblogger-3.1-r3.ebuild,v 1.1 2005/02/21 17:00:16 ka0ttic Exp $
 
 inherit bash-completion eutils
 
@@ -21,6 +21,7 @@ src_unpack() {
 	sed -i \
 		-e 's|^\(BASE_DIR=\).*$|\1"/usr/share/nanoblogger"|' \
 		-e 's|"$BASE_DIR"/\(nb\.conf\)|/etc/\1|' \
+		-e "s|\$BASE_DIR.*\(nano.*html\)|/usr/share/doc/${PF}/html/\1|" \
 			nb || die "sed nb failed"
 	epatch ${FILESDIR}/${P}-fix-rss2.diff
 }
@@ -39,7 +40,7 @@ src_install() {
 pkg_postinst() {
 	echo
 	einfo "Documentation for getting started with nanoblogger may be found at"
-	einfo "/usr/share/doc/${PF}/html/nanoblogger.html."
+	einfo "/usr/share/doc/${PF}/html/nanoblogger.html or by running 'nb --manual;."
 	einfo
 	einfo "To create and configure a new weblog, run the following as your user:"
 	einfo "   nb -b /some/dir -a"

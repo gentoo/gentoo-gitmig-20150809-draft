@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a9a8cb7560993b526b37a568f041fd8c nanoblogger-3.1-r3.ebuild 1671
+MD5 45532f1536457d840202735890b4867a ChangeLog 1211
 MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
-MD5 7ed8fb967049e67f00fabd453d10b11c nanoblogger-3.1-r2.ebuild 1571
-MD5 1eb3709c5253399cce11877c613dd371 ChangeLog 1005
 MD5 1c213e50a94f5d19d1aa1fb5edd93721 files/nb.bashcomp 1389
-MD5 1ab32e1e0e5fef5232ec0b69d002f8eb files/digest-nanoblogger-3.1-r2 66
+MD5 1ab32e1e0e5fef5232ec0b69d002f8eb files/digest-nanoblogger-3.1-r3 66
 MD5 67755be92a7c9db9f65d470a5bd5cc6f files/nanoblogger-3.1-fix-rss2.diff 1204
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCGhOqEZCkKN40op4RAtLEAKC1JlgdK944LSVokHFAF++IplUd2QCgnzi3
+I3s1v1mT7yEZCgMx0n0DPG8=
+=IDmt
+-----END PGP SIGNATURE-----
