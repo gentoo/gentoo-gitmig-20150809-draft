@@ -4,3 +4,4 @@
 LOGFILE=/var/log/mman.log
 CONFIG=/etc/mman/config.xml
 LOGLEVEL=32767
+SECTION=/etc/mman/section.xml
