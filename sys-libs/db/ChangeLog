@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.113 2005/01/30 19:39:20 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.114 2005/03/19 23:51:29 kloeri Exp $
+
+  19 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> db-4.1.25_p1-r4.ebuild:
+  Stable on alpha.
 
   30 Jan 2005; Paul de Vrieze <pauldv@gentoo.org> db-1.85-r1.ebuild,
   db-1.85-r2.ebuild, db-3.2.9-r10.ebuild, db-3.2.9-r7.ebuild,
