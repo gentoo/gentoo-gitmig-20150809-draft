@@ -1,0 +1,213 @@
+#!/bin/bash
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# Author:  Martin Schlemmer <azarah@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.1,v 1.1 2002/11/10 11:58:19 azarah Exp $
+
+
+source /etc/init.d/functions.sh || {
+	echo "$0: Could not source /etc/init.d/functions.sh!"
+	exit 1
+}
+
+if [ "$(id -u)" -ne 0 ]
+then
+	eerror "$0: Must be root."
+	exit 1
+fi
+
+usage() {
+cat << "USAGE_END"
+Usage: gcc-config [Option] <CHOST>-<gcc version>
+Options:
+	[--use-old]
+	[--get-current-profile]
+	[--get-bin-path]
+	[--get-lib-path]
+	[--get-stdcxx-incdir]
+
+USAGE_END
+
+	exit 1
+}
+
+if [ "$#" -lt 1 ]
+then
+	usage
+fi
+
+find_path() {
+	[ -z "$1" ] && return 0
+
+	for x in /bin /sbin /usr/bin /usr/sbin
+	do
+		if [ -x ${x}/$1 -a -r ${x}/$1 ]
+		then
+			echo "${x}/$1"
+			break
+		fi
+	done
+}
+
+GCC_COMP=""
+
+switch_profile() {
+	ebegin "Switching to ${GCC_COMP} compiler"
+
+	# Sourcing /etc/env.d/gcc/${GCC_COMP} is going to mess up
+	# PATH among things...
+	CP="$(find_path cp)"
+	RM="$(find_path rm)"
+	MV="$(find_path mv)"
+	LN="$(find_path ln)"
+	GREP="$(find_path grep)"
+	ENV_UPDATE="$(find_path env-update)"
+
+	source /etc/env.d/gcc/${GCC_COMP}
+	
+	${GREP} -v 'STDCXX_INCDIR' /etc/env.d/gcc/${GCC_COMP} > /etc/env.d/05gcc
+
+	if [ -d /usr/include/${STDCXX_INCDIR} -a ! -L /usr/include/${STDCXX_INCDIR} ]
+	then
+		${MV} /usr/include/${STDCXX_INCDIR} /usr/include/${STDCXX_INCDIR}.orig
+	elif [ -L /usr/include/${STDCXX_INCDIR} ]
+	then
+		${RM} -f /usr/include/${STDCXX_INCDIR}
+	fi
+	${LN} -snf ..${LDPATH/\/usr}/include/${STDCXX_INCDIR} /usr/include/${STDCXX_INCDIR}
+
+	[ -L /lib/cpp -o -f /lib/cpp ] && ${RM} -f /lib/cpp
+	${LN} -snf ..${PATH}/cpp /lib/cpp
+	[ -L /usr/bin/cc -o -f /usr/bin/cc ] && ${RM} -f /usr/bin/cc
+	${LN} -snf ../..${PATH}/gcc /usr/bin/cc
+
+	echo "CURRENT=${GCC_COMP}" > /etc/env.d/gcc/config
+
+	source /etc/profile
+
+	${ENV_UPDATE} &> /dev/null
+
+	eend 0
+
+	return 0
+}
+
+get_current_profile() {
+	if [ ! -f /etc/env.d/gcc/config ]
+	then
+		eerror "$0:  No gcc profile is active!"
+		return 1
+	fi
+
+	source /etc/env.d/gcc/config
+
+	if [ -z "${CURRENT}" ]
+	then
+		eerror "$0:  No gcc profile is active!"
+		return 1
+	fi
+
+	echo "${CURRENT}"
+
+	return 0
+}
+
+get_bin_path() {
+	source /etc/env.d/gcc/${GCC_COMP}
+
+	echo "${PATH}"
+
+	return 0
+}
+
+get_lib_path() {
+	source /etc/env.d/gcc/${GCC_COMP}
+
+	echo "${LDPATH}"
+
+	return 0
+}
+
+get_stdcxx_incdir() {
+	source /etc/env.d/gcc/${GCC_COMP}
+
+	echo "${LDPATH}/include/${STDCXX_INCDIR}"
+
+	return 0
+}
+
+NEED_ACTION="yes"
+DOIT="switch_profile"
+
+for x in $*
+do
+	case ${x} in
+		# Only use specified compiler if one is not already selected.
+		--use-old)
+			if get_current_profile &> /dev/null
+			then
+				GCC_COMP="$(get_current_profile)"
+			fi
+			;;
+		--get-current-profile)
+			if [ "${NEED_ACTION}" = "yes" ]
+			then
+				NEED_ACTION="no"
+				DOIT="get_current_profile"
+			fi
+			;;
+		--get-bin-path)
+			if [ "${NEED_ACTION}" = "yes" ]
+			then
+				NEED_ACTION="no"
+				DOIT="get_bin_path"
+			fi
+			;;
+		--get-lib-path)
+			if [ "${NEED_ACTION}" = "yes" ]
+			then
+				NEED_ACTION="no"
+				DOIT="get_lib_path"
+			fi
+			;;
+		--get-stdcxx-incdir)
+			if [ "${NEED_ACTION}" = "yes" ]
+			then
+				NEED_ACTION="no"
+				DOIT="get_stdcxx_incdir"
+			fi
+			;;
+		*)
+			if [ -z "${GCC_COMP}" ]
+			then
+				GCC_COMP="${x}"
+			fi
+			;;
+	esac
+done
+
+if [ "${DOIT}" = "switch_profile" -a -z "${GCC_COMP}" ]
+then
+	usage
+fi
+
+if [ -z "${GCC_COMP}" ]
+then
+	if get_current_profile &> /dev/null
+	then
+		GCC_COMP="$(get_current_profile)"
+	else
+		usage
+	fi
+fi
+
+if [ ! -d /usr/lib/gcc-lib/${GCC_COMP%-*}/${GCC_COMP##*-} -o \
+     ! -f /etc/env.d/gcc/${GCC_COMP} ]
+then
+	usage
+fi
+
+eval ${DOIT}
+
+
+# vim:ts=4
