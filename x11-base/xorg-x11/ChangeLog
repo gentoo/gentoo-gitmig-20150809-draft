@@ -1,6 +1,12 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.101 2004/08/31 09:20:01 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.102 2004/09/03 05:19:20 seemant Exp $
+
+*xorg-x11-6.7.99.904 (02 Sep 2004)
+
+  02 Sep 2004; Seemant Kulleen <seemant@gentoo.org>
+  +xorg-x11-6.7.99.904.ebuild:
+  copy ebuild over, for coming version bump
 
   31 Aug 2004; Travis Tilley <lv@gentoo.org> xorg-x11-6.7.99.903.ebuild:
   I've added an override for amd64 that will use lib64 as the lib directory even
