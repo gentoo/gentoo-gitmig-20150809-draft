@@ -1,7 +1,14 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.6 2002/04/10 12:01:33 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.7 2002/04/11 03:00:14 jhhudso Exp $
 
+*postgresql-7.2-r3 (10 Apr 2002)
+
+  10 Apr 2002; Jared H. Hudson <jhhudso@gentoo.org> postgresql-7.2-r3.ebuild files/digest-postgresql-7.2-r3:
+
+  Removed dependency of virtual/jdk-1.3. Portage doesn't currently support
+  virtual/package-X.X only virtual/package.
+	
 *postgresql-7.2-r2 (10 Apr 2002)
 
   10 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> postgresql-7.2-r2.ebuild files/digest-postgresql-7.2-r2:
