@@ -1,4 +1,6 @@
 MD5 e4e964435d900d47f118f4e1cb23e930 ChangeLog 619
 MD5 93731cf6a6160474995fa626c42d9d5d at-poke-0.1.0-r1.ebuild 762
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 68e3c9eb4e3964a1a577101ce14403a5 at-poke-0.2.1.ebuild 690
 MD5 6acba1fb6e4ef224efc884f23b61e3ec files/digest-at-poke-0.1.0-r1 66
+MD5 f6a812352544d473d3150d94a54256ec files/digest-at-poke-0.2.1 66
