@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-3.0-r1.ebuild,v 1.12 2004/07/16 02:52:25 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-3.0-r1.ebuild,v 1.13 2004/08/12 00:25:24 mr_bones_ Exp $
 
 inherit flag-o-matic gnuconfig
 
@@ -25,13 +25,12 @@ src_unpack() {
 	do
 		sed -e 's:@sysconfdir@/:@sysconfdir@/joe/:' -i ${i}
 	done
+	gnuconfig_update
 }
 
 src_compile() {
 	# Bug 34609 (joe 2.9.8 editor seg-faults on 'find and replace' when compiled with -Os)
 	replace-flags "-Os" "-O2"
-
-	use ppc64 && gnuconfig_update
 
 	econf || die
 	emake || die
