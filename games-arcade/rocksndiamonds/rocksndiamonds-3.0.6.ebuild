@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/rocksndiamonds/rocksndiamonds-3.0.6.ebuild,v 1.5 2004/03/27 09:57:04 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/rocksndiamonds/rocksndiamonds-3.0.6.ebuild,v 1.6 2004/03/28 09:22:26 mr_bones_ Exp $
 
 inherit games flag-o-matic
 
@@ -13,8 +13,8 @@ SLOT="0"
 KEYWORDS="x86 ppc amd64"
 
 DEPEND="virtual/glibc
-	|| (
 		X? ( virtual/x11 )
+	|| (
 		sdl? ( >=media-libs/libsdl-1.2.3
 			>=media-libs/sdl-mixer-1.2.4
 			>=media-libs/sdl-image-1.2.2 )
