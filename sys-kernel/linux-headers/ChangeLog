@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.91 2005/01/12 02:09:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.92 2005/01/12 05:09:25 eradicator Exp $
 
 *linux-headers-2.6.8.1-r2 (11 Jan 2005)
 
@@ -13,7 +13,7 @@
   +files/linux-headers-2.6.8.1-parisc-syscall.patch,
   +files/linux-headers-2.6.8.1-sparc-glibcsafe.patch,
   +files/linux-headers-2.6.8.1-strict-ansi-fix.patch,
-  +linux-headers-2.6.8.1-r2.ebuild:
+  +linux-headers-2.6.8.1-r2.ebuild, +linux-headers-2.6.8.1-r3.ebuild:
   Bring 2.6 headers back from linux26-headers.
 
   14 Nov 2004; Markus Rothe <corsair@gentoo.org> linux-headers-2.4.22.ebuild:
