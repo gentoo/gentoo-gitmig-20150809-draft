@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openobex
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/ChangeLog,v 1.19 2005/04/02 17:26:36 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openobex/ChangeLog,v 1.20 2005/04/04 03:15:10 tgall Exp $
+
+  03 Apr 2005; Tom Gall <tgall@gentoo.org> openobex-1.0.1.ebuild:
+  added ~ppc64.  it builds but I don't have a device to test with
 
   02 Apr 2005; Andrej Kacian <ticho@gentoo.org> openobex-1.0.1.ebuild:
   Marked 1.0.1 as -amd64, wrt bug #82961.
