@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/ircii
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ircii/ChangeLog,v 1.10 2004/07/08 21:30:29 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ircii/ChangeLog,v 1.11 2004/07/08 21:42:12 swegener Exp $
+
+*ircii-20040216 (08 Jul 2004)
+
+  08 Jul 2004; Sven Wegener <swegener@gentoo.org> +ircii-20040216.ebuild:
+  Version bump.
 
   08 Jul 2004; Sven Wegener <swegener@gentoo.org> metadata.xml,
   -ircii-20030709-r1.ebuild, -ircii-20030709.ebuild:
