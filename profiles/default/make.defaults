@@ -36,7 +36,7 @@ FETCHCOMMAND="/usr/bin/wget -t 5 --passive-ftp \${x} -P \${DISTDIR}"
 #USE="sdl nas esd alsa lcms opengl"
 #USE="berkdb gdbm readline libg++ gpm tcpd slang libwww pam"
 #USE="nls"
-#USE="ssl postgres mysql ldap odbc"
+#USE="ssl postgres mysql ldap odbc xml"
 #USE="tex"
 #USE="guile perl java python tcltk ruby"
 
