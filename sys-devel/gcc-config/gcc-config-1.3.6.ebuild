@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.3.6.ebuild,v 1.1 2004/06/19 17:53:18 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/gcc-config-1.3.6.ebuild,v 1.2 2004/06/21 04:12:24 mr_bones_ Exp $
 
 # Version of .c wrapper to use
 W_VER="1.4.2"
@@ -30,7 +30,7 @@ pkg_setup() {
 
 src_install() {
 	local gcc_bin_path="$(${GCC_CONFIG_BIN} --get-bin-path)"
-	
+
 	# Setup PATH just in case ...
 	if ${GCC_CONFIG_BIN} --get-current-profile &> /dev/null
 	then
