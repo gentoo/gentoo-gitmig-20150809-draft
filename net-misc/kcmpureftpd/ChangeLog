@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/kcmpureftpd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kcmpureftpd/ChangeLog,v 1.7 2004/04/14 00:16:41 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kcmpureftpd/ChangeLog,v 1.8 2004/05/03 20:32:38 centic Exp $
+
+*kcmpureftpd-0.9.1 (03 May 2004)
+
+  03 May 2004; Dominik Stadler <centic@gentoo.org> kcmpureftpd-0.8.ebuild,
+  +kcmpureftpd-0.9.1.ebuild:
+  Add new version 0.9.1, see Bug 38162. Add missing IUSE.
 
   13 Apr 2004; Jason Wever <weeve@gentoo.org> kcmpureftpd-0.8.ebuild:
   Added ~sparc keyword.
