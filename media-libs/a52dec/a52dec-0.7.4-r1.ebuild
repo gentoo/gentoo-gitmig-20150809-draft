@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/a52dec-0.7.4-r1.ebuild,v 1.3 2004/07/01 07:53:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/a52dec-0.7.4-r1.ebuild,v 1.4 2004/07/14 01:51:56 lv Exp $
 
 inherit flag-o-matic
 
@@ -14,7 +14,8 @@ KEYWORDS="~x86 ~ppc ~sparc ~hppa ~amd64 ~alpha ~ia64"
 IUSE="oss static djbfft"
 
 DEPEND=">=sys-devel/autoconf-2.52d-r1
-	x86? ( djbfft? ( dev-libs/djbfft ) )"
+	x86? ( djbfft? ( dev-libs/djbfft ) )
+	amd64? ( djbfft? ( dev-libs/djbfft ) )"
 RDEPEND="virtual/libc"
 
 src_compile() {
@@ -27,7 +28,7 @@ src_compile() {
 	use static \
 		&& myconf="${myconf} --disable-shared --enable-static" \
 		|| myconf="${myconf} --enable-shared --disable-static"
-	use x86 && myconf="${myconf} $(use_enable djbfft)"
+	(use x86 || use amd64) && myconf="${myconf} $(use_enable djbfft)"
 	econf ${myconf} || die
 	emake || die "emake failed"
 }

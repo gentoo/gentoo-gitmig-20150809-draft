@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/a52dec
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.16 2004/07/01 07:53:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.17 2004/07/14 01:51:56 lv Exp $
+
+  13 Jul 2004; Travis Tilley <lv@gentoo.org> a52dec-0.7.4-r1.ebuild:
+  added djbfft support for amd64
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   a52dec-0.7.4-r1.ebuild, a52dec-0.7.4.ebuild:
