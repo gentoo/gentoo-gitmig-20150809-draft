@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text-format/text-format-0.64.ebuild,v 1.5 2004/09/07 09:09:39 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/text-format/text-format-0.64.ebuild,v 1.6 2004/12/30 10:49:54 nigoro Exp $
 
 inherit eutils ruby
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.halostatue.ca/files/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~ppc64"
 IUSE=""
 DEPEND="virtual/ruby"
 USE_RUBY="any"
