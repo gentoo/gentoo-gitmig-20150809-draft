@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/fireflies/fireflies-2.06.ebuild,v 1.1 2004/01/04 15:06:44 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/fireflies/fireflies-2.06.ebuild,v 1.2 2004/02/29 15:14:25 aliz Exp $
 
 IUSE=""
 
 DESCRIPTION="Fireflies screensaver: Wicked cool eye candy"
-HOMEPAGE="http://somewhere.fscked.org/${PN}/"
-SRC_URI="${HOMEPAGE}/${P}.tar.gz"
+HOMEPAGE="http://somewhere.fscked.org/fireflies/"
+SRC_URI="http://somewhere.fscked.org/fireflies/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
