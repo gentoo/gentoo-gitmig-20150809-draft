@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-ladspa
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-ladspa/ChangeLog,v 1.5 2004/02/02 09:52:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-ladspa/ChangeLog,v 1.6 2004/03/26 22:02:55 eradicator Exp $
+
+  26 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-ladspa-0.6.ebuild, xmms-ladspa-0.7.ebuild:
+  Stable on x86.  Added explicit IUSE.
 
 *xmms-ladspa-0.7 (02 Feb 2004)
 

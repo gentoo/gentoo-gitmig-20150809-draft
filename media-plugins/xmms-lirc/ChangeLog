@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-lirc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-lirc/ChangeLog,v 1.5 2004/02/24 05:47:00 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-lirc/ChangeLog,v 1.6 2004/03/26 22:03:40 eradicator Exp $
+
+  26 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> xmms-lirc-1.2.ebuild,
+  xmms-lirc-1.4.ebuild:
+  Stable on x86.  Added explicit IUSE.
 
   23 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> xmms-lirc-1.2.ebuild,
   xmms-lirc-1.4.ebuild:
