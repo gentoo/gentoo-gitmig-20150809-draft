@@ -1,14 +1,21 @@
 # ChangeLog for net-misc/tsclient
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tsclient/ChangeLog,v 1.4 2003/02/12 08:34:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tsclient/ChangeLog,v 1.5 2003/02/22 08:34:07 liquidx Exp $
 
 *tsclient-0.91 (26 Jan 2003)
-
+  
+  22 Feb 2003; Alastair Tse <liquidx@gentoo.org> tsclient-0.91.ebuild,
+  files/tsclient.desktop:
+  Applet installs in the right location (#15925). Added Gnome menu entry.
+  
   26 Jan 2003; Brad Cowan <bcowan@gentoo.org> tsclient-0.91.ebuild,
   files/digest-tsclient-0.91:
   Version bump.
 
 *tsclient-0.86 (28 Dec 2002)
+
+  22 Feb 2003; Alastair Tse <liquidx@gentoo.org tsclient-0.86.ebuild,
+  Applet installs in the right location (#15925). Added Gnome menu entry.
 
   28 Dec 2002; Brad Cowan <bcowan@gentoo.org> tsclient-0.86.ebuild,
   files/digest-tsclient-0.86:
