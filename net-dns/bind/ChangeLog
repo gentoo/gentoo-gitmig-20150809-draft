@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.30 2003/07/15 09:23:17 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.31 2003/07/15 19:57:26 mholzer Exp $
+
+  15 Jul 2003; Martin Holzer <mholzer@gentoo.org> files/named.conf-r2:
+  Fixed pid patch. Closes #24497
 
   15 Jul 2003; Christian Birchinger <joker@gentoo.org> bind-9.2.2-r2.ebuild:
   Added sparc stable keyword

@@ -1,4 +1,4 @@
-MD5 559a94993707e5c2253e4d2cd25e4fca ChangeLog 5559
+MD5 9a450cb23707d83fd33dfef05ba3ae21 ChangeLog 5666
 MD5 c9a29b6508d3d303a2eb6edffe70594f bind-9.2.2-r1.ebuild 4809
 MD5 fdbfc77b1be11b5d17136423aa2d3454 bind-9.2.2-r2.ebuild 4805
 MD5 4de06bb39a3c02c13680025e087099b5 bind-9.2.2.ebuild 4602
@@ -15,6 +15,6 @@ MD5 ccfca63035b534556c3910270d40a4b9 files/localhost 412
 MD5 ccfca63035b534556c3910270d40a4b9 files/localhost.zone 412
 MD5 b5605e61fab3836f54d54acfba68b09f files/named.ca 2499
 MD5 93246d599352b489da51f7ada3186802 files/named.conf-r1 756
-MD5 22e628a0c466f1a956beff414b8c5dc9 files/named.conf-r2 760
+MD5 20f93349185d27963c279254fe494b34 files/named.conf-r2 766
 MD5 21e3efd21e18f4c660155978105f8ebe files/named.confd 351
 MD5 4c2d6ae455ffd54c35345189cdbc8ee7 files/named.rc6 1399
