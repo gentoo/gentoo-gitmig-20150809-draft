@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/most
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/ChangeLog,v 1.7 2004/02/25 14:43:26 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/most/ChangeLog,v 1.8 2004/04/06 17:48:07 avenj Exp $
+
+*most-4.9.4 (06 Apr 2004)
+
+  06 Apr 2004; Jon Portnoy <avenj@gentoo.org> most-4.9.4.ebuild :
+  Version bump, bug #46314.
 
   25 Feb 2004; Daniel Ahlberg <aliz@gentoo.org> most-4.9.2.ebuild:
   Add binary depending on arch. Closing #38900.
