@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/skipstone/skipstone-0.9.2.ebuild,v 1.1 2004/06/20 16:30:34 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/skipstone/skipstone-0.9.2.ebuild,v 1.2 2004/06/21 04:26:53 brad Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 
 DEPEND=">=net-www/mozilla-1.6
-	=x11-libs/gtk+-1.2*"
+	>=x11-libs/gtk+-2.0"
 
 RDEPEND="${DEPEND}
 	nls? ( sys-devel/gettext )"
