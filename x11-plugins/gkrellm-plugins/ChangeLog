@@ -1,0 +1,21 @@
+# ChangeLog for x11-plugins/gkrellm-plugins
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-plugins/ChangeLog,v 1.1 2002/08/30 01:49:27 seemant Exp $
+
+*gkrellm-plugins-1.2.11-r1 (16 Jun 2002)
+
+  29 Aug 2002; Seemant Kulleen <seemant@gentoo.org> * :
+
+  Relocated to x11-plugins
+
+  16 Jun 2002; Ben Lutgens <lamer@gentoo.org> ChangeLog  :
+
+  Added gkrellshoot and gkrellmweather
+
+*gkrellm-plugins-1.2.11 (10 Jun 2002)
+
+  10 Jun 2002; Ben Lutgens <lamer@gentoo.org> gkrellm-plugins-1.2.11: A
+  rollup package of all gkrellm-plugins in portage. If you add any gkrellm
+  plugins, make sure to add an entry to the DEPEND for your addition. Also
+  keep the revision number the same as the gkrellm package number. Some
+  plugins will only work with certain versions of gkrellm.
