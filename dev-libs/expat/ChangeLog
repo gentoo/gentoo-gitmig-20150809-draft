@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/expat
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.34 2004/08/07 10:37:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/expat/ChangeLog,v 1.35 2004/09/09 06:29:14 cardoe Exp $
+
+*expat-1.95.7-r1 (09 Sep 2004)
+
+  09 Sep 2004; Doug Goldstein <cardoe@gentoo.org> +expat-1.95.7-r1.ebuild:
+  make check adds additional depends... graceful solution to include those
+  depends if the FEATURE is requested. Had to use a local USE flag though.
 
   07 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org> expat-1.95.7.ebuild:
   gnuconfig_update in src_unpack; use generic src_compile
