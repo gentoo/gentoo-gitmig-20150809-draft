@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 72ffa3137551a735022d350908a695ae pinentry-0.7.1_p20041207.ebuild 2061
-MD5 69fb1612c45201d866665119757a50d2 pinentry-0.7.1-r1.ebuild 1616
+MD5 13b17a6aa83caf416efd21391c7c84b4 pinentry-0.7.1-r1.ebuild 1620
 MD5 697dc37cbe8a74d6134fc4f34cba41cc ChangeLog 2924
 MD5 f5775272cd7e22ae38566107c416c1e4 metadata.xml 275
 MD5 60e4ac83d966e30e888666d8ac56095b files/qt-compile-fix.diff 694
@@ -11,7 +11,7 @@ MD5 85ba6415300c935a1234df2cb3199fce files/digest-pinentry-0.7.1-r1 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBtjIAI1lqEGTUzyQRAsBZAKCQVQ8tmv5FehRpg0sQhvPe1CQoKQCg2GTk
-EQLEZIxFk26WTLk3+BxY8nw=
-=UtSp
+iD8DBQFBtjJBI1lqEGTUzyQRAmiBAKDGNUHVWmKedN0qvA1FSpB2MR4/uACdF9gI
+fWv8jIKLoHdOdciovPQs/Nw=
+=Zovv
 -----END PGP SIGNATURE-----
