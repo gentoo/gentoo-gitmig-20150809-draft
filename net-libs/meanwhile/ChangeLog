@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/meanwhile
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/ChangeLog,v 1.7 2004/10/20 21:15:18 rizzo Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/meanwhile/ChangeLog,v 1.8 2005/01/16 21:48:36 weeve Exp $
+
+  16 Jan 2005; Jason Wever <weeve@gentoo.org> meanwhile-0.3-r2.ebuild:
+  Added ~sparc keyword wrt bug #77973.
 
 *meanwhile-0.3-r2 (20 Oct 2004)
 
