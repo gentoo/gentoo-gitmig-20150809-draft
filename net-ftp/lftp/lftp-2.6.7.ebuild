@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-2.6.7.ebuild,v 1.1 2003/09/20 03:59:00 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-2.6.7.ebuild,v 1.2 2003/09/21 19:24:26 taviso Exp $
 
-IUSE="ssl socks5 nls alpha"
+IUSE="ssl socks5 nls"
 
 inherit eutils
 
@@ -38,15 +38,6 @@ src_compile() {
 		--sysconfdir=/etc/lftp \
 		--without-modules \
 		${myconf}
-
-	[ "${ARCH}" == "alpha" ] && {
-		 # remove duplicate libraries, causes problems on ALPHA.
-		 #  -taviso
-		 einfo "Adding check for superfluous linking..."
-		 sed -i \
-		 	's/\(link_command="\)\($compile_command$compile_rpath\)"/\1\`echo \2 | perl -lane \x27print "@F" if @F = grep \!\$seen{\$_}++, @F\x27\`"/' \
-		 	libtool
-	}
 
 	make || die "compile problem"
 }
