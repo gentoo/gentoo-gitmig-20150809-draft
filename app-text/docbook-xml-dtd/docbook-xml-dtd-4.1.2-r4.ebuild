@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/docbook-xml-dtd-4.1.2-r4.ebuild,v 1.1 2003/09/06 19:25:57 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/docbook-xml-dtd-4.1.2-r4.ebuild,v 1.2 2003/09/06 22:24:38 msterret Exp $
 
 MY_P="docbkx412"
 S=${WORKDIR}/${P}
@@ -31,7 +31,7 @@ src_install() {
 
 	insinto /usr/share/sgml/docbook/xml-dtd-${PV}
 	doins *.dtd *.mod
-	doins docbook.cat 
+	doins docbook.cat
 	insinto /usr/share/sgml/docbook/xml-dtd-${PV}/ent
 	doins ent/*.ent
 
@@ -41,7 +41,7 @@ src_install() {
 pkg_postinst() {
 	build-docbook-catalog
 
-	# we need to add the docbookx.dtd to local, so 
+	# we need to add the docbookx.dtd to local, so
 	# packages that refer to it dont need to go http
 	# for it <obz@gentoo.org>
 	CATALOG=/etc/xml/catalog
@@ -55,8 +55,8 @@ pkg_postinst() {
 		"http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" \
 		"/usr/share/sgml/docbook/xml-dtd-4.1.2/docbookx.dtd" \
 		${CATALOG}
-	
-}	
+
+}
 
 pkg_postrm( ) {
 
