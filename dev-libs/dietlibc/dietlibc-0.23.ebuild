@@ -1,9 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.23.ebuild,v 1.6 2003/12/20 01:14:28 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.23.ebuild,v 1.7 2004/02/20 02:51:45 mr_bones_ Exp $
 
-inherit eutils flag-o-matic
-filter-flags "-fstack-protector"
+inherit eutils flag-o-matic gcc
 
 DESCRIPTION="A minimal libc"
 SRC_URI="mirror://kernel/linux/libs/${PN}/${P}.tar.bz2"
@@ -14,9 +13,13 @@ LICENSE="GPL-2"
 KEYWORDS="x86 sparc ~hppa ~amd64 ~alpha"
 
 src_unpack() {
-	unpack ${A} ; cd ${S}
+	filter-flags "-fstack-protector"
 
-	epatch ${FILESDIR}/${PV}-dirent-prototype.patch
+	unpack ${A}
+	cd ${S}
+
+	epatch "${FILESDIR}/${PV}-dirent-prototype.patch"
+	[ $(gcc-major-version) -eq 3 ] && epatch "${FILESDIR}/gcc-33.patch"
 	[ "${ARCH}" = "hppa" ] && epatch "${FILESDIR}/${P}-hppa.patch"
 	mv Makefile Makefile.orig
 	sed -e "s:^CFLAGS.*:CFLAGS = ${CFLAGS}:" \

@@ -1,0 +1,13 @@
+--- diet.c	2003-10-10 15:17:46.000000000 +0200
++++ diet.c	2004-02-15 19:03:01.000000000 +0100
+@@ -26,8 +26,8 @@
+ 
+ static const char* Os[] = {
+   "i386","-Os","-mpreferred-stack-boundary=2",
+-	 "-malign-functions=1","-malign-jumps=1",
+-	 "-malign-loops=1","-fomit-frame-pointer",0,
++	 "-falign-functions","-falign-jumps",
++	 "-falign-loops","-fomit-frame-pointer",0,
+   "x86_64","-Os","-fno-omit-frame-pointer",0,
+   "sparc","-Os","-mcpu=supersparc",0,
+   "sparc64","-Os","-m64",0,

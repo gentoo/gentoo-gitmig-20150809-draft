@@ -1,9 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.22-r2.ebuild,v 1.8 2003/12/06 15:55:40 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/dietlibc-0.22-r2.ebuild,v 1.9 2004/02/20 02:51:45 mr_bones_ Exp $
 
 inherit eutils flag-o-matic
-filter-flags "-fstack-protector"
 
 DESCRIPTION="A minimal libc"
 SRC_URI="mirror://kernel/linux/libs/${PN}/${P}.tar.bz2"
@@ -14,7 +13,10 @@ LICENSE="GPL-2"
 KEYWORDS="x86 sparc hppa amd64 alpha"
 
 src_unpack() {
-	unpack ${A} ; cd ${S}
+	filter-flags "-fstack-protector"
+
+	unpack ${A}
+	cd ${S}
 
 	epatch ${FILESDIR}/${P}_xdr_security_fix.patch
 	epatch ${FILESDIR}/${PV}-dirent-prototype.patch
