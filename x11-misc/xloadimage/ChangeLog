@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xloadimage
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xloadimage/ChangeLog,v 1.17 2003/11/04 03:40:44 abhishek Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xloadimage/ChangeLog,v 1.18 2003/11/13 14:28:14 tuxus Exp $
+
+  13 Nov 2003; <tuxus@gentoo.org> xloadimage-4.1-r1.ebuild:
+  added mips to KEYWORDS
 
   03 Nov 2003; Abhishek Amit <abhishek@gentoo.org> metadata.xml:
   Added metadata.xml
