@@ -1,0 +1,7 @@
+MD5 14a7d56a31b075424a127fe25127bf33 SphinxTrain-0.9.1-r1.ebuild 952
+MD5 acd7f894f7931bc0e83cc7c85cc45ad2 ChangeLog 678
+MD5 575dff87b256c94b5e850538bd053c49 SphinxTrain-0.9.1.ebuild 882
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 7ee585b5d5453d603e510f969b876524 files/digest-SphinxTrain-0.9.1 74
+MD5 7ee585b5d5453d603e510f969b876524 files/digest-SphinxTrain-0.9.1-r1 74
+MD5 993e38eaa81b891528bd3447e4d92a90 files/gcc.patch 816
