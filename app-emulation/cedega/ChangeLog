@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/cedega
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/cedega/ChangeLog,v 1.1 2004/06/23 14:58:04 coronalvr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/cedega/ChangeLog,v 1.2 2004/06/24 11:16:41 mholzer Exp $
+
+  24 Jun 2004; Martin Holzer <mholzer@gentoo.org> cedega-4.0.ebuild:
+  fixing einfo
 
 *cedega-4.0 (23 Jun 2004)
 

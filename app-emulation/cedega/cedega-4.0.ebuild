@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/cedega/cedega-4.0.ebuild,v 1.1 2004/06/23 14:58:04 coronalvr Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/cedega/cedega-4.0.ebuild,v 1.2 2004/06/24 11:16:41 mholzer Exp $
 
 MY_P="cedega_${PV}-1.i386"
 DESCRIPTION="Cedega replaces WineX, a distribution of Wine with enhanced DirectX for gaming"
@@ -33,7 +33,7 @@ src_install () {
 }
 
 pkg_postinst() {
-	einfo "Run /usr/bin/cedega to start winex as any non-root user."
+	einfo "Run /usr/bin/cedega to start cedega as any non-root user."
 	einfo "This is a wrapper-script which will take care of creating"
 	einfo "an initial environment and do everything else."
 	einfo ""
