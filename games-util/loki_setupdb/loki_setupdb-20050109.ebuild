@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/loki_setupdb/loki_setupdb-20040916.ebuild,v 1.3 2005/01/09 15:08:06 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/loki_setupdb/loki_setupdb-20050109.ebuild,v 1.1 2005/01/09 15:08:06 wolf31o2 Exp $
 
 inherit eutils
 
@@ -15,6 +15,11 @@ RESTRICT=""
 IUSE=""
 
 DEPEND="dev-libs/libxml"
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${P}-amd64.patch
+}
 
 src_compile() {
 	./autogen.sh || "autogen.sh failed"
