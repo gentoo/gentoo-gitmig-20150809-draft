@@ -1,17 +1,21 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.48.ebuild,v 1.1 2005/01/02 04:23:47 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.48.2.20050130.ebuild,v 1.1 2005/01/30 23:33:25 swtaylor Exp $
 
 inherit eutils
 
 DESCRIPTION="An MTA designed specifically for maildirs"
-[ -z "${PV/?.??/}" ] && SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2" || SRC_URI="http://www.courier-mta.org/beta/courier/${P%%_pre}.tar.bz2"
+[ -z "${PV/?.??/}" ] && SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
+[ -z "${PV/?.??.?/}" ] && SRC_URI="mirror://sourceforge/courier/${P}.tar.bz2"
+[ -z "${SRC_URI}" ] && SRC_URI="http://www.courier-mta.org/beta/courier/${P%%_pre}.tar.bz2"
 HOMEPAGE="http://www.courier-mta.org/"
 S="${WORKDIR}/${P%%_pre}"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~alpha ~ppc ~sparc ~amd64 ~mips"
+# not in keywords due to missing dependencies: ~arm ~s390 ~ppc64
+#KEYWORDS="~x86 ~alpha ~amd64 ~hppa ~ia64 ~mips ~ppc ~sparc"
+KEYWORDS="-*"
 IUSE="postgres ldap mysql pam nls ipv6 spell fax crypt norewrite uclibc mailwrapper"
 
 PROVIDE="virtual/mta
@@ -67,7 +71,7 @@ src_compile() {
 		--disable-root-check \
 		--mandir=/usr/share/man \
 		--sysconfdir=/etc/courier \
-		--libexecdir=/usr/lib/courier \
+		--libexecdir=/usr/$(get_libdir)/courier \
 		--datadir=/usr/share/courier \
 		--sharedstatedir=/var/lib/courier/com \
 		--localstatedir=/var/lib/courier \
@@ -95,9 +99,11 @@ etc_courier() {
 }
 
 etc_courier_chg() {
+	set -v -x
 	file="${1}" ; key="${2}" ; value="${3}"
 	grep -q "${key}" "${file}" && einfo "Changing ${file}: ${key} to ${value}"
 	sed -i -e"/\#\#NAME: ${key}/,+20 s|${key}=.*|${key}=\"${value}\"|g" ${file}
+	set +v +x
 }
 
 set_maildir() {
@@ -163,8 +169,12 @@ src_install() {
 	etc_courier esmtpd-ssl "BOFHBADMIME=accept"
 	etc_courier esmtpd-msa "BOFHBADMIME=accept"
 	etc_courier_chg esmtpd ESMTPDSTART YES
+	etc_courier_chg esmtpd ESMTPAUTH "LOGIN CRAM-SHA1 CRAM-MD5"
+	etc_courier_chg esmtpd ESMTPAUTH_TLS "PLAIN LOGIN CRAM-SHA1 CRAM-MD5"
 	etc_courier_chg esmtpd-msa ESMTPDSTART YES
+	etc_courier_chg esmtpd-msa AUTH_REQUIRED 1
 	etc_courier_chg esmtpd-ssl ESMTPDSSLSTART YES
+	etc_courier_chg esmtpd-ssl AUTH_REQUIRED 1
 	etc_courier_chg imapd IMAPDSTART YES
 	etc_courier_chg imapd-ssl IMAPDSSLSTART YES
 	etc_courier_chg pop3d POP3DSTART YES
@@ -178,7 +188,7 @@ src_install() {
 	echo "See /usr/share/courier/htmldoc/index.html for docs in html format" \
 		>> ${D}/usr/share/doc/${P}/README.htmldocs
 
-	insinto /usr/lib/courier/courier
+	insinto /usr/$(get_libdir)/courier/courier
 	insopts -m  755 -o mail -g mail
 	doins ${S}/courier/webmaild
 	insinto /etc/courier/webadmin

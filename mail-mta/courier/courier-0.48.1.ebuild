@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.48.1.ebuild,v 1.1 2005/01/05 19:30:46 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/courier-0.48.1.ebuild,v 1.2 2005/01/30 23:33:25 swtaylor Exp $
 
 inherit eutils
 
@@ -69,7 +69,7 @@ src_compile() {
 		--disable-root-check \
 		--mandir=/usr/share/man \
 		--sysconfdir=/etc/courier \
-		--libexecdir=/usr/lib/courier \
+		--libexecdir=/usr/$(get_libdir)/courier \
 		--datadir=/usr/share/courier \
 		--sharedstatedir=/var/lib/courier/com \
 		--localstatedir=/var/lib/courier \
@@ -180,7 +180,7 @@ src_install() {
 	echo "See /usr/share/courier/htmldoc/index.html for docs in html format" \
 		>> ${D}/usr/share/doc/${P}/README.htmldocs
 
-	insinto /usr/lib/courier/courier
+	insinto /usr/$(get_libdir)/courier/courier
 	insopts -m  755 -o mail -g mail
 	doins ${S}/courier/webmaild
 	insinto /etc/courier/webadmin
