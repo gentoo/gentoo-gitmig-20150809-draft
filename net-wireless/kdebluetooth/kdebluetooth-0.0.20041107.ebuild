@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-0.0.20041107.ebuild,v 1.1 2004/11/07 12:48:52 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-0.0.20041107.ebuild,v 1.2 2004/12/05 19:28:25 motaboy Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ SRC_URI="http://dev.gentoo.org/~motaboy/files/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 IUSE="xmms"
 
 RDEPEND=">=dev-libs/openobex-1
