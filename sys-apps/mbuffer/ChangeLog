@@ -1,0 +1,9 @@
+# ChangeLog for sys-apps/mbuffer
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mbuffer/ChangeLog,v 1.1 2003/08/06 20:30:36 max Exp $
+
+*mbuffer-20011008 (06 Aug 2003)
+
+  06 Aug 2003; Max Kalika <max@gentoo.org> mbuffer-20011008.ebuild:
+  Initial version.
+
