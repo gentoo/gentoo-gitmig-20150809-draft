@@ -1,11 +1,12 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 4279146e32b6ebd1b9103a9194b6680c ChangeLog 2914
+MD5 66777123fcb44319180327f04e0f9441 ChangeLog 3102
 MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
 MD5 0af8dec75f725b2ed9956874af7058b6 drbd-0.7.7.ebuild 1961
 MD5 b149aaae0a018b3d665b28b7c8ac2b41 drbd-0.6.12-r1.ebuild 2136
 MD5 32ee8c669ef5af0a261cbcaf8b53351e drbd-0.7.8.ebuild 1961
+MD5 fd2dfa130ebad69b6622a23a0d407a62 drbd-0.7.8-r1.ebuild 2020
 MD5 463c9c89c7d3f156fc5581070abce14d files/0.6.12-conf.d 69
 MD5 4ab78154d6a32d13d416f9915ad4bc28 files/0.6.12-init 701
 MD5 7416c44daab264a36cc8c5a2c35e757f files/0.6.12-scripts-Makefile.patch 1072
@@ -16,10 +17,12 @@ MD5 a977b79c0da39dcb625d9aeb8287d60e files/drbd-0.7-init 1189
 MD5 965d3d560fe5fee18c3fdd1bec9748fd files/digest-drbd-0.7.7 62
 MD5 4f71ba1c534aebcc1f20da6afd4d10f7 files/digest-drbd-0.7.8 62
 MD5 cc42f194896b14c87944e9a5c5aaebf9 files/drbd-0.7-module-Makefile.patch 948
+MD5 b46416329e2a7fe113723dc825e3250e files/drbd-0.7-bio.patch 6699
+MD5 4f71ba1c534aebcc1f20da6afd4d10f7 files/digest-drbd-0.7.8-r1 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB9XW2gMUyd/cdjWsRAj6nAJsE8DZRTNjYT2rvPhODnsK3RamH+QCeIgrx
-ahW720kBob1baf0EL0ujVqs=
-=+ISZ
+iD8DBQFB9oMrgMUyd/cdjWsRAvnUAJ0YHGmef1UgvZ4AoeHT8SCqcYfhJACfbtPB
+DF7zYErHj33oqVMn4Ugh1ls=
+=tS9x
 -----END PGP SIGNATURE-----
