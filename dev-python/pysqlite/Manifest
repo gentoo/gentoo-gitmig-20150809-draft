@@ -1,0 +1,7 @@
+MD5 7e1b24cb7739e83ef52eb943ff062022 ChangeLog 980
+MD5 fdb332521b5e7a2ce1b66e5f0028762b pysqlite-0.2.0-r1.ebuild 834
+MD5 53f45b7768e5afde0283f6edc7b02950 pysqlite-0.3.1.ebuild 760
+MD5 e1beee195d65e7799e1d6e4f550b26dc pysqlite-0.4.1.ebuild 764
+MD5 a698d92790a57551420d82611a3520c6 files/digest-pysqlite-0.2.0-r1 65
+MD5 e553eec3bb40bcfc1ace7fc8f2e60806 files/digest-pysqlite-0.3.1 129
+MD5 2358ec1e5d6c50a9b165a50d31c0e5a8 files/digest-pysqlite-0.4.1 65
