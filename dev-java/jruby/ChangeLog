@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/jruby
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.5 2005/03/29 14:42:57 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.6 2005/04/02 21:43:38 luckyduck Exp $
+
+  02 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> jruby-0.7.0-r1.ebuild,
+  -jruby-0.7.0.ebuild:
+  cleanup, removed old revision with a dependency to oro. marked stable on amd64.
 
 *jruby-0.7.0-r1 (29 Mar 2005)
 
