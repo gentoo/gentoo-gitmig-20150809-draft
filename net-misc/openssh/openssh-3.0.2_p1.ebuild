@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.0.1_p1.ebuild,v 1.4 2001/12/05 18:44:48 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.0.2_p1.ebuild,v 1.1 2001/12/06 18:05:15 drobbins Exp $
 
 # Make it more portable between straight releases
 # and _p? releases.
