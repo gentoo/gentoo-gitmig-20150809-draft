@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-2.0.9.ebuild,v 1.4 2003/09/12 19:31:11 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-2.0.9.ebuild,v 1.5 2004/02/22 19:48:30 agriffis Exp $
 
 inherit gnome.org gnome2 eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnome.org/gnome-pilot/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc "
+KEYWORDS="x86 ~sparc"
 IUSE=""
 
 RDEPEND=">=gnome-base/libgnome-2.0.0
