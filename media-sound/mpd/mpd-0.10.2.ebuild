@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.10.2.ebuild,v 1.5 2004/04/20 07:50:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpd/mpd-0.10.2.ebuild,v 1.6 2004/04/22 09:39:49 eradicator Exp $
 
-IUSE="oggvorbis mad aac audiofile ipv6"
+IUSE="oggvorbis mad aac audiofile ipv6 flac"
 
 DESCRIPTION="Music Player Daemon (mpd)"
 SRC_URI="mirror://sourceforge/musicpd/${P}.tar.gz"
