@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.2.ebuild,v 1.7 2004/11/24 15:03:04 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.2.ebuild,v 1.8 2004/11/25 08:53:34 kosmikus Exp $
 
 # Brief explanation of the bootstrap logic:
 #
@@ -108,11 +108,9 @@ src_compile() {
 	# incorrectly by the configure script
 	echo "ArSupportsInput:=" >> mk/build.mk
 
-	# Required under ppc to work around some obscure linker problem.
-	if use ppc || use amd64;
-	then
-		echo "SplitObjs=NO" >> mk/build.mk
-	fi
+	# Required for some architectures, because they don't support ghc fully ...
+	use ppc || use amd64 && echo "SplitObjs=NO" >> mk/build.mk
+	use amd64 && echo "GhcUnregisterised=YES" >> mk/build.mk
 
 	# unset SGML_CATALOG_FILES because documentation installation
 	# breaks otherwise ...

@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.47 2004/11/24 15:03:04 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.48 2004/11/25 08:53:34 kosmikus Exp $
+
+  25 Nov 2004; Andres Loeh <kosmikus@gentoo.org> ghc-6.2.2.ebuild:
+  The amd64 build is unregistered (bug #58588).
 
   24 Nov 2004; Andres Loeh <kosmikus@gentoo.org> ghc-6.2.2.ebuild:
   Added ~amd64 flag, cf. bug #58588.
