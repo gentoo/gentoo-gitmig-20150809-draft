@@ -1,0 +1,6 @@
+MD5 67594eeaf000afc1f82294b73510ec8b ChangeLog 562
+MD5 859b267cac67ffc221940c4ec90e2523 elogin-0.0.2.20030220.ebuild 1638
+MD5 b9446dcfa34350da783bce4292e2bdee files/digest-elogin-0.0.2.20030220 75
+MD5 4faf01f0b618f374f7bf174ddd153008 files/elogin-0.0.2.20030220-autofiles.patch 4148
+MD5 b90aec533897e1753204e5af5154d93d files/gentoo-paths.patch 833
+MD5 9fefb382b74b2953808e726418f8f71f files/gentoo-sessions.patch 1856
