@@ -1,3 +1,4 @@
+MD5 82481141c99765eaeb9a7d6f2a09f720 anthy-ss-4723.ebuild 1521
 MD5 ca30b7ef075f2fc650499a1a074aa91f metadata.xml 818
 MD5 4045ff28e2c9239f0335346dfeb7298b ChangeLog 1297
 MD5 1a1d4ee2f79e04403df1d6909103fc0b anthy-ss-4601.ebuild 1521
@@ -6,6 +7,7 @@ MD5 75b8edafd11f92791b3a387ee5c1ca71 anthy-ss-4624.ebuild 1521
 MD5 9bf04e14dd27819240809d630b68913d anthy-ss-4703.ebuild 1521
 MD5 157c9fbb3f326e252fd41e4854b3dad1 anthy-ss-4708.ebuild 1521
 MD5 d91fcb424ec63b588900d2d88a8bcee2 files/50anthy-gentoo.el 99
+MD5 3ac07bb6d11f16116dafa5e8cf462dc8 files/digest-anthy-ss-4723 63
 MD5 7bbcd511928477630332c6bd34c6e528 files/digest-anthy-ss-4507 63
 MD5 f8f5923028de00ce97fc403b4eb54c74 files/digest-anthy-ss-4601 63
 MD5 6978e00395926591bb4d94b9c8b48006 files/digest-anthy-ss-4624 63

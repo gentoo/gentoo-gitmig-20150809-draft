@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/anthy-ss
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy-ss/ChangeLog,v 1.7 2003/11/09 19:24:30 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy-ss/ChangeLog,v 1.8 2003/11/24 15:41:20 usata Exp $
+
+*anthy-ss-4723 (25 Nov 2003)
+
+  25 Nov 2003; Mamoru KOMACHI <usata@gentoo.org> anthy-ss-4723.ebuild:
+  New upstream release
 
 *anthy-ss-4703 (10 Nov 2003)
 
