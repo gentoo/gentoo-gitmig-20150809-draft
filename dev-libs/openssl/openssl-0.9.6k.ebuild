@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6k.ebuild,v 1.6 2003/12/15 05:41:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.6k.ebuild,v 1.7 2004/01/17 07:26:29 kumba Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ RDEPEND="virtual/glibc"
 DEPEND="${RDEPEND} >=dev-lang/perl-5"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ppc alpha sparc mips hppa arm -amd64"
+KEYWORDS="x86 ppc alpha sparc mips hppa ~arm -amd64"
 IUSE=""
 
 if [ "$PROFILE_ARCH" = "sparc" -a "`uname -m`" = "sparc64" ]; then

@@ -1,6 +1,16 @@
 # ChangeLog for dev-libs/openssl
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.66 2004/01/15 13:52:50 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.67 2004/01/17 07:26:29 kumba Exp $
+
+*openssl-0.9.7b-r3 (17 Jan 2004)
+
+  17 Jan 2004; Joshua Kinard <kumba@gentoo.org> openssl-0.9.6k-r1.ebuild,
+  openssl-0.9.6k.ebuild, openssl-0.9.6l.ebuild, openssl-0.9.7b-r3.ebuild,
+  openssl-0.9.7b.ebuild, openssl-0.9.7c-r1.ebuild, openssl-0.9.7c.ebuild:
+  Bumped mips to stable, fixed copyright headers, &  Removed inherit on gcc.eclass
+  and replaced $(gcc-version) calls with a ${gcc_version} variable defined by
+  calling gcc -dumpversion directly. The reason for this was to resolve
+  dependency issues reported by repoman.
 
   13 Jan 2004; Daniel Ahlberg <aliz@gentoo.org> openssl-0.9.7c-r1.ebuild:
   More CFLAGS filtering, Closing #34261.
