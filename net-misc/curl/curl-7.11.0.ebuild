@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.11.0.ebuild,v 1.5 2004/06/24 23:40:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/curl/curl-7.11.0.ebuild,v 1.6 2004/10/04 22:16:35 pvdabeel Exp $
 
 DESCRIPTION="A Client that groks URLs"
 SRC_URI="http://curl.haxx.se/download/${P}.tar.bz2"
@@ -8,7 +8,7 @@ HOMEPAGE="http://curl.haxx.se/"
 
 SLOT="0"
 LICENSE="MIT X11"
-KEYWORDS="x86 ~ppc sparc ~alpha hppa amd64 ppc64 mips"
+KEYWORDS="x86 ppc sparc ~alpha hppa amd64 ppc64 mips"
 IUSE="ssl ipv6 ldap"
 
 DEPEND="ssl? ( >=dev-libs/openssl-0.9.6a )
