@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/gnome-print-0.30.ebuild,v 1.3 2001/10/16 23:41:30 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-print/gnome-print-0.30-r1.ebuild,v 1.1 2001/10/16 23:43:03 hallski Exp $
 
 
 S=${WORKDIR}/${P}
@@ -45,7 +45,10 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make prefix=${D}/usr						\
+	     sysconfdir=${D}/etc					\
+	     localstatedir=${D}/var/lib					\
+	     install || die
 
 	dosed /usr/share/fonts/fontmap
 	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
