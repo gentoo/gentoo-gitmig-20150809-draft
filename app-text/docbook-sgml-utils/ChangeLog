@@ -1,6 +1,13 @@
 # ChangeLog for app-text/docbook-sgml-utils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/ChangeLog,v 1.18 2003/11/15 02:55:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/ChangeLog,v 1.19 2003/11/20 07:55:06 obz Exp $
+
+*docbook-sgml-utils-0.6.12-r2 (20 Nov 2003)
+
+  20 Nov 2003; Mike Gardiner <obz@gentoo.org>
+  docbook-sgml-utils-0.6.12-r1.ebuild, docbook-sgml-utils-0.6.12-r2.ebuild,
+  docbook-sgml-utils-0.6.12.ebuild:
+  Added head -1 to head -n 1 patch for jw, see bug #33862
 
   14 Nov 2003; Aron Griffis <agriffis@gentoo.org>
   docbook-sgml-utils-0.6.12.ebuild:
