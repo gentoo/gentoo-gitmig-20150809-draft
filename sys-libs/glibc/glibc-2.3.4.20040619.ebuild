@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619.ebuild,v 1.1 2004/06/20 23:19:54 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619.ebuild,v 1.2 2004/06/21 08:10:46 mr_bones_ Exp $
 
 IUSE="nls pic build nptl erandom hardened makecheck multilib"
 
@@ -76,7 +76,7 @@ PROVIDE="virtual/glibc"
 
 setup_flags() {
 	# Over-zealous CFLAGS can often cause problems.  What may work for one person may not
-	# work for another.  To avoid a large influx of bugs relating to failed builds, we 
+	# work for another.  To avoid a large influx of bugs relating to failed builds, we
 	# strip most CFLAGS out to ensure as few problems as possible.
 	strip-flags
 	strip-unsupported-flags
@@ -149,7 +149,7 @@ check_nptl_support() {
 	local min_kernel_version="$(KV_to_int "${MIN_KERNEL_VERSION}")"
 
 	echo
-	
+
 	einfon "Checking gcc for __thread support ... "
 	if ! gcc -c ${FILESDIR}/test-__thread.c -o ${T}/test2.o &> /dev/null; then
 		echo "no"
@@ -475,7 +475,7 @@ do_ssp_patches() {
 src_unpack() {
 	# Check NPTL support _before_ we unpack things to save some time
 	want_nptl && check_nptl_support
-	
+
 	unpack ${PN}-${BASE_PV}.tar.bz2
 
 	# Extract pre-made man pages.
@@ -489,19 +489,19 @@ src_unpack() {
 	# crap laying around ...
 	rm -f ${S}/manual/*.info*
 
-    if (! want_nptl) && [ -z "${BRANCH_UPDATE}" ]; then
-        unpack ${PN}-linuxthreads-${BASE_PV}.tar.bz2
+	if (! want_nptl) && [ -z "${BRANCH_UPDATE}" ]; then
+		unpack ${PN}-linuxthreads-${BASE_PV}.tar.bz2
 	else
 		rm -rf ${S}/linuxthreads
-    fi
+	fi
 
 	if [ -n "${BRANCH_UPDATE}" ]; then
 		epatch ${DISTDIR}/${PN}-${NEW_PV}-branch-update-${BRANCH_UPDATE}.patch.bz2
 
 		# Snapshot date patch
-        einfo "Patching version to display snapshot date ..."
+		einfo "Patching version to display snapshot date ..."
 		sed -i -e "s:\(#define RELEASE\).*:\1 \"${BRANCH_UPDATE}\":" version.h
-    fi
+	fi
 	# Version patch
 	sed -i -e "s:\(#define VERSION\).*:\1 \"${NEW_PV}\":" version.h
 
@@ -719,4 +719,3 @@ pkg_postinst() {
 		/sbin/init U &> /dev/null
 	fi
 }
-
