@@ -1,6 +1,15 @@
 # ChangeLog for app-emulation/wine
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.15 2002/08/02 14:36:01 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.16 2002/08/31 14:17:01 phoenix Exp $
+
+*wine-20020710-r2 (31 Aug 2002)
+
+  31 Aug 2002; phoen][x <phoenix@gentoo.org> wine-20020710-r2.ebuild :
+
+  New revision. This moves wine to its new location in /usr/lib/wine
+  in order to make it fhs compliant. Wine is started with "/usr/bin/wine",
+  which is a wrapper script. "/usr/bin/regedit-wine" imports registry
+  files into the wine registry.
 
 *wine-20020710-r1 (18 Jun 2002)
 
