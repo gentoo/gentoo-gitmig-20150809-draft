@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/gnutls
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.9 2003/12/14 00:35:53 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/gnutls/ChangeLog,v 1.10 2003/12/16 21:27:51 gmsoft Exp $
+
+  16 Dec 2003; Guy Martin <gmsoft@gentoo.org> gnutls-0.8.10.ebuild:
+  Marked stable on hppa.
 
   14 Dec 2003; Lars Weiler <pylon@gentoo.org> gnutls-0.8.12.ebuild:
   Make stable on ppc
