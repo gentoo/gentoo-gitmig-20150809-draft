@@ -33,11 +33,11 @@ src_install () {
 	docinto clients/headlines
 	dodoc clients/headlines/lcdheadlines
 
-	# /etc/init.d and /etc/conf.d installation
+	# init.d & conf.d installation
 	exeinto /etc/init.d
-	doexe ${FILESDIR}/lcdproc
-	mkdir -p ${D}/etc/conf.d
-	install ${FILESDIR}/lcdproc.confd ${D}/etc/conf.d/lcdproc
+	newexe ${FILESDIR}/lcdproc
+	insinto /etc/conf.d
+	newins ${FILESDIR}/lcdproc.confd lcdproc
 }
 
 pkg_postinst () {
