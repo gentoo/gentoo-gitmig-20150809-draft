@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.53-r1.ebuild,v 1.1 2004/12/02 11:46:26 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/auctex/auctex-11.53-r1.ebuild,v 1.2 2004/12/02 11:53:32 usata Exp $
 
 inherit elisp
 
@@ -30,5 +30,5 @@ src_install() {
 	elisp-install ${PN} bib-cite.el* tex-jp.el* || die
 	dosed ${SITELISP}/tex-site.el || die
 	elisp-site-file-install ${FILESDIR}/50auctex-gentoo.el
-	dodoc ChangeLog CHANGES INSTALLATION PROBLEMS README
+	dodoc ChangeLog CHANGES README RELEASE TODO FAQ INSTALL*
 }
