@@ -1,18 +1,17 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.2880.ebuild,v 1.3 2002/04/29 03:20:44 agenkin Exp $
-
-DESCRIPTION="Linux kernel module for the NVIDIA's X driver"
-HOMEPAGE="http://www.nvidia.com/"
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.2880-r1.ebuild,v 1.1 2002/04/29 06:49:02 drobbins Exp $
 
 NV_V=${PV/1.0./1.0-}
 NV_PACKAGE=NVIDIA_kernel-${NV_V}
 S="${WORKDIR}/${NV_PACKAGE}"
+DESCRIPTION="Linux kernel module for the NVIDIA's X driver"
 SRC_URI="ftp://download.nvidia.com/XFree86_40/${NV_V}/${NV_PACKAGE}.tar.gz
 	http://download.nvidia.com/XFree86_40/${NV_V}/${NV_PACKAGE}.tar.gz"
+HOMEPAGE="http://www.nvidia.com/"
 
-DEPEND="virtual/linux-sources"
+DEPEND="virtual/linux-sources >=sys-apps/portage-1.9.2"
 
 # Make sure Portage does _NOT_ strip symbols.  Need both lines for
 # Portage 1.8.9+
@@ -20,8 +19,8 @@ DEBUG="yes"
 RESTRICT="nostrip"
 
 src_compile() {
-	[ x"${KV}" = x ] && die "Cannot determine kernel version."
-	make KERNDIR="/usr/src/linux-${KV}" clean NVdriver || die
+	make KERNDIR="/usr/src/linux-${KV}" \
+		clean NVdriver || die
 }
 
 src_install () {
@@ -64,3 +63,4 @@ pkg_postinst() {
 	einfo "\"NVdriver\" to your /etc/modules.autoload:"
 	einfo
 }
+
