@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.2-r2.ebuild,v 1.1 2003/11/22 15:13:12 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.2-r2.ebuild,v 1.2 2003/11/23 01:43:23 mr_bones_ Exp $
 
 inherit flag-o-matic python
 
@@ -78,7 +78,7 @@ src_compile() {
 	[ "${ARCH}" = "hppa" ] && append-flags -fPIC
 	[ "${ARCH}" = "alpha" ] && append-flags -fPIC
 	[ "${ARCH}" = "amd64" ] && append-flags -fPIC
-	
+
 	export OPT="${CFLAGS}"
 
 	local myconf
