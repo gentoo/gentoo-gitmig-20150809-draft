@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.1.1-r2.ebuild,v 1.6 2005/03/22 02:57:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.1.1-r2.ebuild,v 1.7 2005/03/22 03:04:57 vapier Exp $
 
 # NOTE TO MAINTAINER:  Info pages get nuked for multiple version installs.
 #                      Ill fix it later if i get a chance.
