@@ -1,0 +1,9 @@
+# ChangeLog for gnome-extra/gcursor
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcursor/ChangeLog,v 1.1 2004/08/11 05:37:55 obz Exp $
+
+*gcursor-0.06 (11 Aug 2004)
+
+  11 Aug 2004; Mike Gardiner <obz@gentoo.org> +metadata.xml, +gcursor-0.06.ebuild:
+  Please welcome GCursor to the portage tree, as requested in bug #45338
+
