@@ -1,6 +1,6 @@
 #!/bin/sh
 # Gentoo Startup script for qmail's POP3 daemon
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/files/1.03-r13/run-qmailpop3d,v 1.1 2004/05/30 10:50:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/files/1.03-r13/run-qmailpop3d,v 1.2 2004/07/05 00:14:00 robbat2 Exp $
 #
 # If you need to edit this file, please look at editing conf-pop3d and
 # conf-common first.  If you still need to change this file, you should
@@ -18,6 +18,7 @@ SERVICE=pop3
 [ -s /var/qmail/bin/config-sanity-check ] && source /var/qmail/bin/config-sanity-check
 
 exec /usr/bin/softlimit ${SOFTLIMIT_OPTS} \
+    ${QMAIL_TCPSERVER_PRE} \
     /usr/bin/tcpserver ${TCPSERVER_OPTS} -x /etc/tcp.${SERVICE}.cdb -c ${MAXCONN} \
     ${TCPSERVER_HOST} ${TCPSERVER_PORT} \
     ${QMAIL_POP3_PREAUTH} /var/qmail/bin/qmail-popup ${QMAIL_POP3_POP3HOST} \

@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/qmail
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.5 2004/07/01 19:53:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.6 2004/07/05 00:14:00 robbat2 Exp $
+
+  04 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> files/run-qmailpop3d,
+  files/1.03-r13/run-qmailpop3d:
+  fix bug #45518.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   qmail-1.03-r10.ebuild, qmail-1.03-r11.ebuild, qmail-1.03-r12.ebuild,
