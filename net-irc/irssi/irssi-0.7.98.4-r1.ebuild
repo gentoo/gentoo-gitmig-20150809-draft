@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Tom von Schwerdtner <tvon@etria.org>
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.7.98.4-r1.ebuild,v 1.1 2002/03/15 17:22:38 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.7.98.4-r1.ebuild,v 1.2 2002/04/12 19:04:22 spider Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A modular textUI IRC client with IPv6 support."
@@ -9,7 +9,7 @@ SRC_URI="http://irssi.org/files/${P}.tar.bz2"
 HOMEPAGE="http://irssi.org"
 
 DEPEND="virtual/glibc
-	>=dev-libs/glib-1.2.0
+	=dev-libs/glib-1.2*
 	sys-libs/ncurses
 	perl? ( sys-devel/perl ) 
 	nls? ( sys-devel/gettext )"
