@@ -1,3 +1,5 @@
-MD5 571b7abcbbccc80e356537597630ce2e ChangeLog 444
-MD5 72f727c53233021959fa5a3069a71d45 groups-0.3.1.ebuild 451
+MD5 c04e873124e39dfddf8877c3038fd8f3 groups-0.3.1.ebuild 450
+MD5 35808490cf9d5b436a717b0fcb907463 ChangeLog 681
+MD5 66b39b9585eafdf4440ef68761c49454 groups-0.3.2.ebuild 452
 MD5 f3b27f0b5d72a4c5c9bb80b3fcee59ab files/digest-groups-0.3.1 122
+MD5 73a175fb11e9eb0e1d08534ee6ac3a1c files/digest-groups-0.3.2 60
