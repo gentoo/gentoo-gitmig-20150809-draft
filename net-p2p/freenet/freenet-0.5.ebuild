@@ -1,13 +1,13 @@
 # Copyright (c) 2002, Per Wigren <wigren@home.se>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.ebuild,v 1.1 2002/10/29 05:02:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.ebuild,v 1.2 2003/07/13 20:28:39 aliz Exp $
 
 DESCRIPTION="large-scale peer-to-peer network that creates a massive virtual information store open to anyone"
 SRC_URI="mirror://sourceforge/freenet/${P}.tgz"
 HOMEPAGE="http://freenetproject.org/"
 DEPEND="virtual/jdk"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 LICENSE="GPL-2"
 S=${WORKDIR}/${PN}
 

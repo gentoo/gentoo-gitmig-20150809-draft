@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/qtella-0.5.4.ebuild,v 1.2 2003/02/13 15:22:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/qtella-0.5.4.ebuild,v 1.3 2003/07/13 20:28:39 aliz Exp $
 inherit kde-base 
 
 use kde && need-kde 3 
@@ -13,7 +13,7 @@ DESCRIPTION="Excellent QT/KDE Gnutella Client"
 
 SLOT="3"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 src_compile() {
 

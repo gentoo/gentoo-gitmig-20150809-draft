@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.5.2a.ebuild,v 1.2 2003/03/23 10:06:59 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnunet/gnunet-0.5.2a.ebuild,v 1.3 2003/07/13 20:28:39 aliz Exp $
 
 S="${WORKDIR}/GNUnet-${PV}"
 DESCRIPTION="GNUnet is an anonymous, distributed, reputation based network."
@@ -9,7 +9,7 @@ SRC_URI="http://www.ovmj.org/GNUnet/download/GNUnet-${PV}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=">=dev-libs/openssl-0.9.6d
 	>=sys-libs/gdbm-1.8.0

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.02-r1.ebuild,v 1.4 2003/03/11 21:11:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.02-r1.ebuild,v 1.5 2003/07/13 20:28:39 aliz Exp $
 
 IUSE="gtk mldonkeypango"
 
@@ -16,7 +16,7 @@ SRC_URI="http://savannah.nongnu.org/download/${PN}/stable/${P}-${N}.sources.tar.
 
 LICENSE="GPL-1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 
 DEPEND="gtk? ( >=lablgtk-1.2.3 )
 	>=dev-lang/ocaml-3.06

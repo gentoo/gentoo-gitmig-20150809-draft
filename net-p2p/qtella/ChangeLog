@@ -1,6 +1,6 @@
 # ChangeLog for net-p2p/qtella
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/ChangeLog,v 1.9 2003/02/25 18:21:19 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qtella/ChangeLog,v 1.10 2003/07/13 20:28:39 aliz Exp $
 
 *qtella-0.6.1 (25 Feb 2003) Dan Armak <danarmak@gentoo.org>
 
@@ -11,8 +11,9 @@
   does strang things... I wouldn't commit this normally, but it's still a lot
   better than the previous ebuilds, so it's on the way to fixing everything.
 
-*qtella-0.5.4 (8 Dec 2002) Bart Verwilst <verwilst@gentoo.org>
+*qtella-0.5.4 (8 Dec 2002) 
 
+Bart Verwilst <verwilst@gentoo.org>
   New version
 
 *qtella-0.5.3-r2 (23 Aug 2002)

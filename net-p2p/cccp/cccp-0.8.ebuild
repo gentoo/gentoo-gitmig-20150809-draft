@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/cccp/cccp-0.8.ebuild,v 1.2 2003/02/13 15:17:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/cccp/cccp-0.8.ebuild,v 1.3 2003/07/13 20:28:39 aliz Exp $
 
 DESCRIPTION="Scriptable console frontend to Direct Connect"
 HOMEPAGE="http://members.chello.se/hampasfirma/cccp"
@@ -8,7 +8,7 @@ SRC_URI="http://members01.chello.se/hampasfirma/cccp/${PN}.${PV}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=">=net-p2p/dctc-0.83"
 
