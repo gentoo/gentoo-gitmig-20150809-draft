@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-cvs/irssi-cvs-0.2.ebuild,v 1.7 2004/09/27 21:36:08 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-cvs/irssi-cvs-0.2.ebuild,v 1.8 2004/12/15 00:03:23 jhuebel Exp $
 
 ECVS_SERVER="cvs.irssi.org:/home/cvs"
 ECVS_MODULE="irssi"
@@ -12,7 +12,7 @@ HOMEPAGE="http://irssi.org/"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~alpha hppa ~mips"
+KEYWORDS="x86 ppc sparc ~alpha hppa ~mips ~amd64"
 IUSE="nls ipv6 perl ssl"
 
 RDEPEND=">=dev-libs/glib-2.2.1
