@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/alsa-utils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.28 2003/08/21 18:17:50 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/ChangeLog,v 1.29 2003/09/04 08:57:57 johnm Exp $
+
+  04 Sep 2003; John Mylchreest <johnm@gentoo.org>; files/alsasound:
+  Updating init script to load all oss compat modules. not just pcm-oss
 
   21 Aug 2003; John Mylchreest <johnm@gentoo.org>; files/alsasound:
   Updating alsasound to load sequencers properly
