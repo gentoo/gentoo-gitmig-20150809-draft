@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/torsmo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/ChangeLog,v 1.24 2005/03/27 00:28:30 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/torsmo/ChangeLog,v 1.25 2005/03/31 20:14:39 blubb Exp $
+
+  31 Mar 2005; <blubb@gentoo.org> torsmo-0.18-r1.ebuild:
+  stable on amd64
 
   27 Mar 2005; Michael Hanselmann <hansmi@gentoo.org> torsmo-0.18-r1.ebuild:
   Stable on ppc.
