@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/pam-login
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.1 2002/04/28 14:19:31 azarah Exp $
+
+*pam-login-3.6 (28 Apr 2002)
+
+  28 Apr 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  Initial version.
+
