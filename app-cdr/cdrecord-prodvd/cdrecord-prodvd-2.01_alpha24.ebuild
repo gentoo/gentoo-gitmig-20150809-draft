@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrecord-prodvd/cdrecord-prodvd-2.01_alpha24.ebuild,v 1.3 2004/01/29 13:10:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrecord-prodvd/cdrecord-prodvd-2.01_alpha24.ebuild,v 1.4 2004/01/30 03:13:55 pylon Exp $
 
 X86_FILENAME="cdrecord-prodvd-2.01a24-i686-pc-linux-gnu"
 
@@ -13,7 +13,6 @@ SLOT="0"
 KEYWORDS="~x86"
 
 DEPEND=">=app-cdr/cdrtools-2.01_alpha24"
-PROVIDE="virtual/cdrtools"
 
 S=${WORKDIR}
 

@@ -1,6 +1,11 @@
 # ChangeLog for app-cdr/cdrecord-prodvd
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrecord-prodvd/ChangeLog,v 1.1 2004/01/17 22:07:58 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrecord-prodvd/ChangeLog,v 1.2 2004/01/30 03:13:55 pylon Exp $
+
+  30 Jan 2004; Lars Weiler <pylon@gentoo.org>
+  cdrecord-prodvd-2.01_alpha24.ebuild:
+  Don't provide virtual/cdrtools, as all libraries are missing. They still have
+  to be installed with cdrtools.
 
 *cdrecord-prodvd-2.01_alpha24 (17 Jan 2004)
 
