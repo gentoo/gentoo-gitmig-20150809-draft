@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/goggles/goggles-0.8.0.ebuild,v 1.1 2005/03/31 21:24:13 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/goggles/goggles-0.8.0-r1.ebuild,v 1.1 2005/04/04 19:12:10 luckyduck Exp $
 
 inherit eutils gcc
 
@@ -33,7 +33,7 @@ src_compile() {
 	./gb || die "build failed"
 
 	# we do it now manually, to avoid calling 'gb install'
-	sed "s|@prefix@|/${D}${DESTTREE}|" scripts/goggles.in > scripts/goggles
+	sed "s|@prefix@|/${DESTTREE}|" scripts/goggles.in > scripts/goggles
 }
 
 src_install() {
