@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmnetload
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetload/ChangeLog,v 1.20 2004/10/19 08:59:35 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetload/ChangeLog,v 1.21 2004/11/24 23:36:14 weeve Exp $
+
+  24 Nov 2004; Jason Wever <weeve@gentoo.org> wmnetload-1.3-r1.ebuild:
+  Added ~sparc keyword.
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> wmnetload-1.3-r1.ebuild:
   Stable on amd64.

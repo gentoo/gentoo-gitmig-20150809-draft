@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmnetmon
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetmon/ChangeLog,v 1.4 2004/09/02 18:22:40 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnetmon/ChangeLog,v 1.5 2004/11/24 23:38:27 weeve Exp $
+
+  24 Nov 2004; Jason Wever <weeve@gentoo.org> wmnetmon-0.2.ebuild:
+  Added ~sparc keyword.
 
   02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   wmnetmon-0.2.ebuild:
