@@ -22,6 +22,10 @@
 ##
 
 # seemant@gentoo.org (02 Aug 2003)
+# masking openafs-1.3 series as it is really unstable and useless
+=net-fs/openafs-1.3*
+
+# seemant@gentoo.org (02 Aug 2003)
 # Testing, alpha version.  In demand, so it's in portage
 >=x11-wm/openbox-3.0_alpha1
 
