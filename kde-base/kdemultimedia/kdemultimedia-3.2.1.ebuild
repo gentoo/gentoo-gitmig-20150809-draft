@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.2.1.ebuild,v 1.3 2004/03/12 20:55:14 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.2.1.ebuild,v 1.4 2004/03/15 14:44:34 caleb Exp $
 
 inherit kde-dist flag-o-matic
 
@@ -35,6 +35,8 @@ src_unpack() {
 
 src_compile() {
 	replace-flags -O3 -O2
+	# Still persists with 3.2.1 - kaboodle
+	filter-flags "-fno-default-inline"
 
 	myaudio="--enable-audio=oss"
 	myinterface="--enable-interface=xaw,ncurses"
