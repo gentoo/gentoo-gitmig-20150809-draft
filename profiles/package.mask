@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3530 2005/01/24 22:03:36 slarti Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3531 2005/01/25 09:08:38 eradicator Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -67,10 +67,6 @@ mail-client/sylpheed-claws-vcalendar
 =net-www/mod_auth_mysql-20030510
 =net-www/mod_auth_mysql-20030510-r1
 =net-www/mod_auth_mysql-20030510-r2
-
-# Jeremy Huddleston <eradicator@gentoo.org> (21 Jan 2005)
-# ICE problems found in this branch update.  See bug #78666
-=sys-devel/gcc-3.4.3.20050110
 
 # <kosmikus@gentoo.org> (19 Jan 2005)
 # several compilation problems using current gcc's,
