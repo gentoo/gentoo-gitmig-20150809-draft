@@ -1,9 +1,9 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.20_beta-r1.ebuild,v 1.1 2000/11/25 00:57:45 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.21.ebuild,v 1.1 2001/01/14 05:36:19 drobbins Exp $
 
-P=dump-0.4b20
+P=dump-0.4b21
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Dump/restore ext2fs backup utilities"
