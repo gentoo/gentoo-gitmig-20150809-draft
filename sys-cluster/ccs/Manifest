@@ -7,12 +7,12 @@ MD5 9fa91c22c5dcbf38ca7417f83cfb5c3f ccs-0.7.ebuild 748
 MD5 0bf890a674bf03dc8e72ad44905181d5 ccs-0.24.ebuild 1020
 MD5 26c41799e51873904b374ba950887f8b files/digest-ccs-0.7 58
 MD5 46814b5b5398bfaf0d64854a0d0900a6 files/digest-ccs-0.24 59
-MD5 1ee3688a41f89176094bb7c8830e8370 files/ccsd.conf 21
-MD5 ca9be7abb2d4904b758d1487b5bde55c files/ccsd.rc 564
+MD5 ae0093cb5711fc199f75eff2e78db16e files/ccsd.conf 11
+MD5 f54cba5fa458e5fc4eb817352da8cc36 files/ccsd.rc 574
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCPJN0gMUyd/cdjWsRAgyVAJ9NOC239203rBoUvpACjBlaNMhCqwCfV9vU
-hOqR2cIbEWsP6Lm1uEJ42Ts=
-=aTHo
+iD8DBQFCPJrugMUyd/cdjWsRAhEvAJ9IRCMd9HZ/yyMI/jnaBIPVsjcLzgCfW2Fb
+9/OqWxULOvauvwyK7iMIEJM=
+=Z6RD
 -----END PGP SIGNATURE-----
