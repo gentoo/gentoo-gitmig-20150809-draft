@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/libnss-mysql
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libnss-mysql/ChangeLog,v 1.3 2003/11/01 01:05:27 max Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libnss-mysql/ChangeLog,v 1.4 2004/03/10 04:50:20 max Exp $
+
+*libnss-mysql-1.1 (09 Mar 2004)
+
+  09 Mar 2004; Max Kalika <max@gentoo.org> libnss-mysql-1.0.ebuild,
+  libnss-mysql-1.1.ebuild:
+  Bump to version 1.1. Fixes important bug where groups with no members don't
+  show up.
 
   31 Oct 2003; Max Kalika <max@gentoo.org> libnss-mysql-1.0.ebuild:
   Bump to stable x86.
