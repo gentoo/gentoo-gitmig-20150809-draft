@@ -1,8 +1,14 @@
 # ChangeLog for media-plugins/xmms-spc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-spc/ChangeLog,v 1.2 2003/02/12 07:23:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-spc/ChangeLog,v 1.3 2003/03/14 11:39:41 jje Exp $
 
 *xmms-spc-0.2.1 (31 Oct 2002)
+
+  14 Mar 2003; jje <jje@gentoo.org> xmms-spc-0.2.1.ebuild,
+  files/xmms-spc-0.2.1.patch:
+  Updated to patch makefiles. Unable to test as i don't have any of the media.
+  
+  Submitted by: Adam Duck
 
   31 Oct 2002; Seemant Kulleen <seemant@gentoo.org> xmms-spc-0.2.1.ebuild
   ChangeLog files/digest-xmms-spc-0.2.1 :
