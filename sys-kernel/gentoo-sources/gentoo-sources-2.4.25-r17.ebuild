@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.25-r16.ebuild,v 1.1 2005/02/17 18:12:52 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.25-r17.ebuild,v 1.1 2005/03/07 00:28:55 plasmaroo Exp $
 
 ETYPE="sources"
 inherit kernel-2
@@ -41,7 +41,8 @@ UNIPATCH_LIST="
 	${FILESDIR}/${PN}-2.4.77666.patch
 	${FILESDIR}/${PN}-2.4.78362.patch
 	${FILESDIR}/${PN}-2.4.78363.patch
-	${FILESDIR}/${PN}-2.4.81106.patch"
+	${FILESDIR}/${PN}-2.4.81106.patch
+	${FILESDIR}/${PN}-2.4.PaX-84167.patch"
 
 DESCRIPTION="Full sources including the gentoo patchset for the ${KV_MAJOR}.${KV_MINOR} kernel tree"
 SRC_URI="${KERNEL_URI} http://dev.gentoo.org/~livewire/${P}.patch.bz2

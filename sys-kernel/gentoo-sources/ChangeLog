@@ -1,6 +1,16 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.118 2005/03/04 22:26:58 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.119 2005/03/07 00:28:55 plasmaroo Exp $
+
+*gentoo-sources-2.4.20-r33 (07 Mar 2005)
+
+  07 Mar 2005; <plasmaroo@gentoo.org> -gentoo-sources-2.4.20-r32.ebuild,
+  +gentoo-sources-2.4.20-r33.ebuild, -gentoo-sources-2.4.25-r16.ebuild,
+  +gentoo-sources-2.4.25-r17.ebuild, -gentoo-sources-2.4.28-r7.ebuild,
+  +gentoo-sources-2.4.28-r8.ebuild,
+  +files/gentoo-sources-2.4.20-PaX-84167.patch,
+  +files/gentoo-sources-2.4.PaX-84167.patch:
+  Security bump; fix #84167.
 
   04 Mar 2005; Michael Hanselmann <hansmi@gentoo.org>
   gentoo-sources-2.6.11-r2.ebuild:
