@@ -1,6 +1,15 @@
 # ChangeLog for net-www/galeon
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.3 2002/03/23 22:38:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.4 2002/03/30 13:23:31 seemant Exp $
+
+*galeon-1.2.0-r2 (30 Mar 2002)
+
+  30 Mar 2002; Seemant Kulleen <seemant@gentoo.org> galeon-1.2.0-r2.ebuild :
+
+  The big de-bloating!   gnome-core is actually NOT a required a dependency,
+  which means, non gnome users can use galeon with only the following GNOME
+  components: gnome-libs, gnome-vfs, oaf (and by extension ORBit), libxml.
+  And, libglade and gdk-pixbuf may be compiled without GNOME-support.
 
 *galeon-1.2.0-r1 (23 Mar 2002)
 
@@ -15,5 +24,3 @@
 
   New stable release of galeon.  (Note to developers: galeon changed the
   way it deals with installing gconfd schemas)
-
-
