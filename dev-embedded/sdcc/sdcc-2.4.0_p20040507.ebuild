@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-2.4.0_p20040507.ebuild,v 1.1 2004/05/07 14:15:38 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/sdcc-2.4.0_p20040507.ebuild,v 1.2 2004/05/17 15:39:05 usata Exp $
 
 S=${WORKDIR}/${PN}
 MY_PV=${PV/*_p/}
@@ -20,7 +20,7 @@ DEPEND="virtual/glibc
 	sys-apps/grep
 	sys-devel/bison
 	doc? ( dev-tex/latex2html
-		app-text/tetex
+		virtual/tetex
 		>=app-office/lyx-1.3.4
 		sys-apps/sed )"
 
