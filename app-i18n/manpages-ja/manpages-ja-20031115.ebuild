@@ -1,16 +1,21 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ja/manpages-ja-20031015.ebuild,v 1.2 2003/11/16 20:02:05 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/manpages-ja/manpages-ja-20031115.ebuild,v 1.1 2003/11/16 20:02:05 usata Exp $
 
 IUSE=""
-HOMEPAGE="http://www.linux.or.jp/JM/"
-DESCRIPTION="A collection of manual pages translated into Japanese"
 
-SRC_URI="http://www.linux.or.jp/JM/man-pages-ja-${PV}.tar.gz"
+MY_P="man-pages-ja-${PV}"
+
+HOMEPAGE="http://www.linux.or.jp/JM/
+	http://www.gentoo.gr.jp/jpmain/translation.xml"
+DESCRIPTION="A collection of manual pages translated into Japanese"
+SRC_URI="http://www.linux.or.jp/JM/${MY_P}.tar.gz
+	http://dev.gentoo.org/~usata/distfiles/portage-${PN}-20031115.tar.gz"
+
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha mips hppa arm amd64 ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm ~amd64 ~ia64"
 SLOT="0"
-S="${WORKDIR}/man-pages-ja-${PV}"
+S="${WORKDIR}/${MY_P}"
 
 DEPEND=""
 RDEPEND=">=sys-apps/groff-1.18.1-r2
@@ -24,13 +29,23 @@ src_install () {
 		do
 			jmandir=$(echo $a | cut -d/ -f3)
 
-			echo install $x:  /usr/share/man/ja/$jmandir/
+			einfo install $x:  /usr/share/man/ja/$jmandir/
 
 			insinto /usr/share/man/ja/$jmandir
 			doins $a/*
 		done
 	done
 
+	insinto /usr/share/man/ja/man1
+	for y in ${WORKDIR}/portage/man/ja/*.1; do
+		einfo install $y:  /usr/share/man/ja/man1
+		doins $y
+	done
+	insinto /usr/share/man/ja/man5
+	for z in ${WORKDIR}/portage/man/ja/*.5; do
+		einfo install $z:  /usr/share/man/ja/man5
+		doins $z
+	done
 	dodoc ChangeLog INSTALL README
 }
 
