@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r1.ebuild,v 1.6 2002/11/05 20:01:54 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r1.ebuild,v 1.7 2002/11/21 13:55:01 cretin Exp $
 
 IUSE="sse nls mmx truetype 3dnow 3dfx"
 
@@ -120,7 +120,7 @@ src_unpack() {
 #		freetype-${FT2_VER}.tar.bz2
 
 	# Fix permissions
-	chmod -R 0644 ${WORKDIR}/fcpackage.${FC2_VER/\./_}/
+	chmod -R 0755 ${WORKDIR}/fcpackage.${FC2_VER/\./_}/
 
 	# Deploy our custom freetype2.  We want it static for stability,
 	# and because some things in Gentoo depends the freetype2 that
