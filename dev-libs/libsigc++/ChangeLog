@@ -1,13 +1,19 @@
 # ChangeLog for dev-libs/libsigc++
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.5 2002/06/23 18:37:11 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/ChangeLog,v 1.6 2002/08/02 03:35:21 gerk Exp $
 
 *libsigc++-1.0.4-r2 (21 Jun 2002)
+
+  01 Aug 2002; Mark Guertin <gerk@gentoo.org> libxml2-2.4.23.ebuild :
+  Added ppc to keywords
 
   21 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
   Slotify.
 
 *libsigc++-1.1.11 (17 Jun 2002)
+  01 Aug 2002; Mark Guertin <gerk@gentoo.org> libxml2-2.4.23.ebuild :
+  Added ppc to keywords
+
   17 Jun 2002; Spider <spider@gentoo.org> libsigc++-1.1.11.ebuild :
   Just bumping the version to the latest that gtkmm requires. somone,  take over this?
   
