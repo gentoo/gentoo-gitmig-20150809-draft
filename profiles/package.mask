@@ -26,6 +26,10 @@
 # work in progress, broken ebuild
 >=app-admin/ufed-0.4
 
+# pauldv@gentoo.org 23 Apr 2003
+# mask the ebuild as it is complicated and possibly broken
+>=dev-util/subversion-0.20.0
+
 # <robbat2@gentoo.org> (23 Apr 2003)
 # PHP ebuilds using new PHP eclass
 # Work in progress
@@ -741,7 +745,3 @@ x11-libs/gdkxft
 # jnelson@gentoo.org 24 Sep 2002
 # mask todo-manager because it's really busted
 app-misc/todo-manager-bronze
-
-# pauldv@gentoo.org 23 Apr 2003
-# mask the ebuild as it is complicated and possibly broken
->=dev-util/subversion-0.20.0
