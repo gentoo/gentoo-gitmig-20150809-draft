@@ -75,6 +75,7 @@ mmx - Adds support for optimizations for Pentium MMX and Athlon class processors
 motif - Adds motif support (Open Motif)
 mozilla - Adds mozilla support
 mpeg - Adds libmpeg3 support to various packages.
+mule - Adds multi-language support to XEmacs
 mysql - Adds mySQL support
 nas - Adds support for network audio sound
 ncurses - Adds ncurses support (console display library)
