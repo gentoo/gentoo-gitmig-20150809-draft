@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/uclinux-sources-2.6.5_p0-r1.ebuild,v 1.2 2004/05/30 23:53:42 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/uclinux-sources-2.6.6_p0.ebuild,v 1.1 2004/06/02 14:22:00 plasmaroo Exp $
 
 IUSE=""
 
@@ -43,7 +43,6 @@ src_unpack() {
 	set MY_ARCH=${ARCH}
 	unset ARCH
 	rm ../${MY_P/linux/${base}}.${patch}
-	epatch ${FILESDIR}/${P}.CAN-2004-0109.patch || die "Failed to patch CAN-2004-0109 vulnerability!"
 
 	kernel_universal_unpack
 	set ARCH=${MY_ARCH}

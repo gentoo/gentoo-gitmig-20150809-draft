@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/uclinux-sources-2.4.24_p0-r2.ebuild,v 1.2 2004/05/30 23:53:42 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/uclinux-sources-2.4.26_p0.ebuild,v 1.1 2004/06/02 14:22:00 plasmaroo Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ EXTRAVERSION="uc${PV/*_p/}"
 [ ! "${PR}" == "r0" ] && EXTRAVERSION="${EXTRAVERSION}-${PR}"
 KV="${OKV}-${EXTRAVERSION}"
 
-#Get the major & minor kernel version
+# Get the major & minor kernel version
 MMV=`echo $PV | awk -F. '{print $1"."$2}'`
 
 patch="diff"
@@ -44,11 +44,7 @@ src_unpack() {
 	unset ARCH
 	rm ../${MY_P/linux/${base}}.${patch}
 
-	epatch ${FILESDIR}/${P}.munmap.patch || die "Failed to apply munmap patch!"
-	epatch ${FILESDIR}/${P}.CAN-2004-0010.patch || die "Failed to add the CAN-2004-0010 patch!"
-	epatch ${FILESDIR}/${P}.CAN-2004-0109.patch || die "Failed to patch CAN-2004-0109 vulnerability!"
-	epatch ${FILESDIR}/${P}.CAN-2004-0177.patch || die "Failed to add the CAN-2004-0177 patch!"
-	epatch ${FILESDIR}/${P}.CAN-2004-0178.patch || die "Failed to add the CAN-2004-0178 patch!"
+	epatch ${FILESDIR}/${P}.CAN-2004-0394.patch || die "Failed to add the CAN-2004-0394 patch!"
 
 	kernel_universal_unpack
 	set ARCH=${MY_ARCH}
