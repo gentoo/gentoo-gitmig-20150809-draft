@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnophone/gnophone-0.2.4-r1.ebuild,v 1.2 2004/02/17 21:14:48 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnophone/gnophone-0.2.4-r1.ebuild,v 1.3 2004/04/13 18:40:20 rizzo Exp $
 
 DESCRIPTION="internet telephone"
 HOMEPAGE="http://www.gnophone.com/"
@@ -18,7 +18,6 @@ DEPEND="media-sound/gsm
 	x11-libs/gtk+
 	media-libs/gdk-pixbuf
 	dev-libs/glib
-	x11-base/xfree
 	media-libs/imlib
 	virtual/glibc"
 

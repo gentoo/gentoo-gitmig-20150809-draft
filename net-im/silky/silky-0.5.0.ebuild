@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/silky/silky-0.5.0.ebuild,v 1.3 2004/03/24 19:18:01 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silky/silky-0.5.0.ebuild,v 1.4 2004/04/13 18:41:27 rizzo Exp $
 
 IUSE="debug"
 
@@ -16,7 +16,6 @@ SLOT="0"
 # is to be addressed in next release of Silky.
 DEPEND="sys-libs/glibc
 	sys-libs/zlib
-	x11-base/xfree
 	>=gnome-base/libglade-2
 	>=x11-libs/gtk+-2.2
 	x11-libs/pango
