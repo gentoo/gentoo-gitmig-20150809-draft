@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.9.7.ebuild,v 1.6 2004/01/16 21:20:49 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/sylpheed-claws-0.9.7.ebuild,v 1.7 2004/01/16 22:18:34 genone Exp $
 
 IUSE="nls gnome xface dillo crypt spell imlib ssl ldap ipv6 pda clamav pdflib"
 
@@ -24,6 +24,7 @@ KEYWORDS="x86 ppc sparc ~alpha"
 DEPEND=">=sys-apps/sed-4
 	=x11-libs/gtk+-1.2*
 	app-misc/mime-types
+	net-mail/metamail
 	pda? ( >=app-pda/jpilot-0.99 )
 	ssl? ( >=dev-libs/openssl-0.9.6b )
 	ldap? ( >=net-nds/openldap-2.0.7 )

@@ -1,6 +1,15 @@
 # ChangeLog for net-mail/sylpheed-claws
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.62 2004/01/16 21:20:49 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed-claws/ChangeLog,v 1.63 2004/01/16 22:18:34 genone Exp $
+
+  16 Jan 2004; Marius Mauch <genone@gentoo.org>
+  sylpheed-claws-0.8.11.ebuild, sylpheed-claws-0.9.0-r1.ebuild, 
+  sylpheed-claws-0.9.5.ebuild, sylpheed-claws-0.9.6-r1.ebuild, 
+  sylpheed-claws-0.9.6.ebuild, sylpheed-claws-0.9.7.ebuild,
+  sylpheed-claws-0.9.8.ebuild:
+  adding metamail dependency, thanks to Keith Edmunds <keith@midnighthax.com>
+  for pointing that out (closing bug 37090). Removing old versions. Changing
+  some DEPENDs to RDEPEND in 0.9.8
 
   16 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org>
   sylpheed-claws-0.9.7.ebuild:
