@@ -1,0 +1,95 @@
+#!/bin/bash
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/files/capi.hotplug,v 1.1 2005/03/29 06:43:28 mrness Exp $
+
+. /etc/conf.d/capi
+
+[ "$CAPI_HOTPLUG_USB" = "0" ] && exit 0
+
+# driver lookup
+cardinfo() {  # <driver>
+	/bin/sed 2>/dev/null -n "s:^\([1-9][0-9]*\) \+${1} \+\([^ ]\+\) \+\([^ ]\+\).*:\1 \3 \2:p" /proc/capi/controller
+}
+
+# AVM firmware loader
+avmusb() {  # <card> <firmware>
+	/usr/sbin/avmcapictrl load "/lib/firmware/${2}" "${1}"
+}
+
+# normalize and split product code
+# only needed, because coldplug gives other results than hotplug :-/
+IFS="/" read _A _B _C < <(echo "${PRODUCT}")
+read VENDOR DEVID PCLASS < <(/usr/bin/printf "%04x %04x %04x" "0x${_A}" "0x${_B}" "0x${_C}")
+VENDID="${VENDOR}/${DEVID}"
+DEVTMP="${DEVICE##/proc/bus/usb/}"
+USBBUS="${DEVTMP%%/*}"
+USBDEV="${DEVTMP##*/}"
+
+LOCK="/tmp/.capi-usb-${USBBUS}-${USBDEV}"
+LOADER=""
+DRIVER=""
+FIRMWARE=""
+
+# select driver and firmware
+case "${VENDID}" in
+	"057c/0c00") # FRITZCARD!USB
+		DRIVER="fcusb"
+		;;
+	"057c/1000") # FRITZCARD!USB v2.0
+		LOADER="avmusb"
+		DRIVER="fcusb2"
+		FIRMWARE="fus2base.frm"
+		;;
+	"057c/1900") # FRITZCARD!USB v2.1
+		LOADER="avmusb"
+		DRIVER="fcusb2"
+		FIRMWARE="fus3base.frm"
+		;;
+	"057c/2000") # FRITZX!USB
+		DRIVER="fxusb"
+		;;
+	"057c/2200") # BlueFRITZ!USB
+		DRIVER="bfusb"
+		;;
+	"057c/2300") # FRITZDSL!USB
+		LOADER="avmusb"
+		DRIVER="fcdslusb"
+		FIRMWARE="fdsubase.frm"
+		;;
+	"057c/2800") # FRITZX!USB OEM
+		DRIVER="fxusb_CZ"
+		;;
+	"057c/3500") # FRITZDSL!USB SL
+		LOADER="avmusb"
+		DRIVER="fcdslslusb"
+		FIRMWARE="fdlubase.frm"
+		;;
+	*) # unknown card
+		echo "unknown USB product: $VENDID"
+		exit 1
+esac
+
+case "$ACTION" in
+	add)
+		/bin/ln 2>/dev/null -s "$$" "$LOCK" || exit 0
+		for MODULE in kernelcapi capi capidrv $DRIVER; do
+			/sbin/modprobe -s $MODULE || exit 1
+		done
+		if [ -n "$LOADER" -a -n "$FIRMWARE" ]; then
+			CNT=0  # wait for udev
+			while [ ! -e /dev/capi20 -a $CNT -lt 10 ]; do
+				sleep 1; : $((CNT++))
+			done
+			read CARD NAME STATUS < <(cardinfo $DRIVER)
+			[ "$STATUS" = "detected" ] && $LOADER $CARD $FIRMWARE
+		fi
+		[ "$CAPI_HOTPLUG_BEEP" = "0" ] || echo -en "\033[10;1200]\a\033[10;262]" > /dev/console
+		/bin/rm -f "$LOCK"
+		;;
+	remove)
+		/sbin/modprobe -sqr $DRIVER
+		[ "$CAPI_HOTPLUG_BEEP" = "0" ] || echo -en "\033[10;300]\a\033[10;262]" > /dev/console
+		;;
+esac
+exit 0
