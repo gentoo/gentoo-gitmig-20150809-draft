@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/vstgl/vstgl-0.6.2.ebuild,v 1.1 2004/07/29 11:51:17 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/vstgl/vstgl-0.6.2.ebuild,v 1.2 2004/12/27 20:19:20 ribosome Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ KEYWORDS="~x86"
 DEPEND="x11-libs/qt
 	media-libs/libpng
 	sys-libs/zlib
-	app-sci/petrify"
+	sci-electronics/petrify"
 	# dev-util/kdoc"
 
 S=${WORKDIR}/${PN}
