@@ -1,7 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ami/ami-1.1.0.ebuild,v 1.1 2003/01/27 20:49:25 jayskwak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ami/ami-1.1.0.ebuild,v 1.2 2003/01/28 01:02:13 seo Exp $
 
+IUSE="gtk2"
 S=${WORKDIR}/${P}
 DESCRIPTION="Korean IMS Ami"
 SRC_URI="http://download.kldp.net/ami/${P}.tar.gz
@@ -17,7 +18,7 @@ DEPEND=">=media-libs/gdk-pixbuf-0.7.0"
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	if [ -n "`use gnome`" ]
+	if [ -n "`use gtk2`" ]
 	then patch -p0 < ${DISTDIR}/${P}-imhangul_status.patch
 	fi
 }
