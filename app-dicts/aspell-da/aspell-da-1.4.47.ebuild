@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-da/aspell-da-1.4.35.ebuild,v 1.5 2005/01/01 12:41:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-da/aspell-da-1.4.47.ebuild,v 1.1 2005/02/15 18:46:24 arj Exp $
 
 ASPELL_LANG="Danish"
 inherit aspell-dict
