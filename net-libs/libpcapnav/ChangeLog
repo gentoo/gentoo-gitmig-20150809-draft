@@ -1,0 +1,10 @@
+# ChangeLog for net-libs/libpcapnav
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcapnav/ChangeLog,v 1.1 2005/03/16 11:24:29 ka0ttic Exp $
+
+*libpcapnav-0.5 (16 Mar 2005)
+
+  16 Mar 2005; Aaron Walker <ka0ttic@gentoo.org> +metadata.xml,
+  +libpcapnav-0.5.ebuild:
+  Initial commit. Thanks to soulse in bug 84895 for the ebuild.
+
