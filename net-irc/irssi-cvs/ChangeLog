@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/irssi-cvs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-cvs/ChangeLog,v 1.1 2003/07/18 17:02:09 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi-cvs/ChangeLog,v 1.2 2003/09/14 18:09:30 johnm Exp $
+
+*irssi-cvs-0.1 (14 Sep 2003)
+
+  14 Sep 2003; John Mylchreest <johnm@gentoo.org>; irssi-cvs-0.1.ebuild:
+  Fixes #27584
 
   18 Jul 2003; John Mylchreest <johnm@gentoo.org>;
   initial commit. thanks go out to gregf and original irssi ebuild developers
