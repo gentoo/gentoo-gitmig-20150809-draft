@@ -33,7 +33,7 @@ src_compile() {
 	 --infodir=/usr/share/info --enable-static-rnd=linux \
 		--enable-m-guard --host=${CHOST}\
 	${myconf}
-    try pmake
+    try emake
 
 }
 

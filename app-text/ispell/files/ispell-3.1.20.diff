@@ -1,6 +1,6 @@
-diff -r -N -U3 ispell-3.1.orig/Makefile ispell-3.1/Makefile
---- ispell-3.1.orig/Makefile	Thu Oct 12 19:04:06 1995
-+++ ispell-3.1/Makefile	Thu Feb  8 18:33:10 2001
+diff -rNu ispell-3.1.clean/Makefile ispell-3.1/Makefile
+--- ispell-3.1.clean/Makefile	Thu Oct 12 14:04:06 1995
++++ ispell-3.1/Makefile	Thu Aug 16 17:50:38 2001
 @@ -165,6 +165,10 @@
  SHELL = /bin/sh
  MAKE = make
@@ -41,9 +41,9 @@ diff -r -N -U3 ispell-3.1.orig/Makefile ispell-3.1/Makefile
  	  fi
  
  FRC:
-diff -r -N -U3 ispell-3.1.orig/Makefile.Linux ispell-3.1/Makefile.Linux
---- ispell-3.1.orig/Makefile.Linux	Thu Jan  1 00:00:00 1970
-+++ ispell-3.1/Makefile.Linux	Thu Feb  8 18:33:10 2001
+diff -rNu ispell-3.1.clean/Makefile.Linux ispell-3.1/Makefile.Linux
+--- ispell-3.1.clean/Makefile.Linux	Wed Dec 31 18:00:00 1969
++++ ispell-3.1/Makefile.Linux	Thu Aug 16 17:50:38 2001
 @@ -0,0 +1,31 @@
 +#
 +#
@@ -76,9 +76,9 @@ diff -r -N -U3 ispell-3.1.orig/Makefile.Linux ispell-3.1/Makefile.Linux
 +	install -m 0444 suse/emacs/american.el /usr/lib/ispell/emacs/
 +	install -m 0444 suse/emacs/british.el  /usr/lib/ispell/emacs/
 +
-diff -r -N -U3 ispell-3.1.orig/buildhash.c ispell-3.1/buildhash.c
---- ispell-3.1.orig/buildhash.c	Mon Jan 23 18:28:24 1995
-+++ ispell-3.1/buildhash.c	Thu Feb  8 18:33:10 2001
+diff -rNu ispell-3.1.clean/buildhash.c ispell-3.1/buildhash.c
+--- ispell-3.1.clean/buildhash.c	Mon Jan 23 12:28:24 1995
++++ ispell-3.1/buildhash.c	Thu Aug 16 17:50:38 2001
 @@ -211,7 +211,7 @@
      {
      register FILE *		houtfile;
@@ -97,9 +97,9 @@ diff -r -N -U3 ispell-3.1.orig/buildhash.c ispell-3.1/buildhash.c
  	    x = dp->next - hashtbl;
  	    dp->next = (struct dent *)x;
  	    }
-diff -r -N -U3 ispell-3.1.orig/correct.c ispell-3.1/correct.c
---- ispell-3.1.orig/correct.c	Thu Oct 12 19:04:06 1995
-+++ ispell-3.1/correct.c	Thu Feb  8 18:33:10 2001
+diff -rNu ispell-3.1.clean/correct.c ispell-3.1/correct.c
+--- ispell-3.1.clean/correct.c	Thu Oct 12 14:04:06 1995
++++ ispell-3.1/correct.c	Thu Aug 16 17:50:38 2001
 @@ -179,7 +179,7 @@
  
      if (interactive)
@@ -278,9 +278,9 @@ diff -r -N -U3 ispell-3.1.orig/correct.c ispell-3.1/correct.c
  		(void) fflush (stdout);
  		return;
  	    default:
-diff -r -N -U3 ispell-3.1.orig/fields.c ispell-3.1/fields.c
---- ispell-3.1.orig/fields.c	Tue Jan 25 18:31:54 1994
-+++ ispell-3.1/fields.c	Thu Feb  8 18:33:10 2001
+diff -rNu ispell-3.1.clean/fields.c ispell-3.1/fields.c
+--- ispell-3.1.clean/fields.c	Tue Jan 25 12:31:54 1994
++++ ispell-3.1/fields.c	Thu Aug 16 17:50:38 2001
 @@ -34,6 +34,7 @@
  #include <stdio.h>
  #include "config.h"
@@ -306,9 +306,9 @@ diff -r -N -U3 ispell-3.1.orig/fields.c ispell-3.1/fields.c
  
  /*
   * Read one line of the given file into a buffer, break it up into
-diff -r -N -U3 ispell-3.1.orig/ijoin.c ispell-3.1/ijoin.c
---- ispell-3.1.orig/ijoin.c	Wed Nov  2 18:44:21 1994
-+++ ispell-3.1/ijoin.c	Thu Feb  8 18:33:10 2001
+diff -rNu ispell-3.1.clean/ijoin.c ispell-3.1/ijoin.c
+--- ispell-3.1.clean/ijoin.c	Wed Nov  2 12:44:21 1994
++++ ispell-3.1/ijoin.c	Thu Aug 16 17:50:38 2001
 @@ -133,7 +133,9 @@
  static int		unpairable1 = 0; /* NZ if -a1 */
  static int		unpairable2 = 0; /* NZ if -a2 */
@@ -319,9 +319,9 @@ diff -r -N -U3 ispell-3.1.orig/ijoin.c ispell-3.1/ijoin.c
  
  int main (argc, argv)			/* Join files */
      int			argc;		/* Argument count */
-diff -r -N -U3 ispell-3.1.orig/ispell.1X ispell-3.1/ispell.1X
---- ispell-3.1.orig/ispell.1X	Mon Jan 23 18:28:25 1995
-+++ ispell-3.1/ispell.1X	Thu Feb  8 18:33:10 2001
+diff -rNu ispell-3.1.clean/ispell.1X ispell-3.1/ispell.1X
+--- ispell-3.1.clean/ispell.1X	Mon Jan 23 12:28:25 1995
++++ ispell-3.1/ispell.1X	Thu Aug 16 17:50:38 2001
 @@ -373,7 +373,7 @@
  key will not.
  .PP
@@ -363,9 +363,9 @@ diff -r -N -U3 ispell-3.1.orig/ispell.1X ispell-3.1/ispell.1X
  .SH BUGS
  It takes several to many seconds for
  .I ispell
-diff -r -N -U3 ispell-3.1.orig/ispell.4 ispell-3.1/ispell.4
---- ispell-3.1.orig/ispell.4	Thu Oct 12 19:04:06 1995
-+++ ispell-3.1/ispell.4	Thu Feb  8 18:33:10 2001
+diff -rNu ispell-3.1.clean/ispell.4 ispell-3.1/ispell.4
+--- ispell-3.1.clean/ispell.4	Thu Oct 12 14:04:06 1995
++++ ispell-3.1/ispell.4	Thu Aug 16 17:50:38 2001
 @@ -60,7 +60,7 @@
  .\" Get rid of all old RCS log lines in preparation for the 3.1 release.
  .\"
@@ -375,9 +375,9 @@ diff -r -N -U3 ispell-3.1.orig/ispell.4 ispell-3.1/ispell.4
  .SH NAME
  ispell \- format of ispell dictionaries and affix files
  .SH DESCRIPTION
-diff -r -N -U3 ispell-3.1.orig/ispell.c ispell-3.1/ispell.c
---- ispell-3.1.orig/ispell.c	Thu Oct 12 19:04:07 1995
-+++ ispell-3.1/ispell.c	Thu Feb  8 18:33:10 2001
+diff -rNu ispell-3.1.clean/ispell.c ispell-3.1/ispell.c
+--- ispell-3.1.clean/ispell.c	Thu Oct 12 14:04:07 1995
++++ ispell-3.1/ispell.c	Thu Aug 16 17:50:38 2001
 @@ -134,6 +134,7 @@
  #include "version.h"
  #include <ctype.h>
@@ -428,9 +428,9 @@ diff -r -N -U3 ispell-3.1.orig/ispell.c ispell-3.1/ispell.c
  		    preftype = "tex";
  		break;
  	    case 'T':			/* Set preferred file type */
-diff -r -N -U3 ispell-3.1.orig/ispell.h ispell-3.1/ispell.h
---- ispell-3.1.orig/ispell.h	Thu Oct 12 19:04:08 1995
-+++ ispell-3.1/ispell.h	Thu Feb  8 18:33:10 2001
+diff -rNu ispell-3.1.clean/ispell.h ispell-3.1/ispell.h
+--- ispell-3.1.clean/ispell.h	Thu Oct 12 14:04:08 1995
++++ ispell-3.1/ispell.h	Thu Aug 16 17:50:38 2001
 @@ -89,6 +89,7 @@
   */
  
@@ -451,10 +451,29 @@ diff -r -N -U3 ispell-3.1.orig/ispell.h ispell-3.1/ispell.h
  EXTERN char *	cd;	/* clear to end of display */
  EXTERN char *	cl;	/* clear display */
  EXTERN char *	cm;	/* cursor movement */
-diff -r -N -U3 ispell-3.1.orig/ispell.texinfo ispell-3.1/ispell.texinfo
---- ispell-3.1.orig/ispell.texinfo	Wed Nov  2 18:44:23 1994
-+++ ispell-3.1/ispell.texinfo	Thu Feb  8 18:33:10 2001
-@@ -73,6 +73,9 @@
+diff -rNu ispell-3.1.clean/ispell.texinfo ispell-3.1/ispell.texinfo
+--- ispell-3.1.clean/ispell.texinfo	Wed Nov  2 12:44:23 1994
++++ ispell-3.1/ispell.texinfo	Thu Aug 16 17:55:05 2001
+@@ -3,12 +3,17 @@
+ @setfilename ispell.info
+ @settitle ISPELL V3.1
+ @comment %**end of header (This is for running Texinfo on a region.)
+-
+ @iftex
+ @finalout
+ @end iftex
+ 
+ @ifinfo
++@format
++INFO-DIR-SECTION Utilities
++START-INFO-DIR-ENTRY
++* Spell Checker: (ispell). interactively check spelling of text files
++END-INFO-DIR-ENTRY
++@end format
+ This file documents ISPELL, an interactive spelling corrector.
+ 
+ Copyright 1988, 1990, 1991, 1992, 1993  Free Software Foundation, Inc.
+@@ -73,6 +78,9 @@
  by the Foundation.
  
  @end titlepage
@@ -464,7 +483,7 @@ diff -r -N -U3 ispell-3.1.orig/ispell.texinfo ispell-3.1/ispell.texinfo
  @menu
  * Emacs::			Using ispell from emacs
  * Old Emacs::			Old Emacs
-@@ -91,8 +94,6 @@
+@@ -91,8 +99,6 @@
  * Multiple Dictionaries::	Using Multiple Dictionaries
  @end menu
  
@@ -473,7 +492,7 @@ diff -r -N -U3 ispell-3.1.orig/ispell.texinfo ispell-3.1/ispell.texinfo
  @iftex
  @chapter ISPELL
  @code{Ispell} is a program that helps you to correct spelling and
-@@ -198,7 +199,7 @@
+@@ -198,7 +204,7 @@
  the shell.
  @end table
  
@@ -482,7 +501,7 @@ diff -r -N -U3 ispell-3.1.orig/ispell.texinfo ispell-3.1/ispell.texinfo
  changing anything.
  
  If you make a change that you don't like, just use emacs' normal undo
-@@ -215,7 +216,7 @@
+@@ -215,7 +221,7 @@
  
  When you finish with one word, the cursor is automatically moved to the
  next.  If you want to stop in the middle of the list type @kbd{X} or
@@ -491,9 +510,9 @@ diff -r -N -U3 ispell-3.1.orig/ispell.texinfo ispell-3.1/ispell.texinfo
  
  @node Region, Multiple Dictionaries, Buffer, Emacs
  @subsection Checking a region
-diff -r -N -U3 ispell-3.1.orig/languages/altamer/Makefile ispell-3.1/languages/altamer/Makefile
---- ispell-3.1.orig/languages/altamer/Makefile	Wed Nov  2 18:44:31 1994
-+++ ispell-3.1/languages/altamer/Makefile	Thu Feb  8 18:33:11 2001
+diff -rNu ispell-3.1.clean/languages/altamer/Makefile ispell-3.1/languages/altamer/Makefile
+--- ispell-3.1.clean/languages/altamer/Makefile	Wed Nov  2 12:44:31 1994
++++ ispell-3.1/languages/altamer/Makefile	Thu Aug 16 17:50:38 2001
 @@ -143,7 +143,7 @@
  	  cd $$LIBDIR; \
  	  chmod 644 english.aff $(HASHFILES); \
@@ -584,9 +603,9 @@ diff -r -N -U3 ispell-3.1.orig/languages/altamer/Makefile ispell-3.1/languages/a
  	      ||  cp $(DICTSRC)/$$i .; \
  	done
  
-diff -r -N -U3 ispell-3.1.orig/languages/american/Makefile ispell-3.1/languages/american/Makefile
---- ispell-3.1.orig/languages/american/Makefile	Mon Jan 23 18:28:29 1995
-+++ ispell-3.1/languages/american/Makefile	Thu Feb  8 18:33:11 2001
+diff -rNu ispell-3.1.clean/languages/american/Makefile ispell-3.1/languages/american/Makefile
+--- ispell-3.1.clean/languages/american/Makefile	Mon Jan 23 12:28:29 1995
++++ ispell-3.1/languages/american/Makefile	Thu Aug 16 17:50:38 2001
 @@ -146,7 +146,7 @@
  	  cd $$LIBDIR; \
  	  chmod 644 english.aff $(HASHFILES); \
@@ -677,9 +696,9 @@ diff -r -N -U3 ispell-3.1.orig/languages/american/Makefile ispell-3.1/languages/
  	      ||  cp $(DICTSRC)/$$i .; \
  	done
  
-diff -r -N -U3 ispell-3.1.orig/languages/british/Makefile ispell-3.1/languages/british/Makefile
---- ispell-3.1.orig/languages/british/Makefile	Mon Jan 23 18:28:29 1995
-+++ ispell-3.1/languages/british/Makefile	Thu Feb  8 18:33:11 2001
+diff -rNu ispell-3.1.clean/languages/british/Makefile ispell-3.1/languages/british/Makefile
+--- ispell-3.1.clean/languages/british/Makefile	Mon Jan 23 12:28:29 1995
++++ ispell-3.1/languages/british/Makefile	Thu Aug 16 17:50:38 2001
 @@ -146,7 +146,7 @@
  	  cd $$LIBDIR; \
  	  chmod 644 english.aff $(HASHFILES); \
@@ -761,9 +780,9 @@ diff -r -N -U3 ispell-3.1.orig/languages/british/Makefile ispell-3.1/languages/b
  
  $(DBUILD)english.xlg+:	$(CONFIG)
  $(DBUILD)english.xlg+:	english.0
-diff -r -N -U3 ispell-3.1.orig/languages/deutsch/Makefile ispell-3.1/languages/deutsch/Makefile
---- ispell-3.1.orig/languages/deutsch/Makefile	Wed Nov  2 18:44:32 1994
-+++ ispell-3.1/languages/deutsch/Makefile	Thu Feb  8 18:33:11 2001
+diff -rNu ispell-3.1.clean/languages/deutsch/Makefile ispell-3.1/languages/deutsch/Makefile
+--- ispell-3.1.clean/languages/deutsch/Makefile	Wed Nov  2 12:44:32 1994
++++ ispell-3.1/languages/deutsch/Makefile	Thu Aug 16 17:50:38 2001
 @@ -95,8 +95,31 @@
  # If you change DICTOPTIONS in your local.h file, you will have to do
  # "make dictclean" to clear out the old dictionary before you re-make.
@@ -872,9 +891,9 @@ diff -r -N -U3 ispell-3.1.orig/languages/deutsch/Makefile ispell-3.1/languages/d
  
  #	required to be present in all other language Makefiles as
  #	well, even though it doesn't have to do anything in those
-diff -r -N -U3 ispell-3.1.orig/languages/english/english.4l ispell-3.1/languages/english/english.4l
---- ispell-3.1.orig/languages/english/english.4l	Tue Jan 25 18:31:59 1994
-+++ ispell-3.1/languages/english/english.4l	Thu Feb  8 18:33:11 2001
+diff -rNu ispell-3.1.clean/languages/english/english.4l ispell-3.1/languages/english/english.4l
+--- ispell-3.1.clean/languages/english/english.4l	Tue Jan 25 12:31:59 1994
++++ ispell-3.1/languages/english/english.4l	Thu Aug 16 17:50:38 2001
 @@ -42,17 +42,17 @@
  .\" Get rid of all old RCS log lines in preparation for the 3.1 release.
  .\"
@@ -913,9 +932,9 @@ diff -r -N -U3 ispell-3.1.orig/languages/english/english.4l ispell-3.1/languages
  .SH "SEE ALSO"
 -okspell(1), okspell(4)
 +ispell(1), ispell(5)
-diff -r -N -U3 ispell-3.1.orig/languages/english/english.aff ispell-3.1/languages/english/english.aff
---- ispell-3.1.orig/languages/english/english.aff	Mon Jan 23 18:28:30 1995
-+++ ispell-3.1/languages/english/english.aff	Thu Feb  8 18:33:11 2001
+diff -rNu ispell-3.1.clean/languages/english/english.aff ispell-3.1/languages/english/english.aff
+--- ispell-3.1.clean/languages/english/english.aff	Mon Jan 23 12:28:30 1995
++++ ispell-3.1/languages/english/english.aff	Thu Aug 16 17:50:38 2001
 @@ -68,6 +68,7 @@
  wordchars [a-z] [A-Z]
  
@@ -924,9 +943,9 @@ diff -r -N -U3 ispell-3.1.orig/languages/english/english.aff ispell-3.1/language
  
  # Here's a record of flags used, in case you want to add new ones.
  # Right now, we fit within the minimal MASKBITS definition.
-diff -r -N -U3 ispell-3.1.orig/languages/espanol/Makefile ispell-3.1/languages/espanol/Makefile
---- ispell-3.1.orig/languages/espanol/Makefile	Mon Jan 23 18:28:45 1995
-+++ ispell-3.1/languages/espanol/Makefile	Thu Feb  8 18:33:11 2001
+diff -rNu ispell-3.1.clean/languages/espanol/Makefile ispell-3.1/languages/espanol/Makefile
+--- ispell-3.1.clean/languages/espanol/Makefile	Mon Jan 23 12:28:45 1995
++++ ispell-3.1/languages/espanol/Makefile	Thu Aug 16 17:50:38 2001
 @@ -56,17 +56,18 @@
  SHELL = /bin/sh
  MAKE = make
@@ -970,9 +989,9 @@ diff -r -N -U3 ispell-3.1.orig/languages/espanol/Makefile ispell-3.1/languages/e
  
  $(HASHFILE):	$(AFFIXES) $(DICTIONARY)
  	rm -f $(HASHFILE)
-diff -r -N -U3 ispell-3.1.orig/languages/fix8bit.c ispell-3.1/languages/fix8bit.c
---- ispell-3.1.orig/languages/fix8bit.c	Tue Jan 25 18:32:02 1994
-+++ ispell-3.1/languages/fix8bit.c	Thu Feb  8 18:33:11 2001
+diff -rNu ispell-3.1.clean/languages/fix8bit.c ispell-3.1/languages/fix8bit.c
+--- ispell-3.1.clean/languages/fix8bit.c	Tue Jan 25 12:32:02 1994
++++ ispell-3.1/languages/fix8bit.c	Thu Aug 16 17:50:38 2001
 @@ -160,9 +160,9 @@
  		    if (ch >= '0'  &&  ch <= '9')
  			backch = (backch << 4) | (ch - '0');
@@ -985,9 +1004,9 @@ diff -r -N -U3 ispell-3.1.orig/languages/fix8bit.c ispell-3.1/languages/fix8bit.
  		    else
  			{
  			(void) putchar (backch);
-diff -r -N -U3 ispell-3.1.orig/languages/portugues/Makefile ispell-3.1/languages/portugues/Makefile
---- ispell-3.1.orig/languages/portugues/Makefile	Thu Oct 12 19:04:47 1995
-+++ ispell-3.1/languages/portugues/Makefile	Thu Feb  8 18:33:11 2001
+diff -rNu ispell-3.1.clean/languages/portugues/Makefile ispell-3.1/languages/portugues/Makefile
+--- ispell-3.1.clean/languages/portugues/Makefile	Thu Oct 12 14:04:47 1995
++++ ispell-3.1/languages/portugues/Makefile	Thu Aug 16 17:50:38 2001
 @@ -50,10 +50,11 @@
  SHELL = /bin/sh
  MAKE = make
@@ -1023,9 +1042,9 @@ diff -r -N -U3 ispell-3.1.orig/languages/portugues/Makefile ispell-3.1/languages
  
  $(HASHFILE):	$(AFFIXES) $(DICTIONARY)
  	rm -f $(HASHFILE)
-diff -r -N -U3 ispell-3.1.orig/local.h.samp ispell-3.1/local.h.samp
---- ispell-3.1.orig/local.h.samp	Mon Jan 23 18:28:27 1995
-+++ ispell-3.1/local.h.samp	Thu Feb  8 18:33:10 2001
+diff -rNu ispell-3.1.clean/local.h.samp ispell-3.1/local.h.samp
+--- ispell-3.1.clean/local.h.samp	Mon Jan 23 12:28:27 1995
++++ ispell-3.1/local.h.samp	Thu Aug 16 17:50:38 2001
 @@ -80,19 +80,49 @@
   */
  
@@ -1084,9 +1103,9 @@ diff -r -N -U3 ispell-3.1.orig/local.h.samp ispell-3.1/local.h.samp
 +#define USESH
 +#define COMMANDFORSPACE
 +
-diff -r -N -U3 ispell-3.1.orig/lookup.c ispell-3.1/lookup.c
---- ispell-3.1.orig/lookup.c	Mon Jan 23 18:28:27 1995
-+++ ispell-3.1/lookup.c	Thu Feb  8 18:33:10 2001
+diff -rNu ispell-3.1.clean/lookup.c ispell-3.1/lookup.c
+--- ispell-3.1.clean/lookup.c	Mon Jan 23 12:28:27 1995
++++ ispell-3.1/lookup.c	Thu Aug 16 17:50:38 2001
 @@ -59,6 +59,7 @@
  #include "ispell.h"
  #include "proto.h"
@@ -1122,9 +1141,9 @@ diff -r -N -U3 ispell-3.1.orig/lookup.c ispell-3.1/lookup.c
  	else
  	    entry->affix = NULL;
  	}
-diff -r -N -U3 ispell-3.1.orig/parse.y ispell-3.1/parse.y
---- ispell-3.1.orig/parse.y	Mon Nov 21 18:26:05 1994
-+++ ispell-3.1/parse.y	Thu Feb  8 18:33:11 2001
+diff -rNu ispell-3.1.clean/parse.y ispell-3.1/parse.y
+--- ispell-3.1.clean/parse.y	Mon Nov 21 12:26:05 1994
++++ ispell-3.1/parse.y	Thu Aug 16 17:50:38 2001
 @@ -677,7 +677,10 @@
  				      toupper (hashheader.compoundbit);
  #endif /* MASKBITS */
@@ -1161,9 +1180,9 @@ diff -r -N -U3 ispell-3.1.orig/parse.y ispell-3.1/parse.y
  				yyerror (PARSE_Y_BAD_FLAG);
  #endif /* MASKBITS */
  			    flagbit = CHARTOBIT (flagbit);
-diff -r -N -U3 ispell-3.1.orig/proto.h ispell-3.1/proto.h
---- ispell-3.1.orig/proto.h	Wed Nov  2 18:44:27 1994
-+++ ispell-3.1/proto.h	Thu Feb  8 18:35:21 2001
+diff -rNu ispell-3.1.clean/proto.h ispell-3.1/proto.h
+--- ispell-3.1.clean/proto.h	Wed Nov  2 12:44:27 1994
++++ ispell-3.1/proto.h	Thu Aug 16 17:50:38 2001
 @@ -73,6 +73,21 @@
   *
   */
@@ -1218,9 +1237,9 @@ diff -r -N -U3 ispell-3.1.orig/proto.h ispell-3.1/proto.h
  #endif /* NO_STDLIB_H */
  
  #ifndef USG
-diff -r -N -U3 ispell-3.1.orig/sq.c ispell-3.1/sq.c
---- ispell-3.1.orig/sq.c	Tue Jan 25 18:32:18 1994
-+++ ispell-3.1/sq.c	Thu Feb  8 18:33:11 2001
+diff -rNu ispell-3.1.clean/sq.c ispell-3.1/sq.c
+--- ispell-3.1.clean/sq.c	Tue Jan 25 12:32:18 1994
++++ ispell-3.1/sq.c	Thu Aug 16 17:50:38 2001
 @@ -49,6 +49,7 @@
   */
  
@@ -1229,9 +1248,9 @@ diff -r -N -U3 ispell-3.1.orig/sq.c ispell-3.1/sq.c
  
  #ifdef __STDC__
  #define P(x)	x
-diff -r -N -U3 ispell-3.1.orig/suse/LIESMICH ispell-3.1/suse/LIESMICH
---- ispell-3.1.orig/suse/LIESMICH	Thu Jan  1 00:00:00 1970
-+++ ispell-3.1/suse/LIESMICH	Thu Feb  8 18:33:11 2001
+diff -rNu ispell-3.1.clean/suse/LIESMICH ispell-3.1/suse/LIESMICH
+--- ispell-3.1.clean/suse/LIESMICH	Wed Dec 31 18:00:00 1969
++++ ispell-3.1/suse/LIESMICH	Thu Aug 16 17:50:38 2001
 @@ -0,0 +1,107 @@
 +
 +  Kurzbeschreibung
@@ -1340,9 +1359,9 @@ diff -r -N -U3 ispell-3.1.orig/suse/LIESMICH ispell-3.1/suse/LIESMICH
 +
 +    norsk.hash        (mittel)
 +
-diff -r -N -U3 ispell-3.1.orig/suse/README ispell-3.1/suse/README
---- ispell-3.1.orig/suse/README	Thu Jan  1 00:00:00 1970
-+++ ispell-3.1/suse/README	Thu Feb  8 18:33:11 2001
+diff -rNu ispell-3.1.clean/suse/README ispell-3.1/suse/README
+--- ispell-3.1.clean/suse/README	Wed Dec 31 18:00:00 1969
++++ ispell-3.1/suse/README	Thu Aug 16 17:50:38 2001
 @@ -0,0 +1,97 @@
 +
 +     Short description
@@ -1441,9 +1460,9 @@ diff -r -N -U3 ispell-3.1.orig/suse/README ispell-3.1/suse/README
 +    norsk.hash        (mittel)
 +
 +
-diff -r -N -U3 ispell-3.1.orig/suse/emacs/american.el ispell-3.1/suse/emacs/american.el
---- ispell-3.1.orig/suse/emacs/american.el	Thu Jan  1 00:00:00 1970
-+++ ispell-3.1/suse/emacs/american.el	Thu Feb  8 18:33:11 2001
+diff -rNu ispell-3.1.clean/suse/emacs/american.el ispell-3.1/suse/emacs/american.el
+--- ispell-3.1.clean/suse/emacs/american.el	Wed Dec 31 18:00:00 1969
++++ ispell-3.1/suse/emacs/american.el	Thu Aug 16 17:50:38 2001
 @@ -0,0 +1,12 @@
 +;; Used by ispell-emacs-menu.el
 +;; Do *not* byte-compile this file because its loaded by both emacs and xemacs
@@ -1457,9 +1476,9 @@ diff -r -N -U3 ispell-3.1.orig/suse/emacs/american.el ispell-3.1/suse/emacs/amer
 +(append-ispell-dict-alist	"british.hash"
 +   '("british"  "[A-Za-z]" "[^A-Za-z]" "[']" nil ("-B" "-d" "british")  nil nil))
 +
-diff -r -N -U3 ispell-3.1.orig/suse/emacs/british.el ispell-3.1/suse/emacs/british.el
---- ispell-3.1.orig/suse/emacs/british.el	Thu Jan  1 00:00:00 1970
-+++ ispell-3.1/suse/emacs/british.el	Thu Feb  8 18:33:11 2001
+diff -rNu ispell-3.1.clean/suse/emacs/british.el ispell-3.1/suse/emacs/british.el
+--- ispell-3.1.clean/suse/emacs/british.el	Wed Dec 31 18:00:00 1969
++++ ispell-3.1/suse/emacs/british.el	Thu Aug 16 17:50:38 2001
 @@ -0,0 +1,12 @@
 +;; Used by ispell-emacs-menu.el
 +;; Do *not* byte-compile this file because its loaded by both emacs and xemacs
@@ -1473,9 +1492,9 @@ diff -r -N -U3 ispell-3.1.orig/suse/emacs/british.el ispell-3.1/suse/emacs/briti
 +(append-ispell-dict-alist	"american.hash"
 +   '("american" "[A-Za-z]" "[^A-Za-z]" "[']" nil ("-B" "-d" "american") nil nil))
 +
-diff -r -N -U3 ispell-3.1.orig/suse/ispell-emacs-menu.el ispell-3.1/suse/ispell-emacs-menu.el
---- ispell-3.1.orig/suse/ispell-emacs-menu.el	Thu Jan  1 00:00:00 1970
-+++ ispell-3.1/suse/ispell-emacs-menu.el	Thu Feb  8 18:33:11 2001
+diff -rNu ispell-3.1.clean/suse/ispell-emacs-menu.el ispell-3.1/suse/ispell-emacs-menu.el
+--- ispell-3.1.clean/suse/ispell-emacs-menu.el	Wed Dec 31 18:00:00 1969
++++ ispell-3.1/suse/ispell-emacs-menu.el	Thu Aug 16 17:50:38 2001
 @@ -0,0 +1,43 @@
 +;;; ispell-emacs-menu.el --- Produce the (x)emacs (i)spell menu on the fly
 +
@@ -1520,9 +1539,9 @@ diff -r -N -U3 ispell-3.1.orig/suse/ispell-emacs-menu.el ispell-3.1/suse/ispell-
 +(load "ispell" nil t)
 +
 +;;; ispell-emacs-menu.el end here
-diff -r -N -U3 ispell-3.1.orig/term.c ispell-3.1/term.c
---- ispell-3.1.orig/term.c	Wed Nov  2 18:44:28 1994
-+++ ispell-3.1/term.c	Thu Feb  8 18:33:11 2001
+diff -rNu ispell-3.1.clean/term.c ispell-3.1/term.c
+--- ispell-3.1.clean/term.c	Wed Nov  2 12:44:28 1994
++++ ispell-3.1/term.c	Thu Aug 16 17:50:38 2001
 @@ -70,9 +70,10 @@
  #include <sgtty.h>
  #endif
@@ -1711,9 +1730,9 @@ diff -r -N -U3 ispell-3.1.orig/term.c ispell-3.1/term.c
  #else
      (void) ioctl (0, TIOCSETP, (char *) &sbuf);
  #ifdef TIOCSLTC
-diff -r -N -U3 ispell-3.1.orig/tree.c ispell-3.1/tree.c
---- ispell-3.1.orig/tree.c	Mon Jan 23 18:28:28 1995
-+++ ispell-3.1/tree.c	Thu Feb  8 18:33:11 2001
+diff -rNu ispell-3.1.clean/tree.c ispell-3.1/tree.c
+--- ispell-3.1.clean/tree.c	Mon Jan 23 12:28:28 1995
++++ ispell-3.1/tree.c	Thu Aug 16 17:50:38 2001
 @@ -61,6 +61,7 @@
  
  #include <ctype.h>
@@ -1722,9 +1741,9 @@ diff -r -N -U3 ispell-3.1.orig/tree.c ispell-3.1/tree.c
  #include "config.h"
  #include "ispell.h"
  #include "proto.h"
-diff -r -N -U3 ispell-3.1.orig/unsq.c ispell-3.1/unsq.c
---- ispell-3.1.orig/unsq.c	Tue Jan 25 18:32:18 1994
-+++ ispell-3.1/unsq.c	Thu Feb  8 18:33:11 2001
+diff -rNu ispell-3.1.clean/unsq.c ispell-3.1/unsq.c
+--- ispell-3.1.clean/unsq.c	Tue Jan 25 12:32:18 1994
++++ ispell-3.1/unsq.c	Thu Aug 16 17:50:38 2001
 @@ -49,6 +49,7 @@
   */
  

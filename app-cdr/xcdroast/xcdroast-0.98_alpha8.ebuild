@@ -9,15 +9,16 @@ DESCRIPTION="Menu based front-end to mkisofs and cdrecord"
 SRC_URI="http://www.xcdroast.org/download/${A}"
 HOMEPAGE="http://www.xcdroast.org/"
 
-DEPEND=">=app-cdr/cdrecord-1.9
-	>=dev-libs/glib-1.2.3
+DEPEND=">=dev-libs/glib-1.2.3
 	>=x11-libs/gtk+-1.2.3
 	>=media-libs/imlib-1.8
 	>=media-libs/giflib-3.0"
 
+RDEPEND=">=app-cdr/cdrecord-1.9"
 
 src_compile () {
-	try make ${MAKEOPTS} CC="gcc $CFLAGS"
+	try env "CC='gcc ${CFLAGS}'"
+	try make ${MAKEOPTS}
 
 }
 

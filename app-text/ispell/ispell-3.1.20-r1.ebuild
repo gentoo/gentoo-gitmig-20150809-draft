@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author  Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ispell-3.1.20-r1.ebuild,v 1.3 2001/05/28 05:24:13 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ispell/ispell-3.1.20-r1.ebuild,v 1.4 2001/08/16 23:19:35 lamer Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${PN}-3.1
@@ -37,7 +37,7 @@ src_install () {
     doins ispell.el suse/*.el suse/emacs/*.el
     
     insinto /usr/lib/ispell
-    doins languages/{american,british}/*.hash
+    doins languages/{american,british}/*.{hash,med}
     doins languages/english/english.aff
 
     dodoc Contributors README WISHES

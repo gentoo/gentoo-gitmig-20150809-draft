@@ -21,6 +21,8 @@ src_unpack() {
   cp Configure Configure.orig
   sed -e "s/-O3/$CFLAGS/" -e "s/-m486//" \
     Configure.orig > Configure
+# Makefile borkage. The MANDIR is set to ${OPENSSLDIR}/man which is lame
+	sed -e 's:MANDIR=$(OPENSSLDIR)/man:MANDIR=/usr/share/man:g' Makefile | cat > Makefile
 }
 
 src_compile() {
