@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/quadra
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/ChangeLog,v 1.4 2004/01/27 09:26:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/quadra/ChangeLog,v 1.5 2004/03/31 04:00:44 mr_bones_ Exp $
+
+  30 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> quadra-1.1.8.ebuild:
+  virtual/x11; depend on sed >= 4; error check sed
 
   27 Jan 2004; Michael Sterrett <mr_bones_@gentoo.org> quadra-1.1.8.ebuild:
   remove incorrectly named patch attempt
