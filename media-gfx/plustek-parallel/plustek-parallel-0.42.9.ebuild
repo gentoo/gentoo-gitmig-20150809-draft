@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/plustek-parallel/plustek-parallel-0.42.9.ebuild,v 1.3 2003/09/30 05:40:54 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/plustek-parallel/plustek-parallel-0.42.9.ebuild,v 1.4 2004/02/16 15:50:34 spock Exp $
 
 IUSE=""
 
@@ -8,7 +8,7 @@ inherit eutils
 
 DESCRIPTION="Scanner Access Now Easy - Plustek module for parallel port scanners"
 HOMEPAGE="http://www.gjaeger.de/scanner/plustek.html"
-DEPEND="virtual/kernel
+DEPEND="=virtual/linux-sources-2.4*
 	>=media-gfx/sane-backends-1.0.8"
 SRC_URI="http://www.gjaeger.de/scanner/current/plustek-module-0_42_9.tar.gz"
 S="${WORKDIR}/plustek_driver"
@@ -41,5 +41,9 @@ pkg_postinst () {
 	einfo
 	einfo If you want this module to be loaded automatically at system boot,
 	einfo add 'pt_drv' to /etc/modules.autoload.d/kernel-$(uname -r | sed 's/\([0-9].[0-9]\).*/\1/')
+
+	ewarn "Please note that this program is DEPRECATED and will be removed from Portage"
+	ewarn "in the nearest future. It is recommended that you install the latest"
+	ewarn "sane-backends (1.0.13 or newer) instead."
 }
 

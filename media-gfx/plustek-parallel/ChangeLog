@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/plustek-parallel
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/plustek-parallel/ChangeLog,v 1.2 2003/08/26 00:50:54 vapier Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/plustek-parallel/ChangeLog,v 1.3 2004/02/16 15:50:34 spock Exp $
+
+  16 Feb 2004; Michal Januszewski <spock@gentoo.org>
+  plustek-parallel-0.42.9.ebuild:
+  Added a note about this package being deprecated, added dependency on
+  virtual/linux-sources-2.4* (it won't compile with 2.6 kernels).
 
 *plustek-parallel-0.42.9 (25 Aug 2003)
 
