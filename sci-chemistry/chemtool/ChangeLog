@@ -1,0 +1,70 @@
+# ChangeLog for app-sci/chemtool
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-chemistry/chemtool/ChangeLog,v 1.1 2004/12/24 16:32:14 ribosome Exp $
+
+*chemtool-1.6.3 (24 Dec 2004)
+
+  24 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +chemtool-1.6.3.ebuild:
+  Moved from app-sci/chemtool to sci-chemistry/chemtool.
+
+  08 Nov 2004; Patrick Kursawe <phosphan@gentoo.org>
+  -files/chemtool-1.6.patch, -chemtool-1.6-r1.ebuild, chemtool-1.6.3.ebuild:
+  Cleanup + fixing bug #70454
+
+  18 Aug 2004; Patrick Kursawe <phosphan@gentoo.org> chemtool-1.6.3.ebuild:
+  stable for x86
+
+  02 Jun 2004; Aron Griffis <agriffis@gentoo.org> chemtool-1.6-r1.ebuild,
+  chemtool-1.6.3.ebuild:
+  Fix use invocation
+
+*chemtool-1.6.3 (24 May 2004)
+
+  24 May 2004; Patrick Kursawe <phosphan@gentoo.org> chemtool-1.6.3.ebuild:
+  Version bump, is supposed to work on amd64 aswell (see bug #51468)
+
+  15 Apr 2004; Caleb Tennis <caleb@gentoo.org>
+  -files/Makefile.in-chemtool-1.5-gentoo.diff,
+  -files/config.h.in-chemtool-1.5-gentoo.diff,
+  -files/configure.in-chemtool-1.5-gentoo.diff,
+  -files/src-cht-Makefile.in-chemtool-1.5-gentoo.diff, -chemtool-1.6.ebuild:
+  Remove old ebuild that was dependent on kde 2.2 anyway.
+
+  15 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> chemtool-1.6-r1.ebuild:
+  Removing historical supersed dependency and need-kde 2
+
+*chemtool-1.6-r1 (26 Feb 2004)
+
+  26 Feb 2004; Patrick Kursawe <phosphan@gentoo.org> chemtool-1.6-r1.ebuild:
+  Removed gettext dependency, won't install locale stuff when USE="-nls"
+  (see bug #37230)
+
+  02 Dec 2003; Patrick Kursawe <phosphan@gentoo.org> chemtool-1.6.ebuild:
+  Fixing dependencies.
+
+  30 Sep 2003; Patrick Kursawe <phosphan@gentoo.org> chemtool-1.6.ebuild:
+  Considered stable for x86.
+
+  06 Aug 2003; Patrick Kursawe <phosphan@gentoo.org> chemtool-1.6.ebuild:
+  Trying to fix bug 24984, no revision bump necessary.
+
+*chemtool-1.6 (17 Jul 2003)
+
+  17 Jul 2003; Patrick Kursawe <phosphan@gentoo.org> chemtool-1.6.ebuild,
+  files/chemtool-1.6.patch:
+  Version bump as requested in bug 24367
+
+*chemtool-1.5 (27 Nov 2002)
+
+  18 Apr 2003; Seemant Kulleen <seemant@gentoo.org> Manifest,
+  chemtool-1.5.ebuild:
+  sandbox violation fix. reported by: wernfried haas <w.haas@xover.mud.at> in
+  bug #19562
+
+  27 Nov 2002; George Shapovalov <george@gentoo.org> chemtool-1.5.ebuild, files/{Makefile.in-chemtool-1.5-gentoo.diff,digest-chemtool-1.5,config.h.in-chemtool-1.5-gentoo.diff,src-cht-Makefile.in-chemtool-1.5-gentoo.diff,configure.in-chemtool-1.5-gentoo.diff} :
+
+  initial release. 
+
+  Chemtool is a program for drawing organic molecules
+  ebuild submitted by 
