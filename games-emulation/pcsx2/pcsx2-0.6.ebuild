@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx2/pcsx2-0.6.ebuild,v 1.2 2004/06/24 22:32:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/pcsx2/pcsx2-0.6.ebuild,v 1.3 2004/11/03 00:16:33 vapier Exp $
 
 inherit eutils games
 
@@ -24,6 +24,7 @@ RDEPEND="virtual/x11
 	>=games-emulation/ps2emu-spu2null-0.21
 	>=games-emulation/ps2emu-dev9null-0.1"
 DEPEND="${RDEPEND}
+	app-arch/unzip
 	dev-lang/nasm"
 
 S="${WORKDIR}/pcsx2_${PV}src"
