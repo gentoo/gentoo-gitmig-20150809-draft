@@ -1,3 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f7bc98f286b6b00d1123cdc88016e4b8 ChangeLog 1201
-MD5 e9d818f55f974733aef6b476e6d8d2e0 xclass-0.8.2-r1.ebuild 1481
+MD5 091e3a9c87b87a1b1c1698eb16c37ba1 xclass-0.8.2-r1.ebuild 1427
 MD5 5e06d8892b0af94c7e720a4c2873bc78 files/digest-xclass-0.8.2-r1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB1w6droRuSHgZdywRAredAJ42ZqiMWfKY5x/T8TA4jS/4iAHtPwCfcetn
+M8i7uofXDbaSsd1lMn2jSgM=
+=/RBe
+-----END PGP SIGNATURE-----
