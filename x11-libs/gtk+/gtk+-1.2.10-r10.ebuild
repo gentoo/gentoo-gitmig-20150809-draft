@@ -1,14 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r10.ebuild,v 1.14 2004/03/07 04:04:55 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-1.2.10-r10.ebuild,v 1.15 2004/03/09 07:18:18 ferringb Exp $
 
-inherit eutils libtool
+GNOME_TARBALL_SUFFIX="gz"
+inherit gnome.org eutils libtool
 
 DESCRIPTION="The GIMP Toolkit"
 HOMEPAGE="http://www.gtk.org/"
-SRC_URI="ftp://ftp.gtk.org/pub/gtk/v1.2/${P}.tar.gz
-	ftp://ftp.gnome.org/pub/GNOME/stable/sources/gtk+/${P}.tar.gz
-	http://ftp.gnome.org/pub/GNOME/stable/sources/gtk+/${P}.tar.gz
+SRC_URI="${SRC_URI}
 	http://www.ibiblio.org/gentoo/distfiles/gtk+-1.2.10-r8-gentoo.diff.bz2"
 
 LICENSE="LGPL-2.1"
