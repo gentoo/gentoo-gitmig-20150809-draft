@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.31 2004/03/25 21:09:35 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.32 2004/04/18 07:37:18 mkennedy Exp $
+
+  18 Apr 2004; <mkennedy@gentoo.org> files/sbcl.sh, files/0.8.9/sbcl.sh:
+  Change /etc/sbcl.rc to /etc/sbclrc for sbcl.sh
 
 *sbcl-0.8.9 (25 Mar 2004)
 

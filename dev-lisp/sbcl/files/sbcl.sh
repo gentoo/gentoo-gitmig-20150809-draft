@@ -18,7 +18,7 @@ case $1 in
 	    echo $0 rebuilding...
 	    shift
 	    echo rebuilding $1
-	    sbcl --noinform --sysinit /etc/sbcl.rc --userinit /dev/null \
+	    sbcl --noinform --sysinit /etc/sbclrc --userinit /dev/null \
 	         --disable-debugger \
 	         --eval \
 "(handler-case
@@ -42,7 +42,7 @@ case $1 in
 	    echo $0 loading and dumping clc.
 	    ( cd /usr/lib/sbcl
 	      sbcl --core /usr/lib/sbcl/sbcl-dist.core \
-		   --noinform --sysinit /etc/sbcl.rc --userinit /dev/null \
+		   --noinform --sysinit /etc/sbclrc --userinit /dev/null \
 		   --load "/usr/lib/sbcl/install-clc.lisp" 2> /dev/null
               mv sbcl-new.core sbcl.core || (echo FAILED ; cp sbcl-dist.core sbcl.core ) )
 	    ;;
