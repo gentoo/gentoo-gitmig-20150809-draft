@@ -1,6 +1,13 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.23 2004/03/30 09:12:47 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.24 2004/04/07 18:24:01 solar Exp $
+
+*heimdal-0.6.1 (07 Apr 2004)
+
+  07 Apr 2004; <solar@gentoo.org> heimdal-0.4e-r1.ebuild,
+  heimdal-0.5.1-r1.ebuild, heimdal-0.5.1.ebuild, heimdal-0.5.ebuild,
+  heimdal-0.6.1.ebuild, metadata.xml:
+  security version bump. bug #46590
 
   30 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> heimdal-0.6.ebuild,
   files/heimdal-0.6-berkdb.patch:
