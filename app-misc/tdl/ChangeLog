@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/tdl
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/tdl/ChangeLog,v 1.10 2004/07/03 20:03:56 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/tdl/ChangeLog,v 1.11 2004/09/26 14:36:55 blubb Exp $
+
+  26 Sep 2004; <blubb@gentoo.org> tdl-1.5.2.ebuild:
+  added ~amd64
 
   03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> tdl-1.5.2.ebuild:
   Stable on alpha.
