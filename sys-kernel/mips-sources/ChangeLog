@@ -1,6 +1,23 @@
 # ChangeLog for sys-kernel/mips-sources
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.66 2004/12/03 06:29:45 kumba Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.67 2005/01/06 05:20:39 kumba Exp $
+
+*mips-sources-2.4.28 (06 Jan 2005)
+
+  06 Jan 2005; Joshua Kinard <kumba@gentoo.org>
+  -mips-sources-2.4.26-r14.ebuild, -mips-sources-2.4.27-r6.ebuild,
+  +mips-sources-2.4.27-r7.ebuild, +mips-sources-2.4.28.ebuild,
+  +mips-sources-2.6.10.ebuild, -mips-sources-2.6.7-r12.ebuild,
+  -mips-sources-2.6.8.1-r6.ebuild, +mips-sources-2.6.8.1-r7.ebuild,
+  -mips-sources-2.6.9-r7.ebuild, +mips-sources-2.6.9-r8.ebuild:
+  More changes (as usual). Mainly security updates - added CAN-2004-1068,
+  CAN-2004-1069, CAN-2004-1016, CAN-2004-1056, CAN-1004-1137, plus a non-CAN
+  shm_unlock patch for 2.6. Also included are new ebuilds for 2.6.10 and 2.4.28,
+  and removed 2.6.7 and 2.4.26 ebuilds. 2.6.10 no longer uses individual cobalt
+  patches -- all have been lumped into a single patch similar to IP30/Octane
+  support, and added code to 2.6.10's ebuild to use RC-kernels when needed via
+  variable switch. See the following gentoo bugs: 72317, 72452, 74384, 74392,
+  74464, 74465.
 
 *mips-sources-2.6.8.1-r6 (03 Dec 2004)
 
