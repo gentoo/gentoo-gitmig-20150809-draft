@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/jless-iso254/jless-iso254-358.ebuild,v 1.8 2003/09/30 13:38:32 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/jless-iso254/jless-iso254-358.ebuild,v 1.9 2003/11/18 07:21:20 usata Exp $
 
 IUSE=""
 
@@ -49,6 +49,9 @@ src_install() {
 	if [ ! -f /usr/bin/lesspipe.sh ] ; then
 		dosym /usr/bin/jlesspipe.sh /usr/bin/lesspipe.sh
 	fi
+
+	insinto /etc/env.d
+	doins ${FILESDIR}/70jless
 
 	dodoc COPYING LICENSE NEWS README*
 }
