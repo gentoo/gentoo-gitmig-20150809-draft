@@ -1,13 +1,19 @@
 # ChangeLog for app-i18n/uim
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.54 2004/06/14 11:35:38 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/ChangeLog,v 1.55 2004/06/14 22:55:45 matsuu Exp $
+
+*uim-0.3.9-r1 (15 Jun 2004)
+
+  15 Jun 2004; MATSUU Takuto <matsuu@gentoo.org> +uim-0.3.9-r1.ebuild:
+  Added X to IUSE.
+  Fixed xim compile problem.
 
 *uim-0.3.9 (14 Jun 2004)
 
   14 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> +uim-0.3.9.ebuild:
   Version bumped.
 
-  14 Jun 2004; <matsuu@gentoo.org> uim-0.3.8.ebuild:
+  14 Jun 2004; MATSUU Takuto <matsuu@gentoo.org> uim-0.3.8.ebuild:
   Added ~amd64 to KEYWORDS.
 
   05 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> uim-0.3.4.2.ebuild,
