@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/rdesktop
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.16 2003/03/09 20:35:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rdesktop/ChangeLog,v 1.17 2003/04/28 16:53:23 agriffis Exp $
+
+*rdesktop-1.2.0-r1 (28 Apr 2003)
+
+  28 Apr 2003; Aron Griffis <agriffis@gentoo.org> rdesktop-1.2.0-r1.ebuild:
+  Add patch from Steve Fosdick on rdesktop-devel to provide rudimentary
+  clipboard support (X->TS only). This isn't really supported on RDP4 but there
+  will be clipboard support in RDP5. At that point this patch should be removed.
 
 *rdesktop-1.2.0 (27 Feb 2003)
 
