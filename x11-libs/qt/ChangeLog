@@ -1,6 +1,15 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.171 2004/09/09 21:12:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.172 2004/09/10 16:30:29 usata Exp $
+
+*qt-3.3.3-r1 (11 Sep 2004)
+
+  11 Sep 2004; Mamoru KOMACHI <usata@gentoo.org>
+  +files/qt-3.3.3-immodule-20040819-event-inversion-20040908.diff,
+  +files/qt-3.3.3-immodule-r123-event-inversion-20040909.diff,
+  qt-3.3.2.ebuild, +qt-3.3.3-r1.ebuild, qt-3.3.3.ebuild:
+  Updated immodule for Qt patch. Character inversion problem on
+  some input methods has been fixed.
 
   09 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> qt-3.3.3.ebuild:
   get_libdir updates. Fix multilib support on amd64. libqt.so is now created on
