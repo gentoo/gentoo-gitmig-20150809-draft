@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.6-r1.ebuild,v 1.1 2004/11/07 17:24:06 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.6-r1.ebuild,v 1.2 2004/11/18 16:57:27 chainsaw Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -17,7 +17,7 @@ SRC_URI="http://home.san.rr.com/johninsd/pub/linux/lilo/${P}.tar.gz
 
 SLOT="0"
 LICENSE="BSD GPL-2"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* x86"
 
 RDEPEND=">=sys-apps/sed-4
 	devmap? ( >=sys-libs/device-mapper-1.00.08 )"
@@ -50,7 +50,6 @@ src_unpack() {
 	fi
 
 	cd ${S}
-	unpack ${DOLILO_TAR}
 
 	# Fix creating install dirs, bug #39405
 	epatch ${FILESDIR}/${P}-create-install-dirs.patch
@@ -58,6 +57,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-correct-usage-info.patch
 	# Get the manpage path right
 	sed -i -e s,usr/man,usr/share/man,g ${S}/Makefile
+
+	unpack ${DOLILO_TAR}
 }
 
 src_compile() {
