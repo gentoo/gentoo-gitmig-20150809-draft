@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.1_pre5.ebuild,v 1.3 2003/05/30 09:11:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xaos/xaos-3.1_pre5.ebuild,v 1.4 2003/06/03 05:03:28 george Exp $
 
 IUSE="X svga aalib"
 
@@ -29,7 +29,8 @@ src_compile() {
 #	use dga   || myconf="${myconf} --with-dga-driver=no"
 
 # ggi support is broken
-#	use ggi   || myconf="${myconf} --with-ggi-driver=no"
+#	use ggi   ||
+	myconf="${myconf} --with-ggi-driver=no"
 	use svga  || myconf="${myconf} --with-svga-driver=no"
 #	use aalib || myconf="${myconf} --with-aa-driver=no"
 
