@@ -21,10 +21,6 @@
 ##   End example
 ##
 
-# <carpaski@gentoo.org> (23 Sep 2003)
-# Test masking for portage-2.0.49-r6
->=sys-apps/portage-2.0.49-r6
-
 # <strider@gentoo.org> (21 Sep 2003)
 # ant 1.5.4 the ebuild is ok but ant
 # script its no working too well
