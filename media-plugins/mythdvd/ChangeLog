@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/mythdvd
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythdvd/ChangeLog,v 1.8 2004/02/03 14:09:00 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythdvd/ChangeLog,v 1.9 2004/02/06 14:35:53 max Exp $
+
+  06 Feb 2004; Max Kalika <max@gentoo.org> mythdvd-0.14.ebuild:
+  Ditch the postinst() message and don't attempt to install non-existant db
+  files. Get rid of the alsa and lirc workarounds as they are no longer needed.
 
 *mythdvd-0.14 (03 Feb 2004)
 
