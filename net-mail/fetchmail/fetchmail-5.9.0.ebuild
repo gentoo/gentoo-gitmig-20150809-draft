@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Parag Mehta <pm@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-5.9.0.ebuild,v 1.2 2001/08/31 18:48:14 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fetchmail/fetchmail-5.9.0.ebuild,v 1.3 2001/08/31 19:02:09 g2boojum Exp $
 
 
 S=${WORKDIR}/${P}
@@ -22,9 +22,10 @@ src_compile() {
     if [ -z "`use nls`" ] ; then
 	myconf="$myconf --disable-nls"
     fi
-    if [ "`use ipv6`" ] ; then
-	myconf="$myconf --enable-inet6"
-    fi
+# need inet6-apps, which we don't have
+#    if [ "`use ipv6`" ] ; then
+#	myconf="$myconf --enable-inet6"
+#    fi
     try ./configure --prefix=/usr --host=${CHOST} \
         --mandir=/usr/share/man \
 	--infodir=/usr/share/info \
