@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.5.2.ebuild,v 1.3 2005/02/21 04:24:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lilypond/lilypond-2.5.2.ebuild,v 1.4 2005/03/29 14:04:13 luckyduck Exp $
 
 IUSE="doc"
 
@@ -24,7 +24,7 @@ RDEPEND=">=dev-util/guile-1.6.5
 DEPEND="${RDEPEND}
 	>=app-text/t1utils-1.32
 	>=dev-lang/perl-5.8.0-r12
-	>=sys-apps/texinfo-4.6
+	>=sys-apps/texinfo-4.7
 	>=sys-devel/flex-2.5.4a-r5
 	>=sys-devel/gcc-3.1-r8
 	>=sys-devel/make-3.80
