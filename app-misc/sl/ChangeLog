@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/sl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/sl/ChangeLog,v 1.7 2005/01/01 15:23:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/sl/ChangeLog,v 1.8 2005/02/02 16:40:15 luckyduck Exp $
+
+  02 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> sl-3.03.ebuild:
+  added ~amd64 to KEYWORDS. fixes #80447
 
   13 Dec 2004; Jason Wever <weeve@gentoo.org> sl-3.03.ebuild:
   Stable on sparc.
