@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/quartz/quartz-1.3.4.ebuild,v 1.2 2004/05/20 17:01:13 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/quartz/quartz-1.3.4.ebuild,v 1.3 2004/06/03 02:55:19 agriffis Exp $
 
 inherit java-pkg
 USE="oracle servlet-2.3 servlet-2.4 dbcp jboss jta jmx struts jikes"
@@ -33,7 +33,7 @@ src_compile() {
 	use dbcp && CLASSPATH="$CLASSPATH:`java-config -p commons-dbcp`"
 	use jta && CLASSPATH="$CLASSPATH:`java-config -p jta`"
 	use oracle && cp /usr/share/jdbc2-oracle-9.2.0.3/lib/classes12.zip ${S}/lib
-	if [ `use jboss` ]; then
+	if use jboss; then
 		cp /usr/share/jboss/lib/jboss-common.jar ${S}/lib
 		cp /usr/share/jboss/lib/jboss-jmx.jar ${S}/lib
 		cp /usr/share/jboss/lib/jboss-system.jar ${S}/lib
