@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3066 2004/08/16 13:42:13 caleb Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3067 2004/08/16 14:31:14 cardoe Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# <cardoe@gentoo.org> (16 Aug 2004)
+# Masked for development purposes and testing
+=net-wireless/ndiswrapper-0.9
 
 # <squinky86@gentoo.org> (14 Aug 2004)
 # Masked for development purposes:
