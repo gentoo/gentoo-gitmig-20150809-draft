@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.22 2002/06/10 12:06:57 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.23 2002/06/13 18:58:02 azarah Exp $
+
+*mplayer-0.90_pre5-r1 (13 Jun 2002)
+
+  13 Jun 2002; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_pre5-r1 :
+
+  Fix missing subtitles for region 4 DVD's, bug #3679, thanks to report
+  from Bernardo S. A. Silva.
 
 *mplayer-0.90_pre5 (10 Jun 2002)
 

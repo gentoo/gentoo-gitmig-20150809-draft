@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre3-r1.ebuild,v 1.3 2002/05/23 06:50:14 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre5-r1.ebuild,v 1.1 2002/06/13 18:58:03 azarah Exp $
 
 # Handle PREversions as well
 MY_PV=${PV/_/}
@@ -9,7 +9,6 @@ S="${WORKDIR}/MPlayer-${MY_PV}"
 # Only install Skin if GUI should be build (gtk as USE flag)
 SRC_URI="ftp://mplayerhq.hu/MPlayer/releases/MPlayer-${MY_PV}.tar.bz2
 	 ftp://mplayerhq.hu/MPlayer/releases/mp-arial-iso-8859-1.zip
-	 ftp://ftp.mplayerhq.hu/MPlayer/patches/dxr3.patch
 	 gtk? ( http://www.ibiblio.org/gentoo/distfiles/default-skin-0.1.tar.bz2 )"
 #	 This is to get the digest problem fixed.
 #	 gtk? ( ftp://mplayerhq.hu/MPlayer/Skin/default.tar.bz2 )"
@@ -56,6 +55,13 @@ src_unpack() {
 	cd ${S}
 	# Fixes some compile problems, thanks to Gwenn Gueguen
 	patch -p0 <${FILESDIR}/${P}-widget.patch || die "widget patch failed"
+	# Fixes include problem - Azarah (10 Jun 2002)
+	patch -p1 <${FILESDIR}/${P}-stream-include.patch || die
+	# Fixes install location for vidix drivers, thanks to Mezei Zoltan.
+	patch -p1 <${FILESDIR}/${P}-vidix-destpath.patch || die
+	# Fix missing subtitles for some regions (4), bug #3679, thanks
+	# to Bernardo Silva
+	patch -p1 <${FILESDIR}/${P}-spudec.c.patch || die
 }
 
 src_compile() {
@@ -67,7 +73,7 @@ src_compile() {
 	local myconf=""
 
 	# Some people have compile problems with the vidix stuff
-	myconf="${myconf} --disable-vidix"
+#	myconf="${myconf} --disable-vidix"
 
 	use 3dnow \
 		|| myconf="${myconf} --disable-3dnow --disable-3dnowex"
@@ -155,8 +161,9 @@ src_compile() {
 
 src_install() {
 
-	make prefix=${D}/usr/share \
+	make prefix=${D}/usr \
 	     BINDIR=${D}/usr/bin \
+		 LIBDIR=${D}/usr/lib \
 	     CONFDIR=${D}/usr/share/mplayer \
 	     DATADIR=${D}/usr/share/mplayer \
 	     MANDIR=${D}/usr/share/man \

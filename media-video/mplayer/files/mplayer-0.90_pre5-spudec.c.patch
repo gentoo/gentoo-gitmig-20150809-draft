@@ -1,0 +1,22 @@
+--- MPlayer-0.90pre5/spudec.c.orig	Wed May 29 21:27:06 2002
++++ MPlayer-0.90pre5/spudec.c	Thu Jun 13 20:52:03 2002
+@@ -448,7 +448,8 @@
+ #if 1
+   // check if we have a complete packet (unfortunatelly packet_size is bad
+   // for some disks)
+-  if (spu->packet_offset == spu->packet_size){
++//  if (spu->packet_offset == spu->packet_size){
++  {
+     unsigned int x=0,y;
+     while(x+4<=spu->packet_offset){
+       y=get_be16(spu->packet+x+2); // next control pointer
+@@ -469,7 +470,8 @@
+     }
+   }
+ #else
+-  if (spu->packet_offset == spu->packet_size) {
++//  if (spu->packet_offset == spu->packet_size) {
++  {
+     spudec_decode(spu, pts100);
+     spu->packet_offset = 0;
+   }
