@@ -1,6 +1,6 @@
-# ChangeLog for dev-perlFile-MMagicChangeLog/dev-perlFilterChangeLog
+# ChangeLog for dev-perl/Filter
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Filter/ChangeLog,v 1.5 2002/12/13 10:56:37 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Filter/ChangeLog,v 1.6 2002/12/17 19:23:57 vapier Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
