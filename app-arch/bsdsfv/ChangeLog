@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/bsdsfv
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdsfv/ChangeLog,v 1.10 2003/11/10 14:41:11 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bsdsfv/ChangeLog,v 1.11 2004/04/27 16:30:28 aliz Exp $
+
+  27 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> bsdsfv-1.18.ebuild:
+  Added IUSE.
 
 *bsdsfv-1.18 (10 Nov 2003)
 
