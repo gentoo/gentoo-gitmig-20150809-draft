@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/sash-3.6.ebuild,v 1.13 2004/05/15 20:40:52 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/sash/sash-3.6.ebuild,v 1.14 2004/06/01 20:49:50 pvdabeel Exp $
 
 inherit eutils
 
@@ -25,6 +25,7 @@ src_unpack() {
 	epatch ${FILESDIR}/sash-3.6-fix-includes.patch
 	[ `use readline` ] && epatch ${FILESDIR}/sash-3.6-readline.patch
 	[ `use ppc64` ] && epatch ${FILESDIR}/sash-3.6-ppc64-includes.patch
+	[ `use ppc` ] && epatch ${FILESDIR}/sash-3.6-2.6-includes.patch
 	sed -e "s:-O3:${CFLAGS}:" -i Makefile
 }
 
