@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.4.4.2.ebuild,v 1.2 2005/03/25 12:56:09 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/k3d/k3d-0.4.4.2.ebuild,v 1.3 2005/04/02 19:27:02 lu_zero Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ DEPEND="virtual/x11
 	truetype? ( >=media-libs/freetype-2 )
 	doc? ( app-text/xmlto )
 	python? ( >=dev-lang/python-2.3 )
-	ruby? ( virtual/ruby )"
+	" ##ruby support deprecated ruby? ( virtual/ruby )
 
 src_unpack()
 {
@@ -54,9 +54,9 @@ src_compile()
 		&& myconf="${myconf} --with-python" \
 		|| myconf="${myconf} --without-python"
 
-	use ruby \
-		&& myconf="${myconf} --with-ruby=`ruby -rrbconfig -e 'puts Config::CONFIG["archdir"]'`" \
-		|| myconf="${myconf} --without-ruby"
+#	use ruby \
+#		&& myconf="${myconf} --with-ruby=`ruby -rrbconfig -e 'puts Config::CONFIG["archdir"]'`" \
+#		|| myconf="${myconf} --without-ruby"
 
 
 	econf "CXXFLAGS=${CXXFLAGS}" $myconf || die
