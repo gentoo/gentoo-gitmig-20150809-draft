@@ -1,4 +1,3 @@
-MD5 379e0d518f0f2c1277c90292863d7cd4 ChangeLog 4439
 MD5 7f4b1ac767214657b085c4951227af02 metadata.xml 178
 MD5 4536a40e7befd906dc1ad15c9ac0000c straw-0.19.2.ebuild 1374
 MD5 37cb1ec325734892c613b82ccdefef8b straw-0.21.2.ebuild 2157
@@ -6,6 +5,7 @@ MD5 d7f05e919c45bc0cf00157eec8d8e807 straw-0.22.1.ebuild 1557
 MD5 42be7de6050cc1ee02c3bebefd89d70b straw-0.22.ebuild 1248
 MD5 4fc68a2122f98aa4f06bc63222ea6294 straw-0.23.ebuild 1630
 MD5 c4cb7fb034104b1e1d2568178f7249ab straw-0.25.1.ebuild 1962
+MD5 b975c5c9a3178a43e5bbe27f095ff787 ChangeLog 4442
 MD5 4de4ce496f2607dd3a9b38d2f30a856e files/digest-straw-0.19.2 64
 MD5 02c585d463b5069559098bf5946589d7 files/digest-straw-0.21.2 65
 MD5 62022aa3104ffda5eefb9d703602acb1 files/digest-straw-0.22 63
