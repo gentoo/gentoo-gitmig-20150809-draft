@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-forensics/air/air-1.2.5-r1.ebuild,v 1.2 2004/09/16 13:40:03 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-forensics/air/air-1.2.5-r1.ebuild,v 1.3 2004/10/14 20:01:22 dholm Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/air-imager/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 DEPEND=">=dev-perl/perl-tk-804.027
