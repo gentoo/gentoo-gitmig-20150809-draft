@@ -23,8 +23,7 @@ stop() {
 	eend $?
 }
 
-# NOT LEGAL... Need to work on this...
-reload() {
+svc_restart() {
 	ebegin "Reloading apache2"
 	/usr/lib/apache2/bin/httpd -k reload ${APACHE2_OPTS}
 	eend $?
