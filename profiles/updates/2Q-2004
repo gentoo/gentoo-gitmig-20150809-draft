@@ -87,3 +87,4 @@ move net-mail/rblcheck mail-filter/rblcheck
 move net-mail/razor mail-filter/razor
 move net-mail/scmail mail-filter/scmail
 move net-mail/spamass-milter mail-filter/spamass-milter
+move net-mail/spambayes mail-filter/spambayes
