@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r6.ebuild,v 1.3 2004/10/01 02:40:50 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r6.ebuild,v 1.4 2004/10/03 23:20:25 eradicator Exp $
 
 IUSE="xml nls esd opengl mmx oggvorbis 3dnow mikmod directfb ipv6 cjk alsa oss arts jack sndfile lirc flac"
 
 inherit flag-o-matic eutils libtool gnuconfig
 
-PATCHVER="1.1"
+PATCHVER="1.2"
 
 MY_P=${P/_pre/-pre}
 S=${WORKDIR}/${MY_P}
@@ -67,6 +67,9 @@ src_unpack() {
 
 	# Save playlist, etc on SIGTERM and SIGINT, bug #13604.
 	epatch ${PATCHDIR}/${P}-sigterm.patch
+
+	# Turn on shoutcast titles by default, bug #62568
+	epatch ${PATCHDIR}/${P}-shout-title.patch
 
 	# Patch for mpg123 to convert Japanese character code of MP3 tag info
 	# the Japanese patch and the Russian one overlap, so its one or the other
