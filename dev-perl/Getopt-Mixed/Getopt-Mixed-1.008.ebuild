@@ -6,8 +6,7 @@ IUSE=""
 
 inherit perl-module
 
-S="${WORKDIR}/${P}"
-CATEGORY="dev-perl"
+S=${WORKDIR}/${P}
 
 DESCRIPTION="Getopt::Mixed is used for parsing mixed options"
 SRC_URI="http://www.cpan.org/modules/by-module/Getopt/${P}.tar.gz"
@@ -15,6 +14,6 @@ HOMEPAGE="http://www.cpan.org/modules/by-module/Getopt/${P}.readme"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ppc ~sparc ~sparc64 ~alpha"
+KEYWORDS="~x86 ppc ~sparc ~alpha"
 
 DEPEND="${DEPEND}"
