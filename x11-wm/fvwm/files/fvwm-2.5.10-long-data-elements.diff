@@ -1,0 +1,17 @@
+--- fvwm/decorations.c.orig 2003-10-21 07:52:33.000000000 +0200
++++ fvwm/decorations.c 2004-08-06 20:30:05.605756454 +0200
+@@ -94,10 +94,10 @@
+ /* Motif  window hints */
+ typedef struct
+ {
+-	int      flags;
+-	int      functions;
+-	int      decorations;
+-	int      inputMode;
++	long     flags;
++	long     functions;
++	long     decorations;
++	long     inputMode;
+ } PropMotifWmHints;
+ 
+ typedef PropMotifWmHints PropMwmHints;

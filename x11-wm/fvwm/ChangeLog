@@ -1,6 +1,15 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.78 2004/07/31 01:54:52 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.79 2004/09/08 10:00:24 taviso Exp $
+
+*fvwm-2.5.10-r7 (08 Sep 2004)
+
+  08 Sep 2004; Tavis Ormandy <taviso@gentoo.org> -files/acinclude.m4,
+  -files/fvwm-2.5.10-fvwmbuttonshover.diff,
+  +files/fvwm-2.5.10-fvwmbuttonshover.diff.gz,
+  +files/fvwm-2.5.10-long-data-elements.diff, fvwm-2.5.10-r6.ebuild,
+  +fvwm-2.5.10-r7.ebuild, -fvwm-2.5.7-r5.ebuild:
+  64bit fix, remove outdated ebuild.
 
   31 Jul 2004; Tom Gall <tgall@gentoo.org>  fvwm-2.5.10-r6.ebuild:
   stable on ppc64, bug #57040

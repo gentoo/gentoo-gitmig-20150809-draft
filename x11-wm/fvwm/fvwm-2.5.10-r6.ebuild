@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.10-r6.ebuild,v 1.5 2004/08/20 01:56:16 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.10-r6.ebuild,v 1.6 2004/09/08 10:00:24 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -93,7 +93,7 @@ src_unpack() {
 	cd ${S}; epatch ${FILESDIR}/iconfile-2.5.10.diff
 
 	# fvwmbuttons hover patch
-	cd ${S}; epatch ${FILESDIR}/fvwm-2.5.10-fvwmbuttonshover.diff
+	cd ${S}; epatch ${FILESDIR}/fvwm-2.5.10-fvwmbuttonshover.diff.gz
 }
 
 src_compile() {

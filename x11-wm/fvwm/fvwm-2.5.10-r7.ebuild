@@ -1,18 +1,18 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.7-r5.ebuild,v 1.7 2004/07/15 01:12:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.5.10-r7.ebuild,v 1.1 2004/09/08 10:00:24 taviso Exp $
 
-inherit gnuconfig
+inherit eutils flag-o-matic
 
-IUSE="bidi cjk debug gnome gtk gtk2 imlib ncurses nls nosm noxpm perl png readline rplay stroke tcltk truetype xinerama"
+IUSE="bidi debug gnome gtk gtk2 imlib ncurses nls nosm noxpm perl png readline rplay stroke tcltk truetype xinerama"
 
 DESCRIPTION="An extremely powerful ICCCM-compliant multiple virtual desktop window manager"
 SRC_URI="ftp://ftp.fvwm.org/pub/fvwm/version-2/${P}.tar.bz2
-		perl? ( mirror://gentoo/FvwmTabs-2.3.tar.gz )"
+		perl? ( http://users.tpg.com.au/users/scottie7/FvwmTabs-v3.1.tar.gz	)"
 HOMEPAGE="http://www.fvwm.org/"
 
 SLOT="0"
-KEYWORDS="x86 sparc alpha ppc"
+KEYWORDS="~x86 ~ppc64 ~ppc ~amd64"
 LICENSE="GPL-2 FVWM"
 
 RDEPEND="readline? ( >=sys-libs/readline-4.1
@@ -20,46 +20,90 @@ RDEPEND="readline? ( >=sys-libs/readline-4.1
 				!ncurses? ( >=sys-libs/libtermcap-compat-1.2.3 ) )
 		gtk? ( =x11-libs/gtk+-1.2*
 				imlib? ( >=media-libs/gdk-pixbuf-0.21.0
-						>=media-libs/imlib-1.9.14-r1 ) )
-		gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )
+						>=media-libs/imlib-1.9.14-r1 )
+				gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 ) )
 		rplay? ( >=media-sound/rplay-3.3.2 )
 		bidi? ( >=dev-libs/fribidi-0.10.4 )
 		png? ( >=media-libs/libpng-1.0.12-r2 )
 		stroke? ( >=dev-libs/libstroke-0.4 )
 		perl? ( tcltk? ( >=dev-lang/tk-8.3.4
 						>=dev-perl/perl-tk-800.024-r2
-						>=dev-perl/X11-Protocol-0.51-r1 ) )
-		truetype? ( virtual/xft
-					>=media-libs/fontconfig-2.1-r1
-					>=dev-libs/expat-1.95.6-r1 )
-		!noxpm? ( >=media-libs/netpbm-9.12-r4 )
+						>=dev-perl/X11-Protocol-0.52 ) )
+		truetype? ( virtual/xft >=media-libs/fontconfig-2.1-r1 )
 		>=dev-lang/perl-5.6.1-r10
 		>=sys-libs/zlib-1.1.4-r1
+		sys-apps/debianutils
 		virtual/x11"
 # XXX:	gtk2 perl bindings require dev-perl/gtk2-perl, worth a dependency?
 # XXX:	gtk perl bindings require dev-perl/gtk-perl, worth a dependency?
-# XXX:	netpbm is used by FvwmScript-ScreenDump...im assuming anyone with
-# 	`use noxpm` will not want them.
-DEPEND="${RDEPEND}
-	>=sys-apps/sed-4
-	sys-devel/automake
-	sys-devel/autoconf
-	dev-util/pkgconfig"
+# XXX:	netpbm is used by FvwmScript-ScreenDump, worth a dependency?
+DEPEND="${RDEPEND} dev-util/pkgconfig"
+
+SFT=${WORKDIR}/FvwmTabs-v3.1
 
 src_unpack() {
 	unpack ${A}
 
-	gnuconfig_update
+	# this patch enables fast translucent menus in fvwm..yummy! this is a
+	# minor tweak of a patch posted to fvwm-user mailing list by Olivier
+	# Chapuis in <20030827135125.GA6370@snoopy.folie>.
+	cd ${S}; epatch ${FILESDIR}/fvwm-2.5.9-translucent-menus.diff.gz
 
-	# CFLAGS containing comma (eg -mfpmath=sse,387) will break this, so change it for !
-	sed -i 's#\x27s,xCFLAGSx,$(CFLAGS),\x27#\x27s!xCFLAGSx!$(CFLAGS)!\x27#' ${S}/utils/Makefile.am
+	# according to a post to fvwm-workers mailing list, Mikhael Goikhman
+	# planned on disabling these debug statements before the release, but
+	# never got around to it.
+	cd ${S}; epatch ${FILESDIR}/disable-debug-statements.diff
 
-	# Xft detection is totally b0rked if using pkg-config, this update from cvs.
-	cp ${FILESDIR}/acinclude.m4 ${S}/acinclude.m4
+	if use perl; then
+		# I'll supply a default icon for FvwmTabs, this removes the need for
+		# installing an iconset, this one comes from the fvwm_icons package.
+		cd ${SFT}
+		ebegin "	Setting default icon for FvwmTabs"
+			sed -i 's#happyMini.xpm#/usr/share/fvwm/mini-happy.xpm#g' \
+				FvwmTabs FvwmTabs.1 fvwmtabrc
+		eend $?
+	fi
+
+	# this patch adds an 'ShowOnlyIcons Never' option to FvwmIconMan.
+	# XXX: ShowNoIcons ever option added to official FvwmIconMan on 24 Jun 2004
+	# XXX: Remove this patch, and add ewarn about new Syntax.
+	cd ${S}; epatch ${FILESDIR}/fvwm-iconman.diff
+
+	# fix some issues reported since the 2.5.10 release.
+	# XXX: incvs
+	cd ${S}; epatch ${FILESDIR}/fvwm-2.5.10-post-release.diff
+
+	# build fails on alpha with certain options without this.
+	use alpha && append-flags -fPIC
+
+	# just in case anyone on mips want to test.
+	# XXX: incvs
+	use mips && epatch ${FILESDIR}/fvwm-2.5.10-mips-compat.diff
+
+	# fixing #51287, the fvwm-menu-xlock script is not compatible
+	# with the xlockmore implementation in portage.
+	epatch ${FILESDIR}/fvwm-menu-xlock-xlockmore-compat.diff
+
+	# XXX: incvs
+	cd ${S}; epatch ${FILESDIR}/fvwm-2.5.10-FvwmCommand.diff
+
+	# XXX: incvs
+	cd ${S}; epatch ${FILESDIR}/fvwm-2.5.10-Test-update.diff
+
+	# XXX: incvs
+	cd ${S}; epatch ${FILESDIR}/centerplacement-2.5.10.diff
+	cd ${S}; epatch ${FILESDIR}/iconfile-2.5.10.diff
+
+	# XXX: incvs
+	cd ${S}; epatch ${FILESDIR}/fvwm-2.5.10-fvwmbuttonshover.diff.gz
+
+	# XXX: incvs
+	# fix some 64bit cleanliness issues
+	cd ${S}; epatch ${FILESDIR}/fvwm-2.5.10-long-data-elements.diff
 }
 
 src_compile() {
-	local myconf="--libexecdir=/usr/lib --with-imagepath=/usr/include/X11/bitmaps:/usr/include/X11/pixmaps:/usr/share/icons/fvwm"
+	local myconf="--libexecdir=/usr/lib --with-imagepath=/usr/include/X11/bitmaps:/usr/include/X11/pixmaps:/usr/share/icons/fvwm --enable-package-subdirs"
 
 	# ImagePath should include /usr/share/icons/fvwm (x11-themes/fvwm_icons)
 	#
@@ -81,25 +125,22 @@ src_compile() {
 		fi
 	fi
 
-	# fvwm configure doesnt provide a way to disable gtk support if the
-	# required libraries are found, this hides them from the script.
-	# Print a message indicating the errors are normal.
+	# since fvwm-2.5.8 GTK support can be diabled with --disable-gtk, previously
+	# we had to hide the includes/libs during configure. this is still the case
+	# for GDK image suport _with_ gtk, unfortunately.
+	# FvwmGtk can be built as a gnome application, or a Gtk+ application.
 	if ! use gtk; then
-		einfo "ATTN: You can safely ignore any gtk related configure errors."
-		einfo "ATTN: You can safely ignore any imlib related configure errors."
-		myconf="${myconf} --with-gtk-prefix=${T} --with-imlib-prefix=${T}"
+		myconf="${myconf} --disable-gtk --without-gnome"
 	else
 		if ! use imlib; then
 			einfo "ATTN: You can safely ignore any imlib related configure errors."
 			myconf="${myconf} --with-imlib-prefix=${T}"
 		fi
-	fi
-
-	# link with the gnome libraries, for better integration with the gnome desktop.
-	if use gnome; then
-		myconf="${myconf} --with-gnome"
-	else
-		myconf="${myconf} --without-gnome"
+		if ! use gnome; then
+			myconf="${myconf} --without-gnome"
+		else
+			myconf="${myconf} --with-gnome"
+		fi
 	fi
 
 	# rplay is a cool, but little used way of playing sounds over a network
@@ -108,7 +149,7 @@ src_compile() {
 		myconf="${myconf} --without-rplay-library"
 	fi
 
-	# Install perl bindings for FvwmPerl.
+	# Install perl bindings.
 	if use perl; then
 		myconf="${myconf} --enable-perllib"
 	else
@@ -120,13 +161,6 @@ src_compile() {
 		myconf="${myconf} --enable-xinerama"
 	else
 		myconf="${myconf} --disable-xinerama"
-	fi
-
-	# multibyte character support, chinese/japanese/korean/etc.
-	if use cjk; then
-		myconf="${myconf} --enable-multibyte"
-	else
-		myconf="${myconf} --disable-multibyte"
 	fi
 
 	# bidirectional writing support, eg hebrew
@@ -143,9 +177,9 @@ src_compile() {
 
 	# native language support
 	if use nls; then
-		myconf="${myconf} --enable-nls"
+		myconf="${myconf} --enable-nls --enable-iconv"
 	else
-		myconf="${myconf} --disable-nls"
+		myconf="${myconf} --disable-nls --disable-iconv"
 	fi
 
 	# support for mouse gestures using libstroke (very very cool)
@@ -156,9 +190,10 @@ src_compile() {
 	# more verbosity for module developers/hackers/etc.
 	if use debug; then
 		myconf="${myconf} --enable-debug-msgs --enable-command-log"
+		append-flags -DCR_DETECT_MOTION_METHOD_DEBUG
 	fi
 
-	# Xft Anti Aliased text support (yummy eye candy)
+	# Xft Anti Aliased text support
 	if use truetype; then
 		myconf="${myconf} --enable-xft"
 	else
@@ -166,40 +201,21 @@ src_compile() {
 	fi
 
 	# disable xsm protocol (session management) support?
-	# `nosm` instead of `sm` as some people dont check USE flags
 	if use nosm; then
 		myconf="${myconf} --disable-sm"
 	else
 		myconf="${myconf} --enable-sm"
 	fi
 
-	# disable xpm support? (maybe you only use png in your themes, or just solid colour?)
-	# `noxpm` instead of `xpm`, as most people will want this.
+	# disable xpm support?
 	if use noxpm; then
 		myconf="${myconf} --without-xpm-library"
 	fi
 
-	# Xft detection is broken in this release, the fix is in cvs
-	# which ive installed here, rerun automake to sort the problem.
-	# This is only nescessary if `truetype` is required.
-	if use truetype; then
-		einfo "Fixing Xft detection, please wait..."
-		(	ebegin "	Running aclocal"
-			aclocal; eend $?
+	# set the local maintainer for fvwm-bug.
+	export FVWM_BUGADDR="taviso@gentoo.org"
 
-			ebegin "	Running autoheader"
-			autoheader; eend $?
-
-			ebegin "	Running automake"
-			automake --add-missing; eend $?
-
-			ebegin "	Running autoreconf"
-			autoreconf; eend $?	) 2>/dev/null
-		einfo "Fixed."
-	fi
-
-	# must specify PKG_CONFIG or Xft detection bombs.
-	econf ${myconf} PKG_CONFIG=/usr/bin/pkg-config || die
+	econf ${myconf} || die
 	emake || die
 }
 
@@ -217,9 +233,17 @@ src_install() {
 			einfo "Installing FvwmTabs module..."
 
 			exeinto /usr/lib/fvwm/${PV}/
-			doexe ${WORKDIR}/FvwmTabs
-			dodoc ${WORKDIR}/fvwmtabrc ${WORKDIR}/README.fvwmtabs
-			doman ${WORKDIR}/FvwmTabs.1
+			doexe ${SFT}/FvwmTabs
+
+			dodoc ${SFT}/fvwmtabrc ${SFT}/tab.zsh
+			doman ${SFT}FvwmTabs.1
+			dohtml ${SFT}/FvwmTabs.man.html
+
+			newdoc ${SFT}/README README.fvwmtabs
+
+			# install default drag and drop icon.
+			insinto /usr/share/fvwm
+			newins ${FILESDIR}/mini.happy.xpm mini-happy.xpm
 		else
 			# Remove the Tk bindings (requires perl-tk)
 			rm -f ${D}/usr/share/fvwm/perllib/FVWM/Module/Tk.pm
@@ -250,6 +274,13 @@ src_install() {
 		rm -rf ${D}/usr/bin/fvwm-perllib ${D}/usr/share/man/man1/fvwm-perllib.1
 	fi
 
+	# neat utility for testing fvwm behaviour on applications setting various
+	# hints, creates a simple black window with configurable hints set.
+	if use debug; then
+		dobin ${S}/tests/hints/hints_test
+		newdoc ${S}/tests/hints/README README.hints
+	fi
+
 	# fvwm-convert-2.6 is just a stub, contains no code - remove it for now.
 	# fvwm-convert-2.2 has a man page, but the script is no longer distributed.
 	rm -f ${D}/usr/bin/fvwm-convert-2.6 ${D}/usr/share/man/man1/fvwm-convert-2.6.1
@@ -268,6 +299,12 @@ src_install() {
 
 	dodoc utils/fvwm_make_directory_menu.sh  utils/fvwm_make_browse_menu.sh \
 	utils/quantize_pixmaps utils/xselection.c
+
+	dodoc ${FILESDIR}/README.transluceny.gz
+
+	# make sure FvwmGtk man page is installed
+	# XXX: Fixed in cvs
+	use gtk && doman ${S}/modules/FvwmGtk/FvwmGtk.1
 
 	# fix a couple of symlinks.
 	prepallman
