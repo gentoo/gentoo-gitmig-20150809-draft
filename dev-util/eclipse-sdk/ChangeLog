@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/eclipse-sdk
 # Copyright 2003-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.36 2004/06/07 15:52:06 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.37 2004/06/12 10:35:00 karltk Exp $
+
+  12 Jun 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  eclipse-sdk-3.0.0_rc1.ebuild: Added dep for libgnomeui, fixes #53690.
 
   07 Jun 2004; Ferris McCormick <fmccor@gentoo.org>
   eclipse-sdk-2.1.3-r3.ebuild:

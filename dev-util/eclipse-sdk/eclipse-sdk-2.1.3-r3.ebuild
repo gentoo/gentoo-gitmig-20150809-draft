@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.3-r3.ebuild,v 1.9 2004/06/07 15:52:06 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.3-r3.ebuild,v 1.10 2004/06/12 10:35:00 karltk Exp $
 
 inherit eutils
 
@@ -106,12 +106,12 @@ src_unpack() {
 	# Extra patching if the gtk+ installed is 2.4 or newer
 	# for users with the 2.3 series, they should upgrade, dunno which 2.3.x all this
 	#  stuff broke in anyway.
-	if pkg-config --atleast-version 2.4 gtk+-2.0 ; then
-		einfo "Applying gtk+-2.4 patches"
-		sed -r \
-			-e "s:#define GTK_DISABLE_DEPRECATED::g" \
-			-i swt.c
-	fi
+#	if pkg-config --atleast-version 2.4 gtk+-2.0 ; then
+#		einfo "Applying gtk+-2.4 patches"
+#		sed -r \
+#			-e "s:#define GTK_DISABLE_DEPRECATED::g" \
+#			-i swt.c
+#	fi
 
 	# Some fixups for the motif compilation
 	cd ${S}/"${motif_swt_src_dir}"
