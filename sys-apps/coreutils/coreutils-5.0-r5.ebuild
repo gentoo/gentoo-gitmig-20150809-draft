@@ -1,14 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r5.ebuild,v 1.1 2003/12/08 11:55:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r5.ebuild,v 1.2 2003/12/10 02:56:39 seemant Exp $
 
 inherit eutils
 
 IUSE="nls build static"
 
-PATCH_VER=1.8
+PATCH_VER=1.8.1
 
-S="${WORKDIR}/${P}"
+S=${WORKDIR}/${P}
 DESCRIPTION="Standard GNU file utilities (chmod, cp, dd, dir, ls...), text utilities (sort, tr, head, wc..), and shell utilities (whoami, who,...)"
 HOMEPAGE="http://www.gnu.org/software/coreutils/"
 SRC_URI="http://ftp.gnu.org/pub/gnu/coreutils/${P}.tar.bz2
@@ -17,7 +17,7 @@ SRC_URI="http://ftp.gnu.org/pub/gnu/coreutils/${P}.tar.bz2
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~amd64 ~ppc sparc alpha hppa ~arm mips"
+KEYWORDS="x86 ~ppc sparc alpha hppa arm mips ~amd64"
 
 DEPEND=">=sys-apps/portage-2.0.49
 	sys-devel/automake
@@ -48,6 +48,10 @@ src_unpack() {
 	then
 		epatch ${PATCHDIR}/${PN}-gentoo-uname.patch
 	fi
+
+	# Patch to remove installation of man pages for which the  man-pages 
+	# package provides superior versions
+	epatch ${PATCHDIR}/${PN}-manpages.patch
 }
 
 src_compile() {

@@ -1,14 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r6.ebuild,v 1.1 2003/12/08 11:55:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r6.ebuild,v 1.2 2003/12/10 02:56:39 seemant Exp $
 
 inherit eutils
 
 IUSE="nls build acl static"
 
-PATCH_VER=1.9
+PATCH_VER=1.9.1
 
-S="${WORKDIR}/${P}"
+S=${WORKDIR}/${P}
 DESCRIPTION="Standard GNU file utilities (chmod, cp, dd, dir, ls...), text utilities (sort, tr, head, wc..), and shell utilities (whoami, who,...)"
 HOMEPAGE="http://www.gnu.org/software/coreutils/"
 SRC_URI="http://ftp.gnu.org/pub/gnu/coreutils/${P}.tar.bz2
@@ -17,7 +17,7 @@ SRC_URI="http://ftp.gnu.org/pub/gnu/coreutils/${P}.tar.bz2
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64 ppc ~sparc alpha hppa ~arm ~mips ia64"
+KEYWORDS="~x86 ppc ~sparc alpha hppa ~arm ~mips ~amd64 ia64"
 
 DEPEND=">=sys-apps/portage-2.0.49
 	sys-devel/automake
@@ -47,7 +47,7 @@ src_unpack() {
 		if [ -z "`use nls`" ] ; then
 			mv ${PATCHDIR}/acl/004* ${PATCHDIR}/excluded
 		fi
-		mv ${PATCHDIR}/{001*,002*} ${PATCHDIR}/excluded
+		mv ${PATCHDIR}/{001*,002*,004*} ${PATCHDIR}/excluded
 		EPATCH_SUFFIX="patch" epatch ${PATCHDIR}/acl
 	fi
 

@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0.91-r2.ebuild,v 1.4 2003/12/09 10:05:07 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0.91-r2.ebuild,v 1.5 2003/12/10 02:56:39 seemant Exp $
 
 inherit eutils flag-o-matic
 
 IUSE="nls build acl selinux static"
 
-PATCH_VER="1.4"
+PATCH_VER=1.4.1
 PATCHDIR=${WORKDIR}/patch
 
 S=${WORKDIR}/${P}
@@ -27,7 +27,7 @@ DEPEND="virtual/glibc
 	sys-devel/autoconf
 	sys-apps/help2man
 	nls? ( sys-devel/gettext )
-	acl? ( sys-apps/acl )
+	acl? ( !hppa? ( sys-apps/acl ) )
 	selinux? ( sys-libs/libselinux )"
 
 RDEPEND="selinux? ( sys-libs/libselinux )"
@@ -66,7 +66,7 @@ src_unpack() {
 		# can just verify please ...
 		mv ${PATCHDIR}/acl/006* ${PATCHDIR}/excluded
 
-		use selinux || mv ${PATCHDIR}/{001*,002*} ${PATCHDIR}/excluded
+		use selinux || mv ${PATCHDIR}/{001*,002*,004*} ${PATCHDIR}/excluded
 		use selinux || EPATCH_SUFFIX="patch" epatch ${PATCHDIR}/acl
 	fi
 
