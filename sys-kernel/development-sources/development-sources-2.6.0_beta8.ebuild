@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.0_beta8.ebuild,v 1.1 2003/10/18 19:13:56 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.0_beta8.ebuild,v 1.2 2003/10/18 21:18:51 brad_mssw Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 OKV=${PV/_beta/-test}
@@ -23,8 +23,8 @@ PATCH_URI=""
 #PATCH_URI="http://www.kernel.org/pub/linux/kernel/v2.6/snapshots/patch-${PKV}.bz2"
 
 
-GPATCH_URI="http://gentoo.oregonstate.edu/distfiles/genpatches-${PV}-${GPV}.tar.bz2"
-#GPATCH_URI="http://dev.gentoo.org/~brad_mssw/kernel_patches/2.6.0/genpatches-${PV}-${GPV}.tar.bz2"
+#GPATCH_URI="http://gentoo.oregonstate.edu/distfiles/genpatches-${PV}-${GPV}.tar.bz2"
+GPATCH_URI="http://dev.gentoo.org/~brad_mssw/kernel_patches/2.6.0/genpatches-${PV}-${GPV}.tar.bz2"
 SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${OKV}.tar.bz2 ${PATCH_URI} ${GPATCH_URI}"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 LICENSE="GPL-2"
