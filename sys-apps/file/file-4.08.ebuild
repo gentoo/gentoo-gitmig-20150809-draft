@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.08.ebuild,v 1.2 2004/03/30 02:51:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/file-4.08.ebuild,v 1.3 2004/03/30 02:52:40 vapier Exp $
 
 inherit flag-o-matic gnuconfig
 
@@ -35,11 +35,7 @@ src_compile() {
 	# file command segfaults on hppa -  reported by gustavo@zacarias.com.ar
 	[ ${ARCH} = "hppa" ] && filter-flags "-mschedule=8000"
 
-	./configure \
-		--prefix=/usr \
-		--mandir=/usr/share/man \
-		--datadir=/usr/share/misc \
-		--host=${CHOST} || die
+	econf --datadir=/usr/share/misc || die
 
 	# Buggy Makefiles.  This fixes bug 31356
 	emake -j1 || die "emake failed"
