@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha04.ebuild,v 1.1 2003/03/03 18:38:28 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha04.ebuild,v 1.2 2003/03/05 02:49:17 agenkin Exp $
 
 inherit eutils
 
@@ -13,6 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 
 DEPEND="virtual/glibc"
+PROVIDE="virtual/cdrtools"
 
 S="${WORKDIR}/${PN}-2.01"
 
