@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/avr-libc-1.2.3.ebuild,v 1.1 2005/03/16 00:05:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/avr-libc/avr-libc-1.2.3.ebuild,v 1.2 2005/03/19 22:28:56 vapier Exp $
 
 DESCRIPTION="Libc for the AVR microcontroller architecture"
 HOMEPAGE="http://www.nongnu.org/avr-libc/"
@@ -11,8 +11,10 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="nls"
 
-DEPEND="sys-devel/crossdev"
-RDEPEND=""
+DEPEND=">=sys-devel/crossdev-0.9.1"
+[[ ${CATEGORY/cross-} != ${CATEGORY} ]] \
+	&& RDEPEND="!dev-embedded/avr-libc" \
+	|| RDEPEND=""
 
 src_compile() {
 	mkdir obj-avr
