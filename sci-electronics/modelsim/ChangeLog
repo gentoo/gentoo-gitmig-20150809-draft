@@ -1,0 +1,17 @@
+# ChangeLog for app-sci/modelsim
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/modelsim/ChangeLog,v 1.1 2004/12/27 20:01:41 ribosome Exp $
+
+*modelsim-5.7d (27 Dec 2004)
+
+  27 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +modelsim-5.7d.ebuild:
+  Moved from app-sci/modelsim to sci-electronics/modelsim.
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> modelsim-5.7d.ebuild:
+  Adding IUSE
+
+*modelsim-5.7d (09 Jul 2003)
+
+  09 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Chris Bainbridge <chrb@dcs.ed.ac.uk> #8312.
