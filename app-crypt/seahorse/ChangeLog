@@ -1,8 +1,11 @@
 # ChangeLog for app-crypt/seahorse
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.8 2003/03/13 19:13:53 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/ChangeLog,v 1.9 2003/04/12 12:40:30 liquidx Exp $
 
 *seahorse-0.6.2 (12 Mar 2003)
+
+  12 Apr 2003; Alastair Tse <liquidx@gentoo.org> seahorse-0.6.2.ebuild:
+  cleanups and IUSE
 
   12 Mar 2003; Brad Cowan <bcowan@gentoo.org> seahorse-0.6.2.ebuild,
   files/digest-seahorse-0.6.2 :

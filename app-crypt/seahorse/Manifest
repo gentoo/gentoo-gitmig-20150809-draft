@@ -1,0 +1,7 @@
+MD5 cb6eb0f5493aa4e0491f7722b67eba61 ChangeLog 1407
+MD5 dd2e182b7a54b106fb48323c17f061e5 seahorse-0.5.0.ebuild 753
+MD5 a4ba0500f609bbf4882c55144862e869 seahorse-0.6.1.ebuild 717
+MD5 8c162e563c79e0d26302544e8fb515d1 seahorse-0.6.2.ebuild 805
+MD5 2ac72d441df8951af562ac49299cd059 files/digest-seahorse-0.5.0 66
+MD5 bf6fdc8ab47d20abb4390d5be7f9aeef files/digest-seahorse-0.6.1 66
+MD5 1ab30e715e58ad23bf11b5cc84298598 files/digest-seahorse-0.6.2 66

@@ -1,7 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.6.2.ebuild,v 1.2 2003/03/28 12:44:03 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/seahorse/seahorse-0.6.2.ebuild,v 1.3 2003/04/12 12:40:30 liquidx Exp $
 
+IUSE=""
 DESCRIPTION="gnome front end to gnupg"
 SRC_URI="mirror://sourceforge/seahorse/${P}.tar.gz"
 HOMEPAGE="http://seahorse.sourceforge.net/"
@@ -18,11 +19,11 @@ DEPEND="virtual/x11
 	>=app-text/scrollkeeper-0.3*"
 
 src_compile() {                           
-	econf
-	emake || die
+	econf || die "configure failed"
+	emake || die "parallel make failed"
 }
 
 src_install() {
-	einstall
+	einstall || die "install failed"
 	dodoc AUTHORS COPYING* ChangeLog NEWS README TODO THANKS
 }
