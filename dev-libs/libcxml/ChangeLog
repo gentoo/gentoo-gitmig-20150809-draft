@@ -1,0 +1,7 @@
+# ChangeLog for dev-libs/libcxml
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libcxml/ChangeLog,v 1.1 2003/05/25 18:09:57 taviso Exp $
+
+  25 May 2003; Tavis Ormandy <taviso@gentoo.org> :
+  QA fixes
+
