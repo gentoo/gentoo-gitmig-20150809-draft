@@ -1,6 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 4661f6b376643d13bb3ab04a51653ee5 gentoo-sources-2.6.11-r2.ebuild 1609
 MD5 fdbf1f1944b017fafc0bb0a9e44faf8c gentoo-sources-2.4.25-r17.ebuild 2002
 MD5 565e8c7d3f41f233f953acfffdbc0092 gentoo-sources-2.6.11-r4.ebuild 1615
@@ -16,8 +13,9 @@ MD5 bdf0d3f70cce71adb850ed49b19ea179 gentoo-sources-2.6.11-r3.ebuild 1609
 MD5 1ec0f7ec45dce6f53d70a7df0fabe7a5 gentoo-sources-2.6.1-r2.ebuild 2235
 MD5 386b6b1084b1c4cabfad87fc8b603114 gentoo-sources-2.6.10-r6.ebuild 1607
 MD5 2d2150ca2b1b3db3d469a5a2356161fb gentoo-sources-2.6.9-r9.ebuild 1625
-MD5 542977e1faad0fb2b942a116f509af4f ChangeLog 33961
+MD5 17e0f8ee883e79149d47508d7c36ecee ChangeLog 34131
 MD5 91ea2908f17a4069774ffce01264df0c metadata.xml 354
+MD5 e21e53a1f438d843fc4a5d31267fd509 gentoo-sources-2.6.10-r8.ebuild 1595
 MD5 29e531cdd3f2effce5e31a1f2afb5b5d files/gentoo-sources-2.4.28.brk-locked.patch 8912
 MD5 147fec50180ad91b6260fc7201dcb90f files/gentoo-sources-2.4.CAN-2004-0010.patch 6050
 MD5 6d00ca4e483a30f88621fa7c68943e22 files/digest-gentoo-sources-2.6.11 223
@@ -94,16 +92,10 @@ MD5 b09e0ad41a8658a3e1309e5ab3ad652b files/gentoo-sources-2.4.28.77181.patch 295
 MD5 c27699e9d62f7d46213bd51f87636163 files/gentoo-sources-2.4.22-vma.patch 8143
 MD5 03fa0238a07d103d2ccb9c8b01f88326 files/digest-gentoo-sources-2.6.10-r6 224
 MD5 ee806dc7db51b79562ec4b9b7b84023a files/digest-gentoo-sources-2.6.10-r7 224
+MD5 6beb408aa7202cc7dd24745f9c77d13f files/digest-gentoo-sources-2.6.10-r8 224
 MD5 3b50e055f15e762e55bf8fc32ce0b092 files/digest-gentoo-sources-2.6.11-r1 224
 MD5 001315a2018b4e07b85fc6da0e3fd48f files/digest-gentoo-sources-2.6.11-r2 224
 MD5 fea94b05c67c417ee80eaf93d496fd7c files/digest-gentoo-sources-2.6.11-r3 224
 MD5 8ce5f3dffd54cdb2f0966369645cab8a files/digest-gentoo-sources-2.6.11-r4 224
 MD5 0694ed26023de7664f6d3658f04c4bbe files/digest-gentoo-sources-2.6.7-r19 221
 MD5 8da78927316be1a23e92d44fe314756e files/digest-gentoo-sources-2.6.9-r14 221
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCObNviJcSIUGNthERAgYMAKCSanbwPAqSObliIUF4CPdYRJiVEQCfaTEg
-I318kog6A922fkDc7GaFsw4=
-=i4oq
------END PGP SIGNATURE-----
