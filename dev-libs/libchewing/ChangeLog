@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/libchewing
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libchewing/ChangeLog,v 1.1 2004/06/21 06:49:27 usata Exp $
+
+*libchewing-0.2.1 (21 Jun 2004)
+
+  21 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> +libchewing-0.2.1.ebuild:
+  Initial import. Ebuild submitted by Benny Chuang <bennyc@gentoo.org>,
+  see bug #52133
+
