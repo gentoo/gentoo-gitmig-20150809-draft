@@ -1,10 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d08e93e6ab6eaab65321e6056579adc4 ChangeLog 1039
+MD5 38d6913df745ab2a513cda0400c8ec5c ChangeLog 1212
 MD5 562b81b31b7994b037940076f0606015 gtkradiant-1.3.12.ebuild 1308
 MD5 9c392282a19df0c12b6a15150c130f81 metadata.xml 538
 MD5 7c21c30c192d2409000e4fe03a93839d gtkradiant-1.4.0.ebuild 1642
+MD5 7a202d10287ad715e9c1b9e072e31f78 gtkradiant-1.5.0_pre20041205.ebuild 977
 MD5 031d93d17697b6512404b8a7e3a5006e files/digest-gtkradiant-1.3.12 71
 MD5 3633c9d3f6ed52242495709273e66209 files/et.game 328
 MD5 0dce3f3cf6514f0ba360faebf7f0329d files/q2.game 315
@@ -13,10 +14,11 @@ MD5 e87d17f38772a874e6484462e0ce092e files/q3map2 136
 MD5 78012ad36011d8cf41354d509bcf5faa files/radiant 137
 MD5 2a27da1131c5916209d6c9381c06d182 files/wolf.game 318
 MD5 68a371cbed93f7eaa0ea5d87c2c14d81 files/digest-gtkradiant-1.4.0 70
+MD5 d05f4e65ce265d106f0112ea0765627b files/digest-gtkradiant-1.5.0_pre20041205 82
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFA4YUSHTu7gpaalycRAsckAJ9k+zJxLcKD2gNaVeqlX3pRrYeISACg89bb
-DOVIe6qJL1EGWoKZ1t4ZSxQ=
-=y0Db
+iD8DBQFBt9YgroRuSHgZdywRAgeIAJ9sHoYhrL5q7w0plpLQtYEw3Q1EygCfXmCF
+TjuyHI0jFBKZqYEKqxqDTk0=
+=3wui
 -----END PGP SIGNATURE-----
