@@ -1,0 +1,24 @@
+diff -urN gdm-2.4.4.5.orig/configure gdm-2.4.4.5/configure
+--- gdm-2.4.4.5.orig/configure	2003-10-17 12:48:47.000000000 -0500
++++ gdm-2.4.4.5/configure	2004-02-06 11:47:34.487419640 -0600
+@@ -25222,7 +25222,7 @@
+ #define HAVE_SELINUX 1
+ _ACEOF
+ 
+-	EXTRA_DAEMON_LIBS="$EXTRA_DAEMON_LIBS -lselinux -lattr"
++	EXTRA_DAEMON_LIBS="$EXTRA_DAEMON_LIBS -lselinux"
+ fi
+ 
+ #
+diff -urN gdm-2.4.4.5.orig/configure.in gdm-2.4.4.5/configure.in
+--- gdm-2.4.4.5.orig/configure.in	2003-10-17 12:48:29.000000000 -0500
++++ gdm-2.4.4.5/configure.in	2004-02-06 11:47:02.021488283 -0600
+@@ -463,7 +463,7 @@
+ 	AC_CHECK_LIB(selinux,setexeccon,/bin/true)
+ 	AC_CHECK_LIB(selinux,is_selinux_enabled,/bin/true)
+ 	AC_DEFINE(HAVE_SELINUX)
+-	EXTRA_DAEMON_LIBS="$EXTRA_DAEMON_LIBS -lselinux -lattr"
++	EXTRA_DAEMON_LIBS="$EXTRA_DAEMON_LIBS -lselinux"
+ fi
+ 
+ #

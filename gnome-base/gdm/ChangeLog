@@ -1,6 +1,14 @@
 # ChangeLog for gnome-base/gdm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.50 2004/02/10 06:14:59 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/ChangeLog,v 1.51 2004/02/17 23:10:44 foser Exp $
+
+*gdm-2.4.4.7 (17 Feb 2004)
+
+  17 Feb 2004; foser <foser@gentoo.org> gdm-2.4.4.7.ebuild :
+  Finally put this update in
+  Fixed some small issues after cleaning 2.4.4 triggered by the diff in #40711
+  Added selinux stuff as requested & proposed by pebenito in #41022
+  Added a new default gentoo theme : gentoo-cow
 
   10 Feb 2004; Bartosch Pixa <darkspecter@gentoo.org> gdm-2.4.1.7-r1.ebuild:
   set ppc in keywords
