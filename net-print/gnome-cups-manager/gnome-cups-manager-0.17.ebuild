@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/gnome-cups-manager-0.17.ebuild,v 1.19 2004/07/15 03:54:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gnome-cups-manager/gnome-cups-manager-0.17.ebuild,v 1.20 2004/09/22 12:00:19 lanius Exp $
 
 inherit gnome2 eutils
 
@@ -24,11 +24,11 @@ DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.20"
 
 src_unpack() {
-
 	unpack ${A}
-
 	cd ${S}
+
 	# Fix gtk+-2.4 deprecation issues (#45259)
 	epatch ${FILESDIR}/${P}-fix_gtk24_deprecation.patch
-
+	# gcc 3.4 fix
+	epatch ${FILESDIR}/${PN}-0.18-paren.patch
 }
