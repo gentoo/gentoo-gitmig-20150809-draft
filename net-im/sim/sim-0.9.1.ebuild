@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.1.ebuild,v 1.9 2004/01/30 06:56:57 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/sim/sim-0.9.1.ebuild,v 1.10 2004/01/30 08:11:24 mr_bones_ Exp $
 
 if [ $( use kde ) ]; then
 	inherit kde-base eutils
@@ -21,7 +21,7 @@ SLOT="0"
 IUSE="ssl kde"
 
 RDEPEND="ssl? ( dev-libs/openssl )"
-DEPEND="$RDEPEND 
+DEPEND="$RDEPEND
 	sys-devel/flex
 	sys-devel/automake
 	>=sys-devel/autoconf-2.58"
