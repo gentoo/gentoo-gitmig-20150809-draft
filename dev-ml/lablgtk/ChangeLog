@@ -1,6 +1,13 @@
 # ChangeLog for dev-ml/lablgtk
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.7 2003/12/26 14:09:00 weeve Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/lablgtk/ChangeLog,v 1.8 2004/01/22 22:27:38 mattam Exp $
+
+*lablgtk-2.2.0 (22 Jan 2004)
+
+  22 Jan 2004; Matthieu Sozeau <mattam@gentoo.org> lablgtk-1.2.3.ebuild,
+  lablgtk-2.2.0.ebuild, metadata.xml:
+  New version for gtk+2, incompatible with lablgtk 1 but the two can coexist
+    peacefully. Also added metadata file.
 
   26 Dec 2003; Jason Wever <weeve@gentoo.org> lablgtk-1.2.5.ebuild:
   Marked stable on sparc to fix broken net-misc/unison dependencies.
