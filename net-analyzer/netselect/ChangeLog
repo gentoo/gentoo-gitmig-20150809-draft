@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/netselect
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/ChangeLog,v 1.13 2004/06/30 23:12:31 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netselect/ChangeLog,v 1.14 2004/07/01 20:55:22 mr_bones_ Exp $
+
+  01 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  netselect-0.3-r1.ebuild:
+  IUSE; sed in src_unpack (bug #55755); use emake; error check; tidy
 
 *netselect-0.3-r1 (01 Jul 2004)
 
