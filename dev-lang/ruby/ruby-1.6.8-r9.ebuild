@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.6.8-r8.ebuild,v 1.2 2004/04/23 18:00:18 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.6.8-r9.ebuild,v 1.1 2004/04/23 18:00:18 usata Exp $
 
 IUSE="cjk"
 
-ONIG_DATE="20040316"
+ONIGURUMA="onigd2_2_6"
 SNAP_DATE="20031015"
 
 inherit flag-o-matic alternatives eutils
@@ -14,7 +14,7 @@ DESCRIPTION="An object-oriented scripting language"
 HOMEPAGE="http://www.ruby-lang.org/"
 SRC_URI="mirror://ruby/${PV%.*}/${P/_pre/-preview}.tar.gz
 	mirror://gentoo/${P}-${SNAP_DATE}.diff.gz
-	cjk? ( ftp://ftp.ruby-lang.org/pub/ruby/contrib/onigd${ONIG_DATE}.tar.gz )"
+	cjk? ( ftp://ftp.ruby-lang.org/pub/ruby/contrib/${ONIGURUMA}.tar.gz )"
 
 LICENSE="Ruby"
 SLOT="1.6"
@@ -35,7 +35,7 @@ src_unpack() {
 	use amd64 && epatch ${FILESDIR}/${P}-fix-x86_64.patch
 
 	if [ -n "`use cjk`" ] ; then
-		einfo "Applying oniguruma-${ONIG_DATE}"
+		einfo "Applying ${ONIGURUMA}"
 		cd ${WORKDIR}/oniguruma
 		econf --with-rubydir=${S}
 		make ${SLOT/./}

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.1-r3.ebuild,v 1.4 2004/04/22 13:57:03 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.1-r3.ebuild,v 1.5 2004/04/23 18:00:18 usata Exp $
 
 IUSE="socks5 tcltk cjk"
 
@@ -87,21 +87,21 @@ src_install() {
 pkg_postinst() {
 	ewarn
 	ewarn "Warning: Vim won't work if you've just updated ruby from"
-	ewarn "1.6.8 to 1.8.0 due to the library version change."
+	ewarn "1.6.x to 1.8.x due to the library version change."
 	ewarn "In that case, you will need to remerge vim."
 	ewarn
 
-	if [ ! -e "$(readlink /usr/bin/ruby)" ] ; then
-		/usr/sbin/ruby-config ruby${SLOT/./}
+	if [ ! -n "$(readlink ${ROOT}usr/bin/ruby)" ] ; then
+		${ROOT}usr/sbin/ruby-config ruby${SLOT/./}
 	fi
 	einfo
-	einfo "You can change the default ruby interpreter by /usr/sbin/ruby-config"
+	einfo "You can change the default ruby interpreter by ${ROOT}usr/sbin/ruby-config"
 	einfo
 }
 
 pkg_postrm() {
 
-	if [ ! -e "$(readlink /usr/bin/ruby)" ] ; then
-		/usr/sbin/ruby-config ruby${SLOT/./}
+	if [ ! -n "$(readlink ${ROOT}usr/bin/ruby)" ] ; then
+		${ROOT}usr/sbin/ruby-config ruby${SLOT/./}
 	fi
 }
