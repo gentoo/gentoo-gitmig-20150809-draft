@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 32a3bfd91cc616dc4a50baf7fb107c7b tic98-1.01-r1.ebuild 885
-MD5 ea29b649c56723cdcb113d0c8cc8ba68 tic98-1.01.ebuild 882
 MD5 9a0886c7eace7257574b8ac51c479cd2 ChangeLog 718
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 b2419a7092da155e7165fec26d606e07 files/digest-tic98-1.01-r1 62
+MD5 50c133ed74b40991ea34f080580d9578 tic98-1.01-r1.ebuild 710
+MD5 ea29b649c56723cdcb113d0c8cc8ba68 tic98-1.01.ebuild 882
 MD5 b2419a7092da155e7165fec26d606e07 files/digest-tic98-1.01 62
-MD5 2deb186a272185cf5454932fb730c77b files/tic98.diff 2480
+MD5 b2419a7092da155e7165fec26d606e07 files/digest-tic98-1.01-r1 62
 MD5 c7a34ada9751cb8a4ed07f73959c881a files/tic98-1.01-gentoo.diff 2153
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCKbXgI1lqEGTUzyQRAoA5AJwNxHzJGk6cTVrpGltyBmQM7AAhFACg3Vk+
-x+7vW3YoYEw88mGmm2RxAD0=
-=306N
------END PGP SIGNATURE-----
+MD5 2deb186a272185cf5454932fb730c77b files/tic98.diff 2480

@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/tic98/tic98-1.01-r1.ebuild,v 1.1 2005/03/05 00:48:58 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/tic98/tic98-1.01-r1.ebuild,v 1.2 2005/03/09 00:16:38 vapier Exp $
 
 inherit eutils
 
-DESCRIPTION="tic98 is a compressor for black-and-white images, in particular scanned documents. It gets very good compression, better than AT&T's DjVu system.  tic98 also includes ppmd text compression (ppmd) and number compression (b_gamma_enc)"
+DESCRIPTION="compressor for black-and-white images, in particular scanned documents"
 HOMEPAGE="http://www.cs.waikato.ac.nz/~singlis/"
 SRC_URI="http://www.cs.waikato.ac.nz/~singlis/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 amd64"
+KEYWORDS="amd64 x86"
 IUSE=""
 
 DEPEND=""
@@ -25,7 +25,6 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr
 	dodir /usr/bin
 	make BIN=${D}usr/bin install || die
 }
