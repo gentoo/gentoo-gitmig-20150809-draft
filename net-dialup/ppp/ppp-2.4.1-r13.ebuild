@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r13.ebuild,v 1.7 2003/09/26 05:57:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.1-r13.ebuild,v 1.8 2003/12/05 20:23:14 lanius Exp $
 
 S=${WORKDIR}/${P}.pppoe4
 DESCRIPTION="Point-to-point protocol - patched for pppoe"
@@ -81,9 +81,9 @@ src_install() {
 	done
 
 	chmod u+s-w ${D}/usr/sbin/pppd
-	chown root.dialout ${D}/usr/sbin/pppd
-	chown root.dialout ${D}/usr/sbin/pppdump
-	chown root.dialout ${D}/usr/sbin/pppstats
+	chown root:dialout ${D}/usr/sbin/pppd
+	chown root:dialout ${D}/usr/sbin/pppdump
+	chown root:dialout ${D}/usr/sbin/pppstats
 
 	dodir /etc/ppp/peers
 	insinto /etc/ppp
