@@ -1,6 +1,6 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.47 2002/12/31 18:41:47 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.48 2003/01/31 21:24:09 rphillips Exp $
 
   04 Dec 2002: Michael Cummings <mcummings@gentoo.org>
   postgresql-7.3.ebuild: 
@@ -8,6 +8,9 @@
   Added sparc64 keyword - installs and runs just fine
 
 *postgresql-7.3.1 (31 Dec 2002)
+
+  31 Jan 2003; Ryan Phillips <rphillips@gentoo.org> postgresql-7.3.1.ebuild :
+  Changed java dep to be sun-jdk for compatibility
 
   31 Dec 2002; Ryan Phillips <rphillips@gentoo.org> postgresql-7.3.1.ebuild :
   Version bump.. Masked for testing.
