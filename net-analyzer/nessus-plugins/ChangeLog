@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/nessus-plugins
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/ChangeLog,v 1.27 2004/07/23 10:00:39 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/ChangeLog,v 1.28 2004/07/24 02:39:55 weeve Exp $
+
+  23 Jul 2004; Jason Wever <weeve@gentoo.org> nessus-plugins-2.0.12.ebuild:
+  Stable on sparc wrt security bug #58014.
 
 *nessus-plugins-2.0.12 (23 Jul 2004)
 
