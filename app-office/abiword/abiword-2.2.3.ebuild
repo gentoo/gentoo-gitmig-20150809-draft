@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.2.2.ebuild,v 1.3 2005/01/18 15:38:33 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.2.3.ebuild,v 1.1 2005/01/18 15:38:33 foser Exp $
 
 inherit eutils fdo-mime
 
-IUSE="gnome jpeg spell xml2"
+IUSE="gnome jpeg spell xml2 debug"
 
 S_P=${S}/${PN}-plugins
 S=${WORKDIR}/${P}/abi
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.abisource.com"
 
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
-KEYWORDS="x86 ~sparc ~alpha ~ppc ~amd64 ~hppa ~ppc64"
+KEYWORDS="~x86 ~sparc ~alpha ~ppc ~amd64 ~hppa ~ppc64"
 LICENSE="GPL-2"
 SLOT="2"
 
@@ -52,7 +52,7 @@ src_compile() {
 		`use_enable gnome gucharmap` \
 		`use_with xml2 libxml2` \
 		`use_enable spell enchant` \
-		--disable-debug \
+		`use_enable debug` \
 		--enable-bidi \
 		--enable-threads \
 		--without-ImageMagick \
@@ -66,7 +66,7 @@ src_compile() {
 	cd ${S_P}
 
 	econf \
-		--disable-debug \
+		`use_enable debug` \
 		--enable-all \
 		--with-abiword=${S} \
 		--without-ImageMagick || die
@@ -102,5 +102,3 @@ pkg_postinst() {
 	fdo-mime_desktop_database_update
 
 }
-
-USE_DESTDIR="1"
