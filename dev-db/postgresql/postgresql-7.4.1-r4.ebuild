@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.1-r4.ebuild,v 1.6 2004/04/06 02:59:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.1-r4.ebuild,v 1.7 2004/05/01 04:16:50 nakano Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -191,7 +191,7 @@ pkg_postinst() {
 	einfo "ebuild /var/db/pkg/dev-db/${PF}/${PF}.ebuild config"
 	einfo "to setup the initial database environment."
 	einfo ""
-	einfo "Make sure the postgres user in /etc/passwd has an account setup with /bin/bash as the shell, or /bin/true"
+	einfo "Make sure the postgres user in /etc/passwd has an account setup with /bin/bash as the shell"
 	if use pg-hier; then
 		ewarn ""
 		ewarn "REQUIRED!! After installing patched PostgreSQL by pg-hier"
