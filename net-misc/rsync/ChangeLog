@@ -1,7 +1,9 @@
 # ChangeLog for net-misc/rsync
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.28 2003/07/06 09:12:27 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.29 2003/07/23 16:07:39 wwoods Exp $
 
+  23 Jul 2003; Will Woods <wwoods@gentoo.org> rsync-2.5.6-r2.ebuild:
+  Marked stable for alpha
 
 *rsync-2.5.6-r2 (23 May 2003)
 
