@@ -1,9 +1,0 @@
-# ChangeLog for app-pda/unshield
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/unshield/ChangeLog,v 1.1 2003/09/22 14:05:43 abhishek Exp $
-
-*unshield-0.2 (22 Sep 2003)
-
-  22 Sep 2003; Abhishek Amit <abhishek@gentoo.org> unshield-0.2.ebuild:
-  Initial import
-
