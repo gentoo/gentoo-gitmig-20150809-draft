@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/pxes-0.6-r4.ebuild,v 1.5 2003/10/18 12:59:07 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/pxes-0.6-r4.ebuild,v 1.6 2003/11/05 15:24:25 wolf31o2 Exp $
 
 IUSE="ltsp"
 DESCRIPTION="PXES is a package for building thin clients using multiple types of clients"
@@ -15,9 +15,11 @@ SLOT="0"
 LICENSE="GPL-2"
 DEPEND=">=dev-lang/perl-5.8.0-r12
 	ltsp? >=net-misc/ltsp-core-3.0.9-r1"
+
 RDEPEND="${DEPEND}
 	dev-perl/gtk-perl
-	>=dev-perl/glade-perl-0.61"
+	>=dev-perl/glade-perl-0.61
+	cdr? app-cdr/cdrtools"
 
 S=${WORKDIR}/${P}
 RESTRICT="nouserpriv"
@@ -40,8 +42,8 @@ src_compile() {
 
 src_install() {
 	dodir ${dir}
-	cp -r ${S}/stock ${Ddir}
-	cp -r ${S}/tftpboot ${D}
+	cp -ar ${S}/stock ${Ddir}
+	cp -ar ${S}/tftpboot ${D}
 	dodoc Documentation/ChangeLog
 	dohtml Documentation/html/{index,pxe,readme,screenshots}.html,howto/{configuring_ICA,customizing_kernel_and_modules,gdm,xfs,ms_only_environment/ms_only_environment}.html
 	exeinto ${dir}
