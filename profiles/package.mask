@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3179 2004/09/23 18:35:54 pauldv Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3180 2004/09/23 19:26:57 karltk Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,10 @@
 ##
 ##   End example
 ##
+
+# Karl Trygve Kalleberg <karltk@gentoo.org> (23 Sep 2004)
+# upstream is unstable
+>=dev-util/eclipse-sdk-3.1_pre
 
 # Ned Ludd <solar@gentoo.org> (19 Sep 2004)
 # fatal error: input stack limit exceeded (probable infinite loop)
