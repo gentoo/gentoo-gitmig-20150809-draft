@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc4-r1.ebuild,v 1.16 2004/06/29 19:20:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc4-r1.ebuild,v 1.17 2004/06/29 19:24:34 vapier Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -82,6 +82,7 @@ src_compile() {
 	filter-flags -fstack-protector -fPIC
 	filter-flags -fforce-addr
 	filter-flags -momit-leaf-frame-pointer #46339
+	filter-flags -funroll-all-loops #55420
 	filter-flags -fno-unit-at-a-time
 	[ "`gcc-fullversion`" == "3.4.0" ] && append-flags -fno-web #49509
 

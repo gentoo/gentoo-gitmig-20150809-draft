@@ -6,9 +6,9 @@ MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
 MD5 3d849500b17b5ad075102cf70d75b7c4 xine-lib-0.9.13-r3.ebuild 3354
 MD5 c639cbd78aac77ed3cff247df68d2608 xine-lib-1_rc2.ebuild 3934
 MD5 21f16ff9e27523f78078b77e1bd41c54 xine-lib-1_rc3-r1.ebuild 4042
-MD5 e27462c202ed742fc5e3eabc05295127 xine-lib-1_rc4-r1.ebuild 4816
+MD5 d04fab9ab3265d2a8a56055388bc53a5 xine-lib-1_rc4-r1.ebuild 4856
 MD5 342f5acc8a2e99672e90f384dc6abf8e xine-lib-1_rc4.ebuild 4462
-MD5 e32947e122d9fc05e9af48ae1638ba38 xine-lib-1_rc5-r2.ebuild 4821
+MD5 bea29835aabcc3a26c3ea37ea6c43e6e xine-lib-1_rc5-r2.ebuild 4861
 MD5 f1570a69c99207f65b5cdf1d154bbcd4 files/digest-xine-lib-0.9.13-r3 68
 MD5 f90bfe4a0ee80eecb38fc34022ccab7e files/digest-xine-lib-1_rc2 67
 MD5 5e99bec89f5cc4f0d00bcd61430d67cb files/protect-CFLAGS.patch-1_rc2 597
@@ -37,7 +37,7 @@ MD5 e87a4ce6246db7db0d3cf0d967cb62d2 files/protect-CFLAGS.patch-1_rc5-r2 641
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.8 (GNU/Linux)
 
-iD8DBQFA4cErHTu7gpaalycRAhUgAJ9YqgcZcnFHQxIcW2h4AR0JVY9bRgCggnrL
-Oyo5acwm2EY/RlHpbGeN1Gc=
-=bOYB
+iD8DBQFA4cIJHTu7gpaalycRAs+lAJ4gWNUKS/DghnCkKssOoRVuIPUHswCeNOOG
+ppX5a0CufMH1hOcVEbqYZvA=
+=MIIB
 -----END PGP SIGNATURE-----
