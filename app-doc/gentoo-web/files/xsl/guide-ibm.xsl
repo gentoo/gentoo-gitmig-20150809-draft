@@ -154,7 +154,7 @@ time with his wife, Mary, and his new baby daughter, Hadassah.</p>
 </xsl:template>
 
 <xsl:template match="c">
-	"<xsl:apply-templates />" 
+	<b><xsl:apply-templates /></b> 
 </xsl:template>
 
 <xsl:template match="box">
