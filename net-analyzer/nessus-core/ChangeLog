@@ -1,7 +1,13 @@
 # ChangeLog for net-analyzer/nessus-core
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/ChangeLog,v 1.48 2004/09/26 04:27:49 tgall Exp $
-  
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/ChangeLog,v 1.49 2004/10/28 15:36:23 eldad Exp $
+
+*nessus-core-2.2.0 (28 Oct 2004)
+
+  28 Oct 2004; Eldad Zack <eldad@gentoo.org> -nessus-core-2.1.1.ebuild,
+  +nessus-core-2.2.0.ebuild:
+  Version bump: new stable series. Removed 2.1.x development series.
+
   25 Sep 2004; Tom Gall <tgall@gentoo.org> nessus-core-2.0.12.ebuild:
   stable on ppc64, bug #58014
 
