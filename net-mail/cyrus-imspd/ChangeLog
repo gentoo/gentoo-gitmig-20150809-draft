@@ -1,6 +1,12 @@
 # ChangeLog for net-mail/cyrus-imspd
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/ChangeLog,v 1.4 2004/01/15 00:44:15 max Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/ChangeLog,v 1.5 2004/01/20 17:39:36 max Exp $
+
+*cyrus-imspd-1.7b (20 Jan 2004)
+
+  20 Jan 2004; Max Kalika <max@gentoo.org> cyrus-imspd-1.7a.ebuild,
+  cyrus-imspd-1.7b.ebuild:
+  Bump version to 1.7b. Security release.
 
 *cyrus-imspd-1.7a (14 Jan 2004)
 

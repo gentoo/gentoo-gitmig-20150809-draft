@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/cyrus-imspd-1.7a.ebuild,v 1.1 2004/01/15 00:44:15 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imspd/cyrus-imspd-1.7b.ebuild,v 1.1 2004/01/20 17:39:36 max Exp $
 
 inherit gnuconfig ssl-cert
 
