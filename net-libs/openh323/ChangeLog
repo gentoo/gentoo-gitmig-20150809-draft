@@ -1,6 +1,13 @@
 # ChangeLog for net-libs/openh323
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.1 2002/07/03 18:26:49 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.2 2002/07/03 21:31:41 drobbins Exp $
+
+*openh323-1.8.11 (03 Jul 2002)
+
+  03 Jul 2002; Daniel Robbins <drobbins@gentoo.org> Adding latest 1.8 version
+  of this ebuild so that we can get the latest gnomemeeting working (doesn't
+  work with 1.9 yet.)  Thanks to Nick Hadaway (raker) for this submission.  Set
+  SLOT to 1.8 and tweaked top comments.
 
 *openh323-1.9.1 (03 Jul 2002)
 
