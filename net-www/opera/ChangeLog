@@ -1,6 +1,6 @@
 # ChangeLog for net-www/opera
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.56 2004/04/14 03:44:32 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.57 2004/04/17 11:54:47 lanius Exp $
 
   13 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> opera-7.23-r1.ebuild,
   opera-7.50_alpha3.ebuild:
@@ -10,6 +10,12 @@
   opera-7.50_alpha3:
   Minor changes to (r)depend for correct packages on amd64, amd64-specific
   call of install.sh, marked ~amd64
+
+*opera-7.50_alpha4 (17 Apr 2004)
+
+  17 Apr 2004; Heinrich Wendel <lanius@gentoo.org> opera-7.50_alpha3.ebuild,
+  opera-7.50_alpha4.ebuild:
+  new alpha version
 
   10 Apr 2004; Heinrich Wendel <lanius@gentoo.org> opera-7.50_alpha3.ebuild:
   exchange static !static, it was in the wrong order, bug #47377
