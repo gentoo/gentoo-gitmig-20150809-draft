@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.52 2004/12/02 15:38:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel.eclass,v 1.53 2004/12/03 19:20:52 vapier Exp $
 #
 # This eclass contains the common functions to be used by all lostlogic
 # based kernel ebuilds
@@ -131,6 +131,12 @@ kernel_src_install() {
 	chown -R root:root *
 	chmod -R a+r-w+X,u+w *
 
+	# Cross-compiling support
+	[ "${CTARGET}" = "${CHOST}" ] \
+		&& LINUX_INCDIR=/usr/include \
+		|| LINUX_INCDIR=/usr/${CTARGET}/include
+	export LINUX_INCDIR
+
 	cd ${S}
 	if [ "$ETYPE" = "sources" ]
 	then
@@ -157,15 +163,11 @@ kernel_src_install() {
 		mv ${WORKDIR}/linux* ${D}/usr/src
 	else
 		# linux-headers
-		local dir
-		[ "${CTARGET}" = "${CHOST}" ] \
-			&& dir=/usr/include \
-			|| dir=/usr/${CTARGET}/include
-		dodir ${dir}/linux
-		cp -ax ${S}/include/linux/* ${D}/${dir}/linux
-		rm -rf ${D}/${dir}/linux/modules
-		dodir ${dir}/asm
-		cp -ax ${S}/include/asm/* ${D}/${dir}/asm
+		dodir ${LINUX_INCDIR}/linux
+		cp -ax ${S}/include/linux/* ${D}/${LINUX_INCDIR}/linux
+		rm -rf ${D}/${LINUX_INCDIR}/linux/modules
+		dodir ${LINUX_INCDIR}/asm
+		cp -ax ${S}/include/asm/* ${D}/${LINUX_INCDIR}/asm
 	fi
 }
 
