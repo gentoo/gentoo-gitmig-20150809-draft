@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/cfengine-2.1.6.ebuild,v 1.2 2004/05/28 03:01:59 vapier Exp $
 
 DESCRIPTION="An agent/software robot and a high level policy language for building expert systems to administrate and configure large computer networks"
 HOMEPAGE="http://www.iu.hio.no/cfengine/"
@@ -8,14 +8,12 @@ SRC_URI="ftp://ftp.iu.hio.no/pub/cfengine/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="~x86 ~ppc ~sparc arm"
 IUSE=""
-KEYWORDS="~x86 ~ppc ~sparc"
 
 DEPEND="virtual/glibc
 	>=sys-libs/db-3.2
 	>=dev-libs/openssl-0.9.6k"
-
-S="${WORKDIR}/${P}"
 
 src_compile() {
 

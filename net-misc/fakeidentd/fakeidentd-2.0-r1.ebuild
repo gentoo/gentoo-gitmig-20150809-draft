@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/fakeidentd/fakeidentd-2.0-r1.ebuild,v 1.5 2004/04/27 21:33:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/fakeidentd/fakeidentd-2.0-r1.ebuild,v 1.6 2004/05/28 03:02:22 vapier Exp $
 
 inherit gcc eutils
 
@@ -10,7 +10,8 @@ SRC_URI="mirror://gentoo/${P}.tbz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha ppc64 ~amd64"
+KEYWORDS="x86 ppc sparc alpha arm ~amd64 ppc64"
+IUSE=""
 
 DEPEND="virtual/glibc"
 
