@@ -1,6 +1,13 @@
 # ChangeLog for net-www/w3m
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/ChangeLog,v 1.17 2003/02/17 14:22:12 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/ChangeLog,v 1.18 2003/03/05 15:36:04 agriffis Exp $
+
+*w3m-0.4 (05 Mar 2003)
+
+  05 Mar 2003; Aron Griffis <agriffis@gentoo.org> w3m-0.4.ebuild:
+  Updated to 0.4. Fixed bug #16868 by updating the configuration monologue and
+  adding a sanity check at the end. Fixed bug #8879 by adding dep on
+  media-libs/compface, thanks to Lim Swee Tat for the heads-up.
 
 *w3m-0.3.2.2 (17 Feb 2003)
 
