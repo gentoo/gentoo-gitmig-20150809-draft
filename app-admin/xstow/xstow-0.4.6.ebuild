@@ -1,19 +1,19 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/xstow/xstow-0.4.6.ebuild,v 1.6 2004/06/24 21:43:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/xstow/xstow-0.4.6.ebuild,v 1.7 2004/06/25 23:07:13 vapier Exp $
 
 inherit eutils
 
 DESCRIPTION="replacement for GNU stow with extensions"
-SRC_URI="mirror://sourceforge/xstow/${P}.tar.gz"
 HOMEPAGE="http://xstow.sourceforge.net/"
+SRC_URI="mirror://sourceforge/xstow/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86"
 IUSE="ncurses"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	ncurses? ( sys-libs/ncurses )"
 
 src_unpack() {

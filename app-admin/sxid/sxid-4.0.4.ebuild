@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sxid/sxid-4.0.4.ebuild,v 1.5 2004/06/24 21:38:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sxid/sxid-4.0.4.ebuild,v 1.6 2004/06/25 23:01:11 vapier Exp $
 
 DESCRIPTION="suid, sgid file and directory checking"
 SRC_URI="http://www.phunnypharm.org/pub/sxid/${P/-/_}.tar.gz"
@@ -11,10 +11,9 @@ SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE=""
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	virtual/mta"
-
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	sys-apps/sed
 	sys-devel/gcc
 	sys-devel/autoconf"

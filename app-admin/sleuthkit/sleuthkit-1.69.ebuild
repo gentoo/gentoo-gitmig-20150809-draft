@@ -1,21 +1,20 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/sleuthkit/sleuthkit-1.69.ebuild,v 1.8 2004/06/25 14:55:13 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/sleuthkit/sleuthkit-1.69.ebuild,v 1.9 2004/06/25 23:12:13 vapier Exp $
 
 DESCRIPTION="A collection of file system and media management forensic analysis tools"
-SRC_URI="mirror://sourceforge/sleuthkit/${P}.tar.gz"
 HOMEPAGE="http://www.sleuthkit.org/sleuthkit/"
-RESTRICT="nomirror"
-IUSE=""
-KEYWORDS="x86 sparc s390 ~ppc hppa"
+SRC_URI="mirror://sourceforge/sleuthkit/${P}.tar.gz"
+
 LICENSE="GPL-2 IBM"
 SLOT="0"
+KEYWORDS="x86 ~ppc sparc hppa s390"
+IUSE=""
 
 RDEPEND="dev-lang/perl
 	dev-perl/DateManip
-	virtual/glibc
+	virtual/libc
 	sys-libs/zlib"
-
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
 	sys-devel/gcc"
@@ -29,12 +28,12 @@ src_unpack() {
 
 src_compile() {
 	export OPT="${CFLAGS}"
-	unset CFLAGS
-	make -e no-perl sorter mactime || die "make failed"
+	env -u CFLAGS \
+		make -e no-perl sorter mactime || die "make failed"
 }
 
 src_install() {
-	dobin bin/*
+	dobin bin/* || die
 	dodoc CHANGES README docs/*
 	docinto tct.docs
 	dodoc tct.docs/*

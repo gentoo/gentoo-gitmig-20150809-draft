@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5.ebuild,v 1.8 2004/06/24 21:37:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5.ebuild,v 1.9 2004/06/25 23:00:20 vapier Exp $
 
-inherit flag-o-matic ccc
+inherit flag-o-matic
 
 DESCRIPTION="Linux Port of OpenBSD Single-key Password System"
 HOMEPAGE="http://www.sparc.spb.su/solaris/skey/"
@@ -12,16 +12,13 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 LICENSE="BSD X11"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha mips hppa amd64"
-
 IUSE="doc"
+
 DEPEND=">=dev-lang/perl-5.8.0
 	virtual/mta
-	virtual/glibc"
-
-S=${WORKDIR}/${P}
+	virtual/libc"
 
 src_compile() {
-
 	if use alpha; then
 		append-flags -fPIC
 		append-ldflags -fPIC

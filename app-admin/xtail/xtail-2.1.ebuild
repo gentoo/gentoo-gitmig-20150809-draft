@@ -1,25 +1,20 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/xtail/xtail-2.1.ebuild,v 1.16 2004/06/24 21:43:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/xtail/xtail-2.1.ebuild,v 1.17 2004/06/25 23:07:33 vapier Exp $
 
-DESCRIPTION="Tail multiple logfiles at once, even if rotated."
-SRC_URI="http://www.unicom.com/sw/xtail/${P}.tar.gz"
+DESCRIPTION="Tail multiple logfiles at once, even if rotated"
 HOMEPAGE="http://www.unicom.com/sw/xtail/"
+SRC_URI="http://www.unicom.com/sw/xtail/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="as-is"
-IUSE=""
+SLOT="0"
 KEYWORDS="x86 ppc sparc"
+IUSE=""
 
-DEPEND="virtual/glibc"
-
-src_compile() {
-	econf || die "econf failed"
-	emake || die
-}
+DEPEND="virtual/libc"
 
 src_install() {
 	doman xtail.1
-	dobin xtail
+	dobin xtail || die
 	dodoc README
 }

@@ -1,18 +1,19 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/tmpwatch-2.8.4.ebuild,v 1.8 2004/06/24 21:40:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/tmpwatch/tmpwatch-2.8.4.ebuild,v 1.9 2004/06/25 23:03:22 vapier Exp $
 
 RPM_V="4"
 
 DESCRIPTION="Utility recursively searches through specified directories and removes files which have not been accessed in a specified period of time."
-SRC_URI="ftp://ftp.redhat.com/pub/redhat/linux/rawhide/SRPMS/SRPMS/${P}-${RPM_V}.src.rpm"
 HOMEPAGE="ftp://ftp.redhat.com/pub/redhat/linux/rawhide/SRPMS/SRPMS"
+SRC_URI="ftp://ftp.redhat.com/pub/redhat/linux/rawhide/SRPMS/SRPMS/${P}-${RPM_V}.src.rpm"
+
 LICENSE="GPL-2"
 SLOT="0"
-IUSE=""
 KEYWORDS="x86 ~ppc"
+IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	app-arch/rpm2targz"
 
 src_unpack() {
@@ -32,7 +33,6 @@ src_compile() {
 
 src_install() {
 	preplib /usr
-
 	dosbin tmpwatch
 	doman tmpwatch.8
 }
