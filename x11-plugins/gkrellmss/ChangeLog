@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/gkrellmss
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmss/ChangeLog,v 1.7 2004/03/06 18:42:10 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmss/ChangeLog,v 1.8 2004/04/12 16:42:32 aliz Exp $
+
+  12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> gkrellmss-2.4.ebuild:
+  Removing S=
 
 *gkrellmss-2.4 (06 Mar 2004)
 

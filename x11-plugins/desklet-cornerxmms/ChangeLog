@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/desklet-cornerxmms
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-cornerxmms/ChangeLog,v 1.4 2003/11/12 10:11:17 obz Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-cornerxmms/ChangeLog,v 1.5 2004/04/12 16:42:32 aliz Exp $
+
+  12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org>
+  desklet-cornerxmms-0.0.5-r1.ebuild:
+  Mark stable on amd64.
 
 *desklet-cornerxmms-0.0.5-r1 (12 Nov 2003)
 

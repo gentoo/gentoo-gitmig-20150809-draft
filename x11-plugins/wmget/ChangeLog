@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmget
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmget/ChangeLog,v 1.4 2004/03/19 10:04:28 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmget/ChangeLog,v 1.5 2004/04/12 16:42:32 aliz Exp $
+
+  12 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> wmget-0.4.4.ebuild,
+  wmget-0.5.0.ebuild:
+  Adding IUSE=
 
   19 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> wmget-0.4.4.ebuild,
   wmget-0.5.0.ebuild:
