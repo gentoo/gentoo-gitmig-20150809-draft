@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.6.ebuild,v 1.9 2004/03/23 09:15:10 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/unixODBC/unixODBC-2.2.6.ebuild,v 1.10 2004/06/02 15:47:24 agriffis Exp $
 
 DESCRIPTION="ODBC Interface for Linux"
 HOMEPAGE="http://www.unixodbc.org/"
@@ -20,7 +20,7 @@ DEPEND="virtual/glibc
 src_compile() {
 	local myconf
 
-	if [ "`use qt`" ]
+	if use qt
 	then
 		myconf="--enable-gui=yes"
 	else
@@ -34,7 +34,7 @@ src_compile() {
 
 	make || die
 
-	if [ "`use gnome`" ]
+	if use gnome
 	then
 		# Symlink for configure
 		ln -s ${S}/odbcinst/.libs ./lib
@@ -58,7 +58,7 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 
-	if [ "`use gnome`" ]
+	if use gnome
 	then
 		cd gODBCConfig
 		make DESTDIR=${D} install || die
