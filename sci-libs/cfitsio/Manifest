@@ -1,6 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 53306d9243364e75443927915511fe1a cfitsio-2.500.ebuild 1086
-MD5 096dccc30eda86a15c75e3bdc20e0338 ChangeLog 1387
+MD5 ac0183e5ce81d8608417df95c0c1e49c ChangeLog 1387
 MD5 1e4fe3feb94154cb58259f2f577bf57e metadata.xml 215
 MD5 8763d39c03814b79e2eedfd0faa68177 cfitsio-2.490.ebuild 975
 MD5 3563a5722dad5d085d0eb548dd3bd0d6 files/digest-cfitsio-2.490 64
 MD5 de64193b32445d9f837defb19734cf4c files/digest-cfitsio-2.500 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFB0cp7I1lqEGTUzyQRAjk7AKDCv9ItxG82/78/mdbv8ucHeyK8VgCfSOrQ
+xycCOCoqtqCgx6zLct0kqFM=
+=hzET
+-----END PGP SIGNATURE-----
