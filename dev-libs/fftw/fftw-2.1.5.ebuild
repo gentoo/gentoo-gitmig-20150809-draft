@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/fftw-2.1.5.ebuild,v 1.3 2003/07/08 05:44:22 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/fftw-2.1.5.ebuild,v 1.4 2003/07/12 09:22:21 aliz Exp $
 
 inherit flag-o-matic
 
@@ -16,7 +16,7 @@ SLOT="2.1"
 LICENSE="GPL-2"
 
 #remove ~'s on ppc and sparc when removig on x86 (as per recent discussion on -core)
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 
 #this one is reported to cause trouble on pentium4 m series
 filter-flags "-mfpmath=sse"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.30.0.ebuild,v 1.1 2003/05/17 05:50:03 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.30.0.ebuild,v 1.2 2003/07/12 09:22:21 aliz Exp $
 
 MY_V="${PV//\./_}"
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.boost.org"
 SRC_URI="mirror://sourceforge/${PN}/${PN}_${MY_V}.tar.bz2"
 
 LICENSE="freedist"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 SLOT="1"
 IUSE="icc"
 

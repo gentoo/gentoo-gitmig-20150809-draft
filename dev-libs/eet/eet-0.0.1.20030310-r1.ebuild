@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eet/eet-0.0.1.20030310-r1.ebuild,v 1.1 2003/03/20 13:17:21 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eet/eet-0.0.1.20030310-r1.ebuild,v 1.2 2003/07/12 09:22:21 aliz Exp $
 
 inherit flag-o-matic
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~ppc"
+KEYWORDS="x86 ~alpha ~ppc"
 IUSE=""
 
 DEPEND="virtual/glibc

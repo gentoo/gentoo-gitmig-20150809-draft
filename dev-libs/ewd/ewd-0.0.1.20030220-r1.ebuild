@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/ewd/ewd-0.0.1.20030220-r1.ebuild,v 1.1 2003/03/20 13:32:44 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ewd/ewd-0.0.1.20030220-r1.ebuild,v 1.2 2003/07/12 09:22:21 aliz Exp $
 
 DESCRIPTION="library providing thread-safe basic data structures like hashes, lists and trees"
 HOMEPAGE="http://www.enlightenment.org/pages/ewd.html"
@@ -9,7 +9,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha"
+KEYWORDS="x86 ~ppc ~alpha"
 IUSE=""
 
 DEPEND="virtual/glibc

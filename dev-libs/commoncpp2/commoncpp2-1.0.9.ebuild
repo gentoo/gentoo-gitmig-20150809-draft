@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/commoncpp2/commoncpp2-1.0.9.ebuild,v 1.1 2003/05/10 17:27:16 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/commoncpp2/commoncpp2-1.0.9.ebuild,v 1.2 2003/07/12 09:22:21 aliz Exp $
 
 IUSE="doc xml2"
 
@@ -15,7 +15,7 @@ DEPEND="xml2? ( dev-libs/libxml2 )
 	
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 src_compile() {
 	local myconf=""

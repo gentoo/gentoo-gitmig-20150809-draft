@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.29.0.ebuild,v 1.3 2003/02/13 10:34:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.29.0.ebuild,v 1.4 2003/07/12 09:22:21 aliz Exp $
 
 MY_V="${PV//\./_}"
 
@@ -8,7 +8,7 @@ DESCRIPTION="Boost provides free peer-reviewed portable C++ source libraries."
 HOMEPAGE="http://www.boost.org"
 SRC_URI="http://boost.sourceforge.net/release/boost_${MY_V}.tar.gz"
 LICENSE="freedist"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ~ppc"
 SLOT="1"
 IUSE=""
 

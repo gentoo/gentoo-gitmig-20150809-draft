@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libxslt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.35 2003/06/24 14:48:05 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.36 2003/07/12 09:22:22 aliz Exp $
+
+*libxslt-1.0.31 (07 Jul 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
   24 Jun 2003; Aron Griffis <agriffis@gentoo.org> libxslt-1.0.30-r1.ebuild:
   Mark stable on alpha

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.6.ebuild,v 1.2 2003/02/13 10:34:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/blitz/blitz-0.6.ebuild,v 1.3 2003/07/12 09:22:21 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="High-performance C++ numeric library"
@@ -10,7 +10,7 @@ DEPEND="icc? ( dev-lang/icc )"
 IUSE="icc"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 LICENSE="GPL-2"
 
 src_compile() {

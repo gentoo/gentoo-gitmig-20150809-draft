@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/g-wrap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.9 2003/04/02 23:23:12 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.10 2003/07/12 09:22:21 aliz Exp $
 
 *g-wrap-1.3.4 (17 Mar 2003)
 
@@ -22,6 +22,11 @@
   1 Apr 2002; M.Schlemmer <azarah@gentoo.org> g-wrap-1.3.1.ebuild :
 
   Libtoolize to fix "relink" bug in older versions of libtool.
+
+*g-wrap-1.2.1-r2 (13 Feb 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *g-wrap-1.2.1 (28 Mar 2002)
 

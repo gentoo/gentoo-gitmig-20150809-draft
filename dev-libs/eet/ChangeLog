@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/eet
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/eet/ChangeLog,v 1.6 2003/06/29 17:44:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/eet/ChangeLog,v 1.7 2003/07/12 09:22:21 aliz Exp $
 
 *eet-0.0.1.20030629 (29 Jun 2003)
 
@@ -12,6 +12,11 @@
   20 Mar 2003; Graham Forest <vladimir@gentoo.org>
   eet-0.0.1.20030220-r1.ebuild, eet-0.0.1.20030310-r1.ebuild:
   Removed usage of pic USE flag
+
+*eet-0.0.1.20030310-r1 (20 Mar 2003)
+ 
+  12 Jul 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Added missing changelog entry.
 
 *eet-0.0.1.20030310 (10 Mar 2003)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.28.ebuild,v 1.2 2003/02/13 10:34:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.28.ebuild,v 1.3 2003/07/12 09:22:21 aliz Exp $
 
 DESCRIPTION="Boost provides free peer-review portable C++ source libraries."
 MY_V="`echo ${PV} |sed -e 's:\.:_:g'`"
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.boost.org"
 LICENSE="freedist"
 DEPEND=">=dev-util/yacc-1.9.1-r1
 	>=dev-lang/python-2.2.1"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="1"
 IUSE=""
 

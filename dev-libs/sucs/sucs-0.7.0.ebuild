@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/sucs/sucs-0.7.0.ebuild,v 1.2 2003/02/13 10:51:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/sucs/sucs-0.7.0.ebuild,v 1.3 2003/07/12 09:22:23 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="The Simple Utility Classes are C++ libraries of common C-based algorithms and libraries."
@@ -9,7 +9,7 @@ HOMEPAGE="http://sucs.sf.net/"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=">=dev-libs/libpcre-3.9
 	>=dev-libs/expat-1.95.4"
