@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-20020901.ebuild,v 1.2 2002/09/05 08:11:08 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-20020901.ebuild,v 1.3 2002/09/05 15:16:35 satai Exp $
 
 TEXMFSRC="teTeX-texmfsrc-beta-20020829.tar.gz"
 TEXMF="teTeX-texmf-beta-20020901.tar.gz"
@@ -43,23 +43,7 @@ src_unpack() {
 	tar xzf ${DISTDIR}/teTeX-french.tar.gz
 
 	cd ${S}
-	patch -p0 < ${FILESDIR}/tetex-20020901-fontmap.diff
-
-	#cd ${WORKDIR}
-	#patch -p0 < ${FILESDIR}/teTeX-1.0-gentoo.diff || die
-
-	#cd ${S}
-	#patch -p0 < ${FILESDIR}/teTeX-1.0.dif || die
-
-	# Fix problem where the *.fmt files are not generated due to the LaTeX
-	# source being older than a year.
-#        local x
-#        for x in `find ${S}/texmf/ -type f -name '*.ini'`
-#        do
-#                cp ${x} ${x}.orig
-#                sed -e '1i \\scrollmode' ${x}.orig > ${x}
-#                rm -f ${x}.orig
-#        done
+	patch -p0 < ${FILESDIR}/tetex-20020901-fontmap.diff || die
 
 }
 
@@ -114,6 +98,7 @@ src_install() {
 	sed -e 's:    \$(scriptdir)/mktexlsr:    echo:' \
 		-e 's:\$(scriptdir)/texconfig init:echo:' \
 		Makefile > Makefile.install
+	patch -p0 < ${FILESDIR}/tetex-20020901-makefile.diff || die
 	make prefix=${D}/usr \
 		bindir=${D}/usr/bin \
 		datadir=${D}/usr/share \
@@ -163,10 +148,12 @@ pkg_postinst() {
 	then
 		echo ">>> Configuring teTeX..."
 		mktexlsr >/dev/null 2>&1 
+        fmtutil --all >/dev/null 2>&1
 		texlinks >/dev/null 2>&1
 		texconfig init >/dev/null 2>&1
 		texconfig confall >/dev/null 2>&1
 		texconfig font vardir /var/cache/fonts >/dev/null 2>&1
-		echo "*** use 'texconfig font rw' to allow all users to generate fonts ***"
+		texconfig font rw
+		echo "*** use 'texconfig font ro' to allow only root to generate fonts ***"
 	fi
 }

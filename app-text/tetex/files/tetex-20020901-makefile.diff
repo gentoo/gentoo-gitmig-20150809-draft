@@ -1,0 +1,27 @@
+--- Makefile.install	Thu Sep  5 09:30:02 2002
++++ Makefile.install.final	Thu Sep  5 09:57:23 2002
+@@ -85,15 +85,15 @@
+ 	done
+ 	$(srcdir)/selfautofix "$(bindir)" "$(texmf)/web2c"
+ 	cd $(bindir); for i in $(ALLPROGS); do test -f $$i && { echo strip $$i; strip $$i || true; }; done; true
+-	test -f $(scriptdir)/mktexlsr && \
+-	  TEXMFMAIN=$(texmf) PATH=$(scriptdir):$(bindir):$(PATH) \
+-	    echo
+-	test -f $(scriptdir)/fmtutil && \
+-	  TEXMFCNF=$(texmf)/web2c TEXMFMAIN=$(texmf) PATH=$(scriptdir):$(bindir):$(PATH) \
+-	    $(scriptdir)/fmtutil --all
+-	test -f $(scriptdir)/texlinks && \
+-	  TEXMF=$(texmf) TEXMFMAIN=$(texmf) PATH=$(scriptdir):$(bindir):$(PATH) \
+-	    $(scriptdir)/texlinks
++	#test -f $(scriptdir)/mktexlsr && \
++	  #TEXMFMAIN=$(texmf) PATH=$(scriptdir):$(bindir):$(PATH) \
++	    #echo
++	#test -f $(scriptdir)/fmtutil && \
++	  #TEXMFCNF=$(texmf)/web2c TEXMFMAIN=$(texmf) PATH=$(scriptdir):$(bindir):$(PATH) \
++	    #$(scriptdir)/fmtutil --all
++	#test -f $(scriptdir)/texlinks && \
++	  #TEXMF=$(texmf) TEXMFMAIN=$(texmf) PATH=$(scriptdir):$(bindir):$(PATH) \
++	    #$(scriptdir)/texlinks
+ 
+ install-exec:
+ 	for dir in $(ESUBDIRS); do \
