@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-dist.eclass,v 1.54 2004/08/06 12:23:21 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-dist.eclass,v 1.55 2004/08/06 15:08:49 caleb Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -34,6 +34,7 @@ need-kde $PV
 # 3.2 prereleases
 [ "$PV" == "3.3.0_beta1" ] && S=${WORKDIR}/${PN}-3.2.91
 [ "$PV" == "3.3.0_beta2" ] && S=${WORKDIR}/${PN}-3.2.92
+[ "$PV" == "3.3.0_rc1" ] && S=${WORKDIR}/${PN}-3.3.0
 
 DESCRIPTION="KDE ${PV} - "
 HOMEPAGE="http://www.kde.org/"
