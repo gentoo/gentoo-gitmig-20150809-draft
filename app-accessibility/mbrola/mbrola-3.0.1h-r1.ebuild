@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/mbrola-3.0.1h-r1.ebuild,v 1.7 2004/09/29 02:04:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/mbrola/mbrola-3.0.1h-r1.ebuild,v 1.8 2004/09/29 02:06:26 eradicator Exp $
 
 IUSE=""
 
@@ -36,13 +36,13 @@ src_compile() {
 		cp mbrola-linux-alpha mbrola || die
 	;;
 	*)
-		die "Unsupported architecture."
+		einfo "mbrola binary not available on this architecture.  Still installing voices."
 	esac
 }
 
 src_install () {
 	# Take care of main binary
-	dobin mbrola
+	[ -f mbrola ] && dobin mbrola
 	dodoc readme.txt
 
 	# Now install the vioces
