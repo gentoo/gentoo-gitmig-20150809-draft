@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.57 2004/03/05 10:30:33 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.58 2004/04/02 10:22:50 mcummings Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 # Maintained by the Perl herd <perl@gentoo.org>
@@ -26,23 +26,6 @@ SITE_LIB=""
 ARCH_LIB=""
 POD_DIR=""
 MMSIXELEVEN=""
-
-getperlinfo() {
-	eval `perl '-V:version'`
-	PERL_VERSION=${version}
-	eval `perl '-V:installsitearch'`
-	SITE_ARCH=${installsitearch}
-	eval `perl '-V:installarchlib'`
-	ARCH_LIB=${installarchlib}
-	eval `perl '-V:installarchlib'`
-	ARCH_LIB=${installarchlib}
-	eval `perl '-V:installsitearch'`
-	SITE_LIB=${installsitearch}
-# handling of DESTDIR changed in makemaker 6.11
-	MMSIXELEVEN=`perl -e 'use ExtUtils::MakeMaker; print( $ExtUtils::MakeMaker::VERSION ge "6.11" )'`
-}
-
-getperlinfo
 
 perl-module_src_prep() {
 	SRC_PREP="yes"
@@ -184,6 +167,18 @@ perlinfo() {
 	then 
 		POD_DIR="/usr/share/perl/gentoo-pods/${version}"
 	fi
+	eval `perl '-V:version'`
+	PERL_VERSION=${version}
+	eval `perl '-V:installsitearch'`
+	SITE_ARCH=${installsitearch}
+	eval `perl '-V:installarchlib'`
+	ARCH_LIB=${installarchlib}
+	eval `perl '-V:installarchlib'`
+	ARCH_LIB=${installarchlib}
+	eval `perl '-V:installsitearch'`
+	SITE_LIB=${installsitearch}
+# handling of DESTDIR changed in makemaker 6.11
+	MMSIXELEVEN=`perl -e 'use ExtUtils::MakeMaker; print( $ExtUtils::MakeMaker::VERSION ge "6.11" )'`
 
 }
 
