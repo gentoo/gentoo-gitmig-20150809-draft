@@ -1,16 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/xforms-1.0_rc4.ebuild,v 1.1 2002/07/29 05:01:59 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/xforms-1.0_rc4.ebuild,v 1.2 2002/07/29 05:16:48 owen Exp $
 
 DESCRIPTION="This is a sample skeleton ebuild file"
 HOMEPAGE="http://world.std.com/~xforms"
 SRC_URI="ftp://ncmir.ucsd.edu/pub/xforms/OpenSource/xforms-1.0RC4.tgz"
 
 LICENSE="GPL-2"
-SLOT="1"
+SLOT="0"
 KEYWORDS="x86 ppc"
 DEPEND="virtual/x11"
-
+PROVIDES="virtual/xforms"
 S="${WORKDIR}/xforms-1.0RC4"
 
 src_compile() {
