@@ -1,8 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfs.confd,v 1.6 2004/07/14 23:36:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/nfs-utils/files/nfs.confd,v 1.7 2004/10/09 18:51:26 vapier Exp $
 
 # Config file for /etc/init.d/nfs
+
+# If you wish to set the port numbers for lockd,
+# please see /etc/sysctl.conf
 
 # Number of servers to be started up by default
 RPCNFSDCOUNT=8
