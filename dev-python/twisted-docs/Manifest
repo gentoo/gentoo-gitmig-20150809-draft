@@ -1,4 +1,6 @@
+MD5 23e739b211d698cec9a032690eec0ab0 twisted-docs-1.1.1.ebuild 915
 MD5 a15a7cdb4616853f97741b766fb983d0 twisted-docs-1.1.0.ebuild 916
-MD5 b215bf4e6024dbe902213853d0b55498 ChangeLog 542
+MD5 f63b2303ceaab00be5b494be65b70351 ChangeLog 677
 MD5 19df39ef54fc4a8677998f19bb6046ac metadata.xml 218
 MD5 7b7856512d8720cdff541fe47a782a29 files/digest-twisted-docs-1.1.0 71
+MD5 e1cc24d837b53bd573bd68ef734a6534 files/digest-twisted-docs-1.1.1 71
