@@ -1,6 +1,14 @@
 # ChangeLog for net-firewall/ipsec-tools
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.1 2003/12/16 18:04:33 plasmaroo Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ipsec-tools/ChangeLog,v 1.2 2004/02/01 11:35:28 plasmaroo Exp $
+
+*ipsec-tools-0.2.3 (01 Feb 2004)
+
+  01 Feb 2004; <plasmaroo@gentoo.org> ipsec-tools-0.2.2.ebuild,
+  ipsec-tools-0.2.3.ebuild, ipsec-tools-0.2.4.ebuild:
+  Version bumps to 0.2.3 and 0.2.4 and I also fixed the configure scripts to use
+  the /usr/src/linux includes rather than those of the current kernel. Closes
+  bug #38807.
 
 *ipsec-tools-0.2.2 (16 Dec 2003)
 
