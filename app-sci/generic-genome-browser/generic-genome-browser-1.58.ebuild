@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/generic-genome-browser/generic-genome-browser-1.58.ebuild,v 1.1 2004/01/13 05:56:21 sediener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/generic-genome-browser/generic-genome-browser-1.58.ebuild,v 1.2 2004/01/14 04:40:13 sediener Exp $
 
 inherit perl-module
 
@@ -50,7 +50,7 @@ src_compile() {
 
 	cd ${S}
 #	ewarn "Modifying Makefile.PL to avoid sandbox violation"
-	sed -e "s:WriteMakefile(:WriteMakefile(\n 'PREFIX'=>'\${D}/usr',\n'INSTALLDIRS'  => 'vendor',:" -i Makefile.PL
+	sed -e "s:WriteMakefile(:WriteMakefile(\n 'PREFIX'=>'${D}/usr',\n'INSTALLDIRS'  => 'vendor',:" -i Makefile.PL
 
 	perl Makefile.PL \
 			HTDOCS=/var/www/localhost/htdocs \
