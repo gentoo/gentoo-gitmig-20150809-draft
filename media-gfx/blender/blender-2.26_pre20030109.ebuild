@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.26_pre20030109.ebuild,v 1.1 2003/01/10 08:12:48 kain Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/blender-2.26_pre20030109.ebuild,v 1.2 2003/01/12 13:05:10 mholzer Exp $
 
 DESCRIPTION="3D Creation/Animation/Publishing System"
 
-HOMEPAGE="http://blender3d.org/"
+HOMEPAGE="http://www.blender.org/"
 SRC_URI="mirror://gentoo/blender-2.26-pre20030109.tar.bz2"
 LICENSE="GPL-2 BL"
 SLOT="0"

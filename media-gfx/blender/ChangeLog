@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.7 2003/01/10 08:12:48 kain Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.8 2003/01/12 13:05:10 mholzer Exp $
+
+*blender-2.26_pre20030109 (10 Jan 203)
+
+  12 Jan 2003; Martin Holzer <mholzer@gentoo.org> :
+  Changed Homepage. Closes #13707
 
   10 Jan 2003; Kain <kain@kain.org> : blender-2.26_pre20030109.ebuild
   files/digest-blender-2.26_pre20030109
@@ -9,8 +14,6 @@
   blender works with autoconf and has GCC-3 fixes, so it builds (and runs!)
   for me on PPC and x86.  Testers wanted.
 
-*blender-2.26_pre20030109 (10 Jan 203)
-  
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *blender-2.23 (15 Oct 2002)
