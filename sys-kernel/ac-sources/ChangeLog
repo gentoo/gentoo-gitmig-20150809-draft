@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/ac-sources
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ac-sources/ChangeLog,v 1.46 2004/12/20 19:48:48 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ac-sources/ChangeLog,v 1.47 2004/12/22 01:34:31 lostlogic Exp $
+
+*ac-sources-2.6.9-r16 (21 Dec 2004)
+
+  21 Dec 2004; Brandon Low <lostlogic@gentoo.org>
+  +ac-sources-2.6.9-r16.ebuild:
+  Bump
 
   20 Dec 2004; <plasmaroo@gentoo.org> ac-sources-2.6.9-r12.ebuild,
   +files/ac-sources-2.6.9.CAN-2004-1016.patch,
