@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.203 2004/11/15 17:21:42 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.204 2004/11/15 19:46:22 spyderous Exp $
+
+  15 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.0-r1.ebuild, xorg-x11-6.8.0-r2.ebuild:
+  Bug number for no-sse2 is 57602, not 56702. Thanks cyfred.
 
   15 Nov 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r1.ebuild,v 1.32 2004/11/03 17:33:19 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r1.ebuild,v 1.33 2004/11/15 19:46:22 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -283,7 +283,7 @@ host_def_setup() {
 				replace-cpu-flags athlon athlon-tbird
 			fi
 
-			#to fix #56702 for now, thanks Spanky
+			#to fix #57602 for now, thanks Spanky
 			[ "$(gcc-version)" == "3.4" ] && use x86 && test_flag -mno-sse2 && append-flags -mno-sse2
 
 
