@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/commons-logging
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/ChangeLog,v 1.6 2003/02/12 05:51:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-logging/ChangeLog,v 1.7 2003/03/22 12:24:43 absinthe Exp $
+
+*commons-logging-1.0.2-r2 (22 Mar 2003)
+
+  22 Mar 2003; Dylan Carlson <absinthe@gentoo.org>
+  commons-logging-1.0.2-r2.ebuild:
+  Changed to add 'doc' USE flag and jakarta-commons eclass.
 
 *commons-logging-1.0.2-r1 (06 Nov 2002)
 
