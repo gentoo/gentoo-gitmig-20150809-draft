@@ -1,6 +1,9 @@
 # ChangeLog for app-i18n/iiimf-skk
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimf-skk/ChangeLog,v 1.1 2004/09/14 08:02:52 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimf-skk/ChangeLog,v 1.2 2004/09/14 08:27:21 usata Exp $
+
+  14 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> iiimf-skk-0.1.22.95.ebuild:
+  Added einfos to tell how to use the module.
 
 *iiimf-skk-0.1.22.95 (14 Sep 2004)
 

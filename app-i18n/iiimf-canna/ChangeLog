@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/iiimf-canna
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimf-canna/ChangeLog,v 1.1 2004/09/13 20:25:58 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/iiimf-canna/ChangeLog,v 1.2 2004/09/14 08:26:09 usata Exp $
+
+  14 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> files/iiimf-canna.sh,
+  iiimf-canna-0.3.0.ebuild:
+  Added einfos to tell how to use the module.
 
 *iiimf-canna-0.3.0 (14 Sep 2004)
 
