@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
 # Author:     Ilian Zarov <coder@descom.com>
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/p0f-1.8.2.ebuild,v 1.2 2002/02/21 22:59:51 m0rpheus Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/p0f-1.8.2.ebuild,v 1.3 2002/02/22 19:57:46 m0rpheus Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="p0f performs passive OS detection based on SYN packets."
@@ -10,7 +10,7 @@ DEPEND="net-libs/libpcap"
 
 src_compile() {
 	patch < ${FILESDIR}/${P}-makefile.patch
-	cp ${FILESDIR}/${P}.init p0f.init
+	cp ${FILESDIR}/${P}.rc p0f.rc
 	make || die
 }
 
