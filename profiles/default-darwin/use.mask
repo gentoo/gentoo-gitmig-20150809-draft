@@ -70,3 +70,8 @@ oci8
 oracle7
 pfpro
 solid
+
+# masks for x11-libs/qt
+nas
+odbc
+postgres
