@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-xmms-remote/gaim-xmms-remote-1.0.ebuild,v 1.1 2004/03/26 03:10:59 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gaim-xmms-remote/gaim-xmms-remote-1.0.ebuild,v 1.2 2004/03/26 03:17:00 rizzo Exp $
 
 DESCRIPTION="Gaim XMMS Remote is a Gaim plugin that lets you control XMMS from within gaim."
 
@@ -27,4 +27,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
+	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README VERSION
 }
