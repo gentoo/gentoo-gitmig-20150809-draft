@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/qpopper-4.0.5-r2.ebuild,v 1.1 2005/02/13 16:46:41 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/qpopper-4.0.5-r2.ebuild,v 1.2 2005/02/14 13:49:32 plasmaroo Exp $
 
 IUSE="debug gdbm mailbox pam ssl xinetd"
 
@@ -13,6 +13,7 @@ HOMEPAGE="http://www.qpopper.org/qpopper/"
 DEPEND="virtual/mta
 	xinetd? ( virtual/inetd )
 	gdbm? ( sys-libs/gdbm )
+	!gdbm? ( sys-libs/db )
 	pam? (
 			>=sys-libs/pam-0.72
 			>=net-mail/mailbase-0.00-r8

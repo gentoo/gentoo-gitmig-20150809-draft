@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/qpopper
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/ChangeLog,v 1.18 2005/02/13 16:46:40 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qpopper/ChangeLog,v 1.19 2005/02/14 13:49:32 plasmaroo Exp $
+
+  14 Feb 2005; <plasmaroo@gentoo.org> qpopper-4.0.5-r1.ebuild,
+  qpopper-4.0.5-r2.ebuild:
+  Add sys-libs/db DEPEND if we're not using gdbm.
 
 *qpopper-4.0.5-r2 (13 Feb 2005)
 
