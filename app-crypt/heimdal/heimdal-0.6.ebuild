@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.ebuild,v 1.6 2004/02/17 15:54:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.ebuild,v 1.7 2004/02/17 16:13:49 agriffis Exp $
 
 inherit libtool
 
@@ -11,13 +11,13 @@ HOMEPAGE="http://www.pdc.kth.se/heimdal/"
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 -sparc ppc ~alpha ~ia64"
-IUSE="ssl ldap berkdb ipv6 krb4"
+IUSE="ssl ldap berkdb ipv6"
 PROVIDE="virtual/krb5"
 
 DEPEND="
-	krb4? ( >=app-crypt/kth-krb-1.2.1 )
 	ssl? ( dev-libs/openssl )
-	berkdb? ( sys-libs/db )"
+	berkdb? ( sys-libs/db )
+	!app-crypt/kth-krb"
 	# ldap? ( net-nds/openldap )
 	# With this enabled, we create a multiple stage
 	# circular dependency with USE="ldap kerberos"
@@ -45,17 +45,14 @@ src_compile() {
 
 	local myconf="
 		$(use_with ipv6)
-		$(use_with berkdb berkely-db)"
+		$(use_with berkdb berkely-db)
+		--enable-shared"
 
 	use ssl \
 		&& myconf="--with-openssl=/usr" \
 		|| myconf="--without-openssl"
 
 	#use ldap && myconf="${myconf} --with-open-ldap=/usr"
-
-	use krb4 \
-		&& myconf="${myconf} --with-krb4=/usr/athena --disable-shared" \
-		|| myconf="${myconf} --enable-shared"
 
 	econf ${myconf}
 
