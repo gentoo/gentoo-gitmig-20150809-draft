@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.26.ebuild,v 1.2 2004/07/23 16:14:08 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.26.ebuild,v 1.3 2004/07/23 21:26:12 zypher Exp $
 
 inherit eutils flag-o-matic
 
@@ -34,8 +34,9 @@ RDEPEND="virtual/x11
 DEPEND="$RDEPEND >=sys-devel/autoconf-2.58
 		>=sys-devel/automake-1.8.3"
 
-
-filter-flags "-fno-default-inline -funroll-loops -funroll-all-loops"
+filter-flags "-fno-default-inline"
+filter-flags "-funroll-loops"
+filter-flags "-funroll-all-loops"
 
 src_compile() {
 	local myconf
