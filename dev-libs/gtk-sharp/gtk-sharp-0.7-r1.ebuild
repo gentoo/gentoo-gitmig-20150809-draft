@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gtk-sharp/gtk-sharp-0.7-r1.ebuild,v 1.1 2003/02/20 16:53:33 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gtk-sharp/gtk-sharp-0.7-r1.ebuild,v 1.2 2003/02/20 17:00:00 foser Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gtk# is a C# language binding for the GTK2 toolkit."
@@ -19,14 +19,27 @@ DEPEND=">=dev-lang/mono-0.16
 
 KEYWORDS="~x86 -ppc"
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
 
+	# disable building of samples (#16015)
+	cd ${S}
+	mv makefile makefile.old
+	sed -e "s:sample::" makefile.old > makefile
+	mv configure.in configure.in.old
+	sed -e "s:sample/Makefile::" configure.in.old > configure.in
+}
+
+src_compile() {
 	local myconf
 	myconf="--enable-glade"
 
 	use gnome \
 		&& myconf="${myconf} --enable-gnome" \
 		|| myconf="${myconf} --disable-gnome"
+
+	# disable samples
+	./autogen.sh
 
 	econf ${myconf} || die "./configure failed"
 
