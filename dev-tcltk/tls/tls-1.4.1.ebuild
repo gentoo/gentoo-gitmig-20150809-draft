@@ -1,6 +1,6 @@
-# Copyright 2003 Arcady Genkin <agenkin@gentoo.org>
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tls/tls-1.4.1.ebuild,v 1.3 2003/08/07 03:26:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tls/tls-1.4.1.ebuild,v 1.4 2003/09/29 21:21:13 mholzer Exp $
 
 DESCRIPTION="TLS OpenSSL extension to Tcl."
 HOMEPAGE="http://tls.sourceforge.net/"

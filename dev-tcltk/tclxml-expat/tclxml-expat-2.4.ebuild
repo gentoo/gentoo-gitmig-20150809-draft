@@ -1,6 +1,6 @@
-# Copyright 2003 Arcady Genkin <agenkin@gentoo.org>
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml-expat/tclxml-expat-2.4.ebuild,v 1.5 2003/08/07 03:22:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml-expat/tclxml-expat-2.4.ebuild,v 1.6 2003/09/29 21:17:40 mholzer Exp $
 
 DESCRIPTION="Tcl wrapper libraries for expat XML parser."
 HOMEPAGE="http://tclxml.sourceforge.net/"
