@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/unicon/unicon-3.0.4.ebuild,v 1.4 2004/04/26 15:59:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/unicon/unicon-3.0.4.ebuild,v 1.5 2004/06/21 17:28:06 usata Exp $
 
 inherit eutils
 
@@ -23,26 +23,21 @@ DEPEND="virtual/kernel
 	dev-libs/newt
 	dev-libs/pth"
 
-S=${WORKDIR}/${P}
-
-MAKEOPTS="${MAKEOPTS} -j1"
-
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	einfo "Applying unicon-3.0.4-debian.patch"
-	patch -p1 < ${FILESDIR}/unicon-3.0.4-debian.patch || die "Failed applying debian patch"
+	epatch ${FILESDIR}/unicon-3.0.4-debian.patch
 	epatch ${FILESDIR}/unicon-3.0.4-gentoo.patch
 }
 
 src_compile() {
 	econf || die "econf failed"
 
-	make || die "make failed"
-	make data || die "make data failed"
+	emake -j1 || die "make failed"
+	emake data -j1 || die "make data failed"
 
 	cd ${S}/tools
-	make || die "make tools failed"
+	emake -j1 || die "make tools failed"
 
 	# still has gcc-3.2 issues
 	# make -C sfonts/tools || die "make tools failed"
