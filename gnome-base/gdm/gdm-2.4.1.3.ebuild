@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.1.3.ebuild,v 1.4 2003/02/22 04:57:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.1.3.ebuild,v 1.5 2003/03/16 23:15:17 mholzer Exp $
 
 inherit eutils gnome.org
 
@@ -139,7 +139,7 @@ src_install() {
 	# Move Gentoo theme in
 	mv ${WORKDIR}/gentoo-emergence  ${D}/usr/share/gdm/themes
 	
-	dodoc ABOUT-NLS AUTHORS COPYING ChangeLog INSTALL NEWS README* TODO
+	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README* TODO
 }
 
 pkg_preinst() {
