@@ -692,6 +692,7 @@ dev-libs/libmrproject
 >=net-irc/xchat-20020519
 >=dev-util/glade-1.1.0
 >=gnome-base/gdm-2.3.90.3
+>=dev-util/gob-1.99.3
 
 
 # at-spi doesn't install all headers so libgail-gnome doesn't build ok.
