@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-0.3.16.ebuild,v 1.7 2004/07/31 02:13:46 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpgme/gpgme-0.3.16.ebuild,v 1.8 2004/08/27 13:57:59 dragonheart Exp $
 
 DESCRIPTION="GnuPG Made Easy is a library for making GnuPG easier to use"
 HOMEPAGE="http://www.gnupg.org/gpgme.html"
@@ -15,7 +15,8 @@ DEPEND=">=sys-libs/zlib-1.1.3
 	>=app-crypt/gnupg-1.0.7
 	sys-apps/gawk
 	sys-devel/libtool
-	sys-devel/gcc"
+	sys-devel/gcc
+	!>=app-crypt/gpgme-0.9"
 
 RDEPEND="nls? ( sys-devel/gettext )"
 
