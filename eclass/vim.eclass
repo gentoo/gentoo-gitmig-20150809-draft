@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.71 2004/09/19 23:32:32 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.72 2004/09/20 17:12:01 usata Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -52,7 +52,7 @@ if [[ "${MY_PN}" != "vim-core" ]] ; then
 		python?  ( dev-lang/python )
 		selinux? ( sys-libs/libselinux )
 		acl?     ( sys-apps/acl )
-		ruby?    ( dev-lang/ruby )"
+		ruby?    ( virtual/ruby )"
 	RDEPEND="$RDEPEND
 		cscope?  ( dev-util/cscope )
 		gpm?     ( >=sys-libs/gpm-1.19.3 )
@@ -60,7 +60,7 @@ if [[ "${MY_PN}" != "vim-core" ]] ; then
 		python?  ( dev-lang/python )
 		selinux? ( sys-libs/libselinux )
 		acl?     ( sys-apps/acl )
-		ruby?    ( dev-lang/ruby )"
+		ruby?    ( virtual/ruby )"
 
 	if [[ "${MY_PN}" == "vim" ]] ; then
 		IUSE="$IUSE vim-with-x minimal"
