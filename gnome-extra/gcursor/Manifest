@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b04b646d250d699e680072a19c0a7179 ChangeLog 645
+MD5 f83a90b393c5dd74b9d8309692eb1bcc gcursor-0.061.ebuild 702
+MD5 f6a238e70d84c10b219fe15a6737b634 ChangeLog 785
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 d0988ba484463ac5a72d031e3a02bdaf gcursor-0.06.ebuild 704
+MD5 b0e0affc8252e7b3f8340b975d44ac9e files/digest-gcursor-0.061 65
 MD5 98e3894dbecb7b2171e6ac19bd62e804 files/digest-gcursor-0.06 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBYXtKCHk4+ZoBpvsRAhUFAJ4tcImbkRWtQ8VPRxAcD5Df/o9esgCgoFhW
-n4603ev42aTIEi6BVeFNDAo=
-=elHF
------END PGP SIGNATURE-----

@@ -1,6 +1,11 @@
 # ChangeLog for gnome-extra/gcursor
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcursor/ChangeLog,v 1.3 2004/10/04 16:32:48 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcursor/ChangeLog,v 1.4 2004/11/05 02:31:34 obz Exp $
+
+*gcursor-0.061 (05 Nov 2004)
+
+  05 Nov 2004; Mike Gardiner <obz@gentoo.org> +gcursor-0.061.ebuild:
+  Version bump, as requested in bug #62241
 
   04 Oct 2004; Tom Martin <slarti@gentoo.org> gcursor-0.06.ebuild:
   Marked ~amd64, resolves #60260. Thanks to Christophe Jouny <cjouny@jhmi.edu>
