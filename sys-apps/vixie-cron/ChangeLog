@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/vixie-cron
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/ChangeLog,v 1.55 2005/02/15 14:04:00 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/ChangeLog,v 1.56 2005/02/23 11:17:41 ka0ttic Exp $
+
+*vixie-cron-4.1-r6 (23 Feb 2005)
+
+  23 Feb 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/vixie-cron-4.1-basename.diff, -vixie-cron-4.1-r5.ebuild,
+  +vixie-cron-4.1-r6.ebuild:
+  Patch vixie to use basename(argv[0]) instead of argv[0] for bug 82057.
+  Thanks to Colin Kingsley for the patch.
 
   15 Feb 2005; Aaron Walker <ka0ttic@gentoo.org> vixie-cron-4.1-r5.ebuild:
   Fix dopamd invocation since the semantics were changed.

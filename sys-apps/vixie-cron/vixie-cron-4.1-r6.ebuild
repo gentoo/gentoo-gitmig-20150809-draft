@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/vixie-cron-4.1-r5.ebuild,v 1.3 2005/02/19 17:54:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/vixie-cron/vixie-cron-4.1-r6.ebuild,v 1.1 2005/02/23 11:17:41 ka0ttic Exp $
 
 inherit cron toolchain-funcs debug
 
@@ -32,6 +32,7 @@ src_unpack() {
 	epatch ${WORKDIR}/${P}-gentoo-${GENTOO_PATCH_REV}.patch
 	epatch ${FILESDIR}/crontab.5.diff
 	epatch ${FILESDIR}/${P}-commandline.patch
+	epatch ${FILESDIR}/${P}-basename.diff
 
 	use pam && epatch ${FILESDIR}/${P}-pam.patch
 	use selinux && epatch ${FILESDIR}/${SELINUX_PATCH}
