@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-1.3.12.ebuild,v 1.18 2004/06/25 00:24:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-1.3.12.ebuild,v 1.19 2004/07/24 06:26:27 eradicator Exp $
 
 IUSE="tcpd"
 
@@ -71,5 +71,5 @@ src_install() {
 	insinto /etc ; doins etc/ypserv.conf
 
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/ypserv-initd ypserv
+	newexe ${FILESDIR}/ypserv ypserv
 }

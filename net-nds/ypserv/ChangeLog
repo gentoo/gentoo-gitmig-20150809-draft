@@ -1,6 +1,13 @@
 # ChangeLog for net-nds/ypserv
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ChangeLog,v 1.18 2004/06/25 00:24:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ChangeLog,v 1.19 2004/07/24 06:26:27 eradicator Exp $
+
+  23 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  files/rpc.yppasswdd-r1, files/rpc.ypxfrd, +files/rpc.ypxfrd.confd,
+  +files/ypserv, files/ypserv.confd, -files/ypserv.rc, -ypserv-2.5.ebuild:
+  Add conf.d options to set command line options (bug #38219). init script
+  depends on domainname rather than having it set in two places. Marking latest
+  ebuild stable on amd64 and x86. Removing old ebuilds.
 
   11 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
   files/rpc.yppasswdd-r1, ypserv-2.13-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-2.8.ebuild,v 1.12 2004/06/25 00:24:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-2.8.ebuild,v 1.13 2004/07/24 06:26:28 eradicator Exp $
 
 DESCRIPTION="Network Information Service server"
 SRC_URI="mirror://kernel/linux/utils/net/NIS/${P}.tar.gz"
@@ -31,7 +31,7 @@ src_install() {
 	newins ${FILESDIR}/ypserv.confd ypserv
 
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/ypserv.rc ypserv
+	newexe ${FILESDIR}/ypserv ypserv
 	newexe ${FILESDIR}/rpc.yppasswdd rpc.yppasswdd
 	newexe ${FILESDIR}/rpc.ypxfrd rpc.ypxfrd
 
