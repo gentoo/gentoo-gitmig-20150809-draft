@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.170 2004/08/23 15:15:16 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.171 2004/09/09 21:12:31 eradicator Exp $
+
+  09 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> qt-3.3.3.ebuild:
+  get_libdir updates. Fix multilib support on amd64. libqt.so is now created on
+  amd64.
 
   23 Aug 2004; psi29a <psi29a@gentoo.org> qt-3.3.3.ebuild:
   Removed mips patch, as it is no longer necessary with > 3.2.x and marked

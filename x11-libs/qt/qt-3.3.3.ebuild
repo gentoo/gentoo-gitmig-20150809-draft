@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.3.ebuild,v 1.12 2004/08/23 15:15:16 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.3.ebuild,v 1.13 2004/09/09 21:12:31 eradicator Exp $
 
 inherit eutils
 
@@ -93,7 +93,7 @@ src_compile() {
 
 	use nas		&& myconf="${myconf} -system-nas-sound"
 	use gif		&& myconf="${myconf} -qt-gif"
-	use mysql	&& myconf="${myconf} -plugin-sql-mysql -I/usr/include/mysql -L/usr/lib/mysql" || myconf="${myconf} -no-sql-mysql"
+	use mysql	&& myconf="${myconf} -plugin-sql-mysql -I/usr/include/mysql -L/usr/$(get_libdir)/mysql" || myconf="${myconf} -no-sql-mysql"
 	use postgres	&& myconf="${myconf} -plugin-sql-psql -I/usr/include/postgresql/server -I/usr/include/postgresql/pgsql -I/usr/include/postgresql/pgsql/server" || myconf="${myconf} -no-sql-psql"
 	use firebird    && myconf="${myconf} -plugin-sql-ibase" || myconf="${myconf} -no-sql-ibase"
 	use sqlite	&& myconf="${myconf} -plugin-sql-sqlite" || myconf="${myconf} -no-sql-sqlite"
@@ -118,10 +118,18 @@ src_compile() {
 	export QTDIR=${S}
 
 	emake src-qmake src-moc sub-src || die
-	LD_LIBRARY_PATH="${S}/lib:${LD_LIBRARY_PATH}" emake sub-tools || die
+	LD_LIBRARY_PATH="${S}/$(get_libdir):${LD_LIBRARY_PATH}" emake sub-tools || die
 }
 
 src_install() {
+	# needed to fix lib64 issues on amd64, see bug #45669
+	# It would be better to have lib -> lib64, but other libs might be
+	# installed in ${QTBASE}/lib which is not currently a symlink...
+	if use amd64; then
+		dodir ${QTBASE}/lib
+		dosym lib ${QTBASE}/lib64
+	fi
+
 	export QTDIR=${S}
 
 	# binaries
@@ -133,7 +141,7 @@ src_install() {
 	dolib lib/libqt-mt.so.3.3.3 lib/libqui.so.1.0.0
 	dolib lib/lib{editor,qassistantclient,designercore}.a lib/libqt-mt.la
 
-	cd ${D}/$QTBASE/lib
+	cd ${D}/$QTBASE/$(get_libdir)
 	for x in libqui.so ; do
 		ln -s $x.1.0.0 $x.1.0
 		ln -s $x.1.0 $x.1
@@ -212,7 +220,4 @@ src_install() {
 		insinto ${QTBASE}/`dirname $x`
 		doins $x
 	done
-
-	# needed to fix lib64 issues on amd64, see bug #45669
-	use amd64 && ln -s ${QTBASE}/lib ${D}/${QTBASE}/lib64
 }
