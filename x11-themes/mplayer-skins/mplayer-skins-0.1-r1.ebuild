@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mplayer-skins/mplayer-skins-0.1-r1.ebuild,v 1.1 2003/03/25 03:18:57 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mplayer-skins/mplayer-skins-0.1-r1.ebuild,v 1.2 2003/03/27 11:46:31 seemant Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Collection of mplayer themes"
@@ -29,7 +29,7 @@ SRC_URI="${THEME_URI}/AlienMind-1.0.tar.bz2
 #	${THEME_URI}/default-1.7.tar.bz2
 
 SLOT="0"
-LICENSE="Freeware"
+LICENSE="freedist"
 KEYWORDS="x86 ppc sparc alpha"
 
 DEPEND="net-misc/wget"
