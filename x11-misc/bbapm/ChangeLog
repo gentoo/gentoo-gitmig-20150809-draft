@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/bbapm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbapm/ChangeLog,v 1.3 2002/12/09 04:41:49 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbapm/ChangeLog,v 1.4 2002/12/12 17:47:30 mkeadle Exp $
+
+*bbapm-0.0.1-r3 (12 Dec 2002)
+
+  12 Dec 2002; Matt Keadle <mkeadle@gentoo.org> bbapm-0.0.1-r3.ebuild
+  files/digest-bbapm-0.0.1-r3 files/bbapm-0.0.1-gcc3.patch
+
+  Patch created to successfuly build on gcc3.x systems.
 
 \* Autoupdate keywords (12-6-02)
   06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
