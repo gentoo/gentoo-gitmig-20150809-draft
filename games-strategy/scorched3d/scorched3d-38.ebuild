@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-38.ebuild,v 1.2 2004/12/06 08:41:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-38.ebuild,v 1.3 2004/12/09 06:15:28 mr_bones_ Exp $
 
 inherit wxwidgets games
 
@@ -24,15 +24,20 @@ DEPEND=">=media-libs/libsdl-1.0.1
 S="${WORKDIR}/scorched"
 
 pkg_setup() {
-	if ! use gtk2; then
-		need-wxwidgets gtk || die "No gtk1 version of x11-libs/wxGTK found"
-	else
+	if use gtk2; then
 		need-wxwidgets gtk2 || die "You need to emerge wxGTK with USE='gtk2'"
+	else
+		need-wxwidgets gtk || die "No gtk1 version of x11-libs/wxGTK found"
 	fi
 	games_pkg_setup
 }
 
 src_compile() {
+	if use gtk2; then
+		need-wxwidgets gtk2 || die "You need to emerge wxGTK with USE='gtk2'"
+	else
+		need-wxwidgets gtk || die "No gtk1 version of x11-libs/wxGTK found"
+	fi
 	egamesconf \
 		--disable-dependency-tracking \
 		--exec_prefix="${GAMES_PREFIX}" \
