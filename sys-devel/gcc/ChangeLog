@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.94 2003/04/28 03:06:00 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.95 2003/04/29 20:32:43 azarah Exp $
+
+*gcc-3.2.3-r1 (29 Apr 2003)
+
+  29 Apr 2003; Martin Schlemmer <azarah@gentoo.org> gcc-3.2.3-r1.ebuild :
+  Manpages gets regenerated, and as we do not have perl at bootstrap, we need
+  to use a tarball with updated manpages again.  Also fix the build to gzip
+  manpages and info pages.  Fix the build to actually remove man/info pages
+  if 'build' in USE .. this got broken during the gcc-config changes.
 
 *gcc-3.2.3 (28 Apr 2003)
 
