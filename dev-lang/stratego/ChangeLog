@@ -1,13 +1,19 @@
 # ChangeLog for dev-lang/stratego
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/stratego/ChangeLog,v 1.3 2002/11/02 12:24:19 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/stratego/ChangeLog,v 1.4 2002/11/02 12:35:06 karltk Exp $
 
 *stratego-0.8.1 (20 Oct 2002)
 
   20 Oct 2002; Karl Trygve Kalleberg <karltk@gentoo.org> stratego-0.8.1.ebuild files/digest-stratego-0.8.1 :
   New upstream version.
 
+  02 Nov 2002; Karl Trygve Kalleberg <karltk@gentoo.org> stratego-0.8.1.ebuild :
+  Fixed sandbox violation. 
+
 *stratego-0.8 (20 Oct 2002)
+
+  02 Nov 2002; Karl Trygve Kalleberg <karltk@gentoo.org> stratego-0.8.ebuild :
+  Fixed sandbox violation. 
 
   20 Oct 2002; Karl Trygve Kalleberg <karltk@gentoo.org> stratego-0.8.ebuild files/digest-stratego-0.8 :
   New upstream version.
