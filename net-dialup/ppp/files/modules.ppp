@@ -5,3 +5,4 @@ alias tty-ldisc-14	ppp_synctty
 alias ppp-compress-21	bsd_comp
 alias ppp-compress-24	ppp_deflate
 alias ppp-compress-26	ppp_deflate
+alias net-pf-24		pppoe
