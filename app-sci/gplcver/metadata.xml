@@ -1,0 +1,8 @@
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer>
+          <email>chrb@gentoo.org</email>
+          <name>Chris Bainbridge</name>
+  </maintainer>
+  <longdescription>Verilog simulator</longdescription>
+</pkgmetadata>
