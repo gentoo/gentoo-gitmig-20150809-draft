@@ -1,3 +1,13 @@
-MD5 d54fc70c6ec75d4069926ae4a4561769 ChangeLog 1144
-MD5 e43fb7bbb6e6bb987f006248f5bb662d usbview-1.0-r1.ebuild 638
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4cde5e1eebe1f82a43a1c517f4b381f0 ChangeLog 1253
+MD5 bde634b0f2d00e6df282e99cd379243e usbview-1.0-r1.ebuild 644
 MD5 df63a1e8011f281dcbde1e693cb32f35 files/digest-usbview-1.0-r1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCSwNGugEuf3OQ0akRAtDNAKCgr377jkb1STLHJdPp+NVOG+4t1wCePY0H
+ZmdPy0cE7A+scowWVHrkfHQ=
+=hulE
+-----END PGP SIGNATURE-----
