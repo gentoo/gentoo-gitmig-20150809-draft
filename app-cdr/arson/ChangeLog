@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/arson
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/ChangeLog,v 1.12 2003/02/12 03:04:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/ChangeLog,v 1.13 2003/03/19 10:43:33 danarmak Exp $
+
+  19 Mar 2003; Dan Armak <danarmak@gentoo.org> : arson-0.9.7-r1.ebuild:
+  
+  Added x86 keyword.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
