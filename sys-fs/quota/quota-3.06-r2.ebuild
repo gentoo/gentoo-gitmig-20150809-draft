@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/quota-3.06-r2.ebuild,v 1.1 2004/10/03 10:28:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/quota/quota-3.06-r2.ebuild,v 1.2 2005/01/03 00:11:56 ciaranm Exp $
 
 inherit eutils
 

@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/mtools
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/ChangeLog,v 1.10 2004/12/26 12:11:26 corsair Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/mtools/ChangeLog,v 1.11 2005/01/03 00:11:18 ciaranm Exp $
+
+  03 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   26 Dec 2004; Markus Rothe <corsair@gentoo.org> mtools-3.9.9.ebuild:
   Added ~ppc64 to KEYWORDS
@@ -12,7 +15,7 @@
   mtools-3.9.9.ebuild:
   Masked mtools-3.9.9.ebuild stable for ppc
 
-  16 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> mtools-3.9.9.ebuild:
+  16 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> mtools-3.9.9.ebuild:
   Stable on alpha.
 
   15 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org> mtools-3.9.9.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.35.ebuild,v 1.17 2004/11/12 03:21:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/e2fsprogs-1.35.ebuild,v 1.18 2005/01/03 00:10:40 ciaranm Exp $
 
 inherit eutils flag-o-matic gnuconfig
 

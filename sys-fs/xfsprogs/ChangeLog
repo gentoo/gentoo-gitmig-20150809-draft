@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/xfsprogs
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.26 2004/12/14 15:51:49 absinthe Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsprogs/ChangeLog,v 1.27 2005/01/03 00:13:04 ciaranm Exp $
+
+  03 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   14 Dec 2004; Dylan Carlson <absinthe@gentoo.org> xfsprogs-2.6.25.ebuild:
   Stable on amd64.
@@ -30,7 +33,7 @@
   xfsprogs-2.3.9.ebuild:
   Masked xfsprogs-2.3.9.ebuild stable for ppc
 
-  23 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> xfsprogs-2.6.13.ebuild:
+  23 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> xfsprogs-2.6.13.ebuild:
   Stable on alpha.
 
   21 Aug 2004; Joshua Kinard <kumba@gentoo.org> xfsprogs-2.6.13.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/dosfstools
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/ChangeLog,v 1.19 2004/09/03 19:16:58 pvdabeel Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/dosfstools/ChangeLog,v 1.20 2005/01/03 00:09:22 ciaranm Exp $
+
+  03 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   dosfstools-2.9.ebuild:
@@ -15,7 +18,7 @@
   dosfstools-2.10-r1.ebuild:
   Stable on sparc
 
-  07 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> dosfstools-2.10-r1.ebuild:
+  07 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> dosfstools-2.10-r1.ebuild:
   Stable on alpha.
 
   04 Jul 2004; Ian Leitch <port001@gentoo.org> dosfstools-2.10-r1.ebuild:
