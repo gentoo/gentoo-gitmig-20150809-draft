@@ -1,6 +1,11 @@
 # ChangeLog for app-pda/gnome-pilot-conduits
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot-conduits/ChangeLog,v 1.8 2004/07/02 19:14:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot-conduits/ChangeLog,v 1.9 2004/07/24 20:16:27 liquidx Exp $
+
+  24 Jul 2004; Alastair Tse <liquidx@gentoo.org>
+  gnome-pilot-conduits-0.9.ebuild, gnome-pilot-conduits-2.0.10-r1.ebuild,
+  -gnome-pilot-conduits-2.0.8.ebuild, -gnome-pilot-conduits-2.0.9.ebuild:
+  fix SRC_URI (#56769)
 
   02 Jul 2004; Aron Griffis <agriffis@gentoo.org>
   gnome-pilot-conduits-2.0.10-r1.ebuild:

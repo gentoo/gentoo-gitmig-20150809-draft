@@ -1,6 +1,10 @@
 # ChangeLog for app-pda/gnome-pilot
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.13 2004/07/12 18:59:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/ChangeLog,v 1.14 2004/07/24 20:21:10 liquidx Exp $
+
+  24 Jul 2004; Alastair Tse <liquidx@gentoo.org> gnome-pilot-2.0.10-r1.ebuild,
+  -gnome-pilot-2.0.9.ebuild:
+  fix SRC_URI (#56769)
 
   12 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   +files/gnome-pilot-2.0.10-gcc34.patch:

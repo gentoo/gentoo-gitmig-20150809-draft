@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-2.0.10-r1.ebuild,v 1.10 2004/07/12 18:59:03 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-pda/gnome-pilot/gnome-pilot-2.0.10-r1.ebuild,v 1.11 2004/07/24 20:21:10 liquidx Exp $
 
 inherit gnome2 eutils
 
 DESCRIPTION="Gnome Pilot apps"
-HOMEPAGE="http://www.gnome.org/gnome-pilot/"
+HOMEPAGE="http://www.gnome.org/projects/gnome-pilot/"
 
 IUSE=""
 SLOT="0"
