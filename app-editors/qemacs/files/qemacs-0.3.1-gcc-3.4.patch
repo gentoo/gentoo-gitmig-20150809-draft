@@ -4,7 +4,7 @@
              *q++ = l1;
              i++;
          found:
-+	    ;
++	     break;
          }
      }
      return q - buf_out;

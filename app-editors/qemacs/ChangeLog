@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/qemacs
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.13 2005/03/06 02:49:03 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.14 2005/03/17 13:46:43 josejx Exp $
+
+  17 Mar 2005; Joseph Jezak <josejx@gentoo.org>
+  files/qemacs-0.3.1-gcc-3.4.patch, +files/qemacs-ppc-segfault.patch,
+  qemacs-0.3.1.ebuild, qemacs-0.3.1-r1.ebuild:
+  Added workaround to prevent segfaults on ppc.
 
   06 Mar 2005; Joseph Jezak <josejx@gentoo.org>
   +files/qemacs-0.3.1-gcc-3.4.patch, qemacs-0.3.1-r1.ebuild,

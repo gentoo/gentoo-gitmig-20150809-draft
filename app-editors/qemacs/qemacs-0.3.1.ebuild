@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/qemacs-0.3.1.ebuild,v 1.15 2005/03/06 02:49:03 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/qemacs-0.3.1.ebuild,v 1.16 2005/03/17 13:46:43 josejx Exp $
 
 inherit eutils
 
@@ -22,6 +22,9 @@ src_unpack() {
 	epatch ${FILESDIR}/qemacs-Makefile-gentoo.patch
 	epatch ${FILESDIR}/qemacs-${PV}-configure-gentoo.patch
 	epatch ${FILESDIR}/${P}-gcc-3.4.patch
+	if use ppc; then
+		epatch ${FILESDIR}/${PN}-ppc-segfault.patch
+	fi
 	use unicode && epatch ${FILESDIR}/${P}-tty_utf8.patch
 }
 
