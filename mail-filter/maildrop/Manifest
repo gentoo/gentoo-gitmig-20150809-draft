@@ -10,8 +10,9 @@ MD5 e02bab1f875ba079e6e5d2ad5d267851 maildrop-1.8.0.ebuild 3322
 MD5 288de83476470795423e4631cb9c6abf maildrop-1.5.3.ebuild 2508
 MD5 e42d4d7c6fe30f0bef7229527f2da340 maildrop-1.7.0-r2.ebuild 3296
 MD5 d7d4dcd6aaeea931bfcdfb353611c171 maildrop-1.5.3-r1.ebuild 2432
-MD5 18bdca8f68f1e764420e31c19cbe30a4 ChangeLog 8644
+MD5 85dd3182b93a09b4e547d28daeb2c860 ChangeLog 8838
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 8a32128755e871bc9134651be6f208a1 maildrop-1.8.0-r2.ebuild 3177
 MD5 88b7f06e9f2d03007db22e431920e29c maildrop-1.7.0.20040907-r1.ebuild 3246
 MD5 be89a292c7c2bd4365fd160f4db22fb9 files/digest-maildrop-1.7.0.20040907 77
 MD5 a0e238f4cd5c4a52dfb06754051b6dfe files/digest-maildrop-1.5.2 67
@@ -24,6 +25,7 @@ MD5 afbd9f7ee066fa84ac9efd57bce9f461 files/digest-maildrop-1.5.3-r1 67
 MD5 5db4117db5eca1f36f1778625e85d190 files/digest-maildrop-1.7.0-r2 68
 MD5 72eeead0d2cb72de0ee2571af5c63bd5 files/maildrop-1.7.0-db4-configure.in.patch 1290
 MD5 eb7acda28529a85c74150a140f143d75 files/digest-maildrop-1.8.0-r1 68
+MD5 eb7acda28529a85c74150a140f143d75 files/digest-maildrop-1.8.0-r2 68
 MD5 c9c1f6d4020a5fd19162f20c537eb5cf files/maildroprc 58
 MD5 54e776919d1cd1729e5c6c1f27c40444 files/maildrop-1.7.0-0x0B-fix.patch 525
 MD5 532cc225eb7ae73b01639168857445be files/maildrop-1.7.0-db4-bdbobj_configure.in.patch 1211
@@ -31,7 +33,7 @@ MD5 2f8014fea76e32d9bb682d00ee5ce7c7 files/maildrop-1.8.0-db4.patch 2501
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCD1PmViELBEf1JB0RAoFvAKCFUhIDIlxyb6x/82xrvw5i5AcxAACcDj7o
-Eo9TpGzf5pSq2rWEqj6yM0Y=
-=7DkY
+iD8DBQFCEw7hViELBEf1JB0RAhaNAJ95Vvn/SjY568T2rVWmTX/8PbWKEACfbYNv
+5bweUrbXrNWV9hCE/pCP3e4=
+=tYsv
 -----END PGP SIGNATURE-----
