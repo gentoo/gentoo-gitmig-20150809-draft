@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/guitoo
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/guitoo/ChangeLog,v 1.2 2004/11/25 10:19:14 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/guitoo/ChangeLog,v 1.3 2004/11/29 01:02:03 pylon Exp $
+
+  29 Nov 2004; Lars Weiler <pylon@gentoo.org> guitoo-0.50.01.ebuild:
+  Added ~ppc to keywords.
 
 *guitoo-0.50.01 (25 Nov 2004)
 
