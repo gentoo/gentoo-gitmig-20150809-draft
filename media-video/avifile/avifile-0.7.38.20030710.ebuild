@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.38.20030710.ebuild,v 1.16 2004/05/04 03:58:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.38.20030710.ebuild,v 1.17 2004/05/29 21:03:28 lv Exp $
 
 inherit eutils
 
@@ -49,6 +49,7 @@ src_unpack() {
 	use amd64 && epatch ${FILESDIR}/${P}-amd64.patch
 	use sparc && epatch ${FILESDIR}/${P}-sparc.patch
 	epatch ${FILESDIR}/avifile-gcc34.patch
+	epatch ${FILESDIR}/avifile-x86-gcc34.patch
 }
 
 src_compile() {

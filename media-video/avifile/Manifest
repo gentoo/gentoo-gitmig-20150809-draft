@@ -1,6 +1,6 @@
-MD5 c066dced2996736ab183ee7432980764 avifile-0.7.38.20030710.ebuild 4451
+MD5 874d94167e32e7d66d353755fc9cfada avifile-0.7.38.20030710.ebuild 4487
 MD5 2b031ce54f8c05dfbfa9a541893ef858 avifile-0.7.32.20030219.ebuild 4069
-MD5 4c4a016a74299ad167823a0f9e077182 ChangeLog 12080
+MD5 abcbf19ac2ffc39cd3ce1ea7f5c924df ChangeLog 12226
 MD5 76b95bd390c69f39e5e7b028b3ff69a5 metadata.xml 272
 MD5 07d4fda440558b645a9288d47cb90fdb avifile-0.7.37.20030522-r2.ebuild 4439
 MD5 8390bf9de24635d667a5724c2cc0cbe9 files/avifile-0.7.37.20030522-divx.patch 11943
@@ -9,6 +9,7 @@ MD5 88eda2a3289907201d524c557bd8a753 files/digest-avifile-0.7.32.20030219 73
 MD5 7a55e6cb72df715c9b822505d5b4b8b0 files/avifile-0.7.38.20030710-2.6.patch 2038
 MD5 624ac61f6a4fb9ed9700a7496f2827cb files/avifile-0.7.38.20030710-amd64.patch 466
 MD5 5c7a3ea4957036aa1da3db9880a3ed34 files/flvenc-patch 558
+MD5 f2e5938361909893d37d1ce0b80fdbfc files/avifile-x86-gcc34.patch 5247
 MD5 769b5c63369a3c1bc5b74abe591731fd files/avifile-0.7.38.20030710-sparc.patch 998
 MD5 21e60c1838b04fa1990fe5538569ac4b files/digest-avifile-0.7.38.20030710 71
 MD5 69d7c84947a5ea083f25e43fdacc126e files/avifile-gcc34.patch 5795
