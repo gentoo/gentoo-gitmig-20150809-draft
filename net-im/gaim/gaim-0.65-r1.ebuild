@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.65-r1.ebuild,v 1.3 2003/07/18 09:41:27 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.65-r1.ebuild,v 1.4 2003/07/18 16:08:04 lostlogic Exp $
 
 IUSE="nls perl spell nas ssl cjk"
 
@@ -18,7 +18,7 @@ DEPEND="=sys-libs/db-1*
 	>=x11-libs/gtk+-2.0
 	>=dev-libs/glib-2.0
 	nas? ( >=media-libs/nas-1.4.1-r1 )
-	nls? ( sys-devel/gettext )
+	sys-devel/gettext
 	media-libs/libao
 	>=media-libs/audiofile-0.2.0
 	perl? ( >=dev-lang/perl-5.6.1 )
@@ -57,7 +57,7 @@ src_compile() {
 	use nas && myconf="${myconf} --enable-nas" || myconf="${myconf} --disable-nas"
 
 	econf ${myconf} || die "Configuration failed"
-	emake || make || die "Make failed"
+	emake || MAKEOPTS="${MAKEOPTS} -j1" emake || die "Make failed"
 }
 
 src_install() {
