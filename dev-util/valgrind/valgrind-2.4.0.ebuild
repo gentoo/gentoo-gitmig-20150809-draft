@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-2.4.0.ebuild,v 1.2 2005/03/24 20:36:45 griffon26 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/valgrind/valgrind-2.4.0.ebuild,v 1.3 2005/03/28 20:35:48 griffon26 Exp $
 
 inherit flag-o-matic eutils
 
@@ -25,7 +25,7 @@ src_unpack() {
 
 	# make sure our CFLAGS are respected
 	einfo "Changing configure to respect CFLAGS"
-	sed -i -e 's:CFLAGS="":#CFLAGS="":' configure
+	sed -i -e 's:CFLAGS="-Wno-long-long":CFLAGS="$CFLAGS -Wno-long-long":' configure
 }
 
 src_compile() {

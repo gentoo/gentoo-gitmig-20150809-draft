@@ -3,7 +3,7 @@ Hash: SHA1
 
 MD5 799f0b61a3a686b4074bd61acc572c5c metadata.xml 1003
 MD5 4871b943d694b8d009f993c244356257 valgrind-2.2.0-r1.ebuild 1428
-MD5 d62cfa1bd2859603addd997549a1f0ee valgrind-2.4.0.ebuild 1264
+MD5 c2926988d7ba99963e8bc2e37dbb97ce valgrind-2.4.0.ebuild 1299
 MD5 be4e2e968179239e51aafd78be4d95af valgrind-2.0.0.ebuild 1172
 MD5 e6dc16df8e136f735bc577092f7b6383 valgrind-2.1.0.ebuild 1017
 MD5 7e4a680daca3ed212226f6364c958420 valgrind-2.1.1-r1.ebuild 1143
@@ -11,7 +11,7 @@ MD5 07f48be25380e77aa5a44fec2b408998 valgrind-2.1.1.ebuild 925
 MD5 b99a507d5351da63d87c61f3fe0072ad valgrind-2.1.2.ebuild 1101
 MD5 2371f70b5ed5e88767cade219fd7cc65 valgrind-2.2.0.ebuild 1388
 MD5 9c6171e63f2c500b26cd6c2dd98d42e8 valgrind-2.2.0-r2.ebuild 1716
-MD5 6d6641bc1262b3b37770ef33d60efacd ChangeLog 3392
+MD5 e579e33b2417be36980c695231f1e075 ChangeLog 3598
 MD5 286d10f4514e8a85360ce6ba5654ae93 files/digest-valgrind-2.0.0 67
 MD5 a69fe5652a8ca5fb1d04521fe0c56850 files/digest-valgrind-2.1.0 138
 MD5 f50184c09d0376e66b1b79d0b45e94c2 files/digest-valgrind-2.1.1 67
@@ -29,7 +29,7 @@ MD5 e2dec812b00ae7d80e570dc0922ed676 files/digest-valgrind-2.4.0 68
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCQybeMGnpIbeahxwRAmHuAJ0fgEg6b27snEewGxrazoG+AhBdOACgg2tV
-H52RI/vbC6P8YbyFWV2A9gs=
-=wauV
+iD8DBQFCSGq+MGnpIbeahxwRAkMTAJ0d1QFP6SxL7lUUF3wBq+/syCS+GgCfTLHs
+hFeJyyEiiCkSNkca+CwzO/8=
+=2LgB
 -----END PGP SIGNATURE-----
