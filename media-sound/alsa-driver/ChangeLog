@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.59 2003/10/27 14:36:16 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.60 2003/11/26 16:38:57 mholzer Exp $
+
+  26 Nov 2003; Martin Holzer <mholzer@gentoo.org> alsa-driver-0.9.8.ebuild:
+  marked x86 stable.
 
   27 Oct 2003; Martin Holzer <mholzer@gentoo.org> alsa-driver-0.9.8.ebuild:
   Changing SLOT to KV.
