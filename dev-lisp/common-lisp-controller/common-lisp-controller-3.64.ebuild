@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/common-lisp-controller/common-lisp-controller-3.64.ebuild,v 1.2 2003/06/07 19:49:17 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/common-lisp-controller/common-lisp-controller-3.64.ebuild,v 1.3 2003/06/10 20:43:32 mkennedy Exp $
 
 DESCRIPTION="Common Lisp Controller"
 HOMEPAGE="http://packages.debian.org/unstable/devel/common-lisp-controller.html"
@@ -11,7 +11,8 @@ KEYWORDS="~x86"
 IUSE=""
 DEPEND="netkit-base
 	dev-lisp/cl-defsystem3
-	dev-lisp/cl-asdf"
+	dev-lisp/cl-asdf
+	app-admin/realpath"
 
 src_compile() {
 	make || die
