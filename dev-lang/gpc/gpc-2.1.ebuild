@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# /space/gentoo/cvsroot/gentoo-x86/dev-lang/gpc/gpc-20020410-r1.ebuild,v 1.2 2002/04/27 23:08:36 bangert Exp
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-2.1.ebuild,v 1.4 2002/07/22 08:02:59 george Exp $
 
 S="${WORKDIR}/gcc-2.95.3"
 

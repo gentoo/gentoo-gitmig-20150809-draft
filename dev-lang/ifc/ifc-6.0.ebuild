@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-6.0.ebuild,v 1.2 2002/07/11 06:30:20 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-6.0.ebuild,v 1.3 2002/07/22 08:03:00 george Exp $
 
 S=${WORKDIR}
 
@@ -17,6 +17,9 @@ HOMEPAGE="http://www.intel.com/software/products/compilers/f60l/"
 
 # The ifc-6 license is the same copy with minimal name changes.
 LICENSE="icc-6.0"
+LOT="0"
+KEYWORDS="x86"
+
 
 DEPEND=">=virtual/linux-sources-2.4
 		>=sys-libs/glibc-2.2.2
