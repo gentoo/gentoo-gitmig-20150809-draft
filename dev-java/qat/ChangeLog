@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/qat
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/qat/ChangeLog,v 1.6 2004/10/06 22:12:55 axxo Exp $
+
+*qat-2.7.1-r1 (07 Oct 2004)
+
+  07 Oct 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
+  +qat-2.7.1-r1.ebuild:
+  now builds from source, ebuild submited by Arne Mejlholm <aaby@gentoo.org>
+  in 63298, some modifications by me
+
