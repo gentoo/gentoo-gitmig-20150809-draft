@@ -29,3 +29,4 @@ move net-news/knews net-nntp/knews
 move net-news/newspost net-nntp/newspost
 move net-news/nget net-nntp/nget
 move net-news/nzbget net-nntp/nzbget
+move net-news/pan net-nntp/pan
