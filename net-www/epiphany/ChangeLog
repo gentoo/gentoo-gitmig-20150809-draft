@@ -1,6 +1,10 @@
 # ChangeLog for net-www/epiphany
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.15 2003/08/24 11:34:08 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.16 2003/08/24 15:53:06 weeve Exp $
+
+  24 Aug 2003; Jason Wever <weeve@gentoo.org> epiphany-0.8.4.ebuild,
+  epiphany-0.9.1.ebuild:
+  Added ~sparc to keywords.
 
 *epiphany-0.9.1 (24 Aug 2003)
 

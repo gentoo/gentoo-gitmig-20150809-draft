@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-0.8.4.ebuild,v 1.1 2003/08/11 22:00:47 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-0.8.4.ebuild,v 1.2 2003/08/24 15:53:06 weeve Exp $
 
 inherit gnome2 debug
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://epiphany.mozdev.org/"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~sparc"
 IUSE=""
 
 RDEPEND=">=gnome-base/gconf-1.2
