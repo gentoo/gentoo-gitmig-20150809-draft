@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcp/wmcp-1.2.8.ebuild,v 1.5 2003/10/16 16:10:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcp/wmcp-1.2.8.ebuild,v 1.6 2004/02/17 07:52:25 mr_bones_ Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://linux-sea.tucows.webusenet.com/files/x11/dock/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ~ia64 ~ppc ~sparc ~alpha ~hppa ~mips ~arm"
+KEYWORDS="x86 amd64 ~ia64 ~ppc ~sparc ~alpha ~hppa ~mips"
 
 DEPEND="virtual/glibc
 	virtual/x11"
