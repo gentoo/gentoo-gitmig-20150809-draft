@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/jconfig
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/jconfig/ChangeLog,v 1.4 2004/07/15 08:30:43 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/jconfig/ChangeLog,v 1.5 2004/08/27 11:30:17 axxo Exp $
+
+*jconfig-2.7 (27 Aug 2004)
+
+  27 Aug 2004; Thomas Matthijs <axxo@gentoo.org> jconfig-2.5.ebuild,
+  +jconfig-2.7.ebuild:
+  version bump
 
   15 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> :
   fix broken package.
