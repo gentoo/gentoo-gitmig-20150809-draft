@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619-r2.ebuild,v 1.7 2005/01/14 02:51:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040619-r2.ebuild,v 1.8 2005/01/17 23:19:22 vapier Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -186,7 +186,7 @@ want_nptl() {
 	if use nptl; then
 		# Archs that can use NPTL
 		if use amd64 || use alpha || use ia64 || use ppc || \
-		   use ppc64 || use s390 || use sparc; then
+		   use ppc64 || use s390 ; then
 			return 0
 		fi
 
@@ -205,7 +205,7 @@ want_nptl() {
 want_tls() {
 	# Archs that can use TLS (Thread Local Storage)
 	if use amd64 || use alpha || use ia64 || use ppc || \
-	   use ppc64 || use s390 || use sparc; then
+	   use ppc64 || use s390 ; then
 		return 0
 	fi
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.31 2005/01/15 03:10:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20041102.ebuild,v 1.32 2005/01/17 23:19:22 vapier Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs versionator
 
@@ -268,7 +268,7 @@ want_nptl() {
 	if use nptl || use nptlonly ; then
 		# Archs that can use NPTL
 		if use amd64 || use ia64 || use ppc || \
-		   use ppc64 || use s390 || use sparc; then
+		   use ppc64 || use s390 ; then
 			return 0
 		fi
 
