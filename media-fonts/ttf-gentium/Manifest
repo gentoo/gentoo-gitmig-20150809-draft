@@ -1,4 +1,14 @@
-MD5 d5857e9f5d86b9cddb0bec8398481d91 ChangeLog 543
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c8cc5996192b6e15d89859928f69a210 ChangeLog 733
 MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
-MD5 e870b0008ca250d3fee5e84f69e53e76 ttf-gentium-1.0.1.ebuild 753
+MD5 eb676f9328c997dc2826beb0691ddbf2 ttf-gentium-1.0.1.ebuild 782
 MD5 77a5f9f4b983ded4bf9374e683633115 files/digest-ttf-gentium-1.0.1 77
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBWmHaVWNWqTUmv+0RAiZXAKCgGYtMt0DV/y1c3OQ5qcPYbXGx+wCfRbpA
+gk96VE5NhySpGDB1VSwXuag=
+=WWnm
+-----END PGP SIGNATURE-----
