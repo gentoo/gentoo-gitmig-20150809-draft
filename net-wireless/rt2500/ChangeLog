@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/rt2500
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/ChangeLog,v 1.5 2005/02/21 21:15:28 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/rt2500/ChangeLog,v 1.6 2005/02/22 18:35:57 genstef Exp $
+
+  22 Feb 2005; Stefan Schweizer <genstef@gentoo.org> :
+  Fixing digest
 
 *rt2500-1.1.0_beta2 (21 Feb 2005)
 
