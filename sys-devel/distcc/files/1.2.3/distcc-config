@@ -14,7 +14,9 @@
 [ -z "${ROOT}" ] && ROOT=/
 
 # distcc-config manges the DISTCC_{HOSTS,LOG,VERBOSE} settings here
-DISTCC_ENV_FILE="${ROOT}etc/env.d/04distcc"
+# moved to accomodate 02ccache and leave 0[14]* free
+DCCC_ENV_FILE="${ROOT}etc/env.d/02distcc"
+DCCC_OLD_ENV="${ROOT}etc/env.d/04distcc"
 
 # this should be getopt'd someday
 DCCC_VERBOSE=1
@@ -101,23 +103,25 @@ dccc_guess_chost() {
 }
 
 ######
-# routines for manipulating ${DISTCC_ENV_FILE}
+# routines for manipulating ${DCCC_ENV_FILE}
 
 dccc_install_env() {
-	[ -f ${DISTCC_ENV_FILE} ] && return
-	einfo "Creating ${DISTCC_ENV_FILE}..."
-	cat <<_EOF_ > ${DISTCC_ENV_FILE} || \
-		dccc_exit "Unable to create ${DISTCC_ENV_FILE}..."
+	[ -f ${DCCC_OLD_ENV} ] && mv ${DCCC_OLD_ENV} ${DCCC_ENV_FILE}
+	[ -f ${DCCC_ENV_FILE} ] && return
+	einfo "Creating ${DCCC_ENV_FILE}..."
+	cat <<_EOF_ > ${DCCC_ENV_FILE} || \
+		dccc_exit "Unable to create ${DCCC_ENV_FILE}..."
 # This file is managed by distcc-config; use it to change these settings.
 DISTCC_HOSTS="localhost"
 # DISTCC_VERBOSE is not set
 # DISTCC_LOG is not set
 # PATH is not set
+# ROOTPATH is not set
 _EOF_
 }
 
 dccc_show_env() {
-	grep -v '^#' ${DISTCC_ENV_FILE}
+	grep -v '^#' ${DCCC_ENV_FILE}
 }
 
 dccc_test_env() {
@@ -125,7 +129,7 @@ dccc_test_env() {
 }
 
 dccc_load_defaults() {
-	rm -f ${DISTCC_ENV_FILE}
+	rm -f ${DCCC_ENV_FILE}
 	dccc_install_env
 }
 
@@ -133,7 +137,7 @@ dccc_set_env() {
 	local xxENV="${1}"
 	shift
 	dccc_install_env
-	mv -f ${DISTCC_ENV_FILE} ${DISTCC_ENV_FILE}.tmp
+	mv -f ${DCCC_ENV_FILE} ${DCCC_ENV_FILE}.tmp
 	if [ -n "${*}" ]; then
 		einfo "Setting ${xxENV}=\"${*}\""
 	else
@@ -141,23 +145,26 @@ dccc_set_env() {
 	fi
 	# redirect the following block to create new file
 	{
-		egrep -v "${xxENV}[= ]" ${DISTCC_ENV_FILE}.tmp
+		egrep -v "${xxENV}[= ]" ${DCCC_ENV_FILE}.tmp
 		if [ -n "${*}" ]; then
 			echo "${xxENV}=\"${*}\""
 		else
 			echo "# ${xxENV} is not set" 
 		fi 
-	} >> ${DISTCC_ENV_FILE}
-	rm -f ${DISTCC_ENV_FILE}.tmp
+	} >> ${DCCC_ENV_FILE}
+	rm -f ${DCCC_ENV_FILE}.tmp
+}
+dccc_regen_env() {
 	env-update
 	if [ -z "${DCCC_NO_WARN}" ]; then
 	  einfo "If you want to use these new settings in an existing shell,"
 	  einfo "you need to 'source /etc/profile' to get the changes."
 	fi
 }
+
 dccc_get_env() {
-	if [ -f ${DISTCC_ENV_FILE} ]; then
-		local xxENV="$(grep ${1} ${DISTCC_ENV_FILE} | \
+	if [ -f ${DCCC_ENV_FILE} ]; then
+		local xxENV="$(grep ${1} ${DCCC_ENV_FILE} | \
 			grep -v '^#' | tail -1)"
 		echo ${xxENV#*=} | sed -e 's,^",,;s,"$,,'
 	elif [ -n "${2}" ]; then
@@ -167,6 +174,7 @@ dccc_get_env() {
 
 dccc_set_hosts() {
 	dccc_set_env DISTCC_HOSTS "${@}"
+	dccc_regen_env
 }
 dccc_get_hosts() {
 	dccc_get_env DISTCC_HOSTS localhost
@@ -174,6 +182,7 @@ dccc_get_hosts() {
 
 dccc_set_verbose() {
 	dccc_set_env DISTCC_VERBOSE ${1}
+	dccc_regen_env
 }
 dccc_get_verbose() {
 	dccc_get_env DISTCC_VERBOSE
@@ -181,6 +190,7 @@ dccc_get_verbose() {
 
 dccc_set_log() {
 	dccc_set_env DISTCC_LOG ${1}
+	dccc_regen_env
 }
 dccc_get_log() {
 	dccc_get_env DISTCC_LOG
@@ -237,9 +247,13 @@ case "${1}" in
 		;;
 	--add-path )
 		dccc_set_env PATH "/usr/lib/distcc/bin"
+		dccc_set_env ROOTPATH "/usr/lib/distcc/bin"
+		dccc_regen_env
 		;;
 	--no-path )
 		dccc_set_env PATH ""
+		dccc_set_env ROOTPATH ""
+		dccc_regen_env
 		;;
 	--show-env )
 		dccc_show_env
@@ -263,7 +277,7 @@ case "${1}" in
 		echo "usage: ${0} --set-hosts DISTCC_HOSTS | --get-hosts"
 		echo "       ${0} --set-verbose { 0 | 1 }   | --get-verbose"
 		echo "       ${0} --set-log FILE  | --get-log" 
-		echo -e "       ${0} --add-path      | --no-path\n"
+		echo "       ${0} --add-path      | --no-path"
 #		echo "       ${0} --install-links | --remove-links } [ CHOST ]"
 		exit 1
 		;;

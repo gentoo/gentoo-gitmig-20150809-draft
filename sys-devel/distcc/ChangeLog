@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.35 2003/03/18 06:55:24 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.36 2003/03/18 08:56:36 zwelch Exp $
+
+*distcc-1.2.3-r3 (17 Mar 2003)
+
+  17 Mar 2003; Zach Welch <zwelch@gentoo.org> distcc-1.2.3-r1.ebuild,
+  files/1.2.3/distcc-config:
+  set ROOTPATH, refactor env-update code, rename env file
 
 *distcc-1.2.3-r2 (17 Mar 2003)
 
