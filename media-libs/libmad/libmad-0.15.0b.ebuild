@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/libmad-0.15.0b.ebuild,v 1.4 2003/07/19 06:10:02 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmad/libmad-0.15.0b.ebuild,v 1.5 2004/01/01 15:14:32 mholzer Exp $
 
 IUSE="debug"
 
@@ -9,6 +9,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="\"M\"peg \"A\"udio \"D\"ecoder library"
 HOMEPAGE="http://mad.sourceforge.net"
 SRC_URI="mirror://sourceforge/mad/${P}.tar.gz"
+RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
