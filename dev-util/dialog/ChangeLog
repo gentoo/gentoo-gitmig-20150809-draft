@@ -1,6 +1,12 @@
 # ChangeLog for dev-util/dialog
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.28 2004/01/14 03:30:38 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.29 2004/01/16 12:05:25 seemant Exp $
+
+  16 Jan 2004; Seemant Kulleen <seemant@gentoo.org>
+  dialog-0.9_beta20031002.ebuild :
+
+  Added a patch in files/ to fix the regexes in the configure script, so
+  this should be friendly to the Estonian (et_EE) locale finally
 
   13 Jan 2004; Jon Portnoy <avenj@gentoo.org> dialog-0.9_beta20031002.ebuild :
   Stable on AMD64.
