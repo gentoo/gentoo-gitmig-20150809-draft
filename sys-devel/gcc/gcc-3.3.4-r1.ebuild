@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.4-r1.ebuild,v 1.8 2004/08/08 00:45:48 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.4-r1.ebuild,v 1.9 2004/08/12 00:28:46 gustavoz Exp $
 
 inherit eutils flag-o-matic libtool gnuconfig
 
@@ -95,7 +95,7 @@ HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
 ## SpanKY says hppa is a no go with any 3.3.x
 
-KEYWORDS="-hppa ~x86 ~amd64 ~mips ~arm" # weeve: mark "~sparc" as you wish
+KEYWORDS="-hppa ~x86 ~amd64 ~mips ~arm ~sparc"
 
 IUSE="static nls bootstrap build X multilib gcj f77 objc pic hardened uclibc debug"
 
