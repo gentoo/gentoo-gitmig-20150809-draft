@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ucd-snmp-4.2.6-r2.ebuild,v 1.7 2004/06/05 15:55:01 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ucd-snmp-4.2.6-r2.ebuild,v 1.8 2004/06/09 18:52:48 agriffis Exp $
 
 inherit flag-o-matic eutils
 
@@ -43,7 +43,7 @@ src_compile() {
 	myconf="${myconf} `use_with tcpd libwrap`"
 	myconf="${myconf} `use_enable ipv6`"
 
-	if [ "`use ssl`" ] && has_version '=dev-libs/openssl-0.9.6*' ; then
+	if use ssl && has_version '=dev-libs/openssl-0.9.6*' ; then
 		einfo "Found openssl version 0.9.6: adding extra flags."
 		append-flags "-DSTRUCT_DES_KS_STRUCT_HAS_WEAK_KEY"
 	fi

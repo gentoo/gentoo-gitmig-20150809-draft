@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.47.ebuild,v 1.1 2004/04/07 17:08:16 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.47.ebuild,v 1.2 2004/06/09 18:53:04 agriffis Exp $
 
 inherit perl-module flag-o-matic gnuconfig eutils
 
@@ -44,7 +44,7 @@ src_compile() {
 		&& myconf="${myconf} --with-tcllib=/usr/lib" \
 		|| myconf="${myconf} --without-tcllib"
 
-	if [ `use perl` ] ; then
+	if use perl ; then
 	MMSIXELEVEN=`perl -e 'use ExtUtils::MakeMaker; print( $ExtUtils::MakeMaker::VERSION ge "6.11" )'`
 	  if [ "${MMSIXELEVEN}" ]; then
 	   econf \
@@ -91,13 +91,13 @@ src_install() {
 	insinto /usr/share/doc/${PF}/contrib
 	doins contrib/*
 
-	if [ `use perl` ] ; then
+	if use perl ; then
 		perlinfo
 		mytargets="site-perl-install"
 		perl-module_src_install || die
 	fi
 
-	if [ `use tcltk` ] ; then
+	if use tcltk ; then
 		mv ${S}/tcl/tclrrd.so ${S}/tcl/tclrrd${PV}.so
 		insinto /usr/lib/tcl${TCL_VER}/tclrrd${PV}
 		doins ${S}/tcl/tclrrd${PV}.so

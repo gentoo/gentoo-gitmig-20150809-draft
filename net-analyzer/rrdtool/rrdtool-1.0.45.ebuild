@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.45.ebuild,v 1.7 2004/05/08 11:15:09 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.45.ebuild,v 1.8 2004/06/09 18:53:04 agriffis Exp $
 
 inherit perl-module flag-o-matic gnuconfig
 
@@ -23,11 +23,11 @@ RDEPEND="tcltk? ( dev-lang/tcl )"
 TCLVER=""
 
 pkg_setup() {
-	if [ "`use tcltk`" ]; then
+	if use tcltk; then
 		TCLVER=`awk -F\' '/TCL_VERSION/ {print $2}' /usr/lib/tclConfig.sh`
 	fi
 
-	if [ "`use perl`" ]; then
+	if use perl; then
 		perl-module_pkg_setup
 	fi
 }
@@ -70,13 +70,13 @@ src_install() {
 	insinto /usr/share/doc/${PF}/contrib
 	doins contrib/*
 
-	if [ `use perl` ] ; then
+	if use perl ; then
 		perlinfo
 		mytargets="site-perl-install"
 		perl-module_src_install || die
 	fi
 
-	if [ `use tcltk` ] ; then
+	if use tcltk ; then
 		mv ${S}/tcl/tclrrd.so ${S}/tcl/tclrrd${PV}.so
 		insinto /usr/lib/tcl${TCL_VER}/tclrrd${PV}
 		doins ${S}/tcl/tclrrd${PV}.so

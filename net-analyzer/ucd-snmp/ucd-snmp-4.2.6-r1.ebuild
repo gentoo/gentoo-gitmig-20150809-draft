@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ucd-snmp-4.2.6-r1.ebuild,v 1.5 2004/04/26 04:29:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ucd-snmp/ucd-snmp-4.2.6-r1.ebuild,v 1.6 2004/06/09 18:52:48 agriffis Exp $
 
 IUSE="ssl ipv6 tcpd"
 PROVIDE="virtual/snmp"
