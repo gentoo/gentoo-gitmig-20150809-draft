@@ -1,6 +1,6 @@
 # ChangeLog for app-cdr/cdrtools
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.101 2004/10/13 02:01:50 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/ChangeLog,v 1.102 2004/10/26 01:21:03 pylon Exp $
 
   13 Oct 2004; Lars Weiler <pylon@gentoo.org>
   -files/cdrtools-2.01-kernel25-support.patch,
@@ -9,7 +9,7 @@
   Keep your portage clean.
 
   13 Oct 2004; Lars Weiler <pylon@gentoo.org> metadata.xml:
-  Package is now member of the opti-media herd.
+  Package is now member of the media-optical herd.
 
   09 Oct 2004; Tom Gall <tgall@gentoo.org> cdrtools-2.01.ebuild:
   stable on ppc64, bug #63187
