@@ -1,0 +1,10 @@
+--- kprof/kprofwidget.cpp.~1.53.~	2002-10-29 16:52:01.000000000 -0500
++++ kprof/kprofwidget.cpp	2004-05-06 18:03:26.000000000 -0400
+@@ -28,6 +28,7 @@
+ 
+ #include <cstdlib>
+ #include <cstring>
++#include <cassert>
+ 
+ #include <qhbuttongroup.h>
+ #include <kfontdialog.h>

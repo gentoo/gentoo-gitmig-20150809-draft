@@ -1,3 +1,5 @@
-MD5 ca046a5a1fbe957cc5225a7fd10a446f kprof-1.4.2.ebuild 646
-MD5 31408b91e5754c242a79f83a54965dd9 ChangeLog 364
+MD5 218540b80d9668c6f472dd7adac59342 kprof-1.4.2.ebuild 703
+MD5 7baaeb986dca6236c3e3f3350d48f75d ChangeLog 500
+MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
+MD5 25cd4add2b24268f45d593f7bb93716b files/include_cassert.patch 268
 MD5 178f447fefe47a811cf3cfe3d0b00991 files/digest-kprof-1.4.2 63
