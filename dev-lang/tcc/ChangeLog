@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/tcc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/ChangeLog,v 1.14 2004/07/02 04:32:26 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/ChangeLog,v 1.15 2004/09/27 15:39:59 sekretarz Exp $
+
+  27 Sep 2004; Karol Wojtaszek <sekretarz@gentoo.org>
+  +files/tcc-0.9.20-gcc34.patch, -tcc-0.9.14.ebuild, -tcc-0.9.16.ebuild,
+  tcc-0.9.20.ebuild, -tcc-0.9.7.ebuild, -tcc-0.9.8.ebuild:
+  Fixed gcc-3.4 compile issues, Bug #65346. Ebuild clean up.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> tcc-0.9.14.ebuild,
   tcc-0.9.16.ebuild, tcc-0.9.19.ebuild, tcc-0.9.20.ebuild, tcc-0.9.8.ebuild:
