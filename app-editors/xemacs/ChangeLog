@@ -1,8 +1,16 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.7 2002/04/17 04:16:21 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.8 2002/05/19 19:16:30 mkennedy Exp $
 
-*xemasc-21.4.6-r4 (16 Apr 2002)
+*xemacs-21.4.8 (19 May 2002)
+
+  19 May 2002; Matthew Kennedy <mkennedy@gentoo.org> xemacs-21.4.8.ebuild, 
+  files/README.Gentoo, files/digest-xemacs-21.4.8, 
+  files/emodules.info-21.4.8-gentoo.patch :
+
+  New xemacs-21.4.8 (gamma). Adds missing gpm dependency. General overhaul.
+
+*xemacs-21.4.6-r4 (16 Apr 2002)
 
   16 Apr 2002: Matthew Kennedy <mkennedy@gentoo.org>
   xemacs-21.4.6-r4.ebuild, files/digest-xemacs-21.4.6-r4, ChanegLog :
