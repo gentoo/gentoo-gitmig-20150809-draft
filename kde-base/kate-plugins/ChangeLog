@@ -1,0 +1,10 @@
+# ChangeLog for kde-base/kate-plugins
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kate-plugins/ChangeLog,v 1.1 2005/02/11 02:08:17 caleb Exp $
+
+*kate-plugins-3.4.0_beta2 (10 Feb 2005)
+
+  10 Feb 2005; Caleb Tennis <caleb@gentoo.org> +metadata.xml,
+  +kate-plugins-3.4.0_beta2.ebuild:
+  Initial import - replaces kate-*
+
