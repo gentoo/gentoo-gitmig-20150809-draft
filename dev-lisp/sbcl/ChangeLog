@@ -1,9 +1,9 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.49 2004/12/13 12:25:30 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.50 2004/12/13 12:27:35 swegener Exp $
 
   13 Dec 2004; Sven Wegener <swegener@gentoo.org> sbcl-0.8.17.ebuild:
-  Fixed invalid atoms in *DEPEND.
+  Fixed invalid atoms in *DEPEND. Added missing digest entries.
 
 *sbcl-0.8.17 (13 Dec 2004)
 

@@ -13,7 +13,7 @@ MD5 4cf68e2406e345e39267d1b8060d7a7d sbcl-0.8.10.ebuild 3717
 MD5 452bd315ab639d1e2738c73c498be1ed sbcl-0.8.12-r1.ebuild 3878
 MD5 811e4e7c7cb8653c093c5d4d4d90b5ae sbcl-0.8.17.ebuild 4194
 MD5 bfec86129246e3243821520419058139 sbcl-0.8.12.ebuild 3823
-MD5 2dc63022cbed18b9a106428241e0a753 ChangeLog 12001
+MD5 3df3b0111906974e63d9a350286acc82 ChangeLog 12031
 MD5 c93195a12a4bb997ca623db927bb6676 metadata.xml 997
 MD5 35329bbe93e1b1d0ac162f8ee2ea9914 sbcl-0.8.7.ebuild 4076
 MD5 69afd15544b984478ca6de7cac998145 files/digest-sbcl-0.8.12-r1 468
@@ -32,7 +32,7 @@ MD5 12dd45cfcd09d50683635790f81c88ca files/digest-sbcl-0.8.13 468
 MD5 c79912580313a9a43b0b9fd2aa794ba2 files/digest-sbcl-0.8.14 468
 MD5 74f94f11c31e6e9395b26994ebc70aa7 files/digest-sbcl-0.8.15 469
 MD5 a3c050d853b5f0484425c9e35fce226f files/digest-sbcl-0.8.16 469
-MD5 7fce2b38fce587a789c5cda34689352d files/digest-sbcl-0.8.17 288
+MD5 d95bb1c5dfb4b72dfca51f2c78da15d1 files/digest-sbcl-0.8.17 535
 MD5 24a9e0ee9cf55fc23d01535520f03edc files/0.8.7/install-clc.lisp-gentoo.patch 675
 MD5 b8407a8b953cc86ccab6b4c9b3148024 files/0.8.7/customize-target-features.lisp.no-threads 557
 MD5 62313101e0dfbc6a70bd0a0f9b6c3304 files/0.8.7/customize-target-features.lisp 555
@@ -124,7 +124,7 @@ MD5 e27aa0d43ffa7f7a1bd96bf23d27e873 files/0.8.17/sbcl-gentoo.patch 1172
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBvYpCI1lqEGTUzyQRAgTIAJ4yaFNSKILlMCPKRYFfwL+ogAabwACbBTE1
-XqeGTl+obKHXZVtTB2z5pyg=
-=yQ38
+iD8DBQFBvYq9I1lqEGTUzyQRAruzAJ9Bz2hueegcZ9lK4XLwLds2xdDn2QCg0UJA
+2BFyC6fhFP8e/+98+0eR7uA=
+=IRf/
 -----END PGP SIGNATURE-----
