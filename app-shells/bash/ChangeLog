@@ -1,6 +1,10 @@
 # ChangeLog for app-shells/bash
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.14 2003/09/02 19:05:18 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/ChangeLog,v 1.15 2003/09/03 19:58:00 weeve Exp $
+
+  03 Sep 2003; Jason Wever <weeve@gentoo.org> bash-2.05b-r6.ebuild,
+  bash-2.05b-r7.ebuild:
+  Added ~sparc keyword.
 
   02 Sep 2003; Martin Holzer <mholzer@gentoo.org> bash-2.05a-r3.ebuild,
   bash-2.05b-r3.ebuild, bash-2.05b-r4.ebuild, bash-2.05b-r5.ebuild,
