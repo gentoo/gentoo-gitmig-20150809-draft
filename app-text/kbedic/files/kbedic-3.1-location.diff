@@ -1,0 +1,32 @@
+diff -ur kbedic-3.1.orig/data/Makefile.in kbedic-3.1/data/Makefile.in
+--- data/Makefile.in	Wed Aug 14 17:24:36 2002
++++ data/Makefile.in	Wed Sep 11 22:00:11 2002
+@@ -115,12 +115,12 @@
+ uninstall-info-am:
+ install-dataDATA: $(data_DATA)
+ 	@$(NORMAL_INSTALL)
+-	$(mkinstalldirs) $(DESTDIR)$(datadir)
++	$(mkinstalldirs) $(DESTDIR)$(pkgdatadir)
+ 	@list='$(data_DATA)'; for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  f="`echo $$p | sed -e 's|^.*/||'`"; \
+-	  echo " $(INSTALL_DATA) $$d$$p $(DESTDIR)$(datadir)/$$f"; \
+-	  $(INSTALL_DATA) $$d$$p $(DESTDIR)$(datadir)/$$f; \
++	  echo " $(INSTALL_DATA) $$d$$p $(DESTDIR)$(pkgdatadir)/$$f"; \
++	  $(INSTALL_DATA) $$d$$p $(DESTDIR)$(pkgdatadir)/$$f; \
+ 	done
+ 
+ uninstall-dataDATA:
+diff -ur kbedic-3.1.orig/src/config.h.in kbedic-3.1/src/config.h.in
+--- src/config.h.in	Wed Aug 14 17:24:43 2002
++++ src/config.h.in	Wed Sep 11 22:00:24 2002
+@@ -8,7 +8,7 @@
+ 
+ 
+ // Path to Database
+-#define ENG_BUL_DAT_CONFIG "@DATA_DIR@/engbul.dat"
+-#define BUL_ENG_DAT_CONFIG "@DATA_DIR@/buleng.dat"
++#define ENG_BUL_DAT_CONFIG "@DATA_DIR@/kbedic/engbul.dat"
++#define BUL_ENG_DAT_CONFIG "@DATA_DIR@/kbedic/buleng.dat"
+ 
+ #endif
