@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/hydrogen
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.5 2004/01/22 14:19:46 torbenh Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/hydrogen/ChangeLog,v 1.6 2004/02/27 07:35:17 torbenh Exp $
+
+  27 Feb 2004; <torbenh@gentoo.org> hydrogen-0.8.1-r1.ebuild,
+  hydrogen-0.8.1.ebuild:
+  Fixed Dependecies
 
 *hydrogen-0.8.1-r1 (22 Jan 2004)
 
