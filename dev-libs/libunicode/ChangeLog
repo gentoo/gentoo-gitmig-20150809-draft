@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/libunicode
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunicode/ChangeLog,v 1.8 2003/02/12 06:07:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libunicode/ChangeLog,v 1.9 2003/07/06 11:29:09 gmsoft Exp $
 
   07 Feb 2003; Will Woods <wwoods@gentoo.org> libunicode-0.4-r1.ebuild: 
   added gnuconfig_update for alpha systems.
@@ -11,6 +11,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *libunicode-0.4-r1 (1 Feb 2002)
+
+  06 Jul 2003; Guy Martin <gmsoft@gentoo.org> libunicode-0.4-r1.ebuild :
+  Added hppa to KEYWORDS.
 
   08 Dec 2002; Martin Holzer <mholzer@gentoo.org> libunicode-0.4-r1.ebuild Changelog :
   Fixed SRC_URI. 
