@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.97 2004/08/31 09:05:24 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.98 2004/09/05 22:38:41 ciaranm Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -15,6 +15,33 @@ INHERITED="$INHERITED $ECLASS"
 DEPEND="!bootstrap? ( sys-devel/patch )"
 
 DESCRIPTION="Based on the ${ECLASS} eclass"
+
+# Wait for the supplied number of seconds. If no argument is supplied, defaults
+# to five seconds. If the EPAUSE_IGNORE env var is set, don't wait. If we're not
+# outputting to a terminal, don't wait. For compatability purposes, the argument
+# must be an integer greater than zero.
+# Bug 62950, Ciaran McCreesh <ciaranm@gentoo.org> (05 Sep 2004)
+epause() {
+	if [ -z "$EPAUSE_IGNORE" ] && [ -t 1 ] ; then
+		sleep ${1:-5}
+	fi
+}
+
+# Beep the specified number of times (defaults to five). If our output
+# is not a terminal, don't beep. If the EBEEP_IGNORE env var is set,
+# don't beep.
+# Bug 62950, Ciaran McCreesh <ciaranm@gentoo.org> (05 Sep 2004)
+ebeep() {
+	local n
+	if [ -z "$EBEEP_IGNORE" ] && [ -t 1 ] ; then
+		for ((n=1 ; n <= ${1:-5} ; n++)) ; do
+			echo -ne "\a"
+			sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
+			echo -ne "\a"
+			sleep 1
+		done
+	fi
+}
 
 # This function simply returns the desired lib directory. With portage
 # 2.0.51, we now have support for installing libraries to lib32/lib64
