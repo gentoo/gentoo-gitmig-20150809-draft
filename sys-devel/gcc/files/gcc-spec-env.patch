@@ -6,7 +6,7 @@
       line.  */
 +
 +  GET_ENVIRONMENT (specs_file, "GCC_SPECS");
-+  if (specs_file)
++  if (specs_file && (strlen(specs_file) > 0))
 +    {
 +      struct user_specs *user = (struct user_specs *)
 +        xmalloc (sizeof (struct user_specs));

@@ -11,7 +11,7 @@ MD5 453632339c41cdb4c4a6949c282556e2 gcc-3.4.3.ebuild 13325
 MD5 4bcf46d8a3f5509cf09f23017408095d gcc-2.95.3-r8.ebuild 8407
 MD5 872c3e4633f5a8414f8e2c004fa3b374 gcc-3.3.3-r3.ebuild 23468
 MD5 4282c4d5c156752df0976947871f7e1e gcc-3.4.3-r1.ebuild 14494
-MD5 5bdc72e6f0fedd6b932d93692a4e4fa6 ChangeLog 74977
+MD5 a06782d62fff9e6a7fe1728d4ced6d3b ChangeLog 75102
 MD5 483487724c94691b62abeb1a32023e9e gcc-3.3.2.ebuild 16758
 MD5 b52666d9d366f9dd02c00cdedb65b281 gcc-3.3.4-r2.ebuild 24553
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
@@ -36,7 +36,7 @@ MD5 454652372363986ccf7974279150d516 files/digest-gcc-3.3.5 442
 MD5 d197c7ddd1a614b89bddbc3babb31c3b files/digest-gcc-3.4.3 442
 MD5 3213bd50acdbbd71ce7dd3e40710e30e files/digest-gcc-2.95.3-r8 64
 MD5 e3193bdffb435b77a21bfb504ff6f591 files/mkinfodir 7324
-MD5 edced3dd7f4035b638bbee500bc89e7b files/gcc-spec-env.patch 791
+MD5 60e02a7ee2f579ac72ab223679d81e7a files/gcc-spec-env.patch 819
 MD5 07b57d62aa1a8cd4d1cd37984ebe2053 files/scan_libgcc_linked_ssp.sh 861
 MD5 f6b6f7c3577eccb694066bb54dd8075a files/3.3/gcc33-gentoo-branding-1.patch 870
 MD5 d047c78a9141b16915d8ec3f54d1e246 files/3.3/gcc33-coreutils-compat.patch.bz2 3462
