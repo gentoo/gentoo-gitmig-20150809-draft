@@ -1,13 +1,13 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/scrollkeeper/scrollkeeper-0.2.ebuild,v 1.1 2001/04/15 18:57:14 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/scrollkeeper/scrollkeeper-0.2.ebuild,v 1.2 2001/04/19 00:47:47 pete Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Scrollkeeper"
-SRC_URI="ftp://ftp.gnome.org/pub/GNOME/unstable/sources/${PN}/${A}
-         ftp://gnome.eazel.com/pub/gnome/unstable/sources/${PN}/${A}"
+SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${A}
+         ftp://gnome.eazel.com/pub/gnome/stable/sources/${PN}/${A}"
 HOMEPAGE="http://www.gnome.org/"
 
 DEPEND="nls? ( sys-devel/gettext )
