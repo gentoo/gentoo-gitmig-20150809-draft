@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nforce-net/nforce-net-1.0.0261.ebuild,v 1.1 2003/06/12 05:38:02 alron Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nforce-net/nforce-net-1.0.0261.ebuild,v 1.2 2003/06/12 10:07:03 seemant Exp $
 
 inherit gcc
 
@@ -37,7 +37,7 @@ src_install() {
 	doins nvnet/nvnet.o
     
 	# Docs
-	dodoc ${S}/ReleaseNotes.html
+	dohtml ${S}/ReleaseNotes.html
 }
 
 pkg_postinst() {
