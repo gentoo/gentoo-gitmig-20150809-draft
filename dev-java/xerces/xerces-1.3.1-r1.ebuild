@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-1.3.1-r1.ebuild,v 1.2 2005/01/20 19:21:32 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xerces/xerces-1.3.1-r1.ebuild,v 1.3 2005/03/16 18:46:04 luckyduck Exp $
 
 inherit java-pkg
 
@@ -14,7 +14,8 @@ SLOT="1.3"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 
 DEPEND=">=virtual/jdk-1.3
-	jikes? ( dev-java/jikes )"
+	jikes? ( dev-java/jikes )
+	source? ( app-arch/zip )"
 RDEPEND=">=virtual/jre-1.3
 	>=dev-java/xalan-2.5.2"
 IUSE="doc jikes source"
@@ -31,7 +32,6 @@ src_compile() {
 	local antflags="jar"
 	use doc && antflags="${antflags} docs"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
-	use source && antflags="${antflags} sourcezip"
 	ant ${antflags} || die "ant build failed"
 }
 
@@ -42,5 +42,8 @@ src_install () {
 	java-pkg_dohtml Readme.html
 	if use doc; then
 		java-pkg_dohtml -r docs/*
+	fi
+	if use source; then
+		java-pkg_dosrc ${S}/src/*
 	fi
 }
