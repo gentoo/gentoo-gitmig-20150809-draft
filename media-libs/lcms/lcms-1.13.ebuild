@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.13.ebuild,v 1.2 2004/10/31 22:34:32 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.13.ebuild,v 1.3 2004/12/01 10:14:52 usata Exp $
 
 inherit libtool gnuconfig
 
@@ -30,7 +30,7 @@ src_unpack() {
 	# fix build on amd64
 	cd ${S}
 	einfo "Running autoreconf..."
-	autoreconf
+	use ppc-macos || autoreconf
 	einfo "Running libtoolize..."
 	elibtoolize
 }

@@ -1,8 +1,18 @@
-MD5 fe38d443711f1d51604169949ab76889 ChangeLog 3415
-MD5 40007b7efe584339c249e1e4c0191f61 lcms-1.11.ebuild 1115
-MD5 0eca592267cb15a4a5b12fa8c164ae1a lcms-1.12.ebuild 1239
-MD5 ec17e922620aea2c02bb3a5d2d317fd8 lcms-1.13.ebuild 1402
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 43fb8eb231aefa93db3a8cc17a88bcf5 lcms-1.12.ebuild 1257
+MD5 57eea48bdd4b179c827c0f9b3c82a0a6 lcms-1.13.ebuild 1420
+MD5 21fbca810e0103cd743c00284709019b ChangeLog 3642
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
+MD5 40007b7efe584339c249e1e4c0191f61 lcms-1.11.ebuild 1115
 MD5 ec46b226970ad1597b5be73ec187ef6e files/digest-lcms-1.11 61
 MD5 a2d2635e95a30adc03a018d80e7697cf files/digest-lcms-1.12 61
 MD5 58a0f36993082241e2b970733b79087b files/digest-lcms-1.13 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (Darwin)
+
+iD8DBQFBrZmmVWNWqTUmv+0RApqwAJ9Fm50To8WGYBdbkb4sL2Sx131VRgCcDfLJ
+7U4UOd3W/lGlrxDWzFqHCo0=
+=3AKB
+-----END PGP SIGNATURE-----
