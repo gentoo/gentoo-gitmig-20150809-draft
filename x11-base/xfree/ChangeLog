@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.210 2003/10/07 20:12:15 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.211 2003/10/07 21:34:05 spyderous Exp $
+
+  07 Oct 2003; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.99.13.ebuild:
+  Adding patch #9960 to close bug #29216. Thanks to Marc <gigerstyle@gmx.ch> for
+  making me do this.
 
   07 Oct 2003; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.99.12.ebuild,
   xfree-4.3.99.13.ebuild:
