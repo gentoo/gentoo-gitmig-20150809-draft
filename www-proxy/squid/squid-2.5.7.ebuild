@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/squid-2.5.7.ebuild,v 1.3 2004/11/04 05:23:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/squid-2.5.7.ebuild,v 1.4 2004/12/04 02:16:55 cyfred Exp $
 
 inherit eutils
 
@@ -8,7 +8,7 @@ inherit eutils
 S_PV=${PV%.*}
 S_PL=${PV##*.}
 S_PP=${PN}-${S_PV}.STABLE${S_PL}
-PATCH_VERSION="20041017"
+PATCH_VERSION="20041204"
 
 DESCRIPTION="A caching web proxy, with advanced features"
 HOMEPAGE="http://www.squid-cache.org/"

@@ -1,9 +1,9 @@
-MD5 2fd4f56a598ab66d9f72e81ab2103e13 ChangeLog 11333
+MD5 1d4db40eb80e3bd561236118dab50781 ChangeLog 11457
 MD5 d7dd06078d4f3a44b46709294cc7bc21 metadata.xml 249
 MD5 e4a8135ed447b72a7271fade6c06e9cc squid-2.4.7.ebuild 4000
 MD5 81a38c1c8b9bde45861c616a3d06621a squid-2.5.5-r3.ebuild 5383
 MD5 96e1e858c2ff6b3549c5c6c8077939e3 squid-2.5.6-r3.ebuild 5805
-MD5 5be246504d6395a1030de380ea289886 squid-2.5.7.ebuild 5802
+MD5 59b2a3e75c74b163878a234df159f247 squid-2.5.7.ebuild 5802
 MD5 45bf3c4b37515fe4da4ed6d39904132d files/digest-squid-2.5.5-r3 147
 MD5 c3cb57db464a884a63d0c53ceb38331b files/digest-squid-2.5.6-r3 156
 MD5 626914d5b07105602773bf8a1534a3ae files/squid-2.4.7-debian.diff 12078
@@ -16,4 +16,4 @@ MD5 1b391c390c547ef3a249aee590e654d8 files/squid.rc6 1980
 MD5 a188814c2113dcd28c55672dbe58df8c files/squid-2.5.5-ntml-auth-fix.patch 2354
 MD5 26a4ab522a2469f805f746bcdbe0109c files/squid-2.5.6-ufs-no-valid-dir.patch 566
 MD5 4995c4c8c3365f121620ea78d6ca8794 files/digest-squid-2.4.7 222
-MD5 a8a6dbf036a288e569daa56bdf5ae774 files/digest-squid-2.5.7 154
+MD5 8cba266e8470f1c52bb2056a1d7f8564 files/digest-squid-2.5.7 155

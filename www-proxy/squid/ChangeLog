@@ -1,6 +1,9 @@
 # ChangeLog for www-proxy/squid
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/ChangeLog,v 1.17 2004/12/04 02:03:30 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/ChangeLog,v 1.18 2004/12/04 02:16:55 cyfred Exp $
+
+  04 Dec 2004; Andrew Bevitt <cyfred@gentoo.org> squid-2.5.7.ebuild:
+  Added more bug fix patches to the STABLE7 patchset.
 
   04 Dec 2004; Andrew Bevitt <cyfred@gentoo.org>
   -files/squid-2.5.3-gentoo.diff, files/squid-2.5.7-gentoo.diff,
