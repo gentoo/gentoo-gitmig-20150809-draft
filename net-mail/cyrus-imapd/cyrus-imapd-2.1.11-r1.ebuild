@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.11-r1.ebuild,v 1.2 2003/02/13 14:27:28 vapier Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.11-r1.ebuild,v 1.3 2003/09/04 04:42:16 msterret Exp $
 
 DESCRIPTION="The Cyrus IMAP Server"
 HOMEPAGE="http://asg.web.cmu.edu/cyrus/imapd/"
@@ -37,7 +37,7 @@ src_unpack() {
 
 src_compile() {
 	local myconf
-	
+
 	use afs && myconf="--with-afs" \
 		|| myconf="--without-afs"
 
@@ -87,7 +87,7 @@ src_install() {
 	# remove man-pages from packet net-mail/cyrus-imapd-admin
 	rm ${D}usr/share/man/man1/installsieve.1.gz ${D}usr/share/man/man1/sieveshell.1.gz
 
-	dodir /etc 
+	dodir /etc
 	cp ${FILESDIR}/imapd_2.conf ${D}etc/imapd.conf
 	cp ${FILESDIR}/cyrus_2.conf ${D}etc/cyrus.conf
 	dodir /etc/pam.d
@@ -95,7 +95,7 @@ src_install() {
 
 	dodir /var
 	mkdir -m 0750 ${D}var/imap
-	chown -R cyrus.mail ${D}var/imap 
+	chown -R cyrus.mail ${D}var/imap
 	keepdir /var/imap
 	mkdir -m 0755 ${D}var/imap/db
 	chown -R cyrus.mail ${D}var/imap/db
@@ -122,20 +122,20 @@ src_install() {
 		keepdir /var/imap/quota/$i
 	done
 	mkdir -m 0755 ${D}var/imap/sieve
-        chown -R cyrus.mail ${D}var/imap/sieve
+	chown -R cyrus.mail ${D}var/imap/sieve
 	for i in a b c d e f g h i j k l m n o p q r s t u v w x y z ; do mkdir -m 0755 ${D}var/imap/sieve/$i ; \
 		chown -R cyrus.mail ${D}var/imap/sieve/$i
 		keepdir /var/imap/sieve/$i
 	done
-   	mkdir -m 0755 ${D}var/imap/socket
-        chown -R cyrus.mail ${D}var/imap/socket
+	mkdir -m 0755 ${D}var/imap/socket
+	chown -R cyrus.mail ${D}var/imap/socket
 	keepdir /var/imap/socket
 	mkdir ${D}var/spool
 	mkdir -m 0750 ${D}var/spool/imap
-        chown -R cyrus.mail ${D}var/spool/imap
+	chown -R cyrus.mail ${D}var/spool/imap
 	keepdir /var/spool/imap
 	mkdir -m 0755 ${D}var/spool/imap/stage.
-        chown -R cyrus.mail ${D}var/spool/imap/stage.
+	chown -R cyrus.mail ${D}var/spool/imap/stage.
 	keepdir /var/spool/imap/stage.
 	# For hashimapspool
 	for i in a b c d e f g h i j k l m n o p q r s t u v w x y z ; do mkdir -m 0755 ${D}var/spool/imap/$i ; \

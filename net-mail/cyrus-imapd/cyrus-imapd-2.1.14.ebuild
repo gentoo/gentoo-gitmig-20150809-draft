@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.14.ebuild,v 1.2 2003/07/13 20:27:38 raker Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.14.ebuild,v 1.3 2003/09/04 04:42:16 msterret Exp $
 
 inherit eutils
 IPV6_P="${P}-ipv6-20030703"
@@ -44,14 +44,14 @@ src_unpack() {
 
 	# add libwrap defines as we don't have a dynamicly linked library.
 	epatch ${FILESDIR}/cyrus-imapd-2.1.12-libwrap.patch
-	
+
 	# Does running autoconf squash any of this?
 	use ipv6 && epatch ${WORKDIR}/${IPV6_P}.diff
 
-        libtoolize --copy --force
-        aclocal -I cmulocal || die
-        autoheader || die   
-        autoconf || die
+	libtoolize --copy --force
+	aclocal -I cmulocal || die
+	autoheader || die
+	autoconf || die
 
 	# remove spurious -I/usr/includes which make configure tests fail
 	epatch ${FILESDIR}/cyrus-imapd-2.1.12-includepath.patch
@@ -60,7 +60,7 @@ src_unpack() {
 	cp configure configure.orig
 	sed -e "s:lrpm:lrpm -lrpmio -lrpmdb:" \
 		< configure.orig > configure
-	
+
 }
 
 src_compile() {
@@ -69,7 +69,7 @@ src_compile() {
 	use afs && myconf="--with-afs" \
 		|| myconf="--without-afs"
 
-	use snmp && myconf="${myconf} --with-ucdsnmp=/usr" \ 
+	use snmp && myconf="${myconf} --with-ucdsnmp=/usr" \
 		myconf="${myconf} --without-ucdsnmp"
 
 	use ssl && myconf="${myconf} --with-openssl=/usr" \
@@ -119,7 +119,7 @@ src_install() {
 	# remove man-pages from packet net-mail/cyrus-imapd-admin
 	rm ${D}usr/share/man/man1/installsieve.1.gz ${D}usr/share/man/man1/sieveshell.1.gz
 
-	dodir /etc 
+	dodir /etc
 	cp ${FILESDIR}/imapd_2.conf ${D}etc/imapd.conf
 	cp ${FILESDIR}/cyrus_2.conf ${D}etc/cyrus.conf
 	dodir /etc/pam.d
@@ -127,7 +127,7 @@ src_install() {
 
 	dodir /var
 	mkdir -m 0750 ${D}var/imap
-	chown -R cyrus.mail ${D}var/imap 
+	chown -R cyrus.mail ${D}var/imap
 	keepdir /var/imap
 	mkdir -m 0755 ${D}var/imap/db
 	chown -R cyrus.mail ${D}var/imap/db
@@ -154,20 +154,20 @@ src_install() {
 		keepdir /var/imap/quota/$i
 	done
 	mkdir -m 0755 ${D}var/imap/sieve
-        chown -R cyrus.mail ${D}var/imap/sieve
+	chown -R cyrus.mail ${D}var/imap/sieve
 	for i in a b c d e f g h i j k l m n o p q r s t u v w x y z ; do mkdir -m 0755 ${D}var/imap/sieve/$i ; \
 		chown -R cyrus.mail ${D}var/imap/sieve/$i
 		keepdir /var/imap/sieve/$i
 	done
-   	mkdir -m 0755 ${D}var/imap/socket
-        chown -R cyrus.mail ${D}var/imap/socket
+	mkdir -m 0755 ${D}var/imap/socket
+	chown -R cyrus.mail ${D}var/imap/socket
 	keepdir /var/imap/socket
 	mkdir ${D}var/spool
 	mkdir -m 0750 ${D}var/spool/imap
-        chown -R cyrus.mail ${D}var/spool/imap
+	chown -R cyrus.mail ${D}var/spool/imap
 	keepdir /var/spool/imap
 	mkdir -m 0755 ${D}var/spool/imap/stage.
-        chown -R cyrus.mail ${D}var/spool/imap/stage.
+	chown -R cyrus.mail ${D}var/spool/imap/stage.
 	keepdir /var/spool/imap/stage.
 	# For hashimapspool
 	for i in a b c d e f g h i j k l m n o p q r s t u v w x y z ; do mkdir -m 0755 ${D}var/spool/imap/$i ; \
