@@ -1,3 +1,5 @@
-MD5 2b644bcd2e70be7ecf88845a0b606f4d ChangeLog 796
 MD5 f149aad95be8d20d698d6100985f2759 File-Spec-0.82.ebuild 584
+MD5 2b644bcd2e70be7ecf88845a0b606f4d ChangeLog 796
+MD5 3bd7cecbfc6e2e792c7e142ef40f0b3b File-Spec-0.84.ebuild 478
 MD5 4c4ff53e78adcf00c5ce38ac9d7408c1 files/digest-File-Spec-0.82 65
+MD5 144ba852cf94f6d50b9e39e953c5936a files/digest-File-Spec-0.84 65

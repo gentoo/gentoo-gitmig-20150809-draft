@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/File-Spec
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Spec/ChangeLog,v 1.5 2003/07/02 19:38:19 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Spec/ChangeLog,v 1.6 2003/07/10 10:26:36 mcummings Exp $
+
+*File-Spec-0.84 (10 Jul 2003)
+
+  10 Jul 2003; Michael Cummings <mcummings@gentoo.org> File-Spec-0.84.ebuild:
+  CPAN version bump, marked for testing
 
   24 Jun 2003; Aron Griffis <agriffis@gentoo.org> File-Spec-0.82.ebuild:
   Mark stable on alpha
