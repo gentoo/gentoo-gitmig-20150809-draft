@@ -1,0 +1,12 @@
+diff -Nuar qt-x11-free-3.1.2/src/kernel/qcomplextext.cpp qt-x11-free-3.1.2-complextext/src/kernel/qcomplextext.cpp
+--- qt-x11-free-3.1.2/src/kernel/qcomplextext.cpp	2003-04-03 00:22:39.000000000 +0700
++++ qt-x11-free-3.1.2-complextext/src/kernel/qcomplextext.cpp	2003-04-03 00:22:19.000000000 +0700
+@@ -855,7 +855,7 @@
+ 	}
+ 
+ 	// combining marks of different class don't interact. Reset the rectangle.
+-	if ( cmb != lastCmb ) {
++	if ( eCmb != lastCmb ) {
+ 	    //qDebug( "resetting rect" );
+ 	    attachmentRect = baseRect;
+ 	}

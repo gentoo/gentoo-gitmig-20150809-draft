@@ -1,19 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.2-r5.ebuild,v 1.4 2003/07/22 19:34:59 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.2.0.ebuild,v 1.1 2003/07/31 02:55:27 caleb Exp $
 
 inherit eutils
 
-IUSE="cups nas postgres opengl mysql odbc gif cjk"
+IUSE="cups nas postgres opengl mysql odbc gif"
 
-S="${WORKDIR}/qt-x11-free-${PV}"
+S=${WORKDIR}/${PV}
 
 DESCRIPTION="QT version ${PV}"
 SLOT="3"
 LICENSE="QPL-1.0 | GPL-2"
 
-# WARNING: do not give this ebuild keywords that >=kdelibs-3.1.1, >=kdebase-3.1.1-r1 don't have
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64"
+KEYWORDS="~x86"
 
 SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-free-${PV}.tar.bz2"
 
@@ -30,18 +29,10 @@ DEPEND="virtual/x11
 	odbc? ( >=dev-db/unixODBC-2.0 )
 	mysql? ( >=dev-db/mysql-3.2.10 )
 	opengl? ( virtual/opengl virtual/glu )
-	postgres? ( >=dev-db/postgresql-7.2 )
-	!=kde-base/kdelibs-3.1
-	!=kde-base/kdelibs-3.1-r1
-	!=kde-base/kdelibs-3.1-r2
-	!=kde-base/kdelibs-3.1-r3
-	!=kde-base/kdebase-3.1
-	!=kde-base/kdebase-3.1-r1
-	!=kde-base/kdebase-3.1.1"
-# WARNING: the versions blocked above are known to be buggy. DO NOT use them with this qt	
+	postgres? ( >=dev-db/postgresql-7.2 )"
 
-RDEPEND="$DEPEND
-	doc? ( ~app-doc/qt-docs-$PV )"
+RDEPEND="$DEPEND"
+	#doc? ( ~app-doc/qt-docs- )"
 	
 QTBASE=/usr/qt/3
 export QTDIR=${S}
@@ -53,15 +44,6 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	
-	epatch ${FILESDIR}/designer.diff
-	epatch ${FILESDIR}/${P}-qmlined.diff
-	epatch ${FILESDIR}/${P}-r3-qsocket.diff
-	epatch ${FILESDIR}/${P}-qlistview-dnd.diff
-	# Fix issues with coreutils's head and tail commands
-	epatch ${FILESDIR}/${P}-coreutils-fixup.patch
-
-	use cjk && epatch ${FILESDIR}/${P}-korean-xim.patch
 	
 	cp configure configure.orig
 	sed -e 's:read acceptance:acceptance=yes:' configure.orig > configure
@@ -79,7 +61,7 @@ src_unpack() {
 	    sed -e "s:= gcc:= ${CC}:" qmake.conf.orig > qmake.conf
 	fi
 	
-	# hppa people, please review the following
+	# hppa and alpha people, please review the following
 	
 	# hppa need some additional flags
 	if [ "${ARCH}" = "hppa" ]; then
@@ -87,6 +69,18 @@ src_unpack() {
 		echo "QMAKE_CXXFLAGS += -fPIC -ffunction-sections" >> qmake.conf
 		echo "QMAKE_LFLAGS += -ffunction-sections -Wl,--stub-group-size=25000" >> qmake.conf
 	fi
+	
+	# on alpha we need to compile everything with -fPIC
+	if [ ${ARCH} == "alpha" ]; then
+	    cp qmake.conf qmake.conf.orig
+	    sed -e "s:= -O2:= -O2 -fPIC:" qmake.conf.orig > qmake.conf
+	    cat >> ${S}/tools/designer/editor/editor.pro <<_EOF_
+QMAKE_CFLAGS += -fPIC
+QMAKE_CXXFLAGS += -fPIC
+_EOF_
+	fi
+
+
 }
 
 src_compile() {
@@ -134,7 +128,7 @@ src_install() {
 	dobin bin/*
 
 	# libraries
-	dolib lib/libqt-mt.so.3.1.2 lib/libqui.so.1.0.0 lib/lib{editor,qassistantclient,designer}.a
+	dolib lib/libqt-mt.so.3.2.0 lib/libqui.so.1.0.0 lib/lib{editor,qassistantclient,designer}.a
 	cd ${D}$QTBASE/lib
 	for x in libqui.so
 	do
@@ -143,14 +137,14 @@ src_install() {
 	    ln -s $x.1 $x
 	done
 	
-	# version symlinks - 3.1.2->3.1->3->.so
-	ln -s libqt-mt.so.3.1.2 libqt-mt.so.3.1
-	ln -s libqt-mt.so.3.1 libqt-mt.so.3
+	# version symlinks - 3.2.0->3.2->3->.so
+	ln -s libqt-mt.so.3.2.0 libqt-mt.so.3.2
+	ln -s libqt-mt.so.3.2 libqt-mt.so.3
 	ln -s libqt-mt.so.3 libqt-mt.so
 
 	# libqt -> libqt-mt symlinks
-	ln -s libqt-mt.so.3.1.2 	libqt.so.3.1.2
-	ln -s libqt-mt.so.3.1		libqt.so.3.1
+	ln -s libqt-mt.so.3.2.0 	libqt.so.3.2.0
+	ln -s libqt-mt.so.3.2		libqt.so.3.2
 	ln -s libqt-mt.so.3		libqt.so.3
 	ln -s libqt-mt.so		libqt.so
 
@@ -180,11 +174,4 @@ src_install() {
 	done
 
 }
-pkg_postinst() {
 
-    ewarn "If you upgraded from QT 3.0.x to 3.1.x, you should remerge any copies"
-    ewarn "of kdelibs you have installed. Otherwise, other kde packages may not"
-    ewarn "compile properly. If you upgraded QT from 3.0.x to 3.1.x in the past"
-    ewarn "but have not remerged kdelib, since then, you should proobably do so now."
-
-}

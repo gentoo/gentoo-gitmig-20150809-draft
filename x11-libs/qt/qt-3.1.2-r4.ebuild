@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.2-r4.ebuild,v 1.2 2003/07/21 21:26:31 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.1.2-r4.ebuild,v 1.3 2003/07/31 02:55:27 caleb Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="3"
 LICENSE="QPL-1.0 | GPL-2"
 
 # WARNING: do not give this ebuild keywords that >=kdelibs-3.1.1, >=kdebase-3.1.1-r1 don't have
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 
 SRC_URI="ftp://ftp.trolltech.com/qt/source/qt-x11-free-${PV}.tar.bz2"
 
@@ -60,6 +60,9 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-qlistview-dnd.diff
 	# Fix issues with coreutils's head and tail commands
 	epatch ${FILESDIR}/${P}-coreutils-fixup.patch
+
+	use cjk && epatch ${FILESDIR}/${P}-korean-xim.patch
+	epatch ${FILESDIR}/${P}-thai-complextext.patch
 	
 	cp configure configure.orig
 	sed -e 's:read acceptance:acceptance=yes:' configure.orig > configure
@@ -132,7 +135,7 @@ src_install() {
 	dobin bin/*
 
 	# libraries
-	dolib lib/libqt-mt.so.3.1.2 lib/libqui.so.1.0.0 lib/lib{editor,qassistantclient,designer}.a
+	dolib lib/libqt-mt.so.3.1.2 lib/libqui.so.1.0.0 lib/lib{editor,qassistantclient,designer}.a lib/*.la lib/*.prl
 	cd ${D}$QTBASE/lib
 	for x in libqui.so
 	do
