@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 add5ba23c1692923c79ecaf27bfe3411 ChangeLog 560
-MD5 8308205d41ac2bfa210d28cbf2da0ddc detect-0.9.72.ebuild 990
+MD5 086ace929b371946e01cf28457492d93 detect-0.9.72.ebuild 976
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 8861af0d18236fbf10c7754660853ed1 files/digest-detect-0.9.72 140
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.5 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBKr90I1lqEGTUzyQRAuiRAJ9rAtY+eFSWmNpTvTOjxncZn0nSfwCfXmzC
-qClVysMSwkRFfrdGoFQLqwQ=
-=2e1p
+iD8DBQFBaJ8THTu7gpaalycRAmFHAKCVYyOmcLiZp+l83Y/6R37fnt+mFwCbBWHo
+4daEsn4uVcJaA10mI3nfEF0=
+=oPOY
 -----END PGP SIGNATURE-----
