@@ -1,0 +1,9 @@
+# ChangeLog for dev-embedded/gpsim-logic
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim-logic/ChangeLog,v 1.1 2003/10/21 05:45:15 robbat2 Exp $
+
+*gpsim-logic-0.0.2 (20 Oct 2003)
+
+  20 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> gpsim-logic-0.0.2.ebuild:
+  initial commit
+
