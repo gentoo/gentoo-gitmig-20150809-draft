@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-3.9.13-r3.ebuild,v 1.1 2002/12/20 16:48:35 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/screen/screen-3.9.13-r3.ebuild,v 1.2 2003/01/15 16:18:16 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -43,6 +43,21 @@ src_compile() {
 	econf 	--with-socket-dir=/var/run/screen \
 		--with-sys-screenrc=/etc/screenrc \
 		--enable-rxvt_osc ${myconf}
+
+	# Fix bug 12683 by fixing up term.h (remove dups and add missing).
+	# This is really an upstream problem in screen, I think.
+	# (15 Jan 2003 agriffis)
+	make term.h || die "Failed making term.h"
+	mv term.h term.h.old
+	awk '/^#define/ { if (defs[$2]) next; defs[$2] = $3 }
+                    { print }
+                END { for (d in defs) { 
+						if (d !~ /_C../) continue; 
+						d2 = gensub(/C/, "", 1, d);
+						if (d2 in defs) continue; 
+                        print "#define " d2 " " defs[d]
+                      }
+                    }' term.h.old > term.h || die "Failed to fix term.h"
 
 	emake || die "Failed to compile"
 }
