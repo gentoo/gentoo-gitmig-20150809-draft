@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/wastesedge/wastesedge-0.3.3.ebuild,v 1.5 2004/02/29 21:12:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/wastesedge/wastesedge-0.3.3.ebuild,v 1.6 2004/04/10 09:06:49 mr_bones_ Exp $
 
 inherit games
 
@@ -28,11 +28,11 @@ src_compile(){
 		`use_enable doc` \
 		--with-adonthell-binary=${GAMES_BINDIR}/adonthell \
 		|| die
-	emake || die
+	emake || die "emake failed"
 }
 
 src_install(){
-	emake install DESTDIR=${D} || die
+	make DESTDIR="${D}" install || die "make install failed"
 	dodoc AUTHORS ChangeLog NEWS PLAYING README
 	prepgamesdirs
 }
