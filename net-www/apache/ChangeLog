@@ -1,6 +1,9 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.322 2005/02/24 06:16:49 beu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.323 2005/02/24 15:41:50 beu Exp $
+
+  24 Feb 2005; Elfyn McBratney <beu@gentoo.org> apache-2.0.52-r1.ebuild:
+  Always create /var/cache/apache2 (closes bug #83187).
 
   24 Feb 2005; Elfyn McBratney <beu@gentoo.org> apache-2.0.52-r1.ebuild:
   Create /var/log/apache2 and /etc/apache2/conf/ssl (former closes bug #76044).
