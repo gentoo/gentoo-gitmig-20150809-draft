@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# <seemant@gentoo.org> (25 Jul 2002)
+# masked while licensing is sorted out
+app-games/halflife-server
+
 # <cardoe@genoo.org> (25 Jul 2002)
 # Moz 1.1beta (don't kill me Azarah for putting this here!)
 =net-www/mozilla-1.1_beta
