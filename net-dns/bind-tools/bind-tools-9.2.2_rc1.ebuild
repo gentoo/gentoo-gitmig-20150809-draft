@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# /space/gentoo/cvsroot/gentoo-x86/net-misc/bind-tools/bind-tools-9.2.2-r1.ebuild,v 1.1 2001/12/09 23:47:08 jerrya Exp
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.2.2_rc1.ebuild,v 1.4 2002/10/17 15:47:14 vapier Exp $
 
 MY_P=${P//-tools}
 MY_P=${MY_P/_}
@@ -14,11 +14,7 @@ LICENSE="as-is"
 SLOT="0"
 
 DEPEND="virtual/glibc"
-
-src_unpack() {
-	unpack ${MY_P}.tar.gz
-
-}
+RDEPEND="${DEPEND}"
  
 src_compile() {
 	econf || die "configure failed"
