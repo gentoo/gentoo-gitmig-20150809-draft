@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xmountains
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmountains/ChangeLog,v 1.9 2004/09/29 05:25:57 pyrania Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmountains/ChangeLog,v 1.10 2005/01/02 18:11:20 hansmi Exp $
+
+  02 Jan 2005; Michael Hanselmann <hansmi@gentoo.org> xmountains-2.7.ebuild:
+  Stable on ppc.
 
   29 Sep 2004; <pyrania@gentoo.org> xmountains-2.7.ebuild:
   Stable on x86.

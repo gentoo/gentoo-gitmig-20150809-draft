@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 74e8ba9856ba1ed5c0993646d54019ae ChangeLog 1347
-MD5 a20b070845a5a7b6ee8f6b6a7c5900cf xmountains-2.6.ebuild 724
-MD5 690fde32c0d331a6148731cc326f7c63 xmountains-2.7.ebuild 756
+MD5 abc374b0f880af265a8cfddf1d5ea1e7 xmountains-2.6.ebuild 722
 MD5 cdb11033a3fa6525334cecf938961c07 metadata.xml 166
+MD5 e18a6e3e22a61815eabbaaac9b1c07a1 ChangeLog 1442
+MD5 7460ea93ce657daf90422e935a27dbcf xmountains-2.7.ebuild 754
 MD5 f46a2a0e142a692bc65d33291276c789 files/digest-xmountains-2.6 65
 MD5 ec4d97c900d4b688034d5eb4cf9d110b files/digest-xmountains-2.7 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBWkcgI7fK2cqeyXkRAgghAKCY49IxGYDcr8pgpoPEp1ixRAixOgCg4YIx
-8hReUr7nLxfatsh+Dv0yVpE=
-=mQkq
------END PGP SIGNATURE-----

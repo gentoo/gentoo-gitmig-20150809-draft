@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmountains/xmountains-2.6.ebuild,v 1.7 2004/09/02 22:49:41 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xmountains/xmountains-2.6.ebuild,v 1.8 2005/01/02 18:11:20 hansmi Exp $
 
 DESCRIPTION="Fractal terrains of snow-capped mountains near water"
 HOMEPAGE="http://www.epcc.ed.ac.uk/~spb/${PN}/"
