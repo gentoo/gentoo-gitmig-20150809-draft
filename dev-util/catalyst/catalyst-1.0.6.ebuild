@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-1.0.6.ebuild,v 1.1 2004/04/12 20:04:31 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-1.0.6.ebuild,v 1.2 2004/04/27 07:31:04 vapier Exp $
 
 DESCRIPTION="Gentoo Linux official release metatool"
 HOMEPAGE="http://www.gentoo.org/proj/en/releng/catalyst"
@@ -8,7 +8,7 @@ SRC_URI="http://dev.gentoo.org/~zhen/catalyst/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 sparc ~ppc ~alpha ~mips"
+KEYWORDS="~x86 ~ppc sparc ~mips ~alpha arm ~amd64"
 IUSE="doc"
 
 DEPEND=""

@@ -1,33 +1,26 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-2.3.ebuild,v 1.12 2004/04/09 07:15:00 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-2.3.ebuild,v 1.13 2004/04/27 07:30:30 vapier Exp $
 
-DESCRIPTION="ccache is a fast compiler cache. It is used as a front end to your
-compiler to safely cache compilation output. When the same code is compiled
-again the cached output is used giving a significant speedup."
-SRC_URI="http://ccache.samba.org/ftp/ccache/${P}.tar.gz"
+DESCRIPTION="fast compiler cache"
 HOMEPAGE="http://ccache.samba.org/"
+SRC_URI="http://ccache.samba.org/ftp/ccache/${P}.tar.gz"
 
-IUSE=""
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc alpha mips hppa amd64 ia64 ppc64 s390"
+SLOT="0"
+KEYWORDS="x86 ~ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
+IUSE=""
+
 DEPEND="virtual/glibc \
 	>=sys-apps/portage-2.0.46-r11"
 
 # Note: this version is designed to be auto-detected and used if
 # you happen to have Portage 2.0.X+ installed.
 
-src_compile() {
-	econf || die
-	emake || die
-}
-
 src_install () {
-	exeinto /usr/bin
-	doexe ccache
+	dobin ccache || die
 	doman ccache.1
-	dodoc COPYING README
+	dodoc README
 	dohtml web/*.html
 
 	diropts -m0755
