@@ -1,0 +1,15 @@
+# ChangeLog for app-emulation/winex-cvs
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/ChangeLog,v 1.1 2002/09/01 06:25:28 phoenix Exp $
+
+*winex-20020831 (01 September 2002)
+
+  01 Sep 2002; phoen][x <phoenix@gentoo.org> ChangeLog, winex-cvs-20020831.ebuild,
+  files/winex-cvs-20020831-fake_windows.tar.bz2, files/winex-cvs-20020831-regedit,
+  files/winex-cvs-20020831-winex :
+
+  Initial release of the winex-cvs package. In order to have both winex versions
+  (the normal one and the cvs one) installed at the same time, i made this one go
+  into /usr/lib/winex-cvs. The wrapper is called /usr/bin/winex-cvs and the 
+  regedit is named /usr/bin/regedit-winex-cvs.
+
