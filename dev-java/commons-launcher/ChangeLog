@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-launcher
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-launcher/ChangeLog,v 1.7 2005/01/01 18:18:18 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-launcher/ChangeLog,v 1.8 2005/01/20 19:29:38 luckyduck Exp $
+
+  20 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  commons-launcher-0.9.ebuild:
+  added missing jikes dependency. see #78819.
 
   17 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
   commons-launcher-0.9.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/commons-digester-1.4.ebuild,v 1.2 2005/01/01 18:16:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/commons-digester-1.4.ebuild,v 1.3 2005/01/20 19:27:43 luckyduck Exp $
 
 inherit java-pkg
 
@@ -15,7 +15,8 @@ IUSE="doc jikes junit"
 RDEPEND=">=virtual/jre-1.3
 	 >=dev-java/commons-beanutils-1.4
 	 >=dev-java/commons-collections-2.0
-	 >=dev-java/commons-logging-1.0"
+	 >=dev-java/commons-logging-1.0
+	 jikes? ( dev-java/jikes )"
 DEPEND="${RDEPEND}
 	>=virtual/jdk-1.3
 	>=dev-java/ant-1.4

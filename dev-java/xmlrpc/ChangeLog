@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xmlrpc
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlrpc/ChangeLog,v 1.6 2004/10/22 10:34:01 absinthe Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlrpc/ChangeLog,v 1.7 2005/01/20 19:25:25 luckyduck Exp $
+
+  20 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> xmlrpc-1.2_beta1.ebuild:
+  added missing jikes dependency. see #78819.
 
   22 Oct 2004; Dylan Carlson <absinthe@gentoo.org> xmlrpc-1.2_beta1.ebuild:
   Keywords ~amd64.

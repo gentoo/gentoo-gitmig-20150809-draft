@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlrpc/xmlrpc-1.2_beta1.ebuild,v 1.5 2004/10/22 10:34:01 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xmlrpc/xmlrpc-1.2_beta1.ebuild,v 1.6 2005/01/20 19:25:25 luckyduck Exp $
 
 inherit java-pkg
 
@@ -13,7 +13,10 @@ LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~amd64"
 IUSE="jikes doc"
-DEPEND="dev-java/ant"
+DEPEND=">=virtual/jdk-1.4
+	dev-java/ant
+	jikes? ( dev-java/jikes )"
+RDEPEND=">=virtual/jre-1.4"
 
 S=${WORKDIR}/${PN}-${MY_PV}
 
