@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysqlnavigator
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlnavigator/ChangeLog,v 1.8 2004/06/24 21:57:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlnavigator/ChangeLog,v 1.9 2004/10/06 08:02:54 sejo Exp $
+
+  06 Oct 2004; <SeJo@gentoo.org> mysqlnavigator-1.4.2.ebuild:
+  added the patch of tcort@cs.ubishops.ca
 
   25 Apr 2004; Aron Griffis <agriffis@gentoo.org> mysqlnavigator-1.4.1.ebuild,
   mysqlnavigator-1.4.2.ebuild:
