@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.1.ebuild,v 1.6 2004/10/19 14:21:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.1.ebuild,v 1.7 2004/11/07 23:53:49 sekretarz Exp $
 
 inherit flag-o-matic eutils
 
@@ -199,7 +199,7 @@ pkg_config() {
 	if [ ! -f /etc/hosts.equiv ]
 	then
 		touch /etc/hosts.equiv
-		chown root.root /etc/hosts.equiv
+		chown root:root /etc/hosts.equiv
 		chmod u=rw,go=r /etc/hosts.equiv
 	fi
 
