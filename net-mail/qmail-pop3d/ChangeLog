@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/qmail-pop3d
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-pop3d/ChangeLog,v 1.7 2003/07/31 13:46:52 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-pop3d/ChangeLog,v 1.8 2003/08/16 11:23:30 taviso Exp $
+
+  16 Aug 2003; Tavis Ormandy <taviso@gentoo.org> qmail-pop3d-1.03-r1.ebuild:
+  stable on alpha
 
   31 Jul 2003; Tavis Ormandy <taviso@gentoo.org> qmail-pop3d-1.03-r1.ebuild:
   ~alpha
