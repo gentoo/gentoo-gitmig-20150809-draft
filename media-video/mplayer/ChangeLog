@@ -1,9 +1,16 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.161 2004/07/16 09:53:41 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.162 2004/07/18 06:46:07 chriswhite Exp $
 
   16 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> mplayer-1.0_pre5.ebuild:
   Stable on alpha, see bug #55456.
+
+*mplayer-1.0_pre4-r5 (18 Jul 2004)
+
+  18 Jul 2004; Chris White <chriswhite@gentoo.org>
+  +files/amd64_fix_the_blue_love.patch, +files/real_demux.patch,
+  mplayer-1.0_pre4-r4.ebuild, +mplayer-1.0_pre4-r5.ebuild:
+  Fixes Bug #53634 and Bug #55456 for amd64.
 
   15 Jul 2004; Jason Wever <weeve@gentoo.org> mplayer-1.0_pre5.ebuild:
   Stable on sparc wrt bug #55456.
