@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.8-r1.ebuild,v 1.8 2004/06/29 19:56:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.8-r1.ebuild,v 1.9 2004/07/11 15:49:26 pylon Exp $
 
 inherit flag-o-matic eutils
 
@@ -15,8 +15,11 @@ IUSE="gnome debug"
 RESTRICT="nostrip"
 
 RDEPEND=">=media-sound/lame-3.90
-	gnome? ( >=dev-cpp/gtkmm-2.0
-		>=dev-cpp/libgnomeuimm-2.0 )"
+	gnome? ( =dev-cpp/gtkmm-2.2*
+	=dev-cpp/libgnomemm-2.0*
+	=dev-cpp/gconfmm-2.0*
+	=dev-cpp/libgnomecanvasmm-2.0*
+	=dev-cpp/libgnomeuimm-2.0.0 )"
 DEPEND=">=dev-util/pccts-1.33.24-r1
 	>=app-cdr/cdrtools-2.01_alpha20
 	${RDEPEND}
