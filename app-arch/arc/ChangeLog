@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/arc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arc/ChangeLog,v 1.3 2003/02/12 02:55:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arc/ChangeLog,v 1.4 2003/11/25 03:39:12 agriffis Exp $
+
+  24 Nov 2003; Aron Griffis <agriffis@gentoo.org> arc-521e.ebuild:
+  Add ~alpha
 
 *arc-521e (17 Aug 2002)
 

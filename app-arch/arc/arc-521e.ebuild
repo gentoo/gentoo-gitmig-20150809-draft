@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arc/arc-521e.ebuild,v 1.7 2003/09/26 21:07:35 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arc/arc-521e.ebuild,v 1.8 2003/11/25 03:39:12 agriffis Exp $
 
 DESCRIPTION="Create & extract files from DOS .ARC files."
 MY_P="${PN}${PV}.pl8"
 SRC_URI="ftp://ftp.kiarchive.ru/pub/unix/arcers/${MY_P}.tar.Z"
 HOMEPAGE=""
 
-KEYWORDS="x86 -ppc"
+KEYWORDS="x86 -ppc ~alpha"
 SLOT="0"
 LICENSE="ARC"
 
