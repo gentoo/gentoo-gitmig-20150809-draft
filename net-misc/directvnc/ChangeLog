@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/directvnc
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/ChangeLog,v 1.13 2004/06/24 23:41:50 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/directvnc/ChangeLog,v 1.14 2005/01/16 02:00:48 luckyduck Exp $
+
+  16 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> directvnc-0.7.5.ebuild:
+  aded ~amd64 to KEYWORDS. fixes #77599.
 
 *directvnc-0.7.5 (01 Jun 2004)
 
