@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Test-Exception
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Exception/ChangeLog,v 1.5 2005/03/20 11:00:54 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Test-Exception/ChangeLog,v 1.6 2005/04/02 14:16:35 mcummings Exp $
+
+  02 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  Test-Exception-0.20.ebuild:
+  Bug 82091
 
 *Test-Exception-0.20 (20 Mar 2005)
 
