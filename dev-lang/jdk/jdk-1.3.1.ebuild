@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/jdk/jdk-1.3.1.ebuild,v 1.1 2001/07/10 00:32:26 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/jdk/jdk-1.3.1.ebuild,v 1.2 2001/07/10 03:17:07 achim Exp $
 
 P=jdk-1.3.1
 A=j2sdk-1.3.1-FCS-linux-i386.tar.bz2
@@ -33,7 +33,7 @@ src_install() {
 }
 
 pkg_postinst () {
-  ln -s ${ROOT}/opt/jdk-${PV} ${ROOT}/opt/java
+  ln -sf ${ROOT}/opt/jdk-${PV} ${ROOT}/opt/java
 }
 
 
