@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/phpldapadmin-0.9.3.ebuild,v 1.3 2004/04/19 19:24:57 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/phpldapadmin-0.9.3.ebuild,v 1.4 2004/04/20 18:43:25 rizzo Exp $
+
+inherit webapp-apache
 
 DESCRIPTION="phpLDAPadmin is a web-based tool for managing all aspects of your LDAP server."
 HOMEPAGE="http://phpldapadmin.sourceforge.net"
@@ -13,10 +15,9 @@ IUSE=""
 
 DEPEND="virtual/php"
 
-inherit webapp-apache
-webapp-detect || NO_WEBSERVER=1
-
 pkg_setup() {
+	webapp-detect || NO_WEBSERVER=1
+
 	# Check for "ldap" in USE vars for mod_php
 	webapp-check-php ldap
 
