@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.29 2004/02/26 19:40:43 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.30 2004/02/26 21:17:34 azarah Exp $
+
+*udev-018-r2 (26 Feb 2004)
+
+  26 Feb 2004; Martin Schlemmer <azarah@gentoo.org> udev-018-r2.ebuild,
+  files/udev-018-sysfs-build-fix.patch:
+  Fix build error, bug #42377, thanks Greg KH <greg@kroah.com>.
 
   26 Feb 2004; Ciaran McCreesh <ciaranm@gentoo.org> udev-018-r1.ebuild:
   Works on (most) sparc kit, adding ~sparc to the keywords
