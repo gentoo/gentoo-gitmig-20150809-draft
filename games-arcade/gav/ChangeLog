@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/gav
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/gav/ChangeLog,v 1.3 2004/02/23 18:41:42 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/gav/ChangeLog,v 1.4 2004/04/10 01:42:08 mr_bones_ Exp $
+
+*gav-0.8.0 (09 Apr 2004)
+
+  09 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> gav-0.8.0.ebuild:
+  version bump (bug #47214)
 
   23 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org> gav-0.7.3.ebuild:
   Work around the buggy make files (bug #41530)

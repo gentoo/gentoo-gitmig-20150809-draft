@@ -1,4 +1,6 @@
 MD5 503adffdb8c3eed0673441849b9d9d5d gav-0.7.3.ebuild 1794
 MD5 3f11aaf297b2fe67404a96cda13e9bfe metadata.xml 251
-MD5 9a02d8f05bc2c71e58075319a4e75766 ChangeLog 578
+MD5 3c333798b1e13f0e2e26a92e2dd937fe ChangeLog 706
+MD5 518b74a5f8bb6cf9dd56eba052eb25c0 gav-0.8.0.ebuild 1840
 MD5 1c18406366033665fb9514f27589ec2e files/digest-gav-0.7.3 447
+MD5 39c97c2692489eea1148249b55046c6b files/digest-gav-0.8.0 448
