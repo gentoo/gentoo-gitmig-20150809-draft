@@ -1,6 +1,10 @@
 # ChangeLog for net-www/horde-chora
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-chora/ChangeLog,v 1.6 2003/02/12 08:47:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-chora/ChangeLog,v 1.7 2003/04/08 21:50:17 alron Exp $
+
+*horde-chora-1.2-r1 (08 Apr 2003)
+  08 Apr 2003; Dean Bailey <alron@gentoo.org> horde-chora-1.2-r1 :
+  Fixed an issue that cropped up when one updates horde-chora.
 
 *horde-chora-1.2 (03 Feb 2003)
   03 Feb 2003; Dean Bailey <alron@gentoo.org> horde-chora-1.2 :
