@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jade/jade-3.1.ebuild,v 1.1 2004/02/18 02:47:51 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jade/jade-3.1.ebuild,v 1.2 2004/03/23 03:07:57 zx Exp $
 
 inherit java-pkg
 
@@ -13,10 +13,9 @@ DEPEND=">=virtual/jdk-1.3
 RDEPEND=">=virtual/jdk-1.3"
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~amd64"
+KEYWORDS="x86 ~sparc ~ppc ~amd64"
 
 S=${WORKDIR}/${PN}
-
 
 src_unpack() {
 	jar xvf ${DISTDIR}/JADE-src-${PV}.zip
@@ -26,7 +25,7 @@ src_compile(){
 	local antflags="lib"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
 	use doc && antflags="${antflags} doc"
-	ant ${antflags}
+	ant ${antflags} || die "compilation problem"
 }
 
 src_install() {
