@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.27 2004/05/27 21:34:25 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.28 2004/05/28 21:34:45 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -35,6 +35,10 @@ fi
 if [ "${PHPSAPI}" != "cli" ]; then
 	SRC_URI="${SRC_URI} mirror://gentoo/php-4.3.2-fopen-url-secure.patch"
 fi
+
+# Patch for bug 50991, 49420 
+# Make sure the correct include_path is used.
+SRC_URI="${SRC_URI} mirror://gentoo/php-4.3.6-includepath.diff http://dev.gentoo.org/~robbat2/distfiles/php-4.3.6-includepath.diff"
 
 [ "${PV//4.3.6}" != "${PV}" ] && SRC_URI="${SRC_URI} http://www.apache.org/~jorton/php-4.3.6-pcrealloc.patch"
 
@@ -165,14 +169,14 @@ PHP_INSTALLTARGETS="${PHP_INSTALLTARGETS} install-modules install-programs"
 # provided by PHP Provider:
 # install-pear install-build install-headers install-programs
 # for use by other ebuilds:
-# install-cli install-sapi install-modules install-programs
+# install-sapi install-modules install-programs
 #
 # all ebuilds should have install-programs, and then delete everything except
 # php-config.${PN}
 
 # These are quick fixups for older ebuilds that didn't have PHPSAPI defined.
-[ -z "${PHPSAPI}" ] && [ "${PN}" = "php" ] && PHPSAPI="cli"
-if [ -z "${PHPSAPI}" ] && [ "${PN}" = "mod_php" ]; then
+[ -z "${PHPSAPI}" -a "${PN}" = "php" ] && PHPSAPI="cli"
+if [ -z "${PHPSAPI}" -a "${PN}" = "mod_php" ]; then
 	use apache2 && PHPSAPI="apache2" || PHPSAPI="apache1"
 fi
 
@@ -182,6 +186,7 @@ if [ -z "${PHPSAPI}" ]; then
 	eerror "${msg}"
 	die "${msg}"
 fi
+
 # build the destination and php.ini detail
 PHPINIDIRECTORY="/etc/php/${PHPSAPI}-php${PHPMAJORVER}"
 PHPINIFILENAME="php.ini"
@@ -466,7 +471,10 @@ php-sapi_src_compile() {
 		--enable-inline-optimization \
 		--enable-track-vars \
 		--enable-trans-sid \
-		--enable-versioning \
+		--enable-versioning"
+
+	einfo "Using INI file: ${PHPINIDIRECTORY}/${PHPINIFILENAME}"
+	myconf="${myconf} \
 		--with-config-file-path=${PHPINIDIRECTORY}" 
 
 	php-sapi_is_providerbuild || myconf="${myconf} --without-pear"
@@ -550,6 +558,10 @@ php-sapi_src_install() {
 	if [ "${PHPSAPI}" != "cli" ]; then
 		patch ${phpinisrc} <${DISTDIR}/php-4.3.2-fopen-url-secure.patch
 	fi
+
+	# Patch for bug 50991, 49420 
+	# Make sure the correct include_path is used.
+	patch ${phpinisrc} <${DISTDIR}/php-4.3.6-includepath.diff
 
 	# A lot of ini file funkiness
 	insinto ${PHPINIDIRECTORY}
