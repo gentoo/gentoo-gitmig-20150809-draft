@@ -1,15 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/cocoon/cocoon-2.0.2.ebuild,v 1.5 2002/10/05 05:39:24 drobbins Exp $
-
-IUSE="jikes"
+# $Header: /var/cvsroot/gentoo-x86/net-www/cocoon/cocoon-2.0.2.ebuild,v 1.6 2002/11/02 12:07:33 karltk Exp $
 
 A=cocoon-${PV}-src.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="A Web Publishing Framework for Apache"
 SRC_URI="http://xml.apache.org/cocoon/dist/${A}"
 HOMEPAGE="http://xml.apache.org/cocoon/"
-KEYWORDS="x86 sparc sparc64"
+KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
 SLOT="0"
 LICENSE="Apache-1.1"
 
@@ -18,6 +16,8 @@ DEPEND=">=virtual/jdk-1.3
 	>=net-www/tomcat-4.0.4
 	jikes? ( >=dev-java/jikes-1.15 )
 	"
+IUSE="jikes"
+
 
 src_unpack() {
 	unpack ${A}
@@ -76,5 +76,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	echo -e "\e[32;01m You must restart tomcat to have access to Cocoon. \033[0m"
+	einfo "You must restart tomcat to have access to Cocoon."
 }
