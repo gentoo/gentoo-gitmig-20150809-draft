@@ -1,4 +1,4 @@
-MD5 2f4f25409a3446999f2d8295c285b58c ChangeLog 4906
+MD5 ca8b445242c4c3385401866a772d1456 ChangeLog 5112
 MD5 6cdc2c55c81d469d6c659b78aeaab6fa busybox-0.50.ebuild 1021
 MD5 afce61e411b071fc0cb5721e03e67270 busybox-0.60.2.ebuild 1239
 MD5 468aac724f34f9d41d0ad79934ceea60 busybox-0.60.3-r1.ebuild 1100
@@ -7,8 +7,9 @@ MD5 d3043ed4947d95bdc6d851104d264b08 busybox-0.60.5-r1.ebuild 1430
 MD5 b2aea7596915e98b9fdca4327e253c59 busybox-0.60.5-r2.ebuild 2147
 MD5 dbe32c7e55c8da606a4e1081f3f55f71 busybox-0.60.5.ebuild 1040
 MD5 69837430060f0ab0c3f2d4ee893d0d02 busybox-1.00_pre5.ebuild 4461
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 a4751ddd67251dc33465a54a898f433c busybox-1.00_pre7.ebuild 5135
+MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 04d36a211e4b8ce910b44543e95b7787 busybox-0.60.3-r2.ebuild 1173
 MD5 9ce965b12114a360496fe06e952139a8 files/Config.h 11695
 MD5 24ec3839ecb3e429bf29a819398b7753 files/Config.h-0.60.2-cd 13772
 MD5 af127cfced92352c0a43cbf63cde52bd files/Config.h-0.60.3-cd 14319
@@ -23,6 +24,8 @@ MD5 eed3465a5e0e5ddae7dac2c1c1f879ef files/digest-busybox-0.60.5 66
 MD5 eed3465a5e0e5ddae7dac2c1c1f879ef files/digest-busybox-0.60.5-r1 66
 MD5 eed3465a5e0e5ddae7dac2c1c1f879ef files/digest-busybox-0.60.5-r2 66
 MD5 347b6eb9800123daef3dbc8b97bf6d37 files/digest-busybox-1.00_pre5 70
+MD5 704f416234f8fbc811d4313a29dd7007 files/digest-busybox-1.00_pre7 70
 MD5 9750d4004e6507d35f9aa67d2785fdd3 files/dodeps 2015
 MD5 3a4b93f7ec6f3aaade20029a81562b88 files/msh.diff 433
-MD5 704f416234f8fbc811d4313a29dd7007 files/digest-busybox-1.00_pre7 70
+MD5 4e80b04a6c57cb7341be774b55b7229c files/busybox-cmdedit-sparc.diff 568
+MD5 61ecae720ff226b1e543f7c1d0900043 files/digest-busybox-0.60.3-r2 66

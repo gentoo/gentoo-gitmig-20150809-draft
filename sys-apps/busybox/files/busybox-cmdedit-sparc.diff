@@ -1,0 +1,12 @@
+diff -Nru busybox-0.60.5-orig/cmdedit.c busybox-0.60.5/cmdedit.c
+--- busybox-0.60.5-orig/cmdedit.c	Thu Apr 25 01:07:03 2002
++++ busybox-0.60.5/cmdedit.c	Fri Apr  4 19:55:30 2003
+@@ -1177,7 +1177,7 @@
+ 	new_settings.c_lflag &= ~ICANON;        /* unbuffered input */
+ 	/* Turn off echoing and CTRL-C, so we can trap it */
+ 	new_settings.c_lflag &= ~(ECHO | ECHONL | ISIG);
+-#ifndef linux
++#if (defined(__sparc__) && defined(linux)) || ! defined(linux)
+ 	/* Hmm, in linux c_cc[] not parsed if set ~ICANON */
+ 	new_settings.c_cc[VMIN] = 1;
+ 	new_settings.c_cc[VTIME] = 0;
