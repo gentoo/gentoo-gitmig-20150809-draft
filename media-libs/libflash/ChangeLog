@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libflash
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libflash/ChangeLog,v 1.1 2002/02/01 21:53:30 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libflash/ChangeLog,v 1.2 2002/06/14 23:50:13 lostlogic Exp $
+
+*libflash-0.4.10-r1 (14 Jun 2002)
+
+  14 Jun 2002; Doug Goldstein (Cardoe) <dougg@ufl.edu> libflash-0.4.10-r1.ebuild :
+  
+  Fixed some redundant stuff in the ebuild and the major thing is I included a patch
+  that makes it actually compile with gcc3.1. The patch has no effect on gcc2.95 and 
+  has been confirmed to compile on both platforms.
 
 *libflash-0.4.10 (1 Feb 2002)
 
