@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pysol-sound-server/pysol-sound-server-3.00.ebuild,v 1.2 2004/01/24 13:59:50 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pysol-sound-server/pysol-sound-server-3.00.ebuild,v 1.3 2004/03/21 17:13:45 jhuebel Exp $
 
 DESCRIPTION="Sound server for PySol"
 HOMEPAGE="http://www.oberhumer.com/opensource/pysol/"
 SRC_URI="http://www.oberhumer.com/opensource/pysol/download/${P}.tar.bz2"
 
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~amd64"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE=""

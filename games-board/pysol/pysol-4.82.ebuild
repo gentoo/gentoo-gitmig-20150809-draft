@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/pysol/pysol-4.82.ebuild,v 1.3 2004/01/24 13:58:21 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/pysol/pysol-4.82.ebuild,v 1.4 2004/03/21 17:13:45 jhuebel Exp $
 
 DESCRIPTION="An exciting collection of more than 200 solitaire card games"
 SRC_URI="http://www.oberhumer.com/opensource/pysol/download/${P}.tar.bz2"
@@ -12,7 +12,7 @@ RDEPEND="virtual/python
 	>=games-board/pysol-sound-server-3.0
 	>=dev-lang/tk-8.0"
 
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~amd64"
 LICENSE="GPL-2"
 SLOT="0"
 
