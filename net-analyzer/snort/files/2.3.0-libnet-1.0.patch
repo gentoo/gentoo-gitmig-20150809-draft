@@ -1,5 +1,6 @@
---- configure.in.orig	2005-01-10 23:05:06.867089352 +0930
-+++ configure.in	2005-01-10 23:07:32.461660456 +0930
+diff -urN snort-2.3.0.orig/configure.in snort-2.3.0/configure.in
+--- snort-2.3.0.orig/configure.in	2005-01-27 10:11:34.000000000 -0500
++++ snort-2.3.0/configure.in	2005-01-27 10:36:24.727932095 -0500
 @@ -686,20 +686,20 @@
          fi
  
@@ -100,8 +101,9 @@
    if test "$LNET" = "no"; then
      echo
      echo "   ERROR!  Libnet library not found, go get it from"
---- ./src/detection-plugins/sp_react.c.orig	2005-01-10 23:11:17.253602680 +0930
-+++ ./src/detection-plugins/sp_react.c	2005-01-10 23:12:01.073940976 +0930
+diff -urN snort-2.3.0.orig/src/detection-plugins/sp_react.c snort-2.3.0/src/detection-plugins/sp_react.c
+--- snort-2.3.0.orig/src/detection-plugins/sp_react.c	2005-01-27 10:11:34.000000000 -0500
++++ snort-2.3.0/src/detection-plugins/sp_react.c	2005-01-27 10:36:24.733931106 -0500
 @@ -57,7 +57,7 @@
  #include <stdlib.h>
  #include <string.h>
@@ -111,8 +113,9 @@
  
  #include "rules.h"
  #include "decode.h"
---- ./src/detection-plugins/sp_respond.c.orig	2005-01-10 23:11:29.457747368 +0930
-+++ ./src/detection-plugins/sp_respond.c	2005-01-10 23:12:01.074940824 +0930
+diff -urN snort-2.3.0.orig/src/detection-plugins/sp_respond.c snort-2.3.0/src/detection-plugins/sp_respond.c
+--- snort-2.3.0.orig/src/detection-plugins/sp_respond.c	2005-01-27 10:11:34.000000000 -0500
++++ snort-2.3.0/src/detection-plugins/sp_respond.c	2005-01-27 10:36:24.734930941 -0500
 @@ -34,7 +34,7 @@
  
  
@@ -122,3 +125,15 @@
  
  #include "decode.h"
  #include "rules.h"
+diff -urN snort-2.3.0.orig/src/inline.c snort-2.3.0/src/inline.c
+--- snort-2.3.0.orig/src/inline.c	2005-01-27 10:11:34.000000000 -0500
++++ snort-2.3.0/src/inline.c	2005-01-27 10:37:00.735994060 -0500
+@@ -3,7 +3,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <pcap.h>
+-#include <libnet.h>
++#include <libnet-1.0.h>
+ 
+ #include "decode.h"
+ #include "inline.h"
