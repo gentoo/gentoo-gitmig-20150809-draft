@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/libgphoto2
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.6 2003/06/10 22:32:53 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/ChangeLog,v 1.7 2003/07/02 14:02:41 weeve Exp $
+
+  02 Jul 2003; Jason Wever <weeve@gentoo.org> libgphoto2-2.1.1-r2.ebuild:
+  Changed ~sparc keyword to sparc.
 
   10 Jun 2003; Alastair Tse <liquidx@gentoo.org> libgphoto2-2.1.1-r2.ebuild:
   marked as stable x86
