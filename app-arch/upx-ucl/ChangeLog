@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/upx-ucl
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/upx-ucl/ChangeLog,v 1.4 2004/06/24 21:39:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/upx-ucl/ChangeLog,v 1.5 2004/07/09 01:52:59 matsuu Exp $
+
+*upx-ucl-1.25 (09 Jul 2004)
+
+  09 Jul 2004; MATSUU Takuto <matsuu@gentoo.org> +upx-ucl-1.25.ebuild:
+  Version bumped.
 
   24 Mar 2004; Jason Wever <weeve@gentoo.org> upx-ucl-1.24.ebuild:
   Added ~sparc keyword.
