@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation, Pieter Van den Abeele <pvdabeel@gentoo.org>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsystem/libsystem-7.1.ebuild,v 1.3 2004/07/11 00:43:37 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libsystem/libsystem-7.1.ebuild,v 1.4 2004/07/11 00:47:58 pvdabeel Exp $
 
 DESCRIPTION="Darwin Libsystem, a collection of core libs similar to glibc on linux"
 
-HOMEPAGE="http://www.opendarwin.org/"
+HOMEPAGE="http://www.opensource.apple.com/darwinsource/"
 SRC_URI=""
 LICENSE="APSL-2"
 SLOT="0"
