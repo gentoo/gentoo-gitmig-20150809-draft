@@ -1,6 +1,16 @@
-MD5 54ff6e6c7b9059e7401df8eb56a74f57 edb-1.0.3.ebuild 601
-MD5 9952e928f1bea23cfcb63e9669b3950a edb-1.0.5.20040529.ebuild 674
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d1dde00ce67701a871775d1f10d9876e ChangeLog 2057
+MD5 54ff6e6c7b9059e7401df8eb56a74f57 edb-1.0.3.ebuild 601
+MD5 4beb20a87b61fb52b3cb7759bfa74e6f edb-1.0.5.20040710.ebuild 672
 MD5 2d0647a67387b6483b9e24bafb1d794d metadata.xml 602
+MD5 f1c81e6c7046f0011f96dbb3e492d50d files/digest-edb-1.0.5.20040710 71
 MD5 5a1883ed9ee827aa49ada2cb72a265bf files/digest-edb-1.0.3 61
-MD5 ab5106e09bbdd67db50098b2eb2900d8 files/digest-edb-1.0.5.20040529 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA8iF/HTu7gpaalycRAqrHAJ9oMS0ef9qRFqgrVkJkPiJ/H+8eSACgx7Hq
+S5wXGddPpEgzYGC9mHfhpqw=
+=IhS9
+-----END PGP SIGNATURE-----
