@@ -1,9 +1,14 @@
 # ChangeLog for x11-misc/efax-gtk
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/efax-gtk/ChangeLog,v 1.6 2004/02/19 18:36:19 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/efax-gtk/ChangeLog,v 1.7 2004/03/06 13:16:28 lanius Exp $
 
   19 Feb 2004; Brad Laue <brad@gentoo.org> efax-gtk-2.2.4.ebuild:
   Stable on x86
+
+*efax-gtk-2.2.5a (06 Mar 2004)
+
+  06 Mar 2004; Heinrich Wendel <lanius@gentoo.org> efax-gtk-2.2.5a.ebuild:
+  version bump, remove hardcoded version number for efax (bug #42791)
 
 *efax-gtk-2.2.4 (02 Feb 2004)
 
