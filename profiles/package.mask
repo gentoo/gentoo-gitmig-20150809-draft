@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3129 2004/09/04 10:37:48 carlo Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3130 2004/09/05 14:14:13 pebenito Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -30,10 +30,6 @@
 # Up for removal, unmaintained (#62566)
 app-office/gaby
 
-# <scox@gentoo.org> (31 Aug 2004)
-# Updated SELinux headers needs more testing before hitting ~x86
->=sys-kernel/hardened-sources-2.4.27-r2
-
 # <squinky86@gentoo.org> (28 Aug 2004)
 # dependency on pygtk remasked
 >=net-p2p/gnome-btdownload-0.0.12
@@ -42,11 +38,6 @@ app-office/gaby
 # This needs a loooot of testing, especially on selinux systems,
 # before it's ready to be unleashed upon ~arch. bug #61961.
 >=sys-apps/vixie-cron-4
-
-# <tseng@gentoo.org> (26 Aug 2004)
-# selinux headers update, masked until
-# new policy is ready.
->=sys-kernel/hardened-dev-sources-2.6.7-r8
 
 # <lucass@gentoo.org> (26 Aug 2004)
 # unstable branch of pygtk
@@ -202,10 +193,6 @@ gnome-extra/evolution-data-server
 # <pylon@gentoo.org> (11 July 2004)
 # Does not compile with gcc-3.4 in the USE=gnome dependencies
 >=app-cdr/cdrdao-1.1.9
-
-# <pebenito@gentoo.org> (2 July 2004)
-# eventual use when SELinux kernel headers are updated
-=sec-policy/selinux-base-policy-20040702
 
 # <usata@gentoo.org> (2 July 2004)
 # emacs-unicode-2 branch is not stable and SLOT support for emacs
