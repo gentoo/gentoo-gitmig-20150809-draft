@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50c.ebuild,v 1.10 2003/09/11 01:18:39 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50c.ebuild,v 1.11 2003/10/08 16:02:22 lu_zero Exp $
 
 inherit gcc eutils
 
@@ -22,9 +22,17 @@ DEPEND="media-libs/libpng
 	svga? ( media-libs/svgalib )"
 
 pkg_setup() {
-	if [ "$(gcc-version)" != "3.2" ] ; then
+	if [ "`use icc`" ]
+	then
+		einfo "using icc"
+	else
+	export WANT_GCC_3="yes"
+
+	if [ "$(gcc-major-version)" -lt "3" -o "$(gcc-minor-version)" -le "2" ]
+	then
 		eerror "This build needs gcc-3.2 or later"
 		die "This build needs gcc-3.2 or later"
+	fi
 	fi
 }
 
