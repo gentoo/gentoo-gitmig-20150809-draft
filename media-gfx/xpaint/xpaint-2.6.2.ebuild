@@ -1,7 +1,7 @@
 #Copyright 2002 Gentoo Technologies, Inc.
 #Distributed under the terms of the GNU General Public License, v2 or later
 #Author John Stalker <stalker@math.princeton.edu>
-#$Header: /var/cvsroot/gentoo-x86/media-gfx/xpaint/xpaint-2.6.2.ebuild,v 1.1 2002/02/07 15:38:25 verwilst Exp $
+#$Header: /var/cvsroot/gentoo-x86/media-gfx/xpaint/xpaint-2.6.2.ebuild,v 1.2 2002/03/18 08:13:18 gbevin Exp $
 
 S=${WORKDIR}/xpaint
 DESCRIPTION="XPaint is an image editor which supports most standard paint program options."
@@ -32,8 +32,8 @@ src_compile() {
 
 src_install () {
 
-	make install || die
-	make install.man
+	make DESTDIR=${D} install || die
+	make DESTDIR=${D} install.man || die
 	dodoc ChangeLog INSTALL README README.PNG README.old TODO 
 
 }
