@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <twp@gentoo.org> 10 Jun 2003
+# Needs testing (I can't test it)
+=dev-ruby/optparse-0.12
+
+=======
 # <liquidx@gentoo.org> 10 Jun 2003
 # Obligatory masking before introducing into portage.
 =net-mail/evolution-1.4.0*
