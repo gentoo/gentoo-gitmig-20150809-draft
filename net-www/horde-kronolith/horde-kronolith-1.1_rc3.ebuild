@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-kronolith/horde-kronolith-1.1_rc3.ebuild,v 1.1 2003/04/10 19:47:55 alron Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-kronolith/horde-kronolith-1.1_rc3.ebuild,v 1.2 2003/04/10 20:01:51 alron Exp $
 
 DESCRIPTION="Kronolith ${PV} is the Horde calendar application"
 HOMEPAGE="http://www.horde.org"
-P=kronolith-1.1-RC3
-SRC_URI="ftp://ftp.horde.org/pub/kronolith/${P}.tar.gz"
+P=kronolith-1.1
+SRC_URI="ftp://ftp.horde.org/pub/kronolith/${P}-RC3.tar.gz"
 LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
