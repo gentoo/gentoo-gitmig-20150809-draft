@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/anjuta
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.22 2003/09/25 22:28:17 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/anjuta/ChangeLog,v 1.23 2003/09/26 13:12:54 lu_zero Exp $
+
+  26 Sep 2003; Luca Barbato <lu_zero@gentoo.org> anjuta-1.1.97.ebuild:
+  Added ~ppc to keyword.
 
   25 Sep 2003; Chuck Short <zul@gentoo.org> anjuta-1.0.2.ebuild:
   Added sparc to keyword.
