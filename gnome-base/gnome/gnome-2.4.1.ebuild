@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.1.ebuild,v 1.5 2004/01/14 15:37:04 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.4.1.ebuild,v 1.6 2004/01/18 15:21:15 gustavoz Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Meta package for the GNOME desktop."
@@ -12,7 +12,7 @@ IUSE="cdr doc accessibility samba"
 
 # when unmasking for an arch
 # double check none of the deps are still masked !
-KEYWORDS="x86 ~amd64 ~ppc ~alpha ~sparc ~hppa"
+KEYWORDS="x86 ~amd64 ~ppc ~alpha sparc hppa"
 
 #  Note to developers:
 #  This is a wrapper for the complete Gnome2 desktop,
@@ -59,7 +59,7 @@ RDEPEND="!gnome-base/gnome-core
 	>=gnome-extra/nautilus-media-0.3.3.1
 
 	>=media-gfx/eog-2.4.1
-	>=net-www/epiphany-1.0.6
+	!hppa? ( >=net-www/epiphany-1.0.6 )
 	>=app-arch/file-roller-2.4.1.1
 	>=gnome-extra/gcalctool-4.3.16
 	>=gnome-extra/gconf-editor-2.4
