@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfcalendar
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfcalendar/ChangeLog,v 1.10 2004/04/17 19:22:43 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfcalendar/ChangeLog,v 1.11 2004/04/18 05:02:17 bcowan Exp $
+
+  18 Apr 2004; Brad Cowan <bcowan@gentoo.org> :
+  Version bump.
 
   17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> xfcalendar-0.1.5.ebuild,
   xfcalendar-0.1.6.ebuild:
