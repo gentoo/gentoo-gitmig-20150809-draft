@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 64d76be63235ae35bc636f0423b40cf3 oracle-instantclient-sqlplus-10.1.0.3.ebuild 1667
 MD5 1779b5c0aac4f4dda70cace0117268db oracle-instantclient-sqlplus-10.1.0.2_p1.ebuild 1732
 MD5 ce8dbec14717b8fc00bd9b6845abab71 ChangeLog 849
 MD5 0cde0af1778937296983dc2cd11a03fe metadata.xml 351
 MD5 77c18d359283aaf49ec2636bae6693f2 files/digest-oracle-instantclient-sqlplus-10.1.0.2_p1 93
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBw0ikI1lqEGTUzyQRAp76AJ9rJ/bEaB9VDoums0dv6OjH+OXP/gCfUgo6
-TewCRrEmQTHhfsH/nN7ZaeQ=
-=7mbV
------END PGP SIGNATURE-----
+MD5 0b0f6d200d7e375101ff9b829a3e8704 files/digest-oracle-instantclient-sqlplus-10.1.0.3 93
