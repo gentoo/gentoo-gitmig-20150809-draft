@@ -1,12 +1,14 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/sdl-gfx-2.0.3.ebuild,v 1.9 2003/02/13 12:54:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdl-gfx/sdl-gfx-2.0.3.ebuild,v 1.10 2003/03/04 09:42:41 seemant Exp $
 
-MY_P="${P/sdl-/SDL_}"
+inherit flag-o-matic
+
+MY_P=${P/sdl-/SDL_}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Graphics drawing primitives library for SDL"
-SRC_URI="http://www.ferzkopp.net/Software/SDL_gfx-2.0/${MY_P}.tar.gz"
 HOMEPAGE="http://www.ferzkopp.net/Software/SDL_gfx-2.0/"
+SRC_URI="http://www.ferzkopp.net/Software/SDL_gfx-2.0/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
@@ -14,7 +16,7 @@ KEYWORDS="x86 ppc sparc "
 
 DEPEND=">=media-libs/libsdl-1.2"
 
-CFLAGS="${CFLAGS} -O2"
+filter-flags "-O?" "-O2"
 
 src_compile() {
 	local myconf
