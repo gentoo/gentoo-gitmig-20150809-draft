@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5.2.ebuild,v 1.14 2004/10/07 02:59:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5.2.ebuild,v 1.15 2004/10/08 09:36:14 eradicator Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -32,6 +32,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}-largefile.patch
 	epatch ${FILESDIR}/${PV}-proper-c.patch
 	epatch ${FILESDIR}/${PV}-no-nasm.patch
+	epatch ${FILESDIR}/${PV}-gentoo-multilib.patch
 	[ "`gcc-version`" == "3.4" ] && epatch ${FILESDIR}/${PV}-gcc3.4.patch #49452
 	# remove a52 crap
 	echo > Makefile.a52
@@ -39,10 +40,12 @@ src_unpack() {
 	ln -s /usr/include/a52dec a52dec-0.7.3/include
 	local libs
 	libs=" -la52"
-	if grep -q djbfft ${ROOT}usr/$(get_libdir)/liba52.a; then
-		libs="${libs} -ldjbfft"
+	if ! [ -f "${ROOT}/usr/$(get_libdir)/liba52.so" ]; then
+		if grep -q djbfft ${ROOT}/usr/$(get_libdir)/liba52.a; then
+			libs="${libs} -ldjbfft"
+		fi
 	fi
-	sed -i "/LIBS = /s:$: -L\${ROOT}usr/lib ${libs}:" Makefile
+	sed -i "/LIBS = /s:$: -L\${ROOT}usr/$(get_libdir) ${libs}:" Makefile
 }
 
 src_compile() {
@@ -60,6 +63,6 @@ src_install() {
 	# to show the correct include syntax '<>' instead of '""'  This patch
 	# was also generated using info from SF's src.rpm
 	epatch ${FILESDIR}/${PV}-gentoo-p2.patch
-	make DESTDIR=${D}/usr install || die
+	make DESTDIR="${D}/usr" LIBDIR="$(get_libdir)" install || die
 	dohtml -r docs
 }

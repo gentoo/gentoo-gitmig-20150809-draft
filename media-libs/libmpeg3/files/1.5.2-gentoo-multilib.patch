@@ -1,0 +1,20 @@
+diff -Naur libmpeg3-1.5.2.orig/Makefile libmpeg3-1.5.2/Makefile
+--- libmpeg3-1.5.2.orig/Makefile	2004-10-08 02:31:11.839597000 -0700
++++ libmpeg3-1.5.2/Makefile	2004-10-08 02:33:42.627740299 -0700
+@@ -212,13 +212,13 @@
+ 	install -d $(DESTDIR)/include/libmpeg3
+ 	install -d $(DESTDIR)/include/libmpeg3/audio
+ 	install -d $(DESTDIR)/include/libmpeg3/video
+-	install -d $(DESTDIR)/lib
++	install -d $(DESTDIR)/$(LIBDIR)
+ 	install $(UTILS) $(DESTDIR)/bin
+ 	install -m 644 $(INSTALL_HEADERS) $(DESTDIR)/include/libmpeg3
+ 	install -m 644 $(INSTALL_AHEADERS) $(DESTDIR)/include/libmpeg3/audio
+ 	install -m 644 $(INSTALL_VHEADERS) $(DESTDIR)/include/libmpeg3/video
+-	install -m 644 $(OUTPUT) $(DESTDIR)/lib
+-	install -m 644 $(SHAREDOUTPUT) $(DESTDIR)/lib
++	install -m 644 $(OUTPUT) $(DESTDIR)/$(LIBDIR)
++	install -m 644 $(SHAREDOUTPUT) $(DESTDIR)/$(LIBDIR)
+ 
+ clean:
+ 	rm -rf $(OBJDIR)
