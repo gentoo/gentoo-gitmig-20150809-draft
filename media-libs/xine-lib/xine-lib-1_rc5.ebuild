@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc5.ebuild,v 1.1 2004/06/24 14:40:29 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc5.ebuild,v 1.2 2004/06/24 22:48:09 hansmi Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -78,7 +78,7 @@ src_unpack() {
 }
 
 src_compile() {
-	filter-flags -maltivec -mabi=altivec -fstack-protector
+	filter-flags -fstack-protector
 	filter-flags -fPIC
 	filter-flags -fforce-addr
 
@@ -102,10 +102,16 @@ src_compile() {
 	use amd64 \
 		&& myconf="${myconf} --with-xv-path=/usr/X11R6/lib"
 
+	# Disable compiling of altivec-code if it's not in the
+	# USE-flags
+	use ppc && use altivec \
+		&& myconf="${myconf} --enable-altivec" \
+		|| CFLAGS="${CFLAGS} -U__ALTIVEC__"
+
 	# The default CFLAGS (-O) is the only thing working on hppa.
 	use hppa \
 		&& unset CFLAGS
-
+	
 	econf \
 		`use_enable X x11` \
 		`use_enable esd` \

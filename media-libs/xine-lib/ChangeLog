@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.125 2004/06/24 14:40:29 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.126 2004/06/24 22:48:09 hansmi Exp $
+
+  25 Jun 2004; Michael Hanselmann <hansmi@gentoo.org> xine-lib-1_rc5.ebuild:
+  Fixed a compilation-error on PowerPC when CFLAGS don't allow Altivec-code.
+  Uses USE-flag "altivec".
 
 *xine-lib-1_rc5 (24 Jun 2004)
 
