@@ -1,6 +1,9 @@
 # ChangeLog for net-nds/openldap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.53 2003/12/05 21:25:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/ChangeLog,v 1.54 2003/12/13 20:54:51 weeve Exp $
+
+  13 Dec 2003; Jason Wever <weeve@gentoo.org> openldap-2.0.27-r4.ebuild:
+  Marked stable on sparc.
 
   05 Dec 2003; Robin H. Johnson <robbat2@gentoo.org> openldap-2.1.23.ebuild:
   change the version depend on berkdb to 4.1.25_p1-r3 and fix a nasty bug with
