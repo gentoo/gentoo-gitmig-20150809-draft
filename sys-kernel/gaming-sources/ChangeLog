@@ -1,12 +1,18 @@
 # ChangeLog for sys-kernel/gaming-sources
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gaming-sources/ChangeLog,v 1.5 2003/05/01 02:30:20 livewire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gaming-sources/ChangeLog,v 1.6 2003/06/09 03:38:58 drobbins Exp $
+
+gaming-sources-2.4.20-r4 (08 June 2003)
+
+  08 June 2003; Daniel Robbins <drobbins@gentoo.org>: new 2.4.20-r4
+  gaming-sources with a patch from 2.4.21_rc6-gss that includes AGPGART support
+  for nforce2 chipsets. Also added a note to the configure options about the DRI
+  kernel modules being old and that "emerge xfree-drm" should be used instead.
 
 gaming-sources-2.4.20-r3 (30 April 2003)
 
-  30 April 2003; Bob Johnson <livewire@gentoo.org>
-
-	-gcc31 default optimizations changed to -O2 (pfeifer@gentoo.org)
+  30 April 2003; Bob Johnson <livewire@gentoo.org> -gcc31 default optimizations
+  changed to -O2 (pfeifer@gentoo.org)
 
 *gaming-sources-2.4.20-r2 (20 April 2003)
 
