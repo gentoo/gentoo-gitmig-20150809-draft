@@ -1,0 +1,33 @@
+# ChangeLog for app-sci/gnucap
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-electronics/gnucap/ChangeLog,v 1.1 2004/12/27 19:37:57 ribosome Exp $
+
+*gnucap-0.34 (27 Dec 2004)
+
+  27 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +files/gnucap-0.34-gcc-3.4.patch, +gnucap-0.34.ebuild:
+  Moved from app-sci/gnucap to sci-electronics/gnucap.
+
+  07 Oct 2004; Michael Hanselmann <hansmi@gentoo.org> gnucap-0.34.ebuild:
+  Added to ~ppc. See bug #66325.
+
+  04 Oct 2004; <plasmaroo@gentoo.org> gnucap-0.34.ebuild,
+  +files/gnucap-0.34-gcc-3.4.patch:
+  Patching for GCC 3.4 compilation issues; bug #66325.
+
+*gnucap-0.34 (24 Jun 2004)
+
+  24 Jun 2004; <plasmaroo@gentoo.org> +gnucap-0.34.ebuild:
+  Version bump.
+
+  05 Jun 2004; David Holm <dholm@gentoo.org> gnucap-0.33.ebuild:
+  Added to ~ppc.
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> gnucap-0.33.ebuild:
+  Removed S, added IUSE.
+
+*gnucap-0.33 (28 Nov 2003)
+
+  28 Nov 2003; <plasmaroo@gentoo.org> gnucap-0.33.ebuild:
+  Initial commit...
+
