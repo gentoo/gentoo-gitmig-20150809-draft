@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-mod.eclass,v 1.8 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-mod.eclass,v 1.9 2004/10/06 21:25:11 dsd Exp $
 
 # This eclass provides help for compiling external kernel modules from
 # source.
@@ -83,6 +83,47 @@ kernel-mod_getversion ()
 	KV_TYPE="$KV_MK_TYPE"
 
 	einfo "Building for Linux ${KV_VERSION_FULL} found in ${KERNEL_DIR}"
+}
+
+kernel-mod_configoption_present ()
+{
+        [ -e "${KERNEL_DIR}/.config" ] || die "kernel has not been configured yet"
+
+	if egrep "^CONFIG_${1}=[ym]" ${ROOT}/usr/src/linux/.config >/dev/null
+	then
+		return 0
+	else
+		return -1
+	fi
+}
+
+kernel-mod_configoption_module ()
+{
+	[ -e "${KERNEL_DIR}/.config" ] || die "kernel has not been configured yet"
+
+	if egrep "^CONFIG_${1}=[m]" ${ROOT}/usr/src/linux/.config >/dev/null
+	then
+		return 0
+	else
+		return -1
+	fi
+}
+
+kernel-mod_configoption_builtin ()
+{
+	[ -e "${KERNEL_DIR}/.config" ] || die "kernel has not been configured yet"
+
+	if egrep "^CONFIG_${1}=[y]" ${ROOT}/usr/src/linux/.config >/dev/null
+	then
+		return 0
+	else
+		return -1
+	fi
+}
+
+kernel-mod_modules_supported ()
+{
+	kernel-mod_configoption_builtin "MODULES"
 }
 
 kernel-mod_checkzlibinflate_configured ()
