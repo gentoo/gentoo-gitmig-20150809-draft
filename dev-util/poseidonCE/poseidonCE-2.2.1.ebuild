@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/poseidonCE/poseidonCE-2.1.2.ebuild,v 1.1 2004/02/14 05:49:58 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/poseidonCE/poseidonCE-2.2.1.ebuild,v 1.1 2004/04/02 03:53:40 zx Exp $
 
 IUSE="doc gnome kde"
 DESCRIPTION="A UML CASE-Tool powered by Java"
-SRC_URI="poseidonCE-2.1.2.zip"
+SRC_URI="poseidonCE-2.2.1.zip"
 HOMEPAGE="http://www.gentleware.com/"
 LICENSE="PoseidonCommon.pdf"
 SLOT="0"
@@ -27,7 +27,9 @@ src_install() {
 
 	echo "#!/bin/sh" > ${PN}
 	echo "cd /opt/${PN}" >> ${PN}
-	echo '${JAVA_HOME}'/bin/java -cp lib/poseidon.jar:lib/umlplugin.jar com.gentleware.poseidon.Poseidon '$*' >> ${PN}
+	echo '${JAVA_HOME}'/bin/java -cp lib/floating-server.jar:lib/poseidon.jar:lib/umlplugin.jar:${JAVA_HOME}/jre/lib/rt.jar \
+	      -Xms64m -Xmx160m -Dposeidon.java.home="${JAVA_HOME}" -Dposeidon.user.dir.PE="$POSEIDONPE_HOME" \
+		  com.gentleware.poseidon.Poseidon '$*' >> ${PN}
 
 	into /opt
 	dobin ${PN}
@@ -69,10 +71,8 @@ src_install() {
 		doins ${PN}-kde.desktop
 	fi
 
-
 	dodoc LICENSE.txt
 
 	dodir /opt/${PN}/examples
 	cp -R examples/* ${D}opt/${PN}/examples
-
 }
