@@ -1,4 +1,6 @@
-# Copyright 2004 Pieter Van den Abeele, Gentoo Foundation.
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-ppc-2004.3/make.defaults,v 1.7 2005/03/09 00:35:08 vapier Exp $
 # Gentoo Linux PowerPC system defaults
 
 ACCEPT_KEYWORDS="ppc"
@@ -9,5 +11,5 @@ CXXFLAGS=${CFLAGS}
 FETCHCOMMAND="/usr/bin/wget -t 5 --passive-ftp \${URI} -P \${DISTDIR}"
 MAKEOPTS="-j2"
 PLATFORM=$CHOST
-USE="unicode pam dvd jpeg nls gif pam png truetype ppc fortran f77"
+USE="unicode pam dvd jpeg nls gif pam png truetype ppc fortran"
 

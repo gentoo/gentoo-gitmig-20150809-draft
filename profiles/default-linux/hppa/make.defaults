@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/make.defaults,v 1.2 2005/03/05 17:00:00 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/hppa/make.defaults,v 1.3 2005/03/09 00:35:06 vapier Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -12,4 +12,4 @@ ACCEPT_KEYWORDS="hppa"
 
 FEATURES="sandbox sfperms strict"
 
-USE="berkdb crypt cups foomaticdb fortran f77 gdbm gpm imlib ipv6 libwww ncurses nls pam perl pic python readline spell ssl tcpd xml2 zlib"
+USE="berkdb crypt cups foomaticdb fortran gdbm gpm imlib ipv6 libwww ncurses nls pam perl pic python readline spell ssl tcpd xml2 zlib"

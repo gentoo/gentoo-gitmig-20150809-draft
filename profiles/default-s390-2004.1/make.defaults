@@ -1,4 +1,6 @@
-# Copyright 2002 Gentoo Foundation.
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-s390-2004.1/make.defaults,v 1.9 2005/03/09 00:35:08 vapier Exp $
 # System-wide defaults for the Portage system
 
 GRP_STAGE23_USE="ipv6 pam tcpd readline nls ssl gpm perl python berkdb acl ncurses"
@@ -23,7 +25,7 @@ CFLAGS=""
 # C++ Compiler flags
 CXXFLAGS=${CFLAGS}
 
-USE="berkdb bitmap-fonts crypt cups fortran f77 fbcon font-server foomaticdb gdbm imlib jpeg libwww mikmod motif mad mpeg ncurses nls pam perl png python readline slang spell ssl tcpd truetype truetype-fonts type1-fonts zlib"
+USE="berkdb bitmap-fonts crypt cups fortran fbcon font-server foomaticdb gdbm imlib jpeg libwww mikmod motif mad mpeg ncurses nls pam perl png python readline slang spell ssl tcpd truetype truetype-fonts type1-fonts zlib"
 
 # The following USE flags are NOT recommended for sparc32 and might cause breakage...
 # mmx, 3dnow, sse, svga, gpm,  

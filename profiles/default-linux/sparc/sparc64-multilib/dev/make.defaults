@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/dev/make.defaults,v 1.23 2005/03/05 03:05:47 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/dev/make.defaults,v 1.24 2005/03/09 00:35:07 vapier Exp $
 
 FEATURES="sandbox ccache autoconfig"
 
@@ -8,7 +8,7 @@ FEATURES="sandbox ccache autoconfig"
 GRP_STAGE23_USE="berkdb gpm ipv6 -java ncurses nls pam perl python readline ssl tcpd zlib"
 
 # Sane, minimal USE settings
-USE="${GRP_STAGE23_USE} alsa bitmap-fonts crypt cups font-server fortran f77 fbcon gif jpeg nls opengl png tiff truetype truetype-fonts type1-fonts usb xpm xrandr xv"
+USE="${GRP_STAGE23_USE} alsa bitmap-fonts crypt cups font-server fortran fbcon gif jpeg nls opengl png tiff truetype truetype-fonts type1-fonts usb xpm xrandr xv"
 
 MULTILIB_ABIS="sparc32 sparc64"
 DEFAULT_ABI="sparc32"

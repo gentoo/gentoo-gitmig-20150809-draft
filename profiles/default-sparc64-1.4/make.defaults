@@ -1,4 +1,6 @@
-# Copyright 2002 Gentoo Foundation.
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc64-1.4/make.defaults,v 1.27 2005/03/09 00:35:08 vapier Exp $
 # System-wide defaults for the Portage system
 
 #Experimental: trying to use these USE variables to build up from stage 2->3 
@@ -25,7 +27,7 @@ CFLAGS="-O2 -pipe"
 # C++ Compiler flags
 CXXFLAGS=${CFLAGS}
 
-USE="arts avi berkdb bitmap-fonts crypt cups encode esd fortran f77 fbcon font-server foomaticdb gdbm gif gtk gnome imlib jpeg kde libwww mad mikmod motif mpeg ncurses nls oggvorbis oss opengl pam perl png python pdflib qt readline slang sdl spell ssl tcpd truetype truetype-fonts type1-fonts X xv xml2 xmms zlib"
+USE="arts avi berkdb bitmap-fonts crypt cups encode esd fortran fbcon font-server foomaticdb gdbm gif gtk gnome imlib jpeg kde libwww mad mikmod motif mpeg ncurses nls oggvorbis oss opengl pam perl png python pdflib qt readline slang sdl spell ssl tcpd truetype truetype-fonts type1-fonts X xv xml2 xmms zlib"
 
 
 # The following USE flags are NOT recommended for sparc64 and might cause breakage...

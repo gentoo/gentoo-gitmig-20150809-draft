@@ -1,6 +1,6 @@
-# Copyright 2004 Gentoo Foundation.
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/mips64/ip28/2005.0/make.defaults,v 1.1 2005/01/09 18:45:51 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/mips64/ip28/2005.0/make.defaults,v 1.2 2005/03/09 00:35:06 vapier Exp $
 
 ARCH="mips"
 
@@ -20,6 +20,6 @@ CXXFLAGS=${CFLAGS}
 
 ACCEPT_KEYWORDS="mips"
 
-USE="readline fortran f77 gpm berkdb gdbm tcpd pam libwww ssl nls perl python sdl mips ip28"
+USE="readline fortran gpm berkdb gdbm tcpd pam libwww ssl nls perl python sdl mips ip28"
 GRP_STAGE23_USE="readline gpm berkdb gdbm tcpd pam libwww ssl nls perl python sdl mips ip28"
 

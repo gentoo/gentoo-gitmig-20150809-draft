@@ -1,4 +1,6 @@
-# Copyright 2000 Daniel Robbins, Gentoo Foundation.
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-mips64-1.4/make.defaults,v 1.9 2005/03/09 00:35:07 vapier Exp $
 # System-wide defaults for the Portage system
 
 ARCH="mips"
@@ -21,6 +23,6 @@ CFLAGS="-O2 -pipe"
 # C++ Compiler flags
 CXXFLAGS=${CFLAGS}
 
-USE="bitmap-fonts slang readline fortran f77 font-server gpm berkdb gdbm tcpd pam libwww ssl nls perl python sdl mips truetype-fonts type1-fonts"
+USE="bitmap-fonts slang readline fortran font-server gpm berkdb gdbm tcpd pam libwww ssl nls perl python sdl mips truetype-fonts type1-fonts"
 
 ACCEPT_KEYWORDS="mips"

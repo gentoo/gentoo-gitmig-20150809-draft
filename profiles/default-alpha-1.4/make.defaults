@@ -1,5 +1,6 @@
-# Copyright 2003 Gentoo Foundation.
-# System-wide defaults for the Portage system on alpha
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-alpha-1.4/make.defaults,v 1.16 2005/03/09 00:35:06 vapier Exp $
 
 USE="
 alpha
@@ -9,7 +10,6 @@ crypt
 cups
 encode
 fortran
-f77
 font-server
 foomaticdb
 gdbm

@@ -1,3 +1,6 @@
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-hppa-2004.0/make.defaults,v 1.9 2005/03/09 00:35:06 vapier Exp $
 # System-wide defaults for the Portage system
 
 USE="
@@ -7,7 +10,6 @@ crypt
 cups
 font-server
 fortran
-f77
 encode
 foomaticdb
 gdbm

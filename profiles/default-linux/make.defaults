@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/make.defaults,v 1.8 2005/01/12 23:08:21 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/make.defaults,v 1.9 2005/03/09 00:35:06 vapier Exp $
 #
 # System-wide defaults for the Portage system
 # See portage(5) manpage
@@ -10,7 +10,8 @@
 # has a conditional dependency on java (which it does,) then a JDK will be 
 # pulled in during *emerge system*!
 
-
-
 # build X in an expected way
 USE="bitmap-fonts truetype-fonts type1-fonts"
+
+# make sure toolchain has sane defaults
+USE="${USE} fortran"

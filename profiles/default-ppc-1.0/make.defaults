@@ -1,4 +1,6 @@
-# Copyright 2000 Daniel Robbins, Gentoo Foundation.
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-ppc-1.0/make.defaults,v 1.15 2005/03/09 00:35:07 vapier Exp $
 # System-wide defaults for the Portage system
 
 ARCH="ppc"
@@ -20,7 +22,7 @@ CFLAGS="-O2 -pipe"
 # C++ Compiler flags
 CXXFLAGS=${CFLAGS}
 
-USE="bitmap-fonts oss dvd xv slang readline fortran f77 font-server gpm berkdb gdbm tcpd pam libwww ssl jpeg nls mitshm perl python esd gif imlib sdl oggvorbis gnome gtk X qt kde motif opengl mozilla png truetype truetype-fonts type1-fonts ppc" 
+USE="bitmap-fonts oss dvd xv slang readline fortran font-server gpm berkdb gdbm tcpd pam libwww ssl jpeg nls mitshm perl python esd gif imlib sdl oggvorbis gnome gtk X qt kde motif opengl mozilla png truetype truetype-fonts type1-fonts ppc" 
 
 # The following USE should _not_ bet set on ppc as they can cause breakage
 # in some pacakges (are mostly x86 only options)
