@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/linuxtv-dvb/linuxtv-dvb-1.0.0_pre2-r2.ebuild,v 1.1 2003/04/03 17:04:17 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/linuxtv-dvb/linuxtv-dvb-1.0.0_pre2-r2.ebuild,v 1.2 2003/04/03 20:41:48 mholzer Exp $
 
 DESCRIPTION="Standalone DVB driver for Linux kernel 2.4.x"
 HOMEPAGE="http://www.linuxtv.org"
@@ -114,6 +114,7 @@ pkg_postinst() {
 	einfo ""
 	einfo "If you'd like to load all modules at once, unpack and add"
 	einfo "/usr/share/doc/${PF}/dvb.gz to /etc/modules.d/"
+	einfo "then run #update-modules to update your modules.conf"
 	einfo ""
 }
 
