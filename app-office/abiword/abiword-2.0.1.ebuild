@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.0.1.ebuild,v 1.5 2004/01/16 21:01:33 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-2.0.1.ebuild,v 1.6 2004/03/25 08:21:27 mr_bones_ Exp $
 
 inherit eutils
 
@@ -28,7 +28,8 @@ RDEPEND="virtual/x11
 	>=app-text/wv-1
 	>=dev-libs/fribidi-0.10.4
 	jpeg?  ( >=media-libs/jpeg-6b-r2 )
-	( xml2? >=dev-libs/libxml2-2.4.10 : dev-libs/expat )
+	xml2? ( >=dev-libs/libxml2-2.4.10 )
+	!xml2? ( dev-libs/expat )
 	spell? ( >=app-text/enchant-1 )
 	gnome? ( >=gnome-base/libgnomeui-2.2
 		>=gnome-base/libgnomeprintui-2.2.1 )"

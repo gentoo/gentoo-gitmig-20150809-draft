@@ -1,6 +1,10 @@
 # ChangeLog for app-office/abiword
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.68 2004/03/13 00:32:03 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.69 2004/03/25 08:21:27 mr_bones_ Exp $
+
+  25 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> abiword-2.0.1.ebuild,
+  abiword-2.0.2.ebuild, abiword-2.0.3-r1.ebuild, abiword-2.0.5.ebuild:
+  don't use deprecated ? : use syntax
 
 *abiword-2.0.5 (13 Mar 2004)
 
