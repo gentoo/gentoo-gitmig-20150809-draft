@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-0.5.11-r1.ebuild,v 1.1 2004/11/30 11:01:41 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/libidn/libidn-0.5.11-r1.ebuild,v 1.2 2004/11/30 20:33:51 dragonheart Exp $
 
 inherit java-pkg
 
@@ -45,7 +45,7 @@ src_install() {
 
 	if use java; then
 		java-pkg_dojar ${D}/usr/share/java/libidn-0.5.11.jar || die
-		rm ${D}/usr/share/java/libidn-0.5.11.jar
+		rm -rf ${D}/usr/share/java
 		if use doc; then
 			dohtml -r ${S}/doc/java
 		fi
