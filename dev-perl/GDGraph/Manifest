@@ -1,6 +1,4 @@
-MD5 5667f3e14db860aa0130b9f35fdab6cc ChangeLog 531
-MD5 d1d89bff37b149b523865a40a95a36c7 GDGraph-1.35.ebuild 616
+MD5 62ed810ea504b4370d7294ab5a9e904f ChangeLog 631
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 4d50f7087127761baedd30dccd027be3 GDGraph-1.43.ebuild 639
-MD5 0bc537328c075ce89a462729ab54f042 files/digest-GDGraph-1.35 64
 MD5 f36dfcc25376c885d0778058abe551e6 files/digest-GDGraph-1.43 64
