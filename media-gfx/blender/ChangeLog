@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/blender
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.28 2004/02/18 09:30:29 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/blender/ChangeLog,v 1.29 2004/03/07 22:47:12 avenj Exp $
+
+  07 Mar 2004; Jon Portnoy <avenj@gentoo.org> :
+  Removed AMD64 keywords from all versions prior to 2.32. 
+  Added !amd64() contruct for dev-games/ode.
 
   18 Feb 2004; <augustus@gentoo.org> blender-2.32.ebuild:
   Made 2.32 testing ~amd64.
