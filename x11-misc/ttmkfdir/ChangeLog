@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/ttmkfdir
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ttmkfdir/ChangeLog,v 1.23 2003/11/15 02:40:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ttmkfdir/ChangeLog,v 1.24 2003/12/29 04:13:10 kumba Exp $
+
+  28 Dec 2003; Joshua Kinard <kumba@gentoo.org> ttmkfdir-3.0.9.ebuild:
+  Move to mips stable (~mips -> mips)
 
   14 Nov 2003; Aron Griffis <agriffis@gentoo.org> ttmkfdir-3.0.9-r1.ebuild:
   Stable on ia64
