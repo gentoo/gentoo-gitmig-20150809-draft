@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ncmpc
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.1 2004/06/27 06:15:22 ferringb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ncmpc/ChangeLog,v 1.2 2004/07/09 15:40:35 ciaranm Exp $
+
+  09 Jul 2004; Ciaran McCreesh <ciaranm@gentoo.org> ncmpc-0.10.1.ebuild:
+  Added ~sparc, bug #56543
 
 *ncmpc-0.10.1 (27 Jun 2004)
 
