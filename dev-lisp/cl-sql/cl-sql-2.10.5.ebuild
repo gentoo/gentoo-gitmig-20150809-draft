@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/cl-sql-2.10.5.ebuild,v 1.4 2004/07/14 16:15:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-sql/cl-sql-2.10.5.ebuild,v 1.5 2004/08/05 23:26:47 arj Exp $
 
 inherit common-lisp eutils
 
@@ -19,7 +19,7 @@ DEPEND="dev-lisp/common-lisp-controller
 	dev-lisp/cl-uffi
 	postgres? ( dev-db/postgresql )
 	mysql? ( dev-db/mysql )
-	sqlite? ( dev-db/sqlite )
+	sqlite? ( =dev-db/sqlite-2* )
 	odbc? ( dev-db/unixODBC )"
 
 S=${WORKDIR}/clsql-${PV}
