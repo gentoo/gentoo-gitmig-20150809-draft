@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/opengl-update-1.8-r1.ebuild,v 1.1 2004/07/17 12:04:03 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/opengl-update-1.8-r1.ebuild,v 1.2 2004/07/17 14:13:15 cyfred Exp $
 
 DESCRIPTION="Utility to change the OpenGL interface being used"
 HOMEPAGE="http://www.gentoo.org/"
@@ -16,8 +16,7 @@ DEPEND="virtual/libc"
 
 pkg_setup() {
 	# xfree has glext.h somewhere out of place so lets make the user move it
-	if ( has_version "x11-base/xfree" || [ ! -h /usr/X11R6/include/GL/glext.h ] )
-#	if ( has_version "x11-base/xfree" || has_version "<x11-base/xorg-x11-6.7.0-r2" )
+	if ( [ ! -h /usr/X11R6/include/GL/glext.h ] && [ -a /usr/X11R6/include/GL/glext.h ] )
 	then
 		# Just make it simpler on the user by giving verbose instructions
 		if [ -d /usr/lib/opengl/xfree ]
