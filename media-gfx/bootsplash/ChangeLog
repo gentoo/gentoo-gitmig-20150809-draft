@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/bootsplash 
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/ChangeLog,v 1.18 2004/02/15 09:14:17 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/ChangeLog,v 1.19 2004/02/15 18:44:38 spock Exp $
+
+*bootsplash-0.6-r6 (15 Feb 2004)
+
+  15 Feb 2004; Michal Januszewski <spock@gentoo.org> bootsplash-0.6-r6.ebuild,
+  metadata.xml:
+  New revision, includes the patch for 2.6.3 kernels and has an updated patching
+  system.
 
   15 Feb 2004; Michal Januszewski <spock@gentoo.org> bootsplash-0.6-r5.ebuild:
   Added a statically linked version of fbmngplay, closes #41476.
@@ -14,7 +21,7 @@
 
 *bootsplash-0.6-r5 (26 Jan 2004)
 
-  26 Jan 2004; Michal 'Spock' Januszewski <spock@gentoo.org>
+  26 Jan 2004; Michal Januszewski <spock@gentoo.org>
   bootsplash-0.6-r5.ebuild:
   Added support for user-defined boot messages and user-specified font for
   silent bootplash, added an option to specify different configs for selected
@@ -23,7 +30,7 @@
 
 *bootsplash-0.6-r4 (17 Jan 2004)
 
-  17 Jan 2004; Michal 'Spock' Januszewski <spock@gentoo.org>
+  17 Jan 2004; Michal Januszewski <spock@gentoo.org>
   bootsplash-0.6-r4.ebuild, metadata.xml:
   Added support for 2.6 kernels, fixed a few minor issues with silent mode,
   added the BOOTSPLASH_TTYS variable.
