@@ -1,6 +1,12 @@
 # ChangeLog for dev-python/Imaging
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Imaging/ChangeLog,v 1.9 2003/03/25 21:21:00 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Imaging/ChangeLog,v 1.10 2003/05/16 20:38:43 liquidx Exp $
+
+*Imaging-1.1.3-r2 (16 May 2003)
+
+  16 May 2003; Alastair Tse <liquidx@gentoo.org> Imaging-1.1.3-r2.ebuild:
+  workaround for new tk-8.4.x. thanks to Hyriand <hyriand@thegraveyard.org>
+  (#21013)
 
 *Imaging-1.1.3-r1 (05 Mar 2003)
 
