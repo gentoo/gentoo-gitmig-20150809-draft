@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/opensp-1.5.ebuild,v 1.7 2004/04/25 23:04:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/opensp-1.5.ebuild,v 1.8 2004/06/25 03:04:35 agriffis Exp $
 
 MY_P=${P/opensp/OpenSP}
 S=${WORKDIR}/${MY_P}

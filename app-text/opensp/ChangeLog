@@ -1,6 +1,6 @@
 # ChangeLog for app-text/opensp
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.15 2004/04/25 23:04:52 agriffis Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/opensp/ChangeLog,v 1.16 2004/06/25 03:04:35 agriffis Exp $
 
   25 Apr 2004; Aron Griffis <agriffis@gentoo.org> opensp-1.5-r1.ebuild,
   opensp-1.5.ebuild:

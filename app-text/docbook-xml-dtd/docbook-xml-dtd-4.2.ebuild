@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/docbook-xml-dtd-4.2.ebuild,v 1.21 2004/05/28 03:11:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xml-dtd/docbook-xml-dtd-4.2.ebuild,v 1.22 2004/06/25 03:03:57 agriffis Exp $
 
 MY_P="docbook-xml-4.2"
 DESCRIPTION="Docbook DTD for XML"
