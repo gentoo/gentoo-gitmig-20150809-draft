@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3410 2004/12/23 10:10:11 pvdabeel Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3411 2004/12/23 12:11:36 robbat2 Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -21,6 +21,11 @@
 ##
 ##   End example
 ##
+
+# <robbat2@gentoo.org> (23 Dec 2004)
+# The upgrade process to this is non-trivial.
+# Please see the ebuild about it.
+=net-nds/openldap-2.2*
 
 # <langthang@gentoo.org> (22 Dec 2004)
 # Mask for testing.
@@ -433,10 +438,6 @@ dev-lisp/cl-rsm-genetic-alg
 # <mr_bones_@gentoo.org> (25 June 2004)
 # No worky for me.  Needs some love from Spanky.
 games-arcade/mtp-target-bin
-
-# <robbat2@gentoo.org> (20 June 2004)
-# mask waiting for sys-libs/db-4.2
-=net-nds/openldap-2.2*
 
 # <swegener@gentoo.org> (20 June 2004)
 # alpha software, which is very buggy
