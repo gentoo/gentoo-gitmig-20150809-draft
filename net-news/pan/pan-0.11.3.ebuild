@@ -6,6 +6,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="A newsreader for GNOME."
 SRC_URI="http://pan.rebelbase.com/download/releases/${PV}/SOURCE/${P}.tar.bz2"
 HOMEPAGE="http://pan.rebelbase.com/"
+SLOT="0"
 
 DEPEND="virtual/x11 
 	nls? ( sys-devel/gettext )
@@ -16,7 +17,7 @@ DEPEND="virtual/x11
 
 
 src_compile() {
-	local myconf
+	local myconf=""
 
 	if [ -z "`use nls`" ]
 	then
@@ -27,16 +28,16 @@ src_compile() {
 
 	use gtkhtml && myconf="${myconf} --enable-html"
 
-	./configure --host=${CHOST} 					\
-		    --prefix=/usr					\
-		    --sysconfdir=/etc 					\
+	./configure --host=${CHOST} \
+		    --prefix=/usr \
+		    --sysconfdir=/etc \
 		    ${myconf} || die
 
 	# Doesn't work with -j 4 (hallski)
 	make || die
 }
 
-src_install () {
+src_install() {
 	make 	\
 		prefix=${D}/usr	\
 		sysconfdir=${D}/etc	\
@@ -44,3 +45,4 @@ src_install () {
 
 	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
 }
+
