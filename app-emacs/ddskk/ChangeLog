@@ -1,6 +1,13 @@
 # ChangeLog for app-emacs/ddskk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ChangeLog,v 1.2 2003/02/12 03:51:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/ddskk/ChangeLog,v 1.3 2003/07/14 11:27:43 usata Exp $
+
+*ddskk-12.2.0_rc2 (14 Jul 2003)
+
+  14 Jul 2003; Mamoru KOMACHI <usata@gentoo.org> ddskk-12.2.0_rc2.ebuild,
+  files/50ddskkserv-gentoo.el:
+  Version bumped. Added ~alpha, ~sparc and ~ppc to KEYWORDS.
+  Defaults to call skkserv instead of using skk-jisyo directly.
 
 *ddskk-20020901 (31 Oct 2002)
 
