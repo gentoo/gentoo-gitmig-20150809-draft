@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 18e9cf33ba67fa3c766a255977c3861a ChangeLog 1056
-MD5 71e2f9b3b2d6161840d9ec0884a9ad67 flexplaylist-0.4.8.ebuild 722
+MD5 42a4d3a6c4bea60be18bfc900f0d2b8c flexplaylist-0.4.8.ebuild 743
+MD5 63cbe4d052fbe40dd96e8305ff56fb75 ChangeLog 1200
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 9e83688cc383c6535cd66e57fc02b1d0 files/digest-flexplaylist-0.4.8 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBb5J0ArHZZzCEUG0RAi9AAJ9we4J0z/WLUF7hPvGqB5PWVL8apwCffT3Z
-gWAxUfIc7uOoSG9Rh6iuAdw=
-=p6DO
------END PGP SIGNATURE-----
