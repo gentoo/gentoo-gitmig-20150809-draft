@@ -1,6 +1,6 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.68 2002/12/09 21:24:28 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.69 2002/12/11 18:49:12 seemant Exp $
 
   09 Dec 2002; Martin Schlemmer <azarah@gentoo.org> xfree-4.2.1-r2.ebuild :
 
@@ -31,6 +31,10 @@
   Tweak to compile libs (for x86) and glx with -fPIC.
 
 *xfree-4.2.99.3 (13 Nov 2002)
+
+  11 Dec 2002; Seemant Kulleen <seemant@gentoo.org> :
+
+  updated snapshot again -- ibm chipset updates, evidently.
 
   -7 Dec 2002; Seemant Kulleen <seemant@gentoo.org> :
 
