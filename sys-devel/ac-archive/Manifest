@@ -1,0 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 516ad53909deb6e861a47ec6c585612c ac-archive-0.5.57.ebuild 746
+MD5 e0a4ecb38fe4f8d6f650df256475607c ChangeLog 360
+MD5 ac9d7aa98a803fad73610d51fd658c97 files/digest-ac-archive-0.5.57 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA+hmeHTu7gpaalycRAiJLAKDHJeTCJnLY4htrX+lbc4qij18I8gCfXyLz
+bQcgBkp9bL7oDrHUjBwsQ40=
+=sRbA
+-----END PGP SIGNATURE-----
