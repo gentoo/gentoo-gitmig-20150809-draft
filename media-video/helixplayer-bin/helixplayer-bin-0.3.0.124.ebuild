@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer-bin/helixplayer-bin-0.3.0.124.ebuild,v 1.2 2004/06/25 00:41:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer-bin/helixplayer-bin-0.3.0.124.ebuild,v 1.3 2004/07/14 21:44:04 agriffis Exp $
 
 inherit nsplugins
 
@@ -14,6 +14,7 @@ HOMEPAGE="https://player.helixcommunity.org"
 LICENSE="realsdk"
 SLOT="0"
 KEYWORDS="~x86"
+IUSE=""
 DEPEND="virtual/x11
 		>=x11-libs/gtk+-2.2.0
 		media-libs/libvorbis

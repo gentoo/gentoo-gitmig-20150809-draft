@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer-bin/helixplayer-bin-0.3.0.123.ebuild,v 1.2 2004/06/25 00:41:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer-bin/helixplayer-bin-0.3.0.123.ebuild,v 1.3 2004/07/14 21:44:04 agriffis Exp $
 
 inherit nsplugins
 
@@ -17,8 +17,6 @@ DEPEND="virtual/x11
 		media-libs/libvorbis
 		media-libs/libogg
 		media-libs/faad2"
-
-S=${WORKDIR}/${P}
 
 RESTRICT="nostrip"
 
