@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/Text-ChaSen
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Text-ChaSen/ChangeLog,v 1.1 2003/06/20 16:43:13 yakina Exp $
+
+*Text-ChaSen-1.03 (21 Jun 2003)
+
+  21 Jun 2003; YAMAKURA Makoto <yakina@gentoo.org> Text-ChaSen-1.03.ebuild,
+  Manifest,ChangeLog,files/digest-Text-ChaSen-1.03:
+
+  Initial import. Ebuild submitted by naoto @ GentooJP
+
