@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.113 2004/03/18 15:25:31 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.114 2004/03/19 23:22:34 weeve Exp $
+
+  19 Mar 2004; Jason Wever <weeve@gentoo.org> postfix-2.0.19.ebuild:
+  Marked stable on sparc.
 
   18 Mar 2004; Grant Goodyear <g2boojum@hotmail.com> postfix-2.0.19-r2.ebuild:
   Whoops, forgot to create sendmail.postfix (bug 44989).
