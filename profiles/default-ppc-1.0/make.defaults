@@ -20,8 +20,8 @@ CFLAGS="-O2 -pipe"
 # C++ Compiler flags
 CXXFLAGS=${CFLAGS}
 
-USE="xv oss slang readline gpm berkdb gdbm tcpd pam libwww ssl
+USE="oss dvd xv slang readline gpm berkdb gdbm tcpd pam libwww ssl jpeg
 nls mitshm perl python esd gif imlib sdl oggvorbis gnome gtk X qt kde
-motif opengl mozilla ppc"
+motif opengl mozilla png ppc"
 
 ACCEPT_KEYWORDS="ppc"
