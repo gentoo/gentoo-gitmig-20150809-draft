@@ -1,0 +1,7 @@
+# ChangeLog for dev-python/cjkcodecs
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cjkcodecs/ChangeLog,v 1.1 2003/06/27 23:46:01 liquidx Exp $
+
+  28 Jun 2003; Alastair Tse <liquidx@gentoo.org> :
+  new package to replace chinesecodecs, japanesecodecs and koreancodecs
+
