@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/wm-icons
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/wm-icons/ChangeLog,v 1.4 2004/02/29 16:45:27 aliz Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/wm-icons/ChangeLog,v 1.5 2004/04/26 15:03:49 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org> wm-icons-0.3.0.ebuild,
+  wm-icons-0.4.0_pre1.ebuild:
+  Add die following econf for bug 48950
 
   17 Dec 2003; Tavis Ormandy <taviso@gentoo.org> wm-icons-0.4.0_pre1.ebuild:
   marking stable.
