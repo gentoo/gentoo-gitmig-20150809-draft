@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.0.ebuild,v 1.3 2004/04/23 03:06:58 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-3.0.ebuild,v 1.4 2004/04/23 16:09:09 gmsoft Exp $
 
 # This ebuild includes backwards compatability for stable 2.4 kernels
 IUSE=""
@@ -67,7 +67,12 @@ src_compile() {
 		--disable-zlib \
 		${myconf}
 
-	emake || die "emake modutils failed"
+	if [ "${ARCH}" = "hppa" ]
+	then
+		mymake="ARCH=hppa"
+	fi
+
+	emake ${mymake} || die "emake modutils failed"
 	einfo "Building module-init-tools..."
 	cd ${S}
 
@@ -81,8 +86,13 @@ src_compile() {
 
 src_install () {
 
+	if [ "${ARCH}" = "hppa" ]
+	then
+		mymake="ARCH=hppa"
+	fi
+
 	cd ${WORKDIR}/modutils-${MODUTILS_PV}
-	einstall prefix="${D}"
+	einstall prefix="${D}" ${mymake}
 
 	docinto modutils-${MODUTILS_PV}
 	dodoc COPYING CREDITS ChangeLog NEWS README TODO
