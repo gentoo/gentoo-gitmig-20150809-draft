@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6-r2.ebuild,v 1.1 2005/03/20 17:23:04 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6-r2.ebuild,v 1.2 2005/03/22 07:14:55 chriswhite Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
 RESTRICT="nostrip"
-IUSE="3dfx 3dnow 3dnowex aalib alsa altivec arts avi bidi debug dga divx4linux doc dts dvb cdparanoia directfb dvd dv dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca lirc live lzo mad matroska matrox mpeg mmx mmxext mythtv nas nls nvidia oggvorbis opengl oss png real rtc samba sdl sse sse2 svga tga theora truetype v4l v4l2 X xanim xinerama xmms xv xvid xvmc"
+IUSE="3dfx 3dnow 3dnowext aalib alsa altivec arts avi bidi debug dga divx4linux doc dts dvb cdparanoia directfb dvd dv dvdread edl encode esd fbcon gif ggi gtk i8x0 ipv6 jack joystick jpeg libcaca lirc live lzo mad matroska matrox mpeg mmx mmxext mythtv nas nls nvidia oggvorbis opengl oss png real rtc samba sdl sse sse2 svga tga theora truetype v4l v4l2 X xanim xinerama xmms xv xvid xvmc"
 
 BLUV=1.4
 SVGV=1.9.17
@@ -229,7 +229,7 @@ src_compile() {
 	# check cpu flags
 	if use x86
 	then
-		CPU_FLAGS=(3dnow 3dnowex mmx sse sse2 mmxext)
+		CPU_FLAGS=(3dnow 3dnowext mmx sse sse2 mmxext)
 		ecpu_check CPU_FLAGS
 	fi
 
@@ -333,11 +333,11 @@ src_compile() {
 	#############
 	# Video Output #
 	#############
-	myconf="${myconf} $(use_enable 3dfx)"
+	# 3dfx requires dga to build.  See bug #85861
 	if use 3dfx; then
-		myconf="${myconf} --enable-tdfxvid"
+		myconf="${myconf} --enable-tdfxvid --enable-3dfx --enable-dga"
 	else
-		myconf="${myconf} --disable-tdfxvid"
+		myconf="${myconf} --disable-tdfxvid --disable-3dfx"
 	fi
 	if use fbcon && use 3dfx; then
 		myconf="${myconf} --enable-tdfxfb"
@@ -433,7 +433,7 @@ src_compile() {
 		myconf="${myconf} --enable-3dnow"
 	fi
 
-	if has_pic && use x86 || use !3dnowex; then
+	if has_pic && use x86 || use !3dnowext; then
 		myconf="${myconf} --disable-3dnowex"
 	else
 		myconf="${myconf} --enable-3dnowex"

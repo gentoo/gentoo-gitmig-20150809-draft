@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.285 2005/03/21 23:06:23 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.286 2005/03/22 07:14:55 chriswhite Exp $
+
+  22 Mar 2005; Chris White <chriswhite@gentoo.org>
+  mplayer-1.0_pre6-r2.ebuild:
+  Fixing bug #85861 as well as changing over to 3dnowext to match the cpu flag
+  in mplayer-1.0_pre6-r2.
 
   22 Mar 2005; Chris White <chriswhite@gentoo.org>
   files/mplayer-1.0_pre6-pic.patch:
