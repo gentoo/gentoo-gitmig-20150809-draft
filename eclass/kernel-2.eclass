@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.26 2004/02/04 19:49:35 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.27 2004/02/15 20:11:00 johnm Exp $
 
 # kernel.eclass rewrite for a clean base regarding the 2.6 series of kernel
 # with back-compatibility for 2.4
@@ -160,16 +160,20 @@ install_headers() {
 install_sources() {
 	local doc
 	local docs
+	local file
 
 	cd ${S}
 	dodir /usr/src
 	echo ">>> Copying sources..."
-	if [ -d "${WORKDIR}/${KV}/docs/" ]
+	file="$(find ${WORKDIR} -iname "docs" -type d)"
+	if [ -n "${file}" ]
 	then
-		for file in $(ls -1 ${WORKDIR}/${KV}/docs/)
+		for file in $(find ${file} -type f)
 		do
-			echo "XX_${file}*" >> ${S}/patches.txt
-			cat ${WORKDIR}/${KV}/docs/${file} >> ${S}/patches.txt
+			echo "${file/*docs\//}" >> ${S}/patches.txt
+			echo "===================================================" >> ${S}/patches.txt
+			cat ${file} >> ${S}/patches.txt
+			echo "===================================================" >> ${S}/patches.txt
 			echo "" >> ${S}/patches.txt
 		done
 	fi
@@ -188,6 +192,7 @@ install_sources() {
 	if [ -f ${S}/patches.txt ]; then
 		docs="${docs} ${S}/patches.txt"
 	fi
+
 	dodoc ${docs}
 	mv ${WORKDIR}/linux* ${D}/usr/src
 }
