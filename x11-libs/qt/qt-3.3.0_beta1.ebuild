@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.0_beta1.ebuild,v 1.3 2003/12/26 16:39:53 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.0_beta1.ebuild,v 1.4 2003/12/28 14:47:27 caleb Exp $
 
 SRCTYPE="free"
 DESCRIPTION="QT version ${PV}"
@@ -14,22 +14,20 @@ SLOT="3"
 KEYWORDS="x86"
 IUSE="cups nas postgres opengl mysql odbc gif doc firebird zlib icc sqlite oci8"
 
-DEPEND="virtual/x11
-	virtual/xft
-	media-libs/libpng
-	media-libs/jpeg
-	media-libs/libmng
+DEPEND="virtual/x11 virtual/xft
+	media-libs/libpng media-libs/jpeg media-libs/libmng
 	>=media-libs/freetype-2
-	cups? ( net-print/cups )
-	zlib? ( sys-libs/zlib )
-	icc? ( dev-lang/icc )
+	gif? ( media-libs/giflib media-libs/libungif )
 	nas? ( media-libs/nas )
 	odbc? ( dev-db/unixODBC )
 	mysql? ( dev-db/mysql )
 	sqlite? ( dev-db/sqlite )
 	firebird? ( dev-db/firebird )
+	opengl? ( virtual/opengl virtual/glu )
 	postgres? ( dev-db/postgresql )
-	opengl? ( virtual/opengl virtual/glu )"
+	cups? ( net-print/cups )
+	zlib? ( sys-libs/zlib )
+	icc? ( dev-lang/icc )"
 
 RDEPEND="${DEPEND}"
 
@@ -65,24 +63,24 @@ src_compile() {
 	[ -d "$QTBASE/etc/settings" ] && addwrite "$QTBASE/etc/settings"
 	[ ! -d "$QTBASE/etc/settings" ] && dodir ${QTBASE}/etc/settings
 
-	use cups	|| myconf="${myconf} -no-cups"
 	use nas		&& myconf="${myconf} -system-nas-sound"
 	use gif		&& myconf="${myconf} -qt-gif"
 	use mysql	&& myconf="${myconf} -plugin-sql-mysql -I/usr/include/mysql -L/usr/lib/mysql"
 	use postgres	&& myconf="${myconf} -plugin-sql-psql -I/usr/include/postgresql/server"
-	use odbc	&& myconf="${myconf} -plugin-sql-odbc"
-	use sqlite	&& myconf="${myconf} -plugin-sql-sqlite"
 	use firebird    && myconf="${myconf} -plugin-sql-ibase"
 	use oci8	&& myconf="${myconf} -plugin-sql-oci"
+	use sqlite	&& myconf="${myconf} -plugin-sql-sqlite"
+	use odbc	&& myconf="${myconf} -plugin-sql-odbc"
+	use cups	&& myconf="${myconf} -cups" || myconf="${myconf} -no-cups"
 	use opengl	&& myconf="${myconf} -enable-module=opengl" || myconf="${myconf} -disable-opengl"
 	use debug	&& myconf="${myconf} -debug" || myconf="${myconf} -release -no-g++-exceptions"
 	use xinerama    && myconf="${myconf} -xinerama"
-	use ipv6        && myconf="${myconf} -ipv6" || myconf="${myconf} -no-ipv6"
 	use zlib	&& myconf="${myconf} -system-zlib" || myconf="${myconf} -qt-zlib"
+	use ipv6        && myconf="${myconf} -ipv6" || myconf="${myconf} -no-ipv6"
 
 	export YACC='byacc -d'
 
-	./configure -sm -thread -stl -system-libjpeg -verbose \
+	./configure -sm -thread -stl -system-libjpeg -verbose -largefile \
 		-qt-imgfmt-{jpeg,mng,png} -tablet -system-libmng \
 		-system-libpng -lpthread -xft -platform ${PLATFORM} -xplatform \
 		${PLATFORM} -xrender -prefix ${D}${QTBASE} -plugindir ${QTBASE}/plugins \
