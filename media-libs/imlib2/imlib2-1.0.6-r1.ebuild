@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.0.6-r1.ebuild,v 1.19 2003/11/03 21:54:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.0.6-r1.ebuild,v 1.20 2003/11/03 23:08:53 vapier Exp $
 
 inherit libtool flag-o-matic
 
@@ -20,6 +20,7 @@ DEPEND="=x11-libs/gtk+-1.2*
 	virtual/x11"
 
 src_compile() {
+	strip-flags # 25368
 	replace-flags k6-3 i586
 	replace-flags k6-2 i586
 	replace-flags k6 i586
