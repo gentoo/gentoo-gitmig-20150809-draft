@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3167 2004/09/19 19:24:06 slarti Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3168 2004/09/19 20:08:17 foser Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -47,7 +47,6 @@ app-sci/staden
 
 # <foser@gentoo.org> (14 Sep 2004)
 # Big GNOME 2.8 mask
-# !!! INCOMPLETE !!!
 >=gnome-base/gnome-2.7
 >=x11-libs/pango-1.5
 >=gnome-base/orbit-2.11
@@ -117,6 +116,7 @@ gnome-extra/evolution-data-server
 >=gnome-extra/libgtkhtml-3.1
 >=mail-client/evolution-1.5
 >=net-libs/libsoup-2.1
+gnome-extra/evolution-webcal
 # End of big GNOME 2.8 mask
 
 # <usata@usata.org> (07 Sep 2004)
