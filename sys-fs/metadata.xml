@@ -4,5 +4,9 @@
 	<longdescription lang="en">
 		The sys-fs category contains filesystem tools and utilities.
 	</longdescription>
+	<longdescription lang="es">
+		La categoría sys-fs contiene herramientas y utilidades de sistemas de
+		ficheros.
+	</longdescription>
 </catmetadata>
 

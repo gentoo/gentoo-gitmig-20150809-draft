@@ -5,5 +5,10 @@
 		The sys-power category contains software which handles power management,
 		including CPU frequency scaling tools.
 	</longdescription>
+	<longdescription lang="es">
+		La categoría sys-power contiene programas que manejan el control del
+		rendimiento incluyendo herramientas para cambio de frecuencia de algunos
+		microprocesadores.
+	</longdescription>
 </catmetadata>
 

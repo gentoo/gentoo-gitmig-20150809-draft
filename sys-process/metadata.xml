@@ -5,5 +5,10 @@
 		The sys-process category contains packages which query or manipulate
 		processes. The 'cron' daemons are included in this.
 	</longdescription>
+	<longdescription lang="es">
+		La categoría sys-proccess contiene paquetes que manipulan y obtienen
+		información de los procesos. Los paquetes de 'cron' también están
+		incluidos en esta categoría.
+	</longdescription>
 </catmetadata>
 

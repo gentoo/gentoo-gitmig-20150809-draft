@@ -4,5 +4,8 @@
 	<longdescription lang="en">
 		The sys-libs category contains various system-level libraries.
 	</longdescription>
+	<longdescription lang="es">
+		La categoría sys-libs contiene varias librerías del sistema.
+	</longdescription>
 </catmetadata>
 

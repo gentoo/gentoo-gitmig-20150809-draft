@@ -5,5 +5,9 @@
 		The sys-devel category contains various core system development tools
 		and libraries.
 	</longdescription>
+	<longdescription lang="es">
+		La categoría sys-devel contiene paquetes esenciales para el desarrollo
+		de software.
+	</longdescription>
 </catmetadata>
 

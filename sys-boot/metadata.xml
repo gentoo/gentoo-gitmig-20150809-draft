@@ -4,5 +4,9 @@
 	<longdescription lang="en">
 		The sys-boot category contains bootloaders and related tools.
 	</longdescription>
+	<longdescription lang="es">
+		La categoría sys-boot contiene algunos cargadores de arranque y
+		herramientas relacionadas.
+	</longdescription>
 </catmetadata>
 

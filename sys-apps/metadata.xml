@@ -6,5 +6,10 @@
 		some non-core system applications which have not yet been moved out into
 		other sys- categories.
 	</longdescription>
+	<longdescription lang="es">
+		La categoría sys-apps contiene varios paquetes esenciales del sistema, y
+		algunos paquetes no esenciales que aún no han sido movidos a otras
+		categorías sys-.
+	</longdescription>
 </catmetadata>
 

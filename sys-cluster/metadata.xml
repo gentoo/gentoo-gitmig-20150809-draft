@@ -4,5 +4,8 @@
 	<longdescription lang="en">
 		The sys-cluster category contains cluster-related software.
 	</longdescription>
+	<longdescription lang="es">
+		La categoría sys-cluster contiene paquetes relacionados con clusters.
+	</longdescription>
 </catmetadata>
 

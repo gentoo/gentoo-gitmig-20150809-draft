@@ -5,5 +5,9 @@
 		The sys-kernel category contains kernel source ebuilds and
 		kernel-related tools.
 	</longdescription>
+	<longdescription lang="es">
+		La categoría sys-kernel contiene las fuentes del núcleo y herramientas
+		relacionadas con este.
+	</longdescription>
 </catmetadata>
 
