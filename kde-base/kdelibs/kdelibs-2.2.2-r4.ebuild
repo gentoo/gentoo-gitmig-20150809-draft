@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.2-r4.ebuild,v 1.14 2002/10/27 11:16:57 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-2.2.2-r4.ebuild,v 1.15 2002/12/02 19:57:56 danarmak Exp $
 
 IUSE="ssl cups ipv6 alsa"
 inherit kde kde.org
@@ -41,8 +41,6 @@ RDEPEND="$RDEPEND
 	app-text/sgml-common
 	cups? ( net-print/cups )
 	dev-lang/python"
-
-set_enable_final
 
 qtver-from-kdever $PV
 need-qt $selected_version

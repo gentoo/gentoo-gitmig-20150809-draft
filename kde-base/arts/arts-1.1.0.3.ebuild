@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.1.0.3.ebuild,v 1.1 2002/11/12 20:03:07 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.1.0.3.ebuild,v 1.2 2002/12/02 19:57:41 danarmak Exp $
 inherit kde-base flag-o-matic
 
 # this is the arts 1.1.0 from kde 3.1 rc3, as opposed to the arts 1.1.0 from kde 3.1 beta2
@@ -23,8 +23,6 @@ SLOT="3.1"
 LICENSE="GPL-2 LGPL-2"
 
 use alsa && myconf="$myconf --enable-alsa" || myconf="$myconf --disable-alsa"
-
-set_enable_final
 
 src_unpack() {
 
