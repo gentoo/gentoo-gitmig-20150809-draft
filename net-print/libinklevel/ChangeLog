@@ -1,6 +1,9 @@
 # ChangeLog for net-print/libinklevel
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/libinklevel/ChangeLog,v 1.10 2005/01/02 02:30:49 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/libinklevel/ChangeLog,v 1.11 2005/01/27 03:55:27 josejx Exp $
+
+  27 Jan 2005; Joseph Jezak <josejx@gentoo.org> libinklevel-0.6.3.ebuild:
+  Marked ~ppc.
 
   02 Jan 2005; Marcus Hanwell <cryos@gentoo.org> libinklevel-0.6.3.ebuild:
   Marked ~amd64.
