@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.1.0.1.ebuild,v 1.5 2004/10/20 01:57:13 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.1.0.1.ebuild,v 1.6 2004/10/31 05:43:22 vapier Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -15,15 +15,13 @@ SRC_URI="ftp://ftp.imagemagick.org/pub/${MY_PN}/${MY_P2}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ppc sparc alpha hppa ~amd64 ~mips ~ppc64 ia64"
+KEYWORDS="alpha amd64 hppa ia64 ~mips ppc ~ppc64 sparc x86"
 IUSE="X cups jpeg lcms mpeg png truetype tiff xml2 wmf jbig perl graphviz"
 
-DEPEND=">=sys-apps/sed-4
-	app-arch/bzip2
+DEPEND="app-arch/bzip2
 	sys-libs/zlib
-	X? ( virtual/x11
-		>=app-text/dgs-0.5.9.1 )
-	cups?   ( virtual/ghostscript )
+	X? ( virtual/x11 >=app-text/dgs-0.5.9.1 )
+	cups? ( virtual/ghostscript )
 	lcms? ( >=media-libs/lcms-1.06 )
 	mpeg? ( media-video/mpeg2vidcodec )
 	png? ( media-libs/libpng )
