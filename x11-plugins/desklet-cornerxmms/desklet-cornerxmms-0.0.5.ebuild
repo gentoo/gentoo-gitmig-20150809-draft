@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-cornerxmms/desklet-cornerxmms-0.0.5.ebuild,v 1.2 2003/09/30 21:43:00 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-cornerxmms/desklet-cornerxmms-0.0.5.ebuild,v 1.3 2003/11/01 03:09:16 lu_zero Exp $
 
 DESKLET_NAME="CornerXMMS"
 
@@ -15,7 +15,7 @@ LICENSE="as-is"
 
 SLOT="0"
 IUSE=""
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 ~sparc ~ppc"
 
 DEPEND=">=gnome-extra/gdesklets-core-0.22
 	>=dev-python/pyxmms-1.06"

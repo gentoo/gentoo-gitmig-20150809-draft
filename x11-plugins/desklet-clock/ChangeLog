@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/desklet-clock
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-clock/ChangeLog,v 1.3 2003/09/24 19:52:58 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/desklet-clock/ChangeLog,v 1.4 2003/11/01 03:05:34 lu_zero Exp $
+
+  01 Nov 2003; Luca Barbato <lu_zero@gentoo.org> desklet-clock-0.31.ebuild,
+  desklet-clock-0.32.ebuild:
+  Maked ~ppc
 
   24 Sep 2003; Todd Sunderlin <todd@gentoo.org> desklet-clock-0.32.ebuild:
   added ~sparc keyword
