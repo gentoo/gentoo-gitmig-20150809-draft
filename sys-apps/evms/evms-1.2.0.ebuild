@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/evms/evms-1.2.0.ebuild,v 1.1 2002/10/02 09:31:11 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/evms/evms-1.2.0.ebuild,v 1.2 2002/10/02 10:52:09 woodchip Exp $
 
 DESCRIPTION="Utilities for the IBM Enterprise Volume Management System"
 HOMEPAGE="http://www.sourceforge.net/projects/evms"
 
 S=${WORKDIR}/${P}
-SRC_URI="ftp://ftp.sourceforge.net/pub/sourceforge/${PN}/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 #EVMS uses libuuid from e2fsprogs
 DEPEND="virtual/glibc gtk? ( =x11-libs/gtk+-1* ) ncurses? ( sys-libs/ncurses ) sys-apps/e2fsprogs"
@@ -45,7 +45,7 @@ src_install() {
 	# realize these symlinks now so they get included
 	cd ${D}/lib
 	rm -f libdlist.so libevms.so
-	ln -sf libevms-${LIBV}.so libevms.so.1
+	ln -sf libevms-${PV}.so libevms.so.1
 	ln -sf libevms.so.1 libevms.so
 	ln -sf libdlist-1.0.so libdlist.so.1
 	ln -sf libdlist.so.1 libdlist.so
