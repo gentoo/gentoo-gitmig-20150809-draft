@@ -1,0 +1,24 @@
+diff -Naur aleph_20040417.orig/Source_Files/GameWorld/TickBasedCircularQueue.h aleph_20040417.new/Source_Files/GameWorld/TickBasedCircularQueue.h
+--- aleph_20040417.orig/Source_Files/GameWorld/TickBasedCircularQueue.h	2005-01-02 18:33:55.919198281 +0000
++++ aleph_20040417.new/Source_Files/GameWorld/TickBasedCircularQueue.h	2005-01-02 18:36:07.587086057 +0000
+@@ -166,7 +166,7 @@
+ class MutableElementsTickBasedCircularQueue : public ConcreteTickBasedCircularQueue<tValueType> {
+ public:
+         MutableElementsTickBasedCircularQueue(int inBufferCapacity) : ConcreteTickBasedCircularQueue<tValueType>(inBufferCapacity) {}
+-        tValueType& at(int32 inTick) { return elementForTick(inTick); }
++        tValueType& at(int32 inTick) { return this->elementForTick(inTick); }
+         tValueType& operator [](int32 inTick) { return at(inTick); }
+ };
+ 
+diff -Naur aleph_20040417.orig/Source_Files/ModelView/Dim3_Loader.cpp aleph_20040417.new/Source_Files/ModelView/Dim3_Loader.cpp
+--- aleph_20040417.orig/Source_Files/ModelView/Dim3_Loader.cpp	2005-01-02 18:33:55.886203321 +0000
++++ aleph_20040417.new/Source_Files/ModelView/Dim3_Loader.cpp	2005-01-02 18:34:29.291100734 +0000
+@@ -225,7 +225,7 @@
+ 	{
+ 		size_t NumBones = Model.Bones.size();
+ 		BoneIndices.resize(NumBones);
+-		fill(BoneIndices.begin(),BoneIndices.end(),UNONE);	// No bones listed -- yet
++		fill(BoneIndices.begin(),BoneIndices.end(),(size_t) UNONE);	// No bones listed -- yet
+ 		vector<Model3D_Bone> SortedBones(NumBones);
+ 		vector<size_t> BoneStack(NumBones);
+ 		vector<bool> BonesUsed(NumBones);
