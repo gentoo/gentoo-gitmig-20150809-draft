@@ -322,10 +322,6 @@ media-libs/id3lib-docs
 #still not working:
 =sys-libs/ncurses-5.2-r4
 
-#db-3.2.9 is untested by the system team
-#>=sys-libs/db-3.2.9
->=sys-libs/db-3.3
-
 #this gcc's new atexit() fix that is supposed to be wonderful, doesn't work....
 =sys-devel/gcc-2.95.3-r2
 # needs to be tested
@@ -544,9 +540,6 @@ app-doc/tkinfo
 # Fails with new Java scheme (karltk) 
 =net-www/tomcat-3.2.2
 
-#Should be tested
-#=net-mail/teapop-0.3.3
-
 # the packages dependent on tcl-tk have been updated to
 # support the seperation of both
 dev-lang/tcl-tk
@@ -560,10 +553,6 @@ dev-lang/tcl-tk
 # "relink bug" fixed.
 >=sys-devel/libtool-1.4.2
 <sys-devel/libtool-1.4.1-r4
-
-# Failed to build for at least me and "wouzer" Bugzilla issue: #243
-=x11-base/xfree-4.2.0
-=x11-base/xfree-4.2.0-r1
 
 # Bevin <gbevin@gentoo.org> - new grub release, splashimage path should
 # be updated in the docs to be "splashimage=(hd0,0)/grub/splash.xpm.gz"
@@ -618,13 +607,6 @@ dev-lang/tcl-tk
 #seemant@gentoo.org 20 Mar 2002
 # Masking medusa-0.5.1-r4 because it requires libtool-1.4.2 which is also masked
 =gnome-extra/medusa-0.5.1-r4
-
-#karltk@gentoo.org 23 Mar 2002
-# has a defect build system that doesn't honor --prefix=${D}
-# see #1279
-# >=dev-python/pychecker-0.8.0
-#jnelson@gentoo.org 28 Apr 2002
-# fixed ebuild to use --root (as all DistUtils should be using)
 
 #seemant@gentoo.org 28 Mar 2002
 # sourceforge no longer has an ftp mirror for these themes
