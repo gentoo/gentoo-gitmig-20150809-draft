@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.2 2002/04/09 14:42:26 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.3 2002/04/15 03:33:50 azarah Exp $
 # This eclass can be used for packages that needs a working X environment to build
 ECLASS=virtualx
 newdepend virtual/x11
@@ -10,12 +10,12 @@ DESCRIPTION="Based on the $ECLASS eclass"
 
 virtualmake() {
 	local retval=0
-	local Xconnect="/usr/X11R6/bin/xhost"
 
 	#If $DISPLAY is not set, or xhost cannot connect to an X
 	#display, then do the Xvfb hack.
 	if [ -z "$DISPLAY" ] || ! /usr/X11R6/bin/xhost
 	then
+		export XAUTHORITY=
 		# Mandrake's hack to allow compiling without the X display
 		local i=0
 		XDISPLAY=$(i=0; while [ -f /tmp/.X${i}-lock ] ; do i=$((${i}+1));done; echo ${i})
