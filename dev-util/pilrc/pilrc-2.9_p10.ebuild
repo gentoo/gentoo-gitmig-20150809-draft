@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/pilrc/pilrc-2.9_p10.ebuild,v 1.2 2003/09/19 08:02:58 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pilrc/pilrc-2.9_p10.ebuild,v 1.3 2003/09/19 22:59:26 liquidx Exp $
+
+inherit eutils
 
 # workout
 PREV_PATCH_LEVEL=$((${PV#*p}-1))
@@ -16,8 +18,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~sparc"
 
-DEPEND="app-text/dos2unix
-	gtk? ( =x11-libs/gtk+-1.2* )"
+DEPEND="gtk? ( =x11-libs/gtk+-1.2* )"
 
 MAKEOPTS="${MAKEOPTS} -j1"
 S=${WORKDIR}/${PN}-${PREV_PV}
@@ -28,7 +29,8 @@ src_unpack() {
 	# convert to unix text file and patch with the latest patch level
 	chmod +x ${S}/src2unix.sh
 	cd ${S}; ./src2unix.sh
-	dos2unix -n ${DISTDIR}/${PN}-${MY_PV}.diff ${WORKDIR}/${P}.diff
+	cp ${DISTDIR}/${PN}-${MY_PV}.diff ${WORKDIR}/${P}.diff
+	edos2unix ${WORKDIR}/${P}.diff
 	epatch ${WORKDIR}/${P}.diff
 	# patch typo in Makefile.am
 	cd ${S}; patch Makefile.am < ${FILESDIR}/${P}-Makefile.patch

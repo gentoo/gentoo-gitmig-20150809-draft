@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/pilrc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 
+  19 Sep 2003; Alastair Tse <liquidx@gentoo.org> pilrc-2.9_p10.ebuild:
+  changing to use edos2unix rather than dos2unix
+
 *pilrc-2.9_p10 (18 Sep 2003)
 
   18 Sep 2003; Alastair Tse <liquidx@gentoo.org> pilrc-2.9_p10.ebuild,
