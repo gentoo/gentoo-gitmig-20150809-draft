@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.50 2004/06/24 22:42:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.51 2004/06/28 02:42:52 gustavoz Exp $
+
+  27 Jun 2004; Gustavo Zacarias <gustavoz@gentoo.org> autoconf-2.59-r4.ebuild:
+  Stable on sparc
 
   16 Jun 2004; Martin Schlemmer <azarah@gentoo.org> files/ac-wrapper-4.pl:
   Update comments to show that we check for 2.13 and not 2.1.
