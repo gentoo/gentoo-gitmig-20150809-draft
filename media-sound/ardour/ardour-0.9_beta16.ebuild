@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.9_beta16.ebuild,v 1.2 2004/06/24 23:50:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.9_beta16.ebuild,v 1.3 2004/06/27 09:32:34 eradicator Exp $
 
 MY_P="${P}.1"
 MY_PV="${PV}.1"
@@ -11,7 +11,7 @@ SRC_URI="http://ardour.org/releases/${MY_P/_/}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc amd64"
 IUSE="nls"
 
 RDEPEND="dev-util/pkgconfig
