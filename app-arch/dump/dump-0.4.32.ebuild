@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.32.ebuild,v 1.4 2003/09/09 15:03:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.32.ebuild,v 1.5 2003/09/15 17:49:03 seemant Exp $
 
 MY_P=${P/4./4b}
 S=${WORKDIR}/${MY_P}
@@ -13,7 +13,7 @@ LICENSE="BSD"
 KEYWORDS="x86 ~ppc ~sparc ~alpha"
 IUSE="readline static"
 
-DEPEND=">=sys-apps/e2fsprogs-1.27
+DEPEND=">=sys-fs/e2fsprogs-1.27
 	>=sys-apps/bzip2-1.0.2
 	>=sys-libs/zlib-1.1.4
 	virtual/os-headers
