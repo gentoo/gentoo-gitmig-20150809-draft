@@ -1,6 +1,10 @@
 # ChangeLog for app-i18n/kurso-de-esperanto
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/kurso-de-esperanto/ChangeLog,v 1.6 2005/01/12 20:48:36 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/kurso-de-esperanto/ChangeLog,v 1.7 2005/01/14 14:35:00 luckyduck Exp $
+
+  14 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  kurso-de-esperanto-3.0.ebuild:
+  back to amd64 from of emul-linux-x86
 
   12 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org>
   kurso-de-esperanto-3.0.ebuild:
