@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3300 2004/11/05 16:05:44 usata Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3301 2004/11/05 23:32:19 chriswhite Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,11 @@
 ##
 ##   End example
 ##
+
+# <chriswhite@gentoo.org> (05 Nov 2004)
+# Masked until all arches have re-marked per 
+# bug #70096
+=net-misc/icecast-2.1.0
 
 # <danarmak@gentoo.org> (23 Oct 2004)
 # Experimental package for plugin separate from main qt ebuild
