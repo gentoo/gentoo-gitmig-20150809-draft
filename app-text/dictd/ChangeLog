@@ -1,6 +1,6 @@
 # ChangeLog for app-text/dictd
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.5 2003/01/19 16:26:16 doctomoe Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/ChangeLog,v 1.6 2003/02/12 05:22:45 vapier Exp $
 
   19 Jan 2003; Olivier Reisch <doctomoe@gentoo.org> dictd-1.8.0.ebuild:
   Added ~ppc keyword

@@ -1,6 +1,6 @@
 # ChangeLog for app-text/gocr
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.8 2003/01/19 16:51:17 mholzer Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/gocr/ChangeLog,v 1.9 2003/02/12 05:25:04 vapier Exp $
 
 *gocr-0.3.6-r2 (06 Jul 2002)
 

@@ -1,6 +1,6 @@
 # ChangeLog for app-text/docbook-sgml-utils
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/ChangeLog,v 1.10 2003/02/09 07:35:04 satai Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/ChangeLog,v 1.11 2003/02/12 05:23:17 vapier Exp $
 
 *docbook-sgml-utils-0.6.12 (09 Feb 2003)
 

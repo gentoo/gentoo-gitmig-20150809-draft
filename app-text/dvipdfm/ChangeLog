@@ -1,6 +1,6 @@
 # ChangeLog for app-text/dvipdfm
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfm/ChangeLog,v 1.4 2002/12/13 10:56:19 blizzy Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/dvipdfm/ChangeLog,v 1.5 2003/02/12 05:23:59 vapier Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
