@@ -1,6 +1,10 @@
 # ChangeLog for dev-tcltk/Tk_Theme
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/Tk_Theme/ChangeLog,v 1.4 2004/04/03 21:16:07 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/Tk_Theme/ChangeLog,v 1.5 2004/04/04 23:08:56 zx Exp $
+
+  04 Apr 2004; Chris Aniszczyk <zx@gentoo.org> Tk_Theme-23.ebuild,
+  metadata.xml:
+  Clean up. Added missing metadata.xml
 
   03 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>; Tk_Theme-23.ebuild:
   Change x11-base/xfree dependency to virtual/x11.
