@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rip/rip-1.07.ebuild,v 1.6 2004/03/11 07:19:24 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rip/rip-1.07.ebuild,v 1.7 2004/04/01 07:55:06 eradicator Exp $
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="A command-line based audio CD ripper and mp3 encoder"
 SRC_URI="http://rip.sourceforge.net/download/${P}.tar.gz"
 HOMEPAGE="http://rip.sourceforge.net"
