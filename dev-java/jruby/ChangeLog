@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/jruby
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed unde the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.1 2004/11/16 00:17:20 karltk Exp $
+# Copyright 1999-2004 Gentoo Foundation; Distributed unde the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jruby/ChangeLog,v 1.2 2004/11/16 05:48:06 swegener Exp $
 
 *jruby-0.7.0 (16 Nov 2004)
 
