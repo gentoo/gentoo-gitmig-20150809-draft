@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/cjkcodecs
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cjkcodecs/ChangeLog,v 1.2 2003/07/12 12:49:25 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cjkcodecs/ChangeLog,v 1.3 2003/08/01 05:44:19 matsuu Exp $
+
+*cjkcodecs-1.0 (01 Aug 2003)
+
+  01 Aug 2003; <matsuu@gentoo.org> cjkcodecs-1.0.ebuild:
+  version bump. thanks to gna <gnagent2@yahoo.com.au>. #25225.
 
 *cjkcodecs-0.9 (27 Jun 2003)
  
