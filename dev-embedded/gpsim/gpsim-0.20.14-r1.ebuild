@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/gpsim-0.20.14-r1.ebuild,v 1.1 2003/10/21 03:22:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gpsim/gpsim-0.20.14-r1.ebuild,v 1.2 2003/10/29 04:17:42 robbat2 Exp $
 
-inherit eutils
+inherit eutils flag-o-matic gcc
 
 DESCRIPTION="A simulator for the Microchip PIC microcontrollers"
 HOMEPAGE="http://www.dattalo.com/gnupic/gpsim.html"
@@ -20,6 +20,9 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-gcc3.2.patch
 	epatch ${FILESDIR}/${P}-gcc33.patch
+	if [ `gcc-major-version` -eq 2 ]; then
+		epatch ${FILESDIR}/${P}-gcc2_fix.patch
+	fi
 }
 
 src_compile(){
