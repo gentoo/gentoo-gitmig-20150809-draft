@@ -1,12 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/crux/crux-1.9.3.ebuild,v 1.2 2002/06/29 13:32:49 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/crux/crux-1.9.3.ebuild,v 1.3 2002/07/08 14:04:21 aliz Exp $
 
 DESCRIPTION="Crux is a GTK2 theme engine that will replace the Eazel theme" 
 HOMEPAGE="http://www.eazel.com"
 S=${WORKDIR}/${P}
 LICENSE="GPL-2"
 SLOT="2"
+KEYWORDS="x86"
 
 RDEPEND=">=x11-libs/gtk+-2.0.5
 	>=gnome-base/libgnomeui-2.0.1

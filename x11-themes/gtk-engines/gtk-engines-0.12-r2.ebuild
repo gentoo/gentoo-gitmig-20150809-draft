@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/gtk-engines-0.12-r2.ebuild,v 1.2 2002/06/29 13:30:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines/gtk-engines-0.12-r2.ebuild,v 1.3 2002/07/08 14:04:21 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="gtk-engines"
@@ -13,6 +13,7 @@ DEPEND="virtual/glibc virtual/x11
 
 SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86"
 
 src_unpack() {
 	unpack ${P}.tar.gz
