@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cpl-stratego/cpl-stratego-0.4.ebuild,v 1.10 2004/05/15 02:47:46 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cpl-stratego/cpl-stratego-0.4.ebuild,v 1.11 2004/06/14 17:24:37 kloeri Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Choice library mostly used by Stratego"
 SRC_URI="http://www.stratego-language.org/ftp/${P}.tar.gz"
 HOMEPAGE="http://www.stratego-language.org"
@@ -10,6 +9,7 @@ HOMEPAGE="http://www.stratego-language.org"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc ~ppc alpha ~ia64"
+IUSE=""
 
 DEPEND="virtual/glibc"
 
