@@ -1,3 +1,4 @@
+
 ;;; Ruby-mode site-lisp configuration
 
 (setq load-path (cons "@SITELISP@" load-path))
@@ -6,4 +7,5 @@
 (setq auto-mode-alist
   (append '(("\\.rb$" . ruby-mode)) auto-mode-alist))
 
-
+(setq interpreter-mode-alist
+  (append '(("ruby" . ruby-mode)) interpreter-mode-alist))
