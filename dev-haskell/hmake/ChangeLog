@@ -1,0 +1,11 @@
+# ChangeLog for dev-haskell/hmake
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/ChangeLog,v 1.1 2003/04/22 08:27:53 kosmikus Exp $
+
+*hmake-3.07 (22 Apr 2003)
+
+  22 Apr 2003; Andres Loeh <kosmikus@gentoo.org> all :
+
+  Initial import. Thanks to Thomas L. Bevan <tom@regex.com.au> for submitting an
+  ebuild (#3970). hmake is a make-like tool that can be used with the major Haskell
+  compilers (i.e. ghc, nhc98, hbc).
