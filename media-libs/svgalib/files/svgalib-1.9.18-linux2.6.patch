@@ -1,0 +1,475 @@
+diff -urpN svgalib-1.9.18/kernel/svgalib_helper/Makefile svgalib-1.9.18/kernel/svgalib_helper/Makefile
+--- svgalib-1.9.18/kernel/svgalib_helper/Makefile	2004-02-22 20:52:42.000000000 +0200
++++ svgalib-1.9.18/kernel/svgalib_helper/Makefile	2004-02-22 23:19:39.617023080 +0200
+@@ -13,15 +13,32 @@ EXTRA_CFLAGS := -DSVGALIB_HELPER_MAJOR=$
+ 
+ ifeq ($(PATCHLEVEL),4)
+   include $(TOPDIR)/Rules.make
++  OBJEXT := o
++else
++  OBJEXT := ko
+ endif
+ 
+ else
+ 
+-VER    = $(shell uname -r)
++# Extract version number from headers.
++VER = $(shell awk -F\" '/REL/ {print $$2}' $(INCLUDEDIR)/linux/version.h 2>/dev/null)
++
++# Use version of current running kernel
++ifeq ($(VER),)
++  VER = $(shell uname -r)
++endif
++
++PATCHLEVEL := $(shell echo $(VER) | cut -d. -f2)
+ KDIR	:= /lib/modules/$(VER)/build
+ PWD	:= $(shell pwd)
+ TARGET  := svgalib_helper
+ 
++ifeq ($(PATCHLEVEL),4)
++  OBJEXT := o
++else
++  OBJEXT := ko
++endif
++
+ default:
+ 	$(MAKE) -C $(KDIR) SUBDIRS=$(PWD) modules
+ 
+@@ -41,4 +58,4 @@ install: modules_install
+ 
+ modules_install: $(TARGET).o
+ 	mkdir -p $(TOPDIR)/lib/modules/$(VER)/kernel/misc
+-	install -m 0644 -c $(TARGET).o $(TOPDIR)/lib/modules/$(VER)/kernel/misc
++	install -m 0644 -c $(TARGET).$(OBJEXT) $(TOPDIR)/lib/modules/$(VER)/kernel/misc
+diff -urpN svgalib-1.9.18/kernel/svgalib_helper/kernel26compat.h svgalib-1.9.18/kernel/svgalib_helper/kernel26compat.h
+--- svgalib-1.9.18/kernel/svgalib_helper/kernel26compat.h	2004-02-22 20:52:42.000000000 +0200
++++ svgalib-1.9.18/kernel/svgalib_helper/kernel26compat.h	2004-02-22 22:55:13.813859032 +0200
+@@ -43,11 +43,41 @@ static inline int devfs_unregister_chrde
+ }
+ #endif
+ 
++#if defined(KERNEL_2_6) && !defined(CONFIG_DEVFS_FS)
++#  define SLH_SYSFS_REGISTER                                            \
++     svgalib_helper_class = class_simple_create(THIS_MODULE, "svgalib_helper");
++
++#  define SLH_SYSFS_ADD_CONTROL                                         \
++     class_simple_device_add(svgalib_helper_class,                      \
++                             MKDEV(SVGALIB_HELPER_MAJOR, 0),            \
++                             NULL, "svga");
++
++#  define SLH_SYSFS_ADD_DEVICE(_name, _minor)                           \
++     class_simple_device_add(svgalib_helper_class,                      \
++                             MKDEV(SVGALIB_HELPER_MAJOR, _minor),       \
++                             &sh_pci_devs[_minor]->dev->dev, _name);
++
++#  define SLH_SYSFS_REMOVE_DEVICE(i)                                    \
++     class_simple_device_remove(MKDEV(SVGALIB_HELPER_MAJOR, i));
++
++#  define SLH_SYSFS_UNREGISTER                                          \
++     class_simple_destroy(svgalib_helper_class);
++#else
++#  define SLH_SYSFS_REGISTER
++#  define SLH_SYSFS_ADD_CONTROL
++#  define SLH_SYSFS_ADD_DEVICE(_name, _minor)
++#  define SLH_SYSFS_REMOVE_DEVICE(i)
++#  define SLH_SYSFS_UNREGISTER
++#endif
++
+ 
+ /* Our main.c really do not like MINOR from 2.6 kernels ... */
+ #if (defined MINOR) && (!defined KERNEL_2_6)
+ # define my_minor(x) MINOR(x)
+ #else
++# ifndef minor
++#  define minor(x) MINOR(x)
++# endif
+ # define my_minor(x) minor(x)
+ #endif
+ 	
+diff -urpN svgalib-1.9.18/kernel/svgalib_helper/main.c svgalib-1.9.18/kernel/svgalib_helper/main.c
+--- svgalib-1.9.18/kernel/svgalib_helper/main.c	2004-02-22 23:01:50.113612312 +0200
++++ svgalib-1.9.18/kernel/svgalib_helper/main.c	2004-02-22 22:59:25.451604280 +0200
+@@ -53,15 +53,19 @@ static int irqs[MAX_NR_DEVICES];
+ static devfs_handle_t devfs_handle;
+ #endif
+ 
++#if defined(KERNEL_2_6) && !defined(CONFIG_DEVFS_FS)
++struct class_simple *svgalib_helper_class;
++#endif
++
+ static int check_io_range(int port, int device) {
+     return 1;
+ }
+ 
+-static struct pci_dev *get_pci_dev(int pcipos, int minor) {
++static struct pci_dev *get_pci_dev(int pcipos, int _minor) {
+     
+-    if(minor>=num_devices) return NULL;
+-    if(minor>0) {
+-        return sh_pci_devs[minor]->dev;
++    if(_minor>=num_devices) return NULL;
++    if(_minor>0) {
++        return sh_pci_devs[_minor]->dev;
+     } else {
+         if(pcipos>0 && pcipos<num_devices)
+             return sh_pci_devs[pcipos]->dev;
+@@ -70,11 +74,11 @@ static struct pci_dev *get_pci_dev(int p
+ 
+ }
+ 
+-static int get_dev(int pcipos, int minor) {
++static int get_dev(int pcipos, int _minor) {
+     
+-    if(minor>=num_devices) return 0;
+-    if(minor>0) {
+-        return minor;
++    if(_minor>=num_devices) return 0;
++    if(_minor>0) {
++        return _minor;
+     } else {
+ 		if(pcipos>=num_devices || pcipos<1) return 0;
+ 		return pcipos;
+@@ -111,7 +115,7 @@ static int svgalib_helper_ioctl( struct 
+ 
+     io_t iov;
+     pcic_t pciv;
+-    int minor = my_minor(inode->i_rdev);
++    int _minor = my_minor(inode->i_rdev);
+     struct pci_dev *pdev;
+     io_string_t iostr;
+     int i=0, ret;
+@@ -134,7 +138,7 @@ static int svgalib_helper_ioctl( struct 
+             if (iostr.length>4096) return -EINVAL;
+ 	    	if ( (outb_str = kmalloc(iostr.length, GFP_KERNEL )) == NULL ) return -ENOMEM;
+ 	    	copy_from_user(outb_str,iostr.string,iostr.length);
+-	    	if(check_io_range(iostr.port,minor)) {
++	    	if(check_io_range(iostr.port,_minor)) {
+ 	        	for(i=0; i<iostr.length; i++) outb(outb_str[i], iostr.port);
+ 			} else ret = -EPERM;
+             kfree (outb_str);
+@@ -142,28 +146,28 @@ static int svgalib_helper_ioctl( struct 
+ 
+         case _IOC_NR(SVGAHELPER_OUTB):
+            copy_from_user(&iov,(char *)arg,sizeof(iov));
+-           if(check_io_range(iov.port,minor))
++           if(check_io_range(iov.port,_minor))
+                outb(iov.val,iov.port);
+                else ret = -EPERM;
+         break;
+ 
+         case _IOC_NR(SVGAHELPER_OUTW):
+            copy_from_user(&iov,(char *)arg,sizeof(iov));
+-           if(check_io_range(iov.port,minor))
++           if(check_io_range(iov.port,_minor))
+                outw(iov.val,iov.port);
+                else ret = -EPERM;
+         break;
+ 
+         case _IOC_NR(SVGAHELPER_OUTL):
+            copy_from_user(&iov,(char *)arg,sizeof(iov));
+-           if(check_io_range(iov.port,minor))
++           if(check_io_range(iov.port,_minor))
+                outl(iov.val,iov.port);
+                else ret = -EPERM;
+         break;
+ 
+         case _IOC_NR(SVGAHELPER_INB):
+            copy_from_user(&iov,(char *)arg,sizeof(iov));
+-           if(check_io_range(iov.port,minor))
++           if(check_io_range(iov.port,_minor))
+                iov.val=inb(iov.port);
+                else ret = -EPERM;
+            copy_to_user((char *)arg,&iov,sizeof(iov));
+@@ -171,7 +175,7 @@ static int svgalib_helper_ioctl( struct 
+ 
+         case _IOC_NR(SVGAHELPER_INW):
+            copy_from_user(&iov,(char *)arg,sizeof(iov));
+-           if(check_io_range(iov.port,minor))
++           if(check_io_range(iov.port,_minor))
+                iov.val=inw(iov.port);
+                else ret = -EPERM;
+            copy_to_user((char *)arg,&iov,sizeof(iov));
+@@ -179,7 +183,7 @@ static int svgalib_helper_ioctl( struct 
+ 
+         case _IOC_NR(SVGAHELPER_INL):
+            copy_from_user(&iov,(char *)arg,sizeof(iov));
+-           if(check_io_range(iov.port,minor))
++           if(check_io_range(iov.port,_minor))
+                iov.val=inl(iov.port);
+                else ret = -EPERM;
+            copy_to_user((char *)arg,&iov,sizeof(iov));
+@@ -220,7 +224,7 @@ static int svgalib_helper_ioctl( struct 
+ 
+         case _IOC_NR(SVGAHELPER_PCIINB):
+             copy_from_user(&pciv,(char *)arg,sizeof(pciv));
+-            pdev = get_pci_dev(pciv.pcipos, minor);
++            pdev = get_pci_dev(pciv.pcipos, _minor);
+             if(!pdev) return -EINVAL;
+             pci_read_config_byte(pdev, pciv.address, &pb);
+             pciv.val=pb;
+@@ -229,7 +233,7 @@ static int svgalib_helper_ioctl( struct 
+ 
+         case _IOC_NR(SVGAHELPER_PCIINW):
+             copy_from_user(&pciv,(char *)arg,sizeof(pciv));
+-            pdev = get_pci_dev(pciv.pcipos, minor);
++            pdev = get_pci_dev(pciv.pcipos, _minor);
+             if(!pdev) return -EINVAL;
+             pci_read_config_word(pdev, pciv.address, &pw);
+             pciv.val=pw;
+@@ -238,7 +242,7 @@ static int svgalib_helper_ioctl( struct 
+ 
+         case _IOC_NR(SVGAHELPER_PCIINL):
+             copy_from_user(&pciv,(char *)arg,sizeof(pciv));
+-            pdev = get_pci_dev(pciv.pcipos, minor);
++            pdev = get_pci_dev(pciv.pcipos, _minor);
+             if(!pdev) return -EINVAL;
+             pci_read_config_dword(pdev, pciv.address, &pl);
+             pciv.val=pl;
+@@ -247,7 +251,7 @@ static int svgalib_helper_ioctl( struct 
+ 
+         case _IOC_NR(SVGAHELPER_PCIAPLEN):
+             copy_from_user(&pciv,(char *)arg,sizeof(pciv));
+-            i = get_dev(pciv.pcipos, minor);
++            i = get_dev(pciv.pcipos, _minor);
+             if((i==0) | (pciv.address>5)) return -EINVAL;
+             pciv.val=sh_pci_devs[i]->len[pciv.address];
+             copy_to_user((char *)arg,&pciv,sizeof(pciv));
+@@ -255,7 +259,7 @@ static int svgalib_helper_ioctl( struct 
+ 
+         case _IOC_NR(SVGAHELPER_PCIOUTB):
+             copy_from_user(&pciv,(char *)arg,sizeof(pciv));
+-            pdev = get_pci_dev(pciv.pcipos, minor);
++            pdev = get_pci_dev(pciv.pcipos, _minor);
+             if(!pdev) return -EINVAL;
+             pb=pciv.val;
+             pci_write_config_byte(pdev, pciv.address, pb);
+@@ -263,7 +267,7 @@ static int svgalib_helper_ioctl( struct 
+ 
+         case _IOC_NR(SVGAHELPER_PCIOUTW):
+             copy_from_user(&pciv,(char *)arg,sizeof(pciv));
+-            pdev = get_pci_dev(pciv.pcipos, minor);
++            pdev = get_pci_dev(pciv.pcipos, _minor);
+             if(!pdev) return -EINVAL;
+             pw=pciv.val;
+             pci_write_config_word(pdev, pciv.address, pw);
+@@ -271,7 +275,7 @@ static int svgalib_helper_ioctl( struct 
+ 
+         case _IOC_NR(SVGAHELPER_PCIOUTL):
+             copy_from_user(&pciv,(char *)arg,sizeof(pciv));
+-            pdev = get_pci_dev(pciv.pcipos, minor);
++            pdev = get_pci_dev(pciv.pcipos, _minor);
+             if(!pdev) return -EINVAL;
+             pl=pciv.val;
+             pci_write_config_dword(pdev, pciv.address, pl);
+@@ -292,17 +296,17 @@ static int svgalib_helper_ioctl( struct 
+         case _IOC_NR(SVGAHELPER_WAITRETRACE):
+ 
+             /* Workaround for nvidia cards, which are not vga compatible */
+-//            if(!minor && num_devices==2) minor=1;
++//            if(!_minor && num_devices==2) _minor=1;
+ 
+-            if(minor) {
+-                i=sh_pci_devs[minor]->dev->irq;
+-                dev_id = sh_pci_devs[minor];
++            if(_minor) {
++                i=sh_pci_devs[_minor]->dev->irq;
++                dev_id = sh_pci_devs[_minor];
+                 if(i==0 || i==-1 || i==255) return -EINVAL;
+             } else dev_id = sdev_id;
+                         
+             vsync=1;
+ 
+-            if(minor) {
++            if(_minor) {
+                 request_irq(i, vsync_interrupt, SA_SHIRQ, "svgalib_helper", dev_id);
+             } else {
+                 i=0;
+@@ -310,16 +314,16 @@ static int svgalib_helper_ioctl( struct 
+                     request_irq(irqs[i++], vsync_interrupt, SA_SHIRQ, "svgalib_helper", dev_id);
+             }
+ 
+-            if(minor) {
+-                sh_pci_devs[minor]->enable_vsync(sh_pci_devs[minor]);
++            if(_minor) {
++                sh_pci_devs[_minor]->enable_vsync(sh_pci_devs[_minor]);
+             } else {
+-                vga_enable_vsync(sh_pci_devs[minor]);
++                vga_enable_vsync(sh_pci_devs[_minor]);
+             }
+ 
+             interruptible_sleep_on(&vsync_wait);
+             
+-            if(minor) {
+-                if(vsync) sh_pci_devs[minor]->ack_vsync(dev_id);
++            if(_minor) {
++                if(vsync) sh_pci_devs[_minor]->ack_vsync(dev_id);
+                 free_irq(i, dev_id);
+             } else {
+                 i=0;
+@@ -354,9 +358,9 @@ static int svgalib_helper_ioctl( struct 
+ 
+ static int svgalib_helper_open( struct inode *inode, struct file * filp) {
+ 
+-   int minor = my_minor(inode->i_rdev);
++   int _minor = my_minor(inode->i_rdev);
+    
+-   if(minor>=num_devices) return -ENODEV;
++   if(_minor>=num_devices) return -ENODEV;
+ 
+ #ifndef KERNEL_2_6
+ 	MOD_INC_USE_COUNT;
+@@ -470,14 +474,14 @@ int check_mem(int card, unsigned long st
+ static int svgalib_helper_mmap(struct file *filp, struct vm_area_struct *vma) {
+    unsigned long start=vma->vm_start;
+    unsigned long end=vma->vm_end;
+-   unsigned long minor = my_minor(filp->f_dentry->d_inode->i_rdev);
++   unsigned long _minor = my_minor(filp->f_dentry->d_inode->i_rdev);
+ #if LINUX_VERSION_CODE >= KERNEL_VERSION(2,3,0)
+    unsigned long ofs=vma->vm_pgoff*PAGE_SIZE;
+ #else
+    unsigned long ofs=vma->vm_offset;
+ #endif
+ 
+-   if(check_mem(minor, ofs, end-start)) return -EPERM;
++   if(check_mem(_minor, ofs, end-start)) return -EPERM;
+    if(remap_cache(vma, ofs)) return -EAGAIN;
+    return 0;
+ }
+@@ -502,6 +506,7 @@ int init_module(void)
+ {
+     int result, i, j;
+     struct pci_dev *dev=NULL;
++    char name[255];
+ #ifdef CONFIG_DEVFS_FS
+ # ifndef KERNEL_2_6
+     devfs_handle_t slave_handle;
+@@ -513,9 +518,9 @@ int init_module(void)
+      
+     printk(KERN_INFO "svgalib_helper: Initializing, version %s\n", versionstr);
+ 
+-	result = devfs_register_chrdev(SVGALIB_HELPER_MAJOR, "svgalib_helper", &svgalib_helper_fops);
++    result = devfs_register_chrdev(SVGALIB_HELPER_MAJOR, "svgalib_helper", &svgalib_helper_fops);
+ 
+-	if (result < 0) {
++    if (result < 0) {
+         printk(KERN_WARNING "svgalib_helper: can't get major %d\n",SVGALIB_HELPER_MAJOR);
+         return result;
+     }
+@@ -523,7 +528,7 @@ int init_module(void)
+     if((sh_pci_devs[0]=kmalloc(sizeof(struct sh_pci_device),GFP_KERNEL))==NULL) {
+         goto nomem_error;
+     }
+-	
++
+     memset(sh_pci_devs[0],0,sizeof(struct sh_pci_device));
+     num_devices=1;
+     for(i=1;i<MAX_NR_DEVICES;i++) sh_pci_devs[i]=NULL;
+@@ -537,19 +542,22 @@ int init_module(void)
+     devfs_mk_symlink( NULL, "svga", 0, "svga_helper/0", &slave_handle, NULL );
+     devfs_auto_unregister( devfs_handle, slave_handle );
+ # else
+-	devfs_mk_dir ("svga_helper");
+-	for (i = 0; i < 8; i++) {
+-		devfs_mk_cdev(MKDEV(SVGALIB_HELPER_MAJOR, i),
+-				S_IFCHR |  S_IRUGO | S_IRWXU, "svga_helper/%d", i);
+-	}
+-	devfs_mk_symlink("svga", "svga_helper/0");
++    devfs_mk_dir ("svga_helper");
++    for (i = 0; i < 8; i++) {
++        devfs_mk_cdev(MKDEV(SVGALIB_HELPER_MAJOR, i),
++                      S_IFCHR |  S_IRUGO | S_IRWXU, "svga_helper/%d", i);
++    }
++    devfs_mk_symlink("svga", "svga_helper/0");
+ # endif
+ #endif /* devfsd support */
+ 
++    SLH_SYSFS_REGISTER;
++    SLH_SYSFS_ADD_CONTROL;
++
+     if(pci_present()) {
+         while((dev= all_devices ? 
+-					pci_find_device(PCI_ANY_ID, PCI_ANY_ID, dev) :
+-					pci_find_class(PCI_CLASS_DISPLAY_VGA<<8,dev)) && 
++                                  pci_find_device(PCI_ANY_ID, PCI_ANY_ID, dev) :
++                                  pci_find_class(PCI_CLASS_DISPLAY_VGA<<8,dev)) && 
+               (num_devices<=MAX_NR_DEVICES)) {
+             if((sh_pci_devs[num_devices]=kmalloc(sizeof(struct sh_pci_device),GFP_KERNEL))==NULL) {
+                 goto nomem_error;
+@@ -581,6 +589,10 @@ int init_module(void)
+                 }
+             }
+             vga_init_vsync(sh_pci_devs[num_devices]);
++
++            sprintf(name, "svga%d", num_devices);
++            SLH_SYSFS_ADD_DEVICE(name, num_devices);
++
+             num_devices++;
+         }
+     }
+@@ -600,39 +612,51 @@ int init_module(void)
+     init_waitqueue_head(&vsync_wait);
+ 
+ #ifndef KERNEL_2_6
+-	EXPORT_NO_SYMBOLS;
++    EXPORT_NO_SYMBOLS;
+ #endif
+-	
++
+     return 0; /* succeed */
+ 
+ nomem_error:
+-    for(i=0;i<MAX_NR_DEVICES;i++) 
+-        if(sh_pci_devs[i])kfree(sh_pci_devs[i]);
++    for(i=0;i<MAX_NR_DEVICES;i++) {
++        if(sh_pci_devs[i]) {
++            SLH_SYSFS_REMOVE_DEVICE(i);
++            kfree(sh_pci_devs[i]);
++        }
++    }
++
++    SLH_SYSFS_REMOVE_DEVICE(0);
++    SLH_SYSFS_UNREGISTER;
++    
++    devfs_unregister_chrdev(SVGALIB_HELPER_MAJOR, "svgalib_helper");
+ 
+-	devfs_unregister_chrdev(SVGALIB_HELPER_MAJOR, "svgalib_helper");
+-		
+-	return result;
++    return result;
+ }
+ 
+ void cleanup_module(void)
+ {
+     int i;
+-    for(i=0;i<MAX_NR_DEVICES;i++) 
++    for(i=0;i<MAX_NR_DEVICES;i++) {
+         if(sh_pci_devs[i]) {
++            SLH_SYSFS_REMOVE_DEVICE(i);
+             kfree(sh_pci_devs[i]);
+         }
++    }
++
++    SLH_SYSFS_REMOVE_DEVICE(0);
++    SLH_SYSFS_UNREGISTER;
+      
+ #ifdef CONFIG_DEVFS_FS
+ # ifndef KERNEL_2_6
+-	devfs_unregister(devfs_handle);
++    devfs_unregister(devfs_handle);
+ # else
+-	for (i = 0; i < 8; i++)
+-		devfs_remove("svga_helper/%d", i);
+-	devfs_remove("svga_helper");
+-	devfs_remove("svga");
+-# endif	
++    for (i = 0; i < 8; i++)
++        devfs_remove("svga_helper/%d", i);
++    devfs_remove("svga_helper");
++    devfs_remove("svga");
++# endif
+ #endif
+-	
++
+     devfs_unregister_chrdev(SVGALIB_HELPER_MAJOR, "svgalib_helper");
+ 
+ }
