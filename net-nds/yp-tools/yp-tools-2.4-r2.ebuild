@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/yp-tools-2.4-r2.ebuild,v 1.2 2001/05/10 09:39:40 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/yp-tools/yp-tools-2.4-r2.ebuild,v 1.3 2001/05/12 12:13:25 achim Exp $
 
 P=yp-tools-2.4
 A=${P}.tar.gz
@@ -28,6 +28,8 @@ src_install() {
   doins etc/nicknames
   # This messes up boot so we remove it
   rm -d ${D}/bin/ypdomainname
+  rm -d ${D}/bin/nisdomainname
+  rm -d ${D}/bin/domainname
 }
 
 
