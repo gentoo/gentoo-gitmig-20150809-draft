@@ -11,9 +11,11 @@ HOMEPAGE="http://www.windowmaker.org/"
 DEPEND="virtual/glibc virtual/x11
 	>=media-libs/tiff-3.5.5
 	>=media-libs/libpng-1.0.12
-	>=media-libs/giflib-4.1.0-r3
 	>=media-libs/jpeg-6b-r2
-	x11-wm/gnustep-env"
+	x11-wm/gnustep-env
+	gif? ( >=media-libs/giflib-4.1.0-r3 )
+	ungif? ( >=media-libs/libungif-4.1.0 )
+	nls? ( >=sys-devel/gettext-0.10.39 )"
 # Replaced by WINGS
 #	>=x11-libs/libPropList-0.10.1"
 
@@ -27,12 +29,17 @@ src_compile() {
 	if [ "`use kde`" ] ; then
 		myconf="$myconf --enable-kde"
 	fi
-  
+	if [ "`use nls`" ] ; then
+ 		LINGUAS="`ls po/*.po | xargs -i basename {} .po`"
+		export LINGUAS
+	fi
+
 	./configure --host=${CHOST}					\
 		    --prefix=/usr					\
 		    --mandir=/usr/share/man				\
 		    --infodir=/usr/share/info				\
 		    --sysconfdir=/etc/X11				\
+		    --with-nlsdir=/usr/share/locale			\
 		    --with-x						\
 		    --enable-newstyle					\
 		    --enable-superfluous				\
@@ -57,6 +64,7 @@ src_install() {
 	     mandir=${D}/usr/share/man					\
 	     infodir=${D}/usr/share/info				\
 	     sysconfdir=${D}/etc/X11					\
+	     NLSDIR=${D}/usr/share/locale				\
 	     GNUSTEP_LOCAL_ROOT=${D}${GNUSTEP_LOCAL_ROOT}		\
 	     install || die
 
