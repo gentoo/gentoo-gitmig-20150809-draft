@@ -1,13 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/entrance/entrance-0.0.2.20030310.ebuild,v 1.4 2003/06/29 19:16:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/entrance/entrance-0.0.2.20030629.ebuild,v 1.1 2003/06/29 19:17:13 vapier Exp $
 
-inherit eutils
+inherit enlightenment eutils
 
 DESCRIPTION="next generation of Elogin, a login/display manager for X"
 HOMEPAGE="http://www.enlightenment.org/"
-SRC_URI="mirror://gentoo/${P}.tar.bz2
-	http://wh0rd.tk/gentoo/distfiles/${P}.tar.bz2
+SRC_URI="${SRC_URI}
 	mirror://gentoo/extraicons-1.tar.bz2
 	http://wh0rd.tk/gentoo/distfiles/extraicons-1.tar.bz2"
 
@@ -15,9 +14,8 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86 ~alpha ~ppc"
 
-DEPEND="virtual/x11
-	virtual/glibc
-	sys-devel/gcc
+DEPEND="${DEPEND}
+	virtual/x11
 	sys-libs/pam
 	>=dev-db/edb-1.0.3.2003*
 	>=media-libs/ebg-1.0.0.2003*
@@ -30,13 +28,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-gentoo-sessions.patch
-}
-
-pkg_setup() {
-	# the stupid gettextize script prevents non-interactive mode, so we hax it
-	cp `which gettextize` ${T} || die "could not copy gettextize"
-	cp ${T}/gettextize ${T}/gettextize.old
-	sed -e 's:read dummy < /dev/tty::' ${T}/gettextize.old > ${T}/gettextize
+	gettext_modify
 }
 
 src_compile() {

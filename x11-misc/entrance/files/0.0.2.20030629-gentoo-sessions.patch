@@ -1,0 +1,56 @@
+--- data/config/build_config.sh.orig	2003-06-29 01:39:40.000000000 -0400
++++ data/config/build_config.sh	2003-06-29 01:43:34.000000000 -0400
+@@ -1,4 +1,4 @@
+-#!/bin/sh -e
++#!/bin/bash
+ DB="./entrance_config.db"
+ rm -f $DB
+ 
+@@ -13,21 +13,30 @@
+ edb_ed $DB add /entrance/theme str "BlueCrystal"
+ edb_ed $DB add /entrance/date_format str "%A %B %e, %Y"
+ edb_ed $DB add /entrance/time_format str "%l:%M:%S %p"
+-edb_ed $DB add /entrance/session/0/name str "enlightenment"
+-edb_ed $DB add /entrance/session/0/path str ""
+-edb_ed $DB add /entrance/session/0/icon str "enlightenment.png"
+-edb_ed $DB add /entrance/session/1/name str "kde2"
+-edb_ed $DB add /entrance/session/1/path str ""
+-edb_ed $DB add /entrance/session/1/icon str "kde.png"
+-edb_ed $DB add /entrance/session/2/name str "blackbox"
+-edb_ed $DB add /entrance/session/2/path str ""
+-edb_ed $DB add /entrance/session/2/icon str "blackbox.png"
+-edb_ed $DB add /entrance/session/3/name str "fluxbox"
+-edb_ed $DB add /entrance/session/3/path str ""
+-edb_ed $DB add /entrance/session/3/icon str "default.png"
+-edb_ed $DB add /entrance/session/4/name str "Failsafe"
+-edb_ed $DB add /entrance/session/4/path str "failsafe"
+-edb_ed $DB add /entrance/session/4/icon str "default.png"
+-edb_ed $DB add /entrance/session/count int 5
+-edb_ed $DB add /entrance/session/default int 0
+ 
++pick_icon() {
++	case "`basename $(echo $1 | awk '{print toupper($1)}')`" in
++		KDE*)           echo -n "kde";;
++		GNOME*)         echo -n "gnome";;
++		ENLIGHTENMENT)  echo -n "e16";;
++		E17)            echo -n "enlightenment";;
++		WMAKER)         echo -n "widowmaker";;
++		BLACKBOX)       echo -n "blackbox";;
++		*)              echo -n "default";;
++	esac
++	echo ".png";
++}
++
++count=-1
++for ses in /etc/X11/Sessions/* ; do
++	let "count++"
++	edb_ed $DB add /entrance/session/${count}/name str "`basename ${ses}`"
++	edb_ed $DB add /entrance/session/${count}/path str "${ses}"
++	edb_ed $DB add /entrance/session/${count}/icon str "`pick_icon ${ses}`"
++done
++let "count++"
++edb_ed $DB add /entrance/session/${count}/name str "Failsafe"
++edb_ed $DB add /entrance/session/${count}/path str "/etc/X11/Sessions/Xsession failsafe"
++edb_ed $DB add /entrance/session/${count}/icon str "default.png"
++edb_ed $DB add /entrance/session/count int ${count}
++edb_ed $DB add /entrance/session/default int 0
