@@ -1,3 +1,4 @@
+MD5 039399151aff0b9074381e9dc831f52a perl-5.8.2.ebuild 9144
 MD5 5e2ced5e0d331faea9122a21c49957b0 perl-5.6.1-r12.ebuild 7089
 MD5 6fa918519f79045619ee131c5cd6b38b perl-5.8.1-r1.ebuild 8736
 MD5 51da78b2203cbf4e81dafb6e24dd2e22 perl-5.8.0-r10.ebuild 14009
@@ -22,6 +23,7 @@ MD5 ea9bf02b28e73e19dc85eb07f2347460 files/5.6.1-builtin-fixup.diff 777
 MD5 0a28eb41f5f12ed54f025004af45c83d files/perl-5.8.1-perldoc-emptydirs.patch 489
 MD5 0a2e349a2e2fa8c18192d5e908f8533f files/perl-5.8.1_rc1-sockatmark-should-__THROW.patch 379
 MD5 013255dc6a00399b13caaf899a72e8db files/perl-5.8.0-reorder-INC.patch 2292
+MD5 8381e239056a7895edf8f3c6c05c835c files/digest-perl-5.8.2 64
 MD5 8605f033c451df987f4631bbf9d7b481 files/digest-perl-5.8.0-r10 64
 MD5 5c83a2e6f630182b708d39c7de034075 files/digest-perl-5.8.0-r11 188
 MD5 5c83a2e6f630182b708d39c7de034075 files/digest-perl-5.8.0-r12 188
