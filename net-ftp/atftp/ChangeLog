@@ -1,6 +1,6 @@
-# ChangeLog for net-misc/atftp
+# ChangeLog for net-ftp/atftp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/atftp/ChangeLog,v 1.2 2002/10/29 14:13:31 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/atftp/ChangeLog,v 1.3 2002/12/17 19:43:13 vapier Exp $
 
 *atftp-0.6-r1 (29 Oct 2002)
 
