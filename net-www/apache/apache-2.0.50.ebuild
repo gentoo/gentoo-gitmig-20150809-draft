@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.50.ebuild,v 1.6 2004/07/25 21:10:12 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.50.ebuild,v 1.7 2004/07/31 19:12:51 zul Exp $
 
 inherit flag-o-matic eutils fixheadtails gnuconfig
 
@@ -266,6 +266,8 @@ src_install () {
 		doins ${FILESDIR}/00_apache_manual.conf
 		dosym /usr/share/doc/${PF}/manual ${DATADIR}/htdocs/manual
 		sed -i -e "s:2.0.49:${MANUAL_VERSION}:" ${D}/etc/apache2/conf/modules.d/00_apache_manual.conf
+		else
+		rm -rf ${D}/usr/share/doc/${PF}/manual
 	fi
 
 	#SLOT=2!!!

@@ -1,6 +1,9 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.229 2004/07/25 21:14:03 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.230 2004/07/31 19:12:51 zul Exp $
+
+  02 Aug 2004; Chuck Short <zul@gentoo.org> apache-2.0.50.ebuild:
+  -doc fix. Closes #50060.
 
   27 Jul 2004; Chuck Short <zul@gentoo.org> files/00_apache_manual.conf:
   Added multiviews support for manual. Closes #57792.

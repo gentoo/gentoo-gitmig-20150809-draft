@@ -4,9 +4,9 @@ MD5 6fb2420645fe7cd13366395eaf0bd49e apache-1.3.31.ebuild 6700
 MD5 d0af9c4419e80f8a9e552d94c10b9a12 apache-1.3.31-r2.ebuild 6865
 MD5 e2e4b464ec2b0986e9fbf9ad9ccc07d2 apache-2.0.49-r3.ebuild 13183
 MD5 9117f8a05139c94a8f20803c68af3f37 apache-1.3.31-r1.ebuild 6739
-MD5 bd3c4d3dad8c6e13e60ed5d9f75478b7 ChangeLog 40892
+MD5 54aa175e6ce843f85a16b93d7166acc8 ChangeLog 40986
 MD5 5b6dd438f81019e56fa641841c0c13fe metadata.xml 501
-MD5 fb3e04a61bc8e78c63e42978f90d737c apache-2.0.50.ebuild 12876
+MD5 f35dea708d651987d9fbdd5caa085c76 apache-2.0.50.ebuild 12924
 MD5 d4b8a4908870107e15cc1edbd0ec6ebb files/apache-1.3.29_mod_auth_db.patch 729
 MD5 161245c7aa1eb785db53b34d6a10be43 files/suexec_pam_gentoo.patch 2149
 MD5 a76e0df0ecc6920d9f4f139e31288155 files/apache-builtin-mods 2467
