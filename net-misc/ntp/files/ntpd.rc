@@ -1,26 +1,32 @@
 #!/sbin/runscript
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2         
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/files/rc.ntpd,v 1.1 2002/11/27 23:57:39 vapier Exp $
-
-#NB: Config is in /etc/conf.d/ntpd
-
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/files/ntpd.rc,v 1.1 2002/12/16 16:17:46 vapier Exp $
 
 depend() {
 	need net
 }
 
 checkconfig() {
-	if [ ! -f /etc/ntp.conf ]
-	then
+	if [ ! -f /etc/ntp.conf ] ; then
 		eerror "Please create /etc/ntp.conf"
 		return 1
 	fi
+
 	return 0
 }
 
 start() {
 	checkconfig || return $?
+
+	NTPDATESERVERS=`grep '^server[[:space:]]*' /etc/ntp.conf | awk '{print $2}'`
+	if [ -n "${NTPDATESERVERS}" ] ; then
+		ebegin "Running ntpdate"
+		ntpdate -b ${NTPDATESERVERS} > /dev/null
+		eend $? "Failed to run ntpdate"
+	else
+		ewarn "Please set a valid server line in /etc/ntp.conf"
+	fi
 
 	ebegin "Starting ntpd"
 	start-stop-daemon --start --quiet --pidfile /var/run/ntpd.pid \
@@ -34,9 +40,5 @@ stop() {
 	eend $? "Failed to stop ntpd"
 
 	# clean stale pidfile
-	if [ -f /var/run/ntpd.pid ]
-	then
-		rm -f /var/run/ntpd.pid
-	fi
+	[ -f /var/run/ntpd.pid ] && rm -f /var/run/ntpd.pid
 }
-
