@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.1.25.ebuild,v 1.2 2000/08/23 08:47:16 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.1.25.ebuild,v 1.3 2000/08/27 05:31:24 achim Exp $
 
 P=gimp-1.1.25
 A=${P}.tar.bz2
@@ -13,6 +13,9 @@ HOMEPAGE="http://www.gimp.org"
 src_compile() {                           
   cd ${S}
   ./configure --host=${CHOST} --prefix=/usr/X11R6 --disable-perl
+  make
+  cd ${S}/plugins/perl
+  perl Makefile.PL $PERLINSTALL
   make
 }
 
