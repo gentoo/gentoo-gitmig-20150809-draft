@@ -1,15 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/colo/colo-1.11.ebuild,v 1.1 2004/08/02 09:35:41 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/colo/colo-1.11.ebuild,v 1.2 2004/09/03 06:19:03 kumba Exp $
 
 inherit eutils
 
-DESCRIPTION="CObalt Linux lOader - Modern bootloader for Cobalt MIPS machines"
+DESCRIPTION="CObalt LOader - Modern bootloader for Cobalt MIPS machines"
 HOMEPAGE="http://www.colonel-panic.org/cobalt-mips/"
 SRC_URI="http://www.colonel-panic.org/cobalt-mips/colo/colo-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* ~mips"
+KEYWORDS="-* mips"
 IUSE=""
 DEPEND=""
 RESTRICT="nostrip"
@@ -91,19 +91,15 @@ src_install() {
 
 pkg_postinst() {
 	echo -e ""
-	einfo "Binaries for this bootloader have been stored in"
-	einfo "/usr/lib/cobalt-bootloader.  Documentation has been"
-	einfo "installed in /usr/share/doc/${PF}.  The flash utility"
-	einfo "has been installed as /usr/sbin/flash-tool.  An example"
-	einfo "default.colo has been placed in /usr/lib/colo.  It is"
-	einfo "a script file the bootloader uses to execute a series"
-	einfo "of commands to load the machine.  If you desire the"
-	einfo "machine to boot to the bootloader command prompt, copy"
-	einfo "/usr/lib/colo/default.colo.example to /boot/default.colo,"
-	einfo "otherwise the bootloader will attempt to automatically"
-	einfo "boot /boot/vmlinux.gz.  It is recommended that you edit"
-	einfo "the default.colo.example script to fit your needs and"
-	einfo "place it in /boot as default.colo."
+	einfo "Install locations:"
+	einfo "   Binaries:\t/usr/lib/${PN}"
+	einfo "   Docs:\t/usr/share/doc/${PF}"
+	einfo "   Tools:\t/usr/bin/{flash-tool,colo-perm,md5rom}"
+	einfo "   Scripts:\t/usr/lib/${PN}/scripts"
+	echo -e ""
+	einfo "Please read the docs to fully understand the behavior of this bootloader, and"
+	einfo "edit the boot scripts to suit your needs."
+	echo -e ""
 	echo -e ""
 	ewarn "Note: It is HIGHLY recommended that you use the chain"
 	ewarn "bootloader (colo-chain.elf) first before attempting to"

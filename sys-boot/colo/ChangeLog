@@ -1,6 +1,15 @@
 # ChangeLog for sys-boot/colo
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/colo/ChangeLog,v 1.9 2004/08/02 09:35:41 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/colo/ChangeLog,v 1.10 2004/09/03 06:19:03 kumba Exp $
+
+*colo-1.13 (03 Sep 2004)
+
+  03 Sep 2004; Joshua Kinard <kumba@gentoo.org> -files/colo-1.4-gentoo.patch,
+  -files/colo-1.6-gentoo.patch, -files/default.boot.example,
+  +files/default.colo, +files/menu-linux.colo, -colo-1.10.ebuild,
+  colo-1.11.ebuild, +colo-1.13.ebuild, -colo-1.4.ebuild, -colo-1.6.ebuild,
+  -colo-1.8.ebuild, -colo-1.9.ebuild:
+  New colo revision, cleaned up older revisions, Marked 1.11 stable.
 
 *colo-1.11 (02 Aug 2004)
 

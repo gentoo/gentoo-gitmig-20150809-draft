@@ -1,0 +1,9 @@
+#:CoLo:#
+
+# Loads the kernel into memory (and unzips if needed)
+# Makes sure this points at the correct kernel image
+load /boot/vmlinuz.gz
+
+# Executes the loaded image with the specified command args
+# Change these args to suit your purposes
+execute root=/dev/hda5 console=ttyS0,115200

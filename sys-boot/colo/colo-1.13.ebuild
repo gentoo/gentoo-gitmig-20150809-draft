@@ -1,15 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/colo/colo-1.6.ebuild,v 1.3 2004/06/28 09:24:44 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/colo/colo-1.13.ebuild,v 1.1 2004/09/03 06:19:03 kumba Exp $
 
 inherit eutils
 
-DESCRIPTION="CObalt Linux lOader - Modern bootloader for Cobalt MIPS machines"
+DESCRIPTION="CObalt LOader - Modern bootloader for Cobalt MIPS machines"
 HOMEPAGE="http://www.colonel-panic.org/cobalt-mips/"
 SRC_URI="http://www.colonel-panic.org/cobalt-mips/colo/colo-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-* mips"
+KEYWORDS="-* ~mips"
 IUSE=""
 DEPEND=""
 RESTRICT="nostrip"
@@ -32,17 +32,41 @@ src_unpack() {
 
 	# patch Docs
 	cd ${S}
-	epatch ${FILESDIR}/${P}-gentoo.patch
+	epatch ${FILESDIR}/colo-linker-overlap-fix.patch
+
+	# cp the bootscripts to WORKDIR
+	cp ${FILESDIR}/menu-linux.colo ${FILESDIR}/menu-linuxold.colo ${WORKDIR}
+
+	# sed the primary boot script and stick the current colo version in there
+	sed "s:@COLOVER@:${PV}:g" ${FILESDIR}/default.colo > ${WORKDIR}/default.colo
 }
 
 src_compile() {
 	# boot-loader
+	echo -e ""
+	einfo ">>> Building the CoLo Bootloader ..."
 	cd ${S}
 	make clean || die	# emake breaks the build
 	make || die
 
 	# flash-tool
+	echo -e ""
+	einfo ">>> Building flash-tool ..."
 	cd ${S}/tools/flash-tool
+	make clean || die
+	make || die
+
+	# colo-perm
+	echo -e ""
+	einfo ">>> Building colo-perm ..."
+	cd ${S}/tools/colo-perm
+	make clean || die
+	make || die
+
+	# md5rom
+	echo -e ""
+	einfo ">>> Building md5rom ..."
+	cd ${S}/tools/md5rom
 	make clean || die
 	make || die
 }
@@ -53,30 +77,43 @@ src_install() {
 	dodir /usr/lib/colo
 	cp binaries/colo-chain.elf ${D}/usr/lib/colo
 	cp binaries/colo-rom-image.bin ${D}/usr/lib/colo
-	cp ${FILESDIR}/default.boot.example ${D}/usr/lib/colo/default.colo.example
 
 	# docs
 	dodoc CHANGES COPYING INSTALL README README.{restore,shell} TODO
 
 	# flash-tool
 	dosbin tools/flash-tool/flash-tool
+	doman tools/flash-tool/flash-tool.8
+
+	# colo-perm
+	dosbin tools/colo-perm/colo-perm
+	doman tools/colo-perm/colo-perm.8
+
+	# md5rom
+	dosbin tools/md5rom/md5rom
+	doman tools/md5rom/md5rom.8
+
+	# bootscripts
+	dodir /usr/lib/colo/scripts
+	cp ${WORKDIR}/default.colo ${WORKDIR}/menu-linux.colo ${D}/usr/lib/colo/scripts
 }
 
 pkg_postinst() {
 	echo -e ""
-	einfo "Binaries for this bootloader have been stored in"
-	einfo "/usr/lib/cobalt-bootloader.  Documentation has been"
-	einfo "installed in /usr/share/doc/${PF}.  The flash utility"
-	einfo "has been installed as /usr/sbin/flash-tool.  An example"
-	einfo "default.colo has been placed in /usr/lib/colo.  It is"
-	einfo "a script file the bootloader uses to execute a series"
-	einfo "of commands to load the machine.  If you desire the"
-	einfo "machine to boot to the bootloader command prompt, copy"
-	einfo "/usr/lib/colo/default.colo.example to /boot/default.colo,"
-	einfo "otherwise the bootloader will attempt to automatically"
-	einfo "boot /boot/vmlinux.gz.  It is recommended that you edit"
-	einfo "the default.colo.example script to fit your needs and"
-	einfo "place it in /boot as default.colo."
+	einfo "Install locations:"
+	einfo "   Binaries:\t/usr/lib/${PN}"
+	einfo "   Docs:\t/usr/share/doc/${PF}"
+	einfo "   Tools:\t/usr/bin/{flash-tool,colo-perm,md5rom}"
+	einfo "   Scripts:\t/usr/lib/${PN}/scripts"
+	echo -e ""
+	einfo "Please read the docs to fully understand the behavior of this bootloader, and"
+	einfo "edit the boot scripts to suit your needs."
+	echo -e ""
+	ewarn "Users installing ${PN} for the first time need to be aware that newer"
+	ewarn "versions of ${PN} disable the serial port by default.  If the serial port"
+	ewarn "is needed, select it from the boot menu.  Users using the example boot"
+	ewarn "scripts provided will have the serial port automatically enabled."
+	echo -e ""
 	echo -e ""
 	ewarn "Note: It is HIGHLY recommended that you use the chain"
 	ewarn "bootloader (colo-chain.elf) first before attempting to"
