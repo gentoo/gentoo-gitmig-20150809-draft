@@ -1,0 +1,12 @@
+--- rc.c~	2004-04-23 16:02:18.000000000 +0100
++++ rc.c	2004-11-16 20:41:33.000000000 +0000
+@@ -708,7 +708,8 @@
+ 	int line = 0;		/* Line number */
+ 	int err = 0;		/* Set to 1 if there was a syntax error */
+ 
+-	strcpy(buf, name);
++	strncpy(buf, name, sizeof(buf) - 1);
++	buf[sizeof(buf)-1] = '\0';
+ #ifdef __MSDOS__
+ 	fd = fopen((char *)buf, "rt");
+ #else

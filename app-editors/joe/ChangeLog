@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/joe
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/ChangeLog,v 1.27 2004/10/13 17:57:23 tomk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/ChangeLog,v 1.28 2004/11/22 13:32:11 tomk Exp $
+
+*joe-3.1-r1 (22 Nov 2004)
+
+  22 Nov 2004; Tom Knight <tomk@gentoo.org> -joe-3.0-r1.ebuild,
+  +joe-3.0-r2.ebuild, +joe-3.1-r1.ebuild, -joe-3.1.ebuild:
+  Fixed non-critical buffer overflow, closes bug #71129. Changed einstall to
+  make install, closes bug #72023
 
 *joe-3.1 (13 Oct 2004)
 
