@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlQt/PerlQt-3.008.ebuild,v 1.7 2004/09/29 11:01:27 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlQt/PerlQt-3.008.ebuild,v 1.8 2005/04/01 17:50:21 blubb Exp $
 
 inherit perl-module
 
