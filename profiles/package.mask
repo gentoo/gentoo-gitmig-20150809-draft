@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3190 2004/09/26 10:33:34 carpaski Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3191 2004/09/26 12:07:22 liquidx Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -486,9 +486,6 @@ games-fps/aaut
 # major API changes; not compatible with anything yet
 >=dev-libs/libmal-0.40
 
-# <liquidx@gentoo.org> (14 Feb 2004)
-# dev-db/db-4.2
-=dev-python/bsddb3-4.2*
 
 # <genone@gentoo.org> (12 Feb 2004)
 # masking stuff that depends on realplayer as it breaks the dependency chain
