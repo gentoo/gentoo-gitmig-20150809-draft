@@ -1,6 +1,12 @@
 # ChangeLog for dev-dotnet/ml-pnet
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ml-pnet/ChangeLog,v 1.15 2004/08/16 13:53:27 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/ml-pnet/ChangeLog,v 1.16 2004/10/30 11:13:45 scandium Exp $
+
+*ml-pnet-0.6.10 (30 Oct 2004)
+
+  30 Oct 2004; Rainer Groesslinger <scandium@gentoo.org>
+  +ml-pnet-0.6.10.ebuild:
+  new version
 
   16 Aug 2004; Rainer Groesslinger <scandium@gentoo.org> ml-pnet-0.6.8.ebuild:
   stable on x86, ppc and sparc

@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 e77fa8456181cce695d6710469b6f19b pnet-0.6.10.ebuild 1038
 MD5 5bb2f7d04489e7217bd5b25010376f7d pnet-0.6.8.ebuild 1164
 MD5 10b5b99d337d632ff5fbeed0b748d211 ChangeLog 3370
 MD5 76b314cc7b7b79b298dd4889dff8c9cd metadata.xml 159
+MD5 ed42c7e8f78bcd92970a52f7a8ea20b3 files/digest-pnet-0.6.10 64
 MD5 667e6fd9c070460b9b0b7293a5ecb096 files/digest-pnet-0.6.8 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBILwXPgS8WLD64cERAgXGAJ9UxHvkkprPlfnxYReFKAtQubtxdQCfVlIX
-FitkX2ORojJTx0BlwTJyPE0=
-=HEn3
------END PGP SIGNATURE-----
