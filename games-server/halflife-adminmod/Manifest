@@ -1,6 +1,16 @@
-MD5 c93bbb38ad552428a8134304b8518d2e halflife-adminmod-2.50.59-r1.ebuild 1264
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 83ad760d13e0fcfff735d48e9db643a6 ChangeLog 1246
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 071bdef76af0f6d1f79b1ce972827787 files/modsetup 1719
+MD5 c93bbb38ad552428a8134304b8518d2e halflife-adminmod-2.50.59-r1.ebuild 1264
 MD5 0de921717db784a8e64346ce9b36844b files/digest-halflife-adminmod-2.50.59-r1 75
+MD5 4238f553d5d45976b6843912967c1bc0 files/modsetup 1724
 MD5 c70c7ef6d70e05e6a986d2d24e96d161 files/2.50.59-adminmod.cfg 817
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFA+e4EmdTrptrqvGERAiPuAKCBVa3aY66VP7jGbX1qHBxFji7bZgCeNfO1
+Q9voJFokLl7WaWKkhW8fLZI=
+=9qQg
+-----END PGP SIGNATURE-----
