@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/scons
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.10 2003/10/28 15:34:49 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/scons/ChangeLog,v 1.11 2003/12/16 20:35:36 lanius Exp $
+
+*scons-0.94-r1 (16 Dec 2003)
+
+  16 Dec 2003; Heinrich Wendel <lanius@gentoo.org> scons-0.93.ebuild,
+  scons-0.94-r1.ebuild, scons-0.94.ebuild:
+  - removed old ebuilds
+  - now uses distutils eclass
+  - marked 0.94 stable on x86, ppc
 
 *scons-0.93 (28 Oct 2003)
 
