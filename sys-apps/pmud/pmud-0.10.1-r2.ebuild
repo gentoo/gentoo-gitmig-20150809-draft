@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmud/pmud-0.10.1-r2.ebuild,v 1.14 2003/06/21 21:19:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pmud/pmud-0.10.1-r2.ebuild,v 1.15 2003/06/23 00:06:24 pylon Exp $
 
 IUSE="X"
 
@@ -9,7 +9,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="PowerMac power management utilities"
 SRC_URI="http://linuxppc.jvc.nl/${P}.tar.gz"
 HOMEPAGE="http://penguinppc.org/"
-KEYWORDS="x86 amd64 -sparc -mips"
+KEYWORDS="ppc -x86 -amd64 -alpha -arm -hppa -mips -sparc"
 SLOT="0"
 LICENSE="GPL-2"
 DEPEND="sys-kernel/linux-headers
