@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/omniORB
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.32 2004/12/29 20:00:37 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/ChangeLog,v 1.33 2005/04/01 16:23:04 agriffis Exp $
+
+  01 Apr 2005; Aron Griffis <agriffis@gentoo.org> omniORB-4.0.4.ebuild:
+  stable on ia64
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

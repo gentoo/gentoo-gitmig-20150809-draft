@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-4.0.5.ebuild,v 1.1 2004/11/16 14:31:27 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/omniORB/omniORB-4.0.5.ebuild,v 1.2 2005/04/01 16:23:04 agriffis Exp $
 
 DESCRIPTION="A robust, high-performance CORBA 2 ORB"
 SRC_URI="mirror://sourceforge/omniorb/${PF}.tar.gz"
