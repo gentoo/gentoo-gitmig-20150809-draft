@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.35-r3.ebuild,v 1.10 2003/01/20 15:51:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.35-r3.ebuild,v 1.11 2003/01/23 04:26:26 vapier Exp $
 
 inherit perl-module
 
@@ -74,7 +74,7 @@ src_install() {
 		doins ${S}/tcl/tclrrd${PV}.so
 		echo "package ifneeded Rrd ${PV} [list load [file join \$$dir .. tclrrd${PV}.so]]" \
 			>> ${D}/usr/lib/tcl${TCL_VER}/tclrrd${PV}/pkgIndex.tcl
-	}
+	fi
 
 	dodoc CHANGES COPY* CONTR* README TODO
 }
