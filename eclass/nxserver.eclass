@@ -22,7 +22,7 @@ RDEPEND="$RDEPEND
 	     >=media-libs/jpeg-6b-r3
          >=sys-libs/glibc-2.3.2-r1
 		 >=sys-libs/zlib-1.1.4-r1
-		 >=x11-base/xfree-4.3.0-r2
+		 virtual/x11
 		 >=net-misc/openssh-3.6.1_p2
 		 >=dev-lang/perl-5.8.0-r12"
 
