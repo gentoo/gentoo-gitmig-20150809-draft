@@ -22,13 +22,16 @@
  
  	ifstream ifs( Full_Save_Name, ios::in );
  
-@@ -67,8 +67,8 @@
+@@ -67,8 +67,11 @@
  
++#include <sys/stat.h>
  int Savegame_Save( unsigned int Save_file, Savegame Save_info )
  {
 -	char Full_Save_Name[45];
 -	sprintf( Full_Save_Name, "%s/%d.sav", SAVE_DIR, Save_file );
 +	char Full_Save_Name[255];
++	snprintf( Full_Save_Name, 254, "%s/%s", getenv("HOME"), SAVE_DIR );
++	mkdir(Full_Save_Name, 0770);
 +	snprintf( Full_Save_Name, 254, "%s/%s/%d.sav", getenv("HOME"), SAVE_DIR, Save_file );
  
  	ifstream ifs( Full_Save_Name, ios::in );
@@ -63,8 +66,9 @@
  	ifstream ifs( Full_Save_Name.c_str(), ios::in );
 --- main.cpp.orig	2004-12-13 23:29:48.623416072 -0500
 +++ main.cpp	2004-12-13 23:31:16.989982312 -0500
-@@ -554,14 +554,14 @@
+@@ -554,14 +554,17 @@
  
++#include <sys/stat.h>
  void MakeScreenshot( void )
  {
 -	char filename[20];
@@ -76,19 +80,24 @@
  		i++;
  
 -		sprintf( filename, "Screenshots/%03d.bmp" , i );
++		snprintf( filename, 254, "%s/.smclone/Screenshots" , getenv("HOME"));
++		mkdir(filename, 0770);
 +		snprintf( filename, 254, "%s/.smclone/Screenshots/%03d.bmp" , getenv("HOME"), i );
  		FILE *fp = fopen( filename, "r" );
  
  		if( !fp )
 --- preferences.cpp.orig	2004-12-13 23:31:36.006091424 -0500
 +++ preferences.cpp	2004-12-13 23:33:28.611972728 -0500
-@@ -27,6 +27,12 @@
+@@ -27,6 +27,15 @@
  {
  	//
  }
++#include <sys/stat.h>
 +char *get_PREF_NAME( void )
 +{
 +	static char ret[255];
++	snprintf(ret, 254, "%s/.smclone", getenv("HOME"));
++	mkdir(ret, 0770);
 +	snprintf(ret, 254, "%s/.smclone/%s", getenv("HOME"), PREF_NAME);
 +	return ret;
 +}

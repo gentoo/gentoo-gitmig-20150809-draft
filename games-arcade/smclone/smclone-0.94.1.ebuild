@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/smclone/smclone-0.94.1.ebuild,v 1.1 2004/12/14 04:57:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/smclone/smclone-0.94.1.ebuild,v 1.2 2004/12/15 17:20:08 vapier Exp $
 
 inherit games eutils
 
@@ -36,7 +36,7 @@ src_unpack() {
 		configure.ac
 	sed -i 's:-Wmissing-prototypes:-Wno-deprecated:' Makefile.am
 	chmod a+x autogen.sh
-	./autogen.sh || die "autogen failed"
+	env WANT_AUTOMAKE=1.8 ./autogen.sh || die "autogen failed"
 	cd ..
 	sed -i '/define LEVEL_DIR/d' include/savegame.h
 	sed -i '/define VERSION/d' include/globals.h
