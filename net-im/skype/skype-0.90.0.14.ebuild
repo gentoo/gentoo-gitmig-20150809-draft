@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-0.90.0.6.ebuild,v 1.2 2004/07/04 13:32:21 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-0.90.0.14.ebuild,v 1.1 2004/07/24 18:35:03 humpback Exp $
 
 inherit eutils
 
@@ -67,4 +67,12 @@ src_install() {
 
 pkg_postinst() {
 	einfo "Have a look at ${PORTDIR}/licenses/${LICENSE} before running this software"
+	einfo "If you have sound problems please visite: "
+	einfo "http://forum.skype.com/bb/viewtopic.php?t=4489"
+	if ( use arts );
+	then
+		ewarn "Dont forget to configure your arts to work in Full-Duplex mode"
+		ewarn "Open controlcenter, go to \"Sound & Multimedia\"->\"Sound System\""
+		ewarn "On the \"Hardware\" tab, check the box next to \"Full duplex\"."
+	fi
 }
