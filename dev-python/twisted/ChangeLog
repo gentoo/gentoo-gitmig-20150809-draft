@@ -1,7 +1,11 @@
 # ChangeLog for dev-python/twisted
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.6 2002/11/28 23:42:30 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/ChangeLog,v 1.7 2002/12/05 13:08:40 lordvan Exp $
 
+*twisted-1.0.1-r1 (05 Dec 2002) Thomas Raschbacher <lordvan@gentoo.org>
+  Added dep for dev-python/pycrypto
+  Added IUSE
+	
 *twisted-1.0.1 (29 Nov 2002) Bart Verwilst <verwilst@gentoo.org>
 
   New version, with lots of bugfixes to the ebuild itself as well, 
