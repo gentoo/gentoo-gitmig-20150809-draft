@@ -1,4 +1,6 @@
-MD5 bc8dbafbf9068eb04e3f8ead8e6c0adf ChangeLog 385
+MD5 aa3e28deb76cafcbee4ce56bbbda3842 unionfs-1.0.8.ebuild 1208
+MD5 a214d6d08824769a02032e937a434e57 ChangeLog 569
 MD5 8959da33bd490fabac57869170fb5cd2 unionfs-1.0.5.ebuild 778
 MD5 6e89ba8198764bfd079a0cfa18dca593 metadata.xml 264
 MD5 3e8352aeb89adf9621000e68a01d1c42 files/digest-unionfs-1.0.5 64
+MD5 ed43e0aa2c797f7089d0b5233c2f4a28 files/digest-unionfs-1.0.8 65
