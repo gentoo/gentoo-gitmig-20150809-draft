@@ -1,0 +1,10 @@
+# ChangeLog for net-www/davfs2
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/davfs2/ChangeLog,v 1.1 2003/04/17 21:46:39 sethbc Exp $
+
+*davfs2-0.2.1 (17 Apr 2003)
+
+  17 Apr 2003; Seth Chandler <sethbc@gentoo.org>; Manifest,
+  davfs2-0.2.1.ebuild:
+  initial import courtesy of me =)
+
