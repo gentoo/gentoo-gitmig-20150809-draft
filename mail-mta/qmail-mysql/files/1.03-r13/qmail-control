@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-mysql/files/1.03-r13/qmail-control,v 1.1 2004/05/30 10:52:14 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail-mysql/files/1.03-r13/qmail-control,v 1.2 2004/07/14 22:34:55 agriffis Exp $
 
 opts="start stop restart reload"
 
