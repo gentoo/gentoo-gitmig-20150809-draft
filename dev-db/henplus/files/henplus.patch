@@ -1,0 +1,33 @@
+--- bin/henplus	2004-02-02 14:53:28.000000000 +0100
++++ bin/henplus	2004-07-18 15:56:40.061422352 +0200
+@@ -13,20 +13,9 @@
+     JAVA=$JAVA_HOME/bin/java
+ fi
+ 
+-##------------------
+-THISDIR=`dirname $0`
+-HENPLUSDIR=$THISDIR/../share/henplus
+-
+-# not yet installed ? Then look in the build directory
+-if [ ! -d "$HENPLUSDIR" ] ; then
+-	HENPLUSDIR=$THISDIR/../build
+-fi
++HENPLUSDIR=$(dirname $(java-config -p henplus))
+ 
+-# location of the readline lib.
+-# Modify this, if you installation stores this at a different
+-# position.
+-LD_LIBRARY_PATH=$THISDIR/../lib:/usr/lib/jni:$LD_LIBRARY_PATH
+-CLASSPATH=$CLASSPATH:$THISDIR/../share/java/libreadline-java.jar
++CLASSPATH=$CLASSPATH:$(java-config -p libreadline-java)
+ 
+ # you may just throw your own jar files in this dir.
+ # (like additional JDBC-drivers, that are not in default
+@@ -66,6 +55,4 @@
+     fi
+ done
+ 
+-export CLASSPATH LD_LIBRARY_PATH
+-
+-exec $JAVA $JAVA_FLAGS henplus.HenPlus "$@"
++exec $JAVA -cp $CLASSPATH $JAVA_FLAGS henplus.HenPlus "$@"
