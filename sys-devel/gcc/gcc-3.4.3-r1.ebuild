@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3-r1.ebuild,v 1.10 2004/12/22 01:44:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3-r1.ebuild,v 1.11 2004/12/24 10:56:03 eradicator Exp $
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+ssp extensions, Haj Ten Brugge runtime bounds checking"
 
@@ -346,6 +346,12 @@ src_install() {
 		cd ${D}${BINPATH}
 		for x in gcc g++ c++ g77 gcj
 		do
+			# For some reason, g77 gets made instead of ${CTARGET}-g77... this makes it safe
+			if [ -f "${x}" ]
+			then
+				mv "${x}" "${CTARGET}-${x}"
+			fi
+
 			if [ "${CHOST}" == "${CTARGET}" ] && [ -f "${CTARGET}-${x}" ]
 			then
 				[ ! -f "${x}" ] && mv "${CTARGET}-${x}" "${x}"

@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.362 2004/12/22 01:44:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.363 2004/12/24 10:56:03 eradicator Exp $
+
+  24 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  gcc-3.4.3-r1.ebuild:
+  Make sure ${CTARGET}-g77 is created.
 
   21 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   gcc-3.4.3-r1.ebuild:
