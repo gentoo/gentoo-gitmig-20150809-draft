@@ -7,8 +7,8 @@
 #
 # Maintainer: Brandon Low <lostlogic@gentoo.org>
 #
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/qpkg,v 1.7 2002/06/08 13:38:46 lostlogic Exp $
-ID='$Id: qpkg,v 1.7 2002/06/08 13:38:46 lostlogic Exp $'
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/qpkg,v 1.8 2002/06/08 13:52:14 lostlogic Exp $
+ID='$Id: qpkg,v 1.8 2002/06/08 13:52:14 lostlogic Exp $'
 VERSION=0.`echo ${ID} | cut -d\  -f3`
 
 PROG=`basename ${0}`
@@ -235,7 +235,7 @@ if [ "${dups}" ]; then
 	#Finish loop, and sort that nice sortable file based on 
 	#installation order, and then based on package basename
 	#bash hates me so I decided to use a temp file
-	done |sort -t " " -k1g,2 |sort -t " " -k3|uniq -d -2> /tmp/qpkg.lst
+	done |sort -t " " -k1g,2 |sort -t " " -k3|uniq -D -2> /tmp/qpkg.lst
 	duppak=`cat /tmp/qpkg.lst`
 	rm /tmp/qpkg.lst
 
