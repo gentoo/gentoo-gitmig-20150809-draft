@@ -1,6 +1,6 @@
 # ChangeLog for net-libs/wvstreams
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.8 2003/06/12 21:27:13 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/ChangeLog,v 1.9 2003/07/28 15:52:40 gmsoft Exp $
 
   12 Jun 2003; <msterret@gentoo.org> wvstreams-3.70-r2.ebuild:
   fix Header
@@ -8,6 +8,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *wvstreams-3.70-r2 (31 Oct 2002)
+
+  28 Jul 2003; Guy Martin <gmsoft@gentoo.org> wvstreams-3.70-r2.ebuild :
+  Added hppa to KEYWORDS and -fPIC to CXXFLAGS for hppa.
 
   21 Oct 2002; Bjoern Brauel <bjb@gentoo.org> wvstreams-3.70-r2.ebuild
 
