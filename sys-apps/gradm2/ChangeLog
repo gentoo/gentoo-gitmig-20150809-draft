@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/gradm2
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm2/ChangeLog,v 1.4 2003/07/05 22:00:44 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gradm2/ChangeLog,v 1.5 2003/07/07 05:24:48 solar Exp $
+
+  07 Jul 2003; <solar@gentoo.org> gradm2-0.0_pre4-r1.ebuild:
+  Odd syntaxing handling thing going on which would cause gradm2 not to be built
+  on some systems, reported by zhen@gentoo.org
 
   05 Jul 2003; <solar@gentoo.org> metadata.xml:
   Added metadata.xml
