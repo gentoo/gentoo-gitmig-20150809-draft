@@ -1,0 +1,10 @@
+# ChangeLog for dev-tex/xmltex
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/xmltex/ChangeLog,v 1.1 2004/02/01 13:53:55 usata Exp $
+
+*xmltex-0.14 (01 Feb 2004)
+
+  01 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> metadata.xml,
+  xmltex-0.14.ebuild:
+  Initial import. Dependency needed by passivetex.
+
