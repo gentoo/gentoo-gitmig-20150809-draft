@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/libungif-4.1.3.ebuild,v 1.3 2004/11/06 08:50:28 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/libungif-4.1.3.ebuild,v 1.4 2005/01/08 09:03:16 vapier Exp $
 
 inherit eutils libtool
 
@@ -10,28 +10,29 @@ SRC_URI="mirror://sourceforge/libungif/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~ppc-macos"
+KEYWORDS="~alpha ~amd64 arm hppa ia64 ~mips ~ppc ~ppc64 ~ppc-macos ~sparc x86"
 IUSE="X gif"
 
 RDEPEND="X? ( virtual/x11 )"
-DEPEND="${RDEPEND}
-	>=sys-devel/autoconf-2.57"
+
+src_unpack() {
+	unpack ${A}
+	cd "${S}"
+	elibtoolize || die
+	epunt_cxx
+}
 
 src_compile() {
-	elibtoolize || die
-
-	local myconf
-	use alpha && myconf="${myconf} --host=alpha-unknown-linux-gnu"
-	econf `use_with X x` ${myconf} || die
-	emake -j1 || die
+	econf $(use_with X x) || die
+	emake || die
 }
 
 src_install() {
 	make DESTDIR="${D}" install || die
 
-	use gif && rm -rf "${D}/usr/bin" "${D}/usr/include/gif_lib.h"
+	use gif && rm -r "${D}"/usr/bin "${D}"/usr/include/gif_lib.h
 
-	dodoc AUTHORS BUGS COPYING ChangeLog NEWS ONEWS UNCOMPRESSED_GIF \
+	dodoc AUTHORS BUGS ChangeLog NEWS ONEWS UNCOMPRESSED_GIF \
 		README TODO doc/*.txt || die "dodoc failed"
 	dohtml -r doc || die "dohtml failed"
 }
