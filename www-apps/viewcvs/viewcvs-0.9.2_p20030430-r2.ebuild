@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/viewcvs-0.9.2_p20030430-r2.ebuild,v 1.1 2004/08/26 07:55:40 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/viewcvs/viewcvs-0.9.2_p20030430-r2.ebuild,v 1.2 2004/08/30 19:45:27 rl03 Exp $
 
 inherit webapp
 
@@ -13,17 +13,12 @@ LICENSE="viewcvs"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="$DEPEND"
 RDEPEND="|| ( ( >=app-text/rcs-5.7
 	>=dev-util/cvs-1.11 )
 	dev-util/subversion )
 	sys-apps/diffutils
 	net-www/apache"
 S=${WORKDIR}/${PN}
-
-src_compile() {
-	:;
-}
 
 src_install() {
 	webapp_src_preinst
