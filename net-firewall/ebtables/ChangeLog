@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/ebtables
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ChangeLog,v 1.7 2004/12/11 17:38:07 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ChangeLog,v 1.8 2004/12/30 23:13:52 swegener Exp $
+
+  31 Dec 2004; Sven Wegener <swegener@gentoo.org> ebtables-2.0.6.ebuild:
+  Moved inherit to the top. Don't use variables in HOMEPAGE. Use MY_P.
 
   11 Dec 2004; <solar@gentoo.org> ebtables-2.0.6.ebuild:
   stable on x86
