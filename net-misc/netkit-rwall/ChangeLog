@@ -1,0 +1,8 @@
+# ChangeLog for net-misc/netkit-rwall
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/netkit-rwall/ChangeLog,v 1.1 2004/10/23 17:27:58 wmertens Exp $
+
+*netkit-rwalld-0.17 (23 Oct 2004)
+
+  23 Oct 2004; Wout Mertens <wmertens@gentoo.org> netkit-rwalld-0.17.ebuild:
+  Initial import. Ebuild submitted by I.Radusch <ilja@radusch.com>.
