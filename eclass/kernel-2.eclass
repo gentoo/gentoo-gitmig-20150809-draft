@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.104 2005/02/24 01:17:32 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.105 2005/02/27 03:27:52 plasmaroo Exp $
 
 # Description: kernel.eclass rewrite for a clean base regarding the 2.6
 #              series of kernel with back-compatibility for 2.4
@@ -32,7 +32,10 @@
 #						  postinst and can be used to carry additional postinst
 #						  messages
 # K_EXTRAEWARN			- same as K_EXTRAEINFO except ewarn's instead of einfo's
-# K_SYMLINK				- if this is set, then forcably create symlink anyway
+# K_SYMLINK			- if this is set, then forcably create symlink anyway
+#
+# K_DEFCONFIG			- Allow specifying a different defconfig target.  If length zero,
+#					defaults to "defconfig".
 
 # H_SUPPORTEDARCH		- this should be a space separated list of ARCH's which
 #						  can be supported by the headers ebuild
@@ -223,12 +226,18 @@ compile_headers() {
 		[[ -f ${ROOT}/usr/include/linux/autoconf.h ]] \
 			|| touch include/linux/autoconf.h
 
+		# if K_DEFCONFIG isn't set, force to "defconfig"
+		# needed by mips
+		if [[ -z ${K_DEFCONFIG} ]]; then
+			K_DEFCONFIG="defconfig"
+		fi
+
 		# if there arent any installed headers, then there also isnt an asm
 		# symlink in /usr/include/, and make defconfig will fail, so we have
 		# to force an include path with $S.
 		HOSTCFLAGS="${HOSTCFLAGS} -I${S}/include/"
 		ln -sf asm-${KARCH} "${S}"/include/asm
-		make defconfig HOSTCFLAGS="${HOSTCFLAGS}" ${xmakeopts} || die "defconfig failed"
+		make ${K_DEFCONFIG} HOSTCFLAGS="${HOSTCFLAGS}" ${xmakeopts} || die "defconfig failed"
 		make prepare HOSTCFLAGS="${HOSTCFLAGS}" ${xmakeopts} || die "prepare failed"
 		make prepare-all HOSTCFLAGS="${HOSTCFLAGS}" ${xmakeopts} || die "prepare failed"
 	fi
