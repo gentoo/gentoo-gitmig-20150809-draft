@@ -25,3 +25,4 @@ MD5 2bd191cca4e640e87cca79bc0405f97a qmail-1.03-moreipme-0.6pre1-gentoo.patch 13
 MD5 d96455aaed208e9cd450d8874564781b qmail-relaymxlookup-0.3.diff 3856
 MD5 d898fbb2b4cb259b208dbb8c9d8c47a9 gentoo-qmail-1.03-r16-mfcheck.3.patch 4223
 MD5 95692f3a7574f258489943ca9d09981a gentoo-qmail-1.03-r16-spp.034.patch 34568
+MD5 a6d05602399a51f6133c7ff19142b7c8 qmail-bounce-encap-20040210.patch 4238

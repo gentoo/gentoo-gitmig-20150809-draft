@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 SERVICE=send
 source /var/qmail/bin/qmail-config-system && \
 exec /usr/bin/setuidgid qmaill /usr/bin/multilog ${LOG_OPTS} ${LOG_DEST}

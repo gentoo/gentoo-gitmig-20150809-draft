@@ -1,6 +1,13 @@
 # ChangeLog for mail-mta/qmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.17 2005/01/03 19:44:44 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/ChangeLog,v 1.18 2005/01/03 20:55:10 hansmi Exp $
+
+  03 Jan 2005; Michael Hanselmann <hansmi@gentoo.org> qmail-1.03-r12.ebuild,
+  qmail-1.03-r13.ebuild, qmail-1.03-r14.ebuild, qmail-1.03-r15.ebuild,
+  qmail-1.03-r16.ebuild, +files/1.03-r16/starttls-recordio.patch:
+  Added bounce-encap-patch from bug 38849. Fixed a problem with recordio and
+  tls, bug 40521. Integrated mailwrapper, bug 48885. Fixed bug 51967 and
+  changed all needed #!/bin/sh to #!/bin/bash in the scripts.
 
   03 Jan 2005; Michael Hanselmann <hansmi@gentoo.org> qmail-1.03-r15.ebuild,
   qmail-1.03-r16.ebuild:
@@ -62,7 +69,7 @@
   qmail-1.03-r11.ebuild, qmail-1.03-r9.ebuild:
   Fix use invocation
 
-  05 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> qmail-1.03-r15.ebuild:
+  05 Jun 2004; Bryan ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂstergaard <kloeri@gentoo.org> qmail-1.03-r15.ebuild:
   Stable on alpha.
 
   28 May 2004; Robin H. Johnson <robbat2@gentoo.org> metadata.xml:

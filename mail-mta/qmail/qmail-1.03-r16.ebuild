@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.2 2005/01/03 19:44:44 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r16.ebuild,v 1.3 2005/01/03 20:55:10 hansmi Exp $
 
 inherit toolchain-funcs eutils fixheadtails
 
@@ -36,13 +36,13 @@ SRC_URI="mirror://qmail/${P}.tar.gz
 	http://hansmi.ch/download/qmail/qmail-relaymxlookup-0.3.diff
 	mirror://gentoo/gentoo-qmail-1.03-r16-mfcheck.3.patch
 	mirror://gentoo/gentoo-qmail-1.03-r16-spp.034.patch
+	http://www.finnie.org/software/qmail-bounce-encap/qmail-bounce-encap-20040210.patch
 	"
 # broken stuffs
 #http://www.qcc.ca/~charlesc/software/misc/nullenvsender-recipcount.patch
 
 LICENSE="as-is"
 SLOT="0"
-#KEYWORDS="~x86 ~ppc ~sparc mips alpha arm hppa amd64 ia64"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64"
 
 DEPEND="virtual/libc
@@ -51,13 +51,15 @@ DEPEND="virtual/libc
 	>=net-mail/queue-fix-1.4-r1"
 RDEPEND="!virtual/mta
 	virtual/libc
+	app-shells/bash
 	>=sys-apps/ucspi-tcp-0.88
 	>=sys-apps/daemontools-0.76-r1
 	>=net-mail/checkpassword-0.90
 	>=net-mail/cmd5checkpw-0.22
 	>=net-mail/dot-forward-0.71
 	>=net-mail/queue-fix-1.4-r1
-	selinux? ( sec-policy/selinux-qmail )"
+	selinux? ( sec-policy/selinux-qmail )
+	mailwrapper? ( net-mail/mailwrapper )"
 
 PROVIDE="virtual/mta
 	 virtual/mda"
@@ -222,16 +224,26 @@ src_unpack() {
 	# Rediffed patch to prevent from a problem which can
 	# happen when using NAT. Rediffed by hansmi@gentoo.org.
 	# See http://www.suspectclass.com/~sgifford/qmail/qmail-moreipme-0.6.README
+	EPATCH_SINGLE_MSG="Adding moreipme-patch" \
 	epatch ${DISTDIR}/qmail-1.03-moreipme-0.6pre1-gentoo.patch
 
 	# Patch to look up the mx before relaying
 	# Look at http://hansmi.ch/software/qmail
+	EPATCH_SINGLE_MSG="Adding relaymxlookup-patch" \
 	epatch ${DISTDIR}/qmail-relaymxlookup-0.3.diff
 	epatch ${FILESDIR}/${PVR}/Makefile-relaymxlookup.patch
 
 	# Fix a bug on ia64, see bug 68173
 	# Doesn't affect other platforms
+	EPATCH_SINGLE_MSG="Patch for spawn.c to fix a bug on ia64" \
 	epatch ${FILESDIR}/${PV}-r15/spawn-alloc-h.patch
+
+	# Added due to bug 38849
+	EPATCH_SINGLE_MSG="Adding qmail-bounce-encap to encapsulate bounces in rfc822 messages" \
+	epatch ${DISTDIR}/qmail-bounce-encap-20040210.patch
+
+	# Fixes bug 40521
+	epatch ${FILESDIR}/${PVR}/starttls-recordio.patch
 
 	echo -n "$(tc-getCC) ${CFLAGS}" >${S}/conf-cc
 	if use ssl; then
@@ -336,8 +348,15 @@ src_install() {
 	einfo "Creating sendmail replacement ..."
 	diropts -m 755
 	dodir /usr/sbin /usr/lib
-	dosym /var/qmail/bin/sendmail /usr/sbin/sendmail
-	dosym /var/qmail/bin/sendmail /usr/lib/sendmail
+
+	if useq mailwrapper; then
+		# make it compatible with mailwrapper, bug 48885
+		dosym /var/qmail/bin/sendmail /usr/sbin/sendmail.qmail
+		dosym /usr/sbin/sendmail /usr/lib/sendmail
+	else
+		dosym /var/qmail/bin/sendmail /usr/sbin/sendmail
+		dosym /var/qmail/bin/sendmail /usr/lib/sendmail
+	fi
 
 	einfo "Setting up the default aliases ..."
 	diropts -m 700 -o alias -g qmail

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r12.ebuild,v 1.7 2005/01/02 22:16:06 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/qmail-1.03-r12.ebuild,v 1.8 2005/01/03 20:55:10 hansmi Exp $
 
 inherit toolchain-funcs eutils fixheadtails
 
@@ -39,6 +39,7 @@ LICENSE="as-is"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 DEPEND="virtual/libc
 	sys-apps/groff
+	app-shells/bash
 	ssl? ( >=dev-libs/openssl-0.9.6g )
 	>=net-mail/queue-fix-1.4-r1"
 

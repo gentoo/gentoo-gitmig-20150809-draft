@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 # Gentoo Startup script for qmail's POP3 daemon
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/files/run-qmailpop3d,v 1.2 2004/07/05 00:14:00 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/qmail/files/run-qmailpop3d,v 1.3 2005/01/03 20:55:10 hansmi Exp $
 #
 # If you need to edit this file, please look at editing conf-pop3d and
 # conf-common first.  If you still need to change this file, you should

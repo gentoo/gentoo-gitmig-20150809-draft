@@ -1,0 +1,12 @@
+--- qmail-smtpd.c.bak	2004-10-17 19:44:53.659697177 +0200
++++ qmail-smtpd.c	2004-10-17 19:46:21.040994357 +0200
+@@ -806,7 +806,8 @@
+   out("220 ready for tls\r\n"); flush();
+ 
+   if(!(ssl=SSL_new(ctx))) die_read();
+-  SSL_set_fd(ssl,0);
++  SSL_set_rfd(ssl,0);
++  SSL_set_wfd(ssl,1);
+   if(SSL_accept(ssl)<=0) die_read();
+   substdio_fdbuf(&ssout,SSL_write,ssl,ssoutbuf,sizeof(ssoutbuf));
+ 
