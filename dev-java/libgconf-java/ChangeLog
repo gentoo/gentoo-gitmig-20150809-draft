@@ -1,8 +1,8 @@
 # ChangeLog for dev-java/libgconf-java
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libgconf-java/ChangeLog,v 1.2 2004/12/04 15:54:54 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libgconf-java/ChangeLog,v 1.3 2004/12/21 20:07:25 karltk Exp $
 
-  04 Dec 2004; <karltk@gentoo.org> :
+  04 Dec 2004; Karl Trygve Kalleberg <karltk@gentoo.org> :
   Initial import. Fixes #70562.
 
 * libgconf-java-2.8.2 (08 Nov 2004)
