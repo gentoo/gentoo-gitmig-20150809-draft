@@ -1,8 +1,8 @@
 # ChangeLog for net-im/ccmsn
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/ccmsn/ChangeLog,v 1.2 2003/02/12 07:59:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/ccmsn/ChangeLog,v 1.3 2004/03/01 20:37:00 aliz Exp $
 
-*ccmsn-0.3-r3 (30 Jun 2002)
+*ccmsn-0.3 (30 Jun 2002)
 
   30 Jun 2002; New ebuild, ccmsn. Sort of a hack job but I've always used it like this.
   Scripts get moved to /usr/lib/ccmsn-0.3p3 and a small two line shell script gets put

@@ -1,6 +1,6 @@
 # ChangeLog for net-im/gaim
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.138 2004/03/01 15:51:16 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/ChangeLog,v 1.139 2004/03/01 20:37:00 aliz Exp $
 
   01 Mar 2004; Don Seiler <rizzo@gentoo.org>; gaim-0.75-r10.ebuild,
   gaim-0.75-r8.ebuild, gaim-0.75-r9.ebuild:
@@ -47,6 +47,8 @@
 
   28 Jan 2004; Don Seiler <rizzo@gentoo.org>; gaim-0.75-r8.ebuild:
   Filtering -msse2 for gcc 3.2.  Fixed bug 27975, thanks to vapier for fix
+
+*gaim-0.75-r8 (28 Jan 2004)
 
   28 Jan 2004; <plasmaroo@gentoo.org> gaim-0.75-r7.ebuild,
   gaim-0.75-r8.ebuild, files/gaim-0.76cvs-yahoo-login-fix.diff:

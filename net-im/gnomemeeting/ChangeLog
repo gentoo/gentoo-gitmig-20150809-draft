@@ -2,6 +2,8 @@
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # $Header:
 
+*gnomemeeting-0.98.5-r1 (03 Feb 2004)
+
   03 Feb 2004; <spider@gentoo.org> :
   fix DEPEND vs. RDEPEND issue
 
