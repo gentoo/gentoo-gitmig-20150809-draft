@@ -2,7 +2,7 @@
 #
 # Gentoo Linux command completion.
 #
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 #
 # Author: Geert Bevin  <gbevin@theleaf.be>
@@ -484,11 +484,11 @@ _javaconfig()
 				do
 					[ "${opts}" ] && opts="${opts} ${arg}" || opts="${arg}"
 				done
-				COMPREPLY=($(compgen -o nospace -W "${opts}"))
+				COMPREPLY=($(compgen $nospace -W "${opts}"))
 				return 0
 				;;
 			"--exec=")
-				COMPREPLY=($(compgen -o nospace -W "${execopts}"))
+				COMPREPLY=($(compgen $nospace -W "${execopts}"))
 				return 0
 				;;
 			*)
@@ -583,10 +583,10 @@ _javaconfig()
 	else
 		opts=""
 	fi
-	COMPREPLY=($(compgen -o nospace -W "${opts}" | grep ^${cur}))
+	COMPREPLY=($(compgen $nospace -W "${opts}" | grep ^${cur}))
 	return 0
 }
-complete -o nospace -F _javaconfig java-config
+complete $nospace -F _javaconfig java-config
 
 _openglupdate()
 {
