@@ -1,0 +1,118 @@
+diff -ur darkstat-2.6/src/acct.c darkstat-2.6-patched/src/acct.c
+--- darkstat-2.6/src/acct.c	2003-11-07 09:47:00.000000000 +0100
++++ darkstat-2.6-patched/src/acct.c	2004-07-16 18:34:19.070212872 +0200
+@@ -20,11 +20,13 @@
+ #if defined(sun) && (defined(__svr4__) || defined(__SVR4)) 
+ #include <sys/sockio.h>
+ #endif
++#include <errno.h>
+ 
+ int64	num_packets, total_data;
+-dword	local_ip = 0, lan_ip = 0xFFFFFFFF, lan_mask = 0;
++dword	local_ip = 0, lan_ip = 0xFFFFFFFF, lan_mask = 0, check_ip = 0;
+ int	acct_linktype = 0;
+-time_t	t_start, t_already = 0, t_lastsave = 0;
++time_t	t_start, t_already = 0, t_lastsave = 0, t_lastipcheck = 0;
++int network_down = 0;
+ pcap_t	*acct_pcap = NULL;
+ host_record *local_host_rec;
+ 
+@@ -367,22 +369,10 @@
+ }
+ 
+ 
+-
+-void acct_main(void *ignored unused)
++void init_pcap(void)
+ {
+ 	char err[PCAP_ERRBUF_SIZE];
+ 
+-	if (!local_ip) local_ip = get_local_ip(acctdev);
+-	printf("Sniffing on device %s, local IP is ", acctdev);
+-	print_addr(local_ip);
+-	putchar('\n');
+-
+-	init_db();
+-	init_graph();
+-	load_db(db_file);
+-
+-	local_host_rec = host_from_ip(local_ip);
+-
+ 	err[0] = '\0'; /* zero length string */
+ 	acct_pcap = pcap_open_live(acctdev, 100, promisc, PCAP_TIMEOUT, err);
+ 	if (!acct_pcap)
+@@ -418,7 +408,23 @@
+ #endif
+ 	}
+ 
++}
++	
++
++void acct_main(void *ignored unused)
++{
++	if (!local_ip) local_ip = get_local_ip(acctdev);
++	printf("Sniffing on device %s, local IP is ", acctdev);
++	print_addr(local_ip);
++	putchar('\n');
++
++	init_db();
++	init_graph();
++	load_db(db_file);
++
++	local_host_rec = host_from_ip(local_ip);
+ 
++	init_pcap();
+ 
+ 	t_lastsave = t_start = time(NULL);
+ 	acct_linktype = pcap_datalink(acct_pcap);
+@@ -432,13 +438,38 @@
+ 	{
+ 		struct pcap_stat ps;
+ 
++		/* check if we still have the same IP from time to time */
++		if (time(NULL) - t_lastipcheck > IPCHECK_TIME)
++		{
++			t_lastipcheck = time(NULL);
++			check_ip = get_local_ip(acctdev);
++			if (local_ip != check_ip)
++			{
++				printf("New IP ");
++				print_addr(check_ip);
++				printf(" detected, old IP was ");
++				print_addr(local_ip);
++				putchar('\n');
++				local_ip = check_ip;
++				network_down = 0;
++				init_pcap();
++			}
++		}
++
++		if (network_down)
++			continue;
++		
+ 		/* capture some packets for accounting */
+ 		if (pcap_dispatch(acct_pcap, -1,
+ 			(pcap_handler)handle_pkt, NULL) == -1)
+ 		{
+ 			printf("Error: pcap_dispatch(): %s\n",
+ 				pcap_geterr(acct_pcap));
+-			FAIL();
++			if (errno == ENETDOWN) {
++				network_down = 1;
++			} else {
++				FAIL();
++			}
+ 		}
+ 
+ 		/* print out cap statistics */	
+diff -ur darkstat-2.6/src/darkstat.h darkstat-2.6-patched/src/darkstat.h
+--- darkstat-2.6/src/darkstat.h	2003-11-07 09:51:19.000000000 +0100
++++ darkstat-2.6-patched/src/darkstat.h	2004-07-16 18:35:50.738277208 +0200
+@@ -52,6 +52,7 @@
+ #define EXIT_SUCCESS 0
+ #define EXIT_FAIL 1
+ #define SAVE_TIME 60*5 /* secs inbetween DB dumps */
++#define IPCHECK_TIME 60	/* seconds between local ip checks */
+ #define MSEC 1000  /* for usleep() */
+ #define SOCKET int /* WinSock? err... */
+ 
