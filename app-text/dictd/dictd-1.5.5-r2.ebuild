@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Michael Conrad Tilstra <michael@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.5.5-r2.ebuild,v 1.1 2001/06/15 02:40:18 michael Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/dictd/dictd-1.5.5-r2.ebuild,v 1.2 2001/07/15 16:25:10 lamer Exp $
 
 #P=
 A=${P}.tar.gz
@@ -49,8 +49,9 @@ src_install () {
     exeinto /var/lib/supervise/services/dictd
     newexe ${FILESDIR}/${PVR}/dictd-run run
 }
-
-pkg_postinst() {
+# DO NOT RUN THIS STUFF FROM pkg_postinst() leave it up to the user by
+# doing it this way
+pkg_config() {
     # gotta start it at boot.
     . ${ROOT}/etc/rc.d/config/functions
     einfo ">>>  Generating symlinks"
