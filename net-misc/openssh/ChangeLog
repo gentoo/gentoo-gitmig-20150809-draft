@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.89 2004/06/25 00:03:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.90 2004/06/28 04:49:08 tseng Exp $
+
+  28 Jun 2004; Brandon Hale <tseng@gentoo.org> openssh-3.8.1_p1-r1.ebuild:
+  Stable on x86.
 
   15 Jun 2004; <solar@gentoo.org> openssh-3.8.1_p1-r1.ebuild:
   pam & uclibc updates

@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/iputils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.29 2004/06/24 23:50:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.30 2004/06/28 04:45:25 tseng Exp $
+
+  28 Jun 2004; Brandon Hale <tseng@gentoo.org> iputils-021109-r3.ebuild:
+  Stable on x86.
 
   15 Jun 2004; <solar@gentoo.org> iputils-021109-r3.ebuild,
   files/iputils-20020927-no-ether_ntohost.patch:
