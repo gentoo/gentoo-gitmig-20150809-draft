@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.7 2002/05/26 22:22:34 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.8 2002/06/08 13:52:04 seemant Exp $
+
+*xine-lib-0.9.9-r2 (r87 Jun 2002)
+
+  8 Jun 2002; Seemant Kulleen <seemant@gentoo.org> xine-lib-0.9.9-r2.ebuild
+  files/digest-xine-lib-0.9.9-r2 :
+
+  Fixes to make it compile against directfb.
 
 *xine-lib-0.9.10 (26 May 2002)
 
