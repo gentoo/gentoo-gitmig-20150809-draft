@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20030505-r1.ebuild,v 1.1 2003/05/24 12:46:08 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20030505-r1.ebuild,v 1.2 2003/06/22 05:33:05 drobbins Exp $
 
 S=${WORKDIR}/${PN/-/_}
 DESCRIPTION="Programmable Completion for bash (includes emerge and ebuild commands)."
@@ -9,7 +9,7 @@ SRC_URI="http://www.caliban.org/files/bash/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha mips hppa arm"
+KEYWORDS="x86 ppc sparc alpha mips hppa arm amd64"
 
 DEPEND="sys-apps/tar
 	sys-apps/bzip2"
