@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.32 2004/04/27 22:05:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.33 2004/05/23 12:42:42 usata Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -141,16 +141,18 @@ erubydoc() {
 	insinto ${rdbase}
 	[ -n "${rdfiles}" ] && doins ${rdfiles}
 	rmdir --ignore-fail-on-non-empty ${D}${rdbase}
-	if [ -d doc -o -d docs -o examples ] ; then
-		dohtml -x html -r {doc,docs,examples}/*
-		dohtml -r {doc,docs,examples}/html/*
+	if [ -d doc -o -d docs ] ; then
+		dohtml -x html -r {doc,docs}/*
+		dohtml -r {doc,docs}/html/*
 	else
 		dohtml -r *
 	fi
-	if [ -d sample ] ; then
-		dodir /usr/share/doc/${PF}
-		cp -a sample ${D}/usr/share/doc/${PF} || die "cp failed"
-	fi
+	for dir in sample example examples; do
+		if [ -d ${dir} ] ; then
+			dodir /usr/share/doc/${PF}
+			cp -a ${dir} ${D}/usr/share/doc/${PF} || die "cp failed"
+		fi
+	done
 	for i in ChangeLog* [A-Z][A-Z]* ; do
 		[ -e $i ] && dodoc $i
 	done
