@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-0.5.10.ebuild,v 1.2 2001/05/28 14:32:32 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-0.5.10.ebuild,v 1.3 2001/06/10 05:12:25 drobbins Exp $
 
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
@@ -36,6 +36,9 @@ src_install() {
 	doins ${FILESDIR}/alsa
 }
 
-
+pkg_postinst() {
+	#this will configure alsa to restore and save settings correctly
+	${ROOT}/usr/sbin/rc-update add alsa	
+}
 
 
