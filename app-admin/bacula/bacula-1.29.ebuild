@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.29.ebuild,v 1.1 2003/01/30 00:19:10 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/bacula-1.29.ebuild,v 1.2 2003/02/12 18:29:07 ykoehler Exp $
 
 DESCRIPTION="Bacula is a featureful client/server network backup suite"
 HOMEPAGE="http://www.bacula.org/"
@@ -17,7 +17,7 @@ DEPEND=">=sys-libs/zlib-1.1.4
 	sqlite? >=dev-db/sqlite-2.7
 	X? virtual/x11"
 RDEPEND="${DEPEND} sys-apps/mtx app-arch/mt-st"
-IUSE="readline tcpd ssl gnome mysql sqlite X"
+IUSE="readline tcpd ssl gnome mysql sqlite X static"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
 SLOT="0"
