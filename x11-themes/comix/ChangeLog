@@ -1,0 +1,10 @@
+# ChangeLog for x11-themes/comix
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/comix/ChangeLog,v 1.1 2004/12/21 00:01:22 motaboy Exp $
+
+*comix-1.1.6 (21 Dec 2004)
+
+  21 Dec 2004; Simone Gotti <motaboy@gentoo.org> +metadata.xml,
+  +comix-1.1.6.ebuild:
+  New ebuild. Thanks to Kostas Petrakis and Pawel Bugalski. Closes bug #65092.
+
