@@ -1,9 +1,9 @@
 #! /bin/sh
 # Copyright (c) 2002, Gentoo Technologies, Inc.
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/gentool/gentool-bump-revision,v 1.1 2002/04/13 23:01:55 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/gentool/gentool-bump-revision,v 1.2 2002/04/13 23:41:15 karltk Exp $
 
-if [ -z $HOME/.gentoo/gentool-env ] ; 
+if [ ! -f $HOME/.gentoo/gentool-env ] ; then
 	echo "You must make a $HOME/.gentoo/gentool-env file that contains"
 	echo "AUTHORNAME=\"Your name\""
 	echo "AUTHOREMAIL=\"Your @gentoo.org mail address\""
