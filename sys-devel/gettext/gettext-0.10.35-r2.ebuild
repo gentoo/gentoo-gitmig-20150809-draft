@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.10.35-r2.ebuild,v 1.2 2001/02/15 18:17:32 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.10.35-r2.ebuild,v 1.3 2001/03/06 05:27:28 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -13,10 +13,14 @@ HOMEPAGE="http://www.gnu.org/software/gettext/gettext.html"
 DEPEND="virtual/glibc"
 
 src_compile() {
-
-	try ./configure --prefix=/usr --infodir=/usr/share/info \
-                --with-included-gettext --enable-shared --host=${CHOST}
-	try make ${MAKEOPTS}
+    local myconf
+    if [  -z "`use nls`" ]
+    then
+        myconf="--disable-nls"
+    fi 
+    try ./configure --prefix=/usr --infodir=/usr/share/info \
+                --with-included-gettext --enable-shared --host=${CHOST} ${myconf}
+    try make ${MAKEOPTS}
 }
 
 src_install() {

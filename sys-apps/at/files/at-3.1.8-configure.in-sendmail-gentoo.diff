@@ -5,7 +5,7 @@
  AC_DEFINE_UNQUOTED(SENDMAIL,"$ac_cv_path_SENDMAIL")
  MAIL_CMD="$ac_cv_path_SENDMAIL"
 +else
-+AC_DEFINE_UNQUOTED(SENDMAIL,"/usr/sbin/snedmail")
++AC_DEFINE_UNQUOTED(SENDMAIL,"/usr/sbin/sendmail")
 +MAIL_CMD="/usr/sbin/sendmail"
  fi
  

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.19.3-r2.ebuild,v 1.1 2001/02/07 16:10:52 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gpm/gpm-1.19.3-r2.ebuild,v 1.2 2001/03/06 05:27:28 achim Exp $
 
 P=gpm-1.19.3
 A="${P}.tar.gz devfs.patch"
@@ -11,8 +11,9 @@ SRC_URI="ftp://metalab.unc.edu/pub/Linux/system/mouse/${A}
 	 ftp://ftp.prosa.it/pub/gpm/patches/devfs.patch"
 
 DEPEND="virtual/glibc
-	>=sys-libs/ncurses-5.2-r2
         tex? ( app-text/tetex )"
+
+RDEPEND="virtual/glibc"
 
 src_unpack() {
 
@@ -25,7 +26,8 @@ src_unpack() {
 
 src_compile() {
 
-    try ./configure --prefix=/usr --sysconfdir=/etc/gpm
+    try ./configure --prefix=/usr --sysconfdir=/etc/gpm --without-curses
+    # without-curses is required to avoid cyclic dependencies to ncurses
     cp Makefile Makefile.orig
     if [ -z "`use tex`" ]
     then

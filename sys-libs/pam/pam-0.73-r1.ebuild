@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.73-r1.ebuild,v 1.2 2001/02/07 21:04:43 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.73-r1.ebuild,v 1.3 2001/03/06 05:27:28 achim Exp $
 
 P=pam-${PV}
 A=Linux-PAM-${PV}.tar.gz
@@ -14,6 +14,12 @@ DEPEND=">=sys-libs/cracklib-2.7-r2
 	>=sys-libs/pwdb-0.61-r3
         berkdb? ( =sys-libs/db-1.85-r1 )"
 
+src_unpack() {
+  unpack ${A}
+  cd ${S}
+  patch -p0 < ${FILESDIR}/pam-0.73-pam_issue.diff
+}
+  
 src_compile() {
 
   try ./configure --prefix= --host=${CHOST} \
@@ -23,7 +29,7 @@ src_compile() {
 
 
   cp Makefile Makefile.orig
-  sed -e "s:libpam_misc doc examples:libpam_misc doc:" \
+  sed -e "s:libpam_misc doc examples:libpam_misc:" \
 	Makefile.orig > Makefile
 
   cp Make.Rules Make.orig

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.5.5-r3.ebuild,v 1.1 2001/02/21 06:39:05 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.5.5-r3.ebuild,v 1.2 2001/03/06 05:27:28 achim Exp $
 
 P=${PN}-v${PV}
 A=${P}.tar.gz
@@ -33,7 +33,7 @@ src_compile() {
 src_install() {
     dodir /usr/{bin,lib,share/man,share/doc/${PF}/html}
     
-    dodir /usr/doc/${PF}/html
+    dodir /usr/share/doc/${PF}/html
     try make install
     
     gzip ${D}/usr/share/doc/${PF}/html/*.html

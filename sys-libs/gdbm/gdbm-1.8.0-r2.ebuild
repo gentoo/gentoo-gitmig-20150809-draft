@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.0-r2.ebuild,v 1.2 2001/02/08 08:01:00 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.0-r2.ebuild,v 1.3 2001/03/06 05:27:28 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -25,7 +25,7 @@ src_compile() {
 src_install() {
 
     try make prefix=${D}/usr man3dir=${D}/usr/share/man/man3 \
-	infodir=${D}/usr/share/info install
+	    infodir=${D}/usr/share/info install
     dodoc COPYING ChangeLog NEWS README
 
 }

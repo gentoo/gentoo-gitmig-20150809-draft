@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.3h.ebuild,v 1.3 2001/01/31 20:49:07 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.3h.ebuild,v 1.4 2001/03/06 05:27:28 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}/build_unix
@@ -12,6 +12,7 @@ HOMEPAGE="http://www.mysql.com"
 RDEPEND="virtual/glibc"
 DEPEND="$RDEPEND
 	=sys-libs/db-1.85"
+
 src_compile() {
 
     cd ${S}

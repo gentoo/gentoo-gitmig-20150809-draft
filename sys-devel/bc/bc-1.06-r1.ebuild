@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/bc-1.06-r1.ebuild,v 1.1 2001/02/07 16:05:19 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/bc-1.06-r1.ebuild,v 1.2 2001/03/06 05:27:28 achim Exp $
       
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -11,7 +11,7 @@ SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/bc/${A}
 HOMEPAGE="http://www.gnu.org/software/bc/bc.html"
 
 DEPEND="virtual/glibc
-	readline? ( >=sys-libs/readline-4.1 )"
+	readline? ( >=sys-libs/readline-4.1 >=sys-libs/ncurses-5.2 )"
 
 src_compile() {
 

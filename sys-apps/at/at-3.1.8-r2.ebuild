@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r2.ebuild,v 1.3 2001/02/27 23:03:15 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r2.ebuild,v 1.4 2001/03/06 05:27:28 achim Exp $
 
 A="${P}.tar.bz2 ${P}.dif"
 S=${WORKDIR}/${P}
@@ -10,9 +10,7 @@ SRC_URI="ftp://jurix.jura.uni-sb.de/pub/jurix/source/chroot/appl/at/${P}.tar.bz2
 	 ftp://jurix.jura.uni-sb.de/pub/jurix/source/chroot/appl/at/${P}.dif"
 HOMEPAGE=""
 
-DEPEND="virtual/glibc
-	sys-devel/autoconf
-        >=sys-devel/flex-2.5.4a"
+DEPEND="virtual/glibc >=sys-devel/flex-2.5.4a"
 
 RDEPEND="virtual/glibc"
 
@@ -23,7 +21,7 @@ src_unpack() {
     patch -p0 < ${DISTDIR}/${P}.dif
     cp configure.in configure.orig
     patch -p0 < ${FILESDIR}/${P}-configure.in-sendmail-gentoo.diff
-    autoconf
+    patch -p0 < ${FILESDIR}/${P}-configure-sendmail-gentoo.diff
 }
 
 src_compile() {

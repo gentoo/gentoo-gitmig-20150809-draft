@@ -9,8 +9,11 @@ EXE="/sbin/nfsd"
 opts="start stop restart"
 
 start() {
+
 		ebegin "Starting ${SERVICE}"
-	        start-stop-daemon --start --quiet --exec /sbin/rpc.statd 1>&2
+	    start-stop-daemon --start --quiet --exec /sbin/rpc.statd 1>&2
+        mount -a -t nfs
+
 		if [ "$NFSSERVER" = "yes" ]
 		then
 		  start-stop-daemon --start --quiet --exec /sbin/exportfs -- -r 1>&2
@@ -21,7 +24,10 @@ start() {
 }
 
 stop() {
+
 		ebegin "Stopping ${SERVICE}"
+        umount -a -t nfs
+
 		if [ "$NFSSERVER" = "yes" ]
 		then
 		  start-stop-daemon --stop --quiet --exec /sbin/exportfs -- -au 1>&2

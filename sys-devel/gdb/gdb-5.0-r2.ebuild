@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.0-r2.ebuild,v 1.4 2001/02/07 21:04:43 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.0-r2.ebuild,v 1.5 2001/03/06 05:27:28 achim Exp $
 
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
@@ -10,15 +10,21 @@ SRC_URI="ftp://sourceware.cygnus.com/pub/gdb/releases/${A}
 	 ftp://ftp.freesoftware.com/pub/sourceware/gdb/releases/${A}"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2
-        sys-devel/gettext"
+        nls? ( sys-devel/gettext )"
 
 RDEPEND=">=sys-libs/ncurses-5.2-r2"
 
 HOMEPAGE="http://www.gnu.org/software/gdb/gdb.html"
 
 src_compile() {
+
+    local myconf
+    if [ -z "`use nls`" ]
+    then
+      myconf="--disable-nls"
+    fi
     try ./configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info \
-        --without-included-regex --without-included-gettext --host=${CHOST}
+        --without-included-regex --without-included-gettext --host=${CHOST} ${myconf}
     try make ${MAKEOPTS}
 
 }

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.2-r1.ebuild,v 1.4 2001/02/27 19:07:22 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.2-r1.ebuild,v 1.5 2001/03/06 05:27:28 achim Exp $
 
 A="$P.tar.gz glibc-linuxthreads-${PV}.tar.gz"
 S=${WORKDIR}/${P}
@@ -14,7 +14,7 @@ SRC_URI="ftp://sourceware.cygnus.com/pub/glibc/releases/glibc-${PV}.tar.gz
 	 ftp://ftp.gnu.org/pub/gnu/glibc/glibc-linuxthreads-${PV}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
-DEPEND="sys-devel/gettext gd? ( media-libs/libgd )"
+DEPEND="nls? ( sys-devel/gettext ) gd? ( media-libs/libgd )"
 
 RDEPEND="gd? ( sys-libs/zlib media-libs/libpng )"
 
@@ -25,14 +25,14 @@ src_unpack() {
     unpack glibc-${PV}.tar.gz
     cd ${S}
     unpack glibc-linuxthreads-${PV}.tar.gz
-    for i in mtrace-perl mtrace-tst-loading-perl configure.in configure
+    for i in mtrace-perl mtrace-tst-loading-perl posix-bug-regex2-mem-perl configure.in configure
     do
       echo "Applying $i patch..."
       patch -p0 < ${FILESDIR}/glibc-2.2.2-${i}.diff
     done
     cd io
     patch -p0 < ${FILESDIR}/glibc-2.2.2-test-lfs-timeout.patch
-    
+
 
 }
 
@@ -50,7 +50,11 @@ src_compile() {
 	else
 	  myconf="${myconf} --with-gd=no"
 	fi
-        rm -rf buildhere
+    if [ -z "`use nls`" ]
+    then
+      myconf="${myconf} --disable-nls"
+    fi
+    rm -rf buildhere
 	mkdir buildhere
 	cd buildhere
 	try ../configure --host=${CHOST} --without-cvs \
@@ -91,7 +95,7 @@ src_install() {
       dodoc BUGS ChangeLog* CONFORMANCE COPYING* FAQ INTERFACE NEWS NOTES \
 	  PROJECTS README*
     else
-      rm -rf ${D}/usr/share/{man,info}
+      rm -rf ${D}/usr/share/{man,info,zoneinfo}
     fi
 
     rm ${D}/lib/ld-linux.so.2

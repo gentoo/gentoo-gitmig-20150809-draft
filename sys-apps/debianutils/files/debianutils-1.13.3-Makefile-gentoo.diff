@@ -1,0 +1,8 @@
+--- Makefile.orig	Tue Feb 27 01:13:51 2001
++++ Makefile	Tue Feb 27 16:41:17 2001
+@@ -1,4 +1,4 @@
+-CFLAGS=-O2 -g -Wall
++CFLAGS+=-Wall
+ TARGETS=mktemp readlink run-parts tempfile
+ 
+ all:	$(TARGETS)

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.3h-r1.ebuild,v 1.2 2001/02/11 20:08:41 pete Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.3h-r1.ebuild,v 1.3 2001/03/06 05:27:28 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}/build_unix
@@ -18,7 +18,7 @@ src_compile() {
 
     try ../dist/configure \
 	--enable-compat185 --enable-dump185 \
-	--prefix=/usr --host=${CHOST} \
+	--prefix=/usr --host=${CHOST} --target=${CHOST} --build=${CHOST} \
 	--enable-shared --enable-static \
 	--enable-cxx
 	#--enable-rpc does not work

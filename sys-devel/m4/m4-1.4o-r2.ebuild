@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4o-r2.ebuild,v 1.3 2001/02/07 16:05:19 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4o-r2.ebuild,v 1.4 2001/03/06 05:27:28 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -10,16 +10,20 @@ SRC_URI="ftp://ftp.seindal.dk/gnu/${A}"
 HOMEPAGE="http://www.gnu.org/software/m4/m4.html"
 
 DEPEND="virtual/glibc
-        sys-devel/gettext
+        nls? ( sys-devel/gettext )
         >=sys-devel/libtool-1.3.5-r2"
 
 RDEPEND="virtual/glibc"
 
 src_compile() {
-
+    local myconf
+    if [ -z "`use nls`" ]
+    then
+        myconf="--disable-nls"
+    fi
     try ./configure --prefix=/usr --libexecdir=/usr/lib \
         --mandir=/usr/share/man --infodir=/usr/share/info \
-        --with-modules --host=${CHOST}
+        --with-modules --host=${CHOST} ${myconf}
     try make ${MAKEOPTS}
 }
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.10.91.0.2-r1.ebuild,v 1.1 2001/02/27 17:21:15 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.10.91.0.2-r1.ebuild,v 1.2 2001/03/06 05:27:28 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -17,7 +17,7 @@ src_compile() {
     then
       myconf="--disable-nls"
     fi
-	try ./configure --prefix=/usr --host=${CHOST} ${myconf}
+	try ./configure --prefix=/usr --mandir=/usr/share/man --host=${CHOST} ${myconf}
     if [ "`use static`" ]
     then
         try make -e LDFLAGS=-all-static ${MAKEOPTS}
@@ -28,11 +28,10 @@ src_compile() {
 
 src_install() {
 
-	try make prefix=${D}/usr install
+	try make prefix=${D}/usr mandir=${D}/usr/share/man install
 
     if [ -z "`use build`" ]
     then
-	    rm -rf ${D}/usr/share
 	    dodoc COPYING* README
 	    docinto bfd
         dodoc bfd/ChangeLog* bfd/COPYING bfd/README bfd/PORTING bfd/TODO
