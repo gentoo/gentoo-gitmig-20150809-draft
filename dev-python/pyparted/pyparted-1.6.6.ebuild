@@ -1,7 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/pyparted-1.6.6.ebuild,v 1.2 2004/05/05 07:33:05 dragonheart Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyparted/pyparted-1.6.6.ebuild,v 1.3 2004/05/07 22:09:24 kloeri Exp $
 
 RH_EXTRAVERSION="2"
 
@@ -17,10 +16,6 @@ IUSE=""
 
 # Needed to build...
 DEPEND=">=sys-apps/parted-1.6.9"
-
-RDEPEND="${DEPEND}"
-
-S="${WORKDIR}/${P}"
 
 src_unpack() {
 	rpm_src_unpack
