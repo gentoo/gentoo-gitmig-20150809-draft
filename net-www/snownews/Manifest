@@ -1,6 +1,4 @@
 MD5 dffd46174e78b327c834fc3e4b1cf848 metadata.xml 160
-MD5 ebfd7609f682dd9f720312db2e3765a8 ChangeLog 645
-MD5 70f501b203cd1bbdac63872ab22fa675 snownews-1.2.3.ebuild 703
 MD5 176a1ed67c5485db10871690e8b3208f snownews-1.3.4.ebuild 703
-MD5 ff228446227077a99799c1cfa56efa0a files/digest-snownews-1.2.3 65
+MD5 ebfd7609f682dd9f720312db2e3765a8 ChangeLog 645
 MD5 451d298ab4f951417f19b6cbbe96b8c6 files/digest-snownews-1.3.4 65
