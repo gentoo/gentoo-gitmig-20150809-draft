@@ -1,6 +1,14 @@
 # ChangeLog for x11-plugins/gkrellm-giFT
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-giFT/ChangeLog,v 1.6 2004/07/09 22:40:26 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-giFT/ChangeLog,v 1.7 2004/08/23 03:02:35 squinky86 Exp $
+
+*gkrellm-giFT-0.2.3 (22 Aug 2004)
+
+  22 Aug 2004; Jon Hood <squinky86@gentoo.org> +metadata.xml,
+  gkrellm-giFT-0.2.1.ebuild, gkrellm-giFT-0.2.2.ebuild,
+  +gkrellm-giFT-0.2.3.ebuild:
+  Version bump, fix #51477 (thanks Daniel Webert <rockoo@rockoo.homelinux.org>),
+  adding metadata.xml.
 
   09 Jul 2004; Tom Martin <slarti@gentoo.org> gkrellm-giFT-0.2.2.ebuild:
   Added to ~amd64.
