@@ -1,0 +1,27 @@
+diff -Naur xmms-nsf-0.0.3.orig/src/nes/Makefile.am xmms-nsf-0.0.3/src/nes/Makefile.am
+--- xmms-nsf-0.0.3.orig/src/nes/Makefile.am	2000-07-19 19:17:55.000000000 -0700
++++ xmms-nsf-0.0.3/src/nes/Makefile.am	2004-07-06 18:00:50.388728466 -0700
+@@ -21,3 +21,5 @@
+ 
+ EXTRA_DIST = license.txt COPYING
+ INCLUDES = @XMMS_CFLAGS@
++
++CFLAGS = -fPIC -DPIC @CFLAGS@
+diff -Naur xmms-nsf-0.0.3.orig/src/nes/device/Makefile.am xmms-nsf-0.0.3/src/nes/device/Makefile.am
+--- xmms-nsf-0.0.3.orig/src/nes/device/Makefile.am	2000-07-19 18:56:01.000000000 -0700
++++ xmms-nsf-0.0.3/src/nes/device/Makefile.am	2004-07-06 18:00:38.662674686 -0700
+@@ -19,4 +19,4 @@
+ sct_init.h \
+ sct_main.h
+ 
+-CFLAGS = -D_REENTRANT @CFLAGS@
++CFLAGS = -fPIC -DPIC -D_REENTRANT @CFLAGS@
+diff -Naur xmms-nsf-0.0.3.orig/src/xmms/Makefile.am xmms-nsf-0.0.3/src/xmms/Makefile.am
+--- xmms-nsf-0.0.3.orig/src/xmms/Makefile.am	2001-01-06 20:08:14.000000000 -0800
++++ xmms-nsf-0.0.3/src/xmms/Makefile.am	2004-07-06 18:01:05.425232876 -0700
+@@ -22,3 +22,5 @@
+ 
+ LIBS = @LIBS@ @XMMS_LIBS@
+ INCLUDES = @XMMS_CFLAGS@ @GTK_CFLAGS@
++
++CFLAGS = -fPIC -DPIC @CFLAGS@
