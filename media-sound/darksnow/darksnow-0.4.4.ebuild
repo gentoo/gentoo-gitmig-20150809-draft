@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/darksnow/darksnow-0.4.4.ebuild,v 1.1 2004/10/19 05:26:20 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/darksnow/darksnow-0.4.4.ebuild,v 1.2 2004/10/19 05:56:39 chriswhite Exp $
 
 
 DESCRIPTION="Streaming GTK2 Front-End based in Darkice Ice Streamer"
@@ -17,25 +17,19 @@ DEPEND=">=x11-libs/gtk+-2
 		>=media-sound/darkice-0.14"
 
 src_unpack() {
-		unpack ${A}
-		einfo "Patching Makefile..."
-		cd ${S}
+	unpack ${A}
+	einfo "Patching Makefile..."
+	cd ${S}
 
-		#fix some makefile issues
-		sed -i "s:^PREFIX=.*:PREFIX=${D}/usr:" Makefile
-		sed -i "s:^INTLPREFIX=.*:INTLPREFIX=${D}/usr:" Makefile
-		sed -i "s:^CFLAGS=:CFLAGS=${CFLAGS} :" Makefile
-
-		# sue me, I like funny things
-		sed -i "s:#CFLAGS+=-DFUNNY:CFLAGS+=-DFUNNY:" Makefile
+	#fix some makefile issues
+	sed -e "s:^PREFIX=.*:PREFIX=${D}/usr:" -e "s:^INTLPREFIX=.*:INTLPREFIX=${D}/usr:" -e "s:^CFLAGS=:CFLAGS=${CFLAGS} :" -i Makefile
 }
 
 src_compile() {
-		emake || die "Compilation failed"
+	emake || die "Compilation failed"
 }
 
 src_install () {
-		dobin darksnow
-		cd ${S}/documentation
-		dodoc *
+	dobin darksnow || die "could not install darksnow executable"
+	dodoc ${S}/documentation/*
 }
