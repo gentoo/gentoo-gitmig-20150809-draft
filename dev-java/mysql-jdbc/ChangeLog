@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/mysql-jdbc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mysql-jdbc/ChangeLog,v 1.3 2002/07/08 20:47:48 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mysql-jdbc/ChangeLog,v 1.4 2002/08/01 18:38:01 karltk Exp $
 
 *mysql-jdbc-2.0.14 (08 Jul 2002)
 
@@ -9,6 +9,10 @@
   New version, closes bug #3760.
 
 *mysql-jdbc-1.2.3-r1 (01 Feb 2002)
+
+  01 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> mysql-jdbc-1.2.3-r1.ebuild :
+
+  Added LICENSE, SLOT and KEYWORDS.
 
   01 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   

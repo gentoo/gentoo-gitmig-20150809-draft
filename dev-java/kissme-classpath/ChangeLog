@@ -1,8 +1,12 @@
 # ChangeLog for dev-java/kissme-classpath
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kissme-classpath/ChangeLog,v 1.1 2002/02/01 21:53:11 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kissme-classpath/ChangeLog,v 1.2 2002/08/01 18:40:31 karltk Exp $
 
 *kissme-classpath-0.19 (1 Feb 2002)
+
+  01 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> kissme-classpath-0.19.ebuild :
+
+  Added LICENSE, SLOT and KEYWORDS. Removed old versions.
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
