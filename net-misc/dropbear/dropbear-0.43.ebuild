@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-0.43.ebuild,v 1.3 2004/10/14 14:15:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-0.43.ebuild,v 1.4 2005/01/02 03:52:32 vapier Exp $
 
 inherit gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="http://matt.ucc.asn.au/dropbear/releases/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="amd64 arm hppa mips ppc x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc sh x86"
 IUSE="zlib multicall static"
 
 DEPEND="zlib? ( sys-libs/zlib )"
