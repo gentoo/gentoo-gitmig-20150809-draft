@@ -998,3 +998,8 @@ net-mail/spamassassin
 # sys-apps/baselayout-1.7.9-r2 with a modified /etc/services
 # waiting for approval from aliz@gentoo.org for cyrus-imapd additions
 =sys-apps/baselayout-1.7.9-r2
+
+# stroke@gentoo.org 16 Jul 2002
+# app-editors/bluefish-2002.06.23 gtk+2 port snapshot masked. (#5034)
+=app-editors/bluefish-2002.06.23
+	
