@@ -1,6 +1,13 @@
 # ChangeLog for dev-games/cel
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/ChangeLog,v 1.8 2004/07/17 21:20:26 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/ChangeLog,v 1.9 2004/12/25 08:56:14 vapier Exp $
+
+*cel-0.98.2 (25 Dec 2004)
+
+  25 Dec 2004; Mike Frysinger <vapier@gentoo.org>
+  -files/cel-20030413-install.patch, +cel-0.98.2.ebuild,
+  -cel-20030413-r2.ebuild, -cel-20040604.ebuild:
+  Version bump.
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> cel-20040604.ebuild:
   sync IUSE (+python)
