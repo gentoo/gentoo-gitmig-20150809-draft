@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/paxtest-0.9.5-r1.ebuild,v 1.6 2004/06/24 21:33:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/paxtest/paxtest-0.9.5-r1.ebuild,v 1.7 2004/06/25 19:28:26 vapier Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ RESTRICT="nostrip"
 FEATURES="-distcc"
 
 DESCRIPTION="PaX regression test suite"
-HOMEPAGE="http://pageexec.virtualave.net"
+HOMEPAGE="http://pageexec.virtualave.net/"
 SRC_URI="http://pageexec.virtualave.net/paxtest-${PV}.tar.gz"
 
 LICENSE="GPL-2"
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-apps/chpax-0.5"
 
 src_unpack() {
@@ -34,7 +34,7 @@ src_compile() {
 
 src_install() {
 	emake DESTDIR=${D} BINDIR=/usr/bin RUNDIR=/usr/lib/paxtest install
-	for doc in Changelog LICENCE README ;do
+	for doc in Changelog README ;do
 		[ -f "${doc}" ] && dodoc ${doc}
 	done
 }
