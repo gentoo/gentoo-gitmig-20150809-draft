@@ -1,10 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/use.mask,v 1.3 2004/11/25 03:12:55 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/use.mask,v 1.4 2004/12/11 16:17:19 solar Exp $
 
 # Chris PeBenito <pebenito@gentoo.org>
 # must use a SELinux profile
 selinux
+
+# uclibc only in uclibc profiles.
 uclibc
+
 # aqua USE flag is only valid on Mac OS X
 aqua
+
+# We don't have any ppc sub profiles yet. bug #74103
+altivec
