@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mac-fdisk/mac-fdisk-0.1-r2.ebuild,v 1.1 2004/06/01 20:31:46 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mac-fdisk/mac-fdisk-0.1-r2.ebuild,v 1.2 2004/06/02 03:22:54 mr_bones_ Exp $
 
 inherit eutils
 
@@ -21,16 +21,16 @@ src_unpack() {
 	mv mac-fdisk-${PV}.orig ${P}
 	cd ${S}
 	cat ${DISTDIR}/mac-fdisk_${PV}-${DEBRV}.diff.gz | gzip -dc | patch -p1 || die
-	
+
 	# Hard code 2.4 headers in mac-fdisk itself - if no maintainer is found, macfdisk should
 	# be deprecated in favor or parted
-	
+
 	[ `use ppc` ] && epatch ${FILESDIR}/mac-fdisk-ppc.patch
 	[ `use ppc64` ] && epatch ${FILESDIR}/mac-fdisk-ppc64.patch
-	
+
 	# this can be applied on ppc32 too:
 	[ `use ppc64` ] && epatch ${FILESDIR}/mac-fdisk-ppc64-1.patch
-	
+
 	cd ${WORKDIR}
 	chown -R 0:0 *
 	chmod -R a+r-w+X,u+w *
