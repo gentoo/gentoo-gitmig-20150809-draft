@@ -1,31 +1,21 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6081e87d852836152f40fc4195cf448c ChangeLog 15347
+MD5 7d66d0440982adbc0c5eb8e6440271f4 ChangeLog 15449
 MD5 37236013e0d26d43c6bff35a8a48e8ec metadata.xml 220
 MD5 b2bb47be1c71efedd650243576212700 openssl-0.9.6m.ebuild 3088
-MD5 a5a3e6682c17e1ee6d679f67d162a15a openssl-0.9.7d.ebuild 7801
-MD5 f486886e3b46bc6502733a497592cac1 openssl-0.9.7d-r1.ebuild 8558
-MD5 bbe66c466cbc610d084fec22d3b81726 openssl-0.9.7d-r2.ebuild 8902
 MD5 8348f8cb6117f6228e58d01f3625c2e2 openssl-0.9.7c-r1.ebuild 7021
 MD5 9eb521df91b2ae08a45484d1986e44e4 openssl-0.9.7c.ebuild 4961
+MD5 f486886e3b46bc6502733a497592cac1 openssl-0.9.7d-r1.ebuild 8558
+MD5 a5a3e6682c17e1ee6d679f67d162a15a openssl-0.9.7d.ebuild 7801
+MD5 071b029b82d98bc165cfd7584a5c40d2 openssl-0.9.7d-r2.ebuild 8897
+MD5 744b358cd3b68b2ca6561c214c541fc0 files/addppc64support.diff 1327
 MD5 2e6ed24d513a8f2b1b6f03709ab5ba18 files/digest-openssl-0.9.6m 67
-MD5 897d293325315cdeeb390745ed5cdd1b files/digest-openssl-0.9.7d 134
-MD5 cebd09d1819c07b0fab14ad90b0da884 files/openssl-0.9.6m-gentoo.diff 1591
-MD5 7483d6f0412e857e9063dce4aecf2991 files/openssl-0.9.7d-gentoo.diff 936
 MD5 8ad6215b1b4c9d53c435ceff6b537e35 files/digest-openssl-0.9.7c 134
 MD5 f8b9ae9e3ed08f964620aa832aec4d0c files/digest-openssl-0.9.7c-r1 134
-MD5 b901850df9952252974316e78775673b files/openssl-0.9.6-mips.diff 1487
-MD5 744b358cd3b68b2ca6561c214c541fc0 files/addppc64support.diff 1327
+MD5 897d293325315cdeeb390745ed5cdd1b files/digest-openssl-0.9.7d 134
 MD5 897d293325315cdeeb390745ed5cdd1b files/digest-openssl-0.9.7d-r1 134
-MD5 91854bcd6c83f040927d490b104bb5a0 files/openssl-0.9.7d-smime.patch 641
-MD5 f804ea4df3b388d22451cde6e9458f2b files/openssl-0.9.7c-tempfile.patch 2178
-MD5 897d293325315cdeeb390745ed5cdd1b files/digest-openssl-0.9.7d-r2 134
+MD5 b901850df9952252974316e78775673b files/openssl-0.9.6-mips.diff 1487
+MD5 cebd09d1819c07b0fab14ad90b0da884 files/openssl-0.9.6m-gentoo.diff 1591
 MD5 7483d6f0412e857e9063dce4aecf2991 files/openssl-0.9.7c-gentoo.diff 936
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBi5hamdTrptrqvGERAnTAAJ4wYmVgEi6baGUUoeD16qaWtGeY4QCfSFA8
-Og5nqtCgo/4vd3hpu2doWP0=
-=Ccc/
------END PGP SIGNATURE-----
+MD5 7483d6f0412e857e9063dce4aecf2991 files/openssl-0.9.7d-gentoo.diff 936
+MD5 91854bcd6c83f040927d490b104bb5a0 files/openssl-0.9.7d-smime.patch 641
+MD5 897d293325315cdeeb390745ed5cdd1b files/digest-openssl-0.9.7d-r2 134
+MD5 f804ea4df3b388d22451cde6e9458f2b files/openssl-0.9.7c-tempfile.patch 2178
