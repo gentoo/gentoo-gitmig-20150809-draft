@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.25 2004/06/17 09:51:14 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.26 2004/06/24 15:45:01 mholzer Exp $
+
+  24 Jun 2004; Martin Holzer <mholzer@gentoo.org> e2fsprogs-1.35.ebuild:
+  x86 stable
 
   17 Jun 2004; Alexander Gabert <pappy@gentoo.org> e2fsprogs-1.35.ebuild:
   building e2fsprogs on sparc results in silo failing because libext2 is linked
