@@ -8,7 +8,7 @@ LICENSE="LGPL-2.1"
 DEPEND=""
 RDEPEND=""
 IUSE=""
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 SLOT=0
 
 src_compile() {
