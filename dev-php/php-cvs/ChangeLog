@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/php-cvs
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cvs/ChangeLog,v 1.4 2003/06/30 21:18:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cvs/ChangeLog,v 1.5 2003/10/08 19:06:51 coredumb Exp $
+
+*php-cvs-5.0-r2 (08 Oct 2003)
+
+  08 Oct 2003; Tal Peer <coredumb@gentoo.org> php-cvs-5.0-r2.ebuild:
+  Fixed installation of libphp5.so
+  Finally changed the ebuild to use the new CVS modules structure on cvs.php.net.
 
 *php-cvs-5.0-r1 (30 Jun 2003)
 
