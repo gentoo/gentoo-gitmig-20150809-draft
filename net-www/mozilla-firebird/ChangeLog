@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mozilla-firebird
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/ChangeLog,v 1.37 2004/02/07 19:49:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firebird/ChangeLog,v 1.38 2004/02/12 20:31:15 agriffis Exp $
+
+  12 Feb 2004; Aron Griffis <agriffis@gentoo.org> files/MozillaFirebird:
+  Fix bug 41074 by allowing multiple urls and url|url syntax
 
   07 Feb 2004; Aron Griffis <agriffis@gentoo.org> files/MozillaFirebird:
   Fix bug 39797 by scanning for Firebirds running on attached screens prior to
