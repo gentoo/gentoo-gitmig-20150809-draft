@@ -1,8 +1,11 @@
 # ChangeLog for x11-plugins/wmsensormon
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsensormon/ChangeLog,v 1.2 2003/02/12 09:43:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmsensormon/ChangeLog,v 1.3 2003/04/01 22:19:56 spider Exp $
 
 *wmsensormon-1.2_beta (28 Jan 2003)
+
+  02 apr 2003; <spider@gentoo.org> wmsensormon-1.2_beta.ebuild:
+  removed xpm dependency, bug 1446
 
   28 Jan 2003; Nick Hadaway <raker@gentoo.org> wmsensormon-1.2_beta.ebuild,
   files/digest-wmsensormon-1.2_beta :
