@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2.ebuild,v 1.6 2003/03/28 10:58:16 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2.ebuild,v 1.7 2003/03/28 22:08:18 liquidx Exp $
 
-inherit flag-o-matic
+inherit flag-o-matic libtool
 
 DESCRIPTION="Red Hat Package Management Utils"
 SRC_URI="ftp://ftp.rpm.org/pub/rpm/dist/rpm-4.2.x/${P}.tar.gz"
@@ -24,6 +24,8 @@ RDEPEND="=sys-libs/db-3.2*
 strip-flags
 
 src_compile() {
+	elibtoolize
+
 	unset LD_ASSUME_KERNEL
 	local myconf
 	myconf="--enable-posixmutexes --without-javaglue"
