@@ -1,0 +1,10 @@
+# ChangeLog for x11-misc/wmakerconf
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmakerconf/ChangeLog,v 1.1 2002/04/02 06:06:21 seemant Exp $
+
+*wmakerconf-2.8.1-r1
+
+  1 Apr 2002; Seemant Kulleen <seemant@gentoo.org> wmakerconf-2.8.1-r1.ebuild :
+
+  Fixed sandbox violations and corrected the dependencies and USE dependent
+  compilations.
