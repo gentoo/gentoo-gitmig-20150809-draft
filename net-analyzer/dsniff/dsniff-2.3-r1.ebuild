@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.3-r1.ebuild,v 1.4 2003/09/03 00:49:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/dsniff-2.3-r1.ebuild,v 1.5 2004/04/08 06:56:39 vapier Exp $
 
 inherit eutils
 
@@ -24,8 +24,7 @@ KEYWORDS="~x86 ~alpha"
 RDEPEND=">=net-libs/libpcap-0.7.1
 	<net-libs/libnet-1.1
 	>=net-libs/libnet-1.0.2a-r3
-	<net-libs/libnids-1.17
-	>=net-libs/libnids-1.16-r1
+	>=net-libs/libnids-1.18
 	>=dev-libs/openssl-0.9.6e"
 
 # dependencies only for building our own sys-libs/db
@@ -45,7 +44,10 @@ src_unpack() {
 	# Data stuff goes into /etc/dsniff
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-libnet-1.0.patch
-	sed -i "s:lib':':" configure || die "sed configure"
+	sed -i \
+		-e 's:-ldb:-ldb -lpthread:' \
+		-e "s:lib':':" \
+		configure || die "sed configure"
 	sed -i 's:-DDSNIFF_LIBDIR=\\\"$(libdir)/\\\"::' Makefile.in || die "sed makefile"
 	sed -i 's:/usr/local/lib:/etc/dsniff:' pathnames.h || die "sed pathnames"
 	epatch ${FILESDIR}/${PV}-makefile.patch

@@ -42,41 +42,12 @@ diff -U 0 -r dsniff-2.3.orig/configure dsniff-2.3/configure
 +  elif test -f /usr/include/libnet-1.0.h; then
 +     CFLAGS="$CFLAGS `libnet-1.0-config --defines`"
 +     LNETLIB="-lnet-1.0"
-@@ -3115 +3115 @@
--     if test -f $withval/src/nids.h -a -f $withval/src/libnids.a; then
-+     if test -f $withval/src/nids-1.0.h -a -f $withval/src/libnids-1.0.a; then
-@@ -3119,2 +3119,2 @@
--	NIDSLIB="-L$withval/src -lnids"
--     elif test -f $withval/include/nids.h -a -f $withval/lib/libnids.a; then
-+	NIDSLIB="-L$withval/src -lnids-1.0"
-+     elif test -f $withval/include/nids-1.0.h -a -f $withval/lib/libnids-1.0.a; then
-@@ -3124 +3124 @@
--	NIDSLIB="-L$withval/lib -lnids"
-+	NIDSLIB="-L$withval/lib -lnids-1.0"
-@@ -3126 +3126 @@
--        { echo "configure: error: nids.h or libnids.a not found in $withval" 1>&2; exit 1; }
-+        { echo "configure: error: nids-1.0.h or libnids-1.0.a not found in $withval" 1>&2; exit 1; }
-@@ -3131 +3131 @@
--   if test -f ${prefix}/include/nids.h; then
-+   if test -f ${prefix}/include/nids-1.0.h; then
-@@ -3133,3 +3133,3 @@
--     NIDSLIB="-L${prefix}/lib -lnids"
--  elif test -f /usr/include/nids.h; then
--     NIDSLIB="-lnids"
-+     NIDSLIB="-L${prefix}/lib -lnids-1.0"
-+  elif test -f /usr/include/nids-1.0.h; then
-+     NIDSLIB="-lnids-1.0"
-@@ -3151 +3151 @@
--#include <nids.h>
-+#include <nids-1.0.h>
 diff -U 0 -r dsniff-2.3.orig/decode_portmap.c dsniff-2.3/decode_portmap.c
 --- dsniff-2.3.orig/decode_portmap.c	2000-12-15 15:13:29.000000000 -0500
 +++ dsniff-2.3/decode_portmap.c	2003-08-19 14:51:56.350596720 -0400
-@@ -18,2 +18,2 @@
+@@ -18,1 +18,1 @@
 -#include <libnet.h>
--#include <nids.h>
 +#include <libnet-1.0.h>
-+#include <nids-1.0.h>
 diff -U 0 -r dsniff-2.3.orig/dnsspoof.c dsniff-2.3/dnsspoof.c
 --- dsniff-2.3.orig/dnsspoof.c	2000-11-19 14:39:40.000000000 -0500
 +++ dsniff-2.3/dnsspoof.c	2003-08-19 14:51:56.183622104 -0400
@@ -86,19 +57,15 @@ diff -U 0 -r dsniff-2.3.orig/dnsspoof.c dsniff-2.3/dnsspoof.c
 diff -U 0 -r dsniff-2.3.orig/dsniff.c dsniff-2.3/dsniff.c
 --- dsniff-2.3.orig/dsniff.c	2000-12-01 16:27:15.000000000 -0500
 +++ dsniff-2.3/dsniff.c	2003-08-19 14:51:56.352596416 -0400
-@@ -21,2 +21,2 @@
+@@ -21,1 +21,1 @@
 -#include <libnet.h>
--#include <nids.h>
 +#include <libnet-1.0.h>
-+#include <nids-1.0.h>
 diff -U 0 -r dsniff-2.3.orig/filesnarf.c dsniff-2.3/filesnarf.c
 --- dsniff-2.3.orig/filesnarf.c	2000-12-15 15:16:58.000000000 -0500
 +++ dsniff-2.3/filesnarf.c	2003-08-19 14:51:56.357595656 -0400
-@@ -22,2 +22,2 @@
+@@ -22,1 +22,1 @@
 -#include <libnet.h>
--#include <nids.h>
 +#include <libnet-1.0.h>
-+#include <nids-1.0.h>
 diff -U 0 -r dsniff-2.3.orig/macof.c dsniff-2.3/macof.c
 --- dsniff-2.3.orig/macof.c	2000-11-14 10:50:55.000000000 -0500
 +++ dsniff-2.3/macof.c	2003-08-19 14:51:56.192620736 -0400
@@ -108,19 +75,15 @@ diff -U 0 -r dsniff-2.3.orig/macof.c dsniff-2.3/macof.c
 diff -U 0 -r dsniff-2.3.orig/mailsnarf.c dsniff-2.3/mailsnarf.c
 --- dsniff-2.3.orig/mailsnarf.c	2000-11-19 14:39:41.000000000 -0500
 +++ dsniff-2.3/mailsnarf.c	2003-08-19 14:51:56.361595048 -0400
-@@ -21,2 +21,2 @@
+@@ -21,1 +21,1 @@
 -#include <libnet.h>
--#include <nids.h>
 +#include <libnet-1.0.h>
-+#include <nids-1.0.h>
 diff -U 0 -r dsniff-2.3.orig/msgsnarf.c dsniff-2.3/msgsnarf.c
 --- dsniff-2.3.orig/msgsnarf.c	2000-12-15 15:12:19.000000000 -0500
 +++ dsniff-2.3/msgsnarf.c	2003-08-19 14:51:56.369593832 -0400
-@@ -20,2 +20,2 @@
+@@ -20,1 +20,1 @@
 -#include <libnet.h>
--#include <nids.h>
 +#include <libnet-1.0.h>
-+#include <nids-1.0.h>
 diff -U 0 -r dsniff-2.3.orig/record.c dsniff-2.3/record.c
 --- dsniff-2.3.orig/record.c	2000-11-14 10:51:02.000000000 -0500
 +++ dsniff-2.3/record.c	2003-08-19 14:51:56.206618608 -0400
@@ -154,19 +117,15 @@ diff -U 0 -r dsniff-2.3.orig/tcpnice.c dsniff-2.3/tcpnice.c
 diff -U 0 -r dsniff-2.3.orig/trigger.c dsniff-2.3/trigger.c
 --- dsniff-2.3.orig/trigger.c	2000-11-19 16:44:29.000000000 -0500
 +++ dsniff-2.3/trigger.c	2003-08-19 14:51:56.376592768 -0400
-@@ -15,2 +15,2 @@
+@@ -15,1 +15,1 @@
 -#include <libnet.h>
--#include <nids.h>
 +#include <libnet-1.0.h>
-+#include <nids-1.0.h>
 diff -U 0 -r dsniff-2.3.orig/urlsnarf.c dsniff-2.3/urlsnarf.c
 --- dsniff-2.3.orig/urlsnarf.c	2000-12-18 21:53:36.000000000 -0500
 +++ dsniff-2.3/urlsnarf.c	2003-08-19 14:51:56.378592464 -0400
-@@ -24,2 +24,2 @@
+@@ -24,1 +24,1 @@
 -#include <libnet.h>
--#include <nids.h>
 +#include <libnet-1.0.h>
-+#include <nids-1.0.h>
 diff -U 0 -r dsniff-2.3.orig/webmitm.c dsniff-2.3/webmitm.c
 --- dsniff-2.3.orig/webmitm.c	2000-12-03 00:13:28.000000000 -0500
 +++ dsniff-2.3/webmitm.c	2003-08-19 14:51:56.229615112 -0400
@@ -176,8 +135,6 @@ diff -U 0 -r dsniff-2.3.orig/webmitm.c dsniff-2.3/webmitm.c
 diff -U 0 -r dsniff-2.3.orig/webspy.c dsniff-2.3/webspy.c
 --- dsniff-2.3.orig/webspy.c	2000-11-14 10:51:04.000000000 -0500
 +++ dsniff-2.3/webspy.c	2003-08-19 14:51:56.381592008 -0400
-@@ -24,2 +24,2 @@
+@@ -24,1 +24,1 @@
 -#include <libnet.h>
--#include <nids.h>
 +#include <libnet-1.0.h>
-+#include <nids-1.0.h>

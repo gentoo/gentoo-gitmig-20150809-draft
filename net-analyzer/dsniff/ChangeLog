@@ -1,8 +1,11 @@
 # ChangeLog for net-analyzer/dsniff
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/ChangeLog,v 1.6 2003/08/26 04:20:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/dsniff/ChangeLog,v 1.7 2004/04/08 06:56:39 vapier Exp $
 
 *dsniff-2.3-r1 (21 Aug 2003)
+
+  08 Apr 2004; Mike Frysinger <vapier@gentoo.org> :
+  Cleanup patch so that dsniff will use a newer version of nids #43370 by Magnus Maatta.
 
   26 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
   Add patch to fix linking order #27267.
