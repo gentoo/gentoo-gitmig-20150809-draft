@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/m17n-db
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-db/ChangeLog,v 1.1 2004/05/16 12:32:15 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/m17n-db/ChangeLog,v 1.2 2004/06/14 16:56:45 usata Exp $
+
+  15 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> m17n-db-1.0.2.ebuild:
+  Stable on x86
 
 *m17n-db-1.0.2 (16 May 2004)
 
