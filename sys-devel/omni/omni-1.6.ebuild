@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/omni/omni-1.6.ebuild,v 1.2 2004/02/11 08:31:02 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/omni/omni-1.6.ebuild,v 1.3 2004/06/24 02:57:22 agriffis Exp $
 
 IUSE="java doc"
 
@@ -45,7 +45,7 @@ src_compile() {
 	myconf=""
 
 	# There is no configure script for the doc
-	if [ ! `use doc` ]  ; then
+	if ! use doc  ; then
 	    dosed s/doc// Makefile.in
 	fi
 
