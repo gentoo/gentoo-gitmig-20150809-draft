@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/vsftpd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.31 2004/06/04 03:53:24 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.32 2004/06/05 20:05:56 hansmi Exp $
+
+  05 Jun 2004; Michael Hanselmann <hansmi@gentoo.org> vsftpd-1.2.1.ebuild:
+  Added ~ppc to KEYWORDS.
 
   03 Jun 2004; Tom Gall <tgall@gentoo.org> vsftpd-1.2.1.ebuild:
   stable on ppc64, bug #52907
