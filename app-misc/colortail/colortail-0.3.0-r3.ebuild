@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/colortail/colortail-0.3.0-r3.ebuild,v 1.12 2004/06/24 22:06:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/colortail/colortail-0.3.0-r3.ebuild,v 1.13 2004/12/06 17:48:02 ka0ttic Exp $
 
-inherit gcc eutils
+inherit toolchain-funcs eutils
 
 DESCRIPTION="Colortail custom colors your log files and works like tail"
-HOMEPAGE="http://www.student.hk-r.se/~pt98jan/colortail.html"
-SRC_URI="http://www.student.hk-r.se/~pt98jan/colortail-0.3.0.tar.gz"
+# bug 73512 - package doesn't seem to have a valid home page
+HOMEPAGE="http://web.archive.org/web/20030411093805/www.student.hk-r.se/~pt98jan/colortail.html"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -20,7 +21,7 @@ src_unpack() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die
+	make DESTDIR=${D} install || die "make install failed"
 	dodoc README example-conf/conf*
 	dodir /usr/bin/wrappers
 	dosym /usr/bin/colortail /usr/bin/wrappers/tail
