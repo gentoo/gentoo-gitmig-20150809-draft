@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/nsplugins.eclass,v 1.6 2002/12/13 20:50:33 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/nsplugins.eclass,v 1.7 2002/12/23 20:35:38 azarah Exp $
 # Just some re-usable functions for the netscape/moz plugins sharing
 
 ECLASS=nsplugins
@@ -16,8 +16,9 @@ PLUGINS_DIR="nsbrowser/plugins"
 # the full path (without $D) to old plugin dir.
 src_mv_plugins() {
 
-	# Move plugins dir
-	dodir /usr/lib/${PLUGINS_DIR}
+	# Move plugins dir.  We use keepdir so that it might not be unmerged
+	# by mistake ...
+	keepdir /usr/lib/${PLUGINS_DIR}
 	cp -a ${D}/$1/* ${D}/usr/lib/${PLUGINS_DIR}
 	rm -rf ${D}/$1
 	dosym ../${PLUGINS_DIR} $1
