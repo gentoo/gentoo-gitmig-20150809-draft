@@ -1,13 +1,16 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.4 2002/03/05 15:22:58 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.5 2002/03/11 03:56:49 woodchip Exp $
+
+  10 March 2002; Donny Davies <woodchip@gentoo.org> files/samba.rc6 :
+
+  Tweak initscript to kill the daemons via pidfile.
 
 *samba-2.2.3a-r1 (5 March 2002)
 
   5 March 2002; M.Schlemmer <azarah@gentoo.org> samba-2.2.3a-r1.ebuild,
-                                                samba-2.2.3a-loadparm.c.patch,
-						samba-2.2.3a-proto.c.patch,
-						samba-2.2.3a-reply.h.patch
+  samba-2.2.3a-loadparm.c.patch, samba-2.2.3a-proto.c.patch,
+  samba-2.2.3a-reply.h.patch :
 
   Move the patches to ${FILESDIR}, as they have the same names as those for
   2.2.2, but is not the same, thus ibiblio do not cache the new ones, and
