@@ -1,43 +1,44 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.4-r1.ebuild,v 1.12 2004/07/01 07:55:56 eradicator Exp $
-
-IUSE="doc zlib bindist"
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/freetype-2.1.9.ebuild,v 1.1 2004/07/20 00:31:05 foser Exp $
 
 inherit eutils flag-o-matic
 
 SPV="`echo ${PV} | cut -d. -f1,2`"
+
 DESCRIPTION="A high-quality and portable font engine"
+HOMEPAGE="http://www.freetype.org/"
 SRC_URI="mirror://sourceforge/freetype/${P/_/}.tar.bz2
 	doc? ( mirror://sourceforge/${PN}/ftdocs-${PV}.tar.bz2 )"
 
-HOMEPAGE="http://www.freetype.org/"
-
 SLOT="2"
-LICENSE="FTL | GPL-2"
-KEYWORDS="~x86 ppc ~sparc alpha hppa ia64 ~mips amd64"
+LICENSE="FTL GPL-2"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~ia64 ~amd64 ~ppc64"
+#IUSE="zlib bindist cjk doc"
+IUSE="zlib bindist doc"
 
 DEPEND="virtual/libc
 	zlib? ( sys-libs/zlib )"
 
 src_unpack() {
+
 	unpack ${A}
 
 	cd ${S}
-	# Slight Hint patch from Redhat
-	epatch ${FILESDIR}/${SPV}/${PN}-2.1.3-slighthint.patch
+	# add autohint patch from http://www.kde.gr.jp/~akito/patch/freetype2/
+	# FIXME : patch hasn't been updated yet
+	# use cjk && epatch ${FILESDIR}/${SPV}/${P}-autohint-cjkfonts-20031130.patch
+
 }
 
 src_compile() {
-	local myconf
 
-	use zlib \
-		&& myconf="${myconf} --with-zlib" \
-		|| myconf="${myconf} --without-zlib"
+	# https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=118021
+	append-flags "-fno-strict-aliasing"
 
 	use bindist || append-flags "${CFLAGS} -DTT_CONFIG_OPTION_BYTECODE_INTERPRETER"
 
-	make setup CFG="--host=${CHOST} --prefix=/usr ${myconf}" unix || die
+	make setup CFG="--host=${CHOST} --prefix=/usr `use_with zlib`" unix || die
 
 	emake || die
 
@@ -46,13 +47,17 @@ src_compile() {
 	then
 		ewarn "Bytecode Interpreter is disabled."
 	fi
+
 }
 
 src_install() {
-	make prefix=${D}/usr install || die
+
+	# make prefix=${D}/usr install || die
+	make DESTDIR=${D} install || die
 
 	dodoc ChangeLog README
-	dodoc docs/{CHANGES,*.txt,PATENTS,TODO}
+	dodoc docs/{CHANGES,CUSTOMIZE,DEBUG,*.txt,PATENTS,TODO}
 
 	use doc && dohtml -r docs/*
+
 }
