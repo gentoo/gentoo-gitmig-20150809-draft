@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/fakeidentd/fakeidentd-1.7-r1.ebuild,v 1.1 2003/02/03 06:59:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/fakeidentd/fakeidentd-1.7-r1.ebuild,v 1.2 2003/02/10 07:25:28 vapier Exp $
 
 # This identd is nearly perfect for a NAT box. It runs in one
 # process (doesn't fork()) and isnt very susceptible to DOS attack.
@@ -23,6 +23,9 @@ src_unpack() {
 }
 
 src_compile() {
+	cp identd.c{,.old}
+	sed -e "s:identd.pid:${PN}.pid:" \
+		identd.c.old > identd.c
 	gcc identd.c -o ${PN} ${CFLAGS} || die
 }
 
