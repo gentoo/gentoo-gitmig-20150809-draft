@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4-r1.ebuild,v 1.4 2004/01/05 10:43:21 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.1-r1.ebuild,v 1.1 2004/01/05 10:43:21 robbat2 Exp $
 
 DESCRIPTION="sophisticated Object-Relational DBMS."
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.postgresql.org/"
 LICENSE="POSTGRESQL"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~amd64 ~hppa"
-IUSE="ssl nls java python tcltk perl libg++ pam readline zlib doc pg-hier"
+IUSE="ssl nls java python tcltk perl libg++ pam readline zlib doc pg-hier pg-vacuumdelay pg-intdatetime"
 
 DEPEND="virtual/glibc
 	sys-devel/autoconf
@@ -71,11 +71,16 @@ check_java_config() {
 src_unpack() {
 	unpack ${A} || die
 	epatch ${FILESDIR}/${P}-gentoo.patch
-	if [ "`use pg-hier`" ]; then
+	if use pg-hier; then
 		cd ${WORKDIR} || die
 		mv readme.html README-${P_HIERPG}.html || die
 		cd ${S} || die
 		epatch ${WORKDIR}/${P_HIERPG}.diff
+	fi
+
+	if use pg-vacuumdelay; then
+		cd ${S} || die
+		epatch ${FILESDIR}/${P}-vacuum-delay.patch
 	fi
 }
 
@@ -99,6 +104,7 @@ src_compile() {
 	use pam && myconf="$myconf --with-pam"
 	use readline || myconf="$myconf --without-readline"
 	use zlib || myconf="$myconf --without-zlib"
+	use pg-intdatetime && myconf="$myconf --enable-integer-datetimes"
 
 	# these are the only working CFLAGS I could get on ppc, so locking them
 	# down, anything more aggressive fails (i.e. -mcpu or -Ox)
@@ -109,6 +115,7 @@ src_compile() {
 		--mandir=/usr/share/man \
 		--host=${CHOST} \
 		--docdir=/usr/share/doc/${PF} \
+		--includedir=/usr/include/postgresql/pgsql \
 		--libdir=/usr/lib \
 		--enable-depend \
 		--with-gnu-ld \
@@ -121,8 +128,7 @@ src_compile() {
 }
 
 src_install() {
-	if [ "`use perl`" ]
-	then
+	if use perl; then
 		mv ${S}/src/pl/plperl/Makefile ${S}/src/pl/plperl/Makefile_orig
 		sed -e "s:(INST_DYNAMIC) /usr/lib:(INST_DYNAMIC) ${D}/usr/lib:" \
 			${S}/src/pl/plperl/Makefile_orig > ${S}/src/pl/plperl/Makefile
@@ -136,7 +142,7 @@ src_install() {
 	cd ${S}/contrib
 	make DESTDIR=${D} LIBDIR=${D}/usr/lib install || die
 	cd ${S}
-	if [ "`use pg-hier`" ]; then
+	if use pg-hier; then
 		dodoc ${WORKDIR}/README-${P_HIERPG}.html || die
 	fi
 	dodoc README HISTORY
@@ -149,13 +155,9 @@ src_install() {
 		rm ${D}/usr/share/postgresql/java/postgresql.jar
 	fi
 
-
-	dodir /usr/include/postgresql/pgsql
-	cp ${D}/usr/include/*.h ${D}/usr/include/postgresql/pgsql
-
 	cd ${S}/doc
 	dodoc FAQ* README.* TODO bug.template
-	if [ "`use doc`" ]; then
+	if use doc; then
 		cd ${S}/doc
 		docinto FAQ_html || die
 		dodoc src/FAQ/* || die
@@ -170,9 +172,11 @@ src_install() {
 	cd ${S}
 	exeinto /etc/init.d/
 	newexe ${FILESDIR}/postgresql.init-${PV} postgresql || die
+	newexe ${FILESDIR}/pg_autovacuum.init-${PV} pg_autovacuum || die
 
 	insinto /etc/conf.d/
 	newins ${FILESDIR}/postgresql.conf-${PV} postgresql || die
+	newins ${FILESDIR}/pg_autovacuum.conf-${PV} pg_autovacuum || die
 }
 
 pkg_postinst() {

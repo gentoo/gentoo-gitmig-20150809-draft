@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/postgresql
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.77 2004/01/03 19:15:42 nakano Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.78 2004/01/05 10:43:21 robbat2 Exp $
+
+*postgresql-7.4.1-r1 (05 Jan 2004)
+
+  05 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> postgresql-7.4-r2.ebuild,
+  postgresql-7.4.1-r1.ebuild:
+  fix bug #34605. no response from postgres herd so fixing it myself
 
   03 Jan 2004; Masatomo Nakano <nakano@gentoo.org> postgresql-7.3.5.ebuild:
   Marked as stable.
