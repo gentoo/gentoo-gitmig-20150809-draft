@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-2.2.ebuild,v 1.8 2004/07/02 05:03:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ccache-2.2.ebuild,v 1.9 2005/01/21 05:36:37 gongloo Exp $
 
 DESCRIPTION="ccache is a fast compiler cache. It is used as a front end to your
 compiler to safely cache compilation output. When the same code is compiled
