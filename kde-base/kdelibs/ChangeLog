@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.135 2004/04/25 03:34:39 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.136 2004/04/27 21:31:35 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> kdelibs-3.1.5.ebuild,
+  kdelibs-3.2.0.ebuild, kdelibs-3.2.2.ebuild:
+  Add inherit eutils
 
   24 Apr 2004; Bret Curtis <psi29a@gentoo.org> kdelibs-3.2.2.ebuild:
   Added to ~mips

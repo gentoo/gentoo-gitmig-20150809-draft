@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.101 2004/04/27 08:47:51 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.102 2004/04/27 21:32:42 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> kdemultimedia-3.2.0.ebuild:
+  Add inherit eutils
 
   20 Apr 2004; Caleb Tennis <caleb@gentoo.org>
   -files/kdemultimedia-3.0.5b-gentoo-timidity.diff,

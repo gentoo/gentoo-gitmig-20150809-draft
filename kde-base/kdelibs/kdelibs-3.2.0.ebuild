@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0.ebuild,v 1.13 2004/03/03 15:30:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.2.0.ebuild,v 1.14 2004/04/27 21:31:35 agriffis Exp $
 
-inherit kde
+inherit kde eutils
 
 need-autoconf 2.5
 set-kdedir ${PV}

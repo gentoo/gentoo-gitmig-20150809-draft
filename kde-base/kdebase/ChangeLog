@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.126 2004/04/25 03:36:16 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.127 2004/04/27 21:27:03 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> kdebase-3.2.0.ebuild,
+  kdebase-3.2.1.ebuild, kdebase-3.2.2.ebuild:
+  Add inherit eutils
 
 *kdebase-3.2.2 (24 Apr 2004)
 

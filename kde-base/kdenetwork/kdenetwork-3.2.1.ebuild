@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.2.1.ebuild,v 1.6 2004/04/17 08:31:52 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.2.1.ebuild,v 1.7 2004/04/27 21:33:50 agriffis Exp $
 
-inherit kde-dist
+inherit kde-dist eutils
 
 DESCRIPTION="KDE network apps: kopete, kppp, kget. kmail and knode are now in kdepim."
 
