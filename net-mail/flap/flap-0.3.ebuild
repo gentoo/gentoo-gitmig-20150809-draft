@@ -5,10 +5,15 @@
 S="${WORKDIR}/${P}-src"
 DESCRIPTION="mail user agent written in Java"
 HOMEPAGE="http://flap.sourceforge.net"
-LICENSE="GPL-2"
-DEPEND=">=dev-java/ant-1.4.1 >=dev-java/jikes-1.15"
-RDEPEND=">=virtual/jdk-1.4"
 SRC_URI="http://unc.dl.sourceforge.net/sourceforge/flap/${P}-src.tar.gz"
+
+DEPEND=">=dev-java/ant-1.4.1
+	>=dev-java/jikes-1.15"
+RDEPEND=">=virtual/jdk-1.4"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 src_compile() {
 	ant || die

@@ -1,6 +1,16 @@
 # ChangeLog for dev-perl/DateManip
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/ChangeLog,v 1.1 2002/04/22 20:51:23 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/grepmail/ChangeLog,v 1.2 2002/07/17 04:20:40 seemant Exp $
+
+*grepmail-4.70-r1 (16 Jul 2002)
+
+  16 Jul 2002; Seemant Kulleen <seemant@gentoo.org> grepmail-4.70-r1.ebuild
+  files/digest-grepmail-4.70-r1 :
+
+  Completely NEW ebuild, which is actually a perl module, it turns out, so
+  it might be better in dev-perl than in net-mail.  This ebuild extends the
+  perl-module eclass, and the DEPEND list is sorted out, so it actually
+  compiles now.
 
 *grepmail-4.70 (22 April 2002)
 

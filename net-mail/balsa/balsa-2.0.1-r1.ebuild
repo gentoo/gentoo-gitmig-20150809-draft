@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-2.0.1-r1.ebuild,v 1.1 2002/07/02 01:55:07 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/balsa-2.0.1-r1.ebuild,v 1.2 2002/07/17 04:20:39 seemant Exp $
 
 inherit debug 
 
@@ -9,8 +9,10 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Balsa: Technical Preview email client for GNOME"
 SRC_URI="http://balsa.gnome.org/${P}.tar.bz2"
 HOMEPAGE="http://balsa.gnome.org"
-SLOT="0"
+
+SLOT="2"
 LICENSE="GPL-2"
+KEYWORDS="x86"
 
 RDEPEND=">=dev-libs/glib-2.0.4
 	>=x11-libs/gtk+-2.0.5

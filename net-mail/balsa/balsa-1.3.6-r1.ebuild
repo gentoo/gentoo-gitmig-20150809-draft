@@ -8,6 +8,10 @@ DESCRIPTION="Balsa: email client for GNOME"
 SRC_URI="http://www.theochem.kth.se/~pawsa/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.balsa.net"
 
+SLOT="1"
+LICENSE="GPL-2"
+KEYWORDS="x86"
+
 DEPEND="=dev-libs/glib-1.2*
 	=x11-libs/gtk+-1.2*
 	>=media-libs/imlib-1.9.10-r1

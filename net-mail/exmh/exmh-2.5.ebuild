@@ -1,11 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exmh/exmh-2.5.ebuild,v 1.1 2002/05/31 08:39:53 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exmh/exmh-2.5.ebuild,v 1.2 2002/07/17 04:20:40 seemant Exp $
 
 DESCRIPTION="An X user interface for MH mail"
 SRC_URI="ftp://ftp.scriptics.com/pub/tcl/${PN}/${PN}-${PV}.tar.gz"
 HOMEPAGE="http://beedub.com/exmh/"
+
+SLOT="0"
 LICENSE="as-is"
+KEYWORDS="x86"
 
 DEPEND="net-mail/nmh
 	dev-tcltk/expect

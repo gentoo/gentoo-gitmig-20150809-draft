@@ -1,15 +1,17 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/fastforward/fastforward-0.51.ebuild,v 1.2 2002/07/11 06:30:47 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/fastforward/fastforward-0.51.ebuild,v 1.3 2002/07/17 04:20:40 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Fastforward handles qmail forwarding according to a cdb database"
 HOMEPAGE="http://cr.yp.to/fastforward.html"
-
 SRC_URI="http://cr.yp.to/software/fastforward-0.51.tar.gz"
 
-DEPEND="virtual/glibc
-	sys-apps/groff"
+DEPEND="sys-apps/groff"
+
+SLOT="0"
+LICENSE="as-is"
+KEYWORDS="x86"
 
 src_unpack() {
 

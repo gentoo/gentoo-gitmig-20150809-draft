@@ -1,13 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Adapted for courier MTA by Andreas Erhart <andi@as-computer.de> and
-# Alex Hartmann <alex@as-computer.de>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/courier-0.39.1.ebuild,v 1.2 2002/07/11 06:30:47 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/courier-0.39.1.ebuild,v 1.3 2002/07/17 04:20:39 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An MTA designed specifically for maildirs"
 SRC_URI="http://ftp1.sourceforge.net/courier/${P}.tar.gz"
 HOMEPAGE="http://www.courier-mta.org/"
+
+SLOT="0"
+LICENSE="GPL-2"
+KEYWORDS="x86"
 
 PROVIDE="virtual/mta
 	 virtual/imapd"
@@ -152,6 +154,8 @@ insinto /etc/skel
 insinto /etc/courier
     newins ${FILESDIR}/bofh bofh
     newins ${FILESDIR}/locallowercase locallowercase
+
+	dodoc AUTHORS BENCHMARKS ChangeLog* NEWS README TODO
 }
 
 pkg_preinst() {
