@@ -1,11 +1,12 @@
 # Copyright 2002 Robin Cull
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gklmsensors/gklmsensors-0.1.ebuild,v 1.1 2002/08/30 07:44:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellm-sensors/gkrellm-sensors-0.1.ebuild,v 1.1 2002/08/30 09:11:26 seemant Exp $
 
+MY_P=${P/gkrellm-/gklm}
 S=${WORKDIR}/gklmsensors
 DESCRIPTION="A GKrellm plugin for monitoring lm_sensors"
 HOMEPAGE="http://sourceforge.net/projects/gklmsensors"
-SRC_URI="mirror://sourceforge/gklmsensors/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/gklmsensors/${MY_P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
