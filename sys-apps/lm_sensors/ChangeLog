@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/lm_sensors
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.15 2003/01/17 03:08:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm_sensors/ChangeLog,v 1.16 2003/01/17 07:51:09 lostlogic Exp $
 
 *lm_sensors-2.7.0 (24 Dec 2002)
+
+  17 Jan 2003; Brandon Low <lostlogic@gentoo.org> lm_sensors-2.7.0.ebuild :
+  Mark unstable for x86, and filter -fPIC as 2.6.5 does.
 
   24 Dec 2002; Brandon Low <lostlogic@gentoo.org> lm_sensors-2.7.0.ebuild :
   This version is going to be marked -arch until kernels have support for it.
