@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/nap
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nap/ChangeLog,v 1.7 2003/03/17 03:08:23 seemant Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nap/ChangeLog,v 1.8 2004/02/26 19:06:51 eradicator Exp $
+
+*nap-1.5.2 (26 Feb 2004)
+
+  26 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> nap-1.5.2.ebuild:
+  Version bump.  Closes bug #33186.
 
 *nap-1.5.1 (15 Dec 2002)
 
