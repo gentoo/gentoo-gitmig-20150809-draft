@@ -6,7 +6,7 @@ then
 	source /etc/rc.d/config/functions > /dev/null 2>&1
 fi
 	
-#if no perms are specified, dirs/files will have decent defaults
+#if  no perms are specified, dirs/files will have decent defaults
 #(not secretive, but not stupid)
 umask 022
 export DESTTREE=/usr
