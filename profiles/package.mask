@@ -22,6 +22,11 @@
 ##
 
 
+# g2boojum@gentoo.org (11 Aug 2003)
+# Masking until approved (or fixed) by the web-app folks
+net-www/scgi
+net-www/mod_scgi
+
 # agenkin@gentoo.org (07 Aug 2003)
 # Masking until xine-lib-1_rc0 is available.
 =media-video/xine-ui-0.9.22
