@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r6.ebuild,v 1.7 2003/09/27 14:58:26 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgmltools-lite/sgmltools-lite-3.0.3-r6.ebuild,v 1.8 2003/11/16 18:06:46 brad_mssw Exp $
 
 inherit sgml-catalog
 
@@ -21,7 +21,7 @@ DEPEND="virtual/python
 	app-text/openjade
 	net-www/lynx"
 
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha amd64"
 
 src_compile() {
 	./configure 	\
