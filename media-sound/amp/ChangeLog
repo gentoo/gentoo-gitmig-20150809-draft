@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/amp
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amp/ChangeLog,v 1.5 2004/06/24 23:50:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amp/ChangeLog,v 1.6 2004/07/04 09:25:50 eradicator Exp $
+
+  04 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> amp-0.7.6.ebuild:
+  ~sparc.
 
   20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org> amp-0.7.6.ebuild:
   Added IUSE.
