@@ -1,14 +1,24 @@
-MD5 25976c2f6fcc9d003a35e463b5c0d3c7 python-ldap-2.0.0_pre13.ebuild 1223
-MD5 14ee892cab06ad12140549d8687be5e3 python-ldap-2.0.0_pre15.ebuild 1224
-MD5 e2a5c6e8c836b7b0b075afa8ff08e94c ChangeLog 3158
-MD5 1b5e325f98e555b32bd7c4bdcf1e18d3 python-ldap-2.0.1.ebuild 1216
-MD5 7da6506cc7067db2aa4ca248f02eb476 python-ldap-2.0.6.ebuild 1502
-MD5 52d87e6f6530204959eecd5b5e20696c python-ldap-2.0.0_pre05-r1.ebuild 862
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5f9b150197c5dd8c65e3a3846df56971 ChangeLog 3260
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 94184328f2bdb308bf2aafad2260b9b7 python-ldap-2.0.0_pre06.ebuild 807
-MD5 a817aea8eb27cfeb4925d7aef1a0df05 files/digest-python-ldap-2.0.6 146
-MD5 541bee8c642ff21d07d3bec72c1ee6d4 files/digest-python-ldap-2.0.1 68
-MD5 aaef21adf6aa58c8fc0a0627f3ceae5f files/digest-python-ldap-2.0.0_pre06 73
+MD5 ab4ee9bc20346917722d8ad1b7b280f4 python-ldap-2.0.0_pre05-r1.ebuild 862
+MD5 43a536a09d803ef117c03acc94140483 python-ldap-2.0.0_pre06.ebuild 807
+MD5 a5d963dc1fb8bf4b38b2256d21aba2a6 python-ldap-2.0.0_pre13.ebuild 1223
+MD5 b7e59d7cc60c3e4318a95b8c473e2184 python-ldap-2.0.0_pre15.ebuild 1224
+MD5 3f920172b2c1cd03da5a3b199958a36a python-ldap-2.0.1.ebuild 1217
+MD5 efd7cc7fbfba4822eabb16ae203bebb6 python-ldap-2.0.6.ebuild 1505
 MD5 870f1b1ecea4f738da0ba65fb5a0a661 files/digest-python-ldap-2.0.0_pre05-r1 73
+MD5 aaef21adf6aa58c8fc0a0627f3ceae5f files/digest-python-ldap-2.0.0_pre06 73
 MD5 7c4a7f327a0bc9843e8fda91f445ee63 files/digest-python-ldap-2.0.0_pre13 73
 MD5 45f27ac957d1d832996bbea74d5a2cd4 files/digest-python-ldap-2.0.0_pre15 73
+MD5 541bee8c642ff21d07d3bec72c1ee6d4 files/digest-python-ldap-2.0.1 68
+MD5 a817aea8eb27cfeb4925d7aef1a0df05 files/digest-python-ldap-2.0.6 146
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB2WqVKRy60XGEcJIRAqLeAJoD+h0Vrg77DXLWNdEhgTUqEzS4pwCdF7R0
+YwEdzGfa9J2Wz15W7LyyVHA=
+=NnHU
+-----END PGP SIGNATURE-----
