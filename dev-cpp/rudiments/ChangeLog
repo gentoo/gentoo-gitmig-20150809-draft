@@ -1,0 +1,9 @@
+# ChangeLog for dev-cpp/rudiments
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/rudiments/ChangeLog,v 1.1 2003/10/20 02:07:33 lisa Exp $
+
+*rudiments-0.25.1 (19 Oct 2003)
+
+  19 Oct 2003; Lisa Seelye <lisa@gentoo.org> rudiments-0.25.1.ebuild:
+  Add this package, to satisify bug 20780
+
