@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.8.1.ebuild,v 1.8 2004/11/27 13:16:08 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.8.1.ebuild,v 1.9 2004/12/03 02:15:44 vapier Exp $
 
 K_NOUSENAME="yes"
 K_NOSETEXTRAVERSION="yes"
@@ -14,5 +14,5 @@ HOMEPAGE="http://www.kernel.org/"
 SRC_URI="${KERNEL_URI} ${ARCH_URI}"
 UNIPATCH_LIST="${ARCH_PATCH}"
 
-KEYWORDS="x86 ia64 ppc ~amd64"
+KEYWORDS="x86 ia64 ppc ~amd64 ~arm"
 IUSE=""
