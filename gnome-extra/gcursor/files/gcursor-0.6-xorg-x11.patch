@@ -1,0 +1,11 @@
+diff -ur gcursor-0.061/src/gcursor.c gcursor-0.061-patched/src/gcursor.c
+--- gcursor-0.061/src/gcursor.c	2004-08-26 18:35:55.000000000 +0800
++++ gcursor-0.061-patched/src/gcursor.c	2005-02-28 18:19:45.350300576 +0800
+@@ -32,6 +32,7 @@
+ 
+ #warning move this into gconf
+ char *paths[] = {
++	"/usr/share/cursors/xorg-x11/",
+ 	"/usr/share/cursors/xfree/",
+ 	"/usr/X11R6/lib/X11/icons/",
+ 	"/usr/Xorg/lib/X11/icons/",

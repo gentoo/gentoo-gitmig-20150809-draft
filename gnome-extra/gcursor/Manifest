@@ -1,16 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 b7f621b13e89d3677d3564c0a65eef63 ChangeLog 1130
 MD5 9dfde256afb55590d4e9977ad57381ae gcursor-0.06.ebuild 706
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 2b982980b60a745048e24b724685ab25 ChangeLog 886
 MD5 66fcc53d7e9d72d190a98deda482ad32 gcursor-0.061.ebuild 714
-MD5 b0e0affc8252e7b3f8340b975d44ac9e files/digest-gcursor-0.061 65
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 9f4a1392b72b39c198c566e13ca69601 gcursor-0.061-r1.ebuild 865
 MD5 98e3894dbecb7b2171e6ac19bd62e804 files/digest-gcursor-0.06 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB/kiWKRy60XGEcJIRAuwoAJ4w8nBAveHclK402i+pDTx3nMRQfgCgi0qE
-fixkARqbZOw0twXWL9jTZlM=
-=uJ/0
------END PGP SIGNATURE-----
+MD5 b0e0affc8252e7b3f8340b975d44ac9e files/digest-gcursor-0.061 65
+MD5 bfdbef1fb4fef28e9d90b9f241399e58 files/gcursor-0.6-xorg-x11.patch 413
+MD5 b0e0affc8252e7b3f8340b975d44ac9e files/digest-gcursor-0.061-r1 65
