@@ -38,3 +38,5 @@ solid
 svga
 sybase
 sybase-ct
+
+djbfft
