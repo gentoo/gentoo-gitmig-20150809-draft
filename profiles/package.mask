@@ -848,3 +848,8 @@ x11-libs/gdkxft
 # lostlogic@gentoo.org 06 Jun 2002
 # Masked because installs headers in wrong location
 =media-libs/id3lib-3.8.0_pre2-r2
+
+# g2boojum@gentoo.org 10 June 2002
+# masking sendmail because I don't know that it works
+net-mail/sendmail
+
