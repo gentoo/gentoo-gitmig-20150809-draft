@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo-extra/skk-jisyo-extra-200309.ebuild,v 1.3 2004/03/27 16:10:29 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo-extra/skk-jisyo-extra-200404.ebuild,v 1.1 2004/03/31 20:02:38 usata Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${PF}.tar.gz
 # see each SKK-JISYO's header for detail
 LICENSE="GPL-2 public-domain freedist"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc alpha"
+KEYWORDS="~x86 ~alpha"
 
 DEPEND="sys-apps/gawk
 	|| ( dev-db/freecdb dev-db/cdb )"
