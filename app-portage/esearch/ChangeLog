@@ -1,6 +1,9 @@
 # ChangeLog for app-portage/esearch
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.17 2004/06/30 22:14:02 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.18 2004/07/17 16:20:13 tgall Exp $
+
+  17 Jul 2004; Tom Gall <tgall@gentoo.org> esearch-0.6.2.ebuild:\
+  stable on ppc64,bug #55519
 
 *esearch-0.6.2 (01 Jul 2004)
 
