@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebindings
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/ChangeLog,v 1.40 2003/09/30 13:08:42 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/ChangeLog,v 1.41 2003/10/02 14:50:43 caleb Exp $
+
+  02 Oct 2003; Caleb Tennis <caleb@gentoo.org> kdebindings-3.1.4.ebuild:
+  Don't compile qtjava if java use flag is off
 
   30 Sep 2003; Caleb Tennis <caleb@gentoo.org> kdebindings-3.1.4.ebuild,
   files/x_QFont.cpp.diff, files/x_QHBox.cpp.diff, files/x_Qt.cpp.diff:

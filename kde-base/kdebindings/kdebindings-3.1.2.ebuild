@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.1.2.ebuild,v 1.4 2003/09/06 23:54:21 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.1.2.ebuild,v 1.5 2003/10/02 14:50:43 caleb Exp $
 # TODO: add gnustep, objc bindings
 inherit kde-dist
 
@@ -25,6 +25,7 @@ use java	&& myconf="$myconf --with-java=$(java-config --jdk-home)"	|| myconf="$m
 
 # we need to have csant (from pnet, from portable.NET) in portage for qtsharp
 export DO_NOT_COMPILE="$DO_NOT_COMPILE qtsharp"
+use java	|| export DO_NOT_COMPILE="$DO_NOT_COMPILE qtjava"
 
 export LIBPYTHON="`python-config`"
 
