@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-2.0.1.ebuild,v 1.5 2005/01/17 16:03:04 jforman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/vsftpd-2.0.1.ebuild,v 1.6 2005/02/09 14:05:06 jforman Exp $
 
 inherit flag-o-matic eutils
 
@@ -32,7 +32,10 @@ src_unpack() {
 }
 
 src_compile() {
-	echo "PAM support is DISABLED"
+	if ! use pam; then
+		einfo "PAM support is DISABLED"
+	fi
+	emake CFLAGS="${CFLAGS}" || die
 }
 
 src_install() {
