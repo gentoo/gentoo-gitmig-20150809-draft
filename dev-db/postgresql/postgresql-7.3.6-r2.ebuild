@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.6-r2.ebuild,v 1.1 2004/07/18 08:42:36 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.6-r2.ebuild,v 1.2 2004/07/21 19:11:10 nakano Exp $
 
-inherit flag-o-matic
+inherit gnuconfig flag-o-matic
 
 DESCRIPTION="sophisticated Object-Relational DBMS"
 
@@ -50,14 +50,14 @@ pkg_setup() {
 			eerror "pg_restore to import them when you have upgraded completely."
 			eerror "You must remove your entire database directory to continue."
 			eerror "(database directory = ${PG_DIR})."
-			die
+			exit 1
 		fi
 	fi
 }
 
 check_java_config() {
 	JDKHOME="`java-config --jdk-home`"
-	if [[ -z ${JDKHOME} || ! -d ${JDKHOME} ]]; then
+	if [[ -z "${JDKHOME}" || ! -d "${JDKHOME}" ]]; then
 		NOJDKERROR="You need to use java-config to set your JVM to a JDK!"
 		eerror "${NOJDKERROR}"
 		die "${NOJDKERROR}"
@@ -93,11 +93,15 @@ src_compile() {
 	# Gerk - Nov 26, 2002
 	use ppc && CFLAGS="-pipe -fsigned-char"
 
+	# Detect mips systems properly
+	gnuconfig_update
+
 	./configure --prefix=/usr \
 		--mandir=/usr/share/man \
 		--host=${CHOST} \
-		--docdir=/usr/share/doc/${P} \
+		--docdir=/usr/share/doc/${PF} \
 		--libdir=/usr/lib \
+		--includedir=/usr/include/postgresql/pgsql \
 		--enable-depend \
 		--with-gnu-ld \
 		--with-maxbackends=1024 \
@@ -109,10 +113,7 @@ src_compile() {
 }
 
 src_install() {
-	addwrite "/usr/share/man/man3/Pg.3pm"
-
-	if use perl
-	then
+	if use perl; then
 		mv ${S}/src/pl/plperl/Makefile ${S}/src/pl/plperl/Makefile_orig
 		sed -e "s:(INST_DYNAMIC) /usr/lib:(INST_DYNAMIC) ${D}/usr/lib:" \
 			${S}/src/pl/plperl/Makefile_orig > ${S}/src/pl/plperl/Makefile
@@ -121,8 +122,8 @@ src_install() {
 			${S}/src/pl/plperl/GNUmakefile_orig > ${S}/src/pl/plperl/GNUmakefile
 	fi
 
-	make DESTDIR=${D} LIBDIR=${D}/usr/lib install || die
-	make DESTDIR=${D} install-all-headers || die
+	make DESTDIR=${D} includedir_server=/usr/include/postgresql/server includedir_internal=/usr/include/postgresql/internal LIBDIR=${D}/usr/lib install || die
+	make DESTDIR=${D} includedir_server=/usr/include/postgresql/server includedir_internal=/usr/include/postgresql/internal install-all-headers || die
 	cd ${S}/contrib
 	make DESTDIR=${D} LIBDIR=${D}/usr/lib install || die
 	cd ${S}
@@ -130,12 +131,17 @@ src_install() {
 	dodoc contrib/adddepend/*
 
 	if use java; then
+		# we need to remove jar file after dojar; otherwise two same jar
+		# file are installed.
 		dojar ${D}/usr/share/postgresql/java/postgresql.jar
 		rm ${D}/usr/share/postgresql/java/postgresql.jar
 	fi
 
-	dodir /usr/include/postgresql/pgsql
-	cp ${D}/usr/include/*.h ${D}/usr/include/postgresql/pgsql
+	# backward compatibility
+	for i in ${D}/usr/include/postgresql/pgsql/*
+	do
+		ln -s ${i} ${D}/usr/include/
+	done
 
 	cd ${S}/doc
 	dodoc FAQ* README.* TODO bug.template
@@ -183,7 +189,7 @@ pkg_config() {
 			eerror "Postgres ${PV} cannot upgrade your existing databases."
 			eerror "You must remove your entire database directory to continue."
 			eerror "(database directory = ${PG_DIR})."
-			die
+			exit 1
 		else
 			einfon "A postgres data directory already exists from version "; cat ${PG_DIR}/data/PG_VERSION
 			einfo "Read the documentation to check how to upgrade to version ${PV}."

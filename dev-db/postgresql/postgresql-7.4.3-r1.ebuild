@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.3-r1.ebuild,v 1.1 2004/07/18 08:42:36 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.3-r1.ebuild,v 1.2 2004/07/21 19:11:10 nakano Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -60,7 +60,7 @@ pkg_setup() {
 
 check_java_config() {
 	JDKHOME="`java-config --jdk-home`"
-	if [[ -z ${JDKHOME} && ! -d ${JDKHOME} ]]; then
+	if [[ -z "${JDKHOME}" || ! -d "${JDKHOME}" ]]; then
 		NOJDKERROR="You need to use java-config to set your JVM to a JDK!"
 		eerror "${NOJDKERROR}"
 		die "${NOJDKERROR}"
@@ -120,6 +120,7 @@ src_compile() {
 		--host=${CHOST} \
 		--docdir=/usr/share/doc/${PF} \
 		--libdir=/usr/lib \
+		--includedir=/usr/include/postgresql/pgsql \
 		--enable-depend \
 		--with-gnu-ld \
 		--with-maxbackends=${MAX_CONNECTIONS} \
@@ -140,8 +141,8 @@ src_install() {
 			${S}/src/pl/plperl/GNUmakefile_orig > ${S}/src/pl/plperl/GNUmakefile
 	fi
 
-	make DESTDIR=${D} LIBDIR=${D}/usr/lib install || die
-	make DESTDIR=${D} install-all-headers || die
+	make DESTDIR=${D} includedir_server=/usr/include/postgresql/server includedir_internal=/usr/include/postgresql/internal LIBDIR=${D}/usr/lib install || die
+	make DESTDIR=${D} includedir_server=/usr/include/postgresql/server includedir_internal=/usr/include/postgresql/internal install-all-headers || die
 	cd ${S}/contrib
 	make DESTDIR=${D} LIBDIR=${D}/usr/lib install || die
 	cd ${S}
@@ -162,8 +163,11 @@ src_install() {
 		rm ${D}/usr/share/postgresql/java/postgresql-examples.jar
 	fi
 
-	dodir /usr/include/postgresql/pgsql
-	cp ${D}/usr/include/*.h ${D}/usr/include/postgresql/pgsql
+	# backward compatibility
+	for i in ${D}/usr/include/postgresql/pgsql/*
+	do
+		ln -s ${i} ${D}/usr/include/
+	done
 
 	cd ${S}/doc
 	dodoc FAQ* README.* TODO bug.template
