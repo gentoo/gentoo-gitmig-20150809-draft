@@ -7,7 +7,6 @@ P=nessus-1.0.4
 A="nessus-libraries-1.0.4.tar.gz nessus-core-1.0.4.tar.gz
    nessus-plugins-1.0.4.tar.gz libnasl-1.0.4.tar.gz libnasl-patch-1"
 S=${WORKDIR}
-CATEGORY="net-analyzer"
 DESCRIPTION="Nessus"
 SRC_URI="ftp://ftp.nessus.org/pub/nessus/nessus-1.0.4/src/nessus-libraries-1.0.4.tar.gz
 	 ftp://ftp.nessus.org/pub/nessus/nessus-1.0.4/src/nessus-core-1.0.4.tar.gz
