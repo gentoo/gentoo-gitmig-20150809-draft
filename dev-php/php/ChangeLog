@@ -1,10 +1,13 @@
 # ChangeLog for dev-php/php
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.22 2002/12/17 19:37:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.23 2002/12/27 17:48:11 rphillips Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *php-4.2.3 (10 Sep 2002)
+
+  27 Dec 2002; Ryan Phillips <rphillips@gentoo.org> : added sockets and
+  pcntl support to the ebuild
 
   19 Nov 2002; Ryan Phillips <rphillips@gentoo.org> php-4.2.3.ebuild :
   fixed qt dep

@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Update: Roman Weber <gentoo@gonzo.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.2.3.ebuild,v 1.11 2002/12/09 04:21:12 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.2.3.ebuild,v 1.12 2002/12/27 17:48:11 rphillips Exp $
 
 IUSE="freetype postgres tiff libwww nls jpeg readline ssl gd oci8 mysql X gdbm curl imap png xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam"
 
@@ -167,6 +167,8 @@ src_compile() {
 		--enable-bcmath \
 		--enable-sysvsem \
 		--enable-sysvshm \
+		--enable-sockets \
+		--enable-pcntl \
 		--enable-calendar \
 		--enable-trans-sid \
 		--enable-versioning \
