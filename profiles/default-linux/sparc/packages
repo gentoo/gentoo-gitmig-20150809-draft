@@ -1,15 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/packages,v 1.13 2005/03/06 00:29:30 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/packages,v 1.14 2005/03/07 00:09:22 eradicator Exp $
 
 # Top-level sparc profile
 
 # SPARC specific stuff (32 and 64 bit)
 *sys-apps/sparc-utils
-
-# Lock to gcc-3.3.x and allow 3.4 for the testing profile only
-*<sys-devel/gcc-3.4.1
-
-# Use 2.4 linux-headers by default
--*virtual/os-headers
-*<sys-kernel/linux-headers-2.5
