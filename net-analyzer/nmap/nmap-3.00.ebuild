@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.00.ebuild,v 1.7 2003/09/05 23:40:10 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nmap/nmap-3.00.ebuild,v 1.8 2004/01/20 19:52:13 spock Exp $
 
 IUSE="gtk gnome ipv6"
 
