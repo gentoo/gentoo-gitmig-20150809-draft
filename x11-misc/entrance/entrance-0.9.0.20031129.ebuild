@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/entrance/entrance-0.9.0.20031129.ebuild,v 1.2 2003/12/08 15:03:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/entrance/entrance-0.9.0.20031129.ebuild,v 1.3 2003/12/17 02:08:39 vapier Exp $
 
 inherit enlightenment eutils
 
@@ -27,13 +27,12 @@ src_install() {
 	exeinto /usr/share/entrance
 	doexe data/config/build_config.sh
 	edb_ed ${D}/etc/entrance_config.db add /entrance/theme str Nebulous.eet
-}
 
-pkg_postinst() {
-	enlightenment_pkg_postinst
 	cd /etc/X11/Sessions
-	local edb=/etc/entrance_config.db
-	local count=`edb_ed ${edb} get /entrance/session/count int`
+	local edb="${D}/etc/entrance_config.db"
+	local count="`edb_ed ${edb} get /entrance/session/count int`"
+	local datadir="${D}/usr/share/entrance/images/sessions"
+	local icon=""
 	while [ ${count} -ge 0 ] ; do
 		edb_ed ${edb} del /entrance/session/${count}/icon
 		edb_ed ${edb} del /entrance/session/${count}/session
@@ -41,11 +40,16 @@ pkg_postinst() {
 		count=$((${count} - 1))
 	done
 	count=0
-	for s in * failsafe ; do
+	for s in Default * failsafe ; do
 		[ "${s}" == "Xsession" ] && continue
-		edb_ed ${edb} add /entrance/session/${count}/icon str ${s}.png
+		icon="`find ${datadir} -iname ${s}.png -printf %f`"
+		if [ -z "${icon}" ] ; then
+			edb_ed ${edb} add /entrance/session/${count}/icon str default.png
+		else
+			edb_ed ${edb} add /entrance/session/${count}/icon str ${icon}
+		fi
 		edb_ed ${edb} add /entrance/session/${count}/session str ${s}
-		edb_ed ${edb} add /entrance/session/${count}/title ${s}
+		edb_ed ${edb} add /entrance/session/${count}/title str ${s}
 		count=$((${count} + 1))
 	done
 	edb_ed ${edb} add /entrance/session/count int ${count}
