@@ -18,13 +18,13 @@
 DCCC_ENV_FILE="${ROOT}etc/env.d/02distcc"
 DCCC_OLD_ENV="${ROOT}etc/env.d/04distcc"
 
-# this should be getopt'd someday
+# this should be getopt'd someday (override with DCCC_QUIET)
 DCCC_VERBOSE=1
 
 source /sbin/functions.sh
 
 dccc_echo() {
-	[ -n "${DCCC_VERBOSE}" ] && echo "$*"
+	[ -z "${DCCC_QUIET}" -a -n "${DCCC_VERBOSE}" ] && echo "$*"
 }
 dccc_exit() {
 	dccc_echo "$*"
@@ -51,7 +51,7 @@ dccc_install_link() {
 	#  note: this `type' doesn't do the right thing if ROOT != /
 	if [ -n "$(type -p ${1})" ]; then 
 		# first be sure any old link is removed
-		DCCC_VERBOSE="" dccc_remove_link "${1}"
+		DCCC_QUIET=1 dccc_remove_link "${1}"
 
 		# then create the new link
 		local t="${ROOT}usr/lib/distcc/bin/${1}"

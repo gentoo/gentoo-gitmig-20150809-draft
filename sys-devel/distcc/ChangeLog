@@ -1,8 +1,11 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.39 2003/04/17 18:48:27 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.40 2003/04/18 00:14:24 zwelch Exp $
 
 *distcc-2.0.1 (31 Mar 2003)
+
+  17 Apr 2003; Zach Welch <zwelch@gentoo.org> files/1.2.3/distcc-config:
+  fix distcc-config to add DCCC_QUIET
 
   31 Mar 2003; Zach Welch <zwelch@gentoo.org> distcc-2.0.1.ebuild,
   files/1.2.3/distcc-config:
