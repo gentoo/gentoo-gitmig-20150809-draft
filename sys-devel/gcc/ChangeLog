@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.377 2005/02/01 15:27:21 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.378 2005/02/02 18:19:30 eradicator Exp $
+
+  02 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  gcc-3.3.5.20050130.ebuild:
+  Pushing into ~arch.  Re-adds support for tls on sparc.
 
   01 Feb 2005; Sven Wegener <swegener@gentoo.org>
   gcc-4.0.0_alpha20050123.ebuild, gcc-4.0.0_alpha20050130.ebuild:
@@ -14,7 +18,7 @@
   +gcc-4.0.0_alpha20050130.ebuild:
   Adding gcc4 alpha ebuilds for development and testing. Fix ordering of data
   in ebuilds so DESCRIPTION, etc comes after inherit toolchain. Bump gcc-3.3
-  to reintroduce a patch from fedora which got dropped from 3.3.5 and
+  to reintroduce patchs from fedora which got dropped from 3.3.5 and
   3.3.5-r1. This should fix tls issues on sparc (bug #78320), but it is still
   in 'KEYWORDS=-*' until the PIE patches get updated.
 

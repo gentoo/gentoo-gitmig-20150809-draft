@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f535799c9f6abdce37129635a7dc224b ChangeLog 79351
+MD5 ff1b7ebe855aa93a6552a16c01f9a3a8 ChangeLog 79496
 MD5 aa7f9fb82c023a1343426871e52d4a7d gcc-2.95.3-r8.ebuild 7442
 MD5 f95107278e3a6306068d0f9ef63fc5de gcc-3.2.3-r4.ebuild 19890
 MD5 244dda3a476e86cb7d23830b245ab323 gcc-3.3.2-r2.ebuild 18031
@@ -19,7 +19,7 @@ MD5 e1dd8a063189d88b781ac008892e2da5 gcc-3.4.3.ebuild 13231
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
 MD5 9612ed8374ad6051980d81a6c2b7a81b gcc-4.0.0_alpha20050123.ebuild 1200
 MD5 ab3301582df1a80d84bf1473ffa64b24 gcc-3.3.5-r1.ebuild 3556
-MD5 c85ab7e681a6e51edcdfb6f3f0608298 gcc-3.3.5.20050130.ebuild 3396
+MD5 00061920daab9e175c52c482f7fa15f8 gcc-3.3.5.20050130.ebuild 3381
 MD5 15863ae899d2122f08a289e7274951e5 gcc-4.0.0_alpha20050130.ebuild 1200
 MD5 e179e0180b0c0eb073643bd1d54d86e5 gcc-3.4.3-r1.ebuild 5159
 MD5 f7e7042c2ddf66e344b30cbc66ebaf73 files/cc 24
@@ -47,8 +47,8 @@ MD5 ea2cf3df0d89a26d5fdc1a531176e395 files/pro-police-docs.patch 3287
 MD5 07b57d62aa1a8cd4d1cd37984ebe2053 files/scan_libgcc_linked_ssp.sh 861
 MD5 d1be641db83c2e12e5e5fa7804e50bc0 files/digest-gcc-4.0.0_alpha20050123 71
 MD5 1acd56209164ab837c5f91723434464e files/fix_libtool_files.sh 1712
-MD5 a8f5eb8b0d72ff929e63ee286f1b9940 files/digest-gcc-3.3.5.20050130 541
 MD5 e529648ecf001568e2016887bf0ec28d files/digest-gcc-4.0.0_alpha20050130 71
+MD5 456037b22f0662c84d2360c7a15a6d75 files/digest-gcc-3.3.5.20050130 540
 MD5 8ec9b0352d226e4693cabffe0fa5bba6 files/3.2.1/gcc31-loop-load-final-value.patch 3324
 MD5 5e8f2122ef7f9ce187b0a0d50ac9d24a files/3.2.1/gcc32-arm-disable-mathf.patch 2229
 MD5 044a164462d9392aa67cde6f9fd5c1bc files/3.2.1/gcc32-arm-reload1-fix.patch 932
@@ -120,7 +120,7 @@ MD5 c672adb59a1f452475ab0a864b9d1bd1 files/awk/scanforssp.awk 5830
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCAAp0ArHZZzCEUG0RAhfSAJ9vW1ESs/mi1DnkOSEDRQiVhhlsnACfdjKL
-6bhf9Dx9+PQAu5pp0C44Fwo=
-=adyP
+iD8DBQFCARqBArHZZzCEUG0RAqakAJ0cC3rIs7owIqEC9tqQoTTH/OnHhQCfV7+T
+ifGdpIWXfSGLNyA5VXpnSV4=
+=kuQA
 -----END PGP SIGNATURE-----
