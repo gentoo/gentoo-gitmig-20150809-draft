@@ -14,7 +14,6 @@ DEPEND=""
 src_unpack() {
 
 	unpack w32codec.zip
-
 }
 
 src_install() {
@@ -24,5 +23,4 @@ src_install() {
 	# Install the new divx codec
 	insinto /usr/lib/win32
 	doins /usr/portage/distfiles/divx.dll
-	
 }

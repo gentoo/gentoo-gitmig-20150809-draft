@@ -4,18 +4,18 @@
 #         Donny Davies <woodchip@gentoo.org>
 
 # Handle PREversions as well
-MY_VERSION="`echo ${PV} |sed -e 's/_//'`"
-S="${WORKDIR}/MPlayer-${MY_VERSION}"
+MY_PV="`echo ${PV} |sed -e 's/_//'`"
+S="${WORKDIR}/MPlayer-${MY_PV}"
 
 # Only install Skin if GUI should be build (gtk as USE flag)
 # NOTE: URC_URI="foo? ( ftp://ftp.foo.org/foo.tar.bz )" style will be used 
 # when included in release portage
 if [ "`use gtk`" ] ; then
-	SRC_URI="ftp://mplayerhq.hu/MPlayer/releases/MPlayer-${MY_VERSION}.tar.bz2
+	SRC_URI="ftp://mplayerhq.hu/MPlayer/releases/MPlayer-${MY_PV}.tar.bz2
 		 ftp://mplayerhq.hu/MPlayer/releases/mp-arial-iso-8859-1.zip
 		 ftp://mplayerhq.hu/MPlayer/Skin/default.tar.bz2"
 else		  
-        SRC_URI="ftp://mplayerhq.hu/MPlayer/releases/MPlayer-${MY_VERSION}.tar.bz2
+        SRC_URI="ftp://mplayerhq.hu/MPlayer/releases/MPlayer-${MY_PV}.tar.bz2
                  ftp://mplayerhq.hu/MPlayer/releases/mp-arial-iso-8859-1.zip"
 fi
 
@@ -62,7 +62,6 @@ src_unpack() {
 	# Fix bug with the default Skin
 	cd ${WORKDIR}/default
 	patch <${FILESDIR}/default-skin.diff
-
 }
 
 src_compile() {
@@ -84,14 +83,21 @@ src_compile() {
 	use ogg    || myconf="${myconf} --disable-oggvorbis"
 	use decss  && myconf="${myconf} --enable-css"
 
-	./configure --mandir=/usr/share/man --prefix=/usr --host=${CHOST} ${myconf} || die
+	./configure --host=${CHOST}					\
+		    --prefix=/usr					\
+		    --mandir=/usr/share/man				\
+		    ${myconf} || die
+		    
 	emake OPTFLAGS="${CFLAGS}" all || die
 	
 }
 
 src_install() {
 
-	make prefix=${D}/usr/share BINDIR=${D}/usr/bin install || die
+	make prefix=${D}/usr/share					\
+	     BINDIR=${D}/usr/bin					\
+	     mandir=${D}/usr/share/man					\
+	     install || die
 	
 	# MAN pages are already installed ...
 	rm DOCS/*.1
@@ -101,8 +107,10 @@ src_install() {
 
 	# Install the default Skin
 	if [ "`use gtk`" ] ; then
+	
 		insinto /usr/share/mplayer/Skin/default
 		doins ${WORKDIR}/default/*
+		
 		# Permissions is fried by default
 		chmod a+rx ${D}/usr/share/mplayer/Skin/default/
 		chmod a+r ${D}/usr/share/mplayer/Skin/default/*
@@ -145,7 +153,12 @@ src_install() {
 	elif [ "`use oss`" ] ; then
 		audio="oss"
 	fi
-	sed -e "s/vo=xv/vo=${video}/" -e "s/ao=oss/ao=${audio}/" -e 's/include =/#include =/' ${S}/etc/example.conf > ${T}/mplayer.conf
+	
+	# Note to myself:  do not change " into '
+	sed -e "s/vo=xv/vo=${video}/"					\
+	    -e "s/ao=oss/ao=${audio}/"					\
+	    -e 's/include =/#include =/'				\
+	    ${S}/etc/example.conf > ${T}/mplayer.conf
 
 	insinto /etc
 	doins ${T}/mplayer.conf 

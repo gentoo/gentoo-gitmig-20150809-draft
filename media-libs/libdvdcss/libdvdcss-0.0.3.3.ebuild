@@ -13,13 +13,19 @@ DEPEND="virtual/glibc"
 
 src_compile() {
 
-	./configure --prefix=/usr --mandir=/usr/share/man
+	./configure --prefix=/usr					\
+		    --mandir=/usr/share/man				\
+		    --infodir=/usr/share/info ||die
+		    
 	make || die
 }
 
-src_install () {
+src_install() {
 	
-	make prefix=${D}/usr install || die
+	make prefix=${D}/usr						\
+	     mandir=${D}/usr/share/man					\
+	     infodir=${D}/usr/share/info				\
+	     install || die
 
 	dodoc AUTHORS COPYING ChangeLog INSTALL README TODO
 }

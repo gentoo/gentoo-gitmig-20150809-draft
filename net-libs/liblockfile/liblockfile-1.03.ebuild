@@ -9,20 +9,21 @@ HOMEPAGE="http://www.debian.org"
 
 DEPEND="virtual/glibc"
 
-RDEPEND="virtual/glibc"
-
 
 src_compile() {
 
-	./configure --with-mailgroup=mail --prefix=/usr --mandir=/usr/share/man
-	make || die
-	
+	./configure --host=${CHOST}					\
+		    --with-mailgroup=mail				\
+		    --prefix=/usr					\
+		    --mandir=/usr/share/man				\
+		    --infodir=/usr/share/info || die
+		    
+	emake || die
 }
 
-src_install () {
+src_install() {
 	
-	dodir /usr/bin /usr/include /usr/lib /usr/share/man/man1 /usr/share/man/man3
+	dodir /usr/{bin,include,lib} /usr/share/man/{man1,man3}
 	make  ROOT=${D} install || die
-	
 }
 

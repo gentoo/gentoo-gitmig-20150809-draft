@@ -53,6 +53,5 @@ src_install () {
 	      anjutadocdir=${D}/usr/share/doc/${PF} 			\
 	      anjuta_docdir=${D}/usr/share/doc/${PF} 			\
 	      install || die
-
 }
 

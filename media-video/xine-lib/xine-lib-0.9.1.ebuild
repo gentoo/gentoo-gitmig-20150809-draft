@@ -16,8 +16,6 @@ DEPEND="virtual/glibc
 	arts? ( kde-base/kdelibs )
 	alsa? ( media-libs/alsa-lib )"
 
-RDEPEND="$DEPEND"
-
 
 src_compile() {
 
@@ -29,13 +27,23 @@ src_compile() {
 	use aalib || myconf="${myconf} --disable-aalib --disable-aalibtest"
 	use arts  || myconf="${myconf} --disable-arts --disable-artstest"
 	 
-	./configure --prefix=/usr --mandir=/usr/share/man $myconf --host=${CHOST} || die
+	./configure --host=${CHOST} 					\
+		    --prefix=/usr					\
+		    --mandir=/usr/share/man				\
+		    --infodir=/usr/share/info				\
+		    --sysconfdir=/etc					\
+		    ${myconf} || die
+		    
 	make || die
 }
 
-src_install () {
+src_install() {
 	
-	make  DESTDIR=${D} install || die
+	make prefix=${D}/usr						\
+	     mandir=${D}/usr/share/man					\
+	     infodir=${D}/usr/share/info				\
+	     sysconfdir=${D}/etc					\
+	     install || die
 
 	dodoc AUTHORS COPYING ChangeLog INSTALL README TODO
 	cd ${S}/doc
@@ -43,6 +51,5 @@ src_install () {
 	docinto xine-lib-API/html
 	rm -f xine-lib-API/html/Makefile*
 	dodoc xine-lib-API/html/*
-		
 }
 

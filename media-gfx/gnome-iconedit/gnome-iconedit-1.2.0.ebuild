@@ -29,22 +29,28 @@ src_unpack() {
 }
 
 src_compile() {
-	local myconf
 
+	local myconf
 	use nls || myconf="--disable-nls"
 	
 	CFLAGS="${CFLAGS} `gnome-config --cflags print`"	
 
 	./configure --host=${CHOST} 					\
 		    --prefix=/usr					\
+		    --mandir=/usr/share/man				\
+		    --infodir=/usr/share/info				\
 		    --with-sysconfdir=/etc				\
 		    $myconf || die
 
 	emake || die
 }
 
-src_install () {
-	make prefix=${D}/usr sysconfdir=/etc install || die
+src_install() {
+
+	make prefix=${D}/usr						\
+	     mandir=${D}/usr/share/man					\
+	     infodir=${D}/usr/share/info				\
+	     sysconfdir=/etc install || die
 
 	dodoc ABOUT-NLS AUTHORS COPYING ChangeLog INSTALL NEWS README TODO
 }

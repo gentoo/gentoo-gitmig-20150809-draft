@@ -17,6 +17,7 @@ DEPEND=">=x11-libs/gtk+-1.2.10-r4
 
 
 src_compile() {
+
 	local myconf
 	use nls     || myconf=--disable-nls
 		
@@ -31,6 +32,7 @@ src_compile() {
 }
 
 src_install() {
+
 	make prefix=${D}/usr						\
 	     mandir=${D}/usr/share/man					\
 	     infodir=${D}/usr/share/info				\

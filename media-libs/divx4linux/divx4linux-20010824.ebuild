@@ -21,6 +21,5 @@ src_install () {
 
 	dodoc RELNOTES.linux license.txt
 	cp -a 'Codec Core Interface.txt' ${D}/usr/share/doc/${P}/ 
-
 }
 

@@ -18,6 +18,8 @@ RDEPEND=">=x11-libs/gtk+-1.2.10-r4
 src_compile() {
 	./configure --host=${CHOST} 					\
 		    --prefix=/usr					\
+		    --mandir=/usr/share/man				\
+		    --infodir=/usr/share/info				\
 		    --sysconfdir=/etc || die
 
 	emake || die
@@ -25,6 +27,8 @@ src_compile() {
 
 src_install () {
 	make prefix=${D}/usr						\
+	     mandir=${D}/usr/share/man					\
+	     infodir=${D}/usr/share/info				\
 	     sysconfdir=${D}/etc					\
 	     install || die
 
