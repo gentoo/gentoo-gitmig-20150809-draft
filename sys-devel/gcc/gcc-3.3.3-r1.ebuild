@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r1.ebuild,v 1.8 2004/03/06 17:22:47 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r1.ebuild,v 1.9 2004/04/04 01:37:59 avenj Exp $
 
 IUSE="static nls bootstrap java build X multilib nogcj hardened"
 
@@ -190,11 +190,12 @@ version_patch() {
 glibc_have_ssp() {
 	local my_libc="${ROOT}/lib/libc.so.6"
 
-	case "${ARCH}" in
-		"amd64")
-			my_libc="${ROOT}/lib64/libc.so.?"
-			;;
-	esac
+# Not necessary. lib64 is a symlink to /lib. -- avenj@gentoo.org  3 Apr 04
+#	case "${ARCH}" in
+#		"amd64")
+#			my_libc="${ROOT}/lib64/libc.so.?"
+#			;;
+#	esac
 
 	# Check for the glibc to have the __guard symbols
 	if  [ "$(readelf -s "${my_libc}" 2>/dev/null | \
