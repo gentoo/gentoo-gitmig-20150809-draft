@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/pysoulseek-1.2.0-r2.ebuild,v 1.2 2003/06/13 22:42:19 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/pysoulseek/pysoulseek-1.2.0-r2.ebuild,v 1.3 2003/06/13 23:28:28 liquidx Exp $
 
 IUSE="oggvorbis hyriand"
 inherit eutils distutils
@@ -34,6 +34,12 @@ S="${WORKDIR}/${MY_P}"
 src_unpack() {
 	unpack ${MY_P}.tar.gz
 	use hyriand && epatch ${DISTDIR}/${MY_P}-hyriand-${MY_HV}.patch
+}
+
+src_install() {
+	distutils_src_install
+	insinto /usr/share/applications
+	doins ${FILESDIR}/pysoulseek.desktop
 }
 
 pkg_postinst() {
