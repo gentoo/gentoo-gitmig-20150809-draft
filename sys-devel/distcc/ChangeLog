@@ -1,8 +1,13 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.31 2003/03/07 21:09:17 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.32 2003/03/12 05:32:40 zwelch Exp $
 
 *distcc-1.2.3 (03 Mar 2003)
+
+  11 Mar 2003; Zach Welch <zwelch@gentoo.org> distcc-1.2.3.ebuild,
+  files/1.2.1/distcc-config:
+  add shadow as DEPEND (for now), fix distcc-config if shadow tools not
+  installed (for later)
 
   07 Mar 2003; Zach Welch <zwelch@gentoo.org> distcc-1.2.3.ebuild:
   mark distcc-1.2.3 as stable on x86 and ppc

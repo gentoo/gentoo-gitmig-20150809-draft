@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-1.2.3.ebuild,v 1.2 2003/03/07 21:09:17 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/distcc-1.2.3.ebuild,v 1.3 2003/03/12 05:32:40 zwelch Exp $
 
 inherit eutils
 
@@ -19,6 +19,7 @@ LPV="1.2.1"
 
 DEPEND=">=sys-apps/portage-2.0.46-r11
 	>=sys-devel/gcc-config-1.3.1
+	sys-apps/shadow
 	dev-libs/popt"
 
 src_unpack() {
