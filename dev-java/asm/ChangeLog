@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/asm
 # Copyright 2000-2004 Gentoo Foundation; Distributed unde the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.6 2004/06/27 16:32:01 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/asm/ChangeLog,v 1.7 2004/07/31 22:13:11 karltk Exp $
+
+*asm-1.4.3-r1 01 Aug 2004
+
+  01 Aug 2004; Karl Trygve Kalleberg <karltk@gentoo.org> 
+  SLOTed properly, fixes #55870.
 
 *asm-1.4.3 (27 Jun 2004)
 
