@@ -1,15 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/aesop/aesop-0.4.ebuild,v 1.8 2004/06/24 23:33:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/aesop/aesop-0.4.ebuild,v 1.9 2004/07/15 02:33:02 agriffis Exp $
 
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Aesop is a TCP-proxy which supports many advanced and powerful features.  Uses encryption and provides a wrapper library for BSD socket API."
 SRC_URI="http://kryptology.org/aesop/download/${P}.tar.gz"
 HOMEPAGE="http://kryptology.org/aesop"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc"
+IUSE=""
 
 DEPEND="sys-devel/gcc"
 
