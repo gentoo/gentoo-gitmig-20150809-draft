@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/joymouse
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/joymouse/ChangeLog,v 1.3 2004/06/24 22:17:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/joymouse/ChangeLog,v 1.4 2004/07/10 13:15:36 slarti Exp $
+
+  10 Jul 2004; Tom Martin <slarti@gentoo.org> joymouse-0.3.ebuild:
+  Marked ~amd64.
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   joymouse-0.3.ebuild:
