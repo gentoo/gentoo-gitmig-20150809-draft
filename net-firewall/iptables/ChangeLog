@@ -1,19 +1,32 @@
 # ChangeLog for net-firewall/iptables
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.30 2004/06/24 22:41:08 agriffis Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.31 2004/06/28 19:00:50 aliz Exp $
 
-*iptables-1.2.9-r2 (24 Jun 2004)
+*iptables-1.2.9-r2 (28 Jun 2004)
 
-  24 Jun 2004; Aron Griffis <agriffis@gentoo.org> iptables-1.2.9-r2.ebuild:
-  QA - fix use invocation
+  28 Jun 2004; Daniel Ahlberg <aliz@gentoo.org> iptables-1.2.9-r2.ebuild:
+  New revision with a new local use flag that toggles the applying of
+  3rd party patches and building against linux sources. Without the new
+  use flag no 3rd party extensions patches will be applied and iptables
+  will be built against linux-headers.
+
+  Be aware that iptables doesn't always build against the newest kernels
+  and manual patching may be required.
+
+  Closing #54440
+
+  28 Jun 2004; Daniel Ahlberg <aliz@gentoo.org> iptables-1.2.7a-r3.ebuild,
+  iptables-1.2.9-r1.ebuild, iptables-1.2.9.ebuild:
+  Step back to an earlier date to clean up the mess, 
+  change "Gentoo Technologies Inc" to "Gentoo Foundation".
 
   09 Jun 2004; Aron Griffis <agriffis@gentoo.org> iptables-1.2.7a-r3.ebuild,
   iptables-1.2.9-r1.ebuild, iptables-1.2.9.ebuild:
   Fix use invocation and replace unnecessary subshell with if..then..fi
 
   07 Jun 2004; Daniel Ahlberg <aliz@gentoo.org> iptables-1.2.9-r1.ebuild:
-  + Only run check_KV if /usr/src/liunx is a symlink or a directory, possible fix
-    for #46817.
+  + Only run check_KV if /usr/src/liunx is a symlink or a directory, possible 
+    fix for #46817.
   + Handle extensionpatches that was added for 1.2.9-r1. Closing #51418.
 
   10 May 2004; Daniel Ahlberg <aliz@gentoo.org> iptables-1.2.9-r1.ebuild:
