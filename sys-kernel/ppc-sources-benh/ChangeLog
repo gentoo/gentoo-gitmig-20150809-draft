@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/ppc-sources-benh
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-benh/ChangeLog,v 1.14 2004/01/08 19:19:20 plasmaroo Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-sources-benh/ChangeLog,v 1.15 2004/02/19 10:04:18 plasmaroo Exp $
+
+*ppc-sources-benh-2.4.22-r5 (19 Feb 2004)
+
+  19 Feb 2004; <plasmaroo@gentoo.org> ppc-sources-benh-2.4.22-r5.ebuild,
+  files/ppc-sources-benh-2.4.22.munmap.patch:
+  Added the patch for the mremap/munmap vulnerability. Bug #42024.
 
 *ppc-sources-benh-2.4.22-r4 (08 Jan 2004)
 
