@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/rosegarden
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.26 2005/03/09 21:49:24 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rosegarden/ChangeLog,v 1.27 2005/03/20 21:54:00 luckyduck Exp $
+
+*rosegarden-4.1.0-r1 (20 Mar 2005)
+
+  20 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  +rosegarden-4.1.0-r1.ebuild:
+  new ebuild for rosegarden, contributed by Carsten Lohrke <carlo@gentoo.org>.
+  fixes #86047
 
   09 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> +files/4.1.0-dssi.patch,
   rosegarden-4.1.0.ebuild:

@@ -3,19 +3,21 @@ Hash: SHA1
 
 MD5 221eb733c2159335f0a6c15e7c9622bc rosegarden-4.0.9.8.ebuild 976
 MD5 4b63b0c68d2355ba3a83dfa02856f368 rosegarden-4.0.9.91.ebuild 1527
+MD5 b64f3388301e809c1181d8c077e737fb rosegarden-4.1.0-r1.ebuild 1425
 MD5 0b1f7abe6a7e52fee5880b4a50c84db6 rosegarden-4.0.9.91_rc2.ebuild 1614
-MD5 52ed58dec649f7ddb73ccda863851e1a ChangeLog 4255
+MD5 2acf87388b30a20aa7c86f2625305373 ChangeLog 4469
 MD5 0414274338771f7434383411b00f030d rosegarden-4.1.0.ebuild 1672
 MD5 c88092184926549fd28a504c79731af2 metadata.xml 256
 MD5 f9434a09349540e99ec3ef2e25b0f894 files/digest-rosegarden-4.0.9.91_rc2 76
 MD5 bd72ada570a80540f254ef3bf2fa7b2e files/digest-rosegarden-4.0.9.91 72
+MD5 3cc3d030f6a95056ab3ece40cd427077 files/digest-rosegarden-4.1.0-r1 70
 MD5 3cc3d030f6a95056ab3ece40cd427077 files/digest-rosegarden-4.1.0 70
 MD5 a59eb89ba41ea479834ca5694b0f5192 files/4.1.0-dssi.patch 514
 MD5 eedfa71e3000918862d19d5ac29cc0ef files/digest-rosegarden-4.0.9.8 71
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCL2+V06ebR+OMO78RAsREAJ49ZphVPnsSPBwMFEVXZ6PzieFaQACfQxPq
-VPk2wjRmyAYd6pAFY8Jp9QE=
-=hrBi
+iD8DBQFCPfD/06ebR+OMO78RAgXDAJ97ygfntfrysMlAXftd5csoqg+MlQCfQDOT
+s3G3V9cFO1GE55j7ZmlN7vk=
+=m6EU
 -----END PGP SIGNATURE-----
