@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/egenix-mx-base
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.19 2004/03/16 19:28:31 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/ChangeLog,v 1.20 2004/03/21 11:02:12 kumba Exp $
+
+  21 Mar 2004; Joshua Kinard <kumba@gentoo.org> egenix-mx-base-2.0.5.ebuild:
+  Marked stable on mips.
 
   16 Mar 2004; Bryan Østergaard,,, <kloeri@gentoo.org>
   egenix-mx-base-2.0.3.ebuild, egenix-mx-base-2.0.4.ebuild,
