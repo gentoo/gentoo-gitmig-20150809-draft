@@ -1,6 +1,6 @@
-# ChangeLog for net-analyzer/nmap
+# ChangeLog for net-analyzer/arpwatch
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/ChangeLog,v 1.2 2003/02/12 07:43:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/arpwatch/ChangeLog,v 1.3 2003/02/13 20:40:11 vapier Exp $
 
 *arpwatch-2.1.11 (08 Jan 2003)
 
