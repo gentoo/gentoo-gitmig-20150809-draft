@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.0-r1.ebuild,v 1.2 2003/01/08 16:58:37 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.0-r1.ebuild,v 1.3 2003/01/08 17:03:37 rphillips Exp $
 
-IUSE="apache2 freetype postgres tiff libwww nls jpeg ssl gd oci8 mysql X gdbm curl imap png xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam"
+IUSE="apache2 freetype postgres tiff libwww nls jpeg ssl oci8 mysql X gdbm curl imap xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam"
 
 MY_P=php-${PV}
 S=${WORKDIR}/${MY_P}
@@ -24,8 +24,6 @@ DEPEND="
 	freetype? ( ~media-libs/freetype-1.3.1 >=media-libs/t1lib-1.3.1 )
 	jpeg? ( >=media-libs/jpeg-6b )
 	tiff? ( >=media-libs/tiff-3.5.5 )
-	png? ( >=media-libs/libpng-1.2.1 )
-	gd? ( >=media-libs/libgd-1.8.3 )
 	X? ( virtual/x11 )
 	qt? ( x11-libs/qt )
 	nls? ( sys-devel/gettext )
@@ -119,8 +117,6 @@ src_compile() {
 	use firebird && myconf="${myconf} --with-interbase=/opt/interbase"
 	use freetype && myconf="${myconf} --with-ttf --with-t1lib"
 	use pdflib && myconf="${myconf} --with-pdflib=/usr"
-	use gd && myconf="${myconf} --with-gd"
-	use png && myconf="${myconf} --with-png-dir=/usr"	
 	use jpeg && myconf="${myconf} --with-jpeg-dir=/usr/lib"
 	use tiff && myconf="${myconf} --with-tiff-dir=/usr"
 
@@ -190,6 +186,7 @@ src_compile() {
 		--enable-bcmath \
 		--enable-sysvsem \
 		--enable-exif \
+		--with-gd \
 		--enable-sysvshm \
 		--enable-sockets \
 		--enable-calendar \
