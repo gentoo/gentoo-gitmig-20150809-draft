@@ -1,6 +1,13 @@
 # ChangeLog for net-nds/ypserv
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ChangeLog,v 1.6 2002/12/13 11:00:17 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ChangeLog,v 1.7 2003/01/28 20:22:01 raker Exp $
+
+*ypserv-2.5-r1 (28 Jan 2003)
+
+  28 Jan 2003; Nick Hadaway <raker@gentoo.org> ypserv-2.5-r1.ebuild,
+  files/digest-ypserv-2.5-r1 :
+  Put in some logic so /var/yp/Makefile doesn't get overwritten on
+  upgrades.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
