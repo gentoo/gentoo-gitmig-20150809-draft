@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kde-i18n
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.63 2005/03/20 11:42:56 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/ChangeLog,v 1.64 2005/03/21 13:53:30 greg_g Exp $
+
+  21 Mar 2005; Gregorio Guidi <greg_g@gentoo.org> kde-i18n-3.3.2.ebuild,
+  kde-i18n-3.4.0.ebuild:
+  Better error message if LINGUAS contains unavailable languages (#85997).
 
   20 Mar 2005; Marcus D. Hanwell <cryos@gentoo.org> kde-i18n-3.4.0.ebuild:
   Marked ~amd64, closes bug 85981.

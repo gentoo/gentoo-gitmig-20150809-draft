@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.4.0.ebuild,v 1.4 2005/03/20 11:42:56 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.4.0.ebuild,v 1.5 2005/03/21 13:53:30 greg_g Exp $
 
 inherit kde eutils
 
@@ -23,16 +23,20 @@ for X in ${LANGS} ; do
 	SRC_URI="${SRC_URI} linguas_${X}? ( mirror://kde/stable/3.4/src/kde-i18n/kde-i18n-${X}-${PV}.tar.bz2 )"
 done
 
-src_unpack() {
-	if [ -z "${LINGUAS}" ]; then
-		ewarn
-		ewarn "You must define a LINGUAS environment variable that contains a list"
-		ewarn "of the language codes for which languages you would like to install."
-		ewarn "e.g.: LINGUAS=\"se de pt\""
-		ewarn
+pkg_setup() {
+	if [ -z "${A}" ]; then
+		echo
+		eerror "You must define a LINGUAS environment variable that contains a list"
+		eerror "of the language codes for which languages you would like to install."
+		eerror "Look at the LANGS variable inside the ebuild to see the list of"
+		eerror "available languages."
+		eerror "e.g.: LINGUAS=\"se de pt\""
+		echo
 		die
 	fi
+}
 
+src_unpack() {
 	base_src_unpack unpack
 
 	if use linguas_ru; then
