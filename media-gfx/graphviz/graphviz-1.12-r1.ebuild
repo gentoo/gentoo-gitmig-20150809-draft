@@ -1,14 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-1.12-r1.ebuild,v 1.3 2004/11/04 03:04:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/graphviz-1.12-r1.ebuild,v 1.4 2004/11/07 20:37:10 sekretarz Exp $
 
 inherit gnuconfig eutils
 
 DESCRIPTION="open source graph drawing software"
 HOMEPAGE="http://www.research.att.com/sw/tools/graphviz/"
-SRC_URI="http://www.graphviz.org/pub/graphviz/ARCHIVE/${P}.tar.gz"
+SRC_URI="http://www.graphviz.org/pub/graphviz/ARCHIVE/${P}.tar.gz
+		mirror://gentoo/graphviz-1.12-configure.ac.bz2"
 
-LICENSE="as-is | ATT"
+LICENSE="as-is ATT"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~x86"
 IUSE="tcltk"

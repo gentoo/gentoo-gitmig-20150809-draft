@@ -1,6 +1,12 @@
 # ChangeLog for media-gfx/graphviz
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.33 2004/07/27 17:16:23 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphviz/ChangeLog,v 1.34 2004/11/07 20:37:10 sekretarz Exp $
+
+*graphviz-1.12-r1 (07 Nov 2004)
+
+  07 Nov 2004; Karol Wojtaszek <sekretarz@gentoo.org>
+  graphviz-1.10.ebuild, graphviz-1.12-r1.ebuild, graphviz-1.12.ebuild:
+  Fixed URI_SRC to download new configure script. bug #70086 and fixed LICENCEs
 
 *graphviz-1.22-r1 (25 Jul 2004)
 
