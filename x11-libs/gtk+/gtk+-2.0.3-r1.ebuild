@@ -2,7 +2,9 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Spider  <spider@gentoo.org>
 # Maintainer: Spider <spider@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.0.3-r1.ebuild,v 1.1 2002/06/09 02:19:59 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.0.3-r1.ebuild,v 1.2 2002/06/09 18:34:12 azarah Exp $
+
+inherit libtool
 
 SLOT="2"
 
@@ -37,10 +39,9 @@ DEPEND="${RDEPEND}
 	 doc? ( >=dev-util/gtk-doc-0.9 )"
 
 src_compile() {
-	# seems things broke here.. odd readding to test
-	#  commented out to commit mainline gtk+
-	#	libtoolize --copy --force
-	local myconf
+	elibtoolize
+	
+	local myconf=""
 	use doc && myconf="${myconf} --enable-gtk-doc" || myconf="${myconf} --disable-gtk-doc"
 	use jpeg ||  myconf="${myconf} --without-libjpeg"
 	use tiff ||  myconf="${myconf} --without-libtiff"
