@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.28 2004/09/15 19:48:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.29 2004/09/15 20:18:05 vapier Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -12,6 +12,7 @@ virtual/aspell-dict			app-dicts/aspell-en
 virtual/bittorrent			net-p2p/bittorrent
 virtual/blackbox			x11-wm/blackbox
 virtual/blas				app-sci/blas-atlas
+virtual/cdrtools			app-cdr/cdrtools
 virtual/commonlisp			dev-lisp/sbcl
 virtual/cron				sys-apps/vixie-cron
 virtual/dhcpc				net-misc/dhcpcd
