@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/nautilus-themes/nautilus-themes-1.0.ebuild,v 1.7 2004/04/27 20:43:00 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/nautilus-themes/nautilus-themes-1.0.ebuild,v 1.8 2004/06/24 23:36:05 agriffis Exp $
 
 DESCRIPTION="Some nice themes for Nautilus"
 S=${WORKDIR}

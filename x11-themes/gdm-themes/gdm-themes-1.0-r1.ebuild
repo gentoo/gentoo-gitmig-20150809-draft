@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/gdm-themes-1.0-r1.ebuild,v 1.8 2004/04/27 20:09:02 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/gdm-themes-1.0-r1.ebuild,v 1.9 2004/06/24 23:27:04 agriffis Exp $
 
 DESCRIPTION="Some nice themes for the GDM Greeter"
 S=${WORKDIR}

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/etheme-BlueSteel/etheme-BlueSteel-0.16.7.ebuild,v 1.2 2004/05/11 18:42:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/etheme-BlueSteel/etheme-BlueSteel-0.16.7.ebuild,v 1.3 2004/06/24 23:24:47 agriffis Exp $
 
 DESCRIPTION="${PN/etheme-} theme for Enlightenment 16.7"
 HOMEPAGE="http://www.enlightenment.org/"

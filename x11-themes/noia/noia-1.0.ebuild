@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/noia/noia-1.0.ebuild,v 1.1 2003/11/11 11:33:49 tad Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/noia/noia-1.0.ebuild,v 1.2 2004/06/24 23:36:15 agriffis Exp $
 inherit kde # not kde-base since we don't need c++ deps
 
 need-kde 3

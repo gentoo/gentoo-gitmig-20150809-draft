@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/alloy-0.4.1a.ebuild,v 1.4 2004/04/27 19:35:49 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/alloy/alloy-0.4.1a.ebuild,v 1.5 2004/06/24 23:23:43 agriffis Exp $
 
 inherit kde
 need-kde 3.1

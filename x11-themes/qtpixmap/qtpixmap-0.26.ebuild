@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtpixmap/qtpixmap-0.26.ebuild,v 1.4 2004/04/27 20:21:36 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/qtpixmap/qtpixmap-0.26.ebuild,v 1.5 2004/06/24 23:37:19 agriffis Exp $
 
 inherit gtk-engines2 eutils
 

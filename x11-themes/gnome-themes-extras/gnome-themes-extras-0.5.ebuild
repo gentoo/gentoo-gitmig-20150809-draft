@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/gnome-themes-extras-0.5.ebuild,v 1.8 2004/04/27 20:10:48 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gnome-themes-extras/gnome-themes-extras-0.5.ebuild,v 1.9 2004/06/24 23:28:09 agriffis Exp $
 
 inherit gnome2 eutils
 

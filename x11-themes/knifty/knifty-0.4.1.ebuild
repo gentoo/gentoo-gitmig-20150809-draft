@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/knifty/knifty-0.4.1.ebuild,v 1.4 2004/06/21 13:58:54 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/knifty/knifty-0.4.1.ebuild,v 1.5 2004/06/24 23:33:57 agriffis Exp $
 
 inherit kde
 

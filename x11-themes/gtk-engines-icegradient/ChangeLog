@@ -1,6 +1,6 @@
 # ChangeLog for x11-themes/gtk-engines-icegradient
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-icegradient/ChangeLog,v 1.4 2004/01/10 14:19:14 gustavoz Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-icegradient/ChangeLog,v 1.5 2004/06/24 23:30:08 agriffis Exp $
 
   10 Jan 2004; <gustavoz@gentoo.org> gtk-engines-icegradient-0.0.5-r1.ebuild:
   keyworded hppa and sparc

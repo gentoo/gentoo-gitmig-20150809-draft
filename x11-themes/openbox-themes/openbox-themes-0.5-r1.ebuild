@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/openbox-themes/openbox-themes-0.5-r1.ebuild,v 1.8 2004/05/06 16:34:39 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/openbox-themes/openbox-themes-0.5-r1.ebuild,v 1.9 2004/06/24 23:36:47 agriffis Exp $
 
 DESCRIPTION="A set of themes for Openbox3."
 SRC_URI="mirror://gentoo/${P}.tar.bz2"

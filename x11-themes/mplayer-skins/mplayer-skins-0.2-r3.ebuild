@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mplayer-skins/mplayer-skins-0.2-r3.ebuild,v 1.6 2004/02/17 23:09:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mplayer-skins/mplayer-skins-0.2-r3.ebuild,v 1.7 2004/06/24 23:35:43 agriffis Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Collection of mplayer themes"
