@@ -1,25 +1,25 @@
 # ChangeLog for net-analyzer/tleds
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tleds/ChangeLog,v 1.2 2002/07/02 09:51:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tleds/ChangeLog,v 1.3 2002/10/15 00:53:10 vapier Exp $
 
 *tleds-1.05_beta11 (2 Jul 2002)
 
+  14 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Fix for #9104 ... ebuild was not properly respecting '-X' ...
+
   02 Jul 2002; Seemant Kulleen <seemant@gentoo.org> tleds-1.05_beta11.ebuild
   files/digest-tleds-1.05_beta11.ebuild files/tleds-1.05_beta11-gentoo.patch :
-
   Version bump. Ebuild and patch submitted by Rachel Holmes
 
 *tleds-1.04-r2 (2 Jul 2002)
 
   02 Jul 2002; Seemant Kulleen <seemant@gentoo.org> tleds-1.04-r1.ebuild
   files/digest-tleds-1.04-r1 :
-
   Corrections submitted by Rachel Holmes.
 
 *tleds-1.04 (1 Jul 2002)
   
   01 Jul 2002; Seemant Kulleen <seemant@gentoo.org> tleds-1.04.ebuild
   files/tleds-1.04-FuRy.patch files/digest-tleds-1.04 ChangeLog :
-
   New package, with a patch for recent kernels generously donated by Rachel
   Holmes.
