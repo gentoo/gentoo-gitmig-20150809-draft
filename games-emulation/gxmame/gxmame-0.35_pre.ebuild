@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/gxmame/gxmame-0.35_pre.ebuild,v 1.1 2005/01/02 07:41:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/gxmame/gxmame-0.35_pre.ebuild,v 1.2 2005/01/22 05:08:26 vapier Exp $
 
 MY_P="${PN}-${PV/_pre/cvs}"
 DESCRIPTION="frontend for XMame using the GTK library"
@@ -13,6 +13,7 @@ KEYWORDS="amd64 ppc x86"
 IUSE="nls joystick"
 
 DEPEND="virtual/x11
+	dev-libs/expat
 	=x11-libs/gtk+-2*
 	=dev-libs/glib-2*
 	sys-libs/zlib"
