@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/e2fsprogs-1.25-r3.ebuild,v 1.2 2001/12/19 02:58:34 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/e2fsprogs-1.25-r3.ebuild,v 1.3 2001/12/19 16:20:13 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard ext2 and ext3 filesystem utilities"
@@ -20,7 +20,7 @@ src_compile() {
 	else
 		myconf="--disable-nls"
 	fi
-	./configure --host=${CHOST} --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --enable-elf-shlibs ${myconf} || die
+	./configure --host=${CHOST} --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --enable-dynamic-e2fsck --enable-elf-shlibs ${myconf} || die
 	# Parallel make sometimes fails
 	make || die
 }
