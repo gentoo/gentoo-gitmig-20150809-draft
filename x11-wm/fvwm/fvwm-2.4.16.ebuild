@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.4.16.ebuild,v 1.1 2003/07/03 18:38:55 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.4.16.ebuild,v 1.2 2003/07/06 20:20:10 taviso Exp $
 
 inherit gnuconfig
 
@@ -35,6 +35,10 @@ src_compile() {
 		&& myconf="--with-gnome" \
 		|| myconf="--without-gnome" \
 
+	# CFLAGS containing comma will break this.
+	sed -i 's#\x27s,xCFLAGSx,$(CFLAGS),\x27#\x27s!xCFLAGSx!$(CFLAGS)!\x27#' \
+		${S}/utils/Makefile.am
+
 	automake
 
 	econf \
@@ -46,7 +50,7 @@ src_compile() {
 }
 
 src_install () {
-	einstall || die
+	make DESTDIR=${D} install || die
 	
 	echo "#!/bin/bash" > fvwm2
 	echo "/usr/bin/fvwm2" >> fvwm2
