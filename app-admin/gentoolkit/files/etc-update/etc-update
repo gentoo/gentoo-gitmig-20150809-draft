@@ -8,7 +8,7 @@
 # Leo Lipelis <aeoo@gentoo.org>
 # Karl Trygve Kalleberg <karltk@gentoo.org>
 #
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/etc-update/etc-update,v 1.6 2002/06/26 06:32:26 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/etc-update/etc-update,v 1.7 2002/06/26 16:56:13 lostlogic Exp $
 
 function get_config() {
 	item=$1
@@ -36,8 +36,8 @@ function scan() {
 			rpath=`echo "${file}" | sed -e "s:/[^/]*$::"`
 			rfile=`echo "${file}" | sed -e "s:^.*/::"`
 			if [[ "${ofile:10}" != "${rfile:10}" ]] || [[ ${opath} != ${rpath} ]]; then
-				if [[ -z `diff -Nu ${rpath}/${rfile} ${rpath}/${rfile:10}|
-						  grep "^[+-][^+-]"|grep -v '# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/etc-update/etc-update,v 1.6 2002/06/26 06:32:26 lostlogic Exp $'` ]]; then
+				if [[ -z `diff -Nua ${rpath}/${rfile} ${rpath}/${rfile:10}|
+						  grep "^[+-][^+-]"|grep -v '# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/etc-update/etc-update,v 1.7 2002/06/26 16:56:13 lostlogic Exp $'` ]]; then
 					mv ${rpath}/${rfile} ${rpath}/${rfile:10}
 					continue
 				else
@@ -49,8 +49,8 @@ function scan() {
 					continue
 				fi
 			fi
-			if [[ -z `diff -Nu ${rpath}/${rfile} ${rpath}/${ofile}|
-					  grep "^[+-][^+-]"|grep -v '# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/etc-update/etc-update,v 1.6 2002/06/26 06:32:26 lostlogic Exp $'` ]]; then
+			if [[ -z `diff -Nua ${rpath}/${rfile} ${rpath}/${ofile}|
+					  grep "^[+-][^+-]"|grep -v '# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/etc-update/etc-update,v 1.7 2002/06/26 16:56:13 lostlogic Exp $'` ]]; then
 				mv ${rpath}/${rfile} ${rpath}/${ofile}
 				continue
 			else
