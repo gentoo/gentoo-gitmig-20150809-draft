@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.1.3.ebuild,v 1.1 2002/08/19 09:34:14 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.1.3.ebuild,v 1.2 2002/08/22 23:28:07 danarmak Exp $
 
 inherit kde-base
 need-kde 3
@@ -33,6 +33,9 @@ newdepend ">=kde-base/kdebase-3
 	>=dev-util/ctags-5.0.1
 	>=app-text/sgmltools-lite-3.0.3
 	>=app-doc/qt-docs-${QTVER}"
+
+# -j2 and greater fails - see bug #6199
+export MAKEOPTS="$MAKEOPTS -j1"
 
 src_unpack() {
     base_src_unpack

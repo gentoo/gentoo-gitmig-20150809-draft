@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.1.2.ebuild,v 1.9 2002/08/16 04:04:42 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-2.1.2.ebuild,v 1.10 2002/08/22 23:28:07 danarmak Exp $
 
 inherit kde-base
 need-kde 3
@@ -19,7 +19,6 @@ SRC_URI="ftp://ftp.kde.org/pub/$SRC_PATH
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc sparc64"
 
-
 DEPEND="$DEPEND
 	sys-devel/flex
 	sys-devel/perl"
@@ -33,6 +32,9 @@ newdepend ">=kde-base/kdebase-3
 	>=dev-util/ctags-5.0.1
 	>=app-text/sgmltools-lite-3.0.3
 	>=app-doc/qt-docs-${QTVER}"
+
+# -j2 and greater fails - see bug #6199
+export MAKEOPTS="$MAKEOPTS -j1"
 
 src_unpack() {
     base_src_unpack
