@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/rsbac-sources-2.4.28-r1.ebuild,v 1.1 2004/12/08 20:17:09 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/rsbac-sources-2.4.28-r1.ebuild,v 1.2 2005/01/12 22:23:18 johnm Exp $
 
 IUSE=""
 ETYPE="sources"

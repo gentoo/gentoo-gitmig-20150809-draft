@@ -1,0 +1,61 @@
+--- 1.143/fs/exec.c	2004-10-28 00:40:03 -07:00
++++ edited/fs/exec.c	2004-11-11 19:24:54 -08:00
+@@ -413,6 +413,7 @@
+ 
+ 	down_write(&mm->mmap_sem);
+ 	{
++		struct vm_area_struct *vma;
+ 		mpnt->vm_mm = mm;
+ #ifdef CONFIG_STACK_GROWSUP
+ 		mpnt->vm_start = stack_base;
+@@ -433,6 +434,12 @@
+ 			mpnt->vm_flags = VM_STACK_FLAGS;
+ 		mpnt->vm_flags |= mm->def_flags;
+ 		mpnt->vm_page_prot = protection_map[mpnt->vm_flags & 0x7];
++		vma = find_vma(mm, mpnt->vm_start);
++		if (vma) {
++			up_write(&mm->mmap_sem);
++			kmem_cache_free(vm_area_cachep, mpnt);
++			return -ENOMEM;
++		}
+ 		insert_vm_struct(mm, mpnt);
+ 		mm->stack_vm = mm->total_vm = vma_pages(mpnt);
+ 	}
+--- 1.25/fs/binfmt_aout.c	2004-10-18 22:26:36 -07:00
++++ edited/fs/binfmt_aout.c	2004-11-11 22:28:58 -08:00
+@@ -43,13 +43,18 @@
+ 	.min_coredump	= PAGE_SIZE
+ };
+ 
+-static void set_brk(unsigned long start, unsigned long end)
++#define BAD_ADDR(x)	((unsigned long)(x) >= TASK_SIZE)
++
++static int set_brk(unsigned long start, unsigned long end)
+ {
+ 	start = PAGE_ALIGN(start);
+ 	end = PAGE_ALIGN(end);
+-	if (end <= start)
+-		return;
+-	do_brk(start, end - start);
++	if (end > start) {
++		unsigned long addr = do_brk(start, end - start);
++		if (BAD_ADDR(addr))
++			return addr;
++	}
++	return 0;
+ }
+ 
+ /*
+@@ -413,7 +418,11 @@
+ beyond_if:
+ 	set_binfmt(&aout_format);
+ 
+-	set_brk(current->mm->start_brk, current->mm->brk);
++	retval = set_brk(current->mm->start_brk, current->mm->brk);
++	if (retval < 0) {
++		send_sig(SIGKILL, current, 0);
++		return retval;
++	}
+ 
+ 	retval = setup_arg_pages(bprm, EXSTACK_DEFAULT);
+ 	if (retval < 0) { 

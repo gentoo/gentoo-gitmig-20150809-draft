@@ -1,6 +1,25 @@
 # ChangeLog for sys-kernel/rsbac-sources
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/ChangeLog,v 1.18 2004/12/08 20:17:09 kang Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-sources/ChangeLog,v 1.19 2005/01/12 22:23:18 johnm Exp $
+
+*rsbac-sources-2.6.9 (12 Jan 2005)
+
+  12 Jan 2005; John Mylchreest <johnm@gentoo.org>
+  +files/rsbac-bugfix-v1.2.3-6.diff, +files/rsbac-bugfix-v1.2.3-ao-01.diff,
+  +files/rsbac-bugfix-v1.2.3-kang-01.diff,
+  +files/rsbac-sources-2.6.7-62524-ptmx.patch,
+  +files/rsbac-sources-2.6.7-70681-binfmt.patch,
+  +files/rsbac-sources-2.6.7-AF_UNIX.patch,
+  +files/rsbac-sources-2.6.7-CAN-2004-0883.patch,
+  +files/rsbac-sources-2.6.7-dos_mem_disc1.patch,
+  +files/rsbac-sources-2.6.7-dos_mem_disc2.patch,
+  +files/rsbac-sources-CAN-2004-0497.patch,
+  +files/rsbac-sources-CAN-2004-0596.patch,
+  +files/rsbac-sources-CAN-2004-0816.patch,
+  +files/rsbac-sources-CAN-2004-1069.patch,
+  +files/rsbac-sources-iptables-dos.patch, +rsbac-sources-2.6.7-r11.ebuild,
+  +rsbac-sources-2.6.9.ebuild:
+  2.6->2.4 amalgamation. Please see web-cvs for changelog from rsbas-dev-sources
 
 *rsbac-sources-2.4.28-r1 (08 Dec 2004)
 

@@ -1,21 +1,39 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3dc4c1d7cadf1c8675e6fe9fe5817cb0 rsbac-sources-2.4.28-r1.ebuild 1451
-MD5 c33a173f4db7ca5ebf992cc1b27711e5 ChangeLog 2575
+MD5 328797650996e7330596351c56cb059e rsbac-sources-2.4.28-r1.ebuild 1452
+MD5 2e6430f6994c795880314318b8ba02fb rsbac-sources-2.6.7-r11.ebuild 1918
+MD5 d4dcd5536cc304096310e85f410f20f2 rsbac-sources-2.6.9.ebuild 1473
+MD5 8525944ae6574c7de53e7c141efb9d5b ChangeLog 3436
 MD5 fee9abc7797fef753c42454679bae9a7 metadata.xml 456
 MD5 6197e52bf5742c3f61716fe6a681055c files/rsbac-sources-v1.2.3-6.patch 13068
+MD5 452e04a312368605e145428c35bd0e05 files/rsbac-sources-2.6.7-62524-ptmx.patch 572
+MD5 accdbfc81ddc59d568ed845b5972f10a files/rsbac-sources-2.6.7-70681-binfmt.patch 2606
+MD5 91dd923056c1af13054cb00fb0a8daa3 files/rsbac-sources-2.6.7-dos_mem_disc1.patch 1578
+MD5 7872d0af6e27fb6007833b113097bb34 files/rsbac-sources-2.6.7-CAN-2004-0883.patch 3357
 MD5 305a7a9407bd311f3b58d0b7ae505506 files/rsbac-sources-v1.2.3-1.patch 1784
 MD5 665832a4660ee3c3d531dfc2568cc495 files/digest-rsbac-sources-2.4.28-r1 207
+MD5 632a66f683783bebc9c7b565284284d0 files/rsbac-sources-2.6.7-dos_mem_disc2.patch 7369
 MD5 b9a94233e1457787352e5f85e3e3582d files/rsbac-sources-2.4.28-dos_mem_disc.patch 2009
+MD5 97a40292e0b33025c43888a20190ef29 files/rsbac-bugfix-v1.2.3-ao-01.diff 1180
 MD5 d41d8cd98f00b204e9800998ecf8427e files/rsbac-sources-v1.2.3-2.patch 0
+MD5 6451bd210935a3978fd3a3edac673591 files/rsbac-sources-iptables-dos.patch 389
+MD5 b6e38b41c8a79943df2ab2642149d06f files/rsbac-sources-CAN-2004-0497.patch 2214
 MD5 a869ab037c7e264df5f8e899864f08e9 files/rsbac-sources-v1.2.3-3.patch 557
+MD5 ee9c2340e890a15d199f98f98e027466 files/digest-rsbac-sources-2.6.7-r11 281
 MD5 c1c64783ddf4cce2b21b0b6f96f329d7 files/rsbac-sources-v1.2.3-4.patch 1018
+MD5 b70bcb7c4896526b671f12695522cb0e files/rsbac-bugfix-v1.2.3-kang-01.diff 510
+MD5 263a9f529a3b80e2c91340a73c0c5920 files/rsbac-sources-CAN-2004-0816.patch 1445
+MD5 6197e52bf5742c3f61716fe6a681055c files/rsbac-bugfix-v1.2.3-6.diff 13068
 MD5 ffea7c6daada6d0033ed3996d45fd7ca files/rsbac-sources-v1.2.3-5.patch 625
+MD5 f0e12ba218f53c2694a91259bdc2fdc7 files/rsbac-sources-CAN-2004-0596.patch 494
+MD5 530630d25910e6bd9376b63ea099655f files/rsbac-sources-2.6.7-AF_UNIX.patch 469
+MD5 76e034360be9c90c736b2440f39349d7 files/digest-rsbac-sources-2.6.9 217
+MD5 4d656fa3f3a47df751c0d78b64ed8353 files/rsbac-sources-CAN-2004-1069.patch 1761
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFBt4zsI1lqEGTUzyQRAtjrAJ95szpZmBidJSlFzhx6ztV1T7kyhwCfWfVk
-Tbx7JNsbkuJrZ1VuNp707Rk=
-=DLsb
+iD8DBQFB5aNhm/TpOlox+n8RAhiVAJ4jqF/sSOH4hhXLw9f8cg3o/AkUmACdFM8e
+k4yvjo0uzPHza3a6o9C8U/U=
+=45Rk
 -----END PGP SIGNATURE-----
