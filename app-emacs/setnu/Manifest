@@ -1,5 +1,5 @@
-MD5 0b543b77eb32abc3fcc213ee246e4e19 ChangeLog 337
+MD5 f58e1efbdb5acc42d89628a0b170a53b ChangeLog 426
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
-MD5 402a3c6763dab25a57734c73148a0dd4 setnu-1.06.ebuild 660
+MD5 21b1122ad8c4f8c117ca4cbc9564404a setnu-1.06.ebuild 653
 MD5 f0af45b7ea787906556c07d2204ad90b files/digest-setnu-1.06 60
 MD5 6db5846550a257ea00daa0f261ceb72f files/50setnu-gentoo.el 194
