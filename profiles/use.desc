@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.139 2004/02/24 19:20:19 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.desc,v 1.140 2004/02/26 23:34:03 eradicator Exp $
 
 3dfx - Adds support for 3dfx video cards to XFree86. See: voodoo3
 3dnow - Adds support for 3dnow multimedia processor instructions
@@ -24,6 +24,7 @@ bonobo - Adds support for gnome-base/bonobo (Gnome CORBA interfaces)
 bootstrap - !!internal use only!! DO NOT SET THIS FLAG YOURSELF!, used during original system bootstrapping
 build - !!internal use only!! DO NOT SET THIS FLAG YOURSELF!, used for creating build images and the first half of bootstrapping.
 canna - Adds support for the Canna kana to kanji conversion engine
+caps - Use Linux capabilities library to control privileges.
 cdr - Adds support for CD writer hardware (e.g. compile the koncd app in kdemultimedia)
 cjk - Adds support for Multi-byte character languages (Chinese, Japanese, Korean)
 crypt - Add support for encryption -- using mcrypt or gpg where applicable
