@@ -2,8 +2,10 @@
 
 3dfx
 3dnow
+acpi
 afs
 alsa
+apm
 directfb
 firebird
 lirc
