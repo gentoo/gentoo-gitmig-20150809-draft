@@ -1,7 +1,7 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl-tk/tcl-tk-8.0.5-r2.ebuild,v 1.3 2001/11/10 11:31:53 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl-tk/tcl-tk-8.0.5-r2.ebuild,v 1.4 2002/04/27 10:25:35 seemant Exp $
 
 
 R1=tcl${PV}
