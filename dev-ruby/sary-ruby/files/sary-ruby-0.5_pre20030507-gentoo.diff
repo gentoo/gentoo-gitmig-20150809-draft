@@ -1,0 +1,13 @@
+diff -urN sary-ruby.ORIG/searcher.c sary-ruby/searcher.c
+--- sary-ruby.ORIG/searcher.c	2002-11-24 04:05:00.000000000 +0900
++++ sary-ruby/searcher.c	2003-12-25 06:13:47.000000000 +0900
+@@ -119,7 +119,8 @@
+     GET_Searcher(klass, searcher);
+ 
+     Check_SafeStr(pattern);
+-    pat = str2cstr(pattern, &len);
++    pat = RSTRING(pattern)->ptr;
++    len = RSTRING(pattern)->len;
+ 
+     if (sary_searcher_search2(searcher, pat, len))
+ 	return Qtrue;
