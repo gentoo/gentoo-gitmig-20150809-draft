@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.84.ebuild,v 1.9 2004/02/22 19:13:21 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.84.ebuild,v 1.10 2004/03/23 03:50:58 weeve Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.redhat.com/"
 
 LICENSE="OpenSoftware"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~ppc ~alpha hppa ~mips"
+KEYWORDS="x86 sparc ~ppc ~alpha hppa ~mips"
 
 DEPEND=">=sys-libs/glibc-2.3.2
 	>=sys-devel/binutils-2.14.90.0.6

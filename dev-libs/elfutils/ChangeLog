@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.32 2004/03/07 21:38:33 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.33 2004/03/23 03:50:58 weeve Exp $
+
+  22 Mar 2004; Jason Wever <weeve@gentoo.org> elfutils-0.84.ebuild:
+  Marked stable on sparc.
 
   07 Mar 2004; Jason Wever <weeve@gentoo.org> elfutils-0.94-r1.ebuild:
   Added ~sparc keyword, fixes bug #43828.
