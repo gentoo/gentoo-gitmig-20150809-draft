@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/bochs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.15 2003/11/22 05:28:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.16 2003/12/24 19:03:46 bazik Exp $
+
+  24 Dec 2003; Sven Blumenstein <bazik@gentoo.org> bochs-2.0.2.ebuild:
+  Added ~sparc keyword.
 
   21 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> bochs-2.0.2.ebuild:
   inherit eutils for epatch; more error checking/messages
