@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/blas-config
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-config/ChangeLog,v 1.7 2004/07/03 18:25:06 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-config/ChangeLog,v 1.8 2004/08/06 10:08:02 kugelfang Exp $
+
+  06 Aug 2004; Danny van Dyk <kugelfang@gentoo.org> blas-config-1.0.0.ebuild:
+  Marked stable on ppc and x86.
 
   03 Jul 2004; Danny van Dyk <kugelfang@gentoo.org> blas-config-1.0.0.ebuild:
   Marked ~alpha, kloeri tested.
