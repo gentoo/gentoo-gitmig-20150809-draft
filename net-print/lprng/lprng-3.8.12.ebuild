@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.12.ebuild,v 1.5 2002/10/05 05:39:24 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/lprng-3.8.12.ebuild,v 1.6 2002/12/07 07:16:54 jmorgan Exp $
 
 IUSE="nls"
 
@@ -9,7 +9,7 @@ MY_PN=LPRng
 S=${WORKDIR}/${MY_PN}-${PV}
 DESCRIPTION="Extended implementation of the Berkley LPR print spooler"
 HOMEPAGE="http://www.lprng.com/"
-KEYWORDS="x86 sparc64"
+KEYWORDS="x86 sparc"
 SRC_URI="ftp://ftp.lprng.com/pub/${MY_PN}/${MY_PN}/${MY_PN}-${PV}.tgz"
 
 PROVIDE="virtual/lpr"
