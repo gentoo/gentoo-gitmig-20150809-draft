@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/hotplug
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.16 2003/05/27 22:29:13 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.17 2003/06/11 00:23:02 msterret Exp $
+
+  10 Jun 2003; <msterret@gentoo.org> hotplug-20020826-r1.ebuild,
+  hotplug-20020826-r2.ebuild, hotplug-20020826.ebuild:
+  DEPEND on sed >= 4
 
 *hotplug-20030501-r1 (27 May 2003)
 
@@ -27,7 +31,7 @@
   fix bug 17799
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+
 *hotplug-20020826 (18 Oct 2002)
 
   14 Mar 2003; Zach Welch <zwelch@gentoo.org> hotplug-20020826.ebuild:
@@ -58,7 +62,7 @@
 
 *hotplug-20020401 (5 May 2002)
 
-  11 Aug 2002; phoen][x <phoenix@gentoo.org> hotplug-20020401.ebuild :  
+  11 Aug 2002; phoen][x <phoenix@gentoo.org> hotplug-20020401.ebuild :
   Fixed bug 6183.
 
   21 Jul 2002; Mark Guertin <gerk@gentoo.org>:

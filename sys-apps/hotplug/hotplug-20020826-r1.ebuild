@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/hotplug-20020826-r1.ebuild,v 1.2 2003/03/25 11:40:14 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/hotplug-20020826-r1.ebuild,v 1.3 2003/06/11 00:23:02 msterret Exp $
 
 inherit eutils
 
@@ -19,6 +19,7 @@ KEYWORDS="x86 ppc ~hppa"
 
 # hotplug needs pcimodules utility provided by pcitutils-2.1.9-r1
 DEPEND=">=sys-apps/pciutils-2.1.9
+	>=sys-apps/sed-4
 	>=sys-apps/usbutils-0.9"
 
 src_unpack() {
@@ -28,7 +29,7 @@ src_unpack() {
 	epatch ${WORKDIR}/hotplug-patches/
 
 	# fix for bug 17799
-	sed -i -e '145s:-le:-lt:' ${S}/etc/hotplug/usb.rc 
+	sed -i -e '145s:-le:-lt:' ${S}/etc/hotplug/usb.rc
 }
 
 src_install() {
@@ -46,7 +47,7 @@ src_install() {
 
 	exeinto /etc/init.d
 	newexe ${WORKDIR}/hotplug-conf/hotplug.rc hotplug
-	
+
 	insinto /etc/conf.d
 	newins ${WORKDIR}/hotplug-conf/usb.conf usb
 }
