@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/wxhaskell-0.8.ebuild,v 1.4 2004/10/26 13:57:18 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/wxhaskell/wxhaskell-0.8.ebuild,v 1.5 2004/11/10 19:02:26 kosmikus Exp $
 
 inherit wxwidgets
 
@@ -82,7 +82,7 @@ pkg_postinst() {
 	einfo "Registering wxcore package"
 	wxhlibdir=${ghclibdir} ghc-pkg -u -i ${ghclibdir}/wxcore.pkg
 	einfo "Registering wx package"
-	wxhlibdir=${ghclibdir} ghc-pkg -u -i ${ghclibdir}/config/wx.pkg
+	wxhlibdir=${ghclibdir} ghc-pkg -u -i ${ghclibdir}/wx.pkg
 }
 
 pkg_postrm() {
