@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.10.ebuild,v 1.4 2005/01/14 15:37:44 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/acroread/acroread-5.10.ebuild,v 1.5 2005/03/16 20:03:28 luckyduck Exp $
 
 inherit nsplugins eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.adobe.com/pub/adobe/acrobatreader/unix/5.x/${MY_P}.tar.gz"
 
 LICENSE="Adobe"
 SLOT="0"
-KEYWORDS="-* x86 ~amd64"
+KEYWORDS="-* x86 amd64"
 IUSE="cjk noplugin"
 RESTRICT="nostrip"
 
