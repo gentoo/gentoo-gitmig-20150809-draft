@@ -1,9 +1,17 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.225 2005/03/31 15:58:08 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.226 2005/04/01 17:48:14 uberlord Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+*baselayout-1.11.10-r6 (01 Apr 2005)
+
+  01 Apr 2005; Roy Marples <uberlord@gentoo.org>
+  +files/baselayout-1.11.10-wireless.patch, +baselayout-1.11.10-r6.ebuild:
+  Stopped setting ESSID in predown functions in iwconfig and wpa_supplicant
+  as there is no guarantee that the current ESSID is the one we started with
+  Also, we may not have an ESSID at all...
 
   31 Mar 2005; Tom Gall <tgall@gentoo.org> +rc-scripts-1.4.16-livecd-hvc.patch
   add support for hvc (ppc64 console on partitioned systems)
