@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.65 2004/10/01 21:32:07 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.66 2005/03/14 15:09:14 mcummings Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 # Maintained by the Perl herd <perl@gentoo.org>
@@ -30,6 +30,14 @@ EXPORT_FUNCTIONS pkg_setup pkg_preinst pkg_postinst pkg_prerm pkg_postrm \
 #
 # 2004.10.01 mcummings
 # noticed a discrepancy in how we were sed fixing references to ${D}
+#
+# 2005.03.14 mcummings
+# Updated eclass to include a specific function for dealing with perlocal.pods -
+# this should avoid the conflicts we've been running into with the introduction
+# of file collision features by giving us a single exportable function to deal
+# with the pods. Modifications to the eclass provided by Yaakov S
+# <yselkowitz@hotmail.com> in bug 83622
+
 
 DEPEND=">=dev-lang/perl-5.8.2 !<dev-perl/ExtUtils-MakeMaker-6.17"
 SRC_PREP="no"
@@ -82,7 +90,6 @@ perl-module_src_test() {
 perl-module_src_install() {
 	
 	perlinfo
-	dodir ${POD_DIR}
 	
 	test -z ${mytargets} && mytargets="install"
 					 
@@ -92,36 +99,7 @@ perl-module_src_install() {
 		make ${myinst} ${mytargets} || die
 	fi
 
-	if [ -f ${D}${ARCH_LIB}/perllocal.pod ];
-	then
-		touch ${D}/${POD_DIR}/${P}.pod
-		sed -e "s:${D}::g" \
-			${D}${ARCH_LIB}/perllocal.pod >> ${D}/${POD_DIR}/${P}.pod
-		touch ${D}/${POD_DIR}/${P}.pod.arch
-		cat ${D}/${POD_DIR}/${P}.pod >>${D}/${POD_DIR}/${P}.pod.arch
-		rm -f ${D}/${ARCH_LIB}/perllocal.pod
-	fi
-	
-	if [ -f ${D}${SITE_LIB}/perllocal.pod ];
-	then 
-		touch ${D}/${POD_DIR}/${P}.pod
-		sed -e "s:${D}::g" \
-			${D}${SITE_LIB}/perllocal.pod >> ${D}/${POD_DIR}/${P}.pod
-		touch ${D}/${POD_DIR}/${P}.pod.site
-		cat ${D}/${POD_DIR}/${P}.pod >>${D}/${POD_DIR}/${P}.pod.site
-		rm -f ${D}/${SITE_LIB}/perllocal.pod
-	fi
-
-	if [ -f ${D}${VENDOR_LIB}/perllocal.pod ];
-	then 
-		touch ${D}/${POD_DIR}/${P}.pod
-		sed -e "s:${D}::g" \
-			${D}${VENDOR_LIB}/perllocal.pod >> ${D}/${POD_DIR}/${P}.pod
-		touch ${D}/${POD_DIR}/${P}.pod.vendor
-		cat ${D}/${POD_DIR}/${P}.pod >>${D}/${POD_DIR}/${P}.pod.vendor
-		rm -f ${D}/${VENDOR_LIB}/perllocal.pod
-	fi
-
+	fixlocalpod
 
 	for FILE in `find ${D} -type f |grep -v '.so'`; do
 		STAT=`file $FILE| grep -i " text"`
@@ -186,6 +164,41 @@ perlinfo() {
 	if [ -f /usr/bin/perl ]
 	then 
 		POD_DIR="/usr/share/perl/gentoo-pods/${version}"
+	fi
+}
+
+fixlocalpod() {
+	perlinfo
+	dodir ${POD_DIR}
+
+	if [ -f ${D}${ARCH_LIB}/perllocal.pod ];
+	then
+		touch ${D}/${POD_DIR}/${P}.pod
+		sed -e "s:${D}::g" \
+			${D}${ARCH_LIB}/perllocal.pod >> ${D}/${POD_DIR}/${P}.pod
+		touch ${D}/${POD_DIR}/${P}.pod.arch
+		cat ${D}/${POD_DIR}/${P}.pod >>${D}/${POD_DIR}/${P}.pod.arch
+		rm -f ${D}/${ARCH_LIB}/perllocal.pod
+	fi
+	
+	if [ -f ${D}${SITE_LIB}/perllocal.pod ];
+	then 
+		touch ${D}/${POD_DIR}/${P}.pod
+		sed -e "s:${D}::g" \
+			${D}${SITE_LIB}/perllocal.pod >> ${D}/${POD_DIR}/${P}.pod
+		touch ${D}/${POD_DIR}/${P}.pod.site
+		cat ${D}/${POD_DIR}/${P}.pod >>${D}/${POD_DIR}/${P}.pod.site
+		rm -f ${D}/${SITE_LIB}/perllocal.pod
+	fi
+
+	if [ -f ${D}${VENDOR_LIB}/perllocal.pod ];
+	then 
+		touch ${D}/${POD_DIR}/${P}.pod
+		sed -e "s:${D}::g" \
+			${D}${VENDOR_LIB}/perllocal.pod >> ${D}/${POD_DIR}/${P}.pod
+		touch ${D}/${POD_DIR}/${P}.pod.vendor
+		cat ${D}/${POD_DIR}/${P}.pod >>${D}/${POD_DIR}/${P}.pod.vendor
+		rm -f ${D}/${VENDOR_LIB}/perllocal.pod
 	fi
 }
 
