@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c631948a1a669109aec8f1d22dabe200 ChangeLog 713
+MD5 3a7d8c3d7ff9d8aeb6e51da547cfce36 ChangeLog 798
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 6739ca767bfc83da8877400da396a43b mplinuxman-1.4.ebuild 1248
+MD5 3c1e59b7c1ac848134d425c41619a638 mplinuxman-1.4.ebuild 1254
 MD5 42127f98c4194df34f0925f654180090 files/digest-mplinuxman-1.4 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA35hKHTu7gpaalycRArMzAJ0SZey8DFlNw8ykURoXJMIrMTQZ4gCdEgcd
-NTBVAsVX9eCZY6VjyTbrnd8=
-=LoWn
------END PGP SIGNATURE-----

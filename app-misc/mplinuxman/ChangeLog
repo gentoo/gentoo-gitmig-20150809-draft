@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/mplinuxman
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mplinuxman/ChangeLog,v 1.4 2004/06/24 22:25:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mplinuxman/ChangeLog,v 1.5 2004/10/10 11:50:17 blubb Exp $
+
+  10 Oct 2004; Simon Stelling <blubb@gentoo.org> mplinuxman-1.4.ebuild:
+  added ~amd64
 
   01 Jun 2004; Aron Griffis <agriffis@gentoo.org> mplinuxman-1.4.ebuild:
   Fix use invocation
