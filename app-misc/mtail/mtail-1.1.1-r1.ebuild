@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mtail/mtail-1.1.1-r1.ebuild,v 1.3 2004/01/18 20:51:02 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mtail/mtail-1.1.1-r1.ebuild,v 1.4 2004/01/19 00:25:17 ciaranm Exp $
 
 DESCRIPTION="tail workalike, that performs output colourising"
 HOMEPAGE="http://matt.immute.net/src/mtail/"
@@ -9,7 +9,7 @@ SRC_URI="http://matt.immute.net/src/mtail/mtail-${PV}.tgz
 LICENSE="as-is"
 
 SLOT="0"
-KEYWORDS="x86 alpha ~sparc amd64"
+KEYWORDS="x86 alpha sparc amd64"
 IUSE=""
 
 DEPEND=""
