@@ -79,7 +79,7 @@ _activate_profile() {
 		ln -s ${file} ${file/-${new}/}
 	done
 	# man pages
-	for file in `find /usr/share/man -name "*-${new}.*"`; do
+	for file in `find /usr/share/man -regex ".*-${new}\..x?.gz"`; do
 		ln -s ${file} ${file/-${new}/}
 	done
 
@@ -115,7 +115,7 @@ _deactivate_profile() {
 		rm -f ${file/-${current}/}
 	done
 	# man pages
-	for file in `find /usr/share/man -name "*-${current}.*"`; do
+	for file in `find /usr/share/man -regex ".*-${current}\..x?.gz"`; do
 		rm -f ${file/-${current}/}
 	done
 }
