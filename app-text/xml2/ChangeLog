@@ -1,0 +1,11 @@
+# ChangeLog for app-text/xml2
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/xml2/ChangeLog,v 1.1 2004/11/07 09:49:18 usata Exp $
+
+*xml2-0.3 (07 Nov 2004)
+
+  07 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +files/xml2-0.3-libxml2.patch, +xml2-0.3.ebuild:
+  Initial import. Ebuild submitted by James Rowe <jnrowe@ukfsn.org>;
+  bug #64494.
+

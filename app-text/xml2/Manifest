@@ -1,0 +1,5 @@
+MD5 2f0a42439554238d7f4bb38d98961dff xml2-0.3.ebuild 889
+MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
+MD5 5c411d427a46483bff2384d6b1826668 ChangeLog 422
+MD5 a5ff7fd7e95501227c698f69a40d141d files/xml2-0.3-libxml2.patch 1757
+MD5 ea42ef5e0dc89daa228f6fabbce4bae4 files/digest-xml2-0.3 59
