@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.1.ebuild,v 1.7 2004/04/27 22:01:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.1.ebuild,v 1.8 2004/06/23 22:49:16 agriffis Exp $
 
 ETYPE="headers"
 inherit kernel eutils
@@ -67,7 +67,7 @@ src_compile() {
 	ARCH=${MY_ARCH}
 
 	# If this is sparc, then generate asm_offsets.h
-	if [ -n "`use sparc`" ]; then
+	if use sparc; then
 		make ARCH=${ARCH} dep || die "Failed to run 'make dep'"
 	fi
 
@@ -88,7 +88,7 @@ src_install() {
 	kernel_src_install
 
 	# If this is sparc, then we need to place asm_offsets.h in the proper location(s)
-	if [ -n "`use sparc`" ]; then
+	if use sparc; then
 
 		# We don't need /usr/include/asm, generate-asm-sparc will take care of this
 		rm -Rf ${D}/usr/include/asm

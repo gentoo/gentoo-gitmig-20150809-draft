@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.21.ebuild,v 1.23 2004/04/14 22:01:01 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.21.ebuild,v 1.24 2004/06/23 22:49:16 agriffis Exp $
 
 ETYPE="headers"
 inherit kernel eutils
@@ -51,7 +51,7 @@ src_unpack() {
 	# Right now, this fix only affects sparc.  Other big-endian archs will need to edit this if they need it.
 	# Issue will be fixed in 2.4.23+ kernel series (issue has been fixed in 2.6.0).
 	# Closes Bug #26062
-	if [ -n "`use sparc`" ]; then
+	if use sparc; then
 		epatch ${FILESDIR}/bigendian-byteorder-fix.patch
 	fi
 
@@ -65,7 +65,7 @@ src_compile() {
 	kernel_src_compile
 
 	# If this is sparc, then generate asm_offsets.h
-	if [ -n "`use sparc`" ]; then
+	if use sparc; then
 		make ARCH=${ARCH} dep || die "Failed to run 'make dep'"
 	fi
 }
@@ -76,7 +76,7 @@ src_install() {
 	kernel_src_install
 
 	# If this is sparc, then we need to place asm_offsets.h in the proper location(s)
-	if [ -n "`use sparc`" ]; then
+	if use sparc; then
 
 		# We don't need /usr/include/asm, generate-asm-sparc will take care of this
 		rm -Rf ${D}/usr/include/asm

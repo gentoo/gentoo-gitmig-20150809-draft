@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.6.ebuild,v 1.4 2004/06/19 13:16:08 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.6.ebuild,v 1.5 2004/06/23 22:49:16 agriffis Exp $
 
 ETYPE="headers"
 inherit kernel eutils
@@ -55,9 +55,10 @@ src_unpack() {
 	epatch ${FILESDIR}/linux-headers-2.6.0-fb.patch
 
 	# Needed to compile NPTL on amd64
-	use amd64 && (cd ${S}/include/asm-x86_64/
-	epatch ${FILESDIR}/linux-headers-2.6.4-unistd-nptl-fix.patch)
-
+	if use amd64; then
+		cd ${S}/include/asm-x86_64/
+		epatch ${FILESDIR}/linux-headers-2.6.4-unistd-nptl-fix.patch
+	fi
 }
 
 src_compile() {
@@ -69,7 +70,7 @@ src_compile() {
 	ARCH=${MY_ARCH}
 
 	# If this is sparc, then generate asm_offsets.h
-	if [ -n "`use sparc`" ]; then
+	if use sparc; then
 		make ARCH=${ARCH} dep || die "Failed to run 'make dep'"
 	fi
 

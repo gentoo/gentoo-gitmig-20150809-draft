@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.21-r1.ebuild,v 1.11 2004/04/14 22:01:01 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.21-r1.ebuild,v 1.12 2004/06/23 22:49:16 agriffis Exp $
 
 ETYPE="headers"
 inherit kernel eutils
@@ -51,7 +51,7 @@ src_unpack() {
 	# Right now, this fix only affects sparc.  Other big-endian archs will need to edit this if they need it.
 	# Issue will be fixed in 2.4.23+ kernel series (issue has been fixed in 2.6.0).
 	# Closes Bug #26062
-	if [ -n "`use sparc`" ]; then
+	if use sparc; then
 		epatch ${FILESDIR}/bigendian-byteorder-fix.patch
 	fi
 
@@ -59,7 +59,7 @@ src_unpack() {
 	# This patch fixes an issue involving the use of gcc's -ansi flag and the __u64 datatype.
 	# It only patches asm-i386, so we only apply it if x86.  Unknown if this is needed for other archs.
 	# Closes Bug #32246
-	if [ -n "`use x86`" ]; then
+	if use x86; then
 		epatch ${FILESDIR}/${PN}-strict-ansi-fix.patch
 	fi
 
@@ -74,7 +74,7 @@ src_compile() {
 	kernel_src_compile
 
 	# If this is sparc, then generate asm_offsets.h
-	if [ -n "`use sparc`" ]; then
+	if use sparc; then
 		make ARCH=${ARCH} dep || die "Failed to run 'make dep'"
 	fi
 }
