@@ -1,6 +1,9 @@
 # ChangeLog for net-im/gaim-snpp
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-snpp/ChangeLog,v 1.6 2004/04/25 15:27:45 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-snpp/ChangeLog,v 1.7 2004/04/27 18:14:02 rizzo Exp $
+
+  27 Apr 2004; Don Seiler <rizzo@gentoo.org>; -gaim-snpp-0.2.0.ebuild:
+  Removing obsolete version
 
   25 Apr 2004; David Holm <dholm@gentoo.org> gaim-snpp-0.3.0.ebuild:
   Added to ~ppc.
