@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog-lite/swi-prolog-lite-5.2.11.ebuild,v 1.2 2004/04/26 00:15:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swi-prolog-lite/swi-prolog-lite-5.2.11.ebuild,v 1.3 2004/05/15 08:50:21 kloeri Exp $
 
 IUSE="readline static"
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.swi.psy.uva.nl/cgi-bin/nph-download/SWI-Prolog/pl-${PV}.tar.
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~alpha"
 
 DEPEND="sys-libs/ncurses
 	sys-apps/gawk
