@@ -6,8 +6,12 @@
 		software.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie net-nntp enthält Software für das Network News Transfer Protocol
+		Die Kategorie net-nntp enthÃ€lt Software fÃŒr das Network News Transfer Protocol
 		(NNTP).
+	</longdescription>
+	<longdescription lang="es">
+		La categoría net-nntp contiene software NNTP (Network News Transfer
+		Protocol).
 	</longdescription>
 </catmetadata>
 

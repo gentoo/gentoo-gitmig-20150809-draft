@@ -6,8 +6,11 @@
 		servers.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie net-irc enthält Clients und Server für den Internet
+		Die Kategorie net-irc enthÃ€lt Clients und Server fÃŒr den Internet
 		Relay Chat (IRC).
+	</longdescription>
+	<longdescription lang="es">
+		La categoría net-irc contiene clientes y servidores IRC.
 	</longdescription>
 </catmetadata>
 

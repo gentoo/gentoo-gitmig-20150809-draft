@@ -5,7 +5,10 @@
 		The net-fs category contains network filesystem packages.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie net-fs enthält Netzwerkdateisysteme.
+		Die Kategorie net-fs enthÃ€lt Netzwerkdateisysteme.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría net-fs contiene paquetes de sistemas de ficheros en red.
 	</longdescription>
 </catmetadata>
 

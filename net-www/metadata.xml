@@ -6,8 +6,12 @@
 		moved into www- categories.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie net-www enthält verschieden Programme die noch nicht auf
+		Die Kategorie net-www enthÃ€lt verschieden Programme die noch nicht auf
 		die anderen www-Kategorien verteilt wurden.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría net-www contiene varios clientes WWW que no han sido
+		movidos (aún) a categorías www-.
 	</longdescription>
 </catmetadata>
 

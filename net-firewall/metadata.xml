@@ -5,7 +5,11 @@
 		The net-firewall category contains network firewall software.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie net-firewall enthält Firewall-Software.
+		Die Kategorie net-firewall enthÃ€lt Firewall-Software.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría net-firewall contiene programas relacionados con
+		cortafuegos de redes.
 	</longdescription>
 </catmetadata>
 

@@ -5,7 +5,11 @@
 		The net-nds category contains NDS (NetWare Directory Services) software.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie net-nds enthält Software für die NetWare Directory Services (NDS).
+		Die Kategorie net-nds enthÃ€lt Software fÃŒr die NetWare Directory Services (NDS).
+	</longdescription>
+	<longdescription lang="es">
+		La categoría net-nds contiene programas NDS (NetWare Directory
+		Services).
 	</longdescription>
 </catmetadata>
 

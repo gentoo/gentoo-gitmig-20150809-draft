@@ -5,7 +5,11 @@
 		The net-news category contains news-related network software.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie net-news enthält News-Software.
+		Die Kategorie net-news enthÃ€lt News-Software.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría net-news contiene programas relacionados con los servicios
+		de noticias.
 	</longdescription>
 </catmetadata>
 
