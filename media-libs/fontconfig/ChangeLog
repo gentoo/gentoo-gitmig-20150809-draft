@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/fontconfig
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.27 2003/04/23 12:34:33 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.28 2003/04/27 11:53:28 azarah Exp $
+
+*fontconfig-2.2.0-r1 (27 Apr 2003)
+
+  27 Apr 2003; Martin Schlemmer <azarah@gentoo.org> fontconfig-2.2.0-r1.ebuild,
+  fontconfig-2.2-blacklist.patch, fontconfig-2.2-defaultconfig.patch :
+  Add blacklist patch from MDK to filter known fonts that borks.  Add
+  defaultconfig patch from MDK that add more font family's.
 
 *fontconfig-2.2.0 (23 Apr 2003)
 
