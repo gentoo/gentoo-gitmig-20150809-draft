@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/gnome-applets
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.15 2002/11/08 13:18:42 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-applets/ChangeLog,v 1.16 2002/11/13 00:25:15 foser Exp $
+
+*gnome-applets-2.1.1 (12 Nov 2002)
+
+  12 Nov 2002; foser <foser@gentoo.org> gnome-applets-2.1.1.ebuild :
+  GNOME 2.1.2 release
 
 *gnome-applets-2.0.3 (14 Sep 2002)
 

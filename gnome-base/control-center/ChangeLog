@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/control-center
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/ChangeLog,v 1.15 2002/10/27 14:42:11 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/control-center/ChangeLog,v 1.16 2002/11/13 00:25:14 foser Exp $
+
+*control-center-2.1.2 (12 Nov 2002)
+
+  12 Nov 2002; foser <foser@gentoo.org> control-center-2.1.2.ebuild :
+  GNOME 2.1.2 release
 
 *control-center-2.1.1 (27 Oct 2002)
 

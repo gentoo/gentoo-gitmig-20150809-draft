@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.1.1.ebuild,v 1.2 2002/11/13 00:25:15 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome/gnome-2.1.2.ebuild,v 1.1 2002/11/13 00:25:15 foser Exp $
 
 S=${WORKDIR}
 DESCRIPTION="GNOME 2.0 - merge this package to merge the Gnome2 desktop"
@@ -31,7 +31,7 @@ KEYWORDS="ppc x86 sparc sparc64 alpha"
 # after the blank line are the "complete" list we use for gnome2 betas
 
 # after the second blank line added packages for gnome2.1 
-# file-roller, system-tray-applet and gcalctool being fifth toe
+# file-roller, gcalctool being (a few of) fifth toe
 
 RDEPEND="!gnome-base/gnome-core
 	>=x11-wm/metacity-2.4.2
@@ -41,9 +41,9 @@ RDEPEND="!gnome-base/gnome-core
 	=media-gfx/eog-1.1*
 	=app-editors/gedit-2.1*
 	=gnome-extra/yelp-2.1*
-	=gnome-base/nautilus-2.1.2
+	=gnome-base/nautilus-2.1*
 	=x11-terms/gnome-terminal-2.1*
-	>=gnome-base/gnome-applets-2.0.2
+	=gnome-base/gnome-applets-2.1*
 	=gnome-base/control-center-2.1*
 	=gnome-extra/gnome-utils-2.1*
 	=gnome-extra/gnome-media-2.1*
@@ -60,9 +60,11 @@ RDEPEND="!gnome-base/gnome-core
 	=gnome-base/eel-2.1*
 	=gnome-base/gnome-panel-2.1*
 	=gnome-base/gnome-desktop-2.1*
-	>=gnome-base/gnome-vfs-2.0.4
-	>=gnome-base/libbonoboui-2.0
-	>=gnome-base/libbonobo-2.0.0
+	=gnome-base/gnome-vfs-2.1*
+	=gnome-base/libgnomeprint-2.1*
+	=gnome-base/libgnomeprintui-2.1*
+	=gnome-base/libbonoboui-2.1*
+	=gnome-base/libbonobo-2.1*
 	=gnome-base/librsvg-2.1*
 	=gnome-base/libgnome-2.1*
 	=gnome-base/libgnomecanvas-2.1*

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomecanvas/libgnomecanvas-2.1.0.ebuild,v 1.1 2002/10/27 14:42:12 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomecanvas/libgnomecanvas-2.1.0.ebuild,v 1.2 2002/11/13 00:25:15 foser Exp $
 
 IUSE="doc"
 
@@ -19,7 +19,7 @@ RDEPEND=">=gnome-base/libglade-2.0.1
 	>=dev-libs/glib-2.0.6
 	>=x11-libs/pango-1.1
 	>=media-libs/libart_lgpl-2.3.10
-	>=dev-libs/libxslt-1.0.21
+	>=dev-libs/libxslt-1.0.20
 	>=media-libs/freetype-2.0.9
 	>=sys-devel/gettext-0.10.40
 	>=sys-devel/perl-5.6.1
