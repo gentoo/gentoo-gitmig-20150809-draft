@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-SSL/IO-Socket-SSL-0.96.ebuild,v 1.7 2005/02/07 17:46:34 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/IO-Socket-SSL/IO-Socket-SSL-0.96.ebuild,v 1.8 2005/02/07 20:56:49 kloeri Exp $
 
 inherit perl-module
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://search.cpan.org/~behroozi/${P}/"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~mips ~alpha ~arm ~amd64 ~ia64 ~s390 ppc64"
+KEYWORDS="x86 ~ppc sparc ~mips alpha ~arm ~amd64 ~ia64 ~s390 ppc64"
 IUSE=""
 
 # Disabled because the tests conflict with other services already running on the
