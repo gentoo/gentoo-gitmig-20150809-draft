@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/aterm/aterm-1.6.7.ebuild,v 1.8 2004/02/17 01:18:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/aterm/aterm-1.6.7.ebuild,v 1.9 2004/03/04 20:10:11 weeve Exp $
 
 DESCRIPTION="ATerm tree-handling library"
 HOMEPAGE="http://www.cwi.nl/projects/MetaEnv/aterm/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.cwi.nl/projects/MetaEnv/aterm/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~ia64"
+KEYWORDS="x86 ~ppc sparc ~alpha ~ia64"
 IUSE="java"
 
 DEPEND="java? ( virtual/jdk )"
