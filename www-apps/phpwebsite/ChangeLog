@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/phpwebsite
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/ChangeLog,v 1.15 2004/12/29 01:50:51 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/ChangeLog,v 1.16 2005/01/20 17:47:54 rizzo Exp $
+
+  20 Jan 2005; Don Seiler <rizzo@gentoo.org> phpwebsite-0.10.0.ebuild:
+  Marking stable in x86
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
