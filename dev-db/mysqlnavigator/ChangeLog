@@ -1,11 +1,17 @@
 # ChangeLog for dev-db/mysqlnavigator
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlnavigator/ChangeLog,v 1.4 2003/02/15 07:24:15 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqlnavigator/ChangeLog,v 1.5 2003/04/22 09:15:08 robbat2 Exp $
+
+*mysqlnavigator-1.4.2 (21 Apr 2003)
+  
+  21 Apr 2003; Robin Johnson <robbat2@gentoo.org> mysqlnavigator-1.4.2.ebuild:
+  Rolled updated version (copied 1.4.1)
+  Added fix via 'sed' for MySQL4 and proper CXXFLAGS
+
+*mysqlnavigator-1.4.1 (24 Oct 2002)
 
   03 Jan 2003; Hannes Mehnert <hannes@gentoo.org> mysqlnavigator-1.4.1.ebuild:
   fixed to compile with qt-3.1.x. solves #12772
-
-*mysqlnavigator-1.4.1 (24 Oct 2002)
 
   15 Feb 2003; Mark Guertin <gerk@gentoo.org> mysqlnavigator-1.4.1.ebuild :
   set ~ppc in keywords
