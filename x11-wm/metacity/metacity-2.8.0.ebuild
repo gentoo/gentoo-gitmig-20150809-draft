@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.8.0.ebuild,v 1.10 2004/07/04 19:23:26 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/metacity/metacity-2.8.0.ebuild,v 1.11 2004/08/26 16:32:09 foser Exp $
 
 inherit gnome2 eutils
 
@@ -31,7 +31,7 @@ DEPEND="${RDEPEND}
 
 DOCS="AUTHORS COPYING ChangeLog HACKING INSTALL NEWS README *txt"
 
-G2CONF="${G2CONF} $(use_enable xinerama)"
+G2CONF="${G2CONF} $(use_enable xinerama) --disable-compositor"
 
 src_unpack() {
 
