@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/sqlite-php
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/sqlite-php/ChangeLog,v 1.13 2004/10/23 15:38:17 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/sqlite-php/ChangeLog,v 1.14 2004/11/29 12:24:19 blubb Exp $
+
+  29 Nov 2004; Simon Stelling <blubb@gentoo.org> sqlite-php-0.0.5.ebuild:
+  added ~amd64
 
   23 Oct 2004; Jason Wever <weeve@gentoo.org> sqlite-php-0.0.5.ebuild:
   Added ~sparc keyword.

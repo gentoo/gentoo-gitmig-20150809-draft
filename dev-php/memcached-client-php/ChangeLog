@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/memcached-client-php
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/memcached-client-php/ChangeLog,v 1.7 2004/10/23 15:29:50 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/memcached-client-php/ChangeLog,v 1.8 2004/11/29 12:20:00 blubb Exp $
+
+  29 Nov 2004; Simon Stelling <blubb@gentoo.org>
+  memcached-client-php-0.1.2.ebuild:
+  added ~amd64
 
   23 Oct 2004; Jason Wever <weeve@gentoo.org>
   memcached-client-php-0.1.2.ebuild:
