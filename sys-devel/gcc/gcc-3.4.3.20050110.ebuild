@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.20050110.ebuild,v 1.20 2005/03/18 05:55:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3.20050110.ebuild,v 1.21 2005/03/19 01:46:45 eradicator Exp $
 
 MAN_VER="3.4.3"
 PATCH_VER="1.1"
@@ -109,7 +109,7 @@ src_unpack() {
 	case $(tc-arch ${CTARGET}) in
 		mips)
 			# If mips, and we DON'T want multilib, then rig gcc to only use n32 OR n64
-			if ! use_multilib; then
+			if ! is_multilib; then
 				use n32 && epatch ${FILESDIR}/3.4.1/gcc-3.4.1-mips-n32only.patch
 				use n64 && epatch ${FILESDIR}/3.4.1/gcc-3.4.1-mips-n64only.patch
 			fi
@@ -136,7 +136,7 @@ src_unpack() {
 			fi
 			;;
 		amd64)
-			if use_multilib; then
+			if is_multilib; then
 				epatch ${FILESDIR}/3.4.1/gcc-3.4.1-glibc-is-native.patch
 				cd ${S}/libstdc++-v3
 				einfo "running autoreconf..."
