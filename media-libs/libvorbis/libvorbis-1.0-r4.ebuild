@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.0-r4.ebuild,v 1.4 2003/09/06 23:59:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.0-r4.ebuild,v 1.5 2003/09/11 01:17:47 msterret Exp $
 
 inherit libtool eutils flag-o-matic
 
@@ -36,10 +36,10 @@ src_unpack() {
 src_compile() {
 	elibtoolize
 
-        # take out -fomit-frame-pointer from CFLAGS if k6-2
-        is-flag "-march=k6-3" && filter-flags "-fomit-frame-pointer"
-        is-flag "-march=k6-2" && filter-flags "-fomit-frame-pointer"
-        is-flag "-march=k6" && filter-flags "-fomit-frame-pointer"
+	# take out -fomit-frame-pointer from CFLAGS if k6-2
+	is-flag "-march=k6-3" && filter-flags "-fomit-frame-pointer"
+	is-flag "-march=k6-2" && filter-flags "-fomit-frame-pointer"
+	is-flag "-march=k6" && filter-flags "-fomit-frame-pointer"
 
 	# filter march, see bug #26463 for details
 	filter-flags "-march=pentium?"

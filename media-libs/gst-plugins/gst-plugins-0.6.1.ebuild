@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.1.ebuild,v 1.9 2003/09/06 23:59:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.1.ebuild,v 1.10 2003/09/11 01:17:46 msterret Exp $
 
 inherit eutils libtool gnome2 flag-o-matic
 
@@ -139,7 +139,7 @@ src_compile() {
 		&& myconf="${myconf} --enable-mikmod --enable-libmikmodtest" \
 		|| myconf="${myconf} --disable-mikmod --disable-libmikmodtest"
 
- 	# qcam doesn't work on PPC
+	# qcam doesn't work on PPC
 	use ppc && myconf="${myconf} --disable-qcam"
 
 	econf ${myconf} \

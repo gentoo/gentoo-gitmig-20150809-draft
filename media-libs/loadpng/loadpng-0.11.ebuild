@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/loadpng/loadpng-0.11.ebuild,v 1.3 2003/02/28 10:35:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/loadpng/loadpng-0.11.ebuild,v 1.4 2003/09/11 01:17:47 msterret Exp $
 
 DESCRIPTION="load and save PNG files in Allegro programs"
 HOMEPAGE="http://www.alphalink.com.au/~tjaden/loadpng/"
@@ -11,8 +11,8 @@ SLOT="0"
 KEYWORDS="x86"
 
 DEPEND=">=media-libs/allegro-4.0.0
-        >=media-libs/libpng-1.2.4
-        >=sys-libs/zlib-1.1.4"
+	>=media-libs/libpng-1.2.4
+	>=sys-libs/zlib-1.1.4"
 
 src_compile() {
 	emake || die

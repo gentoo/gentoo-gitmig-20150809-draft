@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.7-r2.ebuild,v 1.3 2003/09/06 23:59:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.7-r2.ebuild,v 1.4 2003/09/11 01:17:47 msterret Exp $
 
 inherit libtool
 
@@ -31,7 +31,7 @@ DEPEND=">=app-text/ghostscript-6.50
 
 src_compile() {
 	# Have to use the reverse-deps patch to prevent libwmf from
-    # linking an older installed version of libwmflite
+	# linking an older installed version of libwmflite
 	elibtoolize --reverse-deps
 
 	use jpeg || myconf="${myconf} --with-jpeg=no"
@@ -49,11 +49,11 @@ src_compile() {
 src_install () {
 
 	# Must use einstall because of stubborn libtool
-    einstall \
+	einstall \
 		fontdir=${D}/usr/share/libwmf/fonts \
 		wmfonedocdir=${D}/usr/share/doc/${PF}/caolan \
 		wmfdocdir=${D}/usr/share/doc/${PF} \
 		libdir=${D}/usr/lib \
 		|| die
-    dodoc README AUTHORS COPYING CREDITS ChangeLog NEWS TODO
+	dodoc README AUTHORS COPYING CREDITS ChangeLog NEWS TODO
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegttf/allegttf-2.0.ebuild,v 1.3 2003/09/06 23:59:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegttf/allegttf-2.0.ebuild,v 1.4 2003/09/11 01:17:46 msterret Exp $
 
 DESCRIPTION="Anti-aliased text output and font loading routines for Allegro"
 HOMEPAGE="http://huizen.dds.nl/~deleveld/allegttf.htm"
@@ -19,20 +19,20 @@ src_compile() {
 }
 
 src_install() {
-    dodir /usr/include
-    dodir /usr/lib
+	dodir /usr/include
+	dodir /usr/lib
 
-    cd ${S}/source
-    mv makefile.lnx makefile.lnx_orig
-    # hardcoded install paths in makefile
-    sed s/'\/usr\/local'/'${D}\/usr'/ makefile.lnx_orig > makefile.lnx
+	cd ${S}/source
+	mv makefile.lnx makefile.lnx_orig
+	# hardcoded install paths in makefile
+	sed s/'\/usr\/local'/'${D}\/usr'/ makefile.lnx_orig > makefile.lnx
 
-    cd ${S}
-    dodoc docs/*.txt *.txt
-    dohtml docs/allegttf.htm
+	cd ${S}
+	dodoc docs/*.txt *.txt
+	dohtml docs/allegttf.htm
 
-    insinto /usr/share/doc/${P}/examples
-    doins examples/*
+	insinto /usr/share/doc/${P}/examples
+	doins examples/*
 
-    make install || die
+	make install || die
 }

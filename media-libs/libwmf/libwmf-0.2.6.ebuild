@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.6.ebuild,v 1.8 2003/09/06 23:59:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libwmf/libwmf-0.2.6.ebuild,v 1.9 2003/09/11 01:17:47 msterret Exp $
 
 #The configure script finds the 5.50 ghostscript Fontmap file while run.
 #This will probably work, especially since the real one (6.50) in this case
@@ -38,7 +38,7 @@ src_compile() {
 }
 
 src_install () {
-    einstall \
+	einstall \
 		fontdir=${D}/usr/share/libwmf/fonts || die
 
 	dodoc README AUTHORS COPYING CREDITS ChangeLog NEWS TODO

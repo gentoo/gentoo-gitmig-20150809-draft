@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/libungif-4.1.0.1b.ebuild,v 1.2 2003/07/18 21:55:45 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libungif/libungif-4.1.0.1b.ebuild,v 1.3 2003/09/11 01:17:47 msterret Exp $
 
 inherit libtool
 
@@ -32,9 +32,9 @@ src_compile() {
 		&& myconf="--with-x" \
 		|| myconf="--without-x"
 	use alpha \
-        && myconf="${myconf} --host=alpha-unknown-linux-gnu"
+		&& myconf="${myconf} --host=alpha-unknown-linux-gnu"
 
-    elibtoolize || die
+	elibtoolize || die
 
 	econf ${myconf} || die
 	emake || die

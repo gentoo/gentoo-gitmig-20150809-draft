@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvb/libdvb-0.2.1.ebuild,v 1.3 2003/09/06 23:59:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvb/libdvb-0.2.1.ebuild,v 1.4 2003/09/11 01:17:47 msterret Exp $
 
 IUSE=""
 
@@ -16,25 +16,25 @@ KEYWORDS="~x86"
 DEPEND=">=media-tv/linuxtv-dvb-1.0.0_pre2"
 
 src_compile() {
-    # setting $ARCH cuz it uses ${ARCH}g++
-    ARCH='' emake
+	# setting $ARCH cuz it uses ${ARCH}g++
+	ARCH='' emake
 }
 
 src_install() {
-    # no proper Makefile (no DESTDIR)
-    mv ${S}/Makefile ${S}/Makefile_orig
-    sed s%/usr/local/lib/%${D}/usr/lib/% ${S}/Makefile_orig > ${S}/Makefile
-    dodir /usr/lib
-    make install || die
+	# no proper Makefile (no DESTDIR)
+	mv ${S}/Makefile ${S}/Makefile_orig
+	sed s%/usr/local/lib/%${D}/usr/lib/% ${S}/Makefile_orig > ${S}/Makefile
+	dodir /usr/lib
+	make install || die
 
-    # install headers
-    dodir /usr/include/libdvb
-    insinto /usr/include/libdvb
-    doins ${S}/*.h ${S}/*.hh
+	# install headers
+	dodir /usr/include/libdvb
+	insinto /usr/include/libdvb
+	doins ${S}/*.h ${S}/*.hh
 
-    # docs
-    dodoc ${S}/README
+	# docs
+	dodoc ${S}/README
 
-    # config stuff
-    dodoc ${S}/dvbrc.*
+	# config stuff
+	dodoc ${S}/dvbrc.*
 }

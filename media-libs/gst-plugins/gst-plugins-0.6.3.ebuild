@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.3.ebuild,v 1.1 2003/09/07 19:33:01 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.3.ebuild,v 1.2 2003/09/11 01:17:46 msterret Exp $
 
 # IMPORTANT
 #
@@ -41,9 +41,9 @@ src_unpack() {
 	epatch ${FILESDIR}/noppcasm.patch
 
 	# patch for changing types in >libmpeg-0.3.1
-        if grep -q mpeg2_picture ${ROOT}/usr/include/mpeg2dec/mpeg2.h; then
-                epatch ${FILESDIR}/libmpeg2.patch
-        fi
+	if grep -q mpeg2_picture ${ROOT}/usr/include/mpeg2dec/mpeg2.h; then
+		epatch ${FILESDIR}/libmpeg2.patch
+	fi
 
 	# fix the scripts
 	cd ${S}/tools

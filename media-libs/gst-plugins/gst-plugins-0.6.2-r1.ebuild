@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.2-r1.ebuild,v 1.2 2003/09/06 23:59:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.2-r1.ebuild,v 1.3 2003/09/11 01:17:46 msterret Exp $
 
 inherit eutils libtool gnome2 flag-o-matic
 
@@ -67,9 +67,9 @@ src_unpack() {
 	use oggvorbis && epatch ${FILESDIR}/${PN}-${PV_MAJ_MIN}-ffmpeg_ldflags.patch
 
 	# patch for changing types in >libmpeg-0.3.1
-        if grep -q mpeg2_picture ${ROOT}/usr/include/mpeg2dec/mpeg2.h; then
-                epatch ${FILESDIR}/libmpeg2.patch
-        fi
+	if grep -q mpeg2_picture ${ROOT}/usr/include/mpeg2dec/mpeg2.h; then
+		epatch ${FILESDIR}/libmpeg2.patch
+	fi
 
 	# remove problematic default CFLAGS (#22249)
 	epatch ${FILESDIR}/${P}-rm_cflags.patch
@@ -148,7 +148,7 @@ src_compile() {
 		&& myconf="${myconf} --enable-mikmod --enable-libmikmodtest" \
 		|| myconf="${myconf} --disable-mikmod --disable-libmikmodtest"
 
- 	# qcam doesn't work on PPC
+	# qcam doesn't work on PPC
 	use ppc && myconf="${myconf} --disable-qcam"
 
 	econf ${myconf} \

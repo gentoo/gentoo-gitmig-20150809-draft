@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libhydrogen/libhydrogen-0.8.0.ebuild,v 1.4 2003/09/08 07:14:29 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libhydrogen/libhydrogen-0.8.0.ebuild,v 1.5 2003/09/11 01:17:47 msterret Exp $
 
 inherit libtool
 
@@ -15,26 +15,24 @@ KEYWORDS="x86"
 S="${WORKDIR}/${P}"
 
 DEPEND="virtual/x11 \
-        >=media-libs/audiofile-0.2.3 \
-        alsa? ( media-libs/alsa-lib ) \
-        virtual/jack"
+	>=media-libs/audiofile-0.2.3 \
+	alsa? ( media-libs/alsa-lib ) \
+	virtual/jack"
 
 src_compile() {
-        einfo "Reconfiguring..."
-        export WANT_AUTOCONF_2_5=1
-        aclocal
-        autoconf
-        automake
+	einfo "Reconfiguring..."
+	export WANT_AUTOCONF_2_5=1
+	aclocal
+	autoconf
+	automake
 
-        elibtoolize
+	elibtoolize
 
 	econf
 	emake || die
 }
 
- src_install() {
+src_install() {
 	make DESTDIR=${D} install || die
 	dodoc AUTHORS BUGS ChangeLog FAQ README TODO
 }
-
-

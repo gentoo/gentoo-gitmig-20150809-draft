@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.1-r2.ebuild,v 1.8 2003/09/06 23:59:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.1-r2.ebuild,v 1.9 2003/09/11 01:17:47 msterret Exp $
 
 inherit libtool
 inherit flag-o-matic
@@ -18,7 +18,7 @@ IUSE="nls doc jpeg"
 DEPEND=">=dev-libs/libusb-0.1.6
 	dev-util/pkgconfig
 	jpeg? ( >=media-libs/libexif-0.5.9 )
- 	doc? ( dev-util/gtk-doc )"
+	doc? ( dev-util/gtk-doc )"
 
 src_unpack() {
 	unpack ${A}
@@ -39,7 +39,7 @@ src_compile() {
 	use nls \
 		|| myconf="${myconf} --disable-nls"
 
- 	use doc \
+	use doc \
 		&& myconf="${myconf} --enable-docs" \
 		|| myconf="${myconf} --disable-docs"
 

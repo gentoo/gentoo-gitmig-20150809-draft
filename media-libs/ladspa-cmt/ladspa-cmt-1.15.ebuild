@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ladspa-cmt-1.15.ebuild,v 1.3 2003/09/06 23:59:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladspa-cmt/ladspa-cmt-1.15.ebuild,v 1.4 2003/09/11 01:17:47 msterret Exp $
 
 S=${WORKDIR}/cmt/src
 P=cmt_src_${PV}
@@ -26,7 +26,7 @@ src_unpack() {
 
 }
 src_compile() {
-        emake || die
+	emake || die
 }
 
 src_install() {

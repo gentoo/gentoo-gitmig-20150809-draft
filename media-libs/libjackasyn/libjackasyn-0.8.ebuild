@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libjackasyn/libjackasyn-0.8.ebuild,v 1.2 2003/07/12 18:05:53 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libjackasyn/libjackasyn-0.8.ebuild,v 1.3 2003/09/11 01:17:47 msterret Exp $
 
 DESCRIPTION="An application/library for connecting OSS apps to Jackit."
 HOMEPAGE="http://gige.xdv.org/soft/libjackasyn"
@@ -19,7 +19,7 @@ src_compile() {
 
 src_install() {
 	cp Makefile Makefile~
-        sed -e "s:prefix = /usr:prefix = ${D}/usr:" Makefile~ > Makefile
+	sed -e "s:prefix = /usr:prefix = ${D}/usr:" Makefile~ > Makefile
 
 	dodir /usr/lib
 	dodir /usr/include
