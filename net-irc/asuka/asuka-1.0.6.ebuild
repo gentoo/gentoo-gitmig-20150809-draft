@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/asuka/asuka-1.0.6.ebuild,v 1.9 2004/07/24 01:57:23 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/asuka/asuka-1.0.6.ebuild,v 1.10 2004/07/24 02:13:37 swegener Exp $
 
 inherit eutils
 
@@ -16,15 +16,13 @@ IUSE="debug"
 DEPEND="virtual/libc"
 
 src_compile() {
-	local myconf=""
-
-	use debug && myconf="${myconf} --enable-debug"
-
-	econf 	--with-symlink=asuka-ircd \
+	econf \
+	 	--with-symlink=asuka-ircd \
 		--with-dpath=/etc/asuka \
 		--with-cpath=/etc/asuka/ircd.conf \
 		--with-lpath=/var/log/asuka/asuka.log \
-		${myconf} || die "econf failed"
+		$(use_enable debug) \
+		|| die "econf failed"
 	emake || die "emake failed"
 }
 
@@ -33,7 +31,6 @@ src_install() {
 
 	newman doc/ircd.8 asuka-ircd.8
 
-	dodir /etc/asuka
 	insinto /etc/asuka
 	doins doc/ircd.conf.sample
 
@@ -43,16 +40,15 @@ src_install() {
 	insinto /etc/conf.d
 	newins ${FILESDIR}/asuka.conf.d asuka
 
-	dodoc INSTALL* LICENSE README* RELEASE.NOTES TODO*
-	dodoc doc/readme.* doc/p10.html doc/features.txt doc/Authors
-}
+	keepdir /var/log/asuka
 
-pkg_setup() {
-	enewuser asuka
+	dodoc INSTALL* LICENSE README* RELEASE.NOTES TODO* \
+		doc/readme.* doc/p10.html doc/features.txt doc/Authors
 }
 
 pkg_postinst() {
-	install -d -m 0700 -o asuka -g root ${ROOT}/var/log/asuka
+	enewuser asuka
+	chown asuka ${ROOT}/var/log/asuka
 
 	einfo
 	einfo "A sample config file can be found at /etc/asuka/ircd.conf.sample"

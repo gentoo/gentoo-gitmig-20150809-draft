@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/asuka
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/asuka/ChangeLog,v 1.9 2004/07/24 01:57:23 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/asuka/ChangeLog,v 1.10 2004/07/24 02:13:37 swegener Exp $
+
+  24 Jul 2004; Sven Wegener <swegener@gentoo.org> asuka-1.0.6.ebuild:
+  Tidied the ebuild a bit more.
 
   24 Jul 2004; Sven Wegener <swegener@gentoo.org> asuka-1.0.6.ebuild:
   Removed RDEPEND=""
