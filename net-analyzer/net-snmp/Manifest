@@ -1,30 +1,30 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 3dc85452d8319f1044b39b7a11d55c27 ChangeLog 12963
-MD5 feec9ceb3ba9f6a8b860a4a130998500 metadata.xml 214
-MD5 560a87f789fc140ea6b987c577c2ef67 net-snmp-5.1.1-r1.ebuild 3655
 MD5 36c85b0822032cbcb2386dc9074b0030 net-snmp-5.1.1.ebuild 2484
-MD5 82ef8cf80ac104390c860c9c8554f432 net-snmp-5.2.ebuild 3752
-MD5 15483aa80a65e7d50bf1c19f325e203b net-snmp-5.2-r3.ebuild 4212
 MD5 4c598ddb83e9ea7df124e37b8052c868 net-snmp-5.2.1.ebuild 4445
-MD5 b492aa2a6ad459eb41a26932d4c0740b files/digest-net-snmp-5.1.1 67
+MD5 15483aa80a65e7d50bf1c19f325e203b net-snmp-5.2-r3.ebuild 4212
+MD5 560a87f789fc140ea6b987c577c2ef67 net-snmp-5.1.1-r1.ebuild 3655
+MD5 a1cd375a2b179a210d224f83ade1c903 ChangeLog 13047
+MD5 f538a92888ddb5f90d14c7d9f57b39de net-snmp-5.2.ebuild 3753
+MD5 feec9ceb3ba9f6a8b860a4a130998500 metadata.xml 214
 MD5 b492aa2a6ad459eb41a26932d4c0740b files/digest-net-snmp-5.1.1-r1 67
-MD5 93ce82e69e9c66badd05144fd498530c files/digest-net-snmp-5.2-r3 65
+MD5 b492aa2a6ad459eb41a26932d4c0740b files/digest-net-snmp-5.1.1 67
+MD5 f4562e4c61904b17dab28aae2836ff6e files/digest-net-snmp-5.2.1 67
+MD5 791cd8d81154f2c1d01e3f87b86faa44 files/snmptrapd.conf 635
 MD5 93ce82e69e9c66badd05144fd498530c files/digest-net-snmp-5.2 65
-MD5 25d92c9a7adcbb80240a914a8f6bbfe5 files/net-snmp-lm_sensors.patch 13686
+MD5 93ce82e69e9c66badd05144fd498530c files/digest-net-snmp-5.2-r3 65
+MD5 00ce9b4fa6d597e08af7ce82d3a5c246 files/snmpd.conf 599
+MD5 82d14deda5805e21a60de03e0a69659c files/net-snmp-5.2.1-conf-elf-rpm-bz2.patch 4734
 MD5 1cc5b20de8fc9e7c807195c320ab2f4b files/net-snmp-proc.patch 2448
 MD5 ed2e953a9a923caec45eeca95bec2efc files/snmpd-5.1.conf 606
-MD5 0dbde7b1bdd9c9dc988039e676800337 files/snmpd-5.1.rc6 714
-MD5 00ce9b4fa6d597e08af7ce82d3a5c246 files/snmpd.conf 599
 MD5 662833e61042a47d4bd8aaae404f4245 files/snmpd.rc6 710
-MD5 791cd8d81154f2c1d01e3f87b86faa44 files/snmptrapd.conf 635
-MD5 f4562e4c61904b17dab28aae2836ff6e files/digest-net-snmp-5.2.1 67
-MD5 82d14deda5805e21a60de03e0a69659c files/net-snmp-5.2.1-conf-elf-rpm-bz2.patch 4734
+MD5 25d92c9a7adcbb80240a914a8f6bbfe5 files/net-snmp-lm_sensors.patch 13686
+MD5 0dbde7b1bdd9c9dc988039e676800337 files/snmpd-5.1.rc6 714
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCFQL8mdTrptrqvGERAsMgAJ9i5QBXL7ykmJDJvZKDU/PHiEz4uQCffrw/
-SloWD1JGrJQnVrQ/eZS+LHI=
-=bj+E
+iD8DBQFCGUb2M+I1L6GK/u4RAgZOAKCK7nFogLJfr3ulj8S3sKey/OkWhQCeMHdL
+1Wsw1HHakp/1YRdoFL1hf0w=
+=hYY1
 -----END PGP SIGNATURE-----
