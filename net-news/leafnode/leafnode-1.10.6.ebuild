@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/leafnode-1.10.6.ebuild,v 1.1 2004/10/03 19:15:52 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/leafnode-1.10.6.ebuild,v 1.2 2004/11/12 23:59:41 swegener Exp $
 
 MY_P=${P}.rel
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 HOMEPAGE="http://leafnode.sourceforge.net/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 IUSE="ipv6"
 
 DEPEND=">=dev-libs/libpcre-3.9"
