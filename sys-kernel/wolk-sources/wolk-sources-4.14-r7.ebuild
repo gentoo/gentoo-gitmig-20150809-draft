@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.14-r7.ebuild,v 1.2 2004/08/15 01:16:16 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.14-r7.ebuild,v 1.3 2004/11/03 06:56:46 psi29a Exp $
 
 OKV="2.4.20"
 OKB="2.4"
@@ -19,7 +19,7 @@ HOMEPAGE="http://www.kernel.org/pub/linux/kernel/people/mcp/${OKB}-WOLK/"
 SRC_URI="mirror://kernel/linux/kernel/people/mcp/${OKB}-WOLK/${WOLK_SRC}
 	http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/${PN}-4.11-CAN-2004-0415.patch"
 
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~mips"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa -mips"
 
 K_EXTRAEINFO="If there are issues with this kernel, then please direct any queries to the
 mailing list: http://sourceforge.net/mailarchive/forum.php?forum_id=8245.

@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/wolk-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/ChangeLog,v 1.57 2004/08/15 01:16:16 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/ChangeLog,v 1.58 2004/11/03 06:56:46 psi29a Exp $
+
+  03 Nov 2004; Bret Curtis <psi29a@gentoo.org> wolk-sources-4.11-r10.ebuild,
+  wolk-sources-4.14-r7.ebuild, wolk-sources-4.15.ebuild,
+  wolk-sources-4.9-r14.ebuild:
+  does not work on mips based systems, and must remain -mips. We have 
+  mips-sources for that. Please join #gentoo-mips if you feel this should 
+  be ~mips. --- psi29a
 
 *wolk-sources-4.15 (14 Aug 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.15.ebuild,v 1.2 2004/09/12 08:24:25 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.15.ebuild,v 1.3 2004/11/03 06:56:46 psi29a Exp $
 
 # Ramereth's contributed WOLK ebuild - thanks! (you didn't think you'd
 # go blameless, did you?)
@@ -19,7 +19,7 @@ ETYPE="sources"
 inherit kernel-2
 # detect_version doesn't work for WOLK yet -- don't use it!
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 -mips"
 
 K_NOSETEXTRAVERSION="don't_set_it"
 RESTRICT="nomirror"
