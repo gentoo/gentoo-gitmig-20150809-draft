@@ -1,0 +1,9 @@
+# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-util/boa-constructor/ChangeLog,v 1.1 2002/03/16 02:42:18 agenkin Exp $
+
+*boa-constructor-0.1.0_alpha (<Mar 15, 2002>)
+
+  15 Mar 2002; Arcady Genkin <agenkin@thpoon.com> boa-constructor-0.1.0_alpha :
+  
+  Initial version of the package.
