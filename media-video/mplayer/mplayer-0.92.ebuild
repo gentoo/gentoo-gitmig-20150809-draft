@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.92.ebuild,v 1.6 2003/10/12 23:17:22 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.92.ebuild,v 1.7 2003/10/13 19:10:54 mholzer Exp $
 
-IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb gtk2 samba"
+IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb gtk2 samba lirc"
 
 inherit eutils
 
@@ -40,6 +40,7 @@ RDEPEND="ppc? ( >=media-libs/xvid-0.9.0 )
 	esd? ( media-sound/esound )
 	ggi? ( media-libs/libggi )
 	sdl? ( media-libs/libsdl )
+	lirc? ( app-misc/lirc )
 	alsa? ( media-libs/alsa-lib )
 	arts? ( kde-base/arts )
 	nas? ( media-libs/nas )
@@ -248,6 +249,10 @@ src_compile() {
 		&& myconf="${myconf} --enable-smb" \
 		|| myconf="${myconf} --disable-smb"
 
+	use lirc \
+		&& myconf="${myconf} --enable-lirc" \
+		|| myconf="${myconf} --disable-lirc"
+
 	if [ -d /opt/RealPlayer9/Real/Codecs ]
 	then
 		einfo "Setting REALLIBDIR to /opt/RealPlayer9/Real/Codecs..."
@@ -264,16 +269,6 @@ src_compile() {
 	then
 		einfo "Enabling LIVE.COM Streaming Media..."
 		myconf="${myconf} --enable-live"
-	fi
-
-
-	# For lirc support as the auto-detect doesn't seem to work
-	if [ -f /usr/include/lirc/lirc_client.h ]
-	then
-		einfo "Enabling lirc support..."
-		myconf="${myconf} --enable-lirc"
-	else
-		myconf="${myconf} --disable-lirc"
 	fi
 
 	if [ -e /dev/.devfsd ]

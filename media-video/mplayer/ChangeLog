@@ -1,6 +1,10 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.89 2003/10/10 15:19:35 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.90 2003/10/13 19:10:54 mholzer Exp $
+
+  14 Oct 2003; Martin Holzer <mholzer@gentoo.org> mplayer-0.92.ebuild,
+  mplayer-1.0_pre1-r1.ebuild, mplayer-1.0_pre2.ebuild:
+  adding lirc IUSE flag. Closes #31031.
 
   11 Oct 2003; Martin Holzer <mholzer@gentoo.org> mplayer-0.92.ebuild,
   mplayer-1.0_pre1-r1.ebuild, mplayer-1.0_pre2.ebuild:
