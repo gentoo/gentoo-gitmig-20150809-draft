@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap/hostap-20021012-r1.ebuild,v 1.2 2003/02/25 19:17:52 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/hostap/hostap-20021012-r1.ebuild,v 1.3 2003/02/28 02:50:02 latexer Exp $
 
 inherit eutils
 
@@ -24,6 +24,13 @@ DEPEND=">=net-wireless/wireless-tools-25
 S=${WORKDIR}/${PN}-2002-10-12
 LIB_PATH="/lib/modules/${KV}"
 
+if [ -z "${HOSTAP_DRIVERS}" ]; then
+	CUSTOM="no"
+	HOSTAP_DRIVERS="pci plx"
+else
+	CUSTOM="yes"
+fi
+
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -34,11 +41,16 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-gentoo-patch.diff
 
 	mv Makefile ${T}
-	sed -e "s:^PCMCIA_PATH=:PCMCIA_PATH=${WORKDIR}/${MY_PCMCIA}:" \
-		-e "s:gcc:${CC}:" \
+	sed -e "s:gcc:${CC}:" \
 		-e "s:-O2:${CFLAGS}:" \
 		-e "s:\$(EXTRA_CFLAGS):\$(EXTRA_CFLAGS) -DPRISM2_HOSTAPD:" \
 		${T}/Makefile > Makefile
+	
+	if [ -n "`use pcmcia`" ] || [[ "${HOSTAP_DRIVERS}" == *pccard* ]]; then
+		mv Makefile ${T}
+		sed -e "s:^PCMCIA_PATH=:PCMCIA_PATH=${WORKDIR}/${MY_PCMCIA}:" \
+			${T}/Makefile > Makefile
+	fi
 	
 	cd ${S}/hostapd
 	mv Makefile ${T}
@@ -48,7 +60,6 @@ src_unpack() {
 }
 
 src_compile() {
-	
 	#
 	# This ebuild now uses a system similar to the alsa ebuild.
 	# By default, it will install the pci and plx drivers, and
@@ -57,17 +68,15 @@ src_compile() {
 	#
 	#     HOSTAP_DRIVERS="pci pccard" emerge hostap
 	#
+	# Available options are pci, plx, and pccard.
 
-	if [ -z "${HOSTAP_DRIVERS}" ]; then
-		CUSTOM="no"
-		HOSTAP_DRIVERS="pci plx"
+	if [ "${CUSTOM}" == no ]; then
 		if [ -n "`use pcmcia`" ]; then
 			emake ${HOSTAP_DRIVERS} pccard hostap crypt || die
 		else
 			emake ${HOSTAP_DRIVERS} hostap crypt || die
 		fi
 	else
-		CUSTOM="yes"
 		einfo "Building the folowing drivers: ${HOSTAP_DRIVERS}"
 		emake ${HOSTAP_DRIVERS} hostap crypt || die
 	fi
