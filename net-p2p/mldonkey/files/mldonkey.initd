@@ -37,7 +37,10 @@ start() {
 	then
 		eerror "MLDonkey could not be started! Check logfile: ${LOG}"
 	fi
-	renice ${NICE} -u ${USER} >/dev/null
+	for i in `pgrep -u ${USER} mlnet`
+	do
+		renice -p $i ${NICE}
+	done
 	eend $?
 }
 

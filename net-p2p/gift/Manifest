@@ -6,5 +6,5 @@ MD5 875f23093b78af2d864a7a7ba464f126 metadata.xml 223
 MD5 64b21cffd79f35db281d077303eb810b files/digest-gift-0.11.6 64
 MD5 64b21cffd79f35db281d077303eb810b files/digest-gift-0.11.6-r1 64
 MD5 bc6445cb39701ab31230338ff7be3949 files/gift.confd 641
-MD5 093c8d14357ed7d8225fd861ecd2bf97 files/gift.initd 667
+MD5 7740a5e853c9f67527c983e82c8a930b files/gift.initd 698
 MD5 e53b1d5024a6b4a9c59097929889cd0e files/digest-gift-0.11.7_pre20040627 76
