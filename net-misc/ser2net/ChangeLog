@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/ser2net
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ser2net/ChangeLog,v 1.5 2005/03/03 20:50:54 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ser2net/ChangeLog,v 1.6 2005/03/18 20:05:43 rajiv Exp $
+
+*ser2net-2.2-r1 (18 Mar 2005)
+
+  18 Mar 2005; Rajiv Aaron Manglani <rajiv@gentoo.org>
+  +files/ser2net-2.2-tcpwrappers-configure.in.patch, +ser2net-2.2-r1.ebuild:
+  ser2net does not actually depend on glib, bug #85569. also make tcp wrappers
+  support optional via the tcpd USE flag.
 
 *ser2net-2.2 (03 Mar 2005)
 

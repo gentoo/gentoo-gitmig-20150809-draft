@@ -1,16 +1,9 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2666fb007fbfc1c1ddc3e56eaddb2656 ChangeLog 723
+MD5 37b04d2227ecd01dc1635f9cd6a9390d ser2net-2.2-r1.ebuild 1029
+MD5 d490569555fb3cf62df92011f3f5ea36 ser2net-2.1.ebuild 567
 MD5 7a14148b1ef30bc9e0abaa8ac139d185 ser2net-2.2.ebuild 594
-MD5 e89472c8fad41702efa324dfff88fab3 ser2net-2.1.ebuild 568
-MD5 d0cf4918c194048e3efc995693bc9ede metadata.xml 321
-MD5 7295e582c629d0c67c477124d53f26fc files/digest-ser2net-2.2 63
+MD5 5a12ca6b56e45e71dcd5c26d86fd3a0b ChangeLog 1006
+MD5 c546ddef0d0bcf060c017bc93b2dc621 metadata.xml 257
+MD5 7295e582c629d0c67c477124d53f26fc files/digest-ser2net-2.2-r1 63
 MD5 cfc5b849d5aa10d856011fdf00295c96 files/digest-ser2net-2.1 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCJ3ikLLFUmVNQ7rkRAtPnAKCU/zL9cASDpTeFJIwzw/QEAqAbMwCgr4RE
-622N6UfWIMeiF3Ej0M6nRvU=
-=g2dx
------END PGP SIGNATURE-----
+MD5 7295e582c629d0c67c477124d53f26fc files/digest-ser2net-2.2 63
+MD5 f2e8dd3909065a4135fbb65f7b1f2727 files/ser2net-2.2-tcpwrappers-configure.in.patch 571
