@@ -54,3 +54,5 @@ move x11-misc/kmousetool kde-base/kdeaccessibility
 move net-www/drupal www-apps/drupal
 slotmove sys-libs/chipcard-client 0 2
 slotmove sys-libs/chipcard-server 0 2
+move sys-libs/chipcard-client sys-libs/libchipcard
+move sys-libs/chipcard-server sys-libs/libchipcard
