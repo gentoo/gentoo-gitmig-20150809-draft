@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/chmlib/chmlib-0.33.ebuild,v 1.1 2004/06/30 16:32:03 sergey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/chmlib/chmlib-0.33.ebuild,v 1.2 2004/09/02 22:43:03 pvdabeel Exp $
 
 DESCRIPTION="Library for MS CHM (compressed html) file format plus extracting and http server utils"
 HOMEPAGE="http://66.93.236.84/~jedwin/projects/chmlib/"
@@ -9,7 +9,7 @@ DEPEND=">=sys-apps/sed-4"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~x86 ppc ~amd64"
 IUSE=""
 
 S=${WORKDIR}/${PN}
