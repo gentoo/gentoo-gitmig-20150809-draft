@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/netcat-110.ebuild,v 1.7 2002/08/30 16:36:37 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/netcat-110.ebuild,v 1.8 2002/09/01 07:09:35 seemant Exp $
 
 MY_P=nc${PV}
 S=${WORKDIR}/nc-${PV}
@@ -27,7 +27,7 @@ src_compile() {
 		-e "s:^CC =.*$:CC = gcc \$(CFLAGS):" \
 		Makefile.orig > Makefile
 
-	cp netcat.c netcat.orig
+	cp netcat.c netcat.c.orig
 	sed -e "s:#define HAVE_BIND:#undef HAVE_BIND:" \
 		netcat.c.orig > netcat.c
 
