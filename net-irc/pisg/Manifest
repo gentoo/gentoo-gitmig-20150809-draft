@@ -1,23 +1,13 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6568789ad27b7197423ab01eed130854 ChangeLog 2954
+MD5 4e1aaeba0963ec0f0913504d93db44c5 ChangeLog 3034
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
 MD5 535e23e995369f18facdf660880feda6 pisg-0.57.ebuild 1234
 MD5 d4d46ebbdc4a44a2bd3a7260c8651814 pisg-0.58.ebuild 1235
 MD5 27d162e876f18b0e4815ef9611c32e47 pisg-0.59.ebuild 1236
 MD5 e8d52a9ed0da6e1a4f382e5da8a2e035 pisg-0.60.ebuild 1236
-MD5 ba59580f5861a65fe15a438c0d00159f pisg-0.61.ebuild 1236
+MD5 9c1ea61ae600aff20efa12f6a6291afd pisg-0.61.ebuild 1240
 MD5 2116a6e5786030640b4a7f25159dbfc6 files/0.56-network-option-fix.patch 1345
 MD5 9de11d80cf02a7d17db1351fe63fc0ba files/digest-pisg-0.57 61
 MD5 3c97207f955bb7df8a99958d56db7ce4 files/digest-pisg-0.58 61
 MD5 c97d5cdf99ed48e06d0a79440ea429bd files/digest-pisg-0.59 61
 MD5 b743840afb38720ebf907d60e4c373db files/digest-pisg-0.60 61
 MD5 6e4b3184fb6020dbe09ec1299c27423e files/digest-pisg-0.61 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBhEKNI1lqEGTUzyQRApoOAJ46jjEXawI0bfa+9UtlZPB/bTONXACfeDd+
-gJzUm3qqb6b+9be+urt+IGQ=
-=Jl+f
------END PGP SIGNATURE-----
