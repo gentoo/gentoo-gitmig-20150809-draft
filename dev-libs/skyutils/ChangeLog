@@ -1,8 +1,13 @@
 # ChangeLog for dev-libs/skyutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/skyutils/ChangeLog,v 1.5 2003/03/06 22:23:06 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/skyutils/ChangeLog,v 1.6 2003/04/09 14:15:50 lu_zero Exp $
 
-*skyutils-2.1 (06 Mar 2003)
+*skyutils-2.5 (09 Apr 2003)
+
+  09 Apr 2003; Luca Barbato <lu_zero@gentoo.org> : skytuils-2.5.ebuild
+  Thanks to Kfir Ozer <ufk2k@yahoo.com> for the update
+
+*skyutils-2.4 (06 Mar 2003)
 
   06 Mar 2003; Luca Barbato <lu_zero@gentoo.org> : skytuils-2.4.ebuild
   Thanks to Michele Balistreri <brain87@gmx.net> for the update
