@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-fasttrack/gift-fasttrack-0.8.5.ebuild,v 1.1 2004/02/01 00:28:45 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-fasttrack/gift-fasttrack-0.8.5.ebuild,v 1.2 2004/02/22 01:06:24 brad_mssw Exp $
 
 MY_P=${P/gift-fasttrack/giFT-FastTrack}
 
@@ -9,7 +9,7 @@ HOMEPAGE="https://developer.berlios.de/projects/gift-fasttrack/"
 SRC_URI="http://download.berlios.de/${PN}/${MY_P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="~x86 ~sparc ~ppc amd64"
 
 DEPEND="virtual/glibc
 	!net-p2p/gift-fasttrack-cvs
