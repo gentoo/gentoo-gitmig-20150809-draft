@@ -4,7 +4,7 @@ MD5 beb1087e4c12b9b88585e7177034fd10 ChangeLog 3590
 MD5 1d014b56d3b519b8626774389dbd149b squirrelmail-1.2.8.ebuild 1589
 MD5 4ed98c6ec965564be4311d6f63e6b108 squirrelmail-1.2.9.ebuild 1593
 MD5 11ebf3c96e74affebeb697f691127a3f squirrelmail-1.4.0.ebuild 1584
-MD5 ed183aae739b0147a0c5592b1a841cec squirrelmail-1.4.0-r1.ebuild 1988
+MD5 bdb9161e71ee6c628a1e6a8453172783 squirrelmail-1.4.0-r1.ebuild 1955
 MD5 666d7152216894372774217761d6eac5 files/digest-squirrelmail-1.2.10 73
 MD5 8eeb77a0af1734942ad728fc29c84441 files/digest-squirrelmail-1.2.11 73
 MD5 cb8452d8dad1eae871978e6b8f565ec1 files/digest-squirrelmail-1.2.8 72

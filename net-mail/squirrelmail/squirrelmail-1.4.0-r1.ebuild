@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.4.0-r1.ebuild,v 1.1 2003/04/29 19:48:33 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/squirrelmail/squirrelmail-1.4.0-r1.ebuild,v 1.2 2003/04/29 19:55:08 mholzer Exp $
 
 DESCRIPTION="Webmail for nuts!"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
@@ -13,9 +13,12 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 RDEPEND="virtual/php"
 DEPEND="${RDEPEND}"
 
-HTTPD_ROOT="/home/httpd/htdocs"
-HTTPD_USER="apache"
-HTTPD_GROUP="apache"
+HTTPD_ROOT="`grep '^DocumentRoot' /etc/apache/conf/apache.conf | cut -d\  -f2`"
+HTTPD_USER="`grep '^User' /etc/apache/conf/commonapache.conf | cut -d \  -f2`"
+HTTPD_GROUP="`grep '^Group' /etc/apache/conf/commonapache.conf | cut -d \  -f2`"
+[ -z "${HTTPD_ROOT}" ] && HTTPD_ROOT="/home/httpd/htdocs"
+[ -z "${HTTPD_USER}" ] && HTTPD_USER="apache"
+[ -z "${HTTPD_GROUP}" ] && HTTPD_GROUP="apache"
 
 pkg_setup() {
 	if [ -L ${HTTPD_ROOT}/${PN} ] ; then
