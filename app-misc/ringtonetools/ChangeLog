@@ -1,9 +1,12 @@
 # ChangeLog for app-misc/scmxx
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ringtonetools/ChangeLog,v 1.1 2003/11/15 07:50:47 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ringtonetools/ChangeLog,v 1.2 2003/11/15 08:04:39 strider Exp $
 
 *ringtonetools-2.18 (15 Nov 2003)
 
   15 Nov 2003; Adrian Almenar <strider@gentoo.org> ringtonetools-2.18.ebuild:
   First import to cvs of ringtonetools.
+  - This closes bug #15162. thanks to Rigo Ketelings <rigo@home.nl> for sending
+  and ebuild for it, it had a couple of lines better handled than my first
+  version.
 
