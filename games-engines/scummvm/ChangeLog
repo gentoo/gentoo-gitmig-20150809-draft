@@ -1,0 +1,74 @@
+# ChangeLog for app-games/scummvm
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm/ChangeLog,v 1.1 2003/09/09 17:34:21 vapier Exp $
+
+*scummvm-0.5.1 (08 Aug 2003)
+
+  08 Aug 2003; Michael Sterrett <msterret@gentoo.org> scummvm-0.5.1.ebuild:
+  version bump
+
+*scummv-0.5.0 (02 Aug 2003)
+  02 Aug 2003; Lisa Seelye <lisa@gentoo.org>; scummvm-0.5.0.ebuild:
+  Version bump
+
+  02 Aug 2003; Lisa Seelye <lisa@gentoo.org>; ChangeLog:
+  Moved 'reverted to 0.4.1' down under 4.1-r1.
+
+*scummvm-0.4.1-r1 (17 Jul 2003)
+
+  19 Jul 2003; Nick Hadaway <raker@gentoo.org>:
+  Reverted to 0.4.1
+
+  17 Jul 2003; Nick Hadaway <raker@gentoo.org> scummvm-0.4.1-r1.ebuild:
+  Changed from media-sound/mad to media-libs/{libmad,libid3tag}
+
+  06 Jun 2003; <msterret@gentoo.org> scummvm-0.3.0b.ebuild,
+  scummvm-0.4.1.ebuild:
+  spellcheck: gameenginge -> "game engine"
+
+*scummvm-0.4.1 (06 Jun 2003)
+
+  06 Jun 2003; <msterret@gentoo.org> scummvm-0.4.1.ebuild:
+  version bump
+
+  06 Jun 2003; <msterret@gentoo.org> scummvm-0.3.0b.ebuild:
+  DEPEND on sed >= 4; use sed -i
+
+*scummvm-0.3.0b (14 Dec 2002)
+
+  22 Apr 2003; Graham Forest <vladimir@gentoo.org> scummvm-0.3.0b.ebuild:
+  set ~ppc in keywords
+
+  18 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
+  Updated ebuild to use mad properly and support for other sound libs.
+
+  14 Dec 2002; Maik Schreiber <blizzy@gentoo.org> :
+  new version
+
+*scummvm-0.2.0-r1 (17 Jun 2002)
+
+  23 Sep 2002; Mike Frysinger <vapier@gentoo.org> :
+  Changed SRC_URI to use mirror: and updated LICENSE
+
+  17 Jul 2002; Jose Alberto Suárez López <bass@gentoo.org> scummvm-0.2.0.ebuild :
+  Added KEYWORDS, SLOT.
+
+  17 Jul 2002; Jose Alberto Suárez López <bass@gentoo.org> scummvm-0.2.0-r1.ebuild :
+  Added KEYWORDS, SLOT.
+
+  17 Jun 2002; Ryan Phillips <rphillips@gentoo.org> scummvm-0.2.0-r1.ebuild :
+
+  Added support for the SDL USE variable
+
+*scummvm-0.2.0 (26 May 2002)
+
+  23 Sep 2002; Mike Frysinger <vapier@gentoo.org> :
+  Changed SRC_URI to use mirror: and updated LICENSE
+
+  26 May 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.

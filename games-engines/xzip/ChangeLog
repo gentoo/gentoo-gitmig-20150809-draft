@@ -1,0 +1,21 @@
+# ChangeLog for app-games/xzip
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/xzip/ChangeLog,v 1.1 2003/09/09 17:34:21 vapier Exp $
+
+*xzip-1.8.2-r2 (02 Sep 2003)
+
+  02 Sep 2003; Michael Sterrett <msterret@gentoo.org> xzip-1.8.2-r2.ebuild:
+  use games eclass; sed >=4; use CFLAGS in Makefile
+
+*xzip-1.8.2-r1 (1 Feb 2002)
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> xzip-1.8.2-r1.ebuild :
+  Added LICENSE, KEYWORDS.
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.

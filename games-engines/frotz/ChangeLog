@@ -1,0 +1,21 @@
+# ChangeLog for app-games/frotz
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-engines/frotz/ChangeLog,v 1.1 2003/09/09 17:34:21 vapier Exp $
+
+*frotz-2.43 (02 Nov 2002)
+
+  02 Nov 2002; Arcady Genkin <agenkin@gentoo.org> frotz-2.43.ebuild :
+  Fixed unneeded alsa-oss dependency for people who have 'oss', but not
+  'alsa' in their USE.  Got rid of the patch, as it is not really needed.
+  Updated to the latest version while I was at it.
+	
+*frotz-2.42 (15 Jul 2002)
+
+  21 Sep 2002; Mike Frysinger <vapier@gentoo.org> :
+  Filled out the rest of the ebuild (wasnt installing docs/shared files)
+
+  19 Sep 2002; Mike Frysinger <vapier@gentoo.org> :
+  Changed the OSS diff to a patch #8152
+
+  15 Jul 2002; J. Alberto S. L. <bass@gentoo.org> frotz-2.4.2.ebuild: 
+  First relase
