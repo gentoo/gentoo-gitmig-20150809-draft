@@ -1,6 +1,18 @@
 # ChangeLog for games-emulation/blight_input
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-blight-input/ChangeLog,v 1.1 2005/01/06 02:51:04 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-blight-input/ChangeLog,v 1.2 2005/01/06 04:58:18 morfic Exp $
+
+  05 Jan 2005; Daniel Goller <morfic@gentoo.org>
+  +files/mupen64-blight-input-SDL_ttf.patch,
+  +files/mupen64-blight-input-cflags.patch,
+  mupen64-blight-input-0.0.8-r1.ebuild:
+  Moved patches to match
+
+  05 Jan 2005; Daniel Goller <morfic@gentoo.org>
+  +files/mupen64-blight_input-SDL_ttf.patch,
+  +files/mupen64-blight_input-cflags.patch,
+  mupen64-blight-input-0.0.8-r1.ebuild:
+  Fixed ebuild to work with new mupen64 ebuild
 
 *mupen64-blight-input-0.0.8-r1 (05 Jan 2005)
 

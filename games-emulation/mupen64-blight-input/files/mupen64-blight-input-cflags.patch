@@ -1,0 +1,16 @@
+--- blight_input-0.0.8-b/configure.old	2005-01-02 16:19:54.094170638 -0800
++++ blight_input-0.0.8-b/configure	2005-01-02 16:21:37.380781639 -0800
+@@ -6022,12 +6022,7 @@
+   :
+ fi
+ 
+-
+-if test "$debug" = no ; then
+-	CFLAGS="$CFLAGS -O3 -fomit-frame-pointer -finline-functions -funroll-loops -march=`uname -m`"
+-else
+-	CFLAGS="$CFLAGS -g3 -O0 -Wall -D_DEBUG"
+-fi
++CFLAGS="${CFLAGS}"
+ 
+ trap '' 1 2 15
+ cat > confcache <<\EOF

@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 c4b4a0d56fae34e3156f774d1e831822 ChangeLog 1625
+MD5 2be7a6fb59f41467039a196112757dcb ChangeLog 2055
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 b833f1a460867831b021d7d106cd130b mupen64-blight-input-0.0.8-r1.ebuild 969
+MD5 cfd0b4cadce29c22104b3b6abefba499 mupen64-blight-input-0.0.8-r1.ebuild 1014
 MD5 82f760f850552f3be75d5dd733687219 files/digest-mupen64-blight-input-0.0.8-r1 72
+MD5 ba8b60aba3d62bdaf3f7a817cbe2d61d files/mupen64-blight-input-cflags.patch 422
+MD5 f63e1260b9d35674f21fdcfff3be5c16 files/mupen64-blight-input-SDL_ttf.patch 353
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB3KgVUpKYMelfdYERAodJAJ9BAJPLNIURIAS+As2+1F3KDP6DSQCfVHWq
-ayuPmdUdB2N1oWETlqGF7SI=
-=w0Jb
+iD8DBQFB3MXHUpKYMelfdYERAhz0AJ97IxFuOGuRI8O5Is75OFeTs97EUgCffA0l
+Y7P/svkBArrSvWOKwlSHycY=
+=0NrQ
 -----END PGP SIGNATURE-----
