@@ -413,10 +413,6 @@ dev-python/japanesecodecs
 # doesn't compile under gcc3 and is unsupported anymore
 sys-devel/spython
 
-# <pauldv@gentoo.org> (19 Jun 2003)
-# It is a rc version
-=app-office/openoffice-bin-1.1_rc4
-
 # <robh@gentoo.org> (18 Jun 2003)
 # due to ardour approaching a release and sourceforge breaking
 # this ebuild is not going to work for quite a while
@@ -430,10 +426,6 @@ sys-devel/spython
 # <twp@gentoo.org> 10 Jun 2003
 # Needs testing (I can't test it)
 =dev-ruby/optparse-0.12
-
-# <pauldv@gentoo.org> 10 Jun 2003
-# release candidate, should not be used generally
-=app-office/openoffice-1.1_rc3
 
 # <robbat2@gentoo.org> 29 May 2003
 # ebuild was previously masked only in the ebuild
