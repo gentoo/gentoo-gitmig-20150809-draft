@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9009.494.ebuild,v 1.1 2005/01/01 14:11:51 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9009.494.ebuild,v 1.2 2005/01/01 14:13:25 aliz Exp $
 
 MAJ_PV=${PV:0:6}
 MIN_PV=${PV:7:9}
@@ -27,7 +27,7 @@ pkg_preinst() {
 	if [ -e /opt/distributed.net/dnetc ] && [ -e /etc/init.d/dnetc ]; then
 		einfo "flushing old buffers"
 		source /etc/conf.d/dnetc
-		
+
 		if [ -e /opt/distributed.net/dnetc.ini ]; then
 			# use ini file
 			/opt/distributed.net/dnetc -quiet -ini /opt/distributed.net/dnetc.ini -flush
