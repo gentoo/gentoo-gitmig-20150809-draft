@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.ebuild,v 1.4 2004/02/20 13:10:56 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-6.2.ebuild,v 1.5 2004/03/23 01:03:20 mattam Exp $
 
 #Some explanation of bootstrap logic:
 #
@@ -34,7 +34,7 @@ SRC_URI="http://www.haskell.org/ghc/dist/${PV}/ghc-${PV}-src.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 -ppc -alpha"
+KEYWORDS="~x86 ~ppc -alpha"
 
 
 PROVIDE="virtual/ghc"
@@ -96,6 +96,11 @@ src_compile() {
 	# incorrectly by the configure script
 	echo "ArSupportsInput:=" >> mk/build.mk
 
+	if use ppc; then
+		echo "GhcUnregisterised=YES" >> mk/build.mk
+		echo "SplitObjs=NO" >> mk/build.mk
+	fi
+
 	# unset SGML_CATALOG_FILES because documentation installation
 	# breaks otherwise ...
 	PATH="${GHCPATH}" SGML_CATALOG_FILES="" econf \
@@ -112,7 +117,6 @@ src_compile() {
 			make ps || die "make ps failed"
 		fi
 	fi
-
 }
 
 src_install () {
