@@ -1,10 +1,19 @@
 # ChangeLog for sys-apps/portage
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.2 2002/02/04 23:59:25 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.3 2002/02/05 01:41:32 gbevin Exp $
+
+*portage-1.8.9_pre2 (5 Feb 2002)
+
+  5 Feb 2002; G.Bevin <gbevin@gentoo.org> portage-1.8.9_pre2.ebuild,
+  files/digest-portage-1.8.9_pre2, files/portage-1.8.9_pre2.tar.bz2 :
+  
+  Fixed bug in the unmerging of packages that were installed with an older
+  portage version.
 
 *portage-1.8.9_pre1 (5 Feb 2002)
 
   5 Feb 2002; G.Bevin <gbevin@gentoo.org> portage-1.8.9_pre1.ebuild :
+  
   Install emerge to /usr/bin instead of /usr/sbin.
 
   4 Feb 2002; G.Bevin <gbevin@gentoo.org> portage-1.8.9_pre1.ebuild,
