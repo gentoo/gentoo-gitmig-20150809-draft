@@ -1,6 +1,9 @@
 # ChangeLog for media-video/gqcam
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gqcam/ChangeLog,v 1.6 2004/06/25 00:40:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gqcam/ChangeLog,v 1.7 2004/08/12 20:34:59 chriswhite Exp $
+
+  13 Aug 2004; Chris White <chriswhite@gentoo.org> +metadata.xml:
+  Adding missing metadata.xml.
 
   13 May 2004; David Holm <dholm@gentoo.org> gqcam-0.9.ebuild:
   Added to ~ppc.

@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ks3switch
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ks3switch/ChangeLog,v 1.6 2004/07/06 12:32:52 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ks3switch/ChangeLog,v 1.7 2004/08/12 20:39:29 chriswhite Exp $
+
+  13 Aug 2004; Chris White <chriswhite@gentoo.org> +metadata.xml:
+  Added missing metadata.xml.
 
   06 Jul 2004; Carsten Lohrke <carlo@gentoo.org> ks3switch-0.1.ebuild:
   QA: newdepend -> R/DEPEND, need-kde
