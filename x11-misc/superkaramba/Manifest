@@ -1,6 +1,7 @@
-MD5 5be8ce2140b26ee69e79e88a812f8780 superkaramba-0.30.ebuild 841
+MD5 ffb5423fcbaa02e9a4cbbe137600bcfc superkaramba-0.30.ebuild 840
 MD5 4e78fc9d782103c681c8fa418e65715b superkaramba-0.21.ebuild 836
 MD5 f85e4e43a43fee99d0535e934f1aee24 superkaramba-0.28.ebuild 840
+MD5 5be8ce2140b26ee69e79e88a812f8780 superkaramba-0.31.ebuild 841
 MD5 4c6ab8eaadea0486e4e0b2bde8021731 superkaramba-0.27.ebuild 840
 MD5 d55bd05b40145ec6baa955100d595b03 superkaramba-0.29.ebuild 840
 MD5 3e9bf536e2257bf1a2fc6ffb8e4a2ba5 ChangeLog 885
@@ -9,4 +10,5 @@ MD5 73f10738e1aa2000afbf6e523b076b4e files/digest-superkaramba-0.27 70
 MD5 54967ddeac8a69609735d600e60cc656 files/digest-superkaramba-0.28 70
 MD5 38c837e315db0370c25a062c7cbbe639 files/digest-superkaramba-0.29 70
 MD5 629a3eaf7c612149c169c63125bfc29a files/digest-superkaramba-0.30 70
+MD5 9797b197be7572405432477528e54e08 files/digest-superkaramba-0.31 70
 MD5 dfffd46934fc1bbec91ae05eb8ec535b files/karamba-env 60
