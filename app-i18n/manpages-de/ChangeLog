@@ -1,0 +1,10 @@
+# ChangeLog for app-i18n/manpages-de
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# /space/gentoo/cvsroot/gentoo-x86/app-i18n/manpages-de/ChangeLog,v 1.0 2002/07/25 11:48:00 cybersystem
+
+*manpages-de-0.4 (25 July 2002)
+
+  25 July 2002; Sascha Schwabbauer <cybersystem@gentoo.org> ChangeLog, manpages-de-0.4.ebuild, files/digest-manpages-de-0.4 :
+
+  Initial version in Portage now..
+
