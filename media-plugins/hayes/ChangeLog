@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/hayes
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/hayes/ChangeLog,v 1.6 2004/03/14 17:23:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/hayes/ChangeLog,v 1.7 2004/04/06 17:55:30 caleb Exp $
+
+  06 Apr 2004; Caleb Tennis <caleb@gentoo.org> hayes-1.21.ebuild, hayes-1.3.ebuild:
+  Bump to stable, remove old version, add new version
 
   14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> hayes-1.1.5.ebuild,
   hayes-1.21.ebuild, hayes-1.3.ebuild:
