@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r7.ebuild,v 1.20 2004/10/24 13:56:09 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre4-r7.ebuild,v 1.21 2004/10/24 14:56:29 chriswhite Exp $
 
-inherit eutils flag-o-matic kmod
+inherit eutils flag-o-matic kernel-mod
 
 IUSE="3dfx 3dnow 3dnowex aalib alsa altivec arts bidi debug divx4linux dvb cdparanoia directfb dvd dvdread edl encode esd fbcon gif ggi gtk ipv6 joystick jpeg libcaca lirc live lzo mad  matroska matrox mmx mmx2 mpeg mythtv nas network nls oggvorbis opengl oss png real rtc samba sdl sse svga tga theora truetype v4l v4l2 xinerama X xmms xv xvid gnome"
 
@@ -134,12 +134,7 @@ src_unpack() {
 
 	#Setup the matrox makefile
 	if use matrox; then
-		get_kernel_info
 		epatch ${DISTDIR}/${P}-mga-kernel2.6.patch.tar.bz2
-		sed -i -e \
-		"s:^#KERNEL_OUTPUT_PATH=: \
-		KERNEL_OUTPUT_PATH =${KV_OUTPUT}:" \
-		${S}/Makefile || die "failed to sed ${S}/Makefile"
 	fi # end of matrox related stuff
 
 	# Fix hppa compilation
@@ -241,10 +236,7 @@ src_compile() {
 	# That way the configure script sees it and builds the support
 	#build the matrox driver before the 
 	if use matrox && use x86; then
-		check_KV
 		cd ${S}/drivers
-		# bad hack, will be fixed later
-		addwrite ${ROOT}/usr/src/linux/
 		unset ARCH
 		make all || die "Matrox build failed!  Your kernel may need to have `make mrproper` run on it before trying to use matrox support in this ebuild again."
 		cd ${S}
