@@ -1,0 +1,224 @@
+--- prc-tools-2.2/binutils/configure.in	2002-05-15 00:47:22.000000000 +0100
++++ prc-tools-2.2/binutils/configure.in	2003-07-01 22:02:49.000000000 +0100
+@@ -508,35 +508,38 @@
+ fi
+ 
+ # Handle ${copy_dirs}
+-set fnord ${copy_dirs}
+-shift
+-while [ $# != 0 ]; do
+-  if [ -f $2/COPIED ] && [ x"`cat $2/COPIED`" = x"$1" ]; then
+-    :
+-  else
+-    echo Copying $1 to $2
+-
+-    # Use the install script to create the directory and all required
+-    # parent directories.
+-    if [ -d $2 ]; then
+-      :
+-    else
+-      echo >config.temp
+-      ${srcdir}/install-sh -c -m 644 config.temp $2/COPIED
+-    fi
+-
+-    # Copy the directory, assuming we have tar.
+-    # FIXME: Should we use B in the second tar?  Not all systems support it.
+-    (cd $1; tar -cf - .) | (cd $2; tar -xpf -)
+-
+-    # It is the responsibility of the user to correctly adjust all
+-    # symlinks.  If somebody can figure out how to handle them correctly
+-    # here, feel free to add the code.
+-
+-    echo $1 > $2/COPIED
+-  fi
+-  shift; shift
+-done
++### DISABLED ---> plasmaroo@plasmaroo.squirrelserver.co.uk
++###               prc-tools compile fix to prevent sandbox
++###               errors
++# set fnord ${copy_dirs}
++# shift
++# while [ $# != 0 ]; do
++#  if [ -f $2/COPIED ] && [ x"`cat $2/COPIED`" = x"$1" ]; then
++#    :
++#  else
++#    echo Copying $1 to $2
++#
++#    # Use the install script to create the directory and all required
++#    # parent directories.
++#    if [ -d $2 ]; then
++#      :
++#    else
++#      echo >config.temp
++#      ${srcdir}/install-sh -c -m 644 config.temp $2/COPIED
++#    fi
++#
++#    # Copy the directory, assuming we have tar.
++#    # FIXME: Should we use B in the second tar?  Not all systems support it.
++#    (cd $1; tar -cf - .) | (cd $2; tar -xpf -)
++#
++#    # It is the responsibility of the user to correctly adjust all
++#    # symlinks.  If somebody can figure out how to handle them correctly
++#    # here, feel free to add the code.
++#
++#    echo $1 > $2/COPIED
++#  fi
++#  shift; shift
++#done
+ 
+ # Configure extra directories which are host specific
+
+--- prc-tools-2.2/gcc/configure.in 2002-05-15 00:47:22.000000000 +0100
++++ prc-tools-2.2/gcc/configure.in 2003-07-01 22:02:49.000000000 +0100
+@@ -470,36 +470,39 @@
+   esac
+ fi
+
+ # Handle ${copy_dirs}
+-set fnord ${copy_dirs}
+-shift
+-while [ $# != 0 ]; do
+-  if [ -f $2/COPIED ] && [ x"`cat $2/COPIED`" = x"$1" ]; then
+-    :
+-  else
+-    echo Copying $1 to $2
+-
+-    # Use the install script to create the directory and all required
+-    # parent directories.
+-    if [ -d $2 ]; then
+-      :
+-    else
+-      echo >config.temp
+-      ${srcdir}/install-sh -c -m 644 config.temp $2/COPIED
+-    fi
+-
+-    # Copy the directory, assuming we have tar.
+-    # FIXME: Should we use B in the second tar?  Not all systems support it.
+-    (cd $1; tar -cf - .) | (cd $2; tar -xpf -)
+-
+-    # It is the responsibility of the user to correctly adjust all
+-    # symlinks.  If somebody can figure out how to handle them correctly
+-    # here, feel free to add the code.
+-
+-    echo $1 > $2/COPIED
+-  fi
+-  shift; shift
+-done
++### DISABLED ---> plasmaroo@plasmaroo.squirrelserver.co.uk
++###               prc-tools compile fix to prevent sandbox
++###               errors
++#set fnord ${copy_dirs}
++#shift
++#while [ $# != 0 ]; do
++#  if [ -f $2/COPIED ] && [ x"`cat $2/COPIED`" = x"$1" ]; then
++#    :
++#  else
++#    echo Copying $1 to $2
++#
++#    # Use the install script to create the directory and all required
++#    # parent directories.
++#    if [ -d $2 ]; then
++#      :
++#    else
++#      echo >config.temp
++#      ${srcdir}/install-sh -c -m 644 config.temp $2/COPIED
++#    fi
++#
++#   # Copy the directory, assuming we have tar.
++#   # FIXME: Should we use B in the second tar?  Not all systems support it.
++#    (cd $1; tar -cf - .) | (cd $2; tar -xpf -)
++#
++#   # It is the responsibility of the user to correctly adjust all
++#   # symlinks.  If somebody can figure out how to handle them correctly
++#   # here, feel free to add the code.
++#
++#    echo $1 > $2/COPIED
++#  fi
++#  shift; shift
++#done
+
+ # Configure extra directories which are host specific
+
+--- prc-tools-2.2/doc/Makefile.in  2002-08-03 01:02:16.000000000 +0100
++++ prc-tools-2.2/doc/Makefile.in  2003-07-02 12:59:41.000000000 +0100
+@@ -16,7 +16,8 @@
+ exec_prefix = @exec_prefix@
+ palmdev_prefix = @palmdev_prefix@
+ infodir = @infodir@
+-htmldir = @htmldocs_prefix@
++htmldir = ${D}/@htmldocs_prefix@
++       # Portage fix - install to ${D} instead...
+
+ INSTALL = @INSTALL@
+ INSTALL_DATA = @INSTALL_DATA@
+
+--- prc-tools-2.2/gdb/configure.in  2002-12-10 21:34:10.000000000 +0000
++++ prc-tools-2.2/gdb/configure.in  2003-07-03 17:49:38.000000000 +0100
+@@ -909,35 +909,38 @@
+ fi
+
+ # Handle ${copy_dirs}
+-set fnord ${copy_dirs}
+-shift
+-while test $# != 0 ; do
+-  if test -f $2/COPIED && test x"`cat $2/COPIED`" = x"$1" ; then
+-    :
+-  else
+-    echo Copying $1 to $2
+-
+-    # Use the install script to create the directory and all required
+-    # parent directories.
+-    if test -d $2 ; then
+-      :
+-    else
+-      echo >config.temp
+-      ${srcdir}/install-sh -c -m 644 config.temp $2/COPIED
+-    fi
+-
+-    # Copy the directory, assuming we have tar.
+-    # FIXME: Should we use B in the second tar?  Not all systems support it.
+-    (cd $1; tar -cf - .) | (cd $2; tar -xpf -)
+-
+-    # It is the responsibility of the user to correctly adjust all
+-    # symlinks.  If somebody can figure out how to handle them correctly
+-    # here, feel free to add the code.
+-
+-    echo $1 > $2/COPIED
+-  fi
+-  shift; shift
+-done
++### DISABLED ---> plasmaroo@plasmaroo.squirrelserver.co.uk
++###               prc-tools compile fix to prevent sandbox
++###               errors
++# set fnord ${copy_dirs}
++# shift
++# while test $# != 0 ; do
++#  if test -f $2/COPIED && test x"`cat $2/COPIED`" = x"$1" ; then
++#    :
++#  else
++#    echo Copying $1 to $2
++#
++#    # Use the install script to create the directory and all required
++#    # parent directories.
++#    if test -d $2 ; then
++#      :
++#    else
++#      echo >config.temp
++#      ${srcdir}/install-sh -c -m 644 config.temp $2/COPIED
++#   fi
++#
++#    # Copy the directory, assuming we have tar.
++#    # FIXME: Should we use B in the second tar?  Not all systems support it.
++#    (cd $1; tar -cf - .) | (cd $2; tar -xpf -)
++#
++#    # It is the responsibility of the user to correctly adjust all
++#    # symlinks.  If somebody can figure out how to handle them correctly
++#    # here, feel free to add the code.
++#
++#    echo $1 > $2/COPIED
++#  fi
++#  shift; shift
++#done
+
+ # Work in distributions that contain no compiler tools, like Autoconf.
+ tentative_cc=""
