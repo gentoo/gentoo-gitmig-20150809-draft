@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.89 2004/02/16 01:15:47 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.90 2004/02/25 17:26:38 gmsoft Exp $
+
+  25 Feb 2004; Guy Martin <gmsoft@gentoo.org> :
+  Marked stable on hppa.
 
   15 Feb 2004; Caleb Tennis <caleb@gentoo.org> kdemultimedia-3.0.5b.ebuild,
   kdemultimedia-3.1.4-r1.ebuild, kdemultimedia-3.1.5.ebuild:
