@@ -1,6 +1,18 @@
 # ChangeLog for media-libs/tiff
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.31 2004/10/24 03:13:29 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/ChangeLog,v 1.32 2004/11/15 22:51:41 nerdboy Exp $
+
+  15 Nov 2004; Steve Arnold <nerdboy@gentoo.org> tiff-3.7.0.ebuild:
+  bumped to stable on x86 due to broken parts in 3.6.x as well as
+  positive feedback from users and testing.  Earlier tiff versions
+  have issues with faxing, and the 3.7.0 release has several other
+  changes:
+    1) lzw compression is now integrated (no more patant issues)
+       so the local USE flag has been removed
+    2) the intall-private option is gone (please file an upstream
+       bug if you need it) and the extra headers have changed. The
+       private USE flag will remain for now.
+    3) fax conversions work correctly !!!
 
 *tiff-3.7.0 (23 Oct 2004)
 
