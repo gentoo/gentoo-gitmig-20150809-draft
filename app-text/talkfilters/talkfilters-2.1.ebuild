@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/talkfilters/talkfilters-2.1.ebuild,v 1.8 2004/07/14 00:46:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/talkfilters/talkfilters-2.1.ebuild,v 1.9 2004/12/26 10:50:16 ka0ttic Exp $
 
 DESCRIPTION="convert ordinary English text into text that mimics a stereotyped or otherwise humorous dialect"
-SRC_URI="http://www2.dystance.net:8080/software/talkfilters/${P}.tar.gz"
-HOMEPAGE="http://www2.dystance.net:8080/software/talkfilters/"
+HOMEPAGE="http://www.dystance.net/software/talkfilters/"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
