@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.39 2004/04/09 15:49:46 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.40 2004/04/09 18:46:57 foser Exp $
 #
 # Authors:
 # Bruce A. Locke <blocke@shivan.org>
@@ -143,17 +143,18 @@ gnome2_pkg_postinst() {
 	gnome2_scrollkeeper_update
 }
 
-gnome2_pkg_prerm() {
+#gnome2_pkg_prerm() {
 
-	gnome2_gconf_uninstall
+#	gnome2_gconf_uninstall
 
-}
+#}
 
 gnome2_pkg_postrm() {
 	gnome2_scrollkeeper_update
 }
 
 
-EXPORT_FUNCTIONS src_compile src_install pkg_postinst pkg_prerm  pkg_postrm
+#EXPORT_FUNCTIONS src_compile src_install pkg_postinst pkg_prerm  pkg_postrm
+EXPORT_FUNCTIONS src_compile src_install pkg_postinst pkg_postrm
 
 
