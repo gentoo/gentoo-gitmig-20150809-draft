@@ -1,0 +1,63 @@
+--- Makefile.orig	2004-02-09 11:12:03.000000000 +0900
++++ Makefile	2004-02-27 03:22:14.563256080 +0900
+@@ -1,9 +1,10 @@
+ # $Id: latex2rtf-Makefile-gentoo.diff,v 1.1 2004/02/26 19:05:41 usata Exp $
+ 
+-CC=gcc
++CC=$(CC)
+ MKDIR=mkdir -p
+ 
+-CFLAGS:=-DUNIX
++# Gentoo: Modified to use makefile.conf CFLAGS
++CFLAGS:=$(CFLAGS) -DUNIX
+ #CFLAGS:=-DMSDOS         #Windows/DOS
+ #CFLAGS:=-DMAC_CLASSIC   #MacOS 8/9
+ #CFLAGS:=-DOS2           #OS/2
+@@ -18,17 +19,18 @@
+ #CFLAGS:=$(CFLAGS) -Zwin32  
+ 
+ #Base directory - adapt as needed
+-PREFIX=$(PREFIX_DRIVE)/usr/local
++PREFIX=/usr
+ 
+ #Name of executable binary --- beware of 8.3 restriction under DOS
+ BINARY_NAME=latex2rtf$(EXE_SUFFIX)
+ 
+ # Location of binary, man, info, and support files - adapt as needed
+ BIN_INSTALL=$(PREFIX)/bin
+-MAN_INSTALL=$(PREFIX)/man/man1
+-INFO_INSTALL=$(PREFIX)/info
+-SUPPORT_INSTALL=$(PREFIX)/share/latex2rtf
+-CFG_INSTALL=$(PREFIX)/share/latex2rtf/cfg
++MAN_INSTALL=$(PREFIX)/share/man/man1
++INFO_INSTALL=$(PREFIX)/share/info
++SUPPORT_INSTALL=$(PREFIX)/share/doc/latex2rtf
++CFG_INSTALL=$(PREFIX)/share/latex2rtf/
++
+ 
+ # Nothing to change below this line
+ 
+@@ -158,23 +160,6 @@
+ 	cp doc/latex2rtf.1    $(MAN_INSTALL)
+ 	cp doc/latex2png.1    $(MAN_INSTALL)
+ 	cp $(CFGS)            $(CFG_INSTALL)
+-	cp doc/latex2rtf.html $(SUPPORT_INSTALL)
+-	cp doc/latex2rtf.pdf  $(SUPPORT_INSTALL)
+-	cp doc/latex2rtf.txt  $(SUPPORT_INSTALL)
+-	@echo "******************************************************************"
+-	@echo "*** latex2rtf successfully installed as \"$(BINARY_NAME)\""
+-	@echo "*** in directory \"$(BIN_INSTALL)\""
+-	@echo "***"
+-	@echo "*** \"make install-info\" will install TeXInfo files "
+-	@echo "***"
+-	@echo "*** latex2rtf was compiled to search for its configuration files in"
+-	@echo "***           \"$(CFG_INSTALL)\" "
+-	@echo "***"
+-	@echo "*** If the configuration files are moved then either"
+-	@echo "***   1) set the environment variable RTFPATH to this new location, or"
+-	@echo "***   2) use the command line option -P /path/to/cfg, or"
+-	@echo "***   3) edit the Makefile and recompile"
+-	@echo "******************************************************************"
+ 
+ install-info: doc/latex2rtf.info
+ 	$(MKDIR) $(INFO_INSTALL)
