@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.38 2003/06/10 08:09:41 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.39 2003/06/10 08:19:19 rac Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -10,6 +10,7 @@ app-editors/vim:vim-with-x - Enables linking the console vim against X libs to e
 app-editors/xemacs:athena - Chooses the MIT Athena widget set
 app-editors/xemacs:dnd - Enables support for the x11-libs/dnd drag-n-drop library
 app-editors/xemacs:neXt - Chooses the neXt L&F widget set
+app-editors/xemacs:lucid - Chooses the lucid widget set (default, deprecated)
 app-games/scummvm:mad - disables media-sound/mad support if not set
 app-office/gnucash:ofx - Enable OFX support, for importing OFX data files.
 app-office/gnucash:hbci - Enable HBCI support, for connecting to some internet banks
