@@ -1,0 +1,11 @@
+diff -ur gtkhtml-1.1.10-orig/components/html-editor/popup.c gtkhtml-1.1.10/components/html-editor/popup.c
+--- gtkhtml-1.1.10-orig/components/html-editor/popup.c	2004-05-25 00:27:37.463103516 -0400
++++ gtkhtml-1.1.10/components/html-editor/popup.c	2004-05-25 00:28:20.916203966 -0400
+@@ -496,6 +496,7 @@
+ 			ADD_PROP (PARAGRAPH);
+ 			break;
+ 		default:
++			break;
+ 		}
+ 		if (obj->parent && obj->parent->parent && HTML_IS_TABLE_CELL (obj->parent->parent)) {
+ 			if (cd->format_html) {

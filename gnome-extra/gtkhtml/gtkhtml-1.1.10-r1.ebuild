@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.1.10-r1.ebuild,v 1.5 2004/07/14 15:55:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.1.10-r1.ebuild,v 1.6 2004/08/25 06:39:22 sekretarz Exp $
 
-inherit gnome.org libtool
+inherit gnome.org libtool eutils
 
 MY_PV="`echo ${PV} | cut -d. -f1,2`"
 DESCRIPTION="Lightweight HTML rendering/printing/editing engine."
@@ -30,6 +30,13 @@ RDEPEND="=gnome-extra/gal-0.24*
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext
 	>=dev-util/intltool-0.11 )"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/${PN}-gcc34.patch
+}
 
 src_compile() {
 	elibtoolize
