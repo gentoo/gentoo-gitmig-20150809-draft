@@ -867,6 +867,9 @@ sys-apps/sysvinit
 # mask 641d to enable 1.0.0
 >app-office/openoffice-bin-2.0.0
 >app-office/openoffice-2.0.0
+# <azarah@gento.org> (09 Sep 2002)
+# new install method, should be tested.
+=app-office/openoffic-bin-1.0.0-r3
 
 #apparently has an fs unmount corruption bug
 =sys-kernel/linux-sources-2.4.15
