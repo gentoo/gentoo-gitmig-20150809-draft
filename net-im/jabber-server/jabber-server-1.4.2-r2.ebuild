@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r2.ebuild,v 1.14 2002/11/15 14:08:50 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/jabber-server/jabber-server-1.4.2-r2.ebuild,v 1.15 2002/11/16 15:20:40 verwilst Exp $
 
 IUSE="ssl"
 
@@ -96,8 +96,7 @@ src_install() {
 	touch ${D}/var/spool/jabber/.keep
 	mkdir -p ${D}/var/run
 	if [ "${COMPILER}" = "gcc3" ]; then
-                cd ${S}/icqv7-t-${ICQv7}
-		#make DESTDIR=${D} install || die
+                cp ${S}/icqv7-t-${ICQv7}/jabberd/icqv7t.so ${D}/usr/lib/jabber/
         fi
 
 	cp ${S}/jabberd/jabberd ${D}/usr/sbin/
