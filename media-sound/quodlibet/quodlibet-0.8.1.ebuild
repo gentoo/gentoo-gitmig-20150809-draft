@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-0.8.1.ebuild,v 1.2 2005/02/12 21:07:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/quodlibet/quodlibet-0.8.1.ebuild,v 1.3 2005/02/18 01:07:07 mr_bones_ Exp $
 
 IUSE="mad oggvorbis alsa"
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.sacredchao.net/~piman/software/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~sparc ~x86"
+KEYWORDS="~x86"
 
 DEPEND=">=virtual/python-2.3
 	>=dev-python/pygtk-2.4.1
