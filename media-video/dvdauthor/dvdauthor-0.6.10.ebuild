@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/dvdauthor-0.6.10.ebuild,v 1.10 2004/11/08 00:35:24 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdauthor/dvdauthor-0.6.10.ebuild,v 1.11 2005/01/08 00:56:54 luckyduck Exp $
 
 inherit eutils 64-bit
 
@@ -15,7 +15,8 @@ IUSE=""
 
 DEPEND="media-libs/libdvdread
 	>=media-gfx/imagemagick-5.5.7.14
-	>=dev-libs/libxml2-2.5.0"
+	>=dev-libs/libxml2-2.5.0
+	media-libs/libpng"
 
 src_unpack() {
 	unpack ${A}
