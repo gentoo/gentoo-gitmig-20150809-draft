@@ -1,6 +1,11 @@
 # ChangeLog for media-gfx/gthumb
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.21 2003/08/18 21:19:14 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/ChangeLog,v 1.22 2003/09/01 06:44:52 obz Exp $
+
+*gthumb-2.1.6 (01 Sep 2003)
+
+  01 Sep 2003; Mike Gardiner <obz@gentoo.org> gthumb-2.1.6.ebuild:
+  New version, bug #25729 still affects, keeping omf_fix out for now
 
 *gthumb-2.1.5 (18 Aug 2003)
 
