@@ -1,0 +1,10 @@
+# ChangeLog for net-misc/kickpim
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kickpim/ChangeLog,v 1.1 2004/03/10 21:05:40 centic Exp $
+
+*kickpim-0.5.3 (10 Mar 2004)
+
+  10 Mar 2004; Dominik Stadler <centic@gentoo.org> kickpim-0.5.3.ebuild:
+  Initial ebuild, thanks to Johannes Findeisen <you@hanez.org> and Thilo Bangert
+  <fizzelpark-lists@gmx.net> for the ebuild. Bug 12089.
+
