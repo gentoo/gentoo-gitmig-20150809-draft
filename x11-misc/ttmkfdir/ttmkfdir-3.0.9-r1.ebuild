@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ttmkfdir/ttmkfdir-3.0.9-r1.ebuild,v 1.10 2004/04/22 20:52:34 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ttmkfdir/ttmkfdir-3.0.9-r1.ebuild,v 1.11 2004/04/28 22:21:03 vapier Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic gcc
 
 DESCRIPTION="A utility to create a fonts.scale file from a set of TrueType fonts"
 HOMEPAGE="http://www.joerg-pommnitz.de/TrueType/xfsft.html"
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="amd64 x86 sparc ~ppc ~alpha hppa ia64 ~mips"
+KEYWORDS="x86 ~ppc sparc ~mips ~alpha arm hppa amd64 ia64"
 IUSE=""
 
 RDEPEND="virtual/glibc
@@ -30,12 +30,12 @@ src_unpack() {
 }
 
 src_compile() {
-	filter-flags "-O" "-O1" "-O2" "-O3"
+	filter-flags -O -O1 -O2 -O3
 	emake \
-		CXX="${CXX:=g++}" \
+		CXX="$(gcc-getCXX)" \
 		OPTFLAGS="${CFLAGS}" \
 		DEBUG="" \
-			|| die "emake failed"
+		|| die "emake failed"
 }
 
 src_install() {
@@ -43,4 +43,3 @@ src_install() {
 	doexe ttmkfdir || die "doexe failed"
 	dodoc README
 }
-
