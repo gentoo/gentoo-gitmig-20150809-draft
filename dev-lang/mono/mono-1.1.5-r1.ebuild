@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.5-r1.ebuild,v 1.1 2005/03/31 02:27:56 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/mono/mono-1.1.5-r1.ebuild,v 1.2 2005/03/31 17:46:37 latexer Exp $
 
 inherit eutils mono flag-o-matic
 
@@ -60,10 +60,8 @@ src_unpack() {
 
 src_compile() {
 	strip-flags
-
 	local myconf="--with-preview=yes"
-	# This will be the setup when this hopefully goes into the tree
-	#local myconf="--with-sigaltstack=yes"
+
 	if use nptl && have_NPTL
 	then
 		myconf="${myconf} --with-tls=__thread"
