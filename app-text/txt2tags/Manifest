@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7aaf95d3b481ae5d5fb690e856b5eb5f ChangeLog 1698
+MD5 b8464f0219d56d76a6720776313c40d4 ChangeLog 1849
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 4a132e10c4fdc9776bdadd6c5277a799 txt2tags-2.0.ebuild 2016
-MD5 25360bd74d827ad9b2eb3d418f0010e6 txt2tags-2.1.ebuild 2016
+MD5 949ce4f17f27f9d6443b118198d3c204 txt2tags-2.1.ebuild 2059
 MD5 8b57b59c78e5b69cb59a1521e1398f63 txt2tags-1.7.ebuild 1566
 MD5 734efbcc17f64a55dae3456db95bb2ef files/digest-txt2tags-2.0 61
 MD5 c07466e13acebb2524d2a0820e3c9aba files/digest-txt2tags-2.1 61
@@ -13,7 +13,7 @@ MD5 704c47e007ed4a2e1d9bd9231dbdea25 files/digest-txt2tags-1.7 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBr+moVWNWqTUmv+0RAiZSAKCpXKDC4isnl19kUekhWmxOrxwApQCfTfGg
-KBryRT8QCDo5+MjqxqJBl4s=
-=mUTc
+iD8DBQFBsEopVWNWqTUmv+0RAknpAJ977+hKwXx+dsAsnNMo1R0ZOGBfFACgmS4l
+43BTXZapJXJxeM7rmKhLY2k=
+=vxB1
 -----END PGP SIGNATURE-----
