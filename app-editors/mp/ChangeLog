@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/mp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.13 2004/03/13 22:30:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.14 2004/05/28 21:31:04 kugelfang Exp $
+
+  28 May 2004; Danny van Dyk <kugelfang@gentoo.org> mp-3.2.8.ebuild:
+  Marked ~amd64.
 
   13 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> mp-3.1.9.ebuild,
   mp-3.2.10.ebuild, mp-3.2.11.ebuild, mp-3.2.7.ebuild, mp-3.2.8.ebuild:
