@@ -1,5 +1,5 @@
 #
-# DATABASE VERSION 03B (30/11/2003)
+# DATABASE VERSION 03C (01/01/2004)
 #
 # Insert a regular expression for support of the model or the serie of your hard drive.
 # If you don't know what to put in the second field, put the number
@@ -196,7 +196,8 @@
 "ST360015A"				194  C  "Seagate Barracuda V ST360015A"
 "ST360020A"				194  C  "Seagate U Series 60020"
 "ST360021A"				194  C  "Seagate Barracuda IV ST360021A"
-"ST380011A"				194  C  "Seagate Barracuda 7200.7 80Go"
+"ST380011A"				194  C  "Seagate Barracuda 7200.7 80GB"
+"ST380013AS"				194  C  "Seagate Barracuda 7200.7 80GB (Serial ATA)"
 "ST380020A"				194  C  "Seagate U Series 80020 (80Gb, Ultra ATA/100, 5400 rpm)"
 "ST380021A"				194  C  "Seagate Barracuda IV ST380021A"
 "ST380023A"                             194  C  "Seagate Barracuda V ST380023A"
@@ -223,7 +224,7 @@
 #"TOSHIBA MK4019GAX"			222  C  "Toshiba MK4019GAX"
 "TOSHIBA MK6021GAS"			194  C	"Toshiba MK6021GAS"
 "TOSHIBA MK2018GAS"			226  F  "Toshiba MK2018GAS"
-
+"TOSHIBA MK6022GAX"			194  C	"Toshiba MK6022GAX"
 
 
 
