@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.0.2.ebuild,v 1.2 2004/04/27 20:59:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.0.2.ebuild,v 1.3 2004/04/29 20:35:50 mr_bones_ Exp $
 
 inherit elisp-common libtool python eutils
 
@@ -42,7 +42,7 @@ RDEPEND="python? ( >=dev-lang/python-2.0 )
 		) )
 		>=dev-lang/perl-5.8 )
 	>=net-misc/neon-0.24.4
-	berkdb? ( =sys-libs/db-4* 
+	berkdb? ( =sys-libs/db-4*
 		java? ( virtual/jdk ) )
 	emacs? ( virtual/emacs )"
 
