@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.2 2003/09/07 03:09:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.3 2003/09/12 11:56:04 twp Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -25,7 +25,7 @@ ruby_src_compile() {
 		emake || die "make failed"
 	elif [ -f install.rb ] ; then
 		ruby install.rb config --prefix=/usr \
-			|| die "insall.rb config failed"
+			|| die "install.rb config failed"
 		ruby install.rb setup \
 			|| die "install.rb setup failed"
 	elif [ -f configure ] ; then
