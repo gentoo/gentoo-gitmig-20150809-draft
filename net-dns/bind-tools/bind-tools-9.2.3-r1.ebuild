@@ -1,22 +1,23 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.2.3-r1.ebuild,v 1.3 2004/03/11 02:56:47 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind-tools/bind-tools-9.2.3-r1.ebuild,v 1.4 2004/04/06 03:09:37 vapier Exp $
+
+inherit flag-o-matic
 
 MY_P=${P//-tools}
 MY_P=${MY_P/_}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="bind tools: dig, nslookup, and host"
-SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV/_}/${MY_P}.tar.gz"
 HOMEPAGE="http://www.isc.org/products/BIND/bind9-beta.html"
+SRC_URI="ftp://ftp.isc.org/isc/bind9/${PV/_}/${MY_P}.tar.gz"
 
-KEYWORDS="~x86 ppc ~sparc ~alpha ~hppa ~amd64 ~ia64"
 LICENSE="as-is"
 SLOT="0"
+KEYWORDS="x86 ppc ~sparc ~alpha hppa ~amd64 ~ia64"
 
 DEPEND="virtual/glibc"
 
 src_compile() {
-
 	# Set -fPIC compiler option to enable compilation on 64-bit archs
 	# (Bug #33336)
 	if use alpha || use amd64 || use ia64; then
@@ -40,12 +41,10 @@ src_compile() {
 }
 
 src_install() {
-	cd ${S}/bin/dig
-	dobin dig host nslookup
-	doman dig.1 host.1
-
+	dodoc README CHANGES FAQ COPYRIGHT
 	doman ${FILESDIR}/nslookup.8
 
-	cd ${S}
-	dodoc  README CHANGES FAQ COPYRIGHT
+	cd ${S}/bin/dig
+	dobin dig host nslookup || die
+	doman dig.1 host.1
 }
