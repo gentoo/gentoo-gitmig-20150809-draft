@@ -1,16 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.8 2004/08/09 02:15:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/mozilla.eclass,v 1.9 2004/08/09 15:36:12 agriffis Exp $
 
 ECLASS=mozilla
 INHERITED="$INHERITED $ECLASS"
 
 IUSE="java gnome gtk2 ldap debug xinerama xprint"
 # Internal USE flags that I do not really want to advertise ...
-IUSE="${IUSE} mozsvg moznoxft"
-if [[ ${PN} == mozilla || ${PN} == mozilla-firefox ]]; then
+IUSE="${IUSE} moznoxft"
+[[ ${PN} == mozilla || ${PN} == mozilla-firefox ]] && \
 	IUSE="${IUSE} mozdevelop mozplaintext mozxmlterm"
-fi
+[[ ${PN} == mozilla ]] && \
+	IUSE="${IUSE} mozsvg"
 
 RDEPEND="virtual/x11
 	!moznoxft ( virtual/xft )
@@ -225,19 +226,8 @@ mozilla_conf() {
 	# Some browser-only flags
 	if ${MOZ} || ${FF}; then
 		myconf="${myconf} $(mozilla_use_enable java oji)"
-		# Re-enabled per bug 24522 (28 Apr 2004 agriffis)
-		if use mozsvg; then
-			export MOZ_INTERNAL_LIBART_LGPL=1
-			mozilla_annotate "+mozsvg on ${PN}" \
-				--enable-svg --enable-svg-renderer-libart
-		else
-			mozilla_annotate "-mozsvg" \
-				--disable-svg
-		fi
 	else
-		mozilla_annotate "n/a on ${PN}" \
-			--disable-oji \
-			--disable-svg
+		mozilla_annotate "n/a on ${PN}" --disable-oji
 	fi
 
 	# Some mailer-only flags
@@ -260,8 +250,19 @@ mozilla_conf() {
 		if use moznocompose && use moznomail; then
 			mozilla_annotate "+moznocompose +moznomail" --disable-composer
 		fi
+		# Re-enabled per bug 24522 (28 Apr 2004 agriffis)
+		if use mozsvg; then
+			export MOZ_INTERNAL_LIBART_LGPL=1
+			mozilla_annotate "+mozsvg on ${PN}" \
+				--enable-svg --enable-svg-renderer-libart
+		else
+			mozilla_annotate "-mozsvg" \
+				--disable-svg
+		fi
 	else
-		mozilla_annotate "n/a on ${PN}" --disable-calendar
+		mozilla_annotate "n/a on ${PN}" \
+			--disable-calendar \
+			--disable-svg
 	fi
 
 	# Setup extensions.
