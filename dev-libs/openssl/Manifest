@@ -5,7 +5,7 @@ MD5 8348f8cb6117f6228e58d01f3625c2e2 openssl-0.9.7c-r1.ebuild 7021
 MD5 9eb521df91b2ae08a45484d1986e44e4 openssl-0.9.7c.ebuild 4961
 MD5 a5a3e6682c17e1ee6d679f67d162a15a openssl-0.9.7d.ebuild 7801
 MD5 f486886e3b46bc6502733a497592cac1 openssl-0.9.7d-r1.ebuild 8558
-MD5 348ce79b2739cf40723f004604ab8111 openssl-0.9.7d-r2.ebuild 8888
+MD5 bb8c47ff76464d051ac47a20b50d79bf openssl-0.9.7d-r2.ebuild 8891
 MD5 2e6ed24d513a8f2b1b6f03709ab5ba18 files/digest-openssl-0.9.6m 67
 MD5 897d293325315cdeeb390745ed5cdd1b files/digest-openssl-0.9.7d 134
 MD5 cebd09d1819c07b0fab14ad90b0da884 files/openssl-0.9.6m-gentoo.diff 1591
