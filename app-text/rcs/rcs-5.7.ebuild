@@ -1,13 +1,13 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/rcs-5.7.ebuild,v 1.2 2000/09/15 20:08:47 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rcs/rcs-5.7.ebuild,v 1.3 2000/10/05 00:12:58 achim Exp $
 
-P=rcs-5.7
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="Revision Controll System"
-SRC_URI="ftp://ftp.gnu.org/gnu/rcs/${A}"
+SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/rcs/${A}
+	 ftp://ftp.gnu.org/gnu/rcs/${A}"
 HOMEPAGE="http://www.gnu.org/software/rcs/"
 
 

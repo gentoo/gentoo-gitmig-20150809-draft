@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r1.ebuild,v 1.5 2000/09/15 20:08:47 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r1.ebuild,v 1.6 2000/10/05 00:12:58 achim Exp $
 
 P=tetex-1.0.7
 A="teTeX-src-1.0.7.tar.gz teTeX-texmf-1.0.2.tar.gz"
@@ -30,7 +30,7 @@ src_install() {
   cd ${S}
   dodir /usr/share
   cp -a ../texmf ${D}/usr/share/
-  try make prefix=${D}/usr bindir=${D}/usr/bin texmf=${D}/usr/share/texmf install
+  make prefix=${D}/usr bindir=${D}/usr/bin texmf=${D}/usr/share/texmf install
 
   prepman
   prepinfo
