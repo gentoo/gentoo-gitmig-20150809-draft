@@ -1,6 +1,16 @@
 # ChangeLog for net-www/mplayerplug-in
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.10 2003/10/04 00:36:55 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mplayerplug-in/ChangeLog,v 1.11 2003/10/26 19:22:12 mholzer Exp $
+
+*mplayerplug-in-1.0_pre2 (26 Oct 2003)
+
+  26 Oct 2003; Martin Holzer <mholzer@gentoo.org>
+  mplayerplug-in-1.0_pre2.ebuild:
+  Version bumped. C Closes #32043.
+
+  26 Oct 2003; Martin Holzer <mholzer@gentoo.org> mplayerplug-in-0.80.ebuild,
+  mplayerplug-in-0.91.ebuild, mplayerplug-in-0.95.ebuild:
+  digest update, adding RESTRICT="nomirror"
 
 *mplayerplug-in-0.95 (03 Oct 2003)
 
