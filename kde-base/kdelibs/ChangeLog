@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.184 2005/01/19 13:29:52 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.185 2005/01/23 01:39:48 cryos Exp $
+
+  23 Jan 2005; Marcus D. Hanwell <cryos@gentoo.org>
+  kdelibs-3.4.0_beta1.ebuild:
+  Added some extra logic to create correct symlink for multilib.
 
   19 Jan 2005; Marcus Hanwell <cryos@gentoo.org> kdelibs-3.3.2-r2.ebuild:
   Added some extra logic to create correct symlink for multilib.
