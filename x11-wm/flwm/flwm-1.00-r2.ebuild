@@ -1,7 +1,7 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Michael Conrad Tilstra <tadpol@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/flwm/flwm-1.00-r2.ebuild,v 1.1 2002/01/25 07:51:59 tod Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/flwm/flwm-1.00-r2.ebuild,v 1.2 2002/04/12 20:25:38 seemant Exp $
 
 S=${WORKDIR}/${P}
 
@@ -35,7 +35,6 @@ src_compile() {
 		--host=${CHOST} \ || die "Configuration Failed"
 		
 	emake || die "Parallel Make Failed"
-	
 }
 
 src_install() {
@@ -45,7 +44,6 @@ src_install() {
     
 	into /usr
 	dobin flwm
-
 }
 
 pkg_postinst() {
