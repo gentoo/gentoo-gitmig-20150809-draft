@@ -1,6 +1,12 @@
 # ChangeLog for app-text/docbook-xsl-stylesheets
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/ChangeLog,v 1.13 2003/07/23 17:25:50 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/ChangeLog,v 1.14 2003/09/08 07:07:24 obz Exp $
+
+*docbook-xsl-stylesheets-1.62.0 (08 Sep 2003)
+
+  08 Sep 2003; Mike Gardiner <obz@gentoo.org>
+  docbook-xsl-stylesheets-1.62.0.ebuild:
+  New version, we can probably remove .50 and .52 soon
 
   19 Jun 2003; <msterret@gentoo.org> docbook-xsl-stylesheets-1.60.1.ebuild:
   Be more selective with compression than prepalldocs allows. (bug 23048)
