@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.31 2004/04/26 01:00:34 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.32 2004/04/27 22:05:28 agriffis Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -35,6 +35,8 @@
 #		variable. Note that you cannot specify them by command line
 #		if you are using <sys-apps/portage-2.0.49-r17.
 # PATCHES	Space delimited list of patch files.
+
+inherit eutils
 
 ECLASS=ruby
 INHERITED="${INHERITED} ${ECLASS}"
