@@ -1,0 +1,11 @@
+# ChangeLog for app-editors/jasspa-microemacs
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jasspa-microemacs/ChangeLog,v 1.1 2004/03/14 10:54:29 usata Exp $
+
+*jasspa-microemacs-20021205 (14 Mar 2004)
+
+  14 Mar 2004; Mamoru KOMACHI <usata@gentoo.org>
+  jasspa-microemacs-20021205.ebuild, metadata.xml:
+  Initial import. Ebuild submitted by Randy Roesler <xhl178@shaw.ca>,
+  closing bug #23734
+
