@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/freecdb
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/freecdb/ChangeLog,v 1.8 2004/06/29 16:00:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/freecdb/ChangeLog,v 1.9 2004/10/02 06:14:16 usata Exp $
+
+  02 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> freecdb-0.62.ebuild:
+  Added to ~ppc-macos
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> freecdb-0.62.ebuild:
   sync IUSE (missing)
