@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.0_rc6.ebuild,v 1.1 2002/08/22 19:54:54 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.0_rc6.ebuild,v 1.2 2002/08/22 20:23:15 raker Exp $
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -16,10 +16,18 @@ DEPEND="media-libs/libpng
 	media-libs/jpeg
 	opengl? ( virtual/opengl )"
 
+src_unpack() {
+
+	unpack ${A}
+	cd ${S}
+	patch -p1 < ${FILESDIR}/libs.diff || die "patch failed"
+
+}
+
 src_compile() {
 
 	local myconf
-	myconf="--enable-shared --enable-threads"
+	myconf="--enable-shared --enable-static --enable-threads"
 
 	use opengl || myconf="${myconf} --disable-gl"
 
@@ -42,6 +50,8 @@ src_install () {
 		includedir=${D}/usr/include/${PN}-1.1 \
 		libdir=${D}/usr/lib/fltk-1.1 || die "Installation Failed"
 		
+	ranlib ${D}/usr/lib/fltk-1.1/*.a
+
 	dodoc CHANGES COPYING README
 	
 	echo "LDPATH=/usr/lib/fltk-1.1" > 99fltk-1.1
