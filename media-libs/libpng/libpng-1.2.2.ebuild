@@ -12,6 +12,9 @@ SLOT="1.2"
 DEPEND=">=sys-libs/zlib-1.1.4"
 
 src_compile() {
+	
+	libtoolize --copy --force
+
 	sed -e "s:ZLIBLIB=../zlib:ZLIBLIB=/usr/lib:"	\
 		-e "s:ZLIBINC=../zlib:ZLIBINC=/usr/include:"	\
 		-e "s:prefix=/usr:prefix=${D}/usr:" -e "s/-O3/${CFLAGS}/"	\
@@ -25,6 +28,10 @@ src_install() {
 	make 	\
 		prefix=${D}/usr	\
 		install || die
+	
+	rm ${D}/usr/include/libpng ${D}/usr/lib/libpng.a
+	dosym /usr/include/libpng12 /usr/include/libpng
+	dosym /usr/lib/libpng.a /usr/lib/libpng12.a
 
 	doman *.[35]
 	dodoc ANNOUNCE CHANGES KNOWNBUG LICENSE README TODO Y2KINFO

@@ -6,7 +6,10 @@
 
   16 Apr 2002; Seemant Kulleen <seemant@gentoo.org>
 
-  Quick version update (new version fixes many bugs; whatever)
+  Quick version update (new version fixes many bugs; whatever).  Kaali in 
+  #gentoo is to be thanked for finding the two bogus symlinks that the make
+  install process installs.  Those are fixed with the two dosym operations
+  in src_install()
 
 *libpng-1.0.12-r1 and libpng-1.2.1-r1 (13 April 2002)
 
