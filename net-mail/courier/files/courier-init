@@ -9,7 +9,7 @@ prefix="/usr"
 exec_prefix="/usr/bin"
 sysconfdir="/etc/courier"
 sbindir="/usr/sbin"
-libexecdir="/usr/libcourier"
+libexecdir="/usr/lib/courier"
 datadir="/usr/share/courier"
 #authlib="/usr/lib/courier/authlib"
 

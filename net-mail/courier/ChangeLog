@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/courier
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/ChangeLog,v 1.27 2003/07/24 18:02:55 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/ChangeLog,v 1.28 2003/07/25 03:24:22 iggy Exp $
+
+  24 Jul 2003; <iggy@gentoo.org> files/courier-init:
+  fixed courier init script
 
   24 Jul 2003; <iggy@gentoo.org> courier-0.42.2-r2.ebuild:
   added !virtual/imapd to RDEPEND closes bug 25027
