@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/speedtouch
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/ChangeLog,v 1.7 2003/07/28 15:59:10 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/ChangeLog,v 1.8 2003/08/08 16:20:18 zhen Exp $
+
+  08 Aug 2003; <zhen@gentoo.org> :
+  1.2_beta1 did not compile due to $S not being set to ${WORKDIR}/${MY_P}. So I
+  fixed that, added an IUSE var, and added brackets around the 'use static' in
+  src_compile(). This closes bug 26066.
 
 *speedtouch-1.2_beta1 (25 May 2003)
 
