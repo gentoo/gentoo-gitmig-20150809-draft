@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Locale-PO
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-PO/ChangeLog,v 1.9 2004/10/19 11:05:39 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-PO/ChangeLog,v 1.10 2004/12/23 16:47:22 nigoro Exp $
+
+  24 Dec 2004; Yuta SATOH <nigoro@gentoo.org> Locale-PO-0.12.ebuild:
+  added ~ppc64
 
 *Locale-PO-0.12 (19 Oct 2004)
 
