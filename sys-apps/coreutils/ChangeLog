@@ -1,6 +1,17 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.3 2003/03/11 05:10:15 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.4 2003/03/11 07:42:58 azarah Exp $
+
+  11 Mar 2003; Martin Schlemmer <azarah@gentoo.org> coreutils-4.5.9.ebuild :
+  OK, I am dense.  Seems when I did previous fix, I changed the:
+
+    rm ${D}/usr/share/man/man1/su
+
+  to:
+
+    rm ${D}/usr/share/man/man1/su*
+
+  Fixed this to fix the sum problem.
 
   11 Mar 2003; Martin Schlemmer <azarah@gentoo.org> coreutils-4.5.9.ebuild :
   Move symlink stuff till after we remove stuff we do not use, else we have

@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-4.5.9.ebuild,v 1.3 2003/03/11 05:10:15 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-4.5.9.ebuild,v 1.4 2003/03/11 07:42:58 azarah Exp $
 
 inherit eutils
 
 IUSE="nls build"
 
-S=${WORKDIR}/${P}
+S="${WORKDIR}/${P}"
 DESCRIPTION="Standard GNU file utilities (chmod, cp, dd, dir, ls...), text utilities (sort, tr, head, wc..), and shell utilities (whoami, who,...)"
 HOMEPAGE="http://www.gnu.org/software/coreutils/"
 SRC_URI="ftp://alpha.gnu.org/gnu/coreutils/${P}.tar.bz2"
@@ -54,23 +54,16 @@ src_install() {
 	einstall \
 		bindir=${D}/bin || die
 
-	# Do manpages manually, as else it do not install them all
-	rm -rf ${D}/usr/share/man
-	for x in ${S}/man/*.1
-	do
-		[ -f "${x}" ] && doman ${x}
-	done
-	
-    # hostname comes from net-base
-    # hostname does not work with the -f switch, which breaks gnome2
-    #   amongst other things
-    rm -f ${D}/usr/bin/hostname
+	# hostname comes from net-base
+	# hostname does not work with the -f switch, which breaks gnome2
+	#   amongst other things
+	rm -f ${D}/usr/bin/hostname
 
-    # /bin/su comes from sys-apps/shadow
-    rm -f ${D}/bin/su ${D}/usr/share/man/man1/su*
+	# /bin/su comes from sys-apps/shadow
+	rm -f ${D}/bin/su ${D}/usr/share/man/man1/su.*
 
-    # /usr/bin/uptime comes from the sys-apps/procps packaga
-    rm -f ${D}/usr/bin/uptime ${D}/usr/share/man/man1/uptime*
+	# /usr/bin/uptime comes from the sys-apps/procps packaga
+	rm -f ${D}/usr/bin/uptime ${D}/usr/share/man/man1/uptime*
 
 	cd ${D}
 	dodir /usr/bin
