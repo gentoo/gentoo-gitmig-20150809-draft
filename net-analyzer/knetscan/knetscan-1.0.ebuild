@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/knetscan/knetscan-1.0.ebuild,v 1.7 2004/07/06 12:48:54 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/knetscan/knetscan-1.0.ebuild,v 1.8 2004/07/10 12:08:43 eldad Exp $
 
 inherit kde
 
@@ -17,5 +17,6 @@ DEPEND=">=net-analyzer/nmap-2.54_beta36
 	>=net-analyzer/traceroute-1.4_p12
 	>=net-misc/whois-4.5.28-r1
 	>=sys-apps/netkit-base-0.17-r5"
-RDEPEND=${DEPEND}
+
 need-kde 3
+
