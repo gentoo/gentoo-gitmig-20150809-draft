@@ -1,5 +1,14 @@
---- kdevelop-3.1.0/bdb/include/mutex.h.old	2004-08-29 04:59:55.583591176 +0200
-+++ kdevelop-3.1.0/bdb/include/mutex.h	2004-08-29 05:00:01.196737848 +0200
+--- bdb/include/mutex.h.orig	2004-10-14 12:44:23.000000000 +0200
++++ bdb/include/mutex.h	2004-10-14 12:46:02.000000000 +0200
+@@ -486,7 +486,7 @@
+ 	int __one = 1;			\
+ 	int __r;			\
+ 	tsl_t *__l = (tsl);		\
+-	asm volatile ("			\
++	__asm volatile ("			\
+ 0:					\
+ 	lwarx %0,0,%1;			\
+ 	cmpwi %0,0;			\
 @@ -621,7 +621,7 @@
  #define  MUTEX_SET(tsl) ({           \
  	register tsl_t *__l = (tsl);          \

@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.69 2004/10/14 14:49:56 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.70 2004/10/20 21:24:44 carlo Exp $
+
+  20 Oct 2004; Carsten Lohrke <carlo@gentoo.org>
+  files/kdevelop-3.1.0-bdb-mutex.patch:
+  missing ppc in mutex.h patch
 
 *kdevelop-3.1.1 (14 Oct 2004)
 
