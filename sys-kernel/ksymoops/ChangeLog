@@ -1,0 +1,11 @@
+# ChangeLog for sys-kernel/ksymoops
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ksymoops/ChangeLog,v 1.1 2002/04/30 22:48:10 seemant Exp $
+
+*ksymoops-2.4.5 (30 Apr 2002)
+  
+  30 Apr 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog
+  files/digest-ksymoops-2.4.5 :
+
+  Daniel Robbins added this package. I am simply enhancing the directory
+  by adding the digest file and ChangeLog
