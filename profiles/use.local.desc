@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.859 2005/01/12 17:37:51 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.860 2005/01/13 15:02:21 ticho Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -559,6 +559,7 @@ net-mail/cyrus-imapd:drac - Enable dynamic relay support in the cyrus imap serve
 net-mail/cyrus-imapd:idled - Enable idled vs poll IMAP IDLE method
 net-mail/dovecot:nopop3d - Do not build pop3d support
 net-mail/dovecot:vpopmail - Add vpopmail support
+net-mail/hotwayd:smtp - Build SMTP proxy (hotsmtpd)
 net-mail/poppassd_ceti:cracklib - Support for cracklib strong password checking
 net-mail/qpopper:mailbox - Enables mail spool file is in home directory ~/Mailbox
 net-mail/qpopper:xinetd - If you want inetd version instead of standalone
