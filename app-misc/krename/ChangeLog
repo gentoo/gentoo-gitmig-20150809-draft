@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/krename
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/krename/ChangeLog,v 1.18 2003/10/23 17:19:08 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/krename/ChangeLog,v 1.19 2003/12/04 20:11:07 caleb Exp $
+
+*krename-2.8.4 (04 Dec 2003)
+
+  04 Dec 2003; Caleb tennis <caleb@gentoo.org> krename-2.8.4.ebuild:
+  New version
 
   23 Oct 2003; Caleb Tennis <caleb@gentoo.org> krename-2.5.5.ebuild, metadata.xml:
   New version, remove old version, change metadata.xml to kde-other.
