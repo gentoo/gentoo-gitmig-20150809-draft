@@ -1,0 +1,10 @@
+# Should be either i82365 or tcic
+PCIC=i82365
+# Put socket driver timing parameters here
+PCIC_OPTS=
+# Put pcmcia_core options here
+CORE_OPTS=
+# Put cardmgr options here
+CARDMGR_OPTS=
+# To set the PCMCIA scheme at startup...
+SCHEME=
