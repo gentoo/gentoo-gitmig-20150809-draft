@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/ruby
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.33 2003/08/16 09:39:24 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ChangeLog,v 1.34 2003/10/11 20:32:39 usata Exp $
+
+*ruby-1.8.0-r1 (12 Oct 2003)
+
+  12 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> ruby-1.6.8-r2.ebuild,
+  ruby-1.8.0-r1.ebuild:
+  Added SLOT support and ruby18 local IUSE flag to ruby-1.6.8-r2.
 
   16 Aug 2003; Tom Payne <twp@gentoo.org> ruby-1.8.0.ebuild :
   Added all ~ARCHs to KEYWORDS. Bug # 26570.
