@@ -1,18 +1,18 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/vdkbuilder-2.0.2.ebuild,v 1.11 2003/09/06 20:28:41 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/vdkbuilder/vdkbuilder-2.0.2.ebuild,v 1.12 2004/03/04 16:00:20 seemant Exp $
 
 IUSE="nls gnome"
 
 MY_P=${P/builder/}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="A RAD Application Development tool based on VDK (The Visual Development Kit)."
-SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 HOMEPAGE="http://vdkbuilder.sf.net"
+SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc"
 
 DEPEND="dev-libs/atk
 	x11-libs/pango
@@ -24,15 +24,14 @@ DEPEND="dev-libs/atk
 
 src_compile() {
 	local myconf
-	use nls \
-		&& myconf="${myconf} --enable-nls" \
-		|| myconf="${myconf} --disable-nls"
 
 	use gnome \
 		&& myconf="${myconf} --enable-gnome=yes" \
 		|| myconf="${myconf} --enable-gnome=no"
 
-	econf ${myconf} || die "econf failed"
+	econf \
+		`use_enable nls` \
+		${myconf} || die "econf failed"
 	emake || die
 }
 
