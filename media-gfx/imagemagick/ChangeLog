@@ -1,9 +1,11 @@
 # ChangeLog for media-gfx/imagemagick
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.18 2002/09/24 22:32:54 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/ChangeLog,v 1.19 2002/10/17 13:26:55 mcummings Exp $
 
 *imagemagick-5.4.7-r2 (24 Sep 2002)
   
+  17 Oct 2002; <mcummings@gentoo.org> : added sparc64 to keywords
+
   24 Sep 2002; <mcummings@gentoo.org> : addresses bug 8299
   
 *imagemagick-5.4.7-r1 (15 Sep 2002)
