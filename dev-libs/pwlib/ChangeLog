@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.55 2004/08/13 22:24:10 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.56 2004/08/14 21:14:01 stkn Exp $
+
+  14 Aug 2004; <stkn@gentoo.org> pwlib-1.5.0-r1.ebuild:
+  fixed wrong patch suffix in ebuild (#60345)
 
   14 Aug 2004; Danny van Dyk <kugelfang@gentoo.org> pwlib-1.6.6.ebuild:
   Marked ~amd64.

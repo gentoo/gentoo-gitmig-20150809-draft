@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.5.0-r1.ebuild,v 1.4 2004/07/14 15:05:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.5.0-r1.ebuild,v 1.5 2004/08/14 21:14:01 stkn Exp $
 
 inherit eutils
 
@@ -33,7 +33,7 @@ src_unpack() {
 		-e "s:-O3 -DNDEBUG:-DNDEBUG:" \
 		unix.mak
 	cd ${S}
-	epatch ${FILESDIR}/pwlib-1.5.0-r1-gentoo.patch || die "patch failed"
+	epatch ${FILESDIR}/pwlib-1.5.0-r1-gentoo.diff || die "patch failed"
 }
 
 src_compile() {
