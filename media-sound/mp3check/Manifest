@@ -1,4 +1,14 @@
-MD5 87dde50130e0f7fb5e3369f6ac91aa54 ChangeLog 492
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 f1cfc89f98e17b43200a367631e4dacc mp3check-0.8.0.ebuild 675
+MD5 ff4bc092dd65afb674f4f743a862c42d ChangeLog 566
 MD5 0e4355f7afa9cfc73b2c06420a9923b5 files/digest-mp3check-0.8.0 66
 MD5 738499728009660d6d5d4f50515c6ff7 files/mp3check-0.8.0-gcc34.diff 2675
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBTLATI1lqEGTUzyQRAjINAKC+2H242IMBYOyqGFJbeR3SdXUdoACgmHwN
+wOhmN9ZlwWYILdgjJylpR9k=
+=Bq8G
+-----END PGP SIGNATURE-----
