@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.22 2004/03/09 23:30:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.23 2004/04/21 11:58:22 aliz Exp $
+
+  21 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> iptables-1.2.7a-r3.ebuild,
+  iptables-1.2.7a-r4.ebuild, iptables-1.2.8.ebuild:
+  Added IUSE=
 
   09 Mar 2004; <agriffis@gentoo.org> iptables-1.2.9.ebuild:
   stable on alpha and ia64

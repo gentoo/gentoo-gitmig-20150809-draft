@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.7a-r3.ebuild,v 1.4 2004/02/22 22:41:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/iptables-1.2.7a-r3.ebuild,v 1.5 2004/04/21 11:58:22 aliz Exp $
 
 inherit eutils
 
 DESCRIPTION="Kernel 2.4 firewall, NAT and packet mangling tools"
 HOMEPAGE="http://www.iptables.org/"
 SRC_URI="http://www.iptables.org/files/${P}.tar.bz2"
-
+IUSE=""
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc alpha sparc hppa mips"
