@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.2.20020511-r1.ebuild,v 1.3 2002/06/27 03:19:26 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.2.20020511-r1.ebuild,v 1.4 2002/07/09 12:51:11 aliz Exp $
 
 MY_PV=${PV%.*}
 
@@ -17,6 +17,7 @@ DEPEND="virtual/glibc sys-apps/bzip2"
 RDEPEND="virtual/glibc"
 LICENSE="MIT"
 SLOT="5"
+KEYWORDS="x86"
 
 src_unpack() {
 	unpack ${PN}-${MY_PV}.tar.gz ; cd ${S}

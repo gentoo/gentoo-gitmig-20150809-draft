@@ -2,13 +2,15 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.61-r3.ebuild,v 1.8 2002/07/07 13:00:35 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.61-r3.ebuild,v 1.9 2002/07/09 12:51:12 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Password database"
 SRC_URI="ftp://gentoolinux.sourceforge.net/pub/gentoolinux/current/distfiles/${P}.tar.gz"
 DEPEND="virtual/glibc"
 LICENSE="PWDB"
+KEYWORDS="x86"
+SLOT="0"
 
 src_unpack () {
 	mkdir ${S}

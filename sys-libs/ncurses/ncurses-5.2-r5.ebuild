@@ -2,13 +2,16 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.2-r5.ebuild,v 1.2 2002/03/26 23:51:09 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.2-r5.ebuild,v 1.3 2002/07/09 12:51:11 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Linux console display libarary"
 SRC_URI="ftp://ftp.gnu.org/pub/gnu/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/ncurses/ncurses.html"
 DEPEND="virtual/glibc"
+KEYWORDS="x86"
+LICENSE="MIT"
+SLOT="5"
 
 src_compile() {
 	if [ -z "$DEBUG" ]

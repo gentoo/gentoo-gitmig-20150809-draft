@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: System Team <system@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.3h-r4.ebuild,v 1.8 2002/07/07 13:00:35 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-3.2.3h-r4.ebuild,v 1.9 2002/07/09 12:51:08 aliz Exp $
 
 S=${WORKDIR}/${P}/build_unix
 DESCRIPTION="Berkeley DB for transaction support in MySQL"
@@ -12,6 +12,7 @@ SLOT="3"
 RDEPEND="virtual/glibc"
 DEPEND="$RDEPEND =sys-libs/db-1.85-r1"
 LICENSE="DB"
+KEYWORDS="x86"
 
 src_compile() {
 	../dist/configure --host=${CHOST} --enable-compat185 --enable-dump185 --prefix=/usr --enable-shared --enable-static --enable-cxx || die

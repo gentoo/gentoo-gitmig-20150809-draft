@@ -1,11 +1,13 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.1.3-r3.ebuild,v 1.1 2002/03/05 04:05:21 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.1.3-r3.ebuild,v 1.2 2002/07/09 12:51:14 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Standard (de)compression library"
 SRC_URI="ftp://ftp.freesoftware.com/pub/infozip/zlib/${P}.tar.gz"
+KEYWORDS="x86"
+SLOT="0"
 
 DEPEND="virtual/glibc"
 
