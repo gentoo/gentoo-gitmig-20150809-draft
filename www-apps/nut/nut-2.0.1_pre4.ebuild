@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nut/nut-2.0.1_pre4.ebuild,v 1.1 2005/02/17 19:17:33 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nut/nut-2.0.1_pre4.ebuild,v 1.2 2005/02/18 17:39:47 mr_bones_ Exp $
 
 inherit fixheadtails
 
@@ -24,7 +24,7 @@ DEPEND="$RDEPEND
 		>=sys-devel/autoconf-2.58"
 
 src_unpack() {
-	unpack ${A} 
+	unpack ${A}
 
 	cd "${S}"
 
