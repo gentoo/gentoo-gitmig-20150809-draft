@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/kcpuload
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kcpuload/ChangeLog,v 1.8 2004/06/24 22:18:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kcpuload/ChangeLog,v 1.9 2004/07/04 09:53:53 kugelfang Exp $
+
+  04 Jul 2004; Danny van Dyk <kugelfang@gentoo.org> kcpuload-1.99.ebuild:
+  Marked ~amd64.
 
   18 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> kcpuload-1.9.1.ebuild,
   kcpuload-1.99.ebuild:

@@ -1,5 +1,5 @@
-MD5 42394ecf567ed60bf07a887a14a2cc68 kcpuload-1.99.ebuild 456
-MD5 f4d8cbe9c2f44480c92fbb8ffdeb376f ChangeLog 1278
+MD5 0ca173c0307b006f074119d753081bd3 ChangeLog 1371
 MD5 785d22e067b6258b71ba7986736fe26d kcpuload-1.9.1.ebuild 501
+MD5 6331385c28e4036370c7d9bdb49385c2 kcpuload-1.99.ebuild 465
 MD5 1832135d88cd144698b7fedf097857f5 files/digest-kcpuload-1.9.1 66
 MD5 1b8a8e2d12f8eb9e581a305b134f596f files/digest-kcpuload-1.99 66
