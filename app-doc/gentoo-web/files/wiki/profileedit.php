@@ -24,8 +24,10 @@ $dude = mysql_query( "select * from users where uid=$uid" );
 $dude = mysql_fetch_array( $dude );
 
 // are we leader?
-$result = mysql_query( 'select leader from teams where gid='.$dude['team'] );
-list( $leader ) = mysql_fetch_row( $result );
+if ( isset($dude['team']) ) { // prevent errors if dude's team wasn't set for some reason
+	$result = mysql_query( 'select leader from teams where gid='.$dude['team'] );
+	list( $leader ) = mysql_fetch_row( $result );
+}
 if ( $leader == $uid ) $leader='Yes'; else $leader='No';
 ?>
 
