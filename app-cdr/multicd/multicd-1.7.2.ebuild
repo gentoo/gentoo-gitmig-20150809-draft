@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/multicd/multicd-1.7.2.ebuild,v 1.1 2003/10/09 16:15:10 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/multicd/multicd-1.7.2.ebuild,v 1.2 2003/10/09 16:15:35 mholzer Exp $
 
-DESCRIPTION="Tool for making direct copies of your files to multiple cd's" 
+DESCRIPTION="Tool for making direct copies of your files to multiple cd's"
 HOMEPAGE="http://danborn.net/multicd/"
 SRC_URI="http://danborn.net/multicd/${P}.tar.gz"
 LICENSE="GPL-2"
