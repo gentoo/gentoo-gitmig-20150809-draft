@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/xfsdump-2.2.16.ebuild,v 1.7 2004/06/24 22:54:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/xfsdump/xfsdump-2.2.16.ebuild,v 1.8 2004/06/28 01:55:57 agriffis Exp $
 
 DESCRIPTION="xfs dump/restore utilities"
 HOMEPAGE="http://oss.sgi.com/projects/xfs"
@@ -29,7 +29,7 @@ src_unpack() {
 src_compile() {
 	export OPTIMIZER="${CFLAGS}"
 	export DEBUG=-DNDEBUG
-	[ `use sparc` ] && unset PLATFORM
+	use sparc && unset PLATFORM
 
 	econf \
 		--libdir=/lib \

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/raidtools/raidtools-1.00.3-r1.ebuild,v 1.7 2004/06/24 22:53:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/raidtools/raidtools-1.00.3-r1.ebuild,v 1.8 2004/06/28 01:54:24 agriffis Exp $
 
 inherit flag-o-matic eutils
 
@@ -33,7 +33,7 @@ src_install() {
 	make install ROOTDIR=${D} || die
 	rm -rf ${D}/dev
 
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		doman *.8 *.5
 		dodoc README *raidtab raidreconf-HOWTO reconf.notes retry summary

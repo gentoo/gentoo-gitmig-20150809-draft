@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/raidtools/raidtools-0.90-r2.ebuild,v 1.3 2004/06/24 22:53:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/raidtools/raidtools-0.90-r2.ebuild,v 1.4 2004/06/28 01:54:24 agriffis Exp $
 
 S=${WORKDIR}/raidtools-0.90
 DESCRIPTION="Linux RAID 0/1/4/5 utilities"
@@ -28,7 +28,7 @@ src_install() {
 	done
 	dosym mkraid /sbin/raid0run
 
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		doman *.8 *.5
 		dodoc COPYING README

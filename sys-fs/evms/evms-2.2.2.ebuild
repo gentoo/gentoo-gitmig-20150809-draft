@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.2.2.ebuild,v 1.6 2004/06/24 22:51:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/evms-2.2.2.ebuild,v 1.7 2004/06/28 01:53:12 agriffis Exp $
 
 IUSE="ncurses gtk"
 
@@ -54,7 +54,7 @@ src_install() {
 	done
 
 	# the gtk+ frontend should live in /usr/sbin
-	if [ -n "`use gtk`" ]
+	if use gtk
 	then
 		dodir /usr/sbin
 		mv -f ${D}/sbin/evmsgui ${D}/usr/sbin
