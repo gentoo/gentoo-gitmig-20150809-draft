@@ -1,0 +1,22 @@
+diff -u xmlutils.orig/phtml.cl xmlutils/phtml.cl
+--- xmlutils.orig/phtml.cl	2003-04-01 00:41:00.000000000 -0600
++++ xmlutils/phtml.cl	2003-06-09 19:25:13.000000000 -0500
+@@ -1,8 +1,3 @@
+-(sys:defpatch "phtml" 1
+-  "parse-html close tag closes consecutive identical open tags."
+-  :type :system
+-  :post-loadable t)
+-
+ ;; copyright (c) 1986-2000 Franz Inc, Berkeley, CA 
+ ;;
+ ;; This code is free software; you can redistribute it and/or
+@@ -48,7 +43,7 @@
+ ;
+ 
+ (defpackage net.html.parser
+-  (:use :lisp :clos :excl)
++  (:use :lisp :excl)
+   (:export
+    #:phtml-internal
+    #:parse-html))
+Only in xmlutils: phtml.cl~

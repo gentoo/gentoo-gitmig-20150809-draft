@@ -1,0 +1,8 @@
+# ChangeLog for dev-lisp/cl-ppcre
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-ppcre/ChangeLog,v 1.1 2003/06/10 04:53:04 mkennedy Exp $
+
+*cl-pprce-0.5.4b (07 Jul 2003)
+
+  07 Jul 2003; Matthew Kennedy <mkennedy@gentoo.org> :
+  initial import

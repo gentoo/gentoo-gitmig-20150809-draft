@@ -1,0 +1,8 @@
+# ChangeLog for dev-lisp/cl-lexer
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-lexer/ChangeLog,v 1.1 2003/06/10 04:53:04 mkennedy Exp $
+
+*cl-lexer-1 (07 Jul 2003)
+
+  07 Jul 2003; Matthew Kennedy <mkennedy@gentoo.org> :
+  initial import

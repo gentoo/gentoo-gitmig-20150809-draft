@@ -1,0 +1,7 @@
+MD5 21d80cfb55555c6607055eeb08398b49 ChangeLog 328
+MD5 df6f295e041610543d560d37ad7ad7b6 cl-inflate-1.1.4.2.1.ebuild 688
+MD5 31ae8e06325055aff076689f49ef9362 cl-inflate-1.1.4.2.1.ebuild~ 726
+MD5 dabe9c1f1b838b61486b278782b02463 files/rt.asd 1097
+MD5 b11fa2ad08c93fcf48f585ceed4e8885 files/digest-cl-rt-20030428a 70
+MD5 e66525b63d8bb2a9720c9aff2731f7c8 files/inflate.asd 1236
+MD5 a2edf99d5162f55b35de68f81c3822e8 files/digest-cl-inflate-1.1.4.2.1 75

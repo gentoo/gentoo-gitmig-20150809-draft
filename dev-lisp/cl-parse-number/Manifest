@@ -1,0 +1,7 @@
+MD5 c2c3ae7ac6f4f5bea415b6f5946181a2 ChangeLog 332
+MD5 692cc2e21d5e72aed974f4c890123886 cl-parse-number-1.0.ebuild 736
+MD5 e290aa9540cabbe9b5a89dd298083758 files/png.asd 384
+MD5 9cc53124d98aa4b18abfb63e43635efe files/digest-cl-png-0.2 58
+MD5 c7b550097b3f46b519c05d3a7ca315ca files/parse-number.asd 96
+MD5 53cb5e0a4243e4d22360d7b497ed812d files/parse-number.asd~ 95
+MD5 2ba56f942aafd98fade34ce2bf682811 files/digest-cl-parse-number-1.0 74
