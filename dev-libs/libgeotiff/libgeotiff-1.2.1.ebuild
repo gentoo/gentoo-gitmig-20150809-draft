@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgeotiff/libgeotiff-1.2.1.ebuild,v 1.4 2003/10/08 23:21:06 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgeotiff/libgeotiff-1.2.1.ebuild,v 1.5 2003/11/24 18:00:48 rphillips Exp $
 
 inherit base eutils
 
@@ -13,7 +13,7 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND="virtual/glibc
-	>=media-libs/tiff-3.3.4
+	>=media-libs/tiff-3.6.0
 	dev-libs/proj"
 
 src_unpack() {
