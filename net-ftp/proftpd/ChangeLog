@@ -1,6 +1,13 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.82 2004/11/30 12:16:11 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.83 2004/12/06 19:29:06 humpback Exp $
+
+*proftpd-1.2.10-r2 (06 Dec 2004)
+
+  06 Dec 2004; Gustavo Felisberto <humpback@gentoo.org>;
+  +proftpd-1.2.10-r2.ebuild, -proftpd-1.2.7.ebuild, -proftpd-1.2.8.ebuild:
+  Removed older versions and added a new release that uses the sendfile()
+  function. Use with care.
 
   30 Nov 2004; Guy Martin <gmsoft@gentoo.org> proftpd-1.2.10-r1.ebuild:
   Stable on hppa.
