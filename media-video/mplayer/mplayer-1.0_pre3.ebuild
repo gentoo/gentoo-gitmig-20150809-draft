@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre3.ebuild,v 1.4 2003/12/14 12:46:45 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre3.ebuild,v 1.5 2003/12/18 00:12:57 seemant Exp $
 
 IUSE="dga oss xmms jpeg 3dfx sse matrox sdl X svga ggi oggvorbis 3dnow aalib gnome xv opengl truetype dvd gtk gif esd fbcon encode alsa directfb arts dvb gtk2 samba lirc matroska debug joystick"
 
@@ -14,6 +14,7 @@ inherit eutils
 MY_PV="${PV/_/}"
 S="${WORKDIR}/MPlayer-${MY_PV}"
 SRC_URI="http://mplayerhq.hu/MPlayer/releases/MPlayer-${MY_PV}.tar.bz2
+	http://dev.gentoo.org/~seemant/extras/MPlayer-${MY_PV}.tar.bz2
 	http://mplayerhq.hu/MPlayer/releases/fonts/font-arial-iso-8859-1.tar.bz2
 	http://mplayerhq.hu/MPlayer/releases/fonts/font-arial-iso-8859-2.tar.bz2
 	svga? ( http://mplayerhq.hu/~alex/svgalib_helper-1.9.17-mplayer.tar.bz2 )
