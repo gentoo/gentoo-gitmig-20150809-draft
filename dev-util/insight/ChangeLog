@@ -1,6 +1,12 @@
 # ChangeLog for dev-utils/insight
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/ChangeLog,v 1.1 2002/03/03 18:19:07 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/ChangeLog,v 1.2 2002/09/01 19:39:23 agenkin Exp $
+
+*insight-5.2.1; (1 Sep 2002)
+
+  1 Sep 2002; Arcady Genkin <agenkin@thpoon.com> insight-5.2.1.ebuild :
+
+  Updated version of the ebuild by Olivier Crete <tester@videotron.ca>.
 
 *insight-5.1.1; (15 Feb 2002)
 
