@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-1.7.9-r3.ebuild,v 1.9 2004/07/14 01:07:38 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-1.7.9-r3.ebuild,v 1.10 2004/10/05 14:00:39 pvdabeel Exp $
 
 inherit gcc eutils gnuconfig
 
@@ -19,7 +19,7 @@ SRC_URI="
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="x86 ~alpha ~hppa ~mips sparc ~ppc ~amd64"
+KEYWORDS="x86 ~alpha ~hppa ~mips sparc ppc ~amd64"
 IUSE=""
 
 DEPEND=">=dev-db/mysql-3.23.49"
