@@ -1,0 +1,18 @@
+--- MPlayer-0.90pre5/vidix/drivers/Makefile.orig	Mon Jun 10 11:48:02 2002
++++ MPlayer-0.90pre5/vidix/drivers/Makefile	Mon Jun 10 11:48:54 2002
+@@ -120,11 +120,11 @@
+ # do nothing here
+ 
+ install:
+-	mkdir -p $(BINDIR)
+-	install -m 755 -s -p *.so $(BINDIR)
++	mkdir -p $(prefix)/lib/mplayer/vidix
++	install -m 755 -s -p *.so $(prefix)/lib/mplayer/vidix
+ uninstall:
+-	rm -f $(BINDIR)/*.so
+-	rmdir -p --ignore-fail-on-non-empty $(BINDIR)
++	rm -f $(prefix)/lib/mplayer/vidix/*.so
++	rmdir -p --ignore-fail-on-non-empty $(prefix)/lib/mplayer/vidix
+ 
+ #
+ # include dependency files if they exist

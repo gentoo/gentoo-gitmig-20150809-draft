@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.21 2002/05/21 21:09:47 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.22 2002/06/10 12:06:57 azarah Exp $
+
+*mplayer-0.90_pre5 (10 Jun 2002)
+
+  10 Jun 2002; Martin Schlemmer <azarah@gentoo.org> mplayer-0.90_pre5 :
+
+  Version update with a few fixes (vidix install location, #include errors,
+  etc).
 
 *mplayer-0.90_pre4 (21 May 2002)
 
