@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.13.ebuild,v 1.13 2003/03/11 21:11:46 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.13.ebuild,v 1.14 2003/03/13 22:42:19 gmsoft Exp $
 
 inherit gcc
 
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.inet.no/pub/socks/${P}.tar.gz"
 HOMEPAGE="http://www.inet.no/dante/"
 
 LICENSE="BSD"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha hppa"
 SLOT="0"
 IUSE="tcpd"
 
