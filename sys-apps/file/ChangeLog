@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/file
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.71 2004/12/07 16:31:18 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.72 2004/12/07 21:14:03 dragonheart Exp $
+
+  08 Dec 2004; Daniel Black <dragonheart@gentoo.org> file-4.12.ebuild:
+  ppc stable as per bug #72521
 
   07 Dec 2004; Olivier Crete <tester@gentoo.org> file-4.12.ebuild:
   Stable on x86 wrt bug 72521
