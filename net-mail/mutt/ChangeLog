@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/mutt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.36 2003/10/02 17:52:34 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.37 2003/11/20 00:10:45 gregf Exp $
+
+*mutt-1.5.5.1 (19 Nov 2003)
+
+  19 Nov 2003; Greg Fitzgerald <gregf@gentoo.org> mutt-1.5.5.1.ebuild:
+  Version bump.
 
   02 Oct 2003; Brad House <brad_mssw@gentoo.org> mutt-1.5.4.ebuild:
   add ~amd64 flag
