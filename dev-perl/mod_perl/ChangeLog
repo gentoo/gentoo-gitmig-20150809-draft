@@ -1,10 +1,13 @@
 # ChangeLog for dev-perl/mod_perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/ChangeLog,v 1.12 2002/12/13 10:56:41 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/ChangeLog,v 1.13 2002/12/17 20:27:16 lostlogic Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *mod_perl-1.99.07 (29 Nov 2002)
+
+  17 Dec 2002; Brandon Low <lostlogic@gentoo.org> :
+  This should be a new slot. marked slot=1.
 
   29 Nov 2002; Donny Davies <woodchip@gentoo.org> :
   New development version for Apache2.

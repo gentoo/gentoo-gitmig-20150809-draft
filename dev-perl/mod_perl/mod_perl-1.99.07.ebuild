@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.99.07.ebuild,v 1.1 2002/11/29 11:22:37 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/mod_perl/mod_perl-1.99.07.ebuild,v 1.2 2002/12/17 20:27:16 lostlogic Exp $
 
 DESCRIPTION="An embedded Perl interpreter for Apache2"
 HOMEPAGE="http://perl.apache.org/"
@@ -12,7 +12,7 @@ DEPEND="sys-devel/perl =net-www/apache-2*"
 LICENSE="GPL-2"
 KEYWORDS="~x86"
 IUSE=""
-SLOT="0"
+SLOT="1"
 
 src_compile() {
 	perl Makefile.PL \
