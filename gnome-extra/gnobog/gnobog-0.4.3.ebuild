@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnobog/gnobog-0.4.3.ebuild,v 1.9 2004/05/29 03:46:58 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnobog/gnobog-0.4.3.ebuild,v 1.10 2004/06/24 22:04:14 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Gnome Bookmarks Organizer"

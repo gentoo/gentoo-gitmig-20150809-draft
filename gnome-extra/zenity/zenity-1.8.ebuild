@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/zenity-1.8.ebuild,v 1.10 2004/05/15 23:04:10 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/zenity/zenity-1.8.ebuild,v 1.11 2004/06/24 22:11:17 agriffis Exp $
 
 inherit eutils gnome2
 

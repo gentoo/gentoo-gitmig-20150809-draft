@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gxmms/gxmms-0.1.0.ebuild,v 1.6 2004/06/18 06:19:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gxmms/gxmms-0.1.0.ebuild,v 1.7 2004/06/24 22:07:36 agriffis Exp $
 
 inherit gnome2
 DESCRIPTION="XMMS applet for Gnome2 panel"

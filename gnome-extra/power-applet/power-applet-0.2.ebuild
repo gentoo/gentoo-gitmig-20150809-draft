@@ -1,7 +1,7 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # Authour: Mikael Hallendal <hallski@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/power-applet/power-applet-0.2.ebuild,v 1.10 2004/02/22 20:53:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/power-applet/power-applet-0.2.ebuild,v 1.11 2004/06/24 22:10:14 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNOME Panel applet that shows the battery state on notebooks"
