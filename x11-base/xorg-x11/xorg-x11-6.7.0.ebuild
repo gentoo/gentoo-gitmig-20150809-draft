@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.9 2004/04/08 01:55:25 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0.ebuild,v 1.10 2004/04/08 03:33:31 spyderous Exp $
 
 # This is a snapshot of the XORG-RELEASE-1 branch.
 
@@ -540,7 +540,8 @@ fi
 
 		# with USE="X doc' circular dep w/ virtual/ghostscript
 		# echo "#define HasGhostScript ${DOC}" >> config/cf/host.def
-		echo "#define BuildLinuxDocText ${DOC}" >> config/cf/host.def
+		# Caused issues, basic docs aren't installed
+		#echo "#define BuildLinuxDocText ${DOC}" >> config/cf/host.def
 		echo "#define BuildLinuxDocHtml ${DOC}" >> config/cf/host.def
 		echo "#define BuildLinuxDocPS ${DOC}" >> config/cf/host.def
 		echo "#define BuildSpecsDocs ${DOC}" >> config/cf/host.def
