@@ -49,6 +49,7 @@ net-www/zope
 >=x11-misc/mosfet-liquid-widgets-0.9.1
 >=net-misc/kbiff-3.6
 >=app-cdr/k3b-0.6.0_pre2
+>=app-office/koffice-1.2_pre20020402
 
 # These two have compile problems -- Azarah (24/03/2002)
 #
