@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r4.ebuild,v 1.2 2003/08/23 23:22:22 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r4.ebuild,v 1.3 2003/08/29 00:13:12 robbat2 Exp $
 
 inherit eutils
 
@@ -71,7 +71,7 @@ src_install() {
 	docinto examples ; dodoc examples/*
 	dodir /etc/iproute2
 	insinto /etc/iproute2 ; doins ${S}/etc/iproute2/*
-	if use tetex; then
+	if use tetex && [ -n "`ls doc/*.ps`" ] ; then
 		docinto ps ; dodoc doc/*.ps
 	fi
 }
