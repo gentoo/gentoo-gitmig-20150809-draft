@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.43 2004/11/03 09:13:26 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.44 2004/11/03 09:37:55 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -846,8 +846,10 @@ setup_config_files() {
 	# Fix default config files after installing fonts to /usr/share/fonts
 	sed -i "s:/usr/X11R6/$(get_libdir)/X11/fonts:/usr/share/fonts:g" \
 		${D}/etc/X11/xorg.conf.example
-	sed -i "s:/usr/X11R6/$(get_libdir)/X11/fonts:/usr/share/fonts:g" \
-		${D}/etc/X11/fs/config
+	if use font-server; then
+		sed -i "s:/usr/X11R6/$(get_libdir)/X11/fonts:/usr/share/fonts:g" \
+			${D}/etc/X11/fs/config
+	fi
 
 	# Work around upgrade problem where people have
 	# Option "XkbRules" "xfree86" in their config file
@@ -1074,8 +1076,10 @@ update_config_files() {
 		einfo "Preparing any installed configuration files for font move..."
 		FILES="/etc/X11/xorg.conf
 			/etc/X11/XF86Config-4
-			/etc/X11/XF86Config
-			/etc/X11/fs/config"
+			/etc/X11/XF86Config"
+		if use font-server; then
+			FILES="${FILES} /etc/X11/fs/config"
+		fi
 		#	/etc/fonts/fonts.conf
 		#	/etc/fonts/local.conf
 
