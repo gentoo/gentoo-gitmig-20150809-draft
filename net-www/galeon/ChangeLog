@@ -1,6 +1,9 @@
 # ChangeLog for net-www/galeon
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.70 2003/12/07 22:40:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.71 2003/12/16 23:47:14 avenj Exp $
+
+  16 Dec 2003; Jon Portnoy <avenj@gentoo.org> galeon-1.3.10.ebuild :
+  AMD64 keywords.
 
   07 Dec 2003; Aron Griffis <agriffis@gentoo.org> galeon-1.3.10.ebuild:
   Stable on alpha and ia64
