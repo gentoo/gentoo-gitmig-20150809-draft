@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/drip/drip-0.9.0_alpha3.ebuild,v 1.1 2003/04/27 14:27:36 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/drip/drip-0.9.0_alpha3.ebuild,v 1.2 2003/05/07 18:28:01 avenj Exp $
 
 inherit eutils libtool
 
@@ -18,6 +18,7 @@ RDEPEND="gnome-base/gnome-libs
 	>=media-libs/libdvdcss-1.2.2
 	>=media-libs/libdvdread-0.9.3
 	>=media-libs/libmpeg2-0.3.1
+	media-gfx/imagemagick
 	media-libs/gdk-pixbuf
 	dev-libs/libxml2
 	sys-apps/eject"
