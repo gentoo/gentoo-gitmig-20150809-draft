@@ -1,6 +1,12 @@
 # ChangeLog for net-libs/enet
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/enet/ChangeLog,v 1.4 2004/06/24 23:10:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/enet/ChangeLog,v 1.5 2004/08/13 09:19:33 mr_bones_ Exp $
+
+*enet-0_pre20040813 (13 Aug 2004)
+
+  13 Aug 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  enet-0_pre20031103.ebuild, +enet-0_pre20040813.ebuild:
+  new snapshot
 
   21 Mar 2004; David Holm <dholm@gentoo.org> enet-0_pre20031103.ebuild:
   Added to ~ppc.
