@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-fep/uim-fep-0.3.2.ebuild,v 1.2 2004/06/24 21:56:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-fep/uim-fep-0.3.5.ebuild,v 1.1 2004/06/26 10:39:11 usata Exp $
 
 IUSE="unicode"
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.ice.nuie.nagoya-u.ac.jp/~h013177b/uim-fep/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~alpha"
 
 DEPEND=">=app-i18n/uim-0.3.4.2
 	sys-libs/ncurses"
