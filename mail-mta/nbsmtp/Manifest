@@ -1,10 +1,20 @@
-MD5 c4551756a998651ae49a606670841749 ChangeLog 2549
-MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9c278f768f581ae123011325c3650d5b ChangeLog 2679
+MD5 16f944cbd91f206fbd0b1ba7588a95e1 nbsmtp-0.92-r1.ebuild 622
 MD5 bd0e70cbb7f76e8927fcf241536bc854 nbsmtp-0.8.ebuild 592
-MD5 12cf13b3289b587be4d731aa15f02640 nbsmtp-0.92.ebuild 636
-MD5 61094ffc33a0bacd15f626908873d90f nbsmtp-0.92-r1.ebuild 623
-MD5 364d4d119a60ff5c696bae97f2c32bef nbsmtp-0.96.ebuild 815
-MD5 699b53b1a713d738aa1008c6cd0b4f29 files/digest-nbsmtp-0.8 57
-MD5 e428ef7d3bc28b7f487c2eca0dbdf48e files/digest-nbsmtp-0.92 63
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 b696c46f578395ec238ab0d1d1bba01f nbsmtp-0.92.ebuild 630
+MD5 90a299ade9f605312132912e0a11a1c2 nbsmtp-0.96.ebuild 814
 MD5 e428ef7d3bc28b7f487c2eca0dbdf48e files/digest-nbsmtp-0.92-r1 63
+MD5 699b53b1a713d738aa1008c6cd0b4f29 files/digest-nbsmtp-0.8 57
 MD5 96b4b06bf606b3d82f0c3121d55aad87 files/digest-nbsmtp-0.96 63
+MD5 e428ef7d3bc28b7f487c2eca0dbdf48e files/digest-nbsmtp-0.92 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBhqfg10xuJSrg3/sRAlQ1AJ9kmazCyrbdiFQODdMQ4Oa3jmAgGgCfY4Vv
+bf0GCBe3rUUQARd3sFv4SHo=
+=Tltj
+-----END PGP SIGNATURE-----
