@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.1.15.ebuild,v 1.1 2003/01/05 16:40:23 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.1.15.ebuild,v 1.2 2003/01/22 22:32:19 nall Exp $
 
 #provide Xmake and Xemake
 inherit virtualx libtool gnome2
@@ -9,7 +9,7 @@ DESCRIPTION="Gnumeric, the GNOME Spreadsheet"
 HOMEPAGE="http://www.gnome.org/gnome-office/gnumeric.shtml"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE="nls libgda gb evo python guile perl"
 
 #Eye Of Gnome (media-gfx/eog) is for image support.
