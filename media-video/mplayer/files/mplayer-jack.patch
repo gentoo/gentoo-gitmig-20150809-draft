@@ -1,0 +1,11 @@
+--- libao2/ao_jack.c_old	2005-02-13 20:59:19.789628272 +0000
++++ libao2/ao_jack.c	2005-02-13 20:59:32.437705472 +0000
+@@ -103,7 +103,7 @@
+ 			m = 1;
+ 			break;
+ 		default:
+-			format = AFMT_S16_LE;
++			format = AFMT_S16_NE;
+ 			bits_per_sample = 16;
+ 			m = 2;
+ 			break;

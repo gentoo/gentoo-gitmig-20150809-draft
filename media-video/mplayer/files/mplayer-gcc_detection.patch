@@ -1,0 +1,11 @@
+--- configure.old	2005-02-19 13:11:58.000000000 +0900
++++ configure	2005-02-19 13:20:22.538154224 +0900
+@@ -586,7 +586,7 @@
+   echocheck "$_cc version"
+   cc_vendor=gnu
+   cc_name=`( $_cc -v ) 2>&1 | _tail 1 | cut -d ' ' -f 1`
+-  cc_version=`( $_cc -dumpversion ) 2>&1`
++  cc_version=`( $_cc -dumpversion | cut -f1,2 -d.) 2>&1`
+   if test "$?" -gt 0; then
+     cc_version="not found"
+   fi

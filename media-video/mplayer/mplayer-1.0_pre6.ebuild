@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6.ebuild,v 1.27 2005/02/07 06:58:57 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-1.0_pre6.ebuild,v 1.28 2005/02/19 05:30:53 chriswhite Exp $
 
 inherit eutils flag-o-matic kernel-mod
 
@@ -132,6 +132,13 @@ src_unpack() {
 
 	# fixes bug #78337
 	epatch ${FILESDIR}/${PN}-avi_crash.patch
+
+	# fixes mplayer not seeing gcc 3.4-blahetc type
+	# gcc versions.  Half stolen from toolchain-funcs
+	epatch ${FILESDIR}/${PN}-gcc_detection.patch
+
+	#fixes endian issues with jack output
+	epatch ${FILESDIR}/${PN}-jack.patch
 }
 
 linguas_warn() {

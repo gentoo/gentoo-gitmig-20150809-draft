@@ -1,6 +1,11 @@
 # ChangeLog for media-video/mplayer
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.273 2005/02/07 20:31:18 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/ChangeLog,v 1.274 2005/02/19 05:30:53 chriswhite Exp $
+
+  19 Feb 2005; Chris White <chriswhite@gentoo.org>
+  +files/mplayer-gcc_detection.patch, +files/mplayer-jack.patch,
+  mplayer-1.0_pre6.ebuild:
+  Fixed endianess issues with jack output.  Fixed gcc being detected improperly.
 
   07 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org>
   mplayer-1.0_pre5-r5.ebuild:
