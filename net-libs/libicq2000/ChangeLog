@@ -1,0 +1,7 @@
+# ChangeLog for net-libs/libicq2000
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libicq2000/ChangeLog,v 1.1 2002/04/17 20:50:20 spider Exp $
+
+*libicq2000-0.3.0 (17 Apr 2002)
+  17 Apr 2002; Spider <spider@gentoo.org> libicq2000-0.3.0.ebuild
+  initial release due to ickle 0.3.0 
