@@ -1,6 +1,13 @@
 # ChangeLog for app-office/abiword
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.42 2003/07/19 03:11:32 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.43 2003/07/27 18:17:43 foser Exp $
+
+*abiword-1.99.2 (27 Jul 2003)
+
+  27 Jul 2003; foser <foser@gentoo.org> abiword-1.99.2.ebuild :
+  New version, added plugins building, removed libole2 dep
+  made .desktop file install by default
+  Kudos to mg <markgilbert@hotpop.com> for providing these improvements (#23558, #24705) 
 
   19 Jul 2003; Alastair Tse <liquidx@gentoo.org> abiword-1.9.1.ebuild:
   putting dev versions back in ~x86
