@@ -1,5 +1,17 @@
-MD5 b53753f05dee69bdddeebe933d4a26da ChangeLog 868
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3230bea8c88d0fe8d6211036eeab4732 ChangeLog 995
 MD5 bc11fbad4b05b0917d8dd321875d6921 emacs-wget-0.4.2.ebuild 748
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
+MD5 df0b8cdcf64ac1d7dc968c965e2b77c6 emacs-wget-0.5.0.ebuild 729
 MD5 ce2ee7bdaf6370ded9a6dc9461df7c86 files/65emacs-wget-gentoo.el 252
 MD5 9a1d38708f862c5907ba70f12e3e65ca files/digest-emacs-wget-0.4.2 67
+MD5 fecfb610b3cc1881eef648f26924e428 files/digest-emacs-wget-0.5.0 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (Darwin)
+
+iD8DBQFBdSTIVWNWqTUmv+0RAuY2AKCHdGxxPWy5Nh+4q72+2JDBULo7cgCeOjl0
+1vo+13QYI5lndvoaywDC0sw=
+=fhSn
+-----END PGP SIGNATURE-----
