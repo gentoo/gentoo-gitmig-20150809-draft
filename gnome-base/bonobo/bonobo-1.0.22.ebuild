@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.22.ebuild,v 1.19 2004/08/21 15:19:33 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/bonobo/bonobo-1.0.22.ebuild,v 1.20 2004/11/05 22:41:12 corsair Exp $
 
 IUSE="nls"
 
-inherit gnome.org libtool
+inherit gnome.org libtool gnuconfig
 
 DESCRIPTION="A set of language and system independent CORBA interfaces"
 HOMEPAGE="http://www.gnome.org/"
 
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64 mips ~ppc64"
 LICENSE="GPL-2"
 
 RDEPEND=">=gnome-base/oaf-0.6.8
@@ -26,6 +26,8 @@ DEPEND="${RDEPEND}
 src_compile() {
 	#libtoolize to fix relink bug
 	elibtoolize
+
+	use ppc64 && gnuconfig_update
 
 	local myconf=""
 	use nls || myconf="${myconf} --disable-nls"
