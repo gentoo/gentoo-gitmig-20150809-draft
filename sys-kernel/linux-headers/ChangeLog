@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.61 2004/04/10 06:42:18 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.62 2004/04/10 06:48:45 kumba Exp $
 
 *linux-headers-2.0.40 (10 Apr 2004)
 
@@ -12,7 +12,7 @@
   linux-headers-2.4.17-r5.ebuild, linux-headers-2.4.18-r1.ebuild,
   linux-headers-2.4.18-r2.ebuild, linux-headers-2.4.18.ebuild,
   linux-headers-2.4.19-r1.ebuild, linux-headers-2.4.19.ebuild:
-  Cleaned out old ebuilds (2.4.16->1.4.19), removed old 2.2.2{0,1} ebuilds, and
+  Cleaned out old ebuilds (2.4.16->2.4.19), removed old 2.2.2{0,1} ebuilds, and
   added ebuilds for 2.0.40 and 2.2.26
 
   09 Apr 2004; Brian Jackson <iggy@gentoo.org> linux-headers-2.4.22.ebuild:
