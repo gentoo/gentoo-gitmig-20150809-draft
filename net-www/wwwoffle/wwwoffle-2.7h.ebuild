@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/wwwoffle-2.7h.ebuild,v 1.7 2004/05/07 13:05:28 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/wwwoffle-2.7h.ebuild,v 1.8 2004/06/05 16:12:54 dragonheart Exp $
 
 S=${WORKDIR}/${P}
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.gedanken.demon.co.uk/"
 KEYWORDS="x86 ~sparc ~ppc ppc64"
 SLOT="0"
 LICENSE="GPL-2"
-
+IUSE="ipv6"
 DEPEND="sys-devel/flex
 	sys-libs/zlib
 	sys-devel/gcc
@@ -39,9 +39,7 @@ src_install() {
 	make prefix=${D}/usr SPOOLDIR=${D}/var/spool/wwwoffle CONFDIR=${D}/etc install || die
 
 	cd ${D}/etc
-	mv wwwoffle.conf 1
-	sed -e "s:${D}::" 1 > wwwoffle.conf
-	rm 1
+	sed -i -e "s:${D}::"  wwwoffle.conf
 
 	# Install the wwwoffled init script
 	exeinto /etc/init.d

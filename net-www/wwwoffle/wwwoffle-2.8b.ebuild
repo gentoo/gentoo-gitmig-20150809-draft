@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/wwwoffle-2.8b.ebuild,v 1.2 2004/04/28 08:58:31 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/wwwoffle-2.8b.ebuild,v 1.3 2004/06/05 16:12:54 dragonheart Exp $
 
 inherit eutils
 
@@ -59,33 +59,6 @@ src_compile() {
 	emake || die
 }
 
-src_install() {
-	emake DESTDIR=${D} install || die
-
-	# install the wwwoffled init script
-	exeinto /etc/init.d
-	doexe ${FILESDIR}/{wwwoffled-online,wwwoffled}
-
-	# keep spool
-	keepdir /var/spool/wwwoffle/{http,outgoing,monitor,lasttime,prevtime1,lastout,local}
-
-	# empty dirs are removed during update
-	keepdir \
-	/var/spool/wwwoffle/search/{mnogosearch/db,htdig/tmp,htdig/db-lasttime,htdig/db,namazu/db}
-
-	# del empty doc dirs
-	rmdir ${D}/usr/share/doc/${P}/{it,nl,ru}
-
-	chown -R wwwoffle:wwwoffle \
-		${D}/var/spool/wwwoffle/{http,outgoing,monitor,lasttime,prevtime1,lastout,local} \
-	${D}/var/spool/wwwoffle/search/{mnogosearch/db,htdig/tmp,htdig/db-lasttime,htdig/db,namazu/db}
-
-	# for those upgrading...
-	[ -f ${ROOT}/etc/wwwoffle.conf ] && \
-		sed -e 's/\(run-[gu]id\)[ \t]*=[ \t]*[a-zA-Z0-9]*[ \t]*$/\1 = wwwoffle/g' \
-			${ROOT}/etc/wwwoffle.conf > ${D}/etc/wwwoffle/wwwoffle.conf
-}
-
 pkg_preinst() {
 
 	# TODO rootjail ${ROOT}
@@ -100,12 +73,56 @@ pkg_preinst() {
 	fi
 }
 
+
+src_install() {
+	emake DESTDIR=${D} install || die
+
+	# install the wwwoffled init script
+	exeinto /etc/init.d
+	doexe ${FILESDIR}/wwwoffled
+	newexe  ${FILESDIR}/wwwoffled-online-${PV} wwwoffled-online
+
+	# keep spool
+	keepdir /var/spool/wwwoffle/{http,outgoing,monitor,lasttime,prevtime1,lastout,local}
+
+	fowners root:wwwoffle /var/spool/wwwoffle
+	# empty dirs are removed during update
+	keepdir \
+	/var/spool/wwwoffle/search/{mnogosearch/db,htdig/tmp,htdig/db-lasttime,htdig/db,namazu/db}
+
+	# del empty doc dirs
+	rmdir ${D}/usr/share/doc/${P}/{it,nl,ru}
+
+	chown -R wwwoffle:wwwoffle \
+	${D}/var/spool/wwwoffle/{http,outgoing,monitor,lasttime,prevtime[1-9],prevout[1-9]lastout,local} \
+	${D}/var/spool/wwwoffle/search/{mnogosearch/db,htdig/tmp,htdig/db-lasttime,htdig/db,namazu/db}
+
+	dodir /etc/conf.d
+	local config=${D}/etc/conf.d/wwwoffled-online
+	echo -e "\n\n# Enter the interface that connects you to the outside world" >> ${config}
+	echo '# This will correspond to /etc/init.d/net.${IFACE}' >> ${config}
+	echo -e "\n# IMPORTANT: Be sure to run depscan.sh after modifiying IFACE" >>  ${config}
+	echo "IFACE=ppp0" >> ${config}
+
+	# for those upgrading...(removed)
+	#[ -f ${ROOT}/etc/wwwoffle.conf ] && \
+	#	sed -e 's/\(run-[gu]id\)[ \t]*=[ \t]*[a-zA-Z0-9]*[ \t]*$/\1 = wwwoffle/g' \
+	#		${ROOT}/etc/wwwoffle.conf > ${D}/etc/wwwoffle/wwwoffle.conf
+
+}
+
 pkg_postinst() {
 	# fix permissions for those upgrading
 	chown -R wwwoffle:wwwoffle \
-		${ROOT}/var/spool/wwwoffle/{http,outgoing,monitor,lasttime,prevtime1,lastout,local} \
+	${ROOT}/var/spool/wwwoffle/{http,outgoing,monitor,lasttime,prevtime[1-9],prevout[1-9],lastout,local} \
 	${ROOT}/var/spool/wwwoffle/search/{mnogosearch/db,htdig/tmp,htdig/db-lasttime,htdig/db,namazu/db}
 
+	chown root:wwwoffle /var/spool/wwwoffle
 	[ -f ${T}/stopped ] && \
 		ewarn "wwwoffled was stopped. /etc/init.d/wwwoffled start to restart AFTER etc-update"
+
+
+	einfo "wwwoffled should run as an ordinary user now. Please change run-uid and run-gid to wwwoffle in"
+	einfo "your /etc/wwwoffle/wwwoffle.conf"
+
 }
