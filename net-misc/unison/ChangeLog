@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/unison
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/ChangeLog,v 1.17 2004/08/09 10:40:37 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/ChangeLog,v 1.18 2004/08/19 10:50:27 stuart Exp $
+
+  19 Aug 2004; Stuart Herbert <stuart@gentoo.org> unison-2.9.1-r1.ebuild,
+  unison-2.9.1.ebuild:
+  Fixed broken SRC_URI settings, requested by tigger@gentoo.org
+  Removed macos KEYWORD; fails repoman checks (bad alexander ;-)
 
 *unison-2.9.1-r1 (09 Aug 2004)
 

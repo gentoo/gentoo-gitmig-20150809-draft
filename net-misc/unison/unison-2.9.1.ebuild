@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.9.1.ebuild,v 1.18 2004/07/26 14:31:01 alexander Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/unison/unison-2.9.1.ebuild,v 1.19 2004/08/19 10:50:27 stuart Exp $
 
 IUSE="gtk"
 
@@ -8,13 +8,13 @@ DESCRIPTION="Two-way cross-platform file synchronizer"
 HOMEPAGE="http://www.cis.upenn.edu/~bcpierce/unison/"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc ~ppc alpha ~amd64 macos"
+KEYWORDS="x86 sparc ~ppc alpha ~amd64"
 
 DEPEND=">=dev-lang/ocaml-3.04
 	gtk? ( =dev-ml/lablgtk-1.2* )"
 RDEPEND="gtk? ( =x11-libs/gtk+-1.2* )"
 
-SRC_URI="mirror://${P}.tar.gz"
+SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 src_unpack() {
 	unpack ${P}.tar.gz
