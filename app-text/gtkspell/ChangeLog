@@ -1,6 +1,9 @@
 # ChangeLog for app-text/gtkspell
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.24 2004/03/03 18:06:27 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/gtkspell/ChangeLog,v 1.25 2004/03/14 01:51:11 geoman Exp $
+
+  13 Mar 2004; Stephen P. Becker <geoman@gentoo.org> gtkspell-2.0.4-r1.ebuild:
+  Added ~mips keyword.
 
   03 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org>
   gtkspell-2.0.4-r1.ebuild:
