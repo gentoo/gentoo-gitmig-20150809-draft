@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_p2.ebuild,v 1.1 2003/01/16 03:47:27 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_p2.ebuild,v 1.2 2003/01/17 10:14:57 aliz Exp $
 
 #This should be fairly consistant now, unless we have any _pre releases...
 MYP="${P/_p/pl}"
@@ -10,7 +10,7 @@ DESCRIPTION="ISC Dynamic Host Configuration Protocol"
 SRC_URI="ftp://ftp.isc.org/isc/dhcp/${MYP}.tar.gz"
 HOMEPAGE="http://www.isc.org/products/DHCP"
 LICENSE="isc-dhcp"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ppc sparc"
 
 SLOT="0"
 DEPEND="virtual/glibc sys-apps/groff"
