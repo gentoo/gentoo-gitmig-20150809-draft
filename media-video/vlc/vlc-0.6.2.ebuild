@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2.ebuild,v 1.7 2003/10/18 03:25:49 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2.ebuild,v 1.8 2003/10/20 02:55:14 max Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -25,7 +25,7 @@ DEPEND="X? ( virtual/x11 )
 	aalib? ( >=media-libs/aalib-1.4_rc4-r2 )
 	alsa? ( >=media-libs/alsa-lib-0.9_rc2 )
 	arts? ( kde-base/kdelibs )
-	dvb? ( media-video/libdvb
+	dvb? ( media-libs/libdvb
 		media-tv/linuxtv-dvb )
 	dvd? ( >=media-libs/libdvdread-0.9.3
 		>=media-libs/libdvdcss-1.2.8

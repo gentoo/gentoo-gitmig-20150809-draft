@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.34 2003/10/18 03:25:49 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.35 2003/10/20 02:55:14 max Exp $
+
+  19 Oct 2003; Max Kalika <max@gentoo.org> vlc-0.6.2.ebuild:
+  Revert location of libdvd, it belongs in media-libs but was only partly moved
+  there previously.
 
   17 Oct 2003; Nick Hadaway <raker@gentoo.org> vlc-0.6.2.ebuild:
   Fixed portage location of libdvb.  Marked stable for x86.
