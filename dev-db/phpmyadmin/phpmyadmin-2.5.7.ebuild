@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.5.7.ebuild,v 1.1 2004/06/27 11:31:40 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.5.7.ebuild,v 1.2 2004/06/27 11:37:11 twp Exp $
 
 inherit eutils webapp
 
@@ -35,7 +35,7 @@ src_compile() {
 	sed -e "s/@pmapass@/${pmapass}/g" \
 		${T}/config.inc.php > config.inc.php
 	sed -e "s/@pmapass@/${pmapass}/g" \
-		${FILESDIR}/mysql-setup.sql.in-${PV} > ${T}/mysql-setup.sql
+		${FILESDIR}/mysql-setup.sql.in-2.5.6 > ${T}/mysql-setup.sql
 }
 
 src_install() {
