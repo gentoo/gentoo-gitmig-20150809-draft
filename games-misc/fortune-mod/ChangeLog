@@ -1,6 +1,9 @@
 # ChangeLog for games-misc/fortune-mod
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/ChangeLog,v 1.10 2004/09/13 02:54:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod/ChangeLog,v 1.11 2004/09/15 16:12:15 gmsoft Exp $
+
+  15 Sep 2004; Guy Martin <gmsoft@gentoo.org> fortune-mod-1.99.1.ebuild:
+  Stable on hppa.
 
   12 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org>
   fortune-mod-1.99.1.ebuild:
