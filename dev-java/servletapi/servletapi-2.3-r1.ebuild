@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.3-r1.ebuild,v 1.8 2005/03/23 12:09:11 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/servletapi-2.3-r1.ebuild,v 1.9 2005/04/03 02:29:35 weeve Exp $
 
 inherit java-pkg
 
@@ -14,7 +14,7 @@ DEPEND=">=virtual/jdk-1.3
 RDEPEND=">=virtual/jre-1.3"
 LICENSE="Apache-1.1"
 SLOT="2.3"
-KEYWORDS="x86 ~sparc ~ppc amd64 ppc64"
+KEYWORDS="x86 sparc ~ppc amd64 ppc64"
 IUSE="jikes doc"
 
 src_compile() {
