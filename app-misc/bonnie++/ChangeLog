@@ -1,6 +1,16 @@
 # ChangeLog for app-misc/bonnie++
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/bonnie++/ChangeLog,v 1.4 2002/10/14 20:02:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/bonnie++/ChangeLog,v 1.5 2003/01/05 06:25:51 george Exp $
+
+*bonnie++-1.03 (6 Dec 2002)
+
+  4 Jan 2003; George Shapovalov <george@gentoo.org> bonnie++-1.03.ebuild :
+  for whatever reason got this one assigned to me.
+  Checked and committed.
+
+  5 Dec 2002; William McArthur <sandymac@gentoo.org> bonnie++-1.03.ebuild :
+
+  Bummped the ebuild file name and added IUSE and DEPEND lines.
 
 *bonnie++-1.02c-r1 (14 Oct 2002)
 
@@ -20,10 +30,3 @@
 
 *bonnie++-1.02a (1 Feb 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
-  Added initial ChangeLog which should be updated whenever the package is
-  updated in any way. This changelog is targetted to users. This means that the
-  comments should well explained and written in clean English. The details about
-  writing correct changelogs are explained in the skel.ChangeLog file which you
-  can find in the root directory of the portage repository.
