@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.6629-r3.ebuild,v 1.3 2005/01/21 08:23:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.6629-r3.ebuild,v 1.4 2005/01/21 21:14:08 eradicator Exp $
 
-inherit eutils multilib
+inherit eutils multilib versionator
 
 X86_PKG_V="pkg1"
 AMD64_PKG_V="pkg2"
@@ -99,27 +99,11 @@ src_install() {
 
 	is_final_abi || return 0
 
-	# The X module
-	# Since we moved away from libs in /usr/X11R6 need to check this
-	if has_version ">=x11-base/xorg-x11-6.8.0-r4" ; then
-		local X11_LIB_DIR="/usr/$(get_libdir)"
-	else
-		local X11_LIB_DIR="/usr/X11R6/$(get_libdir)"
-	fi
-
-	exeinto ${X11_LIB_DIR}/modules/drivers
-	doexe usr/X11R6/lib/modules/drivers/nvidia_drv.o
-
 	# Install tls_test
 	dodir /usr/libexec/misc
 	exeinto /usr/libexec/misc
 	doexe usr/bin/tls_test
 	doexe usr/bin/tls_test_dso.so
-
-	insinto ${X11_LIB_DIR}
-	doins usr/X11R6/lib/libXvMCNVIDIA.a
-	exeinto ${X11_LIB_DIR}
-	doexe usr/X11R6/lib/libXvMCNVIDIA.so.${PV}
 
 	# Docs, remove nvidia-settings as provided by media-video/nvidia-settings
 	rm -f usr/share/doc/nvidia-settings*
@@ -155,7 +139,7 @@ src_install-libs() {
 	dosym libnvidia-tls.so.${PV} ${NV_ROOT}/lib/libnvidia-tls.so
 	dosym libnvidia-tls.so.${PV} ${NV_ROOT}/lib/libnvidia-tls.so.1
 
-	local TLS_ROOT="/usr/${pkglibdir}/opengl/nvidia/tls"
+	local TLS_ROOT="/usr/${inslibdir}/opengl/nvidia/tls"
 	dodir ${TLS_ROOT}
 	exeinto ${TLS_ROOT}
 	doexe usr/${pkglibdir}/tls/libnvidia-tls.so.${PV}
@@ -163,23 +147,40 @@ src_install-libs() {
 	dosym libnvidia-tls.so.${PV} ${TLS_ROOT}/libnvidia-tls.so.1
 
 	# Old opengl-updates don't always make this
-	keepdir /usr/${pkglibdir}/tls
+	keepdir /usr/${inslibdir}/tls
 
 	# Not sure whether installing the .la file is neccessary;
 	# this is adopted from the `nvidia' ebuild
-	#local ver1="`echo ${PV} |cut -d '.' -f 1`"
-	#local ver2="`echo ${PV} |cut -d '.' -f 2`"
-	#local ver3="`echo ${PV} |cut -d '.' -f 3`"
-	#sed -e "s:\${PV}:${PV}:"     \
-	#	-e "s:\${ver1}:${ver1}:" \
-	#	-e "s:\${ver2}:${ver2}:" \
-	#	-e "s:\${ver3}:${ver3}:" \
-	#	${FILESDIR}/libGL.la > ${D}/${NV_ROOT}/lib/libGL.la
+	local ver1=$(get_version_component_range 1)
+	local ver2=$(get_version_component_range 2)
+	local ver3=$(get_version_component_range 3)
+	sed -e "s:\${PV}:${PV}:"     \
+	    -e "s:\${ver1}:${ver1}:" \
+	    -e "s:\${ver2}:${ver2}:" \
+	    -e "s:\${ver3}:${ver3}:" \
+	    -e "s:\${libdir}:${inslibdir}:" \
+	    ${FILESDIR}/libGL.la-r1 > ${D}/${NV_ROOT}/lib/libGL.la
 
 	# The GLX extension
 	if is_final_abi; then
+		# The X module
+		# Since we moved away from libs in /usr/X11R6 need to check this
+		if has_version ">=x11-base/xorg-x11-6.8.0-r4" ; then
+			local X11_LIB_DIR="/usr/$(get_libdir)"
+		else
+			local X11_LIB_DIR="/usr/X11R6/$(get_libdir)"
+		fi
+
+		exeinto ${X11_LIB_DIR}/modules/drivers
+		doexe usr/X11R6/${pkglibdir}/modules/drivers/nvidia_drv.o
+
+		insinto ${X11_LIB_DIR}
+		doins usr/X11R6/${pkglibdir}/libXvMCNVIDIA.a
+		exeinto ${X11_LIB_DIR}
+		doexe usr/X11R6/${pkglibdir}/libXvMCNVIDIA.so.${PV}
+
 		exeinto ${NV_ROOT}/extensions
-		newexe usr/X11R6/lib/modules/extensions/libglx.so.${PV} libglx.so
+		newexe usr/X11R6/${pkglibdir}/modules/extensions/libglx.so.${PV} libglx.so
 
 		# Includes
 		insinto ${NV_ROOT}/include
