@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glademm/glademm-2.0.0.ebuild,v 1.6 2004/01/23 13:52:35 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glademm/glademm-2.0.0.ebuild,v 1.7 2004/02/20 17:19:56 foser Exp $
 
 inherit gnome2
 
@@ -24,7 +24,7 @@ src_unpack() {
 
 	# Patch that fixes a missing <cassert> include in the source
 	# Closes Bug #29654
-	epatch ${FILESDIR}/${P}-gcc33-missing-includes-fix.patch
+#	epatch ${FILESDIR}/${P}-gcc33-missing-includes-fix.patch
 }
 
 pkg_postinst() {

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glademm/glademm-0.6.4.ebuild,v 1.8 2003/07/13 12:26:37 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glademm/glademm-0.6.4.ebuild,v 1.9 2004/02/20 17:19:56 foser Exp $
 
 DESCRIPTION="A C++ backend for glade, the GUI designer for Gtk."
 HOMEPAGE="http://home.wtal.de/petig/Gtk/"
@@ -8,7 +8,7 @@ SRC_URI="http://distro.ibiblio.org/pub/linux/distributions/sorcerer/sources/${P}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc"
 
 DEPEND="=dev-util/glade-0.6*
 	=x11-libs/gtk+-1.2*
@@ -18,6 +18,7 @@ DEPEND="=dev-util/glade-0.6*
 S=${WORKDIR}/${P}b
 
 src_unpack() {
+
 	unpack ${A}
 
 	#Fix to compile with gcc-3's C++ ABI
@@ -29,6 +30,11 @@ src_unpack() {
 		# Fix supplied by "Nicholas Wourms" <nwourms@netscape.net> 
 		patch -p0 < ${FILESDIR}/glademm-0.6.4b-gcc3.patch || die
 	fi
+
+	# fixes gcc3 missing includes #40283
+	cd ${S}
+	epatch ${FILESDIR}/${P}-gcc33_assert_fixes.patch
+
 }
 
 src_compile() {
