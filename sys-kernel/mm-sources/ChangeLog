@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.87 2003/10/02 10:14:04 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.88 2003/10/06 07:26:08 lostlogic Exp $
+
+*mm-sources-2.6.0_beta6-r4 (06 Oct 2003)
+
+  06 Oct 2003; Brandon Low <lostlogic@gentoo.org>
+  mm-sources-2.6.0_beta3-r3.ebuild, mm-sources-2.6.0_beta4-r6.ebuild,
+  mm-sources-2.6.0_beta5-r4.ebuild, mm-sources-2.6.0_beta6-r4.ebuild:
+  Clean up and bump
 
 *mm-sources-2.6.0_beta6-r2 (02 Oct 2003)
 
