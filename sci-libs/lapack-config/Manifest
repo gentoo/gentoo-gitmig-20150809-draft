@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e8cb5fe0ea4c0b96c8a090343292cfea lapack-config-1.0.1.ebuild 600
-MD5 b905295365f6658c485fbd3f0c09c36b lapack-config-1.0.0.ebuild 588
-MD5 f8c9621519bfeaeed48ea20493e397c9 ChangeLog 1838
 MD5 8c623e53daafa025137077c6b65815bd metadata.xml 156
+MD5 80fdb18280c77ab4db157244472db493 lapack-config-1.0.1.ebuild 605
+MD5 060dc4cd8232edf5e331379fa1db3288 lapack-config-1.0.0.ebuild 586
+MD5 7679d51f39d18c918199b5aa9b1df4b8 ChangeLog 1938
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-lapack-config-1.0.0 0
 MD5 c67c3c5f6c9426ec0aaaffb6e1904f1f files/lapack-config.gz 1808
 MD5 f62647128358ff2ae72da0beb67ed2c6 files/lapack-config-1.0.1.gz 1900
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-lapack-config-1.0.0 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-lapack-config-1.0.1 0
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB0ygOI1lqEGTUzyQRAmL9AKCDP2ikSP6NZ7lF0CF6W0caT0SZSgCfRXUj
-d3zZPIQdhFIRtHf4P4A0wgA=
-=tJii
+iD8DBQFCFQyiugEuf3OQ0akRAluEAKCWLzmYjYTLcghDjRi4AOGTFI3XKwCdGtYz
+TvxjwFavN3qGAfesYQR5rXA=
+=mAmT
 -----END PGP SIGNATURE-----
