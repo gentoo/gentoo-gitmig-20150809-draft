@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/gdm-themes-1.0-r1.ebuild,v 1.4 2003/12/13 17:39:59 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gdm-themes/gdm-themes-1.0-r1.ebuild,v 1.5 2003/12/15 10:21:30 obz Exp $
 
 DESCRIPTION="Some nice themes for the GDM Greeter"
 S=${WORKDIR}
@@ -36,7 +36,7 @@ SRC_URI="${THEME_URI}GDM-300-lantueno.tar.gz
 	${THEME_URI}GDM-xpto.tar.gz
 	mirror://gentoo/GDM-gentoo-emergance_2.tar.gz"
 
-HOMEPAGE="http://art.gnome.org/theme_list.php?category=gdm_greeter"
+HOMEPAGE="http://art.gnome.org/themes/gdm_greeter/index.php"
 
 RDEPEND="gnome-base/gdm"
 
