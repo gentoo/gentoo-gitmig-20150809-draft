@@ -1,4 +1,4 @@
-MD5 91f38aa44668413f3860b9099ccef025 ChangeLog 3136
+MD5 5b2677e4436af2a9e9563c047635a016 ChangeLog 3253
 MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
 MD5 0b47d5322be2905553a3784f82a4fdca xmule-1.6.0a-r1.ebuild 1126
 MD5 086d4d6e06fd8c75611692426879cb96 xmule-1.6.0a.ebuild 982
@@ -7,6 +7,7 @@ MD5 e7f1352199d7100fe73b74b48074ea56 xmule-1.7.1.ebuild 1276
 MD5 dece2459cf9d6c3f4f18b8e1fabf1cd6 xmule-1.7.2.ebuild 1354
 MD5 93c35ace7b59731b6911ed292e4d0fbf xmule-1.7.4b.ebuild 1368
 MD5 56b69f6ec92a3777c0fe5c966e2a68c9 xmule-1.7.4c.ebuild 1368
+MD5 0b621d4eaeb418301cee0a08800ee487 xmule-1.8.0.ebuild 1367
 MD5 ae3ef316b6a6a3cc8b670289ed08ee79 files/digest-xmule-1.6.0a 65
 MD5 ae3ef316b6a6a3cc8b670289ed08ee79 files/digest-xmule-1.6.0a-r1 65
 MD5 88c461e77cc500b6238785f3b86edcb5 files/digest-xmule-1.6.1 65
@@ -16,3 +17,4 @@ MD5 ad581d2862766b41bb2b94a81ec1fca6 files/digest-xmule-1.7.4b 66
 MD5 1135d70abe10f56fe3b0590aa3cae9c9 files/ini2.patch 273
 MD5 d4e66918eaa0f6b42f988409ae3c218f files/rehash.patch 348
 MD5 20de5f5c6c7ea1fcf2a8f66c6e5a20fc files/digest-xmule-1.7.4c 66
+MD5 fda50be6ca23916ab5227a58de0290d3 files/digest-xmule-1.8.0 65
