@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/mythmusic
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/ChangeLog,v 1.25 2004/12/05 01:02:16 iggy Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/ChangeLog,v 1.26 2005/01/20 08:20:59 cardoe Exp $
+
+*mythmusic-0.16.20050119 (20 Jan 2005)
+
+  20 Jan 2005; Doug Goldstein <cardoe@gentoo.org> metadata.xml,
+  -files/asm_fix.diff, -mythmusic-0.13.ebuild, -mythmusic-0.14.ebuild,
+  -mythmusic-0.15.1.ebuild, +mythmusic-0.16.20050119.ebuild:
+  rev bump to new CVS snapshot to match MythTV snapshot
+  delete old revs
 
   04 Dec 2004; Brian Jackson <iggy@gentoo.org> mythmusic-0.16.ebuild:
   I can't find any of the other media-tv guys, and it's been fairly bug free,

@@ -1,6 +1,14 @@
 # ChangeLog for media-plugins/mythvideo
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/ChangeLog,v 1.20 2004/12/05 00:59:00 iggy Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythvideo/ChangeLog,v 1.21 2005/01/20 08:29:40 cardoe Exp $
+
+*mythvideo-0.16.20050120 (20 Jan 2005)
+
+  20 Jan 2005; Doug Goldstein <cardoe@gentoo.org> metadata.xml,
+  -mythvideo-0.13.ebuild, -mythvideo-0.14.ebuild, -mythvideo-0.15.1.ebuild,
+  +mythvideo-0.16.20050120.ebuild:
+  rev bump to new CVS snapshot to match MythTV snapshot
+  delete old revs
 
   04 Dec 2004; Brian Jackson <iggy@gentoo.org> mythvideo-0.16.ebuild:
   I can't find any of the other media-tv guys, and it's been fairly bug free,
