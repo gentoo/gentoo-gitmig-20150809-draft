@@ -1,6 +1,16 @@
 # ChangeLog for mail-client/sylpheed-claws
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.41 2005/03/17 21:20:11 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/ChangeLog,v 1.42 2005/03/29 07:25:00 genone Exp $
+
+*sylpheed-claws-1.0.4 (29 Mar 2005)
+
+  29 Mar 2005; Marius Mauch <genone@gentoo.org>
+  -files/gv-procmime-Makefile.in.patch, -files/vcalendar-0.4-ical.patch,
+  -sylpheed-claws-0.9.12a-r1.ebuild, -sylpheed-claws-0.9.12a.ebuild,
+  -sylpheed-claws-0.9.12b-r1.ebuild, -sylpheed-claws-0.9.13.ebuild,
+  +sylpheed-claws-1.0.4.ebuild:
+  version bump, going straight to stable for security bug 86541. Cleaning out
+  older versions.
 
   17 Mar 2005; Bryan Østergaard <kloeri@gentoo.org>
   sylpheed-claws-1.0.3.ebuild:

@@ -1,31 +1,23 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0b5217a4ecef5d29621d23608408f00f sylpheed-claws-0.9.13.ebuild 3514
-MD5 0605664fd7b4d0a100792054a1490956 sylpheed-claws-0.9.12a-r1.ebuild 6469
-MD5 dbb8802b2baa1868dcc42d42f7e49980 sylpheed-claws-0.9.12b-r1.ebuild 3251
-MD5 bbe78917f8927844f57f1320d9ada74a sylpheed-claws-1.0.0.ebuild 3562
-MD5 5e28784efc1dfbfdb851979e59c2de53 ChangeLog 19995
-MD5 def27041a56aa364d9e1a73a0408a5f0 sylpheed-claws-1.0.1.ebuild 3815
 MD5 82e806ed62f0596fb7bef493d225712f metadata.xml 269
-MD5 2fef7e9e47020b8ef4017433dd505114 sylpheed-claws-1.0.1.1.ebuild 4880
-MD5 67b1d04ac11ba986e9101f21b73f2158 sylpheed-claws-0.9.12a.ebuild 4243
+MD5 bbe78917f8927844f57f1320d9ada74a sylpheed-claws-1.0.0.ebuild 3562
 MD5 40c1a0aa9d98d845a54ed255a4b95ccc sylpheed-claws-1.0.3.ebuild 3810
-MD5 6647f03568da3cd649c64549db6177c6 files/digest-sylpheed-claws-0.9.13 75
-MD5 e4776c1d04bababc02a76a8102e18108 files/vcalendar-0.4-ical.patch 2292
-MD5 db15d20129837459a3b58fc654301b7c files/digest-sylpheed-claws-0.9.12a 279
-MD5 60eaf129bf082ddccef4b8fe4776b353 files/digest-sylpheed-claws-0.9.12b-r1 76
-MD5 82d3d3968bf15e87b2fc7b5b53c42277 files/gv-procmime-Makefile.in.patch 930
-MD5 2d862dcfbc8d3ac467800ee5bfa816a6 files/digest-sylpheed-claws-1.0.3 74
-MD5 3cda57c34ce8182358f3189330411a8b files/digest-sylpheed-claws-1.0.1 74
+MD5 6e8dd45de69a1ccbc7192f3335d08972 sylpheed-claws-1.0.4.ebuild 3813
+MD5 def27041a56aa364d9e1a73a0408a5f0 sylpheed-claws-1.0.1.ebuild 3815
+MD5 2fef7e9e47020b8ef4017433dd505114 sylpheed-claws-1.0.1.1.ebuild 4880
+MD5 bb291854695096ee72bcccb0c453e75d ChangeLog 20419
 MD5 bf4c9cd9cb7cdc6ece7d4d327910f0cf files/procmime.patch 977
 MD5 36875560f20470a8e0265fd9d81e0007 files/digest-sylpheed-claws-1.0.0 74
+MD5 3cda57c34ce8182358f3189330411a8b files/digest-sylpheed-claws-1.0.1 74
 MD5 ff80e8ec705644978625111bd6e399ec files/digest-sylpheed-claws-1.0.1.1 85
-MD5 127bc1fa7e9c9f3d46b0df6f05446360 files/digest-sylpheed-claws-0.9.12a-r1 442
+MD5 2d862dcfbc8d3ac467800ee5bfa816a6 files/digest-sylpheed-claws-1.0.3 74
+MD5 abb48579ea54768c2ee6f172f6d8aa05 files/digest-sylpheed-claws-1.0.4 74
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCOgLBugEuf3OQ0akRApixAKCZV8lrtRZ7XoJ1aDGiNY2fXs2umgCghd0A
-l10KZpzqXMLT7JXQMiQQWFY=
-=sK1f
+iD8DBQFCSQN96J2i8a8J4okRAkALAKDcJxGtydlz0pHOfBCvv6VAMYKHswCeMSbo
+gum9nlhoVvx2P5MP/4VD8to=
+=Qsz0
 -----END PGP SIGNATURE-----

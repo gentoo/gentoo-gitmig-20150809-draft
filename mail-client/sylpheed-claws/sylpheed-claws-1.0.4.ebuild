@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-0.9.13.ebuild,v 1.2 2005/01/19 22:30:08 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/sylpheed-claws/sylpheed-claws-1.0.4.ebuild,v 1.1 2005/03/29 07:25:00 genone Exp $
 
-IUSE="nls gnome dillo crypt spell imlib ssl ldap ipv6 pda clamav pdflib maildir mbox calendar xface"
+IUSE="nls gnome dillo crypt spell imlib ssl ldap ipv6 pda clamav pdflib maildir xface kde" # mbox
 
 inherit eutils
 
@@ -10,15 +10,15 @@ inherit eutils
 GS_VERSION="ghostscript-viewer-0.8"
 PGP_VERSION="pgpinline-0.5"
 MAILDIR_VERSION="maildir-0.7"
-MBOX_VERSION="mailmbox-0.9"
-VCAL_VERSION="vcalendar-0.4"
 
 DESCRIPTION="Bleeding edge version of Sylpheed"
 HOMEPAGE="http://sylpheed-claws.sf.net"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
+#SRC_URI="mirror://gentoo/${P}.tar.bz2 http://dev.gentoo.org/~genone/distfiles/${P}.tar.bz2"
+
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~alpha"
+KEYWORDS="x86 ~ppc ~sparc amd64 ~alpha"
 
 COMMONDEPEND="=x11-libs/gtk+-1.2*
 	pda? ( >=app-pda/jpilot-0.99 )
@@ -30,6 +30,7 @@ COMMONDEPEND="=x11-libs/gtk+-1.2*
 	imlib? ( >=media-libs/imlib-1.9.10 )
 	spell? ( virtual/aspell-dict )
 	nls? ( >=sys-devel/gettext-0.12 )
+	kde? ( kde-base/kdelibs )
 	x11-libs/startup-notification"
 
 DEPEND="${COMMONDEPEND}
@@ -44,8 +45,7 @@ RDEPEND="${COMMONDEPEND}
 PDEPEND="pdflib? ( =mail-client/${PN}-${GS_VERSION} )
 		 maildir? ( =mail-client/${PN}-${MAILDIR_VERSION} )
 		 crypt? ( =mail-client/${PN}-${PGP_VERSION} )"
-#		 mbox? ( =mail-client/${PN}-${MBOX_VERSION} )
-#		 calendar? ( =mail-client/${PN}-${VCAL_VERSION} )
+#		 mbox? ( =mail-client/${PN}-${MBOX_VERSION} )"
 
 PROVIDE="virtual/sylpheed"
 
@@ -90,17 +90,16 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 
-	local menuentry="/usr/share/gnome/apps/Internet/sylpheed.desktop"
-	if use gnome; then
-		dosed "s/Sylpheed/Sylpheed Claws/" ${menuentry}
-		dosed "s/sylpheed/sylpheed-claws/" ${menuentry}
-		mv ${D}${menuentry} ${D}${menuentry/sylpheed/sylpheed-claws}
-	else
-		rm -rf ${D}/usr/share/gnome
-	fi
+	local menuentry="/usr/share/applications/sylpheed-claws.desktop"
+	insinto /usr/share/applications
+	newins ${S}/sylpheed.desktop sylpheed-claws.desktop
+	dosed "s/Sylpheed/Sylpheed Claws/" ${menuentry}
+	dosed "s/sylpheed/sylpheed-claws/" ${menuentry}
+	rm -rf ${D}/usr/share/gnome
 
-	dodir /usr/share/pixmaps
-	mv ${D}/usr/share/pixmaps/sylpheed{,-claws}.png
+	insinto /usr/share/pixmaps
+	newins ${S}/sylpheed.png sylpheed-claws.png
+	rm -f ${D}/usr/share/pixmaps/sylpheed.png
 
 	dodoc AUTHORS ChangeLog* INSTALL* NEWS README* TODO*
 	docinto tools
@@ -109,15 +108,25 @@ src_install() {
 	# install the extra tools
 	cd ${S}/tools
 	exeinto /usr/lib/${PN}/tools
-	doexe *.pl *.py *.rc *.conf *.sh gpg-sign-syl
-	doexe tb2sylpheed update-po uudec
+	doexe *.pl *.py *.rc *.conf *.sh
+	doexe tb2sylpheed update-po uudec gpg-sign-syl
+
+	if use kde; then
+		local kdeprefix="$(kde-config --prefix)"
+		local servicescript="sylpheed-kdeservicemenu.pl"
+		cd ${S}/tools/kdeservicemenu
+		for f in sylpheed-attach-files.desktop sylpheed-compress-attach.desktop; do
+			sed -e "s:SCRIPT_PATH:${kdeprefix}/bin/${servicescript}:g" template_$f > $f
+			install -m 0644 $f ${D}/${kdeprefix}/share/apps/konqueror/servicemenus/$f
+		done
+		insinto ${kdeprefix}/bin
+		doexe ${servicescript}
+	fi
 }
 
 pkg_postinst() {
 	ewarn
 	ewarn "You have to re-emerge or update all external plugins"
-	use mbox && ewarn "There is no updated version of the mailmbox plugin available yet."
-	use calendar && ewarn "There is no updated version of the calendar plugin available yet."
 	ewarn
 	epause 5
 	ebeep 3
