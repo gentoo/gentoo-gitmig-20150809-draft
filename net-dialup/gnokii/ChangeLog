@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/gnokii
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/ChangeLog,v 1.8 2004/02/22 01:53:25 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gnokii/ChangeLog,v 1.9 2004/03/06 13:12:22 lanius Exp $
+
+  06 Mar 2004; Heinrich Wendel <lanius@gentoo.org> gnokii-0.5.10.ebuild:
+  mark gnokii-0.5.10 stable because of a serious bug in the previous version (bug
+  #42909)
 
 *gnokii-0.5.10 (22 Feb 2004)
 
