@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.6.0_rc3.ebuild,v 1.2 2003/05/19 02:47:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.6.0_rc3.ebuild,v 1.3 2003/05/31 07:43:29 seemant Exp $
 
 # The release candidates are named syslog-ng-1.6.0rc1 for example
 MY_P=${P/_/} 
@@ -45,7 +45,7 @@ src_install() {
 	dodoc doc/{syslog-ng.conf.sample,syslog-ng.conf.demo,stresstest.sh}
 	dodoc doc/sgml/{syslog-ng.dvi,syslog-ng.ps,syslog-ng.sgml,syslog-ng.txt}
 	dodoc contrib/syslog2ng
-	dohtml doc/sgml/syslog-ng.html
+	dohtml doc/sgml/syslog-ng.html/*
 
 	# Install default configuration
 	dodir /etc/syslog-ng
