@@ -1,0 +1,11 @@
+# ChangeLog for app-office/imposter
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/imposter/ChangeLog,v 1.1 2004/06/15 19:54:21 squinky86 Exp $
+
+*imposter-0.2 (15 Jun 2004)
+
+  15 Jun 2004; Jon Hood <squinky86@gentoo.org> +metadata.xml,
+  +imposter-0.2.ebuild:
+  Initial commit. Ebuild by S.Caglar Onur <caglar.onur@tubitak.gov.tr>. Closes
+  #49845. Also thanks to Redeeman <redeeman@metanurb.dk> for ebuild cleanup.
+
