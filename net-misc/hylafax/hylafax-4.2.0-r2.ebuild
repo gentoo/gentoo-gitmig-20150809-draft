@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.2.0-r1.ebuild,v 1.6 2005/01/11 15:34:23 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/hylafax-4.2.0-r2.ebuild,v 1.1 2005/01/11 15:34:23 kingtaco Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.hylafax.org/source/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="hylafax"
-KEYWORDS="x86 sparc ~hppa ~alpha ~amd64 ~ppc"
+KEYWORDS="x86 sparc hppa ~alpha amd64 ~ppc"
 
 DEPEND="!faxonly? ( net-dialup/mgetty )
 	>=sys-libs/zlib-1.1.4
@@ -33,7 +33,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-faxcron_uid.patch
 	epatch ${FILESDIR}/${P}-tiff_version.patch
 	epatch ${FILESDIR}/configure-gcc-3.4.patch
-	epatch ${FILESDIR}/hylafax-4.2.0-fPIC.patch
+	epatch ${FILESDIR}/hylafax-hostvuln.patch
 }
 
 src_compile() {
