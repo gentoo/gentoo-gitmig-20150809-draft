@@ -1,17 +1,18 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer:  Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/glut-3.7.ebuild,v 1.8 2002/01/24 18:19:43 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/glut-3.7-r2.ebuild,v 1.1 2002/02/25 04:09:51 azarah Exp $
 
 MESA_VER="4.0.1"
 S=${WORKDIR}/Mesa-${MESA_VER}
-DESCRIPTION=""
+DESCRIPTION="The OpenGL Utility Toolkit (GLUT)"
 SRC_URI="http://prdownloads.sourceforge.net/mesa3d/MesaLib-${MESA_VER}.tar.bz2
 	http://prdownloads.sourceforge.net/mesa3d/MesaDemos-${MESA_VER}.tar.bz2"
 HOMEPAGE="http://www.opengl.org/developers/documentation/glut/"
 
 DEPEND="virtual/glibc
-	virtual/opengl"
+	virtual/opengl
+	virtual/glu"
 	
 
 PROVIDE="virtual/glut"
@@ -29,7 +30,13 @@ src_install() {
 
 	insinto /usr/lib
 	doins ${S}/src-glut/libglut.la
+	dosed -e "s: -L${S}/si-glu : -L/usr/lib :" /usr/lib/libglut.la
+	dosed -e "s:/usr/local/lib:/usr/lib:g" /usr/lib/libglut.la
+	dosed -e "s:installed=no:installed=yes:" /usr/lib/libglut.la
+	
 	dolib.so ${S}/src-glut/.libs/libglut.so.${PV}.0
+	dosym libglut.so.${PV}.0 /usr/lib/libglut.so
+	
 	insinto /usr/include/GL
 	doins ${S}/include/GL/glut*
 

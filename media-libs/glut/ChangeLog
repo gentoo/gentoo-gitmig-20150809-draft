@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/glut
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/ChangeLog,v 1.1 2002/02/01 21:53:30 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/glut/ChangeLog,v 1.2 2002/02/25 04:09:51 azarah Exp $
+
+*glut-3.7-r2 (26 Feb 2002)
+
+  26 Feb 2002; M.Schlemmer <azarah@gentoo.org> glut-3.7-r2.ebuild :
+
+  Fix wacky paths in /usr/lib/libglut.la.
 
 *glut-3.7-r1 (1 Feb 2002)
 
