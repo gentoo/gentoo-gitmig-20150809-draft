@@ -113,3 +113,5 @@
 #sys-devel/gdb
 #sys-kernel/linux
 #sys-libs/lib-compat  
+#rc6 initscripts
+<app-admin/fcron-1.1.1-r6

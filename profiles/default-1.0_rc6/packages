@@ -136,3 +136,4 @@
 #>=net-fs/samba-2.0.10-r6
 >=sys-apps/at-3.1.8-r6
 *>=sys-apps/isapnptools-1.23-r6
+>=app-admin/fcron-1.1.1-r6
