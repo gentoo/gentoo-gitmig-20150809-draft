@@ -1,0 +1,27 @@
+diff -urN klaptopdaemon/linux/cistpl.h klaptopdaemon/linux/cistpl.h
+--- klaptopdaemon/linux/cistpl.h	2001-03-16 09:29:21.000000000 -0300
++++ klaptopdaemon/linux/cistpl.h	2003-08-05 04:48:49.000000000 -0300
+@@ -161,7 +161,6 @@
+ 
+ typedef struct cistpl_funce_t {
+     u_char	type;
+-    u_char	data[0];
+ } cistpl_funce_t;
+ 
+ /*======================================================================
+@@ -226,7 +225,6 @@
+     u_char	escape;
+     u_char	encrypt;
+     u_char	misc_features;
+-    u_char	ccitt_code[0];
+ } cistpl_data_serv_t;
+ 
+ typedef struct cistpl_fax_serv_t {
+@@ -236,7 +234,6 @@
+     u_char	encrypt;
+     u_char	features_0;
+     u_char	features_1;
+-    u_char	ccitt_code[0];
+ } cistpl_fax_serv_t;
+ 
+ typedef struct cistpl_voice_serv_t {
