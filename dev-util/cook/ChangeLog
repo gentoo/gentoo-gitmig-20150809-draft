@@ -1,0 +1,14 @@
+# ChangeLog for dev-utils/cook
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cook/ChangeLog,v 1.1 2002/02/18 18:52:48 karltk Exp $
+
+*cook-2.18 ( 18 Feb 2002 )
+
+  18 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ChangeLog cook-2.18.ebuild files/digest-cook-2.18
+
+  Cook is a tool for constructing files. It is given a set of files to create,
+  and recipes of how to create them. In any non-trivial program there will be
+  prerequisites to performing the actions necessary to creating any file, such
+  as include files. Cook provides a mechanism to define these.
+
+  Ebuild submitted by Sean Mitchell <sean@arawak.tzo.org>.
