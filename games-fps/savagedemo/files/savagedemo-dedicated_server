@@ -1,3 +1,4 @@
 #!/bin/sh
+mkdir ${HOME}/.savage >& /dev/null
 cd /opt/savagedemo
 exec ./dedicated_server.sh "$@"
