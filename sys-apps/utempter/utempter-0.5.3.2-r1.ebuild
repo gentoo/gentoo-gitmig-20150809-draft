@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/utempter-0.5.3.2-r1.ebuild,v 1.1 2004/03/13 08:05:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/utempter/utempter-0.5.3.2-r1.ebuild,v 1.2 2004/04/08 03:07:32 spyderous Exp $
 
 inherit rpm eutils
 
@@ -19,6 +19,12 @@ RDEPEND="virtual/glibc"
 
 pkg_setup() {
 	enewgroup utmp 406
+}
+
+src_unpack() {
+	rpm_src_unpack
+#	cd ${S}
+	epatch ${FILESDIR}/${P}-soname-makefile-fix.patch
 }
 
 src_compile() {
