@@ -1,0 +1,5 @@
+MD5 b0b8d1705ea99ce685187102447cf286 eflite-0.3.8.ebuild 816
+MD5 22998fc89adf72c75477733fa54a291a ChangeLog 463
+MD5 4f5d797c455932135181f0c31b5e71b2 metadata.xml 185
+MD5 2fa2755f77640d9f4656a5a73dcb3995 files/eflite-0.3.8-shared_flite.patch 2116
+MD5 0f5da4dd97b480750c68391658e4bee6 files/digest-eflite-0.3.8 63
