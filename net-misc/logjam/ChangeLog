@@ -1,6 +1,8 @@
 # ChangeLog for net-misc/logjam
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/ChangeLog,v 1.16 2004/04/20 02:14:55 khai Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/ChangeLog,v 1.17 2004/04/27 09:27:21 aliz Exp $
+
+*logjam-4.4.0 (19 Apr 2004)
 
   19 Apr 2004; <khai@gentoo.org> logjam-4.3.2.ebuild:
   Version bump, closes #48344.  Marked logjam-4.3.2 stable on x86.

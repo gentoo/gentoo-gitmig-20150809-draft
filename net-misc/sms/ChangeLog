@@ -1,9 +1,13 @@
 # ChangeLog for net-misc/sms
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sms/ChangeLog,v 1.2 2004/04/22 08:46:31 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sms/ChangeLog,v 1.3 2004/04/27 09:27:21 aliz Exp $
+
+*sms-1.9.2k (22 Apr 2004)
 
   22 Apr 2004; Daniel Black <dragonheart@gentoo.org> sms-1.9.2k.ebuild:
   version bump
+
+*sms-1.9.2i (20 Apr 2004)
 
   20 Apr 2004; Daniel Black <dragonheart@gentoo.org> sms-1.9.2i.ebuild:
   initial commit - thanks to Adam Piatyszek <ediap@et.put.poznan.pl> for the
