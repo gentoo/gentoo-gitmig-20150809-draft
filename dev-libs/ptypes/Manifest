@@ -2,7 +2,7 @@ MD5 f844c8cce77082c25da149d74b795927 ChangeLog 964
 MD5 dd42a3a268812d561d4159887341a83a ptypes-1.7.4.ebuild 670
 MD5 814549504e970d3a53255966ace26b39 ptypes-1.7.5.ebuild 670
 MD5 7ffd6d975e7133e31a43e38d60ed1a0e ptypes-1.8.2.ebuild 672
-MD5 aa25119b3646254c9424206730e931ed ptypes-1.8.3.ebuild 672
+MD5 fc51c8fcd596c83c0b4578f6db4f1899 ptypes-1.8.3.ebuild 680
 MD5 ac9727774e731871409c39efb5e7f80d files/digest-ptypes-1.7.4 64
 MD5 670a2069b108b32c7e54625f736a1f1f files/digest-ptypes-1.7.5 64
 MD5 ce4a0ef80b3ed572bff4164344c8027f files/digest-ptypes-1.8.2 64
