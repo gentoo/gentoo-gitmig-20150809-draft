@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.0.2.5592-r1.ebuild,v 1.2 2003/09/29 13:48:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/vmware-workstation-4.0.2.5592-r1.ebuild,v 1.3 2003/10/09 15:15:17 vapier Exp $
 
 # Unlike many other binary packages the user doesn't need to agree to a licence
 # to download VMWare. The agreeing to a licence is part of the configure step
@@ -181,6 +181,12 @@ pkg_postinst() {
 	einfo "http://www.vmware.com/download/downloadaddons.html"
 	einfo
 	einfo "After configuring, type 'vmware' to launch"
+	einfo
+	einfo "Also note that when you reboot you should run:"
+	einfo "/etc/init.d/vmware start"
+	einfo "before trying to run vmware.  Or you could just add"   
+	einfo "it to the default run level:"
+	einfo "rc-update add vmware default"
 	echo
 	ewarn "For users of glibc-2.3.x, vmware-nat support is *still* broken"
 }
