@@ -1,6 +1,11 @@
 # ChangeLog for net-www/epiphany
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.31 2003/11/08 16:48:16 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.32 2003/11/11 14:47:02 foser Exp $
+
+*epiphany-1.0.6 (11 Nov 2003)
+
+  11 Nov 2003; foser <foser@gentoo.org> epiphany-1.0.6.ebuild :
+  New version
 
   08 Nov 2003; Todd Sunderlin <todd@gentoo.org> epiphany-1.0.ebuild:
   added sparc keyword
