@@ -1,6 +1,6 @@
-# ChangeLog for net-misc/glftpd-tls
+# ChangeLog for net-ftp/glftpd-tls
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd-tls/ChangeLog,v 1.1 2003/06/16 19:01:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/glftpd-tls/ChangeLog,v 1.2 2003/06/20 04:18:12 vapier Exp $
 
 *glftpd-tls-1.30 (16 Jun 2003)
 
