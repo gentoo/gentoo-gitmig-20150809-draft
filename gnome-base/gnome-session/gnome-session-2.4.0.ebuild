@@ -1,14 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.3.90.ebuild,v 1.2 2003/09/08 05:04:45 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.4.0.ebuild,v 1.1 2003/09/10 23:39:19 foser Exp $
 
 inherit gnome2
 
-DESCRIPTION="the Gnome2 session manager"
+DESCRIPTION="Gnome session manager"
 HOMEPAGE="http://www.gnome.org/"
 
+IUSE="ipv6"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~alpha ~sparc"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64"
 LICENSE="GPL-2 LGPL-2 FDL-1.1"
 
 RDEPEND=">=x11-libs/gtk+-2.2
@@ -24,6 +25,8 @@ DEPEND="${RDEPEND}
 # gnome-base/gnome-core overwrite /usr/bin/gnome-session
 
 DOC="AUTHORS COPYING* README HACKING INSTALL NEWS TODO ChangeLog"
+
+G2CONF="${G2CONF} $(use_enable ipv6)"
 
 src_unpack() {
 	unpack ${A}
