@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.0.2-r2.ebuild,v 1.5 2002/08/11 10:56:36 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.0.2-r2.ebuild,v 1.6 2002/08/16 04:13:58 murphy Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="gtkhtml"
@@ -9,7 +9,7 @@ SRC_URI="ftp://ftp.ximian.com/pub/source/evolution/${P}.tar.gz
 
 HOMEPAGE="http://www.gnome.org/"
 LICENSE="GPL-2 LGPL-2.1"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 SLOT="0"
 
 
