@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808.ebuild,v 1.14 2004/08/28 01:28:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808.ebuild,v 1.15 2004/08/30 14:02:39 gmsoft Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -27,7 +27,7 @@ S="${WORKDIR}/${PN}-${BASE_PV}"
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
 HOMEPAGE="http://sources.redhat.com/glibc/"
 
-HPPA_PATCHES=2004-06-04
+HPPA_PATCHES=2004-08-24
 
 SRC_URI="http://dev.gentoo.org/~lv/${PN}-${BASE_PV}.tar.bz2
 	http://dev.gentoo.org/~lv/${PN}-manpages-${NEW_PV}.tar.bz2

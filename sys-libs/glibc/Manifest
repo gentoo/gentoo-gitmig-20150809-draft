@@ -1,29 +1,26 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 b2013d991c28310b8cc1ee0fffb3b147 ChangeLog 50483
 MD5 f3cfb768f888ac432bddfa481c2febce glibc-2.2.5-r9.ebuild 10877
-MD5 4b47e58e600eebddddb96287bdcc42da glibc-2.3.2-r11.ebuild 20306
-MD5 81bf9a9ef6acade533daed4761400cee glibc-2.3.4.20040619-r1.ebuild 20686
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
-MD5 230961b75f3fbc3baed1837f5f842bdf glibc-2.3.4.20040808.ebuild 21051
+MD5 9a8bc943981177078809e67dbe916042 ChangeLog 50601
+MD5 81bf9a9ef6acade533daed4761400cee glibc-2.3.4.20040619-r1.ebuild 20686
+MD5 4b47e58e600eebddddb96287bdcc42da glibc-2.3.2-r11.ebuild 20306
 MD5 cdff0e2d789aa0bda20dbe3771c107c3 glibc-2.3.3.20040420-r1.ebuild 21481
+MD5 cf51b6c1753f34946100da742353dbb2 glibc-2.3.4.20040808.ebuild 21051
 MD5 9cc1e6b6f749dba7c8759bd07266f7d9 files/digest-glibc-2.2.5-r9 143
-MD5 2d5306ef875573750af642a9f93b634a files/digest-glibc-2.3.2-r11 312
-MD5 470f57fe18dd0a94cb4a4d6cf51528af files/digest-glibc-2.3.4.20040619-r1 307
 MD5 e4393f4721a207750581d6265d5f7f40 files/fix-sysctl_h.patch 376
 MD5 52cfc7627fc62dfb26d8d163aac361f6 files/glibc-2.2.2-test-lfs-timeout.patch 320
 MD5 135f8145885a2f4f9876fe973f33ddf6 files/glibc-2.2.4-string2.h.diff 5221
 MD5 b712a49b5113fccb4c8b0ada2a30d390 files/glibc-manpages-2.2.5.tar.bz2 14610
 MD5 184eddb92615fb991dce41b9edbfa690 files/glibc-manpages-2.3.2.tar.bz2 14700
-MD5 d96bf4dc27501a58060a2f2b3d01176a files/glibc-sec-hotfix-20040804.patch 4278
 MD5 d688e44731d6e4b757382d7646c492c3 files/glibc-xdr_security.patch 6612
 MD5 c4300e2f8808cb38a308745ed8b77367 files/locales.build 602
 MD5 98ea363167dacaaad23fd9a66ba98d5b files/nscd 844
 MD5 2013443f5192d4b999953ba4248d288c files/nscd.conf 1158
 MD5 d8830438ea871dbfd1acf7a3d0299159 files/test-__thread.c 53
 MD5 4404ee4b6e3017819d8f36082e0265e5 files/test-sysctl_h.c 54
-MD5 96c4c915e773ca312b14a53ae6ce91cf files/digest-glibc-2.3.4.20040808 382
+MD5 470f57fe18dd0a94cb4a4d6cf51528af files/digest-glibc-2.3.4.20040619-r1 307
+MD5 d96bf4dc27501a58060a2f2b3d01176a files/glibc-sec-hotfix-20040804.patch 4278
+MD5 2d5306ef875573750af642a9f93b634a files/digest-glibc-2.3.2-r11 312
+MD5 2f05d3181e9a9ded61e074147af47e8e files/digest-glibc-2.3.4.20040808 382
 MD5 42af7e35fe2404a49954f91fd1aee891 files/digest-glibc-2.3.3.20040420-r1 312
 MD5 f75ebd335c4b882013cc12229d39c9f7 files/2.2.5/glibc-2.2.5-alpha-gcc3-fix.diff 475
 MD5 843eaa26ae2c49e894aa365b6f463546 files/2.2.5/glibc-2.2.5-alpha-pcdyn-fix.diff 471
@@ -106,16 +103,9 @@ MD5 847afe57e19abff1d5c49f6bb7084a3d files/2.3.3/mips-syscall.h.diff 1199
 MD5 84fa9a725c22975d735a2f91543a5cca files/2.3.3/mips-sysify.diff 2138
 MD5 81d95470c5766e56e27ad8b6967d2a16 files/2.3.3/semtimedop.diff 602
 MD5 ae9425cd4199cccd69c6d22633583dc1 files/2.3.3/ssp.c 4041
-MD5 03e0e9a2235886c0abbe98bdafd0d5ce files/2.3.4/glibc-2.3.4-hardened-sysdep-shared.patch 382
-MD5 659a9d64935d67a5938d0cb4e5fe4899 files/2.3.4/glibc-2.3.4-hppa-hardened-disable__init_arrays.patch 2310
-MD5 207e313566b3fc24e0a5ca2ffd2da1d9 files/2.3.4/glibc-2.3.4-nptl-altivec.patch 6140
 MD5 1185022e9a50560d1bf9116a0461e011 files/2.3.4/mips-sysdep-cancel.diff 2402
+MD5 03e0e9a2235886c0abbe98bdafd0d5ce files/2.3.4/glibc-2.3.4-hardened-sysdep-shared.patch 382
+MD5 207e313566b3fc24e0a5ca2ffd2da1d9 files/2.3.4/glibc-2.3.4-nptl-altivec.patch 6140
+MD5 659a9d64935d67a5938d0cb4e5fe4899 files/2.3.4/glibc-2.3.4-hppa-hardened-disable__init_arrays.patch 2310
 MD5 340825c77e38e88e0ceaa12f154cbfa3 files/2.3.4/glibc-2.3.4.20040808-i386-got-fix.diff 4203
 MD5 16f18501efd56811e724231470dc5d00 files/2.3.4/glibc-2.3.4-ld.so-brk-fix.patch 2562
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBMBC9HTu7gpaalycRAuqQAJ9uNDgAaczT0NG9Q8b5mK6YEej2CACgh/iF
-e8u24enTd6Q+i433HUBNVLQ=
-=Nz8D
------END PGP SIGNATURE-----

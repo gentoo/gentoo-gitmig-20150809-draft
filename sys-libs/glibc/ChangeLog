@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.246 2004/08/27 17:06:10 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.247 2004/08/30 14:02:38 gmsoft Exp $
+
+  30 Aug 2004; Guy Martin <gmsoft@gentoo.org> glibc-2.3.4.20040808.ebuild:
+  Updated hppa patches to 2004-08-24.
 
   27 Aug 2004; Travis Tilley <lv@gentoo.org> -glibc-2.3.4.20040605.ebuild:
   removed old ebuild
