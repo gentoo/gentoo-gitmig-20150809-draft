@@ -1,8 +1,11 @@
 # ChangeLog for dev-perl/Storable
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Storable/ChangeLog,v 1.4 2002/09/09 21:53:26 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Storable/ChangeLog,v 1.5 2002/09/13 01:23:52 mcummings Exp $
 
 *Storable-2.04 (9 Sep 2002)
+
+  12 Sep 2002;  <mcummings@gentoo.org> Storable-2.04.ebuild :
+  Corrected mising dep (thanks to Tristan Henderson) - bug 7729
 
   9 Sep 2002; <mcummings@gentoo.org> Storable-2.04.ebuild :
   Syntax fixes
