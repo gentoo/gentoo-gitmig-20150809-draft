@@ -1,0 +1,3 @@
+#!/bin/sh
+export LD_LIBRARY_PATH="/opt/bnr2/lib:${LD_LIBRARY_PATH}"
+exec /opt/bnr2/bin/BNR2 "$@"
