@@ -1,13 +1,18 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/drip/drip-0.9.0.ebuild,v 1.1 2004/10/13 18:25:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/drip/drip-0.9.0.ebuild,v 1.2 2004/11/01 01:08:07 vapier Exp $
 
 inherit eutils libtool flag-o-matic
 
-DESCRIPTION="Drip - A DVD to DIVX convertor frontend"
+DESCRIPTION="A DVD to DIVX convertor frontend"
 HOMEPAGE="http://drip.sourceforge.net/"
 SRC_URI="http://drip.sourceforge.net/files/${P}.tar.gz
 	 mirror://debian/pool/main/d/drip/drip_0.8.3.2+0.9.0-rc3-5.diff.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86"
+IUSE="nls"
 
 RDEPEND="gnome-base/gnome-libs
 	>=media-video/avifile-0.7.34
@@ -22,15 +27,9 @@ RDEPEND="gnome-base/gnome-libs
 	dev-libs/libxml2
 	sys-apps/eject
 	>=sys-devel/gcc-3"
-
 DEPEND="${RDEPEND}
 	dev-lang/nasm
 	>=sys-devel/automake-1.5-r1"
-
-LICENSE="GPL-2"
-SLOT="0"
-KEYWORDS="~x86"
-IUSE="nls"
 
 src_unpack() {
 	unpack ${A}
@@ -56,7 +55,7 @@ src_unpack() {
 	# Remove stale script ... "automake --add-missing" will add it again
 	einfo "Rerunnig autoconf/automake..."
 	cd ${S} ; rm -f ${S}/missing
-	export WANT_AUTOMAKE_1_5=1
+	export WANT_AUTOMAKE=1.5
 	aclocal -I macros
 	automake --add-missing
 	autoconf

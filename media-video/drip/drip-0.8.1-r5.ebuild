@@ -1,10 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/drip/drip-0.8.1-r5.ebuild,v 1.9 2004/06/25 00:38:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/drip/drip-0.8.1-r5.ebuild,v 1.10 2004/11/01 01:08:07 vapier Exp $
 
-DESCRIPTION="Drip - A DVD to DIVX convertor frontend"
+DESCRIPTION="A DVD to DIVX convertor frontend"
 HOMEPAGE="http://drip.sourceforge.net/"
-SRC_URI="${SRC_URI} http://drip.sourceforge.net/files/${P}.tar.gz"
+SRC_URI="http://drip.sourceforge.net/files/${P}.tar.gz"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86"
+IUSE="nls"
 
 RDEPEND="gnome-base/gnome-libs
 	>=media-video/avifile-0.7.4.20020426-r2
@@ -13,15 +18,9 @@ RDEPEND="gnome-base/gnome-libs
 	>=media-libs/libdvdcss-1.1.1
 	>=media-libs/libdvdread-0.9.2
 	media-libs/gdk-pixbuf"
-
 DEPEND="${RDEPEND}
 	dev-lang/nasm
 	>=sys-devel/automake-1.5-r1"
-
-LICENSE="GPL-2"
-SLOT="0"
-KEYWORDS="x86 -ppc"
-IUSE="nls"
 
 src_unpack() {
 	AF_MINOR_VER="$(avifile-config --data-dir | cut -d. -f2)"
@@ -66,7 +65,7 @@ src_unpack() {
 	cd ${S}
 	# Remove stale script ... "automake --add-missing" will add it again
 	rm -f ${S}/missing
-	export WANT_AUTOMAKE_1_5=1
+	export WANT_AUTOMAKE=1.5
 	aclocal -I macros
 	automake --add-missing
 	autoconf
@@ -74,7 +73,7 @@ src_unpack() {
 
 src_compile() {
 
-	export WANT_AUTOMAKE_1_5=1
+	export WANT_AUTOMAKE=1.5
 
 	local myconf
 	use nls || myconf="--disable-nls"
