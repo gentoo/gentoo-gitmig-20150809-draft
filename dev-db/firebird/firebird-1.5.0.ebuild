@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.0.ebuild,v 1.8 2004/06/24 21:53:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/firebird-1.5.0.ebuild,v 1.9 2004/06/29 15:34:12 agriffis Exp $
 
 inherit flag-o-matic eutils
 
@@ -15,7 +15,7 @@ KEYWORDS="x86"
 IUSE="inetd"
 RESTRICT="nouserpriv"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	inetd? ( virtual/inetd )"
 
 S=${WORKDIR}/${P}.${extra_ver}
