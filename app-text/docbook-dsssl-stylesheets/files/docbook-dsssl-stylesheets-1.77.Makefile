@@ -1,5 +1,5 @@
 BINDIR = /usr/bin
-DESTDIR = /usr/share/sgml/docbook/dsssl-stylesheets-1.64
+DESTDIR = /usr/share/sgml/docbook/dsssl-stylesheets-1.76
 
 all: install
 
@@ -22,7 +22,4 @@ install:
 	cp html/*.dsl $(DESTDIR)/html
 	cp lib/*.dsl $(DESTDIR)/lib
 	cp print/*.dsl $(DESTDIR)/print
-	cp test/*.dsl $(DESTDIR)/test
-	cp test/*.sgm $(DESTDIR)/test
-	cp test/*.css $(DESTDIR)/test
 	cp images/*.gif $(DESTDIR)/images

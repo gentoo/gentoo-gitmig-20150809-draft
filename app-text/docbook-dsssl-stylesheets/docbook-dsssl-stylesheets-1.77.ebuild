@@ -1,20 +1,26 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-dsssl-stylesheets/docbook-dsssl-stylesheets-1.64.ebuild,v 1.5 2002/04/28 20:28:54 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-dsssl-stylesheets/docbook-dsssl-stylesheets-1.77.ebuild,v 1.1 2002/07/09 04:34:25 seemant Exp $
 
-MY_P="db164"
-S=${WORKDIR}/docbook
-DESCRIPTION=""
-SRC_URI="http://www.nwalsh.com/docbook/dsssl/${MY_P}.zip"
-HOMEPAGE="http://www.nwalsh.com/docbook/dsssl/"
+MY_P=${P/-stylesheets/}
+S=${WORKDIR}/${MY_P}
+DESCRIPTION="DSSSL Stylesheets for DocBook."
+SRC_URI="mirror://sourceforge/docbook/${MY_P}.tar.gz"
+HOMEPAGE="http://www.sourceforge.net/docbook/"
 
-DEPEND=">=app-arch/unzip-5.41"
 RDEPEND="app-text/sgml-common"
 
-src_install () {
+SLOT="0"
+LICENSE="as-is"
+KEYWORDS="*"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
 	cp ${FILESDIR}/${P}.Makefile Makefile
+}
+
+src_install () {
 
 	make \
 		BINDIR="${D}/usr/bin" \
