@@ -3,6 +3,9 @@
 # $Header: /home/cvsroot/gentoo-x86/media-sound/mbrola/mbrola-3.0.1h.ebuild,v
 # 1.0 2002/05/07 03:58:19 naz Exp $
 
+  12 Nov 2003; Ciaran McCreesh <ciaranm@gentoo.org> mbrola-3.0.1h-r1.ebuild:
+  Made -sparc as the binary will not work. Thanks to gust4voz in #gentoo-sparc
+
   12 Jun 2003; <msterret@gentoo.org> mbrola-3.0.1h-r1.ebuild:
   fix Header
 
