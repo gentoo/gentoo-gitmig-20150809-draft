@@ -1,4 +1,4 @@
-MD5 20e2a817d925b43799a0c0bb4104f9db ChangeLog 8103
+MD5 3675bd639724c698c67369bfbdff3648 ChangeLog 8288
 MD5 63bd6e87942a25d48bd5365edd8246c0 metadata.xml 268
 MD5 af980038dfeb68c33f10ce7f7a8664bd proftpd-1.2.5-r1.ebuild 2484
 MD5 8403cc3447fabc18a92eeb5dc891ed26 proftpd-1.2.7.ebuild 3668
@@ -7,8 +7,8 @@ MD5 f29eb6e755937b7bd540ae7a64309a49 proftpd-1.2.9_rc1.ebuild 2908
 MD5 4f9ff456a1e0bc583b44fff8c2392e40 proftpd-1.2.9_rc2-r1.ebuild 3160
 MD5 3bc8ce3f5baacf0756ccc0a5d7d08ce9 proftpd-1.2.9_rc2.ebuild 3036
 MD5 8b61bc1b4a71805531b36c33915858dd proftpd-1.2.9_rc3.ebuild 3123
-MD5 9e47bcea764c8c0102b1f209f7ea8cb9 proftpd-1.2.9.ebuild 3018
-MD5 ceae0e2b800c4e2cb2bef5184bc928c9 proftpd-1.2.9-r1.ebuild 3117
+MD5 62650c3bb171e990434577969ea2b288 proftpd-1.2.9.ebuild 3326
+MD5 c377bba2c44a2bc85872fa39e300dbb8 proftpd-1.2.9-r1.ebuild 3421
 MD5 6236a589ef01778d118911281b20be51 files/digest-proftpd-1.2.5-r1 66
 MD5 c1dc1d9278d5b77f53ea44ee848dafc6 files/digest-proftpd-1.2.7 211
 MD5 cb6cd6133728449d0da092b1d6147b9d files/digest-proftpd-1.2.8 66

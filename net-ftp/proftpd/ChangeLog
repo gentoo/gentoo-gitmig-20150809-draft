@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.51 2004/02/12 19:14:14 blkdeath Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.52 2004/02/12 19:47:21 blkdeath Exp $
+
+  12 Feb 2004; Stewart Honsberger <blkdeath@gentoo.org>
+  proftpd-1.2.9-r1.ebuild, proftpd-1.2.9.ebuild:
+  Re: Bug #40260; add warning to ebuild if both USE=postgres and mysql are set
 
 *proftpd-1.2.9-r1 (12 Feb 2004)
 

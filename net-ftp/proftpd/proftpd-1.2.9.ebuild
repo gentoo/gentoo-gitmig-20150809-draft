@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.9.ebuild,v 1.9 2004/01/31 14:26:46 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.9.ebuild,v 1.10 2004/02/12 19:47:21 blkdeath Exp $
 
 inherit flag-o-matic
 
@@ -41,6 +41,15 @@ src_compile() {
 		einfo ssl
 		# enable mod_tls
 		modules="${modules}:mod_tls"
+	fi
+
+	if use mysql && use postgres
+	then
+		ewarn "ProFTPD only supports either the MySQL or PostgreSQL modules."
+		ewarn "Presently this ebuild defaults to mysql. If you would like to"
+		ewarn "change the default behaviour, merge ProFTPD with;"
+		ewarn "USE=\"-mysql postgres\" emerge proftpd"
+		sleep 5
 	fi
 
 	if use mysql; then
