@@ -1,4 +1,6 @@
+MD5 32c05ad43481aed129300d9bc06b008c omni-0.9.1.ebuild 1371
 MD5 c60a08cba144da3856c3be78bca37788 omni-0.9.0.ebuild 1265
-MD5 d02d84fc3384cc94f29a828a78f9acdc ChangeLog 778
+MD5 21808ddf567431f7809e9ad2b0d3199a ChangeLog 857
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 a0f001bbeec0ec15dff8fac7e9790527 files/digest-omni-0.9.0 63
+MD5 b4fb01c3394f59f16ff3ecffb7457ec1 files/digest-omni-0.9.1 63
