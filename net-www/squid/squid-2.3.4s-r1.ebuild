@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.3.4s-r1.ebuild,v 1.4 2000/11/02 08:31:53 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squid/squid-2.3.4s-r1.ebuild,v 1.5 2000/12/22 01:07:22 drobbins Exp $
 
 P=squid-2.3.STABLE4
 A=${P}-src.tar.gz
@@ -18,7 +18,7 @@ src_compile() {
  cd ${S}
  LDFLAGS="$LDFLAGS -lresolv" try ./configure --host=${CHOST} \
 	--prefix=/usr --sysconfdir=/etc/squid \
-	--localstatedir=/var/squid \
+	--localstatedir=/var/state/squid \
 	--enable-ipf-transparent --enable-useragent-log \
 	--enable-async-io --enable-icmp
  try make
@@ -43,7 +43,7 @@ src_install() {
   dodir /var/squid
   chown squid.daemon ${D}/var/squid
   try make install prefix=${D}/usr sysconfdir=${D}/etc/squid \
-	localstatedir=${D}/var/squid 
+	localstatedir=${D}/var/state/squid 
   into /usr
   cd auth_modules
   dobin LDAP/squid_ldap_auth PAM/pam_auth SMB/smb_auth NCSA/ncsa_auth
@@ -56,13 +56,13 @@ src_install() {
   cp ${O}/files/squid.conf ${D}/etc/squid
   dodir /etc/rc.d/init.d
   cp ${O}/files/squid ${D}/etc/rc.d/init.d
-  rm -r ${D}/var/squid
+#  rm -r ${D}/var/squid
   dodir /var/log/squid
   dodir /var/cache/squid
   fowners squid.daemon /var/log/squid
   fowners squid.daemon /var/cache/squid
-  fperms 644 /var/log/squid
-  fperms 644 /var/cache/squid
+  fperms 755 /var/log/squid
+  fperms 755 /var/cache/squid
 }
 
 pkg_config() {

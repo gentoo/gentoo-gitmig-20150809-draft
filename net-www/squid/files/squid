@@ -10,17 +10,21 @@ PIDFILE=/var/run/squid.pid
 EXE=/usr/bin/squid
 
 start() {
-		if [ ! -d /var/cache/squid/00 ]
+		local cachedir
+		cachedir=`cat /etc/squid/squid.conf | grep '^cache_dir' | awk '{ print $3 }'`
+		if [ ! -d ${cachedir}/00 ]
 		then
-		  $EXE -z
+			ebegin "Initializing squid cache"
+		  	$EXE -z
+			eend $? "Initialized cache." "Error initializing cache."
 		fi
-		ebegin "Starting $SERVICE..."
+		ebegin "Starting $SERVICE"
      		start-stop-daemon --start --quiet --exec $EXE -- -sYD
 		eend $? "Started $SERVICE." "Error Starting $SERVICE."
 }
 
 stop() {
-		ebegin "Stopping $SERVICE..."
+		ebegin "Stopping $SERVICE"
 		start-stop-daemon --stop --quiet --exec $EXE
 		eend $? "Stopped $SERVICE." "Error Stopping $SERVICE."
 }
