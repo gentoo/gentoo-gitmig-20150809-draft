@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.9-r5.ebuild,v 1.2 2004/11/23 22:33:24 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.9-r5.ebuild,v 1.3 2004/11/23 22:40:10 johnm Exp $
 
 ETYPE="sources"
 inherit kernel-2
@@ -26,7 +26,7 @@ SRC_URI="${KERNEL_URI} ${GPV_SRC} ${ARCH_URI}"
 DEPEND="${DEPEND} >=dev-libs/ucl-1"
 
 IUSE="ultra1"
-use ultra1 || UNIPATCH_LIST="${UNIPATCH_LIST} 1399_sparc-U1-hme-lockup.patch"
+use ultra1 || UNIPATCH_LIST="${UNIPATCH_LIST} 1399_sparc-U1-hme-lockup"
 
 pkg_postinst() {
 	postinst_sources
