@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.87 2004/11/05 11:50:16 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.88 2004/11/08 03:53:43 nerdboy Exp $
+
+  07 Nov 2004; Steve Arnold <nerdboy@gentoo.org>
+  +files/2.4.2/mppe-mppc-1.0.patch.gz, ppp-2.4.2-r2.ebuild:
+  updated mppe patch for bug 51744
 
   05 Nov 2004; Hardave Riar <hardave@gentoo.org> ppp-2.4.2-r7.ebuild:
   Stable on mips, bug #69152.
