@@ -1,6 +1,10 @@
 # ChangeLog for games-strategy/freecnc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecnc/ChangeLog,v 1.4 2004/06/24 23:27:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecnc/ChangeLog,v 1.5 2004/11/08 01:41:04 josejx Exp $
+
+  08 Nov 2004; Joseph Jezak <josejx@gentoo.org>
+  freecnc-0.2.1.31072003.ebuild:
+  Added ~ppc.
 
   03 Jun 2004; Aron Griffis <agriffis@gentoo.org> freecnc-0.2.0.ebuild,
   freecnc-0.2.1.31072003.ebuild:

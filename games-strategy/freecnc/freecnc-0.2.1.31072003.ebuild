@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecnc/freecnc-0.2.1.31072003.ebuild,v 1.4 2004/06/24 23:27:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/freecnc/freecnc-0.2.1.31072003.ebuild,v 1.5 2004/11/08 01:41:04 josejx Exp $
 
 inherit games flag-o-matic eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://gentoo/freecnc++-${PV}-src.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="zlib nocd"
 
 DEPEND="media-libs/libsdl
