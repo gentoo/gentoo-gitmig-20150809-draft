@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer>
+		<email>kumba@gentoo.org</email>
+		<description>Primary Maintainer</description>
+	</maintainer>
+	<herd>no-herd</herd>
+	<longdescription>ESR's utility for making fast comparisons among large source trees</longdescription>
+</pkgmetadata>
+
