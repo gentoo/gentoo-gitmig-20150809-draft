@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77-r3.ebuild,v 1.3 2005/02/02 20:46:14 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.77-r5.ebuild,v 1.1 2005/02/02 20:46:14 azarah Exp $
 
-PATCH_LEVEL="1.3"
+PATCH_LEVEL="1.6"
 BDB_VER="4.1.25"
 PAM_REDHAT_VER="0.77-4"
 
@@ -48,7 +48,7 @@ SRC_URI="http://www.kernel.org/pub/linux/libs/pam/pre/library/Linux-PAM-${PV}.ta
 
 LICENSE="PAM"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 s390 sh ~sparc ~x86"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sh sparc x86"
 IUSE="berkdb pwdb selinux"
 
 apply_pam_patches() {
@@ -273,7 +273,7 @@ src_install() {
 	done
 
 	cd ${S}
-	doman doc/man/*.[58]
+	doman doc/man/*.[0-9]
 
 	dodoc CHANGELOG Copyright README
 	docinto modules ; dodoc modules/README ; dodoc doc/txts/README.*
