@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/acid
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/acid/ChangeLog,v 1.3 2004/07/31 08:39:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/acid/ChangeLog,v 1.4 2004/10/11 23:10:52 eldad Exp $
+
+  12 Oct 2004; Eldad Zack <eldad@gentoo.org> acid-0.9.6_beta23.ebuild:
+  Added deps media-libs/gd and dev-php/mod_php. Added a check to see if mod_php
+  was emerged with USE=gd, and bail if not. Closes bug #63441. Thanks to
+  Benjamin Smee (strerror) <ben@disciplina.net>. Fixed typo in sedding. Closes
+  #64164. Thanks to Jakub Moc <jakub.moc@seznam.cz>.
 
   31 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
   acid-0.9.6_beta23.ebuild:
