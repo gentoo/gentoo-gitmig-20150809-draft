@@ -1,6 +1,7 @@
 MD5 916d2c35d8baa079ceac7b2fd0beac19 ChangeLog 1552
 MD5 803a571b73ce6340f1628ec342506d30 mosix-user-1.5.7.ebuild 1509
 MD5 13fc57e7132934a6469d45e53e8a33bf mosix-user-1.8.0.ebuild 1735
+MD5 beb9efce81ae2c582a621528fc783095 metadata.xml 373
 MD5 2e34d15e58268e92280e80977d3cc1d7 files/digest-mosix-user-1.5.7 63
 MD5 6833450c62a97c1d22650dc6ca39a389 files/digest-mosix-user-1.8.0 60
 MD5 0394b3e0c079a81ee5f1980c6c99ad4a files/mosix 698
