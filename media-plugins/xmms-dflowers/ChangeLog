@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/xmms-dflowers
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dflowers/ChangeLog,v 1.15 2004/09/15 19:23:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dflowers/ChangeLog,v 1.16 2004/11/27 20:14:27 corsair Exp $
+
+  27 Nov 2004; Markus Rothe <corsair@gentoo.org> xmms-dflowers-1.2.1.ebuild:
+  Added ~ppc64 to KEYWORDS; bug #72240
 
   15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-dflowers-1.2.1.ebuild:
