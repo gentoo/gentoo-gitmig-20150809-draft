@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/subversion
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.90 2004/07/23 22:00:32 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/ChangeLog,v 1.91 2004/08/04 09:46:11 pauldv Exp $
+
+  04 Aug 2004; <pauldv@gentoo.org> subversion-1.0.6.ebuild:
+  Make the java stuff compile in all cases by specifying an encoding 
+  (needed for a french author name) and a source version (needed for 1.5 
+  jdk's)
 
   23 Jul 2004; Travis Tilley <lv@gentoo.org> subversion-1.0.6.ebuild:
   stable on amd64

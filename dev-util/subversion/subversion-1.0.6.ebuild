@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.0.6.ebuild,v 1.6 2004/07/23 22:00:32 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.0.6.ebuild,v 1.7 2004/08/04 09:46:11 pauldv Exp $
 
 inherit elisp-common libtool python eutils
 
@@ -152,7 +152,7 @@ src_compile() {
 				--with-apr=/usr --with-apr-util=/usr"
 			use apache2 || myconfj=""
 			econf ${myconfj} || die "Configuration failed"
-			make || die "Compilation failed"
+			make JAVACFLAGS="-source 1.3 -encoding iso8859-1" || die "Compilation failed"
 			cd ${S}
 		fi
 	fi
