@@ -59,3 +59,4 @@ move net-mail/sylpheed-claws mail-client/sylpheed-claws
 move net-mail/xfmail mail-client/xfmail
 move net-mail/ximian-connector mail-client/ximian-connector
 move net-mail/drac mail-client/drac
+move net-mail/sendmail mail-mta/sendmail
