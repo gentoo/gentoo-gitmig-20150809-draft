@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-statsme/halflife-statsme-2.7.1.ebuild,v 1.5 2004/06/28 22:09:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-server/halflife-statsme/halflife-statsme-2.7.1.ebuild,v 1.6 2004/07/20 01:51:29 vapier Exp $
 
 inherit games eutils
 
@@ -24,7 +24,7 @@ S=${WORKDIR}
 
 src_unpack() {
 	for m in cstrike dod tfc ; do
-		useq no${m} && continue
+		use no${m} && continue
 		mkdir ${S}/${m}
 		cd ${S}/${m}
 		unpack statsme-${PV}-${m}.zip
@@ -40,7 +40,7 @@ src_unpack() {
 src_install() {
 	local dir=${GAMES_PREFIX_OPT}/halflife/addons/statsme
 	for m in cstrike dod tfc ; do
-		useq no${m} && continue
+		use no${m} && continue
 		dodir ${dir}-${m}
 		cd ${S}/${m}/addons/statsme
 		#sed -i "s:addons/statsme/:../addons/statsme-${m}/:g" \
