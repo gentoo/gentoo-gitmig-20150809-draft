@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/skstream
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/skstream/ChangeLog,v 1.6 2003/09/24 17:28:50 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/skstream/ChangeLog,v 1.7 2003/10/24 13:03:00 aliz Exp $
 
 *skstream-0.2.5 (25 Sep 2003)
 
@@ -9,7 +9,9 @@
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*skstream-0.2.4 (1 Okt 2002) Bart Verwilst <verwilst@gentoo.org>
+*skstream-0.2.4 (1 Oct 2002) 
+
+  01 Oct 2002; Bart Verwilst <verwilst@gentoo.org>
 
   bugfix update
 

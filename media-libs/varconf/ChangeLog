@@ -1,10 +1,12 @@
 # ChangeLog for media-libs/varconf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/varconf/ChangeLog,v 1.5 2003/02/12 07:17:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/varconf/ChangeLog,v 1.6 2003/10/24 13:03:29 aliz Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*varconf-0.5.4 (1 Okt 2002) Bart Verwilst <verwilst@gentoo.org>:
+*varconf-0.5.4 (1 Oct 2002) 
+
+  01 Oct 2002; Bart Verwilst <verwilst@gentoo.org>:
 
   bugfix release
 

@@ -1,6 +1,6 @@
 # ChangeLog for media-libs/janus
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/janus/ChangeLog,v 1.6 2003/09/24 17:32:39 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/janus/ChangeLog,v 1.7 2003/10/24 13:01:42 aliz Exp $
 
 *janus-0.4.6 (25 Sep 2003)
 
@@ -9,7 +9,9 @@
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
-*janus-0.4.5 (1 Okt 2002) Bart Verwilst <verwilst@gentoo.org>
+*janus-0.4.5 (1 Oct 2002) 
+
+  01 Oct 2002; Bart Verwilst <verwilst@gentoo.org>
 
   New version, + added optional gtk dep
 
