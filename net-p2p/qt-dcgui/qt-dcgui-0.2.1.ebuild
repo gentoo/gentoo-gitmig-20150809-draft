@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/qt-dcgui/qt-dcgui-0.2_rc5.ebuild,v 1.1 2003/01/10 17:09:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/qt-dcgui/qt-dcgui-0.2.1.ebuild,v 1.1 2003/01/21 03:34:53 vapier Exp $
 
 MY_P="${P/qt-/}"
 MY_P="${MY_P/_/}"
