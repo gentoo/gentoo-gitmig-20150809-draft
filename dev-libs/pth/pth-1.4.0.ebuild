@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/pth-1.4.0.ebuild,v 1.9 2003/02/13 10:50:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pth/pth-1.4.0.ebuild,v 1.10 2003/11/25 03:32:24 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU Portable Threads"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnu.org/software/pth/"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc ~alpha"
 
 DEPEND="virtual/glibc"
 
