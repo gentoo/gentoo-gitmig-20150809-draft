@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.55.ebuild,v 1.5 2003/03/01 23:38:35 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.55.ebuild,v 1.6 2003/03/10 10:10:51 vapier Exp $
 
 # bug #11681; get b0rked code when using -march=k6 with this package.
 inherit flag-o-matic
@@ -80,6 +80,7 @@ src_compile() {
 
 	#glibc-2.3.2_pre fix; bug #16496
 	export CFLAGS="${CFLAGS} -DHAVE_ERRNO_AS_DEFINE=1"
+	export CXXFLAGS="${CFLAGS} -DHAVE_ERRNO_AS_DEFINE=1"
 
 	# the compiler flags are as per their "official" spec ;-)
 	einfo "\$myconf is $myconf"
