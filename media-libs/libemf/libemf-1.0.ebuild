@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/libemf-1.0.ebuild,v 1.3 2004/02/15 13:17:04 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libemf/libemf-1.0.ebuild,v 1.4 2004/02/18 11:02:08 phosphan Exp $
 
 MY_P="${P/emf/EMF}"
 
@@ -13,11 +13,16 @@ KEYWORDS="x86 ~ppc"
 IUSE=""
 DEPEND=""
 
+inherit gcc
+
 S=${WORKDIR}/${MY_P}
 
 src_unpack() {
 	unpack ${A}
-	patch -p0 < ${FILESDIR}/${MY_P}-gcc3.patch || die "patch failed"
+	if [ $(gcc-major-version) -ge 3 ]; then
+		einfo "gcc >= 3, patch needed"
+		patch -p0 < ${FILESDIR}/${MY_P}-gcc3.patch || die "patch failed"
+	fi
 }
 
 src_compile() {
