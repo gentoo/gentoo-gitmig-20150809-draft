@@ -1,6 +1,12 @@
 # ChangeLog for app-emulation/emul-linux-x86-xlibs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.11 2004/08/29 03:45:50 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/emul-linux-x86-xlibs/ChangeLog,v 1.12 2004/08/29 23:15:42 kugelfang Exp $
+
+*emul-linux-x86-xlibs-1.2-r1 (30 Aug 2004)
+
+  30 Aug 2004; Danny van Dyk <kugelfang@gentoo.org> +files/XI18N_OBJS,
+  +files/XLC_LOCALE, +emul-linux-x86-xlibs-1.2-r1.ebuild:
+  Fixed BUG #62110. Workaround by Evgeny Stambulchik.
 
   28 Aug 2004; Travis Tilley <lv@gentoo.org> emul-linux-x86-xlibs-1.2.ebuild:
   stable on amd64
