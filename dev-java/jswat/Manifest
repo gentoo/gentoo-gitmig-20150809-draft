@@ -1,19 +1,23 @@
-MD5 4a2488230fa95e5d4d5da6554eab73f2 jswat-2.25.ebuild 1357
-MD5 9ff2fc96cfea33c5246652974411869b jswat-2.27.ebuild 1581
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 cb9eed91d9eac1efd7f9ec0ee49096f6 jswat-1.7.1-r1.ebuild 897
-MD5 9e8b149153c2cfef68fda256629a1a7f jswat-2.25-r1.ebuild 1587
 MD5 471d23b247628d552c9279f2397780bb jswat-2.21-r1.ebuild 1357
-MD5 0a546463159b731d9c2b755b85a99e38 jswat-2.28.ebuild 1580
-MD5 35fed9771a84feadff11d87c37b35021 ChangeLog 3984
+MD5 be13f7e21ed3d493a230317a5633731a ChangeLog 4178
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 610f1b3edaa13d060f75e4b39af09e35 jswat-2.34.ebuild 1570
 MD5 b7b3e490432793c593c9694f882a2163 files/digest-jswat-1.7.1-r1 64
 MD5 5fb69786d5458d626f0c04fd59d7be5b files/jswat 1411
-MD5 bb970d9369dc57864ae0ae76592073fe files/digest-jswat-2.25 67
-MD5 59a89ad5cf0de07763502362294c8d18 files/digest-jswat-2.27 64
-MD5 b9ca7d671b0f215a25e0cccf0dfa282e files/digest-jswat-2.28 64
+MD5 ff292abee441bd03a5a31733da598235 files/digest-jswat-2.34 64
 MD5 5cbb19f7d395ac847f9ab66bfc86262c files/build.xml.patch 677
 MD5 56036ddb69a86ea3ef40cb26fd444257 files/jswat2 1225
 MD5 52d53eb4cc81c586df4ba5b11dc5a682 files/digest-jswat-2.21-r1 67
-MD5 bb970d9369dc57864ae0ae76592073fe files/digest-jswat-2.25-r1 67
 MD5 dfdb6d1b85d8fbb055bd57e6bc30aab2 files/2.21/jswat2 1220
 MD5 070f409edc50e7b85e80227e51af7a5f files/2.21/build.xml.diff 730
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCTnzz/rLF9B432nYRArJrAKCl/fN85XOetKIasBuwG+KGuz2LHwCgsS/l
+b6WenEwMUKQYckrsCdXKQug=
+=NS+I
+-----END PGP SIGNATURE-----
