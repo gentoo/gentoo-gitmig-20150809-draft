@@ -5,6 +5,7 @@ berkdb
 bitmap-fonts
 crypt
 cups
+font-server
 fortran
 f77
 encode
@@ -41,6 +42,8 @@ ssl
 svga
 tcpd
 truetype
+truetype-fonts
+type1-fonts
 X
 xml2
 xmms

@@ -10,6 +10,7 @@ cups
 encode
 fortran
 f77
+font-server
 foomaticdb
 gdbm
 gif
@@ -42,6 +43,8 @@ spell
 ssl
 tcpd
 truetype
+truetype-fonts
+type1-fonts
 X
 xml2
 xmms
