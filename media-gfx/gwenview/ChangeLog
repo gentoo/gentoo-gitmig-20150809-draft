@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/gwenview
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/ChangeLog,v 1.25 2005/03/22 19:16:32 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gwenview/ChangeLog,v 1.26 2005/03/25 11:51:19 lanius Exp $
+
+  25 Mar 2005; Heinrich Wendel <lanius@gentoo.org> gwenview-1.2.0_pre4.ebuild:
+  add kipi use flag, bug #84149
 
 *gwenview-1.2.0_pre4 (22 Mar 2005)
 
