@@ -1,8 +1,14 @@
 # ChangeLog for media-video/xawtv
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/ChangeLog,v 1.11 2002/12/13 01:00:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xawtv/ChangeLog,v 1.12 2002/12/15 12:16:46 seemant Exp $
 
 *xawtv-3.81 (12 Dec 2002)
+
+  15 Dec 2002; Seemant Kulleen <seemant@gentoo.org> xawtv-3.80.ebuild
+  xawtv-3.81.ebuild :
+
+  Sed out #define MMX for non-MMX enabled architectures (USE based).  Thanks
+  to rajiv@gentoo.org (Rajiv Manglani) in bug #12179.
 
   12 Dec 2002; Seemant Kulleen <seemant@gentoo.org> xawtv-3.81.ebuild
   files/digest-xawtv-3.81 :
