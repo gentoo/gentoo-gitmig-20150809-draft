@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109.ebuild,v 1.9 2004/01/13 11:03:11 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109-r1.ebuild,v 1.1 2004/01/13 11:03:11 solar Exp $
 
 DESCRIPTION="Network monitoring tools including ping and ping6"
 HOMEPAGE="ftp://ftp.inr.ac.ru/ip-routing"
@@ -8,13 +8,12 @@ SRC_URI="ftp://ftp.inr.ac.ru/ip-routing/${PN}-ss${PV}-try.tar.bz2"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~alpha ppc ~hppa ~mips ~amd64 ~ia64 ~ppc64"
-IUSE="static" #doc
+KEYWORDS="~x86 ~sparc ~alpha ~ppc ~hppa ~mips ~amd64 ~ia64 ppc64"
+IUSE="static ipv6" #doc
 
 DEPEND="virtual/glibc
 	virtual/os-headers
 	!ppc64? ( dev-util/yacc )"
-#	not marked stable at all on ppc64?
 #	doc? ( app-text/openjade
 #		dev-perl/SGMLSpm
 #		app-text/docbook-sgml-dtd
@@ -32,6 +31,8 @@ src_unpack() {
 	sed -e "27s:-O2:${CFLAGS}:;68s:./configure:unset CFLAGS\;./configure:" -i Makefile
 	sed -e "20d;21d;22d;23d;24d" -i Makefile
 
+	# not everybody wants ipv6 suids laying around on the filesystems
+	use ipv6 || sed -i -e s:"IPV6_TARGETS=":"#IPV6_TARGETS=":g Makefile
 }
 
 src_compile() {
@@ -74,16 +75,22 @@ src_install() {
 
 	cd ${S}
 	into /
-	dobin ping ping6
+	dobin ping
+	use ipv6 && dobin ping6
 	dosbin arping
 	into /usr
-	dobin tracepath tracepath6 traceroute6
+	dobin tracepath
+	use ipv6 && dobin trace{path,route}6
 	dosbin clockdiff rarpd rdisc ipg tftpd
 
-	fperms 4755 /bin/ping /bin/ping6 /usr/bin/tracepath \
-		/usr/bin/tracepath6 /usr/bin/traceroute6
+	fperms 4711 /bin/ping /usr/bin/tracepath
+
+	use ipv6 && fperms 4711 /bin/ping6 \
+		/usr/bin/trace{path,route}6
 
 	dodoc INSTALL RELNOTES
+
+	use ipv6 || rm doc/*6.8
 	doman doc/*.8
 
 #	if [ "`use doc`" ]; then
