@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.0.0.ebuild,v 1.1 2003/02/26 08:09:43 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.0.0.ebuild,v 1.2 2003/07/09 15:54:47 mholzer Exp $
 
 IUSE="tcpd X gtk gtk2"
 S=${WORKDIR}/${PN}
@@ -21,7 +21,7 @@ src_compile() {
 	use X && myconf="--with-x" || myconf="--without-x"
 	if [ `use gtk` ]; then
 		myconf="${myconf} --enable-gtk"
-	elif [ `use gtk2`]; then
+	elif [ `use gtk2` ]; then
 		myconf="${myconf} --enable-gtk"
 	else
 		myconf="${myconf} --disable-gtk"

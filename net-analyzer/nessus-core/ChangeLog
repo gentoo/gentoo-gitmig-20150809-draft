@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/nessus-core
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/ChangeLog,v 1.16 2003/05/23 11:49:00 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/ChangeLog,v 1.17 2003/07/09 15:54:47 mholzer Exp $
+
+  09 Jul 2003; Martin Holzer <mholzer@gentoo.org> nessus-core-1.2.7.ebuild,
+  nessus-core-2.0.0.ebuild, nessus-core-2.0.4.ebuild,
+  nessus-core-2.0.5.ebuild, nessus-core-2.0.6a.ebuild:
+  Fixing typo. Closes #24161
 
 *nessus-core-2.0.6a (23 May 2003)
 
