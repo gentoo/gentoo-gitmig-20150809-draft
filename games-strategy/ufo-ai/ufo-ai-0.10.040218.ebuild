@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-0.10.040218.ebuild,v 1.12 2004/07/01 05:34:11 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/ufo-ai/ufo-ai-0.10.040218.ebuild,v 1.13 2004/07/16 22:42:30 mr_bones_ Exp $
 
 inherit eutils games flag-o-matic
 
@@ -31,9 +31,9 @@ src_unpack() {
 src_compile() {
 	filter-flags -fstack-protector #51116
 	cd "${S}/source/linux"
-	make build_release \
+	emake build_release \
 		OPTCFLAGS="${CFLAGS}" \
-		|| die "make failed"
+		|| die "emake failed"
 }
 
 src_install() {
