@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-3.4.0_beta1.ebuild,v 1.1 2005/01/15 02:24:32 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdm/kdm-3.4.0_beta1.ebuild,v 1.2 2005/01/16 17:05:26 greg_g Exp $
 
 KMNAME=kdebase
 MAXKDEVER=$PV
@@ -34,7 +34,7 @@ src_compile() {
 
 src_install() {
 	kde-meta_src_install
-	cd ${S}/kdm && make DESTDIR=${D} GENKDMCONF_FLAGS="--no-old --no-backup" install
+	cd ${S}/kdm && make DESTDIR=${D} GENKDMCONF_FLAGS="--no-old --no-backup --no-in-notice" install
 
 	# We tell kdm to /use session files from /usr/share/xsessions.
 	# I've removed some other kdmrc mods from here, since it's not clear why
