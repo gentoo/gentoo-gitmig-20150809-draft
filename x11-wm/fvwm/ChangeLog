@@ -1,6 +1,14 @@
 # ChangeLog for x11-wm/fvwm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.38 2003/10/31 16:07:15 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/ChangeLog,v 1.39 2003/11/01 11:26:55 taviso Exp $
+
+*fvwm-2.5.8 (01 Nov 2003)
+
+  01 Nov 2003; Tavis Ormandy <taviso@gentoo.org> fvwm-2.5.8.ebuild,
+  files/disable-debug-statements.diff, files/fvwm-translucent-menus.diff.gz:
+  new fvwm development release 2.5.8, and new FvwmTabs 2.4.
+  i've included two patches, one enables fast translucent menus, the other
+  disables some noisy debug statements.
 
   31 Oct 2003; Tavis Ormandy <taviso@gentoo.org> fvwm-2.5.7-r5.ebuild:
   stable.
