@@ -918,3 +918,7 @@ net-mail/spamassassin
 # ruby-libglade-1.2 is OLD.  The 0.2[789] versions represent new
 # maintainership.
 =dev-ruby/ruby-libglade-1.2
+
+# stroke@gentoo.org 08 Jul 2002
+# media-libs/libpng-1.2.4 latest version, masked for testing
+=media-libs/libpng-1.2.4
