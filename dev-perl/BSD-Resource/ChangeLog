@@ -1,6 +1,15 @@
 # ChangeLog for dev-perl/BSD-Resource
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/BSD-Resource/ChangeLog,v 1.10 2005/01/22 12:53:19 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/BSD-Resource/ChangeLog,v 1.11 2005/02/06 12:51:23 mcummings Exp $
+
+  06 Feb 2005; Michael Cummings <mcummings@gentoo.org>
+  +files/portage_niceness.patch, BSD-Resource-1.24.ebuild:
+  This update is to include a patch to deal with users employing the
+  PORTAGE_NICENESS variable. The getpriority tests that the module uses assume
+  that there is a priority of 0 for these tests - but if you've used niceness,
+  then that isn't the case and they will fail. Instead, we leave the old
+  values and adjust them to the niceness level if PORTAGE_NICENESS has been
+  set. Bug 79329.
 
   22 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org>
   BSD-Resource-1.24.ebuild:

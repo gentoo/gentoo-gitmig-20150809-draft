@@ -1,0 +1,16 @@
+--- t/getpriority.t	1997-04-08 02:54:17.000000000 -0400
++++ t/getpriority.t.new	2005-02-06 07:37:07.092780984 -0500
+@@ -12,6 +12,13 @@
+ 
+ # AIX without BSD libs has 0..39 priorities, not -20..20.
+ $okpriopat = $Config{'osname'} eq 'aix' ? '0|19' : '0';
++my $priority = 0;
++if (defined($ENV{'PORTAGE_NICENESS'})) {
++	$priority = int($ENV{'PORTAGE_NICENESS'})
++} else {
++	$priority = 19
++}
++$okpriopat = defined($priority) ? "0|$priority" : '0';
+ 
+ $okpriopat = "^($okpriopat)";
+ 
