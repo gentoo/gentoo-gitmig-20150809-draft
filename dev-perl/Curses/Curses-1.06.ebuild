@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Per Wigren <wigren@home.se>
-# /space/gentoo/cvsroot/gentoo-x86/dev-perl/XML-Simple/XML-Simple-1.05.ebuild,v 1.1 2001/08/21 15:39:29 hallski Exp
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses/Curses-1.06.ebuild,v 1.2 2002/05/11 17:31:05 agenkin Exp $
 
 DESCRIPTION="Curses interface modules for Perl"
 HOMEPAGE="http://cpan.valueclick.com/authors/id/W/WP/WPS/${P}.readme"
