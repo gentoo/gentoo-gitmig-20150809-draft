@@ -1,8 +1,16 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.25 2002/07/31 16:43:34 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.26 2002/08/23 12:37:01 seemant Exp $
 
-xmms-1.2.7-r12 (18 Jul 2002)
+*xmms-1.2.7-r13 (23 Aug 2002)
+
+  23 Aug 2002; Seemant Kulleen <seemant@gentoo.org> xmms-1.2.7-r13.ebuild
+  files/digest-xmms-1.2.7-r13 :
+
+  Removed all avi stuff from xmms ebuild, since the xmms folks have updated
+  the avi-xmms plugin to be statically compiled against avifile.
+
+*xmms-1.2.7-r12 (18 Jul 2002)
   31 Jul 2002; Martin Schlemmer <azarah@gentoo.org> xmms-1.2.7-r12.ebuild :
   Minor form fixes.
 
@@ -17,7 +25,7 @@ xmms-1.2.7-r12 (18 Jul 2002)
 
   
 
-xmms-1.2.7-r11 (30 Jun 2002)
+*xmms-1.2.7-r11 (30 Jun 2002)
 
   30 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
   This revision tries to fix all the automake/autoconf warning, etc.
