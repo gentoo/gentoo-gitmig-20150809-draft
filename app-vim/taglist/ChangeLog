@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/taglist
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/taglist/ChangeLog,v 1.22 2004/08/20 22:40:14 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/taglist/ChangeLog,v 1.23 2004/09/05 01:36:49 ciaranm Exp $
+
+  05 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> taglist-3.4.ebuild:
+  Added help text, bug #62559
 
 *taglist-3.4 (20 Aug 2004)
 

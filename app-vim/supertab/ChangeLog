@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/supertab
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/supertab/ChangeLog,v 1.10 2004/06/24 23:03:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/supertab/ChangeLog,v 1.11 2004/09/05 01:35:12 ciaranm Exp $
+
+  05 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> supertab-0.32.ebuild:
+  Added help text, bug #62559
 
   04 Apr 2004; Ciaran McCreesh <ciaranm@gentoo.org> supertab-0.32.ebuild:
   Stable on mips
