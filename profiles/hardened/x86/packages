@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation.
+# Copyright 1999-2005 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/packages,v 1.7 2005/01/04 06:52:00 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/x86/packages,v 1.8 2005/01/21 22:20:21 solar Exp $
 
 # IMPORTANT: In order to parse this new format, you need Portage 1.6 or later!
 
@@ -44,4 +44,17 @@
 *sys-libs/pwdb
 *virtual/dev-manager
 
-#masking gcc3.4
+# masking 2.6 kernels/headers
+<sys-kernel/linux-headers-2.5
+<sys-kernel/ac-sources-2.5
+<sys-kernel/ck-sources-2.5
+<sys-kernel/gentoo-sources-2.5
+<sys-kernel/grsec-sources-2.5
+<sys-kernel/hardened-sources-2.5
+<sys-kernel/openmosix-sources-2.5
+<sys-kernel/rsbac-sources-2.5
+<sys-kernel/uclinux-sources-2.5
+<sys-kernel/usermode-sources-2.5
+<sys-kernel/vanilla-sources-2.5
+<sys-kernel/win4lin-sources-2.5
+<sys-kernel/xbox-sources-2.5

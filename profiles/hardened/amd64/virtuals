@@ -1,6 +1,9 @@
-virtual/alsa            sys-kernel/hardened-dev-sources
-virtual/kernel          sys-kernel/linux26-headers
-virtual/linux-sources   sys-kernel/hardened-dev-sources
+# Copyright 1999-2005 Gentoo Foundation.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened/amd64/virtuals,v 1.10 2005/01/21 22:20:21 solar Exp $
+
+virtual/alsa            sys-kernel/hardened-sources
+virtual/kernel          sys-kernel/linux-headers
 virtual/bootloader	sys-boot/grub-static
-virtual/os-headers	sys-kernel/linux26-headers
+virtual/os-headers	sys-kernel/linux-headers
 virtual/dev-manager	sys-fs/devfsd
