@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.1.ebuild,v 1.11 2004/11/12 15:19:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4.1.ebuild,v 1.12 2004/12/05 09:17:20 vapier Exp $
 
 inherit eutils gnuconfig
 
@@ -22,36 +22,15 @@ DEPEND="virtual/libc
 	nls? ( sys-devel/gettext )"
 RDEPEND="virtual/libc"
 
-src_unpack() {
-	unpack ${A}
-
-	cd ${S}
-#	epatch ${DISTDIR}/${PN}_1.4-${PVER}.diff.gz
-
-	gnuconfig_update
-}
-
 src_compile() {
-	local myconf=
-
-	use nls || myconf="--disable-nls"
-
-	./configure --host=${CHOST} \
-		--prefix=/usr \
+	econf \
+		$(use_enable nls) \
 		--enable-changeword \
-		${myconf} || die
-
+		|| die
 	emake || die
 }
 
 src_install() {
-	make prefix=${D}/usr \
-		libexecdir=${D}/usr/lib \
-		mandir=${D}/usr/share/man \
-		infodir=${D}/usr/share/info \
-		install || die
-
-#	rm -rf ${D}/usr/include
-
+	einstall || die
 	dodoc BACKLOG ChangeLog NEWS README* THANKS TODO
 }
