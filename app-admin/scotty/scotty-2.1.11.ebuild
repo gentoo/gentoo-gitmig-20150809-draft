@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/scotty/scotty-2.1.11.ebuild,v 1.9 2005/01/01 11:24:24 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/scotty/scotty-2.1.11.ebuild,v 1.10 2005/01/01 21:05:25 aliz Exp $
+
+inherit eutils
 
 DESCRIPTION="tcl network management extension"
 HOMEPAGE="http://wwwhome.cs.utwente.nl/~schoenw/scotty"
@@ -8,7 +10,7 @@ SRC_URI="ftp://ftp.ibr.cs.tu-bs.de/pub/local/tkined/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="x86 alpha"
+KEYWORDS="x86 alpha ~amd64"
 IUSE=""
 
 DEPEND="virtual/libc
@@ -16,22 +18,33 @@ DEPEND="virtual/libc
 	sys-devel/bison
 	dev-lang/perl
 	dev-lang/tcl
-	dev-lang/tk"
+	dev-lang/tk
+	sys-devel/autoconf"
+
+src_unpack() {
+	unpack ${A} ; cd ${S}
+
+	epatch ${FILESDIR}/${P}-suse.patch
+	epatch ${FILESDIR}/${P}-Makefile.patch
+
+	cd ${S}/unix ; autoconf
+}
 
 src_compile() {
 	cd ${S}/unix
 	econf || die
-	make || die
+	make "CFLAGS=${CFLAGS}" || die
 }
 
 src_install() {
 	cd ${S}/unix
 	dodir /usr/share/man
-	TNM_LIBRARY=${D}/usr/lib/tnm${V} \
-		make prefix=${D}/usr \
-		MAN_INSTALL_DIR=${D}/usr/share/man install
-	make prefix=${D}/usr \
-		MAN_INSTALL_DIR=${D}/usr/share/man sinstall
+#	TNM_LIBRARY=${D}/usr/lib/tnm${V} \
+#		make prefix=${D}/usr \
+#		MAN_INSTALL_DIR=${D}/usr/share/man install
+#	make prefix=${D}/usr \
+#		MAN_INSTALL_DIR=${D}/usr/share/man sinstall
+	make DESTDIR=${D} install
 	cd ${D}/usr/bin
 	perl -p -i -e 's|/.*/image||' ${D}/usr/lib/tnm2.1.11/pkgIndex.tcl
 	perl -p -i -e 's|/.*/image||' ${D}/usr/lib/tkined1.4.11/pkgIndex.tcl
