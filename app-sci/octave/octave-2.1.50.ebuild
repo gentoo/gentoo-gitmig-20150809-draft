@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.1.50.ebuild,v 1.1 2004/01/08 04:29:40 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/octave/octave-2.1.50.ebuild,v 1.2 2004/02/22 16:43:22 brad_mssw Exp $
 
 inherit flag-o-matic
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.octave.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~alpha ~sparc"
+KEYWORDS="x86 ~ppc ~alpha ~sparc amd64"
 
 DEPEND="virtual/glibc
 	>=sys-libs/ncurses-5.2-r3
