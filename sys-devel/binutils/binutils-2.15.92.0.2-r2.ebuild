@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.92.0.2-r2.ebuild,v 1.14 2005/01/05 06:38:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.15.92.0.2-r2.ebuild,v 1.15 2005/01/10 02:19:02 vapier Exp $
 
 PATCHVER="1.2"
 UCLIBC_PATCHVER="1.1"
 inherit toolchain-binutils
 
-KEYWORDS="-* ~alpha ~amd64 ~arm ~hppa ~ia64 ~sparc ~x86"
+KEYWORDS="-* ~alpha ~amd64 -arm ~hppa ~ia64 ~sparc ~x86"
 
 src_unpack() {
 	toolchain-binutils_src_unpack
