@@ -1,35 +1,65 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/bitdefender-console/bitdefender-console-7.0.1.ebuild,v 1.1 2004/11/20 15:41:44 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/bitdefender-console/bitdefender-console-7.0.1.ebuild,v 1.2 2004/11/20 15:53:30 ticho Exp $
 
-inherit rpm
-
-DESCRIPTION="Complete virus defense solution designed for easy virus prevention on Linux systems."
-HOMEPAGE="http://www.bitdefender.com/bd/site/products.php?p_id=16"
-SRC_URI="ftp://ftp.bitdefender.com/pub/linux/free/bitdefender-console/en/BitDefender-Console-Antivirus-${PV}-3.linux-gcc3x.i586.rpm"
-
-LICENSE="as-is"
-SLOT="0"
-KEYWORDS="~x86"
 IUSE=""
 
-DEPEND="app-arch/rpm2targz"
+MY_P=BitDefender-Console-Antivirus-${PV}-3.linux-gcc3x.i586.run
+S=${WORKDIR}/i386
 
-src_unpack() {
-	rpm_src_unpack ${DISTDIR}/${A} || die "Could not unpack RPM package"
+DESCRIPTION="BitDefender console antivirus"
+HOMEPAGE="http://www.bitdefender.com/"
+SRC_URI="ftp://ftp.bitdefender.com/pub/linux/free/bitdefender-console/en/${MY_P}"
+
+DEPEND="app-arch/tar
+	app-arch/gzip"
+RDEPEND="virtual/libc"
+PROVIDE="virtual/antivirus"
+
+SLOT="0"
+LICENSE="as-is"
+KEYWORDS="~x86"
+
+src_unpack () {
+	#Extract the tgz achive contained in MY_P
+	SKIP=`sed -n '/^\x1F/q;p' < ${DISTDIR}/${MY_P} | wc -c`
+	dd if=${DISTDIR}/${MY_P} ibs=1 skip=$SKIP 2> /dev/null | tar -xz || die "Failed to extract from archive"
 }
 
-src_install() {
-	dodir /opt/bdc
-	cp -Rf ${WORKDIR}/opt/* ${D}/opt
+src_install ()
+{
+	cd ${S}
 
-	# Create a symlink for bdc executable
+	INSTALLDIR=/opt
+	QUARDIR=/var/bdc
+	INIFILE=bdc.ini
+
+	(
+		dodir ${QUARDIR} &&
+		dodir ${QUARDIR}/infected &&
+		dodir ${QUARDIR}/suspected
+	) || die "Unable to create quarantine directories"
+
+	cd opt/bdc
+	echo "InfectedFolder = ${QUARDIR}/infected" >> $INIFILE
+	echo "SuspectedFolder = ${QUARDIR}/suspected" >> $INIFILE
+
+	insinto /opt/bdc
+	insopts -m 755
+	doins bdc
 	dodir /usr/bin
 	dosym /opt/bdc/bdc /usr/bin/bdc
 
-	# Install manpage correctly and remove it from /opt, where it's
-	# useless
-	doman ${WORKDIR}/opt/bdc/man/bdc.1
-	rm -rf ${D}/opt/bdc/man
+	insopts -m 644
+	doins bdc.ini *.so
+	insinto /opt/bdc/Plugins
+	doins Plugins/*
+
+	doman man/*
+	dodoc doc/*
 }
 
+pkg_postinst ()
+{
+	einfo You should upgrade  virus database by running bdc --update
+}

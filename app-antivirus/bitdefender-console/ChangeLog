@@ -1,10 +1,11 @@
 # ChangeLog for app-antivirus/bitdefender-console
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/bitdefender-console/ChangeLog,v 1.1 2004/11/20 15:41:44 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/bitdefender-console/ChangeLog,v 1.2 2004/11/20 15:53:30 ticho Exp $
 
 *bitdefender-console-7.0.1 (20 Nov 2004)
 
   20 Nov 2004; Andrej Kacian <ticho@gentoo.org> +metadata.xml,
   +bitdefender-console-7.0.1.ebuild:
-  Initial import.
+  Initial import. Ebuild submitted by Alin Nastac <mrness@gentoo.org>. Closes
+  #62759.
 
