@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.2a.ebuild,v 1.10 2003/09/06 23:59:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.2a.ebuild,v 1.11 2003/11/27 20:13:07 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A OpenSource library from flash movie generation"
-SRC_URI="http://www.opaque.net/ming/${PN}-${PV}.tgz"
+SRC_URI="http://www.opaque.net/ming/${P}.tgz"
 HOMEPAGE="http://www.opaque.net/ming/"
 
 SLOT="0"
@@ -14,15 +14,12 @@ KEYWORDS="x86 sparc hppa ppc amd64"
 DEPEND="virtual/glibc"
 
 src_unpack() {
-	unpack ${A}
-	cd ${S}/util
-	patch -p0 < ${FILESDIR}/${PF}-gentoo.diff || die
+	unpack ${A} ; cd ${S}
+	epatch ${FILESDIR}/${P}-fpic.patch
+	epatch ${FILESDIR}/${PF}-gentoo.diff
 }
 
 src_compile() {
-
-	[ "${ARCH}" = "hppa" ] && CFLAGS="${CFLAGS} -fPIC"
-
 	make CC="gcc -Wall" all static || die
 	cd util
 	make CC="gcc -Wall" bindump hexdump listswf listfdb listmp3 listjpeg makefdb swftophp \
