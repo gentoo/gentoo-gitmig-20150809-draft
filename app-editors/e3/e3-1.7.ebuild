@@ -4,7 +4,7 @@
 #
 # NOTE: this is an x86-only ebuild!!!
 #
-# $Header: /var/cvsroot/gentoo-x86/app-editors/e3/e3-1.7.ebuild,v 1.2 2001/08/12 03:22:18 chadh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/e3/e3-1.7.ebuild,v 1.3 2001/08/12 18:32:42 chadh Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Super Tiny Editor with wordstar, vi, and emacs key bindings"
@@ -12,6 +12,12 @@ SRC_URI="http://www.sax.de/~adlibit/${P}.tar.gz"
 HOMEPAGE="http://www.sax.de/~adlibit"
 DEPEND="dev-lang/nasm"
 #RDEPEND=""
+
+src_unpack() {
+	unpack ${A}
+	cd ${WORKDIR}
+	patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
+}
 
 src_compile() {
 	try emake

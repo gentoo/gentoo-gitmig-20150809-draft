@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Chad Huneycutt <chad.huneycutt@acm.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/petrovich/petrovich-1.0.0.ebuild,v 1.1 2001/08/07 01:20:08 chadh Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/petrovich/petrovich-1.0.0.ebuild,v 1.2 2001/08/12 18:32:42 chadh Exp $
 
 S=${WORKDIR}/petrovich
 DESCRIPTION="Filesystem Integrity Checker"
@@ -10,9 +10,7 @@ HOMEPAGE="http://sourceforge.net/projects/petrovich"
 
 #build-time dependencies
 DEPEND="sys-devel/perl"
-
-#run-time dependencies, same as DEPEND if RDEPEND isn't defined:
-#RDEPEND=""
+RDEPEND="dev-perl/Digest-MD5"
 
 src_unpack () {
 	unpack ${A}

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
 #        Chad Huneycutt <chad.huneycutt@acm.org>
-# /home/cvsroot/gentoo-x86/sys-apps/gzip/gzip-1.2.4a-r3.ebuild,v 1.1 2001/02/27 16:44:48 achim Exp
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gzip/gzip-1.2.4a-r5.ebuild,v 1.2 2001/08/12 18:32:42 chadh Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
