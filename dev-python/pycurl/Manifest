@@ -1,18 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 1fc36c47836e5b06d4c63776a53e92c9 pycurl-7.10.4.ebuild 794
-MD5 c14d47099a5eb91199785ac2179ae628 pycurl-7.12.ebuild 803
-MD5 76a2c7f6e3b51c861923b0e6f713e648 pycurl-7.11.0.ebuild 806
-MD5 f87b11930775655a7ab25187e679a2dc ChangeLog 2133
+MD5 34520bea5cd858f0ad5107ac561edd6c ChangeLog 2391
 MD5 3ada39a5a31dfe5031403906f2348560 metadata.xml 435
-MD5 99fb608d4ede8adac9107ba3c798ee35 files/digest-pycurl-7.12 62
-MD5 e493742a164b22b91b7b552c2620e3c1 files/digest-pycurl-7.10.4 127
+MD5 6162fbfe736d6896e5bc4f1c8cbd9fbb pycurl-7.11.0.ebuild 810
+MD5 f6b351fbb130d17ba05142cae4e5973c pycurl-7.12.ebuild 806
 MD5 f32d70dfa77ff03575a859a3f0011560 files/digest-pycurl-7.11.0 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBdC/YCHk4+ZoBpvsRArzxAJ4mJjcM+zAtDbvjHbHiWtkyxKCNBwCgmNw6
-rPozluMZmjOBcnJsXyEWxwM=
-=nWFF
------END PGP SIGNATURE-----
+MD5 99fb608d4ede8adac9107ba3c798ee35 files/digest-pycurl-7.12 62

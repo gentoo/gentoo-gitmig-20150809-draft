@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pycurl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.12 2004/10/18 21:04:09 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pycurl/ChangeLog,v 1.13 2004/10/29 19:07:18 pythonhead Exp $
+
+  29 Oct 2004; Rob Cakebread <pythonhead@gentoo.org> -pycurl-7.10.4.ebuild,
+  pycurl-7.11.0.ebuild, pycurl-7.12.ebuild:
+  Removed version with no corresponding version of curl, changed DEPEND to
+  match exact version of net-misc/curl, marked stable X86
 
   18 Oct 2004; Tom Martin <slarti@gentoo.org> pycurl-7.12.ebuild:
   Marked ~amd64, bug 68027.
