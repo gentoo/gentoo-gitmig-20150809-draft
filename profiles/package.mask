@@ -21,7 +21,11 @@
 ##   End example
 ##
 
-# <tad@gentoo.org> (11 Nov 03)
+# <max@gentoo.org> (13 Nov 2003)
+# Masking for testing, pending final release.
+>=media-tv/tvtime-0.9.11
+
+# <tad@gentoo.org> (11 Nov 2003)
 # 1.0 is final release, previous versions were snapshots.
 # Bug #32759
 >=x11-themes/noia-021209
