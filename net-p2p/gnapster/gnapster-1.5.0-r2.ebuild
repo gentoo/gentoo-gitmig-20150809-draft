@@ -1,6 +1,8 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnapster/gnapster-1.5.0-r2.ebuild,v 1.9 2003/09/07 00:17:34 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnapster/gnapster-1.5.0-r2.ebuild,v 1.10 2004/02/25 14:24:22 aliz Exp $
+
+inherit gnuconfig
 
 IUSE="nls gtk gnome"
 
@@ -11,13 +13,15 @@ HOMEPAGE="http://jasta.gotlinux.org/gnapster.html"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~amd64"
 
 DEPEND="=x11-libs/gtk+-1.2*
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.2-r1 )
 	gtk? ( >=media-libs/gdk-pixbuf-0.11.0-r1 )"
 
 src_compile() {
+	gnuconfig_update
+
 	local myconf
 
 	use nls || myconf="${myconf} --disable-nls"
