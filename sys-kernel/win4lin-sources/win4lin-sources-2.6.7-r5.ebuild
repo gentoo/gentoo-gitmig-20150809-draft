@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.6.7-r4.ebuild,v 1.2 2004/08/05 18:54:26 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.6.7-r5.ebuild,v 1.1 2004/08/10 00:52:17 plasmaroo Exp $
 
 ETYPE="sources"
 inherit kernel-2
@@ -13,7 +13,8 @@ UNIPATCH_LIST="
 	${FILESDIR}/${PN}.CAN-2004-0497.patch
 	${FILESDIR}/${PN}-2.6.CAN-2004-0596.patch
 	${FILESDIR}/${PN}-2.6.IPTables-RDoS.patch
-	${FILESDIR}/${PN}-2.6.ProcPerms.patch"
+	${FILESDIR}/${PN}-2.6.ProcPerms.patch
+	${FILESDIR}/${PN}-2.6.cmdlineLeak.patch"
 
 S=${WORKDIR}/linux-${KV}
 
