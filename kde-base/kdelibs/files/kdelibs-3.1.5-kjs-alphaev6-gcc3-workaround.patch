@@ -1,0 +1,19 @@
+--- kjs/ustring.cpp.orig	2003-01-23 15:49:49.000000000 -0500
++++ kjs/ustring.cpp	2003-01-27 19:49:00.000000000 -0500
+@@ -421,8 +421,15 @@
+ {
+   double d = toDouble();
+   bool b = true;
++  /* useless temporary variable to work around gcc optimization bug */
++  bool nan = false;
+ 
+-  if (isNaN(d) || d != static_cast<unsigned long>(d)) {
++  if (isNaN(d)) {
++    d = 0;
++    nan = true;
++  }
++
++  if (nan || d != static_cast<unsigned long>(d)) {
+     b = false;
+     d = 0;
+   }
