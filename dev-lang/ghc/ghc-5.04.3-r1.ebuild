@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.04.3-r1.ebuild,v 1.8 2003/11/11 19:42:36 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.04.3-r1.ebuild,v 1.9 2004/01/11 21:26:11 kosmikus Exp $
 
 #Some explanation of bootstrap logic:
 #
@@ -64,34 +64,35 @@ RDEPEND="virtual/glibc
 	>=dev-libs/gmp-4.1
 	opengl? ( virtual/opengl virtual/glu virtual/glut )"
 
-
-#determine what version of ghc we have around:
-if test -z "${GHC}"; then
-	GHC=`which ghc`
-fi
-
-BASE_GHC_VERSION=`"$GHC" --version | sed 's/^.*version //'`
-
-# If the base GHC version matches wanted one we can skip stage1
-if test x${BASE_GHC_VERSION} = x${PV}; then
-	need_stage1=no
-else
-	need_stage1=yes
-fi
-
-# If we update from certain package combinations, we need to compile
-# twice to get a GHCi bug fixed ...
-has_version '>=sys-libs/glibc-2.3.2' \
-	&& has_version '<=virtual/ghc-5.04.3' \
-	&& need_stage1=yes
-
-# some vars
-STAGE1_B="${WORKDIR}/stage1-build"
-STAGE2_B="${WORKDIR}/stage2-build"
-STAGE1_D="${BUILDDIR}/stage1-image"
-
 # extend path to /opt/ghc/bin to guarantee that ghc-bin is found
 GHCPATH="${PATH}:/opt/ghc/bin"
+
+pkg_setup() {
+	#determine what version of ghc we have around:
+	if test -z "${GHC}"; then
+		GHC=`which ghc`
+	fi
+
+	BASE_GHC_VERSION=`"$GHC" --version | sed 's/^.*version //'`
+
+	# If the base GHC version matches wanted one we can skip stage1
+	if test x${BASE_GHC_VERSION} = x${PV}; then
+		need_stage1=no
+	else
+		need_stage1=yes
+	fi
+
+	# If we update from certain package combinations, we need to compile
+	# twice to get a GHCi bug fixed ...
+	has_version '>=sys-libs/glibc-2.3.2' \
+		&& has_version '<=virtual/ghc-5.04.3' \
+		&& need_stage1=yes
+
+	# some vars
+	STAGE1_B="${WORKDIR}/stage1-build"
+	STAGE2_B="${WORKDIR}/stage2-build"
+	STAGE1_D="${WORKDIR}/stage1-image"
+}
 
 src_unpack() {
 	base_src_unpack
