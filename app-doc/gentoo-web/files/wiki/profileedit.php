@@ -12,7 +12,7 @@ if ( $submitted ) {
 	if ( $pass1 != $pass2 ) {
 		print '<p style="color:red;">Your password fields did not match.</p>';
 	} else {
-		$query = "update users set email='$email'";
+		$query = "update users set email='$email',location='$location'";
 		if ( $pass1 ) $query .= ",password='$pass1'";
 		$query .= " where uid=$uid";
 		$result = mysql_query( $query );
@@ -23,12 +23,6 @@ if ( $submitted ) {
 $dude = mysql_query( "select * from users where uid=$uid" );
 $dude = mysql_fetch_array( $dude );
 
-// are we leader?
-if ( isset($dude['team']) ) { // prevent errors if dude's team wasn't set for some reason
-	$result = mysql_query( 'select leader from teams where gid='.$dude['team'] );
-	list( $leader ) = mysql_fetch_row( $result );
-}
-if ( $leader == $uid ) $leader='Yes'; else $leader='No';
 ?>
 
 <p style="font-size:medium;font-weight:bold;"><?=$dude['username'];?> Profile</p>
@@ -41,7 +35,7 @@ if ( $leader == $uid ) $leader='Yes'; else $leader='No';
 </tr>
 <tr>
 	<td align="right"><b>Password:</b></td>
-	<td><input type="password" name="pass1"><br><input type="password" name="pass2"></td>
+	<td><input type="password" name="pass1" maxlength=10><br><input type="password" name="pass2" maxlength=10></td>
 	<td><p>Type in a password twice to change</p></td>
 </tr>
 <tr>
@@ -50,15 +44,11 @@ if ( $leader == $uid ) $leader='Yes'; else $leader='No';
 </tr>
 <tr>
 	<td align="right"><b>Email:</b></td>
-	<td><input type="input" name="email" value="<?=$dude['email'];?>"></td>
+	<td><input type="input" name="email" value="<?=$dude['email'];?>" maxlength=200></td>
 </tr>
 <tr>
-	<td align="right"><b>Team:</b></td>
-	<td><?=team_num_name( $dude['team'] );?></td>
-</tr>
-<tr>
-	<td align="right"><b>Team Leader:</b></td>
-	<td><?=$leader;?></td>
+	<td align="right"><b>Location:</b></td>
+	<td><input type="input" name="location" value="<?=$dude['location'];?>" maxlength=200></td>
 </tr>
 </table>
 <input type="hidden" name="submitted" value="1">

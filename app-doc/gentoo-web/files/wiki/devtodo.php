@@ -24,7 +24,7 @@
 	<td bgcolor="#dddaec"><b>Followups</b></td>
 </tr>
 <?php
-		$result = mysql_query( "select * from todos where owner=$devid and priority!=0 order by priority,date desc" );
+		$result = mysql_query( "select * from todos where owner=$devid and priority!=0 order by priority desc, date" );
 		while ( $todo = mysql_fetch_array($result) ) {
 			if ( $todo['priority'] == 1 ) {
 				$priority = 'low';

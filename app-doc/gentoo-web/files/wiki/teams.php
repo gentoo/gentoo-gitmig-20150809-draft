@@ -80,7 +80,10 @@
 	</tr>
 	<tr>
 		<td><a href="teamtasks.php?team=<?=$team_num;?>&q=on">Outstanding Neither:</a></td>
-		<td><?=$on;?><br></td>
+		<td><?=$on;?></td>
+	</tr>
+	<tr>
+		<td colspan=2>&nbsp;</td>
 	</tr>
 	<tr>
 		<td><a href="teamtasks.php?team=<?=$team_num;?>&q=u">Total Unassigned:</a></td>
@@ -104,8 +107,13 @@
 	</td></tr></table>
 </div>
 
-	
-<p style="font-size:medium;font-weight:bold;"><?=$team;?> Team</p>
+<?php
+	$leader = mysql_query( "select leader from teams where gid=$team_num" );
+	list( $leader ) = mysql_fetch_row( $leader );
+	$leader = mysql_query( "select username from users where uid=$leader" );
+	list( $leader ) = mysql_fetch_row( $leader );
+?>
+<p style="font-size:medium;font-weight:bold;"><?=$team;?> Team<?php if ($leader) print " - Leaded by $leader"; else print " - no leader"; ?></p>
 <p><b>Summary</b></p>
 <p style="margin:0 5px 10px 10px;"><?=$summary;?></p>
 <p><b>Status</b></p>
@@ -114,10 +122,10 @@
 <p><b>Team Members</b></p>
 <ul>
 <?php
-	$result = mysql_query( "select username,title,email,realname from users where team=$team_num" );
+	$result = mysql_query( "select username,title,email,realname,location from users where team=$team_num" );
 	while ( $dude = mysql_fetch_array($result) ) {
 ?>
-	<li> <a href="mailto:<?=$dude['email'];?>"><?=$dude['realname'];?></a> (aka <?=$dude['username'];?>) - <?=$dude['title'];?>
+	<li> <a href="mailto:<?=$dude['email'];?>"><?=$dude['realname'];?></a> (aka <?=$dude['username'];?>) - <?=$dude['title'];?> from <?=$dude['location'];?>
 <?php
 	}
 ?>

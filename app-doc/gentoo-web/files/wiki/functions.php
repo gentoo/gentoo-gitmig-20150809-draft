@@ -6,6 +6,23 @@
 	// tags to allow for output
 	$allow_tags = "<a>,<br>,<b>,<u>";
 
+	// init the team/branch arrays
+	$teams = array(
+		0 => 'None',
+		1 => 'All',
+		2 => 'System',
+		3 => 'Desktop',
+		4 => 'Server',
+		5 => 'Tools',
+		6 => 'Infrastructure',
+	);
+	$branches = array(
+		0 => 'none',
+		1 => 'all',
+		2 => 'stable',
+		3 => 'unstable',
+	);
+
 	// make sure our uid, which dictates whether they're logged in or not, is all straight
 	if ( !isset($uid) ) {
 		$uid = 0;
@@ -253,39 +270,31 @@ global $uid, $dbusername, $show_privates, $list; ?>
 } ?>
 
 <?php function team_num_name ( $num ) {
-	if     ( $num == 0 ) $team = 'None';
-	elseif ( $num == 1 ) $team = 'All';
-	elseif ( $num == 2 ) $team = 'System';
-	elseif ( $num == 3 ) $team = 'Desktop';
-	elseif ( $num == 4 ) $team = 'Server';
-	elseif ( $num == 5 ) $team = 'Tools';
-	elseif ( $num == 6 ) $team = 'Infrastructure';
-	return $team;
+	// take a team number, return a team name.
+	// The following three functions are similar in spirit.
+	global $teams;
+	return $teams[$num];
 } ?>
 
 <?php function team_name_num ( $name ) {
-	if     ( $name == 'None' )           $num = 0;
-	elseif ( $name == 'All' )            $num = 1;
-	elseif ( $name == 'System' )         $num = 2;
-	elseif ( $name == 'Desktop' )        $num = 3;
-	elseif ( $name == 'Server' )         $num = 4;
-	elseif ( $name == 'Tools' )          $num = 5;
-	elseif ( $name == 'Infrastructure' ) $num = 6;
-	return $num;
+	global $teams;
+	while ( $each = each($teams) ) {
+		if ( $each['value'] == $name ) return $each['key'];
+	}
+	// we found nothing; we should never get here.
+	return 0;
 } ?>
 
 <?php function branch_num_name ( $num ) {
-	if     ( $num == 0 ) $branch = 'none';
-	elseif ( $num == 1 ) $branch = 'all';
-	elseif ( $num == 2 ) $branch = 'stable';
-	elseif ( $num == 3 ) $branch = 'unstable';
-	return $branch;
+	global $branches;
+	return $branches[$num];
 } ?>
 
-<?php function branch_name_num ( $num ) {
-	if     ( $num == 'none' )     $branch = 0;
-	elseif ( $num == 'all' )      $branch = 1;
-	elseif ( $num == 'stable' )   $branch = 2;
-	elseif ( $num == 'unstable' ) $branch = 3;
-	return $branch;
+<?php function branch_name_num ( $name ) {
+	global $branches;
+	while ( $each = each($branches) ) {
+		if ( $each['value'] == $name ) return $each['key'];
+	}
+	// we found nothing; we should never get here.
+	return 0;
 } ?>

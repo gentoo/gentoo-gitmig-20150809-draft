@@ -129,20 +129,12 @@
 					<b>Todo posted:</b> <?=date( "n/j/y", $todo['date'] );?><br>
 				<?php } ?>
 				<b>Team:</b>
-				<?php if ( $theirs ) { ?>
-					<select name="team"><?php
-					if ( $team == 'None' ) {
-						print '<option>None</option><option>System</option><option>Desktop</option><option>Server</option><option>Tools</option><option>Infrastructure</option>';
-					} elseif ( $team == 'System' ) {
-						print '<option>System</option><option>None</option><option>Desktop</option><option>Server</option><option>Tools</option><option>Infrastructure</option>';
-					} elseif ( $team == 'Desktop' ) {
-						print '<option>Desktop</option><option>None</option><option>System</option><option>Server</option><option>Tools</option><option>Infrastructure</option>';
-					} elseif ( $team == 'Server' ) {
-						print '<option>Server</option><option>None</option><option>Desktop</option><option>System</option><option>Tools</option><option>Infrastructure</option>';
-					} elseif ( $team == 'Tools' ) {
-						print '<option>Tools</option><option>None</option><option>Desktop</option><option>Server</option><option>System</option><option>Infrastructure</option>';
-					} elseif ( $team == 'Infrastructure' ) {
-						print '<option>Infrastructure</option><option>None</option><option>Desktop</option><option>Server</option><option>Tools</option><option>System</option>';
+				<?php if ( $theirs ) {
+					if (!$team) $team = 'None'; ?> 
+					<select name="team"><option><?=$team;?></option><?php
+					while ( $each = each($teams) ) {
+						if ( $each['value'] == $team ) continue;
+						print '<option>'.$each['value'].'</option>';
 					}
 				?></select>
 				<?php } else {
@@ -181,16 +173,12 @@
 					print "$public - <img src=\"images/$public.gif\" width=16 height=16>";
 				} ?><br>
 				<b>Branch:</b>
-				<?php if ( $theirs ) { ?>
-					<select name="branch"><?php
-					if ( $branch == 'all' ) {
-						print '<option>stable</option><option>unstable</option><option>none</option><option>all</option>';
-					} elseif ( $branch == 'unstable' ) {
-						print '<option>unstable</option><option>stable</option><option>none</option><option>all</option>';
-					} elseif ( $branch == 'all' ) {
-						print '<option>all</option><option>stable</option><option>unstable</option><option>none</option>';
-					} else {
-						print '<option>none</option><option>stable</option><option>unstable</option><option>all</option>';
+				<?php if ( $theirs ) {
+					if (!$branch) $branch = 'none'; ?>
+					<select name="branch"><option><?=$branch;?></option><?php
+					while ( $each = each($branches) ) {
+						if ( $each['value'] == $branch ) continue;
+						print '<option>'.$each['value'].'</option>';
 					}
 				?></select>
 				<?php } else {

@@ -19,26 +19,53 @@ if ( $submitted ) {
 		// stuff that needs to be done for both
 		$team = team_name_num( $team );
 		if ( $admin ) $admin = '1'; else $admin = '0';
-		if ( $leader ) $leader = '1'; else $leader = '0';
+		reset( $teams );
+		while ( $cur = each($teams) ) { // construct special teams value
+			if ( $$cur['value'] == 'r' || $$cur['value'] == 'l' ) $tms[] = $cur['key'];
+			if ( $$cur['value'] == 'l' ) $leads[] = $cur['key'];
+		}
+		if ( $tms ) {
+			$team = implode( ',', $tms );
+		} else {
+			$team = '';
+		}
+
+
+		// grant leaderships
+		if ( $leads ) {
+			while ( $cur = each($leads) ) {
+				mysql_query( "update teams set leader=$xuid where gid=".$cur['value'] );
+			}
+		}
+
+
+		// revoke leaderships
+		$oldleads = explode( ',', $oldleads );
+		if ($leads) reset( $leads );
+		while ( $ol = each($oldleads) ) {
+			$tmp = 1;
+			if ( $leads ) {
+				reset( $leads );
+				while ( $g = each($leads) ) {
+					if ( $g['value'] == $ol['value'] ) { $tmp = 0; break; }
+				}
+			}
+			if ( $tmp ) {
+				mysql_query( 'update teams set leader=0 where gid='.$ol['value'] );
+			}
+		}
 
 		if ( $xuid == 'new' ) {
 			// new user
-			print '<p style="color:red;">You omitted vital information.</p>';
-			mysql_query( "insert into users set username='$username',password='$pass1',admin=$admin,title='$title',email='$email',realname='$realname',team=$team" );
-			
-			if ( $leader ) mysql_query( "update teams set leader=$uid where gid=$team" );
-			elseif ( !$leader && $wasleader ) mysql_query( "update teams set leader=0 where gid=$team" );
-
+			mysql_query( "insert into users set username='$username',password='$pass1',admin=$admin,title='$title',email='$email',realname='$realname',location='$location',team='$team'" );
+			$xuid = mysql_insert_id();
 			print '<p style="color:red;">User added to database.</p>';
 		} else {
 			// change existing
 			$query = "update users set username='$username'";
 			if ( $pass1 ) $query .= ",password='$pass1'";
-			$query .= ",admin=$admin,title='$title',email='$email',realname='$realname',team='$team' where uid=$xuid";
+			$query .= ",admin=$admin,title='$title',email='$email',realname='$realname',location='$location',team='$team' where uid=$xuid";
 			mysql_query( $query );
-
-			if ( $leader ) mysql_query( "update teams set leader=$xuid where gid=$team" );
-			elseif ( !$leader && $wasleader ) mysql_query( "update teams set leader=0 where gid=$team" );
 
 			print '<p style="color:red;">User information updated.</p>';
 		}
@@ -70,10 +97,7 @@ if ( !$xuid ) {
 		$dude = mysql_query( "select * from users where uid=$xuid" );
 		$dude = mysql_fetch_array( $dude );
 
-		// are we leader?
-		$result = mysql_query( 'select leader from teams where gid='.$dude['team'] );
-		list( $leader ) = mysql_fetch_row( $result );
-		if ( $leader == $xuid ) $leader=1; else $leader=0;
+		$xteams = explode( ",", $dude['team'] );
 	}
 	?>
 	<form action="useredit.php" method="post">
@@ -87,9 +111,8 @@ if ( !$xuid ) {
 		<td><input type="text" name="username" maxlength=10 value="<?=$dude['username'];?>"></td>
 	</tr>
 	<tr>
-		<td align="right"><b>/<br>Password:<br>\</b></td>
+		<td align="right"><b>Password:</b><br>(Type in a<br>password twice<br>to change.)</td>
 		<td><input type="password" name="pass1" maxlength=10><br><input type="password" name="pass2" maxlength=10></td>
-		<td><p>Type in a password twice to change</p></td>
 	</tr>
 	<tr>
 		<td align="right"><b>Title:</b></td>
@@ -97,40 +120,65 @@ if ( !$xuid ) {
 	</tr>
 	<tr>
 		<td align="right"><b>Email:</b></td>
-		<td><input type="input" name="email" value="<?=$dude['email'];?>"></td>
+		<td><input type="input" name="email" value="<?=$dude['email'];?>" maxlength=200></td>
 	</tr>
 	<tr>
-		<td align="right"><b>Team:</b></td>
-		<td><select name="team"><?php
-			$team = team_num_name( $dude['team'] );
-			if ( $team == 'None' ) {
-				print '<option>None</option><option>System</option><option>Desktop</option><option>Server</option><option>Tools</option><option>Infrastructure</option>';
-			} elseif ( $team == 'System' ) {
-				print '<option>System</option><option>None</option><option>Desktop</option><option>Server</option><option>Tools</option><option>Infrastructure</option>';
-			} elseif ( $team == 'Desktop' ) {
-				print '<option>Desktop</option><option>None</option><option>System</option><option>Server</option><option>Tools</option><option>Infrastructure</option>';
-			} elseif ( $team == 'Server' ) {
-				print '<option>Server</option><option>None</option><option>Desktop</option><option>System</option><option>Tools</option><option>Infrastructure</option>';
-			} elseif ( $team == 'Tools' ) {
-				print '<option>Tools</option><option>None</option><option>Desktop</option><option>Server</option><option>System</option><option>Infrastructure</option>';
-			} elseif ( $team == 'Infrastructure' ) {
-				print '<option>Infrastructure</option><option>None</option><option>Desktop</option><option>Server</option><option>Tools</option><option>System</option>';
-			}
-		?></select></td>
-	</tr>
-	<tr>
-		<td align="right"><b>Team Leader:</b></td>
-		<td><input type="checkbox" name="leader"<?php if ( $leader ) print ' checked'; ?>></td>
+		<td align="right"><b>Location:</b></td>
+		<td><input type="input" name="location" value="<?=$dude['location'];?>" maxlength=200></td>
 	</tr>
 	<tr>
 		<td align="right"><b>Admin:</b></td>
 		<td><input type="checkbox" name="admin"<?php if ( $dude['admin'] ) print ' checked'; ?>></td>
 	</tr>
+	<tr>
+		<td align="right" valign="top"><b>Team Memberships:</b></td>
+		<td>
+		<table border=0 cellpadding=1 cellspacing=0 bgcolor="black"><tr><td>
+		<table width=300 border=0 cellpadding=5 cellspacing=0 bgcolor="#bdbacc">
+		<tr>
+			<td>&nbsp;</td>
+			<td align="center"><b>Unaffiliated</b></td>
+			<td align="center"><b>Regular</b></td>
+			<td align="center"><b>Leader</b></td>
+		</tr>
+		<?php
+		// get team info
+		reset( $teams );
+		while ( $each = each($teams) ) {
+			if ( $each['key'] == 0 || $each['key'] == 1 ) continue; // skip 'none' and 'all'
+			$tm = 'u'; // set the default
+			if ( $xuid != 'new' ) {
+				// are they a simple member? ...
+				reset( $xteams );
+				while ( $cur = each($xteams) ) {
+					if ( $cur['value'] == $each['key'] ) $tm = 'r';
+				}
+				// are they the team LEADER?!?! :)
+				$ldr = mysql_query( 'select leader from teams where gid='.$each['key'] );
+				list( $ldr ) = mysql_fetch_row( $ldr );
+				if ( $ldr == $xuid ) { $tm = 'l'; $oldlead[] = $each['key']; }
+			}
+			?>
+		<tr>
+			<td><b><?=$each['value'];?></b></td>
+			<td align="center"><input type="radio" name="<?=$each['value'];?>" value="u"<?php if ($tm=='u') print ' checked'; ?>></td>
+			<td align="center"><input type="radio" name="<?=$each['value'];?>" value="r"<?php if ($tm=='r') print ' checked'; ?>></td>
+			<td align="center"><input type="radio" name="<?=$each['value'];?>" value="l"<?php if ($tm=='l') print ' checked'; ?>></td>
+		</tr>
+			<?php
+		}
+		?>
+		</table>
+		</td></tr></table>
+		</td>
+	</tr>
+	<tr>
+		<input type="hidden" name="submitted" value="1">
+		<input type="hidden" name="oldleads" value="<?php if ($oldlead) print implode( ',', $oldlead );?>">
+		<input type="hidden" name="xuid" value="<?=$xuid;?>">
+		<td align="center" colspan=2><input type="submit" value="Submit"></td>
+	<tr>
 	</table>
-	<input type="hidden" name="submitted" value="1">
-	<input type="hidden" name="wasleader" value="<?=$leader;?>">
-	<input type="hidden" name="xuid" value="<?=$xuid;?>">
-	<p><input type="submit" value="Submit"></p>
 	</form>
 	<?php
 }
