@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/chrony
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.11 2003/11/26 01:43:55 wmertens Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/chrony/ChangeLog,v 1.12 2004/02/20 23:00:25 iluxa Exp $
+
+  20 Feb 2004; Ilya Volynets <ilya@total-knowledge.com> chrony-1.20.ebuild:
+  Add ~mips to keywords
 
 *chrony-1.20 (26 Nov 2003)
 
