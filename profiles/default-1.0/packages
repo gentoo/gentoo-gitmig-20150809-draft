@@ -52,8 +52,6 @@
 
 dev-lang/perl
 *virtual/editor
-#no real cost for nano, since we already have ncurses
-*net-ftp/ftp
 *net-misc/dhcpcd
 *net-misc/netkit-telnetd
 *net-misc/rsync
@@ -74,7 +72,6 @@ dev-lang/perl
 *sys-apps/gawk
 *sys-apps/grep
 *sys-apps/groff
-*virtual/bootloader
 *sys-apps/gzip
 *sys-apps/hdparm
 *sys-apps/less
@@ -106,7 +103,6 @@ dev-lang/perl
 *sys-devel/bin86
 *sys-devel/bison
 *sys-devel/flex
-*sys-devel/gettext
 *sys-devel/ld.so
 *>=sys-devel/libtool-1.4.1-r4
 *sys-devel/m4
@@ -114,7 +110,6 @@ dev-lang/perl
 *sys-devel/patch
 *sys-libs/cracklib  
 *<sys-libs/db-3.2.10
-*sys-libs/gdbm  
 *sys-libs/ncurses
 # Removed since it's really no need for this to be default, and it together 
 # with defaulting to db in /etc/nsswitch.conf breaks evolution >= 0.11.
@@ -122,7 +117,6 @@ dev-lang/perl
 *sys-libs/pam     
 *sys-libs/pwdb      
 *<sys-libs/readline-4.2 
-*sys-libs/slang
 *sys-libs/zlib
 #these ones have the new rc6 style init scripts
 >=sys-libs/gpm-1.19.3-r5
