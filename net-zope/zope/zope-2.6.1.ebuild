@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.1.ebuild,v 1.1 2003/03/03 23:43:22 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.1.ebuild,v 1.2 2003/04/04 03:05:26 kutsuya Exp $
 
 S="${WORKDIR}/Zope-${PV}-src"
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.zope.org/Products/Zope/${PV}/Zope-${PV}-src.tgz"
 LICENSE="ZPL"
 SLOT="0"
 
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 
 # This is for developers that wish to test Zope with virtual/python.
 # If this is a problem, let me know right away. --kutsuya@gentoo.org
@@ -150,13 +150,8 @@ pkg_postinst()
 
 pkg_postrm()
 {
-	# Remove the rcscript and confd file. Emerge won't do it because it 
-	# didn't add them. zope-config did added them. This will change when
-	# zope-config can remove instances.
-	
-	rm -f ${CONFDIR}/${ZGID} /etc/init.d/${ZGID}
+	# rcscripts and conf.d files will remain. i.e. /etc protection.
 
-	
 	# Delete .default if this ebuild is the default. zprod-manager will
 	# have to handle a missing default;
 	local VERSION_DEF="$(zope-config --zidef-get)"

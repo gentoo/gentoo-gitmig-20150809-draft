@@ -1,10 +1,13 @@
 # ChangeLog for net-zope/zope
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.3 2003/03/11 05:46:56 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/ChangeLog,v 1.4 2003/04/04 03:05:26 kutsuya Exp $
 
 06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords 
 
 *zope-2.6.1 (26 Feb 2003)
+
+  03 Apr 2003; Jason Shoemaker <kutsuya@gentoo.org> zope-2.6.1.ebuild:
+  Stopped removal of /etc files. ~x86 -> x86 and added ~ppc
 
   03 Mar 2003; Jason Shoemaker <kutsuya@gentoo.org> : Moving from net-www to     net-zope.
 
