@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/vsftpd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.47 2005/01/17 16:03:03 jforman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/vsftpd/ChangeLog,v 1.48 2005/01/22 20:36:07 solar Exp $
+
+  22 Jan 2005; <solar@gentoo.org> vsftpd-1.2.2.ebuild:
+  - remove fPIC filtering on vsftpd-1.2.2. (no longer needed) bug #74519
 
   17 Jan 2005; Jeffrey Forman <jforman@gentoo.org> vsftpd-2.0.1.ebuild:
   Add support to build vsftpd without pam, bug 65981, thanks Rob!
