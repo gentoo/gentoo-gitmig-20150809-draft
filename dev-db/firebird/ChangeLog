@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/firebird
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.25 2004/09/14 16:08:11 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.26 2004/10/17 18:39:38 sekretarz Exp $
+
+  17 Oct 2004; Karol Wojtaszek,,, <sekretarz@gentoo.org>
+  firebird-1.5.1.ebuild:
+  Keyworded ~amd64
 
   14 Sep 2004; Karol Wojtaszek <sekretarz@gentoo.org>
   files/firebird-1.5.1-gcc34.patch:

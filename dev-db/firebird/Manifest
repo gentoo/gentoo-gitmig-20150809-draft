@@ -1,5 +1,5 @@
-MD5 a937e33e83997615b610b3624c9ffce2 firebird-1.5.1.ebuild 6380
-MD5 e755b4669ee93d289a2554d654a3ba7f ChangeLog 3835
+MD5 a27bd48254c182cf3b0fdef6cb6daf2f firebird-1.5.1.ebuild 6387
+MD5 fe09dc3bb1da8a3d5db33e35af94add1 ChangeLog 3937
 MD5 70eaf71c2018b87fe06aed9df3799509 metadata.xml 225
 MD5 c5f5e6bae2cae891269931331e69f1ca files/firebird.conf.d 80
 MD5 19238be258dea758cf3f082df5ae813a files/firebird.init.d 697
