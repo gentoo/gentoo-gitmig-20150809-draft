@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.115 2005/03/19 23:54:43 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.116 2005/03/27 20:13:20 pauldv Exp $
+
+  27 Mar 2005; Paul de Vrieze <pauldv@gentoo.org>
+  +files/db-3.2.9-java15.patch, db-3.2.9-r10.ebuild:
+  Add a java 1.5 patch from bug #84770. Also bump all architectures that were 
+  not stable on this ebuild. It has not changed much since months and the 
+  instable keywords were added a very long time ago.
 
   19 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> db-1.85-r2.ebuild:
   Stable on alpha.
