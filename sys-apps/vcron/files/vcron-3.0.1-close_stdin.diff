@@ -1,0 +1,11 @@
+diff -urN vixie-cron-3.0.1.orig/cron.c vixie-cron-3.0.1/cron.c
+--- vixie-cron-3.0.1.orig/cron.c	1995-05-31 16:37:20.000000000 -0500
++++ vixie-cron-3.0.1/cron.c	2003-10-16 17:31:41.000000000 -0500
+@@ -107,6 +107,7 @@
+ 		}
+ 	}
+ 
++	close(STDIN_FILENO);
+ 	acquire_daemonlock(0);
+ 	database.head = NULL;
+ 	database.tail = NULL;
