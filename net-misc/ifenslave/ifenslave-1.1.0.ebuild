@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ifenslave/ifenslave-1.1.0.ebuild,v 1.3 2004/07/05 19:08:13 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ifenslave/ifenslave-1.1.0.ebuild,v 1.4 2005/02/22 10:58:46 blubb Exp $
 
 inherit gcc eutils
 
@@ -15,7 +15,7 @@ SRC_URI="${DEBIANPKG_BASE}/${DEBIANPKG_TARBALL}
 		 ${DEBIANPKG_BASE}/${DEBIANPKG_PATCH}"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
 RDEPEND="sys-libs/glibc"
 DEPEND="sys-devel/gcc
