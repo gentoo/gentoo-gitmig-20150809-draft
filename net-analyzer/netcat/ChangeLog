@@ -1,11 +1,15 @@
 # ChangeLog for net-analyzer/netcat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/ChangeLog,v 1.4 2002/10/22 08:15:23 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/ChangeLog,v 1.5 2002/10/22 16:44:05 seemant Exp $
 
 *netcat-110-r1 (22 Oct 2002)
 
   22 Oct 2002; Seemant Kulleen <seemant@gentoo.org> netcat-110-r1.ebuild
   files/digest-netcat-110-r1 :
+
+  Changed the order of the sed statements as the nc->netcat change in the
+  Makefile screwed people's CFLAGS.  Thanks to: Bulletz_1900@hotmail.com
+  (Dries Harnie) in bug #9479 by shadow@ines.ro
 
   The executable is now installed as /usr/bin/netcat instead of /usr/bin/nc
   which conflicted with /usr/bin/nc from app-editors/nedit.  Closes bug

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/netcat-110-r1.ebuild,v 1.1 2002/10/22 08:15:23 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/netcat-110-r1.ebuild,v 1.2 2002/10/22 16:44:05 seemant Exp $
 
 MY_P=nc${PV}
 S=${WORKDIR}
@@ -18,9 +18,9 @@ src_compile() {
 
 	einfo "Makefile corrections"
 	ssed -i \
+		-e "s:nc:netcat:g" \
 		-e "s:^CFLAGS =.*$:CFLAGS = ${CFLAGS}:" \
 		-e "s:^CC =.*$:CC = gcc \$(CFLAGS):" \
-		-e "s:nc:netcat:g" \
 		Makefile
 
 	einfo "netcat.c corrections"
