@@ -1,12 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.19-r5.ebuild,v 1.3 2002/09/23 13:30:13 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/openmosix-sources/openmosix-sources-2.4.19-r5.ebuild,v 1.4 2002/09/23 15:02:35 tantive Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
 GFILESDIR=${PORTDIR}/sys-kernel/linux-sources/files
 OKV=2.4.19
-KV=2.4.19-openmosix-r5
+#KV=2.4.19-openmosix-r5
+[ "${PR}" == "r0" ] && KV=${OKV}-openmosix || KV=${OKV}-openmosix-${PR}
+EXTRAVERSION="`echo ${KV}|sed -e 's:[0-9]\+\.[0-9]\+\.[0-9]\+\(.*\):\1:'`"
 S=${WORKDIR}/linux-${KV}
 ETYPE="sources"
 
@@ -63,7 +65,8 @@ src_unpack() {
 	cd ${S}
 	mv Makefile Makefile.orig
 	sed -e 's:#export\tINSTALL_PATH:export\tINSTALL_PATH:' \
-		Makefile.orig >Makefile || die # test, remove me if Makefile ok
+	    -e "s:^\(EXTRAVERSION =\).*:\1 ${EXTRAVERSION}:" \
+		Makefile.orig > Makefile || die # test, remove me if Makefile ok
 	rm Makefile.orig
 }
 
