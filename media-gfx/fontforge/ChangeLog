@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/fontforge
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.10 2005/02/19 10:04:20 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.11 2005/03/18 15:22:23 usata Exp $
+
+*fontforge-20050310 (18 Mar 2005)
+
+  18 Mar 2005; Mamoru KOMACHI <usata@gentoo.org>
+  -files/fontforge-20040618.patch, fontforge-20040930.ebuild,
+  fontforge-20041231.ebuild, fontforge-20050209.ebuild,
+  +fontforge-20050310.ebuild:
+  Version bumped. Fixed giflib dependency; bug #85720.
 
 *fontforge-20050209 (19 Feb 2005)
 

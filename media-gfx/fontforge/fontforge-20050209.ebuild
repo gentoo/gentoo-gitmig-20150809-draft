@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20050209.ebuild,v 1.1 2005/02/19 10:04:20 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/fontforge-20050209.ebuild,v 1.2 2005/03/18 15:22:23 usata Exp $
 
 inherit flag-o-matic eutils
 
@@ -14,7 +14,7 @@ KEYWORDS="~x86 ~ppc ~amd64 ~sparc ~ia64 ~alpha"
 IUSE="png gif jpeg tiff truetype svg unicode X"
 
 DEPEND="png? ( >=media-libs/libpng-1.2.4 )
-	gif? ( >=media-libs/libungif-4.1.0-r1 )
+	gif? ( >=media-libs/giflib-4.1.0-r1 )
 	jpeg? ( >=media-libs/jpeg-6b-r2 )
 	tiff? ( >=media-libs/tiff-3.5.7-r1 )
 	truetype? ( >=media-libs/freetype-2.1.4 )
@@ -23,6 +23,8 @@ DEPEND="png? ( >=media-libs/libpng-1.2.4 )
 	!media-gfx/pfaedit"
 
 src_compile() {
+	sed -i -e "s@ungif@gif@g" configure* || die
+	sed -i -e 's@"libungif"@"libgif"@g' gdraw/gimagereadgif.c || die
 	local myconf="--with-multilayer"
 	use X || myconf="--without-x"
 
