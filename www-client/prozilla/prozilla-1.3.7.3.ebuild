@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-client/prozilla/prozilla-1.3.7.3.ebuild,v 1.4 2005/02/07 20:32:10 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-client/prozilla/prozilla-1.3.7.3.ebuild,v 1.5 2005/02/10 12:10:52 taviso Exp $
 
 inherit eutils
 
@@ -22,6 +22,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-gentoo.diff
+	epatch ${FILESDIR}/${PN}-expands-format-twice.diff
 }
 
 src_install () {
