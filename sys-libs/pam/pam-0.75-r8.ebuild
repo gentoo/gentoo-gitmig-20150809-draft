@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r8.ebuild,v 1.2 2002/10/13 13:14:03 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.75-r8.ebuild,v 1.3 2002/10/19 07:14:48 azarah Exp $
 
 IUSE="berkdb"
 
@@ -8,15 +8,15 @@ inherit gcc
 
 PATCH_LEVEL=".1"
 
-S=${WORKDIR}/Linux-PAM-${PV}
-S2=${WORKDIR}/pam
+S="${WORKDIR}/Linux-PAM-${PV}"
+S2="${WORKDIR}/pam"
 DESCRIPTION="Pluggable Authentication Modules"
 SRC_URI="http://www.kernel.org/pub/linux/libs/pam/pre/library/Linux-PAM-${PV}.tar.gz
 	mirror://gentoo/pam-${PVR}${PATCH_LEVEL}-gentoo.tbz2"
 HOMEPAGE="http://www.redhat.com/linux-info/pam/"
 
 LICENSE="PAM"
-KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
+KEYWORDS="x86 ppc sparc sparc64 alpha"
 SLOT="0"
 
 DEPEND=">=sys-libs/cracklib-2.7-r3
@@ -90,7 +90,7 @@ src_compile() {
 		rm -f Make.Rules.orig
 	fi
 	
-	if [ -z "`use berkdb`" ]
+	if [ -z "$(use berkdb)" ]
 	then
 		cp Make.Rules Make.Rules.orig
 		sed -e "s:^HAVE_LIBNDBM=yes:HAVE_LIBNDBM=no:" \
@@ -115,8 +115,7 @@ src_install() {
 		then
 			if ! ls -1 ${D}/lib/security/$(basename ${x})*.so &> /dev/null
 			then
-				if [ -z "`use berkdb`" ] && \
-				   [ "$(basename ${x})" = "pam_userdb" ]
+				if [ -z "$(use berkdb)" -a "$(basename ${x})" = "pam_userdb" ]
 				then
 					continue
 				fi
