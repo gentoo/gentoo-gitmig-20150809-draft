@@ -25,6 +25,10 @@
 # Experimental gtk2 support
 =net-mail/sylpheed-0.9.4-r1
 
+# <msterret@gentoo.org> (04 Sep 2003)
+# Likes to segfault ... working with upstream devs on it
+=dev-lang/nasm-0.98.37
+
 # <lu_zero@gentoo.org> (04 Sep 2003)
 # Not working for me, still builds fine
 media-video/lives
