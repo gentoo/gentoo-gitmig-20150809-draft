@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/serialmail
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/serialmail/ChangeLog,v 1.14 2005/03/03 18:29:50 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/serialmail/ChangeLog,v 1.15 2005/03/03 18:32:40 ciaranm Exp $
+
+  03 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  serialmail-0.75-r1.ebuild:
+  Dependency update: sys-apps/daemontools -> sys-process/daemontools.
 
   03 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org>
   serialmail-0.75-r2.ebuild:

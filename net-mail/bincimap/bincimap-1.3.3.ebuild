@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/bincimap-1.3.3.ebuild,v 1.2 2005/02/03 20:24:43 cryos Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/bincimap/bincimap-1.3.3.ebuild,v 1.3 2005/03/03 18:30:53 ciaranm Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ DEPEND="virtual/libc
 	ssl? ( dev-libs/openssl )"
 
 RDEPEND="${DEPEND}
-	sys-apps/daemontools
+	sys-process/daemontools
 	sys-apps/ucspi-tcp
 	net-mail/checkpassword"
 
