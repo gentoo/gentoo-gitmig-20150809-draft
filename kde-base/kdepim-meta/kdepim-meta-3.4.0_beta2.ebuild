@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/kdepim-meta-3.4.0_beta2.ebuild,v 1.2 2005/02/05 19:35:55 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/kdepim-meta-3.4.0_beta2.ebuild,v 1.3 2005/02/13 12:38:21 motaboy Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -30,6 +30,7 @@ RDEPEND="
 	$(deprange $PV $MAXKDEVER kde-base/kode)
 	$(deprange $PV $MAXKDEVER kde-base/konsolekalendar)
 	$(deprange $PV $MAXKDEVER kde-base/kontact)
+	$(deprange $PV $MAXKDEVER kde-base/kontact-specialdates)
 	$(deprange $PV $MAXKDEVER kde-base/korganizer)
 	$(deprange $PV $MAXKDEVER kde-base/korn)
 	$(deprange $PV $MAXKDEVER kde-base/kpilot)

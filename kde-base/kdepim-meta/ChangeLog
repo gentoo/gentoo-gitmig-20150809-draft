@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdepim-meta
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/ChangeLog,v 1.3 2005/02/05 11:39:16 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim-meta/ChangeLog,v 1.4 2005/02/13 12:38:21 motaboy Exp $
+
+  13 Feb 2005; Simone Gotti <motaboy@gentoo.org>
+  kdepim-meta-3.4.0_beta2.ebuild:
+  Add deps on kontact-specialdates.
 
 *kdepim-meta-3.4.0_beta2 (05 Feb 2005)
 
