@@ -1,0 +1,27 @@
+# ChangeLog for dev-java/sun-jre
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/ChangeLog,v 1.1 2004/06/03 18:23:30 karltk Exp $
+
+  03 Jun 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
+  sun-jre-bin-1.4.2.04.ebuild: Moved from dev-java/sun-jre to 
+  dev-java/sun-jre-bin. Partial fix for #9289.
+
+  02 Jun 2004; Aron Griffis <agriffis@gentoo.org> sun-jre-1.4.2.04.ebuild:
+  Fix use invocation
+
+*sun-jre-1.4.2.04 (11 Mar 2004)
+
+  11 Mar 2004; Chris Aniszczyk <zx@gentoo.org> sun-jre-1.4.2.04.ebuild,
+  files/sun-jre-1.4.2.04:
+  Version bump :)
+
+  01 Mar 2004; <mkennedy@gentoo.org> files/sun-jre-1.4.2.03:
+  Remove CLASSPATH from environment variable list.
+
+*sun-jre-1.4.2.03 (12 Feb 2004)
+
+  12 Feb 2004; Brandon Low <lostlogic@gentoo.org> metadata.xml,
+  sun-jre-1.4.2.03.ebuild, files/sun-jre-1.4.2.03:
+  First version of the Sun JRE, I primarily based this on the sun-jdk-1.4.2.03
+  ebuild, I hope I ported it over correctly
+
