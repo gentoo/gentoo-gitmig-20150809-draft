@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.82 2003/09/17 18:31:31 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.83 2003/09/20 20:23:40 azarah Exp $
+
+*glibc-2.3.2-r5 (20 Sep 2003)
+
+  20 Sep 2003; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.2-r5.ebuild:
+  Update CVS snapshot to 20030919. Update NPTL to 0.59.
 
   17 Sep 2003; Jon Portnoy <avenj@gentoo.org> glibc-2.3.2-r1.ebuild :
   ia64 keywords.
