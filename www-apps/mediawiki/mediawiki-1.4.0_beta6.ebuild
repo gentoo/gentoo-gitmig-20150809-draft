@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.4.0_beta6.ebuild,v 1.2 2005/02/17 04:28:54 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/mediawiki-1.4.0_beta6.ebuild,v 1.3 2005/02/18 01:09:20 trapni Exp $
 
 inherit webapp
 
@@ -44,8 +44,8 @@ src_install() {
 		extensions
 		images
 		includes
-		includes/norma
-		includes/template
+		includes/normal
+		includes/templates
 		includes/zhtable
 		irc
 		languages

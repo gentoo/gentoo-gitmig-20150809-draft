@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/mediawiki
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.8 2005/02/17 04:28:54 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/mediawiki/ChangeLog,v 1.9 2005/02/18 01:09:20 trapni Exp $
+
+  18 Feb 2005; Christian Parpart <trapni@gentoo.org> :
+  fixed bug 82329: typo
 
   17 Feb 2005; Christian Parpart <trapni@gentoo.org>
   +files/postinstall-1.4-en.txt:
