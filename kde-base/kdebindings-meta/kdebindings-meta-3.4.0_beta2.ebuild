@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-meta/kdebindings-meta-3.4.0_beta2.ebuild,v 1.2 2005/02/06 13:39:55 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings-meta/kdebindings-meta-3.4.0_beta2.ebuild,v 1.3 2005/02/15 21:49:17 greg_g Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
-DESCRIPTION="kdebindings - merge this to pull in all kdebase-derived packages"
+DESCRIPTION="kdebindings - merge this to pull in all kdebindings-derived packages"
 HOMEPAGE="http://www.kde.org/"
 
 LICENSE="GPL-2"
