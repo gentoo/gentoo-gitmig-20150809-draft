@@ -1,6 +1,8 @@
 # ChangeLog for dev-embedded/sdcc
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/ChangeLog,v 1.1 2004/02/19 04:31:57 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/sdcc/ChangeLog,v 1.2 2004/03/01 12:48:54 aliz Exp $
+
+*sdcc-20040218 (19 Feb 2004)
 
   19 Feb 2004; Daniel Black <dragonheart@gentoo.org> :
   Initial import. bug #38473 thanks to Simon Smith supersi2000@hotmail.com

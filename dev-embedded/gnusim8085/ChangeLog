@@ -1,6 +1,8 @@
 # ChangeLog for dev-embedded/gnusim8085
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gnusim8085/ChangeLog,v 1.1 2004/02/19 07:11:21 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/gnusim8085/ChangeLog,v 1.2 2004/03/01 12:48:54 aliz Exp $
+
+*gnusim8085-1.2.89 (19 Feb 2004)
 
   19 Feb 2004; Daniel Black <dragonheart@gentoo.org> :
   Initial import. bug #34418 - thanks to J. Santiago Hirschfeld
