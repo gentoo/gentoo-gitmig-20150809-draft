@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/figlet-22-r1.ebuild,v 1.5 2003/03/29 11:18:02 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/figlet/figlet-22-r1.ebuild,v 1.6 2003/04/23 14:31:39 vapier Exp $
 
 MY_P=${P/-/}
 S=${WORKDIR}/${MY_P}
-DESCRIPTION="FIGlet is a program for making large letters out of ordinary text"
+DESCRIPTION="program for making large letters out of ordinary text"
 HOMEPAGE="http://www.figlet.org/"
 SRC_URI="ftp://ftp.figlet.org/pub/figlet/program/unix/${MY_P}.tar.gz"
 
@@ -22,7 +22,6 @@ src_unpack() {
 	epatch ${FILESDIR}/${PF}-gentoo.diff
 	sed -i "s/CFLAGS = -g/CFLAGS = ${CFLAGS}/g" Makefile
 }
-
 
 src_compile() {
 	make clean || die
