@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tkTheme
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkTheme/ChangeLog,v 1.9 2004/12/31 01:25:15 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkTheme/ChangeLog,v 1.10 2005/04/02 15:53:37 weeve Exp $
+
+  02 Apr 2005; Jason Wever <weeve@gentoo.org> tkTheme-1.0.ebuild:
+  Stable on SPARC.
 
   31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

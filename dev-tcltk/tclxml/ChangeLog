@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tclxml
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/ChangeLog,v 1.15 2004/12/31 01:23:34 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tclxml/ChangeLog,v 1.16 2005/04/02 15:48:48 weeve Exp $
+
+  02 Apr 2005; Jason Wever <weeve@gentoo.org> tclxml-2.4.ebuild:
+  Stable on SPARC.
 
   31 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tkXwin
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkXwin/ChangeLog,v 1.7 2004/06/25 02:11:00 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkXwin/ChangeLog,v 1.8 2005/04/02 15:50:39 weeve Exp $
+
+  02 Apr 2005; Jason Wever <weeve@gentoo.org> tkXwin-1.0.ebuild:
+  Stable on SPARC.
 
   19 Jun 2004; Jason Wever <weeve@gentoo.org> tkXwin-1.0.ebuild:
   Added ~sparc keyword.

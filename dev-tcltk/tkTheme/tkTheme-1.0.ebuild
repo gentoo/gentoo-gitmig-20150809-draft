@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkTheme/tkTheme-1.0.ebuild,v 1.10 2004/06/25 02:10:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tkTheme/tkTheme-1.0.ebuild,v 1.11 2005/04/02 15:53:37 weeve Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.xmission.com/~georgeps/Tk_Theme/other/"
 SRC_URI="http://www.xmission.com/~georgeps/Tk_Theme/other/${PN}.tgz"
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 alpha ~sparc"
+KEYWORDS="x86 alpha sparc"
 IUSE=""
 DEPEND=">=dev-lang/tcl-8.3.3
 	>=dev-lang/tk-8.3.3"

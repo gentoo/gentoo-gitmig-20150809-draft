@@ -1,6 +1,9 @@
 # ChangeLog for dev-tcltk/tls
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tls/ChangeLog,v 1.9 2004/12/10 22:03:09 ticho Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tls/ChangeLog,v 1.10 2005/04/02 15:47:46 weeve Exp $
+
+  02 Apr 2005; Jason Wever <weeve@gentoo.org> tls-1.4.1.ebuild:
+  Stable on SPARC.
 
   10 Dec 2004; Andrej Kacian <ticho@gentoo.org> tls-1.5.0.ebuild:
   Made dependency on dev-lang/tk optional. Closes #73999, reported by Benjamin
