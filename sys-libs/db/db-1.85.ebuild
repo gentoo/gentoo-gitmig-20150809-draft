@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-1.85.ebuild,v 1.3 2000/11/25 13:13:30 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-1.85.ebuild,v 1.4 2000/11/30 23:14:00 achim Exp $
 
 A=db.1.85.tar.gz
 S=${WORKDIR}/db.1.85
@@ -18,7 +18,7 @@ src_unpack() {
 
 src_compile() {
     cd ${S}/PORT/linux
-    try make OORG=\"${CFLAGS} -fomit-frame-pointer\" prefix=/usr
+    try make ${MAKEOPTS} OORG=\"${CFLAGS} -fomit-frame-pointer\" prefix=/usr
 }
 
 src_install () {
@@ -36,6 +36,13 @@ src_install () {
 	dosed "s:<db.h>:<db1/db.h>;" /usr/include/ndbm.h
 	cp db_dump185 db1_dump185
 	dobin db1_dump185
+	cd ${S}
+	dodoc changelog README
+	docinto ps
+	dodoc docs/*.ps
+	docinto hash
+	dodoc hash/README
+	
 }
 
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.1-r1.ebuild,v 1.5 2000/11/07 11:16:08 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-4.1-r1.ebuild,v 1.6 2000/11/30 23:14:00 achim Exp $
 
 P=readline-4.1
 A=${P}.tar.gz
@@ -16,10 +16,9 @@ RDEPEND=$DEPEND
 
 src_compile() {                           
     try ./configure --host=${CHOST} --with-curses --prefix=/usr
-    try make
+    try make ${MAKEOPTS}
     cd shlib
-    try make
-    cd ..
+    try make ${MAKEOPTS}
 
 }
 
@@ -29,16 +28,14 @@ src_install() {
 	cd shlib
 	try make prefix=${D}/usr install
 	cd ..
-	prepman
-	prepinfo
-	dodoc CHANGELOG CHANGES COPYING INSTALL MANIFEST README USAGE
+	dodoc CHANGELOG CHANGES COPYING MANIFEST README USAGE
+	docinto ps
 	dodoc doc/*.ps
 	docinto html
 	dodoc doc/*.html
-	dosym libhistory.so.4.1 /usr/lib/libhistory.so.4
 	dosym libhistory.so.4.1 /usr/lib/libhistory.so
-	dosym libreadline.so.4.1 /usr/lib/libreadline.so.4
 	dosym libreadline.so.4.1 /usr/lib/libreadline.so
+	chmod 755 ${D}/usr/lib/*.4.1
 }
 
 

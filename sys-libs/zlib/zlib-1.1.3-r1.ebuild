@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.1.3-r1.ebuild,v 1.5 2000/11/07 11:16:08 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.1.3-r1.ebuild,v 1.6 2000/11/30 23:14:00 achim Exp $
 
 P=zlib-1.1.3
 A=${P}.tar.gz
@@ -15,10 +15,10 @@ RDEPEND=$DEPEND
 src_compile() {            
    cd ${S}               
     try ./configure --shared --prefix=/usr
-    try make
+    try make ${MAKEOPTS}
     try make test
     try ./configure --prefix=/usr
-    try make
+    try make ${MAKEOPTS}
 }
 
 src_install() {                               
@@ -28,9 +28,8 @@ src_install() {
     doins zconf.h zlib.h
     dolib libz.so.1.1.3
     dolib libz.a
-#    dosym libz.so.1.1.3 /usr/lib/libz.so
-#    dosym libz.so.1.1.3 /usr/lib/libz.so.1
-    preplib
+    dosym libz.so.1.1.3 /usr/lib/libz.so
+    dosym libz.so.1.1.3 /usr/lib/libz.so.1
     dodoc FAQ README algorithm.txt ChangeLog
 }
 

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.0-r1.ebuild,v 1.5 2000/11/07 11:16:08 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.0-r1.ebuild,v 1.6 2000/11/30 23:14:00 achim Exp $
 
 # FOR SOME REASON, THE CONFIGURE SCRIPT DOES NOT USE THE EXPORTED CFLAGS, SO
 # THIS LIBRARY ONLY HAS -O OPTS, WE WON'T WORRY ABOUT THIS FOR SUCH AN 
@@ -21,19 +21,11 @@ RDEPEND=$DEPEND
 
 src_compile() {                           
     try ./configure --host=${CHOST} --prefix=/usr
-    try make
+    try pmake 
 }
 
-src_install() {                               
-    into /usr
-    dolib.a libgdbm.la .libs/libgdbm.a
-    dolib.so .libs/libgdbm.so.2.0.0
-    dosym libgdbm.so.2.0.0 /usr/lib/libgdbm.so.2
-    dosym libgdbm.so.2.0.0 /usr/lib/libgdbm.so
-    insinto /usr/include
-    doins gdbm.h
-    doman gdbm.3
-    doinfo gdbm.info
+src_install() {      
+    try make prefix=${D}/usr install                         
     dodoc COPYING ChangeLog NEWS README
 }
 

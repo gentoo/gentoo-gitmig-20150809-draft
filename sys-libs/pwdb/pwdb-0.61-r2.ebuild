@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.61-r2.ebuild,v 1.1 2000/11/20 22:16:46 jerry Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pwdb/pwdb-0.61-r2.ebuild,v 1.2 2000/11/30 23:14:00 achim Exp $
 
 P=pwdb-0.61
 A=${P}.tar.gz
@@ -22,7 +22,7 @@ src_compile() {
   cd ${S}
   cp Makefile Makefile.orig
   sed -e "s/^DIRS = .*/DIRS = libpwdb/" Makefile.orig > Makefile
-  try make
+  try make ${MAKEOPTS}
 }
 
 src_install() {                               
@@ -30,12 +30,14 @@ src_install() {
   into /usr
   dodir /usr/include/pwdb
   dodir /usr/lib
-  dodoc doc/pwdb.txt CHANGES Copyright CREDITS README
+  dodoc CHANGES Copyright CREDITS README
   docinto html
   dodoc doc/html/*
+  docinto txt
+  dodoc doc/*.txt
   insinto /etc
   doins conf/pwdb.conf
-  try make INCLUDED=${D}/usr/include/pwdb LIBDIR=${D}/usr/lib install
+  try make INCLUDED=${D}/usr/include/pwdb LIBDIR=${D}/usr/lib LDCONFIG="echo" install
   preplib /usr
 
   cd ${O}/files
