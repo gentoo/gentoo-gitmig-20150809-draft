@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/gtkpbbuttons
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gtkpbbuttons/ChangeLog,v 1.2 2002/07/14 19:20:18 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gtkpbbuttons/ChangeLog,v 1.3 2002/10/17 08:08:57 kain Exp $
+
+*gtkpbbuttons-0.5.2 (17 Oct 2002)
+
+  17 Oct 2002; Kain <kain@kain.org> gtkpbbuttons-0.5.2.ebuild :
+  Update to bring us in line with pbbuttonsd-0.5+.
 
 *gtkpbbuttons-0.4.6b (09 Jul 2002)
 
