@@ -2,9 +2,10 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Team: System Team <system@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-2.9_p2-r2.ebuild,v 1.3 2001/09/03 21:47:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-2.9_p2-r2.ebuild,v 1.4 2001/09/04 01:27:52 blocke Exp $
 
-S=${WORKDIR}/${P}
+MYP="openssh-2.9p2"
+S=${WORKDIR}/${MYP}
 DESCRIPTION="Port of OpenBSD's free SSH release"
 SRC_URI="ftp://ftp.openbsd.org/pub/unix/OpenBSD/OpenSSH/portable/openssh-2.9p2.tar.gz"
 HOMEPAGE="http://www.openssh.com/"
@@ -12,11 +13,13 @@ HOMEPAGE="http://www.openssh.com/"
 DEPEND="virtual/glibc sys-devel/perl sys-apps/groff
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
 	pam? ( >=sys-libs/pam-0.73 )
-	>=dev-libs/openssl-0.9.6"
+	>=dev-libs/openssl-0.9.6
+	sys-libs/zlib"
 
 RDEPEND="virtual/glibc
 	pam? ( >=sys-libs/pam-0.73 )
-	>=dev-libs/openssl-0.9.6"
+	>=dev-libs/openssl-0.9.6
+	sys-libs/zlib"
 
 src_compile() {
     local myconf
