@@ -1,19 +1,24 @@
 # ChangeLog for dev-libs/atk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.16 2003/01/21 19:20:25 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.17 2003/02/04 06:03:58 spider Exp $
 
 *atk-1.2.2 (21 Jan 2003)
-
   21 Jan 2003; foser <foser@gentoo.org> atk-1.2.2.ebuild :
   New version, fixed ebuild to use gnome2 eclass more
 
 *atk-1.2.1 (13 Jan 2003)
+  
+  04 Feb 2003; Spider <spider@gentoo.org> atk-1.2.1.ebuild :
+  removed DEBUG for DEBUGBUILD
 
   13 Jan 2003; foser <foser@gentoo.org> atk-1.2.1.ebuild :
   New version
 
 *atk-1.2.0 (22 Dec 2002)
-
+  
+  04 Feb 2003; Spider <spider@gentoo.org> atk-1.2.0.ebuild :
+  removed DEBUG for DEBUGBUILD
+      
   06 Jan 2003; Martin Holzer <mholzer@gentoo.org> atk-1.2.0.ebuild :
   Changed RDEPEND=">=dev-libs/glib-2" to RDEPEND=">=dev-libs/glib-2.0.6-r1"
   cause it doesn't work.
@@ -28,6 +33,9 @@
  
 *atk-1.1.1 (12 Nov 2002)
 
+  04 Feb 2003; Spider <spider@gentoo.org> atk-1.1.1.ebuild :
+  removed DEBUG for DEBUGBUILD
+
   26 Nov 2002; Jon Nall <nall@gentoo.org> atk-1.1.1.ebuild :
   added ~ppc to KEYWORDS
 
@@ -40,6 +48,10 @@
   New unstable version
 
 *atk-1.0.3-r1 (4 Aug 2002)
+  
+  04 Feb 2003; Spider <spider@gentoo.org> atk-1.0.3-r1.ebuild :
+  change the DEBUG to DEBUGBUILD
+   
   4 Aug 2002; Spider <spider@gentoo.org> atk-1.0.3-r1.ebuild:
   remove debugging informatio, restructure the ebuild
   
@@ -59,6 +71,10 @@
 
 
 *atk-1.0.1-r2 (24 Apr 2002)
+  04 Feb 2003; Spider <spider@gentoo.org> atk-1.0.1-r2.ebuild :
+  removed debug cludge for inherit debug instead
+
+  
   24 Apr 2002; Spider <spider@gentoo.org> atk-1.0.1-r2.ebuild ChangeLog:
   ChangeLog update
   libtoolize
