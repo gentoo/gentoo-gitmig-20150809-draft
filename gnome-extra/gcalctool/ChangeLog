@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gcalctool
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/ChangeLog,v 1.43 2004/12/19 06:26:52 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gcalctool/ChangeLog,v 1.44 2004/12/22 00:58:12 obz Exp $
+
+  21 Dec 2004; Mike Gardiner <obz@gentoo.org> gcalctool-4.4.20.ebuild:
+  Updated atk dependency, see bug #71688
 
   19 Dec 2004; Mike Gardiner <obz@gentoo.org> gcalctool-4.4.20.ebuild:
   Keyworded x86 and ppc for GNOME 2.8.1
