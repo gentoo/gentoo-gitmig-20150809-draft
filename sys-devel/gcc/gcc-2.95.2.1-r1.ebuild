@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.2.1-r1.ebuild,v 1.1 2001/02/19 18:00:33 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.2.1-r1.ebuild,v 1.2 2001/02/27 17:46:55 achim Exp $
 
 
 SRC_URI="ftp://ftp.freesoftware.com/pub/sourceware/gcc/releases/${PN}-2.95.2/${PN}-2.95.2.tar.gz
@@ -26,7 +26,7 @@ T=/usr
 DESCRIPTION="Modern GCC C/C++ compiler"
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 DEPEND="virtual/glibc
-        >=sys-devel/gettext-0.10.35-r1"
+        nls? ( sys-devel/gettext )"
 
 RDEPEND="virtual/glibc"
 
@@ -70,9 +70,15 @@ src_compile() {
     local myconf
     if [ -z "`use build`" ]
     then
-        myconf="--enable-nls --enable-shared"
+        myconf="--enable-shared"
     else
-        myconf="--disable-nls"
+        myconf="--enable-languages=c,c++"
+    fi
+    if [ "`use nls`" ]
+    then
+        myconf="${myconf} --enable-nls"
+    else
+        myconf="${myconf} --disable-nls"
     fi
 
     # gcc does not like optimization
@@ -87,7 +93,7 @@ src_compile() {
                 --with-local-prefix=${T}/local ${myconf}
 
 	# Parallel build does not work
-    if [ -z "`use build-static`" ]
+    if [ -z "`use static`" ]
     then
 	    try make ${MAKEOPTS} bootstrap-lean
     else
