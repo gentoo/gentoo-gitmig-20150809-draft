@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/files/pg_autovacuum.init-8.0.0_beta3,v 1.1 2004/11/06 19:26:26 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/files/pg_autovacuum.init-8.0.0_beta5,v 1.1 2004/11/23 10:42:55 nakano Exp $
 
 depend() {
 	need postgresql logger

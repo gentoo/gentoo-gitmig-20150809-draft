@@ -1,6 +1,6 @@
-diff -Naru postgresql-8.0.0beta3.org/src/bin/initdb/initdb.c postgresql-8.0.0beta3/src/bin/initdb/initdb.c
---- postgresql-8.0.0beta3.org/src/bin/initdb/initdb.c	2004-08-29 06:06:52.000000000 +0100
-+++ postgresql-8.0.0beta3/src/bin/initdb/initdb.c	2004-09-02 09:18:00.634625577 +0100
+diff -Naru postgresql-8.0.0beta5.org/src/bin/initdb/initdb.c postgresql-8.0.0beta5/src/bin/initdb/initdb.c
+--- postgresql-8.0.0beta5.org/src/bin/initdb/initdb.c	2004-08-29 06:06:52.000000000 +0100
++++ postgresql-8.0.0beta5/src/bin/initdb/initdb.c	2004-09-02 09:18:00.634625577 +0100
 @@ -2499,11 +2499,7 @@
  		fprintf(stderr, authwarning);
  

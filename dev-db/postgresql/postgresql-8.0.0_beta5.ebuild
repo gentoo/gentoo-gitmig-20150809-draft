@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.0.0_beta3.ebuild,v 1.3 2004/11/06 19:26:26 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-8.0.0_beta5.ebuild,v 1.1 2004/11/23 10:42:55 nakano Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -111,7 +111,7 @@ src_install() {
 	fi
 
 	make DESTDIR=${D} LIBDIR=${D}/usr/lib install || die
-	make DESTDIR=${D} install-all-headers || die
+#	make DESTDIR=${D} install-all-headers || die
 	cd ${S}/contrib
 	make DESTDIR=${D} LIBDIR=${D}/usr/lib install || die
 	cd ${S}
