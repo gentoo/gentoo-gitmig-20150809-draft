@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.7-r1.ebuild,v 1.5 2001/12/11 04:15:58 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.7-r1.ebuild,v 1.6 2001/12/11 19:10:50 azarah Exp $
 
 SV=1.2.2
 S=${WORKDIR}/rc-scripts-${SV}
@@ -308,10 +308,15 @@ pkg_postinst() {
 	#symlinks (to /dev/sound/*, etc) and cause problems.
 	if [ -z "`use build`" ]
 	then
+		#force clean start of devfsd (we want it to fail on start
+		#when the version is < 1.3.20 to display notice ...)
 		if [ "`ps -A |grep devfsd`" ]
 		then
-			killall -HUP devfsd >/dev/null 2>&1
-		elif [ -x /sbin/devfsd ]
+			killall devfsd >/dev/null 2>&1
+			sleep 1
+		fi
+		
+		if [ -x /sbin/devfsd ]
 		then
 			/sbin/devfsd /dev >/dev/null 2>&1
 		fi
