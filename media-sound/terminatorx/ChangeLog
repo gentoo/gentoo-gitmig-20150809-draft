@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/terminatorx
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/ChangeLog,v 1.8 2004/04/03 23:49:04 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/terminatorx/ChangeLog,v 1.9 2004/04/23 22:29:15 kugelfang Exp $
+
+  24 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> terminatorx-3.81.ebuild:
+  marked ~amd64
 
   03 Apr 2004; Donnie Berkholz <spyderous@gentoo.org>;
   terminatorx-3.81.ebuild:
