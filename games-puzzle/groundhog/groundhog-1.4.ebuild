@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/groundhog/groundhog-1.4.ebuild,v 1.7 2004/06/04 19:21:27 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/groundhog/groundhog-1.4.ebuild,v 1.8 2004/06/04 19:25:41 mr_bones_ Exp $
 
-inherit eutils games gnuconfig
+inherit eutils gnuconfig games
 
 DESCRIPTION="Kids card/puzzle game"
 HOMEPAGE="http://home-2.consunet.nl/~cb007736/groundhog.html"
