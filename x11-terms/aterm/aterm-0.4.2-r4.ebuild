@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r4.ebuild,v 1.3 2003/03/11 08:23:20 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/aterm/aterm-0.4.2-r4.ebuild,v 1.4 2003/03/25 05:20:11 agriffis Exp $
 
 IUSE="cjk"
 S=${WORKDIR}/${P}
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/aterm/${P}.tar.bz2
 HOMEPAGE="http://aterm.sourceforge.net"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 
 DEPEND="media-libs/jpeg
 	media-libs/libpng

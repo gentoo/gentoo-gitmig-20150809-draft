@@ -1,10 +1,13 @@
 # ChangeLog for media-libs/libflash
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libflash/ChangeLog,v 1.6 2003/02/12 07:10:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libflash/ChangeLog,v 1.7 2003/03/25 05:20:11 agriffis Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *libflash-0.4.10-r1 (23 August 2002)
+
+  25 Mar 2003; Aron Griffis <agriffis@gentoo.org> libflash-0.4.10-r1.ebuild:
+  Add ~alpha to KEYWORDS
 
   26 August 2002; Sascha Schwabbauer <cybersystem@gentoo.org> libflash-0.4.10-r1.ebuild :
 

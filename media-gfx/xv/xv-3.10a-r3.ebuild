@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r3.ebuild,v 1.3 2003/02/13 12:39:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/xv-3.10a-r3.ebuild,v 1.4 2003/03/25 05:20:11 agriffis Exp $
 
 IUSE="png"
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.trilon.com/xv/index.html"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~ppc ~sparc "
+KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 
 DEPEND="virtual/x11
 	png? ( media-libs/jpeg

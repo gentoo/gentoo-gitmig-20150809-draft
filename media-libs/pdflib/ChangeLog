@@ -1,8 +1,11 @@
 # ChangeLog for media-libs/pdflib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/ChangeLog,v 1.16 2003/03/20 00:28:39 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/pdflib/ChangeLog,v 1.17 2003/03/25 05:20:11 agriffis Exp $
 
 *pdflib-4.0.3-r1 (13 Jan 2003)
+
+  25 Mar 2003; Aron Griffis <agriffis@gentoo.org> pdflib-4.0.3-r1.ebuild:
+  Add ~alpha to KEYWORDS
 
   20 Mar 2003; Guy Martin <gmsoft@gentoo.org> pdflib-4.0.3-r1.ebuild :
   Added hppa to KEYWORDS.

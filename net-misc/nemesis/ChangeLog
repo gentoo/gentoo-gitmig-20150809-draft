@@ -1,8 +1,11 @@
 # ChangeLog for net-misc/nemesis
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nemesis/ChangeLog,v 1.6 2003/03/07 23:26:35 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nemesis/ChangeLog,v 1.7 2003/03/25 05:20:11 agriffis Exp $
 
 *nemesis-1.32 (23 Apr 2002)
+
+  25 Mar 2003; Aron Griffis <agriffis@gentoo.org> nemesis-1.32.ebuild:
+  Add ~alpha to KEYWORDS
 
   07 Mar 2003; Martin Holzer <mholzer@gentoo.org> nemesis-1.32.ebuild :
   Corrected Homepage. Fixed Depend to libnet-1.0*. Closes #17017.

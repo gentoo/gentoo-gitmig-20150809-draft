@@ -1,8 +1,11 @@
 # ChangeLog for media-gfx/scrot
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/scrot/ChangeLog,v 1.3 2003/02/12 07:04:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/scrot/ChangeLog,v 1.4 2003/03/25 05:20:11 agriffis Exp $
 
 *scrot-0.6 (1 Feb 2002)
+
+  25 Mar 2003; Aron Griffis <agriffis@gentoo.org> scrot-0.6.ebuild:
+  Add ~alpha to KEYWORDS
 
   11 Sep 2002; Seemant Kulleen <seemant@gentoo.org> scrot-0.6.ebuild :
 

@@ -1,8 +1,11 @@
 # ChangeLog for media-sound/grip
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.13 2003/03/06 20:39:06 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.14 2003/03/25 05:20:11 agriffis Exp $
 
 *grip-3.0.6 (16 Feb 2003)
+
+  25 Mar 2003; Aron Griffis <agriffis@gentoo.org> grip-3.0.6.ebuild:
+  Add ~alpha to KEYWORDS
 
   06 March 2003; Martin Schlemmer <azarah@gentoo.org> grip-3.0.6.ebuild :
   The NPTL pthreads implementation do not support the

@@ -1,6 +1,11 @@
 # ChangeLog for dev-php/phpsysinfo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/ChangeLog,v 1.2 2003/02/12 06:29:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpsysinfo/ChangeLog,v 1.3 2003/03/25 05:20:11 agriffis Exp $
+
+*phpsysinfo-2.1 (25 Mar 2003)
+
+  25 Mar 2003; Aron Griffis <agriffis@gentoo.org> phpsysinfo-2.1.ebuild:
+  Add ~alpha to KEYWORDS
 
 *phpsysinfo-1.2 (31 Jan 2003)
 

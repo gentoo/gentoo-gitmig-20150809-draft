@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/pexpect-0.94.ebuild,v 1.6 2003/03/12 21:51:27 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/pexpect-0.94.ebuild,v 1.7 2003/03/25 05:20:11 agriffis Exp $
 
 IUSE=""
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://pexpect.sourceforge.net/"
 SRC_URI="mirror://sourceforge/pexpect/pexpect-0.94.tgz"
 LICENSE="PYTHON"
 SLOT="0"
-KEYWORDS="x86 ppc alpha sparc"
+KEYWORDS="x86 ppc ~alpha sparc"
 DEPEND="dev-lang/python"
 
 src_compile() {

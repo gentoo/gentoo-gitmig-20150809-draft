@@ -1,8 +1,11 @@
 # ChangeLog for dev-python/pexpect
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/ChangeLog,v 1.6 2003/03/12 21:51:27 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pexpect/ChangeLog,v 1.7 2003/03/25 05:20:11 agriffis Exp $
 
 *pexpect-0.94 (27 Oct 2002)
+
+  25 Mar 2003; Aron Griffis <agriffis@gentoo.org> pexpect-0.94.ebuild:
+  Add ~alpha to KEYWORDS
 
   12 Mar 2003; Jason Wever <weeve@gentoo.org> pexpect-0.94.ebuild:
   Added sparc to keywords.
