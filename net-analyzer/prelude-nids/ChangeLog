@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/prelude-nids
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nids/ChangeLog,v 1.15 2004/07/14 08:31:36 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nids/ChangeLog,v 1.16 2004/08/30 13:26:50 dholm Exp $
+
+  30 Aug 2004; David Holm <dholm@gentoo.org> prelude-nids-0.8.6.ebuild:
+  Added to ~ppc.
 
   14 Jul 2004; Eldad Zack <eldad@gentoo.org> -prelude-nids-0.8.1-r1.ebuild,
   -prelude-nids-0.8.1.ebuild, -prelude-nids-0.8.4.ebuild,

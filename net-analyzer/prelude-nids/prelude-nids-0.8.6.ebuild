@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nids/prelude-nids-0.8.6.ebuild,v 1.7 2004/07/14 08:31:36 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/prelude-nids/prelude-nids-0.8.6.ebuild,v 1.8 2004/08/30 13:26:50 dholm Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.prelude-ids.org/download/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 sparc"
+KEYWORDS="x86 sparc ~ppc"
 IUSE="doc debug"
 
 DEPEND="virtual/libc
