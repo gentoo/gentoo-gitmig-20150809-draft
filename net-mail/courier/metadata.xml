@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+
+<pkgmetadata>
+  <herd>no-herd</herd>
+  <maintainer>
+    <email>iggy@gentoo.org</email>
+    <name>Brian Jackson</name>
+    <description>Actively maintained</description>
+  </maintainer>
+  <longdescription>Complete email package consisting of pop, imap, smtp, and fax
+      server and secure version of the above also
+  </longdescription>
+</pkgmetadata>
