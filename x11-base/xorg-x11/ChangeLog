@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.167 2004/10/19 08:00:00 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.168 2004/10/19 08:31:27 spyderous Exp $
+
+  19 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.0-r2.ebuild:
+  Tons of code cleanups, again thanks to mr_bones_. There are a few more left in
+  the TODO list.
 
   19 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
   xorg-x11-6.8.0-r2.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.24 2004/10/19 08:00:00 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.25 2004/10/19 08:31:27 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -17,6 +17,11 @@
 #			- Move everything inside to /usr/lib while retaining its MD5 so
 #				it will still be uninstalled when portage follows the symlink.
 #				Note: A simple $(mv) does this. Do in pkg_preinst().
+#		Combine find loops for "Creating fonts.scale files," "Generating
+#			fonts.dir files and "Generating Xft cache"
+#		Mr_Bones_ the loop in pkg_postinst for removing Compose can probably
+#			be one line of bash expansion like rm -f ${ROOT}/usr/$(get_libdir)/
+#			X11/locale/{ja*|ko*|zh*}/Compose
 #   TARGET: 6.8.0-r3
 #		Same for /usr/X11R6/include
 #   TARGET: 6.8.0-r4
@@ -661,9 +666,7 @@ src_unpack() {
 		do
 			if [ -f ${x} ]
 			then
-				cp ${x} ${x}.orig
-				grep -iv 'Load[[:space:]]*"\(pex5\|xie\)"' ${x}.orig > ${x}
-				rm -f ${x}.orig
+				sed -i '/Load[[:space:]]*"\(pex5\|xie\)"/d' ${x}
 			fi
 		done
 	fi
@@ -751,7 +754,7 @@ compose_files_setup() {
 		sed -i \
 			-e 's/\(<dead_diaeresis> <space>\).*$/\1 : "\\"" quotedbl/' \
 			-e "s/\(<dead_acute> <space>\).*$/\1 : \"'\" apostrophe/" \
-			${i}
+			${i} || eerror "sed ${i} failed"
 	done
 }
 
@@ -767,11 +770,8 @@ etc_files_install() {
 	# new display manager script
 	doexe ${FILES_DIR}/startDM.sh
 	exeinto /etc/X11/Sessions
-	local x
-	for x in ${FILES_DIR}/Sessions/*
-	do
-		[ -f ${x} ] && doexe ${x}
-	done
+	# doexe skips directories, so this should be safe
+	doexe ${FILES_DIR}/Sessions/*
 	insinto /etc/env.d
 	doins ${FILES_DIR}/10xorg
 	insinto /etc/X11/xinit
@@ -996,17 +996,16 @@ src_install() {
 	do
 		if [ -f ${x} ]
 		then
-			fperms 0755 $(echo ${x} | sed -e "s|${D}||")
+			fperms 0755 ${x/${D}}
 		fi
 	done
 
 	# Fix permissions on modules ...
-	for x in $(find ${D}/usr/$(get_libdir)/modules -name '*.o') \
-	         $(find ${D}/usr/$(get_libdir)/modules -name '*.so')
+	for x in $(find ${D}/usr/$(get_libdir)/modules -name '*.o' -o -name '*.so')
 	do
 		if [ -f ${x} ]
 		then
-			fperms 0755 $(echo ${x} | sed -e "s|${D}||")
+			fperms 0755 ${x/${D}}
 		fi
 	done
 
@@ -1015,7 +1014,8 @@ src_install() {
 	ebegin "Fixing $(get_libdir)/X11/config/host.def"
 		cp ${D}/usr/$(get_libdir)/X11/config/host.def ${T}
 		awk '!/OptimizedCDebugFlags|OptimizedCplusplusDebugFlags|GccWarningOptions/ {print $0}' \
-			${T}/host.def > ${D}/usr/$(get_libdir)/X11/config/host.def
+			${T}/host.def > ${D}/usr/$(get_libdir)/X11/config/host.def \
+			|| eerror "Munging host.def failed"
 		# theoretically, /usr/lib/X11/config is a possible candidate for
 		# config file management. If we find that people really worry about imake
 		# stuff, we may add it.  But for now, we leave the dir unprotected.
@@ -1059,8 +1059,7 @@ src_install() {
 	dosym ../../usr/X11R6/bin/Xorg /etc/X11/X
 
 	# Fix perms
-	fperms 755 /usr/$(get_libdir)/X11/xkb/geometry/sgi
-	fperms 755 /usr/X11R6/bin/dga
+	fperms 755 /usr/$(get_libdir)/X11/xkb/geometry/sgi /usr/X11R6/bin/dga
 
 	compose_files_setup
 
@@ -1074,7 +1073,8 @@ src_install() {
 
 			for x in ${D}/usr/share/fonts/encodings/{.,large}/*.enc
 			do
-				[ -f "${x}" ] && gzip -9 -f ${x}
+				[ -f "${x}" ] && gzip -9 -f ${x} \
+					|| eerror "gzipping ${x} failed"
 			done
 		eend 0
 	fi
@@ -1083,10 +1083,11 @@ src_install() {
 	then
 		ebegin "gemini-koi8 fonts..."
 			cd ${WORKDIR}/ukr
-			gunzip *.Z
-			gzip -9 *.pcf
+			gunzip *.Z || eerror "gunzipping gemini-koi8 fonts failed"
+			gzip -9 *.pcf || eerror "gzipping gemini-koi8 fonts failed"
 			cd ${S}
-			cp -a ${WORKDIR}/ukr ${D}/usr/share/fonts
+			cp -a ${WORKDIR}/ukr ${D}/usr/share/fonts \
+				|| eerror "copying gemini-koi8 fonts failed"
 		eend 0
 	fi
 
@@ -1141,8 +1142,8 @@ clean_dynamic_libgl() {
 
 	# make sure we do not have any stale files lying around
 	# that could break things. Check old and new locations.
-	rm -f ${ROOT}/usr/X11R6/$(get_libdir)/libGL*
-	rm -f ${ROOT}/usr/$(get_libdir)/libGL*
+	rm -f ${ROOT}/usr/X11R6/$(get_libdir)/libGL* \
+		${ROOT}/usr/$(get_libdir)/libGL*
 }
 
 pkg_preinst() {
@@ -1174,9 +1175,7 @@ pkg_preinst() {
 		if [ "${G_FONTDIR}" != "CID" -a "${G_FONTDIR}" != "Speedo" ]
 		then
 			find ${ROOT}/usr/share/fonts/${G_FONTDIR} -type f -name 'fonts.*' \
-				-exec rm -f {} \;
-			find ${ROOT}/usr/share/fonts/${G_FONTDIR} -type f -name 'encodings.dir' \
-				-exec rm -f {} \;
+				-o -name 'encodings.dir' -exec rm -f {} \;
 		fi
 	done
 
@@ -1294,6 +1293,8 @@ font_setup() {
 				fi
 			done
 		eend 0
+	else
+		eerror "ttmkfdir not found. Unable to prepare TrueType fonts for use."
 	fi
 
 	ebegin "Generating fonts.dir files..."
@@ -1347,17 +1348,6 @@ font_setup() {
 }
 
 print_info() {
-	if use 3dfx
-	then
-		echo
-		einfo "If using a 3DFX card, and you had \"3dfx\" in your USE flags,"
-		einfo "please merge media-libs/glide-v3 if you have not done so yet"
-		einfo "by doing:"
-		einfo
-		einfo "  # emerge media-libs/glide-v3"
-		echo
-	fi
-
 	echo
 	einfo "Please note that the xcursors are in /usr/share/cursors/${PN}"
 	einfo "Any custom cursor sets should be placed in that directory"
