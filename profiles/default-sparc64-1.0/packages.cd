@@ -1,0 +1,16 @@
+sys-apps/devfsd
+sys-apps/lvm-user
+sys-apps/e2fsprogs
+sys-apps/reiserfs-utils
+sys-apps/util-linux
+sys-apps/bash
+sys-apps/fileutils
+sys-apps/net-tools
+sys-apps/modutils
+sys-apps/grep
+sys-apps/bzip2
+sys-apps/gzip
+sys-apps/textutils
+net-misc/openssh
+app-editors/levee
+app-editors/nano
