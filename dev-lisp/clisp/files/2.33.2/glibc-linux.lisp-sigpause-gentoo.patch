@@ -1,0 +1,15 @@
+diff -U4 --recursive clisp-2.33.2-orig/modules/bindings/glibc/linux.lisp clisp-2.33.2/modules/bindings/glibc/linux.lisp
+--- clisp-2.33.2-orig/modules/bindings/glibc/linux.lisp	2004-07-27 11:51:00.403973848 -0400
++++ clisp-2.33.2/modules/bindings/glibc/linux.lisp	2004-07-27 11:51:39.937963768 -0400
+@@ -34,8 +34,11 @@
+ (def-c-type ulonglong uint64)
+ (define-modify-macro orf () logior)
+ (define-modify-macro andf () logand)
+ 
++; Needed to choose sigpause version
++(c-lines "#define __FAVOR_BSD~%~%")
++
+ ; ============================= <stddef.h> ====================================
+ 
+ (c-lines "#include <stddef.h>~%")
+ 
