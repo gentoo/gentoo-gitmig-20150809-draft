@@ -1,6 +1,12 @@
 # ChangeLog for app-sci/chemtool
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/chemtool/ChangeLog,v 1.7 2003/12/02 10:27:16 phosphan Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/chemtool/ChangeLog,v 1.8 2004/02/26 11:23:44 phosphan Exp $
+
+*chemtool-1.6-r1 (26 Feb 2004)
+
+  26 Feb 2004; Patrick Kursawe <phosphan@gentoo.org> chemtool-1.6-r1.ebuild:
+  Removed gettext dependency, won't install locale stuff when USE="-nls"
+  (see bug #37230)
 
   02 Dec 2003; Patrick Kursawe <phosphan@gentoo.org> chemtool-1.6.ebuild:
   Fixing dependencies.
