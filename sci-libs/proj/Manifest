@@ -1,0 +1,19 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 669c99bfd7fab9a1be8a4fc239364576 ChangeLog 2374
+MD5 92bcaeb4dbc39c4a9a7cd00e71c4dfc6 proj-4.4.9.ebuild 1015
+MD5 53f6978b26051cf744bbf60284643324 proj-4.4.7-r1.ebuild 1014
+MD5 0673e088d6627cb1d2a6ed2c53f8b491 metadata.xml 426
+MD5 c54905fa0017b3cd5ff6b42e252760a7 proj-4.4.8.ebuild 995
+MD5 0ca57aaf4fc06ef33076e15f1adeb887 files/digest-proj-4.4.9 129
+MD5 ac50ff8c7d1e1aee4f500e2046eb3ac4 files/digest-proj-4.4.7-r1 129
+MD5 a057c46d8075728c0cfd3e97917c633c files/proj-4.4.7-gentoo.patch 914
+MD5 f177b03c8438b1a5e59e70358c91b269 files/digest-proj-4.4.8 129
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBwLiUugEuf3OQ0akRArsWAJ404To9uV4I5XgRH/bxQZI2xXwTWgCeJjZJ
+2x7qBzNzESmkHgpJO9mIKWo=
+=Lptn
+-----END PGP SIGNATURE-----

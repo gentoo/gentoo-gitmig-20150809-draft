@@ -1,0 +1,78 @@
+# ChangeLog for dev-libs/proj
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/proj/ChangeLog,v 1.1 2004/12/29 01:02:44 ribosome Exp $
+
+*proj-4.4.8 (28 Dec 2004)
+
+  28 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +files/proj-4.4.7-gentoo.patch, +proj-4.4.7-r1.ebuild, +proj-4.4.8.ebuild,
+  +proj-4.4.9.ebuild:
+  Moved from dev-libs/proj to sci-libs/proj.
+
+  15 Dec 2004; Bryan √òstergaard <kloeri@gentoo.org> proj-4.4.8.ebuild:
+  Stable on alpha.
+
+  12 Dec 2004; Mike Doty <kingtaco@gentoo.org> proj-4.4.9.ebuild:
+  stable on amd64
+
+*proj-4.4.9 (11 Dec 2004)
+
+  11 Dec 2004; Steve Arnold <nerdboy@gentoo.org> proj-4.4.8.ebuild,
+  +proj-4.4.9.ebuild:
+  bumped 4.4.8 to x86 and ppc, and added 4.4.9 with nad 1.2 (~arch)
+
+  05 Oct 2004; Sven Wegener <swegener@gentoo.org> :
+  Removed stray digest.
+
+*proj-4.4.8 (05 Oct 2004)
+
+  05 Oct 2004; Tom Payne <twp@gentoo.org> +proj-4.4.8.ebuild:
+  Version bump. Bug # 65832. Removed old version.
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> proj-4.4.7-r1.ebuild,
+  proj-4.4.7.ebuild:
+  virtual/glibc -> virtual/libc
+
+  23 May 2004; Bryan ÿstergaard <kloeri@gentoo.org> proj-4.4.7-r1.ebuild:
+  Stable on alpha.
+
+  21 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> proj-4.4.7-r1.ebuild:
+  Now really added IUSE, removed RDEPEND="${DEPEND}"
+
+  19 Apr 2004; Patrick Kursawe <phosphan@gentoo.org> proj-4.4.7-r1.ebuild,
+  proj-4.4.7.ebuild:
+  Added "inherit eutils", added IUSE
+
+  15 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> proj-4.4.7-r1.ebuild:
+  marked ~amd64
+
+  12 Jan 2004; <nerdboy@gentoo.org> proj-4.4.7-r1.ebuild, proj-4.4.7.ebuild:
+  Bumped -r1 to x86, updated copyright date and cleaned up ebuild comments
+
+*proj-4.4.7 (05 Nov 2003)
+
+  05 Nov 2003; <nerdboy@gentoo.org> proj-4.4.7.ebuild:
+  bumped original 4.4.7 ebuild to x86
+
+*proj-4.4.7-r1 (05 Nov 2003)
+
+  05 Nov 2003; <nerdboy@gentoo.org> proj-4.4.7-r1.ebuild:
+  added additional grids and test scripts, metadata.xml file
+
+*proj-4.4.7.ebuild (30 Aug 2003)
+
+  30 Aug 2003; Tom Payne <twp@gentoo.org> proj-4.4.7.ebuild :
+  Moved back to dev-libs from app-sci. Sorry!
+
+  30 Aug 2003; Tom Payne <twp@gentoo.org> proj-4.4.7.ebuild :
+  Moved from dev-libs to app-sci.
+
+  30 Aug 2003; Tom Payne <twp@gentoo.org> proj-4.4.7.ebuild :
+  Version bump.
+
+*proj-4.4.5.ebuild (16 ‰≈À 2002)
+
+  16 ‰≈À 2002; George Shapovalov <george@gentoo.org> ChangeLog, proj-4.4.5.ebuild, files/digest-proj-4.4.5 :
+  initial release
+  cartographic projections library
+  ebuild submitted by Nathaniel C. Domingo <nathaniel.domingo@upd.edu.ph>
