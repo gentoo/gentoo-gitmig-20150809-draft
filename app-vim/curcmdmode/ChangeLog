@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/curcmdmode
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/curcmdmode/ChangeLog,v 1.2 2004/07/17 19:16:39 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/curcmdmode/ChangeLog,v 1.3 2004/07/24 02:53:49 ciaranm Exp $
+
+  24 Jul 2004; Ciaran McCreesh <ciaranm@gentoo.org> curcmdmode-1.0.ebuild:
+  Stable on sparc, mips
 
   17 Jul 2004; David Holm <dholm@gentoo.org> curcmdmode-1.0.ebuild:
   Added to ~ppc.
