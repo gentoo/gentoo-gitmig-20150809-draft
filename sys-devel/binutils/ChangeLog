@@ -1,11 +1,15 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.22 2003/01/08 17:35:29 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.23 2003/01/19 20:28:42 tuxus Exp $
 
   08 Jan 2003; Martin Schlemmer <azarah@gentoo.org> binutils-2.13.90.0.16-r1.ebuild :
   Mark stable.
 
 *binutils-2.13.90.0.16-r1 (30 Dec 2002)
+
+  19 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
+  Add patches for mips
+  Added mips to keywords
 
   30 Dec 2002; Martin Schlemmer <azarah@gentoo.org> binutils-2.13.90.0.16-r1.ebuild :
   Update with patches from Redhat/Mandrake for various issues.
