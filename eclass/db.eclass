@@ -1,5 +1,5 @@
 # This is a common location for functions used in the sys-libs/db ebuilds
-# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.5 2003/10/15 09:03:13 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.6 2003/10/15 10:53:01 pauldv Exp $
 
 ECLASS=db
 INHERITED="$INHERITED $ECLASS"
@@ -39,7 +39,7 @@ db_fix_so () {
 	# but since there are only two of them, just overwrite them
 	cd ${ROOT}/usr/include
 	target=`find -type d -maxdepth 1 -name 'db[0-9]*' | sort  -g |cut -d/ -f2- | tail -n1`
-	if [ -n "${target} ] && [ -e "${target}/db.h" ]; then
+	if [ -n "${target}" ] && [ -e "${target}/db.h" ]; then
 		ln -sf ${target}/db.h .
 		ln -sf ${target}/db_185.h .
 	elif [ ! -e "${target}/db.h" ]; then
