@@ -1,5 +1,5 @@
-MD5 c724ecfb9c1c51cf93adbc78f53331d7 ChangeLog 774
+MD5 a27746a39a6f1bdb0686327e9f3b01a6 systray4j-2.4.ebuild 1863
+MD5 693ef6341a168d784c591fb4e3798cc0 ChangeLog 860
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 1c91c6f0acbde9a9d6ffa12d6fbd86ee systray4j-2.4.ebuild 1864
 MD5 f0c65493b9e6f3dcf93ec6928696b856 files/digest-systray4j-2.4 74
 MD5 1a1e3d6123fb041172ef5959bd74c225 files/systray4j-2.4-fPIC.patch 1884
