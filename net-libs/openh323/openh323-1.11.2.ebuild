@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.11.2.ebuild,v 1.1 2003/01/28 15:17:15 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.11.2.ebuild,v 1.2 2003/02/02 03:23:40 raker Exp $
 
 IUSE="ssl"
 S="${WORKDIR}/${PN}"
@@ -11,7 +11,7 @@ DEPEND="=dev-libs/pwlib-1.4.7*
 	ssl? ( dev-libs/openssl )"
 SLOT="0"
 LICENSE="MPL-1.1"
-KEYWORDS="~x86 ~ppc -sparc "
+KEYWORDS="x86 ~ppc -sparc "
 
 src_compile() {
 	export PWLIBDIR=/usr/share/pwlib

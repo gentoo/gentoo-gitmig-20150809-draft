@@ -4,6 +4,9 @@
 
 *openh323-1.11.2 (28 Jan 2003)
 
+  01 Feb 2003; Nick Hadaway <raker@gentoo.org> openh323-1.11.2.ebuild :
+  Marked stable
+
   28 Jan 2003; Nick Hadaway <raker@gentoo.org> openh323-1.11.2.ebuild,
   files/digest-openh323-1.11.2 :
   Version bump for gnomemeeting-0.96
