@@ -1,2 +1,14 @@
-MD5 4b00e4e8b7fe8c41c46b47de5dcf03b7 File-Slurp-9999.06.ebuild 369
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d5539034292939eabcaf49a49f3dab40 File-Slurp-9999.06.ebuild 520
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 1bfd359d7a45c52a659e708d50e092e4 ChangeLog 390
 MD5 e4c791bd52682b8c8f07ea20862d658c files/digest-File-Slurp-9999.06 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBZHsqtG5z4I8BtQoRAiJVAJ9+Ydxs0FbqP8C1yhEaF04pMmMKOgCfZ8rm
+WEHtUhCIRV3uEz04nSGAGuA=
+=4kHb
+-----END PGP SIGNATURE-----

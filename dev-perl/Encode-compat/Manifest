@@ -1,2 +1,14 @@
-MD5 5b4499c07cbbeddbd0b1f42b90ac2d3b Encode-compat-0.07.ebuild 336
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4dafbff8f8bf72c55e7821af455b0cbd Encode-compat-0.07.ebuild 511
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 4b92b1933723db45c0604d4f58f6188c ChangeLog 396
 MD5 d3e3f410ac22e62570650d21bf2cbfcc files/digest-Encode-compat-0.07 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBZHratG5z4I8BtQoRAugLAKCCTQVdILFv6/CQOtQe7p6rJolwmACeNWsa
+EtjQJZzVcy4bE5fBAmDOJJM=
+=WHfE
+-----END PGP SIGNATURE-----
