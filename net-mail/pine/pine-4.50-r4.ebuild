@@ -1,14 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.50-r4.ebuild,v 1.5 2003/02/14 21:31:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.50-r4.ebuild,v 1.6 2003/04/15 22:24:42 mholzer Exp $
+
+inherit eutils
 
 DESCRIPTION="A tool for reading, sending and managing electronic messages."
-SRC_URI="ftp://ftp.cac.washington.edu/${PN}/${PN}${PV}.tar.gz"
+SRC_URI="ftp://ftp.cac.washington.edu/${PN}/${PN}${PV}.tar.gz
+	mirror://gentoo/pine-4.50-maildir.patch.gz"
 HOMEPAGE="http://www.washington.edu/pine/"
 
 SLOT="0"
 LICENSE="PICO"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="x86 ppc sparc"
 IUSE="ssl ldap"
 
 DEPEND="virtual/glibc
@@ -21,45 +24,47 @@ S=${WORKDIR}/${PN}${PV}
 
 src_unpack() {
 	unpack ${A}
+	unpack pine-4.50-maildir.patch.gz
+	cd ${S}
 
 	if [ "`use mbox`" ] ; then
-		patch -d ${S} -p0 < ${FILESDIR}/imap-4.7c2-flock.patch
+		epatch ${FILESDIR}/imap-4.7c2-flock.patch
 	else
-		patch -d ${S} -p1 < ${FILESDIR}/pine-4.50-maildir.patch
-		patch -d ${S} -p0 < ${FILESDIR}/imap-4.7c2-flock+maildir.patch
+		epatch ${FILESDIR}/pine-4.50-maildir.patch
+		epatch ${FILESDIR}/imap-4.7c2-flock+maildir.patch
 	fi
 
 	# fix for Home and End keys
-        patch -d ${S} -p1 < ${FILESDIR}/pine-4.21-fixhome.patch
+        epatch ${FILESDIR}/pine-4.21-fixhome.patch
 
         # flock() emulation
         cp ${FILESDIR}/flock.c ${S}/imap/src/osdep/unix
 
         # change /bin/passwd to /usr/bin/passwd
-        patch -d ${S} -p1 < ${FILESDIR}/pine-4.21-passwd.patch
+        epatch ${FILESDIR}/pine-4.21-passwd.patch
 
 	if [ "`use ldap`" ] ; then
 		# link to shared ldap libs instead of static
-		patch -d ${S} -p1 < ${FILESDIR}/pine-4.30-ldap.patch
+		epatch ${FILESDIR}/pine-4.30-ldap.patch
 		mkdir ${S}/ldap
 		ln -s /usr/lib ${S}/ldap/libraries
 		ln -s /usr/include ${S}/ldap/include
 	fi
 
 	# small flock() related fix
-        patch -d ${S} -p0 < ${FILESDIR}/pine-4.40-boguswarning.patch
+        epatch ${FILESDIR}/pine-4.40-boguswarning.patch
 
         # segfix? not sure what this is for but it still applies
-        patch -d ${S} -p1 < ${FILESDIR}/pine-4.31-segfix.patch
+        epatch ${FILESDIR}/pine-4.31-segfix.patch
 
         # change lock files from 0666 to 0600
-        patch -d ${S} -p0 < ${FILESDIR}/pine-4.40-lockfile-perm.patch
+        epatch ${FILESDIR}/pine-4.40-lockfile-perm.patch
 
         # add missing needed time.h includes
-        patch -d ${S} -p1 < ${FILESDIR}/imap-2000-time.patch
+        epatch ${FILESDIR}/imap-2000-time.patch
 
         # gets rid of a call to stripwhitespace()
-        patch -d ${S} -p1 < ${FILESDIR}/pine-4.33-whitespace.patch
+        epatch ${FILESDIR}/pine-4.33-whitespace.patch
 
 	if [ -n "$DEBUG" ]; then
 		cd ${S}/pine
@@ -131,4 +136,3 @@ src_install() {
 	docinto html/tech-notes
 	dodoc doc/tech-notes/*.html
 }
-
