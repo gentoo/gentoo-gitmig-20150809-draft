@@ -1,4 +1,14 @@
-MD5 8b483f1255d9329ac47aa68b86a96722 ChangeLog 781
-MD5 e348c6f6e7e5e47ad7377b693efca91e cdemu-0.6_beta.ebuild 845
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bb39634dd849f07c48f3430000b19e56 ChangeLog 917
+MD5 d0ee0b61de771c45c6424b3fca7aeb2b cdemu-0.7.ebuild 845
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 801e9690970a37d539e1799b793b16be files/digest-cdemu-0.6_beta 66
+MD5 e622d5742ffb7be6a86f0662e095391f files/digest-cdemu-0.7 61
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBofC5HTu7gpaalycRAvTzAKCoUdFZj/jOrEoYFrsKanJIAnoJ0QCgnCoQ
+fZpt3m1xinrKNxF7zJ9IWkE=
+=wguw
+-----END PGP SIGNATURE-----
