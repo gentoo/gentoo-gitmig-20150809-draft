@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Archive-Zip
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Zip/ChangeLog,v 1.27 2005/03/29 18:32:38 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Archive-Zip/ChangeLog,v 1.28 2005/04/03 02:18:10 mcummings Exp $
+
+  02 Apr 2005; Michael Cummings <mcummings@gentoo.org>
+  -Archive-Zip-1.05-r1.ebuild, -Archive-Zip-1.05.ebuild,
+  -Archive-Zip-1.06.ebuild, -Archive-Zip-1.10.ebuild,
+  -Archive-Zip-1.12.ebuild:
+  Cleaning out old ebuidls
 
   29 Mar 2005; Markus Rothe <corsair@gentoo.org> Archive-Zip-1.14.ebuild:
   Stable on ppc64
