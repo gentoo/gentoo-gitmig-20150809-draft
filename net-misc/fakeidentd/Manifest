@@ -1,5 +1,5 @@
-MD5 230a8b6a08cd43becce867eb002daa9e fakeidentd-2.0-r1.ebuild 957
-MD5 06c85b47fa3aede89461a0098873e634 ChangeLog 2125
+MD5 8e26d5101ed945361c197bcacf73450a fakeidentd-2.0-r1.ebuild 957
+MD5 4ddca25d25455ed4b5a9b727599cb5d8 ChangeLog 2239
 MD5 5094e299a662c83ab7049ec879612056 files/fakeidentd.rc 516
 MD5 cd7ffa2f7a3f7745cc91f8488ff5bbde files/digest-fakeidentd-2.0-r1 62
 MD5 d1cd71f64931b2eb20b248a0fcf2ede2 files/fakeidentd.confd 405
