@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mozilla-firefox
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.52 2004/07/28 06:58:38 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.53 2004/07/28 12:29:16 agriffis Exp $
+
+  28 Jul 2004; <agriffis@gentoo.org> mozilla-firefox-0.9.1.ebuild:
+  stable on alpha, ia64 and x86
 
   28 Jul 2004; Travis Tilley <lv@gentoo.org>
   +files/firefox-0.9-nsFormHistory-crash-fix.patch,
