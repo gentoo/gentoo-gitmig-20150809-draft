@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/lft
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/ChangeLog,v 1.7 2005/03/21 23:54:44 vanquirius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/lft/ChangeLog,v 1.8 2005/04/03 02:47:29 vanquirius Exp $
+
+*lft-2.31 (02 Apr 2005)
+
+  02 Apr 2005; Marcelo Goes <vanquirius@gentoo.org> +lft-2.31.ebuild:
+  Version bump. Changed LICENSE to VOSTROM, using mirror://gentoo for SRC_URI.
 
   21 Mar 2005; Marcelo Goes <vanquirius@gentoo.org> lft-2.2.ebuild:
   Updated homepage.

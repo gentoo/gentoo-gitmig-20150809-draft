@@ -1,4 +1,6 @@
 MD5 94fe6c17df157acfe3b978f54c0161ea lft-2.2.ebuild 560
-MD5 7b20562a53c71fb18bf06ae9577a1e82 ChangeLog 894
+MD5 690130d8e6af9678dd2bd8296a10d1a2 lft-2.31.ebuild 547
+MD5 b776f378bba0fd0bcd7faa0b250b27e7 ChangeLog 1069
 MD5 bb22173a418c973dd61905d5cbf16cf6 metadata.xml 255
 MD5 a5e4182f300d1f41e8957bfb184842d9 files/digest-lft-2.2 59
+MD5 ceb29e8400bccbb7770137909245459d files/digest-lft-2.31 60
