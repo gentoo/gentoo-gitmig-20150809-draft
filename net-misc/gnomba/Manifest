@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 8c1d72bf014ee2d7ce3161464ea3855b ChangeLog 1484
 MD5 2172ae164f492fe0967e80b58927c768 gnomba-0.6.2.ebuild 897
-MD5 7eafee2905802254e28b56c90d885dbb gnomba-0.6.2-r1.ebuild 1055
+MD5 5eafccef4fd8233e5cff7bbccb70be87 gnomba-0.6.2-r1.ebuild 1055
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 900ccd7d2abcc3d34cc0858830561440 files/digest-gnomba-0.6.2 64
 MD5 900ccd7d2abcc3d34cc0858830561440 files/digest-gnomba-0.6.2-r1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBc8NQI1lqEGTUzyQRAnmsAJ4tQM5Ezt0qOHeWjFH2L1nK8S334ACdFlUG
-G/8+F49qiZqkCIB57aJo8+0=
-=NPd9
------END PGP SIGNATURE-----

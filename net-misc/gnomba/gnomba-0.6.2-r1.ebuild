@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gnomba/gnomba-0.6.2-r1.ebuild,v 1.2 2004/10/18 13:21:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gnomba/gnomba-0.6.2-r1.ebuild,v 1.3 2004/10/18 18:07:12 mr_bones_ Exp $
 
 inherit eutils
 
@@ -16,7 +16,7 @@ DEPEND="gnome-base/gnome-libs"
 
 src_compile() {
 	econf `use_enable debug` || die "econf failed"
-	# We touch the Makefile here, because the configure script 
+	# We touch the Makefile here, because the configure script
 	# touches Makefile.in and we want to avoid the recreation
 	touch Makefile
 	emake \
