@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/konserve
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/konserve/ChangeLog,v 1.20 2005/01/01 11:47:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/konserve/ChangeLog,v 1.21 2005/03/28 19:04:16 hansmi Exp $
+
+  28 Mar 2005; Michael Hanselmann <hansmi@gentoo.org>
+  konserve-0.10.3.ebuild:
+  Stable on ppc.
 
   18 Dec 2004; Simon Stelling <blubb@gentoo.org> konserve-0.10.3.ebuild:
   was testing for a long time, marking stable on amd64

@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/karchiver
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/karchiver/ChangeLog,v 1.19 2005/03/01 23:35:38 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/karchiver/ChangeLog,v 1.20 2005/03/28 19:05:08 hansmi Exp $
+
+  28 Mar 2005; Michael Hanselmann <hansmi@gentoo.org>
+  karchiver-3.1.1.ebuild:
+  Stable on ppc.
 
 *karchiver-3.1.1 (02 Mar 2005)
 
