@@ -1,8 +1,18 @@
-MD5 c71bd879d3ff2831f7db9809afc11e44 ChangeLog 778
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 96d94e883d50b29fd970d836eab5f6fd ChangeLog 932
 MD5 54528549c74096166938118f88d5dc1a metadata.xml 378
 MD5 15bef20e791738765681c9feea16a3ce selinux-logrotate-20031129.ebuild 402
-MD5 6d9b1c44bfb19aec83805f7916b00297 selinux-logrotate-20041120.ebuild 284
+MD5 91ae1dad6c6639bc020c43dd56c77eb8 selinux-logrotate-20041120.ebuild 405
 MD5 fa9617fb92a964c82598d65b34554882 selinux-logrotate-20041114.ebuild 405
 MD5 ba8727f969149526c6a20a13a9945058 files/digest-selinux-logrotate-20031129 77
 MD5 562588bbcb31c158672cc96e8600e623 files/digest-selinux-logrotate-20041120 77
 MD5 f7f3721ab7cb43aca2a9e4e25f5c1068 files/digest-selinux-logrotate-20041114 77
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBoj6lGSBEIeh4AEYRAoaXAJ9wVAZgpKPmL9fbhULVdZUMQkLcVQCgjgte
+Q6IvxvTNws01RgB7XLu5GaE=
+=2HCI
+-----END PGP SIGNATURE-----
