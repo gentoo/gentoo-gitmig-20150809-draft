@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/xqf-0.9.14.ebuild,v 1.6 2004/07/05 21:40:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/xqf/xqf-0.9.14.ebuild,v 1.7 2004/08/17 01:41:19 vapier Exp $
 
 DESCRIPTION="A server browser for many FPS games (frontend for qstat)"
 HOMEPAGE="http://www.linuxgames.com/xqf/"
@@ -25,7 +25,7 @@ RDEPEND="virtual/libc
 DEPEND="${RDEPEND}
 	sys-devel/libtool"
 RDEPEND="${RDEPEND}
-	>=games-util/qstat-25"
+	>=games-util/qstat-2.5"
 
 src_unpack() {
 	unpack ${A}
