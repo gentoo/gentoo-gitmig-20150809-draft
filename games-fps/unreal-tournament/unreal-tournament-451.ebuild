@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/unreal-tournament-451.ebuild,v 1.5 2004/02/08 21:22:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/unreal-tournament/unreal-tournament-451.ebuild,v 1.6 2004/02/24 22:22:33 vapier Exp $
 
 inherit games eutils
 
@@ -100,7 +100,6 @@ src_install() {
 
 	# export some symlinks so ppl can run
 	dodir ${GAMES_BINDIR}
-	dosym ${dir}/ucc ${GAMES_BINDIR}/ucc
 	dosym ${dir}/ut ${GAMES_BINDIR}/ut
 
 	prepgamesdirs
