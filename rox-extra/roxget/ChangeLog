@@ -1,0 +1,10 @@
+# ChangeLog for rox-extra/roxget
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/roxget/ChangeLog,v 1.1 2004/12/18 12:27:29 sergey Exp $
+
+*roxget-0.0.4 (18 Dec 2004)
+
+  18 Dec 2004; Sergey Kuleshov <svyatogor@gentoo.org> +metadata.xml,
+  +roxget-0.0.4.ebuild:
+  Just added to portage tree. (Bug #51996)
+
