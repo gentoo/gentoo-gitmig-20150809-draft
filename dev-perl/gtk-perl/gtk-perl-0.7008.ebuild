@@ -1,15 +1,18 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/gtk-perl-0.7008.ebuild,v 1.3 2001/11/12 15:28:46 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/gtk-perl-0.7008.ebuild,v 1.4 2002/02/09 21:30:55 verwilst Exp $
 
-A=Gtk-Perl-${PV}.tar.gz
 S=${WORKDIR}/Gtk-Perl-${PV}
 DESCRIPTION="Perl bindings for GTK"
-SRC_URI="ftp://ftp.rz.ruhr-uni-bochum.de/pub/CPAN/authors/id/L/LU/LUPUS/${A}"
+SRC_URI="http://www.gtkperl.org/Gtk-Perl-0.7008.tar.gz"
 HOMEPAGE="http://www.perl.org/"
-
-DEPEND=">=x11-libs/gtk+-1.2.10-r4 sys-devel/perl dev-perl/XML-Writer dev-perl/XML-Parser gnome? ( gnome-base/gnome-core )"
+SLOT="0"
+DEPEND=">=x11-libs/gtk+-1.2.10-r4 
+	sys-devel/perl 
+	dev-perl/XML-Writer 
+	dev-perl/XML-Parser 
+	gnome? ( gnome-base/gnome-core )"
 
 
 src_compile() {                           
@@ -18,11 +21,11 @@ src_compile() {
     myconf="--without-guessing"
   fi
   perl Makefile.PL $myconf
-  try make
+  make || die
 }
 
 src_install() {                               
-  try make PREFIX=${D}/usr INSTALLMAN3DIR=${D}/usr/share/man/man3 install
+  make PREFIX=${D}/usr INSTALLMAN3DIR=${D}/usr/share/man/man3 install || die
   dodoc ChangeLog MANIFEST NOTES README VERSIONS WARNING
 }
 
