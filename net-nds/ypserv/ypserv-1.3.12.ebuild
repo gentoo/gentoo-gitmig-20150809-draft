@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-1.3.12.ebuild,v 1.7 2002/08/16 03:55:04 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-1.3.12.ebuild,v 1.8 2002/08/29 21:27:15 karltk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="NIS SERVER"
@@ -21,6 +21,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	cp ${FILESDIR}/defs.sed ypmake
+	patch < ${FILESDIR}/${PV}/volatile-fix-gcc-3.2.diff || die
 
 }
 
