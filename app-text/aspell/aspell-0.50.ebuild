@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.ebuild,v 1.2 2002/08/23 13:40:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.50.ebuild,v 1.3 2002/08/26 13:40:06 seemant Exp $
 
 inherit libtool
 
@@ -40,11 +40,20 @@ src_install () {
 	make DESTDIR=${D} install || die
 	cd ${D}/usr/share/doc/${P}
 	dohtml -r man-html
+	rm -rf man-html
 	docinto text
 	dodoc man-text
+	rm -rf man-text
 	cd ${S}
 	
 	dodoc README* TODO
+
+	cd examples
+	make clean || die
+	cd ${S}
+	
+	docinto examples
+	dodoc examples/*
 
 }
 
