@@ -1,6 +1,12 @@
 # ChangeLog for mail-mta/courier
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.30 2004/11/29 22:54:38 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/courier/ChangeLog,v 1.31 2004/12/01 11:21:27 swtaylor Exp $
+
+*courier-0.47.20041129 (01 Dec 2004)
+
+  01 Dec 2004; Scott W Taylor <swtaylor@gentoo.org>
+  +courier-0.47.20041129.ebuild:
+  bump
 
   29 Nov 2004; Andrej Kacian <ticho@gentoo.org> courier-0.45.6.ebuild,
   courier-0.46.20040816.ebuild, courier-0.46.20040825.ebuild,
