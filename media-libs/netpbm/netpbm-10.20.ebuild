@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.20.ebuild,v 1.10 2004/10/02 21:15:36 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.20.ebuild,v 1.11 2004/10/03 04:54:12 vapier Exp $
 
 inherit flag-o-matic gcc
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc ~mips ~alpha ~hppa amd64 ~ia64 ppc64"
+KEYWORDS="~alpha amd64 hppa ia64 ~mips ppc ppc64 sparc x86"
 IUSE="svga jpeg tiff png zlib"
 
 DEPEND="jpeg? ( >=media-libs/jpeg-6b )
