@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/livecd-kconfigs
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/livecd-kconfigs/ChangeLog,v 1.1 2005/03/28 01:07:18 wolf31o2 Exp $
+
+*livecd-kconfigs-2005.0 (28 Mar 2005)
+
+  28 Mar 2005; Chris Gianelloni <wolf31o2@gentoo.org> +metadata.xml,
+  +livecd-kconfigs-2005.0.ebuild:
+  Initial import.  Ebuild by me.
+
