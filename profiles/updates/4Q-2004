@@ -177,3 +177,4 @@ move app-sci/xfoil sci-misc/xfoil
 move app-sci/zetagrid sci-misc/zetagrid
 move app-sci/gato sci-misc/gato
 move app-sci/gri sci-misc/gri
+move app-sci/h5utils sci-misc/h5utils
