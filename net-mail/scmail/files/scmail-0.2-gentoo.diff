@@ -1,0 +1,25 @@
+diff -urN scmail-0.2.orig/Makefile scmail-0.2/Makefile
+--- scmail-0.2.orig/Makefile	2003-03-21 10:46:02.000000000 +0900
++++ scmail-0.2/Makefile	2004-02-02 19:50:38.347370928 +0900
+@@ -2,7 +2,7 @@
+ 
+ PREFIX = /usr/local
+ BINDIR = $(PREFIX)/bin
+-DATADIR = $(PREFIX)/share/scmail
++SITELIBDIR = ${D}`gauche-config --sitelibdir`
+ 
+ DIST =	ChangeLog \
+ 	Makefile \
+@@ -37,10 +37,9 @@
+ 
+ install:
+ 	mkdir -p $(BINDIR)
+-	mkdir -p $(DATADIR)
++	mkdir -p ${SITELIBDIR}
+ 	cp -p scmail-deliver scmail-refile $(BINDIR)
+-	cp -p scmailrc*.sample $(DATADIR)
+-	cp -p scmail.scm `gauche-config --sitelibdir`
++	cp -p scmail.scm ${SITELIBDIR}
+ dist:
+ 	cd doc && make
+ 	rm -rf scmail-$(VERSION)

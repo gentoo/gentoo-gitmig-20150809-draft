@@ -1,3 +1,5 @@
-MD5 52db68e74cf2f65a794cafa9c3732af2 scmail-0.2.ebuild 585
+MD5 cc79e9ea5d91f31652b9b236650dfd5c ChangeLog 360
+MD5 a487669466c0db6312be14384cd52fc2 metadata.xml 225
+MD5 67f65df412373fdc37838712a09a1c90 scmail-0.2.ebuild 666
 MD5 33e7bd89a7d6f62b2a6711a6a219fd7f files/digest-scmail-0.2 61
 MD5 f807b3ff180a7c92b84716890eea3570 files/scmail-0.2-gentoo.diff 673
