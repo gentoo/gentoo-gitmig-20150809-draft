@@ -1,6 +1,10 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.84 2005/03/09 06:50:05 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.85 2005/03/10 02:27:58 gustavoz Exp $
+
+  09 Mar 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  gnome-terminal-2.8.2.ebuild:
+  Stable on sparc
 
 *gnome-terminal-2.10.0 (09 Mar 2005)
 
