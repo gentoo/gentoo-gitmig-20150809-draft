@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12p-r1.ebuild,v 1.1 2005/02/06 20:02:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12p-r1.ebuild,v 1.2 2005/02/19 01:55:32 vapier Exp $
 
 inherit eutils flag-o-matic toolchain-funcs
 
@@ -19,16 +19,15 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="crypt old-crypt nls static pam selinux perl"
 
-DEPEND="virtual/libc
-	virtual/os-headers
-	>=sys-libs/ncurses-5.2-r2
+RDEPEND=">=sys-libs/ncurses-5.2-r2
 	>=sys-fs/e2fsprogs-1.34
 	selinux? ( sys-libs/libselinux )
 	pam? ( sys-apps/pam-login )
-	crypt? ( app-crypt/hashalot )"
-RDEPEND="${DEPEND}
-	perl? ( dev-lang/perl )
-	nls? ( sys-devel/gettext )"
+	crypt? ( app-crypt/hashalot )
+	perl? ( dev-lang/perl )"
+DEPEND="${RDEPEND}
+	nls? ( sys-devel/gettext )
+	virtual/os-headers"
 
 OLD_CRYPT_P=${WORKDIR}/${PN}-${OLD_CRYPT_VER}
 
