@@ -1,6 +1,9 @@
 # ChangeLog for app-text/jadetex
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.8 2003/02/03 17:38:58 satai Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.9 2003/02/07 17:25:02 satai Exp $
+
+  07 Feb 2003; Matthew Turk <satai@gentoo.org> jadetex-3.12.ebuild :
+  Added some more addwrite lines in order to generate font metrics.
 
   03 Feb 2003; Matthew Turk <satai@gentoo.org> jadetex-3.12.ebuild :
   Added un-sandboxing to work with tetex-2.0.
