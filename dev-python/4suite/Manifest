@@ -1,17 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 e3c4022098e60ece3350df3430292634 4suite-1.0_alpha4.ebuild 916
 MD5 72aa6941a6afc35089f525c1f9658f83 4suite-1.0_alpha3.ebuild 610
-MD5 8b34b6adc07e98376b1e301b8c8b2bd6 ChangeLog 2821
+MD5 cdc88b46e1863c72d516acaf912a5589 4suite-1.0_alpha4.ebuild 919
+MD5 24eee0dd9820b4d379457037e9f2d132 ChangeLog 2915
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
-MD5 880f1fc88e78283a8665b8b0e45b95de files/digest-4suite-1.0_alpha4 66
-MD5 0724d222f5540595a368fb7acd27c1f9 files/digest-4suite-1.0_alpha3 65
 MD5 4814d18b806331ba9c6ef9340ed67f74 files/4S-1.0_a4.addrootopt-gentoo.diff 464
+MD5 0724d222f5540595a368fb7acd27c1f9 files/digest-4suite-1.0_alpha3 65
+MD5 880f1fc88e78283a8665b8b0e45b95de files/digest-4suite-1.0_alpha4 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD4DBQFB7zpYz2gxt1z4IGYRAv8gAJUVAUfCr6OSe/zaefYjQccZwL41AJ0fjwta
-24epidTeMCWd0Z++6lvilQ==
-=LMZ/
+iD8DBQFCPbuZevY57Fted3ERAqaGAKCMkTxxALIvZB8SZ4Uw10ECqvw0ywCfTP51
+h1CmWETuJU/W0/ZrfGPaASM=
+=6pL+
 -----END PGP SIGNATURE-----
