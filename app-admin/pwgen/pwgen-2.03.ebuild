@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/pwgen-2.03.ebuild,v 1.6 2003/09/20 19:56:29 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/pwgen-2.03.ebuild,v 1.7 2003/10/01 18:17:49 genone Exp $
 
 DESCRIPTION="Password Generator"
 SRC_URI="mirror://sourceforge/pwgen/${P}.tar.gz"
@@ -15,8 +15,7 @@ DEPEND="virtual/glibc"
 src_unpack() {
 	unpack ${A} ; cd ${S}
 
-	sed -i -e 's:$(prefix)/man/man1:$(mandir)/man1:g' \
-		Makefile.in.new > Makefile.in
+	sed -i -e 's:$(prefix)/man/man1:$(mandir)/man1:g' Makefile.in
 }
 
 src_compile() {
