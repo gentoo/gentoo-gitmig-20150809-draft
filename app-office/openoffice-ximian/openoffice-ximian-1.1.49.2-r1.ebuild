@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.49.2-r1.ebuild,v 1.2 2004/01/21 23:15:20 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.49.2-r1.ebuild,v 1.3 2004/01/22 13:39:16 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -405,12 +405,6 @@ src_compile() {
 
 src_install() {
 
-	# Don't forget the mime info...
-	insinto ${D}/usr/share/mimelnk/application
-	doins ${S}/sysui/${SOLPATH}/misc/kde/share/mimelnk/application/*
-	insinto /usr/share/application-registry
-	doins ${FILESDIR}/${OO_VER}/ximian-openoffice.applications
-
 	# Sandbox issues; bug #11838
 	addpredict "/user"
 	addpredict "/share"
@@ -517,6 +511,12 @@ src_install() {
 		insinto /usr/share/applnk/Ximian-OpenOffice.org
 		doins ${FILESDIR}/${OO_VER}/*.desktop
 	fi
+
+	# Don't forget the mime info...
+	insinto /usr/share/mimelnk/application
+	doins ${S}/sysui/${SOLPATH}/misc/kde/share/mimelnk/application/*
+	insinto /usr/share/application-registry
+	doins ${FILESDIR}/${OO_VER}/ximian-openoffice.applications
 
 	# Remove unneeded stuff
 	rm -rf ${D}${INSTDIR}/share/cde
