@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netio/netio-1.23.ebuild,v 1.6 2004/06/24 22:11:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netio/netio-1.23.ebuild,v 1.7 2004/07/01 20:05:49 squinky86 Exp $
 
 DESCRIPTION="a network benchmark for DOS, OS/2, Windows NT and Unix that measures net througput with NetBIOS and TCP/IP protocols."
 HOMEPAGE="http://freshmeat.net/projects/netio/"
@@ -9,9 +9,9 @@ LICENSE="free-noncomm"
 SLOT="0"
 KEYWORDS="x86 ppc ~sparc"
 IUSE=""
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	app-arch/unzip"
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 S=${WORKDIR}/
 
 src_compile() {
