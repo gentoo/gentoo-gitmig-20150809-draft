@@ -1,4 +1,14 @@
-MD5 617c925c97eed9124c65571f38b4dc10 gpg-agent-1.9.14.ebuild 2132
-MD5 5aeb364ab8429ca6c126371d40598981 ChangeLog 629
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d462f4ea30d9bfb373719d04d499140b gpg-agent-1.9.14.ebuild 2133
+MD5 559d6370b1181e38b1c32d56d1b218a2 ChangeLog 832
 MD5 b1a4c3f100342f9335a6974737f5e5ec metadata.xml 872
 MD5 337c9671ff169f922ba7d007a3ceaae6 files/digest-gpg-agent-1.9.14 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB3myimdTrptrqvGERAu0qAJ97CtFfLAvYpPM+JPFCYAScV9AmdwCfStFc
+cKpMEwvQ55IPfCbHVTd2p48=
+=o5bs
+-----END PGP SIGNATURE-----

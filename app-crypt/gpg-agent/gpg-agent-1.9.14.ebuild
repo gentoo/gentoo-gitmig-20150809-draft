@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpg-agent/gpg-agent-1.9.14.ebuild,v 1.2 2005/01/02 13:16:03 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpg-agent/gpg-agent-1.9.14.ebuild,v 1.3 2005/01/07 11:03:55 dragonheart Exp $
 
 inherit eutils flag-o-matic
 
@@ -20,7 +20,7 @@ KEYWORDS="~amd64 ~hppa ~ppc ~ppc64 ~x86"
 
 IUSE="nls caps threads"
 
-RDEPEND="<app-crypt/gnupg-1.9
+RDEPEND="app-crypt/gnupg
 	nls? ( sys-devel/gettext )
 	virtual/libc
 	>=dev-libs/libassuan-0.6.9
