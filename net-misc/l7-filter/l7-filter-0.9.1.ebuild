@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-0.9.1.ebuild,v 1.4 2005/01/04 09:28:13 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/l7-filter/l7-filter-0.9.1.ebuild,v 1.5 2005/01/04 09:31:33 dragonheart Exp $
 
 inherit kernel-mod eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/l7-filter/${MY_P}.tar.gz
 	mirror://sourceforge/l7-filter/kernel-2.6-layer7-${PV}+working_with_2.6.9.patch"
 LICENSE="GPL-2"
 SLOT="${KV}"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 IUSE=""
 
 S=${WORKDIR}/${MY_P}
