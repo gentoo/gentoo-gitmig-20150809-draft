@@ -1,17 +1,20 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.2_p6.ebuild,v 1.3 2003/10/27 11:01:24 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/bestcrypt/bestcrypt-1.2_p6.ebuild,v 1.4 2003/11/12 14:14:30 vapier Exp $
 
 MY_PN="bcrypt"
-KEYWORDS="x86"
+DESCRIPTION="commercially licensed transparent filesystem encryption"
+HOMEPAGE="http://www.jetico.com/"
 SRC_URI="http://www.jetico.com/linux/BestCrypt-${PV/_p/-}.tar.gz
 	http://www.jetico.com/linux/BestCrypt.doc.tgz"
-HOMEPAGE="http://www.jetico.com"
-DESCRIPTION="Transparent filesystem encryption.  This is a Commercially Licensed Package, please read the license and ChangeLog for more information."
-S=${WORKDIR}/${MY_PN}
+
 LICENSE="bestcrypt"
 SLOT="0"
+KEYWORDS="x86"
+
 DEPEND="virtual/linux-sources"
+
+S=${WORKDIR}/${MY_PN}
 
 src_unpack() {
 	unpack ${A}
@@ -25,7 +28,7 @@ src_unpack() {
 }
 
 src_compile() {
-	MAKEOPTS="-j1" emake
+	emake -j1 || die
 }
 
 src_install() {
@@ -37,24 +40,13 @@ src_install() {
 
 	exeinto /etc/rc.d/init.d
 	doexe ${FILESDIR}/bcrypt
-	dodir	/usr/bin		\
-		/etc/init.d		\
-		/etc/rc.d/rc0.d		\
-		/etc/rc.d/rc1.d		\
-		/etc/rc.d/rc2.d		\
-		/etc/rc.d/rc3.d		\
-		/etc/rc.d/rc4.d		\
-		/etc/rc.d/rc5.d		\
-		/etc/rc.d/rc6.d		\
-		/etc/rc0.d		\
-		/etc/rc1.d		\
-		/etc/rc2.d		\
-		/etc/rc3.d		\
-		/etc/rc4.d		\
-		/etc/rc5.d		\
-		/etc/rc6.d		\
-		/usr/share/man/man8	\
-		/lib/modules/${KV}/kernel/drivers/block/
+	dodir \
+		/usr/bin \
+		/etc/init.d \
+		/etc/rc.d/rc{0,1,2,3,4,5,6}.d \
+		/etc/rc{0,1,2,3,4,5,6}.d \
+		/usr/share/man/man8 \
+		/lib/modules/${KV}/kernel/drivers/block
 	einstall MAN_PATH="/usr/share/man" \
 		 root="${D}" \
 		 MOD_PATH=/lib/modules/${KV}/kernel/drivers/block
