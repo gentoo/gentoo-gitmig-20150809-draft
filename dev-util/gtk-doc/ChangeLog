@@ -1,10 +1,12 @@
 # ChangeLog for dev-util/gtk-doc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.7 2002/12/13 10:56:49 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/ChangeLog,v 1.8 2003/01/09 11:30:44 spider Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *gtk-doc-0.10 (16 Nov 2002)
+  09 Jan 2003; Spider <spider@gentoo.org> :
+  moved DEBUG to be DEBUGBUILD
   
   16 Nov 2002; Mike Frysinger <vapier@gentoo.org> :
   Added dev-libs/libxslt to DEPEND.

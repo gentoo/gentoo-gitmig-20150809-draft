@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-0.10.ebuild,v 1.3 2002/12/09 04:21:15 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gtk-doc/gtk-doc-0.10.ebuild,v 1.4 2003/01/09 11:30:44 spider Exp $
 
 inherit gnome.org
 
@@ -23,7 +23,7 @@ DEPEND=">=dev-util/pkgconfig-0.12.0
 src_compile() {
 	local myconf
 
-	if [ "${DEBUG}" ]
+	if [ "${DEBUGBUILD}" ]
 	then
 		myconf="--enable-debug=yes"
 	else
