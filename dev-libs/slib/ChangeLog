@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/slib
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/slib/ChangeLog,v 1.11 2004/02/17 02:05:35 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/slib/ChangeLog,v 1.12 2004/02/21 17:48:36 weeve Exp $
+
+*slib-3.1.1 (21 Feb 2004)
+
+  21 Feb 2004; Jason Wever <weeve@gentoo.org> slib-3.1.1.ebuild:
+  Marked slib-3.1.1 masked on x86.  see bug #41983 for more info.
 
   16 Feb 2004; Jason Wever <weeve@gentoo.org> :
   Version bump, resolves bug #40727.
