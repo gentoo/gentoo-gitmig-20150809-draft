@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/phppgadmin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/ChangeLog,v 1.32 2004/12/13 18:10:28 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/ChangeLog,v 1.33 2004/12/26 03:45:25 nakano Exp $
+
+  26 Dec 2004; Masatomo Nakano <nakano@gentoo.org> phppgadmin-3.5.1.ebuild:
+  Marked stable on x86
 
 *phppgadmin-3.5.1 (13 Dec 2004)
 
