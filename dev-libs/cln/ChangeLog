@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/cln
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cln/ChangeLog,v 1.9 2004/06/24 23:02:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cln/ChangeLog,v 1.10 2004/11/04 12:31:25 phosphan Exp $
+
+  04 Nov 2004; Patrick Kursawe <phosphan@gentoo.org> +metadata.xml,
+  cln-1.1.6.ebuild:
+  Adding metadata, declaring latest version stable for x86.
 
 *cln-1.1.6 (17 Mar 2004)
 
