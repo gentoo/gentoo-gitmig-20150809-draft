@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/egenix-mx-base-2.0.5.ebuild,v 1.10 2004/04/02 01:25:57 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/egenix-mx-base-2.0.5.ebuild,v 1.11 2004/06/02 02:29:19 tgall Exp $
 
 inherit distutils flag-o-matic
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.egenix.com/"
 
 DEPEND="virtual/python"
 SLOT="0"
-KEYWORDS="x86 sparc alpha ppc ~amd64 hppa ia64 mips s390"
+KEYWORDS="x86 sparc alpha ppc ~amd64 hppa ia64 mips s390 ppc64"
 LICENSE="eGenixPublic"
 #please note, there is also a possibility to buy a commercial license
 #from egenix.com
