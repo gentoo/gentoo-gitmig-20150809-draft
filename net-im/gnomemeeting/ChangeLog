@@ -1,6 +1,38 @@
 # ChangeLog for net-im/gnomemeeting
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/ChangeLog,v 1.2 2002/07/07 14:11:48 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/ChangeLog,v 1.3 2002/07/20 21:16:23 raker Exp $
+
+*gnomemeeting-0.93.0 (20 Jul 2002)
+
+  20 Jul 2002; Nick Hadaway <raker@gentoo.org>
+  gnomemeeting-0.93.0.ebuild, files/digest-gnomemeeting-0.93.0,
+  files/ifarts.diff :
+
+  *NOTE* - arts suspend support (disabling arts during gnomemeeting call)
+  isn't compilling correctly.  I have a patch for the mean time which
+  checks if you have the kde use variable set, and if you do, disables
+  arts support.
+
+  Version bump.  Removed old versions from cvs.
+
+  - SDL support (video in popup window + fullscreen video) (Damien)
+  - Improved Quicknet Support (Damien)
+  - Improved Video Snapshots saving in png's (Damien)
+  - Support for callto URLs (see FAQ) (Damien)
+  - Support for URLs at startup via a Bonobo Factory (Damien)
+  - Improved LDAP browser usability (Damien)
+  - Added right-click popup menu for video (Damien)
+  - Made Quicknet optional (Damien)
+  - Made SDL optional (Damien, Miguel)
+  - Simplified gconf installation problems detection (Miguel)
+  - Artsd suspend support (Stefan)
+  - Flashing messages in the statusbar (Damien)
+  - Code reorganizations (Kenneth)
+  - Updated translations: German by Stefan Bruns , Spanish by 
+  Jacobo Tarrio , French by Fabrice Alphonso , Galician by Jacobo Tarrio , 
+  Dutch by Huib Kleinhout , Portuguese by Duarte Loreto , 
+  Russian by Leon Kanter , Slovak by Martin Lacko , Swedish by 
+  Christian Rose , Traditional Chinese by Chung-Yen Chang
 
 *gnomemeeting-0.92.1-r1 (07 Jul 2002)
 

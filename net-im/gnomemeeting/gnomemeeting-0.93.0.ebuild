@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-0.92.1-r1.ebuild,v 1.2 2002/07/17 09:08:08 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-0.93.0.ebuild,v 1.1 2002/07/20 21:16:23 raker Exp $
 
 inherit gnome2
 
@@ -9,7 +9,7 @@ SRC_URI="http://www.gnomemeeting.org/downloads/latest/sources/GnomeMeeting-${PV}
 HOMEPAGE="http://www.gnomemeeting.org"
 DESCRIPTION="Gnome NetMeeting client"
 
-SLOT="1"
+SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 
@@ -35,7 +35,6 @@ src_compile() {
 	cd ${S}
 	export PWLIBDIR=/usr/share/pwlib
 	export OPENH323DIR=/usr/share/openh323
-
 	./configure \
 		--prefix=/usr \
 		--sysconfdir=/etc \
@@ -45,10 +44,20 @@ src_compile() {
 		--with-openh323-libs=/usr/lib \
 		--host=${CHOST} || die
 
+	# disable arts stuff even if arts is found 
+	# I can't get gnomemeeting to compile with arts support
+	# This is a new "feature" of the latest version and there
+	# isn't a configure option available for disabling support
+	if [ "`use kde`" ] ; then
+                cd ..
+                patch -p0 < ${FILESDIR}/ifarts.diff
+                cd ${S}
+        fi
+	
 	#manually disable installation of schemas
 	cp Makefile Makefile.orig
 	sed -e "s/^install-data-local: install-schemas/install-data-local:/g" Makefile.orig > Makefile || die
-	emake || die
+	make || die
 }
 
 
