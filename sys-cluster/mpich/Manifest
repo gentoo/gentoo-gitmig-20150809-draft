@@ -1,6 +1,4 @@
-MD5 be6bf2390c008e1fa3f9d18446eb5202 ChangeLog 1077
+MD5 6062ba12465f091c41d38e9ab7a6e1f8 ChangeLog 1177
 MD5 41664043c4624dedcfeeb07950f08d13 metadata.xml 312
-MD5 a96171fd03b9fbf0a5c6873bee8d9c82 mpich-1.2.5-r1.ebuild 2663
 MD5 1df1532aaefab512bb5b26b2367eed40 mpich-1.2.5.2.ebuild 2618
-MD5 08007da1bd4dcd9f6e1c4b3c08d0bb1b files/digest-mpich-1.2.5-r1 65
 MD5 11a56e15994b5f4fe1ae37ebde20fa50 files/digest-mpich-1.2.5.2 67
