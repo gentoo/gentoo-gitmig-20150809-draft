@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/pureadmin/pureadmin-0.1.10.ebuild,v 1.2 2004/06/08 20:37:34 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/pureadmin/pureadmin-0.1.10.ebuild,v 1.3 2004/06/10 16:52:18 agriffis Exp $
 
 IUSE="debug gnome"
 
@@ -36,7 +36,7 @@ src_install() {
 	rm -rf ${D}usr/share/doc/pureadmin
 
 	# Add a desktop entry for gnome if requested
-	if [ `use gnome` ]; then
+	if use gnome; then
 		rm ${D}/usr/share/applications
 		dodir /usr/share/applications
 		insinto /usr/share/applications
