@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.7 2002/06/29 03:43:50 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.8 2002/06/29 19:30:01 blocke Exp $
+
+*ethereal-0.9.5-r1 (29 Jun 2002)
+
+  29 Jun 2002; Bruce A. Locke <blocke@shivan.org> ethereal-0.9.5-r1.ebuild:
+
+  Dependency update and configure script fix recommended by 
+  gerald+gentoo@ethereal.com (Gerald Combs)
 
 *ethereal-0.9.5 (28 Jun 2002)
 
