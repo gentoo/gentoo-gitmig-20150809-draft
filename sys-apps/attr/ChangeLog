@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/attr
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.8 2002/12/13 11:00:31 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/attr/ChangeLog,v 1.9 2002/12/16 18:38:32 bcowan Exp $
+
+*attr-2.1.1-r1 (16 Dec 2002)
+
+  16 Dec 2002; Brad Cowan <bcowan@gentoo.org> attr-2.1.1-r1.ebuild,
+  files/digest-attr-2.1.1-r1:
+  
+  Changed symlinks.
 
 *attr-2.1.1 (09 Dec 2002)
 
