@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/files/alsasound,v 1.4 2002/04/27 20:07:06 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/files/alsasound,v 1.5 2002/04/27 21:19:32 agenkin Exp $
 #
 # alsasound     This shell script takes care of starting and stopping
 #               the ALSA sound driver.
@@ -31,6 +31,7 @@ aconnect=/usr/bin/aconnect
 alsascrdir=/etc/alsa.d
 
 depend() {
+  need modules
   provide alsa-modules
 }
 
@@ -39,7 +40,7 @@ start() {
   # Start driver if it isn't already up.
   if [ -d /proc/asound ]
   then
-    echo "ALSA driver is already running."
+    eerror "ALSA driver is already running."
     return 1
   fi
 
@@ -47,21 +48,23 @@ start() {
   # insert all sound modules
   #
 
-  drivers=`/sbin/modprobe -c | \
+  ebegin "Initialising ALSA."
+
+  drivers="`/sbin/modprobe -c | \
     grep -E "^[[:space:]]*alias[[:space:]]+snd-card-[[:digit:]]" | \
-    awk '{print $3}'`
+    awk '{print $3}'`"
   for i in $drivers; do
     if [ "$i" != off ]; then
-      echo -n "Starting sound driver: $i "
+      einfon "Starting sound driver: $i "
       /sbin/modprobe $i
-      echo -e "$rc_done"
+      eend 0
     fi
   done
   #
   # insert sequencer modules
   #
   if [ x"$START_ALSA_SEQ" = xyes -a -r /proc/asound/seq/drivers ]; then
-    t=`cut -d , -f 1 /proc/asound/seq/drivers`
+    t="`cut -d , -f 1 /proc/asound/seq/drivers`"
     if [ "x$t" != "x" ]; then
       /sbin/modprobe $t
     fi
@@ -71,12 +74,12 @@ start() {
   #
   if [ -d /proc/asound ]; then
     if [ ! -r $asoundcfg ]; then
-      echo "No mixer config in $asoundcfg, you have to unmute your card!"
+      ewarn "No mixer config in $asoundcfg, you have to unmute your card!"
     else
       if [ -x $alsactl ]; then
         $alsactl -f $asoundcfg restore
       else
-        echo -e "${rc_warning}ERROR: alsactl not found${rc_reset}"
+        eerror -e "ERROR: alsactl not found!"
       fi
     fi
   fi
@@ -112,9 +115,11 @@ stop() {
 
   if [ ! -d /proc/asound ]
   then
-    echo "ALSA driver is not loaded."
+    eerror "ALSA driver is not loaded."
     return 0
   fi
+
+  ebegin "Shutting down ALSA modules."
 
   # Call terminate function first to kill the processes, holding the drivers.
   terminate
@@ -125,7 +130,7 @@ stop() {
   if [ -x $alsactl ]; then
     $alsactl -f $asoundcfg store
   else
-    echo -n -e "${rc_warning}!!!alsactl not found!!!${rc_reset} "
+    ewarn -n "WARNING: !!!alsactl not found!!! "
   fi
   #
   # remove all sound modules
@@ -136,4 +141,6 @@ stop() {
   # remove the 2.2 soundcore module (if possible)
   /sbin/rmmod soundcore 2> /dev/null
   /sbin/rmmod gameport 2> /dev/null
+
+  eend 0
 }
