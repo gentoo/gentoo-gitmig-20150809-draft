@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.16-r1.ebuild,v 1.8 2003/11/10 18:48:35 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.16-r1.ebuild,v 1.9 2003/11/11 03:54:55 max Exp $
 
 inherit eutils ssl-cert
 
@@ -39,26 +39,26 @@ RDEPEND="${DEPEND}
 
 pkg_setup() {
 	# Prevent mangling the smtpd.conf file
-	if [ ! -L ${ROOT}/usr/lib/sasl2/smtpd.conf ] ; then
-		if [ -f ${ROOT}/usr/lib/sasl2/smtpd.conf ] ; then
+	if [ ! -L "${ROOT}/usr/lib/sasl2/smtpd.conf" ] ; then
+		if [ -f "${ROOT}/usr/lib/sasl2/smtpd.conf" ] ; then
 			ebegin "Protecting your smtpd.conf file"
-			if [ ! -d ${ROOT}/etc/sasl2 ] ; then
-				mkdir -p ${ROOT}/etc/sasl2
+			if [ ! -d "${ROOT}/etc/sasl2" ] ; then
+				mkdir -p "${ROOT}/etc/sasl2"
 			fi
 
 			# This shouldn't be necessary, but apparently
 			# without it things can still get messy.
-			if [ -L ${ROOT}/etc/sasl2/smtpd.conf ] ; then
-				rm ${ROOT}/etc/sasl2/smtpd.conf
+			if [ -L "${ROOT}/etc/sasl2/smtpd.conf" ] ; then
+				rm "${ROOT}/etc/sasl2/smtpd.conf"
 			fi
 
 			# If both files exist, make sure that we preserve
 			# a copy of each with the ._cfg system
-			if [ -f ${ROOT}/etc/sasl2/smtpd.conf ] ; then
-				mv ${ROOT}/etc/sasl2/smtpd.conf \
-					${ROOT}/etc/sasl2/._cfg0000_smtpd.conf
+			if [ -f "${ROOT}/etc/sasl2/smtpd.conf" ] ; then
+				mv "${ROOT}/etc/sasl2/smtpd.conf" \
+					"${ROOT}/etc/sasl2/._cfg0000_smtpd.conf"
 			fi
-			mv ${ROOT}/usr/lib/sasl2/smtpd.conf ${ROOT}/etc/sasl2
+			mv "${ROOT}/usr/lib/sasl2/smtpd.conf" "${ROOT}/etc/sasl2"
 			eend
 		fi
 	fi
@@ -144,10 +144,10 @@ src_install () {
 		mail_owner="postfix" \
 		setgid_group="postdrop" || die "postfix-install failed"
 
-	# Install an rmail for UUCP, closing bug #19127
+	# Install an rmail for UUCP, closing bug #19127.
 	dobin auxiliary/rmail/rmail
 
-	# Set proper permissions on required files/directories
+	# Set proper permissions on required files/directories.
 	fowners root:postdrop /usr/sbin/post{drop,queue}
 	fperms 02711 /usr/sbin/post{drop,queue}
 
@@ -192,7 +192,8 @@ src_install () {
 		dosym /etc/sasl2/smtpd.conf /usr/lib/sasl2/smtpd.conf
 	fi
 
-	keepdir /var/spool/postfix
+	keepdir /var/spool/postfix/{active,bounce,corrupt,defer,deferred,flush}
+	keepdir /var/spool/postfix/{hold,incomming,maildrop,pid,private,public}
 }
 
 pkg_postinst() {
