@@ -5,7 +5,11 @@
 		The dev-tcltk category contains Tcl- and Tk-related libraries and tools.
 	</longdescription>
 	<longdescription lang="de">
-		Die Kategorie dev-tcltk enthält Bibliotheken und Werkzeuge für Tcl und Tk.
+		Die Kategorie dev-tcltk enthÃ¤lt Bibliotheken und Werkzeuge fÃ¼r Tcl und Tk.
+	</longdescription>
+	<longdescription lang="es">
+		La categoría dev-tcltk contiene herramientas y librerías referentes
+		a Tcl y Tk.
 	</longdescription>
 </catmetadata>
 
