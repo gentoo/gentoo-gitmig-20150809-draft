@@ -1,0 +1,60 @@
+diff -Naur emu10k1-v0.20a.old/utils/as10k1/as10k1.c emu10k1-v0.20a/utils/as10k1/as10k1.c
+--- emu10k1-v0.20a.old/utils/as10k1/as10k1.c	2004-10-28 20:54:43.919581000 +0200
++++ emu10k1-v0.20a/utils/as10k1/as10k1.c	2004-10-28 20:58:53.175688816 +0200
+@@ -72,7 +72,7 @@
+ {
+ 	int i,j;
+ 	for(i=1;i<argc;i++){
+-		
++
+ 		if(argv[i][0]=='-'){
+ 			switch(argv[i][1]){
+ 
+@@ -93,9 +93,9 @@
+ 					dbg_opt=dbg_opt|DBG_INSTR;//default
+ 					i--;
+ 					printf(" instructions by default\n");
+-					goto next_cli_arg;
++					continue;
+ 				}
+-				
++
+ 				while(argv[i][j]!='\0'){
+ 						
+ 					switch(argv[i][j]){
+@@ -161,8 +161,6 @@
+ 			}
+ 
+ 		}
+-next_cli_arg:
+-
+ 	}
+ }
+ 
+diff -Naur emu10k1-v0.20a.old/utils/mixer/lib/file.c emu10k1-v0.20a/utils/mixer/lib/file.c
+--- emu10k1-v0.20a.old/utils/mixer/lib/file.c	2002-02-25 09:33:30.000000000 +0100
++++ emu10k1-v0.20a/utils/mixer/lib/file.c	2004-10-28 20:57:12.673967400 +0200
+@@ -441,14 +441,21 @@
+ 		list= &mgr->ipatch_list;
+ 		/* only load a patch if there is a route connecting it */
+ 		for(i=0;i<num_in;i++){
++			char do_continue = 0;
++
+ 			set_bit(input[i], &patch->input);
+ 			set_bit(output[i], &patch->output);
+ 			
+ 			for (j = 0; j < DSP_NUM_OUTPUTS; j++)
+ 				if ( test_bit(input[i], &mgr->rpatch.route_v[j]) || test_bit(input[i], &mgr->rpatch.route[j])  ) 
+-					goto match1;
++				{
++					do_continue = 1;
++					break;
++				}
++
++			if (do_continue) continue;
++
+ 			goto err2;
+-match1:
+ 		}
+ 		goto match;
+ 	}else{
