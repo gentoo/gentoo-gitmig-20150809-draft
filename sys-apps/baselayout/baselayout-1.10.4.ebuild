@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.10.4.ebuild,v 1.2 2004/08/19 19:39:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.10.4.ebuild,v 1.3 2004/08/20 23:54:21 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -425,8 +425,8 @@ pkg_postinst() {
 	if [[ -z $(/bin/ls ${ROOT}/etc/runlevels 2>/dev/null) ]]; then
 		for x in boot default nonetwork single; do
 			einfo "Creating default runlevel symlinks for ${x}"
-			mkdir -p ${ROOT}/etc/runlevels/${foo}
-			for y in $(<${ROOT}/usr/share/baselayout/rc-lists/${foo}); do
+			mkdir -p ${ROOT}/etc/runlevels/${x}
+			for y in $(<${ROOT}/usr/share/baselayout/rc-lists/${x}); do
 				if [[ ! -e ${ROOT}/init.d/${y} ]]; then
 					ewarn "init.d/${y} not found -- ignoring"
 				else
