@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/gnu-smalltalk-2.1.8.ebuild,v 1.2 2004/07/16 09:43:58 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gnu-smalltalk/gnu-smalltalk-2.1.8.ebuild,v 1.3 2004/08/18 21:58:15 mkennedy Exp $
 
 inherit elisp-common flag-o-matic eutils gcc
 
@@ -31,15 +31,24 @@ src_unpack() {
 }
 
 src_compile() {
+	local myconf=""
+
+	if use tclk; then
+		myconf="
+		`use_with tcltk tcl=/usr/lib` \
+		`use_with tcltk tk=/usr/lib`"
+	fi
+
 	replace-flags '-O3' '-O2'
+
 	econf \
 		`use_with emacs emacs` \
 		`use_with readline readline` \
-		`use_with tcltk tcl=/usr/lib` \
-		`use_with tcltk tk=/usr/lib` \
 		`use_with gmp gmp` \
 		`use_enable gtk gtk` \
+		${myconf} \
 		|| die
+
 	emake || die "emake failed"
 }
 
