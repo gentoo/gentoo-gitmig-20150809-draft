@@ -1,6 +1,12 @@
 # ChangeLog for games-engines/scummvm-tools
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/ChangeLog,v 1.3 2004/06/24 22:39:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-engines/scummvm-tools/ChangeLog,v 1.4 2004/07/29 08:24:51 mr_bones_ Exp $
+
+*scummvm-tools-0.6.1 (29 Jul 2004)
+
+  29 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  +scummvm-tools-0.6.1.ebuild:
+  version bump
 
 *scummvm-tools-0.6.0 (05 Apr 2004)
 
