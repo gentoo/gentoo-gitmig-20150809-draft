@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Update: Roman Weber <gentoo@gonzo.ch>
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.1.ebuild,v 1.7 2003/03/03 21:10:55 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.1.ebuild,v 1.8 2003/03/06 04:20:59 vapier Exp $
 
 IUSE="truetype postgres tiff libwww nls jpeg readline ssl oci8 mysql X gdbm curl imap xml2 xml cjk pdflib qt snmp crypt flash odbc ldap berkdb freetds firebird pam spell"
 
@@ -123,11 +123,8 @@ src_compile() {
 					myconf="${myconf} --with-oci8=${ORACLE_HOME}" 
 			fi 
 	fi 
-					
-	use qt && { 
-		export QTDIR=${QTDIR} #hope this helps - danarmak
-		myconf="${myconf} --with-qtdom" 
-	}
+
+	use qt && myconf="${myconf} --with-qtdom"
 
 	if [ "`use imap`" ] ; then
 		if [ "`use ssl`" ] && [ "`strings ${ROOT}/usr/lib/c-client.a \
