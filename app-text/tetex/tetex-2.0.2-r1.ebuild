@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.0.2-r1.ebuild,v 1.1 2003/09/07 01:01:49 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.0.2-r1.ebuild,v 1.2 2003/09/07 07:01:20 msterret Exp $
 
 inherit eutils flag-o-matic
 filter-flags "-fstack-protector"
@@ -12,8 +12,8 @@ TEXMF="tetex-texmf-${PV}.tar.gz"
 
 DESCRIPTION="a complete TeX distribution"
 SRC_URI="ftp://cam.ctan.org/tex-archive/systems/unix/teTeX/2.0/distrib/${TETEXSRC}
-         ftp://cam.ctan.org/tex-archive/systems/unix/teTeX/2.0/distrib/${TEXMFSRC}
-         ftp://cam.ctan.org/tex-archive/systems/unix/teTeX/2.0/distrib/${TEXMF}"
+	ftp://cam.ctan.org/tex-archive/systems/unix/teTeX/2.0/distrib/${TEXMFSRC}
+	ftp://cam.ctan.org/tex-archive/systems/unix/teTeX/2.0/distrib/${TEXMF}"
 HOMEPAGE="http://tug.org/teTeX/"
 
 KEYWORDS="~x86 ppc sparc alpha amd64"
@@ -24,8 +24,8 @@ IUSE="X"
 DEPEND="sys-apps/ed
 	sys-libs/zlib
 	X? ( virtual/x11 )
-	>=media-libs/libpng-1.2.1 
-	sys-libs/ncurses 
+	>=media-libs/libpng-1.2.1
+	sys-libs/ncurses
 	>=net-libs/libwww-5.3.2-r1"
 RDEPEND="$DEPEND >=dev-lang/perl-5.2 dev-util/dialog"
 PROVIDE="virtual/tetex-2.0.2"
@@ -89,10 +89,10 @@ src_compile() {
 src_install() {
 
 	dodir /usr/share/
-    # Install texmf files
+	# Install texmf files
 	einfo "Installing texmf..."
-    cp -Rv texmf ${D}/usr/share
-		
+	cp -Rv texmf ${D}/usr/share
+
 	make prefix=${D}/usr \
 		bindir=${D}/usr/bin \
 		datadir=${D}/usr/share \
@@ -118,13 +118,13 @@ src_install() {
 	dodoc CONTRIB COPYING NEWS NOTES PORTING README
 	docinto ps2pkm
 	cd ${S}/texk/ps2pkm
-	dodoc ChangeLog CHANGES.type1 INSTALLATION README* 
+	dodoc ChangeLog CHANGES.type1 INSTALLATION README*
 	docinto web2c
 	cd ${S}/texk/web2c
 	dodoc AUTHORS ChangeLog NEWS PROJECTS README
 	docinto xdvik
 	cd ${S}/texk/xdvik
-	dodoc BUGS FAQ README* 
+	dodoc BUGS FAQ README*
 
 	#fix for conflicting readlink binary:
 	rm -f ${D}/bin/readlink

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r13.ebuild,v 1.1 2003/09/07 01:01:49 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r13.ebuild,v 1.2 2003/09/07 07:01:20 msterret Exp $
 
 inherit flag-o-matic
 filter-flags "-fstack-protector"
@@ -23,7 +23,7 @@ IUSE="X"
 DEPEND="sys-apps/ed
 	X? ( virtual/x11 )
 	>=media-libs/libpng-1.2.1
-	sys-libs/ncurses 
+	sys-libs/ncurses
 	>=net-libs/libwww-5.3.2-r1
 	sys-libs/zlib"
 RDEPEND="$DEPEND >=dev-lang/perl-5.2
@@ -35,7 +35,7 @@ src_unpack() {
 
 	cd ${S}
 	patch -p1 < ${FILESDIR}/${PF}-gentoo.diff
-	
+
 	mkdir ${S}/texmf
 	cd ${S}/texmf
 	umask 022
@@ -61,13 +61,13 @@ src_unpack() {
 
 	# Fix problem where the *.fmt files are not generated due to the LaTeX
 	# source being older than a year.
-        local x
-        for x in `find ${S}/texmf/ -type f -name '*.ini'`
-        do
-                cp ${x} ${x}.orig
-                sed -e '1i \\scrollmode' ${x}.orig > ${x}
-                rm -f ${x}.orig
-        done
+	local x
+	for x in `find ${S}/texmf/ -type f -name '*.ini'`
+	do
+		cp ${x} ${x}.orig
+		sed -e '1i \\scrollmode' ${x}.orig > ${x}
+		rm -f ${x}.orig
+	done
 
 	# IMPORTANT!  If you're having *.fmt problems, do this:
 	# fmtutil --all
@@ -108,7 +108,7 @@ src_compile() {
 src_install() {
 
 	dodir /usr/share/
-    # Install texmf files
+	# Install texmf files
 	einfo "Installing texmf..."
 	cp -Rv texmf ${D}/usr/share || die "cp -Rv texmf failed"
 
@@ -135,13 +135,13 @@ src_install() {
 	dodoc CONTRIB COPYING NEWS NOTES PORTING README
 	docinto ps2pkm
 	cd ${S}/texk/ps2pkm
-	dodoc ChangeLog CHANGES.type1 INSTALLATION README* 
+	dodoc ChangeLog CHANGES.type1 INSTALLATION README*
 	docinto web2c
 	cd ${S}/texk/web2c
 	dodoc AUTHORS ChangeLog NEWS PROJECTS README
 	docinto xdvik
 	cd ${S}/texk/xdvik
-	dodoc BUGS FAQ README* 
+	dodoc BUGS FAQ README*
 
 	#fix for conflicting readlink binary:
 	rm -f ${D}/bin/readlink
@@ -173,7 +173,7 @@ pkg_postinst() {
 
 		einfo "Generating format files..."
 		fmtutil --missing &>/dev/null # This should generate all missing fmt files.
-		
+
 		echo
 		einfo "Use 'texconfig font rw' to allow all users to generate fonts."
 		echo
