@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lvm2
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.8 2003/12/27 03:47:28 seemant Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.9 2004/01/17 07:41:40 darkspecter Exp $
+
+  17 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org> lvm2-2.00.08.ebuild:
+  set ppc in keywords
 
   26 Dec 2003; Seemant Kulleen <seemant@gentoo.org> lvm2-2.00.06.ebuild,
   lvm2-2.00.07.ebuild, lvm2-2.00.08.ebuild:
