@@ -1,0 +1,9 @@
+# ChangeLog for dev-util/larch
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/larch/ChangeLog,v 1.1 2003/10/05 03:04:55 rphillips Exp $
+
+*larch-1.0_pre0 (04 Oct 2003)
+
+  04 Jul 2003; Ryan Phillips <rphillips@gentoo.org> larch-1.0_pre0.ebuild :
+
+  Initial Import.  Thanks to Thomas Eckert. eckert.thomas (at) gmx.net
