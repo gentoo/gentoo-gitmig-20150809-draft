@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 28b8c233ca85d1233abfeb8d3dc84a15 ChangeLog 1725
-MD5 b53690284faa447ae5e1b7ce04c8ef18 cvscommand-1.65.ebuild 529
-MD5 d4ef5b97d435236336a767e123483301 cvscommand-1.67.ebuild 530
+MD5 5783dfc445016479437e6f281c064672 ChangeLog 1881
+MD5 e285ee24b4480539ac808ab85b6ce801 cvscommand-1.65.ebuild 552
+MD5 7d8e4be65804c49b809bd68d3e27ff8d cvscommand-1.67.ebuild 556
 MD5 f3583430b2f7b0686cafd606b08bf203 metadata.xml 156
-MD5 8e7bebcbff3f1ab34edf35f4fa333434 cvscommand-1.63.ebuild 428
+MD5 a4cbf5caa1beaf64e3038f83b6cb1c54 cvscommand-1.63.ebuild 461
 MD5 e841d7041392ce13f60b2ee6a824a912 files/digest-cvscommand-1.67 67
 MD5 f05d6d6bc01af408975de529176e388d files/digest-cvscommand-1.65 67
 MD5 a4656469986a2ce622163caf9ad436fe files/digest-cvscommand-1.63 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB8TFHLLFUmVNQ7rkRAhRmAJ9SXr64hNlJQw5wua8Vr8Q2GgUqeACeJQZw
-donmt6LYRY7tXnHnKLDbs+8=
-=VU3L
+iD8DBQFB8YRwLLFUmVNQ7rkRAkrrAJ9OEDpbE5jRDrUgnVKDtkkv3BheXgCgohP9
+Da/JX2lT+kdQaqQB5DbxlwE=
+=dvmf
 -----END PGP SIGNATURE-----
