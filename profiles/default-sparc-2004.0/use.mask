@@ -18,6 +18,7 @@ informix
 firebird
 ladcca
 lirc
+lm_sensors
 mmx
 mmx2
 pic
