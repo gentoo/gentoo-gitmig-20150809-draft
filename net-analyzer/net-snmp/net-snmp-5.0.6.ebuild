@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.0.6.ebuild,v 1.7 2003/05/01 20:58:06 nitro Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/net-snmp/net-snmp-5.0.6.ebuild,v 1.8 2003/05/03 04:15:19 nitro Exp $
 
 IUSE="ssl kerberos ipv6 tcpd"
 
@@ -11,7 +11,6 @@ HOMEPAGE="http://net-snmp.sourceforge.net/"
 
 DEPEND="virtual/glibc <sys-libs/db-2
 	>=sys-libs/zlib-1.1.4
-	ssl? ( >=dev-libs/openssl-0.9.6 )
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
 	ssl? ( >=dev-libs/openssl-0.9.6d )
 	kerberos? ( >=app-crypt/krb5-1.2.5 )"
@@ -25,6 +24,12 @@ src_unpack() {
 
 	cd ${S}
 	patch -p1 < ${FILESDIR}/${PF}-gentoo.diff
+
+	use kerberos && {
+		cp "${S}/configure" "${S}/configure.tmp"
+		sed 's:security_def_list="usm":security_def_list="usm ksm":' \
+			"${S}/configure.tmp" > "${S}/configure"
+	}
 }
 
 src_compile() {
@@ -33,11 +38,10 @@ src_compile() {
 	use ssl || myconf="${myconf} --enable-internal-md5 --with-openssl=no"
 	use tcpd && myconf="${myconf} --with-libwrap" || myconf="${myconf} --with-libwrap=no"
 	use ipv6 && myconf="${myconf} --enable-ipv6" || myconf="${myconf} --disable-ipv6"
-	# Doesn't seem that emerge passes the escaped double quotes properly -- nitro
-	use ipv6 || myconf=${myconf} --with-out-transports="TCPIPv6 UDPIPv6"
-	use kerberos && myconf=${myconf} --with-security-modules="usm ksm"
+#	Doesn't seem that emerge passes the escaped double quotes properly -- nitro
+#	use kerberos && myconf="--with-security-modules=usm ksm"
 
-	econf \
+econf \
 		--with-cflags="${CFLAGS}" \
 		--host="${CHOST}" \
 		--with-zlib \
