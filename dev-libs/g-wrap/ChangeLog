@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/g-wrap
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.16 2004/02/09 07:53:21 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/g-wrap/ChangeLog,v 1.17 2004/06/22 21:23:18 mr_bones_ Exp $
+
+  22 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> g-wrap-1.3.4.ebuild:
+  inherit to top; filter-flags into src_compile; error messages; IUSE; tidy
 
   09 Feb 2004; Dylan Carlson <absinthe@gentoo.org> g-wrap-1.3.4.ebuild:
   added amd64 keyword.
