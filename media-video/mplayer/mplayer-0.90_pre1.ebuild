@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.60-r2.ebuild,v 1.3 2002/02/24 14:49:14 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre1.ebuild,v 1.1 2002/04/23 23:25:06 azarah Exp $
 
 # Handle PREversions as well
 MY_PV=${PV/_/}
@@ -9,6 +9,7 @@ S="${WORKDIR}/MPlayer-${MY_PV}"
 # Only install Skin if GUI should be build (gtk as USE flag)
 SRC_URI="ftp://mplayerhq.hu/MPlayer/releases/MPlayer-${MY_PV}.tar.bz2
 	 ftp://mplayerhq.hu/MPlayer/releases/mp-arial-iso-8859-1.zip
+	 ftp://ftp.mplayerhq.hu/MPlayer/patches/dxr3.patch
 	 gtk? ( http://www.ibiblio.org/gentoo/distfiles/default-skin-0.1.tar.bz2 )"
 #	 This is to get the digest problem fixed.
 #	 gtk? ( ftp://mplayerhq.hu/MPlayer/Skin/default.tar.bz2 )"
@@ -16,41 +17,62 @@ DESCRIPTION="Media Player for Linux"
 HOMEPAGE="http://www.mplayerhq.hu/"
 
 # 'encode' in USE for MEncoder
-# Experimental USE flag 'css' for DVD decription
-RDEPEND="virtual/glibc
-	>=media-libs/win32codecs-${PV}
-	>=media-libs/divx4linux-20011025
-	media-libs/libdvdread
-	css?    ( media-libs/libdvdcss )
+RDEPEND=">=media-libs/divx4linux-20020304
+	>=media-libs/win32codecs-0.60
+	dvd? ( media-libs/libdvdread
+	       media-libs/libdvdcss )
+	gtk? ( >=x11-libs/gtk+-1.2.10-r4
+	       media-libs/libpng )
+	esd? ( media-sound/esound )
+	ggi? ( media-libs/libggi )
+	sdl? ( media-libs/libsdl )
+	alsa? ( media-libs/alsa-lib )
+	svga? ( media-libs/svgalib )
+	encode? ( media-sound/lame )
 	opengl? ( virtual/opengl )
-	sdl?    ( media-libs/libsdl )
-	ggi?    ( media-libs/libggi )
-	svga?   ( media-libs/svgalib )
-	X?      ( virtual/x11 )
-	gtk?    ( >=x11-libs/gtk+-1.2.10-r4 )
-	esd?    ( media-sound/esound )
-	alsa?   ( media-libs/alsa-lib )
-	ogg?    ( media-libs/libogg )
-	encode? ( media-sound/lame )"
+	directfb? ( dev-libs/DirectFB )
+	oggvorbis? ( media-libs/libvorbis )"
 
 DEPEND="${RDEPEND}
 	dev-lang/nasm
 	app-arch/unzip"
 
+SLOT="0"
+
 
 src_unpack() {
 
-	unpack ${A}
+	unpack MPlayer-${MY_PV}.tar.bz2 mp-arial-iso-8859-1.zip
 
 	# Fix bug with the default Skin
-	if [ "`use gtk`" ] ; then
+	use gtk && ( \
+		unpack default-skin-0.1.tar.bz2
 		cd ${WORKDIR}/default
-		patch < ${FILESDIR}/default-skin.diff || die "skin patch failed"
-	fi
+		patch < ${FILESDIR}/default-skin.diff || die "gtk patch failed"
+	)
 
-	if [ "`use mga`" ] ; then
-		cd ${S}/drivers;
-		patch < ${FILESDIR}/mga_vid_devfs.patch || die "mga patch failed"
+
+	#
+	# The next two patches can fail, as I havent tested them yet!!
+	#
+	use matrox && ( \
+		cd ${S}/drivers
+		patch < ${FILESDIR}/mga_vid_devfs.patch || die "matrox patch failed"
+	)
+	
+	#patch mplayer with the DXR3 patch
+	local module=""
+	local dxr=""
+	for module in `lsmod` ; do
+		if [ ${module} = "em8300" ] ; then
+			dxr=true
+		fi
+	done
+	if [ $dxr ] ; then
+		cd ${WORKDIR};
+		mv ${S} ${S}a
+		patch -p0 < ${DISTDIR}/dxr3.patch || die "dxr3 patch failed"
+		mv ${S}a ${S}
 	fi
 }
 
@@ -58,57 +80,88 @@ src_compile() {
 
 	local myconf=""
 
-	use 3dnow         || myconf="${myconf} --disable-3dnow --disable-3dnowex"
-	use sse           || myconf="${myconf} --disable-sse --disable-sse2"
+	use 3dnow \
+		|| myconf="${myconf} --disable-3dnow --disable-3dnowex"
+
+	use sse	\
+		|| myconf="${myconf} --disable-sse --disable-sse2"
+
 	# Only disable MMX if 3DNOW or SSE is not in USE
-	use mmx           || { \
-	    use 3dnow     || { \
-	        use sse   || myconf="${myconf} --disable-mmx --disable-mmx2"
-	    }
-	    use sse       || { \
-	        use 3dnow || myconf="${myconf} --disable-mmx --disable-mmx2"
-	    }
-	}
+	use mmx || use 3dnow || use sse \
+		|| myconf="${myconf} --disable-mmx --disable-mmx2"
+
 	# Only disable X if gtk is not in USE
-	use X             || { \
-	    use gtk       || myconf="${myconf} --disable-x11 --disable-xv --disable-xmga"
-	}
-	use gtk           && myconf="${myconf} --enable-gui --enable-x11 --enable-xv"
-	use oss           || myconf="${myconf} --disable-ossaudio"
-	use opengl        || myconf="${myconf} --disable-gl"
-	use sdl           || myconf="${myconf} --disable-sdl"
-	use ggi           || myconf="${myconf} --disable-ggi"
-	use svga          || myconf="${myconf} --disable-svga"
-	use fbcon         && myconf="${myconf} --enable-fbdev"
-	use alsa          || myconf="${myconf} --disable-alsa"
-	use ogg           || myconf="${myconf} --disable-vorbis"
-	use encode        && myconf="${myconf} --enable-mencoder --enable-tv"
-	use encode        || myconf="${myconf} --disable-mencoder"
-	use css           && myconf="${myconf} --enable-dvdread --enable-css"
-	use mga           && myconf="${myconf} --enable-mga"
-	use mga           && \
-	use X             && myconf="${myconf} --enable-xmga"
-	use 3dfx          && myconf="${myconf} --enable-3dfx --enable-tdfxfb"
+	use X || use gtk \
+		|| myconf="${myconf} --disable-x11 --disable-xv --disable-xmga --disable-png"
+
+	use matrox && use X \
+		&& myconf="${myconf} --enable-xmga"
+
+	use gtk \
+		&& myconf="${myconf} --enable-gui --enable-x11 --enable-xv --enable-png"
+
+	use oss \
+		|| myconf="${myconf} --disable-ossaudio"
+
+	use opengl \
+		|| myconf="${myconf} --disable-gl"
+
+	use sdl \
+		|| myconf="${myconf} --disable-sdl"
+
+	use ggi \
+		|| myconf="${myconf} --disable-ggi"
+
+	use svga \
+		|| myconf="${myconf} --disable-svga"
+
+	use directfb \
+		|| myconf="${myconf} --disable-directfb"
+
+	use fbcon \
+		|| myconf="${myconf} --disable-fbdev"
+
+	use alsa \
+		|| myconf="${myconf} --disable-alsa"
+
+	use oggvorbis \
+		|| myconf="${myconf} --disable-vorbis"
+
+	use encode \
+		&& myconf="${myconf} --enable-mencoder --enable-tv" \
+		|| myconf="${myconf} --disable-mencoder"
+
+	use dvd \
+		&& myconf="${myconf} --enable-dvdread --enable-css" \
+		|| myconf="${myconf} --disable-dvdread --disable-css"
+
+	use matrox \
+		&& myconf="${myconf} --enable-mga" \
+		|| myconf="${myconf} --disable-mga"
+
+	use 3dfx \
+		&& myconf="${myconf} --enable-3dfx --enable-tdfxfb"
 
 	# Crashes on start when compiled with most optimizations.
 	# The code have CPU detection code now, with CPU specific
 	# optimizations, so extra should not be needed and is not
 	# recommended by the authors
-	CFLAGS="-O2 -pipe"
-	CXXFLAGS="-O2 -pipe"
-	
-	./configure --host=${CHOST} \
-		--prefix=/usr \
-		--mandir=/usr/share/man \
-		--enable-dvdread \
+	CFLAGS="" \
+	CXXFLAGS="" \
+	./configure --prefix=/usr \
+		--disable-runtime-cpudetection \
+		--enable-largefiles \
+		--enable-linux-devfs \
 		${myconf} || die
-		    
-	emake OPTFLAGS="${CFLAGS}" all || die
+
+	CFLAGS="" \ 
+	CXXFLAGS="" \
+	emake all || die
 	
-	if [ "`use mga`" ] ; then
-		cd drivers
-		emake all
-	fi
+	use matrox && ( \
+		cd drivers 
+		emake all || die
+	)
 }
 
 src_install() {
@@ -117,7 +170,7 @@ src_install() {
 	     BINDIR=${D}/usr/bin \
 	     CONFDIR=${D}/usr/share/mplayer \
 	     DATADIR=${D}/usr/share/mplayer \
-	     mandir=${D}/usr/share/man \
+	     MANDIR=${D}/usr/share/man \
 	     install || die
 	
 	# MAN pages are already installed ...
@@ -128,8 +181,7 @@ src_install() {
 	doalldocs
 
 	# Install the default Skin and Gnome menu entry
-	if [ "`use gtk`" ] ; then
-	
+	use gtk && ( \
 		insinto /usr/share/mplayer/Skin/default
 		doins ${WORKDIR}/default/*
 		# Permissions is fried by default
@@ -139,14 +191,14 @@ src_install() {
 		# Fix the symlink
 		rm -rf ${D}/usr/bin/gmplayer
 		dosym /usr/bin/mplayer /usr/bin/gmplayer
-	fi
-	if [ "`use gnome`" ] ; then
+	)
 
+	use gnome && ( \
 		insinto /usr/share/pixmaps
 		newins ${S}/Gui/mplayer/pixmaps/icon.xpm mplayer.xpm
 		insinto /usr/share/gnome/apps/Multimedia
 		doins ${FILESDIR}/mplayer.desktop
-	fi
+	)
 
 	# Install the font used by OSD and the GUI
 	dodir /usr/share/mplayer/fonts
@@ -156,38 +208,23 @@ src_install() {
 
 	# This tries setting up mplayer.conf automagically
 	local video="sdl" audio="sdl"
-	if [ "`use X`" ] ; then
-		if [ "`use gtk`" ] ; then
-			video="xv"
-		elif [ "`use sdl`" ] ; then
-			video="sdl"
-		elif [ "`use xv`" ] ; then
-			video="xv"
-		elif [ "`use opengl`" ] ; then
-			video="gl"
-		elif [ "`use ggi`" ] ; then
-			video="ggi"
-                elif [ "`use dga`" ] ; then
-                        video="dga"
-		else
-			video="x11"
-		fi
-	else
-		if [ "`use fbcon`" ] ; then
-			video="fbdev"
-                elif [ "`use svga`" ] ; then
-                        video="svga"
-		elif [ "`use aalib`" ] ; then
-			video="aa"
-		fi
-	fi
-	if [ "`use sdl`" ] ; then
-		audio="sdl"
-	elif [ "`use alsa`" ] ; then
-		audio="alsa5"
-	elif [ "`use oss`" ] ; then
-		audio="oss"
-	fi
+	use X && (
+		use gtk && video="xv" \
+		|| use sdl && video="sdl" \
+		|| use xv && video="xv" \
+		|| use opengl && video="gl" \
+		|| use ggi && video="ggi" \
+		|| use dga && video="dga" \
+		|| video="x11"
+	) || (
+		use fbdev && video="fbdev" \
+		|| use svga && video="svga" \
+		|| use aalib && video="aa"
+	)
+
+	use sdl && audio="sdl" \
+	|| use alsa && audio="alsa5" \
+	|| use oss audio="oss" \
 	
 	# Note to myself:  do not change " into '
 	sed -e "s/vo=xv/vo=${video}/"					\
@@ -201,10 +238,10 @@ src_install() {
 	insinto /usr/share/mplayer
 	doins ${S}/etc/codecs.conf
 
-	if [ "`use mga`" ] ; then
+	use matrox && ( \
 		dodir /lib/modules/${KVERS}/kernel/drivers/char
 		cp ${S}/drivers/mga_vid.o ${D}/lib/modules/${KVERS}/kernel/drivers/char
-	fi
+	)
 }
 
 pkg_postinst() {
@@ -225,9 +262,9 @@ pkg_postinst() {
 	echo '#                                                                    #'
 	echo '#   after launching mplayer for the first time.                      #'
 	echo '#                                                                    #'
-	echo '# NB: the GUI needs "gtk" as USE flag to build.                      #'
+	use gtk &>/dev/null \
+		|| echo '# NB: the GUI needs "gtk" as USE flag to build.                      #'
 	echo '######################################################################'
 	echo
 	depmod -a
 }
-
