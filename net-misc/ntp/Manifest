@@ -9,7 +9,7 @@ MD5 38e9293c73a594e5a8e3987e3b25f9b7 files/ntpd-4.1.1b.confd 1592
 MD5 047fe77e01bc9335b07bcc5d963d8683 files/4.1.2-droproot.patch 12672
 MD5 4e13c1a5fa0fa54e3b65ec311dd7270a files/broadcastclient.patch 451
 MD5 7641feb9a3c472abc04bb2f57a071d4e files/ntp-client.confd 889
-MD5 d1f80ccad5a0187312f522c8477df32a files/ntp-client.rc 837
+MD5 fdb3976c00f471552efb9d3ac15aee60 files/ntp-client.rc 850
 MD5 77b8a8aadd740fcf2818dbac8322d40f files/ntpd.confd 396
 MD5 41689b81c25f5b79ae2d5e52a18016b0 files/ntpd.rc 898
 MD5 9656e5d79b0b3bd743d9ff04015aeb10 ntp-4.1.2.ebuild 2830
