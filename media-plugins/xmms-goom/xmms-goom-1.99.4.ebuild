@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-goom/xmms-goom-1.99.4.ebuild,v 1.9 2004/06/24 23:40:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-goom/xmms-goom-1.99.4.ebuild,v 1.10 2004/09/05 14:14:21 aliz Exp $
 
 inherit eutils
 
@@ -8,11 +8,12 @@ MY_P=${P/xmms-/}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Trippy Visualisation for XMMS using SDL."
 HOMEPAGE="http://ios.free.fr/?page=projet&quoi=1&lg=AN"
-SRC_URI="http://ios.free.fr/goom/devel/${MY_P}-src.tgz"
+SRC_URI="http://ios.free.fr/goom/devel/${MY_P}-src.tgz
+	mirror://debian/pool/main/x/xmms-goom/${PN}_${PV}-4.diff.gz"
 
 SLOT="0"
 LICENSE="LGPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~mips "
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~mips ~amd64"
 
 IUSE=""
 
@@ -21,10 +22,8 @@ DEPEND="media-sound/xmms
 	sys-apps/coreutils"
 
 src_unpack() {
-	unpack ${A}
-	cd ${S}/src
-
-	epatch ${FILESDIR}/${PN}-gcc-3.3.patch
+	unpack ${A} ; cd ${S} 
+	epatch ${WORKDIR}/${PN}_${PV}-4.diff
 }
 
 src_compile() {
