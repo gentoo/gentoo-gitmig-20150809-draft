@@ -9,3 +9,22 @@ fi
 
 export CFLAGS_amd64
 export CFLAGS_x86
+
+hack_use_ml() {
+	local x
+	save_IFS
+	unset IFS
+	for x in ${USE}; do
+		if [ "${x}" = "multilib" ]; then
+			restore_IFS
+			return 0
+		fi
+	done
+	restore_IFS
+	return 1
+}
+
+if ! hack_use_ml; then
+        eerror "The 2005.0 profile requires that you have USE=multilib enabled."
+	exit 1
+fi
