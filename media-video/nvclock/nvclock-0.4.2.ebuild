@@ -1,14 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/nvclock-0.4.2.ebuild,v 1.2 2002/01/14 05:56:14 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvclock/nvclock-0.4.2.ebuild,v 1.3 2002/05/23 06:50:14 seemant Exp $
 
 S=${WORKDIR}/${PN}${PV}
 SRC_URI="http://www.evil3d.net/download/${PN}/${PN}${PV}.tar.gz"
 DESCRIPTION="NVIDIA overclocking utility"
 HOMEPAGE="http://www.evil3d.net/products/nvclock/"
 
-RDEPEND="virtual/glibc gtk? ( virtual/x11 >=x11-libs/gtk+-1.2.10-r4 )"
+RDEPEND="virtual/glibc gtk? ( virtual/x11 =x11-libs/gtk+-1.2* )"
 DEPEND="$RDEPEND sys-devel/autoconf"
 
 src_compile() {

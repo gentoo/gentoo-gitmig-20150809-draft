@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # Heavily modified by Ryan Tolboom <ryan@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.5.20011611.ebuild,v 1.3 2002/04/13 00:48:03 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.5.20011611.ebuild,v 1.4 2002/05/23 06:50:14 seemant Exp $
 
 A=${PN}-1.5-20011611.tar.gz
 S=${WORKDIR}/${PN}-1.5-20011611
@@ -13,7 +13,7 @@ HOMEPAGE="http://mjpeg.sourceforge.net/"
 
 RDEPEND=">=media-libs/jpeg-6b
 	X? ( virtual/x11 )
-	gtk? ( >=x11-libs/gtk+-1.2.10-r4 )
+	gtk? ( =x11-libs/gtk+-1.2* )
 	sdl? ( >=media-libs/libsdl-1.2.2 )
 	avi? ( >=media-video/avifile-0.6.0.20011130 )"
 

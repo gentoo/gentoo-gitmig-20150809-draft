@@ -1,14 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Aron Griffis <agriffis@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/geotrace/geotrace-0.0.4.ebuild,v 1.3 2002/04/30 09:54:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/geotrace/geotrace-0.0.4.ebuild,v 1.4 2002/05/23 06:50:15 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="geographical traceroute utility"
 SRC_URI="http://geotrace.sourceforge.net/releases/${P}.tar.gz"
 HOMEPAGE="http://geotrace.sourceforge.net/"
 
-DEPEND=">=x11-libs/gtk+-1.2.10-r4
+DEPEND="=x11-libs/gtk+-1.2*
 	>=media-libs/gdk-pixbuf-0.16.0-r1"
 
 RDEPEND="net-misc/traceroute"

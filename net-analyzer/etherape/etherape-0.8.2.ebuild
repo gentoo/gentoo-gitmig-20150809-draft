@@ -1,14 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Bruce A. Locke <blocke@shivan.org>
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.8.2.ebuild,v 1.2 2002/04/24 02:31:17 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/etherape/etherape-0.8.2.ebuild,v 1.3 2002/05/23 06:50:15 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A graphical network monitor for Unix modeled after etherman"
 SRC_URI="http://prdownloads.sourceforge.net/etherape/${P}.tar.gz"
 HOMEPAGE="http://etherape.sourceforge.net/"
 
-DEPEND="	>=x11-libs/gtk+-1.2.10-r3
+DEPEND="	=x11-libs/gtk+-1.2*
 		>=gnome-base/gnome-libs-1.4.1.2-r1
 		>=net-libs/libpcap-0.6.1
 		>=gnome-base/libglade-0.17-r3 "

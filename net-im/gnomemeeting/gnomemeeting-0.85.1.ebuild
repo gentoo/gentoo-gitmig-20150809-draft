@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Fabrice Alphonso <fabrice@alphonso.dyndns.org>
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-0.85.1.ebuild,v 1.1 2002/04/11 13:09:39 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnomemeeting/gnomemeeting-0.85.1.ebuild,v 1.2 2002/05/23 06:50:15 seemant Exp $
 
 S="${WORKDIR}/GnomeMeeting-${PV}"
 SRC_URI="http://www.gnomemeeting.org/downloads/latest/sources/GnomeMeeting-${PV}.tar.gz"
@@ -16,7 +16,7 @@ DEPEND="virtual/glibc
 	>=dev-libs/openssl-0.9.6c
 	>=gnome-base/gconf-1.0.8
 	>=net-nds/openldap-2.0.21
-	>=x11-libs/gtk+-1.2.10"
+	=x11-libs/gtk+-1.2*"
 
 
 src_compile() {

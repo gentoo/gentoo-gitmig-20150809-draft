@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre3-r1.ebuild,v 1.2 2002/05/08 05:58:31 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre3-r1.ebuild,v 1.3 2002/05/23 06:50:14 seemant Exp $
 
 # Handle PREversions as well
 MY_PV=${PV/_/}
@@ -21,7 +21,7 @@ RDEPEND=">=media-libs/divx4linux-20020418
 	>=media-libs/win32codecs-0.60
 	dvd? ( media-libs/libdvdread
 	       media-libs/libdvdcss )
-	gtk? ( >=x11-libs/gtk+-1.2.10-r4
+	gtk? ( =x11-libs/gtk+-1.2*
 	       media-libs/libpng )
 	esd? ( media-sound/esound )
 	ggi? ( media-libs/libggi )

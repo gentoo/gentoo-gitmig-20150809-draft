@@ -1,6 +1,6 @@
 # Copyright 2000-2002 Achim Gottinger
 # Distributed under the GPL by Gentoo Technologies, Inc.
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/nessus-1.0.10.ebuild,v 1.1 2002/04/05 21:55:56 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus/nessus-1.0.10.ebuild,v 1.2 2002/05/23 06:50:15 seemant Exp $
 
 
 # It's better to split it in four different packages
@@ -19,12 +19,12 @@ HOMEPAGE="http://www.nessus.org/"
 DEPEND="virtual/glibc virtual/x11 sys-devel/m4
 	>=dev-libs/gmp-3.1.1
 	>=sys-libs/zlib-1.1.4
-	>=x11-libs/gtk+-1.2.10-r4"
+	=x11-libs/gtk+-1.2*"
 
 RDEPEND="virtual/glibc virtual/x11
 	>=dev-libs/gmp-3.1.1
 	>=sys-libs/zlib-1.1.4
-	>=x11-libs/gtk+-1.2.10-r4"
+	=x11-libs/gtk+-1.2*"
 
 
 src_compile() {
