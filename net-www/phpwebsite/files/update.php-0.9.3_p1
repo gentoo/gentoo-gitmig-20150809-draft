@@ -1,0 +1,261 @@
+<?php
+define("UPDATE_BRANCHES", TRUE);
+
+if(is_file("../conf/pear_path.php"))
+  include("../conf/pear_path.php");
+
+define("PHPWS_SOURCE_DIR", "../");
+require_once ("../core/Core.php");
+
+$core = new PHPWS_Core(NULL, "../", TRUE);
+
+require_once("../mod/language/class/Language.php");
+require_once("../mod/boost/class/Boost.php");
+require_once("../mod/users/class/Users.php");
+require_once("../mod/layout/class/Layout.php");
+require_once("../mod/help/class/CLS_help.php");
+
+$coreVersion = PHPWS_Boost::getVersionInfo("core");
+$currentVersion = $coreVersion['version'];
+$match = "(\d)\.(\d)(\d)";
+$currentVersion = preg_replace("/$match/", "\\1.\\2.\\3", $currentVersion);
+
+session_start();
+
+include("allow_setup.php");
+
+if ($GLOBALS['core']->sqlTableExists("branch_sites", TRUE)) $GLOBALS['branchExists'] = TRUE;
+else $GLOBALS['branchExists'] = FALSE;
+
+if (!isset($_SESSION["translate"]))
+     $_SESSION["translate"] = new PHPWS_Language;
+
+if (!isset($_SESSION["OBJ_user"]))
+     $_SESSION["OBJ_user"] = new PHPWS_User;
+
+if (!isset($_SESSION["OBJ_layout"]))
+     $_SESSION["OBJ_layout"] = new PHPWS_Layout(FALSE);
+
+$body[] = startpage($currentVersion);
+
+if (isset($_POST['checkPass'])){
+  $_SESSION['OBJ_user']->setDeity(checkPassword($_POST['updatePass']));
+}
+
+if (!$_SESSION['OBJ_user']->isDeity()){
+  $body[] = loginAdmin();
+} elseif (isset($_POST['updateModules'])){
+  $body[] = "<h2>" . $_SESSION["translate"]->it("Updating modules") . "...</h2>";
+  
+  if (isset($_POST['addModules'])){
+    if ($updateMessage = updateModules($_POST['addModules'])){
+      $body[] = $updateMessage;
+      
+      if ($GLOBALS['branchExists'] && UPDATE_BRANCHES)
+	$body[] = updateBranchModules($_POST['addModules']);
+
+      $body[] = "<br />All Modules Updated!";
+    } else
+      $body[] = "<br />No modules selected...";
+  }
+  $body[] = "<br /><br /><a href=\"update.php\">Return to Update</a>";
+} else {
+  $body[] = updateCore($currentVersion);
+  $body[] = updateForm();
+}
+
+$body[] = "</body>
+</html>";
+
+echo implode("", $body);
+
+
+/************************************************************************
+* Functions
+*************************************************************************/
+function startpage($currentVersion){
+  $content = "<html>
+<head>
+<meta name=\"robots\" content=\"noindex, nofollow\" />
+<script language=\"JavaScript\" type=\"text/javascript\">
+<!-- 
+function CheckAll() {
+   for (var i = 0; i < document.modules.elements.length; i++) {
+       if( document.modules.elements[i].type == 'checkbox' ) {
+           document.modules.elements[i].checked = !(document.modules.elements[i].checked);
+       }
+   }
+}
+//-->
+</script>
+<title>".$_SESSION["translate"]->it("phpWebSite Updater")."</title>
+</head>
+<body>
+<img src=\"poweredby.jpg\" /><br />
+<h1>" . $_SESSION["translate"]->it("phpWebSite Updater");
+  $coreVersion = $GLOBALS['core']->version;
+
+  if ($currentVersion < $coreVersion)
+    $content .= ": " . $_SESSION["translate"]->it("Version [var1] to [var2]", $currentVersion, $GLOBALS['core']->version);
+
+ $content .= "</h1>";
+
+ return $content;
+}
+
+
+function loginAdmin(){
+  $content[] = "<h2>" . $_SESSION["translate"]->it("Welcome to the phpWebSite Updater") . "!</h2><b>" . $_SESSION["translate"]->it("Enter your Installation Password below") . "</b><br /><br />";
+  $form = new EZForm;
+  $form->setAction("update.php");
+  $form->add("checkPass", "hidden", 1);
+  $form->add("updatePass", "password");
+  $template = $form->getTemplate();
+  $content[] =  implode("", $template);
+  return implode("", $content);
+}
+
+function checkPassword($password){
+   include("../conf/config.php");
+   if ($install_pw == $password)
+     return TRUE;
+   else
+     return FALSE;
+ } 
+
+function updateBranchCore($currentVersion){
+  if ($GLOBALS['branchExists'] && $sql = $GLOBALS["core"]->sqlSelect("branch_sites")){
+     foreach ($sql as $branch){
+      if(!($GLOBALS["core"]->loadDatabase(PHPWS_SOURCE_DIR . "conf/branch/". $branch["configFile"], TRUE))){
+	$content[] = "<b>" . $_SESSION["translate"]->it("Unable to connect to branch database for [var1]", $branch["branchName"]) . "</b><br /><br />";
+	continue;
+      }
+
+      $content [] = "<b>".$_SESSION["translate"]->it("Updating branch").": ".$branch["branchName"]."</b><br /><br />";
+      updateCore($currentVersion, FALSE);
+    }
+    
+    $GLOBALS["core"]->loadDatabase();
+    return implode("", $content);
+  } else
+    return NULL;
+}
+
+function updateBranchModules($moduleList){
+  if ($GLOBALS['branchExists'] && $sql = $GLOBALS["core"]->sqlSelect("branch_sites")){
+    foreach ($sql as $branch){
+      $branchConfig = PHPWS_SOURCE_DIR . "conf/branch/". $branch["configFile"];
+      if (!is_file($branchConfig)){
+	$content[] = "<b>" . $_SESSION["translate"]->it("Unable to load file [var1] for branch [var2]", $branchConfig, $branch['branchName']) . "</b><br /><br />";
+	continue;
+      }
+
+      if (!$GLOBALS["core"]->loadDatabase($branchConfig, TRUE)){
+	$content[] = "<b>" . $_SESSION["translate"]->it("Unable to connect to branch database for [var1]", $branch["branchName"]) . "</b><br /><br />";
+	continue;
+      }
+
+      $content [] = "<b>".$_SESSION["translate"]->it("Updating branch modules").": " . $branch["branchName"] . "</b><br /><br />";
+      updateModules($moduleList);
+    }
+    
+    $GLOBALS["core"]->loadDatabase();
+    return implode("", $content);
+  } else
+    return NULL;
+}
+
+function updateCore($currentVersion, $isHub=TRUE){
+  include("defaultMods.php");
+  $update = FALSE;
+
+  if ($currentVersion < "0.9.1"){
+    include ("core_updates/update_091.php");
+    $update = TRUE;
+  }
+  
+  if ($currentVersion < "0.9.2"){
+    include ("core_updates/update_092.php");
+    $update = TRUE;
+  }
+
+  if ($currentVersion < "0.9.3-1"){
+    $update = TRUE;
+  }
+
+  if ($update){
+    phpws_boost::setVersionInfo(PHPWS_SOURCE_DIR . "conf/core_info.php", "update");
+    $content[] = "<h2>Core Updated!</h2>";
+    if ($isHub && $GLOBALS['branchExists'] && UPDATE_BRANCHES)
+      $content[] = updateBranchCore($currentVersion);
+  }
+  else
+    $content[] = "<h2>Core update not required</h2>";
+
+  foreach ($defaultMods as $mod_title){
+    if (phpws_boost::needsUpdate($mod_title))
+      $coreModList[] = $mod_title;
+  }
+
+  if (isset($coreModList))
+    $content[] = updateModules($coreModList);
+
+  return implode("", $content);
+}
+
+
+function updateForm(){
+  include("defaultMods.php");
+
+  $modules = $GLOBALS['core']->sqlSelect("modules");
+
+  foreach ($modules as $modInfo){
+    if (phpws_boost::needsUpdate($modInfo['mod_title']))
+      $mods[$modInfo['mod_title']] = $modInfo['mod_pname'];
+  }
+
+  if (!isset($mods) || !count($mods))
+    return "No mods currently require updating.<br />";
+  
+  foreach ($defaultMods as $modRemove)
+    unset($mods[$modRemove]);
+
+
+  $content[] = "<b>You may update the following modules:</b>";
+  $form = new EZForm("modules");
+  $form->add("updateModules", "hidden", 1);
+  $form->setAction("update.php");
+  $content[] = $form->getStart();
+  $content[] = $form->get("updateModules");
+  foreach($mods as $modDir=>$modpname){
+    $form->add("addModules[" . $modDir . "]", "checkbox", $modDir);
+    $content[] = $form->get("addModules[" . $modDir . "]") . " " . $modpname . "<br />\n";
+  }
+  $form->add("button", "submit", "Update Modules");
+  $content[] = "<br />" . $form->get("button");
+  $content[] = $GLOBALS['core']->formButton($_SESSION["translate"]->it("Check All"), "toggle", "CheckAll();");
+  $content[] = "</form>";
+
+  return implode("", $content);
+}
+
+function updateModules($moduleList){
+  if (!isset($moduleList)){
+    $content[] = "No modules selected<br />";
+    return NULL;
+  } else {
+    foreach ($moduleList as $mod_title){
+      if (PHPWS_Boost::updateModule($mod_title, NULL, TRUE)){
+	$content[] = $GLOBALS["CNT_boost"]["content"] . "<hr />";
+	unset($GLOBALS["CNT_boost"]["content"]);
+      }
+    }
+  }
+
+  if (isset($content))
+    return implode("", $content);
+  else
+    return NULL;
+}
+
+?>
