@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/kasablanca/kasablanca-0.4.0.2.ebuild,v 1.1 2005/03/08 11:13:26 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/kasablanca/kasablanca-0.4.0.2.ebuild,v 1.2 2005/03/11 17:02:46 greg_g Exp $
 
 inherit kde eutils
 
@@ -18,6 +18,6 @@ need-kde 3.1
 src_unpack() {
 	kde_src_unpack
 
-	# Fix for 64-bit archs
+	# Fix for 64-bit archs. Patch applied upstream.
 	epatch ${FILESDIR}/${P}-64bit.patch
 }
