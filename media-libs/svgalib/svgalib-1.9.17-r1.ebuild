@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.17-r1.ebuild,v 1.1 2002/12/29 22:22:25 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.17-r1.ebuild,v 1.2 2002/12/31 21:15:53 azarah Exp $
 
 IUSE=""
 
@@ -60,27 +60,25 @@ src_compile() {
 
 	check_kernel
 
-	make OPTIMIZE="${CFLAGS}" static shared textutils lrmi utils || die
+	make OPTIMIZE="${CFLAGS}" static shared textutils lrmi utils || \
+		die "Failed to build libraries and utils!"
 	# Build the gl stuff tpp
-	make OPTIMIZE="${CFLAGS}" -C gl || die
-	make OPTIMIZE="${CFLAGS}" -C gl libvgagl.so.${PV} || die
+	make OPTIMIZE="${CFLAGS}" -C gl || die "Failed to build gl!"
+	make OPTIMIZE="${CFLAGS}" -C gl libvgagl.so.${PV} || \
+		die "Failed to build libvgagl.so.${PV}!"
 	rm -f src/svgalib_helper.h
-	make OPTIMIZE="${CFLAGS}" -C src libvga.so.${PV} || die
+	make OPTIMIZE="${CFLAGS}" -C src libvga.so.${PV} || \
+		die "Failed to build libvga.so.${PV}!"
 	cp -a src/libvga.so.${PV} sharedlib/
 	make OPTIMIZE="${CFLAFS}" LDFLAGS='-L ../sharedlib' \
-		-C threeDKit lib3dkit.a || die
+		-C threeDKit lib3dkit.a || die "Failed to build threeDKit!"
 	
-	# For kernel 2.5, we need to set $MODVER, else it fails.  The
-	# other alternative is to patch the Makefile, but too much hassle ...
-	if [ "${KV_MAJOR}${KV_MINOR}" -gt "24" ]
-	then
-		make INCLUDEDIR="${INCLUDEDIR}" MODVER="foo" \
-			-C kernel/svgalib_helper
-	else
-		make INCLUDEDIR="${INCLUDEDIR}" -C kernel/svgalib_helper
-	fi
+	make INCLUDEDIR="${INCLUDEDIR}" -C kernel/svgalib_helper || \
+		die "Failed to build kernel module!"
 	
-	make OPTIMIZE="${CFLAGS}" LDFLAGS='-L ../sharedlib' demoprogs || die
+	make OPTIMIZE="${CFLAGS}" LDFLAGS='-L ../sharedlib' demoprogs || \
+		die "Failed to build demoprogs!"
+	
 	cp Makefile Makefile.orig
 	sed -e 's/\(install: $(INSTALLAOUTLIB) \)installheaders \(.*\)/\1\2/g' \
 	 	Makefile.orig > Makefile
@@ -88,12 +86,12 @@ src_compile() {
 
 src_install() {
 
-	check_kernel
-
 	dodir /etc/svgalib /usr/{include,lib,bin,share/man}
-	
+
+	# Do not use 'hacked' INCLUDEDIR here ...
 	make TOPDIR=${D} OPTIMIZE="${CFLAGS}" \
-		INCLUDEDIR="${INCLUDEDIR}" install || die
+		INCLUDEDIR="/usr/src/linux/include" install || \
+		die "Failed to install svgalib!"
 	
 	insinto /usr/include
 	doins gl/vgagl.h
@@ -107,6 +105,7 @@ src_install() {
 	doins src/vga.h gl/vgagl.h src/mouse/vgamouse.h src/joystick/vgajoystick.h
 	doins src/keyboard/vgakeyboard.h
 
+	dodir /etc/modules.d
 	echo "probeall  /dev/svga  svgalib_helper" > ${D}/etc/modules.d/svgalib
 
 	cd ${S}/demos
