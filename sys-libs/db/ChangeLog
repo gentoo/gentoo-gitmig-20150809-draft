@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/db
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.86 2004/03/21 07:18:02 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/ChangeLog,v 1.87 2004/04/15 20:40:15 pauldv Exp $
+
+*db-4.2.52_p2 (15 Apr 2004)
+
+  15 Apr 2004; Paul de Vrieze <pauldv@gentoo.org> db-4.2.52_p2.ebuild:
+  New patch version
 
   21 Mar 2004; Joshua Kinard <kumba@gentoo.org> db-4.1.25_p1-r3.ebuild:
   Tweak to make gnuconfig work again for mips (the 'dist' dir got moved from
