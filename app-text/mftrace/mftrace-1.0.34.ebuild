@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/mftrace-1.0.34.ebuild,v 1.2 2004/09/02 08:50:11 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/mftrace/mftrace-1.0.34.ebuild,v 1.3 2004/10/09 20:27:41 usata Exp $
 
 IUSE="truetype"
 
@@ -8,7 +8,7 @@ DESCRIPTION="traces TeX fonts to PFA or PFB fonts (formerly pktrace)"
 HOMEPAGE="http://www.cs.uu.nl/~hanwen/mftrace/"
 SRC_URI="http://www.cs.uu.nl/~hanwen/mftrace/${P}.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS="~alpha ~x86 ~ppc ~amd64 ~sparc"
+KEYWORDS="alpha x86 ppc ~amd64 ~sparc"
 # SLOT 1 was used in pktrace ebuild
 SLOT="1"
 
