@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/libelf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/ChangeLog,v 1.1 2002/02/01 21:53:11 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libelf/ChangeLog,v 1.2 2002/09/29 13:47:37 azarah Exp $
+
+*libelf-0.8.2 (29 Sep 2002)
+
+  29 Sep 2002; Martin Schlemmer <azarah@gentoo.org> :
+
+  Bump version to fully fix bug #4540.  Also fix the docs being installed,
+  and compat headers not installed when package was already merged.
 
 *libelf-0.7.0 (1 Feb 2002)
 
