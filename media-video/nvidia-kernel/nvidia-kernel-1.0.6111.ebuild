@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.6111.ebuild,v 1.2 2004/08/27 16:50:47 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.6111.ebuild,v 1.3 2004/08/30 10:52:07 cyfred Exp $
 
 inherit eutils kmod
 
@@ -69,6 +69,8 @@ src_unpack() {
 
 	# Fix up the removal of PM_SAVE_STATE in kernels > 2.6.8
 	epatch ${FILESDIR}/${PV}/power-suspend-2.6.9-changes.patch
+	# Update pci stuff to work with irqroutes being changed in kernels
+	epatch ${FILESDIR}/${PV}/nv_enable_pci.patch
 
 	# if you set this then it's your own fault when stuff breaks :)
 	[ ! -z "${USE_CRAZY_OPTS}" ] && sed -i "s:-O:${CFLAGS}:" Makefile.*
