@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/adocman
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/adocman/ChangeLog,v 1.4 2004/11/23 20:48:09 rizzo Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/adocman/ChangeLog,v 1.5 2005/03/23 22:20:52 rizzo Exp $
+
+*adocman-0.13 (23 Mar 2005)
+
+  23 Mar 2005; Don Seiler <rizzo@gentoo.org> +adocman-0.13.ebuild:
+  Version bump
 
 *adocman-0.12 (23 Nov 2004)
 
