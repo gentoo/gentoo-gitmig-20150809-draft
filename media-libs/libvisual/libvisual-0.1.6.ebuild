@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisual/libvisual-0.1.6.ebuild,v 1.3 2004/09/22 17:52:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvisual/libvisual-0.1.6.ebuild,v 1.4 2004/09/28 19:14:11 eradicator Exp $
 
 IUSE="pic static"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://libvisual.sourceforge.net/"
 LICENSE="LGPL-2.1 GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~sparc"
 
 DEPEND=""
 
