@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.0_beta1.ebuild,v 1.7 2004/01/04 14:50:48 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.0_beta1.ebuild,v 1.8 2004/01/04 15:07:37 caleb Exp $
 
 SRCTYPE="free"
 DESCRIPTION="QT version ${PV}"
@@ -18,7 +18,7 @@ DEPEND="virtual/x11 virtual/xft
 	media-libs/libpng media-libs/jpeg media-libs/libmng
 	>=media-libs/freetype-2
 	gif? ( media-libs/giflib media-libs/libungif )
-	nas? ( media-libs/nas )
+	nas? ( >=media-libs/nas-1.5 )
 	odbc? ( dev-db/unixODBC )
 	mysql? ( dev-db/mysql )
 	sqlite? ( dev-db/sqlite )
@@ -95,6 +95,7 @@ src_compile() {
 	export QTDIR=${S}
 	emake src-qmake src-moc sub-src sub-tools || die
 	export LD_LIBRARY_PATH=${LD_LIBRARY_PATH_OLD}
+	export HOME="$REALHOME"
 }
 
 src_install() {
