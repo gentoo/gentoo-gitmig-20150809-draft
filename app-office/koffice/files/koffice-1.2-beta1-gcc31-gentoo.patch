@@ -1,0 +1,31 @@
+diff -ur koffice-1.2-beta1.original/karbon/tools/vmtool_rotate.cc koffice-1.2-beta1/karbon/tools/vmtool_rotate.cc
+--- koffice-1.2-beta1.original/karbon/tools/vmtool_rotate.cc	Tue Apr  2 07:07:04 2002
++++ koffice-1.2-beta1/karbon/tools/vmtool_rotate.cc	Mon May 27 01:35:56 2002
+@@ -79,7 +79,7 @@
+ 		KoRect rect = part()->selection().boundingBox( 1 / view->zoomFactor() );
+ 		m_sp = QPoint( rect.left() + rect.width() / 2, rect.top() + rect.height() / 2 );
+ 		QPoint sp = QPoint( m_sp.x() - view->canvasWidget()->contentsX(), m_sp.y() - view->canvasWidget()->contentsY() );
+-		m_angle = atan2( lp.y() - m_sp.y(), lp.x() - m_sp.x() );
++		m_angle = atan2( double(lp.y() - m_sp.y()), double(lp.x() - m_sp.x()) );
+ 		if( VMToolHandle::instance( m_part )->activeNode() == NODE_LT )
+ 			m_angle -= atan2( rect.top() - m_sp.y(), rect.left() - m_sp.x() );
+ 		else if( VMToolHandle::instance( m_part )->activeNode() == NODE_MT )
+diff -ur koffice-1.2-beta1.original/karbon/tools/vshapetool.h koffice-1.2-beta1/karbon/tools/vshapetool.h
+--- koffice-1.2-beta1.original/karbon/tools/vshapetool.h	Thu Mar 14 12:50:49 2002
++++ koffice-1.2-beta1/karbon/tools/vshapetool.h	Mon May 27 01:33:58 2002
+@@ -61,12 +61,12 @@
+ 	if( m_calcPolar )
+ 	{
+ 		// radius:
+-		m_d1 = sqrt(
++	  m_d1 = sqrt( double(
+ 			( m_lp.x() - m_fp.x() ) * ( m_lp.x() - m_fp.x() ) +
+-			( m_lp.y() - m_fp.y() ) * ( m_lp.y() - m_fp.y() ) );
++			( m_lp.y() - m_fp.y() ) * ( m_lp.y() - m_fp.y() ) ));
+ 
+ 		// angle:
+-		m_d2 = atan2( ( m_lp.y() - m_fp.y() ), ( m_lp.x() - m_fp.x() ) );
++		m_d2 = atan2( double( m_lp.y() - m_fp.y() ), double( m_lp.x() - m_fp.x() ) );
+ 
+ 		// define pi/2 as "0.0":
+ 		m_d2 -= VGlobal::pi_2;

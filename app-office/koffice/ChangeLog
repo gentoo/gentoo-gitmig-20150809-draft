@@ -1,6 +1,15 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.4 2002/04/26 22:51:42 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.5 2002/05/27 20:34:51 mkennedy Exp $
+
+*koffice-1.2_beta1-r2 (27 May 2002)
+
+  27 May 2002; Matthew Kennedy <mkennedy@gentoo.org> ChangeLog,
+  koffice-1.2_beta1-r2.ebuild, files/digest-koffice-1.2_beta1-r2,
+  files/koffice-1.2-beta1-gcc31-gentoo.patch :
+
+  Code patch to support gcc-3.1. May not be necessary with next
+  release of koffice.
 
 *koffice-1.2_beta1-r1 (27 April 2002)
 
