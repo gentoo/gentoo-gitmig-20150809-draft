@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.0.2.ebuild,v 1.2 2004/10/17 14:42:20 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.0.2.ebuild,v 1.3 2004/10/18 16:22:26 liquidx Exp $
 
 inherit eutils virtualx gnome2 flag-o-matic alternatives
 
@@ -38,7 +38,7 @@ RDEPEND=">=gnome-extra/libgtkhtml-3.2.3
 		!mozilla? ( >=dev-libs/nspr-4.3
 			>=dev-libs/nss-3.8 ) )
 	ldap? ( >=net-nds/openldap-2 )
-	kerberos? ( >=app-crypt/mit-krb5-1.2.5 )"
+	kerberos? ( virtual/krb5 )"
 
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
