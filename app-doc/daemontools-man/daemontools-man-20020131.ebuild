@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/daemontools-man/daemontools-man-20020131.ebuild,v 1.13 2004/06/07 00:49:19 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/daemontools-man/daemontools-man-20020131.ebuild,v 1.14 2004/06/24 21:39:08 agriffis Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Man pages for daemontools"

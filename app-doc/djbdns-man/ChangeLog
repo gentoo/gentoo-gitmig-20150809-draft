@@ -1,6 +1,6 @@
 # ChangeLog for app-doc/djbdns-man
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/djbdns-man/ChangeLog,v 1.8 2004/06/06 08:38:44 kugelfang Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-doc/djbdns-man/ChangeLog,v 1.9 2004/06/24 21:39:18 agriffis Exp $
 
   06 Jun 2004; Danny van Dyk <kugelfang@gentoo.org>
   djbdns-man-20031023.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-pdf/howto-pdf-20040317.ebuild,v 1.3 2004/06/07 00:56:10 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-pdf/howto-pdf-20040317.ebuild,v 1.4 2004/06/24 21:46:38 agriffis Exp $
 
 DESCRIPTION="The LDP howtos, pdf format"
 HOMEPAGE="http://www.tldp.org/"

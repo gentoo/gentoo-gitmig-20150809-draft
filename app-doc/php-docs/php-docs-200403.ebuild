@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/php-docs-200403.ebuild,v 1.4 2004/06/02 00:03:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/php-docs-200403.ebuild,v 1.5 2004/06/24 21:49:11 agriffis Exp $
 
 # if you update this ebuild, you *must* also update the php-2.eclass to
 # depend on the new manual

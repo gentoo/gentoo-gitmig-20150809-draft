@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/kdelibs-apidocs/kdelibs-apidocs-3.1.5.ebuild,v 1.5 2004/03/25 22:54:11 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/kdelibs-apidocs/kdelibs-apidocs-3.1.5.ebuild,v 1.6 2004/06/24 21:47:30 agriffis Exp $
 
 inherit kde
 

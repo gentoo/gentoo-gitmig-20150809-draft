@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/root-docs/root-docs-3.03.04.ebuild,v 1.9 2004/06/07 01:01:28 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/root-docs/root-docs-3.03.04.ebuild,v 1.10 2004/06/24 21:50:15 agriffis Exp $
 
 S=${WORKDIR}/htmldoc
 DESCRIPTION="An Object-Oriented Data Analysis Framework"
