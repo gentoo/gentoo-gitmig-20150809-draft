@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r7.ebuild,v 1.3 2003/12/16 06:26:50 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r7.ebuild,v 1.4 2004/01/19 07:20:22 spyderous Exp $
 
 IUSE="gatos"
 IUSE_VIDEO_CARDS="3dfx gamma i810 i830 matrox rage128 radeon sis mach64"
@@ -17,7 +17,7 @@ PATCHDIR="${WORKDIR}/patch"
 EXCLUDED="${PATCHDIR}/excluded"
 S="${WORKDIR}/drm"
 DESCRIPTION="XFree86 Kernel DRM modules"
-HOMEPAGE="http://www.xfree.org"
+HOMEPAGE="http://dri.sf.net"
 # Use the same patchset for all of them; exclude patches as necessary
 SRC_URI="mirror://gentoo/${PF}-gentoo-${PATCHVER}.tar.bz2
 	mirror://gentoo/linux-drm-${PV}-kernelsource-${SNAPSHOT}.tar.bz2

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r6.ebuild,v 1.15 2003/12/05 16:14:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/xfree-drm-4.3.0-r6.ebuild,v 1.16 2004/01/19 07:20:22 spyderous Exp $
 
 # Small note:  we should prob consider using a DRM only tarball, as it will ease
 #              some of the overhead on older systems, and will enable us to
@@ -21,7 +21,7 @@ PATCHVER="0.4"
 
 S="${WORKDIR}/drm"
 DESCRIPTION="Xfree86 Kernel DRM modules"
-HOMEPAGE="http://www.xfree.org"
+HOMEPAGE="http://dri.sf.net"
 SRC_URI="mirror://gentoo/linux-drm-${PV}-kernelsource-${SNAPSHOT}.tar.gz
 	mirror://gentoo/${PF}-gentoo-${PATCHVER}.tar.bz2"
 

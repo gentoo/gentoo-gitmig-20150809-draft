@@ -1,6 +1,11 @@
 # ChangeLog for x11-base/xfree-drm
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.48 2003/12/16 06:26:50 spyderous Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree-drm/ChangeLog,v 1.49 2004/01/19 07:20:22 spyderous Exp $
+
+  19 Jan 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xfree-drm-4.3.0-r2.ebuild, xfree-drm-4.3.0-r6.ebuild,
+  xfree-drm-4.3.0-r7.ebuild:
+  Changing homepage to dri.sf.net.
 
   16 Dec 2003; Donnie Berkholz <spyderous@gentoo.org>;
   xfree-drm-4.3.0-r7.ebuild:
