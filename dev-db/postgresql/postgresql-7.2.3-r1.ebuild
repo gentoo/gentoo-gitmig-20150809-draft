@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2.3-r1.ebuild,v 1.4 2002/11/25 20:50:09 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2.3-r1.ebuild,v 1.5 2002/11/26 21:53:40 gerk Exp $
 
 IUSE="ssl nls java python tcltk perl"
 
@@ -9,7 +9,7 @@ DESCRIPTION="PostgreSQL is a sophisticated Object-Relational DBMS"
 SRC_URI="ftp://ftp.easynet.be/postgresql/v${PV}/${P}.tar.gz"
 HOMEPAGE="http://www.postgresql.org"
 LICENSE="POSTGRESQL"
-KEYWORDS="x86 -ppc"
+KEYWORDS="x86 ppc"
 SLOT="0"
 
 DEPEND="virtual/glibc
@@ -70,6 +70,11 @@ src_compile() {
 	use ssl && myconf="$myconf --with-openssl"
 	use nls && myconf="$myconf --enable-locale --enable-nls --enable-multibyte"
 	use libg++ && myconf="$myconf --with-CXX"
+
+	# these are the only working CFLAGS I could get on ppc, so locking them
+        # down, anything more aggressive fails (i.e. -mcpu or -Ox)
+	# Gerk - Nov 26, 2002
+	use ppc && CFLAGS="-pipe -fsigned-char"
 
 	./configure --prefix=/usr \
 		--mandir=/usr/share/man \

@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.40 2002/11/25 20:50:09 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.41 2002/11/26 21:53:40 gerk Exp $
+
+  26 Nov 2002; Mark Guertin <gerk@gentoo.org> postgresql-7.2.3-r1.ebuild:
+  forced CFLAGS="-pipe -fsigned-char", any more aggressive optimizations
+  cause failures on ppc
 
   25 Nov 2002; Mark Guertin <gerk@gentoo.org> portgresql-7.2.3.ebuild, 
   portgresql-7.2.3-r1.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2-r3.ebuild,v 1.11 2002/10/05 05:39:10 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2-r3.ebuild,v 1.12 2002/11/26 21:53:40 gerk Exp $
 
 IUSE="ssl nls java python tcltk perl"
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.easynet.be/postgresql/v${PV}/${P}.tar.gz"
 HOMEPAGE="http://www.postgresql.org"
 LICENSE="POSTGRESQL"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 -ppc"
 
 DEPEND="virtual/glibc
 		sys-devel/autoconf
