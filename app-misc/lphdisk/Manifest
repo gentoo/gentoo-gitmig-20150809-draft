@@ -1,3 +1,6 @@
-MD5 e2651eb68111203875aa77dea1ebd84a ChangeLog 659
+MD5 c64c4cf069e0d08ce07b410486ad65d1 ChangeLog 840
 MD5 f93884e3895ea6ef8e02a65b3176000e lphdisk-0.9.1.ebuild 822
+MD5 4293da158634983347c505cfe8c1ee63 lphdisk-0.9.1-r1.ebuild 918
 MD5 b2e9b7b29c9d01766a62fb786f08e03f files/digest-lphdisk-0.9.1 65
+MD5 b2e9b7b29c9d01766a62fb786f08e03f files/digest-lphdisk-0.9.1-r1 65
+MD5 7c50f50ecfb1e5fc612363f9dff0929e files/lphdisk-0.9.1-gcc3.patch 1564
