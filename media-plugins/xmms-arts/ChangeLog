@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-arts
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-arts/ChangeLog,v 1.5 2002/10/25 22:13:53 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-arts/ChangeLog,v 1.6 2002/11/24 20:20:26 gerk Exp $
+
+  24 Nov 2002; Mark Guertin <gerk@gentoo.org> xmms-arts-0.4-r6.ebuild:
+  marked as -ppc.  Outputs nothing but static, seems like endianess
+  issues.  Will submit bug upstream.
 
 *xmms-arts-0.4-r6 (25 Oct 2002)
 
