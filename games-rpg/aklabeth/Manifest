@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5f2b741c96d2c8c04aee21989808848f aklabeth-1.0.ebuild 610
 MD5 abdbffa1c3e97e5fb503f810bced6f93 ChangeLog 484
-MD5 2cf896cbb44d0d5d859d1d356af01657 aklabeth-1.0.ebuild 599
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 4c8628b96099e3aab5668c2df1cc32ef files/digest-aklabeth-1.0 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBojm2Z/iYVBmujdURAs2gAJ4k+oJciAPqrbDZE0enPyNOOFE0zACbBmXF
+wtGgXW8C2S/dDEPM514/aR4=
+=HyA0
+-----END PGP SIGNATURE-----
