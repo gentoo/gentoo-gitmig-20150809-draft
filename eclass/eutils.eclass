@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.92 2004/08/03 17:24:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/eutils.eclass,v 1.93 2004/08/10 01:11:14 vapier Exp $
 #
 # Author: Martin Schlemmer <azarah@gentoo.org>
 #
@@ -1018,7 +1018,11 @@ unpack_makeself() {
 		gzip*)
 			tail -n +${skip} ${src} | tar --no-same-owner -xzf -
 			;;
+		compress*)
+			tail -n +${skip} ${src} | gunzip | tar --no-same-owner -xf -
+			;;
 		*)
+			eerror "Unknown filetype \"${filetype}\" ?"
 			false
 			;;
 	esac
