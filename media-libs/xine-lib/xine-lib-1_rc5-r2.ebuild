@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc5-r2.ebuild,v 1.2 2004/06/29 19:08:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc5-r2.ebuild,v 1.3 2004/06/29 19:20:52 vapier Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -89,9 +89,10 @@ src_compile() {
 
 	# fix build errors with sse2 #49482
 	if use x86 ; then
-		[ "`gcc-version`" == "3.2" ] && append-flags -mno-sse2 && filter-mfpmath sse
-		[ "`gcc-version`" == "3.3" ] && append-flags -mno-sse2 -mno-sse3 && filter-mfpmath sse
-		[ "`gcc-version`" == "3.4" ] && append-flags -mno-sse2 -mno-sse3 && filter-mfpmath sse
+		if [ `gcc-major-version` -eq 3 ] ; then
+			append-flags -mno-sse2 `test_flag -mno-sse3`
+			filter-mfpmath sse
+		fi
 	fi
 
 	# Use the built-in dvdnav plugin.
