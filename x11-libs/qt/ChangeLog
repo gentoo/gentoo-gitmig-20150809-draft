@@ -1,6 +1,11 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.15 2002/05/15 12:47:18 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.16 2002/05/31 01:14:06 jayskwak Exp $
+
+*qt-3.0.4.1-r1 (31 May 2002)
+
+  31 May 2002; Jays Kwak <jayskwak@gentoo.or.kr> changlog:
+  Fix Korean onthespot input method
 
 *qt-3.0.4.1 (14 May 2002)
 
