@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmdf
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdf/ChangeLog,v 1.2 2004/02/10 22:30:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmdf/ChangeLog,v 1.3 2004/04/11 17:52:23 pyrania Exp $
+
+  11 Apr 2004; Markus Nigbur <pyrania@gentoo.org> wmdf-0.1.6.ebuild:
+  Marked stable.
 
 *wmdf-0.1.6 (07 Feb 2004)
 

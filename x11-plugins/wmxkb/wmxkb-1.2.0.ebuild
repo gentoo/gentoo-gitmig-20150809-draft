@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxkb/wmxkb-1.2.0.ebuild,v 1.1 2004/01/04 05:05:08 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmxkb/wmxkb-1.2.0.ebuild,v 1.2 2004/04/11 17:54:13 pyrania Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.geocities.com/wmalms/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 ~sparc"
 
 DEPEND="virtual/x11"
 
