@@ -16,15 +16,3 @@ FSCKFIX=no				# Set FSCKFIX to "yes" if you want to add "-y" to the fsck at star
 ARCH=`uname -m`				# Architecture
 NFSSERVER=no				# Set to yes if you want to run an nfsserver
 
-# Add the services you want to run supervised
-SUPERVISE="sysklogd sshd xinetd dcron"
-
-# if you sysklogd is listed in the SUPERVISE line above, you can leave these
-# next two variables commented out.  Otherwise, they can be used to set 
-# traditional syslogd/klogd options:
-
-#KLOGD=""                                
-# Use KLOGD="-k /boot/System.map-$(uname -r)" to specify System.map
-
-#SYSLOGD=""                              
-# For remote UDP logging use SYSLOGD="-r"  
