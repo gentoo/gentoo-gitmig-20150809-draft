@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3543 2005/01/30 14:01:57 hollow Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3544 2005/01/30 14:37:42 swegener Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Sven Wegener <swegener@gentoo.org> (30 Jan 2005)
+# Major changes, needs some more testing
+>=net-irc/ultimate-3.0.0_rc2
 
 # Benedikt Boehm <hollow@gentoo.org> (30 Jan 2005)
 # Apache herd package refresh
