@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/bsdiff
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/bsdiff/ChangeLog,v 1.9 2005/03/14 20:36:57 ferringb Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/bsdiff/ChangeLog,v 1.10 2005/03/15 10:01:56 joker Exp $
+
+  15 Mar 2005; Christian Birchinger <joker@gentoo.org> bsdiff-4.2.ebuild:
+  Added sparc stable keyword
 
   14 Mar 2005; Brian Harring <ferringb@gentoo.org> :
   keyworded bsdiff-4.2 x86.
