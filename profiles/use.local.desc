@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.578 2004/08/24 19:11:11 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.579 2004/08/25 10:18:48 mr_bones_ Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -37,8 +37,8 @@ app-emulation/mips64emul:cacheemu - Enables support for cache emulation
 app-emulation/mips64emul:delays - Enables instruction latency/delay emulation
 app-emulation/mips64emul:mips16 - Enables MIPS16 instruction support
 app-emulation/mol:oldworld - Includes Macintosh's OldWorld support
-app-emulation/mol:vnc - Includes vnc support
 app-emulation/mol:sheep - Support for the sheep net driver
+app-emulation/mol:vnc - Includes vnc support
 app-emulation/pearpc:jit - Use the JITC-X86 CPU
 app-emulation/qemu:qemu-fast - Enables the vl/qemu-fast on the x86 cpu
 app-emulation/qemu:softmmu - Support for softmmu targets
@@ -109,8 +109,8 @@ app-text/estraier:kakasi - Enable kakasi support for Estraier
 app-text/estraier:mecab - Enable mecab support for Estraier
 app-text/namazu:chasen - Enable chasen support for namazu
 app-text/namazu:kakasi - Enable kakasi support for namazu
-app-text/sword:icu - Enable icu support for sword
 app-text/sword-modules:intl - Enable different languages
+app-text/sword:icu - Enable icu support for sword
 dev-cpp/sptk:fltk - Enable FLTK support
 dev-db/firebird:inetd - If you want inetd version instead of a superserver (daemon)
 dev-db/postgresql:pg-hier - Enables recursive queries like Oracle's 'CONNECT BY' feature.
@@ -226,6 +226,7 @@ games-strategy/wesnoth:editor - Enable compilation editor
 games-strategy/wesnoth:nomusic - Lite install
 games-strategy/wesnoth:server - Enable compilation of server
 games-strategy/wesnoth:tools - Enable compilation of translation tools
+games-util/aabrowse:geoip - lookup countries by IP addresses via the GeoIP library
 games-util/xqf:geoip - Add geoip support
 gnome-extra/libgda:mdb - Enable Microsoft Access DB support for GnomeDB.
 kde-base/arts:artswrappersuid - Set artswrapper suid for realtime playing, which is a security hazard
@@ -274,8 +275,8 @@ media-gfx/graphicsmagick:gs - enable ghostscript support
 media-gfx/graphicsmagick:jbig - enable jbig support
 media-gfx/graphicsmagick:jp2 - enable jpeg v2 support
 media-gfx/graphicsmagick:lzw - enable LZW support
-media-gfx/imagemagick:jbig - enables jbig-kit, support for fax and similar formats
 media-gfx/imagemagick:graphviz - enable graphviz support
+media-gfx/imagemagick:jbig - enables jbig-kit, support for fax and similar formats
 media-gfx/maya:bundled-libs - Use the bundled versions of libs rather than system ones (libstdc++, libgcc_s, libqt, and libXm)
 media-gfx/nvidia-cg-toolkit:glut - enable glut support
 media-gfx/opendx:cdf - Adds cdf data exchange format
