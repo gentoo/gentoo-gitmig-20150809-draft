@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-server-bin/teamspeak2-server-bin-2.0.20.1.ebuild,v 1.2 2004/04/20 15:50:16 eradicator Exp $
 
 DESCRIPTION="The Teamspeak Voice Communication Server"
 HOMEPAGE="http://www.teamspeak.org/"
@@ -50,7 +50,7 @@ src_install() {
 	fi
 
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/teamspeak2-server.rc7 teamspeak2-server
+	newexe ${FILESDIR}/teamspeak2-server.rc6 teamspeak2-server
 
 	keepdir /var/{lib,log,run}/teamspeak2-server
 	fowners teamspeak2 /var/{lib,log,run}/teamspeak2-server
