@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.17.ebuild,v 1.1 2001/12/25 00:51:40 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.17.ebuild,v 1.2 2001/12/25 22:56:06 azarah Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -48,13 +48,13 @@ fi
 
 #modified to be able to patch a external patch with our own one in 
 #${FILESDIR}/${PVR}/to fix rejects.  our patch have the same name, but not
-#the .gz and .bz2 extension.
+#the .gz or .bz2 extension.
 #this is usefull in that you dont have to have lots of versions of a single
 #patch for every ebuild on ibiblio, and decrease the time to release a ebuild.
 patchorama() {
 	local curdir="`pwd`"
 	local x
-	local patchdir=${WORKDIR}/patch
+	local patchdir=${T}/patch
 	for x in ${*} 
 	do
 		[ -d "$x" ] && continue
