@@ -1,10 +1,14 @@
 # ChangeLog for app-office/siag
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/siag/ChangeLog,v 1.2 2002/06/05 05:07:34 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/siag/ChangeLog,v 1.3 2002/06/06 13:57:01 lostlogic Exp $
 
 *siag-3.5.2 (5 Jun 2002)
 
-  5 Jun 2002; G.Bevin <lostlogic@gentoo.org> ChangeLog : siag-3.5.2.ebuild
+  6 Jun 2002; Brandon Low <lostlogic@gentoo.org> siag-3.5.2-r1.ebuild
+
+  Fix stupid but important typo /usr != /use
+
+  5 Jun 2002; Brandon Low <lostlogic@gentoo.org> ChangeLog : siag-3.5.2.ebuild
 
   Updated version, no type 1 font support for now, causes problems for some people.
   This version is significantly updated from 3.4.7, read the ChangeLog on the siag
