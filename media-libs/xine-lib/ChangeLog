@@ -1,6 +1,12 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.189 2005/01/06 09:25:45 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.190 2005/01/06 20:36:45 chriswhite Exp $
+
+*xine-lib-1_rc8-r1 (07 Jan 2005)
+
+  07 Jan 2005; Chris White <chriswhite@gentoo.org> xine-lib-1_rc8-r1.ebuild:
+  xv support is patched in xine-lib, and it no longer requires the use flag.
+  Removing that as well as the logic, as the logic breaks stuff.
 
   06 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
   -xine-lib-1_rc5-r3.ebuild, -xine-lib-1_rc6.ebuild, -xine-lib-1_rc7.ebuild,
