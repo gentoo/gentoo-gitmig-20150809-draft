@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.7.2_alpha3.ebuild,v 1.2 2004/11/21 22:27:10 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/hk_classes-0.7.2.ebuild,v 1.1 2004/12/07 00:47:10 caleb Exp $
 
 inherit eutils
 

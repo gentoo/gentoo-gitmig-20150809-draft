@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/knoda/knoda-0.7.2_alpha3.ebuild,v 1.1 2004/11/08 22:30:58 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/knoda/knoda-0.7.2.ebuild,v 1.1 2004/12/07 00:49:05 caleb Exp $
 
 inherit kde
 

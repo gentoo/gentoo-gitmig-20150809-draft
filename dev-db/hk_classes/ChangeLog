@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/hk_classes
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.25 2004/11/23 19:35:59 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.26 2004/12/07 00:47:10 caleb Exp $
+
+*hk_classes-0.7.2 (06 Dec 2004)
+
+  06 Dec 2004; Caleb Tennis <caleb@gentoo.org> +hk_classes-0.7.2.ebuild,
+  -hk_classes-0.7.2_alpha3.ebuild:
+  version bump, remove old version
 
   23 Nov 2004; Carsten Lohrke <carlo@gentoo.org> hk_classes-0.7.1.ebuild:
   stable on x86
