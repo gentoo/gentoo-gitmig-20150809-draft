@@ -1,7 +1,7 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: José Alberto Suárez López <bass@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xsat/xsat-0.21.ebuild,v 1.1 2002/06/25 10:26:11 bangert Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xsat/xsat-0.21.ebuild,v 1.2 2002/06/25 11:12:27 bangert Exp $
 
 MY_P=${PN}${PV}
 S=${WORKDIR}/${MY_P}
@@ -11,6 +11,7 @@ SRC_URI="http://unc.dl.sourceforge.net/sourceforge/xsatellite/${P}.tar.gz"
 HOMEPAGE="http://xsatellite.sourceforge.net"
 
 LICENSE="GPL-2"
+SLOT="0"
 
 DEPEND="dev-lang/tk"
 

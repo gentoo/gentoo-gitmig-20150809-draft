@@ -1,6 +1,11 @@
 # ChangeLog for net-p2p/agqt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/agqt/ChangeLog,v 1.1 2002/06/25 10:26:11 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/agqt/ChangeLog,v 1.2 2002/06/25 11:12:27 bangert Exp $
+
+  25 Jun 2002; Thilo Bangert <bangert@gentoo.org> :
+  
+  added SLOT="0"
+  
 
 *agqt-0.10 (26 Apr 2002)
 
