@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-2.6.10.ebuild,v 1.3 2003/12/15 19:24:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-2.6.10.ebuild,v 1.4 2003/12/15 20:14:23 spider Exp $
 
 IUSE="ssl socks5 nls"
 
@@ -12,7 +12,7 @@ SRC_URI="http://ftp.yars.free.net/pub/software/unix/net/ftp/client/lftp/${P}.tar
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ppc sparc alpha ~hppa ~mips ~arm ia64"
+KEYWORDS="x86 amd64 ppc sparc alpha hppa ~mips ~arm ia64"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	ssl? ( >=dev-libs/openssl-0.9.6 )
