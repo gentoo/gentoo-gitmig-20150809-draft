@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdegraphics
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.149 2005/01/23 12:50:13 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegraphics/ChangeLog,v 1.150 2005/01/23 20:14:33 corsair Exp $
+
+  23 Jan 2005; Markus Rothe <corsair@gentoo.org> kdegraphics-3.3.2-r2.ebuild:
+  Stable on ppc64; bug #78619
 
   23 Jan 2005; Guy Martin <gmsoft@gentoo.org> kdegraphics-3.3.2-r2.ebuild:
   Stable on hppa.

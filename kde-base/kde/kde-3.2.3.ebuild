@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/kde-3.2.3.ebuild,v 1.10 2004/08/12 19:36:56 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde/kde-3.2.3.ebuild,v 1.11 2005/01/23 20:16:49 corsair Exp $
 
 DESCRIPTION="KDE 3.2 - merge this to pull in all non-developer kde-base/* packages"
 HOMEPAGE="http://www.kde.org/"

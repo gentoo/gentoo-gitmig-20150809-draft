@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/kdeadmin-3.2.3.ebuild,v 1.7 2004/08/12 19:46:30 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeadmin/kdeadmin-3.2.3.ebuild,v 1.8 2005/01/23 20:08:57 corsair Exp $
 
 inherit kde-dist
 
