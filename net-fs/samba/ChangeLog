@@ -1,6 +1,13 @@
 # ChangeLog for net-fs/samba
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.36 2003/05/29 03:28:36 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/ChangeLog,v 1.37 2003/06/17 07:04:35 woodchip Exp $
+
+*samba-3.0.0_beta1-r1 (17 Jun 2003)
+
+  17 Jun 2003; Donny Davies <woodchip@gentoo.org> samba-3.0.0_beta1-r1.ebuild:
+  This is another SAMBA_3_0 CVS snapshot as pulled on 20030616, so it's newer
+  than the actual beta1 release.  USE flags `oav' and `python' are broken
+  right now, and nisplussam still doesnt build yet (commented out).
 
 *samba-3.0_alpha24-r1 (28 May 2003)
 
