@@ -1,0 +1,32 @@
+--- postfix-2.0.9/src/util/get_hostname.c.orig	2003-04-28 13:15:08.000000000 +0200
++++ postfix-2.0.9/src/util/get_hostname.c	2003-04-28 13:36:47.000000000 +0200
+@@ -33,6 +33,7 @@
+ #include <sys/param.h>
+ #include <string.h>
+ #include <unistd.h>
++#include <netdb.h>
+ 
+ #if (MAXHOSTNAMELEN < 256)
+ #undef MAXHOSTNAMELEN
+@@ -55,6 +56,7 @@
+ const char *get_hostname(void)
+ {
+     char    namebuf[MAXHOSTNAMELEN + 1];
++	struct hostent *hp;
+ 
+     /*
+      * The gethostname() call is not (or not yet) in ANSI or POSIX, but it is
+@@ -66,9 +68,11 @@
+ 	if (gethostname(namebuf, sizeof(namebuf)) < 0)
+ 	    msg_fatal("gethostname: %m");
+ 	namebuf[MAXHOSTNAMELEN] = 0;
+-	if (valid_hostname(namebuf, DO_GRIPE) == 0)
++	if (!(hp = gethostbyname(namebuf)))
++	    msg_fatal("gethostbyname: %m");
++	if (valid_hostname(hp->h_name, DO_GRIPE) == 0)
+ 	    msg_fatal("unable to use my own hostname");
+-	my_host_name = mystrdup(namebuf);
++	my_host_name = mystrdup(hp->h_name);
+     }
+     return (my_host_name);
+ }
