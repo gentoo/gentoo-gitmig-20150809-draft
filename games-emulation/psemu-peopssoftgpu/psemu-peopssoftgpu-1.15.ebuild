@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopssoftgpu/psemu-peopssoftgpu-1.15.ebuild,v 1.3 2004/02/14 00:28:44 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/psemu-peopssoftgpu/psemu-peopssoftgpu-1.15.ebuild,v 1.4 2004/06/03 19:45:56 agriffis Exp $
 
 inherit games eutils
 
@@ -37,7 +37,7 @@ src_compile() {
 
 	emake OPTFLAGS="${CFLAGS}" || die "x11 build failed"
 
-	if [ `use sdl` ] ; then
+	if use sdl ; then
 		sed -i 's:mk.x11:mk.fpse:g' Makefile
 		make clean || die "make clean failed"
 		emake OPTFLAGS="${CFLAGS}" || die "sdl build failed"
