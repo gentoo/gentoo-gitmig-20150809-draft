@@ -1,58 +1,55 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-0.2.ebuild,v 1.5 2002/08/01 11:59:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/ecls/ecls-0.2.ebuild,v 1.6 2002/08/05 09:02:40 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Embeddable Common Lisp 'Spain'"
 SRC_URI="mirror://sourceforge/ecls/${P}.tgz"
 
-PROVIDE="virtual/commonlisp"
+SLOT="0"
+LICENSE="BSD LGPL-2"
+KEYWORDS="x86"
 
-#src_unpack() {
-#
-#    unpack ${P}.tgz
-#
-#    mv ${WORKDIR}/ecls-0.2 ${S}
-#}
+PROVIDE="virtual/commonlisp"
 
 src_compile() {
 
-    local myconf
+	local myconf
 
-    if [ "`use X`" ]
-    then
-        myopts="${myconf} --with-x"
-    else
-        myopts="${myconf} --with-x=no"
-    fi
+	if [ "`use X`" ]
+	then
+		myconf="${myconf} --with-x"
+	else
+		myconf="${myconf} --with-x=no"
+	fi
 
-    echo ${CXXFLAGS} ${CFLAGS} ${LSPCFLAGS}
-    try ./configure --prefix=/usr $myopts
+	echo ${CXXFLAGS} ${CFLAGS} ${LSPCFLAGS}
+	./configure --prefix=/usr ${myconf}  || die
 
-    #
-    # FIXME: This really needs to be triple-verified
-    #
-    local mcpu=`echo ${CFLAGS} | sed "s/.*-mcpu=\([a-zA-Z0-9]*\).*/\1/g"`
-    local march=`echo ${CFLAGS} | sed "s/.*-march=\([a-zA-Z0-9]*\).*/\1/g"`
+	#
+	# FIXME: This really needs to be triple-verified
+	#
+	local mcpu=`echo ${CFLAGS} | sed "s/.*-mcpu=\([a-zA-Z0-9]*\).*/\1/g"`
+	local march=`echo ${CFLAGS} | sed "s/.*-march=\([a-zA-Z0-9]*\).*/\1/g"`
 
-    echo ${mcpu} -- ${march}
+	echo ${mcpu} -- ${march}
 
-    for i in build/{crs,c,gc,tk,.}/Makefile ; do 
-       cp $i $i.orig ;
-       cat $i.orig | sed -e "s:-mcpu= 1:-mcpu=${mcpu}:g" | sed -e "s:-march= 1:-march=${march}:g" > $i ;
-    done
+	for i in build/{crs,c,gc,tk,.}/Makefile ; do 
+	   cp $i $i.orig ;
+	   cat $i.orig | sed -e "s:-mcpu= 1:-mcpu=${mcpu}:g" | sed -e "s:-march= 1:-march=${march}:g" > $i ;
+	done
 
-    cp build/gabriel/Makefile build/gabriel/Makefile.orig
-    cat build/gabriel/Makefile.orig | sed "s/FILES =.*/FILES = ECLSc ECLSi/g" > build/gabriel/Makefile
+	cp build/gabriel/Makefile build/gabriel/Makefile.orig
+	cat build/gabriel/Makefile.orig | sed "s/FILES =.*/FILES = ECLSc ECLSi/g" > build/gabriel/Makefile
 
-    touch LGPL
+	touch LGPL
 
-    alias lisp='echo NOT INSTALLED!' 
-    echo ${CXXFLAGS} ${CFLAGS}
-    try make
+	alias lisp='echo NOT INSTALLED!' 
+	echo ${CXXFLAGS} ${CFLAGS}
+	make || die
 
 }
 
 src_install() {
-    try make install PREFIX=${D}/usr
+	make install PREFIX=${D}/usr || die
 }
