@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Tom von Schwerdtner <tvon@etria.org>
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.7.98.4.ebuild,v 1.1 2001/12/01 21:23:54 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.7.98.4.ebuild,v 1.2 2002/02/07 05:15:26 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A modular textUI IRC client with IPv6 support."
@@ -32,7 +32,7 @@ src_compile() {
 	then
 		myconf="${myconf} --enable-perl=yes"
 	fi
-	if [ "`user ipv6`" ]
+	if [ "`use ipv6`" ]
 	then
 		myconf="${myconf} --enable-ipv6"
 	fi
