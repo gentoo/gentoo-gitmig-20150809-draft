@@ -123,3 +123,4 @@ move app-sci/snac sci-calculators/snac
 move app-sci/tilp sci-calculators/tilp
 move app-sci/transcalc sci-calculators/transcalc
 move app-sci/units sci-calculators/units
+move app-sci/wcalc sci-calculators/wcalc
