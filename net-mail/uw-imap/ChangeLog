@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/uw-imap
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.51 2005/01/28 22:34:09 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/uw-imap/ChangeLog,v 1.52 2005/01/29 17:31:45 weeve Exp $
+
+  29 Jan 2005; Jason Wever <weeve@gentoo.org> uw-imap-2004c.ebuild:
+  Stable on sparc wrt security bug #79874.
 
   28 Jan 2005; Michael Hanselmann <hansmi@gentoo.org> uw-imap-2004c.ebuild:
   Stable on ppc.
