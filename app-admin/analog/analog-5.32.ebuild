@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-5.32.ebuild,v 1.9 2004/04/19 14:46:12 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/analog/analog-5.32.ebuild,v 1.10 2004/05/16 22:00:49 kloeri Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ IUSE=""
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 ppc sparc amd64"
+KEYWORDS="x86 ppc sparc amd64 ~alpha"
 
 RDEPEND=">=dev-libs/libpcre-3.4
 	>=media-libs/libgd-1.8.4-r2
