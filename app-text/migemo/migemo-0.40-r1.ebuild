@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/migemo/migemo-0.40-r1.ebuild,v 1.1 2003/09/30 18:05:24 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/migemo/migemo-0.40-r1.ebuild,v 1.2 2003/10/13 15:03:12 usata Exp $
 
 inherit elisp
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://migemo.namazu.org/"
 SRC_URI="http://migemo.namazu.org/stable/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~alpha ~sparc ~ppc"
+KEYWORDS="x86 alpha sparc ppc"
 SLOT="0"
 S=${WORKDIR}/${P}
 

@@ -1,8 +1,11 @@
 # ChangeLog for app-text/migemo
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/migemo/ChangeLog,v 1.1 2003/09/30 18:05:24 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/migemo/ChangeLog,v 1.2 2003/10/13 15:03:12 usata Exp $
 
 *migemo-0.40-r1 (01 Oct 2003)
+
+  14 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> migemo-0.40-r1.ebuild:
+  Considered as stable for x86, alpha, sparc and ppc
 
   01 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> metadata.xml,
   migemo-0.40-r1.ebuild, migemo-0.40.ebuild, files/50migemo-gentoo.el:
