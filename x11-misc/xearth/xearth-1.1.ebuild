@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xearth/xearth-1.1.ebuild,v 1.1 2003/11/18 04:18:50 port001 Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xearth/xearth-1.1.ebuild,v 1.2 2004/05/23 10:35:58 kugelfang Exp $
 
 HOMEPAGE="http://www.cs.colorado.edu/~tuna/xearth/"
 DESCRIPTION="Xearth sets the X root window to an image of the Earth"
@@ -9,7 +9,7 @@ SRC_URI="ftp://cag.lcs.mit.edu/pub/tuna/${P}.tar.gz
 
 SLOT="0"
 LICENSE="xearth"
-KEYWORDS="x86 sparc ppc"
+KEYWORDS="x86 sparc ppc ~amd64"
 
 DEPEND="virtual/x11"
 
