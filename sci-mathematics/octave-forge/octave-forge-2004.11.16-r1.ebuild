@@ -1,43 +1,58 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave-forge/octave-forge-2003.02.22.ebuild,v 1.2 2005/01/17 11:36:23 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave-forge/octave-forge-2004.11.16-r1.ebuild,v 1.1 2005/03/09 08:32:44 phosphan Exp $
+
+inherit eutils
 
 DESCRIPTION="A collection of custom scripts, functions and extensions for GNU Octave"
 HOMEPAGE="http://octave.sourceforge.net/"
 SRC_URI="mirror://sourceforge/octave/${P}.tar.gz"
 
 LICENSE="as-is"
-# I have only tested this library on x86
-KEYWORDS="x86"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 SLOT="0"
 IUSE="ginac qhull"
 
-DEPEND=">=sci-mathematics/octave-2.1.44
+DEPEND=">=sci-mathematics/octave-2.1.62
 		>=sys-apps/sed-4
 		sys-libs/libtermcap-compat
-		ginac? ( sci-mathematics/ginac )
-		virtual/tetex
+		!amd64? ( ginac? ( sci-mathematics/ginac ) )
 		qhull? ( >=media-libs/qhull-3.1-r1 )"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${PV}.patch
+
+	# make it compile when X isn't installed. The source file there really
+	# doesn't need X at all.
+	# 02 Feb 2005, Robin H. Johnson <robbat2@gentoo.org>
+	sed -e '/#include <X11/d' -i ${S}/main/audio/aurecord.cc
+}
 
 src_compile() {
 	econf || die "econf failed"
 
-	# The MPATH, OPATH, and XPATH variables need to be changed, or they will
+	# this must be done before the *PATH variables are changed
+	cd extra/graceplot && make grace_octave_path.m
+	cd ${S}
+
+	# The *PATH variables need to be changed, or they will
 	# cause Portage access violations. They cannot be easily set just using
 	# arguments passed to ./configure (at least, they can not easily be set
 	# correctly)
 	echo -en "Modifying paths..."
-	sed -i "s|^\(MPATH = \)|\1${D}|" Makeconf || die "failed to modify MPATH"
-	sed -i "s|^\(OPATH = \)|\1${D}|" Makeconf || die "failed to modify OPATH"
-	sed -i "s|^\(XPATH = \)|\1${D}|" Makeconf || die "failed to modify XPATH"
+	for path in M O X ALTM ALTO; do
+		sed -i "s|^\(${path}PATH = \)|\1${D}|" Makeconf || \
+			die "failed to modify ${path}PATH"
+	done
 	echo -e "done.\n"
 
 	emake || die "emake failed"
 }
 
 src_install() {
-	einstall || die "einstall failed"
+	make DESTDIR="${D}" install || die "install failed"
 
 	# strip the fudged install paths
 	sed -i "s|${D}||g" ${D}/usr/bin/mex || die "sed failed"
