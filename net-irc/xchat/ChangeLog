@@ -1,6 +1,14 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.105 2004/06/24 23:10:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.106 2004/07/02 22:17:29 swegener Exp $
+
+*xchat-2.0.10 (03 Jul 2004)
+
+  03 Jul 2004; Sven Wegener <swegener@gentoo.org>
+  -files/xchat-2.0.6-fix_dccsend.patch, -xchat-2.0.1-r1.ebuild,
+  -xchat-2.0.1.ebuild, +xchat-2.0.10.ebuild, -xchat-2.0.6-r1.ebuild,
+  -xchat-2.0.6-r2.ebuild, -xchat-2.0.7.ebuild, -xchat-2.0.8.ebuild:
+  Version bump. Closes bug #55861. Removed older ebuilds.
 
   23 Jun 2004; Sven Wegener <swegener@gentoo.org> xchat-2.0.1-r1.ebuild,
   xchat-2.0.1.ebuild, xchat-2.0.6-r1.ebuild, xchat-2.0.6-r2.ebuild,
