@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c7f9d402933623caa5c7e02aeeaa992c bobotpp-2.1.4.ebuild 1083
+MD5 bdbed6c65c49850d4b37df19f30e5c2c ChangeLog 448
+MD5 bc2e30c300e40dbd9dec502ff3994bc9 bobotpp-2.1.4.ebuild 1085
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 deb16d0ba936aa2feb765cfd83b8f378 ChangeLog 366
 MD5 af1adc0f464cb81a7384e051a207ce7e files/digest-bobotpp-2.1.4 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFA9DS104iMKjbTpdgRAt/sAKCIJdAOjk0fPoXQA7htAOeIudUqFACfb2mV
-czCXrhvXxnsBU3cFA7hSIkc=
-=J33e
------END PGP SIGNATURE-----
