@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/xmule
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/ChangeLog,v 1.30 2004/05/14 17:26:32 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/xmule/ChangeLog,v 1.31 2004/05/15 06:29:27 squinky86 Exp $
+
+  15 May 2004; Jon Hood <squinky86@gentoo.org> xmule-1.8.2.ebuild:
+  xmule 1.8.2 fails to compile for just about everyone. Blocking KEYWORDS until
+  #50895 is fixed.
 
   14 May 2004; Jon Hood <squinky86@gentoo.org> xmule-1.6.0a-r1.ebuild,
   xmule-1.6.0a.ebuild, xmule-1.6.1.ebuild, xmule-1.7.4c.ebuild,
