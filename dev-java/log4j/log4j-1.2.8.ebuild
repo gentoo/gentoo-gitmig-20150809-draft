@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/log4j-1.2.8.ebuild,v 1.5 2004/01/19 04:50:57 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/log4j-1.2.8.ebuild,v 1.6 2004/01/19 04:56:24 strider Exp $
 
 S="${WORKDIR}/jakarta-${P}"
 
@@ -9,7 +9,7 @@ SRC_URI="http://jakarta.apache.org/log4j/jakarta-${P}.tar.gz"
 HOMEPAGE="http://jakarta.apache.org"
 LICENSE="Apache-1.1"
 SLOT="1"
-KEYWORDS="x86 sparc ~ppc amd64"
+KEYWORDS="x86 sparc ppc amd64"
 
 RDEPEND=">=virtual/jdk-1.3"
 DEPEND="${RDEPEND}"
