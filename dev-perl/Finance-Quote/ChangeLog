@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/Finance-Quote
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Finance-Quote/ChangeLog,v 1.1 2002/10/30 22:23:43 seemant Exp $
+
+*Finance-Quote-1.07 (30 Oct 2002)
+
+  30 Oct 2002; Seemant Kulleen <seemant@gentoo.org>
+  Finance-Quote-1.07.ebuild ChangeLog files/digest-Finance-Quote-1.0.7 :
+ 
+  New package to get stock market quotes from the web. Submitted by:
+  gustavo@felisberto.net (Gustavo Felisberto) in bug #8890
