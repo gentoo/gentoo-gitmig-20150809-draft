@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.0.1.ebuild,v 1.1 2002/09/15 16:00:42 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.0.1.ebuild,v 1.2 2002/09/15 18:01:50 azarah Exp $
 
 inherit virtualx
 
@@ -182,7 +182,7 @@ pkg_postinst() {
 	einfo
 	einfo "   $ ooffice"
 	einfo
-	einfo " Also, for individual components, you can run use any of:"
+	einfo " Also, for individual components, you can use any of:"
 	einfo
 	einfo "   oocalc, oodraw, ooimpress, oomath or oowriter"
 	einfo
