@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvoption/nvoption-0_alpha-r1.ebuild,v 1.4 2004/04/26 04:17:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvoption/nvoption-0_alpha-r1.ebuild,v 1.5 2004/06/25 00:47:26 agriffis Exp $
 
 MY_P="${P/-0/}"
 DESCRIPTION="grapich front-end to change NVIDIA options in X mode"

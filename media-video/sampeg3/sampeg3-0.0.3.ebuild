@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/sampeg3/sampeg3-0.0.3.ebuild,v 1.3 2004/06/14 00:53:28 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/sampeg3/sampeg3-0.0.3.ebuild,v 1.4 2004/06/25 00:49:30 agriffis Exp $
 
 DESCRIPTION="MPEG video encoder targeted for optimum picture quality"
 HOMEPAGE="http://rachmaninoff.informatik.uni-mannheim.de/sampeg/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.32.20030219.ebuild,v 1.7 2004/05/04 03:58:51 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.32.20030219.ebuild,v 1.8 2004/06/25 00:36:45 agriffis Exp $
 
 MY_P="${P/.200/-200}"
 MY_S="${PN}0.7-0.7.32"

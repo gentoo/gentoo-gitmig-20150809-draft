@@ -1,6 +1,6 @@
 # ChangeLog for media-video/ks3switch
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ks3switch/ChangeLog,v 1.4 2004/05/23 19:01:05 seemant Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/ks3switch/ChangeLog,v 1.5 2004/06/25 00:43:14 agriffis Exp $
 
   23 May 2004; Seemant Kulleen <seemant@gentoo.org> ks3switch-0.1.ebuild:
   URI and HOMEPAGE fix, thanks to: Francois Bochatay <francois@bochatay.net> in

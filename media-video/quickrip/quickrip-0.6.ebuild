@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/quickrip/quickrip-0.6.ebuild,v 1.7 2004/05/11 17:31:20 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/quickrip/quickrip-0.6.ebuild,v 1.8 2004/06/25 00:48:48 agriffis Exp $
 
 inherit eutils
 

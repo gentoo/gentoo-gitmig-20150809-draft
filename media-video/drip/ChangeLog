@@ -1,6 +1,6 @@
 # ChangeLog for media-video/drip
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/drip/ChangeLog,v 1.15 2004/03/30 21:36:03 mr_bones_ Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/drip/ChangeLog,v 1.16 2004/06/25 00:38:48 agriffis Exp $
 
   30 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> drip-0.8.1-r5.ebuild,
   drip-0.9.0_alpha3.ebuild, drip-0.9.0_rc1.ebuild:

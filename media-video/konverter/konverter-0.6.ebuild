@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/konverter/konverter-0.6.ebuild,v 1.2 2004/04/11 23:35:48 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/konverter/konverter-0.6.ebuild,v 1.3 2004/06/25 00:42:54 agriffis Exp $
 
 inherit kde
 need-kde 3

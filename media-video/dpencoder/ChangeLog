@@ -1,6 +1,6 @@
 # ChangeLog for media-video/dpencoder
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dpencoder/ChangeLog,v 1.2 2004/04/14 21:25:10 weeve Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/dpencoder/ChangeLog,v 1.3 2004/06/25 00:38:38 agriffis Exp $
 
   14 Apr 2004; Jason Wever <weeve@gentoo.org> dpencoder-0.6c.ebuild:
   Added ~sparc keyword.

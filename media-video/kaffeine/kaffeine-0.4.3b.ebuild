@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.4.3b.ebuild,v 1.2 2004/06/15 02:30:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kaffeine/kaffeine-0.4.3b.ebuild,v 1.3 2004/06/25 00:41:53 agriffis Exp $
 
 inherit kde
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gv4l/gv4l-2.2.3.ebuild,v 1.2 2004/04/26 07:24:11 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/gv4l/gv4l-2.2.3.ebuild,v 1.3 2004/06/25 00:41:23 agriffis Exp $
 
 DESCRIPTION="Gv4l is a GUI frontend for the V4L functions of transcode"
 HOMEPAGE="http://gv4l.sourceforge.net/"

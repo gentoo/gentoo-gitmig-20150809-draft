@@ -1,6 +1,6 @@
 # ChangeLog for media-video/vcdimager
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/ChangeLog,v 1.15 2004/05/12 09:45:28 phosphan Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/vcdimager/ChangeLog,v 1.16 2004/06/25 00:51:56 agriffis Exp $
 
   12 May 2004; Patrick Kursawe <phosphan@gentoo.org> vcdimager-0.7.19.ebuild:
   Does not work with libcdio-0.66, fixing dependencies

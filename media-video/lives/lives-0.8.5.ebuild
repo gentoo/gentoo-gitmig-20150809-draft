@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lives/lives-0.8.5.ebuild,v 1.1 2004/06/03 21:13:45 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lives/lives-0.8.5.ebuild,v 1.2 2004/06/25 00:43:44 agriffis Exp $
 
 DESCRIPTION="Linux Video Editing System"
 

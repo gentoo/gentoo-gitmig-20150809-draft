@@ -1,6 +1,6 @@
 # ChangeLog for media-video/nvidia-kernel
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.76 2004/06/15 21:26:28 azarah Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.77 2004/06/25 00:47:15 agriffis Exp $
 
 *nvidia-kernel-1.0.5336-r4 (15 Jun 2004)
 

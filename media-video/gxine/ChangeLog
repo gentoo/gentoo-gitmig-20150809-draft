@@ -1,6 +1,6 @@
 # ChangeLog for media-video/gxine
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.13 2003/12/29 16:06:34 bazik Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/gxine/ChangeLog,v 1.14 2004/06/25 00:41:33 agriffis Exp $
 
   29 Dec 2003; Sven Blumenstein <bazik@gentoo.org> gxine-0.3.3.ebuild:
   Stable on sparc.

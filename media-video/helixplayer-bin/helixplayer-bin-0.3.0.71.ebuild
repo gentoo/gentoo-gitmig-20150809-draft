@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer-bin/helixplayer-bin-0.3.0.71.ebuild,v 1.3 2004/04/27 18:36:59 kanaka Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/helixplayer-bin/helixplayer-bin-0.3.0.71.ebuild,v 1.4 2004/06/25 00:41:43 agriffis Exp $
 
 inherit nsplugins
 

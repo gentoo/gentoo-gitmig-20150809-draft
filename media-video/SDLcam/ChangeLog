@@ -1,6 +1,6 @@
 # ChangeLog for media-video/SDLcam
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/SDLcam/ChangeLog,v 1.4 2004/01/30 09:40:13 vapier Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/SDLcam/ChangeLog,v 1.5 2004/06/25 00:49:40 agriffis Exp $
 
 *SDLcam-0.7.3-r1 (30 Jan 2004)
 

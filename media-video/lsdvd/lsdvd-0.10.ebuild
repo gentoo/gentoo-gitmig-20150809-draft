@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lsdvd/lsdvd-0.10.ebuild,v 1.4 2004/04/14 18:33:09 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lsdvd/lsdvd-0.10.ebuild,v 1.5 2004/06/25 00:43:54 agriffis Exp $
 
 DESCRIPTION="Utility for getting info out of DVDs"
 HOMEPAGE="http://acidrip.thirtythreeandathird.net"
