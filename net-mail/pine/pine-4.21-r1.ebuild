@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.21-r1.ebuild,v 1.2 2000/08/16 04:38:16 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.21-r1.ebuild,v 1.3 2000/10/05 01:32:51 achim Exp $
 
 P=pine-4.21
 A=pine4.21.tar.gz
@@ -36,7 +36,7 @@ src_install() {
 
   insinto /etc
   doins doc/mime.types
-  newins doc/mailcap.unx mailcap
+  donewins doc/mailcap.unx mailcap
 
   dodoc CPYRIGHT README doc/brochure.txt doc/tech-notes.txt
   docinto imap

@@ -1,9 +1,9 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_beta0202.ebuild,v 1.2 2000/09/15 20:09:12 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_beta0206.ebuild,v 1.1 2000/10/05 01:32:52 achim Exp $
 
-P=dhcp-3.0b2pl2
+P=dhcp-3.0b2pl6
 A="${P}.tar.gz"
 S=${WORKDIR}/${P}
 DESCRIPTION="ISC Dynamic Host Configuration Protocol"
@@ -50,7 +50,7 @@ src_install () {
     cd ${S}/client
     insinto /etc/dhcp
     doins dhclient.conf
-    newins scripts/linux dhclient-script
+    donewins scripts/linux dhclient-script
 
     cd ${S}/server
     doins dhcpd.conf

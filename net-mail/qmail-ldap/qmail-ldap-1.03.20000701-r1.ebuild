@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-ldap/qmail-ldap-1.03.20000701-r1.ebuild,v 1.2 2000/09/15 20:09:11 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-ldap/qmail-ldap-1.03.20000701-r1.ebuild,v 1.3 2000/10/05 01:32:51 achim Exp $
 
 P=qmail-ldap-1.03-20000701
 A="qmail-1.03.tar.gz qmail-ldap-1.03-20000701.patch.gz"
@@ -119,7 +119,7 @@ src_install() {
 	qmail-qread qmail-qstat qmail-tcpto qmail-tcpok qmail-pop3d \
 	qmail-popup qmail-qmqpc qmail-qmqpd qmail-qmtpd qmail-smtpd \
 	sendmail tcp-env qreceipt qsmhook qbiff forward preline \
-	condredirect bouncesaying except maildirtry make maildir2mbox \
+	condredirect bouncesaying except maildirmake maildir2mbox \
 	maildirwatch qail elq pinq config-fast qmail-reply qmail-quotawarn
 	do
 	  doins $i $i
@@ -135,7 +135,7 @@ src_install() {
 	  doman $i.5
 	done
 
-	for i in forward condredirect bouncesaying except maildirtry make \
+	for i in forward condredirect bouncesaying except maildirmake \
 	maildir2mbox maildirwatch mailsubj qreceipt qbiff preline tcp-env
 	do
 	  doman $i.1

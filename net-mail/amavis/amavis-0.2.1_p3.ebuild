@@ -1,17 +1,28 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis/amavis-0.2.1_p2.ebuild,v 1.2 2000/09/15 20:09:10 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/amavis/amavis-0.2.1_p3.ebuild,v 1.1 2000/10/05 01:32:51 achim Exp $
 
-P=amavis-0.2.1-p2
-A=amavis-0.2.1-pre2.tar.gz
-S=${WORKDIR}/amavis-0.2.1-pre2
+P=amavis-0.2.1-p3
+A="amavis-0.2.1-pre3.tar.gz configure.in.patch scanmails.in.patch"
+S=${WORKDIR}/amavis-0.2.1-pre3
 DESCRIPTION="Virus Scanner"
-SRC_URI="http://linuxberg.concepts.nl/files/console/system/"${A}
+SRC_URI="http://linuxberg.concepts.nl/files/console/system/${A}
+	 http://www.amavis.org/configure.in.patch
+	 http://www.amavis.org/scanmails.in.patch"
+
 HOMEPAGE="http://www.amavis.org"
 
+src_unpack() {
+  unpack amavis-0.2.1-pre3.tar.gz
+  cd ${S}
+  patch -p0 < ${DISTDIR}/configure.in.patch
+  cd ${S}/src/scanmails
+  patch -p0 < ${DISTDIR}/scanmails.in.patch
+}
 src_compile() {                           
   cd ${S}
+  ./reconf
   try ./configure --host=${CHOST} --prefix=/usr \
 	--with-logdir=/var/log/scanmail \
 	--with-virusdir=/var/tmp/virusmails \
