@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.11-r14.ebuild,v 1.1 2004/11/27 18:57:28 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.11-r15.ebuild,v 1.1 2004/12/24 19:42:58 plasmaroo Exp $
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -55,6 +55,9 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}.smbfs.patch || die "Failed to apply the SMBFS patch!"
 	epatch ${FILESDIR}/${PN}.AF_UNIX.patch || die "Failed to apply the AF_UNIX patch!"
 	epatch ${FILESDIR}/${PN}.binfmt_a.out.patch || die "Failed to apply the binfmt_a.out patch!"
+	epatch ${FILESDIR}/${PN}.vma.patch || die "Failed to apply the VMA patch!"
+	epatch ${FILESDIR}/${PN}.CAN-2004-1016.patch || die "Failed to apply the CAN-2004-1016 patch!"
+	epatch ${FILESDIR}/${PN}.CAN-2004-1056.patch || die "Failed to apply the CAN-2004-1056 patch!"
 
 	kernel_universal_unpack
 }
