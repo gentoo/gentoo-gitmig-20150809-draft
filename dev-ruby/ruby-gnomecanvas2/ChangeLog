@@ -1,0 +1,10 @@
+# ChangeLog for dev-ruby/ruby-gnomecanvas2
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gnomecanvas2/ChangeLog,v 1.1 2003/08/06 13:37:07 agriffis Exp $
+
+*ruby-gnomecanvas2-0.5.0 (06 Aug 2003)
+
+  06 Aug 2003; Aron Griffis <agriffis@gentoo.org> metadata.xml,
+  ruby-gnomecanvas2-0.5.0.ebuild:
+  New ebuild based on ruby-gnome2.eclass to satisfy bug 23067
+
