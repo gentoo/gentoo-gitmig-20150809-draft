@@ -1,6 +1,14 @@
 # ChangeLog for <CATEGORY>/<PACKAGE_NAME>
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/ChangeLog,v 1.1 2003/06/07 15:12:35 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vconfig/ChangeLog,v 1.2 2003/06/11 00:11:25 solar Exp $
+
+*vconfig-1.7-r1 (10 Jun 2003)
+
+  10 Jun 2003; Ned Ludd solar@gentoo.org Manifest, vconfig-1.7-r1.ebuild:
+  Update to get vconfig to install into /sbin vs /usr/sbin (planning for support
+  of init scripts) Added vlan test scripts to docs with path fixes in the .pl
+  scripts I suggest that those .pl scripts not be used as it looks like they
+  contain a /tmp race condition
 
 *vconfig-1.7 (07 Jun 2003)
 
