@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/yosucker
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/yosucker/ChangeLog,v 1.8 2004/05/01 19:41:56 abhishek Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/yosucker/ChangeLog,v 1.9 2004/05/02 18:12:59 dholm Exp $
+
+  02 May 2004; David Holm <dholm@gentoo.org> yosucker-53.ebuild:
+  Added to ~ppc.
 
 *yosucker-53 (01 May 2004)
 
