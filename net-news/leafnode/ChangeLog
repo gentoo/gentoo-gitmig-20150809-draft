@@ -1,9 +1,13 @@
 # ChangeLog for net-news/leafnode
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/ChangeLog,v 1.7 2002/12/29 23:13:08 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/ChangeLog,v 1.8 2002/12/29 23:52:18 lordvan Exp $
 
+*leafnode-1.9.30-r1 (30 Dec 2002)
+  30 Dec 2002; Thomas Raschbacher <lordvan@gentoo.org> leafnode-1.9.30-r1 ebuild:
+  fixed dep for xinetd(reported in IRC by SirDodger in #gentoo.de)
+  
 *leafnode-1.9.30 (30 Dec 2002)
-  30 Dec 2002; Thomas Raschbacher <lordvan@gentoo.org> leafnode-1.9.29 ebuild:
+  30 Dec 2002; Thomas Raschbacher <lordvan@gentoo.org> leafnode-1.9.30 ebuild:
   Version bump and removed patch again :)
 	
 *leafnode-1.9.29 (06 Nov 2002)
