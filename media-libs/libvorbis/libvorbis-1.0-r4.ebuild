@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.0-r4.ebuild,v 1.9 2003/11/20 17:13:50 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/libvorbis-1.0-r4.ebuild,v 1.10 2003/12/13 00:12:24 gmsoft Exp $
 
 inherit libtool eutils flag-o-matic
 
@@ -14,7 +14,7 @@ DEPEND=">=media-libs/libogg-1.0"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86 amd64 ~mips"
+KEYWORDS="x86 amd64 ~mips hppa"
 
 src_unpack() {
 	unpack ${A}
