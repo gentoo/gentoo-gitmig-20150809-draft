@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/entrance/entrance-0.9.0.20031025.ebuild,v 1.1 2003/10/25 16:21:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/entrance/entrance-0.9.0.20031025.ebuild,v 1.2 2003/10/27 13:06:44 vapier Exp $
 
 inherit enlightenment eutils
 
@@ -14,9 +14,10 @@ DEPEND="${DEPEND}
 	virtual/x11
 	sys-libs/pam
 	>=dev-db/edb-1.0.4.20031013
-	>=x11-libs/evas-1.0.0.20031013_pre11
-	>=x11-libs/ecore-0.0.2.20031013_pre4
-	>=media-libs/edje-0.0.1.20031013"
+	>=x11-libs/evas-1.0.0.20031025_pre11
+	>=x11-libs/ecore-0.0.2.20031018_pre4
+	>=media-libs/edje-0.0.1.20031020
+	>=x11-libs/esmart-0.0.2.20031025"
 
 src_install() {
 	enlightenment_src_install
