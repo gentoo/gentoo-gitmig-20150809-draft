@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/bogofilter/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="~ppc x86 ~sparc"
+KEYWORDS="~ppc ~x86 ~sparc"
 IUSE=""
 
 DEPEND="virtual/glibc
@@ -26,13 +26,13 @@ src_install() {
 	make DESTDIR=${D} install || die
 
 	exeinto /usr/lib/${PN}/tuning
-	doexe tuning/bogolex.sh tuning/distrib tuning/mkdb tuning/sizes tuning/tuning.R tuning/tuning.sh
 	insinto /usr/lib/${PN}/tuning
-	doins tuning/README tuning/setR
+	doexe tuning/bogolex.sh tuning/bogol tuning/bogotune
+	doins tuning/README.bogotune tuning/bogol.1 tuning/bogotune.1
 	
 	exeinto /usr/lib/${PN}/contrib
 	doexe contrib/bogofilter-qfe contrib/bogogrep contrib/mime.get.rfc822 contrib/parmtest.sh
-	doexe contrib/printmaildir.pl contrib/randomtrain contrib/scramble
+	doexe contrib/printmaildir.pl contrib/randomtrain contrib/scramble contrib/bogofilter-milter.pl
 	insinto /usr/lib/${PN}/contrib
 	doins contrib/README.randomtrain contrib/bogo.R contrib/trainbogo.sh
 	
