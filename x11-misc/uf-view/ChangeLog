@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/uf-view
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/uf-view/ChangeLog,v 1.4 2004/04/11 17:22:26 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/uf-view/ChangeLog,v 1.5 2004/06/01 13:28:25 tseng Exp $
+
+  01 Jun 2004; Brandon Hale <tseng@gentoo.org> uf-view-2.2.ebuild:
+  Add IUSE=
 
   11 Apr 2004; Markus Nigbur <pyrania@gentoo.org> uf-view-2.2.ebuild:
   Marked stable.

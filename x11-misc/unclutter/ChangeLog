@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/unclutter
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/unclutter/ChangeLog,v 1.4 2004/04/05 13:58:57 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/unclutter/ChangeLog,v 1.5 2004/06/01 13:29:24 tseng Exp $
+
+  01 Jun 2004; Brandon Hale <tseng@gentoo.org> unclutter-8.ebuild:
+  Add IUSE=
 
   05 Apr 2004; Chris Aniszczyk <zx@gentoo.org> unclutter-8.ebuild:
   Stable on hppa
