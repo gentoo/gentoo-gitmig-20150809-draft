@@ -13,7 +13,7 @@ HOMEPAGE="http://www.balabit.hu/en/products/syslog-ng/"
 src_compile() {
 
   try ./configure --host=${CHOST} --prefix=/usr --enable-shared --enable-static --disable-libtool-lock
-  try make CFLAGS=\"${CFLAGS}\" ${MAKEOPTS} prefix=${D}/usr all
+  try make CFLAGS="${CFLAGS}" ${MAKEOPTS} prefix=${D}/usr all
 
 }
 

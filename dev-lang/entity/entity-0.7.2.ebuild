@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/entity/entity-0.7.2.ebuild,v 1.7 2001/07/07 17:29:13 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/entity/entity-0.7.2.ebuild,v 1.8 2001/08/11 04:45:10 drobbins Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -66,14 +66,12 @@ src_compile() {
     then
 	myconf="$myconf --enable-gtkgl"
     fi
-    try DEBIAN_ENTITY_MAGIC=\"voodoo\" CFLAGS=\"$CFLAGS -I/usr/X11R6/include\" ./configure --prefix=/usr --mandir=/usr/share/man --host=${CHOST} \
+    try DEBIAN_ENTITY_MAGIC="voodoo" CFLAGS="$CFLAGS -I/usr/X11R6/include" ./configure --prefix=/usr --mandir=/usr/share/man --host=${CHOST} \
 	--enable-exec-class=yes \
 	--enable-gtk=module \
 	--enable-c=module $myconf \
 	--enable-javascript=yes --with-included-njs --enable-csinc
-    try make LDFLAGS=\"-L/usr/lib/python2.0/config/ -lpython2.0 `python-config --libs`\"
-
-
+    try make LDFLAGS="-L/usr/lib/python2.0/config/ -lpython2.0 `python-config --libs`"
 }
 
 src_install () {
