@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.2 2002/02/21 03:21:26 chouser Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.3 2002/02/24 17:35:27 azarah Exp $
+
+*shadow-20001016-r8 (25 Feb 2002)
+
+  25 Feb 2002; M.Schlemmer <azarah@gentoo.org> shadow-20001016-r8.ebuild
+
+  Added a 'rm -rf ${D}/usr/share/man/*' to Chris's man fix to clean the
+  Polish pages.  Added the line for installing /etc/pam.d/chage again, which
+  should close bug #837.
 
 *shadow-20001016-r7 (20 Feb 2002)
 
