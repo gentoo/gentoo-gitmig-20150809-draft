@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/xpp/xpp-1.1-r2.ebuild,v 1.2 2003/07/29 13:37:23 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/xpp/xpp-1.1-r2.ebuild,v 1.3 2004/01/22 14:04:44 lanius Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ src_unpack() {
 
 src_compile() {
 	export CXX=g++
-	export LDFLAGS="-L/usr/lib/fltk-1.1"
+	export LDFLAGS="-L/usr/lib/fltk-1.1 -lfltk"
 	export CPPFLAGS="-I/usr/include/fltk-1.1"
 
 	econf || die "configure failed"
