@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/umodpack/umodpack-0.5_beta16.ebuild,v 1.5 2004/06/24 23:32:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/umodpack/umodpack-0.5_beta16.ebuild,v 1.6 2004/09/27 09:48:58 eradicator Exp $
 
 inherit perl-module
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/umodpack/${MY_P}-nogui.tar.gz"
 
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~amd64"
 IUSE="X tcltk"
 
 DEPEND="dev-lang/perl

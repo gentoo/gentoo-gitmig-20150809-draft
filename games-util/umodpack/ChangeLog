@@ -1,6 +1,10 @@
 # ChangeLog for games-util/umodpack
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-util/umodpack/ChangeLog,v 1.4 2004/06/24 23:32:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-util/umodpack/ChangeLog,v 1.5 2004/09/27 09:48:58 eradicator Exp $
+
+  27 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  umodpack-0.5_beta16.ebuild:
+  Added to ~amd64.
 
   12 Apr 2004; Chris Gianelloni <wolf31o2@gentoo.org>
   umodpack-0.5_beta16.ebuild:
