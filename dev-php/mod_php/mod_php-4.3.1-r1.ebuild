@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.1-r1.ebuild,v 1.7 2003/03/03 13:28:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.3.1-r1.ebuild,v 1.8 2003/03/03 17:32:27 sethbc Exp $
 
 inherit flag-o-matic 
 
@@ -24,7 +24,7 @@ replace-flags "-march=k6*" "-march=i586"
 	#>=dev-libs/gmp-3.1.1
 
 DEPEND=">=net-www/apache-1.3.26-r2
-	>=app-crypt/mhash-0.8 )
+	>=app-crypt/mhash-0.8 
 	apache2? ( >=net-www/apache-2.0.43-r1 )
 	truetype? ( ~media-libs/freetype-1.3.1 >=media-libs/t1lib-1.3.1 )
 	jpeg? ( >=media-libs/jpeg-6b )
