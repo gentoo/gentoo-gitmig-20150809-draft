@@ -1,4 +1,4 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # $Header:
 
@@ -9,6 +9,8 @@ HOMEPAGE="http://www.bugzilla.org"
 LICENSE="MPL-1.1 NPL-1.1"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc"
+
+IUSE="apache2"
 
 # See http://www.bugzilla.org/docs216/html/stepbystep.html to verify dependancies
 DEPEND=">=dev-db/mysql-3.22.5
@@ -35,7 +37,12 @@ src_compile() {
 }
 
 src_install () {
-	dodir /usr/bonsaitools/bin /etc/apache/conf
+	if use apache2 ; then
+		dodir /usr/bonsaitools/bin /etc/apache2/conf
+	else
+		dodir /usr/bonsaitools/bin /etc/apache/conf
+	fi
+
 	cd ${S}
 
 	# Bugzilla originally needs perl to be installed in /usr/bonsaitools/bin
@@ -50,7 +57,12 @@ src_install () {
 # htdocs is for common apache docs, while bugzilla is a web app
 # So, it's better to keep it outside
 
-	cp ${FILESDIR}/bugzilla.conf ${D}/etc/apache/conf || die
+	if use apache2 ; then
+		cp ${FILESDIR}/bugzilla.conf ${D}/etc/apache/conf || die
+	else
+		cp ${FILESDIR}/bugzilla.conf ${D}/etc/apache/conf || die
+	fi
+
 	cp ${FILESDIR}/bugzilla.cron.* ${D}/var/www/bugzilla || die
 	cp ${FILESDIR}/bz.cfg.templ ${D}/var/www/bugzilla || die
 	cp ${FILESDIR}/firstcheck.sh ${D}/var/www/bugzilla || die
