@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/fwlogwatch
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fwlogwatch/ChangeLog,v 1.4 2003/06/23 22:40:04 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fwlogwatch/ChangeLog,v 1.5 2003/07/06 20:07:55 blkdeath Exp $
+
+  06 Jul 2003; Stewart Honsberger <blkdeath@gentoo.org>
+  fwlogwatch-0.9.3.ebuild:
+  Marked stable on x86
 
 *fwlogwatch-0.9.3 (23 Jun 2003)
 

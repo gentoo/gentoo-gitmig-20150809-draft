@@ -1,11 +1,11 @@
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fwlogwatch/fwlogwatch-0.9.3.ebuild,v 1.1 2003/06/23 22:39:17 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/fwlogwatch/fwlogwatch-0.9.3.ebuild,v 1.2 2003/07/06 20:07:55 blkdeath Exp $
 
 DESCRIPTION="A packet filter and firewall log analyzer"
 HOMEPAGE="http://cert.uni-stuttgart.de/projects/fwlogwatch/"
 SRC_URI="http://www.kyb.uni-stuttgart.de/boris/sw/${P}.tar.gz"
 LICENSE="GPL-1"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 ~sparc"
 IUSE=""
 DEPEND=""
 RDEPEND=""
