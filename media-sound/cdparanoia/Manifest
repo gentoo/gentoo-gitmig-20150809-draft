@@ -1,5 +1,5 @@
-MD5 701366c991e497bd21ba89f70f7fd775 ChangeLog 1951
-MD5 6fe0e2032fd29726e61b276f69e4e19d cdparanoia-3.9.8-r1.ebuild 1225
+MD5 3401e7be38d9b4a75ed2d7aaaa9c3a97 ChangeLog 2048
+MD5 768d28beceed7b9859722c46b83b9f39 cdparanoia-3.9.8-r1.ebuild 1226
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 8dfcb53296c1e66ba13fb02d81eef39b files/3.9.8-gcc34.patch 772
 MD5 532963b39bb2da5b1961bcf17fb11e68 files/cdparanoia-3.9.8-include-cdda_interface_h.patch 452
