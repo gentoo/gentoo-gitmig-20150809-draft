@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmnet
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnet/ChangeLog,v 1.12 2004/07/16 23:53:20 s4t4n Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnet/ChangeLog,v 1.13 2004/12/05 11:47:59 s4t4n Exp $
+
+*wmnet-1.06-r1 (05 Dec 2004)
+
+  05 Dec 2004; Michele Noberasco <s4t4n@gentoo.org> wmnet-1.06-r1.ebuild:
+  Revision bump, with new patchset. Closes #72818.
 
   17 Jul 2004; Michele Noberasco <s4t4n@gentoo.org> wmnet-1.06.ebuild:
   Fix HOMEPAGE, closes #42381.
