@@ -1,0 +1,8 @@
+# ChangeLog for app-admin/bacula
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-admin/bacula/ChangeLog,v 1.1 2003/01/30 00:19:10 woodchip Exp $
+
+*bacula-1.29 (29 Jan 2003)
+
+  29 Jan 2003; Donny Davies <woodchip@gentoo.org> :
+  Initial import of Bacula; initscript and ebuild written by me.
