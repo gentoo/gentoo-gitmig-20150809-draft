@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.06.ebuild,v 1.3 2005/01/15 22:53:21 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jre-bin/sun-jre-bin-1.4.2.06.ebuild,v 1.4 2005/01/25 15:40:36 greg_g Exp $
 
 inherit java eutils
 
@@ -102,8 +102,8 @@ src_install () {
 		doins ${T}/sun_java.desktop
 	fi
 	if use kde ; then
-		dodir $KDEDIR/share/applnk/Internet
-		insinto $KDEDIR/share/applnk/Internet
+		dodir /usr/share/applnk/Internet
+		insinto /usr/share/applnk/Internet
 		doins ${T}/sun_java.desktop
 	fi
 
