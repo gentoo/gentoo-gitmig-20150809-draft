@@ -1,0 +1,10 @@
+# ChangeLog for dev-lisp/cl-pxmlutils
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-pxmlutils/ChangeLog,v 1.1 2004/01/28 04:59:11 mkennedy Exp $
+
+*cl-pxmlutils-0.0.9 (27 Jan 2004)
+
+  27 Jan 2004; <mkennedy@gentoo.org> cl-pxmlutils-0.0.9.ebuild, metadata.xml,
+  files/0.0.9-allegro-declare-gentoo.patch, files/pxmlutils.asd:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
