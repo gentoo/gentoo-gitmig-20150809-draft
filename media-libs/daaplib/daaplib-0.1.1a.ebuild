@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/daaplib/daaplib-0.1.1a.ebuild,v 1.1 2004/03/25 06:29:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/daaplib/daaplib-0.1.1a.ebuild,v 1.2 2004/03/25 11:56:17 dholm Exp $
 
 DESCRIPTION="a tiny, portable C++ library to read and write low-level DAAP streams in memory"
 HOMEPAGE="http://www.deleet.de/projekte/daap/daaplib/"
 SRC_URI="http://deleet.de/projekte/daap/daaplib/${PN}.${PV}.zip"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="static"
 DEPEND="app-arch/unzip"
 RDEPEND=""

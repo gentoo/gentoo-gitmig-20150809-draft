@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/daaplib
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/daaplib/ChangeLog,v 1.1 2004/03/25 06:29:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/daaplib/ChangeLog,v 1.2 2004/03/25 11:56:17 dholm Exp $
+
+  25 Mar 2004; David Holm <dholm@gentoo.org> daaplib-0.1.1a.ebuild:
+  Added to ~ppc.
 
 *daaplib-0.1.1a (24 Mar 2004)
 
