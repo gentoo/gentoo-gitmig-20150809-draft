@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/mod_mono-1.0.5-r1.ebuild,v 1.2 2005/02/17 05:56:24 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apache/mod_mono/mod_mono-1.0.5-r1.ebuild,v 1.3 2005/03/11 03:23:00 latexer Exp $
 
 inherit apache-module
 
@@ -11,7 +11,7 @@ LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
-DEPEND=">=dev-dotnet/mono-${PV}
+DEPEND=">=dev-lang/mono-${PV}
 		>=dev-dotnet/xsp-${PV}"
 
 APACHE1_MOD_FILE="${S}/src/.libs/mod_mono.so"
