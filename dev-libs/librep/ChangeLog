@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/librep
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/ChangeLog,v 1.15 2003/11/24 15:26:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/librep/ChangeLog,v 1.16 2003/11/26 13:57:31 agriffis Exp $
+
+*librep-0.17 (26 Nov 2003)
+
+  26 Nov 2003; Aron Griffis <agriffis@gentoo.org> librep-0.17.ebuild:
+  Version bump to 0.17 for bug 34373
 
   24 Nov 2003; Aron Griffis <agriffis@gentoo.org> librep-0.16.2.ebuild:
   Stable on ia64
