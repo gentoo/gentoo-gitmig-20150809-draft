@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.0.11.ebuild,v 1.5 2002/10/24 23:23:45 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gdm/gdm-2.4.0.11.ebuild,v 1.6 2002/11/02 10:12:09 azarah Exp $
 
 DESCRIPTION="GNOME2 Display Manager"
 HOMEPAGE="http://www.gnome.org/"
@@ -33,12 +33,14 @@ src_unpack() {
 
 	cd ${S}/daemon
 	cp gdm.h gdm.h.orig
-	sed -e "s:/usr/bin/X11:/usr/X11R6/bin:g" gdm.h.orig > gdm.h
+	sed -e "s:/usr/bin/X11:/usr/X11R6/bin:g" \
+		gdm.h.orig > gdm.h
 	rm -f gdm.h.orig
 
 	cd ${S}/config
 	cp gdm.conf.in gdm.conf.in.orig
-	sed -e "s:/usr/bin/X11:/usr/X11R6/bin:g" gdm.conf.in.orig > gdm.conf.in
+	sed -e "s:/usr/bin/X11:/usr/X11R6/bin:g" \
+		gdm.conf.in.orig > gdm.conf.in
 	rm -f gdm.conf.in.orig
 }
 
@@ -59,9 +61,10 @@ src_compile() {
 src_install() {
 	cd omf-install
 	cp Makefile Makefile.old
-	sed -e "s:scrollkeeper-update.*::g" Makefile.old > Makefile
+	sed -e "s:scrollkeeper-update.*::g" \
+		Makefile.old > Makefile
 	rm Makefile.old
-	cd "${S}"
+	cd ${S}
 
 	make prefix=${D}/usr \
 		sysconfdir=${D}/etc/X11 \
@@ -101,7 +104,8 @@ src_install() {
 	for i in Init/Default PostSession/Default PreSession/Default gdm.conf
 	do
 		cp ${i} ${i}.orig
-		sed -e s:/usr/bin/X11:/usr/X11R6/bin:g ${i}.orig > ${i}
+		sed -e s:/usr/bin/X11:/usr/X11R6/bin:g \
+			${i}.orig > ${i}
 		rm ${i}.orig
 	done
 
@@ -128,7 +132,7 @@ src_install() {
 
 pkg_preinst() {
 	#support for new session stuff
-	if [ -d ${ROOT}/etc/X11/gdm/Sessions ]
+	if [ -d ${ROOT}/etc/X11/gdm/Sessions -a ! -L ${ROOT}/etc/X11/gdm/Sessions ]
 	then
 		mv -f ${ROOT}/etc/X11/gdm/Sessions ${ROOT}/etc/X11/gdm/Sessions.old
 	fi
