@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.3.11-r1.ebuild,v 1.3 2002/11/09 19:59:08 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.3.11-r1.ebuild,v 1.4 2002/11/10 16:43:34 raker Exp $
 
 S=${WORKDIR}/${PN}
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.openh323.org/bin/${PN}_${PV}.tar.gz"
 
 SLOT="0"
 LICENSE="MPL-1.1"
-KEYWORDS="~x86 ~ppc -sparc -sparc64"
+KEYWORDS="x86 ppc -sparc -sparc64"
 
 DEPEND=">=sys-devel/bison-1.28
 	>=sys-devel/flex-2.5.4a
