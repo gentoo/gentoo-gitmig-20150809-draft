@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/gconf-editor-2.4.0.ebuild,v 1.9 2004/03/17 01:02:52 geoman Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/gconf-editor-2.4.0.ebuild,v 1.10 2004/04/27 21:47:31 foser Exp $ 
 
-inherit gnome2
+inherit gnome2 eutils
 
 DESCRIPTION="An editor to the GNOME 2 config system"
 HOMEPAGE="http://www.gnome.org/"
@@ -18,3 +18,13 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.9"
 
 DOCS="AUTHORS ChangeLog COPYING README INSTALL NEWS"
+
+src_unpack() {
+
+	unpack ${A}
+
+	cd ${S}
+	# fix gtk+-2.4 build
+	epatch ${FILESDIR}/${P}-gtk+-2.4.patch
+
+}

@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/gconf-editor
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/ChangeLog,v 1.27 2004/04/27 21:15:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gconf-editor/ChangeLog,v 1.28 2004/04/27 21:47:31 foser Exp $
+
+  27 Apr 2004; foser <foser@gentoo.org> gconf-editor-2.4.0.ebuild :
+  Add gtk+-2.4 build patch provided by gmsoft in #46640
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> gconf-editor-2.6.0.ebuild:
   Add inherit eutils
