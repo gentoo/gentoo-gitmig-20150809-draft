@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc2.ebuild,v 1.14 2004/02/18 08:52:54 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc2.ebuild,v 1.15 2004/02/19 08:51:15 mr_bones_ Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -44,6 +44,7 @@ S=${WORKDIR}/${PN}-${PV/_/-}${MY_PKG_SUFFIX}
 src_unpack() {
 	unpack ${A}
 
+	cd ${S}
 	# gcc2 fixes provided by <T.Henderson@cs.ucl.ac.uk> in #26534
 	#epatch ${FILESDIR}/${P}-gcc2_fix.patch
 	# preserve CFLAGS added by drobbins, -O3 isn't as good as -O2 most of the time

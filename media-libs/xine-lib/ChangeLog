@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.91 2004/02/18 17:30:36 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.92 2004/02/19 08:51:15 mr_bones_ Exp $
+
+  19 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org> xine-lib-1_rc2.ebuild:
+  cd to ${S} in unpack so the patch works
 
   18 Feb 2004; Caleb Tennis <caleb@gentoo.org>
   files/protect-CFLAGS.patch-1_rc2:
