@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/krusader
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/krusader/ChangeLog,v 1.2 2002/04/20 08:24:31 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/krusader/ChangeLog,v 1.3 2002/06/10 18:20:19 wmertens Exp $
+
+*krusader-1.03_beta1 (10 Jun 2002)
+
+  20 Jun 2002; Wout Mertens <wmertens@gentoo.org>:
+
+  Been using this for a while, seems just as stable as the 1.02, and fixes
+  some bugs, so making it available
 
 *krusader-1.02 (20 Apr 2002)
 
@@ -10,11 +17,3 @@
   
 
 *krusader-1.00 (1 Feb 2002)
-
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
-  Added initial ChangeLog which should be updated whenever the package is
-  updated in any way. This changelog is targetted to users. This means that the
-  comments should well explained and written in clean English. The details about
-  writing correct changelogs are explained in the skel.ChangeLog file which you
-  can find in the root directory of the portage repository.
