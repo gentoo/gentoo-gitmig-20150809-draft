@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/scrot
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/scrot/ChangeLog,v 1.15 2004/11/07 02:03:47 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/scrot/ChangeLog,v 1.16 2004/12/10 02:39:42 kingtaco Exp $
+
+  09 Dec 2004; Mike Doty <kingtaco@gentoo.org> scrot-0.8.ebuild:
+  stable on amd64.  see bug #73936
 
   06 Nov 2004; Aaron Walker <ka0ttic@gentoo.org> scrot-0.8.ebuild:
   Remove pkg_postinst since bash-completion.eclass now exports it.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/scrot/scrot-0.8.ebuild,v 1.11 2004/11/07 02:03:47 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/scrot/scrot-0.8.ebuild,v 1.12 2004/12/10 02:39:42 kingtaco Exp $
 
 inherit bash-completion
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.linuxbrit.co.uk/"
 
 SLOT="0"
 LICENSE="as-is BSD"
-KEYWORDS="x86 ~alpha ~ppc ~amd64 ~sparc ppc64"
+KEYWORDS="x86 ~alpha ~ppc amd64 ~sparc ppc64"
 IUSE=""
 
 DEPEND=">=media-libs/imlib2-1.0.3
