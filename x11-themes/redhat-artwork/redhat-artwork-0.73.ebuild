@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.73.ebuild,v 1.4 2003/06/20 12:54:57 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.73.ebuild,v 1.5 2003/06/21 14:30:21 liquidx Exp $
 
-inherit eutils
+inherit eutils rpm
 
 RH_EXTRAVERSION="1"
 
@@ -17,7 +17,6 @@ IUSE="kde gtk xmms gtk2"
 # Needed to build...
 DEPEND="sys-devel/autoconf
 	sys-devel/automake
-	app-arch/rpm2targz
 	>=x11-libs/gtk+-2.0
 	gtk? (  >=media-libs/gdk-pixbuf-0.2.5
         	=x11-libs/gtk+-1.2* )
@@ -45,10 +44,7 @@ _replace() {
 }
 
 src_unpack() {
-	cd ${WORKDIR}
-	rpm2targz ${DISTDIR}/${A}
-	tar xzf ${P}*.src.tar.gz
-	tar xzf ${P}.tar.gz
+	rpm_src_unpack
     cd ${S}
     epatch ${FILESDIR}/redhat-artwork-0.63-cursors.patch || die
 	epatch ${FILESDIR}/redhat-artwork-0.63-gcc2.patch || die

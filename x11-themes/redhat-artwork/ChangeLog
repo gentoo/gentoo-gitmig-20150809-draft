@@ -1,9 +1,14 @@
 # ChangeLog for x11-themes/redhat-artwork 
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.19 2003/06/20 12:54:57 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.20 2003/06/21 14:30:21 liquidx Exp $
 
   20 Jun 2003; Caleb Tennis <caleb@gentoo.org>
   Marking redhat-arthwork-0.73 as stable x86
+
+  21 Jun 2003; Alastair Tse <liquidx@gentoo.org>
+  redhat-artwork-0.63-r1.ebuild, redhat-artwork-0.65.ebuild,
+  redhat-artwork-0.73.ebuild:
+  ported to rpm.eclass
 
   12 May 2003; Alastair Tse <liquidx@gentoo.org>
   redhat-artwork-0.63-r1.ebuild, redhat-artwork-0.65.ebuild,
