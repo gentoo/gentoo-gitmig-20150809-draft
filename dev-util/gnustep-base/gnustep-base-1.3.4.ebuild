@@ -1,12 +1,14 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-base/gnustep-base-1.3.4.ebuild,v 1.2 2002/07/11 06:30:25 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gnustep-base/gnustep-base-1.3.4.ebuild,v 1.3 2002/07/19 06:21:08 raker Exp $
 
 DESCRIPTION="GNUstep base package"
 HOMEPAGE="http://www.gnustep.org"
 LICENSE="LGPL"
 DEPEND=">=dev-util/gnustep-make-1.3.4"
 SRC_URI="ftp://ftp.gnustep.org/pub/gnustep/core/${P}.tar.gz"
+KEYWORDS="x86 -ppc -sparc -sparc64"
+SLOT="0"
 
 src_compile() {
 	. /usr/GNUstep/System/Makefiles/GNUstep.sh
@@ -19,15 +21,15 @@ src_compile() {
 		--with-xml-prefix=/usr \
 		--with-gmp-include=/usr/include \
 		--with-gmp-library=/usr/lib || die "./configure failed"
-	emake || die
+	make || die
 }
 
 src_install () {
-	mkdir -p ${D}/usr/GNUstep/System/Makefiles/Additional
+	dodir	/usr/GNUstep/System/Makefiles/Additional
 	insinto /usr/GNUstep/System/Makefiles/Additional
 	doins base.make
 
-	mkdir -p ${D}/usr/GNUstep/System/Libraries/ix86/linux-gnu/gnu-gnu-gnu
+	dodir	/usr/GNUstep/System/Libraries/ix86/linux-gnu/gnu-gnu-gnu
 	cd ${WORKDIR}/${P}/Source/shared_obj/ix86/linux-gnu/gnu-gnu-gnu
 	insinto /usr/GNUstep/System/Libraries/ix86/linux-gnu/gnu-gnu-gnu
 	doins libgnustep-base.so.1.3.3	
@@ -36,7 +38,7 @@ src_install () {
 	dosym /usr/GNUstep/System/Libraries/ix86/linux-gnu/gnu-gnu-gnu/libgnustep-base.so.1 \
 		/usr/GNUstep/System/Libraries/ix86/linux-gnu/gnu-gnu-gnu/libgnustep-base.so
 
-	mkdir -p ${D}/usr/GNUstep/System/Headers/Foundation
+	dodir	/usr/GNUstep/System/Headers/Foundation
 	cd ${WORKDIR}/${P}/Headers/gnustep/base
 	insinto /usr/GNUstep/System/Headers/Foundation
 	doins Foundation.h NSByteOrder.h NSConcreteNumber.h \
@@ -60,19 +62,19 @@ src_install () {
 		NSUndoManager.h NSUserDefaults.h NSValue.h NSZone.h \
 		objc-load.h
 
-	mkdir -p ${D}/usr/GNUstep/System/Headers/gnustep/base
+	dodir	/usr/GNUstep/System/Headers/gnustep/base
 	cd ${WORKDIR}/${P}/Headers/gnustep/base
 	insinto /usr/GNUstep/System/Headers/gnustep/base
 	doins DistributedObjects.h GSLocale.h GSUnion.h GSIArray.h \
 		GSIMap.h Unicode.h UnixFileHandle.h behavior.h numbers.h \
 		objc-gnu2next.h preface.h
 
-	mkdir -p ${D}/usr/GNUstep/System/Headers/gnustep/unicode
+	dodir	/usr/GNUstep/System/Headers/gnustep/unicode
 	cd ${WORKDIR}/${P}/Headers/gnustep/unicode
 	insinto /usr/GNUstep/System/Headers/gnustep/unicode
 	doins caseconv.h cop.h cyrillic.h latin2.h decomp.h nextstep.h
 
-	mkdir -p ${D}/usr/GNUstep/System/Headers/ix86/linux-gnu
+	dodir	/usr/GNUstep/System/Headers/ix86/linux-gnu
 	cd ${WORKDIR}/${P}/Source/ix86/linux-gnu
 	insinto /usr/GNUstep/System/Headers/ix86/linux-gnu
 	doins GSConfig.h mframe.h
@@ -82,13 +84,13 @@ src_install () {
 	#gdomap 538/udp # GNUstep distrib objects
 
 	cd ${WORKDIR}/${P}/SSL
-	mkdir -p ${D}/usr/GNUstep/System/Library/Bundles
+	dodir	/usr/GNUstep/System/Library/Bundles
 	rm -f .tmp.gnustep.exclude
 	echo "SSL.bundle/Contents/Resources" > .tmp.gnustep.exclude
 	tar chfX - .tmp.gnustep.exclude SSL.bundle \
 	| (cd ${D}/usr/GNUstep/System/Library/Bundles; tar xf -)
 	rm -f .tmp.gnustep.exclude
-	cd ${D}/usr/GNUstep/System/Library/Bundles/SSL.bundle/Contents
+	dodir	/usr/GNUstep/System/Library/Bundles/SSL.bundle/Contents
 	rm -rf Resources
 	ln -s ../Resources .
 
@@ -107,7 +109,7 @@ src_install () {
 	insopts -m 0755
 	doins make_strings
 
-	mkdir -p ${D}/usr/GNUstep/System/Libraries/Resources/NSCharacterServer
+	dodir	/usr/GNUstep/System/Libraries/Resources/NSCharacterServer
 	cd ${WORKDIR}/${P}/NSCharacterSets
 	insinto /usr/GNUstep/System/Libraries/Resources/NSCharacterSets
 	insopts -m 0644
@@ -119,7 +121,7 @@ src_install () {
 		uppercaseLetterCharSet.dat whitespaceAndNlCharSet.dat \
 		whitespaceCharSet.dat README.CharSet
 
-	mkdir -p ${D}/usr/GNUstep/System/Libraries/Resources
+	dodir	/usr/GNUstep/System/Libraries/Resources
 	cd ${WORKDIR}/${P}/NSTimeZones
 	insinto /usr/GNUstep/System/Libraries/Resources
 	doins NSTimeZones.tar
@@ -128,7 +130,7 @@ src_install () {
 	rm -f NSTimeZones.tar
 
 	cd ${WORKDIR}/${P}/Resources/Languages
-	mkdir -p ${D}/usr/GNUstep/System/Libraries/Resources/Languages
+	dodir	/usr/GNUstep/System/Libraries/Resources/Languages
 	insinto /usr/GNUstep/System/Libraries/Resources/Languages
 	doins Dutch English French German Italian Russian Slovak \
 		UkraineRussian Locale.aliases
