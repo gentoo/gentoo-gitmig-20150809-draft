@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <seemant@gentoo.org> (23 Aug 2002)
+# masked for testing
+=net-misc/x3270-3.2.19
+
 # <blizzy@gentoo.org> (23 Aug 2002)
 # masked for testing
 =dev-java/sun-jdk-1.4.1_rc1
