@@ -1,0 +1,7 @@
+# ChangeLog for app-admin/gentoo-stats
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoo-stats/ChangeLog,v 1.1 2002/07/28 18:27:48 blizzy Exp $
+
+*gentoo-stats-0.1 (28 Jul 2002)
+
+  28 Jul 2002; Maik Schreiber <blizzy@gentoo.org> : Initial import.
