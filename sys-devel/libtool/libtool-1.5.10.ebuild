@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.10.ebuild,v 1.4 2004/11/12 15:21:00 vapier Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.5.10.ebuild,v 1.5 2004/11/30 04:01:32 vapier Exp ${P}-r1.ebuild,v 1.8 2002/10/04 06:34:42 kloeri Exp $
 
 inherit eutils gnuconfig libtool
 
@@ -10,9 +10,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="1.5"
-# breaks building .so completely (emerge fam)
-KEYWORDS="-*"
-#KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="uclibc"
 
 DEPEND="virtual/libc
@@ -109,6 +107,11 @@ src_unpack() {
 	# or vice versa ... newer automakes specify the tag so no
 	# guessing is needed #67692
 	epatch ${FILESDIR}/1.5.6/libtool-1.5-filter-host-tags.patch
+
+	# Libtool uses links to handle locking object files with 
+	# dependencies.  Hard links can't cross filesystems though, 
+	# so we have to use a diff source for the link.  #40992
+	epatch ${FILESDIR}/1.5.10/libtool-1.5.10-locking.patch
 
 	einfo "Generate ltmain.sh ..."
 	gen_ltmain_sh || die "Failed to generate ltmain.sh!"
