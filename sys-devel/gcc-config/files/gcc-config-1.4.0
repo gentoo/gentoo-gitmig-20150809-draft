@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.4.0,v 1.7 2005/03/16 23:51:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/gcc-config-1.4.0,v 1.8 2005/03/19 20:30:01 vapier Exp $
 
 trap ":" INT QUIT TSTP
 
@@ -88,7 +88,7 @@ get_real_chost() {
 
 is_cross_compiler() {
 	get_real_chost
-	[[ ${CC_COMP/${REAL_CHOST}} = ${CC_COMP} ]]
+	[[ ${CC_COMP/${REAL_CHOST}} == ${CC_COMP} ]]
 }
 
 create_script_wrapper() {
@@ -145,7 +145,7 @@ switch_profile() {
 				local sub_ldpath=
 				for sub_ldpath in ${LDPATH} ; do
 					if [[ -d ${sub_ldpath} ]] ; then
-						if [[ ${MY_LDPATH/:${sub_ldpath}} = ${MY_LDPATH} ]] ; then
+						if [[ ${MY_LDPATH/:${sub_ldpath}} == ${MY_LDPATH} ]] ; then
 							MY_LDPATH="${MY_LDPATH}:${sub_ldpath}"
 						fi
 					fi
@@ -213,7 +213,7 @@ switch_profile() {
 	for x in ${native}; do
 		# Make sure we have no stale wrappers
 		${RM} -f "${ROOT}/usr/bin/${x}"
-		[[ ${x:${#x}-3} = "gcc" || ${x:${#x}-3} = "g++" ]] \
+		[[ ${x:${#x}-3} == "gcc" || ${x:${#x}-3} == "g++" ]] \
 			&& ${RM} -f "${ROOT}/usr/bin/${x}"{32,64}
 
 		# Only install a wrapper if the binary exists ...
@@ -223,7 +223,7 @@ switch_profile() {
 		# happy.  See Bug #70548 for more info.
 
 		local ref=${ROOT}/${GCC_BIN_PATH}/${x}
-		[[ ${x} = "cc" ]] && ref=${ROOT}/${GCC_BIN_PATH}/gcc
+		[[ ${x} == "cc" ]] && ref=${ROOT}/${GCC_BIN_PATH}/gcc
 		if [[ -x ${ref} ]] ; then
 			${CP} -f "${WRAPPER}" \
 			         "${ROOT}/usr/bin/${x}"
@@ -231,7 +231,7 @@ switch_profile() {
 
 			# Install 32bit and 64bit wrappers if need be
 			# This should probably get folded back into the wrapper ...
-			if [[ ${x:${#x}-3} = "gcc" ]] || [[ ${x:${#x}-3} = "g++" ]] ; then
+			if [[ ${x:${#x}-3} == "gcc" ]] || [[ ${x:${#x}-3} == "g++" ]] ; then
 				for bits in ${GCCBITS} ; do
 					cp -f "${WRAPPER}" \
 						"${ROOT}/usr/bin/${x}${bits}"
@@ -277,21 +277,26 @@ switch_profile() {
 		${CP} -f "${WRAPPER}" "${ROOT}/lib/cpp"
 	fi
 
-	# We need to make sure that libgcc_s.so makes it into /lib.
+	# We need to make sure that libgcc_s.so / libunwind.so make it into /lib.
 	# On many systems (x86/amd64/etc...), this will probably never matter, 
 	# but on other systems (arm/mips/etc...), this is quite critical.
-
 	# http://bugs.gentoo.org/show_bug.cgi?id=60190
-	if ! is_cross_compiler; then
+	#
+	# Don't copy the library if we're being called by portage because 
+	# this may cause python to start segfaulting all over the place 
+	# since on many arches, it uses libgcc_s.so.
+	if [[ -z ${PORTAGE_CALLER} ]] && ! is_cross_compiler ; then
 		for multilib in $(${ROOT}/${GCC_BIN_PATH}/${CTARGET}-gcc -print-multi-lib); do
 			multiarg=${multilib#*;}
 			multiarg=${multiarg/@/-}
 			multilibdir=${multilib%;*}
 			libdir="lib/$(${ROOT}/${GCC_BIN_PATH}/${CTARGET}-gcc ${multiarg} -print-multi-os-directory)"
-			if [[ -e ${ROOT}/${LDPATH}/${multildir}/libgcc_s.so ]]; then
-				rm -f ${ROOT}/${libdir}/libgcc_so.so*
-				cp -a ${ROOT}/${LDPATH}/${multilibdir}/libgcc_s.so* ${ROOT}/${libdir}/
-			fi
+			for gcclib in gcc_s unwind ; do
+				if [[ -e ${ROOT}/${LDPATH}/${multildir}/lib${gcclib}.so ]]; then
+					rm -f "${ROOT}/${libdir}"/lib${gcclib}.so*
+					cp -a "${ROOT}/${LDPATH}"/${multilibdir}/lib${gcclib}.so* "${ROOT}/${libdir}"/
+				fi
+			done
 		done
 		unset multilib
 		unset multilibdir
@@ -299,13 +304,13 @@ switch_profile() {
 		unset libdir
 	fi
 
-	if [[ ${ROOT} = "/" ]] && [[ ${OLD_CC_COMP} != ${CC_COMP} ]] ; then
+	if [[ ${ROOT} == "/" ]] && [[ ${OLD_CC_COMP} != ${CC_COMP} ]] ; then
 		${ENV_UPDATE} &>/dev/null
 	fi
 
 	eend 0
 
-	if [[ ${ROOT} = "/" ]] && [[ ${OLD_CC_COMP} != ${CC_COMP} ]] ; then
+	if [[ ${ROOT} == "/" ]] && [[ ${OLD_CC_COMP} != ${CC_COMP} ]] ; then
 		echo
 		ewarn "If you intend to use the gcc from the new profile in an already"
 		ewarn "running shell, please remember to do:"
@@ -354,9 +359,9 @@ list_profiles() {
 		echo "Using gcc-config info in ${ROOT}"
 	fi
 	for x in "${GCC_ENV_D}"/* ; do
-		if [[ -f ${x} ]] && [[ ${x/\/config} = ${x} ]] ; then
+		if [[ -f ${x} ]] && [[ ${x/\/config} == ${x} ]] ; then
 			x=${x##*/}
-			[[ ${x} = ${CURRENT} ]] && x="${x} *"
+			[[ ${x} == ${CURRENT} ]] && x="${x} *"
 			echo "[${i}] ${x}"
 			i=$((i + 1))
 		fi
@@ -444,37 +449,37 @@ for x in "$@" ; do
 			CHECK_CHOST="yes"
 			;;
 		-c|--get-current-profile)
-			if [[ ${NEED_ACTION} = "yes" ]] ; then
+			if [[ ${NEED_ACTION} == "yes" ]] ; then
 				NEED_ACTION="no"
 				DOIT="get_current_profile"
 			fi
 			;;
 		-l|--list-profiles)
-			if [[ ${NEED_ACTION} = "yes" ]] ; then
+			if [[ ${NEED_ACTION} == "yes" ]] ; then
 				NEED_ACTION="no"
 				DOIT="list_profiles"
 			fi
 			;;
 		-E|--print-environ)
-			if [[ ${NEED_ACTION} = "yes" ]] ; then
+			if [[ ${NEED_ACTION} == "yes" ]] ; then
 				NEED_ACTION="no"
 				DOIT="print_environ"
 			fi
 			;;
 		-B|--get-bin-path)
-			if [[ ${NEED_ACTION} = "yes" ]] ; then
+			if [[ ${NEED_ACTION} == "yes" ]] ; then
 				NEED_ACTION="no"
 				DOIT="get_bin_path"
 			fi
 			;;
 		-L|--get-lib-path)
-			if [[ ${NEED_ACTION} = "yes" ]] ; then
+			if [[ ${NEED_ACTION} == "yes" ]] ; then
 				NEED_ACTION="no"
 				DOIT="get_lib_path"
 			fi
 			;;
 		-X|--get-stdcxx-incdir)
-			if [[ ${NEED_ACTION} = "yes" ]] ; then
+			if [[ ${NEED_ACTION} == "yes" ]] ; then
 				NEED_ACTION="no"
 				DOIT="get_stdcxx_incdir"
 			fi
@@ -499,7 +504,7 @@ for x in "$@" ; do
 					for y in "${GCC_ENV_D}"/* ; do
 						[[ ${y/\/config} != ${y} ]] && continue
 
-						if [[ -f ${y} ]] && [[ ${x} = ${i} ]] ; then
+						if [[ -f ${y} ]] && [[ ${x} == ${i} ]] ; then
 							CC_COMP="${y##*/}"
 							break
 						fi
@@ -524,7 +529,7 @@ for x in "$@" ; do
 	esac
 done
 
-if [[ ${DOIT} = "switch_profile" ]] && [[ -z ${CC_COMP} ]] ; then
+if [[ ${DOIT} == "switch_profile" ]] && [[ -z ${CC_COMP} ]] ; then
 	usage 1
 fi
 
@@ -558,7 +563,7 @@ if [[ ${DOIT} != "get_current_profile" ]] ; then
 	fi
 fi
 
-if [[ ${CHECK_CHOST} = "yes" ]] ; then
+if [[ ${CHECK_CHOST} == "yes" ]] ; then
 	# Chosen CHOST are not the same as the real CHOST according to
 	# make.conf, and --use-portage-chost option was given, so do nothing
 	get_real_chost
