@@ -1,0 +1,10 @@
+# ChangeLog for dev-lang/sather
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-db/firebird/ChangeLog,v 1.1 2002/03/20 19:19:43 gbevin Exp $
+
+*firebird-1.0 (20 Mar 2002)
+
+  20 Mar 2002; G.Bevin <gbevin@gentoo.org> firebird-1.0.ebuild
+  files/firebird-1.0:
+  
+  Initial package for the firebird database.
