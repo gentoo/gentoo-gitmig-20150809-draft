@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-21.4.ebuild,v 1.17 2004/11/15 18:58:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-21.4.ebuild,v 1.18 2004/12/08 01:33:00 vapier Exp $
 
 inherit eutils gnuconfig
 
@@ -32,6 +32,8 @@ src_unpack() {
 	else
 		use nls || epatch ${FILESDIR}/${P}-no-nls.patch
 	fi
+
+	epunt_cxx #73632
 }
 
 src_compile() {
