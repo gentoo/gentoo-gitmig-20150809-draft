@@ -1,0 +1,16 @@
+# ChangeLog for app-text/cpp2latex
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/cpp2latex/ChangeLog,v 1.1 2003/06/09 07:32:39 satai Exp $
+
+*cpp2latex-2.2 (31 Dec 2002)
+
+  31 Dec 2002; Richard Garand <richard@garandnet.net>
+
+  Version bump; added patch to fix gcc 3 errors and add option
+  to prevent linewrapping.
+
+*cpp2latex-2.1 (03 Oct 2002)
+
+  03 Oct 2002; Richard Garand <richard@garandnet.net>
+
+  First ebuild.
