@@ -1,6 +1,9 @@
 # ChangeLog for app-xemacs/vm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-xemacs/vm/ChangeLog,v 1.5 2004/06/24 23:25:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-xemacs/vm/ChangeLog,v 1.6 2004/08/10 02:04:38 tgall Exp $
+
+  09 Aug 2004; Tom Gall <tgall@gentoo.org> vm-7.07.ebuild:
+  stable on ppc64, bug #57174
 
   02 Oct 2003; Aron Griffis <agriffis@gentoo.org> vm-7.07.ebuild:
   Stable on alpha
