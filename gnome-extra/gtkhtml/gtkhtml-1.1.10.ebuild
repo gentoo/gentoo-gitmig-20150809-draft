@@ -1,13 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.1.10.ebuild,v 1.11 2004/06/24 22:06:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.1.10.ebuild,v 1.12 2004/07/14 15:55:08 agriffis Exp $
 
-IUSE="nls gnome"
+IUSE="nls"
 
 inherit gnome.org libtool
 
 MY_PV="`echo ${PV} | cut -d. -f1,2`"
-S="${WORKDIR}/${P}"
 DESCRIPTION="Lightweight HTML rendering/printing/editing engine."
 HOMEPAGE="http://www.gnome.org/"
 
@@ -142,4 +141,3 @@ src_install() {
 
 	dodoc AUTHORS COPYING* ChangeLog README NEWS TODO
 }
-

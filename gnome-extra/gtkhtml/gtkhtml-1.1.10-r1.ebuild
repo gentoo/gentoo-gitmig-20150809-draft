@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.1.10-r1.ebuild,v 1.4 2004/06/24 22:06:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gtkhtml/gtkhtml-1.1.10-r1.ebuild,v 1.5 2004/07/14 15:55:08 agriffis Exp $
 
 inherit gnome.org libtool
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2 LGPL-2.1"
 # that new versions will support 1.[12] of gtkhtml ...
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha hppa amd64"
-IUSE="nls gnome"
+IUSE="nls"
 
 # peg gtkhtml at gal-0.23 because it might get confused with gal-1.99
 RDEPEND="=gnome-extra/gal-0.24*
