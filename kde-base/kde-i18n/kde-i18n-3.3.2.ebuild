@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.3.2.ebuild,v 1.2 2004/12/10 18:20:03 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.3.2.ebuild,v 1.3 2004/12/10 20:38:06 mr_bones_ Exp $
 
 inherit kde
 
@@ -22,7 +22,7 @@ SRC_URI="linguas_sr? ( mirror://kde/stable/${MY_PV}/src/kde-i18n/kde-i18n-sr@Lat
 
 LANGS="af ar bg bn bs ca cs cy da de el en_GB eo es et eu fa fi fr gl he hi hr hsb hu is it ja mn ms nb nds nl nn pa pl pt pt_BR ro ru sk sl sr sr@Latn sv ta tg tr uk uz zh_CN zh_TW"
 
-for X in ${LANGS} ; do 
+for X in ${LANGS} ; do
 	SRC_URI="${SRC_URI} linguas_${X}? ( mirror://kde/stable/${MY_PV}/src/kde-i18n/kde-i18n-${X}-${PV}.tar.bz2 )"
 done
 
