@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/cel-20030413-r2.ebuild,v 1.4 2003/07/15 23:58:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/cel/cel-20030413-r2.ebuild,v 1.5 2003/08/05 16:05:20 vapier Exp $
+
+inherit eutils
 
 DESCRIPTION="A game entity layer based on Crystal Space"
 HOMEPAGE="http://cel.sourceforge.net/"
