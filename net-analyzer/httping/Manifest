@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d81491dc3aa470c520d8c77aec413fe5 httping-0.0.95.ebuild 737
+MD5 cbf5c8619a7775691a16c1e62c2e6737 httping-0.0.95.ebuild 750
 MD5 ad4a493ee0b1776ad4d0a4a2105f5992 httping-0.0.94-r1.ebuild 740
-MD5 02c400223dc292c1bd976e39cf592009 ChangeLog 1486
+MD5 3ae920143a9816251354538eb2ce0720 ChangeLog 1582
 MD5 61da3c68a3ae57136cdc2a17fbaedfaf metadata.xml 223
 MD5 ae2b0648bc9a639b7129d5297c8ad680 files/digest-httping-0.0.95 61
 MD5 e09a4c048a540ff768f9be969e7fa62c files/digest-httping-0.0.94-r1 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBdBtScAgAdbxYsnERAkkGAJ9QJdAO1TNP8ddjdUqBQvyx0/4/OQCgmGMe
-OfNkIMN8egxybUCGeBJQdPs=
-=wUF8
+iD8DBQFBrTgucAgAdbxYsnERAkkyAJ4j1HeYiNDiucVDrPWR3/txgJpPjQCgi28K
+CDXrjLcjXGRB1QsucKCMjDI=
+=UK0Q
 -----END PGP SIGNATURE-----

@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/httping
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/ChangeLog,v 1.10 2004/10/18 19:36:45 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/httping/ChangeLog,v 1.11 2004/12/01 03:18:55 squinky86 Exp $
+
+  30 Nov 2004; Jon Hood <squinky86@gentoo.org> httping-0.0.95.ebuild:
+  Mark ~hppa and ~amd64.
 
   18 Oct 2004; Jon Hood <squinky86@gentoo.org> httping-0.0.95.ebuild:
   Stable on x86.
