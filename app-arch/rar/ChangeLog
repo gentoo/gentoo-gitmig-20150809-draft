@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/rar
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/ChangeLog,v 1.27 2005/01/01 15:30:14 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rar/ChangeLog,v 1.28 2005/01/07 18:28:27 aliz Exp $
+
+*rar-3.4.1 (07 Jan 2005)
+
+  07 Jan 2005; Daniel Ahlberg <aliz@gentoo.org> +rar-3.4.1.ebuild:
+  Version bump, closing #76975.
 
   01 Jan 2005; Daniel Ahlberg <aliz@gentoo.org> rar-3.2.0.ebuild,
   rar-3.4.0.ebuild:
