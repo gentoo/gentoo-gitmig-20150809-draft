@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.52 2004/02/09 22:12:34 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.53 2004/02/19 06:42:42 kumba Exp $
+
+  18 Feb 2004; Joshua Kinard <kumba@gentoo.org> perl-5.8.2-r1.ebuild:
+  Marking stable on mips
 
   09 Feb 2004; Bartosch Pixa <darkspecter@gentoo.org> perl-5.8.2-r1.ebuild:
   set ppc in keywords
