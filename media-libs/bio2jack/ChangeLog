@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/bio2jack
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/bio2jack/ChangeLog,v 1.13 2004/12/29 00:39:43 ciaranm Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/bio2jack/ChangeLog,v 1.14 2005/01/30 01:38:24 jnc Exp $
+
+  29 Jan 2005; Eric Shattow <jnc@gentoo.org> bio2jack-0.3-r1.ebuild:
+  closes bug #74980
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
