@@ -1,6 +1,9 @@
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 
+# Masked for testing of the ACL parts (styx 21 Jun 2002)
+>=sys-apps/e2fsprogs-1.27-r1
+
 # Masked for testing. (sunflare 20 Jun 2002)
 =net-analyzer/ettercap-0.6.6.6
 
