@@ -1,6 +1,9 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.78 2004/10/07 21:56:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.79 2004/10/07 23:47:15 gmsoft Exp $
+
+  08 Oct 2004; Guy Martin <gmsoft@gentoo.org> ghostscript-7.07.1-r7.ebuild:
+  Marked stable on hppa.
 
   07 Oct 2004; Bryan Østergaard <kloeri@gentoo.org>
   ghostscript-7.07.1-r7.ebuild:
