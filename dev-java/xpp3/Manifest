@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0e33c103523e9d033040cf3edc4a0c08 xpp3-1.1.3.4m.ebuild 1081
+MD5 9a62a2adffef06ab42cbf91540012848 ChangeLog 352
+MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
+MD5 dd17a37a22e7c98f54e4f0610502965d files/digest-xpp3-1.1.3.4m 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCLbmT/rLF9B432nYRAnUEAJ40+DZPt/kBP/7JxWrILkLaDo4rzgCfTByo
++HrXddzjEPosjqMBi+pgXhM=
+=DmWS
+-----END PGP SIGNATURE-----
