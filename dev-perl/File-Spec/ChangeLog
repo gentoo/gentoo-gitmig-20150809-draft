@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/File-Spec
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Spec/ChangeLog,v 1.4 2003/06/24 14:49:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Spec/ChangeLog,v 1.5 2003/07/02 19:38:19 gmsoft Exp $
 
   24 Jun 2003; Aron Griffis <agriffis@gentoo.org> File-Spec-0.82.ebuild:
   Mark stable on alpha
@@ -12,6 +12,9 @@
   Added sparc stable keyword
 
 *File-Spec-0.82 (31 May 2003)
+
+  02 Jul 2003; Guy Martin <gmsoft@gentoo.org> File-Spec-0.82.ebuild :
+  Added hppa to KEYWORDS.
 
   31 May 2003; Michael Cummings <mcummings@gentoo.org> File-Spec-0.82.ebuild:
   Initial import of File-Spec. This fulfills deps for existing modules like
