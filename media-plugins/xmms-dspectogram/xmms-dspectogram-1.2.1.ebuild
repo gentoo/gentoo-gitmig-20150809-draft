@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dspectogram/xmms-dspectogram-1.2.1.ebuild,v 1.5 2003/09/11 01:19:38 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-dspectogram/xmms-dspectogram-1.2.1.ebuild,v 1.6 2004/03/05 21:36:43 jhuebel Exp $
 
 MY_P=${PN/xmms-/}-v${PV}
 S=${WORKDIR}/${MY_P}
@@ -10,7 +10,7 @@ SRC_URI="http://www.shell.linux.se/bm/f/${MY_P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ~ppc ~amd64"
 
 DEPEND=">=sys-apps/portage-2.0.47-r10
 	media-sound/xmms"
