@@ -1,12 +1,12 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bruce A. Locke <blocke@shivan.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/ogle-gui/ogle-gui-0.8.2-r3.ebuild,v 1.1 2002/03/27 04:52:53 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ogle-gui/ogle-gui-0.8.2-r3.ebuild,v 1.2 2002/04/27 12:29:18 seemant Exp $
 
-P="ogle_gui-0.8.2"
-S=${WORKDIR}/${P}
+MY_P=${P/-/_}
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="GUI interface for the Ogle DVD player"
-SRC_URI="http://www.dtek.chalmers.se/groups/dvd/dist/${P}.tar.gz"
+SRC_URI="http://www.dtek.chalmers.se/groups/dvd/dist/${MY_P}.tar.gz"
 HOMEPAGE="http://www.dtek.chalmers.se/groups/dvd/"
 
 DEPEND=">=media-video/ogle-0.8.2 x11-libs/gtk+ dev-libs/libxml2 sys-devel/bison nls? ( sys-devel/gettext )  gnome-base/libglade"
@@ -23,7 +23,7 @@ src_compile() {
 	# libxml2 hack
 	CFLAGS="${CFLAGS} -I/usr/include/libxml2/libxml"
 
-	./configure --prefix=/usr --host=${CHOST} $myconf  || die
+	./configure --prefix=/usr --host=${CHOST} ${myconf}  || die
   	emake || die	
 
 }
@@ -34,4 +34,3 @@ src_install() {
 
 	dodoc ABOUT-NLS AUTHORS COPYING INSTALL NEWS README
 }
-
