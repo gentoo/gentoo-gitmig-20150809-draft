@@ -236,3 +236,4 @@ move net-www/mozilla-bin www-client/mozilla-bin
 move net-www/mozilla-firefox-bin www-client/mozilla-firefox-bin
 move net-www/epiphany-extensions www-client/epiphany-extensions
 move net-www/khttrack www-client/khttrack
+move net-www/kazehakase www-client/kazehakase
