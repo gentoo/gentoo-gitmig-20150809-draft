@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.1-r2.ebuild,v 1.1 2004/01/10 17:28:39 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.1-r2.ebuild,v 1.2 2004/01/12 15:38:12 tseng Exp $
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
@@ -84,7 +84,7 @@ pkg_postinst() {
 	ewarn "and the vt_console (Character Devices->Support for console...)."
 	ewarn "Otherwise, you will get the dreaded \"Uncompressing the Kernel\""        ewarn "error."
 	echo
-	einfo "Consult http://www.codemonkey.org.uk/post-halloween-2.5.txt"
+	einfo "Consult http://www.linux.org.uk/~davej/docs/post-halloween-2.6.txt"
 	einfo "for more info about the development series."
 	echo
 }
