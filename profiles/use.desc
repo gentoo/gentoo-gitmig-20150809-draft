@@ -101,6 +101,7 @@ perl - Adds support/bindings for the Perl language.
 pic
 pixbuf
 plotutils
+png - Adds support for libpng (PNG images)
 pnp
 postgres - Adds support for the postgresql database
 python - Adds support/bindings for the Python language
