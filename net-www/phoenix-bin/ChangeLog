@@ -1,7 +1,11 @@
 # ChangeLog for net-www/phoenix-bin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/ChangeLog,v 1.15 2002/12/13 11:00:28 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/ChangeLog,v 1.16 2002/12/30 17:40:30 lordvan Exp $
 
+*phoenix-bin-0.5 (30 Dec 2002)
+  30 Dec 2002; Thomas Raschbacher <lordvan@gentoo.org> phoenix-bin-0.5.ebuild
+  unmasked 0.5 for x86
+	
 *phoenix-bin-0.4-r2 (10 Dec 2002)
 
   10 Dec 2002; phoen][x <phoenix@gentoo.org> phoenix-bin-0.5.ebuild 
