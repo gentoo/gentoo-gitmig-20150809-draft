@@ -1,10 +1,10 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.5.8-r1.ebuild,v 1.2 2003/12/14 06:10:20 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/lilo/lilo-22.5.8-r1.ebuild,v 1.3 2004/01/19 18:34:01 azarah Exp $
 
 inherit mount-boot eutils
 
-S=${WORKDIR}/${P}
+S="${WORKDIR}/${P}"
 DESCRIPTION="Standard Linux boot loader"
 HOMEPAGE="http://lilo.go.dyndns.org/pub/linux/lilo/"
 SRC_URI="http://home.san.rr.com/johninsd/pub/linux/lilo/${P}.tar.gz
@@ -13,7 +13,7 @@ SRC_URI="http://home.san.rr.com/johninsd/pub/linux/lilo/${P}.tar.gz
 
 SLOT="0"
 LICENSE="BSD GPL-2"
-KEYWORDS="-* ~x86"
+KEYWORDS="-* x86"
 
 DEPEND=">=sys-apps/sed-4
 	dev-lang/nasm
