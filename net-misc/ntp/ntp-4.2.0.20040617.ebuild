@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0.20040617.ebuild,v 1.1 2004/11/09 15:46:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0.20040617.ebuild,v 1.2 2004/11/10 02:48:22 vapier Exp $
 
 inherit eutils
 
@@ -99,6 +99,7 @@ src_install() {
 	newconfd ${FILESDIR}/ntp-client.confd ntp-client
 	use nodroproot && dosed "s|-u ntp:ntp||" /etc/conf.d/ntpd
 	dosed "s:-Q::" /etc/conf.d/ntp-client # no longer needed
+	dosed "s:/usr/bin:/usr/sbin:" /etc/init.d/ntpd
 
 	dodir /var/lib/ntp
 	fowners ntp:ntp /var/lib/ntp

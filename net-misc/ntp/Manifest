@@ -2,7 +2,7 @@ MD5 c6843dfd9350bfef1f1222d0fe610c0f ChangeLog 7276
 MD5 aa73d5edf312beeab44fa9d58a603ad4 metadata.xml 636
 MD5 5ee4f3f57c18aad3ceece869d567c9c8 ntp-4.1.2.ebuild 3167
 MD5 a8bf16fa19d12bf016bac126572d980e ntp-4.2.0-r2.ebuild 3727
-MD5 7fd9bb73d90eac05c51b4909776a9336 ntp-4.2.0.20040617.ebuild 3776
+MD5 58cc5b4a2a08d1d8a46ecb5960d4cf4f ntp-4.2.0.20040617.ebuild 3824
 MD5 047fe77e01bc9335b07bcc5d963d8683 files/4.1.2-droproot.patch 12672
 MD5 4e13c1a5fa0fa54e3b65ec311dd7270a files/broadcastclient.patch 451
 MD5 af48491e8d6820a3d8eba16a771e5c26 files/digest-ntp-4.1.2 129
