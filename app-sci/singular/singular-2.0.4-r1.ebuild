@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/singular/singular-2.0.4-r1.ebuild,v 1.2 2003/11/06 13:05:58 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/singular/singular-2.0.4-r1.ebuild,v 1.3 2003/12/10 16:08:46 phosphan Exp $
 
 S=${WORKDIR}/${P}
 MINPV=${PV//./-}
@@ -32,7 +32,7 @@ DEPEND="${RDEPEND}
 
 SLOT="0"
 LICENSE="singular"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ppc"
 
 S=${WORKDIR}
 
