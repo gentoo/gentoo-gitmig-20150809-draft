@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/riece
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/riece/ChangeLog,v 1.26 2004/07/18 03:17:56 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/riece/ChangeLog,v 1.27 2004/07/19 12:16:30 usata Exp $
+
+  19 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> riece-1.0.1.ebuild:
+  Added to macos
 
   17 Jul 2004; Tom Gall <tgall@gentoo.org> riece-1.0.1.ebuild:
   stable on ppc64, bug #55875

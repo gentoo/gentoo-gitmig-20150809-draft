@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/wanderlust-2.11.30_pre20040618.ebuild,v 1.2 2004/06/24 22:27:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wanderlust/wanderlust-2.11.30_pre20040618.ebuild,v 1.3 2004/07/19 12:27:05 usata Exp $
 
 inherit elisp
 
@@ -15,7 +15,7 @@ SRC_URI="mirror://gentoo/${MY_P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 # Please do not mark it stable since this is merely a CVS snapshot
-KEYWORDS="~x86 ~alpha ~sparc ~ppc"
+KEYWORDS="~x86 ~alpha ~sparc ~ppc ~macos"
 
 DEPEND="virtual/emacs
 	>=app-emacs/apel-10.6
