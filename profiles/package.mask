@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# Daniel Robbins <drobbins@gentoo.org> (31 Jul 2002)
+# marked pre-release
+=sys-apps/evms-1.1.0_pre4
+
 # J. Alberto Suárez L. <bass@gentoo.org> (31 Jul 2002)
 # Beta version of firestarter for Gnome2
 =net-misc/firestarter-0.9.0
@@ -31,7 +35,7 @@
 =app-i18n/xcin-2.5.2.3
 
 # Seemant Kulleen <seemant@gentoo.org> (31 Jul 2002)
-# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1142 2002/08/01 00:25:06 lostlogic Exp $
+# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1143 2002/08/01 01:03:58 drobbins Exp $
 # repoman had a field day
 sys-apps/discover
 sys-apps/discover-data
