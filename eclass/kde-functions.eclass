@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.46 2002/11/27 21:31:42 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.47 2002/12/01 05:06:21 danarmak Exp $
 # This contains everything except things that modify ebuild variables and functions (e.g. $P, src_compile() etc.)
 
 ECLASS=kde-functions
@@ -229,6 +229,10 @@ set-qtdir() {
 
 	export QTDIR="/usr/qt/$QTMAJORVER"
 
+	# i'm putting this here so that the maximum amount of qt/kde apps gets it -- danarmak
+	# if $QTDIR/etc/settings/qtrc file exists, the qt build tools try to create
+	# a .qtrc.lock file in that directory. It's easiest to allow them to do so.
+	[ -d "$QTDIR/etc/settings" ] && addwrite "$QTDIR/etc/settings"
 
 }
 
