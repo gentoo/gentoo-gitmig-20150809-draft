@@ -1,8 +1,20 @@
-MD5 f12b3cb107d79be2855f768249c994a9 ChangeLog 4916
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c66535e1547eaec150160f277265b1da ChangeLog 5041
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+MD5 64bf484d4a3c91e3d7c0b2021bd32acb skk-jisyo-200501.ebuild 654
+MD5 70daa032e5a243ae38f5e464f79bb43a skk-jisyo-200504.ebuild 654
 MD5 cddb45bd1c9d68449b21fd2004b94293 skk-jisyo-200407.ebuild 661
 MD5 45f098f4067db406414483cfb0b1fabb skk-jisyo-200410.ebuild 655
-MD5 64bf484d4a3c91e3d7c0b2021bd32acb skk-jisyo-200501.ebuild 654
+MD5 4764f1c17da61a3ec2eda9cfe4b64ef2 files/digest-skk-jisyo-200501 69
+MD5 d9bb0fb1f903c2e92b367436d563d28e files/digest-skk-jisyo-200504 69
 MD5 923c59581dcd6ce53f1b7b45dceb48ed files/digest-skk-jisyo-200407 69
 MD5 353baf5ec08e73aadf602a1ad27bb2d6 files/digest-skk-jisyo-200410 69
-MD5 4764f1c17da61a3ec2eda9cfe4b64ef2 files/digest-skk-jisyo-200501 69
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCTry6VWNWqTUmv+0RAi4/AJ43MvbLCiEZGM0TSIhHcG6pGxgsfwCeJnCZ
+qR9LcsjdZ8cCr9p3f1iN19A=
+=SdFm
+-----END PGP SIGNATURE-----
