@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.5.7.ebuild,v 1.1 2003/12/04 09:14:51 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.5.7.ebuild,v 1.2 2003/12/04 17:38:25 seemant Exp $
 
 inherit eutils
 
@@ -63,7 +63,7 @@ src_install() {
 
 pkg_postinst() {
 	ewarn "Please make sure you do NOT disable the rsync server running"
-	ewarn "in a chroot.  Please check /etc/rsync/rsync.conf and make sure"
+	ewarn "in a chroot.  Please check /etc/rsync/rsyncd.conf and make sure"
 	ewarn "it says: use chroot = yes"
 
 	einfo 'This patch enables usage of user:pass@proxy.foo:port'

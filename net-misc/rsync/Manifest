@@ -1,4 +1,4 @@
-MD5 794977333c4fa10d419cc3d7912cfb44 rsync-2.5.7.ebuild 2225
+MD5 61724c5f2ffec8d9940270fd4fa1dba9 rsync-2.5.7.ebuild 2226
 MD5 d4ae4e1c9c0cca260015ed8e487c8d98 ChangeLog 5082
 MD5 38f45eaed761df27cfa731ce65763e98 files/rsyncd.conf.d 355
 MD5 b87d68fcfff9eb9ae5cdbea3796693c5 files/rsyncd.init.d 423
