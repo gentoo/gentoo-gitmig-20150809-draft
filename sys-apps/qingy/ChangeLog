@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/qingy
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/ChangeLog,v 1.7 2004/02/25 06:35:01 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qingy/ChangeLog,v 1.8 2004/03/20 12:25:23 pyrania Exp $
+
+*qingy-0.4.0 (20 Mar 2004)
+
+  20 Mar 2004; Markus Nigbur <pyrania@gentoo.org> qingy-0.4.0.ebuild:
+  Version bump. Closing #45072.
 
 *qingy-0.3.0 (25 Feb 2004)
 
