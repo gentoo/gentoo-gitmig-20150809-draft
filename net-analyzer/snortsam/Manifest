@@ -4,16 +4,18 @@ Hash: SHA1
 MD5 563816515ae29db4307c0c08572c9255 snortsam-2.29.ebuild 1150
 MD5 74fa62ade77c950de851e9444490fd3b snortsam-2.24.ebuild 1023
 MD5 e7c92338cb02469c0cd13da04dc27de3 snortsam-2.30.ebuild 1204
-MD5 280b3b93e503d6732b254f5d609f45f8 ChangeLog 1136
+MD5 b1cad3512df9c96cb67851f4108cf292 ChangeLog 1269
 MD5 5b4a8eb28c662d274a2a6fd3ca87c3c1 metadata.xml 275
+MD5 201e6a76262f911eb380777e7488d2af snortsam-2.31.ebuild 1205
 MD5 0be28257a995a317341b1d367535cb38 files/snortsam-2.29-no-ugly----lines.diff 1665
 MD5 ba3cfd3145dc1ff7957a323d413e45ab files/digest-snortsam-2.24 69
 MD5 0fba63de6dcbb1d580551ccdd18e3cd1 files/digest-snortsam-2.29 70
 MD5 ab344229fa16837941fb8097d305dc2d files/digest-snortsam-2.30 70
+MD5 60effdf575c3dff7ee6ea78698eb827b files/digest-snortsam-2.31 70
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCHycDEZCkKN40op4RAnqlAKCw3pnunQMcGs5+pkBIKMg6dRCb1ACeKNj7
-L7feBn5hJkQ8lDkBsOy2o9k=
-=1dvn
+iD8DBQFCOrJYEZCkKN40op4RAuF8AJ47PH3a3E6GZ/mzLXg6Ep2cyfecnACggOGg
+Tric52XZpOwhSIYyXs9qvFM=
+=FUdv
 -----END PGP SIGNATURE-----
