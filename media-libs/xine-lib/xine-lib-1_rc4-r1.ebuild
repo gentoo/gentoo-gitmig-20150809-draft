@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc4-r1.ebuild,v 1.7 2004/06/21 04:58:06 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc4-r1.ebuild,v 1.8 2004/06/23 12:57:25 vapier Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/xine/${PN}-${PV/_/-}${MY_PKG_SUFFIX}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="1"
-KEYWORDS="x86 ppc hppa ~sparc amd64 -ia64 ~alpha"
+KEYWORDS="x86 ppc ~sparc ~alpha hppa amd64 -ia64"
 IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa gnome sdl speex theora ipv6"
 
 RDEPEND="oggvorbis? ( media-libs/libvorbis )
@@ -81,6 +81,7 @@ src_compile() {
 	filter-flags -maltivec -mabi=altivec -fstack-protector
 	filter-flags -fPIC
 	filter-flags -fforce-addr
+	[ "`gcc-fullversion`" == "3.4.0" ] && append-flags -fno-web #49509
 
 	# fix build errors with sse2
 	if use x86 ; then
