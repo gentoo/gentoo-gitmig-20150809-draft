@@ -23,9 +23,9 @@ src_compile() {
 	./configure --host=${CHOST} \
 				--prefix=/usr \
 				--mandir=/usr/share/man \
-	# threading is not recommended as it breaks some packages 
-	#			--enable-threads 
 				|| die
+	# threading is not recommended as it breaks some packages 
+	#			--enable-threads \
 				
 	emake CFLAGS="${CFLAGS}" || die
 
