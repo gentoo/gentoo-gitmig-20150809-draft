@@ -3,13 +3,13 @@ Hash: SHA1
 
 MD5 896b0d0e01e0ec17d53ae33ddb1b537d coldplug-20040920.ebuild 843
 MD5 075d5a933d6175160a02ddf15bd4f454 metadata.xml 260
-MD5 53d817dd05494ff0add38242b3f49cb4 ChangeLog 871
-MD5 d5b334c2e03c92784a6b526ff05aa84c files/coldplug.rc 698
+MD5 bf389cf5301ddba637cbd7cb6184522d ChangeLog 982
+MD5 84f35322799b9d850051ed12b17a1f11 files/coldplug.rc 692
 MD5 6038bb8c3af43a0e6f0aa876e4307df6 files/digest-coldplug-20040920 69
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBVGCyI1lqEGTUzyQRAgXjAJ9dbScsdj9yIFNVwt6kbsDb789K+ACgnIKr
-JCum1h57snk44lJWXv9Sl2c=
-=SQwR
+iD8DBQFBWMN/I1lqEGTUzyQRAtRsAJ9Oib9D4QsiUlr5nH9wPPNpNsbWMQCfVC/i
+9yNh7QatSbdPaF3v4tp7DjI=
+=1dpq
 -----END PGP SIGNATURE-----

@@ -1,4 +1,14 @@
-MD5 0f2565030fae22bb0ede00746077e0f7 ChangeLog 446
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ea7742e85ac7f0789676b46f7eb11581 ChangeLog 543
 MD5 aa50ecdd0ce20833ba71e846ec861028 pcfclock-0.44.ebuild 852
 MD5 7481cda919930a3db6d92e0b4ab47420 files/digest-pcfclock-0.44 64
 MD5 b60ea900b74d4f577955d7bbe079a376 files/pcfclock.modules.d 127
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBWMRqI1lqEGTUzyQRAhe1AKCzyB8nWFEjK2xrRiTxu9pDPWgnMACgsjEU
+88R9i40azNlydFdWfQ/pTms=
+=36rl
+-----END PGP SIGNATURE-----
