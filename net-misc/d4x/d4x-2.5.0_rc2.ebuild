@@ -1,15 +1,17 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.4.1.ebuild,v 1.6 2003/09/05 22:01:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.5.0_rc2.ebuild,v 1.1 2004/02/04 18:34:05 liquidx Exp $
 
 IUSE="nls esd gnome oss kde"
+
+inherit eutils
 
 S="${WORKDIR}/${P/_}"
 DESCRIPTION="GTK based download manager for X."
 SRC_URI="http://www.krasu.ru/soft/chuchelo/files/${P/_}.tar.gz"
 HOMEPAGE="http://www.krasu.ru/soft/chuchelo/"
 
-KEYWORDS="x86"
+KEYWORDS="~x86"
 SLOT="0"
 LICENSE="Artistic"
 
@@ -27,6 +29,10 @@ src_unpack() {
 	cp configure configure.orig
 	sed -e "s:CXXFLAGS=\"-O2\":CXXFLAGS=\"${CXXFLAGS}\":g;s:OPTFLAGS=\"-O2\":OPTFLAGS=\"\":g" \
 		configure.orig >configure
+
+	# Fix a miscompile with gcc-3.2.2 and CFLAGS="-O2"
+	# <azarah@gentoo.org> (30 Mar 2003)
+	#epatch ${FILESDIR}/${PN}-2.4.1-fix-statusbar-crash.patch
 }
 
 src_compile() {
