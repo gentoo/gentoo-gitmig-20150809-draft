@@ -1,8 +1,9 @@
 # ChangeLog for net-analyzer/rrdtool
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.22 2003/09/01 10:29:32 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/ChangeLog,v 1.23 2003/09/01 13:51:29 aliz Exp $
 
-  01 Sep 2003; Daniel Ahlberg <aliz@gentoo.org> rrdtool-1.0.42-r2 :
+  01 Sep 2003; Daniel Ahlberg <aliz@gentoo.org> rrdtool-1.0.42-r2.ebuild, rrdtool-1.0.40-r1.ebuild,
+						rrdtool-1.0.45.ebuild :
   If neither perl or tcltk are enabled pkg_setup will fail becuse the last use check returns 1.
 
 *rrdtool-1.0.45 (30 Jul 2003)
