@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <foser@gentoo.org> (15 Dec 2003)
+# abi-1.0 mask pending removal
+=app-office/abiword-1*
+
 # <usata@gentoo.org> (14 Dec 2003)
 # experimental XIM support. Bug 33123
 >=app-i18n/im-ja-0.9_alpha20031109
