@@ -4,3 +4,4 @@ slotmove >=media-libs/libsidplay-2.0 0 2
 move dev-python/wxPython dev-python/wxpython
 slotmove <=app-editors/emacs-21.3-r3 0 21.3
 slotmove <=app-editors/emacs-21.3-r3 21 21.3
+move net-im/guifications x11-plugins/guifications
