@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/aranym/aranym-0.8.6_beta.ebuild,v 1.5 2004/06/27 23:00:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/aranym/aranym-0.8.6_beta.ebuild,v 1.6 2004/06/30 03:10:33 agriffis Exp $
 
 inherit flag-o-matic
 
@@ -14,12 +14,13 @@ SRC_URI="mirror://sourceforge/aranym/${PN}-0.8.6beta.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~ppc ~x86"
-IUSE="sdl"
+IUSE="opengl"
 
 DEPEND="media-libs/libsdl
 	games-emulation/emutos
 	app-arch/unzip
-	opengl? ( virtual/opengl )"
+	opengl? ( virtual/opengl )
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack "${PN}-0.8.6beta.tar.gz"
