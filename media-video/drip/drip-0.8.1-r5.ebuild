@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/drip/drip-0.8.1-r5.ebuild,v 1.4 2002/10/04 05:55:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/drip/drip-0.8.1-r5.ebuild,v 1.5 2003/02/13 13:24:50 vapier Exp $
 
 AF_MINOR_VER="$(avifile-config --data-dir | cut -d. -f2)"
 S=${WORKDIR}/${P}

@@ -1,6 +1,6 @@
-# Copyright 2003 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/aatv/aatv-0.2.ebuild,v 1.1 2003/02/12 06:23:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/aatv/aatv-0.2.ebuild,v 1.2 2003/02/13 13:23:12 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="watch TV on a text console rendered by aalib"

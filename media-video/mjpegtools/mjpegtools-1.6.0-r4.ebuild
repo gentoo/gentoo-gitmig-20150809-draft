@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.0-r4.ebuild,v 1.1 2002/11/15 02:52:25 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.0-r4.ebuild,v 1.2 2003/02/13 13:29:20 vapier Exp $
 
 IUSE="sse arts gtk mmx sdl X quicktime 3dnow avi"
 

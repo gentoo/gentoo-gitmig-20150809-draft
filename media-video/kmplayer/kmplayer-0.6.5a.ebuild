@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.6.5a.ebuild,v 1.2 2003/02/02 04:32:09 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kmplayer/kmplayer-0.6.5a.ebuild,v 1.3 2003/02/13 13:28:03 vapier Exp $
 
 inherit kde-base
 need-kde 3.1

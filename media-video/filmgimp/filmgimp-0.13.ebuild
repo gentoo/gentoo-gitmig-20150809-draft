@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/filmgimp/filmgimp-0.13.ebuild,v 1.1 2003/01/15 15:26:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/filmgimp/filmgimp-0.13.ebuild,v 1.2 2003/02/13 13:26:11 vapier Exp $
 
 DESCRIPTION="motion picture editing tool used for painting and retouching of movies"
 SRC_URI="mirror://sourceforge/filmgimp/${P}.tar.gz"

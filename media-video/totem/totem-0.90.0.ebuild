@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.90.0.ebuild,v 1.2 2003/02/08 19:52:01 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.90.0.ebuild,v 1.3 2003/02/13 13:35:21 vapier Exp $
 
 inherit gnome2
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.27.20030122-r1.ebuild,v 1.5 2003/02/07 21:40:49 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.7.27.20030122-r1.ebuild,v 1.6 2003/02/13 13:23:47 vapier Exp $
 
 IUSE="static freetype xv sdl oss dvd mmx sse 3dnow zlib oggvorbis X qt"
 

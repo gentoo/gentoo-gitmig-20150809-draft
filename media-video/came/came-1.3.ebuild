@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/came/came-1.3.ebuild,v 1.1 2003/02/10 05:01:01 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/came/came-1.3.ebuild,v 1.2 2003/02/13 13:24:11 vapier Exp $
 
 S=${WORKDIR}/camE-${PV}
 DESCRIPTION="camE is a rewrite of the xawtv webcam app, which adds imlib2 support and a lot of new features"

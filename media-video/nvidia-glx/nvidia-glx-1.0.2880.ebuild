@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.2880.ebuild,v 1.9 2002/12/09 04:26:14 manson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.2880.ebuild,v 1.10 2003/02/13 13:31:29 vapier Exp $
 
 NV_V=${PV/1.0./1.0-}
 NV_PACKAGE=NVIDIA_GLX-${NV_V}
