@@ -1,27 +1,27 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9fce23dae9bbf9830415c0e5b09a9c0b ChangeLog 8804
-MD5 5f4d3c6362a343092a7239210559dbf5 freetype-1.3.1-r3.ebuild 2740
-MD5 45ff4ae66d0609aeff8cda85b0394f4c freetype-2.1.9.ebuild 1701
-MD5 d3edad981b35fcdfd6992bb24b15778d freetype-2.1.5-r1.ebuild 1473
-MD5 e72cfba59b50b3c8a40f2ec01e8650cb freetype-2.1.5.ebuild 1272
-MD5 2ec9bf7eae18a7ce6f4322816ed8d2a9 freetype-2.1.7.ebuild 1468
-MD5 68a04e23ccfb7971cff8ce012aee659c metadata.xml 221
 MD5 4dbebd96e579670bc4b2b5a90691c523 freetype-1.3.1-r4.ebuild 3086
-MD5 10bd432787c1a182edece351dbf82809 files/config.mk 1240
+MD5 72a7eb600a714a58bdcd10a80dccc242 freetype-2.1.5-r1.ebuild 1467
+MD5 c3d550351f40132383ca82d9ab967df1 freetype-2.1.5.ebuild 1266
+MD5 2ec9bf7eae18a7ce6f4322816ed8d2a9 freetype-2.1.7.ebuild 1468
+MD5 45ff4ae66d0609aeff8cda85b0394f4c freetype-2.1.9.ebuild 1701
+MD5 9fce23dae9bbf9830415c0e5b09a9c0b ChangeLog 8804
+MD5 68a04e23ccfb7971cff8ce012aee659c metadata.xml 221
+MD5 5f4d3c6362a343092a7239210559dbf5 freetype-1.3.1-r3.ebuild 2740
 MD5 d42207bb27a2046e454b706339adaa25 files/digest-freetype-1.3.1-r3 136
-MD5 29bbc2c883bf52623f42dd235cd23fd6 files/digest-freetype-2.1.9 132
+MD5 d42207bb27a2046e454b706339adaa25 files/digest-freetype-1.3.1-r4 136
 MD5 4889d3ad3f18d1c357b3d707c7b71f1c files/digest-freetype-2.1.5 67
 MD5 4889d3ad3f18d1c357b3d707c7b71f1c files/digest-freetype-2.1.5-r1 67
 MD5 e311f2a688631e2869cd5fdb025a1862 files/digest-freetype-2.1.7 132
-MD5 d42207bb27a2046e454b706339adaa25 files/digest-freetype-1.3.1-r4 136
+MD5 29bbc2c883bf52623f42dd235cd23fd6 files/digest-freetype-2.1.9 132
+MD5 10bd432787c1a182edece351dbf82809 files/config.mk 1240
 MD5 eea0ebe9b39158ab0fa0b131c284930f files/2.1/freetype-2.1.5-autohint-cjkfonts-20031105.patch 65828
 MD5 e3d7a7456563597bb3ec82b4e7f6627c files/2.1/freetype-2.1.7-autohint-cjkfonts-20031130.patch 65589
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.2.4 (Darwin)
 
-iD8DBQFBchVUVWNWqTUmv+0RApHLAJ9eZ6ypfDE7TmOiKw6S9CbehPk+HgCaA88Y
-IIsFMpZLx9qEDFA1YHmTkd4=
-=C2FX
+iD8DBQFBehc4VWNWqTUmv+0RAjoaAKCi0tpr8bhxPePHvtQGIlmfHn4WqgCgkeic
+v0AzwhvD4xVPu+r9EuYEAys=
+=HyaO
 -----END PGP SIGNATURE-----
