@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-sci/euler/euler-1.60.6.ebuild,v 1.2 2002/12/07 05:58:58 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/euler/euler-1.60.6.ebuild,v 1.3 2002/12/14 18:31:47 mkennedy Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://euler.sf.net"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ppc sparc"
 
 DEPEND="virtual/glibc
 	virtual/x11
@@ -22,23 +22,20 @@ DEPEND="virtual/glibc
 
 src_unpack() {
 	unpack ${P}.tar.gz
-	#mv euler-1.60 ${P}
 
 	cd ${S}/source
 	mv main.c main.c.orig
 	cat main.c.orig | \
 	sed -e "s:share/euler/docs/index.html:share/doc/${P}/html/index.html:" \
-	> main.c
+		> main.c
 }
 
 src_compile() {
-
 	cd ${S}/source
 	emake INSTALL_DIR=/usr || die
 }
 
 src_install () {
-
 	cd ${S}/source
 	dodir usr usr/share usr/bin
 	make INSTALL_DIR=${D}/usr install || die

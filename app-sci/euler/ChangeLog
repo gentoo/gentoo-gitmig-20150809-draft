@@ -1,6 +1,13 @@
 # ChangeLog for app-sci/euler
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/euler/ChangeLog,v 1.3 2002/12/07 05:58:57 jmorgan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/euler/ChangeLog,v 1.4 2002/12/14 18:31:47 mkennedy Exp $
+
+*euler-1.60.6 (14 Dec 2002)
+  
+  14 Dec 2002; Matthew Kennedy <mkennedy@gentoo.org> euler-1.60.6.ebuild,
+  ChangeLog : 
+
+  Move to stable profile on account of bug #1162, comment #3.
 
 *euler-1.60.6 (07 Nov 2002)
   
