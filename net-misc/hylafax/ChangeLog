@@ -1,6 +1,15 @@
 # ChangeLog for net-misc/hylafax
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.9 2002/09/11 15:50:16 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.10 2002/10/25 19:44:38 raker Exp $
+
+*hylafax-4.1.5 (25 Oct 2002)
+
+  25 Oct 2002; Nick Hadaway <raker@gentoo.org> hylafax-4.1.5.ebuild,
+  files/digest-hylafax-4.1.5 :
+  Version bump.  See http://www.hylafax.org/4.1.5.html for release
+  info.  Most notably, an important issue with faxgetty has been
+  resolved.  Also changed the ebuild to correct the install location
+  of html docs.  Currently marked unstable.
 
 *hylafax-4.1.3 (12 Aug 2002)
 
