@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-libs/lcrzo/lcrzo-4.06.ebuild,v 1.1 2002/03/20 08:21:11 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/lcrzo/lcrzo-4.07.ebuild,v 1.1 2002/04/03 09:42:56 woodchip Exp $
 
 DESCRIPTION="Library of Ethernet, IP, UDP, TCP, ICMP, ARP and RARP protocols"
 HOMEPAGE="http://www.laurentconstantin.com/en/lcrzo/"
@@ -27,19 +27,19 @@ src_unpack() {
 
 	# plug in our CFLAGS and make it install into ${D}...
 	mv Makefile Makefile.orig
-	sed -e "s:^GCCOPT=.*:GCCOPT=${CFLAGS}:" \
-		-e "s:^GCCOPTL=.*:GCCOPTL=${CFLAGS}:" \
-		-e "s:^GCCOPTP=.*:GCCOPTP=${CFLAGS}:" \
-		-e "s:^INSTINCLUDE=:INSTINCLUDE=${D}:" \
-		-e "s:^INSTLIB=:INSTLIB=${D}:" \
-		-e "s:^INSTBIN=:INSTBIN=${D}:" \
-		-e "s:^INSTMAN1=:INSTMAN1=${D}:" \
-		-e "s:^INSTMAN3=:INSTMAN3=${D}:" \
+	sed -e "s:^\(GCCOPT=\).*:\1${CFLAGS}:" \
+		-e "s:^\(GCCOPTL=\).*:\1${CFLAGS}:" \
+		-e "s:^\(GCCOPTP=\).*:\1${CFLAGS}:" \
+		-e "s:^\(INSTINCLUDE=\):\1${D}:" \
+		-e "s:^\(INSTLIB=\):\1${D}:" \
+		-e "s:^\(INSTBIN=\):\1${D}:" \
+		-e "s:^\(INSTMAN1=\):\1${D}:" \
+		-e "s:^\(INSTMAN3=\):\1${D}:" \
 		Makefile.orig > Makefile
 }
 
 src_compile() {
-	make -C src || die "compile problem :("
+	make -C src || die "compile problem"
 }
 
 src_install() {
