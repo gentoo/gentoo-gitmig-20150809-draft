@@ -1,10 +1,15 @@
 # ChangeLog for sys-kernel/pfeifer-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pfeifer-sources/ChangeLog,v 1.16 2003/09/20 23:05:07 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pfeifer-sources/ChangeLog,v 1.17 2003/09/21 04:10:18 iggy Exp $
 
   TODO:
 	update FreeSWAN, aic7xxx
 	update some of the docs
+
+*pfeifer-sources-2.4.22-r2 (20 Sep 2003)
+
+  20 Sep 2003; <iggy@gentoo.org> pfeifer-sources-2.4.22-r2.ebuild:
+  this is what -r1 was supposed to be
 
   20 Sep 2003; <iggy@gentoo.org> :
   some ck badness, updated the ck patch, thnx tribunal
