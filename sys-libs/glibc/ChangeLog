@@ -1,6 +1,19 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.194 2004/06/19 13:34:40 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.195 2004/06/20 23:19:54 azarah Exp $
+
+*glibc-2.3.4.20040619 (20 Jun 2004)
+
+  20 Jun 2004; Martin Schlemmer <azarah@gentoo.org>
+  +glibc-2.3.4.20040619.ebuild:
+  Update snapshot to 20040619. Add BRANCH_UPDATE support back, as it appears
+  there will be again official releases, and the snapshot is much less to
+  download for future updates to 2.3.4 ... It should be noted that
+  non-branch-update support was not tested fully, so there might be bugs on next
+  stable upstream release. Also add back testing of linux-headers version, as
+  well as kernel version for NPTL support. Remove stale info pages, else we have
+  ~40 unused files installed. Generate updated manpages tarball, and move it to
+  mirrors rather.
 
   19 Jun 2004; <malc@gentoo.org> glibc-2.3.4.20040605.ebuild:
   Mark stable for release on amd64. Complaints to lv@gentoo.org, he made me do it ;-) 
