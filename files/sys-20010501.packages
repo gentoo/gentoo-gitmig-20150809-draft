@@ -26,7 +26,7 @@
 ./sys-apps/ed/ed-0.2-r1.ebuild
 ./sys-apps/eject/eject-2.0.2.ebuild
 ./sys-apps/file/file-3.33-r2.ebuild
-./sys-apps/fileutils/fileutils-4.1.ebuild
+./sys-apps/fileutils/fileutils-4.1-r1.ebuild
 ./sys-apps/findutils/findutils-4.1-r5.ebuild
 ./sys-apps/gawk/gawk-3.0.6-r3.ebuild
 ./sys-apps/gluelog/gluelog-1.0-r2.ebuild
