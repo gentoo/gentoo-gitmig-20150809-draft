@@ -25,7 +25,7 @@ src_compile() {
     then
       myconf="$myconf --enable-mitshm"
     fi
-    try CXXFLAGS=\"-I/usr/X11R6/include $CXXFLAGS\" ./configure --prefix=${KDEDIR} --host=${CHOST} $myconf
+    try CXXFLAGS="-I/usr/X11R6/include $CXXFLAGS" ./configure --prefix=${KDEDIR} --host=${CHOST} $myconf
     try make
 
 }

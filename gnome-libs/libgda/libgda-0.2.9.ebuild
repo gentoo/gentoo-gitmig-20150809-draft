@@ -44,7 +44,7 @@ src_compile() {
   fi
   
   try  ./configure --host=${CHOST} --prefix=/opt/gnome --sysconfdir=/etc/opt/gnome $myconf
-  try make LDFLAGS=\"-lncurses\" LIBREADLINE=\"-lreadline -lncurses\"  # Doesn't work with -j 4 (hallski)
+  try make LDFLAGS="-lncurses" LIBREADLINE="-lreadline -lncurses"  # Doesn't work with -j 4 (hallski)
 }
 
 src_install() {

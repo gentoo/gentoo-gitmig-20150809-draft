@@ -25,7 +25,7 @@ src_compile() {
     then
       myconf="$myconf --enable-mitshm"
     fi
-    try CFLAGS=\"$CFLAGS\" ./configure --prefix=$KDEDIR --host=${CHOST} \
+    try CFLAGS="$CFLAGS" ./configure --prefix=$KDEDIR --host=${CHOST} \
 		--with-qt-dir=$QTBASE $myconf
     try make
 }

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-0.7.14.ebuild,v 1.3 2001/06/11 08:11:28 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-0.7.14.ebuild,v 1.4 2001/08/11 04:34:35 drobbins Exp $
 
 A="abi-${PV}.tar.gz abidistfiles-${PV}.tar.gz expat-${PV}.tar.gz psiconv-${PV}.tar.gz
    unixfonts-${PV}.tar.gz wv-${PV}.tar.gz"
@@ -44,13 +44,13 @@ src_compile() {
   cd ${S}
 
   # Doesn't work with -j 4 (hallski)
-  try make prefix=/opt/gnome/ UNIX_CAN_BUILD_STATIC=0 $myconf OPTIMIZER=\"$CFLAGS\"
+  try make prefix=/opt/gnome/ UNIX_CAN_BUILD_STATIC=0 $myconf OPTIMIZER="$CFLAGS"
 
 }
 
 src_install() {
-
-  try make prefix=${D}/opt/gnome  UNIX_CAN_BUILD_STATIC=0 $myconf OPTIMIZER=\"$CFLAGS\" install
+	#do you really need the OPTIMIZER var below? -- DR
+  try make prefix=${D}/opt/gnome  UNIX_CAN_BUILD_STATIC=0 $myconf OPTIMIZER="$CFLAGS" install
   cp ${D}/opt/gnome/AbiSuite/bin/AbiWord AbiWord.orig
   sed -e "s:${D}::" AbiWord.orig > ${D}/opt/gnome/AbiSuite/bin/AbiWord
   cd ${D}/opt/gnome/bin
