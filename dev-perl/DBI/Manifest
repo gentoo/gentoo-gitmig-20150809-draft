@@ -1,4 +1,4 @@
-MD5 13db4d67d500b57b5a6e56ef126adf23 ChangeLog 3376
+MD5 5509577a63ae5e1f41fecd81b25ee386 ChangeLog 3500
 MD5 5f50dc122c0e5aa88f957be4e02d5810 DBI-1.21-r1.ebuild 554
 MD5 3c02eea33ccd1339acccb92acc43738e DBI-1.21.ebuild 552
 MD5 1aefe3f2880daf889b88ac04bf622ce0 DBI-1.30-r1.ebuild 581
@@ -7,6 +7,7 @@ MD5 8cbc8bf5b9059f8bd943b879475c7860 DBI-1.32.ebuild 555
 MD5 f5515ff73ade0e4fecfff702f65bf021 DBI-1.37.ebuild 556
 MD5 126d1842f39e146eef5e5375cd9fd12d DBI-1.38.ebuild 555
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 7225ca9f8354af71d41e883f5dc62215 DBI-1.42.ebuild 582
 MD5 5c1a1c7dd060be231a97a5bb2f77b1b0 files/digest-DBI-1.21 60
 MD5 5c1a1c7dd060be231a97a5bb2f77b1b0 files/digest-DBI-1.21-r1 60
 MD5 d04d31e4e0ff867a0e374f611870f573 files/digest-DBI-1.30 60
@@ -14,3 +15,4 @@ MD5 d04d31e4e0ff867a0e374f611870f573 files/digest-DBI-1.30-r1 60
 MD5 c87954deeaba231f7a3f03e2aa68e8da files/digest-DBI-1.32 118
 MD5 23839223cddac45582e44b00462c279a files/digest-DBI-1.37 60
 MD5 15f938f674832cfacebcbe4846157499 files/digest-DBI-1.38 60
+MD5 732cdd79b1b2ec01fd3f4c627a4201cb files/digest-DBI-1.42 60
