@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ncftp-3.1.5.ebuild,v 1.9 2003/05/04 13:33:57 seo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/ncftp/ncftp-3.1.5.ebuild,v 1.10 2003/06/01 19:21:55 mholzer Exp $
 
 IUSE="cjk"
 S=${WORKDIR}/${P}
@@ -25,6 +25,6 @@ src_install() {
 	dodir /usr/share
 	einstall || die
 
-	dodoc CHANGELOG FIREWALL-PROXY-README LICENSE.txt
-	dodoc READLINE-README README WHATSNEW-3.0
+	dodoc README.txt doc/*.txt
+	dohtml doc/html/*.html 
 }
