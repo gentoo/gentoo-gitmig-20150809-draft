@@ -1,0 +1,9 @@
+# ChangeLog for dev-ruby/uconv
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/uconv/ChangeLog,v 1.1 2003/04/23 14:59:04 twp Exp $
+
+*uconv-0.4.11 (23 Apr 2003)
+
+  23 Apr 2003; Tom Payne <twp@gentoo.org> uconv-0.4.11.ebuild :
+
+  Initial version.
