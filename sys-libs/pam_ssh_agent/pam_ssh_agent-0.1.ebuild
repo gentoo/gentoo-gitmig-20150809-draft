@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam_ssh_agent/pam_ssh_agent-0.1.ebuild,v 1.2 2004/03/01 08:14:48 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam_ssh_agent/pam_ssh_agent-0.1.ebuild,v 1.3 2004/03/01 08:18:39 mr_bones_ Exp $
 
 inherit gcc
 
@@ -9,10 +9,14 @@ HOMEPAGE="http://pam-ssh-agent.sourceforge.net/"
 SRC_URI="mirror://sourceforge/pam-ssh-agent/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
-DEPEND="pam"
+KEYWORDS="~x86"
+SLOT="0"
+IUSE=""
+
+DEPEND="sys-libs/pam
+	>=sys-apps/sed-4"
 RDEPEND="net-misc/keychain
 	dev-tcltk/expect"
-KEYWORDS="~x86"
 
 src_unpack() {
 	unpack ${A}
