@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.22 2002/10/25 19:55:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cvs.eclass,v 1.23 2002/11/01 10:54:42 danarmak Exp $
 # This eclass provides the generic cvs fetching functions.
 
 ECLASS=cvs
@@ -36,10 +36,14 @@ INHERITED="$INHERITED $ECLASS"
 # other settings
 [ -z "$ECVS_SERVER" ] && ECVS_SERVER="offline"
 
+# Anonymous cvs login?
+# if 'yes' uses :pserver: with empty password, if 'no' uses :ext: with $ECVS_PASS, other values not allowed
+[ -z "$ECVS_ANON" ] && ECVS_ANON="yes"
+
 # Username to use
 [ -z "$ECVS_USER" ] && ECVS_USER="anonymous"
 
-# Password to use (NOT (YET) SUPPORTED, because cvs doesn't store passwords in plaintext in .cvspass)
+# Password to use if anonymous login is off
 [ -z "$ECVS_PASS" ] && ECVS_PASS=""
 
 # Module to be fetched, must be set explicitly -
@@ -58,7 +62,7 @@ INHERITED="$INHERITED $ECLASS"
 # --- end ebuild-configurable settings ---
 
 # add cvs to deps
-DEPEND="$DEPEND dev-util/cvs"
+DEPEND="$DEPEND dev-util/cvs dev-python/pexpect"
 
 # since we now longer have src_fetch as a redefinable ebuild function,
 # we are forced to call this function from cvs_src_unpack
@@ -71,6 +75,7 @@ ECVS_CVS_COMMAND=$ECVS_CVS_COMMAND
 ECVS_CVS_OPTIONS=$ECVS_CVS_OPTIONS
 ECVS_TOP_DIR=$ECVS_TOP_DIR
 ECVS_SERVER=$ECVS_SERVER
+ECVS_ANON=$ECVS_ANON
 ECVS_USER=$ECVS_USER
 ECVS_PASS=$ECVS_PASS
 ECS_MODULE=$ECVS_MODULE
@@ -130,7 +135,10 @@ DIR=$DIR"
 	# we make sure a CVS/ dir exists in our module subdir with the right
 	# Root and Repository entries in it and cvs update.
 	
-	newserver=":pserver:${ECVS_USER}@${ECVS_SERVER}"
+	[ "${ECVS_ANON}" == "yes" ] && \
+		newserver=":pserver:${ECVS_USER}@${ECVS_SERVER}" || \
+		newserver=":ext:${ECVS_USER}@${ECVS_SERVER}" 
+		
 	
 	# CVS/Repository files can't (I think) contain two concatenated slashes
 	if [ -n "$ECVS_SUBDIR" ]; then
@@ -197,7 +205,46 @@ DIR=$DIR"
 	debug-print "$FUNCNAME: is in dir `/bin/pwd`"
 	debug-print "$FUNCNAME: running $ECVS_CVS_COMMAND update $ECVS_CVS_OPTIONS with $ECVS_SERVER for module $ECVS_MODULE subdir $ECVS_SUBDIR"
 	einfo "Running $ECVS_CVS_COMMAND update $ECVS_CVS_OPTIONS with $ECVS_SERVER for $ECVS_MODULE/$ECVS_SUBDIR..."
-	$ECVS_CVS_COMMAND update $ECVS_CVS_OPTIONS || die "died running cvs update"
+
+	if [ "${ECVS_ANON}" == "no" ]; then
+	
+		debug-print "$FUNCNAME: starting non-anonymous cvs login..."
+		# CVS Login - written in python :: the right way ;)
+		# Tilman Klar, <phoenix@gentoo.org>
+
+		export CVS_RSH="/usr/bin/ssh"
+
+############################## inline-python #####################################
+/usr/bin/env python << EndOfFile
+
+import pexpect,os
+
+mypasswd  = "${ECVS_PASS}"
+mytimeout = 10
+
+mycommand = "${ECVS_CVS_COMMAND} update ${ECVS_CVS_OPTIONS}"
+child = pexpect.spawn(mycommand)
+
+index = child.expect(['continue connecting','word:'], mytimeout)
+if index == 0:
+	child.sendline('yes')
+	## Added server to ~/.ssh/known_hosts
+	child.expect('word:', mytimeout)
+else:
+	## Server already is in ~/.ssh/known_hosts
+	pass
+
+child.sendline(mypasswd)
+child.expect(pexpect.EOF)
+
+EndOfFile
+########################### End of inline-python ##################################
+	else
+		debug-print "$FUNCNAME: using anonymous cvs login"
+		$ECVS_CVS_COMMAND update $ECVS_CVS_OPTIONS || die "died running cvs update"
+	fi
+
+
 
 }
 
