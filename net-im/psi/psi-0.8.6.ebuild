@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.8.6.ebuild,v 1.6 2002/10/05 05:39:21 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/psi-0.8.6.ebuild,v 1.7 2002/10/29 07:44:47 vapier Exp $
 
 IUSE="ssl"
 
@@ -18,8 +18,13 @@ KEYWORDS="x86 ppc"
 DEPEND=">=x11-libs/qt-3
 	ssl? ( >=dev-libs/openssl-0.9.6c )"
 
+pkg_setup() {
+	# xfree should not install these, remove until the fixed
+	# xfree is in main use.
+	rm -f /usr/X11R6/include/{zconf.h,zlib.h}
+}
+
 src_compile() {
-	
 	export QTDIR="${QTDIR}"
 	export QMAKESPEC="linux-g++"
 	cd ${S}/src
@@ -36,14 +41,12 @@ src_compile() {
 }
 
 src_install() {
-
 	# We do not use the ./install method, we do it manually ##
-	
+
 	export PSIDIR=/usr/share/psi
-	
-	mkdir -p ${D}/usr/bin
-	mkdir -p ${D}/usr/share/psi
-	#mkdir -p ${D}/usr/share/psi/iconsets
+
+	dodir /usr/bin
+	dodir /usr/share/psi/iconsets
 
 	cd ${S}
 	cp -rf ./image ${D}/usr/share/psi/
@@ -60,5 +63,4 @@ src_install() {
 	cp README ${D}/usr/share/psi/
 	cp COPYING ${D}/usr/share/psi/
 	ln -sf /usr/share/psi/psi ${D}/usr/bin/psi
-
 }

@@ -1,33 +1,32 @@
 # ChangeLog for net-im/psi
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.5 2002/09/14 17:43:30 owen Exp $
-
-  25 Aug 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
-
-  Change qt dep to >= so that qt-5, the cvs ebuilds, can satisfy it. It will be ok
-  until qt 4.x is released; we should have slot-dependencies working before then.
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.6 2002/10/29 07:44:47 vapier Exp $
 
 *psi-0.8.6 (9 July 2002)
+
+  28 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Added pkg_setup fix for #9663
+
+  25 Aug 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+  Change qt dep to >= so that qt-5, the cvs ebuilds, can satisfy it. It will be ok
+  until qt 4.x is released; we should have slot-dependencies working before then.
 
   14 Sep 2002; Owen Stampflee <owen@gentoo.org> :
   Added PPC to KEYWORDS.
 
   9 July 2002; Bart Verwilst <verwilst@gentoo.org> ChangeLog :
-
   Emoticons, finally! Proxy support, .... Long Changelog on the site, 
   check it out..
 
 *psi-0.8.5 (1 April 2002)
 
   1 April 2002; Bart Verwilst <verwilst@gentoo.org> ChangeLog :
-
   0.8.5 works, had to change the sed command from 0.8.4... New stuff are 
   profiles, new iconsets, sounds, and some bugfixes..
 
 *psi-0.8.4 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
