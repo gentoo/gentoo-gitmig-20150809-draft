@@ -2,8 +2,9 @@ MD5 6d46998813f2d56c90d49be112a8d2ed aa-sources-2.4.21_rc8-r1.ebuild 1099
 MD5 d468fae9c47da7d838e1f15720764698 aa-sources-2.4.21_rc4-r1.ebuild 1099
 MD5 0bcf85041b4378294617b860a49047ec aa-sources-2.4.22-r1.ebuild 2162
 MD5 6d701ca6c0c9a9be612250adb9ccc6b8 aa-sources-2.4.21_rc2-r1.ebuild 1099
-MD5 5d4effda7da739d1af70a3447eac9ca4 aa-sources-2.4.23_pre6-r3.ebuild 2290
-MD5 c3264aba246d6ebc1e8227d6245dba83 ChangeLog 2612
+MD5 fc2eee9c846712a7304d67cec1550fca aa-sources-2.4.23_pre6-r3.ebuild 2290
+MD5 74a728768d7fbd79b734c4384efffefa ChangeLog 2735
+MD5 399eb7607b8f1f3f597e93566b1bda7c metadata.xml 453
 MD5 fcfb3fc100621b77d191f86b66dd810a files/aa-sources-2.4.22-ide-scsi-missing-sym-fix.patch 465
 MD5 c2babe65706f8f06078eb30bd36d0cd5 files/digest-aa-sources-2.4.23_pre6-r3 197
 MD5 6d35038c9b70d9b1c75855bb70910947 files/digest-aa-sources-2.4.21_rc2-r1 195
