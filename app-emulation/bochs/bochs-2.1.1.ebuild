@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.1.1.ebuild,v 1.1 2004/02/29 03:31:13 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.1.1.ebuild,v 1.2 2004/03/07 21:11:57 lu_zero Exp $
 
 inherit eutils
 
@@ -47,6 +47,7 @@ src_compile() {
 		--enable-cpu-level=6 \
 		--enable-repeat-speedups --enable-guest2host-tlb \
 		--enable-plugins --enable-debugger \
+		--enable-ignore-bad-msr \
 		--enable-ne2000 --enable-sb16=linux --enable-slowdown --prefix=/usr \
 		--infodir=/usr/share/info --mandir=/usr/share/man --host=${CHOST} \
 		--with-x11 $myconf || \
