@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r1.ebuild,v 1.4 2004/06/12 23:32:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r1.ebuild,v 1.5 2004/06/13 14:22:06 geoman Exp $
 
 # This is a snapshot of the XORG-RELEASE-1 branch.
 
@@ -122,7 +122,7 @@ LICENSE="Adobe-X CID DEC DEC-2 IBM-X NVIDIA-X NetBSD SGI UCB-LBL XC-2
 	nokia tektronix the-open-group todd-c-miller x-truetype xfree86-1.0
 	MIT SGI-B BSD FTL | GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc alpha arm hppa"
+KEYWORDS="~x86 ~sparc alpha arm hppa ~mips"
 
 # Need portage-2.0.50_pre9 for `use !foo`
 DEPEND=">=sys-apps/baselayout-1.8.3
