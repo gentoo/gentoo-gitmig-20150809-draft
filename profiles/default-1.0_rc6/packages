@@ -127,17 +127,18 @@
 #not required, since glibc depends on linux-headers and they come with the build image
 *sys-kernel/linux-headers
 
-#these ones have rc6 specific init scripts
->=sys-apps/xinetd-2.3.3-r6
->=net-fs/samba-2.2.1a-r6
-#multiple support in portage needed for this
-#>=net-fs/samba-2.0.10-r6
->=sys-apps/at-3.1.8-r6
+#these ones have the new rc6 style init scripts
 *>=sys-apps/isapnptools-1.23-r6
->=app-admin/fcron-1.1.1-r6
 *>=sys-apps/dcron-2.7-r5
 *>=net-misc/openssh-2.9_p2-r2
 *>=sys-apps/devfsd-1.3.16-r1
+#multiple support in portage needed for this
+#>=net-fs/samba-2.0.10-r6
+>=sys-apps/xinetd-2.3.3-r6
+>=net-fs/samba-2.2.1a-r6
+>=sys-apps/at-3.1.8-r6
+>=app-admin/fcron-1.1.1-r6
 >=app-admin/metalog-0.6-r6
 >=app-admin/mon-0.38.20-r6
 >=app-admin/syslog-ng-1.4.12-r6
+>=net-www/apache-1.3.20-r6
