@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/media-sound/umix/umix-0.9.1.ebuild,v 1.2 2002/07/21 13:50:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/umix/umix-0.9.1.ebuild,v 1.3 2002/07/23 21:25:54 trance Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Program for adjusting soundcard volumes"
@@ -8,7 +8,7 @@ SRC_URI="http://www.ionstream.fi/sakari/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.ionstream.fi/sakari/umix/"
 
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 LICENSE="GPL-2"
 
 DEPEND="ncurses? ( >=sys-libs/ncurses-5.2 )
