@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.105 2005/03/25 03:01:43 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.106 2005/03/26 19:34:57 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -201,6 +201,19 @@ vim_pkg_setup() {
 		die "${PF} not supported."
 	fi
 
+	if [[ $(get_major_version ) -ge 7 ]] ; then
+		if [[ ${MY_PN} != "vim-core" ]] && use spell ; then
+			if ! built_with_use "app-editors/vim-core" spell ; then
+				echo
+				ewarn "You have asked for spell checking but did not build vim-core"
+				ewarn "with USE=\"spell\". This means you will not have any dictionary"
+				ewarn "files installed."
+				echo
+			fi
+			epause 5
+		fi
+	fi
+
 	# people with broken alphabets run into trouble. bug 82186.
 	unset LANG LC_ALL
 }
@@ -315,6 +328,7 @@ src_compile() {
 	# (2) Rebuild auto/configure
 	# (3) Notice auto/configure is newer than auto/config.mk
 	# (4) Run ./configure (with wrong args) to remake auto/config.mk
+	ebegin "Creating configure script"
 	sed -i 's/ auto.config.mk:/:/' src/Makefile || die "Makefile sed failed"
 	rm -f src/auto/configure
 	# vim-6.2 changed the name of this rule from auto/configure to autoconf
@@ -324,6 +338,7 @@ src_compile() {
 	# except it seems we actually need 2.5 now -- bug 53777
 	WANT_AUTOCONF=2.5 \
 		make -C src $confrule || die "make $confrule failed"
+	eend $?
 
 	# This should fix a sandbox violation (see bug 24447). The hvc
 	# things are for ppc64, see bug 86433.
