@@ -2,9 +2,11 @@ MD5 0b3b076a9c343e9f3c5a92121147c986 ChangeLog 1017
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 MD5 9b0866532c5779d44b4c403998470727 ruby-gnomecanvas2-0.5.0.ebuild 499
 MD5 f2225cb889d495887f128dfd7ada81b2 ruby-gnomecanvas2-0.7.0.ebuild 499
-MD5 010735a0750fdef8a499b1ba81abae2c ruby-gnomecanvas2-0.8.0.ebuild 499
+MD5 ccb6db39f4980536904ca08eb490df13 ruby-gnomecanvas2-0.8.0.ebuild 502
 MD5 8872d97c23e2b2b4ace0b1d01eaa2533 ruby-gnomecanvas2-0.8.1.ebuild 501
+MD5 d37031ce61c7da1aae98a8e20e021bc6 ruby-gnomecanvas2-0.9.1.ebuild 507
 MD5 09c1005bfdf294a6657070475a55b5ed files/digest-ruby-gnomecanvas2-0.5.0 69
 MD5 4f9c7018ce4d7fed7f075d8ec562f13f files/digest-ruby-gnomecanvas2-0.7.0 73
 MD5 f15d65d18e7816f32c3bcf8023b5835b files/digest-ruby-gnomecanvas2-0.8.0 73
 MD5 7de5312a62217022283595b441356cde files/digest-ruby-gnomecanvas2-0.8.1 73
+MD5 2b2c4fe1967f3e6d7abc0f74a6008c23 files/digest-ruby-gnomecanvas2-0.9.1 73

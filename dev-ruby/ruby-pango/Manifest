@@ -2,9 +2,11 @@ MD5 8fee16739b63b2af592d159c771c2864 ChangeLog 934
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 MD5 45524c984e727541ec6ae22d3f9b679b ruby-pango-0.5.0.ebuild 429
 MD5 1d018027a8f44f31e7ee1b229de268a2 ruby-pango-0.7.0.ebuild 429
-MD5 672d647244d45eb9d05adb5b7daeb211 ruby-pango-0.8.0.ebuild 429
+MD5 074dd6436671d73d69a89b65654d9bd2 ruby-pango-0.8.0.ebuild 432
 MD5 b52f30445d52691351a7d509d13285fe ruby-pango-0.8.1.ebuild 431
+MD5 0d19159a0b521fb872b6cebb9e56ffce ruby-pango-0.9.1.ebuild 437
 MD5 09c1005bfdf294a6657070475a55b5ed files/digest-ruby-pango-0.5.0 69
 MD5 4f9c7018ce4d7fed7f075d8ec562f13f files/digest-ruby-pango-0.7.0 73
 MD5 f15d65d18e7816f32c3bcf8023b5835b files/digest-ruby-pango-0.8.0 73
 MD5 7de5312a62217022283595b441356cde files/digest-ruby-pango-0.8.1 73
+MD5 2b2c4fe1967f3e6d7abc0f74a6008c23 files/digest-ruby-pango-0.9.1 73

@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-pango
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-pango/ChangeLog,v 1.5 2004/02/24 01:52:34 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-pango/ChangeLog,v 1.6 2004/03/18 23:38:38 agriffis Exp $
+
+*ruby-pango-0.9.1 (18 Mar 2004)
+
+  18 Mar 2004; Aron Griffis <agriffis@gentoo.org> ruby-pango-0.8.0.ebuild,
+  ruby-pango-0.9.1.ebuild:
+  Mark 0.8.0 stable on alpha, ia64 and x86.  Add version 0.9.1 for bug 44739
 
   23 Feb 2004; Lars Weiler <pylon@gentoo.org> ruby-pango-0.8.1.ebuild:
   Added ~ppc to keywords
