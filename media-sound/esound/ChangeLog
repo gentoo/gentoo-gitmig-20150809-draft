@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/esound
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.32 2004/02/01 20:32:42 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/esound/ChangeLog,v 1.33 2004/02/04 05:46:01 augustus Exp $
+
+  04 Feb 2004; <augustus@gentoo.org> esound-0.2.32-r1.ebuild,
+  files/esound-0.2.32-amd64.patch:
+  Fixed amd64 compilation. -Werror is set and there was a warning. I'm surprised
+  this doesn't affect other platforms. If so, just remove my use condition.
 
 *esound-0.2.32-r1 (01 Feb 2004)
 
