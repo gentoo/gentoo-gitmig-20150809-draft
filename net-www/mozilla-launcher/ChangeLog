@@ -1,6 +1,12 @@
 # ChangeLog for net-www/mozilla-launcher
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-launcher/ChangeLog,v 1.42 2005/03/23 18:43:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-launcher/ChangeLog,v 1.43 2005/03/23 19:10:40 agriffis Exp $
+
+  23 Mar 2005; Aron Griffis <agriffis@gentoo.org>
+  mozilla-launcher-1.28.ebuild:
+  Stabilize everywhere to prevent build/rebuild cycle since the OOo fix
+  requires application ebuild updates, and there's a security fix going out
+  now anyway
 
   23 Mar 2005; <agriffis@gentoo.org> mozilla-launcher-1.22.ebuild,
   mozilla-launcher-1.23.ebuild, mozilla-launcher-1.26.ebuild,
