@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-0.99.3-r1.ebuild,v 1.1 2002/04/12 21:29:27 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-0.99.3-r1.ebuild,v 1.2 2002/04/12 23:03:04 seemant Exp $
 
 S=${WORKDIR}/${P}/abi
 DESCRIPTION="Text processor"
@@ -72,22 +72,18 @@ src_unpack() {
 src_compile() {
 
 	local myconf
-	if [ "`use gnome`" ] ; then
-		myconf="${myconf} --with-gnome --enable-gnome"
-		export ABI_OPT_BONOBO=1
-	fi
+	use gnome	\
+		&& myconf="${myconf} --with-gnome --enable-gnome"	\
+		&& export ABI_OPT_BONOBO=1
 
-	if [ "`use perl`" ] ; then
-		myconf="${myconf} --enable-scripting"
-	fi
+	use perl	\
+		&& myconf="${myconf} --enable-scripting"
 	
-	if [ "`use spell`" ] ; then
-		myconf="${myconf} --with-pspell"
-	fi
+	use spell	\
+		&& myconf="${myconf} --with-pspell"
 
-	if [ "`use xml2`" ] ; then
-		myconf="${myconf} --with-libxml2"
-	fi
+	use xml2	\
+		&& myconf="${myconf} --with-libxml2"
 
 	./autogen.sh
 	
