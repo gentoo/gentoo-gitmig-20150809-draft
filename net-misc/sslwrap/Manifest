@@ -1,0 +1,5 @@
+MD5 158b94903172ecc9cb661f79fc2b76be ChangeLog 1384
+MD5 26cf5d8d2cf37a009e754b11b93a7030 sslwrap-2.0.5-r1.ebuild 935
+MD5 5710ea6cbcf3de36e4f45dc4274a4f59 sslwrap-2.0.6.ebuild 1060
+MD5 455ea82cafb85765e1aff23f69767f5c files/digest-sslwrap-2.0.5-r1 124
+MD5 e510f94c5cb1d70ab6da66c674c1fff3 files/digest-sslwrap-2.0.6 127

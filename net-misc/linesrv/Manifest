@@ -1,0 +1,7 @@
+MD5 b4e445aff3fd2ab6c300e8dea98b4e05 ChangeLog 957
+MD5 7f66b979e778c73a5c2a925d367a7fdc linesrv-2.1.6-r1.ebuild 1890
+MD5 fcf1fee9b36c1cd1bfb2933c4b6826e3 files/digest-linesrv-2.1.6-r1 70
+MD5 af60fe815b57d49018b9304e03bea856 files/lcshutdown.pam 395
+MD5 5a68ab066e6b1f25fb2b9b834ddf0f49 files/linecontrol.pam 421
+MD5 c1ab2d4f273fec5022a90a587f74c92a files/linesrv.conf 1283
+MD5 e68687b3fa3a02bef1fdeb070dbfcea6 files/linesrv.rc6 736

@@ -1,0 +1,6 @@
+MD5 0ab61c5054a4ae7609676992d1bdff8b ChangeLog 956
+MD5 850e131f407c989079a9af9a89f7ad15 bk2site-1.1.8-r1.ebuild 1520
+MD5 0b8bc3517b7da71a792c87cd4178eea2 bk2site-1.1.8.ebuild 990
+MD5 fcb374071ef326226a810c7a343732e1 files/digest-bk2site-1.1.8 65
+MD5 fcb374071ef326226a810c7a343732e1 files/digest-bk2site-1.1.8-r1 65
+MD5 1156516e33f0132f33b488a314a9e3ee files/ebuild.patch 7128

@@ -1,0 +1,6 @@
+MD5 76c8dbfda520651a88ae444000ff2e5d ChangeLog 496
+MD5 c9d5d561d587584b6e40ea06e215c62b fsh-1.2-r1.ebuild 851
+MD5 c8523794d207fe89157334943af3cc08 fsh-1.2.ebuild 681
+MD5 b784b126706d26f48759c60d6b2a5c45 files/digest-fsh-1.2 59
+MD5 b784b126706d26f48759c60d6b2a5c45 files/digest-fsh-1.2-r1 59
+MD5 2822dfff6a02066868da8c3ab1ccc775 files/fsh-1.2-fcpwrap.patch 460

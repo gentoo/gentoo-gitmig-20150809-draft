@@ -1,0 +1,5 @@
+MD5 b285e33b14d76f60366e399bb010beaf ChangeLog 587
+MD5 dd524585cd340e481fb086e956e6aa02 linux-igd-0.75.ebuild 1343
+MD5 d558a748e7a1149c2afdf329e5c24a73 files/digest-linux-igd-0.75 60
+MD5 3e13c42283a75a030090b2c87ff2fe65 files/rc_upnpd 601
+MD5 09036e3385f54dd26f318a44cf5b3d27 files/upnpd.conf 68

@@ -1,0 +1,6 @@
+MD5 b5a09f8a8da3550ba7db5d8709e0f32a ChangeLog 1034
+MD5 fc86bf359295fccb6593bd6ddfc6b9c4 shout-0.8.0-r1.ebuild 879
+MD5 a71de1a191931e5b219c65e462bfbbcd shout-0.8.0.ebuild 813
+MD5 0b75f95937f0f8d238142c325a390e15 files/digest-shout-0.8.0 62
+MD5 0b75f95937f0f8d238142c325a390e15 files/digest-shout-0.8.0-r1 62
+MD5 cb0cb8ccd0256e8ee847bcc0f6df5aec files/variables.diff 470

@@ -1,0 +1,5 @@
+MD5 09e5bf582ecaf7e9dca9400ea2ce5e8d ChangeLog 552
+MD5 deb447a5a20c2e37c65434a9ac7116cb monmotha-2.3.8_pre7.ebuild 1177
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-monmotha-2.3.8_pre7 0
+MD5 ec780996db7dc521e6a1c8bbfeba2cb0 files/monmotha.rc6 944
+MD5 5368c139957ecdf3fed36278f89e926e files/rc.firewall-2.3.8-pre7 55183
