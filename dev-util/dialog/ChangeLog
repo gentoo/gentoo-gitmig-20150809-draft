@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/dialog
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.17 2003/07/12 13:23:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/ChangeLog,v 1.18 2003/07/15 09:27:01 joker Exp $
+
+  15 Jul 2003; Christian Birchinger <joker@gentoo.org>
+  dialog-0.9_beta20030308-r1.ebuild:
+  Added sparc stable keyword
 
 *dialog-0.9_beta20030130 (18 Apr 2003)
 
