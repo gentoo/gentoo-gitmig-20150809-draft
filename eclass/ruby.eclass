@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.15 2003/11/16 19:27:24 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.16 2003/11/16 21:36:33 usata Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -135,12 +135,12 @@ ruby_emake() {
 		cd -
 	elif [[ "${WITH_RUBY/ruby16/}" != "${WITH_RUBY}" ]] ; then
 		einfo "running emake for ruby 1.6 ;)"
-		[[ -x /usr/bin/ruby16 ]] && alias ruby ruby16
-		erubymake $@
+		[[ -x /usr/bin/ruby16 ]] && RUBY=ruby16 || RUBY=ruby
+		erubymake RUBY=${RUBY} $@
 	elif [[ "${WITH_RUBY/ruby18/}" != "${WITH_RUBY}" ]] ; then
 		einfo "running emake for ruby 1.8 ;)"
-		[[ -x /usr/bin/ruby18 ]] && alias ruby ruby18
-		erubymake $@
+		[[ -x /usr/bin/ruby18 ]] && RUBY=ruby18 || RUBY=ruby
+		erubymake RUBY=${RUBY} $@
 	else
 		einfo "running emake for ruby ;)"
 		erubymake $@ || die
