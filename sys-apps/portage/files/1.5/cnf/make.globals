@@ -40,7 +40,7 @@ USE="slang readline gpm berkdb gdbm tcpd pam libwww ssl
 
 # Other stable USE flags
 # 3dnow perl python tcltk java guile ruby mysql postgres ldap odbc
-# ggi fbcon svga tex bonobo nas qtmt aalib oss arts libg++
+# ggi fbcon svga tex bonobo nas qtmt aalib oss arts libg++ pda
 # 
 # Other experimental/unstable flags
 # directfb gd ungif gtkhtml socks5 pdflib qt-embedded jfs
