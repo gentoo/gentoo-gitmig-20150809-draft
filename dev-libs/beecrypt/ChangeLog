@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/beecrypt
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.21 2004/10/24 01:27:15 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/beecrypt/ChangeLog,v 1.22 2004/12/29 20:02:28 iluxa Exp $
+
+  29 Dec 2004; Ilya A. Volynets-Evenbach <iluxa@gentoo.org>
+  beecrypt-3.1.0-r2.ebuild:
+  mark ~mips
 
 *beecrypt-3.1.0-r2 (13 Apr 2004)
 
