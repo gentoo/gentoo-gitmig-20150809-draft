@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cannadic.eclass,v 1.6 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cannadic.eclass,v 1.7 2005/01/05 09:26:30 usata Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -129,6 +129,7 @@ pkg_postinst() {
 			einfo "For details, see documents under /usr/share/doc/${PF}"
 		fi
 
+		einfo "If you do not have ~/.canna, you can find sample files in /usr/share/canna."
 		ewarn "If you are upgrading from existing dictionary, you may need to recreate"
 		ewarn "user dictionary if you have one."
 		einfo
