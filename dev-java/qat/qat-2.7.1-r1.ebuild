@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/qat/qat-2.7.1-r1.ebuild,v 1.2 2004/10/16 17:32:49 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/qat/qat-2.7.1-r1.ebuild,v 1.3 2004/10/22 09:59:47 absinthe Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/qat/qat-${PV}-src.zip"
 HOMEPAGE="http://qat.sourceforge.net"
 LICENSE="sun-csl"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="~x86 ~sparc ~ppc ~amd64"
 DEPEND=">=virtual/jdk-1.3"
 RDEPEND=">=virtual/jre-1.3
 		dev-java/jlfgr
