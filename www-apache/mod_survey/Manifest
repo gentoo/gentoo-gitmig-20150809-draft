@@ -1,6 +1,16 @@
-MD5 d749a46e2c958d46d3e1325e263a22a0 mod_survey-3.2.0.ebuild 1896
-MD5 30ca4c13aab28a754e6700c47c6ec9e5 ChangeLog 657
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 16080eb784eaa8119b24bb6e6b2daf57 mod_survey-3.2.0.ebuild 1896
+MD5 d4999109ea5fd3c28ce2283e005e05f2 ChangeLog 771
 MD5 701b2b1df0a5dd9b0d847b25699a0336 metadata.xml 219
 MD5 6e46d5897e70491662270bc3de8c0236 files/postinstall-en.txt 407
 MD5 14d833e6ab31ed6765dd0116b0576876 files/digest-mod_survey-3.2.0 67
 MD5 c778b2cb7c0d593c715c3be9020d4d24 files/reconfig 218
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBrPTlI1lqEGTUzyQRAjwWAJ9710OC71A3Fl+f6Wj0M8t1mlfKYQCgj2PI
+vn2uqMI581C/QxsdRL6ri64=
+=POtm
+-----END PGP SIGNATURE-----
