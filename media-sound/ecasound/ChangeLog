@@ -1,10 +1,6 @@
 # ChangeLog for media-sound/ecasound
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ChangeLog,v 1.23 2004/07/01 07:56:05 eradicator Exp $
-
-  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
-  ecasound-2.3.2.ebuild, ecasound-2.3.3.ebuild:
-  virtual/glibc -> virtual/libc
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ChangeLog,v 1.24 2004/07/01 08:06:31 eradicator Exp $
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   ecasound-2.3.2.ebuild, ecasound-2.3.3.ebuild:

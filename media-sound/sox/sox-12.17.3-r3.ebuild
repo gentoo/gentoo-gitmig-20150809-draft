@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.3-r3.ebuild,v 1.10 2004/06/25 00:23:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.3-r3.ebuild,v 1.11 2004/07/01 07:59:16 eradicator Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ KEYWORDS="x86 ppc alpha sparc "
 SLOT="0"
 LICENSE="LGPL-2.1"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_compile () {
 	# Looks like support for alsa09's dsp is broken in sox;

@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/rplay
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rplay/ChangeLog,v 1.6 2004/06/25 00:20:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rplay/ChangeLog,v 1.7 2004/07/01 07:58:28 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> rplay-3.3.2.ebuild:
+  virtual/glibc -> virtual/libc
 
   01 Feb 2004; Jon Portnoy <avenj@gentoo.org> rplay-3.3.2.ebuild :
   AMD64 keywords.

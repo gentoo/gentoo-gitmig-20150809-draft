@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/qsynth
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/ChangeLog,v 1.6 2004/06/25 00:18:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/qsynth/ChangeLog,v 1.7 2004/07/01 07:57:40 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> qsynth-0.1.0.ebuild,
+  qsynth-0.2.1.ebuild:
+  virtual/glibc -> virtual/libc
 
   23 Jun 2004; David Holm <dholm@gentoo.org> qsynth-0.2.1.ebuild:
   Added to ~ppc.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/toolame/toolame-02l.ebuild,v 1.9 2004/06/25 00:27:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/toolame/toolame-02l.ebuild,v 1.10 2004/07/01 08:00:32 eradicator Exp $
 
 IUSE=""
 
@@ -14,7 +14,7 @@ SLOT="0"
 LICENSE="LGPL-2.1"
 KEYWORDS="x86 ~amd64"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	sys-devel/gcc"
 
 src_compile() {

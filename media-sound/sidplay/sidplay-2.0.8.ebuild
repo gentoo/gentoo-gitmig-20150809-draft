@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sidplay/sidplay-2.0.8.ebuild,v 1.6 2004/06/25 00:22:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sidplay/sidplay-2.0.8.ebuild,v 1.7 2004/07/01 07:58:50 eradicator Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="C64 SID player"
@@ -11,7 +11,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc ~sparc"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=media-libs/sidplay-libs-2.1.0"
 
 src_compile() {
