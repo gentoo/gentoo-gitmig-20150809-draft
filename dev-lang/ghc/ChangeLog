@@ -1,6 +1,11 @@
 # ChangeLog for dev-lang/ghc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.9 2003/02/12 21:53:28 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ChangeLog,v 1.10 2003/03/08 23:21:18 george Exp $
+
+  08 Mar 2003; George Shapovalov <george@gentoo.org> ghc-5.04.2.ebuild :
+
+  updated the ebuild to correctly build (namely to build ghci) if bootstrapped off different (older)
+  version. See #10155 for details.
 
 *ghc-5.04i.2.ebuild (12 Feb 2003)
 

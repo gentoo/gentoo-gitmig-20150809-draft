@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.04.2.ebuild,v 1.2 2003/02/13 10:25:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ghc/ghc-5.04.2.ebuild,v 1.3 2003/03/08 23:21:18 george Exp $
 
 #Some explanation of bootstrap logic:
 #
@@ -19,8 +19,13 @@
 #(considering that ghc is not installing much docs at present this looks more like an advantage).
 #When the upgrade time comes, if you still have ghc-bin around, portage will happily bootstrap off
 #your existing ghc (or ghc-bin, whichever was merged last), without attempting to ruin anything...
+#
+#There is only one issue: ghci will be successfully built only if ghc is bootstrapped from the same version.
+#Thus we need to detect presently installed one and bootstrap in one or two stages..
 
-IUSE="iopengl"
+inherit base
+
+IUSE="opengl"
 
 DESCRIPTION="The Glasgow Haskell Compiler"
 HOMEPAGE="http://www.haskell.org/ghc/"
@@ -51,14 +56,79 @@ RDEPEND="virtual/glibc
 	opengl? ( virtual/opengl virtual/glu virtual/glut )"
 
 
+#determine what version of ghc we have around:
+if test -z "${GHC}"; then
+	GHC=`which ghc`
+fi
+
+BASE_GHC_VERSION=`"$GHC" --version | sed 's/^.*version //'`
+
+# If the base GHC version matches wanted one we can skip stage1
+if test x${BASE_GHC_VERSION} = x${PV}; then
+	need_stage1=no
+else
+	need_stage1=yes
+fi
+
+#some vars
+STAGE1_B="${WORKDIR}/stage1-build"
+STAGE2_B="${WORKDIR}/stage2-build"
+STAGE1_D="${BUILDDIR}/stage1-image"
+
+src_unpack() {
+	base_src_unpack
+
+	# Create our own lndir if none installed.
+	local LNDIR
+	if which lndir; then
+		LNDIR=lndir
+	else
+		# Current directory should be $WORKDIR.
+		echo "You don\'t seem to have lndir available, building my own"
+		echo "version..."
+		cp ${FILESDIR}/lndir.c . || die
+		make lndir || die
+		LNDIR=./lndir
+	fi
+
+	# Create build directories.
+	if test x$need_stage1 = xyes; then
+		echo '>>> Creating stage 1 build dir'
+		mkdir ${STAGE1_B} || die
+		${LNDIR} ${S} ${STAGE1_B} || die
+	fi
+	echo '>>> Creating stage 2 build dir'
+	mkdir ${STAGE2_B} || die
+	${LNDIR} ${S} ${STAGE2_B} || die
+
+}
+
 src_compile() {
 	local myconf
 	use opengl && myconf="--enable-hopengl" || myconf="--disable-hopengl"
 
-	econf --enable-threaded-rts ${myconf}|| die "./configure failed"
-	# the build does not seem to work all that
-	# well with parallel make
-	make || die
+	if test x$need_stage2 = xyes; then
+		echo ">>> Bootstrapping intermediate GHC ${PV} using GHC ${BASE_GHC_VERSION}"
+
+		pushd "${STAGE1_B}" || die
+			./configure \
+				-host="${CHOST}" \
+				--prefix="${STAGE2_D}/usr" \
+				--with-ghc="${GHC}" \
+				--without-happy || die "intermediat stage configure failed"
+			#parallel make causes trouble
+			make || die "intermediate stage make failed"
+			make install || die
+			GHC=${STAGE1_D}/usr/bin/ghc
+		popd
+	fi
+
+	pushd "${STAGE2_B}" || die
+		econf --enable-threaded-rts --with-ghc="${GHC}" ${myconf}|| die "./configure failed"
+		# the build does not seem to work all that
+		# well with parallel make
+		make || die
+	popd
 }
 
 src_install () {
@@ -77,3 +147,4 @@ src_install () {
 	cd ${S}/ghc
 	dodoc README ANNOUNCE LICENSE VERSION
 }
+
