@@ -1,8 +1,8 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer System Team <system@gentoo.org>
-# Author Achim Gottinger <achim@gentoo.org>, Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.3-r7.ebuild,v 1.2 2001/12/23 23:25:19 azarah Exp $
+# Maintainer: System Team <system@gentoo.org>
+# Author: Donny Davies <woodchip@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.3-r7.ebuild,v 1.3 2002/01/23 04:40:29 woodchip Exp $
 
 # NB: This ebuild introduces the /etc/xinetd.d includedir with a default
 #     /etc/xinetd.conf file.  Check your config files if you're upgrading
