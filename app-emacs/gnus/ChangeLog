@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/gnus
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus/ChangeLog,v 1.4 2004/01/05 05:00:18 jbms Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus/ChangeLog,v 1.5 2004/01/05 19:12:36 jbms Exp $
+
+  05 Jan 2004; Jeremy Maitin-Shepard <jbms@gentoo.org> gnus-5.10.6.ebuild:
+  Ebuild now uses correct site lisp directory.
+  This resolves bug 37243.
 
 *gnus-5.10.6 (05 Jan 2004)
 

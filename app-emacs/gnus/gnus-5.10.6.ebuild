@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus/gnus-5.10.6.ebuild,v 1.1 2004/01/05 05:00:18 jbms Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/gnus/gnus-5.10.6.ebuild,v 1.2 2004/01/05 19:12:36 jbms Exp $
 
 inherit elisp
 
@@ -28,7 +28,7 @@ src_compile() {
 	fi
 	econf \
 		--with-emacs \
-		--with-lispdir=/usr/share/emacs/site-lisp/gnus-cvs \
+		--with-lispdir=/usr/share/emacs/site-lisp/gnus \
 		--with-etcdir=/usr/share/emacs/etc \
 		${myconf}
 	emake || die
@@ -36,7 +36,7 @@ src_compile() {
 
 src_install() {
 	einstall \
-		lispdir=${D}/usr/share/emacs/site-lisp/gnus-cvs \
+		lispdir=${D}/usr/share/emacs/site-lisp/gnus \
 		etcdir=${D}/usr/share/emacs/etc \
 		|| die
 
