@@ -1,23 +1,25 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/blassic/blassic-0.8.1.ebuild,v 1.6 2005/02/12 19:54:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/blassic/blassic-0.10.0.ebuild,v 1.1 2005/02/12 19:54:56 mr_bones_ Exp $
 
 DESCRIPTION="classic Basic interpreter"
-HOMEPAGE="http://www.arrakis.es/~ninsesabe/blassic/index.html"
-SRC_URI="http://www.arrakis.es/~ninsesabe/blassic/${P}.tgz"
+HOMEPAGE="http://www.blassic.org"
+SRC_URI="http://www.blassic.org/bin/${P}.tgz"
 
-KEYWORDS="x86 ~ppc hppa"
 LICENSE="GPL-2"
+KEYWORDS="~hppa ~ppc ~x86"
 SLOT="0"
-IUSE="svga"
+IUSE="svga X"
 
-DEPEND="virtual/x11
+DEPEND="virtual/libc
+	X? ( virtual/x11 )
 	sys-libs/ncurses
 	svga? ( media-libs/svgalib )"
 
 src_compile() {
 	econf \
 		--disable-dependency-tracking \
+		$(use_with X x) \
 		$(use_enable svga svgalib) \
 		|| die
 	emake || die "emake failed"
