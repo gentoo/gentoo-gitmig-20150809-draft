@@ -1,0 +1,71 @@
+#!/bin/sh
+#RCUPDATE:3 4:75:
+
+LPD_PATH="/usr/sbin/lpd"
+INSTALL="/bin/install -c"
+LPD_PERMS_PATH="/etc/lprng/lpd.perms"
+LPD_CONF_PATH="/etc/lprng/lpd.conf"
+PRINTCAP_PATH="/etc/lprng/printcap"
+SYSCONFDIR=/etc/lprng
+SBINDIR=/usr/sbin
+FILTER_DIR=/usr/libexec/filters
+LOCKFILE="/var/run/lpd"
+PSHOWALL="-ax"
+VERSION=3.6.19
+#
+# -- START --
+# $Id: lprng,v 1.1 2000/08/13 12:10:50 achim Exp $
+#
+# lpd           This shell script takes care of starting and stopping
+#               lpd (printer daemon).
+#  Taken from the RedHat Linux 6.2 distribution for the lpd startup
+#  modified to make things a little more robust
+#
+# chkconfig: 2345 60 60
+# description: lpd is the print daemon required for lpr to work properly. \
+#   It is basically a server that arbitrates print jobs to printer(s).
+# processname: lpd
+# config: /etc/printcap
+
+# Source function library.
+
+. /etc/rc.d/config/functions
+
+
+[ -f "${LPD_PATH}" ] || exit 0
+[ -f /etc/printcap ] || exit 0
+
+RETVAL=0
+SERVICE=lpd
+opts="start stop restart status"
+
+# See how we were called.
+
+function start() {
+        # Start daemons.
+        ebegin "Starting lpd: "
+	start-stop-daemon --start --quiet --exec ${LPD_PATH}
+	eend $? "Started $SERVICE." "Error Starting $SERVICE"
+}
+function stop() {
+
+        # Stop daemons.
+        ebegin "Shutting down lpd: "
+	start-stop-daemon --stop --quiet --pidfile ${LOCKFILE} --exec ${LPD_PATH}
+	eend $? "Stopped $SERVICE." "Error Stopping $SERVICE."
+}
+
+function restart() {
+
+	stop
+	start
+}
+
+function status() {
+
+        lpc lpd
+
+}
+
+doservice ${@}
+
