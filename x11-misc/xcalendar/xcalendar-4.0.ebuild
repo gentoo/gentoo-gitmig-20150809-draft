@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/xcalendar-4.0.ebuild,v 1.5 2004/01/11 13:41:42 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/xcalendar-4.0.ebuild,v 1.6 2004/02/06 03:46:32 agriffis Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="A simple interactive calendar program with a notebook capability"
@@ -9,7 +9,7 @@ SRC_URI="ftp://daemon.jp.FreeBSD.org/pub/FreeBSD-jp/ports-jp/LOCAL_PORTS/${P}+i1
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86"
+KEYWORDS="x86 alpha"
 
 DEPEND="virtual/x11
 		motif? ( x11-libs/openmotif )"
