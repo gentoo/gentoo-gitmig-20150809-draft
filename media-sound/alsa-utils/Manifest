@@ -1,4 +1,4 @@
-MD5 951cbaa9c665e1aa362a7dfc028d190e ChangeLog 9760
+MD5 cfa97456560cf315ab391149bee80958 ChangeLog 9865
 MD5 21cca59866032a8911f3390d5d787c11 alsa-utils-0.5.10-r8.ebuild 941
 MD5 c7def99ae6079be0bcefcf120fbf9af5 alsa-utils-0.9.0_rc2.ebuild 827
 MD5 0a3ad1402c1a17018d3c37b34fbd4b7d alsa-utils-0.9.2.ebuild 794
@@ -6,7 +6,7 @@ MD5 262115edcd0bc73f4d4a4a4725a13948 alsa-utils-0.9.8.ebuild 1645
 MD5 b2717443eb0404be2e474f4ecf70c82a alsa-utils-1.0.2.ebuild 1693
 MD5 22cca6913d00252a0020a67365c7f098 alsa-utils-1.0.3.ebuild 1686
 MD5 e7a2004346c34727c16f0428b5c4034c alsa-utils-1.0.4.ebuild 1801
-MD5 90c029af926527eba22793e077d88341 alsa-utils-1.0.5.ebuild 1704
+MD5 0f19482870c5849a44e381ecd08f5ec9 alsa-utils-1.0.5.ebuild 1706
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 dcc66ee6a9db24006a4158e2be0da3f2 files/alsa-0.5.10 392
 MD5 4d91cb34977dfd90022f085560ea00a9 files/alsa-modules.conf-rc 1157
