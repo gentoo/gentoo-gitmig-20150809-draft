@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc8-r1.ebuild,v 1.6 2004/12/23 21:20:52 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc8-r1.ebuild,v 1.7 2004/12/24 04:25:55 chriswhite Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/xine/${PN}-${PV/_/-}${MY_PKG_SUFFIX}.tar.gz"
 LICENSE="GPL-2"
 SLOT="1"
 KEYWORDS="alpha amd64 ~hppa ~ia64 ppc ppc64 ~sparc x86"
-IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa gnome sdl speex theora ipv6 altivec"
+IUSE="arts esd avi nls dvd aalib X directfb oggvorbis alsa gnome sdl speex theora ipv6 altivec xv"
 
 RDEPEND="oggvorbis? ( media-libs/libvorbis )
 	!amd64? ( X? ( virtual/x11 ) )
@@ -119,7 +119,7 @@ src_compile() {
 	[ "${PROFILE_ARCH}" == "sparc" ] \
 		&& myconf="${myconf} --disable-vis"
 
-	myconf="${myconf} --with-xv-path=/usr/X11R6/$(get_libdir)"
+	use xv && myconf="${myconf} --with-xv-path=/usr/X11R6/$(get_libdir)"
 
 	# Fix compilation-errors on PowerPC #45393 & #55460 & #68251
 	if use ppc || use ppc64 ; then
@@ -153,7 +153,7 @@ src_compile() {
 		$(use_enable sdl sdltest) \
 		$(use_enable ipv6) \
 		$(use_enable directfb) \
-		--enable-shared-xv \
+		$(use_enable xv shared-xv) \
 		${myconf} || die "Configure failed"
 
 	emake -j1 || die "Parallel make failed"

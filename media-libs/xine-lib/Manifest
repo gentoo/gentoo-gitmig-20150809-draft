@@ -1,10 +1,13 @@
-MD5 cbe702cd253bc0fb09410de8cf669f5f ChangeLog 28036
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5b840f21929f96a86e005e3128e866cc ChangeLog 28160
 MD5 af08cabbae4b191018ca153392a86bea metadata.xml 304
 MD5 b25152bddc933afdf390149b07f2ff43 xine-lib-1_rc5-r3.ebuild 5473
 MD5 a53b6f55661ef41e343932ceb7108cc3 xine-lib-1_rc6.ebuild 5358
 MD5 d2d62f59048715eaf85d88a90842729d xine-lib-1_rc7.ebuild 5327
 MD5 d9591aa743f1cbe61c93c98846b139b2 xine-lib-1_rc8.ebuild 5380
-MD5 dcd0f1fbfa28dc2a0f1c7cdc91d04a30 xine-lib-1_rc8-r1.ebuild 5496
+MD5 57bfe5d908fa622f554cb057c2e543b0 xine-lib-1_rc8-r1.ebuild 5522
 MD5 bcd5f2b8999f92c2f7215009f5ae1490 files/configure-64bit-define.patch 221
 MD5 044cbe825fc480693aec675808e4c679 files/digest-xine-lib-1_rc5-r3 67
 MD5 082b3ed1c96543704d604199047b1dee files/digest-xine-lib-1_rc6 68
@@ -35,6 +38,13 @@ MD5 aa54582a91933533008c1211dcbcfb35 files/xine-lib-disable-directfb.patch 4169
 MD5 3cbdef8aa211184b96474addb4f7c5d6 files/xine-lib-gcc34.patch 423
 MD5 dcb0c79c0bb106397aad42f6d936627d files/xineconfig.patch-0.9.13 601
 MD5 98bc17778384589bba027ff136956fec files/digest-xine-lib-1_rc8 67
-MD5 98bc17778384589bba027ff136956fec files/digest-xine-lib-1_rc8-r1 67
 MD5 54088d42a9e9980285a96b7e2cce19cf files/djb_demux_aiff.patch 559
 MD5 5d2c3c00bf3ae9a89dfcaa8b5c5b17a2 files/xine-lib-x11.patch 703
+MD5 98bc17778384589bba027ff136956fec files/digest-xine-lib-1_rc8-r1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBy5pgFdQwWVoAgN4RAqLBAKDtP8Y6OPKxQXW33rZV3xp2qimt5gCfbGqM
+rc3c52FkX4bWhJHlxSpmSnI=
+=CdWj
+-----END PGP SIGNATURE-----
