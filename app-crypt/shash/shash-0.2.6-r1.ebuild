@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/shash/shash-0.2.6-r1.ebuild,v 1.6 2005/03/02 16:41:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/shash/shash-0.2.6-r1.ebuild,v 1.7 2005/03/24 02:54:02 vapier Exp $
 
 inherit bash-completion eutils
 
@@ -10,16 +10,10 @@ SRC_URI="ftp://mcrypt.hellug.gr/pub/mcrypt/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ppc x86"
+KEYWORDS="amd64 arm ppc x86"
 IUSE="static"
 
-RDEPEND="virtual/libc
-	>=app-crypt/mhash-0.8.18-r1"
-DEPEND="${RDEPEND}
-	sys-devel/libtool
-	sys-devel/automake
-	sys-devel/autoconf
-	sys-apps/gawk"
+DEPEND=">=app-crypt/mhash-0.8.18-r1"
 
 src_unpack() {
 	unpack ${A}
@@ -35,5 +29,5 @@ src_compile() {
 src_install() {
 	make install DESTDIR="${D}" || die "install failed"
 	dodoc AUTHORS ChangeLog INSTALL NEWS doc/sample.shashrc doc/FORMAT
-	dobashcompletion ${FILESDIR}/shash.bash-completion ${PN}
+	dobashcompletion "${FILESDIR}"/shash.bash-completion ${PN}
 }
