@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portagemaster/portagemaster-0.2.1.ebuild,v 1.12 2004/06/24 21:50:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portagemaster/portagemaster-0.2.1.ebuild,v 1.13 2004/10/16 23:07:08 axxo Exp $
+
+inherit java-pkg
 
 DESCRIPTION="A java portage browser and installer"
 HOMEPAGE="http://portagemaster.sourceforge.net/"
@@ -42,6 +44,6 @@ src_compile() {
 }
 
 src_install() {
-	dojar packages/portagemaster-${PV}.jar
+	java-pkg_dojar packages/portagemaster-${PV}.jar
 	dobin src/portagemaster
 }

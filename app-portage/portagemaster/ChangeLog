@@ -1,6 +1,10 @@
 # ChangeLog for app-portage/portagemaster
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/portagemaster/ChangeLog,v 1.13 2004/06/24 21:50:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/portagemaster/ChangeLog,v 1.14 2004/10/16 23:07:08 axxo Exp $
+
+  17 Oct 2004; Thomas Matthijs <axxo@gentoo.org> portagemaster-0.2.0.ebuild,
+  portagemaster-0.2.1.ebuild:
+  dojar --> java-pkg_dojar
 
   02 Jun 2004; Aron Griffis <agriffis@gentoo.org> portagemaster-0.2.0.ebuild,
   portagemaster-0.2.1.ebuild:

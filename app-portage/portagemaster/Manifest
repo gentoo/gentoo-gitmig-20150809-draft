@@ -1,6 +1,16 @@
-MD5 eabf1c80713b965fbb8715a7b6d632db portagemaster-0.2.1.ebuild 1381
-MD5 3fcc0d236b9e1bef9bcc3fe0479c4a1b portagemaster-0.2.0.ebuild 1374
-MD5 0f58880f85f817a39efe5ffe267bf302 ChangeLog 3573
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0910ea60b15a3496df0fdf60629fe5c1 portagemaster-0.2.1.ebuild 1404
+MD5 85a418dff4c4960bf406b2227ab021b2 portagemaster-0.2.0.ebuild 1397
+MD5 1012f5f217f15245e13c2f159470974a ChangeLog 3704
 MD5 fbb6fe345e65c9b7fa51b2ae10f85067 metadata.xml 166
 MD5 8a940fc25ce6a223c06dfed054da2669 files/digest-portagemaster-0.2.0 71
 MD5 bdde03313d53829930a6d1b30faa2681 files/digest-portagemaster-0.2.1 71
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBcaml/rLF9B432nYRAtyhAJ9RgBl5AttWQbKj7wZN7lxsdGTU+gCdEt9E
+68Mv2xSiUfndsPOdcrND3cg=
+=M3+A
+-----END PGP SIGNATURE-----
