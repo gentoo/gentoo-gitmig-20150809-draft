@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-2.4.2.ebuild,v 1.6 2004/06/24 21:45:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-2.4.2.ebuild,v 1.7 2004/08/21 15:16:17 foser Exp $
 
 inherit gnome2 eutils
 
@@ -25,7 +25,7 @@ RDEPEND=">=gnome-base/libbonobo-2.2.0
 	>=sys-libs/zlib-1.1.4
 	>=gnome-base/gconf-1.2
 	>=dev-libs/popt-1.7
-	>=gnome-base/ORBit2-2.6
+	>=gnome-base/orbit-2.6
 	>=x11-libs/gtk+-2
 	app-text/scrollkeeper"
 
