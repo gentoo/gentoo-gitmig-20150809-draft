@@ -1,6 +1,12 @@
 # ChangeLog for app-text/ghostscript
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.73 2004/10/05 06:43:50 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ChangeLog,v 1.74 2004/10/06 22:40:16 lu_zero Exp $
+
+  07 Oct 2004; Luca Barbato <lu_zero@gentoo.org> +files/gs-fix-gc.patch,
+  ghostscript-7.07.1-r6.ebuild:
+  Eventually found a fix for the garbage collector in the ghostscript ml,
+  thanks to Alex Cherepanov <alexcher@coscript.com> for the patch and pointing
+  out the solution
 
   05 Oct 2004; Mamoru KOMACHI <usata@gentoo.org>
   +files/gs7.07.1-cjk.diff.bz2, ghostscript-7.05.6-r1.ebuild,
