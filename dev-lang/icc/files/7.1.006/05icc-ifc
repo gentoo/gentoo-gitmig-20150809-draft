@@ -1,0 +1,7 @@
+IA32ROOT=/opt/intel/compiler70/ia32
+INTEL_FLEXLM_LICENSE=/opt/intel/licenses
+INTEL_LICENSE_FILE=/opt/intel/licenses
+LDPATH=/opt/intel/compiler70/ia32/lib
+MANPATH=/opt/intel/compiler70/man
+PATH=/opt/intel/compiler70/ia32/bin
+ROOTPATH=/opt/intel/compiler70/ia32/bin
