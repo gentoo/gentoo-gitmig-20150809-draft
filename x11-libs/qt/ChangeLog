@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.1 2002/02/01 21:53:38 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.2 2002/02/03 18:19:51 gbevin Exp $
+
+  3 Feb 2002; G.Bevin <gbevin@gentoo.org> qt-3.0.1-r3.ebuild :
+  changed postgres dependency to the latest release r3
 
 *qt-3.0.1-r3 (1 Feb 2002)
 

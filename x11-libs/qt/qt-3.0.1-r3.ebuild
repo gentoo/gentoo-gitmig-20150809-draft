@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.1-r3.ebuild,v 1.1 2002/01/27 22:21:51 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.1-r3.ebuild,v 1.2 2002/02/03 18:19:51 gbevin Exp $
 
 P=qt-x11-${PV}
 S=${WORKDIR}/qt-x11-free-${PV}
@@ -16,7 +16,7 @@ DEPEND=">=media-libs/libpng-1.0.9
 	opengl? ( virtual/opengl virtual/glu )
 	nas? ( >=media-libs/nas-1.4.1 )
 	mysql? ( >=dev-db/mysql-3.2.10 )
-	postgres? ( =dev-db/postgresql-7.1.3-r1 )
+	postgres? ( =dev-db/postgresql-7.1.3* )
 	odbc? ( >=dev-db/unixODBC-2.0 )
 	virtual/x11"
 
