@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/e2fsprogs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.31 2004/09/03 19:16:58 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/e2fsprogs/ChangeLog,v 1.32 2004/09/13 07:51:58 gmsoft Exp $
+
+*e2fsprogs-1.35-r1 (13 Sep 2004)
+
+  13 Sep 2004; Guy Martin <gmsoft@gentoo.org> +e2fsprogs-1.35-r1.ebuild:
+  Use -fPIC compiled shared files in .a files. Fix kdelibs-3.3.0 compilation on
+  hppa => Stable on hppa.
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   e2fsprogs-1.35.ebuild:
