@@ -2,7 +2,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.13 2002/08/29 23:56:15 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.14 2002/10/20 10:43:04 azarah Exp $
 # This eclass patches ltmain.sh distributed with libtoolized packages with the
 # relink and portage patch
 ECLASS=libtool
@@ -386,18 +386,18 @@ relink_patch() {
 		 
 	ENDPATCH
 
-    retval=$?
+	retval=$?
 
-    # This one dont apply clean to libtool-1.4.2a, so do it manually.
-    if [ "${1}" != "--test" ] && [ "${retval}" -eq 0 ]
-    then
-        cp ltmain.sh ltmain.sh.orig
-        sed -e 's:cd `pwd`; $SHELL $0 --mode=relink $libtool_args:cd `pwd`; $SHELL $0 --mode=relink $libtool_args @inst_prefix_dir@:' \
-            ltmain.sh.orig > ltmain.sh
-        rm -f ltmain.sh.orig
-    fi
+	# This one dont apply clean to libtool-1.4.2a, so do it manually.
+	if [ "${1}" != "--test" ] && [ "${retval}" -eq 0 ]
+	then
+		cp ltmain.sh ltmain.sh.orig
+		sed -e 's:cd `pwd`; $SHELL $0 --mode=relink $libtool_args:cd `pwd`; $SHELL $0 --mode=relink $libtool_args @inst_prefix_dir@:' \
+			ltmain.sh.orig > ltmain.sh
+		rm -f ltmain.sh.orig
+	fi
 
-    return ${retval}
+	return ${retval}
 }
 
 tmp_patch() {

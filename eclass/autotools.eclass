@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.4 2002/07/26 21:50:14 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.5 2002/10/20 10:43:04 azarah Exp $
 # The autotools eclass enables building of the apps that needs the latest autconf/automake.
 #
 # NOTES:
@@ -22,7 +22,7 @@
 #    # Copyright 1999-2002 Gentoo Technologies, Inc.
 #    # Distributed under the terms of the GNU General Public License, v2 or later
 #    # Maintainer:  John Doe <john@foo.com>
-#    # $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.4 2002/07/26 21:50:14 danarmak Exp $
+#    # $Header: /var/cvsroot/gentoo-x86/eclass/autotools.eclass,v 1.5 2002/10/20 10:43:04 azarah Exp $
 #
 #    # If you need to set the versions different from in here, it *must*
 #    # be done before inherit.eclass is sourced
@@ -163,14 +163,14 @@ install_automake() {
 
 	cd ${AUTO_S}/automake-${AMAKEVER} || die "!!! Failed to build automake !!!"
 
-         ./configure --prefix=${AUTO_D} \
-                --infodir=${AUTO_D}/share/info \
-                --mandir=${AUTO_D}/share/man \
-                --target=${CHOST} || die "!!! Failed to configure automake !!!"
+	./configure --prefix=${AUTO_D} \
+		--infodir=${AUTO_D}/share/info \
+		--mandir=${AUTO_D}/share/man \
+		--target=${CHOST} || die "!!! Failed to configure automake !!!"
 
-        emake || die "!!! Failed to build automake !!!"
+	emake || die "!!! Failed to build automake !!!"
 
-        make install || die "!!! Failed to install automake !!!"
+	make install || die "!!! Failed to install automake !!!"
 }
 
 install_autotools() {
