@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r5.ebuild,v 1.5 2003/12/08 22:31:03 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.2.1-r5.ebuild,v 1.6 2003/12/26 02:00:07 robbat2 Exp $
 
 IUSE="mysql ipalias"
 
@@ -145,7 +145,7 @@ pkg_preinst() {
 	vpopmail_set_homedir
 
 	# Keep DATA
-	touch ${VPOP_HOME}/domains/.keep
+	touch ${VPOP_HOME}/domains # this is valid as keepdir will not work here
 
 	# This is a workaround until portage handles binary packages+users better.
 	pkg_setup

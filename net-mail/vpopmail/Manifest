@@ -1,8 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/Manifest,v 1.26 2003/12/26 01:56:20 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/Manifest,v 1.27 2003/12/26 02:00:18 robbat2 Exp $
 MD5 25a76d617426d9b8ecfd020b80ba6016 vpopmail-5.2.1-r9.ebuild 7435
 MD5 23d5189f50d18117f8e65ab1b027df9c vpopmail-5.2.1-r6.ebuild 6370
 MD5 0d0b597b0be51f05b73072576b2c64a9 vpopmail-5.2.1-r8.ebuild 6700
-MD5 891b1414afd92b3c8ee75ec39ae317c9 vpopmail-5.2.1-r5.ebuild 6035
+MD5 aaf66be4381a990e8302ed581c24db1c vpopmail-5.2.1-r5.ebuild 6075
 MD5 4d0603212359169055062f5010d6f200 ChangeLog 4156
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 122d629b4ce8f06e71f75215bd143fdb vpopmail-5.2.1-r7.ebuild 6369
