@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Memoize
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Memoize/ChangeLog,v 1.8 2003/02/13 07:42:02 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Memoize/ChangeLog,v 1.9 2003/05/31 21:19:12 mcummings Exp $
+
+*Memoize-1.01 (31 May 2003)
+
+  31 May 2003; Michael Cummings <mcummings@gentoo.org> Memoize-1.01.ebuild:
+  New version on CPAN
 
   13 Feb 2003; Mark Guertin <gerk@gentoo.org> Memoize-1.00-r1.ebuild Memoize-1.00-r2.ebuild:
   set ppc in keywords
