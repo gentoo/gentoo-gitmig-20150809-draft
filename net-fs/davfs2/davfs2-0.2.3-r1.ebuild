@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/davfs2-0.2.3.ebuild,v 1.3 2004/11/27 22:12:02 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/davfs2/davfs2-0.2.3-r1.ebuild,v 1.1 2004/12/15 14:44:21 genstef Exp $
 
 inherit kernel-mod eutils
 
@@ -36,8 +36,14 @@ src_unpack() {
 }
 
 src_compile() {
+	local myconf
+
+	if useq debug; then
+		myconf="--with-debug"
+	fi
+
 	econf $(use_with ssl) \
-		$(use_with debug) || die "econf failed"
+		${myconf} || die "econf failed"
 	emake || die "emake failed"
 }
 
