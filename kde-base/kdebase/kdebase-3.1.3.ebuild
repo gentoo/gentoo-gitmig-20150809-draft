@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.1.3.ebuild,v 1.4 2003/08/12 15:32:34 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.1.3.ebuild,v 1.5 2003/09/06 23:54:21 msterret Exp $
 inherit kde-dist eutils
 
 IUSE="ldap pam motif encode oggvorbis cups ssl opengl samba java"
@@ -20,7 +20,7 @@ newdepend ">=media-sound/cdparanoia-3.9.8
 	samba? ( net-fs/samba )
 	java? ( virtual/jdk )
 	>=media-libs/freetype-2
-	dev-util/pkgconfig" 
+	dev-util/pkgconfig"
 #	lm_sensors? ( ?/lm_sensors ) # ebuild doesn't exist yet
 
 RDEPEND="$RDEPEND sys-apps/eject"
@@ -43,7 +43,7 @@ PATCHES=""
 src_unpack() {
 	kde_src_unpack
 	cd ${S} && aclocal
-}	
+}
 
 src_compile() {
 	rm -f configure configure.in # to make sure the fontconfig patch takes effect
@@ -86,7 +86,7 @@ ${KDEDIR}/bin/startkde" > kde-${PV}
 	${FILESDIR}/${PVR}/kdmrc > kdmrc
 	cp ${FILESDIR}/${PVR}/backgroundrc .
 
-	#backup splashscreen images, so they can be put back when unmerging 
+	#backup splashscreen images, so they can be put back when unmerging
 	#mosfet or so.
 	if [ ! -d ${KDEDIR}/share/apps/ksplash.default ]
 	then
@@ -107,10 +107,10 @@ ${KDEDIR}/bin/startkde" > kde-${PV}
 
 pkg_postinst() {
 	mkdir -p ${KDEDIR}/share/templates/.source/emptydir
-	
+
 einfo "If you want to floppy:/ kioslave to work, please emerge the mtools package."
 einfo "This ioslave allows you to use fat/vfat filesystems (not only on floppies)"
 einfo "without mounting them. If you don't know what this is for, you can probably"
 einfo "go with the usual mounting method."
-	
+
 }

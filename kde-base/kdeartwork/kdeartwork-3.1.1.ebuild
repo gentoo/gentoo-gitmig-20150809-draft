@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/kdeartwork-3.1.1.ebuild,v 1.4 2003/04/28 05:51:20 pylon Exp $
-inherit kde-dist 
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/kdeartwork-3.1.1.ebuild,v 1.5 2003/09/06 23:54:21 msterret Exp $
+inherit kde-dist
 
 IUSE="opengl"
 newdepend "opengl? ( virtual/opengl ) =kde-base/kdebase-${PV}*"
@@ -11,4 +11,4 @@ KEYWORDS="x86 ppc sparc ~alpha"
 PATCHES="$FILESDIR/xsaver-conflicting-typedefs.diff"
 
 myconf="$myconf --with-dpms"
-use opengl && myconf="$myconf --with-gl" || myconf="$myconf --without-gl" 
+use opengl && myconf="$myconf --with-gl" || myconf="$myconf --without-gl"

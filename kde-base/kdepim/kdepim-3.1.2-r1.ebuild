@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.1.2-r1.ebuild,v 1.4 2003/08/30 10:19:25 liquidx Exp $
-inherit kde-dist 
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/kdepim-3.1.2-r1.ebuild,v 1.5 2003/09/06 23:54:21 msterret Exp $
+inherit kde-dist
 
 IUSE="pda"
 DESCRIPTION="KDE PIM (Personal Information Management) apps: korganizer..."
 KEYWORDS="~x86 ppc ~sparc -alpha hppa" # mark as stable only after marking stable libmal
 
-newdepend "pda? ( >=app-pda/pilot-link-0.11.1-r1 
+newdepend "pda? ( >=app-pda/pilot-link-0.11.1-r1
 				>=dev-libs/libmal-0.31 )
 	dev-lang/perl
 	=kde-base/kdebase-${PV}*
@@ -22,7 +22,7 @@ src_compile() {
 		kde_src_compile myconf configure
 		kde_src_compile make
 }
-								
+
 src_install() {
 	kde_src_install
 	docinto html

@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.1.3.ebuild,v 1.1 2003/08/07 02:36:33 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.1.3.ebuild,v 1.2 2003/09/06 23:54:21 msterret Exp $
 # TODO: add gnustep, objc bindings
-inherit kde-dist 
+inherit kde-dist
 
 IUSE="mozilla java python"
 DESCRIPTION="KDE library bindings for languages other than c++"

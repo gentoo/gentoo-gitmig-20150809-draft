@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/kdeartwork-3.0.5b.ebuild,v 1.3 2003/07/16 16:18:11 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeartwork/kdeartwork-3.0.5b.ebuild,v 1.4 2003/09/06 23:54:21 msterret Exp $
 inherit kde-dist eutils
 
 IUSE="opengl"
@@ -10,7 +10,7 @@ KEYWORDS="x86 ppc ~alpha sparc"
 newdepend "opengl? ( virtual/opengl ) ~kde-base/kdebase-${PV}"
 
 myconf="$myconf --with-dpms"
-use opengl && myconf="$myconf --with-gl" || myconf="$myconf --without-gl" 
+use opengl && myconf="$myconf --with-gl" || myconf="$myconf --without-gl"
 
 src_unpack() {
 	kde_src_unpack

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.1.3.ebuild,v 1.2 2003/07/29 10:42:50 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.1.3.ebuild,v 1.3 2003/09/06 23:54:21 msterret Exp $
 inherit kde-base flag-o-matic
 
 IUSE="alsa oggvorbis artswrappersuid mad"
@@ -21,7 +21,7 @@ newdepend "alsa? ( media-libs/alsa-lib )
 	    >=dev-libs/glib-2"
 
 if [ "${COMPILER}" == "gcc3" ]; then
-	# GCC 3.1 kinda makes arts buggy and prone to crashes when compiled with 
+	# GCC 3.1 kinda makes arts buggy and prone to crashes when compiled with
 	# these.. Even starting a compile shuts down the arts server
 	filter-flags "-fomit-frame-pointer -fstrength-reduce"
 fi
@@ -62,7 +62,7 @@ LDPATH=${PREFIX}/lib
 CONFIG_PROTECT=${PREFIX}/share/config" > ${D}/etc/env.d/49kdepaths-3.1.2 # number goes down with version upgrade
 
 	echo "KDEDIR=$PREFIX" > ${D}/etc/env.d/56kdedir-3.1.2 # number goes up with version upgrade
-	
+
 	# used for realtime priority, but off by default as it is a security hazard
 	use artswrappersuid && chmod +s ${D}/${PREFIX}/bin/artswrapper
 

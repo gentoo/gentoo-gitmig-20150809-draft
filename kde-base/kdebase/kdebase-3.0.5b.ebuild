@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.5b.ebuild,v 1.5 2003/08/03 02:40:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.5b.ebuild,v 1.6 2003/09/06 23:54:21 msterret Exp $
 inherit eutils flag-o-matic kde-dist
 
 IUSE="ldap pam motif encode oggvorbis cups ssl opengl samba"
@@ -201,21 +201,21 @@ ${KDEDIR}/bin/startkde" > kde-${PV}
 	dosed "s:Session=${PREFIX}/share/config/kdm/Xsession:Session=/etc/X11/xdm/Xsession:" \
 		${PREFIX}/share/config/kdm/kdmrc
 
-	#backup splashscreen images, so they can be put back when unmerging 
+	#backup splashscreen images, so they can be put back when unmerging
 	#mosfet or so.
 	if [ ! -d ${KDEDIR}/share/apps/ksplash.default ]
 	then
 		cd ${D}/${KDEDIR}/share/apps
 		cp -rf ksplash/ ksplash.default
 	fi
-    
+
 	# Show gnome icons when choosing new icon for desktop shortcut
 	dodir /usr/share/pixmaps
 	mv ${D}/${KDEDIR}/share/apps/kdesktop/pics/* ${D}/usr/share/pixmaps/
 	rm -rf ${D}/${KDEDIR}/share/apps/kdesktop/pics/
 	cd ${D}/${KDEDIR}/share/apps/kdesktop/
 	ln -sf /usr/share/pixmaps/ pics
-	
+
 	# fix bug #12705: make sure default Xreset, Xsetup, Xwilling files are installed
 	# into the kdm config dir
 	cd ${S}/kdm/kfrontend
@@ -225,7 +225,7 @@ ${KDEDIR}/bin/startkde" > kde-${PV}
 
 	# portage has a problem working with empty directories
 	rmdir ${D}/${KDEDIR}/share/templates/.source/emptydir
-	
+
 }
 
 pkg_postinst() {

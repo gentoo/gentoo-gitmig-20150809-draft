@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.4-r3.ebuild,v 1.8 2003/03/21 22:25:32 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.0.4-r3.ebuild,v 1.9 2003/09/06 23:54:21 msterret Exp $
 inherit kde-dist eutils
 
 IUSE="ldap pam motif encode oggvorbis cups ssl opengl samba"
@@ -116,14 +116,14 @@ ${KDEDIR}/bin/startkde" > kde-${PV}
 	-e "s:Session=${PREFIX}/share/config/kdm/Xsession:Session=/etc/X11/xdm/Xsession:" kdmrc.orig > kdmrc
 	rm kdmrc.orig
 
-	#backup splashscreen images, so they can be put back when unmerging 
+	#backup splashscreen images, so they can be put back when unmerging
 	#mosfet or so.
 	if [ ! -d ${KDEDIR}/share/apps/ksplash.default ]
 	then
 		cd ${D}/${KDEDIR}/share/apps
 		cp -rf ksplash/ ksplash.default
 	fi
-    
+
 	# Show gnome icons when choosing new icon for desktop shortcut
 	dodir /usr/share/pixmaps
 	mv ${D}/${KDEDIR}/share/apps/kdesktop/pics/* ${D}/usr/share/pixmaps/
