@@ -33,6 +33,7 @@ dev-util
 gnome-base
 gnome-extra 
 kde-base 
+media-fonts
 media-gfx
 media-libs
 media-plugins
