@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.30 2005/03/07 17:28:19 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-meta.eclass,v 1.31 2005/03/09 20:14:15 danarmak Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 # Simone Gotti <motaboy@gentoo.org>
@@ -44,6 +44,7 @@ if [ "$KDEBASE" = "true" ]; then
 	# Note that we set SRC_PATH, and add it to SRC_URI later on
 	case "$PV" in
 		3.4.0_*)	SRC_PATH="unstable/$TARBALLVER/src/$TARBALL" ;;
+		3.4.0)		SRC_PATH="stable/3.4/src/$TARBALL" ;;
 		3*)			SRC_PATH="stable/$TARBALLVER/src/$TARBALL" ;;
 		*)			die "$ECLASS: Error: unrecognized version $PV, could not set SRC_URI" ;;
 	esac
@@ -64,6 +65,8 @@ if [ "$KDEBASE" = "true" ]; then
 		3.4.0_rc1)		XDELTA_BASE="unstable/3.3.90/src/$KMNAME-3.3.90.tar.bz2"
 						XDELTA_DELTA="unstable/3.3.91/src/$KMNAME-3.3.90-3.3.91.tar.xdelta unstable/3.3.91/src/$KMNAME-3.3.91-3.3.92.tar.xdelta unstable/3.4.0-rc1/src/$KMNAME-3.3.92-3.4.0-rc1.tar.xdelta"
 						;;
+		3.4.0)			;; # xdeltas break off at first stable version, since most people
+							# don't have prerelease tarballs handy
 		*)				;;
 	esac	
 
