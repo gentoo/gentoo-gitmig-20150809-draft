@@ -1,6 +1,16 @@
 # ChangeLog for sys-devel/perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.27 2002/12/17 07:34:27 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.28 2002/12/17 16:29:18 mcummings Exp $
+
+* perl-5.8.0-r6 (17 Dec 2002)
+
+  17 Dec 2002; Michael Cummings <mcummings@gentoo.org>
+  perl-5.8.0-r6.ebuild:
+
+  Further fixes to path writing. If the user asks for threading, the
+  dirs are $[arch]-linux-thread-multi. If not, the paths are
+  $[arch]-linux - this is correct behaviour!! Installation with
+  threading is *not* supported by all apps that dep perl.
 
 * perl-5.8.0-r5 (17 Dec 2002)
 
