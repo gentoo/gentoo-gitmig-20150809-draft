@@ -1,21 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 7b1e4b9f7962d02564c40143c231c921 ChangeLog 6630
 MD5 42cbdeef12abd31687396ae303321803 metadata.xml 271
-MD5 882cc70eee0bac6252fce4381ffad489 wanderlust-2.8.1.ebuild 1260
-MD5 5570a49583a4a3cf22df6bb279c4b38c wanderlust-2.11.33_pre20041106.ebuild 1258
 MD5 46def9e0eeaded184cca8ce4333fb6de wanderlust-2.10.1-r2.ebuild 1501
-MD5 f1daac5132aa10bc1086f7f35ae77458 wanderlust-2.11.33_pre20041130.ebuild 1239
+MD5 800271d81b195ce904bc98a98fe233ca ChangeLog 6877
+MD5 882cc70eee0bac6252fce4381ffad489 wanderlust-2.8.1.ebuild 1260
+MD5 25574db012eaf515a78f0140829a92b0 wanderlust-2.11.33_pre20041202.ebuild 1239
 MD5 c633c96cff2fe04a6aec8ba3a96440d7 files/70wl-gentoo.el 298
+MD5 c91763a7deb15e48b3796c8d50a5e65a files/digest-wanderlust-2.11.33_pre20041202 72
 MD5 44642f0fb41a990b0451d247cfb33033 files/digest-wanderlust-2.8.1 61
-MD5 89e58be112d312dc7fbaa9668aa44e26 files/digest-wanderlust-2.11.33_pre20041130 72
-MD5 5a32f4629e3754be61a76f73edb002cb files/digest-wanderlust-2.11.33_pre20041106 72
 MD5 a8f86382da45e4a1136e478ad781477e files/digest-wanderlust-2.10.1-r2 131
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.2.6 (Darwin)
 
-iD4DBQFBq/aTVWNWqTUmv+0RAqi8AJj+JKcv0EaNLzq7Bz79/OQ8cgC6AJ9mTpMz
-ey6UbI5dAvuvOmlk7Mw7Sw==
-=gkph
+iD4DBQFBrvUKVWNWqTUmv+0RAhObAJ9NNLYlzxPcWe2yj16NyUbnHZrE0QCY7xg9
+CBNXyEy46C/kOh2UCta8DA==
+=RXnL
 -----END PGP SIGNATURE-----
