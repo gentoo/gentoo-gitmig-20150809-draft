@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/blam/blam-1.6.0-r1.ebuild,v 1.2 2005/01/12 23:24:24 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/blam/blam-1.6.0-r1.ebuild,v 1.3 2005/03/11 03:21:27 latexer Exp $
 
 inherit mono gnome2 eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 
 IUSE=""
-DEPEND=">=dev-dotnet/mono-1.0
+DEPEND=">=dev-lang/mono-1.0
 		>=dev-dotnet/gtk-sharp-1.0.4-r1
 		>=dev-dotnet/gconf-sharp-1.0.4
 		>=dev-dotnet/glade-sharp-1.0.4

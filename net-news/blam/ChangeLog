@@ -1,6 +1,10 @@
 # ChangeLog for net-news/blam
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/blam/ChangeLog,v 1.15 2005/01/12 23:24:24 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/blam/ChangeLog,v 1.16 2005/03/11 03:21:27 latexer Exp $
+
+  10 Mar 2005; Peter Johanson <latexer@gentoo.org> blam-1.6.0-r1.ebuild,
+  blam-1.6.0.ebuild, blam-1.6.1.ebuild:
+  mono moved from dev-dotnet -> dev-lang
 
 *blam-1.6.1 (12 Jan 2005)
 
