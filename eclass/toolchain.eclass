@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.131 2005/03/18 03:49:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.132 2005/03/21 05:48:04 vapier Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1020,18 +1020,6 @@ gcc_do_configure() {
 		confgcc="${confgcc} --disable-nls"
 	fi
 
-	# __cxa_atexit is "essential for fully standards-compliant handling of
-	# destructors", but apparently requires glibc.
-	# --enable-sjlj-exceptions : currently the unwind stuff seems to work 
-	# for statically linked apps but not dynamic
-	# so use setjmp/longjmp exceptions by default
-	# uclibc uses --enable-clocale=uclibc (autodetected)
-	if is_uclibc ; then
-		confgcc="${confgcc} --disable-__cxa_atexit --enable-sjlj-exceptions --enable-target-optspace"
-	else
-		confgcc="${confgcc} --enable-__cxa_atexit --disable-sjlj-exceptions --enable-clocale=gnu"
-	fi
-
 	# reasonably sane globals (hopefully)
 	# --disable-libunwind-exceptions needed till unwind sections get fixed. see ps.m for details
 	confgcc="${confgcc} \
@@ -1052,9 +1040,20 @@ gcc_do_configure() {
 	# When building a stage1 cross-compiler (just C compiler), we have to 
 	# disable a bunch of features or gcc goes boom
 	if is_crosscompile && [[ ${GCC_LANG} == "c" ]] ; then
-		confgcc="${confgcc} --disable-shared --disable-threads --without-headers"
+		confgcc="${confgcc} --disable-shared --disable-threads --without-headers --enable-sjlj-exceptions"
 	else
-		confgcc="${confgcc} $(use_enable !static shared) --enable-threads=posix"
+		confgcc="${confgcc} $(use_enable !static shared) --enable-threads=posix --disable-sjlj-exceptions"
+	fi
+	# __cxa_atexit is "essential for fully standards-compliant handling of
+	# destructors", but apparently requires glibc.
+	# --enable-sjlj-exceptions : currently the unwind stuff seems to work 
+	# for statically linked apps but not dynamic
+	# so use setjmp/longjmp exceptions by default
+	# uclibc uses --enable-clocale=uclibc (autodetected)
+	if is_uclibc ; then
+		confgcc="${confgcc} --disable-__cxa_atexit --enable-sjlj-exceptions --enable-target-optspace"
+	else
+		confgcc="${confgcc} --enable-__cxa_atexit --enable-clocale=gnu"
 	fi
 
 	# Nothing wrong with a good dose of verbosity
@@ -1065,7 +1064,7 @@ gcc_do_configure() {
 	einfo "DATAPATH:        ${DATAPATH}"
 	einfo "STDCXX_INCDIR:   ${STDCXX_INCDIR}"
 	echo
-	einfo "Configuring GCC with: ${confgcc} ${@} ${EXTRA_ECONF}"
+	einfo "Configuring GCC with: ${confgcc//--/\n\t--} ${@} ${EXTRA_ECONF}"
 	echo
 
 	# Build in a separate build tree
