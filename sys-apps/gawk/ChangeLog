@@ -1,6 +1,25 @@
 # ChangeLog for sys-apps/gawk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.16 2003/03/25 18:06:59 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/ChangeLog,v 1.17 2003/03/26 14:30:15 azarah Exp $
+
+*gawk-3.1.1-r2 (26 Mar 2003)
+
+  26 Mar 2003; Martin Schlemmer <azarah@gentoo.org> gawk-3.1.2-r1.ebuild :
+  For some reason gawk-3.1.2 is more pain than worth.  Seems this release
+  also borks the ability to specify input files as arguments:
+
+    # gawk '/devfs/ { print }' /proc/filesystems 
+    #
+
+  should have been the same as:
+  
+    # cat /proc/filesystems | gawk '/devfs/ { print }'
+    nodev	devfs
+    nodev	usbdevfs
+    # 
+
+  Thus all this release does, is get the filefuncs module into 3.1.1 as well,
+  so that we can totally mask gawk-3.1.2.
 
 *gawk-3.1.2-r2 (25 Mar 2003)
 
