@@ -1,3 +1,5 @@
+MD5 47900b387aaa41f63ad08885ce7fe0b2 upx-ucl-1.25.ebuild 835
 MD5 6c972a1ae8e58653eed8bd7b3473d6bd upx-ucl-1.24.ebuild 861
-MD5 78057927d0751c3382e9a901a4e9e6b1 ChangeLog 587
+MD5 0773570c3adb1194a3219ce7bffa8632 ChangeLog 704
 MD5 7321411d8b47a0a94a230b0a338ca0d2 files/digest-upx-ucl-1.24 64
+MD5 5d3006a2e612fcc16edb9cbe618bc1e7 files/digest-upx-ucl-1.25 64
