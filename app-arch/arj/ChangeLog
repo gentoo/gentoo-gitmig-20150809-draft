@@ -1,6 +1,11 @@
 # ChangeLog for app-arch/arj
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/ChangeLog,v 1.2 2003/09/04 05:02:54 msterret Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arj/ChangeLog,v 1.3 2004/02/09 06:02:33 absinthe Exp $
+
+*arj-3.10.18 (09 Feb 2004)
+
+  09 Feb 2004; Dylan Carlson <absinthe@gentoo.org> arj-3.10.18.ebuild:
+  version bump.
 
   03 Sep 2003; Michael Sterrett <msterret@gentoo.org> arj-3.10g.ebuild:
   fix LICENSE; tidy
