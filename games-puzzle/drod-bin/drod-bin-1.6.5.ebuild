@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/drod-bin/drod-bin-1.6.5.ebuild,v 1.5 2004/06/24 23:03:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/drod-bin/drod-bin-1.6.5.ebuild,v 1.6 2004/09/23 09:54:51 mr_bones_ Exp $
 
 inherit games eutils
 
@@ -23,14 +23,14 @@ S="${WORKDIR}"
 
 src_unpack() {
 	unpack_makeself ${A}
-	cd ${S}
-	epatch ${FILESDIR}/install.patch
+	cd "${S}"
+	epatch "${FILESDIR}/install.patch"
 }
 
 src_install() {
 	./install.sh -R "${D}" -g -rl -pg -I || die "install.sh failed"
-	dodir ${GAMES_BINDIR}
-	dosym /opt/drod/bin/drod ${GAMES_BINDIR}/drod
+	dodir "${GAMES_BINDIR}"
+	dosym /opt/drod/bin/drod "${GAMES_BINDIR}/drod"
 	prepgamesdirs
 	fperms 770 /opt/drod/bin/Data
 }
@@ -42,6 +42,7 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
+	games_pkg_postinst
 	if [ -d ${ROOT}/opt/drod/bin/Data.backup ] ; then
 		ewarn "Your saved games have been backed up to"
 		ewarn "/opt/drod/bin/Data.backup"
