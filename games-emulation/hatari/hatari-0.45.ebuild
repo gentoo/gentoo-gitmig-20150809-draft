@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/hatari/hatari-0.45.ebuild,v 1.4 2004/05/26 20:57:53 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/hatari/hatari-0.45.ebuild,v 1.5 2004/05/26 20:58:40 mr_bones_ Exp $
 
 inherit games
 
@@ -11,6 +11,7 @@ SRC_URI="mirror://sourceforge/hatari/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc"
+IUSE=""
 
 RDEPEND="games-emulation/emutos
 	media-libs/libsdl
@@ -24,8 +25,8 @@ src_unpack() {
 
 	sed -i \
 		-e "/^CFLAGS/ s:-O3.*:${CFLAGS}:" \
-		-e "/^DATADIR/ s:=.*:= ${GAMES_DATADIR}/${PN}:" Makefile.cnf || \
-			die "sed Makefile.cnf failed"
+		-e "/^DATADIR/ s:=.*:= ${GAMES_DATADIR}/${PN}:" Makefile.cnf \
+		|| die "sed Makefile.cnf failed"
 }
 
 src_compile() {
