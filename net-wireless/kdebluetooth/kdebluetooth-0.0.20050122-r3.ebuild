@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-0.0.20050122-r3.ebuild,v 1.1 2005/01/30 17:50:50 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/kdebluetooth-0.0.20050122-r3.ebuild,v 1.2 2005/02/02 20:20:23 centic Exp $
 
-inherit kde
+inherit kde eutils
 
 DESCRIPTION="KDE Bluetooth Framework"
 HOMEPAGE="http://kde-bluetooth.sourceforge.net/"
@@ -22,6 +22,11 @@ DEPEND=">=dev-libs/openobex-1
 RDEPEND="|| ( kde-base/kdialog kde-base/kdebase )"
 
 need-kde 3
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${P}-compile.patch
+}
 
 src_compile() {
 	kde_src_compile myconf

@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/kdebluetooth
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/ChangeLog,v 1.22 2005/01/30 17:50:50 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kdebluetooth/ChangeLog,v 1.23 2005/02/02 20:20:23 centic Exp $
+
+  02 Feb 2005; Dominik Stadler <centic@gentoo.org>
+  +files/kdebluetooth-0.0.20050122-compile.patch,
+  kdebluetooth-0.0.20050122-r3.ebuild:
+  Add patch to compile correctly
 
 *kdebluetooth-0.0.20050122-r3 (30 Jan 2005)
 
