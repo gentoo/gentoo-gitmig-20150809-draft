@@ -1,0 +1,73 @@
+--- tuxmathscrabble.py.orig	2003-03-05 15:10:31.000000000 -0500
++++ tuxmathscrabble.py	2003-03-05 15:11:22.000000000 -0500
+@@ -58,7 +58,7 @@
+ 		pygame.display.set_caption('www.asymptopia.com')
+ 		pygame.mouse.set_visible(1)
+ 		
+-		self.pyfont=pygame.font.Font('font/freesansbold.ttf',16)
++		self.pyfont=pygame.font.Font('GENTOO_DATADIR/font/freesansbold.ttf',16)
+ 		#print 'using freesansbold.ttf: ',self.pyfont
+ 		
+ 		self.LEVEL=level
+@@ -70,11 +70,11 @@
+ 		win_sound=load_sound('sparcle.wav')
+ 		lose_sound=load_sound('foghorn2.wav')
+ 		
+-		reset_button=Button('images/reset.jpeg')
++		reset_button=Button('GENTOO_DATADIR/images/reset.jpeg')
+ 		reset_button.rect.center=(820,430)
+-		skip_button=Button('images/skip.jpeg')
++		skip_button=Button('GENTOO_DATADIR/images/skip.jpeg')
+ 		skip_button.rect.center=(820,500)
+-		ready_button=Button('images/ready.jpeg')
++		ready_button=Button('GENTOO_DATADIR/images/ready.jpeg')
+ 		ready_button.rect.center=(820,570)
+ 		buttongroup=pygame.sprite.Group([ready_button,skip_button,reset_button])
+ 		buttons=pygame.sprite.RenderPlain(buttongroup)
+@@ -84,13 +84,13 @@
+ 		background.fill((0, 150, 100))#green
+ 		
+ 		#Specific Test beyond this point:
+-		board=Board(M,N,W/2,H/2,None,'images/spot.jpeg')
++		board=Board(M,N,W/2,H/2,None,'GENTOO_DATADIR/images/spot.jpeg')
+ 		boardspots=pygame.sprite.RenderPlain(board.get_spots())
+ 		
+-		tray=Board(1,10,W/2,H-40,None,'images/spot.jpeg')
++		tray=Board(1,10,W/2,H-40,None,'GENTOO_DATADIR/images/spot.jpeg')
+ 		trayspots=pygame.sprite.RenderPlain(tray.get_spots())
+ 		
+-		submission=Board(M,N,W/2,H/2,None,'images/spot.jpeg')
++		submission=Board(M,N,W/2,H/2,None,'GENTOO_DATADIR/images/spot.jpeg')
+ 		submissionspots=pygame.sprite.RenderPlain()
+ 		
+ 		#drag-n-drop object	
+@@ -120,7 +120,7 @@
+ 
+ 
+ 	
+-		tuxtray=Board(1,10,W/2,80,None,'images/spot.jpeg')
++		tuxtray=Board(1,10,W/2,80,None,'GENTOO_DATADIR/images/spot.jpeg')
+ 		tuxtrayspots=pygame.sprite.RenderPlain(tuxtray.get_spots())
+ 		self.tuxtrayspots=tuxtrayspots
+ 		self.tuxtray=tuxtray
+@@ -134,7 +134,7 @@
+ 			if spot.getMN()[1]<6:
+ 				int_val=int(11*random())
+ 				str_val=`int_val`
+-				fname='images/'+imgnames[int_val]+'.jpeg'
++				fname='GENTOO_DATADIR/images/'+imgnames[int_val]+'.jpeg'
+ 			elif spot.getMN()[1]<10-1:
+ 				opnames=['plus','minus','mult']
+ 				idx=int(2*random())
+@@ -143,9 +143,9 @@
+ 				elif opnames[idx]=='minus':str_val='-'
+ 				elif opnames[idx]=='mult':str_val='*'
+ 				else:pass
+-				fname='images/'+opnames[idx]+'.jpeg'
++				fname='GENTOO_DATADIR/images/'+opnames[idx]+'.jpeg'
+ 			else:
+-				fname='images/equal.jpeg'
++				fname='GENTOO_DATADIR/images/equal.jpeg'
+ 				int_val=None
+ 				str_val='='
+ 			tile=Tile(fname,int_val,str_val)

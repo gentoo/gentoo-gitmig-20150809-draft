@@ -1,0 +1,25 @@
+# ChangeLog for app-games/stickers
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-kids/stickers/ChangeLog,v 1.1 2003/09/10 04:51:18 vapier Exp $
+
+*stickers-0.1.3-r1 (12 Mar 2002)
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> stickers-0.1.3.ebuild :
+  Added LICENSE, KEYWORDS.
+
+  17 jul 2002; Jose Alberto Suárez López <bass@gentoo.org> stickers-0.1.3-r1.ebuild :
+  Added LICENSE, KEYWORDS.
+
+  12 Mar 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog :
+
+  Added USE dependent nls compilation.
+
+*stickers-0.1.3 (1 Feb 2002)
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.

@@ -1,0 +1,5 @@
+MD5 0346bcf761b5cad47d9ce1289da0305a files/digest-gcompris-3.2 63
+MD5 ce34833a98967ab510f2b14908536746 files/digest-gcompris-3.1 66
+MD5 0e2dfadb4de246304d0751e44c64d652 ChangeLog 847
+MD5 d9011ac118b57cec458073383db0f14a gcompris-3.1.ebuild 1647
+MD5 4b04da717813935ea8fb66b4cf5910b2 gcompris-3.2.ebuild 1681

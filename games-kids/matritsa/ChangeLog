@@ -1,0 +1,16 @@
+# ChangeLog for app-games/matritsa
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-kids/matritsa/ChangeLog,v 1.1 2003/09/10 04:51:18 vapier Exp $
+
+*matritsa-0.1.2 (22 Aug 2003)
+
+  22 Aug 2003; Michael Sterrett <msterret@gentoo.org> matritsa-0.1.2.ebuild:
+  version bump
+
+  22 Aug 2003; Michael Sterrett <msterret@gentoo.org> matritsa-0.1.1.ebuild:
+  use games.eclass src_compile
+
+*matritsa-0.1.1 (07 Mar 2003)
+
+  07 Mar 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Ron <doobedoobedo@quake3world.com> #15605.

@@ -1,0 +1,13 @@
+# ChangeLog for app-games/tuxmathscrabble
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-kids/tuxmathscrabble/ChangeLog,v 1.1 2003/09/10 04:51:18 vapier Exp $
+
+*tuxmathscrabble-2.2 (03 Aug 2003)
+
+  03 Aug 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump.
+
+*tuxmathscrabble-0.1.0 (05 Mar 2003)
+
+  05 Mar 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by me for #15040.
