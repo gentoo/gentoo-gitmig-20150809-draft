@@ -1,5 +1,5 @@
-MD5 f63e739d82bddf91b479063b42503645 ChangeLog 2983
-MD5 e1d01b6e82ee64c045561ed31a25a561 amanda-2.4.4-r3.ebuild 11255
+MD5 f20ac8877d68c3fe9667f540d73f2f02 ChangeLog 3091
+MD5 2b87108cb1dc68b1fdfe3e043de8aa7c amanda-2.4.4-r3.ebuild 11238
 MD5 451df413de672ae539379c00fb9e62fc files/amanda-amandahosts 339
 MD5 a98390eb2ab16398b7332c42560c190f files/amanda-cron 419
 MD5 b21569120561b1c58ad59e93ce6df732 files/amanda-devfs 216

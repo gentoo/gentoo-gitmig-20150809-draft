@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4-r3.ebuild,v 1.1 2004/01/07 08:59:07 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4-r3.ebuild,v 1.2 2004/03/16 05:01:19 mr_bones_ Exp $
 
 inherit eutils
 
@@ -29,7 +29,6 @@ DEPEND="sys-libs/readline
 
 IUSE="pic debug gdbm berkdb samba xfs"
 
-S=${WORKDIR}/${P}
 MYFILESDIR=${WORKDIR}/files
 MYTMPDIR=${WORKDIR}/tmp
 ENVDIR="/etc/env.d"
@@ -179,7 +178,6 @@ src_compile() {
 	#perl ${S}/contrib/set_prod_link.pl
 
 }
-
 
 src_install() {
 	[ ! -f "${TMPENVFILE}" ] && die "Variable setting file (${TMPENVFILE}) should exist!"
