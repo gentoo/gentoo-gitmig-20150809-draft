@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.15.2.ebuild,v 1.3 2005/01/08 20:15:47 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.15.2.ebuild,v 1.4 2005/01/09 23:11:27 weeve Exp $
 
 IUSE="ssl novideo noaudio debug"
 
@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}-src-tar.gz"
 RESTRICT="nomirror"
 SLOT="0"
 LICENSE="MPL-1.1"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 
 DEPEND=">=sys-apps/sed-4
 	>=dev-libs/pwlib-1.8.3

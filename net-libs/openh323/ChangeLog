@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/openh323
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.56 2005/01/08 20:15:47 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/ChangeLog,v 1.57 2005/01/09 23:11:27 weeve Exp $
+
+  09 Jan 2005; Jason Wever <weeve@gentoo.org> openh323-1.15.2.ebuild:
+  Added ~sparc keyword as it went missing in the version bump.
 
   08 Jan 2005; Stefan Knoblich <stkn@gentoo.org> openh323-1.15.2.ebuild:
   removed sample application (simph323, anyone needs that?), parallel building
