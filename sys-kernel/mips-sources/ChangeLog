@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/mips-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.55 2004/09/29 09:46:15 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/ChangeLog,v 1.56 2004/10/21 22:42:11 kumba Exp $
+
+*mips-sources-2.6.9 (21 Oct 2004)
+
+  21 Oct 2004; Joshua Kinard <kumba@gentoo.org> +mips-sources-2.6.9.ebuild:
+  New version - Contains known fixes for many things, including functional IP22
+  (Indy/Indigo2 support (including ip22zilog), big changes in IP32 code,
+  gcc-3.4.x fixes, and various other tweaks.
 
 *mips-sources-2.4.26-r9 (29 Sep 2004)
 
