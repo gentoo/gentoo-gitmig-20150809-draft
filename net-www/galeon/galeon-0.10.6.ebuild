@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-0.10.6.ebuild,v 1.1 2001/05/13 09:28:22 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/galeon-0.10.6.ebuild,v 1.2 2001/05/20 13:50:36 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -10,6 +10,7 @@ SRC_URI="http://prdownloads.sourceforge.net/galeon/${A}"
 HOMEPAGE="http://galeon.sourceforge.net"
 
 DEPEND=">=net-www/mozilla-0.9
+	>=gnome-apps/glade-0.6.2
 	>=gnome-base/gnome-libs-1.2.12
 	>=gnome-base/gnome-vfs-0.6.2
 	>=gnome-base/gconf-0.50

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.3.ebuild,v 1.2 2001/04/22 18:02:30 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.3.ebuild,v 1.3 2001/05/20 13:50:36 achim Exp $
 
 A="jakarta-ant-1.3-src.tar.gz"
 S=${WORKDIR}/jakarta-ant-1.3
@@ -13,7 +13,12 @@ DEPEND="virtual/glibc
 	>=dev-lang/jdk-1.3
     >=dev-java/jaxp-1.0.1"
 
-
+src_unpack() {
+    unpack ${A}
+    cd ${S}/src/script
+    cp antRun antRun.orig
+    tr -d '\r' < antRun.orig > antRun
+}
 src_compile() {
 
   CLASSPATH=/opt/java/src.jar:/opt/java/lib/tools.jar:/usr/lib/java/jaxp.jar

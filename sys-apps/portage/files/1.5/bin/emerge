@@ -12,15 +12,16 @@ import shutil
 
 class depgraph:
 
-	def __init__(self):
+	def __init__(self,mymode,myopts):
+		self.mymode=mymode
+		self.myopts=myopts
 		virts=portage.getvirtuals("/")
 		self.db={}
-		self.db["/"]={"virtuals":virts,"vartree":portage.vartree("/",virts),"porttree":portage.portagetree("/",virts)}
+		self.db["/"]={"virtuals":virts,"vartree":portage.vartree("/",virts),"porttree":portage.portagetree("/",virts),"bintree":portage.binarytree("/",virts)}
 		if portage.root!="/":
 			pr=portage.root
 			virts=portage.getvirtuals(pr)
-			self.db[pr]={"virtuals":virts,"vartree":portage.vartree(pr,virts),"porttree":portage.portagetree(pr,virts)}
-	
+			self.db[pr]={"virtuals":virts,"vartree":portage.vartree(pr,virts),"porttree":portage.portagetree(pr,virts),"bintree":portage.binarytree(pr,virts)}
 		self.digraph=portage.digraph()
 
 	def create(self,mybigkey=None,myparent=None):
@@ -32,14 +33,22 @@ class depgraph:
 			if myparent:
 				self.digraph.addnode(mybigkey,myparent)
 			return 1
-		myroot,mykey=string.split(mybigkey)
-		if not self.db[myroot]["porttree"].exists_specific(mykey):
-			#might be blocked by package.mask
-			print "\n\n!!!",mykey,"not found (possibly blocked by package.mask)\n"
-			sys.exit(1)
-		myebuild=self.db[myroot]["porttree"].getname(mykey)
-		mydep={}
-		edepend=portage.doebuild(myebuild,"depend")
+		mytype,myroot,mykey=string.split(mybigkey)
+		if mytype=="binary":
+			if not self.db[portage.root]["bintree"].exists_specific(mykey):
+				print "\n\n!!!",mytype,mykey,"not found (possibly blocked by package.mask)\n"
+				sys.exit(1)
+			mytbz2=xpak.tbz2(self.db[portage.root]["bintree"].getname(mykey))
+			edepend=["",string.join(mytbz2.getelements("RDEPEND")," ")]
+		else:
+			#ebuild specified
+			if not self.db[myroot]["porttree"].exists_specific(mykey):
+				print "\n\n!!!",mytype,mykey,"not found (possibly blocked by package.mask)\n"
+				sys.exit(1)
+				mydep={}
+			myebuild=self.db[myroot]["porttree"].getname(mykey)
+			edepend=portage.doebuild(myebuild,"depend")
+		mydep={}	
 		if portage.root=="/":
 			mydep["/"]=edepend[0]+" "+edepend[1]
 		else:
@@ -51,11 +60,7 @@ class depgraph:
 				print "!!! depgraph.create() error: string format:",mydep
 				return 0
 			for x in mycheck[1]:
-				mymatch=self.db[dep]["porttree"].dep_bestmatch(x)
-				if mymatch=="":
-					print "!!! depgraph.create() error: can't resolve dependency:",x
-					return 0
-				mynew=dep+" "+mymatch
+				mynew=self.match(x)
 				if not self.digraph.hasnode(mynew):
 					if not self.create(mynew,mybigkey):
 						return 0
@@ -77,33 +82,21 @@ class depgraph:
 				print "!!! Error: circular dependencies"
 				sys.exit(1)
 			splitski=string.split(mycurkey)
-			self.db[splitski[0]]["merge"].append(splitski[1])	
+			self.db[splitski[1]]["merge"].append(splitski)	
 			mygraph.delnode(mycurkey)
 		for x in dolist:
 			for y in self.db[x]["merge"]:
-				retlist.append([x,y])
+				retlist.append(y)
 		return retlist
 
-	def list(self):
-		mygraph=self.digraph.copy()
-		retlist=[]
-		while not mygraph.empty():
-			mycurkey=mygraph.firstzero()
-			if not mycurkey:
-				print "!!! Error: circular dependencies"
-				sys.exit(1)
-			retlist.append(string.split(mycurkey))	
-			mygraph.delnode(mycurkey)
-		return retlist
-	
-	def syscreate(self,mylines,update=0):
+	def syscreate(self,mylines):
 		for x in mylines:
 			myline=string.join(string.split(x))
 			if not len(myline):
 				continue
 			if myline[0]=="#":
 				continue
-			if not update:
+			if "update" not in self.mymode:
 				mycheck=self.db[portage.root]["vartree"].depcheck(myline)
 				if mycheck[0]==0:
 					print "\n!!! Warning:",myline,"has an invalid depstring\n"
@@ -111,116 +104,172 @@ class depgraph:
 				if mycheck[1]==None:
 					continue
 				for x in mycheck[1]:
-					mykey=self.db[portage.root]["porttree"].dep_bestmatch(myline)
-					if not mykey:
-						print "\n!!! Warning: couldn't find match for",myline,"\n"
-						continue
-					self.create(portage.root+" "+mykey)
+					self.create(self.match(myline))
 			else:
-				mykey=self.db[portage.root]["porttree"].dep_bestmatch(myline)
-				if not mykey:
-						print "\n!!! Warning: couldn't find match for",myline,"\n"
-						continue
-				self.create(portage.root+" "+mykey)
-			
+				self.create(self.match(myline))
+	
+	def match(self,mydep):
+		myeb=self.db[portage.root]["porttree"].dep_bestmatch(mydep)
+		if not myeb:
+			print "\n!!! Error: couldn't find match for",myline,"\n"
+			sys.exit(1)
+		if "--usepkg" in self.myopts:
+			mypk=self.db[portage.root]["bintree"].dep_bestmatch(mydep)
+			if myeb==mypk:
+				myk="binary "+portage.root+" "+mypk
+			else:
+				myk="ebuild "+portage.root+" "+myeb
+		else:
+			myk="ebuild "+portage.root+" "+myeb
+		return myk	
+	
 	def display(self,mylist):
 		for x in mylist:
-			if self.db[x[0]]["vartree"].exists_specific(x[1]):
-				addl="(replacing identical package)"
-			elif self.db[x[0]]["vartree"].exists_specific_cat(x[1]):
-				addl="(package upgrade)"
+			if self.db[x[1]]["vartree"].exists_specific(x[2]):
+				addl=" R "
+			elif self.db[x[1]]["vartree"].exists_specific_cat(x[2]):
+				addl="  U"
 			else:
-				addl="(new)"
-			print x[1],"to",x[0],addl
-
+				addl="N  "
+			print "["+x[0]+" "+addl+"]",x[2],"to",x[1]
+				
 	def merge(self,mylist):
 		for x in mylist:
-			os.environ["ROOT"]=x[0]
-			print ">>> emerge",x[1],"to",x[0]
+			os.environ["ROOT"]=x[1]
+			print ">>> emerge",x[2],"to",x[1]
 			#the last argument in the portage.doebuild() tells doebuild to *not* do dep checking
 			#(emerge is already handling that)
-			retval=portage.doebuild(self.db[x[0]]["porttree"].getname(x[1]),"clean",0)
-			if retval:
-				print "!!! emerge aborting."
-				sys.exit(1)
-			retval=portage.doebuild(self.db[x[0]]["porttree"].getname(x[1]),"merge",0)
-			if retval:
-				print "!!! emerge aborting."
-				sys.exit(1)
-			#dynamically update our database	
-			self.db[x[0]]["vartree"].inject(x[1])
+			if x[0]=="ebuild":
+				if "--buildpkg" in self.myopts:
+					#create pkg, then merge pkg
+					retval=portage.doebuild(self.db[x[1]]["porttree"].getname(x[2]),"clean",0)
+					if retval:
+						print "!!! emerge aborting."
+						sys.exit(1)
+					retval=portage.doebuild(self.db[x[1]]["porttree"].getname(x[2]),"package",0)
+					if retval:
+						print "!!! emerge aborting."
+						sys.exit(1)
+					#dynamically update our database	
+					self.db[portage.root]["bintree"].inject(x[2])
+					mytbz2=self.db[portage.root]["bintree"].getname(x[2])
+					retval=portage.pkgmerge(mytbz2)
+					if retval==None:
+						print "!!! emerge aborting."
+						sys.exit(1)
+				else:
+					retval=portage.doebuild(self.db[x[1]]["porttree"].getname(x[2]),"clean",0)
+					if retval:
+						print "!!! emerge aborting."
+						sys.exit(1)
+					retval=portage.doebuild(self.db[x[1]]["porttree"].getname(x[2]),"merge",0)
+					if retval:
+						print "!!! emerge aborting."
+						sys.exit(1)
+					#dynamically update our database	
+			else:
+				#merge the tbz2
+				mytbz2=self.db[portage.root]["bintree"].getname(x[2])
+				retval=portage.pkgmerge(mytbz2)
+				if retval==None:
+					print "!!! emerge aborting."
+					sys.exit(1)
+				#need to check for errors
+			self.db[x[1]]["vartree"].inject(x[2])
 
-pretend=0
-sysmode=0
-updmode=0
-if len(sys.argv)>=2:
-	if sys.argv[1]=="--pretend":
+opts=["--help","--pretend","--buildpkg","--usepkg"]
+modes=["rsync","system","update"]
+myopts=[]
+mymode=[]
+myfiles=[]
+
+for x in sys.argv[1:]:
+	if len(x)>=2:
+		if x[0:2]=="--":
+			if x in opts:
+				myopts.append(x)
+			else:
+				print "!!! Error:",x,"is an invalid option."
+				sys.exit(1)
+		elif x in modes:
+			if len(mymode)>=1:
+				print "!!! Error: more than one mode specified on command-line."
+				print "!!! Available modes:",modes
+				sys.exit(1)
+			else:
+				mymode.append(x)
+		elif os.path.exists(x):
+			if not x in myfiles:
+				myfiles.append(x)
+		else:
+			print "!!! Error:",x,"does not exist or is an invalid command-line option."
+			sys.exit(1)
+
+if "--help" in myopts:
+	print "Usage: emerge [--pretend] pkg1.tbz2 [pkg2.tbz2]..."
+	sys.exit(1)
+
+if "--pretend" in myopts:
 		print
 		print "These are the packages that I would merge, in order."
 		print
-		pretend=1
-		del sys.argv[1]
-	elif sys.argv[1]=="--help":
-		print "Usage: emerge [--pretend] pkg1.tbz2 [pkg2.tbz2]..."
-		sys.exit(1)
-	elif sys.argv[1]=="rsync":
-		if not os.path.exists("/usr/bin/rsync"):
-			print "!!! /usr/bin/rsync does not exist, so rsync support is disabled."
-			sys.exit(1)
-		rclean=0
-		myportdir=portage.settings["PORTDIR"]
-		if myportdir[-1]=="/":
-			myportdir=myportdir[:-1]
-		if not os.path.exists(myportdir):
-			print ">>>",myportdir,"not found, creating it."
-			os.makedirs(myportdir,0755)	
-		if len(sys.argv)>2:
-			if sys.argv[2]=="clean":
-				#we'll --delete files when we rsync
-				rclean=1
-		mycommand="/usr/bin/rsync -av --stats --progress "
-		if rclean:
-			mycommand=mycommand+"--delete --exclude='distfiles/*' --exclude='packages/*' "
-		mycommand=mycommand+"rsync://cvs.gentoo.org/gentoo-x86-portage/* "+myportdir
-		print ">>> starting rsync with cvs.gentoo.org..."
-		sys.exit(os.system(mycommand))	
-	if sys.argv[1] in ["system","update"]:
-		sysmode=1
-		if sys.argv[1]=="update":
-			updmode=1
-	#system profile mode
-	if sysmode: 
-		if not os.path.exists(portage.root+"etc/make.profile/packages"):
-			print "!!!",portage.root+"etc/make.profile/packages does not exist.  \"system\" mode unavailable."
-			sys.exit(1)
-		myfile=open(portage.root+"etc/make.profile/packages","r")
-		mylines=myfile.readlines()
-		myfile.close()
-		mydepgraph=depgraph()
-		print "Calculating system dependencies",
-		mydepgraph.syscreate(mylines,updmode)
-		print " done!"
-		if pretend:
-			mydepgraph.display(mydepgraph.altlist())
-		else:
-			mydepgraph.merge(mydepgraph.altlist())
-		sys.exit(0)
 
-#standard single mode
-for mypkg in sys.argv[1:]:
-	if len(mypkg)<=7:
-		print ">>> Error: short ebuild name, skipping..."
-		continue
-	if mypkg[-7:]!=".ebuild":
-		print ">>> Error: there is no ebuild extension on",mypkg+", skipping..."
-		continue
-		
-	mykey=os.path.basename(os.path.abspath(mypkg+"/../.."))+"/"+os.path.basename(mypkg)[:-7]
-	mydepgraph=depgraph()
-	print "Calculating dependencies",
-	mydepgraph.create(portage.root+" "+mykey)
+if "rsync" in mymode:
+	if not os.path.exists("/usr/bin/rsync"):
+		print "!!! /usr/bin/rsync does not exist, so rsync support is disabled."
+		sys.exit(1)
+	rclean=0
+	myportdir=portage.settings["PORTDIR"]
+	if myportdir[-1]=="/":
+		myportdir=myportdir[:-1]
+	if not os.path.exists(myportdir):
+		print ">>>",myportdir,"not found, creating it."
+		os.makedirs(myportdir,0755)	
+	if len(sys.argv)>2:
+		if sys.argv[2]=="clean":
+			#we'll --delete files when we rsync
+			rclean=1
+	mycommand="/usr/bin/rsync -av --stats --progress "
+	if rclean:
+		mycommand=mycommand+"--delete --exclude='distfiles/*' --exclude='packages/*' "
+	mycommand=mycommand+"rsync://cvs.gentoo.org/gentoo-x86-portage/* "+myportdir
+	print ">>> starting rsync with cvs.gentoo.org..."
+	sys.exit(os.system(mycommand))	
+
+if ("system" in mymode) or ("update" in mymode):
+	#system profile mode
+	if not os.path.exists(portage.root+"etc/make.profile/packages"):
+		print "!!!",portage.root+"etc/make.profile/packages does not exist.  \"system\" mode unavailable."
+		sys.exit(1)
+	myfile=open(portage.root+"etc/make.profile/packages","r")
+	mylines=myfile.readlines()
+	myfile.close()
+	mydepgraph=depgraph(mymode,myopts)
+	print "Calculating system dependencies",
+	mydepgraph.syscreate(mylines)
 	print " done!"
-	if pretend:
+	if "--pretend" in myopts:
+		mydepgraph.display(mydepgraph.altlist())
+	else:
+		mydepgraph.merge(mydepgraph.altlist())
+	sys.exit(0)
+
+mydepgraph=depgraph(mymode,myopts)
+for mypkg in myfiles:
+	if mypkg[-5:]==".tbz2":
+		mytype="binary"
+		mytbz2=xpak.tbz2(mypkg)
+		mykey=mytbz2.getelements("CATEGORY")[0]+"/"+os.path.basename(mypkg)[:-5]
+	elif mypkg[-7:]==".ebuild":
+		mytype="ebuild"
+		mykey=os.path.basename(os.path.abspath(mypkg+"/../.."))+"/"+os.path.basename(mypkg)[:-7]
+	else:
+		print "!!! Error:",x,"is neither an ebuild nor a .tbz2 package."
+		sys.exit(1)
+	print "Calculating dependencies",
+	mydepgraph.create(mytype+" "+portage.root+" "+mykey)
+	print " done!"
+	if "--pretend" in myopts:
 		mydepgraph.display(mydepgraph.altlist())
 	else:
 		mydepgraph.merge(mydepgraph.altlist())

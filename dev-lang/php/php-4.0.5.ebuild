@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.0.5.ebuild,v 1.5 2001/05/18 17:13:55 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.0.5.ebuild,v 1.6 2001/05/20 13:50:36 achim Exp $
 
 A=${PN}-4.0.5.tar.gz
 S=${WORKDIR}/${PN}-4.0.5
@@ -29,9 +29,9 @@ DEPEND="virtual/glibc
 	ldap? ( >=net-nds/openldap-1.2.11 )
 	postgres? ( >=dev-db/postgresql-7.1 )
 	X? ( virtual/x11 )
-	qt? ( x11-libs/qt-x11-2.3.0 )
+	qt? ( >=x11-libs/qt-x11-2.3.0 )
 	xml? ( >=app-text/sablotron-0.44 )
-	libwww? ( net-libs/libwww-5.3.2 )
+	libwww? ( >=net-libs/libwww-5.3.2 )
 	imap? ( virtual/imap )"
 
 src_compile() {
@@ -93,7 +93,7 @@ src_compile() {
 	--enable-dbase --enable-sysvsem --enable-sysvshm --with-zlib=yes --enable-bcmath \
 	--enable-calendar --enable-versioning --enable-inline-optimization --enable-trans-sid \
 	--with-gd --with-ttf --with-t1lib --with-jpeg-dir=/usr/lib \
-	--with-config-file-path=`/usr/sbin/apxs -q SYSCONFDIR` \
+	--with-config-file-path=`/usr/sbin/apxs -q SYSCONFDIR` --host=${CHOST} \
 	--with-apxs="/usr/sbin/apxs -ltiff" --with-exec-dir="/usr/lib/apache/bin" $myconf
     try make
 }

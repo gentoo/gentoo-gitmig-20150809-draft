@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache-ssl/apache-ssl-1.3.19.2.8.3.ebuild,v 1.1 2001/05/06 14:55:29 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache-ssl/apache-ssl-1.3.19.2.8.3.ebuild,v 1.2 2001/05/20 13:50:36 achim Exp $
 
 A="apache_1.3.19.tar.gz mod_ssl-2.8.3-1.3.19.tar.gz"
 S=${WORKDIR}/apache_1.3.19
@@ -11,7 +11,8 @@ SRC_URI="http://httpd.apache.org/dist/httpd/apache_1.3.19.tar.gz
 HOMEPAGE="http://www.apache.org http://www.modssl.org"
 
 DEPEND="virtual/glibc
-	>=sys-libs/db-3.1
+	=sys-libs/db-3.2.3h-r3
+	=sys-libs/db-1.85-r1
 	>=dev-libs/openssl-0.9.6"
 
 src_compile() {                           
