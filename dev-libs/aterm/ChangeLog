@@ -1,11 +1,14 @@
 # ChangeLog for dev-libs/aterm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/aterm/ChangeLog,v 1.5 2003/01/14 15:14:20 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/aterm/ChangeLog,v 1.6 2003/01/21 02:50:56 nall Exp $
 
+  20 Jan 2003; Jon Nall <nall@gentoo.org> aterm-1.6.7.ebuild: :
+  keyworded ~ppc
+  
   14 Jan 2003; Karl Trygve Kalleberg <karltk@gentoo.org> aterm-1.6.7.ebuild:
   Unmasked. Needed by dev-lang/stratego-0.8.1.
  
-*aterm-1.6.6 (19 Oct 2002)
+*aterm-1.6.7 (19 Oct 2002)
 
   19 Oct 2002; Karl Trygve Kalleberg <karltk@gentoo.org> aterm-1.6.7.ebuild files/digest-aterm-1.6.7 :
   New upstream version.
