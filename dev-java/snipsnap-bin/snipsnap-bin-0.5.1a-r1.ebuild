@@ -1,15 +1,17 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/snipsnap-bin/snipsnap-bin-0.5.1a.ebuild,v 1.1 2004/07/30 21:52:34 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/snipsnap-bin/snipsnap-bin-0.5.1a-r1.ebuild,v 1.1 2004/08/21 12:03:15 axxo Exp $
 
 DESCRIPTION="A blog/wiki personal content management system"
 HOMEPAGE="http://snipsnap.org"
-SRC_URI="ftp://snipsnap.org/${PN/-bin}/${P/-bin}-20040123.tgz"
+MY_P=${P/-bin}
+SRC_URI="ftp://snipsnap.org/${PN/-bin}/${MY_P}-20040123.tgz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE=""
 DEPEND=">=virtual/jre-1.3"
+S=${WORKDIR}/${MY_P}
 
 src_install() {
 	dodir /opt/${PN/-bin}

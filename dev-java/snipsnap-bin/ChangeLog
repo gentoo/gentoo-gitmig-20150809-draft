@@ -1,6 +1,12 @@
 # ChangeLog for dev-java/snipsnap
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/snipsnap-bin/ChangeLog,v 1.1 2004/07/30 21:52:34 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/snipsnap-bin/ChangeLog,v 1.2 2004/08/21 12:03:15 axxo Exp $
+
+*snipsnap-bin-0.5.1a-r1 (21 Aug 2004)
+
+  21 Aug 2004; Thomas Matthijs <axxo@gentoo.org>
+  +snipsnap-bin-0.5.1a-r1.ebuild:
+  fix S path
 
 *snipsnap-bin-0.4.2a (30 Jul 2004)
 
