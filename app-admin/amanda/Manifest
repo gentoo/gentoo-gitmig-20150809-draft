@@ -1,21 +1,33 @@
-MD5 2afa19ca1e9fe8deb5a14711e70cec82 ChangeLog 4784
-MD5 c6b751a034398ef7dd3e207476c53e82 amanda-2.4.4-r3.ebuild 11290
-MD5 e6f1be35cbce779e07dd3d4449a8dfcc amanda-2.4.4_p2-r1.ebuild 11509
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 dbebfc7992834d0a916c2479a75e35b4 amanda-2.4.4_p3.ebuild 11780
 MD5 fbae3bebc75f02f1d4fd63ecd968f100 amanda-2.4.4_p2-r2.ebuild 11642
 MD5 1f23611bf44cee67526b78a0e2af4e33 amanda-2.4.4_p2.ebuild 11341
-MD5 e8f6530495f7634139ae11a02230656c amanda-2.4.4_p3.ebuild 11639
+MD5 c6b751a034398ef7dd3e207476c53e82 amanda-2.4.4-r3.ebuild 11290
+MD5 e6f1be35cbce779e07dd3d4449a8dfcc amanda-2.4.4_p2-r1.ebuild 11509
+MD5 0864f2f8f22527a5b6f5b6d42a9c68e5 ChangeLog 4900
 MD5 b0d485ea1a51fb83c70daedef2599272 metadata.xml 279
-MD5 451df413de672ae539379c00fb9e62fc files/amanda-amandahosts 339
-MD5 a98390eb2ab16398b7332c42560c190f files/amanda-cron 419
 MD5 89f98efbd6fee9891cd6c39d52e5d7a8 files/amanda-devfs 349
-MD5 ef2e4c8797076d9733b31a860fda8582 files/amanda-inetd.amanda.sample 194
-MD5 c1754144159a9b9e71119c7ca30e6054 files/amanda-profile 49
+MD5 fe28f64731a2dbf85f76b6f38942e032 files/example_disklist 55
+MD5 a98390eb2ab16398b7332c42560c190f files/amanda-cron 419
 MD5 3f55a95767207ed6c8fa0a14ec2a27b3 files/amanda-xinetd 1502
+MD5 c1754144159a9b9e71119c7ca30e6054 files/amanda-profile 49
+MD5 7e3ebbf89155432d9ee2e0ede8d4d8d6 files/example_amanda.conf 635
+MD5 451df413de672ae539379c00fb9e62fc files/amanda-amandahosts 339
+MD5 1c3320d56e74e925e4b3e4a8936488cd files/patch-tar-1.14.90 984
 MD5 7e5571de2054c56f477b5522246a834e files/digest-amanda-2.4.4-r3 65
 MD5 0c1121f81cee9a50018b96c615b4554b files/digest-amanda-2.4.4_p2 67
+MD5 8c132263bed2ee3703b26936b15aa916 files/digest-amanda-2.4.4_p3 67
 MD5 0c1121f81cee9a50018b96c615b4554b files/digest-amanda-2.4.4_p2-r1 67
 MD5 0c1121f81cee9a50018b96c615b4554b files/digest-amanda-2.4.4_p2-r2 67
-MD5 8c132263bed2ee3703b26936b15aa916 files/digest-amanda-2.4.4_p3 67
-MD5 7e3ebbf89155432d9ee2e0ede8d4d8d6 files/example_amanda.conf 635
-MD5 fe28f64731a2dbf85f76b6f38942e032 files/example_disklist 55
 MD5 95a109a0edbf12da91dbabf7977a97f7 files/example_global.conf 1377
+MD5 ef2e4c8797076d9733b31a860fda8582 files/amanda-inetd.amanda.sample 194
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+Comment: Robbat2 @ Orbis-Terrarum Networks
+
+iD8DBQFBoV0dPpIsIjIzwiwRAnCcAKCpRuS+PMZrEGcZ0gLWMe+B0N/g6ACcCbUl
+gjcdUJ3Aun2WoxFByCOzd/4=
+=UbKd
+-----END PGP SIGNATURE-----

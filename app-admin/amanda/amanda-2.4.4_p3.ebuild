@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4_p3.ebuild,v 1.1 2004/07/15 17:26:19 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/amanda-2.4.4_p3.ebuild,v 1.2 2004/11/22 03:29:31 robbat2 Exp $
 
 inherit eutils
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.amanda.org/"
 SRC_URI="mirror://sourceforge/amanda/${P/_/}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+KEYWORDS="x86 ~ppc ~sparc ~amd64"
 RDEPEND="sys-libs/readline
 		virtual/inetd
 		app-arch/mt-st
@@ -23,13 +23,12 @@ RDEPEND="sys-libs/readline
 		samba? ( net-fs/samba )
 		berkdb? ( sys-libs/db )
 		gdbm? ( sys-libs/gdbm )
-		!sparc? ( xfs? ( sys-fs/xfsdump ) )"
+		!sparc? ( xfs? ( sys-fs/xfsdump ) )
+		>=sys-apps/portage-2.0.51-r3"
 
 DEPEND="${RDEPEND}
 	sys-devel/autoconf
 	sys-devel/automake"
-#dev-lang/perl sys-apps/gawk?
-
 
 IUSE="pic debug gdbm berkdb samba xfs"
 
@@ -104,6 +103,9 @@ pkg_setup() {
 
 src_unpack() {
 	unpack ${A}
+	# Fix glitch with recognizing tar-1.14.90
+	epatch ${FILESDIR}/patch-tar-1.14.90 || die "Failed to add tar support patch"
+	# now the real fun
 	amanda_variable_setup
 	# places for us to work in
 	mkdir -p ${MYFILESDIR} ${MYTMPDIR}
