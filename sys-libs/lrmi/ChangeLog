@@ -1,6 +1,6 @@
-# ChangeLog for media-gfx/icoutils
+# ChangeLog for sys-libs/lrmi
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/lrmi/ChangeLog,v 1.1 2002/10/21 17:52:19 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/lrmi/ChangeLog,v 1.2 2002/12/17 19:49:02 vapier Exp $
 
 *lrmi-0.6 (21 Oct 2002)
 
