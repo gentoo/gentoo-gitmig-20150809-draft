@@ -1,8 +1,11 @@
 # ChangeLog for net-misc/wget
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.4 2002/07/09 11:36:09 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.5 2002/10/23 19:29:38 vapier Exp $
 
 *wget-1.8.2 (29 May 2002)
+
+  23 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Removed bootcd USE flag
 
   09 Jul 2002; phoen][x <phoenix@gentoo.org> wget-1.8.2.ebuild :
   Added KEYWORDS, LICENSE, SLOT.
@@ -14,6 +17,9 @@
   to the user.
 
 *wget-1.8.1-r1 (22 Feb 2002)
+
+  23 Oct 2002; Mike Frysinger <vapier@gentoo.org> :
+  Removed bootcd USE flag
 
   09 Jul 2002; phoen][x <phoenix@gentoo.org> wget-1.8.2.ebuild :
   Added KEYWORDS, LICENSE, SLOT.
