@@ -21,6 +21,11 @@
 ##   End example
 ##
 
+# <ciaranm@gentoo.org> (24 Dec 2003)
+# This has a fair number of unchecked sprintf() calls, and several appear to
+# be potentially exploitable. Masking until we can get these fixed.
+media-sound/mp3blaster
+
 # <pauldv@gentoo.org> (22 Dec 2003)
 # Some testing is needed before unmasking. It should run well, but this package
 # is quite critical
