@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c1b86f6ebc7ac8318e3e2c635a4cad94 aaindex-6.0.ebuild 1447
+MD5 8527b3bcf2116580d712f4a3aa9df938 aaindex-6.0.ebuild 1448
 MD5 a463630e2d11cc22ed1f50a39edee004 ChangeLog 890
 MD5 d508af45f2137bf67613eb18d9f6f831 metadata.xml 1310
 MD5 cd3e50367768bef809d98048504b43d6 files/digest-aaindex-6.0 278
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBy3ztI1lqEGTUzyQRAouvAJ4jcDzXKBqYQPIHxtP/F3yzJvss6gCgruWl
-lkTn2A7uLsmwrurT45qm0ow=
-=YxOv
------END PGP SIGNATURE-----
