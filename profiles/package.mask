@@ -772,15 +772,6 @@ net-www/zope
 # drobbins, 16 Mar 2002: This kernel sucks :)
 =sys-kernel/linux-sources-2.4.18
 
-# Opera 6 final.
-# This package requires that qt2 package were linked against libpng 1.0.12,
-# while the latest libpng version is 1.2.  Since I could not figure out how
-# to specify this witihout making qt-2 dependent on =libpng-1.0.12*, this
-# ebuild is masked out.  Please use opera-static instead, which does not
-# require libpng or qt installed.
-# Arcady Genkin <agenkin@gentoo.org> May 20, 2002.
-#
-net-www/opera
 
 # Arcady Genkin <agenkin@gentoo.org>
 # Aug 15 2002
