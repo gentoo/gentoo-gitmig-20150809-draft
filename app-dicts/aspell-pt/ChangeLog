@@ -1,7 +1,10 @@
 # ChangeLog for app-dicts/aspell-pt
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-pt/ChangeLog,v 1.8 2005/02/16 17:36:05 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/aspell-pt/ChangeLog,v 1.9 2005/03/12 22:40:21 arj Exp $
 
+  12 Mar 2005; Anders Rune Jensen <arj@gentoo.org> -aspell-pt-20041027.ebuild:
+  Fix #84809. This snapshots Makefile is completely broken.
+	
   16 Feb 2005; Anders Rune Jensen <arj@gentoo.org> aspell-pt-20041027.ebuild:
   Fix #82232
 	
