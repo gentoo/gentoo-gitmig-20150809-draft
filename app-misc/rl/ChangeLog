@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/rl
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rl/ChangeLog,v 1.7 2004/10/13 20:38:41 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rl/ChangeLog,v 1.8 2004/12/13 19:38:15 weeve Exp $
+
+  13 Dec 2004; Jason Wever <weeve@gentoo.org> rl-0.2.2.ebuild:
+  Stable on sparc.
 
   13 Oct 2004; Sven Wegener <swegener@gentoo.org> metadata.xml:
   Added to the shell-tools herd.
