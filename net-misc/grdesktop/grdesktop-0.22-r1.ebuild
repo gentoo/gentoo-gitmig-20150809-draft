@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/grdesktop-0.22.ebuild,v 1.2 2004/02/21 01:13:11 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/grdesktop-0.22-r1.ebuild,v 1.1 2004/02/21 01:13:11 cyfred Exp $
 
 DESCRIPTION="Gtk2 frontend for rdesktop"
 HOMEPAGE="http://www.nongnu.org/grdesktop"
@@ -14,7 +14,8 @@ IUSE=""
 
 DEPEND=">=x11-libs/gtk+-2.0.6-r3
 	>=net-misc/rdesktop-1.1.0.19.9.0
-	>=app-text/docbook2X-0.6.1"
+	>=app-text/docbook2X-0.6.1
+	>=gnome-base/libgnomeui-2.2"
 
 #RDEPEND=""
 

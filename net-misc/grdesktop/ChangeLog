@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/grdesktop
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/ChangeLog,v 1.8 2004/02/16 12:50:59 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/grdesktop/ChangeLog,v 1.9 2004/02/21 01:13:11 cyfred Exp $
+
+*grdesktop-0.22-r1 (21 Feb 2004)
+
+  21 Feb 2004; Andrew Bevitt <cyfred@gentoo.org>; grdesktop-0.22-r1.ebuild,
+  grdesktop-0.22.ebuild, metadata.xml:
+  Updating for dependency changes, and pulling ~amd64 as dependencies have been
+  masked for this ARCH
 
 *grdesktop-0.22 (16 Feb 2004)
 
