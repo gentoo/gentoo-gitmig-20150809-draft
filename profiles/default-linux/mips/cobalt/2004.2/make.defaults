@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/cobalt/2004.2/make.defaults,v 1.3 2004/09/27 09:12:55 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/cobalt/2004.2/make.defaults,v 1.4 2004/09/29 20:27:29 kumba Exp $
 
 ARCH="mips"
 
@@ -13,6 +13,16 @@ PROFILE_ARCH="cobalt"
 # Sandbox is broken on mips (Bug #45814)
 FEATURES="-sandbox ccache"
 
+# Compiler flags
+# We build mips4 by default because all cobalt systems use an RM5231 (or derivative)
+# CPU, which is in the R5000-class and is thus mips4 capable.  We also force the
+# ABI to o32 because there is no mips64 support on cobalt (yet) and it therefore
+# cannot run anything else.
+CFLAGS="-O2 -pipe -march=mips4 -mabi=32"
+CXXFLAGS=${CFLAGS}
+
 ACCEPT_KEYWORDS="mips"
 
-USE="slang readline gpm berkdb gdbm tcpd pam libwww ssl nls perl python sdl"
+USE="slang readline gpm berkdb gdbm tcpd pam libwww ssl nls perl python sdl cobalt -n32 -n64 -multilib nomultilib"
+GRP_STAGE23_USE="slang readline gpm berkdb gdbm tcpd pam libwww ssl nls perl python sdl cobalt -n32 -n64 -multilib nomultilib"
+

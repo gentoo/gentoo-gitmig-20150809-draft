@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.1 2004/09/23 05:38:34 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/mips/use.mask,v 1.2 2004/09/29 20:27:29 kumba Exp $
 
 # Stephen P. Becker <geoman@gentoo.org>
 # mask evolution use flag until it can be properly tested
@@ -52,18 +52,21 @@ emacs
 
 # And arch keyword flags that don't work
 
-x86
-ppc
 alpha
-hppa
-arm
 amd64
+arm
+hppa
 ia64
-ppc64
-s390
-uclibc
 macos
+mips
+ppc
+ppc64
+ppc-macos
+s390
+sparc
+x86
 x86-obsd
+x86-fbsd
 
 # see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
 # Dated Sat, 31 Jul 2004 14:49:28 -0700, from robbat2@gentoo.org
