@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/alsa-oss-0.9.8.ebuild,v 1.6 2004/03/31 17:28:09 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/alsa-oss-0.9.8.ebuild,v 1.7 2004/04/20 16:40:13 eradicator Exp $
+
+IUSE=""
 
 DESCRIPTION="Advanced Linux Sound Architecture OSS compatibility layer."
 HOMEPAGE="http://www.alsa-project.org/"

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/alsa-oss
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/ChangeLog,v 1.29 2004/04/04 18:54:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-oss/ChangeLog,v 1.30 2004/04/20 16:40:13 eradicator Exp $
+
+  20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  alsa-oss-0.9.0_rc1.ebuild, alsa-oss-0.9.8.ebuild:
+  Added IUSE.
 
 *alsa-oss-1.0.4 (04 Apr 2004)
 

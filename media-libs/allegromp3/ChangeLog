@@ -1,5 +1,9 @@
 # ChangeLog for media-libs/allegromp3
 
+  20 Apr 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  allegromp3-2.0.2.ebuild:
+  Added IUSE.
+
   23 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
   allegromp3-2.0.2.ebuild:
   mp3dep changed to virtual
