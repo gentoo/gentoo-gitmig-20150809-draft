@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.1.ebuild,v 1.7 2005/03/18 02:47:09 gongloo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/gnupg-1.4.1.ebuild,v 1.8 2005/03/18 21:42:51 taviso Exp $
 
 inherit eutils flag-o-matic
 
@@ -38,7 +38,7 @@ RDEPEND="
 	selinux? ( sec-policy/selinux-gnupg )"
 # waiting on arm arch - bug #76234
 RDEPEND="${RDEPEND}
-	!arm? ( X? ( media-gfx/xloadimage media-gfx/xli ) )"
+	!arm? ( X? ( || ( media-gfx/xloadimage media-gfx/xli ) ) )"
 
 DEPEND="${RDEPEND}
 	dev-lang/perl"
