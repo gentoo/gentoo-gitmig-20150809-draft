@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>cjk</herd>
+<longdescription>
+uim is a simple, secure and flexible input method library.  At the
+moment Anthy, SKK, Prime, T-code, TUT-code (these are Japanese input
+method), Pinyin (Chinese input method), Hangul (Korean input method),
+IPA (International Phonetic Alphabet) are implemented.  You can extend
+the library with Scheme thus easily, or with C if it becomes rather
+complicated.
+</longdescription>
+</pkgmetadata>
