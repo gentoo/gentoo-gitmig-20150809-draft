@@ -1,0 +1,8 @@
+# ChangeLog for dev-lisp/rlwrap
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rlwrap/ChangeLog,v 1.1 2003/08/27 22:12:55 mkennedy Exp $
+
+*rlwrap-0.16 (27 Aug 2003)
+
+  27 Aug 2003; Matthew Kennedy <mkennedy@gentoo.org> :
+  Initial import.  
