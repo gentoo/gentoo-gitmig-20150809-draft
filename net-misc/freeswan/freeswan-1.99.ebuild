@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/freeswan-1.99.ebuild,v 1.8 2004/01/03 14:06:50 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freeswan/freeswan-1.99.ebuild,v 1.9 2004/02/20 20:08:14 aliz Exp $
 
 X509_PATCH=0.9.34
 S=${WORKDIR}/${P}
@@ -23,16 +23,17 @@ pkg_setup() {
 		echo You need to have the crypto-enabled version of Gentoo Sources
 		echo with a symlink to it in /usr/src/linux in order to have IPSec
 		echo kernel compatibility.
-		exit 1
+#		exit 1
 	}
 }
 
 src_unpack() {
-	unpack ${A}
+	unpack ${A} ; cd ${S}
+	epatch ${FILESDIR}/freeswan-gentoo-cflags.patch
+	epatch ${FILESDIR}/${P}-spi.c.patch
 
-	cd ${S}
-	patch -p1 < ${FILESDIR}/freeswan-gentoo-cflags.patch || die
-	sed 's:/etc/ipsec.d:/etc/ipsec/ipsec.d:g' ${WORKDIR}/x509patch-${X509_PATCH}-${P}/freeswan.diff | patch -p1 || die
+	sed -i 's:/etc/ipsec.d:/etc/ipsec/ipsec.d:g' ${WORKDIR}/x509patch-${X509_PATCH}-${P}/freeswan.diff 
+	epatch ${WORKDIR}/x509patch-${X509_PATCH}-${P}/freeswan.diff
 }
 
 src_compile() {
