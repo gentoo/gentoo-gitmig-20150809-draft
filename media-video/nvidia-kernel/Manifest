@@ -3,8 +3,8 @@ MD5 04b1f361d40708ab81631bea5e46a632 nvidia-kernel-1.0.2880-r1.ebuild 1970
 MD5 5177ed76121fb4bc1aa220c62319d196 nvidia-kernel-1.0.2960-r1.ebuild 2081
 MD5 16a9003f79bea31eeec6f03ae64cd8ef nvidia-kernel-1.0.3123-r2.ebuild 3229
 MD5 4fc62b5769bfcbb15e69c27860bc27e7 nvidia-kernel-1.0.4191-r2.ebuild 3870
-MD5 7ca1e6fc896e6c56546d3afb0cd1d085 nvidia-kernel-1.0.4349-r1.ebuild 4218
-MD5 2ad995da05202beb1064222409d00027 ChangeLog 5624
+MD5 e64884b31959fdf80e8abc6016f63e34 nvidia-kernel-1.0.4349-r1.ebuild 4219
+MD5 2098e61196d7ac76c1fde2ccb8e3d3ed ChangeLog 5625
 MD5 059b3ddf8944dce6c9184d11d15abd71 files/NVIDIA_kernel-1.0-3123-2.5-tl.diff 31614
 MD5 57f69061f52fd98e20c7d62882af2757 files/NVIDIA_kernel-1.0-4191-2.5.54.diff 1228
 MD5 441b29e8f10b6620c4dd4fc01528f172 files/NVIDIA_kernel-1.0-3123-2.5-module.diff 5569
