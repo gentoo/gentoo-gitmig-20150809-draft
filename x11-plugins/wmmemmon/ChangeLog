@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmmemmon
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemmon/ChangeLog,v 1.8 2004/06/28 20:51:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmemmon/ChangeLog,v 1.9 2004/07/03 02:40:09 s4t4n Exp $
+
+  03 Jul 2004; Michele Noberasco <s4t4n@gentoo.org> wmmemmon-0.7.0.ebuild:
+  Remove old ebuilds...
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> wmmemmon-0.7.0.ebuild,
   wmmemmon-1.0.1.ebuild:
