@@ -1,9 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/razor-2.36-r1.ebuild,v 1.3 2004/07/09 18:00:58 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/razor/razor-2.36-r1.ebuild,v 1.4 2004/07/09 20:38:35 langthang Exp $
 
 inherit perl-module eutils
 
+IUSE=""
 DESCRIPTION="a distributed & collaborative spam detection and filtering network"
 HOMEPAGE="http://razor.sourceforge.net/"
 SRC_URI="mirror://sourceforge/razor/razor-agents-${PV}.tar.gz"
