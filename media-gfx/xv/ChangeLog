@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xv
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.30 2004/06/24 22:53:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.31 2004/07/20 20:22:42 tgall Exp $
+
+  20 Jul 2004; Tom Gall <tgall@gentoo.org> xv-3.10a-r6.ebuild:
+  stable on ppc64, bug #57151
 
   07 Jun 2004; Aron Griffis <agriffis@gentoo.org> xv-3.10a-r3.ebuild,
   xv-3.10a-r5.ebuild, xv-3.10a-r6.ebuild:
