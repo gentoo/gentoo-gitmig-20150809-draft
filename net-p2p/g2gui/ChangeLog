@@ -1,0 +1,11 @@
+# ChangeLog for net-p2p/g2gui
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/g2gui/ChangeLog,v 1.1 2004/06/16 12:37:32 squinky86 Exp $
+
+*g2gui-0.3.0_pre1 (16 Jun 2004)
+
+  16 Jun 2004; Jon Hood <squinky86@gentoo.org> +metadata.xml,
+  +g2gui-0.3.0_pre1.ebuild:
+  Initial commit. Thanks to Charles Goodwin <charlie@vexi.org> and Dylan
+  Wakefield <dylanw@telpacific.com.au>, #40269
+
