@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.20 2002/10/27 07:54:33 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.21 2002/10/28 07:15:32 woodchip Exp $
+
+  28 Oct 2002; Donny Davies <woodchip@gentoo.org> mysql.init :
+  Behave more carefully in stop().  Thanks psi-jack@myrealbox.com.
 
 *mysql-3.23.53 (27 Oct 2002)
 
