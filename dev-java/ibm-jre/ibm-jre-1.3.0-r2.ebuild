@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre/ibm-jre-1.3.0-r1.ebuild,v 1.2 2002/03/23 19:20:10 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre/ibm-jre-1.3.0-r2.ebuild,v 1.1 2002/04/09 22:11:20 karltk Exp $
 
 At=IBMJava2-JRE-13.tgz
 S=${WORKDIR}/IBMJava2-13
@@ -11,7 +11,7 @@ SRC_URI=""
 HOMEPAGE="http://www6.software.ibm.com/dl/dklx130/dklx130-p"
 
 DEPEND="virtual/glibc
-	>=dev-java/java-config-0.1.3"
+	>=dev-java/java-config-0.2.1"
 RDEPEND="$DEPEND"
 
 PROVIDE="virtual/jre-1.3
