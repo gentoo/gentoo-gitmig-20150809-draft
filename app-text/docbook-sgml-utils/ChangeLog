@@ -1,8 +1,11 @@
 # ChangeLog for app-text/docbook-sgml-utils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/ChangeLog,v 1.12 2003/02/22 03:40:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/ChangeLog,v 1.13 2003/03/19 16:52:55 gmsoft Exp $
 
 *docbook-sgml-utils-0.6.12 (09 Feb 2003)
+
+  19 Mar 2003; Guy Martin <gmsoft@gentoo.org> docbook-sgml-utils-0.6.12.ebuild :
+  Added hppa to keywords.
 
   21 Feb 2003; Aron Griffis <agriffis@gentoo.org> docbook-sgml-utils-0.6.12.ebuild :
   Mark stable on Alpha
