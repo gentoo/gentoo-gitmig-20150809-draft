@@ -62,6 +62,15 @@ net-www/netscape-plugger
 ~sys-apps/lilo
 ~sys-apps/grub 
 
+# x86 and sparc only kernels (gerk)
+~sys-kernel/gentoo-sources
+~sys-kernel/crypto-sources
+~sys-kernel/openmosix-sources
+~sys-kernel/redhat-sources
+~sys-kernel/sparc-sources
+~sys-kernel/usermode-sources
+~sys-kernel/xfs-sources
+
 <=x11-libs/qt-3.0.3.1
 
 *app-arch/ncompress
