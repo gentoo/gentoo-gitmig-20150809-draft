@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre3.ebuild,v 1.1 2002/05/05 11:21:21 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mplayer/mplayer-0.90_pre3.ebuild,v 1.2 2002/05/05 11:43:15 azarah Exp $
 
 # Handle PREversions as well
 MY_PV=${PV/_/}
@@ -58,7 +58,7 @@ src_compile() {
 	local myconf=""
 
 	# Some people have compile problems with the vidix stuff
-	#myconf="${myconf} --disable-vidix"
+	myconf="${myconf} --disable-vidix"
 
 	use 3dnow \
 		|| myconf="${myconf} --disable-3dnow --disable-3dnowex"
