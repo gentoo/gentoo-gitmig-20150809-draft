@@ -10,12 +10,14 @@ apm
 directfb
 divx4linux
 fdftk
+hal
 icc
 icc-pgo
 ifc
 informix
 firebird
 lirc
+mbrola
 mmx
 mmx2
 oci8
