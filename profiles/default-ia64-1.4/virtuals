@@ -21,7 +21,7 @@ virtual/xemacs			app-editors/xemacs
 virtual/sylpheed		mail-client/sylpheed
 virtual/php				dev-php/mod_php
 virtual/textbrowser		net-www/links
-virtual/mda				net-mail/procmail
+virtual/mda				mail-filter/procmail
 virtual/xft				x11-base/xfree
 virtual/krb5			app-crypt/mit-krb5
 virtual/bootloader		sys-apps/elilo

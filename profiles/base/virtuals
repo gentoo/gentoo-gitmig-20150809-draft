@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.16 2004/05/30 09:57:17 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.17 2004/06/04 04:03:13 seemant Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -32,7 +32,7 @@ virtual/jre						dev-java/blackdown-jre
 virtual/krb5					app-crypt/mit-krb5
 virtual/logger					app-admin/syslog-ng
 virtual/lpr						net-print/cups
-virtual/mda						net-mail/procmail
+virtual/mda						mail-filter/procmail
 virtual/mpg123					media-sound/mpg123
 virtual/mta						mail-mta/ssmtp
 virtual/opengl					x11-base/xfree
