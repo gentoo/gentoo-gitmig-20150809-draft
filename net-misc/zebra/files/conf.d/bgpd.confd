@@ -1,0 +1,27 @@
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/files/conf.d/bgpd.confd,v 1.1 2003/05/31 19:57:29 solar Exp $
+
+
+#################################
+# Configuration options for bgpd
+#################################
+
+# Set configuration file name
+#BGPD_CONFIG_FILE="/etc/zebra/bgpd.conf"
+
+# Set bgp protocol's port number
+#BGPD_BGP_PORT=""
+
+# Set vty's bind address
+#BGPD_VTY_ADDR="0.0.0.0"
+
+# Set vty's port number
+#BGPD_VTY_PORT=""
+
+# When program terminates, retain added route by bgpd.
+#BGPD_RETAIN="yes"
+
+# Do not install route to kernel.
+#BGPD_NO_KERNEL="yes"
+

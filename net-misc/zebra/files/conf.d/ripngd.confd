@@ -1,0 +1,24 @@
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/files/conf.d/ripngd.confd,v 1.1 2003/05/31 19:57:29 solar Exp $
+
+
+#################################
+# Configuration options for ripngd
+#################################
+
+# Set configuration file name
+#RIPNGD_CONFIG_FILE="/etc/zebra/ripngd.conf"
+
+# Set verbose log mode flag
+#RIPNGD_LOG_MODE="255"
+
+# Set vty's bind address
+#RIPNGD_VTY_ADDR="0.0.0.0"
+
+# Set vty's port number
+#RIPNGD_VTY_PORT=""
+
+# When program terminates, retain added route by ripngd.
+#RIPNGD_RETAIN="yes"
+

@@ -1,0 +1,21 @@
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/zebra/files/conf.d/ripd.confd,v 1.1 2003/05/31 19:57:29 solar Exp $
+
+
+#################################
+# Configuration options for ripd
+#################################
+
+# Set configuration file name
+#RIPD_CONFIG_FILE="/etc/zebra/ripd.conf"
+
+# Set vty's bind address
+#RIPD_VTY_ADDR="0.0.0.0"
+
+# Set vty's port number
+#RIPD_VTY_PORT=""
+
+# When program terminates, retain added route by ripd.
+#RIPD_RETAIN="yes"
+
