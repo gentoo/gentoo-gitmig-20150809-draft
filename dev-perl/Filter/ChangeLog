@@ -1,11 +1,14 @@
 # ChangeLog for dev-perl/Filter
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Filter/ChangeLog,v 1.10 2003/06/24 14:56:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Filter/ChangeLog,v 1.11 2003/07/03 21:41:54 gmsoft Exp $
 
   24 Jun 2003; Aron Griffis <agriffis@gentoo.org> Filter-1.29.ebuild:
   Mark stable on alpha
 
 *Filter-1.29 (31 May 2003)
+
+  03 Jul 2003; Guy Martin <gmsoft@gentoo.org> Filter-1.29.ebuild :
+  Added hppa to KEYWORDS.
 
   31 May 2003; Michael Cummings <mcummings@gentoo.org> Filter-1.29.ebuild:
   New version of filter from CPAN

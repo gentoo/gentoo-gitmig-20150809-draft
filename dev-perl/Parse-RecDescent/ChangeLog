@@ -1,12 +1,15 @@
 # ChangeLog for dev-perl/Parse-RecDescent
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-RecDescent/ChangeLog,v 1.12 2003/06/24 14:57:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Parse-RecDescent/ChangeLog,v 1.13 2003/07/03 21:37:23 gmsoft Exp $
 
   24 Jun 2003; Aron Griffis <agriffis@gentoo.org>
   Parse-RecDescent-1.94.ebuild:
   Mark stable on alpha
 
 *Parse-RecDescent-1.94 (31 May 2003)
+
+  03 Jul 2003; Guy Martin <gmsoft@gentoo.org> Parse-RecDescent-1.94.ebuild :
+  Added hppa to KEYWORDS.
 
   31 May 2003; Michael Cummings <mcummings@gentoo.org>
   Parse-RecDescent-1.94.ebuild:

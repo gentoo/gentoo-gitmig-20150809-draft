@@ -1,8 +1,11 @@
 # ChangeLog for dev-perl/ExtUtils-F77
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-F77/ChangeLog,v 1.11 2003/05/31 20:26:00 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/ExtUtils-F77/ChangeLog,v 1.12 2003/07/03 21:43:38 gmsoft Exp $
 
 *ExtUtils-F77-1.14-r1 (31 May 2003)
+
+  03 Jul 2003; Guy Martin <gmsoft@gentoo.org> ExtUtils-F77-1.14-r1.ebuild :
+  Added hppa to KEYWORDS.
 
   31 May 2003; Michael Cummings <mcummings@gentoo.org>
   ExtUtils-F77-1.14-r1.ebuild:

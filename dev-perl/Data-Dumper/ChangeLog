@@ -1,6 +1,6 @@
 # ChangeLog for dev-perl/Data-Dumper
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Dumper/ChangeLog,v 1.3 2003/06/24 14:55:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Data-Dumper/ChangeLog,v 1.4 2003/07/03 21:34:34 gmsoft Exp $
 
   24 Jun 2003; Aron Griffis <agriffis@gentoo.org> Data-Dumper-2.101.ebuild:
   Mark stable on alpha
@@ -9,6 +9,9 @@
   Add back lost keywords
 
 *Data-Dumper-2.101 (31 May 2003)
+
+  03 Jul 2003; Guy Martin <gmsoft@gentoo.org> Data-Dumper-2.101.ebuild :
+  Added hppa to KEYWORDS.
 
   31 May 2003; Michael Cummings <mcummings@gentoo.org>
   Data-Dumper-2.101.ebuild:
