@@ -1,0 +1,10 @@
+# ChangeLog for app-sci/nmrview
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/nmrview/ChangeLog,v 1.1 2004/12/16 16:26:30 ribosome Exp $
+
+*nmrview-5.2.2 (16 Dec 2004)
+
+  16 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +files/nmrview-env,
+  +nmrview-5.2.2.ebuild:
+  Initial import.
+

@@ -1,0 +1,4 @@
+NMRVIEW5HOME="/opt/nmrview"
+TK_LIBRARY="/opt/nmrview/tk8.0"
+TCL_LIBRARY="/opt/nmrview/tcl8.0"
+PATH=/opt/nmrview/bin
