@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/vtun
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/ChangeLog,v 1.21 2004/10/17 02:09:15 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vtun/ChangeLog,v 1.22 2004/10/31 16:56:46 kloeri Exp $
+
+  31 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> vtun-2.6.ebuild:
+  ~alpha keyword.
 
   16 Oct 2004; <solar@gentoo.org> vtun-2.6.ebuild:
   added missing RDEPEND
