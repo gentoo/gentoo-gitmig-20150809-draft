@@ -1,0 +1,45 @@
+diff -u -r mwavem-1.0.2.orig/src/mwavem/Makefile.am mwavem-1.0.2/src/mwavem/Makefile.am
+--- mwavem-1.0.2.orig/src/mwavem/Makefile.am	Wed Jul 17 08:25:02 2002
++++ mwavem-1.0.2/src/mwavem/Makefile.am	Wed Jul 17 08:25:35 2002
+@@ -6,12 +6,13 @@
+ 
+ install-exec-local:
+ 	-chmod 755 mwaved
+-	-mkdir -p /dev/modems
+-	-mknod --mode=660 /dev/modems/mwave c 10 219
+-	-cp -f /etc/modules.conf /etc/modules.conf~
+-	-grep 'alias char-major-10-219 mwave' /etc/modules.conf || echo "alias char-major-10-219 mwave" >>/etc/modules.conf
++#	-mkdir -p /dev/modems
++#	-mknod --mode=660 /dev/modems/mwave c 10 219
++	-mkdir -p ${D}/etc/modules.d
++	-cp -f /etc/modules.d/aliases ${D}/etc/modules.d
++	-grep 'alias char-major-10-219 mwave' ${D}/etc/modules.d/aliases || echo "alias char-major-10-219 mwave" >>${D}/etc/modules.d/aliases
+ 
+ uninstall-local:
+-	-cp -f /etc/modules.conf /etc/modules.conf~
+-	-grep -v 'alias char-major-10-219 mwave' /etc/modules.conf~ >/etc/modules.conf
++#	-cp -f /etc/modules.conf /etc/modules.conf~
++#	-grep -v 'alias char-major-10-219 mwave' /etc/modules.conf~ >/etc/modules.conf
+ 
+diff -u -r mwavem-1.0.2.orig/src/mwavem/Makefile.in mwavem-1.0.2/src/mwavem/Makefile.in
+--- mwavem-1.0.2.orig/src/mwavem/Makefile.in	Wed Jul 17 08:25:02 2002
++++ mwavem-1.0.2/src/mwavem/Makefile.in	Wed Jul 17 08:26:01 2002
+@@ -321,14 +321,15 @@
+ 
+ install-exec-local:
+ 	-chmod 755 mwaved
+-	-mkdir -p /dev/modems
+-	-mknod --mode=660 /dev/modems/mwave c 10 219
+-	-cp -f /etc/modules.conf /etc/modules.conf~
+-	-grep 'alias char-major-10-219 mwave' /etc/modules.conf || echo "alias char-major-10-219 mwave" >>/etc/modules.conf
++#	-mkdir -p /dev/modems
++#	-mknod --mode=660 /dev/modems/mwave c 10 219
++	-mkdir -p ${D}/etc/modules.d
++	-cp -f /etc/modules.d/aliases ${D}/etc/modules.d
++	-grep 'alias char-major-10-219 mwave' ${D}/etc/modules.d/aliases || echo "alias char-major-10-219 mwave" >>${D}/etc/modules.d/aliases
+ 
+ uninstall-local:
+-	-cp -f /etc/modules.conf /etc/modules.conf~
+-	-grep -v 'alias char-major-10-219 mwave' /etc/modules.conf~ >/etc/modules.conf
++#	-cp -f /etc/modules.conf /etc/modules.conf~
++#	-grep -v 'alias char-major-10-219 mwave' /etc/modules.conf~ >/etc/modules.conf

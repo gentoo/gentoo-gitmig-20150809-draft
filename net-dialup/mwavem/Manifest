@@ -1,0 +1,21 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7ae6cc74f695f8e3ba232e0599ac91a9 ChangeLog 777
+MD5 53fb7e1e97ab6f60167cb93fd626a292 metadata.xml 394
+MD5 6af9b0ee8f09226ec39b3a0a9e604a54 mwavem-1.0.2.ebuild 1272
+MD5 c1731141ecded400521306c335a5250d mwavem-1.0.4.ebuild 1996
+MD5 ef5c0d9f57ca24c1eb1ab7b33df9d291 files/digest-mwavem-1.0.2 65
+MD5 1f1c427444c0684d7d1c8bc8146b9a3f files/digest-mwavem-1.0.4 65
+MD5 779ead17ce93702aa87513e41030ba40 files/mwave-dev-handler 210
+MD5 6a2110cacb03948288203ca53d4c9535 files/mwave.devfs 150
+MD5 8ceb387439cc272ebcfbf455eef22ec1 files/mwave.modules 30
+MD5 201284b6e4d0b1db01e347aa7586bae7 files/mwavem-1.0.2-gentoo.diff 2178
+MD5 63382db599ecae3e74b11e641249c93a files/mwavem-1.0.4-gentoo.diff 2255
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBWIeqmdTrptrqvGERAivgAJ0Ya3pyTSFI8eF4vJCYPd25+ryzvgCeMpxz
+XZ7OtGCjPjjeSsEqC/2N7lU=
+=1oE5
+-----END PGP SIGNATURE-----
