@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.99.22-r1.ebuild,v 1.1 2004/11/22 14:57:14 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.99.22-r1.ebuild,v 1.2 2004/11/29 14:22:40 foser Exp $
 
 inherit gnome2 eutils
 
@@ -59,7 +59,7 @@ src_unpack() {
 
 	cd ${S}
 	# fix #71863
-	epatch ${FILESDIR}/${P}-reorder_includes.patch
+	epatch ${FILESDIR}/${P}-x_includes.patch
 	# use the omf_fix for scrollkeeper sandbox
 	# violations, see bug #48800 <obz@gentoo.org>
 	gnome2_omf_fix
@@ -67,6 +67,9 @@ src_unpack() {
 	# make the gst backend actually work with 0.8.5 plugins
 	cd ${S}/src
 	epatch ${FILESDIR}/${P}-gst_object_rename.patch
+
+	cd ${S}
+	autoconf || die
 
 }
 

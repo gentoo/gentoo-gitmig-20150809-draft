@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.99.19.ebuild,v 1.4 2004/11/22 01:07:30 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.99.19.ebuild,v 1.5 2004/11/29 14:22:40 foser Exp $
 
 inherit gnome2 eutils
 
@@ -57,7 +57,8 @@ src_unpack() {
 	# violations, see bug #48800 <obz@gentoo.org>
 	gnome2_omf_fix
 
-	epatch ${FILESDIR}/${PN}-0.99.22-reorder_includes.patch
+	epatch ${FILESDIR}/${PN}-0.99.22-x_includes.patch
+	autoconf || die
 
 }
 
