@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.5-r3.ebuild,v 1.13 2001/06/19 23:04:56 achim Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.5-r3.ebuild,v 1.14 2001/06/21 11:06:25 hallski Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
 
 A=""
 S=${WORKDIR}/${P}
@@ -64,7 +64,7 @@ src_install()
 	dodir /tmp
 	chmod 1777 ${D}/tmp
         chmod 1777 ${D}/var/tmp
-	chown root.uucp ${D}/vat/lock
+	chown root.uucp ${D}/var/lock
 	chmod 775 ${D}/var/lock
 	insopts -m0644
 	insinto /etc
