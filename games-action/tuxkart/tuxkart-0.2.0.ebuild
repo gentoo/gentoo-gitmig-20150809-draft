@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/tuxkart/tuxkart-0.2.0.ebuild,v 1.1 2003/09/10 19:29:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/tuxkart/tuxkart-0.2.0.ebuild,v 1.2 2003/10/06 15:56:28 agriffis Exp $
 
 inherit games eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://tuxkart.sourceforge.net"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 alpha"
 
 DEPEND=">=media-libs/plib-1.6.0
 	virtual/x11
@@ -20,6 +20,11 @@ DEPEND=">=media-libs/plib-1.6.0
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/01tuxkart.patch
+
+	# apparently <sys/perm.h> doesn't exist on alpha
+	if use alpha; then
+		epatch ${FILESDIR}/tuxkart-0.2.0-alpha.patch
+	fi
 }
 
 src_compile() {
