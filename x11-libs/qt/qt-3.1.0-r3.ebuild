@@ -65,6 +65,10 @@ src_unpack() {
 	if [ ${ARCH} == "alpha" ]; then
 	    cp qmake.conf qmake.conf.orig
 	    sed -e "s:= -O2:= -O2 -fPIC:" qmake.conf.orig > qmake.conf
+	    cat >> ${S}/tools/designer/editor/editor.pro <<_EOF_
+QMAKE_CFLAGS += -fPIC
+QMAKE_CXXFLAGS += -fPIC
+_EOF_
 	fi
 
 }
