@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5e05b54cc35a994f38d6e5b777e595f9 ChangeLog 394
+MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
+MD5 56b98a03ad0f3073187e7ceed8decace gnuradius-1.2.ebuild 1467
+MD5 2ab0db30efa4a96f74d1e4fd3f7cd875 files/digest-gnuradius-1.2 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBlFNyjtv59x0+BrURAiSoAJ9M7s7mDQ/aPRmeCsfhqrnTWMTZSQCgiETk
+KHXy7Y6pYQr6pUW4mR5Pue4=
+=wh2w
+-----END PGP SIGNATURE-----
