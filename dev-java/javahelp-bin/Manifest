@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4b0aaec84ff4df236a5215af2e0ee7be javahelp-bin-2.0.01.ebuild 1061
-MD5 86722a7df874106d3ba56ef650cdf729 ChangeLog 847
+MD5 1f5d377ee24c23f9308e9120ed8ea446 ChangeLog 952
+MD5 8c3f4079bf061089f67f1665002532a8 javahelp-bin-2.0.01.ebuild 1072
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
 MD5 126c9ed6a7f735ccd789704e148f0e47 files/digest-javahelp-bin-2.0.01 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBcVg5/rLF9B432nYRAq+IAJ4pig1W4yIQTIxdjWToszqCRlgxAwCePZDQ
-ZVH75/iBkdS4EPQK/zsdHHQ=
-=0l+b
------END PGP SIGNATURE-----

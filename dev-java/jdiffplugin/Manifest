@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ae895732146fbbe99d4cab50e5294281 jdiffplugin-1.4.2.ebuild 911
-MD5 f4d6208c6b3260fe6c9d3fb06ca508e7 ChangeLog 395
+MD5 3ad52742b3703c227980a5a0a6652f08 ChangeLog 496
+MD5 f419e9b4a4b315bb0b36eda827b76623 jdiffplugin-1.4.2.ebuild 922
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
 MD5 235b47918083e5a3688ac9c6680c2418 files/digest-jdiffplugin-1.4.2 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBSrAz/rLF9B432nYRAmhgAKChP1vpcJIBkXqcz41QiSWBWe/ZNgCgjeDK
-FI+S9goZyOjhha7/Vie4FoI=
-=bf/W
------END PGP SIGNATURE-----

@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e21bbde20efc6c2d1bad45b8d5212e6a plugspud-0.4.5.20040917.ebuild 868
-MD5 e75c48d162e2e26b3be2df614a81e62f ChangeLog 401
+MD5 8f0c0a9763fdd2ed53e963513247039d ChangeLog 510
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
+MD5 34818bf91a9bcbcf0f9244f1d67c3a4e plugspud-0.4.5.20040917.ebuild 879
 MD5 af988f8698ff0ec7327653451af9011c files/digest-plugspud-0.4.5.20040917 80
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBTGRf/rLF9B432nYRAi3VAJ4hHIxL3mGtEMaXKEY7xmciWLeLrQCdHHFe
-zvlCTQzogH9il/pB1fJq/IQ=
-=Oxoe
------END PGP SIGNATURE-----
