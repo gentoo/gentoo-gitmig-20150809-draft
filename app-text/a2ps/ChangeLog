@@ -1,8 +1,11 @@
 # ChangeLog for app-text/a2ps
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.16 2003/09/27 15:02:40 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/a2ps/ChangeLog,v 1.17 2003/09/28 21:15:36 usata Exp $
 
 *a2ps-4.13c (27 Sep 2003)
+
+  29 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> a2ps-4.13c.ebuild:
+  Use make instead of emake. Changed -alpha keyword to ~alpha.
 
   27 Sep 2003; Mamoru KOMACHI <usata@gentoo.org> a2ps-4.13c.ebuild,
   files/a2ps-4.13c-locale-gentoo.diff:
