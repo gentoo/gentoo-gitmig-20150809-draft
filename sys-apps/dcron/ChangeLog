@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dcron
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/ChangeLog,v 1.33 2004/06/24 22:02:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dcron/ChangeLog,v 1.34 2004/07/21 21:21:08 tgall Exp $
+
+  21 Jul 2004; Tom Gall <tgall@gentoo.org> dcron-2.9-r2.ebuild:
+  stable on ppc64, bug #57579
 
   22 Apr 2004; Jon Portnoy <avenj@gentoo.org> dcron-2.9-r2.ebuild :
   Stable on x86.
