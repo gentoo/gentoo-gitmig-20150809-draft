@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.3.ebuild,v 1.1 2002/06/20 19:15:37 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.4.ebuild,v 1.1 2002/06/21 00:25:56 drobbins Exp $
  
 S=${WORKDIR}/${P}
 SLOT="0"
@@ -84,6 +84,7 @@ src_install() {
 	dosym ../lib/portage/bin/env-update /usr/sbin/env-update
 	dosym ../lib/portage/bin/xpak /usr/bin/xpak
 	dosym ../lib/portage/bin/repoman /usr/bin/repoman
+	dosym ../lib/portage/bin/tbz2tool /usr/bin/tbz2tool
 	dosym newins /usr/lib/portage/bin/donewins
 	
 	# man pages
