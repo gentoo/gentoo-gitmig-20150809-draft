@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/imhangul-0.9.11-r1.ebuild,v 1.2 2005/03/21 17:38:53 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/imhangul/imhangul-0.9.11-r1.ebuild,v 1.3 2005/03/27 09:07:46 kloeri Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://download.kldp.net/imhangul/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~alpha ~ppc"
+KEYWORDS="x86 alpha ~ppc"
 
 DEPEND=">=x11-libs/gtk+-2.2.0"
 
