@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.93.20030118.ebuild,v 1.2 2003/12/16 02:34:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/grub/grub-0.93.20030118.ebuild,v 1.3 2003/12/16 05:37:35 seemant Exp $
 
 inherit mount-boot eutils flag-o-matic
 
@@ -19,7 +19,8 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 -amd64 -ppc -sparc -alpha -mips"
 
-DEPEND=">=sys-libs/ncurses-5.2-r5"
+DEPEND=">=sys-libs/ncurses-5.2-r5
+	>=sys-devel/autoconf-2.5"
 
 PROVIDE="virtual/bootloader"
 
@@ -34,7 +35,7 @@ src_unpack() {
 	# -splashimagehelp.patch
 	# -configfile.patch
 	# -installcopyonly.patch
-	epatch ${DISTDIR}/${P}-gentoo.diff.bz2
+	epatch ${WORKDIR}/${P}-gentoo.diff
 
 	# grub-0.93-gcc3.3.diff <johnm@gentoo.org> (14 Sep 2003)
 	# -fixes compile error with >=gcc-3.3
