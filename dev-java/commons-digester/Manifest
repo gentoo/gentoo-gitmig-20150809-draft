@@ -1,8 +1,18 @@
-MD5 98674c3ba8c18f70deea578974346075 commons-digester-1.6.ebuild 1668
-MD5 b6e50d2ce9efb55832ed9c9e1a3866f9 commons-digester-1.5.ebuild 1660
-MD5 54107e538f75ff14ef9787d2b125c094 ChangeLog 2952
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 b6e50d2ce9efb55832ed9c9e1a3866f9 commons-digester-1.5.ebuild 1660
+MD5 d2e682d5872d017282d9e72ac3e64dad commons-digester-1.6.ebuild 1666
+MD5 04a2fb51c0792b89312cbbfe809b1bbc ChangeLog 3055
 MD5 9d28d7a15a90ae7bf5cd8d36e1d5f94a commons-digester-1.4.ebuild 1657
+MD5 dffdbb44be5308d2e17beeea612d909d files/digest-commons-digester-1.6 76
 MD5 0009c9984a9616e76d3da160197d563a files/digest-commons-digester-1.4 76
 MD5 4deda928e1e4b664deb7b526e48632d6 files/digest-commons-digester-1.5 76
-MD5 dffdbb44be5308d2e17beeea612d909d files/digest-commons-digester-1.6 76
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCSBEyKRy60XGEcJIRAvJnAKC0cyGbPdIPGEQW2NBIMJv0BwipEwCgiRCK
+dvIPYMCWsCbkxzY3QJBVNxc=
+=vybE
+-----END PGP SIGNATURE-----
