@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.2.ebuild,v 1.6 2003/03/23 18:03:39 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.3.2.ebuild,v 1.7 2003/03/31 05:04:28 nakano Exp $
 
 DESCRIPTION="sophisticated Object-Relational DBMS"
 SRC_URI="ftp://ftp.us.postgresql.org/source/v${PV}/${P}.tar.gz"
@@ -9,16 +9,16 @@ HOMEPAGE="http://www.postgresql.org/"
 LICENSE="POSTGRESQL"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha"
-IUSE="ssl nls java python tcltk perl libg++"
+IUSE="ssl nls java python tcltk perl libg++ pam readline zlib"
 
 filter-flags -ffast-math 
 
 DEPEND="virtual/glibc
 	sys-devel/autoconf
 	app-admin/sudo
-	>=sys-libs/readline-4.1
 	>=sys-libs/ncurses-5.2
-	>=sys-libs/zlib-1.1.3
+	zlib? ( >=sys-libs/zlib-1.1.3 )
+	readline? ( >=sys-libs/readline-4.1 )
 	tcltk? ( >=dev-lang/tcl-8 >=dev-lang/tk-8.3.3-r1 )
 	perl? ( >=dev-lang/perl-5.6.1-r2 )
 	python? ( >=dev-lang/python-2.2 dev-python/egenix-mx-base )
@@ -28,7 +28,7 @@ DEPEND="virtual/glibc
 # java dep workaround for portage bug
 # x86? ( java? ( =dev-java/sun-jdk-1.3* >=dev-java/ant-1.3 ) )
 RDEPEND="virtual/glibc
-	>=sys-libs/zlib-1.1.3
+	zlib? ( >=sys-libs/zlib-1.1.3 )
 	tcltk? ( >=dev-lang/tcl-8 )
 	perl? ( >=dev-lang/perl-5.6.1-r2 )
 	python? ( >=dev-lang/python-2.2 )
@@ -59,8 +59,11 @@ src_compile() {
 	use perl && myconf="$myconf --with-perl"
 	use java && myconf="$myconf --with-java"
 	use ssl && myconf="$myconf --with-openssl"
-	use nls && myconf="$myconf --enable-locale --enable-nls --enable-multibyte"
+	use nls && myconf="$myconf --enable-nls"
 	use libg++ && myconf="$myconf --with-CXX"
+	use pam && myconf="$myconf --with-pam"
+	use readline || myconf="$myconf --without-readline"
+	use zlib || myconf="$myconf --without-zlib"
 
 	# these are the only working CFLAGS I could get on ppc, so locking them
         # down, anything more aggressive fails (i.e. -mcpu or -Ox)
@@ -72,10 +75,8 @@ src_compile() {
 		--host=${CHOST} \
 		--docdir=/usr/share/doc/${P} \
 		--libdir=/usr/lib \
-		--enable-syslog \
 		--enable-depend \
 		--with-gnu-ld \
-		--with-pam \
 		--with-maxbackends=1024 \
 		$myconf || die
 
