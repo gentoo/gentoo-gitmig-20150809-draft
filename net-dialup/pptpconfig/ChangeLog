@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/pptp-php-gtk
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpconfig/ChangeLog,v 1.1 2004/09/27 13:24:12 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/pptpconfig/ChangeLog,v 1.2 2004/09/27 13:39:39 dragonheart Exp $
+
+*pptpconfig-20040722 (27 Sep 2004)
+
+  27 Sep 2004; Daniel Black <dragonheart@gentoo.org>
+  pptpconfig-20030731.ebuild, +pptpconfig-20040722.ebuild:
+  move and version bump inspired by bug #63150. Thanks to Sander Rijken
+  <sr@sander.yi.org>
 
 *pptpconfig-20030731 (27 Sep 2004)
 

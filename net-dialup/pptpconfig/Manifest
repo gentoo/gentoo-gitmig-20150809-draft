@@ -1,4 +1,16 @@
-MD5 f25de76ca27acd572895117b7164adb3 ChangeLog 579
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 50fc0e749b17157d7720c34459eefe97 ChangeLog 1021
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
-MD5 fec3288b683970aceeed41131c0e06ee pptp-php-gtk-20030731.ebuild 657
-MD5 2e240ad9883a5bf27a2228ff1c4708d9 files/digest-pptp-php-gtk-20030731 72
+MD5 7ec6fe082e727f4d8c6be0ed31ded2ab pptpconfig-20030731.ebuild 780
+MD5 3196830922430749dd5cd29b15a04756 pptpconfig-20040722.ebuild 740
+MD5 2e240ad9883a5bf27a2228ff1c4708d9 files/digest-pptpconfig-20030731 72
+MD5 6d09d5d24ab4cc325fb857c2f54be505 files/digest-pptpconfig-20040722 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBWBghmdTrptrqvGERAn3LAJ9LDsqr2OSrcFdIfcC36Nz4k+2HngCgkKnR
+A/c8iTSAt+tXfQrpnBozuWQ=
+=5SUv
+-----END PGP SIGNATURE-----
