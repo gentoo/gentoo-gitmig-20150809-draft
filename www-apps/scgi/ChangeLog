@@ -1,6 +1,12 @@
 # ChangeLog for www-apps/scgi
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/scgi/ChangeLog,v 1.4 2004/11/17 04:14:21 robbat2 Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-apps/scgi/ChangeLog,v 1.5 2005/03/02 07:18:33 hollow Exp $
+
+*scgi-1.2 (02 Mar 2005)
+
+  02 Mar 2005; Benedikt Boehm <hollow@gentoo.org> metadata.xml,
+  +scgi-1.2.ebuild:
+  version bump to 1.2 + new metadata
 
   16 Nov 2004; Robin H. Johnson <robbat2@gentoo.org> scgi-1.2_alpha1.ebuild,
   scgi-1.2_alpha2.ebuild:
