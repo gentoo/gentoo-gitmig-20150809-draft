@@ -1,17 +1,15 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/tla-1.1.ebuild,v 1.6 2005/01/10 06:49:58 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/tla-1.3.ebuild,v 1.1 2005/01/10 06:49:58 rphillips Exp $
 
-MY_P="${P/_/}"
-
-S="${WORKDIR}/${MY_P}/src/=build"
+S="${WORKDIR}/${P}/src/=build"
 DESCRIPTION="Revision control system ideal for widely distributed development"
-SRC_URI="http://arch.quackerhead.com/~lord/releases/tla/${MY_P}.tar.gz"
-HOMEPAGE="http://arch.quackerhead.com/~lord/"
+SRC_URI="mirror://gnu/gnu-arch/${P}.tar.gz"
+HOMEPAGE="http://savannah.gnu.org/projects/gnu-arch http://wiki.gnuarch.org/ http://arch.quackerhead.com/~lord/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 alpha ppc hppa sparc"
+KEYWORDS="x86 ~alpha ~ppc ~hppa ~sparc"
 IUSE=""
 
 DEPEND="sys-apps/coreutils
@@ -26,7 +24,7 @@ DEPEND="sys-apps/coreutils
 
 src_unpack() {
 	unpack "${A}"
-	mkdir "${MY_P}/src/=build"
+	mkdir "${P}/src/=build"
 }
 
 src_compile() {
@@ -40,10 +38,15 @@ src_compile() {
 src_install () {
 	make install prefix="${D}/usr" \
 		|| die "make install failed"
-	cd ${WORKDIR}/${MY_P}/src
+
+	cd ${WORKDIR}/${P}/
+	dodoc =ARCH-USERS-README
+	cd ${WORKDIR}/${P}/src
 	dodoc COPYING
 	cd docs-tla
 	dodoc =README
-	cd html
-	dohtml -r .
+	docinto ps
+	dodoc ps/*.ps
+	docinto html
+	dohtml -r html/
 }
