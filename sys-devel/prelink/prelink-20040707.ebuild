@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20040707.ebuild,v 1.1 2004/09/09 18:08:52 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20040707.ebuild,v 1.2 2004/09/10 16:35:27 cretin Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-x86 -amd64 -ppc -alpha"
+KEYWORDS="~x86 ~amd64 ~ppc ~alpha"
 IUSE=""
 
 DEPEND=">=dev-libs/elfutils-0.94
@@ -24,6 +24,9 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${P}-init.patch
+	echo -e \
+	"PRELINK_PATH_MASK=/usr/lib/wine:/usr/lib/valgrind\nPRELINK_PATH=\n" \
+	> ${S}/60prelink
 }
 
 src_compile() {
@@ -38,4 +41,6 @@ src_install() {
 
 	insinto /etc
 	doins ${S}/doc/prelink.conf
+	insinto /etc/env.d
+	doins ${S}/60prelink
 }

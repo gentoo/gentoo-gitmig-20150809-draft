@@ -1,8 +1,11 @@
 # ChangeLog for sys-devel/prelink
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.32 2004/09/09 18:08:52 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/ChangeLog,v 1.33 2004/09/10 16:35:27 cretin Exp $
 
 *prelink-20040707 (09 Sep 2004)
+
+  10 Sep 2004; Stefan Jones <cretin@gentoo.org> :
+  Ready for big time, added env.d entry
 
   09 Sep 2004; Stefan Jones <cretin@gentoo.org> :
   New Version and add experimental reexec of init
