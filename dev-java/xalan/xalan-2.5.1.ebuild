@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.5.1.ebuild,v 1.3 2003/10/04 01:14:37 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/xalan-2.5.1.ebuild,v 1.4 2003/12/16 03:37:22 strider Exp $
 
 MY_P=${PN}-j_${PV//./_}
 
@@ -14,7 +14,7 @@ DEPEND=">=virtual/jdk-1.3
 	>=dev-java/xerces-2.3.0"
 RDEPEND="$DEPEND"
 SLOT="0"
-KEYWORDS="x86 ~sparc ~ppc"
+KEYWORDS="x86 sparc ppc"
 IUSE="doc"
 
 src_compile() {
