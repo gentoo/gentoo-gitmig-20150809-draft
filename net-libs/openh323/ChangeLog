@@ -4,6 +4,10 @@
 
 *openh323-1.11.7 (01 Apr 2003)
 
+  15 Apr 2003; Alastair Tse <liquidx@gentoo.org> openh323-1.11.7.ebuild,
+  files/openh323-1.11.7-emptyMakefile:
+  added Makefile to allow gnugk to compile against openh323 correctly
+
   01 Apr 2003; Alastair Tse <liquidx@gentoo.org> openh323-1.11.7.ebuild:
   version bump and additional check for possible broken pwlib makefiles
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.11.7.ebuild,v 1.1 2003/04/01 12:48:37 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/openh323/openh323-1.11.7.ebuild,v 1.2 2003/04/15 17:18:03 liquidx Exp $
 
 IUSE="ssl"
 S="${WORKDIR}/${PN}"
@@ -59,6 +59,10 @@ src_install() {
    rm -rf ${D}/usr/share/openh323/include/CVS
    rm -rf ${D}/usr/share/openh323/include/ptlib/unix/CVS
    rm -rf ${D}/usr/share/openh323/include/ptlib/CVS
+
+   # mod to keep gnugk happy
+   insinto /usr/share/openh323/src
+   newins ${FILESDIR}/openh323-1.11.2-emptyMakefile Makefile
 
    cd ${D}/usr/lib
    if [ ${ARCH} = "ppc" ] ; then
