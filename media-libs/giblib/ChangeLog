@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/giblib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giblib/ChangeLog,v 1.1 2002/02/01 21:53:30 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giblib/ChangeLog,v 1.2 2002/08/13 13:27:15 karltk Exp $
+
+*giblib-1.2.2 (13 Aug 2002)
+
+  13 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> giblib-1.2.2.ebuild files/digest-giblib-1.2.2 :
+  New upstream version.
 
 *giblib-1.2.1 (1 Feb 2002)
 
