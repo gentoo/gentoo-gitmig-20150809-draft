@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.99.15.1.ebuild,v 1.2 2004/08/19 19:30:45 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/totem/totem-0.99.15.1.ebuild,v 1.3 2004/08/20 05:13:38 obz Exp $
 
 inherit gnome2 eutils
 
@@ -48,3 +48,14 @@ use lirc \
 use gnome \
 	&& G2CONF="${G2CONF} --disable-gtk" \
 	|| G2CONF="${G2CONF} --enable-gtk"
+
+src_unpack() {
+
+	unpack ${A}
+	cd ${S}
+	# use the omf_fix for scrollkeeper sandbox
+	# violations, see bug #48800 <obz@gentoo.org>
+	gnome2_omf_fix
+
+}
+
