@@ -1,23 +1,20 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-2.0.0.ebuild,v 1.8 2003/02/13 12:12:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libglade/libglade-2.0.0.ebuild,v 1.9 2003/08/03 02:37:57 vapier Exp $
 
-IUSE="doc"
-
-# Do _NOT_ strip symbols in the build! Need both lines for Portage 1.8.9+
-DEBUG="yes"
+inherit flag-o-matic
+# Do _NOT_ strip symbols in the build!
 RESTRICT="nostrip"
-# force debug information
-CFLAGS="${CFLAGS} -g"
-CXXFLAGS="${CXXFLAGS} -g"
-LICENSE="LGPL-2.1"
+append-flags -g
 
-S=${WORKDIR}/${P}
 DESCRIPTION="GLADE is a interface builder"
-SRC_URI="http://ftp.gnome.org/pub/GNOME/pre-gnome2/sources/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.gnome.org/"
-KEYWORDS="x86 ppc sparc "
+SRC_URI="http://ftp.gnome.org/pub/GNOME/pre-gnome2/sources/${PN}/${P}.tar.bz2"
+
+LICENSE="LGPL-2.1"
 SLOT="2.0"
+KEYWORDS="x86 ppc sparc"
+IUSE="doc"
 
 RDEPEND=">=dev-libs/glib-2.0.3
 	>=x11-libs/gtk+-2.0.3
@@ -27,7 +24,6 @@ RDEPEND=">=dev-libs/glib-2.0.3
 	>=dev-lang/python-2.0-r7
 	>=sys-devel/gettext-0.10.40
 	>=dev-libs/libxml2-2.4.17"
-	
 DEPEND=">=dev-util/pkgconfig-0.12.0
 	${RDEPEND}
 	doc? ( dev-util/gtk-doc )
@@ -59,15 +55,13 @@ src_install() {
 		install || die
     
  	dodoc ABOUT-NLS AUTHORS COPYING  ChangeLog INSTALL NEWS README 
-
 }
 
-
 pkg_postinst() {
-		echo ">>> Updating XML catalog"
-		/usr/bin/xmlcatalog --noout --add "system" \
-			"http://glade.gnome.org/glade-2.0.dtd" \
-			/usr/share/xml/libglade/glade-2.0.dtd /etc/xml/catalog	
+	echo ">>> Updating XML catalog"
+	/usr/bin/xmlcatalog --noout --add "system" \
+		"http://glade.gnome.org/glade-2.0.dtd" \
+		/usr/share/xml/libglade/glade-2.0.dtd /etc/xml/catalog	
 }
 
 pkg_postrm() {
@@ -75,9 +69,3 @@ pkg_postrm() {
 	/usr/bin/xmlcatalog --noout --del \
 		/usr/share/xml/libglade/glade-2.0.dtd /etc/xml/catalog
 }
-
-	
-
-
-
-
