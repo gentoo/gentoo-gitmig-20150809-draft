@@ -1,0 +1,8 @@
+# ChangeLog for app-text/talkfilters
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/talkfilters/ChangeLog,v 1.1 2003/10/19 01:58:31 vapier Exp $
+
+*talkfilters-2.1 (18 Oct 2003)
+
+  18 Oct 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Björn Lindström <bkhl@privat.utfors.se> #15937.
