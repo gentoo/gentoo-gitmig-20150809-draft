@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.6.1-r1.ebuild,v 1.2 2004/03/10 10:46:39 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/beep-media-player/beep-media-player-0.9.6.1-r1.ebuild,v 1.3 2004/03/30 02:59:19 mr_bones_ Exp $
 
-inherit eutils
+inherit flag-o-matic eutils
 
 MY_PN="bmp"
 MY_P=bmp-${PV}
@@ -15,9 +15,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~sparc ~amd64"
 IUSE="nls esd gnome opengl oggvorbis mikmod alsa"
-
-# Bug #42893
-replace-flags "-Os" "-O2"
 
 RDEPEND="app-arch/unzip
 	>=x11-libs/gtk+-2.2
@@ -35,6 +32,9 @@ S=${WORKDIR}/${MY_P}
 
 src_compile() {
 	local myconf=""
+
+	# Bug #42893
+	replace-flags "-Os" "-O2"
 
 	econf \
 		--with-dev-dsp=/dev/sound/dsp \
