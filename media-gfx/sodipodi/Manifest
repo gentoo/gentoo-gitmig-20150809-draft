@@ -2,6 +2,7 @@ MD5 6dbf84fbde3fcb7aa45f65b8cd99e35a ChangeLog 2252
 MD5 1e9a4bec96d5a7521b3c0b4aa287d59c sodipodi-0.32.ebuild 1017
 MD5 f9e26ec18ec321f5fddeba8d945dd23b sodipodi-0.28.ebuild 1415
 MD5 fcaac435fe9acd8175678363e80fe5bd sodipodi-0.31.1-r1.ebuild 1120
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 e51ca1b45c22e7a6b1c20b7526bbf6f9 files/digest-sodipodi-0.31.1-r1 68
 MD5 b06ae3761eae4107d65a634b4168a7d4 files/digest-sodipodi-0.28 66
 MD5 002b26a1c0e0f79d578954dc0db7ec01 files/sodipodi-0.24.1-compile.patch 401

@@ -1,5 +1,6 @@
 MD5 660ad2d2334ad8940cb160a36b8bdc7f ChangeLog 1307
 MD5 7dc21f4cfbf1aecfecdfabec0af47276 gimp-freetype-0.2-r2.ebuild 862
 MD5 707a2f7768c1bd516b5a6ad56c5f1188 gimp-freetype-0.2-r3.ebuild 908
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 d231ccb326ac2e7f1e63b0b3a5288efb files/digest-gimp-freetype-0.2-r2 69
 MD5 d231ccb326ac2e7f1e63b0b3a5288efb files/digest-gimp-freetype-0.2-r3 69

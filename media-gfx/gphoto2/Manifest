@@ -1,6 +1,7 @@
 MD5 f145027711b153c2f49a6c5d1fe4e7e2 ChangeLog 2575
 MD5 89cd61f0f169d2db621dbf268c12eafa gphoto2-2.0-r1.ebuild 1147
 MD5 3ae454f193ec732c74c616b57c861f61 gphoto2-2.1.0.ebuild 1168
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 cf655c6489f7814acea4dac8187b86e7 gphoto2-2.1.1-r1.ebuild 1631
 MD5 51b5a71b2ed7d53c04e5e3daac55ddf7 files/digest-gphoto2-2.0-r1 64
 MD5 c6b8e82b0fa2b033d67aad22c1eebaf3 files/digest-gphoto2-2.1.0 66

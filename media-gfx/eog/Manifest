@@ -4,6 +4,7 @@ MD5 792865719cda3de647a191adbed7c3b2 eog-1.0.3.ebuild 1072
 MD5 c16be85c1617b2ab52e72d63221d82b0 eog-1.0.4.ebuild 1015
 MD5 f09f948eec785567b8c3ff78ac796533 eog-2.2.0.ebuild 913
 MD5 8f457278724973a1dc28fc4f51cde004 eog-2.2.1.ebuild 955
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 3fdbdde39a90689cbbd65d8087476749 eog-2.2.2.ebuild 957
 MD5 5f786f0751774fc1e127d27e4f0c31e9 files/digest-eog-0.6-r4 59
 MD5 df49c6aa6aae55e947388f38dcf0d6fa files/digest-eog-1.0.3 62

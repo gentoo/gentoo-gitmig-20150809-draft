@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.3.15.ebuild,v 1.5 2003/06/19 22:19:53 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.3.15.ebuild,v 1.6 2003/07/03 23:54:14 liquidx Exp $
 
 IUSE="doc python perl aalib png jpeg tiff gtkhtml"
 
@@ -67,6 +67,11 @@ src_install() {
 	
 	make DESTDIR=${D} install || die
 	dodoc AUTHORS COPYING ChangeL* HACKING INSTALL MAINTAINERS NEWS PLUGIN_MAINTAINERS README* TODO*
+	
+	# fix desktop link in the right place
+	dodir /usr/share/applications
+	rm ${D}/usr/share/gimp/1.3/misc/gimp-1.3.desktop
+	mv ${D}/usr/share/gimp/1.3/misc/gimp.desktop ${D}/usr/share/applications/gimp-1.3.desktop
 }
 
 pkg_postinst() {

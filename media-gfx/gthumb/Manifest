@@ -5,6 +5,7 @@ MD5 c725c8bc412ef192e8931899288a4e32 gthumb-2.1.2.ebuild 1192
 MD5 bed2ea0937855e2d4be48ad1985cf5e9 gthumb-2.0.1.ebuild 1058
 MD5 a356c73a36bd7581937893aff678abaa gthumb-2.1.0.ebuild 1097
 MD5 d43373a0dbbd201052a746fbeb7411f1 gthumb-2.1.1.ebuild 1098
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 6552832e528ea12ac21ec464c103fc2f files/digest-gthumb-0.13 63
 MD5 f3ba7fa273aa1c3523b3d79357e4a0cc files/digest-gthumb-1.104 64
 MD5 a0516645946b03a8f35516b06f8a5261 files/digest-gthumb-2.1.0 66

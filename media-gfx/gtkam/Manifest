@@ -2,6 +2,7 @@ MD5 34b61e5193305c178dde2dba8ef743bf ChangeLog 1486
 MD5 b169871109e992ae208b7ab0584689a7 gtkam-0.1.4.ebuild 678
 MD5 9209af589a9155a977b506edd43daf8b gtkam-0.1.9.ebuild 936
 MD5 d39dc920e703f6a02c3a7682147eb41a gtkam-0.1.10.ebuild 1259
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 0c55eb7ec8a4af3f3efdee10a639e3ac files/digest-gtkam-0.1.4 63
 MD5 ecc463b67ca1c84a223144fd7bcb0396 files/digest-gtkam-0.1.9 63
 MD5 6eb68b631f3f91c3af9151bbe912dbe8 files/gtkam-0.1.10-norpm.patch 398
