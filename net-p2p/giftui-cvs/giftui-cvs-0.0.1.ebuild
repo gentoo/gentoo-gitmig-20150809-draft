@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftui-cvs/giftui-cvs-0.0.1.ebuild,v 1.1 2003/07/13 19:40:14 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/giftui-cvs/giftui-cvs-0.0.1.ebuild,v 1.2 2003/07/25 18:55:09 avenj Exp $
 
 ECVS_SERVER="cvs.tuxfamily.org:/cvsroot/giftui"
 ECVS_MODULE="giFTui"
@@ -17,7 +17,7 @@ SLOT="0"
 KEYWORDS="~x86"
 
 DEPEND=">=x11-libs/gtk+-2.0.3
-	net-p2p/gift-cvs"
+	net-p2p/gift"
 
 RDEPEND=${DEPEND}
 
