@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.3.ebuild,v 1.9 2004/09/17 22:55:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/heimdal-0.6.3-r1.ebuild,v 1.1 2004/09/17 22:55:39 aliz Exp $
 
-inherit libtool eutils flag-o-matic
+inherit libtool eutils
 
 DESCRIPTION="Kerberos 5 implementation from KTH"
 SRC_URI="ftp://ftp.pdc.kth.se/pub/heimdal/src/${P}.tar.gz"
@@ -31,11 +31,14 @@ DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
 src_unpack() {
-	unpack ${A}
+	unpack ${A} ; cd ${S}
 
-	epatch ${FILESDIR}/${P}.all.patch
-	cd ${S}
 	epatch ${FILESDIR}/${P}-ldap-subtree.patch.bz2
+	epatch ${FILESDIR}/${P}-no_libedit.patch.bz2
+	epatch ${FILESDIR}/${P}-fPIC.patch.bz2
+	epatch ${FILESDIR}/${P}-rxapps.patch.bz2
+	epatch ${FILESDIR}/${P}-berkdb.patch.bz2
+	epatch ${FILESDIR}/${P}-suid_fix.patch.bz2
 }
 
 src_compile() {
@@ -60,10 +63,8 @@ src_compile() {
 
 	use ldap && myconf="${myconf} --with-openldap=/usr"
 
-	append-ldflags -Wl,-z,now
 	econf ${myconf} || die "econf failed"
 	emake		|| die
-
 }
 
 src_install() {
@@ -75,13 +76,13 @@ src_install() {
 	# Begin client rename and install
 	for i in {telnetd,ftpd}
 	do
-		mv ${D}/usr/share/man/man8/${i}.8.gz ${D}/usr/share/man/man8/k${i}.8.gz
+		mv ${D}/usr/share/man/man8/${i}.8 ${D}/usr/share/man/man8/k${i}.8
 		mv ${D}/usr/sbin/${i} ${D}/usr/sbin/k${i}
 	done
-	for i in {rshd,telnetd,ftpd}
+	for i in {rcp,rsh,telnet,ftp}
 	do
-		mv ${D}/usr/share/man/man1/${i}.1.gz ${D}/usr/share/man/man1/k${i}.1.gz
-		mv ${D}/usr/sbin/${i} ${D}/usr/sbin/k${i}
+		mv ${D}/usr/share/man/man1/${i}.1 ${D}/usr/share/man/man1/k${i}.1
+		mv ${D}/usr/bin/${i} ${D}/usr/bin/k${i}
 	done
 
 	# Create symlinks for the includes
@@ -116,5 +117,4 @@ src_install() {
 
 	# default database dir
 	dodir /var/heimdal
-
 }

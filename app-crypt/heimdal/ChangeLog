@@ -1,6 +1,26 @@
 # ChangeLog for app-crypt/heimdal
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.53 2004/09/15 22:40:44 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/heimdal/ChangeLog,v 1.54 2004/09/17 22:55:39 aliz Exp $
+
+*heimdal-0.6.3-r1 (17 Sep 2004)
+
+  17 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> heimdal-0.6.2-r1.ebuild,
+  heimdal-0.6.2.ebuild, heimdal-0.6.3-r1.ebuild,
+  files/heimdal-0.6-berkdb.patch, files/heimdal-0.6-berkdb.patch.bz2,
+  files/heimdal-0.6-gcc3.patch, files/heimdal-0.6-gcc3.patch.bz2,
+  files/heimdal-0.6-rxapps.patch, files/heimdal-0.6-rxapps.patch.bz2,
+  files/heimdal-0.6.1-fPIC.patch, files/heimdal-0.6.1-fPIC.patch.bz2,
+  files/heimdal-0.6.2-fPIC.patch, files/heimdal-0.6.2-fPIC.patch.bz2,
+  files/heimdal-0.6.3-berkdb.patch.bz2, files/heimdal-0.6.3-fPIC.patch.bz2,
+  files/heimdal-0.6.3-ldap-subtree.patch,
+  files/heimdal-0.6.3-ldap-subtree.patch.bz2,
+  files/heimdal-0.6.3-no_libedit.patch.bz2,
+  files/heimdal-0.6.3-rxapps.patch.bz2, files/heimdal-0.6.3.all.patch:
+
+  + Don't check for el_init in -ledit, thanks to Jason Wever <wever@gentoo.org> for finding the bug.
+  + Split heimdal-0.6.3.all.patch.
+  + Added suid fix patch instead of appending flags to ldflags globally.
+  + Compressed patches.
 
   16 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org> heimdal-0.6.3.ebuild:
   Stable on alpha, bug 61412.
