@@ -1,9 +1,11 @@
 # ChangeLog for media-libs/giblib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/giblib/ChangeLog,v 1.10 2004/02/23 01:06:11 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/giblib/ChangeLog,v 1.11 2004/03/01 13:01:51 aliz Exp $
 
   22 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
   Add logic to handle when imlib2 has been built w/out X support #41445.
+
+*giblib-1.2.3 (19 Oct 2003)
 
   19 Oct 2003; Heinrich Wendel <lanius@gentoo.org> giblib-1.2.1.ebuild,
   giblib-1.2.2.ebuild:
