@@ -3,7 +3,7 @@
 # Author Daniel Robbins <drobbins@gentoo.org>
 # Modified Tod M. Neidt <tneidt@fidnet.com>
 # /home/cvsroot/gentoo-x86/dev-lang/python/python-2.0-r4.ebuild,v 1.1 2001/06/04 19:49:02 drobbins Exp
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.0-r4.ebuild,v 1.5 2001/08/30 17:31:35 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.0-r4.ebuild,v 1.6 2001/08/31 03:23:38 pm Exp $
 
 
 S=${WORKDIR}/Python-2.0

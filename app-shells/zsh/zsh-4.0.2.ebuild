@@ -2,8 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
 # This ebuild by Parag Mehta <pm@gentoo.org>
-# /home/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.2.ebuild,v 1.1 2001/07/03 12:19:26 pm Exp
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.2.ebuild,v 1.4 2001/08/30 17:31:35 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.0.2.ebuild,v 1.5 2001/08/31 03:23:38 pm Exp $
 
 
 A=${P}.tar.gz

@@ -3,7 +3,7 @@
 # Author Ollie Rutherfurd <oliver@rutherfurd.net>
 # :mode=shellscript:noTabs=true:
 # /home/cvsroot/gentoo-x86/dev-python/PyXML/PyXML-0.6.5.ebuild,v 1.1 2001/08/03 17:34:18 kabau Exp
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyXML/PyXML-0.6.6.ebuild,v 1.2 2001/08/30 17:31:35 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyXML/PyXML-0.6.6.ebuild,v 1.3 2001/08/31 03:23:38 pm Exp $
 
 
 A=${P}.tar.gz
