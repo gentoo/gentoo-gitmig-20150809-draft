@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-10.0.3.ebuild,v 1.2 2005/03/15 04:25:19 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-10.0.3.ebuild,v 1.3 2005/03/19 14:05:10 luckyduck Exp $
 
 inherit nsplugins eutils rpm
 
@@ -10,7 +10,7 @@ HOMEPAGE="https://player.helixcommunity.org/2004/downloads/"
 SRC_URI="https://helixcommunity.org/download.php/801/${MY_PN}-${PV}.748-20050223.i586.rpm"
 LICENSE="HBRL"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 IUSE="mozilla"
 
 # take this out until I get the realplayer source
