@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/files/courier-pop3d-ssl.rc6,v 1.2 2003/02/14 23:02:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/files/courier-pop3d-ssl.rc6,v 1.3 2003/02/21 17:17:35 vapier Exp $
 
 depend() {
 	need net authdaemond
@@ -19,6 +19,11 @@ checkconfig() {
 		eerror "Edit /etc/courier-imap/pop3d.cnf, then run: mkpop3dcert"
 		return 2
 	fi
+	source /etc/courier-imap/pop3d-ssl || {
+		eerror "There are syntax errors in /etc/courier-imap/pop3d-ssl"
+		eerror "Please correct them before trying to start pop3d-ssl"
+		return 3
+	}
 }
 
 start() {
