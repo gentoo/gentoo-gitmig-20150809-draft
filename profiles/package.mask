@@ -1,6 +1,3 @@
-#Still under construction, should be ready by tomorrow
-app-misc/rox-1.1.8
-
 #waiting for new portage dep format
 >=x11-libs/qt-x11-3
 
