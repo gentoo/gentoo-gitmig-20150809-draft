@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/glsof/glsof-0.9.16.ebuild,v 1.2 2004/12/13 22:33:05 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/glsof/glsof-0.9.16.ebuild,v 1.3 2005/01/14 14:23:11 ticho Exp $
 
 inherit base  # Saves us work
 

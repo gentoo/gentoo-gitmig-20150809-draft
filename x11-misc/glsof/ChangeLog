@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/glsof
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/glsof/ChangeLog,v 1.3 2004/12/13 22:50:10 ticho Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/glsof/ChangeLog,v 1.4 2005/01/14 14:23:11 ticho Exp $
+
+  14 Jan 2005; Andrej Kacian <ticho@gentoo.org> glsof-0.9.17.ebuild:
+  Stable on x86.
 
 *glsof-0.9.17 (13 Dec 2004)
 
