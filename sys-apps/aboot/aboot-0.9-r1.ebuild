@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/aboot/aboot-0.9-r1.ebuild,v 1.9 2003/06/22 23:37:37 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/aboot/aboot-0.9-r1.ebuild,v 1.10 2003/09/07 02:41:05 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Alpha Linux boot loader for srm"
@@ -19,7 +19,7 @@ src_unpack() {
 	unpack ${A}
 
 	mv ${WORKDIR}/aboot-0.9bpre ${WORKDIR}/${P}
-	
+
 	cd ${S}
 	cp Makefile Makefile.orig
 	sed -e "s:/usr/man:/usr/share/man:" Makefile.orig > Makefile
@@ -40,7 +40,7 @@ src_install() {
 
 	dodoc COPYING ChangeLog INSTALL README TODO aboot.conf
 
-	dodir /etc	
+	dodir /etc
 	insinto /etc
 	newins ${FILESDIR}/aboot.conf aboot.conf.example
 }

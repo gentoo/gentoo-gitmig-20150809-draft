@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.1.1.ebuild,v 1.5 2003/08/03 04:37:47 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-lite/pcsc-lite-1.1.1.ebuild,v 1.6 2003/09/07 03:00:30 msterret Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ src_unpack () {
 	unpack ${A}
 	cd ${WORKDIR}
 	epatch ${FILESDIR}/${P}-gentoo.patch
-}   
+}
 
 src_compile() {
 	./configure \
@@ -31,8 +31,8 @@ src_compile() {
 src_install() {
 	emake prefix=${D}/usr install || die
 
-	dodoc AUTHORS COPYING ChangeLog DRIVERS HELP INSTALL NEWS README SECURITY 
-	insinto /usr/share/doc/${P} 
+	dodoc AUTHORS COPYING ChangeLog DRIVERS HELP INSTALL NEWS README SECURITY
+	insinto /usr/share/doc/${P}
 	doins doc/*.pdf doc/README.DAEMON
 
 	exeinto /etc/init.d

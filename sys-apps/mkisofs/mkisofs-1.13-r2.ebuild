@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mkisofs/mkisofs-1.13-r2.ebuild,v 1.14 2003/06/21 21:19:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mkisofs/mkisofs-1.13-r2.ebuild,v 1.15 2003/09/07 02:57:40 msterret Exp $
 # -r2 by Dan Armak
 
 DESCRIPTION="Premastering program for creating iso9660 volumes"
@@ -18,8 +18,8 @@ src_compile() {
 
 }
 
-src_install() {							   
-	
+src_install() {
+
 	into /usr
 	local DIR
 
@@ -33,18 +33,18 @@ src_install() {
 	[ -d mkisofs/OBJ/x86-linux-cc ] && DIR=x86-linux-cc
 	[ -d mkisofs/OBJ/ppc-linux-cc ] && DIR=ppc-linux-cc
 	[ -d mkisofs/OBJ/alpha-linux-cc ] && DIR=alpha-linux-cc
-	
+
 	dobin mkisofs/OBJ/${DIR}/mkisofs
 	dobin mkisofs/diag/OBJ/${DIR}/devdump
 	dobin mkisofs/diag/OBJ/${DIR}/isodump
 	dobin mkisofs/diag/OBJ/${DIR}/isoinfo
 	dobin mkisofs/diag/OBJ/${DIR}/isovfy
-	
+
 	doman mkisofs/mkisofs.8 mkisofs/mkhybrid.8 mkisofs/apple_driver.8
 	doman mkisofs/diag/isoinfo.8
 	dodoc ABOUT BUILD COMPILE COPYING MKNOD* PORTING README*
 	docinto mkisofs
 	dodoc mkisofs/ChangeLog
 	dodoc mkisofs/README* mkisofs/TODO
-	
+
 }

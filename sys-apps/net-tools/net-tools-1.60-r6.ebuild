@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r6.ebuild,v 1.2 2003/06/21 21:19:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r6.ebuild,v 1.3 2003/09/07 02:58:52 msterret Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ src_unpack() {
 	epatch ${PATCHDIR}/net-tools-1.57-bug22040.patch
 	epatch ${PATCHDIR}/net-tools-1.60-manydevs.patch
 	epatch ${PATCHDIR}/net-tools-1.60-miiioctl.patch
-	
+
 	cp ${PATCHDIR}/net-tools-1.60-config.h config.h
 	cp ${PATCHDIR}/net-tools-1.60-config.make config.make
 
@@ -52,10 +52,10 @@ src_unpack() {
 }
 
 src_compile() {
-	# Changing "emake" to "make" closes half of bug #820; 
-	# configure is run from *inside* the Makefile, sometimes 
-	# breaking parallel makes (if ./configure doesn't finish first) 
-	make || die	
+	# Changing "emake" to "make" closes half of bug #820;
+	# configure is run from *inside* the Makefile, sometimes
+	# breaking parallel makes (if ./configure doesn't finish first)
+	make || die
 
 	if [ "`use nls`" ] ; then
 		cd po
@@ -68,7 +68,7 @@ src_compile() {
 
 src_install() {
 	make BASEDIR=${D} install || die
-	
+
 	dosbin ether-wake
 	mv ${D}/bin/* ${D}/sbin
 	for i in hostname domainname netstat dnsdomainname ypdomainname nisdomainname
@@ -77,7 +77,7 @@ src_install() {
 	done
 	dodir /usr/bin
 	dosym /bin/hostname /usr/bin/hostname
-	
+
 	if [ -z "`use build`" ]
 	then
 		dodoc COPYING README README.ipv6 TODO

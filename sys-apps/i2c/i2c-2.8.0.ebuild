@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.8.0.ebuild,v 1.2 2003/08/14 09:24:49 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.8.0.ebuild,v 1.3 2003/09/07 02:55:33 msterret Exp $
 
 # plasmaroo@plasmaroo.squirrelserver.co.uk, datestamp Tue Aug 12, 11:11 PM
 
@@ -20,7 +20,7 @@ src_compile ()  {
 	einfo "*****************************************************************"
 	einfo
 	einfo "This ebuild assumes your *current* kernel is >=2.4.9 && < 2.5+ "
-	einfo 
+	einfo
         einfo "For 2.5+ series kernels, use the support already in the kernel"
         einfo "under 'Character devices' -> 'I2C support'."
 	einfo
@@ -62,7 +62,7 @@ src_compile ()  {
                 einfo "You are running:- `uname -r`"
                 check_KV || die "Cannot find kernel in /usr/src/linux"
                 einfo "Using kernel in /usr/src/linux/:- ${KV}"
-                                                                                                                                           
+
                 echo ${KV} | grep 2.4. > /dev/null
                 if [ $? == 1 ]; then
                         eerror "Kernel version in /usr/src/linux is not 2.4.x"
@@ -71,7 +71,7 @@ src_compile ()  {
                 else
                         LINUX='/usr/src/linux'
                 fi
-                                                                                                                                           
+
                 if [ "${KV}" != "`uname -r`" ]; then
                         ewarn "WARNING:- kernels do not match!"
                 fi

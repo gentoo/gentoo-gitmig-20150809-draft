@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gtk-systrace/gtk-systrace-0.1-r1.ebuild,v 1.4 2003/07/18 15:49:45 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gtk-systrace/gtk-systrace-0.1-r1.ebuild,v 1.5 2003/09/07 02:51:36 msterret Exp $
 
 DESCRIPTION="Systrace gtk notification gui"
 HOMEPAGE="http://www.citi.umich.edu/u/provos/systrace/index.html"
@@ -25,8 +25,8 @@ src_install() {
 	cp ${FILESDIR}/src/notification xsystrace
 	exeinto /usr/X11R6/bin
 	doexe xsystrace
-	
+
 	dodir /usr/local/share/notification/pixmaps
 	insinto /usr/local/share/notification/pixmaps
-	doins ${FILESDIR}/pixmaps/*.xpm 
+	doins ${FILESDIR}/pixmaps/*.xpm
 }

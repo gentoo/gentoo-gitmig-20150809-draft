@@ -1,18 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/milo/milo-2.4.18.ebuild,v 1.5 2003/06/27 14:06:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/milo/milo-2.4.18.ebuild,v 1.6 2003/09/07 02:57:20 msterret Exp $
 
-inherit flag-o-matic eutils ccc 
+inherit flag-o-matic eutils ccc
 
 # Currently tested Systems:
-# 	
+#
 # 	Ruffian: UX164, BX164
-# 	
+#
 
 DESCRIPTION="The Alpha MIniLOader, for Alpha Machines without SRM"
 HOMEPAGE="http://www.suse.de/~stepan/"
 
-# ive tested this, and it seems to make little difference 
+# ive tested this, and it seems to make little difference
 # which kernel version you use, so it makes sense to use the
 # latest available 2.2 kernel with the latest bugfixes/drivers/etc.
 
@@ -20,7 +20,7 @@ kernel_version="2.2.25"
 milo_version="2.2-18"
 ldmilo_patch="20010430"
 
-# milo-2.2-18.tar.bz2 :- latest milo sources 
+# milo-2.2-18.tar.bz2 :- latest milo sources
 # linux-2.2.25.tar.bz2 :- latest linux 2.2 kernel sources
 # ldmilo-patched-20010430 :- Ruffian ldmilo utility, with bugfixes by Jay Eastabrook
 # linload.exe :- linload utility (ldmilo equivalent for non-ruffians).
@@ -33,11 +33,11 @@ SRC_URI="http://www.suse.de/~stepan/source/milo-${milo_version}.tar.bz2
 	http://www.ibiblio.org/pub/Linux/docs/HOWTO/MILO-HOWTO"
 
 #
-# milo license is dec palcode license, dec bios emulation license, and gpl-2 rolled 
+# milo license is dec palcode license, dec bios emulation license, and gpl-2 rolled
 # into one big ugly package.
-# 
-# the dec licenses say you can basically do anything you like, including modify 
-# and redistribute for profit or non-profit, as long as its for use with Alpha 
+#
+# the dec licenses say you can basically do anything you like, including modify
+# and redistribute for profit or non-profit, as long as its for use with Alpha
 # architecture.
 #
 
@@ -55,14 +55,14 @@ PROVIDE="virtual/bootloader"
 
 S=${WORKDIR}/milo-${milo_version}
 
-# You can change the default MILO serial 
+# You can change the default MILO serial
 # number here, the MILO default is "Linux_is_Great!".
 # There are some below that i have made you can
 # use if you want, just uncomment the one you like.
-# 
+#
 # if you want to see how this works, to make your own
 # look at mkserial_no.c in the filesdir.
-# 
+#
 ##### Linux_is_Great! ###################
 #milo_serial_number0=0x73695f78756e694c
 #milo_serial_number1=0x002174616572475f
@@ -89,18 +89,18 @@ src_unpack() {
 	unpack linux-${kernel_version}.tar.bz2
 	unpack milo-${milo_version}.tar.bz2
 
-	# gcc3 fixes, and some tweaks to get a build, also 
+	# gcc3 fixes, and some tweaks to get a build, also
 	# reiserfs support for the kernel (and milo).
 	cd ${WORKDIR}/linux; epatch ${FILESDIR}/linux-${kernel_version}-gcc3-milo.diff || die
-	cd ${WORKDIR}/linux; epatch ${DISTDIR}/linux-2.2.20-reiserfs-3.5.35.diff.bz2 || die 
-	cd ${S}; epatch ${FILESDIR}/milo-${milo_version}-gcc3-gentoo.diff || die 
+	cd ${WORKDIR}/linux; epatch ${DISTDIR}/linux-2.2.20-reiserfs-3.5.35.diff.bz2 || die
+	cd ${S}; epatch ${FILESDIR}/milo-${milo_version}-gcc3-gentoo.diff || die
 }
 
 src_compile() {
 	# no ccc sorry :(
 	is-ccc && die "sorry, ccc not supported."
-	
-	unset MILO_ARCH 
+
+	unset MILO_ARCH
 	for arches in	"Alpha-XLT  XLT"		\
 			"Alpha-XL   XL"			\
 			"AlphaBook1 BOOK1"		\
@@ -130,29 +130,29 @@ src_compile() {
 			fi
 		fi
 	done
-	
+
 	if [ -z "${MILO_ARCH}" ]; then
 		eerror "Sorry, but ${MILO_IMAGE} doesnt look valid to me"
 		eerror "Consult the Alpha installation guide, or the ebuild"
 		eerror "for a list of available Alphas."
 		die "${MILO_IMAGE} not supported, or not recognised."
 	fi
-	
+
 	sed -i "s!__MILO_ARCHES__!${MILO_ARCH}!g" ${S}/tools/scripts/build
 
 	ewarn
 	ewarn "seriously, this is going to take a while, go get some coffee..."
-	ewarn 
+	ewarn
 	einfo "this ebuild will build the standard MILO images, similar to those"
 	einfo "distributed with some distributions, and the images provided with"
 	einfo "the official MILO sources."
-	einfo 
+	einfo
 	einfo "of course, the beauty of MILO is it can support any device supported"
 	einfo "by the linux kernel, so if you need support for non-standard hardware"
 	einfo "set the path to the .config you want in \$custom_milo_kernel_config and"
 	einfo "i will use it instead of the default."
 	ewarn
-	
+
 	einfon "continuing in..."
 	for ((i=10;i>0;i--))
 	do
@@ -160,13 +160,13 @@ src_compile() {
 		sleep 1
 	done
 	echo ${NORMAL}
-	
+
 	# get kernel configured
 	cp ${custom_milo_kernel_config:-${S}/Documentation/config/linux-2.2.19-SuSE.config} \
 		${WORKDIR}/linux/.config
 	cd ${WORKDIR}/linux; yes n | make oldconfig || die "unable to configure kernel."
-	
-	# we're building a generic kernel that defaults to ev5, but theres no 
+
+	# we're building a generic kernel that defaults to ev5, but theres no
 	# reason why we cant tweak the instruction set.
 	# im not sure if you can actually pull a system performance gain/faster
 	# boot from optimising milo, but at least you'll get a faster milo pager ;)
@@ -176,7 +176,7 @@ src_compile() {
 			${WORKDIR}/linux/arch/alpha/Makefile
 	fi
 
-	# build the generic linux kernel, of course if you have 
+	# build the generic linux kernel, of course if you have
 	# hardware not supported by this generic kernel, you are free
 	# to hack it (or the .config used here).
 	einfo "building a generic kernel for use with milo..."
@@ -190,14 +190,14 @@ src_compile() {
 	einfo "building milo images..."
 
 	# we have a choice here, milo can set the serial number to just about
-	# anything we like, the milo author has chosen "Linux_is_Great!", which 
-	# is a bit cheesy, but we will leave it as default if user hasnt chosen 
+	# anything we like, the milo author has chosen "Linux_is_Great!", which
+	# is a bit cheesy, but we will leave it as default if user hasnt chosen
 	# something else.
 	# see above for options.
 
 	append-flags -DMILO_SERIAL_NUMBER0="${milo_serial_number0:-0x73695f78756e694c}"
 	append-flags -DMILO_SERIAL_NUMBER1="${milo_serial_number1:-0x002174616572475f}"
-	
+
 	# the Makefile missed this :-/
 	cd ${S}/tools/common; make || die "couldnt make commonlib."
 
@@ -207,33 +207,33 @@ src_compile() {
 	# put the ldmilo utility there.
 	cp ${DISTDIR}/ldmilo-patched-${ldmilo_patch} ${S}/binaries/ldmilo.exe
 	cp ${DISTDIR}/linload.exe ${S}/binaries/linload.exe
-	
+
 }
 
 src_install() {
-	
+
 	cd ${S}; dodir /opt/milo
 	insinto /opt/milo
-	
+
 	einfo "Installing MILO images..."
 	for i in binaries/*
 	do
 		einfo "	${i}"
 		doins ${i}
 	done
-	
+
 	cd ${S}/Documentation
-	
+
 	dodoc ChangeLog filesystem Nikita.Todo README.milo Todo LICENSE README.BSD Stuff WhatIsMilo \
 		${FILESDIR}/README-gentoo ${FILESDIR}/mkserial_no.c ${DISTDIR}/MILO-HOWTO
-	
+
 }
 
 pkg_postinst() {
 	einfo "The MILO images have been installed into /opt/milo."
 	einfo "There are instructions in /usr/share/doc/${P} for making MILO boot floppies."
 	einfo "Alternative methods, (flash, srm, debug monitor, etc) are described in the MILO-HOWTO."
-	einfo 
+	einfo
 	einfo "The important docs to read are the README-gentoo and the MILO-HOWTO."
 	einfo
 	ewarn "PLEASE, PLEASE, PLEASE, let me know if this works or not, i need to know which systems"

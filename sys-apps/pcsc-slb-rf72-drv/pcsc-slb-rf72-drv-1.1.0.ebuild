@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-slb-rf72-drv/pcsc-slb-rf72-drv-1.1.0.ebuild,v 1.3 2003/06/21 21:19:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcsc-slb-rf72-drv/pcsc-slb-rf72-drv-1.1.0.ebuild,v 1.4 2003/09/07 03:01:15 msterret Exp $
 
 MY_P="slb_rf72"
 S=${WORKDIR}/${MY_P}
@@ -19,12 +19,12 @@ src_compile() {
 
 src_install () {
 
-	insinto /usr/share/doc/${MY_P} 
+	insinto /usr/share/doc/${MY_P}
 	doins doc/*.html doc/*.gif ERRATA LICENSE README
-	
-	insinto /usr/share/doc/${MY_P}/sample 
+
+	insinto /usr/share/doc/${MY_P}/sample
 	doins sample/*
-	
+
 	insinto /usr/lib/readers
 	insopts -m755
 	doins *.so

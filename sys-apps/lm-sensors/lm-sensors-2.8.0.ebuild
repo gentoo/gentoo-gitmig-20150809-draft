@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.0.ebuild,v 1.1 2003/08/13 20:33:18 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lm-sensors/lm-sensors-2.8.0.ebuild,v 1.2 2003/09/07 02:56:08 msterret Exp $
 
 inherit flag-o-matic
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www2.lm-sensors.nu/~lm78"
 
 SLOT="0"
 # gentoo-sources-2.4.20-r1 and xfs-sources-2.4.20-r1 will
-# have support for this package, do not change these to ~ 
+# have support for this package, do not change these to ~
 # until your arch has i2c-2.7.0 in it's kernel.
 KEYWORDS="~x86 ~amd64 -ppc -sparc"
 LICENSE="GPL-2"
@@ -37,7 +37,7 @@ src_compile()  {
 	einfo
 	einfo "This ebuild assumes your /usr/src/linux kernel is the one you"
 	einfo "used to build i2c-2.8.0. and is >=2.4.9 && < 2.5+"
-	einfo 
+	einfo
         einfo "For 2.5+ series kernels, use the support already in the kernel"
         einfo "under 'Character devices' -> 'I2C support'."
 	einfo
@@ -55,7 +55,7 @@ src_compile()  {
 		einfo "You are running:- `uname -r`"
                 check_KV || die "Cannot find kernel in /usr/src/linux"
                 einfo "Using kernel in /usr/src/linux/:- ${KV}"
-                                                                                                                        
+
                 echo ${KV} | grep 2.4. > /dev/null
                 if [ $? == 1 ]; then
                         eerror "Kernel version in /usr/src/linux is not 2.4.x"

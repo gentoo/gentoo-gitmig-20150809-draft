@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/anacron/anacron-2.3.ebuild,v 1.4 2003/06/21 21:19:38 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/anacron/anacron-2.3.ebuild,v 1.5 2003/09/07 02:49:15 msterret Exp $
 
 #MY_P=${PN}-${PV}
 #S=${WORKDIR}/${MY_P}
@@ -37,12 +37,12 @@ src_install() {
 
 	exeinto /etc/init.d ; newexe ${FILESDIR}/anacron.rc6 anacron
 
-	dodoc ChangeLog COPYING README TODO 
+	dodoc ChangeLog COPYING README TODO
 
 	insinto /usr/sbin
 	insopts -o root -g root -m 0750 ; doins anacron
 
-	insinto /etc 
+	insinto /etc
 	doins ${FILESDIR}/anacrontab
 }
 

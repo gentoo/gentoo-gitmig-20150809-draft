@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/e2fsprogs-1.33.ebuild,v 1.6 2003/07/16 13:39:28 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/e2fsprogs/e2fsprogs-1.33.ebuild,v 1.7 2003/09/07 02:46:48 msterret Exp $
 
 inherit eutils
 
@@ -33,7 +33,7 @@ src_compile() {
 		--enable-elf-shlibs \
 		`use_enable nls` \
 		|| die
-		
+
 	# Parallel make sometimes fails
 	MAKEOPTS="-j1" emake || die
 }
@@ -42,18 +42,18 @@ src_install() {
 	einstall libdir=zapme || die
 	#evil e2fsprogs makefile -- I'll get you!
 	rm -rf ${D}/zapme
-	
+
 	make DESTDIR=${D} install-libs || die
-	
+
 	#There is .po file b0rkage with 1.33; commenting this out (drobbins, 21 Apr 2003)
 	#if use nls; then
 	#	make -C po DESTDIR=${D} install || die
 	#fi
-	
+
 	dodoc COPYING ChangeLog README RELEASE-NOTES SHLIBS
 	docinto e2fsck
 	dodoc e2fsck/ChangeLog e2fsck/CHANGES
-	
+
 	dodir /lib /bin /sbin
 	cd ${D}/usr/lib
 	mv * ../../lib
@@ -77,7 +77,7 @@ src_install() {
 		mylib="`basename ${mylib}`"
 		ln -sf ${mylib} ${x}
 	done
-	
+
 	mv ${D}/usr/sbin/* ${D}/sbin
 	cd ${D}/usr/bin
 	mv lsattr chattr uuidgen ../../bin

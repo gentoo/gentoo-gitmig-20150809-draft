@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acpid/acpid-1.0.1.ebuild,v 1.11 2003/06/21 21:19:38 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acpid/acpid-1.0.1.ebuild,v 1.12 2003/09/07 02:48:58 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Daemon for Advanced Configuration and Power Interface."
@@ -24,13 +24,13 @@ src_compile() {
 src_install () {
 
 	make INSTPREFIX=${D} install || die
-	
+
 	dodir /etc/acpi/events
 	exeinto /etc/acpi
 	doexe debian/default.sh
 	insinto /etc/acpi/events
 	doins debian/default
-	
+
 	dodoc README Changelog
 
 	exeinto /etc/init.d

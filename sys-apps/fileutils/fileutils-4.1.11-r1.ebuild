@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/fileutils-4.1.11-r1.ebuild,v 1.10 2003/07/16 13:43:10 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/fileutils-4.1.11-r1.ebuild,v 1.11 2003/09/07 02:41:32 msterret Exp $
 
 IUSE="acl nls build"
 ACLPV=4.1.11acl-0.8.25
@@ -24,12 +24,12 @@ src_unpack() {
 
 	unpack ${A}
 
-	if [ "`use acl`" ]; then 
+	if [ "`use acl`" ]; then
 		zcat ${DISTDIR}/fileutils-${ACLPV}.diff | patch -p0
 		cd ${S}/lib
 		cat ${FILESDIR}/acl.c.diff | patch -p0 -l || die
 	fi
-		
+
 	cd ${S}
 	# Fix braindead scripting problem in configure
 	# <azarah@gentoo.org> (25 Sep 2002)
@@ -39,13 +39,13 @@ src_unpack() {
 src_compile() {
 	local myconf=""
 	use nls || myconf="--disable-nls"
-	
+
 	./configure --prefix=/usr \
 		--mandir=/usr/share/man \
 		--infodir=/usr/share/info \
 		--bindir=/bin \
 		${myconf} || die
-	
+
 	emake || die
 }
 
@@ -55,13 +55,13 @@ src_install() {
 		infodir=${D}/usr/share/info \
 		bindir=${D}/bin \
 		install || die
-	
+
 	cd ${D}
 	dodir /usr/bin
 	rm -rf usr/lib
 	cd usr/bin
 	ln -s ../../bin/* .
-	
+
 	if [ -z "`use build`" ]
 	then
 		cd ${S}

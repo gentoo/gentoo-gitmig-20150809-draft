@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/chpax-0.4.ebuild,v 1.5 2003/06/24 15:32:51 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/chpax-0.4.ebuild,v 1.6 2003/09/07 02:49:46 msterret Exp $
 
 S=${WORKDIR}/chpax
 
@@ -15,7 +15,7 @@ IUSE=""
 DEPEND="virtual/glibc"
 
 src_compile() {
-	mv Makefile{,.orig}        
+	mv Makefile{,.orig}
 	sed -e "s|-Wall|${CFLAGS} -Wall|" Makefile.orig > Makefile
 	emake CC="${CC}" || die "Parallel Make Failed"
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.08-r1.ebuild,v 1.3 2003/08/06 20:58:34 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/kbd/kbd-1.08-r1.ebuild,v 1.4 2003/09/07 02:47:52 msterret Exp $
 
 IUSE="nls"
 
@@ -36,13 +36,13 @@ src_compile() {
 	# Non-standard configure script; --disable-nls to
 	# disable NLS, nothing to enable it.
 	use nls || myconf="--disable-nls"
-	
+
 	# We should not add the prefix to mandir and datadir
 	./configure --prefix=/usr \
 		--mandir=/share/man \
 		--datadir=/share \
 		${myconf} || die
-		
+
 	make || die
 }
 

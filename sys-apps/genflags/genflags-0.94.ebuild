@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/genflags/genflags-0.94.ebuild,v 1.1 2003/07/27 11:14:47 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/genflags/genflags-0.94.ebuild,v 1.2 2003/09/07 02:51:16 msterret Exp $
 
 DESCRIPTION="Gentoo CFLAGS generator"
 
@@ -21,11 +21,11 @@ KEYWORDS="~x86 ~amd64 ~arm ~hppa ~ppc ~mips ~sparc ~alpha"
 IUSE=""
 
 # This is all explictly specified as might want this in early stages
-DEPEND="app-shells/bash 
+DEPEND="app-shells/bash
 		|| ( sys-apps/coreutils ( sys-apps/sh-utils sys-apps/textutils ) )
-		sys-apps/findutils  
-		sys-apps/grep 
-		sys-apps/sed 
+		sys-apps/findutils
+		sys-apps/grep
+		sys-apps/sed
 		sys-apps/util-linux"
 
 S=${WORKDIR}/${P}

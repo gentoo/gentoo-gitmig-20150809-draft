@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hfsplusutils/hfsplusutils-1.0.4-r1.ebuild,v 1.6 2003/07/03 22:14:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hfsplusutils/hfsplusutils-1.0.4-r1.ebuild,v 1.7 2003/09/07 02:52:34 msterret Exp $
 
 inherit eutils
 
@@ -26,7 +26,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/hfsplusutils-1.0.4-glob.patch
-	epatch ${FILESDIR}/hfsplusutils-1.0.4-errno.patch	
+	epatch ${FILESDIR}/hfsplusutils-1.0.4-errno.patch
 }
 
 src_compile() {

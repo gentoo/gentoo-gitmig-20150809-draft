@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/fileutils-4.1.11.ebuild,v 1.10 2003/06/21 21:19:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fileutils/fileutils-4.1.11.ebuild,v 1.11 2003/09/07 02:41:32 msterret Exp $
 
 IUSE="nls build"
 
@@ -31,13 +31,13 @@ src_unpack() {
 src_compile() {
 	local myconf=""
 	use nls || myconf="--disable-nls"
-	
+
 	./configure --prefix=/usr \
 		--mandir=/usr/share/man \
 		--infodir=/usr/share/info \
 		--bindir=/bin \
 		${myconf} || die
-	
+
 	emake || die
 }
 
@@ -47,13 +47,13 @@ src_install() {
 		infodir=${D}/usr/share/info \
 		bindir=${D}/bin \
 		install || die
-	
+
 	cd ${D}
 	dodir /usr/bin
 	rm -rf usr/lib
 	cd usr/bin
 	ln -s ../../bin/* .
-	
+
 	if [ -z "`use build`" ]
 	then
 		cd ${S}

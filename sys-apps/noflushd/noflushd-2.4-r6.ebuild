@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/noflushd/noflushd-2.4-r6.ebuild,v 1.11 2003/07/16 17:56:20 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/noflushd/noflushd-2.4-r6.ebuild,v 1.12 2003/09/07 02:59:04 msterret Exp $
 # Note: the daemon's current 2.4 version has nothing to do with kernel versions
 
 MY_P=${P/-/_}
@@ -36,7 +36,7 @@ src_install () {
 }
 
 pkg_postinst() {
-    
+
 	echo "
 	Run 'rc-update add noflushd' to add it to default runlevel.
 

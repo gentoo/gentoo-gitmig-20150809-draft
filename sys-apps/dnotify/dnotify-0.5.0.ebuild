@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dnotify/dnotify-0.5.0.ebuild,v 1.11 2003/06/21 21:19:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dnotify/dnotify-0.5.0.ebuild,v 1.12 2003/09/07 02:50:28 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Execute a command when the contents of a directory change"
@@ -22,5 +22,5 @@ src_install() {
 	make prefix=${D}/usr \
 		mandir=${D}/usr/share/man \
 		install || die
-	dodoc AUTHORS ChangeLog COPYING* NEWS README 
+	dodoc AUTHORS ChangeLog COPYING* NEWS README
 }

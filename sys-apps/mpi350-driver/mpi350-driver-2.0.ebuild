@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/mpi350-driver/mpi350-driver-2.0.ebuild,v 1.4 2003/06/21 21:19:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mpi350-driver/mpi350-driver-2.0.ebuild,v 1.5 2003/09/07 02:58:37 msterret Exp $
 
 DESCRIPTION="Cisco's wireless drivers and utilities"
 
@@ -59,7 +59,7 @@ src_install() {
 	dodir ${MOD_DIR}/net
 
 	cp ${S}/driver/mpi350.o ${D}/${MOD_DIR}/net
-	
+
 
 	# Next we install the utilities. They're binaries, so we simply
 	# put them in the right place.
@@ -80,7 +80,7 @@ src_install() {
 	cp ${S}/ACU.PRFS ${D}/opt/cisco
 
 	cd ${S}
-	dodoc ethX.cfg readme.txt 
+	dodoc ethX.cfg readme.txt
 }
 pkg_postinst() {
 	einfo "The cisco utilities are placed in /opt/cisco/bin"

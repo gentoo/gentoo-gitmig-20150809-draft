@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/partimage/partimage-0.6.2.ebuild,v 1.7 2003/07/18 20:40:57 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/partimage/partimage-0.6.2.ebuild,v 1.8 2003/09/07 02:59:55 msterret Exp $
 
 inherit gnuconfig
 
@@ -13,12 +13,12 @@ KEYWORDS="x86 ~amd64"
 IUSE="ssl"
 
 RDEPEND="virtual/glibc
-    >=sys-libs/zlib-1.1.4
-    >=dev-libs/lzo-1.08
-    >=dev-libs/newt-0.50.35-r1
-    >=sys-libs/slang-1.4.5-r2
+	>=sys-libs/zlib-1.1.4
+	>=dev-libs/lzo-1.08
+	>=dev-libs/newt-0.50.35-r1
+	>=sys-libs/slang-1.4.5-r2
 	sys-apps/bzip2
-    ssl? ( >=dev-libs/openssl-0.9.6g )"
+	ssl? ( >=dev-libs/openssl-0.9.6g )"
 
 DEPEND="${RDEPEND} sys-devel/autoconf"
 
@@ -33,12 +33,12 @@ src_unpack() {
 }
 
 src_compile() {
-    # SSL is optional
+	# SSL is optional
 	local sslconf
 	use ssl || sslconf="--disable-ssl"
 	econf \
 		${sslconf} \
-		--infodir=/usr/share/doc/${PF} 
+		--infodir=/usr/share/doc/${PF}
 	cp Makefile Makefile.orig
 	sed -e "s/partimag\.root/root.root/g" Makefile.orig > Makefile
 	emake || die

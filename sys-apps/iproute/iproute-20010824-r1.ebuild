@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r1.ebuild,v 1.10 2003/06/21 21:19:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r1.ebuild,v 1.11 2003/09/07 02:42:24 msterret Exp $
 
 inherit eutils
 
@@ -35,9 +35,9 @@ src_unpack() {
 	# This allows us to always enable HTB3 without compile problems; however,
 	# other parts of the source tree are still dependent upon having a kernel
 	# source tree in /usr/src/linux.
-	
+
 	epatch ${WORKDIR}/iproute-debian-8-htb3.diff
-	
+
 	# why was this commented out? were the programs segfaulting/not working?
 	# they seem ok here when i compile with optimisations, so im reenabling
 	# this patch. if theres problems, will glady change back. ~woodchip
@@ -47,7 +47,7 @@ src_unpack() {
 	    -e "s:-Werror::g" Makefile.orig > Makefile
 
 	# this next thing is required to enable diffserv (ATM support doesn't compile right now)
-	
+
 	cp Config Config.orig
 	sed -e 's:DIFFSERV=n:DIFFSERV=y:g' \
 		-e 's:ATM=y:ATM=n:g' Config.orig > Config
@@ -64,7 +64,7 @@ src_install() {
 
 	#install Debian man pages
 	doman ${S}/debian/*.[1-9]
-	
+
 	docinto examples/diffserv ; dodoc examples/diffserv/*
 	docinto examples ; dodoc examples/*
 	dodir /etc/iproute2

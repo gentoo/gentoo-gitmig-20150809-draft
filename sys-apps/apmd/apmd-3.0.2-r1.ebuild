@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.0.2-r1.ebuild,v 1.10 2003/07/16 13:34:12 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.0.2-r1.ebuild,v 1.11 2003/09/07 02:55:19 msterret Exp $
 
 IUSE="X"
 
@@ -27,7 +27,7 @@ src_unpack() {
 		-e "s:\(MANDIR\=\${PREFIX}\)\(/man\):\1/share\2:" \
 		Makefile.orig > Makefile
 
-	if [ "`use X`" ] 
+	if [ "`use X`" ]
 	then
 		cp Makefile Makefile.orig
 		sed -e "/^EXES=/s/xapm//" \

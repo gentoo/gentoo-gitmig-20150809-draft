@@ -17,14 +17,14 @@ src_compile() {
 		--prefix=/ \
 		--mandir=/usr/share/man \
 		--infodir=/usr/share/info \
-		--sysconfdir=/etc 
+		--sysconfdir=/etc
 	make || die "compile of cpufreqd failed"
 }
 
 src_install() {
 	make DESTDIR=${D} install || die
 	dodoc README Authors TODO
-	
+
 	exeinto /etc/init.d
 	newexe ${S}/scripts/gentoo/cpufreqd cpufreqd
 }

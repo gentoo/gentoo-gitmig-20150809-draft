@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/lsof-4.64.ebuild,v 1.15 2003/07/16 11:32:57 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/lsof-4.64.ebuild,v 1.16 2003/09/07 02:56:37 msterret Exp $
 
 MY_P=${P/-/_}
 S=${WORKDIR}/${MY_P}/${MY_P}_src
@@ -29,11 +29,11 @@ src_compile() {
 	#Just piping in the results didn't seem to work.
 	echo -e "y\ny\ny\nn\ny\ny\n" > ${T}/junk
 	./Configure linux < ${T}/junk
-	
+
 	#simple Makefile hack to insert CFLAGS
 	cp Makefile Makefile.orig
 	sed -e "s/-DLINUXV/${CFLAGS} -DLINUXV/" Makefile.orig > Makefile
-	
+
 	make all || die
 }
 
