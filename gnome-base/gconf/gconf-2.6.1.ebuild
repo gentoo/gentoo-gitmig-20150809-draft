@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.5.90.ebuild,v 1.1 2004/03/19 16:12:46 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.6.1.ebuild,v 1.1 2004/04/20 23:10:23 foser Exp $
 
 inherit gnome2
 
@@ -23,8 +23,6 @@ RDEPEND=">=dev-libs/glib-2.0.1
 	>=dev-libs/libxml2-2
 	dev-libs/popt
 	>=x11-libs/gtk+-2"
-
-# FIXME : gtk dep only for tests (?)
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
