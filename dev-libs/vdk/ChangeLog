@@ -1,11 +1,12 @@
 # ChangeLog for dev-libs/vdk
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/ChangeLog,v 1.2 2002/12/17 19:19:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/ChangeLog,v 1.3 2003/01/15 19:14:58 vapier Exp $
 
 *vdk-2.0.2 (12 Aug 2002)
 
+  15 Jan 2002; Mike Frysinger <vapier@gentoo.org> :
+  Added a small vdk/Makefile.in patch to fix #13820.
+
   12 Aug 2002; Joe Tennies <rotund@fatnsoft.com> vdk-2.0.2.ebuild:
-	First release... based on bass@gentoo.org's original vdkbuilder
-	script that built the vdk library.
-
-
+  First release... based on bass@gentoo.org's original vdkbuilder
+  script that built the vdk library.
