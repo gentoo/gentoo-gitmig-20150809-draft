@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/dc-gui-0.74.ebuild,v 1.1 2003/06/06 22:37:29 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/dc-gui-0.74.ebuild,v 1.2 2003/06/25 19:21:48 mholzer Exp $
 
 IUSE="nls"
 
@@ -18,7 +18,7 @@ DEPEND="=dev-libs/glib-2*
 	=x11-libs/gtk+-2*
 	=gnome-base/libgnomeui-2*
 	>=sys-libs/db-3.2*
-	>=net-p2p/dctc-0.83.8"
+	>=net-p2p/dctc-0.85.1"
 RDEPEND="nls? ( sys-devel/gettext )"
 
 src_compile() {

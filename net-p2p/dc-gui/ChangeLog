@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/dc-gui
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/ChangeLog,v 1.15 2003/06/06 22:37:29 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dc-gui/ChangeLog,v 1.16 2003/06/25 19:21:48 mholzer Exp $
+
+  25 Jun 2003; Martin Holzer <mholzer@gentoo.org> dc-gui-0.74.ebuild:
+  Fixed DEPEND. Closes #23473.
 
 *dc-gui-0.74 (07 Jun 2003)
 
