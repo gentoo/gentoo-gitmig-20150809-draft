@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.8.20040322-r1.ebuild,v 1.2 2004/06/09 20:55:00 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.8.20040322-r1.ebuild,v 1.3 2004/06/09 21:50:48 lu_zero Exp $
 
 inherit eutils flag-o-matic
 
@@ -43,6 +43,7 @@ src_compile() {
 	# fixes bug #16281
 	use alpha && append-flags -fPIC
 	use amd64 && append-flags -fPIC
+	use ppc && append-flags -fPIC
 
 	local myconf
 	#myconf="${myconf} --disable-opts --enable-pp --enable-shared-pp"
