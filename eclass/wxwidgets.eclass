@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/wxwidgets.eclass,v 1.4 2004/11/13 02:50:53 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/wxwidgets.eclass,v 1.5 2005/01/11 00:02:00 pythonhead Exp $
 #
 # Author Rob Cakebread <pythonhead@gentoo.org>
 
@@ -53,7 +53,7 @@ set-wxconfig() {
 		wxconfig_prefix="/usr/lib/wx/config"
 		wxconfig_name="${1}-release-${WX_GTK_VER}"
 		wxconfig="${wxconfig_prefix}/${wxconfig_name}"
-		wxconfig_debug_name="${1}d-release-${WX_GTK_VER}"
+		wxconfig_debug_name="${1}-debug-${WX_GTK_VER}"
 		wxconfig_debug="${wxconfig_prefix}/${wxconfig_debug_name}"
 	else
 		# Default is 2.4:
