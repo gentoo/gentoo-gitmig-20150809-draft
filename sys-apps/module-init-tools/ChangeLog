@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/module-init-tools
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.32 2003/09/15 21:35:05 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.33 2003/09/17 21:07:10 azarah Exp $
+
+*module-init-tools-0.9.15_pre1 (17 Sep 2003)
+
+  17 Sep 2003; Martin Schlemmer <azarah@gentoo.org>
+  module-init-tools-0.9.15_pre1.ebuild,
+  files/module-init-tools-0.9.15-legacy-modext-support.patch:
+  New version.  Add support for legacy modules (.o). bug #28831.
 
 *module-init-tools-0.9.14 (15 Sep 2003)
 
