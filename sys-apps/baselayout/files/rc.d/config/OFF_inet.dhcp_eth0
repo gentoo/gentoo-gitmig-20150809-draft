@@ -1,0 +1,19 @@
+IFACE=eth0
+
+# Comment out the following line if you don't want to config a default gateway
+			 
+netup() {
+
+	/sbin/dhclient $IFACE
+
+	#enabling rp_filter causes wacky packets to be auto-dropped by the kernel
+	if [ -e /proc/sys/net/ipv4/conf/${IFACE}/rp_filter ]
+	then
+		echo 1 > /proc/sys/net/ipv4/conf/${IFACE}/rp_filter
+	fi
+}
+
+netdown() {
+	/sbin/ifconfig $IFACE down
+}
+
