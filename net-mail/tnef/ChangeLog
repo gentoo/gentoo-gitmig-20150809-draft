@@ -1,19 +1,20 @@
 # ChangeLog for net-mail/tnef
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/tnef/ChangeLog,v 1.5 2002/12/13 11:00:08 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/tnef/ChangeLog,v 1.6 2003/01/27 07:50:38 vapier Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+*tnef-1.1.4 (27 Jan 2003)
+
+  27 Jan 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump + FHS fix (/usr/man)
+
 *tnef-1.1.1 (26 May 2002)
 
   26 May 2002; Ben Lutgens <lamer@gentoo.org> ChangeLog :
-	
   Updated to the latest version.
 
 *tnef-0.15 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about
