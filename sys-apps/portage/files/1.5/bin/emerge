@@ -32,6 +32,10 @@ class depgraph:
 				self.digraph.addnode(mybigkey,myparent)
 			return 1
 		myroot,mykey=string.split(mybigkey)
+		if not self.db[myroot]["porttree"].exists_specific(mykey):
+			#might be blocked by package.mask
+			print "\n\n!!!",mykey,"not found (possibly blocked by package.mask)\n"
+			sys.exit(1)
 		myebuild=self.db[myroot]["porttree"].getname(mykey)
 		mydep={}
 		edepend=portage.doebuild(myebuild,"depend")
