@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.19 2002/12/09 22:26:26 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.20 2003/01/02 05:20:53 raker Exp $
+
+  01 Jan 2003; Nick Hadaway <raker@gentoo.org> ncurses-5.3-r1.ebuild :
+  Added --without-ada to build options as a newer version of ncurses and
+  a modified gcc are required for this support.  See bug #12288 and
+  #11204.
 
   10 Dec Martin Schlemmer <azarah@gentoo.org> ncurses-5.3-r1.ebuild :
   Mark as stable for x86.

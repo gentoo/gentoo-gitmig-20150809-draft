@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.3-r1.ebuild,v 1.6 2002/12/15 12:35:24 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.3-r1.ebuild,v 1.7 2003/01/02 05:20:53 raker Exp $
 
 IUSE=""
 
@@ -28,13 +28,14 @@ src_compile() {
 	# build in bootstrap.sh.
 	# <azarah@gentoo.org> (23 Oct 2002)
 	( use build || use bootstrap ) \
-		&& myconf="${myconf} --without-cxx --without-cxx-binding"
+		&& myconf="${myconf} --without-cxx --without-cxx-binding --without-ada"
 
 	econf \
 		--libdir=/lib \
 		--disable-termcap \
 		--with-shared \
 		--with-rcs-ids \
+		--without-ada \
 		${myconf} || die "configure failed"
 
 	# do not work with -j2 on P4 - <azarah@gentoo.org> (23 Oct 2002)
