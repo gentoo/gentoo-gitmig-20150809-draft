@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/activation
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed unde the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/activation/ChangeLog,v 1.1 2004/03/31 22:59:52 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/activation/ChangeLog,v 1.2 2004/04/19 19:45:28 robbat2 Exp $
+
+  19 Apr 2004; Robin Johnson,,604-339-5621,604-298-8414 <robbat2@gentoo.org>
+  activation-20040331.ebuild:
+  not parallel build safe
 
 *activation-20040331 (01 Apr 2004)
 
