@@ -1,10 +1,10 @@
 # ChangeLog for net-zope/zodb
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.1 2003/10/30 13:23:17 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zodb/ChangeLog,v 1.2 2003/10/30 13:24:37 lanius Exp $
 
 *zodb-3.2 (30 Oct 2003)
 
   30 Oct 2003; Heinrich Wendel <lanius@gentoo.org> metadata.xml,
   zodb-3.2.ebuild:
-  initial release, thx to Axxackall <axxackall@yahoo.com> #32033
+  initial release, thx to Thomas Eckert <eckert.thomas@gmx.net> #31968
 
