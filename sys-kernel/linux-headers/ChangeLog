@@ -1,10 +1,13 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.8 2002/12/20 16:55:00 alron Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.9 2003/01/19 17:05:13 tuxus Exp $
 
   20 Dec 2002; Dean Bailey <alron@gentoo.org> : added missing sparc64 to ebuild.
 
 *linux-headers-2.4.19-r1 (18 Dec 2002)
+
+  19 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
+  Added mips to keywords
 
   18 Dec 2002; Dean Bailey <alron@gentoo.org> : 
   Fixed the lack of sparc64 instances in the file which were accidently wiped during an earlier fix.
