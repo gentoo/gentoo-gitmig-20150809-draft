@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/libgsf
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/ChangeLog,v 1.46 2005/03/28 19:09:55 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgsf/ChangeLog,v 1.47 2005/04/06 18:05:24 corsair Exp $
+
+  06 Apr 2005; Markus Rothe <corsair@gentoo.org> libgsf-1.10.0.ebuild:
+  Stable on ppc64
 
   28 Mar 2005; Michael Hanselmann <hansmi@gentoo.org> libgsf-1.10.0.ebuild:
   Stable on ppc.

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-1.0.4.ebuild,v 1.5 2005/02/01 14:45:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-1.0.4.ebuild,v 1.6 2005/04/06 18:07:21 corsair Exp $
 
 inherit gnome2 eutils
 
@@ -10,7 +10,7 @@ LICENSE="GPL-2 LGPL-2"
 
 IUSE="odbc postgres mysql ldap firebird freetds sqlite mdb oci8 doc"
 SLOT="1"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~ia64 ~amd64 ~ppc64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~ia64 ~amd64 ppc64"
 
 RDEPEND=">=dev-libs/glib-2.0
 	>=dev-libs/libxml2-2.0

@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/libgda
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.54 2005/02/01 14:45:21 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/ChangeLog,v 1.55 2005/04/06 18:07:21 corsair Exp $
+
+  06 Apr 2005; Markus Rothe <corsair@gentoo.org> libgda-1.0.4.ebuild:
+  Stable on ppc64
 
   01 Feb 2005; Markus Rothe <corsair@gentoo.org> libgda-1.0.4.ebuild:
   Added ~ppc64 to KEYWORDS
