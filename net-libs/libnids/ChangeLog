@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/libnids
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.8 2003/08/21 04:12:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnids/ChangeLog,v 1.9 2003/11/04 18:14:17 solar Exp $
+
+*libnids-1.18 (04 Nov 2003)
+
+  04 Nov 2003; <solar@gentoo.org> libnids-1.18.ebuild:
+  version bump, security fix #32724
 
 *libnids-1.17_rc1 (21 Aug 2003)
 
