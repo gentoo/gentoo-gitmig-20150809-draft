@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.95.1.ebuild,v 1.11 2004/04/11 19:06:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.96.ebuild,v 1.1 2004/04/11 19:06:35 eradicator Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -11,13 +11,12 @@ RESTRICT="nomirror"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-
-# This should remain in ~arch because of bug #46672
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 ~mips"
 IUSE="gtk debug"
 
 RDEPEND=">=sys-libs/ncurses-5.2
 	gtk? ( =x11-libs/gtk+-1.2* )"
+
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )"
 
@@ -36,7 +35,7 @@ src_compile() {
 	[ "`gcc-fullversion`" == "3.3.2" ] && replace-flags -march=2.0 -march=1.0
 
 	local myconf=""
-	if [ "`use gtk`" ] ; then
+	if use gtk; then
 		myconf="${myconf} --enable-mp3x"
 	fi
 

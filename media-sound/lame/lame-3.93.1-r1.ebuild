@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.93.1-r1.ebuild,v 1.12 2004/02/24 06:45:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/lame-3.93.1-r1.ebuild,v 1.13 2004/04/11 19:06:35 eradicator Exp $
 
 inherit flag-o-matic gcc
 
@@ -18,12 +18,15 @@ RDEPEND=">=sys-libs/ncurses-5.2
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )"
 
+src_unpack() {
+	unpack ${A}
+
+	# fix gtk detection
+	sed -i -e "s:gtk12-config:gtk-config:" configure
+}
+
 # this release completely removed oggvorbis support as it was too outdated.
 src_compile() {
-	# fix gtk detection
-	cp configure configure.orig
-	sed -e "s:gtk12-config:gtk-config:" < configure.orig > configure
-
 	# take out -fomit-frame-pointer from CFLAGS if k6-2
 	is-flag "-march=k6-3" && filter-flags "-fomit-frame-pointer"
 	is-flag "-march=k6-2" && filter-flags "-fomit-frame-pointer"
@@ -32,9 +35,10 @@ src_compile() {
 	[ "`gcc-fullversion`" == "3.3.2" ] && replace-flags -march=2.0 -march=1.0
 
 	local myconf=""
-	if [ "`use gtk`" ] ; then
+	if use gtk; then
 		myconf="${myconf} --enable-mp3x"
 	fi
+
 	[ `use debug` ] \
 		&& myconf="${myconf} --enable-debug=yes" \
 		|| myconf="${myconf} --enable-debug=no"
