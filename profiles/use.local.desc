@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.419 2004/06/05 21:17:35 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.420 2004/06/06 14:30:31 zypher Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -242,6 +242,7 @@ media-video/mplayer:live - Enables live.com streaming media support
 media-video/mplayer:matroska - Use external libmatroska, rather then bundled version
 media-video/mplayer:v4l - Enables video4linux support
 media-video/mplayer:v4l2 - Enables video4linux2 support
+media-video/tcvp:ffmpeg - Enable ffmpeg support
 media-video/vlc:faad - Enables faad2 support
 media-video/vlc:matroska - Enables support for the matroska video format
 media-video/vlc:v4l - Enables video4linux support
