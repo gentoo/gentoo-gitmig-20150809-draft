@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.0.ebuild,v 1.1 2004/12/21 22:44:45 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-2.2.0.ebuild,v 1.2 2004/12/22 15:25:36 obz Exp $
 
 inherit flag-o-matic libtool eutils
 
@@ -8,7 +8,7 @@ DESCRIPTION="GNU Image Manipulation Program"
 HOMEPAGE="http://www.gimp.org/"
 LICENSE="GPL-2"
 
-P_HELP="gimp-help-2-0.6" #"gimp-help-${PV/\./-}"
+P_HELP="gimp-help-2-0.6" #gimp-help-2-{version}
 S_HELP="$WORKDIR/${P_HELP}"
 SRC_URI="mirror://gimp/v2.2/${P}.tar.bz2
 	doc? ( mirror://gimp/help/testing/${P_HELP}.tar.gz )"
@@ -23,12 +23,14 @@ IUSE="aalib altivec debug doc gimpprint jpeg mmx mng png python sse svg tiff wmf
 
 #	X? ( virtual/x11 )"
 RDEPEND="virtual/x11
-	>=dev-libs/glib-2.2
-	>=x11-libs/gtk+-2.2.2
-	>=x11-libs/pango-1.2.2
+	>=dev-libs/glib-2.4.5
+	>=x11-libs/gtk+-2.4.4
+	>=x11-libs/pango-1.4
 	>=media-libs/fontconfig-2.2
 	>=media-libs/libart_lgpl-2.3.8-r1
 	sys-libs/zlib
+	dev-libs/libxml2
+	dev-libs/libxslt
 
 	gimpprint? ( =media-gfx/gimp-print-4.2* )
 	doc? ( =gnome-extra/libgtkhtml-2* )
@@ -59,9 +61,8 @@ src_unpack() {
 	# Fix linking to older version of gimp if installed - this should
 	# void liquidx's hack, so it is removed.
 	epatch ${FILESDIR}/ltmain_sh-1.5.0-fix-relink.patch
-	# Fix missing logo for python support
-	bzcat ${FILESDIR}/pygimp-logo.png.bz2 > \
-	${S}/plug-ins/pygimp/pygimp-logo.png
+	# Install the missing pygimp logo
+	cp ${FILESDIR}/pygimp-logo.png ${S}/plug-ins/pygimp/
 
 }
 
@@ -128,12 +129,14 @@ src_install() {
 
 	make DESTDIR=${D} install || die
 
-	dodoc AUTHORS COPYING ChangeL* HACKING INSTALL \
-		MAINTAINERS NEWS PLUGIN_MAINTAINERS README* TODO*
+	dodoc AUTHORS ChangeLog* HACKING NEWS README*
 
 	if use doc; then
 		cd ${S_HELP}
 		make DESTDIR=${D} install || die
 	fi
+
+	# Create the gimp-remote link, see bug #36648
+	dosym gimp-remote-2.2 /usr/bin/gimp-remote
 
 }
