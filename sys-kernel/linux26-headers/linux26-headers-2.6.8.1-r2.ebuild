@@ -1,14 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/linux26-headers-2.6.8.1-r2.ebuild,v 1.1 2005/01/06 15:43:26 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/linux26-headers-2.6.8.1-r2.ebuild,v 1.2 2005/01/11 04:36:28 vapier Exp $
 
-# What's in this kernel?
+# What's in this kernel ?  ninja juice ! :D
 
 # INCLUDED:
 # 1) linux sources from kernel.org
 
 ETYPE="headers"
-inherit kernel eutils
+inherit kernel eutils toolchain-funcs
 
 OKV="${PV/_/-}"
 KV="${OKV}"
@@ -20,11 +20,10 @@ SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${OKV}.tar.bz2
 	mirror://gentoo/linux-2.6.8.1-sh-headers.patch.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~alpha amd64 arm hppa ia64 ~ppc ppc64 ~sparc sh x86"
+KEYWORDS="~alpha amd64 arm hppa ia64 ~ppc ppc64 ~s390 ~sparc sh x86"
 IUSE=""
 
-if [[ ${CTARGET} = ${CHOST} ]]
-then
+if [[ ${CTARGET} = ${CHOST} ]] ; then
 	DEPEND="!virtual/os-headers"
 	PROVIDE="virtual/kernel virtual/os-headers"
 	SLOT="0"
@@ -46,7 +45,7 @@ headers___fix() {
 pkg_setup() {
 	# Archs which have their own separate header packages, add a check here
 	# and redirect the user to them
-	case "${ARCH}" in
+	case $(tc-arch ${CTARGET}) in
 		mips)
 			eerror "These headers are not appropriate for your architecture."
 			eerror "Please use sys-kernel/mips-headers instead."
@@ -74,10 +73,15 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-arm-float.patch
 	epatch ${FILESDIR}/${P}-parisc-syscall.patch
 
-	# Fixes
-	headers___fix ${S}/include/asm-ia64/*
-	headers___fix ${S}/include/asm-ppc64/*
-	headers___fix ${S}/include/asm-ppc64/iSeries/*
+	# Fixes ... all the mv magic is to keep sed from dumping 
+	# ugly warnings about how it can't work on a directory.
+	cd "${S}"/include
+	mv asm-ia64/sn asm-ppc64/iSeries .
+	headers___fix asm-ia64/*
+	mv sn asm-ia64/
+	headers___fix asm-ppc64/*
+	mv iSeries asm-ppc64/
+	headers___fix asm-ppc64/iSeries/*
 }
 
 src_compile() {
@@ -86,24 +90,26 @@ src_compile() {
 	[ -f "${ROOT}"/usr/include/linux/autoconf.h ] \
 		|| touch include/linux/autoconf.h
 
+	# Kernel ARCH != portage ARCH
+	local KARCH=$(tc-arch-kernel ${CTARGET})
+
 	# When cross-compiling, we need to set the CROSS_COMPILE var properly
-	local extra_makeopts=
+	local xmakeopts=
 	if [[ ${CTARGET} != ${CHOST} ]] ; then
-		extra_makeopts="CROSS_COMPILE=${CTARGET}-"
+		xmakeopts="CROSS_COMPILE=${CTARGET}-"
 	elif type -p ${CHOST}-ar ; then
-		extra_makeopts="CROSS_COMPILE=${CHOST}-"
+		xmakeopts="CROSS_COMPILE=${CHOST}-"
 	fi
+	xmakeopts="${xmakeopts} ARCH=${KARCH}"
 
 	# if there arent any installed headers, then there also isnt an asm
 	# symlink in /usr/include/, and make defconfig will fail, so we have
 	# to force an include path with $S.
 	local HOSTCFLAGS="-Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -I${S}/include/"
 
-	set_arch_to_kernel
-	ln -sf ${S}/include/asm-${ARCH} ${S}/include/asm
-	make defconfig HOSTCFLAGS="${HOSTCFLAGS}" ${extra_makeopts} || die "defconfig failed"
-	make prepare HOSTCFLAGS="${HOSTCFLAGS}" ${extra_makeopts} || die "prepare failed"
-	set_arch_to_portage
+	ln -sf ${S}/include/asm-${KARCH} ${S}/include/asm
+	make defconfig HOSTCFLAGS="${HOSTCFLAGS}" ${xmakeopts} || die "defconfig failed"
+	make prepare HOSTCFLAGS="${HOSTCFLAGS}" ${xmakeopts} || die "prepare failed"
 }
 
 src_install() {

@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/linux26-headers
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.51 2005/01/11 02:57:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/ChangeLog,v 1.52 2005/01/11 04:36:28 vapier Exp $
+
+  10 Jan 2005; Mike Frysinger <vapier@gentoo.org>
+  linux26-headers-2.6.8.1-r2.ebuild:
+  Cooler cross-compile support. Now you just have to set CTARGET/CHOST and
+  THATS IT :D.
 
 *linux26-headers-2.6.8.1-r3 (10 Jan 2005)
 
