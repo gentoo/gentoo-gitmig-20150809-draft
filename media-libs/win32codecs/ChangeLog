@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/win32codecs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.5 2002/12/16 21:34:53 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/win32codecs/ChangeLog,v 1.6 2003/01/29 08:05:04 raker Exp $
+
+*win32codecs-0.90.1-r2 (29 Jan 2003)
+
+  29 Jan 2003; Nick Hadaway <raker@gentoo.org> win32codecs-0.90.1-r2.ebuild,
+  files/digest-win32codecs-0.90.1-r2 :
+  Now includes the extra Quicktime codecs plus WindowsMedia9 and
+  RealPlayer9 codec support.  x86 should be the only platform
+  utilizing these codecs, changed arch accordingly.
 
 *win32codecs-0.90.1-r1 (16 Dec 2002)
 
