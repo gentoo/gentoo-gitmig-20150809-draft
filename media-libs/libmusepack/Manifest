@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 eba2081c2a5183f2969064704c7923e9 ChangeLog 1101
 MD5 98811cb14956c6161c77fcf4f08ae9f4 libmusepack-1.0.2.ebuild 952
+MD5 5e711142593c4fd8511bab5735661d03 libmusepack-1.0.3.ebuild 565
 MD5 e8fc941f8ebe41167fc4df75c039b1d0 files/digest-libmusepack-1.0.2 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBkzOmArHZZzCEUG0RAjymAJ9avAwtMCxBNABhtKcLIBiDDEAMpACeOWiM
-TjO8Z7EYo5h8fZiyJQpxDy0=
-=+Nrg
------END PGP SIGNATURE-----
+MD5 51b8f6a366771c5e79ab355b15ba9b9c files/digest-libmusepack-1.0.3 70
