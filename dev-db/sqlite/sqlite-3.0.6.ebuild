@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.0.6.ebuild,v 1.2 2004/09/13 02:44:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/sqlite/sqlite-3.0.6.ebuild,v 1.3 2004/09/13 08:40:56 dholm Exp $
 
 IUSE="nls"
 
@@ -13,7 +13,7 @@ DEPEND="virtual/libc
 SLOT="3"
 LICENSE="as-is"
 # ~ppc ~sparc ~alpha ~mips ~hppa ~ppc64 ~amd64
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~x86 ~amd64 ~ppc"
 
 src_compile() {
 	# sqlite includes a doc directory making it impossible to generate docs, 
