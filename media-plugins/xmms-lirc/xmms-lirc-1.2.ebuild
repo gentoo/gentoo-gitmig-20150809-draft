@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-lirc/xmms-lirc-1.2.ebuild,v 1.1 2002/10/29 15:34:57 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-lirc/xmms-lirc-1.2.ebuild,v 1.2 2003/02/13 13:03:09 vapier Exp $
 
 MY_P=${P/xmms-lirc/lirc-xmms-plugin}
 

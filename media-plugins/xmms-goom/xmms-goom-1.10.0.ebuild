@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-goom/xmms-goom-1.10.0.ebuild,v 1.1 2002/12/02 08:07:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-goom/xmms-goom-1.10.0.ebuild,v 1.2 2003/02/13 13:02:23 vapier Exp $
 
 MY_P=${P/xmms-/}
 S=${WORKDIR}/${MY_P}
