@@ -22,7 +22,8 @@ DEPEND="nls? ( sys-devel/gettext )
 	>=gnome-base/control-center-1.4.0
 	>=gnome-libs/medusa-0.5.1
         >=gnome-libs/ammonite-1.0.2
-	>=gnome-libs/librsvg-1.0.0"
+	>=gnome-libs/librsvg-1.0.0
+	>=gnome-libs/eel-1.0"
 
 src_compile() {                           
   local myconf

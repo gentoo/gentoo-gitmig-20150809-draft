@@ -286,6 +286,7 @@ src_install() {
             then
   	        #install ALSA modules
  	        cd ${S}/extras/alsa-driver-${AV}
+		dodoc INSTALL FAQ
 	        dodir /lib/modules/${KV}/misc
 	        cp modules/*.o ${D}/lib/modules/${KV}/misc
 	
