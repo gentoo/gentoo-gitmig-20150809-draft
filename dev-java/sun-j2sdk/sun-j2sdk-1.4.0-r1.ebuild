@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Stefan Jones <cretin@gentoo.org>
 # Author: Stefan Jones <cretin@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.0-r1.ebuild,v 1.5 2002/11/09 19:52:54 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.0-r1.ebuild,v 1.6 2002/11/10 11:30:25 cretin Exp $
 
 # Based on http://tushar.lfsforum.org/javafromscratch.txt (LFS)
 # By Tushar Teredesai <Tush@Yahoo.Com>
@@ -39,7 +39,7 @@ RDEPEND="virtual/glibc
 	>=dev-java/java-config-0.1.3"
 DEPEND="${RDEPEND}
 	app-arch/unzip
-	virtual/jdk-1.4
+	>=virtual/jdk-1.4
 	>=x11-libs/lesstif-0.93.36
 	!x11-libs/openmotif"
 
