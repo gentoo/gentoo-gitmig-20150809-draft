@@ -1,6 +1,13 @@
 # ChangeLog for net-www/w3mmee
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3mmee/ChangeLog,v 1.2 2003/08/22 14:41:46 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3mmee/ChangeLog,v 1.3 2003/12/06 12:16:27 usata Exp $
+
+*w3mmee-0.3.2_p24-r2 (06 Dec 2003)
+
+  06 Dec 2003; Mamoru KOMACHI <usata@gentoo.org> metadata.xml,
+  w3mmee-0.3.2_p24-r1.ebuild, w3mmee-0.3.2_p24-r2.ebuild,
+  w3mmee-0.3.2_p24.ebuild, files/w3mmee-w3mman-gentoo.diff:
+  w3mmee-0.4.2-p24.19 was released.
 
 *w3mmee-0.3.2_p24-r1 (22 Aug 2003)
 
