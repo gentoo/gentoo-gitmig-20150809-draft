@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>net-p2p</herd>
+<maintainer>
+  <email>rizzo@gentoo.org</email>
+  <name>Don Seiler</name>
+  <description>seemant asked to put this back in since it was taken out after the Luke-Jr unpleasantness.</description>
+</maintainer>
+<!-- <longdescription>Long description of the package</longdescription> -->
+</pkgmetadata>
