@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/gucharmap-1.0.0.ebuild,v 1.9 2003/11/08 16:28:09 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gucharmap/gucharmap-1.0.0.ebuild,v 1.10 2003/11/09 21:50:58 obz Exp $
 
 inherit gnome2 eutils
 
@@ -26,12 +26,12 @@ DEPEND="${RDEPEND}
 G2CONF="${G2CONF} $(use_enable gnome) $(use_enable cjk unihan) --disable-gtk-immodules"
 
 pkg_postinst() {
-	einfo "Registering GKT+ input modules..."
+	einfo "Registering GTK+ input modules..."
 	${ROOT}/usr/bin/gtk-query-immodules-2.0 > /etc/gtk-2.0/gtk.immodules
 }
 
 pkg_postrm() {
-	einfo "Registering GKT+ input modules..."
+	einfo "Registering GTK+ input modules..."
 	${ROOT}/usr/bin/gtk-query-immodules-2.0 > /etc/gtk-2.0/gtk.immodules
 }
 
