@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xv
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.50 2005/03/03 19:57:43 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xv/ChangeLog,v 1.51 2005/03/14 01:45:03 hardave Exp $
+
+  13 Mar 2005; Hardave Riar <hardave@gentoo.org> xv-3.10a-r10.ebuild:
+  Stable on mips, bug #83686.
 
   03 Mar 2005; Bryan Østergaard <kloeri@gentoo.org> xv-3.10a-r10.ebuild:
   Stable on alpha, bug 83686.
