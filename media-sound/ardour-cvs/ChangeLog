@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/ardour-cvs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour-cvs/ChangeLog,v 1.8 2003/05/06 13:26:50 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour-cvs/ChangeLog,v 1.9 2003/05/09 10:59:30 jje Exp $
+
+  09 May 2003; jje <jje@gentoo.org> ardour-cvs-0.5-r1.ebuild,
+  ardour-cvs-0.5-r1.ebuild, ardour-cvs-0.5.ebuild, ardour-cvs-0.5.ebuild,
+  ardour-cvs-0.6.4.ebuild, ardour-cvs-0.6.ebuild, ardour-cvs-0.6.ebuild:
+  Bug fix to sample_ardour.rc. Removed old ebuilds.
+  
+  Submitted by Rob Holland.
 
 *ardour-cvs-0.6.4 (06 May 2003)
 
