@@ -1,4 +1,6 @@
 MD5 5881d2051bf2e28d18de2743c448dc79 pegasos-dev-sources-2.6.6.ebuild 1252
 MD5 a768f20366d412feaf748b4ac46b046e metadata.xml 350
-MD5 8de2c0f79f556600ffec87e8bcfe1f04 ChangeLog 399
+MD5 4642a590da8e92abfcf3404788e904c6 ChangeLog 574
+MD5 9a831b5dc04f3e4bfb512120399ec9ab pegasos-dev-sources-2.6.6-r1.ebuild 1254
 MD5 22015e010d6881a448cfea8cdd5a1f7c files/digest-pegasos-dev-sources-2.6.6 137
+MD5 0362f4716095d6394a832b7cf7d40186 files/digest-pegasos-dev-sources-2.6.6-r1 137
