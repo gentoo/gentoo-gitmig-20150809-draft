@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-imms/xmms-imms-0.9.9.ebuild,v 1.3 2004/03/26 21:59:31 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-imms/xmms-imms-0.9.9.ebuild,v 1.4 2004/03/31 17:49:58 eradicator Exp $
 
 MY_P=${P/xmms-/}
 
 DESCRIPTION="intelligent XMMS playlist plug-in that tracks your listening patterns and dynamically adapts to your taste"
 HOMEPAGE="http://www.luminal.org/phpwiki/index.php/IMMS"
 SRC_URI="mirror://sourceforge/imms/${MY_P}.tar.bz2"
+RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
