@@ -163,7 +163,6 @@
 
 # lostlogic@gentoo.org (09 Jul 2002)
 # Masked for testing md5 support
-<<<<<<< package.mask
 =net-misc/openssh-3.4_p1-r3
 
 # seemant@gentoo.org (09 Jul 2002)
@@ -181,9 +180,6 @@
 # sunflare@gentoo.org (08 Jul 2002)
 # Deleted; will remove this dependency once 0.99.2-r1 comes out of testing. 
 =app-admin/mon-0.99.2
-=======
-#=net-misc/openssh-3.4_p1-r3
->>>>>>> 1.998
 
 # sunflare@gentoo.org (08 Jul 2002)
 # Masking out the old zsnes, since its version numbering scheme is emulation
