@@ -10,4 +10,4 @@ MD5 b380d6440fe49096f7705d6f1adf01ee files/festival-1.4.3-asterisk.patch 3028
 MD5 70fe1c867e8782c7ff288056677fda0c files/festival-gcc3.3.diff 5257
 MD5 e2882c47fc5e3eab44b08f2ab31deedb files/digest-festival-1.4.2-r3 942
 MD5 f38f904b9dfc77c788a63f51ccd2abb7 files/digest-festival-1.4.3-r1 863
-MD5 d8274364ca1d2313136a0e2052e7c25a files/festival.rc 580
+MD5 2fdb355c64220e5bfb66df2de7faca00 files/festival.rc 627
