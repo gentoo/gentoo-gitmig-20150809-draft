@@ -1,20 +1,24 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/snes9x/snes9x-139-r1.ebuild,v 1.11 2003/02/13 07:16:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/snes9x/snes9x-139-r1.ebuild,v 1.12 2003/02/20 21:58:26 darkspecter Exp $
 
 IUSE="X svga 3dfx opengl"
 
 DESCRIPTION="Super Nintendo Entertainment System (SNES) emulator"
 HOMEPAGE="http://www.snes9x.com/"
 LICENSE="as-is"
-KEYWORDS="x86 -ppc"
+KEYWORDS="x86 ~ppc"
 SLOT="0"
 SRC_URI="http://www.snes9x.com/zips/s9xs${PV}.zip"
-DEPEND="dev-lang/nasm
+DEPEND="x86? (dev-lang/nasm)
 	X? ( virtual/x11 )
 	svga? ( media-libs/svgalib )
 	opengl? ( virtual/opengl )
 	3dfx? ( media-libs/glide-v3 )"
+RDEPEND= X? ( virtual/x11 )
+    svga? ( media-libs/svgalib )
+    opengl? ( virtual/opengl )
+    3dfx? ( media-libs/glide-v3 )"
 S="${WORKDIR}/release"
 
 pkg_setup() {
@@ -32,6 +36,9 @@ pkg_setup() {
 
 src_compile() {
 	patch -p1 < ${FILESDIR}/snes9x-gcc3.diff
+	if [ `use ppc` ]; then
+		patch -p1 < ${FILESDIR}/snes9x-139-r1-Makefile-ppc.diff
+	fi
 
 	#install our custom CXXFLAGS
 	mv Makefile.linux Makefile
