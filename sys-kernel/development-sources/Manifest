@@ -1,23 +1,15 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 63a42b858a6db60dc63371bb36e25660 development-sources-2.6.8.1.ebuild 557
 MD5 5caccd9193acfe5a3a07ea88861cb11b metadata.xml 660
 MD5 b8ac045ea1819268b444d272c5f2eda1 development-sources-2.6.11.ebuild 568
-MD5 4919020f12b6a1e3e6eca8ffc6b6e845 ChangeLog 31326
+MD5 a4b2e902b1f681b30dc3851785767409 ChangeLog 31535
 MD5 ae23074c9562e0b9b3f8ef62599770f6 development-sources-2.6.10-r1.ebuild 600
 MD5 d5d0435c1079243d61c187a29e263f57 development-sources-2.6.9.ebuild 649
 MD5 1d50ed5441a06c6b1122482ddd304999 development-sources-2.6.5.ebuild 1395
+MD5 5a702131c119619872aacc059f972b42 development-sources-2.6.11.2.ebuild 440
 MD5 414403f6046e06086e6d2fb0e2d5be60 files/digest-development-sources-2.6.9 135
 MD5 cd0a7533c43364e377348613c6d76bb7 files/development-sources-2.6.10-CAN-2004-1235.patch 9736
 MD5 18bed04a1b45de515096089cc10913ec files/digest-development-sources-2.6.8.1 68
 MD5 d941e03c24f3a4f29221f37ae4d95132 files/digest-development-sources-2.6.11 67
+MD5 765898bacfc99ff9ca725d0bb735b479 files/digest-development-sources-2.6.11.2 69
 MD5 78b4470aebd0088d0560ca3f88387b83 files/digest-development-sources-2.6.10-r1 67
 MD5 a09d4ddd7fe62bbf298879c6450cb6e7 files/digest-development-sources-2.6.5 208
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0-ecc0.1.6 (GNU/Linux)
-
-iD8DBQFCJcLsp5vW4rUFj5oRAkv0AJ0U1eW0KJjqz6w+ODmFU6omzqCIdACgpfsU
-nNQJePD/P4hrerJpaHCNpyU=
-=NSil
------END PGP SIGNATURE-----
