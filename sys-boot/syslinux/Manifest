@@ -1,18 +1,20 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 93eb2e823d64b6f469c9ef5d93a2c73d ChangeLog 3260
+MD5 62d2af0417d41279016cf94369cb3db0 ChangeLog 3380
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 53ae1668c8fc16cc1e0093f28b1511a2 syslinux-2.13.ebuild 963
 MD5 be91e91e8fbb5560f3cbd9adc6a38677 syslinux-2.11.ebuild 959
+MD5 49d73d05c1ccbf4262aa53905cbc0c29 syslinux-3.05.ebuild 960
 MD5 fad406869474fc3a7cfde4203eb896fe syslinux-1.76.ebuild 760
 MD5 26489361fe682baf353e4b7cef7bba16 files/digest-syslinux-1.76 65
 MD5 d44d8f9a65b91ec75463ccc8dd60cee3 files/digest-syslinux-2.13 66
+MD5 798848c65e6e488d942399422a4155c9 files/digest-syslinux-3.05 66
 MD5 437dcea1ca8e2c9469874b045a9e76cb files/digest-syslinux-2.11 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB4c1GroRuSHgZdywRAi6zAJ4x4P/c+nzOHChi9WVFdGskQorACACeOPnj
-T3ei3wLKTBAqxKduL3v4mY8=
-=WOef
+iD4DBQFB4c9SroRuSHgZdywRAgQRAJoDuyShWrAWpZNIsiJb7Qm4R/NTxACYn+sJ
+uGYQvYFu2fD9cZ+/zPOklg==
+=Mjqg
 -----END PGP SIGNATURE-----
