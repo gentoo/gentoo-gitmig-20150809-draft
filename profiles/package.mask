@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3774 2005/03/30 00:14:32 trapni Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3775 2005/03/30 13:23:00 suka Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Andreas Proschofsky <suka@gentoo.org> (30 Mar 2005)
+# Pre-Release, use on your own risk
+>=app-office/openoffice-bin-1.9.87
 
 # Jon Portnoy <avenj@gentoo.org> (29 Mar 2005)
 # 2.21 introduces more severe bugs than it fixes. See bug 87091.
