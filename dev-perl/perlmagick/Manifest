@@ -1,25 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 465a69930c5e9886450a13631bea4c29 perlmagick-6.1.3.2.ebuild 1000
-MD5 2401f7500ec1797cc0970d1ad62eade0 perlmagick-6.1.3.4.ebuild 1006
-MD5 35d5560f60eedb66855a24603b2e2ace perlmagick-6.0.7.1.ebuild 1016
+MD5 2466e5e6a39eb4f58ca119db83e04eff ChangeLog 5272
+MD5 392865d9b31c7f9bb4715ccb465db656 perlmagick-6.1.3.4.ebuild 1002
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 8080f6d67d57ec436801a769818a9140 perlmagick-6.0.8.1.ebuild 1029
+MD5 465a69930c5e9886450a13631bea4c29 perlmagick-6.1.3.2.ebuild 1000
 MD5 6967e0a25e3656d103a957e774c56fd0 perlmagick-6.1.6.0.ebuild 1009
 MD5 d107599ccab65973141c7c2a69406969 perlmagick-6.1.0.1.ebuild 1002
-MD5 d3afce205d6d00dea12defaca8b0a194 ChangeLog 5162
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 220c2dac3f8b381c42fdb5e92085bdd8 files/digest-perlmagick-6.0.7.1 73
-MD5 95b9bca1e2ef2b6fed9919fcc59b1462 files/digest-perlmagick-6.0.8.1 73
+MD5 35d5560f60eedb66855a24603b2e2ace perlmagick-6.0.7.1.ebuild 1016
 MD5 a4a32e0f76d7fe0b204a2d408fc52158 files/digest-perlmagick-6.1.0.1 73
-MD5 2dd9ba895922b7d6bb513572bb851254 files/digest-perlmagick-6.1.3.2 73
-MD5 88435dc2f0a4064ae49313f41419695d files/digest-perlmagick-6.1.3.4 73
-MD5 4dbe04f2c27a20911e1080d591674997 files/digest-perlmagick-6.1.6.0 73
 MD5 edbc2be86318f2676c55ce64e47ea2f6 files/perlpatch.diff 1598
+MD5 95b9bca1e2ef2b6fed9919fcc59b1462 files/digest-perlmagick-6.0.8.1 73
+MD5 220c2dac3f8b381c42fdb5e92085bdd8 files/digest-perlmagick-6.0.7.1 73
+MD5 2dd9ba895922b7d6bb513572bb851254 files/digest-perlmagick-6.1.3.2 73
+MD5 4dbe04f2c27a20911e1080d591674997 files/digest-perlmagick-6.1.6.0 73
+MD5 88435dc2f0a4064ae49313f41419695d files/digest-perlmagick-6.1.3.4 73
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBttAJZ/iYVBmujdURArekAKCJVhJFXS/IPNqi37d0lTPyMtRPCwCdETK6
-IDmo/bK6Rg764s1e7qUKMuM=
-=f6xT
+iD8DBQFBttkaugEuf3OQ0akRAiFQAJ95DD33U99QvB/miZGrSJ1rXotwfQCeM9qs
+cClGF78ORAjnoBWJDy01i78=
+=WGxo
 -----END PGP SIGNATURE-----
