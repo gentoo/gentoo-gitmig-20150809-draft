@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.6.ebuild,v 1.4 2004/10/07 02:40:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.6.ebuild,v 1.5 2004/10/12 19:27:48 eradicator Exp $
 
 IUSE="static jack"
 
@@ -67,6 +67,12 @@ src_install() {
 	fi
 }
 
-src_postinst() {
+pkg_postinst() {
 	preserve_old_lib_notify /usr/$(get_libdir)/libasound.so.1
+
+	einfo "If you are using an emu10k1 based sound card, you will need to"
+	einfo "recompile packages that link against alsa-lib due to some ABI"
+	einfo "changes between 1.0.5 and 1.0.6 unique to that hardware. See"
+	einfo "the following URL for more information:"
+	einfo "http://bugs.gentoo.org/show_bug.cgi?id=65347"
 }
