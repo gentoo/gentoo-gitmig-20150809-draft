@@ -1,8 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/docbook-sgml-utils-0.6.11-r2.ebuild,v 1.6 2002/12/15 10:44:11 bjb Exp $
-
-IUSE="tetex"
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-sgml-utils/docbook-sgml-utils-0.6.11-r2.ebuild,v 1.7 2002/12/18 15:17:24 vapier Exp $
 
 MY_PN=${PN/-sgml/}
 MY_P=${MY_PN}-${PV}
@@ -14,6 +12,7 @@ HOMEPAGE="http://sources.redhat.com/docbook-tools/"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc alpha"
+IUSE="tetex"
 
 DEPEND=">=sys-devel/perl-5
 	app-text/docbook-dsssl-stylesheets
@@ -27,17 +26,13 @@ DEPEND=">=sys-devel/perl-5
 	=app-text/docbook-sgml-dtd-4.1
 	tetex? ( app-text/jadetex )"
 
-
 src_compile() {
-
-	cd ${S}
 	patch -p1 < ${FILESDIR}/docbook-sgml-utils-frontend.patch || die
-	econf || die
+	econf
 	make || die
-
 }
 
-src_install () {
-	einstall htmldir=${D}/usr/share/doc/${PF}/html || die
+src_install() {
+	einstall htmldir=${D}/usr/share/doc/${PF}/html
 	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
 }
