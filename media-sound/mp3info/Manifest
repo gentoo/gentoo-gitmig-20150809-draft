@@ -1,5 +1,5 @@
-MD5 fe61769633ed5ff144fdc77c8bfabf3d mp3info-0.8.4-r1.ebuild 867
-MD5 f8774ad9f13f31390cffd8b371a6519f ChangeLog 1401
+MD5 2304808a321387d5f921267be592a29a ChangeLog 1503
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 82ecb20ed6f771f4e9550f6f1347171d mp3info-0.8.4-r1.ebuild 873
 MD5 ad2d1f86b64479bc8dd0b27b192d606f files/digest-mp3info-0.8.4-r1 61
 MD5 2be66b044256d5db41bb23da1d53b133 files/gcc.patch 825
