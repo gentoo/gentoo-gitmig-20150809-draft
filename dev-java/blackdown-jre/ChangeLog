@@ -1,8 +1,12 @@
 # ChangeLog for dev-java/blackdown-jre
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/ChangeLog,v 1.18 2003/02/18 19:28:15 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/ChangeLog,v 1.19 2003/04/14 08:34:10 cretin Exp $
 
 *blackdown-jre-1.4.1 (18 Feb 2003)
+
+  14 Apr 2003; Stefan Jones <gerk@gentoo.org> : blackdown-jre-1.4.1.ebuild,
+  Moved to stable, java will now work!
+
   18 Feb 2003; Stefan Jones <gerk@gentoo.org> : blackdown-jre-1.4.1.ebuild,
   New version for all ya java fans, now supports gcc3.2 for mozilla plugin.
 
