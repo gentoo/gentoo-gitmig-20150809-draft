@@ -1,7 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/skunkweb/skunkweb-3.4_beta5.ebuild,v 1.5 2004/06/25 01:50:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/skunkweb/skunkweb-3.4_beta5.ebuild,v 1.6 2004/07/29 01:35:53 liquidx Exp $
 
+inherit eutils
 
 DESCRIPTION="robust Python web application server"
 HOMEPAGE="http://skunkweb.sourceforge.net/"
@@ -18,31 +19,8 @@ DEPEND=">=dev-lang/python-2.2
 		!apache2? ( apache1? ( <=net-www/apache-2 ) )"
 
 pkg_setup() {
-	if ! groupmod skunkweb; then
-		groupadd skunkweb || die "problem adding group skunkweb"
-	fi
-	if ! id skunkweb; then
-		useradd -g skunkweb -s /bin/false -d /usr/share/skunkweb -c "SkunkWeb user" skunkweb \
-			|| die "problem adding user skunkweb"
-	fi
-}
-
-pkg_postinst() {
-	if [ -z "${INSTALLING}" ]; then
-		einfo "NOTICE!"
-		einfo "User and group 'skunkweb' have been added."
-	fi
-}
-
-pkg_postrm() {
-	if [ -z "${INSTALLING}" ] ; then
-		einfo ">>> removing skunkweb user"
-		userdel skunkweb || die "error removing skunk user"
-		einfo ">>> removing skunkweb group"
-		groupdel skunkweb || die "error removing skunkweb group"
-	else
-		einfo ">>> skunkweb user and group preserved"
-	fi
+	enewgroup skunkweb
+	enewuser skunkweb -1 /bin/false /usr/share/skunkweb skunkweb
 }
 
 src_compile() {

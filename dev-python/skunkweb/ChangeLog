@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/skunkweb
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/skunkweb/ChangeLog,v 1.5 2004/06/25 01:50:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/skunkweb/ChangeLog,v 1.6 2004/07/29 01:35:53 liquidx Exp $
+
+  28 Jul 2004; Alastair Tse <liquidx@gentoo.org> skunkweb-3.4_beta5.ebuild:
+  fix enewuser enewgroup issues (#58526)
 
   07 May 2004; Bryan Østergaard <kloeri@gentoo.org> skunkweb-3.4_beta5.ebuild:
   Fix IUSE.
