@@ -1,9 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/xc/xc-4.3.2.ebuild,v 1.2 2002/09/07 17:44:07 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/xc/xc-4.3.2.ebuild,v 1.3 2002/10/26 19:03:34 vapier Exp $
 
-DESCRIPTION="This is a sample skeleton ebuild file"
-HOMEPAGE="http://foo.bar.com"
+DESCRIPTION="unix dialout program"
+HOMEPAGE="http://www.ibiblio.org/pub/Linux/apps/serialcomm/dialout/"
 SRC_URI="http://www.ibiblio.org/pub/Linux/apps/serialcomm/dialout/${P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
