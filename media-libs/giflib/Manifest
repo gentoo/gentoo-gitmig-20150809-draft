@@ -1,3 +1,13 @@
-MD5 ba8a0ea7367b98133d3101fe79b40a3c giflib-4.1.0-r3.ebuild 1681
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 40dfb96348304885dbc56e3cc215b51c ChangeLog 1811
+MD5 596bc216dbf7f28873d87a62e2fbf832 giflib-4.1.0-r3.ebuild 1573
 MD5 93888297538e2f77defcfef93578b8db files/digest-giflib-4.1.0-r3 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFAvja4HTu7gpaalycRAs4aAJ9qOkhMrwnyYR1DjrVo6wh+gt7FIACglLO/
+mfjwf2ul940NsGCKmKhAPdc=
+=wMtO
+-----END PGP SIGNATURE-----
