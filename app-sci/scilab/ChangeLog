@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/scilab
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/ChangeLog,v 1.10 2003/10/12 17:53:36 george Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/ChangeLog,v 1.11 2004/03/22 13:25:16 phosphan Exp $
+
+*scilab-2.7-r3 (22 Mar 2004)
+
+  22 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> scilab-2.7-r3.ebuild:
+  Trying to fix bug #40225 by providing an X server during build.
 
   11 Oct 2003; George Shapovalov <geore@gentoo.org> scilab-2.7-r2.ebuild :
   added few more dependensies for gtk interface
