@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.5 2002/04/19 20:54:29 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.6 2002/04/23 02:20:28 seemant Exp $
+
+*libsdl-1.2.4-r1 (22 Apr 2002)
+
+  22 Apr 2002; Seemant Kulleen <seemant@gentoo.org> libsdl-1.2.4-r2.ebuild :
+
+  naz in #gentoo pointed out that since kde3 is the default kde, arts 
+  dependency can now be on kde-base/arts instead of kdelibs, which reduces
+  code bloat immensely.
 
 *libsdl-1.2.4-r1 (19 Apr 2002)
 
