@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.5328-r1.ebuild,v 1.7 2004/07/01 08:41:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-glx/nvidia-glx-1.0.5328-r1.ebuild,v 1.8 2004/07/14 22:09:53 agriffis Exp $
 
 inherit eutils
 
@@ -15,6 +15,7 @@ SRC_URI="http://download.nvidia.com/XFree86/Linux-x86/${NV_V}/${NV_PACKAGE}-${PK
 LICENSE="NVIDIA"
 SLOT="0"
 KEYWORDS="-* ~x86"
+IUSE=""
 RESTRICT="nostrip"
 
 # We need xfree-4.2.0-r9 to support the dynamic libGL* stuff
@@ -70,7 +71,7 @@ src_install() {
 	exeinto /usr/X11R6/lib
 	doexe usr/X11R6/lib/libXvMCNVIDIA.so.${PV}
 
-	# Closing bug #37517 
+	# Closing bug #37517
 	rm -f usr/include/GL/glext.h
 
 	# Includes
