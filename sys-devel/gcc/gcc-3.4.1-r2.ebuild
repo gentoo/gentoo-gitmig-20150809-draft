@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright (C) 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r2.ebuild,v 1.4 2004/08/11 18:18:46 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r2.ebuild,v 1.5 2004/08/11 19:54:40 iluxa Exp $
 
 IUSE="static nls bootstrap build multilib gcj gtk f77 objc hardened uclibc n32 n64"
 
@@ -42,8 +42,9 @@ RDEPEND="virtual/libc
 	>=sys-apps/texinfo-4.2-r4
 	!build? ( >=sys-libs/ncurses-5.2-r2 )"
 
-PDEPEND="sys-devel/gcc-config
-	sys-libs/libstdc++-v3"
+PDEPEND="sys-devel/gcc-config"
+[ "${ABI}" != "n32" ] && [ "${ABI}" != "n64" ] && PDEPEND="${PDEPEND}
+	!n32? ( !n64? ( sys-libs/libstdc++-v3 ) )"
 
 
 # <<--------------------SRC_URI variables-------------------->>
@@ -498,6 +499,20 @@ src_unpack() {
 	# misc patches that havent made it into a patch tarball yet
 	epatch ${FILESDIR}/3.4.0/gcc34-reiser4-fix.patch
 
+	# MIPS is screwed screwed thing - but it's cool!
+	# I had to add ABI variable, because during bootstrap
+	# USE flags get stripped. This doesn't make gcc happy.
+	# I'll take care of multilib when I actually decide to make it work.
+	# (That implied somebody has to add appropriate support to portage
+	# first).
+	if ! use multilib; then
+	    if [ "${ABI}" = "n32" ]; then
+		epatch ${FILESDIR}/3.4.1/gcc-3.4.1-mips-n32only.patch
+	    elif [ "${ABI}" = n64 ]; then
+		epatch ${FILESDIR}/3.4.1/gcc-3.4.1-mips-n64only.patch
+	    fi
+	fi
+
 	if use amd64 && use multilib ; then
 		# this should hack around the GCC_NO_EXECUTABLES bug
 		epatch ${FILESDIR}/3.4.1/gcc-3.4.1-glibc-is-native.patch
@@ -598,8 +613,8 @@ src_compile() {
 	case "${CCHOST}" in
 	    mips*)
 		use multilib && myconf="${myconf} --with-abi=32"
-		use n32 && myconf="${myconf} --with-abi=n32"
-		use n64 && myconf="${myconf} --with-abi=n64"
+		[ "${ABI}" = n32 ] && myconf="${myconf} --with-abi=n32"
+		[ "${ABI}" = n64 ] && myconf="${myconf} --with-abi=n64"
 	    ;;
 	esac
 
