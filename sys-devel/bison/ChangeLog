@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/bison
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.31 2004/07/19 15:53:22 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/ChangeLog,v 1.32 2004/10/15 02:00:28 vapier Exp $
+
+  14 Oct 2004; Mike Frysinger <vapier@gentoo.org> bison-1.875.ebuild:
+  Dont install bison as yacc, but if yacc doesnt exist, create a symlink
+  #49331 by Bruno Redondi.
 
   19 Jul 2004; <solar@gentoo.org> bison-1.875.ebuild:
   updated bison to use gnuconfig.eclass. Needed for uclibc and maybe others.

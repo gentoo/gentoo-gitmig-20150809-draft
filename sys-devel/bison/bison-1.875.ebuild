@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.875.ebuild,v 1.24 2004/09/25 07:43:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bison/bison-1.875.ebuild,v 1.25 2004/10/15 02:00:28 vapier Exp $
 
 inherit gcc flag-o-matic eutils gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/bison/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 s390 sparc x86"
 IUSE="nls static uclibc"
 
 DEPEND="sys-devel/m4
@@ -41,13 +41,9 @@ src_compile() {
 		replace-cpu-flags k6 k6-1 k6-2 i586
 	fi
 
-	econf `use_enable nls` || die
-
-	if use static; then
-		emake LDFLAGS="-static" || die
-	else
-		emake || die
-	fi
+	econf $(use_enable nls) || die
+	use static && append-ldflags -static
+	emake || die
 }
 
 src_install() {
@@ -58,9 +54,7 @@ src_install() {
 		install || die
 
 	# This one is installed by dev-util/yacc
-	if ! use uclibc; then
-		mv ${D}/usr/bin/yacc ${D}/usr/bin/yacc.bison || die
-	fi
+	mv ${D}/usr/bin/yacc ${D}/usr/bin/yacc.bison || die
 
 	# We do not need this.
 	rm -f ${D}/usr/lib/liby.a
@@ -68,4 +62,10 @@ src_install() {
 	dodoc AUTHORS NEWS ChangeLog README REFERENCES OChangeLog
 	docinto txt
 	dodoc doc/FAQ
+}
+
+pkg_postinst() {
+	if [ ! -e "${ROOT}/usr/bin/yacc" ] ; then
+		ln -s yacc.bison /usr/bin/yacc
+	fi
 }
