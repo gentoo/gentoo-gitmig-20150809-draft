@@ -1,6 +1,11 @@
 # ChangeLog for net-dialup/speedtouch
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/ChangeLog,v 1.8 2003/08/08 16:20:18 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/speedtouch/ChangeLog,v 1.9 2003/08/11 22:42:27 lu_zero Exp $
+
+*speedtouch-1.2_beta2 (12 Aug 2003)
+
+  12 Aug 2003; Luca Barbato <lu_zero@gentoo.org> speedtouch-1.2_beta2.ebuild:
+  Version bump
 
   08 Aug 2003; <zhen@gentoo.org> :
   1.2_beta1 did not compile due to $S not being set to ${WORKDIR}/${MY_P}. So I
