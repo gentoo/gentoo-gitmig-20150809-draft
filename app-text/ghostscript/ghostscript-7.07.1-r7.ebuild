@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r7.ebuild,v 1.8 2004/10/10 02:58:59 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r7.ebuild,v 1.9 2004/10/10 16:30:40 usata Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -41,7 +41,7 @@ src_unpack() {
 	cd ${S}
 
 	if use cjk ; then
-		epatch ${FILESDIR}/gs7.05.6-cjk.diff.bz2
+		epatch ${FILESDIR}/gs7.07.1-cjk.diff.bz2
 		epatch ${FILESDIR}/gs7.05.6-kochi-substitute.patch
 	fi
 
@@ -78,6 +78,10 @@ src_unpack() {
 src_compile() {
 	local myconf
 	myconf="--with-ijs --with-omni --without-gimp-print"
+
+	# bug #56998, only compiled-in fontpath is searched when running 
+	# gs -DPARANOIDSAFER out.ps
+	myconf="${myconf} --with-fontconfig --with-fontpath=/usr/share/fonts:/usr/share/fonts/ttf/zh_TW:/usr/share/fonts/ttf/zh_CN:/usr/share/fonts/arphicfonts:/usr/share/fonts/ttf/korean/baekmuk:/usr/share/fonts/baekmuk-fonts:/usr/X11R6/lib/X11/fonts/truetype:/usr/share/fonts/kochi-substitute"
 
 	use X && myconf="${myconf} --with-x" \
 		|| myconf="${myconf} --without-x"

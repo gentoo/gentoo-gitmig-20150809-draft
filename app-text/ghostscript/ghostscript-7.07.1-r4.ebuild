@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r4.ebuild,v 1.5 2004/10/05 06:43:50 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.07.1-r4.ebuild,v 1.6 2004/10/10 16:30:40 usata Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -21,9 +21,9 @@ RDEPEND="virtual/libc
 	>=media-libs/libpng-1.2.1
 	>=sys-libs/zlib-1.1.4
 	X? ( virtual/x11 )
-	cjk? ( <=media-fonts/arphicfonts-0.1-r1
-		<=media-fonts/kochi-substitute-20030809-r2
-		<=media-fonts/baekmuk-fonts-2.1-r1 )
+	cjk? ( media-fonts/arphicfonts
+		media-fonts/kochi-substitute
+		media-fonts/baekmuk-fonts )
 	cups? ( net-print/cups )
 	!virtual/ghostscript
 	truetype? ( media-libs/fontconfig )"
@@ -42,7 +42,7 @@ src_unpack() {
 	cd ${S}
 
 	if use cjk ; then
-		epatch ${FILESDIR}/gs7.05.6-cjk.diff.bz2
+		epatch ${FILESDIR}/gs${PV}-cjk.diff.bz2
 		epatch ${FILESDIR}/gs7.05.6-kochi-substitute.patch
 	fi
 
@@ -75,6 +75,12 @@ src_unpack() {
 src_compile() {
 	local myconf
 	myconf="--with-ijs --with-omni --without-gimp-print"
+
+	if use truetype ; then
+		# bug #56998, only compiled-in fontpath is searched when running 
+		# gs -DPARANOIDSAFER out.ps
+		myconf="${myconf} --with-fontconfig --with-fontpath=/usr/share/fonts:/usr/share/fonts/ttf/zh_TW:/usr/share/fonts/ttf/zh_CN:/usr/share/fonts/arphicfonts:/usr/share/fonts/ttf/korean/baekmuk:/usr/share/fonts/baekmuk-fonts:/usr/X11R6/lib/X11/fonts/truetype:/usr/share/fonts/kochi-substitute"
+	fi
 
 	use X && myconf="${myconf} --with-x" \
 		|| myconf="${myconf} --without-x"
