@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.871 2005/01/15 21:10:51 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.872 2005/01/17 15:29:15 danarmak Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -315,6 +315,7 @@ kde-base/kdenetwork:wifi - Enable wireless network functions in kde
 kde-base/kdenetwork-meta:wifi - Enable wireless network functions in kde
 kde-base/kdepim:gnokii - Enable address synchronization with mobile phones with gnokii
 kde-base/krdc:rdesktop - Enable remote desktop functionality
+kde-base/ksysguard:lm_sensors - Adds linux lm_sensors (hardward sensors) support
 kde-base/mpeglib:cdparanoia - Enables support for audiocd browsing and ripping
 mail-client/evolution:nntp - Enable evolution nntp (news) functionality
 mail-client/mail-notification:gmail - Enable Gmail mailbox checking
