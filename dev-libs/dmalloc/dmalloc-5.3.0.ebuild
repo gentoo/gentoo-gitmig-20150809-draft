@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/dmalloc-5.3.0.ebuild,v 1.6 2004/09/12 23:57:31 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dmalloc/dmalloc-5.3.0.ebuild,v 1.7 2004/10/05 02:45:39 pvdabeel Exp $
 
 inherit debug eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tgz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~ia64 ~ppc ~sparc ~x86 ~alpha"
+KEYWORDS="~ia64 ppc ~sparc ~x86 ~alpha"
 IUSE=""
 
 DEPEND="virtual/libc"

@@ -1,6 +1,6 @@
 MD5 2848547365c61c7f2a931e37a60f77b9 ChangeLog 1773
 MD5 087e81b198fc6058ada170e3f905d7b6 dmalloc-4.8.2-r1.ebuild 766
-MD5 fba1b7c6b7b5e7867d4c668f4671fec3 dmalloc-5.3.0.ebuild 862
+MD5 768b4d5ecea3cc1e8a8f5728f8b3a81e dmalloc-5.3.0.ebuild 863
 MD5 1399bcd56ae8738ff7d702f73cf37ae4 metadata.xml 308
 MD5 005387d8e427b7c5704d67259d9e32e1 files/digest-dmalloc-4.8.2-r1 62
 MD5 d7d2c9ed36553b70e9fc9ffae863ff70 files/digest-dmalloc-5.3.0 62
