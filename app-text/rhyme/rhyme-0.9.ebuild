@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rhyme/rhyme-0.9.ebuild,v 1.3 2004/03/24 23:25:04 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rhyme/rhyme-0.9.ebuild,v 1.4 2004/04/17 15:11:24 taviso Exp $
 
 inherit ccc
 
@@ -19,8 +19,6 @@ DEPEND="ncurses? ( >=sys-libs/ncurses-5.3 )
 	!ncurses? ( >=sys-libs/libtermcap-compat-1.2.3 )
 	>=sys-libs/readline-4.3
 	>=sys-libs/gdbm-1.8.0"
-
-S=${WORKDIR}/${P}
 
 src_compile() {
 	# gcc is hardcoded, switch to user specified compiler
