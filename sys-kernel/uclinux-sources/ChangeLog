@@ -1,7 +1,8 @@
 # ChangeLog for sys-kernel/uclinux-sources
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/ChangeLog,v 1.1 2004/03/07 04:52:48 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/ChangeLog,v 1.2 2004/03/09 12:20:46 aliz Exp $
 
+*uclinux-sources-2.6.3_p0 (07 Mar 2004)
 *uclinux-sources-2.4.24_p0 (07 Mar 2004)
 
   07 Mar 2004; Daniel Black <dragonheart@gentoo.org>
