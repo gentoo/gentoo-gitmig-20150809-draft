@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-20040124.ebuild,v 1.2 2004/01/25 15:10:44 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-svn/uim-svn-20040124.ebuild,v 1.3 2004/01/28 09:44:54 hattya Exp $
 
 inherit subversion
 
@@ -23,7 +23,8 @@ DEPEND="${RDEPEND}
 	dev-perl/XML-Parser
 	>=sys-apps/sed-4
 	nls? ( sys-devel/gettext )"
-RDEPEND="gtk? ( >=x11-libs/gtk+-2 )"
+RDEPEND="gtk? ( >=x11-libs/gtk+-2 )
+	!app-i18n/uim"
 
 # for debugging use
 use debug && RESTRICT="nostrip"
