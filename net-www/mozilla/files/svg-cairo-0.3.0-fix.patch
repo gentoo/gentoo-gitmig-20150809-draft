@@ -1,0 +1,22 @@
+diff -aur mozilla-orig/layout/svg/renderer/src/cairo/nsSVGCairoCanvas.cpp mozilla/layout/svg/renderer/src/cairo/nsSVGCairoCanvas.cpp
+--- mozilla-orig/layout/svg/renderer/src/cairo/nsSVGCairoCanvas.cpp	2004-02-10 15:18:09.000000000 -0500
++++ mozilla/layout/svg/renderer/src/cairo/nsSVGCairoCanvas.cpp	2005-02-23 20:25:32.240459288 -0500
+@@ -50,6 +50,7 @@
+ #include "nsRenderingContextGTK.h"
+ #include <gdk/gdkx.h>
+ #include <cairo.h>
++#include <cairo-xlib.h>
+ 
+ /**
+  * \addtogroup cairo_renderer Cairo Rendering Engine
+diff -aur mozilla-orig/layout/svg/renderer/src/cairo/nsSVGCairoGlyphMetrics.cpp mozilla/layout/svg/renderer/src/cairo/nsSVGCairoGlyphMetrics.cpp
+--- mozilla-orig/layout/svg/renderer/src/cairo/nsSVGCairoGlyphMetrics.cpp	2004-03-16 16:40:07.000000000 -0500
++++ mozilla/layout/svg/renderer/src/cairo/nsSVGCairoGlyphMetrics.cpp	2005-02-23 20:25:09.538910448 -0500
+@@ -51,6 +51,7 @@
+ #include "nsSVGTypeCIDs.h"
+ #include "nsIComponentManager.h"
+ #include <cairo.h>
++#include <stdlib.h>
+ 
+ /**
+  * \addtogroup gdiplus_renderer Cairo Rendering Engine

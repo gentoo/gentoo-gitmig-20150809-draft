@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7.5.ebuild,v 1.10 2005/01/24 19:41:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7.5.ebuild,v 1.11 2005/02/27 09:09:59 brad Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic gcc eutils nsplugins mozilla-launcher mozconfig makeedit
@@ -70,6 +70,11 @@ src_unpack() {
 	# freetype; this enables freetype-2.1.8+ compat.
 	# https://bugzilla.mozilla.org/show_bug.cgi?id=234035#c65
 	epatch ${FILESDIR}/mozilla-1.7.3-4ft2.patch
+
+	# Patch for newer versions of cairo (#80301) 
+	if has_version '>=x11-libs/cairo-0.3.0'; then
+		epatch ${FILESDIR}/svg-cairo-0.3.0-fix.patch
+	fi
 
 	WANT_AUTOCONF=2.1 autoconf || die "WANT_AUTOCONF failed"
 
