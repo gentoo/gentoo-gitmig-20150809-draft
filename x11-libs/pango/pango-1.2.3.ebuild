@@ -1,24 +1,23 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.2.3.ebuild,v 1.3 2003/07/19 23:36:01 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/pango/pango-1.2.3.ebuild,v 1.4 2003/08/03 04:55:23 vapier Exp $
 
 inherit gnome2 eutils
 
-IUSE="doc"
+DESCRIPTION="Text rendering and Layout library"
+HOMEPAGE="http://www.pango.org/"
+SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.2/${P}.tar.bz2"
+
+LICENSE="LGPL-2.1"
 SLOT="1"
 KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa ~amd64"
-
-DESCRIPTION="Text rendering and Layout library"
-SRC_URI="ftp://ftp.gtk.org/pub/gtk/v2.2/${P}.tar.bz2"
-HOMEPAGE="http://www.pango.org/"
-LICENSE="LGPL-2.1"
+IUSE="doc"
 
 RDEPEND="virtual/x11
 	virtual/xft
 	>=dev-libs/glib-2.1.3
 	>=media-libs/fontconfig-2
 	>=media-libs/freetype-2.1.2-r2"
-	
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	doc? ( >=dev-util/gtk-doc-0.10 )"
