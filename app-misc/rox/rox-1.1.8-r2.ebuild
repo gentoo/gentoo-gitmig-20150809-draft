@@ -1,4 +1,4 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Bart Verwilst <verwilst@gentoo.org>
 # /home/cvsroot/gentoo-x86/app-misc/rox/rox-1.1.8.ebuild $
