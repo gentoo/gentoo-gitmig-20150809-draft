@@ -569,7 +569,8 @@ x11-libs/qt-embedded
 
 # <leonardop@gentoo.org> (19 Aug 2002)
 # Masked for, guess what... testing
-=dev-util/guile-1.4.1
+# work fine here on a few boxen.  GNUCash test fine as well.
+#=dev-util/guile-1.4.1
 
 # <bass@gentoo.org> (16 Aug 2002)
 # test it please
