@@ -1,0 +1,8 @@
+# ChangeLog for net-www/horde-mnemo
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-mnemo/ChangeLog,v 1.1 2004/01/19 07:09:17 vapier Exp $
+
+*horde-imp-1.1 (19 Jan 2004)
+
+  19 Jan 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial ebuild made by me.
