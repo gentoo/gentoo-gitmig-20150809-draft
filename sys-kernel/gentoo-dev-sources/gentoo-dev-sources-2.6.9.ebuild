@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.9.ebuild,v 1.3 2004/10/22 14:41:21 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.9.ebuild,v 1.4 2005/01/02 00:22:00 dsd Exp $
 
 ETYPE="sources"
 inherit kernel-2

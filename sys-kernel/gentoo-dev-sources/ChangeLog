@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.160 2004/12/28 09:50:02 corsair Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.161 2005/01/02 00:22:00 dsd Exp $
+
+*gentoo-dev-sources-2.6.10-r2 (02 Jan 2005)
+
+  02 Jan 2005; Daniel Drake <dsd@gentoo.org>
+  +gentoo-dev-sources-2.6.10-r2.ebuild:
+  Fix SPARC Kconfig. Add capabilities module security fix. Fix dm-multipath
+  compilation. Add ICH7 support. Fix running of kylix binaries (e.g. teamspeak)
 
   28 Dec 2004; Markus Rothe <corsair@gentoo.org>
   gentoo-dev-sources-2.6.10-r1.ebuild:
