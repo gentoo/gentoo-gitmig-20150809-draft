@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.32 2003/12/21 06:50:15 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.33 2003/12/31 16:51:35 vapier Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -113,9 +113,7 @@ filter-flags() {
 append-flags() {
 	CFLAGS="${CFLAGS} $@"
 	CXXFLAGS="${CXXFLAGS} $@"
-	for x in $@; do
-		[ "${x}" = "-fno-stack-protector" -o "${x}" = "-fno-stack-protector-all" ] && fstack-flags
-	done
+	[ "`is-flag -fno-stack-protector`" -o "`is-flag -fno-stack-protector-all`" ] && fstack-flags
 	return 0
 }
 
