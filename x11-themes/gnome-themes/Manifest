@@ -6,9 +6,11 @@ MD5 4dbf83906c9dcf267b637f85a7d6e6ca gnome-themes-0.3.ebuild 554
 MD5 e672f7662d9adeb08b483e4b575fd66f gnome-themes-2.2.2.ebuild 1069
 MD5 fe57516cc14f2a9c01a9fa9c802f0017 ChangeLog 2364
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 aacb63f465b900be53c3c097adc438f1 gnome-themes-2.4.0.ebuild 760
 MD5 72bc1748d57dc94b06dfc5ea161b14bd files/digest-gnome-themes-2.2.1 72
 MD5 97769356747d4e13bc1ab80682fd9326 files/digest-gnome-themes-2.2.2 72
 MD5 327aaf5c1b54806ad8b2f270dfe4d863 files/digest-gnome-themes-2.3.4 72
+MD5 b237b2cea04972f1f32619728e79805d files/digest-gnome-themes-2.4.0 72
 MD5 6744ae5beb7d833f65ce9264800c8085 files/digest-gnome-themes-0.3 70
 MD5 e49a55d1b7e0eff886352d2dc9058e97 files/digest-gnome-themes-2.2 70
 MD5 97769356747d4e13bc1ab80682fd9326 files/digest-gnome-themes-2.2.2-r1 72
