@@ -1,0 +1,10 @@
+# ChangeLog for media-libs/libdts
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdts/ChangeLog,v 1.1 2004/03/03 03:59:00 eradicator Exp $
+
+*libdts-0.0.2 (02 Mar 2004)
+
+  02 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> :
+  DTS Decoding Library based off a52dec. Ebuild provided by Derk-Jan Hartman
+  <thedj@users.sourceforge.net> in bug #43366.
+
