@@ -1,6 +1,12 @@
 # ChangeLog for sys-kernel/gaming-sources
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gaming-sources/ChangeLog,v 1.9 2003/10/28 00:08:50 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gaming-sources/ChangeLog,v 1.10 2003/10/28 21:02:25 plasmaroo Exp $
+
+*gaming-sources-2.4.20-r6 (28 Oct 2003)
+
+  28 Oct 2003; <plasmaroo@gentoo.org> gaming-sources-2.4.20-r6.ebuild,
+  files/gaming-sources-2.4.20-gcc33.patch:
+  Added the GCC 3.3 patches, thus a version bump.
 
 gaming-sources-2.4.20-r5 (11 June 2003)
 
