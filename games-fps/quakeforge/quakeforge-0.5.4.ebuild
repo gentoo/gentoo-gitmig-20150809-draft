@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.4.ebuild,v 1.7 2004/02/04 00:26:22 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quakeforge/quakeforge-0.5.4.ebuild,v 1.8 2004/02/20 06:35:23 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -14,7 +14,7 @@ KEYWORDS="x86 amd64"
 IUSE="debug 3dfx fbcon opengl sdl svga X ncurses oggvorbis zlib ipv6 xv dga xmms alsa oss"
 RESTRICT="nouserpriv"
 
-RDEPEND="3dfx? ( media-libs/glide-v3 )
+RDEPEND="!amd64? ( 3dfx? ( media-libs/glide-v3 ) )
 	opengl? ( virtual/opengl )
 	sdl? ( media-libs/libsdl )
 	svga? ( media-libs/svgalib )
