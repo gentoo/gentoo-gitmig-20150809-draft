@@ -1,6 +1,10 @@
 # ChangeLog for dev-libs/fftw
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/ChangeLog,v 1.9 2003/03/25 08:17:09 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/ChangeLog,v 1.10 2003/05/07 22:47:54 george Exp $
+
+  07 May 2003; George Shapovalov <george@gentoo.org> fftw-2.1.5.ebuild :
+  apparently fftw doesn't like -fpmath=sse on pentium-4 M based systems (#19523)
+  added corresponding filter, thanks to Christian Birchinger <joker@gentoo.org> for report.
 
 *fftw-2.1.5 (23 Mar 2003)
 

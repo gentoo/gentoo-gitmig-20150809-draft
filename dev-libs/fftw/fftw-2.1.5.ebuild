@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/fftw-2.1.5.ebuild,v 1.1 2003/03/25 08:17:10 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/fftw/fftw-2.1.5.ebuild,v 1.2 2003/05/07 22:47:54 george Exp $
+
+inherit flag-o-matic
 
 IUSE="mpi"
 
@@ -15,6 +17,24 @@ LICENSE="GPL-2"
 
 #remove ~'s on ppc and sparc when removig on x86 (as per recent discussion on -core)
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+
+#this one is reported to cause trouble on pentium4 m series
+filter-flags "-mfpmath=sse"
+
+#here I need (surprise) to increase optimization:
+#--enable-i386-hacks requires -fomit-frame-pointer to work properly
+export CFLAGS="${CFLAGS/-fomit-frame-pointer/} -fomit-frame-pointer"
+
+pkg_setup() {
+	einfo ""
+	einfo "This ebuild installs double and single precision versions of library"
+	einfo "This involves some name mangling, as supported by package and required"
+	einfo "by some apps that use it."
+	einfo "By default, the symlinks to non-mangled names will be created off"
+	einfo "double-precision version. In order to symlink to single-precision use"
+	einfo "SINGLE=yes emerge fftw"
+	einfo ""
+}
 
 src_unpack() {
 	#doc suggests installing single and double precision versions via separate compilations
@@ -32,11 +52,6 @@ src_unpack() {
 
 
 src_compile() {
-
-	#here I need (surprise) to increase optimization:
-	#--enable-i386-hacks requires -fomit-frame-pointer to work properly
-	export CFLAGS="${CFLAGS/-fomit-frame-pointer/} -fomit-frame-pointer"
-
 	local myconf=""
 	use mpi && myconf="${myconf} --enable-mpi"
 	#mpi is not a valid flag yet. In this revision it is used merely to block --enable-mpi option
