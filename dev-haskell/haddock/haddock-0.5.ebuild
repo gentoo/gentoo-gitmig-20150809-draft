@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-0.5.ebuild,v 1.1 2003/07/28 15:28:21 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/haddock/haddock-0.5.ebuild,v 1.2 2003/09/07 03:13:09 msterret Exp $
 #
 # USE variable summary:
 #   doc    - Build extra documenation from DocBook sources,
@@ -20,7 +20,7 @@ KEYWORDS="~x86 ~sparc"
 LICENSE="as-is"
 
 DEPEND="virtual/ghc
-	doc? ( >=app-text/openjade-1.3.1 
+	doc? ( >=app-text/openjade-1.3.1
 		>=app-text/sgml-common-0.6.3
 		=app-text/docbook-sgml-dtd-3.1-r1
 		>=app-text/docbook-dsssl-stylesheets-1.64

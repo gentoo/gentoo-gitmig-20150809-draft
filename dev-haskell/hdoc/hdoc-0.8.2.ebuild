@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdoc/hdoc-0.8.2.ebuild,v 1.1 2003/04/22 08:26:25 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdoc/hdoc-0.8.2.ebuild,v 1.2 2003/09/07 03:13:09 msterret Exp $
 
 DESCRIPTION="A documentation generator for Haskell"
 
@@ -35,5 +35,5 @@ src_compile() {
 src_install () {
 	# DESTDIR does not work, but only bindir is used ...
 	make bindir=${D}/usr/bin install || die
-	dodoc docs/hdoc.pdf 
+	dodoc docs/hdoc.pdf
 }

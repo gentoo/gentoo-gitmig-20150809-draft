@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/hmake-3.07.ebuild,v 1.2 2003/06/27 14:02:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hmake/hmake-3.07.ebuild,v 1.3 2003/09/07 03:13:09 msterret Exp $
 
 DESCRIPTION="a make tool for Haskell programs"
 HOMEPAGE="http://www.haskell.org/hmake/"
@@ -34,7 +34,7 @@ src_compile() {
 		--prefix=/usr \
 		--mandir=/usr/share/man/man1 \
 		${buildwith} || die "./configure failed"
-	
+
 	# emake tested; does not work
 	make || die "make failed"
 }
