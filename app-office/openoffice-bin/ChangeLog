@@ -1,6 +1,20 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.64 2005/03/30 10:17:17 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.65 2005/03/30 13:31:30 suka Exp $
+
+*openoffice-bin-1.9.87 (30 Mar 2005)
+
+  30 Mar 2005; Andreas Proschofsky <suka@gentoo.org>
+  +files/1.9/ooffice-wrapper-1.9, +openoffice-bin-1.9.87.ebuild:
+  First pre-release of OpenOffice.org 2.0. Please remember:
+  
+  *) This is a pre-release so expect breakage, its use is totally at your own
+  risk
+  
+  *) The ebuild is not finished, but should generally work, just don't expect
+  a "smooth" upgrade path for your user install to future versions
+  
+  Other than that: Enjoy!
 
   30 Mar 2005; Andreas Proschofsky <suka@gentoo.org>
   files/1.1.4/ooffice-wrapper-1.3, openoffice-bin-1.1.4.ebuild:

@@ -1,0 +1,85 @@
+#!/bin/sh
+#
+# Wrapper script for openoffice
+#
+# (C) Peter 'Nidd' Novodvorsky, 2001,2002
+# (C) Martin 'empty' Quinson, 2002.
+#     Modifications by Chris Halls
+#     Modifications by Lucien Saviot
+
+# This program is free software; you can redistribute it and/or modify         
+# it under the terms of the GNU General Public License as published by         
+# the Free Software Foundation; either version 2 of the License, or            
+# (at your option) any later version.                                          
+#                                                                             
+# This program is distributed in the hope that it will be useful,              
+# but WITHOUT ANY WARRANTY; without even the implied warranty of               
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU             
+# General Public License for more details.                                     
+#                                                                             
+# You should have received a copy of the GNU General Public License            
+# along with this program; if not, write to the Free Software                  
+# Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA      
+
+# For OpenOffice.org1.9
+OOHOME=/opt/OpenOffice.org
+
+##
+## Add /usr/share/fonts to font search path
+##
+
+# Default font path.  This is used if SAL_FONTPATH_PRIVATE is not defined.
+
+GENTOO_FONTPATH=""
+for d in `find /usr/share/fonts -maxdepth 1 -mindepth 1 -type d` ; do
+    GENTOO_FONTPATH="$GENTOO_FONTPATH;$d"
+done
+
+SAL_FONTPATH_PRIVATE=${SAL_FONTPATH_PRIVATE:-"$GENTOO_FONTPATH"}
+export SAL_FONTPATH_PRIVATE
+
+## search LOCALE
+if [ -n "$LC_ALL" ]; then
+  LOCALE="$LC_ALL"
+  # OOo doesn't understand LC_ALL, so set LANG
+  LANG="$LC_ALL"
+elif [ -n "$LANG" ]; then
+  LOCALE="$LANG"
+elif [ -n "$LC_MESSAGES" ]; then
+  LOCALE="$LC_MESSAGES"
+  LANG="$LC_MESSAGES"
+else
+  LOCALE="en_US"
+fi
+
+# Set locale to en_US if locale is C
+if [ "x$LOCALE" = "xC" ] ; then LOCALE="en_US"; fi
+
+LOCALEOO=`echo $LOCALE | sed 's/_/-/'`
+
+##
+## If no file is specified on the command line, which application to start?  
+## The wrapper can be called from several links in /usr/bin
+##
+if [ $# = 0 ]; then
+  case `basename $0` in
+    oocalc) set -- private:factory/scalc;;
+    oodraw) set -- private:factory/sdraw;;
+    ooimpress) set -- private:factory/simpress;;
+    oomath) set -- private:factory/smath;;
+    ooweb) set -- private:factory/swriter/web;;
+    oowriter) set -- private:factory/swriter;;
+  esac
+fi
+
+##
+## That's it. Launch the beast (with the given args)
+##
+LANG=$LOCALE
+export LANG
+case `basename $0` in
+    oopadmin) exec "$OOHOME/program/spadmin"
+    ;;
+    *) exec "$OOHOME/program/soffice" "$@"
+    ;;
+esac
