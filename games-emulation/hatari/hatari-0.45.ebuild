@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/hatari/hatari-0.45.ebuild,v 1.3 2004/02/29 10:31:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/hatari/hatari-0.45.ebuild,v 1.4 2004/05/26 20:57:53 mr_bones_ Exp $
 
 inherit games
 
@@ -34,8 +34,8 @@ src_compile() {
 }
 
 src_install() {
-	dogamesbin ${S}/src/hatari || die "dogamesbin failed"
-	insinto ${GAMES_DATADIR}/${PN}
+	dogamesbin "${S}/src/hatari" || die "dogamesbin failed"
+	insinto "${GAMES_DATADIR}/${PN}"
 	doins src/font8.bmp || die "doins font8.bmp failed"
 	dodoc readme.txt doc/*.txt
 	dohtml -r doc/
