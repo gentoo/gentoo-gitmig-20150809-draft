@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.1.0.ebuild,v 1.1 2002/10/27 15:05:48 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-games/gnome-games-2.1.1.ebuild,v 1.1 2002/10/28 14:29:17 foser Exp $
 
 inherit gnome2 debug
 
@@ -11,25 +11,13 @@ SLOT="0"
 KEYWORDS="x86 sparc sparc64 ppc alpha"
 LICENSE="GPL-2"
 
-RDEPEND=">=dev-libs/glib-2.0.6
-	=x11-libs/pango-1.1*
-	=dev-libs/atk-1.1*
-	=x11-libs/gtk+-2.1*
-	>=x11-libs/libzvt-2.0.1
-	>=media-libs/freetype-2.0.9
-	>=dev-libs/libxml2-2.4.25
+RDEPEND="
 	>=app-text/scrollkeeper-0.3.11
 	>=sys-libs/ncurses-5.2
-	>=sys-libs/readline-4.1
 	>=sys-devel/gettext-0.10.40
-	>=gnome-base/libglade-2.0.1
 	>=gnome-base/gconf-1.2.1
-	>=gnome-base/gnome-vfs-2.0.4
-	>=gnome-base/ORBit2-2.4.3
-	=gnome-base/bonobo-activation-2.1*
-	=gnome-base/gnome-panel-2.1*
+	>=gnome-base/gnome-vfs-2
 	=gnome-base/libgnome-2.1*
-	=gnome-base/libgnomecanvas-2.1*
 	=gnome-base/libgnomeui-2.1*"
 
 DEPEND=">=dev-util/pkgconfig-0.12.0
