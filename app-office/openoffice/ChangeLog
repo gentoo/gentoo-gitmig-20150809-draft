@@ -1,6 +1,10 @@
 # ChangeLog for app-office/openoffice
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.6 2002/09/15 18:12:49 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/ChangeLog,v 1.7 2002/09/16 22:45:18 azarah Exp $
+
+  17 Sep 2002; Martin Schlemmer <azarah@gentoo.org> :
+  Fix openoffice-1.0.1-parallel-build.patch, as stupid
+  cvs expanded the keywords in it.
 
 *openoffice-1.0.1 (15 Sep 2002)
 
