@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/files/ntpd.rc,v 1.14 2003/10/30 06:18:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/files/ntpd.rc,v 1.15 2004/02/14 05:08:42 vapier Exp $
 
 depend() {
 	need net
@@ -22,7 +22,9 @@ start() {
 	checkconfig || return $?
 
 	ebegin "Starting ntpd"
-	start-stop-daemon --start --quiet --pidfile /var/run/ntpd.pid \
+	touch /var/run/ntpd.pid
+	chown ntp:ntp /var/run/ntpd.pid
+	start-stop-daemon --start --quiet \
 		--startas /usr/bin/ntpd -- -p /var/run/ntpd.pid ${NTPD_OPTS}
 	eend $? "Failed to start ntpd"
 }
@@ -31,7 +33,4 @@ stop() {
 	ebegin "Stopping ntpd"
 	start-stop-daemon --stop --quiet --pidfile /var/run/ntpd.pid
 	eend $? "Failed to stop ntpd"
-
-	# clean stale pidfile
-	[ -f /var/run/ntpd.pid ] && rm -f /var/run/ntpd.pid
 }
