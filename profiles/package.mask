@@ -84,10 +84,6 @@ media-libs/gst-plugins-cdparanoia
 # buffer issue on ncurses application (e.g. BitchX)
 #>=x11-libs/vte-0.10.28
 
-# <vladimir@gentoo.org> 10 June 2003
-# Needs testing (Completely new patches)
->=sys-apps/quik-2.0.1k
-
 # <twp@gentoo.org> 10 Jun 2003
 # Needs testing (I can't test it)
 =dev-ruby/optparse-0.12
