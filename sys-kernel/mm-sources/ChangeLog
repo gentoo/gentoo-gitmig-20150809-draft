@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.96 2003/11/21 20:34:13 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.97 2003/11/21 21:44:55 lostlogic Exp $
 
 *mm-sources-2.6.0_beta9-r5 (21 Nov 2003)
 
@@ -10,7 +10,7 @@
 
   21 Nov 2003; Brandon Low <lostlogic@gentoo.org>
   mm-sources-2.6.0_beta9-r4.ebuild, files/2.6.0-test9-mm4-alsa-crash.patch:
-  Add a patch for ALSA crashes
+  Add a patch for ALSA crashes (bug #34039)
 
 *mm-sources-2.6.0_beta9-r4 (20 Nov 2003)
 

@@ -3,7 +3,7 @@ MD5 0ee621803e934c132718f0680a8ae907 mm-sources-2.6.0_beta9-r4.ebuild 3114
 MD5 f4c883a89f1c1440869339a008a745cf mm-sources-2.6.0_beta9-r1.ebuild 3010
 MD5 a4fa5e46323f3235eb7866a9568bc52a mm-sources-2.6.0_beta8-r1.ebuild 3010
 MD5 795da7cc15e11462555565b3f23c4d1b mm-sources-2.6.0_beta9-r5.ebuild 3010
-MD5 865d61b306822c40996407ba03ce7937 ChangeLog 16621
+MD5 5bd5311aa3e0a5c511abf425a1d20a75 ChangeLog 16634
 MD5 62587df4b49506468241ec3c9415b010 metadata.xml 435
 MD5 b3e6c57a381a41e3bdc287b0be80b603 files/2.6.0-test9-mm4-alsa-crash.patch 375
 MD5 c2a85ee37f0ce1076159ec64b7c5a78d files/wpadded.patch 1751
