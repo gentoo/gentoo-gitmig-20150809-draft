@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<maintainer>
+ <email>vapier@gentoo.org</email>
+ <name>Mike Frysinger</name>
+</maintainer>
+<longdescription>
+Examine is a configuration library for applications based on the Enlightenment 
+Foundation Libraries (EFL).
+Using examine an application can register a property (key->value), modify or 
+read a property, load and save these values to edb databases and listen to 
+changes in the value.
+The API for examine has been kept as simple as possible to allow programs to 
+easily access configuration information, but also to expand the given 
+structures to include application specific data.
+Included with examine are two applications, examiner (still to come) and exsh.
+These applications connect to the configuration library and allow the user to 
+alter configurations.
+The configurations are stored in edb format and can either be read from the 
+default ~/.e/appname/config.db location, or from a specified file elsewhere.
+
+More complex applications can make use of "bundles" (sets of properties) so 
+that each window or view can use a different set of properties.
+</longdescription>
+</pkgmetadata>
