@@ -3,7 +3,7 @@
 <pkgmetadata>
 	<herd>python</herd>
 	<maintainer>
-		<email>pythonhead@gentoo.org</email>
+		<email>kloeri@gentoo.org</email>
 		<description>Primary Maintainer</description>
 	</maintainer>
 	<longdescription>Stan's Python Editor is a Python IDE with full Blender support.</longdescription>
