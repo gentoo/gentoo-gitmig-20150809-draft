@@ -1,0 +1,12 @@
+# ChangeLog for app-emulation/atari800
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/atari800/ChangeLog,v 1.1 2002/05/21 20:54:18 blocke Exp $
+
+*atari800-1.2.2 (24 Feb 2002)
+
+  24 Feb 2002; Rob McMullen <robm@flipturn.org> atari800-1.2.2.ebuild:
+
+  Atari 8-bit emulator (400/800/1200/XL/XE etc.) that will be compiled
+  with SDL if 'sdl' appears in your USE statement, otherwise as an X11
+  app.  SDL switches to fullscreen mode by default, so a 400x300 entry
+  into your XF86Config-4 file is recommended.
