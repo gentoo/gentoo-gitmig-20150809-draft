@@ -1,5 +1,5 @@
-MD5 a7f5f3b83d794e371a987214ddf30bae libclthreads-1.0.0.ebuild 836
-MD5 ae2f0ce6b633cd6e8ea199bdabb85098 metadata.xml 227
 MD5 cec4c312093948a0943f829f20861267 ChangeLog 518
+MD5 7eef24b8ecaf5bbc19d749be1f804d3d libclthreads-1.0.0.ebuild 740
+MD5 ae2f0ce6b633cd6e8ea199bdabb85098 metadata.xml 227
 MD5 d2fd270bc43b10320feef7399cfb76c5 files/digest-libclthreads-1.0.0 66
 MD5 15457e6804d7144803490194460b485d files/libclthreads-1.0.0-makefile.patch 863
