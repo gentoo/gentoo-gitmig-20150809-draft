@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 87dfbfb9476746a5993bcd740783a43c jal-0.4.60.ebuild 531
+MD5 ad188a4893e62a7d31ec2a28f9c2a385 ChangeLog 408
+MD5 db5b59667f431d967e5e9af08001459f metadata.xml 473
+MD5 5be609db891681d111ad267657174d11 files/digest-jal-0.4.60 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFB84lHmdTrptrqvGERAmldAJwOjuZBp2/s1bbZqdMxNeAw6kSe+ACghO/A
+iaKJxWGkqgV/BDTSAdA9Z4s=
+=5qMl
+-----END PGP SIGNATURE-----
