@@ -1,0 +1,18 @@
+# ChangeLog for media-tv/kwintv
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kwintv/ChangeLog,v 1.1 2003/06/18 11:59:01 seemant Exp $
+
+*kwintv-0.8.11 (18 Jun 2003)
+
+  18 Jun 2003; Seemant Kulleen <seemant@gentoo.org> kwintv-0.8.11.ebuild:
+  moved to media-tv
+
+*kwintv-0.8.11 (1 Feb 2002)
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
