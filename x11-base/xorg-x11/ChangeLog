@@ -1,6 +1,14 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.151 2004/10/11 15:44:36 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.152 2004/10/13 04:22:35 spyderous Exp $
+
+  12 Oct 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.0-r2.ebuild:
+  PATCH_VER 0.2.4. Add 9940_all_6.8.0-libX11-stack-overflow.patch to fix a
+  non-exploitable problem (fd.0 #1459). Add 5140_all_6.8.0-radeon-swsusp.patch
+  to fix software suspend on Radeons (fd.o #1220). FILES_VER 0.4. Add
+  /usr/X11R6/lib64 to LDPATH in /etc/env.d/10xorg, so things work for
+  architectures that install to there.
 
   11 Oct 2004; Mike Frysinger <vapier@gentoo.org>;
   xorg-x11-6.7.0-r2.ebuild, xorg-x11-6.8.0-r1.ebuild, xorg-x11-6.8.0-r2.ebuild:
