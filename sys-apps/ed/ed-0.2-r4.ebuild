@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ed-0.2-r4.ebuild,v 1.2 2004/10/05 14:40:13 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ed/ed-0.2-r4.ebuild,v 1.3 2004/10/05 17:38:25 tester Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.gnu.org/pub/gnu/ed/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc x86"
 IUSE=""
 
 DEPEND="virtual/libc
