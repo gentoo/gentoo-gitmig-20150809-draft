@@ -1,6 +1,12 @@
 # ChangeLog for net-analyzer/netspeed_applet
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netspeed_applet/ChangeLog,v 1.1 2002/07/13 16:12:21 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netspeed_applet/ChangeLog,v 1.2 2002/07/28 19:58:03 stroke Exp $
+
+*netspeed_applet-0.3 (28 Jul 2002)
+
+  28 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> netspeed_applet-0.3.ebuild:
+
+  New version
 
 *netspeed_applet-0.2 (13 Jul 2002)
 
