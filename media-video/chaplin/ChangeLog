@@ -1,6 +1,9 @@
 # ChangeLog for media-video/chaplin
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/chaplin/ChangeLog,v 1.3 2004/10/07 14:59:34 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/chaplin/ChangeLog,v 1.4 2004/11/30 22:11:08 swegener Exp $
+
+  30 Nov 2004; Sven Wegener <swegener@gentoo.org> chaplin-1.10.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
   06 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   chaplin-1.10.ebuild:

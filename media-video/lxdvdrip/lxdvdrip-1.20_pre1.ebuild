@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lxdvdrip/lxdvdrip-1.20_pre1.ebuild,v 1.3 2004/09/05 16:37:47 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lxdvdrip/lxdvdrip-1.20_pre1.ebuild,v 1.4 2004/11/30 22:13:34 swegener Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
 IUSE=""
-DEPEND=">=dvdauthor-0.6.9"
+DEPEND=">=media-video/dvdauthor-0.6.9"
 
 S="${WORKDIR}/${PN}"
 

@@ -1,6 +1,9 @@
 # ChangeLog for media-video/cpdvd
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cpdvd/ChangeLog,v 1.4 2004/10/07 15:00:47 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cpdvd/ChangeLog,v 1.5 2004/11/30 22:12:08 swegener Exp $
+
+  30 Nov 2004; Sven Wegener <swegener@gentoo.org> cpdvd-1.10.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
   06 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> cpdvd-1.10.ebuild:
   Added to ~amd64.  Fixed LICENSE.

@@ -1,6 +1,9 @@
 # ChangeLog for media-video/ripmake
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ripmake/ChangeLog,v 1.3 2004/10/07 15:05:19 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ripmake/ChangeLog,v 1.4 2004/11/30 22:17:56 swegener Exp $
+
+  30 Nov 2004; Sven Wegener <swegener@gentoo.org> ripmake-1.39.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
   06 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
   ripmake-1.39.ebuild:

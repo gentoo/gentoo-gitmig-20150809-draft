@@ -1,6 +1,11 @@
 # ChangeLog for media-video/lxdvdrip
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/lxdvdrip/ChangeLog,v 1.9 2004/10/09 19:17:13 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/lxdvdrip/ChangeLog,v 1.10 2004/11/30 22:13:34 swegener Exp $
+
+  30 Nov 2004; Sven Wegener <swegener@gentoo.org> lxdvdrip-1.10_pre2.ebuild,
+  lxdvdrip-1.10_pre5.ebuild, lxdvdrip-1.20_pre1-r1.ebuild,
+  lxdvdrip-1.20_pre1.ebuild, lxdvdrip-1.30_pre4.ebuild:
+  Fixed invalid atoms in *DEPEND.
 
 *lxdvdrip-1.30_pre4 (09 Oct 2004)
 
