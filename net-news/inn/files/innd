@@ -9,12 +9,12 @@ depend() {
 
 start() {
 	ebegin "Starting innd"
-	start-stop-daemon --start --quiet --chuid news:news --exec /usr/lib/news/bin/innd
+	su - news -c /usr/lib/news/bin/rc.news
 	eend $?
 }
 
 stop() {
 	ebegin "Stopping innd"
-	start-stop-daemon --stop --quiet --pidfile /var/run/innd.pid
+	su - news -c '/usr/lib/news/bin/rc.news stop'
 	eend $?
 }
