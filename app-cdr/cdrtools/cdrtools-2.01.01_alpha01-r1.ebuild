@@ -1,20 +1,24 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha01.ebuild,v 1.2 2005/01/01 12:10:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01.01_alpha01-r1.ebuild,v 1.1 2005/03/01 14:59:27 pylon Exp $
 
 inherit eutils gcc gnuconfig
 
+MY_CRYPT_VERS="2.01-encrypt-1.0rc1"
+
 DESCRIPTION="A set of tools for CD recording, including cdrecord"
 HOMEPAGE="http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/cdrecord.html"
-SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/alpha/${P/_alpha/a}.tar.bz2"
+SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/alpha/${P/_alpha/a}.tar.bz2
+	crypt? ( http://burbon04.gmxhome.de/linux/files/${PN}-${MY_CRYPT_VERS}.diff.gz )"
 
 LICENSE="GPL-2 freedist"
 SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86 ~ppc-macos"
-IUSE=""
+IUSE="crypt unicode"
 
 DEPEND="virtual/libc
 	!app-cdr/dvdrtools"
+RDEPEND="crypt? ( sys-fs/cryptsetup )"
 PROVIDE="virtual/cdrtools"
 
 S=${WORKDIR}/${PN}-2.01.01
@@ -25,6 +29,13 @@ src_unpack() {
 
 	# CAN-2004-0806 - Bug 63187
 	epatch ${FILESDIR}/${PN}-2.01-scsi-remote.patch
+
+	# UTF-8 support, see Bug #28369
+	use unicode && epatch ${FILESDIR}/mkisofs-iconv-10.patch
+
+	# Add support for On-The-Fly AES encryption
+	# http://burbon04.gmxhome.de/linux/CDREncryption.html
+	use crypt && epatch ${DISTDIR}/${PN}-${MY_CRYPT_VERS}.diff.gz || die "Can't apply encryption patch"
 
 	cd ${S}/DEFAULTS
 	use ppc-macos && MYARCH="mac-os10" || MYARCH="linux"
