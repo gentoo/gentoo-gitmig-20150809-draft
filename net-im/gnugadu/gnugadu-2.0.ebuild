@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.0.ebuild,v 1.2 2004/04/06 22:21:30 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/gnugadu-2.0.ebuild,v 1.3 2004/04/13 10:14:44 spock Exp $
 
-IUSE="debug tlen esd oss xosd arts jabber perl spell"
+IUSE="debug tlen esd oss xosd arts jabber perl"
 
 MY_P="gg2-2.0"
 S="${WORKDIR}/${MY_P}"
