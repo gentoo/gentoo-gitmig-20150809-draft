@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/iverilog
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/iverilog/ChangeLog,v 1.13 2004/06/24 22:04:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/iverilog/ChangeLog,v 1.14 2004/08/26 13:10:50 tantive Exp $
+
+*iverilog-20040606 (26 Aug 2004)
+
+  26 Aug 2004; Michael Imhof <tantive@gentoo.org> +iverilog-20040606.ebuild:
+  Version bumped.
 
   15 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> iverilog-0.6.1.ebuild,
   iverilog-20031009.ebuild:
