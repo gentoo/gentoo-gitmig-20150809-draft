@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/lrzsz
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lrzsz/ChangeLog,v 1.13 2004/11/07 10:20:46 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lrzsz/ChangeLog,v 1.14 2004/11/15 06:52:46 mr_bones_ Exp $
+
+  14 Nov 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  lrzsz-0.12.20-r1.ebuild:
+  append-flags in src_compile; tidy
 
   07 Nov 2004; Joshua Kinard <kumba@gentoo.org> lrzsz-0.12.20-r1.ebuild:
   Marked unstable on mips.

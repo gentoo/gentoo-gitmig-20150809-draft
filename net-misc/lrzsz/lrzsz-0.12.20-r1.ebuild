@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/lrzsz/lrzsz-0.12.20-r1.ebuild,v 1.17 2004/11/07 10:20:46 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/lrzsz/lrzsz-0.12.20-r1.ebuild,v 1.18 2004/11/15 06:52:46 mr_bones_ Exp $
 
 inherit flag-o-matic
-append-flags -Wstrict-prototypes
 
 DESCRIPTION="communication package providing the X, Y, and ZMODEM file transfer protocols"
 HOMEPAGE="http://www.ohse.de/uwe/software/lrzsz.html"
@@ -17,14 +16,15 @@ IUSE="nls"
 DEPEND=""
 
 src_compile() {
-	econf `use_enable nls` || die
-	emake || die
+	append-flags -Wstrict-prototypes
+	econf $(use_enable nls) || die
+	emake || die "emake failed"
 }
 
 src_install() {
 	make \
-		prefix=${D}/usr \
-		mandir=${D}/usr/share/man \
+		prefix="${D}/usr" \
+		mandir="${D}/usr/share/man" \
 		install || die
 
 	dosym /usr/bin/lrb /usr/bin/rb
@@ -34,6 +34,5 @@ src_install() {
 	dosym /usr/bin/lsx /usr/bin/sx
 	dosym /usr/bin/lsz /usr/bin/sz
 
-	dodoc ABOUT-NLS AUTHORS COMPATABILITY COPYING ChangeLog NEWS
-	dodoc README* THANKS TODO
+	dodoc AUTHORS COMPATABILITY ChangeLog NEWS README* THANKS TODO
 }
