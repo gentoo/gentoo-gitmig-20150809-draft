@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy.eclass,v 1.5 2003/08/11 01:38:27 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/selinux-policy.eclass,v 1.6 2003/10/16 14:28:54 pebenito Exp $
 
 # Eclass for installing SELinux policy, and optionally
 # reloading the policy
@@ -8,7 +8,7 @@
 ECLASS="selinux-policy"
 INHERITED="$INHERITED $ECLASS"
 
-HOMEPAGE="http://www.gentoo.org/proj/en/hardened/"
+HOMEPAGE="http://www.gentoo.org/proj/en/hardened/selinux/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
@@ -17,7 +17,7 @@ S="${WORKDIR}/${PN/selinux-}"
 
 IUSE=""
 
-newrdepend "sys-apps/selinux-small >=sec-policy/selinux-base-policy-20030729"
+newrdepend ">=sec-policy/selinux-base-policy-20030729"
 
 [ -z ${POLICYDIR} ] && POLICYDIR="/etc/security/selinux/src/policy"
 
