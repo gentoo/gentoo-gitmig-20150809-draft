@@ -1,4 +1,6 @@
-MD5 470d394c00ae261ef32fb0daf1b46b1b ChangeLog 1041
+MD5 8ced95c3e7a6db6ccf5d66fd00784d68 ExtUtils-AutoInstall-0.56.ebuild 689
+MD5 cfe8ac3e2b35baef923b97f29122018b ChangeLog 1196
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 680aeebf5a7d54837fe94205d974cc84 ExtUtils-AutoInstall-0.55.ebuild 688
+MD5 ae17c3e8f0740f3e9aca7d19f8531375 files/digest-ExtUtils-AutoInstall-0.56 76
 MD5 a39458b0300a5aca15451739a583b997 files/digest-ExtUtils-AutoInstall-0.55 76
