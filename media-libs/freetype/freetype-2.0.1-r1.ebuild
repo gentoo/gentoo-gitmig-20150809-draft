@@ -20,7 +20,7 @@ src_unpack() {
 src_compile() {
 
   cd builds/unix
-  try ./configure
+  try ./configure --prefix=/usr
   cd ${S}
   export CFG="--host=${CHOST} --prefix=/usr"
   #try make
