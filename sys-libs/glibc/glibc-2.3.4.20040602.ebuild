@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040602.ebuild,v 1.5 2004/06/04 02:30:37 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040602.ebuild,v 1.6 2004/06/04 02:56:00 lv Exp $
 
 IUSE="nls pic build nptl erandom hardened makecheck"
 
@@ -354,7 +354,7 @@ src_compile() {
 		myconf="${myconf} \
 		--enable-add-ons=nptl \
 		--with-tls --with-__thread \
-		--enable-kernel=2.6.6"
+		--enable-kernel=2.6.0"
 	else
 		myconf="${myconf} --enable-add-ons=linuxthreads --without-__thread"
 	fi
