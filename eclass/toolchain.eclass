@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.73 2005/01/11 08:50:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.74 2005/01/11 12:07:43 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -44,7 +44,7 @@ fi
 
 GCC_RELEASE_VER="$(get_version_component_range 1-3)"
 GCC_BRANCH_VER="$(get_version_component_range 1-2)"
-GCC_CONFIG_VER="${PV}"
+GCC_CONFIG_VER="${GCC_RELEASE_VER}"
 GCCMAJOR="$(get_version_component_range 1)"
 GCCMINOR="$(get_version_component_range 2)"
 GCCMICRO="$(get_version_component_range 3)"
@@ -1332,6 +1332,12 @@ gcc_movelibs() {
 	rm -f ${D}${PREFIX}/lib/*/libiberty.a
 	rm -f ${D}${LIBPATH}/libiberty.a
 	rm -f ${D}${LIBPATH}/*/libiberty.a
+
+	#local FROMDIR=${D}/${LIBPATH}/../${GCC_RELEASE_VER}
+	#[ -d "${FROMDIR}" ] && mv ${FROMDIR}/* ${LIBPATH}
+
+	#FROMDIR=${D}/${PREFIX}/libexec/gcc/${CTARGET}/${GCC_RELEASE_VER}
+	#[ -d "${FROMDIR}" ] && mv ${FROMDIR}/* ${FROMDIR}/../
 
 	if [ -n "${MULTILIB_ABIS}" ]; then
 		for abi in ${MULTILIB_ABIS}; do
