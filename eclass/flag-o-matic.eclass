@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.14 2003/03/25 07:07:42 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.15 2003/04/06 23:35:41 method Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -29,7 +29,7 @@ INHERITED="$INHERITED $ECLASS"
 # Find and echo the value for a particular flag
 #
 
-ALLOWED_FLAGS="-O -mcpu -march -pipe -g"
+ALLOWED_FLAGS="-O -mcpu -march -mtune -fstack-protector -pipe -g"
 
 
 filter-flags () {
