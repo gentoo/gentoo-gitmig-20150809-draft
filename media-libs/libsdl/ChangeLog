@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.44 2004/03/30 05:24:29 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.45 2004/04/18 21:50:31 vapier Exp $
+
+*libsdl-1.2.7-r1 (18 Apr 2004)
+
+  18 Apr 2004; Mike Frysinger <vapier@gentoo.org> :
+  Add libcaca support #40224 by Simon Reynolds.
+
+*libsdl-1.2.7 (24 Feb 2004)
 
   30 Mar 2004; Donnie Berkholz <spyderous@gentoo.org>; libsdl-1.2.5-r2.ebuild,
   libsdl-1.2.6-r3.ebuild, libsdl-1.2.7.ebuild:
@@ -13,8 +20,6 @@
   libsdl-1.2.5-r2.ebuild, libsdl-1.2.6-r3.ebuild:
   libsdl-1.2.5-{r1,r2} masked on sparc due to compile error, libsdl-1.2.6-r3
   marked stable.
-
-*libsdl-1.2.7 (24 Feb 2004)
 
   24 Feb 2004; Michael Sterrett <mr_bones_@gentoo.org> libsdl-1.2.7.ebuild,
   files/1.2.7-nobuggy-X.patch:
