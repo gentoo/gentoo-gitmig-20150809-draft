@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/libtermcap-compat
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/ChangeLog,v 1.19 2004/03/17 18:33:39 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libtermcap-compat/ChangeLog,v 1.20 2004/03/26 22:06:10 agriffis Exp $
+
+  26 Mar 2004; Aron Griffis <agriffis@gentoo.org>
+  libtermcap-compat-2.0.8-r1.ebuild:
+  stable on alpha and ia64
 
 *libtermcap-compat-2.0.8-r1 (17 Mar 2004)
 
