@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gqview
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/ChangeLog,v 1.46 2004/10/18 19:28:40 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/ChangeLog,v 1.47 2004/10/19 10:27:35 absinthe Exp $
+
+  19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> gqview-1.4.5.ebuild,
+  gqview-1.5.1.ebuild, gqview-1.5.3.ebuild:
+  Stable on amd64.
 
   18 Oct 2004; Gustavo Zacarias <gustavoz@gentoo.org> gqview-1.5.3.ebuild:
   Stable on sparc
