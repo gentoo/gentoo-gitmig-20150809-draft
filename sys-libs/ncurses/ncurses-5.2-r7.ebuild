@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.2-r6.ebuild,v 1.2 2002/10/04 06:37:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.2-r7.ebuild,v 1.1 2002/10/26 09:45:02 azarah Exp $
 
-inherit flag-o-matic
+inherit eutils flag-o-matic
 
 filter-flags "-fno-exceptions"
 
@@ -53,6 +53,8 @@ src_install() {
 	chmod 755 ${D}/lib/*.${PV}
 	mv libform* libmenu* libpanel* ../usr/lib
 	mv *.a ../usr/lib
+	# bug #4411
+	gen_usr_ldscript libncurses.so
 
 	#with this fix, the default xterm has color as it should
 	cd ${D}/usr/share/terminfo/x
