@@ -1,0 +1,12 @@
+# ChangeLog for net-misc/tn5250
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header
+
+*tn5250-0.16.5 (11 Dec 2002)
+  
+  11 Dec 2002; Matt Keadle <mkeadle@gentoo.org> tn5250-0.16.5.ebuild
+  files/digest-tn5250-0.16.5 :
+
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. Thanks to CJ Kucera for submitting this ebuild
+  in bug #9575.
