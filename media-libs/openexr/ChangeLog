@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/openexr
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/ChangeLog,v 1.9 2005/01/11 21:41:03 zypher Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openexr/ChangeLog,v 1.10 2005/02/16 01:45:56 weeve Exp $
+
+  15 Feb 2005; Jason Wever <weeve@gentoo.org> openexr-1.2.1.ebuild:
+  Added ~sparc keyword.
 
   11 Jan 2005; Marc Hildebrand <zypher@gentoo.org> openexr-1.2.1.ebuild:
   Added to ~ppc.
