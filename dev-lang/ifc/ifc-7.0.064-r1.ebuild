@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-7.0.064-r1.ebuild,v 1.7 2004/06/24 22:50:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-7.0.064-r1.ebuild,v 1.8 2004/07/14 13:41:59 agriffis Exp $
 
 inherit rpm
 
@@ -18,6 +18,7 @@ HOMEPAGE="http://developer.intel.com/software/products/compilers/flin/"
 LICENSE="icc-7.0"
 SLOT="0"
 KEYWORDS="-* x86"
+IUSE=""
 
 DEPEND=">=virtual/linux-sources-2.4
 	>=sys-libs/glibc-2.2.4"

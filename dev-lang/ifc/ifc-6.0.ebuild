@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-6.0.ebuild,v 1.13 2004/06/24 22:50:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ifc/ifc-6.0.ebuild,v 1.14 2004/07/14 13:41:59 agriffis Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Intel Fortran Compiler - The Pentium optimized compiler for Linux"
@@ -16,6 +16,7 @@ HOMEPAGE="http://www.intel.com/software/products/compilers/flin/"
 LICENSE="icc-6.0"
 SLOT="0"
 KEYWORDS="-* x86"
+IUSE=""
 
 
 DEPEND=">=virtual/linux-sources-2.4

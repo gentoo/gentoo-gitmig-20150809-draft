@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/clean/clean-2.0.1.ebuild,v 1.10 2004/07/02 04:25:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/clean/clean-2.0.1.ebuild,v 1.11 2004/07/14 13:36:37 agriffis Exp $
 
 DESCRIPTION="Clean"
 HOMEPAGE="http://www.cs.kun.nl/~clean/"
@@ -9,6 +9,7 @@ SRC_URI="http://www.cs.kun.nl/~clean/download/Clean20/linux/Clean2.0.1.tar.gz ht
 LICENSE="LGPL-2.1 | clean"
 SLOT="0"
 KEYWORDS="s390 x86 -ppc -sparc"
+IUSE=""
 
 DEPEND="virtual/libc"
 S="${WORKDIR}/Clean 2.0.1 Sources"
