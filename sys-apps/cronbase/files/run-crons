@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $ Header: $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/cronbase/files/run-crons,v 1.3 2002/05/13 18:34:05 bangert Exp $
 #
 # 20 Apr 2002; Thilo Bangert <bangert@gentoo.org> run-crons:
 #
