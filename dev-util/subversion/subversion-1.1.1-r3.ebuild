@@ -1,19 +1,17 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.1-r3.ebuild,v 1.13 2005/02/15 14:45:15 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.1-r3.ebuild,v 1.14 2005/02/24 01:42:35 vapier Exp $
 
 inherit elisp-common libtool python eutils bash-completion
 
 DESCRIPTION="A compelling replacement for CVS"
-SRC_URI="http://subversion.tigris.org/tarballs/${P/_rc/-rc}.tar.bz2"
 HOMEPAGE="http://subversion.tigris.org/"
+SRC_URI="http://subversion.tigris.org/tarballs/${P/_rc/-rc}.tar.bz2"
 
-SLOT="0"
 LICENSE="Apache-1.1"
-KEYWORDS="x86 sparc ~ppc amd64 alpha hppa ppc64 ia64"
+SLOT="0"
+KEYWORDS="alpha amd64 arm hppa ia64 ~ppc ppc64 sparc x86"
 IUSE="ssl apache2 berkdb python emacs perl java"
-
-S=${WORKDIR}/${P/_rc/-rc}
 
 # Presently subversion doesn't build with swig-1.3.22, bug 65424
 RDEPEND="apache2? ( >=net-www/apache-2.0.49 )
@@ -25,11 +23,12 @@ RDEPEND="apache2? ( >=net-www/apache-2.0.49 )
 	berkdb? ( =sys-libs/db-4* )
 	java? ( virtual/jdk )
 	emacs? ( virtual/emacs )"
-
 DEPEND="${RDEPEND}
 	>=sys-devel/autoconf-2.59"
 # Does not work because jikes is broken
 #	jikes? (dev-java/jikes)"
+
+S=${WORKDIR}/${P/_rc/-rc}
 
 # Allow for custion repository locations.
 # This can't be in pkg_setup because the variable needs to be available to
