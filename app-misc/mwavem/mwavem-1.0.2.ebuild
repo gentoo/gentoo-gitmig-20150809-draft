@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mwavem/mwavem-1.0.2.ebuild,v 1.2 2002/07/25 19:18:34 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mwavem/mwavem-1.0.2.ebuild,v 1.3 2002/10/17 00:45:18 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="User level application for IBM Mwave modem"
@@ -11,14 +11,16 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 
-DEPEND=""
+DEPEND="virtual/glibc
+	X? ( virtual/x11 )"
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	patch -p1 < ${FILESDIR}/${P}-gentoo.diff
 
 	./configure \
-    --disable-mwavedd \
-    --host=${CHOST} || die "./configure failed"
+		--disable-mwavedd \
+		--host=${CHOST} || die "./configure failed"
 
 	emake || die
 }
