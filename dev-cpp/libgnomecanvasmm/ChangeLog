@@ -1,6 +1,11 @@
 # ChangeLog for dev-cpp/libgnomecanvasmm
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/ChangeLog,v 1.18 2004/07/14 12:06:11 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomecanvasmm/ChangeLog,v 1.19 2004/07/19 17:20:49 pylon Exp $
+
+  19 Jul 2004; Lars Weiler <pylon@gentoo.org> libgnomecanvasmm-2.0.1.ebuild:
+  Added again stable keyword for ppc. Somehow it got lost. This is necessary for
+  cdrdao-1.1.8-r1 to compile with the gnome USE-flag. Please take care that at
+  least one ebuild on every arch stays stable.
 
   14 Jul 2004; Travis Tilley <lv@gentoo.org>
   +files/2.0.1-gcc3.4-after-cvs.patch, +files/2.0.1-gcc3.4-to-cvs.patch,

@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 e73a7daaaa30d16947eb73ce6c64a41d ChangeLog 2872
+MD5 57610bd56992b24f1f812bf5e3fc1f55 ChangeLog 3160
 MD5 c384ffa8997894abdd702e0959c8b02a libgnomecanvasmm-2.0.0.ebuild 635
-MD5 91cdaae2ab1f7e11f315be8588e78840 libgnomecanvasmm-2.0.1.ebuild 881
-MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
+MD5 7df329071d445841f77b7b84345f35b7 libgnomecanvasmm-2.0.1.ebuild 879
 MD5 c253de960acada9ee31a50b0a42abdbd libgnomecanvasmm-2.6.0.ebuild 746
 MD5 309dc0b64c8195ea7a821375d5366839 libgnomecanvasmm-2.6.1.ebuild 786
+MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
 MD5 374e73c2ee23f5d948e866b203faaf63 files/digest-libgnomecanvasmm-2.0.0 74
 MD5 503f4b94ee2876c2eb123fb633749c34 files/digest-libgnomecanvasmm-2.0.1 74
 MD5 431e51ec601c0bc99667968d1177375a files/digest-libgnomecanvasmm-2.6.0 75
 MD5 9d1a7838537ec9856edb6298891255e0 files/digest-libgnomecanvasmm-2.6.1 75
 MD5 c411f9f7919161492f9a879b4011fe03 files/2.0.1-gcc3.4-after-cvs.patch 2679
 MD5 4e3e036401274ab4b34a7ea14bece6be files/2.0.1-gcc3.4-to-cvs.patch 1584
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA9z4KHTu7gpaalycRAt4yAJ975TPdajycJab7z+BcOf5bchxBnwCcCt8R
-JFItoi1j5bMicHf2xIy6xVA=
-=TRSa
------END PGP SIGNATURE-----
