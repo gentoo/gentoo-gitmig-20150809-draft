@@ -1,13 +1,13 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 aa35e6b04092c618daaedb211250bd93 ChangeLog 7608
+MD5 5f81f309c3ee3e4d1825ad199dc0d0aa ChangeLog 7837
 MD5 3e1f2a62b125bc976d086e9f6c596aa0 isdn4k-utils-3.2_p1-r2.ebuild 2932
-MD5 a2bcb84492a2cb2275c0c61b32060ac7 isdn4k-utils-3.5_pre20041110.ebuild 6715
 MD5 bab835f739889e139f5acaf397d3d875 metadata.xml 215
+MD5 d21e8fc9ea7f4cdbbb0e3f87ff714ea7 isdn4k-utils-3.5_pre20041110-r1.ebuild 6718
 MD5 e2cc85397eb8ff285f383213ab00cdad files/digest-isdn4k-utils-3.2_p1-r2 73
-MD5 8de88f6cf872f012abe1e320b3fb4336 files/digest-isdn4k-utils-3.5_pre20041110 81
 MD5 2dbc97316fbe5d721b9701347464e22c files/gcc33-multiline.patch 1977
+MD5 8de88f6cf872f012abe1e320b3fb4336 files/digest-isdn4k-utils-3.5_pre20041110-r1 81
 MD5 7ce4e9c2bb9dee4d231ae8da54a06b9f files/3.2_p1-r2/gentoo.patch 2383
 MD5 2f4c186b729606b475e17a0ea54189c9 files/3.2_p1-r2/config 2405
 MD5 92412760dfacc81cfac908d522ac8e39 files/3.2_p1-r2/ioptions 86
@@ -31,7 +31,7 @@ MD5 02118ba89fc41144086224482bff7422 files/3.5_pre20041110/options.ippp0 685
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBrw7bmdTrptrqvGERAo8sAJwJjJ3kLE/B4jG0Z+/jK7zGgMSTKgCfYlZB
-O91OJvlxrHssq29Z3RJRshE=
-=YqEi
+iD8DBQFBrxuxmdTrptrqvGERAnrkAJ9AYOOr7d06/pnhBrKl23hXzsLaUQCcDE8F
+Xbdkw3Cq9Xce5NWh8D0lAU0=
+=zXKf
 -----END PGP SIGNATURE-----

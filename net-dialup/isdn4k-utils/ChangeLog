@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/isdn4k-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.31 2004/12/02 12:47:17 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.32 2004/12/02 13:42:03 dragonheart Exp $
+
+*isdn4k-utils-3.5_pre20041110-r1 (02 Dec 2004)
+
+  02 Dec 2004; Daniel Black <dragonheart@gentoo.org>
+  +isdn4k-utils-3.5_pre20041110-r1.ebuild,
+  -isdn4k-utils-3.5_pre20041110.ebuild:
+  version bump that I should of done before
 
   02 Dec 2004; Daniel Black <dragonheart@gentoo.org>
   isdn4k-utils-3.2_p1-r2.ebuild, isdn4k-utils-3.5_pre20041110.ebuild:
