@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r13.ebuild,v 1.3 2003/11/27 21:38:49 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r13.ebuild,v 1.4 2003/11/29 07:14:28 robbat2 Exp $
 
 inherit eutils fixheadtails
 
@@ -339,6 +339,14 @@ rootmailfixup() {
 	chown -R alias:qmail ${ROOT}/var/qmail/alias/.maildir 2>/dev/null
 }
 
+buildtcprules() {
+	for i in smtp qmtp qmqp pop3; do
+		# please note that we don't check if it exists
+		# as we want it to make the cdb files anyway!
+		cat ${ROOT}etc/tcp.${i} 2>/dev/null | tcprules ${ROOT}etc/tcp.${i}.cdb ${ROOT}etc/.tcp.${i}.tmp
+	done
+}
+
 pkg_postinst() {
 
 	einfo "Setting up the message queue hierarchy ..."
@@ -346,6 +354,7 @@ pkg_postinst() {
 	/var/qmail/bin/queue-fix ${ROOT}/var/qmail/queue >/dev/null
 
 	rootmailfixup
+	buildtcprules
 
 	# for good measure
 	env-update
@@ -389,14 +398,14 @@ pkg_config() {
 	LOCALIPS=`/sbin/ifconfig  | grep inet | cut -d' ' -f 12 -s | cut -b 6-20`
 	TCPSTRING=":allow,RELAYCLIENT=\"\",RBLSMTPD=\"\""
 	for ip in $LOCALIPS; do
-		echo "${ip}${TCPSTRING}" >> ${ROOT}etc/tcp.smtp
-		echo "${ip}${TCPSTRING}" >> ${ROOT}etc/tcp.qmtp
-		echo "${ip}${TCPSTRING}" >> ${ROOT}etc/tcp.qmqp
+		myline="${ip}${TCPSTRING}"
+		for proto in smtp qmtp qmqp; do
+			f="${ROOT}etc/tcp.${proto}"
+			egrep -q "${myline}" ${f} || echo "${myline}" >>${f}
+		done
 	done
 
-	for i in smtp qmtp qmqp pop3; do
-		[ -f ${ROOT}etc/tcp.${i} ] && tcprules ${ROOT}etc/tcp.${i}.cdb ${ROOT}etc/.tcp.${i}.tmp < ${ROOT}etc/tcp.${i}
-	done
+	buildtcprules
 
 	if use ssl; then
 		${ROOT}etc/cron.daily/qmail-genrsacert.sh
@@ -411,3 +420,4 @@ pkg_config() {
 		einfo "cat signed_req.pem >> /var/qmail/control/servercert.pem"
 	fi
 }
+
