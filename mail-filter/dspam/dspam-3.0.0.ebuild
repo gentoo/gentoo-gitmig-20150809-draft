@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.0.0.ebuild,v 1.6 2004/07/21 12:20:00 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/dspam-3.0.0.ebuild,v 1.7 2004/07/21 17:34:21 mr_bones_ Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 IUSE="debug mysql neural procmail cyrus exim maildrop"
 DEPEND="mysql? ( >=dev-db/mysql-3.23 ) || ( >=sys-libs/db-4.0 )
 		procmail? ( >=mail-filter/procmail-3.22 )
-		x86? ( cyrus? ( >=net-mail/cyrus-imapd-2.1.15 ))
+		x86? ( cyrus? ( >=net-mail/cyrus-imapd-2.1.15 ) )
 		maildrop? ( >=mail-filter/maildrop-1.5.3 )
 		exim? ( >=mail-mta/exim-4.34 )
 		"
