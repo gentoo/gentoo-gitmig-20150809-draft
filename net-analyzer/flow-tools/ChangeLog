@@ -1,0 +1,9 @@
+# ChangeLog for net-analyzer/mtr
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/flow-tools/ChangeLog,v 1.1 2003/05/18 20:02:51 mholzer Exp $
+
+*flow-tools-0.66 (18 May 2003)
+
+  18 May 2003; Martin Holzer <mholzer@gentoo.org> flow-tools-0.66.ebuild:
+  Initial version. Ebuild submitted by Mishael Sibiryakov
+  <death@dom-net.sky.ru> in #18947.
