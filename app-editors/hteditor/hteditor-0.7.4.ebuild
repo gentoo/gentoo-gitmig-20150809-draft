@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/hteditor-0.7.4.ebuild,v 1.7 2004/10/05 12:19:43 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hteditor/hteditor-0.7.4.ebuild,v 1.8 2004/10/26 13:21:33 vapier Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="editor for executable files"
 HOMEPAGE="http://hte.sourceforge.net/"
@@ -8,7 +10,7 @@ SRC_URI="mirror://sourceforge/hte/ht-${PV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc -alpha"
+KEYWORDS="ppc x86"
 IUSE=""
 
 DEPEND="virtual/libc"
