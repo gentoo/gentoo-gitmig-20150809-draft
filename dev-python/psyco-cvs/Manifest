@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0a9b7082a2f4b9562394f19cc34d2020 psyco-cvs-20041130.ebuild 592
+MD5 cb61c4f70c46fac0bc62380023cb8f06 ChangeLog 375
+MD5 9ac4199ebe7cd3e7e311274994767f82 metadata.xml 160
+MD5 de2a36fed2095436b426caa15ba88718 files/digest-psyco-cvs-20041130 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBrQqxz2gxt1z4IGYRArFlAKC4ztw0K5P1vV+EPQ+HTWQSlwyMSgCfTfDF
+xPdumJspHcV/iiLavS0nKxE=
+=d32O
+-----END PGP SIGNATURE-----
