@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.1 2002/02/01 21:53:28 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.2 2002/03/07 10:31:09 danarmak Exp $
+
+  7 Mar 2002; Dan Armak <danarmak@gentoo.org> Changelog:
+  
+  Changed qt-docs dependency from >=... to =...*. This makes sure that the qt-docs
+  installed is from qt-2.x. This fixes bug #947.
 
 *kdevelop-2.0.2 (1 Feb 2002)
 
