@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/phpgroupware
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpgroupware/ChangeLog,v 1.17 2003/12/15 20:14:21 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpgroupware/ChangeLog,v 1.18 2004/01/07 21:26:50 mholzer Exp $
+
+  07 Jan 2004; Martin Holzer <mholzer@gentoo.org>
+  phpgroupware-0.9.14.007.ebuild:
+  chaning depend. Closes 37361
 
   15 Dec 2003; Stuart Herbert <stuart@gentoo.org>
   phpgroupware-0.9.14.007.ebuild:

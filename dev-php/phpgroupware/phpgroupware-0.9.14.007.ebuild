@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/phpgroupware/phpgroupware-0.9.14.007.ebuild,v 1.7 2004/01/05 21:28:00 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/phpgroupware/phpgroupware-0.9.14.007.ebuild,v 1.8 2004/01/07 21:26:50 mholzer Exp $
 
 inherit webapp-apache
 
@@ -15,8 +15,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~ppc ~alpha ~amd64 ~sparc ~hppa ~arm"
 
-DEPEND="$DEPEND
-	>=dev-php/mod_php-4.1
+RDEPEND=">=dev-php/mod_php-4.1
 	dev-db/mysql"
 
 webapp-detect || NO_WEBSERVER=1
