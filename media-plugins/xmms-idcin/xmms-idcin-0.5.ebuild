@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-idcin/xmms-idcin-0.5.ebuild,v 1.6 2004/06/24 23:40:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-idcin/xmms-idcin-0.5.ebuild,v 1.7 2004/07/06 23:41:50 eradicator Exp $
+
+IUSE=""
 
 MY_PN=${PN/-/_}
 MY_P=${MY_PN}-${PV}
@@ -10,9 +12,7 @@ SRC_URI="http://havardk.xmms.org/plugins/idcin/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~amd64"
-
-IUSE=""
+KEYWORDS="x86 ~ppc ~amd64 -sparc"
 
 DEPEND=">=media-sound/xmms-1.2.7-r20"
 
