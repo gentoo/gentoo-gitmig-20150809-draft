@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.7.0.ebuild,v 1.12 2004/06/24 22:11:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.7.0.ebuild,v 1.13 2004/06/30 17:20:13 agriffis Exp $
 
 inherit eutils
 
@@ -11,6 +11,7 @@ SRC_URI="http://www2.lm-sensors.nu/~lm78/archive/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="${KV}"
 KEYWORDS="x86 amd64 alpha ~ppc"
+IUSE=""
 
 DEPEND="virtual/linux-sources"
 
@@ -48,5 +49,3 @@ pkg_postinst() {
 	einfo "IMPORTANT ... *disable* kernel i2c support or *enable it as a module*"
 	einfo
 }
-
-

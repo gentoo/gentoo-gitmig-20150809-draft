@@ -2,8 +2,8 @@ MD5 df4aaf06ee8855230efc3438c25a1983 ifplugd-0.25.ebuild 1743
 MD5 c4aa190f8adf421c2db44e21bdfd1722 ifplugd-0.20.ebuild 1679
 MD5 9bb82fd3fcd35f85635432c619541cb0 ifplugd-0.13-r1.ebuild 975
 MD5 8e60c8abf6526bfe470a91061e9ac663 ifplugd-0.24.ebuild 1743
-MD5 0807518a3fb333380bc0b844d2d500df ifplugd-0.15.ebuild 1484
-MD5 6c818c90e3380f79dd03f6288f4d83a9 ChangeLog 1552
+MD5 b179b0f349cc140c6911e1d3a7475943 ifplugd-0.15.ebuild 1487
+MD5 810d32d621eb0689743220b35abc8548 ChangeLog 1644
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 cf1bd6291950d635b0e94f855b055dd1 files/gentoo-ifplugd.action-v2 710
 MD5 77ae9013053cc2f4b211f4b4fb1ae70a files/ifplugd.action 590
