@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/shfs
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/ChangeLog,v 1.2 2003/06/06 16:41:30 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/shfs/ChangeLog,v 1.3 2003/06/12 21:25:29 msterret Exp $
+
+  12 Jun 2003; <msterret@gentoo.org> shfs-0.31-r1.ebuild, shfs-0.31.ebuild:
+  add Header
 
 *shfs-0.31-r1 (06 Jun 2003)
 
