@@ -1,6 +1,13 @@
 # ChangeLog for dev-php/smarty
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.23 2004/12/30 21:00:12 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.24 2005/01/08 21:31:33 tomk Exp $
+
+*smarty-2.6.6 (08 Jan 2005)
+
+  08 Jan 2005; Tom Knight <tomk@gentoo.org> metadata.xml,
+  smarty-2.6.0-r2.ebuild, smarty-2.6.2.ebuild, smarty-2.6.5.ebuild,
+  +smarty-2.6.6.ebuild:
+  Version bumped, bug #75178. Set correct einfo output, bug #67229
 
   30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

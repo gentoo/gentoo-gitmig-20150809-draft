@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/smarty-2.6.0-r2.ebuild,v 1.5 2004/06/25 01:24:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/smarty-2.6.0-r2.ebuild,v 1.6 2005/01/08 21:31:33 tomk Exp $
 
 MY_P=Smarty-${PV}
 DESCRIPTION="A template engine for PHP"
@@ -24,5 +24,7 @@ pkg_postinst() {
 	einfo "Smarty has been installed in /usr/lib/php/Smarty/."
 	einfo "To use it in your scripts, either"
 	einfo "1. define('SMARTY_DIR', \"/usr/lib/php/Smarty/\") in your scripts, or"
-	einfo "2. add /usr/lib/php/Smarty/ to includes= in /etc/php4/php.ini"
+	einfo "2. add '/usr/lib/php/Smarty/' to the 'include_path' variable in your"
+	einfo "php.ini file under /etc/php/SAPI (where SAPI is one of apache-php[45],"
+	einfo "cgi-php[45] or cli-php[45])."
 }
