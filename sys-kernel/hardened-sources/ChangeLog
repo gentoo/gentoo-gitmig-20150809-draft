@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/hardened-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.39 2004/11/28 18:10:26 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/ChangeLog,v 1.40 2004/11/29 02:45:14 solar Exp $
+
+  28 Nov 2004; <solar@gentoo.org> +files/2.4.28-grsec-binfmt_a.out.patch,
+  +files/2.4.28-grsec-cmdline-race.patch,
+  +files/2.4.28-selinux-binfmt_a.out.patch,
+  +files/2.4.28-selinux-cmdline-race.patch, hardened-sources-2.4.28.ebuild:
+  - Round up remaining security patches that appear to be missing in 2.4.28. -
+  PaX standalone updated to current. hgpv=28.1
 
 *hardened-sources-2.4.28 (28 Nov 2004)
 
