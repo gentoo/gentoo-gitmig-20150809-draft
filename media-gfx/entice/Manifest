@@ -1,4 +1,4 @@
-MD5 1a3ce97eae2a744b8e963f67dbd55ec8 files/digest-entice-0.9.0.20040410 74
+MD5 2cd9a03e9df507096e77f55b31b6eefb files/digest-entice-0.9.1.20040417 74
 MD5 a39534803c5786a830c4b0caf7f9fdd6 ChangeLog 571
-MD5 bc1f01fff96682a15ed3edc570e9c446 entice-0.9.0.20040410.ebuild 561
+MD5 d1faf28cfdeff8b5c6e69b19e471a473 entice-0.9.1.20040417.ebuild 561
 MD5 2f04d0e18e32bd8fb05bcadc8114d3fa metadata.xml 307
