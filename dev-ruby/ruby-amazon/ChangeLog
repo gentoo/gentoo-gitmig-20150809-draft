@@ -1,6 +1,12 @@
 # ChangeLog for dev-ruby/ruby-amazon
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-amazon/ChangeLog,v 1.8 2004/09/30 09:04:37 citizen428 Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-amazon/ChangeLog,v 1.9 2005/01/26 16:53:14 citizen428 Exp $
+
+  26 Jan 2005; Michael Kohl <citizen428@gentoo.org>
+  -ruby-amazon-0.8.1.ebuild, -ruby-amazon-0.8.2.ebuild,
+  -ruby-amazon-0.8.3.ebuild, -ruby-amazon-0.8.4.ebuild,
+  ruby-amazon-0.8.5.ebuild:
+  Marked 0.8.5 stable on x86, cleaned out older versions.
 
   30 Sep 2004; Michael Kohl <citizen428@gentoo.org>
   ruby-amazon-0.8.2.ebuild, ruby-amazon-0.8.3.ebuild:
