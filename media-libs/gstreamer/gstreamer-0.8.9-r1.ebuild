@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.8.9.ebuild,v 1.1 2005/02/09 21:14:20 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.8.9-r1.ebuild,v 1.1 2005/02/11 13:00:25 foser Exp $
 
 inherit eutils flag-o-matic libtool gnome2 flag-o-matic
 
@@ -82,10 +82,21 @@ src_install() {
 	dodoc AUTHORS ChangeLog COPYING* DEVEL \
 		NEWS README RELEASE REQUIREMENTS TODO
 
+	dodir /etc/env.d/
+	echo "PRELINK_PATH_MASK=/usr/lib/${PN}-${PV_MAJ_MIN}" > ${D}/etc/env.d/60${PN}-${PV_MAJ_MIN}
+
 }
 
 pkg_postinst() {
 
 	gst-register-${PV_MAJ_MIN}
+
+	einfo "Gstreamer has known problems with prelinking, as a workaround"
+	einfo "this ebuild adds the gstreamer plugins to the prelink mask"
+	einfo "path to stop them from being prelinked. It is imperative"
+	einfo "that you undo & redo prelinking after building this pack for"
+	einfo "this to take effect. Make sure the gstreamer lib path is indeed"
+	einfo "added to the PRELINK_PATH_MASK environment variable."
+	einfo "For more information see http://bugs.gentoo.org/show_bug.cgi?id=81512"
 
 }
