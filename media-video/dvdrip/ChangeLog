@@ -1,6 +1,11 @@
 # ChangeLog for media-video/dvdrip
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.31 2005/01/15 21:27:50 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/ChangeLog,v 1.32 2005/03/03 17:11:08 ciaranm Exp $
+
+  03 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org>
+  dvdrip-0.50.16-r1.ebuild, dvdrip-0.50.16.ebuild, dvdrip-0.50.17.ebuild,
+  dvdrip-0.50.18.ebuild, dvdrip-0.52.0.ebuild:
+  Move sys-apps/procps -> sys-process/procps
 
   15 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> dvdrip-0.50.16-r1.ebuild,
   dvdrip-0.50.16.ebuild, dvdrip-0.50.17.ebuild, dvdrip-0.50.18.ebuild,

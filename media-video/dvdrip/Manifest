@@ -1,12 +1,22 @@
-MD5 bc836a83188683bbe2944c8c71f0cabb dvdrip-0.50.18.ebuild 1500
-MD5 6fa64ffe73f64d6ef01b4e722856187e dvdrip-0.52.0.ebuild 1516
-MD5 53a9058d7101e5212dfc879920ce3c63 dvdrip-0.50.17.ebuild 1404
-MD5 a0eec15f64549cee2890f287fa652f97 dvdrip-0.50.16-r1.ebuild 1405
-MD5 21a241c60b494368eee7be9beb306a58 ChangeLog 5535
-MD5 512a6d4a57598a29265e4e890cb0602b dvdrip-0.50.16.ebuild 1391
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6b825b583f97f2ee966adf36ce122dc2 dvdrip-0.50.17.ebuild 1405
+MD5 9772b9e66c1b976f985685f2d27638a9 dvdrip-0.50.18.ebuild 1501
+MD5 2c871bd426b935684c430342fa1f1669 ChangeLog 5752
+MD5 fa539af95792d152081dc6fb507acf2d dvdrip-0.52.0.ebuild 1517
+MD5 494eae51ecbded11b6cae0580a2ffe3c dvdrip-0.50.16-r1.ebuild 1406
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
-MD5 818c85254ed8afb5190356fc6c9a36dc files/digest-dvdrip-0.50.16-r1 72
-MD5 748c8776c847405991432e3a345432fd files/digest-dvdrip-0.52.0 71
+MD5 0639511ba7249963a72e6a83e6fdeaef dvdrip-0.50.16.ebuild 1392
 MD5 818c85254ed8afb5190356fc6c9a36dc files/digest-dvdrip-0.50.16 72
 MD5 f20273260806a39847e31fa217a2de68 files/digest-dvdrip-0.50.17 72
+MD5 748c8776c847405991432e3a345432fd files/digest-dvdrip-0.52.0 71
+MD5 818c85254ed8afb5190356fc6c9a36dc files/digest-dvdrip-0.50.16-r1 72
 MD5 f20badcd06b0ee448f1d754a254b2f9a files/digest-dvdrip-0.50.18 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCJ0UeLLFUmVNQ7rkRApG9AJ9fSe0/FEjinxnRhdJnMVnHdDFxNwCfTSRd
+h041w78+ar26jrobp/mj2Hg=
+=aozM
+-----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.50.16.ebuild,v 1.7 2005/01/15 21:27:50 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.50.16.ebuild,v 1.8 2005/03/03 17:11:08 ciaranm Exp $
 
 inherit perl-module
 
@@ -26,7 +26,7 @@ DEPEND=" gnome? ( gnome-extra/gtkhtml )
 		virtual/cdrtools )
 	>=media-video/transcode-0.6.10
 	>=media-gfx/imagemagick-5.5.7
-	sys-apps/procps
+	sys-process/procps
 	dev-perl/gtk-perl
 	dev-perl/Storable
 	dev-perl/Event"
