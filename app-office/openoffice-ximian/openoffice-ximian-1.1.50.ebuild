@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.50.ebuild,v 1.6 2004/02/05 09:22:11 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.50.ebuild,v 1.7 2004/02/15 09:37:17 dholm Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -61,7 +61,7 @@ HOMEPAGE="http://ooo.ximian.com"
 
 LICENSE="LGPL-2 | SISSL-1.1"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="gnome kde"
 
 RDEPEND=">=sys-libs/glibc-2.1

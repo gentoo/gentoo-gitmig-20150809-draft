@@ -1,6 +1,9 @@
 # ChangeLog for app-office/openoffice-ximian
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.22 2004/02/05 09:22:11 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.23 2004/02/15 09:37:17 dholm Exp $
+
+  15 Feb 2004; David Holm <dholm@gentoo.org> openoffice-ximian-1.1.50.ebuild:
+  Added to ~ppc, closing bug #40801.
 
   05 Feb 2004; suka <suka@gentoo.org> openoffice-ximian-1.1.50.ebuild:
   Now stripping the binaries during install, this reduces the size of the
