@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.875 2005/01/17 17:05:12 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.876 2005/01/17 20:36:07 swegener Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -615,9 +615,9 @@ net-misc/strongswan:smartcard - Enables smartcard support
 net-misc/zaptel:devfs26 - Devfs support for Linux-2.6
 net-misc/zebra:ospfapi - An API for the Zebra OSPF daemon
 net-misc/vnc:server - Build VNC client
-net-news/inn:innkeywords - Enable automatic keyword generation support
-net-news/inn:inntaggedhash - Use tagged hash table for history (disables large file support)
-net-news/slrn:uudeview - Add support for yEnc coding and more using dev-libs/uulib
+net-nntp/inn:innkeywords - Enable automatic keyword generation support
+net-nntp/inn:inntaggedhash - Use tagged hash table for history (disables large file support)
+net-nntp/slrn:uudeview - Add support for yEnc coding and more using dev-libs/uulib
 net-p2p/amule:remote - enable remote controlling of the client
 net-p2p/amule:stats - enable statistic reporting
 net-p2p/nicotine:geoip - Enable GeoIP support
