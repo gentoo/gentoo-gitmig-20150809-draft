@@ -1,6 +1,6 @@
-# ChangeLog for games-mud/tkMOO-light
+# ChangeLog for games-mud/tkmoo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/tkmoo/ChangeLog,v 1.4 2003/12/07 03:53:46 luke-jr Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/tkmoo/ChangeLog,v 1.5 2003/12/08 08:29:44 vapier Exp $
 
   07 Dec 2003; Luke-Jr <luke-jr@gentoo.org> tkmoo-0.3.32.ebuild:
   tkmoo symlink
