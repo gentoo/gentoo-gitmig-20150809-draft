@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/ivman
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ChangeLog,v 1.6 2004/12/15 14:05:44 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/ivman/ChangeLog,v 1.7 2004/12/17 14:12:11 genstef Exp $
+
+*ivman-0.4_rc1 (17 Dec 2004)
+
+  17 Dec 2004; Stefan Schweizer <genstef@gentoo.org> ivman-0.3.ebuild,
+  +ivman-0.4_rc1.ebuild:
+  Marking version 0.3 stable, updating to latest 0.4_rc1, thanks to rohan
+  <rohan@mizzenblog.com> in bug 74616
 
   15 Dec 2004; Stefan Schweizer <genstef@gentoo.org> ivman-0.3-r1.ebuild:
   Make the usb patch only apply on USE=usb
