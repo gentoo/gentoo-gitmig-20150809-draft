@@ -1,6 +1,14 @@
 # ChangeLog for app-admin/rkhunter
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rkhunter/ChangeLog,v 1.12 2004/08/07 22:40:54 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rkhunter/ChangeLog,v 1.13 2004/08/12 00:02:29 solar Exp $
+
+*rkhunter-1.1.5 (11 Aug 2004)
+
+  11 Aug 2004; <solar@gentoo.org> rkhunter-1.1.2.ebuild,
+  rkhunter-1.1.4.ebuild, rkhunter-1.1.5.ebuild:
+  This release has the Ni0 Rootkit detection support, some small fixes, and a
+  few new tests. It also fixes the xinetd.conf false positive, and has an
+  improved application version checker and updated databases.
 
 *rkhunter-1.1.4 (07 Aug 2004)
 

@@ -1,14 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/rkhunter/rkhunter-1.1.2.ebuild,v 1.3 2004/07/23 23:36:52 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/rkhunter/rkhunter-1.1.5.ebuild,v 1.1 2004/08/12 00:02:29 solar Exp $
 
 DESCRIPTION="Rootkit Hunter scans for known and unknown rootkits, backdoors, and sniffers."
 HOMEPAGE="http://www.rootkit.nl/"
 SRC_URI="http://downloads.rootkit.nl/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc alpha ~amd64 ~sparc"
+KEYWORDS="~x86 ~ppc ~alpha ~amd64 ~sparc"
 IUSE=""
+S=${WORKDIR}/${PN}
 DEPEND="app-arch/tar
 	app-arch/gzip
 	virtual/mta"
@@ -16,7 +17,7 @@ RDEPEND="app-shells/bash
 	dev-lang/perl"
 
 src_install() {
-	cd ${WORKDIR}/${PN}/files
+	cd ${S}/files
 	dodir /usr/lib/rkhunter
 	dodir /usr/lib/rkhunter/db
 	insinto /usr/lib/rkhunter/db
@@ -30,13 +31,16 @@ src_install() {
 	exeinto /usr/bin
 	doexe rkhunter
 	dodoc CHANGELOG LICENSE README WISHLIST
+
+	exeinto /etc/cron.daily
+	newexe ${FILESDIR}/rkhunter.cron rkhunter
 }
 
 pkg_postinst() {
 	echo
-	einfo "Add the following to /etc/crontab to run un Rootkit Hunter as a cronjob:"
-	einfo "30 5 * * * root /usr/bin/rkhunter -c --cronjob <more options>"
-	einfo "Rootkit Hunter will now run on a daily basis at 5:30 (AM)"
+	einfo "A cron script has been installed to /etc/cron.daily/rkhunter."
+	einfo "To enable it, edit /etc/cron.daily/rkhunter and follow the"
+	einfo "directions."
 	echo
 }
 
