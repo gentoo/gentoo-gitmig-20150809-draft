@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.31.ebuild,v 1.14 2004/06/25 00:48:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-1.3.31.ebuild,v 1.15 2004/09/28 02:57:25 vapier Exp $
 
 inherit eutils fixheadtails
 
@@ -23,7 +23,7 @@ DEPEND="dev-lang/perl <=sys-libs/db-4.1
 	>=sys-libs/gdbm-1.8
 	>=dev-libs/expat-1.95.2
 	>=sys-apps/sed-4
-	=sys-libs/db-1.85-r1"
+	=sys-libs/db-1*"
 LICENSE="Apache-2.0"
 SLOT="1"
 
