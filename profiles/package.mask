@@ -1,3 +1,6 @@
+#incomplete and very dangerous
+>=app-office/openoffice-641b
+
 #apparently has an fs unmount corruption bug
 =sys-kernel/linux-sources-2.4.15
 
