@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.2.ebuild,v 1.1 2005/03/07 17:20:36 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.2.ebuild,v 1.2 2005/03/08 18:22:42 mcummings Exp $
 
 IUSE="opengl"
 
@@ -57,7 +57,9 @@ src_install () {
 	dodir /usr/share/doc/${PF}/html
 	eval `perl '-V:version'`
 	PERLVERSION=${version}
-	mv ${D}/usr/lib/perl5/vendor_perl/${PERLVERSION}/${CHOST%%-*}-linux/PDL/HtmlDocs/PDL \
+	eval `perl '-V:archname'`
+	ARCHVERSION=${archname}
+	mv ${D}/usr/lib/perl5/vendor_perl/${PERLVERSION}/${ARCHVERSION}/PDL/HtmlDocs/PDL \
 		${D}/usr/share/doc/${PF}/html
 
 	mydir=${D}/usr/share/doc/${PF}/html/PDL
@@ -66,17 +68,17 @@ src_install () {
 	do
 		dosed ${i/${D}}
 	done
-	cp ${S}/Doc/scantree.pl ${D}/usr/lib/perl5/vendor_perl/${PERLVERSION}/${CHOST%%-*}-linux/PDL/Doc/
-	cp ${S}/Doc/mkhtmldoc.pl ${D}/usr/lib/perl5/vendor_perl/${PERLVERSION}/${CHOST%%-*}-linux/PDL/Doc/
+	cp ${S}/Doc/scantree.pl ${D}/usr/lib/perl5/vendor_perl/${PERLVERSION}/${ARCHVERSION}/PDL/Doc/
+	cp ${S}/Doc/mkhtmldoc.pl ${D}/usr/lib/perl5/vendor_perl/${PERLVERSION}/${ARCHVERSION}/PDL/Doc/
 
 }
 
 pkg_postinst() {
-	einfo "Building perldl.db. You can recreate this at any time"
+	perl /usr/lib/perl5/vendor_perl/${PERLVERSION}/${ARCHVERSION}/PDL/Doc/scantree.pl
+	einfo "Building perldl.db done. You can recreate this at any time"
 	einfo "by running"
-	einfo "perl /usr/lib/perl5/vendor_perl/${PERLVERSION}/${CHOST%%-*}-linux/PDL/Doc/scantree.pl"
-	sleep 3
-	perl /usr/lib/perl5/vendor_perl/${PERLVERSION}/${CHOST%%-*}-linux/PDL/Doc/scantree.pl
+	einfo "perl /usr/lib/perl5/vendor_perl/${PERLVERSION}/${ARCHVERSION}/PDL/Doc/scantree.pl"
+	epause 3
 	einfo "PDL requires that glx and dri support be enabled in"
 	einfo "your X configuration for certain parts of the graphics"
 	einfo "engine to work. See your X's documentation for futher"
