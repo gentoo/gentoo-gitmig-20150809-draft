@@ -1,6 +1,10 @@
 # ChangeLog for net-www/resin-ee
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/resin-ee/ChangeLog,v 1.4 2004/06/25 01:11:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/resin-ee/ChangeLog,v 1.5 2004/07/26 13:40:42 axxo Exp $
+
+  26 Jul 2004; Thomas Matthijs <axxo@gentoo.org> +metadata.xml,
+  resin-ee-2.1.9.ebuild:
+  ebuild cleanup
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> resin-ee-2.1.9.ebuild:
   Add inherit eutils

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/resin-ee/resin-ee-2.1.9.ebuild,v 1.6 2004/06/25 01:11:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/resin-ee/resin-ee-2.1.9.ebuild,v 1.7 2004/07/26 13:40:42 axxo Exp $
 
 inherit java-pkg eutils
 
@@ -13,31 +13,32 @@ LICENSE="CAUCHO"
 SLOT="0"
 DEPEND="!net-www/resin"
 RDEPEND=">=virtual/jdk-1.2"
+IUSE=""
 
-pkg_setup() {
-	if ! groupmod resin ; then
-		groupadd -g 268 resin || die "problem adding group resin, gid 268"
-	fi
-	if ! id resin; then
-		useradd -u 268 -g resin -s /bin/bash -d /opt/resin -c "Resin" resin || die "problem adding user resin, uid 268"
-	fi
-}
-
-src_compile() {
+src_unpack() {
+	unpack ${A}
+	cd ${S}
 	epatch ${FILESDIR}/${PV}/${PN}.diff
 }
+
+pkg_preinst() {
+	enewgroup resin
+	enewuser resin -1 /bin/bash /opt/resin resin
+	chown -R resin:resin ${D}/opt/resin
+	chown -R resin:resin ${D}/var/log/${PN}
+}
+src_compile() {	:; }
 
 src_install() {
 	cd ${S}
 	RESIN_HOME="/opt/resin"
-	INSTALLING="yes"
-	DIROPTIONS="--mode=0775 --owner=resin --group=resin"
+	diropts -m0755
 
 	# Create directories
 	dodir ${RESIN_HOME}
-	dodir /var/log/resin
-	dosym /var/log/resin ${RESIN_HOME}/logs
-	touch ${D}/var/log/resin/.keep
+	dodir /var/log/${PN}
+	dosym /var/log/${PN} ${RESIN_HOME}/logs
+	keepdir /var/log/${PN}/
 
 	# INIT SCRIPTS AND ENV
 
@@ -55,8 +56,6 @@ src_install() {
 	insinto /etc/env.d
 	insopts -m0755
 	doins ${S}/21resin
-
-	chown -R resin:resin ${S}
 
 	dodir /opt/resin || die
 	dodoc LICENSE readme.txt
@@ -118,19 +117,9 @@ pkg_postinst() {
 	einfo " Please file any bugs at http://bugs.gentoo.org/ or else it"
 	einfo " may not get seen.  Thank you."
 	einfo " "
-	echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1
-	sleep 10
-
 }
 
 pkg_postrm() {
-	if [ -z "${INSTALLING}" ] ; then
-		einfo ">>> Removing user for Resin"
-		userdel resin || die "Error removing Resin user"
-		einfo ">>> Removing group for Resin"
-		groupdel resin || die "Error removing Resin group"
-	else
-		einfo ">>> Resin user and group preserved"
-	fi
+	einfo "You may want to remove the resin user and group"
 }
 
