@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.8.ebuild,v 1.8 2004/08/06 04:09:58 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libusb/libusb-0.1.8.ebuild,v 1.9 2004/09/16 01:54:58 pvdabeel Exp $
 
 inherit eutils
 
@@ -10,17 +10,18 @@ SRC_URI="mirror://sourceforge/libusb/${P}.tar.gz"
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~alpha ~amd64 ~ia64 ppc64 macos"
+KEYWORDS="~x86 ~sparc ~ppc ~alpha ~amd64 ~ia64 ppc64 macos ppc-macos"
 IUSE="debug doc"
 
 DEPEND="sys-devel/libtool
-	!macos? ( doc? ( app-text/openjade
-		=app-text/docbook-sgml-dtd-3.1-r1 ) )"
+	!macos? ( !ppc-macos? ( doc? ( app-text/openjade
+		=app-text/docbook-sgml-dtd-3.1-r1 ) ) )"
 
 src_unpack(){
 	unpack ${A}
 	# needed by libgphoto2, see bug #45889
 	cd ${S}; epatch ${FILESDIR}/libusb-0.1.8-amd64-fPIC.patch
+	# BUG on macos ARCH is ppc
 	[ "${ARCH}x" = "macosx" ] && \
 		( aclocal && autoconf && automake --add-missing )
 }

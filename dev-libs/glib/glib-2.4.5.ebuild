@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.4.5.ebuild,v 1.6 2004/09/16 01:48:51 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.4.5.ebuild,v 1.7 2004/09/16 01:50:38 pvdabeel Exp $
 
 inherit libtool
 
@@ -23,6 +23,8 @@ src_compile() {
 
 	if use macos; then
 		glibtoolize
+	elif use ppc-macos; then
+		glibtoolize	
 	else
 		elibtoolize
 	fi
