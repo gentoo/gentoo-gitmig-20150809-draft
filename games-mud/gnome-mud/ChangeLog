@@ -1,6 +1,10 @@
 # ChangeLog for games-mud/gnome-mud
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/ChangeLog,v 1.9 2004/01/02 19:36:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/ChangeLog,v 1.10 2004/01/03 02:04:20 mr_bones_ Exp $
+
+  02 Jan 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  gnome-mud-0.10.4a.ebuild:
+  add dev-perl/XML-Parser to RDEPEND
 
 *gnome-mud-0.10.4a (02 Jan 2004)
 

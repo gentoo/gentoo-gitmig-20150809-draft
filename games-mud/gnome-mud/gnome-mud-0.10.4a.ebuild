@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/gnome-mud-0.10.4a.ebuild,v 1.1 2004/01/02 19:36:59 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/gnome-mud/gnome-mud-0.10.4a.ebuild,v 1.2 2004/01/03 02:04:20 mr_bones_ Exp $
 
 inherit games gnome2
 
@@ -18,6 +18,7 @@ RDEPEND="=x11-libs/gtk+-2*
 	=gnome-base/libgnome-2*
 	=gnome-base/libgnomeui-2*
 	>=x11-libs/vte-0.10.26
+	dev-perl/XML-Parser
 	python? ( >=dev-python/pygtk-1.99.13 )
 	zlib? ( sys-libs/zlib )"
 
