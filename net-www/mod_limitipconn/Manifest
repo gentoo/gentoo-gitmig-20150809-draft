@@ -1,17 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 05a06147f353d2844c22ad8d69e7c46e ChangeLog 1043
+MD5 82d4aa44256a4fa915727ba2eed8159c ChangeLog 1330
 MD5 0d18f0fe5d603b41b988373892caf195 metadata.xml 226
 MD5 adb34f8c8edb120148ba1a6ca078559c mod_limitipconn-0.22.ebuild 705
-MD5 e5be9dc23fcebb8d8561979d1f97826d mod_limitipconn-0.22-r1.ebuild 736
-MD5 d74c2fe772d1158400818e16f9a55a5f files/digest-mod_limitipconn-0.22 70
+MD5 32c901ef8618d6871135d8376da209ba mod_limitipconn-0.22-r1.ebuild 638
+MD5 a389704e69848edb3437f8cb8c2c38ee mod_limitipconn-0.04.ebuild 844
 MD5 9dad8cd241c920daa6b6d8740cf2ed01 files/27_mod_limitipconn.conf 624
+MD5 d74c2fe772d1158400818e16f9a55a5f files/digest-mod_limitipconn-0.22 70
 MD5 d74c2fe772d1158400818e16f9a55a5f files/digest-mod_limitipconn-0.22-r1 70
+MD5 6a4297b16078f78a42aee295f0331973 files/digest-mod_limitipconn-0.04 70
+MD5 c893598a5903f5b8b9456f0ac5d4de82 files/mod_limitipconn-0.04-local_ip.patch 2235
+MD5 19738f900e2a69c3a3165a23f7c8b122 files/mod_limitipconn-0.04-vhost.patch 7997
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB4HsCmPFBzbX68WERAmIpAJ4vbz25UNejpu3YFe7+b8VBBiTGsgCdGd8b
-CYjYk2SvRdd3Ctsu8cIDC+0=
-=FBfX
+iD8DBQFCCjDcmPFBzbX68WERAhzgAJ4+AqK1C7Bi150JYz3W84a0opA1KQCfaayO
+kX87yAs4g4jWpoXrDJaGDUE=
+=Sdlf
 -----END PGP SIGNATURE-----
