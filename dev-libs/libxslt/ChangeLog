@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libxslt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.33 2003/06/14 03:06:40 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxslt/ChangeLog,v 1.34 2003/06/24 11:06:09 foser Exp $
+
+*libxslt-1.0.30-r1 (24 Jun 2003)
+
+  24 Jun 2003; foser <foser@gentoo.org> libxslt-1.0.30-r1.ebuild :
+  Reinstated emake on upstream request (#23356)
 
   08 Jun 2003; Christian Birchinger <joker@gentoo.org> libxslt-1.0.30.ebuild:
   Added sparc stable keyword
