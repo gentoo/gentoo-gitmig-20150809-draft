@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r2.ebuild,v 1.4 2002/03/18 18:48:57 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5-r2.ebuild,v 1.5 2002/03/18 18:50:24 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
@@ -11,14 +11,14 @@ HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 #Specific Linux headers are now required so that we build from a stable "base"
 #portage-1.8.9 needed for smart library merging feature (avoids segfaults on glibc upgrade)
 LHV=2.4.17
-DEPEND=">=sys-apps/portage-1.8.9_pre1 ~sys-kernel/linux-headers-${LHV} nls? ( sys-devel/gettext ) gd? ( media-libs/libgd )"
+DEPEND="~sys-kernel/linux-headers-${LHV} nls? ( sys-devel/gettext ) gd? ( media-libs/libgd )"
 RDEPEND="~sys-kernel/linux-headers-${LHV}"
 
 if [ -z "`use build`" ]
 then
 	RDEPEND="$RDEPEND gd? ( sys-libs/zlib media-libs/libpng ) sys-apps/baselayout"
 else
-	RDEPEND="$RDEPEND sys-apps/baselayout"
+	RDEPEND="$RDEPEND >=sys-apps/portage-1.8.9_pre1 sys-apps/baselayout"
 fi
 
 PROVIDE="virtual/glibc"
