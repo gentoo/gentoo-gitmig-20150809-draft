@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.93 2004/02/02 08:43:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.94 2004/02/02 19:24:55 eradicator Exp $
+
+  02 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> xmms-1.2.9-r1.ebuild:
+  Cleanup to remove some gnome cruft and now using make DESTDIR=${D} install
+  instead of einstall
 
   02 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org> xmms-1.2.9-r1.ebuild:
   Removing gnome-panel dep since xmms no longer includes a gnome1 panel applet.

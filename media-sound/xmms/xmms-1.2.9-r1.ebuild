@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.9-r1.ebuild,v 1.2 2004/02/02 08:43:13 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.9-r1.ebuild,v 1.3 2004/02/02 19:24:55 eradicator Exp $
 
 inherit flag-o-matic eutils
 
@@ -120,7 +120,6 @@ src_compile() {
 	econf \
 		--with-dev-dsp=/dev/sound/dsp \
 		--with-dev-mixer=/dev/sound/mixer \
-		`use_with gnome` \
 		`use_enable oggvorbis vorbis` \
 		`use_enable oggvorbis oggtest` \
 		`use_enable oggvorbis vorbistest` \
@@ -140,11 +139,12 @@ src_compile() {
 }
 
 src_install() {
-	einstall \
-		incdir=${D}/usr/include \
-		sysdir=${D}/usr/share/applets/Multimedia \
-		GNOME_SYSCONFDIR=${D}/etc \
-		install || die "make install failed"
+	make DESTDIR=${D} install || die
+#	einstall \
+#		incdir=${D}/usr/include \
+#		sysdir=${D}/usr/share/applets/Multimedia \
+#		GNOME_SYSCONFDIR=${D}/etc \
+#		install || die "make install failed"
 
 	dodoc AUTHORS ChangeLog FAQ NEWS README TODO
 
@@ -159,13 +159,13 @@ src_install() {
 	insinto /etc/X11/wmconfig
 	donewins xmms/xmms.wmconfig xmms
 
-	if use gnome; then
+	if [ `use gnome` ] ; then
 		insinto /usr/share/gnome/apps/Multimedia
 		doins xmms/xmms.desktop
 		dosed "s:xmms_mini.xpm:mini/xmms_mini.xpm:" \
 			/usr/share/gnome/apps/Multimedia/xmms.desktop
-	else
-		rm ${D}/usr/share/man/man1/gnomexmms*
+#	else
+#		rm ${D}/usr/share/man/man1/gnomexmms*
 	fi
 
 	# Add the sexy Gentoo Ice skin
