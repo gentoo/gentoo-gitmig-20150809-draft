@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/kamix
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kamix/ChangeLog,v 1.10 2004/11/09 01:45:14 pkdawson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kamix/ChangeLog,v 1.11 2004/11/17 22:44:20 eradicator Exp $
+
+  17 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org> kamix-0.5.7.ebuild:
+  Assume vumeter.
 
   08 Nov 2004; Patrick Dawson <pkdawson@gentoo.org> kamix-0.5.7.ebuild:
   Stable x86.

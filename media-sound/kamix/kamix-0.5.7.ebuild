@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kamix/kamix-0.5.7.ebuild,v 1.6 2004/11/12 09:22:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kamix/kamix-0.5.7.ebuild,v 1.7 2004/11/17 22:44:20 eradicator Exp $
 
 IUSE=""
 
@@ -22,6 +22,6 @@ S=${WORKDIR}/${PN}
 
 src_compile() {
 	kde_src_compile myconf
-	myconf="$myconf `use_enable arts vumeter`"
+	myconf="$myconf --enable-vumeter"
 	kde_src_compile configure make
 }
