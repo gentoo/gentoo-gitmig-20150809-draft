@@ -1,17 +1,18 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ladcca/ladcca-0.4.0.ebuild,v 1.8 2004/06/24 23:04:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ladcca/ladcca-0.4.0.ebuild,v 1.9 2004/09/22 22:21:56 eradicator Exp $
+
+IUSE="alsa"
 
 DESCRIPTION="Linux Audio Developer's Configuration and Connection API (LADCCA)"
 HOMEPAGE="http://pkl.net/~node/ladcca.html"
 SRC_URI="http://pkl.net/~node/software/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc amd64"
-IUSE=""
+KEYWORDS="x86 ppc amd64 ~sparc"
 
-DEPEND="media-libs/alsa-lib \
-	media-sound/jack-audio-connection-kit \
+DEPEND="alsa? ( media-libs/alsa-lib )
+	media-sound/jack-audio-connection-kit
 	>=x11-libs/gtk+-2.0"
 
 src_compile() {
