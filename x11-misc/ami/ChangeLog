@@ -1,6 +1,6 @@
 # ChangeLog for x11-misc/ami
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/ami/ChangeLog,v 1.5 2003/01/28 01:02:13 seo Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/ami/ChangeLog,v 1.6 2003/02/03 22:42:33 seo Exp $
 
 *ami-1.1.0 (27 Jan 2003)
   
@@ -15,6 +15,9 @@
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 *ami-1.0.11-r2 (11 Jul 2002)
+
+  03 Feb 2003; Jungmin Seo <seo@gentoo.org> digest-ami-1.0.11-r2:
+  Changed digest file
 
   08 Nov 2002; Seemant Kulleen <seemant@gentoo.org> * :
 
@@ -31,6 +34,9 @@
   remove gnome-applet option for GNOME2
 
 *ami-1.0.11-r1 (09 Jul 2002)
+
+  03 Feb 2003; Jungmin Seo <seo@gentoo.org> digest-ami-1.0.11-r1:
+  Changed digest file
 
   14 Jul 2002; phoen][x <phoenix@gentoo.org> ami-1.0.11-r1.ebuild :
   Added KEYWORDS, SLOT.
