@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.1-r4.ebuild,v 1.1 2002/12/26 20:14:40 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.1-r4.ebuild,v 1.2 2003/01/08 22:29:02 azarah Exp $
 
 IUSE="java crypt ipv6 gtk2 ssl ldap gnome"
 # Internal USE flags that I do not really want to advertise ...
@@ -33,6 +33,11 @@ filter-flags "-fomit-frame-pointer"
 #
 # <azarah@gentoo.org> (13 Oct 2002)
 strip-flags
+
+# We set -O in ./configure to -O1, as -O2 cause crashes on startup ...
+# (bug #13287)
+export CFLAGS="${CFLAGS//-O?}"
+export CXXFLAGS="${CFLAGS//-O?}"
 
 EMVER="0.71.0"
 IPCVER="1.0.1"
@@ -457,7 +462,7 @@ src_compile() {
 		--with-java-supplement \
 		--with-pthreads \
 		--enable-extensions="${myext}" \
-		--enable-optimize="-O2" \
+		--enable-optimize="-O1" \
 		--with-default-mozilla-five-home=/usr/lib/mozilla \
 		${myconf} || die
 

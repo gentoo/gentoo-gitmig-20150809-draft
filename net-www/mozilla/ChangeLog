@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.78 2002/12/26 20:14:40 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.79 2003/01/08 22:29:02 azarah Exp $
+
+  09 Jan 2003; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2.1-r4.ebuild :
+
+  We set -O in ./configure to -O1, as -O2 cause crashes on startup ...
+  (bug #13287)
 
   26 Dec 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2.1-r4.ebuild :
 
