@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/cryptsetup
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.4 2004/09/17 11:32:09 tigger Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/cryptsetup/ChangeLog,v 1.5 2004/10/13 19:50:36 wolf31o2 Exp $
+
+  13 Oct 2004; Chris Gianelloni <wolf31o2@gentoo.org> cryptsetup-0.1.ebuild:
+  Stable on amd64, blame jhuebel.
 
   17 Sep 2004; Rob Holland <tigger@gentoo.org> cryptsetup-0.1.ebuild:
   Marking stable on x86
