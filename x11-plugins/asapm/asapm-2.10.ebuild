@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/asapm/asapm-2.10.ebuild,v 1.8 2002/10/04 06:41:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/asapm/asapm-2.10.ebuild,v 1.1 2002/11/03 16:09:24 seemant Exp $
 
 S=${WORKDIR}/${P}
 
