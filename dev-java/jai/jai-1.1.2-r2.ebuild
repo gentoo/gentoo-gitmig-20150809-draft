@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jai/jai-1.1.2-r2.ebuild,v 1.1 2004/03/19 21:22:18 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jai/jai-1.1.2-r2.ebuild,v 1.2 2004/06/03 18:32:56 karltk Exp $
 
 DESCRIPTION="JAI is a class library for managing images."
 HOMEPAGE="http://java.sun.com/products/java-media/jai/"
@@ -32,11 +32,11 @@ src_install() {
 	start=${D}
 	jre=""
 	java_home="$(java-config --jdk-home)"
-	if [ ! -z java_home ]; then
+	if [ ! -z "${java_home}" ]; then
 		jre="jre/"
 	else
 		java_home="$(java-config --jre-home)"
-		if [ -z java_home ]; then
+		if [ -z ${java_home} ]; then
 			die "You must have a JVM selected in order to install JAI"
 		fi
 	fi
