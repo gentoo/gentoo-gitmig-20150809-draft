@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/commons-digester-1.4.1.ebuild,v 1.1 2003/03/22 11:47:05 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-digester/commons-digester-1.4.1.ebuild,v 1.2 2003/03/22 12:41:33 absinthe Exp $
 
 inherit jakarta-commons
 
@@ -29,4 +29,10 @@ src_compile() {
 	echo "commons-logging.jar=`java-config --classpath=commons-logging`" | sed s/\=.*:/\=/ >> build.properties
 	jakarta-commons_src_compile myconf make
 	use doc && jakarta-commons_src_compile makedoc
+	use doc && jakarta-commons_src_install html
+
+	# UGLY HACK
+	mv ${S}/target/conf/MANIFEST.MF ${S}/target/classes/
+	cd ${S}/target/classes
+	zip -r ../${PN}-${PV}.jar org
 }
