@@ -47,6 +47,7 @@ net-analyzer/network_cmds-176
 net-analyzer/tcpdump-3.8
 net-dialup/ppp-142
 net-dns/bind-9.2.2
+net-dns/bind-tools-9.2.2
 net-firewall/ipfirewall-17
 net-fs/samba-3.0.2
 net-ftp/lukemftp-3
