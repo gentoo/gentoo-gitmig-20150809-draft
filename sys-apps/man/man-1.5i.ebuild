@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5i.ebuild,v 1.1 2001/05/08 01:30:15 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5i.ebuild,v 1.2 2001/05/16 14:16:48 achim Exp $
 
 P=man-1.5i
 A=${P}.tar.gz
@@ -56,10 +56,9 @@ src_install() {
     doman man2html.1
 
     cd ${S}/man
-    echo "BINROOTDIR=${D}" > Makefile.orig
     cat Makefile >> Makefile.orig
     sed -e "s:usr/man:usr/share/man:" Makefile.orig > Makefile
-    try make installsubdirs 
+    try make PREFIX=${D} installsubdirs 
 
     cd ${S}
     dodoc COPYING LSM README* TODO

@@ -20,8 +20,7 @@ src_compile() {
 }
 
 src_install () {
-
-    try make DESTDIR=${D} install
+    try make DESTDIR=${D} kde_locale=${D}${KDEDIR}/share/locale install
     dodoc AUTHORS COPYING ChangeLog NEWS README TODO
 }
 

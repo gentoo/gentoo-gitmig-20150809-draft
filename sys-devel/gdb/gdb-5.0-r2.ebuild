@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.0-r2.ebuild,v 1.5 2001/03/06 05:27:28 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gdb/gdb-5.0-r2.ebuild,v 1.6 2001/05/16 14:16:48 achim Exp $
 
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}
@@ -31,8 +31,12 @@ src_compile() {
 
 src_install() {
 
-    try make prefix=${D}/usr mandir=${D}/usr/share/man infodir=${D}/usr/share/info install install-info
-
+    try make prefix=${D}/usr mandir=${D}/usr/share/man install 
+    cd gdb/doc
+    try make infodir=${D}/usr/share/info install-info
+    cd ${S}/bfd/doc
+    try make infodir=${D}/usr/share/info install-info
+    cd ${S}
     # These includes and libs are in binutils already
     rm -f ${D}/usr/lib/libbfd.*
     rm -r ${D}/usr/lib/libiberty.*
