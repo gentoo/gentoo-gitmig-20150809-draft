@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/FileHandle-Unget
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/FileHandle-Unget/ChangeLog,v 1.1 2003/11/20 17:53:55 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/FileHandle-Unget/ChangeLog,v 1.2 2003/12/31 11:17:54 mcummings Exp $
+
+  31 Dec 2003; Michael Cummings,,, <mcummings@gentoo.org>
+  FileHandle-Unget-0.11.ebuild:
+  Tested on sparc and x86 successfully
 
 *FileHandle-Unget-0.11 (20 Nov 2003)
 
