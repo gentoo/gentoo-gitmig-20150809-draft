@@ -43,5 +43,5 @@ tcpd		sys-apps/tcp-wrappers
 tetex		app-text/tetex
 ungif		media-libs/ungif
 #xinerama
-bitmap-fonts
-xprint
+
+

@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/gcc31/use.defaults,v 1.4 2004/09/08 18:29:29 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/gcc31/use.defaults,v 1.5 2004/09/09 08:06:33 seemant Exp $
 
 # Use this file to override specific mappings indicating which package
 # satisfies a particular USE flag.  The base profile (in
@@ -10,5 +10,5 @@
 # Note, that these mappings extend the parent profiles' (its own parent,
 # grandparent, and so on up to the base profile).  However, mappings that
 # are present in the parents can be overridden in this file.
-bitmap-fonts
-xprint
+
+

@@ -2,7 +2,7 @@ aalib		media-libs/aalib
 alsa		media-libs/alsa-lib
 arts		kde-base/arts
 berkdb		sys-libs/db
-bitmap-fonts
+
 bonobo		gnome-base/bonobo
 cdr		app-cdr/cdrtools
 directfb	dev-libs/DirectFB
@@ -45,5 +45,5 @@ tcpd		sys-apps/tcp-wrappers
 tetex		app-text/tetex
 ungif		media-libs/ungif
 xinerama
-xprint
+
 X		x11-base/xorg-x11 x11-base/xfree
