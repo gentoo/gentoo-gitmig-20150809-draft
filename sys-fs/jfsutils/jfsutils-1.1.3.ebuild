@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/jfsutils-1.1.3.ebuild,v 1.5 2003/11/13 14:21:29 cybersystem Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/jfsutils/jfsutils-1.1.3.ebuild,v 1.6 2004/03/14 10:49:23 plasmaroo Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="IBM's Journaling Filesystem (JFS) Utilities"
@@ -9,7 +9,7 @@ SRC_URI="http://www10.software.ibm.com/developer/opensource/jfs/project/pub/${P}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~amd64 ~ppc ~hppa ia64 ~sparc"
+KEYWORDS="x86 ~amd64 ~ppc ~hppa ia64 ~sparc"
 
 DEPEND="virtual/glibc"
 
