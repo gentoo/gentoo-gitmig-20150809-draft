@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.3.4.ebuild,v 1.1 2003/09/10 18:57:14 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/freevo/freevo-1.3.4.ebuild,v 1.2 2003/09/22 18:23:37 max Exp $
 
 DESCRIPTION="Digital video jukebox (PVR, DVR)."
 HOMEPAGE="http://www.freevo.org/"
@@ -21,7 +21,7 @@ DEPEND=">=dev-python/pygame-1.5.5
 	>=media-libs/libsdl-1.2.5
 	>=media-tv/xmltv-0.5.16
 	>=sys-apps/sed-4
-	dvd? ( >=media-video/xine-ui-0.9.21 )
+	dvd? ( >=media-video/xine-ui-0.9.22 )
 	encode? ( >=media-sound/cdparanoia-3.9.8 >=media-sound/lame-3.93.1 )
 	lirc? ( app-misc/lirc >=dev-python/pylirc-0.0.3 )
 	X? ( virtual/x11 )"
