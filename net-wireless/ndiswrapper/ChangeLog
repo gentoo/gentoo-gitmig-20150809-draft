@@ -1,6 +1,16 @@
 # ChangeLog for net-wireless/ndiswrapper
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.16 2004/12/28 17:02:06 cardoe Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/ndiswrapper/ChangeLog,v 1.17 2005/01/15 21:11:28 cardoe Exp $
+
+*ndiswrapper-1.0_rc2 (15 Jan 2005)
+
+  15 Jan 2005; Doug Goldstein <cardoe@gentoo.org> -ndiswrapper-0.10.ebuild,
+  -ndiswrapper-0.11.ebuild, -ndiswrapper-0.12-r1.ebuild,
+  -ndiswrapper-0.12-r2.ebuild, -ndiswrapper-0.12.ebuild,
+  +ndiswrapper-1.0_rc2.ebuild:
+  revision bump to 1.0rc2, switched to linux-mod
+  deleted old drivers
+  added local use flag to support 4kstacks
 
 *ndiswrapper-0.12-r3 (28 Dec 2004)
 
