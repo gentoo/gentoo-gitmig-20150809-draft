@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-0.9.5.ebuild,v 1.1 2003/07/11 20:19:09 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/alsa-tools-0.9.5-r1.ebuild,v 1.1 2003/07/15 16:35:22 agenkin Exp $
 
 DESCRIPTION="Advanced Linux Sound Architecture tools"
 HOMEPAGE="http://www.alsa-project.org"
@@ -22,7 +22,7 @@ ALSA_TOOLS="ac3dec as10k1 envy24control sb16_csp seq/sbiload"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	#patch -p1 < ${FILESDIR}/${P}-gcc3.3.patch || die
+	patch -p1 < ${FILESDIR}/${P}-gcc3.3.patch || die
 }
 
 src_compile() {

@@ -1,6 +1,6 @@
 # ChangeLog for media-sound/alsa-tools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.24 2003/07/11 20:19:09 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-tools/ChangeLog,v 1.25 2003/07/15 16:35:21 agenkin Exp $
 
   04 Jul 2003; jje <jje@gentoo.org> alsa-tools-0.9.4.ebuild:
   Added alsa-driver to DEPEND. See #23613. Most people follow the instructions
@@ -14,6 +14,12 @@
 
   05 Jun 2003; Daniel Ahlberg <aliz@gentoo.org> alsa-tools-0.9.4.ebuild :
   Switched to mirror://alsaproject in SRC_URI.
+
+*alsa-tools-0.9.5-r1 (15 Jul 2003)
+
+  15 Jul 2003; Arcady Geknin <agenkin@gentoo.org> :
+  Enabled patch by Jason Rhinelander <jason-gentoo@gossamer-threads.com>
+  (bug #22324) to fix compilation with gcc 3.3.
 
 *alsa-tools-0.9.5 (11 Jul 2003)
 
