@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird-bin/mozilla-thunderbird-bin-0.4.ebuild,v 1.1 2003/12/06 17:06:25 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird-bin/mozilla-thunderbird-bin-0.4.ebuild,v 1.2 2003/12/08 06:33:08 brad Exp $
 
 inherit nsplugins eutils
 
@@ -41,7 +41,7 @@ src_install() {
 	mv ${S} ${D}/opt/MozillaThunderbird
 
 	# Fixing permissions
-	chown -R root.root ${D}/opt/MozillaThunderbird
+	chown -R root:root ${D}/opt/MozillaThunderbird
 
 	# Truetype fonts
 	cd ${D}/opt/MozillaThunderbird/defaults/pref

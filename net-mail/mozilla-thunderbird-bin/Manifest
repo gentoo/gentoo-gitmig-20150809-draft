@@ -1,6 +1,6 @@
 MD5 5dd0418c191830dfcfd74400e3f9608c metadata.xml 182
 MD5 04c7a469a02f328dc8e00dc80e57e7a4 ChangeLog 596
-MD5 559c4863e1d4b980313146fedc2f9eaa mozilla-thunderbird-bin-0.4.ebuild 2021
+MD5 8f53bf06099f3a01c942d3f9d3b13e82 mozilla-thunderbird-bin-0.4.ebuild 2021
 MD5 7dd2dac40d6bb1cad39c82742ac7a949 files/MozillaThunderbird 294
 MD5 409c1fb9a49f402540b3ffa017bb3636 files/thunderbird-0.3-antialiasing-patch 1246
 MD5 680f6e780814d352113bbd3fc58b4052 files/digest-mozilla-thunderbird-bin-0.4 93
