@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.10.ebuild,v 1.7 2004/03/28 02:20:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt/rxvt-2.7.10.ebuild,v 1.8 2004/04/19 14:10:37 usata Exp $
 
 inherit eutils
 
@@ -54,7 +54,6 @@ src_compile() {
 		--enable-shared \
 		--enable-keepscrolling \
 		--with-term=${term} \
-		--with-term=rxvt \
 		`use_enable xgetdefault` || die
 
 	emake || die
