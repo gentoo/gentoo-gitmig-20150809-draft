@@ -1,6 +1,10 @@
 # ChangeLog for app-text/tetex
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.65 2004/08/04 03:44:27 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/ChangeLog,v 1.66 2004/08/17 02:28:47 usata Exp $
+
+  17 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> tetex-1.0.7-r13.ebuild:
+  Corrected missing dvips-secure.diff. (It was in patch archive but not
+  applied.) This closes bug #60603.
 
   04 Aug 2004; Daniel Black <dragonheart@gentoo.org> :
   Manifest fix - contained removed patch

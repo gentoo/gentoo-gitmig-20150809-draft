@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r13.ebuild,v 1.11 2004/07/30 19:50:14 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r13.ebuild,v 1.12 2004/08/17 02:28:47 usata Exp $
 
 inherit eutils flag-o-matic
 
@@ -37,7 +37,6 @@ src_unpack() {
 	unpack teTeX-src-${PV}.tar.gz
 
 	cd ${S}
-	epatch ${FILESDIR}/${P}-dvips-secure.diff
 
 	mkdir ${S}/texmf
 	cd ${S}/texmf
@@ -51,6 +50,7 @@ src_unpack() {
 
 	cd ${S}
 	unpack ${P}-gentoo.tar.gz
+	epatch ${P}-dvips-secure.diff
 
 	# Fixes from way back ... not sure even Achim will
 	# still know why :/
