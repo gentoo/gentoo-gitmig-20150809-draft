@@ -1,6 +1,9 @@
 # ChangeLog for sci-biology/ncbi-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.6 2005/01/30 16:50:04 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/ncbi-tools/ChangeLog,v 1.7 2005/02/02 21:22:58 j4rg0n Exp $
+
+  02 Feb 2005; Lina Pezzella <j4rg0n@gentoo.org> ncbi-tools-20040616.ebuild:
+  Stable ppc-macos
 
   30 Jan 2005; Olivier Fisette <ribosome@gentoo.org>
   ncbi-tools-20041020.ebuild:
@@ -50,7 +53,7 @@
   ncbi-tools-20040202-r1.ebuild:
   Fix use invocation
 
-  05 May 2004; Bryan Østergaard <kloeri@gentoo.org>
+  05 May 2004; Bryan Ãstergaard <kloeri@gentoo.org>
   ncbi-tools-20040202-r1.ebuild:
   Stable on alpha.
 

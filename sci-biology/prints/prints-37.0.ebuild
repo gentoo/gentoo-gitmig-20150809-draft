@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/prints/prints-37.0.ebuild,v 1.2 2005/01/02 01:57:51 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/prints/prints-37.0.ebuild,v 1.3 2005/02/02 21:32:12 j4rg0n Exp $
 
 DESCRIPTION="A protein motif fingerprint database"
 HOMEPAGE="http://www.bioinf.man.ac.uk/dbbrowser/PRINTS/"
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.ebi.ac.uk/pub/databases/${PN}/newpr.lis.gz
 	ftp://ftp.ebi.ac.uk/pub/databases/${PN}/${PN}37_0.vsn.gz"
 LICENSE="public-domain"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~ppc-macos"
+KEYWORDS="x86 ~ppc ppc-macos"
 IUSE="no-emboss no-rawdb"
 
 S=${WORKDIR}
