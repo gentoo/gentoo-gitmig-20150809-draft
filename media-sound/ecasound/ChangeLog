@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/ecasound-2.0.4.ebuild
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ChangeLog,v 1.3 2003/01/16 00:56:29 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ecasound/ChangeLog,v 1.4 2003/01/29 14:39:01 viz Exp $
+
+*ecasound-2.2.0 (29 Jan 2003)
+
+  29 Jan 2003; Tobias Eichert <viz@gentoo.org> ecasound-2.2.0.ebuild
+  files/digest-ecasound-2.2.0:
+  
+  Version bump.
 
   15 Jan 2003; Nick Hadaway <raker@gentoo.org> ecasound-2.2.0_rc1.ebuild :
   changed jack depend to virtual/jack
