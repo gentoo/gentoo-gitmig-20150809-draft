@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.21 2004/12/24 08:44:41 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.22 2004/12/28 19:15:19 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *brltty-3.6.1 (24 Dec 2004)
 
@@ -35,7 +38,7 @@
   17 Sep 2004; Jon Hood <squinky86@gentoo.org> +brltty-3.6_pre3.ebuild:
   Version bump.
 
-  22 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> brltty-3.5.ebuild:
+  22 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> brltty-3.5.ebuild:
   Stable on alpha.
 
   18 Aug 2004; Jon Hood <squinky86@gentoo.org> brltty-3.5.ebuild:
@@ -50,7 +53,7 @@
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> brltty-3.4.1.ebuild:
   add sed-4 dep
 
-  15 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> brltty-3.4.1.ebuild:
+  15 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> brltty-3.4.1.ebuild:
   Stable on alpha.
 
 *brltty-3.5 (14 Jun 2004)

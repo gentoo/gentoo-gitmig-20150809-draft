@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/gnome-mag
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/ChangeLog,v 1.31 2004/12/23 13:05:28 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/ChangeLog,v 1.32 2004/12/28 19:22:03 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   23 Dec 2004; Guy Martin <gmsoft@gentoo.org> gnome-mag-0.11.10.ebuild:
   Stable on hppa.
@@ -63,7 +66,7 @@
   gnome-mag-0.10.6.ebuild:
   sync IUSE (-debug)
 
-  16 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> gnome-mag-0.10.11.ebuild:
+  16 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> gnome-mag-0.10.11.ebuild:
   Stable on alpha.
 
   30 May 2004; L. Boshell <leonardop@gentoo.org> gnome-mag-0.10.11.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/dasher
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.23 2004/12/23 12:53:49 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/ChangeLog,v 1.24 2004/12/28 19:17:58 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   23 Dec 2004; Guy Martin <gmsoft@gentoo.org> dasher-3.2.11.ebuild:
   Stable on hppa.
@@ -23,7 +26,7 @@
   18 Sep 2004; Leonardo Boshell <leonardop@gentoo.org> dasher-3.2.11.ebuild:
   New release.
 
-  23 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> dasher-3.2.10-r1.ebuild:
+  23 Aug 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> dasher-3.2.10-r1.ebuild:
   Stable on alpha.
 
   05 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> dasher-3.2.10-r1.ebuild:
