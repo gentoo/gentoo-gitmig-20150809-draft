@@ -1,11 +1,21 @@
-MD5 aa7a69eb66a857b1f117a2858e827f4d ChangeLog 3103
-MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 40ad19a685c6a4710644151121d0c770 ruby-config-0.2.ebuild 534
-MD5 ecc43bdbb89664625d87ce4d1235b920 ruby-config-0.3.1.ebuild 676
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 aac34cd06169dbc774df19cfafd616df ruby-config-0.3.ebuild 555
+MD5 668b7c9f3aa449633d08daec202630c3 ruby-config-0.3.1.ebuild 676
+MD5 40ad19a685c6a4710644151121d0c770 ruby-config-0.2.ebuild 534
+MD5 f3969042aff35a08e2994ff20d555530 ChangeLog 3196
+MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-ruby-config-0.2 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-ruby-config-0.3 0
+MD5 a7587ba5bba2cb46fd7c87c1e24fcc00 files/ruby-config-0.3.1.diff 427
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-ruby-config-0.3.1 0
 MD5 276864d6663923ca8ac72c501a857338 files/ruby-config-0.2 2724
 MD5 1fc7fb01ff27a5293ea7a3aec878b55c files/ruby-config-0.3 3107
-MD5 a7587ba5bba2cb46fd7c87c1e24fcc00 files/ruby-config-0.3.1.diff 427
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBsfuMCHk4+ZoBpvsRAkBcAJ0Wh0Fsar4YNoOiIh7+/muDbI8A+QCdGns1
+kkXs0caFjEDUl1S7qbdqBa8=
+=IMUi
+-----END PGP SIGNATURE-----
