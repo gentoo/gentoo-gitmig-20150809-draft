@@ -1,0 +1,10 @@
+# ChangeLog for dev-java/jmdns
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmdns/ChangeLog,v 1.1 2004/04/18 22:02:06 zx Exp $
+
+*jmdns-0.2 (18 Apr 2004)
+
+  18 Apr 2004; Chris Aniszczyk <zx@gentoo.org> jmdns-0.2.ebuild, metadata.xml:
+  Initial Import. Closes #48047
+  Thanks to Guy de Pourtales <guy@gadp.ch> for the initial ebuild.
+
