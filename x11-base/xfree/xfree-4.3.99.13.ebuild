@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.13.ebuild,v 1.7 2003/10/27 18:51:30 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.13.ebuild,v 1.8 2003/10/31 21:38:01 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -817,7 +817,7 @@ src_install() {
 	# Install Synaptics touchpad driver and docs
 	insinto /usr/X11R6/lib/modules/input
 	doins ${SYNDIR}/synaptics_drv.o
-	insinto /usr/X11R6/bin
+	exeinto /usr/X11R6/bin
 	doexe ${SYNDIR}/synclient
 	docinto synaptics
 	dodoc ${SYNDIR}/{COMPATIBILITY,FEATURES,FILES,INSTALL,INSTALL.DE,LICENSE,NEWS,PARAMETER,TODO,VERSION}
