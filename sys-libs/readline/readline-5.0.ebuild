@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.0.ebuild,v 1.4 2004/08/26 11:51:25 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/readline-5.0.ebuild,v 1.5 2004/09/02 23:24:07 eradicator Exp $
 
 inherit eutils gnuconfig
 
@@ -59,16 +59,16 @@ src_install() {
 	dohtml -r doc
 
 	# Backwards compatibility #29865
-	if [ -e ${ROOT}/lib/libreadline.so.4 ] ; then
-		cp -a ${ROOT}/lib/libreadline.so.4* ${D}/lib/
-		touch ${D}/lib/libreadline.so.4*
+	if [ -e ${ROOT}/$(get_libdir)/libreadline.so.4 ] ; then
+		cp -a ${ROOT}/$(get_libdir)/libreadline.so.4* ${D}/$(get_libdir)/
+		touch ${D}/$(get_libdir)/libreadline.so.4*
 	fi
 }
 
 pkg_postinst() {
-	if [ -e ${ROOT}/lib/libreadline.so.4 ] ; then
+	if [ -e ${ROOT}/$(get_libdir)/libreadline.so.4 ] ; then
 		ewarn "Your old readline libraries have been copied over."
 		ewarn "You should run 'revdep-rebuild --soname libreadline.so.4' asap."
-		ewarn "Once you have, you can safely delete /lib/libreadline.so.4*"
+		ewarn "Once you have, you can safely delete /$(get_libdir)/libreadline.so.4*"
 	fi
 }
