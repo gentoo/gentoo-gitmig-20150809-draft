@@ -1,13 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 0cbb5ecb2182406f9a1bb6654b31e08d ChangeLog 2679
+MD5 a01c72a452e31276465c891555ddaff6 ChangeLog 2886
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 c8af71bca7650d7eb281bacf0929a42d teapop-0.3.3.ebuild 1128
 MD5 ceb8531c0d09811fd37915c39491ca15 teapop-0.3.7.ebuild 1339
 MD5 f9825b327c07dbbcc05168cfd175b2dc teapop-0.3.5.ebuild 1341
+MD5 49d4cb6e9ba020ce109518382aeeee1f teapop-0.3.8-r1.ebuild 1581
 MD5 f9233a80d91fcaac099d95da3b3885c8 teapop-0.3.7-r1.ebuild 1483
 MD5 0284d10d24dc3512d51b55c8a26ce433 teapop-0.3.8.ebuild 1519
+MD5 230d3f3ae839f2ef4842405070f63079 files/digest-teapop-0.3.8-r1 64
 MD5 3afa1bcb1ec5ae7ddd8d229988fef7f6 files/digest-teapop-0.3.3 64
 MD5 230d3f3ae839f2ef4842405070f63079 files/digest-teapop-0.3.8 64
 MD5 fa42f37eed3061bfa135eb72673414c5 files/teapop-confd 143
@@ -19,7 +21,7 @@ MD5 410c3be33295d22e317e9e734253a8af files/teapop-init 754
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBUTjP10xuJSrg3/sRAnlGAJ4858D/BHIfBAp1PCJyDHGZzlLnRACffBHB
-Xg25IE+WqTTBou/H/Xi/lQg=
-=qADn
+iD8DBQFBuOISQlM6RnzZP+IRApeGAKC2ZnJqh84DyV2b2X65f6ATVUWFUQCeMqYr
+Tcz/x2nTyCAGt4PkojbhRn0=
+=GNtn
 -----END PGP SIGNATURE-----
