@@ -67,3 +67,4 @@ move app-sci/prints sci-biology/prints
 move app-sci/prosite sci-biology/prosite
 move app-sci/rebase sci-biology/rebase
 move app-sci/transfac sci-biology/transfac
+move app-sci/clustalx sci-biology/clustalx
