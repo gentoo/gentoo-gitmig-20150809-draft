@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/f-prot/f-prot-3.12b.ebuild,v 1.1 2002/11/19 19:59:03 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/f-prot/f-prot-3.12b.ebuild,v 1.2 2002/11/21 09:11:32 raker Exp $
 
 MY_P=fp-linux-sb-${PV}
 S=${WORKDIR}/f-prot
@@ -16,7 +16,7 @@ RDEPEND=">=app-arch/unzip-5.42-r1
 
 SLOT="0"
 LICENSE="F-PROT"
-KEYWORDS="~x86 ~sparc ~sparc64"
+KEYWORDS="x86 sparc sparc64"
 
 IUSE=""
 
