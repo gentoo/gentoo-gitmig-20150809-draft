@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/xalan
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.14 2003/12/16 03:37:21 strider Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xalan/ChangeLog,v 1.15 2004/01/18 07:36:53 strider Exp $
+
+  18 Jan 2004; Adrian Almenar <strider@gentoo.org> xalan-2.5.2.ebuild:
+  Moved ppc, sparc keywords to stable, Updated RDEPEND.
 
 *xalan-2.5.2 (15 Dec 2003)
 
