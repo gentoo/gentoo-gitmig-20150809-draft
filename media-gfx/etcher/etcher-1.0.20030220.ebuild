@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/etcher/etcher-1.0.20030220.ebuild,v 1.1 2003/02/20 12:37:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/etcher/etcher-1.0.20030220.ebuild,v 1.2 2003/03/03 14:52:23 vapier Exp $
 
 DESCRIPTION="graphical editing tool for creating and manipulating Ebits GUI elements"
 HOMEPAGE="http://www.enlightenment.org/pages/etcher.html"
@@ -9,7 +9,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND="virtual/glibc
 	sys-devel/gcc
