@@ -1,6 +1,6 @@
 # ChangeLog for dev-embedded/pikdev
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/ChangeLog,v 1.8 2004/04/25 01:29:11 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/pikdev/ChangeLog,v 1.9 2004/04/27 09:07:15 aliz Exp $
 
 *pikdev-0.6.5c-r1 (25 Apr 2004)
 
@@ -11,6 +11,9 @@
   pikdev-0.4.4.ebuild, pikdev-0.6.5c.ebuild:
   Changed x11-base/xfree dependancy to virtual/x11 to fix bug #47760. Thanks to
   D.J. Capelis <djcapelisp@yahoo.com>
+
+*pikdev-0.4.4-r1 (09 Apr 2004)
+*pikdev-0.6.5c (09 Apr 2004)
 
   09 Apr 2004; Daniel Black <dragonheart@gentoo.org> pikdev-0.4.4-r1.ebuild
   pikdev-0.6.5c.ebuild:
