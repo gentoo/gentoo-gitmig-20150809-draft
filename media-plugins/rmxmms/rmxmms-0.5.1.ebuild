@@ -1,6 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/rmxmms/rmxmms-0.5.1.ebuild,v 1.3 2003/02/13 12:58:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/rmxmms/rmxmms-0.5.1.ebuild,v 1.4 2003/03/28 23:45:53 liquidx Exp $
+
+IUSE=""
+
+inherit gcc
 
 S=${WORKDIR}/rmxmms/${P}
 DESCRIPTION="RealAudio plugin for xmms"
@@ -14,6 +18,15 @@ KEYWORDS="x86 -ppc -sparc "
 
 DEPEND="media-sound/xmms
 	media-video/realplayer"
+
+pkg_setup() {
+	if [ `gcc-major-ver` = 3 ]; then
+    	eerror "This plugin will not work when compiled with gcc-3.x"
+        eerror "Either install and select a gcc-2.95.x compiler with"
+        eerror  "gcc-config, or give up."
+        die "Doesn't work with gcc-3.xx"
+    fi
+}
 
 src_unpack () {
 
@@ -41,8 +54,13 @@ src_unpack () {
 }
 
 src_compile () {
+	# patch Makefiles to use -lgcc
+    cd ${S}/rmxmms
+    sed -e 's/^LIBS =/LIBS = -lgcc/' Makefile.in > Makefile.in.new
+    sed -e 's/^LDFLAGS =/LDFLAGS = -lgcc/' Makefile.in.new > Makefile.in
+    
+	cd ${S}
 	econf "--with-realsdk-dir=${WORKDIR}/realsdk/rmasdk_6_0" || die
-
 	emake || die
 }
 
