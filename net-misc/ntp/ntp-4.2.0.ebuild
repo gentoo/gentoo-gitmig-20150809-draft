@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0.ebuild,v 1.4 2004/02/15 01:51:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.2.0.ebuild,v 1.5 2004/02/16 01:56:32 vapier Exp $
 
 inherit eutils
 
@@ -12,11 +12,11 @@ SRC_URI="http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/${P}.tar.gz"
 LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64"
-IUSE="parse-clocks droproot selinux ssl"
+IUSE="parse-clocks nodroproot selinux ssl"
 
 RDEPEND=">=sys-libs/ncurses-5.2
 	>=sys-libs/readline-4.1
-	droproot? ( sys-libs/libcap )
+	!nodroproot? ( sys-libs/libcap )
 	ssl? ( dev-libs/openssl )
 	selinux? ( sec-policy/selinux-ntp )"
 DEPEND="${RDEPEND}
@@ -58,6 +58,8 @@ src_unpack() {
 	aclocal -I . || die "aclocal"
 	automake || die "automake"
 	autoconf || die "autoconf"
+
+	sed -i 's:-lelf:-la_doe_a_deer_a_female_deer:g' configure
 }
 
 src_compile() {
@@ -71,7 +73,7 @@ src_compile() {
 		|| mysslconf="--with-openssl-libdir=no"
 	econf \
 		--build=${CHOST} \
-		`use_enable droproot linuxcaps` \
+		`use_enable !nodroproot linuxcaps` \
 		`use_enable clockctl` \
 		${mysslconf} \
 		|| die
@@ -107,6 +109,7 @@ src_install() {
 	insinto /etc/conf.d
 	newins ${FILESDIR}/ntpd.confd ntpd
 	newins ${FILESDIR}/ntp-client.confd ntp-client
+	use nodroproot && dosed "s|-u ntp:ntp||" /etc/conf.d/ntpd
 
 	dodir /var/lib/ntp
 	fowners ntp:ntp /var/lib/ntp

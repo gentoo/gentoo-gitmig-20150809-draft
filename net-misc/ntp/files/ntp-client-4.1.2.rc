@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/files/ntp-client.rc,v 1.4 2004/02/16 01:56:32 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/files/ntp-client-4.1.2.rc,v 1.1 2004/02/16 01:56:32 vapier Exp $
 
 depend() {
 	before cron
@@ -27,6 +27,6 @@ start() {
 	checkconfig || return $?
 
 	ebegin "Setting clock via the ntp client '${NTPCLIENT_CMD}'"
-	${NTPCLIENT_CMD} -Q ${NTPCLIENT_OPTS} >/dev/null
+	${NTPCLIENT_CMD} >/dev/null ${NTPCLIENT_OPTS}
 	eend $? "Failed to set clock"
 }
