@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-data/quake2-data-3.20.ebuild,v 1.11 2004/12/30 22:33:18 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-data/quake2-data-3.20.ebuild,v 1.12 2005/01/03 07:35:33 vapier Exp $
 
 inherit games eutils
 
@@ -20,10 +20,10 @@ S=${WORKDIR}
 
 pkg_setup() {
 	cdrom_get_cds Install
-	if [ -e ${CDROM_ROOT}/Install/Data ] ; then
+	if [[ -e ${CDROM_ROOT}/Install/Data ]] ; then
 		export CDROM_ROOT=${CDROM_ROOT}/Install/Data
 		einfo "Source is the CD"
-	elif [ -e ${CDROM_ROOT}/baseq2 ] ; then
+	elif [[ -e ${CDROM_ROOT}/baseq2 ]] ; then
 		export CDROM_ROOT=${CDROM_ROOT}
 		einfo "Source is an installed copy"
 	else
@@ -34,28 +34,29 @@ pkg_setup() {
 }
 
 src_unpack() {
-	unzip -L -q ${DISTDIR}/q2-${PV}-x86-full-ctf.exe
+	echo ">>> Unpacking ${A} to ${PWD}"
+	unzip -Lqo "${DISTDIR}/${A}"
 }
 
 src_install() {
 	dodoc DOCS/* 3.20_Changes.txt
 	newdoc ctf/readme.txt ctf-readme.txt
-	dohtml -r ${CDROM_ROOT}/DOCS/quake2_manual/*
+	dohtml -r "${CDROM_ROOT}"/DOCS/quake2_manual/*
 
 	dodir ${GAMES_DATADIR}/${PN}/baseq2
 
 	if use videos ; then
 		insinto ${GAMES_DATADIR}/${PN}/baseq2/video
-		doins ${CDROM_ROOT}/baseq2/video/*
+		doins "${CDROM_ROOT}"/baseq2/video/*
 	fi
 
 	insinto ${GAMES_DATADIR}/${PN}/baseq2
-	doins ${CDROM_ROOT}/baseq2/pak0.pak || die "couldnt grab pak0.pak"
+	doins "${CDROM_ROOT}"/baseq2/pak0.pak || die "couldnt grab pak0.pak"
 	doins baseq2/*.pak || die "couldnt grab release paks"
 	doins baseq2/maps.lst || die "couldnt grab maps.lst"
-	cp -R baseq2/players ${D}/${GAMES_DATADIR}/${PN}/baseq2/ || die "couldnt grab player models"
+	cp -R baseq2/players "${D}/${GAMES_DATADIR}"/${PN}/baseq2/ || die "couldnt grab player models"
 
-	insinto ${GAMES_DATADIR}/${PN}/ctf
+	insinto "${GAMES_DATADIR}"/${PN}/ctf
 	doins ctf/*.{cfg,ico,pak} || die "couldnt grab ctf"
 
 	prepgamesdirs
