@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/pms
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/pms/ChangeLog,v 1.5 2004/06/24 22:29:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/pms/ChangeLog,v 1.6 2004/07/10 15:27:00 slarti Exp $
+
+  10 Jul 2004; Tom Martin <slarti@gentoo.org> pms-0.94.ebuild:
+  Marked ~amd64.
 
   18 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> pms-0.94.ebuild:
   sync IUSE; use default src_compile; use dobin; tidy
