@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc. 
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.21.ebuild,v 1.1 2002/07/28 09:15:35 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.22.ebuild,v 1.1 2002/07/30 05:15:36 drobbins Exp $
  
 S=${WORKDIR}/${P}
 SLOT="0"
@@ -32,7 +32,6 @@ src_compile() {
 	else
 		emake || die
 	fi
-
 }
 
 src_install() {
@@ -180,6 +179,13 @@ pkg_postinst() {
 	einfo "WARNING: The default behavior for 'emerge rsync' is to have --clean enabled."
 	einfo "Please back up any modified files in your Portage tree before running emerge"
 	einfo "rsync."
+	echo
+	einfo "You may want to move any custom ebuilds to a new directory, and then set"
+	einfo "PORTDIR_OVERLAY (in /etc/make.conf) to point to this directory.  For example,"
+	einfo "make a /usr/portage.local/sys-apps/foo directory and put your ebuild in there."
+	einfo "Then set PORTDIR_OVERLAY=\"/usr/portage.local\"  Portage should see your"
+	einfo "personal ebuilds.  NOTE: PORTDIR_OVERLAY support is *beta* code; it may not"
+	einfo "work correctly yet."
 	echo
 	echo
 	}
