@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/mutt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.4 2002/05/29 21:29:34 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/ChangeLog,v 1.5 2002/07/28 04:52:10 seemant Exp $
+
+*mutt-1.4-r1 (27 Jul 2002)
+
+  27 Jul 2002; Seemant Kulleen <seemant@gentoo.org> mutt-1.4-r1.ebuild :
+
+  Enabled support for compressed folders.  Submitted by Lim Swee Tat
+  <st_lim@eXtropia.com> in an email to me.
 
 *mutt-1.4 (29 May 2002)
 
