@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.14-r1.ebuild,v 1.4 2003/08/18 03:14:02 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.14-r1.ebuild,v 1.5 2003/08/28 04:55:58 robbat2 Exp $
 
 #to accomodate -laadeedah releases
 NEWP=${P}
@@ -23,7 +23,7 @@ SLOT="0"
 IUSE="static readline innodb berkdb tcpd ssl perl debug"
 
 DEPEND="readline? ( >=sys-libs/readline-4.1 )
-	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
+	tcpd? ( >=sys-apps/tcp-wrappers-7.6-r6 )
 	ssl? ( >=dev-libs/openssl-0.9.6d )
 	perl? ( dev-lang/perl )
 	>=sys-libs/zlib-1.1.3
