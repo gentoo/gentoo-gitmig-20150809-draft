@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/wavplay
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/wavplay/ChangeLog,v 1.5 2004/03/01 05:37:16 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/wavplay/ChangeLog,v 1.6 2004/04/27 07:15:54 absinthe Exp $
+
+  27 Apr 2004; Dylan Carlson <absinthe@gentoo.org> wavplay-1.4.ebuild:
+  Added ~amd64 to KEYWORDS.
 
   24 Apr 2003; Patrick Kursawe <phosphan@gentoo.org> wavplay-1.4.ebuild :
   Considered stable for x86
