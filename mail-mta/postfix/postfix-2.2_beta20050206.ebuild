@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.2_beta20050119.ebuild,v 1.1 2005/01/22 05:40:25 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.2_beta20050206.ebuild,v 1.1 2005/02/07 20:16:11 langthang Exp $
 
 inherit eutils ssl-cert toolchain-funcs flag-o-matic fixheadtails
 IUSE="ipv6 pam ldap mysql postgres ssl sasl mailwrapper mbox nis vda selinux hardened"
@@ -16,7 +16,7 @@ SRC_URI="ftp://ftp.porcupine.org/mirrors/postfix-release/experimental/${MY_SRC}.
 
 LICENSE="IPL-1"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~alpha ~amd64 ~s390 ~mips ~hppa"
+KEYWORDS="~x86 ~sparc ~ppc ~alpha ~amd64 ~s390 ~mips ~hppa ~ppc64"
 
 PROVIDE="virtual/mta virtual/mda"
 DEPEND=">=sys-libs/db-3.2
@@ -36,11 +36,11 @@ RDEPEND="${DEPEND}
 S=${WORKDIR}/${MY_SRC}
 
 group_user_check() {
-	einfo "checking for postfix group, create if missing."
+	einfo "checking for postfix group...	create if missing."
 	enewgroup postfix 207
-	einfo "checking for postdrop group, create if missing."
+	einfo "checking for postdrop group...	create if missing."
 	enewgroup postdrop 208
-	einfo "checking for postfix user, create if missing."
+	einfo "checking for postfix user...		create if missing."
 	enewuser postfix 207 /bin/false /var/spool/postfix postfix
 }
 
