@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.2.0_alpha2.ebuild,v 1.1 2003/09/25 23:26:41 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.2.0_beta2.ebuild,v 1.1 2003/12/02 02:04:33 caleb Exp $
 inherit kde-dist eutils
 
 IUSE="ldap pam motif encode oggvorbis cups ssl opengl samba java"
@@ -8,14 +8,14 @@ DESCRIPTION="KDE base packages: the desktop, panel, window manager, konqueror...
 
 KEYWORDS="~x86"
 
-DEPEND=">=media-sound/cdparanoia-3.9.8
-	ldap? ( >=net-nds/openldap-1.2 )
-	pam? ( >=sys-libs/pam-0.73 )
+DEPEND="media-sound/cdparanoia
+	ldap? ( net-nds/openldap )
+	pam? ( sys-libs/pam )
 	motif? ( virtual/motif )
-	encode? ( >=media-sound/lame-3.89b )
-	oggvorbis? ( >=media-libs/libvorbis-1.0_beta1 )
+	encode? ( media-sound/lame )
+	oggvorbis? ( media-libs/libvorbis )
 	cups? ( net-print/cups )
-	ssl? ( >=dev-libs/openssl-0.9.6b )
+	ssl? ( dev-libs/openssl )
 	opengl? ( virtual/opengl )
 	samba? ( net-fs/samba )
 	java? ( virtual/jdk )
@@ -28,7 +28,6 @@ RDEPEND="sys-apps/eject"
 myconf="$myconf --with-dpms --with-cdparanoia"
 
 use ldap	&& myconf="$myconf --with-ldap" 	|| myconf="$myconf --without-ldap"
-use pam		&& myconf="$myconf --with-pam"		|| myconf="$myconf --with-shadow"
 use motif	&& myconf="$myconf --with-motif"	|| myconf="$myconf --without-motif"
 use encode	&& myconf="$myconf --with-lame"		|| myconf="$myconf --without-lame"
 use cups	&& myconf="$myconf --with-cups"		|| myconf="$myconf --disable-cups"
@@ -53,10 +52,12 @@ src_compile() {
 src_install() {
 
 	kde_src_install
+	cd ${S}/kdm && make DESTDIR=${D} GENKDMCONF_FLAGS="--no-old --no-backup" install
 
-	# cf bug #5953
 	insinto /etc/pam.d
 	newins ${FILESDIR}/kde.pam kde
+	# kde-np is new requirement for 3.2 autologins - #33690
+	newins ${FILESDIR}/kde-np.pam kde-np
 
 	# startkde script
 	cd ${D}/${KDEDIR}/bin
@@ -65,6 +66,12 @@ src_install() {
 	sed -e "s:_KDEDIR_:${KDEDIR}:" startkde.orig > startkde
 	rm startkde.orig
 	chmod a+x startkde
+
+	# kcontrol modules
+	cd ${D}/${KDEDIR}/etc/xdg/menus
+	ln -s default_kde-settings.menu kde-settings.menu
+	ln -s default_kde-information.menu kde-information.menu
+	ln -s default_kde-screensavers.menu kde-screensavers.menu
 
 	# x11 session script
 	cd ${T}
@@ -75,9 +82,12 @@ ${KDEDIR}/bin/startkde" > kde-${PV}
 	doexe kde-${PV}
 
 	cd ${D}/${KDEDIR}/share/config/kdm || die
+	dodir ${KDEDIR}/share/config/kdm/sessions
 	sed -e "s:_PREFIX_:${PREFIX}:g" \
-	    -e "s:_VERSION:${VERSION}:g" \
+	    -e "s:_RANDOM_:${RANDOM}${RANDOM}:g" \
 	${FILESDIR}/${PVR}/kdmrc > kdmrc
+	sed -e "s:_PREFIX_:${PREFIX}:g" ${FILESDIR}/${PVR}/Xsetup > Xsetup
+
 	cp ${FILESDIR}/${PVR}/backgroundrc .
 
 	#backup splashscreen images, so they can be put back when unmerging
@@ -101,5 +111,4 @@ ${KDEDIR}/bin/startkde" > kde-${PV}
 
 pkg_postinst() {
 	mkdir -p ${KDEDIR}/share/templates/.source/emptydir
-
 }
