@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.4.18.ebuild,v 1.1 2004/03/19 18:44:23 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fvwm/fvwm-2.4.18.ebuild,v 1.2 2004/03/30 11:29:17 taviso Exp $
 
 inherit gnuconfig
 
@@ -12,7 +12,7 @@ SRC_URI="ftp://ftp.fvwm.org/pub/fvwm/version-2/${P}.tar.bz2"
 HOMEPAGE="http://www.fvwm.org/"
 
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~ppc ~sparc"
+KEYWORDS="x86 alpha ~ppc sparc"
 LICENSE="GPL-2 FVWM"
 
 RDEPEND="readline? ( >=sys-libs/readline-4.1
@@ -25,6 +25,7 @@ RDEPEND="readline? ( >=sys-libs/readline-4.1
 		rplay? ( >=media-sound/rplay-3.3.2 )
 		stroke? ( >=dev-libs/libstroke-0.4 )
 		>=dev-lang/perl-5.8.0
+		sys-apps/debianutils
 		virtual/x11"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
@@ -112,24 +113,4 @@ src_install() {
 	dodoc AUTHORS ChangeLog COPYING README NEWS docs/ANNOUNCE docs/BUGS \
 	docs/DEVELOPERS docs/FAQ docs/error_codes docs/color_combos docs/TODO \
 	docs/fvwm.lsm
-}
-
-pkg_postinst() {
-	ewarn
-	ewarn "The following features that you did not request are now"
-	ewarn "controlled via USE flags:"
-	use readline	|| ewarn "	Readline support in FvwmConsole [readline]"
-	use ncurses		|| ewarn "	Ncurses support in FvwmConsole [ncurses]"
-	use stroke		|| ewarn "	Mouse Gestures [stroke]"
-	use xinerama	|| ewarn "	Xinerama Support [xinerama]"
-	use cjk			|| ewarn "	Multibyte Character Support [cjk]"
-	use rplay		|| ewarn "	RPlay Support in FvwmEvent [rplay]"
-	use gtk			|| ewarn "	FvwmGTK (gtk+ support) [gtk]"
-	use imlib		|| ewarn "	FvwmGTK (GDK image support) [imlib]"
-	ewarn
-	ewarn "If you require any of the features listed above, you should remerge"
-	ewarn "FVWM with the appropriate USE flags. Use this command to see the flags"
-	ewarn "available:"
-	ewarn "	$ emerge -pv fvwm"
-	ewarn
 }
