@@ -1,6 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl-glade/gtk-perl-glade-0.7004-r1.ebuild,v 1.2 2002/02/20 06:00:49 drobbins Exp $
+# Author: Tools Team <tools@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl-glade/gtk-perl-glade-0.7004-r1.ebuild,v 1.3 2002/05/06 23:28:26 seemant Exp $
 
 S=${WORKDIR}/Gtk-Perl-${PV}
 DESCRIPTION="Perl bindings for GTK"
@@ -21,8 +22,3 @@ src_install() {
 	cd Glade
 	make PREFIX=${D}/usr INSTALLMAN3DIR=${D}/usr/share/man/man3 install || die
 }
-
-
-
-
-
