@@ -1,7 +1,7 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 82b01b5609a77192dd568d3eac39bf67 ChangeLog 72679
+MD5 dc2eb78058bfbde7007a378f8ea1e5bd ChangeLog 72781
 MD5 4bcf46d8a3f5509cf09f23017408095d gcc-2.95.3-r8.ebuild 8407
 MD5 9d2f881e949534e2585b5b1e32b8edf9 gcc-3.1.1-r2.ebuild 9274
 MD5 9f2b75a5738fb492bdd6a50db9b1c8a0 gcc-3.2.3-r4.ebuild 19754
@@ -129,7 +129,7 @@ MD5 c672adb59a1f452475ab0a864b9d1bd1 files/awk/scanforssp.awk 5830
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBl2gUI1lqEGTUzyQRAt+CAKCbNup1HXDObPkCyRtKKRmsfcBSvACfaDNY
-hsBlxl2KUSd4S+FmYkLzpvw=
-=JK3T
+iD8DBQFBl2kuI1lqEGTUzyQRAuZLAKC6w6Va0WHC0S2EKkeA/YpzWv/zdACgmrcr
+4AMFFdPDHOCjwFULfXrjj6w=
+=9A5T
 -----END PGP SIGNATURE-----
