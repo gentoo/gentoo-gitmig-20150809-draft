@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/alsa-lib
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.105 2005/03/16 06:36:15 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/ChangeLog,v 1.106 2005/03/16 11:53:52 eradicator Exp $
+
+  16 Mar 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  -alsa-lib-1.0.5.ebuild, -alsa-lib-1.0.5-r3.ebuild, -alsa-lib-1.0.6.ebuild,
+  -alsa-lib-1.0.8_rc1.ebuild:
+  Removing old versions.
 
   16 Mar 2005; Chris White <chriswhite@gentoo.org>
   +files/alsa-lib-mixer.patch, alsa-lib-1.0.8.ebuild,
