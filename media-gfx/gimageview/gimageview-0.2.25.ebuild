@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimageview/gimageview-0.2.25.ebuild,v 1.4 2004/06/28 22:56:48 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimageview/gimageview-0.2.25.ebuild,v 1.5 2004/06/29 13:04:03 morfic Exp $
+
+inherit eutils gcc
 
 DESCRIPTION="Powerful GTK+ based image & movie viewer"
 HOMEPAGE="http://gtkmmviewer.sourceforge.net/"
@@ -38,6 +40,13 @@ src_compile() {
 
 	# workaround for gtk+-2.4
 	sed -i -e "/GTK_DISABLE_DEPRECATED/d" src/dirview2.c || die
+
+	#apply both patches to compile with gcc-3.4.0 closing bug #53693
+	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]
+	then
+		epatch ${FILESDIR}/gimv-gcc34.patch
+	fi
+
 
 	econf \
 		$(use_enable nls) \
