@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.0.ebuild,v 1.9 2004/06/25 00:53:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.0.ebuild,v 1.10 2004/07/14 20:06:26 agriffis Exp $
 
 IUSE="opengl"
 
 inherit perl-module
 
-S=${WORKDIR}/${P}
 DESCRIPTION="PDL Perl Module"
 SRC_URI="http://cpan.valueclick.com/modules/by-module/PDL/${P}.tar.gz"
 HOMEPAGE="http://cpan.valueclick.com/modules/by-module/PDL/${P}.readme"
@@ -42,7 +41,7 @@ src_unpack() {
 		sed -e "s:WITH_3D => undef:WITH_3D => 0:" \
 			${FILESDIR}/perldl.conf > ${S}/perldl.conf
 	fi
-	if use hpp || use amd64; then
+	if use hppa || use amd64; then
 		cd ${S}/Lib/Slatec
 		sed -i -e "s/mycompiler -c -o/mycompiler -fPIC -c -o/" Makefile.PL
 	fi
