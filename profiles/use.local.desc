@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.109 2003/09/08 19:58:33 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.110 2003/09/08 23:47:30 foser Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -67,6 +67,7 @@ media-sound/alsa-patch-bay:fltk - Compile with fltk interface and not with gtkmm
 media-sound/ardour-cvs:ardour-ksi - Build ksi interface for ardour
 media-sound/jack-cvs:jack-tmpfs - Compile in a tmpf path
 media-sound/museseq:fluidsynth - compile with support for fluidsynth
+media-sound/rhythmbox:xine - Use Xine backend
 media-sound/terminatorX:sox - Enable sox support
 media-tv/mythfrontend:lcd - Enable LCD display support using lcdproc
 media-tv/mythtv:lcd - Enable LCD display support using lcdproc
