@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mad/mad-0.14.2b-r2.ebuild,v 1.3 2002/12/02 07:18:22 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mad/mad-0.14.2b-r2.ebuild,v 1.4 2003/02/11 03:06:23 agriffis Exp $
 
 IUSE="nls esd"
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~alpha"
 
 DEPEND="esd? ( media-sound/esound )
 	nls? ( sys-devel/gettext )"
