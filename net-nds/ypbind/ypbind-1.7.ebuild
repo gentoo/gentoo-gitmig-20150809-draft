@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ypbind-1.7.ebuild,v 1.1 2000/11/26 22:48:36 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ypbind-1.7.ebuild,v 1.2 2000/12/19 00:46:33 achim Exp $
 
 A=ypbind-mt-${PV}.tar.gz
 S=${WORKDIR}/ypbind-mt-${PV}
@@ -17,13 +17,13 @@ src_unpack() {
 
 src_compile() {                           
   cd ${S}
-  try ./configure --host=${CHOST} --prefix=/usr --sysconfdir=/etc/yp --with-catgets
+  try ./configure --host=${CHOST} --prefix=/usr --sysconfdir=/etc/yp
   try make
 }
 
 src_install() {                               
   cd ${S}
-  try make DESTDIR=${D} install
+  try make prefix=${D}/usr sysconfdir=${D}/etc/yp install
   insinto /etc/rc.d/init.d
   doins ${O}/files/ypbind
   dodoc AUTHORS ChangeLog COPYING README THANKS TODO
