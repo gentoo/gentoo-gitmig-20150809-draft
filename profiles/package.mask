@@ -21,13 +21,6 @@
 ##   End example
 ##
 
-# <scandium@gentoo.org> (08 Sept 2003)
-# waiting for source tarballs
-=dev-dotnet/pnet-0.5.12
-=dev-dotnet/pnetlib-0.5.12
-=dev-dotnet/pnetc-0.5.12
-=dev-dotnet/ml-pnet-0.5.12
-
 # <foser@gentoo.org> (07 Sept 2003)
 # Gnome 2.4 RC mask
 >=gnome-base/gnome-2.3
