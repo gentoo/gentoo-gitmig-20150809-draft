@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/hdf-4.2.0-r3.ebuild,v 1.1 2004/12/28 20:36:12 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/hdf/hdf-4.2.0-r3.ebuild,v 1.2 2004/12/29 00:31:18 ribosome Exp $
 
 inherit flag-o-matic
 
@@ -24,7 +24,7 @@ DEPEND="sys-libs/zlib
 		media-libs/jpeg
 		sci-libs/netcdf
 		>=sys-apps/sed-4
-		szip? ( dev-libs/szip )"
+		szip? ( sci-libs/szip )"
 
 pkg_setup() {
 	if ! which &>/dev/null g77; then
