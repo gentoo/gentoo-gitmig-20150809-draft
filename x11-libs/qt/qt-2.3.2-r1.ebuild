@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-2.3.2-r1.ebuild,v 1.24 2003/09/07 00:23:28 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-2.3.2-r1.ebuild,v 1.25 2003/12/11 00:01:25 avenj Exp $
 
 DESCRIPTION="QT ${PV}, an X11 widget set and general library used by KDE et al"
 HOMEPAGE="http://www.trolltech.com/"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.trolltech.com/pub/qt/source/qt-x11-${PV}.tar.gz"
 
 LICENSE="QPL-1.0 | GPL-2"
 SLOT="2"
-KEYWORDS="x86 ppc sparc hppa alpha"
+KEYWORDS="x86 ppc sparc hppa alpha amd64"
 IUSE="gif opengl nas"
 
 RDEPEND="virtual/x11
