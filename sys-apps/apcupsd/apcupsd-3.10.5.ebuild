@@ -1,15 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.5.ebuild,v 1.1 2003/02/24 01:34:17 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.5.ebuild,v 1.2 2003/02/24 09:17:53 aliz Exp $
 
 IUSE=""
 
 S=${WORKDIR}/${P}
 DESCRIPTION="APC UPS daemon with integrated tcp/ip remote shutdown"
-SRC_URI="http://unc.dl.sourceforge.net/sourceforge/apcupsd/${P}.tar.gz
+SRC_URI="mirror://sourceforge/apcupsd/${P}.tar.gz
 	ftp://ftp.apcupsd.com/pub/apcupsd/contrib/gd1.2.tar.gz"
 HOMEPAGE="http://www.sibbald.com/apcupsd/"
-KEYWORDS="~x86 ~ppc ~arm"
+KEYWORDS="x86 ~ppc ~arm"
 SLOT="0"
 LICENSE="GPL-2"
 
@@ -58,7 +58,7 @@ src_compile() {
 src_install () {
 	make DESTDIR=${D} install
 
-	echo "Installing full documentation into /usr/share/doc/${P}..."
+	einfo "Installing full documentation into /usr/share/doc/${P}..."
 	cd ${S}/doc
 	dodoc README.*
 	docinto developers_manual
