@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.98 2005/01/31 02:42:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.99 2005/01/31 07:50:38 eradicator Exp $
 
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
@@ -1132,7 +1132,7 @@ gcc_do_filter_flags() {
 	# Compile problems with these (bug #6641 among others)...
 	#filter-flags "-fno-exceptions -fomit-frame-pointer -fforce-addr"
 
-	export GCJFLAGS=${GCJFLAGS:-CFLAGS}
+	export GCJFLAGS=${GCJFLAGS:-${CFLAGS}}
 }
 
 gcc_src_compile() {
