@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.4.0.ebuild,v 1.3 2003/12/09 17:42:40 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/active-dvi/active-dvi-1.4.0.ebuild,v 1.4 2004/04/26 13:51:57 usata Exp $
 
 MY_PN=${PN/ctive-/}
 MY_P=${MY_PN}-${PV}
@@ -8,12 +8,12 @@ S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="A DVI previewer and a presenter for slides written in LaTeX"
 SRC_URI="ftp://ftp.inria.fr/INRIA/Projects/cristal/${MY_PN}/${MY_P}.tar.gz"
-HOMEPAGE="http://pauillac.inria.fr/${MY_PN}/"
+HOMEPAGE="http://pauillac.inria.fr/advi/"
 LICENSE="LGPL-2.1"
 
 IUSE="cjk tcltk"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=">=dev-lang/ocaml-3.04
 	>=dev-ml/camlimages-2.11
