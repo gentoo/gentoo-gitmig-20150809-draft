@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/dox/dox-1.1.ebuild,v 1.13 2004/06/24 21:39:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/dox/dox-1.1.ebuild,v 1.14 2004/08/16 11:16:00 dragonheart Exp $
 
 DESCRIPTION="graphical documentation browser for Unix/X11"
 SRC_URI="http://download.berlios.de/dox/${P}.tar.gz"
@@ -12,7 +12,7 @@ IUSE=""
 KEYWORDS="x86 ppc"
 
 RDEPEND="=x11-libs/qt-3*"
-DEPEND="net-www/htdig"
+DEPEND="www-misc/htdig"
 
 src_unpack() {
 	unpack ${A}

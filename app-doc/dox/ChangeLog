@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/dox
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/dox/ChangeLog,v 1.5 2004/06/24 21:39:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/dox/ChangeLog,v 1.6 2004/08/16 11:16:00 dragonheart Exp $
+
+  16 Aug 2004; Daniel Black <dragonheart@gentoo.org> dox-1.1.ebuild:
+  Dependancy changed - the great net-www move - Thanks to Manfred Knick
+  <Manfred.Knick@T-Online.de> bug #60539
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   dox-1.1.ebuild:
