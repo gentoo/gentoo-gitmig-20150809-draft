@@ -1,6 +1,11 @@
 # ChangeLog for media-radio/tlf
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/tlf/ChangeLog,v 1.7 2005/02/16 05:00:48 killsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/tlf/ChangeLog,v 1.8 2005/03/31 00:05:09 killsoft Exp $
+
+*tlf-0.9.22 (30 Mar 2005)
+
+  30 Mar 2005; Robb Romans <killsoft@gentoo.org> tlf-0.9.22.ebuild:
+  Mark stable on x86
 
   15 Feb 2005; Robb Romans <killsoft@gentoo.org> :
   * New upstream version 0.9.22
