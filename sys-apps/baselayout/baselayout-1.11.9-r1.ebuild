@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.9-r1.ebuild,v 1.4 2005/02/06 20:45:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.9-r1.ebuild,v 1.5 2005/02/09 18:04:10 agriffis Exp $
 
 inherit flag-o-matic eutils toolchain-funcs multilib
 
@@ -12,7 +12,6 @@ DESCRIPTION="Filesystem baselayout and init scripts"
 HOMEPAGE="http://www.gentoo.org/"
 SRC_URI="mirror://gentoo/rc-scripts-${SV}${SVREV}.tar.bz2
 	http://dev.gentoo.org/~vapier/dist/rc-scripts-${SV}${SVREV}.tar.bz2"
-#	http://dev.gentoo.org/~agriffis/rc-scripts/rc-scripts-${SV}${SVREV}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
