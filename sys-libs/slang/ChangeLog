@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/slang
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.38 2004/11/06 07:59:52 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.39 2004/11/07 10:36:44 usata Exp $
+
+  07 Nov 2004; Mamoru KOMACHI <usata@gentoo.org> slang-1.4.9-r1.ebuild:
+  Fixed chmod failure when unicode USE flag is set; bug #70328.
 
   06 Nov 2004; Mamoru KOMACHI <usata@gentoo.org>
   files/slang-1.4.9-fsuid.patch, files/slang-1.4.9.patch,
@@ -18,7 +21,7 @@
   06 Oct 2004; Guy Martin <gmsoft@gentoo.org> slang-1.4.9-r1.ebuild:
   Stable on hppa.
 
-  30 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org> slang-1.4.9-r1.ebuild:
+  30 Sep 2004; Bryan ƒŠstergaard,,, <kloeri@gentoo.org> slang-1.4.9-r1.ebuild:
   Stable on alpha.
 
   25 Sep 2004; Joshua Kinard <kumba@gentoo.org> slang-1.4.9-r1.ebuild:

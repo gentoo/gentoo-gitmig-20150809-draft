@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.9-r1.ebuild,v 1.16 2004/11/06 07:59:52 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.9-r1.ebuild,v 1.17 2004/11/07 10:36:44 usata Exp $
 
 inherit eutils
 
@@ -47,7 +47,7 @@ src_install() {
 	if use ppc-macos ; then
 		chmod a+rx "${D}"/usr/$(get_libdir)/libslang*dylib || die "chmod failed"
 	else
-		chmod a+rx "${D}"/usr/$(get_libdir)/libslang.so.* || die "chmod failed"
+		chmod a+rx "${D}"/usr/$(get_libdir)/libslang*so* || die "chmod failed"
 	fi
 
 	if use unicode ; then
