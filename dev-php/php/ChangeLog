@@ -1,6 +1,10 @@
 # ChangeLog for dev-php/php
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.54 2003/07/30 08:53:20 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.55 2003/08/17 21:55:11 robbat2 Exp $
+
+  17 Aug 2003; Robin Johnson,,604-339-5621,604-298-8414 <robbat2@gentoo.org>
+  php-4.3.2-r3.ebuild:
+  r4 isn't a security update, but r3 was
 
 *php-4.3.2-r3 (30 Jul 2003)
   30 Jul 2003; Tal Peer <coredumb@gentoo.org> php-4.3.2-r3.ebuild:

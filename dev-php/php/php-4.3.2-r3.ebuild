@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.2-r3.ebuild,v 1.1 2003/07/30 08:53:20 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/php-4.3.2-r3.ebuild,v 1.2 2003/08/17 21:55:11 robbat2 Exp $
 
 PHPSAPI="cli"
 inherit php eutils
@@ -18,8 +18,6 @@ DEPEND="${DEPEND}
 RDEPEND="${RDEPEND}"
 
 src_compile() {
-	php_securityupgrade
-	
 	# Readline and Ncurses are CLI PHP only
 	use ncurses || use readline && use_ncurses="--with-" || use_ncurses="--without-"
 	myconf="${myconf} `use_with readline`"
@@ -44,7 +42,6 @@ src_install() {
 
 pkg_postinst() {
 	php_pkg_postinst
-	php_securityupgrade
 	einfo "This is a CLI only build."
 	einfo "You can not use it on a webserver."
 }
