@@ -1,5 +1,5 @@
-MD5 90ad5982328e7e10847c4b8902c26770 ChangeLog 1064
-MD5 b4bdcfbef3f37a05cac89767fe317813 aspectj4emacs-1.1_beta2.ebuild 1201
+MD5 542826a7ce5088ed64e54e4aea1bf8a1 aspectj4emacs-1.1_beta2.ebuild 1233
+MD5 d567283aa7ecccae4ef7428ab2dd5aa5 ChangeLog 1194
 MD5 8c144cf6053d420b8e0bb2c46d8cca80 metadata.xml 176
 MD5 495710943dc2f7e55b0ff236ed9e7aed files/80aspectj4emacs-gentoo.el 909
 MD5 4033ed8dde320dce01ed224769710e3e files/aspectj4emacs-1.1_beta2-browse-url-new-window-gentoo.patch 843

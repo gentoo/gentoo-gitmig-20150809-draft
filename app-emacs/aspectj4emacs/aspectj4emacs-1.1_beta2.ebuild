@@ -1,25 +1,27 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/aspectj4emacs/aspectj4emacs-1.1_beta2.ebuild,v 1.5 2004/07/16 09:21:12 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/aspectj4emacs/aspectj4emacs-1.1_beta2.ebuild,v 1.6 2004/11/03 05:33:39 usata Exp $
 
 inherit elisp eutils
 
 IUSE=""
 
-MYPV="1.1b2"
+MY_P="AspectJForEmacs-${PV/_beta/b}"
 
 DESCRIPTION="AspectJ support for GNU Emacs java-mode and JDEE"
 HOMEPAGE="http://aspectj4emacs.sourceforge.net/"
-SRC_URI="http://aspectj4emacs.sourceforge.net/AspectJForEmacs-${MYPV}.zip"
+SRC_URI="http://aspectj4emacs.sourceforge.net/${MY_P}.zip"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 
-DEPEND="virtual/emacs
-	app-emacs/jde
+RDEPEND="app-emacs/jde
 	=dev-java/aspectj-1.1*"
+DEPEND="${RDEPEND}
+	app-arch/unzip
+	>=sys-apps/sed-4"
 
-S="${WORKDIR}/AspectJForEmacs-${MYPV}"
+S="${WORKDIR}/${MY_P}"
 
 SITEFILE=80aspectj4emacs-gentoo.el
 
