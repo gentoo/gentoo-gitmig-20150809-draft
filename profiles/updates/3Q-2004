@@ -88,3 +88,4 @@ move net-www/orion www-servers/orion
 move net-www/plb www-servers/plb
 move net-www/pound www-servers/pound
 move net-www/privoxy www-proxy/privoxy
+move net-www/publicfile www-servers/publicfile
