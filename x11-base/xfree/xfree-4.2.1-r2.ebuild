@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r2.ebuild,v 1.30 2003/08/03 04:44:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.1-r2.ebuild,v 1.31 2003/09/07 02:25:28 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -38,7 +38,7 @@ replace-flags "-mcpu=v9" "-mcpu=v8 -mtune=v9"
 # <azarah@gentoo.org> (13 Oct 2002)
 strip-flags
 
-PATCH_VER="1.2"
+PATCH_VER="1.3"
 FT2_VER="2.1.2"
 FC2_VER="2.1"
 SISDRV_VER="210303-1"
@@ -229,7 +229,7 @@ src_unpack() {
 		done
 		ebegin "Done unpacking Core Fonts"; eend 0
 	fi
-	
+
 	ebegin "Setting up config/cf/host.def"
 	cd ${S}; cp ${FILESDIR}/${PVR}/site.def config/cf/host.def || die
 	echo "#define XVendorString \"Gentoo Linux (XFree86 ${PV}, revision ${PR})\"" \
