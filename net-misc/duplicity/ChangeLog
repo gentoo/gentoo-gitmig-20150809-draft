@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/duplicity
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/duplicity/ChangeLog,v 1.7 2004/11/09 23:08:52 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/duplicity/ChangeLog,v 1.8 2004/11/16 10:52:10 ticho Exp $
+
+  16 Nov 2004; Andrej Kacian <ticho@gentoo.org> -duplicity-0.4.0.ebuild:
+  Removed 0.4.0 from portage.
 
   10 Nov 2004; Andrej Kacian <ticho@gentoo.org> duplicity-0.4.1.ebuild:
   Fixed librsync dependancy. Closes bug #70595, reported by Dave S
