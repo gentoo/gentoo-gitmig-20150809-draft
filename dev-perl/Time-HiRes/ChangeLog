@@ -1,24 +1,18 @@
 # ChangeLog for dev-perl/Time-HiRes
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-HiRes/ChangeLog,v 1.7 2002/12/17 19:33:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-HiRes/ChangeLog,v 1.8 2002/12/22 16:11:46 mcummings Exp $
+
+*Time-HiRes-1.38 (22 Dec 2002)
+
+  22 Dec 2002; Michael Cummings <mcummings@gentoo.org>
+  Time-HiRes-1.38.ebuild:
+
+  Version bump, pointed out by stefano.scipioni@euronia.it (Stefano
+  Scipioni) in bug 10434
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
   29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : : : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : : : : :
-
-  29 Oct 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog  : : : : : : : :
 
   forced version bump to install into correct locations
 # ChangeLog for dev-perl/Time-HiRes
