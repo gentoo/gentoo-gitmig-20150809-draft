@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/webapp-config-1.8.ebuild,v 1.1 2004/05/11 10:05:35 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/webapp-config/webapp-config-1.10-r2.ebuild,v 1.1 2004/06/24 20:44:45 stuart Exp $
 
 DESCRIPTION="Gentoo's installer for web-based applications"
 HOMEPAGE="http://www.gentoo.org/"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="http://dev.gentoo.org/~stuart/${PN}/${PN}-${PVR}.tar.bz2"
 LICENSE="GPL-2"
 SLOT=0
-KEYWORDS="x86 ~sparc ~ppc ~amd64 ~mips ~alpha"
+KEYWORDS="~x86 ~sparc ~ppc ~amd64 ~mips ~alpha ~hppa"
 IUSE=""
 DEPEND=
 RDEPEND="sys-apps/grep
@@ -15,8 +15,9 @@ RDEPEND="sys-apps/grep
 	sys-apps/sed
 	sys-apps/gawk
 	sys-apps/coreutils
-	app-shells/bash"
-S=${WORKDIR}/${P}
+	app-shells/bash
+	app-portage/gentoolkit"
+S=${WORKDIR}/${PF}
 
 src_compile () {
 	# do nothing
@@ -32,4 +33,14 @@ src_install () {
 	dodir /usr/share/webapps
 	dodoc examples/phpmyadmin-2.5.4-r1.ebuild AUTHORS.txt README.txt TODO.txt CHANGES.txt examples/postinstall-en.txt
 	doman doc/webapp-config.5 doc/webapp-config.8 doc/webapp.eclass.5
+	dohtml doc/webapp-config.5.html doc/webapp-config.8.html doc/webapp.eclass.5.html
+}
+
+pkg_postinst () {
+	echo
+	einfo "Now that you have upgraded webapp-config, you **must** update your"
+	einfo "config files in /etc/vhosts/webapp-config before you emerge any"
+	einfo "packages that use webapp-config."
+	echo
+	sleep 5
 }
