@@ -1,13 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/lshw-01.03.ebuild,v 1.2 2003/09/21 09:54:28 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/lshw-01.04a.ebuild,v 1.1 2003/11/04 23:54:12 mholzer Exp $
 
 inherit flag-o-matic
 
-MY_P="${P/-/-A.}"
+MAJ_PV=${PV:0:5}
+MIN_PVE=${PV:5:7}
+MIN_PV=${MIN_PVE/a/A}
+
+MY_P="$PN-$MIN_PV.$MAJ_PV"
 DESCRIPTION="Hardware Lister"
 HOMEPAGE="http://ezix.sourceforge.net/"
 SRC_URI="mirror://sourceforge/ezix/${MY_P}.tar.gz"
+RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
