@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/ksetiwatch
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ksetiwatch/ChangeLog,v 1.1 2002/10/24 22:13:23 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ksetiwatch/ChangeLog,v 1.2 2002/10/25 09:21:12 hannes Exp $
+
+*ksetiwatch-2.5.1 (25 Oct 2002)
+
+  25 Oct 2002; Hannes Mehnert <hannes@gentoo.org> ksetiwatch-2.5.1.ebuild:
+  version bump
 
 *ksetiwatch-2.5.0 (24 Oct 2002)
 
