@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5i-r3.ebuild,v 1.10 2003/02/13 16:04:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5i-r3.ebuild,v 1.11 2003/05/25 15:10:30 mholzer Exp $
 
 NV=1.5i2
 S=${WORKDIR}/${PN}-${NV}
 DESCRIPTION="Standard commands to read man pages"
-SRC_URI="http://www.kernel.org/pub/linux/utils/man/man-${NV}.tar.gz"
+SRC_URI="mirror://kernel/linux/utils/man/man-${NV}.tar.gz"
 HOMEPAGE="http://freshmeat.net/projects/man/"
 DEPEND="virtual/glibc"
 

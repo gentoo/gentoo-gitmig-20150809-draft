@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/man
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.28 2003/05/03 08:55:10 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/ChangeLog,v 1.29 2003/05/25 15:10:30 mholzer Exp $
+
+  25 May 2003; Martin Holzer <mholzer@gentoo.org> man-1.5i-r3.ebuild,
+  man-1.5k-r1.ebuild, man-1.5l-r3.ebuild:
+  now uses mirror://kernel
 
 *man-1.5l-r3 (03 May 2003)
 
