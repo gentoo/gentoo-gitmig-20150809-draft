@@ -1,3 +1,5 @@
-MD5 973d54c713c29aea7114fdd18be37a09 ChangeLog 1203
-MD5 a738ecf3ccb831223fc17600597dc5f9 tsocks-1.8_beta4.ebuild 1216
 MD5 1aa2efdb2fe949b6f3323e6b512fbef9 files/digest-tsocks-1.8_beta4 66
+MD5 d90e48e1c5e026d671a6b0bc9aa09574 files/digest-tsocks-1.8_beta5 66
+MD5 72466373c3eb783c231485d788c21a1d tsocks-1.8_beta4.ebuild 1216
+MD5 f0280835077220abcea11064727ad2cb tsocks-1.8_beta5.ebuild 1220
+MD5 62d244d325cb6d1398f301d0a73b9b90 ChangeLog 1325
