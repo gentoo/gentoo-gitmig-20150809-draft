@@ -1,6 +1,13 @@
 # ChangeLog for dev-dotnet/libgdiplus
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.18 2005/01/29 20:01:01 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/libgdiplus/ChangeLog,v 1.19 2005/02/20 18:06:53 latexer Exp $
+
+*libgdiplus-1.0.6 (20 Feb 2005)
+
+  20 Feb 2005; Peter Johanson <latexer@gentoo.org>
+  +libgdiplus-1.0.6-r1.ebuild, +libgdiplus-1.0.6.ebuild:
+  Bump. Includes a revision that works with cairo-0.3.0 (but is p.masked for
+  now).
 
 *libgdiplus-1.0.5-r2 (29 Jan 2005)
 
