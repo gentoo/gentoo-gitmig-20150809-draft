@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <stubear@gentoo.org> (22 Aug 2002)
+# masked for testing
+=x11-misc/arphicfonts-0.1-r1
+
 # <danarmak@gentoo.org> (20 Aug 2002)
 # masked for extensive testing
 x11-libs/qt-embedded
