@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gtm/gtm-0.4.11.ebuild,v 1.13 2004/07/01 21:05:46 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gtm/gtm-0.4.11.ebuild,v 1.14 2004/07/15 02:51:22 agriffis Exp $
 
 IUSE="ssl nls gnome"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="GTM - a transfer manager"
 SRC_URI="http://download.sourceforge.net/gtm/${P}.tar.gz"
 HOMEPAGE="http://gtm.sourceforge.net/"
@@ -67,4 +66,3 @@ src_install() {
 
 	make DESTDIR=${D} install || die
 }
-
