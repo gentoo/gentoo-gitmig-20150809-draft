@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/qhull-3.1-r1.ebuild,v 1.4 2004/03/17 21:53:18 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/qhull/qhull-3.1-r1.ebuild,v 1.5 2004/04/12 22:55:11 weeve Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.geom.umn.edu/software/qhull/"
 
 SLOT="0"
 LICENSE="BSD"
-KEYWORDS="x86 ~sparc ~ppc ~amd64"
+KEYWORDS="x86 sparc ~ppc ~amd64"
 
 DEPEND=""
 
