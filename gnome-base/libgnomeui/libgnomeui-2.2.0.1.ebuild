@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.2.0.1.ebuild,v 1.7 2003/03/11 21:11:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeui/libgnomeui-2.2.0.1.ebuild,v 1.8 2003/03/16 14:54:18 foser Exp $
 
 IUSE="doc"
 
@@ -25,12 +25,14 @@ RDEPEND=">=x11-libs/pango-1.1.2
 	>=gnome-base/libbonoboui-2
 	>=gnome-base/gconf-1.2
 	>=gnome-base/libgnome-2
-	>=gnome-base/libgnomecanvas-2
-	x11-themes/gnome-icon-theme
-	x11-themes/gnome-themes"
+	>=gnome-base/libgnomecanvas-2"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	doc? ( >=dev-util/gtk-doc-0.6 )"
+
+PDEPEND="x11-themes/gnome-themes
+	x11-themes/gnome-icon-theme"
+
 
 DOCS="AUTHORS COPYING* ChangeLog INSTALL NEWS README"
