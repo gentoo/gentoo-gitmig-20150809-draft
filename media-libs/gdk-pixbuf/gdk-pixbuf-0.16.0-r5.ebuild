@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/gdk-pixbuf-0.16.0-r5.ebuild,v 1.1 2002/03/17 21:45:50 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gdk-pixbuf/gdk-pixbuf-0.16.0-r5.ebuild,v 1.2 2002/03/24 22:20:40 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNOME Image Library"
@@ -24,14 +24,15 @@ src_unpack() {
 	cp ${S}/demo/Makefile.in ${S}/demo/Makefile.in.orig
 	sed -e 's:LDADD = :LDADD = $(LIBJPEG) $(LIBTIFF) $(LIBPNG) :' \
 		${S}/demo/Makefile.in.orig > ${S}/demo/Makefile.in
-
-	cd ${S}
-	#update libtool, else we get the "relink bug"
-	libtoolize --copy --force
-	aclocal
 }
 
 src_compile() {
+
+	#update libtool, else we get the "relink bug"
+	libtoolize --copy --force
+	aclocal
+	autoconf
+	automake --add-missing
 
 	./configure --host=${CHOST} \
 		    --prefix=/usr \
