@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-0.9_beta20031002.ebuild,v 1.5 2003/11/15 02:22:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/dialog/dialog-0.9_beta20031002.ebuild,v 1.6 2003/12/17 05:02:10 brad_mssw Exp $
 
 MY_PV="${PV/_beta/b-}"
 S=${WORKDIR}/${PN}-${MY_PV}
@@ -10,7 +10,7 @@ HOMEPAGE="http://hightek.org/dialog/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc sparc ~alpha hppa ~arm ~amd64 ia64"
+KEYWORDS="x86 ~ppc sparc ~alpha hppa ~arm ~amd64 ia64 ppc64"
 
 DEPEND=">=app-shells/bash-2.04-r3
 	>=sys-libs/ncurses-5.2-r5"
