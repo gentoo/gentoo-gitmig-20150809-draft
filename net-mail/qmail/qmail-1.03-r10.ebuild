@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r10.ebuild,v 1.8 2003/02/11 09:13:54 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail/qmail-1.03-r10.ebuild,v 1.9 2003/02/13 06:10:11 seemant Exp $
 
 inherit eutils
 
@@ -15,12 +15,17 @@ SRC_URI="http://cr.yp.to/software/qmail-1.03.tar.gz
 	http://www.nrg4u.com/qmail/ext_todo-20030105.patch
 	http://www.qmail.org/big-concurrency.patch
 	http://www.suspectclass.com/~sgifford/qmail/qmail-0.0.0.0.patch"
+
+SLOT="0"
+LICENSE="as-is"
+KEYWORDS="~x86 ~ppc ~sparc"
 DEPEND="virtual/glibc
 	sys-apps/groff
 	>=sys-apps/ucspi-tcp-0.88
 	>=net-mail/checkpassword-0.90
 	>=net-mail/cmd5checkpw-0.22
 	ssl? ( >=dev-libs/openssl-0.9.6g )"
+
 RDEPEND="!virtual/mta
 	virtual/glibc
 	sys-apps/groff
@@ -29,14 +34,11 @@ RDEPEND="!virtual/mta
 	>=net-mail/checkpassword-0.90
 	>=net-mail/cmd5checkpw-0.22
 	>=net-mail/dot-forward-0.71"
+
 PROVIDE="virtual/mta
 	 virtual/mda"
-SLOT="0"
-LICENSE="as-is"
-KEYWORDS=~"x86 ~ppc ~sparc"
 
 src_unpack() {
-
 	unpack qmail-1.03.tar.gz
 
 	# SMTP AUTH
@@ -44,26 +46,26 @@ src_unpack() {
 	cd ${WORKDIR}/qmail-smtpd-auth-0.31
 	cp README.auth base64.c base64.h ${S}
 	cd ${S}
-	epatch ../qmail-smtpd-auth-0.31/auth.patch || die
+	epatch ../qmail-smtpd-auth-0.31/auth.patch
 
 	# TLS support and an EHLO patch
 	use ssl && bzcat ${FILESDIR}/${PV}-${PR}/tls.patch.bz2 | patch || die
 
 	# Account for Linux filesystems lack of a synchronus link()
 	cd ${S}
-	epatch ${DISTDIR}/qmail-link-sync.patch || die
+	epatch ${DISTDIR}/qmail-link-sync.patch
 
 	# Speeds up processing of large amounts of queue'd messages
 	epatch ${DISTDIR}/ext_todo-20030105.patch
 
 	# Increase limits for large mail systems
-	epatch ${DISTDIR}/big-concurrency.patch || die
+	epatch ${DISTDIR}/big-concurrency.patch
 
 	# Treat 0.0.0.0 as a local address
-	epatch ${DISTDIR}/qmail-0.0.0.0.patch || die
+	epatch ${DISTDIR}/qmail-0.0.0.0.patch
 
 	# Let the system decide how to define errno
-	epatch ${FILESDIR}/${PV}-${PR}/errno.patch || die
+	epatch ${FILESDIR}/${PV}-${PR}/errno.patch
 
 	if [ `use ssl` ]; then
 		echo "gcc ${CFLAGS} -DTLS" > conf-cc
