@@ -1,13 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/ecore/ecore-9999.ebuild,v 1.2 2004/10/21 20:14:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/ecore/ecore-9999.ebuild,v 1.3 2004/10/21 20:17:14 vapier Exp $
 
 inherit enlightenment
 
 DESCRIPTION="core event abstraction layer and X abstraction layer (nice convenience library)"
 HOMEPAGE="http://www.enlightenment.org/pages/ecore.html"
 
-KEYWORDS="-*"
 IUSE="X fbcon opengl"
 
 DEPEND=">=x11-libs/evas-1.0.0.20041016_pre13
@@ -16,12 +15,12 @@ DEPEND=">=x11-libs/evas-1.0.0.20041016_pre13
 
 src_compile() {
 	export MY_ECONF="
-		`use_enable X ecore-x` \
+		$(use_enable X ecore-x) \
 		--enable-ecore-job \
-		`use_enable fbcon ecore-fb` \
+		$(use_enable fbcon ecore-fb) \
 		--enable-ecore-evas \
-		`use_enable opengl ecore-evas-gl` \
-		`use_enable fbcon ecore-evas-fb` \
+		$(use_enable opengl ecore-evas-gl) \
+		$(use_enable fbcon ecore-evas-fb) \
 		--enable-ecore-con \
 		--enable-ecore-ipc \
 		--enable-ecore-txt \

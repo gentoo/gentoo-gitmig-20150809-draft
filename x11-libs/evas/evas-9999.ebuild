@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-9999.ebuild,v 1.2 2004/10/21 20:13:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-9999.ebuild,v 1.3 2004/10/21 20:17:59 vapier Exp $
 
 EHACKAUTOGEN="yes"
 inherit enlightenment flag-o-matic
@@ -8,7 +8,6 @@ inherit enlightenment flag-o-matic
 DESCRIPTION="hardware-accelerated canvas API"
 HOMEPAGE="http://www.enlightenment.org/pages/evas.html"
 
-KEYWORDS="-*"
 IUSE="X directfb fbcon jpeg mmx opengl png sse cairo"
 
 DEPEND="virtual/x11
@@ -31,14 +30,14 @@ src_compile() {
 	#  --enable-scale-smooth           enable sampling scaler code
 	#  --enable-scale-trilinear        enable tri-linear scaler code
 	export MY_ECONF="
-		`use_enable mmx cpu-mmx` \
-		`use_enable sse cpu-mmx` \
-		`use_enable sse cpu-sse` \
-		`use_enable X software-x11` \
-		`use_enable opengl gl-x11` \
-		`use_enable cairo cairo-x11` \
-		`use_enable directfb` \
-		`use_enable fbcon fb` \
+		$(use_enable mmx cpu-mmx) \
+		$(use_enable sse cpu-mmx) \
+		$(use_enable sse cpu-sse) \
+		$(use_enable X software-x11) \
+		$(use_enable opengl gl-x11) \
+		$(use_enable cairo cairo-x11) \
+		$(use_enable directfb) \
+		$(use_enable fbcon fb) \
 		--enable-image-loader-eet \
 		--enable-image-loader-edb \
 		--enable-fmemopen \
@@ -66,8 +65,8 @@ src_compile() {
 		--enable-convert-32-rgb-rot-0 \
 		--enable-convert-32-rgb-rot-270 \
 		--enable-convert-32-rgb-rot-90 \
-		`use_enable png image-loader-png` \
-		`use_enable jpeg image-loader-jpeg`
+		$(use_enable png image-loader-png) \
+		$(use_enable jpeg image-loader-jpeg)
 	"
 	enlightenment_src_compile
 }
