@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/simplecdrx/simplecdrx-1.3.2.ebuild,v 1.5 2004/05/31 20:14:54 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/simplecdrx/simplecdrx-1.3.2.ebuild,v 1.6 2004/06/06 15:29:56 dragonheart Exp $
 
 DESCRIPTION="CD ripping/mastering"
 HOMEPAGE="http://ogre.rocky-road.net/cdr.shtml"
@@ -8,7 +8,7 @@ SRC_URI="http://ogre.rocky-road.net/files/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="x86 ~ppc ~sparc"
 IUSE=""
 
 #todo: add blade encoder
