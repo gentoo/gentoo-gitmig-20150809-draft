@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/syslog-ng.conf.gentoo,v 1.3 2003/05/12 22:43:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/files/syslog-ng.conf.gentoo,v 1.4 2004/07/18 02:25:02 dragonheart Exp $
 #
 # Syslog-ng default configuration file for Gentoo Linux
 # contributed by Michael Sterrett
