@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/redhat-artwork 
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.15 2003/02/22 18:38:10 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.16 2003/03/25 03:59:21 liquidx Exp $
+
+*redhat-artwork-0.63-r1 (25 Mar 2003)
+
+  25 Mar 2003; Alastair Tse <liquidx@gentoo.org>
+  redhat-artwork-0.63-r1.ebuild, redhat-artwork-0.65.ebuild,
+  files/redhat-artwork-0.63-cursors.patch:
+  patched broken cursortheme sources. thanks to TGL <degrenier@easyconnect.fr>.
+  fixes #16063.
 
 *redhat-artwork-0.65 (21 Feb 2003)
 

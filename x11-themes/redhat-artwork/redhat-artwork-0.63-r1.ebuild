@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.63-r1.ebuild,v 1.1 2003/02/18 13:41:08 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.63-r1.ebuild,v 1.2 2003/03/25 03:59:21 liquidx Exp $
+
+inherit eutils
 
 RH_EXTRAVERSION="1"
 
@@ -46,11 +48,14 @@ src_unpack() {
 	rpm2targz ${DISTDIR}/${A}
 	tar xzf ${P}*.src.tar.gz
 	tar xzf ${P}.tar.gz
+    cd ${S}; epatch ${FILESDIR}/redhat-artwork-0.63-cursors.patch || die
 }
 
 src_compile() {
 
 	export WANT_AUTOCONF_2_5=1
+    # build fails with UTF-8 in locale
+    export LANG=C
 
 	# disable qt and kde support if kde use keyword is not set
 	# note: qt and kde support seem to be tied together... maybe someone with

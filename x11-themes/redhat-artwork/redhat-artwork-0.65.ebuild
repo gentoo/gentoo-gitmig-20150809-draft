@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.65.ebuild,v 1.4 2003/02/22 18:38:10 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/redhat-artwork-0.65.ebuild,v 1.5 2003/03/25 03:59:21 liquidx Exp $
+
+inherit eutils
 
 RH_EXTRAVERSION="1"
 
@@ -46,11 +48,15 @@ src_unpack() {
 	rpm2targz ${DISTDIR}/${A}
 	tar xzf ${P}*.src.tar.gz
 	tar xzf ${P}.tar.gz
+    cd ${S}
+    epatch ${FILESDIR}/redhat-artwork-0.63-cursors.patch || die
 }
 
 src_compile() {
 
 	export WANT_AUTOCONF_2_5=1
+    # dies is LANG has UTF-8
+    export LANG=C 
 
 	use kde || (
 
