@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/amanda
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/ChangeLog,v 1.13 2004/03/16 05:01:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/amanda/ChangeLog,v 1.14 2004/03/31 13:47:49 aliz Exp $
+
+  31 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> amanda-2.4.4-r3.ebuild:
+  Adding amd64 keyword, closing #46209.
 
   15 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> amanda-2.4.4-r3.ebuild:
   don't assign default to S
