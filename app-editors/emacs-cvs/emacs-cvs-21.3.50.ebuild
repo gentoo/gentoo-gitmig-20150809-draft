@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-21.3.50.ebuild,v 1.15 2003/09/21 05:00:15 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-21.3.50.ebuild,v 1.16 2003/09/22 23:36:08 usata Exp $
 
 ECVS_SERVER="subversions.gnu.org:/cvsroot/emacs"
 ECVS_MODULE="emacs"
 ECVS_USER="anoncvs"
 ECVS_CVS_OPTIONS="-dP"
 
-inherit cvs
+inherit elisp-common cvs
 
 IUSE="X nls gtk gtk2 Xaw3d gnome spell"
 
@@ -96,6 +96,11 @@ src_install () {
 	# fix info documentation
 	find ${D}/usr/share/info -type f -exec mv {} {}.info \;
 
+	if has_version 'app-text/aspell' ; then
+		# defaults to aspell if installed
+		elisp-site-file-install ${FILESDIR}/40aspell-gentoo.el
+	fi
+
 	dodoc BUGS ChangeLog README
 
 	if use gnome
@@ -103,5 +108,14 @@ src_install () {
 		insinto /usr/share/gnome/apps/Application
 		doins ${FILESDIR}/${DFILE}
 	fi
+}
 
+pkg_postinst() {
+
+	elisp-site-regen
+}
+
+pkg_postrm() {
+
+	elisp-site-regen
 }
