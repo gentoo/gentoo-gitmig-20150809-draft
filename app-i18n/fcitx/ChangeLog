@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/fcitx
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.8 2005/01/01 14:27:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/fcitx/ChangeLog,v 1.9 2005/03/01 11:28:08 usata Exp $
+
+*fcitx-3.0.4 (01 Mar 2005)
+
+  01 Mar 2005; Mamoru KOMACHI <usata@gentoo.org> +fcitx-3.0.4.ebuild:
+  Version bumped. Thanks to Jackey Yang <043936y@acadiau.ca>; bug #82900.
 
   23 Jun 2004; David Holm <dholm@gentoo.org> fcitx-2.1.0_rc.ebuild:
   Added to ~ppc.
