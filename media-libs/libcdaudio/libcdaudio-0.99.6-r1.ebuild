@@ -1,6 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdaudio/libcdaudio-0.99.6-r1.ebuild,v 1.2 2003/02/13 12:46:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdaudio/libcdaudio-0.99.6-r1.ebuild,v 1.3 2003/03/11 14:54:44 agriffis Exp $
+
+inherit flag-o-matic
+
+IUSE="pic"
 
 DESCRIPTION="a library of cd audio related routines"
 SRC_URI="mirror://sourceforge/libcdaudio/${P}.tar.gz"
@@ -8,11 +12,14 @@ HOMEPAGE="http://libcdaudio.sourceforge.net/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc"
-IUSE="pic"
+KEYWORDS="x86 ppc sparc ~alpha"
 
 src_compile() {
 	patch -p1 < ${FILESDIR}/${P}-sanity-checks.patch
+
+	# -fPIC is required for this library on alpha, see bug #17192
+	use alpha && append-flags -fPIC
+	
 	econf --enable-threads --with-gnu-ld `use_with pic`
 	emake || die
 }

@@ -1,8 +1,11 @@
 # ChangeLog for media-libs/libcdaudio
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdaudio/ChangeLog,v 1.5 2003/02/12 07:09:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcdaudio/ChangeLog,v 1.6 2003/03/11 14:54:44 agriffis Exp $
 
 *libcdaudio-0.99.6-r1 (16 Dec 2002)
+
+  11 Mar 2003; Aron Griffis <agriffis@gentoo.org> libcdaudio-0.99.6-r1.ebuild:
+  Fix bug #17192 with -fPIC on alpha
 
   16 Dec 2002; Mike Frysinger <vapier@gentoo.org> :
   Added patch from #12208.
