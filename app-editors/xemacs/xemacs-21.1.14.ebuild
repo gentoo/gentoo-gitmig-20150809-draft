@@ -6,7 +6,7 @@
 #A=${P}.tar.bz2
 S=${WORKDIR}/${P}
 DESCRIPTION="XEmacs"
-
+# The latest versions available are 1.26 and 1.55, respectively
 EFS=1.22
 BASE=1.53
 
