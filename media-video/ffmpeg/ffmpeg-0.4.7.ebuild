@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.7.ebuild,v 1.1 2003/09/07 22:40:55 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ffmpeg/ffmpeg-0.4.7.ebuild,v 1.2 2003/10/29 00:35:27 seemant Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ use alpha && append-flags "-fPIC"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~mips ~arm ~ia64 ~amd64"
 
 DEPEND="encode? ( >=media-sound/lame-3.92 )
 	oggvorbis? ( >=media-libs/libvorbis-1.0-r1 )
