@@ -1,0 +1,5 @@
+# defines for all x86 darwin systems using this profile
+ARCH="x86"
+ACCEPT_KEYWORDS="x86-od"
+FEATURES="-sandbox sfperms"
+USE="x86-od"

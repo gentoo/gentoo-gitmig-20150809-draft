@@ -95,6 +95,7 @@ sys-apps/sed-4.0.7
 sys-apps/tcp-wrappers-7.6-r8
 sys-apps/texinfo-4.6
 sys-apps/vixie-cron-3.0.1
+sys-apps/which-2.16
 sys-apps/xinetd-2.0.0
 sys-devel/autoconf-2.57
 sys-devel/automake-1.6.3

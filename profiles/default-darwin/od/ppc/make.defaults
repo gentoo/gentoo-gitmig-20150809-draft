@@ -1,0 +1,5 @@
+# defines for all ppc darwin systems using this profile
+ARCH="ppc"
+ACCEPT_KEYWORDS="ppc-od"
+FEATURES="-sandbox sfperms"
+USE="ppc-od"
