@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdetoys
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys/ChangeLog,v 1.91 2004/12/18 22:41:37 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdetoys/ChangeLog,v 1.92 2004/12/27 15:30:30 caleb Exp $
+
+  27 Dec 2004; Caleb Tennis <caleb@gentoo.org> kdetoys-3.3.2.ebuild:
+  x86 stable
 
   18 Dec 2004; Markus Rothe <corsair@gentoo.org> kdetoys-3.3.1.ebuild:
   Stable on ppc64
