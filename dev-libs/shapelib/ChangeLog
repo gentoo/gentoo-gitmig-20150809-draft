@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/shapelib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/shapelib/ChangeLog,v 1.1 2003/06/19 19:00:09 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/shapelib/ChangeLog,v 1.2 2003/11/23 22:13:47 nerdboy Exp $
+
+  23 Nov 2003; <nerdboy@gentoo.org> shapelib-1.2.10.ebuild:
+  bumped to x86 and added metadata
 
 *shapelib-1.2.10 (19 Jun 2003)
 
