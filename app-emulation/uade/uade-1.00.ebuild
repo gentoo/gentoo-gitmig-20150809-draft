@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/uade-0.91.ebuild,v 1.4 2004/09/01 06:26:37 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uade/uade-1.00.ebuild,v 1.1 2004/10/30 22:22:32 spock Exp $
+
+inherit eutils
 
 DESCRIPTION="Unix Amiga Delitracker Emulator - plays old Amiga tunes through UAE emulation and cloned m68k-assembler Eagleplayer API"
 HOMEPAGE="http://uade.ton.tut.fi/"
@@ -9,14 +11,14 @@ SRC_URI="http://uade.ton.tut.fi/uade/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~amd64"
-IUSE="xmms sdl alsa oss perl"
+IUSE="xmms sdl alsa oss perl beepmp"
 
 RDEPEND="virtual/libc
-	xmms? (
-		>=media-sound/xmms-1.2.2
+	xmms? (	>=media-sound/xmms-1.2.2
 		x11-libs/gtk+ )
 	sdl? ( media-libs/libsdl )
-	alsa? ( >=media-libs/alsa-lib-1.0.5 )"
+	alsa? ( >=media-libs/alsa-lib-1.0.5 )
+	beepmp? ( >=media-sound/beep-media-player-0.7_rc1 )"
 
 DEPEND="${RDEPEND}
 	xmms? ( sys-devel/libtool )"
@@ -26,11 +28,11 @@ src_compile() {
 		--prefix=/usr \
 		--package-prefix="${D}" \
 		--docdir="/usr/share/doc/${PF}" \
-		--without-bmp \
 		$(use_with oss) \
 		$(use_with sdl) \
 		$(use_with alsa) \
 		$(use_with xmms) \
+		$(use_with beepmp bmp) \
 		|| die "configure failed"
 	emake || die 'emake failed'
 }
