@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/kdelibs-apidocs/kdelibs-apidocs-3.1_rc3.ebuild,v 1.3 2002/12/09 02:15:54 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/kdelibs-apidocs/kdelibs-apidocs-3.1_rc6.ebuild,v 1.1 2003/01/05 21:22:39 hannes Exp $
 
 PN=kdelibs P=$PN-$PVR inherit kde kde.org 
 
@@ -10,7 +10,7 @@ KEYWORDS="~x86"
 HOMEPAGE="http//developer.kde.org/"
 SLOT="3.1"
 LICENSE="GPL-2"
-S="${WORKDIR}/kdelibs-3.0.99"
+S="${WORKDIR}/kdelibs-3.1rc6"
 
 DEPEND="app-doc/doxygen app-doc/qt-docs"
 RDEPEND=""
