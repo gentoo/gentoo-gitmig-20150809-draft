@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/ppp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.47 2004/02/12 20:23:48 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ChangeLog,v 1.48 2004/02/15 03:21:18 agriffis Exp $
+
+  14 Feb 2004; Aron Griffis <agriffis@gentoo.org> ppp-2.4.2.ebuild,
+  files/2.4.2/pcap.patch:
+  Patch for libpcap headers; fixes bug 41416
 
 *ppp-2.4.2 (12 Feb 2004)
 

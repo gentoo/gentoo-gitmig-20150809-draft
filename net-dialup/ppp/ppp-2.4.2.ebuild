@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2.ebuild,v 1.1 2004/02/12 20:23:48 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/ppp-2.4.2.ebuild,v 1.2 2004/02/15 03:21:18 agriffis Exp $
 
-DESCRIPTION="Point-to-point protocol - patched for pppoe"
+DESCRIPTION="Point-to-point protocol - patched for PPPOE"
 HOMEPAGE="http://www.samba.org/ppp"
 SRC_URI="ftp://ftp.samba.org/pub/ppp/${P}.tar.gz"
 
@@ -11,8 +11,10 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~hppa -amd64 ~ia64"
 IUSE="ipv6 activefilter pam"
 
-DEPEND="virtual/glibc
-	activefilter? ( net-libs/libpcap )"
+RDEPEND="virtual/glibc
+	net-libs/libpcap"
+DEPEND="${RDEPEND}
+	>=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
@@ -21,33 +23,33 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}/mpls.patch
 	epatch ${FILESDIR}/${PV}/killaddr-smarter.patch
 	epatch ${FILESDIR}/${PV}/cflags.patch
+	epatch ${FILESDIR}/${PV}/pcap.patch
 
 	use activefilter && {
 		einfo "Enabling active-filter"
-		sed -i -e "s/^#FILTER=y/FILTER=y/" pppd/Makefile.linux
+		sed -i -e "s/^#FILTER=y/FILTER=y/" pppd/Makefile.linux || die
 	}
 
 	use pam && {
 		einfo "Enabling PAM"
-		sed -i -e "s/^#USE_PAM=y/USE_PAM=y/" pppd/Makefile.linux
+		sed -i -e "s/^#USE_PAM=y/USE_PAM=y/" pppd/Makefile.linux || die
 	}
 
 	use ipv6 && {
 		einfo "Enabling IPv6"
-		sed -i -e "s/#HAVE_INET6/HAVE_INET6/" pppd/Makefile.linux
+		sed -i -e "s/#HAVE_INET6/HAVE_INET6/" pppd/Makefile.linux || die
 	}
 
 	einfo "Enabling CBCP"
-	sed -i 's/^#CBCP=y/CBCP=y/' pppd/Makefile.linux
+	sed -i 's/^#CBCP=y/CBCP=y/' pppd/Makefile.linux || die
 
 	einfo "Enabling radius"
-	sed -i -e 's/SUBDIRS := rp-pppoe/SUBDIRS := rp-pppoe radius/' pppd/plugins/Makefile.linux
+	sed -i -e 's/SUBDIRS := rp-pppoe/SUBDIRS := rp-pppoe radius/' pppd/plugins/Makefile.linux || die
 }
 
 src_compile() {
 	# compile radius better than their makefile does
-	(cd pppd/plugins/radius/radiusclient; econf; emake) || die
-
+	(cd pppd/plugins/radius/radiusclient && econf && emake) || die
 	./configure --prefix=/usr || die
 	emake COPTS="${CFLAGS}" || die
 }
