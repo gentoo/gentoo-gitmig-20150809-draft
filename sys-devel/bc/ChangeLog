@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/bc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/ChangeLog,v 1.8 2003/02/20 01:20:43 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/bc/ChangeLog,v 1.9 2003/02/20 10:11:10 zwelch Exp $
 
 *bc-1.06-r5 (19 Feb 2003)
 
@@ -8,6 +8,9 @@
   files/digest-bc-1.06-r5 :
   rev bump to close bug #16043, -O2 on ppc causes segfault.  
   Kept stable all arches (only change)
+
+  20 Feb 2003; Zach Welch <zwelch@gentoo.org> bc-1.06-r4.ebuild :
+  Added arm to keywords.
 
   09 Feb 2003; Guy Martin <gmsoft@gentoo.org> bc-1.06-r4.ebuild :
   Added hppa to keywords.
