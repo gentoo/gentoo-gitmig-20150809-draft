@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/simutrans-0.82.10.ebuild,v 1.2 2003/09/18 19:20:18 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/simutrans/simutrans-0.82.10.ebuild,v 1.3 2003/11/26 09:05:37 mr_bones_ Exp $
 
 inherit games
 
@@ -15,19 +15,23 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="-* x86"
 
-DEPEND="app-arch/unzip"
+DEPEND="app-arch/unzip
+	>=sys-apps/sed-4"
 RDEPEND="media-libs/libsdl"
 
 S=${WORKDIR}/${PN}
 
 src_install() {
-	local dir=${GAMES_PREFIX_OPT}/${PN}
-	dodir ${dir}
+	local dir="${GAMES_PREFIX_OPT}/${PN}"
 
-	mv * ${D}/${dir}/
-
-	dogamesbin ${FILESDIR}/simutrans
-	dosed "s:GENTOO_DIR:${dir}:" ${GAMES_BINDIR}/simutrans
+	dogamesbin "${FILESDIR}/simutrans" || die "dogamesbin failed"
+	dodir "${dir}"                     || die "dodir failed"
+	cp -R * "${D}/${dir}/"             || die "cp failed"
+	sed -i \
+		-e "s:GENTOO_DIR:${dir}:" "${D}${GAMES_BINDIR}/simutrans" || \
+			die "sed simutrans failed"
 
 	prepgamesdirs
+	keepdir "${GAMES_PREFIX_OPT}/${PN}/save"
+	fperms 2775 "${GAMES_PREFIX_OPT}/${PN}/save"
 }
