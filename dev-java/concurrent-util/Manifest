@@ -1,4 +1,14 @@
-MD5 e0bfeb318a9c30cfc637d3946288df07 ChangeLog 668
-MD5 ff69ce0c5554b6d3368fe80fe9ebd5e4 concurrent-util-1.3.4.ebuild 1132
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
+MD5 fae838fd103ef77d6de8a1a88b4ddfaf ChangeLog 786
+MD5 017fd30d0dc1c582517bdda7f0f22e6d concurrent-util-1.3.4.ebuild 1140
 MD5 6fb1b2f722f8d88c928cb957334ab2c8 files/digest-concurrent-util-1.3.4 81
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCQYEPKRy60XGEcJIRAmlJAJ0V7XNWuHMBJinCLK53dwSfH5H7/gCfetRx
+V3+IIQrcqYkXiYl/GiqmvAQ=
+=hMZY
+-----END PGP SIGNATURE-----
