@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-1.3.12.ebuild,v 1.1 2002/04/14 03:28:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-1.3.12.ebuild,v 1.2 2002/04/14 10:25:16 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="NIS SERVER"
@@ -13,13 +13,13 @@ HOMEPAGE="http://www.linux-nis.org/nis/"
 DEPEND=">=sys-libs/gdbm-1.8.0
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
 
-#src_unpack() {
-#
-#	unpack ${A}
-#	cd ${S}
-#	cp ${FILESDIR}/defs.sed ypmake
-#
-#}
+src_unpack() {
+
+	unpack ${A}
+	cd ${S}
+	cp ${FILESDIR}/defs.sed ypmake
+
+}
 
 src_compile() {
 
@@ -38,7 +38,7 @@ src_compile() {
 	make || die
 
 	cd ${S}/ypmake
-#	sed -f defs.sed Makefile.in > Makefile
+	sed -f defs.sed Makefile.in > Makefile
 	make || die
 }
 
