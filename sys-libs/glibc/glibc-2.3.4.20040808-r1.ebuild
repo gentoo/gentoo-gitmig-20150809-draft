@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.41 2005/02/03 05:35:02 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.42 2005/02/14 19:14:13 eradicator Exp $
 
 inherit eutils multilib flag-o-matic toolchain-funcs versionator
 
@@ -122,7 +122,7 @@ setup_flags() {
 		append-flags "-fcall-used-g6"
 
 		# Sparc64 Only support...
-		if [ "${PROFILE_ARCH}" = "sparc64" ]; then
+		if [ "${PROFILE_ARCH}" = "sparc64" ] && !has_multilib_profile; then
 			# Get rid of -mcpu options (the CHOST will fix this up) and flags
 			# known to fail
 			filter-flags "-mcpu=ultrasparc -mcpu=v9 -mvis"
@@ -135,7 +135,7 @@ setup_flags() {
 			fi
 		fi
 
-		if [ "${PROFILE_ARCH}" = "sparc64-multilib" ]; then
+		if [ "${PROFILE_ARCH}" = "sparc64" ] && has_multilib_profile; then
 			# We change our CHOST, so set this right here
 			export CC="$(tc-getCC)"
 
