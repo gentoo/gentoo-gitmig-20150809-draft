@@ -1,0 +1,24 @@
+diff -ur release.orig/Makefile.linux release/Makefile.linux
+--- release.orig/Makefile.linux	Sun Jul 14 18:24:34 2002
++++ release/Makefile.linux	Sun Jul 14 18:24:48 2002
+@@ -102,7 +102,7 @@
+ OPENGLNO_DEPENDS=use_opengl
+ endif
+ 
+-CCC = gcc
++CCC = g++
+ CC = gcc
+ NASM = nasm
+ 
+diff -ur release.orig/unix/config.c release/unix/config.c
+--- release.orig/unix/config.c	Sun Jul 14 18:24:34 2002
++++ release/unix/config.c	Sun Jul 14 18:25:01 2002
+@@ -528,7 +528,7 @@
+       p = find_config_string(config[0], section, name, NULL);
+ 
+    if (p)
+-      return (p->data ? p->data : "");
++      return (p->data ? p->data : (char*) "");
+    else
+       return def;
+ }
