@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdegames
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/ChangeLog,v 1.25 2003/02/15 20:56:25 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdegames/ChangeLog,v 1.26 2003/02/28 16:15:27 wwoods Exp $
+
+  28 Feb 2003; Will Woods <wwoods@gentoo.org> kdegames-3.1.ebuild:
+  Hack to build without kmines on alpha, due to linker problems.
+  Removed previous patch which tried to fix this.
+  Added ~alpha keyword.
 
   15 Feb 2003; Jason Wever <weeve@gentoo.org> kdegames-3.1.ebuild:
   Changed ~sparc keyword to sparc.
