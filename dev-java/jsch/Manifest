@@ -1,4 +1,5 @@
-MD5 974c7aa61f8cb01f4b8394a670d01d5e jsch-0.1.12.ebuild 1167
-MD5 d3e40af2b1633ec27b4d81a494141e1c ChangeLog 122
+MD5 2575ec9bb0f8252b325525a6d01467fe jsch-0.1.12.ebuild 919
+MD5 3a711c33405898bc107969d7288c4efb ChangeLog 445
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 132d7d835d6311ed4a1a7ad44c6ec2f5 files/build.xml-dstamp.patch.gz 281
 MD5 8765f29e891d7792acffc44a43c47a28 files/digest-jsch-0.1.12 60
