@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r9.ebuild,v 1.11 2004/01/16 22:24:38 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.2-r9.ebuild,v 1.12 2004/01/18 04:52:02 darkspecter Exp $
 
 IUSE="nls pic build nptl"
 
@@ -70,6 +70,8 @@ DEPEND=">=sys-devel/gcc-3.2.3-r1
 RDEPEND="virtual/os-headers
 	sys-apps/baselayout
 	nls? ( sys-devel/gettext )"
+
+PDEPEND="ppc? ( >=sys-kernel/linux-headers-2.4.22 )"
 
 PROVIDE="virtual/glibc"
 
