@@ -1,10 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/oaf/oaf-0.6.8-r1.ebuild,v 1.6 2002/08/16 04:09:25 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/oaf/oaf-0.6.8-r1.ebuild,v 1.7 2002/09/21 01:48:59 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Object Activation Framework for GNOME"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
+HOMEPAGE="http://www.gnome.org/"
 SLOT="0"
 KEYWORDS="x86 ppc sparc sparc64"
 LICENSE="GPL-2"
