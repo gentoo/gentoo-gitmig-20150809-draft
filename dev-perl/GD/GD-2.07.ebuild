@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-2.06.ebuild,v 1.5 2003/06/21 21:36:36 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/GD-2.07.ebuild,v 1.1 2003/06/26 15:16:33 vapier Exp $
 
 inherit eutils perl-module
 CATEGORY="dev-perl"
@@ -15,7 +15,8 @@ SLOT="0"
 LICENSE="Artistic | GPL-2"
 KEYWORDS="x86 amd64 ppc sparc alpha"
 
-newdepend ">=media-libs/libgd-2.0.5
+DEPEND="${DEPEND}
+	>=media-libs/libgd-2.0.5
 	jpeg? ( media-libs/jpeg )
 	truetype? ( =media-libs/freetype-2* )
 	X? ( virtual/x11 )
@@ -28,21 +29,22 @@ src_unpack() {
 	use gif && epatch ${FILESDIR}/${PV}-gif-support.patch
 
 	use jpeg \
-		&& jpeg="y" \
-		|| jpeg="n"
+		&& jpeg=1 \
+		|| jpeg=0
 
 	use truetype \
-		&& freetype="y" \
-		|| freetype="n"
+		&& freetype=1 \
+		|| freetype=0
 
 	use X \
-		&& x="y" \
-		|| x="n"
+		&& x=1 \
+		|| x=0
 
 	cp Makefile.PL{,.orig}
-	sed -e "s:GENTOO_JPEG:${jpeg}:" \
-	 -e "s:GENTOO_FREETYPE:${freetype}:" \
-	 -e "s:GENTOO_XPM:${x}:" \
+	sed \
+		-e "s:GENTOO_JPEG:${jpeg}:" \
+		-e "s:GENTOO_FREETYPE:${freetype}:" \
+		-e "s:GENTOO_XPM:${x}:" \
 		Makefile.PL.orig > Makefile.PL
 
 	perl-module_src_prep

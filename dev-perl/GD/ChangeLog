@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/GD
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.15 2003/03/25 22:09:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/GD/ChangeLog,v 1.16 2003/06/26 15:17:22 vapier Exp $
+
+*GD-2.07 (26 Jun 2003)
+
+  26 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump.
 
 *GD-2.06 (23 Feb 2003)
 
