@@ -1,11 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.4.98.ebuild,v 1.1 2003/06/13 07:00:48 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/strace-4.4.98.ebuild,v 1.2 2003/06/13 07:27:55 msterret Exp $
 
 DESCRIPTION="A useful diagnostic, instructional, and debugging tool"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 HOMEPAGE="http://www.wi.leidenuniv.nl/~wichert/strace/"
 
+IUSE=""
 SLOT="0"
 LICENSE="as-is"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~mips"
