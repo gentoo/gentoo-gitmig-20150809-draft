@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libfwbuilder
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/ChangeLog,v 1.24 2004/03/18 12:44:27 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libfwbuilder/ChangeLog,v 1.25 2004/03/31 00:44:38 pylon Exp $
+
+  31 Mar 2004; Lars Weiler <pylon@gentoo.org> libfwbuilder-1.0.2-r1.ebuild:
+  stable on ppc
 
   18 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> libfwbuilder-1.0.2-r1.ebuild:
   Inherit eutils for epatch.
