@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/elfutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.26 2003/12/14 03:49:16 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/ChangeLog,v 1.27 2003/12/31 20:19:57 agriffis Exp $
+
+  31 Dec 2003; Aron Griffis <agriffis@gentoo.org> elfutils-0.89.ebuild:
+  Stable on alpha and ia64 to support ircd-hybrid
 
   14 Dec 2003; Guy Martin <gmsoft@gentoo.org> elfutils-0.84.ebuild:
   Marked stable on hppa.
