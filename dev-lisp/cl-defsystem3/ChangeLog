@@ -1,6 +1,10 @@
 # ChangeLog for dev-lisp/cl-defsystem3
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-defsystem3/ChangeLog,v 1.2 2003/08/23 01:10:26 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-defsystem3/ChangeLog,v 1.3 2003/10/08 02:24:13 mkennedy Exp $
+
+  07 Oct 2003; Matthew Kennedy <mkennedy@gentoo.org>
+  cl-defsystem3-3.3i.ebuild:
+  unmask for x86
 
   22 Aug 2003; Jason Wever <weeve@gentoo.org> cl-defsystem3-3.3i.ebuild:
   Added ~sparc to keywords
