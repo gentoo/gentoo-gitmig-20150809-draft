@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gnupg
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.20 2003/05/05 01:05:34 jrray Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gnupg/ChangeLog,v 1.21 2003/05/14 07:56:16 aliz Exp $
+
+  14 May 2003; Daniel Ahlberg <aliz@gentoo.org> gnupg-1.2.2.ebuild :
+  Unmask.
 
 *gnupg-1.2.2 (04 May 2003)
 
