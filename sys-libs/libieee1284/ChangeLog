@@ -1,0 +1,12 @@
+# ChangeLog for sys-libs/libieee1284
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libieee1284/ChangeLog,v 1.1 2002/07/05 15:06:51 seemant Exp $
+
+*libieee1284-0.1.6 (03 Jul 2002)
+
+  03 Jul 2002; Seemant Kulleen <seemant@gentoo.org> libieee1284-0.1.6.ebuild
+  ChangeLog files/digest-libieee1284-0.1.6 :
+
+  New package, which is needed by sane-backends to support some scanner
+  types.  Thanks to Troy Dack troy@tkdack.com in bug #4207 for finding this
+  out.

@@ -8,11 +8,9 @@ HOMEPAGE="http://cyberelk.net/tim/libieee1284/index.html"
 
 LICENSE=""
 
-DEPEND="app-text/docbook-sgml-utils
+DEPEND=">=app-text/docbook-sgml-utils-0.6.11
 	>=app-text/docbook-sgml-dtd-4.1
-	app-text/openjade
 	app-text/docbook-dsssl-stylesheets
-	dev-perl/SGMLSpm
 	dev-perl/XML-RegExp"
 
 RDEPEND=""
