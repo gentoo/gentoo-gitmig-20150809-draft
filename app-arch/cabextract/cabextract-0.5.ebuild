@@ -1,12 +1,13 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Joshua Pollak <pardsbane@offthehill.org>
-# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/cabextract-0.5.ebuild,v 1.2 2001/11/01 06:55:04 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/cabextract/cabextract-0.5.ebuild,v 1.3 2002/07/06 20:46:50 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Extracts files from Microsoft .cab files"
 SRC_URI="http://www.kyz.uklinux.net/downloads/${P}.tar.gz"
 HOMEPAGE="http://www.kyz.uklinux.net/cabextract.php3"
+LICENSE="GPL-2"
 
 DEPEND="virtual/glibc"
 

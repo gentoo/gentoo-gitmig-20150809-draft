@@ -1,12 +1,13 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.0.4.ebuild,v 1.2 2002/04/27 23:08:35 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.0.4.ebuild,v 1.3 2002/07/06 20:46:50 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Red Hat Package Management Utils"
 SRC_URI="ftp://ftp.rpm.org/pub/rpm/dist/rpm-4.0.x/${P}.tar.gz"
 HOMEPAGE="http://www.rpm.org/"
+LICENSE="GPL|LGPL"
 
 RDEPEND="=sys-libs/db-3.2.3h-r4
 	>=sys-libs/zlib-1.1.3

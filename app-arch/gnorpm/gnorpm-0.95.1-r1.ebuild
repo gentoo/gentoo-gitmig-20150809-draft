@@ -7,6 +7,7 @@ S=${WORKDIR}/${P}
 DESCRIPTION="A Gnome RPM Frontend"
 SRC_URI="ftp://ftp.gnome.org/pub/GNOME/stable/sources/${PN}/${P}.tar.gz"
 HOMEPAGE="http://www.gnome.org/"
+LICENSE="GPL-2"
 
 RDEPEND="virtual/glibc
         >=gnome-base/gnome-libs-1.4.1.2-r1

@@ -7,6 +7,7 @@ DESCRIPTION="makes cpio-format archives and deals somewhat gracefully with \
 input data corruption."
 SRC_URI="http://www.ibiblio.org/pub/linux/system/backup/${P}.tgz"
 HOMEPAGE="http://freshmeat.net/projects/afio/"
+LICENSE="Artistic|LGPL"
 
 DEPEND="virtual/glibc"
 RDEPEND="$DEPEND sys-apps/gzip"
