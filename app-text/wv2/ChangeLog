@@ -1,9 +1,13 @@
 # ChangeLog for app-text/wv2
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.6 2003/08/26 15:40:02 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv2/ChangeLog,v 1.7 2003/09/02 13:24:58 caleb Exp $
+
+*wv2-0.1.9 (02 Sep 2003)
+  02 Sep 2003; Caleb Tennis <caleb@gentoo.org> wv2-0.1.9.ebuild:
+  Version bump
 
 *wv2-0.1.8 (26 Aug 2003)
-  26 Aug 2003; Caleb Tennis <caleb@gentoo.org> wv2-0.8.1.ebuild:
+  26 Aug 2003; Caleb Tennis <caleb@gentoo.org> wv2-0.1.8.ebuild:
   Version bump.
 
 *wv2-0.1 (07 Jul 2003)
