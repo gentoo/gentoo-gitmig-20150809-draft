@@ -2,6 +2,7 @@ MD5 03fccfabacd7ae11eea1cef3030a07f0 ChangeLog 1906
 MD5 498b79a4bd0f92d6e2ea19410f4d8eb1 waimea-0.3.5.ebuild 1151
 MD5 521963a74b51b562e22adbef5b782f76 waimea-0.4.0-r1.ebuild 1232
 MD5 bf2f3ef3a256d21327034734a543bda4 waimea-0.4.0.ebuild 1005
+MD5 e7307c1653035014c1e36a27ca8ccb45 metadata.xml 163
 MD5 99a5f21810e1a4df6ae645f27a60203a files/digest-waimea-0.3.5 64
 MD5 6c13fc081ff9fe081d3ac0b171118fd6 files/digest-waimea-0.4.0 65
 MD5 5be07af92d4d63686b6950ce357c89f7 files/digest-waimea-0.4.0-r1 135
