@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-1.7_alpha6.ebuild,v 1.6 2004/03/13 23:00:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-1.7_alpha6.ebuild,v 1.7 2004/05/22 13:15:32 mholzer Exp $
 
 DESCRIPTION="tiny emacs clone"
 HOMEPAGE="http://zile.sourceforge.net/"
@@ -24,7 +24,7 @@ src_install() {
 	keepdir /var/lib/{exrecover,expreserve}
 	make INSTALL=/usr/bin/install \
 		DESTDIR=${D} \
-		infodir=${D}/usr/share/info\
+		infodir=/usr/share/info\
 		MANDIR=/usr/share/man \
 		TERMLIB=termlib \
 		PRESERVEDIR=${D}/var/lib/expreserve \
