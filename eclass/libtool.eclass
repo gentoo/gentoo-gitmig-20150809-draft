@@ -2,7 +2,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.4 2002/06/10 18:23:49 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/libtool.eclass,v 1.5 2002/06/10 18:25:04 azarah Exp $
 # This eclass patches ltmain.sh distributed with libtoolized packages with the
 # relink and portage patch
 ECLASS=libtool
@@ -27,12 +27,12 @@ elibtoolize() {
 	# if all patches fail.
 	for x in ${*}
 	do
-		if [ "${1}" = "--portage" ]
+		if [ "${x}" = "--portage" ]
 		then
 			portage="yes"
 		fi
 		# Only patch the ltmain.sh in ${S}
-		if [ "${1}" = "--shallow" ]
+		if [ "${x}" = "--shallow" ]
 		then
 			if [ -f ${S}/ltmain.sh ]
 			then
