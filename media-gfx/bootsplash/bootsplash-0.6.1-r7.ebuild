@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/bootsplash-0.6.1-r7.ebuild,v 1.1 2004/10/11 16:30:14 dams Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/bootsplash/bootsplash-0.6.1-r7.ebuild,v 1.2 2004/11/17 09:26:08 dams Exp $
+
+inherit eutils
 
 IUSE=""
 S=${WORKDIR}
@@ -19,8 +21,6 @@ DEPEND=">=media-libs/freetype-2
 	!media-gfx/splashutils"
 
 PATCHS="${FILESDIR}/0.6.1-r7-default_theme.patch"
-
-inherit eutils
 
 src_compile() {
 	# compile utils
