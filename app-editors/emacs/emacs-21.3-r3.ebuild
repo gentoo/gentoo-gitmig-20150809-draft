@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3-r3.ebuild,v 1.4 2004/06/01 23:23:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.3-r3.ebuild,v 1.5 2004/06/10 19:44:32 vapier Exp $
 
 inherit flag-o-matic eutils
 
@@ -16,18 +16,18 @@ IUSE="X nls motif leim gnome Xaw3d lesstif"
 
 RDEPEND="sys-libs/ncurses
 	sys-libs/gdbm
-	!arm? (
 	X? ( virtual/x11
 		>=media-libs/libungif-4.1.0.1b
 		>=media-libs/jpeg-6b-r2
 		>=media-libs/tiff-3.5.5-r3
 		>=media-libs/libpng-1.2.1
+		!arm? (
 		Xaw3d? ( x11-libs/Xaw3d )
 		motif? (
 			lesstif? ( x11-libs/lesstif )
 			!lesstif? ( >=x11-libs/openmotif-2.1.30 ) )
 		gnome? ( gnome-base/gnome-desktop )
-	)
+		)
 	)
 	nls? ( sys-devel/gettext )"
 DEPEND="${RDEPEND}
