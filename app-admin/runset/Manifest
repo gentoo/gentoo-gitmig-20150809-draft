@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ea5105811c481028a02459f27cc6310d ChangeLog 1271
-MD5 a98424641d57be103b512f4e8cacd3f9 runset-1.5.ebuild 780
+MD5 85bdda49e7c095fbdab325d42d206b30 ChangeLog 1393
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 502676ecd6866534ddc541bd2e6bdb54 runset-1.6.ebuild 887
+MD5 a98424641d57be103b512f4e8cacd3f9 runset-1.5.ebuild 780
+MD5 9005eb19bb20381693f366b3e764d3a1 runset-1.6.ebuild 888
 MD5 e5d3e7fb339bab11ec59788bbc4ce36d files/digest-runset-1.5 62
 MD5 7241e84a203ee9faef55e5cb8e3f4bed files/digest-runset-1.6 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA3K41HTu7gpaalycRAkcWAKCXht61TTN9rOkFQxCgGGNCgFnVsQCgt09E
-T6GHhVLX2u/TCPhRC9TmB24=
-=XkP4
------END PGP SIGNATURE-----
