@@ -1,0 +1,13 @@
+# ChangeLog for app-admin/modconf
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/modconf/ChangeLog,v 1.1 2003/03/09 20:43:50 azarah Exp $
+
+*modconf-0.2.43 (09 Mar 2003)
+
+  09 Mar 2003; Martin Schlemmer <azarah@gentoo.org> modconf-0.2.43.ebuild,
+                                                    modconf-0.2.43-gentoo.patch :
+  Initial import.  Ebuild requested by Denny Schierz <linuxmail@4lin.net>.
+  It mostly works, but should need some more tweaking ... need to figure out
+  why whiplash (dev-libs/newt) segfault for instance, and why I cannot seem to
+  edit options for modules.
+
