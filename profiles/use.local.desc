@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.701 2004/10/29 23:14:26 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.702 2004/10/30 18:40:00 slarti Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -115,6 +115,11 @@ app-sci/vienna-rna:no-utils - Do not include sequence format conversion and repr
 app-shells/zsh:cap - Adds POSIX.1e (formerly POSIX 6) capabilities for zsh
 app-text/a2ps:vanilla - Do not add extra patches which change default behaviour
 app-text/acroread:noplugin - Do not install the acroread browser plugin
+app-text/crm114:normalizemime - Add support for using the normalizemime
+mime preprocessor.
+app-text/crm114:mew - Add support for using the mewdecode mime decoder.
+app-text/crm114:mimencode - Adds support for using the mimencode mime
+decoder.
 app-text/estraier:chasen - Enable chasen support for Estraier
 app-text/estraier:kakasi - Enable kakasi support for Estraier
 app-text/estraier:mecab - Enable mecab support for Estraier
