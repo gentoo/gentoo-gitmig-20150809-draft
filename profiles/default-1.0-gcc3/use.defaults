@@ -53,3 +53,6 @@ mozilla		net-www/mozilla
 gphoto2		media-gfx/gphoto2
 ldap		net-nds/openldap
 snmp		net-analyzer/ucd-snmp
+cdr		app-cdr/cdrtools
+scanner		media-gfx/sane-backends
+

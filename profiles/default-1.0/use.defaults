@@ -13,6 +13,7 @@ alsa		media-libs/alsa-lib
 arts		kde-base/kdelibs
 berkdb		sys-libs/db
 bonobo		gnome-base/bonobo
+cdr		app-cdr/cdrtools
 directfb	dev-libs/DirectFB
 esd		media-sound/esound
 gdbm		sys-libs/gdbm
@@ -45,6 +46,7 @@ python		dev-lang/python
 qt		x11-libs/qt
 readline	sys-libs/readline
 ruby		dev-lang/ruby
+scanner		media-gfx/sane-backends
 sdl		media-libs/libsdl
 slang		sys-libs/slang
 snmp		net-analyzer/ucd-snmp

@@ -53,3 +53,5 @@ opengl		virtual/opengl
 mozilla		net-www/mozilla
 ldap		net-nds/openldap
 snmp		net-analyzer/ucd-snmp
+cdr		app-cdr/cdrtools
+scanner		media-gfx/sane-backends
