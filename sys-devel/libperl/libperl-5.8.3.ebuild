@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.3.ebuild,v 1.8 2004/06/29 17:43:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.3.ebuild,v 1.9 2004/08/07 00:09:12 rac Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -64,12 +64,13 @@ filter-flags "-malign-double"
 # The slot of this binary compat version of libperl.so
 PERLSLOT="1"
 
-SHORT_PV="`echo ${PV} | cut -d. -f1,2`"
-MY_P="perl-`echo $PV | sed 's/_rc/-RC/'`"
+SHORT_PV="${PV%.*}"
+MY_P="perl-${PV/_rc/-RC}"
 S="${WORKDIR}/${MY_P}"
 DESCRIPTION="Larry Wall's Practical Extraction and Reporting Language"
 SRC_URI="ftp://ftp.cpan.org/pub/CPAN/src/${MY_P}.tar.gz"
 HOMEPAGE="http://www.perl.org"
+RESTRICT="maketest"
 
 if [ "${PN}" = "libperl" ]
 then

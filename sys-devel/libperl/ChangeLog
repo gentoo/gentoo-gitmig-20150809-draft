@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/libperl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.37 2004/07/29 20:19:53 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/ChangeLog,v 1.38 2004/08/07 00:09:12 rac Exp $
+
+  06 Aug 2004; Robert Coie <rac@gentoo.org> libperl-5.8.2-r1.ebuild,
+  libperl-5.8.2.ebuild, libperl-5.8.3.ebuild, libperl-5.8.4-r1.ebuild,
+  libperl-5.8.4.ebuild:
+  restrict maketest, avoid forkbomb in portage 51 with maketest enabled,
+  eliminate some global scope external calls
 
   29 Jul 2004; Guy Martin <gmsoft@gentoo.org> libperl-5.8.4-r1.ebuild:
   Stable on hppa.
