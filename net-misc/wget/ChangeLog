@@ -1,8 +1,17 @@
 # ChangeLog for net-misc/wget
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.16 2003/07/06 09:13:30 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/wget/ChangeLog,v 1.17 2003/10/15 05:42:04 seemant Exp $
 
-  
+*wget-1.8.2-r3 (14 Oct 2003)
+
+  14 Oct 2003; Seemant Kulleen <seemant@gentoo.org> wget-1.8.2-r2.ebuild,
+  wget-1.8.2-r3.ebuild, files/wget-1.8.2-2Glimit.diff,
+  files/wget-1.8.2-gentoo.diff, files/wget-1.8.2-r2-gentoo.diff:
+  Added debian's patch to let wget download files larger than 2G. Ciaranm in
+  #gentoo/#gentoo-sparc found the patch at:
+  http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=137989 . This closes bug
+  #30985 by katerina <kllba@operamail.com>
+
 *wget-1.8.2-r2 (20 Dec 2002)
 
   06 Jul 2003; Joshua Kinard <kumba@gentoo.org> wget-1.8.2-r2.ebuild:
