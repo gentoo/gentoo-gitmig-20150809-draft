@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/plotutils-2.4.1-r2.ebuild,v 1.17 2004/02/22 16:43:00 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/plotutils/plotutils-2.4.1-r2.ebuild,v 1.18 2004/03/02 14:09:31 lanius Exp $
 
 IUSE="X"
 
@@ -13,7 +13,6 @@ inherit libtool
 #font installation procedures should probably be moved to pkg_postinst.
 #See Bug# 30 at http://bugs.gentoo.org/show_bug.cgi?id=30
 
-S=${WORKDIR}/${P}
 DESCRIPTION="a powerful C/C++ function library for exporting 2-D vector graphics"
 SRC_URI="ftp://ftp.gnu.org/gnu/plotutils/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/plotutils/"
@@ -33,11 +32,9 @@ export CFLAGS="${CFLAGS/k6/i586}"
 export CXXFLAGS="${CFLAGS}"
 
 src_unpack() {
-
 	unpack ${A}
 	cd ${S}
-	patch -p1 < ${FILESDIR}/plotutils-2.4.1-gentoo.patch || die
-
+	epatch ${FILESDIR}/plotutils-2.4.1-gentoo.patch
 }
 
 src_compile() {
@@ -57,17 +54,14 @@ src_compile() {
 
 	econf ${myconf} || die "./configure failed"
 	emake || die "Parallel Make Failed"
-
 }
 
 src_install () {
-
 	einstall \
 		datadir=${D}/usr/share || die "Installation Failed"
 
 	dodoc AUTHORS COMPAT COPYING ChangeLog INSTALL* \
 		KNOWN_BUGS NEWS ONEWS PROBLEMS README THANKS TODO
-
 }
 
 pkg_postinst() {
