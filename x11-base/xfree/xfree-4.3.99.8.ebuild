@@ -652,8 +652,8 @@ src_install() {
 	rm -f ${D}/usr/X11R6/include/{zconf.h,zlib.h}
 
 	# Use the Xwrapper as the X binary
-	rm -f ${D}/usr/X11R6/bin/X
-	dosym Xwrapper /usr/X11R6/bin/X
+	#rm -f ${D}/usr/X11R6/bin/X
+	#dosym Xwrapper /usr/X11R6/bin/X
 	dosym ../../usr/X11R6/bin/XFree86 /etc/X11/X
 
 	# Fix perms
