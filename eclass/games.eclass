@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.84 2004/12/26 09:52:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.85 2004/12/30 11:54:19 vapier Exp $
 #
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org
 #
@@ -8,7 +8,7 @@
 # you better have a *good* reason why you're *not* using games.eclass
 # in a games ebuild
 
-inherit eutils
+inherit eutils gnuconfig
 
 ECLASS=games
 INHERITED="$INHERITED $ECLASS"
@@ -34,6 +34,7 @@ export GAMES_USER_DED="${GAMES_USER_DED:-games}"
 export GAMES_GROUP="${GAMES_GROUP:-games}"
 
 egamesconf() {
+	gnuconfig_update
 	if [ -x ./configure ] ; then
 		echo \
 		./configure \
