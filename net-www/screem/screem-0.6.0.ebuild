@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/screem/screem-0.6.0.ebuild,v 1.2 2003/05/14 13:41:17 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/screem/screem-0.6.0.ebuild,v 1.3 2003/06/10 12:49:38 liquidx Exp $
 
 IUSE="ssl zlib"
 
@@ -24,7 +24,7 @@ DEPEND=">=gnome-base/libgnome-2.0.2
 	>=dev-libs/glib-2.0
 	>=gnome-base/libbonobo-2.0
 	>=gnome-base/libbonoboui-2.0
-	>=gnome-extra/libgtkhtml-2.0
+	=gnome-extra/libgtkhtml-2*
 	>=gnome-base/libgnomeprint-1.110.0
 	>=gnome-base/libgnomeprintui-1.110.0
 	ssl? ( dev-libs/openssl )

@@ -1,6 +1,10 @@
 # ChangeLog for net-www/screem
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/screem/ChangeLog,v 1.9 2003/05/14 13:41:17 darkspecter Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/screem/ChangeLog,v 1.10 2003/06/10 12:49:38 liquidx Exp $
+
+  10 Jun 2003; Alastair Tse <liquidx@gentoo.org> screem-0.6.0.ebuild,
+  screem-0.6.2.ebuild:
+  fixing libgtkhtml deps
 
   14 May 2003; Bartosch Pixa <darkspecter@gentoo.org> screem-0.6.0.ebuild,
   screem-0.6.2.ebuild:
