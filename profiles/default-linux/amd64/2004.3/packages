@@ -9,3 +9,6 @@
 
 *app-portage/gentoolkit
 
+# damnit!
+*dev-lang/perl
+
