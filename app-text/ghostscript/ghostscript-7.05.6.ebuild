@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6.ebuild,v 1.9 2004/07/01 11:57:37 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/ghostscript/ghostscript-7.05.6.ebuild,v 1.10 2004/07/01 21:20:14 mr_bones_ Exp $
 
 DESCRIPTION="ESP Ghostscript -- an enhanced version of GNU Ghostscript with better printer support"
 SRC_URI="ftp://ftp.easysw.com/pub/ghostscript/espgs-${PV}-source.tar.bz2
@@ -16,10 +16,10 @@ KEYWORDS="~x86 ppc ~sparc alpha"
 IUSE="X cups cjk"
 
 DEPEND="virtual/libc
-	>=media-libs/jpeg-6b 
+	>=media-libs/jpeg-6b
 	>=media-libs/libpng-1.2.1
 	>=sys-libs/zlib-1.1.4
-	X? ( virtual/x11 ) 
+	X? ( virtual/x11 )
 	cjk? ( media-fonts/arphicfonts
 		media-fonts/kochi-substitute
 		media-fonts/baekmuk-fonts )
@@ -51,7 +51,7 @@ src_compile() {
 	myconf="--with-ijs --with-omni"
 
 	use X && myconf="${myconf} --with-x" \
-		|| myconf="${myconf} --without-x" 
+		|| myconf="${myconf} --without-x"
 
 	use cups && myconf="${myconf} --enable-cups --with-gimp-print" \
 		|| myconf="${myconf} --disable-cups --without-gimp-print"
