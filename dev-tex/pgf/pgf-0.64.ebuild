@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/pgf/pgf-0.61.ebuild,v 1.5 2004/08/19 01:58:46 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/pgf/pgf-0.64.ebuild,v 1.1 2004/10/13 23:08:10 usata Exp $
 
 inherit latex-package
 
@@ -10,12 +10,12 @@ SRC_URI="mirror://sourceforge/latex-beamer/${P}.tar.gz"
 
 LICENSE="LPPL-1.2"
 SLOT="0"
-KEYWORDS="x86 alpha ppc ~amd64 ~sparc"
+KEYWORDS="~x86 ~alpha ~ppc ~amd64 ~sparc"
 
 IUSE=""
 
 DEPEND="virtual/tetex
-	>=dev-tex/xcolor-1.10"
+	>=dev-tex/xcolor-2.00"
 S="${WORKDIR}/${PN}"
 
 src_compile() {
