@@ -1,5 +1,8 @@
 # ChangeLog for dev-tex/floatflt
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+
+  13 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> floatflt-1.31a.ebuild:
+  marked ~amd64
 
   12 Jun 2003; <msterret@gentoo.org> floatflt-1.31a.ebuild:
   add Header
