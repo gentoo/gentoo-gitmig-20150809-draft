@@ -1,6 +1,10 @@
 # ChangeLog for x11-plugins/wmmp3
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmp3/ChangeLog,v 1.3 2004/09/02 18:22:40 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmp3/ChangeLog,v 1.4 2004/09/04 01:33:46 s4t4n Exp $
+
+  04 Sep 2004; Michele Noberasco <s4t4n@gentoo.org> wmmp3-0.12.ebuild:
+  Stable for x86. Lower mpg123 dependency to version 0.59s-r2 as revision 3
+  is masked on ppc!
 
   02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> wmmp3-0.12.ebuild:
   Masked wmmp3-0.12.ebuild stable for ppc
