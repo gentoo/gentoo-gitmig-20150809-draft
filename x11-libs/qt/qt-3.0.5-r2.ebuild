@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.5-r2.ebuild,v 1.5 2002/11/18 12:34:26 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.0.5-r2.ebuild,v 1.6 2002/12/01 13:37:31 hannes Exp $
 
 IUSE="nas nls postgres opengl mysql odbc gif"
 
@@ -71,6 +71,7 @@ src_compile() {
 	use mysql	&& myconf="${myconf} -plugin-sql-mysql -I/usr/include/mysql -L/usr/lib/mysql"
 	use postgres	&& myconf="${myconf} -plugin-sql-psql -I/usr/include/postgresql/server"
 	use odbc	&& myconf="${myconf} -plugin-sql-odbc"
+	use opengl  && myconf="${myconf} -enable-module=opengl" || myconf="${myconfig} -disable-opengl"
 	[ -n "$DEBUG" ]	&& myconf="${myconf} -debug" 		|| myconf="${myconf} -release -no-g++-exceptions"
 	
 	# avoid wasting time building things we won't install
