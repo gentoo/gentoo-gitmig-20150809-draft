@@ -5,14 +5,14 @@ MD5 be2f0eb9d19bd019872502ec812073c1 snortsnarf-021111.1-r2.ebuild 1389
 MD5 d62f9e3abbae1150f5a5d7cca63f98be snortsnarf-021111.1.ebuild 1182
 MD5 074943e945753b9795d9cd688af03055 snortsnarf-021111.1-r1.ebuild 1336
 MD5 914e98c0683bb2eed958683fadfa617c ChangeLog 1342
-MD5 57c6cc2efb81ce99a5ed7ddadc6e042d metadata.xml 391
+MD5 7380609ed15e1e589ab8a1ac5edfc362 metadata.xml 278
 MD5 a25e9ca70d5bf65e193bdbbe153ae7e2 files/digest-snortsnarf-021111.1 71
 MD5 a25e9ca70d5bf65e193bdbbe153ae7e2 files/digest-snortsnarf-021111.1-r1 71
 MD5 a25e9ca70d5bf65e193bdbbe153ae7e2 files/digest-snortsnarf-021111.1-r2 71
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFA+T+nT+MN7JbqCpMRAhmhAJ0ez20caW6RbO/OyakOV+3+yZ93pwCeMqlo
-qFvrzeG0ErIOEs2FEaN6Mns=
-=Z5fy
+iD8DBQFBKhHAT+MN7JbqCpMRAifWAJ0Q9wnPguA+WxKKTHSxHG2CRXstsACePAw7
+bOEafaYOFOQiVdLVRjyaaks=
+=CSPK
 -----END PGP SIGNATURE-----

@@ -4,7 +4,7 @@ Hash: SHA1
 MD5 28d774ff71dff7f0ed5234a512dcafab piwi-0.8.0.20031109-r3.ebuild 3286
 MD5 d727de56f0f51d479c06a6aa57967c03 piwi-0.8.0.20031109-r2.ebuild 3558
 MD5 efc1a99aa7dba2fc8abebcafa0fd5ef8 ChangeLog 2935
-MD5 f05921d751b274bc413e66205f783070 metadata.xml 341
+MD5 9c951cef866ce42e669df6c94ab8a7cf metadata.xml 227
 MD5 09b1b03da063c7fc20841f8a74d938ff files/make_release.sh 529
 MD5 4d13a93c357ca67b8c4ca9a5085e5ab5 files/digest-piwi-0.8.0.20031109-r2 72
 MD5 4d13a93c357ca67b8c4ca9a5085e5ab5 files/digest-piwi-0.8.0.20031109-r3 72
@@ -12,7 +12,7 @@ MD5 7166a0c6b90970d69af563f6ae7b3036 files/piwi-apache.conf 371
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBKdn/T+MN7JbqCpMRAtjNAJ4191XkXlgIlETLcmhxZRiVGg0cpgCffMcF
-1G2kHl356dob47VCTXFHsv8=
-=hGbX
+iD8DBQFBKhG2T+MN7JbqCpMRAj/NAKCM9BwzikRO2xwJy8HbDNzM7XXmYgCdEPYu
+ZW7PKOq2B395zO1bJso1nQU=
+=5/ll
 -----END PGP SIGNATURE-----

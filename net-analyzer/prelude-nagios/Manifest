@@ -1,7 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 95be7ae4e4f346f523056ab9b8b6e973 prelude-nagios-0.0.2.ebuild 1292
 MD5 096547a34b90248f57a0f6d8375abebb ChangeLog 1159
-MD5 aa28b0cd63f86cdb3b93258c3d231756 metadata.xml 309
+MD5 67513bad83a9eb8513e1e26507e72934 metadata.xml 233
 MD5 7d4d3e867a4aede8c1a70f2c0c6fea01 prelude-nagios-0.0.3.ebuild 847
 MD5 38deb4c75b8cafde875b533ab5ae7b78 files/digest-prelude-nagios-0.0.2 72
 MD5 a7b75c6dbfa1a45c9fab30ff31791aef files/digest-prelude-nagios-0.0.3 72
 MD5 fdc08ad12de3e7b0a010a302b70c9271 files/prelude-nagios-0.0.2-001.patch 1988
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBKhHNT+MN7JbqCpMRAis0AJ4sYjwRsXv9qwG1DwJ/4467Z+ChFgCfRL00
+9KZvk2S30oZzyjlbQM9Iu9I=
+=62Ob
+-----END PGP SIGNATURE-----

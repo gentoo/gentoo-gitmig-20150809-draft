@@ -1,7 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 34eaa82507d90af069d07853218059c0 portmon-2.0.ebuild 804
 MD5 b79827f29769fbc983b0240146478db1 portmon-1.9.ebuild 799
 MD5 a96bf2e14332b5aa68677f2061ebef77 ChangeLog 1107
-MD5 7d43ec53a471d42b355ba1702e0be15d metadata.xml 354
+MD5 28a74772b3ddec6197c687a12f0ef9a8 metadata.xml 242
 MD5 52e3317349da2a915781b132dba91d9f files/digest-portmon-1.9 63
 MD5 3148050ea7db3913004266dbb22ef788 files/digest-portmon-2.0 63
 MD5 e8382aff2db06f680459a2d858b90879 files/portmon.init 748
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBKhHLT+MN7JbqCpMRAk2gAJsEXpPmBqmFnX1U2C3O2AEXJwpCnQCfXI03
+ztn498vFftPhbzbX9JWk/ME=
+=jR6J
+-----END PGP SIGNATURE-----

@@ -6,7 +6,7 @@ MD5 4a3208d69f96614194f69fafe8d616a0 snort-2.2.0.ebuild 3813
 MD5 8f89d5403bedc2791b69f44b0813bfef snort-2.0.6.ebuild 3139
 MD5 1daf3ca336451d88b41bf95fa807679b snort-2.1.3.ebuild 3805
 MD5 1a2cd383c862f5d774a8f3018033cb1d ChangeLog 9584
-MD5 f629e6b9c8a922659de794d67f0cd115 metadata.xml 928
+MD5 53edc4328d9adeaf087c65ea94b1594b metadata.xml 246
 MD5 919058894f4983c35900bc8bb98a96d4 files/snort.rc6 764
 MD5 ea783bd276257a20df5b6537d3ff5d49 files/snort-drop-calculation.diff 4957
 MD5 fe6a25fdd3c6d4b527d89c51d78b8f36 files/2.0.6-libnet-1.0.patch 2753
@@ -22,7 +22,7 @@ MD5 513637a4fadce14177bf85e97e5931f8 files/snort-2.1.3-gcc3.patch 350
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.4 (GNU/Linux)
 
-iD8DBQFBIJUNT+MN7JbqCpMRAmmjAJ90J8XSSedpI7g0Le3F+w8sKyMqqwCfXAHa
-z71nYkGkCSv7w6LiRCdaXV8=
-=Mglx
+iD8DBQFBKhG4T+MN7JbqCpMRAq8wAKCMfiurgllUWI+Tq/lgiE8xaNAP/QCfVtJ0
+4TwjFyWUtLaEvCf3v7vSf1k=
+=su/X
 -----END PGP SIGNATURE-----
