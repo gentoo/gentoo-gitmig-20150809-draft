@@ -1,0 +1,169 @@
+Index: configure
+===================================================================
+RCS file: /cvsroot/ffmpeg/ffmpeg/configure,v
+retrieving revision 1.164
+diff -u -b -B -u -r1.164 configure
+--- configure	9 Mar 2005 03:04:55 -0000	1.164
++++ configure	15 Mar 2005 23:40:10 -0000
+@@ -13,6 +13,7 @@
+ echo "Standard options:"
+ echo "  --help                   print this message"
+ echo "  --prefix=PREFIX          install in PREFIX [$prefix]"
++echo "  --libdir=DIR             install libs in DIR [PREFIX/lib]"
+ echo "  --mandir=DIR             man documentation in DIR [PREFIX/man]"
+ echo "  --enable-mp3lame         enable mp3 encoding via libmp3lame [default=no]"
+ echo "  --enable-ogg             enable ogg support via libogg [default=no]"
+@@ -91,6 +92,7 @@
+ 
+ # default parameters
+ prefix="/usr/local"
++libdir=""
+ mandir=""
+ bindir=""
+ cross_prefix=""
+@@ -376,6 +378,8 @@
+   case "$opt" in
+   --prefix=*) prefix=`echo $opt | cut -d '=' -f 2`
+   ;;
++  --libdir=*) libdir=`echo $opt | cut -d '=' -f 2`
++  ;;
+   --mandir=*) mandir=`echo $opt | cut -d '=' -f 2`
+   ;;
+   --source-path=*) source_path=`echo $opt | cut -d '=' -f 2`
+@@ -1062,6 +1066,10 @@
+ bindir="${prefix}/bin"
+ fi
+ 
++if test x"$libdir" = x""; then
++libdir="${prefix}/lib"
++fi
++
+ if test x"$mandir" = x""; then
+ mandir="${prefix}/man"
+ fi
+@@ -1138,6 +1146,7 @@
+ echo "#define FFMPEG_CONFIGURATION "'"'"$FFMPEG_CONFIGURATION"'"' >> $TMPH
+ 
+ echo "prefix=$prefix" >> config.mak
++echo "libdir=$libdir" >> config.mak
+ echo "bindir=$bindir" >> config.mak
+ echo "mandir=$mandir" >> config.mak
+ echo "MAKE=$make" >> config.mak
+Index: libavcodec/Makefile
+===================================================================
+RCS file: /cvsroot/ffmpeg/ffmpeg/libavcodec/Makefile,v
+retrieving revision 1.177
+diff -u -b -B -u -r1.177 Makefile
+--- libavcodec/Makefile	9 Mar 2005 19:46:31 -0000	1.177
++++ libavcodec/Makefile	15 Mar 2005 23:40:10 -0000
+@@ -302,9 +302,9 @@
+ ifeq ($(CONFIG_WIN32),yes)
+ 	install $(INSTALLSTRIP) -m 755 $(SLIB) "$(prefix)"
+ else
+-	install -d $(prefix)/lib
+-	install $(INSTALLSTRIP) -m 755 $(SLIB) $(prefix)/lib/libavcodec-$(VERSION).so
+-	ln -sf libavcodec-$(VERSION).so $(prefix)/lib/libavcodec.so
++	install -d $(libdir)
++	install $(INSTALLSTRIP) -m 755 $(SLIB) $(libdir)/libavcodec-$(VERSION).so
++	ln -sf libavcodec-$(VERSION).so $(libdir)/libavcodec.so
+ 	ldconfig || true
+ endif
+ ifeq ($(CONFIG_PP),yes)
+@@ -315,7 +315,7 @@
+ endif
+ 
+ installlib: all install-headers
+-	install -m 644 $(LIB) "$(prefix)/lib"
++	install -m 644 $(LIB) "$(libdir)"
+ 
+ install-headers:
+ 	mkdir -p "$(prefix)/include/ffmpeg"
+Index: libavcodec/libpostproc/Makefile
+===================================================================
+RCS file: /cvsroot/ffmpeg/ffmpeg/libavcodec/libpostproc/Makefile,v
+retrieving revision 1.19
+diff -u -b -B -u -r1.19 Makefile
+--- libavcodec/libpostproc/Makefile	4 Feb 2005 03:29:50 -0000	1.19
++++ libavcodec/libpostproc/Makefile	15 Mar 2005 23:40:11 -0000
+@@ -54,9 +54,9 @@
+ ifeq ($(CONFIG_WIN32),yes)
+        install $(INSTALLSTRIP) -m 755 $(SPPLIB) "$(prefix)"
+ else
+-	install -d $(prefix)/lib
+-	install $(INSTALLSTRIP) -m 755 $(SPPLIB) $(prefix)/lib/$(SPPLIB).$(SPPVERSION)
+-	ln -sf $(SPPLIB).$(SPPVERSION) $(prefix)/lib/$(SPPLIB)
++	install -d $(libdir)
++	install $(INSTALLSTRIP) -m 755 $(SPPLIB) $(libdir)/$(SPPLIB).$(SPPVERSION)
++	ln -sf $(SPPLIB).$(SPPVERSION) $(libdir)/$(SPPLIB)
+ 	ldconfig || true
+ endif
+ endif
+Index: libavformat/Makefile
+===================================================================
+RCS file: /cvsroot/ffmpeg/ffmpeg/libavformat/Makefile,v
+retrieving revision 1.84
+diff -u -b -B -u -r1.84 Makefile
+--- libavformat/Makefile	15 Mar 2005 12:37:39 -0000	1.84
++++ libavformat/Makefile	15 Mar 2005 23:40:11 -0000
+@@ -108,9 +108,9 @@
+ ifeq ($(CONFIG_WIN32),yes)
+ 	install $(INSTALLSTRIP) -m 755 $(SLIB) "$(prefix)"
+ else
+-	install -d $(prefix)/lib
+-	install $(INSTALLSTRIP) -m 755 $(SLIB) $(prefix)/lib/libavformat-$(VERSION).so
+-	ln -sf libavformat-$(VERSION).so $(prefix)/lib/libavformat.so
++	install -d $(libdir)
++	install $(INSTALLSTRIP) -m 755 $(SLIB) $(libdir)/libavformat-$(VERSION).so
++	ln -sf libavformat-$(VERSION).so $(libdir)/libavformat.so
+ 	ldconfig || true
+ endif
+ else
+@@ -118,7 +118,7 @@
+ endif
+ 
+ installlib: all install-headers
+-	install -m 644 $(LIB) "$(prefix)/lib"
++	install -m 644 $(LIB) "$(libdir)"
+ 
+ install-headers:
+ 	mkdir -p "$(prefix)/include/ffmpeg"
+Index: vhook/Makefile
+===================================================================
+RCS file: /cvsroot/ffmpeg/ffmpeg/vhook/Makefile,v
+retrieving revision 1.19
+diff -u -b -B -u -r1.19 Makefile
+--- vhook/Makefile	25 Feb 2005 22:22:20 -0000	1.19
++++ vhook/Makefile	15 Mar 2005 23:40:11 -0000
+@@ -26,8 +26,8 @@
+ 	$(CC) -MM $(CFLAGS) $^ 1>.depend
+ 
+ install:
+-	install -d "$(prefix)/lib/vhook"
+-	install -m 755 $(HOOKS) "$(prefix)/lib/vhook"
++	install -d "$(libdir)/vhook"
++	install -m 755 $(HOOKS) "$(libdir)/vhook"
+ 
+ imlib2.so: imlib2.o
+ 	$(CC) -g -o $@ $(SHFLAGS) $< -lImlib2
+--- libavcodec/Makefile.orig	2005-03-18 06:10:21.000000000 +0900
++++ libavcodec/Makefile	2005-03-18 06:17:04.000000000 +0900
+@@ -7,7 +7,7 @@
+ VPATH=$(SRC_PATH)/libavcodec
+ 
+ # NOTE: -I.. is needed to include config.h
+-CFLAGS=$(OPTFLAGS) -DHAVE_AV_CONFIG_H -I.. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE
++CFLAGS=$(OPTFLAGS) $(PIC) -DHAVE_AV_CONFIG_H -I.. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE
+ 
+ OBJS= bitstream.o utils.o mem.o allcodecs.o \
+       mpegvideo.o jrevdct.o jfdctfst.o jfdctint.o\
+--- libavformat/Makefile.orig	2005-02-25 00:18:02.000000000 +0900
++++ libavformat/Makefile	2005-03-18 06:17:22.000000000 +0900
+@@ -6,7 +6,7 @@
+ 
+ VPATH=$(SRC_PATH)/libavformat
+ 
+-CFLAGS=$(OPTFLAGS) -I.. -I$(SRC_PATH) -I$(SRC_PATH)/libavcodec -DHAVE_AV_CONFIG_H -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE
++CFLAGS=$(OPTFLAGS) $(PIC) -I.. -I$(SRC_PATH) -I$(SRC_PATH)/libavcodec -DHAVE_AV_CONFIG_H -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE
+ 
+ OBJS= utils.o cutils.o os_support.o allformats.o
+ PPOBJS=
