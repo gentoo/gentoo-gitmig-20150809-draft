@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r21.ebuild,v 1.2 2004/07/15 03:49:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.20-r22.ebuild,v 1.1 2004/08/02 11:11:09 plasmaroo Exp $
 
 IUSE="aavm crypt evms2 usagi"
 
@@ -30,7 +30,7 @@ S=${WORKDIR}/linux-${KV}
 
 DESCRIPTION="Full sources for the Gentoo Kernel."
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-	 http://dev.gentoo.org/~plasmaroo/patches/kernel/gentoo-sources/patches-${KV/r21/r14}.tar.bz2"
+	 http://dev.gentoo.org/~plasmaroo/patches/kernel/gentoo-sources/patches-${KV/r22/r14}.tar.bz2"
 HOMEPAGE="http://www.gentoo.org/ http://www.kernel.org/"
 LICENSE="GPL-2"
 KEYWORDS="x86 -ppc -sparc -alpha -hppa -mips"
@@ -40,7 +40,7 @@ src_unpack() {
 	unpack ${A}
 	mv linux-${OKV} linux-${KV} || die "Error moving kernel source tree to linux-${KV}"
 
-	cd ${WORKDIR}/${KV/r21/r14}
+	cd ${WORKDIR}/${KV/r22/r14}
 
 	# This is the *ratified* aavm USE flag, enables aavm support in this kernel
 	if ! use aavm; then
@@ -127,6 +127,7 @@ src_unpack() {
 	epatch ${FILESDIR}/do_brk_fix.patch || die "Failed to apply do_brk() fix!"
 	epatch ${FILESDIR}/${P}-munmap.patch || die "Failed to apply munmap patch!"
 	epatch ${FILESDIR}/${P}-rtc_fix.patch || die "Failed to apply RTC fix!"
+	epatch ${FILESDIR}/${PN}-2.4.CAN-2003-0643.patch || die "Failed to add the CAN-2003-0643 patch!"
 	epatch ${FILESDIR}/${PN}-2.4.CAN-2003-0985.patch || die "Failed to apply mremap() fix!"
 	epatch ${FILESDIR}/${PN}-2.4.CAN-2004-0001.patch || die "Failed to apply AMD64 ptrace patch!"
 	epatch ${FILESDIR}/${PN}-2.4.CAN-2004-0010.patch || die "Failed to add the CAN-2004-0010 patch!"

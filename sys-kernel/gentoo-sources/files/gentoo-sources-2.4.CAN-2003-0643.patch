@@ -1,0 +1,26 @@
+# This is a BitKeeper generated diff -Nru style patch.
+#
+# ChangeSet
+#   2003/07/25 09:53:06-07:00 kaber@trash.net 
+#   [NET]: Fix signnedness test in socket filter code.
+# 
+# net/core/filter.c
+#   2003/07/25 09:52:50-07:00 kaber@trash.net +2 -3
+#   [NET]: Fix signnedness test in socket filter code.
+# 
+diff -Nru a/net/core/filter.c b/net/core/filter.c
+--- a/net/core/filter.c	2004-06-27 19:54:06 -07:00
++++ b/net/core/filter.c	2004-06-27 19:54:06 -07:00
+@@ -294,10 +294,9 @@
+ 				goto load_b;
+ 
+ 			case BPF_LDX|BPF_B|BPF_MSH:
+-				k = fentry->k;
+-				if(k >= 0 && (unsigned int)k >= len)
++				if(fentry->k >= len)
+ 					return (0);
+-				X = (data[k] & 0xf) << 2;
++				X = (data[fentry->k] & 0xf) << 2;
+ 				continue;
+ 
+ 			case BPF_LD|BPF_IMM:

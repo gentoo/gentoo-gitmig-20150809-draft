@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.19-r18.ebuild,v 1.2 2004/07/15 03:49:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.19-r19.ebuild,v 1.1 2004/08/02 11:11:09 plasmaroo Exp $
 
 IUSE="acpi4linux crypt xfs"
 
@@ -35,7 +35,7 @@ S=${WORKDIR}/linux-${KV}
 
 DESCRIPTION="Full sources for the Gentoo Linux kernel"
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-	 http://gentoo.lostlogicx.com/patches-${KV/18/10}.tar.bz2"
+	 http://gentoo.lostlogicx.com/patches-${KV/-r19/-r10}.tar.bz2"
 KEYWORDS="x86 -ppc -sparc -amd64 -ia64"
 SLOT="${KV}"
 
@@ -43,7 +43,7 @@ src_unpack() {
 	unpack ${A}
 	mv linux-${OKV} linux-${KV} || die
 
-	cd ${KV/18/10}
+	cd ${KV/-r19/-r10}
 	# Kill patches we aren't suppposed to use, don't worry about
 	# failures, if they aren't there that is a good thing!
 
@@ -63,11 +63,16 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-gcc33.patch || die "GCC 3.3 patch failed!"
 	epatch ${FILESDIR}/${PN}-2.4.20-cs46xx-gcc33.patch || die "GCC 3.3 patch failed!"
 
+	epatch ${FILESDIR}/security.patch2
+	epatch ${FILESDIR}/security.patch3
+	epatch ${FILESDIR}/security.patch4
+
 	epatch ${FILESDIR}/lcall-DoS.patch || die "lcall-DoS patch failed"
 	epatch ${FILESDIR}/i810_drm.patch || die "i810_drm patch failed"
 	epatch ${FILESDIR}/do_brk_fix.patch || die "Failed to apply do_brk() patch!"
 	epatch ${FILESDIR}/${P}-munmap.patch || die "Failed to apply munmap patch!"
 	epatch ${FILESDIR}/${P}-rtc_fix.patch || die "Failed to apply the RTC fixes!"
+	epatch ${FILESDIR}/${PN}-2.4.CAN-2003-0643.patch || die "Failed to add the CAN-2003-0643 patch!"
 	epatch ${FILESDIR}/${PN}-2.4.CAN-2003-0985.patch || die "Failed to add the CAN-2003-0985 patch!"
 	epatch ${FILESDIR}/${PN}-2.4.CAN-2004-0010.patch || die "Failed to add the CAN-2004-0010 patch!"
 	epatch ${FILESDIR}/${PN}-2.4.CAN-2004-0109.patch || die "Failed to add the CAN-2004-0109 patch!"
