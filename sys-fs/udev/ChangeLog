@@ -1,6 +1,12 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.73 2004/10/14 00:09:28 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.74 2004/10/15 22:35:01 gregkh Exp $
+
+  15 Oct 2004; Greg Kroah-Hartman <gregkh@gentoo.org> :
+  039 release
+  Fixes the firmware loading bug.
+  Should fix almost all wait_for_sysfs messages now too.
+  If not, please send them to the address the log message tells you to.
 
   13 Oct 2004; Greg Kroah-Hartman <gregkh@gentoo.org> -udev-037.ebuild:
   remove 037 files, as that version didn't build the extras directory correctly.
