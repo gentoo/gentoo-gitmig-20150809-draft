@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/gnome-vfsmm-2.6.1.ebuild,v 1.6 2005/01/01 17:26:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnome-vfsmm/gnome-vfsmm-2.6.1.ebuild,v 1.7 2005/01/17 19:46:22 blubb Exp $
 
 inherit gnome2
 
@@ -22,10 +22,6 @@ DEPEND=">=dev-util/pkgconfig-0.12.0
 DOCS="AUTHORS COPYING* ChangeLog NEWS README INSTALL"
 
 src_compile() {
-	if [ "${ARCH}" = "amd64" ]; then
-		aclocal -I scripts
-		automake -c -f
-		autoconf
-	fi
+	use amd64 && aclocal -I scripts && automake -c -f && autoconf && libtoolize	--copy --force
 	gnome2_src_compile
 }
