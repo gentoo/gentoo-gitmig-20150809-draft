@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/kcmgrunlevel/kcmgrunlevel-0.2.ebuild,v 1.1 2005/02/01 20:51:35 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/kcmgrunlevel/kcmgrunlevel-0.2.ebuild,v 1.2 2005/02/25 14:33:04 weeve Exp $
 
 inherit kde
 need-kde 3
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.kde-apps.org/content/show.php?content=11911"
 SRC_URI="http://spookyk.dyndns.org/~sarah/content/download/development/${P}.tar.bz2"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 IUSE=""
 SLOT="0"
 
