@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/khttrack/khttrack-0.10.ebuild,v 1.11 2004/12/26 10:52:35 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/khttrack/khttrack-0.10.ebuild,v 1.12 2005/02/27 22:59:54 weeve Exp $
 
 inherit kde eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.nongnu.org/khttrack/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~sparc"
 IUSE=""
 
 DEPEND="net-www/httrack"
