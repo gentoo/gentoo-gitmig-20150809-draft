@@ -2,7 +2,9 @@ MD5 f07bede6c40a94cb45b25bbbaa78ef67 ChangeLog 17018
 MD5 e16077e6f49f640cabe7d96ab3e8f99f fluxbox-0.1.14-r2.ebuild 1551
 MD5 2c62e9868bff0c034d5a9886a0c769ca fluxbox-0.9.6.ebuild 2717
 MD5 fb91a86bbf58cb4d7e40f9536c319766 metadata.xml 437
+MD5 14d65fc24a49f75fe736372b0edb4fca fluxbox-0.9.7.ebuild 1209
 MD5 1c3ae2ce22f7f2a778a8ad5a5631df28 files/digest-fluxbox-0.1.14-r2 67
+MD5 7a8bd89803849aff22030d86ec1e70cf files/digest-fluxbox-0.9.7 65
 MD5 c28b191f95d32d2ab4d6c4f353faa070 files/fluxbox 27
 MD5 1613a723da70c8ef3f16df1f5639990b files/fluxbox-0.1.13-Xft2.patch 1408
 MD5 9a521a2ef9c0942ec02b714c3637e789 files/fluxbox-0.1.13-aa2.patch 1365
