@@ -1,9 +1,19 @@
-MD5 99a9b379eb81b59946ac6e73bdf46167 ChangeLog 3972
-MD5 34dc31be143dd9165ed00c48f7a75d51 lsof-4.74.ebuild 1526
-MD5 ca3b6962892b3f41b4b19ba7f12df533 lsof-4.73.ebuild 1300
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 a18f2d7450fa7aae366dcc876514e0b0 ChangeLog 4065
+MD5 649d0c3813d8cf6746e586b05cfe6fea lsof-4.73.ebuild 1301
 MD5 199e4030ffe19ef6f4d98409511a2ede lsof-4.71.ebuild 1825
-MD5 4e7f0c29cf300421b494446e6aa0c8a4 files/digest-lsof-4.74 62
-MD5 17950eec4cb0ad6f3a3b6a521239dcbe files/digest-lsof-4.71 62
+MD5 34dc31be143dd9165ed00c48f7a75d51 lsof-4.74.ebuild 1526
 MD5 283810a9553bbb1e1579a6dc1a3b7624 files/digest-lsof-4.73 62
+MD5 4e7f0c29cf300421b494446e6aa0c8a4 files/digest-lsof-4.74 62
 MD5 8a26fd08042572a5821e4f5fa51ac5ff files/4.73-answer-config.patch 1755
+MD5 17950eec4cb0ad6f3a3b6a521239dcbe files/digest-lsof-4.71 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB+TDOKRy60XGEcJIRArV5AJ9a8NTRX1eWSon6A4YL/pwZ4Fbx9gCeJGjM
+t7tzECybkwfosVWWehjK/vQ=
+=IDVs
+-----END PGP SIGNATURE-----
