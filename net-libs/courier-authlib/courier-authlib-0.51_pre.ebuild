@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.51_pre.ebuild,v 1.1 2004/12/10 06:16:03 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/courier-authlib/courier-authlib-0.51_pre.ebuild,v 1.2 2004/12/10 06:54:18 swtaylor Exp $
 
 inherit eutils gnuconfig
 
@@ -8,6 +8,7 @@ DESCRIPTION="courier authentication library"
 [ -z "${PV/?.??/}" ] && SRC_URI="mirror://sourceforge/courier-authlib/${P}.tar.bz2" || SRC_URI="http://www.courier-mta.org/beta/courier-authlib/${P%%_pre}.tar.bz2"
 HOMEPAGE="http://www.courier-mta.org/"
 S="${WORKDIR}/${P%%_pre}"
+RESTRICT="nomirror"
 
 SLOT="0"
 LICENSE="GPL-2"
