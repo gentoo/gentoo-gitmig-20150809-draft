@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/ChangeLog,v 1.16 2005/01/14 11:58:41 hollow Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/ChangeLog,v 1.17 2005/01/14 12:48:42 johnm Exp $
+
+*vserver-sources-1.9.3.17 (14 Jan 2005)
+
+  14 Jan 2005; John Mylchreest <johnm@gentoo.org>
+  vserver-sources-1.9.3.17.ebuild:
+  since we cant mask >=1.9.3 without blocking 1.9.4, and the * wildcard is
+  invalid in the atom in package.mask, we hard-mask it here
 
 *vserver-sources-1.9.3 (14 Jan 2005)
 
