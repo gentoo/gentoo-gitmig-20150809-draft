@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ccache
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.35 2005/01/21 05:36:37 gongloo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ccache/ChangeLog,v 1.36 2005/02/21 14:14:22 gongloo Exp $
+
+  21 Feb 2005; <gongloo@gentoo.org> ccache-2.3.ebuild:
+  Stable on ppc-macos.
 
   21 Jan 2005; <gongloo@gentoo.org> ccache-2.3.ebuild:
   Keyworded ~ppc-macos.
