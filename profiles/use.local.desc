@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.393 2004/05/28 12:06:50 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.394 2004/05/29 17:13:33 zul Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -307,6 +307,7 @@ net-wireless/hostap-driver:hostap-noplx - Set to not install hostap_plx driver
 net-wireless/hostap:hostap-nopci - Set to not install hostap_pci driver
 net-wireless/hostap:hostap-noplx - Set to not install hostap_plx driver
 net-www/apache:threads - Enable thread support
+net-www/apache:distcache - Enable SSL distcache support
 net-www/elinks:lua - enable lua support
 net-www/links:javascript - enable javascript support
 net-www/memcached:php - Include the PHP API for memcached
