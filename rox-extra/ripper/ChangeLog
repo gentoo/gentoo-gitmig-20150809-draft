@@ -1,0 +1,10 @@
+# ChangeLog for rox-extra/ripper
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/rox-extra/ripper/ChangeLog,v 1.1 2004/12/09 17:13:20 sergey Exp $
+
+*ripper-0.0.3 (09 Dec 2004)
+
+  09 Dec 2004; Sergey Kuleshov <svyatogor@gentoo.org> +metadata.xml,
+  +ripper-0.0.3.ebuild:
+  Initial commit of ebild (Bug #51996)
+
