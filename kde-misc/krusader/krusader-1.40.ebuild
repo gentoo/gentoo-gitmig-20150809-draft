@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-1.40.ebuild,v 1.1 2004/10/30 17:48:33 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/krusader/krusader-1.40.ebuild,v 1.2 2004/12/05 17:24:16 motaboy Exp $
 
 inherit flag-o-matic kde
 
@@ -31,6 +31,6 @@ pkg_postinst() {
 	einfo "- KRename (app-misc/krename)"
 	einfo "and supports quite a few archive formats. Please use the following"
 	einfo "command to install the more uncommon ones in the *nix world:"
-	einfo "`emerge app-arch/{arj,unarj,rar,unrar,zip,unzip,unace}`"
+	einfo "\"emerge app-arch/{arj,unarj,rar,unrar,zip,unzip,unace}\""
 	einfo ""
 }
