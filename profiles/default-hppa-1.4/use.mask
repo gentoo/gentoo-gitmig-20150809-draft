@@ -1,0 +1,23 @@
+# 14 Mar 2003 Guy Martin <gmsoft@gentoo.org>
+# Postgresql is curently b0rked on hppa
+postgres
+
+# 14 Mar 2003 Guy Martin <gmsoft@gentoo.org>
+# SVGA lib is not yet tested
+svga
+
+# 14 Mar 2003 Guy Martin <gmsoft@gentoo.org>
+# USE flags not related to hppa
+3dnow
+acpi
+apm
+ev6
+icc
+icc-pgo
+mmx
+nocardbus
+pcmcia
+pda
+sse
+trusted
+wavelan
