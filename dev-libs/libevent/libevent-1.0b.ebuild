@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/libevent-1.0b.ebuild,v 1.1 2005/01/21 21:02:22 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libevent/libevent-1.0b.ebuild,v 1.2 2005/02/04 20:18:40 agriffis Exp $
 
 DESCRIPTION="A library to execute a function when a specific event occurs on a file descriptor"
 HOMEPAGE="http://monkey.org/~provos/libevent/"
@@ -8,7 +8,7 @@ SRC_URI="http://monkey.org/~provos/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~arm ~hppa ~amd64 ~ppc64 ~s390"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~arm ~hppa ~amd64 ~ppc64 ~s390 ~alpha ~ia64"
 IUSE=""
 
 RDEPEND=""

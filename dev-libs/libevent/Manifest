@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 c2bb7a07fe7f812f6b368e54502ac595 ChangeLog 2748
 MD5 78a3235463621284e23137d45db71fa0 libevent-0.8a.ebuild 801
-MD5 16121c17206e4b80dbac6452f3773b7b ChangeLog 2650
-MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
-MD5 2aee27ada4c1c820b00495f39b0fde68 libevent-1.0b.ebuild 667
-MD5 9cac2e0a0f63bac2782f09080f6e52f0 libevent-0.9.ebuild 795
+MD5 3f412591762d91c564d22cded4d0a12f libevent-1.0b.ebuild 681
 MD5 4e097c9fa4f5275acbe5297353daa9d9 libevent-0.7c.ebuild 720
-MD5 7fae4b3118510dd6b88868b2cdf7e989 files/digest-libevent-0.8a 64
+MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
+MD5 9cac2e0a0f63bac2782f09080f6e52f0 libevent-0.9.ebuild 795
+MD5 72ed5a716271d29b5df377492deb02b6 files/digest-libevent-1.0b 65
 MD5 689ab0af8c8ee4742fa19610adbb1167 files/digest-libevent-0.7c 64
 MD5 7e087d9ab1fe0644ec05c7c5794e6234 files/digest-libevent-0.9 63
-MD5 72ed5a716271d29b5df377492deb02b6 files/digest-libevent-1.0b 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB8YvxugEuf3OQ0akRAsj8AJ9R5SvuYAQcfQAULIhfxyytfnqdcQCeI6U+
-Hp9LO0fCKZ2ZEvRZnKbTf7o=
-=fyyN
------END PGP SIGNATURE-----
+MD5 7fae4b3118510dd6b88868b2cdf7e989 files/digest-libevent-0.8a 64
