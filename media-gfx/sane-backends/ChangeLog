@@ -1,6 +1,14 @@
 # ChangeLog for media-gfx/sane-backends
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.6 2002/06/24 12:05:49 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sane-backends/ChangeLog,v 1.7 2002/07/04 00:13:33 seemant Exp $
+
+*sane-backends-1.0.8-r2 (03 Jul 2002)
+
+  03 Jul 2002; Seemant Kulleen <seemant@gentoo.org>
+  sane-backends-1.0.8-r2.ebuild files/digest-sane-backends-1.0.8-r2 :
+
+  Added libieee1284 to DEPEND so that the canon drivers get built as well
+  now.  Thanks to troy@tkdack.com (Troy Dack) in bug #4207
 
 *sane-backends-1.0.8-r1 (24 Jun 2002)
 
