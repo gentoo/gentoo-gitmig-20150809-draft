@@ -1,8 +1,11 @@
 # ChangeLog for x11-libs/gtk+
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.22 2002/08/04 07:43:02 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/ChangeLog,v 1.23 2002/09/26 04:12:33 spider Exp $
 
-
+*gtk+-1.2.10-r9 (26 Sep 2002)
+  26 Sep 2002; Spider <spider@gentoo.org> gtk+-1.2.10-r9.ebuild :
+  This build enables minimal debugging for all users, this will fix some unexpected crashes in amongst other things xchat.
+  
 *gtk+-2.0.6-r1 (04 Jul 2002)
   04 Jul 2002; Spider <spider@gentoo.org> gtk+-2.0.6-r1.ebuild :
   remove unnecessary debugging
