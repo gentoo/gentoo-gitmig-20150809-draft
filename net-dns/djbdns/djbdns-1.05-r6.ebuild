@@ -1,33 +1,36 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r6.ebuild,v 1.2 2003/02/12 18:15:50 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/djbdns/djbdns-1.05-r6.ebuild,v 1.3 2003/02/13 08:42:45 seemant Exp $
 
-DESCRIPTION="Excellent high-performance DNS services."
-HOMEPAGE="http://cr.yp.to/djbdns.html"
-LICENSE="as-is"
+inherit eutils
 
-KEYWORDS="~x86 ~sparc "
-SLOT="0"
 IUSE="ipv6 static"
 
-DEPEND="virtual/glibc"
-RDEPEND="${DEPEND}
-	>=sys-apps/daemontools-0.70
+S=${WORKDIR}/${P}
+DESCRIPTION="Excellent high-performance DNS services."
+HOMEPAGE="http://cr.yp.to/djbdns.html"
+
+SLOT="0"
+LICENSE="as-is"
+KEYWORDS="~x86 ~sparc ~ppc ~alpha ~mips ~hppa"
+
+RDEPEND=">=sys-apps/daemontools-0.70
 	sys-apps/ucspi-tcp"
 
 SRC_URI="http://cr.yp.to/djbdns/${P}.tar.gz
 	http://www.skarnet.org/software/djbdns-fwdzone/djbdns-1.04-fwdzone.patch
-	mirror://${P}-ipv6-gentoo.diff.bz2
+	mirror://gentoo/${P}-ipv6-gentoo.diff.bz2
 	http://www.legend.co.uk/djb/dns/round-robin.patch"
-S="${WORKDIR}/${P}"
 
 src_unpack() {
-	unpack ${P}.tar.gz
-	patch -d ${S} -p1 < ${DISTDIR}/djbdns-1.04-fwdzone.patch || die
-	patch -d ${S} -p1 < ${DISTDIR}/round-robin.patch || die
+	unpack ${A}
+	
+	cd ${S}
+	epatch ${DISTDIR}/djbdns-1.04-fwdzone.patch
+	epatch  ${DISTDIR}/round-robin.patch
+
 	if [ `use ipv6` ] ; then
-		bunzip2 -dc ${DISTDIR}/djbdns-1.05-ipv6-gentoo.diff.bz2 |
-		patch -d ${S} -p1 || die "Failed to apply the ipv6 patch"
+		patch -p1 < ${WORKDIR}/djbdns-1.05-ipv6-gentoo.diff || die
 	fi
 }
 
