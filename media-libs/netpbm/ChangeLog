@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.1 2002/02/01 21:53:30 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.2 2002/04/12 21:48:29 spider Exp $
+
+*netpbm-9.12-r2 (12 Apr 2002)
+  12 Apr 2002; Spider <spider@gentoo.org>
+  update with cute new libpng 1.2.1 
 
 *netpbm-9.12-r1 (1 Feb 2002)
 
