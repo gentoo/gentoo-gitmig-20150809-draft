@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-1.0.0.20031013_pre12.ebuild,v 1.1 2003/10/14 02:48:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/evas/evas-1.0.0.20031020_pre12.ebuild,v 1.1 2003/10/20 16:03:51 vapier Exp $
 
 inherit enlightenment flag-o-matic
 
@@ -29,6 +29,7 @@ src_compile() {
 	#  --enable-scale-trilinear        enable tri-linear scaler code
 	export MY_ECONF="
 		`use_enable mmx cpu-mmx` \
+		`use_enable sse cpu-mmx` \
 		`use_enable sse cpu-sse` \
 		`use_enable X software-x11` \
 		`use_enable opengl gl-x11` \
