@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms-aalsa/xmms-aalsa-0.5.4.ebuild,v 1.4 2001/01/16 15:26:10 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms-aalsa/xmms-aalsa-0.5.4-r1.ebuild,v 1.1 2001/02/03 03:56:17 drobbins Exp $
 
 S=${WORKDIR}/xmms-aalsa_0.5.4
 DESCRIPTION="This output plugin allows xmms to work with arts, KDE's sound system"
@@ -16,20 +16,18 @@ src_unpack() {
 }
 
 src_compile() {                           
-	local myconf
 	if [ -n "`use gnome`" ]
 	then
-	  myconf="--prefix=/opt/gnome"
+	  echo /opt/gnome > ${T}/mydest
 	else
-	  myconf="--prefix=/usr/X11R6"
+	  echo /usr/X11R6 > ${T}/mydest
 	fi
-	try ./configure ${myconf} --host=${CHOST}
+	try ./configure --prefix=`cat ${T}/mydest` --host=${CHOST}
 	try make
 }
 
 src_install() {    
-                           
-	try make DESTDIR=${D} install
+	try make DESTDIR=${D} libdir=`cat ${T}/mydest`/lib/xmms/Output install
 	dodoc AUTHORS COPYING NEWS README
 }
 
