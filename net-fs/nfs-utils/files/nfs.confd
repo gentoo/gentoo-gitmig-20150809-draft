@@ -1,13 +1,5 @@
 # Config file for /etc/init.d/nfs
 
-# This is a safety net to keep from running an NFS server unless the
-# administrator really wants it.  It's mostly historical because early
-# versions of Gentoo didn't split nfs/nfsmount into two scripts.
-# These days it might be safe to remove this eventually, since
-# administrators specifically have to run "rc-update add nfs default"
-# in order for the NFS server to run.
-NFSSERVER=no
-
 # Number of servers to be started up by default
 RPCNFSDCOUNT=8
 
