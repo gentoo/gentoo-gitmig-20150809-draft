@@ -684,7 +684,7 @@ gnome-base/bonobo-activation
 gnome-base/gail
 >=gnome-base/gconf-1.1.0
 >=gnome-base/gnome-applets-1.100.0
-gome-base/gnome-common
+gnome-base/gnome-common
 gnome-base/gnome-desktop
 gnome-base/gnome-panel
 gnome-base/gnome-session
