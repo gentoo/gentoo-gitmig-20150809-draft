@@ -1,6 +1,13 @@
 # ChangeLog for app-emulation/wine
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.58 2003/11/19 19:34:23 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.59 2003/12/01 11:58:19 coronalvr Exp $
+
+*wine-20031118-r1 (01 Dec 2003)
+
+  01 Dec 2003; Alex Veber <coronalvr@gentoo.org> wine-20031118-r1.ebuild,
+  files/winearts-kdecvs-fix.patch:
+  revision bump, this fixes #32991, #32226, #31144 
+  and the long and annoying #31557 yay! :)
 
 *wine-20031118 (19 Nov 2003)
 
