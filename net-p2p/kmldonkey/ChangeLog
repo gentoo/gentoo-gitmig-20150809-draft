@@ -1,6 +1,12 @@
 # ChangeLog for net-p2p/kmldonkey
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/ChangeLog,v 1.16 2004/09/26 11:28:22 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/kmldonkey/ChangeLog,v 1.17 2004/11/02 11:57:56 motaboy Exp $
+
+*kmldonkey-0.10 (02 Nov 2004)
+
+  02 Nov 2004; Simone Gotti <motaboy@gentoo.org>
+  +files/kmldonkey-0.10-sandbox.patch, +kmldonkey-0.10.ebuild:
+  Version Bump, closes bug #69801.
 
   26 Sep 2004; Dominik Stadler <centic@gentoo.org> metadata.xml:
   Change herd from kde-core to kde-other, not a core KDE-package
