@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.913 2005/01/29 15:30:32 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.914 2005/01/29 16:17:49 luckyduck Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -496,7 +496,6 @@ media-video/vlc:cdda - Enables libcdda cd audio playback support
 media-video/vlc:cddb - Enables libcddb database support for indentifying cd's
 media-video/vlc:cdio - Enables libcdio support for cd interaction
 media-video/vlc:dts - Enables DTS audio support
-media-video/vlc:dvdread - Enables usage of Ogle's libdvdread for DVD playback
 media-video/vlc:faad - Enables libfaad for mpeg-2 audio playback
 media-video/vlc:ffmpeg - Enables the use of external ffmpeg library for video playback
 media-video/vlc:freetype - Enables freetype font support
