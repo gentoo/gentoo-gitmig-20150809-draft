@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r2.ebuild,v 1.4 2005/03/23 20:47:19 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r2.ebuild,v 1.5 2005/03/25 01:30:30 eradicator Exp $
 
 FORCE_SYSTEMAUTH_UPDATE="no"
 
@@ -52,7 +52,7 @@ DEPEND="${RDEPEND}
 #	doc? ( app-text/sgmltools-lite )
 
 #inherit needs to be after DEPEND definition to protect RDEPEND
-inherit gcc eutils flag-o-matic gnuconfig
+inherit toolchain-funcs eutils flag-o-matic gnuconfig
 
 apply_pam_patches() {
 	local x=
@@ -184,7 +184,7 @@ src_compile() {
 		# XXX: hack out O_DIRECT support in db4 for now.
 		#      (Done above now with --disable-o_direct now)
 
-		make || die "BDB build failed"
+		make CC="$(tc-getCC)" || die "BDB build failed"
 		make install || die
 	fi
 
@@ -207,7 +207,7 @@ src_compile() {
 
 		# Do not need to build the whole shebang
 		cd "${GLIB_DIR}/glib" || die
-		make || die "GLIB build failed"
+		make CC="$(tc-getCC)" || die "GLIB build failed"
 		make install || die
 		# Install pkg-config stuff and needed headers
 		cd "${GLIB_DIR}" || die
@@ -264,7 +264,7 @@ src_compile() {
 			_pam_aconf.h
 	fi
 
-	make || die "PAM build failed"
+	make CC="$(tc-getCC)" || die "PAM build failed"
 }
 
 src_install() {
