@@ -1,10 +1,18 @@
-MD5 8c7e74cd65d68f8d395325a21d3bf699 ChangeLog 2944
-MD5 4f66aab4c9c1ac81c993be89e758e76c loqui-0.2.5.ebuild 790
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 21627f3bb12d8053fbc68e62c9ffa1c9 ChangeLog 3173
 MD5 57ada8d6d09f391b50b4a5a71a52f629 loqui-0.3.6.ebuild 807
-MD5 bd4b434626ac2f48fd4e44d90fd0310f loqui-0.3.7.ebuild 809
-MD5 ca21f5f5ccef3b1cac8a11ed5b549ba8 loqui-0.3.8.ebuild 810
+MD5 26e82a59e168bc8e09cdcb1c460cdcc9 loqui-0.3.8.ebuild 809
 MD5 44c39c6ad372a8e5a5e7ee3311f703a7 metadata.xml 160
-MD5 77a152ff00730cee91d20b96d8cdd111 files/digest-loqui-0.2.5 63
+MD5 f263f204e209d576e1e9548c1aafe348 loqui-0.3.9.ebuild 810
 MD5 41cf537f677fa0ae824c863fb30d276f files/digest-loqui-0.3.6 63
-MD5 61878402dc69580e2d300b3615222689 files/digest-loqui-0.3.7 63
 MD5 15125a1113aaac3182645fb01e8ee766 files/digest-loqui-0.3.8 63
+MD5 2e02a8fe6daa05f7a2b04a0207c16aa9 files/digest-loqui-0.3.9 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBlllEI1lqEGTUzyQRAhLhAJ9YBaS4Oh1bzkAjMKwrlInaXK7dugCglks+
+VwPlQtpt+kjrgxkOQyRJlhU=
+=SEyy
+-----END PGP SIGNATURE-----
