@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.29 2003/02/15 20:56:25 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.30 2003/02/28 11:46:26 hannes Exp $
+
+  28 Feb 2003; Hannes Mehnert <hannes@gentoo.org> kdenetwork-3.1.ebuild,
+  files/kdenetwork-3.1-libxml2-2.5.2.diff: fix for >=libxml2-2.5.2, bug
+  #15245
 
   15 Feb 2003; Jason Wever <weeve@gentoo.org> kdenetwork-3.1.ebuild:
   Changed ~sparc keyword to sparc.
