@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.7.ebuild,v 1.5 2004/02/18 17:47:39 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ddd/ddd-3.3.7.ebuild,v 1.6 2004/02/19 00:45:11 mholzer Exp $
 
 inherit eutils
 
 DESCRIPTION="graphical front-end for command-line debuggers"
 HOMEPAGE="http://www.gnu.org/software/ddd"
-SRC_URI="ftp://ftp.easynet.be/gnu/ddd/${P}.tar.gz"
+SRC_URI="mirror://sourceforge/ddd/${P}.tar.gz"
+RESTRICT="nomirror"
 
 SLOT="0"
 LICENSE="GPL-2 LGPL-2.1 FDL-1.1"
