@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-0.11.0.ebuild,v 1.1 2003/03/15 22:52:17 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-0.11.0.ebuild,v 1.2 2003/04/09 09:29:09 liquidx Exp $
 
-IUSE="odbc postgres mysql ldap"
+IUSE="odbc postgres mysql ldap firebird"
 
 inherit gnome2 gnome.org
 
@@ -27,11 +27,13 @@ RDEPEND=">=gnome-base/ORBit2-2.3.91
    mysql? ( >=dev-db/mysql-3.23.51 )
    postgres? ( >=dev-db/postgresql-7.2.1 )
    odbc? ( >=dev-db/unixODBC-2.0.6 )
-   ldap? ( net-nds/openldap )"
+   ldap? ( net-nds/openldap )
+   firebird? ( >=dev-db/firebird-1.0 )"
    
-# removing un-ratified use flags
+# - libgda needs a version that portage doesn't have yet
+#   freetds? ( >=dev-db/freetds-0.61 )"   
+# - removing un-ratified use flags
 # sqlite? ( >=dev-db/sqlite-2.4.2 )
-# freetds? ( >=dev-db/freetds-0.53 )
 
 DEPEND=">=dev-util/pkgconfig-0.8
    >=dev-util/intltool-0.22
@@ -42,9 +44,9 @@ src_compile() {
 	local myconf 
 
 	if [ -n "`use mysql`" ]; then
-		myconf="--with-mysql=/usr"
+		myconf="${myconf} --with-mysql=/usr"
 	else
-		myconf="--without-mysql"
+		myconf="${myconf} --without-mysql"
 	fi
 
   	if [ -n "`use postgres`" ]; then
@@ -65,32 +67,33 @@ src_compile() {
         myconf="${myconf} --without-ldap"
     fi
 
-    # disabling unratified USE flags
-    
+    # disabling unratified USE flags    
 	#if [ -n "`use sqlite`" ]; then
 	#	myconf="$myconf --with-sqlite=/usr"
 	#else
 	#	myconf="$myconf --without-sqlite"
 	#fi
 
+	# explicitly disabling freetds until we have a
+	# compatible versions in portage
     #if [ -n "`use freetds`" ]; then
 	#    myconf="$myconf --with-tds=/usr"
 	#else
 	#    myconf="$myconf --without-tds"
 	#fi
 
-    # not setting these, because we should allow
-    # libgda to autodetect the environment if
-    # there are no use flags for these backends.
-    
-    #myconf="${myconf} --without-sqlite"
-    #myconf="${myconf} --without-tds"
-    #myconf="${myconf} --without-ibmdb2"
-    #myconf="${myconf} --without-sybase"
-    #myconf="${myconf} --without-oracle"
-    #myconf="${myconf} --without-firebird"
-    #myconf="${myconf} --without-mdb"
+	if [ -n "`use firebird`" ]; then
+		myconf="${myconf} --with-firebird=/usr"
+	else
+		myconf="${myconf} --without-firebird"
+    fi
+
+	myconf="${myconf} --without-tds"
+    myconf="${myconf} --without-sqlite"
+    myconf="${myconf} --without-ibmdb2"
+    myconf="${myconf} --without-sybase"
+    myconf="${myconf} --without-oracle"
+    myconf="${myconf} --without-mdb"
 
 	gnome2_src_compile ${myconf}
-
 }
