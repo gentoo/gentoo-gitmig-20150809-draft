@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.4.7.ebuild,v 1.6 2005/01/02 04:54:32 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/glib/glib-2.4.7.ebuild,v 1.7 2005/01/28 02:12:21 vapier Exp $
 
 inherit libtool
 
@@ -21,9 +21,7 @@ RDEPEND="virtual/libc"
 
 src_compile() {
 
-	if use macos; then
-		glibtoolize
-	elif use ppc-macos; then
+	if use ppc-macos; then
 		glibtoolize
 	else
 		elibtoolize
@@ -44,7 +42,7 @@ src_install() {
 	make DESTDIR=${D} install || die
 
 	# Do not install charset.alias for ppc-macos since it already exists.
-	if (use macos || use ppc-macos); then
+	if use ppc-macos ; then
 		einfo "Not installing charset.alias on macos"
 		rm ${D}/usr/lib/charset.alias || die "Cannot remove charset.alias from the image"
 	fi
