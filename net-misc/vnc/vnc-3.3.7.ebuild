@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-3.3.7.ebuild,v 1.5 2003/07/16 07:31:11 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-3.3.7.ebuild,v 1.6 2003/08/20 03:23:54 vapier Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.realvnc.com/dist/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc -ppc"
+KEYWORDS="x86 ~sparc ppc"
 
 DEPEND="tcpd? ( sys-apps/tcp-wrappers )
 	!net-misc/tightvnc"
@@ -43,7 +43,8 @@ src_compile() {
 	econf || die "./configure failed"
 
 	make 
-	
+
+	use ppc && return 0	
 	cd Xvnc
 	if use tcpd
 	then
