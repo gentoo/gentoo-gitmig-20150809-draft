@@ -1,6 +1,20 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.42 2002/12/21 14:02:39 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.43 2002/12/25 00:51:49 azarah Exp $
+
+  25 Dec 2002; Martin Schlemmer <azarah@gentoo.org> kscreensaver.pam :
+
+  Fix kscreensaver's pam.d file to use pam_stack.so again (bug #12596).
+
+*kdebase-3.0.5a-r1 (24 Dec 2002)
+
+  24 Dec 2002; Martin Schlemmer <azarah@gentoo.org> kdebase-3.0.5a-r1.ebuild,
+                                                    kdebase-3.0.5a-xft2.0-fix.diff :
+
+  Patch kdebase-3.0.5a to compile with Xft2.0 installed.  Also add a function to
+  detect if we have Xft1 or Xft2 installed, and against what QT was compiled.
+  The System->Font Installer->Anti-Alias->Advance do crash though, will see if
+  I can get this fixed.  This should close bug #9423 again.
 
 *kdebase-3.0.5a (21 Dec 2002)
 
