@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/php-cgi
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/ChangeLog,v 1.23 2004/07/14 16:09:39 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/ChangeLog,v 1.24 2004/07/14 21:03:20 lu_zero Exp $
+
+  14 Jul 2004; Luca Barbato <lu_zero@gentoo.org> php-cgi-4.3.8.ebuild:
+  Marked ppc for security reason (bug #56985)
 
   14 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> :
   add hardendephp support for 4.3.8
