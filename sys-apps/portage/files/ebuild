@@ -2,19 +2,6 @@
 # Copyright 1999-2000 Daniel Robbins, Gentoo Technologies, Inc.
 # Distributed under the GPL
 
-# stuff to add:
-# DISTDIR, WORKDIR (WRKDIR) support (relocatable)
-# PATCHDIR support for src_unpack (to get to patches distributed with the 
-# port rather than auto-downloaded.  Maybe make it another target ??? nah
-# CATEGORIES - place package in /usr/src/packages/All, symlink from 
-# /usr/src/sys/packages/${CATEGORY} for cd-rom distribution
-# add BUILD_DEPENDS
-# add RUN_DEPENDS
-# add LIB_DEPENDS ? (make dependency as library-generic as possible)
-# add 
-# possibly add PREFIX support
-# add post-install and post-deinstall (for calling ldconfig, install-int)
-
 export PROXY
 export HTTP_PROXY
 export FTP_PROXY
@@ -1179,6 +1166,7 @@ export EBUILD=${1}
 export PEBUILD=${O}/files/${PLATFORM}.ebuild
 export FILESDIR=${O}/files
 
+export P=${1%.*}
 source ${1}
 if [ -e ${PEBUILD} ]
 then
@@ -1228,8 +1216,6 @@ if [ -e ${PEBUILD} ]
 then
 	source ${PEBUILD}
 fi
-
-export P
 
 # Set Perl-Installation Enviroment
 
