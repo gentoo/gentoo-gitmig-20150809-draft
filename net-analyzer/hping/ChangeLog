@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/hping
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/ChangeLog,v 1.26 2004/08/08 16:49:35 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hping/ChangeLog,v 1.27 2004/08/20 13:51:44 eldad Exp $
+
+*hping-2.0.0_rc3-r1 (20 Aug 2004)
+
+  20 Aug 2004; Eldad Zack <eldad@gentoo.org> +files/hping-bridge.patch,
+  +hping-2.0.0_rc3-r1.ebuild:
+  Ethernet bridge interface fix: patch contributed by Nathan
+  <nathan.stocks@gmail.com>. Closes #59534.
 
   08 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> hping-2.0.0_rc3.ebuild:
   Stable on alpha.
