@@ -1,6 +1,17 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.83 2003/09/20 20:23:40 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.84 2003/09/28 23:46:06 azarah Exp $
+
+*glibc-2.3.2-r6 (28 Sep 2003)
+
+  28 Sep 2003; Martin Schlemmer <azarah@gentoo.org> glibc-2.3.2-r5.ebuild,
+  glibc-2.3.2-r6.ebuild, files/2.3.2/glibc-2.3.2-ia64-LOAD_ARGS-fixup.patch,
+  files/2.3.2/glibc-2.3.2-mips-add-n32-n64-sysdep-cancel.patch,
+  files/2.3.2/glibc-2.3.2-mips-configure-for-n64-symver.patch,
+  files/2.3.2/glibc-2.3.2-mips-fix-n32-n64-sysdep-headers.patch,
+  files/2.3.2/glibc-2.3.2-mips-pread-linux2.5.patch:
+  Update snapshot to 20030927 and NPTL to 0.60. Add a few patches from Kumba
+  <kumba@gentoo.org> for mips.
 
 *glibc-2.3.2-r5 (20 Sep 2003)
 
