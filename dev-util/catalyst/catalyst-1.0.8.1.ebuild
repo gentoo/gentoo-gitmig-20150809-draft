@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-1.0.8.1.ebuild,v 1.11 2004/09/03 22:19:23 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/catalyst-1.0.8.1.ebuild,v 1.12 2005/01/06 21:01:56 kloeri Exp $
 
 DESCRIPTION="Gentoo Linux official release metatool"
 HOMEPAGE="http://www.gentoo.org/proj/en/releng/catalyst"

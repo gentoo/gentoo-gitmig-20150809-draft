@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/catalyst
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.35 2004/12/08 00:14:29 wolf31o2 Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/catalyst/ChangeLog,v 1.36 2005/01/06 21:01:56 kloeri Exp $
+
+  06 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> catalyst-1.1.1.ebuild:
+  Stable on alpha.
 
   07 Dec 2004; Chris Gianelloni <wolf31o2@gentoo.org> catalyst-1.1.1.ebuild:
   Marking stable on x86 and amd64.
