@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games-q3mod.eclass,v 1.5 2003/07/09 00:09:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games-q3mod.eclass,v 1.6 2003/07/09 00:32:45 vapier Exp $
 
 inherit games
 
@@ -101,7 +101,7 @@ depend() {
 
 start() {
 	ebegin "Starting ${MOD_NAME} dedicated"
-	screen -A -m -d -S q3ded-${MOD_NAME} su - ${GAMES_USER_DED} -c ${GAMES_BINDIR}/q3ded-${MOD_NAME} \${${MOD_NAME}_OPTS}
+	screen -A -m -d -S q3ded-${MOD_NAME} su - ${GAMES_USER_DED} -c "${GAMES_BINDIR}/q3ded-${MOD_NAME} \${${MOD_NAME}_OPTS}"
 	eend \$?
 }
 
