@@ -1,0 +1,9 @@
+# ChangeLog for app-sci/embassy
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-sci/embassy/ChangeLog,v 1.1 2004/07/20 02:55:39 ribosome Exp $
+
+* embassy-2.9.0 (19 Jul 2004)
+
+  19 Jul 2004; Olivier Fisette <ribosome@gentoo.org>
+  embassy-2.9.0.ebuild, metadata.xml, ChangeLog
+  Initial import.
