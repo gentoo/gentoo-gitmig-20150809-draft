@@ -3,8 +3,8 @@ MD5 5822745440b8bb7bf340eb8ebc1e61a2 ChangeLog 12747
 MD5 bda09e992bf673c85bb424eb5e3dddcb metadata.xml 507
 MD5 493072e1293c3fe6e3f3900fe0d68b2f vmware-workstation-4.5.2.8848-r1.ebuild 7172
 MD5 48c1667773503fee21a1068da07440b9 files/90vmware 70
-MD5 8c521caffc81bed486aabc91a6548b25 files/digest-vmware-workstation-4.5.2.8848-r1 158
-MD5 1e699b539d107c57abc4b67706cd66e3 files/digest-vmware-workstation-3.2.1.2242-r2 158
+MD5 d51daaea2a6ced6a025123717ea5a78b files/digest-vmware-workstation-4.5.2.8848-r1 158
+MD5 16444e7a086a1c47bc4a5716c166e52d files/digest-vmware-workstation-3.2.1.2242-r2 158
 MD5 c2dc0111fb5bf45ff99578b57d349cb3 files/vmware.rc 1417
 MD5 5c852829f9043917fddc2f80ebb99802 files/vmware-26kern-init-gentoo.patch 3983
 MD5 7ca1ec14670b51d8cf824a58bc8d6621 files/vmware.png 470
