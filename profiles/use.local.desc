@@ -1,12 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.90 2003/08/18 17:01:03 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.91 2003/08/20 15:15:35 agriffis Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
 
 app-admin/lcap:lids - If you have the Linux Intrusion Detection System
 app-editors/nano:justify - Toggle the justify option ... god i hate that thing :)
+app-editors/vim:minimal - Build vim with minimal features, resulting in a ~430K binary
 app-editors/vim:vim-with-x - Enables linking the console vim against X libs to enable some features in xterms
 app-editors/xemacs:athena - Chooses the MIT Athena widget set
 app-editors/xemacs:dnd - Enables support for the x11-libs/dnd drag-n-drop library
