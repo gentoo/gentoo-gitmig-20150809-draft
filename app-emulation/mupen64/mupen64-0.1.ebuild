@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mupen64/mupen64-0.1.ebuild,v 1.1 2003/06/21 08:58:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mupen64/mupen64-0.1.ebuild,v 1.2 2003/06/26 00:09:54 msterret Exp $
 
 inherit games
 
@@ -11,19 +11,25 @@ HOMEPAGE="http://mupen64.emulation64.com/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 -ppc -sparc -sparc64"
+KEYWORDS="x86 -ppc -sparc"
 
 DEPEND="=x11-libs/gtk+-1.2*
+	>=sys-apps/sed-4
 	media-libs/libsdl
 	virtual/glu
 	virtual/opengl"
 
 S=${WORKDIR}/emu64
 
+src_unpack() {
+	unpack ${A}
+	cd ${S} && \
+	sed -i \
+		-e "/^CC.*/s:$: ${CFLAGS}:" \
+		Makefile || die "sed Makefile failed"
+}
+
 src_compile() {
-	cp Makefile{,.orig}
-	sed -e "/^CC.*/s:$: ${CFLAGS}:" \
-		Makefile.orig > Makefile
 	emake || die
 }
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/mupen64
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/mupen64/ChangeLog,v 1.4 2003/06/21 08:57:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/mupen64/ChangeLog,v 1.5 2003/06/26 00:09:54 msterret Exp $
+
+  25 Jun 2003; <msterret@gentoo.org> mupen64-0.1.ebuild:
+  KEYWORD sparc64 doesn't exist; use sed -i (added src_unpack)
 
 *mupen64-0.1 (21 Jun 2003)
 
