@@ -70,7 +70,6 @@ sys-apps
 sys-cluster
 sys-devel
 sys-kernel
-sys-kmods
 sys-libs 
 x11-base 
 x11-libs
