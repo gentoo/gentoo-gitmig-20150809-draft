@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Geert Bevin <gbevin@theleaf.be>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.1.3-r4.ebuild,v 1.1 2002/02/05 10:35:51 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.1.3-r4.ebuild,v 1.2 2002/02/05 10:38:14 gbevin Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PostgreSQL is a sophisticated Object-Relational DBMS"
@@ -155,16 +155,16 @@ src_install () {
 pkg_config() {
 
 	einfo ">>> Creating data directory ..."
-	mkdir -p /var/db/postgresql/data
-	chown -Rf postgres.postgres /var/db/postgresql
-	chmod 700 /var/db/postgresql/data
+	mkdir -p /var/lib/postgresql/data
+	chown -Rf postgres.postgres /var/lib/postgresql
+	chmod 700 /var/lib/postgresql/data
 
 	einfo ">>> Initializing the database ..."
-	if [ -f /var/db/postgresql/data/PG_VERSION ] ; then
-		echo -n "A postgres data directory already exists from version "; cat /var/db/postgresql/data/PG_VERSION
+	if [ -f /var/lib/postgresql/data/PG_VERSION ] ; then
+		echo -n "A postgres data directory already exists from version "; cat /var/lib/postgresql/data/PG_VERSION
 		echo "Read the documentation to check how to upgrade to version ${PV}."
 	else
-		su - postgres -c "/usr/bin/initdb --pgdata /var/db/postgresql/data"
+		su - postgres -c "/usr/bin/initdb --pgdata /var/lib/postgresql/data"
 	fi
 
 }
