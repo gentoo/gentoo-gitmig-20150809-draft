@@ -1,8 +1,12 @@
 # ChangeLog for dev-db/phpmyadmin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.17 2003/04/09 10:04:04 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/ChangeLog,v 1.18 2003/05/09 11:15:40 twp Exp $
 
 *phpmyadmin-2.4.0 (08 Apr 2003)
+
+  09 May 2003; Tom Payne <twp@gentoo.org> phpmyadmin-2.4.0.ebuild :
+
+  Allow user to override document root with DOCUMENT_ROOT env var. Bug # 20642.
 
   09 Apr 2003; Tom Payne <twp@gentoo.org> phpmyadmin-2.4.0.ebuild :
 
