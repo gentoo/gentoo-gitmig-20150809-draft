@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/xcalendar
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/ChangeLog,v 1.2 2003/02/12 09:33:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xcalendar/ChangeLog,v 1.3 2003/09/27 02:39:04 mr_bones_ Exp $
+
+  26 Sep 2003; Michael Sterrett <msterret@gentoo.org> xcalendar-4.0.ebuild:
+  x11-libs/xaw has gone away; seems to not need it to install; tidy
 
 *xcalendar-4.0 (15 Dec 2002)
 
