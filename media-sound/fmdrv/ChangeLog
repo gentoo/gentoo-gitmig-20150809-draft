@@ -1,0 +1,11 @@
+# ChangeLog for media-sound/fmdrv
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fmdrv/ChangeLog,v 1.1 2004/03/18 16:21:50 eradicator Exp $
+
+*fmdrv-1.0.7 (18 Mar 2004)
+
+  18 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org> fmdrv-1.0.7.ebuild,
+  metadata.xml:
+  Console MIDI Player with support for OPL2 hardware. Ebuild submitted by Joel
+  Yliluoma <bisqwit@iki.fi> in bug #28458.
+
