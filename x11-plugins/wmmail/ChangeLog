@@ -1,0 +1,13 @@
+# ChangeLog for x11-plugins/wmmail
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmmail/ChangeLog,v 1.1 2002/08/30 07:44:13 seemant Exp $
+
+*wmmail-0.64 (19-Feb-2002)
+
+  29 Aug 2002; Seemant Kulleen <seemant@gentoo.org> * :
+
+  Relocated to x11-plugins
+
+  19 Feb 2002; Arcady Genkin <agenkin@thpoon.com> wmmail-0.64.ebuild :
+
+  Initial version of this package.

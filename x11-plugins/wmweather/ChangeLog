@@ -1,0 +1,25 @@
+# ChangeLog for x11-plugins/wmweather
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmweather/ChangeLog,v 1.1 2002/08/30 07:44:13 seemant Exp $
+
+*wmweather-1.31-r1 (25 Apr 2002)
+
+  30 Aug 2002; Seemant Kulleen <seemant@gentoo.org> * :
+
+  Relocated to x11-plugins
+
+  25 Apr 2002; Seemant Kulleen <seemant@gentoo.org> wmweather-1.31-r1.ebuild
+  files/digest-wmweather-1.31-r1 :
+
+  WindowMaker is not a requirement for this app.  So it was removed from the
+  DEPEND list.  Thanks to gayeski@cae.wisc.edu (Michael Gayeski) in bug #2091
+
+*wmweather-1.31 (9-Feb-2002)
+
+  9 Feb 2002; Arcady Genkin <agenkin@thpoon.com> wmweather-1.31.ebuild :
+
+  Fixed to make use of CFLAGS.
+
+  7 Feb 2002; Arcady Genkin <agenkin@thpoon.com>  wmweather-1.31.ebuild :
+
+  First version of the package.
