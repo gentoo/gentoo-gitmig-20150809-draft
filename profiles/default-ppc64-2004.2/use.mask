@@ -16,7 +16,6 @@ sse
 scanner 
 tcltk
 tcl
-X
 vim-with-x
 
 # Chris PeBenito <pebenito@gentoo.org>
