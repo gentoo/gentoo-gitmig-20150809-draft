@@ -1,6 +1,7 @@
 # Core Packages
 *>=sys-devel/binutils-2.13.90.0.4
 *>=sys-devel/gcc-3.2
+<sys-devel/gcc-3.4
 *dev-lang/python
 
 >dev-lang/gpc-2.1

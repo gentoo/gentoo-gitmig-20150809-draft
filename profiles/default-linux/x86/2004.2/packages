@@ -1,6 +1,6 @@
 # Copyright 2001-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/2004.2/packages,v 1.1 2004/07/13 19:26:17 beejay Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/x86/2004.2/packages,v 1.2 2004/07/25 03:19:05 morfic Exp $
 
 # For instructions on how this file works (as an inclusion mask, primarily),
 # please refer to ${PORTDIR}/profiles/base/packages
@@ -17,6 +17,7 @@
 >=sys-apps/baselayout-1.7.9-r1
 >=sys-devel/binutils-2.13.90.0.4
 >=sys-devel/gcc-3.2
+<sys-devel/gcc-3.4
 >=sys-libs/glibc-2.2.5
 
 virtual/x11

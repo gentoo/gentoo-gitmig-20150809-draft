@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/hardened-x86-1.4/packages,v 1.16 2004/06/26 23:29:26 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/hardened-x86-1.4/packages,v 1.17 2004/07/25 03:19:05 morfic Exp $
 
 # base system stuff
 >dev-lang/gpc-2.1
@@ -10,6 +10,7 @@
 # toolchain stuff
 *>=sys-devel/binutils-2.13.90.0.6-r2
 *>=sys-devel/gcc-3.2.3-r2
+<sys-devel/gcc-3.4
 *>=sys-devel/hardened-gcc-2.4.5
 *>=sys-libs/glibc-2.3.2-r1
 <sys-libs/glibc-2.3.4
