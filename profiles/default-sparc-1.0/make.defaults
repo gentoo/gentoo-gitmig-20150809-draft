@@ -1,16 +1,23 @@
-# This file created automagically by scripts/generate-packages.sh on Thu Apr 18 23:03:24 CEST 2002
+# This file created automagically by scripts/generate-packages.sh on Tue May  7 02:46:03 CEST 2002
 
 # Copyright 2000 Daniel Robbins, Gentoo Technologies, Inc.
 # System-wide defaults for the Portage system
 
-USE="xv slang readline gpm berkdb mmx 3dnow gdbm tcpd pam libwww ssl nls mitshm arts lame perl python esd imlib sdl oggvorbis gnome gtk X qt kde motif opengl avi jpeg png tiff gif"
+USE="3dnow apm arts avi berkdb crypt cups encode gdbm gif gpm gtk imlib
+ipv6 java jpeg kde libg++ libwww mikmod mmx motif  mpeg ncurses nls
+oggvorbis opengl pam pdflib png python qt qtmt quicktime readline sdl
+slang  spell ssl svga tcltk tcpd truetype X xml2 xmms xv" 
 
 
-# These lines added by scripts/generate-packages.sh -----------------------
+
+# These lines added by scripts/generate-packages.sh
 #
-# $Id: make.defaults,v 1.5 2002/04/18 21:05:52 murphy Exp $
+# $Id: make.defaults,v 1.6 2002/05/07 01:20:52 murphy Exp $
 #
 # $Log: not supported by cvs2svn $
+# Revision 1.2  2002/04/18 21:05:52  murphy
+# YMCA: Yet More Changes Ah-ha (tm)
+#
 #
 ARCH="sparc"
-# End of lines added by scripts/generate-packages.sh ----------------------
+# End of lines added by scripts/generate-packages.sh
