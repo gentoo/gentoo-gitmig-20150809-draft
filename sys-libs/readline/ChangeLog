@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/readline
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.37 2004/09/29 04:24:32 j4rg0n Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.38 2004/09/29 13:54:21 vapier Exp $
+
+*readline-5.0-r1 (29 Sep 2004)
+
+  29 Sep 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/bash-3.0-etc-inputrc.patch, +readline-5.0-r1.ebuild:
+  Add more patches from upstream and add support for /etc/inputrc #38955.
 
   29 Sep 2004; Lina Pezzella <j4rg0n@gentoo.org> readline-4.3-r6.ebuild:
   Fixed collisions with history(3) on macos.
