@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.76 2004/10/05 03:54:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/games.eclass,v 1.77 2004/10/05 04:01:27 vapier Exp $
 #
 # devlist: {vapier,wolf31o2,mr_bones_}@gentoo.org
 #
@@ -199,7 +199,7 @@ games_make_wrapper() {
 	cat << EOF > "${tmpwrapper}"
 #!/bin/sh
 cd "${chdir}"
-export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${libdir}"
+export LD_LIBRARY_PATH="\${LD_LIBRARY_PATH}:${libdir}"
 exec ${bin} "\$@"
 EOF
 	chmod go+rx "${tmpwrapper}"
