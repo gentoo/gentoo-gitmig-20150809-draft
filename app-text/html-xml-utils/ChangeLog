@@ -1,6 +1,11 @@
 # ChangeLog for app-text/html-xml-utils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-text/html-xml-utils/ChangeLog,v 1.3 2002/08/02 17:42:49 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/html-xml-utils/ChangeLog,v 1.4 2002/09/21 19:31:38 karltk Exp $
+
+*html-xml-utils-2.3 (21 Sep 2002)
+
+  21 Sep 2002; Karl Trygve Kalleberg <karltk@gentoo.org> html-xml-utils-2.3.ebuild :
+  Workaround to make it compile with gcc-3.2, fixes #6160.
 
 *html-xml-utils-2.3 (16 Mar 2002)
 
