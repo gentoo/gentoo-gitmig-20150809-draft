@@ -1,12 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-0.9.15_pre2.ebuild,v 1.1 2003/10/18 12:54:38 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/module-init-tools-0.9.15_pre2.ebuild,v 1.2 2003/10/20 06:07:35 kumba Exp $
 
 # This ebuild includes backwards compatability for stable 2.4 kernels
 IUSE=""
 
-inherit flag-o-matic
-inherit eutils
+inherit flag-o-matic eutils gnuconfig
 
 MYP="${P/_pre/-pre}"
 S="${WORKDIR}/${MYP}"
@@ -47,6 +46,10 @@ src_unpack() {
 }
 
 src_compile() {
+
+	# If running mips64, we need updated configure data
+	use mips && gnuconfig_update
+
 	local myconf=
 
 	filter-flags -fPIC

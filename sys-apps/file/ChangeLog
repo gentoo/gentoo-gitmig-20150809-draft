@@ -1,9 +1,12 @@
 # ChangeLog for sys-apps/file
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.24 2003/10/18 10:04:04 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.25 2003/10/20 06:08:26 kumba Exp $
 
 
 *file-4.06 (17 Oct 2003)
+
+  20 Oct 2003; Joshua Kinard <kumba@gentoo.org> file-4.06.ebuild:
+  Added gnuconfig support for mips64
 
   18 Oct 2003; Joshua Kinard <kumba@gentoo.org> file-4.05.ebuild,
   file-4.06.ebuild, files/file-4.05-mips-gentoo.diff,
