@@ -6,7 +6,7 @@
 ./net-mail/ssmtp/ssmtp-2.38.14.ebuild
 ./net-misc/netkit-telnetd/netkit-telnetd-0.17-r1.ebuild
 ./net-misc/openssh/openssh-2.3.0_p1-r5.ebuild
-./net-misc/rsync/rsync-2.4.6-r2.ebuild
+./net-misc/rsync/rsync-2.4.6-r3.ebuild
 ./net-misc/wget/wget-1.5.3-r2.ebuild
 ./net-www/links/links-0.95-r1.ebuild
 ./net-www/prozilla/prozilla-1.3.4.ebuild
@@ -48,7 +48,7 @@
 ./sys-apps/most/most-4.9.0-r2.ebuild
 ./sys-apps/net-tools/net-tools-1.59.ebuild
 ./sys-apps/netkit-base/netkit-base-0.17-r2.ebuild
-./sys-apps/portage/portage-1.5-r5.ebuild
+./sys-apps/portage/portage-1.5-r6.ebuild
 ./sys-apps/procps/procps-2.0.6-r1.ebuild
 ./sys-apps/psmisc/psmisc-19-r2.ebuild
 ./sys-apps/raidtools/raidtools-0.90-r2.ebuild
