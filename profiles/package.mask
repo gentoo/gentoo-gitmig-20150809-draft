@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3736 2005/03/17 03:32:32 bcowan Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3737 2005/03/17 17:13:14 chriswhite Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Chris White <chriswhite@gentoo.org> (17 Mar 2005)
+# Security mask bug #82631
+media-video/gv4l
 
 # Sebastian Bergmann <sebastian@gentoo.org> (14 Mar 2005)
 # Needs more testing.
