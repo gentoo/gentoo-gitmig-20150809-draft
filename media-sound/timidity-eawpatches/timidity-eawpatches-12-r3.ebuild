@@ -1,39 +1,37 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-eawpatches/timidity-eawpatches-12-r1.ebuild,v 1.5 2004/04/20 17:38:10 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity-eawpatches/timidity-eawpatches-12-r3.ebuild,v 1.1 2004/06/15 08:46:00 eradicator Exp $
 
 IUSE=""
 
-inherit eutils
-
-S=${WORKDIR}/eawpatches
 DESCRIPTION="Eric Welsh's GUS patches for TiMidity"
-SRC_URI="http://www.stardate.bc.ca/eawpatches/eawpats${PV}_full.rar"
 HOMEPAGE="http://www.stardate.bc.ca/eawpatches/html/default.htm"
+SRC_URI="http://5hdumat.samizdat.net/music/eawpats${PV}_full.tar.gz"
 
-DEPEND="media-sound/timidity++
-	app-arch/unrar"
-
-SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~amd64"
+
+DEPEND="media-sound/timidity++"
+
+S=${WORKDIR}/eawpats
 
 src_unpack() {
-	mkdir eawpatches
-	cd eawpatches
-	unrar x "${DISTDIR}/${A}" || die "error unpacking ${DISTDIR}/${A}"
-
-	# Patch the default configuration so the patches can be found
-	epatch ${FILESDIR}/${PN}-12-gentoo.diff
+	unpack ${A}
+	cd ${S}/linuxconfig
+	sed -i -e "s:dir /home/user/eawpats/:dir /usr/share/timidity/eawpatches:" timidity.cfg
 }
 
-src_install () {
+src_install() {
 	local instdir=/usr/share/timidity
 
 	# Install base timidity configuration
+	insinto /etc
+	doins linuxconfig/timidity.cfg
+
 	insinto ${instdir}
-	doins timidity.cfg
-	rm timidity.cfg
+	dosym /etc/timidity.cfg ${instdir}/timidity.cfg
+	rm -rf linuxconfig/ winconfig/
 
 	# Install base eawpatches
 	insinto ${instdir}/eawpatches
