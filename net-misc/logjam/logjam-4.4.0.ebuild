@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/logjam-4.3.2.ebuild,v 1.5 2004/04/20 02:14:55 khai Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/logjam/logjam-4.4.0.ebuild,v 1.1 2004/04/20 02:14:55 khai Exp $
 
 DESCRIPTION="GTK2-based LiveJournal client"
 HOMEPAGE="http://logjam.danga.com/"
@@ -8,7 +8,7 @@ SRC_URI="http://logjam.danga.com/download/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc"
 IUSE="xmms spell gtkhtml"
 
 DEPEND=">=x11-libs/gtk+-2
@@ -30,5 +30,5 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
-	dodoc doc/README doc/TODO ChangeLog AUTHORS
+	dodoc doc/README doc/TODO
 }
