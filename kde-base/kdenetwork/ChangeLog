@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.49 2003/09/25 15:27:10 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.50 2003/09/26 02:01:53 caleb Exp $
+
+*kdenetwork-3.2.0_alpha2 (25 Sep 2003)
+
+  25 Sep 2003; Caleb Tennis <caleb@gentoo.org> kdenetwork-3.2.0_alpha1.ebuild,
+  kdenetwork-3.2.0_alpha1.ebuild, kdenetwork-3.2.0_alpha2.ebuild:
+  new alpha version
 
   25 Sep 2003; Caleb Tennis <caleb@gentoo.org> kdenetwork-3.1.4.ebuild:
   marking x86 stable
