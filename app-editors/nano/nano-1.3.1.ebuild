@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.3.1.ebuild,v 1.6 2004/03/02 16:43:56 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.3.1.ebuild,v 1.7 2004/03/17 01:48:47 vapier Exp $
 
 inherit eutils
 
@@ -24,14 +24,14 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	[ `use nomac` ] && epatch ${FILESDIR}/${PV}-nomac.patch
-	[ `use wsconvert` ] && epatch ${FILESDIR}/${PV}-wsconvert.patch
+	use nomac && epatch ${FILESDIR}/${PV}-nomac.patch
+	use wsconvert && epatch ${FILESDIR}/${PV}-wsconvert.patch
 }
 
 src_compile() {
 	local myconf=""
 	use build && myconf="${myconf} --disable-wrapping-as-root"
-	[ `use ncurses` ] || myconf="${myconf} `use_with slang`"
+	use ncurses || myconf="${myconf} `use_with slang`"
 
 	econf \
 		--bindir=/bin \
