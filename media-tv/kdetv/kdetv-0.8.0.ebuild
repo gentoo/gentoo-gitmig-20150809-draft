@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/kdetv-0.8.0.ebuild,v 1.5 2004/06/25 00:32:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/kdetv-0.8.0.ebuild,v 1.6 2005/01/12 22:00:12 carlo Exp $
 
 inherit kde
 DEPEND=">=media-libs/zvbi-0.2.4"

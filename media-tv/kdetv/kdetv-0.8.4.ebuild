@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/kdetv-0.8.4.ebuild,v 1.2 2004/11/19 21:47:53 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/kdetv/kdetv-0.8.4.ebuild,v 1.3 2005/01/12 22:00:12 carlo Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ SRC_URI="http://dziegel.free.fr/releases/${P}.tar.bz2"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="x86 ~ppc ~amd64"
 IUSE="arts lirc"
 
 DEPEND=">=media-libs/zvbi-0.2.4"
