@@ -1,4 +1,14 @@
-MD5 2eb6789fcaef51d162375936150d06db ChangeLog 1196
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 4827916afc3984de2ca7b4108e93b2f3 ChangeLog 1297
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 e0ca9051c4c57aa8df122a7681f69da0 xmms-midi-0.03.ebuild 1031
+MD5 4c36e7613f666cb29a4d2ef7d3f1dbc0 xmms-midi-0.03.ebuild 1054
 MD5 75ea49b4be55e6460edf9bbcec65d726 files/digest-xmms-midi-0.03 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBZLXbArHZZzCEUG0RAlomAJ0dIcZg1CVtkSCRox8vJfbiIuC5bQCfdAos
+lTYsJDTMsPiZVdHFhM11xS0=
+=4yLj
+-----END PGP SIGNATURE-----
