@@ -1,6 +1,10 @@
 # ChangeLog for net-libs/aqhbci-ddvcard
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/aqhbci-ddvcard/ChangeLog,v 1.6 2005/02/01 23:50:28 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqhbci-ddvcard/ChangeLog,v 1.7 2005/02/14 19:08:16 blubb Exp $
+
+  14 Feb 2005; Simon Stelling <blubb@gentoo.org>
+  aqhbci-ddvcard-1.0.1_beta.ebuild:
+  added ~amd64
 
 *aqhbci-ddvcard-1.0.1_beta (02 Feb 2005)
 
