@@ -310,9 +310,6 @@ dev-java/jaxp
 # Masked for testing of the ACL parts (styx 21 Jun 2002)
 >=sys-apps/e2fsprogs-1.27-r1
 
-#masked for testing (bangert 20 Jun 2002)
-=dev-perl/mod_perl-1.27
-
 #waiting for the unmasking of gnomelibs (gnome2) BaSS 20 Jun 02
 dev-utils/vdkbuilder
 
