@@ -1,0 +1,6 @@
+MD5 8c227dd7aece7fe259b2cc0d4ded533c gephex-0.0.4.ebuild 1169
+MD5 1ff1903e153fa87c92a224edbc43c08c ChangeLog 339
+MD5 955f56e990f8c32d705708b4cc4db089 metadata.xml 251
+MD5 d0c894eccb6239538b954cb1d6680c5d files/0.0.4-makefile.in.patch 873
+MD5 8ce45a490b11be332445c5166c2be858 files/digest-gephex-0.0.4 65
+MD5 0e6024af9a9dd49daca8977ba601c8f5 files/0.0.4-alsa-api-fix.patch 832
