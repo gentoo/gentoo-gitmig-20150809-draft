@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Locale-PO
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-PO/ChangeLog,v 1.5 2003/02/12 06:20:20 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Locale-PO/ChangeLog,v 1.6 2004/04/16 00:03:19 randy Exp $
+
+  15 Apr 2004; Michael McCabe <randy@gentoo.org> Locale-PO-0.11.ebuild:
+  adding s390 keywords
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/libnet
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libnet/ChangeLog,v 1.21 2004/03/30 00:44:55 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libnet/ChangeLog,v 1.22 2004/04/16 00:05:29 randy Exp $
+
+  15 Apr 2004; Michael McCabe <randy@gentoo.org> libnet-1.17.ebuild:
+  adding s390 keywords
 
   30 Mar 2004; Lars Weiler <pylon@gentoo.org> libnet-1.17.ebuild:
   stable on ppc
