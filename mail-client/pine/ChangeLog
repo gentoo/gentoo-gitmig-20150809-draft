@@ -1,6 +1,11 @@
 # ChangeLog for mail-client/pine
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.23 2004/11/23 20:53:55 sekretarz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/pine/ChangeLog,v 1.24 2004/11/25 01:11:03 ticho Exp $
+
+*pine-4.61-r3 (25 Nov 2004)
+
+  25 Nov 2004; Andrej Kacian <ticho@gentoo.org> +pine-4.61-r3.ebuild:
+  Updated chappa patch pack.
 
   23 Nov 2004; Karol Wojtaszek <sekretarz@gentoo.org> pine-4.61-r2.ebuild:
   Stable on amd64, bug #72268
