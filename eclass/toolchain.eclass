@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.6 2004/09/07 17:08:11 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.7 2004/09/07 17:38:38 lv Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -275,7 +275,7 @@ do_gcc_SSP_patches() {
 # then lets use those for SSP instead of libgcc.
 update_gcc_for_libc_ssp() {
 	if libc_has_ssp ; then
-		einfo "Updating gcc to use SSP from glibc..."
+		einfo "Updating gcc to use SSP from libc..."
 		sed -e 's|^\(LIBGCC2_CFLAGS.*\)$|\1 -D_LIBC_PROVIDES_SSP_|' \
 			-i ${S}/gcc/Makefile.in || die "Failed to update gcc!"
 	fi
@@ -498,7 +498,7 @@ libc_has_ssp() {
 
 	local my_libc=${ROOT}/${libc_prefix}/${libc_file}
 
-	# Check for the glibc to have the __guard symbols
+	# Check for the libc to have the __guard symbols
 	if  [ "$(readelf -s "${my_libc}" 2>/dev/null | \
 	         grep GLOBAL | grep OBJECT | grep '__guard')" ] && \
 	    [ "$(readelf -s "${my_libc}" 2>/dev/null | \
