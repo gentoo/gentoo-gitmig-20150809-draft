@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/dev/make.defaults,v 1.7 2004/12/19 10:47:56 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/sparc64-multilib/dev/make.defaults,v 1.8 2004/12/23 08:32:17 eradicator Exp $
 
 ARCH="sparc"
 ACCEPT_KEYWORDS="${ARCH}"
@@ -29,11 +29,13 @@ MULTILIB_ABIS="sparc32 sparc64"
 DEFAULT_ABI="sparc64"
 
 ARCH_WRAPPER_sparc64="sparc64"
+ASFLAGS_sparc64="-64 -no-undeclared-regs"
 CFLAGS_sparc64="-m64"
 CXXFLAGS_sparc64="${CFLAGS_sparc64}"
 LIBDIR_sparc64="lib64"
 
 ARCH_WRAPPER_sparc32="sparc32"
+ASFLAGS_sparc64="-32"
 CFLAGS_sparc32="-m32"
 CXXFLAGS_sparc32="${CFLAGS_sparc32}"
 LIBDIR_sparc32="lib"
