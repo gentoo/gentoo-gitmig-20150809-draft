@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-0.12.0.ebuild,v 1.1 2003/06/03 10:30:09 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/libgda/libgda-0.12.0.ebuild,v 1.2 2003/06/03 16:16:12 liquidx Exp $
 
 IUSE="odbc postgres mysql ldap firebird freetds sqlite mdb oci8"
 
@@ -26,7 +26,7 @@ RDEPEND=">=gnome-base/ORBit2-2.3.91
 	mysql? ( >=dev-db/mysql-3.23.51 )
 	postgres? ( >=dev-db/postgresql-7.2.1 )
 	odbc? ( >=dev-db/unixODBC-2.0.6 )
-	ldap? ( >=net-nds/openldap-2.0.45 )
+	ldap? ( >=net-nds/openldap-2.0.25 )
 	firebird? ( >=dev-db/firebird-1.0 )
 	freetds? ( >=dev-db/freetds-0.5 )
 	sqlite? ( >=dev-db/sqlite-2.4.2 )
