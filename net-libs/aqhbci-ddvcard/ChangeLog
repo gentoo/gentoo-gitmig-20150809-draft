@@ -1,0 +1,10 @@
+# ChangeLog for net-libs/aqhbci-ddvcard
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/aqhbci-ddvcard/ChangeLog,v 1.1 2004/12/23 02:56:18 hanno Exp $
+
+*aqhbci-ddvcard-0.9.4_beta (23 Dec 2004)
+
+  23 Dec 2004; Hanno Boeck <hanno@gentoo.org>
+  +aqhbci-ddvcard-0.9.4_beta.ebuild:
+  Initial commit (from bug #44720).
+
