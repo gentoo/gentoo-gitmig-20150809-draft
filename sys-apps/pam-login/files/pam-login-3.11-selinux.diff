@@ -1,0 +1,278 @@
+diff -urN pam_login-3.11.orig/configure pam_login-3.11/configure
+--- pam_login-3.11.orig/configure	2003-05-12 08:07:51.000000000 -0500
++++ pam_login-3.11/configure	2003-06-19 12:41:13.000000000 -0500
+@@ -1689,7 +1689,7 @@
+ fi
+ 
+ 
+-EXTRA_CFLAGS="-W -Wall -Wbad-function-cast -Wcast-align -Wcast-qual -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wshadow -Wstrict-prototypes -Wundef -Werror"
++EXTRA_CFLAGS="-W -Wall -Wbad-function-cast -Wcast-align -Wcast-qual -Winline -Wmissing-declarations -Wmissing-prototypes -Wnested-externs -Wshadow -Wstrict-prototypes -Wundef "
+ # -Wpointer-arith
+ 
+ ac_ext=c
+diff -urN pam_login-3.11.orig/src/Makefile.in pam_login-3.11/src/Makefile.in
+--- pam_login-3.11.orig/src/Makefile.in	2003-05-12 08:08:24.000000000 -0500
++++ pam_login-3.11/src/Makefile.in	2003-06-19 14:11:33.000000000 -0500
+@@ -70,7 +70,7 @@
+ LIBICONV = @LIBICONV@
+ LIBINTL = @LIBINTL@
+ LIBOBJS = @LIBOBJS@
+-LIBS = @LIBS@
++LIBS = @LIBS@ -lsecure
+ LTLIBICONV = @LTLIBICONV@
+ LTLIBINTL = @LTLIBINTL@
+ LTLIBOBJS = @LTLIBOBJS@
+diff -urN pam_login-3.11.orig/src/login.c pam_login-3.11/src/login.c
+--- pam_login-3.11.orig/src/login.c	2003-05-12 08:44:45.000000000 -0500
++++ pam_login-3.11/src/login.c	2003-06-19 14:57:57.000000000 -0500
+@@ -67,6 +67,13 @@
+ #include <sys/sysmacros.h>
+ #include <linux/major.h>
+ #include <utmp.h>
++
++#include <linux/flask/flask_types.h>
++#include <flask_util.h>
++#include <fs_secure.h>
++#include <ss.h>
++#include <get_sid_list.h>
++
+ #include <security/pam_appl.h>
+ #include <security/pam_misc.h>
+ 
+@@ -470,6 +477,23 @@
+   struct passwd resultbuf;
+   struct passwd *pwd;
+ 
++#define CONTEXTLEN 255
++  security_context_t user_context = NULL;
++  int user_context_len = CONTEXTLEN;
++  security_id_t user_sid;
++  security_id_t* sidlist;
++#define SIDLISTLEN 10
++  int sidlistlen = SIDLISTLEN;
++  int num_sids = 0;
++  security_id_t ttyn_sid;  /* The current sid of ttyn device */
++  security_id_t vcsn_sid;  /* The current sid of vcsn device */
++  security_id_t vcsan_sid;  /* The current sid of vcsan device */
++  security_id_t newdev_sid;   /* The new sid of a device */
++  struct stat statbuf;
++  int flask_enabled;
++  int rc;
++  char vcsn[20], vcsan[20];
++
+   init_sighandler ();
+ 
+   setlocale (LC_ALL, "");
+@@ -858,6 +882,67 @@
+   retcode = pam_setcred (pamh, PAM_ESTABLISH_CRED);
+   PAM_FAIL_CHECK;
+ 
++  /* Make sure SELINUX is really running on this system */
++  if ( (flask_enabled = is_flask_enabled()) )
++  {
++      /* Get security context and SID for user */
++      sidlistlen = SIDLISTLEN;
++      sidlist = malloc (sidlistlen*sizeof(security_id_t));
++      if (sidlist == 0) {
++	 fprintf(stderr, "login: no memory for SID list.\n");
++         exit (0);
++      }
++
++      num_sids = get_ordered_sid_list (username, 0, sidlist, &sidlistlen);
++      if (num_sids <= 0 && sidlistlen > SIDLISTLEN) {
++	security_id_t *tmplist;
++        tmplist = realloc (sidlist, sidlistlen*sizeof(security_id_t));
++        if (tmplist) {
++		sidlist = tmplist;
++		num_sids = get_ordered_sid_list (username, 0, sidlist,
++							 &sidlistlen);
++	}
++      }
++
++      if (num_sids <= 0)  {
++	  fprintf(stderr, "login: unable to obtain SIDs for %s.\n", username);
++          if (manual_user_enter_sid (username, &user_sid))
++          {
++              syslog (LOG_ERR, "UNABLE TO GET VALID SID FOR %s", username);
++              exit(0);
++          }
++      }
++      else
++      {
++          query_user_sid (sidlist, num_sids, &user_sid);
++      }
++
++      free (sidlist);
++
++      user_context_len = CONTEXTLEN;
++      user_context = malloc(user_context_len);
++      if (!user_context) {
++	    fprintf(stderr, "login: no memory for security context.\n");
++            exit (0);
++      }
++      rc = security_sid_to_context(user_sid,user_context,&user_context_len);
++      if (rc < 0 && user_context_len > CONTEXTLEN)
++      {
++		security_context_t tmpcon;
++		tmpcon = realloc (user_context, user_context_len);
++		if (tmpcon) {
++			user_context = tmpcon;
++			rc = security_sid_to_context (user_sid, user_context,
++						      &user_context_len);
++		}
++      }
++      if (rc < 0) {
++                free (user_context);
++                syslog (LOG_ERR, "PROBLEM OBTAINING CONTEXT FOR %s", username);
++                exit (0);
++      }
++  }
++
+   /* committed to login -- turn off timeout */
+   alarm ((unsigned int) 0);
+ 
+@@ -1013,13 +1098,25 @@
+   chown (ttyn, pwd->pw_uid, gid);
+   chmod (ttyn,  getdef_num ("TTYPERM", 0600));
+ 
++  if (flask_enabled) {
++    if (stat_secure(ttyn, &statbuf, &ttyn_sid) != 0) {
++	    perror("stat_secure");
++	    exit (0); 
++    }
++    if (security_change_sid (user_sid, ttyn_sid, SECCLASS_CHR_FILE, &newdev_sid) != 0) {
++	    perror("security_change_sid");
++	    exit (0); 
++    }
++    if (chsid (ttyn, newdev_sid) != 0) {
++	    perror("chsid");
++	    exit (0); 
++    }
++  }
++
+   /* if tty is one of the VC's then change owner and mode of the
+      special /dev/vcs devices as well */
+   if (consoletty (0))
+     {
+-#if 0
+-      char vcsn[20], vcsan[20];
+-
+       /* find names of Virtual Console devices */
+       char *p = ttyn;
+       /* find number of tty */
+@@ -1030,7 +1127,7 @@
+       strcat (vcsn, p);
+       strcpy (vcsan, "/dev/vcsa");
+       strcat (vcsan, p);
+-
++#if 0
+       /*
+        * Please don't add code to chown /dev/vcs* to the user logging in -
+        * it's a potential security hole.  I wouldn't like the previous user
+@@ -1043,6 +1140,42 @@
+       chmod (vcsn, getdef_num ("TTYPERM", 0600));
+       chmod (vcsan, getdef_num ("TTYPERM", 0600));
+ #endif
++
++      if (flask_enabled)
++      {
++            if (stat_secure(vcsn, &statbuf, &vcsn_sid) != 0)
++            {
++                perror("stat_secure");
++                exit (0); 
++            }
++            if (security_change_sid (user_sid, vcsn_sid, SECCLASS_CHR_FILE, &newdev_sid) != 0)
++            {
++                perror ("security_change_sid");
++                exit (0);
++            }
++            if (chsid (vcsn, newdev_sid) != 0)
++            {
++                perror("chsid");
++                exit (0);
++            }
++            if (stat_secure(vcsan, &statbuf, &vcsan_sid) != 0)
++            {
++                perror("stat_secure");
++                exit (0);
++            }
++            if (security_change_sid (user_sid, vcsan_sid, SECCLASS_CHR_FILE, &newdev_sid) != 0)
++            {
++                perror("security_change_sid");
++                exit (0);
++            }
++            if (chsid (vcsan, newdev_sid) != 0)
++            {
++                perror("chsid");
++                exit (0);
++            }
++
++       }
++
+     }
+ 
+   setgid (pwd->pw_gid);
+@@ -1123,6 +1256,23 @@
+ 
+   setproctitle ("login", username);
+ 
++  if (flask_enabled) {
++	/* note the SELinux login context */
++	if (pwd->pw_uid == 0) {
++		if (hostname)
++			syslog(LOG_NOTICE, _("ROOT LOGIN ON %s FROM %s USING %s"), ttyn, hostname, user_context);
++		else
++	  		syslog(LOG_NOTICE, _("ROOT LOGIN ON %s USING %s"), ttyn, user_context);
++	} else {
++		if (hostname) 
++			syslog(LOG_INFO, _("LOGIN ON %s BY %s FROM %s USING %s"), ttyn, pwd->pw_name, hostname, user_context);
++		else 
++			syslog(LOG_INFO, _("LOGIN ON %s BY %s USING %s"), ttyn, pwd->pw_name, user_context);
++	}
++
++	free(user_context);
++  }
++
+   if (!quietlog)
+     motd ();
+ 
+@@ -1170,6 +1320,27 @@
+ 	    fprintf (stderr, _("login: waitpid (%d, NULL, 0) failed: %s\n"),
+ 		     childPid, strerror (errsv));
+ 	}
++
++     if (flask_enabled)
++     {
++        /* We need to change the contexts of the terminal devices back to
++           the system when the user's session ends.  */
++        if (chsid (ttyn, ttyn_sid) != 0)
++        {
++             perror("chsid");
++        }
++        if (consoletty(0)) {
++          if (chsid (vcsn, vcsn_sid) != 0)
++          {
++             perror("chsid");
++          }
++          if (chsid (vcsan, vcsan_sid) != 0)
++          {
++             perror("chsid");
++          }
++        }
++      }
++
+       PAM_END;
+       exit (0);
+     }
+@@ -1241,7 +1412,10 @@
+ 
+   childArgv[childArgc++] = NULL;
+ 
+-  execvp (childArgv[0], childArgv + 1);
++  if (flask_enabled)
++       execvp_secure (childArgv[0], user_sid, childArgv + 1);
++  else
++       execvp(childArgv[0], childArgv + 1);
+ 
+   errsv = errno;
+ 

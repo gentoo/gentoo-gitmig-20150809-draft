@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pam-login
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.18 2003/06/24 14:31:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.19 2003/06/29 00:38:16 pebenito Exp $
+
+  28 Jun 2003; Chris PeBenito <pebenito@gentoo.org> pam-login-3.11.ebuild,
+  files/pam-login-3.11-selinux.diff:
+  Added patch for selinux.  Added missing IUSE.
 
   24 Jun 2003; Aron Griffis <agriffis@gentoo.org> pam-login-3.11.ebuild:
   Mark stable on alpha
