@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a61bff25def89efc037d094a0f9cf5d3 ChangeLog 1938
-MD5 64ec3e3e33e074dcfc3470160bb23015 libtheora-1.0_alpha2.ebuild 742
-MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
+MD5 0c36fc2811742837f7422cd039cd267d ChangeLog 2040
 MD5 ac7c58e2610e53fbe396a49ee7004ae7 libtheora-1.0_alpha2-r1.ebuild 833
-MD5 fb2608ab3026d8d2571ccb70681b70df libtheora-1.0_alpha3.ebuild 825
+MD5 64ec3e3e33e074dcfc3470160bb23015 libtheora-1.0_alpha2.ebuild 742
+MD5 515ba3d39ba8e156dd093543f5598f14 libtheora-1.0_alpha3.ebuild 834
+MD5 9ef4af14dad87b03fde8e43f19e08d26 metadata.xml 225
 MD5 43363432588af784deac91552ac3a636 files/digest-libtheora-1.0_alpha2 71
 MD5 43363432588af784deac91552ac3a636 files/digest-libtheora-1.0_alpha2-r1 71
 MD5 a9f9ea68a0659a1bd63f423e5028d5bf files/digest-libtheora-1.0_alpha3 72
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBT4LCHTu7gpaalycRAk8vAJ4kftTO00gIVyRh5+JcZeoxoB5PfACfaDEv
-9o01qyQI038y2mFTqnBOI8s=
-=1iaR
------END PGP SIGNATURE-----
