@@ -1,6 +1,6 @@
-# Copyright 1999-2003 
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pipes/pipes-1.15.ebuild,v 1.1 2003/09/22 17:15:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/pipes/pipes-1.15.ebuild,v 1.2 2003/09/22 19:11:26 msterret Exp $
 
 DESCRIPTION="Very versatile TCP pipes"
 HOMEPAGE="http://bisqwit.iki.fi/source/pipes.html"
@@ -15,7 +15,7 @@ DEPEND="virtual/glibc"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	
+
 	sed -i "s:-O2:${CFLAGS}:" Makefile
 	touch .depend
 }
