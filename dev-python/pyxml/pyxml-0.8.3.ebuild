@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxml/pyxml-0.8.3.ebuild,v 1.4 2003/12/17 05:05:53 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxml/pyxml-0.8.3.ebuild,v 1.5 2004/01/18 12:33:22 liquidx Exp $
 
 inherit distutils
 
@@ -24,7 +24,7 @@ src_compile() {
 
 	# if you want to use 4Suite, then their XSLT/XPATH is
 	# better according to the docs
-	if has_version "dev-python/4Suite"; then
+	if has_version "dev-python/4suite"; then
 		myconf="--without-xslt --without-xpath"
 	fi
 
