@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/tex4ht
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/ChangeLog,v 1.1 2004/08/18 15:48:50 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/tex4ht/ChangeLog,v 1.2 2004/08/30 23:37:14 dholm Exp $
+
+  31 Aug 2004; David Holm <dholm@gentoo.org> tex4ht-20040212.ebuild:
+  Added to ~ppc.
 
 *tex4ht-20040212 (19 Aug 2004)
 
