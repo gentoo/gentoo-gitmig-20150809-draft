@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-0.9.6.20031018.ebuild,v 1.2 2003/10/18 09:44:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-0.9.7.20031025.ebuild,v 1.1 2003/10/25 16:22:47 vapier Exp $
 
 inherit enlightenment eutils flag-o-matic
 
@@ -37,8 +37,7 @@ DEPEND=">=dev-util/pkgconfig-0.5
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PN}-info-direntry.patch
-	epatch ${FILESDIR}/${PV}-makefile-gtk.patch
+	epatch ${FILESDIR}/${PV}-configure.patch.bz2
 }
 
 src_compile() {
@@ -47,18 +46,18 @@ src_compile() {
 
 	# cannot use use_enable constructs because configure script is wrong
 	export MY_ECONF="
-		--enable-backend-efsd
+		--disable-backend-efsd
 		--enable-extra-themes
 		--enable-extra-iconsets
+		`use_enable perl pcre`
+		`use_enable x X`
+		`use_enable mad libmad`
+		`use_enable oggvorbis plugin-vorbis`
+		`use_enable truetype plugin-ttf`
+		`use_enable kde backend-kio`
+		`use_enable gnome backend-gnomevfs2`
+		`use_enable debug`
 		"
-	use perl || MY_ECONF="${MY_ECONF} --disable-pcre"
-	use X || MY_ECONF="${MY_ECONF} --disable-x"
-	use mad || MY_ECONF="${MY_ECONF} --disable-libmad"
-	use oggvorbis || MY_ECONF="${MY_ECONF} --disable-plugin-vorbis"
-	use truetype || MY_ECONF="${MY_ECONF} --disable-plugin-ttf"
-#	use gnome && MY_ECONF="${MY_ECONF} --enable-backend-gnomevfs2"
-	use kde && MY_ECONF="${MY_ECONF} --enable-backend-kio"
-
 	enlightenment_src_compile
 }
 
