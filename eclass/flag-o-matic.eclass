@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.49 2004/05/11 13:02:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.50 2004/05/12 13:36:17 pappy Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -54,14 +54,16 @@ INHERITED="$INHERITED $ECLASS"
 # Matches only complete flags
 #
 #### etexec-flags ####
-# hooked function for hardened-gcc that appends 
-# -yet_exec {C,CXX,LD}FLAGS when hardened-gcc is installed
-# and a package is filtering -fPIC,-fpic, -fPIE, -fpie
+# hooked function for hardened gcc that appends
+# -fno-pic to {C,CXX,LD}FLAGS
+# when a package is filtering -fpic, -fPIC, -fpie, -fPIE
 #
 #### fstack-flags ####
-# hooked function for hardened-gcc that appends
-# -yno_propolice to {C,CXX,LD}FLAGS when hardened-gcc is installed
-# and a package is filtering -fstack-protector, -fstack-protector-all
+# hooked function for hardened gcc that appends
+# -fno-stack-protector to {C,CXX,LD}FLAGS
+# when a package is filtering -fstack-protector, -fstack-protector-all
+# notice: modern automatic specs files will also suppress -fstack-protector-all
+# when only -fno-stack-protector is given
 #
 
 # C[XX]FLAGS that we allow in strip-flags
@@ -274,7 +276,6 @@ get-flag() {
 has_pic() {
 	[ "${CFLAGS/-fPIC}" != "${CFLAGS}" ] && return 0
 	[ "${CFLAGS/-fpic}" != "${CFLAGS}" ] && return 0
-	has_version sys-devel/hardened-gcc && return 0
 	[ ! -z "`${CC/ .*/} --version| grep pie`" ] && return 0
 	return 1
 }
@@ -282,14 +283,12 @@ has_pic() {
 has_pie() { 
 	[ "${CFLAGS/-fPIE}" != "${CFLAGS}" ] && return 0
 	[ "${CFLAGS/-fpie}" != "${CFLAGS}" ] && return 0
-	has_version sys-devel/hardened-gcc && return 0
 	[ ! -z "`${CC/ .*/} --version| grep pie`" ] && return 0
 	return 1
 }
 	
 has_ssp() {
 	[ "${CFLAGS/-fstack-protector}" != "${CFLAGS}" ] && return 0
-	has_version sys-devel/hardened-gcc && return 0
 	[ ! -z "`${CC/ .*/} --version| grep ssp`" ] && return 0
 	return 1
 }
@@ -343,17 +342,18 @@ filter-ldflags() {
 etexec-flags() {
 	has_pie || has_pic
 	if [ $? == 0 ] ; then
-		[ -z "`is-flag -yet_exec`" ] && 
-			export CFLAGS="${CFLAGS} `test_flag -yet_exec`"
-		[ -z "`is-flag -nopie`" ] && 
-			export CFLAGS="${CFLAGS} `test_flag -nopie`"
+	[ -z "`is-flag -fno-pic`" ] && 
+		export CFLAGS="${CFLAGS} `test_flag -fno-pic`"
+
+	[ -z "`is-flag -nopie`" ] && 
+		export CFLAGS="${CFLAGS} `test_flag -nopie`"
 	fi
 }
 
 fstack-flags() {
 	has_ssp
 	if [ $? == 0 ] ; then
-		[ -z "`is-flag -yno_propolice`" ] && 
-			export CFLAGS="${CFLAGS} `test_flag -fno-stack-protector`"
+	[ -z "`is-flag -fno-stack-protector`" ] && 
+		export CFLAGS="${CFLAGS} `test_flag -fno-stack-protector`"
 	fi
 }
