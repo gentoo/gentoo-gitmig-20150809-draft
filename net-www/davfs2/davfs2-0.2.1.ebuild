@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/davfs2/davfs2-0.2.1.ebuild,v 1.3 2003/10/10 17:24:36 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/davfs2/davfs2-0.2.1.ebuild,v 1.4 2003/10/10 17:26:00 mholzer Exp $
 
 IUSE="ssl"
 
@@ -29,6 +29,8 @@ src_install() {
 }
 
 pkg_postinst() {
+	einfo ""
 	einfo "Remember you have to have coda compiled in to your kernel"
-	einfo "In order to use Davfs2"
+	einfo "in order to use davfs2"
+	einfo ""
 }
