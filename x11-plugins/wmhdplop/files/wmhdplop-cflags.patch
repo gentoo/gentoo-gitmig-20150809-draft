@@ -1,0 +1,11 @@
+--- configure	2004-08-26 23:36:16.473232248 +0200
++++ configure	2004-08-26 23:45:52.337687544 +0200
+@@ -3429,7 +3429,7 @@
+ 
+ 
+ if test x$GCC = xyes; then
+-  CFLAGS="-O3 -fomit-frame-pointer -ffast-math -Wall -W";
++  CFLAGS="${GENTOO_CFLAGS} -ffast-math -Wall -W";
+ fi
+ 
+ echo "$as_me:$LINENO: checking for X" >&5

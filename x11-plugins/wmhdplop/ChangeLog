@@ -1,0 +1,9 @@
+# ChangeLog for x11-plugins/wmhdplop
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmhdplop/ChangeLog,v 1.1 2004/08/26 22:03:42 s4t4n Exp $
+
+*wmhdplop-0.9.6 (26 Aug 2004)
+
+  26 Aug 2004; Michele Noberasco <s4t4n@gentoo.org> wmhdplop-0.9.6.ebuild:
+  Initial import. Thanks to didbaba. Closes #61808.
+
