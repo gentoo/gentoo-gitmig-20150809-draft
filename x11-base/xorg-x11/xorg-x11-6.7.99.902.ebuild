@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.99.902.ebuild,v 1.1 2004/08/21 09:50:58 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.99.902.ebuild,v 1.2 2004/08/21 10:23:25 seemant Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -32,19 +32,21 @@ XCUR_VER="0.3.1"
 #VIADRV_VER="0.1"
 XFSFT_ENC_VER="0.1"
 
-S="${WORKDIR}/xc"
+S=${WORKDIR}/xc
 
 HOMEPAGE="http://freedesktop.org/XOrg"
 
 # Misc patches we may need to fetch ..
-X_PATCHES="mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2"
+X_PATCHES="mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2
+	http://dev.gentoo.org/~seemant/distfiles/${P}-patches-${PATCH_VER}.tar.bz2"
 
 X_DRIVERS=""
 #	mirror://gentoo/${P}-drivers-via-${VIADRV_VER}.tar.bz2"
 # Latest Savage drivers:  http://www.probo.com/timr/savage40.html
 # Latest SIS drivers:  http://www.winischhofer.net/
 
-GENTOO_FILES="mirror://gentoo/${P}-files-${FILES_VER}.tar.bz2"
+GENTOO_FILES="mirror://gentoo/${P}-files-${FILES_VER}.tar.bz2
+	http://dev.gentoo.org/~seemant/${P}-files-${FILES_VER}.tar.bz2"
 
 SRC_URI="mirror://gentoo/eurofonts-X11.tar.bz2
 	http://dev.gentoo.org/~spyderous/xorg/${PN}/patchsets/${PV}/xfsft-encodings-${XFSFT_ENC_VER}.tar.bz2
@@ -53,7 +55,8 @@ SRC_URI="mirror://gentoo/eurofonts-X11.tar.bz2
 	${GENTOO_FILES}
 	${X_DRIVERS}
 	${X_PATCHES}
-	mirror://gentoo/${P}.tar.bz2"
+	mirror://gentoo/${P}.tar.bz2
+	http://dev.gentoo.org/~seemant/${P}.tar.bz2"
 #	http://freedesktop.org/~xorg/X11R${PV}/src/X11R${PV}-src1.tar.gz
 #	http://freedesktop.org/~xorg/X11R${PV}/src//X11R${PV}-src2.tar.gz
 #	http://freedesktop.org/~xorg/X11R${PV}/src//X11R${PV}-src3.tar.gz
@@ -64,13 +67,12 @@ SRC_URI="mirror://gentoo/eurofonts-X11.tar.bz2
 #		http://freedesktop.org/~xorg/X11R${PV}/src//X11R${PV}-src7.tar.gz
 #	)"
 
-# http://www.xfree86.org/4.3.0/LICENSE.html
 LICENSE="Adobe-X CID DEC DEC-2 IBM-X NVIDIA-X NetBSD SGI UCB-LBL XC-2
 	bigelow-holmes-urw-gmbh-luxi christopher-g-demetriou national-semiconductor
 	nokia tektronix the-open-group todd-c-miller x-truetype xfree86-1.0
 	MIT SGI-B BSD FTL | GPL-2"
 SLOT="0"
-KEYWORDS="-x86 -ppc64 -amd64 -ppc -mips"
+KEYWORDS="~x86 ppc64 ~amd64 ~ppc ~mips"
 
 # Need portage-2.0.50_pre9 for `use !foo`
 DEPEND=">=sys-apps/baselayout-1.8.3
@@ -524,18 +526,13 @@ src_unpack() {
 	# Unpack source and patches
 	ebegin "Unpacking source"
 		unpack ${P}.tar.bz2
-#		unpack X11R${PV}-src1.tar.gz
-#		unpack X11R${PV}-src2.tar.gz
-#		unpack X11R${PV}-src3.tar.gz
-#		unpack X11R${PV}-src4.tar.gz
-#		unpack X11R${PV}-src5.tar.gz
+#		unpack X11R${PV}-src[1..5].tar.gz
 	eend 0
 
 #	if use doc
 #	then
 #		ebegin "Unpacking documentation"
-#			unpack X11R${PV}-src6.tar.gz
-#			unpack X11R${PV}-src7.tar.gz
+#			unpack X11R${PV}-src{6,7}.tar.gz
 #		eend 0
 #	fi
 
@@ -569,8 +566,6 @@ src_unpack() {
 	cd ${WORKDIR}
 	EPATCH_SUFFIX="patch" \
 	epatch ${PATCHDIR}
-#	epatch ${FILESDIR}/xorgconfig.c.diff
-#	epatch ${FILESDIR}/xorg-stack-protector.patch
 	cd ${S}
 
 	host_def_setup
@@ -792,45 +787,45 @@ setup_config_files() {
 	# Work around upgrade problem where people have
 	# Option "XkbRules" "xfree86" in their config file
 	sed -i "s:^.*Option.*"XkbRules".*$::g" ${D}/etc/X11/xorg.conf.example
+}
 
+update_config_files() {
 	# Fix any installed config files for installing fonts to /usr/share/fonts
 	# This *needs* to be after all other installation so files aren't
 	# overwritten.
-	einfo "Preparing any installed configuration files for font move..."
-	FILES="/etc/X11/xorg.conf
-		/etc/X11/XF86Config
-		/etc/fonts/fonts.conf
-		/etc/fonts/local.conf
-		/etc/X11/fs/config"
 
-	for FILE in ${FILES}
-	do
-		if [ -e ${ROOT}${FILE} ]
-		then
-			DIR="$(dirname ${ROOT}${FILE})"
-			if [ ! -d ${T}${DIR} ]
+	if [ "${ROOT}" = "/" ]
+	then
+		einfo "Preparing any installed configuration files for font move..."
+		FILES="/etc/X11/xorg.conf
+			/etc/X11/XF86Config
+			/etc/X11/fs/config"
+		#	/etc/fonts/fonts.conf
+		#	/etc/fonts/local.conf
+
+		for FILE in ${FILES}
+		do
+			if [ -e ${FILE} ]
 			then
-				mkdir -p ${T}${DIR}
-			fi
-			cp ${ROOT}${FILE} ${T}${DIR}
-			# New font paths
-			sed -i "s,/usr/X11R6/lib/X11/fonts,/usr/share/fonts,g" ${T}${FILE}
+				# New font paths
+				sed "s,/usr/X11R6/lib/X11/fonts,/usr/share/fonts,g" \
+					${ROOT}${FILE} > ${IMAGE}${FILE}
 
-			if [ "${FILE}" = "/etc/X11/xorg.conf" ]
-			then
-				# "keyboard" driver is deprecated and will be removed, switch to "kbd"
-				sed -i 's~^\([ \t]*Driver[ \t]\+\)"keyboard"~\1"kbd"~' \
-					${T}${FILE}
-				# Work around upgrade problem where people have
-				# Option "XkbRules" "xfree86" in their config file
-				sed -i "s:^.*Option.*\"XkbRules\".*$::g" ${T}${FILE}
-			fi
+				if [ "${FILE}" = "/etc/X11/xorg.conf" ]
+				then
+					# "keyboard" driver is deprecated and will be removed,
+					# switch to "kbd"
+					sed -i 's~^\([ \t]*Driver[ \t]\+\)"keyboard"~\1"kbd"~' \
+						${IMAGE}${FILE}
 
-			dodir ${DIR}
-			insinto ${DIR}
-			doins ${T}${FILE}
-		fi
-	done
+					# Work around upgrade problem where people have
+					# Option "XkbRules" "xfree86" in their config file
+					sed -i "s:^.*Option.*\"XkbRules\".*$::g" \
+						${IMAGE}${FILE}
+				fi
+			fi
+		done
+	fi
 }
 
 src_install() {
@@ -996,11 +991,20 @@ src_install() {
 	# Remove xterm app-defaults, since we don't install xterm
 	rm ${D}/etc/X11/app-defaults/{UXTerm,XTerm,XTerm-color}
 
+	# For Battoussai's gatos stuffs:
+	if use sdk
+	then
+		insinto /usr/X11R6/lib/Server/include
+		doins ${S}/extras/drm/shared/drm.h
+	fi
+
 	setup_config_files
+
 }
 
 pkg_preinst() {
 
+	update_config_files
 	for G_FONTDIR in ${G_FONTDIRS}
 	do
 		# Get rid of deprecated directories so our symlinks in the same location
