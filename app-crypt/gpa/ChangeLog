@@ -1,6 +1,9 @@
 # ChangeLog for app-crypt/gpa
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.24 2004/09/29 03:09:53 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/gpa/ChangeLog,v 1.25 2004/10/02 21:24:09 kloeri Exp $
+
+  02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> gpa-0.7.0-r2.ebuild:
+  Keyword ~alpha, requested in bug 64485.
 
   29 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> gpa-0.7.0-r2.ebuild:
   Stable on sparc wrt #64485
