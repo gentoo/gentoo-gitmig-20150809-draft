@@ -1,0 +1,11 @@
+# ChangeLog for app-text/yodl
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/yodl/ChangeLog,v 1.1 2003/10/02 14:04:27 usata Exp $
+
+*yodl-1.31.18 (02 Oct 2003)
+
+  02 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> yodl-1.31.18.ebuild,
+  files/bison-configure.patch, files/yodl-1.31.18-compile-fix-ia64.patch,
+  files/yodl-1.31.18-debian.patch:
+  Initial import. Ebuild submitted by Wayne Davison <gentoo@blorf.net>
+  This closed Bug #18726
