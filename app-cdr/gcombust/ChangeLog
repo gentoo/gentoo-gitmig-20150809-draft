@@ -1,13 +1,16 @@
 # ChangeLog for app-cdr/gcombust
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcombust/ChangeLog,v 1.11 2002/12/13 10:55:59 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/gcombust/ChangeLog,v 1.12 2003/02/03 00:18:46 agenkin Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
- 
+*gcombust-0.1.54 (02 Feb 2003)
+
+  02 Feb 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Version bump.
+  Fixed RDEPEND to also include stuff from DEPEND.
+
 *gcombust-0.1.53 (27 Oct 2002)
 
   27 Oct 2002; Arcady Genkin <agenkin@gentoo.org> gcombust-0.1.53.ebuild :
-
   Version bump.
 
 *gcombust-0.1.52 (08 Jul 2002)
