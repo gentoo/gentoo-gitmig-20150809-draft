@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.6.1.ebuild,v 1.1 2004/03/11 02:34:01 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.6.1.ebuild,v 1.2 2004/03/11 20:37:24 zx Exp $
 
 inherit java-pkg
 
@@ -24,6 +24,24 @@ IUSE="doc"
 
 S="${WORKDIR}/apache-ant-${PV}"
 
+pkg_setup() {
+	if [ -n "$JAVA_HOME" ] ; then
+		export CLASSPATH=".:$JAVA_HOME/lib:$JAVA_HOME/lib/tools.jar:$JAVA_HOME/jre/lib/rt.jar:."
+	else
+		einfo "Warning: JAVA_HOME environment variable is not set (or not exported)."
+		einfo "  If build fails because sun.* classes could not be found"
+		einfo "  you will need to set the JAVA_HOME environment variable"
+		einfo "  to the installation directory of java."
+		einfo "  Try using java-config script"
+		die
+	fi
+
+	if [ `arch` == "ppc" ] ; then
+		# We're compiling _ON_ PPC
+		export THREADS_FLAG="green"
+	fi
+}
+
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -34,15 +52,11 @@ src_unpack() {
 }
 
 src_compile() {
-
-	[ -z ${JDK_HOME} ] && einfo "JDK_HOME not set, please check with java-config" && die
-
 	addwrite "/proc/self/maps"
-	export JAVA_HOME=${JDK_HOME}
-	if [ `arch` == "ppc" ] ; then
-		# We're compiling _ON_ PPC
-		export THREADS_FLAG="green"
-	fi
+
+	local myc
+	myc="${myc} -Ddist.dir=${D}/usr/share/ant"
+	myc="${myc} -Djavac.target=1.4"
 
 	./build.sh -Ddist.dir=${D}/usr/share/ant || die
 }
