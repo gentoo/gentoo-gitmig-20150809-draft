@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.2-r2.ebuild,v 1.10 2004/06/03 02:11:27 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.4.2-r2.ebuild,v 1.11 2004/06/13 00:08:06 nakano Exp $
 
 inherit eutils gnuconfig flag-o-matic
 
@@ -20,7 +20,6 @@ RESTRICT="nomirror"
 
 DEPEND="virtual/glibc
 	sys-devel/autoconf
-	app-admin/sudo
 	>=sys-libs/ncurses-5.2
 	>=sys-devel/bison-1.875
 	zlib? ( >=sys-libs/zlib-1.1.3 )
@@ -35,6 +34,7 @@ DEPEND="virtual/glibc
 # java dep workaround for portage bug
 # x86? ( java? ( =dev-java/sun-jdk-1.3* >=dev-java/ant-1.3 ) )
 RDEPEND="virtual/glibc
+	app-admin/sudo
 	zlib? ( >=sys-libs/zlib-1.1.3 )
 	tcltk? ( >=dev-lang/tcl-8 )
 	perl? ( >=dev-lang/perl-5.6.1-r2 )
