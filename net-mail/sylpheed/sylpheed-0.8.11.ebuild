@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/sylpheed-0.8.11.ebuild,v 1.1 2003/03/13 18:43:20 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/sylpheed/sylpheed-0.8.11.ebuild,v 1.2 2003/03/28 14:41:31 weeve Exp $
 
 IUSE="ssl xface ipv6 nls gnome ldap crypt pda"
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://sylpheed.good-day.net"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 
 PROVIDE="virtual/sylpheed"
 
