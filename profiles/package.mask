@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3798 2005/04/06 10:05:05 eradicator Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3799 2005/04/06 13:57:07 ka0ttic Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,11 @@
 ##
 ##   End example
 ##
+
+# Aaron Walker <ka0ttic@gentoo.org> (06 Apr 2005)
+# Masked until I can figure out why specifying multiple input files
+# causes a segfault.
+=dev-util/source-highlight-2.0_rc1
 
 # Jeremy Huddleston <eradicator@gentoo.org> (06 Apr 2005)
 # For those who want the DST bugfix before 0.18 is released in a few days
