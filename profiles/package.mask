@@ -116,6 +116,10 @@ x11-themes/gtk-xfce-engine
 >=x11-terms/gnome-terminal-2.0.1
 >=net-libs/linc-0.5.2
 >=gnome-base/ORBit2-2.4.1
+>=gnome-base/libbonobo-2.0.1
+>=gnome-extra/libgtkhtml-2.0.1
+>=gnome-extra/yelp-1.0.2
+
 
 # Gabriele Giorgetti <stroke@gentoo.org> (05 Aug 2002)
 # other gnome2 packages masked for testing
