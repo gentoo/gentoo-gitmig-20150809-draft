@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/mod_ssl-2.8.19.ebuild,v 1.8 2004/08/01 14:49:47 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/mod_ssl-2.8.19.ebuild,v 1.9 2004/10/29 13:14:59 stuart Exp $
 
 MY_P=${P}-1.3.31
 S=${WORKDIR}/${MY_P}
@@ -11,6 +11,7 @@ HOMEPAGE="http://www.modssl.org/"
 KEYWORDS="x86 ppc sparc alpha hppa mips"
 LICENSE="as-is"
 SLOT="0"
+IUSE=""
 
 DEPEND="=net-www/apache-1.3.31*
 	>=dev-libs/openssl-0.9.6k"

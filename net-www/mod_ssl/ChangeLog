@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mod_ssl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/ChangeLog,v 1.52 2004/10/23 21:18:09 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/ChangeLog,v 1.53 2004/10/29 13:14:59 stuart Exp $
+
+  29 Oct 2004; Stuart Herbert <stuart@gentoo.org> mod_ssl-2.8.21.ebuild:
+  Marked stable on x86; added --force so that this mod_ssl can be used with
+  apache-1.3.33 (temporary measure until mod_ssl is bumped upstream)
 
 *mod_ssl-2.8.21 (23 Oct 2004)
 
