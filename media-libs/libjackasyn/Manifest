@@ -1,17 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 b67ba0af40a3f8b3075328d327f056ca libjackasyn-0.10.ebuild 875
-MD5 be2fc8ba2525088efd38f3d37d601255 libjackasyn-0.8.ebuild 911
+MD5 5dfe0fbd339be35728c7b2e8bf401cf6 libjackasyn-0.10.ebuild 875
 MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
-MD5 ea973cf52e233baa288ef9b6f20cb877 ChangeLog 1410
+MD5 45b2b95c777dc44566c0090075cb4998 ChangeLog 1536
 MD5 2a4ada362fa3e0aeab0ba7a5eb0787df files/digest-libjackasyn-0.10 67
-MD5 1f38c0c1e629135027a5d3d9f9dea2d3 files/digest-libjackasyn-0.8 66
 MD5 e99041ad32c711e230de2fafad98eb06 files/libjackasyn-0.10-destdir.patch 1199
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBosKJArHZZzCEUG0RAsA5AJ4m8qNl+HwUNFWLZqMbogDNL8iQ3ACfdQxW
-cfRj+qmwl/Epu3lE6Z69Xkw=
-=A6XW
+iD8DBQFBxQ4UArHZZzCEUG0RAhZUAJ9F9rDRQuQQrYXZN8/CsagkW+GMywCeJJ5i
+CdKAi3A4M8a4MqpBsialHrU=
+=1VOG
 -----END PGP SIGNATURE-----
