@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/fcron-2.9.4.ebuild,v 1.1 2004/04/18 22:22:55 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/fcron/fcron-2.9.4.ebuild,v 1.2 2004/05/25 18:48:00 pebenito Exp $
 
 inherit eutils
 
@@ -26,6 +26,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-braindead-configure-check.patch
+	use selinux && epatch ${FILESDIR}/fcron-2.9.4-selinuxupdate.diff
 	autoconf || die "autoconf failed"
 }
 
