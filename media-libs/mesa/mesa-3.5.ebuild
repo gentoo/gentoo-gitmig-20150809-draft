@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-3.5.ebuild,v 1.9 2003/02/13 12:51:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/mesa/mesa-3.5.ebuild,v 1.10 2003/11/25 03:44:27 agriffis Exp $
 
 IUSE="mmx fbcon sse X svga ggi 3dnow"
 
@@ -24,7 +24,7 @@ fi
 
 SLOT="3.5"
 LICENSE="LGPL-2"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc ~alpha"
 
 src_compile() {
 	local myconf
