@@ -1,6 +1,9 @@
 # ChangeLog for net-dialup/globespan-adsl
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/globespan-adsl/ChangeLog,v 1.1 2003/11/11 05:00:36 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/globespan-adsl/ChangeLog,v 1.2 2003/11/19 14:26:31 lanius Exp $
+
+  19 Nov 2003; Heinrich Wendel <lanius@gentoo.org> metadata.xml:
+  metadata.xml
 
 *globespan-adsl-0.8 (10 Nov 2003)
 
