@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.2.7.ebuild,v 1.6 2003/09/05 01:36:51 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/mit-krb5/mit-krb5-1.2.7.ebuild,v 1.7 2003/11/08 16:55:03 todd Exp $
 
 inherit eutils
 
@@ -15,7 +15,7 @@ SRC_URI="http://www.mirrors.wiretapped.net/security/cryptography/apps/kerberos/k
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 sparc"
 IUSE="krb4"
 
 PROVIDE="virtual/krb5"
