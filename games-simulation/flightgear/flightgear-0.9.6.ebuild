@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-0.9.4.ebuild,v 1.8 2004/10/21 20:16:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/flightgear-0.9.6.ebuild,v 1.1 2004/10/21 20:16:48 seemant Exp $
 
 inherit flag-o-matic games
 
@@ -14,10 +14,10 @@ SRC_URI="mirror://flightgear/Source/${MY_P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~sparc ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 IUSE=""
 
-RDEPEND="=dev-games/simgear-0.3.5*
+RDEPEND="=dev-games/simgear-0.3.7*
 	>=media-libs/plib-1.7.0"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
@@ -26,7 +26,7 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	sed -i \
-		-e 's:#include <simgear/screen/jpgfactory.hxx>:#include <simgear/screen/jpgfactory.hxx-faile-include>:g' \
+		's:\(#include <simgear/screen/jpgfactory.hxx\)>:\1-faile-include>:g' \
 		configure || die "sed configure failed"
 }
 
@@ -43,8 +43,8 @@ src_compile() {
 src_install() {
 	egamesinstall || die
 
-	dodir "${GAMES_LIBDIR}/${MY_PN}"
-	cp -a data/* "${D}/${GAMES_LIBDIR}/${MY_PN}" || die "cp failed"
+	dodir "${GAMES_DATADIR}/${MY_PN}"
+	cp -a ${WORKDIR}/data/* "${D}/${GAMES_DATADIR}/${MY_PN}" || die "cp failed"
 
 	dodoc README* ChangeLog AUTHORS NEWS Thanks
 

@@ -1,6 +1,19 @@
 # ChangeLog for games-simulation/flightgear
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.12 2004/06/24 23:22:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/flightgear/ChangeLog,v 1.13 2004/10/21 20:16:48 seemant Exp $
+
+*flightgear-0.9.6 (21 Oct 2004)
+
+  21 Oct 2004; Seemant Kulleen <seemant@gentoo.org>
+  -flightgear-0.9.3.ebuild, flightgear-0.9.4.ebuild,
+  +flightgear-0.9.5.ebuild, +flightgear-0.9.6.ebuild:
+  removed 0.9.3, and moved 0.9.4 to stable x86. Now, 0.9.5 came from Alonso
+  Schaich <AlonsoSchaich@gmx.de> in bug #59001 and compiles cleanly with
+  gcc-3.4. Version 0.9.6 came from Adam Babcock <ababcock@sympatico.ca> in bug
+  #67809. I personally had problems with 0.9.6 and found 0.9.5 to be much
+  better, but your mileage may vary. For this reason, I have added both, and I
+  expect to hear from the gamers which version is the superior. So bug report
+  me please
 
   11 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
   flightgear-0.9.4.ebuild:
