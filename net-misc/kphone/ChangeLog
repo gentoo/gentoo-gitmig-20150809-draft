@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/kphone
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kphone/ChangeLog,v 1.13 2004/03/14 17:29:29 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kphone/ChangeLog,v 1.14 2004/03/25 21:56:56 gustavoz Exp $
+
+  25 Mar 2004; Gustavo Zacarias <gustavoz@gentoo.org> kphone-4.0.1.ebuild:
+  ~sparc baby
 
   14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> kphone-1.0.2.ebuild,
   kphone-2.0.ebuild, kphone-3.11.ebuild, kphone-3.14.ebuild,
