@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hexedit/hexedit-1.2.2.ebuild,v 1.10 2003/05/21 12:41:52 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hexedit/hexedit-1.2.2.ebuild,v 1.11 2003/09/05 23:05:05 msterret Exp $
 
 S="${WORKDIR}/hexedit"
 DESCRIPTION="View and edit files in hex or ASCII."
@@ -19,7 +19,7 @@ src_compile() {
 	cd "${S}"
 	./configure --host="${CHOST}" --prefix=/usr --mandir=/usr/share/man \
 	|| die "./configure failed"
-	
+
 	emake || die
 }
 

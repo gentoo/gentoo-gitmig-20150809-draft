@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.5.4.ebuild,v 1.1 2003/08/31 10:56:06 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.5.4.ebuild,v 1.2 2003/09/05 23:05:05 msterret Exp $
 
 
 MY_PV=$(echo ${PV} | sed 's:\.::g')
@@ -40,7 +40,7 @@ src_compile() {
 	local makeopts
 	use gtk2 && makeopts="GTK2=1"
 	#use debug && makeopts="${makeopts} DEBUG=1"
-	
+
 	make -C ../../scintilla/gtk ${makeopts}  || die "prep make failed"
 	emake ${makeopts} || die "make failed"
 }
@@ -51,13 +51,13 @@ src_install () {
 	dodir /usr/share
 	dodir /usr/share/pixmaps
 	dodir /usr/share/applications
-	
+
 	make prefix=${D}/usr install || die
-	
+
 	# we have to keep this because otherwise it'll break upgrading
 	mv ${D}/usr/bin/SciTE ${D}/usr/bin/scite
 	dosym /usr/bin/scite /usr/bin/SciTE
-	
+
 	doman ../doc/scite.1
 	dodoc ../License.txt ../README
 

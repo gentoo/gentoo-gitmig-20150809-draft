@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gtk/xemacs-gtk-21.4.8-r3.ebuild,v 1.12 2003/02/13 07:02:15 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs-gtk/xemacs-gtk-21.4.8-r3.ebuild,v 1.13 2003/09/05 23:05:05 msterret Exp $
 
 IUSE="gpm postgres xface tiff gtk jpeg mule nas esd X png gnome"
 
@@ -49,7 +49,7 @@ RDEPEND="virtual/glibc
 
 DEPEND="${RDEPEND}
 	>=sys-libs/ncurses-5.2"
-	
+
 PROVIDE="virtual/xemacs"
 
 SLOT="0"
@@ -68,28 +68,28 @@ src_compile() {
 
 	if use X;
 	then
-		myconf="${myconf} 
+		myconf="${myconf}
 			--with-x
 			--with-gtk
-			--with-xpm 
-			--with-dragndrop 
+			--with-xpm
+			--with-dragndrop
 			--with-gif=no"
 
 		use gnome && myconf="${myconf} --with-gnome" ||
 			myconf="${myconf} --without-gnome"
-		use tiff && myconf="${myconf} --with-tiff" || 
+		use tiff && myconf="${myconf} --with-tiff" ||
 			myconf="${myconf} --without-tiff"
-		use png && mconf="${myconf} --with-png" || 
+		use png && mconf="${myconf} --with-png" ||
 			myconf="${myconf} --without-png"
 		use jpeg && myconf="${myconf} --with-jpeg" ||
 			myconf="${myconf} --without-jpeg"
 		use xface && myconf="${myconf} --with-xface" ||
 			myconf="${myconf} --without-xface"
 	else
-		myconf="${myconf} 
-			--without-x 
-			--without-xpm 
-			--without-dragndrop 
+		myconf="${myconf}
+			--without-x
+			--without-xpm
+			--without-dragndrop
 			--with-gif=no"
 	fi
 
@@ -99,7 +99,7 @@ src_compile() {
 		myconf="${myconf} --without-postgresql"
 	use mule && myconf="${myconf} --with-mule" ||
 		myconf="${myconf} --without-mule"
-	
+
 	local soundconf="native"
 
 	use nas	&& soundconf="${soundconf},nas"
@@ -120,25 +120,25 @@ src_compile() {
 	make || die
 }
 
-src_install() {                               
+src_install() {
 	make prefix=${D}/usr \
 		mandir=${D}/usr/share/man/man1 \
 		infodir=${D}/usr/share/info \
 		install gzip-el || die
-	
+
 	# install base packages
 	dodir /usr/lib/xemacs/xemacs-packages/
 	cd ${D}/usr/lib/xemacs/xemacs-packages/
 	unpack efs-${EFS}-pkg.tar.gz
 	unpack xemacs-base-${BASE}-pkg.tar.gz
-	# (optionally) install mule base package 
+	# (optionally) install mule base package
 	if use mule;
 	then
 		dodir /usr/lib/xemacs/mule-packages
 		cd ${D}/usr/lib/xemacs/mule-packages/
 		unpack mule-base-${MULE}-pkg.tar.gz
 	fi
-	
+
 	# remove extraneous files
 	cd ${D}/usr/share/info
 	rm -f dir info.info texinfo* termcap*

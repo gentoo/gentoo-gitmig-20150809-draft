@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.16-r1.ebuild,v 1.7 2003/06/07 01:24:29 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.16-r1.ebuild,v 1.8 2003/09/05 23:05:05 msterret Exp $
 
 IUSE="X gpm truetype"
 
@@ -38,7 +38,7 @@ src_compile() {
 			-e 's/#MOUSELIB/MOUSELIB/' \
 			-e 's/#GPMMOUSEO/GPMMOUSEO/' \
 			-e 's/#OBJGPMMOUSEO/OBJGPMMOUSEO/' \
-			Makefile.orig > Makefile 
+			Makefile.orig > Makefile
 		cd ${S}
 	fi
 
@@ -81,7 +81,7 @@ src_install () {
 
 	insinto /etc
 	doins lib/jed.conf
-	
+
 	# replace IDE mode with EMACS mode
 	sed -i -e 's/\(_Jed_Default_Emulation = \).*/\1"emacs";/' ${D}/etc/jed.conf || die "patching jed.conf failed"
 

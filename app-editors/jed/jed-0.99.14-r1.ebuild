@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.14-r1.ebuild,v 1.10 2003/02/13 06:41:49 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jed/jed-0.99.14-r1.ebuild,v 1.11 2003/09/05 23:05:05 msterret Exp $
 
 IUSE="X gpm"
 
@@ -36,7 +36,7 @@ src_compile() {
 			-e 's/#MOUSELIB/MOUSELIB/' \
 			-e 's/#GPMMOUSEO/GPMMOUSEO/' \
 			-e 's/#OBJGPMMOUSEO/OBJGPMMOUSEO/' \
-			Makefile.orig > Makefile 
+			Makefile.orig > Makefile
 		cd ${S}
 	fi
 

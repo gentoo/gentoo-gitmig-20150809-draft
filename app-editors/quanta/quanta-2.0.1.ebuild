@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/quanta/quanta-2.0.1.ebuild,v 1.18 2003/06/25 22:41:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/quanta/quanta-2.0.1.ebuild,v 1.19 2003/09/05 23:05:05 msterret Exp $
 
 inherit kde-base
 
@@ -23,7 +23,7 @@ RDEPEND=""
 
 src_install() {
 	kde_src_install
-	
+
 	dodir ${PREFIX}/share/apps/quanta/doc/
 	for x in css html javascript php ; do
 		cp -a ${WORKDIR}/${x}/*.docrc ${WORKDIR}/${x}/${x} ${D}/${PREFIX}/share/apps/quanta/doc/

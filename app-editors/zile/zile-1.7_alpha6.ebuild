@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-1.7_alpha6.ebuild,v 1.4 2003/06/29 18:24:09 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/zile/zile-1.7_alpha6.ebuild,v 1.5 2003/09/05 23:05:05 msterret Exp $
 
 DESCRIPTION="tiny emacs clone"
 HOMEPAGE="http://zile.sourceforge.net/"
@@ -31,6 +31,6 @@ src_install() {
 		RECOVER="-DEXRECOVER=\\\"/var/lib/exrecover\\\" \
 			-DEXPRESERVE=\\\"/var/lib/expreserve\\\"" \
 		install || die
-	
+
 	dodoc COPYRIGHT CREDITS HISTORY KNOWNBUGS NEWS README* TODO LICENSE
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/teco/teco-1.00-r1.ebuild,v 1.3 2003/07/07 16:33:08 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/teco/teco-1.00-r1.ebuild,v 1.4 2003/09/05 23:05:05 msterret Exp $
 
 DESCRIPTION="Classic TECO editor, Predecessor to EMACS."
 HOMEPAGE="http://www.ibiblio.org/pub/linux/apps/editors/tty/"
@@ -20,7 +20,7 @@ RDEPEND="virtual/glibc
 	sys-libs/libtermcap-compat"
 
 inherit ccc
-	
+
 S=${WORKDIR}
 
 src_unpack() {
@@ -28,11 +28,11 @@ src_unpack() {
 }
 
 src_compile() {
-	sed -i 's/CFLAGS = -O//' Makefile 
+	sed -i 's/CFLAGS = -O//' Makefile
 	is-ccc && replace-cc-hardcode
-	
+
 	emake || die "compilation failed"
-	
+
 	echo
 	size te
 	echo
@@ -40,7 +40,7 @@ src_compile() {
 
 src_install() {
 	dobin te
-	dodoc sample.tecorc sample.tecorc2 READ.ME MANIFEST 
+	dodoc sample.tecorc sample.tecorc2 READ.ME MANIFEST
 	use doc && dodoc ${DISTDIR}/{tecolore.txt,tech.txt,teco.doc,tecoprog.doc}
 	doman te.1
 }

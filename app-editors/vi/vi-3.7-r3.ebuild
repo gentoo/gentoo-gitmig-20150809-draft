@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vi/vi-3.7-r3.ebuild,v 1.10 2003/08/13 07:20:22 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vi/vi-3.7-r3.ebuild,v 1.11 2003/09/05 23:05:05 msterret Exp $
 
 IUSE=""
 
@@ -24,7 +24,7 @@ src_compile() {
 
 	# Do not use TERMLIB=ncurses, as it causes vi
 	# to segfault with TERM=linux.
-    # 
+	#
 	# WARN is set in the environment in /sbin/functions.sh
 	# (unfortunately generic variable name).  Need to reset on the
 	# make command-line to keep from breaking the build.
@@ -48,7 +48,7 @@ src_install() {
 		RECOVER="-DEXRECOVER=\\\"/var/lib/exrecover\\\" \
 		         -DEXPRESERVE=\\\"/var/lib/expreserve\\\"" \
 		install || die
-	
+
 	dodoc Changes LICENSE README TODO
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-0.9.6-r1.ebuild,v 1.11 2003/07/01 21:47:40 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-0.9.6-r1.ebuild,v 1.12 2003/09/05 23:05:05 msterret Exp $
 
 IUSE="nls"
 
@@ -32,7 +32,7 @@ src_compile() {
 	./configure --host=${CHOST} \
 		    --prefix=/usr \
 		    ${myconf} || die
-	
+
 	emake || die
 }
 

@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.5.1.ebuild,v 1.2 2003/06/29 18:24:09 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/scite/scite-1.5.1.ebuild,v 1.3 2003/09/05 23:05:05 msterret Exp $
 
 S=${WORKDIR}/$PN/gtk
 MY_PV=151
 DESCRIPTION="A very powerful editor for programmers"
-SRC_URI="http://www.scintilla.org/${PN}${MY_PV}.tgz" 
+SRC_URI="http://www.scintilla.org/${PN}${MY_PV}.tgz"
 HOMEPAGE="http://www.scintilla.org"
 
 DEPEND="virtual/glibc

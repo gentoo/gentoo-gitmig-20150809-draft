@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/kvim-6.1.141.ebuild,v 1.11 2003/07/02 16:16:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/kvim-6.1.141.ebuild,v 1.12 2003/09/05 23:05:05 msterret Exp $
 
 IUSE="python gpm nls ruby perl"
 
@@ -21,7 +21,7 @@ newdepend "~app-editors/vim-core-6.1
 	perl?   ( dev-lang/perl )
 	python? ( dev-lang/python )
 	ruby?   ( >=dev-lang/ruby-1.6.4 )"
-				
+
 src_compile() {
 	use nls    && myconf="--enable-multibyte" || myconf="--disable-nls"
 	use perl   && myconf="$myconf --enable-perlinterp"
@@ -33,7 +33,7 @@ src_compile() {
 	kde_src_compile myconf configure
 	cd ${S}
 	# emake does not work
-	make || die 
+	make || die
 }
 
 src_install() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xvile/xvile-9.3h.ebuild,v 1.4 2003/03/11 21:11:44 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xvile/xvile-9.3h.ebuild,v 1.5 2003/09/05 23:05:05 msterret Exp $
 
 IUSE="perl"
 
@@ -53,7 +53,7 @@ src_compile() {
 }
 
 src_install () {
-    dobin xvile
+	dobin xvile
 	make DESTDIR=${D} install || die
 	dodoc CHANGES* COPYING MANIFEST INSTALL README* doc/*
 }

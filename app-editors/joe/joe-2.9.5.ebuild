@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-2.9.5.ebuild,v 1.11 2003/02/10 11:09:16 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/joe/joe-2.9.5.ebuild,v 1.12 2003/09/05 23:05:05 msterret Exp $
 
 IUSE=""
 
@@ -17,13 +17,13 @@ DEPEND=">=sys-libs/ncurses-5.2-r2"
 
 PROVIDE="virtual/editor"
 
-src_compile() {													 
+src_compile() {
 	cp Makefile Makefile.orig
 	sed -e "s:-O2:${CFLAGS}:" Makefile.orig > Makefile
 	make joe termidx || die
 }
 
-src_install() {															
+src_install() {
 	into /usr
 	dobin joe
 	doman joe.1

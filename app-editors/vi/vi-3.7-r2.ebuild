@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vi/vi-3.7-r2.ebuild,v 1.7 2003/02/13 06:59:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vi/vi-3.7-r2.ebuild,v 1.8 2003/09/05 23:05:05 msterret Exp $
 
 MY_P=ex-020403
 S=${WORKDIR}/${MY_P}
@@ -34,7 +34,7 @@ src_install() {
 		PRESERVEDIR=${D}/var/preserve \
 		TERMLIB=termlib \
 		install || die
-	
+
 	dodoc Changes LICENSE README TODO
 }
 

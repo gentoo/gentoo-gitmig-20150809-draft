@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/vile-9.2z.ebuild,v 1.7 2003/08/02 16:56:23 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vile/vile-9.2z.ebuild,v 1.8 2003/09/05 23:05:05 msterret Exp $
 
 IUSE="perl"
 
@@ -25,14 +25,14 @@ SRC_URI="ftp://ftp.phred.org/pub/vile/vile-9.2.tgz
 	ftp://ftp.phred.org/pub/vile/patches/vile-9.2p.patch.gz
 	ftp://ftp.phred.org/pub/vile/patches/vile-9.2q.patch.gz
 	ftp://ftp.phred.org/pub/vile/patches/vile-9.2r.patch.gz
-        ftp://ftp.phred.org/pub/vile/patches/vile-9.2s.patch.gz 
-        ftp://ftp.phred.org/pub/vile/patches/vile-9.2t.patch.gz 
-        ftp://ftp.phred.org/pub/vile/patches/vile-9.2u.patch.gz 
-        ftp://ftp.phred.org/pub/vile/patches/vile-9.2v.patch.gz 
-        ftp://ftp.phred.org/pub/vile/patches/vile-9.2w.patch.gz 
-        ftp://ftp.phred.org/pub/vile/patches/vile-9.2x.patch.gz 
-        ftp://ftp.phred.org/pub/vile/patches/vile-9.2y.patch.gz 
-        ftp://ftp.phred.org/pub/vile/patches/vile-9.2z.patch.gz" 
+	ftp://ftp.phred.org/pub/vile/patches/vile-9.2s.patch.gz
+	ftp://ftp.phred.org/pub/vile/patches/vile-9.2t.patch.gz
+	ftp://ftp.phred.org/pub/vile/patches/vile-9.2u.patch.gz
+	ftp://ftp.phred.org/pub/vile/patches/vile-9.2v.patch.gz
+	ftp://ftp.phred.org/pub/vile/patches/vile-9.2w.patch.gz
+	ftp://ftp.phred.org/pub/vile/patches/vile-9.2x.patch.gz
+	ftp://ftp.phred.org/pub/vile/patches/vile-9.2y.patch.gz
+	ftp://ftp.phred.org/pub/vile/patches/vile-9.2z.patch.gz"
 
 HOMEPAGE="http://www.clark.net/pub/dickey/vile/vile.html"
 
@@ -40,7 +40,7 @@ DEPEND="${RDEPEND}
 	sys-devel/flex"
 
 RDEPEND=">=sys-libs/ncurses-5.2
- 	perl? ( dev-lang/perl )"
+	perl? ( dev-lang/perl )"
 
 PROVIDE="virtual/editor"
 

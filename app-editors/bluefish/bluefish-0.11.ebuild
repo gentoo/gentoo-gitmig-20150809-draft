@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-0.11.ebuild,v 1.1 2003/08/05 05:16:55 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/bluefish-0.11.ebuild,v 1.2 2003/09/05 23:05:05 msterret Exp $
 
 IUSE="nls spell"
 
@@ -45,5 +45,5 @@ src_install() {
 		iconpath=${D}/usr/share/pixmaps \
 		gnome2menupath=${D}/usr/share/applications \
 		gnome1menupath=${D}/usr/share/gnome/apps \
-		|| die "make install failed" 
+		|| die "make install failed"
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/kvim-6.2.14.ebuild,v 1.1 2003/08/13 14:48:01 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kvim/kvim-6.2.14.ebuild,v 1.2 2003/09/05 23:05:05 msterret Exp $
 
 IUSE="python gpm nls ruby perl"
 
@@ -39,7 +39,7 @@ src_compile() {
 		&& myconf="${myconf} --with-tlib=ncurses" \
 		|| myconf="${myconf} --with-tlib=termcap"
 
-    # Let kde.eclass handle the configuration
+	# Let kde.eclass handle the configuration
 	kde_src_compile myconf configure
 	make || die  # emake does not work
 }

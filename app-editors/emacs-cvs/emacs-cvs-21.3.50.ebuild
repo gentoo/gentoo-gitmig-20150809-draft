@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-21.3.50.ebuild,v 1.12 2003/06/27 20:10:52 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/emacs-cvs-21.3.50.ebuild,v 1.13 2003/09/05 23:05:05 msterret Exp $
 
 ECVS_SERVER="subversions.gnu.org:/cvsroot/emacs"
 ECVS_MODULE="emacs"
@@ -9,7 +9,7 @@ ECVS_CVS_OPTIONS="-dP"
 
 inherit cvs
 
-IUSE="X nls gtk gtk2 Xaw3d gnome" 
+IUSE="X nls gtk gtk2 Xaw3d gnome"
 
 S=${WORKDIR}/${ECVS_MODULE}
 DESCRIPTION="Emacs is the extensible, customizable, self-documenting real-time display editor."
@@ -50,22 +50,22 @@ src_compile() {
 	use nls || myconf="${myconf} --disable-nls"
 
 	if use X ;
-	then 
-		myconf="${myconf} 
-			--with-x 
-			--with-xpm 
-			--with-jpeg 
-			--with-tiff 
-			--with-gif 
+	then
+		myconf="${myconf}
+			--with-x
+			--with-xpm
+			--with-jpeg
+			--with-tiff
+			--with-gif
 			--with-png"
 		if use gtk || use gtk2
-		then 
-			myconf="${myconf} --with-x-toolkit=gtk 
+		then
+			myconf="${myconf} --with-x-toolkit=gtk
 				--with-gtk
 				--with-toolkit-scroll-bars"
 		elif use Xaw3d
-		then 
-			myconf="${myconf} --with-x-toolkit=athena 
+		then
+			myconf="${myconf} --with-x-toolkit=athena
 				--with-toolkit-scroll-bars"
 		fi
 	else
