@@ -218,3 +218,4 @@ move sys-apps/acpid sys-power/acpid
 move sys-apps/mtx sys-block/mtx
 move net-www/netscape-communicator www-client/netscape-communicator
 move net-www/netscape-navigator www-client/netscape-navigator
+move net-www/skipstone www-client/skipstone
