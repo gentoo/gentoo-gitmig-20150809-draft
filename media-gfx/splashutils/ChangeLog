@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/splashutils
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.10 2004/10/20 10:28:00 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/splashutils/ChangeLog,v 1.11 2004/11/12 21:33:31 spock Exp $
+
+*splashutils-0.9_rc1 (12 Nov 2004)
+
+  12 Nov 2004; Michal Januszewski <spock@gentoo.org>
+  +splashutils-0.9_rc1.ebuild:
+  A new bugfix release. Closes #68853 and #70029. Fixes some theme issues
+  (wrong images for 8bpp, wrong box coordinates for the gentoo theme).
 
   20 Oct 2004; Michal Januszewski <spock@gentoo.org>
   splashutils-0.9_pre10.ebuild:
