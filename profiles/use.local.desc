@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.216 2004/01/21 23:02:15 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.217 2004/01/22 22:23:52 mattam Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -76,6 +76,8 @@ dev-libs/gmetadom:ocaml - adds support/bindings for the Ocaml
 dev-libs/uclibc:etdyn - enables etdyn support for PaX Address Space Layout Randomization
 dev-lisp/bigloo-lib:expat - enable expat support
 dev-lisp/bigloo-lib:ipcs - enable ipcs support
+dev-ml/lablgtk:svg - Enable librsvg bindings compilation.
+dev-ml/lablgtk:glade - Enable libglade bindings compilation.
 dev-php/PEAR-HTML_Template_Flexy:javascript - Use the PEAR-HTML_Javascript package
 dev-php/PEAR-Log:pear-db - Use the PEAR-DB package
 dev-python/anygui:wxwin - enable wxwin support
