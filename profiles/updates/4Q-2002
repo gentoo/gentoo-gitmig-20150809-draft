@@ -1,2 +1,3 @@
 move dev-util/usermode sys-apps/usermode-utilities
 move x11-themes/sylpheed-theme x11-themes/sylpheed-iconset
+move net-misc/atftp net-ftp/atftp
