@@ -1,6 +1,12 @@
 # ChangeLog for app-editors/bluefish
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.1 2002/02/01 21:53:00 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/bluefish/ChangeLog,v 1.2 2002/03/12 13:39:26 seemant Exp $
+
+*bluefish-0.7-r1 (12 Mar 2002)
+
+  12 Mar 2002; Seemant Kulleen <seemant@gentoo.org> ChangeLog :
+
+  Updated the copyright info, and added USE dependent nls compilation.
 
 *bluefish-0.7 (1 Feb 2002)
 
