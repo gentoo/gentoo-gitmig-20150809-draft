@@ -1,18 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 23096ccaaad2d583e754f36135e64f5a mercury-bin-1709_beta7-r1.ebuild 1602
 MD5 db64959ca5ce9c020a13dcd2b9ab5970 mercury-bin-1709_rc1.ebuild 1570
 MD5 9b1cab5624d2988449e5056c4281cb8e ChangeLog 921
 MD5 16021df92c2051cb101ec0833e9cc116 metadata.xml 634
-MD5 a93a266db20ac2760e83dd97fd95cd05 files/digest-mercury-bin-1709_beta7-r1 57
 MD5 037a6938a09ec22db8941a747726772d files/icon32.gif 1262
 MD5 63491834fd49c7eb2696650ee9f2d4f3 files/mercury.sh 242
 MD5 1060171931d5b6a95e652650f4e2507e files/digest-mercury-bin-1709_rc1 58
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCOc9m/rLF9B432nYRAh5CAJ4vCuJn6rS322ZI8mXlSYBdOr4AVQCgoPzV
-/KBxzMmWlTqSRtpiYjzF+7Q=
-=hLlp
+iD8DBQFCOc/q/rLF9B432nYRAgWrAJ0ayl+h/1ET+n5GGVfO0DLOVieLxwCcCqDL
+zdHUIX0PCSLe8T7zDLwM2Hk=
+=auW8
 -----END PGP SIGNATURE-----
