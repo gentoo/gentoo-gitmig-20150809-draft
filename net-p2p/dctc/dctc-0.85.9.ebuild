@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dctc/dctc-0.85.9.ebuild,v 1.1 2004/01/31 23:14:44 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dctc/dctc-0.85.9.ebuild,v 1.2 2004/02/02 00:10:43 spock Exp $
 
 DESCRIPTION="Direct Connect Text Client, almost famous file share program"
 HOMEPAGE="http://ac2i.homelinux.com/dctc/"
@@ -21,6 +21,8 @@ src_unpack() {
 	if [ "${dbfunc}" != "db_env_create" ] ; then
 		sed -i "s:db_env_create:${dbfunc}:g" configure
 	fi
+
+	epatch ${FILESDIR}/dctc-0.85.6-passive.patch
 }
 
 src_install() {

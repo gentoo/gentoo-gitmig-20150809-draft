@@ -1,6 +1,14 @@
 # ChangeLog for net-p2p/dctc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/dctc/ChangeLog,v 1.22 2004/01/31 23:14:44 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/dctc/ChangeLog,v 1.23 2004/02/02 00:10:43 spock Exp $
+
+*dctc-0.85.4 (02 Feb 2004)
+
+  02 Feb 2004; Michal Januszewski <spock@gentoo.org> dctc-0.85.4.ebuild,
+  dctc-0.85.6.ebuild, dctc-0.85.8.ebuild, dctc-0.85.9.ebuild,
+  files/dctc-0.85.6-passive.patch:
+  Added a patch that makes downloading in passive mode possible. Fixed headers
+  in the ebuilds.
 
 *dctc-0.85.9 (01 Feb 2004)
 
