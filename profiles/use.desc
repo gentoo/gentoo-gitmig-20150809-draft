@@ -53,7 +53,6 @@ gb - Adds support for Gnome Basic to gnumeric
 gd - Adds support for media-libs/gd (to generate graphics on the fly)
 gdbm - Adds support for sys-libs/gdbm (GNU database libraries)
 ggi - Adds support for media-libs/libggi (non-X video api/drivers)
-ggz - Adds support for the Gnu Gaming Zone - http://ggz.sf.net
 gif - Adds GIF image support
 gnome - Adds GNOME support
 gphoto2 - Adds digital camera support
