@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.4.27-r3.ebuild,v 1.1 2004/09/08 20:42:21 scox Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.4.27-r3.ebuild,v 1.2 2005/01/14 03:07:38 tocharian Exp $
 
 IUSE="selinux"
 ETYPE="sources"
