@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.13-r3.ebuild,v 1.1 2003/06/12 21:21:21 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-4.0.13-r3.ebuild,v 1.2 2003/06/12 21:44:47 rac Exp $
 
 #to accomodate -laadeedah releases
 NEWP=${P}
@@ -126,9 +126,6 @@ src_compile() {
 		--with-unix-socket-path=/var/run/mysqld/mysqld.sock \
 		--with-embedded-server \
 		${myconf} || die "bad ./configure"
-
-	# this could well cause problems - trying to update libmysql_r Makefile
-	autoreconf
 
 	emake || die "compile problem"
 }
