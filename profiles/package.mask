@@ -107,7 +107,7 @@ sys-apps/policycoreutils
 #=dev-java/java-sdk-docs-1.4.2
 
 # <azarah@gentoo.org> (28 July 2003)
-# These are depriciated
+# These are deprecated
 sys-apps/console-tools
 sys-apps/console-data
 
