@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/pxes
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/ChangeLog,v 1.4 2003/10/15 22:13:23 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/ChangeLog,v 1.5 2003/10/18 12:59:07 wolf31o2 Exp $
+
+  18 Oct 2003; Chris Gianelloni <wolf31o2@gentoo.org> pxes-0.6-r4.ebuild:
+  Added HOMEPAGE.  Closing bug #31389.
 
   15 Oct 2003; Chris Gianelloni <wolf31o2@gentoo.org> pxes-0.6.ebuild:
   Removing old version

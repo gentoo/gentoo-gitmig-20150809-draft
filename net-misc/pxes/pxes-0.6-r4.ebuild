@@ -1,9 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/pxes-0.6-r4.ebuild,v 1.4 2003/10/07 10:38:48 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pxes/pxes-0.6-r4.ebuild,v 1.5 2003/10/18 12:59:07 wolf31o2 Exp $
 
 IUSE="ltsp"
 DESCRIPTION="PXES is a package for building thin clients using multiple types of clients"
+HOMEPAGE="http://pxes.sourceforge.net"
 SRC_URI="mirror://sourceforge/pxes/${PN}-base-i586-${PV}-4.tar.gz
 	mirror://sourceforge/pxes/pxesconfig-${PV}-4.tar.gz
 	ltsp? ( mirror://sourceforge/pxes/${PN}-ltsp-${PV}.tar.gz )"
