@@ -1,6 +1,11 @@
 # ChangeLog for app-text/lv
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/lv/ChangeLog,v 1.3 2003/02/12 05:32:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/lv/ChangeLog,v 1.4 2003/05/11 17:46:46 nakano Exp $
+
+*lv-4.49.5 (11 May 2003)
+  11 May 2003; Masatomo Nakano <nakano@gentoo.org> : lv-4.49.5.ebuild, ChangeLog:
+
+  Version bump.
 
 *lv-4.49.4 (10 Dec 2002)
 
