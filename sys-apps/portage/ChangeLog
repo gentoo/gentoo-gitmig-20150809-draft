@@ -1,7 +1,18 @@
 # ChangeLog for sys-apps/portage
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.5 2002/02/05 11:11:11 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/ChangeLog,v 1.6 2002/02/06 13:48:46 gbevin Exp $
 
+*portage-1.8.9_pre4 (6 Feb 2002)
+
+  6 Feb 2002; G.Bevin <gbevin@gentoo.org> portage-1.8.9_pre4.ebuild,
+  files/digest-portage-1.8.9_pre4, files/portage-1.8.9_pre4.tar.bz2 :
+
+  fixed more bugs in the binary compatibility slots, more specifically :
+  - when trying to unmerge all instances of a package than was installed both
+    without the slot functionality and with it, before this ended in an error
+	message and failed to unmerge one of them
+  - virtual packages didn't play nice with binary compatibility
+  
 *portage-1.8.9_pre3 (5 Feb 2002)
 
   5 Feb 2002; G.Bevin <gbevin@gentoo.org> portage-1.8.9_pre3.ebuild,
