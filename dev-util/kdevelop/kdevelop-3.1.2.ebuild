@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.1.2.ebuild,v 1.4 2005/02/24 16:40:42 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.1.2.ebuild,v 1.5 2005/03/20 16:17:29 carlo Exp $
 
 inherit python kde eutils
 
@@ -53,7 +53,7 @@ einfo
 einfo "kde-base/kdebase:			(RECOMMENDED) embed konsole kpart in kdevelop ide"
 einfo "kde-base/kdesdk:				(RECOMMENDED) use kompare widget for showing the output of diff, cvs support"
 einfo "dev-util/kdbg:				(RECOMMENDED) kde frontend to gdb"
-einfo "dev-util/valgind:			(RECOMMENDED) integrates valgrind (memory debugger) commands"
+einfo "dev-util/valgrind:			(RECOMMENDED) integrates valgrind (memory debugger) commands"
 einfo "dev-util/cvs dev-util/subversion:	provide frontend for cvs version control system"
 einfo ">=dev-util/ctags-5:			faster and more powerful code browsing logic"
 einfo "app-doc/doxygen:				generate KDE-style documentation for your project"

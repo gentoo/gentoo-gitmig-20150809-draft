@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.2.0.ebuild,v 1.1 2005/03/14 21:56:38 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/kdevelop-3.2.0.ebuild,v 1.2 2005/03/20 16:17:29 carlo Exp $
 
 inherit kde
 
@@ -47,7 +47,7 @@ pkg_postinst() {
 	einfo "dev-util/cvs:                   (RECOMMENDED) support cvs for version control"
 	einfo "kde-base/kdesdk:                (RECOMMENDED) use kompare to show differences between files and cervisia for cvs"
 	einfo "dev-util/kdbg:                  (RECOMMENDED) kde frontend to gdb"
-	einfo "dev-util/valgind:               (RECOMMENDED) integrates valgrind (memory debugger) commands"
+	einfo "dev-util/valgrind:              (RECOMMENDED) integrates valgrind (memory debugger) commands"
 	einfo "dev-java/ant:                   support projects using the ant build tool"
 	einfo "dev-util/ctags:                 faster and more powerful code browsing logic"
 	einfo "app-doc/doxygen:                generate KDE-style documentation for your project"
