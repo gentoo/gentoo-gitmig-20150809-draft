@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/thcrut
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thcrut/ChangeLog,v 1.4 2004/06/24 22:21:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/thcrut/ChangeLog,v 1.5 2004/07/09 14:21:16 eldad Exp $
+
+  09 Jul 2004; Eldad Zack <eldad@gentoo.org> +metadata.xml,
+  thcrut-1.2.5.ebuild:
+  Tidy, added missing IUSE, added metadata.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> thcrut-1.2.5.ebuild:
   Add inherit eutils
