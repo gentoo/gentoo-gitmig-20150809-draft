@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.103 2004/11/16 05:11:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.104 2004/12/29 01:49:29 vapier Exp $
+
+*openssh-3.9_p1-r1 (28 Dec 2004)
+
+  28 Dec 2004; Mike Frysinger <vapier@gentoo.org>
+  files/openssh-3.9_p1-chroot.patch, +openssh-3.9_p1-r1.ebuild, 
+  +files/openssh-3.9_p1-infoleak.patch:
+  Add infoleak fix #59361 and allow the chroot patch to support PAM auth #72987.
 
   16 Nov 2004; Mike Frysinger <vapier@gentoo.org> openssh-3.9_p1.ebuild:
   If USE=pam, then disable PasswordAuthentication since PAM overrides it #71233.

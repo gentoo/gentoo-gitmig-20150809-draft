@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.9_p1.ebuild,v 1.9 2004/12/29 01:49:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.9_p1-r1.ebuild,v 1.1 2004/12/29 01:49:29 vapier Exp $
 
 inherit eutils flag-o-matic ccc gnuconfig
 
@@ -42,10 +42,12 @@ DEPEND="${RDEPEND}
 PROVIDE="virtual/ssh"
 
 src_unpack() {
-	unpack ${PARCH}.tar.gz ; cd ${S}
+	unpack ${PARCH}.tar.gz
+	cd ${S}
 
 	epatch ${FILESDIR}/${P}-largekey.patch.bz2
 	epatch ${FILESDIR}/${P}-fix_suid.patch.bz2
+	epatch ${FILESDIR}/${P}-infoleak.patch #59361
 
 	use sftplogging && epatch ${FILESDIR}/${P}-sftplogging-1.2-gentoo.patch.bz2
 	use alpha && epatch ${FILESDIR}/${PN}-3.5_p1-gentoo-sshd-gcc3.patch.bz2
@@ -55,7 +57,7 @@ src_unpack() {
 	use selinux && epatch ${FILESDIR}/${SELINUX_PATCH}.bz2
 	use smartcard && epatch ${FILESDIR}/${P}-opensc.patch.bz2
 
-	autoconf || die
+	autoconf || die "autoconf failed"
 }
 
 src_compile() {
