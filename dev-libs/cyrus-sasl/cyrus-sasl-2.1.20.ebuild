@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.20.ebuild,v 1.8 2004/12/21 17:13:30 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.20.ebuild,v 1.9 2005/01/24 22:36:05 langthang Exp $
 
 inherit eutils gnuconfig flag-o-matic java-pkg
 
@@ -151,7 +151,7 @@ src_compile() {
 
 	# Parallel build doesn't work.
 	# Parallel build doesn't like distcc?
-	if has distcc $FEATURES; then
+	if has distcc $FEATURES || has ccache $FEATURES; then
 		einfo "You have \"distcc\" enabled"
 		einfo "build with MAKEOPTS=-j1"
 		emake -j1 || die "compile problem"

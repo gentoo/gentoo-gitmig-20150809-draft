@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.20-r1.ebuild,v 1.2 2004/12/23 20:23:36 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cyrus-sasl/cyrus-sasl-2.1.20-r1.ebuild,v 1.3 2005/01/24 22:36:05 langthang Exp $
 
 inherit eutils gnuconfig flag-o-matic java-pkg
 
@@ -35,6 +35,7 @@ DEPEND="${RDEPEND}
 	sys-devel/libtool"
 
 pkg_setup() {
+
 	if use gdbm && use berkdb; then
 		echo
 		ewarn "You have both \"gdbm\" and \"berkdb\" in your USE flags."
@@ -150,10 +151,15 @@ src_compile() {
 		--with-dbpath=/etc/sasl2/sasldb2 \
 		${myconf} || die "econf failed"
 
+	# Fix PEBCAK in make.conf. Bug #75538.
+	CFLAGS="$(echo ${CFLAGS} | xargs)"
+	CXXFLAGS="$(echo ${CXXFLAGS} | xargs)"
+	LDFLAGS="$(echo ${LDFLAGS} | xargs)"
+
 	# Parallel build doesn't work.
-	# Parallel build doesn't like distcc?
-	if has distcc $FEATURES; then
-		einfo "You have \"distcc\" enabled"
+	# Parallel build doesn't like distcc/ccache? Bug #78643.
+	if has distcc $FEATURES || has ccache $FEATURES; then
+		einfo "You have \"distcc\" or \"ccache\" enabled"
 		einfo "build with MAKEOPTS=-j1"
 		emake -j1 || die "compile problem"
 	else
