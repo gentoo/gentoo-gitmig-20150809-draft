@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.20 2004/06/28 02:38:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.21 2004/07/19 22:19:21 vapier Exp $
 #
 # Author: vapier@gentoo.org
 
@@ -9,10 +9,18 @@ INHERITED="$INHERITED $ECLASS"
 
 EXPORT_FUNCTIONS pkg_setup src_unpack src_compile src_install pkg_postinst
 
+USE_CVS="no"
+if [ "${PV:0-5}" == ".9999" ] ; then
+	USE_CVS="yes"
+	inherit cvs
+fi
+
 DESCRIPTION="A DR17 production"
 HOMEPAGE="http://www.enlightenment.org/"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
-#	http://wh0rd.de/gentoo/distfiles/${P}.tar.bz2"
+if [ "${USE_CVS}" == "no" ] ; then
+	SRC_URI="mirror://gentoo/${P}.tar.bz2"
+	#	http://wh0rd.de/gentoo/distfiles/${P}.tar.bz2"
+fi
 
 LICENSE="BSD"
 SLOT="0"
@@ -52,7 +60,7 @@ gettext_modify() {
 }
 
 enlightenment_src_unpack() {
-	unpack ${A}
+	[ "${USE_CVS}" == "no" ] && unpack ${A}
 	gettext_modify
 }
 
