@@ -1,6 +1,11 @@
 # ChangeLog for media-tv/tvtime
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/ChangeLog,v 1.7 2003/11/09 08:01:37 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/tvtime/ChangeLog,v 1.8 2003/11/14 06:07:42 max Exp $
+
+*tvtime-0.9.11 (13 Nov 2003)
+
+  13 Nov 2003; <max@gentoo.org> tvtime-0.9.11.ebuild:
+  Bump to version 0.9.11, not yet released.
 
   09 Nov 2003; <max@gentoo.org> tvtime-0.9.10-r1.ebuild:
   Force libxml2 DEPEND to 2.5.11. Fixes bug 32432.
