@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/treecc/treecc-0.3.2.ebuild,v 1.2 2004/08/10 11:09:16 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/treecc/treecc-0.3.2.ebuild,v 1.3 2004/08/10 11:11:46 scandium Exp $
 
 DESCRIPTION="compiler-compiler tool for aspect-oriented programming"
 HOMEPAGE="http://www.southern-storm.com.au/treecc.html"
@@ -16,7 +16,7 @@ DEPEND=""
 src_install() {
 	einstall || die
 
-	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README
+	dodoc AUTHORS ChangeLog INSTALL NEWS README
 	dodoc doc/*.txt
 	dohtml doc/*.html
 }
