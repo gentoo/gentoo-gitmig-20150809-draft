@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/mm-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.149 2004/04/17 19:03:26 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/ChangeLog,v 1.150 2004/04/19 21:21:15 lostlogic Exp $
+
+*mm-sources-2.6.6_rc1-r1 (19 Apr 2004)
+
+  19 Apr 2004; Brandon Low <lostlogic@gentoo.org>
+  -files/2.6.4-r1-debug-spinlock-fix.diff, -files/2.6.4-r1-tty-fix.diff,
+  -files/2.6.4-r2-kbuild-fix.diff, -files/devfs-boot-hang-fix.patch,
+  -files/mm-sources-2.6.3-r4-symbol-fixes.diff,
+  -mm-sources-2.6.5_rc1-r1.ebuild, -mm-sources-2.6.5_rc2-r2.ebuild,
+  -mm-sources-2.6.5_rc2-r3.ebuild, -mm-sources-2.6.5_rc2-r5.ebuild,
+  -mm-sources-2.6.5_rc3-r1.ebuild, -mm-sources-2.6.5_rc3-r4.ebuild,
+  +mm-sources-2.6.6_rc1-r1.ebuild:
+  Cleanup a lot, and bump
 
   17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org>
   mm-sources-2.6.5_rc1-r1.ebuild:
