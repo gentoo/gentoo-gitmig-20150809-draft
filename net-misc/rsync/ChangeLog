@@ -1,7 +1,10 @@
 # ChangeLog for net-misc/rsync
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.22 2003/02/25 15:32:43 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.23 2003/03/06 21:29:19 lu_zero Exp $
 
+  06 Mar 2003; Luca Barbato <lu_zero@gentoo.org> :
+  force -lpthread link on gcc-2.95.x, solves bug #16921
+  
   24 Feb 2003; Luca Barbato <lu_zero@gentoo.org> :
   Added the popt in DEPEND
 
