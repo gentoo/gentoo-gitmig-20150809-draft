@@ -2,8 +2,8 @@ MD5 18de310292b70deeb144e5b3328f858b files/cl-statistics.asd 1089
 MD5 a9cba10a5762d6f7da111f3ec126c9ac files/digest-cl-statistics-1.0.0.1 77
 MD5 f1c22fb3374ceeaddeedadf60cc0829c files/digest-cl-statistics-1.0.0.2 151
 MD5 f1c22fb3374ceeaddeedadf60cc0829c files/digest-cl-statistics-1.0.0.2-r1 151
-MD5 44531bc3a4857c6d99ed163bafe323e5 cl-statistics-1.0.0.2.ebuild 1082
-MD5 79fb35c8ab0561f7940d2b3f940db250 cl-statistics-1.0.0.2-r1.ebuild 944
-MD5 e7179b4c698de3d0d5630409d400a504 cl-statistics-1.0.0.1.ebuild 760
 MD5 593c1659168109243b53725a07169d54 ChangeLog 658
+MD5 e7179b4c698de3d0d5630409d400a504 cl-statistics-1.0.0.1.ebuild 760
+MD5 5967d9b790e8ee548464d970f321f4e9 cl-statistics-1.0.0.2.ebuild 1069
 MD5 9b65b0341efc8f4b29498aad23315229 metadata.xml 164
+MD5 3a0a950723f5988ce8c1f5086fb1cd24 cl-statistics-1.0.0.2-r1.ebuild 931
