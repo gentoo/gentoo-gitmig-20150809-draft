@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-sports/torcs/torcs-1.2.2.ebuild,v 1.3 2004/02/27 19:30:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-sports/torcs/torcs-1.2.2.ebuild,v 1.4 2004/02/27 19:30:37 vapier Exp $
 
 inherit games
 
@@ -37,8 +37,6 @@ RDEPEND=">=media-libs/plib-1.6
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
-HOME="${T}"
-
 src_unpack() {
 	unpack ${A}
 	cd ${S}
@@ -50,7 +48,7 @@ src_unpack() {
 
 src_compile() {
 	egamesconf || die
-	emake -j1 || die
+	env HOME="${T}" emake -j1 || die
 }
 
 src_install() {
