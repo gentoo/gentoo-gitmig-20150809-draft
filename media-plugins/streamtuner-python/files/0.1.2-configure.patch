@@ -1,0 +1,20 @@
+diff -Naur streamtuner-python-0.1.2/configure streamtuner-python-0.1.2.new/configure
+--- streamtuner-python-0.1.2/configure	2004-05-24 05:29:15.000000000 -0500
++++ streamtuner-python-0.1.2.new/configure	2004-08-15 23:38:59.615829560 -0500
+@@ -21312,11 +21312,11 @@
+ 
+ 
+ 
+-found=no
+-PYTHON_VERSION=""
+-PYTHON_PREFIX=""
+-EMBEDDED_PYTHON_CFLAGS=""
+-EMBEDDED_PYTHON_LIBS=""
++found=yes
++PYTHON_VERSION="Python 2.3+"
++PYTHON_PREFIX="/usr/bin/python"
++EMBEDDED_PYTHON_CFLAGS="/usr/include/python2.3"
++EMBEDDED_PYTHON_LIBS="/usr/lib/python2.3"
+ 
+ for ac_prog in python python2.3 python2.2 python2.1 python2.0 python1.6 python1.5
+ do

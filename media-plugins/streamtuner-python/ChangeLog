@@ -1,6 +1,11 @@
 # ChangeLog for media-plugins/streamtuner-python
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/streamtuner-python/ChangeLog,v 1.7 2004/07/13 08:42:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/streamtuner-python/ChangeLog,v 1.8 2004/08/16 04:47:51 squinky86 Exp $
+
+  15 Aug 2004; Jon Hood <squinky86@gentoo.org> +files/0.1.2-configure.patch,
+  streamtuner-python-0.1.2.ebuild:
+  Add configure patch from Alexandro Colorado and apply some editing to the
+  ebuild to fix #51832.
 
   13 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   streamtuner-python-0.1.2.ebuild:
