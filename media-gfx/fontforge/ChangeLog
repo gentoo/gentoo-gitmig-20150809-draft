@@ -1,0 +1,12 @@
+# ChangeLog for media-gfx/fontforge
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fontforge/ChangeLog,v 1.1 2004/05/17 17:31:42 usata Exp $
+
+*fontforge-20040509 (18 May 2004)
+
+  18 May 2004; Mamoru KOMACHI <usata@gentoo.org> fontforge-20040509.ebuild:
+  Initial import. Thanks to Maarten Wisse
+  <Maarten.Wisse@urz.uni-heidelberg.de>, Martin Diers <martin@diers.us>,
+  Akos Maroy <darkeye@tyrell.hu> and Stefan Illner <stillner@gmx.de>.
+  Closing bug #46686
+
