@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/mozilla-sunbird-bin-0.2.20040812.ebuild,v 1.4 2005/01/14 15:36:16 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mozilla-sunbird-bin/mozilla-sunbird-bin-0.2.20040812.ebuild,v 1.5 2005/03/23 20:03:48 seemant Exp $
 
 inherit mozilla-launcher
 
@@ -28,7 +28,7 @@ RDEPEND="virtual/x11
 		>=app-emulation/emul-linux-x86-gtklibs-1.0
 	)
 	virtual/x11
-	>=net-www/mozilla-launcher-1.18"
+	>=www-client/mozilla-launcher-1.18"
 
 src_install() {
 	# Install sunbird in /opt
