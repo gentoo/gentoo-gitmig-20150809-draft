@@ -1,6 +1,8 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/tsocks/tsocks-1.8_beta5.ebuild,v 1.5 2004/07/15 03:39:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/tsocks/tsocks-1.8_beta5.ebuild,v 1.6 2005/02/22 23:52:50 eradicator Exp $
+
+inherit multilib
 
 DESCRIPTION="Transparent SOCKS v4 proxying library"
 HOMEPAGE="http://tsocks.sourceforge.net/"
@@ -22,6 +24,7 @@ src_compile() {
 		--prefix=/usr \
 		--with-conf=/etc/socks/tsocks.conf \
 		--mandir=/usr/share/man \
+		--libdir=/$(get_libdir) \
 		|| die
 	emake || die
 }
@@ -33,8 +36,8 @@ src_install() {
 	doins tsocks.conf.*.example
 	dodoc INSTALL
 	# tsocks script is buggy so we need this symlink
-	dodir /usr/lib
-	dosym /lib/libtsocks.so /usr/lib/libtsocks.so
+	dodir /usr/$(get_libdir)
+	dosym /$(get_libdir)/libtsocks.so /usr/$(get_libdir)/libtsocks.so
 }
 
 pkg_postinst() {
