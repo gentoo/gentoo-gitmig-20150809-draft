@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.7 2004/11/20 22:06:45 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r4.ebuild,v 1.8 2004/11/20 22:11:32 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -872,11 +872,15 @@ host_def_setup() {
 				echo "#define i386Drivers i810" >> ${HOSTCONF}
 				# If you want more drivers built with minimal, file a bug
 				# -Donnie Berkholz <spyderous@gentoo.org>
-				# Removed glint, tga, s3, s3virge, rendition, neomagic, i740,
+				# Remove glint, tga, s3, s3virge, rendition, neomagic, i740,
 				# cirrus, tseng, trident, chips, apm, ark, cyrix, siliconmotion
-				echo "#define XF86CardDrivers mga nv sis tdfx savage vmware \
-					GlideDriver i386Drivers ati DevelDrivers via vesa vga \
-					dummy XF86OSCardDrivers XF86ExtraCardDrivers" >> ${HOSTCONF}
+				# mga, nv, sis, tdfx, savage, GlideDriver, i386Drivers
+				# (nsc, i810), ati, DevelDrivers, via
+				# Leave vmware driver for testing minimal setups using VMWare
+				# XF86OSCardDrivers includes v4l and fbdev on linux
+				# DevelDrivers includes imstt and newport on x86
+				echo "#define XF86CardDrivers vmware vesa vga dummy \
+					XF86OSCardDrivers XF86ExtraCardDrivers" >> ${HOSTCONF}
 			fi
 		fi
 
