@@ -1,8 +1,11 @@
 # ChangeLog for app-emacs/wl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/wl/ChangeLog,v 1.8 2003/07/06 22:53:05 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/wl/ChangeLog,v 1.9 2003/07/07 18:27:38 nakano Exp $
 
 *wl-2.10.1 (06 Jul 2003)
+
+  07 Jul 2003; Masatomo Nakano <nakano@gentoo.org> wl-2.10.1.ebuild:
+  Added ssl support.
 
   06 Jul 2003; Masatomo Nakano <nakano@gentoo.org> wl-2.10.1.ebuild:
   Version bumped as unstable.
