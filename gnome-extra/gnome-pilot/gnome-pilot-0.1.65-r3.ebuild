@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pilot/gnome-pilot-0.1.65-r3.ebuild,v 1.1 2002/07/01 23:49:29 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-pilot/gnome-pilot-0.1.65-r3.ebuild,v 1.2 2002/07/16 22:26:35 seemant Exp $
 
 
 S=${WORKDIR}/${P}
@@ -18,6 +18,7 @@ RDEPEND="nls? ( sys-devel/gettext )"
 
 SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86"
 
 src_unpack() {
 
