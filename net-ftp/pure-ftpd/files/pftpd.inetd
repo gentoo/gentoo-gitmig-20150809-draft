@@ -1,6 +1,0 @@
-# ----------------
-# Pure-FTPd Server
-# ----------------
-#ftp		stream	tcp	nowait	root	/usr/sbin/pure-ftpd
-#
-
