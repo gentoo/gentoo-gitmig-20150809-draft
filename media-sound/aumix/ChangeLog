@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/aumix
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/ChangeLog,v 1.31 2004/07/13 20:40:43 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/aumix/ChangeLog,v 1.32 2004/07/22 08:31:24 eradicator Exp $
+
+*aumix-2.8-r2 (22 Jul 2004)
+
+  22 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/aumix-2.8-nohome.patch, +aumix-2.8-r2.ebuild:
+  Fix aumix segfaulting when env(HOME) is not defined. Thanks to Collins Richey
+  <erichey2@comcast.net>. Closes bug #57291
 
   13 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> aumix-2.8-r1.ebuild:
   Stable on alpha.
