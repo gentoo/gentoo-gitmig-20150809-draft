@@ -1,14 +1,14 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/WindowMaker-0.80.0-r1.ebuild,v 1.1 2002/01/30 16:01:16 vitaly Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/WindowMaker/WindowMaker-0.80.0-r1.ebuild,v 1.2 2002/02/09 12:37:47 verwilst Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Window Maker"
 SRC_URI="ftp://ftp.windowmaker.org/pub/source/release/${P}.tar.gz
 	 ftp://ftp.windowmaker.org/pub/source/release/WindowMaker-extra-0.1.tar.bz2"
 HOMEPAGE="http://www.windowmaker.org/"
-
+SLOT="0"
 DEPEND="virtual/glibc virtual/x11
 	>=media-libs/tiff-3.5.5
 	>=media-libs/libpng-1.0.12
@@ -36,6 +36,9 @@ src_compile() {
 		# I'm not testing other wms right now
 		export KDEDIR=/usr/kde/2
 		myconf="$myconf --enable-kde"
+	fi
+	if [ "$WITH_MODELOCK" ] ; then
+                myconf="$myconf --enable-modelock"
 	fi
 	if [ "`use nls`" ] ; then
  		LINGUAS="`ls po/*.po | sed 's:po/\(.*\)\.po$:\1:'`"
