@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/openvrml
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openvrml/ChangeLog,v 1.5 2003/10/18 21:48:05 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openvrml/ChangeLog,v 1.6 2003/10/21 11:42:21 brandy Exp $
+
+  22 Oct 2003; Brandy Westcott brandy@gentoo.org openvrml-0.14.1.ebuild:
+  An OpenVRML overhaul. Optional functionality can now be specified through USE
+  flags; added required dependencies. Closes #31634.
 
 *openvrml-0.14.1 (18 Oct 2003)
 
