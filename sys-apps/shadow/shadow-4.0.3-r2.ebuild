@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r2.ebuild,v 1.4 2002/12/03 20:33:01 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.3-r2.ebuild,v 1.5 2002/12/03 20:36:52 azarah Exp $
 
 IUSE=""
 
@@ -142,21 +142,22 @@ src_install() {
 
 pkg_postinst() {
 	
-	ewarn "Due to a security issue, ${ROOT}etc/pam.d/system-auth "
-	ewarn "is being updated automatically. Your old "
-	ewarn "system-auth will be backed up as:"
-	ewarn "${ROOT}etc/pam.d/system-auth.bak"
-	echo
-
 	local CHECK1="$(md5sum ${ROOT}/etc/pam.d/system-auth | cut -d ' ' -f 1)"
 	local CHECK2="$(md5sum ${ROOT}/etc/pam.d/system-auth.new | cut -d ' ' -f 1)"
 
 	if [ "${CHECK1}" != "${CHECK2}" -a "${FORCE_SYSTEMAUTH_UPDATE}" = "yes" ]
 	then
+		ewarn "Due to a security issue, ${ROOT}etc/pam.d/system-auth "
+		ewarn "is being updated automatically. Your old "
+		ewarn "system-auth will be backed up as:"
+		ewarn "${ROOT}etc/pam.d/system-auth.bak"
+		echo
+		
 		cp -a ${ROOT}/etc/pam.d/system-auth \
 	              ${ROOT}/etc/pam.d/system-auth.bak;
 		mv -f ${ROOT}/etc/pam.d/system-auth.new \
 	              ${ROOT}/etc/pam.d/system-auth
+		rm -f ${ROOT}/etc/pam.d/._cfg????_system-auth
 	else
 		rm -f ${ROOT}/etc/pam.d/system-auth.new
 	fi
