@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.264 2004/03/06 14:33:49 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.265 2004/03/06 15:47:16 liquidx Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -25,6 +25,7 @@ app-misc/workrave:no-experimental - Compile without experimental features
 app-office/gnucash:hbci - Enable HBCI support, for connecting to some internet banks
 app-office/gnucash:ofx - Enable OFX support, for importing OFX data files.
 app-pda/gtkpod:mpeg4 - Enable mpeg4ip support, to read Mpeg4 AAC files
+app-pda/multisync:bluetooth - Enable Bluetooth support with IRMC
 app-pda/multisync:irmc - Adds support for Mobile Client synchronization via IrDa/IrMC/Bluetooth (eg: SonyEricsson T39/T68i)
 app-pda/multisync:opie - Adds support for PDAs based on the OPIE distribution (eg: Zaurus)
 app-pda/synce-kde:avantgo - Adds support for syncing Avantgo accounts.
