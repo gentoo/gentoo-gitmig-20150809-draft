@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.5.ebuild,v 1.1 2003/09/30 03:02:27 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xosd/xosd-2.2.5.ebuild,v 1.2 2003/09/30 03:02:43 vapier Exp $
 
 DESCRIPTION="Library for overlaying text/glyphs in X-Windows X-On-Screen-Display plus binary for sending text from command line"
 HOMEPAGE="http://www.ignavus.net/"
@@ -18,7 +18,6 @@ DEPEND="virtual/x11
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-#	epatch ${FILESDIR}/${PV}-font-align.patch
 	epatch ${FILESDIR}/${PV}-xmms-trackpos.patch
 }
 
