@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-0.9.8.ebuild,v 1.6 2004/03/01 08:47:29 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-0.9.8.ebuild,v 1.7 2004/04/08 08:06:47 eradicator Exp $
 
 DESCRIPTION="Advanced Linux Sound Architecture Utils (alsactl, alsamixer, etc.)"
 HOMEPAGE="http://www.alsa-project.org/"
@@ -13,7 +13,6 @@ KEYWORDS="x86 ppc amd64"
 
 SRC_URI="mirror://alsaproject/utils/${P}.tar.bz2"
 RESTRICT="nomirror"
-S=${WORKDIR}/${P}
 
 src_compile() {
 

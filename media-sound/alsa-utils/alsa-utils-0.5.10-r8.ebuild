@@ -1,10 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-0.5.10-r8.ebuild,v 1.10 2004/03/01 05:37:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-0.5.10-r8.ebuild,v 1.11 2004/04/08 08:06:47 eradicator Exp $
 
-S=${WORKDIR}/${P}
+inherit eutils
+
 DESCRIPTION="Advanced Linux Sound Architecture Utils (alsactl, alsamixer, etc.)"
-SRC_URI="ftp://ftp.alsa-project.org/pub/utils/${P}.tar.bz2"
+SRC_URI="mirror://alsaproject/utils/${P}.tar.bz2"
+RESTRICT="nomirror"
 HOMEPAGE="http://www.alsa-project.org/"
 
 DEPEND=">=sys-libs/ncurses-5.1
@@ -15,19 +17,18 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc"
 
 src_unpack() {
+	unpack ${A}
 
-	unpack ${A} ; cd ${S}
-	patch -p1 < ${FILESDIR}/alsa-utils-0.5.10-aplay-destdir.diff || die
+	cd ${S}
+	epatch ${FILESDIR}/alsa-utils-0.5.10-aplay-destdir.diff
 }
 
 src_compile() {
-
 	econf || die
 	make || die
 }
 
 src_install() {
-
 	make DESTDIR=${D} install || die
 
 	dodoc COPYING ChangeLog README
