@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnomemm/gnomemm-1.2.3-r1.ebuild,v 1.9 2004/01/14 18:32:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnomemm/gnomemm-1.2.3-r1.ebuild,v 1.10 2004/01/29 04:29:50 agriffis Exp $
 
 inherit gcc
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://gtkmm.sourceforge.net/"
 IUSE=""
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="ppc x86 sparc ~alpha hppa amd64"
+KEYWORDS="ppc x86 sparc alpha hppa amd64 ia64"
 
 RDEPEND="=dev-cpp/gtkmm-1.2*
 	>=gnome-base/gnome-libs-1.4
