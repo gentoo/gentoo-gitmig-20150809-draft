@@ -1,0 +1,2805 @@
+diff -Nur linux-2.4.27/Documentation/tty.txt linux-2.4.27-plasmaroo/Documentation/tty.txt
+--- linux-2.4.27/Documentation/tty.txt	1970-01-01 01:00:00.000000000 +0100
++++ linux-2.4.27-plasmaroo/Documentation/tty.txt	2004-11-07 14:02:20.344653040 +0000
+@@ -0,0 +1,194 @@
++
++			The Lockronomicon
++
++Your guide to the ancient and twisted locking policies of the tty layer and
++the warped logic behind them. Beware all ye who read on.
++
++FIXME: still need to work out the full set of BKL assumptions and document
++them so they can eventually be killed off.
++
++
++Line Discipline
++---------------
++
++Line disciplines are registered with tty_register_ldisc() passing the
++discipline number and the ldisc structure. At the point of registration the 
++discipline must be ready to use and it is possible it will get used before
++the call returns success. If the call returns an error then it won't get
++called. Do not re-use ldisc numbers as they are part of the userspace ABI
++and writing over an existing ldisc will cause demons to eat your computer.
++After the return the ldisc data has been copied so you may free your own 
++copy of the structure. You must not re-register over the top of the line
++discipline even with the same data or your computer again will be eaten by
++demons.
++
++In order to remove a line discipline call tty_register_ldisc passing NULL.
++In ancient times this always worked. In modern times the function will
++return -EBUSY if the ldisc is currently in use. Since the ldisc referencing
++code manages the module counts this should not usually be a concern.
++
++Heed this warning: the reference count field of the registered copies of the
++tty_ldisc structure in the ldisc table counts the number of lines using this
++discipline. The reference count of the tty_ldisc structure within a tty 
++counts the number of active users of the ldisc at this instant. In effect it
++counts the number of threads of execution within an ldisc method (plus those
++about to enter and exit although this detail matters not).
++
++Line Discipline Methods
++-----------------------
++
++TTY side interfaces:
++
++close()		-	This is called on a terminal when the line
++			discipline is being unplugged. At the point of
++			execution no further users will enter the
++			ldisc code for this tty. Can sleep.
++
++open()		-	Called when the line discipline is attached to
++			the terminal. No other call into the line
++			discipline for this tty will occur until it
++			completes successfully. Can sleep.
++
++write()		-	A process is writing data from user space
++			through the line discipline. Multiple write calls
++			are serialized by the tty layer for the ldisc. May
++			sleep.
++
++flush_buffer()	-	May be called at any point between open and close.
++
++chars_in_buffer() -	Report the number of bytes in the buffer.
++
++set_termios()	-	Called on termios structure changes. The caller
++			passes the old termios data and the current data
++			is in the tty. Currently can be parallel entered
++			and ordering isn't predictable - FIXME
++
++read()		-	Move data from the line discipline to the user.
++			Multiple read calls may occur in parallel and the
++			ldisc must deal with serialization issues. May 
++			sleep.
++
++poll()		-	Check the status for the poll/select calls. Multiple
++			poll calls may occur in parallel. May sleep.
++
++ioctl()		-	Called when an ioctl is handed to the tty layer
++			that might be for the ldisc. Multiple ioctl calls
++			may occur in parallel. May sleep. 
++
++Driver Side Interfaces:
++
++receive_buf()	-	Hand buffers of bytes from the driver to the ldisc
++			for processing. Semantics currently rather
++			mysterious 8(
++
++receive_room()	-	Can be called by the driver layer at any time when
++			the ldisc is opened. The ldisc must be able to
++			handle the reported amount of data at that instant.
++			Synchronization between active receive_buf and
++			receive_room calls is down to the driver not the
++			ldisc. Must not sleep.
++
++write_wakeup()	-	May be called at any point between open and close.
++			The TTY_DO_WRITE_WAKEUP flag indicates if a call
++			is needed but always races versus calls. Thus the
++			ldisc must be careful about setting order and to
++			handle unexpected calls. Must not sleep.
++
++
++Locking
++
++Callers to the line discipline functions from the tty layer are required to
++take line discipline locks. The same is true of calls from the driver side
++but not yet enforced.
++
++Three calls are now provided
++
++	ldisc = tty_ldisc_ref(tty);
++
++takes a handle to the line discipline in the tty and returns it. If no ldisc
++is currently attached or the ldisc is being closed and re-opened at this
++point then NULL is returned. While this handle is held the ldisc will not
++change or go away.
++
++	tty_ldisc_deref(ldisc)
++
++Returns the ldisc reference and allows the ldisc to be closed. Returning the
++reference takes away your right to call the ldisc functions until you take
++a new reference.
++
++	ldisc = tty_ldisc_ref_wait(tty);
++
++Performs the same function as tty_ldisc_ref except that it will wait for an
++ldisc change to complete and then return a reference to the new ldisc. 
++
++While these functions are slightly slower than the old code they should have
++minimal impact as most receive logic uses the flip buffers and they only
++need to take a reference when they push bits up through the driver.
++
++A caution: The ldisc->open(), ldisc->close() and driver->set_ldisc 
++functions are called with the ldisc unavailable. Thus tty_ldisc_ref will
++fail in this situation if used within these functions. Ldisc and driver
++code calling its own functions must be careful in this case. 
++
++
++Driver Interface
++----------------
++
++open()		-	Called when a device is opened. May sleep
++
++close()		-	Called when a device is closed. At the point of
++			return from this call the driver must make no 
++			further ldisc calls of any kind. May sleep
++
++write()		-	Called to write bytes to the device. May not
++			sleep. May occur in parallel in special cases. 
++			Because this includes panic paths drivers generally
++			shouldn't try and do clever locking here.
++
++put_char()	-	Stuff a single character onto the queue. The
++			driver is guaranteed following up calls to
++			flush_chars.
++
++flush_chars()	-	Ask the kernel to write put_char queue
++
++write_room()	-	Return the number of characters tht can be stuffed
++			into the port buffers without overflow (or less).
++			The ldisc is responsible for being intelligent
++ 			about multi-threading of write_room/write calls
++
++ioctl()		-	Called when an ioctl may be for the driver
++
++set_termios()	-	Called on termios change, may get parallel calls,
++			may block for now (may change that)
++
++set_ldisc()	-	Notifier for discipline change. At the point this 
++			is done the discipline is not yet usable. Can now
++			sleep (I think)
++
++throttle()	-	Called by the ldisc to ask the driver to do flow
++			control.  Serialization including with unthrottle
++			is the job of the ldisc layer.
++
++unthrottle()	-	Called by the ldisc to ask the driver to stop flow
++			control.
++
++stop()		-	Ldisc notifier to the driver to stop output. As with
++			throttle the serializations with start() are down
++			to the ldisc layer.
++
++start()		-	Ldisc notifier to the driver to start output.
++
++hangup()	-	Ask the tty driver to cause a hangup initiated
++			from the host side. [Can sleep ??]
++
++break_ctl()	-	Send RS232 break. Can sleep. Can get called in
++			parallel, driver must serialize (for now), and
++			with write calls.
++
++wait_until_sent() -	Wait for characters to exit the hardware queue
++			of the driver. Can sleep
++
++send_xchar()	  -	Send XON/XOFF and if possible jump the queue with
++			it in order to get fast flow control responses.
++			Cannot sleep ??
++
+diff -Nur linux-2.4.27/drivers/bluetooth/hci_ldisc.c linux-2.4.27-plasmaroo/drivers/bluetooth/hci_ldisc.c
+--- linux-2.4.27/drivers/bluetooth/hci_ldisc.c	2004-08-08 00:26:04.000000000 +0100
++++ linux-2.4.27-plasmaroo/drivers/bluetooth/hci_ldisc.c	2004-11-07 14:02:20.343653192 +0000
+@@ -181,6 +181,7 @@
+ {
+ 	struct hci_uart *hu  = (struct hci_uart *) hdev->driver_data;
+ 	struct tty_struct *tty = hu->tty;
++	struct tty_ldisc *ld = tty_ldisc_ref(tty);
+ 
+ 	BT_DBG("hdev %p tty %p", hdev, tty);
+ 
+@@ -188,9 +189,11 @@
+ 		kfree_skb(hu->tx_skb); hu->tx_skb = NULL;
+ 	}
+ 
+-	/* Flush any pending characters in the driver and discipline. */
+-	if (tty->ldisc.flush_buffer)
+-		tty->ldisc.flush_buffer(tty);
++	if (ld) {
++		if(ld->flush_buffer)
++			ld->flush_buffer(tty);
++		tty_ldisc_deref(ld);
++	}
+ 
+ 	if (tty->driver.flush_buffer)
+ 		tty->driver.flush_buffer(tty);
+@@ -283,7 +286,9 @@
+ 
+ 	spin_lock_init(&hu->rx_lock);
+ 
+-	/* Flush any pending characters in the driver and line discipline */
++	/* Flush any pending characters in the driver and line discipline. */
++	/* FIXME: why is this needed. Note don't use ldisc_ref here as the
++	   open path is before the ldisc is referencable */
+ 	if (tty->ldisc.flush_buffer)
+ 		tty->ldisc.flush_buffer(tty);
+ 
+diff -Nur linux-2.4.27/drivers/char/amiserial.c linux-2.4.27-plasmaroo/drivers/char/amiserial.c
+--- linux-2.4.27/drivers/char/amiserial.c	2002-11-28 23:53:12.000000000 +0000
++++ linux-2.4.27-plasmaroo/drivers/char/amiserial.c	2004-11-07 14:02:20.143683592 +0000
+@@ -575,9 +575,7 @@
+ 		return;
+ 
+ 	if (test_and_clear_bit(RS_EVENT_WRITE_WAKEUP, &info->event)) {
+-		if ((tty->flags & (1 << TTY_DO_WRITE_WAKEUP)) &&
+-		    tty->ldisc.write_wakeup)
+-			(tty->ldisc.write_wakeup)(tty);
++		tty_wakeup(tty);
+ 		wake_up_interruptible(&tty->write_wait);
+ 	}
+ }
+@@ -1041,9 +1039,7 @@
+ 	info->xmit.head = info->xmit.tail = 0;
+ 	restore_flags(flags);
+ 	wake_up_interruptible(&tty->write_wait);
+-	if ((tty->flags & (1 << TTY_DO_WRITE_WAKEUP)) &&
+-	    tty->ldisc.write_wakeup)
+-		(tty->ldisc.write_wakeup)(tty);
++	tty_wakeup(tty);
+ }
+ 
+ /*
+@@ -1526,6 +1522,7 @@
+ 	struct async_struct * info = (struct async_struct *)tty->driver_data;
+ 	struct serial_state *state;
+ 	unsigned long flags;
++	struct tty_ldisc *ld;
+ 
+ 	if (!info || serial_paranoia_check(info, tty->device, "rs_close"))
+ 		return;
+@@ -1608,8 +1605,12 @@
+ 	shutdown(info);
+ 	if (tty->driver.flush_buffer)
+ 		tty->driver.flush_buffer(tty);
+-	if (tty->ldisc.flush_buffer)
+-		tty->ldisc.flush_buffer(tty);
++	ld = tty_ldisc_ref(tty);
++	if (ld != NULL) {
++		if (ld->flush_buffer)
++			ld->flush_buffer(tty);
++		tty_ldisc_deref(ld);
++	}
+ 	tty->closing = 0;
+ 	info->event = 0;
+ 	info->tty = 0;
+diff -Nur linux-2.4.27/drivers/char/cyclades.c linux-2.4.27-plasmaroo/drivers/char/cyclades.c
+--- linux-2.4.27/drivers/char/cyclades.c	2003-06-13 15:51:32.000000000 +0100
++++ linux-2.4.27-plasmaroo/drivers/char/cyclades.c	2004-11-07 14:02:20.157681464 +0000
+@@ -1000,10 +1000,7 @@
+ 	wake_up_interruptible(&info->delta_msr_wait);
+     }
+     if (test_and_clear_bit(Cy_EVENT_WRITE_WAKEUP, &info->event)) {
+-        if((tty->flags & (1<< TTY_DO_WRITE_WAKEUP))
+-        && tty->ldisc.write_wakeup){
+-            (tty->ldisc.write_wakeup)(tty);
+-        }
++	tty_wakeup(tty);
+         wake_up_interruptible(&tty->write_wait);
+     }
+ #ifdef Z_WAKE
+@@ -2801,6 +2798,7 @@
+ cy_close(struct tty_struct *tty, struct file *filp)
+ {
+   struct cyclades_port *info = (struct cyclades_port *)tty->driver_data;
++  struct tty_ldisc *ld;
+   unsigned long flags;
+ 
+ #ifdef CY_DEBUG_OTHER
+@@ -2918,8 +2916,13 @@
+     shutdown(info);
+     if (tty->driver.flush_buffer)
+         tty->driver.flush_buffer(tty);
+-    if (tty->ldisc.flush_buffer)
+-        tty->ldisc.flush_buffer(tty);
++
++    ld = tty_ldisc_ref(tty);
++    if (ld) {
++	   if (ld->flush_buffer)
++	       ld->flush_buffer(tty);
++	   tty_ldisc_deref(ld);
++    }
+     CY_LOCK(info, flags);
+ 
+     tty->closing = 0;
+@@ -4689,10 +4692,8 @@
+ 	}
+ 	CY_UNLOCK(info, flags);
+     }
++    tty_wakeup(tty);
+     wake_up_interruptible(&tty->write_wait);
+-    if ((tty->flags & (1 << TTY_DO_WRITE_WAKEUP))
+-	&& tty->ldisc.write_wakeup)
+-	    (tty->ldisc.write_wakeup)(tty);
+ } /* cy_flush_buffer */
+ 
+ 
+diff -Nur linux-2.4.27/drivers/char/dz.c linux-2.4.27-plasmaroo/drivers/char/dz.c
+--- linux-2.4.27/drivers/char/dz.c	2004-02-18 13:36:31.000000000 +0000
++++ linux-2.4.27-plasmaroo/drivers/char/dz.c	2004-11-07 14:02:20.289661400 +0000
+@@ -1112,10 +1112,10 @@
+ 	info->event = 0;
+ 	info->tty = 0;
+ 
+-	if (tty->ldisc.num != ldiscs[N_TTY].num) {
++	if (tty->ldisc.num != N_TTY) {
+ 		if (tty->ldisc.close)
+ 			(tty->ldisc.close) (tty);
+-		tty->ldisc = ldiscs[N_TTY];
++		tty->ldisc = *(tty_ldisc_get(N_TTY));
+ 		tty->termios->c_line = N_TTY;
+ 		if (tty->ldisc.open)
+ 			(tty->ldisc.open) (tty);
+diff -Nur linux-2.4.27/drivers/char/epca.c linux-2.4.27-plasmaroo/drivers/char/epca.c
+--- linux-2.4.27/drivers/char/epca.c	2003-06-13 15:51:33.000000000 +0100
++++ linux-2.4.27-plasmaroo/drivers/char/epca.c	2004-11-07 14:02:20.182677664 +0000
+@@ -524,6 +524,7 @@
+ 
+ 	if ((ch = verifyChannel(tty)) != NULL) 
+ 	{ /* Begin if ch != NULL */
++		struct tty_ldisc *ld;
+ 
+ 		save_flags(flags);
+ 		cli();
+@@ -585,8 +586,12 @@
+ 		if (tty->driver.flush_buffer)
+ 			tty->driver.flush_buffer(tty);
+ 
+-		if (tty->ldisc.flush_buffer)
+-			tty->ldisc.flush_buffer(tty);
++		ld = tty_ldisc_ref(tty);
++		if (ld != NULL) {
++			if(ld->flush_buffer)
++				ld->flush_buffer(tty);
++			tty_ldisc_deref(ld);
++		}
+ 
+ 		shutdown(ch);
+ 		tty->closing = 0;
+@@ -687,12 +692,20 @@
+ 	{ /* Begin if ch != NULL */
+ 
+ 		unsigned long flags;
++		struct tty_ldisc *ld;
+ 
+ 		save_flags(flags);
+ 		cli();
+ 		if (tty->driver.flush_buffer)
+ 			tty->driver.flush_buffer(tty);
+ 
++		ld = tty_ldisc_ref(tty);
++		if (ld != NULL) {
++			if (ld->flush_buffer)
++				ld->flush_buffer(tty);
++			tty_ldisc_deref(ld);
++		}
++
+ 		if (tty->ldisc.flush_buffer)
+ 			tty->ldisc.flush_buffer(tty);
+ 
+@@ -1176,8 +1189,7 @@
+ 	restore_flags(flags);
+ 
+ 	wake_up_interruptible(&tty->write_wait);
+-	if ((tty->flags & (1 << TTY_DO_WRITE_WAKEUP)) && tty->ldisc.write_wakeup)
+-		(tty->ldisc.write_wakeup)(tty);
++	tty_wakeup(tty);
+ 
+ } /* End pc_flush_buffer */
+ 
+@@ -2383,9 +2395,7 @@
+ 				{ /* Begin if LOWWAIT */
+ 
+ 					ch->statusflags &= ~LOWWAIT;
+-					if ((tty->flags & (1 << TTY_DO_WRITE_WAKEUP)) &&
+-						  tty->ldisc.write_wakeup)
+-						(tty->ldisc.write_wakeup)(tty);
++					tty_wakeup(tty);
+ 					wake_up_interruptible(&tty->write_wait);
+ 
+ 				} /* End if LOWWAIT */
+@@ -2402,9 +2412,7 @@
+ 				{ /* Begin if EMPTYWAIT */
+ 
+ 					ch->statusflags &= ~EMPTYWAIT;
+-					if ((tty->flags & (1 << TTY_DO_WRITE_WAKEUP)) &&
+-						  tty->ldisc.write_wakeup)
+-						(tty->ldisc.write_wakeup)(tty);
++					tty_wakeup(tty);
+ 
+ 					wake_up_interruptible(&tty->write_wait);
+ 
+@@ -3255,6 +3263,7 @@
+ 			}
+ 			else 
+ 			{
++				/* ldisc lock already held in ioctl */
+ 				if (tty->ldisc.flush_buffer)
+ 					tty->ldisc.flush_buffer(tty);
+ 			}
+diff -Nur linux-2.4.27/drivers/char/generic_serial.c linux-2.4.27-plasmaroo/drivers/char/generic_serial.c
+--- linux-2.4.27/drivers/char/generic_serial.c	2002-11-28 23:53:12.000000000 +0000
++++ linux-2.4.27-plasmaroo/drivers/char/generic_serial.c	2004-11-07 14:02:20.187676904 +0000
+@@ -440,9 +440,7 @@
+ 	restore_flags(flags);
+ 
+ 	wake_up_interruptible(&tty->write_wait);
+-	if ((tty->flags & (1 << TTY_DO_WRITE_WAKEUP)) &&
+-	    tty->ldisc.write_wakeup)
+-		(tty->ldisc.write_wakeup)(tty);
++	tty_wakeup(tty);
+ 	func_exit ();
+ }
+ 
+@@ -582,9 +580,7 @@
+ 	if (!tty) return;
+ 
+ 	if (test_and_clear_bit(RS_EVENT_WRITE_WAKEUP, &port->event)) {
+-		if ((tty->flags & (1 << TTY_DO_WRITE_WAKEUP)) &&
+-		    tty->ldisc.write_wakeup)
+-			(tty->ldisc.write_wakeup)(tty);
++		tty_wakeup(tty);
+ 		wake_up_interruptible(&tty->write_wait);
+ 	}
+ 	func_exit ();
+@@ -729,8 +725,9 @@
+ {
+ 	unsigned long flags;
+ 	struct gs_port *port;
+-
+-	func_enter ();
++	struct tty_ldisc *ld;
++	
++	func_enter();
+ 
+ 	if (!tty) return;
+ 
+@@ -803,8 +800,12 @@
+ 
+ 	if (tty->driver.flush_buffer)
+ 		tty->driver.flush_buffer(tty);
+-	if (tty->ldisc.flush_buffer)
+-		tty->ldisc.flush_buffer(tty);
++	ld = tty_ldisc_ref(tty);
++	if (ld != NULL) {
++		if (ld->flush_buffer) 
++			ld->flush_buffer(tty);
++		tty_ldisc_deref(ld);
++	}
+ 	tty->closing = 0;
+ 
+ 	port->event = 0;
+diff -Nur linux-2.4.27/drivers/char/isicom.c linux-2.4.27-plasmaroo/drivers/char/isicom.c
+--- linux-2.4.27/drivers/char/isicom.c	2003-06-13 15:51:33.000000000 +0100
++++ linux-2.4.27-plasmaroo/drivers/char/isicom.c	2004-11-07 14:02:20.195675688 +0000
+@@ -502,10 +502,8 @@
+ 	
+ 	if (!tty)
+ 		return;
+-	
+-	if ((tty->flags & (1 << TTY_DO_WRITE_WAKEUP)) &&
+-	    tty->ldisc.write_wakeup)
+-		(tty->ldisc.write_wakeup)(tty);
++
++	tty_wakeup(tty);	
+ 	wake_up_interruptible(&tty->write_wait);
+ } 		
+  		
+@@ -1144,6 +1142,7 @@
+ 	struct isi_port * port = (struct isi_port *) tty->driver_data;
+ 	struct isi_board * card = port->card;
+ 	unsigned long flags;
++	struct tty_ldisc *ld;
+ 	
+ 	if (!port)
+ 		return;
+@@ -1199,6 +1198,12 @@
+ 	isicom_shutdown_port(port);
+ 	if (tty->driver.flush_buffer)
+ 		tty->driver.flush_buffer(tty);
++	ld = tty_ldisc_ref(tty);
++	if (ld != NULL) {
++		if (ld->flush_buffer)
++			ld->flush_buffer(tty);
++		tty_ldisc_deref(ld);
++	}
+ 	if (tty->ldisc.flush_buffer)
+ 		tty->ldisc.flush_buffer(tty);
+ 	tty->closing = 0;
+@@ -1671,9 +1676,7 @@
+ 	restore_flags(flags);
+ 	
+ 	wake_up_interruptible(&tty->write_wait);
+-	if ((tty->flags & (1 << TTY_DO_WRITE_WAKEUP)) &&
+-	    tty->ldisc.write_wakeup)
+-		(tty->ldisc.write_wakeup)(tty);
++	tty_wakeup(tty);
+ }
+ 
+ 
+diff -Nur linux-2.4.27/drivers/char/moxa.c linux-2.4.27-plasmaroo/drivers/char/moxa.c
+--- linux-2.4.27/drivers/char/moxa.c	2001-10-25 21:53:47.000000000 +0100
++++ linux-2.4.27-plasmaroo/drivers/char/moxa.c	2004-11-07 14:02:20.200674928 +0000
+@@ -620,6 +620,7 @@
+ {
+ 	struct moxa_str *ch;
+ 	int port;
++	struct tty_ldisc *ld;
+ 
+ 	port = PORTNO(tty);
+ 	if (port == MAX_PORTS) {
+@@ -677,8 +678,13 @@
+ 
+ 	if (tty->driver.flush_buffer)
+ 		tty->driver.flush_buffer(tty);
+-	if (tty->ldisc.flush_buffer)
+-		tty->ldisc.flush_buffer(tty);
++
++	ld = tty_ldisc_ref(tty);
++	if (ld != NULL) {
++		if (ld->flush_buffer)
++			ld->flush_buffer(tty);
++		tty_ldisc_deref(ld);
++	}
+ 	tty->closing = 0;
+ 	ch->event = 0;
+ 	ch->tty = 0;
+@@ -754,9 +760,7 @@
+ 	if (ch == NULL)
+ 		return;
+ 	MoxaPortFlushData(ch->port, 1);
+-	if ((tty->flags & (1 << TTY_DO_WRITE_WAKEUP)) &&
+-	    tty->ldisc.write_wakeup)
+-		(tty->ldisc.write_wakeup) (tty);
++	tty_wakeup(tty);
+ 	wake_up_interruptible(&tty->write_wait);
+ }
+ 
+@@ -992,7 +996,6 @@
+ 		moxaTimer.function = moxa_poll;
+ 		moxaTimer.expires = jiffies + (HZ / 50);
+ 		moxaTimer_on = 1;
+-		add_timer(&moxaTimer);
+ 		return;
+ 	}
+ 	for (card = 0; card < MAX_BOARDS; card++) {
+@@ -1011,9 +1014,7 @@
+ 				if (MoxaPortTxQueue(ch->port) <= WAKEUP_CHARS) {
+ 					if (!tp->stopped) {
+ 						ch->statusflags &= ~LOWWAIT;
+-						if ((tp->flags & (1 << TTY_DO_WRITE_WAKEUP)) &&
+-						  tp->ldisc.write_wakeup)
+-							(tp->ldisc.write_wakeup) (tp);
++						tty_wakeup(tp);
+ 						wake_up_interruptible(&tp->write_wait);
+ 					}
+ 				}
+@@ -1203,9 +1204,7 @@
+ 	if (ch->tty && (ch->statusflags & EMPTYWAIT)) {
+ 		if (MoxaPortTxQueue(ch->port) == 0) {
+ 			ch->statusflags &= ~EMPTYWAIT;
+-			if ((ch->tty->flags & (1 << TTY_DO_WRITE_WAKEUP)) &&
+-			    ch->tty->ldisc.write_wakeup)
+-				(ch->tty->ldisc.write_wakeup) (ch->tty);
++			tty_wakeup(ch->tty);
+ 			wake_up_interruptible(&ch->tty->write_wait);
+ 			return;
+ 		}
+diff -Nur linux-2.4.27/drivers/char/mxser.c linux-2.4.27-plasmaroo/drivers/char/mxser.c
+--- linux-2.4.27/drivers/char/mxser.c	2002-11-28 23:53:12.000000000 +0000
++++ linux-2.4.27-plasmaroo/drivers/char/mxser.c	2004-11-07 14:02:20.212673104 +0000
+@@ -725,9 +725,7 @@
+ 	tty = info->tty;
+ 	if (tty) {
+ 		if (test_and_clear_bit(MXSER_EVENT_TXLOW, &info->event)) {
+-			if ((tty->flags & (1 << TTY_DO_WRITE_WAKEUP)) &&
+-			    tty->ldisc.write_wakeup)
+-				(tty->ldisc.write_wakeup) (tty);
++			tty_wakeup(tty);
+ 			wake_up_interruptible(&tty->write_wait);
+ 		}
+ 		if (test_and_clear_bit(MXSER_EVENT_HANGUP, &info->event)) {
+@@ -810,6 +808,7 @@
+ 	struct mxser_struct *info = (struct mxser_struct *) tty->driver_data;
+ 	unsigned long flags;
+ 	unsigned long timeout;
++	struct tty_ldisc *ld;
+ 
+ 	if (PORTNO(tty) == MXSER_PORTS)
+ 		return;
+@@ -890,6 +889,12 @@
+ 	mxser_shutdown(info);
+ 	if (tty->driver.flush_buffer)
+ 		tty->driver.flush_buffer(tty);
++	ld = tty_ldisc_ref(tty);
++	if (ld) {
++		if (ld->flush_buffer)
++			ld->flush_buffer(tty);
++		tty_ldisc_deref(ld);
++	}
+ 	if (tty->ldisc.flush_buffer)
+ 		tty->ldisc.flush_buffer(tty);
+ 	tty->closing = 0;
+@@ -1051,9 +1056,7 @@
+ 	info->xmit_cnt = info->xmit_head = info->xmit_tail = 0;
+ 	restore_flags(flags);
+ 	wake_up_interruptible(&tty->write_wait);
+-	if ((tty->flags & (1 << TTY_DO_WRITE_WAKEUP)) &&
+-	    tty->ldisc.write_wakeup)
+-		(tty->ldisc.write_wakeup) (tty);
++	tty_wakeup(tty);
+ }
+ 
+ static int mxser_ioctl(struct tty_struct *tty, struct file *file,
+diff -Nur linux-2.4.27/drivers/char/n_tty.c linux-2.4.27-plasmaroo/drivers/char/n_tty.c
+--- linux-2.4.27/drivers/char/n_tty.c	2003-08-25 12:44:41.000000000 +0100
++++ linux-2.4.27-plasmaroo/drivers/char/n_tty.c	2004-11-07 14:02:20.219672040 +0000
+@@ -112,11 +112,18 @@
+ 	spin_unlock_irqrestore(&tty->read_lock, flags);
+ }
+ 
+-/* 
+- * Check whether to call the driver.unthrottle function.
+- * We test the TTY_THROTTLED bit first so that it always
+- * indicates the current state.
++/**
++ *	check_unthrottle	-	allow new receive data
++ *	@tty; tty device
++ *
++ *	Check whether to call the driver.unthrottle function.
++ *	We test the TTY_THROTTLED bit first so that it always
++ *	indicates the current state. The decision about whether
++ *	it is worth allowing more input has been taken by the caller.
++ *	Can sleep, may be called under the atomic_read semaphore but
++ *	this is not guaranteed.
+  */
++ 
+ static void check_unthrottle(struct tty_struct * tty)
+ {
+ 	if (tty->count &&
+@@ -125,10 +132,13 @@
+ 		tty->driver.unthrottle(tty);
+ }
+ 
+-/*
+- * Reset the read buffer counters, clear the flags, 
+- * and make sure the driver is unthrottled. Called
+- * from n_tty_open() and n_tty_flush_buffer().
++/**
++ *	reset_buffer_flags	-	reset buffer state
++ *	@tty: terminal to reset
++ *
++ *	Reset the read buffer counters, clear the flags, 
++ *	and make sure the driver is unthrottled. Called
++ *	from n_tty_open() and n_tty_flush_buffer().
+  */
+ static void reset_buffer_flags(struct tty_struct *tty)
+ {
+@@ -142,9 +152,19 @@
+ 	check_unthrottle(tty);
+ }
+ 
+-/*
+- * Flush the input buffer
++/**
++ *	n_tty_flush_buffer	-	clean input queue
++ *	@tty:	terminal device
++ *
++ *	Flush the input buffer. Called when the line discipline is
++ *	being closed, when the tty layer wants the buffer flushed (eg
++ *	at hangup) or when the N_TTY line discipline internally has to
++ *	clean the pending queue (for example some signals).
++ *
++ *	FIXME: tty->ctrl_status is not spinlocked and relies on
++ *	lock_kernel() still.
+  */
++ 
+ void n_tty_flush_buffer(struct tty_struct * tty)
+ {
+ 	/* clear everything and unthrottle the driver */
+@@ -159,9 +179,14 @@
+ 	}
+ }
+ 
+-/*
+- * Return number of characters buffered to be delivered to user
++/**
++ *	n_tty_chars_in_buffer	-	report available bytes
++ *	@tty: tty device
++ *
++ *	Report the number of characters buffered to be delivered to user
++ *	at this instant in time. 
+  */
++ 
+ ssize_t n_tty_chars_in_buffer(struct tty_struct *tty)
+ {
+ 	unsigned long flags;
+@@ -242,10 +267,20 @@
+ 	return 0;
+ }
+ 
+-/*
+- * opost_block --- to speed up block console writes, among other
+- * things.
++/**
++ *	opost_block		-	block postprocess
++ *	@tty: terminal device
++ *	@inbuf: user buffer
++ *	@nr: number of bytes
++ *
++ *	This path is used to speed up block console writes, among other
++ *	things when processing blocks of output data. It handles only
++ *	the simple cases normally found and helps to generate blocks of
++ *	symbols for the console driver and thus improve performance.
++ *
++ *	Called from write_chan under the tty layer write lock.
+  */
++ 
+ static ssize_t opost_block(struct tty_struct * tty,
+ 		       const unsigned char * inbuf, unsigned int nr)
+ {
+@@ -334,6 +369,16 @@
+ 	}
+ }
+ 
++/**
++ *	eraser		-	handle erase function
++ *	@c: character input
++ *	@tty: terminal device
++ *
++ *	Perform erase and neccessary output when an erase character is
++ *	present in the stream from the driver layer. Handles the complexities
++ *	of UTF-8 multibyte symbols.
++ */
++ 
+ static void eraser(unsigned char c, struct tty_struct *tty)
+ {
+ 	enum { ERASE, WERASE, KILL } kill_type;
+@@ -450,6 +495,18 @@
+ 		finish_erasing(tty);
+ }
+ 
++/**
++ *	isig		-	handle the ISIG optio
++ *	@sig: signal
++ *	@tty: terminal
++ *	@flush: force flush
++ *
++ *	Called when a signal is being sent due to terminal input. This
++ *	may caus terminal flushing to take place according to the termios
++ *	settings and character used. Called from the driver receive_buf
++ *	path so serialized.
++ */
++ 
+ static inline void isig(int sig, struct tty_struct *tty, int flush)
+ {
+ 	if (tty->pgrp > 0)
+@@ -461,6 +518,16 @@
+ 	}
+ }
+ 
++/**
++ *	n_tty_receive_break	-	handle break
++ *	@tty: terminal
++ *
++ *	An RS232 break event has been hit in the incoming bitstream. This
++ *	can cause a variety of events depending upon the termios settings.
++ *
++ *	Called from the receive_buf path so single threaded.
++ */
++ 
+ static inline void n_tty_receive_break(struct tty_struct *tty)
+ {
+ 	if (I_IGNBRK(tty))
+@@ -477,19 +544,40 @@
+ 	wake_up_interruptible(&tty->read_wait);
+ }
+ 
++/**
++ *	n_tty_receive_overrun	-	handle overrun reporting
++ *	@tty: terminal
++ *
++ *	Data arrived faster than we could process it. While the tty
++ *	driver has flagged this the bits that were missed are gone
++ *	forever.
++ *
++ *	Called from the receive_buf path so single threaded. Does not
++ *	need locking as num_overrun and overrun_time are function
++ *	private.
++ */
++ 
+ static inline void n_tty_receive_overrun(struct tty_struct *tty)
+ {
+ 	char buf[64];
+ 
+ 	tty->num_overrun++;
+ 	if (time_before(tty->overrun_time, jiffies - HZ)) {
+-		printk("%s: %d input overrun(s)\n", tty_name(tty, buf),
++		printk(KERN_WARNING "%s: %d input overrun(s)\n", tty_name(tty, buf),
+ 		       tty->num_overrun);
+ 		tty->overrun_time = jiffies;
+ 		tty->num_overrun = 0;
+ 	}
+ }
+ 
++/**
++ *	n_tty_receive_parity_error	-	error notifier
++ *	@tty: terminal device
++ *	@c: character
++ *
++ *	Process a parity error and queue the right data to indicate
++ *	the error case if neccessary. Locking as per n_tty_receive_buf.
++ */
+ static inline void n_tty_receive_parity_error(struct tty_struct *tty,
+ 					      unsigned char c)
+ {
+@@ -507,6 +595,16 @@
+ 	wake_up_interruptible(&tty->read_wait);
+ }
+ 
++/**
++ *	n_tty_receive_char	-	perform processing
++ *	@tty: terminal device
++ *	@c: character
++ *
++ *	Process an individual character of input received from the driver.
++ *	This is serialized with respect to itself by the rules for the 
++ *	driver above.
++ */
++
+ static inline void n_tty_receive_char(struct tty_struct *tty, unsigned char c)
+ {
+ 	unsigned long flags;
+@@ -698,6 +796,16 @@
+ 	put_tty_queue(c, tty);
+ }	
+ 
++/**
++ *	n_tty_receive_room	-	receive space
++ *	@tty: terminal
++ *
++ *	Called by the driver to find out how much data it is
++ *	permitted to feed to the line discipline without any being lost
++ *	and thus to manage flow control. Not serialized. Answers for the
++ *	"instant".
++ */
++ 
+ static int n_tty_receive_room(struct tty_struct *tty)
+ {
+ 	int	left = N_TTY_BUF_SIZE - tty->read_cnt - 1;
+@@ -716,10 +824,13 @@
+ 	return 0;
+ }
+ 
+-/*
+- * Required for the ptys, serial driver etc. since processes
+- * that attach themselves to the master and rely on ASYNC
+- * IO must be woken up
++/**
++ *	n_tty_write_wakeup	-	asynchronous I/O notifier
++ *	@tty: tty device
++ *
++ *	Required for the ptys, serial driver etc. since processes
++ *	that attach themselves to the master and rely on ASYNC
++ *	IO must be woken up
+  */
+ 
+ static void n_tty_write_wakeup(struct tty_struct *tty)
+@@ -732,6 +843,19 @@
+ 	return;
+ }
+ 
++/**
++ *	n_tty_receive_buf	-	data receive
++ *	@tty: terminal device
++ *	@cp: buffer
++ *	@fp: flag buffer
++ *	@count: characters
++ *
++ *	Called by the terminal driver when a block of characters has
++ *	been received. This function must be called from soft contexts
++ *	not from interrupt context. The driver is responsible for making
++ *	calls one at a time and in order (or using queue_ldisc)
++ */
++ 
+ static void n_tty_receive_buf(struct tty_struct *tty, const unsigned char *cp,
+ 			      char *fp, int count)
+ {
+@@ -813,6 +937,18 @@
+ 	        current->sig->action[sig-1].sa.sa_handler == SIG_IGN);
+ }
+ 
++/**
++ *	n_tty_set_termios	-	termios data changed
++ *	@tty: terminal
++ *	@old: previous data
++ *
++ *	Called by the tty layer when the user changes termios flags so
++ *	that the line discipline can plan ahead. This function cannot sleep
++ *	and is protected from re-entry by the tty layer. The user is 
++ *	guaranteed that this function will not be re-entered or in progress
++ *	when the ldisc is closed.
++ */
++ 
+ static void n_tty_set_termios(struct tty_struct *tty, struct termios * old)
+ {
+ 	if (!tty)
+@@ -828,7 +964,6 @@
+ 	    I_ICRNL(tty) || I_INLCR(tty) || L_ICANON(tty) ||
+ 	    I_IXON(tty) || L_ISIG(tty) || L_ECHO(tty) ||
+ 	    I_PARMRK(tty)) {
+-		cli();
+ 		memset(tty->process_char_map, 0, 256/8);
+ 
+ 		if (I_IGNCR(tty) || I_ICRNL(tty))
+@@ -864,7 +999,6 @@
+ 			set_bit(SUSP_CHAR(tty), &tty->process_char_map);
+ 		}
+ 		clear_bit(__DISABLED_CHAR, &tty->process_char_map);
+-		sti();
+ 		tty->raw = 0;
+ 		tty->real_raw = 0;
+ 	} else {
+@@ -878,6 +1012,16 @@
+ 	}
+ }
+ 
++/**
++ *	n_tty_close		-	close the ldisc for this tty
++ *	@tty: device
++ *
++ *	Called from the terminal layer when this line discipline is 
++ *	being shut down, either because of a close or becsuse of a 
++ *	discipline change. The function will not be called while other
++ *	ldisc methods are in progress.
++ */
++ 
+ static void n_tty_close(struct tty_struct *tty)
+ {
+ 	n_tty_flush_buffer(tty);
+@@ -887,11 +1031,22 @@
+ 	}
+ }
+ 
++/**
++ *	n_tty_open		-	open an ldisc
++ *	@tty: terminal to open
++ *
++ *	Called when this line discipline is being attached to the 
++ *	terminal device. Can sleep. Called serialized so that no
++ *	other events will occur in parallel. No further open will occur
++ *	until a close.
++ */
++
+ static int n_tty_open(struct tty_struct *tty)
+ {
+ 	if (!tty)
+ 		return -EINVAL;
+ 
++	/* This one is ugly. Currently a malloc failure here can panic */
+ 	if (!tty->read_buf) {
+ 		tty->read_buf = alloc_buf();
+ 		if (!tty->read_buf)
+@@ -917,14 +1072,23 @@
+ 	return 0;
+ }
+ 
+-/*
+- * Helper function to speed up read_chan.  It is only called when
+- * ICANON is off; it copies characters straight from the tty queue to
+- * user space directly.  It can be profitably called twice; once to
+- * drain the space from the tail pointer to the (physical) end of the
+- * buffer, and once to drain the space from the (physical) beginning of
+- * the buffer to head pointer.
++/**
++ * 	copy_from_read_buf	-	copy read data directly
++ *	@tty: terminal device
++ *	@b: user data
++ *	@nr: size of data
++ *
++ *	Helper function to speed up read_chan.  It is only called when
++ *	ICANON is off; it copies characters straight from the tty queue to
++ *	user space directly.  It can be profitably called twice; once to
++ *	drain the space from the tail pointer to the (physical) end of the
++ *	buffer, and once to drain the space from the (physical) beginning of
++ *	the buffer to head pointer.
++ *
++ *	Called under the tty->atomic_read sem and with TTY_DONT_FLIP set
++ *
+  */
++ 
+ static inline int copy_from_read_buf(struct tty_struct *tty,
+ 				      unsigned char **b,
+ 				      size_t *nr)
+@@ -952,25 +1116,18 @@
+ 	return retval;
+ }
+ 
+-static ssize_t read_chan(struct tty_struct *tty, struct file *file,
+-			 unsigned char *buf, size_t nr)
+-{
+-	unsigned char *b = buf;
+-	DECLARE_WAITQUEUE(wait, current);
+-	int c;
+-	int minimum, time;
+-	ssize_t retval = 0;
+-	ssize_t size;
+-	long timeout;
+-	unsigned long flags;
+-
+-do_it_again:
+-
+-	if (!tty->read_buf) {
+-		printk("n_tty_read_chan: called with read_buf == NULL?!?\n");
+-		return -EIO;
+-	}
++/**
++ *     job_control             -       check job control
++ *     @tty: tty
++ *     @file: file handle
++ *
++ *     Perform job control management checks on this file/tty descriptor
++ *     and if appropriate send any needed signals and return a negative
++ *     error code if action should be taken.
++ */
+ 
++static int job_control(struct tty_struct *tty, struct file *file)
++{
+ 	/* Job control check -- must be done at start and after
+ 	   every sleep (POSIX.1 7.1.1.4). */
+ 	/* NOTE: not yet done after every sleep pending a thorough
+@@ -989,7 +1146,48 @@
+ 			return -ERESTARTSYS;
+ 		}
+ 	}
++	return 0;
++}
++ 
+ 
++/**
++ *	read_chan		-	read function for tty
++ *	@tty: tty device
++ *	@file: file object
++ *	@buf: userspace buffer pointer
++ *	@nr: size of I/O
++ *
++ *	Perform reads for the line discipline. We are guaranteed that the
++ *	line discipline will not be closed under us but we may get multiple
++ *	parallel readers and must handle this ourselves. We may also get
++ *	a hangup. Always called in user context, may sleep.
++ *
++ *	This code must be sure never to sleep through a hangup.
++ */
++ 
++static ssize_t read_chan(struct tty_struct *tty, struct file *file,
++			 unsigned char __user *buf, size_t nr)
++{
++	unsigned char __user *b = buf;
++	DECLARE_WAITQUEUE(wait, current);
++	int c;
++	int minimum, time;
++	ssize_t retval = 0;
++	ssize_t size;
++	long timeout;
++	unsigned long flags;
++
++do_it_again:
++
++	if (!tty->read_buf) {
++		printk("n_tty_read_chan: called with read_buf == NULL?!?\n");
++		return -EIO;
++	}
++
++	c = job_control(tty, file);
++	if(c < 0)
++		return c;
++	
+ 	minimum = time = 0;
+ 	timeout = MAX_SCHEDULE_TIMEOUT;
+ 	if (!tty->icanon) {
+@@ -1011,6 +1209,9 @@
+ 		}
+ 	}
+ 
++	/*
++	 *	Internal serialization of reads.
++	 */
+ 	if (file->f_flags & O_NONBLOCK) {
+ 		if (down_trylock(&tty->atomic_read))
+ 			return -EAGAIN;
+@@ -1146,6 +1347,21 @@
+ 	return retval;
+ }
+ 
++/**
++ *	write_chan		-	write function for tty
++ *	@tty: tty device
++ *	@file: file object
++ *	@buf: userspace buffer pointer
++ *	@nr: size of I/O
++ *
++ *	Write function of the terminal device. This is serialized with
++ *	respect to other write callers but not to termios changes, reads
++ *	and other such events. We must be careful with N_TTY as the receive
++ *	code will echo characters, thus calling driver write methods.
++ *
++ *	This code must be sure never to sleep through a hangup.
++ */
++ 
+ static ssize_t write_chan(struct tty_struct * tty, struct file * file,
+ 			  const unsigned char * buf, size_t nr)
+ {
+@@ -1217,7 +1433,25 @@
+ 	return (b - buf) ? b - buf : retval;
+ }
+ 
+-/* Called without the kernel lock held - fine */
++/**
++ *	normal_poll		-	poll method for N_TTY
++ *	@tty: terminal device
++ *	@file: file accessing it
++ *	@wait: poll table
++ *
++ *	Called when the line discipline is asked to poll() for data or
++ *	for special events. This code is not serialized with respect to
++ *	other events save open/close.
++ *
++ *	This code must be sure never to sleep through a hangup.
++ *	Called without the kernel lock held - fine
++ *
++ *	FIXME: if someone changes the VMIN or discipline settings for the
++ *	terminal while another process is in poll() the poll does not
++ *	recompute the new limits. Possibly set_termios should issue
++ *	a read wakeup to fix this bug.
++ */
++ 
+ static unsigned int normal_poll(struct tty_struct * tty, struct file * file, poll_table *wait)
+ {
+ 	unsigned int mask = 0;
+diff -Nur linux-2.4.27/drivers/char/pcmcia/synclink_cs.c linux-2.4.27-plasmaroo/drivers/char/pcmcia/synclink_cs.c
+--- linux-2.4.27/drivers/char/pcmcia/synclink_cs.c	2003-11-28 18:26:20.000000000 +0000
++++ linux-2.4.27-plasmaroo/drivers/char/pcmcia/synclink_cs.c	2004-11-07 14:02:20.108688912 +0000
+@@ -553,6 +553,40 @@
+ static void* mgslpc_get_text_ptr(void);
+ static void* mgslpc_get_text_ptr() {return mgslpc_get_text_ptr;}
+ 
++/**
++ * line discipline callback wrappers
++ *
++ * The wrappers maintain line discipline references
++ * while calling into the line discipline.
++ *
++ * ldisc_flush_buffer - flush line discipline receive buffers
++ * ldisc_receive_buf  - pass receive data to line discipline
++ */
++
++static void ldisc_flush_buffer(struct tty_struct *tty)
++{
++	struct tty_ldisc *ld = tty_ldisc_ref(tty);
++	if (ld) {
++		if (ld->flush_buffer)
++			ld->flush_buffer(tty);
++		tty_ldisc_deref(ld);
++	}
++}
++
++static void ldisc_receive_buf(struct tty_struct *tty,
++			      const __u8 *data, char *flags, int count)
++{
++	struct tty_ldisc *ld;
++	if (!tty)
++		return;
++	ld = tty_ldisc_ref(tty);
++	if (ld) {
++		if (ld->receive_buf)
++			ld->receive_buf(tty, data, flags, count);
++		tty_ldisc_deref(ld);
++	}
++}
++
+ static dev_link_t *mgslpc_attach(void)
+ {
+     MGSLPC_INFO *info;
+@@ -1027,13 +1061,7 @@
+ 		printk("bh_transmit() entry on %s\n", info->device_name);
+ 
+ 	if (tty) {
+-		if ((tty->flags & (1 << TTY_DO_WRITE_WAKEUP)) &&
+-		    tty->ldisc.write_wakeup) {
+-			if ( debug_level >= DEBUG_LEVEL_BH )
+-				printk( "%s(%d):calling ldisc.write_wakeup on %s\n",
+-					__FILE__,__LINE__,info->device_name);
+-			(tty->ldisc.write_wakeup)(tty);
+-		}
++		tty_wakeup(tty);
+ 		wake_up_interruptible(&tty->write_wait);
+ 	}
+ }
+@@ -1917,11 +1945,9 @@
+ 	info->tx_count = info->tx_put = info->tx_get = 0;
+ 	del_timer(&info->tx_timer);	
+ 	spin_unlock_irqrestore(&info->lock,flags);
+-	
++
+ 	wake_up_interruptible(&tty->write_wait);
+-	if ((tty->flags & (1 << TTY_DO_WRITE_WAKEUP)) &&
+-	    tty->ldisc.write_wakeup)
+-		(tty->ldisc.write_wakeup)(tty);
++	tty_wakeup(tty);
+ }
+ 
+ /* Send a high-priority XON/XOFF character
+@@ -2685,9 +2711,8 @@
+ 
+ 	if (tty->driver.flush_buffer)
+ 		tty->driver.flush_buffer(tty);
+-		
+-	if (tty->ldisc.flush_buffer)
+-		tty->ldisc.flush_buffer(tty);
++	
++	ldisc_flush_buffer(tty);	
+ 		
+ 	shutdown(info);
+ 	
+@@ -4199,11 +4224,7 @@
+ 			} 
+ 			else
+ #endif
+-			{
+-				/* Call the line discipline receive callback directly. */
+-				if (tty && tty->ldisc.receive_buf)
+-					tty->ldisc.receive_buf(tty, buf->data, info->flag_buf, framesize);
+-			}
++				ldisc_receive_buf(tty, buf->data, info->flag_buf, framesize);
+ 		}
+ 	}
+ 
+diff -Nur linux-2.4.27/drivers/char/pcxx.c linux-2.4.27-plasmaroo/drivers/char/pcxx.c
+--- linux-2.4.27/drivers/char/pcxx.c	2002-11-28 23:53:12.000000000 +0000
++++ linux-2.4.27-plasmaroo/drivers/char/pcxx.c	2004-11-07 14:02:20.296660336 +0000
+@@ -632,10 +632,10 @@
+ ** please send me a note.  brian@ilinx.com
+ ** Don't know either what this is supposed to do christoph@lameter.com.
+ */
+-		if(tty->ldisc.num != ldiscs[N_TTY].num) {
++		if(tty->ldisc.num != N_TTY) {
+ 			if(tty->ldisc.close)
+ 				(tty->ldisc.close)(tty);
+-			tty->ldisc = ldiscs[N_TTY];
++			tty->ldisc = *(tty_ldisc_get(N_TTY));
+ 			tty->termios->c_line = N_TTY;
+ 			if(tty->ldisc.open)
+ 				(tty->ldisc.open)(tty);
+diff -Nur linux-2.4.27/drivers/char/pty.c linux-2.4.27-plasmaroo/drivers/char/pty.c
+--- linux-2.4.27/drivers/char/pty.c	2002-08-03 01:39:43.000000000 +0100
++++ linux-2.4.27-plasmaroo/drivers/char/pty.c	2004-11-07 14:02:20.220671888 +0000
+@@ -137,6 +137,10 @@
+  *   (2) avoid redundant copying for cases where count >> receive_room
+  * N.B. Calls from user space may now return an error code instead of
+  * a count.
++ *
++ * FIXME: Our pty_write method is called with our ldisc lock held but
++ * not our partners. We can't just take the other one blindly without
++ * risking deadlocks.  There is also the small matter of TTY_DONT_FLIP
+  */
+ static int pty_write(struct tty_struct * tty, int from_user,
+ 		       const unsigned char *buf, int count)
+diff -Nur linux-2.4.27/drivers/char/riscom8.c linux-2.4.27-plasmaroo/drivers/char/riscom8.c
+--- linux-2.4.27/drivers/char/riscom8.c	2001-09-13 23:21:32.000000000 +0100
++++ linux-2.4.27-plasmaroo/drivers/char/riscom8.c	2004-11-07 14:02:20.231670216 +0000
+@@ -1133,6 +1133,7 @@
+ 	struct riscom_board *bp;
+ 	unsigned long flags;
+ 	unsigned long timeout;
++	struct tty_ldisc *ld;
+ 	
+ 	if (!port || rc_paranoia_check(port, tty->device, "close"))
+ 		return;
+@@ -1200,6 +1201,12 @@
+ 	rc_shutdown_port(bp, port);
+ 	if (tty->driver.flush_buffer)
+ 		tty->driver.flush_buffer(tty);
++	ld = tty_ldisc_ref(tty);
++	if (ld != NULL) {
++		if(ld->flush_buffer)
++			ld->flush_buffer(tty);
++		tty_ldisc_deref(ld);
++	}
+ 	if (tty->ldisc.flush_buffer)
+ 		tty->ldisc.flush_buffer(tty);
+ 	tty->closing = 0;
+@@ -1375,9 +1382,7 @@
+ 	restore_flags(flags);
+ 	
+ 	wake_up_interruptible(&tty->write_wait);
+-	if ((tty->flags & (1 << TTY_DO_WRITE_WAKEUP)) &&
+-	    tty->ldisc.write_wakeup)
+-		(tty->ldisc.write_wakeup)(tty);
++	tty_wakeup(tty);
+ }
+ 
+ static int rc_get_modem_info(struct riscom_port * port, unsigned int *value)
+@@ -1734,9 +1739,7 @@
+ 		return;
+ 
+ 	if (test_and_clear_bit(RS_EVENT_WRITE_WAKEUP, &port->event)) {
+-		if ((tty->flags & (1 << TTY_DO_WRITE_WAKEUP)) &&
+-		    tty->ldisc.write_wakeup)
+-			(tty->ldisc.write_wakeup)(tty);
++		tty_wakeup(tty);
+ 		wake_up_interruptible(&tty->write_wait);
+ 	}
+ }
+diff -Nur linux-2.4.27/drivers/char/selection.c linux-2.4.27-plasmaroo/drivers/char/selection.c
+--- linux-2.4.27/drivers/char/selection.c	2001-09-07 17:28:38.000000000 +0100
++++ linux-2.4.27-plasmaroo/drivers/char/selection.c	2004-11-07 14:02:20.236669456 +0000
+@@ -290,9 +290,11 @@
+ {
+ 	struct vt_struct *vt = (struct vt_struct *) tty->driver_data;
+ 	int	pasted = 0, count;
++	struct  tty_ldisc *ld;
+ 	DECLARE_WAITQUEUE(wait, current);
+ 
+ 	poke_blanked_console();
++	ld = tty_ldisc_ref_wait(tty);
+ 	add_wait_queue(&vt->paste_wait, &wait);
+ 	while (sel_buffer && sel_buffer_lth > pasted) {
+ 		set_current_state(TASK_INTERRUPTIBLE);
+@@ -307,6 +309,8 @@
+ 	}
+ 	remove_wait_queue(&vt->paste_wait, &wait);
+ 	current->state = TASK_RUNNING;
++
++	tty_ldisc_deref(ld);
+ 	return 0;
+ }
+ 
+diff -Nur linux-2.4.27/drivers/char/serial167.c linux-2.4.27-plasmaroo/drivers/char/serial167.c
+--- linux-2.4.27/drivers/char/serial167.c	2002-11-28 23:53:12.000000000 +0000
++++ linux-2.4.27-plasmaroo/drivers/char/serial167.c	2004-11-07 14:02:20.300659728 +0000
+@@ -1920,10 +1920,10 @@
+ 	tty->ldisc.flush_buffer(tty);
+     info->event = 0;
+     info->tty = 0;
+-    if (tty->ldisc.num != ldiscs[N_TTY].num) {
++    if (tty->ldisc.num != N_TTY) {
+ 	if (tty->ldisc.close)
+ 	    (tty->ldisc.close)(tty);
+-	tty->ldisc = ldiscs[N_TTY];
++	tty->ldisc = *(tty_ldisc_get(N_TTY));
+ 	tty->termios->c_line = N_TTY;
+ 	if (tty->ldisc.open)
+ 	    (tty->ldisc.open)(tty);
+diff -Nur linux-2.4.27/drivers/char/sgiserial.c linux-2.4.27-plasmaroo/drivers/char/sgiserial.c
+--- linux-2.4.27/drivers/char/sgiserial.c	2004-02-18 13:36:31.000000000 +0000
++++ linux-2.4.27-plasmaroo/drivers/char/sgiserial.c	2004-11-07 14:02:20.303659272 +0000
+@@ -1498,10 +1498,10 @@
+ 	tty->closing = 0;
+ 	info->event = 0;
+ 	info->tty = 0;
+-	if (tty->ldisc.num != ldiscs[N_TTY].num) {
++	if (tty->ldisc.num != N_TTY) {
+ 		if (tty->ldisc.close)
+ 			(tty->ldisc.close)(tty);
+-		tty->ldisc = ldiscs[N_TTY];
++		tty->ldisc = *(tty_ldisc_get(N_TTY));
+ 		tty->termios->c_line = N_TTY;
+ 		if (tty->ldisc.open)
+ 			(tty->ldisc.open)(tty);
+diff -Nur linux-2.4.27/drivers/char/synclink.c linux-2.4.27-plasmaroo/drivers/char/synclink.c
+--- linux-2.4.27/drivers/char/synclink.c	2003-11-28 18:26:20.000000000 +0000
++++ linux-2.4.27-plasmaroo/drivers/char/synclink.c	2004-11-07 14:02:20.270664288 +0000
+@@ -1011,6 +1011,40 @@
+ 	return 0;
+ }
+ 
++/**
++ * line discipline callback wrappers
++ *
++ * The wrappers maintain line discipline references
++ * while calling into the line discipline.
++ *
++ * ldisc_flush_buffer - flush line discipline receive buffers
++ * ldisc_receive_buf  - pass receive data to line discipline
++ */
++
++static void ldisc_flush_buffer(struct tty_struct *tty)
++{
++	struct tty_ldisc *ld = tty_ldisc_ref(tty);
++	if (ld) {
++		if (ld->flush_buffer)
++			ld->flush_buffer(tty);
++		tty_ldisc_deref(ld);
++	}
++}
++
++static void ldisc_receive_buf(struct tty_struct *tty,
++			      const __u8 *data, char *flags, int count)
++{
++	struct tty_ldisc *ld;
++	if (!tty)
++		return;
++	ld = tty_ldisc_ref(tty);
++	if (ld) {
++		if (ld->receive_buf)
++			ld->receive_buf(tty, data, flags, count);
++		tty_ldisc_deref(ld);
++	}
++}
++
+ /* mgsl_stop()		throttle (stop) transmitter
+  * 	
+  * Arguments:		tty	pointer to tty info structure
+@@ -1170,13 +1204,7 @@
+ 			__FILE__,__LINE__,info->device_name);
+ 
+ 	if (tty) {
+-		if ((tty->flags & (1 << TTY_DO_WRITE_WAKEUP)) &&
+-		    tty->ldisc.write_wakeup) {
+-			if ( debug_level >= DEBUG_LEVEL_BH )
+-				printk( "%s(%d):calling ldisc.write_wakeup on %s\n",
+-					__FILE__,__LINE__,info->device_name);
+-			(tty->ldisc.write_wakeup)(tty);
+-		}
++		tty_wakeup(tty);
+ 		wake_up_interruptible(&tty->write_wait);
+ 	}
+ 
+@@ -2434,11 +2462,8 @@
+ 	spin_unlock_irqrestore(&info->irq_spinlock,flags);
+ 	
+ 	wake_up_interruptible(&tty->write_wait);
+-	if ((tty->flags & (1 << TTY_DO_WRITE_WAKEUP)) &&
+-	    tty->ldisc.write_wakeup)
+-		(tty->ldisc.write_wakeup)(tty);
+-		
+-}	/* end of mgsl_flush_buffer() */
++	tty_wakeup(tty);
++}
+ 
+ /* mgsl_send_xchar()
+  *
+@@ -3342,9 +3367,8 @@
+ 
+ 	if (tty->driver.flush_buffer)
+ 		tty->driver.flush_buffer(tty);
+-		
+-	if (tty->ldisc.flush_buffer)
+-		tty->ldisc.flush_buffer(tty);
++	
++	ldisc_flush_buffer(tty);	
+ 		
+ 	shutdown(info);
+ 	
+@@ -7007,11 +7031,7 @@
+ 			} 
+ 			else
+ #endif
+-			{
+-				/* Call the line discipline receive callback directly. */
+-				if ( tty && tty->ldisc.receive_buf )
+-				tty->ldisc.receive_buf(tty, info->intermediate_rxbuffer, info->flag_buf, framesize);
+-			}
++				ldisc_receive_buf(tty, info->intermediate_rxbuffer, info->flag_buf, framesize);
+ 		}
+ 	}
+ 	/* Free the buffers used by this frame. */
+@@ -7183,9 +7203,7 @@
+ 			memcpy( info->intermediate_rxbuffer, pBufEntry->virt_addr, framesize);
+ 			info->icount.rxok++;
+ 
+-			/* Call the line discipline receive callback directly. */
+-			if ( tty && tty->ldisc.receive_buf )
+-				tty->ldisc.receive_buf(tty, info->intermediate_rxbuffer, info->flag_buf, framesize);
++			ldisc_receive_buf(tty, info->intermediate_rxbuffer, info->flag_buf, framesize);
+ 		}
+ 
+ 		/* Free the buffers used by this frame. */
+diff -Nur linux-2.4.27/drivers/char/synclinkmp.c linux-2.4.27-plasmaroo/drivers/char/synclinkmp.c
+--- linux-2.4.27/drivers/char/synclinkmp.c	2003-11-28 18:26:20.000000000 +0000
++++ linux-2.4.27-plasmaroo/drivers/char/synclinkmp.c	2004-11-07 14:02:20.281662616 +0000
+@@ -735,6 +735,40 @@
+ 	return 0;
+ }
+ 
++/**
++ * line discipline callback wrappers
++ *
++ * The wrappers maintain line discipline references
++ * while calling into the line discipline.
++ *
++ * ldisc_flush_buffer - flush line discipline receive buffers
++ * ldisc_receive_buf  - pass receive data to line discipline
++ */
++
++static void ldisc_flush_buffer(struct tty_struct *tty)
++{
++	struct tty_ldisc *ld = tty_ldisc_ref(tty);
++	if (ld) {
++		if (ld->flush_buffer)
++			ld->flush_buffer(tty);
++		tty_ldisc_deref(ld);
++	}
++}
++
++static void ldisc_receive_buf(struct tty_struct *tty,
++			      const __u8 *data, char *flags, int count)
++{
++	struct tty_ldisc *ld;
++	if (!tty)
++		return;
++	ld = tty_ldisc_ref(tty);
++	if (ld) {
++		if (ld->receive_buf)
++			ld->receive_buf(tty, data, flags, count);
++		tty_ldisc_deref(ld);
++	}
++}
++
+ /* tty callbacks */
+ 
+ /* Called when a port is opened.  Init and enable port.
+@@ -906,8 +940,7 @@
+ 	if (tty->driver.flush_buffer)
+ 		tty->driver.flush_buffer(tty);
+ 
+-	if (tty->ldisc.flush_buffer)
+-		tty->ldisc.flush_buffer(tty);
++	ldisc_flush_buffer(tty);
+ 
+ 	shutdown(info);
+ 
+@@ -1315,9 +1348,7 @@
+ 	spin_unlock_irqrestore(&info->lock,flags);
+ 
+ 	wake_up_interruptible(&tty->write_wait);
+-	if ((tty->flags & (1 << TTY_DO_WRITE_WAKEUP)) &&
+-	    tty->ldisc.write_wakeup)
+-		(tty->ldisc.write_wakeup)(tty);
++	tty_wakeup(tty);
+ }
+ 
+ /* throttle (stop) transmitter
+@@ -1983,13 +2014,7 @@
+ 			__FILE__,__LINE__,info->device_name);
+ 
+ 	if (tty) {
+-		if ((tty->flags & (1 << TTY_DO_WRITE_WAKEUP)) &&
+-		    tty->ldisc.write_wakeup) {
+-			if ( debug_level >= DEBUG_LEVEL_BH )
+-				printk( "%s(%d):%s calling ldisc.write_wakeup\n",
+-					__FILE__,__LINE__,info->device_name);
+-			(tty->ldisc.write_wakeup)(tty);
+-		}
++		tty_wakeup(tty);
+ 		wake_up_interruptible(&tty->write_wait);
+ 	}
+ }
+@@ -4986,15 +5011,8 @@
+ 			}
+ 			else
+ #endif
+-			{
+-				if ( tty && tty->ldisc.receive_buf ) {
+-					/* Call the line discipline receive callback directly. */
+-					tty->ldisc.receive_buf(tty,
+-						info->tmp_rx_buf,
+-						info->flag_buf,
+-						framesize);
+-				}
+-			}
++				ldisc_receive_buf(tty,info->tmp_rx_buf,
++						  info->flag_buf, framesize);
+ 		}
+ 	}
+ 	/* Free the buffers used by this frame. */
+diff -Nur linux-2.4.27/drivers/char/tty_io.c linux-2.4.27-plasmaroo/drivers/char/tty_io.c
+--- linux-2.4.27/drivers/char/tty_io.c	2004-04-14 14:05:29.000000000 +0100
++++ linux-2.4.27-plasmaroo/drivers/char/tty_io.c	2004-11-07 14:02:20.113688152 +0000
+@@ -118,9 +118,10 @@
+ #define TTY_PARANOIA_CHECK 1
+ #define CHECK_TTY_COUNT 1
+ 
++/* Lock for tty_termios changes - private to tty_io/tty_ioctl */
++spinlock_t tty_termios_lock = SPIN_LOCK_UNLOCKED;
+ struct termios tty_std_termios;		/* for the benefit of tty drivers  */
+ struct tty_driver *tty_drivers;		/* linked list of tty drivers */
+-struct tty_ldisc ldiscs[NR_LDISCS];	/* line disc dispatch table	*/
+ 
+ #ifdef CONFIG_UNIX98_PTYS
+ extern struct tty_driver ptm_driver[];	/* Unix98 pty masters; for /dev/ptmx */
+@@ -260,46 +261,264 @@
+ 	return 0;
+ }
+ 
++/*
++ *     This is probably overkill for real world processors but
++ *     they are not on hot paths so a little discipline won't do
++ *     any harm.
++ */    
++
++static void tty_set_termios_ldisc(struct tty_struct *tty, int num)
++{
++	unsigned long flags;
++	spin_lock_irqsave(&tty_termios_lock, flags);
++	tty->termios->c_line = num;
++	spin_unlock_irqrestore(&tty_termios_lock, flags);
++}
++
++/*
++ *     This guards the refcounted line discipline lists. The lock
++ *     must be taken with irqs off because there are hangup path
++ *     callers who will do ldisc lookups and cannot sleep.
++ */
++
++spinlock_t tty_ldisc_lock = SPIN_LOCK_UNLOCKED;
++DECLARE_WAIT_QUEUE_HEAD(tty_ldisc_wait);
++struct tty_ldisc tty_ldiscs[NR_LDISCS]; /* line disc dispatch table     */
++
+ int tty_register_ldisc(int disc, struct tty_ldisc *new_ldisc)
+ {
++
++	unsigned long flags;
++	int ret = 0;
++
+ 	if (disc < N_TTY || disc >= NR_LDISCS)
+ 		return -EINVAL;
+-	
++
++	spin_lock_irqsave(&tty_ldisc_lock, flags);
+ 	if (new_ldisc) {
+-		ldiscs[disc] = *new_ldisc;
+-		ldiscs[disc].flags |= LDISC_FLAG_DEFINED;
+-		ldiscs[disc].num = disc;
+-	} else
+-		memset(&ldiscs[disc], 0, sizeof(struct tty_ldisc));
++		tty_ldiscs[disc] = *new_ldisc;
++		tty_ldiscs[disc].num = disc;
++		tty_ldiscs[disc].flags |= LDISC_FLAG_DEFINED;
++		tty_ldiscs[disc].refcount = 0;
++	} else {
++		if(tty_ldiscs[disc].refcount)
++			ret = -EBUSY;
++		else
++			tty_ldiscs[disc].flags &= ~LDISC_FLAG_DEFINED;
++        }
++	spin_unlock_irqrestore(&tty_ldisc_lock, flags);
+ 	
+-	return 0;
++	return ret;
++
+ }
+ 
++
+ EXPORT_SYMBOL(tty_register_ldisc);
+ 
+-/* Set the discipline of a tty line. */
++struct tty_ldisc *tty_ldisc_get(int disc)
++{
++	unsigned long flags;
++	struct tty_ldisc *ld;
++
++	if (disc < N_TTY || disc >= NR_LDISCS)
++		return NULL;
++
++	spin_lock_irqsave(&tty_ldisc_lock, flags);
++
++	ld = &tty_ldiscs[disc];
++	/* Check the entry is defined */
++	if(ld->flags & LDISC_FLAG_DEFINED)
++		ld->refcount++;
++	else
++		ld = NULL;
++	spin_unlock_irqrestore(&tty_ldisc_lock, flags);
++	return ld;
++}
++
++EXPORT_SYMBOL_GPL(tty_ldisc_get);
++
++void tty_ldisc_put(int disc)
++{
++	struct tty_ldisc *ld;
++	unsigned long flags;
++
++	if (disc < N_TTY || disc >= NR_LDISCS)
++		BUG();
++
++	spin_lock_irqsave(&tty_ldisc_lock, flags);
++	ld = &tty_ldiscs[disc];
++	if(ld->refcount <= 0)
++		BUG();
++	ld->refcount--;
++	spin_unlock_irqrestore(&tty_ldisc_lock, flags);
++}
++      
++EXPORT_SYMBOL_GPL(tty_ldisc_put);
++
++void tty_ldisc_assign(struct tty_struct *tty, struct tty_ldisc *ld)
++{
++	tty->ldisc = *ld;
++	tty->ldisc.refcount = 0;
++}
++
++/**
++ *     tty_ldisc_try           -       internal helper
++ *     @tty: the tty
++ *
++ *     Make a single attempt to grab and bump the refcount on
++ *     the tty ldisc. Return 0 on failure or 1 on success. This is
++ *     used to implement both the waiting and non waiting versions
++ *     of tty_ldisc_ref
++ */
++
++static int tty_ldisc_try(struct tty_struct *tty)
++{
++	unsigned long flags;
++	struct tty_ldisc *ld;
++	int ret = 0;
++
++	spin_lock_irqsave(&tty_ldisc_lock, flags);
++	ld = &tty->ldisc;
++	if(test_bit(TTY_LDISC, &tty->flags))
++	{
++		ld->refcount++;
++		ret = 1;
++	}
++	spin_unlock_irqrestore(&tty_ldisc_lock, flags);
++	return ret;
++}
++
++/**
++ *     tty_ldisc_ref_wait      -       wait for the tty ldisc
++ *     @tty: tty device
++ *
++ *     Dereference the line discipline for the terminal and take a
++ *     reference to it. If the line discipline is in flux then
++ *     wait patiently until it changes.
++ *
++ *     Note: Must not be called from an IRQ/timer context. The caller
++ *     must also be careful not to hold other locks that will deadlock
++ *     against a discipline change, such as an existing ldisc reference
++ *     (which we check for)
++ */
++
++struct tty_ldisc *tty_ldisc_ref_wait(struct tty_struct *tty)
++{
++	/* wait_event is a macro */
++	wait_event(tty_ldisc_wait, tty_ldisc_try(tty));
++	return &tty->ldisc;
++}
++
++EXPORT_SYMBOL_GPL(tty_ldisc_ref_wait);
++
++/**
++ *     tty_ldisc_ref           -       get the tty ldisc
++ *     @tty: tty device
++ *
++ *     Dereference the line discipline for the terminal and take a
++ *     reference to it. If the line discipline is in flux then
++ *     return NULL. Can be called from IRQ and timer functions.
++ */
++
++struct tty_ldisc *tty_ldisc_ref(struct tty_struct *tty)
++{
++	if(tty_ldisc_try(tty))
++		return &tty->ldisc;
++	return NULL;
++}
++
++EXPORT_SYMBOL_GPL(tty_ldisc_ref);
++
++
++void tty_ldisc_deref(struct tty_ldisc *ld)
++{
++
++	unsigned long flags;
++
++	if(ld == NULL)
++		BUG();
++
++	spin_lock_irqsave(&tty_ldisc_lock, flags);
++	if(ld->refcount == 0)
++		printk(KERN_EMERG "tty_ldisc_deref: no references.\n");
++	else
++		ld->refcount--;
++	if(ld->refcount == 0)
++		wake_up(&tty_ldisc_wait);
++	spin_unlock_irqrestore(&tty_ldisc_lock, flags);
++}
++
++EXPORT_SYMBOL_GPL(tty_ldisc_deref);
++
++/**
++ *     tty_set_ldisc           -       set line discipline
++ *     @tty: the terminal to set
++ *     @ldisc: the line discipline
++ *
++ *     Set the discipline of a tty line. Must be called from a process
++ *     context.
++ */
++
+ static int tty_set_ldisc(struct tty_struct *tty, int ldisc)
+ {
+ 	int	retval = 0;
+ 	struct	tty_ldisc o_ldisc;
+ 	char buf[64];
++	int work;
++	unsigned long flags;
++	struct tty_ldisc *ld;
+ 
+ 	if ((ldisc < N_TTY) || (ldisc >= NR_LDISCS))
+ 		return -EINVAL;
++
++restart:
++
++	if (tty->ldisc.num == ldisc)
++		return 0; /* We are already in the desired discipline */
++
++	ld = tty_ldisc_get(ldisc);
+ 	/* Eduardo Blanco <ejbs@cs.cs.com.uy> */
+ 	/* Cyrus Durgin <cider@speakeasy.org> */
+-	if (!(ldiscs[ldisc].flags & LDISC_FLAG_DEFINED)) {
++	if (ld == NULL)
++	{
+ 		char modname [20];
+-		sprintf(modname, "tty-ldisc-%d", ldisc);
+-		request_module (modname);
++                sprintf(modname, "tty-ldisc-%d", ldisc);
++                request_module (modname);
++		ld = tty_ldisc_get(ldisc);
+ 	}
+-	if (!(ldiscs[ldisc].flags & LDISC_FLAG_DEFINED))
++	
++	if (ld == NULL)
+ 		return -EINVAL;
+ 
+-	if (tty->ldisc.num == ldisc)
+-		return 0;	/* We are already in the desired discipline */
+-	o_ldisc = tty->ldisc;
++	/*
++	 *      Make sure we don't change while someone holds a
++	 *      reference to the line discipline. The TTY_LDISC bit
++	 *      prevents anyone taking a reference once it is clear.
++	 *      We need the lock to avoid racing reference takers.
++	 */
++
++	spin_lock_irqsave(&tty_ldisc_lock, flags);
++	if(tty->ldisc.refcount)
++	{
++		/* Free the new ldisc we grabbed. Must drop the lock
++		   first. */
++		spin_unlock_irqrestore(&tty_ldisc_lock, flags);
++		tty_ldisc_put(ldisc);
++		if(wait_event_interruptible(tty_ldisc_wait, tty->ldisc.refcount == 0) < 0)
++			return -ERESTARTSYS;
++		goto restart;
++	}
++	clear_bit(TTY_LDISC, &tty->flags);
++	clear_bit(TTY_DONT_FLIP, &tty->flags);
++	spin_unlock_irqrestore(&tty_ldisc_lock, flags);
+ 
++	/*
++	 *      From this point on we know nobody has an ldisc
++	 *      usage reference, nor can they obtain one until
++	 *      we say so later on.
++	 */
++
++	o_ldisc = tty->ldisc;
+ 	tty_wait_until_sent(tty, 0);
+ 	
+ 	/* Shutdown the current discipline. */
+@@ -307,16 +526,20 @@
+ 		(tty->ldisc.close)(tty);
+ 
+ 	/* Now set up the new line discipline. */
+-	tty->ldisc = ldiscs[ldisc];
+-	tty->termios->c_line = ldisc;
++	tty_ldisc_assign(tty, ld);
++	tty_set_termios_ldisc(tty, ldisc);
+ 	if (tty->ldisc.open)
+ 		retval = (tty->ldisc.open)(tty);
+ 	if (retval < 0) {
+-		tty->ldisc = o_ldisc;
+-		tty->termios->c_line = tty->ldisc.num;
++		tty_ldisc_put(ldisc);
++		/* There is an outstanding reference here so this is safe */
++		tty_ldisc_assign(tty, tty_ldisc_get(o_ldisc.num));
++		tty_set_termios_ldisc(tty, tty->ldisc.num);
+ 		if (tty->ldisc.open && (tty->ldisc.open(tty) < 0)) {
+-			tty->ldisc = ldiscs[N_TTY];
+-			tty->termios->c_line = N_TTY;
++			tty_ldisc_put(o_ldisc.num);
++			/* This driver is always present */
++			tty_ldisc_assign(tty, tty_ldisc_get(N_TTY));
++			tty_set_termios_ldisc(tty, N_TTY);
+ 			if (tty->ldisc.open) {
+ 				int r = tty->ldisc.open(tty);
+ 
+@@ -327,8 +550,23 @@
+ 			}
+ 		}
+ 	}
++	/* At this point we hold a reference to the new ldisc and a
++	    reference to the old ldisc. If we ended up flipping back
++	    to the existing ldisc we have two references to it */
++
+ 	if (tty->ldisc.num != o_ldisc.num && tty->driver.set_ldisc)
+ 		tty->driver.set_ldisc(tty);
++
++	tty_ldisc_put(o_ldisc.num);
++
++	/*
++	 *      Allow ldisc referencing to occur as soon as the driver
++	 *      ldisc callback completes.
++	 */
++
++	set_bit(TTY_LDISC, &tty->flags);
++	wake_up(&tty_ldisc_wait);
++
+ 	return retval;
+ }
+ 
+@@ -430,6 +668,27 @@
+ 
+ static spinlock_t redirect_lock = SPIN_LOCK_UNLOCKED;
+ static struct file *redirect;
++
++/*
++ * Internal and external helper for wakeups of tty
++ */
++
++void tty_wakeup(struct tty_struct *tty)
++{
++	struct tty_ldisc *ld;
++
++	if (test_bit(TTY_DO_WRITE_WAKEUP, &tty->flags)) {
++		ld = tty_ldisc_ref(tty);
++		if(ld) {
++			if(ld->write_wakeup)
++				ld->write_wakeup(tty);
++			tty_ldisc_deref(ld);
++		}
++	}
++}
++
++EXPORT_SYMBOL_GPL(tty_wakeup);
++
+ /*
+  * This can be called by the "eventd" kernel thread.  That is process synchronous,
+  * but doesn't hold any locks, so we need to make sure we have the appropriate
+@@ -442,6 +701,7 @@
+ 	struct file *f = NULL;
+ 	struct task_struct *p;
+ 	struct list_head *l;
++	struct tty_ldisc *ld;
+ 	int    closecount = 0, n;
+ 
+ 	if (!tty)
+@@ -475,18 +735,17 @@
+ 	file_list_unlock();
+ 	
+ 	/* FIXME! What are the locking issues here? This may me overdoing things.. */
++	ld = tty_ldisc_ref(tty);
++	if(ld != NULL)	
+ 	{
+-		unsigned long flags;
+-
+-		save_flags(flags); cli();
+-		if (tty->ldisc.flush_buffer)
+-			tty->ldisc.flush_buffer(tty);
++		if (ld->flush_buffer)
++			ld->flush_buffer(tty);
+ 		if (tty->driver.flush_buffer)
+ 			tty->driver.flush_buffer(tty);
+-		if ((test_bit(TTY_DO_WRITE_WAKEUP, &tty->flags)) &&
+-		    tty->ldisc.write_wakeup)
+-			(tty->ldisc.write_wakeup)(tty);
+-		restore_flags(flags);
++		if ((test_bit(TTY_DO_WRITE_WAKEUP, &tty->flags)) && ld->write_wakeup)
++			ld->write_wakeup(tty);
++		//if (ld->hangup)
++		//	ld->hangup(tty);
+ 	}
+ 
+ 	wake_up_interruptible(&tty->write_wait);
+@@ -496,21 +755,18 @@
+ 	 * Shutdown the current line discipline, and reset it to
+ 	 * N_TTY.
+ 	 */
++
+ 	if (tty->driver.flags & TTY_DRIVER_RESET_TERMIOS)
+-		*tty->termios = tty->driver.init_termios;
+-	if (tty->ldisc.num != ldiscs[N_TTY].num) {
+-		if (tty->ldisc.close)
+-			(tty->ldisc.close)(tty);
+-		tty->ldisc = ldiscs[N_TTY];
+-		tty->termios->c_line = N_TTY;
+-		if (tty->ldisc.open) {
+-			int i = (tty->ldisc.open)(tty);
+-			if (i < 0)
+-				printk(KERN_ERR "do_tty_hangup: N_TTY open: "
+-						"error %d\n", -i);
+-		}
++	{
++		unsigned long flags;
++		spin_lock_irqsave(&tty_termios_lock, flags);
++                *tty->termios = tty->driver.init_termios;
++		spin_unlock_irqrestore(&tty_termios_lock, flags);
+ 	}
+-	
++
++	/* Defer ldisc switch */
++	/* tty_deferred_ldisc_switch(N_TTY);
++
+ 	read_lock(&tasklist_lock);
+  	for_each_task(p) {
+ 		if ((tty->session > 0) && (p->session == tty->session) &&
+@@ -541,6 +797,15 @@
+ 				tty->driver.close(tty, cons_filp);
+ 	} else if (tty->driver.hangup)
+ 		(tty->driver.hangup)(tty);
++
++	/* We don't want to have driver/ldisc interactions beyond
++	   the ones we did here. The driver layer expects no
++	   calls after ->hangup() from the ldisc side. However we
++	   can't yet guarantee all that */
++
++	set_bit(TTY_HUPPED, &tty->flags);
++	if(ld)
++		tty_ldisc_deref(ld);
+ 	unlock_kernel();
+ 	if (f)
+ 		fput(f);
+@@ -644,9 +909,8 @@
+ 	}
+ 	if (tty->driver.start)
+ 		(tty->driver.start)(tty);
+-	if ((test_bit(TTY_DO_WRITE_WAKEUP, &tty->flags)) &&
+-	    tty->ldisc.write_wakeup)
+-		(tty->ldisc.write_wakeup)(tty);
++	/* If we have a running line discipline it may need kicking */
++	tty_wakeup(tty);
+ 	wake_up_interruptible(&tty->write_wait);
+ }
+ 
+@@ -656,6 +920,7 @@
+ 	int i;
+ 	struct tty_struct * tty;
+ 	struct inode *inode;
++	struct tty_ldisc *ld;
+ 
+ 	/* Can't seek (pread) on ttys.  */
+ 	if (ppos != &file->f_pos)
+@@ -684,11 +949,15 @@
+ 			return -ERESTARTSYS;
+ 		}
+ #endif
++	/* We want to wait for the line discipline to sort out in this
++	   situation */
++	ld = tty_ldisc_ref_wait(tty);
+ 	lock_kernel();
+-	if (tty->ldisc.read)
+-		i = (tty->ldisc.read)(tty,file,buf,count);
++	if (ld->read)
++		i = (ld->read)(tty,file,buf,count);
+ 	else
+ 		i = -EIO;
++	tty_ldisc_deref(ld);
+ 	unlock_kernel();
+ 	if (i > 0)
+ 		inode->i_atime = CURRENT_TIME;
+@@ -757,6 +1026,8 @@
+ 	int is_console;
+ 	struct tty_struct * tty;
+ 	struct inode *inode = file->f_dentry->d_inode;
++	ssize_t ret;
++	struct tty_ldisc *ld;
+ 
+ 	/* Can't seek (pwrite) on ttys.  */
+ 	if (ppos != &file->f_pos)
+@@ -803,10 +1074,15 @@
+ 		}
+ 	}
+ #endif
+-	if (!tty->ldisc.write)
+-		return -EIO;
+-	return do_tty_write(tty->ldisc.write, tty, file,
+-			    (const unsigned char *)buf, count);
++
++	ld = tty_ldisc_ref_wait(tty);
++	if (!ld->write)
++		ret = -EIO;
++	else
++		ret = do_tty_write(ld->write, tty, file,
++				(const unsigned char __user *)buf, count);
++	tty_ldisc_deref(ld);
++	return ret;
+ }
+ 
+ /* Semaphore to protect creating and releasing a tty */
+@@ -971,7 +1247,9 @@
+ 				(tty->ldisc.close)(tty);
+ 			goto release_mem_out;
+ 		}
++		set_bit(TTY_LDISC, &o_tty->flags);
+ 	}
++	set_bit(TTY_LDISC, &tty->flags);
+ 	goto success;
+ 
+ 	/*
+@@ -999,7 +1277,9 @@
+ 	}
+ 	tty->count++;
+ 	tty->driver = *driver; /* N.B. why do this every time?? */
+-
++	/* FIXME */
++	if(!test_bit(TTY_LDISC, &tty->flags))
++		printk(KERN_ERR "init_dev but no ldisc\n");
+ success:
+ 	*ret_tty = tty;
+ 	
+@@ -1080,6 +1360,7 @@
+ 	int	pty_master, tty_closing, o_tty_closing, do_sleep;
+ 	int	idx;
+ 	char	buf[64];
++	unsigned long flags;
+ 	
+ 	tty = (struct tty_struct *)filp->private_data;
+ 	if (tty_paranoia_check(tty, filp->f_dentry->d_inode->i_rdev, "release_dev"))
+@@ -1272,17 +1553,51 @@
+ #endif
+ 
+ 	/*
++	 * Prevent flush_to_ldisc() from rescheduling the work for later.  Then
++	 * kill any delayed work. As this is the final close it does not
++	 * race with the set_ldisc code path.
++	 */
++	clear_bit(TTY_LDISC, &tty->flags);
++	clear_bit(TTY_DONT_FLIP, &tty->flags);
++
++	/*
++	 * Wait for any short term users (we know they are just driver
++         * side waiters as the file is closing so user count on the file
++         * side is zero.
++	 */
++
++	spin_lock_irqsave(&tty_ldisc_lock, flags);
++	while(tty->ldisc.refcount)
++	{
++		spin_unlock_irqrestore(&tty_ldisc_lock, flags);
++		wait_event(tty_ldisc_wait, tty->ldisc.refcount == 0);
++		spin_lock_irqsave(&tty_ldisc_lock, flags);
++	}
++	spin_unlock_irqrestore(&tty_ldisc_lock, flags);
++
++	/*
+ 	 * Shutdown the current line discipline, and reset it to N_TTY.
+ 	 * N.B. why reset ldisc when we're releasing the memory??
++	 * FIXME: this MUST get fixed for the new reflocking
+ 	 */
+ 	if (tty->ldisc.close)
+ 		(tty->ldisc.close)(tty);
+-	tty->ldisc = ldiscs[N_TTY];
+-	tty->termios->c_line = N_TTY;
++	tty_ldisc_put(tty->ldisc.num);
++
++	/*
++	 *      Switch the line discipline back
++	 */
++	tty_ldisc_assign(tty, tty_ldisc_get(N_TTY));
++	tty_set_termios_ldisc(tty,N_TTY); 
++
+ 	if (o_tty) {
++		/* FIXME: could o_tty be in setldisc here ? */
++		clear_bit(TTY_LDISC, &o_tty->flags);
+ 		if (o_tty->ldisc.close)
+ 			(o_tty->ldisc.close)(o_tty);
+-		o_tty->ldisc = ldiscs[N_TTY];
++		tty_ldisc_put(o_tty->ldisc.num);
++		tty_ldisc_assign(o_tty, tty_ldisc_get(N_TTY));
++		tty_set_termios_ldisc(o_tty,N_TTY);
+ 	}
+ 	
+ 	/*
+@@ -1464,14 +1779,18 @@
+ static unsigned int tty_poll(struct file * filp, poll_table * wait)
+ {
+ 	struct tty_struct * tty;
++	struct tty_ldisc *ld;
++	int ret = 0;
+ 
+ 	tty = (struct tty_struct *)filp->private_data;
+ 	if (tty_paranoia_check(tty, filp->f_dentry->d_inode->i_rdev, "tty_poll"))
+ 		return 0;
+ 
+-	if (tty->ldisc.poll)
+-		return (tty->ldisc.poll)(tty, filp, wait);
+-	return 0;
++	ld = tty_ldisc_ref_wait(tty);
++	if (ld->poll)
++		ret = (ld->poll)(tty, filp, wait);
++	tty_ldisc_deref(ld);
++	return ret;
+ }
+ 
+ static int tty_fasync(int fd, struct file * filp, int on)
+@@ -1505,12 +1824,15 @@
+ static int tiocsti(struct tty_struct *tty, char * arg)
+ {
+ 	char ch, mbz = 0;
++	struct tty_ldisc *ld;
+ 
+ 	if ((current->tty != tty) && !suser())
+ 		return -EPERM;
+ 	if (get_user(ch, arg))
+ 		return -EFAULT;
+-	tty->ldisc.receive_buf(tty, &ch, &mbz, 1);
++	ld = tty_ldisc_ref_wait(tty);
++	ld->receive_buf(tty, &ch, &mbz, 1);
++	tty_ldisc_deref(ld);
+ 	return 0;
+ }
+ 
+@@ -1718,6 +2040,7 @@
+ {
+ 	struct tty_struct *tty, *real_tty;
+ 	int retval;
++	struct tty_ldisc *ld;
+ 	
+ 	tty = (struct tty_struct *)file->private_data;
+ 	if (tty_paranoia_check(tty, inode->i_rdev, "tty_ioctl"))
+@@ -1808,6 +2131,7 @@
+ 		case TIOCGSID:
+ 			return tiocgsid(tty, real_tty, (pid_t *) arg);
+ 		case TIOCGETD:
++			/* FIXME: check this is ok */
+ 			return put_user(tty->ldisc.num, (int *) arg);
+ 		case TIOCSETD:
+ 			return tiocsetd(tty, (int *) arg);
+@@ -1841,16 +2165,20 @@
+ 			return send_break(tty, arg ? arg*(HZ/10) : HZ/4);
+ 	}
+ 	if (tty->driver.ioctl) {
+-		int retval = (tty->driver.ioctl)(tty, file, cmd, arg);
++		retval = (tty->driver.ioctl)(tty, file, cmd, arg);
+ 		if (retval != -ENOIOCTLCMD)
+ 			return retval;
+ 	}
+-	if (tty->ldisc.ioctl) {
+-		int retval = (tty->ldisc.ioctl)(tty, file, cmd, arg);
+-		if (retval != -ENOIOCTLCMD)
+-			return retval;
++	ld = tty_ldisc_ref_wait(tty);
++	retval = -EINVAL;
++	if (ld->ioctl) {
++		if(likely(test_bit(TTY_LDISC, &tty->flags)))
++			retval = ld->ioctl(tty, file, cmd, arg);
++		if (retval == -ENOIOCTLCMD)
++			retval = -EINVAL;
+ 	}
+-	return -EINVAL;
++	tty_ldisc_deref(ld);
++	return retval;
+ }
+ 
+ 
+@@ -1883,14 +2211,20 @@
+ 	int session;
+ 	int		i;
+ 	struct file	*filp;
++	struct tty_ldisc *disc;
+ 	
+ 	if (!tty)
+ 		return;
+ 	session  = tty->session;
+-	if (tty->ldisc.flush_buffer)
+-		tty->ldisc.flush_buffer(tty);
++	/* We don't want an ldisc switch during this */
++	disc = tty_ldisc_ref(tty);
++	if (disc && disc->flush_buffer)
++		disc->flush_buffer(tty);
++	tty_ldisc_deref(disc);
++
+ 	if (tty->driver.flush_buffer)
+ 		tty->driver.flush_buffer(tty);
++
+ 	read_lock(&tasklist_lock);
+ 	for_each_task(p) {
+ 		if ((p->tty == tty) ||
+@@ -1942,11 +2276,16 @@
+ 	unsigned char	*cp;
+ 	char		*fp;
+ 	int		count;
+-	unsigned long flags;
++	unsigned long 	flags;
++	struct tty_ldisc *disc;
++
++	disc = tty_ldisc_ref(tty);
++	if (disc == NULL)       /*  !TTY_LDISC */
++		return;
+ 
+ 	if (test_bit(TTY_DONT_FLIP, &tty->flags)) {
+ 		queue_task(&tty->flip.tqueue, &tq_timer);
+-		return;
++		goto out;
+ 	}
+ 	if (tty->flip.buf_num) {
+ 		cp = tty->flip.char_buf + TTY_FLIPBUF_SIZE;
+@@ -1969,7 +2308,31 @@
+ 	tty->flip.count = 0;
+ 	restore_flags(flags);
+ 	
+-	tty->ldisc.receive_buf(tty, cp, fp, count);
++	disc->receive_buf(tty, cp, fp, count);
++out:
++	tty_ldisc_deref(disc);
++}
++
++/*
++ *     Call the ldisc flush directly from a driver. This function may
++ *     return an error and need retrying by the user.
++ */
++
++int tty_push_data(struct tty_struct *tty, unsigned char *cp, unsigned char *fp, int count)
++{
++	int ret = 0;
++	struct tty_ldisc *disc;
++	
++	disc = tty_ldisc_ref(tty);
++	if(test_bit(TTY_DONT_FLIP, &tty->flags))
++		ret = -EAGAIN;
++	else if(disc == NULL)
++		ret = -EIO;
++	else
++		disc->receive_buf(tty, cp, fp, count);
++	tty_ldisc_deref(disc);
++	return ret;
++
+ }
+ 
+ /*
+@@ -2032,7 +2395,7 @@
+ {
+ 	memset(tty, 0, sizeof(struct tty_struct));
+ 	tty->magic = TTY_MAGIC;
+-	tty->ldisc = ldiscs[N_TTY];
++	tty_ldisc_assign(tty, tty_ldisc_get(N_TTY));
+ 	tty->pgrp = -1;
+ 	tty->flip.char_buf_ptr = tty->flip.char_buf;
+ 	tty->flip.flag_buf_ptr = tty->flip.flag_buf;
+@@ -2217,7 +2580,7 @@
+ void __init console_init(void)
+ {
+ 	/* Setup the default TTY line discipline. */
+-	memset(ldiscs, 0, sizeof(ldiscs));
++	memset(tty_ldiscs, 0, NR_LDISCS*sizeof(struct tty_ldisc));
+ 	(void) tty_register_ldisc(N_TTY, &tty_ldisc_N_TTY);
+ 
+ 	/*
+diff -Nur linux-2.4.27/drivers/char/tty_ioctl.c linux-2.4.27-plasmaroo/drivers/char/tty_ioctl.c
+--- linux-2.4.27/drivers/char/tty_ioctl.c	2002-11-28 23:53:12.000000000 +0000
++++ linux-2.4.27-plasmaroo/drivers/char/tty_ioctl.c	2004-11-07 14:03:04.506939352 +0000
+@@ -29,6 +29,8 @@
+ 
+ #undef	DEBUG
+ 
++extern spinlock_t tty_termios_lock;
++
+ /*
+  * Internal flag options for termios setting behavior
+  */
+@@ -96,8 +98,17 @@
+ {
+ 	int canon_change;
+ 	struct termios old_termios = *tty->termios;
++	struct tty_ldisc *ld;
++	unsigned long flags;
++
++	/*
++	 *      Perform the actual termios internal changes under lock.
++	 */
++
++	/* FIXME: we need to decide on some locking/ordering semantics
++	   for the set_termios notification eventually */
++	spin_lock_irqsave(&tty_termios_lock, flags);
+ 
+-	cli();
+ 	*tty->termios = *new_termios;
+ 	unset_locked_termios(tty->termios, &old_termios, tty->termios_locked);
+ 	canon_change = (old_termios.c_lflag ^ tty->termios->c_lflag) & ICANON;
+@@ -107,7 +118,6 @@
+ 		tty->canon_data = 0;
+ 		tty->erasing = 0;
+ 	}
+-	sti();
+ 	if (canon_change && !L_ICANON(tty) && tty->read_cnt)
+ 		/* Get characters left over from canonical mode. */
+ 		wake_up_interruptible(&tty->read_wait);
+@@ -131,16 +141,20 @@
+ 		}
+ 	}
+ 
+-	if (tty->driver.set_termios)
+-		(*tty->driver.set_termios)(tty, &old_termios);
++	ld = tty_ldisc_ref(tty);
++	if (ld != NULL) {
++		if (ld->set_termios)
++			(ld->set_termios)(tty, &old_termios);
++		tty_ldisc_deref(ld);
++	}
++	spin_unlock_irqrestore(&tty_termios_lock, flags);
+ 
+-	if (tty->ldisc.set_termios)
+-		(*tty->ldisc.set_termios)(tty, &old_termios);
+ }
+ 
+ static int set_termios(struct tty_struct * tty, unsigned long arg, int opt)
+ {
+ 	struct termios tmp_termios;
++	struct tty_ldisc *ld;
+ 	int retval = tty_check_change(tty);
+ 
+ 	if (retval)
+@@ -157,8 +171,13 @@
+ 			return -EFAULT;
+ 	}
+ 
+-	if ((opt & TERMIOS_FLUSH) && tty->ldisc.flush_buffer)
+-		tty->ldisc.flush_buffer(tty);
++	ld = tty_ldisc_ref(tty);
++
++	if (ld != NULL) {
++		if ((opt & TERMIOS_FLUSH) && ld->flush_buffer)
++			ld->flush_buffer(tty);
++		tty_ldisc_deref(ld);
++	}
+ 
+ 	if (opt & TERMIOS_WAIT) {
+ 		tty_wait_until_sent(tty, 0);
+@@ -223,12 +242,16 @@
+ static int get_sgttyb(struct tty_struct * tty, struct sgttyb * sgttyb)
+ {
+ 	struct sgttyb tmp;
++	unsigned long flags;
+ 
++	spin_lock_irqsave(&tty_termios_lock, flags);
+ 	tmp.sg_ispeed = 0;
+ 	tmp.sg_ospeed = 0;
+ 	tmp.sg_erase = tty->termios->c_cc[VERASE];
+ 	tmp.sg_kill = tty->termios->c_cc[VKILL];
+ 	tmp.sg_flags = get_sgflags(tty);
++	spin_unlock_irqrestore(&tty_termios_lock, flags);
++
+ 	return copy_to_user(sgttyb, &tmp, sizeof(tmp)) ? -EFAULT : 0;
+ }
+ 
+@@ -263,16 +286,19 @@
+ 	int retval;
+ 	struct sgttyb tmp;
+ 	struct termios termios;
++	unsigned long flags;
+ 
+ 	retval = tty_check_change(tty);
+ 	if (retval)
+ 		return retval;
+-	termios =  *tty->termios;
+ 	if (copy_from_user(&tmp, sgttyb, sizeof(tmp)))
+ 		return -EFAULT;
++	spin_lock_irqsave(&tty_termios_lock, flags);
++	termios =  *tty->termios;
+ 	termios.c_cc[VERASE] = tmp.sg_erase;
+ 	termios.c_cc[VKILL] = tmp.sg_kill;
+ 	set_sgflags(&termios, tmp.sg_flags);
++	spin_unlock_irqrestore(&tty_termios_lock, flags);
+ 	change_termios(tty, &termios);
+ 	return 0;
+ }
+@@ -362,6 +388,8 @@
+ {
+ 	struct tty_struct * real_tty;
+ 	int retval;
++	struct tty_ldisc *ld;
++	unsigned long flags;
+ 
+ 	if (tty->driver.type == TTY_DRIVER_TYPE_PTY &&
+ 	    tty->driver.subtype == PTY_TYPE_MASTER)
+@@ -440,22 +468,26 @@
+ 			retval = tty_check_change(tty);
+ 			if (retval)
+ 				return retval;
++
++			ld = tty_ldisc_ref(tty);
+ 			switch (arg) {
+ 			case TCIFLUSH:
+-				if (tty->ldisc.flush_buffer)
+-					tty->ldisc.flush_buffer(tty);
++				if (ld->flush_buffer)
++					ld->flush_buffer(tty);
+ 				break;
+ 			case TCIOFLUSH:
+-				if (tty->ldisc.flush_buffer)
+-					tty->ldisc.flush_buffer(tty);
++				if (ld->flush_buffer)
++					ld->flush_buffer(tty);
+ 				/* fall through */
+ 			case TCOFLUSH:
+ 				if (tty->driver.flush_buffer)
+ 					tty->driver.flush_buffer(tty);
+ 				break;
+ 			default:
++				tty_ldisc_deref(ld);
+ 				return -EINVAL;
+ 			}
++			tty_ldisc_deref(ld);
+ 			return 0;
+ 		case TIOCOUTQ:
+ 			return put_user(tty->driver.chars_in_buffer ?
+@@ -501,9 +533,11 @@
+ 		case TIOCSSOFTCAR:
+ 			if (get_user(arg, (unsigned int *) arg))
+ 				return -EFAULT;
++			spin_lock_irqsave(&tty_termios_lock, flags);
+ 			tty->termios->c_cflag =
+ 				((tty->termios->c_cflag & ~CLOCAL) |
+ 				 (arg ? CLOCAL : 0));
++			spin_unlock_irqrestore(&tty_termios_lock, flags);
+ 			return 0;
+ 		default:
+ 			return -ENOIOCTLCMD;
+diff -Nur linux-2.4.27/drivers/net/ppp_async.c linux-2.4.27-plasmaroo/drivers/net/ppp_async.c
+--- linux-2.4.27/drivers/net/ppp_async.c	2002-08-03 01:39:44.000000000 +0100
++++ linux-2.4.27-plasmaroo/drivers/net/ppp_async.c	2004-11-07 14:02:20.057696664 +0000
+@@ -117,6 +117,9 @@
+  * frees the memory that ppp_asynctty_receive is using.  The best
+  * way to fix this is to use a rwlock in the tty struct, but for now
+  * we use a single global rwlock for all ttys in ppp line discipline.
++ *
++ * FIXME: this is no longer true. The _close path for the ldisc is 
++ * now guaranteed to be sane. 
+  */
+ static rwlock_t disc_data_lock = RW_LOCK_UNLOCKED;
+ 
+@@ -139,7 +142,8 @@
+ }
+ 
+ /*
+- * Called when a tty is put into PPP line discipline.
++ * Called when a tty is put into PPP line discipline. Called in process
++ * context.
+  */
+ static int
+ ppp_asynctty_open(struct tty_struct *tty)
+@@ -248,6 +252,11 @@
+ 	return -EAGAIN;
+ }
+ 
++/*
++ * Called in process context only. May be re-entered by multiple
++ * ioctl calling threads.
++ */
++ 
+ static int
+ ppp_asynctty_ioctl(struct tty_struct *tty, struct file *file,
+ 		   unsigned int cmd, unsigned long arg)
+@@ -714,7 +723,8 @@
+ 
+ /*
+  * Flush output from our internal buffers.
+- * Called for the TCFLSH ioctl.
++ * Called for the TCFLSH ioctl. Can be entered in parallel
++ * but this is covered by the xmit_lock.
+  */
+ static void
+ ppp_async_flush_output(struct asyncppp *ap)
+@@ -819,7 +829,9 @@
+ 	ppp_input_error(&ap->chan, code);
+ }
+ 
+-/* called when the tty driver has data for us. */
++/* Called when the tty driver has data for us. Runs parallel with the
++   other ldisc functions but will not be re-entered */
++
+ static void
+ ppp_async_input(struct asyncppp *ap, const unsigned char *buf,
+ 		char *flags, int count)
+diff -Nur linux-2.4.27/drivers/net/ppp_synctty.c linux-2.4.27-plasmaroo/drivers/net/ppp_synctty.c
+--- linux-2.4.27/drivers/net/ppp_synctty.c	2002-08-03 01:39:44.000000000 +0100
++++ linux-2.4.27-plasmaroo/drivers/net/ppp_synctty.c	2004-11-07 14:02:20.077693624 +0000
+@@ -172,6 +172,8 @@
+  * frees the memory that ppp_synctty_receive is using.  The best
+  * way to fix this is to use a rwlock in the tty struct, but for now
+  * we use a single global rwlock for all ttys in ppp line discipline.
++ *
++ * FIXME: Fixed in tty_io nowdays.
+  */
+ static rwlock_t disc_data_lock = RW_LOCK_UNLOCKED;
+ 
+diff -Nur linux-2.4.27/drivers/net/slip.c linux-2.4.27-plasmaroo/drivers/net/slip.c
+--- linux-2.4.27/drivers/net/slip.c	2002-11-28 23:53:14.000000000 +0000
++++ linux-2.4.27-plasmaroo/drivers/net/slip.c	2004-11-07 14:02:20.086692256 +0000
+@@ -670,7 +670,9 @@
+  * Handle the 'receiver data ready' interrupt.
+  * This function is called by the 'tty_io' module in the kernel when
+  * a block of SLIP data has been received, which can now be decapsulated
+- * and sent on to some IP layer for further processing.
++ * and sent on to some IP layer for further processing. This will not
++ * be re-entered while running but other ldisc functions may be called
++ * in parallel
+  */
+  
+ static void slip_receive_buf(struct tty_struct *tty, const unsigned char *cp, char *fp, int count)
+@@ -826,9 +828,11 @@
+  * SLIP line discipline is called for.  Because we are
+  * sure the tty line exists, we only have to link it to
+  * a free SLIP channel...
++ *
++ * Called in process context serialized from other ldisc calls.
+  */
+-static int
+-slip_open(struct tty_struct *tty)
++
++static int slip_open(struct tty_struct *tty)
+ {
+ 	struct slip *sl;
+ 	int err;
+@@ -910,6 +914,9 @@
+ }
+ 
+ /*
++
++  FIXME: 1,2 are fixed 3 was never true anyway.
++  
+    Let me to blame a bit.
+    1. TTY module calls this funstion on soft interrupt.
+    2. TTY module calls this function WITH MASKED INTERRUPTS!
+@@ -928,9 +935,8 @@
+ 
+ /*
+  * Close down a SLIP channel.
+- * This means flushing out any pending queues, and then restoring the
+- * TTY line discipline to what it was before it got hooked to SLIP
+- * (which usually is TTY again).
++ * This means flushing out any pending queues, and then returning. This
++ * call is serialized against other ldisc functions.
+  */
+ static void
+ slip_close(struct tty_struct *tty)
+diff -Nur linux-2.4.27/drivers/sbus/char/zs.c linux-2.4.27-plasmaroo/drivers/sbus/char/zs.c
+--- linux-2.4.27/drivers/sbus/char/zs.c	2002-08-03 01:39:44.000000000 +0100
++++ linux-2.4.27-plasmaroo/drivers/sbus/char/zs.c	2004-11-07 14:02:20.331655016 +0000
+@@ -1605,10 +1605,10 @@
+ 	tty->closing = 0;
+ 	info->event = 0;
+ 	info->tty = 0;
+-	if (tty->ldisc.num != ldiscs[N_TTY].num) {
++	if (tty->ldisc.num != N_TTY) {
+ 		if (tty->ldisc.close)
+ 			(tty->ldisc.close)(tty);
+-		tty->ldisc = ldiscs[N_TTY];
++		tty->ldisc = *(tty_ldisc_get(N_TTY));
+ 		tty->termios->c_line = N_TTY;
+ 		if (tty->ldisc.open)
+ 			(tty->ldisc.open)(tty);
+diff -Nur linux-2.4.27/fs/proc/proc_tty.c linux-2.4.27-plasmaroo/fs/proc/proc_tty.c
+--- linux-2.4.27/fs/proc/proc_tty.c	2000-04-21 23:17:57.000000000 +0100
++++ linux-2.4.27-plasmaroo/fs/proc/proc_tty.c	2004-11-07 14:02:20.042698944 +0000
+@@ -15,8 +15,6 @@
+ #include <asm/bitops.h>
+ 
+ extern struct tty_driver *tty_drivers;	/* linked list of tty drivers */
+-extern struct tty_ldisc ldiscs[];
+-
+ 
+ static int tty_drivers_read_proc(char *page, char **start, off_t off,
+ 				 int count, int *eof, void *data);
+@@ -106,12 +104,15 @@
+ 	int	i;
+ 	int	len = 0;
+ 	off_t	begin = 0;
+-
++	struct tty_ldisc *ld;
++	
+ 	for (i=0; i < NR_LDISCS; i++) {
+-		if (!(ldiscs[i].flags & LDISC_FLAG_DEFINED))
++		ld = tty_ldisc_get(i);
++		if (ld == NULL)
+ 			continue;
+ 		len += sprintf(page+len, "%-10s %2d\n",
+-			       ldiscs[i].name ? ldiscs[i].name : "???", i);
++			       ld->name ? ld->name : "???", i);
++		tty_ldisc_put(i);
+ 		if (len+begin > off+count)
+ 			break;
+ 		if (len+begin < off) {
+diff -Nur linux-2.4.27/include/linux/tty.h linux-2.4.27-plasmaroo/include/linux/tty.h
+--- linux-2.4.27/include/linux/tty.h	2003-06-13 15:51:39.000000000 +0100
++++ linux-2.4.27-plasmaroo/include/linux/tty.h	2004-11-07 14:02:20.043698792 +0000
+@@ -322,26 +322,28 @@
+  * tty->write.  Thus, you must use the inline functions set_bit() and
+  * clear_bit() to make things atomic.
+  */
+-#define TTY_THROTTLED 0
+-#define TTY_IO_ERROR 1
+-#define TTY_OTHER_CLOSED 2
+-#define TTY_EXCLUSIVE 3
+-#define TTY_DEBUG 4
+-#define TTY_DO_WRITE_WAKEUP 5
+-#define TTY_PUSH 6
+-#define TTY_CLOSING 7
+-#define TTY_DONT_FLIP 8
+-#define TTY_HW_COOK_OUT 14
+-#define TTY_HW_COOK_IN 15
+-#define TTY_PTY_LOCK 16
+-#define TTY_NO_WRITE_SPLIT 17
++#define TTY_THROTTLED 		0	/* Call unthrottle() at threshold min */
++#define TTY_IO_ERROR 		1	/* Canse an I/O error (may be no ldisc too) */
++#define TTY_OTHER_CLOSED 	2	/* Other side (if any) has closed */
++#define TTY_EXCLUSIVE 		3	/* Exclusive open mode */
++#define TTY_DEBUG 		4	/* Debugging */
++#define TTY_DO_WRITE_WAKEUP 	5	/* Call write_wakeup after queuing new */
++#define TTY_PUSH 		6	/* n_tty private */
++#define TTY_CLOSING 		7	/* ->close() in progress */
++#define TTY_DONT_FLIP 		8	/* Defer buffer flip */
++#define TTY_LDISC 		9	/* Line discipline attached */
++#define TTY_HW_COOK_OUT 	14	/* Hardware can do output cooking */
++#define TTY_HW_COOK_IN 		15	/* Hardware can do input cooking */
++#define TTY_PTY_LOCK 		16	/* pty private */
++#define TTY_NO_WRITE_SPLIT 	17	/* Preserve write boundaries to driver */
++#define TTY_HUPPED 		18	/* Post driver->hangup() */
+ 
+ #define TTY_WRITE_FLUSH(tty) tty_write_flush((tty))
+ 
+ extern void tty_write_flush(struct tty_struct *);
+ 
+ extern struct termios tty_std_termios;
+-extern struct tty_ldisc ldiscs[];
++extern struct tty_ldisc tty_ldiscs[];
+ extern int fg_console, last_console, want_console;
+ 
+ extern int kmsg_redirect;
+@@ -396,6 +398,16 @@
+ extern void tty_flip_buffer_push(struct tty_struct *tty);
+ extern int tty_get_baud_rate(struct tty_struct *tty);
+ 
++extern struct tty_ldisc *tty_ldisc_ref(struct tty_struct *);
++extern void tty_ldisc_deref(struct tty_ldisc *);
++extern struct tty_ldisc *tty_ldisc_ref_wait(struct tty_struct *);
++
++extern struct tty_ldisc *tty_ldisc_get(int);
++extern void tty_ldisc_put(int);
++
++extern void tty_wakeup(struct tty_struct *tty);
++
++
+ /* n_tty.c */
+ extern struct tty_ldisc tty_ldisc_N_TTY;
+ 
+diff -Nur linux-2.4.27/include/linux/tty_ldisc.h linux-2.4.27-plasmaroo/include/linux/tty_ldisc.h
+--- linux-2.4.27/include/linux/tty_ldisc.h	2001-11-22 19:46:19.000000000 +0000
++++ linux-2.4.27-plasmaroo/include/linux/tty_ldisc.h	2004-11-07 14:02:20.044698640 +0000
+@@ -129,6 +129,7 @@
+ 			       char *fp, int count);
+ 	int	(*receive_room)(struct tty_struct *);
+ 	void	(*write_wakeup)(struct tty_struct *);
++	int	refcount;
+ };
+ 
+ #define TTY_LDISC_MAGIC	0x5403
