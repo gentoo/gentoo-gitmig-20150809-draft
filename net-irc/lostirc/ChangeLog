@@ -1,13 +1,16 @@
 # ChangeLog for net-irc/lostirc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/ChangeLog,v 1.1 2002/06/01 05:01:07 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/lostirc/ChangeLog,v 1.2 2002/07/13 17:03:03 stroke Exp $
 
+*lostirc-0.1.4 (13 Jul 2002)
+
+  13 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> lostirc-0.1.4.ebuild:
+ 
+  new version
+ 
 *lostirc-0.1.0 (01 June 2002)
 
-  01 June 2002; Lasse Mikkelsen <lbm@fatalerror.dk> lostirc-0.1.0.ebuild:
+  01 June 2002; Gabriele Giorgetti <stroke@gentoo.org> lostirc-0.1.0.ebuild:
 
-  Added initial ChangeLog which should be updated whenever the package is
-  updated in any way. This changelog is targetted to users. This means that the
-  comments should well explained and written in clean English. The details about
-  writing correct changelogs are explained in the skel.ChangeLog file which you
-  can find in the root directory of the portage repository.
+  Initial CVS commit.
+  Ebuild written by: Lasse Mikkelsen <lbm@fatalerror.dk>  
