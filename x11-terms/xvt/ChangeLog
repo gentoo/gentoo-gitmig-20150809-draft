@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/xvt
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/xvt/ChangeLog,v 1.1 2003/11/23 16:16:47 taviso Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/xvt/ChangeLog,v 1.2 2004/04/27 18:25:13 agriffis Exp $
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> xvt-2.1.ebuild:
+  Add flag-o-matic for bug 49179
 
 *xvt-2.1 (23 Nov 2003)
 
