@@ -1,6 +1,11 @@
 # ChangeLog for games-puzzle/scramble
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/scramble/ChangeLog,v 1.2 2004/06/24 23:09:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/scramble/ChangeLog,v 1.3 2004/09/12 04:19:16 mr_bones_ Exp $
+
+*scramble-0.9.1 (11 Sep 2004)
+
+  11 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org> +scramble-0.9.1.ebuild:
+  version bump (bug #63152)
 
 *scramble-0.7 (05 Mar 2004)
 

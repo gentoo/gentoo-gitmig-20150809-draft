@@ -1,4 +1,6 @@
 MD5 9e7fc95b4670e3490e2603f3b9646b66 scramble-0.7.ebuild 862
-MD5 5f6cec03ba638b0a24f9c3ba99e15285 ChangeLog 356
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 2859b9a0995c453457747ee18f641887 ChangeLog 496
+MD5 7d269bd698749c5bf69b6bec4c684dcf scramble-0.9.1.ebuild 725
 MD5 d772e0f0371920a659399f1f2b04e066 files/digest-scramble-0.7 64
+MD5 2c71d411bf73cadd16c858781197b89f files/digest-scramble-0.9.1 66
