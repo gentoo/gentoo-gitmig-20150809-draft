@@ -35,3 +35,4 @@ move app-misc/xfm x11-misc/xfm
 move app-misc/xplore x11-misc/xplore
 move app-misc/xhkeys x11-misc/xhkeys
 move app-misc/xosview x11-misc/xosview
+move games-fps/quake2-relnev games-fps/quake2-icculus
