@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/namazu-2.0.13.ebuild,v 1.4 2004/11/05 03:46:15 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/namazu/namazu-2.0.13.ebuild,v 1.5 2004/12/07 09:21:06 hattya Exp $
 
 IUSE="chasen cjk emacs kakasi nls tcltk"
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc64"
 SLOT="0"
 
-DEPEND=">=dev-perl/File-MMagic-1.12
+DEPEND=">=dev-perl/File-MMagic-1.20
 	cjk? ( app-i18n/nkf )
 	nls? ( sys-devel/gettext )
 	chasen? ( dev-perl/Text-ChaSen )
