@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.12-r1.ebuild,v 1.2 2004/08/08 00:38:07 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/policycoreutils/policycoreutils-1.16.ebuild,v 1.1 2004/09/08 00:47:45 pebenito Exp $
 
 IUSE="build"
 
 inherit eutils
 
-EXTRAS_VER="1.5"
+EXTRAS_VER="1.8"
 
 DESCRIPTION="SELinux core utilities"
 HOMEPAGE="http://www.nsa.gov/selinux"
@@ -14,9 +14,10 @@ SRC_URI="http://www.nsa.gov/selinux/archives/${P}.tgz
 	mirror://gentoo/policycoreutils-extra-${EXTRAS_VER}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="~x86 ~ppc ~sparc"
 
 DEPEND=">=sys-libs/libselinux-${PV}
+	sys-libs/libsepol
 	sys-devel/gettext
 	!build? ( sys-libs/pam )"
 
@@ -26,10 +27,15 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	epatch ${FILESDIR}/policycoreutils-1.10-genhomedircon-reverse.diff
 
-	# Change script paths POLICYDIR
-	sed -i -e "s:/etc/security/selinux/src/policy/:${POLICYDIR}:g" ${S}/scripts/genhomedircon
+	# add compatibility for number of genhomedircon command line args
+	epatch ${FILESDIR}/policycoreutils-1.16-genhomedircon-compat.diff
+
+	# dont install fixfiles cron script
+	sed -i -e '/^all/s/fixfiles//' ${S}/scripts/Makefile \
+		|| die "fixfiles sed 1 failed"
+	sed -i -e '/fixfiles/d' ${S}/scripts/Makefile \
+		|| die "fixfiles sed 2 failed"
 
 	# fix up to accept Gentoo CFLAGS
 	local SUBDIRS="`cd ${S} && find -type d | cut -d/ -f2`"
