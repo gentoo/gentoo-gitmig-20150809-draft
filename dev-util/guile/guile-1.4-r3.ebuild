@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.4-r3.ebuild,v 1.6 2002/07/23 14:04:00 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.4-r3.ebuild,v 1.7 2002/07/23 21:41:50 gerk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Guile is an interpreter for Scheme"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.gnu.org/software/guile/"
 
 SLOT="1.4"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 DEPEND=">=sys-libs/ncurses-5.1
 	>=sys-libs/readline-4.1"
