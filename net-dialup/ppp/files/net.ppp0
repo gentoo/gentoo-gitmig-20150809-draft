@@ -4,7 +4,7 @@
 # Author:  Martin Schlemmer <azarah@gentoo.org>
 # Credits:  To all those I got ideas from :)
 # 
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/files/net.ppp0,v 1.4 2004/07/14 23:18:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ppp/files/net.ppp0,v 1.5 2004/09/27 11:21:23 lanius Exp $
 
 # NB: Config is in /etc/conf.d/net.$IFACE
 
@@ -168,7 +168,7 @@ setup_cfg_files() {
 		# Setup the chat file
 		if [ -n "${INITSTRING}" ]
 		then
-			sed -e "9i\\'OK\' \'${INITSTRING}\'" \
+			sed -e "/\$NUMBER/i\'OK\' \'${INITSTRING}\'"
 				-e "s:\$NUMBER:${NUMBER}:" \
 				${TEMPLATEDIR}/chat-default \
 				>/etc/ppp/chat-${PEER}
