@@ -1,12 +1,12 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/boa/boa-0.94.13.ebuild,v 1.8 2003/10/28 14:52:49 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/boa/boa-0.94.13.ebuild,v 1.9 2004/01/20 20:45:06 tuxus Exp $
 
 DESCRIPTION="Boa - A very small and very fast http daemon"
 SRC_URI="http://www.boa.org/${P}.tar.gz"
 HOMEPAGE="http://www.boa.org/"
 
-KEYWORDS="x86 sparc"
+KEYWORDS="x86 sparc ~mips"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="tetex"
