@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/pilot-link
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pilot-link/ChangeLog,v 1.6 2002/07/22 16:56:47 owen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pilot-link/ChangeLog,v 1.7 2002/07/30 12:22:18 danarmak Exp $
+
+*pilot-link-0.11.1-r1 (30 Jul 2002)
+
+  30 Jul 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Fix bug #5615 (headers installing into the filesystem root).
 
   22 Jul 2002; Owen Stampflee <owen@gentoo.org> :
 
