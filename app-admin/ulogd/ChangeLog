@@ -1,9 +1,11 @@
 # ChangeLog for app-admin/ulogd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.4 2002/07/30 04:33:17 cselkirk Exp $
-
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ulogd/ChangeLog,v 1.5 2002/10/17 13:18:24 aliz Exp $
 
 *ulogd-0.97-r1,  (20 Jun 2002)
+
+  17 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> ulogd-0.97-r1.ebuild :
+  Added IUSE.
 
   30 Jul 2002; Calum Selkirk <cselkirk@gentoo.org> ulogd-0.97-r1.ebuild :
 

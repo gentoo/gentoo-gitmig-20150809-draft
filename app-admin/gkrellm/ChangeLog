@@ -1,8 +1,11 @@
 # ChangeLog for app-admin/gkrellm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.14 2002/10/15 12:29:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/ChangeLog,v 1.15 2002/10/17 13:18:24 aliz Exp $
 
 *gkrellm-2.0.4 (15 Oct 2002)
+
+  17 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> gkrellm-2.0.4.ebuild :
+  Added IUSE.
 
   15 Oct 2002; Seemant Kulleen <seemant@gentoo.org> gkrellm-2.0.4.ebuid
   files/digest-gkrellm-2.0.4 files/gkrellmd :
