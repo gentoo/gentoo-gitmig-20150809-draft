@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/atk
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.42 2004/03/07 03:51:34 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.43 2004/03/18 17:55:03 foser Exp $
+
+*atk-1.6.0 (18 Mar 2004)
+
+  18 Mar 2004; foser <foser@gentoo.org> atk-1.6.0.ebuild :
+  New release
+  Minor fixes, corrected license
 
   06 Mar 2004; Stephen P. Becker <geoman@gentoo.org> atk-1.4.1.ebuild:
   Added ~mips keyword.
