@@ -1,0 +1,11 @@
+--- session.rb.orig	2004-03-27 05:26:36.000000000 +0900
++++ session.rb	2004-05-18 02:53:08.881014304 +0900
+@@ -56,7 +56,7 @@
+   end
+ 
+   def reply_successful (result = nil)
+-    if result then
++    if result and result.length > 0 then
+       result += "\n"
+     else
+       result = ""
