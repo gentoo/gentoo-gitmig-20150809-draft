@@ -1,6 +1,10 @@
 # ChangeLog for games-rpg/nwn
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.10 2004/05/17 18:13:40 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/nwn/ChangeLog,v 1.11 2004/05/17 18:43:12 wolf31o2 Exp $
+
+  17 May 2004; Chris Gianelloni <wolf31o2@gentoo.org> +files/nwn.png,
+  nwn-1.62.ebuild:
+  Added .desktop entry and closing bug #50809.
 
   17 May 2004; Danny van Dyk <kugelfang@gentoo.org> nwn-1.62.ebuild:
   Marked ~amd64.
