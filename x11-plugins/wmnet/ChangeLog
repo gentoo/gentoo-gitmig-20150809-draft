@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/wmnet
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnet/ChangeLog,v 1.6 2003/05/17 00:46:32 wwoods Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnet/ChangeLog,v 1.7 2003/06/17 21:41:54 wwoods Exp $
+
+  17 Jun 2003; Will Woods <wwoods@gentoo.org> wmnet-1.06.ebuild:
+  Marked stable for alpha
 
   16 May 2003; Will Woods <wwoods@gentoo.org> wmnet-1.06.ebuild,
   files/wmnet-1.06-nonx86.patch:
