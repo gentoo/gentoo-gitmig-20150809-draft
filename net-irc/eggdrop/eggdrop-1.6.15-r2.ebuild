@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.15-r2.ebuild,v 1.5 2004/05/29 16:16:27 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.15-r2.ebuild,v 1.6 2004/06/07 04:13:40 agriffis Exp $
 
 inherit fixheadtails eutils
 
@@ -107,10 +107,11 @@ src_install() {
 	doman doc/man1/eggdrop.1
 }
 
-pkg_postinfo() {
-	einfo "Please run /usr/bin/eggdrop-insaller to install your eggdrop bot."
+pkg_postinst() {
+	einfo "Please run /usr/bin/eggdrop-installer to install your eggdrop bot."
 
-	use ssl && \
+	if use ssl; then
 		einfo "You must ad 'set use-ssl [0/1]' to your bot.conf to disable/"
 		einfo "enable SSL connectivity."
+	fi
 }

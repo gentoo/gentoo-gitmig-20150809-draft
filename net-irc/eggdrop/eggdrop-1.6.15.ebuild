@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.15.ebuild,v 1.11 2004/05/29 16:16:27 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/eggdrop-1.6.15.ebuild,v 1.12 2004/06/07 04:13:40 agriffis Exp $
 
 inherit fixheadtails eutils
 
@@ -80,6 +80,6 @@ src_install() {
 	doman doc/man1/eggdrop.1
 }
 
-pkg_postinfo() {
-	einfo "Please run /usr/bin/eggdrop-insaller to install your eggdrop bot."
+pkg_postinst() {
+	einfo "Please run /usr/bin/eggdrop-installer to install your eggdrop bot."
 }
