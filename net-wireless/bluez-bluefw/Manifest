@@ -1,4 +1,6 @@
-MD5 a4aa58732e3d53faa3e189e627df116f ChangeLog 539
+MD5 dcc33c73371def956d34a292f3fb4ec1 ChangeLog 762
+MD5 4e93979a5384ebdb67b13ad1e349283a bluez-bluefw-0.9-r1.ebuild 591
 MD5 4f69dabdbd3f9f5dddfb93effac149fa bluez-bluefw-0.9.ebuild 1073
 MD5 23d1ee94cc2fb13eb6dcae0a51b061fa metadata.xml 237
 MD5 eab84ce6d63a8ba7c5a7773f9fa9f5e4 files/digest-bluez-bluefw-0.9 68
+MD5 eab84ce6d63a8ba7c5a7773f9fa9f5e4 files/digest-bluez-bluefw-0.9-r1 68
