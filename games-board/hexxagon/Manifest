@@ -1,3 +1,4 @@
-MD5 5c539b3d40961899859aadb9cbb4fb2e files/digest-hexxagon-0.3.1 66
-MD5 1cbf48bef5a0c870bb759904bc597652 hexxagon-0.3.1.ebuild 699
 MD5 a856ca8f17d07d857f6a688e494e5ca2 ChangeLog 388
+MD5 1cbf48bef5a0c870bb759904bc597652 hexxagon-0.3.1.ebuild 699
+MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
+MD5 5c539b3d40961899859aadb9cbb4fb2e files/digest-hexxagon-0.3.1 66

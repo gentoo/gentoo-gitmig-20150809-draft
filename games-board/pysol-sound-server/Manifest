@@ -1,3 +1,4 @@
-MD5 026b7c98c7f90f70ea2d386201d7234a files/digest-pysol-sound-server-3.00 76
-MD5 2d99bd8c9f5d50d6a8b1b1524a221f6f pysol-sound-server-3.00.ebuild 733
 MD5 67933affedc74bffa91e6b22ab9e2620 ChangeLog 435
+MD5 2d99bd8c9f5d50d6a8b1b1524a221f6f pysol-sound-server-3.00.ebuild 733
+MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
+MD5 026b7c98c7f90f70ea2d386201d7234a files/digest-pysol-sound-server-3.00 76

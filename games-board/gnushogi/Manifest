@@ -1,3 +1,4 @@
-MD5 a46c4bdecc0df352e8f7735ee4e6e37b files/digest-gnushogi-1.3 64
-MD5 513712ec8d845383bb0c5c5600698b18 gnushogi-1.3.ebuild 990
 MD5 f8edbdacef436ff98020098835f675b4 ChangeLog 584
+MD5 513712ec8d845383bb0c5c5600698b18 gnushogi-1.3.ebuild 990
+MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
+MD5 a46c4bdecc0df352e8f7735ee4e6e37b files/digest-gnushogi-1.3 64

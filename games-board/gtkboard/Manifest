@@ -1,3 +1,4 @@
-MD5 b0b4520ca5dd494b20ee91bd9ca78b32 files/digest-gtkboard-0.10.4 67
-MD5 97611694235d617818410c84fd8fc3fa gtkboard-0.10.4.ebuild 556
 MD5 d44b9de523eb588b49b9f54319b61878 ChangeLog 418
+MD5 97611694235d617818410c84fd8fc3fa gtkboard-0.10.4.ebuild 556
+MD5 a30c9d4ce8f9629d6d7323eaab258343 metadata.xml 241
+MD5 b0b4520ca5dd494b20ee91bd9ca78b32 files/digest-gtkboard-0.10.4 67
