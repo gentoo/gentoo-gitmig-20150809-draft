@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r4.ebuild,v 1.4 2004/08/17 22:38:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r4.ebuild,v 1.5 2004/08/18 17:50:05 mr_bones_ Exp $
 
 inherit gnuconfig flag-o-matic eutils
 
@@ -29,7 +29,7 @@ src_unpack() {
 		epatch "${FILESDIR}/gentoo-sparc32-dfa.patch"
 	fi
 	epatch "${FILESDIR}/${PV}-manpage.patch"
-	use uclibc && epatch ${FILESDIR}/grep-2.5.1-restrict_arr.patch            
+	use uclibc && epatch ${FILESDIR}/grep-2.5.1-restrict_arr.patch
 
 	# Fix configure scripts to detect linux-mips
 	gnuconfig_update
