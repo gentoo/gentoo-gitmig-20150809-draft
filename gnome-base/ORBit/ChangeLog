@@ -1,6 +1,13 @@
 # ChangeLog for gnome-base/ORBit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit/ChangeLog,v 1.6 2002/04/08 17:55:53 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit/ChangeLog,v 1.7 2002/04/12 19:18:57 spider Exp $
+
+
+  11 Apr 2002; Spider <spider@gentoo.org>
+  Update all glib dependencies to use glib-1.2*  in preparation of
+unmasking the glib-2.0.1 packages
+  
+
 
 *ORBit-0.5.14-r2 (8 Apr 2002)
 
