@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/vserver-sources-2.4.26.1.3.9-r1.ebuild,v 1.2 2004/06/24 23:02:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vserver-sources/vserver-sources-2.4.26.1.3.9-r2.ebuild,v 1.1 2004/06/25 20:49:38 plasmaroo Exp $
 
 ETYPE="sources"
 inherit kernel eutils
@@ -37,6 +37,8 @@ src_unpack() {
 	cd linux-${KV}${VEXTRAVERSION}
 	epatch ${WORKDIR}/patch-${KV}${VEXTRAVERSION}.diff
 	epatch ${FILESDIR}/${P}.CAN-2004-0394.patch || die "Failed to add the CAN-2004-0394 patch!"
+	epatch ${FILESDIR}/${P}.CAN-2004-0495.patch || die "Failed to add the CAN-2004-0495 patch!"
+	epatch ${FILESDIR}/${P}.CAN-2004-0535.patch || die "Failed to add the CAN-2004-0535 patch!"
 	epatch ${FILESDIR}/${P}.FPULockup-53804.patch || die "Failed to apply FPU-lockup patch!"
 	kernel_universal_unpack
 }
