@@ -1,0 +1,11 @@
+--- magma-1.0-pre21/lib/Makefile.old	2005-03-19 21:25:35.001643488 +0100
++++ magma-1.0-pre21/lib/Makefile	2005-03-19 21:25:44.615182008 +0100
+@@ -27,7 +27,7 @@
+ 	libmagmamsg.so
+ 
+ INCLUDE=-I.
+-CFLAGS+=-g -Werror -Wstrict-prototypes -Wshadow \
++CFLAGS+=-g -Wall -Wstrict-prototypes -Wshadow \
+ 	-fPIC -DPLUGINDIR=\"${plugindir}\" \
+ 	-D_GNU_SOURCE
+ 
