@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r2.ebuild,v 1.4 2002/11/16 18:28:29 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.1-r2.ebuild,v 1.5 2002/11/17 12:15:17 cretin Exp $
 
 IUSE="nls pic build"
 
@@ -107,6 +107,11 @@ src_unpack() {
 	#
 	# <azarah@gentoo.org> (7 Nov 2002).
 	cd ${S}; epatch ${FILESDIR}/${PV}/${P}-stack_end-compat.patch
+
+	# This one fixes a corner case with prelinking and preloading
+	# This is a diff from the glibc CVS
+	# <cretin@gentoo.org> (17 Nov 2002).
+	cd ${S}; epatch ${FILESDIR}/${PV}/${P}-prelinkfix.patch
 }
 
 src_compile() {
