@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.6.8-r6.ebuild,v 1.7 2004/04/26 17:52:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.6.8-r6.ebuild,v 1.8 2004/06/03 15:40:52 agriffis Exp $
 
 IUSE="cjk"
 
@@ -27,7 +27,7 @@ PROVIDE="virtual/ruby"
 
 src_unpack() {
 	unpack ${A}
-	if [ -n "`use cjk`" ] ; then
+	if use cjk ; then
 		pushd oniguruma
 		econf --with-rubydir=${S} || die "econf failed"
 		make ${SLOT/./}

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.0-r6.ebuild,v 1.5 2004/05/18 05:41:57 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.0-r6.ebuild,v 1.6 2004/06/03 15:40:52 agriffis Exp $
 
 IUSE="socks5 tcltk cjk"
 
@@ -33,7 +33,7 @@ PROVIDE="virtual/ruby"
 
 src_unpack() {
 	unpack ${A}
-	if [ -n "`use cjk`" ] ; then
+	if use cjk ; then
 		pushd oniguruma
 		econf --with-rubydir=${S} || die "econf failed"
 		make ${SLOT/./}
@@ -48,7 +48,7 @@ src_unpack() {
 
 src_compile() {
 	# Socks support via dante
-	if [ ! -n "`use socks5`" ] ; then
+	if ! use socks5 ; then
 		# Socks support can't be disabled as long as SOCKS_SERVER is
 		# set and socks library is present, so need to unset
 		# SOCKS_SERVER in that case.

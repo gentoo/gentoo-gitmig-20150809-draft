@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.6.8-r10.ebuild,v 1.2 2004/05/18 05:41:57 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.6.8-r10.ebuild,v 1.3 2004/06/03 15:40:52 agriffis Exp $
 
 IUSE="cjk"
 
@@ -34,7 +34,7 @@ src_unpack() {
 	epatch ../${P}-${SNAP_DATE}.diff
 	use amd64 && epatch ${FILESDIR}/${P}-fix-x86_64.patch
 
-	if [ -n "`use cjk`" ] ; then
+	if use cjk ; then
 		einfo "Applying ${ONIGURUMA}"
 		cd ${WORKDIR}/oniguruma
 		econf --with-rubydir=${S} || die "econf failed"

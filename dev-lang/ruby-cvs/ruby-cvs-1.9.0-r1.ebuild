@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-cvs/ruby-cvs-1.9.0-r1.ebuild,v 1.3 2004/04/10 06:00:46 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby-cvs/ruby-cvs-1.9.0-r1.ebuild,v 1.4 2004/06/03 15:43:43 agriffis Exp $
 
 IUSE="socks5 tcltk"
 
@@ -43,7 +43,7 @@ src_compile() {
 	fi
 
 	# Socks support via dante
-	if [ ! -n "`use socks5`" ] ; then
+	if ! use socks5 ; then
 		# Socks support can't be disabled as long as SOCKS_SERVER is
 		# set and socks library is present, so need to unset
 		# SOCKS_SERVER in that case.
