@@ -247,3 +247,4 @@ move net-www/netrik www-client/netrik
 move net-www/rawdog net-news/rawdog
 move net-www/mozilla www-client/mozilla
 move net-www/epiphany www-client/epiphany
+move net-www/mozilla-launcher www-client/mozilla-launcher
