@@ -1,6 +1,20 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.28 2003/07/21 06:37:23 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.29 2003/08/01 08:46:29 raker Exp $
+
+*vlc-0.6.1 (01 Aug 2003)
+
+  01 Aug 2003; Nick Hadaway <raker@gentoo.org> vlc-0.6.1.ebuild,
+  files/buildorder.patch:
+  The "elusive math equation" release.
+  Version bump.  Re-organized the ebuild to coincide with the listing
+  of configure options outputted by ./configure --help.  Added support
+  for USE variables faad, xosd, and matroska.  Added a patch based on
+  upstream cvs which allows the mozilla plugin to compile properly.
+  I have updated the dependancies to the new ebuilds of libdvdcss-1.2.8
+  and libdvbpsi-0.1.3 as upstream authors suggest these versions.
+  We are now weighing in at 33 use variables folks. :)  Presently, 
+  perhaps the most prolific package in Portage. :)
 
   21 Jul 2003; Nick Hadaway <raker@gentoo.org> vlc-0.6.0-r1.ebuild:
   Removed the matrox use variable and forced disable-mga as the
