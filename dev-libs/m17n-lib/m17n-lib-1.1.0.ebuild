@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/m17n-lib/m17n-lib-1.1.0.ebuild,v 1.4 2004/10/19 08:31:51 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/m17n-lib/m17n-lib-1.1.0.ebuild,v 1.5 2004/11/20 14:03:35 usata Exp $
+
+inherit eutils
 
 DESCRIPTION="Multilingual Library for Unix/Linux"
 HOMEPAGE="http://www.m17n.org/m17n-lib/"
@@ -18,8 +20,6 @@ DEPEND="virtual/x11
 	>=media-libs/freetype-2.1
 	>=dev-libs/libotf-0.9.2
 	>=dev-db/m17n-db-${PV}"
-
-inherit eutils
 
 src_unpack() {
 	unpack ${A}
