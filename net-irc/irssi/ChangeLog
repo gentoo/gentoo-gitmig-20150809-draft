@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/irssi
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.24 2003/06/19 21:55:11 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/ChangeLog,v 1.25 2003/07/18 16:54:22 johnm Exp $
+
+  18 Jul 2003; John Mylchreest <johnm@gentoo.org>; irssi-0.8.6-r2.ebuild:
+  adding irssi-cvs block
 
   19 Jun 2003; <msterret@gentoo.org> irssi-0.8.6-r2.ebuild:
   Ugly hack to work around compression of the html files. (bug 23048)
