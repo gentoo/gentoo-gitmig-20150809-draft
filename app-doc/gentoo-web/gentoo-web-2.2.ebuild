@@ -1,12 +1,12 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.24 2001/11/15 22:41:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.25 2002/01/02 21:06:37 drobbins Exp $
  
 # WARNING: THIS EBUILD SHOULD BE EDITED BY DANIEL ROBBINS ONLY
  
 TEMPLATE="xsl/guide-main.xsl"
-S=${WORKDIR}/${P}
+S=${WORKDIR}/${P}/gentoo-src
 DESCRIPTION="www.gentoo.org website"
 SRC_URI="http://www.red-bean.com/cvs2cl/cvs2cl.pl"
 HOMEPAGE="http://www.gentoo.org"
@@ -19,13 +19,15 @@ src_unpack() {
 		echo "This will zap stuff in ${WEBROOT}."
 		echo "Beware -- maintainers only."
 	fi
+	cd ${WORKDIR}/${P}
+	cvs co -d /home/cvsroot gentoo-src
 }
 
 src_install() {
 	dodir ${WEBROOT}/doc
 	dodir ${WEBROOT}/projects
 	insinto ${WEBROOT}/doc
-	cd ${FILESDIR}
+	cd ${S}
 	local x
 	for x in build desktop xml-guide portage-user gentoo-howto faq nvidia_tsg openafs cvs-tutorial
 	do
@@ -33,7 +35,7 @@ src_install() {
 	done
 	dodir ${WEBROOT}/images
 	insinto ${WEBROOT}/images
-	cd ${FILESDIR}/images
+	cd ${S}/images
 	doins paypal.png gtop-s.jpg gbot-s.gif gridtest.gif gentoo-new.gif install*.gif fishhead.gif line.gif icon-* keychain-2.gif gentoo-2.gif
 	insinto ${WEBROOT}
 	doins favicon.ico
@@ -41,7 +43,7 @@ src_install() {
 
 	
 	#dynamic firewalls tools page
-	cd ${FILESDIR}
+	cd ${S}
 	xsltproc $TEMPLATE xml/dynfw.xml > ${D}${WEBROOT}/projects/dynfw.html	|| die
 	xsltproc $TEMPLATE xml/project-xml.xml > ${D}${WEBROOT}/projects/xml.html	|| die
 	
@@ -58,7 +60,7 @@ src_install() {
 	
 	cd ..
 	tar czvf ${D}${WEBROOT}/projects/guide-xml-latest.tar.gz files 
-	cd ${FILESDIR}
+	cd ${S}
 	
 	insinto ${WEBROOT}
 
@@ -72,20 +74,20 @@ src_install() {
 	#install XSL for later use
 	dodir ${WEBROOT}/xsl
 	insinto ${WEBROOT}/xsl
-	cd ${FILESDIR}/xsl
+	cd ${S}/xsl
 	doins cvs.xsl guide-main.xsl
 
 	#install snddevices script
 	dodir ${WEBROOT}/scripts
 	insinto ${WEBROOT}/scripts
-	cd ${FILESDIR}/scripts
+	cd ${S}/scripts
 	doins snddevices
 
 	#wikistuffs
 #	dodir ${WEBROOT}/wiki/images
 #	dodir ${WEBROOT}/wiki/bios
 #	insinto ${WEBROOT}/wiki
-#	cd ${FILESDIR}/wiki
+#	cd ${S}/wiki
 #	doins *.php
 #	cd images
 #	insinto ${WEBROOT}/wiki/images
@@ -102,7 +104,7 @@ src_install() {
 #	chmod -R g+rws htdocs
 
 	dobin ${DISTDIR}/cvs2cl.pl
-	dosbin ${FILESDIR}/bin/cvslog.sh
+	dosbin ${S}/bin/cvslog.sh
 #	dosbin ${FILESDIR}/bin/wiki.pl
 #	chmod o-rwx,g+rx ${D}/usr/sbin/wiki.pl
 #	chown root.dbadmin ${D}/usr/sbin/wiki.pl
