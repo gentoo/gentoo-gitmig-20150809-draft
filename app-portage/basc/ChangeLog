@@ -1,6 +1,11 @@
 # ChangeLog for app-portage/basc
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/basc/ChangeLog,v 1.20 2005/01/19 23:01:30 squash Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/basc/ChangeLog,v 1.21 2005/01/24 16:20:12 pvdabeel Exp $
+
+*basc-1.5.8 (23 Jan 2005)
+  
+  23 Jan 2005; Pieter Van den Abeele <pvdabeel@gentoo.org> basc-1.5.8.ebuild:
+  Version bump ; 78832 ; masked as testing
 
   19 Jan 2005; Josh Grebe <squash@gentoo.org> basc-1.5.2.ebuild,
   basc-1.5.3.ebuild, basc-1.5.4.ebuild, basc-1.5.5.ebuild, basc-1.5.6.ebuild,
