@@ -1,6 +1,10 @@
 # ChangeLog for sys-cluster/util-vserver
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/ChangeLog,v 1.5 2004/05/12 14:56:46 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/util-vserver/ChangeLog,v 1.6 2004/06/07 22:29:39 mr_bones_ Exp $
+
+  07 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  util-vserver-0.29.ebuild:
+  clean older ebuild
 
   12 May 2004; David Holm <dholm@gentoo.org> util-vserver-0.29.5.ebuild:
   Added to ~ppc.
