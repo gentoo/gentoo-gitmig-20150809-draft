@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r1.ebuild,v 1.1 2003/04/12 16:33:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/slocate/slocate-2.7-r1.ebuild,v 1.2 2003/04/13 01:07:45 lostlogic Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Secure locate provides a secure way to index and quickly search for files on your system (drop-in replacement for 'locate')"
@@ -17,6 +17,7 @@ src_install() {
 
 	dodir /usr/share/man/man1
 
+	sed -i -e "/groupadd/s/^/#/;/chown.*slocate/s/^/#/" Makefile
 	make DESTDIR=${D} install || die
 
 	# make install for this package is blocked by sandbox
@@ -67,6 +68,6 @@ pkg_postinst() {
 
 	einfo "Please note that the /etc/updatedb.conf file is EMPTY"
 	einfo "There is a sample configuration file in"
-	einfo "/usr/share/doc/${P}"
+	einfo "/usr/share/doc/${PN}-${PVR}"
 
 }
