@@ -1,13 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5.ebuild,v 1.2 2002/02/11 17:17:13 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.2.5.ebuild,v 1.3 2002/02/11 17:28:22 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU libc6 (also called glibc2) C library"
 SRC_URI="ftp://sources.redhat.com/pub/glibc/releases/glibc-${PV}.tar.bz2
-	 ftp://sources.redhat.com/pub/glibc/releases/glibc-linuxthreads-${PV}.tar.bz2
-	 http://www.ibiblio.org/gentoo/distfiles/glibc-manpages-${PV}.tar.bz2"
+	 ftp://sources.redhat.com/pub/glibc/releases/glibc-linuxthreads-${PV}.tar.bz2"
 HOMEPAGE="http://www.gnu.org/software/libc/libc.html"
 
 #Specific Linux headers are now required so that we build from a stable "base"
@@ -34,7 +33,7 @@ src_unpack() {
 	cd ${S}
 	#extract pre-made man pages.  Otherwise we need perl, which is a no-no.
 	mkdir man; cd man
-	tar xjf ${DISTDIR}/glibc-manpages-${PV}.tar.bz2
+	tar xjf ${FILESDIR}/glibc-manpages-${PV}.tar.bz2
 	cd ${S}
 	unpack glibc-linuxthreads-${PV}.tar.bz2
 	
