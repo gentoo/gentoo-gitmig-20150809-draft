@@ -1,6 +1,12 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.176 2005/02/21 17:08:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.177 2005/02/27 06:20:29 robbat2 Exp $
+
+  26 Feb 2005; Robin H. Johnson <robbat2@gentoo.org> mysql-4.0.22-r1.ebuild,
+  mysql-4.0.22-r2.ebuild, mysql-4.0.22.ebuild, mysql-4.0.23-r1.ebuild,
+  mysql-4.0.23-r2.ebuild, mysql-4.0.23.ebuild, mysql-4.1.7.ebuild,
+  mysql-4.1.8-r1.ebuild, mysql-4.1.8.ebuild:
+  Bug #83431, fix since 4.0.24 seems to be a long time in releasing.
 
   20 Feb 2005; Aron Griffis <agriffis@gentoo.org> mysql-4.0.22-r2.ebuild,
   mysql-4.1.8-r1.ebuild:
