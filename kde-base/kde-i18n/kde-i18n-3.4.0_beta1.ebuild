@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.4.0_beta1.ebuild,v 1.2 2005/01/15 10:23:39 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kde-i18n/kde-i18n-3.4.0_beta1.ebuild,v 1.3 2005/01/17 16:49:56 greg_g Exp $
 
 inherit kde eutils
 
@@ -13,7 +13,6 @@ LICENSE="GPL-2"
 KEYWORDS="~x86"
 SLOT="${KDEMAJORVER}.${KDEMINORVER}"
 
-DEPEND="~kde-base/kdebase-${PV}"
 need-kde ${PV}
 
 LANGS="af ar az be bg bn bs ca cs cy da de el en_GB eo es et eu fa \
