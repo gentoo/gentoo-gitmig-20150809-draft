@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/bastille/bastille-2.1.1.ebuild,v 1.7 2003/09/05 21:22:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/bastille/bastille-2.1.1.ebuild,v 1.8 2003/09/05 21:23:17 seemant Exp $
 
 inherit perl-module
 
@@ -41,12 +41,12 @@ src_compile() {
 
 	cd ${S}/psad/whois-4.5.29
 	emake || die
-	
+
 	cd ${S}
 }
 
 src_install() {
-	
+
 	keepdir /var/log/psad /var/lib/psad /var/run/psad /var/lock/subsys/${PN}
 	dodir /etc/Bastille
 
@@ -108,7 +108,7 @@ src_install() {
 		RemoteAccess.pm SecureInetd.pm Sendmail.pm TMPDIR.pm  \
 		test_AccountSecurity.pm test_Apache.pm test_DNS.pm \
 		test_FTP.pm test_HP_UX.pm test_MiscellaneousDaemons.pm \
-		test_SecureInetd.pm test_Sendmail.pm TestAPI.pm IPFilter.pm 
+		test_SecureInetd.pm test_Sendmail.pm TestAPI.pm IPFilter.pm
 
 	# Documentation
 	cd ${S}
