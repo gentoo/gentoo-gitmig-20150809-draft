@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/tcng
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tcng/ChangeLog,v 1.1 2003/11/15 06:53:43 robbat2 Exp $
+
+*tcng-9h (14 Nov 2003)
+
+  14 Nov 2003; Robin H. Johnson <robbat2@gentoo.org> tcng-9h.ebuild:
+  new package as per bug #22103, submitted by cparpart@surakware.net, but
+  heavily modified to build properly
+
