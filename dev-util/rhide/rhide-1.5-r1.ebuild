@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5-r1.ebuild,v 1.7 2003/11/14 20:06:13 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5-r1.ebuild,v 1.8 2004/01/31 02:50:16 genone Exp $
 
 #SNAPSHOT="20020825"
 TVISIONVER="2.0.1"
@@ -46,6 +46,11 @@ DEPEND="virtual/glibc
 
 src_unpack() {
 	unpack ${A}
+	cd ${WORKDIR}
+
+	# gcc-3.3 fixes, contributed by <jochen.eisinger@gmx.de>
+	epatch ${FILESDIR}/${P}-gcc-3.3.patch
+
 	cd ${S}
 
 	# Get it to work with rhtvision-2.0
