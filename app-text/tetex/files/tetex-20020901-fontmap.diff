@@ -1,0 +1,57 @@
+--- texk.orig/tetex/updmap   Mon Sep  2 11:16:34 2002
++++ texk/tetex/updmap        Mon Sep  2 10:32:22 2002
+@@ -290,13 +290,13 @@
+     -e 's/ NimbusMonL-Regu / Courier /' \
+     -e 's/ NimbusMonL-ReguObli / Courier-Oblique /' \
+     -e 's/ NimbusSanL-Bold / Helvetica-Bold /' \
+-    -e 's/ NimbusSanL-BoldCond / Helvetica-Condensed-Bold /' \
++    -e 's/ NimbusSanL-BoldCond / Helvetica-Narrow-Bold /' \
+     -e 's/ NimbusSanL-BoldItal / Helvetica-BoldOblique /' \
+-    -e 's/ NimbusSanL-BoldCondItal / Helvetica-Condensed-BoldObl /' \
++    -e 's/ NimbusSanL-BoldCondItal / Helvetica-Narrow-BoldOblique /' \
+     -e 's/ NimbusSanL-Regu / Helvetica /' \
+-    -e 's/ NimbusSanL-ReguCond / Helvetica-Condensed /' \
++    -e 's/ NimbusSanL-ReguCond / Helvetica-Narrow /' \
+     -e 's/ NimbusSanL-ReguItal / Helvetica-Oblique /' \
+-    -e 's/ NimbusSanL-ReguCondItal / Helvetica-Condensed-Oblique /' \
++    -e 's/ NimbusSanL-ReguCondItal / Helvetica-Narrow-Oblique /' \
+     -e 's/ CenturySchL-Bold / NewCenturySchlbk-Bold /' \
+     -e 's/ CenturySchL-BoldItal / NewCenturySchlbk-BoldItalic /' \
+     -e 's/ CenturySchL-Roma / NewCenturySchlbk-Roman /' \
+@@ -335,13 +335,13 @@
+     -e 's/\<ucrr8a.pfb\>/pcrr8a.pfb/' \
+     -e 's/\<ucrro8a.pfb\>/pcrro8a.pfb/' \
+     -e 's/\<uhvb8a.pfb\>/phvb8a.pfb/' \
+-    -e 's/\<uhvb8ac.pfb\>/phvb8ac.pfb/' \
++    -e 's/\<uhvb8ac.pfb\>/phvb8an.pfb/' \
+     -e 's/\<uhvbo8a.pfb\>/phvbo8a.pfb/' \
+-    -e 's/\<uhvbo8ac.pfb\>/phvbo8ac.pfb/' \
++    -e 's/\<uhvbo8ac.pfb\>/phvbo8an.pfb/' \
+     -e 's/\<uhvr8a.pfb\>/phvr8a.pfb/' \
+-    -e 's/\<uhvr8ac.pfb\>/phvr8ac.pfb/' \
++    -e 's/\<uhvr8ac.pfb\>/phvr8an.pfb/' \
+     -e 's/\<uhvro8a.pfb\>/phvro8a.pfb/' \
+-    -e 's/\<uhvro8ac.pfb\>/phvro8ac.pfb/' \
++    -e 's/\<uhvro8ac.pfb\>/phvro8an.pfb/' \
+     -e 's/\<uncb8a.pfb\>/pncb8a.pfb/' \
+     -e 's/\<uncbi8a.pfb\>/pncbi8a.pfb/' \
+     -e 's/\<uncr8a.pfb\>/pncr8a.pfb/' \
+@@ -425,13 +425,13 @@
+     -e 's/\<ucrr8a.pfb\>/com_____.pfb/' \
+     -e 's/\<ucrro8a.pfb\>/coo_____.pfb/' \
+     -e 's/\<uhvb8a.pfb\>/hvb_____.pfb/' \
+-    -e 's/\<uhvb8ac.pfb\>/hvcb____.pfb/' \
++    -e 's/\<uhvb8ac.pfb\>/hvnb____.pfb/' \
+     -e 's/\<uhvbo8a.pfb\>/hvbo____.pfb/' \
+-    -e 's/\<uhvbo8ac.pfb\>/hvcbo___.pfb/' \
++    -e 's/\<uhvbo8ac.pfb\>/hvnbo___.pfb/' \
+     -e 's/\<uhvr8a.pfb\>/hv______.pfb/' \
+-    -e 's/\<uhvr8ac.pfb\>/hvc_____.pfb/' \
++    -e 's/\<uhvr8ac.pfb\>/hvn_____.pfb/' \
+     -e 's/\<uhvro8a.pfb\>/hvo_____.pfb/' \
+-    -e 's/\<uhvro8ac.pfb\>/hvcdo___.pfb/' \
++    -e 's/\<uhvro8ac.pfb\>/hvno____.pfb/' \
+     -e 's/\<uncb8a.pfb\>/ncb_____.pfb/' \
+     -e 's/\<uncbi8a.pfb\>/ncbi____.pfb/' \
+     -e 's/\<uncr8a.pfb\>/ncr_____.pfb/' \
+
