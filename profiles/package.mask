@@ -290,3 +290,12 @@ media-sound/gkrellm-volume
 media-sound/gkrellmms
 net-misc/gkrellmwireless
 
+x11-misc/gkrellm-gnome
+x11-misc/gkrellkam
+x11-misc/gkrellm-seti
+x11-misc/gkrellmlaunch
+x11-misc/gkrellweather
+x11-misc/gkrellm-volume
+x11-misc/gkrellmms
+x11-misc/gkrellmwireless
+
