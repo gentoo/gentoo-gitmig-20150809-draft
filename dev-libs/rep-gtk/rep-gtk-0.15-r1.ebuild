@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/rep-gtk/rep-gtk-0.15-r1.ebuild,v 1.2 2001/05/20 13:50:36 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/rep-gtk/rep-gtk-0.15-r1.ebuild,v 1.3 2001/06/04 10:34:15 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -14,7 +14,11 @@ DEPEND=">=x11-libs/gtk+-1.2.9
 	gnome? ( >=gnome-base/libglade-0.16
 		 >=gnome-base/gdk-pixbuf-0.9.0-r1 )"
 
-src_compile() {                           
+DEPEND=">=x11-libs/gtk+-1.2.9
+	gnome? ( >=gnome-base/libglade-0.16
+		 >=gnome-base/gdk-pixbuf-0.9.0-r1 )"
+
+src_compile() {
   if [ -n "`use gnome`" ]
   then
       try ./configure --host=${CHOST} --with-gnome --with-libglade
