@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.1.1.ebuild,v 1.2 2004/08/28 14:34:29 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-core/nessus-core-2.1.1.ebuild,v 1.3 2004/09/01 11:44:54 eldad Exp $
 
 inherit eutils
 
@@ -14,7 +14,8 @@ SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc ~alpha ~amd64"
 IUSE="X tcpd gtk2 debug prelude"
 
-DEPEND="=net-analyzer/libnasl-${PV}
+DEPEND="=net-analyzer/nessus-libraries-${PV}
+	=net-analyzer/libnasl-${PV}
 	tcpd? ( sys-apps/tcp-wrappers )
 	X? ( virtual/x11
 		!gtk2? ( =x11-libs/gtk+-1.2* )
