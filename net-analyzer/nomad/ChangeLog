@@ -1,0 +1,10 @@
+# ChangeLog for net-analyzer/nomad
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nomad/ChangeLog,v 1.1 2005/03/11 17:04:02 angusyoung Exp $
+
+*nomad-0.3.2 (11 Mar 2005)
+
+  11 Mar 2005; Otavio Piske <angusyoung@gentoo.org> +nomad-0.3.2.ebuild:
+  Initial release of nomad. Thanks to Brendan Shanks <pip@opus.homelinux.com>
+  for submitting the ebuild
+
