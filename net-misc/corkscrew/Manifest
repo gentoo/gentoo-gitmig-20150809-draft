@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 cc72c4f2e9e5cce60b997a2f9cbec318 ChangeLog 433
-MD5 586ef82d248585f48e10a4765b12fe97 corkscrew-2.0.ebuild 556
+MD5 c133f5810571eb105b87e928ce1331dd ChangeLog 526
+MD5 1a6ce8fdadeeb7126d0657725253ffb7 corkscrew-2.0.ebuild 560
 MD5 12295cb4bdc7f2abb1edbd2269071ef0 metadata.xml 346
 MD5 f331c3776d1be067d47223c196e75d6e files/digest-corkscrew-2.0 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBYHRII1lqEGTUzyQRAk/XAKCF9vgocRlm4AGsFxx8FW+A8CTTgwCeJB81
-AzrAmBQZK4RBJiO2/o7Vbgs=
-=XF2b
------END PGP SIGNATURE-----
