@@ -1,5 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/oroborus-extras/oroborus-extras-2.0.1-r1.ebuild,v 1.11 2003/06/12 19:08:16 msterret Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Other stuff for oroborus"

@@ -1,5 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion-devel/ion-devel-20020605.ebuild,v 1.13 2003/06/12 19:01:21 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A keyboard-based window manager - unstable version"

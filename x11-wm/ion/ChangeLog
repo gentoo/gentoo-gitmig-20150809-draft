@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/ion
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion/ChangeLog,v 1.8 2003/05/24 00:10:53 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion/ChangeLog,v 1.9 2003/06/12 19:10:02 msterret Exp $
+
+  12 Jun 2003; <msterret@gentoo.org> ion-20020207.ebuild:
+  add Header
 
   24 May 2003; Hanno Boeck <hanno@gentoo.org> ion-20020207-r1.ebuild:
   Fixed license var.
