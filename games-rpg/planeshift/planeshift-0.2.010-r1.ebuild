@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/planeshift/planeshift-0.2.010-r1.ebuild,v 1.6 2004/03/29 00:54:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/planeshift/planeshift-0.2.010-r1.ebuild,v 1.7 2004/05/06 19:52:56 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -11,12 +11,13 @@ SRC_URI="mirror://gentoo/distfiles/${P}.tar.bz2"
 LICENSE="GPL-2 | Planeshift"
 SLOT="0"
 KEYWORDS="x86 ppc"
+IUSE=""
 
 DEPEND="net-misc/curl
 	dev-games/crystalspace
 	dev-games/cel"
 
-S=${WORKDIR}/${PN}
+S="${WORKDIR}/${PN}"
 
 export PLANESHIFT_PREFIX=${PLANESHIFT_PREFIX:-${GAMES_PREFIX_OPT}/${PN}}
 export CRYSTAL_PREFIX=${CRYSTAL_PREFIX:-${GAMES_PREFIX_OPT}/crystal}
@@ -24,7 +25,7 @@ export CEL_PREFIX=${CEL_PREFIX:-${CRYSTAL_PREFIX}}
 
 src_unpack() {
 	unpack ${A}
-	epatch ${FILESDIR}/${P}-fix-cast.diff
+	epatch "${FILESDIR}/${P}-fix-cast.diff"
 }
 
 src_compile() {

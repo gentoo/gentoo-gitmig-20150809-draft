@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-rpg/pcgen/pcgen-5.4.ebuild,v 1.2 2004/02/29 21:10:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-rpg/pcgen/pcgen-5.4.ebuild,v 1.3 2004/05/06 19:54:54 mr_bones_ Exp $
 
 inherit games
 
@@ -16,13 +16,17 @@ SRC_URI="mirror://sourceforge/pcgen/pcgen${MY_PV}_part1of3.zip
 LICENSE="LGPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc alpha"
+IUSE=""
 
-RDEPEND="|| ( >=virtual/jdk-1.3.1 >=virtual/jre-1.3.1 )"
+RDEPEND="virtual/glibc
+	|| (
+		>=virtual/jdk-1.3.1
+		>=virtual/jre-1.3.1 )"
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
 	app-arch/unzip"
 
-S=${WORKDIR}
+S="${WORKDIR}"
 
 src_unpack() {
 	PDF_FILES="pdf_new.zip"
