@@ -1,0 +1,14 @@
+--- SDL-1.2.5-old/src/video/SDL_stretch.c	2002-03-06 12:23:03.000000000 +0100
++++ SDL-1.2.5/src/video/SDL_stretch.c	2003-05-28 21:46:38.000000000 +0200
+@@ -261,9 +261,8 @@
+ 			break;
+ 		    default:
+ #ifdef __GNUC__
+-			__asm__ __volatile__ ("
+-				call _copy_row
+-			"
++			__asm__ __volatile__ (
++				"call _copy_row"
+ 			: "=&D" (u1), "=&S" (u2)
+ 			: "0" (dstp), "1" (srcp)
+ 			: "memory" );

@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libsdl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.22 2003/04/14 05:42:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/ChangeLog,v 1.23 2003/05/28 19:59:27 hanno Exp $
+
+  28 May 2003; Hanno Boeck <hanno@gentoo.org> libsdl-1.2.5-r2.ebuild,
+  files/libsdl_gcc33_fix.diff:
+  Fixed gcc 3.3 compile problem. Resolves bug #21808.
 
 *libsdl-1.2.5-r2 (13 Apr 2003)
 

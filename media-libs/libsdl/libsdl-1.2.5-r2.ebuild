@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.5-r2.ebuild,v 1.1 2003/04/14 05:42:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libsdl/libsdl-1.2.5-r2.ebuild,v 1.2 2003/05/28 19:59:27 hanno Exp $
 
 IUSE="arts xv opengl fbcon aalib nas esd X svga ggi alsa"
 
@@ -22,7 +22,7 @@ RDEPEND=">=media-libs/audiofile-0.1.9
 	arts? ( kde-base/arts )
 	svga? ( >=media-libs/svgalib-1.4.2 )
 	opengl? ( virtual/opengl )"
-# This creates circular deps for the moment ... 
+# This creates circular deps for the moment ...
 #	directfb? ( dev-libs/DirectFB )"
 
 DEPEND="${RDEPEND}
@@ -31,11 +31,12 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
+	epatch ${FILESDIR}/libsdl_gcc33_fix.diff
 	cd ${S}/src/video/directfb
 
 	sed -i "s:DICAPS_ALL, ::" SDL_DirectFB_video.c
 
-	# Patch to allow SDL apps to choose the BEST refresh rates for a given 
+	# Patch to allow SDL apps to choose the BEST refresh rates for a given
 	# resolution in XFree86-4.3 instead of the worst one.
 	cd ${S}
 	use X && epatch ${FILESDIR}/${P}-xfree-4.3.patch.bz2
@@ -71,7 +72,7 @@ src_compile() {
 	use arts \
 		&& myconf="${myconf} --enable-arts" \
 		|| myconf="${myconf} --disable-arts"
-	
+
 	use svga \
 		&& myconf="${myconf} --enable-video-svga" \
 		|| myconf="${myconf} --disable-video-svga"
