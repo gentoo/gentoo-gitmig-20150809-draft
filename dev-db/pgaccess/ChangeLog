@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/pgaccess
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/pgaccess/ChangeLog,v 1.10 2005/01/01 17:39:53 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/pgaccess/ChangeLog,v 1.11 2005/02/09 21:25:44 nakano Exp $
+
+  09 Feb 2005; Masatomo Nakano <nakano@gentoo.org>
+  pgaccess-0.99.0.20040219.ebuild:
+  Makred stable on x86.
 
 *pgaccess-0.99.0.20040219 (23 Sep 2004)
 
