@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.12.ebuild,v 1.7 2004/01/11 14:02:53 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/ted/ted-2.12.ebuild,v 1.8 2004/04/25 22:05:10 agriffis Exp $
 
 DESCRIPTION="X-based rich text editor."
 HOMEPAGE="http://www.nllgg.nl/Ted"
@@ -27,7 +27,7 @@ src_unpack() {
 src_compile() {
 	for dir in Ted tedPackage appFrame appUtil ind bitmap libreg; do
 		cd ${S}/${dir}
-		econf --cache-file=../config.cache
+		econf --cache-file=../config.cache || die "econf failed"
 	done
 
 	# The makefile doesn't really allow parallel make, but it does

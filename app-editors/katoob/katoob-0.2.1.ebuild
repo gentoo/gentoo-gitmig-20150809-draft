@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/katoob-0.2.1.ebuild,v 1.5 2004/03/16 10:37:06 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/katoob-0.2.1.ebuild,v 1.6 2004/04/25 22:03:20 agriffis Exp $
 
 DESCRIPTION="Small text editor based on the GTK+ library 2.0"
 HOMEPAGE="http://www.arabeyes.org/project.php?proj=katoob"
@@ -18,7 +18,7 @@ RDEPEND="nls? ( sys-devel/gettext )"
 src_compile() {
 	local myconf=""
 	use nls || myconf="--disable-nls"
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 	emake || die "Compilation failed"
 }
 

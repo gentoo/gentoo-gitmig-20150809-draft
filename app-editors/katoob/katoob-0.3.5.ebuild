@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/katoob-0.3.5.ebuild,v 1.3 2004/03/16 10:37:06 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/katoob-0.3.5.ebuild,v 1.4 2004/04/25 22:03:20 agriffis Exp $
 
 inherit eutils
 
@@ -30,7 +30,7 @@ src_compile() {
 	use debug && myconf="${myconf} --enable-debug"
 	use spell && myconf="${myconf} --enable-spell"
 
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 	emake || die "Compilation failed"
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/qemacs-0.3.1.ebuild,v 1.7 2004/04/03 14:51:23 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/qemacs-0.3.1.ebuild,v 1.8 2004/04/25 22:04:06 agriffis Exp $
 
 inherit eutils
 
@@ -27,7 +27,7 @@ src_compile() {
 	local myconf
 	use X && myconf="--enable-x11" || myconf="--disable-x11"
 	use png && myconf="${myconf} --enable-png" || myconf="${myconf} --disable-png"
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 	emake || die
 }
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/ted
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
 
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> ted-2.11.ebuild,
+  ted-2.12.ebuild:
+  Add die following econf for bug 48950
+
   06 Apr 2004; <spider@gentoo.org> :
   I just got a note from the author that 2.15 is broken (tables support) but
   that we should expect 2.16 in the next two months.

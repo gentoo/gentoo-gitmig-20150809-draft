@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/katoob
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/ChangeLog,v 1.5 2004/03/16 10:37:06 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/ChangeLog,v 1.6 2004/04/25 22:03:20 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> katoob-0.2.1.ebuild,
+  katoob-0.3.5.ebuild:
+  Add die following econf for bug 48950
 
   16 Mar 2004; L. Boshell <leonardop@gentoo.org> katoob-0.3.5.ebuild:
   Inherit from eutils.

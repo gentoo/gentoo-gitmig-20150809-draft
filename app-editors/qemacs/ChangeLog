@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/qemacs
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.5 2004/04/03 14:51:23 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/ChangeLog,v 1.6 2004/04/25 22:04:06 agriffis Exp $
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> qemacs-0.3.1.ebuild:
+  Add die following econf for bug 48950
 
   03 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> qemacs-0.3.1.ebuild:
   Adding amd64 keyword, closing #46659.
