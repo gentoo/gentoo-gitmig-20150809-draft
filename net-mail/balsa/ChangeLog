@@ -1,6 +1,18 @@
 # ChangeLog for net-mail/balsa
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/ChangeLog,v 1.34 2003/04/23 00:28:54 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/balsa/ChangeLog,v 1.35 2003/04/25 13:26:45 foser Exp $
+
+*balsa-2.0.10 (25 Apr 2003)
+
+  25 Apr 2003; foser <foser@gentoo.org> balsa-2.0.10.ebuild :
+  New version (#18142)
+  Fix gtkhtml switch (#19880)
+  Make more use of gnome2 eclass, set SLOT to 0
+
+*balsa-1.4.3 (25 Apr 2003) <foser@gentoo.org> balsa-1.4.3.ebuild :
+  
+  25 Apr 2003; foser <foser@gentoo.org> balsa-1.4.3.ebuild :
+  New version (#18142), set SLOT to 0, balsa isn't slotted
 
 *balsa-2.0.9-r1 (08 Mar 2003)
 
