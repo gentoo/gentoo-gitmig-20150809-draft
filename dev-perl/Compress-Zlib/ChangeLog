@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Compress-Zlib
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Compress-Zlib/ChangeLog,v 1.12 2004/01/18 19:56:43 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Compress-Zlib/ChangeLog,v 1.13 2004/01/19 20:59:02 tuxus Exp $
+
+  19 Jan 2004; <tuxus@gentoo.org> Compress-Zlib-1.22.ebuild:
+  Added ~mips to KEYWORDS.
 
   18 Jan 2004; <gustavoz@gentoo.org> Compress-Zlib-1.22.ebuild:
   stable on sparc
