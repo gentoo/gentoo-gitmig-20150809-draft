@@ -6,8 +6,8 @@
  	#first run antlr.Tool
 -	CLASSPATH=/usr/share/java/antlrall.jar kaffe antlr.Tool -o gnu/makeme/parser gnu/makeme/parser/makeme.g
 -	CLASSPATH=/usr/share/kaffe/Klasses.jar:/usr/share/java/antlrall.jar:. jikes -d . $(JAVA_SOURCES)
-+	CLASSPATH=$(CLASSPATH):/usr/share/antlr/lib/antlrall.jar $(JAVA_HOME)/bin/java antlr.Tool -o gnu/makeme/parser gnu/makeme/parser/makeme.g
-+	CLASSPATH=$(CLASSPATH):/usr/share/antlr/lib/antlrall.jar:. jikes -d . $(JAVA_SOURCES)
++	CLASSPATH=$(CLASSPATH):/usr/share/antlr/lib/antlr.jar $(JAVA_HOME)/bin/java antlr.Tool -o gnu/makeme/parser gnu/makeme/parser/makeme.g
++	CLASSPATH=$(CLASSPATH):/usr/share/antlr/lib/antlr.jar:. jikes -d . $(JAVA_SOURCES)
  
  install:
 -#	cp -Rv $(JAVA_CLASSES) $(DESTDIR)/usr/share/java/repository

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/makeme
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/makeme/ChangeLog,v 1.6 2004/02/10 07:11:15 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/makeme/ChangeLog,v 1.7 2004/05/28 09:00:11 st_lim Exp $
+
+  28 May 2004; Lim Swee Tat <st_lim@gentoo.org>
+  files/makeme-0.02-r2-gentoo.diff:
+  Fixed diff so that it points to the right library.
 
   10 Feb 2004; Adrian Almenar <strider@gentoo.org> makeme-0.02-r2.ebuild:
   Removed alpha keyword.
