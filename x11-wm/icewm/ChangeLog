@@ -1,6 +1,15 @@
 # ChangeLog for x11-wm/icewm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.44 2004/04/27 21:38:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/ChangeLog,v 1.45 2004/06/14 16:10:26 usata Exp $
+
+*icewm-1.2.14 (15 Jun 2004)
+
+  15 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> icewm-1.2.13.ebuild,
+  +icewm-1.2.14.ebuild, -icewm-1.2.14_pre1.ebuild, -icewm-1.2.14_pre2.ebuild,
+  -icewm-1.2.14_pre7.ebuild, -icewm-1.2.14_pre9.ebuild:
+  Version bumped. Fixed configure error when truetype is disabled. Added
+  silverxp IUSE flag. Thanks to Daniel Goller <dgoller@satx.rr.com>.
+  This closes bug #40148 and #53685. Cleaned out _pre* ebuilds.
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> icewm-1.2.13.ebuild:
   Add inherit eutils

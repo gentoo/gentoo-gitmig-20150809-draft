@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.13.ebuild,v 1.7 2004/04/27 21:38:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/icewm/icewm-1.2.13.ebuild,v 1.8 2004/06/14 16:10:26 usata Exp $
 
 inherit eutils
 
@@ -22,7 +22,6 @@ RDEPEND="${DEPEND}
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc amd64"
-S=${WORKDIR}/${P}
 
 # rcg12302003 Various patches to configure.in...
 src_unpack() {
@@ -52,7 +51,7 @@ src_compile(){
 
 	use truetype \
 		&& myconf="${myconf} --enable-gradients --enable-shape --enable-movesize-fx --enable-shaped-decorations" \
-		|| myconf="${myconf} --disable-xfreetype"
+		|| myconf="${myconf} --disable-xfreetype --enable-corefonts"
 
 	use x86 \
 		&& myconf="${myconf} --enable-x86-asm" \
