@@ -1,17 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.12.ebuild,v 1.4 2003/03/16 13:45:05 liquidx Exp $
-
-IUSE="nls libgda gb evo python bonobo guile perl"
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnumeric/gnumeric-1.0.12.ebuild,v 1.5 2003/03/31 17:55:37 foser Exp $
 
 inherit virtualx libtool gnome.org
 
-S=${WORKDIR}/${P}
+
 DESCRIPTION="Gnumeric, the GNOME Spreadsheet"
-HOMEPAGE="http://www.gnome.org/gnome-office/gnumeric.shtml"
+HOMEPAGE="http://www.gnome.org/projects/gnumeric/"
+
+IUSE="nls libgda gb evo python bonobo guile perl"
+
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 LICENSE="GPL-2"
 
 #Eye Of Gnome (media-gfx/eog) is for image support.
@@ -24,7 +25,7 @@ RDEPEND="=x11-libs/gtk+-1.2*
 	>=gnome-extra/gal-0.18
 	>=dev-libs/libole2-0.2.4
 	>=media-gfx/eog-0.6
-	=dev-libs/libxml-1.8*
+	>=dev-libs/libxml-1.8.14
 	=media-libs/freetype-1.3*
 	bonobo? ( >=gnome-base/bonobo-1.0.17 )
 	perl?   ( >=dev-lang/perl-5.6 )
@@ -41,11 +42,10 @@ RDEPEND="=x11-libs/gtk+-1.2*
 
 DEPEND="${RDEPEND}
 	 nls? ( sys-devel/gettext
-	 >=dev-util/intltool-0.11 )"
+	 	>=dev-util/intltool-0.11 )"
 
 src_compile() {
-
-	# fix the relink bug, and invalid paths in .ls files.
+	# fix the relink bug, and invalid paths in .la files.
 	elibtoolize
 
 	local myconf=""
@@ -87,9 +87,9 @@ src_compile() {
 		myconf="${myconf} --without-bonobo"
 	fi
 
-	CFLAGS="$CFLAGS `gdk-pixbuf-config --cflags`"
+	CFLAGS="${CFLAGS} `gdk-pixbuf-config --cflags`"
 
-  	./configure --host=${CHOST} \
+	./configure --host=${CHOST} \
 		--prefix=/usr \
 		--sysconfdir=/etc \
 		${myconf} || die
