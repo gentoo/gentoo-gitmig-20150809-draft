@@ -1,6 +1,11 @@
 # ChangeLog for sys-kernel/aa-sources
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/ChangeLog,v 1.43 2004/06/30 17:56:49 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/ChangeLog,v 1.44 2004/07/09 13:56:32 plasmaroo Exp $
+
+  09 Jul 2004; <plasmaroo@gentoo.org> aa-sources-2.4.23-r2.ebuild,
+  aa-sources-2.6.5-r5.ebuild, +files/aa-sources-2.6.5.ProcPerms.patch,
+  +files/aa-sources.CAN-2004-0497.patch:
+  Patched for attribute vulnerabilities, bug #56479.
 
   30 Jun 2004; <plasmaroo@gentoo.org> aa-sources-2.6.5-r5.ebuild,
   +files/aa-sources-2.6.5.IPTables-RDoS.patch:
