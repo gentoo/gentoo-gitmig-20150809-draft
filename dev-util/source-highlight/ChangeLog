@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/source-highlight
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/ChangeLog,v 1.10 2004/10/30 22:10:02 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/ChangeLog,v 1.11 2004/11/07 11:35:25 ka0ttic Exp $
+
+  07 Nov 2004; Aaron Walker <ka0ttic@gentoo.org>
+  +files/source-highlight.bash-completion, source-highlight-1.11-r1.ebuild,
+  -source-highlight-1.7.ebuild, -source-highlight-1.8.ebuild:
+  Add bash-completion; tidy up old ebuilds.
 
   30 Oct 2004; Aaron Walker <ka0ttic@gentoo.org>
   source-highlight-1.11-r1.ebuild:

@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/source-highlight-1.11-r1.ebuild,v 1.3 2004/10/30 22:10:02 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/source-highlight-1.11-r1.ebuild,v 1.4 2004/11/07 11:35:25 ka0ttic Exp $
 
-IUSE=""
+inherit bash-completion
 
 DESCRIPTION="Generate highlighted source code as an (x)html document"
 HOMEPAGE="http://www.gnu.org/software/src-highlite/source-highlight.html"
@@ -11,24 +11,14 @@ SRC_URI="ftp://ftp.gnu.org/gnu/src-highlite/${P}.tar.gz"
 LICENSE="GPL-2"
 KEYWORDS="x86 amd64 ~ppc"
 SLOT="0"
+IUSE=""
 
-DEPEND="sys-apps/gawk
-	sys-apps/grep
-	sys-devel/bison
-	sys-devel/gcc
-	sys-devel/flex
-	virtual/libc"
-
-RDEPEND="virtual/libc"
-
-src_compile() {
-	econf || die
-	emake || die
-}
+DEPEND="virtual/libc"
 
 src_install () {
 	dodoc AUTHORS ChangeLog COPYING CREDITS INSTALL \
 		NEWS README THANKS TODO.txt || die
+	dobashcompletion ${FILESDIR}/${PN}.bash-completion ${PN}
 
 	cd ${S}/src
 	dobin source-highlight cpp2html java2html source-highlight-cgi \

@@ -1,0 +1,45 @@
+# $Header: /var/cvsroot/gentoo-x86/dev-util/source-highlight/files/source-highlight.bash-completion,v 1.1 2004/11/07 11:35:25 ka0ttic Exp $
+# completion for source-highlight
+
+_source-highlight()
+{
+    local cur prev opts 
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+
+    opts="-h --help -V --version -i --input -o --output -s --src-lang \
+    -f --out-format -v --verbose -d --doc --no-doc -c --css -T --title \
+    -t --tab -H --header -F --footer --tags-file -n --line-number \
+    --line-number-ref --output-dir --gen-version"
+
+    if [[ "${cur}" == -* || ${COMP_CWORD} -eq 1 ]] ; then
+	COMPREPLY=($(compgen -W "${opts}" -- "${cur}"))
+	return 0
+    fi
+
+    case "${prev}" in
+	-T|--title|-t|--tab)
+	    COMPREPLY=()
+	    ;;
+	-i|--input|-o|--output|-c|--css|-H|--header|-F|--footer|--tags-file)
+	    COMPREPLY=($(compgen -A file -- "${cur}"))
+	    ;;
+	-s|--src-lang)
+	    COMPREPLY=($(compgen -W "java javascript cpp prolog perl php3 \
+	    python ruby flex changelog lua caml sml" -- "${cur}"))
+	    ;;
+	-f|--out-format)
+	    COMPREPLY=($(compgen -W "html xhtml esc" -- "${cur}"))
+	    ;;
+	--output-dir)
+	    COMPREPLY=($(compgen -A directory -- "${cur}"))
+	    ;;
+	*)
+	    COMPREPLY=($(compgen -W "${opts/${preprev}}" -- "${cur}"))
+	    ;;
+    esac
+}
+complete -F _source-highlight source-highlight
+
+# vim: set ft=sh tw=80 sw=4 et :
