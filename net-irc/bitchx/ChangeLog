@@ -1,6 +1,17 @@
 # ChangeLog for net-irc/bitchx
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.45 2004/06/24 23:01:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/ChangeLog,v 1.46 2004/07/04 23:19:52 swegener Exp $
+
+*bitchx-1.1-r1 (05 Jul 2004)
+
+  05 Jul 2004; Sven Wegener <swegener@gentoo.org>
+  -files/bitchx-1.0.19-cjk.patch, -files/bitchx-1.0.19-freenode.patch,
+  -files/bitchx-1.0.19-gcc-3.3.patch, -files/bitchx-1.0.19-hebrew.patch,
+  -files/bitchx-1.0.19-nickcomp-nocolor.patch,
+  -files/bitchx-1.0.19-security.patch, -files/bitchx-1.0.19-security2.patch,
+  -bitchx-1.0.19-r5.ebuild, -bitchx-1.0.19-r6.ebuild, +bitchx-1.1-r1.ebuild:
+  Added support for the local cdrom USE flag. Closes bug #55823. Removed older
+  ebuilds.
 
   20 Jun 2004; Sven Wegener <swegener@gentoo.org>
   +files/1.1/bitchx-1.1-gcc34.patch, bitchx-1.1.ebuild:
