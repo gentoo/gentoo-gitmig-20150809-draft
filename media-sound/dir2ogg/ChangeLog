@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/dir2ogg
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/dir2ogg/ChangeLog,v 1.1 2004/10/11 23:13:38 pkdawson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/dir2ogg/ChangeLog,v 1.2 2004/11/22 05:23:55 eradicator Exp $
+
+  21 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org> dir2ogg-0.8.ebuild:
+  Stable x86.  Added to ~amd64 and ~sparc.
 
 *dir2ogg-0.8 (11 Oct 2004)
 
