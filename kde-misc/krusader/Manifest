@@ -1,8 +1,18 @@
-MD5 4f2336b72cb823959ac6549f62c929be krusader-1.50.ebuild 1272
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 fe405b02fb15df86f41e2066ce5f05da ChangeLog 5061
 MD5 0cceac31f0bb6757ec078d3267e87671 krusader-1.40.ebuild 1078
-MD5 5f60934ced152c3e7a6aac88330a19fd ChangeLog 4965
+MD5 18cc113155b3099327c217a778cae936 krusader-1.50.ebuild 1272
 MD5 be88bba4b0fb03c88b8e9ddf445bb2f4 krusader-1.50_beta1.ebuild 1277
 MD5 1b6808bbd78c9161f8b7efb090d966f8 metadata.xml 162
 MD5 49275a58f3cced10d296042c331d833e files/digest-krusader-1.40 66
 MD5 c380b53d2f45b20d2c4356a767746ad4 files/digest-krusader-1.50 66
 MD5 be6d149cdf6b7df43387e333c9e4e906 files/digest-krusader-1.50_beta1 72
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBtbhdKRy60XGEcJIRAiSJAJ9oBF5IJnkpX36AR7ouFpy4MGZ6MwCgkkCf
+/G/8lLy5KhetLsc7MM0pEVM=
+=6C94
+-----END PGP SIGNATURE-----
