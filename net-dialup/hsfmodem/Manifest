@@ -6,12 +6,12 @@ MD5 0795a16ef55f9b7c97e74d31909ebc61 hsfmodem-7.18.00.02.ebuild 1063
 MD5 ec2f84816306825d125d0c01bd86758d metadata.xml 163
 MD5 82303d0b993d28104a57fd2c3deb55d1 hsfmodem-7.18.00.03-r2.ebuild 1346
 MD5 e284b1513d312c30e77623de2a16b405 files/digest-hsfmodem-7.18.00.02 158
-MD5 31d29dc8b8c0cc6b9e0037de5d0e4269 files/hsfmodem-7.18.00.03-nvminstall.patch 522
+MD5 430361a98f210c5a4b0eadcc4d45266c files/hsfmodem-7.18.00.03-nvminstall.patch 521
 MD5 4523eaa6fcb480127dcf1881e1d2bbad files/digest-hsfmodem-7.18.00.03-r2 158
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCOWpPjiC39V7gKu0RAuqeAJ90W3/Dn/Cul+96+t7dn62YRccBcwCfcWdT
-f5CWLnVyz87HFDYD0euLtM8=
-=AZ45
+iD8DBQFCOWw4jiC39V7gKu0RAotpAKDKWX6j69bWEV386nal4TwC9oONawCdH0+b
+1UoQHVemP/vqrCsCbusTgVE=
+=WLLt
 -----END PGP SIGNATURE-----

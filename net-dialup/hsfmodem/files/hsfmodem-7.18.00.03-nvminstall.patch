@@ -6,7 +6,7 @@ diff -urN hsfmodem-7.18.00.03full/nvm/makefile hsfmodem-7.18.00.03full-nvminstal
  
  install: all $(CNXTNVMDIR)
 -	cd $(NVMCVTDIR) && (find $(patsubst %, $(CNXTTARGET)%, $(NVMDIRS)) | cpio -pdmu $(CNXTNVMDIR))
-+	cp -ra $(NVMCVTDIR)/* $(CNXTNVMDIR)
++	cp -a $(NVMCVTDIR)/* $(CNXTNVMDIR)
  
  $(NVMCVTDIR) $(CNXTNVMDIR):
  	$(MKDIR) -p $@
