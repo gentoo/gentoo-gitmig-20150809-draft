@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3168 2004/09/19 20:08:17 foser Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3169 2004/09/19 22:03:40 solar Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -21,6 +21,11 @@
 ##
 ##   End example
 ##
+
+# Ned Ludd <solar@gentoo.org> (19 Sep 2004)
+# fatal error: input stack limit exceeded (probable infinite loop)
+# bug #64117 (waiting on patches from robmoss)
+=sys-apps/groff-1.19.1
 
 # Tom Martin <slarti@gentoo.org> (19 Sep 2004)
 # Seems unmaintained upstream, obsoleted by irssi-0.8.10_rc5.
