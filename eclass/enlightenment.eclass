@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.31 2004/11/05 02:53:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/enlightenment.eclass,v 1.32 2004/11/05 03:07:55 mr_bones_ Exp $
 #
 # Author: vapier@gentoo.org
 
@@ -22,7 +22,7 @@ if [ "${PV/9999}" != "${PV}" ] ; then
 	ECVS_SERVER="${ECVS_SERVER:-cvs.sourceforge.net:/cvsroot/enlightenment}"
 	ECVS_STATE="live"
 	inherit cvs
-elif [ "${PV/.200?????/}" != "${PV}" ] || [ "${PV/2003????}" != "${PV} ] ; then
+elif [ "${PV/.200?????/}" != "${PV}" ] || [ "${PV/2003????}" != "${PV}" ] ; then
 	ECVS_STATE="snap"
 fi
 
