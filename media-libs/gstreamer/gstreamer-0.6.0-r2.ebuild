@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.6.0-r2.ebuild,v 1.4 2003/02/13 12:45:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.6.0-r2.ebuild,v 1.5 2003/03/04 11:17:50 weeve Exp $
 
 inherit eutils flag-o-matic libtool
 
@@ -49,6 +49,10 @@ src_unpack() {
 	# 
 	# foser <foser@gentoo.org>
 	epatch ${FILESDIR}/${PN}-default_scheduler_opt.patch
+	
+	# Added patch for sparc.  Resolves bug #15502.  Thanks to
+	# Alvaro Figueroa for pointing out the fix :)
+	epatch ${FILESDIR}/${PN}-0.6.0-sparc.patch
 }
 	
 src_compile() {
