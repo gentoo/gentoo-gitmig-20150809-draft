@@ -1,6 +1,14 @@
 # ChangeLog for app-portage/herdstat
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/ChangeLog,v 1.7 2005/03/18 11:53:55 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/herdstat/ChangeLog,v 1.8 2005/03/20 17:11:06 ka0ttic Exp $
+
+*herdstat-0.6-r1 (20 Mar 2005)
+
+  20 Mar 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/herdstat-0.6-fix-dev-all.diff, -herdstat-0.5.ebuild,
+  -herdstat-0.6.ebuild, +herdstat-0.6-r1.ebuild:
+  Revision bump; apply patch against trunk to fix max label unhandled
+  exception when '-d all' is specified.
 
 *herdstat-0.6 (18 Mar 2005)
 
