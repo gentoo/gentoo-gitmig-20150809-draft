@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/dash
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/ChangeLog,v 1.5 2004/06/24 22:23:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/dash/ChangeLog,v 1.6 2004/08/20 23:04:50 seemant Exp $
+
+*dash-0.5.1.1 (20 Aug 2004)
+
+  20 Aug 2004; Seemant Kulleen <seemant@gentoo.org> dash-0.4.26.ebuild,
+  +dash-0.5.1.1.ebuild:
+  version bump, thanks to: Peter Gantner <peter.gantner@stud.uni-graz.at> in bug
+  #59063.
 
   09 Jun 2004; Luca Barbato <lu_zero@gentoo.org> dash-0.4.24.ebuild:
   Marked ppc

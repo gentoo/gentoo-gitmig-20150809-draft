@@ -1,16 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 35a2ac1b1149d19cef40df7802785584 ChangeLog 842
+MD5 0599f1e3d5806b2ab0868a9052adca32 dash-0.5.1.1.ebuild 894
 MD5 5e5b37401da2dfbb9a1a91af9237fb61 dash-0.4.24.ebuild 958
-MD5 d4e393b0eb07328265601be0d02f1f27 dash-0.4.26.ebuild 967
+MD5 cc94088dd92b7d82b897a9d1e15ffe8a dash-0.4.26.ebuild 967
+MD5 e33c386d4b67ef074ecba2dbcf0d6323 ChangeLog 1058
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 cdb2616f7107463468dc542ffb5c0afe files/digest-dash-0.4.24 63
 MD5 350944019b93cf21a674780be34264aa files/digest-dash-0.4.26 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA4Oe/HTu7gpaalycRAhI6AKCkMm1a07XqhzsGVOA6ul6aQov3CQCg4vSR
-F5zt+kJFNYcMA+T+dPlQwIc=
-=RGyK
------END PGP SIGNATURE-----
+MD5 115b4f38170f7c82c6c9e3259c55108c files/digest-dash-0.5.1.1 131
