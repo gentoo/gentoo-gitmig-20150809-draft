@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/livecd-tools
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.24 2004/10/13 00:20:38 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/livecd-tools/ChangeLog,v 1.25 2004/10/13 13:17:15 gmsoft Exp $
+
+  13 Oct 2004; Guy Martin <gmsoft@gentoo.org> livecd-tools-1.0.6.ebuild:
+  Stable on hppa.
 
   12 Oct 2004; Chris Gianelloni <wolf31o2@gentoo.org>
   livecd-tools-1.0.6.ebuild:
