@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jerry Alexandratos <jerry@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gconf/ruby-gconf-0.2.ebuild,v 1.1 2002/04/22 01:07:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gconf/ruby-gconf-0.2.ebuild,v 1.2 2002/04/22 01:40:43 agriffis Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Ruby Gconf bindings"
@@ -18,6 +18,6 @@ src_compile() {
 }
 
 src_install () {
-	make install DESTDIR=${D}
+	make -C src install DESTDIR=${D}
 	dodoc [A-Z]*
 }
