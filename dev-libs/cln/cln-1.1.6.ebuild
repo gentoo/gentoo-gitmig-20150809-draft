@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/cln/cln-1.1.6.ebuild,v 1.4 2004/11/04 12:31:25 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/cln/cln-1.1.6.ebuild,v 1.5 2004/11/23 17:08:29 phosphan Exp $
 
-inherit flag-o-matic gcc
+inherit flag-o-matic toolchain-funcs
 
 DESCRIPTION="CLN, a class library (C++) for numbers"
 
@@ -26,6 +26,11 @@ src_compile() {
 	if [ "$( gcc-fullversion )" == "2.95.3" ]; then
 		filter-flags -funroll-loops
 		filter-flags -frerun-loop-opt
+	fi
+
+	# Trouble: see bug #70779
+	if ["$( gcc-fullversion )" == "3.3.4" ]; then
+		filter-flags -finline-functions
 	fi
 
 	./configure \
