@@ -1,18 +1,17 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yodl/yodl-1.31.18.ebuild,v 1.2 2003/10/25 18:23:49 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/yodl/yodl-1.31.18.ebuild,v 1.3 2004/04/26 12:37:26 obz Exp $
 
 inherit eutils
-
-IUSE=""
 
 HOMEPAGE="http://www.xs4all.nl/~jantien/yodl/"
 SRC_URI="ftp://ftp.lilypond.org/pub/yodl/development/${P}.tar.gz"
 DESCRIPTION="Yet oneOther Document Language"
-
 LICENSE="GPL-2"
+
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+IUSE=""
+KEYWORDS="x86 ~ppc ~sparc ~alpha"
 
 DEPEND="sys-devel/bison
 	sys-devel/flex

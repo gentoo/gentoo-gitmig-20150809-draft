@@ -1,6 +1,9 @@
 # ChangeLog for app-text/yodl
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/yodl/ChangeLog,v 1.2 2003/10/25 18:23:49 usata Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-text/yodl/ChangeLog,v 1.3 2004/04/26 12:37:26 obz Exp $
+
+  26 Apr 2004; Mike Gardiner <obz@gentoo.org> yodl-1.31.18.ebuild:
+  Marked stable on x86
 
   26 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> yodl-1.31.18.ebuild:
   Fixed Makefile bug.
