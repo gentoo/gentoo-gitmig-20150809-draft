@@ -1,0 +1,6 @@
+MD5 09eff9b946dad0ddad42ac46da1772d7 slocate-2.7.ebuild 1627
+MD5 e8cb974a036ec6a013317e6b48af8010 slocate-2.6.ebuild 1516
+MD5 9ea73a4b416c358d147f5b46d8bcad10 ChangeLog 926
+MD5 2831adc800599b2ae5ee340beafc4e31 files/digest-slocate-2.6 62
+MD5 f03ed3063ac796dbf26187038a928db8 files/digest-slocate-2.7 62
+MD5 f2c61fd26cb4497626447746ac9189c6 files/updatedb.conf 634
