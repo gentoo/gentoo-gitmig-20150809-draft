@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/libdvdcss
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.5 2002/05/26 18:08:24 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvdcss/ChangeLog,v 1.6 2002/06/24 16:44:26 wmertens Exp $
+
+*libdvdcss-1.2.1 (24 Jun 2002)
+
+  24 Jun 2002; Wout Mertens <wmertens@gentoo.org> :
+
+  Bumped to new version, because it was there and it fixes a playing problem
+  for me. Notice that it seems to have changed a lot since 1.1.1, so you might
+  want to try 1.1.1 to see if that works better for you.
 
 *libdvdcss-1.2.0 (26 May 2002)
 
