@@ -1,4 +1,4 @@
-MD5 7fd641bec131bc8beb086371153390c5 ChangeLog 1549
+MD5 9a8f7391b97a58ce7d0dd0f961dfdf36 ChangeLog 1650
 MD5 f9eb2fa3b268c82a25ee9eb2fdfaccc9 metadata.xml 311
 MD5 9e15744b5d61c11eaa8b7118449e885c prelude-nids-0.8.1-r1.ebuild 1817
 MD5 3184bf62118b169b43f60af99665cf5c prelude-nids-0.8.1.ebuild 1536
@@ -9,6 +9,6 @@ MD5 bf55921bc902a6516c4c5844aeb60e87 files/digest-prelude-nids-0.8.1 70
 MD5 bf55921bc902a6516c4c5844aeb60e87 files/digest-prelude-nids-0.8.1-r1 70
 MD5 50c2103b874c4fbf51bc8cacf321bb1d files/digest-prelude-nids-0.8.4 70
 MD5 5c85fcf0a618f64ab70c726d71746d84 files/gentoo.conf 186
-MD5 f3ea23f4c20e8e2569fedb08386e8ba7 files/gentoo.init 588
+MD5 f61374b6a54ecbe038d3af9e2a955008 files/gentoo.init 615
 MD5 6786cceef872411426f2eec07a2dda73 files/digest-prelude-nids-0.8.5 70
 MD5 09832a59e6a2adbcac19f18df270f272 files/digest-prelude-nids-0.8.6 70
