@@ -40,9 +40,13 @@
 <media-libs/xine-lib-0.9.11
 <media-video/xine-ui-0.9.11
 
+# vnc code (even from vendor) not very ppc happy at all
+# tightvnc works, so masking this for now - Gerk June 26 2002
+~net-misc/vnc
 
-# hfsplusutils masked for testing - Gerk - June 20, 2002
-sys-apps/hfsplusutils
+# libdv currently unmergable, immediate fixes didn't work, looks like it is 
+# very x86 specific - Gerk June 26 2002
+~media-libs/libdv
 
 # arrrrggg someone in x86 land unmsked a non working on ppc binutils build
 # Gerk - June 12 2002
