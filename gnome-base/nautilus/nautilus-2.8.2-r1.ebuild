@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.8.2-r1.ebuild,v 1.6 2005/01/08 23:19:34 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.8.2-r1.ebuild,v 1.7 2005/01/20 09:39:28 obz Exp $
 
 inherit gnome2 eutils
 
@@ -69,7 +69,8 @@ src_unpack() {
 	# use gstreamer for audio preview (patch by <foser@gentoo.org>)
 	use gstreamer && epatch ${FILESDIR}/${PN}-2.6-icon_view_gst_audio_preview.patch
 	# add libgnomeprint support
-	use cups && epatch ${FILESDIR}/${PN}-2-x-printers.patch
+	# With extra 2.8 fun - fixes #65604
+	use cups && epatch ${FILESDIR}/${PN}-2.8-x-printers.patch
 
 	# patch to support libexif versions 0.5 and 0.6
 	epatch ${FILESDIR}/${PN}-2-libexif.patch
