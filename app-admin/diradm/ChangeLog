@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/diradm
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/ChangeLog,v 1.7 2004/10/05 02:58:10 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/diradm/ChangeLog,v 1.8 2004/12/23 23:00:17 robbat2 Exp $
+
+*diradm-2.1 (23 Dec 2004)
+
+  23 Dec 2004; Robin H. Johnson <robbat2@gentoo.org> +diradm-2.1.ebuild:
+  New major revision, from a forked tree (by myself).
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> diradm-1.2.ebuild:
   Masked diradm-1.2.ebuild stable for ppc
