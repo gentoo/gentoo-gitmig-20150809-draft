@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-shn/xmms-shn-2.2.8.ebuild,v 1.4 2004/06/18 06:13:19 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-shn/xmms-shn-2.2.8.ebuild,v 1.5 2004/06/24 23:45:27 agriffis Exp $
 
 DESCRIPTION="This input plugin allows xmms to play .shn compressed (lossless) files"
 HOMEPAGE="http://shnutils.etree.org/xmms-shn"

@@ -1,6 +1,6 @@
 # ChangeLog for media-plugins/xmms-ladspa
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-ladspa/ChangeLog,v 1.7 2004/05/06 21:21:00 kugelfang Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-ladspa/ChangeLog,v 1.8 2004/06/24 23:42:11 agriffis Exp $
 
   06 May 2004; Danny van Dyk <kugelfang@gentoo.org> xmms-ladspa-0.7.ebuild:
   Marked ~amd64.

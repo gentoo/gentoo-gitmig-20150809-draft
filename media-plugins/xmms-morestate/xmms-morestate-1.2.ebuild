@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.; alexf <acid DOT punk AT gmx DOT net>
+# Copyright 1999-2004 Gentoo Foundation; alexf <acid DOT punk AT gmx DOT net>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-morestate/xmms-morestate-1.2.ebuild,v 1.5 2004/06/18 06:26:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-morestate/xmms-morestate-1.2.ebuild,v 1.6 2004/06/24 23:43:24 agriffis Exp $
 
 DESCRIPTION=" XMMS Morestate restores ESD volume, song time, and playing/paused status"
 SRC_URI="mirror://sourceforge/xmms-morestate/${P}.tar.gz"

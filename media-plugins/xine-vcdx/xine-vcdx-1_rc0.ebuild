@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xine-vcdx/xine-vcdx-1_rc0.ebuild,v 1.3 2004/05/13 14:27:03 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xine-vcdx/xine-vcdx-1_rc0.ebuild,v 1.4 2004/06/24 23:36:22 agriffis Exp $
 
 IUSE=""
 

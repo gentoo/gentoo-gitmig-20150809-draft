@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/streamtuner-local/streamtuner-local-0.4.0.ebuild,v 1.6 2004/05/12 18:25:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/streamtuner-local/streamtuner-local-0.4.0.ebuild,v 1.7 2004/06/24 23:35:07 agriffis Exp $
 
 DESCRIPTION="A plugin for Streamtuner to browse and play local files."
 SRC_URI="http://savannah.nongnu.org/download/streamtuner/${P}.tar.gz"

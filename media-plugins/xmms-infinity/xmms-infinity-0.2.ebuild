@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-infinity/xmms-infinity-0.2.ebuild,v 1.8 2004/06/18 06:20:36 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-infinity/xmms-infinity-0.2.ebuild,v 1.9 2004/06/24 23:40:48 agriffis Exp $
 
 inherit gnuconfig
 

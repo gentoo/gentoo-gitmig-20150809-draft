@@ -1,6 +1,6 @@
 # ChangeLog for media-plugins/xmms-status-plugin
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-status-plugin/ChangeLog,v 1.5 2004/06/18 06:33:39 eradicator Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-status-plugin/ChangeLog,v 1.6 2004/06/24 23:46:18 agriffis Exp $
 
   17 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-status-plugin-1.0.ebuild:

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/xmms-musepack-0.98-r2.ebuild,v 1.3 2004/03/29 23:33:40 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-musepack/xmms-musepack-0.98-r2.ebuild,v 1.4 2004/06/24 23:43:44 agriffis Exp $
 
 inherit flag-o-matic eutils
 

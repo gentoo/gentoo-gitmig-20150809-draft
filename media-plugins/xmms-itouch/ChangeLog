@@ -1,6 +1,6 @@
 # ChangeLog for media-plugins/xmms-itouch
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-itouch/ChangeLog,v 1.8 2004/06/18 04:43:01 eradicator Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-itouch/ChangeLog,v 1.9 2004/06/24 23:41:18 agriffis Exp $
 
   17 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-itouch-0.1.2-r1.ebuild:

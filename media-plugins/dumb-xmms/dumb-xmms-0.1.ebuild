@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/dumb-xmms/dumb-xmms-0.1.ebuild,v 1.3 2004/02/27 03:23:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/dumb-xmms/dumb-xmms-0.1.ebuild,v 1.4 2004/06/24 23:27:33 agriffis Exp $
 
 DESCRIPTION="Plug-in for accurate, high-quality IT/XM/S3M/MOD playback."
 HOMEPAGE="http://dumb.sourceforge.net/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-crossfade/xmms-crossfade-0.3.2.ebuild,v 1.6 2004/04/22 06:19:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-crossfade/xmms-crossfade-0.3.2.ebuild,v 1.7 2004/06/24 23:38:07 agriffis Exp $
 
 IUSE=""
 
