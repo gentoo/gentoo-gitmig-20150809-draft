@@ -1,6 +1,9 @@
 # ChangeLog for gnome-extra/guppi
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/ChangeLog,v 1.9 2003/02/12 06:54:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/ChangeLog,v 1.10 2003/07/24 18:35:05 taviso Exp $
+
+  24 Jul 2003; Tavis Ormandy <taviso@gentoo.org> guppi-0.40.3-r2.ebuild:
+  ~alpha
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
