@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/ladebug
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ladebug/ChangeLog,v 1.2 2003/04/15 10:47:29 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ladebug/ChangeLog,v 1.3 2003/06/15 11:51:20 taviso Exp $
+
+  15 Jun 2003; Tavis Ormandy <taviso@gentoo.org> ladebug-4.0.67.ebuild:
+  reodering.
 
 *ladebug-4.0.67 (15 Apr 2003)
 

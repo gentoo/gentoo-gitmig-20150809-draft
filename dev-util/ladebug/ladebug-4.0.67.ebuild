@@ -1,13 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ladebug/ladebug-4.0.67.ebuild,v 1.2 2003/04/15 10:47:29 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ladebug/ladebug-4.0.67.ebuild,v 1.3 2003/06/15 11:51:20 taviso Exp $
 #
 # Submitted By Tavis Ormandy <taviso@gentoo.org>
 #
 
-IUSE="emacs"
-
-inherit elisp
+inherit elisp 
 
 DESCRIPTION="Linux port of the Famous Tru64 Debugger"
 HOMEPAGE="http://www.support.compaq.com/alpha-tools"
@@ -23,6 +21,9 @@ DEPEND="virtual/glibc
 		emacs? ( virtual/emacs )"
 RDEPEND="dev-libs/libots
 		 dev-libs/libcpml"
+
+IUSE="emacs"
+
 S=${WORKDIR}/${P}
 RELEASE="4.0.67-21"
 #SITEFILE="50ladebug.el"
