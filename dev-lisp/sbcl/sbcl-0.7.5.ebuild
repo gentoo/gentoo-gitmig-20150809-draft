@@ -1,66 +1,56 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 2002 Marius Bernklev <mariube@unixcore.com>
 # Distributed under the terms of the GNU General Public License v2
-# Author: Marius Bernklev <mariube@unixcore.com>
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.7.5.ebuild,v 1.1 2002/07/16 16:08:59 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.7.5.ebuild,v 1.2 2002/07/19 23:19:53 karltk Exp $
 
 DESCRIPTION="Steel Bank Common Lisp"
-
 HOMEPAGE="http://sbcl.sf.net/"
-
-LICENSE="PD"
-
 BOOTSTRAPPER="0.7.2"
-
 BIN=${PN}-${BOOTSTRAPPER}
-
 SRC_URI="mirror://sourceforge/sbcl/${P}-source.tar.bz2
 	 mirror://sourceforge/sbcl/${BIN}-x86-linux-binary.tar.bz2
 	 mirror://sourceforge/sbcl/${P}-html.tar.bz2"
-
+LICENSE="PD"
 SLOT="0"
-
-KEYWORDS="x86"
-
+# 2002.07.19 -- karltk:
+# Requires x86-only binary for bootstrapping
+# Krystof promises ppc binary for 0.7.6
+# Sparc is a lost cause.
+KEYWORDS="x86 -ppc -sparc -sparc64" 
 PROVIDE="virtual/commonlisp"
+DEPEND=""
+RDEPEND="${DEPEND}"
 
 src_unpack() {
-    unpack ${BIN}-x86-linux-binary.tar.bz2
-    mv ${BIN} ${BIN}-binary
+	unpack ${BIN}-x86-linux-binary.tar.bz2
+	mv ${BIN} ${BIN}-binary
     
-    unpack ${P}-source.tar.bz2
-    unpack ${P}-html.tar.bz2
+	unpack ${P}-source.tar.bz2
+	unpack ${P}-html.tar.bz2
 }
 
 src_compile() {
-    export SBCL_HOME="../${BIN}-binary/output/" 
-    export GNUMAKE="emake"
-    sh make.sh "../${BIN}-binary/src/runtime/sbcl" || die
+	export SBCL_HOME="../${BIN}-binary/output/" 
+	# 2002.07.19 -- karltk: 
+	# Marius tells me parallell make is  2-3 years off.
+	export GNUMAKE="make"
+	sh make.sh "../${BIN}-binary/src/runtime/sbcl" || die
 }
 
 src_install() {
-    doman doc/sbcl.1
-    dobin src/runtime/sbcl
+	doman doc/sbcl.1
+	dobin src/runtime/sbcl
 
-    dodoc BUGS CREDITS NEWS README INSTALL COPYING 
-    dohtml doc/html/*
+	dodoc BUGS CREDITS NEWS README INSTALL COPYING 
+	dohtml doc/html/*
 
-    # NOTE: sbcl.core is platform dependent, which is why I moved it
-    # away from /usr/share/
+	LIB=${DESTTREE}/lib/sbcl
 
-    LIB=${DESTTREE}/lib/sbcl
+	dodir ${LIB}
+	insinto ${LIB}
+	doins output/sbcl.core
 
-    dodir ${LIB}
-    cp output/sbcl.core ${D}${LIB}
+	dodir /etc/env.d
 
-    dodir /etc/env.d
-
-    echo "SBCL_HOME=${LIB}" > ${D}/etc/env.d/10sbcl
-}
-
-pkg_postinst() {
-    env-update
-}
-
-pkg_postrm() {
-    env-update
+	echo "SBCL_HOME=${LIB}" > ${D}/etc/env.d/10sbcl
 }
