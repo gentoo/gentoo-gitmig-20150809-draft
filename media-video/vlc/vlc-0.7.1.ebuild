@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.7.1.ebuild,v 1.2 2004/03/15 02:45:50 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.7.1.ebuild,v 1.3 2004/03/17 20:38:54 kanaka Exp $
 
 inherit libtool gcc eutils
 
@@ -64,6 +64,7 @@ RDEPEND="X? ( virtual/x11 )
 	bidi? ( >=dev-libs/fribidi-0.10.4 )
 	png? ( >=media-libs/libpng-1.2.5 )
 	speex? ( >=media-libs/speex-1.0.3 )
+	svga? ( media-libs/svgalib )
 	>=media-libs/a52dec-0.7.4
 	>=media-sound/lame-3.93.1
 	>=media-libs/flac-1.1.0

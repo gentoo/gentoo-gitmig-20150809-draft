@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2-r1.ebuild,v 1.9 2004/02/23 13:36:33 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.2-r1.ebuild,v 1.10 2004/03/17 20:38:54 kanaka Exp $
 
 inherit libtool
 
@@ -24,7 +24,7 @@ SRC_URI="http://www.videolan.org/pub/${PN}/${PV}/${P}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~ia64"
+KEYWORDS="~x86 ~alpha"
 IUSE="arts qt ncurses dvd gtk nls 3dfx svga fbcon esd kde X alsa ggi
 	oggvorbis gnome xv oss sdl aalib slp truetype v4l xvid lirc
 	wxwindows imlib mozilla dvb debug faad xosd matroska altivec"

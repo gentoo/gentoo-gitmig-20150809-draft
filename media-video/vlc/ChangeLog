@@ -1,6 +1,10 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.43 2004/03/15 02:45:50 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.44 2004/03/17 20:38:54 kanaka Exp $
+
+  17 Mar 2004; Joel Martin <kanaka@gentoo.org> vlc-0.6.2-r1.ebuild,
+  vlc-0.7.1.ebuild:
+  Fix svga dep in 0.7.1, remove ~ia64 from 0.6.2-r1 because of bad deps
 
   15 Mar 2004; Luca Barbato <lu_zero@gentoo.org> vlc-0.7.1.ebuild:
   Marked -ppc the ffmpeg req has issues
