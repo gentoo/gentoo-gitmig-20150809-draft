@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 99834d192b1bd0428063e82fda3f6712 xdesktopwaves-1.0.ebuild 618
-MD5 e7d912f91205bfb99399da5c14ef0d60 ChangeLog 455
-MD5 f5e577a176b4ffa9726308d63877eac4 metadata.xml 460
+MD5 81626fc6a1504312b446946e9df14dec ChangeLog 573
+MD5 5af3d0d1227b6fcf25c9cf2c246b362c metadata.xml 555
+MD5 b43285dfe4e97b0c3ffea21e17cf2922 xdesktopwaves-1.0.ebuild 624
 MD5 ed4d0374e102c3727c87067ae4fc405d files/digest-xdesktopwaves-1.0 68
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBnkLQwDHaUUJ0mYMRArnyAKCa7ORphHcitLW+RI6zR81m6zz3MQCaAhMz
-2aexNG3yedmn33cxOhH77VE=
-=+6lu
------END PGP SIGNATURE-----

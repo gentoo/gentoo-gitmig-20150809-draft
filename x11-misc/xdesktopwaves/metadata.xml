@@ -2,6 +2,10 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
   <herd>no-herd</herd>
+  <maintainer>
+    <email>dholm@gentoo.org</email>
+    <name>David Holm</name>
+  </maintainer>
   <longdescription>
 xdesktopwaves is a cellular automata setting the background of your X Windows desktop under water. Windows and mouse are like ships on the sea. Each movement of these ends up in moving water waves. You can even have rain and/or storm stirring up the water.
   </longdescription>
