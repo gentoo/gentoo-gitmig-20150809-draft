@@ -1,5 +1,15 @@
-MD5 0217f46f7b79f52f8a05d7e52583f43b ChangeLog 1045
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 36053ad480665062dd4e02559ec22d1c igal-1.4.ebuild 839
+MD5 c9b8c0908f8cce034948d7153320962b ChangeLog 1115
 MD5 686285d9a04bf84e0d0f1870c55ce390 metadata.xml 460
-MD5 d2d3c3175f976c6f7dc1261af34756ea files/digest-igal-1.4 187
+MD5 42ea8b39a800dd0794b0601f3bcb59f0 files/digest-igal-1.4 59
 MD5 943b5dbcddc3a985b05ab6a76f01cdda files/igal-1.4-gentoo.diff 4306
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBon1CI1lqEGTUzyQRAgZmAJ9DA//gYndWQrudPTlEdl9ygssNjACbBes7
+I0Oo5gxJTWm6oWHL8ulkPKo=
+=d1dQ
+-----END PGP SIGNATURE-----
