@@ -1,15 +1,18 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.6_beta2.ebuild,v 1.2 2005/02/24 05:48:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.6.ebuild,v 1.1 2005/02/27 02:41:58 usata Exp $
 
 inherit eutils kde-functions
 
+PRIME_P=prime-0.9.4-beta2
+PRIME_SCM=${PRIME_P}_${P/_*/}_2.scm
 MY_P="${P/_/}"
 S="${WORKDIR}/${MY_P}"
 
 DESCRIPTION="a simple, secure and flexible input method library"
 HOMEPAGE="http://uim.freedesktop.org/"
-SRC_URI="http://uim.freedesktop.org/releases/${MY_P}.tar.gz"
+SRC_URI="http://uim.freedesktop.org/releases/${MY_P}.tar.gz
+	http://prime.sourceforge.jp/src/${PRIME_SCM}"
 
 LICENSE="GPL-2 BSD"
 SLOT="0"
@@ -24,7 +27,8 @@ RDEPEND="X? ( virtual/x11 )
 	canna? ( app-i18n/canna )
 	immqt? ( >=x11-libs/qt-3.3.3-r1 )
 	immqt-bc? ( >=x11-libs/qt-3.3.3-r1 )
-	qt? ( >=x11-libs/qt-3.3.3-r1 )"
+	qt? ( >=x11-libs/qt-3.3.3-r1
+		!app-i18n/uim-kdehelper )"
 DEPEND="${RDEPEND}
 	dev-lang/perl
 	dev-perl/XML-Parser
@@ -34,6 +38,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
+	cp ${DISTDIR}/${PRIME_SCM} scm/prime.scm || die
 	# we execute gtk-query-immodules-2.0 in pkg_postinst()
 	# to not violate sandbox.
 	sed -i -e "/gtk-query-immodules-2.0/s/.*/	:\\\\/g" \
