@@ -1,6 +1,9 @@
 # ChangeLog for net-firewall/firehol
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.17 2005/02/13 08:54:11 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/firehol/ChangeLog,v 1.18 2005/03/17 14:02:10 josejx Exp $
+
+  17 Mar 2005; Joseph Jezak <josejx@gentoo.org> firehol-1.226-r1.ebuild:
+  Marked ~ppc for bug #85474.
 
   13 Feb 2005; Dominik Stadler <centic@gentoo.org> firehol-1.226-r1.ebuild:
   Small fix to comments
