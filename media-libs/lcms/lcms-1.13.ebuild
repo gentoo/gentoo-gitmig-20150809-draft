@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.13.ebuild,v 1.7 2005/01/11 00:49:20 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/lcms/lcms-1.13.ebuild,v 1.8 2005/01/30 09:29:18 lanius Exp $
 
 inherit libtool gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.littlecms.com/${P}.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~mips alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~ppc-macos"
+KEYWORDS="x86 ~ppc sparc ~mips alpha ~arm ~hppa amd64 ~ia64 ~ppc64 ~ppc-macos"
 IUSE="tiff jpeg zlib python"
 
 DEPEND="tiff? ( media-libs/tiff )
@@ -39,6 +39,7 @@ src_unpack() {
 src_compile() {
 	econf \
 		--disable-dependency-tracking \
+		--includedir="/usr/include/${PN}" \
 		`use_with jpeg` \
 		`use_with tiff` \
 		`use_with zlib` \
@@ -50,7 +51,6 @@ src_install() {
 	make \
 		DESTDIR=${D} \
 		BINDIR=${D}/usr/bin \
-		includedir="/usr/include/${PN}" \
 		install                              || die "make install failed"
 
 	insinto /usr/share/lcms/profiles
