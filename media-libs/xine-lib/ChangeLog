@@ -1,7 +1,16 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.31 2003/01/08 08:02:09 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.32 2003/01/29 02:01:35 agenkin Exp $
 
+*xine-lib-1_beta3 (28 Jan 2003)
+
+  28 Jan 2003; Arcady Genkin <agenkin@gentoo.org> :
+  Updated to _beta3.
+  Added Flac dependency.
+  Forced usage of the internal dvdnav version.
+  Unset CFLAGS and CXXFLAGS variables rather than exporting them as empty.
+  Reworded the einfo's in the pkg_postinst().
+  	
 *xine-lib-1_beta2 (02 Jan 2003)
 
   08 Jan 2003; Nick Hadaway <raker@gentoo.org> xine-lib-1_beta2.ebuild :
