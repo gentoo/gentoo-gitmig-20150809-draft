@@ -1,6 +1,14 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.37 2004/01/08 20:29:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.38 2004/01/10 23:12:39 aether Exp $
+
+*java-config-1.2.2 (10 Jan 2004)
+
+  10 Jan 2004; Jason A Mobarak <aether@gentoo.org>
+  java-config-1.2.1-r1.ebuild, java-config-1.2.2.ebuild:
+  Fixed java-config dying with a user's .gentoo directory doesn't exist.
+
+*java-config-1.2.1-r1 (10 Jan 2004)
 
   08 Jan 2004; <agriffis@gentoo.org> java-config-1.1.7.ebuild:
   stable on ia64
