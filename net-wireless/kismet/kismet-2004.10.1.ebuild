@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2004.10.1.ebuild,v 1.3 2004/10/26 16:29:15 brix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kismet/kismet-2004.10.1.ebuild,v 1.4 2004/10/27 18:13:34 brix Exp $
 
 inherit gnuconfig
 
@@ -31,7 +31,7 @@ RDEPEND="virtual/libc
 		gps? ( app-misc/gpsdrive
 				>=dev-libs/expat-1.95.4
 				dev-libs/gmp
-				>=media-gfx/imagemagick-5.4.7
+				>=media-gfx/imagemagick-6.0
 				dev-perl/libwww-perl )"
 		# Note: gps support is automatically enabled based on the
 		# above libs - 2004-10-R1 doesn't honor the --disable-gps flag
