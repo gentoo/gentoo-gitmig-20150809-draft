@@ -1,8 +1,11 @@
 # ChangeLog for sys-kernel/development-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.64 2003/12/18 05:03:11 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/ChangeLog,v 1.65 2003/12/30 14:50:42 gmsoft Exp $
 
 *development-sources-2.6.0 (18 Dec 2003)
+
+  30 Dec 2003; Guy Martin <gmsoft@gentoo.org> development-sources-2.6.0.ebuild :
+  Added hppa support (2.6.0-pa6).
 
   18 Dec 2003; Brad House <brad_mssw@gentoo.org>
   development-sources-2.6.0.ebuild:
