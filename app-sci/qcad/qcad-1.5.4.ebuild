@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad/qcad-1.5.4.ebuild,v 1.4 2003/04/05 21:59:14 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad/qcad-1.5.4.ebuild,v 1.5 2003/05/28 17:38:23 caleb Exp $
 inherit kde-functions
 
 MY_P=${P}-src
@@ -36,4 +36,11 @@ src_install () {
 
 	insinto /usr/share/${PN}/pixmaps
 	doins xpm/*
+}
+
+pkg_postinst()
+{
+	ewarn "The QCad fonts have been installed to /usr/share/${PN}/fonts"
+	ewarn "You will need to copy them to ~/.qcad/fonts/ in order for QCad"
+	ewarn "to properly find the fonts."
 }

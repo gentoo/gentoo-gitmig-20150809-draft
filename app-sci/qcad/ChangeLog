@@ -1,8 +1,12 @@
 # ChangeLog for app-sci/qcad
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad/ChangeLog,v 1.6 2003/04/05 21:59:14 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/qcad/ChangeLog,v 1.7 2003/05/28 17:38:23 caleb Exp $
 
 *qcad-1.5.4 (22 Nov 2002)
+
+  28 May 2003; Caleb Tennis <caleb@gentoo.org> qcad-1.5.4.ebuild:
+  Added warning statement about installing fonts in your home directory.
+  Removed old versions - closes bug #19264
 
   06 Apr 2003; Dan Armak <danarmak@gentoo.org> qcad-1.5.4.ebuild:
   Add stable x86 keyword.
