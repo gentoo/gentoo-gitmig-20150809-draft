@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/ascpu
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/ascpu/ChangeLog,v 1.6 2004/06/13 04:03:26 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/ascpu/ChangeLog,v 1.7 2004/06/20 05:04:06 weeve Exp $
+
+  19 Jun 2004; Jason Wever <weeve@gentoo.org> ascpu-1.9.ebuild:
+  Stable on sparc.
 
 *ascpu-1.10 (13 Jun 2004)
 
