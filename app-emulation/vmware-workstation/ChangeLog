@@ -1,6 +1,17 @@
 # ChangeLog for app-emulation/vmware-workstation
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.20 2003/08/20 12:57:37 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/vmware-workstation/ChangeLog,v 1.21 2003/08/30 14:51:12 wolf31o2 Exp $
+
+*vmware-workstation-4.0.2.5592 (30 Aug 2003)
+
+  30 Aug 2003; Chris Gianelloni <wolf31o2@gentoo.org>
+  vmware-workstation-3.2.1.2237-r1.ebuild,
+  vmware-workstation-3.2.1.2237.ebuild, vmware-workstation-3.2.1.2242.ebuild,
+  vmware-workstation-4.0.0.4460-r1.ebuild,
+  vmware-workstation-4.0.1.5289.ebuild, vmware-workstation-4.0.2.5592.ebuild,
+  files/vmware-4.0.0.4460.rc, files/vmware-4.0.1.5289.rc, files/vmware.rc:
+  Added menu entries for all versions. Fixed init script for 4.x series. Added
+  latest version to fix security flaw and close a security hole.
 
 *vmware-workstation-3.2.1.2242 (20 Aug 2003)
 
