@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdebase
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.169 2004/12/29 19:12:30 kloeri Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.170 2005/01/03 23:00:26 gmsoft Exp $
+
+  03 Jan 2005; Guy Martin <gmsoft@gentoo.org> kdebase-3.3.2-r1.ebuild:
+  Stable on hppa.
 
   29 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
   kdebase-3.3.2-r1.ebuild:
