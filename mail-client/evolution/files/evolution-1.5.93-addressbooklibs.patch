@@ -1,0 +1,10 @@
+--- addressbook/gui/component/Makefile.in.orig	2004-08-13 14:38:30.000000000 -0400
++++ addressbook/gui/component/Makefile.in	2004-08-25 16:01:28.933397392 -0400
+@@ -292,6 +292,7 @@
+ 	$(SMIME_LIB)									\
+ 	$(top_builddir)/addressbook/printing/libecontactprint.la			\
+ 	$(top_builddir)/addressbook/gui/component/select-names/libeselectnames.la	\
++	$(top_builddir)/camel/libcamel.la						\
+ 	$(top_builddir)/shell/libeshell.la						\
+ 	$(top_builddir)/addressbook/gui/merging/libeabbookmerging.la			\
+ 	$(top_builddir)/addressbook/gui/widgets/libeabwidgets.la			\

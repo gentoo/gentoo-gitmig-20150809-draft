@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/evolution
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.12 2004/08/25 11:35:47 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/ChangeLog,v 1.13 2004/08/28 01:30:10 tester Exp $
+
+  27 Aug 2004; <tester@gentoo.org>
+  +files/evolution-1.5.93-addressbooklibs.patch:
+  Fix bug #61603 .. fix addressbook compilation
 
   25 Aug 2004; Brandon Hale <tseng@gentoo.org> evolution-1.5.92.1.ebuild,
   evolution-1.5.93.ebuild:
