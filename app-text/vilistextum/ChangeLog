@@ -1,10 +1,6 @@
 # ChangeLog for app-text/vilistextum
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/ChangeLog,v 1.10 2004/07/01 12:10:48 eradicator Exp $
-
-  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
-  vilistextum-2.6.1.ebuild, vilistextum-2.6.2.ebuild:
-  virtual/glibc -> virtual/libc
+# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/ChangeLog,v 1.11 2004/07/01 19:06:16 eradicator Exp $
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   vilistextum-2.6.1.ebuild, vilistextum-2.6.2.ebuild:
