@@ -1,8 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98.38-r1.ebuild,v 1.3 2005/02/01 07:16:57 mr_bones_ Exp $
-
-inherit eutils
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98.39.ebuild,v 1.1 2005/02/01 07:16:57 mr_bones_ Exp $
 
 DESCRIPTION="groovy little assembler"
 HOMEPAGE="http://nasm.sourceforge.net/"
@@ -10,7 +8,7 @@ SRC_URI="mirror://sourceforge/nasm/${P}.tar.bz2"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="-* x86 amd64"
+KEYWORDS="-* ~amd64 ~x86"
 IUSE="doc build"
 
 DEPEND="!build? ( dev-lang/perl )
@@ -18,12 +16,6 @@ DEPEND="!build? ( dev-lang/perl )
 		sys-apps/texinfo )
 	sys-devel/gcc"
 RDEPEND="virtual/libc"
-
-src_unpack() {
-	unpack ${A}
-	cd "${S}"
-	epatch "${FILESDIR}/${PV}-overflow.patch"
-}
 
 src_compile() {
 	./configure --prefix=/usr || die
