@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.9 2002/08/09 19:47:16 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.10 2002/09/07 23:45:00 owen Exp $
+*java-config-0.2.5 (07 Sep 2002)
+  07 Sep 2002; Owen Stampflee <owen@gentoo.org> java-config-0.2.5.ebuild files/digest-java-config-0.2.5 files/java-config-0.2.5 :
+  New Version to handle "." in CLASSPATH.
 
 *java-config-0.2.4-r1 (24 Jun 2002)
   09 Aug 2002; Mark Guertin <gerk@gentoo.org> java-config-0.2.4-r1.ebuild :
