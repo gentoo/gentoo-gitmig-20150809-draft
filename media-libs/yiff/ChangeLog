@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/yiff
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/yiff/ChangeLog,v 1.7 2004/07/13 03:02:17 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/yiff/ChangeLog,v 1.8 2004/10/08 09:57:14 eradicator Exp $
+
+  08 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> yiff-2.14.2.ebuild:
+  multilib fixes
 
   12 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   +files/yiff-2.14.2-PIC.patch:
