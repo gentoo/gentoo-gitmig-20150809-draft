@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta1-r1.ebuild,v 1.9 2004/12/31 01:47:37 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-4.0.0_beta1-r1.ebuild,v 1.10 2005/01/08 10:36:27 eradicator Exp $
 
 inherit eutils flag-o-matic
 

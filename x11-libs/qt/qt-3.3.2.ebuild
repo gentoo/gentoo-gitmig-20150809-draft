@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.2.ebuild,v 1.19 2004/10/25 17:29:58 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.3.2.ebuild,v 1.20 2005/01/08 10:36:27 eradicator Exp $
 
 inherit eutils
 

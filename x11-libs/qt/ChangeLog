@@ -1,6 +1,12 @@
 # ChangeLog for x11-libs/qt
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.180 2004/12/28 22:03:05 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.181 2005/01/08 10:36:27 eradicator Exp $
+
+*qt-3.3.3-r2 (08 Jan 2005)
+
+  08 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +qt-2.3.2-r2.ebuild, +qt-3.3.3-r2.ebuild:
+  Revbump for multilib fixes.  Only leaving multilib archs in KEYWORDS.
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

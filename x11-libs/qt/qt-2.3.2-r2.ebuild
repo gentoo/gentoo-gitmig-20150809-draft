@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-2.3.2-r1.ebuild,v 1.31 2005/01/08 10:36:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-2.3.2-r2.ebuild,v 1.1 2005/01/08 10:36:27 eradicator Exp $
+
+inherit eutils
 
 DESCRIPTION="QT ${PV}, an X11 widget set and general library used by KDE et al"
 HOMEPAGE="http://www.trolltech.com/"
@@ -8,7 +10,9 @@ SRC_URI="ftp://ftp.trolltech.com/pub/qt/source/qt-x11-${PV}.tar.gz"
 
 LICENSE="|| ( QPL-1.0 GPL-2 )"
 SLOT="2"
-KEYWORDS="x86 ppc sparc hppa alpha amd64 ia64"
+#KEYWORDS="x86 ppc sparc hppa alpha amd64 ia64"
+# -r2 is just the same as -r1 with multilib fixes
+KEYWORDS="~amd64 ~hppa ~sparc"
 IUSE="gif opengl nas debug"
 
 RDEPEND="virtual/x11
@@ -70,8 +74,8 @@ src_install() {
 	dobin bin/*
 
 	# libraries
-	dolib lib/libqt.so.${PV} lib/libqt-mt.so.${PV} lib/libqutil.so.1.0.0
-	cd ${D}$QTBASE/lib
+	dolib.so lib/libqt.so.${PV} lib/libqt-mt.so.${PV} lib/libqutil.so.1.0.0
+	cd ${D}$QTBASE/$(get_libdir)
 	for x in libqt.so libqt-mt.so
 	do
 		ln -s $x.2.3.2 $x.2.3
@@ -90,4 +94,11 @@ src_install() {
 	# misc
 	insinto /etc/env.d
 	doins ${FILESDIR}/{50qt2,45qtdir2}
+
+	# List all the multilib libdirs
+	local libdirs
+	for libdir in $(get_all_libdirs); do
+		libdirs="${libdirs}:/usr/qt/2/${libdir}"
+	done
+	dosed "s~^LDPATH=.*$~LDPATH=${libdirs:1}~" /etc/env.d/50qt2
 }
