@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.2.ebuild,v 1.24 2003/12/14 02:53:27 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ntp-4.1.2.ebuild,v 1.25 2004/02/14 05:06:03 vapier Exp $
 
 inherit eutils
 
@@ -14,17 +14,18 @@ SLOT="0"
 KEYWORDS="x86 ppc ~sparc mips alpha ~arm hppa ~amd64"
 IUSE="parse-clocks selinux ssl"
 
-DEPEND=">=sys-libs/ncurses-5.2
+RDEPEND=">=sys-libs/ncurses-5.2
 	>=sys-libs/readline-4.1
-	>=sys-devel/automake-1.7
 	sys-libs/libcap
-	ssl? ( dev-libs/openssl )"
-#	|| (
-#		dev-libs/libelf
-#		dev-libs/elfutils
-#	)
-RDEPEND="${DEPEND}
+	ssl? ( dev-libs/openssl )
 	selinux? ( sec-policy/selinux-ntp )
+	|| (
+		dev-libs/libelf
+		dev-libs/elfutils
+	)"
+DEPEND="${RDEPEND}
+	>=sys-devel/autoconf-2.58
+	>=sys-devel/automake-1.7.7
 	>=sys-apps/sed-4.0.5"
 
 pkg_setup() {
