@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.6.3-r1.ebuild,v 1.2 2004/08/21 15:21:49 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/nautilus/nautilus-2.6.3-r1.ebuild,v 1.3 2004/08/22 17:54:48 foser Exp $
 
 inherit gnome2 eutils
 
@@ -39,6 +39,7 @@ RDEPEND=">=dev-libs/glib-2.3
 	gstreamer? (
 		>=media-libs/gstreamer-0.8
 		>=media-libs/gst-plugins-0.8
+		>=media-plugins/gst-plugins-gnomevfs-0.8
 		mad? ( >=media-plugins/gst-plugins-mad-0.8 )
 		oggvorbis? (
 			>=media-plugins/gst-plugins-ogg-0.8
