@@ -1,6 +1,6 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.252 2004/09/13 23:05:02 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.253 2004/09/14 08:33:59 stuart Exp $
 
   14 Sep 2004; Danny van Dyk <kugelfang@gentoo.org> apache-2.0.50-r2.ebuild:
   Marked stable on amd64.
@@ -10,6 +10,11 @@
 
   13 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> apache-2.0.50-r2.ebuild:
   Stable on sparc wrt #62626
+
+*apache-2.0.50-r3 (14 Sep 2004)
+
+  14 Sep 2004; Stuart Herbert <stuart@gentoo.org> +apache-2.0.50-r3.ebuild:
+  Added patch for security issue CAN-2004-0809; see bug #63948
 
 *apache-2.0.50-r2 (13 Sep 2004)
 
