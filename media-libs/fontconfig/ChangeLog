@@ -1,18 +1,18 @@
 # ChangeLog for media-libs/fontconfig
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.3 2002/10/21 14:41:48 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.4 2002/10/25 13:01:20 jmorgan Exp $
 
 *fontconfig-2.0 (30 Sep 2002)
 
-  21 Oct 2002; Calum Selkirk <cselkirk@gentoo.org> fontconfig-2.0.ebuild :
+  24 Oct 2002; Jack Morgan <jmorgan@gentoo.org> fontconfig-2.0.ebuild :
+  Added sparc/sparc64 keywords
 
+  21 Oct 2002; Calum Selkirk <cselkirk@gentoo.org> fontconfig-2.0.ebuild :
   Added ppc to KEYWORDS.
 
   01 Oct 2002; Martin Schlemmer <azarah@gentoo.org> fontconfig-2.0.ebuild :
-
   Fix sandbox issues.
 
   30 Sep 2002; Martin Schlemmer <azarah@gentoo.org> fontconfig-2.0.ebuild :
-
   Initial version.
 
