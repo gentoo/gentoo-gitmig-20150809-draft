@@ -1,0 +1,8 @@
+# ChangeLog for app-office/openoffice-ximian
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.1 2003/11/04 11:21:20 pauldv Exp $
+
+*openoffice-ximian-1.1.0 (04 Nov 2003)
+
+  04 Nov 2003; Paul de Vrieze <pauldv@gentoo.org> openoffice-ximian-1.1.0.ebuild :
+  Initial commit based on the good work from <suka@t0.or.at>
