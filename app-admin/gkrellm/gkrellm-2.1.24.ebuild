@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.24.ebuild,v 1.5 2004/01/22 19:10:05 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-2.1.24.ebuild,v 1.6 2004/01/26 13:58:48 weeve Exp $
 
 IUSE="X nls ssl"
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.gkrellm.net/"
 
 SLOT="2"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc alpha ~sparc ~hppa"
+KEYWORDS="x86 ~ppc alpha sparc ~hppa"
 
 DEPEND=">=sys-apps/sed-4
 	ssl? ( dev-libs/openssl )
