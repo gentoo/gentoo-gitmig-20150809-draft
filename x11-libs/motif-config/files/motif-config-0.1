@@ -179,7 +179,7 @@ get_lib_path() {
 	fi
 	name=`cat ${PROFILE_PATH}/${profile} 2> /dev/null`
 	if [ $? -eq 1 ]; then
-		eerror "motif-config: No such profile: $profile"
+		eerror "$0: No such profile: $profile"
 	else
 		echo "/usr/$LIBDIR/${name}/"
 		exit 0
@@ -194,7 +194,7 @@ get_inc_path() {
 	fi
 	name=`cat ${PROFILE_PATH}/${profile} 2> /dev/null`
 	if [ $? -eq 1 ]; then
-		eerror "motif-config: No such profile: $profile"
+		eerror "$0: No such profile: $profile"
 	else
 		echo "/usr/include/${name}/"
 		exit 0
@@ -209,7 +209,7 @@ get_cflags() {
 	fi
 	name=`cat ${PROFILE_PATH}/${profile} 2> /dev/null`
 	if [ $? -eq 1 ]; then
-		eerror "motif-config: No such profile: $profile"
+		eerror "$0: No such profile: $profile"
 	else
 		echo "-I/usr/include/${name}/"
 		exit 0
@@ -224,7 +224,7 @@ get_libs() {
 	fi
 	name=`cat ${PROFILE_PATH}/${profile} 2> /dev/null`
 	if [ $? -eq 1 ]; then
-		eerror "motif-config: No such profile: $profile"
+		eerror "$0: No such profile: $profile"
 	else
 		echo "-L/usr/$LIBDIR/${name}/"
 		exit 0
