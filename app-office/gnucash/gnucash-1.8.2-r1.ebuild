@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.2-r1.ebuild,v 1.1 2003/04/28 02:15:05 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gnucash/gnucash-1.8.2-r1.ebuild,v 1.2 2003/04/28 11:11:46 liquidx Exp $
 
 inherit flag-o-matic libtool
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.gnucash.org/"
 KEYWORDS="~x86 ~ppc"
 SLOT="0"
 LICENSE="GPL-2"
-IUSE="nls postgres ofx hbci debug"
+IUSE="nls postgres ofx hbci"
 
 RDEPEND=">=gnome-base/gnome-libs-1.4.1.2-r1
 	>=dev-util/guile-1.6
@@ -56,11 +56,10 @@ src_compile() {
 	use postgres && myconf="${myconf} --enable-sql"
 	# note: --disable-ofx doesn't work
 	use ofx && myconf="${myconf} --enable-ofx"
-
+	use hbci && myconf="${myconf} --enable-hbci"
+	
 	econf \
-		`use_enable hbci` \
 		`use_enable nls` \
-		`use_enable debug` \
 		${myconf} || die
 		
 	emake || die
