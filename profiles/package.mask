@@ -1,8 +1,5 @@
-#drobbins, 12/22/01.  Testing new glibc without pkg_postinst/preinst hackery.
-=sys-libs/glibc-2.2.4-r8
-
-#still playing with XFS, low latency patches (12/14/2001 - drobbins)
-#=sys-kernel/linux-sources-2.4.16-r1
+#glibc-2.2.4-r8 is working, it seems.  No longer a need to unmask it.
+#(12/22/01 - drobbins)
 
 #incomplete and very dangerous < Danarmak >
 >=app-office/openoffice-641b
