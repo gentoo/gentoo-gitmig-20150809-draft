@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tree-puzzle/tree-puzzle-5.2.ebuild,v 1.3 2004/07/23 19:29:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tree-puzzle/tree-puzzle-5.2.ebuild,v 1.4 2004/10/14 15:02:34 ribosome Exp $
+
+inherit gcc
 
 DESCRIPTION="Maximum likelihood analysis for nucleotide, amino acid, and two-state data."
 HOMEPAGE="http://www.tree-puzzle.de"
@@ -8,14 +10,14 @@ SRC_URI="http://www.tree-puzzle.de/${P}.tar.gz"
 LICENSE="GPL-2"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="mpi"
 
 DEPEND="virtual/libc
 	mpi? ( sys-cluster/lam-mpi )"
 
 pkg_setup () {
-	use mpi && [ ${CC} = icc ] && die "The parallelized version of tree-puzzle cannot be compiled using icc.
+	use mpi && [ $(gcc-getCC) = icc ] && die "The parallelized version of tree-puzzle cannot be compiled using icc.
 	Either disable the \"mpi\" USE flag to compile only the non-parallelized
 	version of the program, or use gcc as your compiler (CC=\"gcc\")."
 }
