@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/gbib/gbib-0.1.2.ebuild,v 1.6 2005/01/01 15:32:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/gbib/gbib-0.1.2.ebuild,v 1.7 2005/03/07 19:30:51 gustavoz Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.seul.org/pub/gbib/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="x86 sparc"
 IUSE="nls"
 
 RDEPEND="=x11-libs/gtk+-1.2*
