@@ -1,5 +1,5 @@
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.47-r2.ebuild,v 1.1 2003/02/17 12:02:49 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.47-r2.ebuild,v 1.2 2003/02/17 12:44:06 carpaski Exp $
 
 IUSE="build"
 
@@ -249,4 +249,9 @@ pkg_postinst() {
 	AUXDBKEYLEN="$(python -c 'import portage,sys; sys.stderr.write(str(len(portage.auxdbkeys)))' 2>&1 >/dev/null)"
 	find ${ROOT}var/cache/edb/dep -type f -exec wc -l {} \; | egrep -v "^ *${AUXDBKEYLEN}" | sed 's:^ \+[0-9]\+ \+\([^ ]\+\)$:\1:' 2>/dev/null | xargs -n 50 -r rm -f
 	echo " ...done!"
+	
+	cd /sbin/
+	patch -sf < ${FILESDIR}/functions.sh.diff &>/dev/null
+	rm -f functions.sh~
+	cd ${S}
 }
