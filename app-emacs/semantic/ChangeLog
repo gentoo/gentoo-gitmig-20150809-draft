@@ -1,6 +1,15 @@
 # ChangeLog for app-emacs/semantic
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/semantic/ChangeLog,v 1.2 2003/02/12 03:55:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/semantic/ChangeLog,v 1.3 2003/09/21 02:57:30 mkennedy Exp $
+
+*semantic-1.4.4 (20 Sep 2003)
+
+  20 Sep 2003; Matthew Kennedy <mkennedy@gentoo.org> semantic-1.4.4.ebuild,
+  files/60semantic-gentoo.el:
+  version update. new changes: Given the package a meaningful description, Added
+  reasonable version-numbers for dependancies Added useful loading commands to
+  the site-file Removed the postinst configuration suggestion. changes
+  contributed by Marshall T. Vandegrift <vandem2@rpi.edu> of bug #18861
 
 *semantic-1.4 (31 Oct 2002)
 
