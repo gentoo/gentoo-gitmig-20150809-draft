@@ -1,0 +1,10 @@
+# ChangeLog for games-misc/fortune-mod-dune
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-dune/ChangeLog,v 1.1 2004/06/05 21:51:26 kloeri Exp $
+
+*fortune-mod-dune-2.0.1 (05 Jun 2004)
+
+  05 Jun 2004; Bryan Østergaard <kloeri@gentoo.org>
+  +fortune-mod-dune-2.0.1.ebuild:
+  Initial import, see bug #48952.
+
