@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/skey
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/ChangeLog,v 1.5 2003/11/05 21:10:34 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/ChangeLog,v 1.6 2003/11/06 02:12:11 taviso Exp $
+
+  06 Nov 2003; Tavis Ormandy <taviso@gentoo.org>
+  files/skey-1.1.5-gentoo.diff.gz:
+  no need for strlcpy, i'll change it for strncpy.
 
   05 Nov 2003; Tavis Ormandy <taviso@gentoo.org> skey-1.1.5-r1.ebuild,
   files/skey-1.1.5-gentoo.diff.gz:
