@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.2-r4.ebuild,v 1.5 2005/01/21 21:38:53 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/bzip2-1.0.2-r4.ebuild,v 1.6 2005/02/05 10:16:44 hansmi Exp $
 
 inherit toolchain-funcs flag-o-matic
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://sources.redhat.com/pub/bzip2/v102/${P}.tar.gz"
 
 LICENSE="BZIP2"
 SLOT="0"
-KEYWORDS="alpha ~amd64 arm hppa ia64 ~mips ~ppc ~ppc64 s390 sh sparc x86"
+KEYWORDS="alpha ~amd64 arm hppa ia64 ~mips ppc ~ppc64 s390 sh sparc x86"
 IUSE="build static"
 
 DEPEND="virtual/libc"

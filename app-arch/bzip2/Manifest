@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 21df7935e7a7e22dffb9057e277adce7 ChangeLog 4871
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 3ebf255381a115570594555f3bf9a784 bzip2-1.0.2-r4.ebuild 2091
+MD5 fb64171a7ba53f8cf95b8aae0a642a72 ChangeLog 4966
 MD5 88eb397d1eb3af19fe800d1cee2be3df bzip2-1.0.2-r3.ebuild 2390
-MD5 cc73bebefba3a38c58fc49b49d7d25a7 files/1.0.2-NULL-ptr-check.patch 838
+MD5 91a0c562e7bd1d9165952dc4ea5f70ee bzip2-1.0.2-r4.ebuild 2090
 MD5 378e8d34dd95cc65b7f65565df5d85f7 files/1.0.2-makefile-CFLAGS.patch 841
 MD5 382f154f0ba01de10aff6207652d6799 files/digest-bzip2-1.0.2-r3 63
+MD5 cc73bebefba3a38c58fc49b49d7d25a7 files/1.0.2-NULL-ptr-check.patch 838
 MD5 382f154f0ba01de10aff6207652d6799 files/digest-bzip2-1.0.2-r4 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFB8XZ7ugEuf3OQ0akRAnVMAJ9Q1wlYJ/WGj5TC9FPtgXfj2mDyPQCfV5iv
-RChW8d5X9K6x0rXPGfkqkGI=
-=9plN
------END PGP SIGNATURE-----
