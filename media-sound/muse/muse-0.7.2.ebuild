@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/muse/muse-0.7.2.ebuild,v 1.6 2004/06/25 00:14:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/muse/muse-0.7.2.ebuild,v 1.7 2004/07/01 10:59:28 eradicator Exp $
 
 IUSE="ncurses oggvorbis X"
 
@@ -14,7 +14,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-apps/portage-2.0.45-r3
 	>=media-sound/lame-3.92
 	>=sys-apps/sed-4.0.5
@@ -22,7 +22,7 @@ DEPEND="virtual/glibc
 	oggvorbis? ( >=media-libs/libogg-1.0 >=media-libs/libvorbis-1.0-r1 )
 	X? ( =x11-libs/gtk+-1* )"
 
-RDEPEND="virtual/glibc
+RDEPEND="virtual/libc
 	>=media-sound/lame-3.92
 	ncurses? ( >=sys-libs/ncurses-5.2 )
 	oggvorbis? ( >=media-libs/libogg-1.0 >=media-libs/libvorbis-1.0-r1 )

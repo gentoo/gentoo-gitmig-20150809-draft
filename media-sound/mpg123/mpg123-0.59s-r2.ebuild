@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r2.ebuild,v 1.8 2004/06/25 00:13:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59s-r2.ebuild,v 1.9 2004/07/01 10:58:52 eradicator Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="x86 ia64 amd64 ppc sparc alpha hppa -mips"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=sys-apps/sed-4"
 PROVIDE="virtual/mpg123"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/mpc-0.11.0.ebuild,v 1.2 2004/06/27 10:43:51 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/mpc-0.11.0.ebuild,v 1.3 2004/07/01 10:59:11 eradicator Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ KEYWORDS="~x86 ~ppc"
 SLOT="0"
 LICENSE="GPL-2"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_compile() {
 	local myconf

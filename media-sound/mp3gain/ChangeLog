@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/mp3gain
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3gain/ChangeLog,v 1.5 2004/06/25 00:12:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mp3gain/ChangeLog,v 1.6 2004/07/01 10:59:53 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> mp3gain-1.4.3.ebuild:
+  virtual/glibc -> virtual/libc
 
   02 Jun 2004; Jon Hood <squinky86@gentoo.org> mp3gain-1.4.3.ebuild:
   added unzip to DEPEND (#52768, thanks Arno <gentoo@onra.org>)
