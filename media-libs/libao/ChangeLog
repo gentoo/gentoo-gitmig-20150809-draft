@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libao
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.23 2004/02/12 11:56:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.24 2004/02/15 20:45:55 azarah Exp $
+
+  15 Feb 2004; Martin Schlemmer <azarah@gentoo.org> libao-0.8.4-r1.ebuild:
+  Remove libtoolize -c -f, as latest libtool-1.5.2-r3 is fixed and rather run
+  elibtoolize.
 
   12 Feb 2004; Jeremy Huddleston <eradicator@gentoo.org>
   libao-0.8.4-r1.ebuild:
