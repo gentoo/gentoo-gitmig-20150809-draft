@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ceba805bd8e00f56b397f02ee45152b5 ChangeLog 552
-MD5 a61d6efc6810a404993310623c00a017 xemacs-eterm-1.13.ebuild 495
+MD5 681bcde8165dc58d4afa817bd0cbc795 ChangeLog 554
+MD5 8c043b8dfe4b08bfdc2dedabe6239bf4 xemacs-eterm-1.13.ebuild 495
 MD5 6652ced118703656fed04c2372b56a0d files/digest-xemacs-eterm-1.13 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBYGQWI1lqEGTUzyQRAoS1AJsE8JIWZ8E+tscasYvlma5IhoEo4gCffuEx
-lQsPQZiIDw5Mkn0Ecnr+ras=
-=UnDu
------END PGP SIGNATURE-----
