@@ -1,6 +1,9 @@
 # ChangeLog for media-radio/xconvers
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-radio/xconvers/ChangeLog,v 1.1 2004/06/28 05:01:03 killsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-radio/xconvers/ChangeLog,v 1.2 2004/06/28 21:44:37 dholm Exp $
+
+  28 Jun 2004; David Holm <dholm@gentoo.org> xconvers-0.8.2.ebuild:
+  Added to ~ppc.
 
 *xconvers-0.8.2 (27 Jun 2004)
 
