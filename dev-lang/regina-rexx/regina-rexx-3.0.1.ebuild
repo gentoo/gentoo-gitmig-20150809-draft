@@ -1,31 +1,30 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/regina-rexx-3.0.1.ebuild,v 1.3 2002/10/04 05:13:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/regina-rexx/regina-rexx-3.0.1.ebuild,v 1.4 2002/11/07 18:33:54 seemant Exp $
 
-S="${WORKDIR}"
+S=${WORKDIR}
 HOMEPAGE="http://regina-rexx.sourceforge.net"
 DESCRIPTION="Portable Rexx interpreter"
-SRC_URI="http://unc.dl.sourceforge.net/sourceforge/regina-rexx/regina301.zip"
-RDEPEND="virtual/glibc"
-DEPEND="${RDEPEND}"
-LICENSE="LGPL-2.1"
+SRC_URI="mirror://sourceforge/regina-rexx/regina301.zip"
+
 SLOT="0"
+LICENSE="LGPL-2.1"
 KEYWORDS="x86 sparc sparc64"
+
+DEPEND="app-arch/unzip"
 
 src_compile() {
 	autoconf || die "autoconf problem"
-	./configure --prefix=/usr --mandir=/usr/share/man || die "configure problem"
+	econf
 	mv Makefile Makefile~
 	sed <Makefile~ >Makefile \
 		-e 's|-$(INSTALL) -m 755 -c ./rxstack.init.d $(STARTUPDIR)/rxstack||' \
 		-e "s|/usr/share/regina|${D}/usr/share/regina|"
-	emake || die "make problem"
+	emake || make || die "make problem"
 }
 
 src_install() {
-	make prefix=${D}/usr \
-		mandir=${D}/usr/share/man \
-		datadir=${D}/usr/share/regina install || die "install problem"
+	einstall datadir=${D}/usr/share/regina || die
 
 	exeinto /etc/init.d
 	doexe ${FILESDIR}/rc_rxstack rxstack
