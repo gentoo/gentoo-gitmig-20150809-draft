@@ -1,6 +1,13 @@
 # ChangeLog for x11-misc/xrootconsole
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrootconsole/ChangeLog,v 1.6 2003/11/04 03:40:44 abhishek Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xrootconsole/ChangeLog,v 1.7 2004/03/06 10:12:08 pyrania Exp $
+
+*xrootconsole-0.4-r1 (06 Mar 2004)
+
+  06 Mar 2004; Markus Nigbur <pyrania@gentoo.org> xrootconsole-0.4-r1.ebuild,
+  files/xrootconsole-0.4.parse-color.patch:
+  Added patch to enable RGB color parsing. Thanks to Martin Parm
+  <parmus@diku.dk> (bug #41969).
 
   03 Nov 2003; Abhishek Amit <abhishek@gentoo.org> metadata.xml:
   Added metadata.xml
