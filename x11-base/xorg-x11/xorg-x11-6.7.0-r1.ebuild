@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r1.ebuild,v 1.29 2004/07/26 20:23:33 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r1.ebuild,v 1.30 2004/07/28 08:50:48 spyderous Exp $
 
 # Libraries which are now supplied in shared form that were not in the past
 # include:  libFS.so, libGLw.so, libI810XvMC.so, libXRes.so, libXfontcache.so,
@@ -182,11 +182,13 @@ pkg_setup() {
 	# See bug #35468, circular pam-X11 dep
 	if use pam && [ "`best_version x11-base/${PN}`" ]
 	then
-		einfo "Previous X installation detected"
+		einfo "Previous ${PN} installation detected"
 		einfo "Enabling PAM features in ${PN}..."
 	else
-		einfo "Previous X installation NOT detected"
+		einfo "Previous ${PN} installation NOT detected"
 		einfo "Disabling PAM features in ${PN}..."
+		einfo "You must remerge ${PN} to enable pam."
+		einfo "See http://bugs.gentoo.org/show_bug.cgi?id=35468."
 	fi
 
 	if use static || use dlloader
