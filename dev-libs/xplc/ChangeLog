@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/xplc
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xplc/ChangeLog,v 1.1 2004/12/05 21:42:15 mrness Exp $
+
+*xplc-0.3.10 (05 Dec 2004)
+
+  05 Dec 2004; Alin Nastac <mrness@gentoo.org> +metadata.xml,
+  +xplc-0.3.10.ebuild:
+  Initial import from #70419, thanks to Peter Colijn <sirjoltalot@yahoo.com>.
+
