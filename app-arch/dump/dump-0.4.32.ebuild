@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.32.ebuild,v 1.3 2003/06/29 15:40:50 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.32.ebuild,v 1.4 2003/09/09 15:03:57 vapier Exp $
 
 MY_P=${P/4./4b}
 S=${WORKDIR}/${MY_P}
@@ -16,7 +16,7 @@ IUSE="readline static"
 DEPEND=">=sys-apps/e2fsprogs-1.27
 	>=sys-apps/bzip2-1.0.2
 	>=sys-libs/zlib-1.1.4
-	sys-kernel/linux-headers
+	virtual/os-headers
 	readline? ( sys-libs/readline )"
 RDEPEND="sys-apps/star"
 
