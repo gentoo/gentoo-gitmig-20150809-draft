@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ebview/ebview-0.3.6.ebuild,v 1.1 2004/09/15 09:24:29 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ebview/ebview-0.3.6.ebuild,v 1.2 2004/11/22 12:54:41 usata Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/ebview/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc"
+KEYWORDS="x86 ~amd64 ppc"
 
 DEPEND=">=dev-libs/eb-3.3.4
 	>=x11-libs/gtk+-2.2
@@ -36,6 +36,7 @@ src_compile() {
 
 src_install () {
 
+	# make DESTDIR=${D} install doesn't work
 	einstall || die
 
 	dodoc ABOUT-NLS AUTHORS ChangeLog INSTALL* NEWS README TODO

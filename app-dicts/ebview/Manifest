@@ -1,9 +1,19 @@
-MD5 a0b04bed1de2125482b824f5b4bf2b06 ChangeLog 2104
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f5f0fd4e71a01cf09acff3dfe1b3fd3c ChangeLog 2236
 MD5 d1411e42201207c6fd5ce3c1e9c37483 metadata.xml 251
-MD5 f577db3bea30b9545933a760b308f0e0 ebview-0.3.6.ebuild 848
-MD5 6c4f329abc7992c3b504f005fe30c51c ebview-0.3.5.ebuild 1051
-MD5 669a87056e662de95352ff0a7386f940 files/ebview-gettext-0.12-gentoo.diff 371
-MD5 fe8e1c89543dc8e25d6d76c9224140c1 files/ebview-eb4-gentoo.diff 814
+MD5 4a4d6bb357cb66e3bc00dd0f5eb6961f ebview-0.3.5.ebuild 1085
+MD5 934d25de165f7b364cb8bfe73f819f66 ebview-0.3.6.ebuild 888
 MD5 3112c347e1311fdd7da16d107a11c45f files/digest-ebview-0.3.6 64
 MD5 7ca1e93a927c69f06d6aba5a74e87927 files/digest-ebview-0.3.5 64
+MD5 fe8e1c89543dc8e25d6d76c9224140c1 files/ebview-eb4-gentoo.diff 814
+MD5 669a87056e662de95352ff0a7386f940 files/ebview-gettext-0.12-gentoo.diff 371
 MD5 fa8622e5791a18b9b15cbf69bb75f736 files/ebview-gtk24.diff 873
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBod/+VWNWqTUmv+0RAvVRAJ9vNdRuujYMUnNXaVVxS96bTFF/lwCcDnpp
+HuzeRTgxr3pBVdhjZ0OaVbA=
+=AJVj
+-----END PGP SIGNATURE-----
