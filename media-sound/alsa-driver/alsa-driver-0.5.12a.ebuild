@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.5.12a.ebuild,v 1.1 2001/12/12 05:29:04 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.5.12a.ebuild,v 1.2 2002/01/02 22:00:27 woodchip Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Advanced Linux Sound Architecture modules"
@@ -45,8 +45,7 @@ src_install () {
 	dodoc INSTALL FAQ
 	dodir /lib/modules/${KV}/misc
 	cp ${S}/modules/*.o ${D}/lib/modules/${KV}/misc
-	dodir /etc/modutils
-	insinto /etc/modutils
+	insinto /etc/modules.d
 	doins ${FILESDIR}/alsa
 	#this is the new modular modules system (from Debian) :)
 }
