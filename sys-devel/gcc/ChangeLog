@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.244 2004/05/14 13:48:07 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.245 2004/05/17 01:04:21 lv Exp $
+
+  17 May 2004; Travis Tilley <lv@gentoo.org> gcc-3.3.3-r5.ebuild:
+  added amd64 to the (short) list of archs that can enable automatic PIE + SSP
 
 *gcc-3.3.3-r5 (14 May 2004)
 
