@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.292 2004/07/22 18:22:54 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.293 2004/07/25 10:07:02 gmsoft Exp $
+
+  25 Jul 2004; Guy Martin <gmsoft@gentoo.org> gcc-3.4.1.ebuild:
+  Marked -hppa. It b0rks glibc and co.
 
 *gcc-3.3.3-r1 (22 Jul 2004)
 
