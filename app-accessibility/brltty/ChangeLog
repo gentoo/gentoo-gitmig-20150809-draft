@@ -1,6 +1,12 @@
 # ChangeLog for app-accessibility/brltty
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.10 2004/06/28 22:45:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/ChangeLog,v 1.11 2004/08/17 04:24:19 squinky86 Exp $
+
+*brltty-3.6_pre1 (16 Aug 2004)
+
+  16 Aug 2004; Jon Hood <squinky86@gentoo.org> -brltty-3.5.0_pre3.ebuild,
+  +brltty-3.6_pre1.ebuild:
+  Version bump, remove old version
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> brltty-3.4.1.ebuild:
   add sed-4 dep

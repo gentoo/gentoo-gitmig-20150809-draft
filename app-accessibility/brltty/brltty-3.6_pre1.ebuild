@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-3.5.0_pre3.ebuild,v 1.3 2004/06/25 15:55:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/brltty/brltty-3.6_pre1.ebuild,v 1.1 2004/08/17 04:24:19 squinky86 Exp $
 
-MY_P=${P/.0_/}
+MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
 
 DESCRIPTION="daemon that provides access to the Linux/Unix console for a blind person"
