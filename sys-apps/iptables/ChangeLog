@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/iptables
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iptables/ChangeLog,v 1.1 2002/02/01 21:53:37 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iptables/ChangeLog,v 1.2 2002/03/21 06:10:11 drobbins Exp $
+
+*iptables-1.2.5-r1 (20 Mar 2002)
+
+  20 Mar 2002; Daniel Robbins <drobbins@gentoo.org> : iptables *requires*
+  kernel sources to compile.  Before, we got away without them since we had a
+  /usr/include/linux/autoconf.h.  Now we don't, and this means that we need a
+  source tree handy.  Sad but true, and apparently the right thing to do.
 
 *iptables-1.2.5 (1 Feb 2002)
 
