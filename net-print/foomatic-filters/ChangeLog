@@ -1,6 +1,10 @@
 # ChangeLog for net-print/foomatic-filters
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/ChangeLog,v 1.7 2004/03/02 13:30:52 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/ChangeLog,v 1.8 2004/03/14 00:55:22 geoman Exp $
+
+  13 Mar 2004; Stephen P. Becker <geoman@gentoo.org>
+  foomatic-filters-3.0.1.ebuild:
+  Added ~mips to keywords.
 
 *foomatic-filters-3.0.1 (02 Mar 2004)
 
