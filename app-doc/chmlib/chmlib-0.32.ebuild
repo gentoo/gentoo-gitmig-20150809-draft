@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/chmlib/chmlib-0.32.ebuild,v 1.2 2004/05/31 18:31:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/chmlib/chmlib-0.32.ebuild,v 1.3 2004/06/09 13:55:45 dholm Exp $
 
 DESCRIPTION="Library for MS CHM (compressed html) file format plus extracting and http server utils"
 HOMEPAGE="http://66.93.236.84/~jedwin/projects/chmlib/"
@@ -20,11 +20,11 @@ src_unpack() {
 	econf
 #	sed -i "s:gcc-3.2:gcc:" Makefile
 #	sed -i "s:/usr/local/:/${D}/usr/:" Makefile
-#	if [ "${ARCH}" = "ppc" ]; then
-#		# In this case it is safe to take this rather
-#		# stupid action =)
-#		sed -i "s:__i386__:__powerpc__:" chm_lib.c
-#	fi
+	if [ "${ARCH}" = "ppc" ]; then
+		# In this case it is safe to take this rather
+		# stupid action =)
+		sed -i "s:__i386__:__powerpc__:" src/chm_lib.c
+	fi
 #	if [ "${ARCH}" = "amd64" ]; then
 #		sed -i "s:__i386__:__x86_64__:" chm_lib.c
 #	fi
