@@ -2282,3 +2282,39 @@ diff -urp linux-2.6.10/include/linux/if_ppp.h linux-2.6.10-gentoo/include/linux/
  
  /*
   * Packet sizes
+--- linux-2.6.10/include/asm-sparc/thread_info.h.orig	2004-12-23 21:38:32.000000000 -0800
++++ linux-2.6.10/include/asm-sparc/thread_info.h	2005-03-07 15:24:52.954659122 -0800
+@@ -11,8 +11,6 @@
+ #ifndef _ASM_THREAD_INFO_H
+ #define _ASM_THREAD_INFO_H
+ 
+-#ifdef __KERNEL__
+-
+ #ifndef __ASSEMBLY__
+ 
+ #include <asm/btfixup.h>
+@@ -147,6 +145,4 @@ BTFIXUPDEF_CALL(void, free_thread_info, 
+ #define _TIF_USEDFPU		(1<<TIF_USEDFPU)
+ #define _TIF_POLLING_NRFLAG	(1<<TIF_POLLING_NRFLAG)
+ 
+-#endif /* __KERNEL__ */
+-
+ #endif /* _ASM_THREAD_INFO_H */
+--- linux-2.6.10/include/asm-sparc64/thread_info.h.orig	2004-12-23 21:38:32.000000000 -0800
++++ linux-2.6.10/include/asm-sparc64/thread_info.h	2005-03-07 15:24:43.765013779 -0800
+@@ -7,8 +7,6 @@
+ #ifndef _ASM_THREAD_INFO_H
+ #define _ASM_THREAD_INFO_H
+ 
+-#ifdef __KERNEL__
+-
+ #define NSWINS		7
+ 
+ #define TI_FLAG_BYTE_FAULT_CODE		0
+@@ -246,6 +244,4 @@ register struct thread_info *current_thr
+ 				 (_TIF_NOTIFY_RESUME | _TIF_SIGPENDING | \
+ 				  _TIF_NEED_RESCHED | _TIF_PERFCTR))
+ 
+-#endif /* __KERNEL__ */
+-
+ #endif /* _ASM_THREAD_INFO_H */
