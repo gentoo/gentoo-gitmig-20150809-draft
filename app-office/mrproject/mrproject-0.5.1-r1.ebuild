@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mrproject/mrproject-0.5.1-r1.ebuild,v 1.5 2003/06/10 13:33:10 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mrproject/mrproject-0.5.1-r1.ebuild,v 1.6 2003/07/09 17:08:54 liquidx Exp $
 
 IUSE="nls"
 
@@ -22,7 +22,8 @@ RDEPEND=">=media-libs/gdk-pixbuf-0.18
 	=gnome-base/gconf-1.0*
 	=gnome-base/gnome-vfs-1.0*
 	>=gnome-base/oaf-0.6.8
-	>=gnome-base/gnome-print-0.34"
+	>=gnome-base/gnome-print-0.34
+	app-text/scrollkeeper"
 
 DEPEND="${RDEPEND}
 	nls? ( sys-devel/gettext )

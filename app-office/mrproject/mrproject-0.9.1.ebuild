@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/mrproject/mrproject-0.9.1.ebuild,v 1.2 2003/07/02 14:51:27 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/mrproject/mrproject-0.9.1.ebuild,v 1.3 2003/07/09 17:08:54 liquidx Exp $
 
 
 inherit gnome2
@@ -22,7 +22,8 @@ RDEPEND=">=x11-libs/gtk+-2.0.5
 	>=dev-libs/libmrproject-${PV}
 	>=gnome-base/gnome-vfs-2.0.2
 	>=gnome-base/libgnomeprintui-2.1.9
-	>=gnome-base/libbonoboui-2.0.0"
+	>=gnome-base/libbonoboui-2.0.0
+	app-text/scrollkeeper"
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0" 
