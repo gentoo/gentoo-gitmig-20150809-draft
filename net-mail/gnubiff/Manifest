@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 81c81886709a96df592392ce2cfaf4b3 ChangeLog 346
+MD5 75c3c77807098d554938a4372bfae9ef gnubiff-2.0.2.ebuild 828
+MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
+MD5 e99d3f45a896c224ba095e188794221f files/digest-gnubiff-2.0.2 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBi4Rc10xuJSrg3/sRAp5sAJ9qJR5dAan1Y2eaarBkwe7llZXQpACeOoDR
+GzZix5/0RzPcDsuDL8mV9FA=
+=SKkl
+-----END PGP SIGNATURE-----
