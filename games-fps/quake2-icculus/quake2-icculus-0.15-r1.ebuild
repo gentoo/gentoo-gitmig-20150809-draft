@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.15-r1.ebuild,v 1.4 2004/04/13 18:50:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake2-icculus/quake2-icculus-0.15-r1.ebuild,v 1.5 2004/04/13 18:54:43 vapier Exp $
 
 inherit eutils gcc games
 
@@ -40,8 +40,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}-gentoo-path.patch
 	sed -i \
 		-e "s:GENTOO_DATADIR:${GAMES_DATADIR}/quake2-data:" \
-			src/qcommon/files.c \
-				|| die "sed src/qcommon/files.c failed"
+		src/qcommon/files.c \
+		|| die "sed src/qcommon/files.c failed"
 
 	ln -s `which echo` ${T}/more
 	for g in `use rogue` `use xatrix` ; do
@@ -50,7 +50,7 @@ src_unpack() {
 		unpack ${g}src320.shar.Z
 		sed -i \
 			-e 's:^read ans:ans=yes :' ${g}src320.shar \
-				|| die "sed ${g}src320.shar failed"
+			|| die "sed ${g}src320.shar failed"
 		env PATH="${T}:${PATH}" unshar ${g}src320.shar
 		rm ${g}src320.shar
 	done
@@ -76,7 +76,7 @@ src_compile() {
 	# xatrix fails to build
 	# rogue fails to build
 	for BUILD_QMAX in YES NO ; do
-		[ `use noqmax` ] && [ "${BUILD_QMAX}" == "YES" ] && continue
+		use noqmax && [ "${BUILD_QMAX}" == "YES" ] && continue
 		[ "${BUILD_QMAX}" == "YES" ] \
 			&& echo "#define GENTOO_LIBDIR \"${GAMES_LIBDIR}/${PN}-qmax\"" > src/linux/gentoo-libdir.h \
 			|| echo "#define GENTOO_LIBDIR \"${GAMES_LIBDIR}/${PN}\"" > src/linux/gentoo-libdir.h
@@ -127,7 +127,7 @@ src_install() {
 	use sdl && dogamesbin ${D}/${q2dir}/sdlquake2 && rm ${D}/${q2dir}/sdlquake2
 
 	# q2max files
-	if [ ! `use noqmax` ] ; then
+	if ! use noqmax ; then
 		dodir ${q2maxdir}
 		cp -rf my-rel-YES/* ${D}/${q2maxdir}/
 		newgamesbin ${D}/${q2maxdir}/quake2 quake2-qmax
