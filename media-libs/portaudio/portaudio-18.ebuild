@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/portaudio-18.ebuild,v 1.8 2004/03/26 20:55:20 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/portaudio/portaudio-18.ebuild,v 1.9 2004/03/30 23:46:32 lv Exp $
 
 S=${WORKDIR}/${PN}_v${PV}
 DESCRIPTION="An open-source cross platform audio API."
@@ -9,7 +9,7 @@ SRC_URI="http://www.portaudio.com/archives/${PN}_v${PV}.zip"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="x86 ~sparc ~amd64"
 
 IUSE=""
 
@@ -17,6 +17,7 @@ DEPEND="virtual/glibc"
 
 src_compile() {
 
+	epatch ${FILESDIR}/portaudio-use-fpic.patch
 	make -f Makefile.linux sharedlib || die
 
 }
