@@ -1,0 +1,25 @@
+#!/sbin/runscript
+
+depend() {
+    need net
+}
+
+checkconfig() {
+    if [ -z "$FTPUSER" ] || [ -z "$FTPROOT" ] ; then
+	eerror "You need to setup FTPUSER and FTPROOT in /etc/rc.conf"
+	return 1
+    fi
+}
+
+start() {
+    checkconfig || return 1
+    ebegin "Starting oftpd"
+    start-stop-daemon --start --quiet --exec /usr/sbin/oftpd -- $FTPUSER $FTPROOT
+    eend $?
+}
+
+stop() {
+    ebegin "Stopping oftpd"
+    start-stop-daemon --stop --quiet --exec /usr/sbin/oftpd
+    eend $?
+}

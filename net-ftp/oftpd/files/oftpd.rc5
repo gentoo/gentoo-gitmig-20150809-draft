@@ -12,7 +12,7 @@ EXE=/usr/sbin/oftpd
 start() {
 
 		ebegin "Starting $SERVICE"
-     		start-stop-daemon --start --quiet --exec $EXE $FTPUSER $FTPROOT
+     		start-stop-daemon --start --quiet --exec $EXE -- $FTPUSER $FTPROOT
 		eend $? "Started $SERVICE." "Error starting $SERVICE."
 }
 

@@ -1,19 +1,16 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Ben Lutgens <lamer@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/oftpd-0.3.6.ebuild,v 1.2 2001/07/07 17:53:18 lamer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/oftpd/oftpd-0.3.6.ebuild,v 1.3 2001/09/06 11:35:24 woodchip Exp $
 
-#P=
-#A=${P}.tar.gz
 S=${WORKDIR}/${P}
-DESCRIPTION="Secure, small anonymous only ftpd"
+DESCRIPTION="Secure, small, anonymous only ftpd"
 SRC_URI="http://www.time-travellers.org/oftpd/${P}.tar.gz"
-HOMEPAGE="http://www.time-travellers.org/oftpd/"
+HOMEPAGE="http://www.time-travellers.org/oftpd"
 
-DEPEND=""
+DEPEND="virtual/glibc"
 
 src_compile() {
-
 
 # Broken upstream source. Won't compile with this enabled.
 #local myconf
@@ -29,25 +26,14 @@ src_compile() {
 
 src_install () {
 
-    try make DESTDIR=${D} install
-	 dodoc AUTHORS BUGS COPYING INSTALL FAQ NEWS README TODO
-	 exeinto /etc/rc.d/init.d
-	 doexe ${FILESDIR}/oftpd
-
-# Am disabling this untill I can figure out how to make the daemon write a
-# pid file
-    doexe ${FILESDIR}/svc-oftpd
-    exeinto /var/lib/supervise/services/oftpd
-	 newexe ${FILESDIR}/oftpd-run run
-    dodir /var/lib/supervise/control
-    dosym /var/lib/supervise/services/oftpd \
-	 /var/lib/supervise/control/oftpd
-	 dodir /home/ftp
+	try make DESTDIR=${D} install
+	dodoc AUTHORS BUGS COPYING INSTALL FAQ NEWS README TODO
+	exeinto /etc/rc.d/init.d
+	newexe ${FILESDIR}/oftpd.rc5 oftpd
+	dodir /home/ftp
 }
 
 pkg_postinst() {
 	einfo "Run \"rc-update add svc-oftpd\" to make the daemon start at boot"
-	einfo "Add FTPUSER=\"ftp\" and FTPROOT=\"/home/ftp\" to
-/etc/rc.d/config/basic"
+	einfo "Add FTPUSER=\"ftp\" and FTPROOT=\"/home/ftp\" to /etc/rc.d/config/basic"
 }
-
