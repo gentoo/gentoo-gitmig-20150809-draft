@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.16.1-r1.ebuild,v 1.11 2002/10/04 06:25:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/groff/groff-1.16.1-r1.ebuild,v 1.12 2002/10/19 03:42:44 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Text formatter used for man pages"
@@ -9,6 +9,7 @@ HOMEPAGE="http://www.gnu.org/software/groff/groff.html"
 KEYWORDS="x86 ppc sparc sparc64"
 SLOT="0"
 DEPEND="virtual/glibc"
+RDEPEND="${DEPEND}"
 LICENSE="GPL-2"
 
 src_compile() {

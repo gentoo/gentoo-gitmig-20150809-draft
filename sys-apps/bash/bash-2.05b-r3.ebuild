@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/bash-2.05b-r3.ebuild,v 1.3 2002/10/16 09:35:02 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/bash/bash-2.05b-r3.ebuild,v 1.4 2002/10/19 03:42:44 vapier Exp $
 
 inherit flag-o-matic
 
@@ -20,6 +20,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~sparc64 ~alpha"
 
 DEPEND=">=sys-libs/ncurses-5.2-r2 
 	sys-devel/autoconf"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${P}.tar.gz ${P}-gentoo.diff.bz2
@@ -57,7 +58,6 @@ src_compile() {
 }
 
 src_install() {
-
 	einstall || die
 
 	dodir /bin
@@ -72,4 +72,3 @@ src_install() {
 			dodoc doc/FAQ doc/INTRO
 		)
 }
-

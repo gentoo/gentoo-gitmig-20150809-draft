@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11o-r3.ebuild,v 1.9 2002/10/19 03:21:25 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11o-r3.ebuild,v 1.10 2002/10/19 03:42:44 vapier Exp $
 
 IUSE="nls"
 
@@ -44,11 +44,11 @@ src_compile() {
 		cp defines.h defines.h.orig	
 		cp Makefile Makefile.orig
 		
-		sed -e "s/#define ENABLE_NLS//g" 	\
-			-e "s/#define HAVE_libintl_h//g"	\
+		sed -e "s/#define ENABLE_NLS//g" \
+			-e "s/#define HAVE_libintl_h//g" \
 			defines.h.orig > defines.h
 	
-		sed "s/\(^SUBDIRS=\)po/\1lib/g"	\
+		sed "s/\(^SUBDIRS=\)po/\1lib/g" \
 			Makefile.orig > Makefile
 	fi
 	

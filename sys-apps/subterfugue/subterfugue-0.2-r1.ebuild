@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/subterfugue/subterfugue-0.2-r1.ebuild,v 1.10 2002/10/19 03:21:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/subterfugue/subterfugue-0.2-r1.ebuild,v 1.11 2002/10/19 03:42:44 vapier Exp $
 
 IUSE="gtk"
 
@@ -13,7 +13,7 @@ SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND=">=dev-lang/python-2.0
-        gtk? ( =x11-libs/gtk+-1.2* )"
+	gtk? ( =x11-libs/gtk+-1.2* )"
 RDEPEND="${DEPEND}"
 
 src_unpack() {

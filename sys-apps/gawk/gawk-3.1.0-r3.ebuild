@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.0-r3.ebuild,v 1.5 2002/10/19 01:52:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.0-r3.ebuild,v 1.6 2002/10/19 03:42:44 vapier Exp $
 
 IUSE="nls build"
 
@@ -13,10 +13,10 @@ SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND="virtual/glibc
-		nls? ( sys-devel/gettext )"
+	nls? ( sys-devel/gettext )"
+RDEPEND="${DEPEND}"
 
 src_compile() {
-
 	local myconf=""
 	use nls || myconf="${myconf} --disable-nls"
 
@@ -31,7 +31,6 @@ src_compile() {
 }
 
 src_install() {
-
 	make prefix=${D}/usr \
 		bindir=${D}/bin \
 		mandir=${D}/usr/share/man \
@@ -68,4 +67,3 @@ src_install() {
 		rm -rf ${D}/usr/share
 	fi
 }
-

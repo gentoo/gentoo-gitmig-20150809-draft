@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gtkpbbuttons/gtkpbbuttons-0.4.6b.ebuild,v 1.10 2002/10/04 06:25:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gtkpbbuttons/gtkpbbuttons-0.4.6b.ebuild,v 1.11 2002/10/19 03:42:44 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="gtkpbbuttons is a PPC-only program to monitor special Powerbook/iBook keys in Linux"
@@ -11,22 +11,14 @@ SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND="x11-libs/gtk+ media-libs/audiofile sys-apps/pbbuttonsd"
-
-pkg_setup() {
-	if [ ${ARCH} != "ppc" ] ; then
-		eerror "Sorry, this is a PPC only package."
-		die "Sorry, this as a PPC only pacakge."
-	fi
-}
+RDEPEND="${DEPEND}"
 
 src_compile() {
-
 	./configure --prefix=/usr || die "sorry, ppc-only package"
 	make || die "sorry, gtkpbbuttons compile failed"
 }
 
 src_install() {
-
 	make \
 		prefix=${D}/usr \
 		mandir={D}/usr/share/man \
@@ -34,5 +26,4 @@ src_install() {
 		install || die "sorry, failed to install gtkpbbuttons"
 
 	dodoc README COPYING
-
 }

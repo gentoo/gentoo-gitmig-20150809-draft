@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-0.50.ebuild,v 1.10 2002/10/04 06:23:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-0.50.ebuild,v 1.11 2002/10/19 03:42:44 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Utilities for rescue and embedded systems"
@@ -11,6 +11,7 @@ SLOT="0"
 LICENSE="GPL-2"
 
 DEPEND="virtual/glibc"
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
@@ -25,7 +26,7 @@ src_compile() {
 	make CFLAGS_EXTRA="${CFLAGS_EXTRA}" OPTIMIZATION=$OPT || die
 }
 
-src_install () {
+src_install() {
 	into /    
 	dobin busybox
 	into /usr
@@ -45,4 +46,3 @@ src_install () {
 	docinto html/images
 	dodoc images/*
 }
-

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/acpid/acpid-1.0.1-r1.ebuild,v 1.2 2002/10/16 15:22:17 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/acpid/acpid-1.0.1-r1.ebuild,v 1.3 2002/10/19 03:42:44 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Daemon for Advanced Configuration and Power Interface."
@@ -14,15 +14,14 @@ LICENSE="GPL-2"
 # be broken.  Hopefully it will be merge into release kernel soon.
 DEPEND="virtual/glibc
 	virtual/linux-sources"
-
+RDEPEND="${DEPEND}"
 
 src_compile() {
 	make INSTPREFIX=${D} \
 	CFLAGS="${CFLAGS} -DVERSION=\"\\\"${PV}\\\"\"" || die
 }
 
-src_install () {
-
+src_install() {
 	make INSTPREFIX=${D} install || die
 	
 	dodir /etc/acpi/events

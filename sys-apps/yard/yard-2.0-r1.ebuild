@@ -1,19 +1,19 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/yard/yard-2.0-r1.ebuild,v 1.12 2002/10/04 06:32:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/yard/yard-2.0-r1.ebuild,v 1.13 2002/10/19 03:42:44 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Yard is a suite of Perl scripts for creating rescue disks (also
 called bootdisks) for Linux."
 SRC_URI="http://www.croftj.net/~fawcett/yard/${P}.tar.gz
-        http://www.ibiblio.org/pub/Linux/distributions/gentoo/distfiles/${P}-extra.tar.bz2
-        http://www.ibiblio.org/pub/Linux/distributions/gentoo/distfiles/diet-utils.tar.bz2"
+	http://www.ibiblio.org/pub/Linux/distributions/gentoo/distfiles/${P}-extra.tar.bz2
+	http://www.ibiblio.org/pub/Linux/distributions/gentoo/distfiles/diet-utils.tar.bz2"
 HOMEPAGE="http://www.linuxlots.com/~fawcett/yard/"
 SLOT="0"
 LICENSE="GPL-2 Artistic"
 KEYWORDS="x86 -ppc"
 DEPEND="sys-devel/perl"
-RDEPEND=""
+RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${P}-extra.tar.bz2
@@ -33,10 +33,9 @@ src_compile() {
 	make || die
 }
 
-src_install () {
-
+src_install() {
 	cd ${S}
-	try make DESTDIR=${D} install
+	make DESTDIR=${D} install || die
 #customize
 	rm -rf ${D}/usr/share/doc/${P}
 	cd doc

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/hotplug-20020114.ebuild,v 1.7 2002/10/04 06:25:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/hotplug-20020114.ebuild,v 1.8 2002/10/19 03:42:44 vapier Exp $
 
 # source maintainers named it hotplug-YYYY_MM_DD instead of hotplug-YYYYMMDD
 S=${WORKDIR}/${P}
@@ -15,8 +15,9 @@ LICENSE="GPL-2"
 DEPEND="virtual/glibc
         >=sys-apps/pciutils-2.1.9
         >=sys-apps/usbutils-0.9"
+RDEPEND="${DEPEND}"
 
-src_unpack () {
+src_unpack() {
 	unpack ${A}
 
 	# move it to dir which matches ebuild name
@@ -28,13 +29,11 @@ src_unpack () {
 }
 
 src_compile() {
-
 	# compile fxload program
 	make PREFIX="" all || die
-
 }
 
-src_install () {
+src_install() {
 	into /
 	dosbin sbin/hotplug
 	doman *.8

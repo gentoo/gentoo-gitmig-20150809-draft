@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sharutils/sharutils-4.2.1-r4.ebuild,v 1.8 2002/10/19 03:21:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sharutils/sharutils-4.2.1-r4.ebuild,v 1.9 2002/10/19 03:42:44 vapier Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Tools to deal with shar archives"
@@ -34,7 +34,7 @@ src_install() {
 
 	doman doc/*.[15]
         #Remove some strange locals
-        cd ${D}/usr/share/locale
+	cd ${D}/usr/share/locale
 	for i in *.
 	do
 		rm -rf ${i}

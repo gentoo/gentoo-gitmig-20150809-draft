@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/hotplug-20020401.ebuild,v 1.5 2002/10/04 06:25:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/hotplug-20020401.ebuild,v 1.6 2002/10/19 03:42:44 vapier Exp $
 
 # source maintainers named it hotplug-YYYY_MM_DD instead of hotplug-YYYYMMDD
 MY_P=`echo ${P}|sed 's/-\(....\)\(..\)\(..\)/-\1_\2_\3/'`
@@ -16,8 +16,9 @@ LICENSE="GPL-2"
 DEPEND="virtual/glibc
         >=sys-apps/pciutils-2.1.9
         >=sys-apps/usbutils-0.9"
+RDEPEND="${DEPEND}"
 
-src_unpack () {
+src_unpack() {
 	unpack ${A}
 
 	cd ${S}/etc/hotplug
@@ -25,7 +26,7 @@ src_unpack () {
 	patch -p0 < ${FILESDIR}/${P}-usb.rc-gentoo.diff
 }
 
-src_install () {
+src_install() {
 	into /
 	dosbin sbin/hotplug
 	doman *.8
@@ -45,7 +46,7 @@ src_install () {
 	newins ${FILESDIR}/usb.conf usb
 }
 
-pkg_postinst () {
-	einfo WARNING: The fxload program was spliced off this package.
-	einfo WARNING: emerge fxload if you need it.
+pkg_postinst() {
+	ewarn "WARNING: The fxload program was spliced off this package"
+	ewarn "WARNING: emerge fxload if you need it"
 }
