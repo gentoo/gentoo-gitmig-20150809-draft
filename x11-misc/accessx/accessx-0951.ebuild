@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/accessx/accessx-0951.ebuild,v 1.5 2004/10/04 21:08:04 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/accessx/accessx-0951.ebuild,v 1.6 2004/10/23 16:31:26 weeve Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Interface to the XKEYBOARD extension in X11"
@@ -12,7 +12,7 @@ DEPEND="virtual/x11
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~sparc ppc"
+KEYWORDS="x86 sparc ppc"
 IUSE=""
 
 src_compile() {

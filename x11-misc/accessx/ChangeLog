@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/accessx
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/accessx/ChangeLog,v 1.16 2004/10/02 15:48:44 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/accessx/ChangeLog,v 1.17 2004/10/23 16:31:26 weeve Exp $
+
+  23 Oct 2004; Jason Wever <weeve@gentoo.org> accessx-0951.ebuild:
+  Stable on sparc.
 
   29 Sep 2004; <pyrania@gentoo.org> accessx-0950-r1.ebuild,
   accessx-0950.ebuild, accessx-0951.ebuild:
