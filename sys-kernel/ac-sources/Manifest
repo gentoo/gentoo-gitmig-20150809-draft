@@ -1,40 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 41932973a257ecb5106c7d91c6acb431 ac-sources-2.6.9-r12.ebuild 1256
-MD5 f67249c4623ae091f872d5f1e199d102 ac-sources-2.6.9-r6.ebuild 1040
-MD5 d3291b9745fd766cebfc1344d094868a ac-sources-2.6.9-r1.ebuild 1085
-MD5 5e5ffb5eeedd2d39af888bd541ae24b8 ac-sources-2.6.9-r8.ebuild 1045
-MD5 b2900ef65ee74df83641a1e0dcc0d04d ac-sources-2.6.9-r16.ebuild 1069
-MD5 dda4d31c56424c4f5d406be5ef674441 ac-sources-2.6.9-r5.ebuild 1040
-MD5 0a60de3ca2d046239c4561e801eb26df ac-sources-2.6.9-r7.ebuild 1077
-MD5 070c1203acdacde473ee4e4d3415ef50 ac-sources-2.6.9-r2.ebuild 1040
-MD5 f4ae2c7c428ccbc6259f857643888982 ChangeLog 2305
+MD5 1fd131397f6afb50b237cbb77c04b66b ChangeLog 2729
 MD5 2b0cfdcefc398952a818684668e808f1 metadata.xml 384
-MD5 35e23c518e4d9d8d66704ae309db4624 ac-sources-2.6.9-r10.ebuild 1041
-MD5 f80f017645bf2c7b32af158130151365 ac-sources-2.6.9-r9.ebuild 1045
+MD5 b2900ef65ee74df83641a1e0dcc0d04d ac-sources-2.6.9-r16.ebuild 1069
+MD5 9439d457915826c36b75b62544b34f02 ac-sources-2.6.10-r6.ebuild 1047
 MD5 f211ff52010dfc1d94d2dcfc06636fd9 files/ac-sources-2.6.9.shmLocking.patch 1757
+MD5 2c667e2fa7172f460e6e9c2699acded2 files/2.6.9-ac1-fix-extraversion.patch 1288
+MD5 cc9defa9a150cb44f0a42b4ca29b569a files/digest-ac-sources-2.6.9-r16 131
+MD5 6aa8f7a7c2d55734389b53d3bcf78570 files/ac-sources-2.6.9.CAN-2004-1016.patch 2835
+MD5 09e9f1cad6f2f28fe81682cbad8e3011 files/ac-sources-2.6.9.CAN-2004-1137.patch 2551
+MD5 42b42f2a4f260fad2fef264b82aff2ae files/ac-sources-2.6.9.vma.patch 8952
+MD5 d9127fc038c80114d40b69d761803ed2 files/ac-sources-2.6.9.binfmt_elf.patch 1929
 MD5 6bcdd0bb63e2db559a5c6465c73a7f89 files/ac-sources-2.6.9.CAN-2004-1151.patch 1143
 MD5 001b0a631c9fc28133013a1f8f78f74c files/ac-sources-2.6.9.CAN-2004-1056.patch 8458
-MD5 508c49456dcb30096fe21b4619e9e8aa files/digest-ac-sources-2.6.9-r1 129
-MD5 cd09c274efab61c5d471a09ff36ff6af files/digest-ac-sources-2.6.9-r2 129
-MD5 1276cffcc9f684ea99c242316f8f4c0b files/digest-ac-sources-2.6.9-r5 129
-MD5 c615cce31b3bce3e255e497291bcd76f files/digest-ac-sources-2.6.9-r6 129
-MD5 ab11de7d3a6b41dc2d9889a0094c0012 files/digest-ac-sources-2.6.9-r7 129
-MD5 2d7e3663eacd4f3e8e96b6645e97ed91 files/digest-ac-sources-2.6.9-r8 129
-MD5 57db481c11c638064759462051c41af6 files/digest-ac-sources-2.6.9-r9 129
-MD5 d9127fc038c80114d40b69d761803ed2 files/ac-sources-2.6.9.binfmt_elf.patch 1929
-MD5 42b42f2a4f260fad2fef264b82aff2ae files/ac-sources-2.6.9.vma.patch 8952
-MD5 2c667e2fa7172f460e6e9c2699acded2 files/2.6.9-ac1-fix-extraversion.patch 1288
-MD5 09e9f1cad6f2f28fe81682cbad8e3011 files/ac-sources-2.6.9.CAN-2004-1137.patch 2551
-MD5 6aa8f7a7c2d55734389b53d3bcf78570 files/ac-sources-2.6.9.CAN-2004-1016.patch 2835
-MD5 88135e20957a282cf6212fd5b09f0593 files/digest-ac-sources-2.6.9-r10 131
-MD5 0262502f5f3933de605488011f3b8211 files/digest-ac-sources-2.6.9-r12 131
-MD5 cc9defa9a150cb44f0a42b4ca29b569a files/digest-ac-sources-2.6.9-r16 131
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB3u1/iJcSIUGNthERAunJAKCHhj2JHJ9ipe08ONe2b+7vPuVivwCdE7co
-4Hy846QDx712NosqlpLaPj4=
-=Ii7e
------END PGP SIGNATURE-----
+MD5 56011b36c9457d90940a19ff73aa1c42 files/digest-ac-sources-2.6.10-r6 132

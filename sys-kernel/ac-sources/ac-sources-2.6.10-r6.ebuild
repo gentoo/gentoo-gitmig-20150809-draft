@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ac-sources/ac-sources-2.6.9-r5.ebuild,v 1.2 2005/01/07 19:02:42 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ac-sources/ac-sources-2.6.10-r6.ebuild,v 1.1 2005/01/08 12:23:33 plasmaroo Exp $
 
 UNIPATCH_LIST="${DISTDIR}/patch-${KV}.bz2"
 K_PREPATCHED="yes"
@@ -14,7 +14,7 @@ RESTRICT="nomirror"
 DESCRIPTION="Alan Cox's kernel, mostly stuff destined for mailine or RedHat's vendor kernel"
 SRC_URI="${KERNEL_URI} mirror://kernel/linux/kernel/people/alan/linux-2.6/${KV/-ac*/}/patch-${KV}.bz2"
 
-KEYWORDS="~x86 ~amd64 ~ia64 -* ~ppc"
+KEYWORDS="~x86 ~amd64 ~ia64 ~ppc -*"
 IUSE=""
 
 K_EXTRAEINFO="If there are issues with this kernel, search http://bugs.gentoo.org/ for an
