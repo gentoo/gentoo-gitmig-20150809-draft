@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/jaaa
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/jaaa/ChangeLog,v 1.1 2004/10/09 22:32:58 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/jaaa/ChangeLog,v 1.2 2004/10/15 05:44:12 mr_bones_ Exp $
+
+*jaaa-0.1.1 (14 Oct 2004)
+
+  14 Oct 2004; Michael Sterrett <mr_bones_@gentoo.org> jaaa-0.1.1.ebuild:
+  fix dep; tidy
 
   10 Oct 2004; Christian Parpart <trapni@gentoo.org> :
   Ebuild submitted by ron widler <ron@einfach.org> (bug #66620)
