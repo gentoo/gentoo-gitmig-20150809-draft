@@ -1,8 +1,8 @@
 # ChangeLog for media-libs/fontconfig
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.34 2003/06/10 12:05:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fontconfig/ChangeLog,v 1.35 2003/06/11 22:47:18 seemant Exp $
 
-  10 Jun 2003; Seemant Kulleen <seemant@gentoo.org> fontconfig-2.1-r1.ebuild,
+  11 Jun 2003; Seemant Kulleen <seemant@gentoo.org> fontconfig-2.1-r1.ebuild,
   fontconfig-2.2.0-r2.ebuild,
   files/patch/fontconfig-0.0.1.020826.1330-blacklist.patch,
   files/patch/fontconfig-2.0-defaultconfig.patch,
@@ -16,7 +16,7 @@
   files/patch/fontconfig-2.2-local_fontdir-r1.patch,
   files/patch/fontconfig-2.2-remove_subpixel_test.patch,
   files/patch/fontconfig-2.2.0-cvs_bugfixes.patch:
-  moved patches to tarballs onto mirrors; use sed-4
+  restored to its previous state. sorry about that, foser
 
   21 May 2003; Tavis Ormandy <taviso@gentoo.org> fontconfig-2.1-r1.ebuild,
   fontconfig-2.2.0-r2.ebuild:

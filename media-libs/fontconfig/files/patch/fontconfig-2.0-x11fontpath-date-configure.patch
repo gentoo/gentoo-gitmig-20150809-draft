@@ -1,0 +1,26 @@
+diff -ur fcpackage.2_0.old/fontconfig/fonts.conf.in fcpackage.2_0/fontconfig/fonts.conf.in
+--- fcpackage.2_0.old/fontconfig/fonts.conf.in	2002-11-26 00:53:47.000000000 +0100
++++ fcpackage.2_0/fontconfig/fonts.conf.in	2002-11-26 01:06:26.000000000 +0100
+@@ -20,7 +20,6 @@
+   Common X11R6 font directories
+ -->
+ 
+-	<dir>/usr/X11R6/lib/X11/fonts</dir>
+  	<dir>/usr/share/fonts</dir>
+ 	<dir>~/.fonts</dir>
+ 
+diff -ur fcpackage.2_0.old/fontconfig/setfontdirs fcpackage.2_0/fontconfig/setfontdirs
+--- fcpackage.2_0.old/fontconfig/setfontdirs	2002-11-26 00:53:47.000000000 +0100
++++ fcpackage.2_0/fontconfig/setfontdirs	2002-11-26 00:55:00.000000000 +0100
+@@ -11,10 +11,10 @@
+ chmod +w fonts.conf
+ ed fonts.conf << EOF
+ /FONTPATH_END/a
+-<!-- Font directory list configured on `date` -->
+ .
+ +r $FONTDIRS
+ a
++	<dir>/usr/X11R6/lib/X11/fonts</dir>
+ 	<dir>~/.fonts</dir>
+ 
+ .
