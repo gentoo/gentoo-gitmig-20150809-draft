@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/eric
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
 
+  23 Jul 2004; Carsten Lohrke <carlo@gentoo.org> -eric-3.1.ebuild,
+  eric-3.4.2.ebuild:
+  marked stable on x86
+
 *eric-3.1 (11 Jul 2004)
 
   11 Jul 2004; Carsten Lohrke <carlo@gentoo.org> +eric-3.1.ebuild,
