@@ -1,12 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/groupoffice/groupoffice-1.93.ebuild,v 1.1 2003/10/26 21:28:43 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/groupoffice/groupoffice-1.93.ebuild,v 1.2 2003/11/02 15:14:02 mholzer Exp $
 
-S=${WORKDIR}/${PN}
-HTTPD_ROOT="/home/httpd/htdocs"
-HTTPD_USER="apache"
-HTTPD_GROUP="apache"
+inherit webapp-apache
 
+S=${WORKDIR}/${P}
 DESCRIPTION="Group-Office is a powerfull modular Intranet application framework. It runs *nix using PHP and has several database support."
 HOMEPAGE="http://group-office.sourceforge.net/"
 SRC_URI="mirror://sourceforge/group-office/${P}.tar.gz
@@ -20,13 +18,11 @@ KEYWORDS="~x86 ~ppc ~alpha ~amd64 ~sparc ~hppa ~arm"
 DEPEND="virtual/php
 	dev-db/mysql"
 
+webapp-detect || NO_WEBSERVER=1
+
 pkg_setup() {
-	if [ -L ${HTTPD_ROOT}/${PN} ] ; then
-		ewarn "You need to unmerge your old ${PN} version first."
-		ewarn "${PN} be installed into ${HTTPD_ROOT}/${PN}"
-		ewarn "directly instead of a version-dependant directory."
-		die "need to unmerge old version first"
-	fi
+	webapp-pkg_setup "${NO_WEBSERVER}"
+	einfo "Installing into ${ROOT}${HTTPD_ROOT}."
 }
 
 src_unpack() {
@@ -35,18 +31,20 @@ src_unpack() {
 }
 
 src_install() {
-	dodir ${HTTPD_ROOT}/${PN}
-	cd ${WORKDIR}
-	mv ${P} ${PN}
+	local DocumentRoot=${HTTPD_ROOT}
+	local destdir=${DocumentRoot}/${PN}
+
+	mkdir -p ${D}${destdir}
 	mv ${WORKDIR}/crystal ${S}/themes
 	cd ${S}
 	dodoc CHANGELOG DEVELOPERS FAQ INSTALL RELEASE README.ldap TODO TRANSLATORS
-	rm -rf CHANGELOG FAQ INSTALL RELEASE README.ldap TODO TRANSLATORS
-	cd ${WORKDIR}
+	rm -rf CHANGELOG FAQ INSTALL README.ldap TODO TRANSLATORS
 
-	cp -r . ${D}/${HTTPD_ROOT}
-	cd ${D}/${HTTPD_ROOT}
-	chown -R ${HTTPD_USER}.${HTTPD_GROUP} ${PN}
+	cp -r . ${D}${destdir}
+
+	# Fix permissions
+	find ${D}${destdir} -type d | xargs chmod 755
+	find ${D}${destdir} -type f | xargs chmod 644
 }
 
 pkg_postinst() {
