@@ -1,6 +1,16 @@
 # ChangeLog for app-editors/gvim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.18 2003/02/13 06:59:24 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gvim/ChangeLog,v 1.19 2003/03/13 22:25:59 seemant Exp $
+
+  13 Mar 2003; Seemant Kulleen <seemant@gentoo.org> gvim-6.1-r6.ebuild :
+
+  First, removed the crusty ebuilds from here.  Second, just set the
+  EGUI_ENABLE variable to "yes" and the eclass will handle everything.
+  This and the vim ebuilds are too similar to have these big ebuild files,
+  so a nice centralised location -- the eclass -- is desirable.  The patch
+  was shared with vim (and both had them in files/ which is duplication
+  and just bad style, really). The patchball has been moved off to the
+  mirrors  (see vim's ChangeLog for patch creating guidelines).
 
   13 Feb 2003; Mark Guertin <gerk@gentoo.org> gvim-6.1.ebuild :
   set as -ppc, can't meet deps

@@ -1,6 +1,28 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.45 2003/02/24 21:12:25 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.46 2003/03/13 22:23:51 seemant Exp $
+
+*vim-6.1-r20.ebuild (13 Mar 2003)
+
+  13 Mar 2003; Seemant Kulleen <seemant@gentoo.org> vim-6.1-r20.ebuild
+  files/vimrc vim-6.1-r19.ebuild :
+
+  OK, the vim.eclass was massively overhauled.  It handles, unpack,
+  compile, install and postinst functions now.  Additionally, the patches
+  have been moved out of portage and onto the mirrors instead.  They are
+  also named better (vim-6.1-gentoo-patches.tar.bz2).  The vim.org patches
+  are in vim-6.1-patches-001-390 for this -r20.  For future releases,
+  please just take the patches in that and add your own.  The vim.eclass
+  should filter out Windows, Mac, BC5 and VMS only patches automatically,
+  but if you experience failures in patches, please list the patch's
+  number in PATCH_EXCLUDES in the ebuild.  Additionally, for the vim.org
+  patches, please gzip them before creating the patch-tarball.  The
+  VIMPATCH variable now only contains the number of the highest patch in
+  the tarball (so "390" for the -r20 release). Note that the vim.eclass
+  also handles gvim installs.  The vimrc here is now a combination of the
+  original gentoo vimrc and the redhat vimrc.  This should make for a
+  better looking vim session, at any rate, though the colours could stand
+  to change.
 
   08 Feb 2003; Guy Martin <gmsoft@gentoo.org> vim-6.1-r19.ebuild :
   Added hppa to keywords.
