@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a6e28e939188ec344474b952eece7e9a ChangeLog 745
-MD5 6e93c0379d71e8dcec1c53b41c8cbc64 achemso-1.0.ebuild 556
+MD5 11f55bb0c6d6836424db81750f8b6cdd ChangeLog 839
+MD5 83730d54262157c7e1654756e752bd88 achemso-1.0.ebuild 566
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 8612af3b5bdfddb825f9b4b15c184950 files/digest-achemso-1.0 55
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBYkHEVWNWqTUmv+0RAjnpAJ4mjG0ADbkyuDlDSUYhGG0qOP8opgCeK6bq
-trLwZqiJqM4Q5c+FY6cNa0Y=
-=MCLY
------END PGP SIGNATURE-----

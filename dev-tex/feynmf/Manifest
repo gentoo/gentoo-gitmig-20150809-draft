@@ -1,5 +1,5 @@
-MD5 7bb790d70dc220dba6eb669419d51f99 ChangeLog 524
-MD5 e3a083adda5ae417c819f9365fb63f5a feynmf-1.08.ebuild 1025
+MD5 ea79b530f037f6f8795bba973d84f9c7 ChangeLog 618
+MD5 85f13c093def4c64b63bb24afbc729da feynmf-1.08.ebuild 1035
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
 MD5 ad6433d8aff8cdf752a4b226b8aa2e29 files/digest-feynmf-1.08 63
 MD5 9b2264341880e792b2134733e4f7fd90 files/feynmf-1.08.patch 305

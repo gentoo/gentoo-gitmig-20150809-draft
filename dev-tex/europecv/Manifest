@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 6618af0577dac9689bb702cb7fc29a25 europecv-20040603.ebuild 872
+MD5 d5cfd5d06b2741f4075941b5da178f23 ChangeLog 524
+MD5 af0fb9e6dedab10aef3f72368d9a24ba europecv-20040603.ebuild 882
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
-MD5 887164739af6ccbfc66371feba3e2fb8 ChangeLog 424
 MD5 2c471434a349151fcb50f39f104d8a60 files/digest-europecv-20040603 69
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBkQALVWNWqTUmv+0RAp/ZAJ0QuTnL104Qlvph5y6BMyUJCUXomgCggwJC
-xfXu2RETzkoRo7sv/yF+Dq4=
-=B4ew
------END PGP SIGNATURE-----

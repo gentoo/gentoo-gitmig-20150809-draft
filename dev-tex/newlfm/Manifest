@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 e1023cb9dcb3b7d8a856f6d1abd1cabc ChangeLog 499
 MD5 c472f5fd1646eb8bca71d8df5cb2bdcc metadata.xml 164
-MD5 5a2c76d30ab64a234edd9e4b364f2d5c newlfm-8.3.ebuild 867
-MD5 b549ebeb497edf3f62a94043db6f3f57 ChangeLog 406
+MD5 020a65097bd1be2965b72c29df45965b newlfm-8.3.ebuild 877
 MD5 6913771fbddb2c04fbc4e42ea7ab19a4 files/digest-newlfm-8.3 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBkP2oVWNWqTUmv+0RAhxjAJ9labGldtyMe+VXTcEMQGZA5rN8VwCghtIi
-9x3h5WMr6OJoRmM2kns2Ba0=
-=0LXG
------END PGP SIGNATURE-----
