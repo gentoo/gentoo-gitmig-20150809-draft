@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/vdk-2.4.0.ebuild,v 1.2 2004/10/14 01:04:17 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/vdk/vdk-2.4.0.ebuild,v 1.3 2004/10/14 17:46:36 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs
 
@@ -14,7 +14,7 @@ KEYWORDS="~x86 ~ppc ~alpha ~sparc ~hppa"
 IUSE="doc debug"
 
 DEPEND=">x11-libs/gtk+-2.4*
-		doc? (app-doc/doxygen)"
+	doc? ( app-doc/doxygen )"
 
 src_compile() {
 
