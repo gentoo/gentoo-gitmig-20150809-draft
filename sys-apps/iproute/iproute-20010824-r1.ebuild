@@ -1,14 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r1.ebuild,v 1.2 2002/08/30 11:18:30 cybersystem Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r1.ebuild,v 1.3 2002/09/07 21:43:01 seemant Exp $
 
 S=${WORKDIR}/iproute2
 DESCRIPTION="Kernel 2.4 routing and traffic control utilities"
 SRC_URI="ftp://ftp.inr.ac.ru/ip-routing/iproute2-2.4.7-now-ss010824.tar.gz"
 HOMEPAGE=""
-KEYWORDS="x86 ppc"
+
 SLOT="0"
-DEPEND="virtual/glibc virtual/linux-sources"
+KEYWORDS="x86 ppc"
+DEPEND="virtual/linux-sources"
+
 LICENSE="GPL-2"
 
 pkg_setup() {
@@ -60,7 +62,7 @@ src_install() {
 	docinto examples ; dodoc examples/*
 	dodir /etc/iproute2
 	insinto /etc/iproute2 ; doins ${S}/etc/iproute2/*
-	if [ "`use tex`" ] ; then
+	if [ "`use tetex`" ] ; then
 		docinto ps ; dodoc doc/*.ps
 	fi
 }
