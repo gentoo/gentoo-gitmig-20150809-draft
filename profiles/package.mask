@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3711 2005/03/11 03:34:11 latexer Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3712 2005/03/11 06:20:11 chriswhite Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -1035,7 +1035,7 @@ dev-lisp/cl-rsm-genetic-alg
 
 # <usata@gentoo.org> (2 July 2004)
 # emacs-unicode-2 branch is not stable and SLOT support for emacs
-# is imcomplete. info directory handling should be reconsidered.
+# is incomplete. info directory handling should be reconsidered.
 =app-editors/emacs-cvs-22.0.0*
 =app-editors/emacs-cvs-23.0.0*
 
