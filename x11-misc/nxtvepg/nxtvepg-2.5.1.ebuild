@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/nxtvepg/nxtvepg-2.5.1.ebuild,v 1.1 2003/05/09 12:53:20 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/nxtvepg/nxtvepg-2.5.1.ebuild,v 1.2 2003/05/13 07:15:39 phosphan Exp $
 
 DESCRIPTION="receive and browse free TV programme listings via bttv for tv networks in Europe"
 HOMEPAGE="http://nxtvepg.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 RDEPEND=">=dev-lang/tcl-8.0
 		>=dev-lang/tk-8.0"
