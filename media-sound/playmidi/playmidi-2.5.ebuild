@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/playmidi/playmidi-2.5.ebuild,v 1.3 2004/03/31 18:31:59 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/playmidi/playmidi-2.5.ebuild,v 1.4 2004/04/08 09:01:00 eradicator Exp $
 
 inherit eutils
 
@@ -28,7 +28,7 @@ CFLAGS="${CFLAGS} `/usr/bin/gtk-config --cflags`"
 src_compile() {
 	epatch ${FILESDIR}/${P}.patch
 
-	./Configure < ${FILESDIR}/${P}.conf
+	echo "5" | ./Configure
 
 	if [ `use gtk` ] ; then
 		CFLAGS="${CFLAGS} `/usr/bin/gtk-config --cflags`"
