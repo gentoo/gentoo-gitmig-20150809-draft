@@ -1,6 +1,12 @@
 # ChangeLog for net-print/hpoj
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/ChangeLog,v 1.11 2003/12/12 21:47:03 blauwers Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpoj/ChangeLog,v 1.12 2003/12/22 15:46:36 lanius Exp $
+
+*hpoj-0.91-r2 (22 Dec 2003)
+
+  22 Dec 2003; Heinrich Wendel <lanius@gentoo.org> hpoj-0.90-r1.ebuild,
+  hpoj-0.91-r2.ebuild, hpoj-0.91.ebuild, files/udev.patch:
+  added udev support, removed old ebuilds
 
 *hpoj-0.91-r1 (12 Dec 2003)
 
