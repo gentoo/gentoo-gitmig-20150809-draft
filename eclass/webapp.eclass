@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.21 2004/05/25 10:22:02 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/webapp.eclass,v 1.22 2004/06/11 22:06:10 stuart Exp $
 #
 # eclass/webapp.eclass
 #				Eclass for installing applications to run under a web server
@@ -52,7 +52,7 @@ function webapp_checkfileexists ()
 
 	[ -n "$2" ] && my_prefix="$2/" || my_prefix=
 
-	if [ ! -e ${my_prefix}$1 ]; then
+	if [ ! -e "${my_prefix}$1" ]; then
 		msg="ebuild fault: file $1 not found"
 		eerror "$msg"
 		eerror "Please report this as a bug at http://bugs.gentoo.org/"
@@ -68,7 +68,7 @@ function webapp_check_installedat
 {
 	local my_output
 
-	/usr/sbin/webapp-config --show-installed -h localhost -d $INSTALL_DIR 2> /dev/null
+	/usr/sbin/webapp-config --show-installed -h localhost -d "$INSTALL_DIR" 2> /dev/null
 }
 
 # ------------------------------------------------------------------------
@@ -120,11 +120,11 @@ function webapp_configfile ()
 {
 	webapp_checkfileexists "$1" "$D"
 	echo $1
-	local MY_FILE="`webapp_strip_appdir $1`"
+	local MY_FILE="`webapp_strip_appdir \"$1\"`"
 	echo $MY_FILE
 
 	einfo "(config) $MY_FILE"
-	echo "$MY_FILE" >> ${D}${WA_CONFIGLIST}
+	echo "\"$MY_FILE\"" >> ${D}${WA_CONFIGLIST}
 }
 
 # ------------------------------------------------------------------------
@@ -178,11 +178,11 @@ function webapp_postinst_txt
 function webapp_runbycgibin ()
 {
 	webapp_checkfileexists "$2" "$D"
-	local MY_FILE="`webapp_strip_appdir $2`"
-	MY_FILE="`webapp_strip_cwd $MY_FILE`"
+	local MY_FILE="`webapp_strip_appdir \"$2\"`"
+	MY_FILE="`webapp_strip_cwd \"$MY_FILE\"`"
 
 	einfo "(cgi-bin) $1 - $MY_FILE"
-	echo "$1 $MY_FILE" >> ${D}${WA_RUNBYCGIBINLIST}
+	echo "\"$1\" \"$MY_FILE\"" >> "${D}${WA_RUNBYCGIBINLIST}"
 }
 
 # ------------------------------------------------------------------------
@@ -201,10 +201,10 @@ function webapp_runbycgibin ()
 function webapp_serverowned ()
 {
 	webapp_checkfileexists "$1" "$D"
-	local MY_FILE="`webapp_strip_appdir $1`" 
+	local MY_FILE="`webapp_strip_appdir \"$1\"`" 
 	
 	einfo "(server owned) $MY_FILE"
-	echo "$MY_FILE" >> ${D}${WA_SOLIST}
+	echo "\"$MY_FILE\"" >> "${D}${WA_SOLIST}"
 }
 
 # ------------------------------------------------------------------------
@@ -230,9 +230,9 @@ function webapp_server_config ()
 	local my_file
 
 	if [ -z "$3" ]; then
-		$my_file="$1-`basename $2`"
+		my_file="$1-`basename $2`"
 	else
-		$my_file="$1-$3"
+		my_file="$1-$3"
 	fi
 
 	# warning:
@@ -278,11 +278,11 @@ function webapp_sqlscript ()
 	if [ -n "$3" ]; then
 		# yes we are
 		einfo "($1) upgrade script from ${PN}-${PVR} to $3"
-		cp $2 ${D}${MY_SQLSCRIPTSDIR}/$1/${3}_to_${PVR}.sql
+		cp "$2" "${D}${MY_SQLSCRIPTSDIR}/$1/${3}_to_${PVR}.sql"
 	else
 		# no, we are not
 		einfo "($1) create script for ${PN}-${PVR}"
-		cp $2 ${D}${MY_SQLSCRIPTSDIR}/$1/${PVR}_create.sql
+		cp "$2" "${D}${MY_SQLSCRIPTSDIR}/$1/${PVR}_create.sql"
 	fi
 }
 
@@ -297,13 +297,13 @@ function webapp_sqlscript ()
 
 function webapp_src_install ()
 {
-	chown -R ${VHOST_DEFAULT_UID}:${VHOST_DEFAULT_GID} ${D}/
-	chmod -R u-s ${D}/
-	chmod -R g-s ${D}/
+	chown -R "${VHOST_DEFAULT_UID}:${VHOST_DEFAULT_GID}" "${D}/"
+	chmod -R u-s "${D}/"
+	chmod -R g-s "${D}/"
 
-	keepdir ${MY_PERSISTDIR}
-	fowners root:root ${MY_PERSISTDIR}
-	fperms 755 ${MY_PERSISTDIR}
+	keepdir "${MY_PERSISTDIR}"
+	fowners "root:root" "${MY_PERSISTDIR}"
+	fperms 755 "${MY_PERSISTDIR}"
 
 	# to test whether or not the ebuild has correctly called this function
 	# we add an empty file to the filesystem
@@ -312,7 +312,7 @@ function webapp_src_install ()
 	# no longer rely on Portage calling both webapp_src_install() and
 	# webapp_pkg_postinst() within the same shell process
 
-	touch ${D}/${MY_APPDIR}/${INSTALL_CHECK_FILE}
+	touch "${D}/${MY_APPDIR}/${INSTALL_CHECK_FILE}"
 }
 
 # ------------------------------------------------------------------------
@@ -334,7 +334,7 @@ function webapp_pkg_setup ()
 	# pull in the shared configuration file
 
 	G_HOSTNAME="localhost"
-	. ${ETC_CONFIG} || die "Unable to open /etc/vhosts/webapp-config file"
+	. "${ETC_CONFIG}" || die "Unable to open file ${ETC_CONFIG}"
 
 	# are we installing a webapp-config solution over the top of a 
 	# non-webapp-config solution?
@@ -424,21 +424,21 @@ function webapp_src_preinst ()
 {
 	# create the directories that we need
 
-	dodir ${MY_HTDOCSDIR}
-	dodir ${MY_HOSTROOTDIR}
-	dodir ${MY_CGIBINDIR}
-	dodir ${MY_ICONSDIR}
-	dodir ${MY_ERRORSDIR}
-	dodir ${MY_SQLSCRIPTSDIR}
+	dodir "${MY_HTDOCSDIR}"
+	dodir "${MY_HOSTROOTDIR}"
+	dodir "${MY_CGIBINDIR}"
+	dodir "${MY_ICONSDIR}"
+	dodir "${MY_ERRORSDIR}"
+	dodir "${MY_SQLSCRIPTSDIR}"
 }
 
 function webapp_pkg_postinst ()
 {
-	. ${ETC_CONFIG}
+	. "${ETC_CONFIG}"
 
 	# sanity checks, to catch bugs in the ebuild
 
-	if [ ! -f ${MY_APPDIR}/${INSTALL_CHECK_FILE} ]; then
+	if [ ! -f "${MY_APPDIR}/${INSTALL_CHECK_FILE}" ]; then
 		eerror
 		eerror "This ebuild did not call webapp_src_install() at the end"
 		eerror "of the src_install() function"
@@ -461,7 +461,7 @@ function webapp_pkg_postinst ()
 		webapp_getinstalltype
 
 		G_HOSTNAME="localhost"
-		. /etc/vhosts/webapp-config
+		. "${ETC_CONFIG}"
 
 		local my_mode=-I
 
@@ -493,7 +493,7 @@ function webapp_pkg_postinst ()
 		if [ "$IS_UPGRADE" = "1" ] ; then
 			einfo "Removing old version $REMOVE_PKG"
 
-			emerge -C $CATEGORY/$REMOVE_PKG
+			emerge -C "$CATEGORY/$REMOVE_PKG"
 		fi
 	else
 		# vhosts flag is on
