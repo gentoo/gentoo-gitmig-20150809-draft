@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/sitecopy
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/ChangeLog,v 1.10 2003/04/28 18:37:19 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/ChangeLog,v 1.11 2003/08/31 17:29:08 mholzer Exp $
+
+*sitecopy-0.13.4 (31 Aug 2003)
+
+  31 Aug 2003; Martin Holzer <mholzer@gentoo.org> sitecopy-0.13.4.ebuild:
+  Version bumped.
 
 *sitecopy-0.12.1 (28 Apr 2003)
 
