@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.9.ebuild,v 1.3 2002/09/30 22:25:04 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.1.5-r2.ebuild,v 1.1 2002/09/30 22:25:04 mcummings Exp $
 
 inherit perl-module
+inherit perl-post
 
 S=${WORKDIR}/${P}
-
 DESCRIPTION="The Cyrus IMAP Server"
 HOMEPAGE="http://asg.web.cmu.edu/cyrus/imapd/"
 SRC_URI="ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/${P}.tar.gz"
@@ -15,18 +15,26 @@ SLOT="0"
 KEYWORDS="x86 -ppc -sparc -sparc64"
 
 PROVIDE="virtual/imapd"
+RDEPEND="virtual/glibc
+	afs? ( >=net-fs/openafs-1.2.2 )
+	snmp? ( >=net-analyzer/ucd-snmp-4.2.3 )
+	ssl? ( >=dev-libs/openssl-0.9.6 )
+    perl? ( >=sys-devel/perl-5.6.1 )
+	>=sys-libs/db-3.2
+	>=sys-libs/pam-0.75
+	>=dev-libs/cyrus-sasl-2.1.2
+	>=sys-apps/tcp-wrappers-7.6"
 DEPEND="virtual/glibc
 	afs? ( >=net-fs/openafs-1.2.2 )
 	snmp? ( >=net-analyzer/ucd-snmp-4.2.3 )
 	ssl? ( >=dev-libs/openssl-0.9.6 )
-    	perl? ( >=sys-devel/perl-5.6.1 )
-	kerberos? ( >=app-crypt/krb5-1.2.5 )
+    perl? ( >=sys-devel/perl-5.6.1 )
 	>=sys-libs/db-3.2
 	>=sys-libs/pam-0.75
 	>=dev-libs/cyrus-sasl-2.1.2
 	>=sys-apps/tcp-wrappers-7.6
 	net-mail/mailbase"
-RDEPEND="${DEPEND}"
+
 
 # recommended: flex, maybe: net-snmp, postfix, perl?, afs, inn, tcl (cyradm)
 	
@@ -41,36 +49,31 @@ pkg_setup() {
 src_unpack() {
 
 	unpack ${A}
-	cd ${S}
-	patch < ${FILESDIR}/config.diff || die "patch failed"
-
+	cd ${WORKDIR}
+	patch -p0 < ${FILESDIR}/e2fsprogs-et.diff
 }
 
 src_compile() {
 
 	local myconf
 	
-	use afs && myconf="--with-afs" \
-		|| myconf="--without-afs"
+	use afs || myconf="--without-afs"
+	use snmp || myconf="${myconf} --without-ucdsnmp"
+	use ssl || myconf="${myconf} --without-openssl"
+    	use perl || myconf="${myconf} --without-perl --disable-cyradm"
 
-	use snmp && myconf="${myconf} --with-ucdsnmp=/usr" \
-		|| myconf="${myconf} --without-ucdsnmp"
 
-	use ssl && myconf="${myconf} --with-openssl=/usr" \
-		|| myconf="${myconf} --without-openssl"
-
-    	use perl && myconf="${myconf} --with-perl --enable-cyradm" \
-		|| myconf="${myconf} --without-perl --disable-cyradm"
-
-	use kerberos && myconf="${myconf} --with-krb --with-auth=krb" \
-		|| myconf="${myconf} --without-krb --with-auth=unix"
-
-	econf \
+	./configure \
+		--prefix=/usr \
+		--without-krb \
+		--without-gssapi \
 		--enable-listext \
+		--disable-cyradm \
 		--with-cyrus-group=mail \
+		--enable-shared \
 		--enable-netscapehack \
 		--with-com_err=yes \
-		${myconf} || die "bad ./configure"
+		--host=${CHOST} ${myconf} || die "bad ./configure"
 
 	# make depends break with -f... in CFLAGS
 	make depend CFLAGS="" || die "make depend problem"
@@ -85,13 +88,14 @@ src_install () {
 	mv ${S}/perl/Makefile ${S}/perl/Makefile.orig
 	mv ${S}/perl/Makefile.install ${S}/perl/Makefile
 
-	# Install!
-	make DESTDIR=${D} install || die
+	emake DESTDIR=${D} install || die
 
-	# Fix manpage stuff
+	# Remove the developer stuff (-> dev-libs/cyrus-imap-devel)
+	rm -rf ${D}usr/include ${D}usr/lib
+
+	# Remove the manpages (wrong place)
 	rm -rf ${D}usr/man
-	doman man/*.?
-
+	
 	mkdir ${D}etc
 	cp ${FILESDIR}/imapd.conf ${D}etc/imapd.conf
 	cp ${FILESDIR}/cyrus.conf ${D}etc/cyrus.conf
@@ -136,11 +140,15 @@ src_install () {
 	    chown -R cyrus.mail ${D}var/spool/imap/$i ; done
 
 
+	doman man/*.?
+	# remove man-pages from packet net-mail/cyrus-imapd-admin
+	rm ${D}usr/share/man/man1/installsieve.1.gz ${D}usr/share/man/man1/sieveshell.1.gz
+
 	dodoc COPYRIGHT README*
 	dohtml doc/*.html doc/murder.png
 	cp doc/cyrusv2.mc ${D}usr/share/doc/${PF}/html
+	
 	cp -r contrib tools ${D}usr/share/doc/${PF}
-
 	# Remove the CVS directories
 	find 2>/dev/null ${D}usr/share/doc/ -type d -name CVS -exec rm -rf '{}' \;
 
@@ -152,26 +160,24 @@ src_install () {
 		perl-module_src_prep
 		perl-module_src_compile
 		perl-module_src_test
-		perl-module_src_install 
+		perl-module_src_install
         cd ${S}/perl/sieve/acap
 		perl-module_src_prep
 		perl-module_src_compile
 		perl-module_src_test
-        perl-module_src_install
-        cd ${S}/perl/sieve/acap/managesieve
+		perl-module_src_install
+        cd ${S}/perl/sieve/managesieve
 		perl-module_src_prep
 		perl-module_src_compile
 		perl-module_src_test
-        perl-module_src_install
+		perl-module_src_install
 	fi
-
-	# remove empty log files installed by default
-	rm ${D}/var/log/{auth,imapd}.log
 
 }
 
 pkg_postinst() {
 
+	perl-post_pkg_postinst
 	ewarn "*****************************************************************"
 	ewarn "* WARNING: If you change the fs-type of /var/imap or            *"
 	ewarn "* /var/spool/imap you should read step 9 of                     *"
