@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/evms
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.15 2004/06/11 18:06:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/evms/ChangeLog,v 1.16 2004/06/13 22:04:44 eradicator Exp $
+
+  13 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> evms-2.3.2.ebuild:
+  Marking stable on x86.
 
   11 Jun 2004; Jeremy Huddleston <eradicator@gentoo.org> files/evms2-init:
   Added missing depend to evms2 init.
