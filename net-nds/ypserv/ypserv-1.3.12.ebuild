@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-1.3.12.ebuild,v 1.19 2004/07/24 06:26:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-1.3.12.ebuild,v 1.20 2004/08/23 21:53:44 eradicator Exp $
 
 IUSE="tcpd"
 
@@ -13,6 +13,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 sparc "
 
 DEPEND=">=sys-libs/gdbm-1.8.0
+	net-libs/openslp
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
 
 src_unpack() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-2.8.ebuild,v 1.13 2004/07/24 06:26:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-2.8.ebuild,v 1.14 2004/08/23 21:53:44 eradicator Exp $
 
 DESCRIPTION="Network Information Service server"
 SRC_URI="mirror://kernel/linux/utils/net/NIS/${P}.tar.gz"
@@ -10,7 +10,8 @@ IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc ~ppc ppc64"
-DEPEND=">=sys-libs/gdbm-1.8.0"
+DEPEND=">=sys-libs/gdbm-1.8.0
+	net-libs/openslp"
 
 src_compile() {
 	econf --enable-yppasswd || die

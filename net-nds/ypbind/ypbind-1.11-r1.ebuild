@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ypbind-1.11-r1.ebuild,v 1.14 2004/06/25 00:23:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ypbind-1.11-r1.ebuild,v 1.15 2004/08/23 21:50:50 eradicator Exp $
 
 IUSE="nls"
 
@@ -15,6 +15,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 sparc alpha ia64"
 
 DEPEND="net-nds/yp-tools
+	net-libs/openslp
 	net-nds/portmap"
 
 RDEPEND="nls? ( sys-devel/gettext )"

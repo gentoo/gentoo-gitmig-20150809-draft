@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-2.13-r1.ebuild,v 1.4 2004/07/24 06:26:28 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-2.13-r1.ebuild,v 1.5 2004/08/23 21:53:44 eradicator Exp $
 
 DESCRIPTION="Network Information Service server"
 HOMEPAGE="http://www.linux-nis.org/nis/"
@@ -11,7 +11,8 @@ SLOT="0"
 KEYWORDS="x86 ~ppc ~sparc ~ppc64 amd64"
 IUSE=""
 
-DEPEND=">=sys-libs/gdbm-1.8.0"
+DEPEND=">=sys-libs/gdbm-1.8.0
+	net-libs/openslp"
 
 src_install() {
 	make DESTDIR=${D} install

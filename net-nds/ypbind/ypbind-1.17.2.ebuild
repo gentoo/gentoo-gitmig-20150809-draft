@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ypbind-1.17.2.ebuild,v 1.6 2004/07/24 06:37:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ypbind-1.17.2.ebuild,v 1.7 2004/08/23 21:50:50 eradicator Exp $
 
 MY_P=${PN}-mt-${PV}
 DESCRIPTION="Multithreaded NIS bind service (ypbind-mt)"
@@ -13,6 +13,7 @@ KEYWORDS="x86 sparc alpha ~ppc amd64"
 IUSE="nls"
 
 DEPEND="net-nds/yp-tools
+	net-libs/openslp
 	net-nds/portmap"
 RDEPEND="nls? ( sys-devel/gettext )"
 

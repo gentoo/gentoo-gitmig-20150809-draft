@@ -1,6 +1,11 @@
 # ChangeLog for net-nds/ypbind
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.19 2004/07/24 06:37:23 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypbind/ChangeLog,v 1.20 2004/08/23 21:50:50 eradicator Exp $
+
+  23 Aug 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  ypbind-1.11-r1.ebuild, ypbind-1.12.ebuild, ypbind-1.17.2-r1.ebuild,
+  ypbind-1.17.2.ebuild:
+  Adding missing DEPEND on openslp to fix bug #60239.
 
 *ypbind-1.17.2-r1 (23 Jul 2004)
 

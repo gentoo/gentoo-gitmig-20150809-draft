@@ -1,6 +1,10 @@
 # ChangeLog for net-nds/ypserv
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ChangeLog,v 1.19 2004/07/24 06:26:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ChangeLog,v 1.20 2004/08/23 21:53:44 eradicator Exp $
+
+  23 Aug 2004; Jeremy Huddleston <eradicator@gentoo.org> ypserv-1.3.12.ebuild,
+  ypserv-2.13-r1.ebuild, ypserv-2.13.ebuild, ypserv-2.8.ebuild:
+  Adding missing DEPEND on openslp to fix bug #60239.
 
   23 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   files/rpc.yppasswdd-r1, files/rpc.ypxfrd, +files/rpc.ypxfrd.confd,
