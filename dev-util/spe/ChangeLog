@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/spe
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/ChangeLog,v 1.4 2003/12/28 00:07:01 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/spe/ChangeLog,v 1.5 2003/12/29 16:25:23 kloeri Exp $
+
+  29 Dec 2003; Bryan Østergaard,,, <kloeri@gentoo.org> files/spe_setup.patch:
+  Add missing patch.
 
 *spe-0.4.2c (28 Dec 2003)
 

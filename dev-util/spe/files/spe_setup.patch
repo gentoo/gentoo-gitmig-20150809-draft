@@ -1,0 +1,11 @@
+--- setup.py.orig	2003-12-14 14:43:45.000000000 +0100
++++ setup.py	2003-12-14 14:44:17.000000000 +0100
+@@ -9,7 +9,7 @@
+ import sys
+ 
+ if len(sys.argv)==1:sys.argv.append('install')
+-distribution=(sys.argv[1]!='install')
++distribution=True
+ 
+ template = """\
+ @echo off
