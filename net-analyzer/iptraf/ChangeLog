@@ -1,14 +1,14 @@
 # ChangeLog for net-analyzer/iptraf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.4 2002/08/30 11:31:41 cybersystem Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.5 2002/09/25 14:38:43 vapier Exp $
 
 *iptraf-2.7.0 (30 Aug 2002)
 
+  25 Sep 2002; Mike Frysinger <vapier@gentoo.org> :
+  Added alpha to KEYWORDS.
+
   30 Aug 2002; Sascha Schwabbauer <cybersystem@gentoo.org> iptraf-2.7.0.ebuild:
-
-  Added ppc to keywords.
-
-*iptraf-2.7.0 (20 Jun 2002)
+  Added ppc to KEYWORDS.
 
   18 Aug 2002; Daniel Ahlberg <aliz@telia.com> iptraf-2.7.0.ebuild:
   Moved bins from /usr/bin to /usr/sbin as suggested in #6517.
