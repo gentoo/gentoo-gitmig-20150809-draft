@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/enhancedcommentify/enhancedcommentify-2.1-r1.ebuild,v 1.8 2004/12/21 16:16:34 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/enhancedcommentify/enhancedcommentify-2.1-r1.ebuild,v 1.9 2005/01/01 16:49:16 eradicator Exp $
 
 inherit vim-plugin
 

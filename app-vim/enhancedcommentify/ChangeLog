@@ -1,6 +1,6 @@
 # ChangeLog for app-vim/enhancedcommentify
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/enhancedcommentify/ChangeLog,v 1.16 2004/12/29 00:33:52 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/enhancedcommentify/ChangeLog,v 1.17 2005/01/01 16:49:16 eradicator Exp $
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org>
   -enhancedcommentify-2.0.ebuild:

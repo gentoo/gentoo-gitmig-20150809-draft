@@ -1,6 +1,6 @@
 # ChangeLog for app-vim/xsl
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/xsl/ChangeLog,v 1.8 2004/10/26 11:49:31 slarti Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/xsl/ChangeLog,v 1.9 2005/01/01 16:56:37 eradicator Exp $
 
   26 Oct 2004; Tom Martin <slarti@gentoo.org> xsl-0.3.11.ebuild:
   Marked ~amd64.

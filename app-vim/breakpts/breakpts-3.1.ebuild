@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/breakpts/breakpts-3.1.ebuild,v 1.4 2004/09/03 00:13:22 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/breakpts/breakpts-3.1.ebuild,v 1.5 2005/01/01 16:46:18 eradicator Exp $
 
 inherit vim-plugin
 

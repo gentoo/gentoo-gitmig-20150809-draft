@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/colorschemes/colorschemes-20031113.ebuild,v 1.10 2004/11/08 08:51:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/colorschemes/colorschemes-20031113.ebuild,v 1.11 2005/01/01 16:47:28 eradicator Exp $
 
 inherit vim-plugin
 

@@ -1,6 +1,6 @@
 # ChangeLog for app-vim/ant
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/ant/ChangeLog,v 1.6 2004/10/23 18:19:58 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/ant/ChangeLog,v 1.7 2005/01/01 16:45:51 eradicator Exp $
 
   23 Oct 2004; Ciaran McCreesh <ciaranm@gentoo.org> ant-0.5.3.ebuild:
   Added help, bug #63316

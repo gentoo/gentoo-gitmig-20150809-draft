@@ -1,6 +1,6 @@
 # ChangeLog for app-vim/foldutil
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/foldutil/ChangeLog,v 1.4 2004/09/03 02:38:35 ciaranm Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/foldutil/ChangeLog,v 1.5 2005/01/01 16:49:55 eradicator Exp $
 
   03 Sep 2004; Ciaran McCreesh <ciaranm@gentoo.org> foldutil-1.6.ebuild:
   Help text, bug #62559

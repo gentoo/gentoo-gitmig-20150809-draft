@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/autoalign/autoalign-4.ebuild,v 1.5 2004/10/26 11:39:20 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/autoalign/autoalign-4.ebuild,v 1.6 2005/01/01 16:46:05 eradicator Exp $
 
 inherit vim-plugin
 

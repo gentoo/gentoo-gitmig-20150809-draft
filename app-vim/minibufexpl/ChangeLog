@@ -1,6 +1,6 @@
 # ChangeLog for app-vim/minibufexpl
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/minibufexpl/ChangeLog,v 1.17 2004/12/30 00:55:51 kloeri Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/minibufexpl/ChangeLog,v 1.18 2005/01/01 16:52:11 eradicator Exp $
 
   30 Dec 2004; Bryan Østergaard <kloeri@gentoo.org>
   minibufexpl-6.3.2.ebuild:

@@ -1,6 +1,6 @@
 # ChangeLog for app-vim/phpdocs
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/phpdocs/ChangeLog,v 1.9 2004/11/27 19:01:19 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/phpdocs/ChangeLog,v 1.10 2005/01/01 16:52:51 eradicator Exp $
 
   27 Nov 2004; Ciaran McCreesh <ciaranm@gentoo.org> phpdocs-0.26.ebuild:
   Add help text, bug #63322

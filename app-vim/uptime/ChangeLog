@@ -1,6 +1,6 @@
 # ChangeLog for app-vim/uptime
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/uptime/ChangeLog,v 1.11 2004/12/29 00:48:22 ciaranm Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/uptime/ChangeLog,v 1.12 2005/01/01 16:55:16 eradicator Exp $
 
   29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> -uptime-1.1.ebuild,
   -uptime-1.2.ebuild:

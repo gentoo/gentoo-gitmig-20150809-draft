@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/tmpl/tmpl-0.1.ebuild,v 1.8 2004/11/27 19:04:41 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/tmpl/tmpl-0.1.ebuild,v 1.9 2005/01/01 16:54:50 eradicator Exp $
 
 inherit vim-plugin
 
