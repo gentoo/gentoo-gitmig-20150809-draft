@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.617 2004/09/15 13:25:22 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.618 2004/09/15 14:51:50 lanius Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -395,6 +395,7 @@ net-dialup/gammu:bluetooth - Enable Bluetooth Support
 net-dialup/gammu:irda - Enable Infrared Support
 net-dialup/gnokii:bluetooth - Enable Bluetooth Support
 net-dialup/gnokii:irda - Enable Infrared Support
+net-dialup/gnokii:sms - Enable SMS Support
 net-dialup/ppp:activefilter - enable activefilter support
 net-dialup/ppp:atm - enable support for pppoatm
 net-dns/djbdns:aliaschain - enables a fix for the truncation of alias chains
