@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/gtk-gnutella
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.26 2004/05/11 23:39:15 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gtk-gnutella/ChangeLog,v 1.27 2004/06/06 21:03:51 weeve Exp $
+
+  06 Jun 2004; Jason Wever <weeve@gentoo.org> gtk-gnutella-0.93.3.ebuild:
+  Stable on sparc.
 
   11 May 2004; Jon Hood <squinky86@gentoo.org> files/gtk-gnutella.desktop:
   fixed .desktop file so it displays the icon correctly. Closes #50798.
