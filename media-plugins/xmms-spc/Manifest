@@ -1,4 +1,4 @@
-MD5 fbd9f8538be5093466fe7cf13be5170c ChangeLog 698
-MD5 d8c32b02076fb0c3541370091f15704d xmms-spc-0.2.1.ebuild 1061
 MD5 2398436193eb0bbad90b6062d8d09980 files/digest-xmms-spc-0.2.1 66
 MD5 c34140815698b64062ff81e0a6ad01de files/xmms-spc-0.2.1.patch 991
+MD5 144cadd18274d7caca4d270040fa662c xmms-spc-0.2.1.ebuild 1061
+MD5 fbd9f8538be5093466fe7cf13be5170c ChangeLog 698

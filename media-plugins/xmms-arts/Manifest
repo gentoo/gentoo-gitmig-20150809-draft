@@ -1,8 +1,3 @@
-MD5 affb7cd52d003b13abb1e3c6f2e1e7e7 ChangeLog 2049
-MD5 bdc45cad0f2ec61f30a1b54b10eb05d4 xmms-arts-0.4-r3.ebuild 1380
-MD5 7b80c96e6be749a0aa30bbae412f4414 xmms-arts-0.4-r4.ebuild 1445
-MD5 c721646bd4fe85b413e011f87ccb55ef xmms-arts-0.4-r5.ebuild 1619
-MD5 e860b2b2bf482192d504e514b91a42f1 xmms-arts-0.4-r6.ebuild 854
 MD5 14ef959720e44686c1c56a169af90b92 files/digest-xmms-arts-0.4-r3 64
 MD5 14ef959720e44686c1c56a169af90b92 files/digest-xmms-arts-0.4-r4 64
 MD5 14ef959720e44686c1c56a169af90b92 files/digest-xmms-arts-0.4-r5 64
@@ -11,3 +6,8 @@ MD5 8a92137732cf9165d7dc23ee3f0bb4df files/xmms-arts-0.4-gentoo-endian.patch 641
 MD5 4fde6a522e3bccd70269561fc287102d files/xmms-arts-0.4-gentoo.patch 372
 MD5 94aaa450cb287a73ebdb918f26d0db23 files/xmms-arts-0.4-gentoo2.patch 754
 MD5 53dae4973af0651df719de36647891ae files/xmmsarts-0.4-nocmallocc.patch 1078
+MD5 bdc45cad0f2ec61f30a1b54b10eb05d4 xmms-arts-0.4-r3.ebuild 1380
+MD5 7b80c96e6be749a0aa30bbae412f4414 xmms-arts-0.4-r4.ebuild 1445
+MD5 06ff8790d174c59d8ff75badea8b96c3 xmms-arts-0.4-r5.ebuild 1616
+MD5 23169454d10c93984c0a39c827f66242 xmms-arts-0.4-r6.ebuild 851
+MD5 884a9e0a27992c621c74b79ff13e2062 ChangeLog 2166
