@@ -1,0 +1,46 @@
+#!/sbin/runscript
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+
+opts="start stop status restart natopen panic"
+
+depend() {
+        need net
+        provide firewall
+}
+
+svc_start() {
+        ebegin "Starting firewall"
+        /usr/sbin/tuxfrw start
+        eend $?
+}
+
+svc_stop() {
+        ebegin "Stopping firewall"
+        /usr/sbin/tuxfrw stop
+        eend $?
+}
+
+status() {
+	ebegin "Firewll status"
+	/usr/sbin/tuxfrw status
+	eend $?
+}
+
+restart() {
+        ebegin "Restarting firewall"
+        /usr/sbin/tuxfrw restart
+        eend $?
+}
+
+natopen() {
+	ebegin "Opening firwall just with NAT"
+	/usr/sbin/tuxfrw natopen
+	eend $?
+}
+
+panic() {
+	ebegin "Entering Firewall Panic Mode"
+	/usr/sbin/tuxfrw panic
+	eend $?
+}

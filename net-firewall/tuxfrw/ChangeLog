@@ -1,0 +1,13 @@
+# ChangeLog for net-firewall/tuxfirewall
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/tuxfrw/ChangeLog,v 1.1 2005/01/24 22:23:00 angusyoung Exp $
+
+*tuxfrw-2.58 (24 Jan 2005)
+
+  24 Jan 2005; Otavio R. Piske <angusyoung@gentoo.org> +metadata.xml,
+  +files/tuxfrw, +tuxfrw-2.58.ebuild:
+  Ebuild for tuxfrw 2.58 (initial release). Ebuild originally submitted by
+  scootersmk <scootersmk@chartertn.net>. Init script originally submitted by
+  Enderson Tadeu S. Maia <enderson@gentoo.org>. Init script patch submitted by
+  TuxFrw creator, Marcelo Gondim <gondim@databras.com.br>.
+
