@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-9c-r2.ebuild,v 1.2 2004/02/29 21:25:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/erlang/erlang-9c-r2.ebuild,v 1.3 2004/03/11 02:22:37 vapier Exp $
 
 inherit eutils gcc flag-o-matic
 
@@ -28,6 +28,7 @@ src_unpack(){
 }
 
 src_compile() {
+	[ "`gcc-fullversion`" == "3.3.2" ] && filter-mfpmath sse
 	[ "`gcc-fullversion`" == "3.3.3" ] && filter-mfpmath sse
 	addpredict /dev/pty # Bug #25366
 	econf --enable-threads || die
