@@ -18,18 +18,18 @@ DEPEND="virtual/glibc
 RDEPEND="net-misc/openssh"
 
 src_unpack() {
-    cd ${WORKDIR}
-    unpack ${A}
-    cd ${S}
-    # this thing doesn't use make install, but rather it's own install script
-    # fix it here so the install dirs are set to the ${D} directory
-    cd buildutils
-    mv pbs_mkdirs.in pbs_mkdirs.in-orig
-    sed -e "s|prefix=@prefix@|prefix=\${D}@prefix@| ; \
-            s|PBS_SERVER_HOME=@PBS_SERVER_HOME@|PBS_SERVER_HOME=\${D}@PBS_SERVER_HOME@| ; \
-            s|PBS_DEFAULT_FILE=@PBS_DEFAULT_FILE@|PBS_DEFAULT_FILE=\${D}@PBS_DEFAULT_FILE@| ; \
-            s|PBS_ENVIRON=@PBS_ENVIRON@|PBS_ENVIRON=\${D}@PBS_ENVIRON@|" \
-            pbs_mkdirs.in-orig > pbs_mkdirs.in
+	cd ${WORKDIR}
+	unpack ${A}
+	cd ${S}
+	# this thing doesn't use make install, but rather it's own install script
+	# fix it here so the install dirs are set to the ${D} directory
+	cd buildutils
+	mv pbs_mkdirs.in pbs_mkdirs.in-orig
+	sed -e "s|prefix=@prefix@|prefix=\${D}@prefix@| ; \
+		s|PBS_SERVER_HOME=@PBS_SERVER_HOME@|PBS_SERVER_HOME=\${D}@PBS_SERVER_HOME@| ; \
+		s|PBS_DEFAULT_FILE=@PBS_DEFAULT_FILE@|PBS_DEFAULT_FILE=\${D}@PBS_DEFAULT_FILE@| ; \
+		s|PBS_ENVIRON=@PBS_ENVIRON@|PBS_ENVIRON=\${D}@PBS_ENVIRON@|" \
+			pbs_mkdirs.in-orig > pbs_mkdirs.in
 }
 
 src_compile() {
@@ -57,5 +57,5 @@ src_install() {
 	     install || die
 
 	dodoc INSTALL PBS_License.text Read.Me Release_Notes
-	exeinto /etc/init.d ; newexe ${FILESDIR}/pbs.rc pbs 
+	exeinto /etc/init.d ; newexe ${FILESDIR}/pbs.rc pbs
 }
