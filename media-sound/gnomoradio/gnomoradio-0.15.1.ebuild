@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomoradio/gnomoradio-0.15.1.ebuild,v 1.1 2004/11/14 18:57:11 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomoradio/gnomoradio-0.15.1.ebuild,v 1.2 2004/11/23 11:07:56 eradicator Exp $
 
 IUSE="oggvorbis"
 
@@ -13,7 +13,7 @@ SLOT="0"
 #KEYWORDS="~amd64 ~ppc ~x86"
 # not linking for me on amd64 - eradicator
 # ~ppc - needs gconfmm keyworded
-KEYWORDS="-amd64 ~x86"
+KEYWORDS="-amd64 ~sparc ~x86"
 
 DEPEND=">=dev-cpp/gtkmm-2.4
 	>=dev-cpp/glibmm-2.4
