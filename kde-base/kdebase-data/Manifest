@@ -1,7 +1,4 @@
 MD5 14889ab75f97d76e58b0c1154e7683a9 metadata.xml 161
 MD5 1f946cd42cb6373052b0452074946f07 ChangeLog 1324
 MD5 a0ff727c40e30022e46fca2d4967db90 kdebase-data-3.4.0.ebuild 633
-MD5 c1250a1da4ea1fd131b44ebc27f32f3f files/agent-startup.sh 551
 MD5 54e17e8f38d377972c220f10357c9b2f files/digest-kdebase-data-3.4.0 68
-MD5 010340a437b3c0d1605af4ddf95368eb files/agent-shutdown.sh 260
-MD5 0aa159291daa24450f0ecf1962a0a179 files/startkde-3.4.0_rc1-gentoo.diff 1210

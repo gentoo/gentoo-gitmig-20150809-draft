@@ -5,4 +5,3 @@ MD5 935f613bbd080ed37bf3bb15835411ad files/startkde-3.4.0-gentoo.diff 1286
 MD5 54e17e8f38d377972c220f10357c9b2f files/digest-kdebase-startkde-3.4.0 68
 MD5 016f5ae82399f6d6c1b9f82aa80ac831 files/agent-startup.sh 550
 MD5 38116c7e3963674ec4a3c0948904ec3b files/agent-shutdown.sh 320
-MD5 0aa159291daa24450f0ecf1962a0a179 files/startkde-3.4.0_rc1-gentoo.diff 1210
