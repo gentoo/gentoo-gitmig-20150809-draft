@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx100/acx100-0.2.0_pre8-r1.ebuild,v 1.2 2005/02/04 12:23:15 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx100/acx100-0.2.0_pre8-r1.ebuild,v 1.3 2005/02/28 21:08:38 genstef Exp $
 
 inherit linux-mod
 
@@ -17,10 +17,10 @@ SRC_URI="http://lisas.de/~andi/${PN}/${P/_/}_plus_fixes_${FIX_VERSION}.tar.bz2
 LICENSE="GPL-2 as-is"
 SLOT="0"
 KEYWORDS="~x86"
-IUSE=""
+IUSE="pcmcia"
 RESTRICT="nomirror"
 
-RDEPEND=">=sys-apps/hotplug-20040923
+RDEPEND="pcmcia? ( >=sys-apps/hotplug-20040923 )
 	net-wireless/wireless-tools"
 
 S=${WORKDIR}/${P/_/}_plus_fixes_${FIX_VERSION}

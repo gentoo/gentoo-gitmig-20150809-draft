@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/acx100
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx100/ChangeLog,v 1.2 2005/02/02 14:34:33 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/acx100/ChangeLog,v 1.3 2005/02/28 21:08:38 genstef Exp $
+
+  28 Feb 2005; Stefan Schweizer <genstef@gentoo.org>
+  acx100-0.2.0_pre8-r1.ebuild:
+  Changing to RDEPEND on hotplug only when use pcmcia is set thanks to Stephen
+  Bennett <spb@gentoo.org> in bug 83592
 
 *acx100-0.2.0_pre8-r1 (02 Feb 2005)
 
