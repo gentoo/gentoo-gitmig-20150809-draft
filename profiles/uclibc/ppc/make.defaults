@@ -2,6 +2,7 @@ ARCH="ppc"
 ACCEPT_KEYWORDS="ppc"
 
 GRP_STAGE23_USE="berkdb ncurses readline zlib uclibc"
+USE="${GRP_STAGE23_USE}"
 STAGE1_USE="uclibc"
 
 UCLIBC_CPU_DEFAULT=""
