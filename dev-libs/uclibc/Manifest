@@ -1,15 +1,17 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 f7e7f52bd817adb9e16127bf98e5aa71 ChangeLog 7643
+MD5 6aaadcf07b706c9004528ff9081e3ce0 ChangeLog 7806
 MD5 e96b4dfc373a1cdf7735aeae52c4cf7e metadata.xml 999
 MD5 7fde305dfd21aeac12e0eb721e0f6a17 uclibc-0.9.21.ebuild 1096
 MD5 d98118dbcb77466679b07fd6eb029f9f uclibc-9999.ebuild 5443
-MD5 7ba6e2f7dbe4f241de617f5ebfa35fa0 uclibc-0.9.26-r5.ebuild 7658
+MD5 da4fc6c9f7a369ef2b61611c46bd3a8d uclibc-0.9.26-r8.ebuild 9749
 MD5 59d40f2d78a6bbdb5e3fc3f0efe960ef uclibc-0.9.26-r7.ebuild 7861
+MD5 7ba6e2f7dbe4f241de617f5ebfa35fa0 uclibc-0.9.26-r5.ebuild 7658
 MD5 d16f404e56abc9f0ab5c372b88a6905d files/Makefile-cp-order-fix.patch 897
 MD5 799adc7fb6ec9ffd653831cea1d32dd5 files/digest-uclibc-0.9.21 67
 MD5 0b733285f186f31c1be9ffcc42f1064e files/getent 973
+MD5 6d2b5c523d34c86df9bc37747d9261dc files/digest-uclibc-0.9.26-r8 231
 MD5 6d2b5c523d34c86df9bc37747d9261dc files/digest-uclibc-0.9.26-r5 231
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-uclibc-9999 0
 MD5 6d2b5c523d34c86df9bc37747d9261dc files/digest-uclibc-0.9.26-r7 231
@@ -35,7 +37,7 @@ MD5 a503ef49001f5f67d61cd40b0809fb76 files/0.9.26/unsecvars.h 682
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBinOEHTu7gpaalycRAkR5AJ4y0dukXg5aPoKol6s48o/Cpq8KYQCdESMR
-XQuy54HoO0k7LXXJR7X9f+I=
-=LnbE
+iD8DBQFBjHhqHTu7gpaalycRAkcdAJ0W9eQvrV4L0CkBDPE5OrFqUNHJKQCeNSrD
+REu6PD6q8mMRzPZpSGWkCto=
+=+x2j
 -----END PGP SIGNATURE-----
