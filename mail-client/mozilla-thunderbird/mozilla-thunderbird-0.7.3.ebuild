@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-0.7.3.ebuild,v 1.6 2004/08/08 19:01:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mozilla-thunderbird/mozilla-thunderbird-0.7.3.ebuild,v 1.7 2004/08/08 19:09:25 agriffis Exp $
 
 IUSE="crypt gtk2"
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
-inherit flag-o-matic gcc eutils nsplugins mozilla mozilla-launcher
+inherit flag-o-matic gcc eutils nsplugins mozilla mozilla-launcher makeedit
 
 EMVER="0.85.0"
 IPCVER="1.0.7"
@@ -28,7 +28,6 @@ S=${WORKDIR}/mozilla
 # Would do in pkg_setup but that loses the export attribute, they
 # become pure shell variables.
 export MOZ_THUNDERBIRD=1
-export MOZ_ENABLE_XFT=1
 
 src_unpack() {
 	unpack ${A} || die "unpack failed"
@@ -65,8 +64,7 @@ src_compile() {
 	mozilla_conf
 
 	myconf="${myconf} \
-		--with-default-mozilla-five-home=/usr/lib/MozillaThunderbird \
-		--enable-extensions=wallet,spellcheck"
+		--with-default-mozilla-five-home=/usr/lib/MozillaThunderbird"
 
 	####################################
 	#
@@ -75,6 +73,10 @@ src_compile() {
 	####################################
 
 	econf ${myconf} || die
+
+	# This removes extraneous CFLAGS from the Makefiles to reduce RAM
+	# requirements while compiling
+	edit_makefiles
 
 	emake MOZ_THUNDERBIRD=1 || die
 
