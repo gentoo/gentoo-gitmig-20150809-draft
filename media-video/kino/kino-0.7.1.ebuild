@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-0.7.1.ebuild,v 1.3 2004/05/11 17:18:53 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-0.7.1.ebuild,v 1.4 2004/05/30 13:36:44 lv Exp $
 
 DESCRIPTION="Kino is a non-linear DV editor for GNU/Linux"
 HOMEPAGE="http://kino.schirmacher.de/"
@@ -25,6 +25,11 @@ DEPEND="x11-libs/gtk+
 	>=media-libs/libdv-0.102
 	media-libs/libsamplerate
 	quicktime? ( virtual/quicktime )"
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/kino_gcc34_fix
+}
 
 src_compile() {
 	econf \
