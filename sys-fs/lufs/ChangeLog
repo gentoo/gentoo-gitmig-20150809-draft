@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lufs
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/ChangeLog,v 1.21 2005/02/14 19:34:26 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/ChangeLog,v 1.22 2005/02/19 08:18:11 josejx Exp $
+
+  19 Feb 2005; Joseph Jezak <josejx@gentoo.org> lufs-0.9.7-r3.ebuild:
+  Marked ppc stable for bug #78127.
 
   14 Feb 2005; Stefan Schweizer <genstef@gentoo.org>
   +files/lufs-no-kernel.patch, lufs-0.9.7-r3.ebuild:
