@@ -2,6 +2,11 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # /space/gentoo/cvsroot/gentoo-x86/app-arch/rar/ChangeLog,v 1.5 2002/05/31 01:48:14 seemant Exp
 
+*rar-3.2.0 (31 May 2003)
+
+  31 May 2003; Martin Holzer <mholzer@gentoo.org> rar-3.2.0.ebuild:
+  Version bumped.
+
 *rar-3.1.1 (05 Feb 2003)
 
   05 Feb 2003; Mike Frysinger <vapier@gentoo.org> :
