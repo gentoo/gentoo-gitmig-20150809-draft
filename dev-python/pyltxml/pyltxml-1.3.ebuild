@@ -1,0 +1,26 @@
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyltxml/pyltxml-1.3.ebuild,v 1.1 2003/10/30 01:40:37 pythonhead Exp $
+
+inherit distutils
+
+S="${WORKDIR}/PyLTXML-${PV}"
+DESCRIPTION="Bindings for LTXML libraries"
+HOMEPAGE="http://www.ltg.ed.ac.uk/software/xml/"
+SRC_URI=ftp://ftp.cogsci.ed.ac.uk/pub/LTXML/PyLTXML-${PV}.tar.gz
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86"
+IUSE=""
+DOCS="00README"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	sed -i \
+		-e s':projects/ltg/projects/lcontrib/include:usr/include:' \
+		-e s':projects/ltg/projects/lcontrib/lib:usr/lib/ltxml12:' \
+		setup.py \
+		|| die "sed failed on setup.py"
+}
+
