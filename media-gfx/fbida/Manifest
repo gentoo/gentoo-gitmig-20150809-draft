@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 090771aa32e3bf3af88a108b5e529a03 fbida-2.03.ebuild 1610
-MD5 74d9ab424143209f0d7784ce71abe258 ChangeLog 354
+MD5 d86a32284a0370aee919cc9c5b8428da fbida-2.03.ebuild 1625
+MD5 75755f7005e590a130575e74bca1970c ChangeLog 497
 MD5 cfe1b5f88cc51ac6ffc42809178d2a06 metadata.xml 221
 MD5 bfb6e027022ffa3822ed655578c0046f files/digest-fbida-2.03 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCBV2echej4aZK9/cRAmxGAJ9dl2ddEHDrUhWPvJtkZTEysLkqAwCghVn7
-eTCdCf2LfLyjLbQbFf0aS64=
-=+sjp
+iD8DBQFCLPjPchej4aZK9/cRAsWIAJ9wQW6mCjWaeuyDuwOAzVU+9R7pgACfee6Z
+VqMCQHclx0f1wrGHmqfMYY0=
+=VyIG
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbi/fbi-1.31.ebuild,v 1.15 2005/02/07 22:19:15 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbi/fbi-1.31.ebuild,v 1.16 2005/03/08 00:58:54 spock Exp $
 
 inherit gcc
 
@@ -19,7 +19,8 @@ DEPEND="jpeg? ( >=media-libs/jpeg-6b )
 	tiff? ( media-libs/tiff )
 	curl? ( net-misc/curl )
 	lirc? ( app-misc/lirc )
-	X? ( virtual/x11 )"
+	X? ( virtual/x11 )
+	!media-gfx/fbida"
 
 src_compile() {
 	export CFLAGS="${CFLAGS}"
