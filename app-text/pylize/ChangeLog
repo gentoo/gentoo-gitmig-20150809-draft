@@ -1,6 +1,9 @@
 # ChangeLog for app-text/pylize
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/pylize/ChangeLog,v 1.1 2003/03/08 15:33:52 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/pylize/ChangeLog,v 1.2 2003/07/08 20:07:52 liquidx Exp $
+
+  07 Jul 2003; Alastair Tse <liquidx@gentoo.org> pylize-1.1b.ebuild:
+  about time we bumped to stable
 
 *pylize-1.1b (08 Mar 2003)
 
