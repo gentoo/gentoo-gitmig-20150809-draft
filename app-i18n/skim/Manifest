@@ -1,22 +1,12 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 ff65202ad7e07776f6dbfbe08fa95442 ChangeLog 2900
-MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 80954fcb8c10e97bd7b1ec9ba6251b46 skim-1.0.2.ebuild 1358
 MD5 07d44d3fb21ecce6dbea953625100032 skim-1.2.1.ebuild 1138
+MD5 80954fcb8c10e97bd7b1ec9ba6251b46 skim-1.0.2.ebuild 1358
+MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
+MD5 cf114af85f6bebfb9aba74dec30d770d skim-1.2.0.ebuild 1137
+MD5 5bfd61a6a092c980ec4bf9e3c81fb7ad ChangeLog 2992
 MD5 e849028fd69b7d93f8152cf09bfac5da skim-1.1.0.ebuild 1216
-MD5 2330cb6a5db3f6cc985592fb3233750f skim-1.2.0.ebuild 1137
-MD5 23841544293c91ccf1a672546f0d91f7 files/digest-skim-1.0.2 64
+MD5 50ec9d30fff381538c2b689792278714 files/digest-skim-1.2.1 64
 MD5 fa742392c9a1a2b5b3bb0dda9dd0e70e files/digest-skim-1.1.0 64
 MD5 b920ff794a0679e89f678af0d08cdf63 files/digest-skim-1.2.0 64
+MD5 23841544293c91ccf1a672546f0d91f7 files/digest-skim-1.0.2 64
 MD5 1d5af0e9f04b0051301aa8ecbbe9048f files/skim-1.0.2-types.patch 739
 MD5 8af9846719437446280e497fd80e4212 files/skim-1.1.0-types.patch 838
-MD5 50ec9d30fff381538c2b689792278714 files/digest-skim-1.2.1 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (GNU/Linux)
-
-iD8DBQFCPoXiVWNWqTUmv+0RAo/lAJ97E2VEkpTSfRuikvOZYWv1/KzH2QCdFXnG
-u6Zc7NGyYga5YTvIjC/5L0c=
-=O9nL
------END PGP SIGNATURE-----
