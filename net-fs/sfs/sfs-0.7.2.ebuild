@@ -1,25 +1,24 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/sfs/sfs-0.7.2.ebuild,v 1.11 2004/07/14 23:54:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/sfs/sfs-0.7.2.ebuild,v 1.12 2004/09/24 00:04:23 vapier Exp $
 
 inherit eutils
 
-DESCRIPTION="SFS (Self-certifying File System) client and server daemons"
+DESCRIPTION="Self-certifying File System client and server daemons"
 HOMEPAGE="http://www.fs.net/"
 SRC_URI="http://www.fs.net/sfs/@new-york.lcs.mit.edu,u83s4uk49nt8rmp4uwmt2exvz6d3cavh/pub/sfswww/dist/${P}.tar.gz"
-LICENSE="GPL-2"
 
+LICENSE="GPL-2"
 SLOT="0"
-IUSE="ssl"
 KEYWORDS="x86"
+IUSE="ssl"
 
 DEPEND="virtual/libc
-		>=dev-libs/gmp-4.1
-		>=net-fs/nfs-utils-0.3.3
-		ssl? ( >=dev-libs/openssl-0.9.6 )"
-
-RDEPEND="$DEPEND
-		>=net-nds/portmap-5b-r6"
+	>=dev-libs/gmp-4.1
+	>=net-fs/nfs-utils-0.3.3
+	ssl? ( >=dev-libs/openssl-0.9.6 )"
+RDEPEND="${DEPEND}
+	>=net-nds/portmap-5b-r6"
 
 pkg_setup() {
 	# checking for NFS support *seems* like a good idea, but since
@@ -40,26 +39,24 @@ src_unpack() {
 }
 
 src_compile() {
-	if use ssl; then
-		EXTRA_ECONF="${EXTRA_ECONF} --with-openssl=/usr"
-	else
-		EXTRA_ECONF="${EXTRA_ECONF} --without-openssl"
-	fi
-	EXTRA_ECONF="${EXTRA_ECONF} --with-gmp=/usr --with-gnuld --prefix=/"
-
-	econf || die "econf failed"
+	econf \
+		`use_with ssl openssl /usr` \
+		--with-gmp=/usr \
+		--with-gnuld \
+		--prefix=/ \
+		|| die "econf failed"
 
 	# won't parallel build w/o baby-sitting
-	EXTRA_EMAKE="${EXTRA_EMAKE} -j1" emake || die
+	emake -j1 || die
 }
 
 src_install() {
-	einstall prefix=${D}/
+	einstall prefix=${D}/ || die
 
 	insinto /etc/sfs/
 	doins ${FILESDIR}/sfsrwsd_config
 
-	dodoc AUTHORS COPYING ChangeLog NEWS \
+	dodoc AUTHORS ChangeLog NEWS \
 		README README.0.7-upgrade \
 		STANDARDS TODO
 
@@ -80,10 +77,6 @@ pkg_postinst() {
 	einfo "Both the client and server require kernel support"
 	einfo "	 for NFS version 3 in order to operate properly."
 	einfo ""
-
-	# Running depscan since we introduced some new init scripts
-	/etc/init.d/depscan.sh
-	return 0
 }
 
 pkg_config() {
