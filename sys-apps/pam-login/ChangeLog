@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/pam-login
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.28 2003/10/20 00:55:03 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.29 2003/10/29 04:16:21 pebenito Exp $
+
+  28 Oct 2003; Chris PeBenito <pebenito@gentoo.org> pam-login-3.11-r1.ebuild,
+  pam-login-3.11.ebuild, pam-login-3.12-r1.ebuild, pam-login-3.12.ebuild,
+  files/pam-login-3.11-selinux-gcc33.patch, files/pam-login-3.11-selinux.diff:
+  Remove old API SELinux patches.
 
   19 Oct 2003; Chris PeBenito <pebenito@gentoo.org> pam-login-3.14.ebuild,
   files/pam-login-3.14-query_user_context.diff:

@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.12.ebuild,v 1.2 2003/09/26 00:01:49 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.12.ebuild,v 1.3 2003/10/29 04:16:21 pebenito Exp $
 
 
 inherit gnuconfig
 
-IUSE="nls selinux"
+IUSE="nls"
 
 # Do we want to backup an old login.defs, and forcefully
 # install a new version?
@@ -24,25 +24,15 @@ LICENSE="GPL-2"
 
 DEPEND="virtual/glibc
 	sys-libs/pam
-	>=sys-apps/shadow-4.0.2-r5
-	selinux? ( >=sys-apps/selinux-small-2003011510-r2 )"
+	>=sys-apps/shadow-4.0.2-r5"
 
 src_unpack() {
 	unpack ${A}
 
 	cd ${S}
 
-	if use selinux
-	then
-		# Patches for selinux
-		epatch ${FILESDIR}/${PN}-3.11-selinux.diff
-
-		# Do not warn on inlining for gcc-3.3, bug #21213
-		epatch ${FILESDIR}/${PN}-3.11-selinux-gcc33.patch
-	else
-		# Do not warn on inlining for gcc-3.3, bug #21213
-		epatch ${FILESDIR}/${PN}-3.11-gcc33.patch
-	fi
+	# Do not warn on inlining for gcc-3.3, bug #21213
+	epatch ${FILESDIR}/${PN}-3.11-gcc33.patch
 
 	epatch ${FILESDIR}/pam-login-3.11-lastlog-fix.patch
 }

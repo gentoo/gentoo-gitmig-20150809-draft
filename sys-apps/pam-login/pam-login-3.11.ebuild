@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.11.ebuild,v 1.11 2003/09/07 00:57:32 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.11.ebuild,v 1.12 2003/10/29 04:16:21 pebenito Exp $
 
 
 inherit gnuconfig
 
-IUSE="nls selinux"
+IUSE="nls"
 
 # Do we want to backup an old login.defs, and forcefully
 # install a new version?
@@ -23,15 +23,7 @@ LICENSE="GPL-2"
 
 DEPEND="virtual/glibc
 	sys-libs/pam
-	>=sys-apps/shadow-4.0.2-r5
-	selinux? ( >=sys-apps/selinux-small-2003011510-r2 )"
-
-src_unpack() {
-	unpack ${A}
-
-	cd ${S}
-	use selinux && epatch ${FILESDIR}/${P}-selinux.diff
-}
+	>=sys-apps/shadow-4.0.2-r5"
 
 src_compile() {
 
