@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/java-commons.eclass,v 1.2 2003/03/18 01:47:59 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/jakarta-commons.eclass,v 1.1 2003/03/18 22:36:09 absinthe Exp $
 
 inherit base
 ECLASS=java-commons
