@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.31.0_alpha2-r1.ebuild,v 1.1 2004/02/03 19:31:39 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.31.0_alpha2-r1.ebuild,v 1.2 2004/02/14 01:25:55 george Exp $
 
 MyPV="2004202"
 
@@ -78,7 +78,7 @@ src_install () {
 	# install libraries
 	find bin/boost/libs -type f -name \*.a -exec dolib.a {} \;
 	find bin/boost/libs -type f -name "*.so*" -exec dolib.so {} \;
-	find bin/boost/libs -type l -name "*.so*" -exec dosym {} /usr/lib \;
+	#find bin/boost/libs -type l -name "*.so*" -exec dosym {} /usr/lib \;
 
 	# install source/header files
 
@@ -113,4 +113,21 @@ src_install () {
 		-and -not -name \*.dsp \
 		-exec \
 	install -D -m0644 \{\} ${D}/usr/share/doc/${P}/html/\{\} \;
+
+	#create symlinks for the libs
+	LocalPV="1_31"
+	cd ${D}/usr/lib
+	for fn in *.so*; do
+		baseName=${fn%%so*}
+		#.so symlinks
+		ln -s $fn ${baseName}so
+		#remove version from .so's and .a's
+		ln -s ${baseName}so ${baseName/-$LocalPV/}so
+		ln -s ${baseName}a ${baseName/-$LocalPV/}a
+	done
+	#and finally set "default" links to -gcc-mt versions
+	for fn in `ls -1 *.so|cut -d- -f1|sort|uniq`; do
+		ln -s $fn-gcc-mt.so $fn.so
+		ln -s $fn-gcc-mt.a  $fn.a
+	done
 }
