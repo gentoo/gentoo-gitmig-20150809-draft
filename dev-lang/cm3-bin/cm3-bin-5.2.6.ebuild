@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3-bin/cm3-bin-5.2.6.ebuild,v 1.4 2003/07/18 19:00:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3-bin/cm3-bin-5.2.6.ebuild,v 1.5 2003/07/28 21:00:11 msterret Exp $
 
 DESCRIPTION="Critical Mass Modula-3 compiler (binary version)"
 HOMEPAGE="http://www.elegosoft.com/cm3/"
@@ -8,9 +8,9 @@ SRC_URI="x86? ( http://www.elegosoft.com/cm3/cm3-min-POSIX-LINUXLIBC6-${PV}.tgz 
 	ppc? ( http://www.elegosoft.com/cm3/cm3-min-POSIX-PPC_LINUX-${PV}.tgz )"
 
 LICENSE="CMASS-M3 DEC-M3"
-SLOT="0"
 KEYWORDS="x86 ppc"
-IUSE="tcltk"
+SLOT="0"
+IUSE=""
 
 S=${WORKDIR}
 
