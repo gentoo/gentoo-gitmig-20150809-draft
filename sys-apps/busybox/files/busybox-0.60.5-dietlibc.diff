@@ -1,0 +1,435 @@
+diff -ur busybox-0.60.5.orig/Makefile busybox-0.60.5/Makefile
+--- busybox-0.60.5.orig/Makefile	2002-10-27 05:47:54.000000000 +0100
++++ busybox-0.60.5/Makefile	2003-05-05 17:29:45.000000000 +0200
+@@ -109,6 +109,7 @@
+ #LIBRARIES = $(LIBCDIR)/lib/libc.a -lgcc
+ #CROSS_CFLAGS+=-nostdinc -I$(LIBCDIR)/include -I$(GCCINCDIR)
+ #GCCINCDIR = $(shell gcc -print-search-dirs | sed -ne "s/install: \(.*\)/\1include/gp")
++LIBRARIES = -lrpc -lcompat
+ 
+ WARNINGS = -Wall -Wshadow
+ 
+diff -ur busybox-0.60.5.orig/ash.c busybox-0.60.5/ash.c
+--- busybox-0.60.5.orig/ash.c	2002-10-23 00:14:29.000000000 +0200
++++ busybox-0.60.5/ash.c	2003-05-05 17:29:45.000000000 +0200
+@@ -7777,7 +7777,7 @@
+ 
+ #undef rflag
+ 
+-#if !defined(__GLIBC__) || __GLIBC__ == 2 && __GLIBC_MINOR__ < 1
++#if (!defined(__GLIBC__) || __GLIBC__ == 2 && __GLIBC_MINOR__ < 1 ) && !defined(__dietlibc__)
+ typedef long rlim_t;
+ #endif
+ 
+diff -ur busybox-0.60.5.orig/chown.c busybox-0.60.5/chown.c
+--- busybox-0.60.5.orig/chown.c	2001-11-20 00:34:17.000000000 +0100
++++ busybox-0.60.5/chown.c	2003-05-05 17:29:45.000000000 +0200
+@@ -36,7 +36,11 @@
+ static long uid;
+ static long gid;
+ 
++#if !defined(__dietlibc__)
+ static int (*chown_func)(const char *, __uid_t, __gid_t) = chown;
++#else
++static int (*chown_func)(const char *, uid_t, gid_t) = chown;
++#endif
+ 
+ static int fileAction(const char *fileName, struct stat *statbuf, void* junk)
+ {
+diff -ur busybox-0.60.5.orig/cmdedit.c busybox-0.60.5/cmdedit.c
+--- busybox-0.60.5.orig/cmdedit.c	2002-04-25 01:07:03.000000000 +0200
++++ busybox-0.60.5/cmdedit.c	2003-05-05 17:29:45.000000000 +0200
+@@ -165,7 +165,7 @@
+ #endif	/* BB_FEATURE_COMMAND_TAB_COMPLETION */
+ 
+ /* It seems that libc5 doesn't know what a sighandler_t is... */
+-#if (__GLIBC__ <= 2) && (__GLIBC_MINOR__ < 1)
++#if ((__GLIBC__ <= 2) && (__GLIBC_MINOR__ < 1)) && !defined(__dietlibc__)
+ typedef void (*sighandler_t) (int);
+ #endif
+ 
+diff -ur busybox-0.60.5.orig/ifconfig.c busybox-0.60.5/ifconfig.c
+--- busybox-0.60.5.orig/ifconfig.c	2002-10-23 00:14:29.000000000 +0200
++++ busybox-0.60.5/ifconfig.c	2003-05-05 17:29:45.000000000 +0200
+@@ -41,7 +41,11 @@
+ #include <arpa/inet.h>
+ #include <net/if.h>
+ #include <net/if_arp.h>
++#ifdef __dietlibc__
++#include <net/if_ether.h>
++#else
+ #include <linux/if_ether.h>
++#endif
+ #include "busybox.h"
+ 
+ #ifdef BB_FEATURE_IFCONFIG_SLIP
+diff -ur busybox-0.60.5.orig/init.c busybox-0.60.5/init.c
+--- busybox-0.60.5.orig/init.c	2002-10-22 21:15:43.000000000 +0200
++++ busybox-0.60.5/init.c	2003-05-05 17:30:03.000000000 +0200
+@@ -38,7 +38,7 @@
+ #include <termios.h>
+ #include <unistd.h>
+ #include <limits.h>
+-#include <sys/fcntl.h>
++#include <fcntl.h>
+ #include <sys/ioctl.h>
+ #include <sys/mount.h>
+ #include <sys/types.h>
+@@ -698,6 +698,7 @@
+ static void shutdown_system(void)
+ {
+ 	sigset_t block_signals;
++	sigset_t old_signals;
+ 
+ 	/* run everything to be run at "shutdown".  This is done _prior_
+ 	 * to killing everything, in case people wish to use scripts to
+@@ -715,7 +716,7 @@
+ 	sigaddset(&block_signals, SIGCONT);
+ 	sigaddset(&block_signals, SIGSTOP);
+ 	sigaddset(&block_signals, SIGTSTP);
+-	sigprocmask(SIG_BLOCK, &block_signals, NULL);
++	sigprocmask(SIG_BLOCK, &block_signals, &old_signals);
+ 
+ 	/* Allow Ctrl-Alt-Del to reboot system. */
+ 	init_reboot(RB_ENABLE_CAD);
+diff -ur busybox-0.60.5.orig/libbb/interface.c busybox-0.60.5/libbb/interface.c
+--- busybox-0.60.5.orig/libbb/interface.c	2002-09-17 08:36:56.000000000 +0200
++++ busybox-0.60.5/libbb/interface.c	2003-05-05 17:29:45.000000000 +0200
+@@ -1527,7 +1527,11 @@
+ 
+ #if HAVE_HWETHER
+ #include <net/if_arp.h>
++#ifdef __dietlibc__
++#include <net/if_ether.h>
++#else
+ #include <linux/if_ether.h>
++#endif
+ 
+ static struct hwtype ether_hwtype;
+ 
+diff -ur busybox-0.60.5.orig/libbb/libc5.c busybox-0.60.5/libbb/libc5.c
+--- busybox-0.60.5.orig/libbb/libc5.c	2002-09-17 09:44:27.000000000 +0200
++++ busybox-0.60.5/libbb/libc5.c	2003-05-05 17:29:45.000000000 +0200
+@@ -65,11 +65,13 @@
+ 	return token;
+ }
+ 
++#if !defined(__dietlibc__)
+ /* Basically getdelim() with the delimiter hard wired to '\n' */
+ ssize_t getline(char **linebuf, size_t *n, FILE *file)
+ {
+       return (getdelim (linebuf, n, '\n', file));
+ }
++#endif
+ 
+ 
+ #ifndef __uClinux__
+diff -ur busybox-0.60.5.orig/libbb/module_syscalls.c busybox-0.60.5/libbb/module_syscalls.c
+--- busybox-0.60.5.orig/libbb/module_syscalls.c	2002-03-12 01:33:09.000000000 +0100
++++ busybox-0.60.5/libbb/module_syscalls.c	2003-05-05 17:29:45.000000000 +0200
+@@ -21,6 +21,7 @@
+  *
+  */
+ 
++#ifndef __dietlibc__
+ #include <stdio.h>
+ #include <errno.h>
+ #include <unistd.h>
+@@ -76,7 +77,7 @@
+ }
+ 
+ #endif /* __GNU_LIBRARY__ < 5 */
+-
++#endif /* __dietlibc__ */
+ 
+ /* END CODE */
+ /*
+diff -ur busybox-0.60.5.orig/libbb/syscalls.c busybox-0.60.5/libbb/syscalls.c
+--- busybox-0.60.5.orig/libbb/syscalls.c	2002-03-12 01:33:09.000000000 +0100
++++ busybox-0.60.5/libbb/syscalls.c	2003-05-05 17:29:45.000000000 +0200
+@@ -21,6 +21,7 @@
+  *
+  */
+ 
++#ifndef __dietlibc__
+ #include <stdio.h>
+ #include <errno.h>
+ #include <unistd.h>
+@@ -102,6 +103,7 @@
+ 
+ 
+ #endif /* __GNU_LIBRARY__ < 5 */
++#endif /* __dietlibc__ */
+ 
+ 
+ /* END CODE */
+diff -ur busybox-0.60.5.orig/logread.c busybox-0.60.5/logread.c
+--- busybox-0.60.5.orig/logread.c	2001-04-10 01:52:18.000000000 +0200
++++ busybox-0.60.5/logread.c	2003-05-05 17:29:45.000000000 +0200
+@@ -35,7 +35,7 @@
+ #include <setjmp.h>
+ #include "busybox.h"
+ 
+-#if __GNU_LIBRARY__ < 5
++#if __GNU_LIBRARY__ < 5 && !defined(__dietlibc__)
+ #error Sorry.  Looks like you are using libc5.  
+ #error libc5 shm support isnt good enough.
+ #error Please disable BB_FEATURE_IPC_SYSLOG 
+diff -ur busybox-0.60.5.orig/mkswap.c busybox-0.60.5/mkswap.c
+--- busybox-0.60.5.orig/mkswap.c	2002-04-06 07:01:20.000000000 +0200
++++ busybox-0.60.5/mkswap.c	2003-05-05 17:29:45.000000000 +0200
+@@ -42,8 +42,12 @@
+ #include <stdlib.h>
+ #include <sys/ioctl.h>			/* for _IO */
+ #include <sys/utsname.h>
++#ifdef __dietlibc__
++#include <sys/shm.h>
++#else
+ #include <asm/page.h>			/* for PAGE_SIZE and PAGE_SHIFT */
+ 				/* we also get PAGE_SIZE via getpagesize() */
++#endif
+ #include "busybox.h"
+ 
+ #ifndef _IO
+diff -ur busybox-0.60.5.orig/mt.c busybox-0.60.5/mt.c
+--- busybox-0.60.5.orig/mt.c	2001-05-22 16:32:35.000000000 +0200
++++ busybox-0.60.5/mt.c	2003-05-05 17:29:45.000000000 +0200
+@@ -3,7 +3,7 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <sys/mtio.h>
+-#include <sys/fcntl.h>
++#include <fcntl.h>
+ #include "busybox.h"
+ 
+ struct mt_opcodes {
+diff -ur busybox-0.60.5.orig/nslookup.c busybox-0.60.5/nslookup.c
+--- busybox-0.60.5.orig/nslookup.c	2002-04-27 06:03:59.000000000 +0200
++++ busybox-0.60.5/nslookup.c	2003-05-05 17:29:45.000000000 +0200
+@@ -137,8 +137,11 @@
+ /* lookup the default nameserver and display it */
+ static inline void server_print(void)
+ {
+-	struct sockaddr_in def = _res.nsaddr_list[0];
+-	char *ip = inet_ntoa(def.sin_addr);
++	struct sockaddr_in def;
++	char *ip;
++
++	memcpy(&def,&_res.nsaddr_list[0],sizeof(def));
++	ip = inet_ntoa(def.sin_addr);
+ 
+ 	hostent_fprint(gethostbyaddr_wrapper(ip), 1);
+ 	printf("\n");
+diff -ur busybox-0.60.5.orig/ping.c busybox-0.60.5/ping.c
+--- busybox-0.60.5.orig/ping.c	2002-09-17 09:56:26.000000000 +0200
++++ busybox-0.60.5/ping.c	2003-05-05 17:29:45.000000000 +0200
+@@ -55,7 +55,7 @@
+ /* It turns out that libc5 doesn't have proper icmp support
+  * built into it header files, so we have to supplement it */
+ #if __GNU_LIBRARY__ < 5
+-static const int ICMP_MINLEN = 8;				/* abs minimum */
++#define ICMP_MINLEN 8				/* abs minimum */
+ 
+ struct icmp_ra_addr
+ {
+diff -ur busybox-0.60.5.orig/ps.c busybox-0.60.5/ps.c
+--- busybox-0.60.5.orig/ps.c	2002-09-17 10:23:05.000000000 +0200
++++ busybox-0.60.5/ps.c	2003-05-05 17:29:45.000000000 +0200
+@@ -38,7 +38,9 @@
+ #include <string.h>
+ #include <termios.h>
+ #include <sys/ioctl.h>
++#ifndef __dietlibc__
+ #include <linux/major.h>
++#endif
+ #include "busybox.h"
+ 
+ static const int TERMINAL_WIDTH = 79;      /* not 80 in case terminal has linefold bug */
+@@ -83,13 +85,15 @@
+ 
+ static void dev_to_name(dev_t dev, char *name)
+ {
+-	if (MAJOR(dev) == TTY_MAJOR)
++	if (MAJOR(dev) == 4)
+ 		if (MINOR(dev) < 64)
+ 			sprintf(name,"tty%d", (int)MINOR(dev));
+ 		else
+ 			sprintf(name,"ttyS%d", (int)MINOR(dev)-64);
+-	else if (MAJOR(dev) == PTY_SLAVE_MAJOR)
++	else if (MAJOR(dev) == 3 )
+ 		sprintf(name,"tty%c%x", master[MINOR(dev) / 16], (int)MINOR(dev) & 0xf);
++	else if (MAJOR(dev) >= 136 && MAJOR(dev) <= 143)
++		sprintf(name,"pts/%d", ((MAJOR(dev)-136) << 8) | (int)MINOR(dev));
+ 	else
+ 		strcpy(name, "");
+ }
+diff -ur busybox-0.60.5.orig/route.c busybox-0.60.5/route.c
+--- busybox-0.60.5.orig/route.c	2002-09-17 09:56:25.000000000 +0200
++++ busybox-0.60.5/route.c	2003-05-05 17:29:45.000000000 +0200
+@@ -23,7 +23,7 @@
+ #include <sys/ioctl.h>
+ #include <sys/socket.h>
+ #include <net/route.h>
+-#include <linux/param.h>  // HZ
++//#include <linux/param.h>  // HZ
+ #include <netinet/in.h>
+ #include <arpa/inet.h>
+ #include <stdio.h>
+diff -ur busybox-0.60.5.orig/syslogd.c busybox-0.60.5/syslogd.c
+--- busybox-0.60.5.orig/syslogd.c	2002-09-17 22:04:12.000000000 +0200
++++ busybox-0.60.5/syslogd.c	2003-05-05 17:29:45.000000000 +0200
+@@ -55,7 +55,7 @@
+ #define __LOG_FILE "/var/log/messages"
+ 
+ /* Path to the unix socket */
+-static char lfile[MAXPATHLEN];
++static const char lfile[] = _PATH_LOG;
+ 
+ static char *logFilePath = __LOG_FILE;
+ 
+@@ -84,7 +84,7 @@
+ 
+ /* circular buffer variables/structures */
+ #ifdef BB_FEATURE_IPC_SYSLOG
+-#if __GNU_LIBRARY__ < 5
++#if __GNU_LIBRARY__ < 5 && !defined(__dietlibc__)
+ #error Sorry.  Looks like you are using libc5.
+ #error libc5 shm support isnt good enough.
+ #error Please disable BB_FEATURE_IPC_SYSLOG
+@@ -495,22 +495,21 @@
+ 	signal (SIGALRM, domark);
+ 	alarm (MarkInterval);
+ 
+-	/* Create the syslog file so realpath() can work. */
+-	if (realpath (_PATH_LOG, lfile) != NULL)
+-		unlink (lfile);
+-
+ 	memset (&sunx, 0, sizeof (sunx));
+ 	sunx.sun_family = AF_UNIX;
+ 	strncpy (sunx.sun_path, lfile, sizeof (sunx.sun_path));
+ 	if ((sock_fd = socket (AF_UNIX, SOCK_DGRAM, 0)) < 0)
+-		perror_msg_and_die ("Couldn't get file descriptor for socket " _PATH_LOG);
++		perror_msg_and_die ("Couldn't get file descriptor for socket %s", lfile);
+ 
+ 	addrLength = sizeof (sunx.sun_family) + strlen (sunx.sun_path);
++
++	unlink (lfile);
++
+ 	if (bind(sock_fd, (struct sockaddr *) &sunx, addrLength) < 0)
+-		perror_msg_and_die ("Could not connect to socket " _PATH_LOG);
++		perror_msg_and_die ("Could not connect to socket %s", lfile);
+ 
+ 	if (chmod (lfile, 0666) < 0)
+-		perror_msg_and_die ("Could not set permission on " _PATH_LOG);
++		perror_msg_and_die ("Could not set permission on %s", lfile);
+ 
+ 
+ #ifdef BB_FEATURE_IPC_SYSLOG
+diff -ur busybox-0.60.5.orig/tee.c busybox-0.60.5/tee.c
+--- busybox-0.60.5.orig/tee.c	2001-11-20 00:34:17.000000000 +0100
++++ busybox-0.60.5/tee.c	2003-05-05 17:29:45.000000000 +0200
+@@ -24,18 +24,33 @@
+ #include <getopt.h>
+ #include <stdio.h>
+ 
++#define TEE_OPT_NONE		0x0
++#ifdef BB_FEATURE_TEE_UNBUFFERED
++#define TEE_OPT_UNBUFFERED	0x1
++#endif
++
+ int
+ tee_main(int argc, char **argv)
+ {
+-	char *mode = "w";
++	char *mode = "w",
++	    opts = TEE_OPT_NONE;
+ 	int c, i, status = 0, nfiles = 0;
+ 	FILE **files;
+ 
++#ifdef BB_FEATURE_TEE_UNBUFFERED
++	while ((c = getopt(argc, argv, "au")) != EOF) {
++#else
+ 	while ((c = getopt(argc, argv, "a")) != EOF) {
++#endif
+ 		switch (c) {
+ 		case 'a': 
+ 			mode = "a";
+ 			break;
++#ifdef BB_FEATURE_TEE_UNBUFFERED
++		case 'u':
++			opts |= TEE_OPT_UNBUFFERED;
++			break;
++#endif
+ 		default:
+ 			show_usage();
+ 		}
+@@ -43,17 +58,28 @@
+ 
+ 	files = (FILE **)xmalloc(sizeof(FILE *) * (argc - optind + 1));
+ 	files[nfiles++] = stdout;
++
+ 	while (optind < argc) {
+-		if ((files[nfiles++] = fopen(argv[optind++], mode)) == NULL) {
++		if ((files[nfiles] = fopen(argv[optind], mode)) == NULL) {
+ 			nfiles--;
+-			perror_msg("%s", argv[optind-1]);
++			perror_msg("%s", argv[optind]);
+ 			status = 1;
+ 		}
++		nfiles++;
++		optind++;
+ 	}
+ 
+ 	while ((c = getchar()) != EOF)
+-		for (i = 0; i < nfiles; i++)
++		for (i = 0; i < nfiles; i++) {
+ 			putc(c, files[i]);
++#ifdef BB_FEATURE_TEE_UNBUFFERED
++			if (opts & TEE_OPT_UNBUFFERED) {
++				if ((fflush(files[i])) == EOF) {
++					perror_msg("Error flushing file");
++				}
++			}
++#endif
++		}
+ 
+ 	return status;
+ }
+diff -ur busybox-0.60.5.orig/time.c busybox-0.60.5/time.c
+--- busybox-0.60.5.orig/time.c	2002-09-30 21:37:19.000000000 +0200
++++ busybox-0.60.5/time.c	2003-05-05 17:29:45.000000000 +0200
+@@ -429,7 +429,7 @@
+ static void run_command (char *const *cmd, resource_t *resp)
+ {
+     pid_t pid;			/* Pid of child.  */
+-    __sighandler_t interrupt_signal, quit_signal;
++    sighandler_t interrupt_signal, quit_signal;
+ 
+     gettimeofday (&resp->start, (struct timezone *) 0);
+     pid = fork ();		/* Run CMD as child process.  */
+diff -ur busybox-0.60.5.orig/top.c busybox-0.60.5/top.c
+--- busybox-0.60.5.orig/top.c	2002-10-23 12:21:19.000000000 +0200
++++ busybox-0.60.5/top.c	2003-05-05 17:29:45.000000000 +0200
+@@ -36,7 +36,11 @@
+ #include <sys/ioctl.h>
+ #include <sys/stat.h>
+ /* get page info */
++#ifdef __dietlibc__
++#include <sys/shm.h>
++#else
+ #include <asm/page.h>
++#endif
+ #include "busybox.h"
+ 
+ #define FEATURE_CPU_USAGE_PERCENTAGE  /* + 2k */
+diff -ur busybox-0.60.5.orig/wget.c busybox-0.60.5/wget.c
+--- busybox-0.60.5.orig/wget.c	2002-04-27 09:40:00.000000000 +0200
++++ busybox-0.60.5/wget.c	2003-05-05 17:29:45.000000000 +0200
+@@ -23,6 +23,7 @@
+ #include <netinet/in.h>
+ #include <arpa/inet.h>
+ #include <netdb.h>
++#include <termios.h>
+ 
+ #ifndef _GNU_SOURCE
+ #define _GNU_SOURCE
