@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.11 2002/06/11 21:27:15 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/gnome2.eclass,v 1.12 2002/06/12 00:05:40 spider Exp $
 
 inherit libtool
 inherit debug
@@ -57,8 +57,7 @@ gnome2_pkg_postinst() {
 	then
 
 		# install/update schemas the hard way
-		export GCONF_CONFIG_SOURCE=`gconftool-2 --get-default-source`
-
+		export GCONF_CONFIG_SOURCE=`/usr/bin/gconftool-2 --get-default-source`
 		echo ">>> Updating GConf2 Schemas for ${P}"
 		for x in $SCHEMAS
 		do
