@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.61 2003/08/04 14:57:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.62 2003/08/05 11:16:17 gmsoft Exp $
 
   04 Aug 2003; Aron Griffis <agriffis@gentoo.org> distcc-2.8-r2.ebuild:
   Mark stable on alpha.  Fix formatting and some errors in ChangeLog
@@ -18,6 +18,9 @@
   all versions in the repository.
 
 *distcc-2.8 (09 Jul 2003)
+
+  05 Aug 2003; Guy Martin <gmsoft@gentoo.org> distcc-2.8-r2.ebuild :
+  Marked stable on hppa.
 
   27 Jul 2003: Lisa Marie Seelye <lisa@gentoo.org> :
   Bumped distcc-2.8-r2 to x86
