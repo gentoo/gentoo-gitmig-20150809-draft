@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/k3b
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.29 2003/11/17 22:10:37 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/ChangeLog,v 1.30 2003/11/30 13:50:08 caleb Exp $
+
+  30 Nov 2003; Caleb Tennis <caleb@gentoo.org> k3b-0.10.2.ebuild:
+  Add a note about where new k3bsetup program is located.
+  Closes bug #33566, thanks to Derek Williams for the fix.
 
   17 Nov 2003; David Holm <dholm@gentoo.org> k3b-0.10.2.ebuild:
   Apparently it's difficult to move the ~ppc keyword to new versions of this app.

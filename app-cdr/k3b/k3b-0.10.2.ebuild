@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.10.2.ebuild,v 1.3 2003/11/17 22:10:37 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.10.2.ebuild,v 1.4 2003/11/30 13:50:08 caleb Exp $
 
 inherit kde
 need-kde 3.1
@@ -98,4 +98,8 @@ pkg_postinst()
 	einfo "that you clear the two check boxes that let k3b make changes for"
 	einfo "cdrecord and cdrdao and let k3b make changes for the devices when"
 	einfo "running k3b setup."
+	echo
+	einfo "The k3b setup program is now part of the KDE Control Center"
+	einfo "under System Administration.  It can be accessed by running"
+	einfo "'kcmshell k3bsetup2'"
 }
