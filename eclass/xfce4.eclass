@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfce4.eclass,v 1.9 2005/01/07 08:16:29 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfce4.eclass,v 1.10 2005/01/07 17:20:57 bcowan Exp $
 # Author: Brad Cowan <bcowan@gentoo.org>
 
 # Xfce4 Eclass
@@ -20,11 +20,15 @@ if [[ ${GOODIES_PLUGIN} = "1" ]]; then
     XFCE_RDEPEND=">=xfce-base/xfce4-panel-${PV}"
 fi
 
+if [[ ${PLUGIN} = "1" ]]; then
+    MY_P="${PN}-plugin-${PV}"
+    XFCE_RDEPEND=">=xfce-base/xfce4-panel-${PV}"
+fi
+
 [[ ${GOODIES} = "1" ]] \
     && SRC_URI="http://download.berlios.de/xfce-goodies/${MY_P:-${P}}${COMPRESS}"
 
 [[ -n ${SRC_URI} ]] \
-    && SRC_URI="${SRC_URI}" \
     || SRC_URI="http://www.xfce.org/archive/xfce-${PV}/src/${P}${COMPRESS}"
 
 [[ ${XFCE_META} = "1" ]] \
