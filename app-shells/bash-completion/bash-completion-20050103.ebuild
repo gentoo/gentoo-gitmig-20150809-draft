@@ -1,10 +1,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20041017-r2.ebuild,v 1.2 2005/01/01 15:56:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20050103.ebuild,v 1.1 2005/01/04 11:57:23 ka0ttic Exp $
 
 inherit eutils
 
-GENCOMP_VERS="1.0_beta3"
+GENCOMP_VERS="1.0_beta4"
 
 DESCRIPTION="Programmable Completion for bash (includes emerge and ebuild commands)"
 HOMEPAGE="http://www.caliban.org/bash/index.shtml#completion"
@@ -18,9 +18,12 @@ IUSE=""
 
 DEPEND="app-arch/tar
 	app-arch/bzip2"
-RDEPEND=">=app-shells/bash-2.05a"
+RDEPEND="|| (
+				>=app-shells/bash-2.05a
+				app-shells/zsh
+			)"
 
-S=${WORKDIR}/${PN/-/_}
+S="${WORKDIR}/${PN/-/_}"
 
 src_unpack() {
 	unpack ${A}
@@ -30,25 +33,25 @@ src_unpack() {
 
 src_install() {
 	insinto /etc
-	doins bash_completion
+	doins bash_completion || die "failed to install bash_completion"
+	exeinto /etc/profile.d
+	doexe ${FILESDIR}/bash-completion || die "failed to install profile.d"
 
 	# >=dev-util/subversion-1.1.1-r3 provides extremely superior completions
 	has_version ">=dev-util/subversion-1.1.1-r3" && rm contrib/subversion
-
 	insinto /usr/share/bash-completion
-	doins contrib/*
-
-	exeinto /etc/profile.d
-	doexe ${FILESDIR}/bash-completion
+	doins contrib/* || die "failed to install contrib completions"
 
 	dodoc Changelog README
 
+	# gentoo-bashcomp
 	cd ${WORKDIR}/gentoo-bashcomp-${GENCOMP_VERS}
-	insinto /etc/bash_completion.d
-	doins src/gentoo
-
+	doins src/gentoo || die "failed to install gentoo completions"
+	dodir /etc/bash_completion.d
+	dosym ../../usr/share/bash-completion/gentoo /etc/bash_completion.d/gentoo \
+		|| die "dosym gentoo-bashcomp failed"
 	docinto gentoo
-	dodoc AUTHORS NEWS TODO
+	dodoc AUTHORS TODO
 }
 
 pkg_postinst() {
@@ -60,26 +63,19 @@ pkg_postinst() {
 	einfo "Additional complete functions can be enabled by symlinking them from"
 	einfo "/usr/share/bash-completion to /etc/bash_completion.d"
 
-	if [ -f ${ROOT}/etc/bash_completion.d/gentoo.completion ]
-	then
+	local g="${ROOT}/etc/bash_completion.d/gentoo"
+	if [[ -e "${g}" && ! -L "${g}" ]] ; then
 		echo
-		ewarn "The file 'gentoo.completion' in '/etc/bash_completion.d/' has been"
-		ewarn "replaced with 'gentoo'. Remove gentoo.completion to avoid problems."
-	fi
-
-	local bcfile moved
-	for bcfile in ${ROOT}/etc/bash_completion.d/{unrar,harbour,isql,larch,lilypond,p4,ri}
-	do
-
-		[ -f "${bcfile}" -a ! -L "${bcfile}" ] && moved="${bcfile##*/} ${moved}"
-	done
-
-	if [ -n "${moved}" ]
-	then
-		echo
-		ewarn "The contrib files: ${moved}"
-		ewarn "have been moved to /usr/share/bash-completion. Please DELETE"
-		ewarn "those old files in /etc/bash_completion.d and create symlinks."
+		ewarn "The gentoo completion functions have moved to /usr/share/bash-completion."
+		ewarn "Please run etc-update to replace /etc/bash_completion.d/gentoo with a symlink."
 	fi
 	echo
+
+	if has_version 'app-shells/zsh' ; then
+		einfo "If you are interested in using the provided bash completion functions with"
+		einfo "zsh, valuable tips on the effective use of bashcompinit are available:"
+		einfo "  http://www.zsh.org/mla/workers/2003/msg00046.html"
+		einfo "  http://zshwiki.org/ZshSwitchingTo"
+		echo
+	fi
 }
