@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/libtool
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.48 2004/07/09 14:21:48 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/ChangeLog,v 1.49 2004/07/10 04:03:27 lv Exp $
+
+  10 Jul 2004; Travis Tilley <lv@gentoo.org> libtool-1.5.6.ebuild:
+  it seems that this libtool breaks building .so files for a few ebuilds. next
+  time i test, i guess i'll have to emerge world -e twice instead of just once
+  ;)
 
   09 Jul 2004; Travis Tilley <lv@gentoo.org> libtool-1.5.6.ebuild:
   added back keywords for all supported archs
