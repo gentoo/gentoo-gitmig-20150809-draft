@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/glabels-2.0.0.ebuild,v 1.1 2004/08/10 23:21:02 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/glabels-2.0.1.ebuild,v 1.1 2004/09/03 09:07:13 leonardop Exp $
 
-inherit gnome2
+inherit eutils gnome2
 
 DESCRIPTION="Program for creating labels and business cards"
 HOMEPAGE="http://glabels.sourceforge.net/"
@@ -32,6 +32,10 @@ DOCS="AUTHORS ChangeLog NEWS README TODO"
 
 src_unpack() {
 	unpack ${A}
+
 	# Small syntax correction.
 	sed -i -e 's:;Office:;Office;:' ${S}/data/desktop/glabels.desktop.in
+
+	# Avoid sandbox violation. See bug #60545.
+	epatch ${FILESDIR}/${P}-sandbox_fix.patch
 }

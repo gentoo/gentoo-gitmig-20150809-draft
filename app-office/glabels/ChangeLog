@@ -1,6 +1,13 @@
 # ChangeLog for app-office/glabels
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.2 2004/08/18 17:31:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/glabels/ChangeLog,v 1.3 2004/09/03 09:07:13 leonardop Exp $
+
+*glabels-2.0.1 (03 Sep 2004)
+
+  03 Sep 2004; L. Boshell <leonardop@gentoo.org> glabels-2.0.1.ebuild,
+  files/glabels-2.0.1-sandbox_fix.patch:
+  New version. Added patch to fix a potential sandbox violation when
+  desktop-file-utils is installed. Resolves bug #60545.
 
   18 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> glabels-1.93.3.ebuild:
   Stable on sparc
