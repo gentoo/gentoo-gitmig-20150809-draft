@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc5-r2.ebuild,v 1.8 2004/06/30 01:20:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc5-r2.ebuild,v 1.9 2004/07/06 19:30:47 lv Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -83,10 +83,14 @@ src_compile() {
 	filter-flags -fforce-addr
 	filter-flags -momit-leaf-frame-pointer #46339
 	filter-flags -funroll-all-loops #55420
-	filter-flags -fno-unit-at-a-time #55202
-	[ "`gcc-fullversion`" == "3.4.0" ] && append-flags -fno-web #49509
 
-	is-flag -O? || append-flags -O1 #31243
+	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]; then
+		append-flags -fno-web #49509
+		filter-flags -fno-unit-at-a-time #55202
+		append-flags -funit-at-a-time #55202
+	fi
+
+	replace-flags -O0 -O1 #31243
 
 	# fix build errors with sse2 #49482
 	if use x86 ; then
