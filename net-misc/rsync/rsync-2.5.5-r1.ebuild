@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.5.5-r1.ebuild,v 1.10 2003/02/13 15:06:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.5.5-r1.ebuild,v 1.11 2003/02/24 00:58:48 lu_zero Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="File transfer program to keep remote files into sync"
@@ -10,7 +10,8 @@ KEYWORDS="x86 ppc sparc alpha mips"
 LICENSE="GPL-2"
 SLOT="0"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc
+        !build? ( >=dev-libs/popt-1.5 )"
 
 src_unpack() {
 	unpack ${A}
