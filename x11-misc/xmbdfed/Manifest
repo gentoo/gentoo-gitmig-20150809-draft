@@ -1,6 +1,16 @@
-MD5 84cfa906aac610149a2fec328448041f ChangeLog 1736
-MD5 b1f688ff3e6c85c5e4d8e5ef35807192 metadata.xml 186
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 f0b049a54adce9b989133b0a6ab9debe ChangeLog 1813
 MD5 3240560dc342ba15df849c2c332095d4 xmbdfed-4.5.ebuild 1458
-MD5 eb63b5e5e281b037283a566ad96a6b5a xmbdfed-4.7_p1.ebuild 1315
-MD5 fda2a635d6d99c2ff0c699725fd7d301 files/digest-xmbdfed-4.5 133
+MD5 b1f688ff3e6c85c5e4d8e5ef35807192 metadata.xml 186
+MD5 12deb6a9b96158d05f2af788541f0562 xmbdfed-4.7_p1.ebuild 1313
 MD5 b44b0fb9e8281e2652b43bf0c6db7e72 files/digest-xmbdfed-4.7_p1 124
+MD5 fda2a635d6d99c2ff0c699725fd7d301 files/digest-xmbdfed-4.5 133
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBWnCTI7fK2cqeyXkRAgLJAKDrLMPV8DyqJOKTBXXYbgJHm3fkjQCglG7u
+Ax8cP8hC7N3spwjyu4d6+qM=
+=+M62
+-----END PGP SIGNATURE-----
