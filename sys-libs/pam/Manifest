@@ -1,42 +1,42 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 ea250586717aadc59bd7058d24741bf0 pam-0.77-r7.ebuild 8051
-MD5 cb547fcc1f1893c82cbf6edcd41a2258 pam-0.77-r2.ebuild 7764
-MD5 88cfb41ac72fb9cbe3febd7fa3529231 pam-0.78-r1.ebuild 9883
-MD5 4f5534ef7373dae1e7e4174e1b015542 pam-0.77-r4.ebuild 7814
-MD5 58cc195d9abe8e8403cfb54ef40d4c80 pam-0.78.ebuild 9536
-MD5 5236b3cdb8926f86382225b63b23d391 pam-0.77-r6.ebuild 7844
-MD5 737b1d219c8d599538c7d61dc396b94d pam-0.77-r1.ebuild 7480
-MD5 9c0c3cf85b94ae623375fb05294b924a pam-0.77-r8.ebuild 8212
 MD5 98613a823c89c1040860b92880332f9d pam-0.77-r3.ebuild 7813
+MD5 737b1d219c8d599538c7d61dc396b94d pam-0.77-r1.ebuild 7480
+MD5 1dfc681e51e8fc14b57304b425dd9368 ChangeLog 10998
 MD5 ac45aab13da90aae9947ed2a112ad9a4 pam-0.77.ebuild 7429
-MD5 0cda001d872f661a9c728b121f3b63de ChangeLog 10813
+MD5 4f5534ef7373dae1e7e4174e1b015542 pam-0.77-r4.ebuild 7814
+MD5 ea250586717aadc59bd7058d24741bf0 pam-0.77-r7.ebuild 8051
+MD5 5236b3cdb8926f86382225b63b23d391 pam-0.77-r6.ebuild 7844
 MD5 1d05f0436f1c273d7862099f309afe4d metadata.xml 156
-MD5 77ffb90ad5cc63cfba82dfd8570afe59 pam-0.78-r2.ebuild 10742
+MD5 9c0c3cf85b94ae623375fb05294b924a pam-0.77-r8.ebuild 8212
+MD5 cb547fcc1f1893c82cbf6edcd41a2258 pam-0.77-r2.ebuild 7764
+MD5 58cc195d9abe8e8403cfb54ef40d4c80 pam-0.78.ebuild 9536
+MD5 23b0df2efee9203ba8645467a9b58b67 pam-0.78-r2.ebuild 10895
+MD5 88cfb41ac72fb9cbe3febd7fa3529231 pam-0.78-r1.ebuild 9883
 MD5 652f6b0ebdc63b0aa9ca6e1783c468a1 files/pam_env.conf 2980
+MD5 60bb8c0caa8b7926facda9fc2c9e860a files/digest-pam-0.78-r2 264
+MD5 028c285db4076f549774c258d0eddcfc files/digest-pam-0.77 201
 MD5 028c285db4076f549774c258d0eddcfc files/digest-pam-0.77-r1 201
 MD5 7abfe66b5996b628696d244d462e47b0 files/digest-pam-0.77-r2 201
 MD5 7abfe66b5996b628696d244d462e47b0 files/digest-pam-0.77-r3 201
 MD5 c0fd7f7bf69f4f0effdfc66eed6d6ed2 files/digest-pam-0.77-r4 201
 MD5 b38aa656e6c205427dd4c4ba7d6d3f97 files/digest-pam-0.77-r6 201
+MD5 c3f9e8ddddd908bd83aa6859d279dd7d files/README.pam_console 2096
 MD5 41e8f5fddbc8e00ebfdc3aeadbf7c50e files/digest-pam-0.77-r7 201
 MD5 693d0527279f95e01ad9a5ba6ef45389 files/digest-pam-0.77-r8 201
-MD5 21390b7acb42d4c22215492782e98f5e files/digest-pam-0.78-r1 200
-MD5 60bb8c0caa8b7926facda9fc2c9e860a files/digest-pam-0.78-r2 264
-MD5 028c285db4076f549774c258d0eddcfc files/digest-pam-0.77 201
 MD5 92aced5acf4c59db3039da332ca1c47e files/digest-pam-0.78 200
-MD5 c3f9e8ddddd908bd83aa6859d279dd7d files/README.pam_console 2096
+MD5 21390b7acb42d4c22215492782e98f5e files/digest-pam-0.78-r1 200
 MD5 69f8cfad7f241eb669085eaa753cd9dd files/pam-0.77-console-reset.patch 1826
-MD5 7b9d8d0930734500608538c166d0179a files/pam.d/rsh 445
 MD5 344d17a865edc40adebe07797853c839 files/pam.d/other 198
 MD5 849aa086002eda305d4d6d59a94fadd8 files/pam.d/rexec 457
 MD5 ec3d6de902670c90897507f4a098f668 files/pam.d/rlogin 580
+MD5 7b9d8d0930734500608538c166d0179a files/pam.d/rsh 445
 MD5 1baa646400c4a596290e9d4b9e1c09b2 files/pam.d/system-auth 491
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCNfTSI1lqEGTUzyQRAukqAKCt/c7tehLhwhf/cvvRCgg2rQ44HwCg0yUo
-0VXlzRJvTrMnHqk8AE5L4sE=
-=SZqO
+iD8DBQFCQda91ZcsMnZjRyIRAl5CAKCpdKTvwqEKRKDcGztY45atrMy2IQCcDCBi
+Tkja0Hmgfs9+i+EzDC10wRg=
+=LNng
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r2.ebuild,v 1.3 2005/03/13 21:43:18 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/pam/pam-0.78-r2.ebuild,v 1.4 2005/03/23 20:47:19 azarah Exp $
 
 FORCE_SYSTEMAUTH_UPDATE="no"
 
@@ -292,7 +292,8 @@ src_install() {
 			fi
 			if [[ -n $(ldd "${sec_dir}/${mod_name}"*.so 2>&1 | \
 			           grep "/usr/$(get_libdir)/" | \
-			           grep -v "/usr/$(get_libdir)/gcc") ]] ; then
+			           grep -v "/usr/$(get_libdir)/gcc" | \
+			           grep -v "libsandbox") ]] ; then
 				echo
 				eerror "ERROR: ${mod_name} have dependencies in /usr."
 				echo
@@ -343,6 +344,12 @@ src_install() {
 }
 
 pkg_postinst() {
+	echo
+	einfo "If you have sshd running, please restart it to avoid possible login issues."
+	echo
+	ebeep
+	sleep 3
+
 	if [[ ${FORCE_SYSTEMAUTH_UPDATE} = "yes" ]] ; then
 		local CHECK1=$(md5sum ${ROOT}/etc/pam.d/system-auth | cut -d ' ' -f 1)
 		local CHECK2=$(md5sum ${ROOT}/etc/pam.d/system-auth.new | cut -d ' ' -f 1)
