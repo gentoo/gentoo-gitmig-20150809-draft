@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jgoodies-looks
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-looks/ChangeLog,v 1.7 2005/03/30 23:33:42 compnerd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jgoodies-looks/ChangeLog,v 1.8 2005/04/03 10:32:24 axxo Exp $
+
+*jgoodies-looks-1.3.1-r1 (03 Apr 2005)
+
+  03 Apr 2005; Thomas Matthijs <axxo@gentoo.org>
+  -jgoodies-looks-1.3_beta1.ebuild, -jgoodies-looks-1.3.1.ebuild,
+  +jgoodies-looks-1.3.1-r1.ebuild:
+  dont install versioned jar files
 
 *jgoodies-looks-1.3.1 (30 Mar 2005)
 
