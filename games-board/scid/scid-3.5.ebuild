@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/scid/scid-3.5.ebuild,v 1.3 2004/06/24 22:20:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/scid/scid-3.5.ebuild,v 1.4 2004/07/01 11:11:50 eradicator Exp $
 
 inherit games
 
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	virtual/x11
 	>=dev-lang/tk-8.3
 	>=sys-libs/zlib-1.1.3"

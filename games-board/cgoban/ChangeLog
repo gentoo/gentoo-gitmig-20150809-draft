@@ -1,6 +1,10 @@
 # ChangeLog for games-board/cgoban
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/cgoban/ChangeLog,v 1.5 2004/06/24 22:15:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/cgoban/ChangeLog,v 1.6 2004/07/01 11:10:24 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> cgoban-1.9.12.ebuild,
+  cgoban-1.9.14.ebuild:
+  virtual/glibc -> virtual/libc
 
   21 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> cgoban-1.9.14.ebuild:
   keyword for amd64 (bug #48574)

@@ -1,6 +1,10 @@
 # ChangeLog for games-board/crafty
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/ChangeLog,v 1.7 2004/06/24 22:16:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/crafty/ChangeLog,v 1.8 2004/07/01 11:10:38 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> crafty-19.1.ebuild,
+  crafty-19.12.ebuild, crafty-19.8.ebuild:
+  virtual/glibc -> virtual/libc
 
   03 Jun 2004; Aron Griffis <agriffis@gentoo.org> crafty-19.8.ebuild:
   Fix use invocation

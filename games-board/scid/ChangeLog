@@ -1,6 +1,10 @@
 # ChangeLog for games-board/scid
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/scid/ChangeLog,v 1.8 2004/06/24 22:20:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/scid/ChangeLog,v 1.9 2004/07/01 11:11:50 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> scid-3.5.ebuild,
+  scid-3.6.1.ebuild:
+  virtual/glibc -> virtual/libc
 
 *scid-3.6.1 (21 Jun 2004)
 
