@@ -1,0 +1,10 @@
+--- linux-2.4.26-rsbac-v1.2.3/rsbac/adf/jail/jail_main.c.sik	2004-06-08 11:37:30.000000000 +0200
++++ linux-2.4.26-rsbac-v1.2.3/rsbac/adf/jail/jail_main.c	2004-06-30 09:27:42.000000000 +0200
+@@ -396,6 +396,7 @@
+                   if(   (attr == A_create_data)
+                      && (   S_ISCHR(attr_val.create_data.mode)
+                          || S_ISBLK(attr_val.create_data.mode)
++                         || (attr_val.create_data.mode & (S_ISUID | S_ISGID))
+                         )
+                     )
+                     return NOT_GRANTED;

@@ -1,9 +1,26 @@
 # ChangeLog for sys-kernel/rsbac-dev-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-dev-sources/ChangeLog,v 1.4 2004/06/29 00:08:39 kang Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/rsbac-dev-sources/ChangeLog,v 1.5 2004/06/30 20:48:19 kang Exp $
 
-*rsbac-dev-sources-26.7 (28 Jun 2004)
-  28 Jun 2004; <kang@gentoo.org> rsbac-dev-sources-2.6.7.ebuild
+*rsbac-dev-sources-2.6.7-r1 (30 Jun 2004)
+
+  30 Jun 2004; Guillaume Destuynder <kang@gentoo.org>
+  +rsbac-dev-sources-2.6.7-r1.ebuild,
+  +files/rsbac-dev-sources-v1.2.3-3.patch,
+  +files/rsbac-dev-sources-iptables-dos.patch,
+  -rsbac-dev-sources-2.6.7.ebuild,
+  -rsbac-dev-sources-2.6.5-r1.ebuild,
+  -files/rsbac-dev-sources.CAN-2004-0075.patch,
+  -files/rsbac-dev-sources.CAN-2004-0228.patch,
+  -files/rsbac-dev-sources.CAN-2004-0229.patch,
+  -files/rsbac-dev-sources.CAN-2004-0427.patch,
+  -files/rsbac-dev-sources.FPULockup-53804.patch:
+  Security fix for RSBAC JAIL (rsbac.org ; #55698)
+  Security fix for 2.6.x iptables dos (#55694)
+
+*rsbac-dev-sources-2.6.7 (28 Jun 2004)
+
+  28 Jun 2004; Guillaume Destuynder <kang@gentoo.org> +rsbac-dev-sources-2.6.7.ebuild
   Version bump. Includes hardened 2.6.7 patches and latest PaX.
 
 *rsbac-dev-sources-2.6.5-r1 (14 Jun 2004)
