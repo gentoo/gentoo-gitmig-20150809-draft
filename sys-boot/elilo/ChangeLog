@@ -1,6 +1,11 @@
 # ChangeLog for sys-boot/elilo
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/ChangeLog,v 1.7 2005/01/22 13:29:32 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/elilo/ChangeLog,v 1.8 2005/03/30 19:50:57 plasmaroo Exp $
+
+*elilo-3.4-r1 (30 Mar 2005)
+
+  30 Mar 2005; <plasmaroo@gentoo.org> +elilo-3.4-r1.ebuild, files/elilo-3.4:
+  Backport --efiboot fix for 2.6 kernels from Debian.
 
   22 Jan 2005; <plasmaroo@gentoo.org> elilo-3.4.ebuild:
   Fix total build breakage; inherit toolchain-funcs please...

@@ -269,8 +269,8 @@ checkconf()
 	local CONFERR=1
     fi
 
-    if [ ! -d /proc/efi/vars -a "$efiboot" = 1 ] ; then
-	echo 1>&2 "$PRG: /proc/efi/vars not available, boot menu not updated"
+    if [ ! -d /proc/efi/vars ] && [ ! -d /sys/firmware/efi/vars ] && [ "$efiboot" = 1 ] && ! modprobe -q efivars; then
+	echo 1>&2 "$PRG: no efi/vars under /proc or /sys/firmware, boot menu not updated"
 	efiboot=0
     fi
 
