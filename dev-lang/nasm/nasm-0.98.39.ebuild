@@ -1,6 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98.39.ebuild,v 1.1 2005/02/01 07:16:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98.39.ebuild,v 1.2 2005/02/20 14:52:42 azarah Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="groovy little assembler"
 HOMEPAGE="http://nasm.sourceforge.net/"
@@ -18,6 +20,9 @@ DEPEND="!build? ( dev-lang/perl )
 RDEPEND="virtual/libc"
 
 src_compile() {
+	[ "$(gcc-major-version)" -eq "2" ] && \
+		sed -i -e 's:-std=c99::g' ${S}/configure
+
 	./configure --prefix=/usr || die
 
 	if use build; then
