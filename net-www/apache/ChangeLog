@@ -1,6 +1,9 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.191 2004/06/07 01:46:10 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.192 2004/06/07 01:50:28 zul Exp $
+
+  06 Jun 2004; Chuck Short <zul@gentoo.org> apache-1.3.31.ebuild:
+  Added dependency on sys-libs/db-1.85-r1.
 
   06 Jun 2004; Chuck Short <zul@gentoo.org> apache-1.3.29-r1.ebuild:
   Ebuild cleanup. We dont want 1.3.29-r1.
