@@ -1,10 +1,20 @@
-MD5 8eed397bc21ca9854d3ff4ec85c65b56 ChangeLog 3254
-MD5 f953339eeb4b7b0e7a9b437f8074a4a2 nvi-1.81.4.ebuild 678
-MD5 cbcb0210dea3ec0ab928665043a600b2 nvi-1.81.5-r1.ebuild 990
-MD5 9a696186b6ea946df5334b21d31be940 nvi-1.81.5-r2.ebuild 1118
-MD5 8ddb0bd88800d2eff583631c78cef276 nvi-1.81.5.ebuild 706
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 190aaddfae40928d909d2a261f5fa9df nvi-1.81.4.ebuild 712
+MD5 b76725e7e081d1f2f5c89f6444bc82b0 ChangeLog 3420
+MD5 097be8de63d6000e28275ce4ca15e3b5 nvi-1.81.5.ebuild 740
+MD5 01f064c8fcf86ffd327320acf0646a7e nvi-1.81.5-r1.ebuild 1024
+MD5 f11aad7670562e59219d0c56241a3a5d nvi-1.81.5-r2.ebuild 1153
 MD5 47f5a61b93feb15280fbaf8deae78ea5 files/digest-nvi-1.81.4 63
 MD5 9c126ee8e4a3070016e51438d8ad45b9 files/digest-nvi-1.81.5 63
-MD5 9c126ee8e4a3070016e51438d8ad45b9 files/digest-nvi-1.81.5-r1 63
 MD5 9c126ee8e4a3070016e51438d8ad45b9 files/digest-nvi-1.81.5-r2 63
 MD5 e4c11bab15aaee62f61cbe103c890cb9 files/nvi-1.81.5-tcsetattr.patch 565
+MD5 9c126ee8e4a3070016e51438d8ad45b9 files/digest-nvi-1.81.5-r1 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCC3fFLLFUmVNQ7rkRAn9OAKC0lhQwboLWZ5yvPWxptJvwPi31LwCgqif6
+n9iqtu+BCx/EKkbNjq3vVik=
+=+/D/
+-----END PGP SIGNATURE-----
