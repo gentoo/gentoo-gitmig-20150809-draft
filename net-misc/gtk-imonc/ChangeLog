@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/gtk-imonc
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/gtk-imonc/ChangeLog,v 1.6 2004/10/31 13:21:06 blubb Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/gtk-imonc/ChangeLog,v 1.7 2005/02/17 14:39:21 hansmi Exp $
+
+  17 Feb 2005; Michael Hanselmann <hansmi@gentoo.org> gtk-imonc-0.6.3.ebuild:
+  Stable.
 
   31 Oct 2004; Simon Stelling <blubb@gentoo.org> gtk-imonc-0.6.3.ebuild:
   added ~amd64
