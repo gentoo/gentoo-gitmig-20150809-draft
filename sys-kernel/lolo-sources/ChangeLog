@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/lolo-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.8 2002/09/21 22:32:58 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.9 2002/09/22 07:07:34 lostlogic Exp $
+
+*lolo-sources-2.4.19.10_pre3 (21 Sep 2002)
+
+  21 Sep 2002; Brandon Low <lostlogic@gentoo.org> lolo-sources-2.4.19.10_pre3.ebuild:
+
+  New this version:
+  - Add futexes support
+  - Add imon support
+  - Optional ACPI patch just set USE="acpi4linux"
+  - Redone ebuild setup now we have an eclass for these things
+  - Add support for KERNEL_EXCLUDE
+  - Rename some patches to better names for use with KERNEL_EXCLUDE
 
 *lolo-sources-2.4.19.10_pre2 (21 Sep 2002)
 
