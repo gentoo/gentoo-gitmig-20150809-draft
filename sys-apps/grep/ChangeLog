@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/grep
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.27 2004/06/12 05:36:56 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/ChangeLog,v 1.28 2004/06/15 07:06:41 solar Exp $
+
+  15 Jun 2004; <solar@gentoo.org> grep-2.5.1-r1.ebuild,
+  files/grep-2.5.1-restrict_arr.patch:
+  added uclibc support
 
 *grep-2.5.1-r4 (11 Jun 2004)
 

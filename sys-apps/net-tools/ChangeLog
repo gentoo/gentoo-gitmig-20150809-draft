@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/net-tools
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.29 2004/04/19 05:47:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/ChangeLog,v 1.30 2004/06/15 07:09:54 solar Exp $
+
+  15 Jun 2004; <solar@gentoo.org> net-tools-1.60-r8.ebuild:
+  added uclibc support
 
   19 Apr 2004; Mike Frysinger <vapier@gentoo.org> :
   Add gcc-3.4 patch #48167 by George L. Emigh.

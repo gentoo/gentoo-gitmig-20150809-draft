@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r1.ebuild,v 1.21 2004/04/29 01:09:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/grep/grep-2.5.1-r1.ebuild,v 1.22 2004/06/15 07:06:41 solar Exp $
 
 inherit gnuconfig flag-o-matic eutils
 
@@ -13,7 +13,7 @@ SRC_URI="http://ftp.club.cc.cmu.edu/pub/gnu/${PN}/${P}.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
-IUSE="nls build"
+IUSE="nls build uclibc"
 
 DEPEND="virtual/glibc
 	nls? ( sys-devel/gettext )"
@@ -25,6 +25,7 @@ src_unpack() {
 	if [ "${ARCH}" = "sparc" -a "${PROFILE_ARCH}" = "sparc" ] ; then
 		epatch ${FILESDIR}/gentoo-sparc32-dfa.patch
 	fi
+	use uclibc && epatch ${FILESDIR}/grep-2.5.1-restrict_arr.patch
 }
 
 src_compile() {
@@ -33,6 +34,7 @@ src_compile() {
 
 	local myconf=""
 	use nls || myconf="--disable-nls"
+	use uclibc && myconf="${myconf} --without-included-regex"
 	use static && append-flags -static && append-ldflags -static
 
 	econf \

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r8.ebuild,v 1.3 2004/05/03 22:28:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r8.ebuild,v 1.4 2004/06/15 07:09:54 solar Exp $
 
 inherit flag-o-matic gcc eutils
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.tazenda.demon.co.uk/phil/net-tools/${P}.tar.bz2
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
-IUSE="nls build static"
+IUSE="nls build static uclibc"
 
 DEPEND="nls? ( sys-devel/gettext )
 	>=sys-apps/sed-4"
@@ -57,8 +57,10 @@ src_unpack() {
 	sed -i -e "s:/usr/man:/usr/share/man:" man/Makefile \
 		|| die "sed man/Makefile failed"
 
-	cp -f ${PATCHDIR}/ether-wake.c ${S}
-	cp -f ${PATCHDIR}/ether-wake.8 ${S}/man/en_US
+	if ! use uclibc ; then
+		cp -f ${PATCHDIR}/ether-wake.c ${S}
+		cp -f ${PATCHDIR}/ether-wake.8 ${S}/man/en_US
+	fi
 
 	if ! use nls ; then
 		sed -i -e 's:\(#define I18N\) 1:\1 0:' config.h || \
@@ -83,18 +85,19 @@ src_compile() {
 		cd ..
 	fi
 
-	$(gcc-getCC) ${CFLAGS} -o ether-wake ether-wake.c || die "ether-wake failed to build"
+	use uclibc || $(gcc-getCC) ${CFLAGS} -o ether-wake ether-wake.c || die "ether-wake failed to build"
 }
 
 src_install() {
 	make BASEDIR=${D} install || die
 
-	dosbin ether-wake || die
+	use uclibc || dosbin ether-wake || die
 	mv ${D}/bin/* ${D}/sbin
 	for i in hostname domainname netstat dnsdomainname ypdomainname nisdomainname
 	do
 		mv ${D}/sbin/${i} ${D}/bin
 	done
+	use uclibc && rm -f ${D}/bin/{yp,nis}domainname
 	dodir /usr/bin
 	dosym /bin/hostname /usr/bin/hostname
 
