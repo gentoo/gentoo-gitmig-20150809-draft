@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.10.ebuild,v 1.4 2004/06/05 12:33:16 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/k3b/k3b-0.11.10.ebuild,v 1.5 2004/06/11 01:20:34 pylon Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2
 	monkey? ( mirror://sourceforge/${PN}/k3bmonkeyaudioplugin.tar.bz2 )"
 
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~amd64"
+KEYWORDS="x86 ppc ~sparc ~amd64"
 IUSE="debug dvdr kde oggvorbis mad flac encode monkey"
 
 DEPEND="kde? ( >=kde-base/kdebase-3.1 )
