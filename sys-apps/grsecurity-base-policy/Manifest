@@ -1,4 +1,5 @@
 MD5 3ac8295e8250de9fde50bf9283b9e020 ChangeLog 594
+MD5 43e3fd05fc5aa752526d29c4a386620b metadata.xml 310
 MD5 b359b98f4f574b8ef0a07c62bbb694b0 grsecurity-base-policy-20030516.ebuild 1222
 MD5 34ddf36bc57bd3a861d0136b514b01bf grsecurity-base-policy-20030614.ebuild 1597
 MD5 720883d1c347b8afba845994fcf8e2f1 files/digest-grsecurity-base-policy-20030516 81
