@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/cfengine
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.34 2004/08/10 00:14:06 klieber Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.35 2004/08/10 13:34:20 weeve Exp $
+
+*cfengine-2.1.9 (10 Aug 2004)
+
+  10 Aug 2004; Jason Wever <weeve@gentoo.org> cfengine-2.1.9.ebuild:
+  Stable on sparc wrt security bug #59895.
 
   10 Aug 2004; Kurt Lieber <klieber@gentoo.org> :
   version bump to 2.1.9
