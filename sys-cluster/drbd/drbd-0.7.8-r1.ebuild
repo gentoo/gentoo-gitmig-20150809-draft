@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-0.7.8-r1.ebuild,v 1.1 2005/01/25 11:40:43 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/drbd-0.7.8-r1.ebuild,v 1.2 2005/01/25 14:38:58 xmerlin Exp $
 
 inherit eutils versionator linux-mod
 
@@ -31,7 +31,7 @@ src_compile() {
 
 	einfo ""
 	einfo "Your kernel-sources in /usr/src/linux-${KV} must be properly configured"
-	einfo "and match the currently running kernel version ${KV}"
+	#einfo "and match the currently running kernel version ${KV}"
 	einfo "If otherwise -> build will fail."
 	einfo ""
 

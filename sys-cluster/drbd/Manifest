@@ -1,11 +1,11 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2bd55a2535a636f0b38aa697a3011cc9 ChangeLog 3214
+MD5 6d5994c4576a46b3fa3ad74d9f598752 ChangeLog 3427
 MD5 a64b9a1937a5cfc2fbaf373521f65d47 metadata.xml 223
 MD5 b149aaae0a018b3d665b28b7c8ac2b41 drbd-0.6.12-r1.ebuild 2136
-MD5 32ee8c669ef5af0a261cbcaf8b53351e drbd-0.7.8.ebuild 1961
-MD5 fd2dfa130ebad69b6622a23a0d407a62 drbd-0.7.8-r1.ebuild 2020
+MD5 0233bd13d2b42295fc5940d84b0b03ba drbd-0.7.8.ebuild 1962
+MD5 47a164a35240c60680aaa5899c138422 drbd-0.7.8-r1.ebuild 2021
 MD5 463c9c89c7d3f156fc5581070abce14d files/0.6.12-conf.d 69
 MD5 4ab78154d6a32d13d416f9915ad4bc28 files/0.6.12-init 701
 MD5 7416c44daab264a36cc8c5a2c35e757f files/0.6.12-scripts-Makefile.patch 1072
@@ -20,7 +20,7 @@ MD5 4f71ba1c534aebcc1f20da6afd4d10f7 files/digest-drbd-0.7.8-r1 62
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFB9oXggMUyd/cdjWsRAi+VAJ9FN1nXpTH4jQfWSmkhoPqvQYdK8ACfVdk3
-9B97f34uNVNfEySZ1VJBdq8=
-=M1pq
+iD8DBQFB9q3WgMUyd/cdjWsRAnp1AJ9qM4qpZ/sRi3IQVT8IREXlCLJEzQCdFJkB
+fQlpn81gZwxLnsZOg3J2+Z0=
+=zDah
 -----END PGP SIGNATURE-----

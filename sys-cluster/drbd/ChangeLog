@@ -1,6 +1,11 @@
 # ChangeLog for sys-cluster/drbd
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/ChangeLog,v 1.14 2005/01/25 11:51:53 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/drbd/ChangeLog,v 1.15 2005/01/25 14:38:58 xmerlin Exp $
+
+  25 Jan 2005; Christian Zoffoli <xmerlin@gentoo.org> drbd-0.7.8-r1.ebuild,
+  drbd-0.7.8.ebuild:
+  fixed module installation path, now it's possibly to compile the module even
+  if we don't run the target kernel
 
   25 Jan 2005; Christian Zoffoli <xmerlin@gentoo.org> -drbd-0.7.7.ebuild:
   removed obsolete drbd-0.7.7.ebuild
