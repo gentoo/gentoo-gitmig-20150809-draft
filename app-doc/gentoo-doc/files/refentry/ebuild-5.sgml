@@ -1,0 +1,25 @@
+<refentry id="ebuild.5">
+
+  <refmeta>
+    <refentrytitle><application>ebuild</application></refentrytitle>
+    <manvolnum>5</manvolnum>
+    <refmiscinfo>ebuild 1.4</refmiscinfo>
+  </refmeta>
+
+  <refnamediv>
+    <refname><application>ebuild</application></refname>
+    <refpurpose>the internal format, variables and functions in an ebuild script</refpurpose>
+  </refnamediv>
+
+  <refsect1>
+    <title>DESCRIPTION</title>
+    <para>
+      The <command>ebuild</command> (1) program accepts a single ebuild script as an argument.  
+      This script contains variables and commands that specify how to download, unpack,
+      patch, compile, install and merge a particular software package from its original
+      sources.  In addition to all this, the ebuild script can also contain 
+      pre/post install/remove commands, as required.
+    </para>
+  </refsect1>
+</refentry>
+
