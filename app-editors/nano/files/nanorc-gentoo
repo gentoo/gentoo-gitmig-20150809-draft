@@ -12,7 +12,7 @@
 ## Highlight variables ... official portage ones in red, all others in bright red
 # color brightred "\$\{?[a-zA-Z_0-9]+\}?"
 # color red "\<(ARCH|HOMEPAGE|DESCRIPTION|IUSE|SRC_URI|LICENSE|SLOT|KEYWORDS|FILESDIR|WORKDIR|(P|R)?DEPEND|PROVIDE|DISTDIR|RESTRICT)\>"
-# color red "\<(S|D|T|PV|PF|P|PN|A)\>" "\<C(XX)?FLAGS\>"
+# color red "\<(S|D|T|PV|PF|P|PN|A)\>" "\<C(XX)?FLAGS\>" "\<LDFLAGS\>"
 ## Highlight portage commands
 # color magenta "\<use(_(with|enable))?\> [!a-z0-9X -]*" "inherit.*"
 # color brightblue "e(begin|end|conf|install|make|warn|infon?|error|patch)"
