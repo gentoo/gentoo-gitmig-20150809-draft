@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20031112.ebuild,v 1.4 2003/11/27 11:16:10 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/bash-completion-20031125-r1.ebuild,v 1.1 2003/12/13 17:46:01 joker Exp $
 
 S=${WORKDIR}/${PN/-/_}
 DESCRIPTION="Programmable Completion for bash (includes emerge and ebuild commands)."
@@ -9,7 +9,7 @@ SRC_URI="http://www.caliban.org/files/bash/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc alpha mips hppa arm amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm ~amd64"
 
 DEPEND="app-arch/tar
 	app-arch/bzip2"
@@ -30,7 +30,7 @@ src_install() {
 	doins contrib/p4
 	doins contrib/ri
 
-	newins ${FILESDIR}/gentoo.completion gentoo
+	newins ${FILESDIR}/gentoo.completion-${PVR/-r0/} gentoo
 
 	insinto /etc/profile.d
 	doins ${FILESDIR}/bash-completion
