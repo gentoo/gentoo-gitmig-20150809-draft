@@ -1,9 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/smarteiffel/smarteiffel-1.0.ebuild,v 1.5 2003/10/17 03:18:36 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/smarteiffel/smarteiffel-1.1.ebuild,v 1.1 2003/10/17 03:18:36 george Exp $
 
-IUSE="doc"
-#IUSE="doc tcc"
+#IUSE="doc"
+IUSE="doc tcc"
 
 DESCRIPTION="GNU Eiffel compiler"
 HOMEPAGE="http://smarteiffel.loria.fr/"
@@ -12,54 +12,59 @@ SRC_URI="ftp://ftp.loria.fr/pub/loria/SmartEiffel/se-${PV}.tgz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~alpha ~sparc"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc"
 
-#DEPEND="tcc? ( >=dev-lang/tcc-0.9.14 )"
-DEPEND="virtual/glibc"
+DEPEND="tcc? ( >=dev-lang/tcc-0.9.14 )"
+#DEPEND="virtual/glibc"
 
 S="${WORKDIR}/SmartEiffel"
 # Destination directory to hold most of the SmartEiffel distribution.
 SE_DIR="/usr/lib/SmartEiffel"
 
 src_compile() {
-	#tcc did not work for me while processing the ebuild
-	#commenting out until resolved
-	#George Shapovalov <george@gentoo.org>, see #8897
-
-#	use tcc && COMPILER=tcc
-#	use tcc || COMPILER=gcc
-#	use tcc && CFLAGS=""
-	COMPILER=gcc
+	use tcc && CFLAGS=""
+	use tcc && COMPILER=tcc || COMPILER=gcc
 	einfo "Using ${COMPILER} as default C-compiler for SmartEiffel!"
 
 	export SmartEiffel="${S}/sys/system.se"
 	export PATH="${S}/bin:${PATH}"
 	cd ${S}
 	ebegin "Compiling install-program"
-		${COMPILER} ${CFLAGS} -o install install.c || die
+		${COMPILER} ${CFLAGS} -o install.bin install.c || die
+		#package authors created install directory right next to install.c
+		#how nioe of them!
 	eend $?
 
 	einfo "Running install-program"
-	(	echo yes
-		echo no
-		echo UNIX
-		echo ${COMPILER}
-		echo ${CFLAGS}
-		echo yes
-	) | ./install -interactive || die
+	(	echo   #skipping stupid prompt
+		echo 2 #compiler setup
+		use tcc && (
+			 echo 11; echo tcc; echo g++
+		)
+		echo 12 #CFLAGS setup
+		echo "${CFLAGS}"
+		echo "${CXXFLAGS}"
+		echo 13 #main menu
+		echo 1; echo 1; echo SmartEiffel.conf; echo 7 #set conf file
+		echo 4 #and saved it
+		echo 5; echo
+		echo 6; echo #leave the menu
+	) | ./install.bin || die
+	einfo "finished running install"
 
-	# Regenerate a proper loadpath.UNIX file.
-	cp sys/loadpath.UNIX sys/loadpath.UNIX.orig
-	sed -e "s:^${S}:${SE_DIR}:" \
-			sys/loadpath.UNIX.orig > sys/loadpath.UNIX || die
+	#looks like only one file with path definitions, good
+	sed -i -e "s:${S}:${SE_DIR}:" SmartEiffel.conf || die
 }
 
 src_install () {
 	dodir ${SE_DIR}
 	cp -a ${S}/{lib,tools,sys,bin} ${D}/${SE_DIR} || die
+	cp SmartEiffel.conf ${D}/${SE_DIR}
 
 	# Create symlinks to the appropriate executable binaries.
 	dodir /usr/bin
+	rm ${S}/bin/README.txt
+	#since then this became a bin file?
 	for NAME in ${S}/bin/*; do
 		NAME=`basename ${NAME}`
 		dosym ${SE_DIR}/bin/${NAME} /usr/bin/${NAME}
@@ -74,6 +79,6 @@ src_install () {
 
 	# Setup 'SmartEiffel' environment variable.
 	dodir /etc/env.d
-	echo "SmartEiffel=${SE_DIR}/sys/system.se" > ${D}/etc/env.d/20smarteiffel
+	echo "SmartEiffel=${SE_DIR}/SmartEiffel.conf" > ${D}/etc/env.d/20smarteiffel
 	echo "SmartEiffelDirectory=${SE_DIR}" >> ${D}/etc/env.d/20smarteiffel
 }
