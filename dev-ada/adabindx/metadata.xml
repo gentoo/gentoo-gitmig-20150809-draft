@@ -2,4 +2,5 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>ada</herd>
+<longdescription>This is a binding from Ada to the X window system. It's a collection of Ada sources which enables a program written in Ada to use the X window and OSF/Motif or lesstif, if available, routines.</longdescription>
 </pkgmetadata>
