@@ -1,0 +1,11 @@
+# ChangeLog for dev-java/javatar
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javatar/ChangeLog,v 1.1 2005/01/08 00:03:10 luckyduck Exp $
+
+*javatar-2.5 (08 Jan 2005)
+
+  08 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> +metadata.xml,
+  +files/javatar-2.5-build.xml, +javatar-2.5.ebuild:
+  Initial import. Ebuild based on the contribution of Paul Pacheco
+  <paul.pacheco@wavecode.com>. Fixes #75343.
+
