@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/fluxbox
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.146 2005/02/26 17:28:07 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/fluxbox/ChangeLog,v 1.147 2005/03/06 14:15:58 lanius Exp $
+
+  06 Mar 2005; Heinrich Wendel <lanius@gentoo.org> fluxbox-0.9.12-r1.ebuild:
+  stable on amd64
 
   26 Feb 2005; Ciaran McCreesh <ciaranm@gentoo.org>
   -files/0.9.12/fluxbox-0.9.12-make-FbTk-available-as-la.patch,
