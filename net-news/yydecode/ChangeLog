@@ -1,0 +1,9 @@
+# ChangeLog for net-analyzer/mtr
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-news/yydecode/ChangeLog,v 1.1 2003/05/18 20:43:33 mholzer Exp $
+
+*yydecode-0.2.9 (18 May 2003)
+
+  18 May 2003; Martin Holzer <mholzer@gentoo.org> yydecode-0.2.9.ebuild:
+  Initial version. Ebuild submitted by Evgeny Roubinchtein
+  <zhenya@freeshell.org> in #12133.
