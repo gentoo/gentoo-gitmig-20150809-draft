@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6-r1.ebuild,v 1.1 2003/02/13 06:10:21 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/johntheripper/johntheripper-1.6-r1.ebuild,v 1.2 2003/02/13 18:12:59 seemant Exp $
 
 inherit eutils
 
-IUSE="mmx"
+IUSE="mmx samba"
 
 MY_P=${P/theripper/}
 S=${WORKDIR}/${MY_P}
@@ -12,8 +12,13 @@ DEBPATCH=${MY_P/-/_}-17.diff
 DESCRIPTION="John the Ripper is a fast password cracker."
 HOMEPAGE="http://www.openwall.com/${PN/theripper/}/"
 SRC_URI="${HOMEPAGE}/${MY_P}.tar.gz
-	 http://ftp.debian.org/debian/pool/main/j/${PN/theripper/}/${DEBPATCH}.gz
-	 http://cvs.gentoo.org/~zhen/${P}-r1-gentoo.tar.bz2"
+	http://ftp.debian.org/debian/pool/main/j/${PN/theripper/}/${DEBPATCH}.gz
+	mysql? ( http://www.openwall.com/john/contrib/john-1.6-mysql-1.diff )
+	samba? ( http://www.openwall.com/john/contrib/john-ntlm-patch-v02.tgz )
+	kerberos? ( http://www.monkey.org/~dugsong/john-1.6.krb4.patch-3 )
+	http://www.monkey.org/~dugsong/john-1.6.skey.patch-1
+	http://www.openwall.com/john/contrib/john-1.6.31-eggpatch-8.diff.gz"
+
 
 SLOT="0"
 LICENSE="GPL-2"
@@ -24,7 +29,24 @@ DEPEND=">=sys-devel/binutils-2.8.1.0.15"
 src_unpack() {
 	unpack ${A}
 	epatch ${WORKDIR}/${DEBPATCH}
-	epatch ${WORKDIR}/${P}-r1-gentoo
+	cd ${S}/src 
+	epatch ${DISTDIR}/${MY_P}.skey.patch-1
+	cd ${S}
+#	use mysql && epatch ${DISTDIR}/${MY_P}-mysql-1.diff
+
+	if use samba
+	then
+		mv ${WORKDIR}/john-ntlm-patch-v02/* ${S}/src
+		cd ${S}/src
+		epatch john-ntlm.diff
+		cd ${S}
+	fi
+
+	epatch ${WORKDIR}/${MY_P}.31-eggpatch-8.diff
+	if use kerberos
+	then
+		patch -p0 < ${DISTDIR}/${MY_P}.krb4.patch-3 || die
+	fi
 }
 
 src_compile() {
