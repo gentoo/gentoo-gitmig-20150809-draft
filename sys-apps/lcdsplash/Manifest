@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 503dfdac92d0ac864437c853afb0a0fb ChangeLog 479
+MD5 9ea7250836ad2c5a0593a8bff1747053 lcdsplash-0.3.ebuild 729
+MD5 ec408e3c1794e964b372c4a7ff71d078 ChangeLog 648
 MD5 d0dad7daa0e6d356fc35f778fed36006 metadata.xml 225
-MD5 d71f1df3bc3bc3531d45a462c9215575 lcdsplash-0.2.ebuild 725
-MD5 3087c807ccb7d795aa443af5a730ae93 files/digest-lcdsplash-0.2 64
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBopf6HTu7gpaalycRAkjeAKCyeaabz/DSmUpU49hc9L8B6L6ovACgssjJ
-JNw7BhcgPR8ddivIXs9+jRk=
-=qsQO
------END PGP SIGNATURE-----
+MD5 3087c807ccb7d795aa443af5a730ae93 files/digest-lcdsplash-0.3 64
