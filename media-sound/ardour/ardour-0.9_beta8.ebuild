@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.9_beta8.ebuild,v 1.1 2003/11/07 13:36:42 tigger Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ardour-0.9_beta8.ebuild,v 1.2 2003/12/10 08:12:31 torbenh Exp $
 
 IUSE="nls ardour-ksi"
 
@@ -15,7 +15,7 @@ KEYWORDS="~x86"
 S="${WORKDIR}/${P/_/}"
 
 DEPEND="dev-util/pkgconfig
-	>=media-sound/jack-audio-connection-kit-0.80.0
+	>=media-sound/jack-audio-connection-kit-0.91.1
 	=dev-libs/glib-1.2*
 	=x11-libs/gtk+-1.2*
 	>=media-libs/libsndfile-1.0.4

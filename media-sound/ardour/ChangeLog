@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/ardour
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.11 2003/12/10 07:10:49 torbenh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/ardour/ChangeLog,v 1.12 2003/12/10 08:12:31 torbenh Exp $
+
+  10 Dec 2003; <torbenh@gentoo.org> ardour-0.9_beta8.ebuild:
+  Fixed DEPEND to >= jack-0.91.1
 
   10 Dec 2003; <torbenh@gentoo.org> ardour-0.9_beta1.ebuild,
   ardour-0.9_beta2.ebuild:
