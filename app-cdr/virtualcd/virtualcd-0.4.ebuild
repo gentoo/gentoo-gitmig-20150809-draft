@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/virtualcd/virtualcd-0.4.ebuild,v 1.2 2003/06/12 17:25:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/virtualcd/virtualcd-0.4.ebuild,v 1.3 2003/06/20 18:39:31 vapier Exp $
 
 DESCRIPTION="mount bin/cue cd images"
 HOMEPAGE="http://outertech.com/robert/virtualcd/"
@@ -15,8 +15,7 @@ DEPEND="virtual/kernel"
 S=${WORKDIR}/${P/-/_}
 
 src_compile() {
-	[ -z "${CC}" ] && CC=gcc
-	${CC} virtualcd.c -o virtualcd.o -c \
+	${CC:-gcc} virtualcd.c -o virtualcd.o -c \
 		${CFLAGS} -D__KERNEL__ -DMODULE -Wall \
 		-I/usr/src/linux/include \
 		|| die "could not make kernel module"
