@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/twin/twin-0.4.6.ebuild,v 1.1 2004/06/01 05:33:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/twin/twin-0.4.6.ebuild,v 1.2 2004/06/22 03:43:51 vapier Exp $
 
 inherit fixheadtails
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/twin/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64"
+KEYWORDS="x86 ppc sparc alpha hppa amd64 ia64"
 IUSE="X gtk ggi gpm"
 
 DEPEND="X? ( virtual/x11 )
