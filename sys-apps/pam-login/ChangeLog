@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/pam-login
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.24 2003/09/25 03:59:08 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/ChangeLog,v 1.25 2003/09/26 00:01:49 rac Exp $
+
+  25 Sep 2003; <rac@gentoo.org> pam-login-3.12.ebuild:
+  Emergency keywording -* due to reports of this version locking people out: see
+  http://forums.gentoo.org/viewtopic.php?t=89507
 
 *pam-login-3.12 (25 Sep 2003)
 
