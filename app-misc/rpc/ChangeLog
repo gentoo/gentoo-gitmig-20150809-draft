@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/rpc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/rpc/ChangeLog,v 1.2 2003/03/30 21:22:59 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/rpc/ChangeLog,v 1.3 2003/05/07 18:33:38 george Exp $
+
+  07 May 2003; George Shapovalov <george@gentoo.org> rpc-0.97-r1.ebuild, files/{rpc-0.97-factorial-fix.diff.bz2,digest-rpc-0.97-r1} :
+  incorporated the upstream fix to factorial function, (#19120)
+  thanks to Bernardo S. A. Silva <bsaslinux@globo.com> for submitting the fix!
 
 *rpc-0.97 (23 Feb 2003)
 
@@ -9,7 +13,8 @@
 
   23 Feb 2003; George Shapovalov <george@gentoo.org> rpc-0.97.ebuild, files/digest-rpc-0.97 :
   initial release (#13209)
-  rpc is a fullscreen console-based RPN calculator that uses the curses library. Its operation is similar to that of 
-  modern HP calculators, but data entry has been optimized for efficiency on a PC keyboard. Its features include 
-  extensive scientific calculator functionality, command completion, and a visible interactive stack.
+  rpc is a fullscreen console-based RPN calculator that uses the curses library. 
+  Its operation is similar to that of modern HP calculators, but data entry has been 
+  optimized for efficiency on a PC keyboard. Its features include extensive scientific 
+  calculator functionality, command completion, and a visible interactive stack.
   ebuild submitted by Bernardo S. A. Silva <bsaslinux@globo.com>
