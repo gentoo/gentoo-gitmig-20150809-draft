@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.238 2004/05/05 04:24:53 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.239 2004/05/06 21:04:46 lv Exp $
+
+  06 May 2004; Travis Tilley <lv@gentoo.org> gcc-3.4.0-r1.ebuild:
+  added gcc333_pre20040408-stack-size.patch for testing on ppc64
 
   04 May 2004; Ilya A. Volynets-Evenbaks <iluxa@gentoo.org> gcc-3.4.0.ebuild:
   gcc reqires glibc-2.3.3_pre20040420, primarily because of bunch of missing
