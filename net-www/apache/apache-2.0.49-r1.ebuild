@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r1.ebuild,v 1.3 2004/04/17 16:12:37 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.49-r1.ebuild,v 1.4 2004/04/19 05:36:19 mr_bones_ Exp $
 
 inherit flag-o-matic eutils fixheadtails
 
@@ -256,7 +256,7 @@ src_install () {
 	mv -v usr/sbin/list_hooks.pl usr/sbin/list_hooks2.pl
 	mv -v usr/sbin/logresolve.pl usr/sbin/logresolve2.pl
 
-	# do the man pages 
+	# do the man pages
 	mv -v usr/share/man/man1/htdigest.1 usr/share/man/man1/htdigest2.1
 	mv -v usr/share/man/man1/htpasswd.1 usr/share/man/man1/htpasswd2.1
 	mv -v usr/share/man/man1/dbmmanage.1 usr/share/man/man1/dbmmanage2.1
@@ -335,7 +335,7 @@ pkg_postinst() {
 	install -d -m0755 -o apache -g apache ${ROOT}/var/lib/dav
 	install -d -m0755 -o root -g root ${ROOT}/var/log/apache2
 	install -d -m0755 -o root -g root ${ROOT}/var/cache/apache2
-			
+
 	if use ssl; then
 	#	install -d -m0755 -o root -g root ${ROOT}/etc/apache2/conf/ssl
 	install -d -m0755 -o root -g root ${ROOT}/etc/apache2/conf/ssl
