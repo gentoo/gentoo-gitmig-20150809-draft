@@ -1,0 +1,5 @@
+MD5 8e7507ed5ced15b925f1bb8fe13f01ec usbmidi-1.0.ebuild 1010
+MD5 6af8f97c561b1b3a6824ef03960bae0b ChangeLog 313
+MD5 b6b08b082cdd69678d1034f0d6b9b129 files/digest-usbmidi-1.0 67
+MD5 7708d9c50a42ddfbf40aed3e6d480b60 files/ezusbmidi 947
+MD5 007cb1fe02b3ca041259d819d8958608 files/ezusbmidi.usermap 174
