@@ -1,13 +1,14 @@
 # ChangeLog for net-im/psi
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.43 2004/12/27 13:20:30 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/psi/ChangeLog,v 1.44 2004/12/28 12:48:29 humpback Exp $
 
 *psi-0.9.3_rc1 (27 Dec 2004)
 
   27 Dec 2004; Gustavo Felisberto <humpback@gentoo.org>;
   +psi-0.9.3_rc1.ebuild:
   Added a test version. This is hardmasked due to needed test on qca, and the
-  fact that is still rc code.
+  fact that is still rc code, this version has alot of work done by Przmek
+  Maciag see bug #75737 for more info.
 
 *psi-0.9.2-r1 (27 Dec 2004)
 
