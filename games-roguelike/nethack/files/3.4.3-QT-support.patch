@@ -3,21 +3,18 @@
 @@ -47 +47 @@
 -/* #define QT_GRAPHICS */	/* Qt interface */
 +#define QT_GRAPHICS
-@@ -89 +88,0 @@
+@@ -91 +90,0 @@
 -# define USE_XPM		/* Use XPM format for images (required) */
 --- src/Makefile.orig	2003-06-21 21:04:41.000000000 -0400
 +++ src/Makefile	2003-06-21 21:04:58.000000000 -0400
-@@ -155 +155 @@
--#LD=g++
-+LD=g++
-@@ -179 +179 @@
+@@ -189 +189 @@
 -WINQTOBJ = qt_win.o qt_clust.o qttableview.o tile.o
 +WINQTOBJ = qt_win.o qt_clust.o qttableview.o
-@@ -207,2 +207,2 @@
+@@ -217,2 +217,2 @@
 -WINSRC = $(WINTTYSRC) $(WINX11SRC)
 -WINOBJ = $(WINTTYOBJ) $(WINX11OBJ)
 +WINSRC = $(WINTTYSRC) $(WINX11SRC) $(WINQTSRC)
 +WINOBJ = $(WINTTYOBJ) $(WINX11OBJ) $(WINQTOBJ)
-@@ -248 +248 @@
+@@ -258 +258 @@
 -WINLIB = $(WINTTYLIB) $(WINX11LIB)
 +WINLIB = $(WINTTYLIB) $(WINX11LIB) $(WINQTLIB)

@@ -1,27 +1,25 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.1-r1.ebuild,v 1.1 2003/09/10 04:59:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/nethack-3.4.3.ebuild,v 1.1 2004/01/01 09:19:28 vapier Exp $
 
-inherit games eutils flag-o-matic
-append-flags -fomit-frame-pointer -I../include
+inherit games eutils gcc flag-o-matic
 
 MY_PV=${PV//.}
-
 DESCRIPTION="The ultimate old-school single player dungeon exploration game"
 HOMEPAGE="http://www.nethack.org/"
-SRC_URI="mirror://sourceforge/nethack/${PN}-${MY_PV}.tgz"
+SRC_URI="mirror://sourceforge/nethack/${PN}-${MY_PV}-src.tgz"
 #SRC_URI="ftp://ftp.nethack.org/pub/nethack/nh340/src/nethack-340.tgz"
 
-KEYWORDS="x86 ppc"
-SLOT="0"
 LICENSE="nethack"
+SLOT="0"
+KEYWORDS="x86 ppc sparc"
 IUSE="X qt gnome"
 
 DEPEND="virtual/glibc
 	dev-util/yacc
 	>=sys-libs/ncurses-5.2-r5
 	X? ( x11-base/xfree )
-	qt? ( =x11-libs/qt-2* )
+	qt? ( x11-libs/qt )
 	gnome? ( >=gnome-base/gnome-libs-1.4.1.4-r2 )"
 
 HACKDIR=${GAMES_DATADIR}/${PN}
@@ -36,8 +34,7 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/${PV}-gentoo-paths.patch
-	epatch ${FILESDIR}/${PV}-errno.patch
-	epatch ${FILESDIR}/${PV}-GNOME-RTLD_NEXT.patch
+#	epatch ${FILESDIR}/${PV}-errno.patch
 	epatch ${FILESDIR}/${PV}-default-options.patch
 
 	sed -i "s:GENTOO_STATEDIR:${GAMES_STATEDIR}/${PN}:" include/unixconf.h || die "setting statedir"
@@ -55,20 +52,25 @@ src_unpack() {
 }
 
 src_compile() {
+	local qtver=
+	has_version =x11-libs/qt-3* \
+		&& qtver=3 \
+		|| qtver=2
 	cd ${S}/src
+	append-flags -I../include
 	make \
-		QTDIR=/usr/qt/2 \
-		CC="${CC:-gcc}" \
+		QTDIR=/usr/qt/${qtver} \
+		CC="$(gcc-getCC)" \
 		CFLAGS="${CFLAGS}" \
 		LFLAGS="-L/usr/X11R6/lib" \
-		|| die
+		|| die "main build failed"
 	cd ${S}/util
-	make CFLAGS="${CFLAGS}" recover || die
+	make CFLAGS="${CFLAGS}" recover || die "util build failed"
 }
 
 src_install() {
 	make \
-		CC="${CC:-gcc}" \
+		CC="$(gcc-getCC)" \
 		CFLAGS="${CFLAGS}" \
 		LFLAGS="-L/usr/X11R6/lib" \
 		GAMEPERM=0755 \
@@ -125,15 +127,20 @@ src_install() {
 		[ ! -e ${statedir}/${f} ] && continue
 		mv ${D}/${statedir}/${f}{,.sample}
 	done
+	keepdir ${statedir}/save
 
 	prepgamesdirs
+	chmod -R 660 ${D}/${statedir}
+	chmod 770 ${D}/${statedir} ${D}/${statedir}/save
 }
 
 pkg_postinst() {
-	touch ${GAMES_STATEDIR}/${PN}/{record,logfile,perm}
-	mkdir -p ${GAMES_STATEDIR}/${PN}/save
-	chmod -R 660 ${GAMES_STATEDIR}/${PN}
-	chmod 770 ${GAMES_STATEDIR}/${PN} ${GAMES_STATEDIR}/${PN}/save
-	einfo "you may want to look at /etc/skel/.nethackrc for interesting options"
 	games_pkg_postinst
+	if [ `use qt` ] ; then
+		if has_version '=x11-libs/qt-3.1*' ; then
+			ewarn "the qt frontend may be a little unstable with this version of qt"
+			ewarn "please see Bug 32629 for more information"
+		fi
+	fi
+	einfo "you may want to look at /etc/skel/.nethackrc for interesting options"
 }

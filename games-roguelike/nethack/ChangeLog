@@ -1,11 +1,16 @@
 # ChangeLog for games-roguelike/nethack
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/ChangeLog,v 1.4 2003/09/17 02:37:17 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-roguelike/nethack/ChangeLog,v 1.5 2004/01/01 09:19:28 vapier Exp $
+
+*nethack-3.4.3 (01 Jan 2003)
+
+  01 Jan 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #35558.
+
+*nethack-3.4.2 (15 Sep 2003)
 
   17 Sep 2003; Chuck Short <zul@gentoo.org> nethack-3.4.2.ebuild:
   Marked stable for sparc, closes bug #28449.
-
-*nethack-3.4.2 (15 Sep 2003)
 
   15 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
   Version bump #27875 + saved games fix #28104 + new qt ver #23149.
