@@ -1,6 +1,11 @@
 # ChangeLog for app-dicts/dictd-wn
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-wn/ChangeLog,v 1.8 2004/06/24 21:39:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/dictd-wn/ChangeLog,v 1.9 2004/07/24 19:52:05 liquidx Exp $
+
+*dictd-wn-2.0 (24 Jul 2004)
+
+  24 Jul 2004; Alastair Tse <liquidx@gentoo.org> +dictd-wn-2.0.ebuild:
+  version bump (#54439)
 
   07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
   dictd-wn-1.5-r1.ebuild:

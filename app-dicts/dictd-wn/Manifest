@@ -1,4 +1,6 @@
+MD5 8499059f11678aa91fcf0cc50e8cefd6 dictd-wn-2.0.ebuild 750
 MD5 a351b211fb7f90103af631357ae7da54 dictd-wn-1.5-r1.ebuild 554
-MD5 f2500d4c31e62f280e1d82fdebd80094 ChangeLog 1210
+MD5 9533ae2fcaacb6257f88409400eda0ad ChangeLog 1334
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
 MD5 21660b33b58fd699adfef2ea39bde92e files/digest-dictd-wn-1.5-r1 68
+MD5 7d53471837d26c8c65851e84ba6346e7 files/digest-dictd-wn-2.0 64
