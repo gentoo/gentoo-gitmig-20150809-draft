@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: George Shapovalov <george@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/host/host-991529.ebuild,v 1.2 2002/05/12 04:49:35 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/host/host-991529.ebuild,v 1.3 2002/07/07 07:56:03 phoenix Exp $
 
 S="${WORKDIR}"
 
@@ -15,12 +15,15 @@ HOMEPAGE="http://www.dtek.chalmers.se/~d3august/xt/"
 #that's the homepage for xtraceroute, not host, but that's best I can do
 #at least it is mentioned there
 
-DEPEND="net-misc/bind-tools"
+DEPEND="net-dns/bind-tools"
 #either bind or bind-tools will do,
 #but since bind-tools is just a partiall install of bind
 #there is no point in introducing new use var and doing PROVIDE dance..
 
 RDEPEND="${DEPEND}"
+
+KEYWORDS="x86"
+SLOT="0"
 
 src_unpack() {
 	cd ${S}
