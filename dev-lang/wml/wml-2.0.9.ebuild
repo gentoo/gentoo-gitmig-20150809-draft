@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/wml-2.0.9.ebuild,v 1.5 2003/03/11 21:11:45 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/wml/wml-2.0.9.ebuild,v 1.6 2003/04/06 04:42:55 george Exp $
 
 IUSE=""
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.engelschall.com/sw/wml/distrib/${P}.tar.gz"
 HOMEPAGE="http://www.engelschall.com/sw/wml/"
 DEPEND=">=dev-lang/perl-5.6.1-r3"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc "
+KEYWORDS="x86 sparc"
 SLOT="0"
 
 src_compile() {
