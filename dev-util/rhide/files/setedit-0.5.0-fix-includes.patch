@@ -1,0 +1,10 @@
+--- setedit/makes/editor.mak.orig	2003-04-03 19:26:00.000000000 +0200
++++ setedit/makes/editor.mak	2003-04-03 19:26:04.000000000 +0200
+@@ -812,7 +812,6 @@
+ 	../../tvision/include/tv/opstream.h\
+ 	../../tvision/include/tv/osclipboard.h\
+ 	../../tvision/include/tv/palette.h\
+-	../../tvision/include/tv/parttree.h\
+ 	../../tvision/include/tv/point.h ../../tvision/include/tv/program.h\
+ 	../../tvision/include/tv/pstream.h ../../tvision/include/tv/rect.h\
+ 	../../tvision/include/tv/resource.h\

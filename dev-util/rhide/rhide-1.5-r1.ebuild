@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5.ebuild,v 1.2 2003/04/03 19:07:18 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/rhide/rhide-1.5-r1.ebuild,v 1.1 2003/04/03 19:07:18 azarah Exp $
 
 IUSE="X"
 
 #SNAPSHOT="20020825"
 TVISIONVER="2.0.1"
 SETEDITVER="0.5.0"
-SETEDIT_S="setedit-${SETEDITVER}"
+SETEDIT_S="setedit"
 # RHIDE is _very_ picky about the GDB used, so dont put GDB in DEPEND
 GDBVER="5.3"
 
@@ -23,13 +23,13 @@ else
 fi
 SRC_URI="${SRC_URI}
 	mirror://sourceforge/tvision/rhtvision-${TVISIONVER}.src.tar.gz
-	mirror://sourceforge/setedit/setedit-${SETEDITVER}.tar.bz2
+	mirror://sourceforge/setedit/setedit-${SETEDITVER}.tar.gz
 	mirror://gnu/gdb/gdb-${GDBVER}.tar.bz2"
 HOMEPAGE="http://www.rhide.com/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 DEPEND="virtual/glibc
 	>=app-text/recode-3.6
@@ -53,6 +53,10 @@ src_unpack() {
 
 	# Get it to work with rhtvision-2.0
 	epatch ${FILESDIR}/${P}-rhtvision2.patch
+
+	cd ${WORKDIR}/${SETEDIT_S}
+	# Fix an include problem with official setedit-0.5.0
+	epatch ${FILESDIR}/setedit-${SETEDITVER}-fix-includes.patch
 	
 	# Update snapshot version
 	if [ -n "${SNAPSHOT}" ]
@@ -62,6 +66,7 @@ src_unpack() {
 		perl -pi -e "s|1998-11-29|`date +%F`|" ${S}/idemain.cc
 	fi
 
+	cd ${S}
 	# Fix invalid "-O2" in CFLAGS and CXXFLAGS
 	for x in configure $(find . -name '*.mak') $(find . -name 'makefile.src')
 	do
