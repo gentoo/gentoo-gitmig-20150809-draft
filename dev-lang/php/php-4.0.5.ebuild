@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.0.5.ebuild,v 1.8 2001/08/15 11:42:21 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.0.5.ebuild,v 1.9 2001/08/31 21:01:32 g2boojum Exp $
 
 A=${PN}-4.0.5.tar.gz
 S=${WORKDIR}/${PN}-4.0.5
@@ -17,7 +17,7 @@ DEPEND="virtual/glibc
 	>=media-libs/libpng-1.0.7
         >=media-libs/libgd-1.8.3
 	>=media-libs/t1lib-1.0.1
-	>=net-www/apache-ssl-1.3
+	>=net-www/apache-1.3
 	pam? ( >=sys-libs/pam-0.75 )
 	readline? ( >=sys-libs/ncurses-5.1 >=sys-libs/readline-4.1 )
 	gettext? ( sys-devel/gettext )
@@ -39,7 +39,7 @@ RDEPEND="virtual/glibc
 	>=media-libs/jpeg-6b
  	>=media-libs/libpng-1.0.7
  	>=media-libs/t1lib-1.0.1
-	>=net-www/apache-ssl-1.3
+	>=net-www/apache-1.3
 	pam? ( >=sys-libs/pam-0.75 )
 	gdbm? ( >=sys-libs/gdbm-1.8.0 )
 	berkdb? ( >=sys-libs/db-3 )
