@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-1.7.1.ebuild,v 1.7 2005/01/01 13:29:42 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/kile/kile-1.7.1.ebuild,v 1.8 2005/01/11 14:52:50 carlo Exp $
 
 inherit kde
 
@@ -31,9 +31,9 @@ LANGS_DOC="da es et fr it nl pt pt_BR sv"
 MAKE_PO=$(echo "${LINGUAS} ${LANGS}" | fmt -w 1 | sort | uniq -d | fmt -w 10000)
 MAKE_DOC=$(echo "${LINGUAS} ${LANGS_DOC}" | fmt -w 1 | sort | uniq -d | fmt -w 10000)
 
-if [ -n "$MAKE_PO" ] ; then
-	SRC_URI="${SRC_URI} mirror://sourceforge/kile/${I18N}.tar.bz2"
-fi
+for X in $LANGS; do
+	SRC_URI="${SRC_URI} linguas_${X}? ( mirror://sourceforge/kile/${I18N}.tar.bz2 )"
+done
 
 src_compile() {
 	local _S=${S}
