@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/guidedog
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/guidedog/ChangeLog,v 1.2 2003/02/12 08:23:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/guidedog/ChangeLog,v 1.3 2003/03/11 22:31:06 mholzer Exp $
+
+*guidedog-0.9.0 (11 Mar 2003)
+
+  11 Mar 2003; Martin Holzer <mholzer@gentoo.org> guidedog-0.9.0.ebuild:
+  changed sys-apps/iptables to net-firewall/iptables
 
 *guidedog-0.90 (18 Aug 2002)
 
