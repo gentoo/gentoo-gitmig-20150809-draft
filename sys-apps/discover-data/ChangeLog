@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/discover-data
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/discover-data/ChangeLog,v 1.11 2004/06/30 15:13:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/discover-data/ChangeLog,v 1.12 2004/08/24 02:58:07 swegener Exp $
+
+  24 Aug 2004; Sven Wegener <swegener@gentoo.org>
+  discover-data-1.2002.05.23-r1.ebuild:
+  Changed SRC_URI to use mirror:// syntax and use epatch.
 
   30 Jun 2004; Aron Griffis <agriffis@gentoo.org>
   discover-data-1.2002.05.23-r1.ebuild, discover-data-2.2003.02.05.ebuild:

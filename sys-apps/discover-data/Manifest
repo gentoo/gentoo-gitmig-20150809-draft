@@ -1,7 +1,17 @@
-MD5 659561f167b34be8db3cf3c32b0ac082 discover-data-1.2002.05.23-r1.ebuild 757
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c85452b9516211ddb3a6a1bda3a3fa26 ChangeLog 1494
 MD5 0e1d8747107530a32958ca5c2f8b808d discover-data-2.2003.02.05.ebuild 589
-MD5 1dc4b7db6f7e3c2d7cbab8d0f8cec93b ChangeLog 1345
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 619dd7c8efb1ed968f1848c2bd6321a1 discover-data-1.2002.05.23-r1.ebuild 757
+MD5 c2e821582d57e4f5c7c93ce91412a02c files/digest-discover-data-1.2002.05.23-r1 79
 MD5 37ed5e2c605c0477d8d2b077e2e5c989 files/digest-discover-data-2.2003.02.05 78
 MD5 6437294b2d605a5f86a119b238d08d15 files/kernel-2.2-2.4.drivername.patch 995
-MD5 c2e821582d57e4f5c7c93ce91412a02c files/digest-discover-data-1.2002.05.23-r1 79
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.5 (GNU/Linux)
+
+iD8DBQFBKq7RI1lqEGTUzyQRAnqYAKDJB+W+yr/RcEbkP7xj5M8FVTRN0ACgwE17
+qWzajvH1Gwu/R693/AhqzUI=
+=6R4J
+-----END PGP SIGNATURE-----
