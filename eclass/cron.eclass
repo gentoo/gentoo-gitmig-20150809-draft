@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/cron.eclass,v 1.2 2005/01/26 16:19:49 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/cron.eclass,v 1.3 2005/03/04 23:25:25 ciaranm Exp $
 
 # Original Author: Aaron Walker <ka0ttic@gentoo.org>
 #
@@ -29,7 +29,7 @@ DEPEND="${DEPEND}
 RDEPEND="${RDEPEND}
 	!virtual/cron
 	virtual/mta
-	>=sys-apps/cronbase-0.2.1-r3"
+	>=sys-process/cronbase-0.2.1-r3"
 
 PROVIDE="virtual/cron"
 
