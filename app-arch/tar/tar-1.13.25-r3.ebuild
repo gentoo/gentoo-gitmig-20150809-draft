@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.13.25-r3.ebuild,v 1.1 2003/11/14 11:38:01 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/tar/tar-1.13.25-r3.ebuild,v 1.2 2003/11/14 20:00:38 seemant Exp $
 
 inherit eutils gnuconfig
 
@@ -17,7 +17,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 amd64 alpha mips hppa arm ppc ia64 sparc"
 
 DEPEND="sys-apps/gzip
-	sys-apps/bzip2
+	app-arch/bzip2
 	app-arch/ncompress"
 
 RDEPEND="nls? ( >=sys-devel/gettext-0.10.35 )"

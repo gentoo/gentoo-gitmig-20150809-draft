@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/alien-8.21.ebuild,v 1.4 2003/07/01 20:36:34 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/alien/alien-8.21.ebuild,v 1.5 2003/11/14 20:00:38 seemant Exp $
 
 S=${WORKDIR}/${PN}
 IUSE=""
@@ -14,7 +14,7 @@ SLOT="0"
 
 DEPEND=">=dev-lang/perl-5.6.0
 	>=app-arch/rpm-4.0.4-r4
-	>=sys-apps/bzip2-1.0.2-r2
+	>=app-arch/bzip2-1.0.2-r2
 	>=app-arch/dpkg-1.10.9"
 
 RDEPEND="${DEPEND}"

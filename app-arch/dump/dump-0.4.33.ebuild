@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.33.ebuild,v 1.5 2003/11/14 12:33:15 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/dump/dump-0.4.33.ebuild,v 1.6 2003/11/14 20:00:38 seemant Exp $
 
 MY_P=${P/4./4b}
 S=${WORKDIR}/${MY_P}
@@ -14,7 +14,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 IUSE="readline static"
 
 DEPEND=">=sys-fs/e2fsprogs-1.27
-	>=sys-apps/bzip2-1.0.2
+	>=app-arch/bzip2-1.0.2
 	>=sys-libs/zlib-1.1.4
 	virtual/os-headers
 	readline? ( sys-libs/readline )"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2.1.ebuild,v 1.6 2003/11/14 13:32:45 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/rpm/rpm-4.2.1.ebuild,v 1.7 2003/11/14 20:00:38 seemant Exp $
 
 inherit flag-o-matic libtool eutils
 
@@ -13,7 +13,7 @@ KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips"
 IUSE="nls python doc"
 RDEPEND="=sys-libs/db-3.2*
 	>=sys-libs/zlib-1.1.3
-	>=sys-apps/bzip2-1.0.1
+	>=app-arch/bzip2-1.0.1
 	>=dev-libs/popt-1.7
 	>=app-crypt/gnupg-1.2
 	dev-libs/elfutils

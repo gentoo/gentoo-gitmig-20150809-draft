@@ -1,0 +1,79 @@
+# ChangeLog for app-arch/bzip2
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-arch/bzip2/ChangeLog,v 1.1 2003/11/14 20:00:38 seemant Exp $
+
+*bzip2-1.0.2-r2 (14 Nov 2003)
+
+  14 Nov 2003; Seemant Kulleen <seemant@gentoo.org> bzip2-1.0.2-r2.ebuild:
+  moved from sys-apps to app-arch
+
+  21 Sep 2003; Mike Frysinger <vapier@gentoo.org> :
+  Added static support #29266.
+
+  02 Mar 2003; Seemant Kulleen <seemant@gentoo.org> bzip2-1.0.2-r2.ebuild :
+  changed the einstall back to make install, because it was causing sandbox
+  violations. Thanks to Jay Pfeifer in #-dev for the fix and rac00n in #gentoo for
+  finding it.
+
+  20 Feb 2003; Zach Welch <zwelch@gentoo.org> bzip2-1.0.2-r2.ebuild :
+  Added arm to keywords.
+
+  09 Feb 2003; Guy Martin <gmsoft@gentoo.org> bzip2-1.0.2-r2.ebuild :
+  Added hppa to keywords.
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+ 
+  20 Oct 2002; Martin Schlemmer <azarah@gentoo.org> bzip2-1.0.2-r2.ebuild :
+  Fix SRC_URI and HOMEPAGE, thanks to J. Scott Edwards <sedwards@xmission.com>.
+
+*bzip2-1.0.2-r2 (29 Jun 2002)
+
+  01 Mar 2003; Brandon Low <lostlogic@gentoo.org> bzip2-1.0.2-r2.ebuild:
+  Various ebuild fixes, better errors, use of einstall, and make the package use
+  the proper CC and CXXs from the portage environment
+
+  07 Feb 2003; Brandon Low <lostlogic@gentoo.org> :
+  Fix breakage when features=distcc is enabled.  this seems to be
+  an issue with the way that make is parsing options such as
+  CC="distcc gcc" I'm not sure this fix actually does what it
+  should, but at least the package merges for now.
+
+  18 Jan 2003; Jan Seidel <tuxus@gentoo.org> :
+  Added mips to keywords
+
+  24 Sep 2002; Martin Schlemmer <azarah@gentoo.org> bzip2-1.0.2-r2.ebuild :
+  Enable use of User specified compiler.  Closes bug #8021.
+
+  28 Jul 2002; Martin Schlemmer <azarah@gentoo.org> bzip2-1.0.2.ebuild :
+  Also install /bin/bzcat with USE=build, as some apps need it, and it
+  gets pulled in prematurely with gcc3 profile.
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> bzip2-1.0.2.ebuild :
+  Added KEYWORDS, SLOT.
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> bzip2-1.0.2-r2.ebuild :
+  Added KEYWORDS, SLOT.
+
+  29 Jun 2002; Daniel Robbins <drobbins@gentoo.org> : new rev of bzip2 that
+  uses user-defined CFLAGS, but keeps existing "-fomit-frame-pointer" and
+  "-fno-strength-reduce" options.
+
+*bzip2-1.0.2-r1 (21 Mar 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> bzip2-1.0.2-r1.ebuild :
+  Added KEYWORDS, SLOT.
+
+  21 Mar 2002; Seemant Kulleen <seemant@gentoo.org> bzip2-1.0.2-r1.ebuild :
+  HTML documentation does not get gzipped any more.  Thanks to
+  stefan@mdy.univie.ac.at for pointing this out.
+
+*bzip2-1.0.2 (2 Feb 2002)
+
+  2 Feb 2002; M.Schlemmer <azarah@gentoo.org> bzip2-1.0.2.ebuild : Redo ebuild
+  not to use the patches, as it makes things difficult between versions.
+  Updated.
+
+*bzip2-1.0.1-r4 (1 Feb 2002)
+
+  14 Jul 2002; phoen][x <phoenix@gentoo.org> bzip2-1.0.1-r4.ebuild :
+  Added KEYWORDS, SLOT.
