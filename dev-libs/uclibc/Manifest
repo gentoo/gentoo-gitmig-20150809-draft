@@ -4,10 +4,12 @@ MD5 54cc65ccbad794d94d98e2bdbd4bf891 uclibc-0.9.23.ebuild 1396
 MD5 5b137b00a41ba0a5a5cf02149681b67c uclibc-0.9.25.ebuild 1059
 MD5 0c28ce2e570bd4cfd43fc04a2e3130b3 uclibc-0.9.25-r1.ebuild 1656
 MD5 016c81b475f0e47a8a529412a17a3adb uclibc-0.9.21.ebuild 1083
+MD5 0c28ce2e570bd4cfd43fc04a2e3130b3 uclibc-0.9.26.ebuild 1656
 MD5 d16f404e56abc9f0ab5c372b88a6905d files/Makefile-cp-order-fix.patch 897
 MD5 07a777e28e8bdd9c29b569045e22bae1 files/digest-uclibc-0.9.25 67
 MD5 799adc7fb6ec9ffd653831cea1d32dd5 files/digest-uclibc-0.9.21 67
 MD5 07a777e28e8bdd9c29b569045e22bae1 files/digest-uclibc-0.9.25-r1 67
+MD5 cf4a11cd99eb78be459f253cf9c53030 files/digest-uclibc-0.9.26 67
 MD5 36a9b2869403944131702c133e2f0fd3 files/digest-uclibc-0.9.23 67
 MD5 17ecd222df47b5253f35787097440a5a files/0.9.23/uClibc-0.9.23-etdyn.patch 5832
 MD5 298b7b42f80e1f8ae395df81c47eb213 files/0.9.23/uClibc-0.9.23-flipturn.patch 1821
