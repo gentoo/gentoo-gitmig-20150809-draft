@@ -1,8 +1,11 @@
 # ChangeLog for media-sound/mpg321
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/ChangeLog,v 1.4 2002/05/27 15:04:10 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg321/ChangeLog,v 1.5 2003/01/14 18:08:43 nall Exp $
 
 *mpg321-0.2.10-r1 (27 May 2002)
+
+  14 Jan 2003; Jon Nall <nall@gentoo.org> mpg321-0.2.10-r1.ebuild :
+  added ~ppc
 
   27 May 2002; Seemant Kulleen <seemant@gentoo.org> mpg321-0.2.10-r1.ebuild
   files/digest-mpg321-0.2.10-r1.ebuild :
