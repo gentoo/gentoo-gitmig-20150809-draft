@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/openvpn
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.17 2004/10/02 16:29:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/ChangeLog,v 1.18 2004/10/07 20:32:29 warpzero Exp $
+
+*openvpn-1.6.0 (02 Oct 2004)
+
+  02 Oct 2004; Joshua Charles Campbell <warpzero@gentoo.org> openvpn-1.6.0.ebuild:
+  Version bump
 
   02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> openvpn-1.5.0-r1.ebuild:
   Keyword ~alpha, bug 65839.

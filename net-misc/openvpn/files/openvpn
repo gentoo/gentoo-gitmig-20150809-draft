@@ -36,7 +36,7 @@ stop() {
 	for VPN in *
 	do
 		if [ -e /var/run/openvpn-$VPN.pid ]; then
-			ebegin "Stoping openvpn for $VPN"
+			ebegin "Stopping openvpn for $VPN"
 				start-stop-daemon --oknodo --stop --pidfile /var/run/openvpn-$VPN.pid
 				rm /var/run/openvpn-$VPN.pid
 			eend 0
