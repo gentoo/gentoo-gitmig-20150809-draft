@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51_rc7.ebuild,v 1.4 2004/10/28 16:13:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.51_rc7.ebuild,v 1.5 2004/12/07 06:09:40 usata Exp $
 
 inherit flag-o-matic toolchain-funcs
 
@@ -74,7 +74,7 @@ src_compile() {
 			make CFLAGS="-O2 -pipe" HAVE_64BIT_ARCH="${MULTILIB}" || die
 			;;
 		*)
-			if useq macos || useq ppc-macos || useq x86-fbsd; then
+			if useq ppc-macos || useq x86-fbsd; then
 				ewarn "NOT BUILDING SANDBOX ON $ARCH"
 			else
 				make || die
@@ -127,7 +127,7 @@ src_install() {
 	doexe *
 	doexe ${S}/src/tbz2tool
 
-	if use macos || use ppc-macos || use x86-fbsd; then
+	if use ppc-macos || use x86-fbsd; then
 		ewarn "Not installing sandbox on ${ARCH}"
 	else
 		#install sandbox
