@@ -7,6 +7,7 @@ alsa
 apm
 directfb
 firebird
+lirc
 mmx
 pic
 sse
