@@ -1,8 +1,11 @@
 # ChangeLog for net-im/micq
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/micq/ChangeLog,v 1.12 2003/10/01 14:16:25 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/micq/ChangeLog,v 1.13 2003/10/02 07:26:10 usata Exp $
 
 *micq-0.4.10.4 (01 Oct 2003)
+
+  02 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> micq-0.4.10.4.ebuild:
+  Fixed IUSE flags.
 
   01 Oct 2003; Mamoru KOMACHI <usata@gentoo.org> micq-0.4.10.4.ebuild:
   Version bumped. Bug #21153
