@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.6.ebuild,v 1.1 2004/11/14 10:32:29 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.6.ebuild,v 1.2 2004/11/15 14:53:54 suka Exp $
 
 # Notes:
 #
@@ -24,7 +24,7 @@
 #   Get support going for installing a custom language pack.  Also
 #   need to be able to install more than one language pack.
 
-inherit flag-o-matic eutils gcc
+inherit flag-o-matic eutils toolchain-funcs
 
 IUSE="gnome kde java curl zlib nptl"
 
@@ -194,11 +194,6 @@ oo_setup() {
 	unset LANGUAGE
 	unset LANG
 	unset LC_ALL
-
-	# We want gcc3 if possible!!!!
-	export WANT_GCC_3="yes"
-
-	export NEW_GCC="0"
 
 	if [ -x /usr/sbin/gcc-config ]
 	then
@@ -410,8 +405,8 @@ src_compile() {
 	if [ -z "$(grep 'CCCOMP' ${S}/${LinuxEnvSet})" ]
 	then
 		# Set CCCOMP and CXXCOMP.  This is still needed for STLport
-		export CCCOMP="$(gcc-getCC)"
-		export CXXCOMP="$(gcc-getCXX)"
+		export CCCOMP="$(tc-getCC)"
+		export CXXCOMP="$(tc-getCXX)"
 	fi
 
 	einfo "Bootstrapping OpenOffice.org..."

@@ -1,6 +1,11 @@
 # ChangeLog for app-office/openoffice-ximian
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.82 2004/11/14 10:32:29 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.83 2004/11/15 14:53:54 suka Exp $
+
+  15 Nov 2004; Andreas Proschofsky <suka@gentoo.org>
+  openoffice-ximian-1.1.55.ebuild, openoffice-ximian-1.3.5-r1.ebuild,
+  openoffice-ximian-1.3.6.ebuild:
+  Use toolchain-funcs.eclass instead of gcc.eclass
 
 *openoffice-ximian-1.3.6 (14 Nov 2004)
 
