@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 4a048915b0af3789261511a278620384 ChangeLog 2264
+MD5 e148c5177dcf9fc64879eb30c6d460dd smlnj-110.0.7.ebuild 2453
+MD5 2ada93c1e47180f8459a77fe483664ea smlnj-110.45.ebuild 2350
+MD5 e9c296f154172d9b20d2cf59386e9af1 ChangeLog 2387
 MD5 8b350f19c06fcabf1053b0421b7c3f5a metadata.xml 155
-MD5 17273376ffb79c363c799ffb2a562214 smlnj-110.0.7.ebuild 2369
-MD5 313033e0be3d43df81e6c36d08174595 smlnj-110.45.ebuild 2273
 MD5 052c6ec903df4598663eaaecb76a75cc files/digest-smlnj-110.0.7 857
-MD5 30591f243ab3c505e7a5c9d8b2ea5606 files/digest-smlnj-110.45 763
 MD5 1bbb6b968c7f7ba50fdd9abcac22343b files/smlnj-110.0.7-bindir.patch 364
 MD5 ad71c8d20ca50e85ceb5d44d0c7a4ea6 files/smlnj-110.0.7-gcc33-quirk-fix.patch 451
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBW06BI1lqEGTUzyQRAnNbAKCVFh2beQq98mHaA9wezoaf8WbQqQCeMHhm
-hS/IkkKtNZMRNjv98yeAznI=
-=ZORq
------END PGP SIGNATURE-----
+MD5 30591f243ab3c505e7a5c9d8b2ea5606 files/digest-smlnj-110.45 763

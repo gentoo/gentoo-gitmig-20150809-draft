@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/smlnj-110.0.7.ebuild,v 1.5 2004/07/07 10:53:41 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/smlnj/smlnj-110.0.7.ebuild,v 1.6 2005/02/06 14:00:15 mattam Exp $
 
 inherit eutils
 
@@ -8,18 +8,18 @@ IUSE=""
 
 DESCRIPTION="Standard ML of New Jersey compiler and libraries"
 
-SRC_URI="mirror://${P}-bin.x86-unix.tar.Z
-mirror://${P}-config.tar.Z
-mirror://${P}-runtime.tar.Z
-mirror://${P}-ml-lex.tar.Z
-mirror://${P}-ml-yacc.tar.Z
-mirror://${P}-ml-burg.tar.Z
-mirror://${P}-sml-nj.tar.Z
-mirror://${P}-smlnj-c.tar.Z
-mirror://${P}-smlnj-lib.tar.Z
-mirror://${P}-cml.tar.Z
-mirror://${P}-cm.tar.Z
-mirror://${P}-eXene.tar.Z"
+SRC_URI="mirror://gentoo/${P}-bin.x86-unix.tar.Z
+mirror://gentoo/${P}-config.tar.Z
+mirror://gentoo/${P}-runtime.tar.Z
+mirror://gentoo/${P}-ml-lex.tar.Z
+mirror://gentoo/${P}-ml-yacc.tar.Z
+mirror://gentoo/${P}-ml-burg.tar.Z
+mirror://gentoo/${P}-sml-nj.tar.Z
+mirror://gentoo/${P}-smlnj-c.tar.Z
+mirror://gentoo/${P}-smlnj-lib.tar.Z
+mirror://gentoo/${P}-cml.tar.Z
+mirror://gentoo/${P}-cm.tar.Z
+mirror://gentoo/${P}-eXene.tar.Z"
 
 HOMEPAGE="http://www.smlnj.org/"
 
