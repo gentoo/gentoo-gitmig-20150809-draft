@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/fixdos/fixdos-1.3.1.ebuild,v 1.5 2003/02/13 08:56:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/fixdos/fixdos-1.3.1.ebuild,v 1.6 2004/02/29 17:19:59 aliz Exp $
 
 S=${WORKDIR}/fixDos-${PV}
 DESCRIPTION="Set of utilities such as crlf which converts files between UNIX and DOS newlines."
@@ -19,7 +19,7 @@ src_unpack() {
 	cd ${S}
 	# Apply this patch to the makefile so that it builds with our
 	#  desired CFLAGS.
-	patch < ${FILESDIR}/${P}-gentoo-makefile.diff || die
+	epatch ${FILESDIR}/${P}-gentoo-makefile.diff
 }
 
 src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/nomadii-utils/nomadii-utils-0.8.ebuild,v 1.8 2003/09/05 12:10:36 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/nomadii-utils/nomadii-utils-0.8.ebuild,v 1.9 2004/02/29 17:20:00 aliz Exp $
 
 IUSE="readline"
 
@@ -18,18 +18,15 @@ DEPEND=">=sys-libs/ncurses-5.2
 	readline? ( >=sys-libs/readline-4.1 )"
 
 src_compile() {
-	cp -f Makefile Makefile.orig
-	sed -e "s:^LIBTERMCAP=-ltermcap$:LIBTERMCAP=-lncurses:" \
-		Makefile.orig > Makefile
+	sed -i -e "s:^LIBTERMCAP=-ltermcap$:LIBTERMCAP=-lncurses:" \
+		Makefile
 
-	cp -f Makefile Makefile.orig
-	sed -e "s:^OPTIMIZER= -O2$:OPTIMIZER= ${CFLAGS}:" \
-		Makefile.orig > Makefile
+	sed -i -e "s:^OPTIMIZER= -O2$:OPTIMIZER= ${CFLAGS}:" \
+		Makefile
 
 	if [ -z "`use readline`" ] ; then
-		cp -f Makefile Makefile.orig
-		sed -e "s:^USE_READLINE=1$:USE_READLINE=0:" \
-			Makefile.orig > Makefile
+		sed -i -e "s:^USE_READLINE=1$:USE_READLINE=0:" \
+			Makefile
 	fi
 
 	emake || die "compile failure"

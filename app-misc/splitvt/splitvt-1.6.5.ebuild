@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/splitvt/splitvt-1.6.5.ebuild,v 1.11 2003/02/13 09:09:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/splitvt/splitvt-1.6.5.ebuild,v 1.12 2004/02/29 17:20:00 aliz Exp $
 
 S=${WORKDIR}/${P}
 SRC_URI="http://www.devolution.com/~slouken/projects/${PN}/${P}.tar.gz"
@@ -16,14 +16,12 @@ DEPEND=">=sys-libs/ncurses-5.2"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	cp config.c config.orig
-	cat config.orig | sed "s:/usr/local/bin:${D}/usr/bin:g" > config.c
+	sed -i "s:/usr/local/bin:${D}/usr/bin:g" config.c
 }
 
 src_compile() {
 	./configure || die
-	cp Makefile Makefile.orig
-	sed -e "s:-O2:${CFLAGS}:" Makefile.orig > Makefile
+	sed -i -e "s:-O2:${CFLAGS}:" Makefile
 	make || die
 }
 

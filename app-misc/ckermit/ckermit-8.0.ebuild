@@ -1,7 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Michael Conrad Tilstra <tadpol@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-8.0.ebuild,v 1.7 2003/02/13 08:54:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-8.0.ebuild,v 1.8 2004/02/29 17:19:59 aliz Exp $
 
 MY_P=cku201
 S=${WORKDIR}
@@ -20,9 +20,8 @@ src_unpack() {
 
 	unpack ${A}
 	cd ${S}
-	patch -p0 < ${FILESDIR}/${PF}-gentoo.diff
-	cp makefile makefile.orig
-	sed -e "s:-O:$CFLAGS:" makefile.orig > makefile
+	epatch ${FILESDIR}/${PF}-gentoo.diff
+	sed -i -e "s:-O:$CFLAGS:" makefile
 }
 
 src_compile() {

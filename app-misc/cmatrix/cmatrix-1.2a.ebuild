@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cmatrix/cmatrix-1.2a.ebuild,v 1.6 2003/02/13 08:54:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cmatrix/cmatrix-1.2a.ebuild,v 1.7 2004/02/29 17:19:59 aliz Exp $
 
 DESCRIPTION="An ncurses based app to show a scrolling screen from the Matrix"
 HOMEPAGE="http://www.asty.org/cmatrix"
@@ -20,7 +20,7 @@ src_unpack() {
 	# patch Makefile.am to make sure the fonts installations don't violate the
 	# sandbox.
 	cd ${S}
-	patch -p1 < ${FILESDIR}/${P}-gentoo.patch || die
+	epatch ${FILESDIR}/${P}-gentoo.patch
 	automake
 }
 

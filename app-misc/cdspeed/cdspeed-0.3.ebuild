@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/cdspeed/cdspeed-0.3.ebuild,v 1.3 2004/02/22 06:58:28 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/cdspeed/cdspeed-0.3.ebuild,v 1.4 2004/02/29 17:19:59 aliz Exp $
 
 DESCRIPTION="Change the speed of your CD drive."
 HOMEPAGE="http://linuxfocus.org/~guido/"
@@ -16,9 +16,8 @@ S=${WORKDIR}/${P}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	mv Makefile Makefile.orig
-	sed -e "s:^CFLAGS=-O.*:CFLAGS=${CFLAGS}:" \
-		Makefile.orig > Makefile
+	sed -i -e "s:^CFLAGS=-O.*:CFLAGS=${CFLAGS}:" \
+		Makefile
 }
 
 src_compile() {

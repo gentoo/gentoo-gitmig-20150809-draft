@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/jail-1.9-r1.ebuild,v 1.7 2004/02/22 19:39:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/jail/jail-1.9-r1.ebuild,v 1.8 2004/02/29 17:19:59 aliz Exp $
 
 inherit eutils
 
@@ -26,13 +26,11 @@ src_unpack() {
 
 src_compile() {
 	# configuration files should be installed in /etc not /usr/etc
-	cp install.sh install.sh.orig
-	sed "s:\$4/etc:\${D}/etc:g" < install.sh.orig > install.sh
+	sed -i "s:\$4/etc:\${D}/etc:g" install.sh
 
 	# the destination directory should be /usr not /usr/local
 	cd ${S}/src
-	cp Makefile Makefile.orig
-	sed "s:usr/local:${D}/usr:g" < Makefile.orig > Makefile
+	sed -i "s:usr/local:${D}/usr:g" Makefile
 
 	emake || die "make failed"
 }
@@ -62,15 +60,11 @@ src_install() {
 	for f in ${FILES}; do
 		# documentation says funtion 'dosed' is supposed to do this, but didn't know how to make it work :'(
 		# dosed ${file} || die "error in dosed"
-		cp ${f} ${f}.orig
-		sed "s:/${D}/usr:/usr:g" < ${f}.orig > ${f}
-		rm ${f}.orig
+		sed -i "s:/${D}/usr:/usr:g" ${f}
 	done
 
 	cd ${D}/usr/lib
-	cp libjail.pm libjail.pm.orig
-	sed "s:/usr/etc:/etc:" < libjail.pm.orig > libjail.pm
-	rm libjail.pm.orig
+	sed -i "s:/usr/etc:/etc:" libjail.pm
 
 	cd ${S}/doc
 	dodoc CHANGELOG INSTALL README SECURITY VERSION

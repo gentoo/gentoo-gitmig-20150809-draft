@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.3.0.ebuild,v 1.4 2003/12/16 00:32:04 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.3.0.ebuild,v 1.5 2004/02/29 17:19:59 aliz Exp $
 
 IUSE=""
 
@@ -25,7 +25,7 @@ src_unpack() {
 	if [ "${ARCH}" = "ppc" -o "${ARCH}" = "sparc" -o "${ARCH}" = "sparc64" ]; then
 		# This patch fixes inverted color on big endian machines
 		einfo "Applying big endian patch..."
-		cd ${S}; patch -p0 < ${FILESDIR}/endeavour-2.1.20-bigendian.diff > /dev/null || die
+		cd ${S}; epatch ${FILESDIR}/endeavour-2.1.20-bigendian.diff
 	fi
 }
 

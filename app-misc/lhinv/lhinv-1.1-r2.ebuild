@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lhinv/lhinv-1.1-r2.ebuild,v 1.6 2003/09/05 12:10:36 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lhinv/lhinv-1.1-r2.ebuild,v 1.7 2004/02/29 17:19:59 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Linux Hardware Inventory"
@@ -15,9 +15,8 @@ RDEPEND="dev-lang/perl"
 
 src_compile() {
 	cd ${S}/cgi
-	cp w3hinv w3hinv.orig
-	sed -e "s:^my \$HINV =.*:my \$HINV =\"/usr/bin/lhinv\";:" \
-		w3hinv.orig > w3hinv
+	sed -i -e "s:^my \$HINV =.*:my \$HINV =\"/usr/bin/lhinv\";:" \
+		w3hinv
 	cd ..
 	make local || die
 }

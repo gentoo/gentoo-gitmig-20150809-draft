@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.4.3-r2.ebuild,v 1.4 2003/09/05 12:10:36 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcdproc/lcdproc-0.4.3-r2.ebuild,v 1.5 2004/02/29 17:19:59 aliz Exp $
 
 SRC_URI="mirror://sourceforge/lcdproc/${P}.tar.gz"
 DESCRIPTION="Client/Server suite to drive all kinds of LCD (-like) devices"
@@ -24,8 +24,7 @@ src_unpack() {
 	sed -i "889s:-O3:${CFLAGS}:" configure
 
 	# fix a few bugs ;)
-	patch -p2 < ${FILESDIR}/${P}-gentoo.diff || die \
-		"Patch #1 failed."
+	epatch ${FILESDIR}/${P}-gentoo.diff
 }
 
 src_compile() {

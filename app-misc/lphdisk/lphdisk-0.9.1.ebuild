@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lphdisk/lphdisk-0.9.1.ebuild,v 1.6 2004/02/22 19:40:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lphdisk/lphdisk-0.9.1.ebuild,v 1.7 2004/02/29 17:19:59 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="utility for preparing a hibernation partition for APM Suspend-To-Disk"
@@ -16,8 +16,9 @@ KEYWORDS="x86 -ppc -sparc -alpha"
 LICENSE="Artistic"
 
 src_compile() {
-	sed "s:/usr/local:usr:" Makefile > Makefile.orig
-	sed -e "s:-g -Wall:${CFLAGS}:" Makefile.orig > Makefile
+	sed -i -e "s:/usr/local:usr:" \
+		-e "s:-g -Wall:${CFLAGS}:" \
+		Makefile
 	make || die
 }
 

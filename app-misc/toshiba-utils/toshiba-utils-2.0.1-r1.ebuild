@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/toshiba-utils/toshiba-utils-2.0.1-r1.ebuild,v 1.10 2004/02/22 19:41:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/toshiba-utils/toshiba-utils-2.0.1-r1.ebuild,v 1.11 2004/02/29 17:20:00 aliz Exp $
 
 S=${WORKDIR}/toshutils-${PV}
 DESCRIPTION="Toshiba Laptop Utilities"
@@ -18,13 +18,12 @@ src_unpack() {
 	unpack ${A} ; cd ${S}
 	rm -f config.{cache,log,status} src/*.o
 
-	mv src/Makefile.in src/Makefile.in.orig
-	sed -e "s:-m486 -O2::" \
+	sed -i -e "s:-m486 -O2::" \
 		-e "s:\(^CFLAGS =.*\):\1 ${CFLAGS}:" \
 		-e "s:^install\:.*:install\: all install-prog:" \
-		src/Makefile.in.orig > src/Makefile.in
+		src/Makefile.in
 
-	use X || patch -p1 < ${FILESDIR}/${P}-gentoo.diff || die
+	use X || epatch ${FILESDIR}/${P}-gentoo.diff
 	autoconf || die
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.1.20-r1.ebuild,v 1.6 2003/11/14 20:04:51 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/endeavour-2.1.20-r1.ebuild,v 1.7 2004/02/29 17:19:59 aliz Exp $
 
 M=endeavour2-mimetypes
 DESCRIPTION="powerful file and image browser"
@@ -22,13 +22,12 @@ src_unpack() {
 
 	#need to remove reference to ctypes.h from fio.cpp to make gcc-3.x compile the package
 	cd ${S}/endeavour2
-	mv fio.cpp fio.cpp-orig
-	sed -e "s:#include <ctype.h>://#include <ctype.h>:" fio.cpp-orig >fio.cpp
+	sed -i -e "s:#include <ctype.h>://#include <ctype.h>:" fio.cpp
 
 	if [ "${ARCH}" = "ppc" -o "${ARCH}" = "sparc" -o "${ARCH}" = "sparc64" ]; then
 		# This patch fixes inverted color on big endian machines
 		einfo "Applying big endian patch..."
-		cd ${S}; patch -p0 < ${FILESDIR}/${P}-bigendian.diff > /dev/null || die
+		cd ${S}; epatch ${FILESDIR}/${P}-bigendian.diff
 	fi
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/colortail/colortail-0.3.0-r3.ebuild,v 1.8 2004/02/09 07:31:55 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/colortail/colortail-0.3.0-r3.ebuild,v 1.9 2004/02/29 17:19:59 aliz Exp $
 
 DESCRIPTION="Colortail custom colors your log files and works like tail"
 SRC_URI="http://www.student.hk-r.se/~pt98jan/colortail-0.3.0.tar.gz"
@@ -21,7 +21,7 @@ src_unpack() {
 	[ -z "${CXX}" ] && CXX=g++
 	if [ "`${CXX} -dumpversion | cut -d. -f1,2`" != "2.95" ] ; then
 		# Both 3.1.x and 3.2 work with the patch.
-		patch -p1 < ${FILESDIR}/${PV}/ansi-c++-gcc-3.2.diff || die
+		epatch ${FILESDIR}/${PV}/ansi-c++-gcc-3.2.diff
 	fi
 	${CXX} -dumpversion > .gentoo-compiler-version
 }
