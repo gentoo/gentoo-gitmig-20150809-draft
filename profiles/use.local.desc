@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.103 2003/09/06 16:15:49 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.104 2003/09/08 00:45:27 lanius Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -20,6 +20,9 @@ app-games/fakk2:nocd - Copies all data for game from CD
 app-games/fortune-mod:offensive - Allow fortune to offend you
 app-games/freecraft-fcmp:music - Also installs the music that the project provides
 app-games/halflife-metamod:src - use the source, not the binary install
+app-games/halflife-statsme:nocstrike - no counterstrike
+app-games/halflife-statsme:nodod - no day of defeat
+app-games/halflife-statsme:notfc - no team fortress classic
 app-games/nwn:nowin - For those people who cant grab the 1.2 gigs of data files from a windows partition
 app-games/quake2-relnev:noqmax - Do not build the pretty version (quake max)
 app-games/tuxracer:stencil-buffer - Enables use of stencil-buffer
