@@ -1,0 +1,19 @@
+--- src/gui_kde_widget.cc.orig	Thu Aug  1 12:14:08 2002
++++ src/gui_kde_widget.cc	Thu Aug  1 12:14:17 2002
+@@ -46,7 +46,6 @@
+ #include "gui_kde_widget.h"
+ 
+ extern "C" {
+-char_u *alloc(unsigned size);    
+ #include "version.h"
+ }
+ 
+@@ -361,7 +360,7 @@
+ 
+     if (QUriDrag::decode(e, urls)) {
+ 	n = urls.count();
+-        fnames = (char_u **)alloc((n+1) * sizeof(char_u *));
++        fnames = (char_u **)lalloc((n+1) * sizeof(char_u *), TRUE);
+ 	nfiles = 0;
+ #if QT_VERSION>=300
+ 	QPtrListIterator<char> it(urls);
