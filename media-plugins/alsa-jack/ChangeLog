@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/alsa-jack
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/alsa-jack/ChangeLog,v 1.1 2004/03/15 00:16:07 eradicator Exp $
+
+*alsa-jack-1.0.3b (14 Mar 2004)
+
+  14 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  alsa-jack-1.0.3b.ebuild, metadata.xml:
+  Package to resolve circular dependency between alsa and jack. Ebuild submitted
+  in bug #35674 by Rick Harris <rickfharris@yahoo.com.au>.
+
