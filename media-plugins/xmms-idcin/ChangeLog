@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/xmms-idcin
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-idcin/ChangeLog,v 1.2 2004/02/19 01:32:59 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-idcin/ChangeLog,v 1.3 2004/03/26 21:54:18 eradicator Exp $
+
+  26 Mar 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-idcin-0.5.ebuild:
+  Stable x86.
 
   19 Feb 2004; Martin Holzer <mholzer@gentoo.org> :
   adding missing digest. closes 42072
