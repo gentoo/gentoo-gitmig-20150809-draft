@@ -1,6 +1,6 @@
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# ChangeLog for dev-libs/mkl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mkl/ChangeLog,v 1.1 2002/04/27 01:19:07 sandymac Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mkl/ChangeLog,v 1.2 2002/11/06 06:24:32 vapier Exp $
 
 *mkl-5.1 (26 Apr 2002)
 
