@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/trswm
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/trswm/ChangeLog,v 1.2 2003/11/05 12:03:03 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/trswm/ChangeLog,v 1.3 2003/12/31 04:26:11 obz Exp $
+
+  31 Dec 2003; Mike Gardiner <obz@gentoo.org> trswm-0.3.ebuild:
+  Removed ~alpha ~arm ~hppa ~mips from trswm-0.3, as lua4 isnt available on 
+  those archs
 
 *trswm-0.4.9 (05 Nov 2003)
 
