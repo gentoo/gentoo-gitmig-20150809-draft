@@ -1,14 +1,13 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.5 2004/01/02 02:56:09 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.6 2004/02/21 12:20:06 usata Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
 # A generic eclass to install tetex distributions.
 
-inherit eutils flag-o-matic alternatives
-filter-flags "-fstack-protector"
+inherit alternatives
 ECLASS=tetex
 INHERITED="${INHERITED} ${ECLASS}"
 EXPORT_FUNCTIONS src_unpack src_compile src_install pkg_preinst pkg_postinst
@@ -94,6 +93,8 @@ tetex_src_unpack() {
 }
 
 tetex_src_compile() {
+
+	filter-flags "-fstack-protector"
 
 	local xdvik
 
