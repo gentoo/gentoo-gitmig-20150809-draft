@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3-r1.ebuild,v 1.12 2005/01/07 01:47:41 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.3-r1.ebuild,v 1.13 2005/01/09 19:02:54 kumba Exp $
 
 DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie+ssp extensions, Haj Ten Brugge runtime bounds checking"
 
@@ -162,19 +162,37 @@ src_unpack() {
 		#epatch ${FILESDIR}/3.4.3/libffi-nogcj-lib-path-fix.patch
 	fi
 
-	# If mips, and we DON'T want multilib, then rig gcc to only use n32 OR n64
-	if use mips && use !multilib; then
-		use n32 && epatch ${FILESDIR}/3.4.1/gcc-3.4.1-mips-n32only.patch
-		use n64 && epatch ${FILESDIR}/3.4.1/gcc-3.4.1-mips-n64only.patch
-	fi
-
-	# Patch forward-ported from a gcc-3.0.x patch that adds -march=r10000 and
-	# -mtune=r10000 support to gcc (Allows the compiler to generate code to
-	# take advantage of R10k's second ALU, perform shifts, etc..
-	# Needs re-porting for DFA in gcc-4.0
+	# /* Begin mips bits */
 	if use mips; then
+		# If mips, and we DON'T want multilib, then rig gcc to only use n32 OR n64
+		if use !multilib; then
+			use n32 && epatch ${FILESDIR}/3.4.1/gcc-3.4.1-mips-n32only.patch
+			use n64 && epatch ${FILESDIR}/3.4.1/gcc-3.4.1-mips-n64only.patch
+		fi
+
+		# Patch forward-ported from a gcc-3.0.x patch that adds -march=r10000 and
+		# -mtune=r10000 support to gcc (Allows the compiler to generate code to
+		# take advantage of R10k's second ALU, perform shifts, etc..
+		#
+		# Needs re-porting to DFA in gcc-4.0 - Any Volunteers? :)
 		epatch ${FILESDIR}/3.4.2/gcc-3.4.x-mips-add-march-r10k.patch
+
+		# This is a very special patch -- it allows us to build semi-usable kernels
+		# on SGI IP28 (Indigo2 Impact R10000) systems.  The patch is henceforth
+		# regarded as a kludge by upstream, and thus, it will never get accepted upstream,
+		# but for our purposes of building a kernel, it works.
+		# Unless you're building an IP28 kernel, you really don't need care about what
+		# this patch does, because if you are, you are probably already aware of what
+		# it does.
+		# All that said, the abilities of this patch are disabled by default and need
+		# to be enabled by passing -mip28-cache-barrier.  Only used to build kernels, 
+		# There is the possibility it may be used for very specific userland apps too.
+		if use ip28; then
+			epatch ${FILESDIR}/3.4.2/gcc-3.4.2-mips-ip28_cache_barriers.patch
+		fi
 	fi
+	# /* End mips bits */
+
 
 	# hack around some ugly 32bit sse2 wrong-code bugs
 	epatch ${FILESDIR}/3.4.2/gcc34-m32-no-sse2.patch
