@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/cowsay/cowsay-3.03.ebuild,v 1.7 2005/02/01 17:18:46 kito Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/cowsay/cowsay-3.03.ebuild,v 1.8 2005/02/01 17:36:04 kito Exp $
 
 DESCRIPTION="configurable talking ASCII cow (and other characters)"
 HOMEPAGE="http://www.nog.net/~tony/warez/cowsay.shtml"
@@ -33,6 +33,6 @@ src_install() {
 	doman cowsay.1
 	dosym cowsay /usr/bin/cowthink
 	dosym cowsay.1.gz /usr/share/man/man1/cowthink.1.gz
-	dodir "/usr/share/${P}"
-	cp -r cows/ "${D}/usr/share/${P}/" || die "cp failed"
+	dodir "/usr/share/${P}/cows"
+	cp -r cows "${D}/usr/share/${P}/" || die "cp failed"
 }
