@@ -1,0 +1,8 @@
+# ChangeLog for x11-themes/ridge
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ridge/ChangeLog,v 1.1 2004/07/01 17:10:58 jhuebel Exp $
+
+  01 Jul 2004; Jason Eric Huebel <jhuebel@gentoo.org> :
+  initial ebuild release. Theme created by Jens Luetkens
+  <j.luetkens@limitland.de>
+
