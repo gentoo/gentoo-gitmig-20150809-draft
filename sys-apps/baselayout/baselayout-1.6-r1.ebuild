@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6-r1.ebuild,v 1.11 2001/08/27 02:08:18 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6-r1.ebuild,v 1.12 2001/08/27 19:46:28 drobbins Exp $
 
 SV=1.1.3
 S=${WORKDIR}/rc-scripts-${SV}
@@ -194,8 +194,4 @@ src_install()
 			[ -e ${S}/init.d/${bar} ] && dosym /etc/init.d/${bar} /etc/runlevels/${foo}/${bar}
 		done
 	done
-
-	#default make.profile symlink; handy for doing bootstraps, etc.
-	dosym /usr/portage/profiles/default /etc/make.profile
-
 }
