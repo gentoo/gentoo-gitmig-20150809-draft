@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/pine
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/ChangeLog,v 1.39 2003/11/09 07:46:59 max Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/ChangeLog,v 1.40 2004/03/25 18:16:10 jhuebel Exp $
+
+  25 Mar 2004; Jason Huebel,,, <jhuebel@gentoo.org> pine-4.58.ebuild:
+  stable on amd64
 
 *pine-4.58-r3 (08 Nov 2003)
 
