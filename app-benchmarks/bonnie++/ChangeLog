@@ -1,6 +1,14 @@
 # ChangeLog for app-benchmarks/bonnie++
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie++/ChangeLog,v 1.10 2004/09/15 00:52:00 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/bonnie++/ChangeLog,v 1.11 2004/10/05 11:08:30 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  bonnie++-1.03.ebuild, bonnie++-1.93c.ebuild:
+  Masked bonnie++-1.93c.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  bonnie++-1.03.ebuild:
+  Masked bonnie++-1.03.ebuild stable for ppc
 
   15 Sep 2004; Danny van Dyk <kugelfang@gentoo.org>
   +files/bonnie++-1.93c-64bit.patch, bonnie++-1.93c.ebuild:

@@ -1,6 +1,18 @@
 # ChangeLog for app-benchmarks/iozone
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/ChangeLog,v 1.10 2004/09/11 15:26:22 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/iozone/ChangeLog,v 1.11 2004/10/05 11:08:30 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  iozone-3.217.ebuild, iozone-3.218.ebuild, iozone-3.221.ebuild:
+  Masked iozone-3.221.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  iozone-3.217.ebuild, iozone-3.218.ebuild:
+  Masked iozone-3.218.ebuild stable for ppc
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  iozone-3.217.ebuild:
+  Masked iozone-3.217.ebuild stable for ppc
 
 *iozone-3.221-r1 (12 Sep 2004)
 

@@ -1,6 +1,10 @@
 # ChangeLog for app-benchmarks/piozone
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/piozone/ChangeLog,v 1.5 2004/06/24 21:28:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-benchmarks/piozone/ChangeLog,v 1.6 2004/10/05 11:08:30 pvdabeel Exp $
+
+  05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  piozone-1.0-r2.ebuild:
+  Masked piozone-1.0-r2.ebuild stable for ppc
 
   13 Apr 2004; David Holm <dholm@gentoo.org> piozone-1.0-r2.ebuild:
   Added to ~ppc.
