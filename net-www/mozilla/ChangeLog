@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.221 2005/01/24 19:41:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.222 2005/02/27 09:15:55 brad Exp $
+
+  27 Feb 2005; Brad Laue <brad@gentoo.org> mozilla-1.7.5.ebuild:
+  Build fix for systems with Cairo >=0.3.0 installed.
 
   24 Jan 2005; Aron Griffis <agriffis@gentoo.org> -files/enigmail-Makefile,
   -files/gtk2mozilla_head_patch2, -files/ipc-1.0.6-nsPipeChannel.patch,
