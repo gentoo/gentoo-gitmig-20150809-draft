@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.13 2004/03/28 22:01:51 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.14 2004/03/28 22:08:56 stuart Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -539,7 +539,7 @@ php-sapi_src_install() {
 	# This is where we install header files that PHP itself doesn't install,
 	# but which PECL packages depend on
 
-	for x in ext/mbstring/libmbfl/mbfl/mbfilter.h ; do
+	for x in ext/mbstring/libmbfl/mbfl/mbfilter.h ext/mbstring/libmbfl/mbfl/mbfl_defs.h ext/mbstring/libmbfl/mbfl/mbfl_consts.h ext/mbstring/libmbfl/mbfl/mbfl_allocators.h ext/mbstring/libmbfl/mbfl/mbfl_encoding.h ext/mbstring/libmbfl/mbfl/mbfl_language.h ext/mbstring/libmbfl/mbfl/mbfl_string.h ext/mbstring/libmbfl/mbfl/mbfl_convert.h ext/mbstring/libmbfl/mbfl/mbfl_ident.h ext/mbstring/libmbfl/mbfl/mbfl_memory_device.h; do
 		my_headerdir="/usr/include/php/`dirname $x`"
 		echo "$my_headerdir"
 		if [ ! -d "${D}$my_headerdir" ]; then
