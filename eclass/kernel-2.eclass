@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.43 2004/08/25 22:53:24 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kernel-2.eclass,v 1.44 2004/09/11 23:26:16 agriffis Exp $
 
 # kernel.eclass rewrite for a clean base regarding the 2.6 series of kernel
 # with back-compatibility for 2.4
@@ -646,9 +646,9 @@ detect_arch() {
 		COMPAT_URI="${LOOP_ARCH}_URI"
 		COMPAT_URI="${!COMPAT_URI}"
 		
-		[ -n "${COMPAT_URI}" ] && ARCH_URI="${ARCH_URI} $(echo ${LOOP_ARCH} | tr [A-Z] [a-z])? ( ${COMPAT_URI} )"
+		[ -n "${COMPAT_URI}" ] && ARCH_URI="${ARCH_URI} $(echo ${LOOP_ARCH} | tr '[:upper:]' '[:lower:]')? ( ${COMPAT_URI} )"
 		
-		if [ "${LOOP_ARCH}" == "$(echo ${ARCH} | tr [a-z] [A-Z])" ]
+		if [ "${LOOP_ARCH}" == "$(echo ${ARCH} | tr '[:lower:]' '[:upper:]')" ]
 		then
 			for i in ${COMPAT_URI}
 			do
