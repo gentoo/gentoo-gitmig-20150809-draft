@@ -5,5 +5,9 @@
 		The app-office category contains 'office' (word processing,
 		spreadsheets, presentation) software packages.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie app-office enthält Bürosoftware (Textverarbeitung,
+		Tabellenkalkulation, Präsentation).
+	</longdescription>
 </catmetadata>
 
