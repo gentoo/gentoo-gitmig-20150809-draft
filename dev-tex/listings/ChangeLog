@@ -1,0 +1,11 @@
+# ChangeLog for dev-tex/listings
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/listings/ChangeLog,v 1.1 2003/09/19 17:21:51 obz Exp $
+
+*listings-1.1 (20 Sep 2003)
+
+  20 Sep 2003; Mike Gardiner <obz@gentoo.org> listings-1.1.ebuild, metadata.xml:
+  First commit. Needed some eclass overriding, which may in fact hint at fixes
+  that need to be applied to the class. Thanks to <g_sauthoff@web.de> for a
+  submission and bug #23061
+
