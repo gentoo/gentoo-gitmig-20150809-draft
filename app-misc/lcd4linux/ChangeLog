@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/lcd4linux
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/ChangeLog,v 1.5 2003/02/12 05:02:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lcd4linux/ChangeLog,v 1.6 2003/09/21 17:37:52 mholzer Exp $
+
+*lcd4linux-0.9.9 (22 Sep 2003)
+
+  22 Sep 2003; Martin Holzer <mholzer@gentoo.org> lcd4linux-0.9.9.ebuild:
+  Version bumped.
 
 *lcd4linux-0.98-r2 (27 May 2002)
 
