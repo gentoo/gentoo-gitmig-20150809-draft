@@ -84,3 +84,5 @@ move app-misc/wmmon+smp x11-plugins/wmmon+smp
 move app-misc/wmtimer x11-plugins/wmtimer
 move media-sound/wmix x11-plugins/wmix
 move app-misc/upx app-arch/upx
+move sys-apps/sysklogd app-admin/metalog
+
