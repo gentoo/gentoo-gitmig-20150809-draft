@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3712 2005/03/11 06:20:11 chriswhite Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3713 2005/03/11 15:43:29 angusyoung Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -20,6 +20,10 @@
 ##
 ##   End example
 ##
+
+# Otavio R. Piske <angusyoung@gentoo.org> (11 Mar 2005)
+# New ebuild that needs more testing.
+net-analyzer/nomad
 
 # Aron Griffis <agriffis@gentoo.org> (10 Mar 2005)
 # For baselayout-1.12, alpha/beta signify baselayout developers only;
