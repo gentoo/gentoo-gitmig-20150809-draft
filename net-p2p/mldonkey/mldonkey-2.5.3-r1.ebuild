@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.3-r1.ebuild,v 1.6 2003/11/16 23:03:51 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.3-r1.ebuild,v 1.7 2003/11/30 21:26:51 jbms Exp $
 
 IUSE="gtk"
 
@@ -93,6 +93,6 @@ pkg_postinst() {
 	einfo "If you want to start mldonkey as a system service, use"
 	einfo "the /etc/init.d/mldonkey script. To control bandwidth, use"
 	einfo "the 'slow' and 'fast' arguments. Be sure to have a look at"
-	einfo "/etc/conf.d/mldonkey either."
+	einfo "/etc/conf.d/mldonkey also."
 	echo
 }
