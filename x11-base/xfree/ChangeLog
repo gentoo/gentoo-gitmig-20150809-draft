@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xfree
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.226 2003/10/25 23:34:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/ChangeLog,v 1.227 2003/10/26 20:01:54 spyderous Exp $
+
+  26 Oct 2003; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.99.14.ebuild:
+  PATCH_VER 0.4. I swear I've pulled 5310_ppc_4.3.0-enable-nv.patch a few times
+  already, but it was still there. Now it's gone (again?).
 
   25 Oct 2003; Donnie Berkholz <spyderous@gentoo.org>; xfree-4.3.99.14.ebuild:
   PATCH_VER 0.3. Add 0280_hppa_4.3.0-build-zlib-with-fpic.patch and
