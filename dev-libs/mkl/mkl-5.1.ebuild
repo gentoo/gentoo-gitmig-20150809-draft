@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mkl/mkl-5.1.ebuild,v 1.9 2003/02/13 10:47:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mkl/mkl-5.1.ebuild,v 1.10 2003/11/15 03:23:01 seemant Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Intel(R) Math Kernel Library"
@@ -17,7 +17,7 @@ LICENSE="imkl-5.1"
 KEYWORDS="x86 sparc "
 
 
-DEPEND="sys-apps/cpio
+DEPEND="app-arch/cpio
 	app-arch/rpm"
 
 RDEPEND=">=sys-kernel/linux-headers-2.4
