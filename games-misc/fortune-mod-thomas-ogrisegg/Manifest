@@ -1,4 +1,14 @@
-MD5 627f511c680abadf249afdab50d7116b ChangeLog 633
-MD5 e7ab2a5fd04efd4d977aa2a4d39e2d16 fortune-mod-thomas-ogrisegg-20030120.ebuild 663
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 bca4c8263e49265b48e51f5c4295af0d fortune-mod-thomas-ogrisegg-20030120.ebuild 669
 MD5 959fc7abb397bb88b9eeb99c8553e5ba metadata.xml 257
+MD5 32d9ff5e8a999ebcfea06b649be271a7 ChangeLog 761
 MD5 4545de61d6fd31694241083fd1bcee51 files/digest-fortune-mod-thomas-ogrisegg-20030120 87
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBdEEgugEuf3OQ0akRAvv/AJ9mQYiPX0wY3unUUNUzPMac59oSfQCgm89I
+yai97ruBP+cCggtb5yVDJvE=
+=5eTL
+-----END PGP SIGNATURE-----
