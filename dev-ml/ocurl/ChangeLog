@@ -1,0 +1,10 @@
+# ChangeLog for dev-ml/ocurl
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ocurl/ChangeLog,v 1.1 2005/03/08 23:49:23 mattam Exp $
+
+*ocurl-0.1.6 (09 Mar 2005)
+
+  09 Mar 2005; Matthieu Sozeau <mattam@gentoo.org>
+  +files/0.1.6-curl-helper.patch, +ocurl-0.1.6.ebuild:
+  curl binding for ocaml.
+
