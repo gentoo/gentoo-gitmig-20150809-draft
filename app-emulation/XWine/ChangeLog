@@ -1,8 +1,13 @@
 # ChangeLog for app-emulation/XWine
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/XWine/ChangeLog,v 1.1 2002/08/19 21:28:46 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/XWine/ChangeLog,v 1.2 2002/09/04 05:51:44 raker Exp $
 
 *XWine-0.2.2.ebuild (17 Aug 2002)
+
+  03 Sep 2002; Nick Hadaway <raker@gentoo.org> XWine-0.2.2.ebuild :
+  Changed to econf and einstall.  Added myconf switches for gnome and
+  nls support.  Changed dependancy from libgnome to gnome-libs and
+  ORBit.
 
   19 Aug 2002; Nick Hadaway <raker@gentoo.org> XWine-0.2.2.ebuild :
   Updated ebuild to not install /usr/share/doc/winex and associated
