@@ -85,3 +85,6 @@ postgres
 pcre
 
 emul-linux-x86
+
+# breaks clisp builds
+fastcgi
