@@ -83,3 +83,4 @@ move app-sci/emboss sci-biology/emboss
 move app-sci/embassy-domainatrix sci-biology/embassy-domainatrix
 move app-sci/embassy-emnu sci-biology/embassy-emnu
 move app-sci/embassy-esim4 sci-biology/embassy-esim4
+move app-sci/embassy-hmmer sci-biology/embassy-hmmer
