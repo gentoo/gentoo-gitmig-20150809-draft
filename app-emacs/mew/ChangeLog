@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/mew
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.25 2004/08/26 15:41:10 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/ChangeLog,v 1.26 2004/09/03 22:31:01 slarti Exp $
+
+  03 Sep 2004; Tom Martin <slarti@gentoo.org> mew-4.0.67.ebuild:
+  Marked ~amd64, resolves #58523. Thanks to Gabriel Ebner <ge@gabrielebner.at>
+  for reporting.
 
 *mew-4.0.67 (27 Aug 2004)
 

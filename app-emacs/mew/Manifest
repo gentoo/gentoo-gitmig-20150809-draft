@@ -1,15 +1,25 @@
-MD5 dd3bf705fc3a3af147f6de90e5c949fb ChangeLog 3755
-MD5 b8a5a05dc587cbca65b831dedcd4488c metadata.xml 424
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 15aec711d54a293c559eb19b33766bea mew-4.0.64.ebuild 967
 MD5 a3f0650799251293f9376feba3f99ca1 mew-2.3-r1.ebuild 1032
 MD5 4211de92271ce618ff8c5dca02d5b1e3 mew-3.1.ebuild 1097
+MD5 72af3ab64c956a3f52d8a4582e6513e7 mew-4.0.67.ebuild 972
 MD5 6a9f5d8ec3dae78e159642492ae114d8 mew-3.3.ebuild 1145
-MD5 c156801b42878a0fa108ea794e130de4 mew-4.0.67.ebuild 964
-MD5 15aec711d54a293c559eb19b33766bea mew-4.0.64.ebuild 967
+MD5 1f5e342d80fd554742b4eef1e5277b55 ChangeLog 3918
+MD5 b8a5a05dc587cbca65b831dedcd4488c metadata.xml 424
 MD5 b01c67ed2c3e6adf6f0895d1c0097b27 files/50mew-gentoo.el 187
+MD5 ce3d967439ce0410358389f065b7f8dd files/mew-smtp-2.3-gentoo.patch 632
 MD5 be2f43b958a3f2ddfffc249ff48c9332 files/digest-mew-2.3-r1 59
+MD5 785aae73b26c7bd6fa17daa5748c7235 files/digest-mew-4.0.64 62
+MD5 0897602600eda6f092edb252e27ab5e5 files/digest-mew-4.0.67 62
 MD5 d61b7b73e39d967857b0d7a72505117e files/digest-mew-3.1 59
 MD5 28ccf63b3de3b67fca74f72ce382fec4 files/digest-mew-3.3 59
-MD5 ce3d967439ce0410358389f065b7f8dd files/mew-smtp-2.3-gentoo.patch 632
-MD5 0897602600eda6f092edb252e27ab5e5 files/digest-mew-4.0.67 62
-MD5 785aae73b26c7bd6fa17daa5748c7235 files/digest-mew-4.0.64 62
 MD5 dde1c4f5ab658fe3d1ea86164db3cc11 files/3.x/50mew-gentoo.el 246
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOPDfCHk4+ZoBpvsRAl8FAKCoU/ehPzBGpH9BRIG0xeyzhC1n6gCgnNXH
+Q8olJl8HyE7Jy1liTNbppWI=
+=uNck
+-----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/mew-4.0.67.ebuild,v 1.1 2004/08/26 15:41:10 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/mew/mew-4.0.67.ebuild,v 1.2 2004/09/03 22:31:01 slarti Exp $
 
 inherit elisp
 
@@ -13,7 +13,7 @@ SRC_URI="ftp://ftp.mew.org/pub/Mew/alpha/${P}.tar.gz"
 LICENSE="BSD"
 SLOT="0"
 # 4.x is meant to be a development branch, so please don't unmask it!
-KEYWORDS="~x86 ~alpha"
+KEYWORDS="~x86 ~alpha ~amd64"
 
 DEPEND="virtual/emacs"
 RDEPEND="${DEPEND}
