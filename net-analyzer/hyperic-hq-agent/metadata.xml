@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<herd>no-herd</herd>
+	<maintainer>
+		<email>mattm@gentoo.org</email>
+		<name>Matthew Marlowe</name>
+	</maintainer>
+	<longdescription>The hyperic-hq-agent allows the hyperic server to monitor an extensive set of system metrics, including the health of mysql, apache, tomcat, and various other enterprise applications.</longdescription>
+</pkgmetadata>

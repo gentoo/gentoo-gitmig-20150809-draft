@@ -1,0 +1,7 @@
+# ChangeLog for net-analyzer/hyperic-hq-agent
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/hyperic-hq-agent/ChangeLog,v 1.1 2005/01/12 22:00:19 mattm Exp $
+
+  12 Jan 2005; Matthew Marlowe <mattm@gentoo.org> :
+  Initial commit of hyperic-hq-agent using latest upstream version.
+
