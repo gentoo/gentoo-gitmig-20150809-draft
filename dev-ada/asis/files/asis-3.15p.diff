@@ -1,0 +1,46 @@
+diff -Naur asis-3.15p-src.orig/asis/a4g-gnat_int.ads asis-3.15p-src/asis/a4g-gnat_int.ads
+--- asis-3.15p-src.orig/asis/a4g-gnat_int.ads	2002-10-24 10:13:16.000000000 +0200
++++ asis-3.15p-src/asis/a4g-gnat_int.ads	2003-06-09 22:34:06.000000000 +0200
+@@ -69,7 +69,7 @@
+    -- Compiler Variables & Routines --
+    -----------------------------------
+ 
+-   Gcc      : constant String := "gcc";
++   Gcc      : constant String := "gnatgcc";
+ 
+    Nul_Argument_List : constant Argument_List (1 .. 0) := (others => null);
+ 
+diff -Naur asis-3.15p-src.orig/Makefile.stub asis-3.15p-src/Makefile.stub
+--- asis-3.15p-src.orig/Makefile.stub	2002-10-24 10:13:16.000000000 +0200
++++ asis-3.15p-src/Makefile.stub	2003-06-09 22:34:06.000000000 +0200
+@@ -1,8 +1,8 @@
+ #host system
+-host := $(shell gcc -dumpmachine)
++host := $(shell gnatgcc -dumpmachine)
+ 
+ # Where Asis library should be installed
+-INSTALL_DIR=$(HOME)/local
++INSTALL_DIR=/usr
+ 
+ # Asis specific directories
+ GNAT_DIR=../gnat
+@@ -55,4 +55,4 @@
+ 
+ # GCC backend specific flags
+ CFLAGS= -O2 -g
+-CC=gcc
++CC=gnatgcc
+diff -Naur asis-3.15p-src.orig/obj/Makefile asis-3.15p-src/obj/Makefile
+--- asis-3.15p-src.orig/obj/Makefile	2002-10-24 10:13:17.000000000 +0200
++++ asis-3.15p-src/obj/Makefile	2003-06-09 22:36:00.000000000 +0200
+@@ -1,8 +1,7 @@
+ include ../Makefile.stub
+-IDIR=$(INSTALL_DIR)/asis
++IDIR=$(INSTALL_DIR)/share/asis
+ install: libasis$(arext)
+-	$(RMDIR) $(IDIR)
+-	$(MKDIR) $(IDIR)
++	install -d $(IDIR)
+ 	$(INSTALL_FILES) *.ali $(IDIR)
+ 	$(CHMOD) a-w $(IDIR)/*.ali
+ 	$(INSTALL_FILES) *$(arext) $(IDIR)
