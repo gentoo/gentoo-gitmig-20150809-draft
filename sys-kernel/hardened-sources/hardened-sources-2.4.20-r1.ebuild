@@ -57,11 +57,11 @@ src_install() {
 		insinto /usr/include/asm/flask
 		doins ${S}/security/selinux/include/asm/flask/uninstd.h
 	fi
+
+	kernel_src_install
 }
 
 pkg_postinst() {
-	kernel_pkg_postinst
-	
 	einfo "This kernel contains LSM/SElinux or GRSecurity, and Systrace"
 	einfo "This is not yet a production ready kernel.  If you experience problems with"
 	einfo "this kernel please report them by assigning bugs on bugs.gentoo.org to"
