@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.6.ebuild,v 1.5 2005/02/05 19:29:59 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.6.ebuild,v 1.6 2005/03/08 23:53:13 eradicator Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -156,10 +156,14 @@ src_compile() {
 		einfo "using ithreads"
 		mythreading="-multi"
 		myconf="-Dusethreads ${myconf}"
-		myarch="${CHOST%%-*}-linux-thread"
+		myarch=$(get_abi_CHOST)
+		myarch="${myarch%%-*}-linux-thread"
 	else
-		myarch="${CHOST%%-*}-linux"
+		myarch=$(get_abi_CHOST)
+		myarch="${myarch%%-*}-linux"
 	fi
+
+	ewarn "myarch: ${myarch}"
 
 	if use gdbm
 	then
