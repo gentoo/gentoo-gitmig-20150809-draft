@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ebook.eclass,v 1.13 2004/02/25 17:30:11 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ebook.eclass,v 1.14 2004/03/05 00:10:35 jhuebel Exp $
 #
 # Author Francisco Gimeno <kikov@fco-gimeno.com>
 # Mantainer José Alberto Suárez López <bass@gentoo.org>
@@ -15,7 +15,7 @@ HOMEPAGE="http://lidn.sourceforge.net"
 
 SLOT="0"
 LICENSE="OPL"
-KEYWORDS="x86 ppc amd64"
+KEYWORDS="x86 ppc ~amd64"
 
 # ebook eclass user guide:
 # -vars
