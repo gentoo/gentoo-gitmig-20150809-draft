@@ -1,15 +1,17 @@
 # ChangeLog for app-admin/ufed
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/ufed/ChangeLog,v 1.7 2003/01/23 15:43:48 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/ufed/ChangeLog,v 1.8 2003/02/11 22:12:58 gmsoft Exp $
 
 NOTE: This ChangeLog doesn't cover modifications to ufed itself.
 The real ChangeLog can be found at:
 http://gentoo.org/cgi-bin/viewcvs.cgi/gentoo-src/ufed/ChangeLog?rev=HEAD
 
+  11 Feb 2003; Guy Martin <gmsoft@gentoo.org> ufed-0.2.ebuild :
+  Added hppa to keywords.
 
 *ufed-0.2 (29 Dec 2002)
 
-  23 Jan 2003; Jason Wever < weeve@gentoo.org> ufed-0.2.ebuild:
+  23 Jan 2003; Jason Wever <weeve@gentoo.org> ufed-0.2.ebuild:
   Added sparc to keywords.
 
   29 Dec 2002; Maik Schreiber <blizzy@gentoo.org> : New version.
