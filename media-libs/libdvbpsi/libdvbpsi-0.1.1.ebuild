@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/libdvbpsi-0.1.1.ebuild,v 1.2 2002/08/02 18:28:29 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libdvbpsi/libdvbpsi-0.1.1.ebuild,v 1.3 2002/08/15 17:09:05 gerk Exp $
 
 DESCRIPTION="library for MPEG TS/DVB PSI tables decoding and generation"
 HOMEPAGE="http://www.videolan.org/libdvbpsi"
@@ -8,7 +8,7 @@ SRC_URI="http://www.videolan.org/pub/videolan/libdvbpsi/0.1.1/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 -ppc -sparc -sparc64"
+KEYWORDS="x86 -sparc -sparc64"
 
 DEPEND=">=app-doc/doxygen-1.2.16"
 #RDEPEND=""
