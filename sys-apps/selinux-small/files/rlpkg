@@ -1,13 +1,12 @@
 #!/bin/bash
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/files/rlpkg,v 1.1 2003/05/22 19:42:23 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/files/rlpkg,v 1.2 2003/05/27 00:57:59 pebenito Exp $
 
 # Author: Chris PeBenito <pebenito@gentoo.org>
 #	this probably isnt the cleanest script, but it works.
 #
 # TODO:	
-#	-make it accept more than 1 pkg on the cmd line
 #	-maybe add a -l function to list the package's files + contexts
 #	-more informative messages, -h for help
 
@@ -17,7 +16,7 @@ PROG=`basename ${0}`
 if [ -z ${1} ]; then
 	echo "The Gentoo Linux package relabeler"
 	echo
-	eerror "Usage: ${PROG} <pkg>"
+	eerror "Usage: ${PROG} <pkg1> [<pkg2> ...]"
 	echo
 	echo "${PROG} relabels gentoo packages based on their CONTENTS file."
 	echo "Any files associated with a package, but not in the contents"
@@ -37,22 +36,23 @@ if [ ! -d ${POLICYDIR} ]; then
 	exit 1
 fi
 
-cd ${POLICYDIR}
 ewarn "Using file contexts from the policy in ${POLICYDIR}"
 
 # generate file_contexts as needed
-if [ ! -f ./file_contexts/file_contexts ]; then
-	ebegin "Generating file contexts"
-	make file_contexts/file_contexts &> /dev/null
-	eend $?
-fi
+ebegin "Regenerating file contexts"
+[ -f ${POLICYDIR}/file_contexts/file_contexts ] && rm -f ${POLICYDIR}/file_contexts/file_contexts
+make -C ${POLICYDIR} file_contexts/file_contexts &> /dev/null
+eend $?
 
-build=`find /var/db/pkg -iname CONTENTS | grep ${1} | sort`
+while [ ${#} -gt 0 ]; do
+	build=`find /var/db/pkg -iname CONTENTS | grep ${1} | sort`
 
-for i in ${build}; do
-	pkgcat=`echo ${i} | cut -d/ -f5`
-	pkgnam=`echo ${i} | cut -d/ -f6`
-	ebegin "Relabeling: ${pkgcat}/${pkgnam}"
-	awk '{ print $2 }' < ${i} | setfiles file_contexts/file_contexts -sq &> /dev/null
-	eend $?
+	for i in ${build}; do
+		pkgcat=`echo ${i} | cut -d/ -f5`
+		pkgnam=`echo ${i} | cut -d/ -f6`
+		ebegin "Relabeling: ${pkgcat}/${pkgnam}"
+		awk '{ print $2 }' < ${i} | setfiles ${POLICYDIR}/file_contexts/file_contexts -sq &> /dev/null
+		eend $?
+	done
+	shift
 done
