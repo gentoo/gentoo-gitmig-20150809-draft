@@ -1,20 +1,20 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.1.02.ebuild,v 1.4 2003/05/24 06:19:45 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.1.03.ebuild,v 1.1 2003/06/07 03:21:47 strider Exp $
 
-IUSE="doc mozilla"
+IUSE="doc"
 
-inherit java
+inherit java nsplugins
 
-At="j2sdk-1_4_1_02-linux-i586.bin"
-S="${WORKDIR}/j2sdk1.4.1_02"
-DESCRIPTION="Sun's J2SE Development Kit, version 1.4.1_02"
+At="j2sdk-1_4_1_03-linux-i586.bin"
+S="${WORKDIR}/j2sdk1.4.1_03"
+DESCRIPTION="Sun's J2SE Development Kit, version 1.4.1_03"
 HOMEPAGE="http://java.sun.com/j2se/1.4.1/download.html"
 SRC_URI=""
 
 SLOT="1.4"
 LICENSE="sun-bcla-java-vm"
-KEYWORDS="x86 -ppc -sparc -alpha -mips -hppa -arm"
+KEYWORDS="~x86 -ppc -sparc -alpha -mips -hppa -arm"
 
 DEPEND=">=dev-java/java-config-0.2.5
 	doc? ( =dev-java/java-sdk-docs-1.4.1* )"
@@ -29,7 +29,7 @@ src_unpack() {
 	if [ ! -f ${DISTDIR}/${At} ] ; then
 		die "Please download ${At} from ${HOMEPAGE} (select the \"Linux self-extracting file\" package format of the SDK) and move it to ${DISTDIR}"
 	fi
-	tail +430 ${DISTDIR}/${At} > install.sfx
+	tail +438 ${DISTDIR}/${At} > install.sfx
 	chmod +x install.sfx
 	./install.sfx || die
 	rm install.sfx
@@ -63,11 +63,5 @@ pkg_postinst () {
 	# Set as default VM if none exists
 	java_pkg_postinst
 
-	if [ "`use mozilla`" ] ; then
-		einfo "The Mozilla browser plugin has been installed as /usr/lib/mozilla/plugins/libjavaplugin_oji140.so"
-	else
-		einfo "To install the Java plugin for Mozilla manually, do:"
-		einfo "ln -s /opt/${P}/jre/plugin/i386/ns610/libjavaplugin_oji.so /usr/lib/mozilla/plugins/"
-		einfo "(Make certain the directory /usr/lib/mozilla/plugins exists first)"
-	fi
+	inst_plugin /opt/${P}/jre/plugin/i386/ns610/libjavaplugin_oji.so
 }
