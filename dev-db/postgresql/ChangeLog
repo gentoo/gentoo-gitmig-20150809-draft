@@ -1,8 +1,15 @@
 # ChangeLog for dev-db/postgresql
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.20 2002/07/28 13:20:11 stubear Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/ChangeLog,v 1.21 2002/07/31 01:29:24 stubear Exp $
 
-* postgresql-7.2.1-r2.ebuild (24 Jul 2002)
+* postgresql-7.2.1-r2 (31 Jul 2002)                                      
+                                                                                
+  31 Jul 2002; Stuart Bouyer <stubear@gentoo.org> postgresql-7.2.1-r2.ebuild:
+
+  Moved --enable-multibyte to nls flag after it was pointed out that it
+  enables much more than just CJK support (ie unicode and latin1 etc).
+
+* postgresql-7.2.1-r2 (24 Jul 2002)
 
   24 Jul 2002; Stuart Bouyer <stubear@gentoo.org> postgresql-7.2.1-r2.ebuild:
 

@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Geert Bevin <gbevin@theleaf.be>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2.1-r2.ebuild,v 1.1 2002/07/24 17:13:06 stubear Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.2.1-r2.ebuild,v 1.2 2002/07/31 01:29:24 stubear Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PostgreSQL is a sophisticated Object-Relational DBMS"
@@ -66,10 +65,8 @@ src_compile() {
 	use perl && myconf="$myconf --with-perl"
 	use java && myconf="$myconf --with-java"
 	use ssl && myconf="$myconf --with-openssl=yes"
-	use nls && myconf="$myconf --enable-locale --enable-nls"
+	use nls && myconf="$myconf --enable-locale --enable-nls --enable-multibyte"
 	use libg++ && myconf="$myconf --with-CXX"
-	use cjk && myconf="$myconf --enable-multibyte"
-	
 
 	./configure --prefix=/usr \
 		--mandir=/usr/share/man \
