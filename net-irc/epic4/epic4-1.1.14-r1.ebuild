@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-1.1.14-r1.ebuild,v 1.6 2004/06/24 23:04:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-1.1.14-r1.ebuild,v 1.7 2004/07/09 22:53:51 swegener Exp $
 
 inherit flag-o-matic
 
@@ -31,15 +31,15 @@ src_compile() {
 
 	econf \
 		--libexecdir=/usr/lib/misc \
-		${myconf} || die
+		${myconf} || die "econf failed"
 
-	make || die
+	make || die "make failed"
 }
 
 src_install () {
 	einstall \
 		sharedir=${D}/usr/share \
-		libexecdir=${D}/usr/lib/misc || die
+		libexecdir=${D}/usr/lib/misc || die "einstall failed"
 
 	rm -f ${D}/usr/bin/epic
 	dosym epic-EPIC4-${PV} /usr/bin/epic
@@ -66,7 +66,7 @@ pkg_postinst() {
 	einfo "file.  If you want to prevent this file from being installed"
 	einfo "in the future, simply create an empty file with this name."
 
-	if [ ! -e /usr/share/epic/script/local ]; then
-		cp ${FILESDIR}/local /usr/share/epic/script/
+	if [ ! -f ${ROOT}/usr/share/epic/script/local ]; then
+		cp ${FILESDIR}/local ${ROOT}/usr/share/epic/script/
 	fi
 }

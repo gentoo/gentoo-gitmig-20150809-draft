@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-2.0.ebuild,v 1.8 2004/06/24 23:04:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-2.0.ebuild,v 1.9 2004/07/09 22:53:51 swegener Exp $
 
 inherit flag-o-matic eutils
 
@@ -11,31 +11,37 @@ SRC_URI="ftp://ftp.epicsol.org/pub/epic/EPIC4-PRODUCTION/${P}.tar.bz2
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~ia64 alpha ~hppa sparc ~amd64"
+KEYWORDS="x86 ~ppc ~ia64 alpha ~hppa sparc ~amd64"
 IUSE="ipv6 perl ssl"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	perl? ( >=dev-lang/perl-5.6.1 )
 	ssl? ( >=dev-libs/openssl-0.9.5 )"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+
+	epatch ${FILESDIR}/${PV}-toggle-stop-screen.patch
+	epatch ${FILESDIR}/epic-defaultserver.patch
+}
+
 src_compile() {
 	replace-flags "-O?" "-O"
-
-	epatch ${FILESDIR}/epic-defaultserver.patch || die "patch failed"
 
 	econf \
 		--libexecdir=/usr/lib/misc \
 		`use_with ipv6` \
 		`use_with perl` \
 		`use_with ssl` \
-		|| die
-	make || die
+		|| die "econf failed"
+	make || die "make failed"
 }
 
 src_install () {
 	einstall \
 		sharedir=${D}/usr/share \
-		libexecdir=${D}/usr/lib/misc || die
+		libexecdir=${D}/usr/lib/misc || die "einstall failed"
 
 	rm -f ${D}/usr/bin/epic
 	dosym epic-EPIC4-${PV} /usr/bin/epic
@@ -62,7 +68,7 @@ pkg_postinst() {
 	einfo "file.  If you want to prevent this file from being installed"
 	einfo "in the future, simply create an empty file with this name."
 
-	if [ ! -e /usr/share/epic/script/local ]; then
-		cp ${FILESDIR}/local /usr/share/epic/script/
+	if [ ! -f ${ROOT}/usr/share/epic/script/local ]; then
+		cp ${FILESDIR}/local ${ROOT}/usr/share/epic/script/
 	fi
 }
