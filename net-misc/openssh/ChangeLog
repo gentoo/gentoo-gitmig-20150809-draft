@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.61 2004/01/10 22:56:42 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.62 2004/02/12 15:12:43 vapier Exp $
+
+  12 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
+  Set Protocol to only allow ssh2 by default #41215 and enable pam if in USE.
 
   10 Jan 2004; Brad House <brad_mssw@gentoo.org> openssh-3.7.1_p2-r2.ebuild:
   install doesn't seem to be creating /var/empty

@@ -1,9 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p2-r2.ebuild,v 1.3 2004/01/29 07:05:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p2-r2.ebuild,v 1.4 2004/02/12 15:12:43 vapier Exp $
 
 inherit eutils flag-o-matic ccc gnuconfig
-[ `use kerberos` ] && append-flags -I/usr/include/gssapi
 
 # Make it more portable between straight releases
 # and _p? releases.
@@ -63,6 +62,8 @@ src_unpack() {
 }
 
 src_compile() {
+	use kerberos && append-flags -I/usr/include/gssapi
+
 	local myconf
 
 	# Allow OpenSSH to detect mips systems
@@ -76,10 +77,8 @@ src_compile() {
 
 	use ipv6 || myconf="${myconf} --with-ipv4-default"
 
-	use skey && {
-		# make sure .sbss is large enough
-		use alpha && append-ldflags -mlarge-data
-	}
+	# make sure .sbss is large enough
+	use skey && use alpha && append-ldflags -mlarge-data
 
 	use selinux && append-flags "-DWITH_SELINUX"
 
@@ -93,7 +92,9 @@ src_compile() {
 		--with-privsep-path=/var/empty \
 		--with-privsep-user=sshd \
 		--with-md5-passwords \
-		--host=${CHOST} ${myconf} || die "bad configure"
+		--host=${CHOST} \
+		${myconf} \
+		|| die "bad configure"
 
 	use static && {
 		# statically link to libcrypto -- good for the boot cd
@@ -110,6 +111,8 @@ src_install() {
 	insinto /etc/pam.d  ; newins ${FILESDIR}/sshd.pam sshd
 	exeinto /etc/init.d ; newexe ${FILESDIR}/sshd.rc6 sshd
 	keepdir /var/empty
+	dosed "/^#Protocol /s:.*:Protocol 2:" /etc/ssh/sshd_config
+	use pam && dosed "/^#UsePAM /s:.*:UsePAM yes:" /etc/ssh/sshd_config
 }
 
 pkg_postinst() {
