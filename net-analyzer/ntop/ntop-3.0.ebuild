@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.0.ebuild,v 1.8 2004/07/25 13:35:01 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ntop/ntop-3.0.ebuild,v 1.9 2004/07/30 20:30:20 vapier Exp $
+
+inherit gnuconfig
 
 DESCRIPTION="tool that shows network usage like top"
 HOMEPAGE="http://www.ntop.org/ntop.html"
@@ -20,19 +22,25 @@ DEPEND=">=sys-libs/gdbm-1.8.0
 	readline? ( >=sys-libs/readline-4.1 )
 	ncurses? ( sys-libs/ncurses )"
 
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	gnuconfig_update
+}
+
 src_compile() {
 	local myconf
 
-	use readline	|| myconf="${myconf} --without-readline"
-	use tcpd	|| myconf="${myconf} --with-tcpwrap"
-	use ssl		|| myconf="${myconf} --without-ssl"
-	use ncurses	|| myconf="${myconf} --without-curses"
+	use readline || myconf="${myconf} --without-readline"
+	use tcpd || myconf="${myconf} --with-tcpwrap"
+	use ssl || myconf="${myconf} --without-ssl"
+	use ncurses || myconf="${myconf} --without-curses"
 
 	econf ${myconf} || die "configure problem"
 	make || die "compile problem"
 }
 
-src_install () {
+src_install() {
 	make DESTDIR=${D} install || die "install problem"
 
 	# fixme: bad handling of plugins (in /usr/lib with unsuggestive names)
@@ -40,7 +48,7 @@ src_install () {
 
 	doman ntop.8
 
-	dodoc AUTHORS CONTENTS COPYING ChangeLog MANIFESTO NEWS
+	dodoc AUTHORS CONTENTS ChangeLog MANIFESTO NEWS
 	dodoc PORTING README SUPPORT_NTOP.txt THANKS docs/*
 
 	dohtml ntop.html
