@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.75-r5.ebuild,v 1.1 2004/01/18 04:04:13 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.75-r5.ebuild,v 1.2 2004/01/19 01:55:29 rizzo Exp $
+
+inherit flag-o-matic
 
 IUSE="nls perl spell nas mozilla cjk debug ssl"
 
@@ -59,6 +61,7 @@ src_compile() {
 
 	einfo "Replacing -Os CFLAG with -O2"
 	replace-flags -Os -O2
+	filter-flags -fstack-protector
 
 	emake || MAKEOPTS="${MAKEOPTS} -j1" emake || die "Make failed"
 }
