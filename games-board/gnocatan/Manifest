@@ -1,4 +1,6 @@
-MD5 d2fd33c0f67ebd1311170c6c352f7ef9 ChangeLog 4122
+MD5 c0e60ab86a0491893636734d4feda27a ChangeLog 4244
+MD5 eaf3b12b4c06b0f442bd5b2cbd2d9bcc gnocatan-0.8.1.42.ebuild 1065
 MD5 cfd29f58e6f9fb057c83c8eb26c1a101 metadata.xml 315
 MD5 084a21f5d1c3f02518347cbf861d24d7 gnocatan-0.8.1.40.ebuild 1064
+MD5 4439665f9974e84f996714ae3c37675c files/digest-gnocatan-0.8.1.42 70
 MD5 d1fa44b434cf05488027636bb804aa4a files/digest-gnocatan-0.8.1.40 70
