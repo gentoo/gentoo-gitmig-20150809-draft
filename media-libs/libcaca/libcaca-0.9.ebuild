@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.9.ebuild,v 1.9 2004/06/05 12:08:02 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libcaca/libcaca-0.9.ebuild,v 1.10 2004/06/21 06:34:26 kloeri Exp $
 
 DESCRIPTION="A library that creates colored ASCII-art graphics"
 HOMEPAGE="http://sam.zoy.org/projects/libcaca"
@@ -22,7 +22,7 @@ src_compile() {
 	export VARTEXFONTS="${T}/fonts"
 	econf \
 	    `use_enable doc` \
-	    `use_enable ncuses` \
+	    `use_enable ncurses` \
 	    `use_enable slang` \
 	    `use_enable imlib imlib2` \
 		`use_enable X x11` \
