@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 a0a44e61c59df2071412e96778f52b82 gnome-menus-2.9.92.ebuild 595
-MD5 79449f067e50153ad42d0722f29202ee ChangeLog 513
 MD5 03ad2e6c4ab41244af1015a8bbb0b39f metadata.xml 158
-MD5 abce2578cfc0eee07dbc7fb50c628ecc gnome-menus-2.10.0.ebuild 595
-MD5 0bdd89692754f2c9607116ac93fb576a files/digest-gnome-menus-2.9.92 71
+MD5 4189d621c5ba8ac7552fcda465f10b82 ChangeLog 613
+MD5 24c5d41a71cb3a8a9f9f15ed39ef5781 gnome-menus-2.10.0.ebuild 606
+MD5 a0a44e61c59df2071412e96778f52b82 gnome-menus-2.9.92.ebuild 595
 MD5 697bc6386ea36f8c516bd6c6118e1f9b files/digest-gnome-menus-2.10.0 71
+MD5 0bdd89692754f2c9607116ac93fb576a files/digest-gnome-menus-2.9.92 71
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFCLrpaXjcVihsel0ERApNxAJ4hr+uXWjNAniAmd7I9X8IfM3FvVgCfYmYo
-/c+2rNjxn8NigLlWZVpgObQ=
-=chwT
+iD8DBQFCMf/yKRy60XGEcJIRAti9AJ9EsJhI/fs5dn8Zb4+WWissnvGONgCgsunP
+94UDAvXTapa+PnFdMTfaNbY=
+=5ril
 -----END PGP SIGNATURE-----
