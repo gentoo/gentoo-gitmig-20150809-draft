@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.16-r1.ebuild,v 1.3 2001/12/15 15:34:38 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.16-r1.ebuild,v 1.4 2001/12/15 16:16:20 drobbins Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -77,7 +77,7 @@ src_unpack() {
 	cd ${S}
 	patchorama $PATCHES
 	echo "Fixing up a single reject..."
-	This is a reject related to both low latency and XFS's kdb modifying the same enum.  No biggie.
+	#This is a reject related to both low latency and XFS's kdb modifying the same enum.  No biggie.
 	cp ${GFILESDIR}/sysctl.h ${S}/include/linux
 	echo "Removing -xfs extension from the kernel..."
 	cp Makefile Makefile.orig
