@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/velocity
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/ChangeLog,v 1.15 2005/03/29 16:00:43 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/velocity/ChangeLog,v 1.16 2005/04/02 21:51:56 luckyduck Exp $
+
+  02 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> velocity-1.4-r1.ebuild,
+  -velocity-1.4.ebuild:
+  cleanup, removed old revision with a dependency to oro.
 
 *velocity-1.4-r1 (29 Mar 2005)
 

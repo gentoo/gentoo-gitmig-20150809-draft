@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ldapsdk
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ldapsdk/ChangeLog,v 1.4 2005/03/29 15:20:56 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ldapsdk/ChangeLog,v 1.5 2005/04/02 21:46:35 luckyduck Exp $
+
+  02 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org> ldapsdk-4.1.7-r1.ebuild,
+  -ldapsdk-4.1.7.ebuild:
+  cleanup, removed old revision with a dependency to oro.
 
 *ldapsdk-4.1.7-r1 (29 Mar 2005)
 

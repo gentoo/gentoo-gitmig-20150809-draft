@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-validator
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-validator/ChangeLog,v 1.21 2005/03/29 16:48:58 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-validator/ChangeLog,v 1.22 2005/04/02 21:54:48 luckyduck Exp $
+
+  02 Apr 2005; Jan Brinkmann <luckyduck@gentoo.org>
+  -commons-validator-1.0.2-r3.ebuild, commons-validator-1.0.2-r4.ebuild:
+  cleanup, removed old revision with a dependency to oro.
 
 *commons-validator-1.0.2-r4 (29 Mar 2005)
 
