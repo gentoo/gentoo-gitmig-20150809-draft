@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/rfcutil/rfcutil-3.2.3.ebuild,v 1.8 2004/03/12 09:18:44 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/rfcutil/rfcutil-3.2.3.ebuild,v 1.9 2004/03/23 20:46:06 dragonheart Exp $
+
+inherit eutils
 
 MY_PN="rfc"
 MY_P="${MY_PN}-${PV}"
@@ -18,8 +20,17 @@ KEYWORDS="x86 sparc ppc"
 SLOT="0"
 LICENSE="as-is"
 
+RDEPEND="dev-lang/perl
+	net-www/lynx
+	net-www/w3m"
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/${MY_P}.diff || die
+}
+
 src_compile() {
-	patch -l -p0 < ${FILESDIR}/${MY_P}.gaarde || die
+	einfo "Nothing to compile"
 }
 
 src_install () {
@@ -27,9 +38,7 @@ src_install () {
 	doman ${MY_PN}.1
 	dodoc CHANGELOG INSTALL KNOWN_BUGS README
 
-	touch ${S}/.keep
-	insinto /var/cache/rfc
-	doins .keep
+	keepdir /var/cache/rfc
 }
 
 pkg_postinst () {
