@@ -1,6 +1,10 @@
 # ChangeLog for mail-client/mailx
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/ChangeLog,v 1.28 2005/01/27 21:18:46 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/ChangeLog,v 1.29 2005/01/30 15:44:01 hansmi Exp $
+
+  30 Jan 2005; Michael Hanselmann <hansmi@gentoo.org>
+  mailx-8.1.2.20040524-r1.ebuild:
+  Stable on ppc, bug 80067.
 
 *mailx-8.1.2.20040524-r1 (27 Jan 2005)
 
@@ -30,7 +34,7 @@
   09 Oct 2004; Tom Gall <tgall@gentoo.org> mailx-8.1.2.20021129-r4.ebuild:
   stable on ppc64, bug #63123
 
-  19 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org>
+  19 Sep 2004; Bryan Ãstergaard,,, <kloeri@gentoo.org>
   mailx-8.1.2.20021129-r4.ebuild:
   Stable on alpha.
 
@@ -51,7 +55,7 @@
   +mailx-8.1.2.20021129-r4.ebuild:
   Provide virtual/mailx. Closes #63123.
 
-  22 Aug 2004; Bryan Østergaard <kloeri@gentoo.org>
+  22 Aug 2004; Bryan Ãstergaard <kloeri@gentoo.org>
   mailx-8.1.2.20021129-r3.ebuild:
   Stable on alpha.
 
@@ -101,7 +105,7 @@
   +mailx-8.1.2.20021129-r3.ebuild:
   Apply 64-bit compatibility patch on all architectures instead of just ia64
 
-  04 Jun 2004; Bryan Østergaard <kloeri@gentoo.org>
+  04 Jun 2004; Bryan Ãstergaard <kloeri@gentoo.org>
   mailx-8.1.2.20021129-r2.ebuild:
   Stable on alpha.
 

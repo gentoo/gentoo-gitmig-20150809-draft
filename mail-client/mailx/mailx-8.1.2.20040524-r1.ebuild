@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/mailx-8.1.2.20040524-r1.ebuild,v 1.3 2005/01/28 21:13:54 ferdy Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/mailx/mailx-8.1.2.20040524-r1.ebuild,v 1.4 2005/01/30 15:44:01 hansmi Exp $
 
 inherit ccc eutils flag-o-matic
 
@@ -24,7 +24,7 @@ PROVIDE="virtual/mailx"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~ia64 ~amd64 ~ppc64"
+KEYWORDS="~x86 ppc ~sparc ~alpha ~mips ~hppa ~ia64 ~amd64 ~ppc64"
 
 src_unpack() {
 	unpack ${A}
