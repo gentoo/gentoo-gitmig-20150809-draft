@@ -1,3 +1,15 @@
-MD5 1ed31d65e125c1e975b30093f95dc713 ChangeLog 1074
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b9252cbc0416be5f70096255df01b07d ChangeLog 1209
 MD5 936202e0e74bc73bfcaad7bf4c83a2e9 neXtaw-0.12.ebuild 730
+MD5 71952ff89da770880d980fdd245f68a0 neXtaw-0.15.1.ebuild 760
 MD5 bc5549fb1bff5f7a480d56d9cde31262 files/digest-neXtaw-0.12 63
+MD5 1c3dd4595fe26cb0d47924d98df607ba files/digest-neXtaw-0.15.1 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (Darwin)
+
+iD8DBQFBndw6VWNWqTUmv+0RAr39AJ96gKZUajIb2CMdMnYLpx0ci6C9KgCeKJY3
+6fGQ7Y6jSa6FwhIJL5YFEmM=
+=2Uar
+-----END PGP SIGNATURE-----
