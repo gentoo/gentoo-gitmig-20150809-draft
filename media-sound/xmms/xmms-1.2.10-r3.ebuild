@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r2.ebuild,v 1.5 2004/04/12 17:17:14 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.10-r3.ebuild,v 1.1 2004/05/31 07:45:35 eradicator Exp $
 
 inherit flag-o-matic eutils libtool
 
-PATCHVER="0.4"
+PATCHVER="0.5"
 
 MY_P=${P/_pre/-pre}
 S=${WORKDIR}/${MY_P}
@@ -47,7 +47,8 @@ src_unpack() {
 
 	# Add dynamic taste detection patch...
 	# goto http://bugs.xmms.org/show_bug.cgi?id=756 to vote for its inclusion in mainline xmms
-	epatch ${PATCHDIR}/${P}-dtd.patch
+	# This patch is no longer included in gentoo xmms due to problems with later versions of glib.
+	# epatch ${PATCHDIR}/${P}-dtd.patch
 
 	# id3v2 editing support in mpg123 plugin
 	epatch ${PATCHDIR}/${P}-id3v2edit.patch
@@ -64,7 +65,9 @@ src_unpack() {
 		epatch ${PATCHDIR}/${P}-mpg123j.patch
 	else
 		# add recode patch http://sourceforge.net/projects/rusxmms/
+		# epatch ${PATCHDIR}/${P}-recode-csa27.3.dtd.patch
 		epatch ${PATCHDIR}/${P}-recode-csa27.3.patch
+		epatch ${PATCHDIR}/${P}-recode-csa27.3.regressionFix.patch
 	fi
 
 	# Add /usr/local/share/xmms/Skins to the search path for skins
@@ -85,6 +88,9 @@ src_unpack() {
 
 	# Bug #45720 ... bugfix when unpausing with alsa
 	epatch ${PATCHDIR}/${P}-alsa-pause.patch
+
+	# Bug #47761 ... Patch to enable seeking in HTTP streams
+	epatch ${PATCHDIR}/${P}-stream-seek.patch
 
 	if [ ! -f ${S}/config.rpath ] ; then
 		touch ${S}/config.rpath
@@ -184,10 +190,3 @@ src_install() {
 	dodoc ${WORKDIR}/README
 }
 
-pkg_postinst() {
-	echo
-	einfo "If you enjoy the dtd (Dynamic Taste Detection) patch, please"
-	einfo "visit the url below and vote for this patch's inclusion in"
-	einfo "main-line xmms."
-	einfo "http://bugs.xmms.org/show_bug.cgi?id=756"
-}

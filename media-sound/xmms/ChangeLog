@@ -1,6 +1,12 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.123 2004/05/14 04:13:09 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.124 2004/05/31 07:45:35 eradicator Exp $
+
+*xmms-1.2.10-r3 (31 May 2004)
+
+  31 May 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  xmms-1.2.10-r2.ebuild, xmms-1.2.10-r3.ebuild:
+  Fixes bugs #46900, #47761, #48891, and hopefully #51080.
 
   14 May 2004; Stephen P. Becker <geoman@gentoo.org> xmms-1.2.8-r4.ebuild:
   Stable on mips.
