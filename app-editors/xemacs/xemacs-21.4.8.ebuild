@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Matthew Kennedy <mkennedy@gentoo.org>
 # Author: Geert Bevin <gbevin@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.8.ebuild,v 1.1 2002/05/19 19:16:30 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.8.ebuild,v 1.2 2002/05/20 18:58:01 mkennedy Exp $
 
 # this is just TEMPORARY until we can get to the core of the problem
 SANDBOX_DISABLED="1"
@@ -19,6 +19,8 @@ SRC_URI="http://ftp.xemacs.org/xemacs-21.4/${P}.tar.gz
 	http://ftp.xemacs.org/packages/xemacs-base-${BASE}-pkg.tar.gz
 	http://ftp.xemacs.org/packages/mule-base-${MULE}-pkg.tar.gz"
 HOMEPAGE="http://www.xemacs.org"
+
+SLOT=""
 
 RDEPEND="virtual/glibc
 	>=sys-libs/gdbm-1.8.0
@@ -41,7 +43,10 @@ RDEPEND="virtual/glibc
 	jpeg? ( media-libs/jpeg )"
 
 DEPEND="${RDEPEND}
-	>=sys-libs/ncurses-5.2"
+	>=sys-libs/ncurses-5.2
+	!virtual/xemacs"
+
+PROVIDE="virtual/xemacs"
 
 src_unpack() {
 	cd ${WORKDIR}
