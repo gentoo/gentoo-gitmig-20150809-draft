@@ -1,6 +1,11 @@
 # ChangeLog for games-arcade/lbreakout2
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout2/ChangeLog,v 1.11 2004/12/28 22:57:41 ciaranm Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout2/ChangeLog,v 1.12 2005/01/19 00:14:33 wolf31o2 Exp $
+
+  18 Jan 2005; Chris Gianelloni <wolf31o2@gentoo.org> lbreakout2-2.4.ebuild,
+  lbreakout2-2.5.1.ebuild, lbreakout2-2.5.ebuild,
+  lbreakout2-2.5_beta6.ebuild:
+  Updated with a .desktop entry and closing bug #76656.
 
   28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance

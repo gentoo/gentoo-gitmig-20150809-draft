@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout2/lbreakout2-2.5.1.ebuild,v 1.1 2004/10/06 09:57:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/lbreakout2/lbreakout2-2.5.1.ebuild,v 1.2 2005/01/19 00:14:33 wolf31o2 Exp $
 
 inherit flag-o-matic games
 
@@ -45,5 +45,11 @@ src_install() {
 
 	dodoc AUTHORS README TODO ChangeLog
 	mv "${D}/usr/share/doc/${PF}/lbreakout2" "${D}/usr/share/doc/${PF}/html"
+
+	cp lbreakout48.gif lbreakout2.gif
+	doicon lbreakout2.gif
+
+	make_desktop_entry lbreakout2 LBreakout2 lbreakout2.gif
+
 	prepgamesdirs
 }
