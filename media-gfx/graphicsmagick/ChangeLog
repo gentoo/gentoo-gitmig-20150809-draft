@@ -1,0 +1,10 @@
+# ChangeLog for media-gfx/graphicsmagick
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/graphicsmagick/ChangeLog,v 1.1 2004/06/05 21:14:11 kloeri Exp $
+
+*graphicsmagick-1.0.6 (05 Jun 2004)
+
+  05 Jun 2004; Bryan Østergaard <kloeri@gentoo.org>
+  +graphicsmagick-1.0.6.ebuild:
+  Initial ebuild provided by Chris Mayo <mayo@clara.co.uk> in bug #35278.
+
