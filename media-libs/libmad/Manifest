@@ -1,6 +1,6 @@
 MD5 61fd88266f6f24d0f684bbffcc58de87 ChangeLog 2720
 MD5 8063034ef76312dd5ca8d1d4a42ab83a libmad-0.15.0b-r1.ebuild 1343
-MD5 6afc01672dfa0248d562169d73d69a03 libmad-0.15.1b.ebuild 1428
+MD5 d1e54f915677a30ffeb12a3e39efc83e libmad-0.15.1b.ebuild 1441
 MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
 MD5 905a86a6acbc90a60d520e923afcdc07 files/digest-libmad-0.15.0b-r1 138
 MD5 6f5b0c06890c1b20c5867e933f2defcc files/digest-libmad-0.15.1b 138

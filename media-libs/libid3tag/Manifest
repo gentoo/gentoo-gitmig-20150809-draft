@@ -1,6 +1,6 @@
 MD5 007a45ea8c7adb0a1b45436454c5e99f ChangeLog 2344
 MD5 9afab6a41217d28a7ff51b53569aacbe libid3tag-0.15.0b.ebuild 993
-MD5 9de5c7475f37290b0b3978b2c58ce374 libid3tag-0.15.1b.ebuild 1003
+MD5 f3e748e0319128562ad7e9cd59210f69 libid3tag-0.15.1b.ebuild 1016
 MD5 527dcfe3ce0f0b53c6b6aa8b82eb930c metadata.xml 252
 MD5 3c479075f74ef05646c045d14b21478a files/digest-libid3tag-0.15.0b 69
 MD5 2599ada700e902044f823c6b5be3e1ba files/digest-libid3tag-0.15.1b 69
