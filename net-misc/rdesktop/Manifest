@@ -1,5 +1,8 @@
-MD5 1dc5b31f046837b777883a966c1ad0bf ChangeLog 5244
-MD5 ba5cbd501be829c4dd810293a86e28c2 metadata.xml 554
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0a8d0f870c7c88b5a82f7f4d814049b8 ChangeLog 5342
+MD5 e6f419cdae06716e25ca3f9af98bad25 metadata.xml 555
 MD5 beec453a865a647e9eb3e4078b6d7ede rdesktop-1.3.0-r1.ebuild 1824
 MD5 a73f5816dfd204a7d46a8222ba730abd rdesktop-1.3.1-r1.ebuild 1185
 MD5 37d16d26fe9d7d4b4f39f0520e56ed73 rdesktop-1.3.1.ebuild 978
@@ -10,3 +13,10 @@ MD5 4ff22b875cb790ab578b6ef3426225ee files/rdesktop-1.3.0-builtin-license.patch 
 MD5 575e5d9fe8a75cb24dcf3c4d1f4348b4 files/rdesktop-1.3.0-geometry.patch 1868
 MD5 4120908a83d84e4150a2cce191f2bbc0 files/rdesktop-1.3.0-last-two-certs.patch 1146
 MD5 a843f83ff14be3e87d5528c3c31416ed files/rdesktop-1.3.1-kde.patch 2409
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBYGrrI1lqEGTUzyQRAnFpAKDJiWfHfsH/NUws8LokIxRSnQgS1ACg3EYy
+6Tv3sRTWl/QmfBF5YAmVY4Y=
+=1ZV0
+-----END PGP SIGNATURE-----
