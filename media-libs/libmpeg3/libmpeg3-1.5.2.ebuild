@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5.2.ebuild,v 1.11 2004/09/28 02:05:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libmpeg3/libmpeg3-1.5.2.ebuild,v 1.12 2004/09/30 13:28:07 phosphan Exp $
 
 inherit flag-o-matic eutils gcc
 
@@ -37,7 +37,7 @@ src_unpack() {
 	echo > Makefile.a52
 	rm -rf a52dec-0.7.3/*
 	ln -s /usr/include/a52dec a52dec-0.7.3/include
-	sed -i '/LIBS = /s:$: -la52:' Makefile
+	sed -i '/LIBS = /s:$: -L${ROOT}usr/lib -la52:' Makefile
 }
 
 src_compile() {
