@@ -1,17 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-2.7.8.ebuild,v 1.1 2002/10/21 12:43:23 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/mod_python-2.7.8.ebuild,v 1.2 2002/11/06 15:02:56 vapier Exp $
 
 DESCRIPTION="Python module for Apache"
 SRC_URI="http://www.modpython.org/dist/${P}.tgz"
 HOMEPAGE="http://www.modpython.org/"
+
 LICENSE="AS-IS"
 KEYWORDS="~x86"
 SLOT="0"
 DEPEND=">=net-www/apache-1.3.26-r2
 	dev-lang/python"
-
-RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
@@ -47,7 +46,6 @@ src_compile() {
 	emake || die "emake failed"
 }
 
-
 src_install() {
 	mkdir -p ${D}/usr/lib/apache-extramodules
 	mkdir ${D}/usr/lib/python2.2
@@ -78,7 +76,6 @@ pkg_postinst() {
 	einfo "automagically and setup Apache to load ${PN} when it starts."
 	einfo
 }
-
 
 pkg_config() {
 	${ROOT}/usr/sbin/apacheaddmod \
