@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r6.ebuild,v 1.10 2003/11/03 03:29:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r6.ebuild,v 1.11 2004/01/17 05:19:10 darkspecter Exp $
 
 inherit nsplugins
 
@@ -33,7 +33,7 @@ SRC_URI="x86? ( http://docs.real.com/docs/playerpatch/unix/rv9_libc6_i386_cs2.tg
 
 LICENSE="realplayer8"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 ppc ~sparc ~alpha"
 
 # Fix for bug 15314
 DEPEND="virtual/glibc

@@ -1,6 +1,12 @@
 # ChangeLog for media-video/transcode
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.56 2003/12/29 21:24:30 weeve Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/transcode/ChangeLog,v 1.57 2004/01/17 05:21:26 darkspecter Exp $
+
+  17 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org> transcode-0.6.10.ebuild:
+  manifest fix
+
+  16 Jan 2004; Bartosch Pixa <darkspecter@gentoo.org> transcode-0.6.10.ebuild:
+  set ppc in keywords
 
   29 Dec 2003; Jason Wever <weeve@gentoo.org> transcode-0.6.11.ebuild:
   Added ~sparc to keywords.
