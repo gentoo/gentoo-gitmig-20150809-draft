@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/naim/naim-0.11.6-r1.ebuild,v 1.1 2003/07/25 20:48:39 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/naim/naim-0.11.6-r1.ebuild,v 1.2 2003/07/25 21:12:07 raker Exp $
 
 IUSE="debug"
 
@@ -33,5 +33,5 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
 
-	dodoc AUTHORS BUGS ChangeLog FAQ NEWS README doc/*
+	dodoc AUTHORS BUGS ChangeLog NEWS doc/course.hlp doc/naim.hlp
 }
