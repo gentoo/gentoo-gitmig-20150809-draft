@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/cfengine
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.8 2003/04/30 19:29:05 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/cfengine/ChangeLog,v 1.9 2003/08/01 13:48:14 pauldv Exp $
+
+*cfengine-2.0.6-r1 (01 Aug 2003)
+
+  01 Aug 2003; Paul de Vrieze <pauldv@gentoo.org> cfengine-2.0.6-r1.ebuild,
+  files/cfengine-2.0.6-db4.diff:
+  Add a hack to make configure work with versioned symbols in db4. Unfortunately
+  autoconf does not work easilly so I had to hack configure itself
 
 *cfengine-2.0.6 (30 Apr 2003)
 
