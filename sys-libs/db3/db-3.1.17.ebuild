@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db3/db-3.1.17.ebuild,v 1.1 2000/11/17 00:25:20 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db3/db-3.1.17.ebuild,v 1.2 2000/11/17 00:30:36 achim Exp $
 
 #P=
 A=${P}.tar.gz
@@ -10,6 +10,9 @@ DESCRIPTION="The Berkeley DB"
 SRC_URI="http://www.sleepycat.com/update/${PV}/${A}"
 HOMEPAGE="http://www.sleepycat.com"
 
+DEPEND=">=sys-libs/glibc-2.2
+	!sys-libs/glibc-2.1.3
+	sys-libs/db1"
 
 src_compile() {
 
