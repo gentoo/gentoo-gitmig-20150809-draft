@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/svgalib
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.29 2004/02/23 08:46:59 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.30 2004/02/23 21:51:12 azarah Exp $
+
+  23 Feb 2004; Martin Schlemmer <azarah@gentoo.org>
+  files/svgalib-1.9.18-linux2.6.patch:
+  Fix bug #42644 (2.4.23 also uses irqreturn_t, so do not define it then).
 
   23 Feb 2004; Luca Barbato <lu_zero@gentoo.org> svgalib-1.9.18.ebuild:
   Workaround to let the kernel module compile on 2.6

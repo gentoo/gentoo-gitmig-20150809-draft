@@ -44,6 +44,29 @@ diff -urpN svgalib-1.9.18/kernel/svgalib_helper/Makefile svgalib-1.9.18.new/kern
 diff -urpN svgalib-1.9.18/kernel/svgalib_helper/kernel26compat.h svgalib-1.9.18.new/kernel/svgalib_helper/kernel26compat.h
 --- svgalib-1.9.18/kernel/svgalib_helper/kernel26compat.h	2003-10-04 15:42:01.000000000 +0200
 +++ svgalib-1.9.18.new/kernel/svgalib_helper/kernel26compat.h	2004-02-23 00:41:03.176196576 +0200
+@@ -1,5 +1,8 @@
+ #ifndef KERNEL_VERSION
+ # include <linux/version.h>
++#else
++# undef KERNEL_VERSION
++# include <linux/version.h>
+ #endif
+ #if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,0)
+ 
+@@ -9,9 +12,11 @@
+ 
+ # define my_io_remap_page_range(vma, start, ofs, len, prot) io_remap_page_range(start,ofs,len,prot)
+ 
++# if LINUX_VERSION_CODE < KERNEL_VERSION(2,4,23)
+ typedef void irqreturn_t;
+-# define IRQ_NONE
+-# define IRQ_HANDLED
++#  define IRQ_NONE
++#  define IRQ_HANDLED
++# endif
+ 
+ #else /* Kernel 2.6 */
+ 
 @@ -43,9 +43,36 @@ static inline int devfs_unregister_chrde
  }
  #endif
