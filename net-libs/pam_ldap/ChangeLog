@@ -1,6 +1,11 @@
 # ChangeLog for net-libs/pam_ldap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/pam_ldap/ChangeLog,v 1.7 2003/03/29 04:27:39 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/pam_ldap/ChangeLog,v 1.8 2003/05/28 20:34:34 g2boojum Exp $
+
+*pam_ldap-161 (28 May 2003)
+
+  28 May 2003; Grant Goodyear <g2boojum@gentoo.org> pam_ldap-161.ebuild:
+  Version bump
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
