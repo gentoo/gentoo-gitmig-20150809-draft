@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.64-r1.ebuild,v 1.1 2003/07/09 21:59:12 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim/gaim-0.64-r1.ebuild,v 1.2 2003/07/10 16:05:48 lostlogic Exp $
 
 IUSE="nls perl spell ssl nas"
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/gaim/${P}.tar.bz2
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="-x86 ~ppc -alpha -sparc"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc"
 
 DEPEND="=sys-libs/db-1*
 	>=x11-libs/gtk+-2.0
@@ -28,8 +28,8 @@ DEPEND="=sys-libs/db-1*
 
 src_unpack() {
 	unpack ${P}.tar.bz2
-		cd ${P}
-		epatch ${DISTDIR}/gaim-0.64-msncrashes-20030705-0044.diff
+	cd ${P}
+	epatch ${DISTDIR}/gaim-0.64-msncrashes-20030705-0044.diff
 
 	use ssl && {
 		cd ${S}/plugins
@@ -60,10 +60,10 @@ pkg_postinst() {
 	if [ `use ssl` ]; then
 		ewarn
 		ewarn "You have chosen (by selecting 'USE=ssl') to install"
-		ewarn "the gaim-encryption plugin ( http://gaim-encryption.sf.net )"
+		ewarn "the gaim-encryption plugin ( http://gaim-encryption.sf.net/ )"
 		ewarn "this plugin is NOT supported by the Gaim project, and if you"
 		ewarn "expierence problems related to it, contact the Gentoo project"
-		ewarn "via http://bugs.gentoo.rog or the gaim-encryption project."
+		ewarn "via http://bugs.gentoo.org/ or the gaim-encryption project."
 		ewarn
 	fi
 }
