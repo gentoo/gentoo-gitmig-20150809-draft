@@ -1,11 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.99.1.20041026.ebuild,v 1.2 2004/11/03 05:39:34 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-2.99.1.20041026.ebuild,v 1.3 2004/11/05 07:07:14 usata Exp $
 
 inherit tetex eutils flag-o-matic
 
 #TETEX_TEXMF_PV=2.96.5.20040711
 TETEX_TEXMF_PV=${PV}
+TEXMF_PATH=/var/lib/texmf
 S=${WORKDIR}/tetex-src-beta-${PV}
 
 TETEX_SRC="tetex-src-beta-${TETEX_SRC_PV:-${TETEX_PV}}.tar.gz"
@@ -18,7 +19,6 @@ HOMEPAGE="http://tug.org/teTeX/"
 SRC_PATH_TETEX=ftp://cam.ctan.org/tex-archive/systems/unix/teTeX-beta
 SRC_URI="${SRC_PATH_TETEX}/${TETEX_SRC}
 	${SRC_PATH_TETEX}/${TETEX_TEXMF}
-	${SRC_PATH_TETEX}/${TETEX_TEXMF_SRC}
 	mirror://gentoo/${P}-gentoo.tar.gz
 	http://dev.gentoo.org/~usata/distfiles/${P}-gentoo.tar.gz"
 
