@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/predict/predict-2.2.2.ebuild,v 1.1 2003/11/11 09:15:31 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/predict/predict-2.2.2.ebuild,v 1.2 2003/11/11 09:17:13 phosphan Exp $
 
 DESCRIPTION="Satellite tracking and orbital prediction."
 HOMEPAGE="http://www.qsl.net/kd2bd/predict.html"
@@ -158,6 +158,6 @@ pkg_postinst() {
 	einfo "after that is set run 'predict -s'"
 	einfo ""
 	einfo "to get list of satellites run 'predict-update'"
-	einfo "before running predict also this script will update"
+	einfo "before running predict this script will also update"
 	einfo "the list of satellites so they are up to date."
 }
