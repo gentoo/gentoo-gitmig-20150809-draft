@@ -1,18 +1,59 @@
-#!/sbin/runscript 
-# Zope rc-script for Gentoo Linux
-# Copyright 2004 Jodok Batlogg <batlogg@gentoo.org>
-# Distributed under the terms of the GNU General Public License, v2 or later.
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/files/2.7.2/zope.initd,v 1.1 2004/07/24 21:32:42 batlogg Exp $
+#!/sbin/runscript
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/files/2.7.2/zope.initd,v 1.2 2004/07/24 23:45:46 batlogg Exp $
 
-# simple wrapper to zopectl script
-case $1 in
-    kill|quit|run|start|reload|status|help|restart|show|stop)
-        echo "$1(ing) zope in ${INSTANCE_HOME}"
-        ${INSTANCE_HOME}/bin/zopectl $1
-        ;;
-    *)  
-        echo      "Usage: $0 {kill|quit|run|start|reload|status|help|restart|show|stop}"
-        ;;
+opts="start stop restart kill quit reload status help"
 
-esac
+depend() {
+        need net
+}
+
+start() {
+        ebegin "Starting Zope in INSTANCE_HOME"
+        INSTANCE_HOME/bin/zopectl start
+        eend $?
+}
+
+stop() {
+        ebegin "Stopping Zope in INSTANCE_HOME"
+        INSTANCE_HOME/bin/zopectl stop
+        eend $?
+}
+
+restart() {
+        ebegin "Restarting Zope in INSTANCE_HOME"
+        INSTANCE_HOME/bin/zopectl restart
+        eend $?
+}
+
+kill() {
+        ebegin "Killing Zope in INSTANCE_HOME"
+        INSTANCE_HOME/bin/zopectl kill
+        eend $?
+}
+
+quit() {
+        ebegin "Quitting Zope Daemon Manager INSTANCE_HOME"
+        INSTANCE_HOME/bin/zopectl quit
+        eend $?
+}
+
+reload() {
+        ebegin "Reloading Zope config in INSTANCE_HOME"
+        INSTANCE_HOME/bin/zopectl reload
+        eend $?
+}
+
+status() {
+        ebegin "Status of Zope in INSTANCE_HOME"
+        INSTANCE_HOME/bin/zopectl status
+        eend $?
+}
+
+help() {
+        ebegin "Help for Zope Daemon Manager in INSTANCE_HOME"
+        INSTANCE_HOME/bin/zopectl help
+        eend $?
+}
 
