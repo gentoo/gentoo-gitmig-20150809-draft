@@ -1,6 +1,13 @@
 # ChangeLog for net-misc/rsync
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.40 2004/04/27 14:04:41 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/ChangeLog,v 1.41 2004/05/01 03:27:51 solar Exp $
+
+*rsync-2.6.2 (30 Apr 2004)
+
+  30 Apr 2004; <solar@gentoo.org> rsync-2.6.2.ebuild:
+  version bump for security update CAN-2004-0426, bug 49534 this version also
+  seems to have the proxy-auth patch merged upstream, USE=acl disabled for now
+  due to patching conflicts
 
   27 Apr 2004; Michael McCabe <randy@gentoo.org> rsync-2.6.0-r1.ebuild:
   Marked stable on s390
