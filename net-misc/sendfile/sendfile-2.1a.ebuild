@@ -1,18 +1,23 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sendfile/sendfile-2.1a.ebuild,v 1.7 2003/12/14 04:37:02 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sendfile/sendfile-2.1a.ebuild,v 1.8 2004/06/15 14:55:29 vapier Exp $
 
-S=${WORKDIR}/${P}
-DESCRIPTION="Sendfile is a SAFT implementation for UNIX and serves as a tool for asynchronous sending of files in the Internet"
-SRC_URI="ftp://ftp.belwue.de/pub/unix/sendfile/${P}.tar.gz"
+DESCRIPTION="SAFT implementation for UNIX and serves as a tool for asynchronous sending of files in the Internet"
 HOMEPAGE="http://www.belwue.de/projekte/saft/sendfile-us.html"
-SLOT="0"
+SRC_URI="ftp://ftp.belwue.de/pub/unix/sendfile/${P}.tar.gz"
+
 LICENSE="GPL-2"
+SLOT="0"
 KEYWORDS="x86 ppc"
+IUSE=""
 
 src_compile() {
-	./makeconfig "CFLAGS=\"${CFLAGS}\" BINDIR=/usr/bin MANDIR=/usr/share/man \
-		CONFIG=/etc/sendfile SERVERDIR=/usr/sbin" || die
+	./makeconfig \
+		"CFLAGS=\"${CFLAGS}\" \
+		BINDIR=/usr/bin \
+		MANDIR=/usr/share/man \
+		CONFIG=/etc/sendfile \
+		SERVERDIR=/usr/sbin" || die
 
 	make all || die
 }
@@ -36,10 +41,9 @@ src_install() {
 
 	doman doc/sendmsg.1 doc/sendfile.1 doc/receive.1 doc/fetchfile.1
 
-	dodoc doc/AUTHORS doc/COPYING doc/ChangeLog doc/README* doc/THANKS
+	dodoc doc/AUTHORS doc/ChangeLog doc/README* doc/THANKS
 }
 
 pkg_postinst() {
 	einfo "To start the sendfile daemon you have to start Inetd."
-	einfo
 }
