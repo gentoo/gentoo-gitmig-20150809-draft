@@ -1,3 +1,0 @@
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/files/pam.d-imap,v 1.2 2004/07/18 04:02:23 dragonheart Exp $
-auth	required	/lib/security/pam_pwdb.so nullok shadow
-account	required	/lib/security/pam_pwdb.so

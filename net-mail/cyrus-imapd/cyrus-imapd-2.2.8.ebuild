@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.8.ebuild,v 1.7 2004/10/20 21:22:47 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/cyrus-imapd-2.2.8.ebuild,v 1.8 2004/11/01 19:14:12 langthang Exp $
 
 inherit eutils ssl-cert gnuconfig fixheadtails
 
@@ -43,7 +43,7 @@ src_unpack() {
 
 	# Add libwrap defines as we don't have a dynamicly linked library.
 	if use tcpd ; then
-		epatch "${FILESDIR}/${PN}-libwrap.patch"
+		epatch "${FILESDIR}/${P}-libwrap.patch"
 	fi
 
 	# DB4 detection and versioned symbols.
