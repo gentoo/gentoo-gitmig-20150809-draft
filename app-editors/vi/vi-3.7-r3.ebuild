@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vi/vi-3.7-r3.ebuild,v 1.7 2003/02/22 07:31:27 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vi/vi-3.7-r3.ebuild,v 1.8 2003/05/14 01:39:22 kumba Exp $
 
 # NOTE: vi needs /etc/termcap to function properly with TERM=linux.
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://ex-vi.berlios.de/"
 
 LICENSE="Caldera"
 SLOT="0"
-KEYWORDS="x86 ppc sparc arm"
+KEYWORDS="x86 ppc sparc arm ~mips"
 
 DEPEND="sys-libs/ncurses
 	sys-libs/libtermcap-compat"
