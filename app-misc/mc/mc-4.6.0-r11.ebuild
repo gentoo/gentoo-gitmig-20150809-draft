@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r11.ebuild,v 1.17 2004/11/03 20:42:08 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mc/mc-4.6.0-r11.ebuild,v 1.18 2004/12/29 18:31:13 lanius Exp $
 
 inherit flag-o-matic eutils
 
@@ -24,6 +24,7 @@ DEPEND=">=sys-fs/e2fsprogs-1.19
 	slang? ( >=sys-libs/slang-1.4.9-r1 )
 	samba? ( >=net-fs/samba-3.0.0 )
 	unicode? ( >=sys-libs/slang-1.4.9-r1 )
+	dev-util/pkgconfig
 	X? ( virtual/x11 )"
 
 src_unpack() {
