@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/redland
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.6 2004/11/11 02:38:57 vapier Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/redland/ChangeLog,v 1.7 2005/02/06 22:23:09 vapier Exp $
+
+*redland-1.0.0 (06 Feb 2005)
+
+  06 Feb 2005; Mike Frysinger <vapier@gentoo.org> -redland-0.9.18.ebuild,
+  +redland-1.0.0.ebuild:
+  Version bump.
 
 *redland-0.9.19 (10 Nov 2004)
 
