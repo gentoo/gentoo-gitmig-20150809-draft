@@ -1,40 +1,40 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.1-r7.ebuild,v 1.4 2002/10/13 11:57:04 seemant Exp $
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/perl-5.6.1-r8.ebuild,v 1.1 2002/10/13 11:57:04 seemant Exp $
 
-IUSE="berkdb gdbm"
-
+MMPV=6.05
+MMPN=ExtUtils-MakeMaker
+MMP=${MMPN}-${MMPV}
 S=${WORKDIR}/${P}
+S2=${WORKDIR}/${MMP}
 DESCRIPTION="Larry Wall's Practical Extraction and Reporting Language"
-SRC_URI="ftp://ftp.perl.org/pub/CPAN/src/${P}.tar.gz"
+SRC_URI="ftp://ftp.perl.org/pub/CPAN/src/${P}.tar.gz
+	http://cpan.valueclick.com/modules/by-module/ExtUtils/${MMP}.tar.gz"
 HOMEPAGE="http://www.perl.org"
-LICENSE="Artistic GPL-2"
-SLOT="0"
-KEYWORDS="x86 ppc sparc sparc64"
 
-RDEPEND="gdbm? ( >=sys-libs/gdbm-1.8.0 )
-	berkdb? ( >=sys-libs/db-3.2.3h-r3
-		=sys-libs/db-1.85-r1 )"
+SLOT="0"
+LICENSE="Artistic GPL-2"
+KEYWORDS="x86 ppc sparc sparc64 alpha"
+
+
+RDEPEND="berkdb? ( >=sys-libs/db-3.2.3h-r3 
+		=sys-libs/db-1.85-r1 ) 
+	gdbm? ( >=sys-libs/gdbm-1.8.0 )"
 
 DEPEND="sys-apps/groff
 	${RDEPEND}"
 
 src_compile() {
+	local myconf
 
-    local myconf
-    if [ "`use gdbm`" ]
-    then
-		myconf="-Di_gdbm"
-    fi
-    if [ "`use berkdb`" ]
-    then
-		myconf="${myconf} -Di_db -Di_ndbm"
-    else
-		myconf="${myconf} -Ui_db -Ui_ndbm"
-    fi
+	use gdbm && myconf="-Di_gdbm"
+
+	use berkdb \
+		&& myconf="${myconf} -Di_db -Di_ndbm" \
+		|| myconf="${myconf} -Ui_db -Ui_ndbm"
 
 	# configure for libperl.so
-    sh Configure -des \
+	sh Configure -des \
 		-Darchname=${CHOST%%-*}-linux \
 		-Dcccdlflags='-fPIC' \
 		-Dccdlflags='-rdynamic' \
@@ -48,31 +48,31 @@ src_compile() {
 		-Dd_semctl_semun \
 		${myconf} || die
 	# add optimization flags
-    cp config.sh config.sh.orig
-    sed -e "s/optimize='-O2'/optimize=\'${CFLAGS}\'/" config.sh.orig > config.sh
+	cp config.sh config.sh.orig
+	sed -e "s/optimize='-O2'/optimize=\'${CFLAGS}\'/" config.sh.orig > config.sh
 	# create libperl.so and move it out of the way
 	mv -f Makefile Makefile_orig
-	sed -e 's#^CCDLFLAGS = -rdynamic -Wl,-rpath,/usr/lib/perl5/.*#CCDLFLAGS = -rdynamic#' \
-	    -e 's#^all: $(FIRSTMAKEFILE) #all: README #' \
+	sed -e 's#^C\(CDLFLAGS = -rdynamic\) -Wl,-rpath,/usr/lib/perl5/.*#\1#' \
+		-e 's#^all: $(FIRSTMAKEFILE) #all: README #' \
 		Makefile_orig > Makefile
-    export PARCH=`grep myarchname config.sh | cut -f2 -d"'"`
+	export PARCH=`grep myarchname config.sh | cut -f2 -d"'"`
 	# fixes a bug in the make/testing on new systems
 	make -f Makefile depend || die
 	mv makefile makefile_orig
 	mv x2p/makefile x2p/makefile_orig
-		  egrep -v "(<built-in>|<command line>)" makefile_orig >makefile
-		  egrep -v "(<built-in>|<command line>)" x2p/makefile_orig >x2p/makefile
+		egrep -v "(<built-in>|<command line>)" makefile_orig >makefile
+		egrep -v "(<built-in>|<command line>)" x2p/makefile_orig >x2p/makefile
 	make -f Makefile libperl.so || die
 	mv libperl.so ${WORKDIR}
 
 	# starting from scratch again
 	cd ${WORKDIR}
 	rm -rf ${S}
-	unpack ${A}
+	unpack ${P}.tar.gz
 	cd ${S}
 	
 	# configure for libperl.a
-# this is gross -- from Christian Gafton, Red Hat
+	# this is gross -- from Christian Gafton, Red Hat
 	cat > config.over <<EOF
 installprefix=${D}/usr
 #test -d \$installprefix || mkdir \$installprefix
@@ -93,7 +93,7 @@ installsitelib=\`echo \$installsitelib | sed "s!\$prefix!\$installprefix!"\`
 installsitearch=\`echo \$installsitearch | sed "s!\$prefix!\$installprefix!"\`
 EOF
 
-    sh Configure -des \
+	sh Configure -des \
 		-Dprefix=/usr \
 		-Darchname=${CHOST%%-*}-linux \
 		-Duselargefiles \
@@ -102,51 +102,52 @@ EOF
 		-Dd_semctl_semun \
 		${myconf} || die
 
-    #Optimize ;)
-    cp config.sh config.sh.orig
-    sed -e "s/optimize='-O2'/optimize=\'${CFLAGS}\'/" config.sh.orig > config.sh
-    #THIS IS USED LATER:
-    export PARCH=`grep myarchname config.sh | cut -f2 -d"'"`
+	#Optimize ;)
+	cp config.sh config.sh.orig
+	sed -e "s/optimize='-O2'/optimize=\'${CFLAGS}\'/" config.sh.orig > config.sh
+	#THIS IS USED LATER:
+	export PARCH=`grep myarchname config.sh | cut -f2 -d"'"`
 
 # Umm, for some reason this doesn't want to work, so we'll just remove
 #  the makefiles and let make rebuild them itself. (It seems to do it
 #  right the second time... -- pete
-#    cp makefile makefile.orig
-#    sed -e "s:^0::" makefile.orig > makefile
+#	cp makefile makefile.orig
+#	sed -e "s:^0::" makefile.orig > makefile
 
 	mv Makefile Makefile_orig
 	sed -e 's#^all: $(FIRSTMAKEFILE) #all: README #' \
 		Makefile_orig > Makefile
-    
-    #for some reason, this rm -f doesn't seem to actually do anything. So we explicitly use "Makefile"
-    #(rather than the default "makefile") in all make commands below.
-    rm -f makefile x2p/makefile
-    make -f Makefile depend || die
-    mv makefile makefile_orig
-    mv x2p/makefile x2p/makefile_orig
-    egrep -v "(<built-in>|<command line>)" makefile_orig >makefile
-    egrep -v "(<built-in>|<command line>)" x2p/makefile_orig >x2p/makefile
-    make -f Makefile || die
+	
+	#for some reason, this rm -f doesn't seem to actually do anything. So we explicitly use "Makefile"
+	#(rather than the default "makefile") in all make commands below.
+	rm -f makefile x2p/makefile
+	make -f Makefile depend || die
+	mv makefile makefile_orig
+	mv x2p/makefile x2p/makefile_orig
+	egrep -v "(<built-in>|<command line>)" makefile_orig >makefile
+	egrep -v "(<built-in>|<command line>)" x2p/makefile_orig >x2p/makefile
+	make -f Makefile || die
 	cp ${O}/files/stat.t ./t/op/
-    # Parallel make fails
+	# Parallel make fails
 	# dont use the || die since some tests fail on bootstrap
 	if [ `expr "$PARCH" ":" "sparc"` -gt 4 ]; then
 		echo "Skipping tests on this platform"
 	else
-    	make -f Makefile test 
+		make -f Makefile test 
 	fi
+	
 }
 
 src_install() {
 
-    export PARCH=`grep myarchname config.sh | cut -f2 -d"'"`
+	export PARCH=`grep myarchname config.sh | cut -f2 -d"'"`
 
 	insinto /usr/lib/perl5/${PV}/${PARCH}/CORE/
 	doins ${WORKDIR}/libperl.so
 	dosym /usr/lib/perl5/${PV}/${PARCH}/CORE/libperl.so /usr/lib/libperl.so
-	
 
-#    make -f Makefile \
+
+#	make -f Makefile \
 #		INSTALLMAN1DIR=${D}/usr/share/man/man1 \
 #		INSTALLMAN3DIR=${D}/usr/share/man/man3 \
 #		install || die
@@ -156,31 +157,43 @@ src_install() {
 		INSTALLMAN1DIR=${D}/usr/share/man/man1 \
 		INSTALLMAN3DIR=${D}/usr/share/man/man3 \
 		install || die "Unable to make install"
-    install -m 755 utils/pl2pm ${D}/usr/bin/pl2pm
+
+	install -m 755 utils/pl2pm ${D}/usr/bin/pl2pm
 
 
 	#man pages
 
 #	./perl installman \
-#		--man1dir=${D}/usr/share/man/man1 \
-#		--man1ext=1 \
-#		--man3dir=${D}/usr/share/man/man3 \
-#		--man3ext=3
+#	--man1dir=${D}/usr/share/man/man1 \
+#	--man1ext=1 \
+#	--man3dir=${D}/usr/share/man/man3 \
+#	--man3ext=3
 
 
 	# This removes ${D} from Config.pm
-
 	dosed /usr/lib/perl5/${PV}/${CHOST%%-*}-linux/Config.pm
 	dosed /usr/lib/perl5/${PV}/${CHOST%%-*}-linux/.packlist
 
 	# DOCUMENTATION
-
-    dodoc Changes* Artistic Copying README Todo* AUTHORS
-    prepalldocs
+	dodoc Changes* Artistic Copying README Todo* AUTHORS
+	prepalldocs
 
 	# HTML Documentation
-    
 	dodir /usr/share/doc/${PF}/html
-    ./perl installhtml --recurse --htmldir=${D}/usr/share/doc/${PF}/html
+	./perl installhtml --recurse --htmldir=${D}/usr/share/doc/${PF}/html
 
+	# MakeMaker Fix
+	cd ${S2}
+	${D}/usr/bin/perl  Makefile.PL ${myconf} PREFIX=${D}/usr
+	make \
+		PREFIX=${D}/usr \
+		INSTALLMAN1DIR=${D}/usr/share/man/man1 \
+		INSTALLMAN2DIR=${D}/usr/share/man/man2 \
+		INSTALLMAN3DIR=${D}/usr/share/man/man3 \
+		INSTALLMAN4DIR=${D}/usr/share/man/man4 \
+		INSTALLMAN5DIR=${D}/usr/share/man/man5 \
+		INSTALLMAN6DIR=${D}/usr/share/man/man6 \
+		INSTALLMAN7DIR=${D}/usr/share/man/man7 \
+		INSTALLMAN8DIR=${D}/usr/share/man/man8 \
+		install || die
 }

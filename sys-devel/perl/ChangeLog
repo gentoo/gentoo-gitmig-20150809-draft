@@ -1,6 +1,15 @@
 # ChangeLog for sys-devel/perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.13 2002/10/02 12:07:57 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.14 2002/10/13 11:57:04 seemant Exp $
+
+*perl-5.6.1-r8 (13 Oct 2002)
+
+  13 Oct 2002; Seemant Kulleen <seemant@gentoo.org> perl-5.6.1-r8.ebuild
+  files/digest-perl-5.6.1-r8 :
+
+  The fixes from -r7 didn't seem to make it into portage. So this version
+  has those, plus the updated MakeMaker.  should close bug #8998 by
+  rac@intrigue.com (Robert Coie)
 
 *perl-5.6.1-r7 (02 Oct 2002)
 
