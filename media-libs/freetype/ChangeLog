@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/freetype
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.9 2002/11/21 20:03:04 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/freetype/ChangeLog,v 1.10 2002/12/02 10:48:41 azarah Exp $
+
+  02 Dec 2002; M.Schlemmer <azarah@gentoo.org> freetype-2.1.2-r2.ebuild :
+
+  Mark as stable, as it seems it could be a fix for bug #10028.
 
 *freetype-2.1.2-r2 (21 Nov 2002)
 
