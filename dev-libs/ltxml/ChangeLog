@@ -1,0 +1,10 @@
+# ChangeLog for dev-libs/ltxml
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/ltxml/ChangeLog,v 1.1 2003/10/30 01:00:47 pythonhead Exp $
+
+*ltxml-1.2.5 (29 Oct 2003)
+
+  29 Oct 2003; Rob Cakebread <pythonhead@gentoo.org> ltxml-1.2.5.ebuild,
+  metadata.xml:
+  Initial commit
+
