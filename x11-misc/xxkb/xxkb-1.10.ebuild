@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/xxkb-1.10.ebuild,v 1.1 2003/05/15 09:00:46 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xxkb/xxkb-1.10.ebuild,v 1.2 2003/05/20 08:16:47 phosphan Exp $
 
 DESCRIPTION="eXtended XKB - assign different keymaps to different windows"
 HOMEPAGE="http://www.tsu.ru/~pascal/other/xxkb/"
 SRC_URI="http://www.tsu.ru/~pascal/other/xxkb/xxkb-1.10.tgz"
 LICENSE="Artistic"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 DEPEND="virtual/x11"
 
 src_compile() {
