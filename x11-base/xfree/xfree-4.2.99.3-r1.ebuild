@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.3-r1.ebuild,v 1.1 2002/12/23 04:52:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.2.99.3-r1.ebuild,v 1.2 2002/12/23 05:44:50 azarah Exp $
 
 IUSE="sse nls mmx truetype 3dnow 3dfx"
 
@@ -399,6 +399,9 @@ src_install() {
 		cp -af ${WORKDIR}/truetype/*.ttf ${D}/usr/X11R6/lib/X11/fonts/truetype
 		eend 0
 	fi
+
+	# Change the silly red pointer to a while one ...
+	dosed 's:redglass:whiteglass:' /usr/X11R6/lib/X11/icons/default/index.theme
 
 	# Standard symlinks
 	dodir /usr/{bin,include,lib}
