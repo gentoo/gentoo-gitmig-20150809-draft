@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/run-mailcap
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/run-mailcap/ChangeLog,v 1.10 2003/12/29 03:06:08 twp Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/run-mailcap/ChangeLog,v 1.11 2004/01/03 10:35:07 avenj Exp $
+
+  03 Jan 2003; Jon Portnoy <avenj@gentoo.org> run-mailcap-3.23_p1-r1.ebuild :
+  AMD64 keywords.
 
   28 Dec 2003; Tom Payne <twp@gentoo.org> run_mailcap-3.23_p1-r1.ebuild :
   Unmarking stable on ARCHes I cannot test at weeve's request.

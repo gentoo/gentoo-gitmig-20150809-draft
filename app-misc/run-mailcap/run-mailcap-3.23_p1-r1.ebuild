@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/run-mailcap/run-mailcap-3.23_p1-r1.ebuild,v 1.3 2003/12/29 03:06:08 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/run-mailcap/run-mailcap-3.23_p1-r1.ebuild,v 1.4 2004/01/03 10:35:07 avenj Exp $
 
 MY_PV="${PV/_p/-}"
 DESCRIPTION="Execute programs via entries in the mailcap file"
@@ -8,7 +8,7 @@ HOMEPAGE="http://packages.debian.org/unstable/net/mime-support.html"
 SRC_URI="mirror://debian/pool/main/m/mime-support/mime-support_${MY_PV}.tar.gz"
 LICENSE="freedist"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa"
+KEYWORDS="x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa amd64"
 IUSE=""
 DEPEND=""
 RDEPEND=">=dev-lang/perl-5.6*"
