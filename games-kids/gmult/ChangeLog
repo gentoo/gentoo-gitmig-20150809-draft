@@ -1,0 +1,10 @@
+# ChangeLog for games-kids/gmult
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-kids/gmult/ChangeLog,v 1.1 2004/05/28 02:39:29 mr_bones_ Exp $
+
+*gmult-2.1 (27 May 2004)
+
+  27 May 2004; Michael Sterrett <mr_bones_@gentoo.org> gmult-2.1.ebuild,
+  metadata.xml:
+  Initial commit - ebuild by Mikel Olasagasti via bug #51390 (modified)
+
