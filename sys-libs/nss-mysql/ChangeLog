@@ -1,6 +1,10 @@
 # ChangeLog for sys-libs/nss-mysql
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-mysql/ChangeLog,v 1.5 2003/09/17 20:56:26 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-mysql/ChangeLog,v 1.6 2003/12/14 23:46:28 spider Exp $
+
+  15 Dec 2003; <spider@gentoo.org> nss-mysql-0.40.ebuild,
+  nss-mysql-0.43-r1.ebuild, nss-mysql-0.43.ebuild:
+  QA: fixing chown user.group to user:group, bug #35127
 
 *nss-mysql-0.43-r1 (17 Sep 2003)
 

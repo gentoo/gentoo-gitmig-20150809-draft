@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-mysql/nss-mysql-0.43.ebuild,v 1.9 2003/09/17 20:56:26 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/nss-mysql/nss-mysql-0.43.ebuild,v 1.10 2003/12/14 23:46:29 spider Exp $
 
 DESCRIPTION="NSS MySQL Module"
 HOMEPAGE="http://savannah.gnu.org/projects/nss-mysql"
@@ -95,7 +95,7 @@ pkg_config() {
 	( gunzip -c /usr/share/doc/${P}/gentoo.sql.gz | sed s/another_password/${PASS}/ | sed s/"'password'"/"'${PAS2}'"/ | mysql ${POPT} -u ${USERNAME} ) || die
 	FILE="/etc/nss-mysql/nss-mysql-root.conf"; sed -e s/"shadow.db_password ="/"shadow.db_password = ${PASS};#oldpass:"/ < ${FILE} | cat > ${FILE}
 	FILE="/etc/nss-mysql/nss-mysql.conf"; sed -e s/"users.db_password ="/"users.db_password = ${PAS2};#oldpass:"/ < ${FILE} | cat > ${FILE}
-	chown -R 0.0 /etc/nss-mysql
+	chown -R 0:0 /etc/nss-mysql
 	chmod 600 /etc/nss-mysql/nss-mysql-root.conf
 	chmod 644 /etc/nss-mysql/nss-mysql.conf
 	einfo "nss_mysql-configfiles and mysql-tables should now be setup"
