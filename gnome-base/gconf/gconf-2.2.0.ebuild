@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.2.0.ebuild,v 1.7 2003/03/06 09:30:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-2.2.0.ebuild,v 1.8 2003/03/11 12:32:23 weeve Exp $
 
 IUSE="doc"
 
@@ -16,7 +16,7 @@ HOMEPAGE="http://www.gnome.org/"
 LICENSE="LGPL-2"
 
 SLOT="2"
-KEYWORDS="x86 ~ppc alpha"
+KEYWORDS="x86 ~ppc alpha ~sparc"
 
 RDEPEND=">=dev-libs/glib-2.0.1
 	>=gnome-base/ORBit2-2.4
