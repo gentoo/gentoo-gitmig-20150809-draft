@@ -1,0 +1,14 @@
+F77LIBS="-L/usr/lib/blas/threaded-atlas -lblas"
+
+setup() {
+ 
+einfo "/usr/lib/libblas.so -> blas/threaded-atlas/libblas.so"
+ln -sf blas/threaded-atlas/libblas.so /usr/lib/libblas.so
+
+einfo "/usr/lib/libblas.so.0 -> blas/threaded-atlas/libblas.so.0"
+ln -sf blas/threaded-atlas/libblas.so.0 /usr/lib/libblas.so.0
+ 
+einfo "/usr/lib/libblas.a -> blas/threaded-atlas/libblas.a"
+ln -sf blas/threaded-atlas/libblas.a /usr/lib/libblas.a
+
+}

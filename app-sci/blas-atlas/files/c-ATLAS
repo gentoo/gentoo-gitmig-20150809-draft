@@ -1,0 +1,14 @@
+CFLAGS="-I/usr/include/atlas"
+CLIBS="-L/usr/lib/blas/atlas -lcblas"
+ 
+setup() {
+ 
+einfo "/usr/lib/libcblas.so -> blas/atlas/libcblas.so"
+ln -sf blas/atlas/libcblas.so /usr/lib/libcblas.so
+
+einfo "/usr/lib/libcblas.so.0 -> blas/atlas/libcblas.so.0"
+ln -sf blas/atlas/libcblas.so.0 /usr/lib/libcblas.so.0
+ 
+einfo "/usr/lib/libcblas.a -> blas/atlas/libcblas.a"
+ln -sf blas/atlas/libcblas.a /usr/lib/libcblas.a
+}

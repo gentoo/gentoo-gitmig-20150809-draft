@@ -1,0 +1,12 @@
+# ChangeLog for app-sci/blas-atlas
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-sci/blas-atlas/ChangeLog,v 1.1 2004/02/02 19:09:43 george Exp $
+
+*blas-atlas-3.4.2.ebuild (02 Feb 2004)
+
+  02 Feb 2004; George Shapovalov <george@gentoo.org> blas-atlas-3.4.2.ebuild, Manifest, files/{atlas-gentoo.patch.bz2,c-ATLAS,c-threaded-ATLAS,digest-blas-atlas-3.4.2,f77-ATLAS,f77-threaded-ATLAS,war} :
+  initial release (#30453)
+  Automatically Tuned Linear Algebra Software BLAS implementation
+  ebuild submitted by Derek Dolney <dolney@astro.upenn.edu>
+  This version installs shared and static libs and provides virtual/blas
+  and will replace atlas now in dev-libs as a part of large blas reorganization (see bug)

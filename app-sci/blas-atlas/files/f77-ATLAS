@@ -1,0 +1,14 @@
+F77LIBS="-L/usr/lib/blas/atlas -lblas"
+
+setup() {
+ 
+einfo "/usr/lib/libblas.so -> blas/atlas/libblas.so"
+ln -sf blas/atlas/libblas.so /usr/lib/libblas.so
+
+einfo "/usr/lib/libblas.so.0 -> blas/atlas/libblas.so.0"
+ln -sf blas/atlas/libblas.so.0 /usr/lib/libblas.so.0
+ 
+einfo "/usr/lib/libblas.a -> blas/atlas/libblas.a"
+ln -sf blas/atlas/libblas.a /usr/lib/libblas.a
+
+}

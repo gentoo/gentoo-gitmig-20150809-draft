@@ -1,0 +1,15 @@
+CFLAGS="-I/usr/include/atlas"
+CLIBS="-L/usr/lib/blas/threaded-atlas -lcblas"
+
+setup() {
+ 
+einfo "/usr/lib/libcblas.so -> blas/threaded-atlas/libcblas.so"
+ln -sf blas/threaded-atlas/libcblas.so /usr/lib/libcblas.so
+
+einfo "/usr/lib/libcblas.so.0 -> blas/threaded-atlas/libcblas.so.0"
+ln -sf blas/threaded-atlas/libcblas.so.0 /usr/lib/libcblas.so.0
+ 
+einfo "/usr/lib/libcblas.a -> blas/threaded-atlas/libcblas.a"
+ln -sf blas/threaded-atlas/libcblas.so.0 /usr/lib/libcblas.a
+
+}
