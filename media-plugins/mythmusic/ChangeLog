@@ -1,6 +1,9 @@
 # ChangeLog for media-plugins/mythmusic
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/ChangeLog,v 1.23 2004/09/12 10:04:27 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythmusic/ChangeLog,v 1.24 2004/09/21 04:59:50 cardoe Exp $
+
+  21 Sep 2004; Doug Goldstein <cardoe@gentoo.org> mythmusic-0.15.1.ebuild:
+  stable x86
 
   12 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> mythmusic-0.16.ebuild:
   Inherit flag-o-matic and move replace flags out of global scope, thanks to

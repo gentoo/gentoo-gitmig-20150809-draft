@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythnews/mythnews-0.15.ebuild,v 1.2 2004/06/24 23:33:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythnews/mythnews-0.15.ebuild,v 1.3 2004/09/21 05:01:19 cardoe Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.mythtv.org/mc/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=">=sys-apps/sed-4
 	|| ( >=media-tv/mythtv-${PV}* >=media-tv/mythfrontend-${PV}* )"

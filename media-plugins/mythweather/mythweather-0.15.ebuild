@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythweather/mythweather-0.15.ebuild,v 1.3 2004/08/07 23:23:39 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/mythweather/mythweather-0.15.ebuild,v 1.4 2004/09/21 05:06:29 cardoe Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SRC_URI="http://www.mythtv.org/mc/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 DEPEND=">=sys-apps/sed-4
 	|| ( >=media-tv/mythtv-${PV}* >=media-tv/mythfrontend-${PV}* )"
