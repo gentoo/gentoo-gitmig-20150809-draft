@@ -1,0 +1,10 @@
+# ChangeLog for media-sound/rip-l
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rip-l/ChangeLog,v 1.1 2005/01/15 11:19:09 mkennedy Exp $
+
+*rip-l-0.4 (15 Jan 2005)
+
+  15 Jan 2005; Matthew Kennedy <mkennedy@gentoo.org> +metadata.xml,
+  +files/0.4-gentoo.patch, +rip-l-0.4.ebuild:
+  Initial port.  Ebuild contributed by Matthew Kennedy <mkennedy@gentoo.org>
+
