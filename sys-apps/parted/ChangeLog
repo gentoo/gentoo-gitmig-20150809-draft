@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/parted
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.19 2003/08/07 18:09:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/ChangeLog,v 1.20 2003/08/11 23:42:49 wwoods Exp $
+
+  11 Aug 2003; Will Woods <wwoods@gentoo.org> parted-1.6.5-r1.ebuild,
+  parted-1.6.5.ebuild, parted-1.6.6.ebuild:
+  Marked 1.6.5 stable for alpha (Mandrake uses it and it works fine) and marked
+  1.6.6 ~alpha. Also fixed a mistake in the ebuild: 
+    "use debug && myconf="${myconf} --disable-debug" 
+  should have been "use debug || ...". This fix doesn't really change the 
+  functionality of the program so I am not bumping the rev number.
 
   07 Aug 2003; Aron Griffis <agriffis@gentoo.org> parted-1.6.5-r1.ebuild:
   Add ~alpha to KEYWORDS

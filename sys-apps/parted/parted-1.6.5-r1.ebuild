@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.5-r1.ebuild,v 1.6 2003/08/07 18:09:52 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/parted/parted-1.6.5-r1.ebuild,v 1.7 2003/08/11 23:42:49 wwoods Exp $
 
 DESCRIPTION="Create, destroy, resize, check, copy partitions and file systems"
 HOMEPAGE="http://www.gnu.org/software/parted"
@@ -8,7 +8,7 @@ SRC_URI="ftp://ftp.gnu.org/gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="ppc amd64 ~alpha"
+KEYWORDS="ppc amd64 alpha"
 IUSE="nls static readline debug"
 
 DEPEND=">=sys-apps/e2fsprogs-1.27
@@ -28,7 +28,7 @@ src_compile() {
 	local myconf
 	use nls || myconf="${myconf} --disable-nls"
 	use readline || myconf="${myconf} --without-readline"
-	use debug && myconf="${myconf} --disable-debug"
+	use debug || myconf="${myconf} --disable-debug"
 	use static && myconf="${myconf} --enable-all-static"
 	econf --target=${CHOST} ${myconf} || die "Configure failed"
 	emake || die "Make failed"
