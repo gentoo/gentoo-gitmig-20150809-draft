@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.6_alpha1.ebuild,v 1.1 2005/02/11 15:53:12 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-0.4.6_beta2.ebuild,v 1.1 2005/02/20 14:30:50 usata Exp $
 
-inherit eutils flag-o-matic
+inherit eutils flag-o-matic kde-functions
 
 MY_P="${P/_/}"
 S="${WORKDIR}/${MY_P}"
@@ -14,7 +14,7 @@ SRC_URI="http://uim.freedesktop.org/releases/${MY_P}.tar.gz"
 LICENSE="GPL-2 BSD"
 SLOT="0"
 KEYWORDS="~x86 ~alpha ~ppc ~amd64 ~ppc64 ~sparc"
-IUSE="gtk immqt immqt-bc nls debug X m17n-lib canna"
+IUSE="gtk qt immqt immqt-bc nls debug X m17n-lib canna"
 
 RDEPEND="X? ( virtual/x11 )
 	gtk? ( >=x11-libs/gtk+-2 )
@@ -23,7 +23,8 @@ RDEPEND="X? ( virtual/x11 )
 	!app-i18n/uim-fep
 	canna? ( app-i18n/canna )
 	immqt? ( >=x11-libs/qt-3.3.3-r1 )
-	immqt-bc? ( >=x11-libs/qt-3.3.3-r1 )"
+	immqt-bc? ( >=x11-libs/qt-3.3.3-r1 )
+	qt? ( >=x11-libs/qt-3.3.3-r1 )"
 DEPEND="${RDEPEND}
 	dev-lang/perl
 	dev-perl/XML-Parser
@@ -47,6 +48,9 @@ src_compile() {
 		myconf="${myconf} --enable-qt-immodule"
 		export CPPFLAGS="${CPPFLAGS} -I${S}/qt"
 	fi
+	if use qt ; then
+		set-qtdir 3
+	fi
 
 	use debug && append-flags -g
 	econf $(use_enable nls) \
@@ -54,6 +58,7 @@ src_compile() {
 		$(use_with gtk gtk2) \
 		$(use_with m17n-lib m17nlib) \
 		$(use_with canna) \
+		$(use_with qt) \
 		${myconf} || die "econf failed"
 	emake -j1 || die "emake failed"
 }
@@ -68,9 +73,8 @@ src_install() {
 pkg_postinst() {
 	einfo
 	einfo "To use uim-anthy you should emerge app-i18n/anthy or app-i18n/anthy-ss."
-	einfo "To use uim-canna you should emerge app-i18n/canna."
 	einfo "To use uim-skk you should emerge app-i18n/skk-jisyo (uim doesn't support skkserv)."
-	einfo "To use uim-prime you should emerge >=app-i18n/prime-0.8."
+	einfo "To use uim-prime you should emerge app-i18n/prime"
 	einfo
 
 	ewarn
@@ -83,7 +87,8 @@ pkg_postinst() {
 	ewarn "(define default-im-name 'anthy)"
 	ewarn "to your ~/.uim."
 	ewarn
-	ewarn "All input methods can be found by running uim-pref-gtk or uim-pref-qt."
+	ewarn "All input methods can be found by running uim-im-switcher-gtk"
+	ewarn "or uim-im-switcher-qt."
 	ewarn
 
 	use gtk && gtk-query-immodules-2.0 > ${ROOT}/etc/gtk-2.0/gtk.immodules
