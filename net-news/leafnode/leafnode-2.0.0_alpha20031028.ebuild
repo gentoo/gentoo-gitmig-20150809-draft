@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/leafnode-2.0.0_alpha20031028.ebuild,v 1.3 2003/12/26 19:52:12 blkdeath Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/leafnode/leafnode-2.0.0_alpha20031028.ebuild,v 1.4 2004/02/26 17:00:06 blkdeath Exp $
 
 DESCRIPTION="leafnode - A USENET software package designed for small sites"
 SRC_URI="http://www-dt.e-technik.uni-dortmund.de/~ma/leafnode/beta/leafnode-2.0.0.alpha20031028a.tar.bz2"
@@ -63,7 +63,7 @@ src_install() {
 pkg_postinst() {
 	dodir ${D}/var/spool/news/{leaf.node,failed.postings,interesting.groups,out.going}
 	dodir ${D}/var/spool/news/message.id/{0,1,2,3,4,5,6,7,8,9}{0,1,2,3,4,5,6,7,8,9}{0,1,2,3,4,5,6,7,8,9}
-	chown -R news:news /var/spool/news
+	chown -R news:news ${D}/var/spool/news
 
 	zcat ${ROOT}/usr/share/doc/${P}/README_FIRST.gz | while read line ;
 	do
