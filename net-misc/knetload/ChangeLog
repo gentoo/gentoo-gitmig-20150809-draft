@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/knetload
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/knetload/ChangeLog,v 1.13 2004/05/22 14:04:05 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/knetload/ChangeLog,v 1.14 2004/06/21 19:05:36 hansmi Exp $
+
+  21 Jun 2004; Michael Hanselmann <hansmi@gentoo.org> knetload-2.2.2.ebuild:
+  Added to ~ppc, bug 54667.
 
   22 May 2004; Danny van Dyk <kugelfang@gentoo.org> knetload-1.99.ebuild:
   Marked stable on amd64.
