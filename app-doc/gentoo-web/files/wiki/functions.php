@@ -130,7 +130,6 @@ global $uid, $dbusername, $show_privates, $list; ?>
 					while ( $row = mysql_fetch_array($query) ) {
 						if ( $row['leader'] == $uid ) {
 							$leaderof[] = team_num_name( $row['gid'] );
-							break;
 						}
 					}
 					// are we an admin?
