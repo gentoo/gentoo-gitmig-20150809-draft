@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.37 2004/11/30 22:01:11 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.38 2004/12/04 21:39:01 eradicator Exp $
+
+  04 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  amarok-1.1.1.ebuild, amarok-1.2_beta1.ebuild:
+  Relaxing the arts dependency.  Closes bug #72869.
 
   30 Nov 2004; Sven Wegener <swegener@gentoo.org> amarok-1.1.1.ebuild,
   amarok-1.2_beta1.ebuild:
