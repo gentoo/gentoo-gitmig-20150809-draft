@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.1-r4.ebuild,v 1.20 2004/03/02 20:31:51 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs/emacs-21.1-r4.ebuild,v 1.21 2004/06/15 08:07:12 kloeri Exp $
 
 IUSE="X nls motif"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="An incredibly powerful, extensible text editor"
 SRC_URI="mirror://gnu/emacs/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/emacs"
