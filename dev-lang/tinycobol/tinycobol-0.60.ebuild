@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tinycobol/tinycobol-0.60.ebuild,v 1.7 2003/08/05 18:58:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tinycobol/tinycobol-0.60.ebuild,v 1.8 2003/09/08 07:19:48 msterret Exp $
 
 inherit eutils
 
