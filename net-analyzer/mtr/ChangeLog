@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/mtr
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.23 2004/08/19 02:10:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/mtr/ChangeLog,v 1.24 2004/08/21 23:11:33 eldad Exp $
+
+*mtr-0.64 (22 Aug 2004)
+
+  22 Aug 2004; Eldad Zack <eldad@gentoo.org> +files/mtr-ac-res_mkquery.patch,
+  +mtr-0.64.ebuild:
+  Version bump. Dropped ipv6 in 0.64. Fixes amd64 issue with resolver lib.
+  marking ~amd64. Closes #54024.
 
   18 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> mtr-0.54-r2.ebuild:
   Stable on sparc
