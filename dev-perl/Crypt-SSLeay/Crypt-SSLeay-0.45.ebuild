@@ -6,7 +6,7 @@ inherit perl-module
 S=${WORKDIR}/${P}
 DESCRIPTION="Crypt::SSLeay module for perl"
 SRC_URI="http://www.cpan.org/authors/id/C/CH/CHAMAS/${P}.tar.gz"
-HOMEPAGE="http://www.cpan.org/"
+HOMEPAGE="http://search.cpan.org/author/CHAMAS/Crypt-SSLeay-${PV}/"
 
 SLOT="0"
 LICENSE="Artistic | GPL-2"
