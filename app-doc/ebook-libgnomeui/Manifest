@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 f13f4a77dd84cb3016d9f7f593326697 ChangeLog 661
-MD5 7120d723310f5206f8fea357ea5b0f2f ebook-libgnomeui-1.0.ebuild 457
+MD5 63ca508be0e6daea5d30e9899286f252 ChangeLog 663
+MD5 d2b68f1bba0f822426e021ee2daff9c1 ebook-libgnomeui-1.0.ebuild 463
 MD5 532b00ed7c12705b0f040c5dd566d0ad files/digest-ebook-libgnomeui-1.0 62
 MD5 5e7a34af75573d09b42ae4614a5aca22 files/ebook-libgnome-book.devhelp.patch 345
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBW0LZI1lqEGTUzyQRAqySAKDJ0Q5cDl0FuI/2Fj5BNIkL9dEYvACeINl8
-IEF5cq4vgOUkC+p2dVlanyY=
-=DvCx
------END PGP SIGNATURE-----

@@ -1,15 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a22b2e2c983f6c9da9d2c5f86ccee43d ChangeLog 602
-MD5 b0299030f8059a9b7c134da0c3f9f83e ebook-gdk-1.2.ebuild 303
-MD5 0d3efce028aab556989284734b4e47c6 ebook-gdk-2.0.ebuild 303
+MD5 f16b26838af92979ee58aaa4da3d5c20 ChangeLog 604
+MD5 6ae5d73203c80f3cbce701e669282a13 ebook-gdk-1.2.ebuild 306
+MD5 3e1521586392be7721e96bb4244e3ffa ebook-gdk-2.0.ebuild 306
 MD5 9c95279c4b22bc75a5acfd464d330719 files/digest-ebook-gdk-1.2 58
 MD5 6ece046786ae659624e834723c0f63a0 files/digest-ebook-gdk-2.0 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBW0MsI1lqEGTUzyQRAmVcAKCv56IoSnRoIm0DGA3Uqz9m2cyPxQCgjnvw
-mx81GsEI2oGtd3iQvNgiF48=
-=iO6X
------END PGP SIGNATURE-----

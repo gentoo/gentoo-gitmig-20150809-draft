@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 adc8610ebd987d17ce30c0d5b443c3f3 ChangeLog 490
-MD5 c16005a11cf6d42acdbbb0a5b9ca6541 ebook-libgnome-1.2.ebuild 339
+MD5 f41893702550fb312ab4427efa36492d ChangeLog 492
+MD5 b82c7aa5afc937440c343771fa14986e ebook-libgnome-1.2.ebuild 341
 MD5 94aca47d18221ee47c0d1a2e3feec380 files/digest-ebook-libgnome-1.2 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBW0IvI1lqEGTUzyQRAmrTAJsFSghOzZjyHxWFl3PXajBkEXEn4gCdEpjm
-zptZuCvMki+MFwcuSw8JBWM=
-=5yG6
------END PGP SIGNATURE-----

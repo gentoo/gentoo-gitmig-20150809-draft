@@ -1,13 +1,3 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 8216bd0c4f4935b6b445e5f34c988f8e ChangeLog 539
-MD5 55d37a66171f194d029c343f4d01101f ebook-glibc-2.2.4.ebuild 297
+MD5 226377a3db2a6d1755d0e7bc106e075a ChangeLog 541
+MD5 73250a254a5fd148098cf7189b514219 ebook-glibc-2.2.4.ebuild 299
 MD5 5a710f606e6ab5fcca415673d787d8ce files/digest-ebook-glibc-2.2.4 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBW0FAI1lqEGTUzyQRAp5gAKCdly4pdFxLJrR/FUjZHGvj30PRcwCdEjum
-zbN4sBo3amakL8cTa3RWCGI=
-=qM6h
------END PGP SIGNATURE-----
