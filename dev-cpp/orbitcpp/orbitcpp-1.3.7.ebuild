@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/orbitcpp/orbitcpp-1.3.7.ebuild,v 1.2 2003/09/14 14:15:07 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/orbitcpp/orbitcpp-1.3.7.ebuild,v 1.3 2003/12/16 14:29:06 weeve Exp $
 
 inherit gnome.org
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://orbitcpp.sourceforge.net/"
 LICENSE="LGPL-2.1"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~sparc"
 IUSE=""
 
 RDEPEND=">=gnome-base/ORBit2-2.5
