@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.ebuild,v 1.15 2004/11/20 09:42:44 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk-bin/ibm-jdk-bin-1.4.2.ebuild,v 1.16 2004/11/20 10:58:14 sejo Exp $
 
 inherit java eutils
 
@@ -34,7 +34,7 @@ if use ppc; then
 elif use ppc64; then
 	S="${WORKDIR}/IBMJava2-ppc64-142"
 elif use amd64; then
-	S="${WORKDIR}/IBMJava2-amd-142"
+	S="${WORKDIR}/IBMJava2-amd64-142"
 else
 	S="${WORKDIR}/IBMJava2-142"
 fi
