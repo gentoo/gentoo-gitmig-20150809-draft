@@ -1,25 +1,22 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00_pre8.ebuild,v 1.1 2004/03/02 09:31:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00_pre8.ebuild,v 1.2 2004/03/05 15:20:44 vapier Exp $
 
 MY_PV=${PV/_/-}
 MY_P=${PN}-${MY_PV}
 S=${WORKDIR}/${MY_P}
 DESCRIPTION="Utilities for rescue and embedded systems"
+HOMEPAGE="http://www.busybox.net/"
 SRC_URI="http://www.busybox.net/downloads/${MY_P}.tar.gz"
-HOMEPAGE="http://www.busybox.net"
-SLOT="0"
-LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
-IUSE="debug static uclibc savedconfig"
 
-# Forward anticipation of expected supported arches would include ~x86
-# ~alpha ~mips ~ppc ~sparc
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~x86 ~ppc"
+IUSE="debug static uclibc savedconfig make-busybox-symlinks"
 
 DEPEND="virtual/glibc
-	uclibc? ( dev-libs/uclibc )
-"
-RDEPEND="!static? ${DEPEND}"
+	uclibc? ( dev-libs/uclibc )"
+RDEPEND="!static? ( ${DEPEND} )"
 # <pebenito> then eventually turning on selinux would mean
 # adding a dep: selinux? ( sys-libs/libselinux )
 
@@ -44,7 +41,7 @@ src_unpack() {
 	# [package]-[version].config
 	# [package].config
 
-	if use savedconfig; then
+	if use savedconfig ; then
 		[ -r .config ] && rm .config
 		for conf in {${PN}-${PV}-${PR},${PN}-${PV},${PN}}.config; do
 			if [ -r /etc/${PN}/${CCHOST}/${conf} ]; then
@@ -69,18 +66,22 @@ src_unpack() {
 	# pain do to as we would need a multiline sed expression which
 	# does not always seem to work so hot for me.
 
-	[ `use static` ] && busybox_config_option y STATIC ||
-		busybox_config_option n STATIC
+	use static \
+		&& busybox_config_option y STATIC \
+		|| busybox_config_option n STATIC
 
 	# 1.00-pre2 uses the old selinux api which is no longer
 	# maintained. perhaps the next stable release will include
 	# support. 
 	# 1.00-pre5  pebenito says busybox is still using the old se api.
-	#[ `use selinux` ] && busybox_config_option y SELINUX ||
-		busybox_config_option n SELINUX
+	#use selinux \
+	#	&& busybox_config_option y SELINUX \
+	#	|| 
+	busybox_config_option n SELINUX
 
-	[ `use debug` ] && busybox_config_option y DEBUG ||
-		busybox_config_option n DEBUG
+	use debug \
+		&& busybox_config_option y DEBUG \
+		|| busybox_config_option n DEBUG
 
 	# Supported architectures:
 
@@ -88,7 +89,6 @@ src_unpack() {
 	# gcc.  It has a few specialized features added for __sparc__
 	# and __alpha__.  insmod functionality is currently limited to
 	# x86, ARM, SH3/4, powerpc, m68k, MIPS, and v850e.
-
 	case ${ARCH} in
 		alpha|sparc*)
 			# non x86 needs to figure out what works for
@@ -109,23 +109,44 @@ src_unpack() {
 	echo | make clean oldconfig > /dev/null
 }
 
-src_compile() {
-	if use uclibc; then
+busybox_set_cross_compiler() {
+	if use uclibc ; then
 		case ${ARCH} in
 			x86*) CROSS="/usr/i386-linux-uclibc/bin/i386-uclibc-";;
 			*) ;;
 		esac
 	fi
 	[ -n "${CROSS}" ] && einfo "Setting cross compiler prefix to ${CROSS}"
-	# MAKEOPTS="-j1" emake CROSS="${CROSS}" include/config.h busybox || die
-	MAKEOPTS="-j1" emake CROSS="${CROSS}" busybox || die
+}
+
+src_compile() {
+	busybox_set_cross_compiler
+	#emake -j1 CROSS="${CROSS}" include/config.h busybox || die
+	emake -j1 CROSS="${CROSS}" busybox || die
 }
 
 src_install() {
+	busybox_set_cross_compiler
+
 	into /
 	dobin busybox
+	if use make-busybox-symlinks ; then
+		make CROSS="${CROSS}" install || die
+		dodir /bin
+		cp -a _install/bin/* ${D}/bin/
+		dodir /sbin
+		cp -a _install/sbin/* ${D}/sbin/
+		cd ${D}
+		local symlink
+		for symlink in {bin,sbin}/* ; do
+			[ -L "${symlink}" ] || continue
+			[ -e "${ROOT}/${symlink}" ] \
+				&& eerror "Deleting symlink ${symlink} because it exists in ${ROOT}" \
+				&& rm ${symlink}
+		done
+		cd ${S}
+	fi
 
-	into /usr
 	dodoc AUTHORS Changelog LICENSE README TODO
 
 	cd docs || die
@@ -133,40 +154,38 @@ src_install() {
 	dodoc *.txt
 	docinto pod
 	dodoc *.pod
-	dohtml *.html
-	dohtml *.sgml
+	dohtml *.html *.sgml
 
 	# no man files?
 	# cd ../man && doman *.1
 
 	cd ../examples || die
 	docinto examples
-	dodoc inittab
-	dodoc depmod.pl
+	dodoc inittab depmod.pl
 
 	cd bootfloppy || die
 	docinto bootfloppy
-	for f in bootfloppy.txt display.txt mkdevs.sh etc/* etc/init.d/* ; do
-		[ -f ${f} ] && dodoc ${f}
-	done
+	dodoc bootfloppy.txt display.txt mkdevs.sh etc/* etc/init.d/* 2>/dev/null
 
 	cd ../../ || die
-
 	if [ `has buildpkg ${FEATURES}` -a `has keepwork ${FEATURES}` ]; then
 		cd ${S}
 		# this should install to the ./_install/ dir by default.
 		# we make a micro pkg of busybox that can be used for
 		# embedded systems -solar
-		make install && cd ./_install/ &&
-			tar --no-same-owner -jcvf \
-				${WORKDIR}/${MY_P}-${ARCH}.bz2 . && cd ..
+		if ! use make-busybox-symlinks ; then
+			make CROSS="${CROSS}" install || die
+		fi
+		cd ./_install/ \
+			&& tar --no-same-owner -jcvf ${WORKDIR}/${MY_P}-${ARCH}.bz2 . \
+			&& cd ..
 	fi
 
-	if use savedconfig; then
+	if use savedconfig ; then
 		einfo "Saving this build config to /etc/${PN}/${CCHOST}/${PN}-${PV}-${PR}.config"
 		einfo "Read this ebuild for more info on how to take advantage of this option"
-		mkdir -p ${D}/etc/${PN}/${CCHOST}/
-		cp ${S}/.config ${D}/etc/${PN}/${CCHOST}/${PN}-${PV}-${PR}.config
+		insinto /etc/${PN}/${CCHOST}/
+		newins ${S}/.config ${PN}-${PV}-${PR}.config
 	fi
 }
 

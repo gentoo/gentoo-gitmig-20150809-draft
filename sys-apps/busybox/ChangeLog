@@ -1,8 +1,12 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.24 2004/03/02 09:31:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.25 2004/03/05 15:20:44 vapier Exp $
 
 *busybox-1.00_pre8 (02 Mar 2004)
+
+  05 Mar 2004; Mike Frysinger <vapier@gentoo.org> :
+  Add local USE flag make-busybox-symlinks to help out embedded building.
+  This will create all the appropriate symlinks in /sbin and /bin #43406.
 
   02 Mar 2004; Mike Frysinger <vapier@gentoo.org> :
   Version bump to fix #43450 by Aaron Peterson.
