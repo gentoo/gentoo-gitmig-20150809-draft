@@ -1,6 +1,6 @@
 # ChangeLog for dev-cpp/gnomemm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnomemm/ChangeLog,v 1.3 2003/07/08 23:17:37 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/gnomemm/ChangeLog,v 1.4 2003/07/11 20:19:09 gmsoft Exp $
 
   09 Jul 2003; Alastair Tse <liquidx@gentoo.org> gnomemm-1.2.3-r1.ebuild:
   added gnome-libs dep
@@ -9,6 +9,9 @@
   added the ppc keyword.
 
 *gnomemm-1.2.3-r1 (21 Jun 2003)
+
+  11 Jul 2003; Guy Martin <gmsoft@gentoo.org> gnomemm-1.2.3-r1.ebuild :
+  Added hppa to KEYWORDS.
 
   21 Jun 2003; Alastair Tse <liquidx@gentoo.org> gnomemm-1.2.3-r1.ebuild,
   files/gnomemm-1.2.3-gentoo.patch:
