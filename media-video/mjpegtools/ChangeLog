@@ -1,6 +1,14 @@
 # ChangeLog for media-video/mjpegtools
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.4 2002/05/26 13:01:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/ChangeLog,v 1.5 2002/05/31 01:40:15 seemant Exp $
+
+*mjpegtools-1.6.0-r1 (30 May 2002)
+
+  30 May 2002; Seemant Kulleen <seemant@gentoo.org>
+  mjpegtools-1.6.0-r1.ebuild files/digest-mjpegtools-1.6.0-r1 :
+
+  Fixed some dependency information, thanks to: aliz@telia.com (Daniel
+  Ahlberg) in bug #3108
 
 *mjpegtools-1.6.0 (26 May 2002)
 
