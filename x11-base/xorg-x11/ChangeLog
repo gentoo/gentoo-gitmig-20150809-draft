@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.346 2005/03/06 17:53:08 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.347 2005/03/06 18:58:01 kugelfang Exp $
+
+  06 Mar 2005; Danny van Dyk <kugelfang@gentoo.org>
+  xorg-x11-6.8.0-r5.ebuild:
+  Marked stable on amd64; Security BUG #83598.
 
   06 Mar 2005; Markus Rothe <corsair@gentoo.org> xorg-x11-6.8.2-r1.ebuild:
   Stable on ppc64; bug #83598
