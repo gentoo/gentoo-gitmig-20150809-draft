@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/golem/golem-0.0.5-r1.ebuild,v 1.2 2003/11/04 14:52:09 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/golem/golem-0.0.5-r1.ebuild,v 1.3 2004/03/01 04:47:14 jhuebel Exp $
 
 DESCRIPTION="Small window manager with themes and plugins"
 HOMEPAGE="http://golem.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86 ~sparc"
+KEYWORDS="x86 ~sparc ~amd64"
 IUSE="nls xinerama esd"
 
 DEPEND="virtual/glibc
@@ -18,6 +18,7 @@ DEPEND="virtual/glibc
 S="${WORKDIR}/${P}"
 
 src_compile() {
+	use amd64 && append-flags -fPIC
 	econf \
 		`use_enable nls i18n` \
 		`use_enable esd sound` \
