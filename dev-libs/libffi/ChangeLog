@@ -1,0 +1,19 @@
+# ChangeLog for dev-libs/libffi
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libffi/ChangeLog,v 1.1 2002/02/10 21:27:52 karltk Exp $
+
+*libffi-0.20 ( 10 Feb 2002 )
+
+  10 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ChangeLog files/digest-libffi-0.20 libffi-0.20:
+  
+  The libffi library provides a portable, high level programming interface to 
+  various calling conventions. This allows a programmer to call any function 
+  specified by a call interface description at run-time.
+
+  Ffi stands for Foreign Function Interface. A foreign function interface is 
+  the popular name for the interface that allows code written in one language 
+  to call code written in another language. The libffi library really only 
+  provides the lowest, machine dependent layer of a fully featured foreign 
+  function interface. A layer must exist above libffi that handles type 
+  conversions for values passed between the two languages.
+
