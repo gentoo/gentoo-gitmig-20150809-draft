@@ -1,6 +1,6 @@
 # Copyright 2002 Alexander Holler
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20021026.ebuild,v 1.2 2003/05/03 09:05:06 killian Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20021026.ebuild,v 1.3 2003/08/28 22:38:06 mholzer Exp $
 
 YEAR_PV=${PV:0:4}
 MON_PV=${PV:4:2}
@@ -20,6 +20,11 @@ DEPEND="virtual/linux-sources
 	sys-devel/automake"
 
 src_compile() {
+	cd ${S}
+	echo "CONFIG_DATADIR='/usr/share'" >> .config
+	sed -i -e "s:acinclude.m4::" rcapid/Makefile.in
+	touch capiinfo/configure capiinfo/aclocal.m4 capiinfo/Makefile.in
+	touch rcapid/configure rcapid/aclocal.m4
 	emake subconfig || die
 	emake || die
 }
