@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.6.1-r1.ebuild,v 1.6 2004/12/25 00:52:47 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.6.1-r1.ebuild,v 1.7 2005/01/02 22:11:24 kloeri Exp $
 
 inherit flag-o-matic
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.povray.org/"
 
 SLOT="0"
 LICENSE="povlegal-3.6"
-KEYWORDS="x86 ppc ~alpha ~amd64 ppc64 ~sparc"
+KEYWORDS="x86 ppc alpha ~amd64 ppc64 ~sparc"
 IUSE="X svga"
 
 DEPEND="media-libs/libpng

@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/povray
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.40 2004/12/25 00:52:47 weeve Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/ChangeLog,v 1.41 2005/01/02 22:11:24 kloeri Exp $
+
+  02 Jan 2005; Bryan Østergaard <kloeri@gentoo.org> povray-3.6.1-r1.ebuild:
+  Stable on alpha.
 
   24 Dec 2004; Jason Wever <weeve@gentoo.org> povray-3.6.1-r1.ebuild:
   Added ~sparc keyword.
