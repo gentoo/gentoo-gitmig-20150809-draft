@@ -1,8 +1,0 @@
-# ChangeLog for sys-apps/nictools-pci
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/nictools-pci/ChangeLog,v 1.1 2003/07/12 18:15:24 lisa Exp $
-
-*nictools-pci-1.3.6 (12 Jul 2003)
-
-  12 Jul 2003; Lisa Seelye <lisa@gentoo.org> :
-  Initial check-in. Ends bug 15111 (submitted ebuild)
