@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/bsf
 # Copyright 2000-2004 Gentoo Foundation; Distributed unde the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/ChangeLog,v 1.5 2004/08/09 11:08:44 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/bsf/ChangeLog,v 1.6 2004/08/24 03:36:18 zx Exp $
+
+  23 Aug 2004; Chris Aniszczyk <zx@gentoo.org> bsf-2.3.0-r1.ebuild,
+  -bsf-2.3.0.ebuild:
+  Marking x86
 
   09 Aug 2004; Thomas Matthijs <axxo@gentoo.org> -files/bsf-rhino-1.5.patch,
   bsf-2.3.0-r1.ebuild:

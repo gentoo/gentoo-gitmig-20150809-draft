@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jython
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.10 2004/07/31 15:51:57 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.11 2004/08/24 03:35:24 zx Exp $
+
+  23 Aug 2004; Chris Aniszczyk <zx@gentoo.org> jython-2.1-r4.ebuild:
+  Marking x86
 
   31 Jul 2004; Karl Trygve Kalleberg <karltk@gentoo.org>:
   jython-2.1-r4.ebuild: Rewrote almost totally to compile from source. Ugly hack
