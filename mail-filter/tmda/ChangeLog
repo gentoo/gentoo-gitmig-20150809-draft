@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/tmda
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/tmda/ChangeLog,v 1.9 2004/09/29 17:26:28 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/tmda/ChangeLog,v 1.10 2004/10/14 21:56:28 ticho Exp $
+
+*tmda-1.0.3-r3 (14 Oct 2004)
+
+  14 Oct 2004; Andrej Kacian <ticho@gentoo.org>
+  +files/tmda-1.0-non-interactive-tty.patch, +tmda-1.0.3-r3.ebuild:
+  Revision bump, apply patch to prevent opening /dev/tty when running in batch
+  mode. See bug #67150, reported by Jesse D. Guardiani <jesse@wingnet.net>.
 
 *tmda-1.0.3-r2 (29 Sep 2004)
 
