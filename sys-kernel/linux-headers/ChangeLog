@@ -1,6 +1,28 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.84 2004/07/03 09:54:32 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.85 2004/07/09 22:39:11 lv Exp $
+
+  09 Jul 2004; Travis Tilley <lv@gentoo.org>
+  -files/linux-headers-2.6.0-appCompat.patch,
+  -files/linux-headers-2.6.0-fb.patch,
+  -files/linux-headers-2.6.0-strict-ansi-fix.patch,
+  -files/linux-headers-2.6.0-sysctl_h-compat.patch,
+  -files/linux-headers-2.6.3-appCompat.patch,
+  -files/linux-headers-2.6.3-strict-ansi-fix.patch,
+  -files/linux-headers-2.6.4-appCompat.patch,
+  -files/linux-headers-2.6.4-unistd-nptl-fix.patch,
+  -files/linux-headers-2.6.6-appCompat.patch,
+  -files/linux-headers-2.6.6-tcp_info-DRS-backport.patch,
+  -files/linux-headers-2.6.7-appCompat.patch, linux-headers-2.0.40.ebuild,
+  linux-headers-2.2.26.ebuild, linux-headers-2.4.21-r1.ebuild,
+  linux-headers-2.4.21.ebuild, linux-headers-2.4.22.ebuild,
+  linux-headers-2.4.23.ebuild, linux-headers-2.4.25.ebuild,
+  linux-headers-2.4.26.ebuild, -linux-headers-2.6.1.ebuild,
+  -linux-headers-2.6.3-r1.ebuild, -linux-headers-2.6.4.ebuild,
+  -linux-headers-2.6.5.ebuild, -linux-headers-2.6.6-r1.ebuild,
+  -linux-headers-2.6.6.ebuild, -linux-headers-2.6.7-r1.ebuild:
+  moved all 2.6 header packages into linux26-headers and updated dependencies so
+  that linux-headers conflicts with virtual/os-headers
 
   03 Jul 2004; Michal Januszewski <spock@gentoo.org>
   linux-headers-2.6.7-r1.ebuild:
