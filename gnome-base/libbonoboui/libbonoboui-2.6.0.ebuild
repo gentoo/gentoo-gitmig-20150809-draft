@@ -1,16 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/libbonoboui-2.6.0.ebuild,v 1.8 2004/07/04 18:44:26 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libbonoboui/libbonoboui-2.6.0.ebuild,v 1.9 2004/11/08 19:15:06 vapier Exp $
 
 inherit gnome2
 
 DESCRIPTION="User Interface part of libbonobo"
 HOMEPAGE="http://www.gnome.org/"
 
-IUSE="doc"
-SLOT="0"
-KEYWORDS="x86 ppc alpha ~sparc hppa amd64 ~ia64 mips"
 LICENSE="GPL-2 LGPL-2.1"
+SLOT="0"
+KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ~sparc x86"
+IUSE="doc"
 
 RDEPEND=">=dev-libs/glib-2.3.2
 	>=x11-libs/gtk+-2.3.1

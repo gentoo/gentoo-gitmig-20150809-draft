@@ -1,15 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/libgnomeprint-1.116.1.ebuild,v 1.10 2004/06/24 22:00:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprint/libgnomeprint-1.116.1.ebuild,v 1.11 2004/11/08 19:10:19 vapier Exp $
 
 inherit libtool gnome.org
 
 DESCRIPTION="Printer handling for Gnome"
 HOMEPAGE="http://www.gnome.org/"
 
-KEYWORDS="x86 ppc ~sparc"
-SLOT="2"
 LICENSE="GPL-2 LGPL-2.1"
+SLOT="2"
+KEYWORDS="x86 ppc ~sparc arm"
 IUSE="doc"
 
 RDEPEND=">=gnome-base/libbonobo-2.0.0

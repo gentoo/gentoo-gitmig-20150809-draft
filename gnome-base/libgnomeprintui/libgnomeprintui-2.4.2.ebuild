@@ -1,15 +1,15 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprintui/libgnomeprintui-2.4.2.ebuild,v 1.10 2004/07/14 15:16:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/libgnomeprintui/libgnomeprintui-2.4.2.ebuild,v 1.11 2004/11/08 19:19:04 vapier Exp $
 
 inherit gnome2
 
 DESCRIPTION="user interface libraries for gnome print"
 HOMEPAGE="http://www.gnome.org/"
-LICENSE="GPL-2 LGPL-2.1"
 
+LICENSE="GPL-2 LGPL-2.1"
 SLOT="2.2"
-KEYWORDS="x86 ppc alpha sparc hppa amd64 ia64 mips"
+KEYWORDS="x86 ppc alpha sparc hppa amd64 ia64 mips arm"
 IUSE="doc"
 
 RDEPEND="=gnome-base/libgnomeprint-${PV}*
