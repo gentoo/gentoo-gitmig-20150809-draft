@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.11.ebuild,v 1.2 2003/09/02 10:31:31 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.11.ebuild,v 1.3 2003/09/07 01:57:11 azarah Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -65,6 +65,8 @@ HOMEPAGE="http://www.xfree.org"
 
 # Misc patches we may need to fetch ..
 X_PATCHES="mirror://gentoo/XFree86-${PV}-patches-${PATCH_VER}.tar.bz2"
+#	mirror://gentoo/XFree86-synaptics-fixup-${SYNDRV_VER}.diff
+#	mirror://gentoo/XFree86-synaptics-update-${SYNDRV_VER}${SYNUPDATE_VER}.diff
 
 X_DRIVERS="http://people.mandrakesoft.com/~flepied/projects/wacom/xf86Wacom.c.gz
 	http://www.probo.com/timr/savage-${SAVDRV_VER}.zip
@@ -98,8 +100,6 @@ SRC_URI="${SRC_PATH0}/${MY_SV}.tar.bz2
 	${GENTOO_FILES}
 	${X_DRIVERS}
 	${X_PATCHES}"
-#	mirror://gentoo/XFree86-synaptics-fixup-${SYNDRV_VER}.diff
-#	mirror://gentoo/XFree86-synaptics-update-${SYNDRV_VER}${SYNUPDATE_VER}.diff
 
 LICENSE="X11 MSttfEULA"
 SLOT="0"
@@ -137,34 +137,33 @@ PROVIDE="virtual/x11
 inherit eutils flag-o-matic gcc
 
 
-
 DESCRIPTION="Xfree86: famous and free X server"
 
 src_unpack() {
 
 	# Unpack source and patches
 	ebegin "Unpacking source"
-	tar jxf ${DISTDIR}/${MY_SV}.tar.bz2
+	unpack ${MY_SV}.tar.bz2 > /dev/null
 	eend 0
 
 	ebegin "Unpacking files and patches"
-	tar jxf ${DISTDIR}/XFree86-${PV}-files-${FILES_VER}.tar.bz2
-	tar jxf ${DISTDIR}/XFree86-${PV}-patches-${PATCH_VER}.tar.bz2
+	unpack XFree86-${PV}-files-${FILES_VER}.tar.bz2 > /dev/null
+	unpack XFree86-${PV}-patches-${PATCH_VER}.tar.bz2 > /dev/null
 	eend 0
 
 	# Unpack TaD's gentoo cursors
 	ebegin "Unpacking Gentoo cursors"
-	tar jxf ${DISTDIR}/gentoo-cursors-tad-${XCUR_VER}.tar.bz2
+	unpack gentoo-cursors-tad-${XCUR_VER}.tar.bz2 > /dev/null
 	eend 0
 
 	# Unpack extra fonts stuff from Mandrake
 	ebegin "Unpacking fonts"
 	if use nls
 	then
-		tar jxf ${DISTDIR}/gemini-koi8-u.tar.bz2
+		unpack gemini-koi8-u.tar.bz2 > /dev/null
 	fi
-	tar jxf ${DISTDIR}/eurofonts-X11.tar.bz2
-	tar jxf ${DISTDIR}/xfsft-encodings.tar.bz2
+	unpack eurofonts-X11.tar.bz2 > /dev/null
+	unpack xfsft-encodings.tar.bz2 > /dev/null
 	eend 0
 
 	# Remove bum encoding
@@ -177,7 +176,7 @@ src_unpack() {
 
 	ebegin "Updating Savage driver"
 	cd ${S}/programs/Xserver/hw/xfree86/drivers
-	unzip -oqq ${DISTDIR}/savage-${SAVDRV_VER}.zip
+	unpack savage-${SAVDRV_VER}.zip > /dev/null
 	ln -s ${S}/programs/Xserver/hw/xfree86/vbe/vbe.h \
 		${S}/programs/Xserver/hw/xfree86/drivers/savage
 	cd ${S}
@@ -185,7 +184,7 @@ src_unpack() {
 
 	ebegin "Updating SiS driver"
 	cd ${S}/programs/Xserver/hw/xfree86/drivers/sis
-	tar zxf ${DISTDIR}/sis_drv_src_${SISDRV_VER}.tar.gz
+	unpack sis_drv_src_${SISDRV_VER}.tar.gz > /dev/null
 	ln -s ${S}/programs/Xserver/hw/xfree86/vbe/vbe.h \
 		${S}/programs/Xserver/hw/xfree86/drivers/sis
 	cd ${S}
@@ -193,13 +192,14 @@ src_unpack() {
 
 	ebegin "Adding Synaptics touchpad driver"
 	cd ${WORKDIR}
-	tar jxf ${DISTDIR}/synaptics-${SYNDRV_VER}.tar.bz2
+	unpack synaptics-${SYNDRV_VER}.tar.bz2 > /dev/null
 	cd ${S}
 	eend 0
 
 	# The 0120 patch is broken, the 0127 may also be broken.
-		mv -f ${PATCH_DIR}/0120*parallel-make* ${PATCH_DIR}/excluded
-		mv -f ${PATCH_DIR}/0127*makefile-fastbuild* ${PATCH_DIR}/excluded
+	mv -f ${PATCH_DIR}/0120*parallel-make* ${PATCH_DIR}/excluded
+	mv -f ${PATCH_DIR}/0127*makefile-fastbuild* ${PATCH_DIR}/excluded
+	
 	if use debug
 	then
 		mv -f ${PATCH_DIR}/5901*acecad-debug* ${PATCH_DIR}/excluded
@@ -208,8 +208,8 @@ src_unpack() {
 	# Bulk patching - based on patch name
 	# Will create excluded stuff once it's needed
 	cd ${WORKDIR}
-	EPATCH_SUFFIX="patch" epatch ${PATCH_DIR}
-	unset EPATCH_EXCLUDE
+	EPATCH_SUFFIX="patch" \
+	epatch ${PATCH_DIR}
 	cd ${S}
 
 	# Update Wacom Driver, hopefully resolving bug #1632
@@ -320,7 +320,7 @@ src_unpack() {
 		echo "#define XtermWithI18N YES" >> config/cf/host.def
 	fi
 
-	if [ "${ARCH}" = "x86" ]
+	if [ "${ARCH}" = "x86" ] && false # I think we should let X decide this ..
 	then
 		# optimize Mesa for architecture
 		if use mmx
@@ -331,7 +331,7 @@ src_unpack() {
 			echo "#define HasMMXSupport	NO" >> config/cf/host.def
 			echo "#define MesaUseMMX NO" >> config/cf/host.def
 		fi
-		if use 3dnow
+		if use mmx && use 3dnow
 		then
 			echo "#define Has3DNowSupport YES" >> config/cf/host.def
 			echo "#define MesaUse3DNow YES" >> config/cf/host.def
@@ -339,7 +339,7 @@ src_unpack() {
 			echo "#define Has3DNowSupport NO" >> config/cf/host.def
 			echo "#define MesaUse3DNow NO" >> config/cf/host.def
 		fi
-		if use sse
+		if use mmx && use sse
 		then
 			echo "#define HasKatmaiSupport YES" >> config/cf/host.def
 			echo "#define MesaUseKatmai YES" >> config/cf/host.def
@@ -492,7 +492,6 @@ src_compile() {
 	cd ${SYNDIR}
 	make
 	eend 0
-
 }
 
 src_install() {
@@ -592,10 +591,13 @@ src_install() {
 
 	# EURO support
 	ebegin "Euro Support..."
+	LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${D}/usr/X11R6/lib" \
 	${D}/usr/X11R6/bin/bdftopcf -t ${WORKDIR}/Xlat9-8x14.bdf | \
 		gzip -9 > ${D}/usr/X11R6/lib/X11/fonts/misc/Xlat9-8x14-lat9.pcf.gz
+	LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${D}/usr/X11R6/lib" \
 	${D}/usr/X11R6/bin/bdftopcf -t ${WORKDIR}/Xlat9-9x16.bdf | \
 		gzip -9 > ${D}/usr/X11R6/lib/X11/fonts/misc/Xlat9-9x16-lat9.pcf.gz
+	LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${D}/usr/X11R6/lib" \
 	${D}/usr/X11R6/bin/bdftopcf -t ${WORKDIR}/Xlat9-10x20.bdf | \
 		gzip -9 > ${D}/usr/X11R6/lib/X11/fonts/misc/Xlat9-10x20-lat9.pcf.gz
 	eend 0
@@ -949,6 +951,7 @@ pkg_postinst() {
 				if [ "${x/encodings}" = "${x}" -a \
 				     -n "$(find ${x} -iname '*.[otps][pft][cfad]' -print)" ]
 				then
+					LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${ROOT}/usr/X11R6/lib" \
 					${ROOT}/usr/X11R6/bin/ttmkfdir -x 2 \
 						-e ${ROOT}/usr/X11R6/lib/X11/fonts/encodings/encodings.dir \
 						-o ${x}/fonts.scale -d ${x}
