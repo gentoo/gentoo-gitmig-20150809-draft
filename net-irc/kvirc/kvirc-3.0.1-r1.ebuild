@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.0.1-r1.ebuild,v 1.3 2005/03/04 20:42:41 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/kvirc-3.0.1-r1.ebuild,v 1.4 2005/03/07 21:36:50 swegener Exp $
 
 inherit eutils kde-functions
 
 DESCRIPTION="An advanced IRC Client"
 HOMEPAGE="http://www.kvirc.net/"
-SRC_URI="ftp://ftp.kvirc.net/pub/kvirc/${PV}/source/${P}.tar.bz2 \
-	ftp://ftp.kvirc.de/pub/kvirc/${PV}/source/${P}.tar.bz2 \
+SRC_URI="ftp://ftp.kvirc.net/pub/kvirc/${PV}/source/${P}.tar.bz2
+	ftp://ftp.kvirc.de/pub/kvirc/${PV}/source/${P}.tar.bz2
 	ftp://kvirc.firenze.linux.it/pub/kvirc/${PV}/source/${P}.tar.bz2"
 
 LICENSE="kvirc"

@@ -1,6 +1,12 @@
 # ChangeLog for net-irc/kvirc
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.22 2005/03/04 20:42:41 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/kvirc/ChangeLog,v 1.23 2005/03/07 21:36:50 swegener Exp $
+
+  07 Mar 2005; Sven Wegener <swegener@gentoo.org> kvirc-3.0.1-r1.ebuild,
+  kvirc-3.2.0.ebuild:
+  Include patch by Szymon Stefanek <devnull@omnikron.net> from bug #84281 that
+  fixes kvirc to not link against the already installed libkvilib from
+  previous versions.
 
 *kvirc-3.2.0 (04 Mar 2005)
 
