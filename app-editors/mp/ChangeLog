@@ -1,6 +1,10 @@
 # ChangeLog for app-editors/mp
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.12 2004/03/01 20:43:53 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/ChangeLog,v 1.13 2004/03/13 22:30:28 mr_bones_ Exp $
+
+  13 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> mp-3.1.9.ebuild,
+  mp-3.2.10.ebuild, mp-3.2.11.ebuild, mp-3.2.7.ebuild, mp-3.2.8.ebuild:
+  Don't assign default to S; header fix
 
 *mp-3.2.11 (01 Mar 2004)
 

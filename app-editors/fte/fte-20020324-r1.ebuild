@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20020324-r1.ebuild,v 1.3 2004/01/11 13:31:46 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20020324-r1.ebuild,v 1.4 2004/03/13 22:29:59 mr_bones_ Exp $
 
 IUSE="gpm slang X"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Lightweight text-mode editor"
 SRC_URI="mirror://sourceforge/fte/${P}-src.zip
 	mirror://sourceforge/fte/${P}-common.zip"

@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-3.2.10.ebuild,v 1.1 2004/01/14 00:20:44 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/mp/mp-3.2.10.ebuild,v 1.2 2004/03/13 22:30:28 mr_bones_ Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="mp, the definitive text editor"
 SRC_URI="http://www.triptico.com/download/${P}.tar.gz"
 HOMEPAGE="http://www.triptico.com/software/mp.html"

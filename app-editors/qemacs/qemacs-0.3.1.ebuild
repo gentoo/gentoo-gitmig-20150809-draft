@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/qemacs-0.3.1.ebuild,v 1.4 2003/12/12 03:46:56 jbms Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/qemacs/qemacs-0.3.1.ebuild,v 1.5 2004/03/13 22:30:55 mr_bones_ Exp $
 
 DESCRIPTION="QEmacs (for Quick Emacs) is a very small but powerful UNIX editor."
 HOMEPAGE="http://fabrice.bellard.free.fr/qemacs/"
@@ -11,8 +11,6 @@ KEYWORDS="x86"
 IUSE=""
 DEPEND="X? ( virtual/x11 )
 	png? ( =media-libs/libpng-1.2* )"
-
-S=${WORKDIR}/${P}
 
 src_unpack() {
 	unpack ${A}

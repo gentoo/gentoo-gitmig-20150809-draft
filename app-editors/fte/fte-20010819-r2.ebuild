@@ -1,12 +1,11 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20010819-r2.ebuild,v 1.15 2003/09/05 01:56:28 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/fte/fte-20010819-r2.ebuild,v 1.16 2004/03/13 22:29:59 mr_bones_ Exp $
 
 inherit eutils
 
 IUSE="gpm slang X"
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Lightweight text-mode editor"
 HOMEPAGE="http://fte.sourceforge.net"
 SRC_URI="mirror://sourceforge/fte/fte-20010819-src.zip
