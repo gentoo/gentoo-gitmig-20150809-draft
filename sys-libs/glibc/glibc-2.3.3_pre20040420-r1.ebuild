@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20040420-r1.ebuild,v 1.1 2004/05/14 22:06:41 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.3_pre20040420-r1.ebuild,v 1.2 2004/05/17 13:22:33 lv Exp $
 
 IUSE="nls pic build nptl erandom"
 
@@ -284,6 +284,11 @@ src_unpack() {
 		epatch ${FILESDIR}/2.3.3/${LOCAL_P}-propolice-guard-functions-v3.patch
 		cp ${FILESDIR}/2.3.3/ssp.c ${S}/sysdeps/unix/sysv/linux || \
 			die "failed to copy ssp.c to ${S}/sysdeps/unix/sysv/linux/"
+		# gcc 3.4 nukes ssp without this patch
+		if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]
+		then
+			epatch ${FILESDIR}/2.3.3/glibc-2.3.3-ssp-gcc34-after-frandom.patch
+		fi
 	fi
 
 	# patch this regardless of architecture, although it's ssp-related
