@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.1-r2.ebuild,v 1.8 2002/12/08 22:38:53 sethbc Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.0.1-r2.ebuild,v 1.9 2002/12/09 06:54:16 sethbc Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -94,15 +94,19 @@ pkg_setup() {
 		eerror "settings, it cannot DEPEND on it, so please merge it"
 		eerror "manually:"
 		eerror
-		eerror " #  ebuild /usr/portage/sys-devel/gcc/gcc-3.2-r1.ebuild merge"
+		eerror " #  ebuild /usr/portage/sys-devel/gcc/gcc-3.2.1.ebuild merge"
 		eerror
 		eerror "Please make sure that you use the latest availible revision of"
-		eerror "gcc-3.2.  Thus if there is already a gcc-3.2-r2 out, use this"
-		eerror "rather than -r1."
+		eerror "gcc-3.2.  Thus if there is already a gcc-3.2.1-r2 out, use this"
+		eerror "rather than 3.2.1, etc."
 		eerror
-		eerror "As of writing, gcc-3.2 seemed to create the most stable builds."
-		eerror "Also, because OO is such a complex build, ONLY gcc-3.2 will be"
+		eerror "As of writing, gcc-3.2.1 seemed to create the most stable builds."
+		eerror "Also, because OO is such a complex build, ONLY gcc-3.2.1 will be"
 		eerror "supported!"
+		eerror
+		eerror "This process is not highly recomended, as upgrading your compiler"
+		eerror "without upgrading your distribution can be detrimental to your "
+		eerror "installation of gentoo, unless you know what you're getting into"
 		eerror
 		die
 	fi
