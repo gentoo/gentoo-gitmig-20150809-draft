@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.19.ebuild,v 1.10 2002/12/18 00:12:48 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.19.ebuild,v 1.11 2003/02/04 19:36:35 seemant Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -12,7 +12,7 @@ S=${WORKDIR}/linux-${KV}
 
 #These are *stock* 2.4.19 headers, for niceness.
 
-DESCRIPTION="Full sources for the Gentoo Linux kernel"
+DESCRIPTION="Headers for the linux kernel"
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2"
 PROVIDE="virtual/kernel"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
