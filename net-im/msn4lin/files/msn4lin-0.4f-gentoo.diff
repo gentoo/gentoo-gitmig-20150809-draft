@@ -1,0 +1,53 @@
+--- msn4lin.org	2003-05-19 21:17:47.000000000 +0000
++++ msn4lin	2003-05-19 21:18:10.000000000 +0000
+@@ -28,7 +28,7 @@
+ set version "0.4f"
+ 
+ if {$tcl_platform(platform) == "unix"} {
+-  set HOME2 "$env(HOME)"
++  set HOME2 "/usr/share"
+   set HOME "$env(HOME)/.msn4lin"
+ } else {
+   set HOME2 ""
+@@ -398,7 +398,7 @@
+   scrollbar .about.ys -command ".about.info yview"
+   pack .about.ys -side right -fill y
+   pack .about.info -expand true -fill both
+-  set id [open "original.txt" r]
++  set id [open "/usr/share/msn4lin/original.txt" r]
+   .about.info insert 1.0 [read $id]
+   close $id
+   .about.info configure -state disabled
+@@ -421,7 +421,7 @@
+   scrollbar .about2.ys -command ".about2.info yview"
+   pack .about2.ys -side right -fill y
+   pack .about2.info -expand true -fill both
+-  set id [open "leeme.txt" r]
++  set id [open "/usr/share/msn4lin/leeme.txt" r]
+   .about2.info insert 1.0 [read $id]
+   close $id
+   .about2.info configure -state disabled
+@@ -444,7 +444,7 @@
+   scrollbar .gracias.ys -command ".gracias.info yview"
+   pack .gracias.ys -side right -fill y
+   pack .gracias.info -expand true -fill both
+-  set id [open "agradecimientos.txt" r]
++  set id [open "/usr/share/msn4lin/agradecimientos.txt" r]
+   .gracias.info insert 1.0 [read $id]
+   close $id
+   .gracias.info configure -state disabled
+@@ -730,11 +730,11 @@
+   set antigua 0
+   set encontrado 1
+ 
+-  if {([file readable "msn4lin.ver"] == 0) ||
+-      ([file isfile "msn4lin.ver"] == 0)} {
++  if {([file readable "/usr/share/msn4lin/msn4lin.ver"] == 0) ||
++      ([file isfile "/usr/share/msn4lin/msn4lin.ver"] == 0)} {
+     set encontrado 0
+   } else {
+-    set file_id [open "msn4lin.ver" r]
++    set file_id [open "/usr/share/msn4lin/msn4lin.ver" r]
+     gets $file_id tmp_data
+     if { $tmp_data != $version } {
+       set antigua 1
