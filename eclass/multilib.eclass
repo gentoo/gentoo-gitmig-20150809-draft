@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.6 2005/01/13 00:43:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/multilib.eclass,v 1.7 2005/01/13 00:48:39 eradicator Exp $
 #
 # Author: Jeremy Huddleston <eradicator@gentoo.org>
 #
@@ -357,7 +357,7 @@ create_ml_includes-makedestdirs() {
 create_ml_includes-allfiles() {
 	local basedirs=${@}
 
-	local files
+	local basedir
 	for basedir in ${basedirs}; do
 		local file
 		for file in $(find ${D}/${basedir} -type f); do
@@ -377,7 +377,7 @@ create_ml_includes-sym_for_dir() {
 			return 0
 		fi
 	done
-	echo "Should be here -- create_ml_includes-sym_for_dir ${1} ${@}"
+	echo "Shouldn't be here -- create_ml_includes-sym_for_dir ${1} ${@}"
 	# exit because we'll likely be called from a subshell
 	exit 1
 }
