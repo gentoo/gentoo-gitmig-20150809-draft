@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r3.ebuild,v 1.3 2003/06/21 21:19:40 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute/iproute-20010824-r3.ebuild,v 1.4 2003/06/22 21:11:08 kumba Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ HOMEPAGE="http://www.worldbank.ro/ip-routing/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 amd64 ~ppc ~sparc ~alpha ~hppa"
+KEYWORDS="x86 amd64 ~ppc sparc ~alpha ~hppa ~mips"
 
 DEPEND="virtual/linux-sources
 		>=sys-apps/sed-4"
