@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceultra/fceultra-0.97.5.ebuild,v 1.4 2004/02/20 06:26:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceultra/fceultra-0.97.5.ebuild,v 1.5 2004/06/09 13:54:11 agriffis Exp $
 
 inherit games gcc eutils
 
@@ -44,19 +44,19 @@ src_unpack() {
 }
 
 src_compile() {
-	if [ `use sdl` ] || [ -z "`use sdl``use svga`" ] ; then
+	if use sdl || ! use svga; then
 		emake -f Makefile.unixsdl || die "sdl make failed"
 		mv fceu fceu-sdl
 		make -f Makefile.unixsdl clean
 	fi
-	if [ `use svga` ] ; then
+	if use svga ; then
 		emake -f Makefile.linuxvga || die "svga make failed"
 		mv fceu fceu-svga
 	fi
 }
 
 src_install() {
-	if [ `use sdl` ] || [ -z "`use sdl``use svga`" ] ; then
+	if use sdl || ! use svga; then
 		dogamesbin fceu-sdl     || die "dogamesbin failed (sdl)"
 		doman Documentation/*.6 || die "doman failed (sdl)"
 	fi

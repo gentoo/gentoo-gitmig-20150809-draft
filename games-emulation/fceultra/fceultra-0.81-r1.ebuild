@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceultra/fceultra-0.81-r1.ebuild,v 1.5 2004/06/06 03:28:25 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/fceultra/fceultra-0.81-r1.ebuild,v 1.6 2004/06/09 13:54:11 agriffis Exp $
 
 inherit gcc
 
@@ -37,12 +37,12 @@ src_compile() {
 	sed -e "s:\${TFLAGS}:\${TFLAGS} ${CFLAGS}:" \
 		Makefile.orig > Makefile.base
 
-	if [ `use sdl` ] ; then
+	if use sdl ; then
 		make -f Makefile.unixsdl || die "sdl make failed"
 		mv fceu fceu-sdl
 		make -f Makefile.unixsdl clean
 	fi
-	if [ `use svga` ] ; then
+	if use svga ; then
 		make -f Makefile.linuxvga || die "svga make failed"
 		mv fceu fceu-svga
 	fi
