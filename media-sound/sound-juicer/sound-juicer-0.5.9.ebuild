@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-0.5.6.ebuild,v 1.2 2003/11/15 17:45:40 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sound-juicer/sound-juicer-0.5.9.ebuild,v 1.1 2004/01/26 23:20:30 foser Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.burtonini.com/computing/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86 ~ppc"
 
 IUSE="oggvorbis"
 
@@ -20,7 +20,6 @@ RDEPEND=">=dev-libs/glib-2
 	>=gnome-base/libgnomeui-2
 	>=media-libs/musicbrainz-2.0.1
 	>=media-libs/gstreamer-0.6.3
-	>=media-libs/gst-plugins-0.6.3
 	>=media-plugins/gst-plugins-cdparanoia-0.6.3
 	oggvorbis? ( >=media-plugins/gst-plugins-vorbis-0.6.3 )"
 
