@@ -6,6 +6,9 @@ S=${WORKDIR}/${P}
 DESCRIPTION="Xautoconfig is a PPC only config file generator for xfree86"
 SRC_URI="http://ftp.penguinppc.org/projects/xautocfg/${P}.tar.gz"
 HOMEPAGE="http://ftp.penguinppc.org/projects/xautocfg/"
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="ppc"
 
 DEPEND="sys-apps/pciutils"
 

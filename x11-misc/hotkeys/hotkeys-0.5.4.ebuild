@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Stacey Keast <slik@telusplanet.net>
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/hotkeys-0.5.4.ebuild,v 1.1 2002/06/11 22:58:13 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/hotkeys/hotkeys-0.5.4.ebuild,v 1.2 2002/07/08 21:31:06 aliz Exp $
 
 NAME="hotkeys"
 S=${WORKDIR}/${P}
@@ -11,6 +11,7 @@ HOMEPAGE="http://ypwong.org/hotkeys/"
 
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="x86"
 
 DEPEND="virtual/x11
 	virtual/glibc

@@ -1,13 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Joe Bormolini <lordjoe@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbsload/bbsload-0.2.5-r2.ebuild,v 1.2 2002/07/08 16:58:05 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbsload/bbsload-0.2.5-r2.ebuild,v 1.3 2002/07/08 21:31:05 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="blackbox load monitor"
 SRC_URI="http://bbtools.thelinuxcommunity.org/sources/${P}.tar.gz"
 HOMEPAGE="http://bbtools.windsofstorm.net/available.phtml#bbsload"
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86"
 
 DEPEND="virtual/blackbox"
 

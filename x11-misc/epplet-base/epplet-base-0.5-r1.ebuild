@@ -10,6 +10,8 @@ SRC_URI="mirror://sourceforge/enlightenment/${P}.tar.gz"
 
 HOMEPAGE="http://sourceforge.net/projects/enlightenment"
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86"
 
 DEPEND=">=x11-base/xfree-4.2.0
 	>=media-libs/imlib-1.9.10

@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Kalen Petersen <kalenp@cs.washington.edu>
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/xplanet-0.94.ebuild,v 1.1 2002/05/27 10:01:22 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xplanet/xplanet-0.94.ebuild,v 1.2 2002/07/08 21:31:08 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A program to render images of the earth into the X root window"
@@ -20,6 +20,7 @@ DEPEND="virtual/x11
 
 SLOT="0"
 LICENSE="GPL-2"
+KEYWORDS="x86"
 
 src_compile() {
 	local myconf

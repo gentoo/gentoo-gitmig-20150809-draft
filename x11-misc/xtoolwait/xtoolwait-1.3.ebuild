@@ -7,6 +7,9 @@ SRC_URI="http://www.hacom.nl/~richard/software/${P}.tar.gz"
 HOMEPAGE="http://www.hacom.nl/~richard/software/xtoolwait.html"
 DESCRIPTION="Xtoolwait notably decreases the startup time of an X session"
 DEPEND="virtual/x11"
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86"
 
 src_compile() {
 	xmkmf

@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmbatppc/wmbatppc-1.0-r1.ebuild,v 1.1 2002/06/04 14:13:54 doctomoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/wmbatppc/wmbatppc-1.0-r1.ebuild,v 1.2 2002/07/08 21:31:07 aliz Exp $
 
 S=${WORKDIR}/wmbatppc
 
@@ -9,6 +9,7 @@ DEPEND="virtual/glibc x11-base/xfree sys-apps/pmud"
 RDEPEND="virtual/glibc x11-base/xfree sys-apps/pmud"
 SLOT=1
 LICENSE=GPL-2
+KEYWORDS="ppc"
 
 src_compile() {
 	make || die 

@@ -9,6 +9,8 @@ DESCRIPTION="A plugin for GKrellM that monitors your wireless network card"
 SRC_URI="http://gkrellm.luon.net/files/${P}.tar.gz"
 HOMEPAGE="http://gkrellm.luon.net/"
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86"
 
 DEPEND=">=app-admin/gkrellm-1.2.9"
 

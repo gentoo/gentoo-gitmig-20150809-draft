@@ -11,5 +11,7 @@ DESCRIPTION="KGamma - a KControl modul for monitor gamma calibration"
 SRC_URI="http://ftp.kde.com/Utilities/X_Window_System/KGamma/${P}.tar.gz"
 HOMEPAGE="http://www.vonostheim.de/kgamma/index2.html"
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86"
 
 #myconf="$myconf --enable-final"

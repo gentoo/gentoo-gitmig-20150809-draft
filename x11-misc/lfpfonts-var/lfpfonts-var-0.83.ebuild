@@ -2,12 +2,15 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Aron Griffis <agriffis@gentoo.org>
 # Maintainer: Aron Griffis
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/lfpfonts-var/lfpfonts-var-0.83.ebuild,v 1.1 2002/01/12 18:38:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/lfpfonts-var/lfpfonts-var-0.83.ebuild,v 1.2 2002/07/08 21:31:07 aliz Exp $
 
 S=${WORKDIR}/${PN}
 DESCRIPTION="Linux Font Project variable-width fonts"
 SRC_URI="http://dreamer.nitro.dk/linux/lfp/${P}.tar.bz2"
 HOMEPAGE="http://dreamer.nitro.dk/linux/lfp/"
+LICENSE="Public Domain"
+SLOT="0"
+KEYWORDS="x86"
 
 DEPEND="virtual/x11"
 

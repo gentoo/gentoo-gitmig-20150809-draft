@@ -1,13 +1,16 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Jays Kwak <jayskwak@gentoo.or.kr>
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/baekmuk-fonts/baekmuk-fonts-2.0.ebuild,v 1.2 2002/05/31 00:47:26 jayskwak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/baekmuk-fonts/baekmuk-fonts-2.0.ebuild,v 1.3 2002/07/08 21:31:05 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Korean Baekmuk Font"
 SRC_URI="ftp://ftp.nnongae.com/pub/gentoo/${P}.tar.gz"
 HOMEPAGE="http://"
 DEPEND="virtual/x11"
+LICENSE="BAEKMUK"
+SLOT="0"
+KEYWORDS="x86"
 
 src_unpack () {
 	unpack ${P}.tar.gz

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Daniel Mettler <mettlerd@icu.unizh.ch> 
 # Maintainer: Matthew Kennedy <mkennedy@gentoo.org> 
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.2.ebuild,v 1.3 2002/07/08 16:58:06 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/grun/grun-0.9.2.ebuild,v 1.4 2002/07/08 21:31:06 aliz Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A GTK/X11 application launcher with nice features such as a history"
@@ -17,6 +17,8 @@ SRC_URI="http://ftp.us.debian.org/debian/pool/main/g/grun/grun_0.9.2.orig.tar.gz
 # http://packages.debian.org/unstable/x11/grun.html instead
 HOMEPAGE="http://www.geocities.com/ResearchTriangle/Facility/1468/sg/grun."
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86"
 
 # The dependencies following the gentoo policy as suggested by gbevin
 DEPEND="=dev-libs/glib-1.2*

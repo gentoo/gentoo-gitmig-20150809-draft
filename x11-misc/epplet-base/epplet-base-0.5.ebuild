@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Paul Fleischer <proguy@proguy.dk>
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/epplet-base/epplet-base-0.5.ebuild,v 1.4 2002/07/08 16:58:05 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/epplet-base/epplet-base-0.5.ebuild,v 1.5 2002/07/08 21:31:05 aliz Exp $
 
 S="${WORKDIR}/Epplets-${PV}"
 
@@ -10,6 +10,8 @@ SRC_URI="mirror://sourceforge/enlightenment/${P}.tar.gz"
 
 HOMEPAGE="http://sourceforge.net/projects/enlightenment"
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86"
 
 DEPEND=">=x11-base/xfree-4.2.0
 	>=media-libs/imlib-1.9.10

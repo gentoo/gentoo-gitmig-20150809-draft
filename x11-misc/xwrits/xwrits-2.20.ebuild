@@ -4,6 +4,9 @@ DESCRIPTION="Xwrits reminds you to take wrist breaks, which will hopefully help 
 
 SRC_URI="http://www.lcdf.org/xwrits/xwrits-2.20.tar.gz"
 HOMEPAGE="http://www.lcdf.org/xwrits/"
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86"
 
 DEPEND="x11-base/xfree"
 
