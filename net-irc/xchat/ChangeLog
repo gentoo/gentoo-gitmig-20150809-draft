@@ -1,6 +1,16 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.148 2005/02/25 16:36:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.149 2005/03/04 22:28:23 swegener Exp $
+
+*xchat-2.4.1-r1 (04 Mar 2005)
+
+  04 Mar 2005; Sven Wegener <swegener@gentoo.org>
+  +files/2.4.1-close-fds-on-exec.patch, +xchat-2.4.1-r1.ebuild,
+  -xchat-2.4.1.ebuild:
+  Revision bump to distribute a fix that closes all file descriptors except
+  stdin, stdout and stderr when using the /exec command. This stops child
+  processes from having access to our network sockets and open log files.
+  Closes bug #83683.
 
   25 Feb 2005; Aron Griffis <agriffis@gentoo.org> xchat-2.4.1.ebuild:
   stable on ia64 #71997
