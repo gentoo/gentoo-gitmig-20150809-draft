@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0_pre7-r1.ebuild,v 1.1 2004/09/16 15:18:51 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/lirc/lirc-0.7.0_pre7-r1.ebuild,v 1.2 2004/09/17 18:29:49 lanius Exp $
 
 inherit eutils kmod
 
@@ -28,7 +28,7 @@ HOMEPAGE="http://www.lirc.org"
 # parallel, pctv, pixelview_bt878,
 # pixelview_pak, pixelview_pro, provideo,
 # realmagic, remotemaster, serial, silitek,
-# sir, slinke, tekram, winfast_tv2000
+# sir, slinke, streamzap tekram, winfast_tv2000
 
 # This could be usefull too
 
