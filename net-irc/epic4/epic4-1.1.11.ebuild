@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-1.1.11.ebuild,v 1.1 2003/04/13 16:55:27 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-1.1.11.ebuild,v 1.2 2003/05/04 16:05:05 avenj Exp $
 
-IUSE="ipv6 perl ssl"
+IUSE="ipv6 perl ssl tcltk"
 
 DESCRIPTION="Epic4 IRC Client"
 SRC_URI="ftp://prbh.org/pub/epic/EPIC4-ALPHA/${P}.tar.bz2
@@ -15,7 +15,9 @@ KEYWORDS="~x86 ~ppc"
 
 DEPEND=">=sys-libs/ncurses-5.2
 	perl? ( >=dev-lang/perl-5.6.1 )
-	ssl? ( >=dev-libs/openssl-0.9.5 )"
+	ssl? ( >=dev-libs/openssl-0.9.5 )
+	tcltk? ( dev-lang/tcl )"
+
 inherit flag-o-matic
 replace-flags "-O?" "-O"
 
@@ -33,6 +35,10 @@ src_compile() {
 	use ssl \
 		&& myconf="${myconf} --with-ssl" \
 		|| myconf="${myconf} --without-ssl"
+
+	use tcltk \
+		&& myconf="${myconf} --with-tcl" \
+		|| myconf="${myconf} --without-tcl"
 
 	econf \
 		--libexecdir=/usr/lib/misc \

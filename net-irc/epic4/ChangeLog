@@ -1,8 +1,11 @@
 # ChangeLog for net-irc/epic4
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.12 2003/04/13 16:55:27 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/ChangeLog,v 1.13 2003/05/04 16:05:05 avenj Exp $
 
 *epic4-1.1.11 (13 Apr 2003)
+
+  04 May 2003; Jon Portnoy <avenj@gentoo.org> epic4-1.1.11.ebuild :
+  Ebuild now respects tcltk USE flag for tcl support.
 
   13 Apr 2003; Jon Portnoy <avenj@gentoo.org> epic4-1.1.11.ebuild :
   Version bump, fixes bug #19092.
