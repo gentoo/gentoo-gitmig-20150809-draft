@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ion3-20041005.ebuild,v 1.1 2004/10/05 08:47:14 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ion3-20041005.ebuild,v 1.2 2004/12/19 17:59:43 twp Exp $
 
 inherit eutils
 
@@ -50,6 +50,10 @@ src_install() {
 		MANDIR=${D}/usr/share/man \
 		DOCDIR=${D}/usr/share/doc/${PF} \
 		LOCALEDIR=${D}/usr/share/locale \
+		LIBDIR=${D}/usr/lib \
+		MODULEDIR=${D}/usr/lib/ion3/mod \
+		LCDIR=${D}/usr/lib/ion3/lc \
+		VARDIR=${D}/var/cache/ion3 \
 		install || die
 
 	prepalldocs

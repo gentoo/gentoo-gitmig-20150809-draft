@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ion3-20040906.ebuild,v 1.2 2004/12/19 17:59:43 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/ion3/ion3-20041104.ebuild,v 1.1 2004/12/19 17:59:43 twp Exp $
 
 inherit eutils
 
@@ -16,19 +16,18 @@ IUSE="xinerama"
 DEPEND="virtual/x11
 	app-misc/run-mailcap
 	>=dev-lang/lua-5.0.2
-	>=sys-devel/libtool-1.4.3
 	!x11-wm/ion3-svn"
 S=${WORKDIR}/${MY_PN}
 
 src_compile() {
+
+	autoreconf
 
 	local myconf=""
 
 	if has_version '>=x11-base/xfree-4.3.0'; then
 		myconf="${myconf} --disable-xfree86-textprop-bug-workaround"
 	fi
-
-	autoreconf
 
 	use hppa && myconf="${myconf} --disable-shared"
 
@@ -67,9 +66,4 @@ src_install() {
 	insinto /usr/share/xsessions
 	doins ${FILESDIR}/ion3.desktop ${FILESDIR}/pwm3.desktop
 
-}
-
-pkg_postinst() {
-	ewarn Binaries, directories, etc. have been renamed from ion to ion3.
-	ewarn You might need to update your configuration files.
 }
