@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3-r1.ebuild,v 1.6 2000/11/01 04:44:13 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/openjade/openjade-1.3-r1.ebuild,v 1.7 2001/03/19 21:00:02 achim Exp $
 
 P=openjade-1.3
 A=${P}.tar.gz
@@ -10,27 +10,26 @@ DESCRIPTION="Jade is an implemetation of DSSSL - an ISO standard for formatting 
 SRC_URI="http://download.sourceforge.net/openjade/"${A}
 HOMEPAGE="http://openjade.sourceforge.net"
 
-DEPEND=">=sys-devel/gcc-2.95.2
-	>=sys-devel/perl-5
-	>=sys-libs/glibc-2.1.3"
+DEPEND="virtual/glibc
+	sys-devel/perl"
 
-src_unpack() {
-  unpack ${A}
-}
+RDEPEND="virtual/glibc
+	app-text/sgml-common"
+
 
 src_compile() {                           
-  cd ${S}
+
   SGML_PREFIX=/usr/share/sgml
   try ./configure --host=${CHOST} --prefix=/usr \
 	--enable-http \
-	--enable-default-catalog=/usr/share/sgml/${P}/catalog \
+	--enable-default-catalog=/etc/sgml/catalog \
 	--enable-default-search-path=/usr/share/sgml \
 	--datadir=/usr/share/sgml/${P}
   try make
 }
 
 src_install() {                               
-  cd ${S}
+
   dodir /usr
   dodir /usr/lib
   try make prefix=${D}/usr datadir=${D}/usr/share/sgml/${P} install
@@ -50,17 +49,17 @@ src_install() {
   insinto /usr/include/sp/lib
   doins lib/*.h
 
-
   insinto /usr/share/sgml/${P}/
-  for i in catalog dsssl.dtd style-sheet.dtd fot.dtd
-  do
-    doins dsssl/$i
-  done
+  doins dsssl/builtins.dsl
 
-#  for i in unicode dsssl pubtext
-#  do
-#    cp -af $i ${D}/usr/share/sgml/${P}
-#  done
+  echo 'SYSTEM "builtins.dsl" "builtins.dsl"' > ${D}/usr/share/sgml/${P}/catalog
+  insinto /usr/share/sgml/${P}/dsssl
+  doins dsssl/{dsssl.dtd,style-sheet.dtd,fot.dtd}
+  newins ${FILESDIR}/${P}.dsssl-catalog catalog
+#  insinto /usr/share/sgml/${P}/unicode
+#  doins unicode/{catalog,unicode.sd,unicode.syn}
+  insinto /usr/share/sgml/${P}/pubtext
+  doins pubtext/*
 
   dodoc COPYING NEWS README VERSION
   docinto html/doc
@@ -72,6 +71,18 @@ src_install() {
 
 }
 
+pkg_postinst() {
+    install-catalog --add /etc/sgml/${P}.cat /usr/share/sgml/openjade-1.3/catalog
+    install-catalog --add /etc/sgml/${P}.cat /usr/share/sgml/openjade-1.3/dsssl/catalog
+    install-catalog --add /etc/sgml/${P}.cat /usr/share/sgml/openjade-1.3/unicode/catalog
+    install-catalog --add /etc/sgml/sgml-docbook.cat /etc/sgml/${P}.cat
+}
 
+pkg_prerm() {
+    install-catalog --remove /etc/sgml/${P}.cat /usr/share/sgml/openjade-1.3/catalog
+    install-catalog --remove /etc/sgml/${P}.cat /usr/share/sgml/openjade-1.3/dsssl/catalog
+    install-catalog --remove /etc/sgml/${P}.cat /usr/share/sgml/openjade-1.3/unicode/catalog
+    install-catalog --add /etc/sgml/sgml-docbook.cat /etc/sgml/${P}.cat
+}
 
 

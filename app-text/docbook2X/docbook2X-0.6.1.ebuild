@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/docbook2X-0.6.1.ebuild,v 1.1 2001/03/18 00:06:08 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook2X/docbook2X-0.6.1.ebuild,v 1.2 2001/03/19 21:00:02 achim Exp $
 
 #P=
 A=${P}.tar.gz
@@ -22,14 +22,14 @@ src_install () {
     doins XML/DOM/Map.pm
     insinto /usr/lib/perl5/site_perl/5.6.0/XML
     doins XML/SGMLSpl.pm
-    insinto /usr/share/sgml/docbook/db2X/common
+    insinto /usr/share/sgml/docbook/db2X-customization/common
     doins xslt/common/*
-    insinto /usr/share/sgml/docbook/db2X/lib
+    insinto /usr/share/sgml/docbook/db2X-customization/lib
     doins xslt/lib/*
-    insinto /usr/share/sgml/docbook/db2X/texi
+    insinto /usr/share/sgml/docbook/db2X-customization/texi
     doins xslt/texi/*
-    insinto /usr/share/sgml/docbook/db2X/dtd
-    newins dtd/Texi-XML Texi-XML.dtd
+    insinto /usr/share/sgml/docbook/db2X-customization/dtd
+    doins dtd/Texi-XML 
     exeinto /usr/bin
     doexe docbook2man docbook2manxml docbook2texi docbook2texixml
     doexe docbook2man-spec.pl docbook2texi-spec.pl texi_xml man_xml
