@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/pwlib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.62 2004/10/19 17:54:08 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/ChangeLog,v 1.63 2004/10/23 13:58:20 weeve Exp $
+
+  23 Oct 2004; Jason Wever <weeve@gentoo.org> pwlib-1.6.6.ebuild:
+  Added ~sparc keyword.
 
   19 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> pwlib-1.6.3-r2.ebuild:
   Stable on alpha.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.6.6.ebuild,v 1.6 2004/08/30 01:38:47 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/pwlib/pwlib-1.6.6.ebuild,v 1.7 2004/10/23 13:58:20 weeve Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/openh323/${MY_P}-src.tar.gz"
 
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
 
 DEPEND=">=sys-devel/bison-1.28
 	>=sys-devel/flex-2.5.4a
