@@ -3,8 +3,8 @@ MD5 4f2c31ca41fa2e7583ca6f4bd0e20881 ChangeLog 1268
 MD5 2fc7978c9e3ab0b3027ff653bba4c59f policycoreutils-1.1-r1.ebuild 1204
 MD5 6d4df7058894970c15d4066f7ad88c29 files/policycoreutils-1.0-gentoo.diff 1818
 MD5 1f231a1da642997577ac4567ee9867ac files/rlpkg 2317
-MD5 8daee4f4fd3e4a74c4d5f2ddb6b086a5 files/newrole 1197
-MD5 8daee4f4fd3e4a74c4d5f2ddb6b086a5 files/run_init 1197
+MD5 7821fa9efa9de78861110c8bd21bf714 files/newrole 326
+MD5 7821fa9efa9de78861110c8bd21bf714 files/run_init 326
 MD5 2d09b4cfc5e5b399863a1ecd381ba33e files/digest-policycoreutils-1.1-r1 67
 MD5 4de7e167223dcedfb7978ffc3fb3c087 files/policycoreutils-1.1-setfiles.diff 2796
 MD5 7d5ff0bb4eb573840072c4a8a420cd2a files/avc_enforcing 141
