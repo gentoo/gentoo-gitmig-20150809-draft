@@ -1,8 +1,11 @@
 # ChangeLog for media-sound/kmms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kmms/ChangeLog,v 1.3 2003/02/12 07:29:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kmms/ChangeLog,v 1.4 2003/04/05 22:22:36 danarmak Exp $
 
 *kmms-0.8_beta1 (06 Dec 2002)
+
+  06 Apr 2003; Dan Armak <danarmak@gentoo.org> kmms-0.8_beta1.ebuild:
+  Mark as x86 stable.
 
   06 Dec 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 

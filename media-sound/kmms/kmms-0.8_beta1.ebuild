@@ -13,6 +13,6 @@ newdepend "media-sound/xmms"
 
 LICENSE="GPL-2"
 
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 PATCHES="${FILESDIR}/${P}-gentoo.diff ${FILESDIR}/${P}-fix-memory-leak.diff"
