@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.4.1-r1.ebuild,v 1.4 2004/02/04 20:50:08 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/d4x-2.4.1-r1.ebuild,v 1.5 2004/03/29 02:07:38 weeve Exp $
 
 IUSE="nls esd gnome oss kde"
 
@@ -11,7 +11,7 @@ DESCRIPTION="GTK based download manager for X."
 SRC_URI="http://www.krasu.ru/soft/chuchelo/files/${P/_}.tar.gz"
 HOMEPAGE="http://www.krasu.ru/soft/chuchelo/"
 
-KEYWORDS="x86"
+KEYWORDS="x86 ~sparc"
 SLOT="0"
 LICENSE="Artistic"
 
@@ -33,6 +33,10 @@ src_unpack() {
 	# Fix a miscompile with gcc-3.2.2 and CFLAGS="-O2"
 	# <azarah@gentoo.org> (30 Mar 2003)
 	epatch ${FILESDIR}/${P}-fix-statusbar-crash.patch
+
+	# Fix bad #elif directives in sndserv.cc for big endian machines
+	# <weeve@gentoo.org> (28 Mar 2004)
+	[ `use sparc` ] && epatch ${FILESDIR}/${PN}-sndserv-bigendian.patch
 }
 
 src_compile() {
