@@ -1,7 +1,7 @@
 /*
  * Copyright 1999-2004 Gentoo Foundation
  * Distributed under the terms of the GNU General Public License v2
- * $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/wrapper-1.4.5.c,v 1.1 2005/01/31 05:39:30 eradicator Exp $
+ * $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc-config/files/wrapper-1.4.5.c,v 1.2 2005/01/31 06:16:58 eradicator Exp $
  * Author: Martin Schlemmer <azarah@gentoo.org>
  */
 
@@ -284,6 +284,7 @@ static char **getNewArgv(char **argv, const char *newflagsStr) {
 			return NULL;
 
 		strncpy(newflags[newflagsCount], newflagsStr + s, f - s);
+		newflags[newflagsCount][f - s]='\0';
 		newflagsCount++;
 	}
 
@@ -307,9 +308,12 @@ static char **getNewArgv(char **argv, const char *newflagsStr) {
 	if(!newargv)
 		return NULL;
 
+	/* Build argv */
+	newargv[0] = argv[0];
+
 	/* The newFlags come first since we want the environment to override them. */
-	for(i=0; i < newflagsCount; i++) {
-		newargv[i] = newflags[i];
+	for(i=1; i - 1 < newflagsCount; i++) {
+		newargv[i] = newflags[i - 1];
 	}
 
 	/* We just use the existing argv[i] as the start. */

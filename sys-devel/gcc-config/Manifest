@@ -11,14 +11,14 @@ MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gcc-config-1.3.9 0
 MD5 396974306d3ccab6db5354d94ffd21fd files/gcc-config-1.3.8 12498
 MD5 e7c7a83406a374ee4262c97d6e5673b2 files/wrapper-1.4.3.c 7545
 MD5 7723c767ef3e4935c2299fb253412d7e files/wrapper-1.4.4.c 10132
-MD5 c7913ab2704a652d4f9486964569a1a1 files/wrapper-1.4.5.c 10579
+MD5 a6c7c0536d2ab7cfc65d7169178ab71d files/wrapper-1.4.5.c 10668
 MD5 0181c8024c1c636b700dbf7a11f07fd6 files/gcc-config-1.3.9 12641
 MD5 9c5f1032109e37d3f576d3ba2d1d28a9 files/gcc-config-1.3.10 13026
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gcc-config-1.3.10 0
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB/cScArHZZzCEUG0RAqOSAJ9pN3zIadMPDylmNasco+zn+gn19QCfe7nV
-vn4jaybHwEW2O2vHrMmbmhU=
-=7OmW
+iD8DBQFB/c1oArHZZzCEUG0RArWmAJ9ZI5bza/oSsAbqr9lwhIA83cIT8gCaAwo5
+/fVoFboXBAOcfK2GwN0QOOo=
+=pYFM
 -----END PGP SIGNATURE-----
