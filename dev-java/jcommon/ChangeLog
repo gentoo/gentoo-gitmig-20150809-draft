@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/jcommon
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jcommon/ChangeLog,v 1.4 2004/10/20 09:14:23 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jcommon/ChangeLog,v 1.5 2004/11/06 09:51:08 axxo Exp $
+
+  06 Nov 2004; Thomas Matthijs <axxo@gentoo.org> jcommon-0.9.7.ebuild:
+  keyword x86
 
 *jcommon-0.9.7 (20 Oct 2004)
 
