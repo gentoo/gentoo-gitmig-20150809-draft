@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7.3-r2.ebuild,v 1.2 2004/11/16 16:07:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.7.3-r2.ebuild,v 1.3 2004/11/18 01:56:19 agriffis Exp $
 
 unset ALLOWED_FLAGS  # stupid extra-functions.sh ... bug 49179
 inherit flag-o-matic gcc eutils nsplugins mozilla-launcher mozconfig makeedit
@@ -108,7 +108,7 @@ src_compile() {
 	# Re-enabled per bug 24522 (28 Apr 2004 agriffis)
 	if use mozsvg; then
 		export MOZ_INTERNAL_LIBART_LGPL=1
-		mozconfig_annotate "+mozsvg on ${PN}" \
+		mozconfig_annotate "+mozsvg" \
 			--enable-svg --enable-svg-renderer-libart
 	else
 		mozconfig_annotate "-mozsvg" --disable-svg
