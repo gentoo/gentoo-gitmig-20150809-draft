@@ -1,17 +1,20 @@
 # ChangeLog for app-emulation/XWine
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/XWine/ChangeLog,v 1.7 2003/03/13 11:57:55 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/XWine/ChangeLog,v 1.8 2003/06/20 04:30:41 vapier Exp $
 
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+*XWine-0.3.1 (20 Jun 2003)
+
+  20 Jun 3003; Mike Frysinger <vapier@gentoo.org> :
+  Version bumped + cleaned up for #11465.
  
-*XWine-0.3.ebuild (13 Mar 2002)
+*XWine-0.3 (13 Mar 2002)
 
   13 Mar 2003; phoen][x <phoenix@gentoo.org> XWine-0.3.ebuild, files/digest-XWine-0.3 :
   Version bump. This ebuild fixes problems with the interactive configure
   and ends the gnome dependency trouble: XWine depends on gnome, there's no
   way to compile it without gnome-libs being installed.
 
-*XWine-0.2.2.ebuild (17 Aug 2002)
+*XWine-0.2.2 (17 Aug 2002)
 
   13 Mar 2003; phoen][x <phoenix@gentoo.org> XWine-0.2.2.ebuild :
   Incorporated latest bugfixes (bug #11465) into this ebuild.
