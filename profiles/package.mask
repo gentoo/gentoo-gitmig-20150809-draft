@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3645 2005/02/20 18:05:17 latexer Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3646 2005/02/21 04:52:19 dragonheart Exp $#
 # When you add an entry to this file, add your name, the date, and an
 # explanation of why something is getting masked
 #
@@ -229,14 +229,12 @@ x11-libs/motif-config
 =sys-cluster/drbd-0.7.9
 =sys-cluster/drbd-0.7.9-r1
 
-# <dragonheart@gentoo.org> (26 Jan 2005)
-# Masked in preparation for deletion. Objects see bug #69451
-net-analyzer/ucd-snmp
-
 # <dragonheart@gentoo.org> (25 Jan 2005)
 # Apache herd package refresh
 # Masked for user testing. bug #77781 Meta-bug #76457
 =net-analyzer/nagios-core-1.2-r4
+
+# nagios-*2 is still beta
 >=net-analyzer/nagios-core-2.0b_p1
 >=net-analyzer/nagios-2.0b_p1
 
