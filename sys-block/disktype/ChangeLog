@@ -1,0 +1,22 @@
+# ChangeLog for sys-apps/disktype
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-block/disktype/ChangeLog,v 1.1 2005/03/05 22:43:21 ciaranm Exp $
+
+*disktype-7 (05 Mar 2005)
+
+  05 Mar 2005; Ciaran McCreesh <ciaranm@gentoo.org> +metadata.xml,
+  +disktype-7.ebuild, +disktype-8.ebuild:
+  Moved from sys-apps/disktype to sys-block/disktype.
+
+*disktype-8 (04 Mar 2005)
+
+  04 Mar 2005; Daniel Black <dragonheart@gentoo.org> disktype-7.ebuild,
+  +disktype-8.ebuild:
+  version bump and ppc stable.
+
+*disktype-7 (19 Dec 2004)
+
+  19 Dec 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  +disktype-7.ebuild:
+  Initial import as per bug #70643. Ebuild by Daniel Evers <dermojo@gmx.net>
+
