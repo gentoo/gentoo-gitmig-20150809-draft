@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkscintilla2/gtkscintilla2-0.1.0.ebuild,v 1.6 2004/10/17 18:05:36 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkscintilla2/gtkscintilla2-0.1.0.ebuild,v 1.7 2004/10/19 09:07:43 absinthe Exp $
 
 MY_P="GtkScintilla2-${PV}"
 DESCRIPTION="Gtk-2 wrappers for the Scintilla source editing components."
@@ -9,7 +9,7 @@ SRC_URI="http://gphpedit.org/download/files/${MY_P}.tar.gz"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="x86 ~amd64 ppc"
+KEYWORDS="x86 amd64 ppc"
 LICENSE="GPL-2"
 
 RDEPEND=">=x11-libs/gtk+-2.0"
