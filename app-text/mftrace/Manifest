@@ -1,5 +1,5 @@
-MD5 c452806098bb0b065be0ad29e128dc38 mftrace-1.0.19.ebuild 856
-MD5 3fe38ff7563af60fec3becdc65799c9c ChangeLog 618
+MD5 3550279de6d262e8306c9803ba73ffb0 mftrace-1.0.19.ebuild 966
+MD5 2f2e78ead4348b4aef7334862c2b955a ChangeLog 821
 MD5 05b7ca909c1550ba57f50196a66aff63 mftrace-1.0.10.ebuild 1167
 MD5 1c506b95a6ad2b08aa694c2da35a2660 files/digest-mftrace-1.0.10 65
 MD5 d133778d040576b85a4bcb9fb9a6e994 files/digest-mftrace-1.0.19 65
