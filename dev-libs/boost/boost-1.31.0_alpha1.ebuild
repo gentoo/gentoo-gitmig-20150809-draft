@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.31.0_alpha1.ebuild,v 1.1 2003/12/19 16:44:07 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/boost/boost-1.31.0_alpha1.ebuild,v 1.2 2004/01/06 16:36:23 aliz Exp $
 
 MyPV="2003d18"
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${PN}-${MyPV}.tar.bz2"
 S=${WORKDIR}/${PN}
 
 LICENSE="freedist"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="~x86 ~ppc ~amd64"
 SLOT="1"
 IUSE="icc"
 
@@ -27,6 +27,7 @@ RDEPEND=">=dev-util/yacc-1.9.1-r1
 src_compile() {
 	local PYTHON_VERSION=$(/usr/bin/python -V 2>&1 | sed 's/Python \([0-9][0-9]*\.[0-9][0-9]*\)\..*/\1/')
 	local BOOST_TOOLSET
+	local arch
 
 	if [ "`use icc`" ] ; then
 		BOOST_TOOLSET="intel-linux"
@@ -39,15 +40,21 @@ src_compile() {
 	./build.sh ${BOOST_TOOLSET} || die "Failed to build bjam"
 	cd ${S}
 
+	if [ "${ARCH}" == "amd64" ]; then
+		arch=
+	else
+		arch=${ARCH}
+	fi
+
 	if [ "`use icc`" ] ; then
-		./tools/build/jam_src/bin.linux${ARCH}/bjam -j2 \
+		./tools/build/jam_src/bin.linux${arch}/bjam -j2 \
 		-sBOOST_ROOT=${S} \
 		-sPYTHON_ROOT=/usr \
 		-sPYTHON_VERSION=${PYTHON_VERSION} \
 		-sTOOLS=${BOOST_TOOLSET} \
 		-sINTEL_LINUX_VERSION="70" || die "Failed to build boost libraries."
 	else
-		./tools/build/jam_src/bin.linux${ARCH}/bjam ${MAKEOPTS} \
+		./tools/build/jam_src/bin.linux${arch}/bjam ${MAKEOPTS} \
 		-sBOOST_ROOT=${S} \
 		-sPYTHON_ROOT=/usr \
 		-sPYTHON_VERSION=${PYTHON_VERSION} \
@@ -56,7 +63,7 @@ src_compile() {
 		einfo "Don't worry if there are a few (probably 6) failures above."
 		einfo "Some targets merely need to be combined.  Here goes:"
 
-		./tools/build/jam_src/bin.linux${ARCH}/bjam \
+		./tools/build/jam_src/bin.linux${arch}/bjam \
 		-sBOOST_ROOT=${S} \
 		-sPYTHON_ROOT=/usr \
 		-sPYTHON_VERSION=${PYTHON_VERSION} \
