@@ -32,6 +32,7 @@
 # wacky version.
 
 #does not build with gcc-2.x
+<media-video/transcode-0.6.12
 sys-fs/ntfsprogs
 <app-arch/rar-3.2.0
 <dev-util/ddd-3.3.6
