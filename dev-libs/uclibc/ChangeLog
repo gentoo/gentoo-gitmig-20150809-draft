@@ -1,6 +1,13 @@
 # ChangeLog for dev-libs/uclibc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/ChangeLog,v 1.8 2003/10/05 01:52:02 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/ChangeLog,v 1.9 2003/11/11 09:18:34 solar Exp $
+
+*uclibc-0.9.22 (11 Nov 2003)
+
+  11 Nov 2003; <solar@gentoo.org> uclibc-0.9.22.ebuild,
+  files/uClibc-0.9.22-etdyn.patch, files/uClibc-0.9.22-pax.patch:
+  version bump, this ebuild includes experimental pax-etdyn support for uclibc
+  when local use flag etdyn is used
 
   04 Oct 2003; <solar@gentoo.org> uclibc-0.9.21.ebuild:
   marking stable on x86, and added a metadata.xml
