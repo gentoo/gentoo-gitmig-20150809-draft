@@ -1,8 +1,12 @@
 # ChangeLog for dev-python/gnome-python
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.11 2003/02/15 23:19:35 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/gnome-python/ChangeLog,v 1.12 2003/03/18 03:27:15 spider Exp $
 
 *gnome-python-1.99.15 (09 Feb 2003)
+
+  18 mar 2003; <spider@gentoo.org> gnome-python-1.99.15.ebuild:
+  added a missing ?, thanks to 
+  j_r_fonseca@yahoo.co.uk for patch and notification
 
   15 Feb 2003; Mark Guertin <gerk@gentoo.org> gnome-python-1.99.15.ebuild :
   set ~ppc in keywords
