@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dbunit/dbunit-2.0.ebuild,v 1.1 2004/04/11 21:53:12 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dbunit/dbunit-2.0.ebuild,v 1.2 2004/04/12 10:12:00 dholm Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.zip"
 HOMEPAGE="http://www.dbunit.org"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 DEPEND="app-arch/unzip"
 RDEPEND=">=virtual/jdk-1.3"
 IUSE="doc"

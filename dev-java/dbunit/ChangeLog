@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/dbunit
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/dbunit/ChangeLog,v 1.1 2004/04/11 21:53:12 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/dbunit/ChangeLog,v 1.2 2004/04/12 10:12:00 dholm Exp $
+
+  12 Apr 2004; David Holm <dholm@gentoo.org> dbunit-2.0.ebuild:
+  Added to ~ppc.
 
 *dbunit-2.0 (11 Apr 2004)
 

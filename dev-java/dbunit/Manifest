@@ -1,4 +1,4 @@
-MD5 349aca3da8cb283fb455f576a44369b0 files/digest-dbunit-2.0 60
-MD5 592fff029fa0b400cf6b0384d6a5094d ChangeLog 414
-MD5 f9360354f21973b7ab0b9d1e705b629e dbunit-2.0.ebuild 694
+MD5 14ad0e5ef829873f0d422dd0d50b627c ChangeLog 499
+MD5 c22917a70675d8227edc2c5bec29fa87 dbunit-2.0.ebuild 702
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
+MD5 349aca3da8cb283fb455f576a44369b0 files/digest-dbunit-2.0 60
