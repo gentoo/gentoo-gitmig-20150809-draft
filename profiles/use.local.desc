@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.678 2004/10/08 14:24:29 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.679 2004/10/08 15:29:34 seemant Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -66,7 +66,6 @@ app-misc/workrave:distribution - Enable networking. See http://www.workrave.org/
 app-misc/workrave:noexercises - Disable exercises support
 app-misc/workrave:noexperimental - Compile without experimental features
 app-office/gnucash:hbci - Enable HBCI support, for connecting to some internet banks
-app-office/gnucash:ofx - Enable OFX support, for importing OFX data files.
 app-office/gnucash:quotes - Enable Online Stock Quote retrieval.
 app-office/grisbi:print - Enable TeX and printing support
 app-office/imposter:iksemel - Enable externel iksemel parsing support.
