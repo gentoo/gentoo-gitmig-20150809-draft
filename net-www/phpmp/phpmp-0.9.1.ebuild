@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/phpmp/phpmp-0.9.1.ebuild,v 1.6 2004/03/03 15:35:33 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phpmp/phpmp-0.9.1.ebuild,v 1.7 2004/03/21 09:09:44 mholzer Exp $
 
 inherit webapp-apache
 
@@ -17,7 +17,8 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ~ppc ~sparc ~alpha"
 IUSE=""
 
-DEPEND=">=net-www/apache-1.3.27-r1 >=mod_php-4.2.3-r2"
+DEPEND=">=net-www/apache-1.3.27-r1
+	>=dev-php/mod_php-4.2.3-r2"
 
 PHPMP_DIR="${HTTPD_ROOT}/${MY_PN}"
 

@@ -1,6 +1,9 @@
 # ChangeLog for net-www/tomcat
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/ChangeLog,v 1.27 2004/03/02 11:40:29 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/tomcat/ChangeLog,v 1.28 2004/03/21 09:12:32 mholzer Exp $
+
+  21 Mar 2004; Martin Holzer <mholzer@gentoo.org> tomcat-5.0.18.ebuild:
+  adding categorie. see 45110 for details
 
   24 Feb 2004; Chris Aniszczyk <zx@gentoo.org> tomcat-4.1.29.ebuild:
   Heh, variable order fix ;) Bug #42071
