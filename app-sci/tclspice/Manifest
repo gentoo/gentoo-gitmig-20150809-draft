@@ -1,8 +1,18 @@
-MD5 c366253919e76b8dd46c0e795d26238b ChangeLog 1290
-MD5 e49bb02132d2cd74ad4e6ee291e102d9 metadata.xml 220
-MD5 1419d5eb0b3a7cddaeea97e2164848dc tclspice-0.2.14.ebuild 1046
-MD5 3b42694a562b8227cfa6533cb5d2e21d tclspice-0.2.15.ebuild 903
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 b821796ff90afdfdc35d116ace6b79ed tclspice-0.2.17.ebuild 895
-MD5 d62f61b6201e2be65948c87c0aaa98fa files/digest-tclspice-0.2.14 68
+MD5 1419d5eb0b3a7cddaeea97e2164848dc tclspice-0.2.14.ebuild 1046
+MD5 cc77f63b7c65b6a450c700d32d8e027e ChangeLog 1378
+MD5 e49bb02132d2cd74ad4e6ee291e102d9 metadata.xml 220
+MD5 3b42694a562b8227cfa6533cb5d2e21d tclspice-0.2.15.ebuild 903
+MD5 38a1edc09faa9a21c5c265c88a1f7a37 files/digest-tclspice-0.2.14 136
 MD5 76d1699724ce746ab2bedb1256d1a768 files/digest-tclspice-0.2.15 68
 MD5 998d5a53a7b3e8f0ab9a60fd056cead8 files/digest-tclspice-0.2.17 68
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBpPgSI1lqEGTUzyQRAlAAAJ0bT/0uehy9lIuGI7OuGejfQ+uECgCfeCJ/
+k4EaiLo8D0CMbvB0pkUUUx0=
+=57Fw
+-----END PGP SIGNATURE-----

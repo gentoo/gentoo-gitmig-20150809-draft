@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/tclspice
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/tclspice/ChangeLog,v 1.10 2004/10/05 03:35:32 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/tclspice/ChangeLog,v 1.11 2004/11/24 21:07:24 swegener Exp $
+
+  24 Nov 2004; Sven Wegener <swegener@gentoo.org> :
+  Added missing digest entries.
 
   04 Oct 2004; Jason Wever <weeve@gentoo.org> tclspice-0.2.17.ebuild:
   Added ~sparc keyword.
