@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05b-r9.ebuild,v 1.24 2004/09/28 13:37:32 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash/bash-2.05b-r9.ebuild,v 1.25 2004/10/02 03:44:53 vapier Exp $
 
-inherit eutils flag-o-matic gnuconfig
+inherit eutils flag-o-matic gnuconfig gcc
 
 # Official patches
 PLEVEL="x002 x003 x004 x005 x006 x007"
