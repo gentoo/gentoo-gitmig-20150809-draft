@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.3-r1.ebuild,v 1.6 2003/07/02 01:33:19 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.3-r1.ebuild,v 1.7 2003/07/02 12:51:40 lu_zero Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -213,7 +213,12 @@ src_unpack() {
 		epatch ${FILESDIR}/3.2.1/gcc32-arm-disable-mathf.patch
 		epatch ${FILESDIR}/3.2.1/gcc32-arm-reload1-fix.patch
 	fi
-
+	#ppc mergel miscompilation workaround
+	if use ppc
+	then
+		epatch ${FILESDIR}/3.2.3/gcc-3.2.3-mergel-fix.patch
+	fi
+	
 	# Install our pre generated manpages if we do not have perl ...
 	if [ ! -x /usr/bin/perl ]
 	then

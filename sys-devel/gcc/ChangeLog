@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.106 2003/07/02 01:33:19 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.107 2003/07/02 12:51:39 lu_zero Exp $
+
+  02 Jul 2003; Luca Barbato <lu_zero@gentoo.org> gcc-3.2.3-r1.ebuild:
+  set added the mergel workaround, G4 users should reemerge or change the
+  altivec.h include by hand
 
   01 Jul 2003; Luca Barbato <lu_zero@gentoo.org> gcc-3.2.3-r1.ebuild:
   set stable on ppc
