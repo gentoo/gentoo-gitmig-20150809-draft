@@ -4,7 +4,7 @@ Hash: SHA1
 MD5 976d924f65f9ef46a14845214be70e65 ChangeLog 16527
 MD5 5659184e067dbf68af9e9251837332c5 alsa-lib-0.9.8.ebuild 1584
 MD5 c840b6d57683f228d3db41a4091e78a5 alsa-lib-1.0.2.ebuild 1609
-MD5 5436409f397d977f8463990f2b853d76 alsa-lib-1.0.9_rc2.ebuild 1560
+MD5 7e79bdef5865d306f23435fab1b59318 alsa-lib-1.0.9_rc2.ebuild 1736
 MD5 255565a888541274148ccb6e1b226eb5 alsa-lib-1.0.7.ebuild 2051
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 680dd86b81d67ef8decb1da4d0071d09 alsa-lib-1.0.8.ebuild 1585
@@ -21,7 +21,7 @@ MD5 afc44aabeb36448990c19eaa9b3dfce0 files/alsa-lib-mixer.patch 264
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCS3FPArHZZzCEUG0RArXSAJ9jJrcJR9myJL50tE6Fuv+MN+M8oQCeLqZf
-hyt6z0MR0s//0sFCI8svEFo=
-=pcvm
+iD8DBQFCUX5zArHZZzCEUG0RArNsAJ9lTwcOv4Bbjh7uIZapasMweW19agCfWPQi
+7LbEr1y6k/JyPH6Ck0xfH2o=
+=/nKt
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.9_rc2.ebuild,v 1.1 2005/03/31 03:40:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/alsa-lib/alsa-lib-1.0.9_rc2.ebuild,v 1.2 2005/04/04 17:49:55 eradicator Exp $
 
 IUSE="jack doc"
 
@@ -58,4 +58,7 @@ pkg_postinst() {
 	einfo "that link against alsa-lib due to some ABI changes between 1.0.5 and"
 	einfo "1.0.6 unique to that hardware. See the following URL for more information:"
 	einfo "http://bugs.gentoo.org/show_bug.cgi?id=65347"
+	echo
+	ewarn "Please use media-sound/alsa-driver rather than in-kernel drivers as there"
+	ewarn "have been some problems recently with the in-kernel drivers.  See bug #87544."
 }
