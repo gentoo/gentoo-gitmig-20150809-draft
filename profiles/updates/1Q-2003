@@ -20,3 +20,4 @@ move sys-devel/perl dev-lang/perl
 move sys-apps/ipchains net-firewall/ipchains
 move sys-apps/iptables net-firewall/iptables
 move media-video/kino-0.60 media-video/kino-0.6
+move sys-kernel/lolo-sources sys-kernel/pfeifer-sources
