@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/tix-8.2.0.ebuild,v 1.3 2003/01/31 23:16:49 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tcltk/tix/tix-8.2.0.ebuild,v 1.4 2003/02/13 11:46:09 vapier Exp $
 
 IUSE="gcc tcl tk threads shared"
 MY_P=${PN}${PV}
