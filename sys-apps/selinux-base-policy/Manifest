@@ -1,3 +1,5 @@
+MD5 658021d857f48a891e730762b90b220c ChangeLog 989
 MD5 fe962f6955776ec7ffae78658024afda selinux-base-policy-20030419.ebuild 759
-MD5 31c4192ea0d5397b15cf2ff07100c73e ChangeLog 595
+MD5 8983973be211a720ac086db1bc01424f selinux-base-policy-20030514.ebuild 1700
 MD5 768ab13f831e9da95f4341f783160bef files/digest-selinux-base-policy-20030419 80
+MD5 c4eb008b1e2774fa2f44385f4b84511d files/digest-selinux-base-policy-20030514 80
