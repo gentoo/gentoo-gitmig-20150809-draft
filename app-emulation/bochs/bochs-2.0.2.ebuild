@@ -1,13 +1,13 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.0.2.ebuild,v 1.9 2003/12/24 19:03:46 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/bochs-2.0.2.ebuild,v 1.10 2004/01/05 04:47:11 lu_zero Exp $
 
 inherit eutils
 
 DESCRIPTION="a LGPL-ed pc emulator"
 HOMEPAGE="http://bochs.sourceforge.net/"
 SRC_URI="mirror://sourceforge/bochs/${P}.tar.gz
-	 http://bochs.sourceforge.net/guestos/dlxlinux3.tar.gz"
+	 http://bochs.sourceforge.net/guestos/dlxlinux4.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -21,11 +21,12 @@ DEPEND=">=sys-libs/glibc-2.1.3
 	gtk?  x11-libs/wxGTK"
 
 src_unpack() {
-	unpack ${P}.tar.gz
+	unpack ${A}
+#	unpack ${P}.tar.gz
 	cd ${S}
-
+# 		-e 's:MAN_PAGE_1_LIST=bochs bximage bochs-dlx:MAN_PAGE_1_LIST=bochs bximage:'
 	sed -i \
-		-e "s:\$(WGET) \$(DLXLINUX_TAR_URL):cp ${DISTDIR}/dlxlinux3.tar.gz .:" \
+		-e "s:\$(WGET) \$(DLXLINUX_TAR_URL):cp ${DISTDIR}/dlxlinux4.tar.gz .:" \
 		-e 's:BOCHSDIR=:BOCHSDIR=/usr/lib/bochs#:' \
 		-e 's: $(BOCHSDIR): $(DESTDIR)$(BOCHSDIR):g' Makefile.in || \
 			die "sed Makefile.in failed"
@@ -48,6 +49,21 @@ src_compile() {
 }
 
 src_install() {
-	make DESTDIR=${D} install || die "make install failed"
+	make DESTDIR=${D} install unpack_dlx || die "make install failed"
+	#workaround
+	make prefix=${D}/usr install_dlx
+	#cleanup
+	rm -rf ${D}/usr/share/bochs/{vga.pcf,install-x11-fonts,test-x11-fonts}
+	rm -rf ${D}/usr/share/bochs/keymaps/CVS
+	insinto /usr/X11R6/lib/X11/fonts/misc
+	doins ${S}/font/vga.pcf
+	gzip ${D}/usr/X11R6/lib/X11/fonts/misc/vga.pcf
 	dodoc CHANGES CVS README TESTFORM.txt || die "dodoc failed"
+}
+
+pkg_postinst() {
+	einfo "Updating the font index"
+	mkfontdir /usr/X11R6/lib/X11/fonts/misc
+	einfo "If you are running X please update the fontlist with:"
+	einfo "# xset fp rehash"
 }
