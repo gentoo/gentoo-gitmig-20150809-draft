@@ -1,5 +1,5 @@
-MD5 1ef86907c0bb89cfb73389f11269bd40 ChangeLog 661
-MD5 3d08668c60247c6caea01a01d7c246d9 gpsim-lcd-0.1.1.ebuild 978
+MD5 3734a5a66494207755269273e229a4e5 ChangeLog 669
+MD5 f5c0c78e20351208c8587f52ac42c9d3 gpsim-lcd-0.1.1.ebuild 957
 MD5 9dc9c88b5a3165e98cdcb06ee4a6d4fc metadata.xml 234
 MD5 6afce2c0050a1d6a1a5a16c5818a54db files/digest-gpsim-lcd-0.1.1 61
 MD5 fe7a1baafadcc1af27792ad5d0bf65e8 files/gpsim-lcd-0.1.1-display_fix.patch 348
