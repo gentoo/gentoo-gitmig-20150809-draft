@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.944 2005/02/11 06:20:00 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.945 2005/02/11 15:51:57 usata Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -65,6 +65,8 @@ app-i18n/scim-cvs:immqt - Enable immodule for Qt support (binary incompatible)
 app-i18n/scim-cvs:immqt-bc - Enable immodule for Qt support (binary compatible)
 app-i18n/scim:immqt - Enable immodule for Qt support (binary incompatible)
 app-i18n/scim:immqt-bc - Enable immodule for Qt support (binary compatible)
+app-i18n/uim:immqt - Enable immodule for Qt support (binary incompatible)
+app-i18n/uim:immqt-bc - Enable immodule for Qt support (binary compatible)
 app-i18n/uim-svn:dict - Build uim-dict (a dictionary utility for uim)
 app-i18n/uim-svn:fep - Build uim-fep
 app-laptop/tpctl:tpctlir - enable support for thinkpad models 760 and 765
