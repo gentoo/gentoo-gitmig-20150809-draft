@@ -1,10 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ebook.eclass,v 1.10 2003/05/06 17:37:03 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ebook.eclass,v 1.11 2003/06/29 00:47:17 bass Exp $
 #
 # Author Francisco Gimeno <kikov@fco-gimeno.com>
 # Mantainer José Alberto Suárez López <bass@gentoo.org>
-#
+# 
+# Latest changes thanks to Kris Verbeeck
 # The ebook eclass defines some default functions and variables to 
 # install ebooks. 
 
@@ -62,7 +63,7 @@ if [ "${DEVHELPROOT}" = "" ]; then
     DEVHELPROOT="usr/share/devhelp"
 fi
 if [ "${RDEPEND}" = "" ]; then
-    RDEPEND=">=dev-util/devhelp-0.3"
+    RDEPEND=">=dev-util/devhelp-0.6"
 fi
 if [ "${DESCRIPTION}" = "" ]; then
     DESCRIPTION="${P} ebook based in $ECLASS eclass"
@@ -74,7 +75,7 @@ if [ "${EBOOKSRCDIR}" = "" ]; then
     EBOOKSRCDIR=${_ebooksrcdir}
 fi
 if [ "${EBOOKDEVHELPFILE}" = "" ]; then
-    EBOOKDEVHELPFILE=${_ebookdevhelpfile}
+    EBOOKDEVHELPFILE=${_ebookdevhelpfile}".devhelp"
 fi
 
 S=${WORKDIR}
@@ -86,11 +87,12 @@ ebook_src_unpack() {
 ebook_src_install() {
 	debug-print-function $FUNCNAME $*
 	
-	dodir ${DEVHELPROOT}/specs
+#dodir ${DEVHELPROOT}/specs
 	dodir ${DEVHELPROOT}/books
 	dodir ${DEVHELPROOT}/books/${EBOOKDESTDIR}
 	echo EBOOKSRCDIR= ${EBOOKSRCDIR}
-	cp ${S}/book.devhelp ${D}${DEVHELPROOT}/specs/${EBOOKDEVHELPFILE}
+#	cp ${S}/book.devhelp ${D}${DEVHELPROOT}/specs/${EBOOKDEVHELPFILE}
+	cp ${S}/book.devhelp ${D}${DEVHELPROOT}/books/${EBOOKDESTDIR}/${EBOOKDEVHELPFILE}
 	cp -R ${S}/book/* ${D}${DEVHELPROOT}/books/${EBOOKDESTDIR}
 }
 
