@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.4.26.ebuild,v 1.1 2004/06/01 17:47:24 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.4.26-r1.ebuild,v 1.1 2004/06/15 18:36:02 plasmaroo Exp $
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -8,8 +8,8 @@ IUSE=""
 ETYPE="sources"
 inherit kernel eutils
 OKV="2.4.26"
-KV="2.4.26-win4lin"
-EXTRAVERSION="-win4lin"
+EXTRAVERSION="-win4lin-${PR}"
+KV="2.4.26${EXTRAVERSION}"
 
 S=${WORKDIR}/linux-${KV}
 
@@ -31,6 +31,7 @@ src_unpack() {
 	patch -Np1 -i ${DISTDIR}/mki-adapter.patch >/dev/null 2>&1 || die "Error: mki-adapter patch failed."
 	eend $?
 	epatch ${FILESDIR}/${P}.CAN-2004-0394.patch || die "Failed to add the CAN-2004-0394 patch!"
+	epatch ${FILESDIR}/${P}.FPULockup-53804.patch || die "Failed to apply FPU-lockup patch!"
 
 	kernel_universal_unpack
 }
