@@ -1,18 +1,19 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Maintainer: Tim Raedisch <tim.raedisch@udo.edu>
-# $Header: /var/cvsroot/gentoo-x86/net-www/phpBB/phpBB-2.0.6-r1.ebuild,v 1.2 2003/10/27 14:14:01 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phpBB/phpBB-2.0.6-r1.ebuild,v 1.3 2003/11/23 00:17:25 mholzer Exp $
 
 S=${WORKDIR}/${PN}2
 DESCRIPTION="phpBB is a high powered, fully scalable, and highly customisable open-source bulletin board package."
 HOMEPAGE="http://www.phpbb.com/"
 SRC_URI="mirror://sourceforge/phpbb/${P}.tar.gz"
+RESTRICT="nomirror"
 
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 
-DEPEND="virtual/php"
+RDEPEND="virtual/php"
 
 inherit webapp-apache
 webapp-detect || NO_WEBSERVER=1
@@ -30,10 +31,10 @@ pkg_setup() {
 	einfo "Installing for ${WEBAPP_SERVER}"
 }
 
-src_compile() {
+src_unpack() {
+	unpack ${A}
+	cd ${S}
 	epatch ${FILESDIR}/${P}-security.patch || die "Security patch failed"
-	#we need to have this empty function ... default compile hangs
-	echo "Nothing to compile"
 }
 
 src_install() {

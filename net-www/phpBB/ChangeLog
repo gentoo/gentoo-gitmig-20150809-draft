@@ -1,6 +1,9 @@
 # ChangeLog for net-www/phpBB
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/phpBB/ChangeLog,v 1.5 2003/09/22 22:24:36 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phpBB/ChangeLog,v 1.6 2003/11/23 00:17:25 mholzer Exp $
+
+  23 Nov 2003; Martin Holzer <mholzer@gentoo.org> phpBB-2.0.6-r1.ebuild:
+  adding RESTRICT="nomirror".
 
 *phpBB-2.0.6-r1 (24 Sep 2003)
 
