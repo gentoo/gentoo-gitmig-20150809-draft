@@ -1,6 +1,11 @@
 # ChangeLog for net-wireless/wireless-tools
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.7 2003/03/08 22:31:15 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/wireless-tools/ChangeLog,v 1.8 2003/03/25 00:25:01 latexer Exp $
+
+*wireless-tools-26_pre7 (24 Mar 2003)
+
+  24 Mar 2003; Peter Johanson <latexer@gentoo.org> wireless-tools-26_pre7.ebuild:
+  Version bump for testing. This is the latest beta of the wireless-tools
 
 *wireless-tools-25-r1 ( 08 Mar 2003 )
 
