@@ -1,0 +1,84 @@
+diff -ur md5-1.0/md5.el md5-1.0.orig/md5.el
+--- md5-1.0/md5.el	2003-11-21 23:59:30.000000000 -0600
++++ md5-1.0.orig/md5.el	2003-12-21 23:59:40.839985880 -0600
+@@ -368,39 +368,44 @@
+ ;;; Here begins the merger with the XEmacs API and the md5.el from the URL
+ ;;; package.  Courtesy wmperry@cs.indiana.edu
+ ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+-(defun md5 (object &optional start end)
+-  "Return the MD5 (a secure message digest algorithm) of an object.
+-OBJECT is either a string or a buffer.
+-Optional arguments START and END denote buffer positions for computing the
+-hash of a portion of OBJECT."
+- (let ((buffer nil))
+-    (unwind-protect
+-	(save-excursion
+-	  (setq buffer (generate-new-buffer " *md5-work*"))
+-	  (set-buffer buffer)
+-	  (cond
+-	   ((bufferp object)
+-	    (insert-buffer-substring object start end))
+-	   ((stringp object)
+-	    (insert (if (or start end)
+-			(substring object start end)
+-		      object)))
+-	   (t nil))
+-	  (prog1
+-	      (if (<= (point-max) md5-maximum-internal-length)
+-		  (mapconcat
+-		   (function (lambda (node) (format "%02x" node)))
+-		   (md5-encode (buffer-string))
+-		   "")
+-		(call-process-region (point-min) (point-max)
+-				     shell-file-name
+-				     t buffer nil
+-				     shell-command-switch md5-program)
+-		;; MD5 digest is 32 chars long
+-		;; mddriver adds a newline to make neaten output for tty
+-		;; viewing, make sure we leave it behind.
+-		(buffer-substring (point-min) (+ (point-min) 32)))
+-	    (kill-buffer buffer)))
+-      (and buffer (buffer-name buffer) (kill-buffer buffer) nil))))
+ 
+-(provide 'md5)
++;; Emacs 21.3 already defines this function.
++
++;; (defun md5 (object &optional start end)
++;;   "Return the MD5 (a secure message digest algorithm) of an object.
++;; OBJECT is either a string or a buffer.
++;; Optional arguments START and END denote buffer positions for computing the
++;; hash of a portion of OBJECT."
++;;  (let ((buffer nil))
++;;     (unwind-protect
++;; 	(save-excursion
++;; 	  (setq buffer (generate-new-buffer " *md5-work*"))
++;; 	  (set-buffer buffer)
++;; 	  (cond
++;; 	   ((bufferp object)
++;; 	    (insert-buffer-substring object start end))
++;; 	   ((stringp object)
++;; 	    (insert (if (or start end)
++;; 			(substring object start end)
++;; 		      object)))
++;; 	   (t nil))
++;; 	  (prog1
++;; 	      (if (<= (point-max) md5-maximum-internal-length)
++;; 		  (mapconcat
++;; 		   (function (lambda (node) (format "%02x" node)))
++;; 		   (md5-encode (buffer-string))
++;; 		   "")
++;; 		(call-process-region (point-min) (point-max)
++;; 				     shell-file-name
++;; 				     t buffer nil
++;; 				     shell-command-switch md5-program)
++;; 		;; MD5 digest is 32 chars long
++;; 		;; mddriver adds a newline to make neaten output for tty
++;; 		;; viewing, make sure we leave it behind.
++;; 		(buffer-substring (point-min) (+ (point-min) 32)))
++;; 	    (kill-buffer buffer)))
++;;       (and buffer (buffer-name buffer) (kill-buffer buffer) nil))))
++
++;; An md5 module is already provided by FLIM.
++
++(provide 'md5-digest)
+Only in md5-1.0.orig: md5.el~
