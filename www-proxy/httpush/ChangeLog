@@ -1,0 +1,10 @@
+# ChangeLog for www-proxy/httpush
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/httpush/ChangeLog,v 1.1 2005/04/01 14:08:38 mrness Exp $
+
+*httpush-0.9_beta11 (01 Apr 2005)
+
+  01 Apr 2005; Alin Nastac <mrness@gentoo.org> +metadata.xml,
+  +httpush-0.9_beta11.ebuild:
+  Initial import from bug #87307.
+

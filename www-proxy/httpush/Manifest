@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5d6738eb89a93379cf55d6341be67333 httpush-0.9_beta11.ebuild 1407
+MD5 70e003d652ff8faa1a4a1e28fa84174a metadata.xml 415
+MD5 f1a820f6983c659ea883f03597864876 ChangeLog 369
+MD5 c9beb4a47643787632f3a8010dba451f files/digest-httpush-0.9_beta11 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCTVX9jiC39V7gKu0RAvkxAKDC/epoYs1exV9ted51Akixh6zTFQCfXmZq
+E2KpzScP9/WTO2wIA1CCP9I=
+=ecjo
+-----END PGP SIGNATURE-----
