@@ -30,6 +30,4 @@ src_install() {
 	
 	dodoc ${ALSA_UTILS_DOCS}
 	newdoc alsamixer/README README.alsamixer
-	exeinto /etc/init.d 
-	newexe ${FILESDIR}/alsa.rc6 alsa
 }
