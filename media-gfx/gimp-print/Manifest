@@ -2,7 +2,7 @@ MD5 3d7d2030c709f3224a3fbc89199a2946 ChangeLog 3104
 MD5 d1c8a9ad85666b4396107f03e0881409 gimp-print-4.2.2.ebuild 1606
 MD5 4de5aefbcd4d4099624ebd89efee2d58 gimp-print-4.2.5-r1.ebuild 1753
 MD5 f94dae31ddab87b7076573adbb9987f2 gimp-print-4.2.5.ebuild 1603
-MD5 d95b8bd0acaeb6a43fd96a5e1a464620 gimp-print-4.3.18.ebuild 2529
+MD5 d0511a11a3c6c3db33c2be5d6524e34f gimp-print-4.3.18.ebuild 2533
 MD5 26b4b081d538c195dc39bcb2ec8e6f3a metadata.xml 161
 MD5 3879a976a01d66b7e1e0b44e4611cd8e files/digest-gimp-print-4.2.2 69
 MD5 68cc29ffb32d107b59d0ab6407a7613e files/digest-gimp-print-4.2.5 69
