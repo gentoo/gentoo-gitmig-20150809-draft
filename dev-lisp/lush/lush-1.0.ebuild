@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation and Matthew Kennedy <mkennedy@gentoo.org>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/lush/lush-0.99.ebuild,v 1.3 2005/03/03 19:37:35 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/lush/lush-1.0.ebuild,v 1.1 2005/03/03 19:37:35 mkennedy Exp $
 
 DESCRIPTION="Lush is the Lisp User Shell"
 HOMEPAGE="http://lush.sourceforge.net/"

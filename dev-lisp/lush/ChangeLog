@@ -1,6 +1,12 @@
 # ChangeLog for dev-lisp/lush
-# Copyright 2000-2004 Gentoo Foundation and Matthew Kennedy <mkennedy@gentoo.org>; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/lush/ChangeLog,v 1.4 2004/06/25 00:00:06 agriffis Exp $
+# Copyright 2000-2005 Gentoo Foundation and Matthew Kennedy <mkennedy@gentoo.org>; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/lush/ChangeLog,v 1.5 2005/03/03 19:37:35 mkennedy Exp $
+
+*lush-1.0 (03 Mar 2005)
+
+  03 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org> lush-0.99.ebuild,
+  +lush-1.0.ebuild:
+  New upstream version; Add --disable-bfd which resolves Bug #55452
 
 *lush-0.99 (13 May 2004)
 
