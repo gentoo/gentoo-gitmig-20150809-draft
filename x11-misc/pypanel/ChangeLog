@@ -1,6 +1,9 @@
 # ChangeLog for x11-misc/pypanel
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/ChangeLog,v 1.14 2004/09/02 22:49:41 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/pypanel/ChangeLog,v 1.15 2004/09/29 07:59:55 pyrania Exp $
+
+  29 Sep 2004; <pyrania@gentoo.org> pypanel-1.3.ebuild:
+  Stable on x86.
 
   03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> pypanel-0.9.ebuild,
   pypanel-1.3.ebuild:
