@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/dancer-ircd/dancer-ircd-1.0.31_p8-r1.ebuild,v 1.2 2003/09/06 22:02:56 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/dancer-ircd/dancer-ircd-1.0.31_p8-r1.ebuild,v 1.3 2003/12/10 01:27:31 zul Exp $
 
 DESCRIPTION="A ircd with ipv6 support use by the freenode network"
 HOMEPAGE="http://freenode.net/dancer_ircd.shtml"
@@ -85,7 +85,7 @@ src_install() {
 	doexe ${FILESDIR}/dancer-ircd
 
 	dodir /var/log/dancer-ircd/
-	touch ${D}/var/log/dancer-ircd/.keep
+	keepdir /var/log/dancer-id
 
 }
 
