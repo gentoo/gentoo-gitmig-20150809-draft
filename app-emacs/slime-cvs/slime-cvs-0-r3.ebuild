@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime-cvs/slime-cvs-0-r3.ebuild,v 1.1 2005/02/10 09:19:21 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime-cvs/slime-cvs-0-r3.ebuild,v 1.2 2005/02/21 07:16:48 mkennedy Exp $
 
 ECVS_SERVER="common-lisp.net:/project/slime/cvsroot"
 if [ -z "${ECVS_BRANCH}" ]; then
@@ -31,8 +31,8 @@ S="${WORKDIR}/slime"
 CLPACKAGE=swank
 
 src_compile() {
-	emacs --batch -q -l <(echo "(add-to-list 'load-path \".\")") \
-		-f batch-byte-compile *.el || die
+	echo "(add-to-list 'load-path \".\")" >load-path
+	emacs --batch -q -l load-path -f batch-byte-compile *.el || die
 	use doc && make -C doc all slime.pdf
 }
 

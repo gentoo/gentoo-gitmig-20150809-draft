@@ -1,6 +1,10 @@
 # ChangeLog for app-emacs/slime
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.10 2005/02/10 09:19:45 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/slime/ChangeLog,v 1.11 2005/02/21 07:16:12 mkennedy Exp $
+
+  21 Feb 2005; Matthew Kennedy <mkennedy@gentoo.org>
+  slime-1.0.20050207.ebuild:
+  For some odd reason, process substitution seems to hang.
 
 *slime-1.0.20050207 (07 Feb 2005)
 
