@@ -1,7 +1,7 @@
 #!/bin/sh
 
 
-mysed="s:${D}::"
+mysed="s:${D}::g"
 
 for x in "$@"
 do
