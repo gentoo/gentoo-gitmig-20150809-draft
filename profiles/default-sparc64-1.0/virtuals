@@ -47,3 +47,4 @@ virtual/logger		app-admin/sysklogd
 virtual/ssh				net-misc/openssh
 virtual/gzip		app-arch/gzip
 virtual/w3m			net-www/w3m
+virtual/mpg123		media-sound/mpg123

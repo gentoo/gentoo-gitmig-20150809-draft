@@ -51,3 +51,4 @@ virtual/gzip			app-arch/gzip
 virtual/ghostscript		app-text/ghostscript
 virtual/w3m				net-www/w3m
 virtual/cdrtools        app-cdr/cdrtools
+virtual/mpg123		media-sound/mpg123

@@ -25,3 +25,4 @@ virtual/logger		app-admin/sysklogd
 virtual/gzip		app-arch/gzip
 virtual/ghostscript	app-text/ghotscript
 virtual/w3m			net-www/w3m
+virtual/mpg123		media-sound/mpg123
