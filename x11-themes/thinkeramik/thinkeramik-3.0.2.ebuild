@@ -3,14 +3,14 @@
 # $Header: 
 inherit kde-base
 
-need-kde 3.1
+need-kde 3.2
 
 DESCRIPTION="A cool kde style modified from keramik"
-SRC_URI="http://kde-look.org/content/files/6986-${P}.tar.bz2"
-HOMEPAGE="http://kde-look.org/content/show.php?content=6986"
+SRC_URI="http://www.geocities.jp/prefsx1/${P}.tar.gz"
+HOMEPAGE="http://kde-look.org/content/show.php?content=10164"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="~x86 ~amd64"
 
 src_compile()
 {
