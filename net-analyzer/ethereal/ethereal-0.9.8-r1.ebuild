@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.8-r1.ebuild,v 1.3 2003/01/11 14:32:40 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.8-r1.ebuild,v 1.4 2003/01/13 05:01:49 bcowan Exp $
 
 IUSE="gtk ipv6 snmp ssl gtk2"
 
@@ -51,9 +51,7 @@ src_compile() {
 	use ipv6 && myconf="${myconf} --enable-ipv6"
 	use gtk || myconf="${myconf} --disable-ethereal"
 	
-	if use snmp
-	    then addwrite "/usr/share/snmp/mibs/"
-	fi    
+	addwrite "/usr/share/snmp/mibs/" 
 	
 	econf \
 		--enable-pcap \
