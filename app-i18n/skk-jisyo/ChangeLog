@@ -1,8 +1,16 @@
 # ChangeLog for app-i18n/skk-jisyo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo/ChangeLog,v 1.15 2003/07/13 02:09:14 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo/ChangeLog,v 1.16 2003/08/01 20:18:50 usata Exp $
+
+*skk-jisyo-200308 (02 Aug 2003)
+
+  02 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> skk-jisyo-200308.ebuild:
+  Updated snapshot
 
 *skk-jisyo-200307 (13 Jul 2003)
+
+  02 Aug 2003; Mamoru KOMACHI <usata@gentoo.org> skk-jisyo-200307.ebuild:
+  Marked stable on all arch
 
   13 Jul 2003; MATSUU Takuto <matsuu@gentoo.org> skk-jisyo-200307.ebuild:
   version bump. Thanks to usata@gentoo.org (Mamoru KOMACHI) in bug #23818.
