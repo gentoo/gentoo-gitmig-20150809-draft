@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/kwebget
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kwebget/ChangeLog,v 1.1 2004/10/18 21:28:37 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kwebget/ChangeLog,v 1.2 2004/11/19 17:58:39 motaboy Exp $
+
+  19 Nov 2004; Simone Gotti <motaboy@gentoo.org> kwebget-0.8.1.ebuild:
+  Stable on x86.
 
 *kwebget-0.8.1 (18 Oct 2004)
 

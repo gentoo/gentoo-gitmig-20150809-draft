@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kwebget/kwebget-0.8.1.ebuild,v 1.1 2004/10/18 21:28:37 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kwebget/kwebget-0.8.1.ebuild,v 1.2 2004/11/19 17:58:39 motaboy Exp $
 
 inherit kde
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.kpage.de/en/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 RDEPEND="$DEPEND
@@ -23,6 +23,6 @@ need-kde 3.0
 src_unpack() {
 	kde_src_unpack
 	# respect the "alsa" USE flag until it's fixed upstream
-	[ ! `useq arts` ] && epatch ${FILESDIR}/kwebget-0.8.1-configure.patch
+	use arts || epatch ${FILESDIR}/kwebget-0.8.1-configure.patch
 }
 
