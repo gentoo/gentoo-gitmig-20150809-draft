@@ -1,6 +1,13 @@
 # ChangeLog for dev-lisp/sbcl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.14 2003/10/04 08:15:12 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.15 2003/10/08 11:12:57 pyrania Exp $
+
+*sbcl-0.8.4 (08 Oct 2003)
+
+  08 Oct 2003; Markus Nigbur <pyrania@gentoo.org> sbcl-0.8.4.ebuild:
+  Version bump. This is a modification to sbcl-0.8.3.68 to add the html docs for
+  sbcl as well as fix a build bug that occurs when SBCL_HOME is set while
+  building. Thanks to Geoff Cant (bug 30640)
 
 *sbcl-0.8.3.68 (03 Oct 2003)
 
