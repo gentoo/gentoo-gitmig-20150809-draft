@@ -1,6 +1,12 @@
 # ChangeLog for kde-misc/komics
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-misc/komics/ChangeLog,v 1.8 2005/01/16 01:26:33 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-misc/komics/ChangeLog,v 1.9 2005/02/03 15:15:45 carlo Exp $
+
+*komics-1.4-r2 (03 Feb 2005)
+
+  03 Feb 2005; Carsten Lohrke <carlo@gentoo.org>
+  +files/komics-1.4-Dilbert.patch, +komics-1.4-r2.ebuild:
+  Pawel can't live without Dilbert, #80449
 
   16 Jan 2005; Simone Gotti <motaboy@gentoo.org> komics-1.4-r1.ebuild:
   Stable on x86

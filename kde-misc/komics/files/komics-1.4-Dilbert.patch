@@ -1,0 +1,11 @@
+--- src/scripts/dilbert.pl.orig	2005-02-02 14:01:25.964429648 +0100
++++ src/scripts/dilbert.pl	2005-02-02 14:02:55.788901068 +0100
+@@ -5,7 +5,7 @@
+ 
+ our $url = 'http://www.dilbert.com';
+ our $prefix = 'http://www.dilbert.com';
+-our $attr_value = 'Today\'s Dilbert Comic';
++our $attr_value = 'Today\'s Comic';
+ our $attr_name = 'alt';
+ our $regex = '';
+ 
