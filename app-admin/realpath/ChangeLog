@@ -1,0 +1,9 @@
+# ChangeLog for app-admin/realpath
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/realpath/ChangeLog,v 1.1 2003/06/10 20:41:38 mkennedy Exp $
+
+*realpath-1.9.3 (09 Jun 2003)
+
+  09 Jun 2003; Matthew Kennedy <mkennedy@gentoo.org> :
+  Initial import.  Dependency of dev-lisp/common-lisp-controller.
+
