@@ -1,6 +1,18 @@
 # ChangeLog for sys-apps/busybox
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.18 2003/12/19 00:00:24 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/ChangeLog,v 1.19 2003/12/24 08:13:54 solar Exp $
+
+*busybox-1.00_pre5 (24 Dec 2003)
+
+  24 Dec 2003; <solar@gentoo.org> busybox-1.00_pre3.ebuild,
+  busybox-1.00_pre4.ebuild, busybox-1.00_pre5.ebuild:
+  The most obvious thing in this release is a fix for a terribly stupid bug in
+  mount that prevented it from working properly unless you specified the
+  filesystem type. This release also fixes a few compile problems, updates
+  udhcp, fixes a silly bug in fdisk, fixes ifup/ifdown to behave like the Debian
+  version, updates devfsd, updates the 2.6.x modutils support, add a new 'rx'
+  applet, removes the obsolete 'loadacm' applet, fixes a few tar bugs, fixes a
+  sed bug, and a few other odd fixes.
 
 *busybox-1.00_pre4 (18 Dec 2003)
 
