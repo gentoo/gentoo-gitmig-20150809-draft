@@ -1,0 +1,10 @@
+# ChangeLog for dev-util/cproto
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cproto/ChangeLog,v 1.1 2002/12/07 03:17:19 george Exp $
+
+*cproto-4.6.ebuild (06 ‰≈À 2002)
+
+  06 Dec 2002; George Shapovalov <george@gentoo.org> ChangeLog, cproto-4.6.ebuild, files/\{cproto-4.6-mkstemp.patch,digest-cproto-4.6\} :
+  initial release
+  generate C function prototypes from C source code
+  ebuild submitted by Cory Visi <cory@visi.name>
