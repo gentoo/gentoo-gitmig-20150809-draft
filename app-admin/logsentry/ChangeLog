@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/logsentry
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/ChangeLog,v 1.6 2003/03/28 10:27:14 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/logsentry/ChangeLog,v 1.7 2003/06/09 21:07:40 msterret Exp $
+
+  09 Jun 2003; <msterret@gentoo.org> logsentry-1.1.1.ebuild:
+  DEPEND on sed >=4; use sed -i; fix SRC_URI and comment out HOMEPAGE since
+  things are unclear.
 
   07 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> logsentry-1.1.1.ebuild :
   Updated dependencies, closes #13332.
