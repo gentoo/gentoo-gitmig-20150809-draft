@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.18.ebuild,v 1.2 2002/03/12 18:22:16 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.18.ebuild,v 1.3 2002/03/12 22:20:55 drobbins Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -89,10 +89,12 @@ src_install() {
 }
 
 pkg_preinst() {
-	[ "$PN" = "linux-sources" ] && return
-	[ -L ${ROOT}usr/include/linux ] && rm ${ROOT}usr/include/linux
-	[ -L ${ROOT}usr/include/asm ] && rm ${ROOT}usr/include/asm
-	return
+	if [ "$PN" = "linux-headers" ] 
+	then
+		[ -L ${ROOT}usr/include/linux ] && rm ${ROOT}usr/include/linux
+		[ -L ${ROOT}usr/include/asm ] && rm ${ROOT}usr/include/asm
+		true
+	fi
 }
 
 pkg_postinst() {
