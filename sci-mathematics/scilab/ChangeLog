@@ -1,0 +1,103 @@
+# ChangeLog for app-sci/scilab
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/scilab/ChangeLog,v 1.1 2004/12/28 15:14:40 ribosome Exp $
+
+*scilab-2.7-r3 (28 Dec 2004)
+
+  28 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +files/scilab-2.7-configure.patch, +scilab-2.7-r3.ebuild,
+  +scilab-3.0.ebuild:
+  Moved from app-sci/scilab to sci-mathematics/scilab.
+
+  01 Dec 2004; Patrick Kursawe <phosphan@gentoo.org> scilab-3.0.ebuild:
+  Correcting gtk/gtk2 handling (bug #70053)
+
+  27 Nov 2004; Joseph Jezak <josejx@gentoo.org> scilab-2.7-r3.ebuild:
+  Marked ~ppc for bug #71458.
+
+  14 Sep 2004; Olivier Fisette <ribosome@gentoo.org> scilab-3.0.ebuild:
+  Added a check for a Fortran compiler (bug #53872).
+
+  22 Aug 2004; Olivier Fisette <ribosome@gentoo.org>
+  -scilab-2.7-r2.ebuild, scilab-3.0.ebuild:
+  Corrected "libgtkhtml" dependency in version 3.0 (bug #61134).
+  Removed old ebuild (version 2.7-r2).
+
+*scilab-3.0
+
+  19 Aug 2004; Olivier Fisette <ribosome@gentoo.org>
+  scilab-2.7-r3.ebuild, scilab-3.0.ebuild:
+  Version bump. Added 2.7-r3 to x86.
+
+  30 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> -scilab-2.6.ebuild,
+  -scilab-2.7-r1.ebuild, scilab-2.7-r2.ebuild, -scilab-2.7.ebuild:
+  Added ifc/g77 check to scilab-2.7-r2 as well. Removed <scilab-2.7-r1.
+
+  27 Jun 2004; Aron Griffis <agriffis@gentoo.org> scilab-2.7-r3.ebuild,
+  scilab-2.7.ebuild:
+  QA - fix use invocation
+
+  14 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> scilab-2.7-r1.ebuild,
+  scilab-2.7-r3.ebuild:
+  Added (already) global USE flag "ifc" and appropriate dependency as well as the
+  g77/ifc warning routine from app-sci/octave. Fixes BUG #53872.
+
+  06 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> scilab-2.7-r3.ebuild:
+  Marked stable on amd64.
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> scilab-2.7-r3.ebuild:
+  Add inherit eutils
+
+  21 Apr 2004; Danny van Dyk <kugelfang@gentoo.org>
+  +files/scilab-2.7-configure.patch, scilab-2.7-r3.ebuild:
+  Minor changes for amd64 only and marked ~amd64. Patch by Scott Robert Ladd.
+
+*scilab-2.7-r3 (22 Mar 2004)
+
+  22 Mar 2004; Patrick Kursawe <phosphan@gentoo.org> scilab-2.7-r3.ebuild:
+  Trying to fix bug #40225 by providing an X server during build.
+
+  11 Oct 2003; George Shapovalov <geore@gentoo.org> scilab-2.7-r2.ebuild :
+  added few more dependensies for gtk interface
+
+  06 Oct 2003; George Shapovalov <geore@gentoo.org> scilab-2.7-r2.ebuild :
+  looks like gnome-lib is also needed for gtk interface, added it to DEPEND under gtk?
+
+  05 Oct 2003; George Shapovalov <geore@gentoo.org> scilab-2.7-r2.ebuild :
+  looks like enabling gtk makes scilab stop building macros,
+  forced macros build in ebuild. 
+  Also added check for previous version installed, as it would have
+  caused problems fr this revision upon upgrade.
+  Note: this check should be removed in new versions if they are issued 
+  after reasonable amount of time passes (so that we can expect people to migrate to -r2)
+
+*scilab-2.7-r2 (04 Oct 2003)
+
+  04 Oct 2003; George Shapovalov <geore@gentoo.org> scilab-2.7-r2.ebuild :
+  fixes ##28245 and 30219, thanks to the guys from the -r1 update :) and 
+  to Toby Smith <thlsmith@iprimus.com.au> for the gtk hint
+  now ebuild comes without postinst/remove functions
+
+*scilab-2.7-r1 (16 Sep 2003)
+
+  16 Sep 2003; George Shapovalov <geore@gentoo.org> scilab-2.7-r1.ebuild :
+  fixes #28245 (help browser),
+  thanks to Federico Zenith <zenith@chemeng.ntnu.no> and Gregorio Guidi <g.guidi@sns.it>
+  for the fixes
+
+*scilab-2.7 (16 Jul 2003)
+
+  16 Jul 2003; Ryan Phillips <rphillips@gentoo.org> scilab-2.7.ebuild :
+  Fixes #16737.
+
+*scilab-2.6 (28 Apr 2002)
+
+  01 May 2003; Martin Holzer <mholzer@gentoo.org> scilab-2.6.ebuild:
+  Fixing typo. Closes #20263.
+
+  28 Apr 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
