@@ -1,21 +1,18 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.8.0.ebuild,v 1.5 2003/09/08 11:32:47 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/i2c/i2c-2.8.0.ebuild,v 1.6 2003/10/03 15:09:55 vapier Exp $
 
-# plasmaroo@plasmaroo.squirrelserver.co.uk, datestamp Tue Aug 12, 11:11 PM
-
-S=${WORKDIR}/${P}
 DESCRIPTION="I2C Bus support for 2.4.x kernels"
+HOMEPAGE="http://www2.lm-sensors.nu/~lm78/"
 SRC_URI="http://www2.lm-sensors.nu/~lm78/archive/${P}.tar.gz"
-HOMEPAGE="http://www2.lm-sensors.nu/~lm78"
 
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~amd64 ~ppc"
-LICENSE="GPL-2"
+
 DEPEND=""
 
-src_compile ()  {
-
+pkg_setup() {
 	echo
 	einfo "*****************************************************************"
 	einfo
@@ -52,8 +49,9 @@ src_compile ()  {
 	eerror
 	eerror "*****************************************************************"
 	echo
-	sleep 10
+}
 
+src_compile ()  {
 	if [ "$LINUX" != "" ]; then
 		einfo "Cross-compiling using:- $LINUX"
 		einfo "Using headers from:- `echo $LINUX/include/linux | sed 's/\/\//\//'`"
@@ -77,25 +75,29 @@ src_compile ()  {
 		fi
 	fi
 
-	echo
-	sleep 2
-
-	emake LINUX=$LINUX clean all || \
-	die "i2c requires the source of a compatible kernel version installed in /usr/src/linux or the environmental variable \$LINUX and kernel i2c *disabled* or *enabled as a module*"
+	if [ ! `emake LINUX=$LINUX clean all` ] ; then
+		eerror "i2c requires the source of a compatible kernel"
+		eerror "version installed in /usr/src/linux"
+		eerror "(or the environmental variable \$LINUX)"
+		eerror "and kernel i2c *disabled* or *enabled as a module*"
+		die "make failed"
+	fi
 }
 
-src_install () {
-
-	emake LINUX=$LINUX LINUX_INCLUDE_DIR=/usr/include/linux DESTDIR=${D} PREFIX=/usr MANDIR=/usr/share/man install || die
+src_install() {
+	emake \
+		LINUX=$LINUX \
+		LINUX_INCLUDE_DIR=/usr/include/linux \
+		DESTDIR=${D} \
+		PREFIX=/usr \
+		MANDIR=/usr/share/man \
+		install || die
 	dodoc CHANGES INSTALL README
-
 }
 
 pkg_postinst() {
 	[ -x /usr/sbin/update-modules ] && /usr/sbin/update-modules
 
-	echo
-	einfo "*****************************************************************"
 	einfo
 	einfo "I2C modules installed ..."
 	einfo
@@ -103,9 +105,4 @@ pkg_postinst() {
 	einfo "IMPORTANT ... *disable* kernel I2C support OR *modularize it*"
 	einfo "IMPORTANT ... if your 2.4.x kernel is patched with such support"
 	einfo
-	einfo "*****************************************************************"
-	echo
-
 }
-
-
