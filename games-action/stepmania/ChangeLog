@@ -1,8 +1,9 @@
 # ChangeLog for games-action/stepmania
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/stepmania/ChangeLog,v 1.2 2003/09/10 20:28:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/stepmania/ChangeLog,v 1.3 2004/03/19 09:49:20 aliz Exp $
 
-stepmania-20030705 
+*stepmania-20030705 (01 Sep 2003)
+
  01 Sept 2003; Joshua Charles Campbell <warpzero@gentoo.org> ChangeLog stepmania-20030705.ebuild:
  Added initial ChangeLog which should be updated whenever the package is
  updated in any way. This changelog is targetted to users. This means that the
