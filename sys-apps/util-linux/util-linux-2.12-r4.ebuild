@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12-r4.ebuild,v 1.11 2004/04/25 20:09:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.12-r4.ebuild,v 1.12 2004/05/09 01:45:29 solar Exp $
 
 inherit eutils flag-o-matic
 
@@ -46,6 +46,11 @@ src_unpack() {
 
 	# Fix unreadable df output
 	epatch ${FILESDIR}/no-symlink-resolve.patch
+
+	# access() is a macro which uses R_OK however
+	# R_OK is not defined on sparc during a bootstrap 
+	# unless we actually include unistd.h -solar (May 07 2004)
+	epatch ${FILESDIR}/${PN}-2.12-swapon-unistd.patch
 
 	# Add the O option to agetty to display DNS domainname in the issue
 	# file, thanks to Marius Mauch <genone@genone.de>, bug #22275.
@@ -106,6 +111,7 @@ src_unpack() {
 
 	# /bin/kill is provided by procps ONLY
 	epatch ${FILESDIR}/${PN}-no-kill.patch
+
 }
 
 src_compile() {
