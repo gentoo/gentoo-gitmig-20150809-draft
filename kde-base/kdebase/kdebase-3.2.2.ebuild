@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.2.2.ebuild,v 1.1 2004/04/19 12:22:34 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.2.2.ebuild,v 1.2 2004/04/19 16:34:25 caleb Exp $
 
 inherit kde-dist
 
@@ -24,15 +24,8 @@ RDEPEND="${DEPEND}
 	sys-apps/eject"
 
 src_unpack() {
-	if [ `has sandbox ${FEATURES}` -a ${PORTAGE_TMPDIR} != "/var/tmp" ]; then
-		eerror "Due to a portage bug, kdebase cannot currently emerge properly"
-		eerror "in sandbox mode if your PORTAGE_TMPDIR has been changed."
-		eerror "Please change your PORTAGE_TMPDIR back to /var/tmp or turn"
-		eerror "off the sandbox for this compilation."
-		die
-	fi
-
 	kde_src_unpack
+	epatch ${FILESDIR}/${P}-genkdmconf.c.diff
 	cd ${S} && aclocal
 }
 
