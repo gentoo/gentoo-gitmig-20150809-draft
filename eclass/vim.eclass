@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.72 2004/09/20 17:12:01 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/vim.eclass,v 1.73 2004/10/01 15:43:01 ciaranm Exp $
 
 # Authors:
 # 	Ryan Phillips <rphillips@gentoo.org>
@@ -68,6 +68,20 @@ if [[ "${MY_PN}" != "vim-core" ]] ; then
 		RDEPEND="$RDEPEND vim-with-x? ( virtual/x11 )"
 	elif [[ "${MY_PN}" == "gvim" ]] ; then
 		IUSE="$IUSE gnome gtk gtk2 motif"
+	fi
+
+	# vim7 has some extra options. tcltk is working again, and mzscheme support
+	# has been added.
+	if [[ $(get_major_version ) -ge 7 ]] ; then
+		if [[ "${MY_PN}" != "vim-core" ]] ; then
+			IUSE="${IUSE} tcltk mzscheme"
+			DEPEND="$DEPEND
+				tcltk?    ( dev-lang/tcl )
+				mzscheme? ( dev-lisp/mzscheme )"
+			RDEPEND="$RDEPEND
+				tcltk?    ( dev-lang/tcl )
+				mzscheme? ( dev-lisp/mzscheme )"
+		fi
 	fi
 fi
 
@@ -152,7 +166,11 @@ vim_src_unpack() {
 	if [[ "${PN##*-}" == "cvs" ]] ; then
 		ECVS_SERVER="cvs.sourceforge.net:/cvsroot/vim"
 		ECVS_PASS=""
-		ECVS_MODULE="vim"
+		if [[ $(get_major_version ) -ge 7 ]] ; then
+			ECVS_MODULE="vim7"
+		else
+			ECVS_MODULE="vim"
+		fi
 		ECVS_TOP_DIR="${DISTDIR}/cvs-src/${ECVS_MODULE}"
 		cvs_src_unpack
 
@@ -253,7 +271,11 @@ src_compile() {
 		# tclinterp is broken; when you --enable-tclinterp flag, then
 		# the following command never returns:
 		#   VIMINIT='let OS=system("uname -s")' vim
-		#myconf="${myconf} `use_enable tcl tclinterp`"
+		# vim7 seems to be ok though. (24 Sep 2004 ciaranm)
+		if [[ $(get_major_version ) -ge 7 ]] ; then
+			myconf="${myconf} `use_enable tcl tclinterp`"
+			myconf="${myconf} `use_enable mzscheme mzschemeinterp`"
+		fi
 
 		# --with-features=huge forces on cscope even if we --disable it. We need
 		# to sed this out to avoid screwiness. (1 Sep 2004 ciaranm)
