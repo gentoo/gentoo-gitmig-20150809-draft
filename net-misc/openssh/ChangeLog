@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.10 2002/06/26 18:09:43 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.11 2002/07/03 00:14:50 lostlogic Exp $
+
+*openssh-3.4_p1-r1 (02 July 2002)
+
+  02 July 2002; Brandon Low <lostlogic@gentoo.org> : openssh-3.4_p1-r1.ebuild
+
+  This closes bugs 4169, 4170, and 4193.  This new ebuild changes the sshd
+  user from whatever it may be to UID 22, this shouldn't mean anything to most
+  people because no scripts, nor programs use the sshd UID directly (for that
+  matter it is only referenced during authentication of new logins via ssh). 
+  However if for some reason your system does have things that were owned by
+  user sshd, you will need to change their UID.
 
 *openssh-3.4_p1 (26 June 2002)
 

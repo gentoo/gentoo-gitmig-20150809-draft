@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.4_p1.ebuild,v 1.1 2002/06/26 18:09:43 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.4_p1-r1.ebuild,v 1.1 2002/07/03 00:14:51 lostlogic Exp $
 
 DESCRIPTION="Port of OpenBSD's free SSH release"
 HOMEPAGE="http://www.openssh.com/"
@@ -26,17 +26,6 @@ S=${WORKDIR}/${PARCH}
 
 LICENSE="as-is"
 SLOT="0"
-
-pkg_setup() {
-	if ! groupmod sshd; then
-		groupadd -g 90 sshd || die "problem adding group sshd"
-	fi
-
-	if ! id sshd; then
-		useradd -g sshd -s /dev/null -d /var/empty -c "sshd" sshd
-		assert "problem adding user sshd"
-	fi
-}
 
 src_compile() {
 	local myconf
@@ -73,7 +62,20 @@ src_install() {
 	exeinto /etc/init.d ; newexe ${FILESDIR}/sshd.rc6 sshd
 }
 
+pkg_preinst() {
+
+	userdel sshd 2> /dev/null
+	if ! groupmod sshd; then
+		groupadd -g 90 sshd 2> /dev/null || \
+			die "Failed to create sshd group"
+	fi
+	useradd -u 22 -g sshd -s /dev/null -d /var/empty -c "sshd" sshd || \
+		did "Failed to create sshd user"
+
+}
+
 pkg_postinst() {
+
 	# empty dir for the new priv separation auth chroot..
 	install -d -m0755 -o root -g root ${ROOT}/var/empty
 
@@ -82,5 +84,9 @@ pkg_postinst() {
 	einfo "As of version 3.4 the default is to enable the UsePrivelegeSeparation"
 	einfo "functionality, but please ensure that you do not explicitly disable"
 	einfo "this in your configuration as disabling it opens security holes"
+	einfo
+	einfo "This revision has removed your sshd user id and replaced it with a"
+	einfo "new one with UID 22.  If you have any scripts or programs that"
+	einfo "that referenced the old UID directly, you will need to update them."
 	einfo
 }
