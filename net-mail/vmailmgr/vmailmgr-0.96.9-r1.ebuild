@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/vmailmgr-0.96.9-r1.ebuild,v 1.23 2004/10/17 11:23:21 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vmailmgr/vmailmgr-0.96.9-r1.ebuild,v 1.24 2004/11/24 09:39:58 ticho Exp $
 
-inherit gcc
+inherit gcc eutils
 
 DESCRIPTION="virtual domains for qmail"
 SRC_URI="http://www.vmailmgr.org/current/${P}.tar.gz"
@@ -21,7 +21,7 @@ RDEPEND=">=sys-apps/ucspi-unix-0.34
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	patch -p1 < ${FILESDIR}/${P}-gentoo-r1.diff || die
+	epatch ${FILESDIR}/${P}-gentoo-r1.diff || die "-gentoo-r1 patch failed"
 }
 
 src_compile() {
