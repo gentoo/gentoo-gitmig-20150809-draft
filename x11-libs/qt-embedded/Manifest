@@ -1,6 +1,7 @@
 MD5 9b810fb56c43fb040d93a5acddcb66cf qt-embedded-3.0.5.ebuild 4606
 MD5 6ca1267b6204efd4e87bd5bb31a02148 qt-embedded-3.1.2.ebuild 4606
 MD5 dcd08c92050239e3939749d5447eab1e ChangeLog 845
+MD5 512150b47a904b0240101e319856aab1 metadata.xml 156
 MD5 1fcffbb83d84af4b0d6d074ec508db20 files/digest-qt-embedded-3.0.5 77
 MD5 81e8e195b18cba662da2c540ce2a1dbc files/digest-qt-embedded-3.1.2 77
 MD5 536e8d26e72b889022acd20f73b41778 files/47qt-embedded3 110
