@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.48 2004/02/18 04:40:58 aether Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.49 2004/02/18 09:40:05 dholm Exp $
+
+  18 Feb 2004; David Holm <dholm@gentoo.org> java-config-1.2.6.ebuild:
+  Thanks for not only fixing bug #41481 but also removing the only keyworded
+  java-config on ppc effectively breaking dev-java/*.
 
 *java-config-1.2.6 (17 Feb 2004)
 
