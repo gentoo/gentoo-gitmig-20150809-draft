@@ -1,5 +1,5 @@
 # Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.46-r12.ebuild,v 1.1 2003/02/07 12:05:26 carpaski Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/portage/portage-2.0.46-r12.ebuild,v 1.2 2003/02/07 12:24:41 carpaski Exp $
 
 IUSE="build"
 
@@ -248,9 +248,9 @@ pkg_postinst() {
 	einfo "'-e bug' or if you deleted it: run 'regenworld' as root."
 	echo
 
-	echo -e "\a" ; sleep 1 ; echo -e "\a" ; sleep 1 ; echo -e "\a" ; sleep 1
-	echo -e "\a" ; sleep 1 ; echo -e "\a" ; sleep 1 ; echo -e "\a" ; sleep 1
-	echo -e "\a" ; sleep 1 ; echo -e "\a" ; sleep 1 ; echo -e "\a" ; sleep 1
+	echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1
+	echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1
+	echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1 ; echo -ne "\a" ; sleep 1
 	sleep 6
 
 	#OLDPV=$(< ${WORKDIR}/previous-version)
