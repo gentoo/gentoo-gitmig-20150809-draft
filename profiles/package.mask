@@ -617,3 +617,8 @@ app-cdr/cddump
 # jnelson@gentoo.org 1 May 2002
 # mask ntp 4.1.72* as they are alpha
 =net-misc/ntp-4.1.72
+
+# seemant@gentoo.org 1 May 2002
+# masking xine-ui with directfb support until the requisite extra files tarball
+# appears on the ibiblio mirror
+=media-video/xine-ui-0.9.9-r1
