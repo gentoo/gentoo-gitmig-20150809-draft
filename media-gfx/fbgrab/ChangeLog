@@ -1,6 +1,13 @@
 # ChangeLog for media-gfx/fbgrab
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbgrab/ChangeLog,v 1.5 2004/02/29 18:54:34 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbgrab/ChangeLog,v 1.6 2004/03/29 20:37:52 sejo Exp $
+
+  29 Mar 2004; <SeJo@gentoo.org> fbgrab-1.0.ebuild,
+  fbgrab-1.0_beta1-r1.ebuild:
+  unstable masking ~ppc
+
+  29 Mar 2004; <SeJo@gentoo.org> fbgrab-1.0_beta1-r1.ebuild:
+  unstable masking ~ppc
 
 *fbgrab-1.0 (29 Feb 2004)
 
