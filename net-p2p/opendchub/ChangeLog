@@ -1,6 +1,9 @@
 # ChangeLog for net-p2p/opendchub
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/opendchub/ChangeLog,v 1.5 2004/06/25 00:35:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/opendchub/ChangeLog,v 1.6 2004/07/01 09:38:20 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> opendchub-0.7.14.ebuild:
+  change virtual/glibc to virtual/libc
 
   14 Jun 2004; Aron Griffis <agriffis@gentoo.org> opendchub-0.7.14.ebuild:
   Fix use invocation

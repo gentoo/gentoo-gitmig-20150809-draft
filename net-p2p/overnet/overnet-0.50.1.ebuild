@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/overnet/overnet-0.50.1.ebuild,v 1.7 2004/06/25 00:35:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/overnet/overnet-0.50.1.ebuild,v 1.8 2004/07/01 09:38:57 squinky86 Exp $
 
 IUSE=""
 
@@ -13,7 +13,7 @@ SLOT="0"
 LICENSE="as-is"
 KEYWORDS="x86 ~amd64"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/libc"
 
 src_install () {
 	cp ${MY_P} ${PN}

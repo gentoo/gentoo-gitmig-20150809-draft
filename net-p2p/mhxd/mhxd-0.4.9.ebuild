@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mhxd/mhxd-0.4.9.ebuild,v 1.3 2004/06/25 00:34:29 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mhxd/mhxd-0.4.9.ebuild,v 1.4 2004/07/01 09:32:21 squinky86 Exp $
 
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
@@ -11,7 +11,7 @@ HOMEPAGE="http://hotlinex.sf.net/"
 
 IUSE="ipv6 ssl mysql"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	ssl? ( >=dev-libs/openssl-0.9.6d )
 	mysql? ( >=dev-db/mysql-3.23.52 )
 	>=sys-libs/zlib-1.1.4"

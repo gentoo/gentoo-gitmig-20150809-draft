@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/nap
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/nap/ChangeLog,v 1.11 2004/06/25 00:35:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nap/ChangeLog,v 1.12 2004/07/01 09:37:26 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> nap-1.5.1.ebuild,
+  nap-1.5.2.ebuild, nap-1.5.3.ebuild:
+  change virtual/glibc to virtual/libc
 
 *nap-1.5.3 (21 May 2004)
 

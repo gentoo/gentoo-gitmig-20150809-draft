@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mutella/mutella-0.4.3.ebuild,v 1.8 2004/06/25 00:35:00 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mutella/mutella-0.4.3.ebuild,v 1.9 2004/07/01 09:36:44 squinky86 Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc ~amd64"
 IUSE=""
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	sys-libs/readline"
 
 src_unpack() {

@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/gnut
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnut/ChangeLog,v 1.10 2004/06/25 00:33:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gnut/ChangeLog,v 1.11 2004/07/01 09:30:57 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> gnut-0.4.28-r1.ebuild,
+  gnut-0.4.28.ebuild:
+  virtual/glibc needs changed to virtual/libc
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> gnut-0.4.28-r1.ebuild:
   Add inherit eutils

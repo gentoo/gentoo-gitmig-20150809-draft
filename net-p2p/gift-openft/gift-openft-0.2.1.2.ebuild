@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/gift-openft-0.2.1.2.ebuild,v 1.9 2004/06/25 00:32:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/gift-openft-0.2.1.2.ebuild,v 1.10 2004/07/01 09:25:16 squinky86 Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 sparc ~ppc amd64"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=net-p2p/gift-0.11.5
 	>=sys-apps/sed-4
 	>=sys-libs/zlib-1.1.4"
