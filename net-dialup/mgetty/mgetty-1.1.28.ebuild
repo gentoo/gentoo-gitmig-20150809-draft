@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.28.ebuild,v 1.12 2003/09/07 00:33:01 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/mgetty-1.1.28.ebuild,v 1.13 2003/09/08 00:28:13 drobbins Exp $
 
 inherit flag-o-matic
 
@@ -78,7 +78,7 @@ src_install () {
 	cd ${S}
 	dodoc BUGS ChangeLog FTP README.1st Recommend THANKS TODO
 	cd doc
-	dodoc *.txt modems.db 
+	dodoc *.txt modems.db
 	use doc && dodoc mgetty.ps
 
 	#generate missing fonts if any.
