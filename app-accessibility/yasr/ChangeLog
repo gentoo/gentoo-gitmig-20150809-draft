@@ -1,6 +1,9 @@
 # ChangeLog for app-accessibility/yasr
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/yasr/ChangeLog,v 1.9 2004/06/29 19:18:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/yasr/ChangeLog,v 1.10 2004/09/02 11:11:57 lv Exp $
+
+  02 Sep 2004; Travis Tilley <lv@gentoo.org> yasr-0.6.5.ebuild:
+  stable on amd64
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> yasr-0.6.5.ebuild:
   add sed-4 dep
