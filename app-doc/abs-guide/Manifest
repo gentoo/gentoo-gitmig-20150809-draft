@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 62e6e930ad89d00f1e2d0f2578fe32cd abs-guide-3.1.ebuild 620
+MD5 0cd049f40eb2f8d99156a8aba4bc96cd abs-guide-3.1.ebuild 629
 MD5 f03a9b7b812f2f2060304793377976a6 abs-guide-3.0.ebuild 620
-MD5 1d40cb5297f252003d06a18671c1f3a5 ChangeLog 2631
+MD5 b064e918ffb1d38702a8728b292a4b02 ChangeLog 2741
 MD5 f8d10f350e91f30316ea4e1bd1e76470 metadata.xml 254
 MD5 7b973984de01212bab4143d348478f64 files/digest-abs-guide-3.0 66
 MD5 b823b8521842c64a7acef04f64da7d42 files/digest-abs-guide-3.1 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBmeScEZCkKN40op4RAsI9AJoCikoJKpmdVZysqeJKslwRHH+3dwCeJtlg
-+tukzOOOdXO6pdLWAsUxFqg=
-=Y5d9
+iD8DBQFBnpAoZ/iYVBmujdURAlWxAJ4rf789O1ySF5FMzHT1ho0A1RnkdQCeJs07
+IFl97XN2sCgrYO524RCPzbM=
+=PG1W
 -----END PGP SIGNATURE-----
