@@ -1,7 +1,14 @@
 # ChangeLog for gnome-base/gnome-session
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.9 2002/07/15 13:31:35 stroke Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/ChangeLog,v 1.10 2002/07/17 20:51:37 spider Exp $
 
+gnome-session-2.0.2-r1 (17 Jul 2002) 
+  17 Jul 2002; Spider <spider@gentoo.org> gnome-session-2.0.2-r1.ebuild:
+  dependency update (gconf)
+  Clean out old DEBUG stuff and SRC_URI
+  now uses gnome2.eclass
+
+  
 *gnome-session-2.0.2 (15 Jul 2002)
   15 Jul 2002; Gabriele Giorgetti <stroke@gentoo.org> gnome-session-2.0.2.ebuild :
   New version.
