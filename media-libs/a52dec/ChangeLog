@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/a52dec
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.1 2002/02/01 21:53:30 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/a52dec/ChangeLog,v 1.2 2002/04/15 12:14:06 seemant Exp $
+
+*a52dec-0.7.3 (15 Apr 2002)
+
+  15 Apr 2002; Seemant Kulleen <seemant@gentoo.org> a52dec-0.7.3.ebuild
+  files/digest-a52dec-0.7.3 :
+
+  Version bump
 
 *a52dec-0.7.2 (1 Feb 2002)
 
