@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.111 2003/07/24 17:44:04 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.112 2003/07/26 17:11:52 brad Exp $
+
+*mozilla-1.4-r2 (26 Jul 2003)
+
+  26 Jul 2003; Brad Laue <brad@gentoo.org> mozilla-1.4-r2.ebuild:
+  Stable on x86.
 
 *mozilla-1.4-r2 (24 Jul 2003)
 
