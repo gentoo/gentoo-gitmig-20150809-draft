@@ -1,10 +1,20 @@
-MD5 d6a0523b48b30e42c741f465afa888d6 ChangeLog 3002
-MD5 a4919c70cf47160ed0a12e6edbac8e15 diffstat-1.34.ebuild 742
-MD5 f40b43b0b956ad81452798cc40ef6fcd diffstat-1.37.ebuild 758
-MD5 76eae403426a4d8ac87ff62c66725b4d diffstat-1.38.ebuild 780
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 9c4c489b7b7f981e40c189e72992b63d ChangeLog 3098
+MD5 0c0c28de7c18c2b7ae8bb55bb6019e17 diffstat-1.37.ebuild 758
 MD5 e2d614fd87eac1a4402def83a459af86 metadata.xml 164
-MD5 3b747948604effbe1ba7f4554ecc210f files/diffstat-1.34-hard-locale.patch 523
+MD5 a4919c70cf47160ed0a12e6edbac8e15 diffstat-1.34.ebuild 742
+MD5 76eae403426a4d8ac87ff62c66725b4d diffstat-1.38.ebuild 780
+MD5 cff8ae270d11fa076ffdbf07750241d0 files/digest-diffstat-1.38 61
+MD5 96dc2146908e8727a045ecd3c3e0b85b files/digest-diffstat-1.37 61
 MD5 aaf2c4b7f099958647cad46682bb37eb files/diffstat-1.37-hard-locale.patch 578
 MD5 7a9c9a2f505ee2221fff4bdd6c5273ff files/digest-diffstat-1.34 61
-MD5 96dc2146908e8727a045ecd3c3e0b85b files/digest-diffstat-1.37 61
-MD5 cff8ae270d11fa076ffdbf07750241d0 files/digest-diffstat-1.38 61
+MD5 3b747948604effbe1ba7f4554ecc210f files/diffstat-1.34-hard-locale.patch 523
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCBrq+ugEuf3OQ0akRAmboAJ4wUYYn77UMzaob63m+FBPDCz9kEwCeJW9U
+4wBZoCTP5g4oUKNpVsSTTBA=
+=hrBk
+-----END PGP SIGNATURE-----
