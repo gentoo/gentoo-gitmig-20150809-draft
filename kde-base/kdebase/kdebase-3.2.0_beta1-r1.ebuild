@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.2.0_beta1-r1.ebuild,v 1.2 2003/11/12 17:18:04 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.2.0_beta1-r1.ebuild,v 1.3 2003/11/13 21:32:07 caleb Exp $
 inherit kde-dist eutils
 
 IUSE="ldap pam motif encode oggvorbis cups ssl opengl samba java"
@@ -8,14 +8,14 @@ DESCRIPTION="KDE base packages: the desktop, panel, window manager, konqueror...
 
 KEYWORDS="~x86"
 
-DEPEND=">=media-sound/cdparanoia-3.9.8
-	ldap? ( >=net-nds/openldap-1.2 )
-	pam? ( >=sys-libs/pam-0.73 )
+DEPEND="media-sound/cdparanoia
+	ldap? ( net-nds/openldap )
+	pam? ( sys-libs/pam )
 	motif? ( virtual/motif )
-	encode? ( >=media-sound/lame-3.89b )
-	oggvorbis? ( >=media-libs/libvorbis-1.0_beta1 )
+	encode? ( media-sound/lame )
+	oggvorbis? ( media-libs/libvorbis )
 	cups? ( net-print/cups )
-	ssl? ( >=dev-libs/openssl-0.9.6b )
+	ssl? ( dev-libs/openssl )
 	opengl? ( virtual/opengl )
 	samba? ( net-fs/samba )
 	java? ( virtual/jdk )
