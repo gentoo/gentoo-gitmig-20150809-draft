@@ -1,0 +1,5 @@
+MD5 a03396536ecf1fd8e8ecc9c05c208b42 nethogs-0.6.0.ebuild 865
+MD5 e9932d8f555c3b19734812d152caa1ad ChangeLog 678
+MD5 1385d77b0c1cbc2ad11db1d3abea9721 metadata.xml 735
+MD5 ee1f4e4bcff506362fd7463b85016f54 files/nethogs-0.6.0-gcc34.diff 397
+MD5 91d6d413a6fddc0318223e2c73caa452 files/digest-nethogs-0.6.0 64
