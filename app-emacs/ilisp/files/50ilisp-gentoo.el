@@ -38,7 +38,7 @@
 ;	       " -image " *cormanlisp-dir* "CormanLisp.img"))
 ; (setq lispworks-program
 ;       "/somewhere/in/the/directory/tree/lispworks")
-(setq cmulisp-program "/opt/cmucl/bin/lisp")
+(setq cmulisp-program "/usr/bin/lisp")
 ;; If you are interested in maintaining CMUCL or compiling it
 ;; from source then set this to where the source files are.
 ; (setq cmulisp-local-source-directory
