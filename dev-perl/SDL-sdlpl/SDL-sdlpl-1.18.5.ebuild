@@ -1,7 +1,7 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # distributed under the terms of the GNU General Pulic License, v2.
 # Author: Defresne Sylvain (keiichi) <kamisama@free.fr>
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SDL-sdlpl/SDL-sdlpl-1.18.3.ebuild,v 1.1 2002/06/04 21:09:05 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SDL-sdlpl/SDL-sdlpl-1.18.5.ebuild,v 1.1 2002/06/21 13:51:40 seemant Exp $
 
 
 inherit perl-module
@@ -25,10 +25,18 @@ src_unpack()
 {
 	unpack "${A}"
 
-	# Patch 'Makefile.PL' to use '/usr/include/SDL'
+	# Patch 'Makefile.linux' to use '/usr/include/SDL'
 	# instead of '/usr/local/include/SDL' ...
-	cp "${MY_P}/Makefile.PL" "${MY_P}/Makefile.PL.orig"
-	sed 's:/usr/local/include:/usr/include:g' < "${MY_P}/Makefile.PL.orig" \
-		> "${MY_P}/Makefile.PL"
-	assert "Patching Makefile.PL failed !"
+	cd ${S}
+	cp Makefile.linux Makefile.linux.orig
+	sed -e 's:/usr/local/include/GL:/usr/lib/opengl/nvidia/include/:g' \
+		-e 's:/local::g' \
+		 Makefile.linux.orig > Makefile.linux
+
+	for i in OpenGL.xs SDL_perl.xs detect.c
+	do
+		cp ${i} ${i}.orig
+		sed "s:GL/::g" \
+			${i}.orig > ${i}
+	done
 }
