@@ -3,8 +3,8 @@
 <pkgmetadata>
 <herd>comm-fax</herd>
 <maintainer>
-  <email>nerdboy@gentoo.org</email>
-  <name>Steve Arnold</name>
+  <email>genstef@gentoo.org</email>
+  <name>Stefan Schweizer</name>
   <description>Primary Maintainer</description>
 </maintainer>
 <longdescription>Fax package for ISDN cards with CAPI capabilities.</longdescription>

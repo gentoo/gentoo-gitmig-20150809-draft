@@ -1,20 +1,37 @@
 #!/sbin/runscript
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/capi4hylafax/files/capi4hylafax,v 1.2 2004/12/02 21:26:14 genstef Exp $
+
+# symlink this script to capi4hylafax.<device>
+# if you want to use more than one config-file.
 
 depend() {
 	need capi
 }
 
 start() {
-	ebegin "Starting CAPI4HylaFAX"
-	start-stop-daemon -b -m --quiet --start --exec /usr/bin/c2faxrecv \
-		--pidfile /var/run/c2faxrecv.pid
-	eend $?
+	local DEVICE="${myservice#*.}"
+	[ "${DEVICE}" = "${myservice}" ] && DEVICE="faxCAPI"
+	local CONFIG="/var/spool/fax/etc/config.${DEVICE}"
 
+	if [ ! -f "$CONFIG" ]; then
+		eerror "You're missing ${CONFIG}"
+		return 1
+	fi
+
+	ebegin "Starting CAPI4HylaFAX for ${DEVICE}"
+	start-stop-daemon -b -m --quiet --start --pidfile "/var/run/c2faxrecv.${DEVICE}.pid" \
+		--exec /usr/bin/c2faxrecv ${DEVICE}
+	eend $?
 }
 
 stop() {
-	ebegin "Stopping CAPI4HylaFAX"
-	start-stop-daemon -o --quiet --stop --pidfile /var/run/c2faxrecv.pid
-        eend $?
+	local DEVICE="${myservice#*.}"
+	[ "${DEVICE}" = "${myservice}" ] && DEVICE="faxCAPI"
 
+	ebegin "Stopping CAPI4HylaFAX for ${DEVICE}"
+	start-stop-daemon >/dev/null --quiet --stop --pidfile "/var/run/c2faxrecv.${DEVICE}.pid" --retry 10 && \
+	/bin/rm -f /var/run/c2faxrecv.${DEVICE}.pid
+        eend $?
 }
