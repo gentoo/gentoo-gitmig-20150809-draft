@@ -1,30 +1,29 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.0_beta7.ebuild,v 1.3 2004/01/02 20:28:09 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.1_rc1.ebuild,v 1.1 2004/01/05 21:12:59 plasmaroo Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
-OKV=${PV/_beta/-test}
+OKV=${PV/_rc/-rc}
+
 KV=${PV/_beta/-test}
-S=${WORKDIR}/linux-${KV}
+KV=${KV/_rc/-rc}
+
+GPV=0
 ETYPE="sources"
-
-# What's in this kernel?
-
-# INCLUDED:
-# beta ${PV} linux kernel sources with
+S=${WORKDIR}/linux-${OKV}
 
 DESCRIPTION="Full sources for the Development Branch of the Linux kernel"
-SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${OKV}.tar.bz2 ${PATCH_URI}"
-PROVIDE="virtual/linux-sources"
-[ -n "$(use alsa)" ] && PROVIDE="${PROVIDE} virtual/alsa"
+
+SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${OKV}.tar.bz2"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 LICENSE="GPL-2"
 SLOT="${KV}"
-KEYWORDS="~x86 ~ppc ~amd64 ~alpha"
+KEYWORDS="-* x86 amd64"
+PROVIDE="virtual/linux-sources virtual/alsa"
 
 if [ $ETYPE = "sources" ] && [ -z "`use build`" ]
 then
-	#console-tools is needed to solve the loadkeys fiasco; binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
+	# console-tools is needed to solve the loadkeys fiasco; binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
 	DEPEND=">=sys-devel/binutils-2.11.90.0.31"
 	RDEPEND=">=sys-libs/ncurses-5.2 dev-lang/perl
 		 sys-devel/make
@@ -37,17 +36,25 @@ src_unpack() {
 	cd ${WORKDIR}
 	unpack linux-${OKV}.tar.bz2
 
-	cd ${S}
+	if [ ! ${KV} == ${OKV} ]
+	then
+		mv linux-${OKV} linux-${KV}
+		S=${WORKDIR}/linux-${KV}
+	fi
 
+	cd ${S}
 	unset ARCH
-	#sometimes we have icky kernel symbols; this seems to get rid of them
+
+	# Patch
+	epatch ${FILESDIR}/${P}.CAN-2003-0985.patch
+
+	# Sometimes we have icky kernel symbols; this seems to get rid of them
 	make mrproper || die
 
-	#fix silly permissions in tarball
+	# Fix silly permissions in tarball
 	cd ${WORKDIR}
 	chown -R 0:0 *
 	chmod -R a+r-w+X,u+w *
-
 }
 
 src_compile() {
@@ -84,19 +91,18 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
+
 	[ "$ETYPE" = "headers" ] && return
-	if [ ! -e ${ROOT}usr/src/linux-beta ]
-	then
+	[ ! ${GPV} == 0 ] && KV="${KV}-patchset-${GPV}"
+	[ ! -e "${ROOT}usr/src/linux-beta" ] && ln -sf linux-${KV} ${ROOT}/usr/src/linux-beta
+	[ ! -e "${ROOT}usr/src/linux" ] && ln -sf linux-${KV} ${ROOT}/usr/src/linux
+	mkdir -p ${ROOT}sys
 
-		ln -sf linux-${KV} ${ROOT}/usr/src/linux-beta
-	fi
-
-	echo
 	ewarn "Please note that ptyfs support has been removed from devfs"
-	ewarn "in the later 2.5.x kernels, and you have to compile it in now,"
-	ewarn "or else you will get errors when trying to open a pty."
-	ewarn "The option is File systems->Pseudo filesystems->/dev/pts"
-	ewarn "filesystem."
+	ewarn "and you have to compile it in now, or else you will get"
+	ewarn "errors when trying to open a pty. The options are:"
+	ewarn "Device Drivers -> Character devices -> Unix98 PTY support and"
+	ewarn "File systems -> Pseudo filesystems -> /dev/pts filesystem."
 	echo
 	ewarn "Also, note that you must compile in support for"
 	ewarn "input devices (Input device support->Input devices),"
@@ -106,7 +112,10 @@ pkg_postinst() {
 	ewarn "Otherwise, you will get the dreaded \"Uncompressing the Kernel\""
 	ewarn "error."
 	echo
-	einfo "Consult http://www.codemonkey.org.uk/post-halloween-2.5.txt"
-	einfo "for more info about the development series."
+	einfo "This kernel is patched against the mremap(2) vulnerability..."
 	echo
+	ewarn "PLEASE NOTE THIS IS NOT OFFICIALLY SUPPORTED BY GENTOO."
+	echo
+	sleep 5
+
 }
