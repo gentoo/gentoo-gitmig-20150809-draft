@@ -1,6 +1,8 @@
 # ChangeLog for media-libs/divx4linux
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/divx4linux/ChangeLog,v 1.2 2002/04/23 22:36:07 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/divx4linux/ChangeLog,v 1.3 2002/05/05 09:57:19 azarah Exp $
+
+*divx4linux-20020418 (5 May 2002)
 
 *divx4linux-20020304 (23 Apr 2002)
 
