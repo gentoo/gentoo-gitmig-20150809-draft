@@ -1,0 +1,51 @@
+diff -ur licq-1.2.0a/src/icqd-filetransfer.cpp licq-1.2.0a~/src/icqd-filetransfer.cpp
+--- licq-1.2.0a/src/icqd-filetransfer.cpp	2002-07-25 21:21:11.000000000 -0500
++++ licq-1.2.0a~/src/icqd-filetransfer.cpp	2002-12-25 13:16:06.000000000 -0600
+@@ -377,7 +377,7 @@
+       m_nSpeed = b.UnpackUnsignedLong();
+       b.UnpackString(m_szRemoteName, sizeof(m_szRemoteName));
+ 
+-      m_nBatchStartTime = time(TIME_NOW);
++      m_nBatchStartTime = time(NULL);
+       m_nBatchBytesTransfered = m_nBatchPos = 0;
+ 
+       PushFileTransferEvent(FT_STARTxBATCH);
+@@ -451,7 +451,7 @@
+       // if this is the first call to this function...
+       if (m_nBytesTransfered == 0)
+       {
+-        m_nStartTime = time(TIME_NOW);
++        m_nStartTime = time(NULL);
+         m_nBatchPos += m_nFilePos;
+         gLog.Info("%sFile Transfer: Receiving %s (%ld bytes).\n", L_TCPxSTR,
+            m_szFileName, m_nFileSize);
+@@ -569,7 +569,7 @@
+       m_nFileSize = p.GetFileSize();
+       strcpy(m_szFileName, p.GetFileName());
+ 
+-      m_nBatchStartTime = time(TIME_NOW);
++      m_nBatchStartTime = time(NULL);
+       m_nBatchBytesTransfered = m_nBatchPos = 0;
+ 
+       PushFileTransferEvent(FT_STARTxBATCH);
+@@ -722,7 +722,7 @@
+ 
+   if (m_nBytesTransfered == 0)
+   {
+-    m_nStartTime = time(TIME_NOW);
++    m_nStartTime = time(NULL);
+     m_nBatchPos += m_nFilePos;
+     gLog.Info("%sFile Transfer: Sending %s (%ld bytes).\n", L_TCPxSTR,
+        m_szPathName, m_nFileSize);
+diff -ur licq-1.2.0a/src/licq.cpp licq-1.2.0a~/src/licq.cpp
+--- licq-1.2.0a/src/licq.cpp	2002-07-22 22:59:24.000000000 -0500
++++ licq-1.2.0a~/src/licq.cpp	2002-12-25 13:15:09.000000000 -0600
+@@ -681,7 +681,7 @@
+       if (bDaemonShutdown)
+       {
+         struct timespec abstime;
+-        abstime.tv_sec = time(TIME_NOW) + MAX_WAIT_PLUGIN;
++        abstime.tv_sec = time(NULL) + (time_t) MAX_WAIT_PLUGIN;
+         abstime.tv_nsec = 0;
+         if (pthread_cond_timedwait(&LP_IdSignal, &LP_IdMutex, &abstime) == ETIMEDOUT)
+           break;
