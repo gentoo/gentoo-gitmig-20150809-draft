@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/device-mapper
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/device-mapper/ChangeLog,v 1.15 2004/04/24 17:04:35 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/device-mapper/ChangeLog,v 1.16 2004/04/26 19:40:39 agriffis Exp $
+
+  26 Apr 2004; Aron Griffis <agriffis@gentoo.org>
+  device-mapper-1.00.07.ebuild, device-mapper-1.00.08.ebuild,
+  device-mapper-1.00.17.ebuild:
+  Add die following econf for bug 48950
 
 *device-mapper-1.00.17 (24 Apr 2004)
 
