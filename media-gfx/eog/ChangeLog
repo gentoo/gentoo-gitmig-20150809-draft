@@ -1,7 +1,12 @@
 # ChangeLog for media-gfx/eog
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.6 2002/05/23 19:15:18 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/eog/ChangeLog,v 1.7 2002/06/05 16:30:45 spider Exp $
 
+*eog-0.119 (05 Jun  2002)
+  05 Jun 2002; Spider <spider@gentoo.org> eog-0.119.ebuild
+  new eog was announced, this is the ebuild, but the tarball isn't ready yet :)
+  gnome2 eclassed. untested yet
+  
 *eog-0.118.0 (23 May 2002)
   23 May 2002; Spider <spider@gentoo.org>  eog-0.118.0.ebuild: 
   version bump
