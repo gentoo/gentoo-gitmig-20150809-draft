@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.0.ebuild,v 1.2 2004/04/03 04:23:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vpopmail/vpopmail-5.4.0.ebuild,v 1.3 2004/04/05 06:11:47 mr_bones_ Exp $
 
 inherit eutils gnuconfig fixheadtails
 
@@ -23,7 +23,7 @@ DEPEND="sys-apps/sed
 	sys-apps/ucspi-tcp
 	${DEPEND_COMMON}"
 RDEPEND="${DEPEND_COMMON}
- 	 virtual/cron"
+	virtual/cron"
 
 S="${WORKDIR}/${MY_P}"
 
