@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/gpsui
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gpsui/ChangeLog,v 1.5 2004/10/05 02:58:10 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gpsui/ChangeLog,v 1.6 2004/11/03 19:21:23 corsair Exp $
+
+  03 Nov 2004; Markus Rothe <corsair@gentoo.org> gpsui-2.2.ebuild:
+  Marked ~ppc64; bug #69837
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> gpsui-2.2.ebuild:
   Masked gpsui-2.2.ebuild stable for ppc

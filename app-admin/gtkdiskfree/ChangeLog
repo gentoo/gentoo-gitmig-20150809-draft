@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/gtkdiskfree
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gtkdiskfree/ChangeLog,v 1.8 2004/10/05 02:58:10 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gtkdiskfree/ChangeLog,v 1.9 2004/11/03 19:24:27 corsair Exp $
+
+  03 Nov 2004; Markus Rothe <corsair@gentoo.org> gtkdiskfree-1.9.3.ebuild:
+  Marked ~ppc64; bug #69838
 
   05 Oct 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   gtkdiskfree-1.8.4.ebuild, gtkdiskfree-1.9.3.ebuild:
