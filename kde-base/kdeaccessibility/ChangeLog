@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdeaccessibility
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility/ChangeLog,v 1.5 2004/01/19 03:31:14 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility/ChangeLog,v 1.6 2004/02/02 13:59:47 caleb Exp $
+
+*kdeaccessibility-3.2.0 (02 Feb 2004)
+
+  02 Feb 2004; Caleb Tennis <caleb@gentoo.org> kdeaccessibility-3.2.0.ebuild,
+  kdeaccessibility-3.2.0_rc1.ebuild:
+  New version, remove _rc
 
 *kdeaccessibility-3.2.0_rc1 (18 Jan 2004)
 
