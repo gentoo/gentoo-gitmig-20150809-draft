@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.5.6-r3.ebuild,v 1.1 2003/08/26 03:45:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/rsync/rsync-2.5.6-r3.ebuild,v 1.2 2003/08/26 09:17:34 aliz Exp $
 
 inherit eutils
 
@@ -18,7 +18,7 @@ DEPEND="virtual/glibc
 	!build? ( >=dev-libs/popt-1.5 )"
 
 src_unpack() {
-	unpack ${A}
+	unpack ${P}.tar.gz
 	epatch ${DISTDIR}/${P}-proxy-auth-1.patch
 	cd ${S}
 
