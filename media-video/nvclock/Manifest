@@ -1,4 +1,5 @@
-MD5 cfb5d4e6a072f93a5cd11bdf24f7f0d2 ChangeLog 1457
-MD5 98b2717ecd2b700dda1dbef254c3d5dd nvclock-0.7.ebuild 888
+MD5 0ca075bd621c13ab50d896369fa0c075 ChangeLog 1602
+MD5 62b5923866608358f9c72327b3a7f514 nvclock-0.7.ebuild 933
 MD5 18e357d8033ba8530d4c6b8a2c6e0a57 metadata.xml 324
 MD5 fd8ac9ae1a4d86f822f0b84ce8f5723a files/digest-nvclock-0.7 61
+MD5 26e4eefbf0073a9a3f2c0ed0b869b107 files/configure.in.diff 357
