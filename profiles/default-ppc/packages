@@ -129,7 +129,7 @@ net-misc/rsync
 *sys-libs/zlib
 >=sys-libs/gpm-1.19.3-r5
 >=sys-apps/isapnptools-1.23-r6
-*>=sys-apps/dcron-2.7-r6
+*>=sys-process/dcron-2.7-r6
 *virtual/ssh
 *virtual/dev-manager
 >=sys-apps/xinetd-2.3.3-r6

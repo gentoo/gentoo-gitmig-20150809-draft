@@ -17,7 +17,7 @@ virtual/jre             dev-java/blackdown-jre
 virtual/imapd           net-mail/courier-imap
 virtual/blackbox        x11-wm/blackbox
 virtual/emacs           app-editors/emacs
-virtual/cron            sys-apps/dcron
+virtual/cron            sys-process/dcron
 sys-apps/reiserfs-utils sys-fs/reiserfsprogs
 virtual/xemacs          app-editors/xemacs
 virtual/sylpheed        mail-client/sylpheed

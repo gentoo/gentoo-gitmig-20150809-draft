@@ -4,7 +4,7 @@ virtual/aspell-dict		app-dicts/aspell-en
 virtual/bittorrent		net-p2p/bittorrent
 virtual/blackbox		x11-wm/blackbox
 virtual/bootloader		sys-boot/grub
-virtual/cron			sys-apps/dcron
+virtual/cron			sys-process/dcron
 virtual/dhcpcd			net-misc/dhcpcd
 virtual/editor			app-editors/nano
 virtual/emacs			app-editors/emacs

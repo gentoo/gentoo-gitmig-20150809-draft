@@ -123,7 +123,7 @@ dev-lang/perl
 #these ones have the new rc6 style init scripts
 >=sys-libs/gpm-1.19.3-r5
 >=sys-apps/isapnptools-1.23-r6
->=sys-apps/dcron-2.7-r6
+>=sys-process/dcron-2.7-r6
 *>=net-misc/openssh-3.0.1_p1
 *virtual/dev-manager
 >=sys-apps/xinetd-2.3.3-r6
