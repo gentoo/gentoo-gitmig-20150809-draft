@@ -1,13 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.12 2003/03/04 01:42:01 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/xanim/xanim-2.80.1-r4.ebuild,v 1.13 2003/03/04 02:34:53 seemant Exp $
 
 inherit flag-o-matic
-filter-flags -finline-functions
 
-LICENSE="XAnim"
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha"
+LICENSE="XAnim"
+KEYWORDS="x86 ppc sparc alpha -mips -hppa -arm"
 
 _XA_CYUV_SPARC=xa1.0_cyuv_sparcELF.o
 _XA_CVID_SPARC=xa2.0_cvid_sparcELF.o
@@ -30,7 +29,7 @@ _XA_IV32_PPC=xa2.0_iv32_linuxPPC.o
 _XA_PPC_EXT=.Z
 
 case $ARCH in
-	sparc*)
+	sparc)
 			_XA_CYUV=$_XA_CYUV_SPARC
 			_XA_CVID=$_XA_CVID_SPARC
 			_XA_IV32=$_XA_IV32_SPARC
@@ -59,42 +58,35 @@ case $ARCH in
 			_XA_UNCOMPRESS=gunzip
 			;;
 esac
-			
-A="xanim2801.tar.gz \
-	${_XA_CYUV_SPARC}${_XA_SPARC_EXT} ${_XA_CVID_SPARC}${_XA_SPARC_EXT} \
-	${_XA_IV32_SPARC}${_XA_SPARC_EXT} \
-    ${_XA_CYUV_ALPHA}${_XA_ALPHA_EXT} ${_XA_CVID_ALPHA}${_XA_ALPHA_EXT} \
-    ${_XA_IV32_ALPHA}${_XA_ALPHA_EXT} \
-	${_XA_CYUV_I386}${_XA_I386_EXT} ${_XA_CVID_I386}${_XA_I386_EXT} \
-	${_XA_IV32_I386}${_XA_I386_EXT} \
-	${_XA_CYUV_PPC}${_XA_PPC_EXT} ${_XA_CVID_PPC}${_XA_PPC_EXT} \
-	${_XA_IV32_PPC}${_XA_PPC_EXT}"
-S=${WORKDIR}/xanim2801
+
+MY_P=${PN}${PV//.}
+S=${WORKDIR}/${MY_P}
 DESCRIPTION="XAnim"
-SRC_URI="ftp://xanim.va.pubnix.com/xanim2801.tar.gz
-	 ftp://xanim.va.pubnix.com/modules/${_XA_CYUV_SPARC}${_XA_SPARC_EXT}
-	 ftp://xanim.va.pubnix.com/modules/${_XA_CVID_SPARC}${_XA_SPARC_EXT}
-	 ftp://xanim.va.pubnix.com/modules/${_XA_IV32_SPARC}${_XA_SPARC_EXT}
-     ftp://xanim.va.pubnix.com/modules/${_XA_CYUV_ALPHA}${_XA_ALPHA_EXT}
-     ftp://xanim.va.pubnix.com/modules/${_XA_CVID_ALPHA}${_XA_ALPHA_EXT}
-     ftp://xanim.va.pubnix.com/modules/${_XA_IV32_ALPHA}${_XA_ALPHA_EXT}
-	 ftp://xanim.va.pubnix.com/modules/${_XA_CYUV_PPC}${_XA_PPC_EXT}
-	 ftp://xanim.va.pubnix.com/modules/${_XA_CVID_PPC}${_XA_PPC_EXT}
-	 ftp://xanim.va.pubnix.com/modules/${_XA_IV32_PPC}${_XA_PPC_EXT}
-	 ftp://xanim.va.pubnix.com/modules/${_XA_CYUV_I386}${_XA_I386_EXT}
-	 ftp://xanim.va.pubnix.com/modules/${_XA_CVID_I386}${_XA_I386_EXT}
-	 ftp://xanim.va.pubnix.com/modules/${_XA_IV32_I386}${_XA_I386_EXT}"
-HOMEPAGE="http://xanim.va.pubnix.com"
+HOMEPAGE="http://smurfland.cit.buffalo.edu/xanim/home.html"
+XANIM_SRC="mirror://gentoo/"
+SRC_URI="${XANIM_SRC}/${MY_P}.tar.gz
+	sparc? ${XANIM_SRC}/${_XA_CYUV_SPARC}${_XA_SPARC_EXT}
+	sparc? ${XANIM_SRC}/${_XA_CVID_SPARC}${_XA_SPARC_EXT}
+	sparc? ${XANIM_SRC}/${_XA_IV32_SPARC}${_XA_SPARC_EXT}
+    alpha? ${XANIM_SRC}/${_XA_CYUV_ALPHA}${_XA_ALPHA_EXT}
+    alpha? ${XANIM_SRC}/${_XA_CVID_ALPHA}${_XA_ALPHA_EXT}
+    alpha? ${XANIM_SRC}/${_XA_IV32_ALPHA}${_XA_ALPHA_EXT}
+	ppc? ${XANIM_SRC}/${_XA_CYUV_PPC}${_XA_PPC_EXT}
+	ppc? ${XANIM_SRC}/${_XA_CVID_PPC}${_XA_PPC_EXT}
+	ppc? ${XANIM_SRC}/${_XA_IV32_PPC}${_XA_PPC_EXT}
+	x86? ${XANIM_SRC}/${_XA_CYUV_I386}${_XA_I386_EXT}
+	x86? ${XANIM_SRC}/${_XA_CVID_I386}${_XA_I386_EXT}
+	x86? ${XANIM_SRC}/${_XA_IV32_I386}${_XA_I386_EXT}"
 
 DEPEND="virtual/x11
 	>=sys-libs/zlib-1.1.3
+	>=sys-apps/sed-4.0.5
 	ppc? ( app-arch/ncompress )
-	sparc? ( app-arch/ncompress )
-	? ( app-arch/ncompress )"
+	sparc? ( app-arch/ncompress )"
 
   	
 src_unpack() {
-	unpack xanim2801.tar.gz
+	unpack ${MY_P}.tar.gz
 	mkdir ${S}/mods
 	cd ${S}/mods
 	cp ${DISTDIR}/${_XA_CYUV}${_XA_EXT} .
@@ -103,8 +95,11 @@ src_unpack() {
 	$_XA_UNCOMPRESS ${_XA_CVID}${_XA_EXT}
 	cp ${DISTDIR}/${_XA_IV32}${_XA_EXT} .
 	$_XA_UNCOMPRESS ${_XA_IV32}${_XA_EXT}
+	
 	# -O higher than -O2 breaks for GCC3.1
-	CFLAGS=${CFLAGS//-O[0-9]/-O2}
+	filter-flags -finline-functions
+	filter-flags "-O?" "-O2"
+	#CFLAGS=${CFLAGS//-O[0-9]/-O2}
 	sed -e "s:-O2:${CFLAGS}:" ${FILESDIR}/Makefile > ${S}/Makefile
 }
 
