@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <seemant@gentoo.org> (16 Aug 2002)
+# masked for mirroring
+=x11-themes/commonbox-styles-0.2
+
 # <satai@gentoo.org> (16 Aug 2002)
 # Masked for testing
 =app-text/docbook-xml-dtd-4.1.2-r3
