@@ -1,5 +1,5 @@
-MD5 1be98aead2f1e1095e2e6e7c2389c46a kvim-6.2.14.ebuild 1795
-MD5 d1b47bd6eaa0f5833efff6960e8e1633 ChangeLog 3075
+MD5 94514f2954bd50b30b29c32cc6b6eca6 kvim-6.2.14.ebuild 1792
+MD5 4f79342d8ee80f39ab1fbfcb803c7853 ChangeLog 3172
 MD5 471a9143084c4f51ac51e3c29e6738dd metadata.xml 179
 MD5 4d2459727266d29b61b856ee4dfc31e0 files/kvim-6.2.14-gcc2.patch 505
 MD5 fb704603c1b2aba318c776935868e006 files/kvim-6.2.14-perl582.patch 862
