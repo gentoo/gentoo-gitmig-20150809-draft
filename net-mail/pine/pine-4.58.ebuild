@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.58.ebuild,v 1.1 2003/09/16 05:26:55 rajiv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/pine/pine-4.58.ebuild,v 1.2 2003/10/02 17:44:32 brad_mssw Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.cac.washington.edu/pine/${PN}${PV}.tar.bz2"
 
 LICENSE="PICO"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~alpha"
+KEYWORDS="x86 ~ppc sparc ~alpha ~amd64"
 IUSE="ssl ldap debug"
 
 DEPEND="virtual/glibc
