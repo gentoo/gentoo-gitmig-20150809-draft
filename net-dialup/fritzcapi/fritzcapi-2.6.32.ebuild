@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.32.ebuild,v 1.4 2005/02/26 22:23:07 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.32.ebuild,v 1.5 2005/02/27 17:59:43 mr_bones_ Exp $
 
 inherit linux-mod rpm eutils
 
@@ -97,7 +97,7 @@ pkg_setup() {
 }
 
 src_unpack() {
-	rpm_unpack ${DISTDIR}/km_${P/2.6./2.6-}.i586.rpm 
+	rpm_unpack ${DISTDIR}/km_${P/2.6./2.6-}.i586.rpm
 	rpm_unpack ${DISTDIR}/capi4linux-2004.4.5-0.i586.rpm
 	cd ${S}
 	for ((CARD=0; CARD < ${#AVM_SRC[*]}; CARD++)); do
