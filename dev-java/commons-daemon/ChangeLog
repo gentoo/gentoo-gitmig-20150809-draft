@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/commons-daemon
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/ChangeLog,v 1.6 2005/01/01 18:15:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/ChangeLog,v 1.7 2005/01/12 15:16:45 luckyduck Exp $
+
+  12 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> commons-daemon-1.0.ebuild:
+  slightly modified ebuild as recommended by Dad <dan@intuitivelyobvious.net> to
+  make package amd64 compatible. added ~amd64 to KEYWORDS. fixes bug #67323.
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org> commons-daemon-1.0.ebuild:
   use java-pkg_dohtml instead of dohtml to also install the package-list in

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/commons-daemon-1.0.ebuild,v 1.6 2005/01/01 18:15:43 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/commons-daemon-1.0.ebuild,v 1.7 2005/01/12 15:16:45 luckyduck Exp $
 
 inherit java-pkg
 
@@ -12,13 +12,15 @@ SLOT="0"
 DEPEND=">=virtual/jdk-1.4
 		>=dev-java/ant-1.4
 		virtual/libc"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 IUSE="jikes doc"
 
 S=${WORKDIR}/daemon-${PV}-Alpha
 
 src_compile() {
 	cd src/native/unix
+	sed -i.orig -r -e "s/sparc/sparc|x86_64/g" support/apsupport.m4
+	WANT_AUTOCONF="2.5" autoconf
 	econf || die
 	emake || die
 	cd ${S}
