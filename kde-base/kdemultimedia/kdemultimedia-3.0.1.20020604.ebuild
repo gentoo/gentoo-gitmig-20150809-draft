@@ -1,9 +1,9 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.0.1.20020604.ebuild,v 1.4 2002/06/11 18:16:03 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/kdemultimedia-3.0.1.20020604.ebuild,v 1.5 2002/06/18 11:28:00 verwilst Exp $
 
-inherit kde-patch kde-dist
+inherit kde-patch kde-dist flag-o-matic
 
 DESCRIPTION="${DESCRIPTION}Multimedia"
 
@@ -21,6 +21,8 @@ newdepend ">=sys-libs/ncurses-5.2
 	>=media-sound/mpg123-0.59r
 	tcltk? ( >=dev-lang/tk-8.0.5-r2 )"
 #	alsa? ( >=media-libs/alsa-lib-0.5.9 )"
+
+replace-flags "-O3" "-O2"
 
 myaudio="--enable-audio=oss"
 myinterface="--enable-interface=xaw,ncurses"
