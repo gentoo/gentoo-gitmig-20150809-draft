@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-servers/jboss/jboss-3.2.5.ebuild,v 1.3 2004/09/21 08:26:54 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-servers/jboss/jboss-3.2.5.ebuild,v 1.4 2004/10/22 11:44:45 absinthe Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.jboss.org"
 LICENSE="LGPL-2"
 IUSE=""
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64"
 
 RDEPEND=">=virtual/jdk-1.3"
 DEPEND="${RDEPEND}
