@@ -1,0 +1,27 @@
+# ChangeLog for net-mail/cone
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-client/cone/ChangeLog,v 1.1 2004/05/30 02:39:36 seemant Exp $
+
+*cone-0.56 (29 May 2004)
+
+  29 May 2004; Seemant Kulleen <seemant@gentoo.org> +cone-0.56.ebuild,
+  +cone-0.57.ebuild:
+  Moved from net-mail/cone to mail-client/cone.
+
+  25 Jan 2004; Jason Wever <weeve@gentoo.org> cone-0.57.ebuild:
+  A ~sparc for you Mr. Cone
+
+*cone-0.57 (24 Jan 2004)
+
+  24 Jan 2004; Brian Jackson <iggy@gentoo.org> cone-0.56.ebuild,
+  cone-0.57.ebuild:
+  add libxml2 to deps, fixes 39281, also version bumped while I was here
+
+*cone-0.56 (14 Dec 2003)
+
+  14 Dec 2003; Brian Jackson <iggy@gentoo.org> cone-0.56.ebuild:
+  new package, cone is a console based news/mail reader written by the author of
+  courier. This has been living in my overlay for awhile, and I've had a few
+  other people test it. Let me know if you give this a try and it works or
+  doesn't.
+
