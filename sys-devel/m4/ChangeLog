@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/m4
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.17 2003/11/01 19:56:23 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/ChangeLog,v 1.18 2003/12/09 04:57:54 seemant Exp $
+
+  08 Dec 2003; Seemant Kulleen <seemant@gentoo.org> m4-1.4-r1.ebuild:
+  coreutils-5.0.91 seems to require this version of m4, so updating to stable
+  the same versions that coreutils-5.0.91 is stable on
 
 *m4-1.4-r1 (01 Nov 2003)
 

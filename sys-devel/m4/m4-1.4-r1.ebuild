@@ -1,22 +1,22 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4-r1.ebuild,v 1.1 2003/11/01 19:56:23 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/m4/m4-1.4-r1.ebuild,v 1.2 2003/12/09 04:57:54 seemant Exp $
 
 IUSE="nls"
 
 inherit eutils gnuconfig
 
 PVER="17"
-S="${WORKDIR}/${PN}-1.4"
+S=${WORKDIR}/${P}
 DESCRIPTION="GNU macro processor"
-SRC_URI="ftp://ftp.seindal.dk/gnu/${PN}-1.4.tar.gz
+SRC_URI="ftp://ftp.seindal.dk/gnu/${P}.tar.gz
 	mirror://gentoo/m4_1.4-${PVER}.diff.gz
 	http://ftp.debian.org/debian/pool/main/m/m4/m4_1.4-${PVER}.diff.gz"
 HOMEPAGE="http://www.gnu.org/software/m4/m4.html"
 
-LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~x86 ~ppc ~sparc ~alpha ~mips ~hppa ~arm ~ia64"
+LICENSE="GPL-2"
+KEYWORDS="~x86 ppc ~sparc alpha ~mips hppa ~arm ia64 amd64"
 
 DEPEND="virtual/glibc
 	!bootstrap? ( >=sys-devel/libtool-1.3.5-r2 )
