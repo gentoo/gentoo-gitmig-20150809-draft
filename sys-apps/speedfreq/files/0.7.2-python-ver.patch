@@ -1,0 +1,11 @@
+--- Makefile.orig	2004-03-28 14:01:19.591638320 -0500
++++ Makefile	2004-03-28 14:01:45.188746968 -0500
+@@ -14,7 +14,7 @@
+ MAN ?= $(PREFIX)/share/man
+ LIB ?= $(PREFIX)/lib
+ INC ?= $(PREFIX)/include
+-PY_VER ?= 2.2
++PY_VER ?= $(shell python -c "import sys; print sys.version[0:3]")
+ PY_INC ?= /usr/include/python$(PY_VER)
+ 
+ INITD ?= /etc/rc.d/init.d
