@@ -150,15 +150,11 @@ net-www/opera-static
 x11-terms/xterm
 sys-apps/utempter
 
-# <azarah@gentoo.org> (18 May 2003)
-# CVS snapshot, will need a bit of testing.
-=sys-libs/glibc-2.3.2-r2
-
 # <azarah@gentoo.org> (17 May 2003)
 # There is a bit of work needed to the tree to get it gcc-3.3 ready.
 # Also, I want to verify that the Hammer update do not break older
 # Athlons ...
->=sys-devel/gcc-3.3
+#>=sys-devel/gcc-3.3
 
 # <lu_zero@gentoo.org> (14 May 2003)
 # Not yet ready, sadly
@@ -257,11 +253,6 @@ dev-db/mergeant
 # <liquidx@gentoo.org> (09 Mar 2003)
 # depends on moz gtk2 which isn't well tested yet
 >=net-www/galeon-1.3.2
-
-# <seemant@gentoo.org> (05 Mar 2003)
-# coreutils -- replacement for sh-utils, textutils and fileutils
-# NEEDS TESTING!!
-sys-apps/coreutils
 
 # <method@gentoo.org> (05 Mar 2003)
 # gcc with optimizations
