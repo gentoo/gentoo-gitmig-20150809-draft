@@ -1,6 +1,6 @@
 # ChangeLog for net-dialup/isdn4k-utils
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.4 2002/12/17 04:21:16 drobbins Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/isdn4k-utils/ChangeLog,v 1.5 2003/02/12 07:52:42 vapier Exp $
 
 *isdn4k-utils-3.2_p1-r2 (16 Dec 2002)
 

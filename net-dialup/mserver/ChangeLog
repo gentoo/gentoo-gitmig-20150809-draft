@@ -1,6 +1,6 @@
 # ChangeLog for net-dialup/mserver
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mserver/ChangeLog,v 1.1 2002/12/12 17:50:20 phoenix Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mserver/ChangeLog,v 1.2 2003/02/12 07:53:22 vapier Exp $
 
 *mserver-0.5.5-r1 (12 Dec 2002)
 

@@ -1,6 +1,6 @@
 # ChangeLog for net-dialup/wvdial
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/ChangeLog,v 1.7 2002/12/13 10:59:50 blizzy Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/wvdial/ChangeLog,v 1.8 2003/02/12 07:54:20 vapier Exp $
 
 *wvdial-1.53-r1 (10 Dec 2002)
 
