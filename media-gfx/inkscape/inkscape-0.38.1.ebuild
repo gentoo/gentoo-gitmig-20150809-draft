@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.38.1.ebuild,v 1.3 2004/05/25 10:11:13 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/inkscape/inkscape-0.38.1.ebuild,v 1.4 2004/06/14 15:55:59 hanno Exp $
 
 inherit gnome2
 
@@ -33,5 +33,10 @@ DEPEND="${RDEPEND}
 G2CONF="${G2CONF} --with-xft --with-popt"
 use mmx || G2CONF="${G2CONF} --disable-mmx"
 use gnome && G2CONF="${G2CONF} --with-gnome-print"
+
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/string.patch
+}
 
 DOCS="AUTHORS COPYING ChangeLog HACKING NEWS README"
