@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/overnet/overnet-0.50.1.ebuild,v 1.3 2004/04/20 18:10:27 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/overnet/overnet-0.50.1.ebuild,v 1.4 2004/04/30 16:58:06 squinky86 Exp $
 
 IUSE=""
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.overnet.com"
 SRC_URI="http://files.edonkey2000.com/files/${MY_P}.tar.gz"
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="x86 ~amd64"
 
 DEPEND="virtual/glibc"
 
