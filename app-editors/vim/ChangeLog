@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.150 2005/02/25 22:15:11 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.151 2005/03/03 01:48:29 morfic Exp $
+
+  02 Mar 2005; Daniel Goller <morfic@gentoo.org> vim-6.3-r4.ebuild:
+  Stable on ppc
 
   25 Feb 2005; Ciaran McCreesh <ciaranm@gentoo.org> vim-6.3-r4.ebuild:
   Fix RDEPEND, bug #83201
