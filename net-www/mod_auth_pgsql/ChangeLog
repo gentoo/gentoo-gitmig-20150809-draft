@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mod_auth_pgsql
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pgsql/ChangeLog,v 1.5 2004/04/01 23:46:56 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_pgsql/ChangeLog,v 1.6 2004/04/02 18:42:59 zul Exp $
+
+  02 Apr 2004; Chuck Short <zul@gentoo.org> :
+  Added apache2 version.
 
   01 Apr 2004; Chuck Short <zul@gentoo.org> mod_auth_pgsql-0.9.12.ebuild:
   Changed DEPEND to net-www/apache-1*. Only meant to work on apache-1.
