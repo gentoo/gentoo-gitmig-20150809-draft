@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-2.8.ebuild,v 1.10 2004/06/08 05:28:54 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/ypserv/ypserv-2.8.ebuild,v 1.11 2004/06/16 09:18:47 kloeri Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="Network Information Service server"
 SRC_URI="mirror://kernel/linux/utils/net/NIS/${P}.tar.gz"
 HOMEPAGE="http://www.linux-nis.org/nis/"

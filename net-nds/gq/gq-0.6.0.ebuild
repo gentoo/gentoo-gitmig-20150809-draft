@@ -1,8 +1,7 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/gq/gq-0.6.0.ebuild,v 1.8 2004/05/12 00:23:54 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/gq/gq-0.6.0.ebuild,v 1.9 2004/06/16 09:17:05 kloeri Exp $
 
-S=${WORKDIR}/${P}
 DESCRIPTION="GTK-based LDAP client"
 SRC_URI="mirror://sourceforge/gqclient/${P}.tar.gz"
 HOMEPAGE="http://www.biot.com/gq/"
