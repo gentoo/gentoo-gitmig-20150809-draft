@@ -4,9 +4,9 @@ virtual/mta	     net-mail/ssmtp
 virtual/kernel	  sys-kernel/linux-headers
 virtual/linux-sources   sys-kernel/sparc-sources
 virtual/glibc	   sys-libs/glibc
-virtual/x11	     x11-base/xfree x11-base/xorg-x11
-virtual/opengl	  x11-base/xfree x11-base/xorg-x11
-virtual/glu	     x11-base/xfree x11-base/xorg-x11
+virtual/x11	     x11-base/xfree
+virtual/opengl	  x11-base/xfree
+virtual/glu	     x11-base/xfree
 virtual/glut	    media-libs/glut
 virtual/imapUW	  net-mail/uw-imap
 x11-libs/xaw	    x11-libs/Xaw3d
@@ -26,7 +26,7 @@ virtual/mda				net-mail/procmail
 virtual/krb5			app-crypt/heimdal
 virtual/bootloader		sys-boot/silo
 virtual/editor			app-editors/nano
-virtual/xft				x11-base/xfree x11-base/xorg-x11
+virtual/xft				x11-base/xfree
 virtual/os-headers		sys-kernel/linux-headers
 virtual/ghc	     dev-lang/ghc-bin
 virtual/modutils 		sys-apps/modutils

@@ -1,6 +1,6 @@
 # Copyright 2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.8 2004/04/07 09:00:50 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/base/virtuals,v 1.9 2004/04/07 19:40:33 spyderous Exp $
 
 # This file describes the packages that by default satisfy a certain virtual
 # That this file exists in the base profile implies that these packages will
@@ -19,7 +19,7 @@ virtual/flim					app-emacs/flim
 virtual/ghc						dev-lang/ghc-bin
 virtual/ghostscript				app-text/ghostscript
 virtual/glibc					sys-libs/glibc
-virtual/glu						x11-base/xfree x11-base/xorg-x11
+virtual/glu						x11-base/xfree
 virtual/glut					media-libs/glut
 virtual/gzip					app-arch/gzip
 virtual/imap-c-client			net-libs/c-client
@@ -35,7 +35,7 @@ virtual/lpr						net-print/cups
 virtual/mda						net-mail/procmail
 virtual/mpg123					media-sound/mpg123
 virtual/mta						net-mail/ssmtp
-virtual/opengl					x11-base/xfree x11-base/xorg-x11
+virtual/opengl					x11-base/xfree
 virtual/php						dev-php/mod_php
 virtual/python					dev-lang/python
 virtual/quicktime				media-libs/libquicktime
@@ -48,7 +48,7 @@ virtual/tetex					app-text/tetex
 virtual/textbrowser				net-www/links
 virtual/tftp					net-misc/tftp-hpa
 virtual/w3m						net-www/w3m
-virtual/x11						x11-base/xfree x11-base/xorg-x11
+virtual/x11						x11-base/xfree
 virtual/xemacs					app-editors/xemacs
-virtual/xft						x11-base/xfree x11-base/xorg-x11
+virtual/xft						x11-base/xfree
 x11-libs/xaw					x11-libs/Xaw3d

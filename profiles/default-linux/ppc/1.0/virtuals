@@ -13,7 +13,7 @@ virtual/flim			app-emacs/flim
 virtual/ghc			dev-lang/ghc-bin
 virtual/ghostscript		app-text/ghostscript
 virtual/glibc			sys-libs/glibc
-virtual/glu			x11-base/xfree x11-base/xorg-x11
+virtual/glu			x11-base/xfree
 virtual/glut			media-libs/glut
 virtual/gzip			app-arch/gzip
 virtual/imap-c-client		net-libs/c-client
@@ -31,7 +31,7 @@ virtual/mda 			net-mail/procmail
 virtual/modutils 		sys-apps/modutils
 virtual/mpg123			media-sound/mpg123
 virtual/mta			net-mail/ssmtp
-virtual/opengl			x11-base/xfree x11-base/xorg-x11
+virtual/opengl			x11-base/xfree
 virtual/os-headers 		sys-kernel/linux-headers
 virtual/php			dev-php/mod_php
 virtual/python			dev-lang/python
@@ -44,6 +44,6 @@ virtual/sylpheed		net-mail/sylpheed
 virtual/tetex			app-text/tetex
 virtual/textbrowser		net-www/links
 virtual/w3m			net-www/w3m
-virtual/x11			x11-base/xfree x11-base/xorg-x11
-virtual/xft			x11-base/xfree x11-base/xorg-x11
+virtual/x11			x11-base/xfree
+virtual/xft			x11-base/xfree
 x11-libs/xaw			x11-libs/Xaw3d
