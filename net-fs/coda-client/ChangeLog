@@ -1,6 +1,15 @@
 # ChangeLog for net-fs/coda-client
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/coda-client/ChangeLog,v 1.7 2004/06/24 22:42:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/coda-client/ChangeLog,v 1.8 2004/09/09 18:15:13 griffon26 Exp $
+
+*coda-client-6.0.6 (04 Sep 2004)
+
+  04 Sep 2004; Maurice van der Pot <griffon26@gentoo.org> metadata.xml,
+  +coda-client-6.0.3.ebuild, +coda-client-6.0.6.ebuild:
+  Took over maintenance from Daniel Black <dragonheart@gentoo.org>
+  Prepared coda-client ebuild for removal from portage because it has been
+  superseded by the coda ebuild. For now the new versions of the coda-client 
+  ebuild will merge coda as a dependency.
 
   26 Apr 2004; Daniel Black <dragonheart@gentoo.org>
   coda-client-5.3.19.ebuild:
