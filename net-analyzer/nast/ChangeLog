@@ -1,0 +1,11 @@
+# ChangeLog for net-analyzer/nast
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nast/ChangeLog,v 1.1 2004/05/18 17:19:04 squinky86 Exp $
+
+*nast-0.2.0 (18 May 2004)
+
+  18 May 2004; Jon Hood <squinky86@gentoo.org> +metadata.xml,
+  +nast-0.2.0.ebuild:
+  Initial import. Closes #51202. Thanks to Sven Wegener
+  <sven.wegener@stealer.net> for the ebuild.
+
