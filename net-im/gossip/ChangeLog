@@ -1,6 +1,11 @@
 # ChangeLog for net-im/gossip
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/ChangeLog,v 1.7 2004/01/22 18:29:30 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gossip/ChangeLog,v 1.8 2004/02/03 22:18:10 spider Exp $
+
+*gossip-0.7.1 (03 Feb 2004)
+
+  03 Feb 2004; <spider@gentoo.org> gossip-0.7.1.ebuild:
+  Versionbump
 
 *gossip-0.7 (22 Jan 2004)
 
