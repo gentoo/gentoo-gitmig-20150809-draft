@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/nxserver-personal
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-personal/ChangeLog,v 1.1 2003/09/02 13:57:39 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/nxserver-personal/ChangeLog,v 1.2 2003/09/10 17:17:12 stuart Exp $
+
+  10 Sep 2003; stuart metadata.xml, nxserver-personal-1.2.2.ebuild:
+  Added ebuild for nxserver-1.2.2-85 release
 
 *nxserver-personal-1.2.2 (02 Sep 2003)
 
