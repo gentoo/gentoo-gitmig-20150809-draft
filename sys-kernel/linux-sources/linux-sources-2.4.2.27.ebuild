@@ -1,20 +1,20 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.2.13.ebuild,v 1.4 2001/03/30 03:34:19 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-sources/linux-sources-2.4.2.27.ebuild,v 1.1 2001/03/30 03:34:19 achim Exp $
 
 S=${WORKDIR}/linux
 #OKV=original kernel version, KV=patched kernel version
 OKV=2.4.2
-KV=2.4.2-ac13
+KV=2.4.2-ac27
 #Versions of LVM, ALSA, JFS and lm-sensors
-LVMV=0.9.1_beta5
-LVMVARC=0.9.1_beta5_a
+LVMV=0.9.1_beta6
+LVMVARC=0.9.1_beta6
 AV=0.5.10b
-JFSV=0.2.0
+JFSV=0.2.1
 SENV=2.5.5
-RV=20010305
-XMLV=0.3
+RV=20010327
+
 
 if [ "$PN" = "linux" ]
 then
@@ -24,12 +24,12 @@ else
 fi
 SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
          http://www.kernel.org/pub/linux/kernel/people/alan/2.4/patch-${KV}.bz2
-         http://www.netroedge.com/~lm78/archive/lm_sensors-${SENV}.tar.gz 
+         http://www.netroedge.com/~lm78/archive/lm_sensors-${SENV}.tar.gz
          http://oss.software.ibm.com/developerworks/opensource/jfs/project/pub/jfs-${JFSV}-patch.tar.gz
          ftp://ftp.alsa-project.org/pub/driver/alsa-driver-${AV}.tar.bz2
 	 ftp://ftp.reiserfs.com/pub/reiserfs-for-2.4/linux-${OKV}-reiserfs-${RV}.patch.gz
          ftp://ftp.sistina.com/pub/LVM/0.9.1_beta/lvm_${LVMVARC}.tar.gz"
-#	 http://download.sourceforge.net/xmlprocfs/linux-2.4-xmlprocfs-${XMLV}.patch.gz
+
 
 HOMEPAGE="http://www.kernel.org/
 	  http://www.netroedge.com/~lm78/
@@ -53,10 +53,7 @@ src_unpack() {
     try bzip2 -dc ${DISTDIR}/patch-${KV}.bz2 | patch -p1
     echo "Applying reiserfs-update patch..."
     try gzip -dc ${DISTDIR}/linux-${OKV}-reiserfs-${RV}.patch.gz | patch -N -p1
-    echo "You can ignore the rejects the changes already are in rc13"
-#    echo
-#    echo "Applying xmlprocfs patch..."
-#    try gzip -dc ${DISTDIR}/linux-2.4-xmlprocfs-${XMLV}.patch.gz | patch -p1   
+    echo "You can ignore the rejects the changes already are in rc27"
 
     mkdir ${S}/extras
     #create and apply LVM patch.  The tools get built later.
