@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.41 2004/06/02 04:19:56 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.42 2004/06/02 19:42:56 seemant Exp $
+
+  02 Jun 2004; Seemant Kulleen <seemant@gentoo.org> gettext-0.12.1-r1.ebuild,
+  gettext-0.12.1.ebuild:
+  Remove the emacs site-lisp stuff, if emacs is not in USE. Closes bug #47854 by
+  Andrew Kirilenko <icedank@gmx.net>. Eric Brown <bigwhitecow@hotmail.com> did
+  the actual patch to the gettext ebuild.
 
   02 Jun 2004; Travis Tilley <lv@gentoo.org> gettext-0.12.1-r1.ebuild:
   stable on amd64

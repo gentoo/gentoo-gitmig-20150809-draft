@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1.ebuild,v 1.15 2004/02/23 00:21:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1.ebuild,v 1.16 2004/06/02 19:42:56 seemant Exp $
 
 inherit eutils
 
-IUSE="nls"
+IUSE="nls emacs"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="GNU locale utilities"
@@ -71,6 +71,12 @@ src_install() {
 	then
 		mv ${D}/usr/doc/gettext ${D}/usr/share/doc/${PF}/html
 		rm -rf ${D}/usr/doc
+	fi
+
+	# Remove the emacs site-lisp stuff if 'emacs' is not in USE
+	if [ -z "`use emacs`" ]
+	then
+		rm -rf ${D}/usr/share/emacs
 	fi
 
 	dodoc AUTHORS BUGS COPYING ChangeLog DISCLAIM NEWS README* THANKS TODO

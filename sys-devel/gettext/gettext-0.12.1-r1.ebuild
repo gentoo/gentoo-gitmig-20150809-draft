@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1-r1.ebuild,v 1.9 2004/06/02 04:19:56 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1-r1.ebuild,v 1.10 2004/06/02 19:42:56 seemant Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha arm hppa amd64 ~ia64 s390"
-IUSE="nls"
+IUSE="nls emacs"
 
 DEPEND="virtual/glibc"
 
@@ -71,6 +71,12 @@ src_install() {
 	then
 		mv ${D}/usr/doc/gettext ${D}/usr/share/doc/${PF}/html
 		rm -rf ${D}/usr/doc
+	fi
+
+	# Remove emacs site-lisp stuff if 'emacs' is not in USE
+	if [ -z "`use emacs`" ]
+	then
+		rm -rf ${D}/usr/share/emacs
 	fi
 
 	dodoc AUTHORS BUGS ChangeLog DISCLAIM NEWS README* THANKS TODO
