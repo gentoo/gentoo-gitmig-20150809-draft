@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.32b-r3.ebuild,v 1.1 2003/12/06 15:06:16 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/quake3/quake3-1.32b-r3.ebuild,v 1.2 2003/12/09 21:34:48 vapier Exp $
 
 inherit games
 
@@ -43,12 +43,12 @@ src_install() {
 
 	exeinto ${dir}
 	insinto ${dir}
-	doexe bin/Linux/x86/{quake3.x86,q3ded} ${FILESDIR}/startq3ded
+	doexe bin/Linux/x86/{quake3.x86,q3ded}
 	doins quake3.xpm README* Q3A_EULA.txt
 	dogamesbin ${FILESDIR}/quake3 ${FILESDIR}/q3ded
 
-	exeinto /etc/init.d
-	newexe ${FILESDIR}/q3ded.rc q3ded
+	exeinto /etc/init.d ; newexe ${FILESDIR}/q3ded.rc q3ded
+	insinto /etc/conf.d ; newins ${FILESDIR}/q3ded.conf.d q3ded
 	insinto /usr/share/pixmaps
 	doins quake3.xpm
 
@@ -58,9 +58,6 @@ src_install() {
 
 pkg_postinst() {
 	games_pkg_postinst
-
-	# Shouldn't this be using the games user?
-	# enewuser q3 -1 /bin/bash /opt/quake3 ${GAMES_GROUP}
 
 	einfo "You need to copy pak0.pk3 from your Quake3 CD into ${dir}/baseq3."
 	einfo "Or if you have got a Window installation of Q3 make a symlink to save space."
