@@ -1,6 +1,5 @@
-MD5 9119512e21293ca6ef0947cd9bc5b0d7 hardened-sources-2.4.24-r1.ebuild 1723
+MD5 36d744e409d9f598ed07acfa83e82178 hardened-sources-2.4.24-r1.ebuild 1722
 MD5 5ce014b028eb12d68b20928094636bb5 hardened-sources-2.4.22-r2.ebuild 2435
-MD5 53e291a0de56384fc5a51ef5270240f2 hardened-sources-2.4.24.ebuild 1645
 MD5 f90241ebafadb9d40a4e0171a112409e ChangeLog 6170
 MD5 0a473e60c059cb41c96a6bbcbff84769 metadata.xml 459
 MD5 e2e2b545b6fcdcecf49e33798efa5b84 files/rtc_fix.patch 7073
@@ -9,4 +8,3 @@ MD5 e77a93fdf26f06cf3ea5080b27211725 files/mremap-CAN-2003-0985.patch 414
 MD5 e637c6fa41097ea2c4693d0766f2e1c5 files/do_brk_fix.patch 242
 MD5 0d5619823272f50a9bac7d4a50ca7757 files/digest-hardened-sources-2.4.22-r2 144
 MD5 5f7f4f858f6ba088827d50ff2c6db55b files/digest-hardened-sources-2.4.24-r1 321
-MD5 5f7f4f858f6ba088827d50ff2c6db55b files/digest-hardened-sources-2.4.24 321

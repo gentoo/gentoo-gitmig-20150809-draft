@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.4.24-r1.ebuild,v 1.4 2004/04/12 16:36:22 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/hardened-sources/hardened-sources-2.4.24-r1.ebuild,v 1.5 2004/04/12 18:06:51 scox Exp $
 
 IUSE="selinux"
 ETYPE="sources"
@@ -22,7 +22,7 @@ SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 
 
 HOMEPAGE="http://www.gentoo.org/proj/en/hardened/"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 SLOT="${KV}"
 
 src_unpack() {
