@@ -1,16 +1,15 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.020.ebuild,v 1.4 2003/06/29 15:24:08 aliz Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/usermin-1.020.ebuild,v 1.5 2003/08/06 06:39:27 vapier Exp $
 
-IUSE="ssl"
-
-DESCRIPTION="Usermin, a web-based user administration interface"
-SRC_URI="mirror://sourceforge/webadmin/${P}.tar.gz"
+DESCRIPTION="a web-based user administration interface"
 HOMEPAGE="http://www.webmin.com/index6.html"
+SRC_URI="mirror://sourceforge/webadmin/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="BSD"
+SLOT="0"
 KEYWORDS="x86 ~sparc ~alpha ~ppc"
+IUSE="ssl"
 
 DEPEND="dev-lang/perl
 	sys-apps/lsof

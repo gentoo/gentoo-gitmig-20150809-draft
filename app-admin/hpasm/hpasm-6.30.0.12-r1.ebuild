@@ -1,40 +1,36 @@
-DESCRIPTION="hp Server Management Drivers and Agents."
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hpasm/hpasm-6.30.0.12-r1.ebuild,v 1.3 2003/08/06 06:34:33 vapier Exp $
+
+DESCRIPTION="hp Server Management Drivers and Agents"
 HOMEPAGE="http://h18000.www1.hp.com/products/servers/linux/documentation.html"
-LICENSE="hp-value"
-RDEPEND="snmp? ( net-analyzer/net-snmp )"
-
-DEPEND="${RDEPEND}
-	virtual/linux-sources
-	mailx
-	rpm2targz"
-
 SRC_URI="ftp://ftp.compaq.com/pub/products/servers/supportsoftware/linux/RedHat/hpasm-6.30.0-12.Redhat8_0.i386.rpm"
 
-IUSE=""
+LICENSE="hp-value"
 SLOT="0"
 KEYWORDS="~x86"
-S="${WORKDIR}"
 
+RDEPEND="snmp? ( net-analyzer/net-snmp )"
+DEPEND="${RDEPEND}
+	virtual/linux-sources
+	net-mail/mailx
+	app-arch/rpm2targz"
+
+S=${WORKDIR}
 
 src_unpack() {
-	cd ${S}
-	rpm2targz ${DISTDIR}/hpasm-6.30.0-12.Redhat8_0.i386.rpm
-	tar zxf ${S}/hpasm-6.30.0-12.Redhat8_0.i386.tar.gz 
-	rm ${S}/opt/compaq/hpasm/addon/libcpqci.so
-	rm ${S}/opt/compaq/hpasm/addon/libcpqci.so.1
+	rpm2targz ${DISTDIR}/hpasm-6.30.0-12.Redhat8_0.i386.rpm || die
+	tar zxf ${S}/hpasm-6.30.0-12.Redhat8_0.i386.tar.gz || die
+	rm ${S}/opt/compaq/hpasm/addon/libcpqci.so || die
+	rm ${S}/opt/compaq/hpasm/addon/libcpqci.so.1 || die
 }
 
 src_install() {
-
-	
-
 	HPASM_HOME="/opt/compaq"
 	
 	dodir ${HPASM_HOME}
 
-    cp -Rdp \
-        opt/compaq/* \
-		${D}${HPASM_HOME}
+	cp -Rdp opt/compaq/* ${D}${HPASM_HOME}
 
 	into /
 	dosbin sbin/bootcfg 
@@ -61,18 +57,15 @@ src_install() {
 
 	dodir /usr/lib
 
-	if [ ! -f /usr/lib/libcrypto.so.2 ]
-    		then
+	if [ ! -f /usr/lib/libcrypto.so.2 ] ; then
 		dosym /usr/lib/libcrypto.so.0.9.6 /usr/lib/libcrypto.so.2
 	fi
 
-	if [ ! -f /usr/lib/libssl.so.2 ]
-    		then
+	if [ ! -f /usr/lib/libssl.so.2 ] ; then
 		dosym /usr/lib/libssl.so.0.9.6 /usr/lib/libssl.so.2
 	fi
 
 	dodir /var/spool/compaq
-
 
 	exeinto /etc/init.d
 	doexe etc/init.d/hpasm
@@ -93,6 +86,3 @@ pkg_postinst() {
 	einfo "modules will automatically build for you."
 	einfo ""
 }
-
-
-
