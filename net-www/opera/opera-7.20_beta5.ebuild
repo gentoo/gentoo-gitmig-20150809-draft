@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.20_beta3.ebuild,v 1.2 2003/08/22 00:12:27 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.20_beta5.ebuild,v 1.1 2003/08/26 16:54:32 lanius Exp $
 
 # Here, like in the other .ebuilds, the static version is
 # forced for simplicity's sake
@@ -18,23 +18,33 @@ RDEPEND="virtual/x11
 	media-libs/libexif
 	>=x11-libs/lesstif-0.93.40" #lesstif resolves Bug 25767
 
-KEYWORDS="-*" #please test! This is for x86 only!!
+KEYWORDS="~x86"
 SLOT="0"
-OPERAVER="7.20-20030807"
-OPERATYPE="1-static-qt"
 
+if [ `use x86` ]; then
+	ARCH="intel"
+	ARCH2="i386"
+	OPERAVER="7.20-20030825"
+	DIR="447-20030825-7.20-B5"
+elif [ `use ppc` ]; then
+	ARCH="ppc"
+	ARCH2="ppc"
+elif [ `use sparc` ]; then
+	ARCH="sparc"
+	ARCH2="sparc"
+fi
 
-SRC_URI="http://snapshot.opera.com/unix/intel-linux/437-20030807-7.20-B3/${PN}-${OPERAVER}.${OPERATYPE}.i386.tar.bz2"
-S=${WORKDIR}/opera-${OPERAVER}.${OPERATYPE}.i386
+if [ "$OPERA_VARIANT" = "shared" ]; then
+        RDEPEND="${RDEPEND} =x11-libs/qt-3*"
+        OPERATYPE="2-shared-qt"
+else
+        OPERATYPE="1-static-qt"
+fi
 
+SRC_URI="http://snapshot.opera.com/unix/${ARCH}-linux/${DIR}/${PN}-${OPERAVER}.${OPERATYPE}.${ARCH2}.tar.bz2"
+S=${WORKDIR}/opera-${OPERAVER}.${OPERATYPE}.${ARCH2}
 
 src_unpack() {
-	ewarn "This package is designed for an i386-based processor."
-	ewarn "Usage on another platform is at your own risk."
-	ewarn "If you want to abort this installation, press CTRL+C now"
-	ewarn "Pausing for 15 seconds..."
-	sleep 15s
-
 	unpack ${A}
 	cd ${S}
 	sed -i -e "s:/etc:${D}/etc:g" \
