@@ -85,10 +85,7 @@ net-libs/openhbci
 >=app-admin/ufed-0.40
 
 # <robbat2@gentoo.org> (23 Apr 2003)
-# PHP ebuilds using new PHP eclass
-# Work in progress
->=dev-php/mod_php-4.3.1-r3
->=dev-php/php-4.3.1-r2
+# This is just for experimentation
 >=dev-php/php-cvs-5.0
 
 # seemant@gentoo.org (22 Apr 2003)
