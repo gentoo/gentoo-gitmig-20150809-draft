@@ -1,0 +1,25 @@
+#!/sbin/runscript
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+
+depend() {
+	need net
+	use cupsd
+}
+
+start() {
+	ebegin "Starting arpwatch"
+	if [ ! -e /var/arpwatch/arp.dat ]; then
+		touch /var/arpwatch/arp.dat 
+	fi
+	/usr/sbin/arpwatch -i eth0 -f /var/arpwatch/arp.dat
+	result=$?
+	eend $result
+}
+
+stop() {
+	ebegin "Stopping arpwatch"
+	killall arpwatch > /dev/null
+	result=$?
+	eend $result
+}
