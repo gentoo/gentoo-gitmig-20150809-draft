@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2-r2.ebuild,v 1.7 2004/10/20 18:01:49 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nagios-core/nagios-core-1.2-r2.ebuild,v 1.8 2004/10/20 18:22:24 eldad Exp $
 
 inherit eutils
 
@@ -156,7 +156,6 @@ src_install() {
 		else
 			insinto /etc/apache/conf/addon-modules
 			doins ${FILESDIR}/nagios.conf
-			echo "Include  conf/addon-modules/nagios.conf" >> ${ROOT}/etc/apache/conf/apache.conf
 		fi
 	fi
 
@@ -173,17 +172,20 @@ pkg_preinst() {
 	keepdir /var/nagios/archives
 	chown -R nagios:nagios ${D}/var/nagios || die "Failed Chown of ${D}/var/nagios"
 	keepdir /var/nagios/rw
-	if use noweb; then
-		chown nagios:nagios ${D}/var/nagios/rw || die "Failed Chown of ${D}/var/nagios/rw"
-	else
-		chown nagios:apache ${D}/var/nagios/rw || die "Failed Chown of ${D}/var/nagios/rw"
-	fi
+
 	enewgroup nagios
+
 	if use noweb; then
 		enewuser nagios -1 /bin/bash /dev/null nagios
 	else
 		enewuser nagios -1 /bin/bash /dev/null apache
 		usermod -G apache nagios
+	fi
+
+	if use noweb; then
+		chown nagios:nagios ${D}/var/nagios/rw || die "Failed Chown of ${D}/var/nagios/rw"
+	else
+		chown nagios:apache ${D}/var/nagios/rw || die "Failed Chown of ${D}/var/nagios/rw"
 	fi
 }
 
@@ -205,6 +207,7 @@ pkg_postinst() {
 			einfo " Edit /etc/conf.d/apache2 and add \"-D NAGIOS\""
 		else
 			einfo " Edit /etc/conf.d/apache and add \"-D NAGIOS\""
+			einfo " Edit /etc/apache/conf/apache.conf and add \"Include  conf/addon-modules/nagios.conf\""
 		fi
 
 		einfo
