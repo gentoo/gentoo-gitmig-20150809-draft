@@ -1,17 +1,15 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Don Seiler <don@seiler.us>
-# $Header: /var/cvsroot/gentoo-x86/app-editors/forte/forte-3.0.ebuild,v 1.1 2002/06/14 19:45:31 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/forte/forte-3.0-r1.ebuild,v 1.1 2002/06/19 02:57:17 karltk Exp $
 
 S=${WORKDIR}/usr/local
 DESCRIPTION="Forte/Sun ONE Studio Developer"
 SRC_URI="ffj-ce-30_ml.noarch.rpm"
 HOMEPAGE="http://forte.sun.com/ffj/index.html"
 LICENSE="forte"
-
 DEPEND=">=app-arch/rpm-3.0.6"
 RDEPEND="virtual/x11
-		>=virtual/jdk-1.3"
+	>=virtual/jdk-1.3"
 RESTRICT="fetch"
 
 dyn_fetch() {
@@ -47,6 +45,5 @@ src_install () {
 	dodir /etc/env.d
 	insinto /etc/env.d
 	doins ${FILESDIR}/21forte
-
 }
 
