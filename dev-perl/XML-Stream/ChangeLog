@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/XML-Stream
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Stream/ChangeLog,v 1.4 2004/12/21 14:39:37 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-Stream/ChangeLog,v 1.5 2004/12/23 23:02:42 kloeri Exp $
+
+  24 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> XML-Stream-1.22.ebuild:
+  Stable on alpha.
 
   21 Dec 2004; Michael Cummings <mcummings@gentoo.org>
   XML-Stream-1.22.ebuild:
