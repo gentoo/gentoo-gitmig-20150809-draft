@@ -1,4 +1,7 @@
-MD5 718cf84e5f91d9f38d9aff692ab8c120 ChangeLog 1719
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c0f8a1e731ece71782f475e31815b25a ChangeLog 1841
 MD5 84b22298b96cf1a5eea391b0a0c743d9 mac-fdisk-0.1-r2.ebuild 1490
 MD5 740e63521b7dddcf17ac4429a364040b mac-fdisk-0.1.ebuild 1139
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
@@ -7,3 +10,10 @@ MD5 1e4edeb8702972aefac52a5b367e9af7 files/digest-mac-fdisk-0.1-r2 137
 MD5 30a3c81f6200c4ce07ef243b12a48ed4 files/mac-fdisk-ppc.patch 3383
 MD5 70dc7bfd1ffda2901ffdf59b6ebacc58 files/mac-fdisk-ppc64-1.patch 14817
 MD5 d5ac7220533aeb36ef5ba7128dd2e29d files/mac-fdisk-ppc64.patch 3412
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBOs1jI1lqEGTUzyQRAokyAJ95tSIZrom7Z7dTbnshYjgdGJbRjACg0zXW
+MyyHq/IBAIyjYC5dNcwYVCo=
+=HyAA
+-----END PGP SIGNATURE-----
