@@ -1,18 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.5-r1.ebuild,v 1.2 2004/03/25 08:32:45 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.5-r1.ebuild,v 1.3 2004/04/26 15:56:49 agriffis Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins
-
-# Added to get thunderbird to compile on sparc.
-replace-sparc64-flags
-if [ "`use ppc`" -a "$(gcc-major-version)" -eq "3" -a "$(gcc-minor-version)" -eq "3" ]
-then
-
-append-flags -fno-strict-aliasing
-
-fi
-
 
 S=${WORKDIR}/mozilla
 
@@ -157,7 +147,14 @@ src_compile() {
 			replace-flags -march=pentium4 -march=pentium3
 			filter-flags -msse2
 		fi
+	fi
 
+	# Added to get thunderbird to compile on sparc.
+	replace-sparc64-flags
+
+	if use ppc && [[ $(gcc-major-version) == 3 && $(gcc-minor-version) == 3 ]]
+	then
+		append-flags -fno-strict-aliasing
 	fi
 
 	econf ${myconf} || die
