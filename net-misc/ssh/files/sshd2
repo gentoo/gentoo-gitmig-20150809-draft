@@ -1,0 +1,34 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+
+
+depend() {
+	use logger dns
+	need net
+}
+
+checkconfig() {
+	if [ ! -e /etc/ssh2/sshd2_config ] ; then
+		eerror "You need an /etc/ssh/sshd2_config file to run sshd"
+		eerror "There is a sample file in  /etc/ssh2/"
+		return 1
+	fi
+
+}
+
+
+start() {
+	checkconfig || return 1
+	ebegin "Starting sshd2"
+	start-stop-daemon --start --quiet --pidfile /var/run/sshd2.pid \
+		--startas /usr/sbin/sshd2
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping sshd2"
+	start-stop-daemon --stop --quiet --pidfile /var/run/sshd2_22.pid
+	eend $?
+}
+
