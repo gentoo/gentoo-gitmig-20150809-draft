@@ -1,22 +1,22 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8907ecfea14e66f1ca3841ac1d685dbe ChangeLog 1127
-MD5 62ff5b768e6e9275bca3fd9136cabaa7 Curses-1.06-r1.ebuild 782
-MD5 f7c8dd02c3789c6e820c557c1570183a Curses-1.06-r2.ebuild 786
-MD5 a5847ad5bf2bf1faaccdad830d426707 Curses-1.06.ebuild 559
+MD5 7ce9b69808533d20eee34e1c8ebf9e70 Curses-1.06.ebuild 522
+MD5 94ac77751b6a07390938745927f79b44 ChangeLog 1263
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 d1210e613d8ec9df5ae4b455f9e53420 Curses-1.07.ebuild 873
+MD5 f78f463f921d26328a21aef85f3fc76e Curses-1.06-r1.ebuild 745
+MD5 db30ee513016f259ff979ffc983fe3b1 Curses-1.06-r2.ebuild 750
+MD5 506fb323424af650cbf190ea6efd9f80 Curses-1.07.ebuild 873
 MD5 15a6b690bc27de8f522622f0c025b910 files/Curses-1.06-p5.8-fixes.diff 1541
+MD5 18b5e538ab728b7900099e162bc50f58 files/Curses-1.07-p5.8-fixes.diff 1144
 MD5 0f0c3df2a14a2bbdbfcdab08ee5fdf50 files/digest-Curses-1.06 62
 MD5 0f0c3df2a14a2bbdbfcdab08ee5fdf50 files/digest-Curses-1.06-r1 62
 MD5 0f0c3df2a14a2bbdbfcdab08ee5fdf50 files/digest-Curses-1.06-r2 62
 MD5 ee186e93868d3f61baa0f56d6c859c31 files/digest-Curses-1.07 59
-MD5 18b5e538ab728b7900099e162bc50f58 files/Curses-1.07-p5.8-fixes.diff 1144
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBXs8qtG5z4I8BtQoRAvYTAKCN6tcegSCWE8XQzIbh3m9nZP/tiwCfaMPu
-ZaYzO/sPlFp7RwWze8JrnSM=
-=w+ys
+iD8DBQFB2pFmtG5z4I8BtQoRAkkXAJ0YFAV0x79JGY6Gywwpab6xbAF4wQCfUyW2
+mkgvG4VWKP8ljvXO83q6eFw=
+=020x
 -----END PGP SIGNATURE-----

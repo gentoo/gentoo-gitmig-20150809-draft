@@ -1,10 +1,20 @@
-MD5 c98846fd701be3a32b27f0cc67e0e793 Filter-1.28.ebuild 517
-MD5 ae013f3fe49a2d414a82aff7fee09e7c ChangeLog 1568
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c1018a7348f344deca310e538c34b233 Filter-1.28.ebuild 491
+MD5 f7eb945097ffd1f0732669eccb9afcb5 ChangeLog 1724
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 3238bca8352974ac280ed2962f5fd364 Filter-1.28-r1.ebuild 519
-MD5 46fc3871c9ff421624fa29e74954ac01 Filter-1.29.ebuild 548
-MD5 0ba1b8bd38bdfd17b63bcd909455d901 Filter-1.30.ebuild 554
+MD5 a647789df02677ff54730ab56b651b9f Filter-1.28-r1.ebuild 494
+MD5 d99aed8f5b69bc3334377a32f134a75f Filter-1.29.ebuild 522
+MD5 57f862d649398bfc0b4aaf0e898e926f Filter-1.30.ebuild 528
 MD5 787590b36ce294bc1906cbf073cd90cc files/digest-Filter-1.28-r1 62
 MD5 787590b36ce294bc1906cbf073cd90cc files/digest-Filter-1.28 62
 MD5 0f3a524cdacf7133a3761870aeeb4de7 files/digest-Filter-1.29 62
 MD5 1d022314ef84dc63d05be090f7309520 files/digest-Filter-1.30 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB2pMytG5z4I8BtQoRAqd6AJwOV3wh1MRjKwB7RYcvGUx0M5Eo6gCbB6kl
+wDPjlKJMTo9zJpr9PuJ0I3A=
+=Jxs2
+-----END PGP SIGNATURE-----
