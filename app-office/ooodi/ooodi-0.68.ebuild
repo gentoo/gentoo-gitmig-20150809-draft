@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/ooodi/ooodi-0.68.ebuild,v 1.3 2004/05/15 09:44:49 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/ooodi/ooodi-0.68.ebuild,v 1.4 2004/05/24 09:54:27 lanius Exp $
 
 MY_P="OOodi2-${PV}"
 DESCRIPTION="automated dictionary installer for OpenOffice"
@@ -13,7 +13,8 @@ KEYWORDS="x86 ~ppc"
 IUSE="nls"
 
 DEPEND="net-misc/curl
-	=x11-libs/gtk+-2*"
+	=x11-libs/gtk+-2*
+	gnome-base/libglade"
 
 S=${WORKDIR}/${MY_P}
 
