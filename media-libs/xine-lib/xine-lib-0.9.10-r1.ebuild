@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2 
-# Author Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.10-r1.ebuild,v 1.2 2002/06/17 08:41:38 naz Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.10-r1.ebuild,v 1.3 2002/06/17 18:50:57 lostlogic Exp $ 
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Xine is a free gpl-licensed video player for unix-like systems"
@@ -18,10 +17,10 @@ DEPEND="X? ( virtual/x11 )
 	alsa? ( media-libs/alsa-lib )
 	aalib? ( media-libs/aalib )
 	oggvorbis? ( media-libs/libvorbis )"
-
 RDEPEND="${DEPEND}
 	nls? ( sys-devel/gettext )"
 
+LICENSE="GPL"
 SLOT="0"
 
 src_unpack() {
@@ -46,12 +45,16 @@ src_compile() {
 	# the next release until then let it autodetect.  See bug #2377.
 	# use aalib  || myconf="${myconf} --disable-aalib --disable-aalibtest"
 
-	use oggvorbis	\
-		|| myconf="${myconf} --disable-ogg --disable-oggtest --disable-vorbis --disable-vorbistest"
+	use oggvorbis || myconf="${myconf}
+				 --disable-ogg
+				 --disable-oggtest
+				 --disable-vorbis
+				 --disable-vorbistest"
 	
-	use avi	\
-		&& myconf="${myconf} --with-w32-path=/usr/lib/win32" \
-		|| myconf="${myconf} --disable-asf"
+	use avi	&& myconf="${myconf}
+			   --with-w32-path=/usr/lib/win32" \
+		|| myconf="${myconf}
+			   --disable-asf"
 
 	# This is ``fixes'' compilation problems when em8300 libs installed
 	# The proper fix is to follow.
