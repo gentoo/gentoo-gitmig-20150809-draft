@@ -1,6 +1,10 @@
 # ChangeLog for app-text/vilistextum
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/ChangeLog,v 1.16 2005/01/04 11:17:48 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/vilistextum/ChangeLog,v 1.17 2005/01/04 12:56:19 gustavoz Exp $
+
+  04 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  vilistextum-2.6.7.ebuild:
+  Stable on sparc wrt #74694
 
   04 Jan 2005; Aaron Walker <ka0ttic@gentoo.org> -vilistextum-2.6.1.ebuild,
   -vilistextum-2.6.2.ebuild, vilistextum-2.6.7.ebuild:
