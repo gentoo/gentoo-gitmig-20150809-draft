@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/celestia
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/celestia/ChangeLog,v 1.19 2004/09/28 04:28:26 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/celestia/ChangeLog,v 1.20 2004/09/30 22:01:26 kugelfang Exp $
+
+  01 Oct 2004; Danny van Dyk <kugelfang@gentoo.org> celestia-1.3.2.ebuild:
+  Marked ~amd64.
 
   27 Sep 2004; Daniel Goller <morfic@gentoo.org> celestia-1.3.2.ebuild:
   added ~ppc keyword
