@@ -1,8 +1,11 @@
 # ChangeLog for app-admin/msyslog
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/ChangeLog,v 1.14 2003/03/28 09:51:41 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/msyslog/ChangeLog,v 1.15 2003/04/21 20:30:47 gmsoft Exp $
 
 *msyslog-1.08e-r1 (27 Sep 2002)
+
+  21 Apr 2003; Guy Martin <gmsoft@gentoo.org> msyslog-1.09a.ebuild :
+  Added hppa to KEYWORDS. Added -fPIC to CFLAGS for hppa.
 
   28 Mar 2003; Pieter Van den Abeele <pvdabeel@gentoo.org> :
   Moving to ppc unstable
