@@ -1,6 +1,11 @@
 # ChangeLog for dev-lisp/cl-gd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-gd/ChangeLog,v 1.13 2005/03/21 07:19:31 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/cl-gd/ChangeLog,v 1.14 2005/03/31 19:21:29 mkennedy Exp $
+
+*cl-gd-0.4.6 (31 Mar 2005)
+
+  31 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org> +cl-gd-0.4.6.ebuild:
+  New upstream version.
 
   21 Mar 2005; Matthew Kennedy <mkennedy@gentoo.org> cl-gd-0.4.5.ebuild:
   Keywording for ~amd64
