@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.60 2004/06/25 00:39:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.61 2004/07/12 02:31:55 agriffis Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -87,27 +87,27 @@ setup-allowed-flags() {
 }
 
 filter-flags() {
-	local x
+	local x f fset 
+	declare -a new_CFLAGS new_CXXFLAGS
 
 	for x in "$@" ; do
 		case "${x}" in
 			-fPIC|-fpic|-fPIE|-fpie|-pie) etexec-flags;;
 			-fstack-protector|-fstack-protector-all) fstack-flags;;
-			*) ;;
 		esac
 	done
 
-	# we do this fancy spacing stuff so as to not filter
-	# out part of a flag ... we want flag atoms ! :D
-	CFLAGS=" ${CFLAGS} "
-	CXXFLAGS=" ${CXXFLAGS} "
-	for x in "$@" ; do
-		CFLAGS="${CFLAGS// ${x} / }"
-		CXXFLAGS="${CXXFLAGS// ${x} / }"
+	for fset in CFLAGS CXXFLAGS; do
+		for f in ${!fset}; do
+			for x in "$@"; do
+				# Note this should work with globs like -O*
+				[[ ${f} == ${x} ]] && continue 2
+			done
+			eval new_${fset}\[\${\#new_${fset}\[@]}]=\${f}
+		done
+		eval export ${fset}=\${new_${fset}\[*]}
 	done
-	CFLAGS="${CFLAGS:1:${#CFLAGS}-2}"
-	CXXFLAGS="${CXXFLAGS:1:${#CXXFLAGS}-2}"
-	export CFLAGS CXXFLAGS
+
 	return 0
 }
 
