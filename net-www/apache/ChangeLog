@@ -1,6 +1,12 @@
 # ChangeLog for net-www/apache
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.265 2004/09/17 08:20:27 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/ChangeLog,v 1.266 2004/09/21 08:46:31 stuart Exp $
+
+*apache-2.0.51-r1 (21 Sep 2004)
+
+  21 Sep 2004; Stuart Herbert <stuart@gentoo.org> +apache-2.0.51-r1.ebuild:
+  Added security patch from UPSTREAM for security issue CAN-2004-0811; thanks to
+  chipig for the heads up
 
   17 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org> apache-2.0.51.ebuild:
   Stable on alpha.

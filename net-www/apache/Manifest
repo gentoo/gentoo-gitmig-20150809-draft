@@ -4,7 +4,8 @@ MD5 97c0a73aabeb06a5514c1d990ab20a95 apache-1.3.31-r2.ebuild 6868
 MD5 6af26a0397f20ac96f22f7e6bf00cf43 apache-1.3.31-r3.ebuild 6873
 MD5 6fb2420645fe7cd13366395eaf0bd49e apache-1.3.31.ebuild 6700
 MD5 b64b45941d477fffdbb972e7c561aaa7 apache-2.0.50.ebuild 12924
-MD5 da5fa708a07dd7546fd4aad515b1b700 ChangeLog 46161
+MD5 f0ba331379894d2e2137b1bc2433ce7a ChangeLog 46378
+MD5 1bef7c5ddebc61d13b47f82ef2e6afe5 apache-2.0.51-r1.ebuild 12830
 MD5 5b6dd438f81019e56fa641841c0c13fe metadata.xml 501
 MD5 c95f4c4a293c07d953e70d7a7dc34148 apache-2.0.51.ebuild 12818
 MD5 8b12871dd74fcd3f4fdf451c9d8c259e files/00_apache_manual.conf 781
@@ -29,6 +30,7 @@ MD5 7d4cec8690cb2c6406b84990d8365587 files/digest-apache-1.3.31-r1 139
 MD5 7d4cec8690cb2c6406b84990d8365587 files/digest-apache-1.3.31-r2 139
 MD5 8cc0834ac7a8afa694ddb3f9f9be2cc8 files/digest-apache-1.3.31-r3 139
 MD5 0551c76a9171a3af1d0ad6aa2ef4572c files/digest-apache-2.0.50 137
+MD5 0eb9067bb4f2c2495069deaa9d7fce1b files/digest-apache-2.0.51-r1 140
 MD5 b9ff3534313dae1b8ac96df0e3e01373 files/httpd-2.0.48-ipv6.patch 865
 MD5 d52999376f67a872ee48cbae72db0160 files/httpd-2.0.49-cgi.patch 10319
 MD5 8cb4313e58d7bd5dc369eb92f75daa2b files/httpd-2.0.49-ipv6.patch 788
