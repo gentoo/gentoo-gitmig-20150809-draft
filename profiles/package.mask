@@ -1,4 +1,4 @@
-#Doesn't compile.. <18 dec 2001 - verwilst>
+#Doesn't compile.. <18 dec 2001 - Verwilst>
 =app-office/koffice-1.1.1
 
 #still playing with XFS, low latency patches (12/14/2001 - drobbins)
@@ -8,13 +8,13 @@
 =sys-apps/sysvinit-2.83-r1
 =sys-apps/baselayout-1.6.8
 
-#incomplete and very dangerous
+#incomplete and very dangerous < Danarmak >
 >=app-office/openoffice-641b
 
 #apparently has an fs unmount corruption bug
 =sys-kernel/linux-sources-2.4.15
 
-#buggy
+#buggy < Danarmak, Verwilst >
 =x11-libs/qt-x11-2.3.2
 
 #waiting for new portage dep format
@@ -37,7 +37,7 @@ media-libs/id3lib-docs
 # needs to be tested
 =sys-devel/gcc-2.95.3-r3
 
-#moved away
+#moved away < Danarmak >
 app-text/ispell-de
 app-text/aspell-de
 kde-i18n/kde-i18n
@@ -134,7 +134,6 @@ app-admin/powertweak
 media-video/avi-xmms
 app-text/sgml2x
 >=sys-apps/procps-2.0.7
->=kde-apps/quanta-2.0_pre2
 >=app-admin/modlogan-0.7.4 (achim)
 
 # unfinished
