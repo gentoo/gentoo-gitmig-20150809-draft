@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/Curses
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses/ChangeLog,v 1.9 2004/06/25 00:19:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Curses/ChangeLog,v 1.10 2004/10/02 15:54:10 mcummings Exp $
+
+*Curses-1.07 (02 Oct 2004)
+
+  02 Oct 2004; Michael Cummings <mcummings@gentoo.org>
+  +files/Curses-1.07-p5.8-fixes.diff, +Curses-1.07.ebuild:
+  New version on CPAN. FORMS support is *still* broken;
 
   17 Apr 2004; Michael McCabe <randy@gentoo.org> Curses-1.06-r2.ebuild:
   Added s390 keywords
