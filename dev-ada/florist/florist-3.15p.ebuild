@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/florist/florist-3.15p.ebuild,v 1.8 2005/01/01 17:24:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/florist/florist-3.15p.ebuild,v 1.9 2005/02/23 09:44:49 dholm Exp $
 
 inherit gnat
 
@@ -8,15 +8,21 @@ DESCRIPTION="POSIX Ada Bindings"
 HOMEPAGE="http://www.cs.fsu.edu/~baker/florist.html"
 SRC_URI="ftp://cs.nyu.edu/pub/gnat/3.15p/florist-3.15p-src.tgz"
 
-DEPEND="<dev-lang/gnat-5.0
+DEPEND="<dev-lang/gnat-3.41
 	>=sys-apps/sed-4"
 RDEPEND=""
 LICENSE="GMGPL"
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 ppc"
 IUSE=""
 
 S="${WORKDIR}/${P}-src"
+
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-fix.patch
+}
 
 src_compile() {
 	sed -i -e "s:GCST(\"SIGRTMAX\", SIGRTMAX:GCST(\"SIGRTMAX\", (NSIG - 1):" c-posix.c
