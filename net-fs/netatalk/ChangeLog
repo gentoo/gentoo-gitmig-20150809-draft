@@ -1,6 +1,9 @@
 # ChangeLog for net-fs/netatalk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.18 2004/10/09 21:20:26 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/netatalk/ChangeLog,v 1.19 2004/10/10 03:04:14 tgall Exp $
+
+  09 Oct 2004; Tom Gall <tgall@gentoo.org> netatalk-1.6.4-r1.ebuild:
+  stable on ppc64, bug #66370
 
   09 Oct 2004; Jason Wever <weeve@gentoo.org> netatalk-1.6.4-r1.ebuild:
   Stable on sparc wrt security bug #66370.
