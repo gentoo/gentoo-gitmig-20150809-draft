@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a1b49d14144c29d22becbef19793c551 ChangeLog 382
-MD5 a1a9c5c06773928d5b383da0dbfcf4f8 astrolog-5.40.ebuild 1972
+MD5 6c3fb3b7be776fa4e390d11b0c924ead ChangeLog 475
+MD5 2d4b5e14b2b7e30040569da102c6d2ba astrolog-5.40.ebuild 1975
 MD5 b6ac40cfdd9adfabf7d803ccf47865f1 metadata.xml 408
 MD5 d6e3d805e13b735f1bc9665ccd43e858 files/digest-astrolog-5.40 58
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFBHhN1I1lqEGTUzyQRAhcOAKCo/vl0WPPsmvOZLQjAh9NaBgMywQCgt3kO
-M/j7/rR+0QNmyu/qiddGOp8=
-=nPlU
------END PGP SIGNATURE-----
