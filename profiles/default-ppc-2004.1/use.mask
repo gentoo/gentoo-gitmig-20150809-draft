@@ -1,0 +1,27 @@
+# This is a list of USE flags that should not be used on PPC
+
+afs
+3dfx
+3dnow
+avi
+icc
+icc-pgo
+mmx
+svga
+sse 
+firebird
+tcc
+acpi
+
+# No stable enough gcc-3.3.x available on ppc
+nptl
+
+# For ppc SElinux support please use the SElinux profile
+# Maintained by Chris Pebenito <pebenito@gentoo.org>
+
+selinux
+
+# HDF is currently broken on ppc, masking
+# until it is fixed
+hdf
+
