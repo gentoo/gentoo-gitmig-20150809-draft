@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/postfix
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.35 2004/11/17 16:27:24 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/ChangeLog,v 1.36 2004/11/24 12:16:46 hardave Exp $
+
+  24 Nov 2004; Hardave Riar <hardave@gentoo.org> postfix-2.1.5-r1.ebuild:
+  Stable on mips, bug #56088.
 
   17 Nov 2004; Markus Rothe <corsair@gentoo.org> postfix-2.1.5-r1.ebuild:
   stable on ppc64
