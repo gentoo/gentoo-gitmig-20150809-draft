@@ -1,6 +1,11 @@
 # ChangeLog for net-im/gnugadu
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/ChangeLog,v 1.13 2004/06/24 22:52:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gnugadu/ChangeLog,v 1.14 2004/06/27 16:31:32 spock Exp $
+
+  27 Jun 2004; Michal Januszewski <spock@gentoo.org> gnugadu-2.0.1.ebuild,
+  gnugadu-2.0.2.ebuild, gnugadu-2.0.3.ebuild, gnugadu-2.0.ebuild:
+  Fixed broken arts support. This closes bug #55161. Thanks to Marcin Kryczek
+  for the fix.
 
 *gnugadu-2.0.3 (12 Jun 2004)
 
