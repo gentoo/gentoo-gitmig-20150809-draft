@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.4.7.ebuild,v 1.2 2004/08/22 22:01:47 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk+/gtk+-2.4.7.ebuild,v 1.3 2004/08/22 22:26:40 lv Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -44,6 +44,9 @@ src_unpack() {
 	# use an arch-specific config directory so that 32bit and 64bit versions
 	# dont clash on multilib systems
 	use amd64 && epatch ${DISTDIR}/gtk+-2.4.1-lib64.patch.bz2
+	# and this line is just here to make building emul-linux-x86-gtklibs a bit
+	# easier, so even this should be amd64 specific.
+	use x86 && [ "${CONF_LIBDIR}" == "lib32" ] && epatch ${DISTDIR}/gtk+-2.4.1-lib64.patch.bz2
 
 	autoconf || die
 	automake || die
@@ -75,6 +78,7 @@ src_install() {
 
 	dodir /etc/gtk-2.0
 	use amd64 && dodir /etc/gtk-2.0/${CHOST}
+	use x86 && [ "${CONF_LIBDIR}" == "lib32" ] && dodir /etc/gtk-2.0/${CHOST}
 
 	make DESTDIR=${D} install || die
 
@@ -89,6 +93,7 @@ src_install() {
 pkg_postinst() {
 
 	use amd64 && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
+	use x86 && [ "${CONF_LIBDIR}" == "lib32" ] && GTK2_CONFDIR="/etc/gtk-2.0/${CHOST}"
 	GTK2_CONFDIR=${GTK2_CONFDIR:=/etc/gtk-2.0/}
 
 	gtk-query-immodules-2.0 >	/${GTK2_CONFDIR}/gtk.immodules
