@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/libirman
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libirman/ChangeLog,v 1.10 2004/07/13 08:15:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libirman/ChangeLog,v 1.11 2004/09/01 17:11:20 eradicator Exp $
+
+  01 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  libirman-0.4.2-r1.ebuild:
+  Stable amd64, sparc, x86.
 
   13 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   libirman-0.4.2.ebuild:
