@@ -1,0 +1,6 @@
+MD5 5556efb595e0306b7d1397a160aef4ff files/digest-packit-0.6.0c 62
+MD5 5de90cc0a881c69a8ede650ae09cf7c4 files/packit-0.6.0c-gentoo.patch 1519
+MD5 5556efb595e0306b7d1397a160aef4ff files/digest-packit-0.6.0c-r1 62
+MD5 705479e9f3f67159f006dd6fb7abf980 ChangeLog 522
+MD5 ae32de89439bae73e55276430e8facf7 packit-0.6.0c.ebuild 913
+MD5 85f381387c0ba71a85ab09d9971ef88e packit-0.6.0c-r1.ebuild 694
