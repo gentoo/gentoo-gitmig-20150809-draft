@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/gsl/gsl-1.4.ebuild,v 1.7 2004/05/23 19:29:19 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/gsl/gsl-1.4.ebuild,v 1.8 2004/06/02 20:39:13 pvdabeel Exp $
 
 IUSE=""
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://sources.redhat.com/gsl/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 sparc amd64 alpha ~ppc"
+KEYWORDS="x86 sparc amd64 alpha ppc"
 
 DEPEND="virtual/glibc"
 
