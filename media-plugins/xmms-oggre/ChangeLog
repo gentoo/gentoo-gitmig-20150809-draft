@@ -1,0 +1,11 @@
+# ChangeLog for media-plugins/xmms-oggre
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-oggre/ChangeLog,v 1.1 2005/01/25 22:28:08 chriswhite Exp $
+
+*xmms-oggre-0.3 (26 Jan 2005)
+
+  26 Jan 2005; Chris White <chriswhite@gentoo.org> +metadata.xml,
+  +xmms-oggre-0.3.ebuild:
+  Initial import into the tree. Closes bug #56055. Thanks to Wolf Goetze for the
+  initial ebuild.
+

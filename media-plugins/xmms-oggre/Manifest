@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 740c7777349880fc94842b4d9542786b xmms-oggre-0.3.ebuild 903
+MD5 4e5a50f7aee667b932576ab7fdcfc85f metadata.xml 219
+MD5 05ddcac6a0adaf5b907e202902bc0926 ChangeLog 448
+MD5 5849ef3ec9c13f613059791413aee805 files/digest-xmms-oggre-0.3 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFB9sgPFdQwWVoAgN4RAptlAKDTdOHykDqI94RzVpG4pR6tS0jPEQCg3WlQ
+o2HSJEA04L/vhUsHm/+lGtY=
+=Th+7
+-----END PGP SIGNATURE-----
