@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.27.ebuild,v 1.2 2004/08/14 15:06:36 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/mldonkey-2.5.27.ebuild,v 1.3 2004/08/15 20:47:23 squinky86 Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ PATCHPACK="patch_pack27b.gz"
 
 DESCRIPTION="mldonkey is a new client to access the eDonkey network. It is written in Objective-Caml, and comes with its own GTK GUI, an HTTP interface and a telnet interface."
 HOMEPAGE="http://www.nongnu.org/mldonkey/"
-SRC_URI="http://ftp.berlios.de/pub/mldonkey/spiralvoice/cvs/${P/.5./.5-}.tar.bz2
+SRC_URI="http://ftp.berlios.de/pub/mldonkey/spiralvoice/cvs/${P}.tar.bz2
 	http://ftp.berlios.de/pub/mldonkey/spiralvoice/patchpacks/${PATCHPACK}"
 
 LICENSE="GPL-2"
@@ -31,7 +31,7 @@ DEPEND="${RDEPEND}
 MLUSER="p2p"
 
 src_unpack() {
-	unpack ${P/.5./.5-}.tar.bz2
+	unpack ${P}.tar.bz2
 	cd ${S}
 	epatch ${DISTDIR}/${PATCHPACK}
 	export WANT_AUTOCONF=2.5
