@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.2.2-r1.ebuild,v 1.8 2002/09/02 16:47:00 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/mod_php-4.2.2-r1.ebuild,v 1.9 2002/09/02 16:57:07 drobbins Exp $
 
 MY_P=php-${PV}
 S=${WORKDIR}/${MY_P}
@@ -162,14 +162,14 @@ src_compile() {
 		myconf="${myconf} --with-xpm-dir=/usr/X11R6"
 		LDFLAGS="$LDFLAGS -L/usr/X11R6/lib"
 	fi
-    
+
 	# this needed moving to prevent b0rkage
 	# Please test your ebuilds!
 	# --with-gmp \
 
 	./configure \
 		--prefix=/usr \
-                --with-bz2 \
+		--with-bz2 \
 		--enable-ftp \
 		--enable-dbase \
 		--with-zlib=yes \
