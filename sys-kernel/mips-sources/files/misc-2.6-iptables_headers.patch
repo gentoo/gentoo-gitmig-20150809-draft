@@ -1,0 +1,62 @@
+--- include/linux/netfilter.h	2004-06-07 12:15:03 +09:00
++++ include/linux/netfilter.h	2004-06-19 02:10:55 +09:00
+@@ -10,6 +10,7 @@
+ #include <linux/wait.h>
+ #include <linux/list.h>
+ #endif
++#include <linux/compiler.h>
+ 
+ /* Responses from hook functions. */
+ #define NF_DROP 0
+--- include/linux/netfilter_arp/arp_tables.h	2004-06-04 09:52:00 +09:00
++++ include/linux/netfilter_arp/arp_tables.h	2004-06-19 02:08:09 +09:00
+@@ -16,7 +16,7 @@
+ #include <linux/if_arp.h>
+ #include <linux/skbuff.h>
+ #endif
+-
++#include <linux/compiler.h>
+ #include <linux/netfilter_arp.h>
+ 
+ #define ARPT_FUNCTION_MAXNAMELEN 30
+--- include/linux/netfilter_ipv4/ip_tables.h	2004-06-07 12:15:03 +09:00
++++ include/linux/netfilter_ipv4/ip_tables.h	2004-06-19 02:08:39 +09:00
+@@ -22,6 +22,7 @@
+ #include <linux/ip.h>
+ #include <linux/skbuff.h>
+ #endif
++#include <linux/compiler.h>
+ #include <linux/netfilter_ipv4.h>
+ 
+ #define IPT_FUNCTION_MAXNAMELEN 30
+@@ -336,8 +337,8 @@
+ /*
+  *	Main firewall chains definitions and global var's definitions.
+  */
+-static DECLARE_MUTEX(ipt_mutex);
+ #ifdef __KERNEL__
++static DECLARE_MUTEX(ipt_mutex);
+ 
+ #include <linux/init.h>
+ extern void ipt_init(void) __init;
+--- include/linux/netfilter_ipv6/ip6_tables.h	2004-06-07 12:15:04 +09:00
++++ include/linux/netfilter_ipv6/ip6_tables.h	2004-06-19 02:09:29 +09:00
+@@ -22,6 +22,7 @@
+ #include <linux/ipv6.h>
+ #include <linux/skbuff.h>
+ #endif
++#include <linux/compiler.h>
+ #include <linux/netfilter_ipv6.h>
+ 
+ #define IP6T_FUNCTION_MAXNAMELEN 30
+@@ -106,7 +107,9 @@
+ 	u_int64_t pcnt, bcnt;			/* Packet and byte counters */
+ };
+ 
++#ifdef __KERNEL__
+ static DECLARE_MUTEX(ip6t_mutex);
++#endif
+ 
+ /* Values for "flag" field in struct ip6t_ip6 (general ip6 structure). */
+ #define IP6T_F_PROTO		0x01	/* Set if rule cares about upper 
+

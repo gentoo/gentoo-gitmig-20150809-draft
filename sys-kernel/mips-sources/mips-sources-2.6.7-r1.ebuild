@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.6.ebuild,v 1.2 2004/06/24 22:59:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.6.7-r1.ebuild,v 1.1 2004/07/01 23:39:04 kumba Exp $
 
 
 # Version Data
 OKV=${PV/_/-}
-CVSDATE="20040510"
-COBALTPATCHVER="1.4"
+CVSDATE="20040621"
+COBALTPATCHVER="1.5"
 IP32DIFFDATE="20040402"
 EXTRAVERSION="-mipscvs-${CVSDATE}"
 KV="${OKV}${EXTRAVERSION}"
@@ -21,10 +21,12 @@ inherit kernel eutils
 
 # INCLUDED:
 # 1) linux sources from kernel.org
-# 2) linux-mips.org CVS snapshot diff from 10 May 2004
-# 3) Patch to fix the Swap issue in 2.6.5+ (Credit: Peter Horton <cobalt@colonel-panic.org>
+# 2) linux-mips.org CVS snapshot diff from 21 Jun 2004
+# 3) Patch to fix an O2 compile-time error
 # 4) Iluxa's minimal O2 Patchset
-# 5) Patches for Cobalt support
+# 5) Security fixes
+# 6) patch to fix iptables build failures
+# 7) Patches for Cobalt support
 
 
 DESCRIPTION="Linux-Mips CVS sources for MIPS-based machines, dated ${CVSDATE}"
@@ -62,12 +64,22 @@ src_unpack() {
 	# Update the vanilla sources with linux-mips CVS changes
 	epatch ${WORKDIR}/mipscvs-${OKV}-${CVSDATE}.diff
 
-	# Bug in 2.6.6 that triggers a kernel oops when swap is activated
-	epatch ${FILESDIR}/mipscvs-2.6.5-swapbug-fix.patch
-
+	# iluxa's minpatchset for SGI O2
 	echo -e ""
 	einfo ">>> Patching kernel with iluxa's minimal IP32 patchset ..."
 	epatch ${WORKDIR}/ip32-iluxa-minpatchset-${IP32DIFFDATE}.diff
+
+	# Fix a compile glitch for SGI O2/IP32
+	epatch ${FILESDIR}/mipscvs-2.6.7-maceisa_rtc_irq-fix.patch
+
+	# Security Fixes
+	echo -e ""
+	ebegin "Applying Security Fixes"
+		epatch ${FILESDIR}/CAN-2004-0626-death_packet.patch
+	eend
+
+	# Misc Fixes
+	epatch ${FILESDIR}/misc-2.6-iptables_headers.patch
 
 	# Cobalt Patches
 	if [ "${PROFILE_ARCH}" = "cobalt" ]; then

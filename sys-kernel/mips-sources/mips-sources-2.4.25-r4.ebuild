@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.25-r3.ebuild,v 1.2 2004/06/24 22:59:06 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.25-r4.ebuild,v 1.1 2004/07/01 23:39:04 kumba Exp $
 
 
 # Version Data
@@ -66,6 +66,8 @@ src_unpack() {
 		epatch ${FILESDIR}/CAN-2004-0181-2.4-jfs_ext3.patch
 		epatch ${FILESDIR}/CAN-2004-0394-panic.patch
 		epatch ${FILESDIR}/CAN-2004-0427-2.4-do_fork.patch
+		epatch ${FILESDIR}/CAN-2004-0495-2.4-sparse.patch
+		epatch ${FILESDIR}/CAN-2004-0535-2.4-e1000.patch
 	eend
 
 	# Cobalt Patches
