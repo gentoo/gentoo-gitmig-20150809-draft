@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xmms-plugin.eclass,v 1.14 2005/02/12 02:15:05 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xmms-plugin.eclass,v 1.15 2005/02/12 10:26:06 eradicator Exp $
 #
 # Jeremy Huddleston <eradicator@gentoo.org>
 
@@ -41,24 +41,30 @@ S="${WORKDIR}/xmms-${PV}"
 
 RDEPEND="${RDEPEND+${RDEPEND}}${RDEPEND-${DEPEND}}"
 DEPEND="${DEPEND}
-        =sys-devel/automake-1.7*
+	=sys-devel/automake-1.7*
 	=sys-devel/autoconf-2.5*
 	sys-devel/libtool"
 
 xmms-plugin_src_unpack() {
+	if ! has_version '>=media-sound/xmms-1.2.10-r13'; then
+		ewarn "You don't have >=media-sound/xmms-1.2.10-r13, so we are using the SDK in"
+		ewarn "this package rather that the one installed on your system. It is recommended"
+		ewarn "that you cancel this emerge and grab >=media-sound/xmms-1.2.10-r13 first."
+		epause 5
+	fi
+
 	unpack ${A}
 
 	cd ${S}
 	if [[ -n "${PATCH_VER}" ]]; then
-
 		EPATCH_SUFFIX="patch"
 		epatch ${WORKDIR}/patches
 	fi
 
 	cd ${S}/${PLUGIN_PATH}
-	sed -i -e 's:-I$(top_srcdir)::g' \
+	sed -i -e "s:-I\$(top_srcdir)::g" \
 	       -e "s:\$(top_builddir)/libxmms/libxmms.la:/usr/$(get_libdir)/libxmms.la:g" \
-	       Makefile.am
+	       Makefile.am || die "Failed to edit Makefile.am"
 
 	cd ${S}
 
@@ -75,6 +81,14 @@ xmms-plugin_src_unpack() {
 	fi
 	autoheader || die "autoheader failed"
 	automake --gnu --add-missing --include-deps --force-missing --copy || die "automake failed"
+
+	cd ${S}/${PLUGIN_PATH}
+	if has_version '>=media-sound/xmms-1.2.10-r13'; then
+		sed -i -e "s:^DEFAULT_INCLUDES = .*$:DEFAULT_INCLUDES = -I. $(xmms-config --cflags):" \
+			Makefile.in || die "Failed to edit Makefile.in"
+	fi
+
+	cd ${S}
 	autoconf || die "autoconf failed"
 }
 
@@ -88,8 +102,9 @@ xmms-plugin_src_compile() {
 	fi
 
 	econf ${myconf}
-	cd ${S}/${PLUGIN_PATH}
+	cp config.h ${S}/${PLUGIN_PATH}
 
+	cd ${S}/${PLUGIN_PATH}
 	emake -j1 || die
 }
 
