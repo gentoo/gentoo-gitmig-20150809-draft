@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/maildrop-1.5.2.ebuild,v 1.5 2003/09/05 08:59:20 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/maildrop/maildrop-1.5.2.ebuild,v 1.6 2003/10/15 17:29:23 mholzer Exp $
 
 IUSE="mysql ldap gdbm berkdb"
 
@@ -38,11 +38,10 @@ src_compile() {
 			--with-ldapconfig=/etc/maildrop/maildropldap.cf" \
 		|| myconf="${myconf} --disable-maildropldap"
 
-	if use berkdb; then
-		myconf="${myconf} --with-db=db"
-	elif use gdbm; then
-		myconf="${myconf} --with-db=gdbm"
-	fi
+	use berkdb \
+		&& myconf="${myconf} --with-db=db"
+	use gdbm \
+		&& myconf="${myconf} --with-db=gdbm"
 
 	econf \
 		--with-devel \
@@ -58,7 +57,9 @@ src_compile() {
 		--enable-sendmail=/usr/sbin/sendmail \
 		${myconf} || die
 
-	emake || die "compile problem"
+	use ldap \
+		&& emake LIBLDAP='-lldap -llber -lresolv' \
+		|| emake
 }
 
 src_install() {
