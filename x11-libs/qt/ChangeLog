@@ -1,6 +1,6 @@
 # ChangeLog for x11-libs/qt
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.25 2002/08/12 09:18:41 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/ChangeLog,v 1.26 2002/08/14 07:10:48 pvdabeel Exp $
 
   12 Aug 2002; Dan Armak <danarmak@gentoo.org> qt-2.3.2-r1.ebuild  :
 
@@ -23,6 +23,9 @@
 
 *qt-3.0.5-r1 (25 Jul 2002)
 
+  13 Aug 2002; Pieter Van den Abeele <pvdabeel@gentoo.org> :
+  Added ppc keyword
+ 
   25 Jul 2002; Jays Kwak <jayskwak@gentoo.org> qt-3.0.5-r1.ebuild
   Added Korean input patch
 
