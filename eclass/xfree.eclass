@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfree.eclass,v 1.16 2004/02/21 23:18:52 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfree.eclass,v 1.17 2004/02/21 23:33:07 spyderous Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 #
@@ -26,7 +26,6 @@ filter-patch() {
 
 patch_exclude() {
 	# Exclude patches matching a pattern if they exist
-	einfo "Excluding patches..."
 	for PATCH_GROUP in ${@}
 	do
 		# Repress errors for non-matching patterns, they're ugly
@@ -40,7 +39,6 @@ patch_exclude() {
 			fi
 		done
 	done
-	einfo "Done excluding patches"
 }
 
 
