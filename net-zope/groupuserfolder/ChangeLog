@@ -1,6 +1,12 @@
 # ChangeLog for net-zope/groupuserfolder
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/groupuserfolder/ChangeLog,v 1.9 2005/03/19 17:29:20 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/groupuserfolder/ChangeLog,v 1.10 2005/03/26 01:33:24 radek Exp $
+
+*groupuserfolder-3.2 (26 Mar 2005)
+
+  26 Mar 2005; Radoslaw Stachowiak <radek@gentoo.org>
+  +groupuserfolder-3.2.ebuild:
+  version bump, closes #85120, opens pandora box for plone 2.0 ;)
 
   19 Mar 2005; Jason Wever <weeve@gentoo.org> groupuserfolder-2.0.1.ebuild:
   Added ~sparc keyword wrt bug #84791.
