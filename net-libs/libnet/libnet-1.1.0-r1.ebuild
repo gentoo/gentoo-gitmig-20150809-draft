@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.1.0-r1.ebuild,v 1.4 2003/03/25 05:20:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libnet/libnet-1.1.0-r1.ebuild,v 1.5 2003/04/23 00:12:05 lostlogic Exp $
 
 S=${WORKDIR}/Libnet-latest
 DESCRIPTION="library to provide an API for commonly used low-level network
@@ -9,7 +9,7 @@ not to be confused with the perl libnet"
 SRC_URI="http://www.packetfactory.net/${PN}/dist/${P}.tar.gz"
 HOMEPAGE="http://www.packetfactory.net/libnet/"
 
-DEPEND="sys-apps/supersed"
+DEPEND="=sys-apps/sed-4*"
 
 SLOT="1.1"
 LICENSE="LGPL-2"
@@ -28,7 +28,7 @@ src_compile(){
 src_install(){
 	make DESTDIR=${D} install || die "Failed to install"
 
-	ssed -i "s/libnet-config/&-${PV}/" libnet-config
+	sed -i "s/libnet-config/&-${PV}/" libnet-config
 	exeinto /usr/bin 
 	newexe libnet-config libnet-config-${PV}
 
