@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.7.6.ebuild,v 1.1 2002/03/24 19:12:57 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.7.6.ebuild,v 1.2 2002/03/31 19:17:51 drobbins Exp $
 
 SV="1.3.2"
 SVREV=""
@@ -15,10 +15,11 @@ HOMEPAGE="http://www.gentoo.org"
 
 DEPEND="sys-kernel/linux-headers"
 RDEPEND=""
-if [ -z "`use build`" ]
-then
-	RDEPEND="sys-apps/kbd"
-fi
+#baselayout shouldn't have any runtime dependencies.  it creates circular deps fast.
+#if [ -z "`use build`" ]
+#then
+#	RDEPEND="sys-apps/kbd"
+#fi
 
 #This ebuild needs to be merged "live".  You can't simply make a package of it and merge it later.
 

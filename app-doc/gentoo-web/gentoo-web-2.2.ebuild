@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc. Distributed under the terms
 # of the GNU General Public License, v2 or later 
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.41 2002/03/07 16:46:11 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/gentoo-web/gentoo-web-2.2.ebuild,v 1.42 2002/03/31 19:17:51 drobbins Exp $
  
 # WARNING: THIS EBUILD SHOULD BE EDITED BY DANIEL ROBBINS ONLY
  
@@ -113,6 +113,8 @@ src_install() {
 
 	dobin ${DISTDIR}/cvs2cl.pl
 	dosbin ${S}/bin/cvslog.sh
+	cd ${D}
+	chmod -R +r *
 }
 
 pkg_preinst() {
