@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.26.7-r3.ebuild,v 1.3 2004/12/31 11:13:12 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/fritzcapi-2.6.26.7-r3.ebuild,v 1.4 2005/01/20 22:09:50 genstef Exp $
 
 inherit linux-mod rpm eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.suse.com/pub/suse/i386/update/9.1/rpm/i586/km_${P/2.6./2.6-}.
 
 LICENSE="LGPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="pcmcia usb"
 
 DEPEND=">=net-dialup/capi4k-utils-20040810"

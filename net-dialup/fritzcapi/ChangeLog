@@ -1,6 +1,10 @@
 # ChangeLog for net-dialup/fritzcapi
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/ChangeLog,v 1.7 2004/12/31 11:13:12 mrness Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/fritzcapi/ChangeLog,v 1.8 2005/01/20 22:09:50 genstef Exp $
+
+  20 Jan 2005; Stefan Schweizer <genstef@gentoo.org>
+  fritzcapi-2.6.26.7-r3.ebuild:
+  x86 stable
 
   31 Dec 2004; Alin Nastac <mrness@gentoo.org>
   +files/fritzcapi-2.6.26.7-fix-for-2.6.10.patch,
