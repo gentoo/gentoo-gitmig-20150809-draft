@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/libf2c-20021004.ebuild,v 1.9 2004/06/24 23:16:50 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libf2c/libf2c-20021004.ebuild,v 1.10 2004/06/30 22:19:00 kugelfang Exp $
 
 inherit gcc
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.netlib.org/f2c/${PN}.zip"
 
 LICENSE="libf2c"
 SLOT="0"
-KEYWORDS="x86 ~amd64"
+KEYWORDS="x86 -amd64"
 
 DEPEND="virtual/glibc"
 
