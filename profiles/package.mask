@@ -1,6 +1,12 @@
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 
+# 
+net-mail/vlnx
+
+# bug #468
+net-www/zope
+
 #18 Mar 2002, drobbins: this doesn't build if USE="-* build" is set
 #>=sys-apps/sh-utils-2.0.11-r2
 
@@ -27,10 +33,10 @@
 
 # Mozilla installs correctly, but there is a java-config error with the plugin
 # This is more a java-config bug ....
-=net-www/mozilla-0.9.9
+#=net-www/mozilla-0.9.9
 
 # Galeon 1.2.0 depends on Mozilla 0.9.9
->=net-www/galeon-1.1.0
+#>=net-www/galeon-1.1.0
 
 # Let's see how this works
 #>=sys-apps/pcmcia-cs-3.1.33
