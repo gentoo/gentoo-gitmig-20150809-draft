@@ -1,6 +1,9 @@
 # ChangeLog for xfce-extra/xfce4-artwork
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-artwork/ChangeLog,v 1.6 2005/01/29 20:16:33 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/xfce-extra/xfce4-artwork/ChangeLog,v 1.7 2005/01/31 15:15:35 lanius Exp $
+
+  31 Jan 2005; lanius@gentoo.org xfce4-artwork-0.0.4-r1.ebuild:
+  stable on amd64
 
   29 Jan 2005; Lars Weiler <pylon@gentoo.org> xfce4-artwork-0.0.4-r1.ebuild:
   Stable on ppc.
