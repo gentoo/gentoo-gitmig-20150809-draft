@@ -1,6 +1,10 @@
 # ChangeLog for x11-misc/gdeskcal
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gdeskcal/ChangeLog,v 1.3 2004/07/19 09:17:37 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gdeskcal/ChangeLog,v 1.4 2004/07/23 01:59:22 pclouds Exp $
+
+  23 Jul 2004; <pclouds@gentoo.org> gdeskcal-0.57.1.ebuild,
+  gdeskcal-0.57.1-gnomeui.patch:
+  Added gnome use flag, which uses libgnomeui to support session if possible
 
   19 Jul 2004; <pclouds@gentoo.org> gdeskcal-0.57.1.ebuild:
   Some stylistic changes: removed using tr, moved GDESKCAL_DIR inside 

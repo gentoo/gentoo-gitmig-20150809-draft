@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/gdeskcal/gdeskcal-0.57.1.ebuild,v 1.3 2004/07/19 09:17:37 pclouds Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/gdeskcal/gdeskcal-0.57.1.ebuild,v 1.4 2004/07/23 01:59:22 pclouds Exp $
+
+inherit eutils
 
 DESCRIPTION="Cute little eye-candy calendar for the desktop"
 HOMEPAGE="http://www.pycage.de/software_gdeskcal.html"
@@ -18,12 +20,18 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc"
 
-IUSE=""
+IUSE="gnome"
 
 DEPEND=">=dev-lang/python-2.0
 	>=x11-libs/gtk+-2.0
 	>=dev-libs/glib-2.0
 	>=dev-python/pygtk-2.0"
+
+src_unpack() {
+	unpack ${A}
+	# Session support for gDeskCal (requires pygtk[gnome])
+	use gnome && epatch ${FILESDIR}/${P}-gnomeui.patch
+}
 
 src_install() {
 	# put documents in the right place

@@ -1,0 +1,29 @@
+diff -ur gDeskCal-0.57.1/gdeskcal gDeskCal-0.57.1.new/gdeskcal
+--- gDeskCal-0.57.1/gdeskcal	2004-03-16 05:46:05.000000000 +0700
++++ gDeskCal-0.57.1.new/gdeskcal	2004-07-23 08:26:49.852863792 +0700
+@@ -93,13 +93,21 @@
+ ensure_transparency()
+ 
+ try:
+-    index = sys.argv.index("--sm-client-id")
+-    cid = sys.argv[index + 1]
++    import gnome.ui
++    client = gnome.ui.master_client()
++    if (client):
++        client.set_restart_style(gnome.ui.RESTART_IF_RUNNING)
++        client.set_restart_command([sys.argv[0]])
+ 
+ except:
+-    cid = "gdeskcal"	
++    try:
++        index = sys.argv.index("--sm-client-id")
++        cid = sys.argv[index + 1]
+ 
+-gtk.gdk.set_sm_client_id(cid)
++    except:
++        cid = "gdeskcal"    
++
++    gtk.gdk.set_sm_client_id(cid)
+ 
+ dcal = CalMediator()
+ 
