@@ -1,0 +1,7 @@
+# ChangeLog for app-editors/amyedit
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/amyedit/ChangeLog,v 1.1 2005/03/15 11:13:37 pclouds Exp $
+
+  15 Mar 2005; <pclouds@gentoo.org> +metadata.xml:
+  Initial ebuild by Robert Paskowitz <rpaskowitz@confucius.ca> #81048
+
