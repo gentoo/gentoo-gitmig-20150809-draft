@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.1.2.ebuild,v 1.2 2003/05/13 01:28:08 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.1.2.ebuild,v 1.3 2003/05/16 21:06:02 brain Exp $
 inherit kde-dist eutils
 
 IUSE="ldap pam motif encode oggvorbis cups ssl opengl samba java"
@@ -19,7 +19,8 @@ newdepend ">=media-sound/cdparanoia-3.9.8
 	opengl? ( virtual/opengl )
 	samba? ( net-fs/samba )
 	java? ( virtual/jdk )
-	>=media-libs/freetype-2" 
+	>=media-libs/freetype-2
+	dev-util/pkgconfig" 
 #	lm_sensors? ( ?/lm_sensors ) # ebuild doesn't exist yet
 
 RDEPEND="$RDEPEND sys-apps/eject"
@@ -37,9 +38,11 @@ use ssl		&& myconf="$myconf --with-ssl"		|| myconf="$myconf --without-ssl"
 use pam		&& myconf="$myconf --with-pam=yes"	|| myconf="$myconf --with-pam=no --with-shadow"
 use java	&& myconf="$myconf --with-java=$(java-config --jdk-home)"	|| myconf="$myconf --without-java"
 
-PATCHES="$FILESDIR/$PVR/sftp.patch"
+PATCHES="$FILESDIR/$PVR/sftp.patch $FILESDIR/$PVR/fontconfig-2.2-support.patch"
 
 src_compile() {
+	rm -f configure configure.in
+	make -f admin/Makefile.common
 	kde_src_compile myconf configure
 	kde_remove_flag kdm/kfrontend -fomit-frame-pointer
 	kde_src_compile make
