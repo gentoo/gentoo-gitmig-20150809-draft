@@ -1,6 +1,10 @@
 # ChangeLog for app-emulation/bochs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.11 2003/09/25 13:04:50 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/bochs/ChangeLog,v 1.12 2003/09/29 20:28:26 mholzer Exp $
+
+  29 Sep 2003; Martin Holzer <mholzer@gentoo.org> bochs-2.0.2.ebuild,
+  files/bochs-2.0.2-gcc3.patch:
+  Added gcc3 fix. Closes #29523
 
   25 Sep 2003; Tavis Ormandy <taviso@gentoo.org> bochs-2.0.2.ebuild:
   testing on alpha (~alpha)
