@@ -1,4 +1,2 @@
-MD5 530c64632d1a692803b1363ab111f6c1 ChangeLog 586
-MD5 dd3e0df9210a789b282ac2998346e739 pnet-0.5.4.ebuild 859
-MD5 da575eba7a80f006c094595ccc3d3131 files/digest-pnet-0.5.4 63
-MD5 978033a0205bd161019e8cc8f7e44cc4 files/pnet-0.5.4.patch 1098
+MD5 a8b429aa9a6dc6b1d5264bc06923efd0 pnet-0.5.6.ebuild 627
+MD5 444f81ca149bcbad8ace433427a1662c files/digest-pnet-0.5.6 63
