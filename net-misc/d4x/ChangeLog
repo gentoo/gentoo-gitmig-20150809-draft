@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/d4x
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/ChangeLog,v 1.10 2003/07/13 14:31:35 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/d4x/ChangeLog,v 1.11 2003/08/31 14:54:23 liquidx Exp $
+
+*d4x-2.5.0_beta2 (31 Aug 2003)
+
+  31 Aug 2003; Alastair Tse <liquidx@gentoo.org> d4x-2.5.0_beta2.ebuild :
+  version bump. fixed some old compile probs (#24504). thanks to Nicolas Kaiser
+  <nikai@nikai.net>
 
 *d4x-2.4.1-r1 (30 Mar 2003)
 
