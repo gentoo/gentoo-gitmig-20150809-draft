@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/java-sdk-docs-1.5.0_rc.ebuild,v 1.1 2004/09/21 08:39:39 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-sdk-docs/java-sdk-docs-1.5.0.ebuild,v 1.7 2004/10/02 17:32:53 axxo Exp $
 
-SRC_URI="jdk-1_5_0-rc-doc.zip"
+SRC_URI="jdk-1_5_0-doc.zip"
 DESCRIPTION="Javadoc for Java SDK version 1.5.0 Beta 2"
 HOMEPAGE="http://java.sun.com/j2se/1.5.0/"
 LICENSE="sun-j2sl"
@@ -12,12 +12,14 @@ IUSE=""
 DEPEND=">=app-arch/unzip-5.50-r1"
 RESTRICT="fetch"
 
-DOWNLOAD_URL="http://javashoplm.sun.com/ECom/docs/Welcome.jsp?StoreId=22&PartDetailId=jdk-1.5.0-rc-doc-oth-JPR&SiteId=JSC&TransactionId=noreg"
+DOWNLOAD_URL="http://javashoplm.sun.com/ECom/docs/Welcome.jsp?StoreId=22&PartDetailId=jdk-1.5.0-doc-oth-JPR&SiteId=JSC&TransactionId=noreg"
 
 S="${WORKDIR}/docs"
 
 pkg_nofetch() {
-	einfo "Please download ${SRC_URI} from ${DOWNLOAD_URL} and move it to ${DISTDIR}"
+	einfo "Please download ${SRC_URI} from "
+	einfo "${DOWNLOAD_URL}"
+	einfo "and move it to ${DISTDIR}"
 }
 
 src_install(){
