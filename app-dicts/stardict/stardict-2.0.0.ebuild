@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-2.0.0.ebuild,v 1.4 2003/07/16 15:22:04 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-2.0.0.ebuild,v 1.5 2003/09/06 22:15:57 msterret Exp $
 
 inherit gnome2
 
@@ -20,7 +20,7 @@ RDEPEND=">=x11-libs/gtk+-2
 	>=gnome-base/bonobo-activation-2.2.0"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
-	
+
 src_unpack() {
 	unpack ${A}
 	gnome2_omf_fix

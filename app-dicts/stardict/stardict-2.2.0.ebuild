@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-2.2.0.ebuild,v 1.6 2003/07/16 15:22:04 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/stardict/stardict-2.2.0.ebuild,v 1.7 2003/09/06 22:15:57 msterret Exp $
 
 inherit gnome2
 
@@ -28,7 +28,7 @@ RDEPEND=">=gnome-base/libbonobo-2.2.0
 	>=dev-libs/popt-1.7
 	>=gnome-base/ORBit2-2.6
 	>=x11-libs/gtk+-2"
-	
+
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 

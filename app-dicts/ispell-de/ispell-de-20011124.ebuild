@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-de/ispell-de-20011124.ebuild,v 1.4 2003/03/08 01:07:44 vladimir Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/ispell-de/ispell-de-20011124.ebuild,v 1.5 2003/09/06 22:15:57 msterret Exp $
 
 MY_P=igerman98-${PV}
 S=${WORKDIR}/${MY_P}
@@ -24,9 +24,9 @@ src_install () {
 	make \
 		DESTDIR=${D} \
 		install swiss-install || die
-	
+
 	insinto /usr/lib/ispell
 	doins german.aff german.hash
- 
+
 	dodoc Documentation/*
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/gjiten-2.1.ebuild,v 1.4 2003/07/16 15:19:24 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-dicts/gjiten/gjiten-2.1.ebuild,v 1.5 2003/09/06 22:15:57 msterret Exp $
 
 DESCRIPTION="A Japanese dictionary program for Gnome"
 SRC_URI="http://gjiten.sourceforge.net/${P}.tar.gz"
@@ -38,7 +38,7 @@ pkg_postinst() {
 	einfo "You need kanjidic and edict at a minimum.  Dictionary files"
 	einfo "must be converted to UTF-8 format - check the Gjiten help"
 	einfo "and README files for details."
-	einfo 
+	einfo
 	einfo "A shell script is available from "
 	einfo "the Gjiten homepage(${HOMEPAGE}) to"
 	einfo "download and convert the dictionary files, but you need"
