@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.26_pre5.ebuild,v 1.1 2004/03/21 03:12:28 livewire Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.26_pre5.ebuild,v 1.2 2004/03/21 15:10:10 plasmaroo Exp $
 
 IUSE="build crypt"
 
@@ -27,8 +27,8 @@ S=${WORKDIR}/linux-${KV}
 # to /usr/share/doc/gentoo-sources-${PV}/patches.txt.gz
 
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
-	 htpp://dev.gentoo.org/~livewire/${P}.patch.bz2"
-KEYWORDS="~x86 -ppc -sparc "
+	 http://dev.gentoo.org/~livewire/${P}.patch.bz2"
+KEYWORDS="~x86 -ppc -sparc"
 SLOT="${KV}"
 DESCRIPTION="Full sources for the Gentoo Kernel."
 src_unpack() {
