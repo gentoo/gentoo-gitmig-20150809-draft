@@ -1,0 +1,11 @@
+# ChangeLog for dev-haskell/hdoc
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/hdoc/ChangeLog,v 1.1 2003/04/22 08:26:25 kosmikus Exp $
+
+*hdoc-0.8.2 (22 Apr 2003)
+
+  22 Apr 2003; Andres Loeh <kosmikus@gentoo.org> all :
+
+  Initial import. Thanks to Thomas L. Bevan <tom@regex.com.au> for submitting an
+  ebuild (#3970). hdoc is a tool to generate documentation automatically from
+  Haskell source files, much like javadoc.
