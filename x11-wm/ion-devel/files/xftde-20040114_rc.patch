@@ -1,0 +1,679 @@
+--- ../ion-2rc-20040114/de/init.c	2004-01-03 01:27:28.000000000 +0100
++++ init.c	2003-12-18 20:41:53.000000000 +0100
+@@ -1,7 +1,7 @@
+ /*
+  * ion/de/init.c
+  *
+- * Copyright (c) Tuomo Valkonen 1999-2004. 
++ * Copyright (c) Tuomo Valkonen 1999-2003. 
+  *
+  * Ion is free software; you can redistribute it and/or modify it under
+  * the terms of the GNU Lesser General Public License as published by
+@@ -105,14 +105,14 @@
+ static void get_colour_group(WRootWin *rootwin, DEColourGroup *cg, 
+ 							 ExtlTab tab)
+ {
+-	get_colour(rootwin, &(cg->hl), tab, "highlight_colour",
+-			   DE_WHITE(rootwin));
+-	get_colour(rootwin, &(cg->sh), tab, "shadow_colour",
+-			   DE_WHITE(rootwin));
+-	get_colour(rootwin, &(cg->bg), tab, "background_colour",
+-			   DE_BLACK(rootwin));
+-	get_colour(rootwin, &(cg->fg), tab, "foreground_colour",
+-			   DE_WHITE(rootwin));
++	DEColour black, white;
++
++	de_alloc_colour(rootwin, &black, "black");
++	de_alloc_colour(rootwin, &white, "white");
++	get_colour(rootwin, &(cg->hl), tab, "highlight_colour", white);
++	get_colour(rootwin, &(cg->sh), tab, "shadow_colour", white);
++	get_colour(rootwin, &(cg->bg), tab, "background_colour", black);
++	get_colour(rootwin, &(cg->fg), tab, "foreground_colour", white);
+ 	get_colour(rootwin, &(cg->pad), tab, "padding_colour", cg->bg);
+ }
+ 
+@@ -253,29 +253,30 @@
+ /*{{{ Module initialisation */
+ 
+ 
+-#include "../version.h"
++#include "version.h"
+ 
+-char de_module_ion_api_version[]=ION_API_VERSION;
++char xftde_module_ion_api_version[]=ION_API_VERSION;
++const char *modname="xftde";
+ 
+ 
+-extern bool de_module_register_exports();
+-extern void de_module_unregister_exports();
++extern bool xftde_module_register_exports();
++extern void xftde_module_unregister_exports();
+ 
+ 
+-bool de_module_init()
++bool xftde_module_init()
+ {
+ 	WRootWin *rootwin;
+ 	DEStyle *style;
+-	
+-	if(!de_module_register_exports())
++
++	if(!xftde_module_register_exports())
+ 		return FALSE;
+ 	
+ 	if(!read_config("delib"))
+ 		goto fail;
+ 	
+-	if(!gr_register_engine("de", (GrGetBrushFn*)&de_get_brush,
++	if(!gr_register_engine(modname, (GrGetBrushFn*)&de_get_brush,
+ 						   (GrGetValuesFn*)&de_get_brush_values)){
+-		warn("DE module", "Failed to register the drawing engine");
++		warn(modname, "Failed to register the drawing engine");
+ 		goto fail;
+ 	}
+ 	
+@@ -283,7 +284,7 @@
+ 	FOR_ALL_ROOTWINS(rootwin){
+ 		style=de_create_style(rootwin, "*");
+ 		if(style==NULL){
+-			warn_obj("DE module", "Could not initialise fallback style for "
++			warn_obj(modname, "Could not initialise fallback style for "
+ 					 "root window %d.\n", rootwin->xscr);
+ 		}else{
+ 			style->is_fallback=TRUE;
+@@ -294,15 +295,15 @@
+ 	return TRUE;
+ 	
+ fail:
+-	de_module_unregister_exports();
++	xftde_module_unregister_exports();
+ 	return FALSE;
+ }
+ 
+ 
+-void de_module_deinit()
++void xftde_module_deinit()
+ {
+-	gr_unregister_engine("de");
+-	de_module_unregister_exports();
++	gr_unregister_engine(modname);
++	xftde_module_unregister_exports();
+ 	de_deinit_styles();
+ }
+ 
+--- ../ion-2rc-20040114/de/draw.c	2004-01-03 01:27:28.000000000 +0100
++++ draw.c	2003-12-18 20:41:53.000000000 +0100
+@@ -1,7 +1,7 @@
+ /*
+  * ion/de/draw.c
+  *
+- * Copyright (c) Tuomo Valkonen 1999-2004. 
++ * Copyright (c) Tuomo Valkonen 1999-2003. 
+  *
+  * Ion is free software; you can redistribute it and/or modify it under
+  * the terms of the GNU Lesser General Public License as published by
+@@ -72,7 +72,7 @@
+ 	w--;
+ 	h--;
+ 
+-	XSetForeground(wglobal.dpy, gc, tlc);
++	XSetForeground(wglobal.dpy, gc, tlc.pixel);
+ 
+ 	
+ 	a=(br!=0);
+@@ -92,7 +92,7 @@
+ 	}
+ 
+ 	
+-	XSetForeground(wglobal.dpy, gc, brc);
++	XSetForeground(wglobal.dpy, gc, brc.pixel);
+ 
+ 	a=(tl!=0);
+ 	b=0;
+@@ -214,7 +214,7 @@
+ 	}
+ 	
+ 	if(MATCHES2("*-*-tagged", a1, a2)){
+-		XSetForeground(wglobal.dpy, d->copy_gc, cg->fg);
++		XSetForeground(wglobal.dpy, d->copy_gc, cg->fg.pixel);
+ 			
+ 		copy_masked(brush, d->tag_pixmap, win, 0, 0,
+ 					d->tag_pixmap_w, d->tag_pixmap_h,
+@@ -266,7 +266,7 @@
+ 	GC gc=brush->d->normal_gc;
+ 	
+ 	if(TRUE/*needfill*/){
+-		XSetForeground(wglobal.dpy, gc, cg->bg);
++		XSetForeground(wglobal.dpy, gc, cg->bg.pixel);
+ 		XFillRectangle(wglobal.dpy, win, gc, geom->x, geom->y, 
+ 					   geom->w, geom->h);
+ 	}
+@@ -499,7 +499,7 @@
+ 		attr.background_pixmap=ParentRelative;
+ 	}else{
+ 		attrflags=CWBackPixel;
+-		attr.background_pixel=brush->d->cgrp.bg;
++		attr.background_pixel=brush->d->cgrp.bg.pixel;
+ 	}
+ 	
+ 	XChangeWindowAttributes(wglobal.dpy, win, attrflags, &attr);
+@@ -516,7 +516,7 @@
+ 	if(cg==NULL)
+ 		return;
+ 	
+-	XSetForeground(wglobal.dpy, gc, cg->bg);
++	XSetForeground(wglobal.dpy, gc, cg->bg.pixel);
+ 	XFillRectangle(wglobal.dpy, win, gc, geom->x, geom->y, geom->w, geom->h);
+ }
+ 
+--- ../ion-2rc-20040114/de/font.c	2004-01-03 01:27:28.000000000 +0100
++++ font.c	2003-12-18 20:41:53.000000000 +0100
+@@ -1,7 +1,7 @@
+ /*
+  * ion/de/font.c
+  *
+- * Copyright (c) Tuomo Valkonen 1999-2004. 
++ * Copyright (c) Tuomo Valkonen 1999-2003. 
+  *
+  * Ion is free software; you can redistribute it and/or modify it under
+  * the terms of the GNU Lesser General Public License as published by
+@@ -13,7 +13,6 @@
+ 
+ #include <ioncore/common.h>
+ #include "font.h"
+-#include "fontset.h"
+ #include "brush.h"
+ 
+ 
+@@ -23,8 +22,7 @@
+ DECLSTRUCT(DEFont){
+ 	char *pattern;
+ 	int refcount;
+-	XFontSet fontset;
+-	XFontStruct *fontstruct;
++	XftFont *font;
+ 	DEFont *next, *prev;
+ };
+ 
+@@ -41,8 +39,7 @@
+ DEFont *de_load_font(const char *fontname)
+ {
+ 	DEFont *fnt;
+-	XFontSet fontset=NULL;
+-	XFontStruct *fontstruct=NULL;
++	XftFont *font=NULL;
+ 	
+ 	if(fontname==NULL){
+ 		warn("Attempt to load NULL as font");
+@@ -57,20 +54,14 @@
+ 		}
+ 	}
+ 	
+-	if(wglobal.use_mb){
+-		fontset=de_create_font_set(fontname);
+-		if(fontset!=NULL){
+-			if(XContextDependentDrawing(fontset)){
+-				warn("Fontset for font pattern '%s' implements context "
+-					 "dependent drawing, which is unsupported. Expect "
+-					 "clutter.", fontname);
+-			}
+-		}
++	if(strncmp(fontname, "xft:", 4)==0){
++		font=XftFontOpenName(wglobal.dpy, DefaultScreen(wglobal.dpy),
++							 fontname+4);
+ 	}else{
+-		fontstruct=XLoadQueryFont(wglobal.dpy, fontname);
++		font=XftFontOpenXlfd(wglobal.dpy, DefaultScreen(wglobal.dpy), fontname);
+ 	}
+ 	
+-	if(fontstruct==NULL && fontset==NULL){
++	if(font==NULL){
+ 		if(strcmp(fontname, CF_FALLBACK_FONT_NAME)!=0){
+ 			warn("Could not load font \"%s\", trying \"%s\"",
+ 				 fontname, CF_FALLBACK_FONT_NAME);
+@@ -86,8 +77,7 @@
+ 		return NULL;
+ 	}
+ 	
+-	fnt->fontset=fontset;
+-	fnt->fontstruct=fontstruct;
++	fnt->font=font;
+ 	fnt->pattern=scopy(fontname);
+ 	fnt->next=NULL;
+ 	fnt->prev=NULL;
+@@ -106,11 +96,6 @@
+ 	if(style->font==NULL)
+ 		return FALSE;
+ 	
+-	if(style->font->fontstruct!=NULL){
+-		XSetFont(wglobal.dpy, style->normal_gc, 
+-				 style->font->fontstruct->fid);
+-	}
+-	
+ 	return TRUE;
+ }
+ 
+@@ -120,10 +105,8 @@
+ 	if(--font->refcount!=0)
+ 		return;
+ 	
+-	if(font->fontset!=NULL)
+-		XFreeFontSet(wglobal.dpy, font->fontset);
+-	if(font->fontstruct!=NULL)
+-		XFreeFont(wglobal.dpy, font->fontstruct);
++	if(font->font!=NULL)
++		XftFontClose(wglobal.dpy, font->font);
+ 	if(font->pattern!=NULL)
+ 		free(font->pattern);
+ 	
+@@ -151,19 +134,10 @@
+ 
+ void defont_get_font_extents(DEFont *font, GrFontExtents *fnte)
+ {
+-	if(font->fontset!=NULL){
+-		XFontSetExtents *ext=XExtentsOfFontSet(font->fontset);
+-		if(ext==NULL)
+-			goto fail;
+-		fnte->max_height=ext->max_logical_extent.height;
+-		fnte->max_width=ext->max_logical_extent.width;
+-		fnte->baseline=-ext->max_logical_extent.y;
+-		return;
+-	}else if(font->fontstruct!=NULL){
+-		XFontStruct *fnt=font->fontstruct;
+-        fnte->max_height=fnt->ascent+fnt->descent;
+-		fnte->max_width=fnt->max_bounds.width;
+-		fnte->baseline=fnt->ascent;
++	if(font->font!=NULL){
++		fnte->max_height=font->font->ascent+font->font->descent;
++		fnte->max_width=font->font->max_advance_width;
++		fnte->baseline=font->font->ascent;
+ 		return;
+ 	}
+ 	
+@@ -183,17 +157,15 @@
+ 
+ uint defont_get_text_width(DEFont *font, const char *text, uint len)
+ {
+-	if(font->fontset!=NULL){
+-		XRectangle lext;
+-#ifdef CF_DE_USE_XUTF8
++	if(font->font!=NULL){
++		XGlyphInfo extents;
+ 		if(wglobal.enc_utf8)
+-			Xutf8TextExtents(font->fontset, text, len, NULL, &lext);
++			XftTextExtentsUtf8(wglobal.dpy, font->font, (XftChar8 *)text, len,
++							   &extents);
+ 		else
+-#endif
+-			XmbTextExtents(font->fontset, text, len, NULL, &lext);
+-		return lext.width;
+-	}else if(font->fontstruct!=NULL){
+-		return XTextWidth(font->fontstruct, text, len);
++			XftTextExtents8(wglobal.dpy, font->font, (XftChar8 *)text, len,
++							&extents);
++		return extents.xOff;
+ 	}else{
+ 		return 0;
+ 	}
+@@ -211,40 +183,30 @@
+ 							DEColourGroup *colours)
+ {
+ 	GC gc=brush->d->normal_gc;
++	XftFont *font=brush->d->font->font;
++	XftDraw *draw;
+ 
+ 	if(brush->d->font==NULL)
+ 		return;
+ 	
+-	XSetForeground(wglobal.dpy, gc, colours->fg);
+-	
+-	if(!needfill){
+-		if(brush->d->font->fontset!=NULL){
+-#ifdef CF_DE_USE_XUTF8
+-			if(wglobal.enc_utf8)
+-				Xutf8DrawString(wglobal.dpy, win, brush->d->font->fontset,
+-								gc, x, y, str, len);
+-			else
+-#endif
+-				XmbDrawString(wglobal.dpy, win, brush->d->font->fontset,
+-							  gc, x, y, str, len);
+-		}else if(brush->d->font->fontstruct!=NULL){
+-			XDrawString(wglobal.dpy, win, gc, x, y, str, len);
+-		}
+-	}else{
+-		XSetBackground(wglobal.dpy, gc, colours->bg);
+-		if(brush->d->font->fontset!=NULL){
+-#ifdef CF_DE_USE_XUTF8
+-			if(wglobal.enc_utf8)
+-				Xutf8DrawImageString(wglobal.dpy, win, brush->d->font->fontset,
+-									 gc, x, y, str, len);
+-			else
+-#endif
+-				XmbDrawImageString(wglobal.dpy, win, brush->d->font->fontset,
+-								   gc, x, y, str, len);
+-		}else if(brush->d->font->fontstruct!=NULL){
+-			XDrawImageString(wglobal.dpy, win, gc, x, y, str, len);
+-		}
++	draw=debrush_get_draw(brush, win);
++
++	if(TRUE/*needfill*/){
++		XGlyphInfo extents;
++		if(wglobal.enc_utf8)
++			XftTextExtentsUtf8(wglobal.dpy, font, (XftChar8 *)str, len,
++							   &extents);
++		else
++			XftTextExtents8(wglobal.dpy, font, (XftChar8 *)str, len, &extents);
++		XftDrawRect(draw, &(colours->bg), x-extents.x, y-extents.y,
++					extents.width, extents.height);
+ 	}
++
++	if(wglobal.enc_utf8)
++		XftDrawStringUtf8(draw, &(colours->fg), font, x, y, (XftChar8 *)str,
++						  len);
++	else
++		XftDrawString8(draw, &(colours->fg), font, x, y, (XftChar8 *)str, len);
+ }
+ 
+ 
+--- ../ion-2rc-20040114/de/colour.c	2004-01-03 01:27:28.000000000 +0100
++++ colour.c	2003-12-18 20:41:53.000000000 +0100
+@@ -1,7 +1,7 @@
+ /*
+  * ion/de/colour.h
+  *
+- * Copyright (c) Tuomo Valkonen 1999-2004. 
++ * Copyright (c) Tuomo Valkonen 1999-2003. 
+  *
+  * Ion is free software; you can redistribute it and/or modify it under
+  * the terms of the GNU Lesser General Public License as published by
+@@ -15,55 +15,39 @@
+ 
+ bool de_alloc_colour(WRootWin *rootwin, DEColour *ret, const char *name)
+ {
+-	XColor c;
+-	bool ok=FALSE;
+-
+ 	if(name==NULL)
+ 		return FALSE;
+ 
+-	if(XParseColor(wglobal.dpy, rootwin->default_cmap, name, &c)){
+-		ok=XAllocColor(wglobal.dpy, rootwin->default_cmap, &c);
+-		if(ok)
+-			*ret=c.pixel;
+-	}
+-	
+-	return ok;
++	return XftColorAllocName(wglobal.dpy,
++							 DefaultVisual(wglobal.dpy,
++										   wglobal.active_screen->id),
++							 rootwin->default_cmap, name, ret);
+ }
+ 
+ 
+ bool de_duplicate_colour(WRootWin *rootwin, DEColour in, DEColour *out)
+ {
+-	XColor c;
+-	c.pixel=in;
+-	XQueryColor(wglobal.dpy, rootwin->default_cmap, &c);
+-	if(XAllocColor(wglobal.dpy, rootwin->default_cmap, &c)){
+-		*out=c.pixel;
+-		return TRUE;
+-	}
+-	return FALSE;
++	return XftColorAllocValue(wglobal.dpy,
++							  DefaultVisual(wglobal.dpy,
++											wglobal.active_screen->id),
++							  rootwin->default_cmap, &(in.color), out);
+ }
+ 
+ 
+ void de_free_colour_group(WRootWin *rootwin, DEColourGroup *cg)
+ {
+-	DEColour pixels[5];
+-	
+-	pixels[0]=cg->bg;
+-	pixels[1]=cg->fg;
+-	pixels[2]=cg->hl;
+-	pixels[3]=cg->sh;
+-	pixels[4]=cg->pad;
+-	
+-	XFreeColors(wglobal.dpy, rootwin->default_cmap, pixels, 5, 0);
++	de_free_colour(rootwin, cg->bg);
++	de_free_colour(rootwin, cg->fg);
++	de_free_colour(rootwin, cg->hl);
++	de_free_colour(rootwin, cg->sh);
++	de_free_colour(rootwin, cg->pad);
+ }
+ 
+ 
+ void de_free_colour(WRootWin *rootwin, DEColour col)
+ {
+-	DEColour pixels[1];
+-	
+-	pixels[0]=col;
+-	
+-	XFreeColors(wglobal.dpy, rootwin->default_cmap, pixels, 1, 0);
++	XftColorFree(wglobal.dpy,
++				 DefaultVisual(wglobal.dpy, wglobal.active_screen->id),
++				 rootwin->default_cmap, &col);
+ }
+ 
+--- ../ion-2rc-20040114/de/brush.c	2004-01-03 01:27:28.000000000 +0100
++++ brush.c	2003-12-18 20:41:53.000000000 +0100
+@@ -1,7 +1,7 @@
+ /*
+  * ion/de/brush.c
+  *
+- * Copyright (c) Tuomo Valkonen 1999-2004. 
++ * Copyright (c) Tuomo Valkonen 1999-2003. 
+  *
+  * Ion is free software; you can redistribute it and/or modify it under
+  * the terms of the GNU Lesser General Public License as published by
+@@ -204,6 +204,8 @@
+ 
+ static bool destyle_init(DEStyle *style, WRootWin *rootwin, const char *name)
+ {
++	DEColour black, white;
++
+ 	style->style=scopy(name);
+ 	if(style->style==NULL){
+ 		warn_err();
+@@ -227,11 +229,13 @@
+ 
+ 	style->cgrp_alloced=FALSE;
+ 	style->cgrp.spec=NULL;
+-	style->cgrp.bg=DE_BLACK(rootwin);
+-	style->cgrp.pad=DE_BLACK(rootwin);
+-	style->cgrp.fg=DE_WHITE(rootwin);
+-	style->cgrp.hl=DE_WHITE(rootwin);
+-	style->cgrp.sh=DE_WHITE(rootwin);
++	de_alloc_colour(rootwin, &black, "black");
++	de_alloc_colour(rootwin, &white, "white");
++	style->cgrp.bg=black;
++	style->cgrp.pad=black;
++	style->cgrp.fg=white;
++	style->cgrp.hl=white;
++	style->cgrp.sh=white;
+ 	
+ 	style->font=NULL;
+ 	
+@@ -311,7 +315,7 @@
+ 	for(style=styles; style!=NULL; style=next){
+ 		next=style->next;
+ 		if(style->usecount>1){
+-			warn_obj("DE module", "Style %s still in use [%d] but the module "
++			warn_obj(modname, "Style %s still in use [%d] but the module "
+ 					 "is being unloaded!", style->style, style->usecount);
+ 		}
+ 		dump_style(style);
+@@ -329,6 +333,7 @@
+ {
+ 	brush->d=style;
+ 	style->usecount++;
++	brush->draw=NULL;
+ 	
+ 	if(!grbrush_init(&(brush->grbrush))){
+ 		style->usecount--;
+@@ -416,6 +421,8 @@
+ {
+ 	unref_style(brush->d);
+ 	brush->d=NULL;
++	if(brush->draw!=NULL)
++		XftDrawDestroy(brush->draw);
+ 	grbrush_deinit(&(brush->grbrush));
+ }
+ 
+@@ -536,6 +543,20 @@
+ }
+ 
+ 
++XftDraw *debrush_get_draw(DEBrush *brush, Drawable d)
++{
++	if(brush->draw==NULL)
++		brush->draw=XftDrawCreate(wglobal.dpy, d,
++								  DefaultVisual(wglobal.dpy,
++									            wglobal.active_screen->id),
++								  DefaultColormap(wglobal.dpy,
++									              wglobal.active_screen->id));
++	else
++		XftDrawChange(brush->draw, d);
++
++	return brush->draw;
++}
++
+ /*}}}*/
+ 
+ 
+--- ../ion-2rc-20040114/de/brush.h	2004-01-03 01:27:28.000000000 +0100
++++ brush.h	2003-12-18 20:41:53.000000000 +0100
+@@ -1,7 +1,7 @@
+ /*
+  * ion/de/brush.h
+  *
+- * Copyright (c) Tuomo Valkonen 1999-2004. 
++ * Copyright (c) Tuomo Valkonen 1999-2003. 
+  *
+  * Ion is free software; you can redistribute it and/or modify it under
+  * the terms of the GNU Lesser General Public License as published by
+@@ -15,6 +15,7 @@
+ #include <ioncore/common.h>
+ #include <ioncore/gr.h>
+ #include <ioncore/extl.h>
++#include <X11/Xft/Xft.h>
+ 
+ 
+ #define MATCHES(S, A) (gr_stylespec_score(S, A)>0)
+@@ -97,6 +98,7 @@
+ DECLOBJ(DEBrush){
+ 	GrBrush grbrush;
+ 	DEStyle *d;
++	XftDraw *draw;
+ };
+ 
+ 
+@@ -226,6 +228,8 @@
+ 
+ extern void debrush_get_extra_values(DEBrush *brush, ExtlTab *tab);
+ 
++XftDraw *debrush_get_draw(DEBrush *brush, Drawable d);
++
+ 
+ /*}}}*/
+ 
+--- ../ion-2rc-20040114/de/colour.h	2004-01-03 01:27:28.000000000 +0100
++++ colour.h	2003-12-18 20:41:53.000000000 +0100
+@@ -1,7 +1,7 @@
+ /*
+  * ion/de/colour.h
+  *
+- * Copyright (c) Tuomo Valkonen 1999-2004. 
++ * Copyright (c) Tuomo Valkonen 1999-2003. 
+  *
+  * Ion is free software; you can redistribute it and/or modify it under
+  * the terms of the GNU Lesser General Public License as published by
+@@ -15,12 +15,13 @@
+ #include <ioncore/common.h>
+ #include <ioncore/global.h>
+ #include <ioncore/rootwin.h>
++#include <X11/Xft/Xft.h>
+ 
+ 
+ INTRSTRUCT(DEColourGroup);
+ 
+ 
+-typedef unsigned long DEColour;
++typedef XftColor DEColour;
+ 
+ 
+ DECLSTRUCT(DEColourGroup){
+--- ../ion-2rc-20040114/de/font.h	2004-01-03 01:27:28.000000000 +0100
++++ font.h	2003-12-18 20:41:53.000000000 +0100
+@@ -1,7 +1,7 @@
+ /*
+  * ion/de/font.h
+  *
+- * Copyright (c) Tuomo Valkonen 1999-2004. 
++ * Copyright (c) Tuomo Valkonen 1999-2003. 
+  *
+  * Ion is free software; you can redistribute it and/or modify it under
+  * the terms of the GNU Lesser General Public License as published by
+@@ -14,6 +14,7 @@
+ 
+ #include <ioncore/common.h>
+ #include <ioncore/gr.h>
++#include <X11/Xft/Xft.h>
+ 
+ INTRSTRUCT(DEFont);
+ 
+--- ../ion-2rc-20040114/de/misc.h	2004-01-03 01:27:28.000000000 +0100
++++ misc.h	2003-12-19 17:51:03.000000000 +0100
+@@ -1,7 +1,7 @@
+ /*
+  * ion/de/misc.h
+  *
+- * Copyright (c) Tuomo Valkonen 1999-2004. 
++ * Copyright (c) Tuomo Valkonen 1999-2003. 
+  *
+  * Ion is free software; you can redistribute it and/or modify it under
+  * the terms of the GNU Lesser General Public License as published by
+@@ -15,4 +15,6 @@
+ #define DE_SUB_IND " ->"
+ #define DE_SUB_IND_LEN 3
+ 
++extern const char *modname;
++
+ #endif /* ION_DE_MISC_H */
+--- ../ion-2rc-20040114/de/Makefile	2004-01-14 22:29:11.000000000 +0100
++++ Makefile	2004-01-18 15:07:42.000000000 +0100
+@@ -8,16 +8,16 @@
+ 
+ ######################################
+ 
+-INCLUDES += -I../libtu/include $(X11_INCLUDES) -I..
++INCLUDES += -I$(TOPDIR)/libtu/include $(X11_INCLUDES) -I$(TOPDIR) `xft-config --cflags`
+ CFLAGS += $(XOPEN_SOURCE) $(C99_SOURCE)
++LIBS += `xft-config --libs`
+ 
+-SOURCES=init.c draw.c font.c colour.c brush.c fontset.c
++SOURCES=init.c draw.c font.c colour.c brush.c
++HEADERS=brush.h colour.h font.h misc.h
+ 
+-LUA_SOURCES=delib.lua
++MODULE=xftde
+ 
+-MODULE=de
+-
+-MAKE_EXPORTS=de_module
++MAKE_EXPORTS=xftde_module
+ 
+ ######################################
+ 
+@@ -26,5 +26,6 @@
+ ######################################
+ 
+ _install: module_install
+-	$(INSTALLDIR) $(SHAREDIR)
+-	$(INSTALL) -m $(DATA_MODE) delib.lua delib.lc $(SHAREDIR)
++
++xftde.patch: $(SOURCES) $(HEADERS) Makefile
++	-for i in $^; do diff -u $(TOPDIR)/de/$$i $$i; done >$@
