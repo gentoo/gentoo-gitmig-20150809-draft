@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.79 2004/12/25 18:45:56 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/flag-o-matic.eclass,v 1.80 2005/01/20 18:29:13 eradicator Exp $
 #
 # Author Bart Verwilst <verwilst@gentoo.org>
 
@@ -10,7 +10,7 @@ INHERITED="$INHERITED $ECLASS"
 IUSE="debug"
 
 # need access to emktemp()
-inherit eutils toolchain-funcs
+inherit eutils toolchain-funcs multilib
 
 #
 #### filter-flags <flags> ####
@@ -365,6 +365,9 @@ has_m32() {
 	# actually -WORKS-. non-multilib gcc will take both -m32 and -m64!
 	# please dont replace this function with test_flag in some future
 	# clean-up!
+
+	[ "$(tc-arch)" = "amd64" ] && has_multilib_profile && return 0
+
 	local temp="$(emktemp)"
 	echo "int main() { return(0); }" > ${temp}.c
 	MY_CC=$(tc-getCC)
