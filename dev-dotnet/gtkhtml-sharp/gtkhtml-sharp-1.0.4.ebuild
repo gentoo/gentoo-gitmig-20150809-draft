@@ -1,11 +1,11 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtkhtml-sharp/gtkhtml-sharp-1.0.4.ebuild,v 1.7 2005/02/19 19:03:38 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gtkhtml-sharp/gtkhtml-sharp-1.0.4.ebuild,v 1.8 2005/02/19 22:16:39 dholm Exp $
 
 inherit gtk-sharp-component
 
 SLOT="1"
-KEYWORDS="~x86 ppc"
+KEYWORDS="~x86 ~ppc"
 IUSE=""
 
 # FIXME
