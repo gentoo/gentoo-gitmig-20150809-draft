@@ -1,6 +1,13 @@
 # ChangeLog for dev-dotnet/gecko-sharp
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/ChangeLog,v 1.25 2005/03/23 16:15:58 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-dotnet/gecko-sharp/ChangeLog,v 1.26 2005/04/02 02:01:07 latexer Exp $
+
+*gecko-sharp-0.7 (02 Apr 2005)
+
+  02 Apr 2005; Peter Johanson <latexer@gentoo.org> +gecko-sharp-0.7.ebuild:
+  Bump. New release that compiles against the gtk-sharp-2.0 items, and is
+  parallel installable along side the version that builds against the
+  gtk-sharp-1.0 items.
 
   23 Mar 2005; Seemant Kulleen <seemant@gentoo.org>
   gecko-sharp-0.5-r2.ebuild, gecko-sharp-0.6.ebuild:
