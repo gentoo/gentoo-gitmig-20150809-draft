@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/run-mailcap
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/run-mailcap/ChangeLog,v 1.28 2005/01/02 21:26:22 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/run-mailcap/ChangeLog,v 1.29 2005/02/03 15:54:12 gustavoz Exp $
+
+  03 Feb 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  run-mailcap-3.28_p1-r1.ebuild:
+  Stable on sparc
 
   02 Jan 2005; Ciaran McCreesh <ciaranm@gentoo.org> :
   Change encoding to UTF-8 for GLEP 31 compliance
