@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-0.99.4.ebuild,v 1.2 2002/10/17 16:36:53 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-1.0.0.ebuild,v 1.1 2002/10/26 15:25:15 verwilst Exp $
 
 S=${WORKDIR}/Twisted-${PV}
 DESCRIPTION="Twisted is a framework, written in Python, for writing networked applications."
@@ -10,7 +10,7 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 DEPEND="virtual/python"
 RDEPEND="$DEPEND"
-KEYWORDS="~x86 alpha"
+KEYWORDS="x86 alpha"
 
 inherit distutils
 
@@ -26,7 +26,5 @@ src_install() {
 	cd doc
 	cp -r . ${D}/usr/share/doc/${PF}
 	cd ../
-	# should be taken care of by the distutils install
-	#	 dodoc README TODO CREDITS
 
 }
