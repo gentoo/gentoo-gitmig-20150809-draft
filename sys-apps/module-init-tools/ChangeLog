@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/module-init-tools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.77 2005/02/18 20:03:14 chainsaw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.78 2005/03/20 23:00:12 solar Exp $
+
+*module-init-tools-3.1-r1 (20 Mar 2005)
+
+  20 Mar 2005; <solar@gentoo.org> module-init-tools-3.0-r2.ebuild,
+  +module-init-tools-3.1-r1.ebuild:
+  - Our zlib.so is in /lib vs /usr/lib so it should be safe for us to link with
+  just -lz - By not linking with -Wl,-Bstatic -lz -Wl,-Bsynamic we save a few
+  bytes on the final linked elf executable binary sizes. This also fixes text
+  relocations that were showing up in this package.
 
   18 Feb 2005; Tony Vroon <chainsaw@gentoo.org>
   +files/modutils-2.4.27-gcc4.patch, module-init-tools-3.1.ebuild:

@@ -1,24 +1,28 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9aa2d9dc0c5d86a58788e346acca57d9 module-init-tools-3.0-r2.ebuild 5489
+MD5 57249cf9ed51532cef87b39e52871a41 module-init-tools-3.1-r1.ebuild 5858
 MD5 187b1843b513986bf51359562552db9f module-init-tools-3.1.ebuild 5711
+MD5 19d1f4f74094145ae4747cbe7106c16a ChangeLog 15435
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 e527e3debd30abf012b019aa7e8a1a56 ChangeLog 15005
-MD5 d5504b6d6ed1ef697275b3a48a1e49e7 files/modutils-2.4.27-gcc34.patch 231
-MD5 97fd0899fb54b236e35bdd1bd5fae336 files/modutils-2.4.27-PATH_MAX.patch 309
-MD5 813f2779e10e8f29d9e1d58dda93a5e3 files/digest-module-init-tools-3.1 142
-MD5 060ce311606657915548168939e965b4 files/modutils-2.4.22-no-above-below.patch 382
+MD5 099e39f6a82945bf0cc3a7b1c8ebf86a module-init-tools-3.0-r2.ebuild 5468
 MD5 d179298a960a2576683689fe19818c8b files/generate-modprobe-assume-kernel.patch 3767
+MD5 060ce311606657915548168939e965b4 files/modutils-2.4.22-no-above-below.patch 382
 MD5 2da5de5fa7c26cdef6a84788452653e6 files/modutils-2.4.27-gcc4.patch 6052
-MD5 07aa415fd57ac42cd0c11527edc9782d files/module-init-tools-0.9.15-legacy-modext-support.patch 481
-MD5 469d7fc1f915c60585afc8d895b1668a files/digest-module-init-tools-3.0-r2 142
+MD5 813f2779e10e8f29d9e1d58dda93a5e3 files/digest-module-init-tools-3.1 142
 MD5 0562a7a338175d0b6100ef7958b0ef5e files/module-init-tools-3.1_generate-modprobe-assume-kernel.patch 3766
 MD5 34f20e2837caff74cef9cca766e1e0c4 files/3.1-modprobe.d.5.bz2 2288
+MD5 469d7fc1f915c60585afc8d895b1668a files/digest-module-init-tools-3.0-r2 142
+MD5 813f2779e10e8f29d9e1d58dda93a5e3 files/digest-module-init-tools-3.1-r1 142
+MD5 97fd0899fb54b236e35bdd1bd5fae336 files/modutils-2.4.27-PATH_MAX.patch 309
+MD5 d5504b6d6ed1ef697275b3a48a1e49e7 files/modutils-2.4.27-gcc34.patch 231
+MD5 07aa415fd57ac42cd0c11527edc9782d files/module-init-tools-0.9.15-legacy-modext-support.patch 481
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFCFkqBp5vW4rUFj5oRApQaAJ90wJrvdmJNORz8kr3wuTM/RcqxGgCcCnOn
-j5+0FhubkkPP68QPaV5Yefw=
-=QrMy
+iQCVAwUBQj4Ae54WFLgrx1GWAQKDlAP9ENjPR0M8+3U7qe63xBzOaDNbOiv/h1Lk
+JW9VmFxyvQXfOQDWsWfL5YVNHRhkOS2sep01dJApu4nTtQLOuKyzDGSQ7cEeQHJQ
+fR03DSwzKpFR+0j15f+dCiKN6BBasi+RpQxlsBbfBCPTzHse27AVjnczssA4Fhyn
+h8ZRKhbIplw=
+=rlDc
 -----END PGP SIGNATURE-----
