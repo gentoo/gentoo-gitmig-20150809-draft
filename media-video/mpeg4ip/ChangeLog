@@ -1,6 +1,13 @@
 # ChangeLog for media-video/mpeg4ip
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.17 2004/12/06 23:12:48 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mpeg4ip/ChangeLog,v 1.18 2004/12/31 08:32:54 tester Exp $
+
+  31 Dec 2004; Olivier Crête <tester@gentoo.org>
+  +files/mpeg4ip-1.2-mp4encode-template-path.patch:
+  Fixed compilation without the X stuff, thanks to Christian Zoffoli
+  <czoffoli@xmerlin.org> see bug #74189. Fixed compilation problem, bug #73761.
+  Fix path problem, thanks to Christian Zoffoli <czoffoli@xmerlin.org> again,
+  bug 74469. Another patch to install more docs from Christian (bug #74500)
 
   06 Dec 2004; Olivier Crete <tester@gentoo.org>
   -files/mpeg4ip-1.2-gentoo-fixes.patch:
