@@ -1,3 +1,5 @@
 MD5 06a25a1edfc9e300e08bb482658bc8d8 ChangeLog 1145
 MD5 c57dece58f3e613e3858a920023c1c46 xxdiff-2.6.ebuild 742
+MD5 4bb5dc1092178df6cadb0cad95151037 xxdiff-2.9.2.ebuild 749
 MD5 4f4300258e4761329eba40d2a8cfb899 files/digest-xxdiff-2.6 62
+MD5 a533ffd20699e97c403fff6cdd3dcf37 files/digest-xxdiff-2.9.2 64

@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/xxdiff
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/ChangeLog,v 1.6 2003/02/12 06:47:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/xxdiff/ChangeLog,v 1.7 2003/06/11 22:25:09 mholzer Exp $
+
+*xxdiff-2.9.2 (12 Jun 2003)
+
+  12 Jun 2003; Martin Holzer <mholzer@gentoo.org> xxdiff-2.9.2.ebuild:
+  Version bumped. Closes #22063
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
