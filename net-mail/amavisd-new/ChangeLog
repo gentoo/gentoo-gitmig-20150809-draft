@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/amavisd-new
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/amavisd-new/ChangeLog,v 1.8 2004/03/01 03:47:55 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/amavisd-new/ChangeLog,v 1.9 2004/03/10 04:38:47 max Exp $
+
+*amavisd-new-20030616_p8 (09 Mar 2004)
+
+  09 Mar 2004; Max Kalika <max@gentoo.org> amavisd-new-20030616_p4.ebuild,
+  amavisd-new-20030616_p5.ebuild, amavisd-new-20030616_p6.ebuild,
+  amavisd-new-20030616_p8.ebuild:
+  Bump to version 20030616_p8. Clean up old ebuilds.
 
   29 Feb 2004; Jason Wever <weeve@gentoo.org> amavisd-new-20030616_p7.ebuild:
   squash tested, ~sparc approved.
