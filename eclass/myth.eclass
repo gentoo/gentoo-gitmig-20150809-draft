@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/myth.eclass,v 1.5 2005/01/18 09:45:34 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/myth.eclass,v 1.6 2005/02/12 06:52:42 cardoe Exp $
 #
 # Author: Daniel Ahlberg <aliz@gentoo.org>
 #
@@ -49,7 +49,7 @@ myth_src_compile() {
 
 myth_src_install() {
 	einstall INSTALL_ROOT="${D}"
-	for doc in "AUTHORS COPYING FAQ UPGRADING ChangeLog README"; do
+	for doc in AUTHORS COPYING FAQ UPGRADING ChangeLog README; do
 		test -e "${doc}" && dodoc ${doc}
 	done
 }
