@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/gorua/gorua-0.17.ebuild,v 1.2 2004/04/27 19:56:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/gorua/gorua-0.17.ebuild,v 1.3 2004/05/16 12:13:53 usata Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="http://www.unixuser.org/~haruyama/software/goRua/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~alpha ~ppc ~sparc"
+KEYWORDS="x86 alpha ~ppc ~sparc"
 
 DEPEND="virtual/ruby
 	=x11-libs/gtk+-1.2*

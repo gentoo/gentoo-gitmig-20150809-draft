@@ -1,16 +1,14 @@
 # boardのbookmark例
 C お気に入り
-A http://pc.2ch.net/unix/ UNIX
-A http://pc.2ch.net/linux/ Linux
+A http://pc5.2ch.net/unix/ UNIX
+A http://pc5.2ch.net/linux/ Linux
 # Threadのbookmark例
 D お気に入りのThread
-S http://pc.2ch.net/linux/dat/1065520318.dat 【厳冬】Gentoo Linux 5【利奈楠】
-S http://pc.2ch.net/unix/dat/1008120213.dat goRua(Ruby/Gtkによる2chブラウザ)ってどうよ
-S http://pc.2ch.net/unix/dat/1044900143.dat C.i. for 2ch
-S http://pc.2ch.net/linux/dat/1022744633.dat おいお前ら！GTK+使ってLinux版かちゅーしゃ作れや
-S http://pc.2ch.net/linux/dat/1044149677.dat お勧め２ちゃんねるブラウザforLinux
-S http://pc.2ch.net/unix/dat/1043510520.dat モナーフォント 2
-S http://pc.2ch.net/linux/dat/1033193724.dat Anthyスレッド
-S http://pc.2ch.net/unix/dat/1064846626.dat 雑談スレ(だよもん){6} !
-#S http://pc.2ch.net/linux/dat/1011982036.dat ▼2chでディストリビューションを作ろう！Part2
-#S http://pc.2ch.net/unix/dat/1019623590.dat 2ちゃんねるAAアニメーションソフト"Gikot"
+S http://pc5.2ch.net/linux/dat/1084107269.dat Gentoo Linux 9
+S http://pc5.2ch.net/linux/dat/1044149677.dat お勧め２ちゃんねるブラウザforLinux
+S http://pc5.2ch.net/linux/dat/1084073229.dat Anthy/uimスレッド3
+S http://pc5.2ch.net/linux/dat/1079912788.dat おいお前ら！おちゅ～しゃはどうですか？ Ver.2
+S http://pc5.2ch.net/linux/dat/1069738960.dat Kita - 2ch client for KDE
+S http://pc5.2ch.net/unix/dat/1008120213.dat goRua(Ruby/Gtkによる2chブラウザ)ってどうよ。
+S http://pc5.2ch.net/unix/dat/1044900143.dat C.i. for 2ch
+S http://pc5.2ch.net/unix/dat/1043510520.dat モナーフォント 2
