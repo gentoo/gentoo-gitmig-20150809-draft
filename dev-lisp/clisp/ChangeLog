@@ -1,6 +1,9 @@
 # ChangeLog for dev-lisp/clisp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.23 2004/06/24 23:45:03 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/clisp/ChangeLog,v 1.24 2004/06/27 20:55:05 mkennedy Exp $
+
+  27 Jun 2004; <mkennedy@gentoo.org> files/clisp.sh:
+  Compile source with ISO-8859-1, not UTF-8.
 
 *clisp-2.33.2 (08 Jun 2004)
 
