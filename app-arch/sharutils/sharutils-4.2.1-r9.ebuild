@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/sharutils-4.2.1-r9.ebuild,v 1.1 2004/05/15 16:53:02 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/sharutils/sharutils-4.2.1-r9.ebuild,v 1.2 2004/05/15 18:26:41 gustavoz Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~ppc ~sparc ~alpha ~hppa ~ia64 ~ppc64 ~s390 ~mips"
+KEYWORDS="~x86 ~amd64 ~ppc sparc ~alpha ~hppa ~ia64 ~ppc64 ~s390 ~mips"
 IUSE="nls"
 
 RDEPEND="sys-apps/texinfo
