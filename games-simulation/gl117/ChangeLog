@@ -1,6 +1,9 @@
 # ChangeLog for games-simulation/gl117
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-simulation/gl117/ChangeLog,v 1.6 2004/03/28 06:55:05 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-simulation/gl117/ChangeLog,v 1.7 2004/03/28 06:55:42 mr_bones_ Exp $
+
+  27 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> gl117-1.2.ebuild:
+  fix IUSE
 
   27 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> gl117-1.0.ebuild,
   gl117-1.1.ebuild:
