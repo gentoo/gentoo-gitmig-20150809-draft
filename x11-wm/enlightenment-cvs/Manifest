@@ -1,3 +1,13 @@
-MD5 69a34980ae4f156926d4ce09a2f4e2f5 enlightenment-cvs-20030629.ebuild 899
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c1eb81ea93e49e67ffac6501d9f3cd74 ChangeLog 2063
+MD5 06cf9b3fbe78927812f642e8e3395d1b enlightenment-cvs-20030629.ebuild 864
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-enlightenment-cvs-20030629 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA8cEXHTu7gpaalycRAqCZAJ4kLWybjheaMuuf/2/nzAtWppNe8wCgyqXX
+/XlIy9z6pc+ZzXJr8NmSN60=
+=oSSU
+-----END PGP SIGNATURE-----

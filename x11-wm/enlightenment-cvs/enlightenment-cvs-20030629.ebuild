@@ -1,14 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/enlightenment-cvs-20030629.ebuild,v 1.12 2004/06/24 23:40:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment-cvs/enlightenment-cvs-20030629.ebuild,v 1.13 2004/07/11 22:36:56 vapier Exp $
 
 inherit enlightenment
 
 DESCRIPTION="e17 meta ebuild ... emerge this to get all e17 components"
 SRC_URI=""
 
-RDEPEND="media-gfx/etcher
-	media-gfx/ebony
+RDEPEND="
 	media-gfx/entice
 	app-misc/examine
 	media-libs/edje
