@@ -1,33 +1,35 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7c.ebuild,v 1.9 2004/02/22 20:09:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/openssl-0.9.7c.ebuild,v 1.10 2004/04/19 19:10:16 vapier Exp $
 
-inherit eutils flag-o-matic
-
-gcc_version=$(gcc -dumpversion | cut -d. -f1,2)
-if [ "${gcc_version}" == "3.3" ]; then
-	filter-flags "-fprefetch-loop-arrays"
-fi
+inherit eutils flag-o-matic gcc
 
 OLD_096_P="${PN}-0.9.6k"
 
-S="${WORKDIR}"
 DESCRIPTION="Toolkit for SSL v2/v3 and TLS v1"
+HOMEPAGE="http://www.openssl.org/"
 SRC_URI="mirror://openssl/source/${P}.tar.gz
 	mirror://openssl/source/${OLD_096_P}.tar.gz"
-HOMEPAGE="http://www.openssl.org/"
+
+LICENSE="as-is"
+SLOT="0"
+KEYWORDS="~x86 ~ppc ~alpha ~sparc ~mips ~hppa amd64 ia64"
+IUSE=""
 
 RDEPEND="virtual/glibc"
 DEPEND="${RDEPEND}
 	>=dev-lang/perl-5
 	>=sys-apps/sed-4"
-LICENSE="as-is"
-SLOT="0"
 
-KEYWORDS="~x86 ~ppc ~alpha ~sparc ~mips ~hppa amd64 ia64"
+S="${WORKDIR}"
 
 src_unpack() {
 	unpack ${A}
+
+	gcc_version=$(gcc -dumpversion | cut -d. -f1,2)
+	if [ "${gcc_version}" == "3.3" ]; then
+		filter-flags "-fprefetch-loop-arrays"
+	fi
 
 	# openssl-0.9.7
 	cd ${WORKDIR}/${P}
