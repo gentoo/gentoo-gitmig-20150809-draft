@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.56-r2.ebuild,v 1.5 2004/06/03 20:54:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/enemy-territory/enemy-territory-2.56-r2.ebuild,v 1.6 2004/06/24 11:48:23 wolf31o2 Exp $
 
 inherit games
 
@@ -22,14 +22,8 @@ RDEPEND="dedicated? ( app-misc/screen )
 	opengl? ( virtual/opengl )"
 
 S=${WORKDIR}
-
-pkg_nofetch() {
-	einfo "Please visit one of these mirrors and download ${A}"
-	einfo "http://www.fileplanet.com/files/120000/124801.shtml"
-	einfo "http://www.fileshack.com/file.x?fid=2743"
-	einfo "http://www.3dgamers.com/games/wolfensteinet/"
-	einfo "Then just put the file in ${DISTDIR}"
-}
+dir=${GAMES_PREFIX_OPT}/${PN}
+Ddir=${D}/${dir}
 
 pkg_setup() {
 	check_license || die "License check failed"
@@ -41,10 +35,9 @@ src_unpack() {
 }
 
 src_install() {
-	local dir=${GAMES_PREFIX_OPT}/${PN}
 	dodir ${dir}
 
-	cp -r Docs pb etmain ${D}/${dir}/
+	cp -r Docs pb etmain ${Ddir}
 
 	exeinto ${dir} ; doexe bin/Linux/x86/* openurl.sh
 	insinto ${dir} ; doins CHANGES v1.02_Readme.htm
@@ -68,7 +61,7 @@ src_install() {
 
 	prepgamesdirs
 	make_desktop_entry et "Enemy Territory" ET.xpm
-	chmod g+rw ${D}/${dir} ${D}/${dir}/etwolf-homedir
+	chmod g+rw ${Ddir} ${Ddir}/etwolf-homedir ${Ddir}/etmain
 }
 
 pkg_postinst() {
