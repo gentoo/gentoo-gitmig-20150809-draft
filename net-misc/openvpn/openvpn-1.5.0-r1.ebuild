@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-1.5.0-r1.ebuild,v 1.8 2004/10/02 16:29:24 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-1.5.0-r1.ebuild,v 1.9 2004/10/17 04:36:57 solar Exp $
+
+inherit gnuconfig
 
 IUSE="ssl pthreads"
 
@@ -14,6 +16,11 @@ KEYWORDS="x86 ppc sparc ~alpha"
 DEPEND=">=dev-libs/lzo-1.07
 	virtual/os-headers
 	ssl? ( >=dev-libs/openssl-0.9.6 )"
+
+src_unpack() {
+	unpack ${A}
+	gnuconfig_update
+}
 
 src_compile() {
 

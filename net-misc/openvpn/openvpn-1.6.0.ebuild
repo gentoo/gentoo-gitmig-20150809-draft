@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-1.6.0.ebuild,v 1.2 2004/10/14 06:26:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openvpn/openvpn-1.6.0.ebuild,v 1.3 2004/10/17 04:36:57 solar Exp $
+
+inherit gnuconfig
 
 IUSE="ssl pthreads"
 
@@ -17,8 +19,6 @@ DEPEND=">=dev-libs/lzo-1.07
 
 src_unpack() {
 	unpack ${A}
-
-	# an updated config.sub for the uclibc env
 	gnuconfig_update
 }
 
