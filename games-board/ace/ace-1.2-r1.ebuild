@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/ace/ace-1.2-r1.ebuild,v 1.5 2004/06/23 01:52:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/ace/ace-1.2-r1.ebuild,v 1.6 2004/06/24 02:41:28 mr_bones_ Exp $
 
 inherit games
 
@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 	# bug #54701
-	WANT_AUTOMAKE=1.4 \
+	export WANT_AUTOMAKE=1.4
 	egamesconf || die
 
 	for f in `grep 1.3.4 * -l` ; do
