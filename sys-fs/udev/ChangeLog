@@ -1,6 +1,10 @@
 # ChangeLog for sys-fs/udev
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.49 2004/06/14 20:51:08 gregkh Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/udev/ChangeLog,v 1.50 2004/06/19 16:11:26 kugelfang Exp $
+
+  19 Jun 2004; Danny van Dyk <kugelfang@gentoo.org> udev-024-r1.ebuild,
+  udev-025-r1.ebuild:
+  Marked stable on amd64.
 
 *udev-027 (14 Jun 2004)
 
