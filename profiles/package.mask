@@ -1,22 +1,31 @@
 # this qt hasn't been tested
 =x11-libs/qt-x11-2.3.1
+
 # this requires the incompatible readline version 4.2
 >=sys-apps/bash-2.05
+
 # this version does not work with nls
 >=sys-apps/procps-2.0.7
+
 # in development
 >=sys-devel/gcc-2.96
+
 # incompatible
 >=sys-libs/readline-4.2
 >sys-devel/automake-1.4-r2
+
 # broken
 app-admin/powertweak
+media-video/avi-xmms
+
 # unfinished
 app-admin/va-systemimager-server
 app-admin/va-systemimager-client
->=media-video/avifile-0.6.0
+<media-video/avifile-0.7.0
+
 # broken
 app-editors/gtk-xemacs
+
 # incompatible
 >=app-text/pspell-0.12
 >=app-text/aspell-0.33
