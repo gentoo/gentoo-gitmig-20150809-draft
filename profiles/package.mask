@@ -21,10 +21,6 @@
 ##   End example
 ##
 
-# <carpaski@gentoo.org> (10 Sep 2003)
-# Temp mask on new portage
->=sys-apps/portage-2.0.49-r4
-
 # <caleb@gentoo.org> (10 Sep 2003)
 # new kde versions mask
 =kde-base/kdelibs-3.2.0_beta1
