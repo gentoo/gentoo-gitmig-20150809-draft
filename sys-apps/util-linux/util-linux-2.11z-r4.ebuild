@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r4.ebuild,v 1.2 2003/06/01 05:33:57 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r4.ebuild,v 1.3 2003/06/10 17:01:29 raker Exp $
 
 IUSE="crypt nls selinux static pam"
 
@@ -56,12 +56,11 @@ src_unpack() {
 	fi
 
 	#enable pam only if we use it
-	use pam && sed -i "s:HAVE_PAM=no:HAVE_PAM=yes:" MCONFIG || die "MCONFIG Pam"
+	use pam && sed -i "s:HAVE_PAM=no:HAVE_PAM=yes:" MCONFIG
 
 	sed -i \
 		-e "s:-pipe -O2 \$(CPUOPT) -fomit-frame-pointer:${CFLAGS}:" \
 		-e "s:CPU=.*:CPU=${CHOST%%-*}:" \
-		-e "s:HAVE_PAM=no:HAVE_PAM=yes:" \
 		-e "s:HAVE_SLN=no:HAVE_SLN=yes:" \
 		-e "s:HAVE_TSORT=no:HAVE_TSORT=yes:" \
 		-e "s:usr/man:usr/share/man:" \
