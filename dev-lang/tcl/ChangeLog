@@ -1,6 +1,9 @@
 # ChangeLog for dev-lang/tcl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.18 2003/10/21 18:37:21 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl/ChangeLog,v 1.19 2003/11/16 17:14:08 brad_mssw Exp $
+
+  16 Nov 2003; Brad House <brad_mssw@gentoo.org> tcl-8.4.4.ebuild:
+  add ~amd64 flag
 
 *tcl-8.4.4 (22 Oct 2003)
 
