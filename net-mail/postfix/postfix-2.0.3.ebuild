@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.3.ebuild,v 1.2 2003/01/31 07:39:13 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.3.ebuild,v 1.3 2003/02/03 01:18:56 raker Exp $
 
 TLS_P="pfixtls-0.8.13-2.0.3-0.9.7"
 IPV6_P="tls+ipv6-1.12-pf-2.0.3"
@@ -54,7 +54,7 @@ src_unpack() {
 		AUXLIBS="${AUXLIBS} -lssl -lcrypto"
 	fi
 	cd ${S}/conf
-	mv main.cf main.cf.orig
+	cp main.cf main.cf.orig
 	sed -e "s:/usr/libexec/postfix:/usr/lib/postfix:" \
 		< main.cf.orig > main.cf
 
@@ -150,6 +150,7 @@ src_install () {
 	sed <main.cf.orig >main.cf \
 		-e "s|/usr/share/doc/POSTFIX|/usr/share/doc/${PF}|"
 	chmod 644 main.cf
+	rm main.cf.orig
 	fperms 600 /etc/postfix/saslpass
 
 	exeinto /etc/init.d ; newexe ${FILESDIR}/postfix.rc6 postfix
@@ -177,6 +178,7 @@ src_install () {
 			< main.cf.prembox > main.cf
 		rm main.cf.prembox
 	fi
+	rm main.cf~
 	cd ${S}
 }
 
