@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icets/icets-1.4.ebuild,v 1.3 2004/11/02 14:29:32 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icets/icets-1.4.ebuild,v 1.4 2005/01/13 09:40:44 phosphan Exp $
 
 DESCRIPTION="IceWM Theme Editor"
 SRC_URI="mirror://sourceforge/icecc/${P}.tar.bz2"
@@ -18,8 +18,8 @@ src_unpack() {
 
 	unpack ${A}
 	cd ${S}
-	sed -e "s:/usr/local/bin:/usr/bin:" -i ${PN}.pro || die "sed failed"
-	sed -e 's:/usr/local/share:/usr/share:g' -i ${PN}.cpp || die "sed failed"
+	sed -e "s:/usr/local:/usr:" -i ${PN}.pro || die "sed failed"
+	sed -e 's:/usr/local:/usr:g' -i ${PN}.cpp || die "sed failed"
 	echo >> ${PN}.pro -e "QMAKE_CXXFLAGS_RELEASE += ${CXXFLAGS}\nQMAKE_CFLAGS_RELEASE += ${CFLAGS}"
 }
 
