@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/sablecc
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sablecc/ChangeLog,v 1.5 2004/06/24 08:51:49 dholm Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sablecc/ChangeLog,v 1.6 2004/06/24 22:42:06 agriffis Exp $
 
   24 Jun 2004; David Holm <dholm@gentoo.org> sablecc-2.18.2.ebuild:
   Added to ~ppc.

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/j2ssh/j2ssh-0.2.7.ebuild,v 1.1 2004/04/10 15:55:38 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/j2ssh/j2ssh-0.2.7.ebuild,v 1.2 2004/06/24 22:29:08 agriffis Exp $
 
 inherit java-pkg
 

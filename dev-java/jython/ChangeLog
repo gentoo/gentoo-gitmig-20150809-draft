@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/jython
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.5 2004/06/19 16:44:51 weeve Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jython/ChangeLog,v 1.6 2004/06/24 22:37:17 agriffis Exp $
 
   19 Jun 2004; Jason Wever <weeve@gentoo.org> jython-2.1-r2.ebuild:
   Stable on sparc.

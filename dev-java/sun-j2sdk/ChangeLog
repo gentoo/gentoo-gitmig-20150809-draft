@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/sun-j2sdk
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/ChangeLog,v 1.25 2004/03/01 07:15:07 mkennedy Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/ChangeLog,v 1.26 2004/06/24 22:43:34 agriffis Exp $
 
   01 Mar 2004; <mkennedy@gentoo.org> files/sun-j2sdk-1.4.1,
   files/sun-j2sdk-1.4.2:

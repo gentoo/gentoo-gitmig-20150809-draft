@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jad/jad-1.5.8e.ebuild,v 1.2 2004/05/19 04:26:44 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jad/jad-1.5.8e.ebuild,v 1.3 2004/06/24 22:29:30 agriffis Exp $
 
 DESCRIPTION="Jad - The fast JAva Decompiler"
 HOMEPAGE="http://www.kpdus.com/jad"

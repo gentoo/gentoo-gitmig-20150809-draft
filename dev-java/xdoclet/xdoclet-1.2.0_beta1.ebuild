@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/xdoclet-1.2.0_beta1.ebuild,v 1.7 2004/06/03 03:28:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/xdoclet-1.2.0_beta1.ebuild,v 1.8 2004/06/24 22:45:43 agriffis Exp $
 
 DESCRIPTION="A code-generation engine primarily for EJB"
 HOMEPAGE="http://xdoclet.sf.net/"

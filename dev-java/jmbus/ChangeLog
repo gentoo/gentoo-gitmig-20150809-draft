@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/jmbus
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jmbus/ChangeLog,v 1.1 2003/05/23 04:12:10 tberman Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jmbus/ChangeLog,v 1.2 2004/06/24 22:34:59 agriffis Exp $
 
 *jmbus-1.0.7 (23 May 2003)
 

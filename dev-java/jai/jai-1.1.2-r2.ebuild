@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jai/jai-1.1.2-r2.ebuild,v 1.2 2004/06/03 18:32:56 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jai/jai-1.1.2-r2.ebuild,v 1.3 2004/06/24 22:30:03 agriffis Exp $
 
 DESCRIPTION="JAI is a class library for managing images."
 HOMEPAGE="http://java.sun.com/products/java-media/jai/"

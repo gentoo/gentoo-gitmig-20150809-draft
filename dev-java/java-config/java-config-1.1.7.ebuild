@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-1.1.7.ebuild,v 1.4 2004/01/08 20:29:44 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-1.1.7.ebuild,v 1.5 2004/06/24 22:30:57 agriffis Exp $
 
 inherit distutils
 

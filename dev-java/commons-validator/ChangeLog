@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/commons-validator
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-validator/ChangeLog,v 1.10 2004/06/21 19:59:32 karltk Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-validator/ChangeLog,v 1.11 2004/06/24 22:23:46 agriffis Exp $
 
 *commons-validator-1.0.2-r3 (21 Jun 2004)
 

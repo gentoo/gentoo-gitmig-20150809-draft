@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/hibernate
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/ChangeLog,v 1.7 2004/06/16 00:56:57 st_lim Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/ChangeLog,v 1.8 2004/06/24 22:28:26 agriffis Exp $
 
   16 Jun 2004; Lim Swee Tat <st_lim@gentoo.org> hibernate-2.1.4.ebuild:
   Modified to use S=${WORKDIR}/${PN}-${PV:0:3} as suggested by user. Not bad

@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/infobus
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/infobus/ChangeLog,v 1.4 2004/02/10 07:26:08 strider Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/infobus/ChangeLog,v 1.5 2004/06/24 22:28:58 agriffis Exp $
 
   10 Feb 2004; Adrian Almenar <strider@gentoo.org> infobus-1.2.ebuild:
   Removed alpha keyword.

@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/log4j
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.16 2004/03/23 05:45:45 zx Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/log4j/ChangeLog,v 1.17 2004/06/24 22:38:31 agriffis Exp $
 
   23 Mar 2004; Chris Aniszczyk <zx@gentoo.org> log4j-1.2.8.ebuild:
   Don't slot me please ;)

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/mckoi/mckoi-1.0.2.ebuild,v 1.1 2004/01/12 09:30:55 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/mckoi/mckoi-1.0.2.ebuild,v 1.2 2004/06/24 22:39:14 agriffis Exp $
 
 DESCRIPTION="Mckoi Java SQL Database System"
 HOMEPAGE="http://mckoi.com/database/"

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-postgresql/jdbc2-postgresql-7.2.ebuild,v 1.5 2004/02/10 07:18:24 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc2-postgresql/jdbc2-postgresql-7.2.ebuild,v 1.6 2004/06/24 22:32:13 agriffis Exp $
 
 inherit java-pkg
 

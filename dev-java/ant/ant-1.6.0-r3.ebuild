@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.6.0-r3.ebuild,v 1.7 2004/04/16 02:25:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.6.0-r3.ebuild,v 1.8 2004/06/24 22:16:16 agriffis Exp $
 
 inherit java-pkg eutils
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jal/jal-20031117.ebuild,v 1.4 2004/05/05 16:48:48 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jal/jal-20031117.ebuild,v 1.5 2004/06/24 22:30:13 agriffis Exp $
 
 inherit java-pkg
 

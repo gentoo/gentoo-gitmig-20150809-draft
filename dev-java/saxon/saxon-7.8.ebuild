@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/saxon-7.8.ebuild,v 1.2 2004/04/17 02:10:58 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/saxon/saxon-7.8.ebuild,v 1.3 2004/06/24 22:42:26 agriffis Exp $
 
 inherit java-pkg
 

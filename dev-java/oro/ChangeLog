@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/oro
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/oro/ChangeLog,v 1.13 2004/06/02 22:06:24 agriffis Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/oro/ChangeLog,v 1.14 2004/06/24 22:40:08 agriffis Exp $
 
   02 Jun 2004; Aron Griffis <agriffis@gentoo.org> oro-2.0.8.ebuild:
   Fix use invocation

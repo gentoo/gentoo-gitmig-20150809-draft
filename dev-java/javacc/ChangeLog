@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/javacc
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/ChangeLog,v 1.7 2004/06/19 22:54:38 karltk Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/javacc/ChangeLog,v 1.8 2004/06/24 22:30:46 agriffis Exp $
 
 *javacc-3.2-r2 (19 Jun 2004)
 

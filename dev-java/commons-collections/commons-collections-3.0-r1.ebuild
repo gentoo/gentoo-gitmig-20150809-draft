@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/commons-collections-3.0-r1.ebuild,v 1.1 2004/05/16 22:55:38 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-collections/commons-collections-3.0-r1.ebuild,v 1.2 2004/06/24 22:20:36 agriffis Exp $
 
 inherit java-pkg
 

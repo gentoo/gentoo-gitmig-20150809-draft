@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/tagunit/tagunit-1.0.1.ebuild,v 1.1 2004/04/05 04:44:37 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/tagunit/tagunit-1.0.1.ebuild,v 1.2 2004/06/24 22:44:41 agriffis Exp $
 
 DESCRIPTION="TagUnit is a tag library for testing custom tags within JSP pages."
 SRC_URI="mirror://sourceforge/${PN}/${PN}-${PV}-src.zip"

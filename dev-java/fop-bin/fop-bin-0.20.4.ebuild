@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/fop-bin/fop-bin-0.20.4.ebuild,v 1.7 2004/02/25 18:19:21 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/fop-bin/fop-bin-0.20.4.ebuild,v 1.8 2004/06/24 22:26:23 agriffis Exp $
 
 MY_P=${P/-bin/}
 DESCRIPTION="Formatting Objects Processor is a print formatter driven by XSL"

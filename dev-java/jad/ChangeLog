@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/jad
-# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jad/ChangeLog,v 1.5 2004/05/19 04:26:44 zx Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jad/ChangeLog,v 1.6 2004/06/24 22:29:30 agriffis Exp $
 
   19 May 2004; Chris Aniszczyk <zx@gentoo.org> jad-1.5.8e.ebuild:
   Marking stable on x86

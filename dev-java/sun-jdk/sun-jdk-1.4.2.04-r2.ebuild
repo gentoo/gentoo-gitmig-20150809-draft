@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.04-r2.ebuild,v 1.1 2004/06/21 19:20:37 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.4.2.04-r2.ebuild,v 1.2 2004/06/24 22:44:09 agriffis Exp $
 
 IUSE="doc gnome kde mozilla jce"
 

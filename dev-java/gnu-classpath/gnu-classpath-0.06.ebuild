@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.06.ebuild,v 1.5 2004/05/05 16:46:47 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.06.ebuild,v 1.6 2004/06/24 22:26:58 agriffis Exp $
 
 DESCRIPTION="Free core class libraries for use with virtual machines and compilers for the java programming language"
 SRC_URI="ftp://alpha.gnu.org/gnu/classpath/${P/gnu-}.tar.gz"
