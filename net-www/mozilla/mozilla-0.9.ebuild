@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.ebuild,v 1.1 2001/05/08 01:06:54 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-0.9.ebuild,v 1.2 2001/05/08 03:34:25 achim Exp $
 
 A=mozilla-source-${PV}.tar.gz
 S=${WORKDIR}/mozilla
@@ -33,11 +33,13 @@ src_compile() {
 
 src_install () {
 
-    dodir /opt/mozilla/include/{private,obsolete}
+    dodir /opt/mozilla/include/nspr/{private,obsolete,md}
     cd dist/include
     cp -f *.h ${D}/opt/mozilla/include
-    cp -f obsolete/*.h ${D}/opt/mozilla/include/obsolete
-    cp -f private/*.h ${D}/opt/mozilla/include/private
+    cp -f nspr/*.h ${D}/opt/mozilla/include/nspr
+    cp -f nspr/obsolete/*.h ${D}/opt/mozilla/include/nspr/obsolete
+    cp -f nspr/private/*.h ${D}/opt/mozilla/include/nspr/private
+    cp -f nspr/md/*.h ${D}/opt/mozilla/include/nspr/md
 
     export MOZILLA_OFFICIAL=1
     export BUILD_OFFICIAL=1
