@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.4-r1.ebuild,v 1.18 2004/10/15 15:15:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/perl-5.8.4-r1.ebuild,v 1.19 2004/10/25 11:41:36 mcummings Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -234,6 +234,7 @@ src_compile() {
 
 	emake -j1 || die "Unable to make"
 
+
 	# i want people to have to take actions to disable tests, because
 	# they reveal lots of important problems in clear ways.  if that
 	# happens, you can revisit this, but portage .51 will call
@@ -367,7 +368,7 @@ pkg_postinst() {
 	if [ "${ROOT}" = "/" ]
 	then
 		ebegin "Converting C header files to the corresponding Perl format"
-		cd /usr/include; find ./ -name "*.h" -type f -exec h2ph {} \;
+		cd /usr/include; h2ph * sys/* arpa/* netinet/* bits/* security/* asm/*
 	fi
 
 	eerror ""

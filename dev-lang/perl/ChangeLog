@@ -1,6 +1,12 @@
 # ChangeLog for dev-lang/perl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.90 2004/10/06 11:44:53 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/perl/ChangeLog,v 1.91 2004/10/25 11:41:36 mcummings Exp $
+
+  25 Oct 2004; Michael Cummings <mcummings@gentoo.org> perl-5.8.2-r1.ebuild,
+  perl-5.8.3.ebuild, perl-5.8.4-r1.ebuild, perl-5.8.4.ebuild,
+  perl-5.8.5.ebuild:
+  Cleaner h2ph, should reduce build time but leave us with something still
+  usable.
 
   06 Oct 2004; Guy Martin <gmsoft@gentoo.org> perl-5.8.4-r1.ebuild:
   Stable on hppa.
