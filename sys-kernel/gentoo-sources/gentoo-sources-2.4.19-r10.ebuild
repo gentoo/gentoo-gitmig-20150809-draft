@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.19-r10.ebuild,v 1.5 2002/12/02 17:57:05 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/gentoo-sources-2.4.19-r10.ebuild,v 1.6 2002/12/09 00:12:15 lostlogic Exp $
 
 IUSE="build crypt xfs acpi4linux"
 
@@ -37,6 +37,8 @@ src_unpack() {
 
 	cd linux-${KV}
 	patch -p1 < ${FILESDIR}/lcall-DoS.patch || die "lcall-DoS patch failed"
+	patch -p1 < ${FILESDIR}/i810_drm.patch || die "i810_drm patch
+failed"
 	cd ..
 
 	cd ${KV}

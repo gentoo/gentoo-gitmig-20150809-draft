@@ -42,6 +42,8 @@ src_unpack() {
 
 	cd linux-${KV}
 	patch -p1 < ${FILESDIR}/lcall-DoS.patch || die "lcall-DoS patch failed"
+	patch -p1 < ${FILESDIR}/i810_drm.patch || die "i810_drm patch
+failed"
 	cd ..
 
 	# Now we need to deal with the tarball of patches.

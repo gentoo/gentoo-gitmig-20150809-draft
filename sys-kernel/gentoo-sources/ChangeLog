@@ -1,6 +1,10 @@
 # ChangeLog for sys-kernel/gentoo-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.8 2002/11/16 07:38:17 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-sources/ChangeLog,v 1.9 2002/12/09 00:12:14 lostlogic Exp $
+
+  07 Dec 2002; Brandon Low <lostlogic@gentoo.org> gentoo-sources-2.4.19-r10.ebuild gentoo-sources-2.4.19-r9.ebuild:
+  Add fix for i810_drm compilation, this should make people nice and
+  happy :). (as shown above this is for -r10 and -r9
 
   16 Nov 2002; Brandon Low <lostlogic@gentoo.org> gentoo-sources-2.4.19-r10.ebuild gentoo-sources-2.4.19-r9.ebuild:
   Add fix for lcall-DoS from lkml.
