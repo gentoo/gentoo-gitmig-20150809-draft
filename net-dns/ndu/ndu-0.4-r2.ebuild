@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/ndu/ndu-0.4-r2.ebuild,v 1.1 2005/02/13 03:38:27 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/ndu/ndu-0.4-r2.ebuild,v 1.2 2005/02/14 06:52:28 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs
 
@@ -12,9 +12,9 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
-DEPEND="sys-apps/sed 
+DEPEND="sys-apps/sed
 		virtual/libc"
-RDEPEND="virtual/libc 
+RDEPEND="virtual/libc
 		sys-apps/ed" # dnstouch calls ed to do the dirty work
 
 src_unpack() {
