@@ -1,7 +1,7 @@
 # Copyright 2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Robin H. Johnson <robbat2@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.76 2003/08/17 21:51:01 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php.eclass,v 1.77 2003/08/28 05:52:17 robbat2 Exp $
 
 # This EBUILD is totally masked presently. Use it at your own risk.  I know it
 # is severely broken, but I needed to get a copy into CVS to pass around and
@@ -153,8 +153,8 @@ PHP_INSTALLTARGETS="${PHP_INSTALLTARGETS} install-modules install-pear install-b
 PHPMAJORVER=${MY_PV//\.*}
 
 # These are quick fixups for older ebuilds that didn't have PHPSAPI defined.
-[ -z "${PHPSAPI}" ] && [ "${PN}" -eq "php" ] && PHPSAPI="cli"
-if [ -z "${PHPSAPI}" ] && [ "${PN}" -eq "mod_php" ]; then
+[ -z "${PHPSAPI}" ] && [ "${PN}" = "php" ] && PHPSAPI="cli"
+if [ -z "${PHPSAPI}" ] && [ "${PN}" = "mod_php" ]; then
 	use apache2 && PHPSAPI="apache2" || PHPSAPI="apache1"
 fi
 
@@ -312,6 +312,7 @@ php_src_compile() {
 	myconf="${myconf} `use_with spell pspell` `use_with ssl openssl`"
 	myconf="${myconf} `use_with curl` `use_with imap` `use_with ldap`"
 	myconf="${myconf} `use_with xml2 dom` `use_with xml2 dom-xslt`"
+	myconf="${myconf} `use_with xml2 dom-exslt`"
 	myconf="${myconf} `use_with kerberos` `use_with pam`"
 	myconf="${myconf} `use_enable memlimit memory-limit`"
 	myconf="${myconf} `use_enable ipv6`"
