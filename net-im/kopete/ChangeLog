@@ -1,6 +1,10 @@
 # ChangeLog for net-im/kopete
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/ChangeLog,v 1.44 2004/07/15 14:36:13 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/kopete/ChangeLog,v 1.45 2004/07/25 21:31:27 carlo Exp $
+
+  25 Jul 2004; Carsten Lohrke <carlo@gentoo.org> -kopete-0.6.2.ebuild,
+  kopete-0.8.0.ebuild, kopete-0.8.4.ebuild:
+  QA: need-kde after R/DEPEND
 
   15 Jul 2004; Lars Weiler <pylon@gentoo.org> kopete-0.8.4.ebuild:
   Stable on ppc.
