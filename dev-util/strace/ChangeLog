@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/strace
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.43 2004/08/07 22:35:34 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/strace/ChangeLog,v 1.44 2004/09/22 03:15:40 vapier Exp $
+
+*strace-4.5.7 (21 Sep 2004)
+
+  21 Sep 2004; Mike Frysinger <vapier@gentoo.org> +strace-4.5.7.ebuild:
+  Version bump.
 
   07 Aug 2004; Tom Martin <slarti@gentoo.org> strace-4.4.94.ebuild:
   Typo in DESCRIPTION: usefull -> useful. Bug 59717.
