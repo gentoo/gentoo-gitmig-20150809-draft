@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/fuse-0.6.1.1.ebuild,v 1.3 2003/11/21 06:40:54 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fuse/fuse-0.6.1.1.ebuild,v 1.4 2003/11/22 08:04:39 vapier Exp $
 
 DESCRIPTION="Free Unix Spectrum Emulator by Philip Kendall"
 HOMEPAGE="http://www.srcf.ucam.org/~pak21/spectrum/fuse.html"
@@ -54,6 +54,7 @@ src_compile() {
 		`use_with gtk` \
 		`use_with gtk2` \
 		`use_with libdsk plus3-disk` \
+		${guiflag} \
 		|| die
 	emake || die
 }
