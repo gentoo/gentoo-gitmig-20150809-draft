@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-gnustep/gorm/gorm-0.2.6-r1.ebuild,v 1.2 2003/07/30 18:59:31 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-gnustep/gorm/gorm-0.3.0.ebuild,v 1.1 2003/07/30 18:59:31 raker Exp $
 
 inherit base gnustep
 
@@ -14,4 +14,3 @@ LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~x86"
 DEPEND=">=dev-util/gnustep-gui-0.8.5"
-PATCHES="${FILESDIR}/${P}-compilation-fix.diff"
