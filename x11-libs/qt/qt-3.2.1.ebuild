@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.2.1.ebuild,v 1.4 2003/09/07 00:23:28 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt/qt-3.2.1.ebuild,v 1.5 2003/09/12 00:09:55 caleb Exp $
 
 DESCRIPTION="QT version ${PV}"
 HOMEPAGE="http://www.trolltech.com/"
@@ -18,14 +18,13 @@ DEPEND="virtual/x11
 	>=media-libs/libmng-1.0.0
 	>=media-libs/freetype-2
 	virtual/xft
-	!<kde-base/kdelibs-3.2
+	!<kde-base/kdelibs-3.1.4
 	nas? ( >=media-libs/nas-1.4.1 )
 	odbc? ( >=dev-db/unixODBC-2.0 )
 	mysql? ( >=dev-db/mysql-3.2.10 )
 	opengl? ( virtual/opengl virtual/glu )
 	postgres? ( >=dev-db/postgresql-7.2 )"
 RDEPEND="${DEPEND}"
-	#doc? ( ~app-doc/qt-docs- )"
 
 S=${WORKDIR}/qt-x11-free-${PV}
 
@@ -76,9 +75,11 @@ _EOF_
 
 src_compile() {
 	export QTDIR=${S}
+	export SYSCONF=${QTBASE}/etc/settings
 
 	# fix #11144; qt wants to create lock files etc. in that directory
 	[ -d "$QTBASE/etc/settings" ] && addwrite "$QTBASE/etc/settings"
+	[ ! -d "$QTBASE/etc/settings" ] && dodir ${QTBASE}/etc/settings
 
 	export LDFLAGS="-ldl"
 
@@ -93,7 +94,7 @@ src_compile() {
 	use xinerama    && mycong="${myconf} -xinerama"
 
 	# avoid wasting time building things we won't install
-	rm -rf tutorial examples
+	#rm -rf tutorial examples
 
 	export YACC='byacc -d'
 
@@ -114,7 +115,7 @@ src_install() {
 	dobin bin/*
 
 	# libraries
-	dolib lib/libqt-mt.so.3.2.0 lib/libqui.so.1.0.0 lib/lib{editor,qassistantclient,designer}.a
+	dolib lib/libqt-mt.so.3.2.1 lib/libqui.so.1.0.0 lib/lib{editor,qassistantclient,designer}.a
 	cd ${D}$QTBASE/lib
 	for x in libqui.so ; do
 		ln -s $x.1.0.0 $x.1.0
@@ -122,13 +123,13 @@ src_install() {
 		ln -s $x.1 $x
 	done
 
-	# version symlinks - 3.2.0->3.2->3->.so
-	ln -s libqt-mt.so.3.2.0 libqt-mt.so.3.2
+	# version symlinks - 3.2.1->3.2->3->.so
+	ln -s libqt-mt.so.3.2.1 libqt-mt.so.3.2
 	ln -s libqt-mt.so.3.2 libqt-mt.so.3
 	ln -s libqt-mt.so.3 libqt-mt.so
 
 	# libqt -> libqt-mt symlinks
-	ln -s libqt-mt.so.3.2.0 libqt.so.3.2.0
+	ln -s libqt-mt.so.3.2.1 libqt.so.3.2.0
 	ln -s libqt-mt.so.3.2 libqt.so.3.2
 	ln -s libqt-mt.so.3 libqt.so.3
 	ln -s libqt-mt.so libqt.so
@@ -142,6 +143,18 @@ src_install() {
 	# misc
 	insinto /etc/env.d
 	doins ${FILESDIR}/{45qt3,50qtdir3}
+
+	dodir ${QTBASE}/tools/designer/templates
+
+	cd ${S}/doc
+	dodir ${QTBASE}/doc
+	for x in html flyers; do
+		cp -r $x ${D}/${QTBASE}/doc
+	done
+
+	cp -r ${S}/doc/man ${D}/${QTBASE}
+	cp -r ${S}/examples ${D}/${QTBASE}
+	cp -r ${S}/tutorial ${D}/${QTBASE}
 
 	# misc build reqs
 	dodir ${QTBASE}/mkspecs
