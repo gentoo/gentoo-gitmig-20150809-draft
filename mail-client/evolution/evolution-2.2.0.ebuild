@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.2.0.ebuild,v 1.2 2005/03/09 09:33:30 joem Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-2.2.0.ebuild,v 1.3 2005/03/11 03:31:27 latexer Exp $
 
 inherit eutils gnome2 flag-o-matic alternatives
 
@@ -43,7 +43,7 @@ RDEPEND=">=gnome-extra/libgtkhtml-3.6.0
 	kerberos? ( virtual/krb5 )
 	gstreamer? ( >=media-libs/gstreamer-0.8
 		>=media-libs/gst-plugins-0.8 )
-	mono? ( >=dev-dotnet/mono-1 )"
+	mono? ( >=dev-lang/mono-1 )"
 
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
