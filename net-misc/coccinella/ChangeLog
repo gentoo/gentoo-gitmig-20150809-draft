@@ -1,7 +1,11 @@
 # ChangeLog for net-misc/coccinella
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
 # Author: José Alberto Suárez López <bass@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/coccinella/ChangeLog,v 1.9 2003/03/03 21:06:27 bass Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/coccinella/ChangeLog,v 1.10 2004/02/29 15:11:43 bass Exp $
+
+*coccinella-0.94.7 (29 Feb 2004)
+  29 Feb 2004; J. Alberto Suarez L. <bass@gentoo.org> coccinella-0.94.7.ebuild:
+  Version bumped
 
 *coccinella-0.94.3 (03 Mar 2003)
  03 Mar 2003; J. Alberto Suarez L. <bass@gentoo.org> coccinella-0.94.3.ebuild:
