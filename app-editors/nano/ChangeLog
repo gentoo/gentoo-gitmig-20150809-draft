@@ -1,6 +1,11 @@
 # ChangeLog for app-editors/nano
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.13 2003/01/18 18:23:10 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/ChangeLog,v 1.14 2003/01/25 05:19:34 vapier Exp $
+
+*nano-1.1.99_pre1 (25 Jan 2003)
+
+  25 Jan 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump #14521.
 
 *nano-1.0.9-r2 (01 Dec 2002)
  
