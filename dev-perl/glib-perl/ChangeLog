@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/glib-perl
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.20 2005/03/07 16:34:06 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib-perl/ChangeLog,v 1.21 2005/03/10 13:03:13 mcummings Exp $
+
+  10 Mar 2005; Michael Cummings <mcummings@gentoo.org> glib-perl-1.062.ebuild:
+  unmasking for x86 as a dep
 
   07 Mar 2005; Markus Rothe <corsair@gentoo.org> glib-perl-1.042.ebuild:
   Stable on ppc64

@@ -1,14 +1,24 @@
-MD5 f6c29849248c041044bbaa749755d905 ChangeLog 2843
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d444f19e2a7f9929c97395ec86abb409 ChangeLog 3025
+MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 e2298742e4b435e45a16373e08bc1b16 gtk2-perl-0.12.ebuild 797
 MD5 11c329fa3289c28451a3bab282d4e479 gtk2-perl-0.97.ebuild 559
 MD5 5e0838258876436b33097b9c676d0607 gtk2-perl-1.012.ebuild 548
 MD5 509e5287b91917c1bae8371c06e667eb gtk2-perl-1.040.ebuild 659
 MD5 85da3a95ca9c214b5446d69309eca028 gtk2-perl-1.042.ebuild 665
-MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
-MD5 f43fffff4211e0565a1dac58b784b99f gtk2-perl-1.062.ebuild 651
+MD5 10ddd6ac8a9aaec080507e0cd969db4f gtk2-perl-1.062.ebuild 650
 MD5 1c1f460714e9f7eedd497abe98296fe1 files/digest-gtk2-perl-0.12 66
 MD5 3c6877e479e1981f98744cfc38929d6f files/digest-gtk2-perl-0.97 61
 MD5 9c02e86dfdde509833710ff87806e11c files/digest-gtk2-perl-1.012 62
 MD5 bccb1a4470a6f10919b8191937346abb files/digest-gtk2-perl-1.040 62
 MD5 4fd687bbc5c9d091a8286f12a05f57fa files/digest-gtk2-perl-1.042 62
 MD5 4c85f817a2d758bce3953718548fbb92 files/digest-gtk2-perl-1.062 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCMEWwtG5z4I8BtQoRAsPNAKCFwkcm+caF+pvtQ/R6+z3cbIBk9ACeIzhF
+dq2V+/VA+aM2CgEVO4UaQ84=
+=6oA/
+-----END PGP SIGNATURE-----
