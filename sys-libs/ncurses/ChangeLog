@@ -1,6 +1,9 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.35 2003/11/04 08:17:44 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.36 2003/11/05 00:59:40 brad_mssw Exp $
+
+  04 Nov 2003; Brad House <brad_mssw@gentoo.org> ncurses-5.3-r4.ebuild:
+  mark stable on amd64
 
   04 Nov 2003; Christian Birchinger <joker@gentoo.org> ncurses-5.3-r2.ebuild:
   Added sparc stable keyword
