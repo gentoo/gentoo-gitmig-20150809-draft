@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.3 2004/11/04 13:13:59 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.4 2004/11/04 14:16:14 kosmikus Exp $
 #
 # Author: Andres Loeh <kosmikus@gentoo.org>
 #
@@ -55,7 +55,7 @@ ghc-localpkgconf() {
 ghc-makeghcilib() {
 	local outfile
 	outfile="$(dirname $1)/$(basename $1 | sed 's:^lib\?\(.*\)\.a$:\1.o:')"
-	ld --relocatable --discard-all --output="${outfile}" $1
+	ld --relocatable --discard-all --output="${outfile}" --whole-archive $1
 }
 
 # creates a local (package-specific) package
