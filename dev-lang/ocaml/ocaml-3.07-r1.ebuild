@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.07-r1.ebuild,v 1.4 2004/04/17 10:54:45 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.07-r1.ebuild,v 1.5 2004/04/19 12:01:29 mattam Exp $
 
 inherit flag-o-matic eutils
 
@@ -35,6 +35,9 @@ src_compile() {
 	if [ "${ARCH}" = "sparc" ]; then
 		myconf="${myconf} -host sparc-unknown-linux-gnu"
 	fi
+
+	# Fix for bug #46703
+	export LC_ALL=C
 
 	./configure -prefix /usr \
 		-bindir /usr/bin \
