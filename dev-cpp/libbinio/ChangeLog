@@ -1,0 +1,10 @@
+# ChangeLog for dev-cpp/libbinio
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libbinio/ChangeLog,v 1.1 2004/07/20 13:52:18 spock Exp $
+
+*libbinio-1.2 (20 Jul 2004)
+
+  20 Jul 2004; Michal Januszewski <spock@gentoo.org> +metadata.xml,
+  +libbinio-1.2.ebuild:
+  Initial commit.
+
