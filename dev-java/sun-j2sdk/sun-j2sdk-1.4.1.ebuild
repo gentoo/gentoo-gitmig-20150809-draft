@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.1.ebuild,v 1.1 2003/01/12 12:21:42 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2sdk/sun-j2sdk-1.4.1.ebuild,v 1.2 2003/01/12 20:01:53 cretin Exp $
 
 # Maintainer: Stefan Jones <cretin@gentoo.org>
 # Author: Stefan Jones <cretin@gentoo.org>
@@ -44,8 +44,8 @@ DEPEND="${RDEPEND}
 	!x11-libs/lesstif
 	!x11-libs/openmotif"
 
-PROVIDE="virtual/jre-1.4.0
-	virtual/jdk-1.4.0
+PROVIDE="virtual/jre-1.4.1
+	virtual/jdk-1.4.1
 	virtual/java-scheme-2"
 
 pkg_setup() {	
