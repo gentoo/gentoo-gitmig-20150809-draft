@@ -3,7 +3,7 @@
 flumotion_manager=/usr/bin/flumotion-manager
 flumotion_worker=/usr/bin/flumotion-worker
 flumotion_manager_pidfile=/var/run/flumotion/manager.default.pid
-flumotion_worker_pidfile=/var/run/flumotion/worker.localhost.pid
+flumotion_worker_pidfile=/var/run/flumotion/worker.default.pid
 
 depend() {
     need net
