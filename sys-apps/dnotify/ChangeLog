@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/dnotify
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dnotify/ChangeLog,v 1.9 2004/06/30 15:24:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dnotify/ChangeLog,v 1.10 2004/07/17 23:28:07 dragonheart Exp $
+
+*dnotify-0.16.0 (18 Jul 2004)
+
+  18 Jul 2004; Daniel Black <dragonheart@gentoo.org> +dnotify-0.16.0.ebuild,
+  dnotify-0.5.0.ebuild:
+  0.5.0 - QA fix S= is default, SRC_URI doesn't exist - changed to
+  mirror://gentoo/. 0.16.0 - version bump
 
   30 Jun 2004; Aron Griffis <agriffis@gentoo.org> dnotify-0.5.0.ebuild:
   sync IUSE (missing)
