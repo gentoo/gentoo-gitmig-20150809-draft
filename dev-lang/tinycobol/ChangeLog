@@ -1,0 +1,9 @@
+# ChangeLog for dev-lang/tinycobol
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tinycobol/ChangeLog,v 1.1 2003/05/12 11:59:06 phosphan Exp $
+
+*tinycobol-0.60 (12 May 2003)
+
+  12 May 2003; Patrick Kursawe <phosphan@gentoo.org> tinycobol-0.60.ebuild:
+  Initial import, suggestion by Rigo Ketelings <rigo@home.nl> in bug 15686
+
