@@ -1,6 +1,6 @@
 # ChangeLog for dev-util/glademm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/glademm/ChangeLog,v 1.9 2003/03/15 19:05:46 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/glademm/ChangeLog,v 1.10 2003/04/26 21:26:29 liquidx Exp $
 
 *glademm-1.1.3e (15 Mar 2003)
 
@@ -14,6 +14,11 @@
   updated version, fixes gcc3 compile (bug #6595)
 
 *glademm-0.6.4 (4 Oct 2002)
+
+  26 Apr 2003; Alastair Tse <liquidx@gentoo.org> glademm-0.6.2.ebuild,
+  glademm-0.6.4.ebuild:
+  peg gtkmm deps at 1.2
+
   04 Oct 2002; Spider <spider@gentoo.org> glademm-0.6.4.ebuild :
   updated to last stable, applied a gcc3 patch from Nicholas Worums
 
