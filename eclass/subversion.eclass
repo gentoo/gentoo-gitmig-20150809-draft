@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.3 2004/01/26 15:06:02 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/subversion.eclass,v 1.4 2004/02/08 14:37:59 hattya Exp $
 
 ## --------------------------------------------------------------------------- #
 # Author: Akinori Hattori <hattya@gentoo.org>
@@ -95,12 +95,15 @@ subversion_svn_fetch() {
 	fi
 
 	if [ ! -d "${ESVN_STORE_DIR}" ]; then
-		mkdir -p "${ESVN_STORE_DIR}"
+		# I don't know why this causes access violation.
+		addwrite "${ESVN_STORE_DIR}"
+
+		mkdir -p "${ESVN_STORE_DIR}" || die "subversion.eclass: can't mkdir ${ESVN_STORE_DIR}."
 		einfo "created store directory: ${ESVN_STORE_DIR}"
 		einfo
 	fi
 
-	cd "${ESVN_STORE_DIR}"
+	cd "${ESVN_STORE_DIR}" || die "subversion.eclass: can't cd to ${ESVN_STORE_DIR}."
 
 	# every time
 	addwrite "/etc/subversion"
@@ -122,10 +125,10 @@ subversion_svn_fetch() {
 		einfo
 		einfo "check out from: ${ESVN_REPO_URI}"
 
-		mkdir -p "${ESVN_PROJECT}"
-		cd "${ESVN_PROJECT}"
+		mkdir -p "${ESVN_PROJECT}" || die "subversion.eclass: can't mkdir ${ESVN_PROJECT}."
+		cd "${ESVN_PROJECT}" || die "subversion.eclass: can't cd to ${ESVN_PROJECT}."
 
-		${ESVN_FETCH_CMD} "${ESVN_REPO_URI}"
+		${ESVN_FETCH_CMD} "${ESVN_REPO_URI}" || die "subversion.eclass: can't fetch from ${ESVN_REPO_URI}."
 		einfo "     stored in: ${ESVN_STORE_DIR}/${ESVN_CO_DIR}"
 
 	else
@@ -134,13 +137,13 @@ subversion_svn_fetch() {
 		einfo
 		einfo "   update from: ${ESVN_REPO_URI}"
 
-		cd "${ESVN_CO_DIR}"
-		${ESVN_UPDATE_CMD}
+		cd "${ESVN_CO_DIR}" || die "subversion.eclass: can't cd to ${ESVN_CO_DIR}."
+		${ESVN_UPDATE_CMD} || die "subversion.eclass: can't update from ${ESVN_REPO_URI}."
 		einfo "    updated in: ${ESVN_STORE_DIR}/${ESVN_CO_DIR}"
 	fi
 
 	# copy to the ${WORKDIR}
-	cp -Rf "${ESVN_STORE_DIR}/${ESVN_CO_DIR}" "${WORKDIR}/${P}"
+	cp -Rf "${ESVN_STORE_DIR}/${ESVN_CO_DIR}" "${WORKDIR}/${P}" || die "subversion.eclass: can't copy to ${WORKDIR}/${P}."
 	einfo
 
 }
