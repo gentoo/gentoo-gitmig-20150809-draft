@@ -1,14 +1,24 @@
-MD5 84ff0d00a21d2e02f8620c48edc30594 ChangeLog 1105
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e2b26c40386a5a73c7e7265721594223 ChangeLog 1234
 MD5 4b562dac77e8dcbc4aaea4b9bf4dbac2 metadata.xml 264
+MD5 963634bd751344b05c9ce3dccde12488 mod_random-1.4-r1.ebuild 600
 MD5 c97901bd13a9142209fc87feb2ac49ba mod_random-1.4.ebuild 805
+MD5 c57bb242841cf82db43417272cf7e617 mod_random-2.0-r1.ebuild 597
 MD5 7d05d208a6fa430df1c953d2e6577146 mod_random-2.0.ebuild 913
-MD5 a1707bc32b3443f646b22425aa9deca9 mod_random-1.4-r1.ebuild 657
-MD5 2464d1fbe83d77bcd489d2531a2c6924 mod_random-2.0-r1.ebuild 660
 MD5 86a55671a4e2cf869d84e85686272f3b files/17_mod_random.conf 827
-MD5 1044515a5b4cf42e839420deca806473 files/digest-mod_random-1.4 64
-MD5 6e72fbdb6780b5f9410dc453fdf45794 files/digest-mod_random-2.0 64
 MD5 ea81d0f33022f43cde58448a4092dabf files/mod_random-register.patch 687
 MD5 1044515a5b4cf42e839420deca806473 files/digest-mod_random-1.4-r1 64
+MD5 1044515a5b4cf42e839420deca806473 files/digest-mod_random-1.4 64
 MD5 6e72fbdb6780b5f9410dc453fdf45794 files/digest-mod_random-2.0-r1 64
-MD5 f020640fb038d8203e3b1167685ea9c3 files/2.0-r1/17_mod_random.conf 817
+MD5 6e72fbdb6780b5f9410dc453fdf45794 files/digest-mod_random-2.0 64
 MD5 f020640fb038d8203e3b1167685ea9c3 files/1.4-r1/17_mod_random.conf 817
+MD5 f020640fb038d8203e3b1167685ea9c3 files/2.0-r1/17_mod_random.conf 817
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCHzvqmPFBzbX68WERAieTAJ9YkfZ6ZF6SuLoN6hz6ws9QDlpHnACfa+fi
+6qLS3Po2T7MNKoC47AUbjmE=
+=+810
+-----END PGP SIGNATURE-----

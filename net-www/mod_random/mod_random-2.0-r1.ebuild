@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_random/mod_random-2.0-r1.ebuild,v 1.1 2005/01/07 19:33:21 vericgar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_random/mod_random-2.0-r1.ebuild,v 1.2 2005/02/25 14:50:54 hollow Exp $
 
 inherit apache-module
 
@@ -14,11 +14,7 @@ IUSE=""
 SLOT="2"
 
 DEPEND=""
-RDEPEND=""
 
-APXS2_S="${S}"
-
-APACHE2_MOD_FILE=".libs/${PN}.so"
 APACHE2_MOD_CONF="${PVR}/17_mod_random"
 APACHE2_MOD_DEFINE="RANDOM"
 
