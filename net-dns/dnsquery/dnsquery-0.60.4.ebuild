@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsquery/dnsquery-0.60.1.ebuild,v 1.1 2003/11/02 05:30:21 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsquery/dnsquery-0.60.4.ebuild,v 1.1 2004/04/22 23:46:02 matsuu Exp $
 
 DESCRIPTION="A graphical tool for sending queries to DNS servers"
 HOMEPAGE="http://www.posadis.org/projects/dnsquery.php"
@@ -8,10 +8,10 @@ SRC_URI="mirror://sourceforge/posadis/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-DEPEND=">=dev-cpp/poslib-0.9.7
+DEPEND=">=dev-cpp/poslib-1.0.2
 	=x11-libs/gtk+-1.2*"
 
 src_compile() {
