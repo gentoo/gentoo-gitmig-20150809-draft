@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.1_pre4.ebuild,v 1.3 2005/02/03 11:09:50 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.1_pre4.ebuild,v 1.4 2005/02/04 22:54:51 karltk Exp $
 
 inherit eutils java-utils
 
@@ -21,7 +21,7 @@ RDEPEND="|| ( >=virtual/jdk-1.4.2 =dev-java/blackdown-jdk-1.4.2* )
 			!motif? ( >=x11-libs/gtk+-2.2.4 )
 		      )
 	      )
-	mozilla? ( >=net-www/mozilla-1.5 )
+	mozilla? ( >=net-www/mozilla-1.7* )
 	gnome? ( =gnome-base/gnome-vfs-2* =gnome-base/libgnomeui-2* )
 	!media-fonts/unifont"
 
@@ -83,8 +83,7 @@ src_unpack() {
 	patch-motif-frontend
 
 	einfo "Set build version in Help->About"
-	find -type f -name about.mappings -exec sed -e "s/@build@/Gentoo Linux ${PF}/" -i \{\} \; \
-		|| die "Failed to patch about.mappings"
+	patch-about
 }
 
 src_compile() {
@@ -108,7 +107,7 @@ src_compile() {
 
 	einfo "Building resources.core plugin"
 	cd ${S}/${core_src_dir}
-	make JDK_INCLUDE="`java-config -O`/include -I`java-config -O`/include/linux" || die "Failed to build resource.core plugin"
+	make JDK_INCLUDE="-I`java-config -O`/include -I`java-config -O`/include/linux" || die "Failed to build resource.core plugin"
 	mkdir -p ${S}/"${core_dest_dir}"
 	mv *.so ${S}/"${core_dest_dir}"
 	cd ${S}
@@ -276,14 +275,16 @@ function patch-gtk-frontend() {
 		-e "s:\(-I\$(GECKO_SDK)\)\(/.*\)\(/include\):-I${mozilla_dir}/include\2:g" \
 		-e "s:\$(XTEST_LIB_PATH):/usr/X11R6/lib:" \
 		-e "s:\$(GECKO_SDK):${mozilla_dir}:" \
-		-e "s:/usr/include/kde:\`kde-config --prefix\`/include:" \
-		-e "s:\(KDE_LIBS.*\)\(-L/usr/lib\):\1-L\`kde-config --prefix\`/lib:" \
 		-i "${S}/${gtk_swt_src_dir}/make_linux.mak" || die "Failed to patch ${gtk_swt_src_dir}/make_linux.mak"
 
-
-	sed -e "s:\(JAVA_HOME *=\)\(.*$\):\1${JAVA_HOME}:" \
+	sed \
+		-e "s:GECKO_INCLUDES *=.*:GECKO_INCLUDES=\"-include \$\{GECKO_SDK\}/include/mozilla-config.h -I\$\{GECKO_SDK\}/include/nspr -I\$\{GECKO_SDK\}/include/nspr -I\$\{GECKO_SDK\}/include/xpcom -I\$\{GECKO_SDK\}/include/string -I\$\{GECKO_SDK\}/include/embed_base\":" \
+		-e "s:GECKO_LIBS *=.*:GECKO_LIBS=\"-L\$\{GECKO_SDK\} -lgtkembedmoz\":" \
+		-e "s:\(JAVA_HOME *=\)\(.*$\):\1${JAVA_HOME}:" \
 		-e "s:\(GECKO_SDK *=\)\(.*$\):\1${mozilla_dir:-/usr/lib/mozilla}:" \
 		-e "s:\(AWT_LIB_PATH *=\)\(.*$\):\1\$JAVA_HOME/jre/lib/${ARCH}:" \
+		-e "s:KDE_LIB_PATH=.*:KDE_LIB_PATH=`kde-config --prefix`/lib:" \
+		-e "s:KDE_INCLUDE_PATH=.*:KDE_INCLUDE_PATH=`kde-config --prefix`/include:" \
 		-i "${S}/${gtk_swt_src_dir}/build.sh" || die "Failed to patch ${gtk_swt_src_dir}/build.sh"
 
 }
@@ -305,6 +306,11 @@ function patch-motif-frontend()
 		-e "s:-L\$(MOZILLA_HOME)/lib -lembed_base_s:-L\$(MOZILLA_HOME):" \
 		-e "s:-L\$(JAVA_HOME)/jre/bin:-L\$(JAVA_HOME)/jre/lib/i386:" \
 		-i "${motif_swt_src_dir}"/make_linux.mak || die "Failed to modify ${motif_swt_src_dir}/make_linux.mak"
+
+	sed \
+		-e "s:KDE_LIB_PATH=.*:KDE_LIB_PATH=`kde-config --prefix`/lib:" \
+		-e "s:KDE_INCLUDE_PATH=.*:KDE_INCLUDE_PATH=`kde-config --prefix`/include:" \
+		-i "${S}/${motif_swt_src_dir}/build.sh" || die "Failed to patch ${motif_swt_src_dir}/build.sh"
 }
 
 
@@ -517,4 +523,14 @@ function check-cflags() {
 		echo
 		ebeep
 	fi
+}
+
+function patch-about {
+
+	find -type f -name about.mappings -exec sed -e "s/@build@/Gentoo Linux ${PF}/" -i \{\} \; \
+		|| die "Failed to patch about.mappings"
+
+	sed -e "s/@build@/Gentoo Linux ${PF}/" \
+		-i features/org.eclipse.platform/configuration.files/configuration/config.ini \
+		-i build.xml || die "Failed to set build version"
 }
