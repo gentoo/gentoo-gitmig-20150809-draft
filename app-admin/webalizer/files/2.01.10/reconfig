@@ -1,0 +1,4 @@
+#!/bin/bash
+if [ $1 = "start" -o $1 = "install" ]; then
+	sed -e "s|/var/www/webalizer|${MY_INSTALLDIR}|" -i /etc/webalizer.conf
+fi
