@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.11.ebuild,v 1.6 2003/06/29 00:38:16 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pam-login/pam-login-3.11.ebuild,v 1.7 2003/06/29 00:57:22 pebenito Exp $
 
 
 inherit gnuconfig
@@ -23,7 +23,8 @@ LICENSE="GPL-2"
 
 DEPEND="virtual/glibc
 	sys-libs/pam
-	>=sys-apps/shadow-4.0.2-r5"
+	>=sys-apps/shadow-4.0.2-r5
+	selinux? ( >=sys-apps/selinux-small-2003011510-r2 )"
 
 src_unpack() {
 	unpack ${A}
