@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.27-r4.ebuild,v 1.9 2003/07/13 23:35:09 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/openldap/openldap-2.0.27-r4.ebuild,v 1.10 2003/07/23 19:11:11 raker Exp $
 
 inherit eutils
 
@@ -61,15 +61,21 @@ pkg_preinst() {
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+
 	# never worked anyway ?
 	epatch ${FILESDIR}/kerberos-2.0.diff.bz2
+
 	# force the use of db3 only, db4 has api breakages
 	epatch ${FILESDIR}/${P}-db3-gentoo.patch
+
 	# According to MDK, the link order needs to be changed so that
 	# on systems w/ MD5 passwords the system crypt library is used
 	# (the net result is that "passwd" can be used to change ldap passwords w/
 	#  proper pam support)
 	sed -ie 's/$(SECURITY_LIBS) $(LDIF_LIBS) $(LUTIL_LIBS)/$(LUTIL_LIBS) $(SECURITY_LIBS) $(LDIF_LIBS)/' ${S}/servers/slapd/Makefile.in
+
+	# rfc2252 has some missing characters...
+	epatch ${FILESDIR}/rfc2252-bork.patch
 }
 
 src_compile() {
@@ -210,4 +216,11 @@ pkg_postinst() {
 		einfo "SASL1=yes emerge net-nds/openldap"
 		einfo ""
 	fi
+
+	ewarn ""
+	ewarn "slapd is no longer running as root!"
+	ewarn "If you have upgraded from a previous ebuild you may find problems"
+	ewarn "Make sure your ldap databases are chown ldap:ldap"
+	ewarn "See http://bugs.gentoo.org/show_bug.cgi?id=24790 for more info"
+	ewarn ""
 }
