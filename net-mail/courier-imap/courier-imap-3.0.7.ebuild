@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.7.ebuild,v 1.2 2004/08/20 06:05:00 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.7.ebuild,v 1.3 2004/08/20 20:10:29 langthang Exp $
 
 inherit eutils gnuconfig
 
@@ -12,7 +12,6 @@ LICENSE="GPL-2"
 SLOT="0"
 IUSE="fam berkdb gdbm debug ipv6 ldap mysql nls pam postgres selinux"
 PROVIDE="virtual/imapd"
-# not compatible with >=sys-libs/db-4
 RDEPEND="virtual/libc
 	>=dev-libs/openssl-0.9.6
 	pam? ( >=sys-libs/pam-0.75 )
@@ -58,37 +57,17 @@ vpopmail_setup() {
 src_unpack() {
 	unpack ${A}
 
-	# patch to fix db4.0 detection as db4.1
-	# bug #27517, patch was sent upstream, but was ignored :-(
-	# EPATCH_OPTS="${EPATCH_OPTS} -p1 -d ${S}" \
-	# epatch ${FILESDIR}/${PN}-3.0.2-db40vs41.patch
-
 	cd ${S}
-	# explicitly use db3 over db4
-	#if use berkdb; then
-	#	sed -i -e 's,-ldb,-ldb-3.2,g' configure
-	#	sed -i -e 's,-ldb,-ldb-3.2,g' bdbobj/configure
-	#	sed -i -e 's#s,@CFLAGS@,$CFLAGS,#s,@CFLAGS@,-I/usr/include/db3 $CFLAGS,#' configure
-	#	sed -i -e 's#s,@CFLAGS@,$CFLAGS,#s,@CFLAGS@,-I/usr/include/db3 $CFLAGS,#' bdbobj/configure
-	#fi
-
-	# Fix a bug with where the password change module is installed. Upstream bug in configure file.
-	#sed -i -e 's,--with-authchangepwdir=/var/tmp/dev/null,--with-authchangepwdir=$libexecdir/authlib,' configure
-
-	# epatch ${FILESDIR}/${PN}-3.0.2-removerpm.patch || die "patch failed."
-
-	# bug #48838 - make is possible to disable fam
-	# EPATCH_OPTS="${EPATCH_OPTS} -p1 -d ${S}" \
-	# epatch ${FILESDIR}/${P}-disable-fam.diff || die "patch failed."
-
-	#rm -f configure config.h.in saslauthd/configure
-	#cp ${FILESDIR}/configure.in . || die "failed copy configure.in"
+	# bug #48838. Patch to enable/disable FAM support.
+	# 20 Aug 2004; langthang@gentoo.org.
+	# This new patch should fix bug #51540. fam USE flag is not needed for shared folder support.
 	epatch ${FILESDIR}/${P}-disable-fam-configure.in.patch || die "patch failed"
+
+	# These patches should fix problem detecting Berkeley DB.
+	# We now can compile with db4 support.
 	epatch ${FILESDIR}/${P}-db4-bdbobj_configure.in.patch || die "patch failed"
 	epatch ${FILESDIR}/${P}-db4-configure.in.patch || die "patch failed"
-	#cp ${FILESDIR}/bdbobj_configure.in bdbobj/configure.in || die "failed copy bdbobj/configure.in"
 
-	#cd ${S}
 	export WANT_AUTOCONF="2.5"
 	gnuconfig_update
 	ebegin "Recreating configure"
@@ -119,7 +98,9 @@ src_compile() {
 	# the --with-ipv6 is broken
 	#myconf="${myconf} --with-ipv6"
 	use ipv6 || myconf="${myconf} --without-ipv6"
-	# default to gdbm if both berkdb and gdbm present. langthang@g.o 20040819
+
+	# 19 Aug 2004; langthang@gentoo.org
+	# default to gdbm if both berkdb and gdbm present.
 	if use berkdb; then
 		if use gdbm; then
 			einfo "build with GDBM support."
@@ -159,9 +140,9 @@ src_compile() {
 	rm -f ${cachefile}
 
 	# fix for bug #21330
-	# CFLAGS="`echo ${CFLAGS} | xargs`"
-	# CXXFLAGS="`echo ${CXXFLAGS} | xargs`"
-	# LDFLAGS="`echo ${LDFLAGS} | xargs`"
+	CFLAGS="`echo ${CFLAGS} | xargs`"
+	CXXFLAGS="`echo ${CXXFLAGS} | xargs`"
+	LDFLAGS="`echo ${LDFLAGS} | xargs`"
 
 	# fix for bug #27528
 	# they really should use a better way to detect redhat
