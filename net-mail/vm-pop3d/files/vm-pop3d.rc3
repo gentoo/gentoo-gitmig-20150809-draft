@@ -1,0 +1,31 @@
+#!/bin/sh
+#RCUPDATE:2 3 4:75:This line is required for script management
+
+. /etc/rc.d/config/functions
+
+SERVICE=vm-pop3d
+opts="start stop restart"
+
+PIDFILE=/var/run/exim.pid
+EXE=/usr/sbin/vm-pop3d
+
+start() {
+		ebegin "Starting $SERVICE..."
+     		start-stop-daemon --start --quiet --exec ${VM-POP3D_OPTS:-d5 -t 600}
+		eend $? "Started $SERVICE." "Error Starting $SERVICE."
+}
+
+stop() {
+		ebegin "Stopping $SERVICE..."
+		start-stop-daemon --stop --quiet --pidfile $PIDFILE --exec $EXE
+		eend $? "Stopped $SERVICE." "Error Stopping $SERVICE."
+}
+
+restart() {
+		stop
+		start
+}
+
+doservice ${@}
+
+

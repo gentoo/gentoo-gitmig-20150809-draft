@@ -1,0 +1,11 @@
+# ChangeLog for net-mail/vm-pop3d
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-mail/vm-pop3d/ChangeLog,v 1.1 2002/07/27 01:09:30 raker Exp $
+
+*vm-pop3d-1.1.6 (26 Jul 2002)
+
+  26 Jul 2002; Nick Hadaway <raker@gentoo.org>
+  vm-pop3d-1.1.6.ebuild, files/digest-vm-pop3d-1.1.6, files/vm-pop3d.rc3,
+  files/vm-pop3d.confd :
+
+  Added initial ebuild.  Thanks to Cal Evans for the package suggestion.

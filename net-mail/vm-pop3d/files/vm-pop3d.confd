@@ -1,0 +1,2 @@
+# Command-line options for running exim
+VM-POP3D_OPTS="-d5 -t 600"
