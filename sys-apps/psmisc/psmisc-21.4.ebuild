@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-21.4.ebuild,v 1.18 2004/12/08 01:33:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/psmisc/psmisc-21.4.ebuild,v 1.19 2005/01/01 21:16:48 vapier Exp $
 
 inherit eutils gnuconfig
 
@@ -25,28 +25,22 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 
-	if use selinux; then
-		# Necessary selinux patch
-		epatch ${FILESDIR}/${SELINUX_PATCH}
-		use nls || epatch ${FILESDIR}/${P}-no-nls-selinux.patch
-	else
-		use nls || epatch ${FILESDIR}/${P}-no-nls.patch
-	fi
+	use selinux && epatch ${FILESDIR}/${SELINUX_PATCH}
+	use nls || epatch ${FILESDIR}/${P}-no-nls.patch
 
 	epunt_cxx #73632
 }
 
 src_compile() {
-	local myconf=""
-	use nls || myconf="${myconf} --disable-nls"
-	use selinux && myconf="${myconf} --enable-flask"
-
-	econf ${myconf} || die
+	econf \
+		$(use_enable nls) \
+		$(use_enable selinux flask) \
+		|| die
 	emake || die
 }
 
 src_install() {
-	einstall || die
+	make install DESTDIR="${D}" || die
 	dosym killall /usr/bin/pidof
 
 	# Some packages expect these to use /usr, others to use /
