@@ -5,7 +5,7 @@ MD5 5d434db1714f032b8b826b1408e45786 apache-2.0.49-r1.ebuild 12031
 MD5 738de16a708fdae922876faebfa4ddd7 apache-2.0.48-r4.ebuild 12398
 MD5 7e76722e90bde33e6ba450b1c3e795f8 apache-1.3.29-r1.ebuild 7441
 MD5 969cda4fe045249c08d5a13aec212865 apache-2.0.49.ebuild 12747
-MD5 a9c83fbe91d83af76ee1d13e1fdcadab ChangeLog 29493
+MD5 6ee367689ee3656109a7cc89d9f274be ChangeLog 29639
 MD5 5b6dd438f81019e56fa641841c0c13fe metadata.xml 501
 MD5 d4b8a4908870107e15cc1edbd0ec6ebb files/apache-1.3.29_mod_auth_db.patch 729
 MD5 161245c7aa1eb785db53b34d6a10be43 files/suexec_pam_gentoo.patch 2149
@@ -43,7 +43,7 @@ MD5 fd9b211c5078739d4aadbe6b3e53aead files/conf/DynamicVhosts.conf 963
 MD5 6c5fea3288b0ca4769495060d345055d files/2.0.48-r1/commonapache2.conf 31776
 MD5 63b10f728d11f10fb24241f8322542df files/2.0.48-r1/apache2.confd 1955
 MD5 abb7eca89bc2ad072c61418195a98cd6 files/2.0.48-r1/apache2.initd 2418
-MD5 429d2311b221deba1bc181e17e046543 files/2.0.48-r1/apache2.conf 7652
+MD5 e8f5a440ea77613b7908872b6ef7cf88 files/2.0.48-r1/apache2.conf 7659
 MD5 5a7b58d54689d6e9d8f8214b5150d18f files/common/config.layout 741
 MD5 fe80b29c20bb6794eb7f4a0875588306 files/common/apr-util-config.layout 437
 MD5 54c0546fa2b1985686cf22c9efa2c7dc files/common/apr-config.layout 434
