@@ -1,12 +1,13 @@
 #!/bin/bash
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.59 2004/10/22 05:30:23 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/scripts/bootstrap.sh,v 1.60 2004/11/23 03:54:54 vapier Exp $
 
 # people who were here:
 # (drobbins, 06 Jun 2003)
 # (solar, Jul 2004)
 # (vapier, Aug 2004)
+# (compnerd, Nov 2004)
 
 if [ -e /etc/init.d/functions.sh ] ; then
 	source /etc/init.d/functions.sh
@@ -30,17 +31,19 @@ for opt in "$@" ; do
 			unset STRAP_RUN;;
 		--help|-h)
 			echo -e "Usage: ${HILITE}bootstrap-cascade.sh${NORMAL} ${GOOD}[options]${NORMAL}"
+			echo -e "  ${GOOD}--debug (-d)${NORMAL}     Run with debug information turned on"
 			echo -e "  ${GOOD}--fetchonly (-f)${NORMAL} Just download all the source files"
 			echo -e "  ${GOOD}--info (-i)${NORMAL}      Show system related information"
 			echo -e "  ${GOOD}--pretend (-p)${NORMAL}   Display the packages that will be merged"
+			echo -e "  ${GOOD}--tree (-t)${NORMAL}      Display the dependency tree, forces -p"
 			echo -e "  ${GOOD}--resume (-r)${NORMAL}    Build/use binary packages"
-			echo -e "  ${GOOD}--debug (-d)${NORMAL}     Run with debug information turned on"
 			exit 1;;
+		--debug|-d)   STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} --debug"; DEBUG=1;;
 		--info|-i)    STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} --info"   ; unset STRAP_RUN ;;
 		--pretend|-p) STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -p" ; unset STRAP_RUN ;;
+		--tree|-t)    STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -p -t"; unset STRAP_RUN ;;
 		--resume|-r)  STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} --usepkg --buildpkg";;
 		--verbose|-v) STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} -v";;
-		--debug|-d)   STRAP_EMERGE_OPTS="${STRAP_EMERGE_OPTS} --debug"; DEBUG=1;;
 		*) ;;
 	esac
 done
