@@ -1,6 +1,15 @@
 # ChangeLog for net-libs/libpcap
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.18 2004/01/15 14:16:59 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libpcap/ChangeLog,v 1.19 2004/02/15 13:41:04 mboman Exp $
+
+*libpcap-0.7.2-r1 (15 Feb 2004)
+
+  15 Feb 2004; Michael Boman <mboman@gentoo.org> libpcap-0.7.2-r1.ebuild,
+  libpcap-0.8.1-r1.ebuild, metadata.xml:
+  Fixing bug #41647, #41648 and #41649
+
+  These ebuilds seems to be unmaintained so i'm making myself the
+  maintainer for now.
 
   15 Jan 2004; <gustavoz@gentoo.org> libpcap-0.8.1.ebuild:
   marked hppa and sparc, fixes #38206
