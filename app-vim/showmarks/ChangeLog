@@ -1,6 +1,9 @@
 # ChangeLog for app-vim/showmarks
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/showmarks/ChangeLog,v 1.3 2003/11/15 04:39:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/showmarks/ChangeLog,v 1.4 2003/11/15 20:02:29 agriffis Exp $
+
+  15 Nov 2003; Aron Griffis <agriffis@gentoo.org> metadata.xml:
+  Added metadata.xml
 
   14 Nov 2003; Aron Griffis <agriffis@gentoo.org> showmarks-2.0.ebuild:
   Stable on ia64
