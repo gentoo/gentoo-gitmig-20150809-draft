@@ -1,6 +1,10 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.114 2004/03/19 23:22:34 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.115 2004/03/22 21:33:51 max Exp $
+
+  22 Mar 2004; Max Kalika <max@gentoo.org> postfix-2.0.19-r1.ebuild,
+  postfix-2.0.19-r2.ebuild, postfix-2.0.19.ebuild:
+  Make sure spool only gets created in pkg_postinst(). Fixes bug #45142.
 
   19 Mar 2004; Jason Wever <weeve@gentoo.org> postfix-2.0.19.ebuild:
   Marked stable on sparc.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.19-r1.ebuild,v 1.2 2004/03/17 23:50:32 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.19-r1.ebuild,v 1.3 2004/03/22 21:33:51 max Exp $
 
 inherit eutils ssl-cert
 
@@ -127,6 +127,9 @@ src_install () {
 		manpage_directory="/usr/share/man" \
 		mail_owner="postfix" \
 		setgid_group="postdrop" || die "postfix-install failed"
+
+	rm -rf "${D}/var"
+	keepdir /var/spool/postfix
 
 	# Provide another link for legacy FSH.
 	dosym /usr/sbin/sendmail /usr/lib/sendmail

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.19-r2.ebuild,v 1.2 2004/03/18 15:25:31 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/postfix-2.0.19-r2.ebuild,v 1.3 2004/03/22 21:33:51 max Exp $
 
 inherit eutils ssl-cert
 
@@ -128,13 +128,15 @@ src_install () {
 		mail_owner="postfix" \
 		setgid_group="postdrop" || die "postfix-install failed"
 
+	# Fix spool removal on upgrade.
+	rm -rf "${D}/var"
+	keepdir /var/spool/postfix
+
 	# Remove the /usr/sbin/sendmail symlink
-	mv ${D}/usr/sbin/sendmail ${D}/usr/sbin/sendmail.postfix
+	mv "${D}/usr/sbin/sendmail" "${D}/usr/sbin/sendmail.postfix"
+
 	# Provide another link for legacy FSH.
 	dosym /usr/sbin/sendmail /usr/lib/sendmail
-
-	insinto /etc
-	doins ${FILESDIR}/mailer.conf
 
 	# Install an rmail for UUCP, closing bug #19127.
 	dobin auxiliary/rmail/rmail
@@ -156,6 +158,9 @@ src_install () {
 		"local_destination_concurrency_limit=2" \
 		"default_destination_concurrency_limit=2" \
 		${mypostconf} || die "postconf failed"
+
+	insinto /etc
+	doins "${FILESDIR}/mailer.conf"
 
 	insinto /etc/postfix
 	newins "${FILESDIR}/smtp.pass" saslpass
