@@ -1,6 +1,9 @@
 # ChangeLog for dev-db/mysql
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.105 2004/05/25 01:45:56 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/ChangeLog,v 1.106 2004/06/01 23:44:33 tgall Exp $
+
+  01 Jun 2004; Tom Gall <tgall@gentoo.org> mysql-4.0.20.ebuild:
+  stable on ppc64, bug #52701
 
   24 May 2004; Joshua Kinard <kumba@gentoo.org> mysql-4.0.18-r1.ebuild,
   mysql-4.0.18-r2.ebuild, mysql-4.0.18.ebuild, mysql-4.0.19.ebuild,
