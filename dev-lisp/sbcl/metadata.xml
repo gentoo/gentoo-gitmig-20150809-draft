@@ -19,5 +19,7 @@ non-ANSI features.
 Support for native threading on GNU/Linux is available for the x86
 platform, including support for the new futex system call available in
 2.6.x kernels.
+
+SBCL 0.8.17 and later support Unicode.
 </longdescription>
 </pkgmetadata>

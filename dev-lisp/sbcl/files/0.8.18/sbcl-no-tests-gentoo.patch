@@ -1,6 +1,6 @@
-diff -ur sbcl-0.8.12.orig/contrib/sb-bsd-sockets/sb-bsd-sockets.asd sbcl-0.8.12/contrib/sb-bsd-sockets/sb-bsd-sockets.asd
---- sbcl-0.8.12.orig/contrib/sb-bsd-sockets/sb-bsd-sockets.asd	2004-02-11 05:00:40.000000000 -0600
-+++ sbcl-0.8.12/contrib/sb-bsd-sockets/sb-bsd-sockets.asd	2004-07-11 15:30:52.230966464 -0500
+diff -ur sbcl-0.8.18.orig/contrib/sb-bsd-sockets/sb-bsd-sockets.asd sbcl-0.8.18/contrib/sb-bsd-sockets/sb-bsd-sockets.asd
+--- sbcl-0.8.18.orig/contrib/sb-bsd-sockets/sb-bsd-sockets.asd	2004-02-11 05:00:40.000000000 -0600
++++ sbcl-0.8.18/contrib/sb-bsd-sockets/sb-bsd-sockets.asd	2004-07-11 15:30:52.230966464 -0500
 @@ -103,14 +103,3 @@
  (defmethod perform :after ((o load-op) (c (eql (find-system :sb-bsd-sockets))))
    (provide 'sb-bsd-sockets))
@@ -16,10 +16,9 @@ diff -ur sbcl-0.8.12.orig/contrib/sb-bsd-sockets/sb-bsd-sockets.asd sbcl-0.8.12/
 -(defmethod perform ((o test-op) (c (eql (find-system :sb-bsd-sockets-tests))))
 -  (or (funcall (intern "DO-TESTS" (find-package "SB-RT")))
 -      (error "test-op failed")))
-Only in sbcl-0.8.12/contrib/sb-bsd-sockets: sb-bsd-sockets.asd~
-diff -ur sbcl-0.8.12.orig/contrib/sb-posix/sb-posix.asd sbcl-0.8.12/contrib/sb-posix/sb-posix.asd
---- sbcl-0.8.12.orig/contrib/sb-posix/sb-posix.asd	2003-11-29 14:41:47.000000000 -0600
-+++ sbcl-0.8.12/contrib/sb-posix/sb-posix.asd	2004-07-11 15:52:38.766342896 -0500
+diff -ur sbcl-0.8.18.orig/contrib/sb-posix/sb-posix.asd sbcl-0.8.18/contrib/sb-posix/sb-posix.asd
+--- sbcl-0.8.18.orig/contrib/sb-posix/sb-posix.asd	2003-11-29 14:41:47.000000000 -0600
++++ sbcl-0.8.18/contrib/sb-posix/sb-posix.asd	2004-07-11 15:52:38.766342896 -0500
 @@ -86,34 +86,3 @@
  		  "constants"
  		  :package :sb-posix :depends-on  ("defpackage"))
@@ -55,4 +54,3 @@ diff -ur sbcl-0.8.12.orig/contrib/sb-posix/sb-posix.asd sbcl-0.8.12/contrib/sb-p
 -       t)
 -      (t
 -       (error "non-errno tests failed!")))))
-Only in sbcl-0.8.12/contrib/sb-posix: sb-posix.asd~

@@ -1,6 +1,65 @@
 # ChangeLog for dev-lisp/sbcl
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.50 2004/12/13 12:27:35 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/ChangeLog,v 1.51 2005/01/07 21:52:19 mkennedy Exp $
+
+*sbcl-0.8.18 (07 Jan 2005)
+
+  07 Jan 2005; Matthew Kennedy <mkennedy@gentoo.org> metadata.xml,
+  -files/gc.lisp-linux-2.6.patch, -files/install-clc.lisp, -files/sbcl.rc,
+  -files/sbcl.sh, -files/0.8.10/README.Gentoo,
+  -files/0.8.10/customize-target-features.lisp,
+  -files/0.8.10/customize-target-features.lisp.no-threads,
+  -files/0.8.10/install-clc.lisp, -files/0.8.10/sbcl-asdf-install.1,
+  -files/0.8.10/sbcl-gentoo.patch, -files/0.8.10/sbcl.sh,
+  -files/0.8.10/sbclrc, -files/0.8.11/README.Gentoo,
+  -files/0.8.11/customize-target-features.lisp,
+  -files/0.8.11/customize-target-features.lisp.no-threads,
+  -files/0.8.11/install-clc.lisp, -files/0.8.11/sbcl-asdf-install.1,
+  -files/0.8.11/sbcl-gentoo.patch, -files/0.8.11/sbcl.sh,
+  -files/0.8.11/sbclrc, -files/0.8.12/README.Gentoo,
+  -files/0.8.12/customize-target-features.lisp,
+  -files/0.8.12/customize-target-features.lisp.no-threads,
+  -files/0.8.12/install-clc.lisp, -files/0.8.12/sbcl-gentoo.patch,
+  -files/0.8.12/sbcl-no-tests-gentoo.patch, -files/0.8.12/sbcl.sh,
+  -files/0.8.12/sbclrc, -files/0.8.13/README.Gentoo,
+  -files/0.8.13/customize-target-features.lisp,
+  -files/0.8.13/customize-target-features.lisp.no-threads,
+  -files/0.8.13/install-clc.lisp, -files/0.8.13/sbcl-gentoo.patch,
+  -files/0.8.13/sbcl-no-tests-gentoo.patch, -files/0.8.13/sbcl.sh,
+  -files/0.8.13/sbclrc, -files/0.8.17/README.Gentoo,
+  -files/0.8.17/customize-target-features.lisp-prefix,
+  -files/0.8.17/customize-target-features.lisp-suffix,
+  -files/0.8.17/install-clc.lisp, -files/0.8.17/sbcl-gentoo.patch,
+  -files/0.8.17/sbcl-no-tests-gentoo.patch, -files/0.8.17/sbcl.sh,
+  -files/0.8.17/sbclrc, +files/0.8.18/README.Gentoo,
+  +files/0.8.18/customize-target-features.lisp-prefix,
+  +files/0.8.18/customize-target-features.lisp-suffix,
+  +files/0.8.18/install-clc.lisp, +files/0.8.18/sbcl-gentoo.patch,
+  +files/0.8.18/sbcl-no-tests-gentoo.patch, +files/0.8.18/sbcl.sh,
+  +files/0.8.18/sbclrc, -files/0.8.7/README.Gentoo,
+  -files/0.8.7/customize-target-features.lisp,
+  -files/0.8.7/customize-target-features.lisp.no-threads,
+  -files/0.8.7/install-clc.lisp-gentoo.patch,
+  -files/0.8.7/posix-tests.lisp-sandbox-gentoo.patch,
+  -files/0.8.8/README.Gentoo, -files/0.8.8/customize-target-features.lisp,
+  -files/0.8.8/customize-target-features.lisp.no-threads,
+  -files/0.8.8/install-clc.lisp,
+  -files/0.8.8/posix-tests.lisp-sandbox-gentoo.patch,
+  -files/0.8.8/sbcl-asdf-install.1, -files/0.8.8/sbcl-gentoo.patch,
+  -files/0.8.8/sbcl.rc, -files/0.8.8/sbcl.sh, -files/0.8.8/sbclrc,
+  -files/0.8.9/GNUmakefile-SBCL_HOME-gentoo.patch,
+  -files/0.8.9/README.Gentoo, -files/0.8.9/customize-target-features.lisp,
+  -files/0.8.9/customize-target-features.lisp.no-threads,
+  -files/0.8.9/install-clc.lisp,
+  -files/0.8.9/posix-tests.lisp-sandbox-gentoo.patch,
+  -files/0.8.9/sbcl-asdf-install.1, -files/0.8.9/sbcl.sh,
+  -files/0.8.9/sbclrc, -sbcl-0.8.10.ebuild, -sbcl-0.8.11.ebuild,
+  -sbcl-0.8.12-r1.ebuild, -sbcl-0.8.12.ebuild, -sbcl-0.8.13.ebuild,
+  -sbcl-0.8.17.ebuild, +sbcl-0.8.18.ebuild, -sbcl-0.8.7-r1.ebuild,
+  -sbcl-0.8.7.ebuild, -sbcl-0.8.8.ebuild, -sbcl-0.8.9.ebuild:
+  New upstream version; Removed ports older than dev-lisp/sbcl-0.8.14; Remove
+  dev-lisp/sbcl-0.8.17 port; Add Unicode support to dev-lisp/sbcl-0.8.18 and
+  beyond; Update metadata.xml.
 
   13 Dec 2004; Sven Wegener <swegener@gentoo.org> sbcl-0.8.17.ebuild:
   Fixed invalid atoms in *DEPEND. Added missing digest entries.

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.8.12-r1.ebuild,v 1.1 2004/07/30 07:12:50 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lisp/sbcl/sbcl-0.8.18.ebuild,v 1.1 2005/01/07 21:52:19 mkennedy Exp $
 
 inherit common-lisp-common eutils
 
@@ -19,10 +19,13 @@ SRC_URI="mirror://sourceforge/sbcl/${P}-source.tar.bz2
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~mips"
-IUSE="threads doc nosource"
 
-DEPEND="dev-lisp/common-lisp-controller
+KEYWORDS="~x86 ~ppc ~sparc ~mips"
+IUSE="threads doc nosource unicode ldb"
+
+DEPEND=">=dev-lisp/common-lisp-controller-3.91
+	>=dev-lisp/cl-defsystem3-3.3i-r3
+	>=dev-lisp/cl-asdf-1.84
 	sys-apps/texinfo
 	doc? ( virtual/tetex )"
 
@@ -48,16 +51,21 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}/sbcl-gentoo.patch
 	epatch ${FILESDIR}/${PV}/sbcl-no-tests-gentoo.patch
 
-	# Currently, thread support is only available for x86.	These
-	# features expressions also disable :sb-test.
-	if use x86 && use threads; then
-		cp ${FILESDIR}/${PV}/customize-target-features.lisp \
-			${S}/customize-target-features.lisp
-	else
-		cp ${FILESDIR}/${PV}/customize-target-features.lisp.no-threads \
-			${S}/customize-target-features.lisp
-	fi
-
+	cp ${FILESDIR}/${PV}/customize-target-features.lisp-prefix \
+		${S}/customize-target-features.lisp
+	use x86 && use threads \
+		&& echo '(enable :sb-threads)' \
+		>>${S}/customize-target-features.lisp
+	use ldb \
+		&& echo '(enable :sb-ldb)' \
+		>>${S}/customize-target-features.lisp
+	echo '(enable :sb-futex)' >>${S}/customize-target-features.lisp
+	echo '(disable :sb-test)' >>${S}/customize-target-features.lisp
+	! use unicode \
+		&& echo '(disable :sb-unicode)' \
+		>>${S}/customize-target-features.lisp
+	cat ${FILESDIR}/${PV}/customize-target-features.lisp-suffix \
+		>>${S}/customize-target-features.lisp
 	find ${S} -type f -name .cvsignore -exec rm -f '{}' \;
 	find ${S} -type d -name CVS \) -exec rm -rf '{}' \;
 	find ${S} -type f -name \*.c -exec chmod 644 '{}' \;
@@ -69,21 +77,16 @@ src_compile() {
 	use ppc && bindir=../ppc-binary
 	use sparc && bindir=../sparc-binary
 	use mips && bindir=../mips-binary
-
-	# TODO: allow the user to chose between SBCL, CMUCL and CLISP for bootstrapping
-	# build with previous SBCL
 	PATH=${bindir}/src/runtime:${PATH} SBCL_HOME=${bindir}/output GNUMAKE=make \
-		./make.sh 'sbcl --sysinit /dev/null --userinit /dev/null --noprogrammer --core ${bindir}/output/sbcl.core' \
-		|| die
-
-	# build with CMUCL
-#	GNUMAKE=make ./make.sh 'lisp -batch'
-
-	# Generation texinfo documentation
+		./make.sh 'sbcl
+			--sysinit /dev/null
+			--userinit /dev/null
+			--no-debugger
+			--core ${bindir}/output/sbcl.core' \
+				|| die
 	cd ${S}/doc/manual
 	make info
 	use doc && make ps pdf
-
 }
 
 src_install() {
