@@ -1,6 +1,16 @@
-MD5 ba1feacad72e9ead203d7b3647574669 ChangeLog 564
-MD5 838ed4e73cfe470b29e8795d75cd20e5 lush-0.1.0-r1.ebuild 709
-MD5 b9678cc8d4273b40c3d1fcffa56b22eb lush-0.1.0.ebuild 598
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 6051e5ca17e21cf35e3c4c8e76d78d73 ChangeLog 678
+MD5 748b03c9a89252520064e32fc9acbb0b lush-0.1.0-r1.ebuild 709
+MD5 93fa19f85aed6754a09d82eafb75694e lush-0.1.0.ebuild 697
 MD5 77a747b5fbf7edf698a0c698141ecf02 metadata.xml 163
 MD5 30eef944f34eac32e48b3815a3a3285e files/digest-lush-0.1.0 67
 MD5 30eef944f34eac32e48b3815a3a3285e files/digest-lush-0.1.0-r1 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBHho1I1lqEGTUzyQRAluUAJ9XMuR07xGzVbKRInKndVbwgNAXlwCfeEba
+jXLoIU+j1t7VR2bla5YMyIA=
+=OwFD
+-----END PGP SIGNATURE-----

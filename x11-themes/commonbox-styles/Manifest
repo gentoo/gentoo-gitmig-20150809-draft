@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0106d3da45e588bc3998bed7c659e7d8 ChangeLog 3098
 MD5 ca3b8bdde215733ec9e428442e45a075 commonbox-styles-0.6.ebuild 739
-MD5 6854776860f8d2cf4def61dbdb424cb3 ChangeLog 2921
 MD5 de081dca0e5f4a2b0813ff1f7f7ebfab metadata.xml 256
 MD5 34b1243aeeafc9132e1c7217c2119d22 files/digest-commonbox-styles-0.6 73
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBHhl7I1lqEGTUzyQRAgkdAJ9Oh+fgpMKjIs7xFuvF2GSukRuIUACgi5Ph
+jMYZl3ECHYaSE69T8dJqCaM=
+=0EV8
+-----END PGP SIGNATURE-----
