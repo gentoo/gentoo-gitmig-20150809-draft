@@ -1,5 +1,11 @@
 # ChangeLog for sys-devel/sparc32
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparc32/ChangeLog,v 1.5 2003/08/16 13:56:15 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/sparc32/ChangeLog,v 1.6 2003/10/07 19:18:03 weeve Exp $
+
+*sparc32-1.1-r1 (07 Oct 2003)
+
+  07 Oct 2003; Jason Wever <weeve@gentoo.org> sparc32-1.1-r1.ebuild:
+  rev bump, cleaned up ebuild submitted by Matsuu Takuto <matsuu@gentoo.org>,
+  fixes bug #30547.
 
   16 Aug 2003; Jason Wever <weeve@gentoo.org> metadata.xml:
   Added metadata.xml
