@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/ntp
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.38 2003/10/18 03:11:08 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/ntp/ChangeLog,v 1.39 2003/12/14 02:53:27 gmsoft Exp $
+
+  14 Dec 2003; root <root@gentoo.org> ntp-4.1.2.ebuild:
+  Marked stable on hppa.
 
   17 Oct 2003; Chris PeBenito <pebenito@gentoo.org> ntp-4.1.1b-r6.ebuild,
   ntp-4.1.2.ebuild:
