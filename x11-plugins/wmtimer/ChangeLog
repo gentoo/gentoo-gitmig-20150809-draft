@@ -1,8 +1,11 @@
 # ChangeLog for x11-plugins/wmtimer
 # Copyright 2001-2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/ChangeLog,v 1.1 2002/09/16 16:14:04 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmtimer/ChangeLog,v 1.2 2002/10/04 18:47:36 raker Exp $
 
 * wmtimer-2.4 (12 August 2002)
+
+  04 Oct 2002; Nick Hadaway <raker@gentoo.org> wmtimer-2.4.ebuild :
+  Added CFLAG optimizations and cleaned up src_install()
 
   16 Sep 2002; Nick Hadaway <raker@gentoo.org> :
   Moved from app-misc to x11-plugins.
