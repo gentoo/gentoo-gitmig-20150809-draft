@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/libwww-perl-5.64.ebuild,v 1.7 2002/08/14 04:32:35 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/libwww-perl-5.64.ebuild,v 1.8 2002/09/13 01:05:07 mcummings Exp $
 
 inherit perl-module
 
@@ -17,12 +17,13 @@ DEPEND="${DEPEND}
 	>=dev-perl/libnet-1.0703
 	>=dev-perl/HTML-Parser-3.13
 	>=dev-perl/URI-1.0.9
-	>=dev-perl/Digest-MD5-2.12"
+	>=dev-perl/Digest-MD5-2.12
+	>=dev-perl/MIME-Base64-2.12"
 
 mydoc="TODO"
 
 src_compile() {
 
-	yes "" | perl Makefile.PL
-	make
+	yes "" | perl Makefile.PL ${myconf} \
+         PREFIX=${D}/usr
 }

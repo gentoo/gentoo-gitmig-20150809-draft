@@ -1,8 +1,11 @@
 # ChangeLog for dev-perl/libwww-perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.3 2002/08/01 22:53:16 cselkirk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/libwww-perl/ChangeLog,v 1.4 2002/09/13 01:05:07 mcummings Exp $
 
 *libwww-perl-5.64 (6 May 2002)
+
+  12 Sep 2002; <mcummings@gentoo.org> libwww-perl-5.64.ebuild :
+  Corrected syntax for perl Makefile
 
   1 Aug 2002; Calum Selkirk <cselkirk@gentoo.org> libwww-perl-5.64.ebuild :
 
