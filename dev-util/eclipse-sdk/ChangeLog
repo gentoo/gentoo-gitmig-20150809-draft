@@ -1,6 +1,14 @@
 # ChangeLog for dev-util/eclipse-sdk
 # Copyright 2003-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.83 2005/03/03 11:44:46 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/ChangeLog,v 1.84 2005/03/23 16:16:48 seemant Exp $
+
+  23 Mar 2005; Seemant Kulleen <seemant@gentoo.org>
+  eclipse-sdk-2.1.3-r5.ebuild, eclipse-sdk-3.0.0-r3.ebuild,
+  eclipse-sdk-3.0.1.ebuild, eclipse-sdk-3.0.1-r1.ebuild,
+  eclipse-sdk-3.0.1-r2.ebuild, eclipse-sdk-3.1_pre1.ebuild,
+  eclipse-sdk-3.1_pre2.ebuild, eclipse-sdk-3.1_pre3.ebuild,
+  eclipse-sdk-3.1_pre4.ebuild, eclipse-sdk-3.1_pre5.ebuild:
+  change dep from net-www/mozilla to www-client/mozilla
 
   03 Mar 2005; Karl Trygve Kalleberg <karltk@gentoo.org>
   eclipse-sdk-3.1_pre5.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.1.ebuild,v 1.3 2005/03/18 20:13:42 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.1.ebuild,v 1.4 2005/03/23 16:16:48 seemant Exp $
 
 inherit eutils java-utils
 
@@ -21,7 +21,7 @@ RDEPEND="|| ( >=virtual/jdk-1.4.2 =dev-java/blackdown-jdk-1.4.2* )
 			!motif? ( >=x11-libs/gtk+-2.2.4 )
 		      )
 	      )
-	mozilla? ( >=net-www/mozilla-1.5 )
+	mozilla? ( >=www-client/mozilla-1.5 )
 	gnome? ( =gnome-base/gnome-vfs-2* =gnome-base/libgnomeui-2* )
 	!media-fonts/unifont"
 
@@ -60,7 +60,7 @@ pkg_setup() {
 
 	if ${use_gtk} && use mozilla ; then
 		if [ -f ${ROOT}/usr/lib/mozilla/libgtkembedmoz.so ] ; then
-			einfo "Compiling against net-www/mozilla"
+			einfo "Compiling against www-client/mozilla"
 			mozilla_dir=/usr/lib/mozilla
 		elif [ -f ${ROOT}/usr/lib/MozillaFirefox/libgtkembedmoz.so ] ; then
 			einfo "Compiling against www-client/mozilla-firefox"

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.3-r5.ebuild,v 1.10 2005/02/03 11:09:50 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-2.1.3-r5.ebuild,v 1.11 2005/03/23 16:16:48 seemant Exp $
 
 inherit eutils
 
@@ -23,7 +23,7 @@ RDEPEND=">=virtual/jdk-1.3
 		      )
 	      )
 	gnome? ( =gnome-base/gnome-vfs-2* )
-	mozilla? ( net-www/mozilla )
+	mozilla? ( www-client/mozilla )
 	jikes? ( >=dev-java/jikes-1.19 )
 	"
 

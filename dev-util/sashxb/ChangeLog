@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/sashxb
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/sashxb/ChangeLog,v 1.6 2004/06/25 02:45:56 agriffis Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sashxb/ChangeLog,v 1.7 2005/03/23 16:16:47 seemant Exp $
+
+  23 Mar 2005; Seemant Kulleen <seemant@gentoo.org> sashxb-1.0.2.ebuild:
+  change dep from net-www/mozilla to www-client/mozilla
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

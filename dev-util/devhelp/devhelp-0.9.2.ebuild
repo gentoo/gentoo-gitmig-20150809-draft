@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.9.2.ebuild,v 1.3 2004/11/23 15:32:54 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/devhelp/devhelp-0.9.2.ebuild,v 1.4 2005/03/23 16:16:24 seemant Exp $
 
 inherit gnome2
 
@@ -16,7 +16,7 @@ RDEPEND=">=dev-libs/glib-2
 	>=x11-libs/gtk+-2.4
 	>=gnome-base/libgnomeui-2.2
 	>=gnome-base/gnome-vfs-2.2
-	net-www/mozilla
+	www-client/mozilla
 	zlib? ( sys-libs/zlib )"
 
 DEPEND="${RDEPEND}
