@@ -1,6 +1,12 @@
 # ChangeLog for mail-client/nail
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.15 2004/12/08 03:10:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/nail/ChangeLog,v 1.16 2004/12/15 12:14:58 ticho Exp $
+
+*nail-11.1-r1 (15 Dec 2004)
+
+  15 Dec 2004; Andrej Kacian <ticho@gentoo.org> +nail-11.1-r1.ebuild:
+  Create /usr/bin/mailx symlink to nail executable. Closes #73602, reported by
+  Aron Griffis <agriffis@gentoo.org>.
 
   07 Dec 2004; Aron Griffis <agriffis@gentoo.org> nail-11.1.ebuild:
   add ~alpha, ~amd64, ~ia64
