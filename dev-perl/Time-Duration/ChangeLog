@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/Time-Duration
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-Duration/ChangeLog,v 1.1 2003/06/04 01:09:41 mcummings Exp $
+
+*Time-Duration-1.02 (03 Jun 2003)
+
+  03 Jun 2003; Michael Cummings <mcummings@gentoo.org>
+  Time-Duration-1.02.ebuild:
+  Fills bug 21791
+
