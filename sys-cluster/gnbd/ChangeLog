@@ -1,6 +1,9 @@
 # ChangeLog for sys-cluster/gnbd
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd/ChangeLog,v 1.2 2005/03/23 14:09:48 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/gnbd/ChangeLog,v 1.3 2005/03/23 14:40:35 xmerlin Exp $
+
+  23 Mar 2005; Christian Zoffoli <xmerlin@gentoo.org> files/gnbd-client.rc:
+  added gfs filesystems (imported GNBSs) umount in init
 
   23 Mar 2005; Christian Zoffoli <xmerlin@gentoo.org> files/gnbd-client.rc:
   added unmounting gfs capability to gnbd-client script
