@@ -1,6 +1,6 @@
-# ChangeLog for app-sci/maxima
+# ChangeLog for sci-mathematics/maxima
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.1 2004/12/28 14:38:51 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/maxima/ChangeLog,v 1.2 2004/12/28 20:43:21 swegener Exp $
 
 *maxima-5.9.1-r1 (28 Dec 2004)
 

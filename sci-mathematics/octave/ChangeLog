@@ -1,6 +1,6 @@
-# ChangeLog for app-sci/octave
+# ChangeLog for sci-mathematics/octave
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.1 2004/12/28 14:48:35 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-mathematics/octave/ChangeLog,v 1.2 2004/12/28 20:51:41 swegener Exp $
 
 *octave-2.1.64 (28 Dec 2004)
 
