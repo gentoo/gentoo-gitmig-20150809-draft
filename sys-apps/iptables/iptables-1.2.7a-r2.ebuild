@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iptables/iptables-1.2.7a-r2.ebuild,v 1.2 2003/01/07 13:19:05 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iptables/iptables-1.2.7a-r2.ebuild,v 1.3 2003/01/08 09:27:20 aliz Exp $
 
 inherit eutils
 
@@ -42,9 +42,9 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/{lib,share/man/man8,sbin}
+#	dodir /usr/{lib,share/man/man8,sbin}
 
-	make DESTDIR=${D} install
+	make DESTDIR=${D} MANDIR=/usr/share/man install
 
 	dodoc COPYING KNOWN_BUGS
 	dodir /var/lib/iptables ; keepdir /var/lib/iptables

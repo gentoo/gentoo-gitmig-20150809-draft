@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/iptables
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iptables/ChangeLog,v 1.17 2003/01/07 13:11:15 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iptables/ChangeLog,v 1.18 2003/01/08 09:27:20 aliz Exp $
+
+  08 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> iptables-1.2.7a-r2.ebuild :
+  Closes #13466.
 
   07 Jan 2003; Daniel Ahlberg <aliz@gentoo.org> :
   Cleaned out old files.
