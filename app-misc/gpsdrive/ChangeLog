@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/gpsdrive
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.5 2003/07/27 14:58:31 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/gpsdrive/ChangeLog,v 1.6 2003/08/01 15:12:51 latexer Exp $
+
+  01 Aug 2003; Peter Johanson <latexer@gentoo.org> gpsdrive-1.33.ebuild:
+  Marking gpsdrive-1.33 x86, as this is mainly a fix to make downloading maps
+  work.
 
 *gpsdrive-2.01 (27 Jul 2003)
 
