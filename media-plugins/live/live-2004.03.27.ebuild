@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2004.03.27.ebuild,v 1.8 2004/05/27 19:18:28 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/live/live-2004.03.27.ebuild,v 1.9 2004/05/28 03:25:38 dostrow Exp $
 
 inherit flag-o-matic eutils
 
@@ -11,7 +11,7 @@ MY_P=${P/-/.}
 SRC_URI="http://www.live.com/liveMedia/public/${MY_P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="~x86 ~ppc amd64 ~sparc alpha"
+KEYWORDS="~x86 ppc amd64 ~sparc alpha"
 IUSE=""
 DEPEND="virtual/glibc"
 S=${WORKDIR}/${PN}
