@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/memtest86+
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.18 2005/02/10 09:21:31 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/memtest86+/ChangeLog,v 1.19 2005/02/12 11:05:59 luckyduck Exp $
+
+  12 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> memtest86+-1.50.ebuild:
+  added ~amd64 to KEYWORDS. fixes #81496
 
   10 Feb 2005; Michał Januszewski <spock@gentoo.org>
   -memtest86+-1.11.ebuild, -memtest86+-1.30.ebuild, memtest86+-1.50.ebuild:
