@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/insight
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/ChangeLog,v 1.17 2004/08/06 00:49:38 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/insight/ChangeLog,v 1.18 2004/09/07 15:51:52 gustavoz Exp $
+
+  07 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> insight-6.1.ebuild:
+  Stable on sparc
 
   05 Aug 2004; <tester@gentoo.org> insight-6.1.ebuild:
   Marked stable on x86
