@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/autoprofile
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/autoprofile/ChangeLog,v 1.12 2004/09/02 18:22:39 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/autoprofile/ChangeLog,v 1.13 2004/09/03 12:05:53 rizzo Exp $
+
+  03 Sep 2004; Don Seiler <rizzo@gentoo.org> autoprofile-2.08.ebuild:
+  Adding explicit emake call for Bug #62650
 
   02 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
   autoprofile-2.07.ebuild, autoprofile-2.08.ebuild:
