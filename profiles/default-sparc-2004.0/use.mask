@@ -12,6 +12,7 @@ divx4linux
 fdftk
 icc
 icc-pgo
+ifc
 informix
 firebird
 lirc
