@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-apps/gnucash/gnucash-1.6.1.ebuild,v 1.1 2001/07/13 12:35:33 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-apps/gnucash/gnucash-1.6.1.ebuild,v 1.2 2001/07/27 21:30:50 hallski Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -12,10 +12,13 @@ HOMEPAGE="http://gnucash.sourceforge.net"
 DEPEND=">=gnome-base/gnome-libs-1.2.4
 	>=gnome-base/libxml-1.8.10
 	>=gnome-base/gtkhtml-0.9.2
-	>=sys-devel/perl-4
+	>=gnome-base/gnome-print-0.25
+	>=sys-devel/perl-5
 	>=dev-lang/swig-1.3_alpha4
 	>=dev-libs/slib-2.3.8
 	>=dev-libs/g-wrap-1.1.5
+	>=gnome-office/guppi-0.35.5
+	>=gnome-base/gal-0.8
 	nls? ( sys-devel/gettext )"
 
 RDEPEND=">=gnome-base/gnome-libs-1.2.4
