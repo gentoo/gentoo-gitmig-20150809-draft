@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.6.10.ebuild,v 1.1 2003/06/08 12:50:37 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ettercap-0.6.10.ebuild,v 1.2 2003/06/08 21:33:52 liquidx Exp $
 
 inherit flag-o-matic
 
@@ -24,8 +24,6 @@ RDEPEND="virtual/glibc
 DEPEND=">=sys-apps/sed-4.0.5
 	>=sys-apps/portage-2.0.45-r3
 	${RDEPEND}"
-
-
 
 src_compile() {
 	# NOTE: gtk support is still experimental code and has _NOT_ been included here
@@ -55,6 +53,15 @@ src_install() {
 
 	rm ${D}/usr/share/doc/${PF}/{ettercap.fr.8.in,COPYING,INSTALL} \
 	   ${D}/etc/ettercap/{AUTHORS,THANKS}
+}
+
+pkg_postinst() {
+	einfo "To use ARP Poisioning, you must generate your own SSL certificate"
+	einfo "by running:"
+	einfo ""
+	einfo " ettercap -w"
+	einfo ""
+	einfo "and then following the instructions."
 }
 
 pkg_preinst() {
