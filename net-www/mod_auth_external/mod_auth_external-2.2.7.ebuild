@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_external/mod_auth_external-2.2.7.ebuild,v 1.2 2004/05/22 21:20:25 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_auth_external/mod_auth_external-2.2.7.ebuild,v 1.3 2004/05/26 10:14:52 zul Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ IUSE=""
 SLOT="0"
 
 src_unpack() {
-	unpack ${A} || die; cd ${S} || die; epatch ../${P}-gentoo.diff
+	unpack ${A} || die; cd ${S} || die; epatch ${FILESDIR}/${P}-gentoo.diff
 }
 
 src_compile() {
