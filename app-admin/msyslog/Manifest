@@ -1,8 +1,18 @@
-MD5 8c5031026155daf34ab0c890b6934c46 msyslog-1.09a-r1.ebuild 2049
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 c19c07511ac8477fcf1f2404541bb96f ChangeLog 2684
-MD5 731f666ed66ef1ef16d5c5a7d43702b3 files/msyslog-init 593
-MD5 d9c4d65852677dca5bb0234cfcb8fcd6 files/msyslog.conf 2797
-MD5 2edcd203cb92257f4628ecc2e05520c7 files/msyslog-1.09a-gentoo.diff 4304
+MD5 f5330b5f85a926b96b3817fc64b212f1 msyslog-1.09a-r1.ebuild 1978
 MD5 abc972b32ebeb711717856368d6eebd8 files/digest-msyslog-1.09a-r1 69
+MD5 2edcd203cb92257f4628ecc2e05520c7 files/msyslog-1.09a-gentoo.diff 4304
+MD5 ca890f415d810ad3a89d6101eeba95ec files/msyslog-confd 304
+MD5 39a234fe8245fd8c4ea7d59751002b52 files/msyslog-init 594
+MD5 b0e2e10a2d9ee2cd71c9f98dab38440f files/msyslog.conf 2798
 MD5 6a6b81716d884a24116244aed117de52 files/msyslog-1.09a-fPIC.patch 547
-MD5 d0e0d4d9e2943bdc207af824453700a3 files/msyslog-confd 303
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA3HxEHTu7gpaalycRAmxmAJwJCCYU6tF4VNyZszKuhZjgY2ZQqwCfaS5b
+B1BOzgB7XYrw8qIqVKUtEKE=
+=5ttY
+-----END PGP SIGNATURE-----
