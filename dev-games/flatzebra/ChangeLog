@@ -1,0 +1,10 @@
+# ChangeLog for dev-games/flatzebra
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/flatzebra/ChangeLog,v 1.1 2004/09/13 07:20:33 mr_bones_ Exp $
+
+*flatzebra-0.1.1 (13 Sep 2004)
+
+  13 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org> +metadata.xml,
+  +flatzebra-0.1.1.ebuild:
+  initial commit - ebuild submitted by Aaron Walker via bug #47319
+
