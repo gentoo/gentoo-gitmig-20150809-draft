@@ -1,5 +1,5 @@
-MD5 9b9898105a7ee27070b0b7d9b34739f7 qmail-pop3d-1.03-r1.ebuild 1429
-MD5 9c53043bdae880cf3b7635c32cf73996 ChangeLog 927
+MD5 555c92aa361ed267ef9f50da4deab6f8 qmail-pop3d-1.03-r1.ebuild 591
+MD5 79c7d16a87c3bc55499ad5b0c50df41a ChangeLog 1036
 MD5 5721b86fd871bdfab77231abc6e02f68 metadata.xml 161
 MD5 88f15101dd4bc36b52d13f336713e716 files/run-qmailpop3d 221
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-qmail-pop3d-1.03-r1 0

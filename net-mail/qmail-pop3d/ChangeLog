@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/qmail-pop3d
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-pop3d/ChangeLog,v 1.5 2003/07/16 20:25:28 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/qmail-pop3d/ChangeLog,v 1.6 2003/07/27 09:24:20 raker Exp $
+
+  27 Jul 2003; Nick Hadaway <raker@gentoo.org> qmail-pop3d-1.03-r1.ebuild:
+  This ebuild is now deprecated.
 
   16 Jul 2003; Nick Hadaway <raker@gentoo.org> files/run-qmailpop3d:
   Updated the run command so `hostname --fqdn` is grabbed instead of
