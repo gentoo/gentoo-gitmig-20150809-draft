@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.1.3.ebuild,v 1.5 2004/08/17 08:27:02 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/postfix/postfix-2.1.3.ebuild,v 1.6 2004/08/18 20:40:06 langthang Exp $
 
 inherit eutils ssl-cert
 
@@ -53,7 +53,7 @@ pkg_setup() {
 	if [[ -n $(pidof master) ]] ; then
 		if has_version '<mail-mta/postfix-2.1.3' ; then
 			echo
-			eerror "You are upgrading from the incompatible verion."
+			eerror "You are upgrading from the incompatible version."
 			eerror "Please stop Postfix then emerge again."
 			die "Upgrade from incompatible version."
 		else
