@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/usermin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.37 2004/09/09 09:31:20 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.38 2004/09/13 10:00:24 gmsoft Exp $
+
+  13 Sep 2004; Guy Martin <gmsoft@gentoo.org> usermin-1.090.ebuild:
+  Stable on hppa.
 
   09 Sep 2004; Bryan Østergaard <kloeri@gentoo.org> usermin-1.090.ebuild:
   Stable on alpha, bug 63167.
