@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/udpcast
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/udpcast/ChangeLog,v 1.4 2004/07/31 21:28:08 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/udpcast/ChangeLog,v 1.5 2004/08/17 08:47:04 eldad Exp $
+
+  17 Aug 2004; Eldad Zack <eldad@gentoo.org> udpcast-20040222.ebuild:
+  x86 stable
 
   31 Jul 2004; <malc@gentoo.org> udpcast-20040222.ebuild:
   ~amd64 closes bug #57776
