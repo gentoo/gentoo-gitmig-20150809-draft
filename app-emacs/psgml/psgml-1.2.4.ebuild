@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/psgml/psgml-1.2.4.ebuild,v 1.3 2004/06/01 14:09:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/psgml/psgml-1.2.4.ebuild,v 1.4 2004/06/14 08:13:24 kloeri Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PSGML is a GNU Emacs Major Mode for editing SGML and XML coded documents."
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 HOMEPAGE="http://psgml.sourceforge.net"
 KEYWORDS="x86 sparc"
+IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
 
