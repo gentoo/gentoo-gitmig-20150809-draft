@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/staden/staden-1.4.1-r2.ebuild,v 1.1 2004/09/16 04:12:35 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/staden/staden-1.4.1-r3.ebuild,v 1.1 2004/09/16 19:16:54 ribosome Exp $
 
 inherit eutils
 
@@ -17,7 +17,6 @@ IUSE="doc emboss ifc"
 
 DEPEND="${RDEPEND}
 	dev-lang/perl
-	emboss? ( app-sci/emboss )
 	ifc? ( dev-lang/ifc )"
 
 RDEPEND="app-shells/ksh
@@ -27,6 +26,8 @@ RDEPEND="app-shells/ksh
 	dev-tcltk/iwidgets
 	media-libs/libpng
 	virtual/x11"
+
+PDEPEND="emboss? ( app-sci/staden-emboss )"
 
 S=${WORKDIR}/${PN}-src-rel-${PV//./-}
 
@@ -51,21 +52,6 @@ pkg_setup() {
 			eerror 'Intel Fortran Compiler).'
 		fi
 		die "Fortran compiler not found."
-	fi
-
-	# Check for X authority if building the EMBOSS tcl/tk GUIs.
-	if use "emboss" && [ -z ${XAUTHORITY} ]; then
-		echo
-		eerror 'The "XAUTHORITY" environment variable is not set on your system.'
-		eerror 'Access to an X display is required to build the EMBOSS tcl/tk GUIs.'
-		eerror 'Please either unset the "emboss" "USE" flag to install this package'
-		eerror 'without building the EMBOSS GUIs (you will still be provided with a'
-		eerror 'set of prebuilt GUIs) or configure access to an X display. You can'
-		eerror 'transfer the X credentials of an ordinary user to the account you'
-		eerror 'use to execute "emerge" with the "sux" command, which is part of the'
-		eerror '"x11-misc/sux" package. See: "http://www.gentoo.org/doc/en/su-x.xml"'
-		eerror 'for an introduction to installing and using "sux" on Gentoo.'
-		die '"XAUTHORITY" not set.'
 	fi
 }
 
@@ -156,14 +142,15 @@ src_compile() {
 	# Patched version of iwidgetsrc
 	cp ${FILESDIR}/${P}-iwidgetsrc.new ${S}/tables/iwidgetsrc
 
-	# Build tcl/tk GUIs for EMBOSS programs if requested.
-	use "emboss" && STADENROOT="${S}" ${S}/linux-bin/create_emboss_files
-
 	# Netscape is not a good default browser (security masked in Portage).
 	# Use documentation.html rather than staden_home.html as the top-level
 	# hypertext documentation file.
 	cp ${FILESDIR}/${P}-staden_help.new ${S}/linux-bin/staden_help
 	chmod +x ${S}/linux-bin/staden_help
+
+	# Remove the prebuilt EMBOSS tcl/tk GUIs.
+	rm ${S}/tables/emboss_menu
+	rm -r ${S}/lib/spin2_emboss/acdtcl
 
 }
 
@@ -191,7 +178,6 @@ src_install() {
 
 	# A short course in printable format along with some data
 	use doc && mv ${WORKDIR}/course ${D}/opt/${PN}/course
-
 }
 
 pkg_postinst() {
@@ -210,10 +196,5 @@ pkg_postinst() {
 	ewarn '"strace" to identify the problematic font(s) and either uninstall'
 	ewarn 'them or remove the directory they are in from "FontPath" by'
 	ewarn 'editing your X server configuration file.'
-	ewarn
-	ewarn 'The default EMBOSS tcl/tk GUIs (which get installed if you did not'
-	ewarn 'set the "emboss" "USE" flag) are way out of date, while the custom'
-	ewarn 'GUIs (which are built if you set the "emboss" "USE" flag) do not'
-	ewarn 'support many of the most recent EMBOSS/EMBASSY programs.'
 	echo
 }
