@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.90.ebuild,v 1.2 2005/02/12 20:35:13 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.95.ebuild,v 1.1 2005/03/31 04:35:28 mr_bones_ Exp $
 
 inherit flag-o-matic gcc eutils games
 
@@ -84,8 +84,6 @@ src_unpack() {
 	fi
 
 
-	#toggle_feature x86 X86_ASM_68020 # Broken
-	toggle_feature x86 X86_ASM_68000
 	toggle_feature x86 X86_MIPS3_DRC
 	toggle_feature2 x86 mmx EFFECT_MMX_ASM
 	toggle_feature joystick JOY_STANDARD
@@ -186,10 +184,11 @@ src_install() {
 		|| die "dodoc failed"
 	dohtml -r doc/* || die "dohtml failed"
 
-	if [ ${disp} -eq 0 ] || use opengl || use X || use dga || use xv ; then
-		dosym "${TARGET}.x11" "${GAMES_BINDIR}/${TARGET}"
-	elif use sdl ; then
+	# default to sdl since the client is a bit more featureful
+	if use sdl ; then
 		dosym "${TARGET}.SDL" "${GAMES_BINDIR}/${TARGET}"
+	elif [ ${disp} -eq 0 ] || use opengl || use X || use dga || use xv ; then
+		dosym "${TARGET}.x11" "${GAMES_BINDIR}/${TARGET}"
 	elif use svga ; then
 		dosym ${TARGET}.svgalib "${GAMES_BINDIR}/${TARGET}"
 	#elif use ggi ; then
