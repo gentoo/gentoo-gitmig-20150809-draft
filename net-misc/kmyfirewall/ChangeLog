@@ -1,6 +1,12 @@
 # ChangeLog for net-misc/kmyfirewall
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/kmyfirewall/ChangeLog,v 1.4 2002/08/03 20:20:09 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/kmyfirewall/ChangeLog,v 1.5 2002/09/14 13:53:48 danarmak Exp $
+
+*kmyfirewall-0.9.2 (14 Sep 2002)
+
+  14 Sep 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  New upstream version.
 
 *kmyfirewall-0.4.5.ebuild (03 Aug 2002)
 
