@@ -1,0 +1,20 @@
+# ChangeLog for app-misc/fenris 
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fenris/ChangeLog,v 1.1 2002/12/22 23:48:00 raker Exp $
+
+*fenris-0.07m (07 Dic 2002)
+
+  07 Dic 2002; Quequero <quequero@bitchx.it> fenris-0.07m.ebuild:
+  First import. Ebuild submitted by Quequero <quequero@bitchx.it>.
+  Fenris is a multipurpose tracer, GUI debugger, stateful analyzer
+  and partial decompiler intended to simplify bug tracking, security
+  audits, code, algorithm, protocol analysis and computer forensics
+  providing a structural program trace, interactive debugging, general 
+  information about internal constructions, execution path, I/O and 
+  much more. Because it does not require sources or any particular 
+  compilation method, this multi-component project can be very 
+  helpful for black-box tests and evaluations but it will also be a 
+  reat tool for open-source project audits, as an unmatched real-time 
+  reconnaissance tool.
+  Installed files and utilities are: fenris, fprints, getfprints,
+  ragnarok, fenris-bug, ragsplit, spliter.pl, dress, aegir, nc-aegir.
