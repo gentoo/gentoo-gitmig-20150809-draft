@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/phpwebsite-0.9.3_p4-r2.ebuild,v 1.4 2004/11/24 09:00:57 josejx Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/phpwebsite/phpwebsite-0.9.3_p4-r2.ebuild,v 1.5 2004/11/24 19:17:12 tester Exp $
 
 inherit webapp
 
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/${PN}/${PN}-${MY_PV}-full.tar.gz
 	http://phpwebsite.appstate.edu/downloads/security/phpwebsite-core-security-patch.tar.gz
 	http://phpwebsite.appstate.edu/downloads/security/phpwebsite-core-security-patch2.tar.gz"
 LICENSE="LGPL-2.1"
-KEYWORDS="~x86 ppc ~sparc alpha"
+KEYWORDS="x86 ppc ~sparc alpha"
 IUSE=""
 RDEPEND="<virtual/httpd-php-5
 	>=dev-db/mysql-3.23.23"
