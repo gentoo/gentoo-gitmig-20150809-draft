@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 055be700af7489072fa03de082a713ec ChangeLog 854
+MD5 268cfecf6c58e0eae3d2f4f7a371ad82 ChangeLog 1128
 MD5 fcd33d07e4ee719b01157946734f4fe8 metadata.xml 158
-MD5 21f8affbcccff92cb0cceb668919cb60 vm-7.07-r1.ebuild 1126
-MD5 ea7032da2eaec99513a211aabc9e9197 vm-7.15.ebuild 1130
-MD5 c5790722527db967b5fa15b5fb9a4852 vm-7.18.ebuild 1138
+MD5 c5a4ff3e0bf034d6a89758ce4b9cebe2 vm-7.15.ebuild 1130
+MD5 0dd561027d8691884606e884735ff470 vm-7.18.ebuild 1137
+MD5 9359bdb89c8b9af0d4c01f00659c96bc vm-7.19.ebuild 1116
 MD5 a3ccada98fbc3181244e33f7d19c3212 files/50vm-gentoo.el 639
-MD5 b1bb4656409854a8c1a2c6f50f7a6948 files/digest-vm-7.07-r1 59
 MD5 21ac98df00464ffd4510939bb172672b files/digest-vm-7.15 59
 MD5 29f46fa938e55c708ae3e691bcaf69b9 files/vm-direntry-fix-gentoo.patch 271
 MD5 e53ed683597d0699c6c8784e83338b30 files/digest-vm-7.18 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA30q3HTu7gpaalycRAp5fAJ0VmZPMRPuS2FJFacvGq5ez1hfgbACfW6ft
-dF7EMnuTciSB0pafFOCeA2I=
-=Hwb4
------END PGP SIGNATURE-----
+MD5 c8728a086fd440115e985ba8bb0b7567 files/digest-vm-7.19 59

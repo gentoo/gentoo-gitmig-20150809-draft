@@ -1,14 +1,14 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-7.15.ebuild,v 1.6 2004/06/27 22:31:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/vm/vm-7.15.ebuild,v 1.7 2004/10/02 08:35:49 usata Exp $
 
 inherit elisp eutils
 
 DESCRIPTION="An emacs major mode for reading and writing e-mail with support for GPG and MIME."
-HOMEPAGE="http://www.wonderworks.com/vm"
+HOMEPAGE="http://www.wonderworks.com/vm/"
 SRC_URI="ftp://ftp.uni-mainz.de/pub/software/gnu/${PN}/${P}.tar.gz"
 
-LICENSE="GPL-2"
+LICENSE="GPL-1"
 SLOT="0"
 KEYWORDS="x86"
 IUSE=""
