@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/amavisd-new/amavisd-new-20030616_p9.ebuild,v 1.1 2004/04/24 18:11:34 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/amavisd-new/amavisd-new-20030616_p9.ebuild,v 1.2 2004/04/24 19:03:50 max Exp $
 
 inherit eutils
 
@@ -19,11 +19,6 @@ RDEPEND="${DEPEND}
 	>=sys-apps/coreutils-5.0-r3
 	app-arch/gzip
 	app-arch/bzip2
-	app-arch/arc
-	app-arch/lha
-	app-arch/unarj
-	app-arch/unrar
-	app-arch/zoo
 	dev-perl/Archive-Tar
 	dev-perl/Archive-Zip
 	dev-perl/Compress-Zlib

@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/amavisd-new
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/amavisd-new/ChangeLog,v 1.12 2004/04/24 18:11:34 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/amavisd-new/ChangeLog,v 1.13 2004/04/24 19:03:50 max Exp $
+
+  24 Apr 2004; Max Kalika <max@gentoo.org> amavisd-new-20030616_p9.ebuild:
+  Remove some optional compression dependencies. Fixes bug 33883.
 
 *amavisd-new-20030616_p9 (24 Apr 2004)
 
