@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.1.0.0.ebuild,v 1.1 2004/05/31 17:17:09 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/azureus-bin/azureus-bin-2.1.0.0-r1.ebuild,v 1.1 2004/06/18 15:15:24 squinky86 Exp $
 
 inherit eutils
 
@@ -87,6 +87,10 @@ src_install() {
 
 	doins *.jar
 	doexe *.so
+
+	# keep the plugins dir bug reports from flowing in
+	insinto ${PROGRAM_DIR}/plugins/azupdater
+	doins plugins/azupdater/*
 
 	dobin azureus
 
