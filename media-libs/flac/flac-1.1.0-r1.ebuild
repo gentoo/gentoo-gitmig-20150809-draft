@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.0-r1.ebuild,v 1.1 2004/04/08 02:23:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.0-r1.ebuild,v 1.2 2004/04/08 02:30:36 eradicator Exp $
 
 inherit libtool
 
@@ -14,9 +14,10 @@ LICENSE="GPL-2 LGPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 ~mips"
 IUSE="sse xmms X"
 
-RDEPEND="virtual/glibc
-	>=media-libs/libogg-1.0_rc2
+RDEPEND=">=media-libs/libogg-1.0_rc2
+	media-libs/id3lib
 	X? ( xmms? ( media-sound/xmms ) )"
+
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )
 	sys-apps/gawk"
