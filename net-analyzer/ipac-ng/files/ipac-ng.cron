@@ -1,8 +1,0 @@
-#!/bin/sh
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/files/ipac-ng.cron,v 1.2 2004/07/18 03:47:05 dragonheart Exp $
-
-FI=/usr/sbin/fetchipac
-
-if [ -x ${FI} ] && [ -f /var/run/ipac.rules ]; then 
-	${FI}
-fi

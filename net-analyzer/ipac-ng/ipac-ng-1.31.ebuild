@@ -1,40 +1,60 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/ipac-ng-1.27_p1-r2.ebuild,v 1.4 2004/07/11 10:15:48 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/ipac-ng-1.31.ebuild,v 1.1 2005/01/09 07:24:00 dragonheart Exp $
+
+inherit eutils
 
 DESCRIPTION="ip accounting suite for 2.4 and 2.6 series kernels with text and PNG image output like mrtg"
 HOMEPAGE="http://sourceforge.net/projects/ipac-ng/"
-SRC_URI="mirror://sourceforge/ipac-ng/${P/_p/pl}.tar.bz2"
+SRC_URI="mirror://sourceforge/ipac-ng/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
-IUSE="gd"
+KEYWORDS="~x86"
+IUSE="gd sqlite"
 
 DEPEND="sys-devel/bison
 	sys-devel/flex
 	dev-lang/perl
-	sys-libs/gdbm
 	gd? ( dev-perl/GD )
+	sqlite? ( =dev-db/sqlite-2* )
+	!sqlite? ( sys-libs/gdbm )
 	sys-devel/flex
 	virtual/libc"
 RDEPEND="net-firewall/iptables
 	virtual/cron
 	dev-lang/perl
-	sys-libs/gdbm
 	gd? ( dev-perl/GD )
+	sqlite? ( =dev-db/sqlite-2* )
+	!sqlite? ( sys-libs/gdbm )
 	virtual/libc"
 
-S=${WORKDIR}/${P/_p*}
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	epatch ${FILESDIR}/${P}-iptables.patch || die "patch failed"
+}
 
 src_compile() {
-	econf \
-		--enable-default-storage=gdbm \
+	local myconf
+
+	if use sqlite; then
+		myconf="--enable-default-storage=sqlite";
+	else
+		myconf="--enable-default-storage=gdbm";
+	fi
+
+	econf ${myconf} \
 		--enable-default-agent=iptables \
 		--enable-default-access=files \
 		--enable-classic=yes \
 		|| die "./configure failed"
+
 	emake -j1 || die "make failed"
+}
+
+src_test() {
+	einfo "self test is broken"
 }
 
 src_install() {
@@ -43,24 +63,26 @@ src_install() {
 	dodir /var/lib/ipac
 
 	insinto /etc/ipac-ng
-	newins ${FILESDIR}/ipac.conf.${PVR} ipac.conf
-	newins ${FILESDIR}/rules.conf.${PVR} rules.conf
+	newins ${FILESDIR}/ipac.conf.1.30 ipac.conf
+	newins ${FILESDIR}/rules.conf.1.30 rules.conf
 
 	exeinto /etc/init.d
-	newexe ${FILESDIR}/ipac-ng.rc.${PVR} ipac-ng
+	newexe ${FILESDIR}/ipac-ng.rc.1.30 ipac-ng
 
 	exeinto /etc/cron.hourly
-	newexe ${FILESDIR}/ipac-ng.cron.${PVR} ipac-ng
+	newexe ${FILESDIR}/ipac-ng.cron.1.30 ipac-ng
 
-	dodoc  COPYING README* TODO UPDATE* CHANGES
+	dodoc README TODO doc/* CHANGELOG
 }
 
 pkg_postinst() {
-	einfo "W A R N I N G !"
-	einfo "do not use \"/etc/init.d/iptables save\" when ipac-ng is running!"
-	einfo "this WILL save ipac rules and can cause problems!"
-	einfo "ipac-ng should be started AFTER iptables and shut down BEFORE iptables"
-	einfo "use /etc/init.d/iptables save only when ipac rules are removed!"
+	ewarn ""
+	ewarn "                         W A R N I N G !"
+	ewarn "do not use \"/etc/init.d/iptables save\" when ipac-ng is running!"
+	ewarn "this WILL save ipac rules and can cause problems!"
+	ewarn "ipac-ng should be started AFTER iptables and shut down BEFORE iptables"
+	ewarn "use /etc/init.d/iptables save only when ipac rules are removed!"
+	ewarn ""
 	einfo "the accounting database is at /var/lib/ipac"
 	einfo "use /usr/sbin/ipacsum to get your ip acounting data"
 	einfo "use /usr/sbin/fetchipac to update the accounting at any time"

@@ -1,6 +1,17 @@
 # ChangeLog for net-analyzer/ipac-ng
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/ChangeLog,v 1.12 2004/10/11 23:44:03 eldad Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/ChangeLog,v 1.13 2005/01/09 07:24:00 dragonheart Exp $
+
+*ipac-ng-1.31 (09 Jan 2005)
+
+  09 Jan 2005; Daniel Black <dragonheart@gentoo.org> -files/ipac-ng.cron,
+  -files/ipac-ng.cron.1.27_p1-r2, -files/ipac-ng.rc,
+  -files/ipac-ng.rc.1.27_p1-r2, -files/ipac.conf, -files/ipac.conf.1.27_p1-r2,
+  -files/rules.conf, -files/rules.conf.1.27_p1-r2, -ipac-ng-1.27_p1-r1.ebuild,
+  -ipac-ng-1.27_p1-r2.ebuild, +ipac-ng-1.31.ebuild, +
+  /files/ipac-ng-1.31-iptables.patch:
+  Old version cleanout and version bump as per bug #75190. Thanks to Vanquirius
+  <marcelogoes@gmail.com> for the bug report.
 
   12 Oct 2004; Eldad Zack <eldad@gentoo.org> files/rules.conf.1.30,
   ipac-ng-1.30.ebuild:

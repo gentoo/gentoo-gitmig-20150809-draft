@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/ipac-ng-1.30.ebuild,v 1.4 2004/08/24 10:56:49 eldad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ipac-ng/ipac-ng-1.30.ebuild,v 1.5 2005/01/09 07:24:00 dragonheart Exp $
 
 DESCRIPTION="ip accounting suite for 2.4 and 2.6 series kernels with text and PNG image output like mrtg"
 HOMEPAGE="http://sourceforge.net/projects/ipac-ng/"
