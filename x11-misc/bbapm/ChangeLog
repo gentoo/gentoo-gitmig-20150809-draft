@@ -1,8 +1,11 @@
 # ChangeLog for x11-misc/bbapm
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbapm/ChangeLog,v 1.7 2003/02/12 09:26:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbapm/ChangeLog,v 1.8 2003/03/02 23:13:32 mholzer Exp $
 
 *bbapm-0.0.1-r3 (12 Dec 2002)
+
+  02 Mar 2003; Martin Holzer <mholzer@gentoo.org> bbapm-0.0.1-r3.ebuild :
+  Filtering out -fomi-frame-pointer. Closes #16623.
 
   06 Jan 2003; Jack Morgan <jmorgan@gentoo.org> bbapm-0.0.1-r*.ebuild :
   Removed sparc keyword

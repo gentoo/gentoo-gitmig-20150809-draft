@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbapm/bbapm-0.0.1-r3.ebuild,v 1.3 2003/02/13 17:06:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/bbapm/bbapm-0.0.1-r3.ebuild,v 1.4 2003/03/02 23:13:32 mholzer Exp $
 
-inherit eutils
+inherit eutils flag-o-matic
 
 S=${WORKDIR}/${P}
 DESCRIPTION="blackbox advanced power management tool"
@@ -11,6 +11,8 @@ HOMEPAGE="http://bbtools.thelinuxcommunity.org/contrib.phtml"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86"
+
+replace-flags "-fomit-frame-pointer" ""
 
 DEPEND="virtual/blackbox
 	>=sys-apps/apmd-3.0.1"
