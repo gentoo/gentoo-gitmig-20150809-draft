@@ -8,9 +8,9 @@ MD5 58ed89f3cc48f16f8bc96b76490e5b6a python-2.2.3-r1.ebuild 3293
 MD5 0a274212a2a49a52600b617a38bafa09 python-2.2.3-r2.ebuild 3441
 MD5 48d3de450107a8702bbd30ddfdceeed2 python-2.2.3-r3.ebuild 3488
 MD5 5806acebfc91d925f328a751fd5503e5 python-2.2.3-r4.ebuild 3491
-MD5 95fff3a43254a9f6a6958dedc1bf6911 python-2.2.3-r5.ebuild 4243
+MD5 e86255b53d02856c0cdc7246cf8fe6ad python-2.2.3-r5.ebuild 4242
 MD5 789d8555967a31cc0de2126fa6468fc2 python-2.2.3.ebuild 2999
-MD5 4873f7a83ccc1983bc8020aa5ead0425 python-2.3.2-r1.ebuild 4745
+MD5 2eaad101b70fbb9ba84c57908ecbab1b python-2.3.2-r1.ebuild 4794
 MD5 7c0dcd5a1aa1ec0db97cd0847faab0d7 python-2.3.2.ebuild 3675
 MD5 3dbbf5dfb3660eb003061a0c59f6e758 files/depreorder.py 1947
 MD5 f3f370c8d1382c1a7571cfc1cbb196d9 files/digest-python-2.1.3-r1 62

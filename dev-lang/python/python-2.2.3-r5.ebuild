@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r5.ebuild,v 1.3 2003/11/03 20:21:47 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.2.3-r5.ebuild,v 1.4 2003/11/03 20:30:45 liquidx Exp $
 
 inherit flag-o-matic eutils python
 
@@ -86,7 +86,7 @@ src_compile() {
 	fi
 
 	src_configure
-	
+
 	# build python with threads support
 	myopts="${myopts} --with-threads"
 

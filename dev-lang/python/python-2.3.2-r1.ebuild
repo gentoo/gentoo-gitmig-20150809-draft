@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.2-r1.ebuild,v 1.5 2003/11/03 03:31:19 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/python/python-2.3.2-r1.ebuild,v 1.6 2003/11/03 20:30:45 liquidx Exp $
 
 inherit flag-o-matic python
 
@@ -51,20 +51,7 @@ src_unpack() {
 	EPATCH_OPTS="-d ${S}" epatch ${FILESDIR}/${PN}-2.3-gentoo_py_dontcompile.patch
 }
 
-src_compile() {
-	filter-flags -malign-double
-
-	[ "${ARCH}" = "hppa" ] && append-flags -fPIC
-	[ "${ARCH}" = "alpha" ] && append-flags -fPIC
-	export OPT="${CFLAGS}"
-
-	local myconf
-	#if we are creating a new build image, we remove the dependency on g++
-	if [ "`use build`" -a ! "`use bootstrap`" ]
-	then
-		myconf="--with-cxx=no"
-	fi
-
+src_configure() {
 	# disable extraneous modules with extra dependencies
 	if [ -n "`use build`" ]; then
 		export PYTHON_DISABLE_MODULES="readline pyexpat dbm gdbm bsddb _socket _curses _curses_panel _tkinter"
@@ -82,6 +69,23 @@ src_compile() {
 			|| export PYTHON_DISABLE_SSL=1
 		export PYTHON_DISABLE_MODULES
 	fi
+}
+
+src_compile() {
+	filter-flags -malign-double
+
+	[ "${ARCH}" = "hppa" ] && append-flags -fPIC
+	[ "${ARCH}" = "alpha" ] && append-flags -fPIC
+	export OPT="${CFLAGS}"
+
+	local myconf
+	#if we are creating a new build image, we remove the dependency on g++
+	if [ "`use build`" -a ! "`use bootstrap`" ]
+	then
+		myconf="--with-cxx=no"
+	fi
+
+	src_configure
 
 	# FIXME: (need to verify the consequences of this, probably breaks tkinter?)
 	# use unicode ucs4 if cjk, otherwise use ucs2.
@@ -101,6 +105,7 @@ src_compile() {
 
 src_install() {
 	dodir /usr
+	src_configure
 	make DESTDIR="${D}" altinstall  || die
 
 	# install our own custom python-config
