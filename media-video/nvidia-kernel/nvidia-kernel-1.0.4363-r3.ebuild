@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4363-r3.ebuild,v 1.8 2004/01/29 09:55:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.4363-r3.ebuild,v 1.9 2004/04/16 11:18:36 cyfred Exp $
 
 inherit eutils
 
@@ -120,7 +120,12 @@ src_compile() {
 src_install() {
 	# The driver goes into the standard modules location
 	insinto /lib/modules/${KV}/video
-	doins nvidia.o
+	if is_kernel 2 5 || is_kernel 2 6
+	then
+		newins nvidia.o nvidia.ko
+	else
+		doins nvidia.o
+	fi
 
 	# Add the aliases
 	insinto /etc/modules.d
