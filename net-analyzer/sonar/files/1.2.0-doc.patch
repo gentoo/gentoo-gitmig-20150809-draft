@@ -1,5 +1,0 @@
---- configure.orig	2003-10-02 14:07:24.800745392 -0400
-+++ configure	2003-10-02 14:07:32.488576664 -0400
-@@ -8027 +8027 @@
--  test -z "$ac_cv_prog_DOXYGEN" && ac_cv_prog_DOXYGEN="/bin/false"
-+  test -z "$ac_cv_prog_DOXYGEN" && ac_cv_prog_DOXYGEN="/bin/true"
