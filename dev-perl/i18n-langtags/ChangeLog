@@ -1,6 +1,12 @@
 # ChangeLog for dev-perl/i18n-langtags
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/i18n-langtags/ChangeLog,v 1.8 2003/07/12 10:49:57 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/i18n-langtags/ChangeLog,v 1.9 2003/12/27 21:34:51 mcummings Exp $
+
+*i18n-langtags-0.28 (27 Dec 2003)
+
+  27 Dec 2003; Michael Cummings,,, <mcummings@gentoo.org>
+  i18n-langtags-0.28.ebuild:
+  Tested on x86 and sparc; compiled fine, samples from perldoc ran fine
 
 *i18n-langtags-0.27-r1 (21 Jun 2003)
  
