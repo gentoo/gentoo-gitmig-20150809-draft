@@ -1,6 +1,13 @@
 # ChangeLog for sys-kernel/sparc-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.9 2003/01/07 14:02:11 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/sparc-sources/ChangeLog,v 1.10 2003/01/09 19:53:14 joker Exp $
+
+*sparc-sources-2.4.20-r2 (09 Jan 2003)
+
+  09 Jan 2003; Christian Birchinger <joker@gentoo.org>:
+  sparc-sources-2.4.20-r2.ebuild files/digest-sparc-sources-2.4.20-r2 :  
+
+  Added a sparc64 netfilter patch
 
 *sparc-sources-2.4.20-r1 (07 Jan 2003)
 
