@@ -1,0 +1,11 @@
+--- mpeg2_movie-1.5/quicktime/libdv/encode.c~	Mon Feb 12 21:35:41 2001
++++ mpeg2_movie-1.5/quicktime/libdv/encode.c	Wed May  9 10:34:09 2001
+@@ -32,7 +32,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <string.h>
+-#include <gtk/gtk.h>
++#include <gtk-1.2/gtk.h>
+ 
+ #include "dct.h"
+ #include "idct_248.h"
