@@ -1,10 +1,16 @@
 # ChangeLog for net-irc/xchat
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.22 2002/10/11 15:01:47 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/ChangeLog,v 1.23 2002/10/11 15:46:43 lostlogic Exp $
+
+*xchat-1.9.3-r1.ebuild (11 Oct 2002)
+
+  11 Oct 2002; Brandon Low <lostlogic@gentoo.org> xchat-1.9.3-r1.ebuild:
+
+  Fix for location and name of plugins now installed to /usr/lib/xchat-2
 
 *xchat-1.9.3.ebuild (11 Oct 2002)
 
-  11 Oct 2002; Brandon Low <lostlogic@gentoo.org> xchat-1.9.3.ebuild/xchat-1.9.3.ebuild:
+  11 Oct 2002; Brandon Low <lostlogic@gentoo.org> xchat-1.9.3.ebuild:
   
   Add another masked version in the gtk2 series.
 
