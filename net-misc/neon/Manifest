@@ -3,11 +3,13 @@ MD5 b8db53a46cbc419cec76ea1829c99c46 neon-0.24.2.ebuild 783
 MD5 4435f0fde1cf416ecc080a2feff3d972 neon-0.24.0.ebuild 783
 MD5 b616f685a16f8e3ea6f85142b6c45127 neon-0.23.9.ebuild 785
 MD5 2ae7200538068877dd6268e6a69a3c67 metadata.xml 635
-MD5 97fedcf8da146da10f3900603340d0de ChangeLog 4207
+MD5 1bddaf2b8ca7e9738b0a9bc6462e17fc ChangeLog 4382
 MD5 fff098a39763ab92ab9c2cd39aa6425f neon-0.23.8.ebuild 784
+MD5 8661e7d26b697a2808c6729496b481b7 neon-0.24.5.ebuild 954
 MD5 89f41a02d5455f2b85fc358bc4827fc0 neon-0.24.4.ebuild 954
 MD5 9ea45811212cea8423e1fd38812675ed files/digest-neon-0.23.9 63
 MD5 78a022284df1908c3c24448427111e6a files/digest-neon-0.24.2 63
+MD5 97d9fa5100efbc5b63dbea48f7d36cf6 files/digest-neon-0.24.5 63
 MD5 5a576942b2663898889c1239a5bec804 files/digest-neon-0.21.3 63
 MD5 e6994eafdacea2341c0b293f12a27e4c files/digest-neon-0.23.8 63
 MD5 84942fd6f6fe937bf09d9649e6e14436 files/digest-neon-0.24.4 63
