@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p2-r2.ebuild,v 1.11 2004/02/27 01:33:33 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p2-r2.ebuild,v 1.12 2004/03/01 17:23:35 vapier Exp $
 
 inherit eutils flag-o-matic ccc gnuconfig
 
@@ -34,6 +34,7 @@ RDEPEND="virtual/glibc
 	>=sys-libs/zlib-1.1.4
 	!ppc64? ( tcpd? ( >=sys-apps/tcp-wrappers-7.6 ) )"
 DEPEND="${RDEPEND}
+	virtual/os-headers
 	dev-lang/perl
 	sys-apps/groff
 	>=sys-apps/sed-4"
