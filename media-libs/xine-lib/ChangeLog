@@ -1,14 +1,18 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.54 2003/04/29 07:46:15 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.55 2003/05/09 15:28:59 mholzer Exp $
+
+*xine-lib-1_beta11 (29 Apr 2003)
+
+  09 May 2003; Martin Holzer <mholzer@gentoo.org> xine-lib-1_beta10.ebuild,
+  xine-lib-1_beta11.ebuild:
+  fixed type. closes #20692
 
   29 Apr 2003; Brandon Low <lostlogic@gentoo.org> xine-lib-0.9.10-r1.ebuild,
   xine-lib-0.9.12-r2.ebuild, xine-lib-0.9.13-r1.ebuild,
   xine-lib-0.9.13-r2.ebuild, xine-lib-0.9.13.ebuild, 
   xine-lib-1_beta6.ebuild, xine-lib-1_beta8.ebuild, xine-lib-1_beta9.ebuild:
   Remove massive amounts of cruft
-
-*xine-lib-1_beta11 (29 Apr 2003)
 
   29 Apr 2003; Brandon Low <lostlogic@gentoo.org> xine-lib-1_beta11.ebuild:
   A bump, and several ebuild changes. Specifically removed the use of
