@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/hpijs-1.2.ebuild,v 1.1 2002/08/17 20:03:18 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/hpijs/hpijs-1.2.1.ebuild,v 1.1 2002/08/21 19:30:31 edolnx Exp $
 
 # Though this program runs on it's own it makes no sense to run it without ghostscript
 
