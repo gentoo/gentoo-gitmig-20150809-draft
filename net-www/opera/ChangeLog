@@ -1,6 +1,9 @@
 # ChangeLog for net-www/opera
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.78 2004/08/05 17:38:34 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.79 2004/08/05 21:11:53 lanius Exp $
+
+  05 Aug 2004; Heinrich Wendel <lanius@gentoo.org> opera-7.53.ebuild:
+  remove vulnerable version
 
   05 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> opera-7.54.ebuild:
   Stable on sparc wrt #59503
