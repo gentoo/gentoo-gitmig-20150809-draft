@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/gtk-iptables/gtk-iptables-0.3.4.ebuild,v 1.4 2004/06/24 22:40:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/gtk-iptables/gtk-iptables-0.3.4.ebuild,v 1.5 2004/07/14 23:45:29 agriffis Exp $
 
-IUSE="X gnome"
+IUSE=""
 
-S=${WORKDIR}/${P}
 DESCRIPTION="A GTK-1.2 front end for iptables"
 HOMEPAGE="http://gtk-iptables.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
