@@ -2,9 +2,9 @@
 Hash: SHA1
 
 MD5 c0d18a4acbaad0241789942573a32957 ChangeLog 2134
-MD5 067ea29b2f990db3abdee1c32726c7bf dropbear-0.43.ebuild 1687
+MD5 eca949c2fcf358c97cbf8071bf15e3ae dropbear-0.43.ebuild 1685
 MD5 ef25f543b5438ee7595e2ae0f98a5093 metadata.xml 671
-MD5 1cf1bbceb95ceb91d9d15891de776448 dropbear-0.44.ebuild 1419
+MD5 8bd2e66c29adf48cfee62e3875a9ba0a dropbear-0.44.ebuild 1426
 MD5 64abc6b82756a97391c12d730c8da084 files/dropbear.conf.d 352
 MD5 34fea1c967596ebcd6d10d38444f2b92 files/dropbear.init.d 913
 MD5 c3634543250cd9f910161b351bb15ccc files/digest-dropbear-0.43 67
@@ -12,7 +12,7 @@ MD5 80f623a0803053ed01024f1419ba608c files/digest-dropbear-0.44 67
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.14 (GNU/Linux)
 
-iD8DBQFB5DGLroRuSHgZdywRAgf7AJ46HvZHjFePs2mM/jsYk1noj1CPuwCeIA1B
-sfVBidHhOLWLQU1jNgOrIac=
-=MsKP
+iD8DBQFB5DHVroRuSHgZdywRAs7UAJ4qTaBz32V3osjv9u70SatplQ8uVgCfX1Di
+e6coGoCG+Mt+WmfsuTdPCP0=
+=H7EC
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-0.44.ebuild,v 1.1 2005/01/11 20:04:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dropbear/dropbear-0.44.ebuild,v 1.2 2005/01/11 20:06:17 vapier Exp $
 
 DESCRIPTION="small SSH 2 client/server designed for small memory environments"
 HOMEPAGE="http://matt.ucc.asn.au/dropbear/"
@@ -9,7 +9,7 @@ SRC_URI="http://matt.ucc.asn.au/dropbear/releases/${P}.tar.bz2
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~sh ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~sparc ~sh ~x86"
 IUSE="zlib multicall static"
 
 RDEPEND="zlib? ( sys-libs/zlib )"
