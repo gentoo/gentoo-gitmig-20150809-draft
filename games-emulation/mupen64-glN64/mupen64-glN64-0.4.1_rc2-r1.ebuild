@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-glN64/mupen64-glN64-0.4.1_rc2-r1.ebuild,v 1.1 2005/01/07 22:18:43 morfic Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/mupen64-glN64/mupen64-glN64-0.4.1_rc2-r1.ebuild,v 1.2 2005/01/31 03:26:42 mr_bones_ Exp $
 
-inherit games
+inherit eutils games
 
 MY_P="glN64-${PV/_/-}"
 S=${WORKDIR}/${MY_P}
