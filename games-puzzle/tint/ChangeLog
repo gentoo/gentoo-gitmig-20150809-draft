@@ -1,6 +1,9 @@
 # ChangeLog for games-puzzle/tint
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tint/ChangeLog,v 1.1 2004/09/25 07:09:15 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/tint/ChangeLog,v 1.2 2004/10/18 12:19:06 dholm Exp $
+
+  18 Oct 2004; David Holm <dholm@gentoo.org> tint-0.03a.ebuild:
+  Added to ~ppc.
 
 *tint-0.03a (25 Sep 2004)
 
