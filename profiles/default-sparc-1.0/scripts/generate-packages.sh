@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc-1.0/scripts/generate-packages.sh,v 1.3 2002/04/18 11:18:52 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc-1.0/scripts/generate-packages.sh,v 1.4 2002/04/18 21:05:52 murphy Exp $
 #
 # New packages file
 NEWPACKAGESBUILD=packages.build
@@ -49,7 +49,7 @@ _EOF_
 cp -p $NEWDEFAULTS $KEEPDEFAULTS
 echo "# This file created automagically by $0 on `date`" > $NEWDEFAULTS
 echo "" >> $NEWDEFAULTS
-cat ${from_dir}/make.defaults >> $NEWDEFAULTS
+sed -e 's:ARCH=.*::' ${from_dir}/make.defaults >> $NEWDEFAULTS
 cat >> $NEWDEFAULTS <<_EOF_
 
 # These lines added by $0 -----------------------

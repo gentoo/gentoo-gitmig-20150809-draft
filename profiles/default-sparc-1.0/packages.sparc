@@ -1,4 +1,4 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc-1.0/packages.sparc,v 1.1 2002/04/16 20:07:18 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-sparc-1.0/packages.sparc,v 1.2 2002/04/18 21:05:52 murphy Exp $
 #
 # Please edit the file packages.sparc, it will be included in
 # packages the next time you run generate-packages.sh
@@ -7,8 +7,8 @@
 *sys-apps/sparc-utils
 *sys-apps/silo
 
-# Not working, and should only be in 64
-#*sys-devel/sparc-egcs64
+# In case we need a different 32 bit compiler.
+#*sys-devel/sparc-egcs32
 
 # Fixes bug#1726
 >=sys-devel/patch-2.5.4-r4
