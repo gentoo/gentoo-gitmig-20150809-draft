@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.21 2004/08/09 22:31:42 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.22 2004/08/13 21:05:11 robbat2 Exp $
 #
 # eclass/php5-sapi.eclass
 #		Eclass for building different php5 SAPI instances
@@ -304,7 +304,7 @@ php5-sapi_pkg_setup () {
 php5-sapi_src_unpack () {
 	unpack ${A}
 	# Fix for HTTP auth bug, #59755 
-	epatch ${FILESDIR}/php-5.0.0-httpauthfix.patch
+	[ "x${PV}" == "x5.0.0" ] && epatch ${FILESDIR}/php-5.0.0-httpauthfix.patch
 
 	cd ${S}
 
