@@ -1,7 +1,13 @@
 # ChangeLog for gnome-extra/yelp
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/ChangeLog,v 1.5 2002/06/05 16:54:36 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/yelp/ChangeLog,v 1.6 2002/06/10 20:46:35 spider Exp $
 
+
+*yelp-1.0 (10 Jun 2002)
+  10 Jun 2002; Spider <spider@gentoo.org> yelp-1.0.ebuild:
+  stable version
+
+    
 
 *yelp-0.10 (05 Jun 2002)
   05 Jun 2002; Spider <spider@gentoo.org> yelp-0.10.ebuild:
