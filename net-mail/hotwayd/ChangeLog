@@ -1,0 +1,9 @@
+# ChangeLog for net-mail/hotwayd
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/hotwayd/ChangeLog,v 1.1 2003/05/11 23:28:51 tberman Exp $
+
+*hotwayd-0.5.3 (11 May 2003)
+
+  11 May 2003; Todd Berman <tberman@gentoo.org> hotwayd-0.5.3.ebuild:
+  Initial commit.
+
