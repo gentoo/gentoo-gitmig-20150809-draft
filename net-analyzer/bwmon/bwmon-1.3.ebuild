@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwmon/bwmon-1.3.ebuild,v 1.4 2002/09/23 19:58:09 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/bwmon/bwmon-1.3.ebuild,v 1.5 2002/10/20 18:50:48 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Simple ncurses bandwidth monitor"
@@ -8,7 +8,6 @@ HOMEPAGE="http://bwmon.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
 DEPEND="sys-libs/ncurses"
-RDEPEND="${DEPEND}"
 
 SLOT="0"
 LICENSE="GPL-2 public-domain"

@@ -1,6 +1,6 @@
 # Copyright 2000-2002 Achim Gottinger
 # Distributed under the GPL by Gentoo Technologies, Inc.
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/nessus-plugins-1.2.4.ebuild,v 1.2 2002/09/30 13:13:13 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/nessus-plugins-1.2.4.ebuild,v 1.3 2002/10/20 18:50:48 vapier Exp $
 
 S=${WORKDIR}/${PN}
 
@@ -9,7 +9,6 @@ HOMEPAGE="http://www.nessus.org/"
 SRC_URI="ftp://ftp.nessus.org/pub/nessus/nessus-${PV}/src/${P}.tar.gz"
 
 DEPEND="=net-analyzer/nessus-core-${PV}"
-RDEPEND="${DEPEND}"
 
 SLOT="0"
 LICENSE="GPL-2"

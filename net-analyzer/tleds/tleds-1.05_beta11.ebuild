@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tleds/tleds-1.05_beta11.ebuild,v 1.5 2002/10/15 00:53:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/tleds/tleds-1.05_beta11.ebuild,v 1.6 2002/10/20 18:50:48 vapier Exp $
 
 IUSE="X"
 
@@ -16,7 +16,6 @@ LICENSE="GPL-2"
 KEYWORDS="x86 sparc sparc64"
 
 DEPEND="X? ( virtual/x11 )"
-RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack tleds-1.05beta10.tgz
