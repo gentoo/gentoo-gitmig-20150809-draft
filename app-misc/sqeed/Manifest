@@ -1,5 +1,15 @@
-MD5 7ad2101356e9a5c2d0f0c19ec68bec61 ChangeLog 533
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c57c234fee3057a95aa8f1f13deef4b8 ChangeLog 532
 MD5 0c131a7201c4670302767f93643876fa metadata.xml 165
 MD5 49d92ef7823ba9cc24d15aec27990fed sqeed-0.2.2.ebuild 601
 MD5 d41d8cd98f00b204e9800998ecf8427e files/sqeed.data 0
 MD5 bc4203fcb6bc4bd257a2d0d2dce69c77 files/digest-sqeed-0.2.2 59
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBd80LEZCkKN40op4RAq8PAJ9ubFOBVEFWkCwKL3b3L0LV3EgNJACfYJyp
+Iq1O0J2uzMUUK+OsevUowhI=
+=0nFA
+-----END PGP SIGNATURE-----
