@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/file
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.74 2004/12/08 21:11:46 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/file/ChangeLog,v 1.75 2004/12/09 13:58:24 gmsoft Exp $
+
+  09 Dec 2004; Guy Martin <gmsoft@gentoo.org> file-4.12.ebuild:
+  Stable on hppa.
 
   08 Dec 2004; Hardave Riar <hardave@gentoo.org>
   files/file-4.xx-mips-gentoo.diff, file-4.12.ebuild:
