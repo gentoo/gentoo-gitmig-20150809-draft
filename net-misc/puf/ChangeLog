@@ -1,0 +1,9 @@
+# ChangeLog for net-misc/puf
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/puf/ChangeLog,v 1.1 2003/06/25 21:40:07 mholzer Exp $
+
+*puf-0.93.2a (25 Jun 2003)
+
+  25 Jun 2003; Martin Holzer <mholzer@gentoo.org> puf-0.93.2a.ebuild:
+  Initial ebuild submitted by pst@ican.at in #22742.
+
