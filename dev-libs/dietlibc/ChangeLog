@@ -1,6 +1,12 @@
 # ChangeLog for dev-libs/dietlibc
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.4 2002/09/27 09:30:28 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/dietlibc/ChangeLog,v 1.5 2002/10/29 14:05:03 aliz Exp $
+
+*dietlibc-0.21 (29 Oct 2002)
+
+  29 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> :
+  Version bump. Ebuild contributed by fridtjof@fbunet.de, ppc patch by 
+  Nicolas Kaiser <nikai@nikai.net>. All in #9484
 
 *dietlibc-0.20 (27 Sep 2002)
   Version bump that includes security fix. Ebuild contributed by fridtjof@fbunet.de.
