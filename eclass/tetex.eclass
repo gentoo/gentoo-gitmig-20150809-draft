@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.8 2004/04/27 22:05:28 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/tetex.eclass,v 1.9 2004/04/27 22:23:44 agriffis Exp $
 #
 # Author: Jaromir Malenko <malenko@email.cz>
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
 # A generic eclass to install tetex distributions.
 
-inherit alternatives eutils
+inherit alternatives eutils flag-o-matic
 
 ECLASS=tetex
 INHERITED="${INHERITED} ${ECLASS}"

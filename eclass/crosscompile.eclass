@@ -1,7 +1,9 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/crosscompile.eclass,v 1.7 2003/10/26 09:13:42 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/crosscompile.eclass,v 1.8 2004/04/27 22:23:44 agriffis Exp $
 # Author: Zachary T Welch
+
+inherit flag-o-matic
 
 ECLASS=crosscompile
 INHERITED="$INHERITED $ECLASS"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ccc.eclass,v 1.12 2003/09/05 12:19:19 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ccc.eclass,v 1.13 2004/04/27 22:23:44 agriffis Exp $
 # 
 # Authors:	Tavis Ormandy <taviso@gentoo.org>
 #			Aron Griffis <agriffis@gentoo.org>
@@ -10,6 +10,8 @@
 # 16/6/2003 - Added otsify()
 # 18/6/2003 - regex tweaks.
 # 22/7/2003 - newdepend
+
+inherit flag-o-matic
 
 ECLASS=ccc
 INHERITED="${INHERITED} ${ECLASS}"
