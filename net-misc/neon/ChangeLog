@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/neon
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.38 2004/07/20 20:33:04 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/neon/ChangeLog,v 1.39 2004/07/20 20:49:40 stuart Exp $
+
+  20 Jul 2004; Stuart Herbert <stuart@gentoo.org> neon-0.24.7.ebuild:
+  Stable on x86
 
   20 Jul 2004; Ciaran McCreesh <ciaranm@gentoo.org> neon-0.24.7.ebuild:
   Stable on sparc for bug #57747

@@ -1,30 +1,20 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c98e191591e3f89968dc5f73f810a8f6 neon-0.24.6.ebuild 875
-MD5 cd567a595a529fa6d1fecc30a67d5368 ChangeLog 5348
+MD5 9485c1088e78f7c8203364cdb15edff1 neon-0.24.4.ebuild 928
 MD5 b69648bc1da0124964066339b41d7812 neon-0.23.8.ebuild 760
 MD5 5fe68cbed0732516e45a1f67011a8ebb neon-0.24.0.ebuild 760
-MD5 9485c1088e78f7c8203364cdb15edff1 neon-0.24.4.ebuild 928
+MD5 2420bd0fa239c7b3f2843fcd761cf8c6 neon-0.21.3.ebuild 732
+MD5 9eecbe6a570a05fa78ce001e20548d1e ChangeLog 5434
+MD5 293e15d00b8563640dcc286571ab9ef6 neon-0.23.9.ebuild 761
 MD5 2ae7200538068877dd6268e6a69a3c67 metadata.xml 635
 MD5 6142927b432bebd6941e53e73fce0cf5 neon-0.24.2.ebuild 760
-MD5 2420bd0fa239c7b3f2843fcd761cf8c6 neon-0.21.3.ebuild 732
-MD5 293e15d00b8563640dcc286571ab9ef6 neon-0.23.9.ebuild 761
 MD5 439547a82610ff7f5ad68f5d0d186a99 neon-0.24.5.ebuild 934
-MD5 284dc50c4456a2316099555e79596ab7 neon-0.24.7.ebuild 880
-MD5 839f25b6c4eb84ed2157cd2904daf5b0 files/digest-neon-0.24.7 63
-MD5 e6994eafdacea2341c0b293f12a27e4c files/digest-neon-0.23.8 63
-MD5 1ff50f00a4a8371de1c523076d9fe45e files/digest-neon-0.24.6 63
-MD5 97d9fa5100efbc5b63dbea48f7d36cf6 files/digest-neon-0.24.5 63
-MD5 9ea45811212cea8423e1fd38812675ed files/digest-neon-0.23.9 63
-MD5 84942fd6f6fe937bf09d9649e6e14436 files/digest-neon-0.24.4 63
-MD5 78a022284df1908c3c24448427111e6a files/digest-neon-0.24.2 63
-MD5 7ee2f46f386d816ceda871cbadc9d7af files/digest-neon-0.24.0 63
+MD5 c98e191591e3f89968dc5f73f810a8f6 neon-0.24.6.ebuild 875
+MD5 8856dc9794e96ce8d00171908eed7846 neon-0.24.7.ebuild 878
 MD5 5a576942b2663898889c1239a5bec804 files/digest-neon-0.21.3 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFA/YD9LLFUmVNQ7rkRAsPHAKC+eSJITVTxStfgl8/om9taFsiQ2wCgwnrn
-KGVxWx1ZEgtjTQs0ScHcMlg=
-=6ULx
------END PGP SIGNATURE-----
+MD5 e6994eafdacea2341c0b293f12a27e4c files/digest-neon-0.23.8 63
+MD5 9ea45811212cea8423e1fd38812675ed files/digest-neon-0.23.9 63
+MD5 7ee2f46f386d816ceda871cbadc9d7af files/digest-neon-0.24.0 63
+MD5 78a022284df1908c3c24448427111e6a files/digest-neon-0.24.2 63
+MD5 84942fd6f6fe937bf09d9649e6e14436 files/digest-neon-0.24.4 63
+MD5 97d9fa5100efbc5b63dbea48f7d36cf6 files/digest-neon-0.24.5 63
+MD5 1ff50f00a4a8371de1c523076d9fe45e files/digest-neon-0.24.6 63
+MD5 839f25b6c4eb84ed2157cd2904daf5b0 files/digest-neon-0.24.7 63
