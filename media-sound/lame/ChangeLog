@@ -1,6 +1,14 @@
 # ChangeLog for media-sound/lame
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.23 2004/01/12 22:50:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.24 2004/01/21 05:35:01 raker Exp $
+
+*lame-3.95.1 (20 Jan 2004)
+
+  20 Jan 2004; Nick Hadaway <raker@gentoo.org> lame-3.95.1.ebuild:
+  Version bump.  Upstream bug fixes, and feature adds.  Updated the
+  debug target.  Fixed tyop :) extopt to expopt but commented out
+  as optimizations are set by the user.  Also added some ebuild
+  fixes as suggested by Gregorio Guidi on bug #38006.
 
   12 Jan 2004; <agriffis@gentoo.org> lame-3.93.1-r1.ebuild:
   stable on ia64
