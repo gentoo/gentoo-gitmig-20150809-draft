@@ -1,6 +1,11 @@
 # ChangeLog for dev-games/clanlib
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.5 2003/09/07 14:24:33 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/ChangeLog,v 1.6 2003/10/07 00:04:35 vapier Exp $
+
+*clanlib-0.7.4 (06 Oct 2003)
+
+  06 Oct 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump to fix #30488.
 
 *clanlib-0.7.3 (07 Sep 2003)
 
