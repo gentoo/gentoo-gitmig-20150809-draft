@@ -1,6 +1,10 @@
 # ChangeLog for gnome-extra/gnome-system-monitor
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.60 2005/02/17 05:51:27 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/gnome-system-monitor/ChangeLog,v 1.61 2005/03/09 03:13:23 obz Exp $
+
+  09 Mar 2005; Mike Gardiner <obz@gentoo.org>
+  gnome-system-monitor-2.8.1-r1.ebuild:
+  Keyworded x86 ppc
 
 *gnome-system-monitor-2.8.3 (17 Feb 2005)
 
