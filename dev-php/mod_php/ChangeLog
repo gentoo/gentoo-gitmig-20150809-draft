@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/mod_php
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.196 2004/12/18 12:22:52 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/mod_php/ChangeLog,v 1.197 2004/12/30 20:51:19 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   18 Dec 2004; Michael Hanselmann <hansmi@gentoo.org> mod_php-4.3.10.ebuild:
   Stable on ppc.
@@ -44,7 +47,7 @@
   28 Sep 2004; Robin H. Johnson <robbat2@gentoo.org> mod_php-4.3.9.ebuild:
   Stable on x86.
 
-  27 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org> mod_php-4.3.9.ebuild:
+  27 Sep 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> mod_php-4.3.9.ebuild:
   Stable on alpha, bug 64223.
 
   27 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> mod_php-4.3.9.ebuild:
@@ -108,7 +111,7 @@
   22 Jul 2004; Stuart Herbert <stuart@gentoo.org> mod_php-5.0.0.ebuild:
   Added missing PROVIDE
 
-  15 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> mod_php-4.3.8.ebuild:
+  15 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> mod_php-4.3.8.ebuild:
   Stable on alpha, see bug #56985.
 
   14 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> mod_php-4.3.8.ebuild:
@@ -141,7 +144,7 @@
   07 Jul 2004; Jason Wever <weeve@gentoo.org> mod_php-4.3.7-r1.ebuild:
   Stable on sparc.
 
-  07 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> mod_php-4.3.7-r1.ebuild:
+  07 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> mod_php-4.3.7-r1.ebuild:
   Stable on alpha.
 
   06 Jul 2004; Michael Hanselmann <hansmi@gentoo.org> mod_php-4.3.7-r1.ebuild:
@@ -156,7 +159,7 @@
   04 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> mod_php-4.3.7-r1.ebuild:
   stable on x86.
 
-  04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> mod_php-4.3.6-r2.ebuild:
+  04 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> mod_php-4.3.6-r2.ebuild:
   Stable on alpha.
 
 *mod_php-4.3.7-r1 (27 Jun 2004)

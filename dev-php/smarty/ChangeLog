@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/smarty
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.22 2004/12/27 19:22:00 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/smarty/ChangeLog,v 1.23 2004/12/30 21:00:12 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   27 Dec 2004; Gustavo Zacarias <gustavoz@gentoo.org> smarty-2.6.5.ebuild:
   Stable on sparc
@@ -28,7 +31,7 @@
   01 Aug 2004; <twp@gentoo.org> +smarty-2.6.3.ebuild:
   Version bump. Bug # 55590.
 
-  04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> smarty-2.6.2.ebuild:
+  04 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> smarty-2.6.2.ebuild:
   Stable on alpha.
 
   18 Apr 2004; Jason Wever <weeve@gentoo.org> smarty-2.6.2.ebuild:

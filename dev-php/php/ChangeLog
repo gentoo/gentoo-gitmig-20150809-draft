@@ -1,6 +1,9 @@
 # ChangeLog for dev-php/php
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.137 2004/12/17 10:44:20 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php/ChangeLog,v 1.138 2004/12/30 20:53:51 ciaranm Exp $
+
+  30 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   17 Dec 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> php-4.3.10.ebuild:
   Stable on alpha, bug 74547.
@@ -46,7 +49,7 @@
   28 Sep 2004; Robin H. Johnson <robbat2@gentoo.org> php-4.3.9.ebuild:
   Stable on x86.
 
-  27 Sep 2004; Bryan Østergaard,,, <kloeri@gentoo.org> php-4.3.9.ebuild:
+  27 Sep 2004; Bryan Ã˜stergaard,,, <kloeri@gentoo.org> php-4.3.9.ebuild:
   Stable on alpha, bug 64223.
 
   27 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> php-4.3.9.ebuild:
@@ -99,7 +102,7 @@
   03 Aug 2004; <agriffis@gentoo.org> php-4.3.7-r1.ebuild, php-4.3.8.ebuild:
   stable on ia64 for bug 56295
 
-  15 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> php-4.3.8.ebuild:
+  15 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> php-4.3.8.ebuild:
   Stable on alpha, see bug #56985.
 
   14 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> php-4.3.8.ebuild:
@@ -134,7 +137,7 @@
   07 Jul 2004; Jason Wever <weeve@gentoo.org> php-4.3.7-r1.ebuild:
   Stable on sparc.
 
-  07 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> php-4.3.7-r1.ebuild:
+  07 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> php-4.3.7-r1.ebuild:
   Stable on alpha.
 
   06 Jul 2004; Michael Hanselmann <hansmi@gentoo.org> php-4.3.7-r1.ebuild:
@@ -143,7 +146,7 @@
   04 Jul 2004; Robin H. Johnson <robbat2@gentoo.org> php-4.3.7-r1.ebuild:
   stable on x86.
 
-  04 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> php-4.3.6-r1.ebuild:
+  04 Jul 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> php-4.3.6-r1.ebuild:
   Stable on alpha.
 
 *php-4.3.7-r1 (27 Jun 2004)
