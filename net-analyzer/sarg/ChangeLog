@@ -1,0 +1,7 @@
+# ChangeLog for net-analyzer/sarg
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+
+*sarg-1.2.2 (14 Nov 2002)
+
+  14 Nov 2002; Jared Hudson <jhhudso@gentoo.org> : Initial Import. Ebuild
+  submitted by Henti Smith <bain@reaper.org>. Bug #6923
