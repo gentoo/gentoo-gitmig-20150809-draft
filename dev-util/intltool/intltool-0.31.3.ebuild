@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/intltool-0.31.3.ebuild,v 1.2 2005/02/07 00:25:50 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/intltool/intltool-0.31.3.ebuild,v 1.3 2005/02/12 08:05:47 mrness Exp $
 
 inherit gnome.org
 
@@ -12,9 +12,8 @@ SLOT="0"
 KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE=""
 
-DEPEND=">=dev-lang/perl-5.6.0"
-RDEPEND="dev-perl/XML-Parser
-	${DEPEND}"
+DEPEND=">=dev-lang/perl-5.6.0
+	dev-perl/XML-Parser"
 
 src_install() {
 
