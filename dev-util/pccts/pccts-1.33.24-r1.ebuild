@@ -3,7 +3,7 @@
 # based on pccts-1.33.24.ebuild, written by:
 # Frédéric Brin <duckx@libertysurf.fr>, Jonas Berlin <jonas@berlin.vg>
 # Author: Peter Kadau <peter.kadau@web.de>
-# $HEADER$
+# $Header: /var/cvsroot/gentoo-x86/dev-util/pccts/pccts-1.33.24-r1.ebuild,v 1.2 2001/08/08 09:19:17 hallski Exp $
 
 A="pccts133mr24.zip"
 S=${WORKDIR}/pccts
@@ -21,7 +21,8 @@ src_unpack() {
 }
 
 src_compile() {
-	try make MAKE="make ${MAKEOPTS}" COPT="${CFLAGS}"
+        # Doesn't work with $CFLAGS
+        try emake COPT="-O2"
 }
 
 src_install() {
