@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.3.ebuild,v 1.1 2003/10/17 16:33:36 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.3.ebuild,v 1.2 2003/10/20 17:26:25 brad Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins
 
@@ -119,7 +119,7 @@ src_compile() {
 		--enable-xterm-updates \
 		--disable-toolkit-qt \
 		--disable-toolkit-xlib \
-		--enable-extensions=wallet \
+		--enable-extensions=wallet,spellcheck \
 		--enable-necko-protocols=http,file,jar,viewsource,res,data \
 		--enable-image-decoders=png,gif,jpeg"
 

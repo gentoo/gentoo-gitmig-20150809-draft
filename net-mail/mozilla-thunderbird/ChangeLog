@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/mozilla-thunderbird
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/ChangeLog,v 1.11 2003/10/17 16:33:36 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/ChangeLog,v 1.12 2003/10/20 17:26:25 brad Exp $
+
+  20 Oct 2003; Brad Laue <brad@gentoo.org> mozilla-thunderbird-0.3.ebuild:
+  Add spellcheck support
 
 *mozilla-thunderbird-0.3 (17 Oct 2003)
 
