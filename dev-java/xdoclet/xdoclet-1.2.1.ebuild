@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/xdoclet-1.2.1.ebuild,v 1.4 2004/10/16 08:58:37 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/xdoclet-1.2.1.ebuild,v 1.5 2004/10/16 23:10:06 axxo Exp $
+
+inherit java-pkg
 
 XJAVADOC_PV=1.0.3
 
@@ -48,7 +50,7 @@ src_compile() {
 }
 
 src_install() {
-	dojar target/lib/*.jar
+	java-pkg_dojar target/lib/*.jar
 	dodoc LICENSE.txt
 	cp -r target/docs target/generated-xdocs samples ${D}/usr/share/doc/${P}
 }

@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/libreadline-java
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/libreadline-java/ChangeLog,v 1.15 2004/10/16 17:28:58 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/libreadline-java/ChangeLog,v 1.16 2004/10/16 23:09:28 axxo Exp $
+
+  17 Oct 2004; Thomas Matthijs <axxo@gentoo.org>
+  libreadline-java-0.8.0-r1.ebuild:
+  dojar --> java-pkg_dojar
 
   16 Oct 2004; Thomas Matthijs <axxo@gentoo.org>
   libreadline-java-0.8.0-r1.ebuild:

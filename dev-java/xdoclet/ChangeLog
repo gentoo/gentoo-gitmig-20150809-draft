@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/xdoclet
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/ChangeLog,v 1.9 2004/10/16 08:58:37 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xdoclet/ChangeLog,v 1.10 2004/10/16 23:10:06 axxo Exp $
+
+  17 Oct 2004; Thomas Matthijs <axxo@gentoo.org> xdoclet-1.2.0_beta1.ebuild,
+  xdoclet-1.2.1.ebuild:
+  dojar --> java-pkg_dojar
 
   16 Oct 2004; Dylan Carlson <absinthe@gentoo.org>
   xdoclet-1.2.0_beta1.ebuild, xdoclet-1.2.1.ebuild:
