@@ -1,6 +1,10 @@
 # ChangeLog for net-ftp/proftpd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.66 2004/07/14 14:09:24 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/ChangeLog,v 1.67 2004/07/29 22:31:26 humpback Exp $
+
+  29 Jul 2004; Gustavo Felisberto <humpback@gentoo.org>;
+  -proftpd-1.2.10_rc1-r1.ebuild:
+  Removing the shaper module because it causes strange problems.
 
 *proftpd-1.2.10_rc3 (14 Jul 2004)
 
