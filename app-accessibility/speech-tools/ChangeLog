@@ -1,6 +1,12 @@
 # ChangeLog for app-accessibility/speech-tools
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.18 2005/01/06 01:00:40 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/speech-tools/ChangeLog,v 1.19 2005/02/10 07:14:45 eradicator Exp $
+
+*speech-tools-1.2.3-r2 (09 Feb 2005)
+
+  09 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +speech-tools-1.2.3-r2.ebuild:
+  Move things to more LSB-FHS friendly locations.
 
   05 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
   speech-tools-1.2.3-r1.ebuild:
