@@ -2,9 +2,10 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.12.90.0.1.ebuild,v 1.2 2002/03/21 19:31:59 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.12.90.0.1.ebuild,v 1.3 2002/03/24 21:36:22 azarah Exp $
 
-# NOTE to Maintainer:  it no longer use perl to build the manpages.
+# NOTE to Maintainer:  ChangeLog states that it no longer use perl to build
+#                      the manpages, but seems this is incorrect ....
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Tools necessary to build programs"
@@ -12,6 +13,8 @@ SRC_URI="http://ftp.kernel.org/pub/linux/devel/binutils/${P}.tar.bz2"
 
 DEPEND="virtual/glibc
 	nls? ( sys-devel/gettext )"
+
+[ -z "`use build`" ] && DEPEND="${DEPEND} sys-devel/perl"
 
 
 src_compile() {
@@ -44,6 +47,9 @@ src_compile() {
 
 	if [ -z "`use build`" ]
 	then
+		#nuke the manpages to recreate them (only use this if we have perl)
+		#uncomment next line if you want proper man pages.
+		#find . -name '*.1' -exec rm {} ';'
 		#make the info pages (makeinfo included with gcc is used)
 		make info || die
 	fi
@@ -87,6 +93,11 @@ src_install() {
 	cd ${S}
 	if [ -z "`use build`" ]
 	then
+		make prefix=${D}/usr \
+			mandir=${D}/usr/share/man \
+			infodir=${D}/usr/share/info \
+			install-info || die
+			
 		dodoc COPYING* README
 		docinto bfd
 		dodoc bfd/ChangeLog* bfd/COPYING bfd/README bfd/PORTING bfd/TODO
