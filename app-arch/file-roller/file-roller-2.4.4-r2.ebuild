@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.4.4-r2.ebuild,v 1.11 2004/06/24 21:30:14 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/file-roller-2.4.4-r2.ebuild,v 1.12 2004/06/29 19:54:19 agriffis Exp $
 
 inherit eutils gnome2
 
 DESCRIPTION="Archive manager for GNOME"
 HOMEPAGE="http://fileroller.sourceforge.net/"
-IUSE="${IUSE}"
+IUSE=""
 
 LICENSE="GPL-2"
 SLOT="0"
