@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.35 2004/01/12 18:30:19 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.36 2004/01/25 09:37:23 vapier Exp $
+
+  25 Jan 2004; Mike Frysinger <vapier@gentoo.org> :
+  Replace perl replacements with sed ones #39319.
 
   12 Jan 2004; <gustavoz@gentoo.org> autoconf-2.58.ebuild:
   stable on hppa, unbreaks kde
