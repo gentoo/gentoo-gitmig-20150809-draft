@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/icemc
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/icemc/ChangeLog,v 1.5 2003/07/01 11:56:56 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/icemc/ChangeLog,v 1.6 2003/07/08 13:49:19 phosphan Exp $
+
+*icemc-1.5 (08 Jul 2003)
+
+  08 Jul 2003; Patrick Kursawe <phosphan@gentoo.org> icemc-1.5.ebuild:
+  Version bump
 
 *icemc-1.4 (01 Jul 2003)
 
