@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Martin Schlemmer <azarah@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.4 2002/05/05 16:47:04 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/virtualx.eclass,v 1.5 2002/05/05 17:12:35 azarah Exp $
 # This eclass can be used for packages that needs a working X environment to build
 ECLASS=virtualx
 newdepend virtual/x11
@@ -13,20 +13,35 @@ virtualmake() {
 
 	#If $DISPLAY is not set, or xhost cannot connect to an X
 	#display, then do the Xvfb hack.
-	if [ -z "$DISPLAY" ] || ! /usr/X11R6/bin/xhost
+	if [ -z "$DISPLAY" ] || ! (/usr/X11R6/bin/xhost &>/dev/null)
 	then
 		export XAUTHORITY=
 		# The following is derived from Mandrake's hack to allow
 		# compiling without the X display
 
-		# Only start at :1, as the default display is usually :0,
-		# and Xvfb cannot start if X is already running. This
-		# is mainly to fix chroot issues where this wont detect
-		# a running X, as we dont have /tmp mounted (--bind) in
-		# the chroot.  (Azarah - 5 May 2002)
-		local i=1
-		XDISPLAY=$(i=1; while [ -f /tmp/.X${i}-lock ] ; do i=$((${i}+1));done; echo ${i})
+		echo ">>> Scanning for a open DISPLAY to start Xvfb..."
+		
+		local i=0
+		XDISPLAY=$(i=0; while [ -f /tmp/.X${i}-lock ] ; do i=$((${i}+1));done; echo ${i})
+		
+		# If we are in a chrooted environment, and there is already a
+		# X server started outside of the chroot, Xvfb will fail to start
+		# on the same display (most cases this is :0 ), so make sure
+		# Xvfb is started, else bump the display number
+		#
+		# Azarah - 5 May 2002
+		#
 		/usr/X11R6/bin/Xvfb :${XDISPLAY} -screen 0 800x600x32 &>/dev/null &
+		sleep 2
+		
+		while [ ! -f /tmp/.X${XDISPLAY}-lock ]
+		do
+			XDISPLAY=$((${XDISPLAY}+1))
+			/usr/X11R6/bin/Xvfb :${XDISPLAY} -screen 0 800x600x32 &>/dev/null &
+			sleep 2
+		done
+
+		echo ">>> Starting Xvfb on \$DISPLAY=${XDISPLAY} ..."
 		
 		export DISPLAY=:${XDISPLAY}
 		#Do not break on error, but setup $retval, as we need
