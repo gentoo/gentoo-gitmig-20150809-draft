@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.0_beta9.ebuild,v 1.1 2003/10/30 17:10:51 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/gentoo-dev-sources-2.6.0_beta9.ebuild,v 1.2 2003/11/02 18:15:34 brad_mssw Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #Original Kernel Version before Patches
@@ -22,7 +22,7 @@ inherit kernel
 DESCRIPTION="Full sources for the development branch of the Linux kernel (2.6)"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${OKV}.tar.bz2
-	 mirror://gentoo/distfiles/genpatches-2.6-${GPV}.tar.bz2"
+	 mirror://gentoo/genpatches-2.6-${GPV}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="${KV}"
 KEYWORDS="-* x86 amd64 ~mips ~hppa ~sparc ~alpha"
