@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/reiserfsprogs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.12 2004/02/23 15:43:31 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/reiserfsprogs/ChangeLog,v 1.13 2004/04/13 22:51:49 kumba Exp $
+
+  13 Apr 2004; Joshua Kinard <kumba@gentoo.org> reiserfsprogs-3.6.13.ebuild:
+  Marked stable on mips.
 
 *reiserfsprogs-3.6.13 (23 Feb 2004)
 
