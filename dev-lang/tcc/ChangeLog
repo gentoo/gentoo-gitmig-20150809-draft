@@ -1,6 +1,13 @@
 # ChangeLog for dev-lang/tcc
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/ChangeLog,v 1.6 2003/02/12 05:59:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcc/ChangeLog,v 1.7 2003/06/06 05:34:36 george Exp $
+
+*tcc-0.9.19 (05 May 2003)
+
+  05 May 2003; George Shapovalov <george@gentoo.org> tcc-0.9.19.ebuild, files/digest-tcc-0.9.19 :
+  new version (#21363)
+  now uses autoconf-based install (albet there were some problems, see the bug for details)
+  thanks to Thomas Eckert <eckert.thomas@gmx.net> for update
 
 *tcc-0.9.16 (06 Jan 2003)
 
