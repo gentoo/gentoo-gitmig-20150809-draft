@@ -129,17 +129,7 @@ dyn_digest() {
 	    echo "MD5 $mymd5 $x" >> ${FILESDIR}/.digest-${PF}
 	fi
     done
-
-    #if we actually have a changed digest file, update it
-    #otherwise we skip it so we can avoid having lots of updated digests
-    #on CVS
-
-    if [ -n "`/usr/bin/cmp ${FILESDIR}/.digest-${PF} ${FILESDIR}/digest-${PF}`" ]
-    then
-    	mv ${FILESDIR}/.digest-${PF} ${FILESDIR}/digest-${PF}
-    else
-        rm ${FILESDIR}/.digest-${PF}
-    fi
+    mv ${FILESDIR}/.digest-${PF} ${FILESDIR}/digest-${PF}
     if [ -n "${MAINTAINER}" ]
     then
 	echo ">>> adding digest-${PF} to CVS (just in case it isn't there)"
@@ -202,22 +192,6 @@ digest_check() {
     return 0
 }
 
-dyn_touch() {
-	echo ">>> Touching ${PF} archives..."
-	local y
-	for y in ${A}
-	do
-		if [ -e ${DISTDIR}/${y} ]
-		then
-			touch ${DISTDIR}/${y}
-		fi
-		if [ -e ${FILESDIR}/digest-${PF} ]
-		then
-			touch ${FILESDIR}/digest-${PF}
-		fi
-	done
-	echo
-}
 
 dyn_fetch() {
 	local y
@@ -989,7 +963,7 @@ dyn_install() {
     mkdir ${BUILDDIR}/image
     cd ${S}
     echo
-    echo ">>> Install ${PF} into ${D}"
+    echo ">>> Install ${PF} into ${D} category ${CATEGORY}"
     src_install
     install -d -m0700 ${D}/var/db/pkg/${CATEGORY}/${PF}
     cp ${STARTDIR}/${EBUILD} ${D}/var/db/pkg/${CATEGORY}/${PF}
@@ -1030,6 +1004,7 @@ dyn_unmerge() {
     fi
     trap SIGINT_SIGQUIT
 }
+
 
 dyn_spec() {
 
@@ -1100,10 +1075,6 @@ dyn_help() {
 	echo "                (auto-fetch/unpack/compile if needed)"
 	echo "  unmerge     : remove package from live filesystem"
 	echo "  clean       : clean up all source and temporary files"
-	echo "  install     : install sources to temporary directory"
-	echo "              : (for testing purposes only)"
-	echo "  touch       : update all source archives' and digest mtime"
-	echo "                (for distfiles maintenance)"
 	echo
 	echo "The following settings will be used for the ebuild process:"
 	echo
@@ -1156,10 +1127,10 @@ src_menu() {
 	    dyn_unpack
 	    dyn_compile
             ;;
-	prerm|postrm|preinst|postinst)
+	prerm|postrm|preinst|postinst|config)
 	    pkg_${MYfoo}
 	    ;;
-	help|clean|fetch|digest|pkginfo|pkgloc|unmerge|install|touch)
+	help|clean|fetch|digest|pkginfo|pkgloc|unmerge|install)
 	    dyn_${MYfoo}
 	    ;;
 	package)
@@ -1223,7 +1194,7 @@ fi
 setp() {
 	if [ $# -ne 3 ]
 	then
-		echo '!!!' ${EBUILDPREFIX} is not a valid package name.  Exiting.
+		echo '!!!' ${P} is not a valid package name.  Exiting.
 		exit 1
 	fi
 	if [ "${3}" = "0" ]
@@ -1239,7 +1210,7 @@ setp() {
 }
 
 export STARTDIR=`pwd`
-export CATEGORY=`/usr/bin/basename ${STARTDIR}/..`
+
 if [ "${1:0:1}" = "/" ]
 then
 	export O=`dirname ${1}`
@@ -1247,12 +1218,14 @@ else
 	tmpfoo=`dirname ${1}`
 	export O=`( cd ${STARTDIR}/${tmpfoo}; pwd )`
 fi
+tmpfoo=`(cd ${O}/..;pwd)`
+export CATEGORY=`/usr/bin/basename $tmpfoo`
 export EBUILD=${1}
 export PEBUILD=${O}/files/${PLATFORM}.ebuild
 export FILESDIR=${O}/files
 
-EBUILDPREFIX=`/usr/bin/basename ${1%.*}`
-setp `/usr/sbin/pkgname ${EBUILDPREFIX}`
+tmpfoo=`/usr/bin/basename ${1%.*}`
+setp `/usr/sbin/pkgname ${tmpfoo}`
 
 source ${1}
 if [ -e ${PEBUILD} ]
