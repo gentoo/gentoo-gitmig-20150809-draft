@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# /space/gentoo/cvsroot/gentoo-x86/sys-apps/openmosix-user/openmosix-user-0.1.3.ebuild,v 1.4 2002/05/27 17:27:39 drobbins Exp
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/openmosix-user/openmosix-user-0.2.0.ebuild,v 1.3 2002/07/21 20:34:45 gerk Exp $
 
 S=${WORKDIR}/openMosixUserland-${PV}
 DESCRIPTION="User-land utilities for openMosix process migration (clustering) software"
@@ -14,7 +14,7 @@ RDEPEND="${DEPEND}
 	sys-devel/perl"
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 -ppc"
 
 src_unpack() {
 	unpack ${A}
