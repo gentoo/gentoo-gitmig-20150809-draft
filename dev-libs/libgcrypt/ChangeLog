@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libgcrypt
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.19 2003/12/16 21:25:03 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libgcrypt/ChangeLog,v 1.20 2004/01/01 16:22:26 hanno Exp $
+
+*libgcrypt-1.1.91 (01 Jan 2004)
+
+  01 Jan 2004; Hanno Boeck <hanno@gentoo.org> libgcrypt-1.1.91.ebuild:
+  Version bump.
 
   16 Dec 2003; Guy Martin <gmsoft@gentoo.org> libgcrypt-1.1.12.ebuild:
   Marked stable on hppa.
