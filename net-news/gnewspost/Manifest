@@ -1,4 +1,5 @@
-MD5 bdd02b32c6f2a9f5478c386b7b641014 ChangeLog 977
-MD5 1e97527e5d3c16cbf4d99d323a4cb8e7 gnewspost-0.6.ebuild 1060
+MD5 487ada22d4d94545f7b4a1fb957d3b8f ChangeLog 1063
+MD5 0136094bf27d4ccaff344f35e5724c64 gnewspost-0.6.ebuild 1059
+MD5 d4764f5c17f5e0b416f7ddf271c77d71 metadata.xml 161
 MD5 3506642e9faf221b0d2d3e9a3713479f files/digest-gnewspost-0.6 65
 MD5 6607318912624e017104b28f8525b9cc files/session.c-fix_errno.patch.gz 590
