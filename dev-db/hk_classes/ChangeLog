@@ -1,6 +1,10 @@
 # ChangeLog for dev-db/hk_classes
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.5 2003/06/17 12:58:30 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/hk_classes/ChangeLog,v 1.6 2003/07/20 14:53:15 caleb Exp $
+
+  20 Jul 2003; Caleb Tennis <caleb@gentoo.org> hk_classes.0.6.ebuild:
+  Added a few lines by Peter Ruskin to include documentation in ebuild. 
+  Closes bug #24335.
 
   17 Jun 2003; Caleb Tennis <caleb@gentoo.org> hk_classes.0.6.ebuild:
   Fixed a problem with the DEPEND string.  Closes bug #22472.
