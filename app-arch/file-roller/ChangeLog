@@ -1,6 +1,10 @@
 # ChangeLog for app-arch/file-roller
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.57 2004/02/06 02:24:59 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.58 2004/02/06 15:18:02 darkspecter Exp $
+
+  06 Feb 2004; Bartosch Pixa <darkspecter@gentoo.org>
+  file-roller-2.4.2-r1.ebuild:
+  set ppc in keywords
 
 *file-roller-2.4.4-r1 (06 Feb 2004)
 
