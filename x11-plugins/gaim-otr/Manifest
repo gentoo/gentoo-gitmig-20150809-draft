@@ -1,15 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 66b5b37566145ac3166a3c7e61c64f8e gaim-otr-1.0.3.ebuild 880
-MD5 ced19657ca6b59ce15f5539bdd087cfe ChangeLog 882
+MD5 6849d1e60420809356fa2cb570987ad7 gaim-otr-2.0.0.ebuild 781
 MD5 772dce3497d3125e130d268b63273b24 metadata.xml 226
-MD5 25b670ffc82acacbee5777a73c30c608 files/digest-gaim-otr-1.0.3 65
+MD5 2e9eb24129e85a7d1660c455a8fb2b80 ChangeLog 998
+MD5 66b5b37566145ac3166a3c7e61c64f8e gaim-otr-1.0.3.ebuild 880
+MD5 972e2f6cda3a9c79b1de8cbd95549597 files/digest-gaim-otr-2.0.0 65
 MD5 f35f82a092a303af1e9780ec9fd495fa files/gaim-otr-1.0.3-fPIC.patch 364
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCCfD3I1lqEGTUzyQRAgq1AKDExEgB5eD7BoBbbQ+QqfVGPRUU2ACgodun
-ILy9B3gLOQwxltTIDRkvrHs=
-=M+Jx
------END PGP SIGNATURE-----
+MD5 25b670ffc82acacbee5777a73c30c608 files/digest-gaim-otr-1.0.3 65
