@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.11 2004/08/24 01:12:06 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/db.eclass,v 1.12 2004/10/10 20:12:19 ka0ttic Exp $
 # This is a common location for functions used in the sys-libs/db ebuilds
 
 ECLASS=db
@@ -18,7 +18,7 @@ db_fix_so () {
 	# now rebuild all the correct ones
 	for ext in so a; do
 		for name in libdb libdb_cxx libdb_tcl libdb_java; do
-			target=`find -type f -maxdepth 1 -name "${name}-*.${ext}" |sort -g |tail -n 1`
+			target=`find . -type f -maxdepth 1 -name "${name}-*.${ext}" |sort -g |tail -n 1`
 			[ -n "${target}" ] && ln -sf ${target//.\//} ${name}.${ext}
 		done;
 	done;
@@ -40,7 +40,7 @@ db_fix_so () {
 	# do the same for headers now
 	# but since there are only two of them, just overwrite them
 	cd ${ROOT}/usr/include
-	target=`find -type d -maxdepth 1 -name 'db[0-9]*' | sort  -g |cut -d/ -f2- | tail -n1`
+	target=`find . -type d -maxdepth 1 -name 'db[0-9]*' | sort  -g |cut -d/ -f2- | tail -n1`
 	if [ -n "${target}" ] && [ -e "${target}/db.h" ]; then
 		ln -sf ${target}/db.h .
 		ln -sf ${target}/db_185.h .
