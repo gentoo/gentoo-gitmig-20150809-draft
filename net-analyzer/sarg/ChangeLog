@@ -1,6 +1,10 @@
 # ChangeLog for net-analyzer/sarg
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
 
+  10 Jul 2004; Eldad Zack <eldad@gentoo.org> sarg-1.2.2.ebuild,
+  -sarg-1.4.1-r1.ebuild, sarg-1.4.1-r2.ebuild, sarg-1.4.1.ebuild:
+  Tidy, x86 stable
+
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> sarg-1.4.1-r1.ebuild,
   sarg-1.4.1-r2.ebuild:
   Add inherit eutils

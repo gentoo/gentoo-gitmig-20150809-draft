@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: 
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sarg/sarg-1.4.1-r2.ebuild,v 1.4 2004/07/10 11:35:06 eldad Exp $
 
 inherit eutils
 
@@ -10,7 +10,8 @@ SRC_URI="http://web.onda.com.br/orso/${P}.tar.gz http://web.onda.com.br/orso/pat
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
+IUSE=""
 
 DEPEND=""
 RDEPEND=">=net-www/squid-2.5.1"
