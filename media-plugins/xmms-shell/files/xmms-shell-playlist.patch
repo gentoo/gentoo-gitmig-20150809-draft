@@ -1,0 +1,84 @@
+diff -urP xmms-shell-0.99.3.orig/include/playlist.h xmms-shell-0.99.3/include/playlist.h
+--- xmms-shell-0.99.3.orig/include/playlist.h	2002-10-22 19:46:17.000000000 -0400
++++ xmms-shell-0.99.3/include/playlist.h	2004-03-16 14:20:34.000000000 -0500
+@@ -19,7 +19,7 @@
+     int length(void) const;
+     int position(void) const;
+     void set_position(int pos) const;
+-    void check_position(int pos, int min_value = 1) const;
++    bool check_position(int pos, int min_value = 1) const;
+     string current_title(void) const;
+     string title(int pos) const;
+     string current_filename(void) const;
+diff -urP xmms-shell-0.99.3.orig/src/playlist.cc xmms-shell-0.99.3/src/playlist.cc
+--- xmms-shell-0.99.3.orig/src/playlist.cc	2002-10-22 19:49:10.000000000 -0400
++++ xmms-shell-0.99.3/src/playlist.cc	2004-03-16 14:18:19.000000000 -0500
+@@ -490,8 +490,9 @@
+ 
+ void Playlist::set_position(int pos) const
+ {
+-    check_position(pos);
+-    xmms_remote_set_playlist_pos(session.id(), pos - 1);
++    if (check_position(pos)) {
++        xmms_remote_set_playlist_pos(session.id(), pos - 1);
++    }
+ }
+ 
+ int Playlist::length(void) const
+@@ -502,11 +503,12 @@
+ 
+ string Playlist::title(int pos) const
+ {
+-    check_position(pos);
++    if (! check_position(pos)) {
++        return "";
++    }
+ 
+     char *c_str = xmms_remote_get_playlist_title(session.id(), pos - 1);
+     string str(c_str);
+-
+     g_free(c_str);
+     return str;
+ }
+@@ -518,11 +520,12 @@
+ 
+ string Playlist::filename(int pos) const
+ {
+-    check_position(pos);
++    if (! check_position(pos)) {
++        return "";
++    }
+ 
+     char *c_str = xmms_remote_get_playlist_file(session.id(), pos - 1);
+     string str(c_str);
+-
+     g_free(c_str);
+     return str;
+ }
+@@ -546,11 +549,13 @@
+     return position();
+ }
+ 
+-void Playlist::check_position(int pos, int min_value) const
++bool Playlist::check_position(int pos, int min_value) const
+ {
+     if(pos < min_value || pos > length()) {
+-        throw PlaylistPositionOutOfBoundsException(*this, pos, min_value);
++        //throw PlaylistPositionOutOfBoundsException(*this, pos, min_value);
++        return FALSE;
+     }
++    return TRUE;
+ }
+ 
+ PlaylistPositionOutOfBoundsException::PlaylistPositionOutOfBoundsException(const Playlist& playlist, int _position, int min_value)
+@@ -611,6 +616,10 @@
+     int n = 0;
+ 
+     session.ensure_running();
++    if ((! check_position(pos1)) ||
++        (! check_position(pos2, pos1))) {
++        return 0;
++    }
+     check_position(pos1);
+     check_position(pos2, pos1);
+     while(pos2 >= pos1) {

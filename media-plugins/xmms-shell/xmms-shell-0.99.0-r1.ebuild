@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-shell/xmms-shell-0.99.0-r1.ebuild,v 1.6 2003/04/25 14:15:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-shell/xmms-shell-0.99.0-r1.ebuild,v 1.7 2004/03/16 20:08:07 kanaka Exp $
 
 DESCRIPTION="simple utility to control XMMS externally"
 SRC_URI="http://download.sourceforge.net/xmms-shell/${P}.tar.gz"
