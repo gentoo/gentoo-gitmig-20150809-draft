@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.8.ebuild,v 1.8 2004/11/07 21:49:57 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier-imap/courier-imap-3.0.8.ebuild,v 1.9 2004/11/16 09:37:01 robbat2 Exp $
 
 inherit eutils gnuconfig
 
@@ -312,4 +312,9 @@ pkg_postinst() {
 	einfo "Make sure to change /etc/courier-imap/authdaemond.conf if"
 	einfo "you would like to use something other than the"
 	einfo "authdaemond.plain authenticator"
+}
+
+src_test() {
+	ewarn "make check not supported by package due to"
+	ewarn "--enable-workarounds-for-imap-client-bugs option."
 }
