@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/kdevelop
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.23 2003/02/22 19:13:46 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/kdevelop/ChangeLog,v 1.24 2003/03/13 10:24:51 doctomoe Exp $
+
+  13 Mar 2003; Olivier Reisch <doctomoe@gentoo.org> kdevelop-2.1.5.ebuild:
+  Marked ppc stable
 
 *kdevelop-2.1.5 (04 Feb 2003)
 
