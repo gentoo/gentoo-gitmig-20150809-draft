@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r9.ebuild,v 1.5 2004/06/28 15:59:01 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/at/at-3.1.8-r9.ebuild,v 1.6 2004/08/24 02:48:06 swegener Exp $
 
 DESCRIPTION="Queues jobs for later execution"
 HOMEPAGE="ftp://jurix.jura.uni-sb.de/pub/jurix/source/chroot/appl/at/"
-SRC_URI="http://ftp.debian.org/debian/pool/main/a/at/at_${PV}-11.tar.gz"
+SRC_URI="mirror://debian/pool/main/a/at/at_${PV}-11.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/anacron
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/anacron/ChangeLog,v 1.6 2004/06/24 21:57:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/anacron/ChangeLog,v 1.7 2004/08/24 02:43:36 swegener Exp $
+
+  24 Aug 2004; Sven Wegener <swegener@gentoo.org> anacron-2.3.ebuild:
+  Changed SRC_URI to use mirror:// syntax.
 
   14 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> anacron-2.3.ebuild:
   inherit eutils for epatch; IUSE; tidy

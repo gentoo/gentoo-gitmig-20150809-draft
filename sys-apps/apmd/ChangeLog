@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/apmd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/ChangeLog,v 1.18 2004/07/29 02:05:02 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/ChangeLog,v 1.19 2004/08/24 02:46:08 swegener Exp $
+
+  24 Aug 2004; Sven Wegener <swegener@gentoo.org> apmd-3.2.0.ebuild:
+  Changed SRC_URI to use mirror:// syntax.
 
   28 Jul 2004; Tom Gall <tgall@gentoo.org> apmd-3.2.1_p4.ebuild:
   stable on ppc64, bug #58191
