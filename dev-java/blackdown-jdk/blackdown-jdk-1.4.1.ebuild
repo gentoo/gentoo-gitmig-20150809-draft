@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1.ebuild,v 1.19 2004/07/14 01:44:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1.ebuild,v 1.20 2004/09/21 08:14:39 axxo Exp $
 
 
 inherit java nsplugins
@@ -11,13 +11,9 @@ S="${WORKDIR}/j2sdk${PV}"
 DESCRIPTION="Blackdown Java Development Kit ${PV}"
 HOMEPAGE="http://www.blackdown.org"
 J_URI="ftp://ftp.gwdg.de/pub/languages/java/linux/JDK-${PV}"
-if [ "`gcc -dumpversion | cut -f1 -d.`" -eq "3" -a "`gcc -dumpversion | cut -f2 -d.`" -ge "2" ] ; then
-	SRC_URI="x86? ( ${J_URI}/i386/${JREV}/j2sdk-${PV}-${JREV}-linux-i586-gcc3.2.bin )
-		amd64? ( ${J_URI}/i386/${JREV}/j2sdk-${PV}-${JREV}-linux-i586-gcc3.2.bin )"
-else
-	SRC_URI="x86? ( ${J_URI}/i386/${JREV}/j2sdk-${PV}-${JREV}-linux-i586-gcc2.95.bin )"
-fi
-SRC_URI="${SRC_URI} sparc? ( ${J_URI}/sparc/${JREV}/j2sdk-${PV}-${JREV}-linux-sparc-gcc3.2.bin )"
+SRC_URI="x86? ( ${J_URI}/i386/${JREV}/j2sdk-${PV}-${JREV}-linux-i586-gcc3.2.bin )
+		amd64? ( ${J_URI}/i386/${JREV}/j2sdk-${PV}-${JREV}-linux-i586-gcc3.2.bin )
+		sparc? ( ${J_URI}/sparc/${JREV}/j2sdk-${PV}-${JREV}-linux-sparc-gcc3.2.bin )"
 
 # this is needed for proper operating under a PaX kernel without activated grsecurity acl
 CHPAX_CONSERVATIVE_FLAGS="pemsv"

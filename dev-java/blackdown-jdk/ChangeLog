@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/blackdown-jdk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.54 2004/07/06 22:27:39 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/ChangeLog,v 1.55 2004/09/21 08:14:39 axxo Exp $
+
+  21 Sep 2004; Thomas Matthijs <axxo@gentoo.org> blackdown-jdk-1.4.1.ebuild:
+  removed the gcc-2.9, since the test was done in global scope and therefor the
+  cache contains the result of the server and can be wrong
 
 *blackdown-jdk-1.4.2_rc1-r1 07 Jul 2004
 
