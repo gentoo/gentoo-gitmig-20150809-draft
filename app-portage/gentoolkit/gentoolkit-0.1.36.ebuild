@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.1.36.ebuild,v 1.1 2003/11/18 17:44:19 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/gentoolkit/gentoolkit-0.1.36.ebuild,v 1.2 2003/11/18 19:19:44 mr_bones_ Exp $
 
 DESCRIPTION="Collection of unofficial administration scripts for Gentoo"
 HOMEPAGE="http://www.gentoo.org/"
@@ -41,7 +41,7 @@ src_install() {
 	dobin ${FILESDIR}/scripts/revdep-rebuild
 	doman ${FILESDIR}/scripts/revdep-rebuild.1
 	fperms 0750 /usr/bin/revdep-rebuild
-	
+
 	dobin ${FILESDIR}/scripts/etcat
 	doman ${FILESDIR}/scripts/etcat.1
 
@@ -49,7 +49,7 @@ src_install() {
 	doman ${FILESDIR}/scripts/ewhich.1
 
 	dobin ${FILESDIR}/scripts/pkg-size
-	dobin ${FILESDIR}/scripts/pkg-size.1	
+	dobin ${FILESDIR}/scripts/pkg-size.1
 # 2002-08-06: karltk
 # This utility currently does more harm than good. I'm not including it
 # until it has been fixed properly. See #5777 in particular.
