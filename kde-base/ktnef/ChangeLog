@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/ktnef
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/ktnef/ChangeLog,v 1.2 2005/02/05 11:39:24 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/ktnef/ChangeLog,v 1.3 2005/02/09 21:59:53 motaboy Exp $
+
+  09 Feb 2005; Simone Gotti <motaboy@gentoo.org> ktnef-3.4.0_beta2.ebuild:
+  Added dependency on kde-base/libkdepim. Fixes bug #81407.
 
 *ktnef-3.4.0_beta2 (05 Feb 2005)
 
