@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.296 2004/07/29 08:46:01 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.297 2004/08/03 15:35:02 tgall Exp $
+
+  03 Aug 2004; Tom Gall <tgall@gentoo.org> gcc-3.4.1-r1.ebuild:
+  stable on ppc64
 
   29 Jul 2004; Alexander Gabert <pappy@gentoo.org> gcc-3.3.4-r1.ebuild:
   adding hardened dependency for sparc, still not keyworded, but yet to come

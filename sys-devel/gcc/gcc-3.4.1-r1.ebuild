@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r1.ebuild,v 1.5 2004/07/27 03:19:05 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.1-r1.ebuild,v 1.6 2004/08/03 15:35:02 tgall Exp $
 
 IUSE="static nls bootstrap build multilib gcj gtk f77 objc hardened uclibc n32 n64"
 
@@ -10,7 +10,7 @@ DESCRIPTION="The GNU Compiler Collection.  Includes C/C++, java compilers, pie a
 HOMEPAGE="http://www.gnu.org/software/gcc/gcc.html"
 LICENSE="GPL-2 LGPL-2.1"
 
-KEYWORDS="-*"
+KEYWORDS="-* ppc64"
 #KEYWORDS="-* ~amd64 ~mips ~ppc64"
 
 # we need a proper glibc version for the Scrt1.o provided to the pie-ssp specs
