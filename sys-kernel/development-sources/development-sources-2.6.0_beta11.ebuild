@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.0_beta11.ebuild,v 1.3 2003/12/03 15:36:52 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.0_beta11.ebuild,v 1.4 2003/12/10 20:40:35 vapier Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #Original Kernel Version before Patches
@@ -26,7 +26,7 @@ DESCRIPTION="Full sources for the Development Branch of the Linux kernel"
 [ ! ${GPV} == 0 ] && GPATCH_URI="mirror://gentoo/distfiles/genpatches-2.6-${GPV}.tar.bz2"
 [ -z ${KV/*-bk*/} ] && PATCH_URI="http://www.kernel.org/pub/linux/kernel/v2.6/snapshots/patch-${KV}.bz2"
 
-HPPA_PATCH=pa0
+HPPA_PATCH=pa2
 PATCH_URI="${PATCH_URI} hppa? ( http://cvs.parisc-linux.org/download/linux-2.6/patch-${OKV}-${HPPA_PATCH}.gz )"
 
 SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${OKV}.tar.bz2 ${PATCH_URI} ${GPATCH_URI}"
