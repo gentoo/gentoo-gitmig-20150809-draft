@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-midi/xmms-midi-0.03.ebuild,v 1.13 2004/09/15 19:27:22 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-midi/xmms-midi-0.03.ebuild,v 1.14 2004/10/07 03:19:45 eradicator Exp $
 
 IUSE=""
 
@@ -20,13 +20,13 @@ DEPEND="media-sound/xmms
 src_compile() {
 	gnuconfig_update
 	econf \
-		--prefix=/usr/lib || die "econf failed"
+		--prefix=/usr/$(get_libdir) || die "econf failed"
 		--with-xmms-prefix=/usr/include/xmms
 	emake || die
 }
 
 src_install() {
-	make DESTDIR=${D} libdir=/usr/lib/xmms/Input install || die
+	make DESTDIR=${D} libdir=`xmms-config --input-plugin-dir` install || die
 	dodoc AUTHORS COPYING NEWS README
 }
 

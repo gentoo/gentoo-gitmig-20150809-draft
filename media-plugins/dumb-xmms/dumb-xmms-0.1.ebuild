@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/dumb-xmms/dumb-xmms-0.1.ebuild,v 1.6 2004/09/01 17:33:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/dumb-xmms/dumb-xmms-0.1.ebuild,v 1.7 2004/10/07 03:14:24 eradicator Exp $
 
 IUSE=""
 
@@ -31,8 +31,8 @@ src_compile() {
 }
 
 src_install() {
-	dodir /usr/lib/xmms/Input
-	make INSTALL_DIR=${D}/usr/lib/xmms/Input install || die
+	dodir `xmms-config --input-plugin-dir`
+	make INSTALL_DIR=${D}`xmms-config --input-plugin-dir` install || die
 	einfo 'Open XMMS, and go to Options -> Preferences -> Audio I/O plugins.'
 	einfo 'If "MikMod Player" is listed under "Input Plugins", click on it'
 	einfo 'and uncheck "Enable Plugin". Do the same for any other plugins'

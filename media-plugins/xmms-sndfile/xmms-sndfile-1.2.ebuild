@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-sndfile/xmms-sndfile-1.2.ebuild,v 1.5 2004/09/15 19:31:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-sndfile/xmms-sndfile-1.2.ebuild,v 1.6 2004/10/07 03:21:18 eradicator Exp $
 
 MY_PN=${PN/-/_}
 MY_P=${MY_PN}-${PV}
@@ -19,6 +19,6 @@ DEPEND="media-libs/libsndfile
 	media-sound/xmms"
 
 src_install() {
-	make DESTDIR=${D} libdir=/usr/lib/xmms/Input install || die
+	make DESTDIR=${D} libdir=`xmms-config --input-plugin-dir` install || die
 	dodoc AUTHORS NEWS README ChangeLog TODO
 }

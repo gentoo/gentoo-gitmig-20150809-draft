@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-shn/xmms-shn-2.4.0.ebuild,v 1.2 2004/09/03 08:59:38 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-shn/xmms-shn-2.4.0.ebuild,v 1.3 2004/10/07 03:20:32 eradicator Exp $
 
 IUSE=""
 
@@ -16,6 +16,6 @@ KEYWORDS="x86 ~ppc -sparc ~alpha ~hppa ~mips amd64"
 DEPEND="media-sound/xmms"
 
 src_install() {
-	make DESTDIR=${D} libdir=/usr/lib/xmms/Input install || die
+	make DESTDIR=${D} libdir=`xmms-config --input-plugin-dir` install || die
 	dodoc AUTHORS COPYING NEWS README
 }

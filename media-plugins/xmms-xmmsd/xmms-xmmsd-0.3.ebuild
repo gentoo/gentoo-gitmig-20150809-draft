@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-xmmsd/xmms-xmmsd-0.3.ebuild,v 1.1 2004/07/26 07:51:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-xmmsd/xmms-xmmsd-0.3.ebuild,v 1.2 2004/10/07 03:22:48 eradicator Exp $
 
 IUSE=""
 
@@ -26,7 +26,7 @@ src_compile() {
 }
 
 src_install() {
-	einstall XMMS_GENERAL_PLUGIN_DIR=${D}/usr/lib/xmms/General || die
+	einstall XMMS_GENERAL_PLUGIN_DIR=${D}`xmms-config --general-plugin-dir` || die
 
 	dodoc AUTHORS COPYING ChangeLog HACKING INSTALL NEWS \
 		README README.libtaglist THANKS TODO
