@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/acid/acid-0.9.6_beta23.ebuild,v 1.7 2004/10/25 17:48:46 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/acid/acid-0.9.6_beta23.ebuild,v 1.8 2004/11/04 12:33:13 eldad Exp $
 
-inherit webapp
+inherit webapp versionator eutils
 
 MY_P=${P/_beta/b}
 DESCRIPTION="Snort ACID - Analysis Console for Intrusion Databases"
@@ -35,13 +35,19 @@ check_useflag() {
 
 	eerror "${my_pkg} was compiled without ${my_flag}. Please re-emerge it with USE=${my_flag}"
 	die "check_useflag failed"
-
 }
 
 pkg_setup() {
 	webapp_pkg_setup
 
 	check_useflag dev-php/mod_php gd
+
+	# If mod_php used is >= 5.0.0, it has to have session useflag enabled.
+	local ver_modphp=$(best_version mod_php)
+	ver_modphp=${ver_modphp/dev-php\/mod_php-/}
+	if [[ $(get_major_version ${ver_modphp}) -ge 5 ]]; then
+		check_useflag dev-php/mod_php session
+	fi
 }
 
 src_compile () {
@@ -52,6 +58,7 @@ src_install () {
 	webapp_src_preinst
 
 	sed -i -e '12s:^$DBlib_path =.*:$DBlib_path = "/usr/lib/php/adodb";:' acid_conf.php
+	sed -i -e '67s/($version\[0\] >= 4)/($version[0] >= 5) || &/' acid_db_common.php
 
 	insinto ${MY_HTDOCSDIR}
 	doins *
