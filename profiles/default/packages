@@ -119,3 +119,4 @@
 *<sys-apps/isapnptools-1.23-r6
 *<sys-libs/gpm-1.19.3-r4 
 <app-admin/mon-0.38.20-r6
+<app-admin/syslog-ng-1.4.12-r6
