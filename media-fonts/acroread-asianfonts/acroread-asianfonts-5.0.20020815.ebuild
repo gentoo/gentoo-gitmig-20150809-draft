@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/acroread-asianfonts-5.0.20020815.ebuild,v 1.2 2005/03/28 15:40:00 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/acroread-asianfonts-5.0.20020815.ebuild,v 1.3 2005/03/29 00:34:23 usata Exp $
 
 BASE_URI="ftp://ftp.adobe.com/pub/adobe/acrobatreader/unix/5.x/"
 
@@ -26,7 +26,7 @@ pkg_setup() {
 	einfo "Traditional Chinese font packs. Available LINGUAS"
 	einfo "are: zh_CN, zh_TW, ja and ko."
 	einfo
-	if ! useq linguas_zh_CN && ! useq linguas_zh_TW && ! useq linugas_ja && ! useq linguas_ko ; then
+	if ! useq linguas_zh_CN && ! useq linguas_zh_TW && ! useq linguas_ja && ! useq linguas_ko ; then
 		die "You need to set LINGUAS variable to emerge ${PN}."
 	fi
 }

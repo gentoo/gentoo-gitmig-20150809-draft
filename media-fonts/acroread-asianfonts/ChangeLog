@@ -1,6 +1,11 @@
 # ChangeLog for media-fonts/acroread-asianfonts
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/ChangeLog,v 1.9 2005/03/28 15:40:00 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/acroread-asianfonts/ChangeLog,v 1.10 2005/03/29 00:34:23 usata Exp $
+
+  29 Mar 2005; Mamoru KOMACHI <usata@gentoo.org>
+  acroread-asianfonts-5.0.20020815.ebuild,
+  acroread-asianfonts-7.0.20020815.ebuild:
+  Fixed a typo; bug #87044.
 
   28 Mar 2005; Mamoru KOMACHI <usata@gentoo.org>
   acroread-asianfonts-5.0.20020815.ebuild,

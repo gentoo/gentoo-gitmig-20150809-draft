@@ -1,16 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 612131cb5051bcb4628d95e02e85f2fb ChangeLog 1564
+MD5 24bf74ace995515db9a7cea9cdf541c3 ChangeLog 1729
 MD5 9088d4a413fe0b465560c753492acf1f metadata.xml 175
-MD5 90a8de10261853dad63e3657693c55c4 acroread-asianfonts-7.0.20020815.ebuild 1883
-MD5 f9603462bb628180f4ced2fe75a2ca58 acroread-asianfonts-5.0.20020815.ebuild 1860
+MD5 66d354e8cd87d8998c56eb046ba6fcc8 acroread-asianfonts-7.0.20020815.ebuild 1883
+MD5 d54d6a393e54fb1c6419be939250b695 acroread-asianfonts-5.0.20020815.ebuild 1860
 MD5 fa09b5ed5d7b5b0f9579df23428a52c4 files/digest-acroread-asianfonts-7.0.20020815 241
 MD5 fa09b5ed5d7b5b0f9579df23428a52c4 files/digest-acroread-asianfonts-5.0.20020815 241
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCSCMAVWNWqTUmv+0RAgO5AKCPCXJjU+i7B33LA9qg4pXh7bqV1QCfazdw
-jRNd3tIin5lMeWk1R+coRcQ=
-=Nx1H
+iD8DBQFCSKAtVWNWqTUmv+0RAuF9AJ0auJ1DjaiYR5v/l7ncUfGwYgnaGwCgk1AM
+RXkYyJ6kyu/9Tl0LjUWYxMw=
+=KIRn
 -----END PGP SIGNATURE-----
