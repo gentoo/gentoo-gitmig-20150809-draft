@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r2.ebuild,v 1.2 2001/05/01 18:29:05 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/tetex/tetex-1.0.7-r2.ebuild,v 1.3 2001/05/11 12:58:26 achim Exp $
 
 P=tetex-1.0.7
 A="teTeX-src-1.0.7.tar.gz teTeX-texmf-1.0.2.tar.gz ec-ready-mf-tfm.tar.gz teTeX-french.tar.gz"
@@ -84,7 +84,7 @@ src_install() {
   cp -af texmf ${D}/usr/share
   sed -e "s:\$(scriptdir)/texconfig init:echo:" Makefile > Makefile.install
   try make prefix=${D}/usr bindir=${D}/usr/bin \
-	mandir=${D}/usr/share/man infodir=${D}/usr/share/info \
+	mandir=${D}/usr/share/man/man1 infodir=${D}/usr/share/info \
 	texmf=${D}/usr/share/texmf -f Makefile.install install
 
 
