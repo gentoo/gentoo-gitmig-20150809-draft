@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.4-r1.ebuild,v 1.3 2004/03/27 17:15:36 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/zope/zope-2.6.4-r1.ebuild,v 1.4 2004/04/02 18:17:12 lanius Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ LICENSE="ZPL"
 SLOT="${PV}"
 
 KEYWORDS="x86 ~sparc ~ppc"
-IUSE="utf8"
+IUSE="unicode"
 
 # This is for developers that wish to test Zope with virtual/python.
 # If this is a problem, let me know right away. --kutsuya@gentoo.org
@@ -111,9 +111,9 @@ src_install() {
 	# If this is a problem, let me know right away. --batlogg@solution2u.net
 	# I wondering if we need a USE flag for this and wheter we can set the
 	# sys.encoding automtically
-	# so i defined a use flag utf-8
+	# so i defined a use flag
 
-	if use utf8; then
+	if use unicode; then
 		einfo "Patching structured text"
 		einfo "make sure you have set the system pythong encoding to utf-8"
 		einfo "create the file sitecusomize.py inside your site-packages"
