@@ -1,9 +1,8 @@
 # ChangeLog for dev-java/java-config
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.15 2002/12/09 21:04:03 strider Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/ChangeLog,v 1.16 2002/12/13 10:56:23 blizzy Exp $
 
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
 
 *java-config-0.2.7 (09 Dec 2002)
 
