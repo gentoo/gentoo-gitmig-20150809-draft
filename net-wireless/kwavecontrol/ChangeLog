@@ -1,6 +1,9 @@
 # ChangeLog for net-wireless/kwavecontrol
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/kwavecontrol/ChangeLog,v 1.1 2002/12/14 19:12:56 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/kwavecontrol/ChangeLog,v 1.2 2003/02/02 18:26:30 hannes Exp $
+
+  02 Feb 2003; Hannes Mehnert <hannes@gentoo.org> kwavecontrol-0.2.ebuild:
+  added fix for gcc-2.95.3, thanks to Aric LeDell <aledell@rcn.com> (bug #13672)
 
 *kwavecontrol-0.2 (14 Dec 2002)
 
