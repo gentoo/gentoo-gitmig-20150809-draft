@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mpc
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/ChangeLog,v 1.2 2003/08/10 10:49:17 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/ChangeLog,v 1.3 2003/08/14 04:33:47 g2boojum Exp $
+
+*mpc-0.8.1 (13 Aug 2003)
+
+  13 Aug 2003; Nick Hadaway <raker@gentoo.org> mpc-0.8.1.ebuild:
+  Version bump.  Minor ebuild cleanups.
 
   10 Aug 2003; jje <jje@gentoo.org> mpc-0.8.0.ebuild:
   Removed RDEPEND. It's doesn't need mpd on the same box...
