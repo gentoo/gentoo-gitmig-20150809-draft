@@ -699,3 +699,7 @@ app-cdr/cddump
 # prez@gentoo.org 10 May 2002
 # Has to be tested
 =app-office/openoffice-bin-1.0.0
+
+# spider@gentoo.org 12 May 2002
+# I've messed this too many times now. please check that it works
+=x11-wm/waimea-0.3.1
