@@ -42,4 +42,6 @@ solid
 sybase
 sybase-ct
 fdftk
+djbfft
+qdbm
 mzscheme
