@@ -1,6 +1,9 @@
 # ChangeLog for dev-util/aap
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/aap/ChangeLog,v 1.6 2004/04/24 16:23:01 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/aap/ChangeLog,v 1.7 2004/05/24 14:04:13 ciaranm Exp $
+
+  24 May 2004; Ciaran McCreesh <ciaranm@gentoo.org> aap-1.055.ebuild:
+  Added ~sparc
 
   24 Apr 2004; Danny van Dyk <kugelfang@gentoo.org> aap-1.055.ebuild:
   marked ~amd64.
