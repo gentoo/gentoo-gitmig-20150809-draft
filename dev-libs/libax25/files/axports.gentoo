@@ -1,0 +1,6 @@
+# Gentoo reference axports file
+# List one interface per line
+# Use a speed of "0" to prevent kissattach from setting the interface's speed
+# (Assuming kissattach is required for said interface)
+#Name	Callsign	Speed	Packet_Size	Window_Size	Comment
+#demo	N0CALL-1	1200	256		2		Demo Interface
