@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/zphoto/zphoto-1.2.ebuild,v 1.1 2004/10/09 21:47:53 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/zphoto/zphoto-1.2.ebuild,v 1.2 2004/11/04 11:54:28 usata Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://namazu.org/~satoru/zphoto/${P}.tar.gz"
 HOMEPAGE="http://namazu.org/~satoru/zphoto/"
 
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 LICENSE="LGPL-2.1"
 
 DEPEND=">=media-libs/ming-0.2a

@@ -1,7 +1,17 @@
-MD5 e2c46b5907bd2cc161759530674e16fd ChangeLog 1758
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 608aece15aa7fcfceb9e075753573af2 ChangeLog 1848
 MD5 043e2d431237aeec1769801a5b0214df metadata.xml 251
 MD5 8d54a6722f45b38164a275510ced2cdf zphoto-1.1.ebuild 947
-MD5 99e0d5019e6819e19f9b628b5c64421b zphoto-1.2.ebuild 954
+MD5 baf5d2a133584690f28e671a56fbe227 zphoto-1.2.ebuild 953
 MD5 c892a3036c833b82808fb04443eb1203 files/digest-zphoto-1.1 62
 MD5 da4e2ed233005ec8423569e0bc407105 files/digest-zphoto-1.2 62
 MD5 d3946f39d2b97ca5c97697351f478e3f files/zphoto-0.9-avifile-gentoo.diff 319
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBihb8VWNWqTUmv+0RApPqAJ9qISgds5L4U25bSpS0+T+CYo5RwQCfSfD4
+mrICptpDOZPO3QTVtEqYzb4=
+=RhAw
+-----END PGP SIGNATURE-----
