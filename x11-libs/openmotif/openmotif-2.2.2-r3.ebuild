@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.2-r2.ebuild,v 1.9 2003/11/30 12:17:51 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/openmotif-2.2.2-r3.ebuild,v 1.3 2003/11/30 12:17:51 lanius Exp $
 
 inherit libtool
 
@@ -10,9 +10,9 @@ DESCRIPTION="Open Motif"
 HOMEPAGE="http://www.motifzone.org/"
 SRC_URI="ftp://ftp.sgi.com/other/motifzone/2.2/src/${MY_P}.tar.gz"
 
-SLOT="0"
+SLOT="2.2"
 LICENSE="MOTIF"
-KEYWORDS="~x86 ~ppc ~sparc ~hppa ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~hppa ~alpha ~amd64"
 
 PROVIDE="virtual/motif"
 
@@ -20,9 +20,6 @@ RDEPEND="virtual/x11"
 DEPEND=">=sys-apps/sed-4"
 
 src_unpack() {
-
-	local f list
-
 	unpack ${A}
 	cd ${S}
 
@@ -71,22 +68,6 @@ src_unpack() {
 	unset f list
 
 	#
-	# move `system.mwmrc' from /usr/X11R6/lib/X11 to /etc/X11/mwm (FHS).
-	#   Just symlinking `system.mwmrc' isn't enough here because mwm
-	#   also looks for localized verions in `$LANG/system.mwmrc'.
-	#   Instead, this patch changes the default location from
-	#   `/usr/X11R6/lib/X11/' to `/usr/X11R6/lib/X11/mwm/', which will
-	#   be symlinked to /etc/X11/mwm/ in src_install().
-	#
-	epatch "$FILESDIR/mwm-configdir.patch"
-
-	#
-	# missing srcfile in demos/programs/animate
-	#
-	#einfo "creating missing file demos/programs/animate/animate.c"
-	#touch demos/programs/animate/animate.c
-
-	#
 	# Rebuild libtool (#15119, #20540, #21681)
 	#
 	elibtoolize
@@ -119,51 +100,66 @@ src_compile() {
 
 
 src_install() {
-
-	local f list
-
 	make \
 		DESTDIR=${D} \
 		VARDIR=${D}/var/X11/ install || die "make install failed"
 
-	#
-	# patch manpages to reflect actual location of configuration files
-	#
-	einfo "fixing manpages..."
-	list="/usr/X11R6/man/man1/mwm.1 /usr/X11R6/man/man4/mwmrc.4"
-	for f in $list; do
-		einfo "    ...${D}/$f"
-		dosed 's:/usr/X11R6/lib/X11/\(.*system\\&\.mwmrc\):/etc/X11/mwm/\1:g' "$f"
-		dosed 's:/usr/X11R6/lib/X11/app-defaults:/etc/X11/app-defaults:g' "$f"
+	# move includes
+	dodir /usr/include/Mrm/2.2/Mrm
+	dodir /usr/include/Xm/2.2/Xm
+	dodir /usr/include/uil/2.2/uil
+
+	mv ${D}/usr/X11R6/include/Mrm/*.h ${D}/usr/include/Mrm/2.2/Mrm
+	mv ${D}/usr/X11R6/include/Xm/*.h ${D}/usr/include/Xm/2.2/Xm
+	mv ${D}/usr/X11R6/include/uil/*.h ${D}/usr/include/uil/2.2/uil
+
+	# bin
+	dodir /usr/bin
+	for file in `ls ${D}/usr/X11R6/bin`
+	do
+		mv ${D}/usr/X11R6/bin/${file} ${D}/usr/bin/${file}-2.2
 	done
-	unset f list
 
-	#
-	# prepallman looks for manpages in /usr/X11R6/share/man while X11 uses
-	# /usr/X11R6/man, so we'll have to compress them ourselves...
-	#
-	einfo "gzipping manpages..."
-	prepman "/usr/X11R6"
+	# libs
+	dodir /usr/lib/motif/2.2
+	mv ${D}/usr/X11R6/lib/lib* ${D}/usr/lib/motif/2.2
 
-	#
-	# move system.mwmrc & create symlink
-	#
-	einfo "moving system.mwmrc..."
-	dodir "/etc/X11/mwm"
-	mv "${D}/usr/X11R6/lib/X11/system.mwmrc" \
-	   "${D}/etc/X11/mwm/system.mwmrc" || die "mv system.mwmrc"
-	ln -s "../../../../etc/X11/mwm" \
-	      "${D}/usr/X11R6/lib/X11/mwm" || die "ln -s confdir"
+	for lib in libMrm.so.3 libMrm.so.3.0.1 \
+		libXm.so.3 libXm.so.3.0.1 \
+		libUil.so.3 libUil.so.3.0.1
+	do
+		dosym "/usr/lib/motif/2.2/${lib}"\
+			"/usr/lib/${lib}"
+	done
 
+	# man pages
+	dodir /usr/share/man/man1
+	dodir /usr/share/man/man3
+	dodir /usr/share/man/man4
+	dodir /usr/share/man/man5
 
-	#
-	# app-defaults/Mwm isn't included anymore as of 2.2.2
-	#
-	einfo "creating mwm app-defaults file..."
-	insinto /etc/X11/app-defaults
-	newins ${FILESDIR}/Mwm.defaults Mwm
+	for file in `ls ${D}/usr/X11R6/man/man1`
+	do
+		file=${file/.1/}
+		mv ${D}/usr/X11R6/man/man1/${file}.1 ${D}/usr/share/man/man1/${file}-22.1
+	done
+	for file in `ls ${D}/usr/X11R6/man/man3`
+	do
+		file=${file/.3/}
+		mv ${D}/usr/X11R6/man/man3/${file}.3 ${D}/usr/share/man/man3/${file}-22.3
+	done
+	for file in `ls ${D}/usr/X11R6/man/man4`
+	do
+		file=${file/.4/}
+		mv ${D}/usr/X11R6/man/man4/${file}.4 ${D}/usr/share/man/man4/${file}-22.4
+	done
+	for file in `ls ${D}/usr/X11R6/man/man5`
+	do
+		file=${file/.5/}
+		mv ${D}/usr/X11R6/man/man5/${file}.5 ${D}/usr/share/man/man5/${file}-22.5
+	done
 
-	einfo "installing docs..."
+	# docs
 	dodoc COPYRIGHT.MOTIF LICENSE
 	dodoc README RELEASE RELNOTES
 	dodoc BUGREPORT OPENBUGS CLOSEDBUGS

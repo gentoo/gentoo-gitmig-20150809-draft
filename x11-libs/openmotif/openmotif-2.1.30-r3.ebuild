@@ -8,13 +8,10 @@ DESCRIPTION="Open Motif (Metrolink Bug Fix Release)"
 SRC_URI="ftp://ftp.metrolink.com/pub/openmotif/2.1.30-4/${MY_P}.tar.gz"
 HOMEPAGE="http://www.metrolink.com/openmotif/"
 LICENSE="MOTIF"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64"
 
 DEPEND="virtual/glibc
-	virtual/x11
-	dev-util/yacc
-	sys-devel/bison
-	sys-devel/flex"
+	virtual/x11"
 
 SLOT="2.1"
 
@@ -84,12 +81,10 @@ src_install() {
 	dodir /usr/include/Mrm/2.1/Mrm
 	dodir /usr/include/Xm/2.1/Xm
 	dodir /usr/include/uil/2.1/uil
-	dodir /usr/include/X11/bitmaps
 
 	mv ${D}/usr/X11R6/include/Mrm/*.h ${D}/usr/include/Mrm/2.1/Mrm
 	mv ${D}/usr/X11R6/include/Xm/*.h ${D}/usr/include/Xm/2.1/Xm
 	mv ${D}/usr/X11R6/include/uil/*.h ${D}/usr/include/uil/2.1/uil
-	mv ${D}/usr/X11R6/include/X11/bitmaps/* ${D}/usr/include/X11/bitmaps
 
 	# bin
 	dodir /usr/bin
@@ -137,7 +132,7 @@ src_install() {
 	for file in `ls ${D}/usr/X11R6/man/man7`
 	do
 		file=${file/.7x/}
-		mv ${D}/usr/X11R6/man/man7/${file}.7x ${D}/usr/share/man/man5/${file}-21.7
+		mv ${D}/usr/X11R6/man/man7/${file}.7x ${D}/usr/share/man/man7/${file}-21.7
 	done
 
 	# cleanups
