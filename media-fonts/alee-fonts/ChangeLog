@@ -1,0 +1,11 @@
+# ChangeLog for media-fonts/alee-fonts
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-fonts/alee-fonts/ChangeLog,v 1.1 2004/09/29 08:32:38 usata Exp $
+
+*alee-fonts-3.1 (29 Sep 2004)
+
+  29 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> +metadata.xml,
+  +alee-fonts-3.1.ebuild:
+  Initial import. Ebuild submitted by Jung Tae-young <master@mytears.org>,
+  closing bug #60144.
+
