@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.1 2004/11/14 09:05:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain-binutils.eclass,v 1.2 2004/11/15 05:16:57 mr_bones_ Exp $
 
 inherit eutils libtool flag-o-matic gnuconfig
 ECLASS=toolchain
@@ -18,7 +18,7 @@ SRC_URI="mirror://kernel/linux/devel/binutils/${P}.tar.bz2
 [ -n "${UCLIBC_PATCHVER}" ] && \
 	SRC_URI="${SRC_URI} mirror://gentoo/${PN}-${PV:0:4}-uclibc-patches-${UCLIBC_PATCHVER}.tar.bz2"
 
-LICENSE="GPL-2 | LGPL-2"
+LICENSE="|| ( GPL-2 LGPL-2 )"
 use cross \
 	&& SLOT="${CTARGET}-${PV}" \
 	|| SLOT="${CTARGET}"
