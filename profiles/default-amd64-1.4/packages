@@ -68,3 +68,4 @@
 *sys-libs/zlib
 *net-misc/openssh
 *sys-apps/devfsd
+*sys-apps/linux32
