@@ -1,6 +1,6 @@
 # ChangeLog for app-cdr/eroaster
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/ChangeLog,v 1.15 2003/09/16 10:09:16 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/eroaster/ChangeLog,v 1.16 2003/09/30 08:15:01 aliz Exp $
 
   16 Sep 2003; Daniel Ahlberg <aliz@gentoo.org> eroaster-2.1.0-r2.ebuild :
   Change SRC_URI to use the old 2.1.0 tarball already mirrored since
@@ -48,7 +48,7 @@
   Fixed eroaster.gnorba path since it was getting dropped into /usr, this
   should fix about everything in this package.
 
-*eroaster-2.0.12 (5 July 2002) Bart Verwilst <verwilst@gentoo.org>
+*eroaster-2.0.12 (5 Jul 2002) 
 
   03 Nov 2002; Mark Guertin <gerk@gentoo.org> eroaster-2.0.12.ebuild:
   Added ppc and x86 to keywords
