@@ -696,11 +696,6 @@ dev-libs/libiconv
 =koffice-1.2_pre20020411
 =koffice-1.2_pre20020404
 
-#if you're not careful, you'll build yourself a rsync that depends on libpopt.so! <kainz, 18 Apr 2002>
-#this fixes that.  devlopers give it a shot
-#repeat for newer rsync
-=net-misc/rsync-2.5.5-r1
-
 # Licq is b0rked beyond usability.. Not only the ebuild, but the protocol
 #they use as well... Trust me, unmasking this has no use at all :o) <Verwilst, 17 April 2002>
 # adding gtk+licq just to make it complete;  26 Jun 2002; <spider@gentoo.org>
