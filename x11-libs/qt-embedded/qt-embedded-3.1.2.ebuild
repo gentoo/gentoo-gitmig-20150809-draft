@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/qt-embedded-3.1.2.ebuild,v 1.1 2003/07/20 13:16:40 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/qt-embedded-3.1.2.ebuild,v 1.2 2003/07/20 14:27:02 caleb Exp $
 
 IUSE="gif build opengl mysql odbc postgres"
 
@@ -110,6 +110,9 @@ src_compile() {
 	
 	cd $S
 	emake src-qmake src-moc sub-src sub-tools || die
+
+	cd $S/tools/designer/uic
+	emake
 
 }
 
