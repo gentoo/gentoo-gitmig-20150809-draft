@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5-r5.ebuild,v 1.1 2005/03/03 15:43:47 taviso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/skey/skey-1.1.5-r5.ebuild,v 1.2 2005/03/04 04:46:30 mr_bones_ Exp $
 
 inherit flag-o-matic ccc eutils
 
@@ -53,7 +53,7 @@ src_compile() {
 	# skeyprune uses a case sensitive regex to check for zeroed entries
 	sed -i 's#\(if ( ! /.*/\)#\1i#g' skeyprune.pl
 
-	# skeyinit(1) describes md4 as the default hash algorithm, which 
+	# skeyinit(1) describes md4 as the default hash algorithm, which
 	# is no longer the case. #64971
 	sed -i \
 		's#\(md4\) \((the default)\), \(md5\) or \(sha1.\)#\1, \3 \2 or \4#g' \
@@ -70,7 +70,7 @@ src_install() {
 	dosym skey /usr/bin/otp-md4
 	dosym skey /usr/bin/otp-sha1
 	dosym skey /usr/bin/otp-md5
-	
+
 	newsbin skeyprune.pl skeyprune
 	newbin skeyaudit.sh skeyaudit
 	dolib.a libskey.a
