@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-0.10.0-r1.ebuild,v 1.2 2005/03/01 19:52:09 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rails/rails-0.10.0-r1.ebuild,v 1.3 2005/03/08 18:27:35 caleb Exp $
 
 inherit ruby gems
 
@@ -13,7 +13,7 @@ SRC_URI="http://rubyforge.org/frs/download.php/3205/${P}.gem"
 
 LICENSE="Ruby"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 
 IUSE="mysql sqlite postgres"
 DEPEND="=dev-lang/ruby-1.8*

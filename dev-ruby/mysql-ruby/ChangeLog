@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/mysql-ruby
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.8 2004/09/02 00:34:08 usata Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/mysql-ruby/ChangeLog,v 1.9 2005/03/08 18:26:52 caleb Exp $
+
+  08 Mar 2005; Caleb Tennis <caleb@gentoo.org> mysql-ruby-2.5.ebuild:
+  x86 stable
 
 *mysql-ruby-2.5 (02 Sep 2004)
 
