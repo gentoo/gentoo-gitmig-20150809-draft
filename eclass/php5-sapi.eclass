@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.23 2004/08/14 19:11:04 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.24 2004/08/14 22:04:28 robbat2 Exp $
 #
 # eclass/php5-sapi.eclass
 #		Eclass for building different php5 SAPI instances
@@ -116,9 +116,8 @@ php5-sapi_check_awkward_uses () {
 		die "mysqli not supported yet"
 	fi
 
-	# recode not available; upstream bug
-
-	if useq recode ; then
+	# recode not available in 5.0.0; upstream bug
+	if useq recode && [ "$PV" == "5.0.0" ]; then
 		eerror
 		eerror "Support for the 'recode' extension is currently broken UPSTREAM"
 		eerror "See http://bugs.php.net/bug.php?id=28700 for details"
@@ -225,7 +224,7 @@ php5-sapi_check_awkward_uses () {
 	# both provide the same functionality
 	confutils_use_conflict "readline" "libedit"
 	# Recode is not liked.
-	confutils_use_conflict "recode" "mysql" "nis"
+	confutils_use_conflict "recode" "mysql" "imap" "nis" # "yaz"
 
 	if ! useq session ; then
 		enable_extension_disable	"session"		"session"		1
