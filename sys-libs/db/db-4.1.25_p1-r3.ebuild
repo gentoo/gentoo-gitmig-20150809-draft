@@ -1,11 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.25_p1-r3.ebuild,v 1.20 2004/04/22 09:48:02 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/db/db-4.1.25_p1-r3.ebuild,v 1.21 2004/04/26 06:40:06 vapier Exp $
 
-IUSE="tcltk java doc"
-
-inherit eutils gnuconfig
-inherit db
+inherit eutils gnuconfig db
 
 #Number of official patches
 PATCHNO=`echo ${PV}|sed -e "s,\(.*_p\)\([0-9]*\),\2,"`
@@ -20,18 +17,17 @@ fi
 
 S=${WORKDIR}/${MY_P}/build_unix
 DESCRIPTION="Berkeley DB"
+HOMEPAGE="http://www.sleepycat.com"
 SRC_URI="http://www.sleepycat.com/update/snapshot/${MY_P}.tar.gz"
-
 for (( i=1 ; i<=$PATCHNO ; i++ ))
 do
 	export SRC_URI="${SRC_URI} http://www.sleepycat.com/update/${MY_PV}/patch.${MY_PV}.${i}"
 done
 
-HOMEPAGE="http://www.sleepycat.com"
-SLOT="4.1"
 LICENSE="DB"
-
-KEYWORDS="ia64 x86 ppc alpha amd64 sparc mips ppc64 hppa s390"
+SLOT="4.1"
+KEYWORDS="x86 ppc 7sparc mips alpha arm hppa amd64 ia64 ppc64 s390"
+IUSE="tcltk java doc"
 
 DEPEND="tcltk? ( dev-lang/tcl )
 	java? ( virtual/jdk )"
