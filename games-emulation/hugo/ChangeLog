@@ -1,0 +1,8 @@
+# ChangeLog for games-emulation/hugo
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/hugo/ChangeLog,v 1.1 2004/01/11 10:25:37 vapier Exp $
+
+*hugo-2.09 (11 Jan 2004)
+
+  11 Jan 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Chris Aniszczyk <zx@mea-culpa.net> #37760.
