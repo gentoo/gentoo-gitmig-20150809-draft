@@ -1,6 +1,12 @@
 # ChangeLog for dev-php/egroupware
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.1 2004/08/19 09:43:07 rl03 Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/egroupware/ChangeLog,v 1.2 2004/08/19 13:13:24 rl03 Exp $
+
+*egroupware-1.0.00.003 (19 Aug 2004)
+
+  19 Aug 2004; Renat Lumpau <rl03@gentoo.org> +files/postinstall-en.txt,
+  +egroupware-1.0.00.003.ebuild:
+  Version bump (bug #59778). Converted to use webapp.eclass (bug #53749).
 
 *egroupware-0.9.99.015 (19 Aug 2004)
 
