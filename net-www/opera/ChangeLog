@@ -1,6 +1,15 @@
 # ChangeLog for net-www/opera
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.4 2002/04/13 00:16:53 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/ChangeLog,v 1.5 2002/04/18 21:14:56 karltk Exp $
+
+*opera-6.0_pre4-r2 (18 Apr 2002)
+
+  18 Apr 2002; Karl Trygve Kalleberg <karltk@gentoo.org> opera-6.0_pre4-r2.ebuild files/digest-opera-6.0_pre4-r2:
+
+  Moved all binaries into /opt, where it belongs. The pixmaps and icons
+  are still installed in /usr.
+
+  Removed opera-6.0_pre4-r1.ebuild files/digest-opera-6.0_pre4-r1
 
 *opera-6.0_pre4-r1 (12 Apr 2002)
 
