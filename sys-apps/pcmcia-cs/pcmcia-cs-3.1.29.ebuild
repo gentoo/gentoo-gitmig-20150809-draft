@@ -2,14 +2,14 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Craig Joly <joly@ee.ualberta.ca>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.29.ebuild,v 1.6 2001/10/19 21:46:03 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pcmcia-cs/pcmcia-cs-3.1.29.ebuild,v 1.7 2001/12/19 15:22:32 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="PCMCIA tools for Linux"
 SRC_URI="http://prdownloads.sourceforge.net/pcmcia-cs/${P}.tar.gz"
 HOMEPAGE="http://pcmcia-cs.sourceforge.net"
 DEPEND="sys-kernel/linux-headers X? ( virtual/x11 x11-libs/xforms )"
-
+RDEPEND="X? ( virtual/x11 x11-libs/xforms )"
 # To use this ebuild, you should have the usr/src/linux symlink to the kernel directory
 # that pcmcia-cs should use for configuration.
 
@@ -57,5 +57,7 @@ src_install () {
 	else
 		rm -rf ${D}/usr/share/man
 	fi
+	rm ${D}/etc/modules.conf
+	#yuck!
 }
 
