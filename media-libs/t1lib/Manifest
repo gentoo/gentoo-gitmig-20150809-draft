@@ -1,11 +1,21 @@
-MD5 fb101bfa6c4246baa9cca3c83f2572b0 ChangeLog 5444
-MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
-MD5 617553a0c8f1cc93e277d66cf72a2f34 t1lib-1.3.1.ebuild 1498
-MD5 653224f57125596a60eaa618232db8c3 t1lib-5.0.0-r2.ebuild 1471
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 3adb22bd3c37a3898880c521a17e9b00 t1lib-5.0.1.ebuild 1532
-MD5 4d83fab4d6b74a82428ad6a5e5b53360 t1lib-5.0.2.ebuild 1631
-MD5 817757abf473e739c3314daca2aecea2 files/digest-t1lib-1.3.1 64
+MD5 617553a0c8f1cc93e277d66cf72a2f34 t1lib-1.3.1.ebuild 1498
+MD5 1431b50045ce22149a8bc5dd903e1450 ChangeLog 5535
+MD5 295674d4bed87f5a7c2796e032ed561e metadata.xml 158
+MD5 653224f57125596a60eaa618232db8c3 t1lib-5.0.0-r2.ebuild 1471
+MD5 f013072211c1055c2b832118e51ca64c t1lib-5.0.2.ebuild 1628
 MD5 fd18dc7d703e77e595bc054f2f4c0f20 files/digest-t1lib-5.0.0-r2 64
-MD5 60bcc4bc9f1f21b6f445e2dc1f462171 files/digest-t1lib-5.0.1 64
 MD5 31349cc7c0045a650519549f365906a9 files/digest-t1lib-5.0.2 64
+MD5 60bcc4bc9f1f21b6f445e2dc1f462171 files/digest-t1lib-5.0.1 64
 MD5 564c11663ec99286c576cedef39a854e files/t1lib-5.0.2-gentoo.diff 2619
+MD5 817757abf473e739c3314daca2aecea2 files/digest-t1lib-1.3.1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBxV4VugEuf3OQ0akRAl41AJ9Jv/EmiuXlJFVLB19juoT+Lxe/wwCdGUro
+ZgO3ewYeV9U7A+517WmGQU4=
+=vF3j
+-----END PGP SIGNATURE-----
