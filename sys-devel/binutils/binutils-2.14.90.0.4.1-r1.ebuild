@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.4.1-r1.ebuild,v 1.2 2003/07/12 23:46:42 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.4.1-r1.ebuild,v 1.3 2003/09/01 19:22:43 azarah Exp $
 
 IUSE="nls bootstrap build"
 
@@ -64,6 +64,16 @@ src_unpack() {
 	epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.10-x86_64-gotpcrel.patch
 	epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.18-s390-file-loc.patch
 	epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.18-testsuite-Wall-fixes.patch
+	# There is a bug in binutils 2.14.* which causes a segfault in certain
+	# circumstances when linking. This bug does not exist in binutils 2.11.*.
+	#
+	# More details on the bug can be found here:
+	#  http://sources.redhat.com/ml/bug-binutils/2003-q3/msg00559.html
+	#  http://sources.redhat.com/ml/bug-binutils/2003-q3/msg00735.html
+	#
+	# Bug #27492, thanks to Adam Chodorowski <adam@chodorowski.com> for
+	# reporting.
+	epatch ${FILESDIR}/2.14/${PN}-2.14.90.0.6-dont-crash-on-null-owner.patch
 
 	use x86 &> /dev/null \
 		&& epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.20-array-sects-compat.patch

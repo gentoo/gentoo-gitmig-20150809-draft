@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.5-r1.ebuild,v 1.4 2003/09/01 19:22:43 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/binutils-2.14.90.0.6-r2.ebuild,v 1.1 2003/09/01 19:22:43 azarah Exp $
 
 IUSE="nls bootstrap build"
 
@@ -20,7 +20,7 @@ HOMEPAGE="http://sources.redhat.com/binutils/"
 
 SLOT="0"
 LICENSE="GPL-2 | LGPL-2"
-KEYWORDS="~amd64 ~x86 ~ppc -alpha ~sparc ~mips -hppa -arm"
+KEYWORDS="~amd64 ~x86 ~ppc ~alpha ~sparc ~mips ~hppa ~arm"
 
 DEPEND="virtual/glibc
 	>=sys-apps/portage-2.0.21
@@ -45,17 +45,14 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.10-glibc21.patch
 	epatch ${FILESDIR}/2.14/${PN}-2.14.90.0.4-sparc-nonpic.patch
-	epatch ${FILESDIR}/2.14/${PN}-2.14.90.0.5-eh-frame-ro.patch
+	epatch ${FILESDIR}/2.14/${PN}-2.14.90.0.6-eh-frame-ro.patch
 	epatch ${FILESDIR}/2.14/${PN}-2.14.90.0.4-ltconfig-multilib.patch
 # Might think of adding the Prescott stuff later on
 #	epatch ${FILESDIR}/2.14/${PN}-2.14.90.0.4-pni.patch
+# This one cause failures in sash and util-linux-2.12 (bug #27330)
+#	epatch ${FILESDIR}/2.14/${PN}-2.14.90.0.5-place-orphan.patch
 	epatch ${FILESDIR}/2.14/${PN}-2.14.90.0.5-s390-pie.patch
 	epatch ${FILESDIR}/2.14/${PN}-2.14.90.0.5-ppc64-pie.patch
-	epatch ${FILESDIR}/2.14/${PN}-2.14.90.0.5-ppc64-ldr.patch
-	epatch ${FILESDIR}/2.14/${PN}-2.14.90.0.5-ppc64-power4.patch
-	epatch ${FILESDIR}/2.14/${PN}-2.14.90.0.5-ppc64-mask.patch
-	epatch ${FILESDIR}/2.14/${PN}-2.14.90.0.5-ppc64-fdesc.patch
-	epatch ${FILESDIR}/2.14/${PN}-2.14.90.0.5-ppc64-elfvsb.patch
 	epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.10-x86_64-testsuite.patch
 	epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.10-x86_64-gotpcrel.patch
 	epatch ${FILESDIR}/2.13/${PN}-2.13.90.0.18-testsuite-Wall-fixes.patch
