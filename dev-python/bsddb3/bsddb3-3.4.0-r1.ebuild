@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-3.4.0-r1.ebuild,v 1.9 2004/06/25 01:26:37 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/bsddb3-3.4.0-r1.ebuild,v 1.10 2004/10/02 23:38:24 kloeri Exp $
 
 inherit distutils eutils
 
@@ -20,6 +20,7 @@ DOCS="README.txt TODO.txt"
 
 src_unpack() {
 	unpack ${A}
+	cd ${S}
 	epatch ${FILESDIR}/${P}-db3.patch
 }
 
