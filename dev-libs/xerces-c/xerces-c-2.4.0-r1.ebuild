@@ -1,21 +1,22 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.3.0-r6.ebuild,v 1.3 2004/02/17 00:07:59 zhen Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/xerces-c-2.4.0-r1.ebuild,v 1.1 2004/02/17 00:07:59 zhen Exp $
 
 MY_PV=${PV//./_}
 
 DESCRIPTION="Xerces-C++ is a validating XML parser written in a portable subset of C++."
 
-SRC_URI="http://xml.apache.org/dist/xerces-c/stable/${PN}-src_${MY_PV}.tar.gz"
+SRC_URI="http://xml.apache.org/dist/xerces-c/stable/${PN}-src${MY_PV}.tar.gz"
 HOMEPAGE="http://xml.apache.org/xerces-c/index.html"
 
-DEPEND="virtual/glibc"
+DEPEND="virtual/glibc
+		doc? ( app-doc/doxygen )"
 LICENSE="Apache-1.1"
 SLOT="0"
 KEYWORDS="x86 ~ppc"
 IUSE="doc"
 
-S=${WORKDIR}/${PN}-src_${MY_PV}
+S=${WORKDIR}/${PN}-src${MY_PV}
 
 src_compile() {
 	export MAKEOPTS="-j1"
@@ -34,7 +35,8 @@ src_install () {
 	if [ "`use doc`" ]; then
 		dodir /usr/share/doc/${P}
 		cp -a ${S}/samples ${D}/usr/share/doc/${P}
-		dohtml -r doc/html
+		cd ${S}/doc; doxygen
+		dohtml -r html
 	fi
 
 	cd ${S}

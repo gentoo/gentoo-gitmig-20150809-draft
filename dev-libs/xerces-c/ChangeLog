@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xerces-c
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.14 2003/12/12 00:45:59 zhen Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xerces-c/ChangeLog,v 1.15 2004/02/17 00:07:59 zhen Exp $
+
+  16 Feb 2004; John Davis <zhen@gentoo.org> :
+  fix for bug #39634
 
   11 Dec 2003; zhen <zhen@gentoo.org> xerces-c-2.4.0.ebuild:
   marking stable, no bugs for a week, lots of testing
