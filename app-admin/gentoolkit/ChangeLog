@@ -1,6 +1,19 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.1 2002/02/01 21:52:59 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.2 2002/02/03 04:47:38 aeoo Exp $
+
+*gentoolkit-0.1.1 (2 Feb 2002)
+
+  2 Feb 2002; Leo Lipelis <aeoo@gentoo.org> ChangeLog :
+
+  Jochem Kossen has added a nice diff/sdiff mode to etc-update.  As many
+  people do not prefer vim, etc-update will now default to using diff for
+  displaying changes and sdiff for merging changes!  This means, if you use
+  any editor other than vim, the script will now work for you out of the box.
+  But, vim users need not panic!  Vim diff functionality is still there in the
+  script.  Just read the top of the etc-update file and configure it
+  appropriately.  To sum up: vim users keep getting what they've been getting,
+  and everyone else gets cool diff/sdiff mode.
 
 *gentoolkit-0.1.0 (1 Feb 2002)
 
