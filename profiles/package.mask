@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3292 2004/10/30 13:05:07 scandium Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3293 2004/10/30 21:10:18 eradicator Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -82,12 +82,6 @@ net-wireless/bluez-pan
 # <seemant@gentoo.org> (15 Oct 2004)
 # This seems to want gcc-3.4.3 which does not even exist in portage yet!
 >=dev-lang/maude-2.1.1-r2
-
-# Jeremy Huddleston <eradicator@gentoo.org>
-# Testing for latest xmms cvs which incorporates many patches that were in
-# the gentoo patchsets as well as some other bug fixes.  This will remain
-# in package.mask atleast until I get the updated cjk patch from the cjk folks.
-=media-sound/xmms-1.2.10-r8
 
 # <solar@gentoo.org> (11 Oct 2004)
 # Masking till I can fix/or remove from the tree.
