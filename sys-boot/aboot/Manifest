@@ -1,7 +1,17 @@
-MD5 004b63cc70357e3cf3fb6aa1d5ff52ca aboot-0.9-r1.ebuild 1902
-MD5 72046a712c3a42a0ad854d712ab3c982 aboot-1.0_pre20040408.ebuild 1875
-MD5 e76192e763d357f4490ba0f35d647eb3 ChangeLog 1050
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 7259fe539efdab206c7557ef0c7da95c ChangeLog 1127
 MD5 0ed40e134501a252bb21c5c5808d8028 metadata.xml 158
+MD5 72046a712c3a42a0ad854d712ab3c982 aboot-1.0_pre20040408.ebuild 1875
+MD5 004b63cc70357e3cf3fb6aa1d5ff52ca aboot-0.9-r1.ebuild 1902
 MD5 254f0c6b0c0862df2ecd486daab0bbf9 files/aboot.conf 295
-MD5 33aacae300189ee99e0df0a268dc4e4a files/digest-aboot-0.9-r1 65
+MD5 963ee6f184a7fecbcbec48b5b8af534d files/digest-aboot-0.9-r1 66
 MD5 746d744469877288661af19f5f0f5d12 files/digest-aboot-1.0_pre20040408 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBm+3DugEuf3OQ0akRAtemAJwOrBT8dWDm6T0Ao6AHtd1jAVfWMgCfV1fs
+K4Lm/7hE3HPiZAd03Avcyr0=
+=t2Ua
+-----END PGP SIGNATURE-----
