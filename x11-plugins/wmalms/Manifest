@@ -1,4 +1,14 @@
-MD5 5a02bcc7bde16d8025135e9a223a48b0 wmalms-1.0.0a-r1.ebuild 624
-MD5 cb9e6be8281c8065d18f58d2e239141c ChangeLog 849
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 92f846a70e725e0d6300abcfc29dc0fa wmalms-1.0.0a-r1.ebuild 620
+MD5 2a3a1bb14cf003bbf85f9f326946b9fd ChangeLog 990
 MD5 4a8b114a7b2019f49c56121738175426 metadata.xml 765
 MD5 79e244e4053a0acf59ba92689d5a38ac files/digest-wmalms-1.0.0a-r1 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCIeIpI1lqEGTUzyQRAuvjAKCnC0jsI94Cxz8PDOe+qsm2FQNjBACgtLq/
+d6aezjNG/OiZXKVHP5qPm0Q=
+=RzNK
+-----END PGP SIGNATURE-----

@@ -1,3 +1,13 @@
-MD5 7e7b0260186835cf7b65eea573f4456e gkrellm-sensors-0.1.ebuild 690
-MD5 2208d194772fabda6a351338d056deb3 ChangeLog 979
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 e9a890cc1763acddc393d1616b126dc9 gkrellm-sensors-0.1.ebuild 688
+MD5 3585fa15691fb4d164c027bc30fdcfc5 ChangeLog 1127
 MD5 2d5df52abe8d875cdb84a150a5c16deb files/digest-gkrellm-sensors-0.1 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCIeIGI1lqEGTUzyQRAoxsAJ9/tHcionSGC8abt4q2/oP7Oz5uEwCcD4AC
+5S9RqXUveQKyirufe+sYY2U=
+=lNk/
+-----END PGP SIGNATURE-----
