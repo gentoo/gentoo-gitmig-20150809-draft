@@ -52,7 +52,7 @@ app-office/ical
 =app-i18n/xcin-2.5.2.3
 
 # Seemant Kulleen <seemant@gentoo.org> (31 Jul 2002)
-# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1150 2002/08/02 07:15:41 lostlogic Exp $
+# invalid RDEPEND, invalid LICENSE, no $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.1151 2002/08/02 07:17:19 lostlogic Exp $
 # repoman had a field day
 sys-apps/discover
 sys-apps/discover-data
@@ -688,9 +688,6 @@ app-admin/va-systemimager-client
 
 # have to fix the patches and dependencies
 =app-editors/fte-20010819
-
-# untested (karltk)
-=x11-wm/ASFiles-1.0
 
 # Moved in the big GNOME move
 gnome-office/abiword
