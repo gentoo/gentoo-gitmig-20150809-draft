@@ -1,6 +1,10 @@
 # ChangeLog for net-www/amaya
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/ChangeLog,v 1.23 2004/06/08 21:10:09 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/ChangeLog,v 1.24 2004/06/15 03:23:46 agriffis Exp $
+
+  14 Jun 2004; Aron Griffis <agriffis@gentoo.org> amaya-8.0.ebuild,
+  amaya-8.5.ebuild:
+  Fix use invocation
 
   08 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> amaya-7.1.ebuild,
   amaya-7.2.ebuild, amaya-8.1a.ebuild, amaya-8.2.ebuild, amaya-8.4.ebuild:

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.5.1-r1.ebuild,v 1.1 2004/05/30 07:25:58 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.5.1-r1.ebuild,v 1.2 2004/06/15 03:23:42 agriffis Exp $
 
 inherit eutils
 
@@ -47,7 +47,7 @@ src_unpack() {
 	unpack ${P}.tar.gz
 	cd ${S}
 	epatch ${FILESDIR}/${PN}-w3mman-gentoo.diff
-	if [ -n "`use async`" ] ; then
+	if use async ; then
 		epatch ${DISTDIR}/${P}-async-1.diff.gz
 	#	epatch ${FILESDIR}/${PN}-0.4.2-async-m17n-gentoo.diff
 	fi
@@ -59,17 +59,17 @@ src_compile() {
 
 	local myconf migemo_command imagelib
 
-	if [ -n "`use X`" ] ; then
+	if use X ; then
 		myconf="${myconf} --enable-image=x11,fb `use_enable xface`"
-		if [ -n "`use gtk`" ] ; then
+		if use gtk ; then
 			imagelib="gdk-pixbuf"
-		elif [ -n "`use imlib2`" ] ; then
+		elif use imlib2 ; then
 			imagelib="imlib2"
 		else
 			imagelib="imlib"
 		fi
 	else	# no X
-		if [ -n "`use imlib2`" ] ; then
+		if use imlib2 ; then
 			myconf="${myconf} --enable-image=fb"
 			imagelib="imlib2"
 		else
@@ -78,7 +78,7 @@ src_compile() {
 		fi
 	fi
 
-	if [ -n "`use migemo`" ] ; then
+	if use migemo ; then
 		migemo_command="migemo -t egrep /usr/share/migemo/migemo-dict"
 	else
 		migemo_command="no"
@@ -87,7 +87,7 @@ src_compile() {
 	# emacs-w3m doesn't like "--enable-m17n --disable-unicode,"
 	# so we better enable or disable both. Default to enable
 	# m17n and unicode, see bug #47046.
-	if [ -n "`use cjk`" ] ; then
+	if use cjk ; then
 		myconf="${myconf}
 			--enable-japanese=E
 			--with-charset=EUC-JP"
@@ -131,7 +131,7 @@ src_install() {
 	doins Bonus/*
 	dodoc README NEWS TODO ChangeLog
 	docinto doc-en ; dodoc doc/*
-	if [ -n "`use cjk`" ] ; then
+	if use cjk ; then
 		docinto doc-jp ; dodoc doc-jp/*
 	else
 		rm -rf ${D}/usr/share/man/ja

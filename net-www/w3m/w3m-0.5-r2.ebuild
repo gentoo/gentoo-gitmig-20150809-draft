@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.5-r2.ebuild,v 1.3 2004/05/04 03:04:57 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.5-r2.ebuild,v 1.4 2004/06/15 03:23:42 agriffis Exp $
 
 inherit eutils
 
@@ -49,11 +49,11 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-w3mman-gentoo.diff
 	epatch ${FILESDIR}/${PN}-m17n-search-gentoo.diff
 	epatch ${FILESDIR}/${PN}-libwc-gentoo.diff
-	if [ -n "`use nls`" ] ; then
+	if use nls ; then
 		#epatch ${DISTDIR}/${W3M_CVS_P}-bkmknls-1.diff
 		epatch ${DISTDIR}/${W3M_CVS_P}-nlscharset-1.diff
 	fi
-	if [ -n "`use async`" ] ; then
+	if use async ; then
 		epatch ${DISTDIR}/${W3M_CVS_P}-async-1.diff.gz
 		epatch ${FILESDIR}/${PN}-0.4.2-async-m17n-gentoo.diff
 	fi
@@ -64,17 +64,17 @@ src_unpack() {
 src_compile() {
 	local myconf migemo_command imagelib
 
-	if [ -n "`use X`" ] ; then
+	if use X ; then
 		myconf="${myconf} --enable-image=x11,fb `use_enable xface`"
-		if [ -n "`use gtk`" ] ; then
+		if use gtk ; then
 			imagelib="gdk-pixbuf"
-		elif [ -n "`use imlib2`" ] ; then
+		elif use imlib2 ; then
 			imagelib="imlib2"
 		else
 			imagelib="imlib"
 		fi
 	else	# no X
-		if [ -n "`use imlib2`" ] ; then
+		if use imlib2 ; then
 			myconf="${myconf} --enable-image=fb"
 			imagelib="imlib2"
 		else
@@ -83,7 +83,7 @@ src_compile() {
 		fi
 	fi
 
-	if [ -n "`use migemo`" ] ; then
+	if use migemo ; then
 		migemo_command="migemo -t egrep /usr/share/migemo/migemo-dict"
 	else
 		migemo_command="no"
@@ -92,7 +92,7 @@ src_compile() {
 	# emacs-w3m doesn't like "--enable-m17n --disable-unicode,"
 	# so we better enable or disable both. Default to enable
 	# m17n and unicode, see bug #47046.
-	if [ -n "`use cjk`" ] ; then
+	if use cjk ; then
 		myconf="${myconf}
 			--enable-japanese=E
 			--with-charset=EUC-JP"
@@ -129,7 +129,7 @@ src_install() {
 	doins Bonus/*
 	dodoc README NEWS TODO ChangeLog
 	docinto doc-en ; dodoc doc/*
-	if [ -n "`use cjk`" ] ; then
+	if use cjk ; then
 		docinto doc-jp ; dodoc doc-jp/*
 	else
 		rm -rf ${D}/usr/share/man/ja

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.2.ebuild,v 1.5 2004/01/04 18:35:30 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/w3m-0.4.2.ebuild,v 1.6 2004/06/15 03:23:42 agriffis Exp $
 
 inherit eutils
 
@@ -41,7 +41,7 @@ src_compile() {
 
 	use cjk && myconf="${myconf} --enable-japanese=E"
 
-	if [ -n "`use imlib`" -o -n "`use gtk`" ] ; then
+	if use imlib || use gtk; then
 		myconf="${myconf} --enable-image=x11,fb `use_enable xface`"
 	else
 		myconf="${myconf} --enable-image=no"
@@ -75,7 +75,7 @@ src_install() {
 	doins Bonus/*
 	dodoc README NEWS TODO ChangeLog
 	docinto doc-en ; dodoc doc/*
-	if [ -n "`use cjk`" ] ; then
+	if use cjk ; then
 		docinto doc-jp ; dodoc doc-jp/*
 	else
 		rm -rf ${D}/usr/share/man/ja

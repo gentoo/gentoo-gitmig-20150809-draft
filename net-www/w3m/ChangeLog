@@ -1,6 +1,10 @@
 # ChangeLog for net-www/w3m
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/ChangeLog,v 1.56 2004/06/06 14:01:44 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m/ChangeLog,v 1.57 2004/06/15 03:23:42 agriffis Exp $
+
+  14 Jun 2004; Aron Griffis <agriffis@gentoo.org> w3m-0.4.2.ebuild,
+  w3m-0.5-r2.ebuild, w3m-0.5.1-r1.ebuild, w3m-0.5.1.ebuild:
+  Fix use invocation
 
   06 Jun 2004; Jason Wever <weeve@gentoo.org> w3m-0.5.1.ebuild:
   Stable on sparc.
