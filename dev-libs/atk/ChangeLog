@@ -1,6 +1,6 @@
 # ChangeLog for dev-libs/atk
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.35 2003/11/08 15:32:54 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atk/ChangeLog,v 1.36 2003/11/15 23:44:27 gmsoft Exp $
 
   08 Nov 2003; Todd Sunderlin <todd@gentoo.org> atk-1.4.0.ebuild:
   added sparc keyword
@@ -12,6 +12,9 @@
   Stable on alpha
 
 *atk-1.4.1 (09 Oct 2003)
+
+  15 Oct 2003; Guy Martin <gmsoftégentoo.org> atk-1.4.1.ebuild :
+  Marked stable on hppa.
 
   09 Oct 2003; Mike Gardiner <obz@gentoo.org> atk-1.4.1.ebuild:
   Version bump, 1.4.1 includes bugfixes over 1.4.0
