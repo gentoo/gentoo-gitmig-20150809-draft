@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jerry Alexandratos <jerry@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-1.0.1.ebuild,v 1.1 2000/11/02 18:06:38 jerry Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-1.0.1.ebuild,v 1.2 2000/11/05 15:44:16 achim Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
@@ -35,7 +35,9 @@ src_install () {
     dodir /usr/share/gkrellm/themes
     
     cd ${S}
-    dodoc COPYRIGHT README Changelog Changelog-plugins.html \
-        Changelog-themes.html Themes.html
+    dodoc COPYRIGHT README Changelog 
+    docinto html
+    dodoc Changelog-plugins.html Changelog-themes.html Themes.html
 }
+
 
