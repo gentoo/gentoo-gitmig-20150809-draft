@@ -9,7 +9,7 @@
 #
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/files/0.4/zope-config,v 1.5 2004/09/11 20:38:48 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/files/0.4/zope-config,v 1.6 2004/09/18 15:58:05 batlogg Exp $
 #
 #
 # Notes:
@@ -21,10 +21,13 @@ VERSION="0.4"
 CONFIGFILE=/etc/zope-config.conf
 if [ -e ${CONFIGFILE} ]; then
 	source ${CONFIGFILE} 
+    EVENTLOGDIR=`dirname ${EVENTLOGDIR}`/`basename ${EVENTLOGDIR}`
 else
 	echo "Unable to find config file: ${CONFIGFILE}" 1>&2
 	exit 1
 fi
+
+
 
 # Return codes used in this program:
 E_SUCCESS=0
@@ -34,19 +37,25 @@ E_ZILIST=22
 E_PARAM=26
 E_ZSLIST=28
 E_ZIDEFAULT=30
-
+ZUID=''
 #Parameters:
 # $1 = instance directory
 # $2 = group
+# $3 = user
 zinst_security_setup()
 {
 	if [ ${ZOPE27} ] ; then
-		chown -R root:${2} ${1}
+		chown -R ${3}:${2} ${1}
 		chmod -R o-rwx ${1}
-		chmod g+ws ${1}/{var,log}
+        chmod -R g-w ${1}
+		#chmod g+ws ${1}/{var,log}
 		chmod g+rX -R ${1}
+        #set owner and group on log dir
+        chown -R  ${ZUID}:${ZGID_NAME} ${EVENTLOGDIR}/${ZIRC_NAME}
+        # permissions on log dir
+        chmod -R 750 ${EVENTLOGDIR}/${ZIRC_NAME}
 	else
-		chown -R ${ZUID}:${2} ${1}
+		chown -R ${3}:${2} ${1}
 		chmod -R g+u ${1}
 		chmod -R o-rwx ${1}
 		chown root ${1}/var/   # needed if $ZOPE_OPTS='-u root'
@@ -86,6 +95,12 @@ zinst_fs_setup()
 		else
 			${BIN}/mkzopeinstance.py --dir $2
 		fi
+        # create the log directory
+        mkdir ${EVENTLOGDIR}/${ZIRC_NAME}
+        # remove log directory  in skeltarget
+        rm -r $2/log
+        # symlink log directory
+        ln -s ${EVENTLOGDIR}/${ZIRC_NAME} $2/log
 		RESULT=$?
 	else
             if [ $NEWZOPE = 1 ] ; then
@@ -163,8 +178,8 @@ zinst_rc_setup()
 		RESULT=${E_PARAM}
 	elif [ ${ZOPE27} ] ; then
 		install $1/skel/zope.initd ${INITD}/${3}
-		echo "INSTANCE_HOME=${2}" >${CONFD}/$3
-		echo "EVENT_LOG_FILE=${EVENTLOGDIR}/${3}" >>${CONFD}/$3
+		#echo "INSTANCE_HOME=${2}" >${CONFD}/$3
+		#echo "EVENT_LOG_FILE=${EVENTLOGDIR}/${3}" >>${CONFD}/$3
 		sed -i \
 			-e "/^# *effective-user/ a\\effective-user ${ZUID}\\ " \
 			${2}/etc/zope.conf
@@ -344,6 +359,32 @@ zinst_zgid_set()
 	return ${RESULT}
 }
 
+# Gets a name for the user that owns the new zinstance and also creates the
+# group if nessicary, this is the user zope runs as
+zinst_zuid_set()
+{
+	local RESULT=
+	while : ; do
+		ZUID=$(dialog --stdout \
+			--backtitle "We need to create and/or assign a zinstance user name." \
+			--inputbox "Enter a user name:" \
+			0 0 $(basename ${ZIRC_NAME}))			
+		RESULT=$?
+		if [ ${RESULT} -ne 0 ] ; then
+			break
+		elif [ -z ${ZUID} ] ; then
+			dialog --msgbox "Error: empty string." 0 0
+			continue
+		elif egrep "^${ZUID}:" /etc/passwd >/dev/null 2>&1  ;  then
+			dialog --yesno "The user ${ZUID} already exists. Do you want to use it?" 0 0
+			RESULT=$?
+			[ ${RESULT} -ne 0 ] && continue 
+		fi
+		break
+	done
+	return ${RESULT}
+}
+
 # Sets the inituser password for a given zinstance
 zinst_zpasswd_set()
 {
@@ -405,16 +446,17 @@ while [ "$#" -gt 0 ] ; do
 	esac
 
 	case "$1" in
-	--zserv=*) ZSERV_DIR=${OPTARG} ; zserv_version_detect ;;
-	--zinst=*) ZINST_DIR=${OPTARG} ;;
-	--zgid=*)  ZGID_NAME=${OPTARG} ;;
-	--zinituser) ZINIT_USER=inituser ;;
-	--zidef-set) zinst_default_set ; exit $? ;;
-	--zidef-get) zinst_default_get ; exit $? ;;
-	--zpasswd) zinst_zpasswd_set ; exit $? ;;
-	--version) echo ${VERSION} ; exit 0 ;;		
-	-*) usage ; exit 0 ;;
-	*) usage ; exit 0 ;;
+	    --zserv=*) ZSERV_DIR=${OPTARG} ; zserv_version_detect ;;
+	    --zinst=*) ZINST_DIR=${OPTARG} ;;
+	    --zgid=*)  ZGID_NAME=${OPTARG} ;;
+        --zuid=*)  ZUID=${OPTARG} ;;
+	    --zinituser) ZINIT_USER=inituser ;;
+	    --zidef-set) zinst_default_set ; exit $? ;;
+	    --zidef-get) zinst_default_get ; exit $? ;;
+	    --zpasswd) zinst_zpasswd_set ; exit $? ;;
+	    --version) echo ${VERSION} ; exit 0 ;;		
+	    -*) usage ; exit 0 ;;
+	    *) usage ; exit 0 ;;
 	esac
 	shift
 done
@@ -423,29 +465,44 @@ done
 if [ -z ${ZSERV_DIR} ] ; then
 	zserv_dir_get || { echo 'Cancelled: zserv_dir_get' ; exit 1 ; }
 	zserv_version_detect
+else
+    ZSERV_DIR=`dirname ${ZSERV_DIR}`/`basename ${ZSERV_DIR}`
 fi
 
 # if ZINST_DIR passed by command line, call zinst_dir_set to set it
 if [ -z ${ZINST_DIR} ] ; then
 	zinst_dir_set || { echo 'Cancelled: zinst_dir_set' ; exit 1 ; }
+else
+    ZINST_DIR=`dirname ${ZINST_DIR}`/`basename ${ZINST_DIR}`
 fi
 
 # if ZIRC_NAME isn't set then use the base of the ZINST_DIR for ZIRC_NAME
 [ -z ${ZIRC_NAME} ] && ZIRC_NAME=$(basename ${ZINST_DIR})
 
+if [ -z ${ZUID} ] ; then
+	zinst_zuid_set || { echo 'Cancelled: zinst_zuid_set' ; exit 1 ; }
+fi
+
 if [ -z ${ZGID_NAME} ] ; then
 	zinst_zgid_set || { echo 'Cancelled: zinst_zgid_set' ; exit 1 ; }
 fi
+
+
+
 zserv_is_2.7_or_newer ${ZSERV_DIR}
 
+! groupmod ${ZGID_NAME} >/dev/null 2>&1 && groupadd ${ZGID_NAME}
 zinst_fs_setup ${ZSERV_DIR} ${ZINST_DIR} ${ZINIT_USER}
 zinst_rc_setup ${ZSERV_DIR} ${ZINST_DIR} ${ZIRC_NAME}
 
-! groupmod ${ZGID_NAME} >/dev/null 2>&1 && groupadd ${ZGID_NAME}
-# add existing user zope to the new group
-gpasswd -a zope ${ZGID_NAME}
+# create user if needed
+useradd -g ${ZGID_NAME} ${ZUID}
 
-zinst_security_setup ${ZINST_DIR} ${ZGID_NAME}
+
+# add existing user  to the new group
+gpasswd -a ${ZUID} ${ZGID_NAME}
+
+zinst_security_setup ${ZINST_DIR} ${ZGID_NAME} ${ZUID}
 # TODO: see about adding interactive configuration of ZOPE_OPTS
 if [ ${ZOPE27} ] ; then
 	echo "Note: Review settings in ${ZINST_DIR}/etc/zope.conf."

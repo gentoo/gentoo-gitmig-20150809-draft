@@ -1,6 +1,13 @@
 # ChangeLog for app-admin/zope-config
 # Copyright 2003-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/ChangeLog,v 1.24 2004/09/11 20:38:48 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/ChangeLog,v 1.25 2004/09/18 15:58:05 batlogg Exp $
+
+*zope-config-0.4-r3 (18 Sep 2004)
+
+  18 Sep 2004; Jodok Batlogg <batlogg@gentoo.org>; files/0.4/zope-config,
+  +zope-config-0.4-r3.ebuild:
+  let users define the user additionaly to the group under which the instance
+  should run. Thanks to Bernd Dorn for this.
 
 *zope-config-0.4-r2 (11 Sep 2004)
 
