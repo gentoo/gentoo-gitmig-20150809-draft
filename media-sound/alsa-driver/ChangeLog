@@ -1,6 +1,13 @@
 # ChangeLog for media-sound/alsa-driver
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.47 2003/07/29 16:28:29 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/ChangeLog,v 1.48 2003/08/05 21:10:22 johnm Exp $
+
+  05 Aug 2003; John Mylchreest <johnm@gentoo.org>; alsa-driver-0.9.6.ebuild,
+  files/makefile.patch:
+  Updating for 2.6 compliance
+
+  05 Aug 2003; John Mylchreest <johnm@gentoo.org>; alsa-driver-0.9.6.ebuild:
+  Updating for 2.6 compliance
 
   05 Jun 2003; Brandon Low <lostlogic@gentoo.org> alsa-driver-0.9.4-r1.ebuild:
   Make the USE=oss actually do something

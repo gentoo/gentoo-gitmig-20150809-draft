@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.9.6.ebuild,v 1.1 2003/07/29 16:28:29 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.9.6.ebuild,v 1.2 2003/08/05 21:10:22 johnm Exp $
 
 DESCRIPTION="Advanced Linux Sound Architecture kernel modules"
 HOMEPAGE="http://www.alsa-project.org/"
@@ -34,16 +34,10 @@ S=${WORKDIR}/${P}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	# Some *broken* Gentoo packages install stuff in /etc/rc.d/init.d
-	# instead of /etc/init.d.  However, this causes alsa's installer
-	# to do the same foolish thing.	 This *hack* inibits the problem.
-	# I filed a bug report about this with the ALSA people:
-	# http://sourceforge.net/tracker/?func=detail&aid=551668&group_id=27464&atid=390601
-	# Arcady Genkin <agenkin@thpoon.com>
-	sed -e 's:/etc/rc.d/init.d:/etc/init.d:' < Makefile > Makefile.hacked \
-	    || die
-	mv Makefile.hacked Makefile
-
+	# The makefile still installs an alsasound initscript,
+	# which we REALLY dont want.
+	# This patch stops that
+	epatch ${FILESDIR}/makefile.patch
 }
 
 
@@ -71,15 +65,9 @@ src_compile() {
 
 src_install() {
 	dodir /usr/include/sound
-	dodir /etc/init.d
 	make DESTDIR=${D} install || die
 
 	dodoc CARDS-STATUS COPYING FAQ INSTALL README WARNING TODO doc/*
-
-	insinto /etc/modules.d
-	newins ${FILESDIR}/alsa-modules.conf-rc alsa
-	exeinto /etc/init.d
-	doexe ${FILESDIR}/alsasound
 }
 
 pkg_postinst() {
@@ -89,14 +77,10 @@ pkg_postinst() {
 	fi
 
 	einfo
-	einfo "You need to edit file /etc/modules.d/alsa according to your"
-	einfo "hardware configuration."
-	einfo
-	einfo "If you are going to be using the 'alsasound' init script, make sure"
-	einfo "that you add it to the 'boot' runlevel (not 'default')."
+	einfo "The alsasound initscript and modules.d/alsa have now moved to alsa-utils"
 	einfo
 	einfo "Also, remember that all mixer channels will be MUTED by default."
-	einfo "Use 'alsamixer' program to unmute them."
+	einfo "Use the 'alsamixer' program to unmute them."
 	einfo
 }
 

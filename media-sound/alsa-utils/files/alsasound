@@ -1,0 +1,154 @@
+#!/sbin/runscript
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/files/alsasound,v 1.1 2003/08/05 21:07:55 johnm Exp $
+#
+# Gentoo users: add this script to 'boot' run level.
+# ==================================================
+#
+# alsasound     	This shell script takes care of starting and stopping
+#               	the ALSA sound driver.
+#
+# This script requires /usr/sbin/alsactl and /usr/bin/aconnect programs
+# from the alsa-utils package.
+#
+# Copyright (c) by Jaroslav Kysela <perex@suse.cz> 
+#
+#
+#  This program is free software; you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation; either version 2 of the License, or
+#  (at your option) any later version.
+#
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with this program; if not, write to the Free Software
+#  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA
+
+#	Edited to support Linux kernel 2.5 and above as well as 2.4
+#	John Mylchreest <johnm@gentoo.org>
+#	July 29, 2003 
+
+alsactl=/usr/sbin/alsactl
+asoundcfg=/etc/asound.state
+aconnect=/usr/bin/aconnect
+alsascrdir=/etc/alsa.d
+
+depend() {
+  need bootmisc localmount
+  before modules
+  after isapnp
+  provide alsa-modules
+}
+
+start() {
+	if [ -d /proc/asound ] && [ -z "$(grep ' no soundcards ' /proc/asound/cards)" ] ; then
+		ebegin "ALSA Detected"
+	else
+		ebegin "Loading ALSA drivers"
+		
+		# I really dislike this and would like to tidy it up.
+		# Anyone running 2.4 + alsa-driver willing to help me?
+		
+		DRIVERS="$(modprobe -c | grep snd_ | grep pci: | awk '{ print $3 }' | uniq)"
+		if [ -z "${DRIVERS}" ] ; then
+			# Fallback on older modprobe syntax
+			DRIVERS="$(/sbin/modprobe -c | grep -E "^[[:space:]]*alias[[:space:]]+snd-card-[[:digit:]]" | awk '{print $3}')"
+		fi
+		
+		[ -z "${DRIVERS}" ] && eerror "Unable to find any ALSA drivers. Have you compiled alsa-drivers correctly?"
+		[ -n "$(modprobe -l | grep "snd.*oss")" ] && DRIVERS="snd-pcm-oss ${DRIVERS}"
+		
+		for DRIVER in ${DRIVERS}
+		do
+			if [ ! "${DRIVER}" = off ] ; then
+				einfo "Loading: ${DRIVER}"
+				/sbin/modprobe ${DRIVER}
+			fi
+		done
+		
+		sleep 1
+		
+		if [ x"$START_ALSA_SEQ" = xyes -a -r /proc/asound/seq/drivers ]; then
+			SEQUENCERS="$(cut -d , -f 1 /proc/asound/seq/drivers)"
+			for SEQUENCER in ${SEQUENCERS}
+			do
+				einfo "Loading: ${SEQUENCER}"
+				[ ! "x${SEQUENCER}" = "x" ] && /sbin/modprobe ${SEQUENCER}
+			done
+		fi
+		
+		einfo "Running card-dependant scripts"
+		for DRIVER in ${DRIVERS}
+		do
+			TMP=${DRIVER##snd-}
+			[ -x "${alsascrdir}/${TMP}" ] && ${alsascrdir}/${TMP}
+		done
+		
+		[ ! -d /proc/asound ] && eerror "ERROR: Failed to load neccessary drivers"
+	fi
+	
+	einfo "Restoring Mixer Levels"
+	if [ ! -r $asoundcfg ]; then
+		ewarn "No mixer config in $asoundcfg, you have to unmute your card!"
+		eend 1
+	elif [ -x $alsactl ]; then
+		CARDS="$(cat /proc/asound/cards | awk '/: / { print $1 }')"
+		for CARDNUM in ${CARDS}
+		do
+			$alsactl -f $asoundcfg restore ${CARDNUM}
+		done
+	else
+		eerror -e "ERROR: Cannot find alsactl, did you forget to install media-sound/alsa-utils?"
+		eend 1
+	fi
+	eend 0
+}
+
+stop() {
+	if [ ! -d /proc/asound ] ; then
+		error "ALSA is not loaded"
+		return 0
+	fi
+	
+	ebegin "Unloading ALSA"
+	terminate
+	einfo "Storing ALSA Mixer Levels"
+	if [ -x $alsactl ]; then
+		$alsactl -f $asoundcfg store
+	else
+		eerror -e "ERROR: Cannot find alsactl, did you forget to install media-sound/alsa-utils?"
+		eend 1
+	fi
+
+	LOADED_MODULES="$(/sbin/lsmod | grep -E "^snd" | awk '{print $1}')"
+	einfo "Unloading modules"
+	for MODULE in ${LOADED_MODULES}
+	do
+		/sbin/rmmod ${MODULE} 2> /dev/null
+	done
+	/sbin/rmmod soundcore 2> /dev/null
+	/sbin/rmmod gameport 2> /dev/null	
+	eend 0
+}
+
+terminate() {
+	#
+	# Kill processes holding open sound devices
+	#
+	# DEVS=`find /dev/ -follow -type c -maxdepth 1 -print 2>/dev/null | xargs ls -dils | grep "1*1[46]," | cut -d: -f2 | cut -d" " -f2; echo /proc/asound/dev/*`
+	ossdevs="/dev/admmidi? /dev/adsp? /dev/amidi? /dev/audio* /dev/dmfm* \
+			/dev/dmmidi? /dev/dsp* /dev/dspW* /dev/midi0? /dev/mixer? /dev/music \
+			/dev/patmgr? /dev/sequencer* /dev/sndstat"
+	alsadevs="/proc/asound/dev/*"
+	fuser -k $ossdevs $alsadevs 2> /dev/null 1>/dev/null
+	
+	#
+	# remove all sequencer connections if any
+	#
+	[ -f /proc/asound/seq/clients -a -x $aconnect ] && $aconnect --removeall
+}
+
+
