@@ -1,6 +1,13 @@
 # ChangeLog for sec-policy/selinux-courier-imap
-# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-courier-imap/ChangeLog,v 1.6 2004/12/12 11:47:52 kaiowas Exp $
+# Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-courier-imap/ChangeLog,v 1.7 2005/01/06 12:50:04 kaiowas Exp $
+
+*selinux-courier-imap-20050105 (06 Jan 2005)
+
+  06 Jan 2005; petre rodan <kaiowas@gentoo.org>
+  -selinux-courier-imap-20041122.ebuild,
+  +selinux-courier-imap-20050105.ebuild:
+  policy that supports courier-authlib and >=courier-imap-4.0
 
 *selinux-courier-imap-20041122 (12 Dec 2004)
 
