@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/mrxvt-0.3.13-r1.ebuild,v 1.3 2005/03/13 12:43:35 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/mrxvt/mrxvt-0.3.13-r1.ebuild,v 1.4 2005/03/19 09:50:28 kloeri Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SRC_URI="mirror://sourceforge/materm/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc-macos ~amd64 ppc ~alpha"
+KEYWORDS="x86 ppc-macos ~amd64 ppc alpha"
 
 RDEPEND="virtual/libc
 	virtual/x11
