@@ -1,6 +1,14 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.64 2003/08/20 03:45:38 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.65 2003/08/24 14:23:11 azarah Exp $
+
+*binutils-2.14.90.0.6 (24 Aug 2003)
+
+  24 Aug 2003; Martin Schlemmer <azarah@gentoo.org>
+  binutils-2.14.90.0.6.ebuild,
+  files/2.14/binutils-2.14.90.0.5-place-orphan.patch,
+  files/2.14/binutils-2.14.90.0.6-eh-frame-ro.patch:
+  Update version.
 
   20 Aug 2003; Luca Barbato <lu_zero@gentoo.org> binutils-2.14.90.0.5-r1.ebuild:
   Marked ~ppc
