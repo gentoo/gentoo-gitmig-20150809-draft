@@ -1,6 +1,14 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.6 2002/07/26 04:58:40 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.7 2002/08/17 05:29:09 seemant Exp $
+
+*openbox-2.0.0 (16 Aug 2002)
+
+  16 Aug 2002; Seemant Kulleen <seemant@gentoo.org> openbox-2.0.0.ebuild
+  files/digest-openbox-2.0.0 :
+
+  Version bump for newest development openbox.  This one has xinerama
+  support as well.
 
 *openbox-1.2.5_beta20020714-r1 (18 jul 2002)
   24 Jul 2002; Mark Guertin <gerk@gentoo.org> :
