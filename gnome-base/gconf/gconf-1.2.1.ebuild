@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.2.1.ebuild,v 1.8 2002/12/15 10:44:19 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gconf/gconf-1.2.1.ebuild,v 1.9 2003/02/04 15:43:24 foser Exp $
 
 IUSE="doc"
 
@@ -25,7 +25,8 @@ DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.12.0
 	doc? ( dev-util/gtk-doc )"
 
-LIBTOOL_FIX="1"
+# multple jobs fails on alpha (#14280)
+use alpha && MAKEOPTS="-j1"
 
 kill_gconf () {
 	# this function will kill all running gconfd that could be causing troubles
