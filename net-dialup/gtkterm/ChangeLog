@@ -1,0 +1,9 @@
+# ChangeLog for net-dialup/gtkterm
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gtkterm/ChangeLog,v 1.1 2003/07/09 18:12:36 mholzer Exp $
+
+*gtkterm-0.99.3 (09 Jul 2003)
+
+  09 Jul 2003; Martin Holzer <mholzer@gentoo.org> gtkterm-0.99.3.ebuild:
+  Initial ebuild submitted by Zach Bagnall <yem@y3m.net> in #23735.
+
