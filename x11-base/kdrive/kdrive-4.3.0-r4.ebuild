@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0-r3.ebuild,v 1.2 2004/01/21 06:34:31 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/kdrive/kdrive-4.3.0-r4.ebuild,v 1.1 2004/01/27 13:18:14 cyfred Exp $
 
 # If you don't want to build the Xvesa server, do this.
 # VESA="no" emerge kdrive
@@ -56,7 +56,7 @@ SRC_URI="${SRC_PATH}/X${MY_SV}src-1.tgz
 	mirror://gentoo/${P}-gentoo-${PATCHVER}.tar.bz2"
 LICENSE="X11"
 SLOT="0"
-KEYWORDS="~x86 -amd64"
+KEYWORDS="~x86 ~amd64"
 # Need portage for USE_EXPAND
 DEPEND=">=sys-apps/baselayout-1.8.3
 	>=sys-libs/ncurses-5.1
@@ -249,7 +249,7 @@ src_compile() {
 	MY_MAN_BASE="${S}/programs/Xserver/hw/kdrive"
 
 	if ! use fbdev ; then
-		# We need to regenerate some makefiles for fbdev 
+		# We need to regenerate some makefiles for fbdev
 		echo "#define XfbdevServer YES" >> config/cf/host.def
 		cd ${S}/programs && make Makefiles > /dev/null || die "Xfbdev Makefile regeneration error..."
 	fi
@@ -291,7 +291,7 @@ src_install() {
 	doexe ${PATCH_DIR}/startxkd
 
 	# Install man pages
-	if best_version x11-base/xfree ; then
+	if [ "`best_version x11-base/xfree`" ] ; then
 		doman -x11 ${MANDIR}/usr/X11R6/man/man1/X{kdrive,vesa,fbdev}.1x
 	else
 		doman -x11 ${MANDIR}/${S}/usr/X11R6/man/man1/X{kdrive,vesa,fbdev}.1x
