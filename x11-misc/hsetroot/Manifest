@@ -1,14 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 43ea735b8ec2f192e441d783dc159fe9 ChangeLog 333
+MD5 d0086489d7b37dcce92009f71de273b4 ChangeLog 479
+MD5 cdba65f45e96362a7729af594d0be81f hsetroot-1.0.2.ebuild 656
 MD5 c089e4586127d0dda3396887446f8184 metadata.xml 1083
-MD5 75adc9e2f00c2bd891bc845bbadf15ac hsetroot-1.0.2.ebuild 552
 MD5 81d3ac08e2e1dac5362971e4649949fa files/digest-hsetroot-1.0.2 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBsl38I7fK2cqeyXkRAhXxAKDita0XyngXg3ExC1drTxzelyUdqACeN8y3
-7oj9pwmWrs2uBg+VE2JwLdU=
-=EetC
+iD8DBQFBstFII1lqEGTUzyQRAuf/AJ9TYABQUqaAbTn20hOsW8LJ0XhWBgCeN0gU
+imf3b96SkI3Hx4+r0iGn/B0=
+=pbTd
 -----END PGP SIGNATURE-----
