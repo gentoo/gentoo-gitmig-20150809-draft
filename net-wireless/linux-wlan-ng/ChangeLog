@@ -4,7 +4,8 @@
 
   11 Nov 2002; Chad Huneycutt <chadh@gentoo.org> linux-wlan-ng-0.1.16_pre6.ebuild :
 
-  revision bump and misc fixes, once again credit to tprado@charter.net
+  revision bump and misc fixes, credit to Bret Towe <btowe@gbis.com> and
+  tprado@charter.net
 
 *linux-wlan-ng-0.1.16_pre4 (31 Oct 2002)
 
