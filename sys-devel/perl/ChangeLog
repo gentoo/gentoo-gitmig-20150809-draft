@@ -1,8 +1,12 @@
 # ChangeLog for sys-devel/perl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.60 2003/03/01 00:36:05 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/perl/ChangeLog,v 1.61 2003/03/01 22:08:16 lostlogic Exp $
 
 *perl-5.8.0-r10 (28 Feb 2003)
+
+  01 Mar 2003; Brandon Low <lostlogic@gentoo.org> perl-5.8.0-r10.ebuild,
+  perl-5.8.0-r9.ebuild:
+  Make use emake instead of make, but still use 1 process build where needed
 
   28 Feb 2003; <rac@gentoo.org> perl-5.8.0-r10.ebuild:
   Ensure that libpthread is linked against by perl, so that runtime

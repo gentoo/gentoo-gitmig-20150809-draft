@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.0.ebuild,v 1.8 2003/02/27 01:50:23 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libperl/libperl-5.8.0.ebuild,v 1.9 2003/03/01 22:10:36 lostlogic Exp $
 
 # The basic theory based on comments from Daniel Robbins <drobbins@gentoo.org>.
 #
@@ -223,8 +223,8 @@ src_compile() {
 			-Ud_csh \
 			${myconf} || die
 
-		make -f Makefile depend || die "Couldn't make libperl.so depends"
-		make -f Makefile ${LIBPERL} || die "Unable to make libperl.so" 
+		emake -f Makefile depend || die "Couldn't make libperl.so depends"
+		emake -f Makefile ${LIBPERL} || die "Unable to make libperl.so" 
 		mv ${LIBPERL} ${WORKDIR}
 	else
 cat > config.over <<EOF
@@ -262,9 +262,9 @@ sleep 10
 			-Ud_csh \
 			${myconf} || die "Unable to configure"
 			
-		make || die "Unable to make"
+		MAKEOPTS="${MAKEOPTS} -j1" emake || die "Unable to make"
 	
-		make -i test CCDLFLAGS=
+		emake -i test CCDLFLAGS=
 	fi
 }
 
