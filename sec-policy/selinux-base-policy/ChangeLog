@@ -1,6 +1,13 @@
 # ChangeLog for sec-policy/selinux-base-policy
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.12 2004/01/08 04:37:06 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-base-policy/ChangeLog,v 1.13 2004/02/03 03:07:28 pebenito Exp $
+
+*selinux-base-policy-20040202 (02 Feb 2004)
+
+  02 Feb 2004; Chris PeBenito <pebenito@gentoo.org>
+  selinux-base-policy-20040202.ebuild:
+  A few misc fixes. Allow portage to update bootloader code, such as in lilo or
+  grub postinst. This requires checkpolicy 1.4-r1.
 
 *selinux-base-policy-20031225 (25 Dec 2003)
 
