@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/URI
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.24 2004/07/30 15:42:00 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/URI/ChangeLog,v 1.25 2004/08/06 18:00:41 gustavoz Exp $
+
+  06 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org> URI-1.30.ebuild:
+  keyworded ppc64 to satisfy perl_ldap and hence samba
 
 *URI-1.31 (30 Jul 2004)
 

@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/Convert-ASN1
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-ASN1/ChangeLog,v 1.10 2004/06/25 00:15:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Convert-ASN1/ChangeLog,v 1.11 2004/08/06 17:56:14 gustavoz Exp $
+
+  06 Aug 2004; Gustavo Zacarias <gustavoz@gentoo.org>
+  Convert-ASN1-0.18.ebuild:
+  keyworded ppc64 to satisfy perl_ldap and hence samba
 
 *Convert-ASN1-0.18 (05 Jun 2004)
 
