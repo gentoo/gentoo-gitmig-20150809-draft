@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-1.5.93.ebuild,v 1.1 2004/08/24 15:07:15 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-client/evolution/evolution-1.5.93.ebuild,v 1.2 2004/08/25 11:35:47 tseng Exp $
 
 inherit eutils virtualx gnome2 debug flag-o-matic
 
@@ -117,7 +117,7 @@ src_compile() {
 	Xemake || Xmake || die "make failed"
 }
 
-_pkg_postinst() {
+pkg_postinst() {
 	gnome2_gconf_install ${GCONFFILEPATH}
 	einfo "To change the default browser if you are not using GNOME, do:"
 	einfo "gconftool-2 --set /desktop/gnome/url-handlers/http/command -t string 'mozilla %s'"
