@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/mod_python
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/mod_python/ChangeLog,v 1.1 2002/10/21 12:43:23 phoenix Exp $
+
+*mod_python-2.7.8 (21 Oct 2002)
+
+  21 Oct 2002; phoen][x <phoenix@gentoo.org> ChangeLog, mod_python-2.7.8.ebuild,
+  files/digest-mod_python-2.7.8, files/mod_python.conf, files/patch-2.7.8.diff : 
+
+  Initial import. Use this ebuild to add python support to your apache webserver.
