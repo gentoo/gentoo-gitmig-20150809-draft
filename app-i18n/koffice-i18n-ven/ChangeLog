@@ -1,0 +1,9 @@
+# ChangeLog for app-i18n/koffice-i18n-ven
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n-ven/ChangeLog,v 1.1 2002/09/17 20:15:41 danarmak Exp $
+
+*koffice-i18n-ven-1.2 (17 Sep 2002)
+
+  17 Sep 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  Added ebuild for language ven koffice i18n files.

@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/koffice-i18n-mt
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n-mt/ChangeLog,v 1.1 2002/02/01 21:53:06 gbevin Exp $
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/koffice-i18n-mt/ChangeLog,v 1.2 2002/09/17 20:15:40 danarmak Exp $
+
+*koffice-i18n-mt-1.2 (17 Sep 2002)
+
+  17 Sep 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
+
+  New version for koffice 1.2.
 
 *koffice-i18n-mt-1.1.1 (1 Feb 2002)
 
