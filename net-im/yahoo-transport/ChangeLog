@@ -1,6 +1,10 @@
 # ChangeLog for net-im/yahoo-transport
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/yahoo-transport/ChangeLog,v 1.17 2004/07/06 11:32:45 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/yahoo-transport/ChangeLog,v 1.18 2004/07/07 19:10:46 humpback Exp $
+
+  07 Jul 2004; Gustavo Felisberto <humpback@gentoo.org>;
+  yahoo-transport-2.3.1-r1.ebuild:
+  Stable on hppa so that deps dont break
 
 *yahoo-transport-2.3.2 (06 Jul 2004)
 
