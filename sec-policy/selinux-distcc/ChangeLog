@@ -1,6 +1,12 @@
 # ChangeLog for sec-policy/selinux-distcc
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-distcc/ChangeLog,v 1.4 2003/11/02 05:12:50 pebenito Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sec-policy/selinux-distcc/ChangeLog,v 1.5 2004/01/29 05:16:27 pebenito Exp $
+
+*selinux-distcc-20040128 (28 Jan 2004)
+
+  28 Jan 2004; Chris PeBenito <pebenito@gentoo.org>
+  selinux-distcc-20040128.ebuild:
+  Update because of changes in base-policy.
 
 *selinux-distcc-20031101 (01 Nov 2003)
 
