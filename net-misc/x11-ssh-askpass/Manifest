@@ -1,0 +1,6 @@
+MD5 f1145afbe88dbd185a77bd7495e382f9 ChangeLog 1389
+MD5 ecfe2a86ba5b4fce54b01b0d6fc9d4a2 x11-ssh-askpass-1.2.2-r1.ebuild 1055
+MD5 3603e9afa8b01a21f709d73a674e0376 x11-ssh-askpass-1.2.2.ebuild 1069
+MD5 a507a3e3da835a4e8d763cdea183d071 files/digest-x11-ssh-askpass-1.2.2 72
+MD5 a507a3e3da835a4e8d763cdea183d071 files/digest-x11-ssh-askpass-1.2.2-r1 72
+MD5 1a90e521c0674c6fd9a34b9c6ebfcb62 files/stupid-imake.diff 548
