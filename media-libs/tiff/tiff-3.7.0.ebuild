@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.7.0.ebuild,v 1.5 2004/12/16 05:45:39 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/tiff/tiff-3.7.0.ebuild,v 1.6 2004/12/17 06:28:52 vapier Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://dl.maptools.org/dl/libtiff/${P}.tar.gz"
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~mips alpha ~arm ~hppa amd64 ~ia64 ~s390 ~ppc-macos ~ppc64"
+KEYWORDS="alpha amd64 arm hppa ia64 ~mips ~ppc ~ppc64 ~ppc-macos s390 sparc x86"
 IUSE=""
 
 DEPEND=">=media-libs/jpeg-6b
@@ -21,6 +21,7 @@ src_unpack() {
 	cd ${S}
 	epatch ${FILESDIR}/${P}-sharedlibsnamefix.patch
 	epatch ${FILESDIR}/${P}-tiff2ps_float.patch
+	epunt_cxx
 }
 
 src_compile() {
@@ -29,7 +30,6 @@ src_compile() {
 }
 
 src_install() {
-	make install DESTDIR=${D} || die "make install failed"
+	make install DESTDIR="${D}" || die "make install failed"
 	dodoc README TODO VERSION
 }
-
