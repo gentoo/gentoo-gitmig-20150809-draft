@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/mailbase-0.00-r4.ebuild,v 1.17 2004/07/15 01:50:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailbase/mailbase-0.00-r4.ebuild,v 1.18 2005/01/18 13:26:24 kumba Exp $
 
 S=${WORKDIR}
 DESCRIPTION="MTA layout package"
