@@ -1,6 +1,17 @@
 # ChangeLog for net-misc/hylafax
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.1 2002/02/01 21:53:35 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/hylafax/ChangeLog,v 1.2 2002/04/24 05:13:00 seemant Exp $
+
+*hylafax-4.1.2 (23 Apr 2002)
+
+  22 Apr 2002; Seemant Kulleen <seemant@gentoo.org> hylafax-4.1.2.ebuild
+  files/hylafax-4.1.2-gentoo-diffs.tar.bz2 files/digest-hylafax-4.1.2 :
+
+  Updated to newest stable release.  This is a pain to build because it requires
+  a lower GNU/sed version than we have in portage.  So, GNU/sed-3.02 is fetched
+  and built statically, so that it can be used to configure hylafax.  The
+  other patches are taken from Mandrake's srpm for 4.1.1, but seems to work well
+  with this.
 
 *hylafax-cvs-000614-r1 (1 Feb 2002)
 
