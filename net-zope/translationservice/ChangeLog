@@ -1,0 +1,13 @@
+# ChangeLog for net-zope/translationservice
+# Copyright 2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/translationservice/ChangeLog,v 1.1 2003/03/03 22:47:55 kutsuya Exp $
+
+*translationservice-0.3 (18 Feb 2003)
+
+  03 Mar 2003; Jason Shoemaker <kutsuya@gentoo.org> : Moving from net-www to 
+  net-zope.
+
+  18 Feb 2003; Jason Shoemaker <kutsuya@gentoo.org> : Initial import.
+ 
+
+ 
