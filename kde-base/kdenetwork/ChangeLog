@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdenetwork
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.83 2004/05/17 23:26:56 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/ChangeLog,v 1.84 2004/05/24 03:07:05 dostrow Exp $
+
+  23 May 2004; Daniel Ostrow <dostrow@gentoo.org> kdenetwork-3.2.2.ebuild:
+  Stable on ppc.
 
   17 May 2004; Caleb Tennis <caleb@gentoo.org> kdenetwork-3.2.2.ebuild:
   Add wlan use flag support
