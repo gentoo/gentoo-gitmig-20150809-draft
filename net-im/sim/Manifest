@@ -6,6 +6,7 @@ MD5 dda5a646edf49b2e43100f5d52176056 sim-0.8.ebuild 1121
 MD5 ed35ac8c5b198a7d5a063c589552ae1e sim-0.8.2.ebuild 1256
 MD5 7b7a835120984646d6f257b9fb323a78 sim-0.8.2-r2.ebuild 1361
 MD5 dcc143c0cb4d0a0da3e4b0a7be6e02a1 sim-0.8.3.ebuild 1383
+MD5 37236013e0d26d43c6bff35a8a48e8ec metadata.xml 220
 MD5 70f338fa515789e891aee9725c524201 files/digest-sim-0.8.2 62
 MD5 b48c0b16be6c9e590da0440cc946e90d files/digest-sim-0.6 60
 MD5 224e22f4b01fda60c071163ea009d91d files/digest-sim-0.7 60
