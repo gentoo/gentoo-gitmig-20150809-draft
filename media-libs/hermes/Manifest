@@ -1,9 +1,9 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 bab2f8bb961acce046ea4b185cd65653 hermes-1.3.3.ebuild 1308
+MD5 e4ce14dc98319f0755f387ae650fc026 hermes-1.3.3.ebuild 1305
 MD5 bf16398a272ab990f4ad2da0a91a2fd0 hermes-1.3.2-r2.ebuild 1390
-MD5 79ed04d05f2a93244e232ba9ab0318ee ChangeLog 3571
+MD5 a57f5fde0e9d3cd4fcbf7af75094c656 ChangeLog 3680
 MD5 fc46488f83981e35d8d604100d4495be metadata.xml 227
 MD5 ef39ed830f1e73b4f498305847dc5b9d files/digest-hermes-1.3.2-r2 64
 MD5 e314b1d068911c6643ee6c7b4ecbd1ae files/hermes-1.3.2-amd64.patch 6804
@@ -14,7 +14,7 @@ MD5 81d27e818f30f5421ceef7b5dd07131f files/hermes-1.3.3-destdir.patch 989
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBwe5zArHZZzCEUG0RAq4WAJ9KP2RBBsoVhx9Ri9eAC+ygC+fMXwCeKR4B
-xdUb3ygze3GK8vxtDiq0Uog=
-=wQbp
+iD8DBQFBxQozArHZZzCEUG0RArfVAJoCdDC/8v6R15i5pL3L1BPCRlu0mwCdGik5
+VsIoOF2H4+ZpssNl6WnL+LA=
+=sgzQ
 -----END PGP SIGNATURE-----
