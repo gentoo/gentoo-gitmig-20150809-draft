@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.42.ebuild,v 1.2 2003/04/24 16:13:33 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/rrdtool/rrdtool-1.0.42.ebuild,v 1.3 2003/04/24 16:19:59 mholzer Exp $
 
 inherit perl-module
 
 DESCRIPTION="A system to store and display time-series data"
 SRC_URI="http://people.ee.ethz.ch/%7Eoetiker/webtools/${PN}/pub/${P}.tar.gz"
-HOMEPAGE="http://ee-staff.ethz.ca/~oetiker/webtools/rrdtool/"
+HOMEPAGE="http://people.ee.ethz.ch/~oetiker/webtools/rrdtool/"
 
 SLOT="0"
 LICENSE="GPL-2"
