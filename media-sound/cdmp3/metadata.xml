@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>no-herd</herd>
+<longdescription>
+cdmp3 uses cdparanoia or cdda2wav to extract single tracks or even a
+whole CD and converts them on-the-fly into MP3 or Ogg Vorbis files.
+Using the CDDB database it is possible to include information like the
+artist's name or the track's title into the file name or as meta tags
+into the file content.
+</longdescription>
+</pkgmetadata>
