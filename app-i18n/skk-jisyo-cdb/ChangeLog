@@ -1,6 +1,11 @@
 # ChangeLog for app-i18n/skk-jisyo-cdb
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo-cdb/ChangeLog,v 1.7 2004/01/04 10:38:14 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo-cdb/ChangeLog,v 1.8 2004/03/31 19:54:14 usata Exp $
+
+*skk-jisyo-cdb-200404 (01 Apr 2004)
+
+  01 Apr 2004; Mamoru KOMACHI <usata@gentoo.org> skk-jisyo-cdb-200404.ebuild:
+  New CVS snapshot
 
 *skk-jisyo-cdb-200401 (04 Jan 2004)
 
