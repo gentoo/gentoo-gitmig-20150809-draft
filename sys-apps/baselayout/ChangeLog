@@ -1,9 +1,20 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.131 2004/04/21 23:29:41 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.132 2004/04/25 22:45:22 agriffis Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+*baselayout-1.8.12 (25 Apr 2004)
+
+  25 Apr 2004; Aron Griffis <agriffis@gentoo.org> +baselayout-1.8.12.ebuild:
+  - Fix bug 40987 (gentoo should be able to boot with an empty /dev)
+    with patch from Spanky.  The patch avoids redirection to /dev/null
+    when it doesn't exist; this was breaking /sbin/rc.
+  - Fix bug 48629 (/sbin/rc fixups for udev) with patch from GregKH
+  - Fix typos in sbin/rc: "try try mount" and "mount ... & >/dev/null"
+    Also removed the errstr double-checking since the need for that is
+    alleviated by these typo fixes.
 
   21 Apr 2004; <rac@gentoo.org> baselayout-1.8.11.ebuild:
   Add needed extra () to RDEPEND
