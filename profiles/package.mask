@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# <nitro@gentoo.org> (05 Aug 2002)
+# masked for testing -- new features
+=net-dns/bind-9.2.1-r2
+
 # <mcummings@gentoo.org> (05 Aug 2002)
 # made workable in cross perl version
 # masked for testing
