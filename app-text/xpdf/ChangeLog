@@ -1,6 +1,12 @@
 # ChangeLog for app-text/xpdf
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.49 2004/10/25 19:48:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xpdf/ChangeLog,v 1.50 2004/11/01 14:00:28 lanius Exp $
+
+*xpdf-3.00-r5 (01 Nov 2004)
+
+  01 Nov 2004; <heino@gentoo.org> +files/xpdf-goo-sizet.patch,
+  +xpdf-3.00-r5.ebuild:
+  add security fix on 64bit platforms, bug #69662
 
   27 Oct 2004; Aron Griffis <agriffis@gentoo.org> xpdf-3.00-r4.ebuild:
   stable on ia64 #68661
