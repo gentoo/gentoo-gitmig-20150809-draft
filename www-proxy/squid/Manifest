@@ -8,7 +8,7 @@ MD5 d7dd06078d4f3a44b46709294cc7bc21 metadata.xml 249
 MD5 60b9ab4d53c4485a214baa7c8f9a2cc0 files/squid-2.4.7-gentoo.diff 1828
 MD5 a188814c2113dcd28c55672dbe58df8c files/squid-2.5.5-ntml-auth-fix.patch 2354
 MD5 80e89eba8200ffbdf4afe8fc3c0dcd0e files/digest-squid-2.5.5-r2 71
-MD5 cd17ad8190576ce543d6573199bd3f01 files/digest-squid-2.5.5-r3 147
+MD5 45bf3c4b37515fe4da4ed6d39904132d files/digest-squid-2.5.5-r3 147
 MD5 3794efc63eff1b0c9140d2396ca83e4d files/digest-squid-2.5.6-r1 147
 MD5 6e37fe3047234060fc63d5c16a4b7853 files/squid.confd 437
 MD5 1ee97d797645814f5ad77c98ad10eef2 files/squid.cron 41
