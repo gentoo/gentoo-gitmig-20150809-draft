@@ -1,6 +1,9 @@
 # ChangeLog for net-dns/bind
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.46 2004/07/11 13:35:37 jforman Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dns/bind/ChangeLog,v 1.47 2004/07/11 14:26:28 jforman Exp $
+
+  11 Jul 2004; Jeffrey Forman <jforman@gentoo.org> bind-9.2.2-r3.ebuild:
+  bind-9.2.2-r3 stable on x86
 
 *bind-9.3.0_rc2 (11 Jul 2004)
 
