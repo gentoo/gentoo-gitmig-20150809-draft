@@ -1,0 +1,475 @@
+
+Add support for nfsv4 to mount
+
+
+ mount/Makefile     |    4 
+ mount/mount.c      |   13 ++
+ mount/nfs4_mount.h |   82 +++++++++++++
+ mount/nfs4mount.c  |  323 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+ mount/sundries.h   |    2 
+ 5 files changed, 422 insertions(+), 2 deletions(-)
+
+diff -puN mount/Makefile~nfsv4 mount/Makefile
+--- util-linux-2.11z/mount/Makefile~nfsv4	2003-04-23 16:40:57.000000000 -0400
++++ util-linux-2.11z-bfields/mount/Makefile	2003-04-23 16:40:57.000000000 -0400
+@@ -25,8 +25,8 @@ PROGS = $(SUID_PROGS) $(NOSUID_PROGS)
+ MAYBE = pivot_root swapoff
+ 
+ LO_OBJS = lomount.o $(LIB)/xstrncpy.o sha512.o rmd160.o
+-NFS_OBJS = nfsmount.o nfsmount_xdr.o nfsmount_clnt.o
+-GEN_FILES = nfsmount.h nfsmount_xdr.c nfsmount_clnt.c
++NFS_OBJS = nfsmount.o nfsmount_xdr.o nfsmount_clnt.o nfs4mount.o
++GEN_FILES = nfsmount.h nfsmount_xdr.c nfsmount_clnt.c nfs4mount.c
+ 
+ all: $(PROGS)
+ 
+diff -puN mount/mount.c~nfsv4 mount/mount.c
+--- util-linux-2.11z/mount/mount.c~nfsv4	2003-04-23 16:40:57.000000000 -0400
++++ util-linux-2.11z-bfields/mount/mount.c	2003-04-23 16:40:57.000000000 -0400
+@@ -803,6 +803,19 @@ retry_nfs:
+ 	              "without support for the type `nfs'"));
+ #endif
+   }
++#ifdef HAVE_NFS
++  /*
++   * NFSv4 support
++   */
++  if (!fake && types && streq (types, "nfs4")) {
++    mnt_err = nfs4mount(spec, node, &flags, &extra_opts, &mount_opts, bg);
++    if (mnt_err)
++      return mnt_err;
++#else
++    die (EX_SOFTWARE, _("mount: this version was compiled "
++	              "without support for the type `nfs4'"));
++#endif
++  }
+ 
+   block_signals (SIG_BLOCK);
+ 
+diff -puN /dev/null mount/nfs4_mount.h
+--- /dev/null	2003-01-08 17:56:04.000000000 -0500
++++ util-linux-2.11z-bfields/mount/nfs4_mount.h	2003-04-23 16:40:57.000000000 -0400
+@@ -0,0 +1,82 @@
++#ifndef _LINUX_NFS4_MOUNT_H
++#define _LINUX_NFS4_MOUNT_H
++
++/*
++ *  linux/include/linux/nfs4_mount.h
++ *
++ *  Copyright (C) 2002  Trond Myklebust
++ *
++ *  structure passed from user-space to kernel-space during an nfsv4 mount
++ */
++
++/*
++ * WARNING!  Do not delete or change the order of these fields.  If
++ * a new field is required then add it to the end.  The version field
++ * tracks which fields are present.  This will ensure some measure of
++ * mount-to-kernel version compatibility.  Some of these aren't used yet
++ * but here they are anyway.
++ */
++#define NFS4_MOUNT_VERSION	1
++
++struct nfs_string {
++	unsigned int len;
++	const char* data;
++};
++
++struct nfs4_mount_data {
++	int version;				/* 1 */
++	int flags;				/* 1 */
++	int rsize;				/* 1 */
++	int wsize;				/* 1 */
++	int timeo;				/* 1 */
++	int retrans;				/* 1 */
++	int acregmin;				/* 1 */
++	int acregmax;				/* 1 */
++	int acdirmin;				/* 1 */
++	int acdirmax;				/* 1 */
++
++	/* see the definition of 'struct clientaddr4' in RFC3010 */
++	struct nfs_string client_addr;		/* 1 */
++
++	/* Mount path */
++	struct nfs_string mnt_path;		/* 1 */
++
++	/* Server details */
++	struct nfs_string hostname;		/* 1 */
++	/* Server IP address */
++	unsigned int host_addrlen;		/* 1 */
++	struct sockaddr* host_addr;		/* 1 */
++
++	/* Transport protocol to use */
++	int proto;				/* 1 */
++
++	/* Pseudo-flavours to use for authentication. See RFC2623 */
++	int auth_flavourlen;			/* 1 */
++	int *auth_flavours;			/* 1 */
++};
++
++/* bits in the flags field */
++/* Note: the fields that correspond to existing NFSv2/v3 mount options
++ * 	 should mirror the values from include/linux/nfs_mount.h
++ */
++
++#define NFS4_MOUNT_SOFT		0x0001	/* 1 */
++#define NFS4_MOUNT_INTR		0x0002	/* 1 */
++#define NFS4_MOUNT_NOCTO	0x0010	/* 1 */
++#define NFS4_MOUNT_NOAC		0x0020	/* 1 */
++#define NFS4_MOUNT_STRICTLOCK	0x1000	/* 1 */
++#define NFS4_MOUNT_FLAGMASK	0xFFFF
++
++/* pseudoflavors: */
++
++#define RPC_AUTH_GSS_KRB5       390003
++#define RPC_AUTH_GSS_KRB5I      390004
++#define RPC_AUTH_GSS_KRB5P      390005
++#define RPC_AUTH_GSS_LKEY       390006
++#define RPC_AUTH_GSS_LKEYI      390007
++#define RPC_AUTH_GSS_LKEYP      390008
++#define RPC_AUTH_GSS_SPKM       390009
++#define RPC_AUTH_GSS_SPKMI      390010
++#define RPC_AUTH_GSS_SPKMP      390011
++
++#endif
+diff -puN /dev/null mount/nfs4mount.c
+--- /dev/null	2003-01-08 17:56:04.000000000 -0500
++++ util-linux-2.11z-bfields/mount/nfs4mount.c	2003-04-23 17:28:54.000000000 -0400
+@@ -0,0 +1,323 @@
++/*
++ * nfs4mount.c -- Linux NFS mount
++ * Copyright (C) 2002 Trond Myklebust <trond.myklebust@fys.uio.no>
++ *
++ * This program is free software; you can redistribute it and/or modify
++ * it under the terms of the GNU General Public License as published by
++ * the Free Software Foundation; either version 2, or (at your option)
++ * any later version.
++ *
++ * This program is distributed in the hope that it will be useful,
++ * but WITHOUT ANY WARRANTY; without even the implied warranty of
++ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ * GNU General Public License for more details.
++ *
++ * Note: this file based on the original nfsmount.c
++ */
++
++#include "../defines.h"	/* for HAVE_rpcsvc_nfs_prot_h and HAVE_inet_aton */
++
++#include <linux/posix_types.h>
++#include <asm/posix_types.h>
++#undef __FD_CLR
++#undef __FD_SET
++#undef __FD_ISSET
++#undef __FD_ZERO
++
++#include <unistd.h>
++#include <stdio.h>
++#include <string.h>
++#include <errno.h>
++#include <netdb.h>
++#include <time.h>
++#include <sys/socket.h>
++#include <sys/time.h>
++#include <sys/utsname.h>
++#include <sys/stat.h>
++#include <netinet/in.h>
++#include <arpa/inet.h>
++
++#include "sundries.h"
++
++#include "mount_constants.h"
++#include "nfs4_mount.h"
++
++#include "nls.h"
++
++#ifndef NFS_PORT
++#define NFS_PORT 2049
++#endif
++
++static int parse_devname(char *hostdir, char **hostname, char **dirname)
++{
++	char *s;
++
++	if (!(s = strchr(hostdir, ':'))) {
++		fprintf(stderr,
++			_("mount: "
++			  "directory to mount not in host:dir format\n"));
++		return -1;
++	}
++	*hostname = hostdir;
++	*dirname = s + 1;
++	*s = '\0';
++	/* Ignore all but first hostname in replicated mounts
++	   until they can be fully supported. (mack@sgi.com) */
++	if ((s = strchr(hostdir, ','))) {
++		*s = '\0';
++		fprintf(stderr,
++			_("mount: warning: "
++			  "multiple hostnames not supported\n"));
++	}
++	return 0;
++}
++
++static int fill_ipv4_sockaddr(const char *hostname, struct sockaddr_in *addr)
++{
++	struct hostent *hp;
++	addr->sin_family = AF_INET;
++
++	if (inet_aton(hostname, &addr->sin_addr))
++		return 0;
++	if ((hp = gethostbyname(hostname)) == NULL) {
++		fprintf(stderr, _("mount: can't get address for %s\n"),
++			hostname);
++		return -1;
++	}
++	if (hp->h_length > sizeof(struct in_addr)) {
++		fprintf(stderr,
++			_("mount: got bad hp->h_length\n"));
++		hp->h_length = sizeof(struct in_addr);
++	}
++	memcpy(&addr->sin_addr, hp->h_addr, hp->h_length);
++	return 0;
++}
++
++static int get_my_ipv4addr(char *ip_addr, int len)
++{
++	char myname[1024];
++	struct sockaddr_in myaddr;
++
++	if (gethostname(myname, sizeof(myname))) {
++		fprintf(stderr, _("mount: can't determine client address\n"));
++		return -1;
++	}
++	if (fill_ipv4_sockaddr(myname, &myaddr))
++		return -1;
++	snprintf(ip_addr, len, "%s", inet_ntoa(myaddr.sin_addr));
++	ip_addr[len-1] = '\0';
++	return 0;
++}
++
++int nfs4mount(const char *spec, const char *node, int *flags,
++	      char **extra_opts, char **mount_opts,
++	      int running_bg)
++{
++	static struct nfs4_mount_data data;
++	static char hostdir[1024];
++	static char ip_addr[16] = "127.0.0.1";
++	static struct sockaddr_in server_addr;
++	static int pseudoflavour = 0;
++
++	char *hostname, *dirname, *old_opts;
++	char new_opts[1024];
++	char *opt, *opteq;
++	char *s;
++	int val;
++	int port, bg, soft, intr;
++	int nocto, noac;
++	int retry;
++	int retval;
++
++	retval = EX_FAIL;
++	if (strlen(spec) >= sizeof(hostdir)) {
++		fprintf(stderr, _("mount: "
++				  "excessively long host:dir argument\n"));
++		goto fail;
++	}
++	strcpy(hostdir, spec);
++	if (parse_devname(hostdir, &hostname, &dirname))
++		goto fail;
++
++	if (fill_ipv4_sockaddr(hostname, &server_addr))
++		goto fail;
++	if (get_my_ipv4addr(ip_addr, sizeof(ip_addr)))
++		goto fail;
++
++	/* add IP address to mtab options for use when unmounting */
++	s = inet_ntoa(server_addr.sin_addr);
++	old_opts = *extra_opts;
++	if (!old_opts)
++		old_opts = "";
++	if (strlen(old_opts) + strlen(s) + 10 >= sizeof(new_opts)) {
++		fprintf(stderr, _("mount: "
++				  "excessively long option argument\n"));
++		goto fail;
++	}
++	snprintf(new_opts, sizeof(new_opts), "%s%saddr=%s",
++		 old_opts, *old_opts ? "," : "", s);
++	*extra_opts = xstrdup(new_opts);
++
++	/* Set default options.
++	 * rsize/wsize and timeo are left 0 in order to
++	 * let the kernel decide.
++	 */
++	memset(&data, 0, sizeof(data));
++	data.retrans	= 3;
++	data.acregmin	= 3;
++	data.acregmax	= 60;
++	data.acdirmin	= 30;
++	data.acdirmax	= 60;
++	data.proto	= IPPROTO_TCP;
++
++	bg = 0;
++	soft = 0;
++	intr = 0;
++	nocto = 0;
++	noac = 0;
++	retry = 10000;		/* 10000 minutes ~ 1 week */
++
++	/*
++	 * NFSv4 specifies that the default port should be 2049
++	 */
++	port = NFS_PORT;
++
++	/* parse options */
++
++	for (opt = strtok(old_opts, ","); opt; opt = strtok(NULL, ",")) {
++		if ((opteq = strchr(opt, '='))) {
++			val = atoi(opteq + 1);	
++			*opteq = '\0';
++			if (!strcmp(opt, "rsize"))
++				data.rsize = val;
++			else if (!strcmp(opt, "wsize"))
++				data.wsize = val;
++			else if (!strcmp(opt, "timeo"))
++				data.timeo = val;
++			else if (!strcmp(opt, "retrans"))
++				data.retrans = val;
++			else if (!strcmp(opt, "acregmin"))
++				data.acregmin = val;
++			else if (!strcmp(opt, "acregmax"))
++				data.acregmax = val;
++			else if (!strcmp(opt, "acdirmin"))
++				data.acdirmin = val;
++			else if (!strcmp(opt, "acdirmax"))
++				data.acdirmax = val;
++			else if (!strcmp(opt, "actimeo")) {
++				data.acregmin = val;
++				data.acregmax = val;
++				data.acdirmin = val;
++				data.acdirmax = val;
++			}
++			else if (!strcmp(opt, "retry"))
++				retry = val;
++			else if (!strcmp(opt, "port"))
++				port = val;
++			else if (!strcmp(opt, "proto")) {
++				if (!strncmp(opteq+1, "tcp", 3))
++					data.proto = IPPROTO_TCP;
++				else if (!strncmp(opteq+1, "udp", 3))
++					data.proto = IPPROTO_UDP;
++				else
++					printf(_("Warning: Unrecognized proto= option.\n"));
++			} else if (!strcmp(opt, "clientaddr")) {
++				if (strlen(opteq+1) >= sizeof(ip_addr))
++					printf(_("Invalid client address %s"),
++								opteq+1);
++				strncpy(ip_addr,opteq+1, sizeof(ip_addr));
++				ip_addr[sizeof(ip_addr)-1] = '\0';
++			} else if (!strcmp(opt, "sec")) {
++				if (!strncmp(opteq+1, "krb5i",5))
++					pseudoflavour = 390004;
++				else if (!strncmp(opteq+1, "krb5p",5))
++					pseudoflavour = 390005;
++				else if (!strncmp(opteq+1, "krb5",4))
++					pseudoflavour = 390003;
++				else {
++					printf(_("unknown security type %s\n"),
++							opteq+1);
++					goto fail;
++				}
++			} else if (!strcmp(opt, "addr")) {
++				/* ignore */;
++			} else {
++				printf(_("unknown nfs mount parameter: "
++					 "%s=%d\n"), opt, val);
++				goto fail;
++			}
++		} else {
++			val = 1;
++			if (!strncmp(opt, "no", 2)) {
++				val = 0;
++				opt += 2;
++			}
++			if (!strcmp(opt, "bg")) 
++				bg = val;
++			else if (!strcmp(opt, "fg")) 
++				bg = !val;
++			else if (!strcmp(opt, "soft"))
++				soft = val;
++			else if (!strcmp(opt, "hard"))
++				soft = !val;
++			else if (!strcmp(opt, "intr"))
++				intr = val;
++			else if (!strcmp(opt, "cto"))
++				nocto = !val;
++			else if (!strcmp(opt, "ac"))
++				noac = !val;
++			else {
++				if (!sloppy) {
++					printf(_("unknown nfs mount option: "
++						 "%s%s\n"), val ? "" : "no", opt);
++					goto fail;
++				}
++			}
++		}
++	}
++
++	data.flags = (soft ? NFS4_MOUNT_SOFT : 0)
++		| (intr ? NFS4_MOUNT_INTR : 0)
++		| (nocto ? NFS4_MOUNT_NOCTO : 0)
++		| (noac ? NFS4_MOUNT_NOAC : 0);
++
++	if (pseudoflavour != 0) {
++		data.auth_flavourlen = 1;
++		data.auth_flavours = &pseudoflavour;
++	}
++
++	data.client_addr.data = ip_addr;
++	data.client_addr.len = strlen(ip_addr);
++
++	data.mnt_path.data = dirname;
++	data.mnt_path.len = strlen(dirname);
++
++	data.hostname.data = hostname;
++	data.hostname.len = strlen(hostname);
++	data.host_addr = (struct sockaddr *)&server_addr;
++	data.host_addrlen = sizeof(server_addr);
++
++#ifdef NFS_MOUNT_DEBUG
++	printf("rsize = %d, wsize = %d, timeo = %d, retrans = %d\n",
++	       data.rsize, data.wsize, data.timeo, data.retrans);
++	printf("acreg (min, max) = (%d, %d), acdir (min, max) = (%d, %d)\n",
++	       data.acregmin, data.acregmax, data.acdirmin, data.acdirmax);
++	printf("port = %d, bg = %d, retry = %d, flags = %.8x\n",
++	       port, bg, retry, data.flags);
++	printf("soft = %d, intr = %d, nocto = %d, noac = %d\n",
++	       (data.flags & NFS4_MOUNT_SOFT) != 0,
++	       (data.flags & NFS4_MOUNT_INTR) != 0,
++	       (data.flags & NFS4_MOUNT_NOCTO) != 0,
++	       (data.flags & NFS4_MOUNT_NOAC) != 0);
++	printf("proto = %s\n", (data.proto == IPPROTO_TCP) ? "tcp" : "udp");
++#endif
++
++	data.version = NFS4_MOUNT_VERSION;
++
++	*mount_opts = (char *) &data;
++	/* clean up */
++	return 0;
++
++fail:
++	return retval;
++}
+diff -puN mount/sundries.h~nfsv4 mount/sundries.h
+--- util-linux-2.11z/mount/sundries.h~nfsv4	2003-04-23 16:40:57.000000000 -0400
++++ util-linux-2.11z-bfields/mount/sundries.h	2003-04-23 16:40:57.000000000 -0400
+@@ -37,6 +37,8 @@ void die (int errcode, const char *fmt, 
+ #ifdef HAVE_NFS
+ int nfsmount (const char *spec, const char *node, int *flags,
+ 	      char **orig_opts, char **opt_args, int *version, int running_bg);
++int nfs4mount (const char *spec, const char *node, int *flags,
++	       char **orig_opts, char **opt_args, int running_bg);
+ #endif
+ 
+ /* exit status - bits below are ORed */
+
+_

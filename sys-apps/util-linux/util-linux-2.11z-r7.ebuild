@@ -1,14 +1,19 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r7.ebuild,v 1.1 2003/07/20 17:26:12 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/util-linux-2.11z-r7.ebuild,v 1.2 2003/07/20 18:16:04 azarah Exp $
 
 IUSE="crypt nls static pam"
 
 inherit eutils flag-o-matic
 
 ## see below for details on pic.patch
-# Added back for now until other archs can be tested.
-filter-flags -fPIC
+case ${ARCH} in
+	"x86"|"hppa"|"sparc64")
+		;;
+	*)
+		filter-flags -fPIC
+		;;
+esac
 
 S="${WORKDIR}/${P}"
 CRYPT_PATCH_P="${P}-crypt-gentoo"
@@ -56,8 +61,12 @@ src_unpack() {
 	# <azarah@gentoo.og> (17 Jul 2003)
 	epatch ${FILESDIR}/${P}-agetty-domainname-option.patch
 
-	# Add NFS4 support (kernel 2.5/2.6). 
-	epatch ${FILESDIR}/${P}-01-nfsv4.dif
+	# Add NFS4 support (kernel 2.5/2.6).
+	if [ ! -z "`use crypt`" ] ; then
+		epatch ${FILESDIR}/${P}-01-nfsv4-crypt.dif
+	else
+		epatch ${FILESDIR}/${P}-01-nfsv4.dif
+	fi
 
 	# <kumba@gentoo.org> (22 Apr 2003)
 	# Fix fdisk so it works on SGI Disk Labels and lets the user
