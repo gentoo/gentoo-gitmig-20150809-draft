@@ -39,7 +39,7 @@ then
 		dev-lang/perl
 		sys-apps/module-init-tools
 		sys-devel/make )"
- 
+
 	PROVIDE="virtual/linux-sources virtual/alsa"
 
 elif [ "${ETYPE}" == "headers" ]
@@ -203,6 +203,16 @@ postinst_sources() {
 	if [ -n "${K_EXTRAEINFO}" ]
 	then
 		echo ${K_EXTRAEINFO} | fmt |
+		while read -s ELINE
+		do
+			einfo "${ELINE}"
+		done
+	fi
+
+	# if K_EXTRAEWARN is set then lets display it now
+	if [ -n "${K_EXTRAEWARN}" ]
+	then
+		echo ${K_EXTRAEWARN} | fmt |
 		while read -s ELINE
 		do
 			einfo "${ELINE}"
