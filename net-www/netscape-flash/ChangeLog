@@ -1,6 +1,11 @@
 # ChangeLog for net-www/netscape-flash
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/ChangeLog,v 1.16 2003/02/12 08:51:43 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape-flash/ChangeLog,v 1.17 2003/03/09 00:15:39 aliz Exp $
+
+*netscape-flash-6.0.79 (09 Mar 2003)
+
+  09 Mar 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Security update.
 
 *netscape-flash-6.0.69-r2 (07 Dec 2003)
 
