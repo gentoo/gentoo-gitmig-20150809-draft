@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/silo-1.3.1-r1.ebuild,v 1.5 2004/07/15 02:52:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/silo/silo-1.3.1-r1.ebuild,v 1.6 2005/03/28 13:35:56 gustavoz Exp $
 
 inherit mount-boot
 
