@@ -1,6 +1,10 @@
 # ChangeLog for x11-themes/gtk-engines-smooth
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-smooth/ChangeLog,v 1.3 2003/10/14 20:30:00 liquidx Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gtk-engines-smooth/ChangeLog,v 1.4 2004/02/06 16:39:06 agriffis Exp $
+
+  06 Feb 2004; Aron Griffis <agriffis@gentoo.org>
+  gtk-engines-smooth-0.5.4.ebuild:
+  add ~alpha
 
 *gtk-engines-smooth-0.5.4 (14 Oct 2003)
 
