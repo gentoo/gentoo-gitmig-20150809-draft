@@ -7,7 +7,7 @@ MD5 7873f0d4e23d5ca1c67bf2c025a0daa8 netpbm-10.11.15.ebuild 1999
 MD5 8b26ce27b466cd799219bae9a1a9919a netpbm-10.11.5-r3.ebuild 1557
 MD5 21805071ef24d25d77ce30ad4608e8fe netpbm-10.18.7.ebuild 1999
 MD5 fc5b2c41ccdc4c486d3f7b65771753b5 netpbm-10.19.ebuild 1739
-MD5 f149cf4352d1487bc20b833011bf032a netpbm-10.20.ebuild 2179
+MD5 8f1bd301b249eaf2abeb2444b0c08439 netpbm-10.20.ebuild 2264
 MD5 def67e3fce4a507bc2a3e0fff3d2c19c netpbm-9.12-r4.ebuild 1333
 MD5 f55c647bfddf0b36f0ca2857c3764bce ChangeLog 7366
 MD5 6735fc271948c349d02f59361b4c373e files/digest-netpbm-10.11.14 65
@@ -25,7 +25,7 @@ MD5 943662580b449abb996444e348c48298 files/9.12/Makefile.config 11635
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBZLGqArHZZzCEUG0RAqMiAJwOVS7hOdEyg3l+b3GR5ku2c5SXkgCfXYb7
-tOWkOCgypg2IsYSmKpXQEkA=
-=ItBc
+iD8DBQFBZnCsArHZZzCEUG0RAsl8AJ9eZJTXlcfzWavXfzYTcxrUubMiMACdFXxd
+2fh6ZBX4amPgNtwETXe35wQ=
+=Wyyd
 -----END PGP SIGNATURE-----

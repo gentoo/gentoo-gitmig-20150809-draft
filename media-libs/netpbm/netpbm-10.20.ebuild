@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.20.ebuild,v 1.12 2004/10/07 03:01:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.20.ebuild,v 1.13 2004/10/08 10:49:06 eradicator Exp $
 
 inherit flag-o-matic gcc
 
@@ -65,6 +65,10 @@ src_install() {
 	make package pkgdir=${D}/usr/ || die "make package failed"
 	dodoc ${D}/usr/misc/*
 	rm -rf ${D}/usr/{VERSION,misc}
+
+	if [ "$(get_libdir)" != "lib" ]; then
+		mv ${D}/usr/lib ${D}/usr/$(get_libdir)
+	fi
 
 	# Fix symlink not being created.
 	dosym `basename ${D}/usr/$(get_libdir)/libnetpbm.so.*` /usr/$(get_libdir)/libnetpbm.so
