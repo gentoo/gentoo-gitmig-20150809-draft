@@ -1,0 +1,9 @@
+# ChangeLog for net-p2p/lmule
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/overnet/ChangeLog,v 1.1 2003/05/22 21:40:49 mholzer Exp $
+
+*overnet-0.48.2 (22 May 2003)
+
+  22 May 2003; Martin Holzer <mholzer@gentoo.org> overnet-0.48.2.ebuild:
+  Initial Version. Ebuild submitted by Jordi Böhme <mail@jordi-boehme.de> in
+  #8541.
