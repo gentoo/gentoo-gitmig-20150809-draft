@@ -1,10 +1,21 @@
-MD5 aacdc3e553b4a00f50e289dcb4dce789 ChangeLog 977
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 2426faca29678544d2365e2c9bfea3a1 ChangeLog 1124
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 96ada1305fde867a8f66ea43adcfd9d0 iiimsf-11.4_p1467.ebuild 859
 MD5 cd0c58350b96303ab91842dbdab867ea iiimsf-12.0.1_pre1891.ebuild 1019
-MD5 2ae49e7dd42f3b98e4505df471e5fd32 iiimsf-12.1_p2002.ebuild 1092
+MD5 601fc6eb4497e4d23c6f80e63557dbb1 iiimsf-12.1_p2002.ebuild 1033
 MD5 be37bb244b3081121d1781e5118f2443 files/digest-iiimsf-12.1_p2002 79
 MD5 6e7144823c257fd7ec97768e6cb835ef files/htt.conf 4765
 MD5 4da5512a7540aec500349265848f41c6 files/iiim.initd 443
+MD5 d7196d53049f9da00e014d860b2fdadd files/htt.xml.conf 1893
 MD5 de5dcfe76eb7086d4b90d73615622cd3 files/digest-iiimsf-11.4_p1467 74
 MD5 e97031d3645096ad0e4fb680a228b9c0 files/digest-iiimsf-12.0.1_pre1891 77
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCStyZVWNWqTUmv+0RAhXHAJ91xeYD5W+oIegg41i9JyccgSejLgCeJ74u
+YABohBhPu2V0t7Wnj3dyYf4=
+=+ReQ
+-----END PGP SIGNATURE-----

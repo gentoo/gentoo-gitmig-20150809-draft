@@ -1,8 +1,19 @@
-MD5 00b6356cbdbcca16d7e14837c5a29078 ChangeLog 709
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 d2d7fef2ebc78a3137f5a2945ccca915 ChangeLog 872
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
 MD5 dc212c8a1b2551bb19653edc08483972 iiimxcf-11.4_p1467.ebuild 925
 MD5 ed94c26ebaad592a6a30d0fbe1e8ddd2 iiimxcf-12.0.1_pre1891.ebuild 930
-MD5 f3486b60d57a471ba4a57b66ae6ffa8f iiimxcf-12.1_p2002.ebuild 1003
+MD5 448508cb125579e9b13159c1aef226d6 iiimxcf-12.1_p2002.ebuild 1050
 MD5 be37bb244b3081121d1781e5118f2443 files/digest-iiimxcf-12.1_p2002 79
 MD5 de5dcfe76eb7086d4b90d73615622cd3 files/digest-iiimxcf-11.4_p1467 74
 MD5 e97031d3645096ad0e4fb680a228b9c0 files/digest-iiimxcf-12.0.1_pre1891 77
+MD5 c613a0e8d91ba0c93bad6683bf53f651 files/im-sdk-htt_xbe-crash.patch 20540
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1 (GNU/Linux)
+
+iD8DBQFCSttjVWNWqTUmv+0RAp9bAJ9J4XHFqLbFyLOZ9EYwmkWs0AlIdQCfXz7O
+LZNCS2+6lM0T5uN/hdYL3iY=
+=TTOd
+-----END PGP SIGNATURE-----
