@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.6.ebuild,v 1.2 2004/06/03 16:07:31 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.6.6.ebuild,v 1.3 2004/06/06 02:52:22 vapier Exp $
 
 ETYPE="headers"
 inherit kernel eutils
@@ -32,7 +32,7 @@ pkg_setup() {
 	# Archs which have their own separate header packages, add a check here
 	# and redirect the user to them
 	case "${ARCH}" in
-		mips|mips64|hppa)
+		mips|mips64)
 			eerror "These headers are not appropriate for your architecture."
 			eerror "Please use sys-kernel/${ARCH/64/}-headers instead."
 			die
