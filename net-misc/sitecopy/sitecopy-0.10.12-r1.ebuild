@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.10.12-r1.ebuild,v 1.8 2002/10/05 05:39:23 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/sitecopy/sitecopy-0.10.12-r1.ebuild,v 1.9 2002/10/30 01:49:19 vapier Exp $
 
 IUSE="ssl"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="sitecopy is for easily maintaining remote web sites"
 SRC_URI="http://www.lyra.org/sitecopy/${P}.tar.gz"
-HOMEPAGE="http://www.lyr.org/sitecopy/"
+HOMEPAGE="http://www.lyra.org/sitecopy/"
 KEYWORDS="x86 ppc sparc sparc64"
 LICENSE="GPL-2"
 SLOT="0"
@@ -18,22 +18,14 @@ DEPEND="virtual/glibc
         ssl? ( >=dev-libs/openssl-0.9.6 )"
 
 src_compile() {
-
-    local myconf
-    if [ "`use ssl`" ] ; then
-      myconf="--with-ssl=/usr"
-    else
-      myconf="--without-ssl"
-    fi
-    try ./configure --prefix=/usr --enable-libxml --host=${CHOST} $myconf
-    try make
-
+	local myconf="--enable-libxml"
+	use ssl \
+		&& myconf="${myconf} --with-ssl=/usr" \
+		|| myconf="${myconf} --without-ssl"
+	econf ${myconf}
+	emake || die "emake failed"
 }
 
-src_install () {
-
-    cd ${S}
-    try make prefix=${D}/usr install
-
+src_install() {
+	make prefix=${D}/usr install || die "install failed"
 }
-
