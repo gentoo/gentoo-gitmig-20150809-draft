@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r6.ebuild,v 1.7 2004/06/04 15:27:38 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.4.0-r6.ebuild,v 1.8 2004/06/04 23:19:52 lv Exp $
 
-IUSE="static nls bootstrap java build X multilib gcj f77 objc pic hardened uclibc n32 n64"
+IUSE="static nls bootstrap java build X multilib gcj f77 objc hardened uclibc n32 n64"
 
 inherit eutils flag-o-matic libtool
 
@@ -362,6 +362,8 @@ src_unpack() {
 	then
 		mkdir -p ${WORKDIR}/patch/exclude
 		#mv -f ${WORKDIR}/patch/84* ${WORKDIR}/patch/exclude/
+		bzip2 -c ${FILESDIR}/3.4.0/gcc34-ice-hack.patch > \
+			${WORKDIR}/patch/02_all_gcc34-ice-hack.patch.bz2
 
 		# for uclibc we rather copy the needed files and patch them
 		mkdir ${S}/libstdc++-v3/config/{locale/uclibc,os/uclibc} || \
@@ -391,7 +393,9 @@ src_unpack() {
 		epatch ${WORKDIR}/patch
 
 		# the uclibc patches need autoconf to be run
-		cd ${S}/libstdc++-v3; autoconf; cd ${S}
+		# for build stage we need the updated files though
+		use build || ( cd ${S}/libstdc++-v3; autoconf; cd ${S} )
+		use build && use uclibc && ewarn "uclibc in build stage is not supported yet" && exit 1
 
 		use uclibc && epatch ${FILESDIR}/3.3.3/gcc-uclibc-3.3-loop.patch
 	elif [ -n "`use multilib`" -a "${ARCH}" = "amd64" ]
@@ -429,6 +433,14 @@ src_unpack() {
 			-i gcc/Makefile.in || die "Failed to update crtstuff!"
 		sed -e 's|^\(LIBGCC2_CFLAGS.*\)$|\1 -fno-stack-protector-all|' \
 			-i ${S}/gcc/Makefile.in || die "Failed to update libgcc!"
+
+		# if gcc in a stage3 defaults to ssp, is version 3.4.0 and a stage1 is built
+		# the build fails building timevar.o w/:
+		# cc1: stack smashing attack in function ix86_split_to_parts()
+		if gcc -dumpspecs | grep -q "fno-stack-protector:"
+		then
+			use build && epatch ${FILESDIR}/3.4.0/gcc-3.4.0-cc1-no-stack-protector.patch
+		fi
 
 		release_version="${release_version}, ssp-${PP_FVER}"
 

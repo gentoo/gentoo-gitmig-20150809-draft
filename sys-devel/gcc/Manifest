@@ -16,14 +16,14 @@ MD5 6f4b970b6e64b99a49d7c2ac35817d38 gcc-3.3.3.ebuild 22398
 MD5 bd281971d3658dd49f02f647b97c4eeb gcc-3.3.1-r5.ebuild 18002
 MD5 b6a375116a668edbe10b2ac2e1f9fc6d gcc-3.0.4-r6.ebuild 8577
 MD5 b33c1f60ade8ee3d1ad43023d788952a gcc-3.3.3-r6.ebuild 25264
-MD5 8290e41195fb28773854180e00e4c5b3 gcc-3.4.0-r6.ebuild 29148
+MD5 8dfdf6a0478cb253654610c3d87aab6d gcc-3.4.0-r6.ebuild 29743
 MD5 68da62e17a31058a92822721b553eca9 gcc-3.1.1-r1.ebuild 9424
 MD5 14cf69f1206d85356781dd2ad63eb7ca gcc-3.3.2-r4.ebuild 20741
 MD5 c7e55fc7f4bfd637f45786c0c5fbb365 gcc-2.95.3-r8.ebuild 9095
 MD5 b5f1d4d71ad38c5c5e489466ac0ad399 gcc-3.3.3-r3.ebuild 24690
 MD5 9fb6a5505f97c736a3f40f84ea9c71da gcc-3.3.2-r6.ebuild 21217
 MD5 e6ead3ed008a1fe7adc73ddae996ade3 gcc-3.3.2-r1.ebuild 17965
-MD5 c459d3b6205dfc18d4c33b52424331d9 ChangeLog 54896
+MD5 8c7105801d2d2a3b670ce5b000dbd662 ChangeLog 55124
 MD5 f00b83c775e21267dcfc5c57412dc961 gcc-3.3.2.ebuild 17908
 MD5 3b2fd4637666e71aae9954782cd23016 gcc-3.3.3_pre20040426.ebuild 22633
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
@@ -148,6 +148,8 @@ MD5 4b249bff27ab6328436e6289ac9f9cfc files/3.3.3/gcc333_pre20040215-gentoo-brand
 MD5 66df5567226338b7504bbd3c25cea92c files/3.3.3/gcc-3.3.3-libiberty-pic.patch 370
 MD5 3210d5fd70806c44d4426c3dceebd480 files/3.3.3/gcc333_pre20040408-stack-size.patch 653
 MD5 bae93db3186aa0fc25d659b7799ef499 files/3.4.0/gcc34-ppc64-m32-m64-multilib-only.patch 825
+MD5 17b3190d64e34ed7709d022b326d08ae files/3.4.0/gcc-3.4.0-cc1-no-stack-protector.patch 563
+MD5 c919e0a2cd429d0121b6133c1b4e41a6 files/3.4.0/gcc34-ice-hack.patch 8605
 MD5 31470a0e018eb2cdfe68c71039ede80f files/3.4.0/gcc34-multi32-hack.patch 2445
 MD5 c7ed491e4bcee6cae89067d4e1c899a8 files/3.4.0/gcc34-ia64-lib64.patch 1395
 MD5 06580106a905e8fa2ff23aa190f9d82c files/3.4.0/gcc-3.4.0-r6-gentoo-branding.patch 781
