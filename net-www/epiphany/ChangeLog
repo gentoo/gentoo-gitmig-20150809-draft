@@ -1,8 +1,11 @@
 # ChangeLog for net-www/epiphany
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.17 2003/09/01 18:21:33 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.18 2003/09/08 11:51:12 foser Exp $
 
 *epiphany-0.9.3 (01 Sep 2003)
+
+  08 Sep 2003; foser <foser@gentoo.org> epiphany-0.9.3.ebuild :
+  Remove bonobo-activation dep (#28156), should be there trough libbonoboui
 
   01 Sep 2003; foser <foser@gentoo.org> epiphany-0.9.3.ebuild :
   New version, re-added sparc keyword.. got lost along the way

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-0.9.3.ebuild,v 1.1 2003/09/01 18:21:33 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-0.9.3.ebuild,v 1.2 2003/09/08 11:51:12 foser Exp $
 
 inherit gnome2 debug
 
@@ -17,7 +17,6 @@ RDEPEND=">=gnome-base/gconf-1.2
 	>=dev-libs/libxml2-2
 	>=gnome-base/libgnomeui-2
 	>=gnome-base/libglade-2
-	>=gnome-base/bonobo-activation-2
 	>=gnome-base/libbonoboui-2.2
 	>=gnome-base/ORBit2-2
 	>=gnome-base/gnome-vfs-2
