@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.2.1.ebuild,v 1.3 2002/09/04 18:53:41 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/lyx/lyx-1.2.1.ebuild,v 1.4 2002/09/11 17:42:39 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="LyX is an WYSIWYM frontend for LaTeX"
@@ -20,10 +20,11 @@ DEPEND="virtual/x11
 	>=sys-devel/perl-5
 	nls? ( sys-devel/gettext )
 	app-text/aiksaurus"
+
 RDEPEND="${DEPEND}
 	app-text/ghostscript
 	app-text/xpdf
-	app-text/ispell
+	app-text/aspell
 	app-text/gv
 	app-text/latex2html
 	media-gfx/imagemagick
