@@ -1,6 +1,9 @@
 # ChangeLog for x11-plugins/karamba-tuxbar
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/karamba-tuxbar/ChangeLog,v 1.2 2003/05/04 04:15:36 prez Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/karamba-tuxbar/ChangeLog,v 1.3 2003/10/29 19:31:41 dholm Exp $
+
+  29 Oct 2003; David Holm <dholm@gentoo.org> karamba-tuxbar-0.17g.ebuild:
+  Added to ~ppc.
 
 *karamba-tuxbar-0.17g (03 May 2003)
 
