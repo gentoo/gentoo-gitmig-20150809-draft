@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/p0f
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/ChangeLog,v 1.6 2003/10/03 23:57:42 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/p0f/ChangeLog,v 1.7 2003/10/04 10:46:13 pappy Exp $
+
+*p0f-2.0.2 (04 Oct 2003)
+
+  04 Oct 2003; Alexander Gabert <pappy@gentoo.org> p0f-2.0.2.ebuild:
+  removed sandbox violations from absolute paths in mk/Linux Makefile
 
   04 Oct 2003; Alexander Gabert <pappy@gentoo.org> :
   added current version 2.0.2 from lcamtuf homepage
