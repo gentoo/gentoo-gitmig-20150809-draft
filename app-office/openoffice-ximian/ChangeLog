@@ -1,6 +1,28 @@
 # ChangeLog for app-office/openoffice-ximian
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.72 2004/09/04 15:17:44 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/ChangeLog,v 1.73 2004/09/06 14:26:57 suka Exp $
+
+*openoffice-ximian-1.3.3-r1 (06 Sep 2004)
+
+  06 Sep 2004; suka@gentoo.org +files/1.1.2/gentoo-1.3.3-r1.patch,
+  +openoffice-ximian-1.3.3-r1.ebuild:
+  New revision, hard masked for testing as it has some significant changes.
+  
+  1) Java is back: If you have java installed, java functionality will be
+  available in OOo. If you don't have java installed the build will work too-
+  
+  2) Better optimization: The build should now be more optimized, your CFLAGS
+  are used in more places
+  
+  3) Removal of ooo-kde local use flag: It's simply not necessary anymore, gnome
+  and kde functionality is enabled through the corresponding use flags. If you
+  have provide both, both native styles will be built, according to your desktop
+  environment, the right one will be shown, you can force the other look by
+  using OOO_FORCE_DESKTOP=KDE|gnome xoowriter. This funcitionality has only one
+  drawback: If you want to have KDE icons, be sure to have -gnome +kde in your
+  USE-flags, icons are not yet parallel installable.
+  
+  and a lot of restructuring in the ebuild
 
 *openoffice-ximian-1.3.3 (04 Sep 2004)
 
