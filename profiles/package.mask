@@ -22,6 +22,11 @@
 ##   End example
 ##
 
+# owen@gentoo.org (15 Jul 2002)
+# The CVS snapshot of Lyx should have been masked in the first place!
+# It simply does not compile. Please Devs, mask all new ebuilds!
+>=app-office/lyx-1.2.0.20020705
+
 # drobbins@gentoo.org (15 Jul 2002)
 # needs testing by developers
 =sys-apps/portage-2.0.14
