@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.98.2.ebuild,v 1.3 2005/03/25 06:58:37 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/quagga-0.98.2.ebuild,v 1.4 2005/04/01 17:20:16 mrness Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.quagga.net/download/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~ppc ~sparc ~x86"
+KEYWORDS="alpha ~amd64 ~arm ~ppc ~sparc x86"
 IUSE="ipv6 snmp pam tcpmd5 bgpclassless ospfapi"
 
 RDEPEND="!net-misc/zebra

@@ -2,7 +2,10 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Copyright 2003-2004 DataCore GmbH
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.12 2005/03/20 18:09:43 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/quagga/ChangeLog,v 1.13 2005/04/01 17:20:16 mrness Exp $
+
+  01 Apr 2005; Alin Nastac <mrness@gentoo.org> quagga-0.98.2.ebuild:
+  Stable on alpha and x86.
 
 *quagga-0.98.2 (20 Mar 2005)
 
