@@ -9,12 +9,13 @@ HOMEPAGE="www.icewm.org"
 DEPEND="virtual/x11"
 
 src_compile(){
-	try ./configure --prefix=/usr/X11R6 --sysconfdir=/etc/X11/
+	try ./configure --prefix=/usr/X11R6 --sysconfdir=/etc
 	try make
 }
 src_install(){
 
-	try make prefix=${D}/usr/X11R6 DOCDIR=${S}/dummy install
+	try make prefix=${D}/usr/X11R6 DOCDIR=${S}/dummy \
+	    sysconfdir=${D}/etc install
 	exeinto /usr/X11R6/bin/wm
 	doexe ${FILESDIR}/icewm
         dodoc BUGS CHANGES COPYING FAQ PLATFORMS README TODO VERSION
