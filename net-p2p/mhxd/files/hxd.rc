@@ -1,0 +1,24 @@
+#!/sbin/runscript
+
+depend() {
+	need net
+}
+
+start() {
+	ebegin Starting hxd
+	cd /home/hxd
+	start-stop-daemon --quiet --start -c hxd --pidfile /var/run/hxd.pid --startas /usr/sbin/hxd -f /etc/hxd.conf
+	eend $?
+}
+
+stop() {
+	ebegin Stopping hxd
+	start-stop-daemon --quiet --stop -c hxd --pidfile /var/run/hxd.pid 
+	eend $?
+}
+
+reload() {
+	ebegin Reloading hxd
+	su hxd -c "killall -HUP hxd"
+	eend $?
+}
