@@ -104,7 +104,7 @@ nxserver_pkg_postinst() {
 	
 	# we do this to move the home directory of older installs
 
-	einfo "Setting home directory of user 'nx' to /usr/NX/home"
+	einfo "Setting home directory of user 'nx' to /usr/NX/home/nx"
 	usermod -d /usr/NX/home/nx nx
 
 	einfo "Changing permissions for files under /usr/NX"
