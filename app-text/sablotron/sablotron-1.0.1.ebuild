@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-1.0.1.ebuild,v 1.8 2004/11/07 06:15:06 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sablotron/sablotron-1.0.1.ebuild,v 1.9 2004/11/20 04:53:36 dragonheart Exp $
 
 inherit libtool gnuconfig flag-o-matic
 
@@ -15,7 +15,7 @@ SRC_URI="http://download-1.gingerall.cz/download/sablot/${MY_P}.tar.gz"
 # Sablotron can optionally be built under GPL, using MPL for now
 LICENSE="MPL-1.1"
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~ppc ~mips ~alpha arm ~hppa ~amd64 ~ia64 s390 ppc64"
+KEYWORDS="~x86 ~sparc ppc ~mips ~alpha arm ~hppa ~amd64 ~ia64 s390 ppc64"
 IUSE="doc perl"
 
 RDEPEND=">=dev-libs/expat-1.95.6-r1"
