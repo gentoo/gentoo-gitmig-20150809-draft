@@ -1,7 +1,14 @@
 # ChangeLog for dev-java/antlr
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.1 2002/02/01 21:53:11 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/antlr/ChangeLog,v 1.2 2002/03/22 16:09:28 gbevin Exp $
 
+*antlr-2.7.1-r2 (15 Mar 2002)
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> antlr-2.7.1-r2.ebuild
+  digest/digest-antlr-2.7.1-r2 :
+  
+  Added support for c++ library and includes
+  
 *antlr-2.7.1-r1 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
