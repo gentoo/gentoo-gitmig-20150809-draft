@@ -1,4 +1,14 @@
-MD5 9d2e2a76366fd3a1e93eef4a481d0673 locateopen-0.8.0.ebuild 484
-MD5 7aae709f123bc88c6891af3ca5cb76dc ChangeLog 983
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 18a55c117b16f0ffdbebf652486ea6e1 ChangeLog 1097
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
+MD5 5ed388d64b1d748eaef07ac657418da3 locateopen-0.8.0.ebuild 475
 MD5 0dc1da8270e79992ef31a37a8fe27e97 files/digest-locateopen-0.8.0 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD4DBQFBLLr0LLFUmVNQ7rkRAhABAKCOc6vOnYUVgbl+WE4xAwrl6xoH9gCXVs/3
+FmXchVUrccfUIk6Qwdw90w==
+=kEA/
+-----END PGP SIGNATURE-----
