@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.9-r1.ebuild,v 1.15 2004/11/05 01:53:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/slang-1.4.9-r1.ebuild,v 1.16 2004/11/06 07:59:52 usata Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ DESCRIPTION="Console display library used by most text viewer"
 HOMEPAGE="http://space.mit.edu/~davis/slang/"
 SRC_URI="ftp://space.mit.edu/pub/davis/slang/v1.4/${P}.tar.bz2"
 
-LICENSE="GPL-2 | Artistic"
+LICENSE="|| ( GPL-2 Artistic )"
 SLOT="0"
 KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 ppc-macos s390 sparc x86"
 IUSE="cjk unicode"
@@ -23,7 +23,7 @@ src_unpack() {
 	cd ${S}
 
 	epatch ${FILESDIR}/${P}.patch
-	epatch ${FILESDIR}/${P}-fsuid.patch
+	use ppc-macos || epatch ${FILESDIR}/${P}-fsuid.patch
 	epatch ${FILESDIR}/${P}-autoconf.patch
 	if use unicode ; then
 		epatch ${FILESDIR}/slang-debian-utf8.patch
@@ -44,7 +44,11 @@ src_compile() {
 
 src_install() {
 	make install install-elf DESTDIR=${D} || die "make install failed"
-	chmod a+rx "${D}"/usr/$(get_libdir)/libslang.so.*
+	if use ppc-macos ; then
+		chmod a+rx "${D}"/usr/$(get_libdir)/libslang*dylib || die "chmod failed"
+	else
+		chmod a+rx "${D}"/usr/$(get_libdir)/libslang.so.* || die "chmod failed"
+	fi
 
 	if use unicode ; then
 		for i in ${D}/usr/$(get_libdir)/libslang-utf8* ; do

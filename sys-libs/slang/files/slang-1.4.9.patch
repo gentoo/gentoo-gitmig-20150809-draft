@@ -35,38 +35,14 @@
  }
  
  #ifdef VMS
---- src/sltermin.c
-+++ src/sltermin.c
-@@ -105,7 +105,32 @@
-     * I will also look into the use of setreuid, seteuid and setregid, setegid.
-     * FIXME: Priority=medium
-     */
-+   /* If your system lacks setfsuid/getfsuid either write
-+      equivalent support or dont use slang to build setuid/setgid
-+      apps like Mutt */
-+
-+   if(setfsuid(getuid())==-1)
-+   {
-+       perror("setfsuid");
-+       return NULL;
-+   }
-+   if(setfsgid(getgid())==-1)
-+   {
-+       perror("setfsgid");
-+       return NULL;
-+   }    
-    fp = fopen (file, "rb");
-+   if(setfsuid(geteuid())==-1)
-+   {
-+       perror("setfsuid");
-+       return NULL;
-+   }
-+   if(setfsgid(getegid())==-1)
-+   {
-+       perror("setfsgid");
-+       return NULL;
-+   }
-+
-    if (fp == NULL) return NULL;
+--- src/slmisc.c.mps	2003-03-23 08:06:40.000000000 +0100
++++ src/slmisc.c	2004-09-17 12:28:44.000000000 +0200
+@@ -565,7 +565,7 @@
+    return (int) SLatol (s);
+ }
  
-    if ((12 == fread ((char *) buf, 1, 12, fp) && (MAGIC == make_integer (buf))))
+-#if !defined(HAVE_ISSETUGID) && defined(__GLIBC__) && (__GLIBC__ >= 2)
++#if !defined(HAVE_ISSETUGID) && defined(__GLIBC__) && (__GLIBC__ >= 2) && !defined(__UCLIBC__)
+ extern int __libc_enable_secure;
+ # define HAVE___LIBC_ENABLE_SECURE 1
+ #endif

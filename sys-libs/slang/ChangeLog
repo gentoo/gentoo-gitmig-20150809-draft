@@ -1,6 +1,13 @@
 # ChangeLog for sys-libs/slang
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.37 2004/10/26 10:23:39 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/slang/ChangeLog,v 1.38 2004/11/06 07:59:52 usata Exp $
+
+  06 Nov 2004; Mamoru KOMACHI <usata@gentoo.org>
+  files/slang-1.4.9-fsuid.patch, files/slang-1.4.9.patch,
+  slang-1.4.9-r1.ebuild:
+  Added a patch to remove glibc specific calls. Thanks to Peter S. Mazinger
+  <ps.m@gmx.net>; bug #67666. Fixed compilation on ppc-macos and LICENSE
+  syntax.
 
   26 Oct 2004; Tom Martin <slarti@gentoo.org> slang-1.4.9-r1.ebuild:
   Stable on amd64.
