@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: William McArthur <sandymac@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms-mad/xmms-mad-0.0.9.ebuild,v 1.1 2002/05/14 02:37:27 sandymac Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms-mad/xmms-mad-0.0.9.ebuild,v 1.2 2002/07/11 06:30:42 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A XMMS plugin for MAD"

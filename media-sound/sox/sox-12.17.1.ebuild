@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.1.ebuild,v 1.9 2002/01/18 23:27:17 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/sox/sox-12.17.1.ebuild,v 1.10 2002/07/11 06:30:41 drobbins Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}

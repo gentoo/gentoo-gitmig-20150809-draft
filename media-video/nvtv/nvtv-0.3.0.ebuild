@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Bart Lauwers <blauwers@gentoo.com>
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvtv/nvtv-0.3.0.ebuild,v 1.2 2002/06/04 15:56:50 blauwers Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvtv/nvtv-0.3.0.ebuild,v 1.3 2002/07/11 06:30:42 drobbins Exp $
 
 DESCRIPTION="TV-Out for NVidia cards."
 HOMEPAGE="http://sourceforge.net/projects/nv-tv-out"

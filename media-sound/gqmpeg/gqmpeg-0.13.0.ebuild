@@ -1,6 +1,5 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
 # Updated to 0.13.0 (development release) by Brandon Low <lostlogic@lostlogicx.com>
 # /media-sound/gqmpeg/gqmpeg-0.13.0.ebuild
 

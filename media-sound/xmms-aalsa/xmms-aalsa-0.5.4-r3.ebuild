@@ -1,7 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms-aalsa/xmms-aalsa-0.5.4-r3.ebuild,v 1.2 2001/12/30 17:29:05 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms-aalsa/xmms-aalsa-0.5.4-r3.ebuild,v 1.3 2002/07/11 06:30:42 drobbins Exp $
 
 S=${WORKDIR}/xmms-aalsa_0.5.4
 DESCRIPTION="This output plugin allows xmms to work with alsa"

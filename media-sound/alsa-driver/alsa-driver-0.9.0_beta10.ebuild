@@ -1,7 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.9.0_beta10.ebuild,v 1.3 2002/04/27 23:34:20 bangert Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-0.9.0_beta10.ebuild,v 1.4 2002/07/11 06:30:40 drobbins Exp $
 
 # By default, drivers for all supported cards will be compiled.
 # If you want to only compile for specific card(s), set ALSA_CARDS

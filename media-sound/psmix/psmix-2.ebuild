@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Cedric Meury <cedric.meury@mensa.ch>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/psmix/psmix-2.ebuild,v 1.1 2002/04/24 01:16:01 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/psmix/psmix-2.ebuild,v 1.2 2002/07/11 06:30:41 drobbins Exp $
 
 A="psmix2.tgz"
 S="${WORKDIR}/psmix2"

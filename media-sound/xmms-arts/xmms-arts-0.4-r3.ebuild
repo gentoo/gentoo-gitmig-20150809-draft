@@ -1,7 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms-arts/xmms-arts-0.4-r3.ebuild,v 1.3 2002/07/01 21:33:31 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms-arts/xmms-arts-0.4-r3.ebuild,v 1.4 2002/07/11 06:30:42 drobbins Exp $
 
 inherit kde-base || die
 

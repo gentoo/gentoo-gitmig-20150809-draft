@@ -1,8 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
 # Heavily modified by Ryan Tolboom <ryan@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.0-r2.ebuild,v 1.1 2002/07/08 04:20:42 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/mjpegtools/mjpegtools-1.6.0-r2.ebuild,v 1.2 2002/07/11 06:30:42 drobbins Exp $
 
 inherit libtool
 

@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Peter Gavin <pete@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdcd/cdcd-0.5.0.ebuild,v 1.6 2002/04/27 11:52:51 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdcd/cdcd-0.5.0.ebuild,v 1.7 2002/07/11 06:30:40 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="a simple yet powerful command line cd player"

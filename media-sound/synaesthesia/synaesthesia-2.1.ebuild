@@ -1,7 +1,5 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Desktop Team <desktop@gentoo.org>
-# Author: Ulf Grossekathoefer <ugrossek@web.de>
 # /home/cvsroot/gentoo-x86/skel.build,v 1.7 2001/08/25 21:15:08 chadh Exp
 
 S=${WORKDIR}/${P}

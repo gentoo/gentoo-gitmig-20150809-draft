@@ -1,6 +1,5 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Ryan Tolboom <ryan@gentoo.org>
 
 A=${PN}-0.1.0-test6.tar.gz
 S=${WORKDIR}/${PN}-0.1.0-test6/driver

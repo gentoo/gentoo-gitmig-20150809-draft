@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Peter Gavin <pbg1854@garnet.acns.fsu.edu>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8.ebuild,v 1.5 2002/04/13 04:30:44 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/cdparanoia/cdparanoia-3.9.8.ebuild,v 1.6 2002/07/11 06:30:40 drobbins Exp $
 
 A=${PN}-III-alpha9.8.src.tgz
 S=${WORKDIR}/${PN}-III-alpha9.8

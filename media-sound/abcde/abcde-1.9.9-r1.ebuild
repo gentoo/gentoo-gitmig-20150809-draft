@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# Author Peter Gavin <pbg1854@garnet.acns.fsu.edu>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/abcde-1.9.9-r1.ebuild,v 1.1 2002/02/09 12:32:20 verwilst Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/abcde/abcde-1.9.9-r1.ebuild,v 1.2 2002/07/11 06:30:40 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="a better cd encoder"

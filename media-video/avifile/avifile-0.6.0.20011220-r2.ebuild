@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author:  Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.6.0.20011220-r2.ebuild,v 1.7 2002/04/30 09:49:50 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avifile/avifile-0.6.0.20011220-r2.ebuild,v 1.8 2002/07/11 06:30:42 drobbins Exp $
 
 MY_P=${P/.200/-200}
 MY_S=${MY_P/avifile-/avifile}

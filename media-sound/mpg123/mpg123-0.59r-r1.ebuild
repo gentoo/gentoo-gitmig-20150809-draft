@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59r-r1.ebuild,v 1.4 2002/05/14 01:16:36 daybird Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpg123/mpg123-0.59r-r1.ebuild,v 1.5 2002/07/11 06:30:41 drobbins Exp $
 
 S=${WORKDIR}/${P}
 

@@ -1,8 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Chris Arndt <arndtc@mailandnews.com>
 # /home/cvsroot/gentoo-x86/skel.build,v 1.5 2001/07/24 22:30:35 lordjoe Exp
-# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-0.5.2-r1.ebuild,v 1.1 2001/10/06 14:36:55 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/glame/glame-0.5.2-r1.ebuild,v 1.2 2002/07/11 06:30:40 drobbins Exp $
 
 
 

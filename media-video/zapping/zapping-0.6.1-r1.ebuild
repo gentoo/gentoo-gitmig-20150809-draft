@@ -1,8 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Desktop Team <desktop@gentoo.org>
-# Author: Jens Blaesche <mr.big@pc-trouble.de>
-# $Header: /var/cvsroot/gentoo-x86/media-video/zapping/zapping-0.6.1-r1.ebuild,v 1.5 2002/05/27 17:27:39 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/zapping/zapping-0.6.1-r1.ebuild,v 1.6 2002/07/11 06:30:42 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Zapping is a TV- and VBI- viewer for the Gnome environment."

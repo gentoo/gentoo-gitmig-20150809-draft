@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-0.5.10.ebuild,v 1.5 2001/10/02 20:34:44 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-utils/alsa-utils-0.5.10.ebuild,v 1.6 2002/07/11 06:30:40 drobbins Exp $
 
 A=${P}.tar.bz2
 S=${WORKDIR}/${P}

@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Peter Gavin <pbg1854@garnet.acns.fsu.edu>
-# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.0_rc2.ebuild,v 1.2 2001/08/27 17:04:20 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/vorbis-tools/vorbis-tools-1.0_rc2.ebuild,v 1.3 2002/07/11 06:30:41 drobbins Exp $
 
 A=vorbis-tools-1.0rc2.tar.gz
 S=${WORKDIR}/vorbis-tools-1.0rc2

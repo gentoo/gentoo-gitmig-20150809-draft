@@ -1,6 +1,5 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# Maintainer Michael Nazaroff <naz@gentoo.org
 # /space/gentoo/cvsroot/gentoo-x86/media-sound/festival/festival-1.4.2.ebuild,v
 # 1.6 2002/05/07 03:58:19 naz Exp $
 
