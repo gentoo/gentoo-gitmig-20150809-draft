@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/smartmontools
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/ChangeLog,v 1.37 2005/01/03 14:18:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/smartmontools/ChangeLog,v 1.38 2005/01/03 21:55:09 gustavoz Exp $
+
+  03 Jan 2005; Gustavo Zacarias <gustavoz@gentoo.org>
+  smartmontools-5.33.ebuild:
+  Stable on sparc
 
   03 Jan 2005; Mike Frysinger <vapier@gentoo.org> files/smartd.rc,
   smartmontools-5.33.ebuild:
