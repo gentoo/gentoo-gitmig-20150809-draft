@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-arts/xmms-arts-0.6.0.ebuild,v 1.1 2003/09/15 12:16:36 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-arts/xmms-arts-0.6.0.ebuild,v 1.2 2003/09/15 12:18:00 seemant Exp $
 
 IUSE=""
 
@@ -20,4 +20,4 @@ src_install() {
 	einstall libdir=${D}/usr/lib/xmms/Output || die
 
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README
-} 
+}
