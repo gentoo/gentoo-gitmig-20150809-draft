@@ -1,7 +1,7 @@
 #!/sbin/runscript
-# Copyright 1999-2004 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/files/samba-init,v 1.4 2004/03/04 19:25:50 vapier Exp $
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/files/samba-init,v 1.5 2004/06/11 14:30:14 satya Exp $
 
 opts="${opts} reload"
 
@@ -10,29 +10,41 @@ depend() {
 	use cupsd
 }
 
+function signal_do {
+	local signal
+	signal="$1"
+	if [ -n "${signal}" ]; then
+		result=0
+		last_result=0
+		for daemon in ${daemon_list}
+		do
+			cmd=${daemon}_${signal}
+			cmd_exec="${!cmd}" 
+			if [ -n "${cmd_exec}" ]; then
+				ebegin "${my_service_name} -> ${signal}: ${daemon} "
+				#echo ${cmd} '->' ${!cmd}
+				${cmd_exec} > /dev/null
+				last_result=$?
+				eend ${last_result}
+			fi
+			result=$(( ${result} + ${last_result} ))
+		done
+	fi
+	return ${result}
+}
 start() {
-	ebegin "Starting samba"
-	start-stop-daemon --start --quiet --exec /usr/sbin/smbd
-	result=$?
-	start-stop-daemon --start --quiet --exec /usr/sbin/nmbd
-	result=$(( $result + $? ))
-	eend $result
+	${my_service_PRE}
+	signal_do start
+	eend $?
 }
-
 stop() {
-	ebegin "Stopping samba"
-	start-stop-daemon --stop --quiet --pidfile /var/run/samba/smbd.pid
-	result=$?
-	start-stop-daemon --stop --quiet --pidfile /var/run/samba/nmbd.pid
-	result=$(( $result + $? ))
-	eend $result
+	${my_service_PRE}
+	signal_do stop
+	${my_service_POST}
+	eend $?
 }
-
 reload() {
-	ebegin "Reloading samba"
-	killall -HUP smbd &>/dev/null
-	result=$?
-	killall -HUP nmbd &>/dev/null
-	result=$(( $result + $? ))
-	eend $result
+	${my_service_PRE}
+	signal_do reload
+	eend $?
 }

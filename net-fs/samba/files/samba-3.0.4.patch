@@ -1,0 +1,223 @@
+##################################################################
+# Recommended patchset for Samba 3.0.4
+#
+# This patchset fixes the following bugs:
+# * BUG 1315 - wbinfo -t unsuccessful on 3.0.4
+# * BUG 1319 - Cannot write to a share with write-list users
+# * BUG 1345 - Macromedia Homesite cannot connect anymore 
+#              after upgrade to 3.0.4
+#
+# Please refer to https://bugzilla.samba.org/ for specific 
+# details regarding the actual bug reports.
+##################################################################
+
+
+Index: source/rpc_client/cli_pipe.c
+===================================================================
+--- source/rpc_client/cli_pipe.c	(revision 842)
++++ source/rpc_client/cli_pipe.c	(working copy)
+@@ -332,13 +332,24 @@
+ 	if (cli->pipe_auth_flags & AUTH_PIPE_NETSEC) {
+ 		RPC_AUTH_NETSEC_CHK chk;
+ 
+-		if (auth_len != RPC_AUTH_NETSEC_CHK_LEN) {
++		if ( (auth_len != RPC_AUTH_NETSEC_SIGN_OR_SEAL_CHK_LEN) 
++			&& (auth_len != RPC_AUTH_NETSEC_SIGN_ONLY_CHK_LEN)  ) 
++		{
+ 			DEBUG(0,("rpc_auth_pipe: wrong schannel auth len %d\n", auth_len));
+ 			return False;
+ 		}
+ 
+-		if (!smb_io_rpc_auth_netsec_chk("schannel_auth_sign", 
+-						&chk, &auth_verf, 0)) {
++		/* can't seal with no nonce */
++		if ( (cli->pipe_auth_flags & AUTH_PIPE_SEAL)
++			&& (auth_len != RPC_AUTH_NETSEC_SIGN_OR_SEAL_CHK_LEN)  )
++		{
++			DEBUG(0,("rpc_auth_pipe: sealing not supported with schannel auth len %d\n", auth_len));
++			return False;
++		}
++		
++
++		if (!smb_io_rpc_auth_netsec_chk("schannel_auth_sign", auth_len, &chk, &auth_verf, 0)) 
++		{
+ 			DEBUG(0, ("rpc_auth_pipe: schannel unmarshalling "
+ 				  "RPC_AUTH_NETSECK_CHK failed\n"));
+ 			return False;
+@@ -918,7 +929,7 @@
+ 			auth_len = RPC_AUTH_NTLMSSP_CHK_LEN;
+ 		}
+ 		if (cli->pipe_auth_flags & AUTH_PIPE_NETSEC) {	
+-			auth_len = RPC_AUTH_NETSEC_CHK_LEN;
++			auth_len = RPC_AUTH_NETSEC_SIGN_OR_SEAL_CHK_LEN;
+ 		}
+ 		auth_hdr_len = RPC_HDR_AUTH_LEN;
+ 	}
+@@ -1034,8 +1045,9 @@
+ 				/* write auth footer onto the packet */
+ 				
+ 				parse_offset_marker = prs_offset(&sec_blob);
+-				if (!smb_io_rpc_auth_netsec_chk("", &verf,
+-								&sec_blob, 0)) {
++				if (!smb_io_rpc_auth_netsec_chk("", RPC_AUTH_NETSEC_SIGN_OR_SEAL_CHK_LEN, 
++					&verf, &sec_blob, 0)) 
++				{
+ 					prs_mem_free(&sec_blob);
+ 					return False;
+ 				}
+Index: source/smbd/filename.c
+===================================================================
+--- source/smbd/filename.c	(revision 842)
++++ source/smbd/filename.c	(working copy)
+@@ -137,6 +137,10 @@
+ 	if (!*name) {
+ 		name[0] = '.';
+ 		name[1] = '\0';
++		if (SMB_VFS_STAT(conn,name,&st) == 0) {
++			*pst = st;
++		}
++		DEBUG(5,("conversion finished %s -> %s\n",orig_path, name));
+ 		return(True);
+ 	}
+ 
+Index: source/smbd/uid.c
+===================================================================
+--- source/smbd/uid.c	(revision 842)
++++ source/smbd/uid.c	(working copy)
+@@ -189,20 +189,26 @@
+ 
+ 	snum = SNUM(conn);
+ 
++	if ((vuser) && !check_user_ok(conn, vuser, snum)) {
++		DEBUG(2,("change_to_user: SMB user %s (unix user %s, vuid %d) not permitted access to share %s.\n",
++			vuser->user.smb_name, vuser->user.unix_name, vuid, lp_servicename(snum)));
++		return False;
++	}
++
+ 	if (conn->force_user) /* security = share sets this too */ {
+ 		uid = conn->uid;
+ 		gid = conn->gid;
+ 		current_user.groups = conn->groups;
+ 		current_user.ngroups = conn->ngroups;
+ 		token = conn->nt_user_token;
+-	} else if ((vuser) && check_user_ok(conn, vuser, snum)) {
++	} else if (vuser) {
+ 		uid = conn->admin_user ? 0 : vuser->uid;
+ 		gid = vuser->gid;
+ 		current_user.ngroups = vuser->n_groups;
+ 		current_user.groups  = vuser->groups;
+ 		token = vuser->nt_user_token;
+ 	} else {
+-		DEBUG(2,("change_to_user: Invalid vuid used %d or vuid not permitted access to share.\n",vuid));
++		DEBUG(2,("change_to_user: Invalid vuid used %d in accessing share %s.\n",vuid, lp_servicename(snum) ));
+ 		return False;
+ 	}
+ 
+Index: source/rpc_server/srv_pipe.c
+===================================================================
+--- source/rpc_server/srv_pipe.c	(revision 842)
++++ source/rpc_server/srv_pipe.c	(working copy)
+@@ -124,7 +124,7 @@
+ 	if(p->ntlmssp_auth_validated) {
+ 		data_space_available -= (RPC_HDR_AUTH_LEN + RPC_AUTH_NTLMSSP_CHK_LEN);
+ 	} else if(p->netsec_auth_validated) {
+-		data_space_available -= (RPC_HDR_AUTH_LEN + RPC_AUTH_NETSEC_CHK_LEN);
++		data_space_available -= (RPC_HDR_AUTH_LEN + RPC_AUTH_NETSEC_SIGN_OR_SEAL_CHK_LEN);
+ 	}
+ 
+ 	/*
+@@ -177,8 +177,8 @@
+ 	} else if (p->netsec_auth_validated) {
+ 		p->hdr.frag_len = RPC_HEADER_LEN + RPC_HDR_RESP_LEN +
+ 			data_len + ss_padding_len +
+-			RPC_HDR_AUTH_LEN + RPC_AUTH_NETSEC_CHK_LEN;
+-		p->hdr.auth_len = RPC_AUTH_NETSEC_CHK_LEN;
++			RPC_HDR_AUTH_LEN + RPC_AUTH_NETSEC_SIGN_OR_SEAL_CHK_LEN;
++		p->hdr.auth_len = RPC_AUTH_NETSEC_SIGN_OR_SEAL_CHK_LEN;
+ 	} else {
+ 		p->hdr.frag_len = RPC_HEADER_LEN + RPC_HDR_RESP_LEN + data_len;
+ 		p->hdr.auth_len = 0;
+@@ -309,7 +309,8 @@
+ 			      SENDER_IS_ACCEPTOR,
+ 			      &verf, data, data_len + ss_padding_len);
+ 
+-		smb_io_rpc_auth_netsec_chk("", &verf, &outgoing_pdu, 0);
++		smb_io_rpc_auth_netsec_chk("", RPC_AUTH_NETSEC_SIGN_OR_SEAL_CHK_LEN, 
++			&verf, &outgoing_pdu, 0);
+ 
+ 		p->netsec_auth.seq_num++;
+ 	}
+@@ -1339,7 +1340,7 @@
+ 
+ 	auth_len = p->hdr.auth_len;
+ 
+-	if (auth_len != RPC_AUTH_NETSEC_CHK_LEN) {
++	if (auth_len != RPC_AUTH_NETSEC_SIGN_OR_SEAL_CHK_LEN) {
+ 		DEBUG(0,("Incorrect auth_len %d.\n", auth_len ));
+ 		return False;
+ 	}
+@@ -1384,7 +1385,9 @@
+ 		return False;
+ 	}
+ 
+-	if(!smb_io_rpc_auth_netsec_chk("", &netsec_chk, rpc_in, 0)) {
++	if(!smb_io_rpc_auth_netsec_chk("", RPC_AUTH_NETSEC_SIGN_OR_SEAL_CHK_LEN, 
++		&netsec_chk, rpc_in, 0)) 
++	{
+ 		DEBUG(0,("failed to unmarshal RPC_AUTH_NETSEC_CHK.\n"));
+ 		return False;
+ 	}
+Index: source/rpc_parse/parse_rpc.c
+===================================================================
+--- source/rpc_parse/parse_rpc.c	(revision 842)
++++ source/rpc_parse/parse_rpc.c	(working copy)
+@@ -1189,7 +1189,8 @@
+ /*******************************************************************
+ reads or writes an RPC_AUTH_NETSEC_CHK structure.
+ ********************************************************************/
+-BOOL smb_io_rpc_auth_netsec_chk(const char *desc, RPC_AUTH_NETSEC_CHK * chk,
++BOOL smb_io_rpc_auth_netsec_chk(const char *desc, int auth_len, 
++                                RPC_AUTH_NETSEC_CHK * chk,
+ 				prs_struct *ps, int depth)
+ {
+ 	if (chk == NULL)
+@@ -1198,10 +1199,19 @@
+ 	prs_debug(ps, depth, desc, "smb_io_rpc_auth_netsec_chk");
+ 	depth++;
+ 
+-	prs_uint8s(False, "sig  ", ps, depth, chk->sig, sizeof(chk->sig));
+-	prs_uint8s(False, "seq_num", ps, depth, chk->seq_num, sizeof(chk->seq_num));
+-	prs_uint8s(False, "packet_digest", ps, depth, chk->packet_digest, sizeof(chk->packet_digest));
+-	prs_uint8s(False, "confounder", ps, depth, chk->confounder, sizeof(chk->confounder));
++	if ( !prs_uint8s(False, "sig  ", ps, depth, chk->sig, sizeof(chk->sig)) )
++		return False;
++		
++	if ( !prs_uint8s(False, "seq_num", ps, depth, chk->seq_num, sizeof(chk->seq_num)) )
++		return False;
++		
++	if ( !prs_uint8s(False, "packet_digest", ps, depth, chk->packet_digest, sizeof(chk->packet_digest)) )
++		return False;
++	
++	if ( auth_len == RPC_AUTH_NETSEC_SIGN_OR_SEAL_CHK_LEN ) {
++		if ( !prs_uint8s(False, "confounder", ps, depth, chk->confounder, sizeof(chk->confounder)) )
++			return False;
++	}
+ 
+ 	return True;
+ }
+Index: source/include/rpc_dce.h
+===================================================================
+--- source/include/rpc_dce.h	(revision 842)
++++ source/include/rpc_dce.h	(working copy)
+@@ -63,8 +63,10 @@
+ #define NETSEC_AUTH_TYPE 0x44
+ #define NETSEC_SIGN_SIGNATURE { 0x77, 0x00, 0xff, 0xff, 0xff, 0xff, 0x00, 0x00 }
+ #define NETSEC_SEAL_SIGNATURE { 0x77, 0x00, 0x7a, 0x00, 0xff, 0xff, 0x00, 0x00 }
+-#define RPC_AUTH_NETSEC_CHK_LEN 0x20
+ 
++#define RPC_AUTH_NETSEC_SIGN_OR_SEAL_CHK_LEN 	0x20
++#define RPC_AUTH_NETSEC_SIGN_ONLY_CHK_LEN 	0x18
++
+ /* The 7 here seems to be required to get Win2k not to downgrade us
+    to NT4.  Actually, anything other than 1ff would seem to do... */
+ #define NETLOGON_NEG_AUTH2_FLAGS 0x000701ff
