@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.67 2003/09/01 19:22:42 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.68 2003/09/01 19:24:23 azarah Exp $
 
 *binutils-2.14.90.0.6-r2 (01 Sep 2003)
 
@@ -8,7 +8,14 @@
   binutils-2.14.90.0.2.ebuild, binutils-2.14.90.0.4.1-r1.ebuild,
   binutils-2.14.90.0.5-r1.ebuild, binutils-2.14.90.0.6-r2.ebuild,
   files/2.14/binutils-2.14.90.0.6-dont-crash-on-null-owner.patch:
-  Update, closes bug #27141.
+  There is a bug in binutils 2.14.* which causes a segfault in certain
+  circumstances when linking. This bug does not exist in binutils 2.11.*.
+                                                                                                                            
+  More details on the bug can be found here:
+    http://sources.redhat.com/ml/bug-binutils/2003-q3/msg00559.html
+    http://sources.redhat.com/ml/bug-binutils/2003-q3/msg00735.html
+                                                                                                                            
+  Bug #27492, thanks to Adam Chodorowski <adam@chodorowski.com> for reporting.
 
 *binutils-2.14.90.0.6-r1 (26 Aug 2003)
 
