@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.0.1.ebuild,v 1.2 2002/09/15 18:01:50 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/openoffice-bin-1.0.1.ebuild,v 1.3 2002/09/24 23:34:41 owen Exp $
 
 inherit virtualx
 
@@ -12,10 +12,19 @@ LOC="/opt"
 
 INSTDIR="${LOC}/OpenOffice.org${PV}"
 MY_PV="`echo ${PV} | gawk '{ print toupper($1) }'`"
-S="${WORKDIR}/install"
+
+if [ `use ppc` ]; then
+	MY_P="OOo_${MY_PV}c_LinuxPPC_installer"
+	S="${WORKDIR}/${MY_P}"
+else
+	MY_P="OOo_${MY_PV}_LinuxIntel_install" 
+	S="${WORKDIR}/install"
+fi;
+
 DESCRIPTION="OpenOffice productivity suite"
 SRC_URI="x86? ( http://ny1.mirror.openoffice.org/${PV}/OOo_${MY_PV}_LinuxIntel_install.tar.gz
-	http://sf1.mirror.openoffice.org/${PV}/OOo_${MY_PV}_LinuxIntel_install.tar.gz )"
+	http://sf1.mirror.openoffice.org/${PV}/OOo_${MY_PV}_LinuxIntel_install.tar.gz )
+	ppc? ( http://ftp.penguinppc.org/projects/openoffice/${MY_PV}/OOo_${MY_PV}c_LinuxPPC_installer.tar.gz )"
 HOMEPAGE="http://www.openoffice.org"
 
 DEPEND="virtual/glibc
@@ -27,12 +36,7 @@ DEPEND="virtual/glibc
 
 LICENSE="LGPL-2 | SISSL-1.1"
 SLOT="0"
-KEYWORDS="x86 -ppc -sparc -sparc64"
-
-src_unpack() {
-
-	unpack OOo_${MY_PV}_LinuxIntel_install.tar.gz
-}
+KEYWORDS="x86 ppc -sparc -sparc64"
 
 src_install() {
 
