@@ -1,6 +1,6 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.1_rc5.ebuild,v 1.1 2002/12/08 15:32:06 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebindings/kdebindings-3.1_rc5.ebuild,v 1.2 2002/12/13 21:07:26 danarmak Exp $
 # TODO: add gnustep, objc bindings
 inherit kde-dist 
 
@@ -13,14 +13,18 @@ newdepend "~kde-base/kdebase-${PV}
 	sys-devel/perl
 	python? ( dev-lang/python )
 	java? (	virtual/jdk )
-	=x11-libs/gtk+-1.2*
 	=dev-libs/glib-1.2*
 	~kde-base/kdenetwork-${PV}
 	mozilla? ( net-www/mozilla )"
 
 use python									|| myconf="$myconf --without-python"
 use java	&& myconf="$myconf --with-java=$(java-config --jdk-home)"	|| myconf="$myconf --without-java"
+
+# obj bindings are officially broken
 #myconf="$myconf --enable-objc"
+
+# we need to have csant (from pnet, from portable.NET) in portage for qtsharp
+export DO_NOT_COMPILE="$DO_NOT_COMPILE qtsharp"
 
 export LIBPYTHON="`python-config`"
 
