@@ -1,4 +1,5 @@
+MD5 40c146f8cedf6f59c0e3f2fe9f7fd3a2 vamps-0.95.ebuild 1019
+MD5 77f457a14c1e57cd93ae022f7b9344e5 ChangeLog 451
 MD5 7300a7b361fa9f48e37722c6952bd432 metadata.xml 158
-MD5 00fa8b3f45a9a34f6730645b370a6753 ChangeLog 347
-MD5 785d375adebc1829487b75373a5e9403 vamps-0.95.ebuild 924
 MD5 016bf3c6dbdba715c0fa44da8cdc0652 files/digest-vamps-0.95 57
+MD5 49b7850d2043759367f52d8594d8d69b files/vamps-0.95-amd64.patch 398
