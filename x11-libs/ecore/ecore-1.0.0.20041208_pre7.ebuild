@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/ecore/ecore-1.0.0.20041031_pre7.ebuild,v 1.2 2004/11/02 04:28:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/ecore/ecore-1.0.0.20041208_pre7.ebuild,v 1.1 2004/12/10 14:21:47 vapier Exp $
 
 inherit enlightenment
 
