@@ -1,6 +1,12 @@
 # ChangeLog for app-crypt/cryptplug
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptplug/ChangeLog,v 1.14 2004/07/03 14:57:41 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptplug/ChangeLog,v 1.15 2004/08/08 03:19:52 dragonheart Exp $
+
+*cryptplug-0.3.16-r1 (07 Aug 2004)
+
+  07 Aug 2004; Daniel Black <dragonheart@gentoo.org> +files/gpgme3.patch,
+  +cryptplug-0.3.16-r1.ebuild:
+  version bump for bug #57193
 
   03 Jul 2004; Bryan Østergaard <kloeri@gentoo.org> cryptplug-0.3.16.ebuild:
   Stable on alpha.
