@@ -1,6 +1,9 @@
 # ChangeLog for media-tv/mythtv
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.37 2004/09/18 06:33:06 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/ChangeLog,v 1.38 2004/09/18 10:18:02 aliz Exp $
+
+  18 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> mythtv-0.16.ebuild:
+  Check if neither X or directfb are in USE, closing #64289.
 
   18 Sep 2004; Doug Goldstein <cardoe@gentoo.org> mythtv-0.15.1-r1.ebuild,
   mythtv-0.16.ebuild:

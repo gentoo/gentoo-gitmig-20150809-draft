@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.16.ebuild,v 1.7 2004/09/18 06:33:06 cardoe Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-tv/mythtv/mythtv-0.16.ebuild,v 1.8 2004/09/18 10:18:02 aliz Exp $
 
 inherit myth flag-o-matic eutils
 
@@ -32,7 +32,15 @@ RDEPEND="${DEPEND}
 	!media-tv/mythfrontend"
 
 pkg_setup() {
-	if use X; then QTP=x11-libs/qt; else QTP=x11-libs/qt-embedded; fi
+	if use X; then
+		QTP=x11-libs/qt
+	elif use directfb; then
+		QTP=x11-libs/qt-embedded
+	else
+		eerror "You must have either X or directfb in USE"
+		die "No QT library selected"
+	fi
+
 	local qt_use="$(</var/db/pkg/`best_version ${QTP}`/USE)"
 	if ! has mysql ${qt_use} ; then
 		eerror "Qt is missing MySQL support. Please add"
@@ -130,10 +138,6 @@ setup_pro() {
 			-e 's:#CONFIG += using_opengl:CONFIG += using_opengl:' \
 			-i 'settings.pro' || die "enable opengl sed failed"
 	fi
-
-	sed -e 's:#CONFIG += using_xrandr:CONFIG += using_xrandr:' \
-		-e 's:#DEFINES += USING_XRANDR:DEFINES += USING_XRANDR:' \
-		-i 'settings.pro' || die "enable xrandr sed failed"
 }
 
 src_unpack() {
