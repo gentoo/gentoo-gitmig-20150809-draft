@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20030817-r1.ebuild,v 1.16 2004/06/24 22:41:34 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20030817-r1.ebuild,v 1.17 2004/07/14 14:43:54 agriffis Exp $
 
 ECVS_PASS="anonymous"
 ECVS_SERVER="icculus.org:/cvs/cvsroot"
@@ -15,7 +15,7 @@ SRC_URI="mirror://gentoo/${P}.tbz2"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc"
-IUSE="perl opengl" # nophysfs"
+IUSE="opengl" # nophysfs"
 
 RDEPEND="virtual/x11
 	media-libs/libsdl
