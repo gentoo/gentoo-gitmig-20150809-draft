@@ -1,21 +1,21 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/darcnes/darcnes-0401-r1.ebuild,v 1.8 2002/10/20 18:37:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/darcnes/darcnes-0401-r1.ebuild,v 1.9 2002/11/21 16:50:04 vapier Exp $
 
-IUSE="X gtk"
-
-S=${WORKDIR}/darcnes
 DESCRIPTION="A multi-system emulator"
 SRC_URI="http://www.dridus.com/~nyef/darcnes/download/dn9b${PV}.tgz"
-HOMEPAGE="http://www.netway.com/~nyef/"
+HOMEPAGE="http://www.dridus.com/~nyef/darcnes/"
+
 SLOT="0"
 KEYWORDS="x86 -ppc"
 LICENSE="GPL-2"
+IUSE="X gtk"
 
 DEPEND=">=media-libs/svgalib-1.4.2
 	X? ( virtual/x11 )
 	gtk? ( =x11-libs/gtk+-1.2* )"
 
+S=${WORKDIR}/${PN}
 
 src_compile() {
 
@@ -38,8 +38,7 @@ src_compile() {
 
 }
 
-src_install () {
-
+src_install() {
 	exeinto /usr/bin
 	doexe sdarcnes
 	if [ "`use X`" ]
