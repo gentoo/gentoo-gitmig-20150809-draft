@@ -1,8 +1,11 @@
 # ChangeLog for sys-apps/sed
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.27 2003/03/31 23:27:27 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.28 2003/04/02 01:11:12 vladimir Exp $
 
 *sed-4.0.6 (24 Mar 2003)
+
+  01 Apr 2003; Graham Forest <vladimir@gentoo.org> sed-4.0.6.ebuild:
+  set ppc in keywords
 
   31 Mar 2003; Seemant Kulleen <seemant@gentoo.org> sed-4.0.6.ebuild:
   changed use_enable to old style for the moment
