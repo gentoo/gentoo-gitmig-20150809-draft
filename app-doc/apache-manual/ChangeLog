@@ -1,6 +1,10 @@
 # ChangeLog for app-doc/apache-manual
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/apache-manual/ChangeLog,v 1.21 2004/06/05 05:43:43 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/apache-manual/ChangeLog,v 1.22 2004/06/07 11:19:55 zul Exp $
+
+  07 Jun 2004; Chuck Short <zul@gentoo.org> apache-manual-2.0.49-r1.ebuild,
+  apache-manual-2.0.49-r3.ebuild:
+  Added missing ppc64 keyword.
 
   04 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org>
   apache-manual-2.0.49-r1.ebuild:
