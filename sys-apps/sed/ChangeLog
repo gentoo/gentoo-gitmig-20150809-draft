@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/sed
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.58 2004/09/22 03:42:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/ChangeLog,v 1.59 2004/10/03 08:58:00 vapier Exp $
+
+  03 Oct 2004; Mike Frysinger <vapier@gentoo.org> sed-4.0.9.ebuild,
+  sed-4.1.2.ebuild:
+  Make sure sed can compile even if system sed is broken #40786 by Brian Harring.
 
 *sed-4.1.2 (21 Sep 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.9.ebuild,v 1.24 2004/10/03 07:38:34 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.9.ebuild,v 1.25 2004/10/03 08:58:00 vapier Exp $
 
 inherit gnuconfig flag-o-matic
 
@@ -24,6 +24,15 @@ src_unpack() {
 }
 
 src_compile() {
+	# make sure system-sed works #40786
+	export NO_SYS_SED=""
+	if ! which sed >& /dev/null ; then
+		NO_SYS_SED="!!!"
+		./bootstrap.sh || die "couldnt bootstrap"
+		cp sed/sed ${T}/ || die "couldnt copy"
+		export PATH="${PATH}:${T}"
+	fi
+
 	local myconf=""
 	if use macos || use ppc-macos ; then
 		myconf="--program-prefix=g"
@@ -32,12 +41,17 @@ src_compile() {
 		$(use_enable nls) \
 		${myconf} \
 		|| die "Configure failed"
+	if [ ! -z "${NO_SYS_SED}" ] ; then 
+		make clean || die "couldnt clean"
+	fi
 
 	use static && append-ldflags -static
 	emake LDFLAGS="${LDFLAGS}" || die "build failed"
 }
 
 src_install() {
+	[ ! -z "${NO_SYS_SED}" ] && export PATH="${PATH}:${T}"
+
 	into /
 	dobin sed/sed || die "dobin"
 	if ! use build
