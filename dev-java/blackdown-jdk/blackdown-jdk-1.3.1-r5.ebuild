@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Karl Trygve Kalleberg <karltk@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r5.ebuild,v 1.3 2002/04/28 04:12:40 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.3.1-r5.ebuild,v 1.4 2002/05/09 20:35:17 daybird Exp $
 
 SYSTEM_ARCH=`echo $ARCH |\
   sed -e s/[i]*.86/i386/ -e s/sun4u/sparc64/ -e s/arm.*/arm/ -e s/sa110/arm/`
@@ -13,20 +13,20 @@ fi
 
 PLATFORM="i386"
 FCS="FCS"
-MY_P="j2sdk-1.3.1-FCS-linux-i386"
+MY_P="j2sdk-1.3.1-FCS-linux-i386.tar.bz2"
 
 case $SYSTEM_ARCH in
 	ppc)
 		PLATFORM="ppc"
 		FCS="FCS-02b"
-		A="j2sdk-1.3.1-02b-FCS-linux-ppc.bin"
+		MY_P="j2sdk-1.3.1-02b-FCS-linux-ppc.bin"
 		;;
 
 	i386)
 		PLATFORM="i386"
 		#Change FCS if you want to use a beta version
 		FCS="FCS"
-		A="j2sdk-1.3.1-FCS-linux-i386.tar.bz2"
+		MY_P="j2sdk-1.3.1-FCS-linux-i386.tar.bz2"
 		;;
 
 	sparc)
@@ -38,7 +38,7 @@ esac
 
 S=${WORKDIR}/j2sdk1.3.1
 DESCRIPTION="Blackdown Java Development Kit 1.3.1"
-SRC_URI="ftp://metalab.unc.edu/pub/linux/devel/lang/java/blackdown.org/JDK-1.3.1/${PLATFORM}/${FCS}/${MY_P}.tar.bz2"
+SRC_URI="ftp://metalab.unc.edu/pub/linux/devel/lang/java/blackdown.org/JDK-1.3.1/${PLATFORM}/${FCS}/${MY_P}"
 HOMEPAGE="http://www.blackdown.org"
 
 DEPEND="virtual/glibc
@@ -51,10 +51,10 @@ PROVIDE="virtual/jdk-1.3
 
 src_unpack () {
 	if [ $PLATFORM = "ppc" ]; then
-		tail +400 ${DISTDIR}/${MY_P}.tar.bz2 > j2sdk-1.3.1-ppc.tar.bz2
+		tail +400 ${DISTDIR}/${MY_P} > j2sdk-1.3.1-ppc.tar.bz2
 		tar -xjf j2sdk-1.3.1-ppc.tar.bz2
 	else
-	unpack ${A}
+	unpack ${MY_P}
 	fi
 }
 
