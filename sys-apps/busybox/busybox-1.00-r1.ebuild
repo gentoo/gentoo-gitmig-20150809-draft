@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00-r1.ebuild,v 1.1 2004/12/11 14:15:53 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-1.00-r1.ebuild,v 1.2 2004/12/13 02:13:07 vapier Exp $
 
 inherit eutils
 
@@ -12,7 +12,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~ppc ~mips ~arm ~amd64 ~sparc ~hppa"
 IUSE="debug uclibc static savedconfig netboot make-busybox-symlinks"
-#IUSE="${IUSE} cross"
 
 MY_PV=${PV/_/-}
 
@@ -95,10 +94,6 @@ src_unpack() {
 	busybox_config_option y FEATURE_SH_IS_ASH
 	busybox_config_option n FEATURE_SH_IS_NONE
 
-	# setting the cross compiler from here would be somewhat of a
-	# pain do to as we would need a multiline sed expression which
-	# does not always seem to work so hot for me.
-
 	use static \
 		&& busybox_config_option y STATIC \
 		|| busybox_config_option n STATIC
@@ -145,15 +140,7 @@ src_unpack() {
 }
 
 busybox_set_cross_compiler() {
-	return 0
-	# revisit this another day.
-	#if use cross ; then
-	#	case ${ARCH} in
-	#		x86*) CROSS="/usr/i386-linux-uclibc/bin/i386-uclibc-";;
-	#		*) ;;
-	#	esac
-	#fi
-	[ -n "${CROSS}" ] && einfo "Setting cross compiler prefix to ${CROSS}"
+	type -p ${CHOST}-gcc && export CROSS=${CHOST}-
 }
 
 src_compile() {

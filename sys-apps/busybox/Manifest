@@ -4,10 +4,10 @@ Hash: SHA1
 MD5 e670b6cbe61335991795e8b9a777d3bb ChangeLog 10185
 MD5 f98f75be102af5709caff4cf84eaeb90 busybox-0.60.3-r1.ebuild 1091
 MD5 bb58878c35f17f5bad4aa060f1dcc25e busybox-0.60.3-r2.ebuild 1183
-MD5 489bc43b4a2746195e25235ad52a103b busybox-1.00.ebuild 6815
+MD5 e83eba8a01e868a8f4e82502f87fba22 busybox-1.00.ebuild 6431
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 f5178c8fd8c1421ea0f6fa05918d1d4a busybox-1.00-r1.ebuild 7009
-MD5 99fad2bf0042dc1141d3089e9f6baeb2 busybox-1.00_rc3.ebuild 6871
+MD5 ad8c239b486642969948ddb089c91a01 busybox-1.00-r1.ebuild 6626
+MD5 71df974e000a57c12f77ec31a68e06d0 busybox-1.00_rc3.ebuild 6488
 MD5 9ce965b12114a360496fe06e952139a8 files/Config.h 11695
 MD5 24ec3839ecb3e429bf29a819398b7753 files/Config.h-0.60.2-cd 13772
 MD5 af127cfced92352c0a43cbf63cde52bd files/Config.h-0.60.3-cd 14319
@@ -29,7 +29,7 @@ MD5 f16657b6a3bf9602a65dbb5f431afbda files/1.00/readlink-follow.patch 2795
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBvArJroRuSHgZdywRAgx2AJ42bDs9ONF3UvBx41crGxCGHvgObQCfWYA2
-mUHoQI5hCmOYsQ2pz8bsRwc=
-=q9gY
+iD8DBQFBvPrNroRuSHgZdywRAmYzAJ4/ufpLPd1EJVe7kHNpZXYhlXixoACfQ0hP
+svuWPq8yvIEF+gWgxqG9lZ0=
+=vth6
 -----END PGP SIGNATURE-----
