@@ -1,4 +1,4 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 DESCRIPTION="mtink is a status monitor and inkjet cartridge changer for some Epson printers"

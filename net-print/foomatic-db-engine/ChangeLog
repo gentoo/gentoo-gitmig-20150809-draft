@@ -1,6 +1,6 @@
 # ChangeLog for net-print/foomatic-db-engine
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/ChangeLog,v 1.13 2004/05/07 10:35:22 lanius Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db-engine/ChangeLog,v 1.14 2004/06/25 00:38:42 agriffis Exp $
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org>
   foomatic-db-engine-3.0.0.20031018.ebuild, foomatic-db-engine-3.0.0.ebuild,

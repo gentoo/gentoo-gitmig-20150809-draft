@@ -1,6 +1,6 @@
 # ChangeLog for net-print/fax4cups
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/fax4cups/ChangeLog,v 1.5 2004/05/05 23:14:58 lanius Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-print/fax4cups/ChangeLog,v 1.6 2004/06/25 00:38:10 agriffis Exp $
 
   06 May 2004; Heinrich Wendel <lanius@gentoo.org> fax4cups-1.23.ebuild:
   add sudo dep

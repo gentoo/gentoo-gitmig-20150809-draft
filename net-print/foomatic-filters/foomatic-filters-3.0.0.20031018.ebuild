@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/foomatic-filters-3.0.0.20031018.ebuild,v 1.5 2004/06/15 02:53:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-filters/foomatic-filters-3.0.0.20031018.ebuild,v 1.6 2004/06/25 00:38:53 agriffis Exp $
 
 MY_P=${P/3.0.0./3.0-}
 
