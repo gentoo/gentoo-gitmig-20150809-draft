@@ -1,4 +1,14 @@
-MD5 e99c6131d59187560b6f7a5bfdf58ebf flow-tools-0.66.ebuild 865
-MD5 63874078f98990d03d0eebfe6cd5cae5 ChangeLog 617
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 60a81df5ad229675303f741677bc9380 flow-tools-0.66.ebuild 910
+MD5 adcb0dfc586e9cd52df09ad922f62918 ChangeLog 792
 MD5 657939d746987d289ffa06516ae69d46 metadata.xml 261
 MD5 4274d0fb58b88876a5767ab9d1c6204c files/digest-flow-tools-0.66 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBfrocT+MN7JbqCpMRAvQ2AJsHPxX0lPYmIhi8ZlL4EKM1/lsF5wCfV0SA
+CQJkRlVJA1GX4O9XSzp7Kjk=
+=vyav
+-----END PGP SIGNATURE-----
