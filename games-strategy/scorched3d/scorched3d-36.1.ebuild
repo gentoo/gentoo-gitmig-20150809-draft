@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-36.ebuild,v 1.2 2004/01/01 22:41:10 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-strategy/scorched3d/scorched3d-36.1.ebuild,v 1.1 2004/01/01 22:41:10 mr_bones_ Exp $
 
 inherit games gcc eutils
 
