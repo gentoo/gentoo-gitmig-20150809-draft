@@ -1,0 +1,11 @@
+--- perl.h.orig	2003-07-10 15:53:31.000000000 -0700
++++ perl.h	2003-07-10 16:06:30.000000000 -0700
+@@ -736,7 +736,7 @@
+ /* sockatmark() is so new (2001) that many places might have it hidden
+  * behind some -D_BLAH_BLAH_SOURCE guard. */
+ #if defined(HAS_SOCKATMARK) && !defined(HAS_SOCKATMARK_PROTO)
+-int sockatmark(int);
++int sockatmark(int) __THROW;
+ #endif
+ 
+ #ifdef SETERRNO
