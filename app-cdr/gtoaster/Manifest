@@ -1,0 +1,7 @@
+MD5 4fc303cdd40ac64ef99a19c074cce620 ChangeLog 1617
+MD5 a700545c9482d1a3ccba531a22a6f7a0 gtoaster-1.0_beta5.ebuild 2053
+MD5 e1246022ba2ec9bdc34a94ab64210c9c gtoaster-1.0_beta6.ebuild 1860
+MD5 f29c8c012430473af4c8b82540fadb00 files/digest-gtoaster-1.0_beta5 65
+MD5 a44a9ce80bffcb13addfcf732f0b3a99 files/digest-gtoaster-1.0_beta6 66
+MD5 a2a4b20cf33b0568ce0660c3b2ad50f0 files/gtoaster.desktop 161
+MD5 1eb3e66bb9f6f444be6ec2491ecc587a files/scdtosr.diff 1751
