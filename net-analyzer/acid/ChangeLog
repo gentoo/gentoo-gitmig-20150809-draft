@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/acid
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/acid/ChangeLog,v 1.7 2004/11/04 12:33:13 eldad Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/acid/ChangeLog,v 1.8 2005/02/18 10:45:28 ka0ttic Exp $
+
+  18 Feb 2005; Aaron Walker <ka0ttic@gentoo.org> acid-0.9.6_beta23.ebuild:
+  Removed snort dep since its possible to run snort on a different box (bug
+  82359); also cleaned up the ebuild: use built_with_use() instead of the
+  homegrown check_useflag(); moved sed's to src_unpack() where they belong.
 
   04 Nov 2004; Eldad Zack <eldad@gentoo.org> acid-0.9.6_beta23.ebuild:
   PHP 5 Compatability fixes. Thanks to Christian Malerbakken
