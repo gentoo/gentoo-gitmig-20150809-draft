@@ -1,6 +1,14 @@
 # ChangeLog for net-mail/courier
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/ChangeLog,v 1.57 2004/04/28 10:04:51 swtaylor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/courier/ChangeLog,v 1.58 2004/05/22 20:05:35 swtaylor Exp $
+
+*courier-0.45.5 (22 May 2004)
+
+  22 May 2004; Scott W Taylor <swtaylor@gentoo.org> +courier-0.45.5.ebuild:
+  bump 0.45.5
+
+  22 May 2004; Scott W Taylor <swtaylor@gentoo.org> files/courier-init:
+  spelling fix and init script update for sqwebmail which gets renamed in 0.45.5
 
   28 Apr 2004; Scott W Taylor <swtaylor@gentoo.org> courier-0.45.2.ebuild,
   courier-0.45.3.ebuild:
