@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/cube/cube-20040522.ebuild,v 1.2 2004/08/15 09:18:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/cube/cube-20040522.ebuild,v 1.3 2004/08/16 10:09:11 mr_bones_ Exp $
 
 inherit eutils games
 
@@ -49,35 +49,39 @@ src_unpack() {
 		Makefile \
 		|| die "sed Makefile failed"
 	edos2unix *.cpp
+	chmod a+x ${S}/source/enet/configure
 }
 
 src_compile() {
 	cd source/enet
-	chmod +x configure
-	econf || die "econf failed"
-	emake || die
+	econf ||
+	emake || die "emake failed"
 	cd ../src
-	emake CXXOPTFLAGS="-fpermissive ${CXXFLAGS}" || die "emake failed"
+	einfo "Compiling in $(pwd)"
+	emake CXXOPTFLAGS="-DHAS_SOCKLEN_T=1 -fpermissive ${CXXFLAGS}" \
+		|| die "emake failed"
 }
 
 src_install() {
 	dogamesbin source/src/cube_{client,server} || die "dogamesbin failed"
-	exeinto ${GAMES_LIBDIR}/${PN}
+	exeinto "${GAMES_LIBDIR}/${PN}"
 	if [ "${ARCH}" == "x86" ] ; then
-		newexe bin_unix/linux_client cube_client
-		newexe bin_unix/linux_server cube_server
+		newexe bin_unix/linux_client cube_client || die "newexe failed"
+		newexe bin_unix/linux_server cube_server || die "newexe failed"
 	elif [ "${ARCH}" == "ppc" ] ; then
-		newexe bin_unix/ppc_linux_client cube_client
-		newexe bin_unix/ppc_linux_server cube_server
+		newexe bin_unix/ppc_linux_client cube_client || die "newexe failed"
+		newexe bin_unix/ppc_linux_server cube_server || die "newexe failed"
 	fi
-	dogamesbin ${FILESDIR}/cube_{client,server}-bin || die "dogamesbin failed (bin)"
+	dogamesbin "${FILESDIR}/cube_"{client,server}-bin \
+		|| die "dogamesbin failed (bin)"
 	sed -i \
 		-e "s:GENTOO_DATADIR:${CUBE_DATADIR}:" \
 		-e "s:GENTOO_LIBDIR:${GAMES_LIBDIR}/${PN}:" \
-		${D}/${GAMES_BINDIR}/cube_{client,server}-bin
+		"${D}/${GAMES_BINDIR}/cube_"{client,server}-bin
 
-	dodir ${CUBE_DATADIR}
-	cp -r *.cfg data packages ${D}/${CUBE_DATADIR} || die "cp failed"
+	dodir "${CUBE_DATADIR}"
+	cp -r *.cfg data packages "${D}/${CUBE_DATADIR}" \
+		|| die "cp failed"
 
 	dodoc source/src/CUBE_TODO.txt
 	dohtml -r docs/
