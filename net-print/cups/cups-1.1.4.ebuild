@@ -1,12 +1,14 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.4.ebuild,v 1.2 2000/12/11 14:58:07 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/cups-1.1.4.ebuild,v 1.3 2000/12/11 18:05:42 achim Exp $
 
-A="${P}-source.tar.bz2"
+GPV="4.0.4"
 S=${WORKDIR}/${P}
+S0=${WORKDIR}/print-${GPV}/cups
 DESCRIPTION="The Common Unix Printing System"
-SRC_URI="ftp://ftp.easysw.com/pub/cups/${PV}/${A}"
+SRC_URI="ftp://ftp.easysw.com/pub/cups/${PV}/${P}-source.tar.bz2
+	 http://download.sourceforge.net/gimp-print/print-${GPV}.tar.gz"
 
 HOMEPAGE="http://www.cups.org"
 
@@ -29,7 +31,10 @@ src_compile() {
     sed -e "s:/usr/share/doc/cups:/usr/share/cups/doc:" \
 	Makedefs.orig > Makedefs 
     try make 
-
+    cd ${S0}
+      try ./configure --host=${CHOST} --prefix=/usr --sysconfdir=/etc \
+	--disable-gimptest
+    try make
 }
 
 src_install () {
@@ -40,13 +45,6 @@ src_install () {
 	INITDIR=${D}/etc/rc.d DOCDIR=${D}/usr/share/cups/doc install 
     rm -rf ${D}/etc/rc.d
     rm -rf ${D}/usr/man/cat*
-   # rm -r  ${D}/etc/pam.d
-  #  cd ${D}/usr/doc/${P}
-  #  gzip *
-  #  mkdir html
-  #  mv images html
-  #  mv *.html.gz html
-  #  mv *.css.gz html
     cd ${S}
     dodoc *.txt 
     docinto html
@@ -58,5 +56,14 @@ src_install () {
     insinto /etc/pam.d
     insopts -m 644
     doins ${FILESDIR}/cups
+
+    cd ${S0}
+    dodir /etc
+    dodir /usr/share /usr/lib/cups/backend
+    try make prefix=${D}/usr exec_prefix=${D}/usr sysconfdir=${D}/etc install
+    gunzip ${D}/usr/share/cups/model/*.gz
+    docinto gimp-print-cups
+    dodoc *.txt
 }
+
 
