@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/suikyo/suikyo-1.2.0.ebuild,v 1.1 2003/11/03 12:32:17 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/suikyo/suikyo-1.2.0.ebuild,v 1.2 2003/11/03 15:01:31 usata Exp $
 
 inherit ruby elisp-common
 
@@ -24,7 +24,7 @@ EXTRA_ECONF="--with-suikyo-docdir=/usr/share/doc/${PF}/html
 src_install() {
 
 	einstall || die
-	erubydoc || die
+	erubydoc
 
 	use emacs || rm -rf ${D}/usr/share/emacs/
 	use emacs && elisp-site-file-install ${FILESDIR}/50suikyo-gentoo.el
