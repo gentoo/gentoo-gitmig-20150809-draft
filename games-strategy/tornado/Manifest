@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d3db598aedd479f8fd0fb5b69ebc0c90 tornado-1.2.1a.ebuild 1098
-MD5 d81b597f2a2ee7211eca51a270ebe2a3 tornado-1.3.ebuild 1100
-MD5 1c35e18f632e6b1782c1975d25db69b8 ChangeLog 620
+MD5 8ea9b8eef52d84805966b50a9a56f7eb ChangeLog 709
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 d454de7d05f53f6ca58221c40496ab8a tornado-1.2.1a.ebuild 1097
+MD5 d81b597f2a2ee7211eca51a270ebe2a3 tornado-1.3.ebuild 1100
 MD5 3ae493c92807e676ee29bf2bcdb95283 files/digest-tornado-1.2.1a 65
 MD5 92951a813f97524acb84295187e6e655 files/digest-tornado-1.3 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBnicM/UDVUK2NELYRAohgAJ42Jm5d9+mos2UZb4DcM/JUulTMDACgrRR4
-o4zW3FnqHXaFpZdMVsF2dMo=
-=5B33
------END PGP SIGNATURE-----
