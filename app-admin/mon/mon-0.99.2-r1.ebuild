@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/mon-0.99.2-r1.ebuild,v 1.16 2004/06/24 21:32:23 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/mon-0.99.2-r1.ebuild,v 1.17 2004/10/26 13:08:50 vapier Exp $
+
+inherit toolchain-funcs
 
 DESCRIPTION="highly configurable service monitoring daemon"
 HOMEPAGE="http://www.kernel.org/software/mon/"
@@ -8,7 +10,7 @@ SRC_URI="mirror://kernel/software/admin/mon/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc"
+KEYWORDS="ppc sparc x86"
 IUSE=""
 
 DEPEND=">=dev-perl/Mon-0.9
@@ -17,15 +19,14 @@ DEPEND=">=dev-perl/Mon-0.9
 
 src_compile() {
 	cd ${S}/mon.d
-	make CC="gcc $CFLAGS" || die
+	make CC="$(tc-getCC) $CFLAGS" || die
 }
 
 src_install() {
-	exeinto /usr/sbin
-	doexe mon clients/mon*
+	dosbin mon clients/mon* || die "dosbin"
 
 	insinto /usr/lib/mon/utils
-	doins utils/*
+	doins utils/* || die "doins"
 
 	exeinto /usr/lib/mon/alert.d ; doexe alert.d/*
 	exeinto /usr/lib/mon/mon.d ; doexe mon.d/*.monitor

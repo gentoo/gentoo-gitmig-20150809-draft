@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.2.ebuild,v 1.24 2004/10/24 22:46:03 pylon Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/hddtemp/hddtemp-0.2.ebuild,v 1.25 2004/10/26 13:04:24 vapier Exp $
 
-inherit eutils
+inherit eutils toolchain-funcs
 
 DESCRIPTION="A simple utility to read the temperature of SMART capable hard drives"
 HOMEPAGE="http://www.guzu.net/linux/hddtemp.php"
@@ -25,7 +25,7 @@ src_unpack() {
 
 	# patch Makefile
 	sed -i -e "s:^CFLAGS.*:CFLAGS=${CFLAGS} -DARCH_I386:" \
-		-e "s:^CC.*:CC=gcc:" \
+		-e "s:^CC.*:CC=$(tc-getCC):" \
 		Makefile
 }
 
