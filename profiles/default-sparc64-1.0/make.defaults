@@ -1,4 +1,4 @@
-# This file created automagically by /usr/portage/profiles/default-sparc-1.0/scripts/generate-packages.sh on Sat May 11 03:15:27 CEST 2002
+# This file created automagically by /usr/portage/profiles/default-sparc-1.0/scripts/generate-packages.sh on Thu Jul  4 14:15:19 CEST 2002
 
 # Copyright 2000 Daniel Robbins, Gentoo Technologies, Inc.
 # System-wide defaults for the Portage system
@@ -10,13 +10,14 @@ slang spell ssl svga tcpd truetype X xml2 xmms xv"
 
 
 
+
 # These lines added by /usr/portage/profiles/default-sparc-1.0/scripts/generate-packages.sh
 #
-# $Id: make.defaults,v 1.11 2002/06/22 16:39:42 drobbins Exp $
+# $Id: make.defaults,v 1.12 2002/07/04 14:13:49 murphy Exp $
 #
 # $Log: not supported by cvs2svn $
-# Revision 1.10  2002/05/11 01:43:34  murphy
-# Removing X fixes.
+# Revision 1.4  2002/07/04 13:39:46  murphy
+# Fixing to use ACCEPT_KEYWORDS
 #
 # Revision 1.3  2002/05/08 22:12:56  murphy
 # Adding misc flags for make.defaults in make.defaults.sparc.
@@ -41,6 +42,6 @@ CFLAGS="-O2 -pipe"
 # C++ Compiler flags
 CXXFLAGS=${CFLAGS}
 
-# End of lines added by /usr/portage/profiles/default-sparc-1.0/scripts/generate-packages.sh
-
+# USE arch:xxx keyword
 ACCEPT_KEYWORDS="sparc64"
+# End of lines added by /usr/portage/profiles/default-sparc-1.0/scripts/generate-packages.sh
