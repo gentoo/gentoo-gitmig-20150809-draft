@@ -1,23 +1,28 @@
 # ChangeLog for net-print/cups
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.11 2002/05/02 04:14:36 jnelson Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/cups/ChangeLog,v 1.12 2002/05/02 04:43:24 woodchip Exp $
 
 *cups-1.1.14-r3 (1 May 2002)
+
   1 May 2002; Jon Nelson <jnelson@gentoo.org> :
-  Added patch to allow for unstripped builds
+
+  Added patch to allow for unstripped builds.
 
 *cups-1.1.14-r3 (30 Apr 2002)
+
   30 Apr 2002; Seemant Kulleen <seemant@gentoo.org> :
-  removed LICENSE.html from dodoc statement because html docs should not
-  be gzipped.  there is already a LICENSE.txt.gz file in docs.
+
+  Unzip html doc.
 
 *cups-1.1.14-r3 (12 Apr 2002)
+
   12 Apr 2002; Spider <spider@gentoo.org>:
-  new revision with updated libpng dependency forces a rebuild
+
+  New revision with updated libpng dependency forces a rebuild.
 
 *cups-1.1.14-r2 (29 Mar 2002)
 
-  29 Mar 2002; Donny Davies <woodchip@gentoo.org>:
+  29 Mar 2002; Donny Davies <woodchip@gentoo.org> :
 
   Add link to the html docs.  Cleaned syntax of several statements.  No need to
   recompile/reinstall unless you enjoy that sort of thing ;)
