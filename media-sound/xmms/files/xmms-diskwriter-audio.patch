@@ -1,0 +1,35 @@
+diff -urN xmms-1.2.7/Output/disk_writer/disk_writer.c xmms-1.2.7-modified/Output/disk_writer/disk_writer.c
+--- xmms-1.2.7/Output/disk_writer/disk_writer.c	2002-01-08 08:09:07.000000000 -0600
++++ xmms-1.2.7-modified/Output/disk_writer/disk_writer.c	2003-07-27 20:36:59.000000000 -0500
+@@ -56,6 +56,8 @@
+ static struct wavhead header;
+ static guint64 written = 0;
+ static AFormat afmt;
++static gint arate, anch;
++static EffectPlugin *ep;
+ gint ctrlsocket_get_session_id(void);		/* FIXME */
+ 
+ static void disk_init(void);
+@@ -121,6 +123,12 @@
+ 
+ 	written = 0;
+ 	afmt = fmt;
++	arate = rate;
++	anch = nch;
++	if (effects_enabled())
++		ep = get_current_effect_plugin();
++	else
++		ep = NULL;
+ 
+ 	if (xmms_check_realtime_priority())
+ 	{
+@@ -234,6 +242,9 @@
+ 
+ static void disk_write(void *ptr, gint length)
+ {
++	if (ep)
++		length = ep->mod_samples(&ptr, length, afmt, arate, anch);
++
+ #ifdef WORDS_BIGENDIAN
+ 	if (afmt == FMT_S8 || afmt == FMT_S16_BE || afmt == FMT_S16_NE || afmt == FMT_U16_LE || afmt == FMT_U16_BE || afmt == FMT_U16_NE)
+ #else
