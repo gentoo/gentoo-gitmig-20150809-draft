@@ -1,7 +1,7 @@
-diff -u -r mysql-3.23.38.orig/acinclude.m4 mysql-3.23.38/acinclude.m4
---- mysql-3.23.38.orig/acinclude.m4	Tue Mar 27 10:11:01 2001
-+++ mysql-3.23.38/acinclude.m4	Fri Apr 13 17:16:52 2001
-@@ -742,12 +742,12 @@
+diff -ur mysql-3.23.49.orig/acinclude.m4 mysql-3.23.49/acinclude.m4
+--- mysql-3.23.49.orig/acinclude.m4	Thu Feb 14 12:30:13 2002
++++ mysql-3.23.49/acinclude.m4	Mon Feb 18 21:09:10 2002
+@@ -774,13 +774,13 @@
      if test X"$bdb_version_ok" = Xyes; then
        save_LDFLAGS="$LDFLAGS"
        LDFLAGS="-L$lib $LDFLAGS"
@@ -12,16 +12,20 @@ diff -u -r mysql-3.23.38.orig/acinclude.m4 mysql-3.23.38/acinclude.m4
          MYSQL_TOP_BUILDDIR([lib])
          bdb_includes="-I$inc"
 -        bdb_libs="-L$lib -ldb"
+-        bdb_libs_with_path="$lib/libdb.a"
 +        bdb_libs="-L$lib -ldb-3.2"
++        bdb_libs_with_path="$lib/libdb-3.2.a"
        ])
        LDFLAGS="$save_LDFLAGS"
      else
-@@ -775,7 +775,7 @@
+@@ -808,8 +808,8 @@
          bdb="$dir"
          MYSQL_TOP_BUILDDIR([dir])
          bdb_includes="-I$dir/build_unix"
 -        bdb_libs="-L$dir/build_unix -ldb"
+-	bdb_libs_with_path="$dir/build_unix/libdb.a"
 +        bdb_libs="-L$dir/build_unix -ldb-3.2"
++	bdb_libs_with_path="$dir/build_unix/libdb-3.2.a"
        else
          bdb_dir_ok="$bdb_version_ok"
        fi

@@ -2,11 +2,11 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Donny Davies <woodchip@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.47.ebuild,v 1.1 2002/01/06 00:53:24 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.49.ebuild,v 1.1 2002/02/19 03:44:41 woodchip Exp $
 
 # NB: Databases are now in /var/lib/mysql vs. the old /var/mysql.  If you are
-# upgrading from a recent mysql version, you should be able to simply move
-# your databases into the new directory, but to be absolutely *safe* you should:
+# upgrading from a recent mysql version, you should be able to simply move your
+# databases into the new directory, but to be absolutely *safe* you should:
 # - dump all of your databases
 # - stop mysql if it is running
 # - delete the old /var/mysql directory
@@ -34,15 +34,15 @@ DEPEND="${RDEPEND} tcpd? ( >=sys-apps/tcp-wrappers-7.6 ) sys-devel/perl sys-apps
 src_unpack() {
 
 	unpack ${A} ; cd ${S}
-	#for -ldb-3.2 instead of -ld
+	# for -ldb-3.2 instead of -ldb, because gentoo has -ldb1 instead
 	patch -p1 < ${FILESDIR}/mysql-3.23-db-3.2.3.diff || die
-	#required for qmail-mysql
+	# required for qmail-mysql
 	patch -p0 < ${FILESDIR}/mysql-3.23-nisam.h.diff || die
-	#zap startup script messages
+	# zap startup script messages
 	patch -p1 < ${FILESDIR}/mysql-3.23-install-db-sh.diff || die
-	#zap binary distribution stuff
+	# zap binary distribution stuff
 	patch -p1 < ${FILESDIR}/mysql-3.23-safe-mysqld-sh.diff || die
-	#for correct hardcoded sysconf directory
+	# for correct hardcoded sysconf directory
 	patch -p1 < ${FILESDIR}/mysql-3.23-my-print-defaults.diff || die
 
 	aclocal || die
@@ -53,7 +53,7 @@ src_unpack() {
 src_compile() {
 
 	local myconf
-	#means use the system readline
+	# means use the system readline
 	use readline && myconf="${myconf} --without-readline"
 	use berkdb && myconf="${myconf} --with-berkeley-db --with-berkeley-db-includes=/usr/include/db3 --with-berkeley-db-libs=/usr/lib"
 	use berkdb || myconf="${myconf} --without-berkeley-db"
@@ -68,34 +68,34 @@ src_compile() {
 		myconf="${myconf} --without-debug"
 	fi
 
-	#CXX must be g++ because gcc|c++ does not find /usr/lib/gcc-lib/libstc+++.so.
-	#the compiler flags are needed to address stability issues.
+	# CXX must be g++ because gcc|c++ does not find /usr/lib/gcc-lib/libstc+++.so.
+	# the compiler flags are needed to address stability issues.
 	CC=gcc \
 	CFLAGS="${CFLAGS/-O?/} -O2 -fomit-frame-pointer" \
 	CXX=g++ \
 	CXXFLAGS="${CXXFLAGS/-O?/} -O2 -fomit-frame-pointer -felide-constructors -fno-exceptions -fno-rtti" \
 	./configure \
-	--prefix=/usr \
-	--exec-prefix=/usr \
-	--libdir=/usr/lib \
-	--libexecdir=/usr/sbin \
-	--datadir=/usr/share \
-	--sysconfdir=/etc/mysql \
-	--mandir=/usr/share/man \
-	--infodir=/usr/share/info \
-	--localstatedir=/var/lib/mysql \
-	--includedir=/usr/include \
-	--with-raid \
-	--with-low-memory \
-	--enable-assembler \
-	--with-charset=latin1 \
-	--with-mysqld-user=mysql \
-	--with-extra-charsets=all \
-	--enable-thread-safe-client \
-	--with-client-ldflags=-lstdc++ \
-	--with-comment="${PF}.ebuild package" \
-	--with-unix-socket-path=/var/run/mysqld/mysqld.sock \
-	--host=${CHOST} ${myconf} || die "bad configure"
+		--prefix=/usr \
+		--libdir=/usr/lib \
+		--exec-prefix=/usr \
+		--datadir=/usr/share \
+		--libexecdir=/usr/sbin \
+		--sysconfdir=/etc/mysql \
+		--mandir=/usr/share/man \
+		--infodir=/usr/share/info \
+		--includedir=/usr/include \
+		--localstatedir=/var/lib/mysql \
+		--with-raid \
+		--with-low-memory \
+		--enable-assembler \
+		--with-charset=latin1 \
+		--with-mysqld-user=mysql \
+		--with-extra-charsets=all \
+		--enable-thread-safe-client \
+		--with-client-ldflags=-lstdc++ \
+		--with-comment="${PF}.ebuild package" \
+		--with-unix-socket-path=/var/run/mysqld/mysqld.sock \
+		--host=${CHOST} ${myconf} || die "bad ./configure"
 
 	make || die "compile problem"
 }
@@ -105,19 +105,20 @@ src_install() {
 	dodir /var/lib/mysql /var/run/mysqld /var/log/mysql
 	make install DESTDIR=${D} benchdir_root=/usr/share/mysql || die
 
-	#eeek, not sure whats going on here.. are these needed by anything?
+	# eeek, not sure whats going on here.. are these needed by anything?
 	use innodb && ( insinto /usr/lib/mysql ; doins ${WORKDIR}/../libs/* )
 
-	#move client libs, install a couple of missing headers
+	# move client libs, install a couple of missing headers
 	mv ${D}/usr/lib/mysql/libmysqlclient*.so* ${D}/usr/lib
 	dosym ../libmysqlclient.so /usr/lib/mysql/libmysqlclient.so
 	insinto /usr/include/mysql ; doins include/{my_config.h,my_dir.h}
 
+	# convenience links
 	dosym /usr/bin/mysqlcheck /usr/bin/mysqlanalyze
 	dosym /usr/bin/mysqlcheck /usr/bin/mysqlrepair
 	dosym /usr/bin/mysqlcheck /usr/bin/mysqloptimize
 
-	#while my broom gently sweeps...
+	# while my broom gently sweeps...
 	rm -f ${D}/usr/share/mysql/binary-configure
 	rm -f ${D}/usr/share/mysql/mysql.server
 	rm -f ${D}/usr/share/mysql/make_binary_distribution
@@ -137,13 +138,11 @@ src_install() {
 
 pkg_config() {
 
-	if [ ! -d /var/lib/mysql/mysql ] ; then
+	if [ ! -d ${ROOT}/var/lib/mysql/mysql ] ; then
 		einfo "Press ENTER to create the mysql database and set proper"
 		einfo "permissions on it, or Control-C to abort now..."
 		read
-		ewarn "Last chance, ENTER to continue, Control-C to abort..."
-		read
-		/usr/bin/mysql_install_db #>>/var/log/mysql/mysql.err 2>&1
+		${ROOT}/usr/bin/mysql_install_db #>>/var/log/mysql/mysql.err 2>&1
 	else
 		einfo "Hmm, it appears as though you already have the mysql"
 		einfo "database in place.  If you are having problems trying"
@@ -153,8 +152,7 @@ pkg_config() {
 	fi
 
 	# ensure permissions on these just in case...
-	chown -R mysql /var/lib/mysql
-	chown -R mysql /var/run/mysqld
+	chown -R mysql ${ROOT}/var/lib/mysql ${ROOT}/var/run/mysqld
 }
 
 pkg_prerm() {
@@ -172,6 +170,10 @@ pkg_preinst() {
 }
 
 pkg_postinst() {
+
+	# NB:  most of this stuff has been integrated into Gentoo's baselayout
+	# now, for convenience.  So Ill remove it soon.  Shouldnt hurt to leave
+	# it here for a few more versions though...
 
 	# ensure the following arrangement:
 	# /etc/passwd: mysql:x:60:60:mysql:/var/lib/mysql:/dev/null
@@ -195,12 +197,11 @@ pkg_postinst() {
 	usermod -s "/dev/null" mysql || die "usermod problem"
 
 	# ensure sane permissions on existing databases and /var/run/mysqld
-	chown mysql.mysql /var/lib/mysql /var/run/mysqld
-	find /var/lib/mysql -not \( -group root -or -group mysql \) -exec chgrp mysql {} \;
+	chown mysql.mysql ${ROOT}/var/lib/mysql ${ROOT}/var/run/mysqld
+	find ${ROOT}/var/lib/mysql -not \( -group root -or -group mysql \) -exec chgrp mysql {} \;
 
 	# get these proper and ready to go
-	touch /var/log/mysql/mysql.log /var/log/mysql/mysql.err
-	chown mysql.mysql /var/log/mysql/mysql.log /var/log/mysql/mysql.err
-	chmod 0600 /var/log/mysql/mysql.log
-	chmod 0600 /var/log/mysql/mysql.err
+	touch ${ROOT}/var/log/mysql/mysql.log ${ROOT}/var/log/mysql/mysql.err
+	chown mysql.mysql ${ROOT}/var/log/mysql/mysql.log ${ROOT}/var/log/mysql/mysql.err
+	chmod 0600 ${ROOT}/var/log/mysql/mysql.log ${ROOT}/var/log/mysql/mysql.err
 }
