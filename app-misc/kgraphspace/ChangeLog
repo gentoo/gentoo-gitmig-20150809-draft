@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/kgraphspace
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/kgraphspace/ChangeLog,v 1.4 2003/02/12 05:02:11 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/kgraphspace/ChangeLog,v 1.5 2004/03/14 17:21:37 mr_bones_ Exp $
+
+  14 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  kgraphspace-0.3.0_pre1.ebuild:
+  inherit kde instead of deprecated kde-base
 
 *kgraphspace-0.3.0_pre1 (09 Jul 2002)
 
