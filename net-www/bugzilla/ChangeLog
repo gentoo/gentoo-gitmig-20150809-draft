@@ -1,6 +1,10 @@
 # ChangeLog for net-www/bugzilla
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/bugzilla/ChangeLog,v 1.8 2004/07/17 11:55:34 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/bugzilla/ChangeLog,v 1.9 2004/07/19 10:02:59 mr_bones_ Exp $
+
+  19 Jul 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  bugzilla-2.18.0_rc1.ebuild:
+  don't use deprecated ? : dep syntax
 
   17 Jul 2004; Stuart Herbert <stuart@gentoo.org> bugzilla-2.18.0_rc1.ebuild:
   Fix for repoman warnings

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/bugzilla/bugzilla-2.18.0_rc1.ebuild,v 1.2 2004/07/17 11:55:34 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/bugzilla/bugzilla-2.18.0_rc1.ebuild,v 1.3 2004/07/19 10:02:59 mr_bones_ Exp $
 
 inherit webapp
 MY_P=${P/.0_/}
@@ -33,7 +33,8 @@ RDEPEND=">=dev-db/mysql-3.22.5
 	dev-perl/XML-Parser
 	dev-perl/PatchReader
 	dev-perl/MIME-tools
-	apache2? ( >=net-www/apache-2 ) : ( =net-www/apache-1* )"
+	apache2? ( >=net-www/apache-2 )
+	!apache2? ( =net-www/apache-1* )"
 
 # removed deps:  dev-perl/Data-Dumper
 
