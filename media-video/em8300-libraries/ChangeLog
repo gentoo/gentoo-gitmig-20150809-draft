@@ -1,6 +1,6 @@
 # ChangeLog for media-video/em8300-libraries
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-libraries/ChangeLog,v 1.6 2003/01/06 04:03:32 agenkin Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/em8300-libraries/ChangeLog,v 1.7 2003/02/12 07:37:33 vapier Exp $
 
 *em8300-libraries-0.13.0 (12 Dec 2002)
 

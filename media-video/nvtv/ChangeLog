@@ -1,6 +1,6 @@
 # ChangeLog for media-video/nvtv
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvtv/ChangeLog,v 1.5 2003/02/10 21:58:05 blauwers Exp $
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvtv/ChangeLog,v 1.6 2003/02/12 07:40:06 vapier Exp $
 
 *nvtv-0.4.3-0 (10 Feb 2003)
 
