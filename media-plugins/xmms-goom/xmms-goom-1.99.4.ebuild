@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-goom/xmms-goom-1.99.4.ebuild,v 1.4 2003/09/15 00:57:35 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-goom/xmms-goom-1.99.4.ebuild,v 1.5 2003/09/15 16:03:35 seemant Exp $
 
 MY_P=${P/xmms-/}
 S=${WORKDIR}/${MY_P}
@@ -14,7 +14,7 @@ KEYWORDS="x86 ~ppc ~sparc ~alpha ~hppa ~mips ~arm"
 
 DEPEND="media-sound/xmms
 	media-libs/libsdl
-	sys-apps/sh-utils"
+	sys-apps/coreutils"
 
 src_unpack() {
 	unpack ${A}
