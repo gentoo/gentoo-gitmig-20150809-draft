@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.89 2004/11/24 04:34:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.90 2004/11/25 15:37:31 solar Exp $
+
+  25 Nov 2004; <solar@gentoo.org> shadow-4.0.5-r2.ebuild,
+  shadow-4.0.5-r3.ebuild, shadow-4.0.6.ebuild:
+  Fix RDEPEND's for bug #67815 again
 
   23 Nov 2004; Mike Frysinger <vapier@gentoo.org> shadow-4.0.5-r2.ebuild,
   shadow-4.0.5-r3.ebuild, shadow-4.0.6.ebuild:
