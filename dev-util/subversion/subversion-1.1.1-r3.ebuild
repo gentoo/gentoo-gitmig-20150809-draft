@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.1-r3.ebuild,v 1.4 2004/12/03 10:04:39 pauldv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.1-r3.ebuild,v 1.5 2004/12/08 11:12:31 pauldv Exp $
 
 inherit elisp-common libtool python eutils bash-completion
 
@@ -207,7 +207,7 @@ src_install () {
 		Require valid-user
 	</Location>
 	<IfDefine SVN_AUTHZ>
-		<IfModule !authz_svn_module.c>
+		<IfModule !mod_authz_svn.c>
 			LoadModule authz_svn_module	extramodules/mod_authz_svn.so
 		</IfModule>
 	</IfDefine>
