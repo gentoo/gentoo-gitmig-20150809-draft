@@ -1,6 +1,9 @@
 # ChangeLog for media-video/camorama
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camorama/ChangeLog,v 1.4 2004/11/25 21:52:40 chriswhite Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camorama/ChangeLog,v 1.5 2004/12/06 16:12:54 sekretarz Exp $
+
+  06 Dec 2004; Karol Wojtaszek <sekretarz@gentoo.org> camorama-0.17.ebuild:
+  Added to ~amd64, bug #60984
 
 *camorama-0.17 (26 Nov 2004)
 
