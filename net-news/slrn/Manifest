@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 9f22b56486517a44d0756346e3d1b74f ChangeLog 3583
 MD5 70a939ee3cc83b41662d95d4a228f04f slrn-0.9.7.4-r1.ebuild 1480
 MD5 a61773c3eb3ba8913c3915e69ed48b65 slrn-0.9.7.4.ebuild 1309
 MD5 3645c8a532a73e908fc3167d11267363 slrn-0.9.8.0.ebuild 1515
 MD5 d4764f5c17f5e0b416f7ddf271c77d71 metadata.xml 161
-MD5 3fd69d78d7be425a52b5d5c3211de55c slrn-0.9.8.0-r1.ebuild 1194
-MD5 2cbdcc6154ce9f710544cd236fff1736 ChangeLog 3492
+MD5 f0767a9b657b68b97842913942945449 slrn-0.9.8.0-r1.ebuild 1195
 MD5 1d73f5e30732304a30c5f4d7f746d0e0 files/digest-slrn-0.9.7.4 203
 MD5 b54a9e966cdf74fdd72047814f37299d files/digest-slrn-0.9.7.4-r1 267
 MD5 d023c37bf388d5a3d465ae1fe19767b9 files/digest-slrn-0.9.8.0 65
 MD5 d023c37bf388d5a3d465ae1fe19767b9 files/digest-slrn-0.9.8.0-r1 65
-MD5 f7cb12ae4f279161334f22f526f7753c files/0.9.8.0/slrn-0.9.8.0-post.diff 298
-MD5 c6206596799c2e5186648f76c63515a6 files/0.9.8.0/slrn-0.9.8.0-ranges2.diff 615
 MD5 aec97981fff230f801619e5047a0dc13 files/0.9.8.0/slrn-0.9.8.0-mime.diff 393
+MD5 f7cb12ae4f279161334f22f526f7753c files/0.9.8.0/slrn-0.9.8.0-post.diff 298
 MD5 39f274095df53e98ae1e5dad26bd2614 files/0.9.8.0/slrn-0.9.8.0-ranges.diff 721
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFA/xiQAXomK8S72HoRAmfxAJ9OvWPoYPV3MHad8liF3SuRj8RyDACfZqki
-YraGNY5nsSpy0IggKx0/+h0=
-=S9Xe
------END PGP SIGNATURE-----
+MD5 c6206596799c2e5186648f76c63515a6 files/0.9.8.0/slrn-0.9.8.0-ranges2.diff 615

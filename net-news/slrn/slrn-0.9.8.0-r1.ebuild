@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/slrn-0.9.8.0-r1.ebuild,v 1.6 2004/07/22 01:28:37 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/slrn/slrn-0.9.8.0-r1.ebuild,v 1.7 2004/07/24 01:50:34 pylon Exp $
 
 inherit eutils
 
@@ -14,7 +14,7 @@ SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 SLOT="0"
 LICENSE="GPL-2"
 #KEYWORDS="~ppc ~ia64"
-KEYWORDS="x86 ~amd64 ~alpha ~sparc"
+KEYWORDS="x86 ~amd64 ~alpha ~sparc ppc"
 IUSE="ssl nls uudeview"
 
 RDEPEND="virtual/mta
