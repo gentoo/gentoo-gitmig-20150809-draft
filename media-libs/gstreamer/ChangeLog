@@ -1,5 +1,9 @@
 # ChangeLog for media-libs/gstreamer
 
+*gstreamer-0.3.4 (06 May 2002)
+  06 May 2002; Spider <spider@gentoo.org> gstreamer-0.3.4.ebuild
+  lintool fix
+
 * gstreamer-0.3.4 (26 Apr 2002)
   26 Apr 2002; Spider <spider@gentoo.org> gstreamer-0.3.4.ebuild
   libtoolize

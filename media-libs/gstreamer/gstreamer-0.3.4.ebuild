@@ -1,7 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer: Artem Baguinski <artm@v2.nl>
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.3.4.ebuild,v 1.2 2002/04/27 23:08:36 bangert Exp $
+# Author: Artem Baguinski <artm@v2.nl> 
+# Maintainer: Spider <spider@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gstreamer/gstreamer-0.3.4.ebuild,v 1.3 2002/05/06 16:27:34 spider Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Streaming media framework"
@@ -20,6 +21,10 @@ DEPEND=">=dev-libs/glib-2.0
 		app-text/xmltex
 		app-text/xpdf
 		app-text/ghostscript )"
+RDEPEND=">=dev-libs/glib-2.0
+	>=dev-libs/libxml2-2.4
+	>=dev-libs/popt-1.5"
+
 
 src_compile() {
 	local myconf
