@@ -17,7 +17,7 @@ KEYWORDS="~x86 ~ppc"
 
 
 DEPEND="gtk? ( >=lablgtk-1.2.4 )
-	>=dev-lang/ocaml-3.06
+	=dev-lang/ocaml-3.06
 	dev-lang/perl"
 RDEPEND="net-misc/wget"
 

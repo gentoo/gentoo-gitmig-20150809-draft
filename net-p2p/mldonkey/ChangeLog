@@ -1,6 +1,10 @@
 # ChangeLog for net-p2p/mldonkey
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.19 2003/09/24 19:45:00 pyrania Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/mldonkey/ChangeLog,v 1.20 2003/10/06 06:46:50 mholzer Exp $
+
+  07 Oct 2003; Martin Holzer <mholzer@gentoo.org> mldonkey-2.5.3-r1.ebuild,
+  mldonkey-2.5.3-r2.ebuild:
+  fixing ocml version. closes #29996
 
 *mldonkey-2.5.3-r2 (24 Sep 2003)
 
