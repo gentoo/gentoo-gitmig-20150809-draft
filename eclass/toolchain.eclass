@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.11 2004/09/09 23:09:02 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.12 2004/09/10 14:21:52 lv Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -169,7 +169,7 @@ gcc_get_s_dir() {
 # Travis Tilley <lv@gentoo.org> (03 Sep 2004)
 #
 gcc_quick_unpack() {
-	pushd ${WORKDIR}
+	pushd ${WORKDIR} > /dev/null
 	gcc_setup_variables
 
 	if [ -n "${PRERELEASE}" ] ; then
@@ -180,9 +180,9 @@ gcc_quick_unpack() {
 		unpack gcc-${MAIN_BRANCH}.tar.bz2
 		# We want branch updates to be against a release tarball
 		if [ -n "${BRANCH_UPDATE}" ] ; then
-			pushd ${S:="$(gcc_get_s_dir)"}
+			pushd ${S:="$(gcc_get_s_dir)"} > /dev/null
 			epatch ${DISTDIR}/gcc-${MAIN_BRANCH}-branch-update-${BRANCH_UPDATE}.patch.bz2
-			popd
+			popd > /dev/null
 		fi
 	fi
 
@@ -193,7 +193,10 @@ gcc_quick_unpack() {
 
 	if [ -n "${PP_VER}" ]
 	then
+		# The gcc 3.4 propolice versions are meant to be unpacked to ${S}
+		pushd ${S:="$(gcc_get_s_dir)"} > /dev/null
 		unpack protector-${PP_FVER}.tar.gz
+		popd > /dev/null
 	fi
 
 	if [ -n "${PIE_VER}" ]
@@ -201,7 +204,7 @@ gcc_quick_unpack() {
 		unpack ${PIE_CORE}
 	fi
 
-	popd
+	popd > /dev/null
 }
 
 
@@ -234,25 +237,42 @@ exclude_gcc_patches() {
 
 # patch in ProPolice Stack Smashing protection
 do_gcc_SSP_patches() {
-	epatch ${WORKDIR}/protector.dif
-	if [ "${PN}" == "gcc" ] ; then
-		epatch ${FILESDIR}/pro-police-docs.patch
+	local ssppatch
+
+	local gccmajor=$(echo ${MY_PV} | cut -f 1 -d '.')
+	local gccminor=$(echo ${MY_PV} | cut -f 2 -d '.')
+	local gccmicro=$(echo ${MY_PV} | cut -f 3 -d '.')
+
+	if  [ ${gccmajor} -lt 3 ] ; then
+		die "gcc version not supported by do_gcc_SSP_patches"
+	elif [ ${gccmajor} -eq 3 -a ${gccminor} -lt 2 ] ; then
+		die "gcc version not supported by do_gcc_SSP_patches"
+	elif [ ${gccmajor} -eq 3 -a ${gccminor} -eq 2 ] && [ ${gccmicro} -lt 3 ] ; then
+		die "gcc version not supported by do_gcc_SSP_patches"
+	elif [ ${gccmajor} -ge 4 ] ; then
+		die "gcc 4.0? wtf?"
 	fi
 
-	local ppunpackdir
-	if [ "${MY_PV}" == "3.3" ] ; then
-		ppunpackdir="${WORKDIR}"
+	# Etoh keeps changing where files are and what the patch is named
+	if [ "${gccminor}" -lt "4" ] ; then
+		# earlier versions have no directory structure or docs
+		mv ${S}/protector.{c,h} ${S}/gcc
+		ssppatch="${S}/protector.dif"
+		sspdocs="no"
+	elif [ "${gccminor}" -ge "4" -a ${PP_VER} == "3_4" ] ; then
+		# >3.4 put files where they belong and 3_4 uses old patch name
+		ssppatch="${S}/protector.dif"
+		sspdocs="no"
 	else
-		ppunpackdir="${WORKDIR}/gcc/"
+		# >3.4.1 uses version in patch name, and also includes docs
+		ssppatch="${S}/gcc_${PP_VER}.dif"
+		sspdocs="yes"
 	fi
 
-	cp ${ppunpackdir}/protector.c ${S}/gcc/ || die "protector.c not found"
-	cp ${ppunpackdir}/protector.h ${S}/gcc/ || die "protector.h not found"
+	epatch ${ssppatch}
 
-	if [ "${MY_PV}" != "3.3" ] ; then
-		# Etoh started including a testsuite with the gcc 3.4 release
-		cp -R ${ppunpackdir}/testsuite/* ${S}/gcc/testsuite/ \
-			|| die "testsuite not found"
+	if [ "${PN}" == "gcc" -a "${sspdocs}" == "no" ] ; then
+		epatch ${FILESDIR}/pro-police-docs.patch
 	fi
 
 	# we apply only the needed parts of protectonly.dif
@@ -262,7 +282,7 @@ do_gcc_SSP_patches() {
 	# if gcc in a stage3 defaults to ssp, is version 3.4.0 and a stage1 is built
 	# the build fails building timevar.o w/:
 	# cc1: stack smashing attack in function ix86_split_to_parts()
-	if gcc -dumpspecs | grep -q "fno-stack-protector:" && [ "${MY_PV}" != "3.3" ]
+	if gcc -dumpspecs | grep -q "fno-stack-protector:" && [ ${gccminor} -ge 4 ]
 	then
 		use build && epatch ${FILESDIR}/3.4.0/gcc-3.4.0-cc1-no-stack-protector.patch
 	fi
