@@ -1,6 +1,11 @@
 # ChangeLog for x11-plugins/wmnd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/ChangeLog,v 1.7 2003/07/07 13:02:52 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmnd/ChangeLog,v 1.8 2003/07/14 05:21:05 raker Exp $
+
+*wmnd-0.5.7 (13 Jul 2003)
+
+  13 Jul 2003; Nick Hadaway <raker@gentoo.org> wmnd-0.4.7.ebuild:
+  Version bump.
 
 *wmnd-0.4.5-r1 (07 Jul 2003)
 
