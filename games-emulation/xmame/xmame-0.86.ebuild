@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.86.ebuild,v 1.2 2004/09/02 19:42:49 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/xmame/xmame-0.86.ebuild,v 1.3 2004/09/02 20:17:20 mr_bones_ Exp $
 
 inherit flag-o-matic gcc eutils games
 
@@ -179,7 +179,8 @@ src_install() {
 	if [ ${disp} -eq 0 ] || use X || use dga || use xv ; then
 		make DISPLAY_METHOD=x11 install || die "install failed (x11)"
 	fi
-	dogamesbin chdman || die "dogamesbin chdman failed"
+	exeinto "${GAMES_LIBDIR}/${PN}"
+	doexe chdman xml2info || die "doexe failed"
 
 	dodir "${GAMES_DATADIR}/${PN}"
 	cp -r ctrlr "${D}/${GAMES_DATADIR}/${PN}/" || die "cp failed"
