@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.5.ebuild,v 1.2 2004/11/11 01:18:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.7.ebuild,v 1.1 2004/12/04 03:58:10 agriffis Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
-SV=1.6.5		# rc-scripts version
+SV=1.6.7		# rc-scripts version
 SVREV=			# rc-scripts rev
 
 S="${WORKDIR}/rc-scripts-${SV}${SVREV}"
@@ -15,7 +15,7 @@ SRC_URI="mirror://gentoo/rc-scripts-${SV}${SVREV}.tar.bz2
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~s390"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sh ~sparc ~x86"
 IUSE="bootstrap build livecd static uclibc"
 
 # This version of baselayout needs gawk in /bin, but as we do not have
@@ -141,6 +141,7 @@ src_install() {
 	kdir /lib/rcscripts/awk
 	kdir /lib/rcscripts/sh
 	dodir /lib/rcscripts/net.modules.d	# .keep file messes up net.lo
+	dodir /lib/rcscripts/net.modules.d/helpers.d
 	kdir /mnt
 	kdir -m 0700 /mnt/cdrom
 	kdir -m 0700 /mnt/floppy
@@ -339,6 +340,8 @@ src_install() {
 	# problematic with CONFIG_PROTECT
 	insinto /lib/rcscripts/net.modules.d
 	doins ${S}/lib/rcscripts/net.modules.d/*
+	insinto /lib/rcscripts/net.modules.d/helpers.d
+	doins ${S}/lib/rcscripts/net.modules.d/helpers.d/*
 
 	#
 	# Install baselayout documentation
@@ -451,9 +454,13 @@ pkg_postinst() {
 	# Touching /etc/passwd and /etc/shadow after install can be fatal, as many
 	# new users do not update them properly...  see src_install() for why they
 	# are in /usr/share/baselayout/
-	if use build || use bootstrap; then
-		cp ${ROOT}/usr/share/baselayout/{passwd,shadow,group,fstab} ${ROOT}/etc
-	fi
+	for x in passwd shadow group fstab ; do
+		if [[ -e ${ROOT}/etc/${x} ]] ; then
+			touch "${ROOT}/etc/${x}"
+		else
+			cp "${ROOT}/usr/share/baselayout/${x}" "${ROOT}/etc/${x}"
+		fi
+	done
 
 	# Under what circumstances would mtab be a symlink?  It would be
 	# nice if there were an explanatory comment here
