@@ -1,0 +1,5 @@
+MD5 8b15080bd98d3b6ad1601e4dc4d34280 ChangeLog 883
+MD5 ecdb8fad569a324e84410a94d4933c75 clamav-0.54-r1.ebuild 883
+MD5 e8dcbdecd955708ddc7c79399ffa6276 files/clamd.conf 166
+MD5 2914cd886cce48e88ae3476775353a59 files/clamd.rc 1251
+MD5 ce9876fced63b00a9145a572acd5718d files/digest-clamav-0.54-r1 63

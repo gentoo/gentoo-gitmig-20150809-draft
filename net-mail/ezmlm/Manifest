@@ -1,0 +1,4 @@
+MD5 80816f8f38e2f68c5474b5df1ad3cfc5 ChangeLog 1014
+MD5 f54e18c00a4e43160370d50e3e96191f ezmlm-0.53.ebuild 1080
+MD5 c69bf265b2474d6b5ff439b55fe8c4d1 files/digest-ezmlm-0.53 193
+MD5 b82b4c09c356dc91fcbe907a24326b52 files/ezmlm-0.53-errno.patch 270
