@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.48 2004/11/03 19:50:18 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.49 2004/11/03 20:40:08 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -51,18 +51,18 @@ S=${WORKDIR}/xc
 HOMEPAGE="http://freedesktop.org/XOrg"
 
 # Misc patches we may need to fetch ..
-X_PATCHES="mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2
-	http://dev.gentoo.org/~spyderous/${PN}/patchsets/${PV}/${P}-patches-${PATCH_VER}.tar.bz2
-	http://dev.gentoo.org/~cyfred/distfiles/${P}-patches-${PATCH_VER}.tar.bz2"
+X_PATCHES="http://dev.gentoo.org/~spyderous/${PN}/patchsets/${PV}/${P}-patches-${PATCH_VER}.tar.bz2
+	http://dev.gentoo.org/~cyfred/distfiles/${P}-patches-${PATCH_VER}.tar.bz2
+	mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2"
 
 X_DRIVERS=""
 #	mirror://gentoo/${P}-drivers-via-${VIADRV_VER}.tar.bz2"
 # Latest Savage drivers:  http://www.probo.com/timr/savage40.html
 # Latest SIS drivers:  http://www.winischhofer.net/
 
-GENTOO_FILES="mirror://gentoo/${P}-files-${FILES_VER}.tar.bz2
-	http://dev.gentoo.org/~spyderous/${PN}/patchsets/${PV}/${P}-files-${FILES_VER}.tar.bz2
-	http://dev.gentoo.org/~cyfred/distfiles/${P}-files-${FILES_VER}.tar.bz2"
+GENTOO_FILES="http://dev.gentoo.org/~spyderous/${PN}/patchsets/${PV}/${P}-files-${FILES_VER}.tar.bz2
+	http://dev.gentoo.org/~cyfred/distfiles/${P}-files-${FILES_VER}.tar.bz2
+	mirror://gentoo/${P}-files-${FILES_VER}.tar.bz2"
 
 SRC_URI="mirror://gentoo/eurofonts-X11.tar.bz2
 	font-server? ( http://dev.gentoo.org/~cyfred/xorg/${PN}/patchsets/${PV}/xfsft-encodings-${XFSFT_ENC_VER}.tar.bz2 )
