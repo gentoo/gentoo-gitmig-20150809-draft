@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/phppgadmin-3.1.ebuild,v 1.1 2003/10/05 19:46:12 nakano Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phppgadmin/phppgadmin-3.1.ebuild,v 1.2 2003/10/22 18:31:48 nakano Exp $
 
 inherit eutils
 inherit webapp-apache
@@ -17,7 +17,7 @@ SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.bz2"
 HOMEPAGE="http://phppgadmin.sourceforge.net/"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ppc"
+KEYWORDS="x86 ppc"
 SLOT="0"
 
 DEPEND=">=dev-db/postgresql-7.0.0
