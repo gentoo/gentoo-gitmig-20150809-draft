@@ -1,6 +1,9 @@
 # ChangeLog for app-emulation/wine
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.55 2003/10/18 16:13:26 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/ChangeLog,v 1.56 2003/10/18 19:40:44 mholzer Exp $
+
+  19 Oct 2003; Martin Holzer <mholzer@gentoo.org> :
+  digest update. Closes #31434
 
 *wine-20031016 (19 Oct 2003)
 
