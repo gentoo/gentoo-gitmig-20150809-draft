@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/crack-attack-1.1.11.ebuild,v 1.2 2004/11/08 15:25:02 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/crack-attack-1.1.11.ebuild,v 1.3 2004/11/12 19:17:15 blubb Exp $
 
 inherit eutils flag-o-matic gcc games
 
@@ -10,7 +10,7 @@ SRC_URI="http://savannah.nongnu.org/download/crack-attack/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="arm hppa ia64 ppc sparc x86"
+KEYWORDS="arm hppa ia64 ppc sparc x86 ~amd64"
 IUSE="gtk"
 
 DEPEND="virtual/glut
