@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3340 2004/11/22 06:46:17 phosphan Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3341 2004/11/22 10:51:34 robbat2 Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -30,11 +30,6 @@ app-editors/zoinks
 # Masked because of dependency on >=dev-db/mysql-4.1 which is also p.mask'ed
 =dev-db/mysql-administrator-1.0.14
 =dev-db/mysql-query-browser-1.1.1
-
-# <solar@gentoo.org> (20 Nov 2004)
-# security masked per request of maintainer till 
-# such time as he can fix it. bug 69019
-app-text/pdftohtml
 
 # <lv@gentoo.org> (19 Nov 2004)
 # unfinished
