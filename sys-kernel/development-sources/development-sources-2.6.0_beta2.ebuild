@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.0_beta2.ebuild,v 1.1 2003/07/27 18:48:36 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/development-sources/development-sources-2.6.0_beta2.ebuild,v 1.2 2003/07/29 20:37:56 wwoods Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 OKV=${PV/_beta/-test}
@@ -19,7 +19,7 @@ PROVIDE="virtual/linux-sources"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/" 
 LICENSE="GPL-2"
 SLOT="${KV}"
-KEYWORDS="x86 ppc amd64"
+KEYWORDS="x86 ppc amd64 ~alpha"
 
 if [ $ETYPE = "sources" ] && [ -z "`use build`" ]
 then
