@@ -1,3 +1,8 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-misc/freenet6/files/tspc.rc,v 1.2 2003/06/11 15:11:13 latexer Exp $
+
 depend() {
 	need net
 }
