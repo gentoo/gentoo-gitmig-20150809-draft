@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc8-r1.ebuild,v 1.10 2004/12/26 22:23:12 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-1_rc8-r1.ebuild,v 1.11 2005/01/01 04:34:59 eradicator Exp $
 
 inherit eutils flag-o-matic gcc libtool
 
@@ -119,7 +119,7 @@ src_compile() {
 		&& myconf="${myconf} --build=${CHOST}"
 
 	# enable/disable appropiate optimizations on sparc
-	[ "${PROFILE_ARCH}" == "sparc64" ] \
+	[ "${PROFILE_ARCH}" == "sparc64" -o "${PROFILE_ARCH}" == "sparc64-multilib" ] \
 		&& myconf="${myconf} --enable-vis"
 	[ "${PROFILE_ARCH}" == "sparc" ] \
 		&& myconf="${myconf} --disable-vis"
