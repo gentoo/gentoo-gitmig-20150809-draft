@@ -1,4 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7bf432059668febd7fe614f71c4d4675 ChangeLog 592
-MD5 8f0a2b3c35d4ec44cd6d1534a3f343fe irqbalance-0.08.ebuild 706
+MD5 2bc305428dddd27561c9bb6b8abecff7 irqbalance-0.08.ebuild 703
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
 MD5 995857a736d39db7fe479520cc79387f files/digest-irqbalance-0.08 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA4ik1HTu7gpaalycRAoWlAKDVjNFBlrpUWcCsU3Eec7/gnzfeHgCfURoK
+FIHs11Z3WePiOWgrHq1xycE=
+=vQek
+-----END PGP SIGNATURE-----

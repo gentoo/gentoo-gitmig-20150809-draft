@@ -1,9 +1,19 @@
-MD5 6afc5c660bdf211dbf683b4b15e6d2b1 grep-2.5.1-r4.ebuild 1745
-MD5 17d29527d2b14272b356757e2ee45b09 grep-2.5.1-r1.ebuild 1646
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 282ab9b7f5f487bb3b356d9c6130e00d ChangeLog 4603
+MD5 c771f455ecce0e7c629dfca0124943d8 grep-2.5.1-r1.ebuild 1642
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 dd9f372116581b0953217e2c76efaf62 grep-2.5.1-r4.ebuild 1742
 MD5 5dcaa51f88b364134a43d60b661870ee files/digest-grep-2.5.1-r1 62
-MD5 5dcaa51f88b364134a43d60b661870ee files/digest-grep-2.5.1-r4 62
-MD5 41f77ef6693dc91a37b5ec51ce5a3e2d files/2.5.1-manpage.patch 283
-MD5 7fe2377aba625aaed445a12cefa4fb37 files/grep-2.5.1-restrict_arr.patch 495
 MD5 9b382fe04d2e5d86aea020215ceca879 files/gentoo-sparc32-dfa.patch 383
+MD5 41f77ef6693dc91a37b5ec51ce5a3e2d files/2.5.1-manpage.patch 283
+MD5 5dcaa51f88b364134a43d60b661870ee files/digest-grep-2.5.1-r4 62
+MD5 7fe2377aba625aaed445a12cefa4fb37 files/grep-2.5.1-restrict_arr.patch 495
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA4id2HTu7gpaalycRAu8AAKClyTp/XASCF/AJr5Ahwi2m8nWmIwCfYELr
+3w6g/BQjkfws2rq2ZXTp1RI=
+=sjpA
+-----END PGP SIGNATURE-----

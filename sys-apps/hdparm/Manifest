@@ -1,12 +1,22 @@
-MD5 7b91d7e8a6cd9431f0f54b6e610f13b3 hdparm-5.5.ebuild 1302
-MD5 d934cf4054af2ac60b2b022dbf41c895 hdparm-5.4.ebuild 1126
-MD5 b8ae88a0fc6355480da28fe9d34c7b7c hdparm-5.3-r2.ebuild 1037
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 31623fda9d3df682c8687efeb4b5595b ChangeLog 4709
+MD5 dcaed5a8c2243ef4424fc6778e1dae34 hdparm-5.5.ebuild 1279
+MD5 3f2b802fbfccffd6c35f930dbb3563d9 hdparm-5.3-r2.ebuild 1041
+MD5 83695ca14336badc025faaaee3407e5b hdparm-5.4.ebuild 1160
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 e7fca1ca6474223108d41a73057ea995 files/hdparm-new-init 2136
-MD5 300982c72dc0f865d5ad6c542e3b6c4c files/digest-hdparm-5.4 61
 MD5 f5fc13fdfccb0f5600d45488c6a5d534 files/digest-hdparm-5.5 61
-MD5 279626f5df9e35168ceadb26c2121301 files/hdparm-init 378
-MD5 58b06c855068c6d95b0f665c201d6051 files/hdparm-5.4-readahead_rename.patch 1254
-MD5 1601811cc1ed03136cf583764fc818c9 files/hdparm-conf.d 518
 MD5 a6bccb876455636b364c093460cbb994 files/digest-hdparm-5.3-r2 61
+MD5 300982c72dc0f865d5ad6c542e3b6c4c files/digest-hdparm-5.4 61
+MD5 e5c89c63fd77a7ffa1b48bf63c1b0fbe files/hdparm-conf.d 519
+MD5 87e182b2381eaf3dff197a7f9bb7f8b9 files/hdparm-init 379
+MD5 79addcfcff37bea2f39b6aef5050139f files/hdparm-new-init 2137
+MD5 58b06c855068c6d95b0f665c201d6051 files/hdparm-5.4-readahead_rename.patch 1254
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFA4ifnHTu7gpaalycRAniJAKCdN/w266JAXD0d87tdnuC5/TtLBgCePxRO
+SzHGkA4QkFw142oR6KJscd0=
+=BA2K
+-----END PGP SIGNATURE-----
