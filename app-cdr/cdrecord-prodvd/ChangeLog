@@ -1,6 +1,18 @@
 # ChangeLog for app-cdr/cdrecord-prodvd
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrecord-prodvd/ChangeLog,v 1.15 2005/02/26 11:36:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrecord-prodvd/ChangeLog,v 1.16 2005/03/29 22:48:14 pylon Exp $
+
+*cdrecord-prodvd-2.01.01-r1 (29 Mar 2005)
+*cdrecord-prodvd-2.01_pre20041012 (29 Mar 2005)
+
+  29 Mar 2005; Lars Weiler <pylon@gentoo.org>
+  +cdrecord-prodvd-2.01_pre20041012.ebuild, -cdrecord-prodvd-2.01.01.ebuild,
+  +cdrecord-prodvd-2.01.01-r1.ebuild:
+  Revision bump, so that the new cdrecord-wrapper.sh with the new key will be
+  installed -> bug #84227
+  Added a separate version for amd64, so that it contains the correct version
+  number -> bug #84731
+  Changed the LICENSE statement -> bug #75279
 
   26 Feb 2005; Jeremy Huddleston <eradicator@gentoo.org>
   files/cdrecord-wrapper.sh:
