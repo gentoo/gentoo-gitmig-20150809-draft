@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/emacs-w3m-1.3.80-r1.ebuild,v 1.1 2004/01/21 16:37:01 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/emacs-w3m/emacs-w3m-1.3.85.ebuild,v 1.1 2004/02/27 20:10:07 usata Exp $
 
 inherit elisp
 
