@@ -1,4 +1,14 @@
-MD5 a5bae104cb42eb1986e206f432543f08 iconbar-0.9.1.20040508.ebuild 602
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 28e6df93796ba296c36614aad2095363 ChangeLog 449
 MD5 156f5c0fef6f57c39e6cb18600811664 metadata.xml 581
+MD5 971e15728143eb20d7ee6ec751fd23d0 iconbar-0.9.1.20040508.ebuild 564
 MD5 d142a5e242ccad5cbc771b422d0118a2 files/digest-iconbar-0.9.1.20040508 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.8 (GNU/Linux)
+
+iD8DBQFBGtanHTu7gpaalycRArveAJ4vQXuVDPIPHk6zflO/hvKbsgo9IwCgrCvn
+Py1GSPs3A9/JKwKCrU+IZas=
+=k7Ia
+-----END PGP SIGNATURE-----
