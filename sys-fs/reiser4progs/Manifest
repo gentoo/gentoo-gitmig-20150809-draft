@@ -2,15 +2,17 @@
 Hash: SHA1
 
 MD5 f56ecec74dd7a0a4f508b8c68243c9c5 reiser4progs-1.0.1.ebuild 1425
-MD5 524e34ff51c4b91eedc914ccd3245956 ChangeLog 2199
+MD5 bf498c870f7a4f943e209e9b12e8a5d0 ChangeLog 2365
 MD5 564631952eab971c18ab4de2b5b721bd metadata.xml 267
 MD5 bbd503ec1d2b0180ec17ac897d95d86e reiser4progs-1.0.2.ebuild 1486
+MD5 caac58c9d991e05cb9312c8ef1b8bca8 reiser4progs-1.0.3.ebuild 1483
 MD5 990967545588c86e92fb0afbb2f77834 files/digest-reiser4progs-1.0.1 70
 MD5 9bb40bf49c081afe6951054366ff7e20 files/digest-reiser4progs-1.0.2 70
+MD5 9f7f4fa128d3f50bb4b4918d05c62a60 files/digest-reiser4progs-1.0.3 70
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBhTxFHTu7gpaalycRAqzVAKCjz4RixeDhwdAI/S0sgIsFTO4SSwCfaCFD
-lt/g/hZTcCzMw9kQEVxqC/M=
-=AG9o
+iD8DBQFBwcWaroRuSHgZdywRAnxqAJ9oLpAFTb1VOsnMoPFAjIYcfo+XSACfXe1k
+dp9COR+L/wn5O0xlyGherLI=
+=VpJl
 -----END PGP SIGNATURE-----
