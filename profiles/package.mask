@@ -235,11 +235,6 @@ net-misc/gift
 media-video/xine-d4d
 media-video/xine-d5d
 
-# Masked pending directfb patching.
-# --lostlogic ( 20 Jun 2002 )
-=media-libs/xine-lib-0.9.11
-=media-video/xine-ui-0.9.11
-
 # New orinoco_cs 0.11a driver -- karltk (01/05/2002)
 #
 # Only tested with the SMC2632W card, should unmask
@@ -859,7 +854,3 @@ net-mail/spamassassin
 # naz@gentoo.org 16 Jun 2002
 # Works but needs some testing an finishing startxdfb script, hint hint :o).
 x11-base/xdirectfb
-
-# seemant@gentoo.org
-# testing new version -- especially packages which have it as a dependency
-=dev-libs/DirectFB-0.9.12
