@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libpcre
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.38 2004/07/12 18:43:02 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libpcre/ChangeLog,v 1.39 2004/07/13 05:22:01 eradicator Exp $
+
+*libpcre-4.5 (12 Jul 2004)
+
+  12 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> +libpcre-4.5.ebuild:
+  Version bump closes bug #56791.
 
   12 Jul 2004; <solar@gentoo.org> libpcre-4.4.ebuild,
   files/pcre-4.2-link.patch, files/pcre-4.4-uclibc-tuple.patch:
