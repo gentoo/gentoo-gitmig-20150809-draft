@@ -9,19 +9,14 @@ MD5 d942e2be09e48e4fb91667b3803d8cfa tetex-2.99.1.20041026.ebuild 1781
 MD5 12b61c88bbb4aff9f9b9e1dd5e86b6b7 tetex-2.0.2-r4.ebuild 487
 MD5 ed2101fe2206c296c09f0d2b67759841 files/digest-tetex-2.0.2-r3 282
 MD5 9179c455d1a594b0b06b670e0b051374 files/digest-tetex-1.0.7-r13 343
-MD5 4d9d822ec737aaccae78dda20afa1b3f files/tetex-2.99.1.20041026-dont-run-config.diff 1755
 MD5 ed2101fe2206c296c09f0d2b67759841 files/digest-tetex-2.0.2-r4 282
 MD5 41f87c91f8bb6ceeae3c1fb7ca0dce1c files/tetex-texdoctk-gentoo.patch 509
-MD5 a539912519440085cf04282e3593d5d0 files/tetex-2.99.1.20041026-etex.diff 484
-MD5 476a1c8128397ff7a381c43fe723a522 files/tetex-2.0.2-dont-run-config.diff 1243
-MD5 50c560b391869be15a001b738e0b7bfe files/tetex-2.0.2.diff 2010
 MD5 1c3401dbbc9d478e94c98e44b9b68e38 files/tetex-no-readlink-manpage.diff 542
 MD5 012e12b394273b313e3c732ec5d24cd5 files/digest-tetex-2.99.1.20041026 337
-MD5 87457ae225528a6748f182b91b9b9c55 files/tetex-2.99.1.20041026.diff 3469
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBiyUrVWNWqTUmv+0RAtEJAJ9cnnld9LWAIz4q++ZvfkIjGe3WPgCgjwiz
-n1+ZN3cfxbDi6yV2kZ/7R70=
-=hFHH
+iD8DBQFBiyW6VWNWqTUmv+0RAlz9AJ0XirUHSS/xDHcam27LGgyQ5cJG+gCgl2Fn
+VzooSIyhcvtiKP7WvKJoX5Y=
+=ppCD
 -----END PGP SIGNATURE-----
