@@ -6,7 +6,7 @@ S="${WORKDIR}/docs"
 SRC_URI=""
 DESCRIPTION="Javadoc for Java SDK version 1.4"
 HOMEPAGE="http://java.sun.com/j2se/1.4/download.html"
-LICENSE="sun"
+LICENSE="sun-j2sl"
 SLOT="1.4"
 KEYWORDS="x86 ppc sparc"
 
