@@ -1,6 +1,11 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.17 2002/07/25 13:57:18 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.18 2002/10/18 08:30:19 aliz Exp $
+
+*openssh-3.5_p1 (18 Oct 2002)
+
+  18 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> openssh-3.5_p1.ebuild :
+  Version bump, found by fluxbox <fluxbox@cox.net> in bug #9262.
 
 *openssh-3.4_p1-r3 (04 July 2002)
 
