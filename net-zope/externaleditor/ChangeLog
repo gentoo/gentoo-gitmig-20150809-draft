@@ -1,6 +1,12 @@
 # ChangeLog for net-zope/externaleditor
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/externaleditor/ChangeLog,v 1.5 2003/10/10 23:16:00 robbat2 Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/externaleditor/ChangeLog,v 1.6 2004/01/22 14:35:35 lanius Exp $
+
+*externaleditor-0.7-r1 (22 Jan 2004)
+
+  22 Jan 2004; Heinrich Wendel <lanius@gentoo.org>
+  externaleditor-0.7-r1.ebuild:
+  separate zopeedit as extra ebuild
 
   10 Oct 2003; Robin H. Johnson <robbat2@gentoo.org>
   externaleditor-0.7.ebuild:
