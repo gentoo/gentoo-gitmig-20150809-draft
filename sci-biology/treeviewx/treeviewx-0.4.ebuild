@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/treeviewx/treeviewx-0.4.ebuild,v 1.1 2004/12/23 18:11:05 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/treeviewx/treeviewx-0.4.ebuild,v 1.2 2005/01/30 18:21:09 ribosome Exp $
 
 DESCRIPTION="A phylogenetic tree viewer"
 HOMEPAGE="http://darwin.zoology.gla.ac.uk/~rpage/treeviewx/"
@@ -29,13 +29,13 @@ src_compile() {
 	econf || die
 	# The configure script may pick the Unicode wxGTK.
 	if grep -q "gtk2u" Makefile; then
-		sed -i -e 's/gtk2u/gtk2/' Makefile
+		sed -i -e 's/gtk2u/gtk2/' Makefile || die
 		cd TreeLib
-		sed -i -e 's/gtk2u/gtk2/' Makefile
+		sed -i -e 's/gtk2u/gtk2/' Makefile || die
 		cd ../ncl-2.0
-		sed -i -e 's/gtk2u/gtk2/' Makefile
+		sed -i -e 's/gtk2u/gtk2/' Makefile || die
 		cd src
-		sed -i -e 's/gtk2u/gtk2/' Makefile
+		sed -i -e 's/gtk2u/gtk2/' Makefile || die
 	fi
 	cd ${S}
 	emake || die

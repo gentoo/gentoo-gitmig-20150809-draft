@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/vienna-rna-1.4.ebuild,v 1.2 2005/01/09 18:48:37 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/vienna-rna/vienna-rna-1.4.ebuild,v 1.3 2005/01/30 18:21:09 ribosome Exp $
 
 inherit flag-o-matic
 
@@ -19,11 +19,11 @@ DEPEND="perl? ( dev-lang/perl )
 S="${WORKDIR}/ViennaRNA-${PV}"
 
 src_compile() {
-	sed -ie 's:/usr/local/bin/perl:/usr/bin/perl:' Perl/RNAfold.pl
-	sed -ie 's:/usr/local/bin/perl:/usr/bin/perl:' Utils/ct2b.pl
-	sed -ie 's:/usr/local/bin/perl:/usr/bin/perl:' Utils/b2mt.pl
-	sed -ie 's:/usr/local/bin/perl:/usr/bin/perl:' Utils/dpzoom.pl
-	sed -ie 's:/usr/local/bin/perl:/usr/bin/perl:' Utils/mountain.pl
+	sed -i -e 's:/usr/local/bin/perl:/usr/bin/perl:' Perl/RNAfold.pl || die
+	sed -i -e 's:/usr/local/bin/perl:/usr/bin/perl:' Utils/ct2b.pl || die
+	sed -i -e 's:/usr/local/bin/perl:/usr/bin/perl:' Utils/b2mt.pl || die
+	sed -i -e 's:/usr/local/bin/perl:/usr/bin/perl:' Utils/dpzoom.pl || die
+	sed -i -e 's:/usr/local/bin/perl:/usr/bin/perl:' Utils/mountain.pl || die
 	append-flags -I../H
 	make -e library programs gammel subopt || die
 	use perl && make -e perl || die
