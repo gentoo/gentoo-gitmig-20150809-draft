@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-20030413-r1.ebuild,v 1.11 2004/02/20 07:44:01 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/crystalspace-20030413-r1.ebuild,v 1.12 2004/03/31 06:54:36 mr_bones_ Exp $
 
 DESCRIPTION="portable 3D Game Development Kit written in C++"
 SRC_URI="mirror://gentoo/distfiles/${P}.tar.gz"
@@ -11,7 +11,7 @@ LICENSE="LGPL-2"
 KEYWORDS="x86 ppc"
 IUSE="oggvorbis mikmod openal truetype 3ds mng"
 
-DEPEND=">=media-libs/libpng-1.2.1
+RDEPEND=">=media-libs/libpng-1.2.1
 	>=media-libs/jpeg-6b
 	mng? ( media-libs/libmng )
 	mikmod? ( media-libs/libmikmod )
@@ -19,14 +19,16 @@ DEPEND=">=media-libs/libpng-1.2.1
 	truetype? ( >=media-libs/freetype-2.0 )
 	openal? ( media-libs/openal )
 	zlib? ( sys-libs/zlib )
-	oggvorbis? ( >=media-libs/libogg-1.0
+	oggvorbis? (
+		>=media-libs/libogg-1.0
 		>=media-libs/libvorbis-1.0 )
-	x86? ( dev-lang/nasm )
 	dev-games/ode
 	>=dev-lang/perl-5.6.1
 	!dev-games/crystalspace-cvs"
+DEPEND="${RDEPEND}
+	x86? ( dev-lang/nasm )"
 
-S=${WORKDIR}/CS
+S="${WORKDIR}/CS"
 
 CRYSTAL_PREFIX=/opt/crystal
 

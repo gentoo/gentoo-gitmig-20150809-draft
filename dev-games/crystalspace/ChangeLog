@@ -1,6 +1,10 @@
 # ChangeLog for dev-games/crystalspace
-# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.2 2003/07/26 07:38:07 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-games/crystalspace/ChangeLog,v 1.3 2004/03/31 06:54:36 mr_bones_ Exp $
+
+  30 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  crystalspace-20030413-r1.ebuild:
+  don't rdepend on nasm
 
 *crystalspace-20030413-r1 (17 Apr 2003)
 
