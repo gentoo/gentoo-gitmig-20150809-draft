@@ -11,6 +11,7 @@ svga
 sse 
 firebird
 tcc
+acpi
 
 # Chris PeBenito <pebenito@gentoo.org>
 # must use a SELinux profile
