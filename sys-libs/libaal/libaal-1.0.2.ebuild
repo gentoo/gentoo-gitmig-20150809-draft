@@ -1,27 +1,37 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/libaal/libaal-1.0.2_pre1.ebuild,v 1.3 2004/10/01 14:35:23 blubb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/libaal/libaal-1.0.2.ebuild,v 1.1 2004/10/30 23:41:36 vapier Exp $
 
 inherit eutils
 
-MY_P="${PN}-${PV/_/-}"
-DATE="2004.09.17"
 DESCRIPTION="library required by reiser4progs"
 HOMEPAGE="http://www.namesys.com/v4/v4.html"
-SRC_URI="ftp://ftp.namesys.com/pub/reiser4progs/pre/${DATE}/${MY_P}.tar.gz"
+SRC_URI="ftp://ftp.namesys.com/pub/reiser4progs/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~amd64"
+KEYWORDS="~amd64 ~ppc ~x86"
 IUSE=""
 
 DEPEND=""
 
-S="${WORKDIR}/${MY_P}"
+src_unpack() {
+	unpack ${A}
+	cd ${S}
+	# remove stupid CFLAG hardcodes
+	sed -i \
+		-e "/GENERIC_CFLAGS/s:-O3::" \
+		-e "/^CFLAGS=/s:\"\":\"${CFLAGS}\":" \
+		configure || die "sed"
+	cat << EOF > run-ldconfig
+#!/bin/sh
+true
+EOF
+}
 
 src_compile() {
 	econf \
-		--enable-stand-alone \
+		--enable-libminimal \
 		--enable-memory-manager \
 		--libdir=/$(get_libdir) || die "configure failed"
 	emake || die "make failed"
@@ -34,9 +44,9 @@ src_install() {
 	# move silly .a libs out of /
 	dodir /usr/$(get_libdir)
 	local l=""
-	for l in libaal libaal-alone ; do
+	for l in libaal libaal-minimal ; do
 		mv ${D}/$(get_libdir)/${l}.{a,la} ${D}/usr/$(get_libdir)/
-		dosym ../usr/$(get_libdir)/${l}.a /$(get_libdir)/${l}.a
+		#dosym /usr/$(get_libdir)/${l}.a /$(get_libdir)/${l}.a
 		gen_usr_ldscript ${l}.so
 	done
 }
