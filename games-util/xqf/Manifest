@@ -1,14 +1,16 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 9dae11ba772c57002aed838ea34d3b25 ChangeLog 2780
+MD5 e38a0b24268f57bf8f18f1ee52c2ca3c ChangeLog 2916
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
 MD5 7802909919727d30a6cd8c252b0821c3 xqf-1.0.ebuild 1475
+MD5 32fdac09b1a9cb2893ef4572973eb739 xqf-1.0.2.ebuild 1252
 MD5 ea7e5fe663f7343fbbc6607a0d0a6895 files/digest-xqf-1.0 59
+MD5 2d33c06cd15aeb89621491ae8828696e files/digest-xqf-1.0.2 61
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBy8Z6roRuSHgZdywRAr2uAJ4o9rgkrgxDWm/AXT9rUZgfLbi3ngCbBsZJ
-IpKu8mna0eC8lB/m6s1ZgiQ=
-=yKaf
+iD8DBQFBy9BoroRuSHgZdywRAnLpAJ9nlKk+GJEuAi/UwKo2CYuBOsNsaACfXtiB
+MNSRGvz5oqmouRSHOp4NUmo=
+=KgQP
 -----END PGP SIGNATURE-----
