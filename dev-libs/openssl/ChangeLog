@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/openssl
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.46 2003/09/19 13:41:06 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/openssl/ChangeLog,v 1.47 2003/09/23 15:48:27 darkspecter Exp $
+
+  23 Sep 2003; Bartosch Pixa <darkspecter@gentoo.org> openssl-0.9.6j.ebuild:
+  set ppc in keywords
 
   19 Sep 2003; Daniel Ahlberg <aliz@gentoo.org> openssl-0.9.7b-r2.ebuild :
   Filter "-fprefetch-loop-arrays" for all GCC 3.3 versions.
