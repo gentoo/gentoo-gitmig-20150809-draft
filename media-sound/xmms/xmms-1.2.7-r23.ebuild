@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r23.ebuild,v 1.8 2003/12/29 08:17:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/xmms-1.2.7-r23.ebuild,v 1.9 2004/01/05 18:42:24 weeve Exp $
 
 inherit libtool flag-o-matic eutils
 filter-flags -fforce-addr -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
@@ -16,7 +16,7 @@ SRC_URI="http://www.xmms.org/files/1.2.x/${P}.tar.gz
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~alpha hppa"
+KEYWORDS="x86 ~ppc sparc ~alpha hppa"
 
 DEPEND="app-arch/unzip
 	=x11-libs/gtk+-1.2*

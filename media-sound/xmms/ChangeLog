@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/xmms
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.81 2003/12/29 08:17:54 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/xmms/ChangeLog,v 1.82 2004/01/05 18:42:24 weeve Exp $
+
+  05 Jan 2004; Jason Wever <weeve@gentoo.org> xmms-1.2.7-r23.ebuild:
+  Marked stable on sparc.
 
   29 Dec 2003; Seemant Kulleen <seemant@gentoo.org> xmms-1.2.7-r23.ebuild:
   move -r23 to stable x86 as there have not been any complaints about it.
