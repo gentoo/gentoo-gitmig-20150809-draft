@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.3-r1.ebuild,v 1.5 2004/08/24 04:11:00 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/gdbm/gdbm-1.8.3-r1.ebuild,v 1.6 2004/09/09 16:32:08 eradicator Exp $
 
-inherit gnuconfig flag-o-matic
+inherit gnuconfig flag-o-matic eutils
 
 DESCRIPTION="Standard GNU database libraries included for compatibility with Perl"
 HOMEPAGE="http://www.gnu.org/software/gdbm/gdbm.html"
@@ -41,13 +41,16 @@ src_install() {
 	dodoc ChangeLog NEWS README
 
 	# temp backwards support #32510
-	if [ -s ${ROOT}/usr/lib/libgdbm.so.2 ] ; then
-		cp ${ROOT}/usr/lib/libgdbm.so.2 ${D}/usr/lib/
-		touch ${D}/usr/lib/libgdbm.so.2
+	if [ -e ${ROOT}/usr/$(get_libdir)/libgdbm.so.2 ] ; then
+		cp ${ROOT}/usr/$(get_libdir)/libgdbm.so.2 ${D}/usr/$(get_libdir)/
+		touch ${D}/usr/$(get_libdir)/libgdbm.so.2
 	fi
 }
 
 pkg_postinst() {
-	ewarn "Please run revdep-rebuild --soname libgdbm.so.2"
-	ewarn "Packages compiled against the previous version will not work"
+	if [ -e ${ROOT}/usr/$(get_libdir)/libgdbm.so.2 ] ; then
+		ewarn "Please run revdep-rebuild --soname libgdbm.so.2"
+		ewarn "After that completes, it will be safe to remove the old"
+		ewarn "library (${ROOT}/usr/$(get_libdir)/libgdbm.so.2)."
+	fi
 }
