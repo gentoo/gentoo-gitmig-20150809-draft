@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.21.ebuild,v 1.2 2004/06/24 22:02:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/dbus-0.21.ebuild,v 1.3 2004/06/25 20:31:01 agriffis Exp $
 
 # because of the experimental nature debug by default
 inherit debug
@@ -69,7 +69,7 @@ src_install() {
 
 #	keepdir /usr/lib/dbus-1.0/services
 
-	if [ -n "`use doc`" ] ; then
+	if use doc ; then
 		cd ${S}
 		doxygen Doxyfile
 		dodir /usr/share/man/man3

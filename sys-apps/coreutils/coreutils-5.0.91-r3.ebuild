@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0.91-r3.ebuild,v 1.13 2004/06/24 22:00:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0.91-r3.ebuild,v 1.14 2004/06/25 20:30:29 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -70,7 +70,7 @@ src_unpack() {
 	# This one also needs porting like the rest, but its a bit more involved,
 	# so I will leave it for somebody that use i18n that can actually test it.
 	#
-	#	if [ -z "`use nls`" ] ; then
+	#	if ! use nls ; then
 			mv ${PATCHDIR}/acl/004* ${PATCHDIR}/excluded
 	#	fi
 
@@ -99,7 +99,7 @@ src_compile() {
 
 	if use acl
 	then
-		if [ -z "`use selinux`" ]
+		if ! use selinux
 		then
 			if [ -z "`which cvs 2>/dev/null`" ]
 			then
@@ -139,7 +139,7 @@ src_install() {
 	cd usr/bin
 	ln -s ../../bin/* .
 
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		cd ${S}
 		dodoc AUTHORS ChangeLog* COPYING NEWS README* THANKS TODO

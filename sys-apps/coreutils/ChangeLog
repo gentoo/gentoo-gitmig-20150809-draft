@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/coreutils
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.98 2004/06/24 22:00:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/ChangeLog,v 1.99 2004/06/25 20:30:29 agriffis Exp $
+
+  25 Jun 2004; Aron Griffis <agriffis@gentoo.org> coreutils-5.0-r6.ebuild,
+  coreutils-5.0.91-r3.ebuild, coreutils-5.0.91-r4.ebuild:
+  QA - fix use invocation
 
   16 Jun 2004; Daniel Black <dragonheart@gentoo.org> coreutils-5.0-r6.ebuild,
   coreutils-5.0.91-r3.ebuild, coreutils-5.0.91-r4.ebuild,

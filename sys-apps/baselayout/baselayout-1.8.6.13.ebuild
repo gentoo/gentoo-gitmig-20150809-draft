@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.13.ebuild,v 1.8 2004/06/24 21:59:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.8.6.13.ebuild,v 1.9 2004/06/25 20:26:33 agriffis Exp $
 
 inherit eutils
 
@@ -44,7 +44,7 @@ src_unpack() {
 	cd ${S2}
 	cp Makefile Makefile.orig
 	sed -e "s:-O2:${CFLAGS}:" Makefile.orig >Makefile || die
-	if [ -n "`use build`" ]
+	if use build
 	then
 		# Do not build sulogin, as it needs libcrypt which is not in the
 		# build image.
@@ -75,7 +75,7 @@ src_unpack() {
 			;;
 	esac
 
-	if [ -z "`use build`" -a -z "`use bootstrap`" ]
+	if ! use build && ! use bootstrap
 	then
 		# Sanity check to see if has version works
 		if has_version '>=sys-apps/baselayout-1.8' &> /dev/null
@@ -101,7 +101,7 @@ src_compile() {
 	make CC="${CC:-gcc}" LD="${CC:-gcc} ${LDFLAGS}" \
 		CFLAGS="${CFLAGS}" || die "problem compiling utilities"
 
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		# Build sysvinit stuff
 		cd ${S2}
@@ -350,7 +350,7 @@ src_install() {
 	# if 'build' or 'bootstrap' is not in USE.  This will
 	# change if we have sys-apps/gawk-3.1.1-r1 or later in
 	# the build image ...
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		# This is for new depscan.sh and env-update.sh
 		# written in awk
@@ -373,7 +373,7 @@ src_install() {
 	einfo "Installing utilities..."
 	make DESTDIR="${D}" install || die "problem installing utilities"
 
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		# Install sysvinit stuff
 		cd ${S2}
@@ -444,8 +444,8 @@ src_install() {
 
 	keepdir ${svcdir} >/dev/null 2>&1
 
-	if [ -n "$(use build)" -o -n "$(use bootstrap)" -o \
-	     ! -f "${ROOT}/lib/udev-state/devices.tar.bz2" ]
+	if use build || use bootstrap || \
+		[ ! -f "${ROOT}/lib/udev-state/devices.tar.bz2" ]
 	then
 		# Ok, create temp device nodes
 		mkdir -p "${T}/udev-$$"
@@ -555,7 +555,7 @@ pkg_postinst() {
 	if [ "${altmerge}" -eq "0" -a ! -e "${ROOT}/dev/.udev" -a \
 	     -f "${ROOT}/lib/udev-state/devices.tar.bz2" ]
 	then
-		if [ -n "$(use build)" -o -n "$(use bootstrap)" ]
+		if use build || use bootstrap
 		then
 			einfo "Populating /dev with device nodes..."
 			[ ! -e "${ROOT}/dev" ] && mkdir -p "${ROOT}/dev"
@@ -616,7 +616,7 @@ EOF
 
 	# Make sure we get everything ready for $svcdir that moved to
 	# /var/lib/init.d ....
-	if [ -z "`use build`" -a -z "`use bootstrap`" ]
+	if ! use build && ! use bootstrap
 	then
 		local oldsvcdir="${svcdir}"
 		local rcconfd="/etc/conf.d/rc"
@@ -675,7 +675,7 @@ EOF
 	# Touching /etc/passwd and /etc/shadow after install can be fatal, as many
 	# new users do not update them properly.  thus remove all ._cfg files if
 	# we are not busy with a bootstrap.
-	if [ -z "`use build`" -a -z "`use bootstrap`" ]
+	if ! use build && ! use bootstrap
 	then
 		ewarn "Removing invalid backup copies of critical config files..."
 		rm -f ${ROOT}/etc/._cfg????_{passwd,shadow}
@@ -684,7 +684,7 @@ EOF
 	# Reload init to fix unmounting problems of / on next reboot
 	# this is really needed, as without the new version of init cause init
 	# not to quit properly on reboot, and causes a fsck of / on next reboot.
-	if [ "${ROOT}" = "/" -a -z "`use build`" -a -z "`use bootstrap`" ]
+	if [ "${ROOT}" = "/" ] && ! use build && ! use bootstrap
 	then
 		echo
 		# Do not return an error if this fails

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r6.ebuild,v 1.9 2004/06/24 22:00:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/coreutils/coreutils-5.0-r6.ebuild,v 1.10 2004/06/25 20:30:29 agriffis Exp $
 
 inherit eutils
 
@@ -42,7 +42,7 @@ src_unpack() {
 	# WARNING: These CONFLICT with the SELINUX patches
 	if use acl
 	then
-		if [ -z "`use nls`" ] ; then
+		if ! use nls ; then
 			mv ${PATCHDIR}/acl/004* ${PATCHDIR}/excluded
 		fi
 		mv ${PATCHDIR}/{001*,002*,004*} ${PATCHDIR}/excluded
@@ -97,7 +97,7 @@ src_install() {
 	cd usr/bin
 	ln -s ../../bin/* .
 
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		cd ${S}
 		dodoc AUTHORS ChangeLog* COPYING NEWS README* THANKS TODO

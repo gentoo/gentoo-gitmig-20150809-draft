@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/dbus
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.8 2004/06/24 22:02:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dbus/ChangeLog,v 1.9 2004/06/25 20:31:01 agriffis Exp $
+
+  25 Jun 2004; Aron Griffis <agriffis@gentoo.org> dbus-0.21.ebuild:
+  QA - fix use invocation
 
 *dbus-0.21 (07 Apr 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-0.60.5-r2.ebuild,v 1.8 2004/06/24 21:59:42 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/busybox/busybox-0.60.5-r2.ebuild,v 1.9 2004/06/25 20:28:35 agriffis Exp $
 
 inherit flag-o-matic eutils
 
@@ -27,14 +27,14 @@ src_unpack() {
 	# I did not include the msh patch since I don't know if it will
 	# break stuff, I compile ash anyway, and it's in CVS
 
-	if [ `use devfs` ]; then
+	if use devfs; then
 		einfo "Disabling devfs in busybox"
 		sed -i -e "s:#define.*BB_FEATURE_DEVFS://#define BB_FEATURE_DEVFS:g" \
 			 ${S}/Config.h
 	fi
 
 	# Add support for dietlibc - solar@gentoo.org
-	if [ `use diet` ]; then
+	if use diet; then
 		[ "${PV}" == "0.60.5" ] &&
 		sed -i \
 			-e "s://#define.*BB_TTY:#define BB_TTY:g" \
@@ -51,14 +51,14 @@ src_compile() {
 	local myconf
 
 	use static && myconf="${myconf} DOSTATIC=true"
-	if [ `use uclibc` ]; then
+	if use uclibc; then
 		myconf="${myconf} \
 			CC=/usr/i386-linux-uclibc/bin/i386-uclibc-gcc \
 			USE_SYSTEM_PWD=false"
 		unset CFLAGS
 	fi
 
-	if [ `use diet` ] ; then
+	if use diet ; then
 		append-flags -D_BSD_SOURCE
 		emake CC="diet ${CC}" CLFAGS="${CFLAGS}" ${myconf} ||
 			die "Failed to make diet ${PN}"
