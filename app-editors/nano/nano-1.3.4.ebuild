@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.3.4.ebuild,v 1.1 2004/08/18 04:09:28 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/nano/nano-1.3.4.ebuild,v 1.2 2004/08/18 19:07:51 vapier Exp $
 
 inherit eutils
 
@@ -24,6 +24,7 @@ S=${WORKDIR}/${MY_P}
 src_unpack() {
 	unpack ${A}
 	cd ${S}
+	epatch ${FILESDIR}/${PV}-nanobrack.patch
 	use nomac && epatch ${FILESDIR}/${PV}-nomac.patch
 }
 
