@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/eflite-0.3.8.ebuild,v 1.7 2004/03/23 05:49:39 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/eflite/eflite-0.3.8-r1.ebuild,v 1.1 2004/03/23 19:02:44 eradicator Exp $
 
 inherit eutils
 
@@ -38,7 +38,7 @@ src_install() {
 	doins ${FILESDIR}/es.conf
 
 	exeinto /etc/init.d
-	newins ${FILESDIR}/eflite.rc eflite
+	newexe ${FILESDIR}/eflite.rc eflite
 }
 
 pkg_postinst() {
