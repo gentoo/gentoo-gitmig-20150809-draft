@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Time-modules
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-modules/ChangeLog,v 1.7 2004/06/25 01:07:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-modules/ChangeLog,v 1.8 2004/12/23 10:26:49 nigoro Exp $
+
+  23 Dec 2004; Yuta SATOH <nigoro@gentoo.org> Time-modules-2003.1126.ebuild:
+  added ~ppc64
 
 *Time-modules-2003.1126 (10 Jun 2004)
 

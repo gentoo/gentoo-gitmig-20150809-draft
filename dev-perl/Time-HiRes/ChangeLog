@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Time-HiRes
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-HiRes/ChangeLog,v 1.21 2004/10/19 08:04:55 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Time-HiRes/ChangeLog,v 1.22 2004/12/23 10:23:12 nigoro Exp $
+
+  23 Dec 2004; Yuta SATOH <nigoro@gentoo.org> Time-HiRes-1.59.ebuild:
+  added ~ppc64
 
   19 Oct 2004; Dylan Carlson <absinthe@gentoo.org> Time-HiRes-1.59.ebuild:
   KEYWORDS ~amd64.
