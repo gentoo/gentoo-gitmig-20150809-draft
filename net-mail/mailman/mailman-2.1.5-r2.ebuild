@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.5-r2.ebuild,v 1.7 2005/01/16 03:21:11 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/mailman-2.1.5-r2.ebuild,v 1.8 2005/02/16 19:53:21 beu Exp $
 
 inherit eutils
 IUSE="apache2"
@@ -129,8 +129,8 @@ pkg_config() {
 	if ! use apache2; then
 		einfo "Updating apache config"
 		einfo "added: \"Include  conf/addon-modules/mailman.conf\""
-		einfo "to ${ROOT}etc/apache/conf/apache.conf"
+		einfo "to ${ROOT}/etc/apache/conf/apache.conf"
 		echo "Include  conf/addon-modules/mailman.conf" \
-			>> ${ROOT}etc/apache/conf/apache.conf
+			>> ${ROOT}/etc/apache/conf/apache.conf
 	fi
 }

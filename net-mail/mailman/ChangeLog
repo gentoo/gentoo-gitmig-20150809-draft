@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/mailman
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.58 2005/02/12 17:16:23 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mailman/ChangeLog,v 1.59 2005/02/16 19:53:21 beu Exp $
+
+  16 Feb 2005; Elfyn McBratney <beu@gentoo.org> mailman-2.1.5-r2.ebuild,
+  mailman-2.1.5-r3.ebuild, mailman-2.1.5-r4.ebuild,
+  mailman-2.1.6_beta1.ebuild:
+  Add slash after ${ROOT} in pkg_config.
 
 *mailman-2.1.6_beta1 (12 Feb 2005)
 
