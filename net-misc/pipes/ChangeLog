@@ -1,11 +1,11 @@
 # ChangeLog for net-misc/pipes
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/pipes/ChangeLog,v 1.5 2004/04/15 21:29:16 randy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/pipes/ChangeLog,v 1.6 2004/04/19 06:36:48 vapier Exp $
+
+*pipes-1.16 (20 Feb 2004)
 
   15 Apr 2004; Michael McCabe <randy@gentoo.org> pipes-1.16.ebuild:
   adding s390 keywords
-
-*pipes-1.16 (20 Feb 2004)
 
   20 Feb 2004; Mike Frysinger <vapier@gentoo.org> :
   Version bump #41305 by Joel Yliluoma.
