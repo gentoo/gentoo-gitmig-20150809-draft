@@ -1,0 +1,9 @@
+# ChangeLog for dev-perl/glib
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/glib/ChangeLog,v 1.1 2003/07/20 15:49:26 mcummings Exp $
+
+*glib-0.26 (20 Jul 2003)
+
+  20 Jul 2003; Michael Cummings <mcummings@gentoo.org> glib-0.26.ebuild:
+  dep for new gtk2-perl, submitted by Rigo Ketelings <rigo@home.nl> in bug 24036
+
