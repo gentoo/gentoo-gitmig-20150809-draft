@@ -8,14 +8,13 @@ MD5 e7df35e2bb31fb0268d2150da19b27b9 binutils-2.14.90.0.4.ebuild 4842
 MD5 5ed1c40a92233028ce782a0c337603d9 binutils-2.13.90.0.16-r1.ebuild 4740
 MD5 5690182afbd4c3cc29eff36bf253bdad binutils-2.14.90.0.5.ebuild 5127
 MD5 368c85b995c3ab74a32a09e573aba1f9 binutils-2.12.90.0.15.ebuild 3512
-MD5 5fa31a72b53f309e52c091bfa37e3772 ChangeLog 13488
-MD5 3dedb0d7d287438e08f1eb0a3cff6655 binutils-2.14.90.0.6.ebuild 5363
-MD5 340b4b167108f42760f3ee4a7cd90315 .binutils-2.14.90.0.5-r1.ebuild.swp 20480
+MD5 79bb499e4ad1f195c106d5fc0a566240 ChangeLog 13733
+MD5 92899f50da78ca1774690fa292545dca binutils-2.14.90.0.6.ebuild 5055
 MD5 011c5a33d84072e1af09ccf89cba6d61 binutils-2.11.92.0.7.ebuild 2357
 MD5 39c137509f3ea2ab526bb092b10a9c54 binutils-2.11.92.0.12.3-r2.ebuild 3055
 MD5 2e588e007eb122eb471c48aefcb04a41 binutils-2.14.90.0.1-r1.ebuild 5097
 MD5 8e8914eebb88c363a128964a7941d66c binutils-2.14.90.0.4.1-r1.ebuild 5806
-MD5 3dedb0d7d287438e08f1eb0a3cff6655 binutils-2.14.90.0.5-r1.ebuild 5363
+MD5 e03dd3aa040f93c1afe6797b7b030042 binutils-2.14.90.0.5-r1.ebuild 5301
 MD5 f2fca878c36319fd0efd1606f4baf24e files/digest-binutils-2.14.90.0.5 75
 MD5 64f2cf145447cc0996540814afb15c68 files/digest-binutils-2.12.90.0.7 74
 MD5 c2028bfe76e16c23a00a4ad36a5a36f2 files/digest-binutils-2.14.90.0.4.1-r1 77
@@ -88,5 +87,6 @@ MD5 3793ff770ff2fca80a2238f8de0a165e files/2.14/binutils-2.14.90.0.4-pie2.patch 
 MD5 c1a6d53bb2eb89124a74f47b0bca0b89 files/2.14/binutils-2.14.90.0.5-ppc64-pie.patch 581
 MD5 613770b55db9f6e3c11f040a94c9c4ea files/2.14/binutils-2.14.90.0.4-cfi4.patch 11909
 MD5 60ff948d89725566178e8149375c3f31 files/2.14/binutils-2.14.90.0.4-gas-execstack.patch 3379
+MD5 09de3fa664f792872af4d6a029909315 files/2.14/binutils-2.14.90.0.6-eh-frame-ro.patch 14503
 MD5 5fa7bd6f7e2c4fa50b74367a85f37541 files/2.14/binutils-2.14.90.0.4-ppc64-prelink.patch 4721
 MD5 e7283a4967ce5101a016b31e747e8442 files/2.14/binutils-2.14.90.0.4-cfi2.patch 18449
