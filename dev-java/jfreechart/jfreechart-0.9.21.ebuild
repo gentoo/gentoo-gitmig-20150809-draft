@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/jfreechart-0.9.21.ebuild,v 1.1 2004/11/06 09:56:01 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jfreechart/jfreechart-0.9.21.ebuild,v 1.2 2004/11/06 09:58:30 axxo Exp $
 
 inherit java-pkg
 
@@ -33,7 +33,8 @@ src_compile() {
 }
 
 src_install() {
-	java-pkg_dojar ${P}.jar
+	mv ${P}.jar ${PN}.jar
+	java-pkg_dojar ${PN}.jar
 	dodoc README.txt CHANGELOG.txt
 	use doc && java-pkg_dohtml -r javadoc/
 }
