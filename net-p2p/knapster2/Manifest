@@ -1,4 +1,5 @@
-MD5 6a69ca2de36cb1c0d360beae2dcf8690 files/knapster2-0.4-gcc3.2.diff 15623
 MD5 f070170f010493775166e99ad51360e9 files/digest-knapster2-0.4 65
-MD5 d7d85d5638864f76e6498e9e76a626c9 knapster2-0.4.ebuild 564
+MD5 6a69ca2de36cb1c0d360beae2dcf8690 files/knapster2-0.4-gcc3.2.diff 15623
 MD5 66021f1792e95b4fb7c19fba72859036 ChangeLog 667
+MD5 bc39f9b0572fe3d37e212a2ba4ab0882 knapster2-0.4.ebuild 568
+MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160

@@ -1,5 +1,5 @@
-MD5 18e4d423bad1434f67f294f131f2e181 files/digest-bittorrent-stats-3.2.1b-r4 69
 MD5 dfb7c0c50cc6abc6efd5cf380f4615a0 files/bittorrent-stats-3.2.1b.patch 26140
-MD5 bc2ec7f8fc545011d9901f69c881c07a bittorrent-stats-3.2.1b-r4.ebuild 1662
+MD5 18e4d423bad1434f67f294f131f2e181 files/digest-bittorrent-stats-3.2.1b-r4 69
 MD5 decff07fd9663b96f4a7c8ac2c63a4c2 ChangeLog 2860
+MD5 771236ceceb3599a36f702611332eca3 bittorrent-stats-3.2.1b-r4.ebuild 1665
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159

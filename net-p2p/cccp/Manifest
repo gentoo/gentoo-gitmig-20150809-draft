@@ -1,3 +1,4 @@
 MD5 97cb86150c44645cf03ffc450ceb6391 files/digest-cccp-0.8 59
-MD5 d5a62acf1465076af379889b91a824d3 cccp-0.8.ebuild 749
 MD5 a68307ec9756397df0af69d14b8d9cdd ChangeLog 283
+MD5 3edc37de7acc03747e1d8c4c3f7afcf9 cccp-0.8.ebuild 755
+MD5 8aefbc0e49db723ca1ad02d0c409cd49 metadata.xml 160
