@@ -1,6 +1,10 @@
 # ChangeLog for app-misc/run-mailcap
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/run-mailcap/ChangeLog,v 1.1 2003/04/06 19:31:08 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/run-mailcap/ChangeLog,v 1.2 2003/04/16 23:03:20 twp Exp $
+
+*run-mailcap-3.21_p1 (17 Apr 2003)
+
+  17 Apr 2003; Tom Payne <twp@gentoo.org> run-mailcap-3.21_p1.ebuild :  Modify ebuild version to reflect package version.
 
 *run-mailcap-3.21 (06 Apr 2003)
 
