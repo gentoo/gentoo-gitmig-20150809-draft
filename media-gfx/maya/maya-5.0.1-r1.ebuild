@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-5.0.1-r1.ebuild,v 1.7 2004/06/18 19:41:32 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/maya/maya-5.0.1-r1.ebuild,v 1.8 2004/06/18 23:58:05 mr_bones_ Exp $
 
 # Note that this ebuild requires you to set the MAYA_INSTALL_LOC environment
 # variable to the location of your maya RPMS and documentation:
@@ -44,7 +44,7 @@ RDEPEND="|| ( app-shells/tcsh app-shells/csh )
 	 x86? ( >=sys-libs/lib-compat-1.3
 	        !bundled-libs? ( =x11-libs/qt-3*
 	                         >=sys-devel/gcc-3*
-	                         >=x11-libs/openmotif-2.1.30 ))
+	                         >=x11-libs/openmotif-2.1.30 ) )
 	 amd64? ( app-emulation/emul-linux-x86-baselibs
 	          app-emulation/emul-linux-x86-xlibs
 	          app-emulation/emul-linux-x86-qtlibs )
