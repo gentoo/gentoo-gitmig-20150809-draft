@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdiskusage/xdiskusage-1.46.ebuild,v 1.5 2004/05/21 16:40:32 jhuebel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/xdiskusage/xdiskusage-1.46.ebuild,v 1.6 2004/06/01 19:36:51 tseng Exp $
 
 DESCRIPTION="front end to xdu for viewing disk usage graphically under X11"
 SRC_URI="http://xdiskusage.sourceforge.net/${P}.tgz"
@@ -9,6 +9,7 @@ HOMEPAGE="http://xdiskusage.sourceforge.net/"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ~amd64"
+IUSE=""
 
 DEPEND="virtual/x11
 	x11-libs/fltk
