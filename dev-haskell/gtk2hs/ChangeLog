@@ -1,6 +1,9 @@
 # ChangeLog for dev-haskell/gtk2hs
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/ChangeLog,v 1.4 2004/11/04 14:57:15 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/ChangeLog,v 1.5 2004/11/06 11:41:16 kosmikus Exp $
+
+  06 Nov 2004; Andres Loeh <kosmikus@gentoo.org> gtk2hs-0.9.6-r1.ebuild:
+  Allow Haskell optimizations during build.
 
 *gtk2hs-0.9.6-r1 (04 Nov 2004)
 

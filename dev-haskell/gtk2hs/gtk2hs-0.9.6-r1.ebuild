@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.6-r1.ebuild,v 1.1 2004/11/04 14:57:15 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-haskell/gtk2hs/gtk2hs-0.9.6-r1.ebuild,v 1.2 2004/11/06 11:41:16 kosmikus Exp $
 
 inherit base ghc-package
 
@@ -25,7 +25,7 @@ DEPEND="${RDEPEND}"
 src_compile() {
 	econf \
 		--libdir=$(ghc-libdir) \
-		--with-hcflags="-H180m" \
+		--with-hcflags="-O -H180m" \
 		`use_enable gnome gnome` \
 		`use_enable gnome libglade` \
 		|| die "Configure failed"
