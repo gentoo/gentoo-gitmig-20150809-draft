@@ -1,10 +1,21 @@
-MD5 045d88293f571daf97daae650f5b8b92 rails-0.10.0-r1.ebuild 1158
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 7cd0d58b54b5130dcb6ab812e53148da rails-0.9.5.ebuild 917
-MD5 da7e9df498582bf679abbadabdf1471b rails-0.11.0.ebuild 1131
-MD5 a466ff97a9d7354ccc2ba957a71349af rails-0.10.1.ebuild 1129
-MD5 faa10e590bb9f927524b9e90881ed6c3 ChangeLog 1069
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 937edc8b22617c57edda938e9d6e5445 files/digest-rails-0.9.5 59
+MD5 a446b0b4bdf2025e64291740337d4a4c ChangeLog 1276
+MD5 045d88293f571daf97daae650f5b8b92 rails-0.10.0-r1.ebuild 1158
+MD5 a466ff97a9d7354ccc2ba957a71349af rails-0.10.1.ebuild 1129
+MD5 420d3b616044e925c352047001d8c4bf rails-0.11.0.ebuild 1438
 MD5 e7525516e42eccce38edf56245e77f36 files/digest-rails-0.10.0-r1 60
+MD5 937edc8b22617c57edda938e9d6e5445 files/digest-rails-0.9.5 59
 MD5 b90ec8b0a5b4c6f49320babf37ffe62a files/digest-rails-0.10.1 60
 MD5 d1fcc78a6710f38b21e3c155deb9a9cf files/digest-rails-0.11.0 60
+MD5 05171dcf63f00b01f8c046973afd873b files/rails-0.11.0-dispatch.fcgi.diff 766
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCQ437z2gxt1z4IGYRAjZ6AJ4xX5aRGUWf+R1jyRC1zL0bldO0HQCfUbzC
+KaCddDWOw/Ru/UQFwhvGlgg=
+=dF/B
+-----END PGP SIGNATURE-----

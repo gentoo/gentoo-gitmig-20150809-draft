@@ -1,11 +1,23 @@
-MD5 f59a5abd73913cca8463450aa1561f86 rubygems-0.8.4.ebuild 834
-MD5 f54fa97264b165a46680c2810254a293 rubygems-0.8.6.ebuild 882
-MD5 4a7d63b8264ab0dceca8f19e32ca5bcf rubygems-0.8.1.ebuild 711
-MD5 965a671c95ff6c227fb62173fedd1c24 rubygems-0.8.4-r1.ebuild 881
-MD5 f26be2c4f9ad7dcdb47ee727fec672bc ChangeLog 1198
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 5f06c199408d094dee943e89aaa751b4 ChangeLog 1328
 MD5 3eec9f3fe48b51f49dbc1f171a3b026f metadata.xml 157
-MD5 f39a6ffe93b3c6ad9a5ff48e849e95c6 files/digest-rubygems-0.8.4-r1 63
-MD5 cb35efb385d388a1c8d666d07a118bbc files/rubygems-0.8.1-gentoo.diff 1510
+MD5 4a7d63b8264ab0dceca8f19e32ca5bcf rubygems-0.8.1.ebuild 711
+MD5 f59a5abd73913cca8463450aa1561f86 rubygems-0.8.4.ebuild 834
+MD5 965a671c95ff6c227fb62173fedd1c24 rubygems-0.8.4-r1.ebuild 881
+MD5 f54fa97264b165a46680c2810254a293 rubygems-0.8.6.ebuild 882
+MD5 ad8fd58b4a65c14738720af0a567e561 rubygems-0.8.8.ebuild 888
 MD5 ae6f2a1b494e82be3591407ca8a7827a files/digest-rubygems-0.8.1 63
+MD5 cb35efb385d388a1c8d666d07a118bbc files/rubygems-0.8.1-gentoo.diff 1510
 MD5 f39a6ffe93b3c6ad9a5ff48e849e95c6 files/digest-rubygems-0.8.4 63
+MD5 f39a6ffe93b3c6ad9a5ff48e849e95c6 files/digest-rubygems-0.8.4-r1 63
 MD5 bdbb5c711d268e4fb7e0ceeac2a2079b files/digest-rubygems-0.8.6 63
+MD5 858c9933d64304775b0ef4229f907053 files/digest-rubygems-0.8.8 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCQ40Qz2gxt1z4IGYRAlfRAKCMEReUIdvqM+0XQ0kO50xaFJgJagCfSMY8
+4iEyO9EpCLKOZv/t+5qA1dU=
+=9aUZ
+-----END PGP SIGNATURE-----

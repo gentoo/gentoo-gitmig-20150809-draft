@@ -1,6 +1,11 @@
 # ChangeLog for dev-ruby/rubygems
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.7 2005/03/08 18:20:37 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/rubygems/ChangeLog,v 1.8 2005/03/25 04:01:01 pythonhead Exp $
+
+*rubygems-0.8.8 (25 Mar 2005)
+
+  25 Mar 2005; Rob Cakebread <pythonhead@gentoo.org> +rubygems-0.8.8.ebuild:
+  Version bump.
 
   08 Mar 2005; Caleb Tennis <caleb@gentoo.org> rubygems-0.8.6.ebuild:
   x86 stable
