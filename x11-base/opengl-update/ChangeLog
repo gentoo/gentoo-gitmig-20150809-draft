@@ -1,6 +1,9 @@
 # ChangeLog for x11-base/opengl-update
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.36 2004/07/18 02:51:17 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/opengl-update/ChangeLog,v 1.37 2004/07/18 19:16:48 lv Exp $
+
+  18 Jul 2004; Travis Tilley <lv@gentoo.org> opengl-update-1.8.1.ebuild:
+  marking opengl-update 1.8.1 stable on amd64 so that i can un-break nvidia-glx
 
 *opengl-update-1.8.1 (18 Jul 2004)
 
