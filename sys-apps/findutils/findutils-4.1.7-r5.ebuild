@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.7-r5.ebuild,v 1.3 2003/12/29 03:40:10 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/findutils-4.1.7-r5.ebuild,v 1.4 2003/12/29 09:19:59 kumba Exp $
 
 IUSE="nls build afs"
 
-inherit eutils
+inherit eutils gnuconfig
 
 DESCRIPTION="GNU utilities to find files"
 HOMEPAGE="http://www.gnu.org/software/findutils/findutils.html"
@@ -38,6 +38,9 @@ src_unpack() {
 
 src_compile() {
 	local myconf
+
+	# Detect mips properly
+	use mips && gnuconfig_update
 
 	use nls || myconf="${myconf} --disable-nls"
 
