@@ -1,10 +1,18 @@
 # ChangeLog for media-sound/mad
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mad/ChangeLog,v 1.4 2002/09/14 03:12:44 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mad/ChangeLog,v 1.5 2002/12/02 07:18:22 seemant Exp $
 
-*mad-0.14.2b-r2 (7 July 2002)
+*mad-0.14.2b-r2 (01 Dec 2002)
 
-  13 Sep 2002; Donny Davies <woodchip@gentoo.org> mad-0.14.2b-r2.ebuild :
+  01 Dec 2002; Seemant Kulleen <seemant@gentoo.org> mad-0.14.2b-r2.ebuild
+  files/mad.pc files/id3tag.pc files/digest-mad-0.14.2b-r2 :
+
+  added id3tag.pc and mad.pc needed by xmms-mad-0.5.1.ebuild.  Thanks to:
+  spam@matzsoft.de (Mathias Menzel-Nielsen) in bug #11454
+
+*mad-0.14.2b-r1 (7 July 2002)
+
+  13 Sep 2002; Donny Davies <woodchip@gentoo.org> mad-0.14.2b-r1.ebuild :
   sys-devel/ld.so is deprecated; #6476.
 
   7 Jul 2002; Mark Guertin <gerk@gentoo.org> Changelog :
