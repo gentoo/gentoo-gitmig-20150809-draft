@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/validation/validation-1.2.3.ebuild,v 1.1 2004/01/19 13:16:51 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/validation/validation-1.2.3.ebuild,v 1.2 2004/03/22 22:26:36 kloeri Exp $
 SLOT="0"
 IUSE=""
 DESCRIPTION="Generic validators originally defined for Archetypes"
@@ -13,11 +13,10 @@ S=${WORKDIR}/${SRC_P}/${PN}
 LICENSE="GPL-2"
 KEYWORDS="~x86"
 if [ "${PYTHON_SLOT_VERSION}" = 'VIRTUAL' ] ; then
-	RDEPEND="virtual/python"
+	DEPEND="virtual/python"
 else
-	RDEPEND="dev-lang/python"
+	DEPEND="dev-lang/python"
 fi
-DEPEND="${RDEPEND}"
 
 src_install() {
 	local python=""

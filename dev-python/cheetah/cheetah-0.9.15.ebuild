@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/cheetah-0.9.15.ebuild,v 1.2 2004/02/26 19:02:06 bazik Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cheetah/cheetah-0.9.15.ebuild,v 1.3 2004/03/22 22:30:11 kloeri Exp $
 
 inherit distutils
 
@@ -15,8 +15,7 @@ IUSE=""
 KEYWORDS="x86 sparc ~alpha"
 SLOT="0"
 
-RDEPEND=">=dev-lang/python-2.2"
-DEPEND="${RDEPEND}"
+DEPEND=">=dev-lang/python-2.2"
 
 PYTHON_MODNAME="Cheetah"
 
