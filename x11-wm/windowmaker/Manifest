@@ -1,34 +1,24 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 20ba3ee0e4036e307342671f74921913 windowmaker-0.80.2-r3.ebuild 3749
-MD5 43e9d0c5bf62aaf821ba9624fd2e9e57 windowmaker-0.91.0.ebuild 4475
-MD5 2f96bb8aafd54dfaa4a2ae79719578c7 windowmaker-0.91.0-r1.ebuild 6192
-MD5 bb71bf2d1a104f6169a49d0daaabc9cc ChangeLog 9031
-MD5 58b92f8943bac08e53aeeb01f640537a windowmaker-0.80.2-r2.ebuild 3437
 MD5 091028d21186597cb01d1440ed387951 metadata.xml 221
+MD5 6ece97d1e347a4626002790748a6d530 ChangeLog 9148
 MD5 ecb31937eebc5b0afa6785ec0afefe4d windowmaker-0.80.2-r1.ebuild 3408
+MD5 58b92f8943bac08e53aeeb01f640537a windowmaker-0.80.2-r2.ebuild 3437
+MD5 20ba3ee0e4036e307342671f74921913 windowmaker-0.80.2-r3.ebuild 3749
 MD5 3c3d6a630b21bdf50c422943b2cc79fe windowmaker-0.80.2-r4.ebuild 4034
 MD5 e843e235a5057f861aa1ed9dc43fa863 windowmaker-0.90.0.ebuild 4490
+MD5 dbec29971d912d6e2a5698c774d50c9e windowmaker-0.91.0-r1.ebuild 6191
+MD5 43e9d0c5bf62aaf821ba9624fd2e9e57 windowmaker-0.91.0.ebuild 4475
+MD5 b5304655d4ff5441989ab94a1bdc9506 files/digest-windowmaker-0.80.2-r1 144
+MD5 b5304655d4ff5441989ab94a1bdc9506 files/digest-windowmaker-0.80.2-r2 144
 MD5 b5304655d4ff5441989ab94a1bdc9506 files/digest-windowmaker-0.80.2-r3 144
+MD5 b5304655d4ff5441989ab94a1bdc9506 files/digest-windowmaker-0.80.2-r4 144
+MD5 c8eb68627dc7b53b10143626018ff597 files/gtk2flickerfix.patch 1969
+MD5 a42a33a349ca84fb6e2cc5fdbd627b99 files/trance.patch.WM-0.80.2.diff 9738
 MD5 9a5c9f1b2b44a678526f0fd71b2cf51d files/windowmaker-0.80.2-r1-gentoo.patch 4331
 MD5 a062e261bd5aaca39bc17be01f07f1b6 files/wlist.patch 2776
-MD5 8b11b75a0ece3b854bf47e03ded7e0ba files/digest-windowmaker-0.91.0-r1 144
-MD5 f70c1e1b121cfc32dbd802678f3b111f files/wmaker.desktop 221
-MD5 b5304655d4ff5441989ab94a1bdc9506 files/digest-windowmaker-0.80.2-r2 144
-MD5 8cb3b3bf7cef606cb356c4ba82744a50 files/digest-windowmaker-0.90.0 144
-MD5 a42a33a349ca84fb6e2cc5fdbd627b99 files/trance.patch.WM-0.80.2.diff 9738
-MD5 b5304655d4ff5441989ab94a1bdc9506 files/digest-windowmaker-0.80.2-r4 144
-MD5 b5304655d4ff5441989ab94a1bdc9506 files/digest-windowmaker-0.80.2-r1 144
-MD5 c41215f830e33a636a440ce389db01eb files/menufocus.patch 1554
-MD5 8b11b75a0ece3b854bf47e03ded7e0ba files/digest-windowmaker-0.91.0 144
 MD5 37aefa1e6f793583e8fa7890231d1721 files/wmfpo.patch 7696
-MD5 c8eb68627dc7b53b10143626018ff597 files/gtk2flickerfix.patch 1969
 MD5 915c0fe65c24d54a1507f662d7b24114 files/xinerama.patch 26662
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBpONQwDHaUUJ0mYMRAloDAKCX1pEst3D0Pcyj3wiUJ7xVFpfS1ACeJDsN
-MzbxoRaVZNoZGBLrPNySK+M=
-=aTuT
------END PGP SIGNATURE-----
+MD5 8cb3b3bf7cef606cb356c4ba82744a50 files/digest-windowmaker-0.90.0 144
+MD5 8b11b75a0ece3b854bf47e03ded7e0ba files/digest-windowmaker-0.91.0 144
+MD5 8b11b75a0ece3b854bf47e03ded7e0ba files/digest-windowmaker-0.91.0-r1 144
+MD5 c41215f830e33a636a440ce389db01eb files/menufocus.patch 1554
+MD5 f70c1e1b121cfc32dbd802678f3b111f files/wmaker.desktop 221
