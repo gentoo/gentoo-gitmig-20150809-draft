@@ -1,7 +1,6 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/mon-0.38.20-r1.ebuild,v 1.8 2002/07/08 14:22:47 sunflare Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/mon/mon-0.38.20-r1.ebuild,v 1.9 2002/07/11 06:30:09 drobbins Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Highly configurable service monitoring daemon"

@@ -1,7 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Joshua Pierre <joshua@swool.com>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/fam-oss-2.6.7.ebuild,v 1.1 2002/03/21 06:56:54 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/fam-oss/fam-oss-2.6.7.ebuild,v 1.2 2002/07/11 06:30:09 drobbins Exp $
 
 MY_P=${P/-oss/}
 S=${WORKDIR}/${MY_P}
