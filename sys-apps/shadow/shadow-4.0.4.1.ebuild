@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.4.1.ebuild,v 1.1 2004/01/22 19:20:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/shadow-4.0.4.1.ebuild,v 1.2 2004/01/23 19:51:06 pebenito Exp $
 
 IUSE="pam selinux"
 
@@ -8,7 +8,7 @@ inherit eutils libtool gnuconfig
 
 FORCE_SYSTEMAUTH_UPDATE="no"
 
-SELINUX_PATCH="shadow-4.0.3-selinux.diff"
+SELINUX_PATCH="shadow-4.0.4.1-selinux.diff"
 
 S="${WORKDIR}/${P}"
 HOMEPAGE="http://shadow.pld.org.pl/"

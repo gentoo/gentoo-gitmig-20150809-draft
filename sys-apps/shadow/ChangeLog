@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/shadow
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.48 2004/01/22 19:20:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shadow/ChangeLog,v 1.49 2004/01/23 19:51:06 pebenito Exp $
+
+  23 Jan 2004; Chris PeBenito <pebenito@gentoo.org> shadow-4.0.4.1.ebuild,
+  files/shadow-4.0.4.1-selinux.diff:
+  Update SELinux patch.
 
 *shadow-4.0.4.1 (22 Jan 2004)
 
