@@ -1,6 +1,9 @@
 # ChangeLog for net-ftp/kasablanca
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/kasablanca/ChangeLog,v 1.10 2005/03/08 11:13:26 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/kasablanca/ChangeLog,v 1.11 2005/03/24 02:10:10 luckyduck Exp $
+
+  24 Mar 2005; Jan Brinkmann <luckyduck@gentoo.org> kasablanca-0.4.0.1.ebuild:
+  stable on amd64, fixes #85102
 
 *kasablanca-0.4.0.2 (08 Mar 2005)
 
