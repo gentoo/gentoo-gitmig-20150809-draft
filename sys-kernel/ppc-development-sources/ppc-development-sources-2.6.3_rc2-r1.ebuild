@@ -1,34 +1,40 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-development-sources/ppc-development-sources-2.6.0_beta9-r5.ebuild,v 1.4 2004/01/08 17:15:17 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc-development-sources/ppc-development-sources-2.6.3_rc2-r1.ebuild,v 1.1 2004/02/13 07:01:40 darkspecter Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 ETYPE="sources"
 inherit kernel
 
-OKV=${PV/_beta/-test}
+OKV="2.6.2"
 
-EXTRAVERSION="`echo ${OKV}-${PR/r/benh} | \
+########  last BK changeset in this patch: 1.1368
+
+EXTRAVERSION="`echo ${PV}-${PR/r/benh} | \
 	sed -e 's/[0-9]\+\.[0-9]\+\.[0-9]\+\(.*\)/\1/'`"
 
-KV=${OKV}-${PR/r/benh}
+KV=${PV}-${PR/r/benh}
 
 S=${WORKDIR}/linux-${KV}
 
 inherit eutils
 
+IUSE="extlib"
+
 # What's in this kernel?
 
 # INCLUDED: 2.6 vanilla + benh bk snapshot
 
-DESCRIPTION="Full sources for the development linux kernel 2.6 with benh's patchset"
-SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${PV/_beta/-test}.tar.bz2
+DESCRIPTION="Full sources for the linux kernel 2.6 with benh's patchset"
+SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${OKV}.tar.bz2
 		mirror://gentoo/patches-${KV}.bz2"
-KEYWORDS="~ppc"
+KEYWORDS="~ppc ~ppc64"
+DEPEND=" extlib? ( dev-libs/ucl )"
 RDEPEND="sys-apps/module-init-tools"
 SLOT=${KV}
 PROVIDE="virtual/linux-sources
 		virtual/alsa"
+
 
 src_unpack() {
 	cd ${WORKDIR}
@@ -67,13 +73,13 @@ src_install() {
 	mv ${WORKDIR}/* ${D}/usr/src
 }
 pkg_postinst() {
-	if [ ! -e ${ROOT}usr/src/linux-beta ]
+	if [ ! -e ${ROOT}usr/src/linux ]
 	then
-		ln -sf linux-${KV} ${ROOT}/usr/src/linux-beta
+		ln -sf ${PF} ${ROOT}/usr/src/linux
 	fi
 
 	ewarn "Please note that ptyfs support has been removed from devfs"
-	ewarn "in the later 2.5.x kernels, and you have to compile it in now,"
+	ewarn "in the later 2.6 kernels, and you have to compile it in now,"
 	ewarn "or else you will get errors when trying to open a pty."
 	ewarn "The option is File systems->Pseudo filesystems->/dev/pts"
 	ewarn "filesystem."
@@ -90,6 +96,6 @@ pkg_postinst() {
 	ewarn "users should use the openfirmware framebuffer for now."
 	echo
 	einfo "Consult http://www.linux.org.uk/~davej/docs/post-halloween-2.6.txt"
-	einfo "for more info about the development series."
+	einfo "for more info about the 2.6 series."
 	echo
 }
