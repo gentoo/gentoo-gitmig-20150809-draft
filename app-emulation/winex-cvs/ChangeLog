@@ -1,8 +1,15 @@
 # ChangeLog for app-emulation/winex-cvs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/ChangeLog,v 1.5 2002/09/13 14:51:07 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/ChangeLog,v 1.6 2002/10/10 15:23:10 phoenix Exp $
 
-*winex-cvs-2.1 (08 September 20002)
+*winex-cvs-2.2 (10 October 2002)
+
+  10 Oct 2002; phoen][x <phoenix@gentoo.org> winex-cvs-2.2.ebuild :
+
+  Added winex-cvs.2.2.
+
+
+*winex-cvs-2.1 (08 September 2002)
 
   13 Sep 2002; phoen][x <phoenix@gentoo.org> winex-cvs-2.1.ebuild :
 
@@ -23,7 +30,7 @@
   speed things up if you often switch between branches; If you dont switch it won't
   waste HD space because you didn't fetch different branches in the first place. :)
 
-*winex-cvs-2.0 (08 September 20002)
+*winex-cvs-2.0 (08 September 2002)
 
   13 Sep 2002; phoen][x <phoenix@gentoo.org> winex-cvs-2.0.ebuild :
 
