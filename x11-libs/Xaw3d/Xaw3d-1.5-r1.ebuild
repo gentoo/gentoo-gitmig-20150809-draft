@@ -1,5 +1,6 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/Xaw3d/Xaw3d-1.5-r1.ebuild,v 1.5 2002/07/22 13:57:39 aliz Exp $
 
 # Ok, hopefully this will resolv the problem with the version of libXaw3d that
 # gets created.
@@ -29,10 +30,9 @@ KEYWORDS="x86 ppc"
 
 # There _might_ be something else, but I doubt it.
 DEPEND="virtual/x11"
-
+RDEPEND=$DEPEND
 
 src_unpack() {
-    
 	unpack ${P}.tar.gz
 	cd ${S}
     
@@ -43,7 +43,6 @@ src_unpack() {
 }
 
 src_compile() {
-    
 	# convoluted process for out-of-tree building
 	mkdir ./X11
 	cd ./X11 ; ln -sf ../../Xaw3d . ; cd ..
@@ -55,7 +54,6 @@ src_compile() {
 }
 
 src_install() {
-
 	make DESTDIR=${D} install || die
 
 	dodoc README.XAW3D

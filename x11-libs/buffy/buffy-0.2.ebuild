@@ -1,6 +1,6 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/buffy/buffy-0.2.ebuild,v 1.5 2002/07/11 06:30:56 drobbins Exp $
+# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/buffy/buffy-0.2.ebuild,v 1.6 2002/07/22 13:57:40 aliz Exp $
 
 S=${WORKDIR}/${P}
 
@@ -17,19 +17,18 @@ DEPEND="virtual/glibc
         =x11-libs/gtk+-1.2*"
 
 src_compile() {
+	./configure --infodir=/usr/share/info \
+	--mandir=/usr/share/man \
+	--prefix=/usr \
+	--host=${CHOST} || die
 
-    try ./configure --infodir=/usr/share/info \
-                    --mandir=/usr/share/man \
-                    --prefix=/usr \
-                    --host=${CHOST}
-    try emake
+	emake || die
 }
 
 src_install () {
+	# try make prefix=${D}/usr install
 
-    # try make prefix=${D}/usr install
-
-    dodoc AUTHORS COPYING INSTALL NEWS README ChangeLog
-    try make DESTDIR=${D} install
+	dodoc AUTHORS COPYING INSTALL NEWS README ChangeLog
+	try make DESTDIR=${D} install
 }
 
