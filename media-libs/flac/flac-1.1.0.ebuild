@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.0.ebuild,v 1.13 2003/09/26 17:29:21 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.0.ebuild,v 1.14 2003/10/29 19:24:06 gmsoft Exp $
 
 inherit libtool
 
@@ -37,6 +37,11 @@ src_unpack() {
 src_compile() {
 	elibtoolize --reverse-deps
 
+	# hppa need -fPIC for to compile when X and xmss are in USE
+	if use xmms && use X && [ "${ARCH}" = "hppa" ]
+	then
+		export CFLAGS="${CFLAGS} -fPIC"
+	fi
 	local myconf
 
 	use sse && myconf="--enable-sse"
