@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.2-r1.ebuild,v 1.4 2003/10/08 21:29:42 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.2-r1.ebuild,v 1.5 2003/10/12 19:41:18 mholzer Exp $
 
 inherit libtool
 
@@ -28,6 +28,7 @@ DEPEND="${RDEPEND}
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/${P}-norpm.patch
+	epatch ${FILESDIR}/${P}-canon.patch #Closes #30880
 }
 
 src_compile() {
