@@ -1,9 +1,10 @@
-MD5 2900c3a1868150b0d54dbc5c81a9cd0f ChangeLog 3847
+MD5 c8a56dd3773c9f894ba5f3b37b2372ee ChangeLog 4058
 MD5 3bbd19d9ae81146ecb1e6ebed90869b3 grace-5.1.10-r1.ebuild 3088
 MD5 3862c6034595e39fcd14a6bd239f749b metadata.xml 270
 MD5 3083e0ecfdb287b48661b236e7fa8ce3 grace-5.1.12-r1.ebuild 3506
 MD5 0033afb90b0d9fed0f76d40c119c998b grace-5.1.13.ebuild 3405
 MD5 4ae817ed531044a8130b6fd5c9debbe8 grace-5.1.7-r2.ebuild 2046
+MD5 d19cae644e964998f85f0bb2739e9be0 grace-5.1.14.ebuild 3394
 MD5 79d4cd7b5bb6c28a0b393294202477cb files/10grace 28
 MD5 84d71fa68c349e7f6bac28b10766e203 files/digest-grace-5.1.13 65
 MD5 0a86071d232bac0c0725906f6bde21bb files/digest-grace-5.1.10-r1 65
@@ -12,3 +13,4 @@ MD5 3e377b216955ff939acf4b4e7ee6227c files/digest-grace-5.1.7-r2 64
 MD5 5061fe8c4ba85c767decf9e69a312bfe files/grace-5.1.10-t1lib-fix-gentoo.patch 836
 MD5 32c9edc625157e58d92136712af4dc0b files/grace-5.1.12-t1lib-fix-gentoo.patch 836
 MD5 97e5d164e32726698f9e90f93d723c8f files/grace-helpviewer-gentoo.diff 384
+MD5 b45d65feb380f4734584d415500e8ffd files/digest-grace-5.1.14 65
