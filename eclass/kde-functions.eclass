@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.110 2005/02/26 20:38:39 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.111 2005/03/07 14:25:21 greg_g Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -633,10 +633,10 @@ need-kde() {
 	KDEVER="$1"
 
 	# determine install locations
-	set-kdedir $KDEVER
+	set-kdedir ${KDEVER}
 
 	# ask for autotools
-	case "$KDEVER" in
+	case "${KDEVER}" in
 		3.1.[234])	# Newer 3.1.x versions are built with automake 1.7, and have errors when using 1.6
 			need-automake 1.7
 			need-autoconf 2.5
@@ -663,30 +663,32 @@ need-kde() {
 			;;
 	esac
 
-	if [ -n "$KDEBASE" ]; then
+	if [ -n "${KDEBASE}" ]; then
 		# If we're a kde-base package, we need at least our own version of kdelibs.
 		# Also, split kde-base ebuilds are not updated with every KDE release, and so
 		# can require support of different versions of kdelibs.
 		# KM_DEPRANGE should contain 2nd and 3rd parameter to deprange:
 		# max and min KDE versions. E.g. KM_DEPRANGE="$PV $MAXKDEVER".
-		if [ -n "$KM_DEPRANGE" ]; then
-			DEPEND="$DEPEND $(deprange $KM_DEPRANGE kde-base/kdelibs)"
-			RDEPEND="$RDEPEND $(deprange $KM_DEPRANGE kde-base/kdelibs)"
+		# Note: we only set RDEPEND if it is already set, otherwise
+		# we break packages relying on portage copying RDEPEND from DEPEND.
+		if [ -n "${KM_DEPRANGE}" ]; then
+			DEPEND="${DEPEND} $(deprange ${KM_DEPRANGE} kde-base/kdelibs)"
+			[ "${RDEPEND-unset}" != "unset" ] && RDEPEND="${RDEPEND} $(deprange ${KM_DEPRANGE} kde-base/kdelibs)"
 		else
 			DEPEND="${DEPEND} ~kde-base/kdelibs-$PV"
-			RDEPEND="${RDEPEND} ~kde-base/kdelibs-$PV"
+			[ "${RDEPEND-unset}" != "unset" ] && RDEPEND="${RDEPEND} ~kde-base/kdelibs-${PV}"
 		fi
 	else
 		# Things outside kde-base only need a minimum version
-		min-kde-ver $KDEVER
-		RDEPEND="${RDEPEND} >=kde-base/kdelibs-${selected_version}"
+		min-kde-ver ${KDEVER}
 		DEPEND="${DEPEND} >=kde-base/kdelibs-${selected_version}"
+		[ "${RDEPEND-unset}" != "unset" ] && RDEPEND="${RDEPEND} >=kde-base/kdelibs-${selected_version}"
 	fi
 
-	qtver-from-kdever $KDEVER
-	need-qt $selected_version
+	qtver-from-kdever ${KDEVER}
+	need-qt ${selected_version}
 
-	if [ -n "$KDEBASE" ]; then
+	if [ -n "${KDEBASE}" ]; then
 		SLOT="$KDEMAJORVER.$KDEMINORVER"
 	else
 		SLOT="0"
@@ -795,19 +797,19 @@ need-qt() {
 
 	QT=qt
 
-	case $QTVER in
+	case ${QTVER} in
 	    2*)
-			RDEPEND="${RDEPEND} =x11-libs/${QT}-2.3*"
 			DEPEND="${DEPEND} =x11-libs/${QT}-2.3*"
+			[ "${RDEPEND-unset}" != "unset" ] && RDEPEND="${RDEPEND} =x11-libs/${QT}-2.3*"
 			;;
 	    3*)
-			RDEPEND="${RDEPEND} >=x11-libs/${QT}-${QTVER}"
 			DEPEND="${DEPEND} >=x11-libs/${QT}-${QTVER}"
+			[ "${RDEPEND-unset}" != "unset" ] && RDEPEND="${RDEPEND} >=x11-libs/${QT}-${QTVER}"
 			;;
 	    *)	echo "!!! error: $FUNCNAME() called with invalid parameter: \"$QTVER\", please report bug" && exit 1;;
 	esac
 
-	set-qtdir $QTVER
+	set-qtdir ${QTVER}
 
 }
 
