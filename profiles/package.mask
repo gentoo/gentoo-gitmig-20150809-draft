@@ -43,6 +43,9 @@ app-editors/gtk-xemacs
 >=x11-base/xfree-4.1.0-r1
 >=sys-devel/libtool-1.4
 >=net-fs/netatalk-1.5
+>=media-libs/libsdl-1.2.1
+>=media-libs/freetype-2.0.4
+>=dev-db/unixODBC-2.0.8
 
 #OK, I assume that the XFS in 2.4.4-r5 is hosed; alkaline?
 
