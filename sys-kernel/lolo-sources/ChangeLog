@@ -1,6 +1,22 @@
 # ChangeLog for sys-kernel/lolo-sources
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.18 2002/11/15 15:48:43 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/lolo-sources/ChangeLog,v 1.19 2002/12/08 01:59:23 lostlogic Exp $
+
+*lolo-sources-2.4.20.1_pre4 (07 Dec 2002)
+
+  07 Dec 2002; Brandon Low <lostlogic@gentoo.org> lolo-sources-2.4.20.1_pre4.ebuild:
+
+  Tons of changes this time...  Merged with mjc-sources got a bunch of
+  nice patches from aa-sources (cuz Andrea Archangeli is a god of code)
+  I'll hopefully have all the new patches in patches.txt soon.  Also
+  changed to linux-2.4.20-ac1 as the base of the kernel, I hope you all
+  enjoy this.  Please report all bugs on bugzilla so I can have a neat
+  organized way of tracking them.  Thanks.
+
+  Big todo:  Need to check on the ext3 data=journalled patch
+
+  Other todo:  Testing, snag patches out of bugzilla that people want
+  included
 
 *lolo-sources-2.4.20.1_pre3 (14 Nov 2002)
 
