@@ -1,18 +1,17 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/chromium-0.9.12-r4.ebuild,v 1.3 2003/10/14 07:28:08 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-action/chromium/chromium-0.9.12-r4.ebuild,v 1.4 2003/11/16 01:18:38 vapier Exp $
 
 inherit games eutils
 
-S=${WORKDIR}/Chromium-0.9
 DESCRIPTION="Chromium B.S.U. - an arcade game"
 HOMEPAGE="http://www.reptilelabour.com/software/chromium/"
 SRC_URI="http://www.reptilelabour.com/software/files/chromium/chromium-src-${PV}.tar.gz
 	 http://www.reptilelabour.com/software/files/chromium/chromium-data-${PV}.tar.gz"
 
+LICENSE="Artistic"
 SLOT="0"
 KEYWORDS="x86 ppc alpha amd64"
-LICENSE="Artistic"
 IUSE="arts esd qt sdl svga oggvorbis alsa"
 
 DEPEND="virtual/glibc
@@ -29,6 +28,8 @@ DEPEND="virtual/glibc
 	media-libs/audiofile
 	svga? ( media-libs/svgalib )
 	>=media-libs/smpeg-0.4.4-r1" # this last isn't strictly needed but is useful
+
+S=${WORKDIR}/Chromium-0.9
 
 src_unpack() {
 	unpack ${A}
@@ -47,7 +48,7 @@ src_compile() {
 }
 
 src_install() {
-	rm -rf `find -name CVS`
+	find ${D} -name CVS -type d -exec rm -rf '{}' \;
 
 	exeinto ${GAMES_BINDIR}
 	doexe bin/chromium*
@@ -59,4 +60,12 @@ src_install() {
 	echo "CHROMIUM_DATA=${GAMES_DATADIR}/${PN}" > ${D}/etc/env.d/99chromium
 
 	prepgamesdirs
+}
+
+pkg_postinst() {
+	games_pkg_postinst
+	ewarn "Before you play this game you must"
+	ewarn "update your environment."
+	ewarn "Either restart your shell or just run:"
+	ewarn "source /etc/profile"
 }
