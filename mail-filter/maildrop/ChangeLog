@@ -1,6 +1,13 @@
 # ChangeLog for mail-filter/maildrop
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.8 2004/08/21 06:14:03 langthang Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/maildrop/ChangeLog,v 1.9 2004/08/28 12:34:59 slarti Exp $
+
+*maildrop-1.7.0-r2 (28 Aug 2004)
+
+  28 Aug 2004; Tom Martin <slarti@gentoo.org> +maildrop-1.7.0-r2.ebuild:
+  Revision bump. Added dspam and apache to the list of trusted users to
+  resolve problems with the dspam CGI script. See bug 61670. Thanks to Mark
+  Wagner <mark+gentoo@lanfear.net> for the fix.
 
 *maildrop-1.7.0-r1 (20 Aug 2004)
 
