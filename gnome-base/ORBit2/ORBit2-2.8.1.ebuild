@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit2/ORBit2-2.8.0.ebuild,v 1.1 2003/09/07 23:31:39 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/ORBit2/ORBit2-2.8.1.ebuild,v 1.1 2003/09/10 23:35:40 foser Exp $
 
 inherit gnome2
 
@@ -20,6 +20,7 @@ RDEPEND=">=dev-libs/glib-2
 	dev-util/indent
 	ssl? ( >=dev-libs/openssl-0.9.6 )"
 # linc is now integrated, but a block isn't necessary
+# and probably complicated FIXME
 
 DEPEND="${RDEPEND}
 	>=dev-util/pkgconfig-0.14.0
