@@ -1,6 +1,13 @@
 # ChangeLog for mail-mta/exim
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.6 2004/07/17 21:37:51 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.7 2004/07/18 17:15:29 peitolm Exp $
+
+*exim-4.40 (18 Jul 2004)
+
+  18 Jul 2004; Colin Morey <peitolm@gentoo.org> +exim-4.40.ebuild:
+  New Exim 4.40 ebuild, fixes bugs 57186 (exim builds eximon.bin but doesn't use
+  it), 57206 ( No build time dependancy on X if USE="X"), 28665 (mail/nailx
+  /usr/bin/mail clash).
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> exim-4.10.ebuild:
   virtual/glibc -> virtual/libc
