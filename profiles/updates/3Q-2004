@@ -17,3 +17,4 @@ move app-laptop/wmbatppc x11-plugins/wmbatppc
 move app-admin/wasabi app-admin/tenshi
 move dev-python/pyOpenSSL dev-python/pyopenssl
 move dev-python/omniORBpy dev-python/omniorbpy
+move net-mail/qmail-scanner mail-filter/qmail-scanner
