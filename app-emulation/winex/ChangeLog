@@ -1,14 +1,21 @@
 # ChangeLog for app-emulation/wine
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/ChangeLog,v 1.13 2002/10/11 18:27:26 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex/ChangeLog,v 1.14 2002/11/23 14:22:02 phoenix Exp $
 
+*winex-20021123 (23 Nov 2002)
+  23 Nov 2002; phoen][x <phoenix@gentoo.org> winex-20021123.ebuild, 
+  files/digest-winex-20021123, files/winex-20021123-misc, 
+  files/winex-20021123-fake_windows :
+  New snapshot of winex-2.2.1. Updated the files/-layout:
+  winex, winex-regedit and config are in ${PN}-misc.tar.bz2 now.  The fake_windows 
+  has been deleted from ${SRC_URI} and also resides in files/ now. The idea is, that 
+  all dynamic data goes into files/. Modified the ebuild to reflect these changes. 
 
 *winex-20021011 (11 Oct 2002)
   
   11 Oct 2002; phoen][x <phoenix@gentoo.org> winex-20021011.ebuild, 
   files/digest-winex-20021011, files/winex-20021011-config,
   files/winex-20021011-regedit, files/winex-20021011-winex :
-
   New version of winex (2.2). Disabled the build of programs/ because there
   were some major problems with the rc-files. If you find a way to work around
   that, tell me how you did it. I gave up after one hour.
@@ -16,7 +23,6 @@
 *winex-20020807-r1 (13 Sep 2002)
   
   13 Sep 2002; phoen][x <phoenix@gentoo.org> winex-20020807-r1.ebuild :
-
   Added manpage installation. This installs the manpage of wine as ${PN}.
 
 *winex-20020807 (19 Aug 2002)
@@ -63,12 +69,10 @@
 
 *winex-20020628 (28 Jun 2002)
 
-  28 Jun 2002; J.Alberto Suárez L. <bass@gentoo.org> winex-20020728.ebuild
-
+  28 Jun 2002; J.Alberto Suárez L. <bass@gentoo.org> winex-20020728.ebuild:
   New CVS version
 
 *winex-20020511 (11 May 2002)
 
   11 May 2002; B.Verwilst <verwilst@gentoo.org> ChangeLog :
-  
   Initial ebuild
