@@ -1,0 +1,9 @@
+# ChangeLog for media-video/binkplayer
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-video/binkplayer/ChangeLog,v 1.1 2003/11/17 21:42:59 mr_bones_ Exp $
+
+*binkplayer-1.5y (17 Nov 2003)
+
+  17 Nov 2003; Michael Sterrett <mr_bones_@gentoo.org> binkplayer-1.5y.ebuild:
+  initial commit (bug 31788)
+
