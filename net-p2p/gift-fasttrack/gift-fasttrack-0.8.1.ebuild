@@ -1,43 +1,31 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-fasttrack-cvs/gift-fasttrack-cvs-0.8.0.ebuild,v 1.1 2003/07/02 19:58:00 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-fasttrack/gift-fasttrack-0.8.1.ebuild,v 1.1 2003/07/14 20:27:57 lostlogic Exp $
 
 DESCRIPTION="FastTrack Plugin for giFT"
 HOMEPAGE="https://developer.berlios.de/projects/gift-fasttrack/"
+SRC_URI="http://download.berlios.de/${PN}/giFT-FastTrack-${PV}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~sparc ~ppc"
 
 DEPENDS="virtual/glibc
-	>=net-p2p/gift-cvs-0.10.0-r3
+	!net-p2p/gift-fasttrack-cvs
+	>=net-p2p/gift-0.11.1
 	>=sys-apps/sed-4
 	>=sys-libs/zlib-1.1.4"
 
-inherit cvs debug flag-o-matic
-
-strip-flags
-
-# CVS settings for giFT-FastTrack
-ECVS_SERVER="cvs.gift-fasttrack.berlios.de:/cvsroot/gift-fasttrack"
-ECVS_MODULE="giFT-FastTrack"
-ECVS_TOP_DIR="${DISTDIR}/cvs-src/gift-fasttrack-cvs"
-S=${WORKDIR}/${ECVS_MODULE}
+S=${WORKDIR}/giFT-FastTrack
 
 src_compile() {
-
-	# Compile the FastTrack plugin. The developers of this thing sure as hell don't like automated installs.
-	cd ${S}
 	cp /usr/share/libtool/ltmain.sh .
 	./autogen.sh --prefix=/usr --host=${CHOST} || die "FastTrack configure failed"
+#	econf || dir "FastTrack plugin failed to configure"
 	emake || die "FastTrack plugin failed to build"
-
 }
 
 src_install() {
-
-	# Install the FastTrack plugin.
-	cd ${S}
-	make DESTDIR="${D}" install || "FastTrack plugin failed to install"
+	make install DESTDIR="${D}" || "FastTrack plugin failed to install"
 
 }
 

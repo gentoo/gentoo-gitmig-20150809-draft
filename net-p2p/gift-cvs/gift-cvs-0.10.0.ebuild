@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-cvs/gift-cvs-0.10.0.ebuild,v 1.8 2003/06/21 20:19:52 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-cvs/gift-cvs-0.10.0.ebuild,v 1.9 2003/07/14 20:27:57 lostlogic Exp $
 
 DESCRIPTION="Lets you connect to OpenFT, a decentralised p2p network like FastTrack"
 HOMEPAGE="http://gift.sourceforge.net"
@@ -9,6 +9,7 @@ LICENSE="GPL-2"
 KEYWORDS="x86 sparc ~ppc"
 
 DEPENDS="virtual/glibc
+	!net-p2p/gift
         >=sys-libs/zlib-1.1.4"
 
 inherit cvs debug flag-o-matic
