@@ -1,6 +1,11 @@
 # ChangeLog for app-text/xmlto
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.3 2003/10/24 03:53:00 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/xmlto/ChangeLog,v 1.4 2003/10/24 06:51:30 obz Exp $
+
+  24 Oct 2003; Mike Gardiner <obz@gentoo.org> xmlto-0.0.15.ebuild,
+  files/xmlto-0.0.15-head-fix.patch:
+  Added head-fix.patch to use head -n <num> instead of the obsoleted head -<num>
+  syntax.
 
   24 Oct 2003; Mike Gardiner <obz@gentoo.org> xmlto-0.0.15.ebuild:
   Sharpened up the docbook-xsl-stylesheets dependency to 1.62.0
