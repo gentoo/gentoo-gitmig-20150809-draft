@@ -1,6 +1,11 @@
 # ChangeLog for app-text/kbedic
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/ChangeLog,v 1.8 2003/02/12 05:31:40 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/kbedic/ChangeLog,v 1.9 2003/08/11 20:36:49 caleb Exp $
+
+*kbedic-4.0 (11 Aug 2003)
+
+  11 Aug 2003; Caleb Tennis <caleb@gentoo.org> : kbedic-4.0.ebuild
+  Version bump
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
