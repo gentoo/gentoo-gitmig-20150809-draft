@@ -5,15 +5,22 @@
 acpi
 afs
 alsa
+altivec
 apm
 directfb
+icc
+icc-pgo
+informix
 firebird
 lirc
 mmx
+oci8
 pic
 sse
 svga
+trusted
 voodoo3
+wavelan
 
 
 # And arch keyword flags that don't work
