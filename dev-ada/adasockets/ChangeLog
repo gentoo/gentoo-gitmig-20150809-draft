@@ -1,0 +1,10 @@
+# ChangeLog for dev-ada/adasockets
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/adasockets/ChangeLog,v 1.1 2003/08/13 04:52:24 george Exp $
+
+*adasockets-1.7 (12 Aug 2003)
+
+  12 Aug 2003; George Shapovalov <george@gentoo.org> adasockets-1.7.ebuild, Manifest, files/{digest-adasockets-1.7} :
+  initial release (#23822)
+  An Interface to BSD sockets from Ada (TCP, UDP and multicast).
+  ebuild submitted by David Holm <dholm@gentoo.org>
