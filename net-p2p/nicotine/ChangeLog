@@ -1,0 +1,11 @@
+# ChangeLog for net-p2p/nicotine
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/nicotine/ChangeLog,v 1.1 2003/09/20 11:53:48 liquidx Exp $
+
+*nicotine-1.0.4 (20 Sep 2003)
+
+  20 Sep 2003; Alastair Tse <liquidx@gentoo.org> metadata.xml,
+  nicotine-1.0.4.ebuild:
+  initial ebuild. the new port of the soulseek p2p network client in python and
+  gtk
+
