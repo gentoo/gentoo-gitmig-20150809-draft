@@ -1,25 +1,25 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 147cc586dfe5a561ae64491c4436aa4d wvstreams-4.0.1-r2.ebuild 2165
-MD5 ef0eabdb3c3c15706bee21630a0cdacb wvstreams-4.0.1-r1.ebuild 1975
-MD5 88beb02e20267e4fc08543358e899909 wvstreams-4.0-r1.ebuild 1872
-MD5 02828f9d2a7fa42ba2b2438d9a7bc0e2 ChangeLog 6962
-MD5 3dd88dcf536208ca7e46e823c82550be wvstreams-4.0.1.ebuild 1899
+MD5 0a37e494e8e2315fe71e3ab3f201cd2d ChangeLog 7064
 MD5 7c8d69f73480b56621770449d11a2e17 metadata.xml 235
-MD5 9c69b24927d041fa398d060e4e5f1bb1 files/wvstreams-4.0.1-linux-serial.patch 7563
+MD5 88beb02e20267e4fc08543358e899909 wvstreams-4.0-r1.ebuild 1872
+MD5 3dd88dcf536208ca7e46e823c82550be wvstreams-4.0.1.ebuild 1899
+MD5 54798ee7a2e0a9ea78024e98880698e6 wvstreams-4.0.1-r2.ebuild 2164
+MD5 ef0eabdb3c3c15706bee21630a0cdacb wvstreams-4.0.1-r1.ebuild 1975
+MD5 f4e61e52cab6cac5470b77a7bd3358a9 files/digest-wvstreams-4.0.1 68
+MD5 a48902f93ab5425fc59a483df42f3d0a files/wvstreams-4.0.1-without-pam.patch 418
+MD5 f606f86f5ef7d07937128fc8dc043c83 files/wvstreams-4.0-tcl_8_4.patch 822
 MD5 f4e61e52cab6cac5470b77a7bd3358a9 files/digest-wvstreams-4.0.1-r1 68
 MD5 f4e61e52cab6cac5470b77a7bd3358a9 files/digest-wvstreams-4.0.1-r2 68
-MD5 f606f86f5ef7d07937128fc8dc043c83 files/wvstreams-4.0-tcl_8_4.patch 822
 MD5 7c5ceff9d19db13318a9c8c6de08e7ef files/digest-wvstreams-4.0-r1 66
-MD5 a48902f93ab5425fc59a483df42f3d0a files/wvstreams-4.0.1-without-pam.patch 418
-MD5 f4e61e52cab6cac5470b77a7bd3358a9 files/digest-wvstreams-4.0.1 68
-MD5 03b73077a83c635ab211f235c7a429bf files/wvstreams-4.0.1-tcl_8_4.patch 822
 MD5 16733d2b49133ec4fd75fa7dbca890ea files/wvstreams-4.0.1-MOC-fix.patch 479
+MD5 9c69b24927d041fa398d060e4e5f1bb1 files/wvstreams-4.0.1-linux-serial.patch 7563
+MD5 03b73077a83c635ab211f235c7a429bf files/wvstreams-4.0.1-tcl_8_4.patch 822
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCNpPgjiC39V7gKu0RAjmqAKCSXxmUfNWxcgdeAReffNfLVJXJCQCgpQzP
-I5/iLe5seolzwaKRKv1gl3k=
-=JrNr
+iD8DBQFCPIm5ugEuf3OQ0akRAmOkAJ9Bf0ZmAhSBHYIBXX1bNX0M1pnKhQCfQrTt
+nsytmUVmAfFfIi8SJ7k2GvE=
+=taO2
 -----END PGP SIGNATURE-----
