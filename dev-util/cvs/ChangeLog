@@ -1,6 +1,10 @@
 # ChangeLog for dev-util/cvs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.64 2004/11/18 16:41:59 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/ChangeLog,v 1.65 2004/12/03 16:39:54 scandium Exp $
+
+  03 Dec 2004; Rainer Groesslinger <scandium@gentoo.org> cvs-1.11.17.ebuild,
+  cvs-1.11.18.ebuild, cvs-1.12.10.ebuild, cvs-1.12.9.ebuild:
+  Custom src_test() to avoid merge problems, bug #73206
 
 *cvs-1.12.10 (18 Nov 2004)
 

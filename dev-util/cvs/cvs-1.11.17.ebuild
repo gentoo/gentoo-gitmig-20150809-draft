@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.11.17.ebuild,v 1.14 2004/09/26 14:03:09 scandium Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cvs/cvs-1.11.17.ebuild,v 1.15 2004/12/03 16:39:54 scandium Exp $
 
 DESCRIPTION="Concurrent Versions System - source code revision control tools"
 HOMEPAGE="http://www.cvshome.org/"
@@ -46,4 +46,8 @@ src_install() {
 		cd ${D}/usr/share/doc/${PF}/html/
 		ln -s cvs.html index.html
 	fi
+}
+
+src_test() {
+	einfo "FEATURES=\"maketest\" has been disabled for dev-util/cvs"
 }
