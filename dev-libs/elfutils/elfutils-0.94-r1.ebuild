@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.94-r1.ebuild,v 1.13 2005/02/09 19:54:10 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.94-r1.ebuild,v 1.14 2005/03/15 23:51:30 vapier Exp $
 
 inherit eutils gnuconfig
 
@@ -18,6 +18,7 @@ IUSE="nls uclibc"
 # gets pulled in as a dep since this package does not respect virtual/libc
 
 DEPEND="!uclibc? ( >=sys-libs/glibc-2.3.2 )
+	sys-devel/gettext
 	>=sys-devel/binutils-2.14.90.0.6
 	>=sys-devel/gcc-3.2.1-r6
 	!dev-libs/libelf"

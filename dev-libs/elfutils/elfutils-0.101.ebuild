@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.101.ebuild,v 1.1 2005/03/13 13:45:32 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/elfutils/elfutils-0.101.ebuild,v 1.2 2005/03/15 23:51:30 vapier Exp $
 
 inherit eutils
 
@@ -10,28 +10,28 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="OpenSoftware"
 SLOT="0"
-KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~s390 ~sparc ~x86 ~ppc64"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x86"
 IUSE="nls uclibc"
 
 # This pkg does not actually seem to compile currently in a uClibc
 # environment (xrealloc errs), but we need to ensure that glibc never
 # gets pulled in as a dep since this package does not respect virtual/libc
 DEPEND="!uclibc? ( >=sys-libs/glibc-2.3.2 )
+	sys-devel/gettext
 	>=sys-devel/binutils-2.14.90.0.6
 	>=sys-devel/gcc-3.2.1-r6
 	!dev-libs/libelf"
 
 src_unpack() {
 	unpack ${A}
-
 	cd "${S}"
-	epatch ${FILESDIR}/${P}-bswap.patch
-	epatch ${FILESDIR}/${P}-portability.patch
+	epatch "${FILESDIR}"/${P}-bswap.patch
+	epatch "${FILESDIR}"/${P}-portability.patch
 
 	# Needed by ${P}-portability.patch
-	autoreconf 2>&1 | grep -v 'underquoted definition' || die
+	autoreconf || die
 
-	find . -name Makefile.in | xargs sed -i -e 's:-W\(error\|extra\)::g'
+	find . -name Makefile.in -print0 | xargs -0 sed -i -e 's:-W\(error\|extra\)::g'
 }
 
 src_compile() {
