@@ -1,10 +1,10 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 2a298d8670fe3106367331b56dfcf2dc ChangeLog 2352
+MD5 6b1bc452ca2afd8645f8ecb90b2a1b0d ChangeLog 2488
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 5c7899c1069ef64dc3a3adf01150a99d sysvinit-2.86.ebuild 1968
 MD5 4bb35af95759582d45324cdf3bc237b7 sysvinit-2.85-r1.ebuild 2545
-MD5 f960b4dabb15c83bc898c55b535a0154 sysvinit-2.86.ebuild 1968
 MD5 38c0059ecfaa1b09e59a75cc2780aa94 files/digest-sysvinit-2.85-r1 64
 MD5 eb3296226618c9805517b4fca35c242e files/inittab 1672
 MD5 3c171d9c843284ce606663e4e6da26e9 files/sysvinit-2.85-selinux.patch 6448
@@ -12,9 +12,9 @@ MD5 5f94105e0b503a39fda5fb65d885e16c files/2.86-gentoo.patch 641
 MD5 3ba9251f1f4f0ae0dd30d682b28183dd files/2.86-selinux.patch 6525
 MD5 64af9a15df244a29ebd5d09307f21a9b files/digest-sysvinit-2.86 64
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB2fkiMTuwkQ6eEKsRAnFqAJ90PqllAmSf7z2SLq6F7Z/VKESFCQCggU6Y
-NLYU838/Te+G863vig/R5lg=
-=9zFj
+iD8DBQFB3q9bMTuwkQ6eEKsRAuIBAKCOQSBjoZx6R3xtB3/7XeKXH1nKAwCfcOSK
+l3pnsGK47R0Dq3eyK1B9ogg=
+=8NsN
 -----END PGP SIGNATURE-----
