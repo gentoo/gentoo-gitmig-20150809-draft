@@ -3,10 +3,10 @@ MD5 81de5d6acaaabfba855da4ff2bedacd0 alsa-lib-1.0.0_rc2-r1.ebuild 1806
 MD5 496de1165aa5f057de82ebcf59fe08b7 alsa-lib-1.0.3.ebuild 1532
 MD5 4b9614e1f8534868351081419f5da2e4 alsa-lib-0.9.8.ebuild 1586
 MD5 88e7d7a1bdef247fc6b175e8ee840dd8 alsa-lib-0.5.10b.ebuild 698
-MD5 31b3629b568f9761ed5d41b2e6838682 alsa-lib-1.0.2.ebuild 1539
+MD5 a554721eea4e5ee9d4ff65bd5417b8d6 alsa-lib-1.0.2.ebuild 1537
 MD5 aa121973afeb12465c8ca0e5771985f6 alsa-lib-0.9.7.ebuild 1104
 MD5 625080376529cda42906a9c004d154bd alsa-lib-0.9.2.ebuild 1119
-MD5 b65cf2160e8e3dcc3b80b5eadd2e0ba4 ChangeLog 7817
+MD5 8b882aac9098d68d53498ba3c8e807be ChangeLog 7816
 MD5 e1147a642867b3b3ea43518a1376f6d2 metadata.xml 250
 MD5 9927b59da455a39a882c18891136e346 alsa-lib-1.0.1.ebuild 1800
 MD5 477c697a35479bcb208db06f896e46cb alsa-lib-0.9.0_rc2.ebuild 1146
