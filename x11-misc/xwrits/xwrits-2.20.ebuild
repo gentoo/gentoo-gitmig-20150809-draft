@@ -1,11 +1,8 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-
 S=${WORKDIR}/${P}
 
 DESCRIPTION="Xwrits reminds you to take wrist breaks, which will hopefully help you prevent repetitive stress injury. It pops up an X window when you should rest; you click on that window, then take a break"
 
-SRC_URI="http://www.lcdf.org/xwrits/xwrits-2.19.tar.gz"
+SRC_URI="http://www.lcdf.org/xwrits/xwrits-2.20.tar.gz"
 HOMEPAGE="http://www.lcdf.org/xwrits/"
 
 DEPEND="x11-base/xfree"
