@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/compaq-jdk/compaq-jdk-1.3.1.ebuild,v 1.1 2002/12/15 14:52:42 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/compaq-jdk/compaq-jdk-1.3.1.ebuild,v 1.2 2002/12/15 16:24:32 bjb Exp $
 
 IUSE="doc"
 
@@ -13,6 +13,8 @@ DESCRIPTION="Compaq Java Development Kit 1.3.1 for Alpha/Linux/GNU"
 HOMEPAGE="http://h18012.www1.hp.com/java/documentation/1.3.1/linux/docs/index.html"
 DEPEND="virtual/glibc
 	app-arch/rpm2targz
+    dev-libs/libots
+    dev-libs/libcpm
 	>=dev-java/java-config-0.2.5
 	doc? ( =dev-java/java-sdk-docs-1.3.1* )"
 RDEPEND="$DEPEND"
