@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc64-headers/ppc64-headers-2.6.4.ebuild,v 1.2 2004/03/31 22:27:52 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/ppc64-headers/ppc64-headers-2.6.4.ebuild,v 1.3 2004/04/02 04:49:44 tgall Exp $
 
 IUSE="build crypt"
 
@@ -31,7 +31,8 @@ S=${WORKDIR}/linux-${KV}
 
 DESCRIPTION="Full sources for the Gentoo Kernel."
 SRC_URI="mirror://kernel/linux/kernel/v2.6/linux-${OKV}.tar.bz2
-	mirror://kernel/ppc64-ames264.patch.gz"
+		mirror://kernel/ppc64-ames264.patch.gz
+		mirror://kernel/ppc64-theader264fix.patch.gz"
 
 HOMEPAGE="http://www.gentoo.org/ http://www.kernel.org/"
 PROVIDE="virtual/kernel virtual/os-headers"
@@ -50,6 +51,7 @@ src_unpack() {
 	kernel_universal_unpack
 	cd ${WORKDIR}/linux-2.6.4
 	epatch ${WORKDIR}/ppc64-ames264.patch
+	epatch ${WORKDIR}/ppc64-theader264fix.patch
 }
 
 src_install() {
