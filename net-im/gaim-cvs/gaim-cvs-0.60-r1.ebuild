@@ -1,11 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-cvs/gaim-cvs-0.60-r1.ebuild,v 1.1 2002/10/25 07:50:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/gaim-cvs/gaim-cvs-0.60-r1.ebuild,v 1.2 2002/10/25 19:40:20 phoenix Exp $
 
-IUSE="nas nls esd gnome arts gtk2 perl"
+IUSE="nas nls esd arts perl"
 
-DESCRIPTION="GTK Instant Messenger client"
-#SRC_URI="mirror://sourceforge/gaim/${P}.tar.bz2"
+DESCRIPTION="GTK Instant Messenger client - CVS ebuild."
 HOMEPAGE="http://gaim.sourceforge.net/"
 
 SLOT="0"
@@ -29,15 +28,13 @@ DEPEND="=sys-libs/db-1*
 	arts? ( >=kde-base/arts-0.9.5 )
 	perl? ( >=sys-devel/perl-5.6.1 )"
 
-RDEPEND="${DEPEND}"
-
 src_compile() {
-	local myconf gnomeopts
+	local myconf
 
 	use esd  || myconf="--disable-esd"
 	use perl || myconf="${myconf} --disable-perl"
-	use nas && myconf="${myconf} --enable-nas" \
-		|| myconf="${myconf} --disable-nas"
+	use nas  && myconf="${myconf} --enable-nas" \
+		 || myconf="${myconf} --disable-nas"
 
 	if [ "` use arts`" ]; then
 	    inherit kde-functions
