@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/qt-embedded
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/ChangeLog,v 1.8 2004/07/05 11:24:13 chrb Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/qt-embedded/ChangeLog,v 1.9 2004/07/06 02:28:54 chrb Exp $
+
+  06 Jul 2004; Chris Bainbridge <chrb@gentoo.org> qt-embedded-3.3.2-r1.ebuild:
+  -m Added ~amd64 (bug #53403)
 
 *qt-embedded-3.3.2-r1 (05 Jul 2004)
 
