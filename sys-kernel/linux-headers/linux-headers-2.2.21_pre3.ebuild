@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.2.21_pre3.ebuild,v 1.1 2002/02/28 18:14:47 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.2.21_pre3.ebuild,v 1.2 2002/03/12 22:33:16 g2boojum Exp $
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -42,7 +42,7 @@ then
 	#binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
 	DEPEND=">=sys-devel/binutils-2.11.90.0.31 sys-apps/console-tools >=sys-apps/modutils-2.4.2 sys-devel/perl"
 	
-	RDEPEND=">=sys-libs/ncurses-5.2"
+	RDEPEND=">=sys-libs/ncurses-5.2 >=sys-apps/baselayout-1.7.4"
 fi
 
 [ -z "$LINUX_HOSTCFLAGS" ] && LINUX_HOSTCFLAGS="-Wall -Wstrict-prototypes -O2 -fomit-frame-pointer -I${S}/include"
