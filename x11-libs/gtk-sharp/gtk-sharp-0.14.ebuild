@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/gtk-sharp-0.14.ebuild,v 1.1 2003/12/06 04:03:20 tberman Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtk-sharp/gtk-sharp-0.14.ebuild,v 1.2 2004/02/02 07:00:15 tberman Exp $
 
 # WARNING
 # All gst-sharp hacks done in this build are nonfunctional
@@ -31,7 +31,7 @@ RDEPEND=">=dev-dotnet/mono-0.24
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 
-KEYWORDS="~x86 -ppc"
+KEYWORDS="x86 -ppc"
 
 src_unpack() {
 	unpack ${A}
@@ -61,7 +61,7 @@ src_compile() {
 src_install () {
 	# Path for the installation of the libs is hardcoded in the Makefile,
 	# so we need to change it - Is being changed, check every release
-	for i in $(find . -iname Makefile); do cp $i ${i}.orig; sed "s:${DESTDIR}/usr:${D}/usr:" $i.orig > $i; done
+	for i in $(find . -iname Makefile); do cp $i ${i}.orig; sed -e "s:${DESTDIR}/usr:${D}/usr:" -e "${D}/usr/bin:${DESTDIR}/usr/bin:" < $i.orig > $i; done
 
 	# one of the samples require gconf schemas, and it'll violate sandbox
 	GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL="1" einstall || die
