@@ -1,0 +1,29 @@
+#!/sbin/runscript
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2 or later
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/qpage/files/qpage,v 1.1 2003/08/08 18:05:35 agriffis Exp $
+
+depend() {
+	need net
+}
+
+checkconfig() {
+	if [ ! -e /etc/qpage/qpage.cf ] ; then
+		eerror "You need an /etc/qpage/qpage.cf file first."
+		eerror "There is a sample file in /etc/qpage/."
+		return 1
+	fi
+}
+
+start() {
+	checkconfig || return 1
+	ebegin "Starting qpage"
+	start-stop-daemon --start --quiet --exec /usr/bin/qpage -- -q 10
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping qpage"
+	start-stop-daemon --stop --quiet --exec /usr/bin/qpage
+	eend $?
+}
