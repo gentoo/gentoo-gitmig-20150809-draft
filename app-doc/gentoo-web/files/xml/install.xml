@@ -11,8 +11,8 @@ you must know how to set up partitions, manually create filesystems, and
 extract tarballs.  If you know how to do this, then you're ready to install the
 Gentoo Linux release candidate.</abstract>
 
-<version>1.0</version>
-<date>18 Feb 2001</date>
+<version>1.0.1</version>
+<date>22 Apr 2001</date>
 
 <chapter>
 <title>Getting started</title>
@@ -400,6 +400,7 @@ kernel /boot/bzImage root=/dev/hda3
 
 title=Windows NT Workstation
 root (hd0,2) 
+chainloader +1
 </pre><p>After saving this file, Gentoo Linux installation is complete.  Selecting the first option will
 tell GRUB to boot Gentoo Linux without a fuss.  The second part of the menu.lst file is optional, and shows you how to
 use GRUB to boot a bootable Windows partition.</p>
