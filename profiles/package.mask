@@ -21,10 +21,6 @@
 ##   End example
 ##
 
-# <verwilst@gentoo.org> (12 Oct 2002)
-# Masked for testing.
-=media-libs/libsdl-1.2.5
-
 # <carpaski@gentoo.org> (12 Oct 2002)
 # Masked for testing.
 =sys-apps/portage-2.0.39
