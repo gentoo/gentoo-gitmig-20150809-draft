@@ -1,0 +1,10 @@
+# ChangeLog for net-zope/verbosesecurity
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-zope/verbosesecurity/ChangeLog,v 1.1 2003/10/11 21:12:18 lanius Exp $
+
+*verbosesecurity-0.5 (11 Oct 2003)
+
+  11 Oct 2003; Heinrich Wendel <lanius@gentoo.org> metadata.xml,
+  verbosesecurity-0.5.ebuild:
+  initial ebuild, thx to Dominik <dom@wahuu.at>
+
