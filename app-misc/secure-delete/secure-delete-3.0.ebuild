@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/secure-delete/secure-delete-3.0.ebuild,v 1.10 2004/06/28 04:12:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/secure-delete/secure-delete-3.0.ebuild,v 1.11 2004/08/07 21:12:55 slarti Exp $
 
 MY_P=${PN//-/_}-${PV}
 S=${WORKDIR}/${MY_P}
-DESCRIPTION="Secure file/disk/swap/memory erasure utlities"
+DESCRIPTION="Secure file/disk/swap/memory erasure utilities"
 HOMEPAGE="http://www.thc.org/"
 SRC_URI="http://www.thc.org/releases/${MY_P}.tar.gz"
 

@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/secure-delete
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/secure-delete/ChangeLog,v 1.8 2004/06/24 22:32:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/secure-delete/ChangeLog,v 1.9 2004/08/07 21:12:55 slarti Exp $
+
+  07 Aug 2004; Tom Martin <slarti@gentoo.org> secure-delete-3.0.ebuild:
+  Typo in DESCRIPTION: utlities -> utilities. Bug 59717.
 
   09 Jun 2004; Daniel Black <dragonheart@gentoo.org> secure-delete-3.0.ebuild,
   +metadata.xml:
