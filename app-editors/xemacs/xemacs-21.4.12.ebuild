@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.12.ebuild,v 1.2 2003/02/13 07:01:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.12.ebuild,v 1.3 2003/05/22 18:13:03 taviso Exp $
 
 IUSE="gpm postgres ldap xface nas dnd X jpeg tiff png mule motif freewnn canna lucid athena neXt Xaw3d"
 
@@ -149,6 +149,9 @@ src_compile() {
 	local dbconf="gnudbm"
 
 	myconf="${myconf} --with-sound=${soundconf} --with-database=${dbconf}"
+
+	# fixes #21264
+	use alpha && myconf="${myconf} --with-system-malloc"
 
 	./configure ${myconf} \
 		--prefix=/usr \
