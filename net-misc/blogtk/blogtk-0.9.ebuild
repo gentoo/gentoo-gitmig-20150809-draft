@@ -1,15 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/blogtk/blogtk-0.8.ebuild,v 1.2 2004/02/24 23:32:06 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/blogtk/blogtk-0.9.ebuild,v 1.1 2004/02/24 23:32:06 humpback Exp $
 
 DESCRIPTION="GTK Blog - post entries to your blog"
 HOMEPAGE="http://blogtk.sourceforge.net"
-SRC_URI="mirror://sourceforge/${PN}/${P}-5.tar.bz2"
-S="${WORKDIR}/BloGTK-${PV}-5"
+SRC_URI="mirror://sourceforge/${PN}/${PN}_${PV}-1.tar.bz2"
+RESTRICT="nomirror"
+S="${WORKDIR}/BloGTK-${PV}-1"
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="~x86"
 
 IUSE=""
 
