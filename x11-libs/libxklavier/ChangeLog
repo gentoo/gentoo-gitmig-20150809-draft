@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/libxklavier
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/ChangeLog,v 1.14 2004/05/25 15:07:15 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libxklavier/ChangeLog,v 1.15 2004/06/03 23:40:27 geoman Exp $
+
+  03 Jun 2004; Stephen P. Becker <geoman@gentoo.org> libxklavier-1.02.ebuild:
+  Stable on mips.
 
   25 May 2004; Guy Martin <gmsoft@gentoo.org> libxklavier-1.02.ebuild:
   Marked stable on hppa.
