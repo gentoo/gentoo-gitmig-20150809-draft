@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.50_alpha1.ebuild,v 1.5 2004/01/11 13:48:42 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.50_alpha1.ebuild,v 1.6 2004/02/04 12:01:22 lanius Exp $
 
 # Here, like in the other .ebuilds, the static version is
 # forced for simplicity's sake
 
-IUSE="gnome kde"
+IUSE="gnome kde operanom2"
 
 MY_PV="7.50-20031219"
 OPERATYPE="1-static-qt"
@@ -70,6 +70,12 @@ src_install() {
 	# Install a symlink /usr/bin/opera
 	dodir /usr/bin
 	dosym /opt/opera/bin/opera /usr/bin/opera
+
+	# Make mail and irc support optional
+	if `use operanom2`; then
+		einfo "Removing mail and chat support"
+		rm ${S}/lib/m2.so
+	fi
 }
 
 pkg_postinst() {
