@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.11.1_beta.ebuild,v 1.2 2004/12/23 20:18:49 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/rezound/rezound-0.11.1_beta.ebuild,v 1.3 2004/12/28 11:28:58 mr_bones_ Exp $
 
 IUSE="alsa oggvorbis jack nls oss portaudio flac soundtouch"
 
@@ -59,7 +59,7 @@ src_compile() {
 	# fix compilation errors on ppc, where some
 	# of the required functions aren't defined
 	test "${ARCH}" = ppc && epatch ${FILESDIR}/undefined-functions.patch
-	
+
 	# following features can't be disabled if already installed:
 	# -> flac, oggvorbis, soundtouch
 
@@ -78,4 +78,3 @@ src_install() {
 	docinto code
 	dodoc docs/code/*
 }
-
