@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+# <mholzer@gentoo.org> (28 Apr 2003)
+# doesn't compile
+>net-dialup/capi4k-utils-20020701
+
 # <fava@gentoo.org> (28 Apr 2003)
 # For testing
 =app-admin/ufed-0.31
