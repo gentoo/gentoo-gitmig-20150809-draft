@@ -1,4 +1,16 @@
-MD5 6a217b8b323e4881883bc8aaebfaf02a ChangeLog 587
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 30cc9aa64eed3029f2a7570c74fc74dc openjgraph-0.9.2.ebuild 712
+MD5 298a3ccddd7789abafaa4bc78dd2ab9c openjgraph-0.9.2-r1.ebuild 1016
+MD5 ea1c346398138d55c647d4f04dd86b01 ChangeLog 768
 MD5 a6ec7d7724fbd068ffb39b5be56134ed metadata.xml 157
-MD5 52f5a06fdd34a9f336c45cdd5767eb94 openjgraph-0.9.2.ebuild 686
+MD5 277134782da94e7034dfe3f3870963ec files/digest-openjgraph-0.9.2-r1 66
 MD5 277134782da94e7034dfe3f3870963ec files/digest-openjgraph-0.9.2 66
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBSs3//rLF9B432nYRAgRTAKClsQ0WVNCVvp4Q1otSXqafXzI29QCggZlA
+zmcqGmdqK9OMdCf5zZj02u4=
+=EG76
+-----END PGP SIGNATURE-----
