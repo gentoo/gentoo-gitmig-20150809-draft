@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/config-kernel/config-kernel-0.2.7.ebuild,v 1.1 2004/03/25 20:28:50 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/config-kernel/config-kernel-0.3.0.ebuild,v 1.1 2004/03/26 19:57:36 latexer Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://dev.gentoo.org/~latexer/files/koutput/${PN}/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
 RDEPEND="virtual/python"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE=""
 
 src_install() {
