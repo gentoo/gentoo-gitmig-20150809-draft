@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.5.3.ebuild,v 1.3 2003/09/11 21:08:04 twp Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-2.5.3.ebuild,v 1.4 2003/09/11 21:13:27 twp Exp $
 
 inherit eutils
 inherit webapp-apache
@@ -23,15 +23,15 @@ webapp-detect || NO_WEBSERVER=1
 pkg_setup() {
 	webapp-pkg_setup "${NO_WEBSERVER}"
 
-	if [ -d ${HTTPD_ROOT}/phpmyadmin ] ; then
+	if [ -d ${ROOT}${HTTPD_ROOT}/phpmyadmin ] ; then
 		echo ""
-		eerror "phpmyadmin directory detected in ${HTTPD_ROOT}."
+		eerror "phpmyadmin directory detected in ${ROOT}${HTTPD_ROOT}."
 		eerror "You must unmerge your older version first,"
 		eerror "and remove the directory before continuing."
 		die "Will not overwrite previous installation."
 	fi
 
-	einfo "Installing into ${HTTPD_ROOT}."
+	einfo "Installing into ${ROOT}${HTTPD_ROOT}."
 }
 
 src_unpack() {
