@@ -1,0 +1,32 @@
+# ChangeLog for net-p2p/freenet
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/ChangeLog,v 1.1 2002/06/25 10:26:11 bangert Exp $
+
+*freenet-20020621.ebuild ( 21 Jun 2002 )
+
+  20 Jun 2002; J.Alberto Suárez L. <bass@gentoo.org> freenet-20020621.ebuild:
+  Bumped versión, and a note that explain how down the newest version.
+
+*freenet-20020214.ebuild ( 18 Feb 2002 )
+
+  18 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ChangeLog files/digest-freenet-20020214 files/freenet files/update-freenet:
+
+  Freenet is a large-scale peer-to-peer network which pools the power of 
+  member computers around the world to create a massive virtual information 
+  store open to anyone to freely publish or view information of all kinds. 
+  Freenet is:
+
+    * Highly survivable: All internal processes are completely anonymized and 
+      decentralized across the global network, making it virtually impossible 
+      for an attacker to destroy information or take control of the system.
+    * Private: Freenet makes it extremely difficult for anyone to spy on the 
+      information that you are viewing, publishing, or storing.
+    * Secure: Information stored in Freenet is protected by strong 
+      cryptography against malicious tampering or counterfeiting.
+    * Efficient: Freenet dynamically replicates and relocates information in 
+      response to demand to provide efficient service and minimal bandwidth 
+      usage regardless of load. Significantly, Freenet generally requires 
+      log(n) time to retrieve a piece of information in a network of size n.
+
+  Ebuild submitted by Per Wigren <wigren@home.se>.
+
