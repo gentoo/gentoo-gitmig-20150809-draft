@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-0.11.0.ebuild,v 1.1 2003/07/22 04:17:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/ogre/ogre-0.11.0-r1.ebuild,v 1.1 2003/08/16 06:26:39 vapier Exp $
 
 DESCRIPTION="Object-oriented Graphics Rendering Engine"
 HOMEPAGE="http://ogre.sourceforge.net/"
@@ -28,7 +28,6 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	sed -i 's:noinst_HEADERS:pkginclude_HEADERS:' `find PlugIns/ -name 'Makefile.am'` || die "installing plugin headers"
-	sed -i "s:ogre\.cfg:/etc/ogre.cfg:" OgreMain/src/OgreRoot.cpp || die "setting ogre.cfg loc"
 }
 
 src_compile() {
