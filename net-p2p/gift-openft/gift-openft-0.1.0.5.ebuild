@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/gift-openft-0.1.0.5.ebuild,v 1.1 2003/08/01 01:54:50 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/gift-openft/gift-openft-0.1.0.5.ebuild,v 1.2 2003/08/03 05:10:11 iggy Exp $
 
 DESCRIPTION="The giFT OpenFT plugin"
 HOMEPAGE="http://gift.sf.net/"
@@ -24,7 +24,7 @@ src_compile() {
 src_install() {
 	einstall giftconfdir=${D}/etc/giFT \
 		 plugindir=${D}/usr/lib/giFT \
-		 giftdatadir=${D}/usr/share/giFT \
+		 datadir=${D}/usr/share/giFT \
 		 giftperldir=${D}/usr/bin \
 		 libgiftincdir=${D}/usr/include/libgift || die "Install failed"
 }
