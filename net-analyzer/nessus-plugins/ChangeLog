@@ -1,6 +1,13 @@
 # ChangeLog for net-analyzer/nessus-plugins
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/ChangeLog,v 1.31 2004/08/12 12:17:31 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/nessus-plugins/ChangeLog,v 1.32 2004/08/12 20:05:44 eldad Exp $
+
+  12 Aug 2004; Eldad Zack <eldad@gentoo.org> -nessus-plugins-2.0.11.ebuild,
+  nessus-plugins-2.0.12.ebuild, -nessus-plugins-2.0.7.ebuild,
+  -nessus-plugins-2.0.8a.ebuild, -nessus-plugins-2.0.9.ebuild,
+  -nessus-plugins-2.1.0.ebuild:
+  GLSA 200408-11 (Bug #58014) ebuild purging. ppc64 -> ~ppc64, and moved to
+  2.0.12. wrt bug #57456.
 
   12 Aug 2004; <SeJo@gentoo.org> nessus-plugins-2.0.12.ebuild:
   stable masking ppc for bug 58014
