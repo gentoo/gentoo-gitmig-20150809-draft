@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/wxGTK
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.60 2004/08/07 04:02:58 pythonhead Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/ChangeLog,v 1.61 2004/08/19 02:16:32 tgall Exp $
+
+  18 Aug 2004; Tom Gall <tgall@gentoo.org> wxGTK-2.4.2-r2.ebuild:
+  stable on ppc64, bug #58420
 
 *wxGTK-2.4.2-r2 (06 Aug 2004)
 
