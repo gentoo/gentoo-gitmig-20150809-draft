@@ -1,6 +1,18 @@
 # ChangeLog for sys-kernel/genkernel
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.30 2004/02/08 17:56:35 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/ChangeLog,v 1.31 2004/02/14 20:01:25 brad_mssw Exp $
+
+*genkernel-3.0.1_beta12 (14 Feb 2004)
+
+  14 Feb 2004; Brad House <brad_mssw@gentoo.org> genkernel-3.0.1_beta1.ebuild,
+  genkernel-3.0.1_beta12.ebuild, genkernel-3.0.1_beta2.ebuild,
+  genkernel-3.0.1_beta4.ebuild, genkernel-3.0.1_beta5.ebuild,
+  genkernel-3.0.1_beta6.ebuild, genkernel-3.0.1_beta7.ebuild,
+  genkernel-3.0.1_beta8.ebuild, genkernel-3.0.1_beta9.ebuild:
+  bugfixes for initrd and console remapping/initrd unmounting
+  ppc profile added
+  default TEMP location moved to /var/tmp/genkernel
+  squashfs and gcloop support added
 
 *genkernel-3.0.1_beta11 (08 Feb 2004)
 
