@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/alpha-sources
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/ChangeLog,v 1.22 2004/04/15 07:56:31 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/alpha-sources/ChangeLog,v 1.23 2004/04/17 09:07:59 plasmaroo Exp $
+
+*alpha-sources-2.4.21-r6 (17 Apr 2004)
+
+  17 Apr 2004; <plasmaroo@gentoo.org>
+  +files/alpha-sources.CAN-2004-0010.patch,
+  +files/alpha-sources.CAN-2004-0177.patch,
+  +files/alpha-sources.CAN-2004-0178.patch, +alpha-sources-2.4.21-r6.ebuild:
+  Added patches for the CAN-2004-0010, CAN-2004-0177 and CAN-2004-0178
+  vulnerabilities.
 
 *alpha-sources-2.4.21-r5 (15 Apr 2004)
 
