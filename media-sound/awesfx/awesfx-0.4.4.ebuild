@@ -1,8 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/awesfx/awesfx-0.4.4.ebuild,v 1.10 2004/07/01 07:48:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/awesfx/awesfx-0.4.4.ebuild,v 1.11 2004/10/14 21:29:18 eradicator Exp $
 
 IUSE=""
+
+inherit toolchain-funcs
 
 DESCRIPTION="AWE Utilities - sfxload"
 HOMEPAGE="http://mitglied.lycos.de/iwai/awedrv.html"
@@ -31,7 +33,7 @@ src_unpack() {
 }
 
 src_compile() {
-	export CC=gcc
+	export CC="$(tc-getCC)"
 	make \
 		INSTDIR=${D}/usr \
 		BINDIR=${D}/usr/bin \
