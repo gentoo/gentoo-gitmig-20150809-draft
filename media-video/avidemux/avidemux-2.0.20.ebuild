@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.20.ebuild,v 1.2 2004/01/26 00:49:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.20.ebuild,v 1.3 2004/01/30 06:48:48 drobbins Exp $
 
 inherit eutils flag-o-matic
 
@@ -14,7 +14,7 @@ SLOT="2"
 KEYWORDS="~x86 ~ppc"
 IUSE="debug nls oggvorbis arts truetype alsa"
 
-DEPEND="virtual/x11
+RDEPEND="virtual/x11
 	media-sound/mad
 	>=media-libs/a52dec-0.7.4
 	>=media-sound/lame-3.93
@@ -31,6 +31,8 @@ DEPEND="virtual/x11
 	truetype? ( >=media-libs/freetype-2.1.2 )
 	alsa? ( >=media-libs/alsa-lib-0.9.1 )"
 # media-sound/toolame is supported as well
+
+DEPEND="$RDEPEND >=sys-devel/autoconf-2.58"
 
 S=${WORKDIR}/${MY_P}
 

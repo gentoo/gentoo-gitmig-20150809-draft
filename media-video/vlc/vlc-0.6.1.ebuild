@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.1.ebuild,v 1.5 2004/01/26 00:52:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/vlc-0.6.1.ebuild,v 1.6 2004/01/30 06:46:12 drobbins Exp $
 
 # Missing support for...
 #	tarkin - package not in portage yet - experimental
@@ -21,7 +21,7 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha ~mips ~hppa"
 
-DEPEND="X? ( virtual/x11 )
+RDEPEND="X? ( virtual/x11 )
 	aalib? ( >=media-libs/aalib-1.4_rc4-r2 )
 	alsa? ( >=media-libs/alsa-lib-0.9_rc2 )
 	arts? ( kde-base/kdelibs )
@@ -58,6 +58,8 @@ DEPEND="X? ( virtual/x11 )
 	>media-video/ffmpeg-0.4.6
 	>media-libs/libmpeg2-0.3.1
 	>=media-video/mplayer-0.90"
+
+DEPEND="$RDEPEND >=sys-devel/autoconf-2.58"
 
 # mplayer is a required dependancy until the libpostproc code becomes
 # a separate packages or until ffmpeg get support for installing

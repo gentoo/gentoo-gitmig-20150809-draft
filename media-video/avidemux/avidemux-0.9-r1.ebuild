@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-0.9-r1.ebuild,v 1.4 2004/01/26 00:49:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-0.9-r1.ebuild,v 1.5 2004/01/30 06:48:48 drobbins Exp $
 
 inherit eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86"
 IUSE="debug nls oggvorbis arts truetype alsa"
 
-DEPEND="virtual/x11
+RDEPEND="virtual/x11
 	=x11-libs/gtk+-1.2*
 	>=media-sound/mad-0.14.2b*
 	>=media-libs/a52dec-0.7.4
@@ -28,6 +28,8 @@ DEPEND="virtual/x11
 	arts? ( >=kde-base/arts-1.1.1 )
 	truetype? ( >=media-libs/freetype-2.1.2 )
 	alsa? ( >=media-libs/alsa-lib-0.9.1 )"
+
+DEPEND="$RDEPEND >=sys-devel/autoconf-2.58"
 
 src_compile() {
 
