@@ -1,11 +1,13 @@
 #!/sbin/runscript
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/files/2.0.40/apache2.initd,v 1.5 2003/02/14 23:10:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/files/2.0.40/apache2.initd,v 1.6 2003/02/23 19:39:22 woodchip Exp $
+
+opts="${opts} reload"
 
 depend() {
 	need net
-	use mysql dns logger
+	use mysql dns logger netmount
 }
 
 start() {
@@ -22,12 +24,12 @@ stop() {
 	eend $?
 }
 
-svc_restart() {
-	ebegin "Gracefully restarting apache"
-	/usr/sbin/apache2 -t ${APACHE_OPTS} &>/dev/null
+reload() {
+	ebegin "Gracefully restarting apache2"
+	/usr/sbin/apache2 -t ${APACHE2_OPTS} &>/dev/null
 	if [ "$?" != "0" ]; then
 		svc_stop
-		eend 1 "Apache configuration error"
+		eend 1 "Apache2 configuration error"
 	else
 		killall -USR1 apache2 &> /dev/null
 		svc_start &>/dev/null
