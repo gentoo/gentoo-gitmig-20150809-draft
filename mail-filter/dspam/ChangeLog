@@ -1,6 +1,11 @@
 # ChangeLog for mail-filter/dspam
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.42 2005/02/17 00:11:12 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.43 2005/03/01 14:02:47 st_lim Exp $
+
+*dspam-3.4_rc2 (01 Mar 2005)
+
+  01 Mar 2005; Lim Swee Tat <st_lim@gentoo.org> +dspam-3.4_rc2.ebuild:
+  Version bump.  Need to include an init.d daemon for the --enable-daemon option.
 
 *dspam-3.4_beta3 (17 Feb 2005)
 
