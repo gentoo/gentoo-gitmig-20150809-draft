@@ -1,6 +1,10 @@
 # ChangeLog for x11-wm/enlightenment
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.38 2005/02/09 00:26:00 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/ChangeLog,v 1.39 2005/03/30 16:46:50 hansmi Exp $
+
+  30 Mar 2005; Michael Hanselmann <hansmi@gentoo.org>
+  enlightenment-0.16.7.2.ebuild:
+  Stable on ppc.
 
   09 Feb 2005; Bryan Østergaard <kloeri@gentoo.org>
   enlightenment-0.16.7.2.ebuild:
