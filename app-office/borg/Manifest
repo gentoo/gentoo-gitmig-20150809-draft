@@ -1,14 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 2266b7314cbf358ae19a864285f6adfc ChangeLog 413
-MD5 a4a2af9d161c2da6e2f86a6e2fb44c15 borg-1.3.2.ebuild 848
+MD5 abf5582e575bbfd8b99837823d728fad ChangeLog 532
+MD5 f027afc6cdd0ada17e59bf9422f4f229 borg-1.4.ebuild 868
 MD5 123cf9440c1d4ac78f2caba1624765f9 metadata.xml 158
+MD5 a4a2af9d161c2da6e2f86a6e2fb44c15 borg-1.3.2.ebuild 848
+MD5 b9b26f87940f58677145382f1828b66e files/digest-borg-1.4 62
 MD5 2e3ed875caa0037c530fd81875801a04 files/digest-borg-1.3.2 63
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBYwSS/rLF9B432nYRAngrAKCPZ8XvcZtbDzVJRjeGZt2pqpJg7ACgyVFt
-lWJ33FxGhSj6BSxd0dVUGuU=
-=Hx8e
------END PGP SIGNATURE-----
