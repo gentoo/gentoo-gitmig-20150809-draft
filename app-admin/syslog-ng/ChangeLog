@@ -1,8 +1,13 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.12 2002/10/25 17:34:12 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.13 2002/11/04 18:01:42 seemant Exp $
 
 *syslog-ng-1.4.16 (25 Oct 2002)
+
+  04 Nov 2002; Seemant Kulleen <Seemant@gentoo.org> *.ebuild :
+
+  Added sys-devel/flex to DEPENDS. Closes bug #10185 by lordvan@lordvan.com
+  (Thomas Raschbacher)
 
   25 Oct 2002; Donny Davies <woodchip@gentoo.org> :
   Arrgh.  This is the *stable version of syslog-ng, and according to our friends on

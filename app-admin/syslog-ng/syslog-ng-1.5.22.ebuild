@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.5.22.ebuild,v 1.2 2002/10/25 17:34:12 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/syslog-ng-1.5.22.ebuild,v 1.3 2002/11/04 18:01:42 seemant Exp $
 
 IUSE="tcpd"
 
@@ -10,6 +10,7 @@ SRC_URI="http://www.balabit.hu/downloads/syslog-ng/1.5/${P}.tar.gz"
 HOMEPAGE="http://www.balabit.hu/en/products/syslog-ng/"
 
 DEPEND=">=dev-libs/libol-0.3.5
+	sys-devel/flex
 	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )"
 
 SLOT="0"
