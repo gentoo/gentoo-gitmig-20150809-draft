@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/aa-sources-2.4.22-r1.ebuild,v 1.4 2003/09/11 21:35:24 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/aa-sources/aa-sources-2.4.22-r1.ebuild,v 1.5 2003/12/01 22:16:40 iggy Exp $
 
 IUSE="build"
 
@@ -62,6 +62,8 @@ src_unpack() {
 
 	# http://lkml.org/lkml/2003/9/2/194 [plasmaroo//bug 28452]
 	epatch ${FILESDIR}/aa-sources-2.4.22-ide-scsi-missing-sym-fix.patch
+
+	epatch ${FILESDIR}/do_brk_fix.patch
 
 	kernel_universal_unpack
 }
