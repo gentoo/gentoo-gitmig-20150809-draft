@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdemultimedia
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.154 2005/02/27 22:55:51 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdemultimedia/ChangeLog,v 1.155 2005/03/14 21:39:03 greg_g Exp $
+
+*kdemultimedia-3.4.0 (14 Mar 2005)
+
+  14 Mar 2005; Gregorio Guidi <greg_g@gentoo.org> +kdemultimedia-3.4.0.ebuild:
+  Ebuild for KDE 3.4 final.
 
 *kdemultimedia-3.4.0_rc1 (27 Feb 2005)
 

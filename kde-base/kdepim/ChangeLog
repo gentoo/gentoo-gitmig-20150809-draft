@@ -1,6 +1,12 @@
 # ChangeLog for kde-base/kdepim
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.141 2005/02/27 22:57:14 greg_g Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdepim/ChangeLog,v 1.142 2005/03/14 21:48:36 greg_g Exp $
+
+*kdepim-3.4.0 (14 Mar 2005)
+
+  14 Mar 2005; Gregorio Guidi <greg_g@gentoo.org>
+  +files/kdepim-3.4.0-fix-imap-resource-type.patch, +kdepim-3.4.0.ebuild:
+  Ebuild for KDE 3.4 final. Add last-minute patch from KDE developers.
 
 *kdepim-3.4.0_rc1 (27 Feb 2005)
 

@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdewebdev
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.40 2005/03/14 21:09:12 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdewebdev/ChangeLog,v 1.41 2005/03/14 21:42:15 greg_g Exp $
+
+*kdewebdev-3.4.0 (14 Mar 2005)
+
+  14 Mar 2005; Gregorio Guidi <greg_g@gentoo.org> +kdewebdev-3.4.0.ebuild:
+  Ebuild for KDE 3.4 final.
 
   14 Mar 2005; Hardave Riar <hardave@gentoo.org> kdewebdev-3.3.2.ebuild:
   Marked ~mips.
