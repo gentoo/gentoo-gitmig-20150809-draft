@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.9.3.ebuild,v 1.1 2004/05/17 22:02:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.9.4.ebuild,v 1.1 2004/05/21 15:41:38 agriffis Exp $
 
 inherit flag-o-matic eutils
 
-SV=1.4.14		# rc-scripts version
+SV=1.4.15		# rc-scripts version
 SVREV=			# rc-scripts rev
 SVIV=2.84		# sysvinit version
 
@@ -555,7 +555,8 @@ pkg_postinst() {
 	# This is also written in src_install (so it's in CONTENTS), but
 	# write it here so that the new version is immediately in the file
 	# (without waiting for the user to do etc-update)
-	echo "Gentoo Base System version ${SV}" > ${D}/etc/gentoo-release
+	rm -f ${ROOT}/etc/._cfg????_gentoo-release
+	echo "Gentoo Base System version ${SV}" > ${ROOT}/etc/gentoo-release
 
 	echo
 	einfo "Please be sure to update all pending '._cfg*' files in /etc,"
