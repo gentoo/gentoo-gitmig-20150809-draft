@@ -1,6 +1,15 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.36 2003/12/11 21:15:24 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.37 2003/12/24 12:09:59 plasmaroo Exp $
+
+*linux-headers-2.6.0 (24 Dec 2003)
+
+  24 Dec 2003; <plasmaroo@gentoo.org> linux-headers-2.6.0.ebuild,
+  linux-headers-2.6.0_beta11.ebuild,
+  files/linux-headers-2.6.0-appCompat.patch:
+  Version bump - this version has been patched to support some applications
+  which did not compile on 2.6. Please report any bugs to http://bugs.gentoo.org
+  or plasmaroo@gentoo.org
 
   11 Dec 2003; <plasmaroo@gentoo.org>
   files/linux-headers-strict-ansi-fix.patch:
