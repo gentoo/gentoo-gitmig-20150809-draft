@@ -1,15 +1,21 @@
 # ChangeLog for app-doc/howto-html
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-doc/howto-html/ChangeLog,v 1.2 2002/07/05 06:59:30 seemant Exp $
+# /space/gentoo/cvsroot/gentoo-x86/app-doc/howto-html/ChangeLog,v 1.2 2002/07/05 06:59:30 seemant Exp
 
 *howto-html-20020328 (4 Jul 2002)
-
+  
+  20 Jul 2002; Doug Goldstein <cardoe@gentoo.org> howto-html-20020328.ebuild
+  Added missing KEYWORDS, SLOT
+ 
   4 Jul 2002; Seemant Kulleen <seemant@gentoo.org>
   howto-html-20020328.ebuild files/digest-howto-html-20020328 :
 
   Version bump.
 
 *howto-html-20010823 (1 Feb 2002)
+
+  20 Jul 2002; Doug Goldstein <cardoe@gentoo.org> howto-html-20010823.ebuild
+  Adding missing KEYWORDS, SLOT, LICENSE
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
