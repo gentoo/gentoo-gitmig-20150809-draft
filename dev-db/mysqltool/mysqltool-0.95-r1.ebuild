@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/mysqltool-0.95-r1.ebuild,v 1.7 2002/11/14 18:47:07 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysqltool/mysqltool-0.95-r1.ebuild,v 1.8 2002/11/17 09:02:00 vapier Exp $
 
 inherit perl-module
 
@@ -8,20 +8,27 @@ S=${WORKDIR}/MysqlTool-${PV}
 DESCRIPTION="Web interface for managing one or more mysql server installations"
 SRC_URI="http://www.dajoba.com/projects/mysqltool/MysqlTool-${PV}.tar.gz"
 HOMEPAGE="http://www.dajoba.com/projects/mysqltool/"
-DEPEND="virtual/glibc sys-devel/perl"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 sparc64"
 
-RDEPEND="${DEPEND} >=net-www/apache-1.3.24-r1 >=dev-db/mysql-3.23.38
-	dev-perl/CGI dev-perl/DBI dev-perl/DBD-mysql dev-perl/Crypt-Blowfish"
+DEPEND="virtual/glibc
+	sys-devel/perl"
+RDEPEND="${DEPEND}
+	>=net-www/apache-1.3.24-r1
+	>=dev-db/mysql-3.23.38
+	dev-perl/CGI
+	dev-perl/DBI
+	dev-perl/DBD-mysql
+	dev-perl/Crypt-Blowfish"
 
 APACHE_ROOT="`grep '^DocumentRoot' /etc/apache/conf/apache.conf | cut -d\  -f2`"
 [ -z "${APACHE_ROOT}" ] && APACHE_ROOT="/home/httpd/htdocs"
 
 src_install() {
 	eval `perl '-V:installarchlib'`
-	mkdir -p ${D}/$installarchlib
+	dodir /$installarchlib
 
 	cp ${S}/Makefile ${S}/Makefile.orig
 	cat ${S}/Makefile | sed -e "s!INSTALLMAN1DIR = /usr/share/man/man1!INSTALLMAN1DIR = ${D}/usr/share/man/man1!" -e "s!INSTALLMAN3DIR = /usr/share/man/man3!INSTALLMAN3DIR = ${D}/usr/share/man/man3!" > ${S}/Makefile.gentoo
