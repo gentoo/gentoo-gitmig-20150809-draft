@@ -2,10 +2,10 @@
 Hash: SHA1
 
 MD5 5a8290e44006ccff0dff3094555d6366 metadata.xml 257
-MD5 46becaec4e3548a0f0c5b8c38232f610 ChangeLog 27709
+MD5 df9fb8bc7e1fb5509d08df65d839f029 ChangeLog 27860
 MD5 0138a28811bc6035412d49182fa7772f xmms-1.2.8-r4.ebuild 5245
 MD5 c3515c2c700aaaefc1fb7d0868356455 xmms-1.2.10-r5.ebuild 5385
-MD5 bf43db2754e0964124df52935688bcdb xmms-1.2.10-r9.ebuild 3318
+MD5 bdbd9963c9f0e7af8e8b76d4de0afd2a xmms-1.2.10-r9.ebuild 3324
 MD5 07a3ee1ff0ac863b041b89319a01bf32 files/digest-xmms-1.2.10-r9 277
 MD5 f52f09b25da87c876de70b6177292f2e files/digest-xmms-1.2.8-r4 216
 MD5 7d2f3807ebbff435b909ecf0539cbf4f files/xmms.desktop 722
@@ -13,7 +13,7 @@ MD5 aa46b23a1cf0655c7f09adbdd623d49f files/digest-xmms-1.2.10-r5 219
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBkANjArHZZzCEUG0RAqxEAJ9QkiuBU1yZnG3pgHN3MOphNriEFACeIzMT
-MTj41+6bTypzmF/uOynEbkc=
-=uMT4
+iD8DBQFBuB17ArHZZzCEUG0RAkkbAJ0f/04V4NoG2I09C/IuXwhcYh9USACeNo0B
+xnl1ItNX7ks9id61NH0fx04=
+=cYaW
 -----END PGP SIGNATURE-----
