@@ -1,6 +1,16 @@
 # ChangeLog for sys-apps/hotplug
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.1 2002/02/25 02:13:12 blocke Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.2 2002/05/11 01:20:23 wmertens Exp $
+
+*hotplug-200200401 (5 May 2002)
+
+  11 May 2002; Wout Mertens <wmertens@gentoo.org> hotplug-20020401.ebuild :
+
+  New version
+
+  11 May 2002; Wout Mertens <wmertens@gentoo.org> files/hotplug.rc :
+
+  Fixed error condition detection
 
 *hotplug-20020114 (24 Feb 2002)
 
