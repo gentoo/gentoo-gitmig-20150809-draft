@@ -1,6 +1,6 @@
 # ChangeLog for dev-java/ant
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.13 2002/11/01 23:19:23 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.14 2002/11/03 01:43:52 blizzy Exp $
 
 *ant-1.5.1-r1 (02 Nov 2002)
 
@@ -8,10 +8,10 @@
   Now uses Green threads on PPC. Fixes #7706.
   Removed ant-1.5.1.ebuild files/digest-ant-1.5.1
 
-*ant-1.5.1 (25 Oct 2002)
-
   16 Oct 2002; Karl Trygve Kalleberg <karltk@gentoo.org> files/1.5/ant:
   Improved slightly, thanks to #9394.
+
+*ant-1.5.1 (25 Oct 2002)
 
   25 Oct 2002; Maik Schreiber <blizzy@gentoo.org> ant-1.5.1.ebuild,
   files/1.5.1/ant: New version.
@@ -19,20 +19,18 @@
   25 Oct 2002; Maik Schreiber <blizzy@gentoo.org> ant-1.5.ebuild: Changed
   KEYWORDS to "x86 ~ppc".
 
-*ant-1.5 (26 Jul 2002)
-
   18 Oct 2002; Karl Trygve Kalleberg <karltk@gentoo.org> files/1.5/ant:
   Fixed nasty oversight in script.
 
   14 Oct 2002; Karl Trygve Kalleberg <karltk@gentoo.org> files/1.5/ant:
   Fixed bugs with script as reported in #7732. Marked for testing. 
 
+*ant-1.5 (26 Jul 2002)
+
   26 Jul 2002; William McArthur <sandymac@gentoo.org> ant-1.5.ebuild,
   files/1.5/ant: Upgraded to Ant 1.5, rewrote the Gentoo specific ant script to
   take avantage of java-config. It also looked like the Gentoo ant-1.4.1
   script was based an older version of ant.
-
-*ant-1.4.1-r3 (03 May 2002)
 
   26 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ant-1.4.1-r3.ebuild:
   Added test in pkg_setup() to ensure that a proper system VM is installed. 
@@ -49,6 +47,8 @@
   01 Aug 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ant-1.4.1-r3.ebuild:
   Added SLOT, KEYWORDS and LICENSE. Ebuild originally submitted by Achim
   Gottinger <achim@gentoo.org>.
+
+*ant-1.4.1-r3 (03 May 2002)
 
   03 May 2002; Karl Trygve Kalleberg <karltk@gentoo.org> ant-1.4.1-r3.ebuild:
   Now handles the case of multiple occurrences of JAVA_HOME in the Java
