@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3204.ebuild,v 1.2 2004/05/21 12:31:13 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004/ut2004-3204.ebuild,v 1.3 2004/05/21 13:55:24 wolf31o2 Exp $
 
 inherit games
 
@@ -58,6 +58,8 @@ pkg_setup() {
 src_unpack() {
 	unpack_makeself ${CDROM_ROOT}/linux-installer.sh \
 		|| die "unpacking linux installer"
+	use x86 && tar -xf ${S}/linux-x86.tar
+	use amd64 && tar -xf ${S}/linux-amd64.tar
 	unpack ${PN}-lnxpatch${PV}.tar.bz2
 }
 
@@ -128,9 +130,8 @@ src_install() {
 	doexe ${S}/bin/ut2004 || die "copying ut2004"
 
 	exeinto ${dir}/System
-	doexe ${S}/System/{libSDL-1.2.so.0,openal.so,ucc-bin} \
-		|| die "copying libs/ucc"
-	doexe ${S}/ut2004-bin
+	doexe ${S}/System/{libSDL-1.2.so.0,openal.so,u{cc,t2004}-bin} \
+		|| die "copying libs/ucc/ut2004"
 
 	# Removing uneccessary files in Sounds
 	rm -f ${Ddir}/Sounds/*.{det,est,frt,itt,kot,smt,tmt}_uax.uz2
