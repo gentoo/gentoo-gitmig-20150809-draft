@@ -1,4 +1,6 @@
 MD5 0ce7679dee2cff59f4968ac0386e2549 ChangeLog 1316
 MD5 ce561bb884cf2e85e04260584f822897 locale-maketext-1.06.ebuild 727
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 c86b3953bed103331a2387a761262698 locale-maketext-1.08.ebuild 617
 MD5 8279355d476ffd80e57623938958f690 files/digest-locale-maketext-1.06 71
+MD5 8a975fbff9a95e168dc4d2c029617d4f files/digest-locale-maketext-1.08 71
