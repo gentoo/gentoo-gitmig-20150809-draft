@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.62 2003/12/13 00:58:24 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.63 2004/01/02 21:57:13 azarah Exp $
+
+  02 Jan 2004; Martin Schlemmer <azarah@gentoo.org> libxml2-2.6.2.ebuild,
+  libxml2-2.6.3.ebuild:
+  Run elibtoolize, as else we get references to PORTAGE_TMPDIR in
+  /usr/lib/python?.?/site-packages/libxml2mod.la among things.
 
   13 Dec 2003; Guy Martin <gmsoft@gentoo.org> libxml2-2.5.11.ebuild:
   Marked stable on hppa.

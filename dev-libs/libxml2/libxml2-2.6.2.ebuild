@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.6.2.ebuild,v 1.2 2003/11/15 02:23:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.6.2.ebuild,v 1.3 2004/01/02 21:57:13 azarah Exp $
 
 inherit eutils libtool gnome.org flag-o-matic
 
@@ -17,6 +17,10 @@ DEPEND="sys-libs/zlib
 	readline? ( sys-libs/readline )"
 
 src_compile() {
+
+	# Please do not remove, as else we get references to PORTAGE_TMPDIR
+	# in /usr/lib/python?.?/site-packages/libxml2mod.la among things.
+	elibtoolize
 
 	# filter seemingly problematic CFLAGS (#26320)
 	filter-flags -fprefetch-loop-arrays -funroll-loops
