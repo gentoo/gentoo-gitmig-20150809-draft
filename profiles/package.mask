@@ -65,7 +65,11 @@ media-libs/libfame
 
 # azarah@gentoo.org (17 Jul 2002)
 # needs testing.
+# Added other deps that depend on baselayout
 =sys-apps/baselayout-1.8.0
+app-arch/unarj
+app-emulation/zinc
+app-sci/setiathome
 
 # cybersystem@gentoo.org (17 Jul 2002)
 # Masking knapster2 - this package is broken on gcc 3.1
