@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/lilo
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/ChangeLog,v 1.31 2003/08/05 19:52:09 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lilo/ChangeLog,v 1.32 2003/09/01 19:24:55 azarah Exp $
+
+*lilo-22.5.7.2 (01 Sep 2003)
+
+  01 Sep 2003; Martin Schlemmer <azarah@gentoo.org> lilo-22.5.7.2.ebuild:
+  Update, closes bug #27141.
 
 *lilo-22.5.1 (05 Aug 2003)
 
