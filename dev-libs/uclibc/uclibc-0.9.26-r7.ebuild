@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r7.ebuild,v 1.2 2004/10/28 05:55:32 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r7.ebuild,v 1.3 2005/01/11 06:19:57 vapier Exp $
 
 inherit eutils flag-o-matic gcc
 

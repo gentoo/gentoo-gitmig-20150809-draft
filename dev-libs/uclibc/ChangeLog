@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/uclibc
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/ChangeLog,v 1.43 2004/12/15 02:28:27 solar Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/ChangeLog,v 1.44 2005/01/11 06:19:57 vapier Exp $
+
+  11 Jan 2005; Mike Frysinger <vapier@gentoo.org> uclibc-0.9.26-r8.ebuild:
+  Merge psm & my cross compile work together and BAM we have a sweet ebuild.
 
   14 Dec 2004; <solar@gentoo.org> uclibc-0.9.26-r8.ebuild:
   - Improved hardened handling bug 73699. Initial support for xattr.

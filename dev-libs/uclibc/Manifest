@@ -1,45 +1,43 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d98118dbcb77466679b07fd6eb029f9f uclibc-9999.ebuild 5443
-MD5 8f504f01c1cb586217db109896a60ca0 uclibc-0.9.26-r8.ebuild 9084
-MD5 7ba6e2f7dbe4f241de617f5ebfa35fa0 uclibc-0.9.26-r5.ebuild 7658
-MD5 ddeed663eb1a390fa3aa5dd91076ba6b ChangeLog 8011
-MD5 7fde305dfd21aeac12e0eb721e0f6a17 uclibc-0.9.21.ebuild 1096
+MD5 1265061fc51e9b3db8020c13f2e25a76 ChangeLog 8165
 MD5 e96b4dfc373a1cdf7735aeae52c4cf7e metadata.xml 999
-MD5 59d40f2d78a6bbdb5e3fc3f0efe960ef uclibc-0.9.26-r7.ebuild 7861
+MD5 965ff7a705ad0a3133b02c98f8100e92 uclibc-0.9.21.ebuild 1097
+MD5 17ba3d0e6436718dafb750dade5d0869 uclibc-0.9.26-r5.ebuild 7658
+MD5 64742403e39911df25935b6099d30043 uclibc-0.9.26-r7.ebuild 7862
+MD5 c2b3545d487eac266e731aee91620602 uclibc-0.9.26-r8.ebuild 9426
+MD5 14f021d1cfb0e76ce684b8eefba1adfc uclibc-9999.ebuild 5442
 MD5 d16f404e56abc9f0ab5c372b88a6905d files/Makefile-cp-order-fix.patch 897
-MD5 0b733285f186f31c1be9ffcc42f1064e files/getent 973
-MD5 6d2b5c523d34c86df9bc37747d9261dc files/digest-uclibc-0.9.26-r5 231
-MD5 6d2b5c523d34c86df9bc37747d9261dc files/digest-uclibc-0.9.26-r7 231
-MD5 e0556dd58957468793213ab327c590d3 files/digest-uclibc-0.9.26-r8 232
 MD5 799adc7fb6ec9ffd653831cea1d32dd5 files/digest-uclibc-0.9.21 67
+MD5 0b733285f186f31c1be9ffcc42f1064e files/getent 973
+MD5 e0556dd58957468793213ab327c590d3 files/digest-uclibc-0.9.26-r8 232
+MD5 6d2b5c523d34c86df9bc37747d9261dc files/digest-uclibc-0.9.26-r5 231
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-uclibc-9999 0
-MD5 df59fcf3a02c17b7dac6999bd9262d05 files/cvs/22_all_uClibc-ld-now.patch 1072
-MD5 7eea15a7a3e8d8a2a222b815e57dc221 files/cvs/13_all_uClibc-enable-ssp.patch 331
-MD5 9cb04f6f038b903868f99d90f81e7e61 files/cvs/21_all_uClibc-ld-relro.patch 1040
-MD5 4216cdf86d54f45fa04cb44a5425b3ff files/0.9.23/uClibc-0.9.23-pax.patch 3607
+MD5 6d2b5c523d34c86df9bc37747d9261dc files/digest-uclibc-0.9.26-r7 231
 MD5 17ecd222df47b5253f35787097440a5a files/0.9.23/uClibc-0.9.23-etdyn.patch 5832
 MD5 298b7b42f80e1f8ae395df81c47eb213 files/0.9.23/uClibc-0.9.23-flipturn.patch 1821
+MD5 4216cdf86d54f45fa04cb44a5425b3ff files/0.9.23/uClibc-0.9.23-pax.patch 3607
+MD5 7eea15a7a3e8d8a2a222b815e57dc221 files/cvs/13_all_uClibc-enable-ssp.patch 331
+MD5 9cb04f6f038b903868f99d90f81e7e61 files/cvs/21_all_uClibc-ld-relro.patch 1040
+MD5 df59fcf3a02c17b7dac6999bd9262d05 files/cvs/22_all_uClibc-ld-now.patch 1072
+MD5 46d965d8bdfe981f75fb8696799d9d2a files/0.9.26/ssp.c 3937
+MD5 2416f5e954ccb8b39b1c0d6a3cf5e827 files/0.9.26/uClibc-0.9.26-Makefile.patch 1478
+MD5 bdd1e91ee48fb8be0d28cabdfcfdf3ff files/0.9.26/uClibc-0.9.26-pie-option.patch 863
+MD5 49671ccbdf2c8055efc6cde0003cb6c5 files/0.9.26/arm-fix-missing-syscalls.patch 2264
+MD5 874260fc77637deccf7588cfc1c76674 files/0.9.26/uClibc-20040613-do_rem.patch 391
+MD5 b9df87c681aa3a1ef3033cb195e516df files/0.9.26/uclibc-0.9.26-arm-dl-sysdep.patch 795
+MD5 d35beaf332590fed8c619483d4598dc6 files/0.9.26/uclibc-0.9.26-ssp-gcc34-after-frandom.patch 542
 MD5 f7c264d37687f1a32f1c6e31239f2276 files/0.9.26/uclibc-0.9.26-noexecstack.patch 15273
 MD5 6835449424e7a8a38e9c85ecf1b73577 files/0.9.26/arm-ucontext.patch 303
-MD5 46d965d8bdfe981f75fb8696799d9d2a files/0.9.26/ssp.c 3937
+MD5 efd96414f3be520f07eabd1c02be1ecb files/0.9.26/uclibc-0.9.26-resolve-segfault.patch 1227
+MD5 7157f784ba7672c9904d289712131a52 files/0.9.26/uclibc-0.9.26-ldso-cache.patch 410
 MD5 7ff9f1e05cdfbbe0e156ea81bf8b55ee files/0.9.26/uClibc-20040921-ldso-unsecvars.patch 1024
 MD5 a503ef49001f5f67d61cd40b0809fb76 files/0.9.26/unsecvars.h 682
-MD5 49671ccbdf2c8055efc6cde0003cb6c5 files/0.9.26/arm-fix-missing-syscalls.patch 2264
-MD5 efd96414f3be520f07eabd1c02be1ecb files/0.9.26/uclibc-0.9.26-resolve-segfault.patch 1227
-MD5 874260fc77637deccf7588cfc1c76674 files/0.9.26/uClibc-20040613-do_rem.patch 391
-MD5 d35beaf332590fed8c619483d4598dc6 files/0.9.26/uclibc-0.9.26-ssp-gcc34-after-frandom.patch 542
-MD5 bdd1e91ee48fb8be0d28cabdfcfdf3ff files/0.9.26/uClibc-0.9.26-pie-option.patch 863
-MD5 7157f784ba7672c9904d289712131a52 files/0.9.26/uclibc-0.9.26-ldso-cache.patch 410
-MD5 2416f5e954ccb8b39b1c0d6a3cf5e827 files/0.9.26/uClibc-0.9.26-Makefile.patch 1478
-MD5 b9df87c681aa3a1ef3033cb195e516df files/0.9.26/uclibc-0.9.26-arm-dl-sysdep.patch 795
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
+Version: GnuPG v1.9.14 (GNU/Linux)
 
-iQCVAwUBQb+hIJ4WFLgrx1GWAQKMGAP+PIfl72Xd9BPFqzT6PE3065pOQC/EA3rC
-WLaFbw3dq33shDUnTSEmoXQ6bzaKCDyOGZNIIxbrhAk68/L7bm5MA1blbGETHcsF
-MJpQiTd9bQb7peP8Z/0nqry3ASfOoYfigQRZh5Tg8/07gQRN1+DrFTY7zJ2pwnW+
-ckijJTDUvx0=
-=3lIc
+iD8DBQFB43AqroRuSHgZdywRAkz9AJ97qifC1HRxNe2/sx7W47TTP1ViMwCfTmlR
+PzPgsUYl+C5wwvRlsF7Hiro=
+=S87t
 -----END PGP SIGNATURE-----

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-9999.ebuild,v 1.4 2004/09/06 19:07:39 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-9999.ebuild,v 1.5 2005/01/11 06:19:57 vapier Exp $
 
 ECVS_SERVER="uclibc.org:/var/cvs"
 ECVS_MODULE="uClibc"

@@ -1,8 +1,15 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r8.ebuild,v 1.3 2004/12/15 02:28:27 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/uclibc/uclibc-0.9.26-r8.ebuild,v 1.4 2005/01/11 06:19:57 vapier Exp $
 
-inherit eutils flag-o-matic gcc
+inherit eutils flag-o-matic toolchain-funcs
+
+export CTARGET=${CTARGET:-${CHOST}}
+if [[ ${CTARGET} == ${CHOST} ]] ; then
+	if [[ ${CATEGORY/cross-} != ${CATEGORY} ]] ; then
+		export CTARGET=${CATEGORY/cross-}
+	fi
+fi
 
 # To make a new CVS_VER we do.
 # wget -O - http://uclibc.org/downloads/snapshots/uClibc-`date +%Y%m%d`.tar.bz2 | tar jxf -
@@ -10,7 +17,7 @@ inherit eutils flag-o-matic gcc
 # diff -urN --exclude .cvsignore --exclude CVS uClibc-0.9.26 uClibc | bzip2 - > uClibc-0.9.26-cvs-update-`date +%Y%m%d`.patch.bz2
 # rm -rf uClibc-0.9.26-cvs-update-`date +%Y%m%d`.patch.bz2  uClibc uClibc-0.9.26
 
-MY_P="${P/ucl/uCl}"
+MY_P=${P/ucl/uCl}
 # only CVS_VER >= 20041117 is supported
 CVS_VER="20041209"
 PATCH_VER="1.4"
@@ -21,10 +28,12 @@ SRC_URI="http://www.kernel.org/pub/linux/libs/uclibc/${MY_P}.tar.bz2
 	mirror://gentoo/${MY_P}-patches-${PATCH_VER}.tar.bz2"
 
 LICENSE="LGPL-2"
-SLOT="0"
+[[ ${CTARGET} != ${CHOST} ]] \
+	&& SLOT="${CTARGET}" \
+	|| SLOT="0"
 KEYWORDS="-*"
 #KEYWORDS="~x86 ~ppc ~sparc ~mips ~arm"
-IUSE="build debug hardened ipv6 static xattr" # nls is not supported yet
+IUSE="alsa build debug hardened ipv6 static xattr" # nls is not supported yet
 RESTRICT="nostrip"
 
 # 2004/11/16 the only binutils w/ relro support for uclibc
@@ -32,7 +41,22 @@ DEPEND="sys-devel/gcc"
 RDEPEND=""
 PROVIDE="virtual/glibc virtual/libc"
 
-S=${WORKDIR}/${MY_P}
+S="${WORKDIR}/${MY_P}"
+
+alt_prefix() {
+	if [[ ${CTARGET} = ${CHOST} ]] ; then
+		echo /usr
+	else
+		echo /usr/${CTARGET}
+	fi
+}
+alt_rprefix() {
+	if [[ ${CTARGET} = ${CHOST} ]] ; then
+		echo /
+	else
+		echo /usr/${CTARGET}
+	fi
+}
 
 CPU_ARM="GENERIC_ARM ARM{610,710,720T,920T,922T,926T,_{SA110,SA1100,XSCALE}}"
 CPU_MIPS="MIPS_ISA_{1,2,3,4,MIPS{32,64}}"
@@ -40,38 +64,26 @@ CPU_PPC=""
 CPU_SH="SH{2,3,4,5}"
 CPU_X86="GENERIC_386 {3,4,5,6}86 PENTIUM{II,III,4} K{6,7} ELAN CRUSOE WINCHIP{C6,2} CYRIXIII NEHEMIAH"
 IUSE_UCLIBC_CPU="${CPU_ARM} ${CPU_MIPS} ${CPU_PPC} ${CPU_SH} ${CPU_X86}"
-IUSE_UCLIBC_ENDIAN="LITTLE BIG"
 
 check_cpu_opts() {
-	local cpu_var="CPU_$(echo ${ARCH} | tr [a-z] [A-Z])"
-	if [ -z "${UCLIBC_CPU}" ] ; then
+	local cpu_var="CPU_$(echo $(tc-arch ${CTARGET}) | tr [a-z] [A-Z])"
+	if [[ -z ${UCLIBC_CPU} ]] ; then
 		ewarn "You really should consider setting UCLIBC_CPU"
 		ewarn "Otherwise, the build will be generic (read: slow)."
 		ewarn "Available CPU options:"
-		eval echo ${!cpu_var}
-		export UCLIBC_CPU="${UCLIBC_CPU_DEFAULT}"
+		UCLIBC_CPU=$(eval echo ${!cpu_var})
+		echo ${UCLIBC_CPU}
+		export UCLIBC_CPU=${UCLIBC_CPU%% *}
 	else
 		local cpu found=0
 		for cpu in $(eval echo ${!cpu_var}) ; do
-			[ "${UCLIBC_CPU}" = "${cpu}" ] && found=1 && break
+			[[ ${UCLIBC_CPU} == "${cpu}" ]] && found=1 && break
 		done
-		if [ ${found} -eq 0 ] ; then
+		if [[ ${found} -eq 0 ]] ; then
 			ewarn "UCLIBC_CPU choice '${UCLIBC_CPU}' not supported"
 			ewarn "Valid choices:"
 			eval echo ${!cpu_var}
 			die "pick a supported cpu type"
-		fi
-	fi
-
-	if [ -z "${UCLIBC_ENDIAN}" ] ; then
-		ewarn "You really should consider setting UCLIBC_ENDIAN"
-		ewarn "Otherwise, the build may choose the wrong default."
-		ewarn "Available CPU endians: little big"
-		export UCLIBC_ENDIAN="${UCLIBC_ENDIAN_DEFAULT}"
-	else
-		export UCLIBC_ENDIAN="$(echo ${UCLIBC_ENDIAN} | tr [a-z] [A-Z])"
-		if [ "${UCLIBC_ENDIAN}" != "LITTLE" -a "${UCLIBC_ENDIAN}" != "BIG" ] ; then
-			die "UCLIBC_ENDIAN may only be 'little' or 'big'"
 		fi
 	fi
 }
@@ -83,10 +95,10 @@ src_unpack() {
 
 	########## PATCHES ##########
 
-	[ -n "${CVS_VER}" ] && \
+	[[ -n ${CVS_VER} ]] && \
 		epatch ${DISTDIR}/${MY_P}-cvs-update-${CVS_VER}.patch.bz2
 
-	if [ -n "${PATCH_VER}" ] ; then
+	if [[ -n ${PATCH_VER} ]] ; then
 		unpack ${MY_P}-patches-${PATCH_VER}.tar.bz2
 		epatch ${WORKDIR}/patch
 		# math functions (sinf,cosf,tanf,atan2f,powf,fabsf,copysignf,scalbnf,rem_pio2f)
@@ -96,13 +108,13 @@ src_unpack() {
 	########## CPU SELECTION ##########
 
 	local target config_target
-	case ${ARCH} in
-		arm)	target="arm";		config_target="GENERIC_ARM";;
-		mips)	target="mips";		config_target="MIPS_ISA_1";;
-		ppc)	target="powerpc";	config_target="no cpu-specific options";;
-		sh)	target="sh";		config_target="SH4";;
-		x86)	target="i386";		config_target="GENERIC_386";;
-		*)		die "${ARCH} lists no defaults :/";;
+	case $(tc-arch ${CTARGET}) in
+		arm)  target="arm";     config_target="GENERIC_ARM";;
+		mips) target="mips";    config_target="MIPS_ISA_1";;
+		ppc)  target="powerpc"; config_target="no cpu-specific options";;
+		sh)   target="sh";      config_target="SH4";;
+		x86)  target="i386";    config_target="GENERIC_386";;
+		*)    die "$(tc-arch ${CTARGET}) lists no defaults :/";;
 	esac
 	sed -i -e "s:default TARGET_i386:default TARGET_${target}:" \
 		extra/Configs/Config.in
@@ -122,7 +134,7 @@ src_unpack() {
 	fi
 
 	sed -i -e 's:^ARCH_.*_ENDIAN=y::' .config
-	echo "ARCH_${UCLIBC_ENDIAN}_ENDIAN=y" >> .config
+	echo "ARCH_$(tc-endian | tr [a-z] [A-Z])_ENDIAN=y" >> .config
 
 	for def in DO_C99_MATH UCLIBC_HAS_{RPC,CTYPE_CHECKED,WCHAR,HEXADECIMAL_FLOATS,GLIBC_CUSTOM_PRINTF,FOPEN_EXCLUSIVE_MODE,GLIBC_CUSTOM_STREAMS,PRINTF_M_SPEC,FTW} ; do
 		sed -i -e "s:# ${def} is not set:${def}=y:" .config
@@ -146,7 +158,7 @@ src_unpack() {
 	use ipv6 && sed -i -e "s:# UCLIBC_HAS_IPV6 is not set:UCLIBC_HAS_IPV6=y:" .config
 
 	# uncomment if you miss wordexp (alsa-lib)
-	#use build || sed -i -e "s:# UCLIBC_HAS_WORDEXP is not set:UCLIBC_HAS_WORDEXP=y:" .config
+	use alsa && sed -i -e "s:# UCLIBC_HAS_WORDEXP is not set:UCLIBC_HAS_WORDEXP=y:" .config
 
 	# we need to do it independently of hardened to get ssp.c built into libc
 	sed -i -e "s:# UCLIBC_SECURITY.*:UCLIBC_SECURITY=y:" .config
@@ -162,7 +174,7 @@ src_unpack() {
 	fi
 
 	if use hardened ; then
-		if has ${ARCH} mips ppc x86 ; then
+		if has $(tc-arch ${CTARGET}) mips ppc x86 ; then
 			echo "UCLIBC_BUILD_PIE=y" >> .config
 		else
 			echo "UCLIBC_BUILD_PIE=n" >> .config
@@ -183,15 +195,12 @@ src_unpack() {
 	use xattr && echo "UCLIBC_XATTR=y" >> .config
 
 	# we are building against system installed kernel headers
-	sed -i -e 's:KERNEL_SOURCE.*:KERNEL_SOURCE="/usr":' .config
-
-	if [ "${PORTAGE_LIBC}" = "uClibc" ] ; then
-		sed -i \
-			-e 's:SHARED_LIB_LOADER_PREFIX=.*:SHARED_LIB_LOADER_PREFIX="/lib":' \
-			-e 's:DEVEL_PREFIX=.*:DEVEL_PREFIX="/usr":' \
-			-e 's:RUNTIME_PREFIX=.*:RUNTIME_PREFIX="/":' \
-			.config
-	fi
+	sed -i \
+		-e "s:KERNEL_SOURCE.*:KERNEL_SOURCE=\"$(alt_prefix)\":" \
+		-e "s:SHARED_LIB_LOADER_PREFIX=.*:SHARED_LIB_LOADER_PREFIX=\"$(alt_rprefix)/$(get_libdir)\":" \
+		-e "s:DEVEL_PREFIX=.*:DEVEL_PREFIX=\"$(alt_prefix)\":" \
+		-e "s:RUNTIME_PREFIX=.*:RUNTIME_PREFIX=\"$(alt_rprefix)\":" \
+		.config
 
 	yes "" | make -s oldconfig > /dev/null || die "could not make oldconfig"
 
@@ -217,32 +226,44 @@ src_compile() {
 	#	emake -j1 || die "could not make locales"
 	#	cd ../..
 	#fi
+	local makeopts
+	type -p ${CTARGET}-ar && makeopts="CROSS=${CTARGET}-"
 
-	emake -j1 || die "could not make"
-	if [ "${PORTAGE_LIBC}" = "uClibc" ] ; then
-		emake -j1 utils || die "could not make utils"
+	emake -j1 ${makeopts} || die "could not make"
+	[[ ${CTARGET} != ${CHOST} ]] && return 0
+
+	if [[ ${CHOST} == *-uclibc ]] ; then
+		emake -j1 ${makeopts} utils || die "could not make utils"
 	fi
 
 	if ! use build ; then
 		if ! hasq maketest $RESTRICT ; then
-			# assert test fails on pax/grsec enabled kernels - normal
-			# vfork test fails in sandbox (both glibc/uclibc)
-			cd test; make; cd ..
+			src_test
 		fi
 	fi
 }
 
+src_test() {
+	# assert test fails on pax/grsec enabled kernels - normal
+	# vfork test fails in sandbox (both glibc/uclibc)
+	cd test
+	make
+}
+
 src_install() {
-	emake PREFIX=${D} install || die "install failed"
+	emake PREFIX="${D}" install || die "install failed"
 
 	# remove files coming from kernel-headers
 	# scsi is uclibc's own directory since cvs 20040212
-	if [ "${PORTAGE_LIBC}" = "uClibc" ] ; then
-		rm -rf ${D}/usr/include/{asm,linux}
-		rm -f ${D}/usr/lib/lib*_pic.a
-		! use static && use build && rm -f ${D}/usr/lib/lib*.a
+	rm -r "${D}"$(alt_prefix)/include/{asm,linux,asm-generic}
 
-		emake PREFIX=${D} install_utils || die "install-utils failed"
+	[[ ${CTARGET} != ${CHOST} ]] && return 0
+
+	if [[ ${CHOST} == *-uclibc ]] ; then
+#		rm -f "${D}"$(alt_prefix)/lib/lib*_pic.a
+#		! use static && use build && rm -f "${D}"$(alt_prefix)/lib/lib*.a
+
+		emake PREFIX="${D}" install_utils || die "install-utils failed"
 		dodir /usr/bin
 		exeinto /usr/bin
 		doexe extra/scripts/getent
@@ -255,25 +276,27 @@ src_install() {
 }
 
 pkg_postinst() {
-if [ "${PORTAGE_LIBC}" = "uClibc" ] ; then
+[[ ${CTARGET} != ${CHOST} ]] && return 0
+
+if [[ ${CHOST} == *-uclibc ]] ; then
 	# remove invalid symlinks if any
 	#local x=
 	#for x in TZ ld.so.conf ld.so.preload ; do
 	#	[ ! -e "${ROOT}/etc/${x}" ] && rm -f ${ROOT}/etc/${x}
 	#done
 
-	if [ ! -e "${ROOT}/etc/TZ" ] ; then
+	if [[ ! -e ${ROOT}/etc/TZ ]] ; then
 		echo "Please remember to set your timezone in /etc/TZ."
-		echo "UTC" > ${ROOT}/etc/TZ
+		echo "UTC" > "${ROOT}"/etc/TZ
 	fi
 
-	if [ ! -e "${ROOT}/etc/ld.so.conf" ] ; then
-		[ -d "${ROOT}/usr/X11R6/lib" ] \
-			&& echo "/usr/X11R6/lib" > ${ROOT}/etc/ld.so.conf \
-			|| > ${ROOT}/etc/ld.so.conf
+	if [[ ! -e ${ROOT}/etc/ld.so.conf ]] ; then
+		[[ -d ${ROOT}/usr/X11R6/lib ]] \
+			&& echo "/usr/X11R6/lib" > "${ROOT}"/etc/ld.so.conf \
+			|| > "${ROOT}"/etc/ld.so.conf
 	fi
 
-	if [ "${ROOT}" = "/" ] ; then
+	if [[ ${ROOT} == "/" ]] ; then
 		# update cache before reloading init
 		/sbin/ldconfig
 		# reload init ...
