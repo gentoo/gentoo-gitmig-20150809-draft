@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.4 2004/11/04 14:16:14 kosmikus Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ghc-package.eclass,v 1.5 2004/11/24 15:05:49 kosmikus Exp $
 #
 # Author: Andres Loeh <kosmikus@gentoo.org>
 #
@@ -101,12 +101,14 @@ ghc-register-pkg() {
 ghc-reregister() {
 	einfo "Re-adding packages ..."
 	ewarn "This may cause several warnings, but they should be harmless."
-	pushd $(ghc-confdir)
-	for conf in *.conf; do
-		einfo "Processing ${conf} ..."
-		ghc-register-pkg ${conf}
-	done
-	popd
+	if [ -d "$(ghc-confdir)" ]; then
+		pushd $(ghc-confdir)
+		for conf in *.conf; do
+			einfo "Processing ${conf} ..."
+			ghc-register-pkg ${conf}
+		done
+		popd
+	fi
 }
 
 # unregisters ...
