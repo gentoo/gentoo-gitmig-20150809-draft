@@ -230,7 +230,7 @@ dev-perl/perl-ldap
 
 # <satai@gentoo.org> (20 Sep 2002)
 # Too many problems.  Masking to fix.
->app-text/tetex-1.0.7-r10
+>app-text/tetex-1.0.7-r11
 
 # <danarmak@gentoo.org> (17 Sep 2002)
 # masked for testing of the gcc3 patch I added for this new version
