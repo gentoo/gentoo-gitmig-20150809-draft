@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.22.ebuild,v 1.16 2004/10/22 13:10:52 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/uae/uae-0.8.22-r1.ebuild,v 1.1 2004/10/22 13:10:52 dholm Exp $
 
 inherit eutils
 
@@ -10,8 +10,8 @@ SRC_URI="ftp://ftp.freiburg.linux.de/pub/uae/sources/develop/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc amd64"
-IUSE="X gtk svga sdl"
+KEYWORDS="~x86 ~ppc ~amd64"
+IUSE="X gtk svga sdl alsa"
 
 DEPEND="virtual/libc
 	X? (
@@ -28,20 +28,25 @@ src_unpack() {
 	unpack ${A}
 	cd ${S}
 	epatch ${FILESDIR}/uae-patch.diff
+	epatch ${FILESDIR}/${P}-alsa-support.diff
 }
 
 src_compile() {
 	local myconf=""
 
-	if use X ; then
+	if use X; then
 		myconf="--with-x --enable-dga --enable-vidmode --with-sdl --with-sdl-sound --with-sdl-gfx"
 		myconf="$myconf `use_enable gtk ui`"
 	else
-		if use svga ; then
+		if use svga; then
 			myconf="--with-svgalib";
 		else
 			myconf="--with-asciiart";
 		fi
+	fi
+
+	if use alsa; then
+		myconf="$myconf --with-alsa"
 	fi
 
 	econf \
