@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-2.0.1.ebuild,v 1.2 2004/05/10 09:32:03 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsigc++/libsigc++-2.0.1.ebuild,v 1.3 2004/05/10 13:08:17 dholm Exp $
 
 DESCRIPTION="Typesafe callback system for standard C++"
 HOMEPAGE="http://libsigc.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/libsigc/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="1.3"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 IUSE="debug"
 
 DEPEND="virtual/glibc"
