@@ -25,7 +25,6 @@
 # Trying some new stuff with sgml-common.
 >=app-text/sgml-common-0.6.3-r4
 
-
 # <avenj@gentoo.org> (04 Feb 2003)
 # _Very_ beta GQview. Extremely buggy.
 =media-gfx/gqview-1.3.0
@@ -319,7 +318,6 @@ gnome-extra/gcalctool
 # and all that. Headache.  Masking it for now until we can get it solid.
 =sys-libs/glibc-2.3.1
 
-
 # <chadh@gentoo.org> (21 Oct 2002)
 # This is a version of pcmcia-cs-3.2.1 with a patch to let it work with kismet
 # see bug 7242.  Until it is checked, it should remain masked
@@ -388,7 +386,6 @@ x11-terms/powershell
 # These should *never* have made it out
 =media-libs/libgd-2.0.1
 =dev-perl/GD-2.01
-
 
 # <lostlogic@gentoo.org> (13 Sep 2002)
 # Masking gaim-0.59.2 because it segfaults all the time
