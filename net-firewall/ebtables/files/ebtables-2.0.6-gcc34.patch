@@ -1,0 +1,11 @@
+--- ebtables-v2.0.6.old/ebtables.c	2004-07-19 22:38:16.955817128 -0400
++++ ebtables-v2.0.6/ebtables.c	2004-07-19 22:38:55.241996744 -0400
+@@ -1170,7 +1170,7 @@
+ 		if (!t->compare(t->t, u_e->t))
+ 			continue;
+ 		return i;
+-letscontinue:
++letscontinue:;
+ 	}
+ 	return -1;
+ }

@@ -1,6 +1,10 @@
 # ChangeLog for net-firewall/ebtables
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ChangeLog,v 1.4 2004/07/01 22:14:06 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/ebtables/ChangeLog,v 1.5 2004/07/20 02:45:13 lv Exp $
+
+  19 Jul 2004; Travis Tilley <lv@gentoo.org>
+  +files/ebtables-2.0.6-gcc34.patch, ebtables-2.0.6.ebuild:
+  added 'inherit eutils', fixed compiling with gcc 3.4, and added ~amd64 keyword
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   ebtables-2.0.6.ebuild:
