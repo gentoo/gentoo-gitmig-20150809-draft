@@ -1,0 +1,9 @@
+# ChangeLog for net-analyzer/sussen
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/sussen/ChangeLog,v 1.1 2003/08/20 12:42:51 obz Exp $
+
+*sussen-0.5.3 (20 Aug 2003)
+
+  20 Aug 2003; Mike Gardiner <obz@gentoo.org> sussen-0.5.3.ebuild:
+  To scour security networks. A GNOME tool exists. First Commit
+
