@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/mm/mm-1.3.0.ebuild,v 1.1 2003/06/18 21:10:59 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/mm/mm-1.3.0.ebuild,v 1.2 2003/09/27 20:20:45 avenj Exp $
 
 S=${WORKDIR}/${P}
 inherit libtool
@@ -13,7 +13,7 @@ DEPEND="virtual/glibc"
 
 LICENSE="as-is"
 SLOT="1.2"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~arm"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~arm ia64"
 
 src_compile() {
 	elibtoolize
