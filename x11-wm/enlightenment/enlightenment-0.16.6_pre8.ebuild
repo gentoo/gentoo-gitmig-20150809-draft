@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.6_pre8.ebuild,v 1.1 2003/10/06 02:10:04 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/enlightenment/enlightenment-0.16.6_pre8.ebuild,v 1.2 2003/10/12 04:19:11 vapier Exp $
 
 DESCRIPTION="Enlightenment Window Manager"
 HOMEPAGE="http://www.enlightenment.org/"
@@ -36,9 +36,17 @@ src_compile() {
 
 src_install() {
 	emake install DESTDIR=${D} || die
+	exeinto /etc/X11/Sessions
+	doexe ${FILESDIR}/enlightenment
 
 	dodoc AUTHORS ChangeLog FAQ INSTALL NEWS README
 
-	exeinto /etc/X11/Sessions
-	doexe ${FILESDIR}/enlightenment
+	# fix default xcursor support
+	cd ${D}/usr/share/enlightenment/themes
+	local deftheme=`readlink DEFAULT`
+	cp -rf ${deftheme} ${deftheme}-xcursors
+	rm DEFAULT
+	ln -s ${deftheme}-xcursors DEFAULT
+	rm -rf ${deftheme}-xcursors/cursors*
+	cp ${FILESDIR}/cursors.cfg ${deftheme}-xcursors/
 }
