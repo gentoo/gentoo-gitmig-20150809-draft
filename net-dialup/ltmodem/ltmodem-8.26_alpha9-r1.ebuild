@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-8.26_alpha9-r1.ebuild,v 1.2 2003/02/05 06:53:13 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/ltmodem/ltmodem-8.26_alpha9-r1.ebuild,v 1.3 2003/02/06 20:41:37 vapier Exp $
 
 MY_P="${P/_alpha/a}"
 DESCRIPTION="Winmodems with Lucent Apollo (ISA) and Mars (PCI) chipsets"
@@ -51,6 +51,6 @@ pkg_postinst() {
 	einfo "/usr/share/doc/${PF}/html/post-install.html"
 	echo
 	einfo "Also, if you wish to access the modem through"
-	einfo "devfs, just issue this command:"
+	einfo "/dev/modem without rebooting, run this:"
 	einfo "killall -HUP devfsd"
 }
