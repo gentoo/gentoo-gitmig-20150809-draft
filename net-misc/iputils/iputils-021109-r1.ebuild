@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109-r1.ebuild,v 1.6 2004/03/22 05:56:58 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/iputils-021109-r1.ebuild,v 1.7 2004/03/23 15:58:34 aliz Exp $
 
-inherit flag-o-matic gcc
+inherit flag-o-matic gcc gnuconfig
 
 DESCRIPTION="Network monitoring tools including ping and ping6"
 HOMEPAGE="ftp://ftp.inr.ac.ru/ip-routing"
@@ -15,7 +15,8 @@ IUSE="static ipv6" #doc
 
 DEPEND="virtual/glibc
 	virtual/os-headers
-	dev-util/yacc"
+	dev-util/yacc
+	sys-devel/autoconf"
 #	doc? ( app-text/openjade
 #		dev-perl/SGMLSpm
 #		app-text/docbook-sgml-dtd
@@ -39,6 +40,8 @@ src_unpack() {
 	# not everybody wants ipv6 suids laying around on the filesystems
 
 	use ipv6 || sed -i -e s:"IPV6_TARGETS=":"#IPV6_TARGETS=":g Makefile
+
+	cd ${S}/racoon && gnuconfig_update
 }
 
 src_compile() {
@@ -70,7 +73,7 @@ src_compile() {
 
 src_install() {
 	if [ -e ${ROOT}/usr/include/linux/pfkeyv2.h ] ; then
-		dodir /usr/sbin /usr/share/man/man{5,8} 
+		dodir /usr/sbin /usr/share/man/man{5,8}
 		cd ${S}/racoon && einstall || die
 
 		into /usr

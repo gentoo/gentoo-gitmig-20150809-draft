@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/iputils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.21 2004/03/01 20:13:04 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/iputils/ChangeLog,v 1.22 2004/03/23 15:58:33 aliz Exp $
+
+  23 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> iputils-021109-r1.ebuild:
+  Closing #44555.
 
   01 Mar 2004; Tom Gall <tgall@gentoo.org> iputils-021109-r1.ebuild:
   make sure ppc64 has yacc dependancy
