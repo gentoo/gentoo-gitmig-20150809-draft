@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/check
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/ChangeLog,v 1.6 2004/09/23 05:31:46 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/check/ChangeLog,v 1.7 2004/09/23 13:01:04 gustavoz Exp $
+
+  23 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> check-0.8.4.ebuild:
+  Stable on sparc wrt #65041
 
   23 Sep 2004; Travis Tilley <lv@gentoo.org> check-0.8.4.ebuild:
   added ~amd64 keyword
