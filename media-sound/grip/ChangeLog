@@ -1,7 +1,16 @@
 # ChangeLog for media-sound/grip
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.1 2002/02/01 21:53:31 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/ChangeLog,v 1.2 2002/02/02 02:25:41 tod Exp $
 
+*grip-2.98.5 (1 Feb 2002)
+  
+  1 Feb 2002; T.Neidt <tod@gentoo.org> ChangeLog :
+
+  New version released to fix nasty bug in 2.98.3 that caused grip to crash
+  after ripping the last track of a cd.  No changes to the ebuild, just a 
+  copy of grip-2.98.3-r1.ebuild to grip-2.98.5.ebuild. =media-sound/grip-2.98.3
+  has been package masked.
+  
 *grip-2.98.3-r1 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
