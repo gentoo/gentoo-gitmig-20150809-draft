@@ -1,0 +1,167 @@
+#!/bin/sh
+# rc		This file is responsible for starting/stopping
+#		services when the runlevel changes.
+
+. /etc/rc.d/config/runlevels
+. /etc/rc.d/config/basic
+. /etc/rc.d/config/functions
+
+bootbar() {
+	case "$1" in
+	on)
+		mysplit() {
+			LINES=$1
+			COLUMNS=$2
+		}
+		mysplit `stty size`
+		if [ "$3" = "S" ]
+		then
+			mode="[ "${rlboot}" ]"
+			hilite="\033[44;32;01m"
+		elif [ "$2" = "S" ]
+		then
+			mode="[ "${rl[${3}]}" ]"
+			hilite="\033[44;32;01m"
+		elif [ "$2" = "K" ]
+		then
+			mode="[ "${rl[${3}]}" ]"
+			hilite="\033[44;33;01m"
+		elif [ "$2" = "H" ]
+		then
+			mode=${rlhalt}
+			hilite="\033[40;32;01m"
+		else
+			echo "Error!"
+			exit 1
+		fi			
+		blank="                                                                         "
+		header="\n\0337\033[01;$((${LINES}-1))r\033[${LINES};01f\033[01;44;32m ${desc0}-\033[44;37m${desc1} "
+		echo -ne "${header}\033[01;44;35m${desc2}${blank:0:${COLUMNS}-((5+${#desc1}+${#desc2}+${#mode}+${#desc0}))}${hilite} ${mode} \033[0m\0338\033[A"
+		
+		;;
+	off)
+		echo -ne "\0337\033[r\033[${LINES};01f\033[K\0338"
+		;;
+	*)
+		;;
+	esac
+}
+
+# Un-comment the following for debugging.
+#debug=echo
+
+#
+# Start script or program.
+#
+
+startup() {
+	if [ -e /var/log/.boot ]
+	then
+	sh "$@" 2>>/var/log/boot
+	else
+	sh "$@" 2>/dev/null
+	fi
+}
+
+  # Ignore CTRL-C only in this shell, so we can interrupt subprocesses.
+  trap ":" INT QUIT TSTP
+
+  # Set onlcr to avoid staircase effect.
+  stty onlcr 0>&1
+
+  # Now find out what the current and what the previous runlevel are.
+
+  runlevel=$RUNLEVEL
+  # Get first argument. Set new runlevel to this argument.
+  [ "$1" != "" ] && runlevel=$1
+
+  previous=$PREVLEVEL
+
+  case "$runlevel" in
+    S)
+	mypath="rcboot.d"
+	;;
+    6)
+	mypath="rchalt.d"
+	;;
+    0)
+	mypath="rchalt.d"
+  	;;
+    *)
+	mypath="rc${runlevel}.d"
+  	;;
+  esac
+
+bootbar on K ${previous}
+
+  export runlevel previous
+echo
+
+if [ "$previous" != "N" ]
+then
+	einfo "[ stopping runlevel ${previous} ]"
+	sleep 3
+else
+	export BOOTING="yes"
+fi
+
+
+#Kill scripts in reverse order from how they were started in prev. runlevel
+if [ "$previous" != "N" ] && [ -d /etc/rc.d/rc${previous}.d ]
+then
+	
+	#Reversing directory list
+	rcs=""
+	for a in /etc/rc.d/rc${previous}.d/[0-9][0-9]*
+        do
+		rcs="${a} ${rcs}"
+	done
+	#Killing old scripts in reverse order	
+	for i in ${rcs}
+		do
+			if [ "$previous" != "N" ]
+			then
+				[ -e $i ] && startup $i stop
+			fi
+		done
+fi
+
+if [ "$previous" != "N" ]
+then
+	einfo "[ sleeping for 3 seconds before starting runlevel ${runlevel} ]"
+	sleep 3
+	einfo "[ starting runlevel ${runlevel} ]"
+fi
+
+bootbar on S ${runlevel}
+
+if [ -d /etc/rc.d/${mypath} ]
+then	
+	#Running new scripts in alphabetical order	
+	for i in /etc/rc.d/${mypath}/[0-9][0-9]*
+		do
+			[ -e $i ] && startup $i start
+		done
+fi
+
+case "$runlevel" in
+ 6)
+	startup /etc/rc.d/init.d/reboot
+	;;
+ 0)
+	startup /etc/rc.d/init.d/halt
+	;;
+ *)
+	;;
+esac
+
+if [ "$1" != "S" ]
+then
+	bootbar off
+fi
+if [ "$previous" != "N" ]
+then
+	einfo "Press <enter> to continue..."
+else
+	rm -f /var/log/.boot
+fi

@@ -1,0 +1,52 @@
+#
+# inittab	This file describes how the INIT process should set up
+#		the system in a certain run-level.
+#
+# Author:	Miquel van Smoorenburg, <miquels@cistron.nl>
+# Modified by:	Patrick J. Volkerding, <volkerdi@ftp.cdrom.com>
+# Modified by:	Daniel Robbins, <drobbins@agapesystems.com>
+
+#
+# Default runlevel.
+
+id:3:initdefault:
+
+# System initialization (runs when system boots).
+si:S:sysinit:/etc/rc.d/init.d/rc S
+
+# Script to run when going single user (runlevel 1).
+~~:S:wait:/sbin/sulogin
+
+# RUNLEVELS
+# 0=halt
+# 1=single user
+# 2=multi-user, no net
+# 3=multi-user, network
+# 4=multi-user, xdm (graphical terminal)
+# 5=customize it to your own liking
+# 6=reboot
+
+l0:0:wait:/etc/rc.d/init.d/rc 0
+l1:1:wait:/etc/rc.d/init.d/rc 1
+l2:2:wait:/etc/rc.d/init.d/rc 2
+l3:3:wait:/etc/rc.d/init.d/rc 3
+l4:4:wait:/etc/rc.d/init.d/rc 4
+l5:5:wait:/etc/rc.d/init.d/rc 5
+l6:6:wait:/etc/rc.d/init.d/rc 6
+z6:6:respawn:/sbin/sulogin
+
+# If you use Login.app, this is how you get it working
+# x1:4:respawn:/usr/bin/Login.app >& /dev/null
+
+# TERMINALS
+c1:12345:respawn:/sbin/agetty 38400 tty1 linux
+c2:12345:respawn:/sbin/agetty 38400 tty2 linux
+c3:12345:respawn:/sbin/agetty 38400 tty3 linux
+c4:12345:respawn:/sbin/agetty 38400 tty4 linux
+c5:23:respawn:/sbin/agetty 38400 tty5 linux
+c6:23:respawn:/sbin/agetty 38400 tty6 linux
+
+# What to do at the "Three Finger Salute".
+ca:12345:ctrlaltdel:/sbin/shutdown -t1 -r now
+
+# End of /etc/inittab

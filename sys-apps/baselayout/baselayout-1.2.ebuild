@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.2.ebuild,v 1.1 2000/08/25 02:56:10 drobbins Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.2.ebuild,v 1.2 2000/08/25 03:08:58 drobbins Exp $# Copyright 1999-2000 Gentoo Technologies, Inc.
 
 A=""
 S=${WORKDIR}/${P}
@@ -45,6 +45,39 @@ src_install()
 	dosym /usr/sbin/MAKEDEV /dev/MAKEDEV
 	dodir /dev/pts /lib /proc /mnt/floppy /mnt/cdrom
 	chmod go-rwx ${D}/mnt/floppy ${D}/mnt/cdrom
+
+	for x in boot halt 1 2 3 4 5 
+	do
+	    dodir /etc/rc.d/rc${x}.d
+	done
+        dosym rcboot.d /etc/rc.d/rc0.d
+        dosym rchalt.d /etc/rc.d/rc6.d
+
+	dodir /etc/rc.d/init.d
+	dodir /etc/rc.d/config
+	cd ${FILESDIR}/rc.d/init.d
+	insinto /etc/rc.d/init.d
+	doins *
+	chmod 0755 ${D}/etc/rc.d/init.d/*
+	insinto /etc/rc.d/init.d/extra_scripts
+	cd ${FILESDIR}/rc.d/config
+	insinto /etc/rc.d/config
+        doins *
+	doins runlevels
+	cd ${FILESDIR}
+	insinto /etc
+	doins inittab
+	into /usr
+	dosbin rc-update
+	exeinto /usr/bin
+	exeopts -m0755
+	doexe colors
+	dodoc README.newusers blurb.txt
+}
+
+
+
+
 }
 
 

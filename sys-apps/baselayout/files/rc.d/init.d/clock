@@ -1,0 +1,29 @@
+#!/bin/sh
+#RCUPDATE:boot:20:This line is required for script management
+
+. /etc/rc.d/config/functions
+. /etc/rc.d/config/basic
+
+if [ ! -f /etc/adjtime ]
+then
+        echo "0.0 0 0.0" > /etc/adjtime
+fi
+
+if [ "$GMT" = "yes" ]
+then
+	GMT="-u"; GMTT="--utc"
+	TBLURB="[GMT]"
+else
+	GMT=""; GMTT=""
+	TBLURB="[Local Time]"
+fi
+
+if [ -x /sbin/hwclock ]
+then
+	ebegin "Setting system clock to hardware clock ${TBLURB}"
+        /sbin/hwclock --adjust ${GMTT} 1>&2
+        /sbin/hwclock --hctosys ${GMTT} 1>&2 
+	eend 0 
+else
+	eend 1 "hwclock executable not found"
+fi

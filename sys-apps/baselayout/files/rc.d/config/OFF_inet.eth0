@@ -1,0 +1,23 @@
+IFACE=eth0
+IPNUM=192.168.1.1
+BCAST=192.168.1.255
+NMASK=255.255.255.0
+NETWK=192.168.1.0
+
+# Comment out the following line if you don't want to config a default gateway
+GTWAY=192.168.1.254      
+			 
+netup() {
+	/sbin/ifconfig $IFACE $IPNUM broadcast $BCAST netmask $NMASK
+	[ $GTWAY ] && /sbin/route add -net default gw $GTWAY netmask 0.0.0.0 metric 1
+
+        ipchains -D input -j DENY -p all -l -s $IPNUM -i $IFACE -d 0.0.0.0/0 2>/dev/null || true
+        ipchains -I input -j DENY -p all -l -s $IPNUM -i $IFACE -d 0.0.0.0/0 >/dev/null
+	ipchains -D input -j DENY -p all -l -s 127.0.0.0/8 -i $IFACE -d 0.0.0.0/0 2>/dev/null || true
+        ipchains -I input -j DENY -p all -l -s 127.0.0.0/8 -i $IFACE -d 0.0.0.0/0 >/dev/null
+}
+
+netdown() {
+	/sbin/ifconfig $IFACE down
+}
+

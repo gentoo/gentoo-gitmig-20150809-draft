@@ -1,0 +1,114 @@
+#! /bin/sh
+#RCUPDATE:3 4:70:This line is required for script management
+
+# inet start brings up all interfaces
+# inet stop brings down all interface
+# inet start <iface> brings up <iface>
+# inet stop <iface> brings down <iface>
+# configuration files are in /etc/rc.d/config/inet.<iface>
+
+. /etc/rc.d/config/functions
+
+opts="start stop restart"
+
+intstat() {
+	local ints=`/sbin/netstat -i | tail --lines +3 | cut -f1 -d" "`
+	for x in $ints
+	do
+		if [ "$1" = "$x" ]
+		then
+			echo "up"
+			return
+		fi
+	done
+	echo "down"
+}
+
+doint() {
+# bring an interface up or down
+# ${1} = interface
+# ${2} = "down" or "up"
+	if [ "`intstat ${1}`" != "${2}" ]
+	then 
+		. /etc/rc.d/config/inet.${1}
+		net${2} 1>&2
+		ebegin "Bringing ${1} ${2}"
+		if [ "`intstat ${1}`" = "$2" ]
+		then
+			eend 0
+			
+		else
+			eend 1 "Error bringing ${1} ${2}."
+		fi
+	else
+		eerror "Interface ${1} is already ${2}."
+	fi
+}
+
+doints() {
+
+	if [ "$1" = "up" ]
+	then
+		doint lo up
+	fi
+
+	for x in /etc/rc.d/config/inet.*
+	do
+		myint=${x##*.}
+		if [ "$myint" != "lo" ]
+		then
+			doint ${myint} ${1}
+		fi
+	done
+
+	if [ "$1" = "down" ]
+	then
+		doint lo down
+	fi
+
+}
+
+
+if [ "$#" = "1" ]
+then
+	ifaces="all"
+else
+	ifaces=$2
+fi
+
+start() {
+
+	if [ "$ifaces" = "all" ]
+	then
+	  doints "up"
+	elif [ -e /etc/rc.d/config/inet.${ifaces} ]
+	then
+		doint ${ifaces} "up"
+	else
+		eerror "Interface config /etc/rc.d/config/inet.${2} not found."
+	fi
+}
+
+stop() {
+
+	if [ "$ifaces" = "all" ]
+	then
+	  doints "down"
+	elif [ -e /etc/rc.d/config/inet.${ifaces} ]
+	then
+		doint ${ifaces} "down"
+	else
+		eerror "Interface config /etc/rc.d/config/inet.${2} not found."
+	fi
+
+}
+
+restart() {
+
+	stop
+	start
+
+}
+
+doservice ${@}
+

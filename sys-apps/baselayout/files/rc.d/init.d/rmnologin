@@ -1,0 +1,12 @@
+#!/bin/sh
+#RCUPDATE:1 2 3 4 5:99:This line is required for script management
+
+# This is an important file, and should be run at a point in the startup
+# sequence where you feel comfortable allowing users to log in.  Normally
+# it's run at the very end, but it does *need* to be run at some point.
+
+if [ -f /etc/nologin.boot ]
+then
+	rm -f /etc/nologin /etc/nologin.boot
+fi
+

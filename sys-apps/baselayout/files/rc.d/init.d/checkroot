@@ -1,0 +1,105 @@
+#!/bin/sh
+#RCUPDATE:boot:05:This line is required for script management
+
+
+. /etc/rc.d/config/basic
+. /etc/rc.d/config/functions
+
+#
+# Set SULOGIN to yes if you want a sulogin to be spawned from
+# this script *before anything else* with a timeout, like on SCO.
+#
+[ "$SULOGIN" = yes ] && sulogin -t 10 $CONSOLE
+
+# There may be Multiple Devices, so prepare MD
+# Don't need this anymore! -DR
+
+# Activate the swap device(s) in /etc/fstab. This needs to be done
+# before fsck, since fsck can be quite memory-hungry.
+#
+if [ -x /sbin/swapon ]
+then
+  ebegin "Activating swap"
+  swapon -a 1>&2 
+  eend $? "Error activating swap."
+fi
+
+#
+# Ensure that bdflush (update) is running before any major I/O is
+# performed (the following fsck is a good example of such activity :).
+#
+[ -x /sbin/update ] && update 1>&2
+
+#
+# Check the root filesystem.
+#
+if [ -f /fastboot ]
+then
+        ebegin "Fast boot, no filesystem check."
+	eend 0
+else
+  #
+  # Ensure that root is quiescent and read-only before fsck'ing.
+  #
+  mount -n -o remount,ro / 1>&2
+  if [ $? = 0 ]
+  then
+    if [ -f /forcefsck ]
+    then
+        force="-f"
+    else
+        force=""
+    fi
+    if [ "$FSCKFIX" ]
+    then
+        fix="-y"
+    else
+        fix="-a"
+    fi
+    ebegin "Checking root filesystem"
+    fsck $force $fix / 1>&2
+    #
+    # If there was a failure, drop into single-user mode.
+    #
+    # NOTE: "failure" is defined as exiting with a return code of
+    # 2 or larger.  A return code of 1 indicates that filesystem
+    # errors were corrected but that the boot may proceed.
+    #
+    if [ $? -eq 0 ]
+    then
+	eend 0
+    elif [ $? -eq 1 ]
+    then
+	eend 1 "Root filesystem errors corrected."	
+    else 
+	eend 2 "Fsck could not fix errors on root fs; reboot needed!"
+	/sbin/sulogin $CONSOLE
+	reboot -f
+    fi
+  else
+    eend 3 "Cannot fsck root fs because it is mounted read-write!"
+    einfo "You should have lilo or loadlin mount your root file"
+    einfo "system read-only (ro), not read-write (rw)."
+    sleep 1
+  fi
+fi
+
+#
+# Remount rootfs rw (default), but do not try to change mtab because it
+# is on a ro fs until the remount succeeded.  Then clean up old mtabs and
+# finally write the new mtab.
+#
+ebegin "Remounting root filesystem" 
+mount -n -o remount,rw / 1>&2
+myerror=$?
+rm -f /etc/mtab~ /etc/nologin 1>&2
+myerror=$(( $myerror + $? ))
+: > /etc/mtab 
+myerror=$(( $myerror + $? ))
+mount -o remount,rw / 1>&2
+myerror=$(( $myerror + $? ))
+eend $myerror "Error mounting root fs!"
+ebegin "Mounting /proc"
+mount /proc 1>&2
+eend $? "Error mounting /proc!"
+

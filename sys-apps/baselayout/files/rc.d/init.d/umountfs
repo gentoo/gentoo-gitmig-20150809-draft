@@ -1,0 +1,29 @@
+#!/bin/sh
+#RCUPDATE:halt:50:This line is required for script management
+# Version:      @(#)umountfs  2.73  26-Nov-1997  miquels@cistron.nl
+
+. /etc/rc.d/config/functions
+
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+
+# Write a reboot record to /var/log/wtmp before unmounting
+halt -w 1>&2
+ebegin "Deactivating swap"
+swapoff -a 1>&2
+eend $?
+ebegin "Unmounting filesystems"
+umount -a 
+if [ "$?" = "1" ]
+then
+  eend 1 "hmmmm..."
+  ebegin "Trying to unmount again"
+  umount -a -r -f
+  eend $?
+else
+  eend 0
+fi
+ebegin "Remounting root fs read-only"
+mount -n -o remount,ro /
+eend $?
+sync; sync; sleep 3
+

@@ -1,0 +1,14 @@
+#! /bin/sh
+#
+# reboot	Execute the reboot command.
+#
+# Version:      @(#)reboot  2.75  22-Jun-1998  miquels@cistron.nl
+#
+
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+
+. /etc/rc.d/config/functions
+
+einfo "Rebooting... "
+
+/sbin/reboot -nfi

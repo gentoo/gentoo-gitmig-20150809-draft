@@ -1,0 +1,13 @@
+SYSLOGD=""				# For remote UDP logging use SYSLOGD="-r"
+KEYMAP="us"				# your favorite keymap
+CONSOLEFONT="grfixed"			# yout favourite console font
+KLOGD=""				# Use KLOGD="-k /boot/System.map-$(uname -r)" to specify System.map
+SULOGIN=no				# Set to yes if you want sulogin to be spawned on bootup
+DELAYLOGIN=yes				# Set to no if you want to be able to login over telnet/rlogin
+					# before system startup is complete (as soon as inetd is started)
+GMT=no					# Set GMT to "yes" if your system clock is set to GMT, and GMT to "no" if not.
+VERBOSE=yes				# Set VERBOSE to "no" if you would like a more quiet bootup.
+FSCKFIX=no				# Set FSCKFIX to "yes" if you want to add "-y" to the fsck at startup.
+
+ARCH=`uname -m`				# Architecture
+

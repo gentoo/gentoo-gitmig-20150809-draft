@@ -1,0 +1,7 @@
+netup() {
+	/sbin/ifconfig lo 127.0.0.1 up
+}
+
+netdown() {
+	/sbin/ifconfig lo down
+}

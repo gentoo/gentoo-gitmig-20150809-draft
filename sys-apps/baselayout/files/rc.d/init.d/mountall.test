@@ -1,0 +1,8 @@
+#!/bin/sh
+#RCUPDATE:boot:15:This line is required for script management
+. /tmp/initscripts-0.99/etc/rc.d/config/functions
+
+# Mount local filesystems in /etc/fstab.
+ebegin "Mounting local filesystems"
+echo mount -avt nonfs,noproc 1>&2
+eend $? "Problem mounting local filesystems."

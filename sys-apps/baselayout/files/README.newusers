@@ -1,0 +1,164 @@
+
+ The Enoch/Stampede Boot Concept
+ 					       Daniel Robbins, November 3, 1998
+						    Updated on December 7, 1998
+							Updated on May 10, 1999
+===============================================================================
+
+The Stampede boot scripts have been designed to be simple and flexible as well
+as very familiar to a large number of Linux/UNIX users.  We thank the RedHat,
+Slackware, Debian and SuSE distributions for their startup-scripts.  These try
+to incorporate the best of all of these distributions, although very little 
+Debian/Slackware/SuSE code actually exists in this initscript distribution.
+(Probably the most borrowed code is in the part that mounts and checks the
+various file systems, which we borrowed from Debian)
+
+Structure:
+
+/etc/rc.d/		Main Directory
+/etc/rc.d/init.d/	Startup Script Repository
+/etc/rc.d/config/	Configuration Directory
+/etc/rc.d/rcboot.d/	Scripts to run when system first starts
+/etc/rc.d/rc1.d/	Scripts for runlevel 1
+/etc/rc.d/rc2.d/	Scripts for runlevel 2
+/etc/rc.d/rc3.d/	Scripts for runlevel 3
+/etc/rc.d/rc4.d/	Scripts for runlevel 4
+/etc/rc.d/rc5.d/	Scripts for runlevel 5
+/etc/rc.d/rchalt.d/	Scripts for halting and reboot (runlevels 0,6)
+/etc/rc.d/rc.local	Symlink to /etc/rc.d/init.d/local;
+			This is an easy way for new users to configure
+			their startup-sequence.  This script is always the
+			last one executed when entering runlevels 1-5.
+
+The Boot Process:
+
+	*rcboot.d*
+
+	The directory /etc/rc.d/rcboot.d contains symbolic links to files in 
+	/etc/rc.d/init.d.  These links have a special naming convention, which
+	is:
+		[0-9][0-9]myname
+
+	for example:
+	
+		05checkroot
+ 	or
+		20mountall
+
+	On boot, these scripts are run in order, from 00 to 99.  These scripts
+	perform functions such as mounting file systems and configuring the
+	system hardware.  They are intended to be one-time setup scripts and
+	are not expected to parse any command-line arguments (although they are
+	all called with the "start" argument, it can be ignored)
+
+	*rc[1-5].d*
+
+	After all the scripts in rcboot.d have been executed, the system 
+	switches to the default runlevel (listed in /etc/inittab), and executes
+	scripts in the appropriate directory, rc?.d, where ? is between 1 and 5
+	inclusive.  As with rcboot.d, every script is a symbolic link to a file
+	in /etc/rc.d/init.d, and each symlink has a name in the format:
+
+		[0-9][0-9]myname (just like those in rcboot.d)
+
+	When the runlevel is entered, scripts are run in 00-99 order, with
+	"start" as the first and only command-line argument.  For example,
+	my system executes the following scripts upon entering runlevel 3:
+
+	/etc/rc.d/rc3.d/20sysklogd start
+	/etc/rc.d/rc3.d/22kerneld start
+	/etc/rc.d/rc3.d/23modules start
+	/etc/rc.d/rc3.d/50urandom start
+	/etc/rc.d/rc3.d/99local start
+
+	When we leave a runlevel, the scripts will be run in the reverse 99-00
+	order with the "stop" argument.  This will happen when switching to
+	any other runlevel, including before reboot or halt.  So, when 
+	switching out of runlevel 3, my system runs the following scripts:
+
+	/etc/rc.d/rc3.d/99local stop
+	/etc/rc.d/rc3.d/50urandom stop
+	/etc/rc.d/rc3.d/23modules stop
+	/etc/rc.d/rc3.d/22kerneld stop
+	/etc/rc.d/rc3.d/20sysklogd stop
+
+	Then, the appropriate startup scripts for the new runlevel are started.
+
+	This design decision was made to simplify the process of maintaining
+	the startup scripts, minimizing the number of links that need to be
+	created as compared to a more traditional SysV startup script approach.
+
+	Some important notes:
+
+		Scripts in the rc[1-5].d directories are expected to handle
+		the "start" and "stop" arguments properly.  The "start"
+		argument should cause the script to start a particular service,
+		while the "stop" argument should stop a particular service.
+		If you put a script in rc[1-5].d that is only supposed to do
+		something on startup, and not execute on shutdown, then 
+		simply base your script on /etc/rc.d/init.d/SAMPLE, 
+		put your commands in the start() function, but put no
+		commands in the stop() function.  This way, it will still
+		work properly with Stampede's special script accounting
+		functionality.
+
+		To see what scripts have been started, type:
+
+			'ls /var/lib/rc.started'
+
+			or `rc-update list`
+
+		To see what network interfaces have been brought up, type:
+
+			'ls /var/lib/rc.started/inet'
+
+	*rchalt.d*
+
+	Instead of having two separate directories for runlevel 0 (halt) and
+	runlevel 6 (reboot) containing a nearly identical configuration, they
+	were combined into one directory.  This simplifies script maintenance.
+
+	all scripts in rchalt.d are run when switching to runlevel 0 or 6,
+	in 00-99 order.  They can be simple scripts, and do not have to process
+	the "start" and "stop" arguments (Although they are called with the
+	"start" argument, it is perfectly if this is ignored).  After all 
+	scripts in the directory have been executed, the system either halts 
+	or reboots the system, as appropriate.
+
+	*config*
+
+	The config directory contains various files that are imported by the
+	startup scripts.  They provide an easy way to change boot options
+	without "messing" with the scripts themselves.  Included here are
+	configuration files for kernel modules, serial ports, colorization
+	features, and many other miscellaneous settings.  It's always better
+	(and faster) to change an option here, if possible.
+	
+	*guidelines and hints*
+
+	Don't put any real scripts in the rc.* directories.  Put them in init.d
+	and put only symbolic links in rc.*.  Try out the rc-update tool
+	located in /sbin.
+
+	Any scripts you reference in rc[1-5].d need to behave properly when
+	called with the "start" and "stop" arguments.  Scripts referenced from
+	the rcboot.d and rchalt.d directories will always be called with the
+	"start" argument, but this argument can be safely ignored.
+
+	If you don't want to have the rc.local capability, simply delete the
+	99local file from the directories rc[1-5].d.  It's there for new users
+	who want to make "quick and easy" late additions to the startup
+	process.  Another option is to write your own script; base it on
+	/etc/rc.d/init.d/SAMPLE.
+
+	Best Regards,
+
+	Daniel Robbins (script designer)
+	drobbins@iolnm.net
+	drobbins@stampede.org
+
+	Special thanks to:
+	The Stampede Development Team & Friends
+	(for suggestions, bug fixes and support)
+
+===============================================================================

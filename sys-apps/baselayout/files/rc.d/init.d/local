@@ -1,0 +1,34 @@
+#!/bin/sh
+#RCUPDATE:1 2 3 4 5:99:This line is required for script management
+
+. /etc/rc.d/config/functions
+
+SERVICE=local
+opts="start stop restart"
+
+start() {
+		ebegin "Starting local"
+		# This is a good place to load any misc.
+		# programs on startup ( 1>&2 )
+		eend $? "Started local."
+}
+
+stop() {
+		ebegin "Stopping local"
+		# This is a good place to unload any misc.
+		# programs you started above.
+		# For example, if you are using OSS and have
+		# "/usr/local/bin/soundon" above, put
+		# "/usr/local/bin/soundoff" here.
+		eend $? "Stopped local."
+}
+
+restart() {
+
+		stop
+		start
+
+}
+
+doservice ${@}
+

@@ -1,0 +1,204 @@
+#!/bin/bash
+
+. ${ROOT}/etc/rc.d/config/functions
+
+usage() {
+	einfo "Usage: ${0} add <script> [ \"1 2 3 4\" ]"
+	echo "			Add script <script> to runlevels in quotes"
+	echo "			No runlevels in quotes = add to default runlevels"
+	echo
+	einfo "       ${0} del <script> [ \"1 2 3\" ]"
+	echo "			Delete script <script> from runlevels in quotes"
+	echo "			No runlevels in quotes = add to default runlevels"
+	echo
+	einfo "       ${0} autogen {normal|boot|halt} [force]"
+	echo "			Reset symlinks in runlevels 1-5, boot, or halt"
+	echo
+	einfo "       ${0} list"
+	echo "			List scripts available for management"
+	echo
+}
+
+
+doit() {
+	# debug mode
+	"$@"
+}
+
+# linkzap:
+#
+# zaps symlinks you specify, and only symlinks.
+
+linkzap() {
+    local j
+    for j in "$@"
+    do
+	if [ -L ${j} ]
+	then
+	    doit rm 2>/dev/null ${j}
+	fi
+    done
+}
+
+# getinfo:
+# 
+# will set variables mylevels and mypos to the runlevels and position that the
+# script should be in by default. Returns 0=ok, 1=no #RCUPDATE line, 2=file
+# not found.
+
+getinfo() {
+    if [ -e $1 ]
+    then
+	local myline
+	myline=`grep "^#RCUPDATE" ${1}`
+	if [ "$myline" ]
+	then
+	    mylevels=`echo $myline | cut -f2 -d":"`
+	    mypos=`echo $myline | cut -f3 -d":"`
+	    return 0
+	else
+	    return 1
+	fi
+     else
+	eerror "script ${1} not found." 
+	return 2
+     fi
+}
+
+resetlevel() {
+	for x in `ls -dA ${ROOT}/etc/rc.d/init.d/*`
+	do
+		if [ ! -f $x ]
+		then
+			continue
+		fi
+		getinfo $x
+		if [ $? -ne 0 ]
+		then 
+			continue
+		fi
+		local ok=no
+		for y in $mylevels
+		do
+			if [ "$y" = "$1" ]
+			then
+				local ok=yes	
+			fi
+		done
+		if [ "$ok" = "yes" ]
+		then
+			ln -s ../init.d/${x##*/} ${ROOT}/etc/rc.d/rc${1}.d/${mypos}${x##*/}
+		fi
+	done
+}
+
+case $1 in
+autogen)
+	case "$2" in
+	normal|boot|halt)
+		if [ "$3" != "force" ]
+		then
+			einfo "You are asking me to reset symlinks."
+			einfon "Are you sure you want to continue? [y/N]> "
+			read foo
+		else
+			foo=y
+		fi
+		case "$foo" in
+		y|Y|Yes|yes)
+			FROMD=${ROOT}/etc/rc.d/init.d
+			case "$2" in
+			boot)
+				ebegin "Resetting all symlinks in runlevel boot..."
+				linkzap ${ROOT}/etc/rc.d/rcboot.d/*
+				eend 0
+				resetlevel boot
+				einfo "Reset all symlinks in runlevel boot."
+ 				;;
+			halt)
+				ebegin "Resetting all symlinks in runlevel halt..."
+				linkzap ${ROOT}/etc/rc.d/rchalt.d/*
+				eend 0
+				resetlevel halt
+				einfo "Reset all symlinks in runlevel halt."
+				;;
+			normal)
+				ebegin "Resetting all symlinks in runlevels 1-5..."
+				for x in 1 2 3 4 5
+				do
+				    linkzap ${ROOT}/etc/rc.d/rc${x}.d/*
+				    resetlevel $x
+				done
+				eend 0
+				einfo "Reset all symlinks in runlevels 1-5."
+				;;
+			*)
+				usage
+				;;
+			esac
+			;;
+		n|N|no|No|*)
+			echo "Of course you don't!"
+			;;
+		esac
+		;;
+	*)
+		usage
+		;;
+	esac
+	;;
+list)
+
+	einfo "Services installed in directory ${ROOT}/etc/rc.d/init.d/"
+	einfo "======================================================================"
+
+	for i in ${ROOT}/etc/rc.d/init.d/*
+	do
+		if [ ! -f ${i} ]
+		then
+			continue
+		fi
+		myline=`grep "^#RCUPDATE" $i`
+		if [ "$myline" ]
+		then
+			echo ${i#${ROOT}/etc/rc.d/init.d/}
+		fi
+	done
+	;;
+add|del)
+	getinfo ${ROOT}/etc/rc.d/init.d/${2}
+	if [ $? -ne 0 ]
+	then
+	    exit 1
+	elif [ "$1" = "add" ]
+	then
+		einfon "Adding ${2} to runlevel " 
+	else
+		mylevels="1 2 3 4 5 boot halt"
+		einfon "Removing ${2} from runlevel "
+	fi
+
+	if [ "$3" ]
+	then
+		mylevels="$3"
+	fi
+
+	for i in $mylevels
+	do
+		if [ -d ${ROOT}/etc/rc.d/rc${i}.d ]
+		then
+			linkzap ${ROOT}/etc/rc.d/rc${i}.d/[0-9][0-9]${2}
+			if [ "$1" = "add" ]
+			then
+				doit ln -sf /etc/rc.d/init.d/${2} ${ROOT}/etc/rc.d/rc${i}.d/${mypos}${2}
+			fi
+			einfon "${i} "
+		fi
+	done
+        echo
+	;;
+*)
+	usage
+	;;
+esac
+exit 0

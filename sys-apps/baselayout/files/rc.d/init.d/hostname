@@ -1,0 +1,10 @@
+#!/bin/sh
+#RCUPDATE:boot:30:This line is required for script management
+
+. /etc/rc.d/config/functions
+
+myhost=`cat /etc/hostname` 1>&2
+ebegin "Setting hostname to $myhost"
+/sbin/hostname ${myhost}
+eend $?
+

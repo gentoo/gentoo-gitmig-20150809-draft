@@ -1,0 +1,17 @@
+#!/bin/sh
+. ${ROOT}/etc/rc.d/config/functions
+einfo "Setting up initscripts..."
+ln -sf init.d/local ${ROOT}/etc/rc.d/rc.local
+einfo "Setting up symlinks..."
+${ROOT}/usr/sbin/rc-update autogen boot force 
+${ROOT}/usr/sbin/rc-update autogen halt force
+for i in bootmisc checkfs checkroot clock hostname \
+	 inet isapnp keymaps local modules mountall \
+	 pretty rmlogin sendsigs serial single \
+	 sysklogd umountfs urandom vcron xinetd 
+do
+  ${ROOT}/usr/sbin/rc-update add $i
+done
+
+
+

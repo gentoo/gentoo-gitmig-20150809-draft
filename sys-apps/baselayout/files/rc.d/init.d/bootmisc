@@ -1,0 +1,39 @@
+#!/bin/sh
+#RCUPDATE:boot:40:This line is required for script management
+
+if [ "$1" != "start" ]
+then
+	exit 0
+fi
+
+. /etc/rc.d/config/basic
+. /etc/rc.d/config/functions
+
+# Put a nologin file in /etc to prevent people from logging in before
+# system startup is complete.
+if [ "$DELAYLOGIN" = "yes" ]
+then
+  echo "System bootup in progress - please wait" > /etc/nologin
+  cp /etc/nologin /etc/nologin.boot
+fi
+
+#
+# Clean up any stale locks.
+#
+ebegin "Cleaning /var/lock, /var/run"
+( cd /var/lock && find . -type f -exec rm -f -- {} \; 1>&2 )
+#
+# Clean up /var/run and create /var/run/utmp so that we can login.
+#
+( cd /var/run && \
+	find . ! -type d ! -name utmp ! -name innd.pid ! -name random-seed \
+	-exec rm -f -- {} \; 1>&2 )
+: > /var/run/utmp
+eend 0
+
+#
+# Set pseudo-terminal access permissions.
+#
+chmod 666 /dev/tty[p-za-e][0-9a-f]
+chown root:tty /dev/tty[p-za-e][0-9a-f]
+

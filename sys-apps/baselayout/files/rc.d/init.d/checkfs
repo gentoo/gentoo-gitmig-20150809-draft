@@ -1,0 +1,37 @@
+#!/bin/sh
+#RCUPDATE:boot:10:This line is required for script management
+
+. /etc/rc.d/config/basic
+. /etc/rc.d/config/functions
+
+# Check the rest of the filesystems.
+if [ ! -f /fastboot ]
+then
+    if [ -f /forcefsck ]
+    then
+        force="-f"
+    else
+        force=""
+    fi
+    if [ "$FSCKFIX"  = yes ]
+    then
+	fix="-y"
+    else
+	fix="-a"
+    fi
+    ebegin "Checking all filesystems"
+    fsck -R -A $fix $force 1>&2
+    if [ $? -eq 0 ]
+    then
+	eend 0
+    elif [ $? -eq 1 ]
+    then
+	eend 1 "Filesystem errors corrected."
+    else 
+	eend 2 "Fsck could not correct all errors, manual repair needed"
+	/sbin/sulogin $CONSOLE
+    fi
+    touch /var/log/boot
+fi
+rm -f /fastboot /forcefsck
+

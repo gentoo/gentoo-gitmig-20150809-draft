@@ -1,0 +1,23 @@
+STD_FLAGS="skip_test autoconfig session_lockout"
+
+setports() {
+
+# ADD PORTS TO CONFIGURE HERE (for example, ISA PnP modems configured with isapnp)
+#             DEVICE IRQ PORT FLAGS
+
+	setport ttyS0 4 0x3F8 "$STD_FLAGS";
+	setport ttyS1 3 0x2F8 "$STD_FLAGS";
+
+# The above two lines are typical settings for a PC, but may not be yours --
+# Best bet is to check your PC's BIOS, and use those settings above.
+
+#	setport ttyS2 7 0x3E8 "$STD_FLAGS";
+
+# This is for my ISA PnP modem, which has been set to these values using 
+# the isapnp package.
+# If you have serial support compiled as a module, the serial script
+# script loads your module manually, so that it doesn't ever unload. 
+# Otherwise, the serial module will "forget" the settings for your modem 
+# when it is dynamically removed from the kernel.  (Called "autocleaning")
+
+}

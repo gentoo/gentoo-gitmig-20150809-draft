@@ -1,0 +1,21 @@
+#!/bin/sh
+#RCUPDATE:boot:01:This line is required for script management
+
+if [ "${1}" != "start" ]
+then
+	exit 0
+fi
+
+. /etc/rc.d/config/basic
+. /etc/rc.d/config/functions
+
+if [ -e /usr/bin/consolechars ]
+then
+	/usr/bin/consolechars -f ${CONSOLEFONT}
+fi
+einfo "Booting Enoch 0.75"
+einfo "(All boot info logged to /var/log/boot)"
+echo
+sleep 1
+
+

@@ -1,0 +1,81 @@
+#!/bin/sh
+#RCUPDATE:boot:50:This line is required for script management
+#
+# rc.modules : specify modules to insert (they will stay inserted forever)
+# Included with Stampede Linux 0.90
+# Copyright 1998 Daniel Robbins
+# Distributed under the GPL
+#
+# Version History:
+#	Oct 21 1998 -- v0.9 -- A simple little script; let's see how it works.
+#                             
+
+#This only gets run on 
+if [ "$1" != "start" ]
+then
+	exit 0
+fi
+
+. /etc/rc.d/config/functions
+KERNVERS=`uname -r`
+
+if [ ! -e /lib/modules/${KERNVERS}/modules.dep ]
+then
+	
+	ebegin "Calculating kernel module dependencies" 
+	depmod -a 1>&2 
+	eend $? "Error calculating module dependencies."
+fi
+
+if [ ! -d /etc/modules ]
+then
+    mkdir /etc/modules 1>&2
+fi
+
+if [ -e /etc/modules.conf ]
+then
+    mv /etc/modules.conf /etc/modules.conf.bak 1>&2
+fi
+
+if [ -e /etc/conf.modules ]
+then
+    mv /etc/conf.modules /etc/conf.modules.bak 1>&2
+fi
+
+if [ ! -e /etc/modules/${KERNVERS} ]
+then
+    ebegin "Auto-generating ${KERNVERS} modules.conf"
+    modprobe -c >/etc/modules/${KERNVERS}
+    if [ $? -eq 0 ]
+    then
+	eend 0
+    	einfo "File /etc/modules/${KERNVERS} created."
+    	einfo "Please customize this file as desired."
+    else
+    	eend 1 "Error configuring module dependencies."
+    fi
+fi
+
+cp /etc/modules/${KERNVERS} /etc/modules.conf 1>&2
+touch /lib/modules/${KERNVERS}/modules.dep 	#Go away errors
+
+
+
+mod_load() {
+	if [ $# -gt 0 ]
+	then
+		ebegin "Inserting module ${1}"
+		/bin/sh -c "/sbin/modprobe ${1} >/dev/null 2>&1" >/dev/null 2>&1
+		eend $?
+	fi
+}
+
+if [ -e /etc/rc.d/config/modules ]
+then
+ 	cat /etc/rc.d/config/modules | grep -v ^# | sed s/^/"mod_load "/ >/tmp/domods 
+	. /tmp/domods
+	if [ ! -L /tmp/domods ]
+	then
+		rm /tmp/domods
+	fi
+fi

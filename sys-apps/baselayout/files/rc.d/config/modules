@@ -1,0 +1,9 @@
+# Put modules to be loaded, with arguments, one per line
+# The following lines will be called with "modprobe"
+#eth0
+#isofs
+#msdos
+#snd-audiopci1370
+#snd-pcm1-oss
+#snd-mixer-oss
+

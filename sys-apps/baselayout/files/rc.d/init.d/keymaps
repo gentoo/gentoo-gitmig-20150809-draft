@@ -1,0 +1,18 @@
+#!/bin/sh
+#RCUPDATE:boot:30:This line is required for script management
+
+if [ "${1}" != "start" ]
+then
+	exit 0
+fi
+
+. /etc/rc.d/config/basic
+. /etc/rc.d/config/functions
+
+LOADKEY=/usr/bin/loadkeys
+
+ebegin "Loading keymap"
+${LOADKEY} ${KEYMAP} 1>&2
+eend $? "Error loading keymap!"
+
+
