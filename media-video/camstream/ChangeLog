@@ -1,6 +1,10 @@
 # ChangeLog for media-video/camstream
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/ChangeLog,v 1.4 2003/10/31 17:52:24 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/camstream/ChangeLog,v 1.5 2003/11/14 09:14:18 phosphan Exp $
+
+  14 Nov 2003; Patrick Kursawe <phosphan@gentoo.org> camstream-0.26.2.ebuild,
+  files/camstream-0.26.2-fix-qt-dir.patch:
+  Removing the fix-qt-dir.patch because it breaks compiling, see bug 33053
 
   31 Oct 2003; Caleb Tennis <caleb@gentoo.org> camstream-0.26.2.ebuild,
   files/camstream-0.26.2-fix-qt-dir.patch:
