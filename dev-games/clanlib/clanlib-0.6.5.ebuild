@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.6.5.ebuild,v 1.2 2003/09/02 16:04:57 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-games/clanlib/clanlib-0.6.5.ebuild,v 1.3 2003/09/05 11:57:11 msterret Exp $
 
 inherit eutils
 
@@ -46,9 +46,9 @@ src_compile() {
 
 	export CFLAGS=${CFLAGS/-O?/-O2}
 	export CXXFLAGS=${CXXFLAGS/-O?/-O2}
-    
+
 	./autogen.sh
-	
+
 	./configure \
 		--host=${CHOST} \
 		--prefix=/usr \
