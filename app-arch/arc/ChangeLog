@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/arc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/arc/ChangeLog,v 1.11 2004/06/24 21:27:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/arc/ChangeLog,v 1.12 2004/07/12 03:06:30 tgall Exp $
+
+  11 Jul 2004; Tom Gall <tgall@gentoo.org> arc-5.21j.ebuild:
+  stable on ppc64 bug #55409
 
   05 Jun 2004; David Holm <dholm@gentoo.org> arc-5.21j.ebuild:
   Added to ~ppc.
