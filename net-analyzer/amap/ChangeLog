@@ -1,6 +1,15 @@
 # ChangeLog for net-analyzer/amap
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/ChangeLog,v 1.16 2005/01/25 10:30:14 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/ChangeLog,v 1.17 2005/02/22 10:52:18 ka0ttic Exp $
+
+*amap-4.8 (22 Feb 2005)
+
+  22 Feb 2005; Aaron Walker <ka0ttic@gentoo.org>
+  +files/4.8-system-pcre.patch, +files/amap-4.8-fix-icky-lvalue-casts.diff,
+  amap-4.7.ebuild, +amap-4.8.ebuild:
+  Version bump for bug 82876; updated pcre patch and added a patch to fix
+  amap's icky lvalue casts which cause numerous warnings w/gcc-3.4. Updated
+  HOMEPAGE and SRC_URI. Marked 4.7 stable on x86.
 
   25 Jan 2005; Aaron Walker <ka0ttic@gentoo.org> amap-4.6.ebuild,
   amap-4.7.ebuild:

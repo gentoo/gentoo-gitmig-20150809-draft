@@ -2,17 +2,21 @@
 Hash: SHA1
 
 MD5 6f1e34801a7ab85b6284cfeb3f889c29 amap-4.6.ebuild 1393
-MD5 7ee6c8fef4e565debeea30278013d81d amap-4.7.ebuild 1399
-MD5 782d2a898eb5ae48587af88ce640df45 ChangeLog 2076
+MD5 415b36fc87ad32785703aa0570163bee amap-4.8.ebuild 1435
+MD5 7876e2a1bc7131d7e9c82d6c455fa095 amap-4.7.ebuild 1398
+MD5 9b20edd5cbec15e92e298b1b5a53d031 ChangeLog 2464
 MD5 f34e3c8858756da0001b12d2d3fa1af2 metadata.xml 159
 MD5 a5f16a887d88f7d685dbaed470ee6ec8 files/digest-amap-4.6 60
 MD5 0650e1a8429fc7f1febbffe8435ed1c4 files/digest-amap-4.7 60
+MD5 6a77a9ce3b2272dff2d409eccdf38833 files/digest-amap-4.8 60
 MD5 c1c1d543f5427e6ccf71fe8648a6b322 files/4.7-system-pcre.patch 1155
+MD5 a11774428cb7e97a81107a22682d1798 files/4.8-system-pcre.patch 1232
+MD5 36fabda09cbfbb3c4c9eab818e99a501 files/amap-4.8-fix-icky-lvalue-casts.diff 7058
 MD5 c50165b5bb6fb19a617df68f6001d98d files/4.6-system-pcre.patch 1103
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.0 (GNU/Linux)
 
-iD8DBQFB9h/HEZCkKN40op4RAkVaAKCX8yw4SSIjDs8lFiAcEqULsddTWACeKYKF
-iy7iZfeEsVf3dV5yxlP3H0g=
-=QfBX
+iD8DBQFCGw9sEZCkKN40op4RAnk5AJ9SHNpNf0G4oviSrHCjpv60xrORzQCfeHh9
+cfAD69Pyv5a5bBZU5LPHlmI=
+=W4qL
 -----END PGP SIGNATURE-----

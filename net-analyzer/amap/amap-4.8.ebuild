@@ -1,16 +1,16 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/amap-4.7.ebuild,v 1.3 2005/02/22 10:52:18 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/amap/amap-4.8.ebuild,v 1.1 2005/02/22 10:52:18 ka0ttic Exp $
 
 inherit eutils
 
 DESCRIPTION="A network scanning tool for pentesters"
-HOMEPAGE="http://www.thc.org/releases.php"
-SRC_URI="http://packetstormsecurity.nl/groups/thc/${P}.tar.gz"
+HOMEPAGE="http://www.thc.org/thc-amap/"
+SRC_URI="http://www.thc.org/releases/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~ia64 ~ppc ~ppc64 ~sparc ~x86"
 IUSE="ssl"
 
 DEPEND="virtual/libc
@@ -27,6 +27,7 @@ src_unpack() {
 
 	rm -rf pcre-3.9
 	epatch ${FILESDIR}/${PV}-system-pcre.patch
+	epatch ${FILESDIR}/${P}-fix-icky-lvalue-casts.diff
 }
 
 src_compile() {
