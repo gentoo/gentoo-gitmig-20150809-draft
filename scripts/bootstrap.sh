@@ -16,11 +16,10 @@ echo "Using GLIBC $myGLIBC"
 
 export USE="build"
 cd /usr/portage
-#commented out for now; why do we need to do this?
-#emerge $myPORTAGE || exit
-#emerge $myBINUTILS || exit
-#emerge $myGCC || exit
-#emerge $myGETTEXT || exit
+emerge $myPORTAGE || exit
+emerge $myBINUTILS || exit
+emerge $myGCC || exit
+emerge $myGETTEXT || exit
 unset USE
 export USE="`spython -c 'import portage; print portage.settings["USE"];'` bootstrap"
 emerge $myGLIBC || exit
