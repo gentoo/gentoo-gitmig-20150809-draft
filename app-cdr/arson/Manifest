@@ -2,7 +2,10 @@ MD5 98fd512806697bcb408badcb98d32f17 ChangeLog 1592
 MD5 6ddb90f11b024352b7e4f74472d00439 arson-0.9.7-r1.ebuild 925
 MD5 eea6e06c53cdcf9c87e042e1ba8adcf4 arson-0.9.7.ebuild 827
 MD5 f1355fe3cf97b4961e0ff6759da5be79 arson-0.9.7-r2.ebuild 973
+MD5 58090a252c1afee2a0896a240d01e83c arson-0.9.7-r3.ebuild 962
 MD5 36dfe8c597aa471beb98dc30e3606d47 files/arson-0.9.7-write-img-fix.diff 1689
 MD5 12bb89bba9ef85545f69d581706c82bf files/digest-arson-0.9.7 69
 MD5 12bb89bba9ef85545f69d581706c82bf files/digest-arson-0.9.7-r1 69
 MD5 12bb89bba9ef85545f69d581706c82bf files/digest-arson-0.9.7-r2 69
+MD5 dbcb408efd85de0535addf120954d78d files/arson-0.9.7-crashfix.diff 404
+MD5 12bb89bba9ef85545f69d581706c82bf files/digest-arson-0.9.7-r3 69
