@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/w3m-m17n/w3m-m17n-0.4.2.ebuild,v 1.2 2003/10/04 22:21:45 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/w3m-m17n/w3m-m17n-0.4.2.ebuild,v 1.3 2003/10/12 16:18:29 usata Exp $
 
 IUSE="X imlib imlib2 gtk xface migemo gpm ssl"
 #IUSE="nls"
@@ -23,7 +23,7 @@ SRC_URI="http://dev.gentoo.org/~usata/distfiles/${W3M_P}.tar.gz
 
 SLOT="0"
 LICENSE="w3m"
-KEYWORDS="~x86 ~alpha ~ppc ~sparc"
+KEYWORDS="x86 alpha ppc sparc"
 
 DEPEND="${RDEPEND}
 	>=sys-apps/sed-4
