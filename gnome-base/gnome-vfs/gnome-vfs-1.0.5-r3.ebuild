@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.0.5-r3.ebuild,v 1.9 2004/01/10 14:05:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-vfs/gnome-vfs-1.0.5-r3.ebuild,v 1.10 2004/04/01 08:53:12 leonardop Exp $
 
 IUSE="ssl nls"
 
@@ -38,6 +38,8 @@ src_unpack() {
 	epatch ${FILESDIR}/1.0/${P}-codeset.patch
 	# Use GNOME2 Gconf keys for proxy settings
 	epatch ${FILESDIR}/1.0/${P}-proxy.patch
+	# Avoid openjade errors. See bug #46266.
+	epatch ${FILESDIR}/1.0/${P}-gtkdoc_fixes.patch
 
 	# Fix a rare segfault with gnome-mime-data-2.0.1.  Weird one really ...
 	# <azarah@gentoo.org> (2 Jan 2003).
