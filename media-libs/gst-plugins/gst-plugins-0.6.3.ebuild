@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.3.ebuild,v 1.15 2003/11/17 03:06:45 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/gst-plugins/gst-plugins-0.6.3.ebuild,v 1.16 2003/11/21 18:02:35 gmsoft Exp $
 
 # IMPORTANT
 #
@@ -72,7 +72,7 @@ src_compile() {
 	strip-flags
 	replace-flags "-O3" "-O2"
 	filter-flags "-fprefetch-loop-arrays" # see bug 22249
-	if use alpha || use amd64 || use ia64; then
+	if use alpha || use amd64 || use ia64 || use hppa; then
 		append-flags -fPIC
 	fi
 
