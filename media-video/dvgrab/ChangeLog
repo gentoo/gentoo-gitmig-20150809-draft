@@ -1,6 +1,9 @@
 # ChangeLog for media-video/dvgrab
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/ChangeLog,v 1.6 2005/01/20 13:44:33 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/ChangeLog,v 1.7 2005/01/20 16:33:17 luckyduck Exp $
+
+  20 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> dvgrab-1.7.ebuild:
+  minor fixes.
 
 *dvgrab-1.7 (20 Jan 2005)
 

@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/dvgrab-1.7.ebuild,v 1.1 2005/01/20 13:44:33 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvgrab/dvgrab-1.7.ebuild,v 1.2 2005/01/20 16:33:17 luckyduck Exp $
 
 inherit eutils
 
 DESCRIPTION="Digital Video (DV) grabber for GNU/Linux"
 HOMEPAGE="http://kino.schirmacher.de/"
-SRC_URI="http://kino.schirmacher.de/filemanager/download/20/${P}.tar.gz"
+SRC_URI="http://kino.schirmacher.de/filemanager/download/43/${P}.tar.gz"
 LICENSE="GPL-2"
 IUSE="jpeg quicktime"
 
@@ -22,14 +22,6 @@ DEPEND="sys-libs/libavc1394
 # quicktime4linux then we need to use some special linker options
 # (-ldl -lglib)
 #	quicktime? ( virtual/quicktime )"
-
-src_unpack() {
-	unpack ${A}
-	cd ${WORKDIR}
-
-	epatch ${FILESDIR}/dvgrab_gcc34_fix || die
-	mv ${PN}-1.5 ${P} # the directory is still ...1.5.
-}
 
 src_compile() {
 	econf ${myconf} || die "./configure failed"
