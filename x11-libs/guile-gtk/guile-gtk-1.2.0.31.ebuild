@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/guile-gtk-1.2.0.31.ebuild,v 1.2 2004/01/10 14:50:34 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/guile-gtk-1.2.0.31.ebuild,v 1.3 2004/04/26 14:42:51 agriffis Exp $
 
 MAJOR_PV=${PV%.[0-9]*.[0-9]*}
 MINOR_PV=${PV#[0-9]*.[0-9]*.}
@@ -20,7 +20,7 @@ S=${WORKDIR}/${PN}-${MAJOR_PV}-${MINOR_PV}
 
 src_compile() {
 	#patch < ${FILESDIR}/${P}-Makefile.in.patch || die "patch failed"
-	econf
+	econf || die "econf failed"
 	emake || die
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/guile-gtk-0.19-r1.ebuild,v 1.4 2004/04/17 23:02:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/guile-gtk-0.19-r1.ebuild,v 1.5 2004/04/26 14:42:51 agriffis Exp $
 
 inherit eutils
 
@@ -17,7 +17,7 @@ DEPEND="=dev-util/guile-1.4*
 
 src_compile() {
 	epatch ${FILESDIR}/${P}-Makefile.in.patch
-	econf
+	econf || die "econf failed"
 	emake || die
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.2.ebuild,v 1.10 2004/04/17 23:02:17 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/wxGTK/wxGTK-2.4.2.ebuild,v 1.11 2004/04/26 14:43:52 agriffis Exp $
 
 inherit eutils
 
@@ -65,7 +65,7 @@ src_compile() {
 	# only enable odbc if unicode is not enabled.
 	[ -n "`use gtk2`" -a  -n "`use unicode`" ] || myconf="${myconf} `use_with odbc`"
 
-	econf ${myconf}
+	econf ${myconf} || die "econf failed"
 	emake || die "make failed"
 
 	cd ${S}/contrib/src

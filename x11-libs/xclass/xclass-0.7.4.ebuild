@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xclass/xclass-0.7.4.ebuild,v 1.7 2003/06/27 20:55:30 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xclass/xclass-0.7.4.ebuild,v 1.8 2004/04/26 14:44:29 agriffis Exp $
 
 DESCRIPTION="a C++ GUI toolkit for the X windows environment"
 HOMEPAGE="http://xclass.sourceforge.net/"
@@ -14,7 +14,7 @@ DEPEND="virtual/x11
 	virtual/glibc"
 
 src_compile() {
-	econf --enable-shared=yes --with-x
+	econf --enable-shared=yes --with-x || die "econf failed"
 
 	# for some reason -fPIC dies while sandboxed ...
 	#cd ${S}/lib/libxclass

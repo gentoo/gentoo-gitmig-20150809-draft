@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/guile-gtk-0.19.ebuild,v 1.4 2003/02/13 16:58:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/guile-gtk-0.19.ebuild,v 1.5 2004/04/26 14:42:51 agriffis Exp $
 
 DESCRIPTION="GTK+ bindings for guile"
 SRC_URI="http://www.ping.de/sites/zagadka/guile-gtk/download/${P}.tar.gz"
