@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-meta/kdeaccessibility-meta-3.4.0_beta2.ebuild,v 1.3 2005/02/13 22:53:06 motaboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdeaccessibility-meta/kdeaccessibility-meta-3.4.0_beta2.ebuild,v 1.4 2005/02/16 16:04:04 greg_g Exp $
 MAXKDEVER=$PV
 
 inherit kde-functions
@@ -13,11 +13,10 @@ KEYWORDS="~x86"
 IUSE="arts"
 
 RDEPEND="
-arts? ( $(deprange $PV $MAXKDEVER kde-base/ksayit) )
+arts? ( $(deprange $PV $MAXKDEVER kde-base/ksayit)
+	$(deprange $PV $MAXKDEVER kde-base/kttsd) )
 $(deprange $PV $MAXKDEVER kde-base/kmag)
 $(deprange $PV $MAXKDEVER kde-base/kdeaccessibility-iconthemes)
 $(deprange $PV $MAXKDEVER kde-base/kmousetool)
 $(deprange $PV $MAXKDEVER kde-base/kbstateapplet)
-$(deprange $PV $MAXKDEVER kde-base/kttsd)
 $(deprange $PV $MAXKDEVER kde-base/kmouth)"
-
