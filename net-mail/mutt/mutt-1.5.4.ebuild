@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.5.4.ebuild,v 1.3 2003/03/26 05:23:45 latexer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mutt/mutt-1.5.4.ebuild,v 1.4 2003/03/26 23:30:41 latexer Exp $
 
 IUSE="ssl nls slang cjk crypt imap"
 
@@ -49,7 +49,7 @@ src_compile() {
 	fi
 
 	local myconf
-	myconf="`use_enable nls` `use_enable ssl` \
+	myconf="`use_enable nls` `use_with ssl` \
 			`use_enable imap` `use_enable crypt pgp`"
 
 	# --without-slang doesn't work;
