@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.69 2004/04/19 20:54:26 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.70 2004/05/25 01:04:09 caleb Exp $
 #
 # Author Dan Armak <danarmak@gentoo.org>
 #
@@ -164,6 +164,7 @@ set-kdedir() {
 				3.0) export PREFIX="/usr/kde/3";;
 				3.1) export PREFIX="/usr/kde/3.1";;
 				3.2) export PREFIX="/usr/kde/3.2";;
+				3.3) export PREFIX="/usr/kde/3.3";;
 				5.0) export PREFIX="/usr/kde/cvs";;
 			esac
 		fi
@@ -177,7 +178,7 @@ set-kdedir() {
 	else
 		if [ -z "$KDEBASE" ]; then
 			# find the latest kdelibs installed
-			for x in /usr/kde/{cvs,3.2,3.1,3.0,3} $PREFIX $KDE3LIBSDIR $KDELIBSDIR $KDE3DIR $KDEDIR /usr/kde/*; do
+			for x in /usr/kde/{cvs,3.3,3.2,3.1,3.0,3} $PREFIX $KDE3LIBSDIR $KDELIBSDIR $KDE3DIR $KDEDIR /usr/kde/*; do
 				if [ -f "${x}/include/kwin.h" ]; then
 					debug-print found
 					export KDEDIR="$x"
@@ -190,6 +191,7 @@ set-kdedir() {
 				3.0) export KDEDIR="/usr/kde/3";;
 				3.1) export KDEDIR="/usr/kde/3.1";;
 				3.2) export KDEDIR="/usr/kde/3.2";;
+				3.3) export KDEDIR="/usr/kde/3.3";;
 				5.0) export KDEDIR="/usr/kde/cvs";;
 			esac
 		fi
@@ -261,6 +263,7 @@ qtver-from-kdever() {
 		2*)	ver=2.3.1;;
 		3.1*)	ver=3.1;;
 		3.2*)	ver=3.2;;
+		3.3*)	ver=3.3;;
 		3*)	ver=3.0.5;;
 		5)	ver=3.2;; # cvs version
 		*)	echo "!!! error: $FUNCNAME called with invalid parameter: \"$1\", please report bug" && exit 1;;
@@ -295,6 +298,7 @@ min-kde-ver() {
 }
 
 # This function should fix the broken automake detection in the detect-autoconf file
+# This is only in use in arts-1.1.5.
 kde_fix_autodetect() {
 	cd ${S}/admin
 	patch -p0 <<EOF
@@ -341,19 +345,6 @@ kde_sandbox_patch() {
 	shift
 	done
 
-}
-
-#replace any instances of head -1 with head -n 1 in build files:
-kde_fix_head_instances() {
-	while [ -n "$1" ]; do
-		if [ -f "$1" ]; then
-			echo Performing head fix on $1
-			cp ${1} ${1}.orig
-			sed -e 's:head -1:head -n 1:g' -e 's:head -2:head -n 2:g' ${1}.orig > ${1}
-			rm ${1}.orig
-		fi
-	shift
-	done
 }
 
 # remove an optimization flag from a specific subdirectory's makefiles.
