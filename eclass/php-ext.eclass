@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext.eclass,v 1.2 2003/06/28 20:23:40 coredumb Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-ext.eclass,v 1.3 2003/07/12 16:27:31 coredumb Exp $
 #
 # Author: Tal Peer <coredumb@gentoo.org>
 #
@@ -32,6 +32,30 @@ DEPEND="${DEPEND}
 		=sys-devel/m4-1.4
 		>=sys-devel/libtool-1.4.3"
 
+php-ext_buildinilist () {
+	# work out the list of .ini files to edit/add to
+
+	if [ -z "${PHPSAPILIST}" ]; then
+		PHPSAPILIST="apache1 apache2 cli"
+	fi
+	
+	PHPINIFILELIST=""
+
+	for x in ${PHPSAPILIST} ; do
+		if [ -f /etc/php/${x}-php4/php.ini ]; then
+			PHPINIFILELIST="${PHPINIFILELIST} /etc/php/${x}-php4/php.ini"
+		fi
+	done
+	
+	if [[ ${PHPINIFILELIST} = "" ]]; then
+		msg="No PHP ini files found for this extension"
+		eerror ${msg}
+		die ${msg}
+	fi
+
+#	einfo "php.ini files found in $PHPINIFILELIST"
+}
+
 php-ext_src_compile() {
 	#phpize creates configure out of config.m4
 	phpize
@@ -50,19 +74,53 @@ php-ext_src_install() {
 
 php-ext_pkg_postinst() {
 	if [ "$PHP_EXT_INI" = "yes" ] ; then
-		if [ `grep ${EXT_DIR}/${PHP_EXT_NAME}.so /etc/php4/php.ini` ] ; then
-			einfo "No changes made to php.ini"
-		else
-			if [ "$PHP_EXT_ZENDEXT" = "yes" ] ; then
-				echo zend_extension=${EXT_DIR}/${PHP_EXT_NAME}.so >> /etc/php4/php.ini
-			else
-				echo extension=${EXT_DIR}/${PHP_EXT_NAME}.so >> /etc/php4/php.ini
-			fi
-		
-			einfo "${PHP_EXT_NAME} has been added to php.ini"
-			einfo "Please check phpinfo() output to verify that ${PHP_EXT_NAME} is loaded."
-		fi
-	else
-		einfo "No changes made to php.ini"
+		php-ext_buildinilist
+		php-ext_addextension "${EXT_DIR}/${PHP_EXT_NAME}.so"
 	fi
 }
+
+php-ext_extension_is_present () {
+	grep "^$1=$2" $3 > /dev/null 2>&1
+}
+
+php-ext_addextensiontoinifile () {
+	php-ext_extension_is_present $1 $2 $3 && return
+
+	einfo "Extension added to $3"
+	echo "$1=$2" >> $3
+}
+
+php-ext_addextension () {
+	if [ "${PHP_EXT_ZENDEXT}" = "yes" ]; then
+		ext="zend_extension"
+	else
+		ext="extension"
+	fi
+
+	for x in ${PHPINIFILELIST} ; do
+		php-ext_addextensiontoinifile "$ext" "$1" "$x"
+	done
+}
+	
+php-ext_setting_is_present () {
+	grep "^$1=" $2 > /dev/null 2>&1
+}
+
+# $1 - setting name
+# $2 - setting value
+# $3 - file to add to
+
+php-ext_addtoinifile () {
+	php-ext_setting_is_present $1 $3 && return
+
+	einfo "Added '$1=$2' to $3"
+	echo "$1=$2" >> $3
+}
+
+php-ext_addtoinifiles () {
+	for x in ${PHPINIFILELIST} ; do
+		php-ext_addtoinifile $1 $2 $x
+	done
+}
+	
+
