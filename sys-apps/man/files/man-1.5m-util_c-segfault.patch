@@ -1,0 +1,67 @@
+  When calling man for instance with:
+
+    $ man -k "foo bar"
+
+  will result in the following crash:
+
+    $ man -k "foo bar"
+    sh: line 1: unsafe: command not found
+    Error executing formatting or display command.
+    System command unsafe exited with status 127.
+    Segmentation fault
+
+  The reason for this is that my_xsprintf() in util.c passes
+  NOT_SAFE as the result if the string is not shell safe.
+  When do_appros() (or whatever) then calls 'free(command)',
+  free() tries to free a constant, and segfault.
+
+  The attached solution are not eligant, but works without
+  breaking the API.  Basically we redefine NOT_SAFE as a
+  message that we want to display, prepended with 'echo'.
+  When the command is then executed, our message are displayed,
+  and not the the line containing:
+  
+    sh: line 1: unsafe: command not found
+
+  Further more, we do not return NOT_SAFE, but rather a string
+  that we malloc, and then fill with the contents of NOT_SAFE,
+  which will solve us trying to free a constant.
+
+  More info can be found at:
+
+    http://bugs.gentoo.org/show_bug.cgi?id=9761
+
+  Alternatively it is possible to redefine what is "shell safe",
+  but that will me a much more comprehensive fix ...
+ 
+ 
+  Martin Schlemmer <azarah@gentoo.org> (26 Dec 2002).
+
+--- man-1.5k/src/util.c.orig	2002-12-26 07:41:03.000000000 +0200
++++ man-1.5k/src/util.c	2002-12-26 07:51:48.000000000 +0200
+@@ -237,7 +237,7 @@
+  * The %S parameters are checked for being shell safe.
+  * The %Q parameters are checked for being shell safe inside single quotes.
+  */
+-#define NOT_SAFE "/unsafe/"
++#define NOT_SAFE "echo Cannot run command, as it is not shell safe!\necho Check that you do not quote search strings, etc."
+
+ static int
+ is_shell_safe(const char *ss, int quoted) {
+@@ -295,8 +295,14 @@
+ 			case 'Q':
+ 			case 'S': /* check and turn into 's' */
+ 				ss = va_arg(p, char *);
+-				if (!is_shell_safe(ss, (s[1] == 'Q')))
+-					return NOT_SAFE;
++				if (!is_shell_safe(ss, (s[1] == 'Q'))) {
++					/* we cannot return NOT_SAFE, as it will cause
++					 * free to segfault in trying to free a constant
++					 */
++					s = my_malloc(sizeof(NOT_SAFE) + 1);
++					s = strncpy(s, NOT_SAFE, sizeof(NOT_SAFE));
++					return s;
++				}
+ 				len += strlen(ss);
+ 				s[1] = 's';
+ 				break;

@@ -1,0 +1,57 @@
+  Do not print the 'man: No such file or directory' error if
+  'man -d' was called and the NLS catalogue was not found, as
+  it confuses people, and be more informative.  More info at:
+
+    http://bugs.gentoo.org/show_bug.cgi?id=
+   
+   
+  Martin Schlemmer <azarah@gentoo.org> (26 Dec 2002).
+
+--- man-1.5k/catopen/catopen.c.orig	2002-12-26 08:25:07.000000000 +0200
++++ man-1.5k/catopen/catopen.c	2002-12-26 10:25:06.000000000 +0200
+@@ -10,7 +10,11 @@
+ extern char *my_malloc(int);	/* in util.c */
+ 
+ #ifndef DEFAULT_NLSPATH
+-#define DEFAULT_NLSPATH "/usr/lib/locale/%N/%L"
++# if __GLIBC__ >= 2
++#  define DEFAULT_NLSPATH "/usr/share/locale/%L/%N"
++# else
++#  define DEFAULT_NLSPATH "/usr/lib/locale/%N/%L"
++# endif
+ #endif
+ 
+ static nl_catd my_catopenpath(char *name, char *path);
+--- man-1.5k/src/gripes.c.orig	2002-12-26 08:13:53.000000000 +0200
++++ man-1.5k/src/gripes.c	2002-12-26 10:29:46.000000000 +0200
+@@ -47,14 +47,25 @@
+ 	    if (!lg)
+ 		    lg = getenv("LC_ALL");
+ 	    if ((s || lg) && (!lg || strncmp(lg, "en", 2))) {
+-		perror(mantexts);
++               /* This prints 'man: No such file or directory' which
++                * confuses people.  The fprintf message should really
++                * be enouth ...
++                */
++/*             perror(mantexts); */
++
+ 		fprintf(stderr,
+-"Failed to open the message catalog %s on the path NLSPATH=%s\n\n",
+-			mantexts, s ? s : "<none>");
++"Failed to open the message catalog \"%s\" for locale \"%s\"\n\
++(NLSPATH=\"%s\")\n\n",
++                       mantexts, lg ? lg : "<none>",
++                       s ? s : DEFAULT_NLSPATH);
+ 	    } else if (debug) {
+-		perror(mantexts);
++               /* This prints 'man: No such file or directory' which
++                * confuses people.  The fprintf message should really
++                * be enouth ...
++                */
++/*             perror(mantexts); */
+ 		fprintf(stderr,
+-"Looked whether there exists a message catalog %s, but there is none\n"
++"Looked whether there exists a message catalog \"%s\", but there is none\n\n"
+ "(and for English messages none is needed)\n\n",
+ 			mantexts);
+             }

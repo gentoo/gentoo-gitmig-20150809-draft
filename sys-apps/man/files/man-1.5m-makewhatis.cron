@@ -1,0 +1,11 @@
+#!/bin/sh
+#
+# Uncomment the following if you want 
+# your whatis database rebuilt regularly
+#
+# this is part of the man package
+#
+#
+
+#source /etc/profile
+#/usr/sbin/makewhatis -w
