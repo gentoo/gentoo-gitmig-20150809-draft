@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.44 2004/11/08 00:23:11 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/toolchain.eclass,v 1.45 2004/11/08 05:54:25 lv Exp $
 #
 # This eclass should contain general toolchain-related functions that are
 # expected to not change, or change much.
@@ -569,8 +569,11 @@ do_gcc_config() {
 	# some packages with one compiler and others with another. besides, it's
 	# just plain rude. ;)
 	# ...unless we're bootstrapping and NEED a compiler with c++!
-	if use !bootstrap && use !build ; then
-		local current_gcc_libpath="$(gcc-config -L)"
+	# ...and if the gcc-config -L result is no-config, lets just skip the
+	# rest of the exclusion logic altogether, since we certainly want to
+	# run gcc-config.
+	if use !bootstrap && use !build && [ "$(gcc-config -L | grep -v ^\ )" != "no-config" ] ; then
+		local current_gcc_libpath="$(gcc-config -L | grep -v ^\ )"
 		if [ -e ${ROOT}${current_gcc_libpath%:*}/specs -a -e ${ROOT}/etc/env.d/gcc/${current_gcc_config} ] ; then
 			local current_gcc_version="$(echo ${current_gcc_config} | awk -F - '{ print $5 }')"
 			if [ "${current_gcc_version}" != "${MY_PV_FULL}" ] ; then
