@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r1.ebuild,v 1.2 2004/02/26 19:32:05 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.3.3-r1.ebuild,v 1.3 2004/02/26 19:55:17 pappy Exp $
 
 IUSE="static nls bootstrap java build X multilib nogcj"
 
@@ -260,9 +260,11 @@ update_gcc_for_libc_ssp() {
 }
 
 src_unpack() {
+	local release_version="Gentoo Linux ${PVR}"
+
 	if [ -n "${PP_VER}" ] && [ "${ARCH}" != "hppa" ]
 	then
-		# Check for the glibc to have the guard
+		# the guard check should be very early in the unpack process
 		check_glibc_ssp
 	fi
 
@@ -317,59 +319,45 @@ src_unpack() {
 		epatch ${FILESDIR}/3.3.2/gcc332-altivec-fix.patch
 	fi
 
-	if [ "${ARCH}" == "hppa" ]
+	# non-default SSP and PIE support for the Gentoo Hardened project
+	if [ "${ARCH}" != "hppa" -a "${ARCH}" != "hppa64" -a -n "${PP_VER}" ]
 	then
-		if [ -n "`use hardened`" ]
-		then
-			# hppa system without propolice and with hardened
-			einfo "Updating gcc to use automatic PIE building ..."
-			sed -e 's|^ALL_CFLAGS = |ALL_CFLAGS = -DEFAULT_PIE |' \
-				-i ${S}/gcc/Makefile.in || die "Failed to update gcc!"
+		# ProPolice Stack Smashing protection
+		EPATCH_OPTS="${EPATCH_OPTS} ${WORKDIR}/protector.dif" \
+		epatch ${FILESDIR}/3.3.1/gcc331-pp-fixup.patch
 
-			RELEASE_VERSION="${BRANCH_UPDATE} (Gentoo Hardened GNU/Linux ${PVR}, pie-${PIE_VER})"
-		else
-			# hppa system without propolice and without hardened
-			RELEASE_VERSION="${BRANCH_UPDATE} (Gentoo Linux ${PVR})"
-		fi
-	else
-		if [ -z "${PP_VER}" ]
-		then
-			# Make gcc's version info specific to Gentoo
-			RELEASE_VERSION="${BRANCH_UPDATE} (Gentoo Linux ${PVR})"
-		else
-			# ProPolice Stack Smashing protection
-			EPATCH_OPTS="${EPATCH_OPTS} ${WORKDIR}/protector.dif" \
-			epatch ${FILESDIR}/3.3.1/gcc331-pp-fixup.patch
+		EPATCH_OPTS="${EPATCH_OPTS} ${WORKDIR}/protector.dif" \
+		epatch ${FILESDIR}/3.3.3/gcc333-ssp-3.3_7-fixup.patch
 
-			EPATCH_OPTS="${EPATCH_OPTS} ${WORKDIR}/protector.dif" \
-			epatch ${FILESDIR}/3.3.3/gcc333-ssp-3.3_7-fixup.patch
+		epatch ${WORKDIR}/protector.dif
 
-			epatch ${WORKDIR}/protector.dif
+		cp ${WORKDIR}/protector.c ${WORKDIR}/${P}/gcc/ || die "protector.c not found"
+		cp ${WORKDIR}/protector.h ${WORKDIR}/${P}/gcc/ || die "protector.h not found"
 
-			cp ${WORKDIR}/protector.c ${WORKDIR}/${P}/gcc/ || die "protector.c not found"
-			cp ${WORKDIR}/protector.h ${WORKDIR}/${P}/gcc/ || die "protector.h not found"
+		release_version="${release_version}, ssp-${PP_VER}"
 
-			update_gcc_for_libc_ssp
-
-			if [ -n "`use hardened`" ]
-			then
-				einfo "Updating gcc to use automatic PIE + SSP building ..."
-				sed -e 's|^ALL_CFLAGS = |ALL_CFLAGS = -DEFAULT_PIE_SSP |' \
-					-i ${S}/gcc/Makefile.in || die "Failed to update gcc!"
-
-				RELEASE_VERSION="${BRANCH_UPDATE} (Gentoo Hardened GNU/Linux ${PVR}, pie-${PIE_VER} ssp-${PP_FVER})"
-			else
-				RELEASE_VERSION="${BRANCH_UPDATE} (Gentoo Linux ${PVR}, pie-${PIE_VER} ssp-${PP_FVER})"
-			fi
-		fi
+		update_gcc_for_libc_ssp
 	fi
 
-	# update the Gentoo gcc version string, use hardened if building default PIE and SSP
-	version_patch ${FILESDIR}/3.3.3/gcc333-gentoo-branding.patch \
-		"${RELEASE_VERSION}" || die "Failed Branding"
+	# This patch enables improved PIE and SSP behaviour but does not
+	# enable it by default ...
 
-	# this patch enables improved pie and ssp behaviour but does not enable it by default
 	cd ${WORKDIR}/${P}; epatch "${DISTDIR}/gcc-3.3.2-nodefault-pie-ssp.patch"
+
+	if [ -n "`use hardened`" ]
+	then
+		einfo "Updating gcc to use automatic PIE + SSP building ..."
+		sed -e 's|^ALL_CFLAGS = |ALL_CFLAGS = -DEFAULT_PIE_SSP |' \
+			-i ${S}/gcc/Makefile.in || die "Failed to update gcc!"
+
+		# will show if default PIE/SSP building was used - make bug reports easier
+		release_version="${release_version/Gentoo/Gentoo Hardened}, pie-${PIE_VER}"
+	else
+		release_version="${release_version}, pie-${PIE_VER}"
+	fi
+
+	version_patch ${FILESDIR}/3.3.3/gcc333-gentoo-branding.patch \
+		"${BRANCH_UPDATE} (${release_version})" || die "Failed Branding"
 
 	# TODO: on arches where we lack a Scrt1.o (like parisc) we still need unpack, compile and install logic
 	# TODO: for the crt1Snocsu.o provided by a custom gcc-pie-ssp.tgz which can also be included in SRC_URI
