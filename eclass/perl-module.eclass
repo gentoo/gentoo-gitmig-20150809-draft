@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.64 2004/08/02 18:45:37 rac Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/perl-module.eclass,v 1.65 2004/10/01 21:32:07 mcummings Exp $
 #
 # Author: Seemant Kulleen <seemant@gentoo.org>
 # Maintained by the Perl herd <perl@gentoo.org>
@@ -27,6 +27,9 @@ EXPORT_FUNCTIONS pkg_setup pkg_preinst pkg_postinst pkg_prerm pkg_postrm \
 # for the same reasons, make the perl dep >=5.8.2 to get everybody
 # with 5.8.0 and its 6.03 makemaker up to a version that can
 # understand DESTDIR
+#
+# 2004.10.01 mcummings
+# noticed a discrepancy in how we were sed fixing references to ${D}
 
 DEPEND=">=dev-lang/perl-5.8.2 !<dev-perl/ExtUtils-MakeMaker-6.17"
 SRC_PREP="no"
@@ -35,6 +38,8 @@ SRC_TEST="skip"
 PERL_VERSION=""
 SITE_ARCH=""
 SITE_LIB=""
+VENDOR_LIB=""
+VENDOR_ARCH=""
 ARCH_LIB=""
 POD_DIR=""
 
@@ -107,8 +112,22 @@ perl-module_src_install() {
 		rm -f ${D}/${SITE_LIB}/perllocal.pod
 	fi
 
-	for FILE in `find ${D} -type f -name "*.html" -o -name ".packlist"`; do
-    	sed -i -e "s:${D}:/:g" ${FILE}
+	if [ -f ${D}${VENDOR_LIB}/perllocal.pod ];
+	then 
+		touch ${D}/${POD_DIR}/${P}.pod
+		sed -e "s:${D}::g" \
+			${D}${VENDOR_LIB}/perllocal.pod >> ${D}/${POD_DIR}/${P}.pod
+		touch ${D}/${POD_DIR}/${P}.pod.vendor
+		cat ${D}/${POD_DIR}/${P}.pod >>${D}/${POD_DIR}/${P}.pod.vendor
+		rm -f ${D}/${VENDOR_LIB}/perllocal.pod
+	fi
+
+
+	for FILE in `find ${D} -type f |grep -v '.so'`; do
+		STAT=`file $FILE| grep -i " text"`
+		if [ "${STAT}x" != "x" ]; then
+			sed -i -e "s:${D}:/:g" ${FILE}
+		fi
 	done
 
 	for doc in Change* MANIFEST* README*; do
@@ -146,20 +165,28 @@ perl-module_pkg_postrm() {
 
 perlinfo() {
 
+	eval `perl '-V:version'`
+	PERL_VERSION=${version}
+	
+	eval `perl '-V:installsitearch'`
+	SITE_ARCH=${installsitearch}
+	
+	eval `perl '-V:installsitearch'`
+	SITE_LIB=${installsitearch}
+	
+	eval `perl '-V:installarchlib'`
+	ARCH_LIB=${installarchlib}
+	
+	eval `perl '-V:installvendorlib'`
+	VENDOR_LIB=${installvendorlib}
+
+	eval `perl '-V:installvendorarch'`
+	VENDOR_ARCH=${installvendorarch}
+	
 	if [ -f /usr/bin/perl ]
 	then 
 		POD_DIR="/usr/share/perl/gentoo-pods/${version}"
 	fi
-	eval `perl '-V:version'`
-	PERL_VERSION=${version}
-	eval `perl '-V:installsitearch'`
-	SITE_ARCH=${installsitearch}
-	eval `perl '-V:installarchlib'`
-	ARCH_LIB=${installarchlib}
-	eval `perl '-V:installarchlib'`
-	ARCH_LIB=${installarchlib}
-	eval `perl '-V:installsitearch'`
-	SITE_LIB=${installsitearch}
 }
 
 updatepod() {
@@ -173,6 +200,10 @@ updatepod() {
 		done
 		for FILE in `find ${POD_DIR} -type f -name "*.pod.site"`; do
 		   cat ${FILE} >> ${SITE_LIB}/perllocal.pod
+		   rm -f ${FILE}
+		done
+		for FILE in `find ${POD_DIR} -type f -name "*.pod.vendor"`; do
+		   cat ${FILE} >> ${VENDOR_LIB}/perllocal.pod
 		   rm -f ${FILE}
 		done
 	fi
