@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-5.0.0_beta1.ebuild,v 1.1 2004/07/05 12:20:07 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-5.0.0_beta1.ebuild,v 1.2 2004/07/05 15:16:32 lanius Exp $
 
 inherit flag-o-matic libtool
 
@@ -49,11 +49,12 @@ src_compile() {
 		myconf="${myconf} --without-cups"
 	fi
 
-	if use cups && use ppds; then
-		myconf="${myconf} --enable-cups-ppds"
-	else
-		myconf="${myconf} --disable-cups-ppds"
-	fi
+	# disable for now, it does not work correctly
+	#if use cups && use ppds; then
+	#	myconf="${myconf} --enable-cups-ppds --enable-cups-level3-ppds"
+	#else
+	#	myconf="${myconf} --disable-cups-ppds"
+	#fi
 
 	use foomaticdb \
 		&& myconf="${myconf} --with-foomatic3" \
