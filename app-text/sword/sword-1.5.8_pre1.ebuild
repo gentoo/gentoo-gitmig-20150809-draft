@@ -1,32 +1,31 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.5.7.ebuild,v 1.7 2004/06/23 21:48:37 squinky86 Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/sword-1.5.8_pre1.ebuild,v 1.1 2004/06/23 21:48:37 squinky86 Exp $
 
-inherit eutils
-
-DESCRIPTION="library for bible reading software"
+DESCRIPTION="Library for Bible reading software"
 HOMEPAGE="http://www.crosswire.org/sword/"
-SRC_URI="ftp://ftp.crosswire.org/pub/sword/source/v1.5/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-# do not mark stable- problems when compiling (bug #48523)
+# temporary ebuild to fix bug #48523- please do not mark stable
 KEYWORDS="~x86 ~ppc ~amd64"
-
+SRC_URI="http://dev.gentoo.org/~squinky86/files/${P}.tar.bz2"
 IUSE="icu curl"
-DEPEND="virtual/glibc
+RDEPEND="virtual/glibc
 	sys-libs/zlib
 	curl? ( >=net-misc/curl-7.10.8 )
 	icu? ( dev-libs/icu )"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PN}-installmgr-gentoo.patch
-	epatch ${FILESDIR}/${PN}-gcc34-gentoo.patch
-}
+DEPEND="${RDEPEND}
+	>=sys-devel/automake-1.7.2"
 
 src_compile() {
+	export WANT_AUTOMAKE="1.6"
+	cd ${S}
+	./autogen.sh \
+		--host=${CHOST} \
+		--prefix=/usr \
+		--infodir=/usr/share/info \
+		--mandir=/usr/share/man || die "autogen.sh failed"
 	econf --without-clucene --without-lucene `use_with icu` `use_with curl` || die "configure failed"
 	emake || die "compile failed"
 }
@@ -34,6 +33,7 @@ src_compile() {
 src_install() {
 	einstall || die "install failed"
 	dodir /etc
+	insdir /etc
 	doins ${FILESDIR}/sword.conf
 
 	dodoc AUTHORS CODINGSTYLE INSTALL ChangeLog README

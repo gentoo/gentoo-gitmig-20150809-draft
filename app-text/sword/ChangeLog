@@ -1,6 +1,12 @@
 # ChangeLog for app-text/sword
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.14 2004/06/01 21:12:30 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sword/ChangeLog,v 1.15 2004/06/23 21:48:37 squinky86 Exp $
+
+*sword-1.5.8_pre1 (23 Jun 2004)
+
+  23 Jun 2004; Jon Hood <squinky86@gentoo.org> sword-1.5.7.ebuild,
+  +sword-1.5.8_pre1.ebuild:
+  version bump to fix #48523
 
   01 Jun 2004; Travis Tilley <lv@gentoo.org> sword-1.5.7.ebuild:
   added ~amd64 keyword
