@@ -1,21 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 bf38081c28b194a59f25828e502d8b2b gnome-cups-manager-0.30.ebuild 807
 MD5 112f3c4c3da156b141c8f9b4198c0264 gnome-cups-manager-0.17.ebuild 869
-MD5 38196327f1b73f24ddf5881e9c9a0f26 ChangeLog 5464
+MD5 831be0ef76d348f64b419f084a7d6a9e ChangeLog 5561
 MD5 574309004015c52c39e2f4e8122c18a3 metadata.xml 180
-MD5 679adf0d6e24c1063a217eb3324a20da gnome-cups-manager-0.28.ebuild 802
-MD5 0c0cb642ffb64f6fb6374990ed754088 files/gnome-cups-manager.desktop 312
+MD5 9e9f2490917fd74d9f49f9edb2376301 gnome-cups-manager-0.28.ebuild 800
+MD5 bf38081c28b194a59f25828e502d8b2b gnome-cups-manager-0.30.ebuild 807
 MD5 6dae95b443777de3b98de444d36134ec files/digest-gnome-cups-manager-0.17 76
-MD5 07a029b527bbc920b1174bd5dff0f048 files/digest-gnome-cups-manager-0.28 76
-MD5 998708b9d087d7d8f34f8dcf319fb4b3 files/digest-gnome-cups-manager-0.30 76
 MD5 38ef34fd59e1c024d719000653111039 files/gnome-cups-manager-0.17-fix_gtk24_deprecation.patch 3301
 MD5 1772dd481b0fa6e38d67b284f73df4bf files/gnome-cups-manager-0.18-paren.patch 486
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCObOMevY57Fted3ERAmOXAJ9WbJLst7KLl4U63JIN/UWtjTGEHQCferY7
-3tBJiBaTJbjfTk02HqawyQo=
-=2wXl
------END PGP SIGNATURE-----
+MD5 07a029b527bbc920b1174bd5dff0f048 files/digest-gnome-cups-manager-0.28 76
+MD5 998708b9d087d7d8f34f8dcf319fb4b3 files/digest-gnome-cups-manager-0.30 76
+MD5 0c0cb642ffb64f6fb6374990ed754088 files/gnome-cups-manager.desktop 312

@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 d63cb268508db805f38c2f8853e66586 libgnomecups-0.1.10.ebuild 533
-MD5 a0f771c095bc4e333e5688475d2839e1 libgnomecups-0.1.14.ebuild 534
-MD5 104792df1d6e8ee7d38a6d211d12b38d libgnomecups-0.2.0.ebuild 530
-MD5 c77b350ec8a8dda44cea422ceaa3cd96 ChangeLog 3582
+MD5 d0cb968aa659d8624105908aaffb6ca8 ChangeLog 3675
 MD5 574309004015c52c39e2f4e8122c18a3 metadata.xml 180
 MD5 4e8f6b4306d3c55047cd893628818869 libgnomecups-0.1.6.ebuild 521
+MD5 d63cb268508db805f38c2f8853e66586 libgnomecups-0.1.10.ebuild 533
+MD5 5758facba91940f1cd53d43145fac999 libgnomecups-0.1.14.ebuild 532
+MD5 104792df1d6e8ee7d38a6d211d12b38d libgnomecups-0.2.0.ebuild 530
+MD5 598c276edd67500c9c91148bb57c968c files/digest-libgnomecups-0.1.6 71
 MD5 0905ed8e2bea808cde2ae60aab7f3d31 files/digest-libgnomecups-0.1.10 72
 MD5 972a00f1c984c22f4b9cdb69122edd38 files/digest-libgnomecups-0.1.14 72
-MD5 598c276edd67500c9c91148bb57c968c files/digest-libgnomecups-0.1.6 71
 MD5 3f3a8f9b995d2d0f5db06e6cf01b9b3f files/digest-libgnomecups-0.2.0 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFCL4HAevY57Fted3ERAmuGAKDO55EXhwRSRvUfxYlL1bmiLdUViwCgpJEy
-f1hBfVE0aNqs2VBDji3FsU8=
-=0lop
------END PGP SIGNATURE-----
