@@ -147,9 +147,6 @@ dev-lang/perl
 >=net-nds/ypbind-1.7-r6
 >=net-nds/ypserv-1.3.9-r6
 >=net-print/cups-1.1.10-r6
-# jnelson says the lower ntp version is stabler so putting that in instead
-#>=net-misc/ntp-4.1.71-r6
-<net-misc/ntp-4.1.71
 >=sys-apps/apmd-3.0.1-r6
 #>=net-mail/postfix-20010228.5-r6
 >=net-misc/portsentry-1.1-r6
