@@ -1,7 +1,7 @@
 #!/bin/bash
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.6 2005/03/08 23:39:39 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/crossdev/files/crossdev,v 1.7 2005/03/10 04:27:27 vapier Exp $
 
 source /sbin/functions.sh || exit 1
 die() {
@@ -35,8 +35,7 @@ ${BRACKET}Target (-t)${NORMAL}:
     The target takes the form:   ${BRACKET}ARCH-VENDOR-OS-LIBC${NORMAL}
     The default 'pc-linux-gnu' will be appended if only ARCH is specified.
     Examples:
-       arm-pc-linux-gnu      hppa2.0-pc-linux-gnu   sparc-pc-linux-gnu
-       i386-pc-linux-uclibc  mips-pc-linux-uclibc   sh4-pc-linux-uclibc
+       arm-unknown-linux-gnu  sh4-pc-linux-uclibc  mips-pc-linux-uclibc
 
 For more info, please see ${HILITE}crossdev${NORMAL}(8).
 EOF
@@ -98,20 +97,20 @@ TARCH=
 HARCH=$(env -uARCH portageq envvar ARCH)
 CTARGET=
 STAGE=3
-BVER="[latest]"
-GVER="[latest]"
-KVER="[latest]"
+BVER="[latest]" ; BUSE=""
+GVER="[latest]" ; GUSE=""
+KVER="[latest]" ; KUSE=""
 LPKG="glibc"
-LVER="[latest]"
+LVER="[latest]" ; LUSE=""
 
 while [[ $# -gt 0 ]] ; do
 	case $1 in
 	-V|--version)   echo "crossdev-GENTOO_PV"; exit 0;;
 	-t|--target)    shift; parse_target $1;;
-	--b|--binutils) shift; BVER=-$1;;
-	--g|--gcc)      shift; GVER=-$1;;
-	--k|--kernel)   shift; KVER=-$1;;
-	--l|--libc)     shift; LVER=-$1;;
+	--b|--binutils) shift; BVER=$1;;
+	--g|--gcc)      shift; GVER=$1;;
+	--k|--kernel)   shift; KVER=$1;;
+	--l|--libc)     shift; LVER=$1;;
 	-s?|--stage?)   STAGE=${1:0-1};;
 	-a|-b|-p|-v)    UOPTS="${UOPTS} $1";;
 	-h|--help)      usage;;
@@ -129,6 +128,12 @@ if [[ -z $(portageq best_version / binutils-config) ]] ; then
 	eerror "in order to keep from screwing things up."
 	eerror "That means you must be running unstable versions of"
 	eerror "both binutils and binutils-config."
+	exit 1
+fi
+if [[ -z $(egrep 'inherit.*toolchain( |$)' /var/db/pkg/sys-devel/gcc-*/*.ebuild) ]] ; then
+	eerror "Sorry, but your host system needs to have "
+	eerror "an unstable version of gcc in order to"
+	eerror "keep from screwing things up."
 	exit 1
 fi
 
@@ -178,11 +183,17 @@ set_keywords() {
 		echo "cross-${CTARGET}/${pkg} * ~* -*" >> package.keywords
 	fi
 }
-touch package.keywords package.mask
-set_keywords binutils ${BVER}
-set_keywords gcc ${GVER}
-set_keywords linux-headers ${KVER}
-set_keywords ${LPKG} ${LVER}
+set_use() {
+	local pkg=$1 use=$2
+	[[ -z ${use} ]] && return
+	sed -i -e "/cross-${CTARGET}\/${pkg}/d" package.use
+	echo "cross-${CTARGET}/${pkg} ${use}" >> package.use
+}
+touch package.{keywords,mask,use}
+set_keywords binutils ${BVER}      ; set_use binutils ${BUSE}
+set_keywords gcc ${GVER}           ; set_use gcc ${GUSE}
+set_keywords linux-headers ${KVER} ; set_use linux-headers ${KUSE}
+set_keywords ${LPKG} ${LVER}       ; set_use ${LPKG} ${LUSE}
 
 cd "${PORTDIR_OVERLAY}"/cross-${CTARGET}
 ln -sf "${PORTDIR}"/sys-devel/binutils
@@ -213,8 +224,8 @@ EOPTS="${UOPTS} -u --nodeps"
 
 doemerge binutils
 USE=nocxx doemerge gcc gcc-stage1
-doemerge linux-headers
 [[ ${STAGE} -gt 1 ]] || exit 0
+doemerge linux-headers
 USE=$TARCH doemerge ${LPKG}
 
 [[ ${STAGE} -gt 2 ]] || exit 0
