@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/ibm-jdk
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ChangeLog,v 1.38 2004/04/18 14:48:07 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jdk/ChangeLog,v 1.39 2004/04/20 18:00:26 humpback Exp $
+
+  20 Apr 2004; Gustavo Felisberto <humpback@gentoo.org>; :
+  The digest file had a reference for a IBMJava2-SDK-142.tgz file, and the
+  md5sum of the IBMJava2-SDK-141.tgz
 
   18 Apr 2004; Chris Aniszczyk <zx@gentoo.org> ibm-jdk-1.4.1-r1.ebuild:
   Fixing typo in ebuild. Closes #47850.
