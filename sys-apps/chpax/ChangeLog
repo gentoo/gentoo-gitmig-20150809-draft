@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/chpax
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/ChangeLog,v 1.10 2003/10/27 23:23:01 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/chpax/ChangeLog,v 1.11 2003/11/23 00:17:20 solar Exp $
+
+  22 Nov 2003; <solar@gentoo.org> chpax-0.4.ebuild, files/pax-conf.d,
+  files/pax-init.d:
+  extended functionality added for initscript, added sane settings to keep bugs
+  down. no version bump needed
 
   27 Oct 2003; <solar@gentoo.org> chpax-0.5.ebuild, files/pax-conf.d,
   files/pax-init.d:
