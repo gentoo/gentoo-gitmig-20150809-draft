@@ -1,0 +1,8 @@
+# ChangeLog for sys-apps/powernowd
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/powernowd/ChangeLog,v 1.1 2004/04/05 23:50:27 vapier Exp $
+
+*powernowd-0.90 (05 Apr 2004)
+
+  05 Apr 2004; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Kai Groner #43390.

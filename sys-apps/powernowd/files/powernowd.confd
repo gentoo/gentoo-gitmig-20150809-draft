@@ -1,0 +1,6 @@
+# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/powernowd/files/powernowd.confd,v 1.1 2004/04/05 23:50:27 vapier Exp $
+
+# For more info see `powernowd -h`
+POWERNOWD_OPTS=""
