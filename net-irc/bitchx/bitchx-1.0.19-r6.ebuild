@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r6.ebuild,v 1.7 2003/12/03 20:31:37 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/bitchx/bitchx-1.0.19-r6.ebuild,v 1.8 2004/01/02 14:08:51 zul Exp $
 
 inherit flag-o-matic eutils
 
