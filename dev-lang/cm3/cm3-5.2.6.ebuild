@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3/cm3-5.2.6.ebuild,v 1.6 2004/01/24 19:58:51 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/cm3/cm3-5.2.6.ebuild,v 1.7 2004/04/02 01:09:45 vapier Exp $
 
 inherit fixheadtails
 
@@ -19,14 +19,6 @@ DEPEND="${RDEPEND}
 	dev-lang/cm3-bin"
 
 S=${WORKDIR}
-
-export GCC_BACKEND="yes"
-export M3GDB="no"
-export HAVE_SERIAL="no"
-unset M3GC_SIMPLE
-[ `use tcltk` ] \
-	&& HAVE_TCL="yes" \
-	|| HAVE_TCL="no"
 
 src_unpack() {
 	unpack ${A}
@@ -48,7 +40,18 @@ src_unpack() {
 		scripts/pkginfo.sh
 }
 
+setup_env() {
+	export GCC_BACKEND="yes"
+	export M3GDB="no"
+	export HAVE_SERIAL="no"
+	unset M3GC_SIMPLE
+	use tcltk \
+		&& HAVE_TCL="yes" \
+		|| HAVE_TCL="no"
+}
+
 src_compile() {
+	setup_env
 	cd scripts
 	for s in do-cm3-core do-cm3-base ; do
 		env -u P ROOT=${S} ./${s}.sh build || die "building ${s}"
@@ -56,6 +59,7 @@ src_compile() {
 }
 
 src_install() {
+	setup_env
 	local TARGET=`grep 'TARGET.*=' /usr/bin/cm3.cfg | awk '{print $4}' | sed 's:"::g'`
 	sed -i "s:\"/usr/lib/cm3/:\"${D}/usr/lib/cm3/:g" `find -name .M3SHIP` || die "fixing .M3SHIP"
 
@@ -65,7 +69,7 @@ src_install() {
 		env -u P ROOT=${S} ./${s}.sh ship || die "shipping ${s}"
 	done
 	cd ${D}/usr/lib/cm3/pkg
-	sed -i "s:${S}/*[^/-]*-[^/\"]*:/usr/lib/cm3/pkg:" `grep -RIl /var/tmp/portage *` || die "fixing .M3EXPORTS"
+	sed -i "s:${S}/*[^/-]*-[^/\"]*:/usr/lib/cm3/pkg:" `grep -RIl ${PORTAGE_TMPDIR}/portage *` || die "fixing .M3EXPORTS"
 
 	# do all this crazy linking so as to overwrite cm3-bin stuff
 	dodir /usr/bin
