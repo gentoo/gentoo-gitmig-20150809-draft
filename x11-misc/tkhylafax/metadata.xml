@@ -7,15 +7,9 @@
   <name>Steve Arnold</name>
   <description>Primary Maintainer</description>
 </maintainer>
-<longdescription>Front end for sending faxes with HylaFAX.  Current features include:
-        o Batching fax destinations
-        o Built-in faxnumber database
-        o Fast cover sheet generation 
-        o Cover sheet preview
-        o Cover sheet ONLY transmission option
-        o Directory browser
-        o Fax job dequeuing made easier
-        o Fax job scheduling made easier
-        o Highly configurable
+<longdescription>Front end for sending faxes with HylaFAX. 
+This code has barely been touched in several years, but it 
+works well enough, and is the only *nix client I found that 
+has certain features...
 </longdescription>
 </pkgmetadata>
