@@ -1,6 +1,3 @@
+MD5 747353be86040c7e4c49b553f3467b7c files/digest-mips-headers-2.4.21-r1 160
 MD5 00cb76dd90e67637707627d124aac54f ChangeLog 941
 MD5 bba8b4c80a9c90d171471fd4012b2161 mips-headers-2.4.21-r1.ebuild 1242
-MD5 747353be86040c7e4c49b553f3467b7c files/digest-mips-headers-2.4.21-r1 160
-MD5 538c2d572195a560219589ab6a584356 files/2.4.21-pre4/mips-sources-r4k-cache-fix.patch 1557
-MD5 9bc51a03dd26dee8e0ebe0048ef67145 files/2.4.21-pre4/mips-sources-gcc32-makefile-fix.patch 651
-MD5 3831b4dace1503fcd9cbaf745addfbce files/2.4.21-pre4/mips-sources-gcc33-makefile-fix.patch 651
