@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/dnd
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/dnd/ChangeLog,v 1.4 2003/02/12 09:22:09 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/dnd/ChangeLog,v 1.5 2004/01/25 22:02:17 pyrania Exp $
+
+  25 Jan 2004; Markus Nigbur <pyrania@gentoo.org> dnd-1.1.ebuild:
+  Hooray for epatch.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
