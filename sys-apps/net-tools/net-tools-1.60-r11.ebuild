@@ -1,13 +1,14 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r11.ebuild,v 1.3 2005/03/14 15:45:00 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r11.ebuild,v 1.4 2005/03/16 23:54:28 vapier Exp $
 
 inherit flag-o-matic toolchain-funcs eutils
 
+PVER=1.1
 DESCRIPTION="Standard Linux networking tools"
 HOMEPAGE="http://sites.inka.de/lina/linux/NetTools/"
 SRC_URI="http://www.tazenda.demon.co.uk/phil/net-tools/${P}.tar.bz2
-	mirror://gentoo/${P}-patches-1.0.tar.bz2"
+	mirror://gentoo/${P}-patches-${PVER}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
