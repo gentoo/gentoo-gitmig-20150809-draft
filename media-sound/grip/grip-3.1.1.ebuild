@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.1.1.ebuild,v 1.1 2003/07/11 16:59:33 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/grip/grip-3.1.1.ebuild,v 1.2 2003/07/11 21:47:15 mholzer Exp $
 
 inherit eutils
 
@@ -14,6 +14,7 @@ DEPEND="=x11-libs/gtk+-2.2*
 	media-sound/cdparanoia
 	media-libs/id3lib
 	gnome-base/gnome-libs
+	>=gnome-base/libgnomeui-2.2.0
 	gnome-base/ORBit2
 	gnome-base/libghttp
 	oggvorbis? ( media-sound/vorbis-tools )
