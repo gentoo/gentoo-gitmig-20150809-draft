@@ -1,6 +1,9 @@
 # ChangeLog for www-apps/tikiwiki
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/ChangeLog,v 1.8 2005/01/29 10:45:35 hansmi Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/tikiwiki/ChangeLog,v 1.9 2005/03/26 11:37:46 voxus Exp $
+
+  26 Mar 2005; Konstantin Arkhipov <voxus@gentoo.org> tikiwiki-1.8.5.ebuild:
+  Added ~amd64 keyword, closes bug #86726.
 
   29 Jan 2005; Michael Hanselmann <hansmi@gentoo.org> tikiwiki-1.8.5.ebuild:
   Stable on ppc, bug 78944.
