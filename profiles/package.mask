@@ -22,7 +22,11 @@
 ##   End example
 ##
 
-# bass@gentoo.org> (08 Aug 2002)
+# <george@gentoo.org> (08 Aug 2002)
+# new version, masked for testing
+=dev-lang/ghc-5.04
+
+# <bass@gentoo.org> (08 Aug 2002)
 # beta version for gnome2
 =app-games/teg-0.11.0
 
