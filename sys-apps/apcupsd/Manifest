@@ -3,8 +3,8 @@ Hash: SHA1
 
 MD5 2efa2a59694894eafd70880618ae6d1a apcupsd-3.10.13.ebuild 2510
 MD5 27ae5add10fc42e77804f1ecd768df87 metadata.xml 226
-MD5 adba3b4076dd9d9a09ca1215c8cbed7a apcupsd-3.10.15-r1.ebuild 2490
-MD5 fc5ae0c00b7c4f2595b3995626f30881 ChangeLog 8541
+MD5 4834d920d902f5a7d7b615fe8ea4973b apcupsd-3.10.15-r1.ebuild 2489
+MD5 29174fb0de50b04bf3fc6c939e6a2917 ChangeLog 8638
 MD5 ec48a12c6d8b56aeffbeaa629f8835ad files/digest-apcupsd-3.10.15-r1 68
 MD5 706952fc576fc75365b88542aada9702 files/digest-apcupsd-3.10.13 124
 MD5 8f1a2aa4fd0307c2cfe3733e8454d3c2 files/3.10.13/smtp.patch 2663
@@ -18,7 +18,7 @@ MD5 2a93b5c4f2574caa199b3d93cf838e8c files/3.10.15/apcupsd.in.patch 315
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBf4jFKtJO8LeSoosRAuYFAJwKLs3fUEnIFuwZ7O8D2pBBtv79TACdGygQ
-jkq6YTqpCpumpRTL09TlLRg=
-=SVta
+iD8DBQFBgrhiKtJO8LeSoosRAkWFAJ9LouLeGHpMPMup2av8h0WlbiK+1wCaAiGq
+H315OUeFqSOXfoz5Rt9rj3g=
+=eCuu
 -----END PGP SIGNATURE-----

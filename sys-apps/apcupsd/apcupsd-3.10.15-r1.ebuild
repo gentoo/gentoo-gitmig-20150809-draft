@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.15-r1.ebuild,v 1.5 2004/10/27 11:38:06 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apcupsd/apcupsd-3.10.15-r1.ebuild,v 1.6 2004/10/29 21:38:33 tantive Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://sourceforge/apcupsd/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~amd64 ~ppc ~sparc"
+KEYWORDS="x86 amd64 ~ppc ~sparc"
 IUSE="doc snmp usb apache2"
 
 DEPEND=">=sys-apps/baselayout-1.8.4
