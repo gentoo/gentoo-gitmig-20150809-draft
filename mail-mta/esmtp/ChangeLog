@@ -1,6 +1,9 @@
 # ChangeLog for mail-mta/esmtp
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/esmtp/ChangeLog,v 1.8 2005/01/13 18:00:10 ticho Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/esmtp/ChangeLog,v 1.9 2005/01/16 05:30:14 weeve Exp $
+
+  15 Jan 2005; Jason Wever <weeve@gentoo.org> esmtp-0.5.0-r1.ebuild:
+  Added ~sparc keyword.
 
   13 Jan 2005; Andrej Kacian <ticho@gentoo.org> esmtp-0.5.0-r1.ebuild:
   Fixed mailwrapper support.
