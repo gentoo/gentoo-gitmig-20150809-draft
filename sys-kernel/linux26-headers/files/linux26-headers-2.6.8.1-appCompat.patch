@@ -1570,3 +1570,16 @@ diff -ur linux-2.6.8.1/include/asm-parisc/types.h linux-2.6.8.1-gentoo/include/a
  typedef __signed__ long long __s64;
  typedef unsigned long long __u64;
  #endif
+diff -ur linux-2.6.8.1/include/asm-ppc/unaligned.h linux-2.6.8.1-gentoo/include/asm-ppc/unaligned.h
+--- linux-2.6.8.1/include/asm-ppc/unaligned.h	2004-07-10 01:47:34.000000000 +0100
++++ linux-2.6.8.1-gentoo/include/asm-ppc/unaligned.h	2004-09-25 19:07:46.956434136 +0100
+@@ -1,4 +1,3 @@
+-#ifdef __KERNEL__
+ #ifndef __PPC_UNALIGNED_H
+ #define __PPC_UNALIGNED_H
+ 
+@@ -15,4 +14,3 @@
+ #define put_unaligned(val, ptr) ((void)( *(ptr) = (val) ))
+ 
+ #endif
+-#endif /* __KERNEL__ */
