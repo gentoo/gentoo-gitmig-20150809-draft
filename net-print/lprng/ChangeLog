@@ -1,6 +1,11 @@
 # ChangeLog for net-print/lprng
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.19 2004/03/14 12:16:27 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/lprng/ChangeLog,v 1.20 2004/03/17 09:45:28 seemant Exp $
+
+  17 Mar 2004; Seemant Kulleen <seemant@gentoo.org> lprng-3.8.22.ebuild,
+  lprng-3.8.26.ebuild:
+  spelling of Berkeley fixed, thanks to: Martin Rieder <bugs@martinrieder.de> in
+  bug #44927
 
 *lprng-3.8.26 (14 Mar 2004)
 
