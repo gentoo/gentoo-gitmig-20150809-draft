@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/gentoo-dev-sources
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.165 2005/01/07 22:43:47 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/gentoo-dev-sources/ChangeLog,v 1.166 2005/01/08 23:39:51 dsd Exp $
+
+*gentoo-dev-sources-2.6.10-r4 (09 Jan 2005)
+
+  09 Jan 2005; Daniel Drake <dsd@gentoo.org>
+  +gentoo-dev-sources-2.6.10-r4.ebuild:
+  4 security fixes, get em while they are hot: moxa overflow, random poolsize
+  overflow, rlimit memlock dos, scsi ioctl overflow. Please test, this is going
+  to go stable soon.
 
 *gentoo-dev-sources-2.6.10-r3 (07 Jan 2005)
 
