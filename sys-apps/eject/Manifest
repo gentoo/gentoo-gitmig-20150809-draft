@@ -1,15 +1,11 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 443f2e0e7c3057ee4092a37c5291584e ChangeLog 3888
-MD5 7b2733de80aef35425702dea77b95db9 eject-2.0.13.ebuild 1183
+MD5 d6cdaed317709e3d05d20f0a41205222 ChangeLog 4233
+MD5 dde46f9dc1c91a72369e0e86fd7ced32 eject-2.0.13-r1.ebuild 1125
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
+MD5 2964b180ad83ff32e8d171e33a70e300 eject-2.0.13.ebuild 1181
 MD5 a8f6893c482c2b74b0e799b6cd81e867 files/digest-eject-2.0.13 63
-MD5 c948ce559d97f8710824e40ffffb606e files/eject-2.0.13-kernel25-support.patch 447
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFB9lYa0K3RJaeXx6cRAt47AKCwEtjP1WFYsVwiXGlD8V12wXV9FwCfQbCw
-Tn4Gy5yu9nZp2fkMFFjjrfQ=
-=FONm
------END PGP SIGNATURE-----
+MD5 a8f6893c482c2b74b0e799b6cd81e867 files/digest-eject-2.0.13-r1 63
+MD5 3f842146dbaced2c09bf45e5cf14b8c8 files/eject-2.0.13-autoclose.patch 699
+MD5 f9dc8e0281dbe9fd3f4db87d5ecfc69e files/eject-2.0.13-kernel25-support.patch 458
+MD5 b053ba461998415bd9d1c9daf2ca0685 files/eject-2.0.13-finddev.patch 377
+MD5 c7f02cf0dea0ee27a338220804de25ab files/eject-2.0.13-header.patch 848
+MD5 79bfd06f7b36f98ebfe676e8e37e4955 files/eject-2.0.13-use-mountpoints.patch 1100

@@ -1,0 +1,16 @@
+Ripped from Fedora
+
+--- eject-2.0.13/eject.c.orig	2004-09-07 12:10:58.382649630 +0200
++++ eject-2.0.13/eject.c	2004-09-07 12:10:43.930067903 +0200
+@@ -326,6 +326,11 @@
+ 	if (FileExists(buf))
+ 		return buf;
+ 
++	strcpy(buf, "/media/");
++	strcat(buf, name);
++	if (FileExists(buf))
++		return buf;
++
+ 	/* for devfs under Linux */
+ 	strcpy(buf, "/dev/cdroms/");
+ 	strcat(buf, name);

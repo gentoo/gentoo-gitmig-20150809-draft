@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/eject
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/ChangeLog,v 1.28 2005/01/25 14:22:06 kingtaco Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/ChangeLog,v 1.29 2005/02/13 05:12:21 vapier Exp $
+
+*eject-2.0.13-r1 (13 Feb 2005)
+
+  13 Feb 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/eject-2.0.13-autoclose.patch, +files/eject-2.0.13-finddev.patch,
+  +files/eject-2.0.13-header.patch,
+  files/eject-2.0.13-kernel25-support.patch,
+  +files/eject-2.0.13-use-mountpoints.patch, +eject-2.0.13-r1.ebuild:
+  Grab a bunch of patches from Fedora.
 
   25 Jan 2005; Mike Doty <kingtaco@gentoo.org> eject-2.0.13.ebuild:
   nls patch provided by seemant

@@ -1,5 +1,7 @@
---- eject.c.orig	2002-12-09 22:28:08.000000000 +0000
-+++ eject.c	2003-11-08 17:06:43.000000000 +0000
+	# Get this puppy working with kernel 2.5.x
+	# <azarah@gentoo.org> (06 March 2003)
+--- eject.c.orig
++++ eject.c
 @@ -58,7 +58,13 @@
  #include <sys/ioctl.h>
  #include <sys/wait.h>

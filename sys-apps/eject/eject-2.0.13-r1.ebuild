@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/eject-2.0.13.ebuild,v 1.17 2005/02/13 05:12:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/eject-2.0.13-r1.ebuild,v 1.1 2005/02/13 05:12:21 vapier Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.ibiblio.org/pub/Linux/utils/disk-management/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha amd64 arm hppa ia64 mips ppc ppc64 sparc x86"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~sh ~sparc ~x86"
 IUSE="nls"
 
 RDEPEND="virtual/libc"
@@ -20,20 +20,14 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
+	cd "${S}"
+	epatch "${FILESDIR}"/${P}-kernel25-support.patch
+	epatch "${FILESDIR}"/${P}-autoclose.patch
+	epatch "${FILESDIR}"/${P}-finddev.patch
+	epatch "${FILESDIR}"/${P}-header.patch
+	epatch "${FILESDIR}"/${P}-use-mountpoints.patch
 
-	# Get this puppy working with kernel 2.5.x
-	# <azarah@gentoo.org> (06 March 2003)
-	epatch "${FILESDIR}/${P}-kernel25-support.patch"
-
-	# Fix stupid includes (bug #41856)
-	sed -i \
-		-e 's|-I/usr/src/linux -I/usr/src/linux|-I/usr/include|' \
-		${S}/Makefile.in \
-		|| die "sed Makefile.in failed"
-
-	if ! use nls
-		then
+	if ! use nls ; then
 		sed -i "s:SUBDIRS = po::" Makefile.in || die "sed nls failed"
 	fi
 }
