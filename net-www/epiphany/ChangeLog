@@ -1,8 +1,12 @@
 # ChangeLog for net-www/epiphany
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.10 2003/07/16 14:52:53 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/ChangeLog,v 1.11 2003/07/27 19:29:04 foser Exp $
 
 *epiphany-0.8.0 (16 Jul 2003)
+
+  27 Jul 2003; foser <foser@gentoo.org> epiphany-0.8.0.ebuild :
+  Fix mozilla dep to be moer forgiving
+  Remove -Werror to fix gcc2 build failures (#22413)
 
   16 Jul 2003; Hanno Boeck <hanno@gentoo.org> epiphany-0.8.0.ebuild:
   Version bump.

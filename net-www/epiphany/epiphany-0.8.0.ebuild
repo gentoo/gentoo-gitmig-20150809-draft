@@ -1,10 +1,7 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-0.8.0.ebuild,v 1.1 2003/07/16 14:52:53 hanno Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/epiphany/epiphany-0.8.0.ebuild,v 1.2 2003/07/27 19:29:05 foser Exp $
 
-
-# This fixes a paralell build problem that recently cropped up on my sytem
-MAKEOPTS="-j1"
 inherit gnome2 debug
 
 DESCRIPTION="GNOME webbrowser based on the mozilla rendering engine"
@@ -15,8 +12,6 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc"
 IUSE=""
 
-G2CONF="${G2CONF} --with-mozilla-snapshot=1.4"
-
 RDEPEND=">=gnome-base/gconf-1.2
 	>=x11-libs/gtk+-2
 	>=dev-libs/libxml2-2
@@ -26,24 +21,41 @@ RDEPEND=">=gnome-base/gconf-1.2
 	>=gnome-base/libbonoboui-2.1.1
 	>=gnome-base/ORBit2-2
 	>=gnome-base/gnome-vfs-2
-	=net-www/mozilla-1.4*
+	>=net-www/mozilla-1.3
 	app-text/scrollkeeper"
 
 DEPEND="${RDEPEND}
+	sys-devel/autoconf
 	dev-util/pkgconfig"
 
 DOCS="AUTHORS COPYING* ChangeLog INSTALL NEWS README TODO"
 
+MAKEOPTS="${MAKEOPTS} -j1"
+
 pkg_setup () {
 	if [ ! -f ${ROOT}/usr/lib/mozilla/components/libwidget_gtk2.so ]
 	then
-		eerror "you need mozilla-1.4 compiled against gtk+-2"
+		eerror "you need mozilla-1.3+ compiled against gtk+-2"
 		eerror "export USE=\"gtk2\" ;emerge mozilla -p "
 		die "Need Mozilla compiled with gtk+-2.0!!"
 	fi
 }
 
+src_unpack() {
+
+	unpack ${A}
+
+	cd ${S}
+
+	# quick fix for #22413
+	mv configure.in configure.in.old
+	sed -e "s:GNOME_COMPILE_WARNINGS(error)::" configure.in.old > configure.in
+
+	autoconf || die
+
+}
+
 pkg_postinst() {
-	einfo "Gconf keys for some settings have changed,"
+	einfo "GConf keys for some settings have changed,"
 	einfo "you may have to reset some settings."
 }
