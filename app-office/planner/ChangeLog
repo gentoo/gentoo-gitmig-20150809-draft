@@ -1,6 +1,18 @@
 # ChangeLog for app-office/planner
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.8 2004/07/11 20:46:51 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/ChangeLog,v 1.9 2004/07/14 10:12:47 spider Exp $
+
+*planner-0.12-r1 (14 Jul 2004)
+
+  14 Jul 2004; <spider@gentoo.org> +planner-0.12-r1.ebuild:
+  ugh. I goofed up and didnt notice the new python bindings, revamped the ebuild
+  to manage those with USE flags, and changed to the libgda interface instead of
+  direct postgres dep.
+
+*planner-0.12-r1 14 Jul 2004
+
+  14 Jul 2004; Spider <spider@gentoo.org> 
+  # INSERT ENTRY HERE
 
 *planner-0.12 (11 Jul 2004)
 
