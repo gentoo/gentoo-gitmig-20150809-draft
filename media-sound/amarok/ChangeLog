@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/amarok
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.17 2004/06/18 21:25:44 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/ChangeLog,v 1.18 2004/06/18 21:31:52 centic Exp $
+
+  18 Jun 2004; Dominik Stadler <centic@gentoo.org> amarok-1.0.ebuild:
+  According to the README we should require gstreamer 0.8.1
 
 *amarok-1.0 (18 Jun 2004)
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.0.ebuild,v 1.1 2004/06/18 21:25:45 centic Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/amarok/amarok-1.0.ebuild,v 1.2 2004/06/18 21:31:52 centic Exp $
 
 inherit kde eutils
 need-kde 3.2
@@ -16,7 +16,7 @@ KEYWORDS="~x86 ~ppc ~amd64"
 IUSE="cjk gstreamer xmms arts opengl"
 
 DEPEND=">=kde-base/kdemultimedia-3.2
-	gstreamer? ( >=media-libs/gst-plugins-0.8.0 )
+	gstreamer? ( >=media-libs/gst-plugins-0.8.1 )
 	opengl? ( virtual/opengl )
 	xmms? ( >=media-sound/xmms-1.2 )
 	>=dev-util/pkgconfig-0.9.0
