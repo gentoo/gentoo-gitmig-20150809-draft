@@ -1,8 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kmp/kmp-0.01.ebuild,v 1.1 2004/08/08 00:40:59 pkdawson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kmp/kmp-0.01.ebuild,v 1.2 2004/08/26 00:34:50 pkdawson Exp $
 
-inherit eutils
+inherit eutils kde-functions
+
+need-qt 3
 
 DESCRIPTION="An MPD client that uses Qt"
 HOMEPAGE="http://www.threadbox.net/kmp.php"
@@ -13,13 +15,15 @@ SLOT="0"
 KEYWORDS="~x86"
 IUSE=""
 
-DEPEND=">=x11-libs/qt-3.0"
+src_unpack() {
+	unpack ${A}
+	epatch ${FILESDIR}/kmp-0.01-gcc34.patch
+}
 
 src_compile() {
 	echo QMAKE_CFLAGS_RELEASE=${CFLAGS} >> kmp.pro
 	echo QMAKE_CXXFLAGS_RELEASE=${CXXFLAGS} >> kmp.pro
 
-	addwrite ${QTDIR}/etc/settings
 	econf || die
 	emake || die
 }

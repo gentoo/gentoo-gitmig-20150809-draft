@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/kmp
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/kmp/ChangeLog,v 1.1 2004/08/08 00:40:59 pkdawson Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/kmp/ChangeLog,v 1.2 2004/08/26 00:34:50 pkdawson Exp $
+
+  25 Aug 2004; Patrick Dawson <pkdawson@gentoo.org> kmp-0.01.ebuild :
+  Added a fix for gcc-3.4.
 
 *kmp-0.01 (07 Aug 2004)
 

@@ -1,0 +1,12 @@
+diff -ur kmp-0.01.orig/linkedlist.h kmp-0.01/linkedlist.h
+--- kmp-0.01.orig/linkedlist.h	2004-08-25 16:05:47.366049280 +0000
++++ kmp-0.01/linkedlist.h	2004-08-25 16:06:16.632600088 +0000
+@@ -121,7 +121,7 @@
+ int linkedList<ItemType>::add(ItemType Item, int location) {
+ 	node* parent;
+ 	node* nextspot;
+-	if(!find(location, root_, parent)) return 0;
++	if(!find(location, root, parent)) return 0;
+ 	nextspot = parent->next;
+ 	parent->next = new node;
+ 	parent->next->next = nextspot;
