@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# Header: $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/xvnkb/xvnkb-0.2.8a.ebuild,v 1.3 2004/06/18 23:19:44 pclouds Exp $
 
 inherit eutils
 
