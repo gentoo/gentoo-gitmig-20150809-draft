@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9001.478.ebuild,v 1.2 2002/12/03 13:49:18 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dnetc/dnetc-2.9001.478.ebuild,v 1.3 2002/12/03 14:04:08 aliz Exp $
 
 MAJ_PV=${PV:0:6}
 MIN_PV=${PV:7:9}
@@ -22,6 +22,15 @@ elif [ `use ppc` ]; then
 fi
 
 RESTRICT="nomirror"
+
+pkg_preinst() {
+	if [ -e /opt/distributed.net/dnetc ] && [ -e /etc/init.d/dnetc ]; then
+		einfo "flushing old buffers"
+		/opt/distributed.net/dnetc -quiet -flush
+		einfo "removing old buffer files"
+		rm -f /opt/distributed.net/buff*
+	fi
+}
 
 src_install() {
 	exeinto /opt/distributed.net
