@@ -1,0 +1,5 @@
+MD5 03768c440b619167634da5d13711fde1 files/digest-libticalcs-4.3.0 68
+MD5 0053bc607b7d60af19176b5e227cf83e files/digest-libticalcs-4.4.3 68
+MD5 8faa36f85fd7a72a381ab5807f42b071 ChangeLog 522
+MD5 e2fbebbfc818b86768957d6700644a4a libticalcs-4.3.0.ebuild 739
+MD5 a4a3d0de31c3f7f60d518bc193bd9048 libticalcs-4.4.3.ebuild 727
