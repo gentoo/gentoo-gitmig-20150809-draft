@@ -1,7 +1,17 @@
-MD5 b4790a30bfe6310396d827dffd40d16f fbdesk-1.2.1.ebuild 786
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 48d42346bb8cebbdaea4cac2a2a1c7f2 fbdesk-1.2.1.ebuild 790
 MD5 a24b26df16716164f301ca98bfb190bd fbdesk-1.1.5.ebuild 736
-MD5 3cbd1b2d3e6b4b0c58b64a63843f8de9 ChangeLog 1381
+MD5 499f700df12166e48f66f4c4872b2485 ChangeLog 1478
 MD5 416452bedba085c06bd2502510370e1a metadata.xml 162
 MD5 39b789020c286f3f1239d3fb96d00aa0 files/digest-fbdesk-1.1.5 64
 MD5 c9802bbcd01212346c3bff9690a74759 files/digest-fbdesk-1.2.1 64
 MD5 6c03b221f71103953d36a49670e85246 files/fbdesk-1.1.5-gcc34.patch 2462
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBdDGaCHk4+ZoBpvsRArCMAJ96bzKxDTgf1KkJxg9AkPf16yzfuACgwWh4
+Z0UCDh6vtr2JbhD8bv8U17Q=
+=apyH
+-----END PGP SIGNATURE-----
