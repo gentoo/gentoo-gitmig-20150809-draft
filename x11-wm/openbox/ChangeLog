@@ -1,6 +1,9 @@
 # ChangeLog for x11-wm/openbox
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.48 2003/09/04 03:48:47 tseng Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/openbox/ChangeLog,v 1.49 2003/09/05 23:50:26 tseng Exp $
+
+  05 Sep 2003; Brandon Hale <tseng@gentoo.org> openbox-3.0_beta1.ebuild:
+  Small tweak to install a session file under /etc/X11/Sessions
 
 *openbox-3.0_beta1 (03 Sep 2003)
 
