@@ -1,0 +1,8 @@
+--- ../CherryPy-2.0.0b.orig/cherrypy/test/test.py	2004-12-30 11:13:53.000000000 +0100
++++ cherrypy/test/test.py	2005-02-09 14:56:13.505391384 +0100
+@@ -186,4 +186,4 @@
+ #    - test hidden classes
+ #    ...
+ 
+-raw_input('hit enter')
++sys.exit(len(failedList))

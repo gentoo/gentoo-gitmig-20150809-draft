@@ -1,0 +1,12 @@
+# ChangeLog for dev-python/cherrypy
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/cherrypy/ChangeLog,v 1.1 2005/03/15 16:11:45 pythonhead Exp $
+
+*cherrypy-2.0.0b (15 Mar 2005)
+
+  15 Mar 2005; Rob Cakebread <pythonhead@gentoo.org>
+  +files/cherrypy-2.0.0b-setup-gentoo.diff,
+  +files/cherrypy-2.0.0b-test-gentoo.diff, +cherrypy-2.0.0b.ebuild:
+  Initial commit. ebuild by Maurizio Pucci <mauriziopucci@tele2.it> Thanks
+  Maurizio. bug# 81370
+
