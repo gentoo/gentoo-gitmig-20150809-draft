@@ -1,6 +1,13 @@
 # ChangeLog for x11-libs/openmotif
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.59 2005/01/15 13:47:49 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/openmotif/ChangeLog,v 1.60 2005/01/18 08:59:33 eradicator Exp $
+
+*openmotif-2.1.30-r6 (18 Jan 2005)
+
+  18 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/openmotif-2.1.30-xpm.diff, +openmotif-2.1.30-r6.ebuild:
+  Revision bump for security bug #78111. Thanks to bartron@gmx.net for the
+  patch.
 
   15 Jan 2005; Jeremy Huddleston <eradicator@gentoo.org>
   openmotif-2.1.30-r4.ebuild, openmotif-2.1.30-r5.ebuild:
