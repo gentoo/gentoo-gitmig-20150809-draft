@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/iptraf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.16 2003/10/28 01:12:17 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/iptraf/ChangeLog,v 1.17 2003/11/02 19:12:02 joker Exp $
+
+  02 Nov 2003; Christian Birchinger <joker@gentoo.org> iptraf-2.7.0-r1.ebuild:
+  Added sparc stable keyword
 
   05 Oct 2003; Brad House <brad_mssw@gentoo.org> iptraf-2.7.0-r1.ebuild:
   add ~amd64 flag
