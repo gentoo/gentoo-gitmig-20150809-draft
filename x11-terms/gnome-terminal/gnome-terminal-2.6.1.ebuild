@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.6.1.ebuild,v 1.1 2004/04/19 16:33:49 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/gnome-terminal-2.6.1.ebuild,v 1.2 2004/04/27 14:49:10 foser Exp $
 
 inherit gnome2 eutils
 
@@ -38,6 +38,9 @@ src_unpack() {
 	# terminal enhancement, inserts a space after a DND URL
 	# patch by Zach Bagnall <yem@y3m.net> in #13801
 	epatch ${FILESDIR}/${PN}-2-dnd_url_add_space.patch
+
+	# gcc 3.4 fix
+	epatch ${FILESDIR}/${P}-gcc34_eggcell.patch
 
 }
 

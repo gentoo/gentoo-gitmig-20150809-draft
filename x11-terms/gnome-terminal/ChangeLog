@@ -1,6 +1,9 @@
 # ChangeLog for x11-terms/gnome-terminal
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.57 2004/04/19 16:33:49 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/gnome-terminal/ChangeLog,v 1.58 2004/04/27 14:49:10 foser Exp $
+
+  27 Apr 2004; foser <foser@gentoo.org> gnome-terminal-2.6.{0,1}.ebuild :
+  Add gcc 3.4 fix, patch provided by Robert Moss <robert.moss@jesus.ox.ac.uk> in #48425
 
 *gnome-terminal-2.6.1 (19 Apr 2004)
 
