@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/gpsui
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gpsui/ChangeLog,v 1.6 2004/11/03 19:21:23 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gpsui/ChangeLog,v 1.7 2004/11/17 16:21:45 vapier Exp $
+
+  17 Nov 2004; Mike Frysinger <vapier@gentoo.org> gpsui-2.2.ebuild:
+  Use make install DESTDIR.
 
   03 Nov 2004; Markus Rothe <corsair@gentoo.org> gpsui-2.2.ebuild:
   Marked ~ppc64; bug #69837

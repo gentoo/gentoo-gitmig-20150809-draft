@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/gtkdiskfree
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gtkdiskfree/ChangeLog,v 1.9 2004/11/03 19:24:27 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gtkdiskfree/ChangeLog,v 1.10 2004/11/17 16:23:37 vapier Exp $
+
+  17 Nov 2004; Mike Frysinger <vapier@gentoo.org> gtkdiskfree-1.8.4.ebuild,
+  -gtkdiskfree-1.9.3.ebuild:
+  Use make install DESTDIR.
 
   03 Nov 2004; Markus Rothe <corsair@gentoo.org> gtkdiskfree-1.9.3.ebuild:
   Marked ~ppc64; bug #69838
