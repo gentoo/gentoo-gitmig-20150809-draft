@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.0.5b.ebuild,v 1.1 2003/04/08 19:58:08 hannes Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/arts/arts-1.0.5b.ebuild,v 1.2 2003/07/16 16:05:53 pvdabeel Exp $
 inherit kde-base flag-o-matic
 
 IUSE="alsa"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
-KEYWORDS="x86 ~ppc ~alpha sparc"
+KEYWORDS="x86 ppc ~alpha sparc"
 HOMEPAGE="http://multimedia.kde.org"
 S="${WORKDIR}/${PN}-1.1"
 
