@@ -84,9 +84,9 @@ To install a package, enter its directory in <path>/usr/portage</path>, i.e:
 # <i>ebuild xchat-1.4.2.ebuild merge</i>
 </pre>
 
-<p>The xchat sources will be downloaded (and stored in /usr/portage/distfiles), verified, 
+<p>The xchat sources will be downloaded (and stored in <path>/usr/portage/distfiles</path>), verified, 
 unpacked, compiled and installed to a temporary directory. Then, they will be merged into the
-local filesystem and a package database will be created at /var/db/pkg/net-irc/xchat/CONTENTS,
+local filesystem and a package database will be created at <path>/var/db/pkg/net-irc/xchat-1.4.2/CONTENTS</path>,
 containing the files installed and the md5sums for all files.</p>
 
 </body>
