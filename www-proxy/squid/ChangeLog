@@ -1,6 +1,17 @@
 # ChangeLog for www-proxy/squid
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/ChangeLog,v 1.39 2005/02/21 04:04:53 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/squid/ChangeLog,v 1.40 2005/02/23 20:06:05 mrness Exp $
+
+*squid-2.5.8-r1 (23 Feb 2005)
+
+  23 Feb 2005; Alin Nastac <mrness@gentoo.org>
+  -files/squid-2.4.7-debian.diff, -files/squid-2.4.7-gentoo.diff,
+  -files/squid-2.5.3-gentoo.diff, -files/squid-2.5.5-ntml-auth-fix.patch,
+  -files/squid-2.5.6-ufs-no-valid-dir.patch, -files/squid-2.5.7-gentoo.diff,
+  +files/squid-logrotate, -squid-2.4.7.ebuild, -squid-2.5.5-r3.ebuild,
+  -squid-2.5.6-r3.ebuild, -squid-2.5.7-r6.ebuild, +squid-2.5.8-r1.ebuild:
+  Incorporate combined log patch (#76333). Add support for logrotate selected
+  by a new USE flag (#71658). Remove obsolete versions.
 
   20 Feb 2005; Aron Griffis <agriffis@gentoo.org> squid-2.5.8.ebuild:
   stable on ia64 #81997
