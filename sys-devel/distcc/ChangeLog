@@ -1,6 +1,6 @@
 # ChangeLog for sys-devel/distcc
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.71 2003/08/15 23:06:33 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/distcc/ChangeLog,v 1.72 2003/08/24 13:30:27 gmsoft Exp $
 
 *distcc-2.10-r2 (15 Aug 2003)
 
@@ -54,6 +54,9 @@
   the file
 
 *distcc-2.9 (21 Jul 2003)
+
+  24 Aug 2003; Guy Martin <gmsoft@gentoo.org> distcc-2.9.ebuild :
+  Added hppa to KEYWORDS.
 
   21 Jul 2003: Lisa Marie Seelye <lisa@gentoo.org> :
   New version released and committed (Still with the patch to fix tmpdir)
