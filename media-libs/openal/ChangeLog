@@ -1,6 +1,14 @@
 # ChangeLog for media-libs/openal
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.30 2004/08/17 15:06:15 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/openal/ChangeLog,v 1.31 2004/08/17 20:02:12 wolf31o2 Exp $
+
+*openal-20040817 (17 Aug 2004)
+
+  17 Aug 2004; Chris Gianelloni <wolf31o2@gentoo.org>
+  -files/openal-20040219-alsa_capture.diff,
+  +files/openal-20040817-alsa_capture.diff, -openal-20040218.ebuild,
+  +openal-20040817.ebuild:
+  Bumped to new snapshot and closing bug #58365.
 
   17 Aug 2004; Chris Gianelloni <wolf31o2@gentoo.org> openal-20040218.ebuild,
   openal-20040303.ebuild:
