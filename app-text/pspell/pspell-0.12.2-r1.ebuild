@@ -25,6 +25,11 @@ src_compile() {
 		--host=${CHOST} || die "./configure failed"
 		
 	emake || die "Parallel Make Failed"
+	cd modules
+	./configure \
+		--prefix=/usr \
+		--host=${CHOST} || die "Modules config failed"
+	emake || die "Modules compilation filed"
 
 }
 
