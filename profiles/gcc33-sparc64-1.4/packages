@@ -123,7 +123,7 @@
 *sys-devel/make
 *sys-devel/patch
 *sys-libs/cracklib  
-*<=sys-libs/db-4.0.14-r2
+*sys-libs/db
 *sys-libs/gdbm  
 *>=sys-libs/ncurses-5.2.20020511-r3
 *>=sys-libs/pam-0.75-r10
@@ -133,6 +133,5 @@
 *sys-libs/zlib
 *net-misc/openssh
 *sys-fs/devfsd
+*sys-devel/sparc32
 <=app-portage/portagemaster-0.1.5
-# masked openldap-2.1 until db-4.1 is a go
-<net-nds/openldap-2.1
