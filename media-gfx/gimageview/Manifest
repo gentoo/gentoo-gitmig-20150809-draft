@@ -1,7 +1,17 @@
-MD5 508b3c8eeb4cedfc4e06118ff36eed5c ChangeLog 1176
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 ad7102c5f166218cd6d072eb14d66c5a ChangeLog 1277
 MD5 16de6b2ae14f80ba6badefc739cbfdd4 gimageview-0.2.25.ebuild 1912
 MD5 4368b20da8cb79a90eb16111f691f548 metadata.xml 379
-MD5 1fc8d29faeba32524524abc8a4b9056e gimageview-0.2.26.ebuild 1639
+MD5 d5d8d9e59e24cecae36dd67efe577897 gimageview-0.2.26.ebuild 1637
 MD5 36f65a43da5f087e4bbc63ff7f8adad0 files/digest-gimageview-0.2.25 70
 MD5 9a949f1e3e1aebb680b0b2823db37bf1 files/gimv-gcc34.patch 851
 MD5 89b270a7d0a783ab34544f41c5224819 files/digest-gimageview-0.2.26 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBihMIVWNWqTUmv+0RAtMYAKCgS/d0B9wG2zTUl68DGpF/xbTG8gCfeNcD
+2q+nuhUONoeBR3vZ2irt1Js=
+=yx+c
+-----END PGP SIGNATURE-----
