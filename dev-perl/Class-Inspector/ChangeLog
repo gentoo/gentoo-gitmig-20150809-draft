@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/Class-Inspector
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Inspector/ChangeLog,v 1.1 2003/06/01 03:10:46 mcummings Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Class-Inspector/ChangeLog,v 1.2 2004/03/20 10:15:40 kumba Exp $
+
+  20 Mar 2004; Joshua Kinard <kumba@gentoo.org> Class-Inspector-1.ebuild:
+  Added ~mips to KEYWORDS.
 
 *Class-Inspector-1 (31 May 2003)
 
