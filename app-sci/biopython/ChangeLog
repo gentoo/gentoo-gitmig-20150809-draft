@@ -1,0 +1,10 @@
+# ChangeLog for app-sci/biopython
+# Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
+# $Header: /var/cvsroot/gentoo-x86/app-sci/biopython/ChangeLog,v 1.1 2003/02/18 21:08:45 george Exp $
+
+*biopython-1.10.ebuild (18 Feb 2003)
+
+  18 Feb 2003; George Shapovalov <george@gentoo.org> ChangeLog, biopython-1.10.ebuild, files/digest-biopython-1.10 :
+  initial release (#11617)
+  Biopython - python module for Computational Moelcular Biology
+  ebuild submitted by Daniel Jaeggi <daniel@jaeggi.co.uk>
