@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_beta0224.ebuild,v 1.1 2001/04/15 10:53:53 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcp/dhcp-3.0_beta0224.ebuild,v 1.2 2001/04/15 11:01:37 achim Exp $
 
 P=dhcp-3.0b2pl24
 A="${P}.tar.gz"
@@ -17,7 +17,7 @@ src_compile() {
   echo "CC = gcc ${CFLAGS}" > site.conf
   echo "ETC = /etc/dhcp" >> site.conf
   echo "VARDB = /var/lib/dhcp" >> site.conf
-  try ./configure
+  try ./configure --with-nsupdate
   try make
 }
 
