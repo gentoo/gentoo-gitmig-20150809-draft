@@ -1,3 +1,5 @@
 MD5 0f015a4fdbc2a773b97bf7dc691b37c1 gift-fasttrack-0.8.1.ebuild 1209
-MD5 1a8e27a875a5f066e31f6a30e654a4b1 ChangeLog 475
+MD5 15a5d449c7d2639d0e682bcb1a573076 ChangeLog 628
+MD5 e0db6b0be513003d0c1f6991f5dccdd4 gift-fasttrack-0.8.2.ebuild 1230
 MD5 281932b8dc87c3c85c1b57e29c2cb6c1 files/digest-gift-fasttrack-0.8.1 72
+MD5 89ba3b632718dced20c9e7793a92ac05 files/digest-gift-fasttrack-0.8.2 72
