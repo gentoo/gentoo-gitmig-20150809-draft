@@ -127,6 +127,7 @@ net-misc/netkit-telnetd
 *sys-apps/file
 *sys-apps/fileutils
 *sys-apps/findutils
+*sys-apps/slocate
 *sys-apps/gawk
 *sys-apps/grep
 *sys-apps/groff
