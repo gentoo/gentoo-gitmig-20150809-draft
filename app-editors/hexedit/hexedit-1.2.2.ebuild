@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hexedit/hexedit-1.2.2.ebuild,v 1.11 2003/09/05 23:05:05 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hexedit/hexedit-1.2.2.ebuild,v 1.12 2004/01/18 20:22:37 zul Exp $
 
 S="${WORKDIR}/hexedit"
 DESCRIPTION="View and edit files in hex or ASCII."
@@ -12,7 +12,7 @@ DEPEND="virtual/glibc
 RDEPEND=""
 
 SLOT="0"
-KEYWORDS="x86 ppc sparc alpha"
+KEYWORDS="x86 ppc sparc alpha amd64"
 LICENSE="GPL-1"
 
 src_compile() {

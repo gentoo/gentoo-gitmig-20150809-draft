@@ -1,6 +1,9 @@
 # ChangeLog for app-editors/hexedit
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/hexedit/ChangeLog,v 1.7 2003/10/01 11:39:33 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-editors/hexedit/ChangeLog,v 1.8 2004/01/18 20:22:37 zul Exp $
+
+  18 Jan 2004; Chuck Short <zul@gentoo.org> hexedit-1.2.2.ebuild:
+  Header update, added amd64 keyword.
 
   21 May 2003; Tavis Ormandy <taviso@gentoo.org> hexedit-1.2.2.ebuild:
   looks good on alpha.
