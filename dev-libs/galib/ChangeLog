@@ -1,0 +1,10 @@
+# ChangeLog for app-sci/galib
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/galib/ChangeLog,v 1.1 2003/10/16 12:50:33 phosphan Exp $
+
+*galib-2.4.5 (16 Oct 2003)
+
+  16 Oct 2003; Patrick Kursawe <phosphan@gentoo.org> galib-2.4.5.ebuild,
+  metadata.xml:
+  Initial import, suggested in bug 26493
+
