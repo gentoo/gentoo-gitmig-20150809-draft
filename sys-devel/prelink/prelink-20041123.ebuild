@@ -1,12 +1,12 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20041123.ebuild,v 1.1 2005/02/11 23:20:31 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/prelink/prelink-20041123.ebuild,v 1.2 2005/02/12 22:33:10 cretin Exp $
 
 inherit eutils
 
 DESCRIPTION="Modifies executables so runtime libraries load faster"
 HOMEPAGE="ftp://people.redhat.com/jakub/prelink"
-SRC_URI="mirror://gentoo/${P}.tar.bz2"
+SRC_URI="ftp://people.redhat.com/jakub/prelink/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
