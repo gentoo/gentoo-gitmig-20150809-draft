@@ -9,9 +9,9 @@ SRC_URI="http://darwinsource.opendarwin.org/tarballs/apsl/${P}.tar.gz"
 LICENSE="APSL-2"
 
 SLOT="0"
-KEYWORDS="~ppc-macos"
+#KEYWORDS="~ppc-macos"
 IUSE=""
-
+KEYWORDS=""
 DEPEND="virtual/libc"
 
 ##
