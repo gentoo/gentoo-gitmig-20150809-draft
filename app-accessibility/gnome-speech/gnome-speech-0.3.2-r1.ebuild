@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.3.2-r1.ebuild,v 1.12 2004/06/24 21:22:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.3.2-r1.ebuild,v 1.13 2004/08/21 15:14:08 foser Exp $
 
 inherit java-pkg gnome2
 
@@ -13,7 +13,7 @@ KEYWORDS="x86 ppc sparc alpha hppa amd64 ~ia64"
 IUSE="java"
 
 RDEPEND=">=gnome-base/libbonobo-1.97
-	>=gnome-base/ORBit2-2.3.94
+	>=gnome-base/orbit-2.3.94
 	java? ( virtual/jdk
 		app-accessibility/java-access-bridge )"
 # Support for freetts still pending, since the tarball doesn't actually

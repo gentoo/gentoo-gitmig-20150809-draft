@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-3.2.10-r1.ebuild,v 1.11 2004/08/05 23:29:38 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/dasher/dasher-3.2.10-r1.ebuild,v 1.12 2004/08/21 15:14:08 foser Exp $
 
 inherit eutils gnome2
 
@@ -23,7 +23,7 @@ RDEPEND="dev-libs/expat
 		>=gnome-base/gnome-vfs-2
 		>=gnome-base/libgnomeui-2 )
 	accessibility? ( >=gnome-base/libbonobo-2
-		>=gnome-base/ORBit2-2
+		>=gnome-base/orbit-2
 		>=gnome-base/libgnomeui-2
 		app-accessibility/gnome-speech
 		>=gnome-extra/at-spi-1 )"

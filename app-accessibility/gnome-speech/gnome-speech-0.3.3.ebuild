@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.3.3.ebuild,v 1.4 2004/06/24 21:22:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.3.3.ebuild,v 1.5 2004/08/21 15:14:08 foser Exp $
 
 inherit java-pkg gnome2
 
@@ -16,7 +16,7 @@ KEYWORDS="~x86 ~ppc ~hppa ~alpha ~ia64 ~sparc ~amd64"
 LICENSE="LGPL-2"
 
 RDEPEND=">=gnome-base/libbonobo-1.97
-	>=gnome-base/ORBit2-2.3.94
+	>=gnome-base/orbit-2.3.94
 	java? ( virtual/jdk
 		app-accessibility/java-access-bridge )
 	freetts? ( =app-accessibility/freetts-1.2*

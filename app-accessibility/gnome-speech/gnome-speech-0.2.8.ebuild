@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.2.8.ebuild,v 1.3 2004/06/24 21:22:57 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-speech/gnome-speech-0.2.8.ebuild,v 1.4 2004/08/21 15:14:08 foser Exp $
 
 inherit gnome2
 
@@ -13,7 +13,7 @@ KEYWORDS="x86 ppc sparc alpha hppa ~amd64 ia64"
 IUSE=""
 
 RDEPEND=">=gnome-base/libbonobo-2
-	>=gnome-base/ORBit2-2.4"
+	>=gnome-base/orbit-2.4"
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/gnome-mag-0.10.6.ebuild,v 1.8 2004/07/13 15:53:08 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gnome-mag/gnome-mag-0.10.6.ebuild,v 1.9 2004/08/21 15:14:08 foser Exp $
 
 inherit gnome2
 
@@ -13,7 +13,7 @@ KEYWORDS="x86 ppc sparc ~alpha hppa amd64 ~ia64"
 IUSE="debug"
 
 RDEPEND=">=gnome-base/libbonobo-1.107
-	>=gnome-base/ORBit2-2.3.100
+	>=gnome-base/orbit-2.4
 	>=gnome-extra/at-spi-0.12.1
 	>=dev-libs/glib-1.3.11
 	>=x11-libs/gtk+-2.1

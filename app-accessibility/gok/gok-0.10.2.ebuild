@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-0.10.2.ebuild,v 1.11 2004/08/05 23:26:25 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-accessibility/gok/gok-0.10.2.ebuild,v 1.12 2004/08/21 15:14:08 foser Exp $
 
 inherit gnome2
 
@@ -21,7 +21,7 @@ RDEPEND=">=x11-libs/gtk+-2.3.1
 	media-sound/esound
 	>=x11-libs/libwnck-1
 	>=gnome-extra/at-spi-1.3.4
-	gnome-base/ORBit2
+	>=gnome-base/orbit-2
 	virtual/x11"
 DEPEND="${RDEPEND}
 	>=dev-util/intltool-0.27.3
