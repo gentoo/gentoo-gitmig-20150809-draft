@@ -1,0 +1,1129 @@
+diff -Nru -x '*~' -x '*.o' -x '*.orig' -x '*.rej' nautilus-2.2.4.orig/components/Makefile.am nautilus-2.2.4/components/Makefile.am
+--- nautilus-2.2.4.orig/components/Makefile.am	2002-11-20 07:19:52.000000000 -0500
++++ nautilus-2.2.4/components/Makefile.am	2003-05-27 01:31:42.000000000 -0400
+@@ -5,6 +5,7 @@
+ 	hardware 				\
+ 	history 				\
+ 	notes 					\
++	printers                                \
+ 	text 					\
+ 	throbber 				\
+ 	tree 					\
+diff -Nru -x '*~' -x '*.o' -x '*.orig' -x '*.rej' nautilus-2.2.4.orig/components/printers/Makefile.am nautilus-2.2.4/components/printers/Makefile.am
+--- nautilus-2.2.4.orig/components/printers/Makefile.am	1969-12-31 19:00:00.000000000 -0500
++++ nautilus-2.2.4/components/printers/Makefile.am	2003-05-26 22:17:59.000000000 -0400
+@@ -0,0 +1,37 @@
++NULL =
++
++INCLUDES=\
++	-DG_LOG_DOMAIN=\"Nautilus-Printers\" \
++	-I$(top_srcdir)		\
++	-DDATADIR=\""$(datadir)"\"	\
++	-DGNOMELOCALEDIR=\""$(prefix)/${DATADIRNAME}/locale"\"	\
++	$(PRINTER_CFLAGS) \
++	$(NULL)	\
++	-DGTK_ENABLE_BROKEN
++
++bonobodir = $(libdir)/bonobo
++bonobo_LTLIBRARIES = libnautilus-printers-view.la
++
++libnautilus_printers_view_la_SOURCES = nautilus-printers.c
++
++libnautilus_printers_view_la_LIBADD =               \
++	$(top_builddir)/libnautilus/libnautilus.la \
++	$(top_builddir)/libnautilus-private/libnautilus-private.la	\
++	$(PRINTER_LIBS) \
++	$(NULL)
++
++libnautilus_printers_view_la_LDFLAGS = -module -avoid-version
++
++server_in_files = Nautilus_View_printers.server.in.in
++
++serverdir = $(libdir)/bonobo/servers
++server_DATA = $(server_in_files:.server.in.in=.server)
++$(server_in_files:.server.in.in=.server.in): $(server_in_files)
++	sed -e "s|\@BONOBODIR\@|$(bonobodir)|" $< > $@
++@INTLTOOL_SERVER_RULE@
++
++uidir=$(datadir)/gnome-2.0/ui
++ui_DATA = nautilus-printers-view-ui.xml
++
++EXTRA_DIST= $(server_in_files) $(ui_DATA)
++CLEANFILES = $(server_DATA) $(server_DATA).in
+diff -Nru -x '*~' -x '*.o' -x '*.orig' -x '*.rej' nautilus-2.2.4.orig/components/printers/nautilus-printers.c nautilus-2.2.4/components/printers/nautilus-printers.c
+--- nautilus-2.2.4.orig/components/printers/nautilus-printers.c	1969-12-31 19:00:00.000000000 -0500
++++ nautilus-2.2.4/components/printers/nautilus-printers.c	2003-05-27 01:31:06.000000000 -0400
+@@ -0,0 +1,923 @@
++/* -*- Mode: C; tab-width: 8; indent-tabs-mode: nil; c-basic-offset: 8 -*- */
++
++/*
++ *  Nautilus
++ *
++ *  Copyright (C) 2002 Ximian Inc.
++ *
++ *  This library is free software; you can redistribute it and/or
++ *  modify it under the terms of the GNU General Public License as
++ *  published by the Free Software Foundation; either version 2 of the
++ *  License, or (at your option) any later version.
++ *
++ *  This library is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++ *  General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with this library; if not, write to the Free Software
++ *  Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
++ *
++ *  Author: Dave Camp <dave@ximian.com>
++ *
++ */
++
++#define VIEW_IID "OAFIID:Nautilus_Printers_View"
++
++#include <config.h>
++
++#include <string.h>
++#include <bonobo/bonobo-window.h>
++#include <eel/eel-glib-extensions.h>
++#include <eel/eel-gtk-extensions.h>
++#include <gtk/gtklabel.h>
++#include <gtk/gtklayout.h>
++#include <gtk/gtkmessagedialog.h>
++#include <gtk/gtkscrolledwindow.h>
++#include <libgnome/gnome-i18n.h>
++#include <libgnome/gnome-macros.h>
++#include <libgnomecups/gnome-cups-init.h>
++#include <libgnomecups/gnome-cups-printer.h>
++#include <libgnomecups/gnome-cups-request.h>
++#include <libgnomecups/gnome-cups-ui-init.h>
++#include <libnautilus/nautilus-view.h>
++#include <libnautilus/nautilus-view-standard-main.h>
++#include <libnautilus-private/nautilus-bonobo-extensions.h>
++#include <libnautilus-private/nautilus-icon-container.h>
++#include <libnautilus-private/nautilus-icon-factory.h>
++#include <libnautilus-private/nautilus-global-preferences.h>
++
++#define NEW_PRINTER_ICON ((NautilusIconData*)1)
++
++#define COMMAND_NEW_PRINTER                  "/commands/New Printer"
++#define COMMAND_OPEN                         "/commands/Open"
++#define COMMAND_DELETE                       "/commands/Delete"
++#define COMMAND_PAUSE                        "/commands/Pause"
++#define COMMAND_RESUME                       "/commands/Resume"
++#define COMMAND_MAKE_DEFAULT                 "/commands/Make Default"
++#define COMMAND_PROPERTIES                   "/commands/Properties"
++
++typedef struct {
++        NautilusIconContainer container;
++        
++        GList *printers;
++        guint new_printer_notify;
++        NautilusView *view;
++        BonoboUIComponent *ui;
++} NautilusPrinterContainer;
++
++typedef struct {
++        NautilusIconContainerClass container;
++} NautilusPrinterContainerClass;
++
++static GType nautilus_printer_container_get_type (void);
++
++static void remove_printer (NautilusPrinterContainer *container, 
++                            GnomeCupsPrinter *printer);
++
++GNOME_CLASS_BOILERPLATE (NautilusPrinterContainer, nautilus_printer_container,
++                         NautilusIconContainer,
++                         nautilus_icon_container_get_type ());
++
++static void
++update_menus (NautilusPrinterContainer *container)
++{
++        GList *selection;
++        GList *l;
++        GnomeCupsPrinter *printer;
++        int num_selected;
++        gboolean new_printer_selected;
++        gboolean all_paused;
++        gboolean all_running;
++        gboolean is_default;
++
++        selection = nautilus_icon_container_get_selection (NAUTILUS_ICON_CONTAINER (container));
++        
++        num_selected = g_list_length (selection);
++
++        new_printer_selected = FALSE;
++        all_paused = TRUE;
++        all_running = TRUE;
++        is_default = FALSE;
++
++        for (l = selection; l != NULL; l = l->next) {
++                if (l->data == NEW_PRINTER_ICON) {
++                        new_printer_selected = TRUE;
++                } else {
++                        printer = GNOME_CUPS_PRINTER (l->data);
++                        if (gnome_cups_printer_get_state (printer) == IPP_PRINTER_STOPPED) {
++                                all_running = FALSE;
++                        } else {
++                                all_paused = FALSE;
++                        }
++
++                        is_default = gnome_cups_printer_get_is_default (printer);
++                }
++        }
++
++        g_list_free (selection);
++
++        nautilus_bonobo_set_sensitive (container->ui,
++                                       COMMAND_PAUSE,
++                                       !new_printer_selected && !all_paused);
++        nautilus_bonobo_set_sensitive (container->ui,
++                                       COMMAND_RESUME,
++                                       !new_printer_selected && !all_running);
++        nautilus_bonobo_set_sensitive (container->ui,
++                                       COMMAND_MAKE_DEFAULT,
++                                       (!new_printer_selected && num_selected == 1) && !is_default);
++        nautilus_bonobo_set_sensitive (container->ui,
++                                       COMMAND_PROPERTIES,
++                                       !new_printer_selected);
++        nautilus_bonobo_set_sensitive (container->ui,
++                                       COMMAND_DELETE,
++                                       !new_printer_selected);
++}
++
++static void
++get_icon_text (NautilusIconContainer *container,
++               NautilusIconData *data,
++               char **editable_text,
++               char **additional_text)
++{
++        GnomeCupsPrinter *printer;
++
++        if (data == NEW_PRINTER_ICON) {
++                *editable_text = g_strdup (_("New Printer"));
++                *additional_text = NULL;
++        } else {
++                printer = GNOME_CUPS_PRINTER (data);
++                
++                *editable_text = g_strdup (gnome_cups_printer_get_name (printer));
++                *additional_text = g_strdup_printf (_("%s\n%d Jobs"), 
++                                                    gnome_cups_printer_get_state_name (printer),
++                                                    gnome_cups_printer_get_job_count (printer));
++        }
++}
++
++static char *
++get_icon_images (NautilusIconContainer *container,
++                 NautilusIconData *data,
++                 GList **emblem_icons,
++                 char **embedded_text)
++{
++        char *icon_name;
++
++        *embedded_text = NULL;
++
++        if (data == NEW_PRINTER_ICON) {                
++                icon_name = g_strdup ("gnome-dev-printer-new");
++        } else {
++                gnome_cups_printer_get_icon (GNOME_CUPS_PRINTER (data), 
++                                             &icon_name, 
++                                             emblem_icons);
++        }
++
++        return icon_name;
++}
++
++static int
++compare_icons (NautilusIconContainer *container,
++               NautilusIconData *data_a,
++               NautilusIconData *data_b)
++{
++        if (data_a == data_b) {
++                return 0;
++        } else if (data_a == NEW_PRINTER_ICON && data_b != NEW_PRINTER_ICON) {
++                return -1;
++        } else if (data_b == NEW_PRINTER_ICON && data_a != NEW_PRINTER_ICON) {
++                return 1;
++        } else {
++                return strcmp (gnome_cups_printer_get_name (GNOME_CUPS_PRINTER (data_a)),
++                               gnome_cups_printer_get_name (GNOME_CUPS_PRINTER (data_b)));
++        }
++}
++
++static int
++compare_icons_by_name (NautilusIconContainer *container,
++                       NautilusIconData *data_a,
++                       NautilusIconData *data_b)
++{
++        if (data_a == data_b) {
++                return 0;
++        } else if (data_a == NEW_PRINTER_ICON && data_b != NEW_PRINTER_ICON) {
++                return -1;
++        } else if (data_b == NEW_PRINTER_ICON && data_a != NEW_PRINTER_ICON) {
++                return 1;
++        } else {
++                return strcmp (gnome_cups_printer_get_name (GNOME_CUPS_PRINTER (data_a)),
++                               gnome_cups_printer_get_name (GNOME_CUPS_PRINTER (data_b)));
++        }
++}
++
++static gboolean 
++can_accept_item (NautilusIconContainer *container,
++                 NautilusIconData *target,
++                 const char *item_uri)
++{
++        return FALSE;
++}
++
++static gboolean
++get_stored_icon_position (NautilusIconContainer *container,
++                          NautilusIconData *data,
++                          NautilusIconPosition *position)
++{
++        return FALSE;
++}
++
++static char * 
++get_icon_uri (NautilusIconContainer *container,
++              NautilusIconData *data)
++{
++        return NULL;
++}
++
++static char *
++get_icon_drop_target_uri (NautilusIconContainer *container,
++                          NautilusIconData *data)
++{
++        return g_strdup ("printers:");
++}
++
++static char *
++get_container_uri (NautilusIconContainer *container)
++{
++        return g_strdup ("printers:");
++}
++
++static void
++printer_gone_cb (GnomeCupsPrinter *printer,
++                 gpointer user_data)
++{
++        NautilusPrinterContainer *container;
++
++        container = user_data;
++
++        remove_printer (container, printer);
++}
++
++static void
++printer_changed_cb (GnomeCupsPrinter *printer,
++                    gpointer user_data)
++{
++        NautilusIconContainer *container;
++
++        container = NAUTILUS_ICON_CONTAINER (user_data);
++
++        update_menus ((NautilusPrinterContainer*)container);
++        nautilus_icon_container_request_update (container, (NautilusIconData*)printer);
++}
++
++static void
++disconnect_printer (NautilusPrinterContainer *container,
++                    GnomeCupsPrinter *printer)
++{
++        g_signal_handlers_disconnect_by_func (printer,
++                                              G_CALLBACK (printer_changed_cb),
++                                              printer);
++        g_signal_handlers_disconnect_by_func (printer,
++                                              G_CALLBACK (printer_gone_cb),
++                                              printer);
++        g_object_unref (printer);
++}
++
++static void
++remove_printer (NautilusPrinterContainer *container,
++                GnomeCupsPrinter *printer)
++{
++        nautilus_icon_container_remove (NAUTILUS_ICON_CONTAINER (container),
++                                        (NautilusIconData*)printer);
++        container->printers = g_list_remove (container->printers, printer);
++        disconnect_printer (container, printer);        
++}
++
++static void
++watch_printer (NautilusPrinterContainer *container,
++               const char *name)
++{
++        GnomeCupsPrinter *printer;
++        
++        printer = gnome_cups_printer_get (name);
++        if (!printer) {
++                return;
++        }
++
++        container->printers = g_list_append (container->printers, printer);
++        
++        nautilus_icon_container_add (NAUTILUS_ICON_CONTAINER (container),
++                                     (NautilusIconData*)printer);
++        
++        g_signal_connect_object (printer, "is_default_changed", 
++                                 G_CALLBACK (printer_changed_cb), 
++                                 container, 0);
++        g_signal_connect_object (printer, "attributes_changed", 
++                                 G_CALLBACK (printer_changed_cb), 
++                                 container, 0);
++        g_signal_connect_object (printer, "gone",
++                                 G_CALLBACK (printer_gone_cb), 
++                                 container, 0);
++}
++
++static BonoboWindow *
++get_bonobo_window (GtkWidget *widget)
++{
++        GtkWidget *window;
++       	
++	/* Note: This works only because we are in the same process
++	 * as the Nautilus shell. Bonobo components in their own
++	 * processes can't do this.
++	 */
++	window = gtk_widget_get_ancestor (widget, BONOBO_TYPE_WINDOW);
++	g_assert (window != NULL);
++
++	return BONOBO_WINDOW (window);
++}
++
++static GtkMenu *
++create_popup_menu (NautilusIconContainer *container, const char *popup_path)
++{
++        GtkMenu *menu;
++        
++        menu = GTK_MENU (gtk_menu_new ());
++        update_menus ((NautilusPrinterContainer*)container);
++        
++        bonobo_window_add_popup (get_bonobo_window (GTK_WIDGET (container)), 
++                                 menu, popup_path);
++
++        return menu;
++}
++
++static void
++context_click_selection (NautilusIconContainer *container,
++                         GdkEventButton *event)
++{
++        eel_pop_up_context_menu (create_popup_menu (container,
++                                                    "/popups/selection"),
++                                 EEL_DEFAULT_POPUP_MENU_DISPLACEMENT,
++                                 EEL_DEFAULT_POPUP_MENU_DISPLACEMENT,
++                                 event);
++}
++
++static void
++selection_changed (NautilusIconContainer *container)
++{
++        update_menus ((NautilusPrinterContainer *)container);
++}
++
++static void
++handle_error (NautilusPrinterContainer *container, 
++              const char *prefix,
++              GError *error)
++{
++        GtkWidget *dialog;
++	char *msg;
++	
++        if (prefix) {
++                msg = g_strdup_printf (_("%s: %s"), 
++                                       prefix, 
++                                       error ? error->message : _("Unknown Error"));
++        } else {
++                msg = g_strdup (error ? error->message : _("Unknown Error"));
++        }
++        
++	dialog = gtk_message_dialog_new (GTK_WINDOW (gtk_widget_get_toplevel (GTK_WIDGET (container))),
++					 GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_MODAL, 
++					 GTK_MESSAGE_ERROR,
++					 GTK_BUTTONS_OK,
++                                         "%s",
++                                         msg);
++        g_free (msg);
++	gtk_dialog_run (GTK_DIALOG (dialog));
++	gtk_widget_destroy (dialog); 
++}
++
++static void
++new_printer (NautilusPrinterContainer *container)
++{
++        char *argv[] = { "gnome-cups-add", NULL };
++        GError *error;
++        
++        error = NULL;
++
++        g_spawn_async (NULL, argv, NULL, 
++                       G_SPAWN_SEARCH_PATH, NULL, NULL, NULL, &error);
++
++        if (error) {
++                handle_error (container, NULL, error);
++                g_error_free (error);
++        }
++}
++
++static void
++open_printers (NautilusPrinterContainer *container,
++               GList *printer_names, 
++               const char *command)
++{
++        char **argv;
++        int argc;
++        GList *l;
++        int i;
++        GError *error;
++
++        argc = g_list_length (printer_names) + 4;
++        argv = g_new0 (char *, argc);
++
++        i = 0;
++        
++        argv[i++] = "gnome-cups-manager";
++        argv[i++] = (char*)command;
++        
++        for (l = printer_names; l != NULL; l = l->next, i++) {
++                argv[i] = l->data;
++        }
++        argv[i] = NULL;
++
++        error = NULL;
++        g_spawn_async (NULL, argv, NULL, 
++                       G_SPAWN_SEARCH_PATH, NULL, NULL, NULL, &error);
++
++        if (error) {
++                handle_error (container, NULL, error);
++                g_error_free (error);
++        }
++
++        g_free (argv);
++}
++
++static void
++activate_selection (NautilusPrinterContainer *container, 
++                    GList *selection)
++{
++        GList *l;
++        GnomeCupsPrinter *printer;
++        GList *printer_names;
++        
++        printer_names = NULL;
++        
++
++        for (l = selection; l != NULL; l = l->next) {
++                if (l->data == NEW_PRINTER_ICON) {
++                        new_printer (container);
++                } else {
++                        printer = GNOME_CUPS_PRINTER (l->data);
++                        printer_names = g_list_prepend (printer_names,
++                                                        g_strdup (gnome_cups_printer_get_name (printer)));
++                }
++        }
++
++        if (printer_names) {
++                open_printers (container, printer_names, "-v");
++        }
++
++        eel_g_list_free_deep (printer_names);
++}
++
++static void
++activate (NautilusIconContainer *container, 
++          /* FIXME */NautilusIconData *data)
++{
++        /* FIXME: nautilus-icon-container's header is busted, and lists this 
++         * argument as a NautilusIconData rather than a GList * */
++        GList *items = (GList*)data;
++        
++        activate_selection ((NautilusPrinterContainer*)container, items);
++}
++
++static void
++show_selection_properties (NautilusPrinterContainer *container, 
++                           GList *selection)
++{
++        GList *l;
++        GnomeCupsPrinter *printer;
++        GList *printer_names;
++        
++        printer_names = NULL;
++        
++        for (l = selection; l != NULL; l = l->next) {
++                if (l->data == NEW_PRINTER_ICON) {
++                        g_warning ("properties selected on New Printer");
++                } else {
++                        printer = GNOME_CUPS_PRINTER (l->data);
++                        printer_names = g_list_prepend (printer_names,
++                                                        g_strdup (gnome_cups_printer_get_name (printer)));
++                }
++        }
++
++        if (printer_names) {
++                open_printers (container, printer_names, "-p");
++        }
++
++        eel_g_list_free_deep (printer_names);
++}
++
++static void
++nautilus_printer_container_unload_printers (NautilusPrinterContainer *container)
++{
++        GList *l;
++        for (l = container->printers; l != NULL; l = l->next) {
++                nautilus_icon_container_remove (NAUTILUS_ICON_CONTAINER (container),
++                                                (NautilusIconData*)l->data);
++                disconnect_printer (container, GNOME_CUPS_PRINTER (l->data));
++        }
++        g_list_free (container->printers);
++        container->printers = NULL;
++}
++
++static void
++nautilus_printer_container_load_printers (NautilusPrinterContainer *container)
++{
++        GList *printer_names;
++        GList *l;
++
++        nautilus_printer_container_unload_printers (container);
++        
++        printer_names = gnome_cups_get_printers ();
++        for (l = printer_names; l != NULL; l = l->next) {
++                watch_printer (container, l->data);
++        }
++        gnome_cups_printer_list_free (printer_names);
++}
++
++static void
++nautilus_printer_container_dispose (GObject *object)
++{
++        NautilusPrinterContainer *container;
++        GList *l;
++        
++        container = (NautilusPrinterContainer*)object;
++        
++        for (l = container->printers; l != NULL; l = l->next) {
++                disconnect_printer (container, GNOME_CUPS_PRINTER (l->data));
++        }
++        g_list_free (container->printers);
++        container->printers = NULL;
++
++        if (container->new_printer_notify) {
++                gnome_cups_printer_new_printer_notify_remove (container->new_printer_notify);
++                container->new_printer_notify = 0;
++        }
++
++        GNOME_CALL_PARENT (G_OBJECT_CLASS, dispose, (object));
++}
++
++
++static void
++update_click_mode (gpointer user_data)
++{
++        NautilusIconContainer *container;
++	int click_mode;
++
++        container = NAUTILUS_ICON_CONTAINER (user_data);
++
++	click_mode = eel_preferences_get_enum (NAUTILUS_PREFERENCES_CLICK_POLICY);
++
++	nautilus_icon_container_set_single_click_mode (container,
++						       click_mode == NAUTILUS_CLICK_POLICY_SINGLE);
++}
++
++static void
++prioritize_thumbnailing (NautilusIconContainer *container,
++                         NautilusIconData *data)
++{
++}
++
++static void
++nautilus_printer_container_instance_init (NautilusPrinterContainer *container)
++{
++}
++
++static void
++nautilus_printer_container_class_init (NautilusPrinterContainerClass *klass)
++{
++        NautilusIconContainerClass *container_class;
++        GObjectClass *object_class;
++        
++        container_class = NAUTILUS_ICON_CONTAINER_CLASS (klass);
++        object_class = G_OBJECT_CLASS (klass);
++        
++        container_class->get_icon_text = get_icon_text;
++        container_class->get_icon_images = get_icon_images;
++        container_class->compare_icons = compare_icons;
++        container_class->compare_icons_by_name = compare_icons_by_name;
++        container_class->can_accept_item = can_accept_item;
++        container_class->get_stored_icon_position = get_stored_icon_position;
++        container_class->get_icon_uri = get_icon_uri;
++        container_class->get_icon_drop_target_uri = get_icon_drop_target_uri;
++        container_class->get_container_uri = get_container_uri;
++
++        container_class->context_click_selection = context_click_selection;
++        container_class->selection_changed = selection_changed;
++        
++        container_class->activate = activate;
++        container_class->prioritize_thumbnailing = prioritize_thumbnailing;
++
++        object_class->dispose = nautilus_printer_container_dispose;
++
++}
++
++static void
++printer_added_cb (const char *name, gpointer user_data)
++{
++        NautilusPrinterContainer *container;
++
++        container = (NautilusPrinterContainer*)user_data;
++        
++        watch_printer (container, name);
++}
++
++static void
++printers_load_location (NautilusView *view,
++                        const char *location,
++                        gpointer user_data)
++{
++        NautilusPrinterContainer *container;
++        GtkWidget *dialog;
++
++        container = (NautilusPrinterContainer*)user_data;
++        if (gnome_cups_check_daemon ()) {
++                if (!container->new_printer_notify) {
++                        container->new_printer_notify = 
++                                gnome_cups_printer_new_printer_notify_add (printer_added_cb, 
++                                                                           user_data);
++                }
++                
++                nautilus_printer_container_load_printers (user_data);
++                
++                nautilus_view_set_title (view, _("Printers"));
++                
++                nautilus_view_report_load_complete (view);
++        } else {
++		dialog = gtk_message_dialog_new (GTK_WINDOW (gtk_widget_get_toplevel (GTK_WIDGET (container))), 
++						 GTK_DIALOG_DESTROY_WITH_PARENT | GTK_DIALOG_MODAL, 
++						 GTK_MESSAGE_ERROR,
++						 GTK_BUTTONS_OK,
++						 _("CUPS does not appear to be running.  CUPS must be running for the printers: url to work correctly."));
++		gtk_dialog_run (GTK_DIALOG (dialog));
++		gtk_widget_destroy (dialog); 
++
++                nautilus_view_report_load_failed (view);
++        }
++}
++
++static void
++open_cb (BonoboUIComponent *component, gpointer user_data, const char *verb)
++{
++        NautilusPrinterContainer *container;
++        GList *selection;
++
++        container = user_data;
++        
++        selection = nautilus_icon_container_get_selection (NAUTILUS_ICON_CONTAINER (container));
++        activate_selection (container, selection);
++        g_list_free (selection);
++}
++
++static void
++properties_cb (BonoboUIComponent *component, gpointer user_data, const char *verb)
++{
++        NautilusPrinterContainer *container;
++        GList *selection;
++
++        container = user_data;
++        
++        selection = nautilus_icon_container_get_selection (NAUTILUS_ICON_CONTAINER (container));
++        show_selection_properties (container, selection);
++        g_list_free (selection);
++}
++
++static void
++pause_cb (BonoboUIComponent *component, gpointer user_data, const char *verb)
++{
++        NautilusPrinterContainer *container;
++        GList *selection;
++        GList *l;
++        GnomeCupsPrinter *printer;
++        
++        container = user_data;
++
++        selection = nautilus_icon_container_get_selection (NAUTILUS_ICON_CONTAINER (container));
++        for (l = selection; l != NULL; l = l->next) {
++                GError *error = NULL;
++                g_return_if_fail (l->data != NEW_PRINTER_ICON);
++                printer = GNOME_CUPS_PRINTER (l->data);
++                gnome_cups_printer_pause (printer, &error);
++                if (error) {
++                        char *msg;
++                        msg = g_strdup_printf ("Could not pause '%s'", 
++                                               gnome_cups_printer_get_name (printer));
++                        handle_error (container, msg, error);
++                        g_free (msg);
++                        g_error_free (error);
++                }
++                
++        }
++        g_list_free (selection);
++}
++
++static void
++resume_cb (BonoboUIComponent *component, gpointer user_data, const char *verb)
++{
++        NautilusPrinterContainer *container;
++        GList *selection;
++        GList *l;
++        GnomeCupsPrinter *printer;
++        
++        container = user_data;
++
++        selection = nautilus_icon_container_get_selection (NAUTILUS_ICON_CONTAINER (container));
++        for (l = selection; l != NULL; l = l->next) {
++                GError *error = NULL;
++                g_return_if_fail (l->data != NEW_PRINTER_ICON);
++                printer = GNOME_CUPS_PRINTER (l->data);
++                gnome_cups_printer_resume (printer, &error);
++                if (error) {
++                        char *msg;
++                        msg = g_strdup_printf ("Could not resume '%s'", 
++                                               gnome_cups_printer_get_name (printer));
++                        handle_error (container, msg, error);
++                        g_free (msg);
++                        g_error_free (error);
++                }
++
++        }
++        g_list_free (selection);
++}
++
++static void
++make_default_cb (BonoboUIComponent *component, gpointer user_data, const char *verb)
++{
++        NautilusPrinterContainer *container;
++        GList *selection;
++        GnomeCupsPrinter *printer;
++        GError *error = NULL;
++        
++        container = user_data;
++
++        selection = nautilus_icon_container_get_selection (NAUTILUS_ICON_CONTAINER (container));
++        g_return_if_fail (g_list_length (selection) == 1);
++        g_return_if_fail (selection->data != NEW_PRINTER_ICON);
++        
++        printer = GNOME_CUPS_PRINTER (selection->data);
++        gnome_cups_printer_set_default (printer, &error);
++        if (error) {
++                char *msg;
++                msg = g_strdup_printf ("Could not make '%s' the default printer", 
++                                       gnome_cups_printer_get_name (printer));
++                handle_error (container, msg, error);
++                g_free (msg);
++                g_error_free (error);
++        }
++
++        g_list_free (selection);
++}
++
++static void
++delete_cb (BonoboUIComponent *component, gpointer user_data, const char *verb)
++{
++        NautilusPrinterContainer *container;
++        GList *selection;
++        GList *l;
++        GnomeCupsPrinter *printer;
++        
++        container = user_data;
++
++        selection = nautilus_icon_container_get_selection (NAUTILUS_ICON_CONTAINER (container));
++        for (l = selection; l != NULL; l = l->next) {
++                GError *error = NULL;
++                g_return_if_fail (l->data != NEW_PRINTER_ICON);
++                printer = GNOME_CUPS_PRINTER (l->data);
++                gnome_cups_printer_delete (printer, &error);                
++                if (error) {
++                        char *msg;
++                        msg = g_strdup_printf ("Could not delete '%s'", 
++                                               gnome_cups_printer_get_name (printer));
++                        handle_error (container, msg, error);
++                        g_free (msg);
++                        g_error_free (error);
++                }
++
++        }
++        g_list_free (selection);
++}
++
++static void
++new_printer_cb (BonoboUIComponent *component, gpointer user_data, const char *verb)
++{
++        NautilusPrinterContainer *container;
++
++        container = user_data;
++        
++        new_printer (container);
++}
++
++static BonoboUIVerb verbs[] = {
++        BONOBO_UI_VERB ("Open", open_cb),
++        BONOBO_UI_VERB ("Pause", pause_cb),
++        BONOBO_UI_VERB ("Resume", resume_cb),
++        BONOBO_UI_VERB ("Make Default", make_default_cb),
++        BONOBO_UI_VERB ("Delete", delete_cb),
++        BONOBO_UI_VERB ("Properties", properties_cb),
++        BONOBO_UI_VERB ("New Printer", new_printer_cb),
++        BONOBO_UI_VERB_END,
++};
++
++static void
++control_activate_cb (BonoboObject *control, 
++                     gboolean state,
++                     gpointer callback_data)
++{
++        NautilusView *view;
++        NautilusPrinterContainer *container;
++        
++        view = NAUTILUS_VIEW (callback_data);
++        container = g_object_get_data (G_OBJECT (view), "container");
++        
++        if (state) {
++                container->ui = nautilus_view_set_up_ui (view, DATADIR,
++                                                         "nautilus-printers-view-ui.xml",
++                                                         "nautilus-printers");
++                bonobo_ui_component_add_verb_list_with_data (container->ui,
++                                                             verbs,
++                                                             container);
++                update_menus (container);
++        } 
++        /* Nothing to do on deactivate case, which necer happens
++         * because of the way nautilus content views are handled */
++}
++
++static BonoboObject *
++make_printers_view (void)
++{
++        GtkWidget *scrolled;
++        NautilusView *view;
++        NautilusPrinterContainer *container;
++
++        gnome_cups_ui_init ();
++
++        scrolled = gtk_scrolled_window_new (NULL, NULL);
++        gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (scrolled),
++                                             GTK_SHADOW_IN);
++        gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scrolled),
++                                        GTK_POLICY_AUTOMATIC, 
++                                        GTK_POLICY_AUTOMATIC);
++        container = g_object_new (nautilus_printer_container_get_type (), NULL);
++        gtk_container_add (GTK_CONTAINER (scrolled), 
++                           GTK_WIDGET (container));
++
++        update_click_mode (container);
++        eel_preferences_add_callback (NAUTILUS_PREFERENCES_CLICK_POLICY,
++				      update_click_mode, container);
++
++
++        nautilus_icon_container_set_auto_layout (NAUTILUS_ICON_CONTAINER (container), TRUE);
++        nautilus_icon_container_add (NAUTILUS_ICON_CONTAINER (container),
++                                     NEW_PRINTER_ICON);
++
++        gtk_widget_show_all (scrolled);
++
++	/* Create CORBA object. */
++        view = nautilus_view_new (scrolled);
++        g_object_set_data (G_OBJECT (view), "container", container);
++
++        g_signal_connect_object (nautilus_view_get_bonobo_control (view),
++                                 "activate",
++                                 G_CALLBACK (control_activate_cb), view, 0);
++
++        /* handle events */
++        g_signal_connect (view, "load_location",
++                          G_CALLBACK (printers_load_location), 
++                          container);
++
++        return BONOBO_OBJECT (view);
++}
++
++static CORBA_Object
++printers_shlib_make_object (PortableServer_POA poa,
++                            const char *iid,
++                            gpointer impl_ptr,
++                            CORBA_Environment *ev)
++{
++	BonoboObject *view;
++
++        if (strcmp (iid, VIEW_IID) != 0) {
++		return CORBA_OBJECT_NIL;
++	}
++
++	view = make_printers_view ();
++
++	bonobo_activation_plugin_use (poa, impl_ptr);
++
++	return CORBA_Object_duplicate (BONOBO_OBJREF (view), ev);
++}
++
++static const BonoboActivationPluginObject printers_plugin_list[] = {
++	{ VIEW_IID, printers_shlib_make_object },
++	{ NULL }
++};
++
++const BonoboActivationPlugin Bonobo_Plugin_info = {
++	printers_plugin_list,
++	"Nautilus Printers View"
++};
+diff -Nru -x '*~' -x '*.o' -x '*.orig' -x '*.rej' nautilus-2.2.4.orig/components/printers/nautilus-printers-view-ui.xml nautilus-2.2.4/components/printers/nautilus-printers-view-ui.xml
+--- nautilus-2.2.4.orig/components/printers/nautilus-printers-view-ui.xml	1969-12-31 19:00:00.000000000 -0500
++++ nautilus-2.2.4/components/printers/nautilus-printers-view-ui.xml	2003-05-26 22:17:59.000000000 -0400
+@@ -0,0 +1,93 @@
++<Root>
++<commands>
++	<cmd name="Delete"
++         _label="_Delete"
++	 _tip="Delete each selected printer"/>
++	<cmd name="New Printer"
++         _label="_New Printer"
++	 _tip="Create a new printer"/>
++	<cmd name="Open"
++         _label="_Open"
++	 _tip="Open the selected item"/>
++        <cmd name="Pause"
++         _label="Pause"
++         _tip="Pause the selected item"/>
++        <cmd name="Resume"
++         _label="Resume"
++         _tip="Resume the selected item"/>
++        <cmd name="Make Default"
++         _label="Make _Default"
++         _tip="Make the selected item the default"/>
++	<cmd name="Properties"
++         _label="_Properties"
++	 _tip="View or modify the properties of each selected item"/>
++</commands>
++<menu>
++	<submenu name="File">
++		<placeholder name="New Items Placeholder">
++			<menuitem name="New Printer"
++			  	  accel="*Control*n"
++                                  pixtype="stock" pixname="gtk-new"
++				  verb="New Printer"/>
++		</placeholder>
++		<placeholder name="Open Placeholder">
++			<menuitem name="Open"
++                                  accel="*Control*o"
++				  pixtype="stock" pixname="gtk-open"
++				  verb="Open"/>
++		</placeholder>
++		<placeholder name="File Items Placeholder">
++			<menuitem name="Properties"
++				  accel="*Control*i"
++				  verb="Properties"/>
++		</placeholder>
++	</submenu>
++
++	<submenu name="Edit">
++		<menuitem name="Select All"
++			  accel="*Control*a"
++			  verb="Select All"/>
++
++                <placeholder name="File Items Placeholder">
++                        <placeholder name="Printer Operations Placeholder" delimit="none">
++                        	<menuitem name="Pause" verb="Pause"/>
++	                        <menuitem name="Resume" verb="Resume"/>
++        	                <menuitem name="Make Default" verb="Make Default"/>
++                	</placeholder>
++		</placeholder>
++
++		<placeholder name="Dangerous File Items Placeholder">
++			<menuitem name="Delete"
++				  verb="Delete"/>
++		</placeholder>
++
++	</submenu>
++</menu>
++<popups>
++	<popup name="background">
++		<placeholder name="Before Zoom Items">
++			<placeholder name="New Items">
++				<menuitem name="New Printer" 
++				 verb="New Printer"/>
++			</placeholder>
++		</placeholder>
++	</popup>
++	
++	<popup name="selection" tearoff="0">
++		<placeholder name="Open Placeholder" delimit="none">
++			<menuitem name="Open" verb="Open"
++			 pixtype="stock" pixname="gtk-open"/>
++		</placeholder>
++                <placeholder name="Printer Operations Placeholder" delimit="top">
++                        <menuitem name="Pause" verb="Pause"/>
++                        <menuitem name="Resume" verb="Resume"/>
++                        <menuitem name="Make Default" verb="Make Default"/>
++                </placeholder>
++		<placeholder name="Dangerous File Actions" delimit="top">
++			<menuitem name="Delete" verb="Delete"/>
++		</placeholder>
++                <separator/>
++                <menuitem name="Properties" verb="Properties"/>
++	</popup>
++</popups>
++</Root>
+diff -Nru -x '*~' -x '*.o' -x '*.orig' -x '*.rej' nautilus-2.2.4.orig/components/printers/Nautilus_View_printers.server.in.in nautilus-2.2.4/components/printers/Nautilus_View_printers.server.in.in
+--- nautilus-2.2.4.orig/components/printers/Nautilus_View_printers.server.in.in	1969-12-31 19:00:00.000000000 -0500
++++ nautilus-2.2.4/components/printers/Nautilus_View_printers.server.in.in	2003-05-26 22:17:59.000000000 -0400
+@@ -0,0 +1,20 @@
++<oaf_info>
++
++<oaf_server iid="OAFIID:Nautilus_Printers_View"
++	type="shlib" location="@BONOBODIR@/libnautilus-printers-view.so">
++	<oaf_attribute name="repo_ids" type="stringv">
++		<item value="IDL:Bonobo/Unknown:1.0"/>
++		<item value="IDL:Bonobo/Control:1.0"/>
++		<item value="IDL:Nautilus/View:1.0"/>
++	</oaf_attribute>
++	<oaf_attribute name="description" type="string" _value="Printers view for nautilus"/>
++	<oaf_attribute name="name" type="string" _value="Printers View"/>
++	<oaf_attribute name="bonobo:supported_uri_schemes" type="stringv">
++		<item value="printers"/>
++	</oaf_attribute>
++	<oaf_attribute name="nautilus:view_as_name" type="string" _value="Printers"/>
++	<oaf_attribute name="nautilus:view_as_label" type="string" _value="View as Printers"/>
++	<oaf_attribute name="nautilus:viewer_label" type="string" _value="Printer Viewer"/>
++</oaf_server>
++
++</oaf_info>
+diff -Nru -x '*~' -x '*.o' -x '*.orig' -x '*.rej' nautilus-2.2.4.orig/configure.in nautilus-2.2.4/configure.in
+--- nautilus-2.2.4.orig/configure.in	2003-05-07 13:51:36.000000000 -0400
++++ nautilus-2.2.4/configure.in	2003-05-27 01:31:42.000000000 -0400
+@@ -296,6 +296,17 @@
+ COMPONENT_LIBS="`$PKG_CONFIG --libs $COMPONENT_MODULES`"
+ AC_SUBST(COMPONENT_LIBS)
+ 
++dnl printer component
++dnl FIXME: Make optional
++
++PRINTER_MODULES="eel-2.0 libbonoboui-2.0 gnome-vfs-module-2.0 gnome-desktop-2.0 libgnomecups-1.0 libgnomecupsui-1.0"
++PKG_CHECK_MODULES(PRINTER, $PRINTER_MODULES)
++PRINTER_CFLAGS="`$PKG_CONFIG --cflags $PRINTER_MODULES`"
++AC_SUBST(PRINTER_CFLAGS)
++PRINTER_LIBS="`$PKG_CONFIG --libs $PRINTER_MODULES`"
++AC_SUBST(PRINTER_LIBS)
++
++
+ dnl emblems component
+ EMBLEM_COMPONENT_MODULES="$COMPONENT_MODULES librsvg-2.0"
+ EMBLEM_COMPONENT_CFLAGS="`$PKG_CONFIG --cflags $EMBLEM_COMPONENT_MODULES`"
+@@ -352,6 +363,7 @@
+ components/hardware/icons/Makefile
+ components/history/Makefile
+ components/notes/Makefile
++components/printers/Makefile
+ components/text/Makefile
+ components/text/services/Makefile
+ components/throbber/Makefile
