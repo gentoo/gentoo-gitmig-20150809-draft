@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/snortsnarf
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsnarf/ChangeLog,v 1.1 2003/02/12 10:45:18 aliz Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snortsnarf/ChangeLog,v 1.2 2004/03/22 12:28:09 mboman Exp $
+
+  22 Mar 2004; Michael Boman <mboman@gentoo.org> metadata.xml,
+  snortsnarf-021111.1.ebuild:
+  QA: Propperly assigned DEPEND/RDEPEND. Added dependency on dev-lang/perl and
+  removed dependency on virtual-glibc.
 
 *snortsnarf-021111.1 (12 Feb 2003)
 
