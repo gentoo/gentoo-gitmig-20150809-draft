@@ -1,13 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.3-r2.ebuild,v 1.6 2003/07/16 14:13:44 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.3-r2.ebuild,v 1.7 2003/08/03 04:41:56 vapier Exp $
 
-IUSE=""
+inherit flag-o-matic
+filter-flags -fno-exceptions
 
-inherit eutils flag-o-matic
-filter-flags "-fno-exceptions"
-
-S="${WORKDIR}/${P}"
 DESCRIPTION="Linux console display library"
 HOMEPAGE="http://www.gnu.org/software/ncurses/ncurses.html"
 SRC_URI="mirror://gnu/ncurses/${P}.tar.gz"
@@ -15,18 +12,17 @@ SRC_URI="mirror://gnu/ncurses/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="5"
 KEYWORDS="amd64 ~x86 ppc ~sparc alpha ~hppa ~arm ~mips"
+IUSE="debug"
 
 DEPEND="virtual/glibc"
 
 src_unpack() {
-	
 	unpack ${A}
 	epatch ${FILESDIR}/ncurses-5.3-xterm.patch
 }
 
 src_compile() {
-
-	[ -z "${DEBUGBUILD}" ] && myconf="${myconf} --without-debug"
+	[ `use debug` ] && myconf="${myconf} --without-debug"
 
 	# From version 5.3, ncurses also build c++ bindings, and as
 	# we do not have a c++ compiler during bootstrap, disable
@@ -49,7 +45,6 @@ src_compile() {
 }
 
 src_install() {
-
 	make DESTDIR=${D} install || die "make install failed"
 
 	# Move static and extraneous ncurses libraries out of /lib
@@ -89,7 +84,6 @@ src_install() {
 }
 
 pkg_postinst() {
-
 	# Old ncurses may still be around from old build tbz2's.
 	rm -f /lib/libncurses.so.5.2
 	rm -f /usr/lib/lib{form,menu,panel}.so.5.2

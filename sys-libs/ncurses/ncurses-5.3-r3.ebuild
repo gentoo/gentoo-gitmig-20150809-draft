@@ -1,13 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.3-r3.ebuild,v 1.1 2003/08/01 13:17:04 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.3-r3.ebuild,v 1.2 2003/08/03 04:41:56 vapier Exp $
 
-IUSE=""
+inherit flag-o-matic
+filter-flags -fno-exceptions
 
-inherit eutils flag-o-matic
-filter-flags "-fno-exceptions"
-
-S="${WORKDIR}/${P}"
 DESCRIPTION="Linux console display library"
 HOMEPAGE="http://www.gnu.org/software/ncurses/ncurses.html"
 SRC_URI="mirror://gnu/ncurses/${P}.tar.gz"
@@ -15,6 +12,7 @@ SRC_URI="mirror://gnu/ncurses/${P}.tar.gz"
 LICENSE="MIT"
 SLOT="5"
 KEYWORDS="~amd64 ~x86 ~ppc ~sparc ~alpha ~hppa ~arm ~mips"
+IUSE="debug"
 
 DEPEND="virtual/glibc"
 
@@ -24,7 +22,7 @@ src_unpack() {
 }
 
 src_compile() {
-	[ -z "${DEBUGBUILD}" ] && myconf="${myconf} --without-debug"
+	[ `use debug` ] && myconf="${myconf} --without-debug"
 
 	# From version 5.3, ncurses also build c++ bindings, and as
 	# we do not have a c++ compiler during bootstrap, disable
