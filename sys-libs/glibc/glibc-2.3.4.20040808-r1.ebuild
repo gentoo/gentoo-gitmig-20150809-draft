@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.1 2004/10/07 22:24:28 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/glibc-2.3.4.20040808-r1.ebuild,v 1.2 2004/10/10 07:35:10 lv Exp $
 
 inherit eutils flag-o-matic gcc
 
@@ -519,6 +519,11 @@ src_unpack() {
 
 	# Improved handled temporary files. bug #66358
 	epatch ${FILESDIR}/2.3.3/${PN}-2.3.3-tempfile.patch
+
+	# fixes compiling with the new binutils on at least amd64 and ia64.
+	# see http://sources.redhat.com/ml/libc-alpha/2004-08/msg00076.html
+	# and http://bugs.gentoo.org/show_bug.cgi?id=66396 for more info.
+	epatch ${FILESDIR}/2.3.4/glibc-2.3.4-res_init.patch
 
 	# Fix permissions on some of the scripts
 	chmod u+x ${S}/scripts/*.sh

@@ -1,6 +1,12 @@
 # ChangeLog for sys-libs/glibc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.268 2004/10/07 22:24:27 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/glibc/ChangeLog,v 1.269 2004/10/10 07:35:10 lv Exp $
+
+  10 Oct 2004; Travis Tilley <lv@gentoo.org>
+  +files/2.3.4/glibc-2.3.4-res_init.patch, glibc-2.3.4.20040808-r1.ebuild:
+  added fix for a relocation error on at least amd64 and ia64. see
+  http://sources.redhat.com/ml/libc-alpha/2004-08/msg00076.html for more info.
+  closes bug 66396.
 
 *glibc-2.3.2-r12 (07 Oct 2004)
 
