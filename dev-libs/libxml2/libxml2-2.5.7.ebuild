@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.5.7.ebuild,v 1.1 2003/04/26 20:41:10 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/libxml2-2.5.7.ebuild,v 1.2 2003/05/24 18:29:59 taviso Exp $
 
-inherit eutils libtool gnome.org
+inherit eutils libtool gnome.org flag-o-matic
 
 IUSE="python readline"
 
@@ -23,6 +23,13 @@ src_compile() {
 	elibtoolize
 
 	local myconf=""
+	
+	if [ "${ARCH}" == "alpha" -a "${CC}" == "ccc" ]; then
+		# i think the author assumes __DECC is defined only on Tru64.
+		# quick fix in this patch. -taviso.
+		append-flags -ieee
+		epatch ${FILESDIR}/libxml2-${PV}-dec-alpha-compiler.diff
+	fi
 
 	# This breaks gnome2 (libgnomeprint for instance fails to compile with
 	# fresh install, and existing) - <azarah@gentoo.org> (22 Dec 2002).

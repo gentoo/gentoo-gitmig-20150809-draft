@@ -1,0 +1,35 @@
+--- libxml2-2.5.7.orig/triodef.h	2003-04-03 16:28:28.000000000 +0100
++++ libxml2-2.5.7/triodef.h	2003-05-24 18:53:53.000000000 +0100
+@@ -21,7 +21,7 @@
+ /*************************************************************************
+  * Platform and compiler support detection
+  */
+-#if defined(__GNUC__)
++#if defined(__GNUC__) || defined(__DECC) || defined(__DECCXX)
+ # define TRIO_COMPILER_GCC
+ #elif defined(__SUNPRO_C)
+ # define TRIO_COMPILER_SUNPRO
+@@ -32,8 +32,6 @@
+ # define TRIO_COMPILER_XLC
+ #elif defined(_AIX) && !defined(__GNUC__)
+ # define TRIO_COMPILER_XLC /* Workaround for old xlc */
+-#elif defined(__DECC) || defined(__DECCXX)
+-# define TRIO_COMPILER_DECC
+ #elif defined(__osf__) && defined(__LANGUAGE_C__)
+ # define TRIO_COMPILER_DECC /* Workaround for old DEC C compilers */
+ #elif defined(_MSC_VER)
+--- libxml2-2.5.7.orig/trionan.c	2003-04-03 16:28:28.000000000 +0100
++++ libxml2-2.5.7/trionan.c	2003-05-24 18:35:01.000000000 +0100
+@@ -47,10 +47,10 @@
+ #include <string.h>
+ #include <limits.h>
+ #include <float.h>
+-#if defined(TRIO_PLATFORM_UNIX)
++#if defined(TRIO_PLATFORM_UNIX) || defined(__DECC)
+ # include <signal.h>
+ #endif
+-#if defined(TRIO_COMPILER_DECC)
++#if defined(TRIO_COMPILER_DECC) && ! defined(__DECC)
+ # include <fp_class.h>
+ #endif
+ #include <assert.h>

@@ -1,6 +1,11 @@
 # ChangeLog for dev-libs/libxml2
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.39 2003/05/07 22:45:41 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libxml2/ChangeLog,v 1.40 2003/05/24 18:29:59 taviso Exp $
+
+  24 May 2003; Tavis Ormandy <taviso@gentoo.org> libxml2-2.5.4.ebuild,
+  libxml2-2.5.7.ebuild, files/libxml2-2.5.4-dec-alpha-compiler.diff,
+  files/libxml2-2.5.7-dec-alpha-compiler.diff:
+  ccc fixes, author assumes ccc == tru64
 
   08 May 2003; Christian Birchinger <joker@gentoo.org> libxml2-2.5.6.ebuild:
   Added stable sparc keyword
