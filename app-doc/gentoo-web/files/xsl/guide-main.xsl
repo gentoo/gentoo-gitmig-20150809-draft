@@ -45,6 +45,7 @@
 				main menu ::<br/>
 				&#160;&#160;<a class="oldlink" href="/index.html">About Gentoo Linux</a><br/>
 				&#160;&#160;<a class="oldlink" href="/index-download.html">Download/Install</a><br/> 
+				&#160;&#160;<a class="oldlink" href="http://cvs.gentoo.org/wiki">Dev Wiki</a><br/> 
 				&#160;&#160;<a class="oldlink" href="/index-changelog.html">CVS Changelog</a><br/> 
 				&#160;&#160;<a class="oldlink" href="/index-projects.html">Projects</a><br/> 
 				<br/>
@@ -169,10 +170,10 @@
 				</xsl:choose>
 				<xsl:choose>
 					<xsl:when test="/mainpage/@id='download'">
-						<a class="highlight" href="/index-download.html">Download/Install</a> |
+						<a class="highlight" href="/index-download.html">Download/Install</a> | <a class="menulink" href="http://cvs.gentoo.org/wiki">Dev Wiki</a> |
 					</xsl:when>
 					<xsl:otherwise>
-						<a class="menulink" href="/index-download.html">Download/Install</a> |
+						<a class="menulink" href="/index-download.html">Download/Install</a> | <a class="menulink" href="http://cvs.gentoo.org/wiki">Dev Wiki</a> |
 					</xsl:otherwise>
 				</xsl:choose>
 				<xsl:choose>
