@@ -1,6 +1,9 @@
 # ChangeLog for net-www/squidguard
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/squidguard/ChangeLog,v 1.7 2004/04/27 20:52:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/squidguard/ChangeLog,v 1.8 2004/06/23 07:22:28 cyfred Exp $
+
+  23 Jun 2004; Andrew Bevitt <cyfred@gentoo.org>; +metadata.xml:
+  Adding metadata.xml
 
   27 Apr 2004; Aron Griffis <agriffis@gentoo.org> squidguard-1.2.0-r1.ebuild:
   Add inherit eutils
