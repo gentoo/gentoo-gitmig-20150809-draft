@@ -1,6 +1,6 @@
 # ChangeLog for app-sci/zetagrid
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/zetagrid/ChangeLog,v 1.14 2003/03/11 20:51:09 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/zetagrid/ChangeLog,v 1.15 2003/03/14 13:53:43 tantive Exp $
 
 *zetagrid-1.8.2 (11 Mar 2003)
 
@@ -8,63 +8,13 @@
   The ebuild now contains the correct version number after the filename
   has been corrected upstream.
 
-*zetagrid-1.0-r8 (02 Mar 2003)
+*zetagrid-1.0 (14 Mar 2003)
 
-  02 Mar 2003; Michael Imhof <tantive@gentoo.org> :
-  Version bumped again to really update all clients, as zetagrid
-  seems to work with the false startup script, but it doesn't.
-
-*zetagrid-1.0-r7 (01 Mar 2003)
-
-  01 Mar 2003; Martin Holzer <mholzer@gentoo.org> files/zeta.init :
-  moved #!/sbin/runscripts to top of the file (needed to run).
-
-  01 Mar 2003; Michael Imhof <tantive@gentoo.org> :
-  Changed /usr/bin/grep back to /bin/grep in zeta.init as
-  the /usr/bin/grep was a mistake in the grep ebuild.
-
-*zetagrid-1.0-r6 (28 Feb 2003)
- 
-  28 Feb 2003; Martin Holzer <mholzer@gentoo.org> :
-  Fixed headers for zeta.init, zeta_progress.sh and zeta.sh
-
-  28 Feb 2003; Michael Imhof <tantive@gentoo.org> :
-  Changed /bin/grep to /usr/bin/grep in zeta.init.
-  Added headers for zeta.init, zeta_progress.sh and zeta.sh
-  This closes #16500
-
-*zetagrid-1.0-r5 (25 Feb 2003)
-
-  25 Feb 2003; Michael Imhof <tantive@gentoo.org> :
-  Changed -alpha to alpha. Bumped digest for new client (1.8.2).
-
-*zetagrid-1.0-r4 (15 Feb 2003)
-
-  15 Feb 2003; Michael Imhof <tantive@gentoo.org> :
-  Changed ~sparc and ~alpha to -sparc and -alpha
-  Added a patch for zeta.sh to pick up proxy information from http_proxy.
-
-*zetagrid-1.0-r3 (14 Feb 2003)
-
-  14 Feb 2003; Michael Imhof <tantive@gentoo.org> :
-  Added app-arch/unzip to DEPEND; Change ppc to stable
-
-*zetagrid-1.0-r2 (03 Feb 2003)
-
-  03 Feb 2003; Michael Imhof <tantive@gentoo.org> :
-  Version bumped as zetagrid offers a new version of the client.
-  The new client is completely written in java and should run
-  therefore on all archs.
-
-*zetagrid-1.0-r1 (12 Jan 2003)
-
-  12 Jan 2003; Michael Imhof <tantive@gentoo.org> :
-  Bugfixes/minor improvements:
-  - Startup script added
-  - >=sys-libs/lib-compat/1.1 added to rdepend
-  - added a check to keep the config if it already exists.
-  
-*zetagrid-1.0 (04 Jan 2003)
-
-  04 Jan 2003; Michael Imhof <tantive@gentoo.org> :
-  Initial release.
+  14 Mar 2003; Michael Imhof <tantive@gentoo.org> zetagrid-1.0-r1.ebuild,
+  zetagrid-1.0-r1.ebuild, zetagrid-1.0-r2.ebuild, zetagrid-1.0-r2.ebuild,
+  zetagrid-1.0-r3.ebuild, zetagrid-1.0-r3.ebuild, zetagrid-1.0-r4.ebuild,
+  zetagrid-1.0-r4.ebuild, zetagrid-1.0-r5.ebuild, zetagrid-1.0-r5.ebuild,
+  zetagrid-1.0-r6.ebuild, zetagrid-1.0-r6.ebuild, zetagrid-1.0-r7.ebuild,
+  zetagrid-1.0-r7.ebuild, zetagrid-1.0-r8.ebuild, zetagrid-1.0-r8.ebuild,
+  zetagrid-1.0.ebuild, zetagrid-1.0.ebuild:
+  Cleaned out old ebuilds
