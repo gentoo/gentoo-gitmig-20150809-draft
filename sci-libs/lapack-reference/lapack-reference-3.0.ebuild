@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.0.ebuild,v 1.2 2004/12/29 18:34:39 ribosome Exp $
+# $Header: /var/cvsroot/gentoo-x86/sci-libs/lapack-reference/lapack-reference-3.0.ebuild,v 1.3 2005/03/08 18:34:06 vapier Exp $
 
 inherit eutils
 
@@ -51,7 +51,7 @@ pkg_setup() {
 	use ifc || \
 	if [ -z `which g77` ]; then
 		eerror "g77 not found on the system!"
-		eerror "Please add f77 to your USE flags and reemerge gcc!"
+		eerror "Please add fortran to your USE flags and reemerge gcc!"
 		die
 	fi
 }
