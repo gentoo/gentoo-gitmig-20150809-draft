@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/lshw-01.06a.ebuild,v 1.2 2004/04/25 02:17:17 matsuu Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lshw/lshw-01.06a.ebuild,v 1.3 2004/05/12 12:55:42 pappy Exp $
 
 inherit flag-o-matic
 
@@ -31,7 +31,6 @@ src_compile() {
 	# cpuid.cc uses inline asm and can not be linked when
 	# position independent code is desired.
 	filter-flags -fPIC
-	has_version 'sys-devel/hardened-gcc' && append-flags -yet_exec
 	emake CXX="${CXX}" CXXFLAGS="${CXXFLAGS}" || die
 }
 
