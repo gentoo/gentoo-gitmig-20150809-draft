@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/syslog-ng
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.76 2004/12/14 23:16:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/syslog-ng/ChangeLog,v 1.77 2004/12/28 19:51:09 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
 *syslog-ng-1.6.5-r2 (14 Dec 2004)
 
@@ -30,7 +33,7 @@
 
 *syslog-ng-1.6.5-r1 (02 Oct 2004)
 
-  02 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> syslog-ng-1.6.5-r1.ebuild:
+  02 Oct 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> syslog-ng-1.6.5-r1.ebuild:
   Stable on alpha.
 
   28 Sep 2004; Aron Griffis <agriffis@gentoo.org> files/syslog-ng.rc6,
@@ -80,7 +83,7 @@
   22 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> syslog-ng-1.6.4.ebuild:
   stable for x86
 
-  16 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> syslog-ng-1.6.4.ebuild:
+  16 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> syslog-ng-1.6.4.ebuild:
   Stable on alpha.
 
   05 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> syslog-ng-1.6.4.ebuild:

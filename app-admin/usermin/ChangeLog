@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/usermin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.43 2004/12/28 17:14:07 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.44 2004/12/28 19:52:22 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   28 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org>
   usermin-1.100.ebuild:
@@ -25,7 +28,7 @@
   13 Sep 2004; Guy Martin <gmsoft@gentoo.org> usermin-1.090.ebuild:
   Stable on hppa.
 
-  09 Sep 2004; Bryan Østergaard <kloeri@gentoo.org> usermin-1.090.ebuild:
+  09 Sep 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> usermin-1.090.ebuild:
   Stable on alpha, bug 63167.
 
 *usermin-1.090 (07 Sep 2004)
@@ -45,7 +48,7 @@
   usermin-1.080-r1.ebuild:
   Stable amd64.
 
-  17 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> usermin-1.080-r1.ebuild:
+  17 Jun 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> usermin-1.080-r1.ebuild:
   Stable on alpha, bug 54030.
 
 *usermin-1.080-r1 (16 Jun 2004)

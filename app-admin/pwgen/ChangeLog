@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/pwgen
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.22 2004/07/24 18:45:58 alexander Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/pwgen/ChangeLog,v 1.23 2004/12/28 19:47:58 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   24 Jun 2004; Alexander Plank <alexander@gentoo.org> pwgen-2.03-r1.ebuild
   Add macos keyword to pwgen
@@ -19,7 +22,7 @@
   pwgen-2.03-r1.ebuild:
   mark pwgen-2.03-r1 stable on mips
 
-  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> pwgen-2.01.ebuild,
+  04 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> pwgen-2.01.ebuild,
   pwgen-2.03-r1.ebuild, pwgen-2.03.ebuild:
   Stable on alpha.
 

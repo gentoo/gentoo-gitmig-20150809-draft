@@ -1,6 +1,6 @@
 # ChangeLog for app-admin/newsyslog
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/newsyslog/ChangeLog,v 1.16 2004/12/16 10:41:10 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/newsyslog/ChangeLog,v 1.17 2004/12/28 19:47:18 ciaranm Exp $
 
   16 Dec 2004; Markus Rothe <corsair@gentoo.org> newsyslog-1.1.ebuild:
   Stable on ppc64
@@ -20,7 +20,7 @@
   newsyslog-1.0.103.ebuild:
   Masked newsyslog-1.0.103.ebuild stable for ppc
 
-  04 May 2004; Bryan Østergaard <kloeri@gentoo.org> newsyslog-1.0.103.ebuild,
+  04 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> newsyslog-1.0.103.ebuild,
   newsyslog-1.1.ebuild:
   Stable on alpha.
 

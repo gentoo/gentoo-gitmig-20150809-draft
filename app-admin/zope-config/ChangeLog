@@ -1,6 +1,9 @@
 # ChangeLog for app-admin/zope-config
 # Copyright 2003-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/ChangeLog,v 1.31 2004/10/20 02:24:04 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/zope-config/ChangeLog,v 1.32 2004/12/28 19:54:18 ciaranm Exp $
+
+  28 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
 
   19 Oct 2004; Jason Wever <weeve@gentoo.org> zope-config-0.5.ebuild:
   Stable on sparc.
@@ -69,7 +72,7 @@
   zope-config-0.4.ebuild, files/0.4/zope-config, files/0.4/zope-config.conf:
   added changes necessary for zope 2.7.1, thanks to commits from #41508
 
-  24 May 2004; Bryan Østergaard <kloeri@gentoo.org> zope-config-0.3.ebuild:
+  24 May 2004; Bryan Ã˜stergaard <kloeri@gentoo.org> zope-config-0.3.ebuild:
   Keyworded ~alpha, requested in bug #51550.
 
   11 Apr 2004; Jason Wever <weeve@gentoo.org> zope-config-0.3.ebuild:
