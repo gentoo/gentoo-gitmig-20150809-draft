@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.16 2002/07/13 17:29:41 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.17 2002/07/16 04:40:32 danarmak Exp $
 # This contains everything except things that modify ebuild variables and functions (e.g. $P, src_compile() etc.)
 ECLASS=kde-functions
 INHERITED="$INHERITED $ECLASS"
@@ -54,10 +54,15 @@ need-kde() {
 	    newdepend "~kde-base/kdelibs-${KDEVER}"
 	    set-kdedir $KDEVER
 	else
-	    # everyone else only needs a minimum version
-	    min-kde-ver $KDEVER
-	    newdepend ">=kde-base/kdelibs-${selected_version}"
+	    # everyone else only needs a minimum version	
 	    set-kdedir $KDEVER
+	    
+	    if [ "$KDEMAJORVER" == "2" ]; then
+		newdepend "=kde-base/kdelibs-2.2*"
+	    else
+		min-kde-ver $KDEVER
+		newdepend ">=kde-base/kdelibs-${selected_version}"
+	    fi
 	fi
 
 	qtver-from-kdever $KDEVER
