@@ -1,6 +1,9 @@
 # ChangeLog for net-irc/irc-server
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-server/ChangeLog,v 1.4 2004/06/08 07:10:19 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irc-server/ChangeLog,v 1.5 2004/06/21 01:00:53 swegener Exp $
+
+  21 Jun 2004; Sven Wegener <swegener@gentoo.org> +metadata.xml:
+  Added metadata.xml
 
 *irc-server-2.10.3_p7 (08 Jun 2004)
 
