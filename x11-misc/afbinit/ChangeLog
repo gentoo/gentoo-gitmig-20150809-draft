@@ -1,6 +1,11 @@
 # ChangeLog for x11-misc/afbinit
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/afbinit/ChangeLog,v 1.8 2004/06/28 19:48:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/afbinit/ChangeLog,v 1.9 2004/10/22 19:19:26 fmccor Exp $
+
+  22 Oct 2004; Ferris McCormick <fmccor@gentoo.org> afbinit-1.0.1-r2.ebuild:
+  Mark stable for sparc.  This has been working fine for both kernel-2.4.xx and
+  kernel-2.6.x systems.  If you have afb+kernel-2.6 it is required, and that is
+  becoming less uncommon.
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> afbinit-1.0.1-r1.ebuild,
   afbinit-1.0.1-r2.ebuild, afbinit-1.0.1.ebuild:
