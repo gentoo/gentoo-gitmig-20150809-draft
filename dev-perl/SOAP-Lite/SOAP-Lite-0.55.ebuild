@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/SOAP-Lite-0.55.ebuild,v 1.5 2003/06/21 21:36:37 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SOAP-Lite/SOAP-Lite-0.55.ebuild,v 1.6 2004/05/04 22:56:51 kloeri Exp $
 
 IUSE=""
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://cpan.valueclick.com/modules/by-module/SOAP/${P}.readme"
 
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="x86 amd64 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 amd64 ~ppc ~sparc alpha"
 
 DEPEND="${DEPEND}
 	dev-perl/XML-Parser
