@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portsentry/portsentry-1.2.ebuild,v 1.5 2004/07/06 03:10:06 malc Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/portsentry/portsentry-1.2.ebuild,v 1.6 2004/07/06 22:39:16 eldad Exp $
 
 inherit eutils
 
@@ -12,6 +12,7 @@ SRC_URI="mirror://sourceforge/sentrytools/${P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="~x86 ~ppc ~sparc ~amd64"
+IUSE=""
 
 DEPEND=">=sys-apps/sed-4"
 S=${WORKDIR}/${PN}_beta
@@ -42,6 +43,8 @@ src_compile() {
 }
 
 src_install() {
+	doman ${FILESDIR}/{portsentry.8,portsentry.conf.5}
+
 	dobin portsentry ignore.csh
 	dodoc README* CHANGES LICENSE CREDITS
 	newdoc portsentry.ignore portsentry.ignore.sample
