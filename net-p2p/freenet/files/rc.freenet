@@ -22,6 +22,9 @@ check_config() {
 
 start() {
 	JAVA="$(java-config --java)"
+	#The JVMs don't support NPTL yet, so this is necessary
+	export LD_ASSUME_KERNEL=2.4.1
+
 	check_config || return 1
 
 	ebegin "Starting Freenet now"

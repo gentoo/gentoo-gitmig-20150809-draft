@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r1.ebuild,v 1.3 2003/07/22 16:12:22 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/freenet/freenet-0.5.2.1-r2.ebuild,v 1.1 2003/07/23 19:39:53 lostlogic Exp $
 
 IUSE=""
 
