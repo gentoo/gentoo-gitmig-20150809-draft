@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/atlas-c++
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/ChangeLog,v 1.9 2004/07/01 07:54:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/atlas-c++/ChangeLog,v 1.10 2004/11/16 13:56:29 gustavoz Exp $
+
+  16 Nov 2004; Gustavo Zacarias <gustavoz@gentoo.org> atlas-c++-0.4.5.ebuild:
+  Stable on sparc
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   atlas-c++-0.4.4.ebuild, atlas-c++-0.4.5.ebuild, atlas-c++-0.4.6.ebuild:
