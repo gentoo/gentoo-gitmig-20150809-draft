@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/saydate
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/saydate/ChangeLog,v 1.7 2004/09/30 00:53:05 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/saydate/ChangeLog,v 1.8 2004/10/19 03:12:43 tgall Exp $
+
+  18 Oct 2004; Tom Gall <tgall@gentoo.org> saydate-0.3.0.ebuild:
+  stable on ppc64, bug #64532
 
   15 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> saydate-0.3.0.ebuild:
   Stable amd64, sparc.
