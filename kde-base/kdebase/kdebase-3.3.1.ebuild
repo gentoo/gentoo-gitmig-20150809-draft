@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.3.1.ebuild,v 1.5 2004/11/03 12:58:01 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/kdebase-3.3.1.ebuild,v 1.6 2004/11/03 19:12:13 kloeri Exp $
 
 inherit kde-dist eutils
 
 DESCRIPTION="KDE base packages: the desktop, panel, window manager, konqueror..."
 
-KEYWORDS="~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc x86"
+KEYWORDS="~amd64 ~hppa ~mips ~ppc ~ppc64 ~sparc x86 ~alpha"
 IUSE="ldap pam cups ssl opengl samba java arts"
 
 DEPEND="ldap? ( net-nds/openldap )
