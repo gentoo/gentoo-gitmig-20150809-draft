@@ -3,4 +3,4 @@ MD5 daaf0c8fa44a481c8943f585ff870714 files/digest-dhcpcd-1.3.22_p4-r4 224
 MD5 daaf0c8fa44a481c8943f585ff870714 files/digest-dhcpcd-1.3.22_p4-r5 224
 MD5 e7ae278e6d4be7b5b868ba5105f2d0e1 ChangeLog 5398
 MD5 62240ae722d5cf609946962adb3b4a37 dhcpcd-1.3.22_p4-r4.ebuild 1870
-MD5 be06681e1cd0db3a74e3d6012e129c10 dhcpcd-1.3.22_p4-r5.ebuild 2112
+MD5 979d8db5b438bf98f3afb761fbe49eee dhcpcd-1.3.22_p4-r5.ebuild 2099
