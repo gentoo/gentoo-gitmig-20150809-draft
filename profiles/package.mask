@@ -29,10 +29,6 @@
 # waiting for jboss user to be added to passwd
 =net-www/jboss-3.2.1
 
-# <liquidx@gentoo.org> (8 May 2003)
-# testing patch for >=tk-8.4
-#=dev-lang/python-2.2.2-r1
-
 # <foser@gentoo.org> (7 May 2003)
 # New branch, not backwards compatible.
 >=net-libs/gnet-2
@@ -75,10 +71,10 @@ net-im/kxicq2
 # gnucash-1.8.2 mask - needs testing as well.
 # may break guile dependent apps! at the very least it
 # will break gnucash-1.6.x
->=dev-util/guile-1.5
-dev-libs/libofx
-net-libs/openhbci
->=app-office/gnucash-1.8.2-r1
+#>=dev-util/guile-1.5
+#dev-libs/libofx
+#net-libs/openhbci
+#>=app-office/gnucash-1.8.2-r1
 
 # <fava@gentoo.org>, <robbat2@gentoo.org> (24 Apr 2003)
 # work in progress, broken ebuild
