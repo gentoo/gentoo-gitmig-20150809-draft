@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.21 2005/01/16 12:24:23 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/linux-mod.eclass,v 1.22 2005/01/16 22:54:56 johnm Exp $
 
 # Description: This eclass is used to interface with linux-info in such a way
 #              to provide the functionality required and initial functions
@@ -18,7 +18,10 @@
 # Env Var		Option		Default			Description
 # KERNEL_DIR	<string>	/usr/src/linux	The directory containing kernel
 #											the target kernel sources.
-# BUILD_PARAMS	<string>					The parameters to pass to make.
+# ECONF_PARAMS	<string>					The parameters to pass to econf.
+#											If this is not set, then econf isn't
+#											run.
+# BUILD_PARAMS	<string>					The parameters to pass to emake.
 # BUILD_TARGETS	<string>	clean modules	The build targets to pass to make.
 # MODULE_NAMES	<string>					This is the modules which are
 #											to be built automatically using the
@@ -234,21 +237,20 @@ display_postinst() {
 		MODULE_NAMES=${MODULE_NAMES//${i}(*}
 	done
 
-	einfo "If you would like to load this module automatically upon boot"
-	einfo "please type the following as root:"
-	for i in ${MODULE_NAMES}
-	do
-		for n in $(find_module_params ${i})
+	if [[ -n ${MODULE_NAMES} ]]
+	then
+		einfo "If you would like to load this module automatically upon boot"
+		einfo "please type the following as root:"
+		for i in ${MODULE_NAMES}
 		do
-			eval ${n/:*}=${n/*:/}
+			for n in $(find_module_params ${i})
+			do
+				eval ${n/:*}=${n/*:/}
+			done
+			einfo "    # echo \"${modulename}\" >> ${file}"
 		done
-		libdir=${libdir:-misc}
-		srcdir=${srcdir:-${S}}
-		objdir=${objdir:-${srcdir}}
-		
-		einfo "    # echo \"${modulename}\" >> ${file}"
-	done
-	echo
+		einfo
+	fi
 }
 
 find_module_params() {
@@ -326,6 +328,12 @@ linux-mod_src_compile() {
 		then
 			cd ${srcdir}
 			einfo "Preparing ${modulename} module"
+			if [[ -n ${ECONF_PARAMS} ]]
+			then
+				econf ${ECONF_PARAMS} || \
+				die "Unable to run econf ${ECONF_PARAMS}"
+			fi
+
 			emake ${BUILD_FIXES} ${BUILD_PARAMS} ${BUILD_TARGETS} \
 				|| die "Unable to make \
 				   ${BUILD_FIXES} ${BUILD_PARAMS} ${BUILD_TARGETS}."
