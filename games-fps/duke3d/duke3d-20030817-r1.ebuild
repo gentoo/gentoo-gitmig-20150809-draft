@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20030817-r1.ebuild,v 1.13 2004/04/18 07:22:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/duke3d-20030817-r1.ebuild,v 1.14 2004/04/20 10:28:40 mr_bones_ Exp $
 
 ECVS_PASS="anonymous"
 ECVS_SERVER="icculus.org:/cvs/cvsroot"
@@ -62,6 +62,7 @@ src_unpack() {
 
 	# configure duke3d
 	cd ${S}/source
+	epatch "${FILESDIR}/${PV}-credits.patch"
 	epatch "${FILESDIR}/${PV}-duke3d-makefile-opts.patch"
 	if use x86 ; then
 		sed -i \

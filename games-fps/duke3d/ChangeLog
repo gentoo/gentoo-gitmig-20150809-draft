@@ -1,6 +1,11 @@
 # ChangeLog for games-fps/duke3d
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/ChangeLog,v 1.11 2004/04/18 07:22:55 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/duke3d/ChangeLog,v 1.12 2004/04/20 10:28:40 mr_bones_ Exp $
+
+  20 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  duke3d-20030817-r1.ebuild, files/20030817-credits.patch:
+  patch to add info text and empty credits screen from Ondrej Jombik via bug
+  #46094
 
   18 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org>
   duke3d-20030817-r1.ebuild:
