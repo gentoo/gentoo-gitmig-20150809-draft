@@ -1,6 +1,9 @@
 # ChangeLog for app-emacs/python-mode
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.8 2004/12/03 04:32:37 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/python-mode/ChangeLog,v 1.9 2004/12/08 17:03:48 blubb Exp $
+
+  08 Dec 2004; Simon Stelling <blubb@gentoo.org> python-mode-4.63-r1.ebuild:
+  added ~amd64
 
 *python-mode-4.63-r1 (03 Dec 2004)
 
