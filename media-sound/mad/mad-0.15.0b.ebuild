@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mad/mad-0.15.0b.ebuild,v 1.8 2004/02/18 21:27:14 augustus Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mad/mad-0.15.0b.ebuild,v 1.9 2004/03/29 17:25:24 eradicator Exp $
 
 IUSE=""
-
-S=${WORKDIR}/${P}
 
 HOMEPAGE="http://mad.sourceforge.net/"
 DESCRIPTION="The MAD metapackage for libmad, libid3tag, and madplay"
