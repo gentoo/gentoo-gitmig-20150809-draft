@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/File-Temp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Temp/ChangeLog,v 1.6 2004/06/25 00:30:33 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/File-Temp/ChangeLog,v 1.7 2004/12/13 05:41:30 weeve Exp $
+
+  12 Dec 2004; Jason Wever <weeve@gentoo.org> File-Temp-0.12.ebuild:
+  Stable on sparc.
 
 *File-Temp-0.14 (05 Jun 2004)
 
