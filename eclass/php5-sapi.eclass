@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.12 2004/08/06 00:56:28 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php5-sapi.eclass,v 1.13 2004/08/06 02:59:47 robbat2 Exp $
 #
 # eclass/php5-sapi.eclass
 #		Eclass for building different php5 SAPI instances
@@ -51,6 +51,7 @@ DEPEND="$DEPEND
 	odbc? ( >=dev-db/unixODBC-1.8.13 )
 	postgres? ( >=dev-db/postgresql-7.1 )
 	png? ( media-libs/libpng )
+	qdbm ( dev-db/qdbm )
 	readline? ( sys-libs/readline )
 	recode? ( app-text/recode )
 	sharedmem? ( dev-libs/mm )
@@ -199,8 +200,11 @@ php5-sapi_check_awkward_uses () {
 		enable_extension_with		"mysqli"		"mysqli"			1
 	fi
 
+	# QDBM doesn't play nicely with GDBM _or_ DBM
+	confutils_use_conflict "qdbm" "gdbm" "dbm"
+	# both provide the same functionality
 	confutils_use_conflict "readline" "libedit"
-
+	# Recode is not liked.
 	confutils_use_conflict "recode" "mysql" "nis"
 
 	if ! useq session ; then
