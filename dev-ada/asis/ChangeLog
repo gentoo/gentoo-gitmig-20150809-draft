@@ -1,6 +1,6 @@
 # ChangeLog for dev-ada/asis
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/ChangeLog,v 1.7 2004/06/24 21:45:34 agriffis Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/asis/ChangeLog,v 1.8 2004/10/02 15:19:56 swegener Exp $
 
   19 Mar 2004; Daniel Ahlberg <aliz@gentoo.org> asis-3.15p.ebuild:
   Inherit eutils.

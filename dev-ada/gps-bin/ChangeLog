@@ -1,6 +1,6 @@
 # ChangeLog for dev-ada/gps-bin
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-ada/gps-bin/ChangeLog,v 1.8 2004/08/02 11:33:55 dholm Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ada/gps-bin/ChangeLog,v 1.9 2004/10/02 15:25:57 swegener Exp $
 
 *gps-bin-1.4.0 (02 Aug 2004)
 
