@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.3.2.ebuild,v 1.9 2004/01/12 21:08:16 nerdboy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/doxygen/doxygen-1.3.2.ebuild,v 1.10 2004/02/20 20:53:28 usata Exp $
 
-IUSE="doc qt"
+IUSE="doc qt tetex"
 
 DESCRIPTION="Doxygen is a documentation system for C++, C, Java, IDL (Corba, Microsoft, and KDE-DCOP flavors) and to some extent PHP and C#."
 HOMEPAGE="http://www.doxygen.org"
@@ -13,9 +13,9 @@ LICENSE="GPL-2"
 KEYWORDS="x86 ppc ~sparc ~alpha hppa"
 
 RDEPEND="media-gfx/graphviz
-	doc? ( virtual/tetex
-		virtual/ghostscript )
-	qt? ( x11-libs/qt )"
+	qt? ( x11-libs/qt )
+	doc? ( tetex? ( virtual/tetex )
+		virtual/ghostscript )"
 
 DEPEND=">=sys-apps/sed-4
 	${RDEPEND}"
@@ -44,15 +44,25 @@ src_compile() {
 	./configure ${confopts} || die '"./configure" failed.'
 	emake all || die '"emake all" failed.'
 
-	# generate html and pdf documents.
+	# generate html and pdf (if tetex in use) documents.
 	# errors here are not considered fatal, hence the ewarn message
 	# TeX's font caching in /var/cache/fonts causes sandbox warnings,
 	# so we allow it.
 	if use doc; then
-		addwrite /var/cache/fonts
-		addwrite /usr/share/texmf/fonts/pk
-		addwrite /usr/share/texmf/ls-R
-		make pdf || ewarn '"make docs" failed.'
+		if use tetex; then
+			addwrite /var/cache/fonts
+			addwrite /usr/share/texmf/fonts/pk
+			addwrite /usr/share/texmf/ls-R
+			make pdf || ewarn '"make docs" failed.'
+		else
+			cp doc/Doxyfile doc/Doxyfile.orig
+			cp doc/Makefile doc/Makefile.orig
+			sed -i.orig -e "s/GENERATE_LATEX    = YES/GENERATE_LATEX    = NO/" doc/Doxyfile
+			sed -i.orig -e "s/@epstopdf/# @epstopdf/" \
+				-e "s/@cp Makefile.latex/# @cp Makefile.latex/" \
+				-e "s/@sed/# @sed/" doc/Makefile
+			make docs || ewarn '"make docs" failed.'
+		fi
 	fi
 }
 
@@ -64,7 +74,9 @@ src_install() {
 	# pdf and html manuals
 	if use doc; then
 		insinto /usr/share/doc/${P}
-		doins latex/doxygen_manual.pdf
+		if use tetex; then
+			doins latex/doxygen_manual.pdf
+		fi
 		dohtml -r html/*
 	fi
 }
