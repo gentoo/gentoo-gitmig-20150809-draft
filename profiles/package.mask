@@ -22,6 +22,10 @@
 ##   End example
 ##
 
+# <aliz@gentoo.org> 22 Jul 2002
+# masked for testing
+x11-misc/xfractint
+
 # <seemant@gentoo.org> 21 Jul 2002
 # masked for testing
 =sys-devel/gettext-0.11.3
