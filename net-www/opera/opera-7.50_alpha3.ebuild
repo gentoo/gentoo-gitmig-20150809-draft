@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.50_alpha3.ebuild,v 1.4 2004/04/13 18:30:48 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/opera/opera-7.50_alpha3.ebuild,v 1.5 2004/04/14 03:44:32 mr_bones_ Exp $
 
 IUSE="static"
 
@@ -30,7 +30,9 @@ RDEPEND="virtual/x11
 	>=media-libs/fontconfig-2.1.94-r1
 	media-libs/libexif
 	x11-libs/openmotif
-	!static? ( amd64? ( =app-emulation/emul-linux-x86-qtlibs-1* ) : ( =x11-libs/qt-3* ) )"
+	!static? (
+		amd64? ( =app-emulation/emul-linux-x86-qtlibs-1* )
+		!amd64? ( =x11-libs/qt-3* ) )"
 
 SLOT="0"
 LICENSE="OPERA"
