@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdl-sopwith/sdl-sopwith-1.7.1.ebuild,v 1.2 2004/02/20 06:20:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/sdl-sopwith/sdl-sopwith-1.7.1.ebuild,v 1.3 2004/03/16 16:16:04 vapier Exp $
 
 inherit games
 
@@ -10,9 +10,9 @@ DESCRIPTION="Port of the classic Sopwith game using LibSDL"
 HOMEPAGE="http://sdl-sopwith.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${MY_P}.tar.gz"
 
-KEYWORDS="x86"
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="x86 ppc"
 IUSE=""
 
 DEPEND=">=media-libs/libsdl-1.1.3
@@ -26,7 +26,7 @@ DEPEND=">=media-libs/libsdl-1.1.3
 
 src_install() {
 	make DESTDIR="${D}" install || die "make install failed"
-	dodoc AUTHORS ChangeLog FAQ NEWS README TODO doc/*txt || die "dodoc failed"
+	dodoc AUTHORS ChangeLog FAQ NEWS README TODO doc/*txt
 	rm -rf "${D}/usr/games/share/"
 	prepgamesdirs
 }

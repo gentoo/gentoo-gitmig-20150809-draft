@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/missile/missile-1.0.1.ebuild,v 1.2 2004/02/20 06:20:00 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/missile/missile-1.0.1.ebuild,v 1.3 2004/03/16 16:16:04 vapier Exp $
 
 inherit games eutils
 
@@ -8,14 +8,15 @@ DESCRIPTION="The Atari game Missile Command for Linux"
 HOMEPAGE="http://missile.sourceforge.net/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+SLOT="0"
+KEYWORDS="x86 ppc"
 
-DEPEND=">=media-libs/libsdl-1.2.4
+RDEPEND=">=media-libs/libsdl-1.2.4
 	>=media-libs/sdl-image-1.2.1
 	>=media-libs/sdl-mixer-1.2.4
-	media-libs/libpng
+	media-libs/libpng"
+DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
 src_unpack() {

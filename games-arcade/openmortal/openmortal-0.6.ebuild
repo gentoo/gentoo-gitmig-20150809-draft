@@ -1,17 +1,16 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc., 2004 Freyr Gunnar Ólafsson <gnarlin@utopia.is>
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/openmortal/openmortal-0.6.ebuild,v 1.2 2004/03/05 13:06:23 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/openmortal/openmortal-0.6.ebuild,v 1.3 2004/03/16 16:16:04 vapier Exp $
 
 inherit games
 
 DESCRIPTION="A spoof of the famous Mortal Combat game"
 HOMEPAGE="http://apocalypse.rulez.org/~upi/Mortal/"
 SRC_URI="mirror://sourceforge/openmortal/${P}.tar.bz2"
-RESTRICT="nomirror"
 
-KEYWORDS="x86 ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="x86 ppc"
 IUSE=""
 
 DEPEND="virtual/x11
@@ -24,7 +23,7 @@ DEPEND="virtual/x11
 	dev-lang/perl"
 
 src_install() {
-	make DESTDIR="${D}" install         || die "make install failed"
-	dodoc AUTHORS ChangeLog TODO README || die "dodoc failed"
+	make DESTDIR="${D}" install || die "make install failed"
+	dodoc AUTHORS ChangeLog TODO README
 	prepgamesdirs
 }

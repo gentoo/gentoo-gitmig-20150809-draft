@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/xkobo/xkobo-1.11.ebuild,v 1.3 2004/03/02 14:29:31 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/xkobo/xkobo-1.11.ebuild,v 1.4 2004/03/16 16:16:04 vapier Exp $
 
 inherit games
 
@@ -12,11 +12,12 @@ SRC_URI="http://www.redhead.dk/download/pub/Xkobo/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 IUSE=""
 
-DEPEND="virtual/glibc
-	virtual/x11
+RDEPEND="virtual/glibc
+	virtual/x11"
+DEPEND="${RDEPEND}
 	>=sys-apps/sed-4"
 
 src_unpack() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/netris/netris-0.52.ebuild,v 1.3 2004/03/04 10:08:19 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/netris/netris-0.52.ebuild,v 1.4 2004/03/16 16:16:04 vapier Exp $
 
 inherit games eutils
 
@@ -11,7 +11,7 @@ SRC_URI="ftp://ftp.netris.org/pub/netris/${P}.tar.gz
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 DEPEND="sys-libs/ncurses"
 
@@ -26,7 +26,7 @@ src_compile() {
 }
 
 src_install() {
-	dogamesbin netris sr
+	dogamesbin netris sr || die
 	dodoc FAQ README robot_desc
 	prepgamesdirs
 }

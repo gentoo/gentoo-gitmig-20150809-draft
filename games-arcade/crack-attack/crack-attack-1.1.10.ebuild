@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/crack-attack-1.1.10.ebuild,v 1.4 2004/02/09 08:04:06 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/crack-attack/crack-attack-1.1.10.ebuild,v 1.5 2004/03/16 16:16:04 vapier Exp $
 
 inherit games flag-o-matic gcc
 
@@ -10,7 +10,7 @@ SRC_URI="http://aluminumangel.org/cgi-bin/download_counter.cgi?attack_linux+atta
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 hppa"
+KEYWORDS="x86 ppc hppa"
 IUSE=""
 
 RDEPEND="media-libs/glut"
@@ -22,19 +22,19 @@ src_unpack() {
 	cd ${S}
 	sed -i \
 		-e 's:-O6:@CXXFLAGS@:' src/Makefile.in \
-			|| die "sed src/Makefile.in failed"
+		|| die "sed src/Makefile.in failed"
 }
 
 src_compile() {
 	append-flags -DGL_GLEXT_LEGACY
 	[ "`gcc-fullversion`" == "3.2.3" ] && filter-flags -march=pentium3
 	egamesconf || die
-	emake      || die "emake failed"
+	emake || die "emake failed"
 }
 
 src_install() {
 	make DESTDIR=${D} install || die "make install failed"
-	dodoc AUTHORS ChangeLog README || die "dodoc failed"
-	dohtml -A xpm doc/* || die "dohtml failed"
+	dodoc AUTHORS ChangeLog README
+	dohtml -A xpm doc/*
 	prepgamesdirs
 }
