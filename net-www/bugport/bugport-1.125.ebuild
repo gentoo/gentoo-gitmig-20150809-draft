@@ -3,14 +3,14 @@
 
 inherit webapp
 
-# $Header: /var/cvsroot/gentoo-x86/net-www/bugport/bugport-1.125.ebuild,v 1.1 2004/07/22 13:21:00 jmglov Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/bugport/bugport-1.125.ebuild,v 1.2 2004/07/22 23:44:47 dholm Exp $
 
 DESCRIPTION="Web-based system for managing tasks and defects throughout the software development process"
 HOMEPAGE="http://www.incogen.com/index.php?type=General&param=bugport"
 SRC_URI="http://www.incogen.com/downloads/${PN}/${PN}_${PV}.tar.gz"
 
 LICENSE="BSD"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 IUSE=""
 RDEPEND=">=virtual/php-4.3
