@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/sgml-common-0.6.3-r4.ebuild,v 1.25 2004/09/17 02:06:14 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/sgml-common-0.6.3-r4.ebuild,v 1.26 2004/09/18 10:12:51 mr_bones_ Exp $
 
 DESCRIPTION="Base ISO character entities and utilities for SGML"
 HOMEPAGE="http://www.iso.ch/cate/3524030.html"
@@ -18,22 +18,18 @@ src_unpack() {
 	unpack ${A}
 	# We use a hacked version of install-catalog that supports the ROOT
 	# variable, and puts quotes around the CATALOG files.
-	cp ${FILESDIR}/${PF}-install-catalog.in ${S}/bin/install-catalog.in
-
-	use macos && ln -sf /usr/share/automake-1.6/{COPYING,INSTALL,install-sh,missing,mkinstalldirs} ${S}
-	use ppc-macos && ln -sf /usr/share/automake-1.6/{COPYING,INSTALL,install-sh,missing,mkinstalldirs} ${S}
+	cp "${FILESDIR}/${PF}-install-catalog.in" "${S}/bin/install-catalog.in"
+	cd "${S}"
+	automake -a
 }
 
 src_install() {
-	emake \
-		prefix=${D}/usr \
-		sysconfdir=${D}/etc \
-		mandir=${D}/usr/share/man \
-		docdir=${D}/usr/share/doc \
-		install || die
+	make DESTDIR="${D}" install || die "make install failed"
 }
 
 pkg_postinst() {
+	local file
+
 	if [ -x "/usr/bin/install-catalog" ] && [ "$ROOT" = "/" ]
 	then
 		einfo "Installing Catalogs..."

@@ -1,6 +1,10 @@
 # ChangeLog for app-text/sgml-common
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/ChangeLog,v 1.28 2004/09/10 13:08:59 gongloo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/sgml-common/ChangeLog,v 1.29 2004/09/18 10:12:51 mr_bones_ Exp $
+
+  18 Sep 2004; Michael Sterrett <mr_bones_@gentoo.org>
+  sgml-common-0.6.3-r4.ebuild:
+  cleaned up src_unpack (bug #63838); cleaned up src_install
 
   10 Sep 2004; Hasan Khalil <gongloo@gentoo.org> sgml-common=0.6.3-r4.ebuild:
   stable on macos
