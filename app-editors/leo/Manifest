@@ -1,5 +1,15 @@
-MD5 76886e9b03c6d90cdab6caeb02f389a5 ChangeLog 382
-MD5 fc9b12829dff9fb140a399bcecc3e723 leo-4.2.ebuild 1048
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 c25b3c4a68d26c9216993b6cacd7426e leo-4.2.ebuild 1047
 MD5 9ac4199ebe7cd3e7e311274994767f82 metadata.xml 160
+MD5 f140f9c5198f442582c120b88661d0fa ChangeLog 506
+MD5 dcdd115f9803c5e4040bf247775f760e files/leoConfig.py.patch 904
 MD5 786b8586255990e3d34ad8d5bee99fe3 files/digest-leo-4.2 63
-MD5 a58113f7350bb99e9ba2d4ad5fa8e620 files/leoConfig.py.patch 963
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCI845z2gxt1z4IGYRAuVvAJsFzbCoKhBMSO30BGpfAwCLirtsRgCgy0bG
+zb4Oxr4oNkfIEXG7ozhUtCU=
+=hksZ
+-----END PGP SIGNATURE-----

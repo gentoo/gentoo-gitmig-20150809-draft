@@ -1,5 +1,5 @@
---- /var/tmp/portage/leo-4.2/work/leo-4.2-final/src/leoConfig.py	2004-07-20 08:11:58.000000000 -0700
-+++ /var/tmp/abeni/leoConfig.py	2004-11-08 22:49:31.055019376 -0800
+--- src/leoConfig.py	2004-07-20 08:11:58.000000000 -0700
++++ leoConfig.py	2004-11-08 22:49:31.055019376 -0800
 @@ -9,6 +9,7 @@
  import os
  import string
