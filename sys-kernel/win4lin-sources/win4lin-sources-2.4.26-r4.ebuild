@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.4.26-r3.ebuild,v 1.1 2004/07/09 17:45:30 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/win4lin-sources/win4lin-sources-2.4.26-r4.ebuild,v 1.1 2004/08/05 12:03:02 plasmaroo Exp $
 
 # OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -16,7 +16,8 @@ S=${WORKDIR}/linux-${KV}
 DESCRIPTION="Full sources for the Linux kernel, with Win4Lin support."
 SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 	 http://www.netraverse.com/member/downloads/files/mki-adapter.patch
-	 http://www.netraverse.com/member/downloads/files/Kernel-Win4Lin3-${OKV}.patch"
+	 http://www.netraverse.com/member/downloads/files/Kernel-Win4Lin3-${OKV}.patch
+	 http://dev.gentoo.org/~plasmaroo/patches/kernel/misc/security/linux-${OKV}-CAN-2004-0415.patch"
 HOMEPAGE="http://www.kernel.org/ http://www.netraverse.com/"
 KEYWORDS="x86"
 SLOT="${KV}"
@@ -31,6 +32,7 @@ src_unpack() {
 	patch -Np1 -i ${DISTDIR}/mki-adapter.patch >/dev/null 2>&1 || die "Error: mki-adapter patch failed."
 	eend $?
 	epatch ${FILESDIR}/${P}.CAN-2004-0394.patch || die "Failed to add the CAN-2004-0394 patch!"
+	epatch ${DISTDIR}/linux-${OKV}-CAN-2004-0415.patch || die "Failed to add the CAN-2004-0415 patch!"
 	epatch ${FILESDIR}/${P}.CAN-2004-0495.patch || die "Failed to add the CAN-2004-0495 patch!"
 	epatch ${FILESDIR}/${PN}.CAN-2004-0497.patch || die "Failed to add the CAN-2004-0497 patch!"
 	epatch ${FILESDIR}/${P}.CAN-2004-0535.patch || die "Failed to add the CAN-2004-0535 patch!"
