@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/soundtracker/soundtracker-0.6.7.ebuild,v 1.3 2004/04/01 08:16:58 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/soundtracker/soundtracker-0.6.7.ebuild,v 1.4 2004/05/10 23:40:15 lv Exp $
 
 IUSE="nls esd gnome oss alsa jack"
 
@@ -30,7 +30,7 @@ RDEPEND="${DEPEND}
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+KEYWORDS="x86 ~amd64"
 
 src_unpack() {
 	unpack ${A}
@@ -47,6 +47,7 @@ src_compile() {
 	use nls || myconf="${myconf} --disable-nls"
 	use alsa || myconf="${myconf} --disable-alsa"
 	use gnome || myconf="${myconf} --disable-gnome"
+	use x86 || myconf="${myconf} --disable-asm"
 
 	econf ${myconf} || die "configure failed"
 	emake || die "make failed"
