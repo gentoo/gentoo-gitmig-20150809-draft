@@ -208,3 +208,6 @@ gnome-apps/gnapster
 # Breaks Evolution (gonna test to rebuild evo, just don't have time just now).
 >=gnome-base/gconf-1.0.5
 
+# Needs newer evo
+>=gnome-extra/gal-0.14
+
