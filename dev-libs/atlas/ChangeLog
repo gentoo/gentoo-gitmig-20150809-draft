@@ -1,6 +1,14 @@
 # ChangeLog for dev-libs/atlas
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/atlas/ChangeLog,v 1.1 2002/02/01 21:53:11 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/atlas/ChangeLog,v 1.2 2002/10/17 14:16:38 seemant Exp $
+
+*atlas-3.2.1-r1 (17 Oct 2002)
+
+  17 Oct 2002; Seemant Kulleen <seemant@gentoo.org> atlas-3.2.1-r1.ebuild
+  files/digest-atlas-3.2.1-r1 :
+
+  liblapack.a is now in /usr/lib where it belongs, instead of /usr/share/
+  Thanks to: stephen@theboulets.net (Stephen Boulet) in bug #9081.
 
 *atlas-3.2.1 (1 Feb 2002)
 
