@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/evms/evms-2.0.0-r1.ebuild,v 1.1 2003/04/07 08:05:54 tantive Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/evms/evms-2.0.0-r1.ebuild,v 1.2 2003/04/07 08:13:48 tantive Exp $
 
 IUSE="ncurses gtk"
 
@@ -37,7 +37,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die "Make install died"
-	dodoc ChangeLog COPYING TERMINOLOGY PLUGIN.IDS
+	dodoc ChangeLog COPYING TERMINOLOGY PLUGIN.IDS INSTALL INSTALL.HA INSTALL.initrd
 
 	# move static libraries to /usr/lib
 	dodir /usr/lib
