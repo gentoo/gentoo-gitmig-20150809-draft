@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-zope/cmf/cmf-1.3.2.ebuild,v 1.2 2003/10/10 22:08:32 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-zope/cmf/cmf-1.4.1.ebuild,v 1.1 2003/10/10 22:08:32 robbat2 Exp $
 
 inherit zproduct
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://cmf.zope.org/"
 MY_PN="CMF"
 MY_P="${MY_PN}-${PV}"
 SRC_URI="${HOMEPAGE}/download/${MY_P}/${MY_P}.tar.gz"
-SLOT=1.3
+SLOT=1.4
 LICENSE="ZPL"
 KEYWORDS="~x86 ~ppc"
 
