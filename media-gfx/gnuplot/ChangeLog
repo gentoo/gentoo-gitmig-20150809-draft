@@ -1,6 +1,16 @@
 # ChangeLog for media-gfx/gnuplot
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/ChangeLog,v 1.14 2003/12/14 19:17:37 zul Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnuplot/ChangeLog,v 1.15 2004/02/09 00:17:54 g2boojum Exp $
+
+*gnuplot-3.8j (08 Feb 2004)
+
+  08 Feb 2004; Grant Goodyear <g2boojum@gentoo.org> gnuplot-3.7.1-r3.ebuild,
+  gnuplot-3.7.2.ebuild, gnuplot-3.7.3-r1.ebuild, gnuplot-3.7.3.ebuild,
+  gnuplot-3.8j.ebuild, metadata.xml:
+  Old versions fail to build due to some libpng setjmp weirdness that
+  I don't understand.  I've added a new version that builds just fine
+  (on x86, at least), and is much less out-of-date.  I've also removed
+  the versions that don't build.
 
   14 Dec 2003; Chuck Short <zul@gentoo.org> gnuplot-3.7.3-r1.ebuild:
   Added amd64 keyword, closes #35807.
