@@ -1,24 +1,12 @@
 # ChangeLog for sys-devel/gettext
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.59 2004/10/06 23:52:05 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/ChangeLog,v 1.60 2004/10/07 23:51:46 vapier Exp $
 
-  06 Oct 2004; Travis Tilley <lv@gentoo.org> gettext-0.14.1.ebuild:
-  also back to unstable for amd64 until the linking bugs are fixed
+*gettext-0.12.1-r2 (07 Oct 2004)
 
-  06 Oct 2004; Gustavo Zacarias <gustavoz@gentoo.org> gettext-0.14.1.ebuild:
-  Stable on sparc wrt #66355
-
-  06 Oct 2004; <SeJo@gentoo.org> gettext-0.14.1.ebuild:
-  back to unstable untill the linking error is fixed
-
-  06 Oct 2004; <SeJo@gentoo.org> gettext-0.14.1.ebuild:
-  stable masked ppc gsla: 66355
-
-  05 Oct 2004; Bryan Østergaard <kloeri@gentoo.org> gettext-0.14.1.ebuild:
-  Stable on alpha, bug 66355.
-
-  05 Oct 2004; Travis Tilley <lv@gentoo.org> gettext-0.14.1.ebuild:
-  stable on amd64 for security fix
+  07 Oct 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/gettext-0.12.1-tempfile.patch, +gettext-0.12.1-r2.ebuild:
+  Version bump for security #66355.
 
 *gettext-0.14.1 (05 Oct 2004)
 

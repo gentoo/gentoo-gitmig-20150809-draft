@@ -1,17 +1,16 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.14.1.ebuild,v 1.10 2004/10/07 23:51:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gettext/gettext-0.12.1-r2.ebuild,v 1.1 2004/10/07 23:51:46 vapier Exp $
 
-inherit eutils gnuconfig gcc mono
+inherit eutils gnuconfig
 
 DESCRIPTION="GNU locale utilities"
 HOMEPAGE="http://www.gnu.org/software/gettext/gettext.html"
-SRC_URI="mirror://gnu/${PN}/${P}.tar.gz
-	mirror://gentoo/${P}-bootstrap.patch.bz2"
+SRC_URI="mirror://gnu/${PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="-*"
+KEYWORDS="~alpha ~amd64 ~arm ~hppa ~ia64 ~mips ~ppc ~ppc64 ~ppc-macos ~s390 ~sparc ~x86"
 IUSE="bootstrap emacs nls"
 
 DEPEND="virtual/libc"
@@ -19,15 +18,15 @@ DEPEND="virtual/libc"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	use bootstrap && epatch ${WORKDIR}/${P}-bootstrap.patch
-	if use sparc; then
-		epatch ${FILESDIR}/${P}-without_java.patch
-		epatch ${FILESDIR}/${P}-no-java-tests.patch
-	fi
+	use bootstrap && epatch ${FILESDIR}/${P}-bootstrap.patch
+	epatch ${FILESDIR}/${P}-tempfile.patch #66355
 	gnuconfig_update
 }
 
 src_compile() {
+	local myconf=""
+	( use macos || use ppc-macos ) && myconf="--enable-nls" || myconf="`use_enable nls`"
+
 	# Compaq Java segfaults trying to build gettext stuff, and there's
 	# no good way to tell gettext to refrain from building the java
 	# stuff, so... remove compaq-jdk/jre from the PATH
@@ -37,19 +36,18 @@ src_compile() {
 	fi
 
 	# When updating in sparc with java the jvm segfaults
-	use sparc && myconf="${myconf} --without-java"
-	use ppc-macos && myconf="${myconf} --enable-nls"
+	if use sparc; then
+		epatch ${FILESDIR}/${P}-without_java.patch
+		myconf="--without-java"
+	fi
 
 	# Build with --without-included-gettext (will use that of glibc), as we
 	# need preloadable_libintl.so for new help2man, bug #40162.
 	# Also note that it only gets build with USE=nls ...
 	# Lastly, we need to build without --disable-shared ...
-	CXX=$(gcc-getCC) \
-		econf \
+	CXX=${CC} econf \
 		--without-included-gettext \
-		$(use_enable nls) \
-		${myconf} \
-		|| die
+		${myconf} || die
 
 	emake || die
 }
@@ -88,10 +86,4 @@ src_install() {
 	fi
 
 	dodoc AUTHORS BUGS ChangeLog DISCLAIM NEWS README* THANKS TODO
-}
-
-pkg_postinst() {
-	ewarn "Any package that linked against the previous version"
-	ewarn "of gettext will have to be rebuilt."
-	ewarn "Please 'emerge gentoolkit' and run 'revdep-rebuild'"
 }
