@@ -1,44 +1,41 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 a131e87ad7c2e951bd163f35c94e0850 ChangeLog 40135
+MD5 5c37c7ad75a4087ba04975e8584ba0e2 binutils-2.14.90.0.8-r2.ebuild 449
+MD5 25026acb763a6e7b0475567a669ca560 ChangeLog 40319
 MD5 45494d255ce82fd574cfa85cba4c67a7 binutils-2.14.90.0.6-r7.ebuild 6736
 MD5 25ade8a6c71ab237778cf1534ca50b77 binutils-2.14.90.0.6-r8.ebuild 436
+MD5 566806dcf81b67546b0c751541145b7d binutils-2.15.91.0.2-r1.ebuild 462
 MD5 a7ceb9e535f7677481bd8e044733be67 binutils-2.14.90.0.8-r1.ebuild 5051
-MD5 5c37c7ad75a4087ba04975e8584ba0e2 binutils-2.14.90.0.8-r2.ebuild 449
 MD5 6904f1690676a2c9b3ffd28b6d8a8e47 binutils-2.15.90.0.1.1-r3.ebuild 4797
 MD5 a6844f75f8c9e7a60124e3de784c0079 binutils-2.15.90.0.1.1-r4.ebuild 522
 MD5 53f0fc4e26d728f52378403883a2aa2e binutils-2.15.90.0.3-r3.ebuild 4973
-MD5 dd1c86b950f9eff25ebd11dda143df83 binutils-2.15.90.0.3-r4.ebuild 402
-MD5 67aaf3806274ea7797aac4df8b06e43f binutils-2.15.91.0.1-r1.ebuild 371
 MD5 398d09db4e9bd0ebd561921e8834011d binutils-2.15.91.0.1.ebuild 4705
-MD5 566806dcf81b67546b0c751541145b7d binutils-2.15.91.0.2-r1.ebuild 462
+MD5 b8186504e5361a3b8cf58db90cf018e9 binutils-2.15.94.0.2.ebuild 445
 MD5 0808c1aab4a9e79f43f9485b9fb7c07e binutils-2.15.91.0.2.ebuild 5159
 MD5 6c9e007f1435b83e0c5d7c6e912014f6 binutils-2.15.92.0.2-r1.ebuild 4877
-MD5 b8186504e5361a3b8cf58db90cf018e9 binutils-2.15.94.0.2.ebuild 445
-MD5 c130d155df1401a4f3a4d5f2abb9c0c5 binutils-2.15.ebuild 369
 MD5 567094e03359ffc1c95af7356395228d metadata.xml 162
-MD5 d84b44c843e6ae1e502ab8b2900fd015 binutils-2.15.92.0.2-r4.ebuild 573
+MD5 c130d155df1401a4f3a4d5f2abb9c0c5 binutils-2.15.ebuild 369
 MD5 9ef42b24df7f55d6bd4105ea163b17ac binutils-2.15.94.0.2.2.ebuild 436
+MD5 edf60409dd68cfe28615dbafd62d3fa4 binutils-2.15.92.0.2-r5.ebuild 573
+MD5 dd1c86b950f9eff25ebd11dda143df83 binutils-2.15.90.0.3-r4.ebuild 402
+MD5 67aaf3806274ea7797aac4df8b06e43f binutils-2.15.91.0.1-r1.ebuild 371
 MD5 e3effee7a8054f5e0344034c596cb6fc files/binutils-2.14.amd64-32bit-path-fix.patch 456
 MD5 3b32997c2ca6b9893839c439e077e82d files/digest-binutils-2.14.90.0.6-r7 75
 MD5 bce6e94a306210a3a46ff8a78ad85df1 files/digest-binutils-2.14.90.0.6-r8 249
+MD5 3cd074b9670edeb82964360e6525c9ee files/digest-binutils-2.15.90.0.3-r4 248
 MD5 d57be7837bb42388ad4f1f9eec6fe699 files/digest-binutils-2.14.90.0.8-r1 160
-MD5 aed408762a54261cd9d1e3168c657bda files/digest-binutils-2.14.90.0.8-r2 249
 MD5 6c06201fe991e098f44f6f75dd5d53f4 files/digest-binutils-2.15 68
 MD5 f5cb20158fe6b87f03a2366b68866343 files/digest-binutils-2.15.90.0.1.1-r3 161
 MD5 7b0c1e491cb6bc7058193b4443071071 files/digest-binutils-2.15.90.0.1.1-r4 255
 MD5 83bd52b9c2e975443e2a8b11b59c7441 files/digest-binutils-2.15.90.0.3-r3 159
-MD5 3cd074b9670edeb82964360e6525c9ee files/digest-binutils-2.15.90.0.3-r4 248
 MD5 9ee0463e60aaa51448aba92f5fc86f04 files/digest-binutils-2.15.91.0.1 159
-MD5 9b3bdf3bc9d10b6cdabad1bf70f5442f files/digest-binutils-2.15.91.0.1-r1 159
 MD5 754cfdc4c162c0cac9c073198f732fdb files/digest-binutils-2.15.91.0.2 159
-MD5 d2dfe61bd330d130043365ee51c2c7b4 files/digest-binutils-2.15.91.0.2-r1 159
 MD5 1b43962f0560663b6b0f58ffa918a8ff files/digest-binutils-2.15.92.0.2-r1 242
-MD5 2a84b8cd9b3623b580267c93b90fa87b files/digest-binutils-2.15.94.0.2 249
 MD5 66df5567226338b7504bbd3c25cea92c files/libiberty-pic.patch 370
-MD5 3e93cfd4faa906a072ccc8250e018a95 files/digest-binutils-2.15.92.0.2-r4 249
+MD5 aed408762a54261cd9d1e3168c657bda files/digest-binutils-2.14.90.0.8-r2 249
+MD5 2a84b8cd9b3623b580267c93b90fa87b files/digest-binutils-2.15.94.0.2 249
+MD5 9b3bdf3bc9d10b6cdabad1bf70f5442f files/digest-binutils-2.15.91.0.1-r1 159
+MD5 d2dfe61bd330d130043365ee51c2c7b4 files/digest-binutils-2.15.91.0.2-r1 159
 MD5 97dfbf6eed66e792d6352732571cdefa files/digest-binutils-2.15.94.0.2.2 255
+MD5 35a1a3cc4c421b687382c8c94f2aa311 files/digest-binutils-2.15.92.0.2-r5 249
 MD5 b811d65855a74369e0faccf7574b886b files/2.13/binutils-2.13.90.0.10-glibc21.patch 2931
 MD5 1841b2037b3da0e0dfddb0345a0526e8 files/2.13/binutils-2.13.90.0.10-x86_64-gotpcrel.patch 769
 MD5 cbf08de84154ca2dcf26e572f2892f00 files/2.13/binutils-2.13.90.0.10-x86_64-testsuite.patch 1205
@@ -90,10 +87,3 @@ MD5 03d6c934577cf40ec75b41bfc38b48a0 files/2.14/binutils-mips-openssl-got-fix.pa
 MD5 8f619fc0c409a5ba768f126f172ee6bc files/2.15/05_all_binutils-2.15-elf32-arm-textrel.patch 2009
 MD5 907ce8c972e2a984590d4bfc04181c1d files/2.15/40_all_binutils-uclibc-linker.patch 530
 MD5 bad6ba9f63eb3a86d7006191848a47b8 files/2.15/52_all_binutils-20040527-uclibc-100-conf.patch 21576
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.0 (GNU/Linux)
-
-iD8DBQFCK39HArHZZzCEUG0RAp60AJ9f+Xdjd8oTr1l0f1tCXEuzaipzEACghacg
-38QIBaE+U+iWV+3MZJDwh8U=
-=1brg
------END PGP SIGNATURE-----
