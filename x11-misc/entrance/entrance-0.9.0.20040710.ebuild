@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/entrance/entrance-0.9.0.20040529.ebuild,v 1.4 2004/06/28 19:54:59 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/entrance/entrance-0.9.0.20040710.ebuild,v 1.1 2004/07/12 05:50:35 vapier Exp $
 
 inherit enlightenment eutils
 
