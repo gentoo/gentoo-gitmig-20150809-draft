@@ -1,6 +1,10 @@
 # ChangeLog for app-admin/setools
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/ChangeLog,v 1.7 2003/12/23 02:07:14 pebenito Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/setools/ChangeLog,v 1.8 2003/12/29 03:04:58 pebenito Exp $
+
+  28 Dec 2003; Chris PeBenito <pebenito@gentoo.org> setools-1.1.ebuild:
+  Eliminate install -Z. The context option is not needed, and causes sandbox
+  violations.
 
   22 Dec 2003; Chris PeBenito <pebenito@gentoo.org> setools-1.1.ebuild,
   files/setools-1.1-fix_noX.diff:
