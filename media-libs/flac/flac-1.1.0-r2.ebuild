@@ -1,10 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.0-r2.ebuild,v 1.1 2004/06/14 21:24:15 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/flac/flac-1.1.0-r2.ebuild,v 1.2 2004/06/18 00:47:12 vapier Exp $
 
-IUSE="sse xmms"
-
-inherit libtool eutils
+inherit libtool eutils flag-o-matic gcc
 
 DESCRIPTION="free lossless audio encoder which includes an XMMS plugin"
 HOMEPAGE="http://flac.sourceforge.net/"
@@ -12,11 +10,11 @@ SRC_URI="mirror://sourceforge/flac/${P}.tar.gz"
 
 LICENSE="GPL-2 LGPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 ~mips"
+KEYWORDS="~x86 ~ppc ~sparc ~mips ~alpha ~hppa ~amd64 ~ia64"
+IUSE="sse xmms"
 
 RDEPEND=">=media-libs/libogg-1.0_rc2
 	xmms? ( media-sound/xmms )"
-
 DEPEND="${RDEPEND}
 	x86? ( dev-lang/nasm )
 	sys-apps/gawk"
@@ -37,6 +35,8 @@ src_unpack() {
 }
 
 src_compile() {
+	use hppa && [ "`gcc-fullversion`" == "3.4.0" ] && replace-cpu-flags 1.0 2.0
+
 	econf \
 		--with-pic \
 		`use_enable sse` \
