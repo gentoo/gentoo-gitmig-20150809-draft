@@ -15,7 +15,7 @@ MD5 41d30ba8cf8d36ad3caebeedb1ddfd0e files/kdelibs-3.1.2-kjs-alphaev6-gcc3-worka
 MD5 488126241373edef5f0cd3db16aecc63 files/kdelibs-3.1.2-http.patch 1450
 MD5 c087405ca3581f6493850d59c98dcefa files/kdelibs-3.1.2-khtml.patch 1486
 MD5 03137d6470b9ab6532a11303c6d6a2ce files/digest-kdelibs-3.2.0_beta1 69
-MD5 99970a2969f2394150d910890c49f844 files/digest-kdelibs-3.2.0_beta2 69
+MD5 b5157791bb30f64dcb7a318f92c40c8e files/digest-kdelibs-3.2.0_beta2 69
 MD5 067d29e66608e7461f28e94895a0f4a2 files/digest-kdelibs-3.0.4-r1 142
 MD5 adfd3d17be1f45423f07f22cd0c73427 files/digest-kdelibs-3.1.2-r1 68
 MD5 0599a56d65abe28cd41280572b621d2f files/kdelibs-3.0.5b-http.patch 1639
