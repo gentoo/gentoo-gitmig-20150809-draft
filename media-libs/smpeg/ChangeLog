@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/smpeg
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.13 2004/03/14 16:51:57 geoman Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/smpeg/ChangeLog,v 1.14 2004/06/07 22:58:18 agriffis Exp $
+
+  07 Jun 2004; Aron Griffis <agriffis@gentoo.org> smpeg-0.4.4-r2.ebuild,
+  smpeg-0.4.4-r4.ebuild:
+  Fix use invocation
 
   14 Mar 2004; Stephen P. Becker <geoman@gentoo.org> smpeg-0.4.4-r4.ebuild:
   Added ~mips keyword.

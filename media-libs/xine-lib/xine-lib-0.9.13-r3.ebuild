@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.13-r3.ebuild,v 1.10 2004/05/12 12:35:23 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/xine-lib-0.9.13-r3.ebuild,v 1.11 2004/06/07 22:58:12 agriffis Exp $
 
 
 inherit libtool flag-o-matic eutils gcc
@@ -41,7 +41,7 @@ src_unpack() {
 	# allows kxine to work; see bug #5412
 	epatch ${FILESDIR}/${P}-kxine.patch
 
-	if [ `use directfb` ] ; then
+	if use directfb ; then
 		epatch ${FILESDIR}/xineconfig.patch-${PV}
 	else
 		epatch ${FILESDIR}/${PN}-disable-directfb.patch

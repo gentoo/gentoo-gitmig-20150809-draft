@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.17-r3.ebuild,v 1.12 2004/05/12 12:30:06 pappy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.17-r3.ebuild,v 1.13 2004/06/07 23:01:38 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -32,7 +32,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}-modversions_h.patch
 
 	# Disable kernel module support while building stages #38403
-	if [ `use build` ] ; then
+	if use build ; then
 		sed -i 's:installmodule ::' Makefile
 	fi
 }
@@ -54,7 +54,7 @@ src_compile() {
 	make OPTIMIZE="${CFLAFS}" LDFLAGS='-L ../sharedlib' \
 		-C threeDKit lib3dkit.a || die "Failed to build threeDKit!"
 
-	if [ ! `use build` ] ; then
+	if ! use build ; then
 		make INCLUDEDIR="/usr/src/linux/include" -C kernel/svgalib_helper \
 			clean all || die "Failed to build kernel module!"
 	fi

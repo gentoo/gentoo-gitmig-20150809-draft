@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.4.ebuild,v 1.7 2004/05/06 06:29:34 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libgphoto2/libgphoto2-2.1.4.ebuild,v 1.8 2004/06/07 22:58:59 agriffis Exp $
 
 inherit libtool eutils
 
@@ -81,7 +81,7 @@ src_install() {
 		install || die "install failed"
 
 	# manually move apidocs
-	if [ -n "`use doc`" ]; then
+	if use doc; then
 		dodir /usr/share/doc/${PF}/api
 		mv ${D}/usr/share/doc/libgphoto2/html/api/* ${D}/usr/share/doc/${PF}/api/
 		mv ${D}/usr/share/doc/libgphoto2_port/html/api/* ${D}/usr/share/doc/${PF}/api/

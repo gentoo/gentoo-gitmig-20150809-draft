@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-2.0.2-r2.ebuild,v 1.7 2004/05/26 11:51:06 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/musicbrainz/musicbrainz-2.0.2-r2.ebuild,v 1.8 2004/06/07 23:01:03 agriffis Exp $
 
 inherit libtool distutils eutils
 
@@ -24,7 +24,7 @@ src_unpack() {
 	unpack ${A}
 
 	cd ${S}
-	if [ `use python` ] ; then
+	if use python ; then
 		epatch ${FILESDIR}/${P}.patch
 	fi
 }
@@ -39,7 +39,7 @@ src_install() {
 
 	dodoc AUTHORS ChangeLog INSTALL README TODO docs/mb_howto.txt
 
-	if [ `use python` ] ; then
+	if use python ; then
 		cd ${S}/python
 		distutils_src_install
 
