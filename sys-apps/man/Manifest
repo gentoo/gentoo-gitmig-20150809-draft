@@ -2,7 +2,7 @@
 Hash: SHA1
 
 MD5 cacba5416aa20dbb0aa8bf2a8d1964ac ChangeLog 7695
-MD5 97255148d86bb7da1161765509805215 man-1.5m-r1.ebuild 3351
+MD5 00cd25d021d380c0f23b3197ee8cb494 man-1.5m-r1.ebuild 3595
 MD5 87416b779f5fd76e415bccbd8e16b30d man-1.5l-r6.ebuild 2792
 MD5 91ffe421042078d3875bcd0b8edcf033 man-1.5m.ebuild 2961
 MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
@@ -38,7 +38,7 @@ MD5 d8990b0dc5c9670156737c7012de3e9e files/man-1.5m-wrong-quotes.patch 411
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.8 (GNU/Linux)
 
-iD8DBQFA4irnHTu7gpaalycRAlrKAJ95TYvOYX5fo7lY0FqjJhYu8ItI0ACg70yw
-l3l05TlBWjId9U5S96rshfc=
-=C+tB
+iD8DBQFBCIc3HTu7gpaalycRAqPaAKCAc/OgkE2l7G2F0et9Pbwqpuv6EQCgjo78
+QP0Ys8mvm5jsKuOANt55zOM=
+=xreN
 -----END PGP SIGNATURE-----

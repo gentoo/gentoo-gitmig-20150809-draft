@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5m-r1.ebuild,v 1.8 2004/06/30 02:52:00 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/man/man-1.5m-r1.ebuild,v 1.9 2004/07/29 05:12:10 vapier Exp $
 
 inherit eutils
 
@@ -121,6 +121,13 @@ src_install() {
 }
 
 pkg_postinst() {
+	einfo "Forcing sane permissions onto ${ROOT}/var/cache/man (Bug #40322)"
+	chown -R root:man ${ROOT}/var/cache/man
+	chmod -R g+w ${ROOT}/var/cache/man
+	[ -e ${ROOT}/var/cache/man/whatis ] && chown root:root ${ROOT}/var/cache/man/whatis
+
+	echo
+
 	local files="`ls ${ROOT}/etc/cron.{daily,weekly}/makewhatis{,.cron} 2>/dev/null`"
 	if [ "${files/$'\n'}" != "${files}" ] ; then
 		ewarn "You have multiple makewhatis cron files installed."
