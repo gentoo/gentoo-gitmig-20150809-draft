@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.11 2002/07/09 20:20:59 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.12 2002/07/09 20:25:54 danarmak Exp $
 # This contains everything except things that modify ebuild variables and functions (e.g. $P, src_compile() etc.)
 ECLASS=kde-functions
 
@@ -161,6 +161,10 @@ min-kde-ver() {
 	    3.0_rc1)	selected_version="3.0_rc1";;
 	    3.0_rc2)	selected_version="3.0_rc2";;
 	    3.0_rc3)	selected_version="3.0_rc3";;
+	    3.0)	selected_version="3.0";;
+	    3.0.*)	selected_version="3.0";;
+	    3.1_alpha1)	selected_version="3.1_alpha1";;
+	    3.1.*)	selected_version="3.1";;
 	    3*)		selected_version="3.0";;
 	    *)		echo "!!! error: $FUNCNAME() called with invalid parameter: \"$1\", please report bug" && exit 1;;
 	esac
