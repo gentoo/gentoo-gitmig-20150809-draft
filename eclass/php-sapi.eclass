@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.32 2004/06/12 03:55:41 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/php-sapi.eclass,v 1.33 2004/06/16 01:26:03 robbat2 Exp $
 # Author: Robin H. Johnson <robbat2@gentoo.org>
 
 inherit eutils flag-o-matic
@@ -217,7 +217,7 @@ php-sapi_check_java_config() {
 		die
 	fi
 
-	JDKVER="$(java-config --java-version 2>&1 | head -n1 | cut -d\" -f2)"
+	JDKVER=$(java-config --java-version 2>&1 | awk '/^java version/ { print $3 }' | xargs )
 	einfo "Active JDK version: ${JDKVER}"
 	case ${JDKVER} in
 		1.4.*) ;;
