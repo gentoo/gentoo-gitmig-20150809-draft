@@ -1,6 +1,6 @@
 # ChangeLog for x11-themes/ksmoothdock
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ksmoothdock/ChangeLog,v 1.10 2004/08/13 21:48:18 kugelfang Exp $
+# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ksmoothdock/ChangeLog,v 1.11 2004/10/02 15:43:52 swegener Exp $
 
   13 Aug 2004; Danny van Dyk <kugelfang@gentoo.org> :
   Marked ~amd64.
