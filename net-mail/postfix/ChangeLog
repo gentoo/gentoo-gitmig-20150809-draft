@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/postfix
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.42 2002/12/13 11:00:07 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/postfix/ChangeLog,v 1.43 2002/12/23 20:43:43 blizzy Exp $
+
+  23 Dec 2002; Maik Schreiber <blizzy@gentoo.org> files/postfix.rc6: Added
+  "use dns" to depend().
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
