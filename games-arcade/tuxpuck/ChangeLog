@@ -1,6 +1,6 @@
-# ChangeLog for app-games/tuxpuck
+# ChangeLog for games-arcade/tuxpuck
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxpuck/ChangeLog,v 1.1 2003/09/10 19:29:21 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-arcade/tuxpuck/ChangeLog,v 1.2 2003/09/10 20:35:10 vapier Exp $
 
   29 Jun 2003; <msterret@gentoo.org> tuxpuck-0.8.2.ebuild:
   fix the man page install (it seems to be compressed upstream now)
