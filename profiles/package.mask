@@ -129,5 +129,4 @@ app-editors/gtk-xemacs
 #=sys-kernel/linux-extras-2.4.5.5
 
 # Seems to be some issues with GConf 
-=net-www/galeon-0.12
 
