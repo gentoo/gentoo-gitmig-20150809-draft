@@ -1,5 +1,5 @@
-MD5 4f182d3f29f1526bc09928b8e69e6351 tomcat-4.1.24-r1.ebuild 3832
-MD5 5b8aafc8bb6d1f2e3d4d4368cc8ece8f ChangeLog 5078
+MD5 75d0a267728d8772dc41c3a7bddc31b3 tomcat-4.1.24-r1.ebuild 3835
+MD5 e714c8795ea79c9ee06fa92dff2ced33 ChangeLog 5078
 MD5 f3d7f1cc3b7b8a69342e6bede7395f58 files/digest-tomcat-4.1.24-r1 74
 MD5 bf1c6e3b412968c9a06aeb15f21355e9 files/4.1.24/gentoo.diff 4002
 MD5 12a2562eeb8ec6dc5ef8b2172a5f29c4 files/4.1.24/tomcat.conf 2710

@@ -1,6 +1,0 @@
-MD5 bf1c6e3b412968c9a06aeb15f21355e9 /files/4.1.24/gentoo.diff 4002
-MD5 12a2562eeb8ec6dc5ef8b2172a5f29c4 /files/4.1.24/tomcat.conf 2710
-MD5 da7e3d883b224f013f546d2a087099e8 /files/4.1.24/tomcat.init 817
-MD5 53b2c10f99d7d2c05a69fc49b7acda8b /files/4.1.24/21tomcat 58
-MD5 88ec69f43adf7db8db42b9b6ea7ba2e0 /tomcat-4.1.24.ebuild 3832
-MD5 f71fb9aa13707a62df7ba71963649de6 jakarta-tomcat-4.1.24.tar.gz 7232715
