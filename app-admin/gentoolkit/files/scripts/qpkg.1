@@ -6,7 +6,7 @@ qpkg \- the "query package" tool for Gentoo Linux
 .B qpkg\fR	[\fIoptions\fR] [\fIpkgname\fR] [\fI\-g group\fR]
 .br 
 	[\fI\-f <file>\fR|\fI\-fp <pattern>\fR]
-.br 
+.TP 
 .B qpkg	\fI\-\-dups\fR	[\fI\-\-slot\fR]
 .TP 
 .B qpkg	\fI\-\-help\fR
@@ -16,8 +16,8 @@ qpkg is GenToolKit's "query package" tool, using it, you can find packages ownin
 .LP 
 .I Duplicate Locating:
 .LP 
-.B \-d, \-\-dups\fR		print packages that have multiple 
-.br
+.B \-d, \-\-dups\fR		print packages that have multiple
+.br 
 				versions installed
 .br 
 .B \-s, \-\-slot\fR		make \-d SLOT only print dups of the
@@ -36,7 +36,7 @@ qpkg is GenToolKit's "query package" tool, using it, you can find packages ownin
 .br 
 .B \-U, \-\-uninstalled\fR	Include only uninstalled packages
 .br 
-.B \-g, \-\-group\fR		Find by group (can be combined with
+.B \-g, \-\-group\fR		Find by goup (can be combined with
 .br 
 				other searches)
 .LP 
@@ -55,6 +55,10 @@ qpkg is GenToolKit's "query package" tool, using it, you can find packages ownin
 .B \-mc, \-\-md5\-check\fR	Verify package files md5
 .br 
 .B \-c, \-\-check\fR		Verify mtimes and md5.
+.br 
+.B \-q, \-\-query\-deps\fR	display all installed packages 
+.br 
+\fR				depending on selected packages
 .LP 
 .I Operation Modifiers:
 .LP 
@@ -103,3 +107,4 @@ Brandon Low <lostlogic@gentoo.org>, 2002: maintainance
 ebuild(5) 
 .TP 
 The \fI/usr/sbin/qpkg\fR script. 
+.TP 

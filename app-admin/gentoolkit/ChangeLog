@@ -1,6 +1,16 @@
 # ChangeLog for app-admin/gentoolkit
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.26 2002/07/03 23:55:36 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/ChangeLog,v 1.27 2002/07/14 22:39:40 lostlogic Exp $
+
+*gentoolkit-0.1.14 (14 Jul 2002)
+
+  14 Jul 2002; Brandon Low <lostlogic@gentoo.org> files/scripts/qpkg files/scripts/qpkg.1
+						  files/etc-update/etc-update files/etc-update/ChangeLog: 
+
+  Added -q --query-deps option to qpkg and qpkg.1.  
+  See `man qpkg` or `qpkg --help` for more information
+
+  See etc-update specific ChangeLog for etc-update changes.
 
 *gentoolkit-0.1.13 (25 Jun 2002)
 

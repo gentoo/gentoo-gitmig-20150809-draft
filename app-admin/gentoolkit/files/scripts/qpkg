@@ -7,8 +7,8 @@
 #
 # Maintainer: Brandon Low <lostlogic@gentoo.org>
 #
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/qpkg,v 1.12 2002/06/26 22:14:37 lostlogic Exp $
-ID='$Id: qpkg,v 1.12 2002/06/26 22:14:37 lostlogic Exp $'
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/scripts/qpkg,v 1.13 2002/07/14 22:39:40 lostlogic Exp $
+ID='$Id: qpkg,v 1.13 2002/07/14 22:39:40 lostlogic Exp $'
 VERSION=0.`echo ${ID} | cut -d\  -f3`
 
 PROG=`basename ${0}`
@@ -34,6 +34,10 @@ do
 	-d|--dups)
 		dups=y
 		inst=y
+		;;
+
+	-q|--query-deps)
+		query=y
 		;;
 
 	-s|--slot)
@@ -124,6 +128,7 @@ if [ ! "${nocolor}" ]; then
 	BR="\x1b[0;01m"
 	CY="\x1b[36;01m"
 	RD="\x1b[31;01m"
+	GR="\x1b[32;01m"
 	YL="\x1b[33;01m"
 	BL="\x1b[34;01m"
 	STAR=" *"
@@ -154,29 +159,31 @@ ${T}${CY}${PROG}${NO} ${BL}--dups${NO} [${BL}--slot${NO}]
 ${T}${CY}${PROG}${NO} ${BL}--help${NO}
 
 ${BR}Duplicate Locating:
-  ${BL}-d,  --dups${NO}${T}${T} print packages that have multiple versions installed
-  ${BL}-s,  --slot${NO}${T}${T} make ${BL}-d${NO} SLOT only print dups of the same SLOT
+  ${BL}-d,  --dups${NO}${T}${T}print packages that have multiple versions installed
+  ${BL}-s,  --slot${NO}${T}${T}make ${BL}-d${NO} SLOT only print dups of the same SLOT
 
 ${BR}Package Selection:
-  ${BL}-f,  --find-file${NO}${T} finds package that owns file <file>
-  ${BL}-fp, --find-pattern${NO}${T} finds to package that owns file matching *<pattern>*
-  ${BL}-I,  --installed${NO}${T} Include${YL} only${NO} installed packages
-  ${BL}-U,  --uninstalled${NO}${T} Include${YL} only${NO} uninstalled packages
-  ${BL}-g,  --group${NO}${T}${T} Find by goup (can be combined with other searches)
+  ${BL}-f,  --find-file${NO}${T}finds package that owns file <file>
+  ${BL}-fp, --find-pattern${NO}${T}finds to package that owns file matching *<pattern>*
+  ${BL}-I,  --installed${NO}${T}Include${YL} only${NO} installed packages
+  ${BL}-U,  --uninstalled${NO}${T}Include${YL} only${NO} uninstalled packages
+  ${BL}-g,  --group${NO}${T}${T}Find by goup (can be combined with other searches)
 
 ${BR}Information Selection:
-  ${BL}-l,  --list${NO}${T}${T} List package content
-  ${BL}-i,  --info${NO}${T}${T} Get package description and home page.
+  ${BL}-l,  --list${NO}${T}${T}List package content
+  ${BL}-i,  --info${NO}${T}${T}Get package description and home page.
   ${BL}-ct, --check-time${NO}
-  ${BL}-tc, --time-check${NO}${T} Verify package files timestamps
+  ${BL}-tc, --time-check${NO}${T}Verify package files timestamps
   ${BL}-cm, --check-md5${NO}
-  ${BL}-mc, --md5-check${NO}${T} Verify package files md5
-  ${BL}-c,  --check${NO}${T}${T} Verify mtimes${YL} and${NO} md5.
+  ${BL}-mc, --md5-check${NO}${T}Verify package files md5
+  ${BL}-c,  --check${NO}${T}${T}Verify mtimes${YL} and${NO} md5.
+  ${BL}-q,  --query-deps${NO}${T}display all installed packages 
+${T}${T}${T}depending on selected packages
 
 ${BR}Operation Modifiers:
-  ${BL}-nc, --no-color${NO}${T} don't use colors
-  ${BL}-v,  --verbose${NO}${T} Be more verbose [ can be repeated twise ]
-  ${BL}-vv${NO}${T}${T}${T} Same as ${BL}-v -v${NO}
+  ${BL}-nc, --no-color${NO}${T}don't use colors
+  ${BL}-v,  --verbose${NO}${T}Be more verbose [ can be repeated twise ]
+  ${BL}-vv${NO}${T}${T}${T}Same as ${BL}-v -v${NO}
 
 ${YL}Notes${NO}: 
 ${YL}*${NO} ${BL}-f${NO}, ${BL}-fp, ${BL}-d${NO}, ${BL}-l${NO}, ${BL}-ct${NO}, ${BL}-cm${NO}, and ${BL}-c${NO} apply only to installed packages.
@@ -202,7 +209,6 @@ ${YL}Examples${NO}:
 "
 	exit
 fi
-
 
 #For the --dups switch only
 if [ "${dups}" ]; then
@@ -254,7 +260,7 @@ if [ "${dups}" ]; then
 	else
 		echo -n "${duppak}"|cut -f2 -d" "| \
 				    sed -e "s:-r[0-9]\+$::" \
-					-e "s:-[0-9][^-]*$::" \
+					-e "s:-[0-9].*$::" \
 					-e "s:\(^[^/]*/\)\(.*\):${BR}\1${CY}\2${NO}:"|uniq
 	fi
 	exit
@@ -324,6 +330,19 @@ for p in ${ipak} ${upak} -;do
 		echo -e "${T}${BL}${desc}${NO} [ ${YL}${home}${NO} ]"
 	fi
 	
+	if [ "${query}" ]; then
+		echo -e "${BL}DEPENDED ON BY:${NO}"
+		package="`echo ${n}|sed -e 's:-r[0-9]\+$::' \
+					-e 's:-[0-9].*$::' \
+					-e 's:^iii ::' \
+					-e 's:^uuu ::'`"
+		place="`echo ${n}|cut -f1 -d' '`"
+		[[ "${place}" == "iii" ]] && color="${GR}" || color="${RD}"
+		grep -R "${package}" /var/db/pkg/*/*/RDEPEND | \
+		cut -f5,6 -d"/" | sed -e "s:^:\t${color}:;s:$:${NO}:" | sort | uniq
+#		gawk -F "/" '{printf("${place}\n\t%s/%s${NO}",$5,$6)}' | sort | uniq
+	fi
+
 	# cat package content, remove obj/sym/dir, md5 and mtime when not verbose
 	# display only match in file-find mode unless extra verbose
 	if [ "${list}" ]; then
@@ -438,9 +457,9 @@ for p in ${ipak} ${upak} -;do
 	fi
 	
 done | (
-	if [ ! \( "${tcheck}" -o "${mcheck}" -o "${info}" -o "${list}" -o ${verb} -gt 0 \) ]; then
+	if [ ! \( "${tcheck}" -o "${mcheck}" -o "${info}" -o "${list}" -o "${query}" -o ${verb} -gt 0 \) ]; then
 		sed -e "s:-r[0-9]\+$::" -e "s:-[0-9][^-]*$::"|sort -k2|uniq -1
-	elif [ ${verb} -lt 2 ]; then
+	elif [ ! \( "${tcheck}" -o "${mcheck}" -o "${info}" -o "${list}" -o "${query}" -o ${verb} -lt 2 \) ]; then
 		sort -k2|uniq -1
 	else
 		cat

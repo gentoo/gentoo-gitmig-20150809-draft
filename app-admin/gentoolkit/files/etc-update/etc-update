@@ -8,7 +8,7 @@
 # Leo Lipelis <aeoo@gentoo.org>
 # Karl Trygve Kalleberg <karltk@gentoo.org>
 #
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/etc-update/etc-update,v 1.9 2002/06/26 23:13:14 lostlogic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/etc-update/etc-update,v 1.10 2002/07/14 22:39:40 lostlogic Exp $
 
 function get_config() {
 	item=$1
@@ -45,20 +45,20 @@ function scan() {
 			if [[ "${ofile:10}" != "${rfile:10}" ]] || 
 			   [[ ${opath} != ${rpath} ]]; then
 				if [[ -z `diff -Nua ${rpath}/${rfile} ${rpath}/${rfile:10}|
-						  grep "^[+-][^+-]"|grep -v '# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/etc-update/etc-update,v 1.9 2002/06/26 23:13:14 lostlogic Exp $'` ]]; then
+						  grep "^[+-][^+-]"|grep -v '# .Header:.*'` ]]; then
 					mv ${rpath}/${rfile} ${rpath}/${rfile:10}
 					continue
 				else
 					count=${count}+1
 					echo "${rpath}/${rfile:10}" > ${TMP}/files/${count}
 					echo "${rpath}/${rfile}" >> ${TMP}/files/${count}
-			    	ofile="${rfile}"
+					ofile="${rfile}"
 					opath="${rpath}"
 					continue
 				fi
 			fi
 			if [[ -z `diff -Nua ${rpath}/${rfile} ${rpath}/${ofile}|
-					  grep "^[+-][^+-]"|grep -v '# $Header: /var/cvsroot/gentoo-x86/app-admin/gentoolkit/files/etc-update/etc-update,v 1.9 2002/06/26 23:13:14 lostlogic Exp $'` ]]; then
+					  grep "^[+-][^+-]"|grep -v '# .Header:.*'` ]]; then
 				mv ${rpath}/${rfile} ${rpath}/${ofile}
 				continue
 			else
@@ -72,18 +72,40 @@ function scan() {
 }
 
 function sel_file() {
-#	[ ! -z `ls ${TMP}/files` ] && \
+	local -i isfirst=0
 	until [ -f ${TMP}/files/${input} ] || [ ${input} == -1 ]; do
-		echo "The following is the list of files which need updating, each 
+		if (( ${mode} == 0 )); then
+			echo "The following is the list of files which need updating, each 
 configuration file is followed by a list of possible replacement files."
+		else
+			local my_title="Please select a file to update"
+		fi
 		for file in `ls ${TMP}/files|sort -n`; do
-			    echo -n "${file}) "
-		    for word in `cat ${TMP}/files/${file}`; do
-				echo ${word}
-			done
-		done
-		echo -n "Please select a file to edit by entering the corresponding number (-1 to exit): "
-		read input
+			if (( ${isfirst} == 0 )); then
+				isfirst=${file}
+			fi
+			echo -n "${file}${PAR} "
+			if (( ${mode} == 0 )); then
+				for word in `cat ${TMP}/files/${file}`; do
+					echo ${word}
+				done
+			else
+				head -n1 ${TMP}/files/${file}
+			fi
+		done > ${TMP}/menuitems
+		if (( ${mode} == 0 )); then
+			cat ${TMP}/menuitems
+			echo -n "Please select a file to edit by entering the corresponding number (-1 to exit): "
+			read input
+		else
+			dialog --title "${title}" --menu "${my_title}" \
+				0 0 0 `echo "-1 Exit";cat ${TMP}/menuitems` \
+				2> ${TMP}/input
+			input=`cat ${TMP}/input`
+		fi		
+		if (( ${input} == 0 )); then
+			input=${isfirst}
+		fi
 	done
 }
 
@@ -99,18 +121,36 @@ function do_file() {
 			fcount=0
 			for line in `cat ${TMP}/files/${input}`; do
 				if (( ${fcount} > 0 )); then
-					echo -n "${fcount}) "
+					echo -n "${fcount}${PAR} "
 					echo "${line}"
 				else
-					echo "Below are the new config files for ${line}:"
+					if (( ${mode} == 0 )); then
+						echo "Below are the new config files for ${line}:"
+					else
+						local my_title="Please select a file to process for ${line}"
+					fi
 				fi
 				fcount=${fcount}+1
-			done
-			echo -n "Please enter the number of the file to process (-1 to exit this file): "
-			read my_input
-			[ ${my_input} == -1 ] && break
+			done > ${TMP}/menuitems
+			if (( ${mode} == 0 )); then
+				cat ${TMP}/menuitems
+				echo -n "Please select a file to process (-1 to exit this file): "
+				read my_input
+			else
+				dialog --title "${title}" --menu "${my_title}" \
+					0 0 0 `cat ${TMP}/menuitems;echo "${fcount} Exit"` \
+					2> ${TMP}/input
+				my_input=`cat ${TMP}/input`
+			fi
+			if (( ${my_input} == 0 )); then
+				my_input=1
+			elif (( ${my_input} == ${fcount} )); then
+				break
+			fi
 		done
-		[ ${my_input} == -1 ] && break
+		if (( ${my_input} == ${fcount} )); then
+			break
+		fi
 
 		fcount=${my_input}+1
 
@@ -122,7 +162,9 @@ function do_file() {
 		cat ${TMP}/files/${input}|sed -e "${fcount}!p;d" > ${TMP}/files/sed
 		mv ${TMP}/files/sed ${TMP}/files/${input}
 
-		[ ${my_input} == -1 ] && break
+		if (( ${my_input} == -1 )); then
+			break
+		fi
 	done
 	echo
 	rm ${TMP}/files/${input}
@@ -140,11 +182,11 @@ function do_cfg() {
 		  `echo "${diff_command}" |
 		   sed -e "s:%file1:${ofile}:" \
 			   -e "s:%file2:${file}:"` ) | ${pager}
-		echo -n "1) Replace ${ofile} with ${file}
-2) Delete ${file}, keeping ${ofile} as is
-3) Interactively merge ${ofile} with ${file}
+		echo -n "1) Replace original with update
+2) Delete update, keeping original as is
+3) Interactively merge original with update
 4) Show differences again
-Please select from the menu above (-1 to exit, ignoring this updated file):"
+Please select from the menu above (-1 to ignore this update): "
 		read my_input
 		case ${my_input} in
 			1) echo "Replacing ${ofile} with ${file}"
@@ -188,13 +230,14 @@ function do_merge() {
 			 -e "s:%new:${file}:g"`
 		until (( ${my_input} == -1 )); do	
 			echo -n "1) Replace ${ofile} with merged file
-2) Show differences between merged file and ${ofile}
-3) Remerge ${ofile} with ${file}
+2) Show differences between merged file and original
+3) Remerge original with update
 4) Return to the previous menu
-Please select from the menu above (-1 to exit, ignoring ${file}): "
+Please select from the menu above (-1 to exit, losing this merge): "
 			read my_input
 			case ${my_input} in
 				1) echo "Replacing ${ofile} with ${mfile}"
+				   chmod --reference=${ofile} ${mfile}
 				   mv ${mv_opts} ${mfile} ${ofile}
 				   rm ${rm_opts} ${file}
 				   return 255
@@ -247,20 +290,37 @@ cp_opts=`get_config cp_opts`
 pager=`get_config pager`
 diff_command=`get_config diff_command`
 merge_command=`get_config merge_command`
+declare -i mode=`get_config mode`
+[ -z ${mode} ] && mode=0
 [ -z ${pager} ] && pager="cat"
 
 #echo "rm_opts: $rm_opts, mv_opts: $mv_opts, cp_opts: $cp_opts"
 #echo "pager: $pager, diff_command: $diff_command, merge_command: $merge_command" 
 
+if (( ${mode} == 0 )); then
+	PAR=")"
+else
+	PAR=""
+	rm_opts=""
+	mv_opts=""
+	cp_opts=""
+	pager=""
+fi
+
 declare -i count=0
 declare -i input=0
+declare title="Gentoolkit's etc-update tool!"
 
 scan
 
 until (( ${input} == -1 )); do
-	[ ${count} == 0 ] && die "No files to work on!" 0
+	if (( ${count} == 0 )); then
+		die "No files to work on!" 0
+	fi
 	sel_file
-	[ ${input} != -1 ] && do_file
+	if (( ${input} != -1 )); then
+		do_file
+	fi
 done
 
 die "User termination!" 0

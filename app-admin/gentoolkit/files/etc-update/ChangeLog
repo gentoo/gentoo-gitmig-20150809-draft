@@ -1,3 +1,9 @@
+2002-07-14 Brandon Low <lostlogic@gentoo.org>
+	* Reasonable defaults
+	* Important: set correct permisions on merged files
+	* Began adding support for config setting "mode"
+	  which is 0 for text mode and 1 for menu mode
+
 2002-06-25 Brandon Low <lostlogic@gentoo.org>
 	* Users get to choose from list of all files at startup
 	* Menus are easier to use
