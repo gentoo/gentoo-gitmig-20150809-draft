@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.6.1-r6.ebuild,v 1.15 2003/06/12 22:11:42 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.6.1-r6.ebuild,v 1.16 2003/09/02 19:16:48 mholzer Exp $
 
 # OLD14 = 1.4
 # OLD15 = 1.5
@@ -42,9 +42,9 @@ S=${WORKDIR}/${P}
 OLD15_S=${WORKDIR}/${OLD15_P}
 OLD14_S=${WORKDIR}/${OLD14_P}
 DESCRIPTION="Used to generate Makefile.in from Makefile.am"
-SRC_URI="ftp://ftp.gnu.org/gnu/${PN}/${P}.tar.gz
-	ftp://ftp.gnu.org/gnu/${PN}/${OLD15_P}.tar.gz
-	ftp://ftp.gnu.org/gnu/${PN}/${OLD14_P}.tar.gz"
+SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2
+	mirror://gnu/${PN}/${OLD15_P}.tar.gz
+	mirror://gnu/${PN}/${OLD14_P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/automake/automake.html"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc alpha arm"

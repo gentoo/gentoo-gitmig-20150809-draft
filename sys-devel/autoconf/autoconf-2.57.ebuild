@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.57.ebuild,v 1.8 2003/03/15 14:48:28 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.57.ebuild,v 1.9 2003/09/02 19:19:32 mholzer Exp $
 
 IUSE=""
 
@@ -11,8 +11,8 @@ OLD_P="${PN}-${OLD_PV}"
 S="${WORKDIR}/${P}"
 OLD_S="${WORKDIR}/${OLD_P}"
 DESCRIPTION="Used to create autoconfiguration files"
-SRC_URI="ftp://ftp.gnu.org/gnu/${PN}/${P}.tar.bz2
-	ftp://ftp.gnu.org/gnu/${PN}/${OLD_P}.tar.gz"
+SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2
+	mirror://gnu/${PN}/${OLD_P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/autoconf/autoconf.html"
 
 LICENSE="GPL-2"

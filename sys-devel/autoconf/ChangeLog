@@ -1,6 +1,11 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.24 2003/03/30 19:12:43 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.25 2003/09/02 19:19:31 mholzer Exp $
+
+  02 Sep 2003; Martin Holzer <mholzer@gentoo.org> autoconf-2.13-r2.ebuild,
+  autoconf-2.53a.ebuild, autoconf-2.54-r1.ebuild, autoconf-2.54.ebuild,
+  autoconf-2.57-r1.ebuild, autoconf-2.57.ebuild:
+  Now uses mirror://gnu.
 
   30 Mar 2003; Martin Schlemmer <azarah@gentoo.org> autoconf-2.57-r1.ebuild :
   Mark stable.  It had some extensive testing, and it closes bug #14663.
