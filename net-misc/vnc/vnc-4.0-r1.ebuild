@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.0-r1.ebuild,v 1.3 2005/01/08 15:37:10 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/vnc/vnc-4.0-r1.ebuild,v 1.4 2005/01/19 01:33:07 mr_bones_ Exp $
 
 inherit eutils toolchain-funcs
 
@@ -39,7 +39,7 @@ src_unpack() {
 	epatch ${FILESDIR}/${P}/vnc-restart.patch
 	epatch ${FILESDIR}/${P}/vnc-via.patch
 
-	use server && ( 
+	use server && (
 		unpack X11R${X_VERSION}-src1.tar.gz
 		unpack X11R${X_VERSION}-src2.tar.gz
 		unpack X11R${X_VERSION}-src3.tar.gz
@@ -65,7 +65,7 @@ src_compile() {
 
 	use server && (
 		cd ${S}/xc
-		make CDEBUGFLAGS="${CFLAGS}" CXXDEBUGFLAGS="${CXXFLAGS}" World FAST=1 || die 
+		make CDEBUGFLAGS="${CFLAGS}" CXXDEBUGFLAGS="${CXXFLAGS}" World FAST=1 || die
 	)
 }
 
