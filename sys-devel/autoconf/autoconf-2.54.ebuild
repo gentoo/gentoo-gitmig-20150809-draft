@@ -1,6 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.54.ebuild,v 1.4 2002/12/09 22:29:51 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/autoconf-2.54.ebuild,v 1.5 2002/12/14 19:19:01 azarah Exp $
+
+IUSE=""
+
+inherit eutils
 
 OLD_PV="2.13"
 OLD_P="${PN}-${OLD_PV}"
@@ -22,9 +26,15 @@ DEPEND=">=sys-devel/m4-1.4p
 src_unpack() {
 
 	unpack ${A}
+	
 	cd ${OLD_S}
-	patch -p0 < ${FILESDIR}/${OLD_P}-configure-gentoo.diff || die
-	patch -p0 < ${FILESDIR}/${OLD_P}-configure.in-gentoo.diff || die
+	epatch ${FILESDIR}/${OLD_P}-configure-gentoo.diff
+	epatch ${FILESDIR}/${OLD_P}-configure.in-gentoo.diff
+	
+	cd ${S}
+	# Enable both autoconf-2.1 and autoconf-2.5 info pages
+	epatch ${FILESDIR}/${PN}-2.5-infopage-namechange.patch
+	ln -snf ${S}/doc/autoconf.texi ${S}/doc/autoconf25.texi
 }
 
 src_compile() {
@@ -76,7 +86,7 @@ src_install() {
 	# new in 2.5x
 	dosym ../lib/${PN}/ac-wrapper.pl /usr/bin/autom4te
 
-	mv ${D}/usr/share/info/autoconf.info ${D}/usr/share/info/autoconf-2.5.info
+#	mv ${D}/usr/share/info/autoconf.info ${D}/usr/share/info/autoconf-2.5.info
 
 	docinto ${PV}
 	dodoc COPYING AUTHORS BUGS NEWS README TODO THANKS

@@ -1,6 +1,10 @@
 # ChangeLog for sys-devel/autoconf
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.12 2002/12/12 22:21:14 tuxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/autoconf/ChangeLog,v 1.13 2002/12/14 19:19:01 azarah Exp $
+
+  14 Dec 2002; Martin Schlemmer <azarah@gentoo.org> autoconf-2.54.ebuild :
+  Also get autoconf-2.5x info page to show up in DIR index, closing
+  bug #12085.
 
   12 Dec 2002; Jan Seidel <tuxus@gentoo.org> autoconf-2.53a.ebuild :
   Added mips to keywords.
