@@ -1,6 +1,18 @@
 # ChangeLog for dev-util/tla
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/ChangeLog,v 1.15 2004/09/01 23:46:49 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/tla/ChangeLog,v 1.16 2004/09/06 20:23:07 arj Exp $
+
+*tla-1.2.2_rc1 (06 Sep 2004)
+
+  06 Sep 2004; <arj@gentoo.org> tla-1.2.2_rc1.ebuild, -tla-1.2.1_pre1.ebuild:
+  Added release candidate for 1.2.2 which fixes the 1k barrier problem in
+  the 1.2.1 release (the reason why it's not in the tree) and fixes other
+  bugs including #59548. The new ebuild also closes #61120. Don't get
+  fooled by the wrong version number of libneon in the configure output.
+  They forgot to update the string when they updated the other files.
+
+  Remove tla-1.2.1_pre1 as it seems to include a vulnerable libneon and
+  doesn't seem to be needed.
 
   01 Sep 2004; Anders Rune Jensen <arj@gentoo.org> metadata.xml, 
   -files/tla-1.2-4.diff.gz:
