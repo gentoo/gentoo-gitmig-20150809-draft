@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/gtkterm/gtkterm-0.99.3.ebuild,v 1.5 2004/07/14 22:55:41 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/gtkterm/gtkterm-0.99.3.ebuild,v 1.6 2004/10/04 09:39:14 dholm Exp $
 
 DESCRIPTION="A serial port terminal written in GTK+, similar to Windows' HyperTerminal."
 HOMEPAGE="http://www.jls-info.com/julien/linux/"
@@ -8,7 +8,7 @@ SRC_URI="http://www.jls-info.com/julien/linux/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 ~sparc ~ppc"
 IUSE=""
 
 DEPEND=">=x11-libs/gtk+-2.0"
