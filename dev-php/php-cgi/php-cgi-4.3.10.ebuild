@@ -1,13 +1,13 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/php-cgi-4.3.10.ebuild,v 1.7 2005/01/09 21:02:39 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-php/php-cgi/php-cgi-4.3.10.ebuild,v 1.8 2005/01/13 21:46:51 gmsoft Exp $
 
 PHPSAPI="cgi"
 inherit php-sapi eutils
 
 DESCRIPTION="PHP CGI"
 SLOT="0"
-KEYWORDS="x86 sparc alpha ~hppa ppc ~ia64 ~amd64"
+KEYWORDS="x86 sparc alpha hppa ppc ~ia64 ~amd64"
 
 # for this revision only
 PDEPEND=">=${PHP_PROVIDER_PKG}-4.3.10"
