@@ -31,4 +31,4 @@ MD5 3d8b3ecb3827e2e3a9a45ac6c3210a0a files/1.0.6106/NVIDIA_glx-1.0.6106-defines.
 MD5 6f55327ce020f7ed0d433ea99dacb315 files/1.0.6106/NVIDIA_glx-1.0.6106-makefile.patch 593
 MD5 6f55327ce020f7ed0d433ea99dacb315 files/1.0.6111/NVIDIA_glx-1.0.6111-makefile.patch 593
 MD5 3d8b3ecb3827e2e3a9a45ac6c3210a0a files/1.0.6111/NVIDIA_glx-1.0.6111-defines.patch 437
-MD5 f6c702c19de46ece719928dc99ef0ad6 files/1.0.6111/NVIDIA_glx-1.0.6111-glheader.patch 419
+MD5 855c32c4f6cf95ab757b9e425ecfd380 files/1.0.6111/NVIDIA_glx-1.0.6111-glheader.patch 375
