@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.4.ebuild,v 1.2 2002/12/15 10:44:23 bjb Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sed/sed-4.0.5.ebuild,v 1.1 2002/12/18 00:51:44 lostlogic Exp $
 
 IUSE="nls static build"
 
