@@ -107,10 +107,6 @@ media-plugins/gst-plugins-xvideo
 =net-mail/sylpheed-0.9.4-r1
 =net-mail/sylpheed-0.9.5-r1
 
-# <msterret@gentoo.org> (04 Sep 2003)
-# Likes to segfault ... working with upstream devs on it
-=dev-lang/nasm-0.98.37
-
 # <lu_zero@gentoo.org> (04 Sep 2003)
 # Not working for me, still builds fine
 media-video/lives
@@ -128,7 +124,6 @@ media-video/lives
 # This one requires more testing. Appears to be buggier than the i
 # previous version
 =media-video/totem-0.99.3
-
 
 # <pylon@gentoo.org> (31 Aug 2003)
 # this mol-snapshot has problems with the audio-driver.  we
@@ -208,18 +203,6 @@ sys-apps/policycoreutils
 # Testing, alpha version.  In demand, so it's in portage
 >=x11-wm/openbox-3.0_alpha1
 
-# taviso@gentoo.org (30 Jul 03)
-# Unstable version, available for those
-# who need it.
-#=x11-wm/fvwm-2.5.7
-
-# <strider@gentoo.org> (29 Jul 2003)
-# Alpha Ebuild, it breaks dev-java/ant
-# Also its not working very well
-# Fixed ant problem. Putting it on testing.
-#=dev-java/sun-jdk-1.4.2
-#=dev-java/java-sdk-docs-1.4.2
-
 # <azarah@gentoo.org> (28 July 2003)
 # These are deprecated
 sys-apps/console-tools
@@ -234,12 +217,6 @@ dev-dotnet/glib-sharp
 # package is obsolete and unsupported
 # use net-p2p/xmule instead
 net-p2p/lmule
-
-# <rac@gentoo.org> (17 July 2003) 
-# emergency mask because of confirmed reports of compilation failure 
-# see bug 24570 
-# >dev-libs/dvnet-0.9.4 
-# should be solved now - masked unstable for further testing <pvdabeel@gentoo.org> (18 July 2003)
 
 # <coredumb@gentoo.org> (14 July 2003)
 # Finally a php5 beta :)
@@ -262,10 +239,6 @@ net-p2p/lmule
 # <agenkin@gentoo.org> (10 Jul 2003)
 # xmms-aalsa package is permanently removed (bug #6797)
 media-plugins/xmms-aalsa
-
-# <liquidx@gentoo.org> (03 Jul 2003)
-# python with db4 support and threads enabled
-#=dev-lang/python-2.2.3-r1
 
 # <brain@gentoo.org> (03 Jul 2003)
 # beta version
@@ -301,15 +274,6 @@ sys-devel/spython
 # <games@gentoo.org> (19 Jun 2003)
 # 4.1.x is incompat with 4.0.x
 =media-libs/allegro-4.1*
-
-# <liquidx@gentoo.org> (19 Jun 2003)
-# re-write and porting of all gtk-themes.
-# masking for testing
-#>=x11-themes/gnome-themes-2.2.2-r1
-#>=x11-themes/gtk-engines-2.2.0
-#>=x11-themes/gtk-engines-mist-0.10
-#>=x11-themes/gtk-engines-crux-1.9.5-r1
-#>=x11-themes/gtk-engines-lighthouseblue-0.7.0
 
 # <robh@gentoo.org> (18 Jun 2003)
 # due to ardour approaching a release and sourceforge breaking
@@ -383,10 +347,6 @@ media-fonts/chkfontpath
 # depreciated packages
 net-misc/kpopper
 net-im/kxicq2
-
-# <mholzer@gentoo.org> (28 Apr 2003)
-# doesn't compile
->net-dialup/capi4k-utils-20020701
 
 # <fava@gentoo.org>, <robbat2@gentoo.org> (24 Apr 2003)
 # work in progress, broken ebuild
@@ -524,13 +484,6 @@ app-text/psgml
 # <chadh@gentoo.org> (11 Nov 2002)
 # masking b/c it won't compile
 =sys-apps/pcmcia-cs-3.2.2
-
-# <bcowan@gentoo.org> (09 Nov 2002)
-# masking mc due to filling entire var/tmp
-# partition during compile
-=app-misc/mc-4.6.0_pre1-r1
-=app-misc/mc-4.6.0_pre1-r2
-=app-misc/mc-4.6.0_pre1-r3
 
 # <mkennedy@gentoo.org> (31 Oct 2002)
 # Masked (incomplete)
