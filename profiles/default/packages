@@ -36,7 +36,8 @@ sys-apps/grub
 sys-apps/gzip
 sys-apps/hdparm
 sys-apps/ipchains
-sys-apps/iproute2
+#currently doesn't build
+#sys-apps/iproute2
 sys-apps/iptables
 sys-apps/isapnptools
 sys-apps/less
