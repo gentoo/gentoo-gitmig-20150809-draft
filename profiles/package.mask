@@ -331,10 +331,6 @@ net-www/galeon-cvs
 # Get things ready for new xfree release.
 #=x11-base/xfree-4.2.1
 
-# <aliz@gentoo.org> (07 Sep 2002)
-# Masked for testing
-=media-plugins/xmms-nebulus-0.3.0
-
 # <spider@gentoo.org> (05 Sep 2002)
 # masked for testing and recheck of ebuild by rphillips
 =net-irc/xchat-1.8.10
