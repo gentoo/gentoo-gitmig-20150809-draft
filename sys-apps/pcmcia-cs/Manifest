@@ -1,8 +1,11 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 d94253e6b6db5a107754140b8b5a6384 pcmcia-cs-3.2.4.ebuild 4308
-MD5 ac69abc850da86049fca72e2dc79a029 pcmcia-cs-3.2.7-r2.ebuild 4889
+MD5 085114f9d0a8e1b95cc2efebb8ec140d pcmcia-cs-3.2.7-r2.ebuild 4891
 MD5 19fd766bac8e110b4620363a1ace26dd metadata.xml 159
 MD5 9cb0e20339d778261fa9b617a9bd9b6e pcmcia-cs-3.1.34-r8.ebuild 4089
-MD5 c53adbf4078e1aba47d2f790989b8c8d ChangeLog 15892
+MD5 d09a33244321e10c96e2bbfa69864ae1 ChangeLog 16098
 MD5 d264ebebd9b9cc4cf613efe9648b1c08 pcmcia-cs-3.2.7.ebuild 4873
 MD5 f801e40c6bcb9ef932085cb198a8c579 pcmcia-cs-3.2.5-r1.ebuild 5375
 MD5 27b6ad5ee172657a5676ed4137d4132e pcmcia-cs-3.2.5.ebuild 4540
@@ -22,3 +25,10 @@ MD5 614f873dfdb6afcff9a631d64eada8e5 files/ppc.config.opts 1687
 MD5 310551d0852ba9c1fe5c0f8c231c3589 files/digest-pcmcia-cs-3.2.7 287
 MD5 ec6d7ed3b83d1af45933e3e8af41796a files/pcmcia-cs-3.2.7-move-pnp-ids-to-usr-share-misc.patch 1436
 MD5 da3f5dc50768f0a5d9868dd5bd227329 files/network 768
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBZ6VLFhz/XBeRBtARAsSCAKCWF5yiAXUbkLvuRKkUAgFibjUaiACeMaiq
+LfwfAYtJ+/A1l02/S4r5W+c=
+=TxoI
+-----END PGP SIGNATURE-----
