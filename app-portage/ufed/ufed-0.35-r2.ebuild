@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ufed-0.35-r2.ebuild,v 1.1 2004/11/22 05:44:27 genone Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-portage/ufed/ufed-0.35-r2.ebuild,v 1.2 2004/11/22 15:57:49 corsair Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gentoo/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc mips ~alpha ~arm ~hppa amd64 ~ia64 ~ppc64"
+KEYWORDS="x86 ~ppc sparc mips ~alpha ~arm ~hppa amd64 ~ia64 ppc64"
 IUSE=""
 
 RDEPEND="dev-lang/perl
