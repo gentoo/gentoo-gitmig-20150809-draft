@@ -1,6 +1,14 @@
 # ChangeLog for sys-apps/textutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/textutils/ChangeLog,v 1.4 2002/07/21 16:14:37 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/textutils/ChangeLog,v 1.5 2002/08/26 17:08:03 seemant Exp $
+
+*textutils-2.0.21 (26 Aug 2002)
+
+  26 Aug 2002; Seemant Kulleen <seemant@gentoo.org> textutils-2.0.21.ebuild
+  files/digest-textutils-2.0.21 :
+
+  rossm@nist.gov (Ross J. Micheals) in bug #6842 reports that od gives
+  incorrect output in the 2.0.19 version.  This release fixes that problem.
 
 *textutils-2.0.19-r1 (21 Jul 2002)
 
