@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/XML-XSH/XML-XSH-1.8.2.ebuild,v 1.2 2004/02/27 13:23:15 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/XML-XSH/XML-XSH-1.8.2.ebuild,v 1.3 2004/06/14 08:08:45 kloeri Exp $
 
 inherit perl-module
 
@@ -14,6 +14,7 @@ SLOT="0"
 
 
 KEYWORDS="x86"
+IUSE=""
 
 DEPEND=">=dev-perl/XML-LibXML-1.54
 	dev-perl/Parse-RecDescent
