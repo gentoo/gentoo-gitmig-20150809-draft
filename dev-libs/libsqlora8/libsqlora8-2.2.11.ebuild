@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsqlora8/libsqlora8-2.2.11.ebuild,v 1.3 2004/06/24 23:23:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libsqlora8/libsqlora8-2.2.11.ebuild,v 1.4 2004/06/25 19:30:37 agriffis Exp $
 
 IUSE="pthreads orathreads"
 
@@ -15,7 +15,7 @@ KEYWORDS="~x86"
 DEPEND=""
 
 pkg_setup() {
-	if [ `use orathreads` -a `use pthreads` ]; then
+	if use orathreads && use pthreads; then
 		eerror
 		eerror 'Enable the "pthreads" USE flag for POSIX threads,'
 		eerror '*or* the "orathreads" USE flag for Oracle threads'
