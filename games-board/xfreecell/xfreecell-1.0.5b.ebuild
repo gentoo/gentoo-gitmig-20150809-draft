@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/xfreecell/xfreecell-1.0.5b.ebuild,v 1.5 2004/12/15 19:03:30 corsair Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/xfreecell/xfreecell-1.0.5b.ebuild,v 1.6 2004/12/17 07:43:42 josejx Exp $
 
 inherit eutils games
 
@@ -12,7 +12,7 @@ SRC_URI="http://www2.giganet.net/~nakayama/${P}.tgz
 
 LICENSE="as-is"
 SLOT="0"
-KEYWORDS="x86 ~ppc64"
+KEYWORDS="x86 ~ppc64 ~ppc"
 IUSE=""
 
 DEPEND="virtual/x11"
