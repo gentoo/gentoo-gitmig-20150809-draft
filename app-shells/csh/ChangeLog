@@ -1,6 +1,9 @@
 # ChangeLog for app-shells/csh
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/ChangeLog,v 1.21 2004/06/28 22:03:55 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/csh/ChangeLog,v 1.22 2004/10/30 21:35:16 weeve Exp $
+
+  30 Oct 2004; Jason Wever <weeve@gentoo.org> csh-1.29-r3.ebuild:
+  Added ~sparc keyword.
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> csh-1.29-r2.ebuild,
   csh-1.29-r3.ebuild:
