@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4.ebuild,v 1.8 2003/04/02 14:04:42 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/dhcpcd-1.3.22_p4.ebuild,v 1.9 2003/04/16 00:54:10 gmsoft Exp $
 
 inherit gnuconfig
 
@@ -10,9 +10,11 @@ SRC_URI="ftp://ftp.phystech.com/pub/${P/_p/-pl}.tar.gz"
 HOMEPAGE="http://www.phystech.com/download/"
 DEPEND=""
 SLOT="0"
-KEYWORDS="x86 ~ppc sparc ~alpha ~hppa arm mips"
+KEYWORDS="x86 ~ppc sparc ~alpha hppa arm mips"
 LICENSE="GPL-2"
 IUSE="build"
+
+[ "${ARCH}" = "hppa" -o -z "${CBUILD}" ] && CBUILD="${CHOST}"
 
 src_unpack() {
 	unpack ${A} || die "unpack failed"
@@ -29,7 +31,6 @@ src_unpack() {
 }
 
 src_install () {
-	[ "${ARCH}" = "hppa" ] && CBUILD="${CHOST}"
 	einstall sbindir=${D}/sbin || die "Install failed"
 	if [ -z "`use build`" ]
 	then

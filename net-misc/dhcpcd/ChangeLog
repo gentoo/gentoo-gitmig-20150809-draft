@@ -1,21 +1,19 @@
 # ChangeLog for net-misc/dhcpcd
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.18 2003/04/02 14:04:42 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dhcpcd/ChangeLog,v 1.19 2003/04/16 00:54:10 gmsoft Exp $
 
   21 Feb 2003; Zach Welch <zwelch@gentoo.org> :
   Added arm to keywords.
 
 *dhcpcd-1.3.22_p4 (04 Jan 2003)
 
+  16 Apr 2003; Guy Martin <gmsoft@gentoo.org> dhcpcd-1.3.22_p4.ebuild :
+  Readded stuff to workaround the ./configure error.
+  Marked stable on hppa.
+
   02 Apr 2003; Christian Birchinger <joker@gentoo.org>
   dhcpcd-1.3.22_p4.ebuild:
   Added stable sparc keyword
-
-  26 Feb 2003; Guy Martin <gmsoft@gentoo.prg> dhcpcd-1.3.22_p4.ebuild :
-  Added CBUILD=$CHOST for hppa due to a ./configure error.
-
-  09 Feb 2003; Guy Martin <gmsoft@gentoo.org> dhcpcd-1.3.22_p4.ebuild :
-  Added hppa to keywords.
 
   24 Feb 2003; Nicholas Wourms <dragon@gentoo.org> dhcpcd-1.3.22_p4.ebuild :
   Added stable mips keyword to the ebuild.
@@ -25,7 +23,7 @@
 
 *dhcpcd-1.3.22_p3-r3 (04 Jan 2003)
 
-  26 Feb 2003; Guy Martin <gmsoft@gentoo.prg> dhcpcd-1.3.22_p4.ebuild :
+  26 Feb 2003; Guy Martin <gmsoft@gentoo.org> dhcpcd-1.3.22_p3-3.ebuild :
   Added CBUILD=$CHOST for hppa due to a ./configure error.
 
   09 Feb 2003; Guy Martin <gmsoft@gentoo.org> dhcpcd-1.3.22_p3-r3.ebuild :
