@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3ddc78bd0a2c19c0c71819414d54542b libgmail-0.0.8.ebuild 875
-MD5 c7d3cc99d6038bcaae3a55d872fa33f7 ChangeLog 517
+MD5 21f677242eccf8cb9a77918ff454906b ChangeLog 602
+MD5 f9b1487c7ebc48cc96d0f3453c168483 libgmail-0.0.8.ebuild 879
 MD5 8abcb326775f027b2e13f23344036e34 metadata.xml 224
 MD5 625ccc538832a272161e1ea1e68fb0b1 files/digest-libgmail-0.0.8 62
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBaFnJCHk4+ZoBpvsRAn/6AJ9Yvg0QdZDKYptQJMmPIcLGvoOBuwCdHzXo
-tuM7s6EszIzTK05iluFe6H4=
-=n59V
------END PGP SIGNATURE-----
