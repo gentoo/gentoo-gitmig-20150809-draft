@@ -1,0 +1,10 @@
+# ChangeLog for app-misc/dvorakng
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/dvorakng/ChangeLog,v 1.1 2003/08/27 21:03:00 pylon Exp $
+
+*dvorakng-0.6.0 (27 Aug 2003)
+
+  27 Aug 2003; Lars Weiler <pylon@gentoo.org> dvorakng-0.6.0.ebuild:
+  Initial import.
+  May this ebuild help everybody who wants to switch over to Dvorak.
+
