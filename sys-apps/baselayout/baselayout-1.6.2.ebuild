@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.2.ebuild,v 1.6 2001/09/03 06:53:27 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.6.2.ebuild,v 1.7 2001/09/14 00:40:19 drobbins Exp $
 
 SV=1.1.5
 S=${WORKDIR}/rc-scripts-${SV}
@@ -38,13 +38,16 @@ src_install()
 	#(because it conflicts with some makefiles)
 	local ROOT
 	ROOT="`cat ${T}/ROOT`"
-	if [ "$ROOT" = "/" ] && [ "`cat /proc/mounts | grep '/dev devfs'`" ]
+	#if we are bootstrapping, we want to merge to /dev.
+	if [ -z "`use build`" ]
 	then
-		#we're installing to our current system and have devfs enabled.  We'll need to
-		#make adjustments
-		altmerge=1
+		if [ "$ROOT" = "/" ] && [ "`cat /proc/mounts | grep '/dev devfs'`" ]
+		then
+			#we're installing to our current system and have devfs enabled.  We'll need to
+			#make adjustments
+			altmerge=1
+		fi
 	fi
-	
 	keepdir /sbin
 	exeinto /sbin
 	doexe ${T}/runscript
@@ -194,7 +197,7 @@ src_install()
 		[ -f $foo ] && doexe $foo
 	done
 	#not the greatest location for this file; should move it on cvs at some point
-	rm ${S}/etc/init.d/runscript.c
+	rm ${S}/init.d/runscript.c
 
 	#skip this if we are merging to ROOT
 	[ "$ROOT" = "/" ] && return
