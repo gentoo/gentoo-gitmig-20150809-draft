@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.55.ebuild,v 1.1 2003/01/30 00:11:03 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql/mysql-3.23.55.ebuild,v 1.2 2003/02/06 23:58:28 wwoods Exp $
 
 # bug #11681; get b0rked code when using -march=k6 with this package.
 inherit flag-o-matic
@@ -55,7 +55,9 @@ src_compile() {
 	local myconf
 	# The following fix is due to a bug with bdb on sparc's. See: 
 	# http://www.geocrawler.com/mail/msg.php3?msg_id=4754814&list=8
-	if use sparc || use sparc64
+	# same for alpha (see http://www.mysql.com/doc/en/BDB_portability.html)
+	# thanks to peter@icebear.net for noticing this.
+	if use sparc || use sparc64 || use alpha
 	then
 		myconf="${myconf} --without-berkeley-db"
 	else
