@@ -1,22 +1,20 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/taglib-1.0_beta2.ebuild,v 1.12 2004/02/16 02:01:44 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/taglib/taglib-1.1.ebuild,v 1.1 2004/05/17 22:43:37 caleb Exp $
 
 inherit flag-o-matic
 
-MY_PV=0.96
 DESCRIPTION="A library for reading and editing audio meta data"
-HOMEPAGE="http://ktown.kde.org/~wheeler/taglib/"
-SRC_URI="http://ktown.kde.org/~wheeler/taglib/${PN}-${MY_PV}.tar.gz"
+HOMEPAGE="http://developer.kde.org/~wheeler/index.html"
+SRC_URI="http://developer.kde.org/~wheeler/files/src/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc sparc hppa ~amd64"
+KEYWORDS="~x86 ~ppc ~sparc ~hppa ~amd64 ~alpha ~ia64"
+IUSE="debug"
 
 DEPEND=">=sys-devel/autoconf-2.58"
 RDEPEND=""
-
-S=${WORKDIR}/${PN}-${MY_PV}
 
 src_unpack() {
 	unpack ${A}
@@ -29,7 +27,7 @@ src_unpack() {
 
 src_compile() {
 	replace-flags -O3 -O2
-	econf || die
+	econf `use_enable debug` || die
 	emake || die
 }
 
