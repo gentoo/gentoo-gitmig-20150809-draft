@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/wwwoffle-2.8b.ebuild,v 1.7 2004/07/01 22:51:35 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/wwwoffle/wwwoffle-2.8b.ebuild,v 1.8 2004/07/27 13:20:04 dragonheart Exp $
 
 inherit eutils
 
@@ -61,6 +61,10 @@ src_compile() {
 
 pkg_preinst() {
 
+	# Add a wwwoffle user - duplicated for binary packages
+	enewgroup wwwoffle
+	enewuser wwwoffle -1 /bin/false /var/spool/wwwoffle wwwoffle
+
 	# TODO rootjail ${ROOT}
 	source /etc/init.d/functions.sh
 	if [ -L ${svcdir}/started/wwwoffled ]; then
@@ -83,7 +87,7 @@ src_install() {
 	newexe  ${FILESDIR}/wwwoffled-online-${PV} wwwoffled-online
 
 	# keep spool
-	keepdir /var/spool/wwwoffle/{http,outgoing,monitor,lasttime,prevtime1,lastout,local}
+	keepdir /var/spool/wwwoffle/{http,outgoing,monitor,lasttime,prevtime[1-9],prevout[1-9],lastout,local}
 
 	fowners root:wwwoffle /var/spool/wwwoffle
 	# empty dirs are removed during update
@@ -94,7 +98,7 @@ src_install() {
 	rmdir ${D}/usr/share/doc/${P}/{it,nl,ru}
 
 	chown -R wwwoffle:wwwoffle \
-	${D}/var/spool/wwwoffle/{http,outgoing,monitor,lasttime,prevtime[1-9],prevout[1-9]lastout,local} \
+	${D}/var/spool/wwwoffle/{http,outgoing,monitor,lasttime,prevtime[1-9],prevout[1-9],lastout,local} \
 	${D}/var/spool/wwwoffle/search/{mnogosearch/db,htdig/tmp,htdig/db-lasttime,htdig/db,namazu/db}
 
 	dodir /etc/conf.d
