@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/streamtuner-0.12.1.ebuild,v 1.1 2004/04/09 04:40:41 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/streamtuner/streamtuner-0.12.1.ebuild,v 1.2 2004/04/09 14:13:58 dholm Exp $
 
 inherit gnome2
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.nongnu.org/streamtuner/"
 
 IUSE=""
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 LICENSE="BSD"
 
 RDEPEND=">=x11-libs/gtk+-2.2.2
