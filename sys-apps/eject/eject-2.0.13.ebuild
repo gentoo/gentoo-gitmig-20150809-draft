@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/eject-2.0.13.ebuild,v 1.2 2003/12/17 03:52:05 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/eject-2.0.13.ebuild,v 1.3 2004/02/19 19:51:46 azarah Exp $
 
 inherit eutils
 
@@ -23,6 +23,10 @@ src_unpack() {
 	# Get this puppy working with kernel 2.5.x
 	# <azarah@gentoo.org> (06 March 2003)
 	epatch ${FILESDIR}/${P}-kernel25-support.patch || die
+
+	# Fix stupid includes (bug #41856)
+	sed -i -e 's|-I/usr/src/linux -I/usr/src/linux|-I/usr/include|' \
+		${S}/Makefile.in
 }
 
 src_install() {

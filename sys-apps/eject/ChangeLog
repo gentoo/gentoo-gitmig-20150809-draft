@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/eject
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/ChangeLog,v 1.16 2003/12/05 17:08:19 plasmaroo Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/eject/ChangeLog,v 1.17 2004/02/19 19:51:46 azarah Exp $
+
+  19 Feb 2004; Martin Schlemmer <azarah@gentoo.org> eject-2.0.13.ebuild:
+  Fix silly includes based on a patch by Ronald Hummelink
+  <gentoo-bugzilla@hummelink.xs4all.nl>, bug #41856.
 
   05 Dec 2003; <plasmaroo@gentoo.org>
   files/eject-2.0.12-kernel25-support.patch,
