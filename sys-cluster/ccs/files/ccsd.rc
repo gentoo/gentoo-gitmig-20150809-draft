@@ -1,7 +1,7 @@
 #!/sbin/runscript
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ccs/files/ccsd.rc,v 1.1 2005/03/19 21:00:48 xmerlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/ccs/files/ccsd.rc,v 1.2 2005/03/19 21:01:56 xmerlin Exp $
 
 depend() {
 	use net
@@ -16,6 +16,7 @@ start() {
 	ebegin "Starting ccsd"
 	start-stop-daemon --start --quiet \
 		--exec ${exefile} -- ${CCSD_OPTS}
+	sleep 1s
 	eend $?
 }
 
