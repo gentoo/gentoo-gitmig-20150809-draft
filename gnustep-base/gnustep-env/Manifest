@@ -1,9 +1,13 @@
-MD5 eac7a61f7db93be91f884d5fdec60a17 ChangeLog 3231
-MD5 f61990fa6c6fb4772239840f832cac4b gnustep-env-0.1.4.ebuild 1198
-MD5 c603ed4d589dc2091e618436e4de9c78 metadata.xml 371
-MD5 d4fc2bb8242101f6876d7271cd9aaf8b gnustep-env-0.1.6.ebuild 1519
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 3ed2f4259c7deac6c9912c9b083ba5be ChangeLog 3334
+MD5 583e2f025312917b8c0ec1bb60d2c983 gnustep-env-0.1.4.ebuild 1202
 MD5 4c2ee22f9b4999544c7a742dc8abe7d9 gnustep-env-0.1.5.ebuild 1568
+MD5 d4fc2bb8242101f6876d7271cd9aaf8b gnustep-env-0.1.6.ebuild 1519
+MD5 c603ed4d589dc2091e618436e4de9c78 metadata.xml 371
 MD5 766b0cb8343bea6f212694c1fd261335 files/10gnustep 36
+MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnustep-env-0.1.6 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnustep-env-0.1.4 0
 MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnustep-env-0.1.5 0
 MD5 1588a64b28bc5eb05d1c93571ad340b1 files/gnustep.env-0.1.4 586
@@ -12,4 +16,10 @@ MD5 f814aedb43348b181f1ee9c044efa12c files/gnustep.runscript-0.1.4 1052
 MD5 8a7d7c75991671d8b36f9f229404edf7 files/gnustep.runscript-0.1.5 944
 MD5 9b9d12281e414534a0e1fbd04cb3e2d1 files/gnustep.env-0.1.6 682
 MD5 fc067eeb87dd2dbfc9cf4f2c4e1df860 files/gnustep.runscript-0.1.6 1006
-MD5 d41d8cd98f00b204e9800998ecf8427e files/digest-gnustep-env-0.1.6 0
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCUajoKRy60XGEcJIRAnHXAJ4ieUDOCG5EQvVoQlErMI9/MhWeWwCeK/ve
+yV/1nNGXIkK4tJmXeyWRUSA=
+=MSdx
+-----END PGP SIGNATURE-----

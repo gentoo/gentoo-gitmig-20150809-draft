@@ -1,4 +1,14 @@
-MD5 b5dab8799d79a56ba84a4d177ea49540 mknfonts-0.5.ebuild 680
-MD5 4842cc6ee3b64b8e76ff1cdb3693b695 ChangeLog 1451
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 8d39aaa046ddba50769232abe809ad51 ChangeLog 1547
 MD5 459d449951c0cddb6f8c892a247ef78f metadata.xml 293
+MD5 fd9aa6266e82f39641cca29d82b0008f mknfonts-0.5.ebuild 682
 MD5 0d9da4daa8baa4f7d051077a6da4f2c3 files/digest-mknfonts-0.5 62
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+
+iD8DBQFCUagPKRy60XGEcJIRArxKAJ9hz9ZyERRxJsdB6AZZ+1KoUIFukACfUJyU
+JXa2qssJ/TgSU2i0r0bTGy8=
+=pVXn
+-----END PGP SIGNATURE-----
