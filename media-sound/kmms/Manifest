@@ -1,6 +1,0 @@
-MD5 84390d2e54a26a707358b7d198adcd9c kmms-0.8_beta1.ebuild 726
-MD5 8f0257e1ab6249c47bbc727bbb334938 ChangeLog 1366
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 b3a795ead9dbacebe0c04faf56d31908 files/kmms-0.8_beta1-gentoo.diff 4857
-MD5 e60145d939de22b07aeb00823df94a0b files/digest-kmms-0.8_beta1 65
-MD5 293904b21bd2d1b0208218ab7801e765 files/kmms-0.8_beta1-fix-memory-leak.diff 756
