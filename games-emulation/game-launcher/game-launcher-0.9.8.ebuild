@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/game-launcher/game-launcher-0.9.8.ebuild,v 1.3 2004/02/20 06:26:47 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/game-launcher/game-launcher-0.9.8.ebuild,v 1.4 2004/06/07 05:30:16 mr_bones_ Exp $
 
 inherit games eutils
 
@@ -9,8 +9,9 @@ HOMEPAGE="http://www.dribin.org/dave/game_launcher/"
 SRC_URI="mirror://sourceforge/glaunch/gl${PV//./}s.zip"
 
 LICENSE="GPL-2"
-KEYWORDS="x86"
 SLOT="0"
+KEYWORDS="x86"
+IUSE=""
 
 RDEPEND=">=media-libs/allegro-4.0.0
 	>=media-libs/loadpng-0.11
@@ -22,14 +23,14 @@ RDEPEND=">=media-libs/allegro-4.0.0
 DEPEND="${RDEPEND}
 	app-arch/unzip"
 
-S=${WORKDIR}/glaunch
+S="${WORKDIR}/glaunch"
 
 src_unpack() {
 	unpack ${A}
 	cd ${S}
 
 	edos2unix `find -regex '.*\.[ch]' -or -name '*.cc'`
-	epatch ${FILESDIR}/${PV}-gentoo.patch
+	epatch "${FILESDIR}/${PV}-gentoo.patch"
 	find . -name ".cvsignore" -exec rm -f \{\} \;
 }
 
@@ -38,7 +39,7 @@ src_compile() {
 }
 
 src_install() {
-	dodir /opt/${P}
-	cp -R ${S}/* ${D}/opt/${P}  # doinst can't do recursive
+	dodir "/opt/${P}"
+	cp -R ${S}/* "${D}/opt/${P}"  # doinst can't do recursive
 	prepgamesdirs
 }
