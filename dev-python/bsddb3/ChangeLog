@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/bsddb3
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.13 2004/06/26 21:22:04 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bsddb3/ChangeLog,v 1.14 2004/09/26 12:05:16 liquidx Exp $
+
+  26 Sep 2004; Alastair Tse <liquidx@gentoo.org>
+  +files/bsddb3-4.1.3-setup.py.patch, bsddb3-4.1.3.ebuild,
+  bsddb3-4.2.4.ebuild:
+  fix problems with 4.2 incompatibility with bsddb3-4.1.3 (#62017)
 
   26 Jun 2004; Alastair Tse <liquidx@gentoo.org> bsddb3-4.1.3.ebuild:
   fix bsddb3 to use the stable db4.1 (#51951)
