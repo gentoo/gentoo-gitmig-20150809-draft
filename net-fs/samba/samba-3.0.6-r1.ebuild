@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.6-r1.ebuild,v 1.1 2004/08/21 11:04:48 mglauche Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/samba/samba-3.0.6-r1.ebuild,v 1.2 2004/08/22 01:45:47 eradicator Exp $
 
 inherit eutils flag-o-matic
 
@@ -201,7 +201,7 @@ src_compile() {
 	# Attention: usage of dev-perl/Crypt-SmbHash for smbldap-tool > 0.8.5
 	if use ldap; then
 		cd ${WORKDIR}/smbldap-tools-${SMBLDAP_TOOLS_VER}
-		if [ -f mkntpwd.tar.gz]; then
+		if [ -f mkntpwd.tar.gz ]; then
 			tar --no-same-owner -zxf mkntpwd.tar.gz
 			cd mkntpwd
 			VISUAL="" make || die "mkntpwd compile problem"
