@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/struts-1.1.ebuild,v 1.1 2004/03/18 05:03:12 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/struts/struts-1.1.ebuild,v 1.2 2004/03/28 04:24:12 zx Exp $
 
 inherit java-pkg
 
@@ -8,7 +8,7 @@ DESCRIPTION="A powerful Model View Controller Framework for JSP/Servlets"
 SRC_URI="mirror://apache/jakarta/struts/source/jakarta-${PN}-${PV}-src.tar.gz"
 HOMEPAGE="http://jakarta.apache.org/struts/index.html"
 LICENSE="Apache-1.1"
-
+SLOT="0"
 DEPEND=">=virtual/jdk-1.4
 		>=dev-java/ant-1.5.4
 		>=dev-java/commons-beanutils-1.6.1
@@ -32,7 +32,7 @@ src_compile() {
 	local antflags="compile.library"
 	use doc && antflags="${antflags} compile.javadoc"
 	use jikes && antflags="${antflags} -Dbuild.compiler=jikes"
-	
+
 	antflags="${antflags} -Dcommons-beanutils.jar=`java-config -p commons-beanutils`"
 	antflags="${antflags} -Dcommons-collections.jar=`java-config -p commons-collections`"
 	antflags="${antflags} -Dstruts-legacy.jar=`java-config -p struts-legacy`"
@@ -43,7 +43,7 @@ src_compile() {
 	antflags="${antflags} -Dcommons-lang.jar=`java-config -p commons-lang`"
 	antflags="${antflags} -Dcommons-logging.jar=`java-config -p commons-logging | sed 's/.*://'`"
 	antflags="${antflags} -Dcommons-validator.jar=`java-config -p commons-validator`"
-	
+
 	ant ${antflags} || die "compile failed"
 }
 
