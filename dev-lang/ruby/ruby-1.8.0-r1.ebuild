@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.0-r1.ebuild,v 1.1 2003/10/11 20:32:39 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ruby/ruby-1.8.0-r1.ebuild,v 1.2 2003/10/31 17:14:32 usata Exp $
 
 inherit flag-o-matic alternatives eutils gnuconfig
 filter-flags -fomit-frame-pointer
@@ -30,6 +30,18 @@ pkg_setup() {
 	ewarn "<dev-lang/ruby-1.8.0-r1 (ruby-1.8 branch) please unmerge them first."
 	ewarn "SLOT supports >=ruby-1.6.8-r2 and >=ruby-1.8.0-r1 only."
 	ewarn
+
+	echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
+	echo -ne "\a" ; sleep 1
+	echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
+	echo -ne "\a" ; sleep 1
+	echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
+	echo -ne "\a" ; sleep 1
+	echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
+	echo -ne "\a" ; sleep 1
+	echo -ne "\a" ; sleep 0.1 &>/dev/null ; sleep 0,1 &>/dev/null
+	echo -ne "\a" ; sleep 1
+	sleep 8
 }
 
 src_unpack() {
