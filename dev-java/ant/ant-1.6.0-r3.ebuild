@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.6.0-r3.ebuild,v 1.8 2004/06/24 22:16:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ant-1.6.0-r3.ebuild,v 1.9 2004/07/02 04:18:20 eradicator Exp $
 
 inherit java-pkg eutils
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE="doc"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=virtual/jdk-1.4
 	>=dev-java/java-config-1.2
 	!<dev-java/${PF}"

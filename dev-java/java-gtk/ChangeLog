@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/java-gtk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gtk/ChangeLog,v 1.9 2004/06/24 22:31:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gtk/ChangeLog,v 1.10 2004/07/02 04:21:30 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  java-gtk-0.8.3.ebuild:
+  virtual/glibc -> virtual/libc
 
   18 Mar 2004; Chris Aniszczyk <zx@gentoo.org> java-gtk-0.7.1.ebuild,
   java-gtk-0.8.3.ebuild:

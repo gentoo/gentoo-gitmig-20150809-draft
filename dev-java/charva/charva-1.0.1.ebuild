@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/charva/charva-1.0.1.ebuild,v 1.4 2004/06/27 17:00:53 zx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/charva/charva-1.0.1.ebuild,v 1.5 2004/07/02 04:19:10 eradicator Exp $
 
 inherit java-pkg
 
@@ -8,7 +8,7 @@ DESCRIPTION="A Java Windowing Toolkit for Text Terminals"
 SRC_URI="http://www.pitman.co.za/projects/charva/download/${P}.tar.gz"
 HOMEPAGE="http://www.pitman.co.za/projects/charva/"
 IUSE="doc"
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 		>=virtual/jdk-1.3
 		sys-libs/ncurses"
 RDEPEND=">=virtual/jdk-1.3"

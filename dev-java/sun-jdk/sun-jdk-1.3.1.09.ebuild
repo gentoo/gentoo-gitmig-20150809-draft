@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.09.ebuild,v 1.10 2004/06/24 22:44:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-jdk/sun-jdk-1.3.1.09.ebuild,v 1.11 2004/07/02 04:23:56 eradicator Exp $
 
 IUSE="doc"
 
@@ -11,7 +11,7 @@ S="${WORKDIR}/jdk1.3.1_09"
 SRC_URI="${At}"
 DESCRIPTION="Sun Java Development Kit 1.3.1_09"
 HOMEPAGE="http://java.sun.com/products/archive/j2se/1.3.1_09/index.html"
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=dev-java/java-config-0.2.7
 	doc? ( =dev-java/java-sdk-docs-1.3.1* )"
 RDEPEND="sys-libs/lib-compat"

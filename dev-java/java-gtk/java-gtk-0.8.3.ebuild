@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gtk/java-gtk-0.8.3.ebuild,v 1.4 2004/06/24 22:31:30 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gtk/java-gtk-0.8.3.ebuild,v 1.5 2004/07/02 04:21:30 eradicator Exp $
 
 inherit java-pkg
 
 DESCRIPTION="GTK+ bindings for Java"
 SRC_URI="mirror://sourceforge/java-gnome/libgtk-java-${PV}.tar.bz2"
 HOMEPAGE="http://java-gnome.sourceforge.net/"
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 		virtual/jdk
 		>=x11-libs/gtk+-2.2*
 		>=app-text/docbook-sgml-utils-0.6.12

@@ -1,6 +1,11 @@
 # ChangeLog for dev-java/ant
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.64 2004/06/24 22:16:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ant/ChangeLog,v 1.65 2004/07/02 04:18:20 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> ant-1.5.3-r5.ebuild,
+  ant-1.5.4-r1.ebuild, ant-1.6.0-r2.ebuild, ant-1.6.0-r3.ebuild,
+  ant-1.6.1-r1.ebuild, ant-1.6.1.ebuild:
+  virtual/glibc -> virtual/libc
 
   12 Jun 2004; Karl Trygve Kalleberg <karltk@gentoo.org> ant-1.6.1.ebuild,
   ant-1.6.1-r1.ebuild: Added some extra symlinks. Fixes #49128.

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.06.ebuild,v 1.6 2004/06/24 22:26:58 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/gnu-classpath/gnu-classpath-0.06.ebuild,v 1.7 2004/07/02 04:20:09 eradicator Exp $
 
 DESCRIPTION="Free core class libraries for use with virtual machines and compilers for the java programming language"
 SRC_URI="ftp://alpha.gnu.org/gnu/classpath/${P/gnu-}.tar.gz"
@@ -8,7 +8,7 @@ HOMEPAGE="http://www.gnu.org/software/classpath/"
 IUSE="doc"
 DEPEND=">=virtual/jdk-1.4
 		media-libs/gdk-pixbuf
-		virtual/glibc
+		virtual/libc
 		>=x11-libs/gtk+-2
 		>=media-libs/libart_lgpl-2.1
 		jikes? ( dev-java/jikes )"

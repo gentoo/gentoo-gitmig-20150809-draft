@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.1.ebuild,v 1.10 2004/06/24 22:28:48 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/ibm-jre-bin/ibm-jre-bin-1.4.1.ebuild,v 1.11 2004/07/02 04:20:47 eradicator Exp $
 
 inherit java nsplugins
 
@@ -14,7 +14,7 @@ IUSE="doc"
 SLOT="1.4"
 LICENSE="IBM-J1.4"
 KEYWORDS="ppc ~x86"
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=dev-java/java-config-0.2.5"
 RDEPEND="${DEPEND}"
 

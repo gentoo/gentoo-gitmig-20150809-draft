@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-2.6.0.1.ebuild,v 1.3 2004/06/24 22:31:19 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/java-gnome-2.6.0.1.ebuild,v 1.4 2004/07/02 04:21:18 eradicator Exp $
 
 inherit eutils
 
 DESCRIPTION="Java bindings for GNOME and GTK libraries that allow GNOME and GTK applications to be written in Java"
 SRC_URI="mirror://sourceforge/java-gnome/${P}.tar.bz2"
 HOMEPAGE="http://java-gnome.sourceforge.net/"
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 		>=gnome-base/libgnome-2.6.0
 		>=gnome-base/libgnomeui-2.6.0
 		>=gnome-base/libgnomecanvas-2.6.0

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/compaq-jre/compaq-jre-1.3.1-r3.ebuild,v 1.3 2004/06/24 22:24:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/compaq-jre/compaq-jre-1.3.1-r3.ebuild,v 1.4 2004/07/02 04:19:55 eradicator Exp $
 
 IUSE="doc"
 
@@ -10,7 +10,7 @@ S=${WORKDIR}/jre${PV}
 SRC_URI="ftp://ftp.compaq.com/pub/products/linuxdevtools/latest/jre-${PV}-1-linux-alpha.rpm"
 HOMEPAGE="ftp://ftp.compaq.com/pub/products/linuxdevtools/latest/"
 DESCRIPTION="Compaq Java Development Kit ${PV} for Alpha/Linux/GNU"
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	app-arch/rpm2targz
 	dev-libs/libots
 	dev-libs/libcpml

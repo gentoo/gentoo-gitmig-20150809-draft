@@ -1,6 +1,10 @@
 # ChangeLog for dev-java/sun-j2ee
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2ee/ChangeLog,v 1.14 2004/06/24 22:43:21 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sun-j2ee/ChangeLog,v 1.15 2004/07/02 04:23:12 eradicator Exp $
+
+  01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  sun-j2ee-1.3.1-r2.ebuild:
+  virtual/glibc -> virtual/libc
 
   20 Jun 2004; Karl Trygve Kalleberg <karltk@gentoo.org>
   sun-j2ee-1.3.1-r2.ebuild, sun-j2ee-1.3.1-r1.ebuild: Removed -r1, and updated

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/commons-daemon-1.0.ebuild,v 1.3 2004/06/24 22:20:46 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/commons-daemon/commons-daemon-1.0.ebuild,v 1.4 2004/07/02 04:19:28 eradicator Exp $
 
 inherit java-pkg
 
@@ -11,7 +11,7 @@ LICENSE="Apache-1.1"
 SLOT="0"
 DEPEND=">=virtual/jdk-1.4
 		>=dev-java/ant-1.4
-		virtual/glibc"
+		virtual/libc"
 KEYWORDS="x86"
 IUSE="jikes doc"
 

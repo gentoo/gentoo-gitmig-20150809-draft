@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r9.ebuild,v 1.15 2004/06/29 17:54:09 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jre/blackdown-jre-1.3.1-r9.ebuild,v 1.16 2004/07/02 04:18:53 eradicator Exp $
 
 inherit java nsplugins gcc
 
@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="ppc"
 IUSE=""
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=dev-java/java-config-0.2.5
 	>=sys-apps/sed-4
 	>=sys-devel/gcc-3.2"

@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/kissme/kissme-0.0.32.ebuild,v 1.3 2004/06/24 22:37:49 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/kissme/kissme-0.0.32.ebuild,v 1.4 2004/07/02 04:22:41 eradicator Exp $
 
 DESCRIPTION="Tiny, JITless JVM"
 SRC_URI="mirror://sourceforge/kissme/${P}.tar.gz"
 HOMEPAGE="http://kissme.sourceforge.net/"
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 		virtual/x11
 		>=dev-libs/gmp-3.1.1
 		>=dev-java/jikes-1.19

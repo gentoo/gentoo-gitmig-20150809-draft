@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1.ebuild,v 1.17 2004/06/24 22:18:36 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/blackdown-jdk/blackdown-jdk-1.4.1.ebuild,v 1.18 2004/07/02 04:18:37 eradicator Exp $
 
 
 inherit java nsplugins
@@ -27,7 +27,7 @@ SLOT="1.4.1"
 KEYWORDS="x86 -ppc sparc amd64"
 IUSE="doc"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=dev-java/java-config-0.2.6
 	doc? ( =dev-java/java-sdk-docs-1.4.1* )
 	amd64? ( >=app-emulation/emul-linux-x86-baselibs-1.0 )"
