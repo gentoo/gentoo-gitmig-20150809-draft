@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/pciutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.13 2003/08/04 21:45:24 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/pciutils/ChangeLog,v 1.14 2003/09/05 20:21:08 mholzer Exp $
+
+  05 Sep 2003; Martin Holzer <mholzer@gentoo.org> pciutils-2.1.11.ebuild:
+  Marked x86 stable.
 
 *pciutils-2.1.11 (05 Aug 2003)
 
