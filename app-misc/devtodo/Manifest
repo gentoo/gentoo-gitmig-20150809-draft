@@ -2,24 +2,24 @@
 Hash: SHA1
 
 MD5 26f617dc1d0fe0d93ca6c5454807b01a devtodo-0.1.17-r1.ebuild 1413
-MD5 4d34cf98ed9d10c42ffb69db90b2191d ChangeLog 3764
-MD5 036d2ebb5c2d914c0805fa8f692fbbc2 devtodo-0.1.18.ebuild 1605
-MD5 b98044c2f037b2bef3988ee7fc5fc3d0 devtodo-0.1.17-r2.ebuild 1531
+MD5 27f76d41ee0d3149d8578c31c1f9ed26 devtodo-0.1.18.ebuild 1445
 MD5 708bc8d1cf20e92b71d189b71d12b641 devtodo-0.1.17.ebuild 939
+MD5 b98044c2f037b2bef3988ee7fc5fc3d0 devtodo-0.1.17-r2.ebuild 1531
+MD5 8d13e86d749e959f421a5991c4e69c31 ChangeLog 3891
 MD5 99ce5509db4b50f28a1f6675f8c09b2b metadata.xml 258
 MD5 cb4cff0cd869696d1207553de89551c1 files/digest-devtodo-0.1.17 66
-MD5 48d3c0943acaae812475061a16fe6eb9 files/devtodo.patch 2359
-MD5 68c51e9b769e87f037a34aa64bbc911f files/devtodo-fix-cd-builtin.patch 303
-MD5 cb4cff0cd869696d1207553de89551c1 files/digest-devtodo-0.1.17-r1 66
-MD5 2f6f41259976609db78b40c59b9131f0 files/devtodo.bash-completion 3070
-MD5 3d389c27b4ba6ade4412c088cefe6f46 files/devtodo-1.1.17-notdl.patch 1985
 MD5 e254b7fe4623f6fb5dfb4c9169e75ef7 files/digest-devtodo-0.1.18 66
+MD5 cb4cff0cd869696d1207553de89551c1 files/digest-devtodo-0.1.17-r1 66
 MD5 cb4cff0cd869696d1207553de89551c1 files/digest-devtodo-0.1.17-r2 66
 MD5 404d78d738ead3b99865b3f9cb33177d files/devtodo-fix-TERM-sigabrt.patch 758
+MD5 68c51e9b769e87f037a34aa64bbc911f files/devtodo-fix-cd-builtin.patch 303
+MD5 2f6f41259976609db78b40c59b9131f0 files/devtodo.bash-completion 3070
+MD5 48d3c0943acaae812475061a16fe6eb9 files/devtodo.patch 2359
+MD5 3d389c27b4ba6ade4412c088cefe6f46 files/devtodo-1.1.17-notdl.patch 1985
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBhPjVLLFUmVNQ7rkRAn1YAJ9+kuCkM/SQFiDkyeW8Nnf09WRGRgCffr0e
-PnqcTmi37ethcKe3EdD6/Mo=
-=VgQb
+iD8DBQFBjY1jEZCkKN40op4RAu/MAJ9uVnLHuT4vchXvzYpfz6vClh3qIQCgxPCn
+IXpr7PpuFmD5LVZY3ihqQUA=
+=U2Of
 -----END PGP SIGNATURE-----

@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/devtodo
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.26 2004/10/31 14:39:10 ciaranm Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/ChangeLog,v 1.27 2004/11/07 02:49:54 ka0ttic Exp $
+
+  06 Nov 2004; Aaron Walker <ka0ttic@gentoo.org> devtodo-0.1.18.ebuild:
+  Use pkg_postinst provided by bash-completion.eclass
 
   31 Oct 2004; Ciaran McCreesh <ciaranm@gentoo.org>
   devtodo-0.1.17-r2.ebuild:

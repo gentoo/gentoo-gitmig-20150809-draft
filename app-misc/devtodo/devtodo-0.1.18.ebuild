@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/devtodo-0.1.18.ebuild,v 1.2 2004/10/31 12:39:47 ka0ttic Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/devtodo/devtodo-0.1.18.ebuild,v 1.3 2004/11/07 02:49:54 ka0ttic Exp $
 
 inherit eutils gnuconfig bash-completion
 
@@ -48,9 +48,5 @@ pkg_postinst() {
 	einfo "remove the symbolic links:"
 	einfo "  /usr/bin/tdl -> /usr/bin/devtodo"
 	einfo "  /usr/share/man/man1/tdl.1.gz -> /usr/share/man/man1/devtodo.1.gz"
-	echo
-	einfo "To enable command-line completion for devtodo, issue the following"
-	einfo "command as root:"
-	einfo "  ln -s /usr/share/bash-completion/devtodo /etc/bash_completion.d/"
-	echo
+	bash-completion_pkg_postinst
 }
