@@ -1,13 +1,23 @@
 # ChangeLog for app-editors/vim
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.1 2002/02/01 21:53:01 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/vim/ChangeLog,v 1.2 2002/02/20 03:06:53 agriffis Exp $
+
+*vim-6.0-r5 (19 Feb 2002)
+
+	19 Feb 2002; Aron Griffis <agriffis@gentoo.org>
+
+	Resolved bug 583: "patch to vim-6.0-r4 to install a vimrc in
+	/usr/share/vim instead of /etc/skel/.vimrc".  Additionally install
+	a default, reasonable gvimrc.  Updated vim to 6.0.223 with all
+	available patches.
 
 *vim-6.0-r4 (1 Feb 2002)
 
-  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
-  Added initial ChangeLog which should be updated whenever the package is
-  updated in any way. This changelog is targetted to users. This means that the
-  comments should well explained and written in clean English. The details about
-  writing correct changelogs are explained in the skel.ChangeLog file which you
-  can find in the root directory of the portage repository.
+	1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+
+	Added initial ChangeLog which should be updated whenever the package is
+	updated in any way. This changelog is targetted to users. This means that
+	the comments should well explained and written in clean English. The
+	details about writing correct changelogs are explained in the
+	skel.ChangeLog file which you can find in the root directory of the
+	portage repository.
