@@ -1,6 +1,10 @@
 # ChangeLog for net-www/horde-chora
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/horde-chora/ChangeLog,v 1.4 2002/12/17 19:46:16 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/horde-chora/ChangeLog,v 1.5 2003/02/03 22:32:09 alron Exp $
+
+*horde-chora-1.2 (03 Feb 2003)
+  03 Feb 2003; Dean Bailey <alron@gentoo.org> horde-chora-1.2 :
+  Updated to version 1.2 of horde-chora.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
