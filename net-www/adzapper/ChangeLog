@@ -1,6 +1,13 @@
 # ChangeLog for net-www/adzapper
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/adzapper/ChangeLog,v 1.9 2003/12/24 20:28:05 mholzer Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/adzapper/ChangeLog,v 1.10 2004/01/19 21:17:14 blkdeath Exp $
+
+*adzapper-20040104 (19 Jan 2004)
+
+  19 Jan 2004; Stewart Honsberger <blkdeath@gentoo.org>
+  adzapper-20030111.ebuild, adzapper-20031105.ebuild,
+  adzapper-20040104.ebuild:
+  Version bump, removed oldest ebuild.
 
 *adzapper-20031105 (24 Dec 2003)
 
