@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-1.2.6.ebuild,v 1.3 2004/05/30 02:05:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/epic4/epic4-1.2.6.ebuild,v 1.4 2004/06/24 23:04:07 agriffis Exp $
 
 inherit flag-o-matic eutils
 

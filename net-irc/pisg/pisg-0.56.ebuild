@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/pisg-0.56.ebuild,v 1.1 2004/06/19 01:41:42 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/pisg/pisg-0.56.ebuild,v 1.2 2004/06/24 23:08:23 agriffis Exp $
 
 inherit eutils
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.6-r6.ebuild,v 1.2 2004/04/27 22:11:45 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssi/irssi-0.8.6-r6.ebuild,v 1.3 2004/06/24 23:05:44 agriffis Exp $
 
 IUSE="nls ipv6 perl ssl"
 

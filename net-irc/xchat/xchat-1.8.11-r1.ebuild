@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.11-r1.ebuild,v 1.5 2004/06/20 05:17:55 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/xchat/xchat-1.8.11-r1.ebuild,v 1.6 2004/06/24 23:10:12 agriffis Exp $
 
 inherit eutils
 

@@ -1,6 +1,6 @@
 # ChangeLog for net-irc/irssistats
-# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/irssistats/ChangeLog,v 1.4 2004/06/20 03:50:16 swegener Exp $
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/irssistats/ChangeLog,v 1.5 2004/06/24 23:06:37 agriffis Exp $
 
 *irssistats-0.62 (20 Jun 2004)
 
