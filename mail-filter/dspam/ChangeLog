@@ -1,0 +1,15 @@
+# ChangeLog for mail-filter/dspam
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/mail-filter/dspam/ChangeLog,v 1.1 2004/06/26 16:45:28 st_lim Exp $
+
+*dspam-3.0.0 (27 Jun 2004)
+
+  27 Jun 2004; Lim Swee Tat <st_lim@gentoo.org> +files/README.postfix,
+  +files/README.qmail, +files/crontab.db4, +files/crontab.mysql,
+  +files/logrotate.dspam, +files/mysql.data, +files/mysql_create_user.sql,
+  +files/mysql_install_db, +files/mysql_purge_db, +files/trusted.users,
+  +files/untrusted.mailer_args, +files/upgrade.sql, +dspam-3.0.0.ebuild:
+  Initial commit.  Most of the ebuild was thanks to work done by Mark Renouf
+  <mark@tweakt.net> on bug #26744.  I just tried harder to be anal about it. :)
+  Closing bug.
+
