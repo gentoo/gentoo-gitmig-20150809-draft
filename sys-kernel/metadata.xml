@@ -9,5 +9,9 @@
 		La categoría sys-kernel contiene las fuentes del núcleo y herramientas
 		relacionadas con este.
 	</longdescription>
+	<longdescription lang="de">
+		Die Kategorie sys-kernel enthält Ebuilds für Kernelquellen
+		sowie damit in Zusammenhang stehende Pakete.
+	</longdescription>
 </catmetadata>
 
