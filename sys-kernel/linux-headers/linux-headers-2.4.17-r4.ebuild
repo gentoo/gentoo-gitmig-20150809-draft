@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.17-r4.ebuild,v 1.13 2003/09/07 07:26:01 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.17-r4.ebuild,v 1.14 2003/09/29 18:30:55 mholzer Exp $
 #OKV=original kernel version, KV=patched kernel version. They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -42,7 +42,7 @@ KEYWORDS="x86 -ppc"
 # The linuxdiskcert site says "no" but the patch author says "yes"
 
 DESCRIPTION="Full sources for the Gentoo Linux kernel"
-SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2 http://www.ibiblio.org/gentoo/distfiles/linux-gentoo-${KV}.patch.bz2"
+SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2 mirror://gentoo/linux-gentoo-${KV}.patch.bz2"
 PROVIDE="virtual/kernel virtual/os-headers"
 HOMEPAGE="http://www.kernel.org/ http://www.gentoo.org/"
 

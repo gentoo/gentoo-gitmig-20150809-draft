@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.0.ebuild,v 1.3 2003/09/07 07:24:54 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/wolk-sources/wolk-sources-4.0.ebuild,v 1.4 2003/09/29 18:33:04 mholzer Exp $
 
 IUSE="build"
 
@@ -15,7 +15,7 @@ EXTRAVERSION=-wolk4.0s
 KV=${OKV}${EXTRAVERSION}
 S=${WORKDIR}/linux-${KV}
 DESCRIPTION="Working Overloaded Linux Kernel"
-SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2
+SRC_URI="mirror://kernel/linux/kernel/v2.4/linux-${OKV}.tar.bz2
 		mirror://sourceforge/wolk/linux-${KV}.patch.bz2"
 KEYWORDS="~x86"
 SLOT="${KV}"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.2.21_pre3.ebuild,v 1.14 2003/09/07 07:26:00 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.2.21_pre3.ebuild,v 1.15 2003/09/29 18:30:55 mholzer Exp $
 #OKV=original kernel version, KV=patched kernel version. They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
@@ -23,8 +23,8 @@ PDEVFS=devfs-patch-v99.21
 PREISERFS=linux-2.2.19-reiserfs-3.5.34-patch
 
 DESCRIPTION="Full sources for the Gentoo Linux kernel"
-SRC_URI="http://www.kernel.org/pub/linux/kernel/v2.2/linux-${OKV}.tar.bz2
-	http://www.kernel.org/pub/linux/kernel/v2.2/testing/${PAC}.gz
+SRC_URI="mirror://kernel/linux/kernel/v2.2/linux-${OKV}.tar.bz2
+	mirror://kernel/linux/kernel/v2.2/testing/${PAC}.gz
 	ftp://ftp.atnf.csiro.au/pub/people/rgooch/linux/kernel-patches/v2.2/${PDEVFS}.gz
 	ftp://ftp.namesys.com/pub/reiserfs-for-2.2/${PREISERFS}.bz2"
 PROVIDE="virtual/kernel virtual/os-headers"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.16-r3.ebuild,v 1.14 2003/09/09 08:55:19 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/linux-headers-2.4.16-r3.ebuild,v 1.15 2003/09/29 18:30:55 mholzer Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -40,9 +40,9 @@ SRC_URI="http://www.de.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2"
 [ "$MOSV"  ] && { SRC_URI="$SRC_URI http://www.mosix.cs.huji.ac.il/ftps/MOSIX-${MOSV}.tar.gz"; PATCHES="$PATCHES ${S2}/MOSIX-${MOSV}/patches.${OKV}"; }
 [ "$ACPIV" ] && { SRC_URI="$SRC_URI http://developer.intel.com/technology/iapc/acpi/downloads/acpi-${ACPIV}.diff.gz"; PATCHES="$PATCHES ${DISTDIR}/acpi-${ACPIV}.diff.gz"; }
 [ "$LOWLV" ] && { SRC_URI="$SRC_URI http://www.zip.com.au/~akpm/linux/${LOWLV}-low-latency.patch.gz"; PATCHES="$PATCHES ${DISTDIR}/${LOWLV}-low-latency.patch.gz"; }
-[ "$PREEV" ] && { SRC_URI="$SRC_URI http://www.kernel.org/pub/linux/kernel/people/rml/preempt-kernel/v2.4/preempt-kernel-rml-${PREEV}.patch" PATCHES="$PATCHES ${DISTDIR}/preempt-kernel-rml-${PREEV}.patch"; }
-[ "$LBPV" ] && { SRC_URI="$SRC_URI http://www.kernel.org/pub/linux/kernel/people/rml/lock-break/v2.4/lock-break-rml-${LBPV}.patch" PATCHES="$PATCHES ${DISTDIR}/lock-break-rml-${LBPV}.patch"; }
-[ "$XFSV" ] && { SRC_URI="$SRC_URI http://www.ibiblio.org/gentoo/distfiles/XFS-${XFSV}.patch.bz2" PATCHES="$PATCHES ${DISTDIR}/XFS-${XFSV}.patch.bz2"; }
+[ "$PREEV" ] && { SRC_URI="$SRC_URI mirror://kernel/linux/kernel/people/rml/preempt-kernel/v2.4/preempt-kernel-rml-${PREEV}.patch" PATCHES="$PATCHES ${DISTDIR}/preempt-kernel-rml-${PREEV}.patch"; }
+[ "$LBPV" ] && { SRC_URI="$SRC_URI mirror://kernel/linux/kernel/people/rml/lock-break/v2.4/lock-break-rml-${LBPV}.patch" PATCHES="$PATCHES ${DISTDIR}/lock-break-rml-${LBPV}.patch"; }
+[ "$XFSV" ] && { SRC_URI="$SRC_URI mirror://gentoo/XFS-${XFSV}.patch.bz2" PATCHES="$PATCHES ${DISTDIR}/XFS-${XFSV}.patch.bz2"; }
 [ "$BNFV" ] && { SRC_URI="$SRC_URI http://bridge.sourceforge.net/devel/bridge-nf/bridge-nf-${BNFV}.diff" PATCHES="$PATCHES ${DISTDIR}/bridge-nf-${BNFV}.diff"; }
 
 PROVIDE="virtual/kernel virtual/os-headers"
