@@ -1,10 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/fceultra/fceultra-080.ebuild,v 1.7 2002/10/20 18:37:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/fceultra/fceultra-080.ebuild,v 1.8 2002/11/18 10:36:42 hanno Exp $
 
 SLOT="0"
 KEYWORDS="x86 -ppc"
 LICENSE="GPL-2"
+IUSE=""
 
 MY_P=fceu
 S=${WORKDIR}/${MY_P}
@@ -26,6 +27,6 @@ src_install() {
 	dobin fce
 	cd Documentation
 	dodoc LICENSE README RELEASE-NOTES fcs.txt porting.txt \
-		rel/readme-linux.txt 
+		rel/readme-linux.txt
 }
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/hercules/hercules-2.15.ebuild,v 1.6 2002/10/20 18:37:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/hercules/hercules-2.15.ebuild,v 1.7 2002/11/18 10:36:43 hanno Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Hercules System/370, ESA/390 and zArchitecture Mainframe Emulator"
@@ -9,10 +9,10 @@ HOMEPAGE="http://www.conmicro.cx/hercules/"
 LICENSE="QPL-1.0"
 KEYWORDS="x86"
 SLOT="0"
+IUSE=""
 
 DEPEND="virtual/glibc
-	sys-apps/bzip2
-	"
+	sys-apps/bzip2"
 
 
 src_compile() {
@@ -35,7 +35,7 @@ src_compile() {
 src_install() {
 
 	make DESTDIR=${D} install
-	dodoc INSTALL 
+	dodoc INSTALL
 
 	dohtml html/*.html html/hercules.css
 
@@ -44,7 +44,7 @@ src_install() {
 }
 
 pkg_postinst() {
-	
+
 	einfo
 	einfo "Hercules System/370, ESA/390 and zArchitecture Mainframe"
 	einfo "Emulator has been installed. Some useful utility files have"

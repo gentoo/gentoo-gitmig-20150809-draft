@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/pose/pose-3.5-r1.ebuild,v 1.4 2002/11/04 17:48:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/pose/pose-3.5-r1.ebuild,v 1.5 2002/11/18 10:36:43 hanno Exp $
 
 S=${WORKDIR}/Emulator_Src_3.5
 FLTK_PV=1.0.11
@@ -16,6 +16,7 @@ DEPEND="virtual/glibc"
 KEYWORDS="x86"
 LICENSE="GPL-2"
 SLOT="0"
+IUSE=""
 
 src_unpack() {
 	unpack emulator_src_3.5.tar.gz
@@ -53,7 +54,7 @@ src_compile() {
 		--disable-gl || die
 
 	make || die
-	
+
 	cd ${S}/build-profile
 	LDFLAGS=-L${S}/static-libs ../BuildUnix/configure --prefix=/usr \
 		--with-fltk=${S}/install-fltk \

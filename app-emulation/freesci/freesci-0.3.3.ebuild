@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License v2 
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/freesci/freesci-0.3.3.ebuild,v 1.4 2002/10/20 18:37:50 vapier Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/freesci/freesci-0.3.3.ebuild,v 1.5 2002/11/18 10:36:42 hanno Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Sierra script interpreter for your old Sierra adventures"
@@ -9,6 +9,7 @@ HOMEPAGE="http://freesci.linuxgames.com/"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 SLOT="0"
+IUSE=""
 
 DEPEND="virtual/x11"
 
@@ -28,7 +29,7 @@ src_install () {
 	make DESTDIR=${D} install || die
 
 	dodoc AUTHORS ChangeLog COPYING INSTALL NEWS README README.Unix THANKS TODO
-	
+
 }
 
 
