@@ -1,0 +1,166 @@
+# ChangeLog for net-www/lynx
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/www-client/lynx/ChangeLog,v 1.3 2005/03/15 14:20:32 seemant Exp $
+
+*lynx-2.8.5 (15 Mar 2005)
+*lynx-2.8.4.1d-r1 (15 Mar 2005)
+*lynx-2.8.4.1d (15 Mar 2005)
+*lynx-2.8.4.1c (15 Mar 2005)
+
+  15 Mar 2005; Seemant Kulleen <seemant@gentoo.org>
+  +files/lynx-2.8.4.1c-gentoo.patch, +files/lynx-2.8.4.1d-gentoo.patch,
+  +files/lynx-2.8.4a-LYStrings.c-gentoo.patch, +files/lynx2.8.4rel.1a.patch,
+  +metadata.xml, +lynx-2.8.4.1c.ebuild, +lynx-2.8.4.1d.ebuild,
+  +lynx-2.8.4.1d-r1.ebuild, +lynx-2.8.5.ebuild:
+  Moved from net-www/lynx to www-client/lynx.
+
+  29 Dec 2004; Ciaran McCreesh <ciaranm@gentoo.org> :
+  Change encoding to UTF-8 for GLEP 31 compliance
+
+  04 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> lynx-2.8.5.ebuild:
+  Masked lynx-2.8.5.ebuild stable for ppc
+
+  13 Aug 2004; Rob Holland <tigger@gentoo.org> lynx-2.8.4.1c.ebuild,
+  lynx-2.8.4.1d-r1.ebuild, lynx-2.8.4.1d.ebuild, lynx-2.8.5.ebuild:
+  Fix SRC_URIs
+
+  11 Jun 2004; Bryan Østergaard <kloeri@gentoo.org> lynx-2.8.5.ebuild:
+  Stable on alpha.
+
+  05 Jun 2004; <tuxus@gentoo.org> lynx-2.8.5.ebuild:
+  Stable on mips
+
+  27 Apr 2004; Aron Griffis <agriffis@gentoo.org> lynx-2.8.4.1d-r1.ebuild,
+  lynx-2.8.5.ebuild:
+  Add inherit eutils
+
+  13 Apr 2004; Guy Martin <gmsoft@gentoo.org> lynx-2.8.5.ebuild:
+  Marked stable on hppa.
+
+  11 Apr 2004; Gustavo Zacarias <gustavoz@gentoo.org> lynx-2.8.5.ebuild:
+  stable on sparc
+
+  08 Apr 2004; Deedra Waters,,, <dmwaters@gentoo.org> lynx-2.8.5.ebuild:
+  Marked 2.8.5 2.8.5 stable on x86. Gave it a metadata.xml listing me as the
+  maintainer since it doesn't have a regular maintainer. Added
+  --enable-EXP_PERSISTENT_COOKIES--enable-EXP_PERSISTENT_COOKIES in the econf
+  part of the ebuild so that lynx could handle certain webpages's cookies.
+
+  15 Mar 2004; Joshua Kinard <kumba@gentoo.org> lynx-2.8.4.1d-r1.ebuild:
+  Marked stable on mips.
+
+  07 Mar 2004; Tom Gall <tgall@gentoo.org> lynx-2.8.5.ebuild:
+  stable on ppc64
+
+*lynx-2.8.5 (11 Feb 2004)
+
+  11 Feb 2004; Brian Jackson <iggy@gentoo.org> lynx-2.8.5.ebuild:
+  version bump
+
+  10 Feb 2004; Gustavo Zacarias <gustavoz@gentoo.org> lynx-2.8.4.1d-r1.ebuild:
+  stable on sparc
+
+  07 Feb 2004; Brian Jackson <iggy@gentoo.org> lynx-2.8.4.1c.ebuild,
+  lynx-2.8.4.1d-r1.ebuild, lynx-2.8.4.1d.ebuild:
+  marking x86
+
+  19 Jan 2004; Daniel Ahlberg <aliz@gentoo.org> lynx-2.8.4.1d-r1.ebuild:
+  Various updates, removed an old version so that I could remove an old entry
+  from packages.mask.
+
+  18 Sep 2003; Jon Portnoy <avenj@gentoo.org> lynx-2.8.4.1d-r1.ebuild :
+  ia64 keywords.
+
+*lynx-2.8.4.1d-r1 (04 Jul 2003)
+
+  06 Jul 2003; Guy Martin <gmsoft@gentoo.org> lynx-2.8.4.1d-r1.ebuild :
+  Marked stable on hppa.
+
+  04 Jul 2003; Patrick Kursawe <phosphan@gentoo.org> lynx-2.8.4.1d-r1.ebuild:
+  fixing bug 23898
+
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
+
+ 
+*lynx-2.8.4.1d (20 Nov 2002)
+
+  16 Jul 2003; Jan Seidel <tuxus@gentoo.org> lynx-2.8.4.1d-r1.ebuild :
+  Marked stable on mips
+
+  01 Jun 2003; Joshua Kinard <kumba@gentoo.org> lynx-2.8.4.1d.ebuild:
+  Added ~mips to KEYWORDS
+
+  16 Apr 2003; Guy Martin <gmsoft@gentoo.org> lynx-2.8.4.1d.ebuild :
+  Marked stable on hppa.
+
+  03 Mar 2003; Aron Griffis <agriffis@gentoo.org> lynx-2.8.4.1d.ebuild:
+  Mark stable on alpha
+
+  03 Dec 2002; Will Woods <wwoods@gentoo.org> :
+  Added ~alpha to keywords.
+
+  20 Nov 2002; Daniel Ahlberg <aliz@gentoo.org> :
+  Version bump
+
+*lynx-2.8.4.1c (26 Aug 2002)
+
+  11 Feb 2003; Guy Martin <gmsoft@gentoo.org> lynx-2.8.4.1c.ebuild :
+  Added hppa to keywords.
+
+  14 Sept 2002; Maarten Thibaut <murphy@gentoo.org> lynx-2.8.4.1c.ebuild :
+  Added sparc/sparc64 to keywords.
+  
+  07 Sept 2002; Calum Selkirk <cselkirk@gentoo.org> lynx-2.8.4.1c.ebuild :
+  Added ppc to KEYWORDS.
+
+  28 Aug 2002; Seemant Kulleen <seemant@gentoo.org> lynx-2.8.4.1c.ebuild
+  lynx-2.8.4a-r4.ebuild :
+  PROVIDE=virtual/textbrowser
+
+  26 Aug 2002; Daniel Ahlberg <aliz@gentoo.org> lynx-2.8.4.1c.ebuild :
+  Updated to latest patchlevel to fix CRLF injection. More info availabe
+  at http://online.securityfocus.com/archive/1/288054/2002-08-16/2002-08-22/0 
+  and http://online.securityfocus.com/archive/1/288620/2002-08-16/2002-08-22/0
+
+*lynx-2.8.4a-r4 (2 June 2002)
+
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> lynx-2.8.4a-r4.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
+  2 June 2002; Matthew Kennedy <mkennedy@gentoo.org> lynx-2.8.4a-r4.ebuild,
+  files/digest-lynx-2.8.4a-r4, files/lynx-2.8.4a-LYStrings.c-gentoo.patch, ChangeLog :
+  Patch for GCC3.1 support. Some users report success with -r3, some
+  don't.
+
+*lynx-2.8.4a-r3 (29 May 2002)
+
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> lynx-2.8.4a-r3.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
+  29 May 2002; Preston A. Elder <prez@gentoo.org> lynx-2.8.4a-r3.ebuild :
+  Fixed the ebuild to just pass --with-ssl=yes, not --with-ssl=/usr.
+  The configure fails to do the right thing with the path version.
+
+*lynx-2.8.4a-r3 (08 May 2002)
+
+  08 May 2002; Carl Perry <edolnx@gentoo.org> lynx-2.8.4a-r3.ebuild :
+  Fixed the alternate SRC_URI link so that it works.  Found during
+  ibiblio.org outage yesterday.
+
+*lynx-2.8.4a-r3 (21 Mar 2002)
+
+  21 Mar 2002; Seemant Kulleen <seemant@gentoo.org> lynx-2.8.4a-r3.ebuild :
+  HTML documentation will no longer be gzipped.  This bug located by
+  stefan@mdy.univie.ac.at
+
+*lynx-2.8.4a-r2 (1 Feb 2002)
+
+  14 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> lynx-2.8.4a-r2.ebuild :
+  Added LICENSE, KEYWORDS, SLOT.
+
+  1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
+  Added initial ChangeLog which should be updated whenever the package is
+  updated in any way. This changelog is targetted to users. This means that the
+  comments should well explained and written in clean English. The details about
+  writing correct changelogs are explained in the skel.ChangeLog file which you
+  can find in the root directory of the portage repository.
