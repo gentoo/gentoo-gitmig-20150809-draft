@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/linux26-headers-2.6.7-r4.ebuild,v 1.6 2004/09/08 13:47:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux26-headers/linux26-headers-2.6.7-r4.ebuild,v 1.7 2004/10/20 14:14:08 agriffis Exp $
 
 ETYPE="headers"
 inherit kernel eutils
@@ -58,7 +58,7 @@ src_unpack() {
 
 src_compile() {
 	# autoconf.h isnt generated unless it already exists. plus, we have
-	# no gurentee that any headers are installed on the system...
+	# no guarantee that any headers are installed on the system...
 	[ -f ${ROOT}/usr/include/linux/autoconf.h ] || \
 		touch ${S}/include/linux/autoconf.h
 	# if there arent any installed headers, then there also isnt an asm
