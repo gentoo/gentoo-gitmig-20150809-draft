@@ -1,4 +1,14 @@
-MD5 4af56e53995dc346709606a4edaf0a81 ChangeLog 489
-MD5 0efb524cd2b7a71383d23ba689eea70b genutils-1.13.ebuild 513
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a4fac5921b8a2e5b5e452228e947e333 ChangeLog 590
 MD5 9771ca4ff90b56dddc4acfadc6f6a01e metadata.xml 250
+MD5 3a6ad1b8c0a49bf3b2043075d66131a0 genutils-1.13.ebuild 513
 MD5 166d5bf44bb32933762370c22a4641dd files/digest-genutils-1.13 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBAc4OLLFUmVNQ7rkRAt8CAKCA9cUh2ohPNH6DEz1Y6bt6MA+j0QCeL0Uw
+gvaPEoH0JnN2tMgRIxYIek4=
+=lewb
+-----END PGP SIGNATURE-----

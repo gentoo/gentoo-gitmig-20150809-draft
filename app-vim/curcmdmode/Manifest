@@ -1,4 +1,14 @@
-MD5 e8c95e9c4815cc14e89f8210d688dac9 ChangeLog 496
-MD5 65258523719e33d83a0180ee5e1a01ab curcmdmode-1.0.ebuild 467
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 615408f60ca7f97c8bcd979fe171645f ChangeLog 598
 MD5 b6deb13fae9232065a4bdf92742fa9c4 metadata.xml 219
+MD5 e50cc0ed0e60038cbf3cec278e328194 curcmdmode-1.0.ebuild 467
 MD5 2f18deaeacb2f41734d95b3d6dcbb8ac files/digest-curcmdmode-1.0 65
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBAc6yLLFUmVNQ7rkRAodwAJsGlbNXGiAPQynzis3X4GkZdvV0LgCdG5ll
+U3UqqIBoxrZ1BK91f8b0JQ4=
+=ABX9
+-----END PGP SIGNATURE-----

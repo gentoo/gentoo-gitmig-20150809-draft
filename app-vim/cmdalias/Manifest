@@ -1,4 +1,14 @@
-MD5 95af125dcdf3b34a3f2df87fa78142b1 ChangeLog 486
-MD5 6f5f2a20934e0ff7be582c8bb3ab30be cmdalias-1.0.ebuild 448
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 24534796f37c545c0d8e4e2708c35be1 ChangeLog 586
+MD5 eeebb1f0b3a9d0a04a4473761cd76042 cmdalias-1.0.ebuild 448
 MD5 b6deb13fae9232065a4bdf92742fa9c4 metadata.xml 219
 MD5 e35a4b64a35186d97aefbcc35fe8097d files/digest-cmdalias-1.0 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.4 (GNU/Linux)
+
+iD8DBQFBAc7RLLFUmVNQ7rkRAjGfAKCWegnesuvbo2/AEfNzafloDrHK9wCgtWBb
+78aldeo6HOJuKUTmUGse8So=
+=t3Xu
+-----END PGP SIGNATURE-----
