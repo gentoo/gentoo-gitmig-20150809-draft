@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/findutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.24 2003/12/29 03:40:10 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/findutils/ChangeLog,v 1.25 2003/12/29 09:19:59 kumba Exp $
+
+  29 Dec 2003; Joshua Kinard <kumba@gentoo.org> findutils-4.1.7-r5.ebuild:
+  Added gnuconfig support to detect mips machines properly
 
   28 Dec 2003; Joshua Kinard <kumba@gentoo.org> findutils-4.1.7-r5.ebuild:
   Move to mips stable (~mips -> mips)
