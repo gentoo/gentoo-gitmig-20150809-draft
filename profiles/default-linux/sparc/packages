@@ -14,7 +14,6 @@
 # SPARC specific stuff (32 and 64 bit)
 *net-ftp/ftp
 *sys-apps/slocate
-*sys-apps/hdparm
 *sys-apps/sparc-utils
 *sys-libs/gdbm  
 *sys-libs/slang
