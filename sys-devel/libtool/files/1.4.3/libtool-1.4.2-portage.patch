@@ -14,7 +14,7 @@
 +		fi
 +		# Do not add duplicates
 +		if test "$mynewdependency_lib"; then
-+		  if test -z "`echo $newdependency_libs |grep -e "$mynewdependency_lib"`"; then
++		  if test -z "`echo $newdependency_libs |$EGREP -e "$mynewdependency_lib"`"; then
 +		    newdependency_libs="$newdependency_libs $mynewdependency_lib"
 +		  fi
 +		fi
@@ -27,10 +27,10 @@
 +		    S="$PWORKDIR"
 +		  fi
 +		  # We do not want portage's build root ($S) present.
-+		  if test -n "`echo $deplib |grep -e "$S"`" && test "$S"; then
++		  if test -n "`echo $deplib |$EGREP -e "$S"`" && test "$S"; then
 +		    mynewdependency_lib=""
 +		  # We do not want portage's install root ($D) present.
-+		  elif test -n "`echo $deplib |grep -e "$D"`" && test "$D"; then
++		  elif test -n "`echo $deplib |$EGREP -e "$D"`" && test "$D"; then
 +		    eval mynewdependency_lib="`echo "$deplib" |sed -e "s:$D::g" -e 's://:/:g'`"
 +		  else
 +		    mynewdependency_lib="$deplib"
@@ -40,7 +40,7 @@
 +		fi
 +		# Do not add duplicates
 +		if test "$mynewdependency_lib"; then
-+		  if test -z "`echo $newdependency_libs |grep -e "$mynewdependency_lib"`"; then
++		  if test -z "`echo $newdependency_libs |$EGREP -e "$mynewdependency_lib"`"; then
 +			newdependency_libs="$newdependency_libs $mynewdependency_lib"
 +		  fi
 +		fi
