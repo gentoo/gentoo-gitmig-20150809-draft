@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mod_ssl
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/ChangeLog,v 1.47 2004/07/25 21:06:33 zul Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_ssl/ChangeLog,v 1.48 2004/07/28 05:27:43 kumba Exp $
+
+  28 Jul 2004; Joshua Kinard <kumba@gentoo.org> mod_ssl-2.8.19.ebuild:
+  Marked stable on mips.
 
   27 Jul 2004; Chuck Short <zul@gentoo.org> mod_ssl-2.8.19.ebuild:
   Fix typo in config. Closes #58274.
