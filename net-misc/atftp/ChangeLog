@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/atftp
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/atftp/ChangeLog,v 1.16 2005/02/07 15:17:14 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/atftp/ChangeLog,v 1.17 2005/02/07 21:11:03 vapier Exp $
+
+  07 Feb 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/atftp-0.7-gcc.patch, atftp-0.7.ebuild:
+  Added patch to fix building #71090.
 
   07 Feb 2005; Jan Brinkmann <luckyduck@gentoo.org> atftp-0.6.2.ebuild:
   added ~amd64 to 0.6.2, fixes #81083
