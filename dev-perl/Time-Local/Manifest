@@ -1,18 +1,18 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 cf4746f7f938cebc9193f5099c3b1a1f ChangeLog 1157
-MD5 c2855b5af358c7ff44669a96b3b45dec Time-Local-1.05.ebuild 550
-MD5 22e30fb57fe55f5cd47d8a0e3788e56d Time-Local-1.07.ebuild 556
-MD5 83c46fe49c0662800ad4ffd5dc420cab Time-Local-1.10.ebuild 583
+MD5 7b0dcd02ca3ce81e736cdf5f036a1bbf ChangeLog 1275
+MD5 ad590e8fd51313974bc45856d058031b Time-Local-1.05.ebuild 556
+MD5 f6716798d8aa05eb4cef035360e1482a Time-Local-1.07.ebuild 558
+MD5 bd57ba7ac2f056c0c5be79c68751eef0 Time-Local-1.10.ebuild 567
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
 MD5 3f31838554c8303b856dfa2321b491f5 files/digest-Time-Local-1.05 66
 MD5 dffcec8b9f498b13ca67b0cb551d554a files/digest-Time-Local-1.07 66
 MD5 418190d3eea5c695354ed8a054d462ee files/digest-Time-Local-1.10 66
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFByoe760LfUIagIAkRAn0TAKDL9pj0UOW79IMKD6Cv3BD/CJmHjgCgwHQZ
-IdFEjxR+qlITDhytQWWiImE=
-=K5HL
+iD8DBQFCT0VftG5z4I8BtQoRAhNPAKCLiMIblo+lWGzPj3Zv7OGol7O1LgCeLDFL
+onrbZxnRyHE+lwIZYF0SVzo=
+=f2dq
 -----END PGP SIGNATURE-----
