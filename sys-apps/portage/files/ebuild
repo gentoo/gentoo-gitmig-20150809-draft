@@ -4,9 +4,9 @@
 
 if [ "`whoami`" != "root" ]
 then
-    echo "Since ebuild can modify critical system files, only root is"
-    echo "allowed to use the ebuild system."
-    exit 1
+	echo "Since ebuild can modify critical system files, only root is"
+	echo "allowed to use the ebuild system."
+	exit 1
 fi
 
 #allow any envvars to be set like QTDIR, even if Qt was just installed
@@ -17,7 +17,6 @@ export PROXY HTTP_PROXY FTP_PROXY FETCHCOMMAND PACKAGE
 export DEBUG MAKEOPTS USE MAINTAINER CHOST CFLAGS CXXFLAGS
 export DISTDIR BUILD_PREFIX PKGDIR RPMDIR PLATFORM 
 export PATH=/usr/lib/portage/bin:${PATH}
-
 
 initvars() {
 	#fix up ROOT path so that it always has a / after it
@@ -91,7 +90,7 @@ dyn_touch() {
 	local x
 	for x in ${A} 
 	do
-  		if [ -e ${DISTDIR}/${x} ]
+		if [ -e ${DISTDIR}/${x} ]
 		then	
 			touch ${DISTDIR}/${x}
 		fi
@@ -99,89 +98,89 @@ dyn_touch() {
 }
 
 dyn_digest() {
-    local x
-    if [ ! -d ${FILESDIR} ]
-    then
-	install -d ${FILESDIR}
-	if [ -n ${MAINTAINER} ]
+	local x
+	if [ ! -d ${FILESDIR} ]
 	then
-		echo ">>> adding ${FILESDIR} to CVS (just in case it isn't there)"
-		( echo; cd `/usr/bin/dirname ${FILESDIR}`; cvs add `/usr/bin/basename ${FILESDIR}`; echo)
+		install -d ${FILESDIR}
+		if [ -n ${MAINTAINER} ]
+		then
+			echo ">>> adding ${FILESDIR} to CVS (just in case it isn't there)"
+			( echo; cd `/usr/bin/dirname ${FILESDIR}`; cvs add `/usr/bin/basename ${FILESDIR}`; echo)
+		fi
 	fi
-    fi
-    for x in ${A}
-    do
-	if [ ! -e ${DISTDIR}/${x} ]
-	then
-	    echo '!!! Cannot compute message digests: '${x} not found
-	    echo "error, aborting."
-	    exit 1
-	else
-	    mymd5=`md5sum ${DISTDIR}/${x} | cut -f1 -d" "`
-	    echo "MD5 $mymd5 $x" >> ${FILESDIR}/.digest-${PF}
-	fi
+	for x in ${A}
+	do
+		if [ ! -e ${DISTDIR}/${x} ]
+		then
+			echo '!!! Cannot compute message digests: '${x} not found
+			echo "error, aborting."
+			exit 1
+		else
+	    	mymd5=`md5sum ${DISTDIR}/${x} | cut -f1 -d" "`
+	    	echo "MD5 $mymd5 $x" >> ${FILESDIR}/.digest-${PF}
+		fi
     done
     mv ${FILESDIR}/.digest-${PF} ${FILESDIR}/digest-${PF}
     if [ -n "${MAINTAINER}" ]
     then
-	echo ">>> adding digest-${PF} to CVS (just in case it isn't there)"
-	( echo; cd ${FILESDIR}; cvs add digest-${PF}; echo )
+		echo ">>> adding digest-${PF} to CVS (just in case it isn't there)"
+		( echo; cd ${FILESDIR}; cvs add digest-${PF}; echo )
     fi
     echo ">>> Computed message digests."
 }
 
 digest_check() {
-    if [ ! -e ${FILESDIR}/digest-${PF} ]
-    then
-	echo '!!!'" No message digest file found."
-	if [ -n "$MAINTAINER" ]
+	if [ ! -e ${FILESDIR}/digest-${PF} ]
 	then
-		echo '>>> Maintainer mode: auto-computing digests.'
-		dyn_digest
-		return 0
-	else
-		echo '!!!'" Maintainer: ebuild digest to update message digests."
-		return 1
-	fi
+		echo '!!!'" No message digest file found."
+		if [ -n "$MAINTAINER" ]
+		then
+			echo '>>> Maintainer mode: auto-computing digests.'
+			dyn_digest
+			return 0
+		else
+			echo '!!!'" Maintainer: ebuild digest to update message digests."
+			return 1
+		fi
     fi
-    if [ ! -e ${DISTDIR}/${1} ]
-    then
-	echo '!!!'" ${1} not found."
-	echo '!!!'" Ebuild fetch to retrieve files."
-	return 1
-    fi	
-    local mycdigest=`grep " ${1}" ${FILESDIR}/digest-${PF} | cut -f2 -d" "`
-    if [ -z "$mycdigest" ]
-    then
-	echo
-	echo '!!!'" No message digest found for ${1}."
-	if [ -n "$MAINTAINER" ]
+	if [ ! -e ${DISTDIR}/${1} ]
 	then
-		echo '>>> Maintainer mode: auto-computing digests.'
-		dyn_digest
-		echo 
-		return 0
-	else
-		echo '!!!'" Maintainer: ebuild digest to update message digests."
+		echo '!!!'" ${1} not found."
+		echo '!!!'" Ebuild fetch to retrieve files."
+		return 1
+	fi	
+	local mycdigest=`grep " ${1}" ${FILESDIR}/digest-${PF} | cut -f2 -d" "`
+	if [ -z "$mycdigest" ]
+	then
+		echo
+		echo '!!!'" No message digest found for ${1}."
+		if [ -n "$MAINTAINER" ]
+		then
+			echo '>>> Maintainer mode: auto-computing digests.'
+			dyn_digest
+			echo 
+			return 0
+		else
+			echo '!!!'" Maintainer: ebuild digest to update message digests."
+			echo
+			return 1
+		fi
+	fi
+	local mydigest=`md5sum ${DISTDIR}/${1} | cut -f1 -d" "`
+	if [ "$mycdigest" != "$mydigest" ]
+	then
+		echo
+		echo '!!!'" ${1}: message digests do not match!"
+		echo '!!!'" ${1} is corrupt or incomplete"
+		echo ">>> md5 con ${mycdigest}"
+		echo ">>> md5 now ${mydigest}"
+		echo ">>> Please delete/redownload ${DISTDIR}/${1}"
 		echo
 		return 1
+	else
+		echo ">>> md5 ;-) ${1}"
 	fi
-    fi
-    local mydigest=`md5sum ${DISTDIR}/${1} | cut -f1 -d" "`
-    if [ "$mycdigest" != "$mydigest" ]
-    then
-	echo
-	echo '!!!'" ${1}: message digests do not match!"
-	echo '!!!'" ${1} is corrupt or incomplete"
-	echo ">>> md5 con ${mycdigest}"
-	echo ">>> md5 now ${mydigest}"
-	echo ">>> Please delete/redownload ${DISTDIR}/${1}"
-	echo
-	return 1
-    else
-	echo ">>> md5 ;-) ${1}"
-    fi
-    return 0
+	return 0
 }
 
 dyn_batchdigest() {
@@ -230,21 +229,22 @@ dyn_fetch() {
 			_SRC_URI=`/usr/bin/queryhost.sh "${SRC_URI}"`
 			for x in ${_SRC_URI}
 			do
-				if [ ! -e ${DISTDIR}/${y} ]; then
-			    		if [ $y == ${x##*/} ]
-			    		then
+				if [ ! -e ${DISTDIR}/${y} ] 
+				then
+			    	if [ $y == ${x##*/} ]
+			    	then
 						echo ">>> Trying site ${x}..."
 						eval ${FETCHCOMMAND}
 						if [ $? -ne 0 ]
-		        			then
-			    				echo '!!!'" Couldn't download ${y}.  Aborting."
-			    				exit 1
+		        		then
+			    			echo '!!!'" Couldn't download ${y}.  Aborting."
+			    			exit 1
 						fi
-		    			fi
+		    		fi
 				fi
 			done
 			echo
-    		fi	
+    	fi	
 	done
 	for y in ${A}
 	do
@@ -257,59 +257,59 @@ dyn_fetch() {
 }
 
 dyn_unpack() {
-    trap "abort_unpack" SIGINT SIGQUIT
-    local unpackwork="yes"
-    if [ -e ${WORKDIR} ]
-    then
-	local x
-	for x in $A $EBUILD
-	do
-		echo ">>> Checking ${x}'s mtime..."
-		if [ ${DISTDIR}/${x} -nt ${WORKDIR} ]
-		then
-			echo ">>> ${x} has been updated; recreating WORKDIR..."
-			rm -rf ${WORKDIR}
-			break
-		fi
-	done
-	echo ">>> WORKDIR is up-to-date, not unpacking. (clean to force unpack)"
-	unpackwork="no"
-     fi
-     if [ "$unpackwork" = "yes" ]
-     then
-	install -m0700 -d ${WORKDIR}
-	cd ${WORKDIR}
-	echo ">>> Unpacking source..."
-	src_unpack
-	echo ">>> Source unpacked."
-	cd ..
+	trap "abort_unpack" SIGINT SIGQUIT
+	local unpackwork="yes"
+	if [ -e ${WORKDIR} ]
+	then
+		local x
+		for x in $A $EBUILD
+		do
+			echo ">>> Checking ${x}'s mtime..."
+			if [ ${DISTDIR}/${x} -nt ${WORKDIR} ]
+			then
+				echo ">>> ${x} has been updated; recreating WORKDIR..."
+				rm -rf ${WORKDIR}
+				break
+			fi
+		done
+		echo ">>> WORKDIR is up-to-date, not unpacking. (clean to force unpack)"
+		unpackwork="no"
+	fi
+	if [ "$unpackwork" = "yes" ]
+	then
+		install -m0700 -d ${WORKDIR}
+		cd ${WORKDIR}
+		echo ">>> Unpacking source..."
+		src_unpack
+		echo ">>> Source unpacked."
+		cd ..
     fi
     trap SIGINT SIGQUIT
 }
 
 dyn_clean() {
-    if [ -d ${WORKDIR} ]
-    then
-	rm -rf ${WORKDIR} 
-    fi
-    if [ -d ${BUILDDIR}/image ]
-    then
-	rm -rf ${BUILDDIR}/image
-    fi
-    rm -rf ${BUILDDIR}/.compiled
+	if [ -d ${WORKDIR} ]
+	then
+		rm -rf ${WORKDIR} 
+	fi
+	if [ -d ${BUILDDIR}/image ]
+	then
+		rm -rf ${BUILDDIR}/image
+	fi
+	rm -rf ${BUILDDIR}/.compiled
 }
 
 into() {
-    if [ $1 = "/" ]
-    then
-	export DESTTREE=""
-    else
-	export DESTTREE=$1
-	if [ ! -d ${D}${DESTTREE} ]
+	if [ $1 = "/" ]
 	then
-	    install -d ${D}${DESTTREE}
+		export DESTTREE=""
+	else
+		export DESTTREE=$1
+		if [ ! -d ${D}${DESTTREE} ]
+		then
+			install -d ${D}${DESTTREE}
+		fi
 	fi
-    fi
 }
 
 insinto() {

@@ -19,7 +19,6 @@ for x in mylines:
 	if x[:2]!="./":
 		continue
 	myline=string.split(string.strip(x)[2:-7],"/")
-	print myline
 	mysplit=portage.pkgsplit(myline[2])
 	current.append([myline[0],myline[2],mysplit])
 	currentdict[ myline[0]+"/"+myline[1]]=[myline[0]+"/"+myline[2],mysplit]
