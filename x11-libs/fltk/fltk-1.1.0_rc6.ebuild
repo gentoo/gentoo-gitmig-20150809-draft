@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.0_rc6.ebuild,v 1.3 2002/09/20 14:40:34 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/fltk-1.1.0_rc6.ebuild,v 1.4 2002/09/20 16:27:08 raker Exp $
 
 MY_P=${P/_/}
 S=${WORKDIR}/${MY_P}
@@ -39,7 +39,7 @@ src_compile() {
 		--libdir=/usr/lib/fltk-1.1 \
 		${myconf} || die "Configuration Failed"
 
-	emake || die "Parallel Make Failed"
+	emake CXX="g++" || die "Parallel Make Failed"
 
 }
 
