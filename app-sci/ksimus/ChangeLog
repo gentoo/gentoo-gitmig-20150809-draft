@@ -1,6 +1,9 @@
 # ChangeLog for app-sci/ksimus
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/ksimus/ChangeLog,v 1.9 2004/06/29 11:51:44 carlo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/ksimus/ChangeLog,v 1.10 2004/11/09 07:46:07 phosphan Exp $
+
+  09 Nov 2004; Patrick Kursawe <phosphan@gentoo.org> ksimus-0.3.6-r1.ebuild:
+  Removing ARTS check from configure script, see bug #70166
 
   29 Jun 2004; Carsten Lohrke <carlo@gentoo.org> ksimus-0.3.6-r1.ebuild:
   QA: inherit kde-base -> inherit kde, need-kde after R/DEPEND
