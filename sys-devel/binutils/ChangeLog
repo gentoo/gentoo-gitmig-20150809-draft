@@ -1,6 +1,12 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.15 2002/11/18 12:59:15 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.16 2002/11/29 20:21:29 raker Exp $
+
+*binutils-2.13.90.0.16 (29 Nov 2002)
+
+  29 Nov 2002; Nick Hadaway <raker@gentoo.org>
+  binutils-2.13.90.0.16.ebuild, files/digest-binutils-2.13.90.0.16 :
+  Version bump.  No changes in the ebuild.  Solves bug #11088
 
 *binutils-2.13.90.0.14 (18 Nov 2002)
 
