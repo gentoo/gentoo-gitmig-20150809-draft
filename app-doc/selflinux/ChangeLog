@@ -1,6 +1,6 @@
 # ChangeLog for app-doc/selflinux
 # Copyright 2001-2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-doc/selflinux/ChangeLog,v 1.4 2002/12/11 19:48:23 cybersystem Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/selflinux/ChangeLog,v 1.5 2002/12/13 10:56:04 blizzy Exp $
 
 * selflinux-0.4.0 (11 December 2002)
 
@@ -14,8 +14,7 @@
 
   Version bump, thanks to Tobias Eichert <tobias@databoogie.net> in bug #11921
 
-\* Autoupdate keywords (12-6-02)
-  06 Dec 2002; Rodney Rees <manson@gentoo.org> changed sparc ~sparc keywords
+  06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
 * selflinux-0.1 (15 August 2002)
 
