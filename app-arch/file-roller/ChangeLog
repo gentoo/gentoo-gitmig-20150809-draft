@@ -1,6 +1,9 @@
 # ChangeLog for app-arch/file-roller
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.49 2003/11/08 12:51:24 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-arch/file-roller/ChangeLog,v 1.50 2003/11/15 02:35:51 agriffis Exp $
+
+  14 Nov 2003; Aron Griffis <agriffis@gentoo.org> file-roller-2.4.0.1.ebuild:
+  Stable on ia64
 
   08 Nov 2003; Todd Sunderlin <todd@gentoo.org> file-roller-2.4.0.1.ebuild:
   Added sparc keyword
