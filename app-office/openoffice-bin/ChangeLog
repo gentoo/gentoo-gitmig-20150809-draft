@@ -1,6 +1,9 @@
 # ChangeLog for app-office/openoffice-bin
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.45 2004/06/24 22:43:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-bin/ChangeLog,v 1.46 2004/07/01 02:38:40 augustus Exp $
+
+  30 Jun 2004; <augustus@gentoo.org> openoffice-bin-1.1.2.ebuild:
+  Added ~amd64 keyword. Bug 55743.
 
 *openoffice-bin-1.1.2 (17 Jun 2004)
 
