@@ -1,8 +1,13 @@
 # ChangeLog for media-libs/libao
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.8 2003/04/12 06:22:59 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libao/ChangeLog,v 1.9 2003/04/13 11:33:55 malverian Exp $
 
 *libao-0.8.3-r1 (12 Apr 2003)
+
+  13 Apr 2003; Philip Walls <malverian@gentoo.org> libao-0.8.3.ebuild,
+  libao-0.8.3-r1.ebuild :
+  Cleaned up ebuild (removed invalid whitespace) and told 0.8.3 not to
+  look for patch. Fixed #19193
 
   12 Apr 2003; jje libao-0.8.3-r1.ebuild, libao-0.8.3.ebuild,
   files/libao-0.8.3-r1.patch:
