@@ -1,35 +1,38 @@
 # ChangeLog for net-fs/openafs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.6 2002/08/03 23:31:34 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-fs/openafs/ChangeLog,v 1.7 2002/09/12 12:00:39 aliz Exp $
 
 *openafs-1.2.6 (03 Aug 2002)
 
-  03 Aug 2002; Daniel Ahlberg <aliz@gentoo.org> openafs-1.2.6.ebuild :
+  12 Sep 2002; Daniel Ahlberg <aliz@gentoo.org> openafs-1.2.6.ebuild :
+  Added CONFIG_PROTECT_MASK to allow binaries in /etc to be overwritten.
+  Closes #5976.
 
+  03 Aug 2002; Daniel Ahlberg <aliz@gentoo.org> openafs-1.2.6.ebuild :
   Security fix.
 
 *openafs-1.2.5-r1 (03 Aug 2002)
 
   02 Aug 2002; Daniel Ahlberg <aliz@gentoo.org> openafs-1.2.5-r1.ebuild :
-
   Security fix.
 
 *openafs-1.3.2 (29 Jul 2002)
 
-  29 Jul 2002; Ryan Phillips <rphillips@gentoo.org> openafs-1.3.2.ebuild :
+  12 Sep 2002; Daniel Ahlberg <aliz@gentoo.org> openafs-1.3.2.ebuild :
+  Added CONFIG_PROTECT_MASK to allow binaries in /etc to be overwritten.
+  Closes #5976.
 
+  29 Jul 2002; Ryan Phillips <rphillips@gentoo.org> openafs-1.3.2.ebuild :
   Masked unstable version.
 
 *openafs-1.2.5 (30 Jul 2002)
 
   30 Jul 2002; Ryan Phillips <rphillips@gentoo.org> openafs-1.2.5.ebuild :
-
   Added latest stable version
 
 *openafs-1.2.2-r7 (1 Feb 2002)
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
-  
   Added initial ChangeLog which should be updated whenever the package is
   updated in any way. This changelog is targetted to users. This means that the
   comments should well explained and written in clean English. The details about

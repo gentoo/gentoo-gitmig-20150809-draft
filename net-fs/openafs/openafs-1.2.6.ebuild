@@ -86,6 +86,9 @@ src_install () {
 	dosym /etc/afs/afsws /usr/afsws/etc
 
 	dodoc ${FILESDIR}/README
+
+	dodir /etc/env.d
+	echo 'CONFIG_PROTECT_MASK="/etc/afs"' >> ${D}/etc/env.d/01${PN}
 }
 
 pkg_postinst () {
