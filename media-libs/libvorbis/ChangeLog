@@ -1,6 +1,13 @@
 # ChangeLog for media-libs/libvorbis
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/ChangeLog,v 1.19 2003/11/20 17:13:50 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libvorbis/ChangeLog,v 1.20 2003/11/22 19:13:23 lostlogic Exp $
+
+*libvorbis-1.0.1 (22 Nov 2003)
+
+  22 Nov 2003; Brandon Low <lostlogic@gentoo.org> libvorbis-1.0.1.ebuild:
+  Bump, had to remove both of the patches, this probably means that it doesn't
+  use SIMD properly now, hopefully we'll get a new patch for this version at
+  some point
 
   20 Nov 2003; Martin Holzer <mholzer@gentoo.org> libvorbis-1.0-r4.ebuild:
   marking stable. Closes #33925.

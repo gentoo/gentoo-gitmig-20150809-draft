@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/libogg
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/ChangeLog,v 1.10 2003/11/15 02:39:47 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libogg/ChangeLog,v 1.11 2003/11/22 19:13:23 lostlogic Exp $
+
+*libogg-1.1 (22 Nov 2003)
+
+  22 Nov 2003; Brandon Low <lostlogic@gentoo.org> libogg-1.1.ebuild:
+  Bump
 
   14 Nov 2003; Aron Griffis <agriffis@gentoo.org> libogg-1.0.ebuild:
   Stable on ia64
