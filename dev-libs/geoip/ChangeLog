@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/geoip
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.18 2004/07/17 17:00:42 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/geoip/ChangeLog,v 1.19 2004/07/19 12:37:09 aliz Exp $
+
+  19 Jul 2004; Daniel Ahlberg <aliz@gentoo.org> geoip-1.3.5.ebuild:
+  Added amd64 keyword, closing #57544.
 
   17 Jul 2004; Tom Gall <tgall@gentoo.org> geoip-1.3.2.ebuild:
   stable on ppc64, bug #55677
