@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<herd>dev-embedded</herd>
+<maintainer>
+  <email>robbat2@gentoo.org</email>
+</maintainer>
+<longdescription>PiKdev is a simple graphic IDE for the development of
+    PIC-based applications.  PiKdev is developed in C++ under Linux and is
+    based on the KDE environment.</longdescription>
+</pkgmetadata>
