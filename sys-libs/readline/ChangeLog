@@ -1,6 +1,15 @@
 # ChangeLog for sys-libs/readline
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.44 2005/02/11 05:10:38 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/readline/ChangeLog,v 1.45 2005/02/12 05:25:25 vapier Exp $
+
+*readline-5.0-r2 (12 Feb 2005)
+
+  12 Feb 2005; Mike Frysinger <vapier@gentoo.org>
+  +files/readline-5.0-del-backspace-policy.patch,
+  +files/readline-5.0-no_rpath.patch, +files/readline-5.0-self-insert.patch,
+  +files/readline-5.0-solaris.patch, +readline-5.0-r2.ebuild:
+  Add some patches from Debian/Fedora fixing #74807 by Ivan Todoroski in the
+  process.
 
   11 Feb 2005; Mike Frysinger <vapier@gentoo.org> +files/5.0-solaris.patch,
   readline-5.0-r1.ebuild:
