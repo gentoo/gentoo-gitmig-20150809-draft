@@ -1,6 +1,10 @@
 # ChangeLog for app-cdr/cdemu
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/ChangeLog,v 1.3 2004/03/10 21:49:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/ChangeLog,v 1.4 2004/06/06 14:52:46 dragonheart Exp $
+
+  07 Jun 2004; Daniel Black <dragonheart@gentoo.org> +metadata.xml,
+  cdemu-0.5.3.ebuild, cdemu-0.6_beta.ebuild:
+  QA - IUSE fix
 
 *cdemu-0.6_beta (10 Mar 2004)
 

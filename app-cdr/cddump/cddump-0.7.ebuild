@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cddump/cddump-0.7.ebuild,v 1.13 2004/03/12 11:51:30 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cddump/cddump-0.7.ebuild,v 1.14 2004/06/06 14:51:49 dragonheart Exp $
 
 DESCRIPTION="cddump - backup to CD-Recordable and CD-Rewritable"
 SRC_URI="http://www.joat.ca/software/${P}.tar.gz"
@@ -9,6 +9,7 @@ SLOT="0"
 LICENSE="GPL-2"
 DEPEND="app-cdr/cdrtools
 	dev-lang/perl"
+IUSE=""
 KEYWORDS="x86 ppc sparc"
 
 src_unpack() {

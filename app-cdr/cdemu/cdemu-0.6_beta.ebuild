@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc., 2002-2003 Mike Frysinger
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/cdemu-0.6_beta.ebuild,v 1.4 2004/03/16 17:14:29 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/cdemu-0.6_beta.ebuild,v 1.5 2004/06/06 14:52:46 dragonheart Exp $
 
 inherit gcc flag-o-matic python
 
@@ -10,6 +10,7 @@ SRC_URI="mirror://sourceforge/cdemu/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
+IUSE=""
 KEYWORDS="x86 ppc"
 
 DEPEND="virtual/kernel"

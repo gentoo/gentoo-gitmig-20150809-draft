@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc., 2002-2003 Mike Frysinger
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/cdemu-0.5.3.ebuild,v 1.2 2004/01/24 22:39:01 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdemu/cdemu-0.5.3.ebuild,v 1.3 2004/06/06 14:52:46 dragonheart Exp $
 
 inherit gcc python
 
@@ -11,6 +11,7 @@ SRC_URI="http://robert.private.outertech.com/virtualcd/${MY_P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
+IUSE=""
 KEYWORDS="x86 ppc"
 
 DEPEND="virtual/kernel"
