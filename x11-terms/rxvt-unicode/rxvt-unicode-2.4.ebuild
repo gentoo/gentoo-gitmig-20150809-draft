@@ -1,11 +1,11 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-2.4.ebuild,v 1.7 2004/09/02 16:47:28 pvdabeel Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-terms/rxvt-unicode/rxvt-unicode-2.4.ebuild,v 1.8 2004/10/12 00:39:35 latexer Exp $
 
 IUSE="xgetdefault"
 
 DESCRIPTION="rxvt clone with XFT and Unicode support"
-HOMEPAGE="http://www.sourceforge.net/projects/rxvt-unicode/"
+HOMEPAGE="http://software.schmorp.de/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
