@@ -3,19 +3,6 @@
 # Make sure this matches your IFACE
 PIDFILE=/var/run/snort_eth0.pid
 
-# fast -   fast alert mode, write the alert in a simple format with a
-#                timestamp, alert message, source and destination IPs/ports
-#
-# full -   this is also the default alert mode, so if you specify nothing
-#                this will automatically be used
-#
-# unsock - send alerts to a UNIX socket that another program can listen on
-#
-# none -   turn off alerting
-MODE="full"
-
-# Set this to the appropriate network you box lives on
-NETWORK="192.168.1.0/24"
 
 # You probably don't want to change this, but in case you do
 LOGDIR="/var/log/snort"
@@ -24,4 +11,4 @@ LOGDIR="/var/log/snort"
 CONF=/etc/snort/snort.conf
 
 # This pulls in the options above
-SNORT_OPTS="-D -s -u nobody -dev -l $LOGDIR -h $NETWORK -c $CONF"
+SNORT_OPTS="-D -u nobody -dev -l $LOGDIR -c $CONF"
