@@ -1,0 +1,13 @@
+# ChangeLog for app-portage/esearch
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-portage/esearch/ChangeLog,v 1.1 2003/09/19 07:55:25 seemant Exp $
+
+*esearch-0.4.0 (19 Sep 2003)
+
+  19 Sep 2003; Seemant Kulleen <seemant@gentoo.org> esearch-0.4.0.ebuild:
+  new package which speeds up portage searching. David Peter
+  <shark@phpwelt.com> wrote this and submitted in bug #26532.  It should be
+  part of gentoolkit, I suppose, but it works fantastically stand-alone.  To
+  use it, please use eupdatedb regularly, and then esearch instead of
+  "emerge search" and esearch -S instead of "emerge -S"
+
