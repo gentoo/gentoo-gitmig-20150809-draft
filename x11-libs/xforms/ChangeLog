@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/xforms
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/ChangeLog,v 1.19 2004/06/28 19:46:11 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/xforms/ChangeLog,v 1.20 2004/09/03 15:35:20 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  xforms-1.0.90.ebuild:
+  Masked xforms-1.0.90.ebuild stable for ppc
 
   28 Jun 2004; Aron Griffis <agriffis@gentoo.org> xforms-1.0.ebuild:
   add sed-4 dep

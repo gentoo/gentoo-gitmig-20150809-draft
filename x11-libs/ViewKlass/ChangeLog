@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/ViewKlass
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/ViewKlass/ChangeLog,v 1.8 2004/06/24 22:08:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/ViewKlass/ChangeLog,v 1.9 2004/09/03 15:35:19 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  ViewKlass-0.7.0.ebuild:
+  Masked ViewKlass-0.7.0.ebuild testing for ppc
 
   17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> ViewKlass-0.6.0.ebuild,
   ViewKlass-0.7.0.ebuild:

@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/buffy
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/buffy/ChangeLog,v 1.7 2004/06/24 21:58:35 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/buffy/ChangeLog,v 1.8 2004/09/03 15:35:19 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  buffy-0.2-r1.ebuild:
+  Masked buffy-0.2-r1.ebuild testing for ppc
 
   14 Jun 2004; Michael Sterrett <mr_bones_@gentoo.org> buffy-0.2.ebuild:
   clean older ebuild

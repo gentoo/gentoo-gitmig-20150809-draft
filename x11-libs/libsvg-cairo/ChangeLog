@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libsvg-cairo
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsvg-cairo/ChangeLog,v 1.7 2004/06/24 22:05:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libsvg-cairo/ChangeLog,v 1.8 2004/09/03 15:35:20 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  libsvg-cairo-0.1.4.ebuild:
+  Masked libsvg-cairo-0.1.4.ebuild stable for ppc
 
   04 Jun 2004; Jason Wever <weeve@gentoo.org> libsvg-cairo-0.1.4.ebuild:
   Added ~sparc keyword.

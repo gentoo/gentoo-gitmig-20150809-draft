@@ -1,6 +1,10 @@
 # ChangeLog for x11-libs/libzvt
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libzvt/ChangeLog,v 1.19 2004/06/24 22:06:25 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libzvt/ChangeLog,v 1.20 2004/09/03 15:35:20 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  libzvt-2.0.1-r2.ebuild:
+  Masked libzvt-2.0.1-r2.ebuild stable for ppc
 
   17 Apr 2004; Daniel Ahlberg <aliz@gentoo.org> libzvt-2.0.1-r1.ebuild,
   libzvt-2.0.1-r2.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gksu
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.7 2004/07/03 18:27:00 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gksu/ChangeLog,v 1.8 2004/09/03 15:35:19 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> gksu-1.0.5.ebuild:
+  Masked gksu-1.0.5.ebuild stable for ppc
 
   03 Jul 2004; Tom Martin <slarti@gentoo.org> gksu-1.0.5.ebuild:
   Added to ~amd64.

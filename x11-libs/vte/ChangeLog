@@ -1,6 +1,14 @@
 # ChangeLog for x11-libs/vte
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.46 2004/08/23 10:22:06 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/vte/ChangeLog,v 1.47 2004/09/03 15:35:20 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  vte-0.11.10-r1.ebuild, vte-0.11.11.ebuild:
+  Masked vte-0.11.11.ebuild stable for ppc
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org>
+  vte-0.11.10-r1.ebuild:
+  Masked vte-0.11.10-r1.ebuild stable for ppc
 
   23 Aug 2004; Bryan Østergaard <kloeri@gentoo.org> vte-0.11.11.ebuild:
   Stable on alpha.

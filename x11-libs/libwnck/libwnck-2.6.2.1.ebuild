@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/libwnck-2.6.2.1.ebuild,v 1.8 2004/08/22 23:13:57 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/libwnck/libwnck-2.6.2.1.ebuild,v 1.9 2004/09/03 15:35:20 pvdabeel Exp $
 
 inherit gnome2 eutils
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.gnome.org/"
 IUSE=""
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc alpha sparc hppa amd64 ~ia64 ~mips ppc64"
+KEYWORDS="x86 ppc alpha sparc hppa amd64 ~ia64 ~mips ppc64"
 
 RDEPEND=">=x11-libs/gtk+-2.1
 	>=x11-libs/startup-notification-0.4

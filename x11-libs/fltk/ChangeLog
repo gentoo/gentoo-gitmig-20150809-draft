@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/fltk
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.35 2004/08/19 07:53:02 iluxa Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/fltk/ChangeLog,v 1.36 2004/09/03 15:35:19 pvdabeel Exp $
+
+  03 Sep 2004; Pieter Van den Abeele <pvdabeel@gentoo.org> fltk-1.1.4.ebuild:
+  Masked fltk-1.1.4.ebuild stable for ppc
 
   19 Aug 2004; Ilya A. Volynets-Evenbach <iluxa@gentoo.org> fltk-1.1.4.ebuild:
   add ~mips
