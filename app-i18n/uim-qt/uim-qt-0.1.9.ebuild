@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-qt/uim-qt-0.1.7.ebuild,v 1.2 2004/09/10 16:33:09 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-qt/uim-qt-0.1.9.ebuild,v 1.1 2004/09/10 16:33:09 usata Exp $
 
 inherit eutils
 
@@ -14,20 +14,14 @@ KEYWORDS="~x86"
 IUSE=""
 
 DEPEND=">=app-i18n/uim-0.4.3
-	|| ( =x11-libs/qt-3.3.3 =x11-libs/qt-3.3.2 )"
+	>=x11-libs/qt-3.3.3-r1"
 
 S="${WORKDIR}/${PN}"
 
 pkg_setup() {
 	if [ ! -e /usr/qt/3/plugins/inputmethods/libqimsw-none.so ] ; then
-		die "You need to rebuild qt-3.3.3 or qt-3.3.2 with immqt or immqt-bc USE flag enabled."
+		die "You need to rebuild >=x11-libs/qt-3.3.3-r1 with immqt or immqt-bc USE flag enabled."
 	fi
-}
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-thread.diff
 }
 
 src_compile() {

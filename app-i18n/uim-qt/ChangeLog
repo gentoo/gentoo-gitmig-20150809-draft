@@ -1,6 +1,12 @@
 # ChangeLog for app-i18n/uim-qt
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-qt/ChangeLog,v 1.4 2004/09/05 12:22:06 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim-qt/ChangeLog,v 1.5 2004/09/10 16:33:09 usata Exp $
+
+*uim-qt-0.1.9 (11 Sep 2004)
+
+  11 Sep 2004; Mamoru KOMACHI <usata@gentoo.org> uim-qt-0.1.7.ebuild,
+  +uim-qt-0.1.9.ebuild:
+  Version bumped. qt-3.3.3-r1 requires uim-qt-0.1.9.
 
 *uim-qt-0.1.7 (05 Sep 2004)
 
