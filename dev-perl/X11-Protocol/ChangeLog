@@ -1,6 +1,9 @@
 # ChangeLog for dev-perl/X11-Protocol
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/X11-Protocol/ChangeLog,v 1.7 2003/11/17 10:15:11 taviso Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/X11-Protocol/ChangeLog,v 1.8 2004/02/01 21:31:48 avenj Exp $
+
+  01 Feb 2004; Jon Portnoy <avenj@gentoo.org> X11-Protocol-0.52.ebuild :
+  AMD64 keywords.
 
   17 Nov 2003; Tavis Ormandy <taviso@gentoo.org> X11-Protocol-0.52.ebuild:
   stable.
