@@ -1,6 +1,6 @@
 MD5 a8499094f68d2290d2fdac0e59cdcbb8 dhcpcd-1.3.22_p4-r5.ebuild 2131
 MD5 ebf2d28b31e49922c277fbea6128fe72 dhcpcd-1.3.22_p4-r4.ebuild 1890
-MD5 a8470dde5bedae0388228c7d658cd257 ChangeLog 5366
+MD5 e7ae278e6d4be7b5b868ba5105f2d0e1 ChangeLog 5398
 MD5 e5580d4472c718a772f6e1c700757968 files/dhcpcd-1.3.22_p4-no-iface-down.diff 2606
 MD5 daaf0c8fa44a481c8943f585ff870714 files/digest-dhcpcd-1.3.22_p4-r4 224
 MD5 daaf0c8fa44a481c8943f585ff870714 files/digest-dhcpcd-1.3.22_p4-r5 224
