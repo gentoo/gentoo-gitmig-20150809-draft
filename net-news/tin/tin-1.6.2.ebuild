@@ -1,18 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# Michael Conrad Tilstra <tadpol@gentoo.org> <tadpol@tadpol.org>
-# $Header: /var/cvsroot/gentoo-x86/net-news/tin/tin-1.6.2.ebuild,v 1.3 2004/04/23 19:20:20 fmccor Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/tin/tin-1.6.2.ebuild,v 1.4 2004/05/28 17:37:22 vapier Exp $
 
-IUSE="ncurses ipv6"
-
-S=${WORKDIR}/${P}
 DESCRIPTION="A threaded NNTP and spool based UseNet newsreader"
-SRC_URI="ftp://ftp.tin.org/pub/news/clients/tin/v1.6/${P}.tar.gz"
 HOMEPAGE="http://www.tin.org/"
+SRC_URI="ftp://ftp.tin.org/pub/news/clients/tin/v1.6/${P}.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~ia64 ~amd64 ~sparc"
+SLOT="0"
+KEYWORDS="~x86 ~sparc arm ~amd64 ~ia64"
+IUSE="ncurses ipv6"
 
 DEPEND="ncurses? ( sys-libs/ncurses )"
 

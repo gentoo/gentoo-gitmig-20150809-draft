@@ -1,15 +1,15 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/nget/nget-0.26.ebuild,v 1.1 2004/02/25 18:33:35 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/nget/nget-0.26.ebuild,v 1.2 2004/05/28 17:30:44 vapier Exp $
 
 NPVER=20011209
 DESCRIPTION="Network utility to retrieve files from an NNTP news server"
 HOMEPAGE="http://nget.sourceforge.net/"
 SRC_URI="mirror://sourceforge/nget/${P}+uulib.tar.gz"
 
-SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86"
+SLOT="0"
+KEYWORDS="x86 arm"
 IUSE="static debug"
 
 RDEPEND="virtual/glibc"
@@ -23,8 +23,11 @@ src_compile() {
 #	use ssl || myconf="${myconf} --without-ssl --disable-opie --disable-digest"
 #	use debug && myconf="${myconf} --disable-debug"
 #	use ssl && CFLAGS="${CFLAGS} -I/usr/include/openssl"
-	./configure --prefix=/usr  \
-		--infodir=/usr/share/info --mandir=/usr/share/man $myconf || die
+	./configure \
+		--prefix=/usr  \
+		--infodir=/usr/share/info \
+		--mandir=/usr/share/man \
+		$myconf || die
 	if use static; then
 		make LDFLAGS="--static" || die
 	else
