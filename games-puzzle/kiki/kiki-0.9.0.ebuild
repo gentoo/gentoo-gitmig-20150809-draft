@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/kiki/kiki-0.9.0.ebuild,v 1.2 2004/02/20 06:53:36 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/kiki/kiki-0.9.0.ebuild,v 1.3 2004/04/21 19:03:10 mr_bones_ Exp $
 
 inherit games
 
@@ -18,7 +18,7 @@ IUSE=""
 RDEPEND=">=media-libs/libsdl-1.2
 		>=media-libs/sdl-image-1.2.2
 		>=media-libs/sdl-mixer-1.2.5
-		>=dev-lang/python-2.2
+		=dev-lang/python-2.2*
 		virtual/glut"
 DEPEND="${RDEPEND}
 	>=sys-devel/gcc-3
@@ -31,6 +31,7 @@ src_unpack() {
 	# There are CVS directories in the tgz file
 	rm -rf `find -name CVS -type d`
 	rm -rf `find -name .cvsignore`
+	chmod a-x kiki_src/kiki/sounds/*.*
 
 	# Change the hard-coded data dir for sounds, etc...
 	sed -i \

@@ -1,6 +1,10 @@
 # ChangeLog for games-puzzle/kiki
-# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-puzzle/kiki/ChangeLog,v 1.2 2003/09/10 15:46:09 vapier Exp $
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-puzzle/kiki/ChangeLog,v 1.3 2004/04/21 19:03:10 mr_bones_ Exp $
+
+  21 Apr 2004; Michael Sterrett <mr_bones_@gentoo.org> kiki-0.9.0.ebuild:
+  source has hard-coded python 2.2 stuff.  Didn't work with python 2.3.3 either
+  so locking it into 2.2 for now.  Patches welcome. (bug #48521)
 
 *kiki-0.9.0 (05 Aug 2003)
 
