@@ -14,7 +14,10 @@ INHERITED="$INHERITED $ECLASS"
 #### replace-flags <orig.flag> <new.flag> ###
 # Replace a flag by another one
 #
-
+#### is-flag <flag> ####
+# Returns "true" if flag is set in C[XX]FLAGS
+# Matches only complete flag
+#
 
 filter-flags () {
 
@@ -37,5 +40,16 @@ replace-flags () {
 
 	CFLAGS="${CFLAGS/${1}/${2}}"
 	CXXFLAGS="${CXXFLAGS/${1}/${2}}"
+
+}
+
+is-flag() {
+
+	for x in $CFLAGS $CXXFLAGS; do
+	    if [ "$x" == "$1" ]; then
+		echo true
+		break
+	    fi
+	done
 
 }
