@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2770 2004/03/24 02:26:23 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2771 2004/03/24 02:34:37 spyderous Exp $
 #
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
@@ -389,8 +389,6 @@ app-portage/kportage
 # <solar@gentoo.org> (Dec 10 2003) 
 # masked for security reasons, see bug #30554 
 <=net-www/jboss-3.2.1-r1
-# bug #34599
-<app-misc/screen-4.0.1-r1
 
 # <genone@gentoo.org> (30 Nov 2003)
 # Service is down, current versions won't work with the new service
