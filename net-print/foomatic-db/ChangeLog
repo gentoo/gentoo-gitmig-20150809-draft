@@ -1,10 +1,14 @@
 # ChangeLog for net-print/foomatic-db
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/ChangeLog,v 1.9 2004/02/23 00:53:39 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-print/foomatic-db/ChangeLog,v 1.10 2004/03/02 13:28:04 lanius Exp $
 
   22 Feb 2004; Aron Griffis <agriffis@gentoo.org> foomatic-db-20031018.ebuild,
   foomatic-db-20031231.ebuild:
   add ia64 keywords
+
+  02 Mar 2004; Heinrich Wendel <lanius@gentoo.org>
+  foomatic-db-20030716.ebuild, foomatic-db-20031231.ebuild:
+  remove old version; mark 20031231 stable, add 20040302
 
 *foomatic-db-20031231 (31 Dec 2003)
 
