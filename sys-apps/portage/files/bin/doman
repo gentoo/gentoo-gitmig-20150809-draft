@@ -12,7 +12,6 @@ fi
 for x in "$@"
 do
 	md=${x##*.}
-	mandir
 	mandir=man${md:0:1}
 	if [ -e ${x} ]
 	then

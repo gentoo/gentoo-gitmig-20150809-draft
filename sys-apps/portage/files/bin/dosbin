@@ -14,7 +14,7 @@ if [ ${#} -lt 1 ]
 	then
             if [ -z "$DEBUG" ]
             then
-	        local MYVAL=`file ${x} | grep "ELF"` 
+	        MYVAL=`file ${x} | grep "ELF"` 
 	        if [ "$MYVAL" ]
 	        then
 		    strip ${x}
