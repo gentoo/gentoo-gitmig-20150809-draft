@@ -1,7 +1,7 @@
-# Copyright 1999-2000 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jerry Alexandratos <jerry@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-1.2.10.ebuild,v 1.1 2002/03/20 02:57:17 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/gkrellm/gkrellm-1.2.10.ebuild,v 1.2 2002/03/21 15:17:17 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Single process stack of various system monitors"
@@ -32,8 +32,7 @@ src_install () {
 		LOCALEDIR=${D}/usr/share/locale
 
 	dodoc COPYRIGHT README Changelog
-	docinto html
-	dodoc Changelog-plugins.html Changelog-themes.html Themes.html
+	dohtml Changelog-plugins.html Changelog-themes.html Themes.html
 }
 
 
