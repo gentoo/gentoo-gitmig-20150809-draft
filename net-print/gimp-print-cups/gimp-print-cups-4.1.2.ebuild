@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
-# $Header $
+# $Header: /var/cvsroot/gentoo-x86/net-print/gimp-print-cups/gimp-print-cups-4.1.2.ebuild,v 1.2 2002/01/08 07:37:04 woodchip Exp $
 
 DESCRIPTION="The Common Unix Printing System - Gimp Print Drivers"
 HOMEPAGE="http://www.cups.org"

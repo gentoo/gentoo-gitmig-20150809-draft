@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Donny Davies <woodchip@gentoo.org>
-# $Header $
+# $Header: /var/cvsroot/gentoo-x86/net-print/LPRng/LPRng-3.8.4.ebuild,v 1.2 2002/01/08 07:37:28 woodchip Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Extended implementation of the Berkley LPR print spooler"
