@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.28.2.0.2.ebuild,v 1.2 2004/11/26 17:10:45 dsd Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/grsec-sources-2.4.28.2.0.2.ebuild,v 1.3 2004/11/26 17:14:49 dsd Exp $
 
 ETYPE="sources"
 UNIPATCH_STRICTORDER="yes"
@@ -13,9 +13,9 @@ PATCH_BASE="${PATCH_BASE/_/-}"
 EXTRAVERSION="-grsec-${PATCH_BASE}"
 KV_FULL="${OKV}${EXTRAVERSION}"
 
-PATCH_SRC_BASE="grsecurity-${PATCH_BASE}-${OKV}.patch"
+PATCH_SRC_BASE="grsecurity-${PATCH_BASE}-${OKV}.patch.gz"
 DESCRIPTION="Vanilla sources of the linux kernel with the grsecurity ${PATCH_BASE} patch"
-SRC_URI="http://grsecurity.net/grsecurity-${PATCH_BASE}-${OKV}.patch \
+SRC_URI="http://grsecurity.net/grsecurity-${PATCH_BASE}-${OKV}.patch.gz \
 	http://www.kernel.org/pub/linux/kernel/v2.4/linux-${OKV}.tar.bz2"
 
 HOMEPAGE="http://www.kernel.org/ http://www.grsecurity.net"
