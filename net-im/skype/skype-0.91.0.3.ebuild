@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-0.91.0.3.ebuild,v 1.2 2004/08/23 18:10:50 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/skype-0.91.0.3.ebuild,v 1.3 2004/09/05 16:13:29 aliz Exp $
 
 inherit eutils
 
@@ -13,10 +13,18 @@ SRC_URI="
 		!qt? ( http://download.skype.com/linux/${PN}_ver-${SVER}-staticQT.tar.bz2 )"
 LICENSE="skype-eula"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~amd64"
 IUSE="qt arts esd"
-DEPEND="qt? ( >=x11-libs/qt-3.2 )
-		>=sys-libs/glibc-2.2.5"
+DEPEND="amd64? ( app-emulation/emul-linux-x86-glibc 
+		app-emulation/emul-linux-x86-xlibs 
+		app-emulation/emul-linux-x86-compat
+		app-emulation/emul-linux-x86-baselibs 
+		qt? ( app-emulation/emul-linux-x86-qtlibs )
+	)
+	x86? ( qt? ( >=x11-libs/qt-3.2 )
+		>=sys-libs/glibc-2.2.5
+	)"
+
 S="${WORKDIR}/${PN}_ver_${SVER}"
 
 src_unpack() {

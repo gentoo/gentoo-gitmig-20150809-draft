@@ -1,6 +1,9 @@
 # ChangeLog for net-im/skype
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.14 2004/09/04 16:37:23 humpback Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/skype/ChangeLog,v 1.15 2004/09/05 16:13:29 aliz Exp $
+
+  05 Sep 2004; Daniel Ahlberg <aliz@gentoo.org> skype-0.91.0.3.ebuild:
+  Added amd64 keyword, closing #58658.
 
 *skype-0.91.0.12 (04 Sep 2004)
 
