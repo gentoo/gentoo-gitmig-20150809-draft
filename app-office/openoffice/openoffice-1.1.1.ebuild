@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.1.ebuild,v 1.5 2004/04/11 11:14:50 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.1.ebuild,v 1.6 2004/04/11 15:54:31 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -47,7 +47,6 @@ export WANT_GCC_3="yes"
 #        Setting this to anything but "1" on my pentium4 causes things
 #        to segfault :(
 [ -z "${ECPUS}" ] && export ECPUS="1"
-
 
 LOC="/opt"
 INSTDIR="${LOC}/OpenOffice.org"
@@ -265,6 +264,9 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}/nptl.patch
 
 	epatch ${FILESDIR}/${PV}/openoffice-java.patch
+
+	#Work around recent portage sandbox troubles
+	epatch ${FILESDIR}/${PV}/build.patch
 
 #	if [ ${ARCH} = "sparc" ]; then
 #		epatch ${FILESDIR}/${PV}/openoffice-1.1.0-sparc64-fix.patch
