@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exception-Class/Exception-Class-1.07.ebuild,v 1.4 2003/02/13 11:07:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Exception-Class/Exception-Class-1.12.ebuild,v 1.1 2003/04/22 23:15:41 rac Exp $
 
 inherit perl-module
 
