@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.2.0.ebuild,v 1.1 2003/12/30 23:12:19 warpzero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/apmd/apmd-3.2.0.ebuild,v 1.2 2003/12/31 13:53:36 plasmaroo Exp $
 
 inherit eutils
 
@@ -42,19 +42,19 @@ src_unpack() {
 	epatch ${FILESDIR}/apmsleep.c.diff.3.2.0
 
 	# This closes bug #29636: needs 2.6 patching [plasmaroo@gentoo.org]
-	#epatch ${FILESDIR}/apmd.kernel26x.patch
-	#this doesn't seem to be needed anymore [warpzero@gentoo.org]
+	# If this does not compile with newer versions, rediff the patch
+	# and DO NOT just ignore it.
+	epatch ${FILESDIR}/apmd-3.2.0.kernel26x.patch
 }
 
 src_compile() {
-	#make CFLAGS="${CFLAGS}" || die "compile problem"
 	emake || die
 }
 
 S="${WORKDIR}/${PN}-${PV}.orig"
 
 src_install() {
-	make DESTDIR=${D} install || die "install failed"
+	make DESTDIR=${D} PREFIX=/usr install || die "install failed"
 
 	dodir /etc/apm/{event.d,suspend.d,resume.d}
 	exeinto /etc/apm ; doexe debian/apmd_proxy
@@ -71,4 +71,5 @@ src_install() {
 	then
 		rm -rf ${D}/usr/share/man/fr
 	fi
+
 }
