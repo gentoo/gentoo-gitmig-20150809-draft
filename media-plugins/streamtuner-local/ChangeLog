@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/streamtuner-local
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/streamtuner-local/ChangeLog,v 1.9 2004/06/24 23:35:07 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/streamtuner-local/ChangeLog,v 1.10 2004/08/27 18:11:15 squinky86 Exp $
+
+  27 Aug 2004; Jon Hood <squinky86@gentoo.org> +files/0.4.0-gcc34.patch,
+  streamtuner-local-0.4.0.ebuild:
+  Add gcc-3.4 patch irt #51846.
 
   12 May 2004; Jeremy Huddleston <eradicator@gentoo.org>
   streamtuner-local-0.4.0.ebuild:

@@ -1,6 +1,17 @@
-MD5 f0c1e3312a86b1a2b7d0888d93b35b5c streamtuner-local-0.4.0.ebuild 738
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 b89a587ba79c6d6f6aef978c74b63a7e streamtuner-local-0.4.0.ebuild 832
 MD5 f7bfb8e93e9e9da7aa1f2801a6787d16 streamtuner-local-0.2.1.ebuild 715
-MD5 1e56158754d8a227a8f2e940704c7c58 ChangeLog 1156
+MD5 fd602723c57955aac772520d95ff7c96 ChangeLog 1298
 MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
+MD5 a42af005d8e16782daf00c3c470ced67 files/0.4.0-gcc34.patch 463
 MD5 dbcd9e078d36fabeda737d6b8e9fa53c files/digest-streamtuner-local-0.2.1 75
 MD5 5a5af1513c37e84669cabf87806622e0 files/digest-streamtuner-local-0.4.0 75
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBL3lMcAgAdbxYsnERApWWAJ0RaLGdnRx7kOIw8LQgaW8i2cNt4QCdF5oP
+o/HwBVW1fn3+VsoSBL4YmU4=
+=W0vi
+-----END PGP SIGNATURE-----
