@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-misc/karamba/karamba-0.17-r1.ebuild,v 1.6 2004/02/04 13:23:36 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/karamba/karamba-0.17-r1.ebuild,v 1.7 2004/02/04 20:34:26 mr_bones_ Exp $
 
 inherit kde-base
 
@@ -17,9 +17,9 @@ newdepend ">=kde-base/kdelibs-3.1
 	>=sys-apps/portage-2.0.26"
 
 src_compile() {
-        local myconf="--enable-libsuffix="
+	local myconf="--enable-libsuffix="
 
-        kde_src_compile all
+	kde_src_compile all
 }
 
 src_install () {
