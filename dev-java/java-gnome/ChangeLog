@@ -1,8 +1,13 @@
 # ChangeLog for dev-java/java-gnome
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.1 2002/02/01 21:53:11 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-gnome/ChangeLog,v 1.2 2002/02/03 17:52:31 karltk Exp $
 
 *java-gnome-0.7.1 (1 Feb 2002)
+
+  2 Feb 2002; Karl Trygve Kalleberg <karltk@gentoo.org> java-gnome-0.7.1.ebuild:
+
+  Fixed compile procedures so that it works with Jikes again.
+
 
   1 Feb 2002; G.Bevin <gbevin@gentoo.org> ChangeLog :
   
