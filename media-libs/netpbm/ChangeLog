@@ -1,6 +1,11 @@
 # ChangeLog for media-libs/netpbm
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.7 2002/12/13 10:59:36 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/ChangeLog,v 1.8 2003/01/05 12:12:18 mholzer Exp $
+
+*netpbm-10.11.4 (04 Jan 2002)
+
+  04 Jan 2002; Martin Holzer <mholzer@gentoo.org> netpbm-10.11.4.ebuild files/digest-netpbm-10.11.4 ChangeLog :
+  Version bumped.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

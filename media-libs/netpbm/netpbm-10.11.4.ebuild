@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-9.12-r4.ebuild,v 1.3 2003/01/05 12:12:18 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/netpbm/netpbm-10.11.4.ebuild,v 1.1 2003/01/05 12:12:18 mholzer Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A set of utilities for converting to/from the netpbm (and related) formats"
@@ -13,7 +13,7 @@ DEPEND=">=media-libs/jpeg-6b
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ppc sparc "
+KEYWORDS="~x86 ~ppc ~sparc"
 
 src_unpack() {
 	unpack ${A}
@@ -39,3 +39,4 @@ src_install () {
 	dodoc COPYRIGHT.PATENT GPL_LICENSE.txt HISTORY \
 		Netpbm.programming README* netpbm.lsm
 }
+
