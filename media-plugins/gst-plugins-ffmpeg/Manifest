@@ -1,8 +1,20 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 2d91003ca1e78da783f2d03e053c9b16 gst-plugins-ffmpeg-0.8.2.ebuild 1189
+MD5 b15cf09e16fa232c3eeae8945d8c6f92 gst-plugins-ffmpeg-0.8.4.ebuild 1475
 MD5 5536b35f64d507a624812bbaefeac98d gst-plugins-ffmpeg-0.8.3.ebuild 1473
 MD5 4dcd3bd9c7c1afd08a532cf008a7008c gst-plugins-ffmpeg-0.8.0.ebuild 1041
-MD5 49cd96460703f7d3d2871abf5c856a7a ChangeLog 2317
+MD5 747134f559645f538eef083b65579e90 ChangeLog 2461
 MD5 6cf6f97e79b43eaf70fa938c431342a3 metadata.xml 181
 MD5 08218449f7831982743033aa8a752314 files/digest-gst-plugins-ffmpeg-0.8.0 70
 MD5 bee099502f714662c0dc1be53cd1b8aa files/digest-gst-plugins-ffmpeg-0.8.2 70
 MD5 b850e943e0aae6df3e751236cb339e0a files/digest-gst-plugins-ffmpeg-0.8.3 70
+MD5 bca5ec805820433590977e10928cc8a3 files/digest-gst-plugins-ffmpeg-0.8.4 70
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFCMexrevY57Fted3ERAi4BAJ9Fz4c8roUfIXAnFtVs/uiWPjoPgwCdFSTr
+o7f7RdYoMkng+wrt3LJRswo=
+=rEtH
+-----END PGP SIGNATURE-----
