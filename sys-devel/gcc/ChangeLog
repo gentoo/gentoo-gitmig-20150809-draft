@@ -1,6 +1,13 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.280 2004/07/04 19:10:29 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.281 2004/07/05 15:34:16 lv Exp $
+
+*gcc-3.4.1 (05 Jul 2004)
+
+  05 Jul 2004; Travis Tilley <lv@gentoo.org>
+  +files/3.4.1/gcc-3.4.1-gentoo-branding.patch, +gcc-3.4.1.ebuild:
+  new version. please see http://gcc.gnu.org/gcc-3.4/changes.html#3.4.1 for more
+  information.
 
 *gcc-3.3.4-r1 (04 Jul 2004)
 
