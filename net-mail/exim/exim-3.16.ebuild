@@ -9,6 +9,10 @@ DESCRIPTION="A highly configurable, drop-in replacement for sendmail"
 SRC_URI="ftp://ftp.exim.org/pub/exim/${A}"
 HOMEPAGE="http://www.exim.org/"
 
+DEPEND=">=sys-libs/glibc-2.1.3
+        >=dev-libs/openssl-0.9.6
+        >=sys-devel/perl-5.6.0"
+
 src_compile() {
     cd ${S}
     mkdir Local
