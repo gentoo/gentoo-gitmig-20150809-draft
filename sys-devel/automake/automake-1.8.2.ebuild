@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.8.2.ebuild,v 1.1 2004/02/03 20:28:14 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/automake/automake-1.8.2.ebuild,v 1.2 2004/02/03 21:27:01 mr_bones_ Exp $
 
 IUSE=""
 
@@ -109,7 +109,7 @@ src_compile() {
 		--mandir=/usr/share/man \
 	--target=${CHOST} || die
 
-    emake || die
+	emake || die
 
 	#
 	# ************ automake-1.7x ************
@@ -257,10 +257,10 @@ src_install() {
 		rm -f ${D}/usr/bin/${x}
 	done
 
-    doinfo doc/automake18.info*
+	doinfo doc/automake18.info*
 
-    docinto ${PV}
-    dodoc COPYING NEWS README THANKS TODO AUTHORS ChangeLog
+	docinto ${PV}
+	dodoc COPYING NEWS README THANKS TODO AUTHORS ChangeLog
 
 	#
 	# ************ automake-1.7x ************
