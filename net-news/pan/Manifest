@@ -1,24 +1,14 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
+MD5 be66bb4b2dcf70166eed980647087ff9 pan-0.13.4.ebuild 1277
+MD5 235829e25c25978db780d8af31d2107f pan-0.14.2.ebuild 1315
+MD5 048aa03061cc46b7e1f65c54e75be6df pan-0.13.3.ebuild 1102
+MD5 2e5b8296b5a671b8b2da149e51aa2c2d pan-0.13.0.ebuild 1096
 MD5 c39ff41b2b5329969f0eec5a3da3ffb3 ChangeLog 5836
 MD5 c986ac5d14086599370000817f4f7135 metadata.xml 180
-MD5 2e5b8296b5a671b8b2da149e51aa2c2d pan-0.13.0.ebuild 1096
-MD5 048aa03061cc46b7e1f65c54e75be6df pan-0.13.3.ebuild 1102
-MD5 a5be0ef495e1ee5a59847cb1e6ef4098 pan-0.13.4.ebuild 1272
-MD5 e3487d6e8453998fe1ef0ef100ead5e8 pan-0.14.0.ebuild 1273
-MD5 20c9663fd070372c37da0172f2178104 pan-0.14.2.ebuild 1310
-MD5 d1a92f699916fac806d3163fd3ee783a pan-0.14.2.91.ebuild 1290
+MD5 f91e19052f75a1eca8ded67742c54453 pan-0.14.2.91.ebuild 1294
+MD5 91bfd7babe001da8e6a31ee543e4d37b pan-0.14.0.ebuild 1277
+MD5 bc715242bd05043ca432fb54b03e2fdf files/digest-pan-0.14.2.91 67
 MD5 cff0105db43ec12604bd9c2987c0ab89 files/digest-pan-0.13.0 64
 MD5 e67e883e39b3cba048e38d29f5808479 files/digest-pan-0.13.3 64
 MD5 c5d7d32aaa4f21e5935f14527f971c78 files/digest-pan-0.13.4 125
 MD5 5a51f7b159e74f73e460503558f6968e files/digest-pan-0.14.0 64
 MD5 179a6776627498e226a1cc2d6bdc33d2 files/digest-pan-0.14.2 64
-MD5 bc715242bd05043ca432fb54b03e2fdf files/digest-pan-0.14.2.91 67
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.4 (GNU/Linux)
-
-iD8DBQFA9c9z04iMKjbTpdgRAraTAJsEKcGRT7gigT1eKUdS6fGN6L6wbACgwo2R
-8kaZE3/PhbkxKs0orm3rqR0=
-=khhO
------END PGP SIGNATURE-----
