@@ -1,6 +1,11 @@
 # ChangeLog for gnome-base/librsvg
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.27 2003/09/07 23:31:39 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/librsvg/ChangeLog,v 1.28 2003/09/08 13:56:38 foser Exp $
+
+*librsvg-2.4.0 (07 Sep 2003)
+
+  07 Sep 2003; foser <foser@gentoo.org> librsvg-2.4.0.ebuild :
+  New version, add zlib use flag for compressed svg support
 
 *librsvg-2.3.1 (07 Sep 2003)
 
