@@ -1,6 +1,23 @@
 # ChangeLog for mail-mta/exim
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.8 2004/07/22 21:38:46 peitolm Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/exim/ChangeLog,v 1.9 2004/08/30 12:30:50 peitolm Exp $
+
+*exim-4.42 (30 Aug 2004)
+
+  30 Aug 2004; Colin Morey <peitolm@gentoo.org> -exim-4.10.ebuild,
+  -exim-4.12.ebuild, -exim-4.14.ebuild, -exim-4.20-r1.ebuild,
+  -exim-4.20-r2.ebuild, -exim-4.20.ebuild, -exim-4.21.ebuild,
+  -exim-4.22.ebuild, -exim-4.24-r1.ebuild, -exim-4.24-r2.ebuild,
+  -exim-4.24-r3.ebuild, -exim-4.24.ebuild, -exim-4.30-r1.ebuild,
+  -exim-4.30.ebuild, -exim-4.31.ebuild, -exim-4.32-r1.ebuild,
+  -exim-4.32.ebuild, -exim-4.33.ebuild, exim-4.41.ebuild, +exim-4.42.ebuild:
+  Pruned out old, vulnerable versions (bug #50217).
+
+*exim-4.42 (30 Aug 2004)
+
+  30 Aug 2004; Colin Morey <peitolm@gentoo.org> exim-4.41.ebuild,
+  +exim-4.42.ebuild:
+  Version bump to 4.42 and stablization of exim-4.41.ebuild
 
 *exim-4.41 (22 Jul 2004)
 
