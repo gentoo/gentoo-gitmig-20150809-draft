@@ -1,6 +1,11 @@
 # ChangeLog for app-misc/endeavour
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/ChangeLog,v 1.12 2003/12/16 00:32:03 avenj Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-misc/endeavour/ChangeLog,v 1.13 2004/01/12 19:34:05 hanno Exp $
+
+*endeavour-2.3.6 (12 Jan 2004)
+
+  12 Jan 2004; Hanno Boeck <hanno@gentoo.org> endeavour-2.3.6.ebuild:
+  Version bump.
 
   15 Dec 2003; Jon Portnoy <avenj@gentoo.org> endeavour-2.3.3.ebuild,
   endeavour-2.3.0.ebuild :
