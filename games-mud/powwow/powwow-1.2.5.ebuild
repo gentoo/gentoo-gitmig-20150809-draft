@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-mud/powwow/powwow-1.2.5.ebuild,v 1.1 2004/08/19 01:57:02 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-mud/powwow/powwow-1.2.5.ebuild,v 1.2 2004/08/30 23:28:37 dholm Exp $
 
 inherit gcc eutils games
 
@@ -10,7 +10,7 @@ SRC_URI="http://linuz.sns.it/~max/powwow/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE=""
 
 DEPEND=">=sys-libs/ncurses-5.2"
