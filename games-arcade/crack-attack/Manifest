@@ -1,4 +1,4 @@
 MD5 0815f3e4ae8caa8f9fc856098b139e6a files/1.1.8-gcc3.patch 8552
 MD5 f323025a014dbaf550a12c4e122d9023 files/digest-crack-attack-1.1.8 70
-MD5 51e46466d762d15e2a2b1c0d1f86e028 crack-attack-1.1.8.ebuild 892
-MD5 44a119b0300518607a00a0da1e977a74 ChangeLog 919
+MD5 2f92d4f2008c025710b722a534d3d8d7 crack-attack-1.1.8.ebuild 895
+MD5 ed3143e55fe4a664d5a822a350f36fb7 ChangeLog 925

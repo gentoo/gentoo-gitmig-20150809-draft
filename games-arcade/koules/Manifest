@@ -1,4 +1,4 @@
-MD5 ccc92d4ab7d61ca482d30192a5ee83ec files/1.4-gcc3.patch 24553
 MD5 a1c0ffbf0eb8f220c9539214524f3275 files/digest-koules-1.4-r1 65
-MD5 857c2a2618f31bf21ab1ffd499af8216 ChangeLog 509
-MD5 2f5a0966449e46cd47c3ae6c715eb819 koules-1.4-r1.ebuild 2358
+MD5 ccc92d4ab7d61ca482d30192a5ee83ec files/1.4-gcc3.patch 24553
+MD5 fb54a8584705f75a43cb9747bc352035 koules-1.4-r1.ebuild 2361
+MD5 014705f37731a809f7471cfb843bf05e ChangeLog 515
