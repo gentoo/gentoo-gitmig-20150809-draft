@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fobbit/fobbit-0.56.ebuild,v 1.6 2004/07/01 07:51:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fobbit/fobbit-0.56.ebuild,v 1.7 2004/07/04 10:31:04 eradicator Exp $
 
 MY_P="${PN}-0.60rc1"
 S="${WORKDIR}/${MY_P}/src"
@@ -47,7 +47,7 @@ src_compile() {
 		mv usbvb-2.4.20.c usbvb.c
 	fi
 
-	make
+	make || die
 }
 
 src_install() {

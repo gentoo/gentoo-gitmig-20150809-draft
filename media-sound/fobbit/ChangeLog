@@ -1,6 +1,9 @@
 # ChangeLog for media-sound/fobbit
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/fobbit/ChangeLog,v 1.5 2004/07/01 07:51:52 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/fobbit/ChangeLog,v 1.6 2004/07/04 10:31:04 eradicator Exp $
+
+  04 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> fobbit-0.56.ebuild:
+  || die
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> fobbit-0.56.ebuild:
   virtual/glibc -> virtual/libc
