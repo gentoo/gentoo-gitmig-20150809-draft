@@ -1,9 +1,19 @@
-MD5 d3b277d9d6a5e93959cf44e37ddc3798 ChangeLog 2292
-MD5 ae96ed03648c7edef2c378536e91de20 gcombust-0.1.52.ebuild 935
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 842a700b7494a6c995ddeb29e49c154f gcombust-0.1.53.ebuild 934
+MD5 9e3028ed67b597ed28c49a3bf6f4bfa8 gcombust-0.1.55.ebuild 1054
+MD5 ae96ed03648c7edef2c378536e91de20 gcombust-0.1.52.ebuild 935
 MD5 d66a18d861893220802d03ef9d4ed1e5 gcombust-0.1.54.ebuild 940
-MD5 e0074f9ba9db9d548c7d8ba61f85057f gcombust-0.1.55.ebuild 946
+MD5 bb60cdfd2f97130514ac875465e934b1 ChangeLog 2405
 MD5 640585b53e3c5c0e02f6edbe3e32ab18 files/digest-gcombust-0.1.52 67
 MD5 83d876f765b3b24ad3a8e1215e072946 files/digest-gcombust-0.1.53 67
 MD5 ab6942c39b304f056d9152604d58250d files/digest-gcombust-0.1.54 67
 MD5 984f834bc69c82ea39efa9884c0ba85d files/digest-gcombust-0.1.55 67
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBoGW+Z/iYVBmujdURAo02AJ99dpy0tYj5FVhdu7TJ8yssEAZd3QCg1vZL
+UsaT8g+YuX2d9mxnrWdqros=
+=9Uhw
+-----END PGP SIGNATURE-----
