@@ -1,0 +1,51 @@
+# Copyright 2002 Interhost ANS, Norway - www.interhost.no
+# Distributed under the terms of the GNU General Public License, v2 or later
+# Written for Portage by Christian Skarby (Interhost ANS, Norway) christian.skarby@interhost.no
+
+CREATE DATABASE IF NOT EXISTS nss_mysql;
+USE nss_mysql;
+
+CREATE TABLE IF NOT EXISTS groups (
+  group_id int(11) NOT NULL auto_increment primary key,
+  group_name varchar(30) DEFAULT '' NOT NULL,
+  status	char(1) DEFAULT 'A',
+  group_password varchar(64) DEFAULT 'x' NOT NULL,
+  gid int(11) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS user_group (
+  user_id int(11) DEFAULT '0' NOT NULL,
+  group_id int(11) DEFAULT '0' NOT NULL
+  );
+
+CREATE TABLE IF NOT EXISTS user (
+  user_id int(11) NOT NULL auto_increment primary key,
+  user_name varchar(50) DEFAULT '' NOT NULL,
+  realname varchar(32) DEFAULT '' NOT NULL,
+  shell varchar(20) DEFAULT '/bin/sh' NOT NULL,
+  password varchar(40) DEFAULT '' NOT NULL,
+  status char(1) DEFAULT 'N' NOT NULL,
+  uid int(11) NOT NULL,
+  gid int(11) DEFAULT '65534' NOT NULL,
+  homedir varchar(32) DEFAULT '/bin/sh' NOT NULL,
+  lastchange int(11),
+  min int(11),
+  max int(11),
+  warn int(11),
+  inact int(11),
+  expire int(11)
+ );
+
+GRANT select(user_name,user_id,uid,gid,realname,shell,homedir,status) 
+   on  nss_mysql.user to nss@localhost identified by 'password';
+GRANT select(group_name,group_id,gid,group_password,status) 
+   on nss_mysql.groups to nss@localhost identified by 'password';
+GRANT select(user_id,group_id) 
+   on nss_mysql.user_group to nss@localhost identified by 'password';
+GRANT SELECT,INSERT,UPDATE,DELETE
+   on nss_mysql.user to 'nss-shadow'@localhost identified by 'another_password';
+GRANT SELECT,INSERT,UPDATE,DELETE
+   on nss_mysql.groups to 'nss-shadow'@localhost identified by 'another_password';
+GRANT SELECT,INSERT,UPDATE,DELETE
+   on nss_mysql.user_group to 'nss-shadow'@localhost identified by 'another_password';
+FLUSH PRIVILEGES;
