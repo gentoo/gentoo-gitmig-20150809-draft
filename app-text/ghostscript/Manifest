@@ -1,8 +1,5 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
 MD5 40cb9de588f9d7b84c71b45be2ff8d69 ghostscript-7.07.1-r5.ebuild 4028
-MD5 d67e10bc0c37e8bba5c909b80cc97961 ghostscript-7.07.1-r7.ebuild 4151
+MD5 42fc4e1e0c6e0accbea8a54943615afb ghostscript-7.07.1-r7.ebuild 4149
 MD5 2db7df35be7d9e0921a6ab5c72c02f67 ghostscript-7.07.1-r2.ebuild 3295
 MD5 4c43a0cacba1f4a15e9578ed603257fd ghostscript-7.05.6.ebuild 2739
 MD5 a61c4af42b77a20abcd7330f20a70162 ghostscript-7.05.6-r2.ebuild 2806
@@ -41,10 +38,3 @@ MD5 3d1cdf07dabc4a05bde9a2dc6f7da2de files/gs7.07.1-fontconfig-rh.patch.bz2 6121
 MD5 68fa21d11a860c222c8ba89c39ce578e files/gs7.05.6-gdevpx.patch 402
 MD5 ac6af6bf67095500ea043aea27062d62 files/gs7.07.1-ijs.patch 401
 MD5 06fe485954243190f4f0f4d8e1542f92 files/gs7.07.1-cjk.diff.bz2 3055
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBs4xfI1lqEGTUzyQRAjIEAJ0RcLCVwOc7dBhs38iOluth/tOdXwCfRaAl
-AUpa7nV/LHH27ngpLnWIORQ=
-=iQdQ
------END PGP SIGNATURE-----
