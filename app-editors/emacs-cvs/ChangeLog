@@ -1,6 +1,13 @@
 # ChangeLog for app-editors/emacs-cvs
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.20 2004/06/30 02:31:54 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/emacs-cvs/ChangeLog,v 1.21 2004/07/01 18:07:26 usata Exp $
+
+*emacs-cvs-22.0.0 (02 Jul 2004)
+*emacs-cvs-21.3.50-r1 (02 Jul 2004)
+
+  02 Jul 2004; Mamoru KOMACHI <usata@gentoo.org> +emacs-cvs-21.3.50-r1.ebuild,
+  +emacs-cvs-22.0.0.ebuild:
+  Added emacs-unicode-2 branch, partial SLOT support.
 
   29 Jun 2004; Aron Griffis <agriffis@gentoo.org> emacs-cvs-21.3.50.ebuild:
   sync IUSE (+gif, +jpeg, +png, +tiff, -gtk2)
