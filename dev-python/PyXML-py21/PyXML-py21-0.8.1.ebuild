@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyXML-py21/PyXML-py21-0.8.1.ebuild,v 1.2 2003/04/05 22:24:38 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyXML-py21/PyXML-py21-0.8.1.ebuild,v 1.3 2003/06/21 22:30:23 drobbins Exp $
 
 PYTHON_SLOT_VERSION=2.1
 
@@ -12,7 +12,7 @@ DESCRIPTION="A collection of libraries to process XML with Python."
 SRC_URI="mirror://sourceforge/pyxml/${P_NEW}.tar.gz"
 HOMEPAGE="http://pyxml.sourceforge.net/"
 SLOT="0"
-KEYWORDS="x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 amd64 ~ppc ~sparc ~alpha"
 LICENSE="PYTHON"
 IUSE=""
 

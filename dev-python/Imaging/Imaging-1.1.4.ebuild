@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Imaging/Imaging-1.1.4.ebuild,v 1.1 2003/06/02 12:59:22 liquidx Exp $ 
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Imaging/Imaging-1.1.4.ebuild,v 1.2 2003/06/21 22:30:23 drobbins Exp $ 
 
 inherit distutils
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.pythonware.com/products/pil/index.htm"
 SRC_URI="http://www.effbot.org/downloads/${P}.tar.gz"
 
 SLOT="0"
-KEYWORDS="~x86 ~sparc ~alpha ~ppc"
+KEYWORDS="x86 amd64 ~sparc ~alpha ~ppc"
 LICENSE="as-is"
 
 DEPEND="virtual/python

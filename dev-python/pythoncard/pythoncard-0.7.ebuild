@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pythoncard/pythoncard-0.7.ebuild,v 1.1 2003/04/20 01:59:03 blauwers Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pythoncard/pythoncard-0.7.ebuild,v 1.2 2003/06/21 22:30:25 drobbins Exp $
 
 inherit distutils
 
@@ -11,7 +11,7 @@ LICENSE="PYTHON"
 
 DEPEND=">=dev-python/wxPython-2.3.2.1-r2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 amd64 ~sparc"
 
 S=${WORKDIR}/PythonCardPrototype-${PV}
 

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Imaging-py21/Imaging-py21-1.1.3-r1.ebuild,v 1.2 2003/04/05 20:02:33 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Imaging-py21/Imaging-py21-1.1.3-r1.ebuild,v 1.3 2003/06/21 22:30:23 drobbins Exp $
 
 PYTHON_SLOT_VERSION="2.1"
 
@@ -19,7 +19,7 @@ DEPEND=">=media-libs/jpeg-6a
 	tcltk? ( dev-lang/tk )"
 	
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 amd64 ~ppc"
 LICENSE="as-is"
 
  src_compile() {

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/bonobo-python/bonobo-python-0.2.0-r3.ebuild,v 1.3 2003/02/13 11:33:33 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/bonobo-python/bonobo-python-0.2.0-r3.ebuild,v 1.4 2003/06/21 22:30:24 drobbins Exp $
 
 IUSE=""
 
@@ -16,7 +16,7 @@ DEPEND="=x11-libs/gtk+-1.2*
 	virtual/python"
 
 SLOT="0"
-KEYWORDS="x86 sparc alpha"
+KEYWORDS="x86 amd64 sparc alpha"
 LICENSE="GPL-2"
 
 src_unpack() {

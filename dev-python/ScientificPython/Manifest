@@ -1,5 +1,5 @@
-MD5 22ea3a24f6c4974fbfdeb440b29b2189 ScientificPython-2.2-r1.ebuild 776
 MD5 2ef573c57e2a8c80a3fb02db3466993c ChangeLog 1465
-MD5 b688e46f1fadf4dad6380db3304993ca ScientificPython-2.4.3.ebuild 789
+MD5 a619811387cca438f3d3b40ceb5e39ce ScientificPython-2.2-r1.ebuild 784
+MD5 3c18279c575a4cee4222e920ce858cf1 ScientificPython-2.4.3.ebuild 796
 MD5 dfa7ad22fed0bcb416294783fb84bb6c files/digest-ScientificPython-2.2-r1 72
 MD5 79c71d20dabb984dca635936b7736c0a files/digest-ScientificPython-2.4.3 74

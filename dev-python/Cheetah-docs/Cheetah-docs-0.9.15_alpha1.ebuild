@@ -1,12 +1,12 @@
 # Copyright 2003 Arcady Genkin <agenkin@gentoo.org>.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Cheetah-docs/Cheetah-docs-0.9.15_alpha1.ebuild,v 1.2 2003/05/22 17:23:27 agenkin Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Cheetah-docs/Cheetah-docs-0.9.15_alpha1.ebuild,v 1.3 2003/06/21 22:30:23 drobbins Exp $
 
 DESCRIPTION="Documentation for Cheetah templates."
 HOMEPAGE="http://www.cheetahtemplate.org/"
 LICENSE="PSF-2.2"
 
-KEYWORDS="x86"
+KEYWORDS="x86 amd64"
 SLOT="0"
 
 DEPEND=""

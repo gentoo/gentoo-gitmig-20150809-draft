@@ -1,6 +1,6 @@
 # Copyright 2002-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg-py21/psycopg-py21-1.1.2.ebuild,v 1.2 2003/04/05 20:44:54 kutsuya Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/psycopg-py21/psycopg-py21-1.1.2.ebuild,v 1.3 2003/06/21 22:30:24 drobbins Exp $
 
 P_NEW="${PN%-py21}-${PV}"
 S="${WORKDIR}/${P_NEW}"
@@ -13,7 +13,7 @@ DEPEND="=dev-lang/python-2.1*
 	>=dev-db/postgresql-7.1.3"
 
 SLOT="0"
-KEYWORDS="x86 ~ppc"
+KEYWORDS="x86 amd64 ~ppc"
 LICENSE="GPL-2"
 
 src_compile() {

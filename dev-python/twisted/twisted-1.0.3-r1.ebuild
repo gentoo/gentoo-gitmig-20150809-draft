@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-1.0.3-r1.ebuild,v 1.1 2003/04/10 22:14:01 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/twisted/twisted-1.0.3-r1.ebuild,v 1.2 2003/06/21 22:30:25 drobbins Exp $
 
 IUSE="gtk2 doc"
 
@@ -13,7 +13,7 @@ SLOT="0"
 DEPEND="virtual/python
 	>=dev-python/pycrypto-1.9_alpha4
 	gtk2? ( =dev-python/pygtk-0.6* ) : ( >=dev-python/pygtk-1.99 )"
-KEYWORDS="~x86 ~alpha ~sparc "
+KEYWORDS="x86 amd64 ~alpha ~sparc "
 
 inherit distutils
 

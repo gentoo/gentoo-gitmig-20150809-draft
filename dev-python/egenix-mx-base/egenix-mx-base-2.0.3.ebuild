@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/egenix-mx-base-2.0.3.ebuild,v 1.10 2003/02/13 11:33:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/egenix-mx-base/egenix-mx-base-2.0.3.ebuild,v 1.11 2003/06/21 22:30:24 drobbins Exp $
 
 
 S=${WORKDIR}/${P}
@@ -12,7 +12,7 @@ DEPEND="virtual/python"
 RDEPEND="${RDEPEND}"
 
 SLOT="0"
-KEYWORDS="x86 sparc alpha"
+KEYWORDS="x86 amd64 sparc alpha"
 LICENSE="eGenixPublic"
 #please note, there is also a possibility to buy a commercial license
 #from egenix.com

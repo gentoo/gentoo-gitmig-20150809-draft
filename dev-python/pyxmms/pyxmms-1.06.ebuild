@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxmms/pyxmms-1.06.ebuild,v 1.1 2003/04/07 15:05:27 chouser Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyxmms/pyxmms-1.06.ebuild,v 1.2 2003/06/21 22:30:25 drobbins Exp $
 
 inherit distutils
 
@@ -10,7 +10,7 @@ SRC_URI="http://www.via.ecp.fr/~flo/2002/PyXMMS/dist/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="alpha x86"
+KEYWORDS="x86 amd64"
 IUSE=""
 
 DEPEND=">=dev-lang/python-2.2.2"

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyOpenSSL/pyOpenSSL-0.5.1.ebuild,v 1.4 2003/03/11 09:34:12 lordvan Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyOpenSSL/pyOpenSSL-0.5.1.ebuild,v 1.5 2003/06/21 22:30:24 drobbins Exp $
 
 IUSE="tetex"
 
@@ -14,7 +14,7 @@ RDEPEND="virtual/python
 	>=dev-libs/openssl-0.9.6g"
 DEPEND="$RDEPEND
         tetex? >=app-text/latex2html-2002.1-r1"
-KEYWORDS="~x86"
+KEYWORDS="x86 amd64"
 
 inherit distutils
 

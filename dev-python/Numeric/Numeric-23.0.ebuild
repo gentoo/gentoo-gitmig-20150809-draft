@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/Numeric/Numeric-23.0.ebuild,v 1.1 2003/04/03 18:46:33 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/Numeric/Numeric-23.0.ebuild,v 1.2 2003/06/21 22:30:23 drobbins Exp $
 
 IUSE=""
 
@@ -15,7 +15,7 @@ HOMEPAGE="http://www.pfdubois.com/numpy/"
 DEPEND=">=dev-lang/python-2.2"
 
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha"
+KEYWORDS="x86 amd64 ~ppc ~sparc ~alpha"
 LICENSE="as-is"
 
 src_install() {
