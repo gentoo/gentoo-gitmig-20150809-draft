@@ -1,13 +1,14 @@
 # ChangeLog for x11-plugins/gkrellmoon
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmoon/ChangeLog,v 1.3 2002/11/11 07:16:12 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellmoon/ChangeLog,v 1.4 2002/11/11 07:39:26 seemant Exp $
 
 *gkrellmoon-0.5 (10 Nov 2002)
  
   10 Nov 2002; Seemant Kulleen <seemant@gentoo.org> gkrellmoon-0.5.ebuild
   files/digest-gkrellmoon-0.5.ebuild :
 
-  New version for GkrellM2
+  New version for GkrellM2. Thanks to: absinthe@pobox.com (Dylan Carlson) in
+  bug #10528
 
 *gkrellmoon-0.3 (19 Feb 2002)
 
