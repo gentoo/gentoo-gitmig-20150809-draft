@@ -1,6 +1,11 @@
 # ChangeLog for net-analyzer/ettercap
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.15 2003/06/12 08:56:37 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ettercap/ChangeLog,v 1.16 2003/07/24 00:11:33 vapier Exp $
+
+*ettercap-0.6.11 (23 Jul 2003)
+
+  23 Jul 2003; Mike Frysinger <vapier@gentoo.org> :
+  Version bump.
 
 *ettercap-0.6.10-r1 (12 Jun 2003)
 
