@@ -1,6 +1,6 @@
 # ChangeLog for sys-kernel/linux-headers
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.15 2003/03/24 05:02:07 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-headers/ChangeLog,v 1.16 2003/03/28 01:52:41 gmsoft Exp $
 
 *linux-headers-2.4.17-r4 (11 Mar 2003)
 
@@ -14,10 +14,14 @@
   linux-headers-2.4.20.ebuild:
   add virtual/os-headers PROVIDE
 
-  15 Feb 2003; Guy Martin <gmsoft@gentoo.org> linux-headers-2.4.20.ebuild :
-  Updated hppa patch level from 23 to 26.
 
 *linux-headers-2.4.20 (06 Feb 2003)
+
+  28 Mar 2003; Guy Martin <gmsoft@gentoo.org> linux-headers-2.4.20.ebuild :
+  Added building of include/asm/offset.h on hppa.
+
+  15 Feb 2003; Guy Martin <gmsoft@gentoo.org> linux-headers-2.4.20.ebuild :
+  Updated hppa patch level from 23 to 26.
 
   06 Feb 2003; Guy Martin <gmsoft@gentoo.org> linux-headers-2.4.20.ebuild :
   Released 2.4.20 needed for hppa. Others archs are masked.

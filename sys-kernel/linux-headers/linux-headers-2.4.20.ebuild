@@ -88,6 +88,8 @@ src_compile() {
 		yes "" | make oldconfig		
 		echo "Ignore any errors from the yes command above."
 	fi
+	# This generate the file offset.h
+	[ "${KERNEL_ARCH}" = "parisc" ] && make archdep
 }
 
 src_install() {
