@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.34_rc2.ebuild,v 1.1 2004/12/12 16:42:39 zypher Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/avidemux/avidemux-2.0.34_rc2.ebuild,v 1.2 2004/12/14 12:10:21 eradicator Exp $
 
 inherit eutils flag-o-matic
 
@@ -12,15 +12,15 @@ SRC_URI="http://download.berlios.de/${PN}/${MY_P}.tgz"
 LICENSE="GPL-2"
 SLOT="2"
 KEYWORDS="~x86 ~ppc ~amd64"
-IUSE="a52 alsa altivec arts debug encode faac faad mad mmx nls oggvorbis pic sdl truetype xvid xv"
+IUSE="a52 aac alsa altivec arts debug encode mad mmx nls oggvorbis pic sdl truetype xvid xv"
 
 RDEPEND="virtual/x11
 	a52? ( >=media-libs/a52dec-0.7.4 )
 	encode? ( >=media-sound/lame-3.93 )
 	>=dev-libs/libxml2-2.6.7
 	>=x11-libs/gtk+-2.4.1
-	faac? ( >=media-libs/faac-1.23.5 )
-	faad? ( >=media-libs/faad2-2.0-r2 )
+	aac? ( >=media-libs/faac-1.23.5
+	       >=media-libs/faad2-2.0-r2 )
 	mad? ( media-libs/libmad )
 	xvid? ( >=media-libs/xvid-1.0.0 )
 	x86? ( dev-lang/nasm )
@@ -64,8 +64,7 @@ src_compile() {
 	use a52 || export ac_cv_header_a52dec_a52=no
 
 	use debug && myconf="${myconf} --enable-debug=full"
-	use faac || myconf="${myconf} --disable-faac"
-	use faad || myconf="${myconf} --disable-faad"
+	use aac || myconf="${myconf} --disable-faac --disable-faad"
 	use mmx || myconf="${myconf} --disable-mmx"
 
 	econf \
