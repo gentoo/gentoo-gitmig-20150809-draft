@@ -10,7 +10,7 @@ SRC_URI="http://open.nit.ca/download/${P}.0.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~sparc ~alpha ~amd64 ~hppa"
-IUSE="gtk qt oggvorbis speex fam berkdb gdbm pam"
+IUSE="gtk qt oggvorbis speex fam gdbm pam"
 
 RDEPEND="gtk? ( >=x11-libs/gtk+-2.2.0 )
 	qt? ( >=x11-libs/qt-3.0.5 )

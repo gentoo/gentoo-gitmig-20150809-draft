@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-3.75.ebuild,v 1.6 2004/07/01 22:27:54 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/wvstreams/wvstreams-3.75.ebuild,v 1.7 2004/07/13 21:47:19 mr_bones_ Exp $
 
 inherit eutils
 
@@ -11,7 +11,7 @@ SRC_URI="http://people.nit.ca/~jim/${P}.0.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~x86 ~sparc -alpha ~amd64 -hppa ~ppc"
-IUSE="gtk qt oggvorbis speex fam berkdb gdbm pam"
+IUSE="gtk qt oggvorbis speex fam gdbm pam"
 
 RDEPEND="gtk? ( >=x11-libs/gtk+-2.2.0 )
 	qt? ( >=x11-libs/qt-3.0.5 )
