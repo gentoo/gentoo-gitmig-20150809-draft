@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.19.ebuild,v 1.3 2003/03/11 21:11:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mips-sources/mips-sources-2.4.19.ebuild,v 1.4 2003/03/24 23:21:30 drobbins Exp $
 
 #OKV=original kernel version, KV=patched kernel version.  They can be the same.
 
@@ -33,7 +33,7 @@ then
 	DEPEND=">=sys-devel/binutils-2.13.90.0.16"
 	RDEPEND=">=sys-libs/ncurses-5.2
 		dev-lang/perl
-		>=sys-apps/modutils-2.4.2
+		sys-apps/modutils
 		sys-devel/make"
 fi
 

@@ -32,7 +32,7 @@ if [ $ETYPE = "sources" ] && [ -z "`use build`" ]
 then
 	#console-tools is needed to solve the loadkeys fiasco; binutils version needed to avoid Athlon/PIII/SSE assembler bugs.
 	DEPEND=">=sys-devel/binutils-2.11.90.0.31"
-	RDEPEND=">=sys-libs/ncurses-5.2 dev-lang/perl >=sys-apps/modutils-2.4.2 sys-devel/make"
+	RDEPEND=">=sys-libs/ncurses-5.2 dev-lang/perl sys-apps/modutils sys-devel/make"
 fi
 
 GENTOOPATCH=${DISTDIR}/linux-gentoo-alpha-${KV}.patch.bz2
