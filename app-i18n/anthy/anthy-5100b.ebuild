@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/anthy-5100b.ebuild,v 1.11 2004/10/17 10:05:33 hattya Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/anthy-5100b.ebuild,v 1.12 2004/11/23 10:09:25 hattya Exp $
 
 inherit elisp-common
 
@@ -46,7 +46,7 @@ src_compile() {
 
 src_install() {
 
-	einstall || die
+	make DESTDIR=${D} install || die
 
 	use emacs && elisp-site-file-install ${FILESDIR}/50anthy-gentoo.el
 

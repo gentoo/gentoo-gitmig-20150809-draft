@@ -3,14 +3,14 @@ Hash: SHA1
 
 MD5 f3fa575a0dc298ba5d69de4dee9bd878 ChangeLog 6204
 MD5 e92a48548554c80cf90e18df17ff6a82 metadata.xml 156
-MD5 88bf10425674e48e4642b4f8c45665d9 prime-0.8.4.ebuild 810
-MD5 5bf1b5bc0518e58a8d9658bd09682137 prime-0.9.2.ebuild 932
+MD5 e150f4fb8f2f8a8187e55a3d419eba77 prime-0.8.4.ebuild 826
+MD5 72f4b76e3ffd88c6b95644d8078fc7ae prime-0.9.2.ebuild 922
 MD5 ac80275dbd0e773a385b19fd0b9ff707 files/digest-prime-0.8.4 63
 MD5 73f354d381264ffd6d42ac053aa4b647 files/digest-prime-0.9.2 63
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBeincVWNWqTUmv+0RAlnZAJ9WO7lDg4xXJNR5Xo4vwxIru3JovgCgpnMW
-F6JDB0+Jzy/kkS57vHHk7Cg=
-=wBFd
+iD8DBQFBowubVWNWqTUmv+0RApeOAJ0WlFm9Cp+kPzOqe9Gv0H8ac2TudgCgsvtf
+LTINHyhHxKnbBv/q6IzXV9s=
+=LE2j
 -----END PGP SIGNATURE-----
