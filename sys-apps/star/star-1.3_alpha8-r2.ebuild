@@ -1,11 +1,11 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/star/star-1.3_alpha8-r2.ebuild,v 1.5 2002/08/01 11:59:04 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/star/star-1.3_alpha8-r2.ebuild,v 1.6 2002/10/02 18:20:24 vapier Exp $
 
 A=star-1.3a8.tar.gz
 S=${WORKDIR}/star-1.3
 
-DESCRIPTION="Includes star, an enhanced (world\'s fastest) tar, as well as enhanced mt/rmt"
+DESCRIPTION="An enhanced (world's fastest) tar, as well as enhanced mt/rmt"
 SRC_URI="ftp://ftp.fokus.gmd.de/pub/unix/star/alpha/${A}"
 HOMEPAGE="http://www.fokus.gmd.de/research/cc/glone/employees/joerg.schilling/private/star.html"
 KEYWORDS="x86"
