@@ -1,7 +1,7 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
 # Author: Seemant Kulleen <seemant@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/commonbox.eclass,v 1.14 2002/12/08 06:15:30 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/commonbox.eclass,v 1.15 2003/01/17 00:50:09 mkeadle Exp $
 
 # The commonbox eclass is designed to allow easier installation of the box
 # window managers such as blackbox and fluxbox and commonbox
@@ -14,11 +14,12 @@ INHERITED="$INHERITED $ECLASS"
 
 EXPORT_FUNCTIONS src_compile src_install pkg_postinst
 
-DEPEND="sys-apps/supersed
+DEPEND="sys-apps/supersed"
+
+RDEPEND="nls? ( sys-devel/gettext )
 	x11-misc/commonbox-utils
 	x11-themes/commonbox-styles"
-
-RDEPEND="nls? ( sys-devel/gettext )"
+	
 PROVIDE="virtual/blackbox"
 
 myconf=""
