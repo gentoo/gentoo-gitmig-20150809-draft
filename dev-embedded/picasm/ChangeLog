@@ -1,0 +1,10 @@
+# ChangeLog for dev-embedded/picasm
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-embedded/picasm/ChangeLog,v 1.1 2003/10/20 08:28:11 robbat2 Exp $
+
+*picasm-1.12b (20 Oct 2003)
+
+  20 Oct 2003; Robin H. Johnson <robbat2@gentoo.org> metadata.xml,
+  picasm-1.12b.ebuild:
+  initial commit, bug #26951, submission by Roman Valls <brainstorm@menta.net>
+
