@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.0.3-r1.ebuild,v 1.4 2001/01/23 19:54:43 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/postgresql/postgresql-7.0.3-r1.ebuild,v 1.5 2001/01/27 14:41:33 achim Exp $
 
 #P=
 A=${P}.tar.gz
@@ -10,11 +10,13 @@ DESCRIPTION="PostgreSQL is a sophisticated Object-Relational DBMS"
 SRC_URI="ftp://ftp.postgresql.org/pub/v7.0.3/${A}"
 HOMEPAGE="http://postgresql.readysetnet.com/"
 
+DEPEND=">=dev-lang/tcl-tk-8"
+
 src_unpack() {
   unpack ${A}
   cd ${S}/backend/catalog
   cp genbki.sh.in genbki.sh.orig
-  sed -e 's:\\name:\\ name:' genbki.sh.orig > genbki.sh.in
+  sed -e 's:\\name:name:' genbki.sh.orig > genbki.sh.in
 }
 
 src_compile() {

@@ -10,6 +10,8 @@ DESCRIPTION="PostgreSQL is a sophisticated Object-Relational DBMS"
 SRC_URI="ftp://ftp.postgresql.org/pub/dev/${A}"
 HOMEPAGE="http://postgresql.readysetnet.com/"
 
+DEPEND=">=dev-lang/tcl-tk-8"
+
 src_unpack() {
   unpack ${A}
   cd ${S}/src/backend/catalog

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.0_rc2-r1.ebuild,v 1.4 2000/11/02 08:31:52 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/proftpd/proftpd-1.2.0_rc2-r1.ebuild,v 1.5 2001/01/27 14:41:33 achim Exp $
 
 P=proftpd-1.2.0rc2
 A="${P}.tar.gz"
@@ -36,6 +36,7 @@ src_install() {
 
      cd ${S}
      into /usr
+     dodir /home/ftp
      dobin contrib/genuser.pl
      dodoc COPYING CREDITS ChangeLog NEWS
      dodoc README*
