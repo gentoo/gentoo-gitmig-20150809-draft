@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/nut/nut-2.0.0.ebuild,v 1.5 2004/09/27 22:17:56 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/nut/nut-2.0.0.ebuild,v 1.6 2004/11/08 09:17:23 mr_bones_ Exp $
 
 inherit fixheadtails
 
@@ -13,7 +13,7 @@ SLOT="0"
 KEYWORDS="x86 sparc ppc ~alpha"
 IUSE="cgi snmp usb"
 
-RDEPEND="cgi? ( =media-libs/gd-1* )
+RDEPEND="cgi? ( media-libs/gd )
 	snmp? ( virtual/snmp )"
 DEPEND="$RDEPEND
 	>=sys-apps/sed-4
