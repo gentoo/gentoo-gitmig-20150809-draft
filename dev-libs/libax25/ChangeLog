@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/libax25
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/libax25/ChangeLog,v 1.5 2004/07/02 04:43:44 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/libax25/ChangeLog,v 1.6 2004/10/18 12:28:06 dholm Exp $
+
+  18 Oct 2004; David Holm <dholm@gentoo.org> libax25-0.0.11-r1.ebuild:
+  Added to ~ppc.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   libax25-0.0.11-r1.ebuild, libax25-0.0.11.ebuild:

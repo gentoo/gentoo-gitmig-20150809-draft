@@ -1,6 +1,9 @@
 # ChangeLog for dev-libs/xmlsec
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlsec/ChangeLog,v 1.4 2004/06/24 23:38:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/xmlsec/ChangeLog,v 1.5 2004/10/18 12:30:23 dholm Exp $
+
+  18 Oct 2004; David Holm <dholm@gentoo.org> xmlsec-1.2.5.ebuild:
+  Added to ~ppc.
 
   17 Jun 2004; Jason Wever <weeve@gentoo.org> xmlsec-1.2.5.ebuild:
   Added ~sparc keyword.
