@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/elinks/elinks-0.10_pre2.ebuild,v 1.1 2004/10/31 20:20:38 spock Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/elinks/elinks-0.10.0.ebuild,v 1.1 2004/12/25 16:28:33 spock Exp $
 
 IUSE="gpm zlib ssl ipv6 X lua guile"
 
