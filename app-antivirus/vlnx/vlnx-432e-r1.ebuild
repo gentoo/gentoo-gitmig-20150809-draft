@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-antivirus/vlnx/vlnx-432e.ebuild,v 1.1 2004/06/29 04:50:48 merlin Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-antivirus/vlnx/vlnx-432e-r1.ebuild,v 1.1 2004/06/29 17:01:36 merlin Exp $
 
 MY_P="${P/-/}"
 S="${WORKDIR}"
@@ -30,7 +30,7 @@ src_install() {
 
 	insopts -m0755
 	doins uvscan
-	doins ${DISTDIR}/check-updates.sh
+	doins check-updates.sh
 
 	insinto /opt/bin
 	newins ${FILESDIR}/uvscan.sh uvscan
