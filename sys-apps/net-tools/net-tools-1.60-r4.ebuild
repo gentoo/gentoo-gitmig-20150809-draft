@@ -1,8 +1,8 @@
-# Copyright 1999-2001 Gentoo Technologies, Inc.
+# Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: System Team <system@gentoo.org>
 # Author: Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r2.ebuild,v 1.1 2002/03/13 05:51:49 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/net-tools/net-tools-1.60-r4.ebuild,v 1.1 2002/06/21 23:38:05 azarah Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="standard Linux network tools"
@@ -22,19 +22,27 @@ src_unpack() {
 	cd man
 	cp Makefile Makefile.orig
 	sed -e "s:/usr/man:/usr/share/man:" Makefile.orig > Makefile
+
+	if [ -z "`use nls`" ]
+	then
+		cd ${S}
+		mv config.h config.h.orig
+		sed 's:\(#define I18N\) 1:\1 0:' config.h.orig > config.h
+
+		mv config.make config.make.orig
+		sed 's:I18N=1:I18N=0:' config.make.orig > config.make
+	fi
+	
 }
 
 src_compile() {
 	# Changing "emake" to "make" closes half of bug #820; configure is run from *inside*
 	# the Makefile, sometimes breaking parallel makes (if ./configure doesn't finish first) 
 	
+	make || die	
 
-	if [ -z "`use nls`" ]
+	if [ "`use nls`" ]
 	then
-		yes "" | make config
-		make || die	
-	else
-		make || die	
 		cd po
 		make || die
 	fi
@@ -47,11 +55,17 @@ src_install() {
 	do
 		mv ${D}/sbin/${i} ${D}/bin
 	done
+	dodir /usr/bin
 	dosym /bin/hostname /usr/bin/hostname
 	if [ -z "`use bootcd`" ] && [ -z "`use build`" ]
 	then
 		dodoc COPYING README README.ipv6 TODO
 	else
-		rm -rf ${D}/usr/share
+		#only install /bin/hostname
+		rm -rf ${D}/usr
+		rm -rf ${D}/sbin
+		rm -f ${D}/bin/{domainname,netstat,dnsdomainname}
+		rm -f ${D}/bin/{ypdomainname,nisdomainname}
 	fi
 }
+

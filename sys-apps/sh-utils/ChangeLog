@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/sh-utils
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/ChangeLog,v 1.5 2002/04/07 03:14:29 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/ChangeLog,v 1.6 2002/06/21 23:37:54 azarah Exp $
+
+*sh-utils-2.0.11-r5 (21 Jun 2002)
+
+  21 Jun 2002; Martin Schlemmer <azarah@gentoo.org> :
+  Remove /usr/bin/hostname to install if "build" in USE, as it do not get
+  removed during "emerge system", and breaks some packages (gnome2 among
+  things).
 
   06 Apr 2002; Daniel Robbins <drobbins@gentoo.org> : updated the mtime of
   src/uname.c in order to thwart a perl dependency (bad mtime was triggering
