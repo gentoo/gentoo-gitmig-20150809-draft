@@ -1,6 +1,12 @@
 # ChangeLog for media-plugins/xmms-infinity
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-infinity/ChangeLog,v 1.10 2004/07/06 23:46:46 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-infinity/ChangeLog,v 1.11 2004/07/26 09:05:54 eradicator Exp $
+
+*xmms-infinity-0.5.8 (26 Jul 2004)
+
+  26 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +xmms-infinity-0.5.8.ebuild:
+  Version bump.
 
   06 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   xmms-infinity-0.2.ebuild:
