@@ -1,6 +1,10 @@
 # ChangeLog for net-www/squidguard
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/www-proxy/squidguard/ChangeLog,v 1.2 2004/08/15 23:40:11 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-proxy/squidguard/ChangeLog,v 1.3 2004/08/25 14:49:27 cyfred Exp $
+
+  26 Aug 2004; Andrew Bevitt <cyfred@gentoo.org>;
+  +files/squidguard-1.2.0-db42.patch, squidguard-1.2.0-r1.ebuild:
+  Adding db4.2 support, see bug #61578
 
   16 Aug 2004; Andrew Bevitt <cyfred@gentoo.org>; squidguard-1.2.0-r1.ebuild:
   Changing net-www/squid to www-proxy/squid in depends
