@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/vanilla-sources-2.2.25.ebuild,v 1.3 2003/12/06 22:22:41 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/vanilla-sources/vanilla-sources-2.2.25.ebuild,v 1.4 2004/01/05 19:03:56 scox Exp $
 #OKV=original kernel version, KV=patched kernel version. They can be the same.
 
 #we use this next variable to avoid duplicating stuff on cvs
