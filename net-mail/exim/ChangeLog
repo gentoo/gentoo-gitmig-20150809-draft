@@ -1,6 +1,11 @@
 # ChangeLog for net-mail/exim
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.48 2004/03/24 17:38:02 g2boojum Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/ChangeLog,v 1.49 2004/03/29 21:00:55 pfeifer Exp $
+
+*exim-4.30 (29 Mar 2004)
+
+  29 Mar 2004; Jay Pfeifer <pfeifer@gentoo.org> exim-4.30.ebuild
+  Version bump. Closes bug #36486.
 
 *exim-4.24-r3 (23 Mar 2004)
 

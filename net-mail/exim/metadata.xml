@@ -2,6 +2,11 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <herd>net-mail</herd>
+<maintainer>
+  <email>pfeifer@gentoo.org</email>
+  <name>Jay Pfeifer</name>
+<!--  <description>Description of the maintainership</description> -->
+</maintainer>
 <longdescription>
 Exim is a message transfer agent (MTA) developed at the University of Cambridge for use on Unix systems connected to the Internet. It is freely available under the terms of the GNU General Public Licence. In style it is similar to Smail 3, but its facilities are more general. There is a great deal of flexibility in the way mail can be routed, and there are extensive facilities for checking incoming mail. Exim can be installed in place of sendmail, although the configuration of exim is quite different to that of sendmail.
 </longdescription>

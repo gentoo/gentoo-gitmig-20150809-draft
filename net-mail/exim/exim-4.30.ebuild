@@ -1,10 +1,10 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.24.ebuild,v 1.3 2004/03/29 21:00:55 pfeifer Exp $
+# $
 
 IUSE="tcpd ssl postgres mysql ldap pam exiscan-acl maildir lmtp ipv6 sasl"
 
-EXISCANACL_VER=${PV}-13
+EXISCANACL_VER=${PV}-16
 
 DESCRIPTION="A highly configurable, drop-in replacement for sendmail"
 SRC_URI="ftp://ftp.exim.org/pub/exim/exim4/${P}.tar.gz
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.exim.org/"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc ~hppa ~ppc ~amd64"
+KEYWORDS="~x86 -*"
 
 PROVIDE="virtual/mta"
 DEPEND=">=sys-apps/sed-4.0.5
@@ -28,7 +28,7 @@ DEPEND=">=sys-apps/sed-4.0.5
 	postgres? ( >=dev-db/postgresql-7 )
 	sasl? ( >=dev-libs/cyrus-sasl-2.1.14 )"
 RDEPEND="${DEPEND}
-	!virtual/mta
+	net-mail/mailwrapper
 	>=net-mail/mailbase-0.00-r5"
 
 src_unpack() {
@@ -94,7 +94,7 @@ src_unpack() {
 	fi
 
 	if [ -n "$myconf" ] ; then
-		echo "EXTRALIBS=${myconf}" >> Makefile
+		echo "EXTRALIBS=${myconf} ${LDFLAGS}" >> Makefile
 	fi
 
 	cd ${S}
@@ -133,7 +133,7 @@ src_unpack() {
 	fi
 
 	if [ -n "$LOOKUP_LIBS" ]; then
-		sed -i "s:# LOOKUP_LIBS=-L/usr/local/lib -lldap -llber -lmysqlclient -lpq:LOOKUP_LIBS=$LOOKUP_LIBS:" \
+		sed -i "s:# LOOKUP_LIBS=-L/usr/local/lib -lldap -llber -lmysqlclient -lpq -lgds:LOOKUP_LIBS=$LOOKUP_LIBS:" \
 			Local/Makefile
 	fi
 
@@ -160,13 +160,14 @@ src_install () {
 	fperms 4755 /usr/sbin/exim
 
 	dodir /usr/bin /usr/sbin /usr/lib
-	dosym ../sbin/exim /usr/bin/mailq
-	dosym ../sbin/exim /usr/bin/newaliases
-	dosym ../sbin/exim /usr/bin/mail
-	dosym exim /usr/sbin/rsmtp
-	dosym exim /usr/sbin/rmail
-	dosym exim /usr/sbin/sendmail
-	dosym ../sbin/exim /usr/lib/sendmail
+	dosym ../sbin/sendmail /usr/bin/mailq
+	dosym ../sbin/sendmail /usr/bin/newaliases
+	dosym ../sbin/sendmail /usr/bin/mail
+	dosym sendmail /usr/sbin/rsmtp
+	dosym sendmail /usr/sbin/rmail
+	dosym ../sbin/sendmail /usr/lib/sendmail
+	insinto /etc
+	doins ${FILESDIR}/mailer.conf
 
 	exeinto /usr/sbin
 	for i in exicyclog exim_dbmbuild exim_dumpdb exim_fixdb exim_lock \

@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.22.ebuild,v 1.3 2003/11/05 14:24:46 klieber Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/exim/exim-4.22.ebuild,v 1.4 2004/03/29 21:00:55 pfeifer Exp $
 
 IUSE="tcpd ssl postgres mysql ldap pam exiscan-acl maildir lmtp ipv6 sasl"
 
