@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/crystal-0.7.7.ebuild,v 1.1 2004/09/07 15:33:10 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/crystal-0.8.0.ebuild,v 1.1 2004/09/28 18:08:23 voxus Exp $
 
 inherit kde
 KLV="13969"

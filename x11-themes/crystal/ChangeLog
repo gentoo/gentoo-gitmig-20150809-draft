@@ -1,6 +1,14 @@
 # ChangeLog for x11-themes/crystal
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/ChangeLog,v 1.4 2004/09/07 15:33:10 voxus Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/crystal/ChangeLog,v 1.5 2004/09/28 18:08:23 voxus Exp $
+
+*crystal-0.8.0 (28 Sep 2004)
+
+  28 Sep 2004; Konstantin Arkhipov <voxus@gentoo.org>
+  -crystal-0.7.7.ebuild,
+  +crystal-0.8.0.ebuild:
+  Version bump, closing #65357.
+  0.7.7 unmasked on x86.
 
 *crystal-0.7.7 (07 Sep 2004)
 
