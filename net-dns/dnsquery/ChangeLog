@@ -1,0 +1,9 @@
+# ChangeLog for net-dns/dnsquery
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-dns/dnsquery/ChangeLog,v 1.1 2003/11/02 05:30:21 matsuu Exp $
+
+*dnsquery-0.60.1 (02 Nov 2003)
+
+  02 Nov 2003; MATSUU Takuto <matsuu@gentoo.org> dnsquery-0.60.1.ebuild:
+  Initial import. #26268
+
