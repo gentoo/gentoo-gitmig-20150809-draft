@@ -1,8 +1,8 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.3-r1.ebuild,v 1.4 2005/02/24 01:42:35 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/subversion/subversion-1.1.3-r1.ebuild,v 1.5 2005/02/27 11:52:39 pauldv Exp $
 
-inherit elisp-common libtool python eutils bash-completion flag-o-matic
+inherit elisp-common libtool python eutils bash-completion flag-o-matic depend.apache
 
 DESCRIPTION="A compelling replacement for CVS"
 HOMEPAGE="http://subversion.tigris.org/"
@@ -15,7 +15,7 @@ IUSE="ssl apache2 berkdb python emacs perl java nls"
 RESTRICT="maketest"
 
 # Presently subversion doesn't build with swig-1.3.22, bug 65424
-RDEPEND="apache2? ( >=net-www/apache-2.0.49 )
+RDEPEND="apache2? ( ${APACHE2_DEPEND} )
 	>=dev-libs/apr-util-0.9.5
 	python? ( =dev-lang/swig-1.3.21 >=dev-lang/python-2.0 )
 	perl? ( =dev-lang/swig-1.3.21 >=dev-lang/perl-5.8 )
@@ -74,7 +74,7 @@ src_compile() {
 	local myconf
 	myconf="--with-apr=/usr --with-apr-util=/usr"
 
-	use apache2 && myconf="${myconf} --with-apxs=/usr/sbin/apxs2"
+	use apache2 && myconf="${myconf} --with-apxs=${APXS2}"
 	use apache2 || myconf="${myconf} --without-apxs"
 
 	myconf="${myconf} $(use_enable java javahl)"
@@ -137,20 +137,19 @@ src_compile() {
 
 
 src_install () {
-	use apache2 && mkdir -p ${D}/etc/apache2/conf
-
 	python_version
 	PYTHON_DIR=/usr/lib/python${PYVER}
 
 	make DESTDIR=${D} install || die "Installation of subversion failed"
-	if [[ -e ${D}/usr/lib/apache2 ]]; then
-		if has_version '>=net-www/apache-2.0.48-r2'; then
-			mv ${D}/usr/lib/apache2/modules ${D}/usr/lib/apache2-extramodules
-			rmdir ${D}/usr/lib/apache2
-		else
-			mv ${D}/usr/lib/apache2 ${D}/usr/lib/apache2-extramodules
-		fi
-	fi
+	
+#	This might not be necessary with the new install
+#	if [[ -e ${D}/usr/lib/apache2 ]]; then
+#		if [ "${APACHE2_MODULESDIR}" != "/usr/lib/apache2/modules" ]; then
+#			mkdir -p ${D}/`dirname ${APACHE2_MODULESDIR}`
+#			mv ${D}/usr/lib/apache2/modules ${D}/${APACHE2_MODULESDIR}
+#			rmdir ${D}/usr/lib/apache2 2>/dev/null
+#		fi
+#	fi
 
 
 	dobin svn-config
@@ -172,11 +171,11 @@ src_install () {
 
 	# Install apache module config
 	if useq apache2; then
-		mkdir -p ${D}/etc/apache2/conf/modules.d
-		cat <<EOF >${D}/etc/apache2/conf/modules.d/47_mod_dav_svn.conf
+		mkdir -p ${D}/${APACHE2_MODULES_CONFDIR}
+		cat <<EOF >${D}/${APACHE2_MODULES_CONFDIR}/47_mod_dav_svn.conf
 <IfDefine SVN>
 	<IfModule !mod_dav_svn.c>
-		LoadModule dav_svn_module	extramodules/mod_dav_svn.so
+		LoadModule dav_svn_module	modules/mod_dav_svn.so
 	</IfModule>
 	<Location /svn/repos>
 		DAV svn
@@ -210,9 +209,7 @@ EOF
 	insinto /etc/conf.d ; newins ${FILESDIR}/svnserve.confd svnserve
 	insinto /etc/xinetd.d ; newins ${FILESDIR}/svnserve.xinetd svnserve
 
-	#
-	# Past here is all documentation and examples
-	#
+	# Install documentation
 
 	dodoc BUGS COMMITTERS COPYING HACKING INSTALL README
 	dodoc CHANGES
@@ -221,7 +218,6 @@ EOF
 	cp -r --parents tools/{client-side,examples,hook-scripts} ${D}/usr/share/doc/${PF}/
 	cp -r --parents contrib/hook-scripts ${D}/usr/share/doc/${PF}/
 
-	# Install documentation
 	docinto notes
 	for f in notes/*
 	do
