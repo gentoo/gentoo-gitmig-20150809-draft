@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.20 2002/07/26 19:37:19 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/kde-functions.eclass,v 1.21 2002/08/06 11:58:16 danarmak Exp $
 # This contains everything except things that modify ebuild variables and functions (e.g. $P, src_compile() etc.)
 ECLASS=kde-functions
 INHERITED="$INHERITED $ECLASS"
@@ -213,8 +213,13 @@ need-qt() {
 
 	debug-print-function $FUNCNAME $*
 	QTVER="$1"
-	min-qt-ver $QTVER
-	newdepend "=x11-libs/qt-$selected_version*"
+
+	case $QTVER in
+	    2*)	newdepend "=x11-libs/qt-2.3*" ;;
+	    3*)	newdepend ">=x11-libs/qt-3.0.4" ;;
+	    *)	echo "!!! error: $FUNCNAME() called with invalid parameter: \"$QTVER\", please report bug" && exit 1;;
+	esac
+
 	set-qtdir $QTVER
 
 }
@@ -282,23 +287,10 @@ min-kde-ver() {
 	
 }
 
-min-qt-ver() {
-
-	debug-print-function $FUNCNAME $*
-
-	case $1 in
-	    2*)	selected_version="2.3";;
-	    3*)	selected_version="3";;
-	    *)	echo "!!! error: $FUNCNAME() called with invalid parameter: \"$1\", please report bug" && exit 1;;
-	esac
-
-}
-
-
 # generic makefile sed for sandbox compatibility. for some reason when the kde makefiles (of many packages
 # and versions) try to chown root and chmod 4755 some binaries (after installing, target isntall-exec-local),
-# they do it to the files in $(bindir), not $(DESTDIR)/$(bindir). I've fild a report on bugs.kde.org but no
-# response so far.
+# they do it to the files in $(bindir), not $(DESTDIR)/$(bindir). Most of these have been fixed in latest cvs
+# but a few remain here and there.
 # Pass a list of dirs to sed, Makefile.{am,in} in these dirs will be sed'ed.
 # This should be harmless if the makefile doesn't need fixing.
 kde_sandbox_patch() {
