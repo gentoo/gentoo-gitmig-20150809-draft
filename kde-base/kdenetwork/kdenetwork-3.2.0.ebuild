@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.2.0.ebuild,v 1.1 2004/02/02 12:28:53 caleb Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdenetwork/kdenetwork-3.2.0.ebuild,v 1.2 2004/02/04 13:26:27 caleb Exp $
 inherit kde-dist
 
 IUSE="slp samba"
@@ -14,6 +14,11 @@ DEPEND="~kde-base/kdebase-${PV}
 RDEPEND="$DEPEND"
 
 myconf="$myconf `use_enable slp`"
+
+src_unpack() {
+	kde_src_unpack
+	epatch ${FILESDIR}/linuxwirelesswidget.cpp.diff
+}
 
 src_install() {
 	kde_src_install

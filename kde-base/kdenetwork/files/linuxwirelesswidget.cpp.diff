@@ -1,0 +1,23 @@
+--- wifi/kwireless/linuxwirelesswidget.cpp	2003/05/07 07:59:05	1.5
++++ wifi/kwireless/linuxwirelesswidget.cpp	2004/01/30 15:12:57	1.5.2.1
+@@ -12,6 +12,7 @@
+ #include <kdebug.h>
+ #include <klocale.h>
+ #include "linuxwirelesswidget.h"
++#include "config.h"
+ 
+ extern "C" {
+ #include <iwlib.h>
+@@ -124,7 +125,11 @@ void LinuxWireLessWidget::poll()
+             }
+ 
+             // get the device statistics:
+-            if(iw_get_stats(socketFD, device_c_str, &(info.stats)) >= 0)
++#if HAVE_IW_27 
++	    if(iw_get_stats(socketFD, device_c_str, &(info.stats), &(info.range), info.has_range)>= 0)
++#else
++	    if(iw_get_stats(socketFD, device_c_str, &(info.stats)) >= 0)
++#endif
+ 	    {
+                 info.has_stats = 1;
+                 bool isAbs; // true if values are relative tp a peak value,
