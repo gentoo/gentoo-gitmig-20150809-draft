@@ -30,7 +30,7 @@ svc_restart() {
 		svc_stop
 		eend 1 "Apache configuration error"
 	else
-		killall -USR1 httpd &> /dev/null
+		killall -USR1 apache &> /dev/null
 		svc_start &>/dev/null
 		eend $?
 	fi
