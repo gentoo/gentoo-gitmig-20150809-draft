@@ -1,21 +1,21 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 d0ca60214578733473660b6132d54e0d ChangeLog 2975
-MD5 1e7a07df23aefefa1d554024bd15b6eb mtr-0.49-r1.ebuild 954
-MD5 9704eabc81810e9e13768bea4a1121cd mtr-0.54.ebuild 824
-MD5 a2cd33e92ed282bb7c8c01b009556f0a mtr-0.64.ebuild 1052
-MD5 720bffd73acf542e859034ca9d443c19 metadata.xml 244
 MD5 76a50eb5847108e787bdfcdcd59be571 mtr-0.54-r2.ebuild 1112
-MD5 9ad35f50576c4ede55776cf455d747a9 files/digest-mtr-0.49-r1 59
+MD5 d3a7562246771e1b81dceb3bafeeef55 mtr-0.64.ebuild 1035
+MD5 9704eabc81810e9e13768bea4a1121cd mtr-0.54.ebuild 824
+MD5 d0ca60214578733473660b6132d54e0d ChangeLog 2975
+MD5 720bffd73acf542e859034ca9d443c19 metadata.xml 244
+MD5 1e7a07df23aefefa1d554024bd15b6eb mtr-0.49-r1.ebuild 954
+MD5 0bbdffc84e47f22daaf46c76e941a02a files/mtr-ac-res_mkquery.patch 510
 MD5 7a626d479aec5d6bfba540b6f3935a9e files/digest-mtr-0.54 59
 MD5 f809e2209338aeea9e409e8a7c17bc05 files/digest-mtr-0.64 60
+MD5 9ad35f50576c4ede55776cf455d747a9 files/digest-mtr-0.49-r1 59
 MD5 cf3436006255ff4c602431f3a3eca98e files/digest-mtr-0.54-r2 131
-MD5 0bbdffc84e47f22daaf46c76e941a02a files/mtr-ac-res_mkquery.patch 510
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBh6LtHTu7gpaalycRAm6kAJ9gIhvoCSmtpcPVY1Oich0N4R/vOACgq+EN
-W31jt+/ImDvNRh0Myh3Zxww=
-=pX2C
+iD8DBQFBiJLST+MN7JbqCpMRAgiKAJ9DhF148eJnEbcUKMRzUUpG1S7cwgCfWOD3
++vQ6ka5tVN3PEzvxMtdJrHA=
+=EwXW
 -----END PGP SIGNATURE-----
