@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.5.ebuild,v 1.4 2002/07/25 15:28:29 gerk Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/xinetd/xinetd-2.3.5.ebuild,v 1.5 2002/08/14 04:40:34 murphy Exp $
 
 # NB: This ebuild introduces the /etc/xinetd.d includedir with a default
 #     /etc/xinetd.conf file.  Check your config files if you're upgrading
@@ -11,7 +11,7 @@
 S=${WORKDIR}/${P}
 DESCRIPTION="Xinetd is a powerful replacement for inetd, with advanced features"
 HOMEPAGE="http://www.xinetd.org"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc sparc sparc64"
 SLOT="0"
 LICENSE="BSD"
 SRC_URI="http://www.xinetd.org/${P}.tar.gz"
