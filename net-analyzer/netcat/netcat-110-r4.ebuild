@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/netcat-110-r4.ebuild,v 1.4 2003/11/22 08:13:47 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/netcat/netcat-110-r4.ebuild,v 1.5 2003/11/24 17:48:47 vapier Exp $
 
 inherit eutils
 
@@ -31,6 +31,7 @@ src_unpack() {
 	epatch ${S}/deb-patches/
 	echo "#define arm arm_timer" >> generic.h
 	sed -i 's:#define HAVE_BIND:#undef HAVE_BIND:' netcat.c
+	sed -i 's:#define FD_SETSIZE 16:#define FD_SETSIZE 1024:' netcat.c #34250
 }
 
 src_compile() {
