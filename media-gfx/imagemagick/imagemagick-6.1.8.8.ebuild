@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.1.8.8.ebuild,v 1.11 2005/01/20 20:11:41 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-6.1.8.8.ebuild,v 1.12 2005/01/20 23:35:53 sekretarz Exp $
 
 inherit libtool flag-o-matic eutils
 
@@ -82,8 +82,8 @@ src_install() {
 	#bug 69705
 	rm -f ${D}/usr/lib/libltdl*
 
-	#bug 73464
-	rm -f ${D}/usr/lib/perl5/5.8.6/x86_64-linux/perllocal.pod
+	#bug 73464 and 78740
+	rm -f ${D}/usr/lib/perl5/*/*/perllocal.pod
 
 	dosed "s:-I/usr/include ::" /usr/bin/Magick-config
 	dosed "s:-I/usr/include ::" /usr/bin/Magick++-config
