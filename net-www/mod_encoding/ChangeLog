@@ -1,0 +1,8 @@
+# ChangeLog for net-www/mod_encoding
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-www/mod_encoding/ChangeLog,v 1.1 2003/06/22 18:59:46 woodchip Exp $
+
+*mod_encoding-20021209 (22 Jun 2003)
+
+  22 Jun 2003; Donny Davies <woodchip@gentoo.org> :
+  Initial import; from #22795.
