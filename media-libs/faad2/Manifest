@@ -1,4 +1,4 @@
-MD5 eed4ecc3d7dd8acffb2be897abc07885 ChangeLog 604
-MD5 2cfa527ecc4ddfd05dd67c09e16769ee faad2-1.1.ebuild 1005
+MD5 fde1e20a916cba5cb26377be5e4374cd faad2-1.1.ebuild 999
+MD5 f32adc2489dc40962ce560ab4d7aa802 ChangeLog 718
 MD5 10465da781f67413a312a590160497b8 files/digest-faad2-1.1 62
 MD5 ae1e030d365422623250d1fa71e2fe72 files/faad2-1.1-gentoo.diff 440
