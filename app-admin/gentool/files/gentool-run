@@ -1,2 +1,4 @@
 #!/bin/sh
-/usr/sbin/gentool.py 2>&1
+exec ( /usr/sbin/gentool.py 2&>1 )
+exec sleep 20
+
