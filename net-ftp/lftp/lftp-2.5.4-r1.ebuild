@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-2.5.4-r1.ebuild,v 1.5 2002/08/16 14:24:48 murphy Exp $
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-ftp/lftp/lftp-2.5.4-r1.ebuild,v 1.6 2002/10/04 06:04:09 vapier Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="LFTP is a sophisticated ftp/http client, file transfer program."
