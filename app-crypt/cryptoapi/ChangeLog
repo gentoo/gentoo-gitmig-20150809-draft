@@ -1,9 +1,13 @@
 # ChangeLog for app-crypt/cryptoapi
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/ChangeLog,v 1.1 2002/04/26 06:13:55 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-crypt/cryptoapi/ChangeLog,v 1.2 2002/04/30 06:06:30 rphillips Exp $
 
-*cryptoapi-2.4.7.0 (25 Apr 2002)
+*cryptoapi-2.4.7.0 (29 Apr 2002)
 
+  29 Apr 2002; Ryan Phillips <rphillips@gentoo.org> cryptoapi-2.4.7.0.ebuild :
+
+  changed install directory to match kernel version.  should fix (#2222)
+  
   25 Apr 2002; Ryan Phillips <rphillips@gentoo.org> ChangeLog :
   
   Added initial ChangeLog which should be updated whenever the package is
