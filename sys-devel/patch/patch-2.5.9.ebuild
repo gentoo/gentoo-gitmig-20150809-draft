@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/patch-2.5.9.ebuild,v 1.14 2004/03/29 21:53:56 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/patch/patch-2.5.9.ebuild,v 1.15 2004/04/24 08:06:20 vapier Exp $
 
 inherit flag-o-matic
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86 ppc sparc alpha mips hppa ia64 ppc64 s390"
+KEYWORDS="x86 ppc ppc64 sparc mips alpha arm hppa amd64 ia64 s390"
 IUSE="build static"
 
 DEPEND="virtual/glibc"
@@ -22,7 +22,7 @@ src_compile() {
 	CFLAGS="$CFLAGS -DLINUX -D_XOPEN_SOURCE=500"
 	ac_cv_sys_long_file_names=yes \
 		./configure --host=${CHOST} --prefix=/usr --mandir=/usr/share/man
-	if [ -z "`use static`" ]; then
+	if ! use static ; then
 		emake || die "emake failed"
 	else
 		emake LDFLAGS=-static || die "emake failed"
@@ -31,8 +31,8 @@ src_compile() {
 
 src_install() {
 	einstall
-	if [ -z "`use build`" ]; then
-		dodoc AUTHORS COPYING ChangeLog NEWS README
+	if ! use build ; then
+		dodoc AUTHORS ChangeLog NEWS README
 	else
 		rm -rf ${D}/usr/share/man
 	fi
