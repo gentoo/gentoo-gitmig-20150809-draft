@@ -1,19 +1,17 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.3-r1.ebuild,v 1.6 2004/03/07 10:32:27 kumba Exp $
-
-IUSE="nls build"
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/gawk/gawk-3.1.3-r1.ebuild,v 1.7 2004/04/01 07:23:51 vapier Exp $
 
 inherit eutils
 
-S="${WORKDIR}/${P}"
 DESCRIPTION="GNU awk pattern-matching language"
-SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/gawk/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/gawk/gawk.html"
+SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/gawk/${P}.tar.gz"
 
-KEYWORDS="x86 amd64 ~ppc sparc alpha mips hppa ia64 ppc64 s390"
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 amd64 ~ppc sparc alpha mips hppa ia64 ppc64 s390"
+IUSE="nls build"
 
 DEPEND="virtual/glibc
 	nls? ( sys-devel/gettext )"
@@ -32,6 +30,7 @@ src_unpack() {
 src_compile() {
 	local myconf=
 	use nls || myconf="${myconf} --disable-nls"
+	[ -z "${CBUILD}" ] || myconf="${myconf} --build=${CBUILD}"
 
 	einfo "Building gawk ..."
 	./configure --prefix=/usr \
@@ -39,7 +38,8 @@ src_compile() {
 		--mandir=/usr/share/man \
 		--infodir=/usr/share/info \
 		--host=${CHOST} \
-		${myconf} || die
+		${myconf} \
+		|| die
 
 	emake || die
 
@@ -113,7 +113,7 @@ src_install() {
 		fi
 	done
 
-	if [ -z "`use build`" ]
+	if ! use build
 	then
 		cd ${S}
 		dosym gawk.1.gz /usr/share/man/man1/awk.1.gz
@@ -131,4 +131,3 @@ src_install() {
 		rm -rf ${D}/usr/share
 	fi
 }
-
