@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 48816e886c9da6750a14001ee2cce4f0 enemy-territory-fortress-1.0.ebuild 899
-MD5 8a9400b9c3535eec9b7129bbf92c913b ChangeLog 392
+MD5 cc0a192396c88c8ccbfb8bc0acab3b2d ChangeLog 622
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
-MD5 b3188f7a77dd67fe82c041f62c03b429 files/digest-enemy-territory-fortress-1.0 61
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.14 (GNU/Linux)
-
-iD8DBQFB6bgKroRuSHgZdywRAkQbAJ9miEyRIA1SgJ2Tlu1xQ/oizI+TRgCdFLMt
-mbhgJ12TrfDSl3SvrDST7Q8=
-=lT32
------END PGP SIGNATURE-----
+MD5 cff379db019bdc652f2ef85d77f2771a enemy-territory-fortress-1.2.ebuild 766
+MD5 7e48a1439277da2aa016c8ce198e13cf files/digest-enemy-territory-fortress-1.2 67
