@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/linuxtrade/linuxtrade-3.65.ebuild,v 1.2 2004/07/20 00:54:27 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/linuxtrade/linuxtrade-3.65.ebuild,v 1.3 2004/07/21 07:45:43 dholm Exp $
 
 inherit eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://debian/pool/main/l/${PN}/${P/-/_}.orig.tar.gz
 	mirror://debian/pool/main/l/${PN}/${P/-/_}-5.diff.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~alpha"
+KEYWORDS="~x86 ~alpha ~ppc"
 IUSE=""
 
 DEPEND="sys-libs/ncurses"
