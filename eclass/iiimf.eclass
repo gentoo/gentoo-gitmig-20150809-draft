@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/iiimf.eclass,v 1.3 2003/09/14 01:38:51 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/iiimf.eclass,v 1.4 2004/04/10 13:02:38 usata Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -27,7 +27,7 @@ SLOT="0"
 
 IUSE="debug"
 
-newdepend "virtual/glibc"
+DEPEND="virtual/glibc"
 
 S="${WORKDIR}/${IMSDK}/${PN}"
 

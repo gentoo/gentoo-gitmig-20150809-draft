@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.27 2004/04/10 10:01:12 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/ruby.eclass,v 1.28 2004/04/10 13:02:38 usata Exp $
 #
 # Author: Mamoru KOMACHI <usata@gentoo.org>
 #
@@ -47,7 +47,7 @@ SRC_URI="mirror://gentoo/${P}.tar.gz"
 SLOT="0"
 LICENSE="Ruby"
 
-newdepend "virtual/ruby"
+DEPEND="virtual/ruby"
 
 [[ -z "${RUBY}" ]] && export RUBY=/usr/bin/ruby
 
