@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/ctypes
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-python/ctypes/ChangeLog,v 1.1 2004/12/11 20:35:20 kloeri Exp $
+
+*ctypes-0.9.2 (11 Dec 2004)
+
+  11 Dec 2004; Bryan Østergaard <kloeri@gentoo.org> +metadata.xml,
+  +ctypes-0.9.2.ebuild:
+  Initial import. Based on ebuild from Miikka <dsword@ovimarsu.net> in bug 59047.
+
