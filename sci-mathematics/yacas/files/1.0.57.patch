@@ -1,0 +1,59 @@
+diff -ru ../yacas-1.0.57.orig/./plugins/filescanner/plugin.cc ./plugins/filescanner/plugin.cc
+--- ../yacas-1.0.57.orig/./plugins/filescanner/plugin.cc	2003-08-24 17:43:25.000000000 +0200
++++ ./plugins/filescanner/plugin.cc	2005-01-14 10:24:32.001007832 +0100
+@@ -81,7 +81,7 @@
+     return NEW FileScannerPlugin;
+ }
+ 
+-};
++}
+ 
+ 
+ 
+diff -ru ../yacas-1.0.57.orig/./plugins/pcre/plugin.cc ./plugins/pcre/plugin.cc
+--- ../yacas-1.0.57.orig/./plugins/pcre/plugin.cc	2003-08-24 17:39:59.000000000 +0200
++++ ./plugins/pcre/plugin.cc	2005-01-14 10:24:32.000007971 +0100
+@@ -180,7 +180,7 @@
+     return NEW PcrePlugin;
+ }
+ 
+-};
++}
+
+
+
+--- plugins/opengl/openglapi.stub	2005-01-11 17:45:19.164377640 +0000
++++ plugins/opengl/openglapi.stub.new	2005-01-11 17:45:26.625243416 +0000
+@@ -144,7 +144,7 @@
+ {
+     return NULL;
+ }
+-};
++}
+ #endif //HAVE_GL_GLUT_H
+ ");
+ 
+diff -ru ../yacas-1.0.57.orig/scripts/compile.rep/compilecpp.ys ./scripts/compile.rep/compilecpp.ys
+--- ../yacas-1.0.57.orig/scripts/compile.rep/compilecpp.ys	2004-12-20 19:10:26.000000000 +0100
++++ ./scripts/compile.rep/compilecpp.ys	2005-01-14 15:01:24.416631846 +0100
+@@ -395,7 +395,7 @@
+ 
+ // The define OPTIMIZE_COMPILED_PLUGIN_SIZE should be defined somewhere else.
+ #ifndef WIN32 // some macro expansion is failing on Win platform, no idea why.
+-#define OPTIMIZE_COMPILED_PLUGIN_SIZE
++//#define OPTIMIZE_COMPILED_PLUGIN_SIZE
+ #endif // WIN32
+ 
+ #ifdef OPTIMIZE_COMPILED_PLUGIN_SIZE
+diff -ru ../yacas-1.0.57.orig/src/libmath.cpp ./src/libmath.cpp
+--- ../yacas-1.0.57.orig/src/libmath.cpp	2004-12-25 11:33:49.000000000 +0100
++++ ./src/libmath.cpp	2005-01-14 15:00:20.263439049 +0100
+@@ -17,7 +17,7 @@
+ 
+ // The define OPTIMIZE_COMPILED_PLUGIN_SIZE should be defined somewhere else.
+ #ifndef WIN32 // some macro expansion is failing on Win platform, no idea why.
+-#define OPTIMIZE_COMPILED_PLUGIN_SIZE
++//#define OPTIMIZE_COMPILED_PLUGIN_SIZE
+ #endif // WIN32
+ 
+ #ifdef OPTIMIZE_COMPILED_PLUGIN_SIZE
