@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/lsof
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/ChangeLog,v 1.29 2004/11/07 09:11:11 kumba Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/lsof/ChangeLog,v 1.30 2005/01/27 03:56:44 vapier Exp $
+
+*lsof-4.74 (26 Jan 2005)
+
+  26 Jan 2005; Mike Frysinger <vapier@gentoo.org> +lsof-4.74.ebuild:
+  Version bump #78610 by Andrej Kacian.
 
   07 Nov 2004; Joshua Kinard <kumba@gentoo.org> lsof-4.71.ebuild:
   Marked stable on mips.
