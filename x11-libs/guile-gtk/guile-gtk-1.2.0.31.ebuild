@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/guile-gtk-1.2.0.31.ebuild,v 1.3 2004/04/26 14:42:51 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/guile-gtk-1.2.0.31.ebuild,v 1.4 2004/06/04 23:26:11 dholm Exp $
 
 MAJOR_PV=${PV%.[0-9]*.[0-9]*}
 MINOR_PV=${PV#[0-9]*.[0-9]*.}
@@ -9,7 +9,7 @@ DESCRIPTION="GTK+ bindings for guile"
 SRC_URI="http://savannah.nongnu.org/download/guile-gtk/${PN}-${MAJOR_PV}-${MINOR_PV}.tar.gz"
 HOMEPAGE="http://www.ping.de/sites/zagadka/guile-gtk/"
 
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 LICENSE="GPL-2"
 SLOT="0"
 

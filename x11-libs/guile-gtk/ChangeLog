@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/guile-gtk 
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/ChangeLog,v 1.9 2004/04/26 19:56:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/guile-gtk/ChangeLog,v 1.10 2004/06/04 23:26:11 dholm Exp $
+
+  05 Jun 2004; David Holm <dholm@gentoo.org> guile-gtk-1.2.0.31.ebuild:
+  Added to ~ppc.
 
   26 Apr 2004; Aron Griffis <agriffis@gentoo.org> guile-gtk-0.19.ebuild:
   Add die following econf for bug 48950
