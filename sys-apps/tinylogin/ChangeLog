@@ -1,6 +1,10 @@
 # ChangeLog for sys-apps/tinylogin
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/tinylogin/ChangeLog,v 1.6 2004/07/01 21:41:24 eradicator Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/tinylogin/ChangeLog,v 1.7 2005/01/26 22:45:43 xmerlin Exp $
+
+  27 Jan 2005; Christian Zoffoli <xmerlin@gentoo.org> tinylogin-1.4.ebuild:
+  closed bug #61251, added some dep., added possibility to compile tinylogic
+  static or shared
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> tinylogin-1.2.ebuild,
   tinylogin-1.4.ebuild:
