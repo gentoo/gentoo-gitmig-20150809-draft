@@ -1,8 +1,13 @@
 # ChangeLog for media-libs/svgalib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.47 2004/09/09 16:17:30 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/ChangeLog,v 1.48 2004/09/24 01:06:20 vapier Exp $
 
 *svgalib-1.9.19-r1 (09 Sep 2004)
+
+  23 Sep 2004; Mike Frysinger <vapier@gentoo.org>
+  +files/svgalib-1.9.19-dont-touch-ld.conf.patch, 
+  svgalib-1.9.19-r1.ebuild:
+  Dont let the ebuild touch /etc/ld.so.conf #64829 by huw jenkins.
 
   09 Sep 2004; Stefan Jones <cretin@gentoo.org> +svgalib-1.9.19-r1.ebuild,
   +files/digest-svgalib-1.9.19-r1, +files/svgalib-1.9.19-pic.patch:

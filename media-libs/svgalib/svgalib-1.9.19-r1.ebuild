@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.19-r1.ebuild,v 1.2 2004/09/09 21:50:47 cretin Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/svgalib/svgalib-1.9.19-r1.ebuild,v 1.3 2004/09/24 01:06:20 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -41,6 +41,9 @@ src_unpack() {
 
 	# -fPIC does work for lrmi, see bug #51698
 	epatch ${FILESDIR}/${P}-pic.patch
+
+	# Don't let the ebuild screw around with ld.so.conf #64829
+	epatch ${FILESDIR}/${P}-dont-touch-ld.conf.patch
 }
 
 src_compile() {

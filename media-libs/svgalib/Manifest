@@ -1,17 +1,20 @@
-MD5 d7bbbe8abcc227138d856108390731fe svgalib-1.9.19.ebuild 4415
-MD5 2d8df6e2f14737c6e078c9b6727e6f2f svgalib-1.9.19-r1.ebuild 4492
-MD5 fd33dac71cd54e0c49636a35423bd9d4 svgalib-1.9.18-r1.ebuild 4606
-MD5 bae56a490ab8dff15f12ca1d6c55d506 ChangeLog 8483
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 a3ae0b86fb61856fed062a639cc186a1 ChangeLog 8680
 MD5 1652522405f5936eb29776ef8d5ffa5b metadata.xml 310
-MD5 08beaed909b549304425870873b67c19 files/svgalib-1.9.18-gcc33.patch 426
-MD5 0d7d045fc55ccf3f4a26bc54286a3b8a files/digest-svgalib-1.9.18-r1 66
-MD5 71fa9630e100dc3a6ce8672b4b4b2cff files/digest-svgalib-1.9.19-r1 66
-MD5 e6a7509b89c4014c625cf1eaefd994ff files/svgalib-1.9.18-gcc34.patch 322
-MD5 8a336e556b73e4107cb5403bc07e7dc3 files/svgalib-1.9.19-gentoo.patch 4107
-MD5 0209cd9462a2c845466526a2a4017104 files/svgalib-1.9.18-gentoo.patch 3622
+MD5 1cd357e2780d2dd707001f46d7d045fe svgalib-1.9.19-r1.ebuild 4603
+MD5 c136e25a99e0681344511eef09d410e6 files/svgalib-1.9.19-dont-touch-ld.conf.patch 350
 MD5 0877788ea40d3673a0c50d82d4560e0a files/svgalib-1.9.18-lrmi-gentoo-cflags.patch 269
-MD5 71fa9630e100dc3a6ce8672b4b4b2cff files/digest-svgalib-1.9.19 66
-MD5 91fa4baff3dfb211bcb57a068ed7495f files/svgalib-1.9.19-pic.patch 422
-MD5 431e1212290d169ae8f928e63c793009 files/svgalib-1.9.19-linux2.6.patch 7834
 MD5 627fcf9d82cd93cddcdef96a00248260 files/svgalib-1.9.18-utils-include.patch 413
-MD5 c6ccf439f748f710447c61fe41801a3c files/svgalib-1.9.18-linux2.6-v2.patch 7842
+MD5 8a336e556b73e4107cb5403bc07e7dc3 files/svgalib-1.9.19-gentoo.patch 4107
+MD5 431e1212290d169ae8f928e63c793009 files/svgalib-1.9.19-linux2.6.patch 7834
+MD5 71fa9630e100dc3a6ce8672b4b4b2cff files/digest-svgalib-1.9.19-r1 66
+MD5 91fa4baff3dfb211bcb57a068ed7495f files/svgalib-1.9.19-pic.patch 422
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBU3McHTu7gpaalycRAr8FAKDTfeU3KaAXYfsqnx6I9uPfm08iJwCgm2Gn
+yH+KnbblyASBrzAhk3n/HBs=
+=sDZa
+-----END PGP SIGNATURE-----
