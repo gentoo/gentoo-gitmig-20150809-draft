@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-news/pan/pan-0.14.2.ebuild,v 1.3 2004/01/09 21:43:37 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-news/pan/pan-0.14.2.ebuild,v 1.4 2004/02/21 23:48:25 brad_mssw Exp $
 
 IUSE="spell"
 
@@ -9,7 +9,7 @@ SRC_URI="http://pan.rebelbase.com/download/releases/${PV}/SOURCE/${P}.tar.bz2"
 HOMEPAGE="http://pan.rebelbase.com"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~hppa ~ppc ~sparc"
+KEYWORDS="~x86 ~hppa ~ppc ~sparc amd64"
 SLOT="0"
 
 RDEPEND=">=dev-libs/glib-2.0.4
@@ -36,7 +36,7 @@ src_compile() {
 	use spell \
 		&& myconf="${myconf} --enable-gtkspell" \
 		|| myconf="${myconf} --disable-gtkspell"
-
+	cd ${S} && libtoolize -c -f
 	econf ${myconf} || die "Configure failure"
 
 	emake || die "Compilation failure"
