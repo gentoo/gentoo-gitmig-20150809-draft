@@ -1,6 +1,13 @@
 # ChangeLog for app-misc/twin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-misc/twin/ChangeLog,v 1.4 2002/10/19 15:48:49 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/twin/ChangeLog,v 1.5 2002/10/27 09:55:27 bcowan Exp $
+
+*twin-0.4.5 (27 Oct 2002)
+
+  27 Oct 2002; Brad Cowan <bcowan@gentoo.org> twin-0.4.5.ebuild,
+  files/digest-twin-0.4.5 :
+  
+  Version bump with many bugfixes.
 
 *twin-0.4.4 (10 Sep 2002)
 
