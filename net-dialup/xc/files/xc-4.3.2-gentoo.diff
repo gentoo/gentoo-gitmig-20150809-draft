@@ -1,0 +1,62 @@
+--- /tmp/xcsubs.c	Fri Sep  6 10:53:42 2002
++++ xcsubs.c	Fri Sep  6 14:39:52 2002
+@@ -23,7 +23,7 @@
+ 	 *tgetstr(), *tgoto();
+ int	LI,	/* One less than screen length in termcap entry */
+ 	CO;	/* Screen width */
+-speed_t ospeed; /* Used by termcap lib */
++//speed_t ospeed; /* Used by termcap lib */
+ static char tc[LG_BUFF];	/* termcap buffer */
+ static char tbuf[LG_BUFF], *CD, *CF, *CL, *CM, *CN, *AE, *SE, *SO, *ME;
+ char *CE, PC; /* used by termcap -- padding character */
+@@ -410,7 +410,7 @@
+ {
+ 	struct stat statbuf;
+ 
+-	if (stat(pathname,&statbuf) || (statbuf.st_mode & S_IFMT) != S_IFREG)
++	if (stat(pathname,&statbuf) || (statbuf.st_mode & __S_IFMT) != __S_IFREG)
+ 		return NIL(FILE);
+ 	return fopen(pathname, "r");
+ }
+--- /tmp/Makefile	Fri Sep  6 10:35:18 2002
++++ Makefile	Fri Sep  6 14:44:56 2002
+@@ -5,6 +5,8 @@
+ 
+ SHELL	= /bin/sh
+ 
++DESTDIR =
++
+ #WARN 	= -Wall -ansi -pedantic -Wshadow -Wmissing-prototypes
+ 
+ #machine = -m486
+@@ -14,12 +16,12 @@
+ CDEFS	= -D_POSIX_SOURCE=1
+ CFLAGS	= $(WARN) $(CDEFS) $(GCCOPT)
+ 
+-prefix	= /usr/local
++prefix	= /usr
+ bindir	= $(prefix)/bin
+ libdir	= $(prefix)/lib/xc 
+-mandir	= /usr/man/man1
++mandir	= /usr/share/man
+ catdir	= /var/catman/cat1
+-manown	= -o root -g man
++manown	= -o root -g root
+ binown	= -o root -g root 
+ 
+ export CC CFLAGS manown binown
+@@ -64,10 +66,10 @@
+ 
+ install: ./bin/xc ./bin/crc xc.1 crc.1
+ 	@echo " "
+-	$(INSTALL) $(binown) -m 755 -s ./bin/xc $(bindir) 
+-	$(INSTALL) $(binown) -m 755 -s ./bin/crc $(bindir) 
+-	$(INSTALL) $(manown) -m 644 xc.1 $(mandir)
+-	$(INSTALL) $(manown) -m 644 crc.1 $(mandir)
++	$(INSTALL) $(binown) -m 755 -s ./bin/xc $(DESTDIR)$(bindir) 
++	$(INSTALL) $(binown) -m 755 -s ./bin/crc $(DESTDIR)$(bindir) 
++	$(INSTALL) $(manown) -m 644 xc.1 $(DESTDIR)$(mandir)/man1
++	$(INSTALL) $(manown) -m 644 crc.1 $(DESTDIR)$(mandir)/man1
+ 	@echo " "
+ 	@echo " "
+ 	@echo "You will want to manually install 'phonelist' and"
