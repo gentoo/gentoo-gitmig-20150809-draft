@@ -1,8 +1,11 @@
 # ChangeLog for net-firewall/iptables
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.2 2003/03/11 22:35:23 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-firewall/iptables/ChangeLog,v 1.3 2003/03/15 17:31:02 tuxus Exp $
 
 *iptables-1.2.7a-r3 (11 Mar 2003)
+
+  15 Mar 2003; Jan Seidel <tuxus@gentoo.org> :
+  Added mips to KEYWORDS
 
   11 Mar 2003; Martin Holzer <mholzer@gentoo.org> iptables-1.2.7a-r3.ebuild,
   files/grsecurity-1.2.7a-iptables.patch, files/iptables-1.2.6a-imq.diff-3,
