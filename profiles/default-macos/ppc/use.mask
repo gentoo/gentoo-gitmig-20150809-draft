@@ -13,6 +13,13 @@ caps
 # Skipping docs for now
 doc
 
+# tcl ebuild overwrites Apple's tcl, so we mask it (dev-lang/ruby)
+tcltk
+
+# net-misc/dante fails to compile, so we mask it until we succeed
+# (dev-lang/ruby, net-misc/lftp)
+socks5
+
 x86
 
 # see email to gentoo-dev with subject "use.mask and PHP5's crazy IUSE"
