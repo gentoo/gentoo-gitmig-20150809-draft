@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.66 2003/10/07 12:23:16 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.0-r3.ebuild,v 1.67 2003/10/13 05:24:31 spyderous Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -43,8 +43,8 @@ XCUR_VER="0.3.1"
 SISDRV_VER="100803-1"
 SAVDRV_VER="1.1.27t"
 MGADRV_VER="1_3_0beta"
-#VIADRV_VER="0.1"
-SYNDRV_VER="0.11.7"
+VIADRV_VER="0.1"
+SYNDRV_VER="0.11.8"
 
 BASE_PV="${PV}"
 MY_SV="${BASE_PV//\.}"
@@ -191,7 +191,6 @@ src_unpack() {
 	cd ${WORKDIR}
 	unpack synaptics-${SYNDRV_VER}.tar.bz2 > /dev/null
 	eend 0
-	epatch ${FILESDIR}/XFree86-synaptics-fixup-0.11.3p11.diff
 	cd ${S}
 
 #	ebegin "Adding VIA driver"
