@@ -1,6 +1,6 @@
-diff -ru j2sdk.orig/control/make/motif-rules.gmk j2sdk/control/make/motif-rules.gmk
---- j2sdk.orig/control/make/motif-rules.gmk	2002-09-06 07:00:16.000000000 +0000
-+++ j2sdk/control/make/motif-rules.gmk	2003-01-13 18:21:50.000000000 +0000
+diff -ur j2sdk/control/make/motif-rules.gmk j2sdk.new/control/make/motif-rules.gmk
+--- j2sdk/control/make/motif-rules.gmk	2002-09-06 08:00:16.000000000 +0100
++++ j2sdk.new/control/make/motif-rules.gmk	2003-04-16 15:35:39.000000000 +0100
 @@ -25,7 +25,10 @@
    ABS_MOTIF_DIR := $(shell $(CD) $(MOTIF_DIR); $(PWD))
  endif
@@ -13,17 +13,18 @@ diff -ru j2sdk.orig/control/make/motif-rules.gmk j2sdk/control/make/motif-rules.
  
  motif: motif-build motif-install
  
-@@ -34,6 +37,9 @@
+@@ -34,8 +37,8 @@
  motif-build:
    ifdef BUILD_MOTIF
  	$(CD) $(MOTIF_TOPDIR)/lib/Xm ; \
-+	$(CD) util ; \
-+	$(MAKE) -k ; \
-+	$(CD) .. ; \
- 	$(MAKE) MAKEFLAGS= ARCH_DATA_MODEL=$(ARCH_DATA_MODEL); \
- 	$(MAKE) includes MAKEFLAGS= ARCH_DATA_MODEL=$(ARCH_DATA_MODEL)
+-	$(MAKE) MAKEFLAGS= ARCH_DATA_MODEL=$(ARCH_DATA_MODEL); \
+-	$(MAKE) includes MAKEFLAGS= ARCH_DATA_MODEL=$(ARCH_DATA_MODEL)
++	$(MAKE) -k MAKEFLAGS= ARCH_DATA_MODEL=$(ARCH_DATA_MODEL); \
++	$(MAKE) -k includes MAKEFLAGS= ARCH_DATA_MODEL=$(ARCH_DATA_MODEL)
    endif
-@@ -43,15 +49,14 @@
+ 
+ motif-install: motif-install-lib motif-install-include
+@@ -43,15 +46,14 @@
  motif-install-lib: $(MOTIF_DIR)/lib 
    ifdef BUILD_MOTIF
  	$(CD) $(MOTIF_DIR)/lib; \
@@ -43,7 +44,7 @@ diff -ru j2sdk.orig/control/make/motif-rules.gmk j2sdk/control/make/motif-rules.
    endif
  #
  # clobber the workspace, but note that the motif code misses some
-@@ -62,7 +67,7 @@
+@@ -62,7 +64,7 @@
    ifdef BUILD_MOTIF
  	( $(CD) $(MOTIF_TOPDIR)/lib/Xm ; \
  		$(MAKE) clean MAKEFLAGS= ARCH_DATA_MODEL=$(ARCH_DATA_MODEL); ); \
@@ -52,9 +53,9 @@ diff -ru j2sdk.orig/control/make/motif-rules.gmk j2sdk/control/make/motif-rules.
  	      $(MOTIF_TOPDIR)/lib/Xm/Xm.msg 
  	$(RM) -r $(MOTIF_TOPDIR)/lib/Xm/exports
  	$(RM) -r $(MOTIF_DIR)/lib $(MOTIF_DIR)/include $(MOTIF_DIR)
-diff -ru j2sdk.orig/j2se/make/sun/awt/Makefile j2sdk/j2se/make/sun/awt/Makefile
---- j2sdk.orig/j2se/make/sun/awt/Makefile	2002-09-06 07:08:23.000000000 +0000
-+++ j2sdk/j2se/make/sun/awt/Makefile	2003-01-13 18:05:35.000000000 +0000
+diff -ur j2sdk/j2se/make/sun/awt/Makefile j2sdk.new/j2se/make/sun/awt/Makefile
+--- j2sdk/j2se/make/sun/awt/Makefile	2002-09-06 08:08:23.000000000 +0100
++++ j2sdk.new/j2se/make/sun/awt/Makefile	2003-04-16 15:34:13.000000000 +0100
 @@ -237,8 +237,10 @@
  ifneq ($(PLATFORM), windows)
  # vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv SOLARIS/LINUX
@@ -67,9 +68,9 @@ diff -ru j2sdk.orig/j2se/make/sun/awt/Makefile j2sdk/j2se/make/sun/awt/Makefile
  else # STATIC_MOTIF
    LIBXM = -lXm
  endif # STATIC_MOTIF
-diff -ru j2sdk.orig/j2se/make/sun/awt/mawt.gmk j2sdk/j2se/make/sun/awt/mawt.gmk
---- j2sdk.orig/j2se/make/sun/awt/mawt.gmk	2002-09-06 07:08:24.000000000 +0000
-+++ j2sdk/j2se/make/sun/awt/mawt.gmk	2003-01-13 18:05:35.000000000 +0000
+diff -ur j2sdk/j2se/make/sun/awt/mawt.gmk j2sdk.new/j2se/make/sun/awt/mawt.gmk
+--- j2sdk/j2se/make/sun/awt/mawt.gmk	2002-09-06 08:08:24.000000000 +0100
++++ j2sdk.new/j2se/make/sun/awt/mawt.gmk	2003-04-16 15:34:13.000000000 +0100
 @@ -125,8 +125,10 @@
  else
  CFLAGS += -DMOTIF_VERSION=$(MOTIF_VERSION)
