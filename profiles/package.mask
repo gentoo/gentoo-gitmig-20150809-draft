@@ -23,6 +23,11 @@
 ##
 
 # raker@gentoo.org (16 Jul 2002)
+# libwmfun completes compiling but doesn't appear to support PLDrawString
+# functions correctly.  Masking while incompatible pointers are figured out
+=x11-libs/libwmfun-0.0.4
+
+# raker@gentoo.org (16 Jul 2002)
 # New freetype build from development series - please test
 # This should be the first good replacement for 2.0.9
 =media-libs/freetype-2.1.2
