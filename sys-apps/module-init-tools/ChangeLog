@@ -1,6 +1,15 @@
 # ChangeLog for sys-apps/module-init-tools
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.26 2003/06/02 09:53:32 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/module-init-tools/ChangeLog,v 1.27 2003/07/12 18:54:54 azarah Exp $
+
+*module-init-tools-0.9.12-r1 (12 Jul 2003)
+
+  12 Jul 2003; Martin Schlemmer <azarah@gentoo.org>
+  module-init-tools-0.9.12-r1.ebuild,
+  files/module-init-tools-0.9.12-includes-should-override.patch:
+  Module options/aliases already accuired, should be replaced by
+  newer if they are aquired from a file 'included' after the original
+  options/aliases ...
 
 *module-init-tools-0.9.12 (02 Jun 2003)
 
