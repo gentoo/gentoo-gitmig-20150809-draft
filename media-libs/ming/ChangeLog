@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/ming
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.6 2003/03/20 16:29:22 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ChangeLog,v 1.7 2003/06/30 18:47:26 darkspecter Exp $
+
+  30 Jun 2003; Bartosch Pixa <darkspecter@gentoo.org> ming-0.2a.ebuild:
+  set ppc in keywords
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  

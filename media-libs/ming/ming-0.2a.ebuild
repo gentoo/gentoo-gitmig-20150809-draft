@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.2a.ebuild,v 1.7 2003/03/20 16:29:22 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/ming/ming-0.2a.ebuild,v 1.8 2003/06/30 18:47:26 darkspecter Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A OpenSource library from flash movie generation"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.opaque.net/ming/"
 
 SLOT="0"
 LICENSE="LGPL-2.1"
-KEYWORDS="x86 sparc hppa"
+KEYWORDS="x86 sparc hppa ppc"
 
 DEPEND="virtual/glibc"
 
