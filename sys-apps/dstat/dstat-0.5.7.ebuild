@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/dstat/dstat-0.5.7.ebuild,v 1.2 2005/03/15 09:38:31 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/dstat/dstat-0.5.7.ebuild,v 1.3 2005/03/15 09:40:39 swegener Exp $
 
 DESCRIPTION="Dstat is a versatile replacement for vmstat, iostat and ifstat"
 HOMEPAGE="http://dag.wieers.com/home-made/dstat/"
@@ -19,7 +19,8 @@ src_compile() {
 
 src_install() {
 	dobin dstat || die "dobin failed"
-	dodoc AUTHORS ChangeLog README TODO dstat.conf || die "dodoc failed"
+	doman dstat.1 || die "doman failed"
+	dodoc AUTHORS ChangeLog README{,.screen} TODO dstat.conf || die "dodoc failed"
 }
 
 pkg_postinst() {
