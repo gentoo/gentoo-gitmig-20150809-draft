@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.1.ebuild,v 1.2 2004/04/01 12:02:51 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.1.ebuild,v 1.3 2004/04/05 13:54:44 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -531,5 +531,12 @@ pkg_postinst() {
 	einfo " Bug 8539, or http://www.openoffice.org/FAQs/fontguide.html#8"
 	einfo
 	einfo "******************************************************************"
+	einfo
+	einfo "******************************************************************"
+	einfo " If you are upgrading from OpenOffice.org 1.1.0 you will have"
+	einfo " to redo your settings."
+	einfo
+	einfo "******************************************************************"
+
 }
 
