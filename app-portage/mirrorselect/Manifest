@@ -1,3 +1,6 @@
-MD5 27503de230d0ab3626a1db0571ad4276 ChangeLog 5026
+MD5 af5aa55346b92a63bae3f2e46df644f9 mirrorselect-0.82-r1.ebuild 630
+MD5 bac6ecde659af7254653437db41c2314 ChangeLog 5347
+MD5 61c2f5a98f7a397858f93b6672f08ab2 metadata.xml 438
 MD5 77d3521a80e2f348212de93794fc4857 mirrorselect-0.82.ebuild 627
 MD5 27276287e28565817f7d04730d47e685 files/digest-mirrorselect-0.82 65
+MD5 eb6b407e941cf1b9d34427a3157f06f9 files/digest-mirrorselect-0.82-r1 68
