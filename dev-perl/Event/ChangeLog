@@ -1,6 +1,11 @@
 # ChangeLog for dev-perl/Event
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event/ChangeLog,v 1.9 2003/04/03 23:02:21 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Event/ChangeLog,v 1.10 2003/05/31 20:23:43 mcummings Exp $
+
+*Event-0.87 (31 May 2003)
+
+  31 May 2003; Michael Cummings <mcummings@gentoo.org> Event-0.87.ebuild:
+  New verison of the Event module, this time with missing depend for Test.
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
