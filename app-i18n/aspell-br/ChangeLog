@@ -1,10 +1,11 @@
 # ChangeLog for app-i18n/aspell-br
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/aspell-br/ChangeLog,v 1.1 2002/10/18 11:43:21 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/aspell-br/ChangeLog,v 1.2 2002/10/30 21:44:08 seemant Exp $
 
 *aspell-br-0.50.2 (18 Oct 2002)
 
   18 Oct 2002; Seemant Kulleen <seemant@gentoo.org> aspell-br-0.50.2.ebuild
   files/digest-aspell-br-0.50.2 :
 
-  Breton language aspell dictionary.
+  Breton language aspell dictionary.  Note that pilla@cs.pitt.edu (Mauricio
+  Lima Pilla) had submitted an ebuild for this in bug #8305.
