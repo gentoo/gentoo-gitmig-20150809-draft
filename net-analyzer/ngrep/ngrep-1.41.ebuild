@@ -1,20 +1,21 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ngrep-1.41.ebuild,v 1.8 2004/06/24 22:13:02 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ngrep/ngrep-1.41.ebuild,v 1.9 2004/07/01 20:11:05 squinky86 Exp $
 
 inherit eutils
 
 S="${WORKDIR}/${P}"
+IUSE=""
 DESCRIPTION="A grep for network layers"
 SRC_URI="mirror://sourceforge/ngrep/${P}.tar.bz2"
 RESTRICT="nomirror"
 HOMEPAGE="http://ngrep.sourceforge.net"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=net-libs/libpcap-0.5.2
 	sys-devel/autoconf"
 
-RDEPEND="virtual/glibc"
+RDEPEND="virtual/libc"
 
 SLOT="0"
 LICENSE="as-is"

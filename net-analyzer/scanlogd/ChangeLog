@@ -1,6 +1,9 @@
 # ChangeLog for net-analyzer/scanlogd
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanlogd/ChangeLog,v 1.7 2004/06/24 22:17:32 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/scanlogd/ChangeLog,v 1.8 2004/07/01 20:16:04 squinky86 Exp $
+
+  01 Jul 2004; Jon Hood <squinky86@gentoo.org> scanlogd-2.2.ebuild:
+  change virtual/glibc to virtual/libc, add IUSE
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
