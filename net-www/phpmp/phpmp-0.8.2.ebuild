@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/net-www/phpmp/phpmp-0.8.2.ebuild,v 1.3 2003/08/04 01:24:02 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phpmp/phpmp-0.8.2.ebuild,v 1.4 2003/09/03 23:47:38 stuart Exp $
 
 MY_P="phpMp-${PV}"
 S=${WORKDIR}/${MY_P}
@@ -24,9 +24,9 @@ pkg_setup() {
 	webapp-pkg_setup "${NO_WEBSERVER}"
 }
 
-src_compile() {            
+src_compile() {
 	#we need to have this empty function ... default compile hangs
-	echo "Nothing to compile" 
+	echo "Nothing to compile"
 }
 
 src_install() {
