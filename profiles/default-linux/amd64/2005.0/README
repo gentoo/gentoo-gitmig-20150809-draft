@@ -1,36 +1,30 @@
 HOWTO upgrade from 2004.3 and 2004.3/lib64 to 2005.0
 
  1) emerge -v '>=sys-apps/portage-2.0.51-r9'
- 2) emerge unmerge app-emulation/emul-linux-x86-glibc
- 3) rm /lib32 /usr/lib32 /usr/X11R6/lib32
- 4) mkdir /lib32
- 5) cp /emul/linux/x86/lib32/libsandbox.so /lib32
- 6) emerge -v '>=sys-apps/baselayout-1.11.8-r1'
- 7) rm /etc/make.profile
- 8) ln -s /usr/portage/profiles/default-linux/amd64/2005.0 /etc/make.profile
- 9) cd /usr/tmp
-10) emerge unmerge linux26-headers
-11) emerge -v linux-headers
-12) wget http://dev.gentoo.org/~eradicator/grp/amd64/2005.0/glibc-2.3.4.20040808-r1.tbz2
-13) emerge -v glibc-2.3.4.20040808-r1.tbz2
-14) lynx -source http://dev.gentoo.org/~eradicator/fix_lib_symlinks.sh | sh
-15) (OPTIONAL) emerge -uv glibc
-16) emerge -upv system
-17) emerge -uv system
+ 2) emerge unmerge linux26-headers
+ 3) emerge -v linux-headers
+ 4) emerge unmerge app-emulation/emul-linux-x86-glibc
+ 5) rm /lib32 /usr/lib32
+ 6) mkdir /lib32 /usr/lib32
+ 7) cp /emul/linux/x86/lib32/libsandbox.so /lib32
+ 8) rm /etc/make.profile
+ 9) ln -s /usr/portage/profiles/default-linux/amd64/2005.0 /etc/make.profile
+10) cd /usr/tmp
+11) wget http://dev.gentoo.org/~eradicator/grp/amd64/2005.0/glibc-2.3.4.20040808-r1.tbz2
+12) emerge -v glibc-2.3.4.20040808-r1.tbz2
+13) (OPTIONAL) emerge -uv glibc
+14) emerge -upv system
+15) emerge -uv system
 
 Notes:
 The order is VERY important.
 
-baselayout-1.11.8-r1 isn't in portage yet,  but you can use
-http://dev.gentoo.org/~eradicator/baselayout-ml.patch to make what I'm using
-for it.  When base-system releases 1.11.8-r1, it might have other fixes too,
-so be sure to re-emerge, but this one should be fine for building stages.
-
 You MUST do every step even if you already have that version installed.
-emerging glibc the second time is optional if you don't want to use my
-options.
 
-The script for step 14 isn't yet ready.  It's safe to skip for now.
+Emerging glibc the second time is optional if you don't want to use my
+options.  It was made with gcc-3.4.3-r1:
+CFLAGS="-O2 -pipe -fomit-frame-pointer"
+USE: -build -debug +emul-linux-x86 -erandom -hardened +multilib +nls +nptl +pic -userlocales
 
 linux-headers is masked in the main package.mask still, so unmask it yourself.
 linux26-headers-2.6.8.1-r3 will probably work, but I noticed it doesn't get

@@ -1,0 +1,21 @@
+HOWTO upgrade from 2005.0 to 2005.0/no-symlinks
+
+ 1) emerge -v '>=sys-apps/baselayout-1.11.8-r1'
+ 2) rm /etc/make.profile
+ 3) ln -s /usr/portage/profiles/default-linux/amd64/2005.0/no-symlinks /etc/make.profile
+ 4) lynx -source http://dev.gentoo.org/~eradicator/fix_lib_symlinks.sh | sh
+ 5) emerge -upv system
+ 6) emerge -uv system
+
+Notes:
+baselayout-1.11.8-r1 isn't in portage yet,  but you can use
+http://dev.gentoo.org/~eradicator/baselayout-ml.patch to make what I'm using
+for it.  When base-system releases 1.11.8-r1, it might have other fixes too,
+so be sure to re-emerge, but this one should be fine for building stages.
+
+The script for step 4 isn't yet ready.  It's safe to skip for now.
+
+linux-headers is masked in the main package.mask still, so unmask it yourself.
+linux26-headers-2.6.8.1-r3 will probably work, but I noticed it doesn't get
+the headers in asm-i386/mach-*/, but my updated multilib.eclass method does
+for linux-headers.

@@ -1,0 +1,7 @@
+# Copyright 1999-2005 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/amd64/2005.0/no-symlinks/packages,v 1.1 2005/01/12 23:49:31 eradicator Exp $
+
+# Don't use packages which do ugly symlink hackery for lib/lib64
+*>=sys-apps/baselayout-1.11.8-r1
+
