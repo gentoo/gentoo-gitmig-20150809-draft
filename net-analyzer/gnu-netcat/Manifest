@@ -1,14 +1,4 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 929617028ab59f6e45c301bd724f1c1d ChangeLog 372
+MD5 6d71ab46db79bd6d67893e52073a536d gnu-netcat-0.7.1.ebuild 778
+MD5 8f9ccd0a972c50e790275e050e59dc82 ChangeLog 366
 MD5 f34e3c8858756da0001b12d2d3fa1af2 metadata.xml 159
-MD5 ead2a5b35c8c1433cb98a183683da4c7 gnu-netcat-0.7.1.ebuild 784
 MD5 18c72f77c7d5016cb4425084707f36ff files/digest-gnu-netcat-0.7.1 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA09fEHTu7gpaalycRAq/iAKCgSkodxa7IwrW/S7LdNS8foAfYIQCeLLpC
-xz4t6Rc0cqxVTYr/nM/ACsw=
-=bxcs
------END PGP SIGNATURE-----

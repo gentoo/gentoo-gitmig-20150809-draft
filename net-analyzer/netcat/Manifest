@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 18af3be64967c78a9dd485f4da903ed5 ChangeLog 3632
-MD5 671600764f19de04aee5220d5cd5725f netcat-110-r6.ebuild 1575
-MD5 3cfad88168cc84b8f15cf707b605f312 netcat-110-r5.ebuild 1560
+MD5 b45543b926076481b65ccdb405216f78 netcat-110-r5.ebuild 1554
+MD5 bce4b8903879dc300ad263da267ba333 netcat-110-r6.ebuild 1569
+MD5 83e1323f4c55af033938afdc0543386b ChangeLog 3625
 MD5 1fb0cef8c20e31d8fee121ebb2205588 metadata.xml 221
-MD5 65549a89bfefa86a357427408e4ac6d7 files/digest-netcat-110-r6 200
 MD5 068046a1728eb528b4b96a334780f932 files/digest-netcat-110-r5 189
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFA09FUHTu7gpaalycRAiFdAKCGUX8XL+tGlMmaQxWf113xNFG/UACfW4o6
-gFURUuR9G0tO15MrbGdUbQw=
-=abUC
------END PGP SIGNATURE-----
+MD5 65549a89bfefa86a357427408e4ac6d7 files/digest-netcat-110-r6 200
