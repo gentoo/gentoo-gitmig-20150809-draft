@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/fmod
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/ChangeLog,v 1.14 2004/09/01 16:55:04 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/fmod/ChangeLog,v 1.15 2004/10/05 10:18:16 eradicator Exp $
+
+  05 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> -fmod-3.71.ebuild:
+  Removing old version.
 
   01 Sep 2004; Jeremy Huddleston <eradicator@gentoo.org> fmod-3.73.ebuild:
   Stable amd64.
