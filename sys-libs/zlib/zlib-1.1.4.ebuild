@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.1.4.ebuild,v 1.10 2002/11/05 20:38:54 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/zlib/zlib-1.1.4.ebuild,v 1.11 2002/11/17 17:42:26 cretin Exp $
 
 S="${WORKDIR}/${P}"
 DESCRIPTION="Standard (de)compression library"
@@ -17,11 +17,7 @@ src_compile() {
 
 	./configure --shared --prefix=/usr || die
 
-	if [ "${ARCH}" = "alpha" ] ; then
-        emake CFLAGS="${CFLAGS} -fPIC" || die
-	else
-		emake || die
-	fi
+	emake CFLAGS="${CFLAGS} -fPIC" || die
 
 	make test || die
 
