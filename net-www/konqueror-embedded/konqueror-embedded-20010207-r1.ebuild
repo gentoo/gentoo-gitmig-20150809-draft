@@ -1,16 +1,16 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/konqueror-embedded/konqueror-embedded-20010207-r1.ebuild,v 1.11 2003/09/06 01:54:08 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/konqueror-embedded/konqueror-embedded-20010207-r1.ebuild,v 1.12 2003/09/08 06:58:01 vapier Exp $
 
-A=${PN}-snapshot.tar.gz
-S=${WORKDIR}/${PN}-snapshot
-DESCRIPTION=""
-SRC_URI="http://devel-home.kde.org/~hausmann/${A}"
-HOMEPAGE="http://www.konqueror.org/embedded.html"
 DESCRIPTION="The Konqueror/Embedded project attempts to build up a special version of the web browsing component of the KDE browser Konqueror (in particular its html rendering engine khtml and its io subsystem)"
-SLOT="0"
-KEYWORDS="x86 sparc "
+HOMEPAGE="http://www.konqueror.org/embedded.html"
+SRC_URI="http://devel-home.kde.org/~hausmann/${PN}-snapshot.tar.gz"
+
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86 sparc"
+
+S=${WORKDIR}/${PN}-snapshot
 
 src_compile() {
 	local myconf
@@ -23,13 +23,12 @@ src_compile() {
 	else
 		myconf="--prefix=/usr"
 	fi
-	try ./configure ${myconf} --host=${CHOST} \
-	--with-ssl-dir=/usr
-	try make
+	/configure ${myconf} --host=${CHOST} --with-ssl-dir=/usr || die
+	make || die
 }
 
-src_install () {
-	try make DESTDIR=${D} install
+src_install() {
+	make DESTDIR=${D} install || die
 	if [ "`use qt-embedded`" ]
 	then
 		dodir /usr/embedded/bin
@@ -41,4 +40,3 @@ src_install () {
 		mv ${D}/usr/konq* ${D}/usr/bin
 	fi
 }
-
