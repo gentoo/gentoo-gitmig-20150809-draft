@@ -1,6 +1,22 @@
 # ChangeLog for app-doc/phrack
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/phrack/ChangeLog,v 1.2 2003/02/12 04:44:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/phrack/ChangeLog,v 1.3 2003/03/14 04:29:18 vladimir Exp $
+
+*phrack-58 (13 Mar 2003)
+
+  13 Mar 2003; Graham Forest <vladimir@gentoo.org> phrack-01.ebuild,
+  phrack-02.ebuild, phrack-03.ebuild, phrack-04.ebuild, phrack-05.ebuild,
+  phrack-06.ebuild, phrack-07.ebuild, phrack-08.ebuild, phrack-09.ebuild,
+  phrack-10.ebuild, phrack-11.ebuild, phrack-12.ebuild, phrack-13.ebuild,
+  phrack-14.ebuild, phrack-15.ebuild, phrack-16.ebuild, phrack-17.ebuild,
+  phrack-18.ebuild, phrack-19.ebuild, phrack-20.ebuild, phrack-21.ebuild,
+  phrack-22.ebuild, phrack-23.ebuild, phrack-24.ebuild, phrack-25.ebuild,
+  phrack-26.ebuild, phrack-27.ebuild, phrack-28.ebuild, phrack-29.ebuild,
+  phrack-30.ebuild, phrack-46.ebuild, phrack-47.ebuild, phrack-48.ebuild,
+  phrack-49.ebuild, phrack-50.ebuild, phrack-51.ebuild, phrack-52.ebuild,
+  phrack-53.ebuild, phrack-54.ebuild, phrack-55.ebuild, phrack-56.ebuild,
+  phrack-57.ebuild, phrack-58.ebuild, phrack-59.ebuild, phrack-60.ebuild:
+  Added ppc to KEYWORDS
 
 *phrack-* (11 Feb 2003)
 
