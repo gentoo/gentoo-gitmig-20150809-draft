@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.52.ebuild,v 1.2 2004/04/01 19:42:16 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.1.52.ebuild,v 1.3 2004/04/02 14:29:02 suka Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -86,6 +86,7 @@ RDEPEND=">=sys-libs/glibc-2.1
 	app-arch/unzip
 	dev-libs/expat
 	virtual/lpr
+	!app-office/openoffice-ximian-bin
 	ppc? ( >=sys-libs/glibc-2.2.5-r7
 	>=sys-devel/gcc-3.2.1 )
 	>=media-libs/freetype-2.1.4"
@@ -239,7 +240,6 @@ src_unpack() {
 
 	#Additional patch for Kernel 2.6
 	epatch ${FILESDIR}/${OO_VER}/openoffice-1.1.0-linux-2.6-fix.patch
-
 
 	if [ ${ARCH} = "sparc" ]; then
 		epatch ${FILESDIR}/${OO_VER}/openoffice-1.1.0-sparc64-fix.patch
