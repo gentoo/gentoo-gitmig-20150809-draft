@@ -1,5 +1,5 @@
-MD5 9b668252507e25cd6f1ec429c992d0ab advancecomp-1.8.ebuild 910
-MD5 a26e221294df44b61ce58194c5c38d17 ChangeLog 490
+MD5 6420a3cc5b0dda24021c4441f4e673ae advancecomp-1.8.ebuild 908
+MD5 cc8e18cb2e7b1f694b05a43e82bc2642 ChangeLog 573
 MD5 52b587de750eaf83b62c0205f5a890a0 metadata.xml 371
 MD5 c59beca247b09c82acb8f42bf94e844c files/digest-advancecomp-1.8 67
 MD5 32520f6c0bf186c37ac3922dd4ac828b files/advancecomp-bzip2-compile-plz-k-thx.diff 3811
