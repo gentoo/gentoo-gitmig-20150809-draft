@@ -1,6 +1,11 @@
 # ChangeLog for media-sound/mpc
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/ChangeLog,v 1.25 2005/02/11 13:20:19 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/mpc/ChangeLog,v 1.26 2005/03/12 18:15:00 axxo Exp $
+
+*mpc-0.11.2 (12 Mar 2005)
+
+  12 Mar 2005; Thomas Matthijs <axxo@gentoo.org> +mpc-0.11.2.ebuild:
+  version bump
 
   11 Feb 2005; Thomas Matthijs <axxo@gentoo.org> mpc-0.11.1.ebuild:
   enable bash completing w/ bash-completion-config
