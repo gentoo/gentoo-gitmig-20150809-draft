@@ -19,7 +19,7 @@ src_unpack() {
 }
 src_compile() {
 
-	addpredict /dev/ptys
+	addpredict /dev/ptys/*
 	
 	./configure \
 		--prefix=/usr \
