@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.11.ebuild,v 1.1 2003/12/14 18:16:03 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/planner/planner-0.11.ebuild,v 1.2 2003/12/17 01:27:05 spider Exp $
 
 
 
@@ -45,3 +45,12 @@ src_unpack () {
 	# Upstream has a newer intltool, doing this will fix some dependency problems
 	intltoolize --force
 }
+
+pkg_postinst () {
+	gnome2_pkg_postinst
+	einfo "You will have to unmerge mrproject and libmrproject after this"
+	einfo "those projects will soon dissapear, as soon as we can mark planner as stable"
+	echo ""
+	einfo "emerge unmerge mrproject libmrproject"
+}
+
