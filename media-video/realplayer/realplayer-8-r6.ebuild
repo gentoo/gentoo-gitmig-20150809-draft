@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r6.ebuild,v 1.4 2003/09/05 09:07:55 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/realplayer/realplayer-8-r6.ebuild,v 1.5 2003/09/05 10:02:23 liquidx Exp $
 
 inherit nsplugins
 
@@ -25,11 +25,11 @@ elif use alpha; then
 fi
 
 
-SRC_URI="x86? http://docs.real.com/docs/playerpatch/unix/rv9_libc6_i386_cs2.tgz
-	x86? rp8_linux20_libc6_i386_cs2.bin
-	ppc? rp8_linux_powerpc_cs1.bin
-	sparc? rp8_linux_sparc_cs1.bin
-	alpha? rp8_linux_alpha_rh62_cs1.bin"
+SRC_URI="x86? ( http://docs.real.com/docs/playerpatch/unix/rv9_libc6_i386_cs2.tgz )
+	x86? ( rp8_linux20_libc6_i386_cs2.bin )
+	ppc? ( rp8_linux_powerpc_cs1.bin )
+	sparc? ( rp8_linux_sparc_cs1.bin )
+	alpha? ( rp8_linux_alpha_rh62_cs1.bin )"
 
 LICENSE="realplayer8"
 SLOT="0"
