@@ -1,13 +1,19 @@
 # ChangeLog for net-analyzer/ethereal
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.15 2002/11/14 00:27:45 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ChangeLog,v 1.16 2002/12/10 21:19:29 mholzer Exp $
 
 *ethereal-0.9.7-r1 (13 Nov 2002) 
+
+  10 Dec 2002; Martin Holzer <mholzer@gentoo.org> ethereal-0.9.7-r1.ebuild files/digest-ethereal-0.9.7-r1 :
+  Changed SRC_URI and to .tar.bz2
   
   13 Nov 2002; Spider <spider@gentoo.org> ethereal-0.9.7-r1.ebuild :
   Testing revision with gtk2 support.  
 
 *ethereal-0.9.7 (11 Oct 2002)
+
+  10 Dec 2002; Martin Holzer <mholzer@gentoo.org> ethereal-0.9.7.ebuild files/digest-ethereal-0.9.7 :
+  Changed SRC_URI and to .tar.bz2
 
   06 Nov 2002; Bruce A. Locke <blocke@shivan.org> ethereal-0.9.7.ebuild:
   Change 'X' USE to 'gtk' (bug #10122) and marking as stable
@@ -18,6 +24,9 @@
   Version bump, fixed sandbox violation closing bugs #7953,8681
 
 *ethereal-0.9.6 (30 Aug 2002)
+
+  10 Dec 2002; Martin Holzer <mholzer@gentoo.org> ethereal-0.9.6.ebuild :
+  Changed SRC_URI
 
   15 Sep 2002; Seemant Kulleen <seemant@gentoo.org> ethereal-0.9.6.ebuild :
 

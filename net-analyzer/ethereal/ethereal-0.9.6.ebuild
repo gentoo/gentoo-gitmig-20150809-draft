@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.6.ebuild,v 1.5 2002/10/05 05:39:17 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/ethereal/ethereal-0.9.6.ebuild,v 1.6 2002/12/10 21:19:30 mholzer Exp $
 
 IUSE="X ipv6 snmp ssl"
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A commercial-quality network protocol analyzer"
-SRC_URI="http://www.ethereal.com/distribution/${P}.tar.gz"
+SRC_URI="http://www.ethereal.com/distribution/old-versions/${P}.tar.gz"
 HOMEPAGE="http://www.ethereal.com/"
 
 SLOT="0"
