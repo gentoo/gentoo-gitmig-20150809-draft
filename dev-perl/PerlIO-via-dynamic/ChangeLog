@@ -1,6 +1,10 @@
 # ChangeLog for dev-perl/PerlIO-via-dynamic
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-via-dynamic/ChangeLog,v 1.5 2005/02/05 14:21:45 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PerlIO-via-dynamic/ChangeLog,v 1.6 2005/03/30 00:00:16 mcummings Exp $
+
+  29 Mar 2005; Michael Cummings <mcummings@gentoo.org>
+  PerlIO-via-dynamic-0.11.ebuild:
+  Bug 87174 - looks like the Makefile was misleading
 
   05 Feb 2005; Dylan Carlson <absinthe@gentoo.org>
   PerlIO-via-dynamic-0.11.ebuild:

@@ -1,6 +1,16 @@
-MD5 26179d737835c7e874933fc81650ecf5 PerlIO-via-dynamic-0.11.ebuild 539
-MD5 4bfffa2bb284d5053e44d069429b8e67 PerlIO-via-dynamic-0.02.ebuild 562
-MD5 47b267ee81af52ecf3058369e732d8e7 ChangeLog 759
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 236ea473d91ca043c4b3381f020babe1 ChangeLog 903
 MD5 e2d8f1bf77722def1dd432e26455c818 metadata.xml 305
+MD5 4bfffa2bb284d5053e44d069429b8e67 PerlIO-via-dynamic-0.02.ebuild 562
+MD5 6ff0e86684666463997290c34c62344b PerlIO-via-dynamic-0.11.ebuild 567
 MD5 6ca0aa87d971cbea5dede44ef798cf96 files/digest-PerlIO-via-dynamic-0.02 73
 MD5 9b31f483b2d60c5b132fe7d1e36d8768 files/digest-PerlIO-via-dynamic-0.11 74
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCSewftG5z4I8BtQoRAlUVAJ41Y70CitJB1znNgVynVBO1eGg99ACeOI6j
+jUs9ge94171/qwzxWkHMaLE=
+=EVHe
+-----END PGP SIGNATURE-----
