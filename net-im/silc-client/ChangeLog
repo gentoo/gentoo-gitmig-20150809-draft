@@ -1,6 +1,6 @@
-# ChangeLog for <CATEGORY>/<PACKAGE_NAME>
+# ChangeLog for net-im/silc-client
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/ChangeLog,v 1.4 2002/09/25 22:20:50 sunflare Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-im/silc-client/ChangeLog,v 1.5 2002/11/06 06:26:08 vapier Exp $
 
 *silc-client-0.9.5.1 (25 Sep 2002)
   25 Sep 2002; Phil Bordelon <sunflare@gentoo.org> silc-client-0.9.5.1.ebuild :
