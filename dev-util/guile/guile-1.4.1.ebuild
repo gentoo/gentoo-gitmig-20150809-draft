@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.4.1.ebuild,v 1.1 2002/08/19 06:47:14 leonardop Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/guile/guile-1.4.1.ebuild,v 1.2 2002/11/06 04:28:37 leonardop Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Guile is an interpreter for Scheme"
 SRC_URI="mirror://gnu/guile/${P}.tar.gz"
 HOMEPAGE="http://www.gnu.org/software/guile/"
 
-SLOT="1.4"
+SLOT="1.4.1"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 
