@@ -1,5 +1,5 @@
-MD5 f1df31e0cf0b87ebe485c208b65e3caf bugs-bug-genie-1.5.ebuild 1551
-MD5 226b0c753a42e5bd2aea9c80aa117113 ChangeLog 434
+MD5 d88b80d33ee4f74700d93e1c54e4d766 bugs-bug-genie-1.5.ebuild 1523
+MD5 a0e7b9e726812f406cf792a29c64ad3a ChangeLog 531
 MD5 f61bfa064e3acdfcd826e4a38b121196 metadata.xml 161
 MD5 b7f5cb0f5d933404fcec3322eb4da94c files/postinstall-en.txt 113
 MD5 656de087ae73d2733da138cf9fe7e48e files/digest-bugs-bug-genie-1.5 57
