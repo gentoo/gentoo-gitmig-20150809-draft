@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.98 2004/08/29 04:22:48 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.99 2004/08/29 07:00:44 lv Exp $
+
+  29 Aug 2004; Travis Tilley <lv@gentoo.org> xorg-x11-6.7.99.903.ebuild:
+  made xorg-x11-6.7.99.903 CONF_LIBDIR aware for installing to lib64 instead of
+  lib
 
 *xorg-x11-6.7.99.903 (28 Aug 2004)
 
