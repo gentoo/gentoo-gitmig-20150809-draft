@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r2.ebuild,v 1.30 2004/10/21 01:09:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.7.0-r2.ebuild,v 1.31 2004/11/24 02:17:56 spyderous Exp $
 
 # Libraries which are now supplied in shared form that were not in the past
 # include:  libFS.so, libGLw.so, libI810XvMC.so, libXRes.so, libXfontcache.so,
@@ -31,7 +31,7 @@ XFSFT_ENC_VER="0.1"
 
 S="${WORKDIR}/xc"
 
-HOMEPAGE="http://freedesktop.org/XOrg"
+HOMEPAGE="http://xorg.freedesktop.org/"
 
 # Misc patches we may need to fetch ..
 X_PATCHES="http://dev.gentoo.org/~spyderous/xorg/${PN}/patchsets/${PV}/${P}-patches-${PATCH_VER}.tar.bz2"

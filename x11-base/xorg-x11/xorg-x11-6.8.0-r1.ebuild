@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r1.ebuild,v 1.33 2004/11/15 19:46:22 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r1.ebuild,v 1.34 2004/11/24 02:17:56 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -35,7 +35,7 @@ XFSFT_ENC_VER="0.1"
 
 S=${WORKDIR}/xc
 
-HOMEPAGE="http://freedesktop.org/XOrg"
+HOMEPAGE="http://xorg.freedesktop.org/"
 
 # Misc patches we may need to fetch ..
 X_PATCHES="mirror://gentoo/${P}-patches-${PATCH_VER}.tar.bz2
