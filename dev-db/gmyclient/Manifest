@@ -2,13 +2,13 @@
 Hash: SHA1
 
 MD5 e1289d1fd0532d56b7e72c94fada4316 ChangeLog 810
-MD5 a9b0b505dc6ca9e4f11095769a72f984 gmyclient-0.3.ebuild 850
+MD5 cfb753e78c0ffd232705f0132e3685a8 gmyclient-0.3.ebuild 888
 MD5 4099749bb897b80e8e6fc6cbd2b886bc files/0.3-fix.patch 844
 MD5 9ce548600f5d9e1ffeb2347725a40bd9 files/digest-gmyclient-0.3 66
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBoP+smdTrptrqvGERAk0cAJsH0jdriPpo5XxrIcVZQDjC8NybNgCeMK9G
-QVSjQALibWTSJo22FwZpcQM=
-=SGeW
+iD8DBQFBoQASmdTrptrqvGERAuyEAJ4kDpzBzorgPxJOGl4ySNzLAhRW1ACcCKIy
+1wPS9EuIRr+MJo2S1Tl03N8=
+=UwWW
 -----END PGP SIGNATURE-----

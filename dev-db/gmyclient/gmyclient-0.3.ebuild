@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/gmyclient/gmyclient-0.3.ebuild,v 1.10 2004/11/21 20:50:46 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/gmyclient/gmyclient-0.3.ebuild,v 1.11 2004/11/21 20:52:28 dragonheart Exp $
+
+inherit eutils
 
 DESCRIPTION="Gnome based mysql client"
 SRC_URI="http://${PN}.sourceforge.net/download/${P}.tar.gz"
@@ -18,7 +20,7 @@ DEPEND=">=gnome-base/gnome-libs-1.2
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	epatch ${FILESDIR}/${PV}-fix.patch
+	epatch ${FILESDIR}/${PV}-fix.patch || die "patch failed"
 }
 
 src_compile() {
