@@ -31,7 +31,7 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
-	dodoc AUTHORS ChangeLog COPYING DOCUMENTATION README TODO
+	dodoc AUTHORS ChangeLog COPYING README TODO
 
 	# Manually install doc and inputs
 	doinfo doc/*.info*
