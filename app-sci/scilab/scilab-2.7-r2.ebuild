@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/scilab-2.7-r2.ebuild,v 1.1 2003/10/05 01:24:16 george Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/scilab/scilab-2.7-r2.ebuild,v 1.2 2003/10/05 17:01:55 george Exp $
 
 DESCRIPTION="Scientific software package for numerical computations, Matlab lookalike"
 SRC_URI="ftp://ftp.inria.fr/INRIA/Projects/Meta2/Scilab/distributions/${P}.src.tar.gz
@@ -9,13 +9,24 @@ HOMEPAGE="http://www.scilab.org/"
 
 LICENSE="scilab"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="tcltk"
 
 DEPEND="virtual/x11
 	x11-libs/Xaw3d
 	tcltk? ( dev-lang/tk )
 	gtk? ( =x11-libs/gtk+-1.2* )"
+
+pkg_setup() {
+	local SCLB
+	SCLB=`which scilab`
+	if [ -e "${SCLB}" ]; then
+		ewarn "Previous version of scilab was detected on your system"
+		ewarn "Unfortunately these versions cause problems for newer ones during update"
+		ewarn 'Please uninstall it with "emerge unmerge scilab" before continuig'
+		die
+	fi
+}
 
 src_unpack() {
 	unpack ${A}
@@ -117,5 +128,6 @@ src_install() {
 	#now scilab wants to create some wrappers, and we will need to adjust the paths
 	cd ${D}/usr/lib/${P}
 	make || die "wrapper creation failed"
+	cd macros && make && cd .. || die macros creation failed
 	grep -rle "${D}" * | xargs sed -i -e "s:${D}:/:g"
 }
