@@ -1,0 +1,42 @@
+# Copyright 2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.mask,v 1.1 2004/03/19 21:58:52 seemant Exp $
+
+# This file contains a list of useflags that cannot be used on sparc.
+
+3dfx
+3dnow
+acpi
+afs
+alsa
+altivec
+apm
+directfb
+icc
+icc-pgo
+informix
+firebird
+lirc
+mmx
+oci8
+pic
+sse
+svga
+tcc
+trusted
+voodoo3
+wavelan
+
+
+# And arch keyword flags that don't work
+
+x86
+ppc
+alpha
+mips
+hppa
+arm
+
+# Chris PeBenito <pebenito@gentoo.org>
+# must use a SELinux profile
+selinux

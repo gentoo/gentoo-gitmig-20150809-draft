@@ -1,7 +1,0 @@
-# Copyright 2004 Gentoo Technologies, Inc.
-# Distributed under the terms of the GNU General Public License, v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/default/x86/gcc2/packages.build,v 1.1 2004/03/18 01:32:13 seemant Exp $
-
-# This file inherits from the parent profiles as well.  The packages listed
-# in this file enumerate those which are needed to build a stage 1 based on
-# this profile.

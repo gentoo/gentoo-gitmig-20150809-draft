@@ -1,0 +1,12 @@
+# Copyright 2004 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License, v2
+# $Header: /var/cvsroot/gentoo-x86/profiles/default-linux/sparc/use.defaults,v 1.1 2004/03/19 21:58:52 seemant Exp $
+
+# Use this file to override specific mappings indicating which package
+# satisfies a particular USE flag.  The base profile (in
+# ${PORTDIR}/profiles/base/use.defaults) will already describe those
+# mappings which apply to absolutely all architectures.  This file is used
+# to describe mappings which are unique to THIS SPECIFIC PROFILE ONLY.
+# Note, that these mappings extend the parent profiles' (its own parent,
+# grandparent, and so on up to the base profile).  However, mappings that
+# are present in the parents can be overridden in this file.
