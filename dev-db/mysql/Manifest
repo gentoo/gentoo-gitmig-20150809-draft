@@ -16,7 +16,7 @@ MD5 d51d090e9a33cdee4558a550a32bc2cc mysql-4.0.22-r2.ebuild 9335
 MD5 669bb1e03acc651e30716ad7b36f34d2 mysql-3.23.58-r1.ebuild 6756
 MD5 c4d197484d0e2ef30d3c6d782c9f4971 mysql-4.1.8.ebuild 8814
 MD5 48ec4f29be41f74555ef483e67425a47 mysql-4.0.23-r1.ebuild 8887
-MD5 8388e5327680efd9ab38cf1ec8b58875 ChangeLog 26179
+MD5 92aba101cbea6c94effd8744b5a25ae2 ChangeLog 26270
 MD5 a5dda17df0286cd82cae42d117784903 metadata.xml 163
 MD5 4541e130a1b0fa90db8612973b0adb75 files/mysql-4.0-mysqld-safe-sh.diff 1477
 MD5 36aa23522b241aafdb833ac4f11c4fd1 files/mysql-4.0.4-install-db-sh.diff 1439
@@ -46,7 +46,7 @@ MD5 f635289f8422fdf26ba3c3dbdf99c4e2 files/mysql-4.0.14-mysqld-safe-sh.diff 1503
 MD5 6f8de46485ea7dcf886e1747fb117427 files/mysql-gentoo-nptl.diff 654
 MD5 e68c5d7e3c48028c4cf7e55ea8396013 files/mysql-4.0-install-db-sh.diff 1271
 MD5 e501d0f33d9d0be73b37c310099011d2 files/mysql-4.0.14-security-28394.patch 654
-MD5 6c92fcba1a8e0c7817ee58366a2de80c files/logrotate.mysql 441
+MD5 6fade376a0db8e1d7822b1d0bbb36288 files/logrotate.mysql 440
 MD5 68cbaa353f522c0a404a4d07693f917d files/mysql-4.0.18-install-db-sh.diff 1473
 MD5 f1fc8bfe540d6f1268b53b7cad275080 files/my.cnf 1231
 MD5 50629599f478b26b4ca82c7c553feae0 files/mysql-3.23.52-install-db-sh.diff 1366
@@ -76,7 +76,7 @@ MD5 ad5636b398982a23f6fc58f18a2114fc files/mysql-4.0.18-mysqldmultisecurity.diff
 Version: GnuPG v1.2.6 (GNU/Linux)
 Comment: Robbat2 @ Orbis-Terrarum Networks
 
-iD8DBQFB/ChoPpIsIjIzwiwRAiqWAJ45vG8s6KIT4PyjHAp3fZ5BcEBjtACfQR4p
-W1KYPzdAUtPz5w5gHV6XqkA=
-=i/CI
+iD8DBQFB/4BnPpIsIjIzwiwRAoouAKD6N70PyqXbLAPwnpgfWzHkj2gi6ACfULP3
+UqcGqhUGdJhUgQe+cM0FC6Y=
+=kwG3
 -----END PGP SIGNATURE-----
