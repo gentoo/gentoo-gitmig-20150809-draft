@@ -1,13 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Grant Goodyear <g2boojum@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.0.4-r2.ebuild,v 1.2 2002/04/15 03:48:03 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.0.4-r2.ebuild,v 1.3 2002/04/15 04:01:27 azarah Exp $
 
 # NOTE TO MAINTAINER:  man pages and info pages gets nuked for multiple
 #                      version installs.  Ill fix later if i get a chance.
 
 TV=4.0
-GCC_SUFFIX=3
+GCC_SUFFIX=-3.0
 LOC=/usr
 S=${WORKDIR}/${P}
 SRC_URI="ftp://gcc.gnu.org/pub/gcc/releases/${P}/${P}.tar.bz2
@@ -80,7 +80,7 @@ src_compile() {
 	#compilers sorted out.
 	#
 	#NOTE:  for software to detirmine gcc version, it will be easier
-	#       if we have gcc, gcc3 and gcc3.1, and NOT gcc-3.0.4.
+	#       if we have gcc, gcc-3.0 and gcc-3.1, and NOT gcc-3.0.4.
 	if build_multiple
 	then
 		myconf="${myconf} --program-suffix=${GCC_SUFFIX}"
@@ -157,14 +157,12 @@ src_install() {
 	dodir /etc/env.d
 	if build_multiple
 	then
-		dosym /usr/bin/cpp${GCC_SUFFIX} /lib/cpp${GCC_SUFFIX}
-		dosym gcc${GCC_SUFFIX} /usr/bin/cc${GCC_SUFFIX}
 		echo "LDPATH=${FULLPATH}" > ${D}/etc/env.d/05gcc${GCC_SUFFIX}
 	else
-		dosym /usr/bin/cpp /lib/cpp
-		dosym gcc /usr/bin/cc
 		echo "LDPATH=${FULLPATH}" > ${D}/etc/env.d/05gcc
 	fi
+	dosym /usr/bin/cpp /lib/cpp
+	dosym gcc /usr/bin/cc
 
 	#make sure we dont have stuff lying around that
 	#can nuke multiple versions of gcc
@@ -203,6 +201,14 @@ src_install() {
 		#move <cxxabi.h> to compiler-specific directories
 		mv ${D}/usr/include/g++-v3/cxxabi.h ${FULLPATH_D}/include/
 	fi
+
+	#move libgcc_s.so.1 to /lib
+	cd ${D}/lib
+	chmod +x ${D}/usr/lib/libgcc_s.so.1
+	mv -f ${D}/usr/lib/libgcc_s.so.1 libgcc_s-${PV}.so.1
+	ln -sf libgcc_s-${PV}.so.1 libgcc_s.so.1
+	ln -sf libgcc_s.so.1 libgcc_s.so
+	rm -f ${D}/usr/lib/libgcc_s.so*
 
 	if build_multiple
 	then
