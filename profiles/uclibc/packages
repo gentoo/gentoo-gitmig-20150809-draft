@@ -4,7 +4,7 @@
 *sys-apps/util-linux
 
 # toolchain
-<=sys-devel/binutils-2.15.90.0.1.1-r3
+#<=sys-devel/binutils-2.15.90.0.1.1-r3
 
 # minimal versions
 -*>=net-misc/iputils-021109-r3
