@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.7-r1.ebuild,v 1.6 2003/02/13 06:00:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrdao/cdrdao-1.1.7-r1.ebuild,v 1.7 2003/03/10 01:16:27 seemant Exp $
 
 inherit flag-o-matic
 
@@ -65,7 +65,7 @@ src_install() {
         insinto /usr/share/cdrdao/mp32dao
         doins contrib/mp32dao/MediaHandler.pm contrib/mp32dao/mp3handler.pm \
                 contrib/mp32dao/BaseInfo.pm
-        use oggvorbis && doins contrib/mp32daoogghandler.pm
+        use oggvorbis && doins contrib/mp32dao/ogghandler.pm
 
         # cdrdao gets definitely installed
         # binary
