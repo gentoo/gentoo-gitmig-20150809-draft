@@ -1,4 +1,8 @@
-# $Header: /var/cvsroot/gentoo-x86/profiles/n32-mips-2004.1/use.mask,v 1.5 2004/09/01 03:20:14 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/n32-mips-2004.1/use.mask,v 1.6 2004/10/01 15:47:51 geoman Exp $
+
+# Stephen P. Becker <geoman@gentoo.org>
+# hal needs linux26-headers
+hal
 
 # Ilya A. Volynets-Evenbach
 # no nptl on mips yet
@@ -22,7 +26,6 @@ acl
 # Flags which aren't applicable to mips (Mostly copied from sparc)
 3dfx
 3dnow
-accessibility
 acpi
 afs
 altivec
