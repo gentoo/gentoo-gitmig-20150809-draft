@@ -1,15 +1,14 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/net-www/netscape/navigator-4.76.ebuild,v 1.1 2000/11/04 00:10:07 jerry Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/netscape/navigator-4.76.ebuild,v 1.2 2000/12/03 23:12:28 drobbins Exp $
 
 A=navigator-v476-us.x86-unknown-linux2.2.tar.gz
 S=${WORKDIR}/navigator-v476.x86-unknown-linux2.2
 DESCRIPTION="Netscape Navigator Standalone 4.76"
 SRC_URI="ftp://ftp.netscape.com/pub/communicator/english/4.76/unix/supported/linux22/navigator_standalone/"${A}
 HOMEPAGE="http://developer.netscape.com/support/index.html"
-
-DEPEND=""
+PROVIDE="virtual/x11-web-browser"
 
 src_install() {                               
   cd ${S}
