@@ -1,6 +1,13 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.356 2005/03/12 19:35:32 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.357 2005/03/13 08:58:11 spyderous Exp $
+
+  13 Mar 2005; Donnie Berkholz <spyderous@gentoo.org>;
+  xorg-x11-6.8.2-r1.ebuild:
+  Stable x86. Sorry about the two upgrades in a few days thing, but the first
+  was a security bug so there was some time pressure involved. I figured it's
+  better to stable this sooner so we can save a compile for people who don't
+  sync every day.
 
   12 Mar 2005; Donnie Berkholz <spyderous@gentoo.org>;
   -xorg-x11-6.7.0-r3.ebuild, -xorg-x11-6.8.0-r4.ebuild,
