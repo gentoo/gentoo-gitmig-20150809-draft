@@ -114,3 +114,4 @@ move kde-base/noatun-wavecapture kde-base/noatun-plugins
 move kde-base/kdeaddons-docs-kate-plugins kde-base/kate-plugins
 move kde-base/kdeaddons-docs-kicker-applets kde-base/kicker-applets
 move app-vim/xsl app-vim/xsl-syntax
+slotmove =app-editors/emacs-cvs-22.0.0* 22.0.0 23.0.0
