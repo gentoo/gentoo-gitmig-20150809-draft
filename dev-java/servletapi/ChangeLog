@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/servletapi
 # Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/ChangeLog,v 1.27 2005/03/23 12:09:11 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/servletapi/ChangeLog,v 1.28 2005/04/03 01:04:53 weeve Exp $
+
+  03 Apr 2005; Jason Wever <weeve@gentoo.org> servletapi-2.4-r1.ebuild:
+  Stable on SPARC wrt bug #87706.
 
   23 Mar 2005; Thomas Matthijs <axxo@gentoo.org> servletapi-2.2-r1.ebuild,
   servletapi-2.3-r1.ebuild, servletapi-2.4.ebuild, servletapi-2.4-r1.ebuild:
