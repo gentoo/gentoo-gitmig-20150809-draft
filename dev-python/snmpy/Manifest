@@ -1,4 +1,14 @@
-MD5 b28d953589f30f312ae9fb362bd3bd78 snmpy-1.0_alpha4.ebuild 571
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 fff4daf4ae94348d5996a924f33a52c5 ChangeLog 680
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 f2d9aea727d2f1a2cd3d23e8cb731f5f snmpy-1.0_alpha4.ebuild 583
 MD5 3eded070e87c9a70c72342494b6be1b3 files/digest-snmpy-1.0_alpha4 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCGUoCmdTrptrqvGERAoXoAJ4yQc2be7PoLtxKw7b6unZ3o6OfFgCgjaaF
+8d4UeZGTMuox7SY93r6YCO0=
+=eC9r
+-----END PGP SIGNATURE-----

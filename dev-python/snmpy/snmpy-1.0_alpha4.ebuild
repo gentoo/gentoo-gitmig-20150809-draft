@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/snmpy/snmpy-1.0_alpha4.ebuild,v 1.16 2004/06/25 01:50:22 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/snmpy/snmpy-1.0_alpha4.ebuild,v 1.17 2005/02/21 02:39:56 dragonheart Exp $
 
 inherit distutils
 
@@ -17,6 +17,6 @@ SLOT="0"
 KEYWORDS="x86 sparc alpha"
 
 DEPEND="virtual/python
-	virtual/snmp"
+	net-analyzer/net-snmp"
 
 mydocs="RELEASE-NOTES docs/docs.html"
