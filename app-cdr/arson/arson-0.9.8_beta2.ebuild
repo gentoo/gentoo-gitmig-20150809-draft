@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/arson-0.9.8_beta2.ebuild,v 1.3 2004/06/24 21:29:17 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/arson/arson-0.9.8_beta2.ebuild,v 1.4 2004/06/27 04:53:47 morfic Exp $
 
-inherit kde eutils
+inherit kde eutils gcc
 need-kde 3
 
 MY_P=${P/_/}
@@ -48,6 +48,18 @@ DEPEND=">=media-sound/cdparanoia-3.9.8
 KEYWORDS="x86 ~sparc ~amd64"
 S=${WORKDIR}/${PN}
 
+#added base_src_unpack() with conditional fix of code allowing compilation with gcc-3.4.0
+base_src_unpack() {
+	unpack ${A}
+	cd ${S}/src/
+	
+	if [ "`gcc-major-version`" -ge "3" -a "`gcc-minor-version`" -ge "4" ]
+	then
+  		einfo "Compiler used: gcc-3.4.x Applying patch conditionally."
+		sed -i "s:(font()):(font):" wizard.cpp
+	fi
+	cd ${S}
+}
 
 src_compile() {
 	use oggvorbis && myconf="$myconf --with-vorbis" || myconf="$myconf --without-vorbis"
