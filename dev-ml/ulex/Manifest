@@ -1,16 +1,6 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 dbf7b4011e4e6bcaccbdb9955c243562 ChangeLog 1143
+MD5 38163001bcf28a713f1f73bc5bfcc415 ulex-0.4.ebuild 592
+MD5 0c5d11bd8946487901daff3e7a060f26 ulex-0.5.ebuild 569
+MD5 5cf6bbcd9567f18ca7555412bf0dcd8a ChangeLog 1232
 MD5 8b350f19c06fcabf1053b0421b7c3f5a metadata.xml 155
-MD5 e933f932fff2ee33933f08dd29cb8a53 ulex-0.4.ebuild 592
-MD5 eeada39c8ec5314ff021ce2ece3d3d52 ulex-0.5.ebuild 571
 MD5 8242016cc55c147692d4983648ba46d0 files/digest-ulex-0.4 59
 MD5 2a453505029c0759cfaba969ac497f19 files/digest-ulex-0.5 59
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
-
-iD8DBQFBW1FdI1lqEGTUzyQRApvZAKCNYtGwt6IWINserj3gECtTVx20RwCgxrOd
-3DORtQ1dzNpo6oB4pe1+XPM=
-=DaJt
------END PGP SIGNATURE-----

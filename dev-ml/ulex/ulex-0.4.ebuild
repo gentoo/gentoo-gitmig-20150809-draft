@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ulex/ulex-0.4.ebuild,v 1.2 2004/08/25 13:36:53 mattam Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ulex/ulex-0.4.ebuild,v 1.3 2005/02/17 20:08:07 mattam Exp $
 
 inherit eutils findlib
 

@@ -1,6 +1,9 @@
 # ChangeLog for dev-ml/ulex
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ml/ulex/ChangeLog,v 1.8 2004/09/30 00:20:38 swegener Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-ml/ulex/ChangeLog,v 1.9 2005/02/17 20:08:07 mattam Exp $
+
+  17 Feb 2005; Matthieu Sozeau <mattam@gentoo.org> ulex-0.5.ebuild:
+  Stable on x86, ppc.
 
   25 Aug 2004; Matthieu Sozeau <mattam@gentoo.org> ulex-0.4.ebuild,
   ulex-0.5.ebuild:
