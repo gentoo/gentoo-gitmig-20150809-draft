@@ -47,7 +47,11 @@ src_unpack() {
 
 	unpack ${A}
 	cd ${S}
-    patch -p1 < ${FILESDIR}/galeon-multitabfix.diff
+    patch -p1 < ${FILESDIR}/galeon-multitabfix.diff || die "Tab fix patch failed!"
+	cd doc/C
+	patch -p0 < ${FILESDIR}/galeon-omffix.patch || die "omf fix patch failed!"
+	cd ${S}
+	 
     # These patches break on this version of galeon.
 	# Are they needed for gcc3/3.1 support?
 	#patch -p1 < ${FILESDIR}/galeon-1.2.0-gcc3.patch || die

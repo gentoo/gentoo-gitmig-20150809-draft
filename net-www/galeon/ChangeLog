@@ -1,9 +1,13 @@
 # ChangeLog for net-www/galeon
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.18 2002/08/28 23:58:17 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.19 2002/08/31 19:00:02 spider Exp $
 
 
 *galeon-1.2.5-r1 (29 Aug 2002)
+  31 Aug 2002; Spider <spider@gentoo.org> galeon-1.2.5-r1.ebuild :
+  added a patch for scrollkeeper omf fixed against DTD.
+  not worthy of updating the revision IMO. 
+
   29 Aug 2002; Spider <spider@gentoo.org> galeon-1.2.5-r1.ebuild :
   Fix for the crash on close bugs 
   thanks to TGL <degrenier@easyconnect.fr> for the fix
