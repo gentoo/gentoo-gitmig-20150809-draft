@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/mutt-vc-query/mutt-vc-query-002.ebuild,v 1.1 2003/07/24 15:41:49 rizzo Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/mutt-vc-query/mutt-vc-query-002.ebuild,v 1.2 2003/07/24 15:48:38 rizzo Exp $
 
 DESCRIPTION="vCard query for mutt"
 HOMEPAGE="http://rolo.sourceforge.net/"
@@ -11,6 +11,7 @@ SLOT="0"
 KEYWORDS="~x86 ~ppc ~sparc ~alpha"
 DEPEND="dev-libs/libvc"
 RDEPEND="${DEPEND}"
+S="${WORKDIR}/${MY_PN}-${PV}"
 
 src_install() {
 	emake DESTDIR=${D} install
