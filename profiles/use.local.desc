@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.903 2005/01/25 06:21:25 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.904 2005/01/25 06:22:14 lu_zero Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -495,7 +495,6 @@ media-video/vlc:hal - support for hal (hardware abstraction layer)
 media-video/vlc:httpd - Enables a web based interface for vlc
 media-video/vlc:libcaca - Enables libcaca colored ascii output
 media-video/vlc:live - Enables LIVE.com support
-media-video/vlc:ogg - Enables libogg ogg container support
 media-video/vlc:stream - Enables vlc to stream video
 media-video/vlc:utf8 - Enables utf8 support
 media-video/vlc:v4l - Enables video4linux support
