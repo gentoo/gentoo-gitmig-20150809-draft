@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.2.1.ebuild,v 1.3 2003/03/30 15:55:16 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-base/gnome-session/gnome-session-2.2.1.ebuild,v 1.4 2003/04/06 00:12:33 foser Exp $
 
 inherit gnome2 eutils
 
@@ -42,4 +42,9 @@ src_install() {
 	dodir /etc/X11/Sessions
 	exeinto /etc/X11/Sessions
 	doexe ${FILESDIR}/Gnome
+
+	# Our own splash for world domination
+	# FIXME : in an ideal world we would alter the gconf key
+	insinto /usr/share/pixmaps/splash/
+	doins ${FILESDIR}/gnome-splash.png
 }
