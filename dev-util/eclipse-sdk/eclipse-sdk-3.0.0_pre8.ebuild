@@ -1,12 +1,11 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.0_pre8.ebuild,v 1.2 2004/05/09 14:41:21 karltk Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/eclipse-sdk/eclipse-sdk-3.0.0_pre8.ebuild,v 1.3 2004/05/09 22:44:04 karltk Exp $
 
 DESCRIPTION="Eclipse Tools Platform"
 HOMEPAGE="http://www.eclipse.org/"
 SRC_URI="http://download.eclipse.org/downloads/drops/S-3.0M8-200403261517/eclipse-sourceBuild-srcIncluded-3.0M8.zip"
 IUSE="gtk motif gnome kde mozilla jikes"
-# karltk: can't get it to compile against motif currently, will need to be fixed soon.
 SLOT="3"
 LICENSE="CPL-1.0"
 KEYWORDS="~x86"
@@ -32,10 +31,6 @@ pkg_setup() {
 	ewarn "This package is _highly_ experimental."
 	ewarn "If you are using Eclipse 2.1.x for any serious work, stop now."
 	ewarn "You cannot expect to be productive with this packaging of 3.0!"
-
-	if use motif ; then
-		die "This package does not currently build with motif in USE, it's being worked on."
-	fi
 }
 
 set_dirs() {
@@ -70,6 +65,7 @@ src_unpack() {
 	cd ${S}
 	unpack ${A}
 
+	# karltk: Is this really needed?
 	addwrite "/proc/self/maps"
 
 	# Clean up all pre-built code
@@ -130,6 +126,9 @@ src_unpack() {
 		-e "s:/usr/lib/qt-3.1:/usr/qt/3:" \
 		-e "s:-lkdecore:-L\`kde-config --prefix\`/lib -lkdecore:" \
 		-e "s:-I/usr/include/kde:-I\`kde-config --prefix\`/include:" \
+		-e "s:-I\$(JAVA_HOME)/include:-I\$(JAVA_HOME)/include -I\$(JAVA_HOME)/include/linux:" \
+		-e "s:-I\$(JAVA_HOME)\t:-I\$(JAVA_HOME)/include -I\$(JAVA_HOME)/include/linux:" \
+		-e "s:-L\$(MOZILLA_HOME)/lib -lembed_base_s:-L\$(MOZILLA_HOME):" \
 		-e "s:-L\$(JAVA_HOME)/jre/bin:-L\$(JAVA_HOME)/jre/lib/i386:" \
 		-i make_linux.mak
 
@@ -283,9 +282,8 @@ src_install() {
 		doexe ./plugins/platform-launcher/library/gtk/eclipse-gtk || die "Failed to install eclipse-gtk"
 	fi
 	if use motif ; then
-		die "Never tested for Motif"
-		doexe eclipse-motif || die "Failed to install eclipse-motif"
-		#unzip ${WORKDIR}/result/linux-motif-${ARCH}-sdk.zip
+		exeinto ${eclipse_dir}
+		doexe ./plugins/platform-launcher/library/motif/eclipse-motif || die "Failed to install eclipse-motif"
 	fi
 
 	doins plugins/org.eclipse.platform/{startup.jar,splash.bmp}
