@@ -1,6 +1,14 @@
 # ChangeLog for sys-kernel/grsec-sources
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/ChangeLog,v 1.29 2004/08/04 18:41:10 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/grsec-sources/ChangeLog,v 1.30 2004/08/08 19:38:44 solar Exp $
+
+*grsec-sources-2.4.27.2.0.1 (08 Aug 2004)
+
+  08 Aug 2004; <solar@gentoo.org> grsec-sources-2.4.26.2.0-r3.ebuild,
+  grsec-sources-2.4.26.2.0-r4.ebuild, grsec-sources-2.4.26.2.0-r5.ebuild,
+  grsec-sources-2.4.26.2.0-r6.ebuild, grsec-sources-2.4.27.2.0.1.ebuild,
+  files/2.4.26-i2cproc_bus_read.patch:
+  version bump. Removed all older versions
 
 *grsec-sources-2.4.26.2.0-r7 (04 Aug 2004)
 
