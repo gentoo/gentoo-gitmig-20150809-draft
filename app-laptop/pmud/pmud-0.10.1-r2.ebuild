@@ -1,10 +1,9 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-laptop/pmud/pmud-0.10.1-r2.ebuild,v 1.3 2004/07/09 21:53:37 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-laptop/pmud/pmud-0.10.1-r2.ebuild,v 1.4 2004/07/14 01:22:18 agriffis Exp $
 
 IUSE="X"
 
-S=${WORKDIR}/${P}
 
 DESCRIPTION="PowerMac power management utilities"
 SRC_URI="http://linuxppc.jvc.nl/${P}.tar.gz"
