@@ -1,6 +1,11 @@
 # ChangeLog for app-shells/zsh
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.58 2004/08/17 21:37:04 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/ChangeLog,v 1.59 2004/10/09 16:25:09 usata Exp $
+
+  10 Oct 2004; Mamoru KOMACHI <usata@gentoo.org> files/_genlop,
+  files/_gentoolkit, +files/zsh-4.2.1-gentoo.diff, zsh-4.2.1.ebuild:
+  Stable on x86, alpha and ppc. Fixed subversion completion; bug #66766.
+  Thanks to Gustaf Thorslund <gustaf@thorslund.org>.
 
   18 Aug 2004; Mamoru KOMACHI <usata@gentoo.org> files/_gcc-config,
   files/_gentoolkit, files/_portage-20040730:

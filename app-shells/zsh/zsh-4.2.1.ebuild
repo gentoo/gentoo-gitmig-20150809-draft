@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.1.ebuild,v 1.1 2004/08/15 11:23:21 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/zsh/zsh-4.2.1.ebuild,v 1.2 2004/10/09 16:25:09 usata Exp $
 
 inherit eutils
 
@@ -11,12 +11,12 @@ MY_P="${PN}-${MY_PV}"
 DESCRIPTION="UNIX Shell similar to the Korn shell"
 HOMEPAGE="http://www.zsh.org/"
 SRC_URI="ftp://ftp.zsh.org/pub/${MY_P}.tar.bz2
-	cjk? ( http://www.ono.org/software/dist/zsh-4.2.0-euc-0.2.patch.gz )
+	cjk? ( http://www.ono.org/software/dist/${P}-euc-0.3.patch.gz )
 	doc? ( ftp://ftp.zsh.org/pub/${MY_P}-doc.tar.bz2 )"
 
 LICENSE="ZSH"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~arm ~hppa ~amd64"
+KEYWORDS="x86 ppc ~sparc alpha ~arm ~hppa ~amd64"
 IUSE="maildir ncurses static doc pcre cap cjk"
 
 RDEPEND="pcre? ( >=dev-libs/libpcre-3.9 )
@@ -32,7 +32,8 @@ src_unpack() {
 	unpack ${MY_P}.tar.bz2
 	use doc && unpack ${MY_P}-doc.tar.bz2
 	cd ${S}
-	use cjk && epatch ${DISTDIR}/zsh-4.2.0-euc-0.2.patch.gz
+	epatch ${FILESDIR}/${P}-gentoo.diff
+	use cjk && epatch ${DISTDIR}/${P}-euc-0.3.patch.gz
 	cd ${S}/Doc
 	ln -sf . man1
 	# fix zshall problem with soelim
@@ -59,10 +60,10 @@ src_compile() {
 		--enable-site-fndir=/usr/share/zsh/site-functions \
 		--enable-function-subdirs \
 		--enable-ldflags="${LDFLAGS}" \
-		`use_with ncurses curses-terminfo` \
-		`use_enable maildir maildir-support` \
-		`use_enable pcre` \
-		`use_enable cap` \
+		$(use_with ncurses curses-terminfo) \
+		$(use_enable maildir maildir-support) \
+		$(use_enable pcre) \
+		$(use_enable cap) \
 		${myconf} || die "configure failed"
 
 	if use static ; then
@@ -78,7 +79,10 @@ src_compile() {
 
 	# emake still b0rks
 	emake -j1 || die "make failed"
-	#make check || die "make check failed"
+}
+
+src_test() {
+	make check || die "make check failed"
 }
 
 src_install() {

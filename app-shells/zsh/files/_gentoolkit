@@ -46,9 +46,29 @@ _portage_pkglist(){
 }
 
 #Reading informations from Portage
-portdir="$(portageq portdir)"
+#
+# Using portageq is the right way to get PORTDIR, but it is very slow :-(
+#
+#portdir="$(portageq portdir)"
 #pkgdir="$(portageq pkgdir)"
-portdir_overlay="$(portageq portdir_overlay)"
+#portdir_overlay="$(portageq portdir_overlay)"
+[[ -n "${PORTDIR}" ]] && portdir="${PORTDIR}"
+[[ -n "${PKGDIR}" ]] && pkgdir="${PKGDIR}"
+if [[ -n "${PORTDIR_OVERLAY}" ]] ; then
+    for overlay in ${=PORTDIR_OVERLAY} ; do
+	portdir_overlay=(${overlay} ${portdir_overlay})
+    done
+fi
+[[ -r /etc/make.globals ]] && source /etc/make.globals
+[[ -r /etc/make.conf ]] && source /etc/make.conf
+
+[[ -z "${portdir}" ]] && portdir="${PORTDIR}"
+[[ -z "${pkgdir}" ]] && pkgdir="${PKGDIR}"
+if [[ -z "${portdir_overlay}" ]] ; then
+    for overlay in ${=PORTDIR_OVERLAY} ; do
+	portdir_overlay=(${overlay} ${portdir_overlay})
+    done
+fi
 
 portage_pkglist=(${portdir}/*-*/* ${portdir_overlay}/*-*/*)
 portage_pkglist=(${portage_pkglist##*/})
