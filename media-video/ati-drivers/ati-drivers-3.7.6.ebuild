@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.7.6.ebuild,v 1.2 2004/03/11 21:26:31 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/ati-drivers/ati-drivers-3.7.6.ebuild,v 1.3 2004/03/12 02:55:57 mr_bones_ Exp $
 
 IUSE="qt kde gnome"
 
@@ -117,14 +117,14 @@ src_install() {
 	rm -f ${WORKDIR}/usr/X11R6/lib/libGL.so.1.2
 
 	dodoc ${WORKDIR}/usr/share/doc/fglrx/LICENSE.*
-	
+
 	#apps
-    insinto /etc/env.d
+	insinto /etc/env.d
 	doins ${FILESDIR}/09ati
 	exeinto /opt/ati/bin
 	doexe usr/X11R6/bin/*
 	rm usr/X11R6/bin/*
-	
+
 	# Removing unused stuff
 	rm -rf ${WORKDIR}/usr/{src,share}
 	cp -R ${WORKDIR}/usr ${D}/
@@ -146,4 +146,3 @@ pkg_postinst() {
 	# DRM module
 	update-modules
 }
-
