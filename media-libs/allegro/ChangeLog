@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/allegro
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.37 2004/12/09 12:18:35 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/allegro/ChangeLog,v 1.38 2004/12/09 12:20:08 mr_bones_ Exp $
+
+  09 Dec 2004; Michael Sterrett <mr_bones_@gentoo.org> -allegro-4.1.15.ebuild,
+  -allegro-4.1.16.ebuild:
+  clean older ebuilds
 
 *allegro-4.1.17 (09 Dec 2004)
 
