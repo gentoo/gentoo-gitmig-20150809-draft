@@ -1,10 +1,15 @@
 # ChangeLog for net-www/galeon
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.22 2002/09/20 12:38:08 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.23 2002/12/01 00:59:19 azarah Exp $
+
+*galeon-1.2.7 (01 Dec 2002)
+
+  01 Dec 2002; Martin Schlemmer <azarah@gentoo.org> galeon-1.2.7.ebuild :
+  Update version.  Closes bug #11376.
 
 *galeon-1.2.6 (16 Sep 2002)
 
-  20 Sep 2002; Spider <spider@gentoo.org> galeon-1.2.6.ebuild:
+  20 Sep 2002; Spider <spider@gentoo.org> galeon-1.2.6.ebuild :
   Added a patch to make it build with mozilla 1.0.1 and not 1.0.  Also changed 
   the dependencies for this.
 

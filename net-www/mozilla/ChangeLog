@@ -1,12 +1,24 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.51 2002/11/21 22:19:43 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.52 2002/12/01 00:58:13 azarah Exp $
+
+*mozilla-1.2 (30 Nov 2002)
+
+  30 Nov 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2.ebuild :
+
+  New version.  People that use DHTML should rather avoid this version, as
+  its broken in 1.2:
+   
+    http://slashdot.org/article.pl?sid=02/11/30/0029226
+
+  This should resolve bugs #11285 and #11395.
 
   21 Nov 2002; Martin Schlemmer <azarah@gentoo.org> mozilla-1.2_beta.ebuild :
 
   Add pkgconfig to DEPEND, closing bug #11036.
 
   20 Nov 2002; Martin Schlemmer <azarah@gentoo.org> *.ebuild :
+  
   Change to new shared nsplugin scheme, bug #10056.  Add strip-flags,
   closing bug #10772.
 

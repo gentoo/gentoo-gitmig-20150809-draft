@@ -31,6 +31,9 @@
 ## The script will setup all the environment voodoo needed to make
 ## mozilla work.
 
+## Faster startup
+export XPCOM_CHECK_THREADSAFE=0
+
 cmdname=`basename $0`
 
 ## don't leave any core files around

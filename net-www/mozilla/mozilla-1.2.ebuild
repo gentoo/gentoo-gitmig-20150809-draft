@@ -1,10 +1,9 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2_beta.ebuild,v 1.6 2002/11/21 22:19:43 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/mozilla-1.2.ebuild,v 1.1 2002/12/01 00:58:13 azarah Exp $
 
-IUSE="mozxmlterm moznomail java mozp3p crypt ipv6 gtk2 mozinterfaceinfo ssl ldap mozaccess mozctl gnome mozsvg"
+IUSE="java crypt ipv6 gtk2 ssl ldap gnome mozsvg mozcalendar mozaccess mozinterfaceinfo mozp3p mozxmlterm moznomail moznocompose"
 
-# NOTE: to build without the mail and news component:  export NO_MAIL="YES"
 inherit flag-o-matic gcc makeedit eutils nsplugins
 
 # Crashes on start when compiled with -fomit-frame-pointer
@@ -32,7 +31,7 @@ filter-flags "-fomit-frame-pointer"
 # <azarah@gentoo.org> (13 Oct 2002)
 strip-flags
 
-EMVER="0.70.0"
+EMVER="0.71.0"
 IPCVER="1.0.1"
 
 FCVER="2.0"
@@ -45,7 +44,7 @@ MY_PV2="${MY_PV1/eta}"
 S="${WORKDIR}/mozilla"
 FC_S="${WORKDIR}/fcpackage.${FCVER/\./_}/Xft"
 DESCRIPTION="The Mozilla Web Browser"
-SRC_URI="ftp://ftp.mozilla.org/pub/mozilla/releases/${PN}${MY_PV2}/src/${PN}-source-${MY_PV2}.tar.gz
+SRC_URI="ftp://ftp.mozilla.org/pub/mozilla/releases/${PN}${MY_PV2}/src/${PN}-source-${MY_PV2}.tar.bz2
 	crypt? ( http://enigmail.mozdev.org/dload/src/enigmail-${EMVER}.tar.gz
 	         http://enigmail.mozdev.org/dload/src/ipc-${IPCVER}.tar.gz )
 	http://fontconfig.org/release/fcpackage.${FCVER/\./_}.tar.gz"
@@ -66,12 +65,13 @@ RDEPEND=">=x11-base/xfree-4.2.0-r11
 	dev-libs/expat
 	app-arch/zip
 	app-arch/unzip
-	( gtk2? >=x11-libs/gtk+-2.0.5 :
+	( gtk2? >=x11-libs/gtk+-2.1.2 :
 	        =x11-libs/gtk+-1.2* )
-	( gtk2? >=dev-libs/glib-2.0.4 :
+	( gtk2? >=dev-libs/glib-2.0.6 :
 	        =dev-libs/glib-1.2* )
 	!gtk2? ( >=media-libs/fontconfig-2.0-r3 )
-	java?  ( virtual/jre )"
+	java?  ( virtual/jre )
+	crypt? ( >=app-crypt/gnupg-1.2.1 )"
 
 DEPEND="${RDEPEND}
 	virtual/x11
@@ -84,9 +84,7 @@ export MOZILLA_OFFICIAL=1
 export BUILD_OFFICIAL=1
 
 # enable XFT
-if [ -z "`use gtk2`" ]; then
-	[ "${DISABLE_XFT}" != "1" ] && export MOZ_ENABLE_XFT=1
-fi
+[ "${DISABLE_XFT}" != "1" ] && export MOZ_ENABLE_XFT=1
 
 # make sure the nss module gets build (for NSS support)
 [ -n "`use ssl`" ] && export MOZ_PSM=1
@@ -96,14 +94,43 @@ fi
 #[ "`use java`" ] && export NS_USE_JDK=1
 
 
+pkg_setup() {
+
+	# Setup CC and CXX
+	if [ -z "${CC}" ] ; then
+		export CC="gcc"
+
+		if [ "$(gcc-major-version)" -eq "3" ] ; then
+			export CXX="g++"
+		else
+			export CXX="gcc"
+		fi
+	fi
+	if [ -z "${CXX}" ] ; then
+		export CXX="${CC}"
+	fi
+
+	#This should enable parallel builds, I hope
+	if [ -f /proc/cpuinfo ] ; then
+		export MAKEOPTS="${MAKEOPTS/-j[0-9]?} -j$((`grep -c ^processor /proc/cpuinfo` * 2))"
+		export MAKE="emake"
+	fi
+}
+
 src_unpack() {
 	
 	unpack ${A}
 
+	# The release branch do not contain all the fixes that are in
+	# the main branch
+	#
+	#   http://bugzilla.mozilla.org/show_bug.cgi?id=182506
+	epatch ${FILESDIR}/${PV}/${P}-branch-update.patch.bz2
+
 	if [ "$(gcc-major-version)" -eq "3" ] ; then
 		# ABI Patch for alpha/xpcom for gcc-3.x
 		if [ "${ARCH}" = "alpha" ] ; then
-			cd ${S}; epatch ${FILESDIR}/mozilla-alpha-xpcom-subs-fix.patch
+			cd ${S}; epatch ${FILESDIR}/${PN}-alpha-xpcom-subs-fix.patch
 		fi
 	fi
 
@@ -112,10 +139,18 @@ src_unpack() {
 	# http://bugzilla.mozilla.org/show_bug.cgi?id=174143
 	cd ${S}; epatch ${FILESDIR}/${PN}-1.0.1-platform.patch
 
-	epatch ${FILESDIR}/1.2/mozilla-1.2b-default-plugin-less-annoying.patch.bz2
-	epatch ${FILESDIR}/1.2/mozilla-1.2b-over-the-spot.patch.bz2
-	epatch ${FILESDIR}/1.2/mozilla-1.2b-freetype.patch.bz2
-	epatch ${FILESDIR}/1.2/mozilla-1.2b-wallet.patch.bz2
+	epatch ${FILESDIR}/${PV}/${P}b-default-plugin-less-annoying.patch.bz2
+	epatch ${FILESDIR}/${PV}/${P}b-over-the-spot.patch.bz2
+	epatch ${FILESDIR}/${PV}/${P}b-freetype.patch.bz2
+	epatch ${FILESDIR}/${PV}/${P}b-wallet.patch.bz2
+
+	# Pasting from another app to mozilla do not always work if data
+	# to be pasted is larger than 4k:
+	#
+	#   http://bugzilla.mozilla.org/show_bug.cgi?id=56219
+	#
+	# <azarah@gentoo.org> (30 Nov 2002)
+	epatch ${FILESDIR}/${PV}/${P}-cutnpaste-limit-fix.patch.bz2
 
 	# Get mozilla to link to Xft2.0 that we install in tmp directory
 	# <azarah@gentoo.org> (18 Nov 2002)
@@ -142,7 +177,7 @@ src_unpack() {
 
 	cd ${FC_S}
 	export WANT_AUTOCONF_2_5=1
-	autoconf --force
+	autoconf --force &> /dev/null
 	unset WANT_AUTOCONF_2_5
 }
 
@@ -169,11 +204,21 @@ src_compile() {
 		myconf="${myconf} --disable-ldap"
 	fi
 
-	if [ -z "${DEBUG}" ] ; then
+	if [ "${DEBUGBUILD}" != "yes" ] ; then
 		myconf="${myconf} --enable-strip-libs \
 			              --disable-debug \
 			              --disable-tests \
-						  --disable-dtd-debug"
+						  --disable-dtd-debug \
+						  --disable-jsd \
+						  --enable-reorder \
+						  --enable-strip \
+						  --enable-elf-dynstr-gc \
+						  --enable-cpp-rtti"
+
+		if [ -z "`use gtk2`" ]; then
+			myconf="${myconf} --disable-accessibility \
+							  --disable-logging"
+		fi
 	fi
 
 	if [ -n "${MOZ_ENABLE_XFT}" -a -z "`use gtk2`" ] ; then
@@ -190,19 +235,17 @@ src_compile() {
 	#        is just here for completeness.  Please do not use if you 
 	#        do not know what you are doing!
 	#
-	# The defaults are (as of 1.0rc1, according to configure (line ~10799)):
-	#     cookie wallet content-packs xml-rpc xmlextras help transformiix venkman inspector irc
+	# The defaults are (as of 1.0rc1, according to configure (line ~11445)):
+	#     cookie, wallet, content-packs, xml-rpc, xmlextras, help, pref, transformiix,
+	#     venkman, inspector, irc, universalchardet, typeaheadfind
 	# Non-defaults are:
-	#     xmlterm access-builtin ctl p3p interfaceinfo
+	#     xmlterm access-builtin p3p interfaceinfo datetime finger cview
 	local myext="default"
 	if [ -n "`use mozxmlterm`" ] ; then
 		myext="${myext},xmlterm"
 	fi
 	if [ -n "`use mozaccess-builtin`" ] ; then
 		myext="${myext},access-builtin"
-	fi
-	if [ -n "`use mozctl`" ] ; then
-		myext="${myext},ctl"
 	fi
 	if [ -n "`use mozp3p`" ] ; then
 		myext="${myext},p3p"
@@ -217,21 +260,34 @@ src_compile() {
 	else
 		myconf="${myconf} --disable-svg"
 	fi
-	
-	if [ -n "`use moznomail`" ] || \
-	   [ "${NO_MAIL}" = "YES" -o "${NO_MAIL}" = "yes" ]
-	then
-		myconf="${myconf} --disable-mailnews"
+	if [ -n "`use mozcalendar`" ] ; then
+		myconf="${myconf} --enable-calendar"
 	fi
 	
-	export BUILD_MODULES=all
-	export BUILD_OPT=1
-
-	# Currently gcc-3.1.1 dont work well if we specify "-march"
-	# and other optimizations for pentium4.
+	if [ -n "`use moznomail`" ] ; then
+		myconf="${myconf} --disable-mailnews"
+	fi
+	if [ -n "`use moznocompose`" ] ; then
+		myconf="${myconf} --disable-composer"
+	fi
+	
 	if [ "$(gcc-major-version)" -eq "3" ] ; then
-		export CFLAGS="${CFLAGS/pentium4/pentium3}"
-		export CXXFLAGS="${CXXFLAGS/pentium4/pentium3}"
+
+		# If CXX is not set, 'c++' is used to compile and not 'g++', which
+		# could cause problems.
+		if [ -z "${CC}" -o -z "${CXX}" ] ; then
+			eerror "CC or CXX are not set.  This may be due to pkg_setup() not"
+			eerror "being run.  Please file a bug report that include your portage"
+			eerror "version, USE flags and CFLAGS."
+			die "CC or CXX are not set!"
+		fi
+		
+		# Currently gcc-3.2 or older do not work well if we specify "-march"
+		# and other optimizations for pentium4.
+		if [ "$(${CC} -dumpversion | sed -e 's:\.::g')" -lt "321" ] ; then
+			export CFLAGS="${CFLAGS/pentium4/pentium3}"
+			export CXXFLAGS="${CXXFLAGS/pentium4/pentium3}"
+		fi
 
 		# Enable us to use flash, etc plugins compiled with gcc-2.95.3
 		if [ "${ARCH}" = "x86" ] ; then
@@ -245,7 +301,7 @@ src_compile() {
 	#
 	# *********************************************************************
 
-	if [ -z "`use gtk2`" ]; then
+	if [ -z "`use gtk2`" ] ; then
 	
 		cd ${FC_S}
 		einfo "Configuring Xft2.0..."
@@ -280,14 +336,14 @@ src_compile() {
 	#
 	# *********************************************************************
 	
-	cd ${S}
-	
-	#This should enable parallel builds, I hope
-	export MAKE="emake"
+	export BUILD_MODULES=all
+	export BUILD_OPT=1
 	
 	# Get it to work without warnings on gcc3
 	export CXXFLAGS="${CXXFLAGS} -Wno-deprecated"
 
+	cd ${S}
+	einfo "Configuring Mozilla..."
 	./configure --prefix=/usr/lib/mozilla \
 		--disable-pedantic \
 		--disable-short-wchar \
@@ -430,11 +486,6 @@ src_install() {
 	cd ${S}
 	exeinto /usr/bin
 	newexe ${FILESDIR}/mozilla.sh mozilla
-	# Get mozilla to preload lesstif to fix java bork ...
-	if [ "$(gcc-major-version)" -eq "3" ] ; then
-		perl -pi -e 's|/usr/lib/mozilla/libc\+\+mem.so|/usr/lib/libXm.so.2|g' \
-			${D}/usr/bin/mozilla
-	fi
 	insinto /etc/env.d
 	doins ${FILESDIR}/10mozilla
 	dodoc LEGAL LICENSE README/mozilla/README*
@@ -464,6 +515,7 @@ src_install() {
 	# (seems the problem is that not all files are readible by the user)
 	einfo "Fixing Permissions..."
 	chmod -R g+r,o+r ${D}/usr/lib/mozilla
+	find ${D}/usr/lib/mozilla/ -type d -exec chmod 0755 {} \; || :
 }
 
 pkg_preinst() {
@@ -507,31 +559,26 @@ pkg_postinst() {
 		rm -f ${MOZILLA_FIVE_HOME}/component.reg
 	fi
 
-	# Tempory fix for missing libtimer_gtk.so
-	# If it exists when generating component.reg (before unmerge of old),
-	# it 'corrupts' the newly generated component.reg with invalid references.
-	if [ -e ${MOZILLA_FIVE_HOME}/components/libtimer_gtk.so ] ; then
-		rm -f ${MOZILLA_FIVE_HOME}/components/libtimer_gtk.so
-	fi
+	umask 022
 
 	# Needed to update the run time bindings for REGXPCOM 
 	# (do not remove next line!)
 	env-update
 	# Register components, setup Chrome .rdf files and fix file permissions
 	einfo "Registering Components and Chrome..."
-	umask 022
 	${MOZILLA_FIVE_HOME}/regxpcom &> /dev/null
 	if [ -e ${MOZILLA_FIVE_HOME}/component.reg ] ; then
-		chmod g+r,o+r ${MOZILLA_FIVE_HOME}/component.reg
+		chmod 0644 ${MOZILLA_FIVE_HOME}/component.reg
 	fi
 	# Setup the default skin and locale to correctly generate the Chrome .rdf files
+	rm -rf ${MOZILLA_FIVE_HOME}/chrome/overlayinfo
 	find ${MOZILLA_FIVE_HOME}/chrome/ -name '*.rdf' -exec rm -f {} \; || :
 	echo "skin,install,select,classic/1.0" >> \
 		${MOZILLA_FIVE_HOME}/chrome/installed-chrome.txt
 	echo "locale,install,select,en-US" >> \
 		${MOZILLA_FIVE_HOME}/chrome/installed-chrome.txt
 	${MOZILLA_FIVE_HOME}/regchrome &> /dev/null
-	find ${MOZILLA_FIVE_HOME}/ -type d -perm 0700 -exec chmod 755 {} \; || :
+	find ${MOZILLA_FIVE_HOME}/chrome/ -name '*.rdf' -exec chmod 0644 {} \; || :
 
 
 	echo
@@ -557,6 +604,7 @@ pkg_postrm() {
 			chmod g+r,o+r ${MOZILLA_FIVE_HOME}/component.reg
 		fi
 
+		rm -rf ${MOZILLA_FIVE_HOME}/chrome/overlayinfo
 		find ${MOZILLA_FIVE_HOME}/chrome/ -name '*.rdf' -exec rm -f {} \; || :
 		${MOZILLA_FIVE_HOME}/regchrome
 		find ${MOZILLA_FIVE_HOME}/ -type d -perm 0700 -exec chmod 755 {} \; || :
