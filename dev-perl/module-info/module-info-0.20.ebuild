@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-info/module-info-0.20.ebuild,v 1.1 2003/06/26 17:04:09 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/module-info/module-info-0.20.ebuild,v 1.2 2004/01/19 22:01:34 esammer Exp $
 
 inherit perl-module
 
@@ -12,5 +12,5 @@ HOMEPAGE="http://www.cpan.org/modules/by-authors/id/M/MB/MBARBON/${MY_P}.readme"
 
 SLOT="0"
 LICENSE="Artistic | GPL-2"
-KEYWORDS="x86 ~alpha ~arm ~hppa ~mips ~ppc ~sparc"
+KEYWORDS="x86 ~alpha ~arm ~hppa ~mips ~ppc ~sparc ~amd64"
 
