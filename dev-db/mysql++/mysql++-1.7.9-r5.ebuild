@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-1.7.9-r5.ebuild,v 1.3 2004/06/29 16:35:24 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-db/mysql++/mysql++-1.7.9-r5.ebuild,v 1.4 2004/07/14 01:07:38 agriffis Exp $
 
 inherit gcc eutils gnuconfig
 
@@ -71,7 +71,7 @@ src_unpack() {
 }
 
 src_compile() {
-	use amd64 && gnuconfig_update
+	gnuconfig_update
 	local myconf
 	# we want C++ exceptions turned on
 	myconf="--enable-exceptions"
