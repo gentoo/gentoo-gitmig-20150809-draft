@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/nictools/nictools-20030719.ebuild,v 1.3 2003/09/25 19:00:45 robbat2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/nictools/nictools-20030719.ebuild,v 1.4 2003/10/17 19:23:22 mholzer Exp $
 
 DESCRIPTION="nictools - diagnostic tools for a variety of ISA and PCI network cards"
 HOMEPAGE="http://www.scyld.com/diag/index.html"
@@ -62,4 +62,3 @@ src_install() {
 	into /usr
 	doman netdiag.8
 }
-
