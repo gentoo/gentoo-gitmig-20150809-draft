@@ -58,3 +58,4 @@ virtual/imap-c-client	net-libs/c-client
 virtual/mpg123		media-sound/mpg123
 virtual/cdrtools        app-cdr/cdrtools
 virtual/dhcpc			net-misc/dhcpcd
+virtual/ssh		net-misc/openssh
