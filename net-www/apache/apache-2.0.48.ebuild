@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.48.ebuild,v 1.1 2003/10/30 17:51:18 woodchip Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/apache/apache-2.0.48.ebuild,v 1.2 2003/10/31 04:26:34 robbat2 Exp $
 
 inherit flag-o-matic
 has_version =sys-libs/glibc-2.2* && filter-flags -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE
@@ -124,8 +124,18 @@ src_compile() {
 
 	select_modules_config || die "determining modules"
 
+	# fix for bug #24215 - robbat2@gentoo.org, 30 Oct 2003
+	# we pre-load the cache with the correct answer!
+	# this avoids it violating the sandbox
+	# this may have to be changed for non-Linux systems
+	# or if sem_open changes on Linux
+	# this hack is built around documentation in /usr/include/semaphore.h and
+	# the glibc (pthread) source
+	echo 'ac_cv_func_sem_open=${ac_cv_func_sem_open=no}' >> ${S}/config.cache
+
 	SSL_BASE="SYSTEM" \
 	./configure \
+		--cache-file=${S}/config.cache \
 		--with-suexec-safepath="/usr/local/bin:/usr/bin:/bin" \
 		--with-suexec-logfile=/var/log/apache2/suexec_log \
 		--with-suexec-bin=/usr/sbin/suexec2 \
