@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/sablecc/sablecc-2.18.2.ebuild,v 1.4 2004/06/03 01:59:13 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/sablecc/sablecc-2.18.2.ebuild,v 1.5 2004/06/24 08:51:49 dholm Exp $
 
 inherit java-pkg
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.sablecc.org/"
 SRC_URI="mirror://sourceforge/sablecc/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~ppc"
 IUSE="jikes"
 
 DEPEND=">=virtual/jdk-1.4
