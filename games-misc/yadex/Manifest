@@ -1,4 +1,14 @@
-MD5 80260908496204a7be36e8d4b38692ee yadex-1.7.0.ebuild 1247
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
 MD5 5ff63c7aa6343bebf96fe16b494bd033 ChangeLog 412
 MD5 f17b9b8fa07a38914fe1c03268f51678 metadata.xml 158
+MD5 f8218c7f5f7303477be8a6045da83ce7 yadex-1.7.0.ebuild 1077
 MD5 50612161cf860343d7754117df23606e files/digest-yadex-1.7.0 63
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.9.10 (GNU/Linux)
+
+iD8DBQFBhHUIHTu7gpaalycRAqoYAJ0d2P8qwEHBe7Ytjf0TRoIhMc+UxACg1qsK
+B+baHe/T0pRmGuna2m2xXwo=
+=yK7N
+-----END PGP SIGNATURE-----

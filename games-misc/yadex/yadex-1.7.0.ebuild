@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/yadex/yadex-1.7.0.ebuild,v 1.2 2004/06/24 22:59:12 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/yadex/yadex-1.7.0.ebuild,v 1.3 2004/10/31 05:15:22 vapier Exp $
 
 inherit games
 
@@ -8,19 +8,19 @@ DESCRIPTION="A Doom level (wad) editor"
 HOMEPAGE="http://www.teaser.fr/~amajorel/yadex/"
 SRC_URI="http://www.teaser.fr/~amajorel/yadex/${P}.tar.gz"
 
-KEYWORDS="x86"
 LICENSE="GPL-2"
 SLOT="0"
+KEYWORDS="x86"
 IUSE=""
 
-DEPEND="virtual/x11
-	>=sys-apps/sed-4"
+DEPEND="virtual/x11"
 
 src_unpack() {
 	unpack ${A}
 	sed -i \
-		-e '/iwad/s/local\///' ${S}/yadex.cfg \
-			|| die "sed yadex.cfg failed"
+		-e '/iwad/s/local\///' \
+		${S}/yadex.cfg \
+		|| die "sed yadex.cfg failed"
 }
 
 src_compile() {
@@ -30,12 +30,12 @@ src_compile() {
 }
 
 src_install() {
-	dogamesbin obj/0/yadex                || die "dogamesbin failed"
+	dogamesbin obj/0/yadex || die "dogamesbin failed"
 	insinto "${GAMES_DATADIR}/${PN}/${PV}/"
-	doins ygd/*                           || die "doins failed (data)"
-	doman doc/yadex.6                     || die "doman failed"
-	dodoc CHANGES FAQ README TODO VERSION || die "dodoc failed"
-	dohtml doc/*                          || die "dohtml failed"
+	doins ygd/* || die "doins failed (data)"
+	doman doc/yadex.6
+	dodoc CHANGES FAQ README TODO VERSION
+	dohtml doc/*
 	insinto /etc/yadex/${PV}/
 	doins yadex.cfg                       || die "doins failed (cfg)"
 
