@@ -1,12 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Jerry Alexandratos <jerry@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/kaffe/kaffe-1.0.6-r1.ebuild,v 1.3 2001/06/29 01:49:08 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/kaffe/kaffe-1.0.6-r1.ebuild,v 1.4 2001/11/10 11:31:52 hallski Exp $
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="A cleanroom, open source Java VM and class libraries"
-SRC_URI="http://www.kaffe.org/ftp/pub/kaffe/${A}"
+SRC_URI="http://www.kaffe.org/ftp/pub/kaffe/${P}.tar.gz"
 HOMEPAGE="http://www.kaffe.org/"
 
 DEPEND=">=dev-libs/gmp-3.1
@@ -16,21 +15,23 @@ DEPEND=">=dev-libs/gmp-3.1
 	virtual/x11"
 
 src_unpack() {
-    unpack ${A}
-    patch -p0 <${FILESDIR}/${PF}-gentoo.diff
+	unpack ${A}
+	patch -p0 <${FILESDIR}/${PF}-gentoo.diff
 }
 
 src_compile() {
-    cd ${S}
-    try ./configure --prefix=/opt/kaffe --host=${CHOST}
-    try make
+	./configure --host=${CHOST}					\
+		    --prefix=/opt/kaffe 
+	assert
+
+	make || die
 }
 
 src_install () {
-    cd ${S}
-    try make DESTDIR=${D} install
-    dodir /etc/env.d
-    insinto /etc/env.d
-    doins ${FILESDIR}/30kaffe
-    #30kaffe will set up the ld.so.path, path, manpath, etc.
+	make DESTDIR=${D} install || die
+
+	dodir /etc/env.d
+	insinto /etc/env.d
+	doins ${FILESDIR}/30kaffe
+	#30kaffe will set up the ld.so.path, path, manpath, etc.
 }

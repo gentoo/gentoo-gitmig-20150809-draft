@@ -1,13 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/jdk/jdk-1.3.0.ebuild,v 1.5 2001/05/28 05:24:13 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/jdk/jdk-1.3.0.ebuild,v 1.6 2001/11/10 11:31:52 hallski Exp $
 
-P=jdk-1.3.0
-A=j2sdk-1.3.0-FCS-linux-i386.tar.bz2
 S=${WORKDIR}/j2sdk1.3.0
 DESCRIPTION="Blackdown JDK 1.3.0"
-SRC_URI="http://www.ibiblio.org/pub/linux/devel/lang/java/blackdown.org/JDK-1.3.0/i386/FCS/${A}"
+SRC_URI="http://www.ibiblio.org/pub/linux/devel/lang/java/blackdown.org/JDK-1.3.0/i386/FCS/j2sdk-1.3.0-FCS-linux-i386.tar.bz2"
 HOMEPAGE="http://www.blackdown.org/java-linux.html"
 
 DEPEND="virtual/glibc"

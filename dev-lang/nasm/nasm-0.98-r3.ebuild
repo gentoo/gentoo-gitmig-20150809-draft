@@ -1,15 +1,13 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98-r3.ebuild,v 1.2 2001/08/18 04:27:00 chadh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/nasm/nasm-0.98-r3.ebuild,v 1.3 2001/11/10 11:31:53 hallski Exp $
 
-P=nasm-0.98
-A=${P}.tar.bz2
 S=${WORKDIR}/${P}
 DESCRIPTION="groovy little assembler"
-SRC_URI="ftp://ftp.kernel.org/pub/software/devel/nasm/source/${A}
-	 ftp://ftp.de.kernel.org/pub/software/devel/nasm/source/${A}
-	 ftp://ftp.uk.kernel.org/pub/software/devel/nasm/source/${A}"
+SRC_URI="ftp://ftp.kernel.org/pub/software/devel/nasm/source/${P}.tar.bz2
+	 ftp://ftp.de.kernel.org/pub/software/devel/nasm/source/${P}.tar.bz2
+	 ftp://ftp.uk.kernel.org/pub/software/devel/nasm/source/${P}.tar.bz2"
 HOMEPAGE="http://nasm.sourceforge.net/"
 
 DEPEND="virtual/glibc sys-apps/texinfo"
@@ -20,15 +18,15 @@ if [ -z "`use build`" ]; then
 fi
 
 src_compile() {                           
+	./configure --prefix=/usr || die
 
-    try ./configure --prefix=/usr 
-    if [ "`use build`" ]; then
-    	make nasm
-    else
-    	try make
-    	cd doc
-    	try make
-    fi
+	if [ "`use build`" ]; then
+		make nasm
+	else
+		make || die
+		cd doc
+		make || die
+	fi
 }
 
 src_install() {
@@ -52,5 +50,3 @@ src_install() {
 		doinfo info/*.info*
 	fi
 }
-
-

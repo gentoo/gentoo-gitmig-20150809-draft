@@ -1,13 +1,12 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3_alpha5-r2.ebuild,v 1.2 2001/07/10 03:17:07 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/swig/swig-1.3_alpha5-r2.ebuild,v 1.3 2001/11/10 11:31:53 hallski Exp $
 
 P=swig1.3a5
-A=${P}.tar.gz
 S=${WORKDIR}/SWIG1.3a5
 DESCRIPTION="Simplified wrapper and interface generator"
-SRC_URI="http://download.sourceforge.net/swig/${A}"
+SRC_URI="http://download.sourceforge.net/swig/${P}.tar.gz"
 HOMEPAGE="http://www.swig.org"
 
 DEPEND="virtual/glibc >=sys-devel/gcc-2.95.2
@@ -19,48 +18,48 @@ DEPEND="virtual/glibc >=sys-devel/gcc-2.95.2
 	perl? ( >=sys-devel/perl-5.6.1 )"
 
 src_compile() {
+	local myconf
 
-    local myconf
-    if [ "`use python`" ] ; then
-	myconf="--with-py"
-    else
-	myconf="--without-py"
-    fi
-    if [ "`use java`" ] ; then
-	myconf="$myconf --with-java"
-    else
-	myconf="$myconf --without-java"
-    fi
-    if [ -z "`use ruby`" ] ; then
-	myconf="$myconf --without-ruby"
-    fi
-    if [ "`use guile`" ] ; then
-	myconf="$myconf --with-guile"
-    else
-	myconf="$myconf --without-guile"
-    fi
-    if [ "`use tcltk`" ] ; then
-	myconf="$myconf --with-tcl --with-tcllib=/usr/lib/tcl-8.4"
-    else
-	myconf="$myconf --without-tcltk"
-    fi
-    if [ "`use perl`" ]
-    then
-	myconf="$myconf --with-perl"
-    else
-	myconf="$myconf --without-perl"
-    fi
-    unset CXXFLAGS
-    unset CFLAGS
-    try ./configure --prefix=/usr --host=${CHOST} \
-	--with-doc=html $myconf
-    try make
+	if [ "`use python`" ] ; then
+		myconf="--with-py"
+	else
+		myconf="--without-py"
+	fi
+	if [ "`use java`" ] ; then
+		myconf="$myconf --with-java"
+	else
+		myconf="$myconf --without-java"
+	fi	
+	if [ -z "`use ruby`" ] ; then
+		myconf="$myconf --without-ruby"
+	fi
+	if [ "`use guile`" ] ; then
+		myconf="$myconf --with-guile"
+	else
+		myconf="$myconf --without-guile"
+	fi
+	if [ "`use tcltk`" ] ; then
+		myconf="$myconf --with-tcl --with-tcllib=/usr/lib/tcl-8.4"
+	else
+		myconf="$myconf --without-tcltk"
+	fi
+	if [ "`use perl`" ]
+	then
+		myconf="$myconf --with-perl"
+	else
+		myconf="$myconf --without-perl"
+	fi
 
+	unset CXXFLAGS
+	unset CFLAGS
+	./configure --host=${CHOST}					\
+		    --prefix=/usr					\
+		    --with-doc=html					\
+		    $myconf || die
+
+	make || die
 }
 
 src_install () {
-
-    try make prefix=${D}/usr install
-
+	make prefix=${D}/usr install || die
 }
-

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl-tk/tcl-tk-8.3.3.ebuild,v 1.4 2001/08/31 03:23:38 pm Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/tcl-tk/tcl-tk-8.3.3.ebuild,v 1.5 2001/11/10 11:31:53 hallski Exp $
 
 
 P=tcl-tk-8.3.3
@@ -17,7 +17,6 @@ S2=${WORKDIR}/${R2}
 
 SRC_URI2="ftp://ftp.scriptics.com/pub/tcl/tcl8_3/tk8.3.3.tar.gz"
 
-A="${A1} ${A2}"
 SRC_URI="${SRC_URI1} ${SRC_URI2}"
 HOMEPAGE="http:/dev.scriptics.com/software/tcltk/"
 

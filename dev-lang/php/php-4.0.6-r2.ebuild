@@ -1,12 +1,11 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.0.6-r2.ebuild,v 1.2 2001/10/07 00:14:36 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/php/php-4.0.6-r2.ebuild,v 1.3 2001/11/10 11:31:53 hallski Exp $
 
-A=${PN}-4.0.6.tar.gz
 S=${WORKDIR}/${PN}-4.0.6
 DESCRIPTION="HTML embedded scripting language"
-SRC_URI="http://www.php.net/distributions/${A}"
+SRC_URI="http://www.php.net/distributions/${P}.tar.gz"
 HOMEPAGE="http://www.php.net/"
 
 DEPEND="virtual/glibc
