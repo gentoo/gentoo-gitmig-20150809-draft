@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3120-r2.ebuild,v 1.7 2004/06/01 12:16:59 wolf31o2 Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/ut2004-demo/ut2004-demo-3120-r2.ebuild,v 1.8 2004/06/02 02:32:39 mr_bones_ Exp $
 
 inherit games
 
@@ -55,7 +55,7 @@ src_install() {
 	doins README-tts.txt tts-festival.pl
 
 	# ALSA and VoIP
-	if [ "`use alsa`" ]; then
+	if use alsa; then
 		rm ${D}/${dir}/System/{libSDL-1.2.so.0,openal.so} || die "removing libs"
 		dosym /usr/lib/libSDL-1.2.so.0 ${dir}/System/libSDL-1.2.so.0 || die "SDL symlink"
 		dosym /usr/lib/libopenal.so.0 ${dir}/System/openal.so || die "OpenAL symlink"
