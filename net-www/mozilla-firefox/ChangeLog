@@ -1,6 +1,10 @@
 # ChangeLog for net-www/mozilla-firefox
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.70 2004/10/02 10:29:22 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-firefox/ChangeLog,v 1.71 2004/10/03 14:03:40 weeve Exp $
+
+  03 Oct 2004; Jason Wever <weeve@gentoo.org>
+  mozilla-firefox-1.0_pre-r2.ebuild:
+  Stable on sparc wrt security bug #66084.
 
   02 Oct 2004; Travis Tilley <lv@gentoo.org>
   mozilla-firefox-1.0_pre-r2.ebuild:

@@ -1,6 +1,9 @@
 # ChangeLog for net-www/mozilla-launcher
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-launcher/ChangeLog,v 1.31 2004/10/02 06:49:44 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla-launcher/ChangeLog,v 1.32 2004/10/03 14:01:09 weeve Exp $
+
+  03 Oct 2004; Jason Wever <weeve@gentoo.org> mozilla-launcher-1.21.ebuild:
+  Stable on sparc wrt security bug #66084.
 
   02 Oct 2004; Travis Tilley <lv@gentoo.org> mozilla-launcher-1.21.ebuild:
   stable on amd64
