@@ -1,6 +1,10 @@
 # ChangeLog for games-misc/fortune-mod-at-linux
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-at-linux/ChangeLog,v 1.5 2004/11/24 21:32:50 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-misc/fortune-mod-at-linux/ChangeLog,v 1.6 2004/12/28 17:22:29 josejx Exp $
+
+  29 Dec 2004; Joseph Jezak <josejx@gentoo.org>
+  fortune-mod-at-linux-20030120.ebuild:
+  Marked ppc stable.
 
   24 Nov 2004; Sven Wegener <swegener@gentoo.org>
   fortune-mod-at-linux-20030120.ebuild:
