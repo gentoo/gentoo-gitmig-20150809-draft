@@ -1,6 +1,11 @@
 # ChangeLog for sys-libs/ncurses
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.57 2004/03/16 03:23:25 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ChangeLog,v 1.58 2004/03/16 21:50:08 solar Exp $
+
+  16 Mar 2004; <solar@gentoo.org> ncurses-5.4-r1.ebuild:
+  new filter-ldflags function in flag-o-matic allows us to filter exactly what
+  we need here which is -pie.. So lets use that function vs all of filter-flags
+  and all it's glory
 
   15 Mar 2004; Jason Wever <weeve@gentoo.org> ncurses-5.4-r1.ebuild,
   ncurses-5.4.ebuild:
