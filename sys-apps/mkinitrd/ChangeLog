@@ -1,0 +1,10 @@
+# ChangeLog for sys-apps/mkinitrd
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/mkinitrd/ChangeLog,v 1.1 2003/08/07 19:59:33 pebenito Exp $
+
+*mkinitrd-3.5.7 (07 Aug 2003)
+
+  07 Aug 2003; Chris PeBenito <pebenito@gentoo.org> metadata.xml,
+  mkinitrd-3.5.7.ebuild, files/mkinitrd-selinux.diff:
+  Initial commit
+
