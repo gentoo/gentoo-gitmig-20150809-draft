@@ -1,6 +1,11 @@
 # ChangeLog for app-office/koffice
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.20 2003/03/18 16:07:33 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/koffice/ChangeLog,v 1.21 2003/04/16 18:22:33 danarmak Exp $
+
+*koffice-1.3_beta1 (16 Apr 2003)
+
+  16 Apr 2003; Dan Armak <danarmak@gentoo.org> koffice-1.3_beta1.ebuild:
+  A new release. The sources are NOT yet generally available so this is masked.
 
   13 Mar 2003; Olivier Reisch <doctomoe@gentoo.org> koffice-1.2.1.ebuild :
   Marked ppc stable
