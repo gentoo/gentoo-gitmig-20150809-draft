@@ -1,6 +1,9 @@
 # ChangeLog for app-text/jadetex
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.13 2004/03/12 08:47:24 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/jadetex/ChangeLog,v 1.14 2004/03/13 20:07:27 geoman Exp $
+
+  13 Mar 2004; Stephen P. Becker <geoman@gentoo.org> jadetex-3.12.ebuild:
+  Added ~mips keyword.
 
   12 Mar 2004; Michael Sterrett <mr_bones_@gentoo.org> jadetex-3.12.ebuild:
   Don't assign default to S; header fix
