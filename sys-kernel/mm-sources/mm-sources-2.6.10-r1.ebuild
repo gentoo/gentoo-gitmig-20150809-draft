@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.9-r1.ebuild,v 1.2 2004/12/21 11:47:07 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/mm-sources/mm-sources-2.6.10-r1.ebuild,v 1.1 2005/01/03 17:25:43 lostlogic Exp $
 
 UNIPATCH_LIST="${DISTDIR}/${KV}.bz2"
 K_PREPATCHED="yes"
@@ -22,4 +22,3 @@ experimental nature. If you have any issues, try a matching development-sources
 ebuild -- if the problem persists there, please file a bug at http://bugme.osdl.org.
 If the problem only occurs with mm-sources then please contact Andrew Morton to
 get your issue resolved."
-
