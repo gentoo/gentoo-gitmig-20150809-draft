@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl-run/bioperl-run-1.4.ebuild,v 1.1 2004/01/09 02:59:06 sediener Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/bioperl-run/bioperl-run-1.4.ebuild,v 1.2 2004/03/22 09:16:51 phosphan Exp $
 
 inherit perl-module eutils
 CATEGORY="app-sci"
@@ -21,7 +21,7 @@ RDEPEND="
 	dev-perl/IO-String
 	dev-perl/XML-Parser"
 
-DEPEND="${RDEPEND}"
+DEPEND=""
 
 src_compile() {
 	perl-module_src_compile || die "compile failed"
