@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50c.ebuild,v 1.7 2003/04/25 15:41:23 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50c.ebuild,v 1.8 2003/08/31 19:32:44 lu_zero Exp $
 
 inherit gcc eutils
 
@@ -29,7 +29,12 @@ pkg_setup() {
 }
 
 src_compile() {
-	econf || die
+	local myconf
+	
+	use X && myconf="${myconf} --with-x" \
+		|| myconf="${myconf} --without-x"
+
+	econf ${myconf} || die
 
 	# fix system default povray.ini to point to install directory
 	cp povray.ini povray.ini.orig
