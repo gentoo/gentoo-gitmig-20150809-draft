@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libsoup
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.16 2003/12/07 16:02:27 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libsoup/ChangeLog,v 1.17 2003/12/11 04:55:34 agriffis Exp $
+
+  10 Dec 2003; <agriffis@gentoo.org> libsoup-1.99.26-r1.ebuild:
+  stable on ia64
 
   06 Dec 2003; foser <foser@gentoo.org> libsoup-1.99.26{-r1}.ebuild :
   Remove aclocal and automake steps, not needed. Fixes #33999
