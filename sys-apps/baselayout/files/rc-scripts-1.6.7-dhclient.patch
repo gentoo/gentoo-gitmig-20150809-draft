@@ -1,0 +1,9 @@
+--- lib/rcscripts/net.modules.d/helpers.d/dhclient-ifconfig	2004-12-04 15:58:24.000000000 +0100
++++ dhclient-ifconfig	2004-12-04 15:57:20.000000000 +0100
+@@ -5,5 +5,5 @@
+ # Distributed under the terms of the GNU General Public License V2
+ # Contributed by Roy Marples (uberlord@gentoo.org)
+ 
+-/lib/rcscripts/helpers.d/dhclient-udhcpc-wrapper ifconfig
++/lib/rcscripts/net.modules.d/helpers.d/dhclient-udhcpc-wrapper ifconfig
+ exit $?

@@ -1,0 +1,11 @@
+--- lib/rcscripts/net.modules.d/helpers.d/udhcpc-ifconfig	2004-12-04 15:58:24.000000000 +0100
++++ udhcpc-ifconfig	2004-12-04 15:57:27.000000000 +0100
+@@ -41,7 +41,7 @@
+ 
+ # If the current address does not match or we are deconfiguring
+ # then we take the all the addresses on the interface down
+-cur=$( ifconfig eth1 | grep 'inet ' | awk -F: '{ print $2,$3 }' | awk '{ print $1,$3 }' )
++cur=$( ifconfig ${interface} | grep 'inet ' | awk -F: '{ print $2,$3 }' | awk '{ print $1,$3 }' )
+ if [[ ${cur} != "${ip} ${subnet}" || ${action} == deconfig ]]; then
+ 	# Remove all aliases
+ 	for i in $( ifconfig | grep -o "^${interface}:[0-9]*" | tac | xargs ); do

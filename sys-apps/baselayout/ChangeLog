@@ -1,9 +1,18 @@
 # ChangeLog for sys-apps/baselayout
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.192 2004/12/04 07:14:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/ChangeLog,v 1.193 2004/12/04 16:11:38 agriffis Exp $
 
 # See the gentoo-src rc-scripts ChangeLog for up-to-date release information:
 # http://www.gentoo.org/cgi-bin/viewcvs.cgi/rc-scripts/ChangeLog?rev=HEAD&cvsroot=gentoo-src&content-type=text/vnd.viewcvs-markup
+
+*baselayout-1.11.7-r2 (04 Dec 2004)
+
+  04 Dec 2004; Aron Griffis <agriffis@gentoo.org>
+  +files/rc-scripts-1.6.7-dhclient.patch,
+  +files/rc-scripts-1.6.7-udhcpc.patch, -baselayout-1.11.7-r1.ebuild,
+  +baselayout-1.11.7-r2.ebuild:
+  Various fixes for /lib/rcscripts/net.modules.d/helpers.d #73327. Thanks to
+  Benoit Boissinot for the patches
 
 *baselayout-1.11.7-r1 (04 Dec 2004)
 

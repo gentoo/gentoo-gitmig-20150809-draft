@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.7-r1.ebuild,v 1.1 2004/12/04 07:14:14 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/baselayout/baselayout-1.11.7-r2.ebuild,v 1.1 2004/12/04 16:11:38 agriffis Exp $
 
 inherit flag-o-matic eutils toolchain-funcs
 
@@ -35,6 +35,8 @@ src_unpack() {
 
 	cd ${S}
 	epatch ${FILESDIR}/rc-scripts-${SV}-fix-runscript.patch
+	epatch ${FILESDIR}/rc-scripts-${SV}-dhclient.patch
+	epatch ${FILESDIR}/rc-scripts-${SV}-udhcpc.patch
 
 	# Fix Sparc specific stuff
 	if [[ ${ARCH} == sparc ]]; then
@@ -341,10 +343,8 @@ src_install() {
 
 	# Original design had these in /etc/net.modules.d but that is too
 	# problematic with CONFIG_PROTECT
-	insinto /lib/rcscripts/net.modules.d
-	doins ${S}/lib/rcscripts/net.modules.d/*
-	insinto /lib/rcscripts/net.modules.d/helpers.d
-	doins ${S}/lib/rcscripts/net.modules.d/helpers.d/*
+	dodir /lib/rcscripts
+	cp -a ${S}/lib/rcscripts/net.modules.d ${D}/lib/rcscripts
 
 	#
 	# Install baselayout documentation
