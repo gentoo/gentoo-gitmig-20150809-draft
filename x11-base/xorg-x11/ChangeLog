@@ -1,6 +1,52 @@
 # ChangeLog for x11-base/xorg-x11
 # Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.48 2004/06/03 21:19:17 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/ChangeLog,v 1.49 2004/06/11 08:35:45 spyderous Exp $
+
+*xorg-x11-6.7.0-r1 (11 Jun 2004)
+
+  11 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>;
+  +xorg-x11-6.7.0-r1.ebuild:
+  PATCH_VER 1.1. Add 9920_all_6.7.0-xdm-open-chooserfd-CAN-2004-0419.patch to
+  stop xdm from ignoring its "DisplayManager.requestPort" setting. xdm opens its
+  "chooserFd" TCP socket on all network interfaces without this patch (xf86
+  #1376). Update 9840_all_4.3.0-SDK-add-missing-includes-for-gatos-v2.patch for
+  new gatos -- another include needed (battousai@gentoo.org). Update
+  0120_all_4.3.99-parallel-make-v2.patch to remove a patched-in .rej and some
+  patched-in .orig's (#49455). Update 0126_all_4.2.99.3-startx-v2.patch to
+  remove pointless dependency on xvt (#49455). Big chunk of backports from CVS:
+  9305_all_6.7.0-chips-segfault-on-mode-switch-and-video-overlay.patch to fix a
+  segfault on video mode switching when pScrn->currentMode does not contain a
+  valid mode. Also fix video overlays for double scan modes; Add
+  9310_all_6.7.0-config-cf-cleanup.patch to clean up xorg.cf by factoring out
+  many common defines. Make the fbdev driver only build on Linux (fbdevhw is
+  just stubs on other OSes). Add AFB to AMD64 build, and include
+  XF86OSCardDrivers. I continue adding things that aren't supported under Gentoo
+  (BSD-related, or other archs) because I want to pre-emptively have work done
+  for any ports. Also, it makes other backports easier. (fd.o #448, 449); Add
+  9315_all_6.7.0-fb-render-fixes.patch to fix problems in render fb
+  implementation found by rendercheck; Add
+  9320_all_6.7.0-getconfig-xorg-name.patch to fix problem with getconfig where
+  file '/usr/X11R6/lib/X11/getconfig/xorg.cfg' has bad signature (Change "Xorg
+  Project" to "Xorg Foundation" to match getconfig script) (fd.o #678); Add
+  9325_all_6.7.0-improve-xdm-auth-1-cookie.patch to improve 'uniqueness' of
+  authorization cookie sent by client for XDM-AUTHORIZATION-1. Old 'uniqueness'
+  consisted of the PID of the client, a time stamp (in seconds) and a number
+  obtained by starting to count down from 0xffff. When a client did an
+  XOpenDisplay() then execv'ed a child and did XOpenDisplay() again within the
+  same second, the cookie was identical to the previous one (as the PID did not
+  change but the static 'count down' variable was reinitialized) and thus
+  refused by the server; Add 9330_all_6.7.0-link-with-pam-on-pam-builds.patch to
+  link with PamLibraries if building with PAM support; Add
+  9335_all_6.7.0-modular-imake-build.patch to fix build glitches when building
+  modules independently using Imake; Add
+  9340_all_6.7.0-remove-xmu-dep-on-xaw-header.patch to remove Xaw header
+  dependency from Xmu library build (fd.o #634); Add
+  9345_all_6.7.0-unlock-xauthority-on-sigpipe.patch to make xauth unlock
+  .Xauthority on SIGPIPE (fd.o #550); Add
+  9350_all_6.7.0-xrender-xorgconfig-xdmcp-msgs.patch to muffle compiler warnings
+  in lib/Xrender/Xrender.c, fix an option name in a log message of
+  programs/Xserver/hw/xfree86/common/xf86Configure.c and improve debugging
+  messages in programs/xdm/xdmcp.c.
 
   03 Jun 2004; Donnie Berkholz <spyderous@gentoo.org>; :
   Add credit for netwinder.org ARM patch.
