@@ -1,6 +1,17 @@
 # ChangeLog for sys-devel/binutils
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.44 2003/05/06 17:56:18 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/binutils/ChangeLog,v 1.45 2003/05/08 20:52:27 dragon Exp $
+
+*binutils-2.14.90.0.1-r1 (08 May 2003)
+
+  08 May 2003; Nicholas Wourms <dragon@gentoo.org>
+  binutils-2.14.90.0.1-r1.ebuild,
+  files/2.14/binutils-2.14.90.0.1-eh-frame-ro.patch,
+  files/2.14/binutils-2.14.90.0.1-sparc-nonpic.patch:
+  Added patch to resync with CVS head, bumped revision to reflect this. This
+  version should resolve any outstanding testsuite & weak symbol issues.  I
+  have also added the previous patches back into the ebuild, compiles and
+  passes the testsuite on x86 w/o any regressions.
 
 *binutils-2.14.90.0.1 (06 May 2003)
 
