@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/Crypt-SSLeay-0.51.ebuild,v 1.2 2004/06/25 00:19:16 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-SSLeay/Crypt-SSLeay-0.51.ebuild,v 1.3 2004/07/02 05:00:05 eradicator Exp $
 
 inherit perl-module
 
@@ -14,7 +14,7 @@ KEYWORDS="~x86 ~amd64 ~alpha ~ppc ~sparc ~hppa ~mips ~ia64"
 
 SRC_TEST="do"
 
-DEPEND="virtual/glibc
+DEPEND="virtual/libc
 	>=dev-lang/perl-5
 	dev-perl/libwww-perl
 	>=dev-libs/openssl-0.9.7c"

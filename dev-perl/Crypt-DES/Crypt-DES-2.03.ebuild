@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-DES/Crypt-DES-2.03.ebuild,v 1.9 2004/06/25 00:17:10 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Crypt-DES/Crypt-DES-2.03.ebuild,v 1.10 2004/07/02 04:59:31 eradicator Exp $
 
 inherit perl-module
 
@@ -13,6 +13,6 @@ SLOT="0"
 LICENSE="Artistic | GPL-2"
 KEYWORDS="x86 amd64 ppc alpha"
 
-DEPEND="virtual/glibc >=dev-lang/perl-5"
+DEPEND="virtual/libc >=dev-lang/perl-5"
 
 export OPTIMIZE="${CFLAGS}"
