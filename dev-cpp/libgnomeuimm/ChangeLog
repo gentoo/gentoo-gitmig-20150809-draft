@@ -1,6 +1,9 @@
 # ChangeLog for dev-cpp/libgnomeuimm
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/ChangeLog,v 1.10 2004/04/16 16:46:49 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-cpp/libgnomeuimm/ChangeLog,v 1.11 2004/05/09 16:35:05 khai Exp $
+
+  09 May 2004; Yi Qiang <khai@gentoo.org> libgnomeuimm-2.0.0.ebuild:
+  Version bump
 
   16 Apr 2004; Travis Tilley <lv@gentoo.org> libgnomeuimm-2.0.0.ebuild:
   added ~amd64 keyword and a fix to get it to compile
