@@ -166,3 +166,4 @@ move app-sci/petrify sci-electronics/petrify
 move app-sci/spice sci-electronics/spice
 move app-sci/systemc sci-electronics/systemc
 move app-sci/tclspice sci-electronics/tclspice
+move app-sci/vbs sci-electronics/vbs
