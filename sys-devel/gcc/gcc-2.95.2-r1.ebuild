@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.2-r1.ebuild,v 1.1 2000/08/03 14:16:17 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-2.95.2-r1.ebuild,v 1.2 2000/08/16 04:38:33 drobbins Exp $
 
 P=gcc-2.95.2
 A="gcc-2.95.2.tar.gz libg++-2.8.1.3.tar.gz libg++-2.8.1.3-20000419.diff.gz"
@@ -10,7 +10,6 @@ A1=gcc-exception-fix.diff.gz
 A2=gcc-accept-doublecolon.diff.gz
 S=${WORKDIR}/gcc-2.95.2
 T=/usr
-CATEGORY="sys-devel"
 DESCRIPTION="modern gcc c/c++ compiler"
 SRC_URI="ftp://prep.ai.mit.edu/gnu/gcc/gcc-2.95.2.tar.gz 
 	 ftp://ftp.leo.org/pub/comp/os/unix/gnu/gcc/gcc-2.95.2.tar.gz 

@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-UP-2.2.17/linux-UP-2.2.17_pre13-r6.ebuild,v 1.1 2000/08/13 03:07:01 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/linux-UP-2.2.17/linux-UP-2.2.17_pre13-r6.ebuild,v 1.2 2000/08/16 04:38:34 drobbins Exp $
 
 P=linux-UP-2.2.17p13
 A="linux-2.2.16.tar.bz2 i2c-2.5.2.tar.gz lm_sensors-2.5.2.tar.gz
@@ -12,7 +12,6 @@ A="linux-2.2.16.tar.bz2 i2c-2.5.2.tar.gz lm_sensors-2.5.2.tar.gz
 
 S=${WORKDIR}/linux
 DESCRIPTION="Linux kernel for UP systems with reiserfs,usb,sensors,raid,udma,nfs3 and pppoe support"
-CATEGORY=sys-kernel
 SRC_URI="ftp://ftp.uk.kernel.org/pub/linux/kernel/v2.2/linux-2.2.16.tar.bz2
 	 ftp://ftp.de.kernel.org/pub/linux/kernel/v2.2/linux-2.2.16.tar.bz2
 	 ftp://ftp.kernel.org/pub/linux/kernel/people/alan/2.2.17pre/pre-patch-2.2.17-13.bz2

@@ -1,13 +1,12 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Daniel Robbins <drobbins@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.3.5-r1.ebuild,v 1.1 2000/08/03 14:16:17 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/libtool/libtool-1.3.5-r1.ebuild,v 1.2 2000/08/16 04:38:33 drobbins Exp $
 
 P=libtool-1.3.5
 A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="A shared library tool for developers"
-CATEGORY="sys-devel"
 SRC_URI="ftp://prep.ai.mit.edu/gnu/libtool/${A}"
 HOMEPAGE="http://www.gnu.org/software/libtool/libtool.html"
 
