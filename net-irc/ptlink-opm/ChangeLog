@@ -1,6 +1,11 @@
 # ChangeLog for net-irc/ptlink-opm
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-opm/ChangeLog,v 1.9 2004/11/25 20:38:38 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-irc/ptlink-opm/ChangeLog,v 1.10 2004/11/25 21:46:53 swegener Exp $
+
+  25 Nov 2004; Sven Wegener <swegener@gentoo.org> -ptlink-opm-1.3.0.ebuild,
+  ptlink-opm-1.3.1.ebuild:
+  There's no need to override path.h because the configure script has options
+  for it.
 
   25 Nov 2004; Sven Wegener <swegener@gentoo.org> ptlink-opm-1.3.0.ebuild,
   ptlink-opm-1.3.1.ebuild:
