@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/xom-1.0_beta5.ebuild,v 1.4 2004/11/03 11:40:27 axxo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/xom/xom-1.0_beta5.ebuild,v 1.5 2005/01/21 17:24:14 luckyduck Exp $
 
 inherit java-pkg
 
