@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/jpeg
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.15 2003/11/16 14:42:04 mholzer Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-libs/jpeg/ChangeLog,v 1.16 2004/02/17 10:14:07 kumba Exp $
+
+  17 Feb 2004; Joshua Kinard <kumba@gentoo.org> jpeg-6b-r3.ebuild:
+  Added ~mips to keywords, removed arm keyword, fixed date.
 
   16 Nov 2003; Martin Holzer <mholzer@gentoo.org> jpeg-6b-r3.ebuild:
   adding more docs. Closes #33439
