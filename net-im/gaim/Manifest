@@ -6,7 +6,8 @@ MD5 6dd218f20477b66873a258f2eca07afc gaim-0.72-r1.ebuild 2907
 MD5 a86ebd7a5efbcb055904551d3b6d4262 gaim-0.72.ebuild 2502
 MD5 44dae26df92312a61f4c67abcf8ec157 gaim-0.74-r2.ebuild 3875
 MD5 cd00ece1fa15bea82f97bae010288aa0 gaim-0.75-r6.ebuild 3371
-MD5 2f6118541bd323b13d4d24da916f28fb ChangeLog 22529
+MD5 e898d4ed5d34e9677cd2b38d91ef6cbf gaim-0.75-r10.ebuild 3491
+MD5 f98de829ff0b172963c4e73228253408 ChangeLog 22763
 MD5 19b3cafbbe380403d46cccc45a984b80 metadata.xml 481
 MD5 afa367e65ccb88696cde98002ec3ffa3 gaim-0.75-r8.ebuild 3315
 MD5 4989dc76d941288934c783f52931762d files/gaim-0.75-static-prpls.patch 3710
@@ -15,6 +16,7 @@ MD5 fd4cd0957e11c11fc6e0c72e10714e07 files/gaim-0.74-log_free.patch 1492
 MD5 4dbb9d0f8bf30e40f8b73215e14442ae files/gaim-0.74-scs-msg-yahoo.patch 776
 MD5 1ade161b6a07868398812aa91ac7115d files/gaim_cjk_gtkconv.patch 1126
 MD5 a714a5babbb4387f5a5516f75548528a files/gaim-0.76cvs-yahoo-misc-fixes-1.diff 3105
+MD5 68525b8389e356a5d05d531b84fb1ada files/gaim-0.74-gnome-url-handler.patch 1854
 MD5 58f03af2ad906ca7194b3a57c7648cf9 files/digest-gaim-0.72-r1 135
 MD5 58f03af2ad906ca7194b3a57c7648cf9 files/digest-gaim-0.72-r2 135
 MD5 24bfb2bbc9bef27fcc0f46639504b1c5 files/digest-gaim-0.74-r2 135
@@ -30,3 +32,4 @@ MD5 e58ee6f06747da85a60cb9c13b91f805 files/gaim-0.76cvs-yahoo-login-fix.diff 461
 MD5 97fa7a76f6bc96c363844ccc57b2bec4 files/gaim_gtkimcontext_patch.diff 1106
 MD5 8f10c80828d074e32b033b80ca6c9c88 files/gaim-encryption-2.18-moz1.6.patch 3498
 MD5 e16439188287325963107a14ccddf668 files/gaim-0.75-yahoo-security.diff 3863
+MD5 8b152d59a54ab95627c4c0cd52758d75 files/digest-gaim-0.75-r10 63
