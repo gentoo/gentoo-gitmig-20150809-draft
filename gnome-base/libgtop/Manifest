@@ -1,4 +1,5 @@
 MD5 e3a8c8fcbda10f0692ee87f230c2877a libgtop-2.0.6.ebuild 672
+MD5 879d3783b8b210f5b268135328142061 libgtop-2.0.8.ebuild 591
 MD5 5f376cee243cfed2f4087fd1c7a3c5c7 libgtop-1.0.13-r2.ebuild 1542
 MD5 5feff623be7631625016ba5adfab9235 libgtop-2.0.5.ebuild 593
 MD5 258238f55c42dfbea617bb68e61b54e8 libgtop-2.0.2-r1.ebuild 688
@@ -12,6 +13,7 @@ MD5 375c19e1d504ca8d48b8e11d73275740 files/libgtop-2.0.2-lt_version_fix.patch 42
 MD5 c3606e086a19809857bc8f93335aa3af files/digest-libgtop-2.0.5 66
 MD5 80e5a667dd5dd9a0d907c160206de79b files/digest-libgtop-2.0.6 66
 MD5 e089e42a24e841b6c2a423b175155c14 files/digest-libgtop-2.0.7 66
+MD5 7035edc882c42b99f88765dc490f5f7d files/digest-libgtop-2.0.8 66
 MD5 51a8192dea5d51a0ba39cb2753af8b84 files/libgtop-1.0.13-guile-compile.patch 1146
 MD5 15330eddda755f3d7e434c1a2f45199a files/digest-libgtop-1.0.13-r2 67
 MD5 f65e04ca45be3eff4e03195c690dab91 files/digest-libgtop-2.0.2-r1 66
