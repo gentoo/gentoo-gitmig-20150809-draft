@@ -1,6 +1,9 @@
 # ChangeLog for dev-java/hibernate
 # Copyright 2000-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/ChangeLog,v 1.18 2005/03/17 06:22:48 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/ChangeLog,v 1.19 2005/03/23 00:42:40 st_lim Exp $
+
+  23 Mar 2005; Lim Swee Tat <st_lim@gentoo.org> :
+  Fixing bug #85821
 
   17 Mar 2005; Lim Swee Tat <st_lim@gentoo.org> hibernate-3.0_rc1.ebuild:
   Fixed 3.0rc1

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-2.1.8.ebuild,v 1.2 2005/03/17 01:07:13 st_lim Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/hibernate/hibernate-2.1.8.ebuild,v 1.3 2005/03/23 00:42:40 st_lim Exp $
 
 inherit java-pkg
 
@@ -17,7 +17,7 @@ RDEPEND="
 		dev-java/commons-collections
 		dev-java/commons-logging
 		dev-java/concurrent-util
-		=dev-java/dom4j-1*
+		>=dev-java/dom4j-1.5
 		dev-java/ehcache
 		dev-java/odmg
 		dev-java/jta
