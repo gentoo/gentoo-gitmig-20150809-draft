@@ -1,9 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/gob-1.0.12.ebuild,v 1.10 2003/03/29 02:51:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/gob/gob-1.0.12.ebuild,v 1.11 2003/04/23 16:23:48 vapier Exp $
 
-S=${WORKDIR}/${P}
-DESCRIPTION="GOB is a preprocessor for making GTK+ objects with inline C code"
+DESCRIPTION="preprocessor for making GTK+ objects with inline C code"
 SRC_URI="http://ftp.5z.com/pub/gob/${P}.tar.gz"
 HOMEPAGE="http://www.5z.com/jirka/gob.html"
 
@@ -20,7 +19,7 @@ src_compile() {
 	make || die
 }
 
-src_install () {
+src_install() {
 	make DESTDIR=${D} install || die
-	dodoc AUTHORS COPYING ChangeLog NEWS README TODO
+	dodoc AUTHORS ChangeLog NEWS README TODO
 }
