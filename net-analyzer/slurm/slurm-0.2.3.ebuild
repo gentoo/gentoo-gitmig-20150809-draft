@@ -1,13 +1,13 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/slurm/slurm-0.2.3.ebuild,v 1.1 2003/09/24 17:42:38 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/slurm/slurm-0.2.3.ebuild,v 1.2 2004/03/21 21:57:19 weeve Exp $
 
 DESCRIPTION="Realtime network interface monitor based on FreeBSD's pppstatus"
 HOMEPAGE="http://www.raisdorf.net/slurm/"
 SRC_URI="http://www.raisdorf.net/files/code/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~sparc"
 
 DEPEND="sys-libs/ncurses"
 
