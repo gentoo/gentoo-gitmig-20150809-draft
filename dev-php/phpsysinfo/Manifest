@@ -1,4 +1,5 @@
-MD5 35abfec3df6a67ec02f76f43feb7b544 phpsysinfo-2.1-r1.ebuild 1039
-MD5 f171a4be8a4ad7610d7a19daeb33859d ChangeLog 499
+MD5 d37bd1e01266c90c705f835a7560fd49 phpsysinfo-2.1.ebuild 872
+MD5 10caba543f899d8c84b1825e454a563e phpsysinfo-2.1-r1.ebuild 1394
+MD5 19b58d5b46c56254c3614fb87a46af64 ChangeLog 668
 MD5 dd6e98f9ae29de67bf46f225d4fe3eff files/digest-phpsysinfo-2.1 66
 MD5 31e3ac9396a003b09c5f3caf78c361f2 files/digest-phpsysinfo-2.1-r1 133
