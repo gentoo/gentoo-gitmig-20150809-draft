@@ -1,7 +1,14 @@
 # ChangeLog for app-editors/xemacs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.28 2002/12/24 23:27:34 jhhudso Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/ChangeLog,v 1.29 2003/01/01 11:32:46 rendhalver Exp $
 
+*xemacs-21.4.10-r2 (01 Jan 2003)
+  01 Jan 2002: Rendhalver <rendhalver@gentoo.org> : fixed use flags
+
+*xemacs-21.4.10-r1 (01 Jan 2003)
+  01 Jan 2002: Rendhalver <rendhalver@gentoo.org> : fixed use flags
+  removed ~arch mask
+	
 *xemacs-21.4.10-r2 (24 Dec 2002)
 
   24 Dec 2002: Jared Hudson <jhhudso@gentoo.org> : Removed sandbox disabling

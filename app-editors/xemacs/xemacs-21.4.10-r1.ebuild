@@ -1,8 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.10-r1.ebuild,v 1.2 2002/12/16 00:14:37 rendhalver Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/xemacs/xemacs-21.4.10-r1.ebuild,v 1.3 2003/01/01 11:32:46 rendhalver Exp $
 
-IUSE="gpm postgres xface nas dnd X jpeg tiff png mule motif canna freewnn lucid athena next xaw3d"
+IUSE="gpm postgres xface nas dnd X jpeg tiff png mule motif canna freewnn lucid athena neXt Xaw3d"
 
 # this is just TEMPORARY until we can get to the core of the problem
 SANDBOX_DISABLED="1"
@@ -61,7 +61,7 @@ PROVIDE="virtual/xemacs"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86 -ppc ~sparc"
+KEYWORDS="x86 -ppc sparc"
 
 
 src_unpack() {
