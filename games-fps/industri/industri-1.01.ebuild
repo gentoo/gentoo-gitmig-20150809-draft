@@ -1,0 +1,62 @@
+# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/games-fps/industri/industri-1.01.ebuild,v 1.1 2003/10/30 07:27:52 vapier Exp $
+
+inherit games
+
+DESCRIPTION="Quake/Tenebrae based, single player game"
+HOMEPAGE="http://industri.sourceforge.net/"
+SRC_URI="mirror://sourceforge/industri/industri_BIN-${PV}-src.tar.gz
+	mirror://sourceforge/industri/industri-1.00.zip"
+
+LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="x86"
+
+DEPEND="virtual/opengl
+	virtual/x11
+	sdl? ( media-libs/libsdl )
+	media-libs/libpng
+	sys-libs/zlib"
+
+S=${WORKDIR}/industri_BIN
+
+src_unpack() {
+	unpack ${A}
+
+	cd ${S}/linux
+	mv Makefile.i386linux Makefile
+	local gl="`ls -al /usr/include/GL/gl.h  | awk '{print $NF}' | cut -d/ -f5`"
+	[ "${gl}" == "nvidia" ] && epatch ${FILESDIR}/${PV}-nvidia-opengl.patch
+	sed -i "s:-mpentiumpro.*:${CFLAGS} \\\\:" Makefile
+
+#	if [ `use sdl` ] ; then
+#		cd ${S}/sdl
+#		./autogen.sh || die "autogen failed"
+#	fi
+}
+
+src_compile() {
+	cd linux
+	emake MASTER_DIR=${GAMES_DATADIR}/quake-data build_release || die
+
+#	if [ `use sdl` ] ; then
+#		cd ${S}/sdl
+#		export GAMEDIR=${GAMES_DATADIR}/quake-data
+#		egamesconf || die
+#		emake || die "emake failed"
+#	fi
+}
+
+src_install() {
+	newgamesbin linux/release*/bin/industri.run industri
+	dogamesbin ${FILESDIR}/industri.pretty
+	insinto /usr/share/icons
+	doins industri.ico quake.ico
+	dodoc linux/README
+	cd ${WORKDIR}/industri
+	dodoc *.txt && rm *.txt
+	insinto ${GAMES_DATADIR}/quake-data/industri
+	doins *
+	prepgamesdirs
+}
