@@ -1,0 +1,8 @@
+# ChangeLog for dev-php/php
+# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-php/xdebug/ChangeLog,v 1.1 2003/05/16 12:25:44 coredumb Exp $
+ 
+*xdebug-1.2.0 (16 May 2003)
+
+  16 May 2003; Tal Peer <coredumb@gentoo.org> xdebug-1.2.0.ebuild:
+  Initial import, uses the new php-ext eclass.
