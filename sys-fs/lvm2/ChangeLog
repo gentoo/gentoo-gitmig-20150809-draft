@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lvm2
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.4 2003/12/03 07:32:24 max Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lvm2/ChangeLog,v 1.5 2003/12/08 16:58:44 max Exp $
+
+  08 Dec 2003; <max@gentoo.org> lvm2-2.00.08.ebuild:
+  But to stable x86 and add ~amd64 as per bug 34779.
 
 *lvm2-2.00.08 (02 Dec 2003)
 
