@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3227 2004/10/07 16:33:35 axxo Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.3228 2004/10/08 11:36:37 pauldv Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -280,11 +280,6 @@ dev-db/mysqlcc
 # <chriswhite@gentoo.org> (21 Aug 2004)
 # CVS snapshot source testing version
 dev-lang/fpc-source
-
-# <pauldv@gentoo.org> (19 Aug 2004)
-# Mask the release candidate
-=dev-util/subversion-1.1.0_rc2
-=dev-util/subversion-1.1.0_rc4
 
 # <agriffis@gentoo.org> (19 Aug 2004)
 # Masking because this package is not ready for prime, but want it in
