@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# Maintainer: Sascha Schwabbauer <cybersystem@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/net-p2p/knapster2/knapster2-0.4.ebuild,v 1.4 2002/10/08 12:02:24 cybersystem Exp $ 
 
 inherit kde-base || die
 
