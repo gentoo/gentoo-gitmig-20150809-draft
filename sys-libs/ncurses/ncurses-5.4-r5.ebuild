@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r5.ebuild,v 1.5 2004/09/21 14:36:17 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-libs/ncurses/ncurses-5.4-r5.ebuild,v 1.6 2004/09/21 14:40:14 lanius Exp $
 
 inherit eutils flag-o-matic gnuconfig
 
@@ -153,7 +153,7 @@ src_install() {
 			cd ${D}/usr/include; rm -f {eti,form,menu,panel}.h cursesapp.h curses?.h cursslk.h etip.h
 		fi
 		# Install xterm-debian terminfo entry to satisfy bug #18486
-		LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${D}/usr/$(get_libdir):${D}/$(get_Libdir) \
+		LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${D}/usr/$(get_libdir):${D}/$(get_libdir) \
 			TERMINFO=${D}/usr/share/terminfo \
 			${D}/usr/bin/tic ${FILESDIR}/xterm-debian.ti
 
