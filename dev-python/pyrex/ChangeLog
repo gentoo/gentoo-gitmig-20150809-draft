@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/pyrex
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.18 2004/10/19 21:03:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.19 2004/10/20 08:50:28 eradicator Exp $
+
+  20 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org> pyrex-0.9.3.ebuild:
+  Added to ~sparc.
 
   21 Oct 2004; Aron Griffis <agriffis@gentoo.org> pyrex-0.9.3.ebuild:
   add ~ia64

@@ -1,11 +1,21 @@
-MD5 4d8de2c4198777329a970bf88cda4ced ChangeLog 2190
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0530269018e43f6533cc183f05bb5c65 ChangeLog 2289
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 9d55329f00fe6945ba6b56a3dbf514ec pyrex-0.5.ebuild 815
 MD5 bee6a3c03e4555157b758959faf34f78 pyrex-0.8.2.ebuild 798
-MD5 f9251fca19e16d5d2add62d277ba6b8c pyrex-0.9.3.ebuild 823
 MD5 db701b8f7a26952a12c46cf06f76a573 pyrex-0.9.2.1.ebuild 798
+MD5 6fa9551680a911323c3d0cd618f1c7ec pyrex-0.9.3.ebuild 832
 MD5 0b6119a106d045a4cfa4647d3d12e5cc files/digest-pyrex-0.5 120
 MD5 5c46cd453275b56cabe9cd981a306fa5 files/digest-pyrex-0.8.2 63
 MD5 1bbfae8705264d80f234c7e386329e56 files/digest-pyrex-0.9.3 63
 MD5 eb81fc8a96e07a88c85802a248fa0ac4 files/digest-pyrex-0.9.2.1 65
 MD5 7d69959a16c0c50c7b8ae652573c8748 files/pyrex-0.9.1.1-gentoo.patch 313
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBdibpArHZZzCEUG0RAkSKAJ9rAx8cMgSUbFAHnuuCSbBSB+CcTwCeLaL9
+kWtBG4aQ/6AAYr8Z36x+X7Q=
+=SrD6
+-----END PGP SIGNATURE-----
