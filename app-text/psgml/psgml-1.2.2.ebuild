@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Your Name <your email>
-# /space/gentoo/cvsroot/gentoo-x86/app-text/psgml/psgml-1.2.2.ebuild,v 1.3 2001/05/09 04:37:31 achim Exp
+# $Header: /var/cvsroot/gentoo-x86/app-text/psgml/psgml-1.2.2.ebuild,v 1.5 2002/04/27 23:08:35 bangert Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}

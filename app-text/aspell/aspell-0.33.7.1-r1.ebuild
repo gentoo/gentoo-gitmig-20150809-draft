@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Seemant Kulleen <seemant@gentoo.org>
-# /space/gentoo/cvsroot/gentoo-x86/app-text/aspell/aspell-0.33.ebuild,v 1.2 2001/05/28 14:32:32 achim Exp
+# $Header: /var/cvsroot/gentoo-x86/app-text/aspell/aspell-0.33.7.1-r1.ebuild,v 1.4 2002/04/27 23:08:35 bangert Exp $
 
 
 MY_P=${PN}-.33.7.1

@@ -1,7 +1,7 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # distributed under the terms of the GNU General Pulic License, v2.
 # Author: Defresne Sylvain (keiichi) <kamisama@free.fr>
-# /space/gentoo/cvsroot/gentoo-x86/skel.ebuild,v 1.3 2002/02/04 15:46:51 gbevin Exp
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/SDL-sdlpl/SDL-sdlpl-1.12.ebuild,v 1.2 2002/04/27 23:08:36 bangert Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="SDL binding for perl"

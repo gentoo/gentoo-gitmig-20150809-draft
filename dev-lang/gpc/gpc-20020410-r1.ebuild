@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: George Shapovalov <georges@its.caltech.edu>
-# /space/gentoo/cvsroot/gentoo-x86/skel.ebuild,v 1.4 2002/03/12 16:05:09 tod Exp
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/gpc/gpc-20020410-r1.ebuild,v 1.2 2002/04/27 23:08:36 bangert Exp $
 
 # Source directory; the dir where the sources can be found
 # (automatically unpacked) inside ${WORKDIR}.	Usually you can just

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Karl Trygve Kalleberg <karltk@gentoo.org>
-# /space/gentoo/cvsroot/gentoo-x86/dev-java/jndi/jndi-1.2.1-r2.ebuild,v 1.3 2002/01/23 20:06:16 karltk Exp
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jndi/jndi-1.2.1-r2.ebuild,v 1.7 2002/04/27 23:08:36 bangert Exp $
 
 At=jndi1_2_1.zip
 S=${WORKDIR}/${P}

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Sean Mitchell <sean@arawak.tzo.org>
-# /space/gentoo/cvsroot/gentoo-x86/skel.build,v 1.11 2001/12/06 22:12:34 drobbins Exp
+# $Header: /var/cvsroot/gentoo-x86/dev-lang/ocaml/ocaml-3.04.ebuild,v 1.2 2002/04/27 23:08:36 bangert Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Objective Caml is a fast modern type-inferring functional programming language descended from the ML (Meta Language) family."

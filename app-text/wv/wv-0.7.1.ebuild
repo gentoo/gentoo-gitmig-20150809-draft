@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License
 # Maintainer: George Shapovalov <georges@cco.caltech.edu>
-# /space/gentoo/cvsroot/gentoo-x86/dev-libs/libwmf/libwmf-0.2.2.ebuild,v 1.2 2002/01/24 19:40:43 karltk Exp
+# $Header: /var/cvsroot/gentoo-x86/app-text/wv/wv-0.7.1.ebuild,v 1.2 2002/04/27 23:08:36 bangert Exp $
 
 
 

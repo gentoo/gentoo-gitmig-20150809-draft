@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Hanno Boeck <hanno@gmx.de>
-# /space/gentoo/cvsroot/gentoo-x86/skel.ebuild,v 1.4 2002/03/12 16:05:09 tod Exp
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cweb/cweb-3.63.ebuild,v 1.2 2002/04/27 23:08:36 bangert Exp $
 
 S=${WORKDIR}
 DESCRIPTION="Knuth's and Levy's C/C++ documenting system"

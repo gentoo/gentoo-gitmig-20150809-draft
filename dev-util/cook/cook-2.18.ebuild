@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Tools Team <tools@gentoo.org>
 # Author: Sean Mitchell <sean@arawak.tzo.org>
-# /space/gentoo/cvsroot/gentoo-x86/skel.build,v 1.11 2001/12/06 22:12:34 drobbins Exp
+# $Header: /var/cvsroot/gentoo-x86/dev-util/cook/cook-2.18.ebuild,v 1.2 2002/04/27 23:08:36 bangert Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Cook is a tool for constructing files. It is a replacement for make."

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: Desktop Team <desktop@gentoo.org>
 # Author: Achim Gottinger <achim@gentoo.org>, Daniel Robbins <drobbins@gentoo.org>
-# /space/gentoo/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.0.12.ebuild,v 1.2 2001/10/13 04:33:21 drobbins Exp
+# $Header: /var/cvsroot/gentoo-x86/media-libs/libpng/libpng-1.0.12-r1.ebuild,v 1.2 2002/04/27 23:08:36 bangert Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="libpng"

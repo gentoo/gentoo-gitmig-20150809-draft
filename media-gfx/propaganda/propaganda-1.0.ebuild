@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Maintainer Spider <spider.gentoo@darkmere.wanfear.com> 
-# /space/gentoo/cvsroot/gentoo-x86/skel.ebuild,v 1.3 2002/02/04 15:46:51 gbevin Exp
+# Maintainer Spider <spider.gentoo@darkmere.wanfear.com>
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/propaganda/propaganda-1.0.ebuild,v 1.2 2002/04/27 23:08:36 bangert Exp $
 
 # Source directory; the dir where the sources can be found
 # (automatically unpacked) inside ${WORKDIR}.  Usually you can just

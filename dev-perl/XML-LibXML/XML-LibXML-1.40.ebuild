@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# /space/gentoo/cvsroot/gentoo-x86/dev-perl/XML-LibXML/XML-LibXML-0.91-r1.ebuild,v 1.1 2001/10/06 14:36:55 azarah Exp
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/XML-LibXML/XML-LibXML-1.40.ebuild,v 1.2 2002/04/27 23:08:36 bangert Exp $
 
 A=${P}.tar.gz
 S=${WORKDIR}/${P}

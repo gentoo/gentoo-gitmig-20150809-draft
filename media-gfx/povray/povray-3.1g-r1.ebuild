@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author: Achim Gottinger <achim@gentoo.org>
-# /space/gentoo/cvsroot/gentoo-x86/media-gfx/eog/eog-0.6-r2.ebuild,v 1.1 2002/02/19 21:20:08 azarah Exp
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.1g-r1.ebuild,v 1.2 2002/04/27 23:08:36 bangert Exp $
 
 S=${WORKDIR}/povray31
 DESCRIPTION="POV Ray- The Persistance of Vision Ray Tracer"
