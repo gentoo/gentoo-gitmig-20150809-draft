@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-1.9.0.ebuild,v 1.1 2002/10/24 14:41:11 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-1.9.0.ebuild,v 1.2 2002/10/24 15:11:44 aliz Exp $
 
 IUSE="ssl postgres mysql snmp"
 
@@ -15,7 +15,7 @@ KEYWORDS="~x86 ~sparc ~sparc64"
 
 DEPEND="virtual/glibc
 	>=net-libs/libpcap-0.6.2-r1
-	>=net-libs/libnet-1.0.2a
+	=net-libs/libnet-1.0.2a*
 	postgres? ( >=dev-db/postgresql-7.2 )
 	mysql? ( >=dev-db/mysql-3.23.26 )
 	ssl? ( >=dev-libs/openssl-0.9.6b )

@@ -1,6 +1,6 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.6 2002/10/24 14:41:11 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.7 2002/10/24 15:11:44 aliz Exp $
 
 *snort-1.9.0 (24 Oct 2002)
 
@@ -8,11 +8,13 @@
   Version bump. Found by Torgeir Hansen <torgeir@trenger.ro> in #8925.
   Added support for specifying listening interface. Closes #6822.
   Addes support for snmp, closes #7299.
+  Locked down dependency on libnet some more.
 
 *snort-1.8.7 (23 Jul 2002)
 
   24 Oct 2002; Daniel Ahlberg <aliz@gentoo.org> files/snort.confd :
   Added support for specifying listening interface. Closes #6822.
+  Locked down dependency on libnet some more.
 
   30 Aug 2002; Seemant Kulleen <seemant@gentoo.org> snort-1.8.7.ebuild :
 
