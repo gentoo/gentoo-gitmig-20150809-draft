@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/uclinux-sources-2.6.7_p0-r11.ebuild,v 1.1 2004/12/19 19:16:12 plasmaroo Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/uclinux-sources/uclinux-sources-2.6.7_p0-r12.ebuild,v 1.1 2004/12/20 21:23:13 plasmaroo Exp $
 
 IUSE=""
 
@@ -55,8 +55,11 @@ src_unpack() {
 	epatch ${FILESDIR}/${PN}-2.6.AF_UNIX.patch || die "Failed to apply the AF_UNIX patch!"
 	epatch ${FILESDIR}/${PN}-2.6.AF_UNIX.SELinux.patch || die "Failed to apply the AF_UNIX SELinux-fix patch!"
 	epatch ${FILESDIR}/${PN}-2.6.binfmt_a.out.patch || die "Failed to apply the a.out patch!"
-	epatch ${FILESDIR}/${PN}-2.6.CAN-2004-1151.patch || die "Failed to apply the CAN-2004-1151 patch!"
 	epatch ${FILESDIR}/${PN}-2.6.vma.patch || die "Failed to apply the VMA patch!"
+	epatch ${FILESDIR}/${PN}-2.6.CAN-2004-1016.patch || die "Failed to apply the CAN-2004-1016 patch!"
+	epatch ${FILESDIR}/${PN}-2.6.CAN-2004-1056.patch || die "Failed to apply the CAN-2004-1056 patch!"
+	epatch ${FILESDIR}/${PN}-2.6.CAN-2004-1137.patch || die "Failed to apply the CAN-2004-1137 patch!"
+	epatch ${FILESDIR}/${PN}-2.6.CAN-2004-1151.patch || die "Failed to apply the CAN-2004-1151 patch!"
 
 	set MY_ARCH=${ARCH}
 	unset ARCH
