@@ -1,0 +1,4 @@
+MD5 c8b4578a54cc89f4ddb3d387b157cc09 ChangeLog 1290
+MD5 ec7ea3091616941e40d35a637c7694c7 libtermcap-compat-1.2.3.ebuild 1105
+MD5 86463dc73dac3761dc5cfa83c3ec83ef files/digest-libtermcap-compat-1.2.3 72
+MD5 c5389fda988845f0c56af4ec72c8d524 files/libtermcap-compat_bcopy_fix.patch 314

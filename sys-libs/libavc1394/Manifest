@@ -1,0 +1,5 @@
+MD5 470e28f977bb1ea71434462a275a64d8 ChangeLog 842
+MD5 0832f20bbf05c0d0ee2b448863b39ef5 libavc1394-0.3.1.ebuild 809
+MD5 8b82dfc0d3bc59e0cb743d4b41a2abdf libavc1394-0.4.1.ebuild 686
+MD5 b9d66cbc5568bbb0285371cb12781d50 files/digest-libavc1394-0.3.1 68
+MD5 22363b2362e88752e67a8dd37624ecce files/digest-libavc1394-0.4.1 68
