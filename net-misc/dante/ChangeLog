@@ -1,6 +1,9 @@
 # ChangeLog for net-misc/dante
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/ChangeLog,v 1.43 2005/02/17 23:15:26 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/ChangeLog,v 1.44 2005/02/18 11:02:33 dragonheart Exp $
+
+  18 Feb 2005; Daniel Black <dragonheart@gentoo.org> dante-1.1.15.ebuild:
+  missed dependancy on automake-1.9. Thanks Hardave
 
   17 Feb 2005; Hardave Riar <hardave@gentoo.org> dante-1.1.15.ebuild:
   Stable on mips.

@@ -1,8 +1,18 @@
-MD5 70e30b50a2bd8a8f59a8fb7b119029c9 dante-1.1.15.ebuild 2197
-MD5 02a63267fb7856d566700e38327d4ddb ChangeLog 6317
-MD5 e1b94493b162bbdb56acba97cec7349a files/dante-1.1.15_pre1-socksify.patch 811
-MD5 5e74662c76571e30e6a190a2d4d1193a files/dante-1.1.15-optionalpam.patch 10896
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 0793907b5f178a0502f6b559ef7e0ba8 ChangeLog 6448
+MD5 64bfa0fa60e432ecbd70a3d6a9149174 dante-1.1.15.ebuild 2227
 MD5 72d9add89e45e3cb921c99d79bdf31a7 files/dante-1.1.14-bindresvport.patch 485
-MD5 0e18d6df6b8f67d3872a56dc65ee4e28 files/dante-sockd-init-1.1.14-r2 1330
-MD5 0a5831b02f1ee3c0b9810c4354839906 files/digest-dante-1.1.15 64
+MD5 e1b94493b162bbdb56acba97cec7349a files/dante-1.1.15_pre1-socksify.patch 811
 MD5 184812cd77df081c52d4a0c540d0ba74 files/dante-sockd-conf-1.1.14-r2 474
+MD5 0e18d6df6b8f67d3872a56dc65ee4e28 files/dante-sockd-init-1.1.14-r2 1330
+MD5 5e74662c76571e30e6a190a2d4d1193a files/dante-1.1.15-optionalpam.patch 10896
+MD5 0a5831b02f1ee3c0b9810c4354839906 files/digest-dante-1.1.15 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.0 (GNU/Linux)
+
+iD8DBQFCFctQmdTrptrqvGERAhx6AJ4kYudOgqx4q5MtKmEMhCTniigWIACgmvio
+Y6yJoiABuJYucGMlirDrlpQ=
+=nLob
+-----END PGP SIGNATURE-----

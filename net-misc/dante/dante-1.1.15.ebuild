@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.15.ebuild,v 1.10 2005/02/17 23:15:26 hardave Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/dante/dante-1.1.15.ebuild,v 1.11 2005/02/18 11:02:33 dragonheart Exp $
 
 inherit gcc fixheadtails eutils
 
@@ -20,7 +20,8 @@ RDEPEND="virtual/libc
 	tcpd? ( sys-apps/tcp-wrappers )
 	selinux? ( sec-policy/selinux-dante )"
 DEPEND="${RDEPEND}
-	>=sys-apps/sed-4"
+	>=sys-apps/sed-4
+	>=sys-devel/automake-1.9"
 
 S=${WORKDIR}/${PN}-${MY_PV}
 
