@@ -1,6 +1,9 @@
 # ChangeLog for x11-libs/gtkscintilla2
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkscintilla2/ChangeLog,v 1.1 2003/07/20 15:00:39 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/gtkscintilla2/ChangeLog,v 1.2 2003/08/20 14:25:06 obz Exp $
+
+  20 Aug 2003; Mike Gardiner <obz@gentoo.org> gtkscintilla2-0.0.8.ebuild:
+  fixed sed characters ',' to remove problems with commas in CFLAGS
 
 *gtkscintilla2-0.0.8 (20 Jul 2003)
 
