@@ -1,0 +1,10 @@
+# ChangeLog for games-util/xgame-gtk2
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/games-util/xgame-gtk2/ChangeLog,v 1.1 2005/01/04 15:03:54 citizen428 Exp $
+
+*xgame-gtk2-2.0.2 (04 Jan 2005)
+
+  04 Jan 2005; Michael Kohl <citizen428@gentoo.org> +metadata.xml,
+  +xgame-gtk2-2.0.2.ebuild:
+  Initial import. Ebuild submitted by Nexu <nexu@pingzero.com> in bug #66715
+
