@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20041006-r2.ebuild,v 1.6 2004/11/14 20:16:15 mrness Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/capi4k-utils/capi4k-utils-20041006-r2.ebuild,v 1.7 2004/11/15 19:08:09 mrness Exp $
 
 inherit eutils
 
@@ -64,7 +64,7 @@ src_compile() {
 }
 
 src_install() {
-	dodir /dev /usr/share/isdn
+	dodir /dev
 	emake DESTDIR=${D} install || die "make install failed"
 
 	# install docs
@@ -92,10 +92,13 @@ src_install() {
 
 pkg_postinst() {
 	einfo "Please read the instructions in:"
-	einfo "/usr/share/doc/${PN}/README.gentoo.gz"
+	einfo "/usr/share/doc/${PF}/README.gentoo.gz"
 	einfo ""
 	einfo "Annotation for active AVM ISDN boards (B1 ISA/PCI, ...):"
 	einfo "If you run"
 	einfo "  emerge capi4k-firmware"
 	einfo "you will probably find your board's firmware in /usr/share/isdn."
+	einfo ""
+	einfo "If you have another active ISDN board, you should create"
+	einfo "/usr/share/isdn and copy there your board's firmware."
 }
