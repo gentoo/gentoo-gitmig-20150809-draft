@@ -1,6 +1,12 @@
 # ChangeLog for media-video/nvidia-kernel
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.102 2004/11/30 00:37:44 cyfred Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/ChangeLog,v 1.103 2004/11/30 01:25:56 cyfred Exp $
+
+  30 Nov 2004; Andrew Bevitt <cyfred@gentoo.org> +files/nvidia,
+  -files/nvidia-1.1, nvidia-kernel-1.0.6111-r3.ebuild,
+  nvidia-kernel-1.0.6629.ebuild:
+  Porting 6111 to use linux-* eclasses, fixing bug #71833 (apply 2.6 patches
+  on 2.6 only), change to install the proper README file.
 
   30 Nov 2004; Andrew Bevitt <cyfred@gentoo.org>
   -files/1.0.4363/NVIDIA_kernel-1.0-4363-2.5-20030714.diff,

@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.6629.ebuild,v 1.8 2004/11/28 09:52:13 johnm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/nvidia-kernel/nvidia-kernel-1.0.6629.ebuild,v 1.9 2004/11/30 01:25:56 cyfred Exp $
 
 inherit eutils linux-mod
 
@@ -83,26 +83,31 @@ src_unpack() {
 
 	cd ${WORKDIR}
 	bash ${DISTDIR}/${NV_PACKAGE}-${PKG_V}.run --extract-only
-	cd ${S}
 
 	# Add patches below, with a breif description.
 	cd ${S}
-	# Fix the /usr/src/linux/include/asm not existing on koutput issue #58294
-	epatch ${FILESDIR}/${PV}/conftest_koutput_includes.patch
-	# Fix pgd_offset() -> pml4_pgd_offset() for >=2.6.10-rc1-mm3
-	epatch ${FILESDIR}/${PV}/nv-pgd_offset.patch
-	# Speedup driver for 2.6 kernel to be on par with 2.4 kernel
-	epatch ${FILESDIR}/${PV}/nv-pgprot-speedup.patch
-	# Fix the vm_flags to only have VM_IO, and not VM_LOCKED as well
-	epatch ${FILESDIR}/${PV}/nv-vm_flags-no-VM_LOCKED.patch
-	# Fix calling of smp_processor_id() when preempt is enabled
-	epatch ${FILESDIR}/${PV}/nv-disable-preempt-on-smp_processor_id.patch
-	# Fix a limitation on available video memory bug #71684
-	epatch ${FILESDIR}/${PV}/nv-fix-memory-limit.patch
-
+	# Any general patches should go here
 	# Shutup pointer arith warnings
 	use x86 && epatch ${FILESDIR}/${PV}/nv-shutup-warnings.patch
 	use amd64 && epatch ${FILESDIR}/${PV}/nv-amd64-shutup-warnings.patch
+	# Fix a limitation on available video memory bug #71684
+	epatch ${FILESDIR}/${PV}/nv-fix-memory-limit.patch
+	# Fix the vm_flags to only have VM_IO, and not VM_LOCKED as well
+	epatch ${FILESDIR}/${PV}/nv-vm_flags-no-VM_LOCKED.patch
+
+	# Now any patches specific to the 2.6 kernel should go here
+	if kernel_is 2 6
+	then
+		einfo "Applying 2.6 kernel patches"
+		# Fix the /usr/src/linux/include/asm not existing on koutput issue #58294
+		epatch ${FILESDIR}/${PV}/conftest_koutput_includes.patch
+		# Fix pgd_offset() -> pml4_pgd_offset() for >=2.6.10-rc1-mm3
+		epatch ${FILESDIR}/${PV}/nv-pgd_offset.patch
+		# Speedup driver for 2.6 kernel to be on par with 2.4 kernel
+		epatch ${FILESDIR}/${PV}/nv-pgprot-speedup.patch
+		# Fix calling of smp_processor_id() when preempt is enabled
+		epatch ${FILESDIR}/${PV}/nv-disable-preempt-on-smp_processor_id.patch
+	fi
 
 	# if you set this then it's your own fault when stuff breaks :)
 	[ -n "${USE_CRAZY_OPTS}" ] && sed -i "s:-O:${CFLAGS}:" Makefile.*
@@ -115,11 +120,12 @@ src_install() {
 	linux-mod_src_install
 
 	# Add the aliases
+	sed -e 's:\${PACKAGE}:'${PF}':g' ${FILESDIR}/nvidia > ${WORKDIR}/nvidia
 	insinto /etc/modules.d
-	newins ${FILESDIR}/nvidia-1.1 nvidia
+	newins ${WORKDIR}/nvidia nvidia
 
 	# Docs
-	dodoc ${S}/README
+	dodoc ${S}/../../share/doc/README
 
 	# The device creation script
 	into /

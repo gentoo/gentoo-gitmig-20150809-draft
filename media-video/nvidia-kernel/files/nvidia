@@ -3,7 +3,8 @@ alias char-major-195 nvidia
 alias /dev/nvidiactl char-major-195
 
 # To tweak the driver the following options can be used, note that
-# you should be careful, as it could cause instability!!
+# you should be careful, as it could cause instability!! For more 
+# option see /usr/share/doc/${PACKAGE}/README.gz 
 #
 #   To enable Side Band Adressing:  NVreg_EnableAGPSBA=1
 #
