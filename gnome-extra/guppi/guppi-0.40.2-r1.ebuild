@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/guppi-0.40.2-r1.ebuild,v 1.2 2002/01/08 19:10:48 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/gnome-extra/guppi/guppi-0.40.2-r1.ebuild,v 1.3 2002/01/08 20:09:56 azarah Exp $
 
 PN=Guppi
 P=${PN}-${PV}
@@ -32,13 +32,6 @@ src_compile() {
 
 	local myconf
 
-	if [ "`use bonobo`" ]
-	then
-		myconf="--enable-bonobo"
-	else
-		myconf="--disable-bonobo"
-	fi
-
 	if [ "`use python`" ]
 	then
 		myconf="${myconf} --enable-python"
@@ -60,6 +53,7 @@ src_compile() {
 		    --prefix=/usr					\
 		    --sysconfdir=/etc					\
 		    --localstatedir=/var/lib				\
+		    --enable-bonobo					\
 		    ${myconf} || die
 
 	# The python 'generate' module opens some files in rw mode for some
