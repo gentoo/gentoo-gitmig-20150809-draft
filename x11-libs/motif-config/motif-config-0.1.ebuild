@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif-config/motif-config-0.1.ebuild,v 1.5 2005/02/18 23:22:31 lanius Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-libs/motif-config/motif-config-0.1.ebuild,v 1.6 2005/02/19 12:20:58 lanius Exp $
 
 inherit multilib
 
@@ -28,7 +28,7 @@ src_compile() {
 src_install () {
 	exeinto /usr/bin
 	newexe ${FILESDIR}/motif-config-0.1 motif-config
-	dosed "s:@@LIBDIR@@:$(get_libdir):" /usr/bin/motif-config
+	dosed "s:@@LIBDIR@@:$(get_libdir):g" /usr/bin/motif-config
 
 	# for profile
 	dodir /usr/$(get_libdir)/motif
