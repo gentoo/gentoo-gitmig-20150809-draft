@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.2.ebuild,v 1.3 2004/12/19 03:09:01 stkn Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/asterisk/asterisk-1.0.2.ebuild,v 1.4 2005/01/25 05:17:44 iggy Exp $
 
 IUSE="alsa doc gtk mmx mysql pri zaptel uclibc resperl"
 
@@ -27,7 +27,7 @@ DEPEND="dev-libs/newt
 	pri? ( >=net-libs/libpri-1.0.2 )
 	alsa? ( media-libs/alsa-lib )
 	mysql? ( dev-db/mysql )
-	uclibc? ( dev-libs/uclibc )
+	uclibc? ( sys-libs/uclibc )
 	zaptel? ( >=net-misc/zaptel-1.0.2 )
 	resperl? ( dev-lang/perl
 		   >=net-misc/zaptel-1.0.2 )"
