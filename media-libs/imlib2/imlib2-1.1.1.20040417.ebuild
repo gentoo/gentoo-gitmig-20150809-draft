@@ -1,14 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.1.1.20040417.ebuild,v 1.1 2004/04/19 03:42:12 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/imlib2/imlib2-1.1.1.20040417.ebuild,v 1.2 2004/04/19 03:43:23 vapier Exp $
 
 inherit enlightenment flag-o-matic gcc
 
 DESCRIPTION="Version 2 of an advanced replacement library for libraries like libXpm"
 HOMEPAGE="http://www.enlightenment.org/pages/imlib2.html"
 
-LICENSE="BSD"
-SLOT="0"
 IUSE="${IUSE} mmx gif png jpeg tiff static X"
 
 DEPEND="=media-libs/freetype-2*
@@ -30,11 +28,8 @@ src_compile() {
 	else
 		mymmx="`use_enable mmx`"
 	fi
-	
 
 	if [ "${S}" == "${WORKDIR}/${PN}" ] ; then
-		# cvs only stuff
-
 		export MY_ECONF="
 			${mymmx} \
 			`use_with X x` \
