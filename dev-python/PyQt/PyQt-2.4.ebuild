@@ -1,12 +1,11 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Maintainer: tools@cvs.gentoo.org
-# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-2.4.ebuild,v 1.3 2001/08/11 23:23:04 chadh Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/PyQt/PyQt-2.4.ebuild,v 1.4 2001/11/10 12:14:29 hallski Exp $
 
-A=${P}.tar.gz
 S=${WORKDIR}/${P}
 DESCRIPTION="PyQt is a set of Python bindings for the Qt Toolkit."
-SRC_URI="http://www.river-bank.demon.co.uk/software/"${A}
+SRC_URI="http://www.river-bank.demon.co.uk/software/${P}.tar.gz"
 HOMEPAGE="http://www.thekompany.com/projects/pykde/"
 
 DEPEND=">=x11-libs/qt-x11-1.4.2
@@ -14,12 +13,16 @@ DEPEND=">=x11-libs/qt-x11-1.4.2
         virtual/python"
 
 src_compile() {
-    try ./configure --prefix=/usr --infodir=/usr/share/info --mandir=/usr/share/man --with-doc-install=/usr/share/doc
-    try make
+	./configure --prefix=/usr					\
+		    --infodir=/usr/share/info				\
+		    --mandir=/usr/share/man				\
+		    --with-doc-install=/usr/share/doc
+	assert
+
+	make || die
 }
 
 src_install() {
-    try make DESTDIR=${D} install
-    try make DESTDIR=${D} install-doc
+	make DESTDIR=${D} install || die
+	make DESTDIR=${D} install-doc || die
 }
-
