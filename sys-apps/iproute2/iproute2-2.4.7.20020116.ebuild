@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.4.7.20020116.ebuild,v 1.9 2004/07/09 21:10:36 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/iproute2/iproute2-2.4.7.20020116.ebuild,v 1.10 2004/08/03 04:48:19 vapier Exp $
 
 inherit eutils flag-o-matic
 
@@ -9,7 +9,8 @@ SRCFILE="iproute2-2.4.7-now-ss020116-try.tar.gz"
 DESCRIPTION="kernel routing and traffic control utilities"
 HOMEPAGE="http://www.worldbank.ro/ip-routing/"
 SRC_URI="http://ftp.iasi.roedu.net/mirrors/ftp.inr.ac.ru/ip-routing/${SRCFILE}
-	ftp://ftp.inr.ac.ru/ip-routing/${SRCFILE}"
+	ftp://ftp.inr.ac.ru/ip-routing/${SRCFILE}
+	mirror://gentoo/${P}-manpages.patch.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -43,7 +44,7 @@ src_unpack() {
 	# Add a few debian fixes
 	epatch ${FILESDIR}/${PV}-misc-deb-fixes.patch
 	# Add manpages from debian
-	epatch ${FILESDIR}/${PV}-manpages.patch
+	epatch ${WORKDIR}/${P}-manpages.patch
 
 	# Make sure we use glibc tcp.h instead of kernel tcp.h
 	sed -i '/include/s:linux/tcp\.h:netinet/tcp.h:' misc/ss.c || die "sed ss.c failed"
