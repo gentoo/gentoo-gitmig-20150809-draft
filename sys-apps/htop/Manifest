@@ -3,6 +3,8 @@ MD5 ce433d9edceef9e3225f605121ec61fd htop-0.3.ebuild 670
 MD5 11e47e8144f38cc73b144eb2bfb41b25 ChangeLog 702
 MD5 be2505c8d1d30960604fa361c0d63f34 htop-0.3.1.ebuild 778
 MD5 43501f3b11f0e754837938e9bdd8bd95 htop-0.3.2.ebuild 778
+MD5 6e146071ccf5050795151e6012464634 htop-0.3.3.ebuild 778
 MD5 8123f72d136ab55139efee23411e3ab6 files/digest-htop-0.3 59
 MD5 47f1850a95a3c5c1447a7606ca9ff1ad files/digest-htop-0.3.1 61
 MD5 334fab92d3a6331a9de56b3f52f47c88 files/digest-htop-0.3.2 61
+MD5 162b1b379ac437b9a5e4002ea69f4cb3 files/digest-htop-0.3.3 61
