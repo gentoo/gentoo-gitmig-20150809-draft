@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/color/color-1.1.ebuild,v 1.6 2004/06/24 22:06:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/color/color-1.1.ebuild,v 1.7 2004/06/28 00:59:04 ciaranm Exp $
 
 inherit ccc
 
@@ -11,7 +11,7 @@ SRC_URI="http://runslinux.net/projects/color/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
 
-KEYWORDS="x86 alpha"
+KEYWORDS="x86 alpha ~sparc ~mips"
 IUSE=""
 DEPEND="virtual/glibc"
 

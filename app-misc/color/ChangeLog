@@ -1,6 +1,9 @@
 # ChangeLog for app-misc/color
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/color/ChangeLog,v 1.4 2004/06/24 22:06:15 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/color/ChangeLog,v 1.5 2004/06/28 00:59:04 ciaranm Exp $
+
+  28 Jun 2004; Ciaran McCreesh <ciaranm@gentoo.org> color-1.1.ebuild:
+  Added ~sparc, ~mips
 
   25 Oct 2003; Tavis Ormandy <taviso@gentoo.org> color-1.1.ebuild:
   marking stable.
