@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.2-r1.ebuild,v 1.1 2002/01/03 06:58:06 hallski Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/scrollkeeper/scrollkeeper-0.2-r2.ebuild,v 1.1 2002/01/14 14:19:25 hallski Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Scrollkeeper"
@@ -30,7 +30,23 @@ src_compile() {
 }
 
 src_install() {
+        cd omf-install
+        cp Makefile Makefile.old
+        sed -e "s:scrollkeeper-update.*::g" Makefile.old > Makefile
+        rm Makefile.old
+        cd ${S}
+
 	make DESTDIR=${D} install || die
 
 	dodoc AUTHORS COPYING* ChangeLog README NEWS
+}
+
+pkg_postinst() {
+        echo ">>> Updating Scrollkeeper database..."
+        scrollkeeper-update >/dev/null 2>&1
+}
+
+pkg_postrm() {
+        echo ">>> Scrollkeeper ${PV} unmerged, if you removed the package"
+	echo "    you might want to clean up /var/lib/scrollkeeper."
 }
