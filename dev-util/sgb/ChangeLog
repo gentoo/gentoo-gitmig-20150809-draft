@@ -1,0 +1,9 @@
+# ChangeLog for dev-util/sgb
+# Copyright 2000-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-util/sgb/ChangeLog,v 1.1 2004/01/11 08:19:20 robbat2 Exp $
+
+*sgb-20030623 (11 Jan 2004)
+
+  11 Jan 2004; Robin H. Johnson <robbat2@gentoo.org> sgb-20030623.ebuild:
+  initial commit, ebuild by robbat2@gentoo.org
+
