@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/amaya-8.0.ebuild,v 1.7 2004/01/26 15:33:16 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/amaya/amaya-8.0.ebuild,v 1.8 2004/03/21 06:21:25 mr_bones_ Exp $
 
 inherit libtool
 
@@ -17,9 +17,12 @@ SLOT="0"
 IUSE="gtk"
 
 RDEPEND="
-	( gtk? =x11-libs/gtk+-1.2* : x11-libs/openmotif )
-	( gtk? =dev-libs/glib-1.2* )
-	gtk? ( media-libs/imlib )"
+	gtk? (
+		=x11-libs/gtk+-1.2*
+		=dev-libs/glib-1.2*
+		media-libs/imlib
+	)
+	!gtk ( x11-libs/openmotif )"
 
 DEPEND="dev-lang/perl
 	${RDEPEND}"
