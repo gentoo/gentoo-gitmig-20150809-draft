@@ -1,4 +1,7 @@
 #!/bin/bash
+# Copyright 1999-2004 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/eggdrop/files/eggdrop-installer,v 1.6 2004/07/05 01:29:28 swegener Exp $
 
 source /etc/init.d/functions.sh || {
   echo "$0: Could not source /etc/init.d/functions.sh!"
