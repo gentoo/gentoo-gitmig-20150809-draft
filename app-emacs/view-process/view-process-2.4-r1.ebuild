@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emacs/view-process/view-process-2.4-r1.ebuild,v 1.1 2003/11/12 07:49:10 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emacs/view-process/view-process-2.4-r1.ebuild,v 1.2 2004/05/11 04:31:28 weeve Exp $
 
 inherit elisp
 
@@ -11,7 +11,7 @@ HOMEPAGE="http://www.emacswiki.org/cgi-bin/wiki.pl?ViewProcess"
 SRC_URI="ftp://sunsite.unc.edu/pub/Linux/apps/editors/emacs/hm--view-process-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86"
+KEYWORDS="x86 ~sparc"
 
 RDEPEND="virtual/emacs"
 
