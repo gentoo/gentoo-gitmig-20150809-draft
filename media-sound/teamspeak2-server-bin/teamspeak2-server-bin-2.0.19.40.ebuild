@@ -1,8 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-server-bin/teamspeak2-server-bin-2.0.19.40.ebuild,v 1.1 2003/09/27 11:27:47 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/teamspeak2-server-bin/teamspeak2-server-bin-2.0.19.40.ebuild,v 1.2 2003/12/10 18:32:06 vapier Exp $
 
-DESCRIPTION="The Teamspeak Voice Communication Server."
+DESCRIPTION="The Teamspeak Voice Communication Server"
 HOMEPAGE="http://www.teamspeak.org/"
 SRC_URI="ftp://webpost.teamspeak.org/releases/ts2_server_rc2_${PV//./}.tar.bz2"
 
@@ -10,15 +10,17 @@ LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~x86"
 
-S="${WORKDIR}/tss2_rc2"
+S=${WORKDIR}/tss2_rc2
+
+pkg_setup() {
+	enewuser teamspeak2
+}
 
 src_install() {
-	enewuser teamspeak2
-
 	exeinto /opt/teamspeak2-server
 	doexe server_linux sqlite.so
 
-	touch "${D}/opt/teamspeak2-server/bad_names.txt"
+	touch ${D}/opt/teamspeak2-server/bad_names.txt
 	fowners teamspeak2 /opt/teamspeak2-server/bad_names.txt
 
 	insinto /opt/teamspeak2-server/sql
@@ -31,7 +33,7 @@ src_install() {
 	dodoc changelog.txt readme.txt slicense.txt
 
 	exeinto /etc/init.d
-	newexe "${FILESDIR}/teamspeak2-server.rc6" teamspeak2-server
+	newexe ${FILESDIR}/teamspeak2-server.rc6 teamspeak2-server
 
 	keepdir /var/{lib,log,run}/teamspeak2-server
 	fowners teamspeak2 /var/{lib,log,run}/teamspeak2-server
@@ -39,18 +41,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	# rebuild init deps
-	/etc/init.d/depscan.sh
-
 	einfo
 	einfo "The Teamspeak Server generates the admin and superadmin"
 	einfo "passwords on the fly.  To get them, please look in:"
 	einfo "/var/log/teamspeak2-server/server.log"
 	einfo
 }
-
-pkg_postrm() {
-	# rebuild init deps
-	/etc/init.d/depscan.sh
-}
-
