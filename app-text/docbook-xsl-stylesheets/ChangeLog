@@ -1,6 +1,14 @@
 # ChangeLog for app-text/docbook-xsl-stylesheets
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/ChangeLog,v 1.41 2004/10/11 03:31:56 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/ChangeLog,v 1.42 2004/11/07 08:53:23 usata Exp $
+
+*docbook-xsl-stylesheets-1.66.1 (07 Nov 2004)
+
+  07 Nov 2004; Mamoru KOMACHI <usata@gentoo.org>
+  docbook-xsl-stylesheets-1.62.4.ebuild,
+  docbook-xsl-stylesheets-1.65.1.ebuild,
+  +docbook-xsl-stylesheets-1.66.1.ebuild:
+  Version bumped. This closes bug #66249. Fixed LICENSE syntax.
 
   10 Oct 2004; Tom Gall <tgall@gentoo.org> 
   docbook-xsl-stylesheets-1.65.1.ebuild:

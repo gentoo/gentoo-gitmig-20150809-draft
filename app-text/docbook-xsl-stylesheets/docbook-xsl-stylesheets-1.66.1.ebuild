@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/docbook-xsl-stylesheets-1.65.1.ebuild,v 1.10 2004/11/07 08:53:23 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/docbook-xsl-stylesheets/docbook-xsl-stylesheets-1.66.1.ebuild,v 1.1 2004/11/07 08:53:23 usata Exp $
 
 DESCRIPTION="XSL Stylesheets for Docbook"
 HOMEPAGE="http://docbook.sourceforge.net/"
@@ -8,7 +8,7 @@ SRC_URI="mirror://sourceforge/docbook/docbook-xsl-${PV}.tar.gz"
 
 LICENSE="|| ( as-is BSD )"
 SLOT="0"
-KEYWORDS="alpha arm amd64 hppa ia64 mips ppc s390 sparc x86 ppc64"
+KEYWORDS="~alpha ~arm ~amd64 ~hppa ~ia64 ~mips ~ppc ~s390 ~sparc ~x86 ~ppc64"
 IUSE=""
 
 DEPEND="dev-libs/libxml2
@@ -41,7 +41,7 @@ src_install() {
 	# Install the documentation
 	cd ${S}
 	dodoc BUGS TODO WhatsNew
-	cp -af doc ${D}/usr/share/doc/${P}/html
+	cp -af doc ${D}/usr/share/doc/${PF}/html
 	cp VERSION ${D}/${DEST}
 
 	# Only a few things in /usr/share/doc make sense to compress.
