@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/jswat-2.17-r1.ebuild,v 1.6 2004/02/25 08:08:08 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/jswat-2.17-r1.ebuild,v 1.7 2004/06/03 01:44:38 agriffis Exp $
 
 inherit java-pkg
 
@@ -24,7 +24,7 @@ src_compile() {
 	if [ -f "/usr/share/junit/lib/junit.jar" ] ; then
 		export CLASSPATH="/usr/share/junit/lib/junit.jar"
 		export DEP_APPEND="junit"
-		if [ `use junit` ]
+		if use junit
 			then
 				einfo "Running JUnit tests, this may take awhile ..."
 				ant ${antopts} test || die "Junit test failed"
