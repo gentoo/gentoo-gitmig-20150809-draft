@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-0.9.3.ebuild,v 1.3 2003/11/24 18:44:43 rphillips Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/freeradius/freeradius-0.9.3.ebuild,v 1.4 2003/12/08 10:35:22 lanius Exp $
 
 IUSE="snmp mysql postgres ldap kerberos ssl pam"
 
@@ -105,9 +105,9 @@ src_install() {
 	dodir /etc/conf.d
 	cp ${FILESDIR}/0.9/radius.conf ${D}/etc/conf.d/radiusd
 
-	touch ${D}/var/run/radiusd/.keep
-	touch ${D}/var/log/radius/.keep
-	touch ${D}/var/log/radius/radacct/.keep
+	keepdir /var/run/radiusd
+	keepdir /var/log/radius
+	keepdir /var/log/radius/radacct
 
 }
 
