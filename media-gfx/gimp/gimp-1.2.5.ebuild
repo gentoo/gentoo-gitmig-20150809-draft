@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.5.ebuild,v 1.6 2003/08/10 23:39:06 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.5.ebuild,v 1.7 2003/09/06 23:56:38 msterret Exp $
 
 inherit eutils flag-o-matic
 
@@ -68,7 +68,7 @@ src_compile() {
 		`use_enable doc gtk-doc` \
 		${myconf} || die
 
-	if [ -z "`use aalib`" ] ; then 
+	if [ -z "`use aalib`" ] ; then
 		# Horrible automake brokenness
 		cp plug-ins/common/Makefile plug-ins/common/Makefile.orig
 		cat plug-ins/common/Makefile.orig | \
@@ -85,14 +85,14 @@ src_compile() {
 
 src_install() {
 
-	local mymake="" 
+	local mymake=""
 	local AA
 
 	use aalib || mymake="LIBAA= AA="
 	use gnome || mymake="${mymake} HELPBROWSER="
-  
+
 	dodir /usr/lib/gimp/1.2/plug-ins
-	
+
 	einstall \
 		gimpdatadir=${D}/usr/share/gimp/1.2 \
 		gimpsysconfdir=${D}/etc/gimp/1.2 \
@@ -117,9 +117,9 @@ src_install() {
 		insinto /usr/share/applications
 		doins ${FILESDIR}/gimp.desktop
 	)
-	
+
 	preplib /usr
-	
+
 	dodoc AUTHORS COPYING ChangeLog* *MAINTAINERS README* TODO
 	dodoc docs/*.txt docs/*.ps docs/Wilber* docs/quick_reference.tar.gz
 }

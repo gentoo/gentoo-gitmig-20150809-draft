@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbi/fbi-1.21.ebuild,v 1.8 2003/02/13 12:32:05 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/fbi/fbi-1.21.ebuild,v 1.9 2003/09/06 23:56:38 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="fbi a framebuffer image viewer"
@@ -23,6 +23,6 @@ src_install() {
 		prefix=${D}/usr \
 		mandir=${D}/usr/share/man/man1 \
 		install || die
-	
+
 	dodoc COPYING README
 }

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-iconedit/gnome-iconedit-1.2.0-r5.ebuild,v 1.12 2003/04/25 16:48:59 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gnome-iconedit/gnome-iconedit-1.2.0-r5.ebuild,v 1.13 2003/09/06 23:56:38 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Edits icons, what more can you say?"
@@ -39,8 +39,8 @@ src_unpack() {
 src_compile() {
 	local myconf
 	use nls || myconf="--disable-nls"
-	
-	CFLAGS="${CFLAGS} `gnome-config --cflags print` -I/usr/include/gdk-pixbuf-1.0"	
+
+	CFLAGS="${CFLAGS} `gnome-config --cflags print` -I/usr/include/gdk-pixbuf-1.0"
 
 	econf \
 		--without-gnome-print \

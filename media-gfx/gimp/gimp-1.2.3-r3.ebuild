@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.3-r3.ebuild,v 1.10 2003/03/10 12:01:38 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.3-r3.ebuild,v 1.11 2003/09/06 23:56:38 msterret Exp $
 
 inherit eutils flag-o-matic
 
@@ -40,20 +40,20 @@ src_unpack() {
 		die "Not compatible with threaded perl"
 	fi
 	unpack ${A}
-	
+
 	cd ${S}/plug-ins/common
 	# compile with nonstandard psd_save plugin
 	cp ${FILESDIR}/psd_save.c .
 	epatch ${FILESDIR}/${PF}-gentoo.diff
 	cd ${S}
-	
+
 	if [ -f ${ROOT}/usr/share/gettext/config.rpath ] ; then
 		cp -f ${ROOT}/usr/share/gettext/config.rpath ${S}
 	else
 		touch ${S}/config.rpath
 		chmod 0755 ${S}/config.rpath
 	fi
-	
+
 	echo ">>> Reconfiguring package..."
 	export WANT_AUTOMAKE_1_4=1
 	export WANT_AUTOCONF_2_1=1
@@ -81,7 +81,7 @@ src_unpack() {
 
 src_compile() {
 
-	
+
 	# Strip out -fomit-frame-pointer for k6's
 	is-flag "-march=k6-3" && strip-flags "-fomit-frame-pointer"
 	is-flag "-march=k6-2" && strip-flags "-fomit-frame-pointer"
@@ -122,7 +122,7 @@ src_compile() {
 		--disable-debug \
 		${myconf} || die
 
-	if [ -z "`use aalib`" ] ; then 
+	if [ -z "`use aalib`" ] ; then
 		# Horrible automake brokenness
 		cp plug-ins/common/Makefile plug-ins/common/Makefile.orig
 		cat plug-ins/common/Makefile.orig | \
@@ -136,7 +136,7 @@ src_compile() {
 
 src_install() {
 
-	local mymake="" 
+	local mymake=""
 	if [ -z "`use aalib`" ] ; then
 		mymake="LIBAA= AA="
 	fi
@@ -144,9 +144,9 @@ src_install() {
 	if [ -z "`use gnome`" ] ; then
 		mymake="${mymake} HELPBROWSER="
 	fi
-  
+
 	dodir /usr/lib/gimp/1.2/plug-ins
-	
+
 	einstall \
 		gimpdatadir=${D}/usr/share/gimp/1.2 \
 		gimpsysconfdir=${D}/etc/gimp/1.2 \
@@ -168,9 +168,9 @@ src_install() {
 		insinto /usr/share/applications
 		doins ${FILESDIR}/gimp.desktop
 	fi
-	
+
 	preplib /usr
-	
+
 	dodoc AUTHORS COPYING ChangeLog* *MAINTAINERS README* TODO
 	dodoc docs/*.txt docs/*.ps docs/Wilber* docs/quick_reference.tar.gz
 	dohtml -r devel-docs

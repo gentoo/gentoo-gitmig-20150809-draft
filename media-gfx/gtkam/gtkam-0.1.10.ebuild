@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.10.ebuild,v 1.4 2003/08/31 02:01:06 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gtkam/gtkam-0.1.10.ebuild,v 1.5 2003/09/06 23:56:39 msterret Exp $
 
 IUSE="nls gnome jpeg"
 
@@ -20,14 +20,14 @@ RDEPEND=">=x11-libs/gtk+-2
 		>=gnome-base/libgnomeui-2 )
 	jpeg? ( media-libs/libexif-gtk
 		media-libs/libexif )"
-		
+
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig
 	nls? ( sys-devel/gettext )"
 
 src_unpack() {
 	unpack ${A}
-	
+
 	cd ${S}
 	epatch ${FILESDIR}/${P}-norpm.patch
 }
@@ -35,13 +35,13 @@ src_unpack() {
 src_compile() {
 
 	local myconf
-	
+
 	myconf="--with-rpmbuild=/bin/false --without-gimp"
-	
+
 	use jpeg \
 		&& myconf="${myconf} --with-exif" \
 		|| myconf="${myconf} --without-exif"
-		
+
 	use gnome \
 		&& myconf="${myconf} --with-gnome --with-bonobo" \
 		|| myconf="${myconf} --without-gnome --without-bonobo"

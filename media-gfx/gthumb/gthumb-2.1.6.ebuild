@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.1.6.ebuild,v 1.1 2003/09/01 06:44:52 obz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gthumb/gthumb-2.1.6.ebuild,v 1.2 2003/09/06 23:56:39 msterret Exp $
 
 inherit gnome2
 
@@ -28,7 +28,7 @@ RDEPEND=">=dev-libs/glib-2.2
 	>=gnome-base/gconf-2
 	png? ( media-libs/libpng )
 	tiff? ( media-libs/tiff )
-	jpeg? ( media-libs/jpeg 
+	jpeg? ( media-libs/jpeg
 		>=media-libs/libexif-0.5.8 )"
 
 DEPEND=">=dev-util/pkgconfig-0.9.0

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.7-r2.ebuild,v 1.9 2003/04/24 11:26:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/grace/grace-5.1.7-r2.ebuild,v 1.10 2003/09/06 23:56:39 msterret Exp $
 
 DESCRIPTION="WYSIWYG 2D plotting tool for the X Window System"
 SRC_URI="ftp://plasma-gate.weizmann.ac.il/pub/grace/src/${P}.tar.gz"
@@ -22,7 +22,7 @@ src_compile() {
 		--with-grace-home=/usr/share/grace \
 		`use_enable pdflib pdfdrv` \
 		|| die
-	
+
 	cp doc/Makefile doc/Makefile.orig
 	sed -e 's:$(GRACE_HOME)/doc:$(PREFIX)/share/doc/$(PF)/html:g' \
 		doc/Makefile.orig >doc/Makefile || die
@@ -63,7 +63,7 @@ src_install() {
 	#mv ${D}/usr/share/doc/${PF}/html/*.1 ${D}/usr/share/man/man1
 	doman ${D}/usr/share/doc/${PF}/html/*.1
 	rm -f ${D}/usr/share/doc/${PF}/html/*.1
-    
+
 	insinto /etc/env.d
 	doins ${FILESDIR}/10grace
 }

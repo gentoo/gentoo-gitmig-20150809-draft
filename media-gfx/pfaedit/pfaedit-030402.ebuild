@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/pfaedit/pfaedit-030402.ebuild,v 1.4 2003/08/07 03:47:03 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/pfaedit/pfaedit-030402.ebuild,v 1.5 2003/09/06 23:56:39 msterret Exp $
 
 inherit flag-o-matic
 
@@ -24,9 +24,9 @@ S="${WORKDIR}/${PN}"
 src_compile() {
 	local myconf=""
 	use X || myconf="--without-x"
-	
+
 	filter-mfpmath "sse" "387"
-	
+
 	econf ${myconf} --without-freetype-src
 	make || die
 }
@@ -35,5 +35,5 @@ src_install() {
 	# make install fails if this directory doesn't exist
 	dodir /usr/lib
 	einstall
-	dodoc AUTHORS COPYING LICENSE README 
+	dodoc AUTHORS COPYING LICENSE README
 }

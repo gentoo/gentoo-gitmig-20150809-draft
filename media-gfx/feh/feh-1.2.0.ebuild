@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/feh-1.2.0.ebuild,v 1.4 2003/02/13 12:32:17 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/feh/feh-1.2.0.ebuild,v 1.5 2003/09/06 23:56:38 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="A fast, lightweight imageviewer using imlib2"
@@ -22,7 +22,7 @@ src_compile() {
 }
 
 src_install () {
-	
+
 	einstall \
 		docsdir=${D}/usr/share/doc/${PF} || die
 

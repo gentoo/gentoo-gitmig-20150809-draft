@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/xzgv-0.7-r1.ebuild,v 1.5 2003/02/13 12:39:20 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xzgv/xzgv-0.7-r1.ebuild,v 1.6 2003/09/06 23:56:39 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An X image viewer."
@@ -21,7 +21,7 @@ DEPEND="virtual/x11
 
 src_unpack() {
 	unpack ${A}
-	
+
 	cd ${S}
 	cp config.mk config.mk.orig
 	sed -e "s:-O2 -Wall:${CFLAGS}:" \
@@ -39,7 +39,7 @@ src_install() {
 		 INFO_DIR_UPDATE=no \
 		 MANDIR=${D}/usr/share/man/man1 \
 	     install || die
-	
+
 	# Fix info files
 	cd ${D}/usr/share/info
 	for i in 1 2 3
@@ -52,6 +52,6 @@ src_install() {
 	rm xzgv.gz
 
 	cd ${S}
-	
+
 	dodoc AUTHORS COPYING ChangeLog INSTALL NEWS README* TODO
 }

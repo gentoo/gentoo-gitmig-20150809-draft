@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gliv/gliv-1.6.ebuild,v 1.5 2003/07/12 16:44:48 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gliv/gliv-1.6.ebuild,v 1.6 2003/09/06 23:56:38 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="An image viewer that uses OpenGL"
@@ -44,12 +44,12 @@ src_compile() {
 	fi
 
 	econf ${myconf} || die
-	
+
 	emake || die
 }
 
 src_install() {
 	einstall || die
-    
+
 	dodoc COPYING README NEWS THANKS
 }

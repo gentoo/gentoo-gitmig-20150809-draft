@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/sodipodi/sodipodi-0.28.ebuild,v 1.7 2003/06/10 13:19:00 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/sodipodi/sodipodi-0.28.ebuild,v 1.8 2003/09/06 23:56:39 msterret Exp $
 
 DESCRIPTION="Vector illustration application for GNOME"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
@@ -22,7 +22,7 @@ DEPEND="${RDEPEND}
 
 src_unpack() {
         unpack ${A}
-        
+
         cd ${S}
         export WANT_AUTOCONF_2_5=1
         autoconf --force

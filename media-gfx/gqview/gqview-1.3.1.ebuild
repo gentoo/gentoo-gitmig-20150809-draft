@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/gqview-1.3.1.ebuild,v 1.4 2003/04/25 23:35:18 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gqview/gqview-1.3.1.ebuild,v 1.5 2003/09/06 23:56:39 msterret Exp $
 
 IUSE="nls"
 
@@ -15,13 +15,13 @@ KEYWORDS="x86 ppc"
 
 DEPEND="media-libs/libpng
 	>=x11-libs/gtk+-2.0.1"
-	
+
 RDEPEND="nls? ( sys-devel/gettext )"
 
 
 src_compile() {
 	local myconf
-	
+
 	use nls || myconf="--disable-nls"
 
 	econf ${myconf} || die
@@ -33,6 +33,6 @@ src_install() {
 
 	# remove duplicate README, since it gets installed in dodoc
 	rm -rf ${D}/usr/share/gqview
-	
+
 	dodoc AUTHORS COPYING ChangeLog README NEWS TODO
 }

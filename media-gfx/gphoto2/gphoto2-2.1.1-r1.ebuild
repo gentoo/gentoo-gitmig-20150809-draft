@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.1.1-r1.ebuild,v 1.6 2003/08/07 03:45:37 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gphoto2/gphoto2-2.1.1-r1.ebuild,v 1.7 2003/09/06 23:56:39 msterret Exp $
 
 inherit libtool flag-o-matic
 
@@ -19,7 +19,7 @@ RDEPEND=">=dev-libs/libusb-0.1.6
 	dev-libs/popt
 	>=media-libs/libgphoto2-2.1.1-r2
 	ncurses? ( dev-libs/cdk )
-	aalib? ( media-libs/aalib 
+	aalib? ( media-libs/aalib
 		media-libs/jpeg )
 	jpeg? (	media-libs/libexif )
 	readline? ( sys-libs/readline )"
@@ -28,7 +28,7 @@ DEPEND="${RDEPEND}
 
 src_compile() {
 	elibtoolize
-	
+
 	aclocal
 	# -pipe does no work
 	filter-flags -pipe
@@ -45,11 +45,11 @@ src_compile() {
 	use aalib \
 		&& myconf="${myconf} --with-jpeg-prefix=/usr" \
 		|| myconf="${myconf} --without-aalib --without-jpeg"
-		
+
 	use jpeg \
 		&& myconf="${myconf} --with-exif-prefix=/usr" \
-		|| myconf="${myconf} --without-exif" 
-		
+		|| myconf="${myconf} --without-exif"
+
 	use readline \
 		||  myconf="${myconf} --without-readline"
 

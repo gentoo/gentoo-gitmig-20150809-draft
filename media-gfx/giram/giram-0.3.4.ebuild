@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/giram/giram-0.3.4.ebuild,v 1.2 2003/02/13 12:33:22 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/giram/giram-0.3.4.ebuild,v 1.3 2003/09/06 23:56:38 msterret Exp $
 
 DESCRIPTION="Giram (Giram is really a modeller). A 3d modeller for POV-ray"
 HOMEPAGE="http://www.giram.org"
@@ -36,6 +36,6 @@ src_compile() {
 
 src_install () {
 	make DESTDIR=${D} install || die
-	
+
 	dodoc AUTHORS BUGS ANNOUNCE CONTRIBUTORS ChangeLog HACKING IDEAS NEWS README TODO
 }

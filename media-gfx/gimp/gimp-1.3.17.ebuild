@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.3.17.ebuild,v 1.2 2003/08/04 08:40:43 kumba Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.3.17.ebuild,v 1.3 2003/09/06 23:56:38 msterret Exp $
 
 IUSE="doc python aalib png jpeg tiff gtkhtml mmx sse X"
 
@@ -74,10 +74,10 @@ src_compile() {
 src_install() {
 	# workaround portage variable leakage
 	local AA
-	
+
 	make DESTDIR=${D} install || die
 	dodoc AUTHORS COPYING ChangeL* HACKING INSTALL MAINTAINERS NEWS PLUGIN_MAINTAINERS README* TODO*
-	
+
 	# fix desktop link in the right place
 	dodir /usr/share/applications
 	rm ${D}/usr/share/gimp/1.3/misc/gimp-1.3.desktop
@@ -86,5 +86,5 @@ src_install() {
 
 pkg_postinst() {
 	ewarn "The 1.3 Gimp series have been reslotted to SLOT 2."
-	ewarn "To clean up old 1.3 version remove all 1.3 series and recompile." 
+	ewarn "To clean up old 1.3 version remove all 1.3 series and recompile."
 }

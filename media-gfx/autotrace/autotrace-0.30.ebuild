@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/autotrace-0.30.ebuild,v 1.6 2003/02/13 12:29:59 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/autotrace/autotrace-0.30.ebuild,v 1.7 2003/09/06 23:56:38 msterret Exp $
 
 DESCRIPTION="Converts Bitmaps to vector-grahics"
 SRC_URI="http://ftp1.sourceforge.net/${PN}/${P}.tar.gz"
@@ -20,6 +20,6 @@ src_compile() {
 
 src_install() {
 	make DESTDIR=${D} install || die
-	
-	dodoc AUTHORS COPYING ChangeLog NEWS README 
+
+	dodoc AUTHORS COPYING ChangeLog NEWS README
 }

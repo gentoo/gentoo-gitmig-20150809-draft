@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xpaint/xpaint-2.6.2-r1.ebuild,v 1.6 2003/02/13 12:38:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xpaint/xpaint-2.6.2-r1.ebuild,v 1.7 2003/09/06 23:56:39 msterret Exp $
 
 S=${WORKDIR}/xpaint
 DESCRIPTION="XPaint is an image editor which supports most standard paint program options."
@@ -11,8 +11,8 @@ SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 
-DEPEND=">=media-libs/tiff-3.2 
-	virtual/x11 
+DEPEND=">=media-libs/tiff-3.2
+	virtual/x11
 	media-libs/jpeg
 	media-libs/libpng"
 
@@ -31,5 +31,5 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install || die
 	make DESTDIR=${D} install.man || die
-	dodoc ChangeLog INSTALL README README.PNG README.old TODO 
+	dodoc ChangeLog INSTALL README README.PNG README.old TODO
 }

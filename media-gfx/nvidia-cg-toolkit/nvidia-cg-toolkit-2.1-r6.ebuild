@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/nvidia-cg-toolkit-2.1-r6.ebuild,v 1.6 2003/07/12 16:44:48 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/nvidia-cg-toolkit/nvidia-cg-toolkit-2.1-r6.ebuild,v 1.7 2003/09/06 23:56:39 msterret Exp $
 
 DESCRIPTION="nvidia's c graphics compiler toolkit"
 HOMEPAGE="http://developer.nvidia.com/view.asp?IO=cg_toolkit"
@@ -19,7 +19,7 @@ src_compile() {
 
 src_install() {
 	dobin usr/bin/cgc
-	
+
 	dolib usr/lib/*
 
 	insinto /etc/env.d

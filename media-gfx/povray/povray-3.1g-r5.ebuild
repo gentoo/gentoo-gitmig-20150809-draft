@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.1g-r5.ebuild,v 1.13 2003/07/29 18:44:34 tester Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.1g-r5.ebuild,v 1.14 2003/09/06 23:56:39 msterret Exp $
 
 S=${WORKDIR}/povray31
 DESCRIPTION="The Persistance Of Vision Ray Tracer"
@@ -33,7 +33,7 @@ src_compile() {
 	# Change the header file with the banner when you start povray
 	cp optout.h optout.h.orig
 	sed -e "s/DISTRIBUTION_MESSAGE_2.*$/DISTRIBUTION_MESSAGE_2 \"Gentoo Linux - `uname -n` - ${USER}\"/" optout.h.orig > optout.h
-	
+
 	cd unix
 	cp makefile makefile.orig
 
@@ -77,8 +77,8 @@ src_compile() {
 				mkdir -m 777 -p ${IPD}
 				echo "s/^CFLAGS =/CFLAGS = -prof_gen /" >> makefile.sed
 				einfo Building PGO prof_gen version.
-			else 
-				einfo Building PGO prof_use version. 
+			else
+				einfo Building PGO prof_use version.
 				echo "s/^CFLAGS =/CFLAGS = -prof_use /" >> makefile.sed
 			fi
 		fi

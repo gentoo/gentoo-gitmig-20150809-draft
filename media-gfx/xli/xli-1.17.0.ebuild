@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/xli-1.17.0.ebuild,v 1.5 2003/02/13 12:38:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xli/xli-1.17.0.ebuild,v 1.6 2003/09/06 23:56:39 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="X Load Image: view images or load them to root window"
@@ -42,7 +42,7 @@ src_install() {
 	newman xlito.man xlito.1
 	dosym /usr/bin/xli /usr/bin/xview
 	dosym /usr/bin/xli /usr/bin/xsetbg
-	
+
 	# is this even worth it? xrdb doesnt like this file; this is what
 	# their install does, though.
 	dodir /usr/X11R6/lib/X11/app-defaults

@@ -1,11 +1,11 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.5.7-r1.ebuild,v 1.1 2003/07/21 21:19:51 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.5.7-r1.ebuild,v 1.2 2003/09/06 23:56:39 msterret Exp $
 
 inherit libtool flag-o-matic
 replace-flags k6-3 i586
-replace-flags k6-2 i586  
-replace-flags k6 i586  
+replace-flags k6-2 i586
+replace-flags k6 i586
 
 IUSE="X cups jpeg lcms mpeg png truetype tiff xml2 wmf"
 
@@ -26,7 +26,7 @@ DEPEND=">=sys-apps/sed-4
 	media-libs/jbigkit
 	>=sys-apps/bzip2-1
 	sys-libs/zlib
-	X? ( virtual/x11 
+	X? ( virtual/x11
 		>=app-text/dgs-0.5.9.1 )
 	cups?   ( >=app-text/ghostscript-6.50 )
 	jpeg? ( >=media-libs/jpeg-6b )
@@ -75,11 +75,11 @@ src_compile() {
 src_install() {
 	make DESTDIR=${D} install
 	mydoc="*.txt"
-	
+
 	rm -f ${D}/usr/share/ImageMagick/*.txt
 
 	dosed "s:-I/usr/include ::" /usr/bin/Magick-config
 	dosed "s:-I/usr/include ::" /usr/bin/Magick++-config
-	
+
 	dosym /usr/lib/libMagick-5.5.5-Q16.so.0.0.0 /usr/lib/libMagick.so.5
 }

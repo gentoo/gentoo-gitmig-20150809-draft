@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50c.ebuild,v 1.8 2003/08/31 19:32:44 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/povray/povray-3.50c.ebuild,v 1.9 2003/09/06 23:56:39 msterret Exp $
 
 inherit gcc eutils
 
@@ -30,7 +30,7 @@ pkg_setup() {
 
 src_compile() {
 	local myconf
-	
+
 	use X && myconf="${myconf} --with-x" \
 		|| myconf="${myconf} --without-x"
 
@@ -46,7 +46,7 @@ src_compile() {
 
 	DCPU=`echo ${CPPFLAGS} | sed -e "s/.*i\(.86\).*/\\1/"`
 	echo "s/^CPPFLAGS.*-DCPU=686/CPPFLAGS = -DCPU=${DCPU}/" > makefile.sed
-	
+
 	# Change the header file with the banner when you start povray
 	cp optout.h optout.h.orig
 	sed -e "s/DISTRIBUTION_MESSAGE_2.*$/DISTRIBUTION_MESSAGE_2 \"Gentoo Linux - `uname -n` - ${USER}\"/" optout.h.orig > optout.h
@@ -90,13 +90,13 @@ src_compile() {
 
 
 	# strip the x86 specific options if on non x86
-	if [ ${ARCH} != "x86" ]; then 
+	if [ ${ARCH} != "x86" ]; then
 		echo "s/-minline-all-stringops//" >> makefile.sed
 		echo "s/-malign-double//" >> makefile.sed
 		echo "s/-mcpu=i586//" >> makefile.sed
 	 	echo "s/-march=i586//" >> makefile.sed
 	fi
-	
+
 	cp Makefile Makefile.orig
 	sed -f makefile.sed Makefile.orig > Makefile
 

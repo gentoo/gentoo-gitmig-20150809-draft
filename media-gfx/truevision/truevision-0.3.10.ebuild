@@ -1,10 +1,10 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/truevision/truevision-0.3.10.ebuild,v 1.3 2003/07/12 16:44:48 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/truevision/truevision-0.3.10.ebuild,v 1.4 2003/09/06 23:56:39 msterret Exp $
 
 DESCRIPTION="Gnome frontend to Povray"
 HOMEPAGE="http://truevision.sourceforge.net"
-SRC_URI="mirror://sourceforge/truevision/${P}.tar.gz 
+SRC_URI="mirror://sourceforge/truevision/${P}.tar.gz
 	mirror://sourceforge/truevision/${PN}-extramat-${PV}.tar.gz"
 
 LICENSE="GPL-2"
@@ -21,7 +21,7 @@ DEPEND="=x11-libs/gtk+-1.2*
 src_unpack() {
 	unpack ${A}
 	epatch ${FILESDIR}/truevision-0.3.10-gentoo2.patch || die
-	epatch ${FILESDIR}/truevision-0.3.10-gentoo3.patch || die 
+	epatch ${FILESDIR}/truevision-0.3.10-gentoo3.patch || die
 }
 
 src_compile() {
@@ -40,7 +40,7 @@ src_install() {
 
 	cd ${WORKDIR}/${PN}-extramat-${PV} || die
 	cp -R materials ${D}/usr/share/truevision/materials/ || die
-	
-	
-	
+
+
+
 }

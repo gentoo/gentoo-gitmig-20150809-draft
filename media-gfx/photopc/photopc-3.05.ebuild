@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/photopc/photopc-3.05.ebuild,v 1.5 2003/02/13 12:36:48 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/photopc/photopc-3.05.ebuild,v 1.6 2003/09/06 23:56:39 msterret Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Utility to control digital cameras based on Sierra Imaging firmware"
@@ -13,7 +13,7 @@ KEYWORDS="x86"
 
 DEPEND="virtual/glibc"
 
-src_unpack () 
+src_unpack ()
 {
 	unpack ${A}
 	cd ${S}

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/propaganda/propaganda-1.0.ebuild,v 1.8 2003/02/13 12:37:24 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/propaganda/propaganda-1.0.ebuild,v 1.9 2003/09/06 23:56:39 msterret Exp $
 
 S=${WORKDIR}/Propaganda
 DESCRIPTION="Propaganda Volume 1-14 + E. Tiling images for your desktop"
@@ -33,13 +33,13 @@ DEPEND="virtual/glibc"
 src_compile() {
 	rm -fr ${S}/../Propaganda-Vol-11/.finderinfo
 	rm -fr ${S}/../Propaganda-Vol-11/.resource
-	
+
 	rm -fr ${S}/../Propaganda-Vol-12/.finderinfo
-	rm -fr ${S}/../Propaganda-Vol-12/.resource	
-	
+	rm -fr ${S}/../Propaganda-Vol-12/.resource
+
 	mv ${S}/../Propaganda-Vol-11 ${S}/Vol11
 	mv ${S}/../Propaganda-Vol-12 ${S}/Vol12
-	
+
 	for NUM in 1 2 3 4 5 6 7 8 9 10 11 12 13 14; do
 		chmod -x ${S}/Vol${NUM}/*
 		cd ${S}/Vol${NUM}
@@ -56,7 +56,7 @@ src_compile() {
 	./script.perl *.jpg
 	cd ${S}
 	pwd
-	rm -f ${S}/Vol2/\@	
+	rm -f ${S}/Vol2/\@
 	chmod ugo-w -R ${S}
 	chmod ugo+r -R ${S}
 }

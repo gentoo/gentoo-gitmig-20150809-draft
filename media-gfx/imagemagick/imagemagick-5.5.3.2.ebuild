@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.5.3.2.ebuild,v 1.13 2003/07/02 03:35:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/imagemagick/imagemagick-5.5.3.2.ebuild,v 1.14 2003/09/06 23:56:39 msterret Exp $
 
 inherit libtool
 inherit perl-module
 inherit flag-o-matic
 replace-flags k6-3 i586
-replace-flags k6-2 i586  
-replace-flags k6 i586  
+replace-flags k6-2 i586
+replace-flags k6 i586
 
 IUSE="X cups jpeg lcms mpeg perl png truetype tiff xml2"
 
@@ -27,7 +27,7 @@ DEPEND=">=sys-apps/sed-4
 	media-libs/jbigkit
 	>=sys-apps/bzip2-1
 	sys-libs/zlib
-	X? ( virtual/x11 
+	X? ( virtual/x11
 		>=app-text/dgs-0.5.9.1 )
 	cups?   ( >=app-text/ghostscript-6.50 )
 	jpeg? ( >=media-libs/jpeg-6b )
@@ -72,7 +72,7 @@ src_compile() {
 		${myconf} || die
 	emake || die "compile problem"
 
-	# More perl stuff 
+	# More perl stuff
 	cd PerlMagick
 	make clean
 	perl-module_src_prep
@@ -101,7 +101,7 @@ src_install() {
 
 	mydoc="*.txt"
 	perl-module_src_install
-	
+
 	rm -f ${D}/usr/share/ImageMagick/*.txt
 
 	dosed "s:-I/usr/include ::" /usr/bin/Magick-config
