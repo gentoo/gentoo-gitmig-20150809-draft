@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.0.ebuild,v 1.5 2003/07/03 21:44:13 gmsoft Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/PDL/PDL-2.4.0.ebuild,v 1.6 2003/07/18 20:14:48 tester Exp $
 
 IUSE="opengl"
 
@@ -41,7 +41,7 @@ src_unpack() {
 		sed -e "s:WITH_3D => undef:WITH_3D => 0:" \
 			${FILESDIR}/perldl.conf > ${S}/perldl.conf
 	fi
-	if [ "`use hppa`" ]
+	if [ "`use hppa`"  -o "`use amd64`" ]
 	then 
 	 cd ${S}/Lib/Slatec
 	 cp Makefile.PL Makefile.PL.orig
