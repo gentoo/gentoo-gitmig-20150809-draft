@@ -1,0 +1,21 @@
+# ChangeLog for app-sci/embassy-topo
+# Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sci-biology/embassy-topo/ChangeLog,v 1.1 2004/12/23 23:08:21 ribosome Exp $
+
+*embassy-topo-1.0.0 (23 Dec 2004)
+
+  23 Dec 2004; Olivier Fisette <ribosome@gentoo.org> +metadata.xml,
+  +embassy-topo-1.0.0.ebuild:
+  Moved from app-sci/embassy-topo to sci-biology/embassy-topo.
+
+  31 Oct 2004; Olivier Fisette <ribosome@gentoo.org> embassy-topo-1.0.0.ebuild:
+  Added to x86.
+
+  21 Jul 2004; David Holm <dholm@gentoo.org> embassy-topo-1.0.0.ebuild:
+  Added to ~ppc.
+
+* embassy-topo-1.0.0 (19 Jul 2004)
+
+  19 Jul 2004; Olivier Fisette <ribosome@gentoo.org>
+  embassy-topo-1.0.0.ebuild, metadata.xml, ChangeLog
+  Initial import.
