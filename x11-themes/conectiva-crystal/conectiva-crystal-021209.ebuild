@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/conectiva-crystal/conectiva-crystal-021209.ebuild,v 1.5 2003/09/06 07:28:56 msterret Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/conectiva-crystal/conectiva-crystal-021209.ebuild,v 1.6 2004/02/29 16:45:26 aliz Exp $
 inherit kde # not kde-base since we don't need c++ deps
 
 need-kde 3
@@ -19,8 +19,7 @@ RESTRICT="$RESTRICT nostrip"
 src_compile() {
 
 	cd ${S}
-	sed "s/Name=Conectiva Crystal .*/Name=Conectiva Crystal Snapshot ${PV}/" index.desktop > index.temp
-	mv index.temp index.desktop
+	sed -i "s/Name=Conectiva Crystal .*/Name=Conectiva Crystal Snapshot ${PV}/" index.desktop
 	return 1
 }
 

@@ -1,12 +1,14 @@
 # ChangeLog for x11-themes/redhat-artwork 
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.25 2003/11/16 03:55:47 tad Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/redhat-artwork/ChangeLog,v 1.26 2004/02/29 16:45:27 aliz Exp $
 
 *redhat-artwork-0.88-r2 (16 Nov 2003)
 
   16 Nov 2003; Troy Dack <tad@gentoo.org> redhat-artwork-0.88-r2.ebuild:
   Version bump. Really closes Bug #32378. SRC_URI is set to fetch from
   fedora.
+
+*redhat-artwork-0.88 (11 Nov 2003)
 
   11 Nov 2003; Troy Dack <tad@gentoo.org> :
   Version Bump. Closes Bug #32378. Thanks to Simon Watson <simon@swat.me.uk> for

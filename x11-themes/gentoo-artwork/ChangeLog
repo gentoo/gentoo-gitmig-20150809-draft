@@ -1,6 +1,6 @@
 # ChangeLog for x11-themes/gentoo-artwork
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/ChangeLog,v 1.6 2003/12/13 17:45:29 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/gentoo-artwork/ChangeLog,v 1.7 2004/02/29 16:45:27 aliz Exp $
 
   13 Dec 2003; Brad House <brad_mssw@gentoo.org> gentoo-artwork-0.3.ebuild:
   mark stable on amd64
@@ -8,7 +8,7 @@
   03 Nov 2003; Jason Wever <weeve@gentoo.org> gentoo-artwork-0.3.ebuild:
   Marked stable on sparc, resolves 32671.
 
-*gentoo-artwork-0.2 (12 Sep 2003)
+*gentoo-artwork-0.3 (12 Sep 2003)
   12 Sep 2003; Troy Dack <tad@gentoo.org> gentoo-artwork-0.3.ebuild:
   Version Bump.  Closes Bugs: #1194, #1285, #22222, #23948, #24711
   Move to stable x86 -- it's only images.

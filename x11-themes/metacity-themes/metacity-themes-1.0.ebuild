@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/metacity-themes/metacity-themes-1.0.ebuild,v 1.8 2004/02/06 15:03:31 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/metacity-themes/metacity-themes-1.0.ebuild,v 1.9 2004/02/29 16:45:27 aliz Exp $
 
 DESCRIPTION="Some nice themes for MetaCity"
 S=${WORKDIR}
@@ -78,7 +78,7 @@ src_install() {
 
 	# This patch corrects some XML files that are considered incomplete by
 	# Metacity
-	patch -p1 <${FILESDIR}/${P}-gentoo.diff
+	epatch ${FILESDIR}/${P}-gentoo.diff
 
 	chmod -R ugo=rX *
 }

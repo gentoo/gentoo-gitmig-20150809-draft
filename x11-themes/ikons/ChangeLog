@@ -1,9 +1,11 @@
 # ChangeLog for x11-themes/ikons
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/ikons/ChangeLog,v 1.5 2003/02/12 09:48:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/ikons/ChangeLog,v 1.6 2004/02/29 16:45:27 aliz Exp $
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
+*ikons-0.5.8-r1 (31 Aug 2002)
+
   31 Aug 2002; Dan Armak <danarmak@gentoo.org> ChangeLog  :
 
   Fix bug #5901 - use kde-functions.eclass to determine the proper insall

@@ -1,6 +1,6 @@
 # ChangeLog for x11-themes/mandrake-artwork
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/mandrake-artwork/ChangeLog,v 1.9 2003/11/18 19:06:47 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/mandrake-artwork/ChangeLog,v 1.10 2004/02/29 16:45:27 aliz Exp $
 
   18 Nov 2003; Brad Laue <brad@gentoo.org> mandrake-artwork-0.9.6.ebuild:
   Mask 0.9.6, doesn't like KDE yet
@@ -31,6 +31,8 @@
 
   24 Jul 2003; Brad Laue <brad@gentoo.org> mandrake-artwork-0.9.1.ebuild:
   Version bump
+
+*mandrake-artwork-0.9 (12 Jul 2003)
 
   12 Jul 2003; Brad Laue <brad@gentoo.org> mandrake-artwork-0.9.ebuild:
   Update to 0.9-2mdk, as the previous version is unfetchable.

@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/noia-warm/noia-warm-030209.ebuild,v 1.3 2003/09/01 06:54:11 lu_zero Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/noia-warm/noia-warm-030209.ebuild,v 1.4 2004/02/29 16:45:27 aliz Exp $
 inherit kde # not kde-base since we don't need c++ deps
 
 need-kde 3
@@ -24,8 +24,7 @@ src_compile() {
 	cd ${WORKDIR}
 	mv "Noia Warm KDE 0.95" "noia-warm"
 	cd ${S}
-	sed "s/Name=Noia Warm KDE.*/Name=Noia Warm Icon Snapshot ${PV}/" index.desktop > index.temp
-	mv index.temp index.desktop
+	sed -i "s/Name=Noia Warm KDE.*/Name=Noia Warm Icon Snapshot ${PV}/" index.desktop
 	return 1
 }
 
