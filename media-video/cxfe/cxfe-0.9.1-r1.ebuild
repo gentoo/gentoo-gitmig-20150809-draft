@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/cxfe/cxfe-0.9.1-r1.ebuild,v 1.1 2005/01/15 04:48:31 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/cxfe/cxfe-0.9.1-r1.ebuild,v 1.2 2005/02/24 16:42:11 luckyduck Exp $
 
 inherit eutils
 
@@ -28,6 +28,9 @@ src_unpack() {
 	epatch ${FILESDIR}/xv-default.patch
 	epatch ${FILESDIR}/disable-dpms.patch
 	epatch ${FILESDIR}/position-osd.patch
+
+	# add missing space, see #82684
+	sed -i -e 's/\-lXext\@LDFLAGS/\-lXext \@LDFLAGS/' Makefile.in
 }
 
 src_install() {
