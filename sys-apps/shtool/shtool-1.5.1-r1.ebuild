@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/shtool/shtool-1.5.1-r1.ebuild,v 1.5 2000/11/30 23:14:35 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/shtool/shtool-1.5.1-r1.ebuild,v 1.6 2001/02/20 03:42:24 pete Exp $
 
 A=shtool-1.5.1.tar.gz
 S=${WORKDIR}/shtool-1.5.1
@@ -11,7 +11,7 @@ SRC_URI="ftp://gatekeeper.dec.com/pub/GNU/shtool/${A}
 HOMEPAGE="http://www.gnu.org/software/shtool/shtool.html"
 DEPEND=""
 RDEPEND=">=sys-apps/bash-2.04
-	 >=sy-devel/perl-5.6"
+	 >=sys-devel/perl-5.6"
 
 
 src_compile() {
