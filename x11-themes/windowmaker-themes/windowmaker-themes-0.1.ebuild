@@ -1,12 +1,13 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-themes/windowmaker-themes/windowmaker-themes-0.1.ebuild,v 1.9 2004/09/16 18:29:40 fafhrd Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-themes/windowmaker-themes/windowmaker-themes-0.1.ebuild,v 1.10 2004/12/13 00:05:13 fafhrd Exp $
 
 # TODO: Break themes up by author and into sub-dirs named after
 # the author
 
 DESCRIPTION="Collection of Window Maker themes"
 HOMEPAGE="http://www.windowmaker.org/"
+
 THEME_URI="http://gentoo.asleep.net/windowmaker-themes/"
 SRC_URI="${THEME_URI}3white.tar.gz
 	${THEME_URI}AM.tar.gz
@@ -82,19 +83,35 @@ SRC_URI="${THEME_URI}3white.tar.gz
 	${THEME_URI}wmfrost.tar.gz
 	${THEME_URI}yondo.tar.gz"
 
+# Some people have complained about nearly getting in trouble while at work
+#   because some of the themes are either pornographic or even artistic, but
+#   "for adults only"; This is a quick hack to no install those themes
+#   without the "offensive" use flag on.
+MY_OFFENSIVE="3white.tar.gz
+	Anguish.tar.gz"
+
+IUSE="offensive"
+
 SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86 ppc sparc alpha ~amd64"
 
 DEPEND=""
 RDEPEND="x11-wm/windowmaker"
-IUSE=""
 
 src_unpack() {
 	mkdir ${S}
 	cd ${S}
 	for i in ${SRC_URI} ; do
 		bn=`basename $i`
+		if ! use offensive ; then
+			for j in ${MY_OFFENSIVE} ; do
+				if [ "${bn}" == "${j}" ]; then
+					einfo "Skipping possibly offensive theme: ${bn}"
+					continue 2
+				fi
+			done
+		fi
 		unpack ${bn}
 	done
 }
@@ -102,6 +119,9 @@ src_unpack() {
 src_install () {
 	dodir /usr/share/WindowMaker/Themes
 	cp -dpR * ${D}/usr/share/WindowMaker/Themes/
+	# TODO: Need to clean this up at some point ...
+	#mv ${D}/usr/share/WindowMaker/Themes/Themes/* ${D}/usr/share/WindowMaker/Themes
+	#rm -Rf ${D}/usr/share/WindowMaker/Themes/Themes
 	chown -R root:root ${D}/usr/share/WindowMaker/Themes/
 	chmod -R o-w ${D}/usr/share/WindowMaker/Themes/
 }
