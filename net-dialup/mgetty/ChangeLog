@@ -1,6 +1,13 @@
 # ChangeLog for net-dialup/mgetty
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.1 2002/02/01 21:53:32 gbevin Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-dialup/mgetty/ChangeLog,v 1.2 2002/04/14 21:45:23 azarah Exp $
+
+*mgetty-1.1.26-r2 (14 Apr 2002)
+
+  14 Apr 2002; M.Schlemmer <azarah@gentoo.org> mgetty-1.1.26-r2.ebuild :
+
+  Fix sandbox errors related to fonts being installed during .ps generation.
+  Add support to generate the missing fonts in pkg_postinst().
 
 *mgetty-1.1.26-r1 (1 Feb 2002)
 
