@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.2_alpha20030807.ebuild,v 1.1 2003/08/09 20:02:42 brad Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/mozilla-thunderbird/mozilla-thunderbird-0.2_alpha20030807.ebuild,v 1.2 2003/08/11 19:39:41 brad Exp $
 
 inherit makeedit flag-o-matic gcc nsplugins
 
@@ -79,7 +79,7 @@ src_compile() {
       --disable-dtd-debug \
       --disable-logging \
       --enable-reorder \
-	  --enable-optimize="-O2" \
+	  --enable-optimize="-O3" \
       --enable-strip \
       --enable-strip-libs \
       --enable-cpp-rtti \
@@ -137,22 +137,22 @@ src_install() {
    
    dobin ${FILESDIR}/MozillaThunderbird
 
-#	# Install icon and .desktop for menu entry
-#	if [ "`use gnome`" ]
-#	then
-#		insinto /usr/share/pixmaps
-#		doins ${S}/build/package/rpm/SOURCES/mozilla-icon.png
-#
-#		# Fix comment of menu entry
-#		cd ${S}/build/package/rpm/SOURCES
-#		cp mozilla.desktop mozillathunderbird.desktop
-#		perl -pi -e 's:Name=Mozilla:Name=Mozilla Thunderbird:' mozillathunderbird.desktop
-#		perl -pi -e 's:Comment=Mozilla:Comment=Mozilla Thunderbird Mail Client:' mozillathunderbird.desktop
-#		perl -pi -e 's:Exec=/usr/bin/mozilla:Exec=/usr/bin/MozillaThunderbird:' mozillathunderbird.desktop
-#		cd ${S}
-#		insinto /usr/share/gnome/apps/Internet
-#		doins ${S}/build/package/rpm/SOURCES/mozillathunderbird.desktop
-#	fi
+	# Install icon and .desktop for menu entry
+	if [ "`use gnome`" ]
+	then
+		insinto /usr/share/pixmaps
+		doins ${S}/build/package/rpm/SOURCES/mozilla-icon.png
+
+		# Fix comment of menu entry
+		cd ${S}/build/package/rpm/SOURCES
+		cp mozilla.desktop mozillathunderbird.desktop
+		perl -pi -e 's:Name=Mozilla:Name=Mozilla Thunderbird:' mozillathunderbird.desktop
+		perl -pi -e 's:Comment=Mozilla:Comment=Mozilla Thunderbird Mail Client:' mozillathunderbird.desktop
+		perl -pi -e 's:Exec=/usr/bin/mozilla:Exec=/usr/bin/MozillaThunderbird:' mozillathunderbird.desktop
+		cd ${S}
+		insinto /usr/share/gnome/apps/Internet
+		doins ${S}/build/package/rpm/SOURCES/mozillathunderbird.desktop
+	fi
 
 }
 
