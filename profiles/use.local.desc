@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.848 2005/01/08 15:34:30 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.849 2005/01/08 17:54:47 peitolm Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -331,6 +331,7 @@ mail-mta/exim:dnsdb - Adds support for a DNS search for a record whose domain na
 mail-mta/exim:exiscan - Patch providing support for content scanning backward-compatibility
 mail-mta/exim:exiscan-acl - Patch providing support for content scanning
 mail-mta/exim:lmtp - Adds support for lmtp
+mail-mta/exim:syslog - defines syslog as the default log path if none is specified in the conf file.
 mail-mta/exim:wildlsearch - Adds support for Wildcarded Linear searches
 mail-mta/postfix:vda - Adds support for virtual delivery agent quota enforcing
 mail-mta/qmail:noauthcram - If you do NOT want AUTHCRAM to be available
