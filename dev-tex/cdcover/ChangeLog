@@ -1,6 +1,9 @@
 # ChangeLog for dev-tex/cdcover
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-tex/cdcover/ChangeLog,v 1.7 2004/06/25 02:11:43 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-tex/cdcover/ChangeLog,v 1.8 2004/12/28 20:51:23 absinthe Exp $
+
+  28 Dec 2004; Dylan Carlson <absinthe@gentoo.org> cdcover-1.3b.ebuild:
+  Stable on amd64.
 
   06 May 2004; Ciaran McCreesh <ciaranm@gentoo.org> cdcover-1.3b.ebuild:
   Added ~sparc, #50239
