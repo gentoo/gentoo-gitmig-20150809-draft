@@ -1,6 +1,11 @@
 # ChangeLog for dev-python/pyrex
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.7 2003/06/25 11:46:55 liquidx Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/pyrex/ChangeLog,v 1.8 2003/07/08 00:35:18 liquidx Exp $
+
+*pyrex-0.8.2 (08 Jul 2003)
+
+  08 Jul 2003; Alastair Tse <liquidx@gentoo.org> pyrex-0.8.2.ebuild:
+  version bump
 
 *pyrex-0.8 (25 Jun 2003)
 
