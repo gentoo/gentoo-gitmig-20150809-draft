@@ -20,3 +20,6 @@ CXXFLAGS="${CFLAGS}"
 # sure the user has a 32bit sandbox! it only gets installed if you add multilib
 # to use, recompile gcc, and then recompile portage. :/
 FEATURES="-sandbox"
+
+# yay lib64!
+CONF_LIBDIR="lib64"
