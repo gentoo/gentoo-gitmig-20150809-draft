@@ -1,0 +1,29 @@
+#!/bin/sh
+#RCUPDATE:2 3 4:80:This line is required for script management
+
+. /etc/rc.d/config/functions
+
+SERVICE=fcron
+opts="start stop restart"
+
+PIDFILE=/var/run/fcron.pid
+EXE=/usr/sbin/fcron
+
+start() {
+    ebegin "Starting $SERVICE..."
+    start-stop-daemon --start --quiet --exec $EXE
+    eend $? "Started $SERVICE." "Error Starting $SERVICE."
+}
+
+stop() {
+    ebegin "Stopping $SERVICE..."
+    start-stop-daemon --stop --quiet --pidfile $PIDFILE --exec $EXE
+    eend $? "Stopped $SERVICE." "Error Stopping $SERVICE."
+}
+
+restart() {
+    stop
+    start
+}
+
+doservice ${@}
