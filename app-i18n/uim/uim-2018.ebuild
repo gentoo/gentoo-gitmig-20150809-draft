@@ -1,13 +1,13 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-2018.ebuild,v 1.1 2003/08/20 12:33:48 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/uim/uim-2018.ebuild,v 1.2 2003/09/07 17:43:33 usata Exp $
 
 DESCRIPTION="UIM an input method library"
 HOMEPAGE="http://anthy.sourceforge.jp/"
 SRC_URI="mirror://sourceforge.jp/anthy/5577/${P}.tar.gz"
 
 LICENSE="GPL-2 | BSD"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 ~sparc"
 SLOT="0"
 IUSE="gtk nls canna"
 
