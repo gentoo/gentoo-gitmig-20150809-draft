@@ -1,5 +1,16 @@
---- ./sal/osl/unx/process.c.orig	2003-07-02 15:34:17.000000000 +0200
-+++ ./sal/osl/unx/process.c	2004-11-01 15:16:40.976815960 +0100
+--- tools/source/solar/solar.c.orig
++++ tools/source/solar/solar.c
+@@ -577,7 +577,7 @@
+ 
+   {
+ 	char* p = NULL;
+-	InfoMemoryAccess( p );
++	/*InfoMemoryAccess( p );*/
+ 	p = (char*)&p;
+ 	InfoMemoryAccess( p );
+ 	InfoMemoryTypeAccess( t_short );
+*** sal/osl/unx/process.c.orig
+--- sal/osl/unx/process.c
 @@ -1017,11 +1017,6 @@
  			for (i = 0; data.m_pszEnv[i] != NULL; i++)
  	     		putenv(data.m_pszEnv[i]);

@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.7.ebuild,v 1.9 2005/01/17 21:26:17 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice-ximian/openoffice-ximian-1.3.7.ebuild,v 1.10 2005/01/18 18:12:22 suka Exp $
 
 # Notes:
 #
@@ -390,6 +390,11 @@ src_compile() {
 
 	# Build as minimal as possible
 	export BUILD_MINIMAL="${LANGNO}"
+
+	# Embedded python dies without Home set
+	if test "z${HOME}" = "z"; then
+		export HOME=""
+	fi
 
 	#Get info for parallel build
 	export JOBS=`echo "${MAKEOPTS}" | sed -e "s/.*-j\([0-9]\+\).*/\1/"`
