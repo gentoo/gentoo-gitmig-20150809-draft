@@ -1,13 +1,13 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.0.1_beta8.ebuild,v 1.1 2004/01/28 03:38:17 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/genkernel/genkernel-3.0.1_beta8.ebuild,v 1.2 2004/01/28 03:39:01 brad_mssw Exp $
 
 DESCRIPTION="Gentoo autokernel script"
 HOMEPAGE="http://www.gentoo.org"
 SRC_URI="http://dev.gentoo.org/~brad_mssw/genkernel/${P}.tar.bz2"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 x86 sparc hppa alpha"
 #KEYWORDS="-* amd64 x86 sparc hppa"
 RESTRICT="nomirror"
 IUSE=""
