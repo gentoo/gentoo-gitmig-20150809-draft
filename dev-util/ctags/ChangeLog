@@ -1,6 +1,11 @@
 # ChangeLog for dev-util/ctags
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ChangeLog,v 1.7 2003/04/11 18:51:45 mkennedy Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/ctags/ChangeLog,v 1.8 2003/05/26 16:27:45 agriffis Exp $
+
+*ctags-5.5-r1 (26 May 2003)
+
+  26 May 2003; Aron Griffis <agriffis@gentoo.org> ctags-5.5-r1.ebuild:
+  Fix bug 20405 by adding --enable-tmpdir=/tmp.  Mark stable on alpha and x86.
 
 *ctags-5.5 (11 Apr 2003)
 
