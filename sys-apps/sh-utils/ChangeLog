@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/sh-utils
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/ChangeLog,v 1.27 2004/01/24 17:49:08 gustavoz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/sh-utils/ChangeLog,v 1.28 2004/04/19 15:16:18 randy Exp $
+
+  19 Apr 2004; Michael McCabe <randy@gentoo.org> sh-utils-2.0.15-r1.ebuild:
+  Added s390 keywords
 
   24 Jan 2004; <gustavoz@gentoo.org> sh-utils-2.0.15-r1.ebuild:
   stable on sparc - less than -r1 can cause problems
