@@ -1,6 +1,10 @@
 # ChangeLog for media-plugins/kipi-plugins
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.3 2004/12/31 19:14:00 weeve Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/kipi-plugins/ChangeLog,v 1.4 2005/01/05 02:21:16 cryos Exp $
+
+  05 Jan 2005; Marcus Hanwell <cryos@gentoo.org>
+  kipi-plugins-0.1_beta1.ebuild:
+  Marked ~amd64 as requested in bug 72943.
 
   31 Dec 2004; Jason Wever <weeve@gentoo.org> kipi-plugins-0.1_beta1.ebuild:
   Added ~sparc keyword.
