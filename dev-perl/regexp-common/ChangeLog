@@ -1,0 +1,11 @@
+# ChangeLog for dev-perl/regexp-common
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/regexp-common/ChangeLog,v 1.1 2003/07/29 14:32:58 mcummings Exp $
+
+*regexp-common-2.113 (29 Jul 2003)
+
+  29 Jul 2003; Michael Cummings <mcummings@gentoo.org>
+  regexp-common-2.113.ebuild:
+  bug 24875 dep for request tracker - Celestial Wizard
+  <gentoo@dev.celestialwizard.org>
+
