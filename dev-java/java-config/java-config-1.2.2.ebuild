@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-1.2.2.ebuild,v 1.1 2004/01/10 23:12:39 aether Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/java-config/java-config-1.2.2.ebuild,v 1.2 2004/01/11 00:42:03 agriffis Exp $
 
 inherit distutils
 
@@ -12,7 +12,7 @@ LICENSE="GPL-2"
 SLOT="0"
 RDEPEND="virtual/python"
 #DEPEND="$DEPEND"
-KEYWORDS="x86"
+KEYWORDS="x86 ~alpha ~ia64"
 IUSE=""
 
 src_install() {
