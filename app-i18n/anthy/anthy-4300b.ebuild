@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/anthy-4300b.ebuild,v 1.2 2003/08/24 18:54:26 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/anthy/anthy-4300b.ebuild,v 1.3 2003/09/04 19:15:04 usata Exp $
+
+inherit elisp
 
 IUSE="emacs"
 
@@ -9,51 +11,38 @@ HOMEPAGE="http://anthy.sourceforge.jp/"
 SRC_URI="mirror://sourceforge.jp/anthy/5332/${P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="x86 ~sparc"
 SLOT="0"
 
 S="${WORKDIR}/${P}"
 
-DEPEND="virtual/glibc
-	emacs? ( virtual/emacs )"
+E_DEPEND="emacs? ( ${E_DEPEND} )"
+E_RDEPEND="emacs? ( ${E_DEPEND} )"
+DEPEND="virtual/glibc"
 
-SITEFILE="50anthy-gentoo.el"
-SITELISP=/usr/share/emacs/site-lisp
+if [ -n "`use emacs`" ] ; then
+	SITEFILE="50anthy-gentoo.el"
+else
+	pkg_postinst () {
+		einfo "Emacs support is disabled."
+	}
+	pkg_postrm () {
+		einfo "Emacs support is disabled."
+	}
+fi
 
 src_compile() {
-	local myconf=""
 
-	use emacs \
-		|| myconf="${myconf} EMACS=no"
-
-	econf ${myconf} || die
+	econf `use emacs >/dev/null 2>&1 || echo EMACS=no` || die
 	emake || die
 }
 
 src_install() {
+
 	einstall || die
 
-	if [ -n "` use emacs`" ] ; then
-		insinto ${SITELISP}
-		doins ${FILESDIR}/${SITEFILE}
-	fi
+	use emacs && elisp-site-file-install ${FILESDIR}/${SITEFILE}
 
 	dodoc AUTHORS ChangeLog DIARY INSTALL NEWS README \
 		doc/[A-Z][A-Z]* doc/protocol.txt
-}
-
-pkg_postinst() {
-
-	if [ -n "` use emacs`" ] ; then
-		inherit elisp
-		elisp-site-regen
-	fi
-}
-
-pkg_postrm() {
-
-	if [ -n "` use emacs`" ] ; then
-		inherit elisp
-		elisp-site-regen
-	fi
 }
