@@ -1,6 +1,11 @@
 # ChangeLog for sys-apps/hotplug
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.11 2003/03/19 04:35:48 zwelch Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/hotplug/ChangeLog,v 1.12 2003/03/19 05:40:46 zwelch Exp $
+
+*hotplug-20020826-r1 (18 Mar 2003)
+
+  18 Mar 2003; Zach Welch <zwelch@gentoo.org> hotplug-20020826-r1.ebuild:
+  fix bug 17799
 
   06 Dec 2002; Rodney Rees <manson@gentoo.org> : changed sparc ~sparc keywords
  
