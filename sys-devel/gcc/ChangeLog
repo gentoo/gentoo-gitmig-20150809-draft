@@ -1,6 +1,9 @@
 # ChangeLog for sys-devel/gcc
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.351 2004/11/20 23:59:18 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/ChangeLog,v 1.352 2004/11/21 00:56:06 lv Exp $
+
+  20 Nov 2004; Travis Tilley <lv@gentoo.org> gcc-3.4.3.ebuild:
+  stable on amd64
 
   20 Nov 2004; Travis Tilley <lv@gentoo.org> gcc-3.3.5.ebuild:
   added in bounds checking support, fixed some multilib path oddities, and
