@@ -3,4 +3,4 @@
 # uncomment this to make it work
 #
 
-#exec qmail-notify -r
+#exec /usr/sbin/qmail-notify -r
