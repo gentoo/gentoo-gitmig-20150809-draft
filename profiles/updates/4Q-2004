@@ -89,3 +89,4 @@ move app-sci/embassy-mse sci-biology/embassy-mse
 move app-sci/embassy-phylip sci-biology/embassy-phylip
 move app-sci/embassy-topo sci-biology/embassy-topo
 move app-sci/embassy sci-biology/embassy
+move app-sci/emboss-kaptain sci-biology/emboss-kaptain
