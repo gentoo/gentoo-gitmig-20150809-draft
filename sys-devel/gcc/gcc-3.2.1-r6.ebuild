@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.1-r6.ebuild,v 1.5 2003/01/08 19:13:01 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-devel/gcc/gcc-3.2.1-r6.ebuild,v 1.6 2003/01/08 19:19:02 azarah Exp $
 
 IUSE="static nls bootstrap java build"
 
@@ -10,8 +10,8 @@ inherit eutils flag-o-matic libtool
 filter-flags "-fno-exceptions -fomit-frame-pointer"
 
 # Some odd problems with -march=k6[-2] (bug #12791)
-replace-flags "-march=k6-2" "-march=i686"
-replace-flags "-march=k6" "-march=i686"
+replace-flags "-march=k6-2" "-march=i586"
+replace-flags "-march=k6" "-march=i586"
 
 # Recently there has been a lot of stability problem in Gentoo-land.  Many
 # things can be the cause to this, but I believe that it is due to gcc3
