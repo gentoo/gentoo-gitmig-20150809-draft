@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.2.ebuild,v 1.5 2004/08/21 19:32:30 suka Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/openoffice/openoffice-1.1.2.ebuild,v 1.6 2004/09/27 08:40:18 pauldv Exp $
 
 # IMPORTANT:  This is extremely alpha!!!
 
@@ -249,6 +249,8 @@ src_unpack() {
 	epatch ${FILESDIR}/${PV}/newstlportfix.patch
 
 	epatch ${FILESDIR}/${PV}/openoffice-java.patch
+
+	epatch ${FILESDIR}/${PV}/gcc-instlib.patch
 
 	# Linux/SPARC fixes
 	use sparc && epatch ${FILESDIR}/${PV}/linux-sparc.patch
