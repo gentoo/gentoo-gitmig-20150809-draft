@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-0.9.6.20031018.ebuild,v 1.1 2003/10/18 09:42:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/evidence/evidence-0.9.6.20031018.ebuild,v 1.2 2003/10/18 09:44:12 vapier Exp $
 
 inherit enlightenment eutils flag-o-matic
 
@@ -28,11 +28,11 @@ DEPEND=">=dev-util/pkgconfig-0.5
 	sys-devel/gcc
 	app-admin/fam-oss
 	>=sys-fs/efsd-0.0.1.20031013
-	>=x11-libs/evas-1.0.0.20031013_pre12
-	>=dev-db/edb-1.0.3
+	>=x11-libs/evas-1.0.0.20031018_pre12
+	>=dev-db/edb-1.0.4
 	>=dev-libs/eet-0.9.0.20031013
-	>=x11-libs/ecore-1.0.0.20031013_pre4
-	>=media-libs/imlib2-1.0.6.2003*"
+	>=x11-libs/ecore-1.0.0.20031018_pre4
+	>=media-libs/imlib2-1.1.0"
 
 src_unpack() {
 	unpack ${A}
