@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7-r1.ebuild,v 1.4 2004/11/26 06:53:30 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsa-driver/alsa-driver-1.0.7-r1.ebuild,v 1.5 2004/11/26 22:39:00 eradicator Exp $
 
 IUSE="oss doc"
 
@@ -15,9 +15,7 @@ SRC_URI="mirror://alsaproject/driver/${P}.tar.bz2"
 
 LICENSE="GPL-2 LGPL-2.1"
 SLOT="0"
-#KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~sparc ~x86"
-# ioctl32 update still being worked on
-KEYWORDS="-*"
+KEYWORDS="~alpha ~amd64 ~ia64 ~mips ~ppc ~sparc ~x86"
 
 RDEPEND="virtual/modutils
 		~media-sound/alsa-headers-${PV}"
@@ -39,7 +37,7 @@ src_unpack() {
 
 	[ "${PROFILE_ARCH}" == "xbox" ] && \
 		epatch ${FILESDIR}/${PN}-1.0.5a-xbox-ac97.patch
-		
+
 	convert_to_m ${S}/Makefile
 
 	# Fix ioctl32 support
@@ -70,7 +68,7 @@ src_compile() {
 	unset ARCH
 	# -j1 : see bug #71028
 	emake -j1 || die "Parallel Make Failed"
-	
+
 	if use doc;
 	then
 		ebegin "Building Documentation"
@@ -119,7 +117,7 @@ pkg_setup() {
 		eerror "unable to continue."
 		die Sound support built into kernel already
 	fi
-	
+
 	# By default, drivers for all supported cards will be compiled.
 	# If you want to only compile for specific card(s), set ALSA_CARDS
 	# environment to a space-separated list of drivers that you want to build.
@@ -140,6 +138,6 @@ pkg_postinst() {
 	einfo "Version 1.0.3 and above should work with version 2.6 kernels."
 	einfo "If you experience problems, please report bugs to http://bugs.gentoo.org."
 	einfo
-	
+
 	linux-mod_pkg_postinst
 }
