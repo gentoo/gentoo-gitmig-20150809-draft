@@ -1,6 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-8.0.209.ebuild,v 1.3 2004/06/07 05:40:42 dragonheart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-misc/ckermit/ckermit-8.0.209.ebuild,v 1.4 2004/06/09 19:41:29 mr_bones_ Exp $
+
+inherit eutils
 
 MY_P=cku209
 S=${WORKDIR}
