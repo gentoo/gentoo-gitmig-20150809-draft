@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/gnomoradio
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomoradio/ChangeLog,v 1.7 2004/07/01 07:52:08 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gnomoradio/ChangeLog,v 1.8 2004/11/12 08:32:41 eradicator Exp $
+
+  12 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  gnomoradio-0.13.ebuild:
+  Stable amd64, x86.
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org>
   gnomoradio-0.11.2.ebuild:
