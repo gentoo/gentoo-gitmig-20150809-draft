@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/php-docs
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/ChangeLog,v 1.5 2004/03/28 20:56:49 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/php-docs/ChangeLog,v 1.6 2004/03/29 10:43:31 robbat2 Exp $
+
+  29 Mar 2004; Robin H. Johnson <robbat2@gentoo.org> php-docs-200403.ebuild:
+  add more arches
 
 *php-docs-200403 (28 Mar 2004)
 
