@@ -1,6 +1,6 @@
 # Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/xfce4.eclass,v 1.8 2005/01/07 08:08:10 bcowan Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/xfce4.eclass,v 1.9 2005/01/07 08:16:29 bcowan Exp $
 # Author: Brad Cowan <bcowan@gentoo.org>
 
 # Xfce4 Eclass
@@ -17,7 +17,7 @@ INHERITED="$INHERITED $ECLASS"
 if [[ ${GOODIES_PLUGIN} = "1" ]]; then
     [[ -z ${MY_P} ]] && MY_P="${PN}-plugin-${PV}"    
     SRC_URI="http://download.berlios.de/xfce-goodies/${MY_P}${COMPRESS}"    
-    XFCE_RDEPEND=">=xfce4-panel-${PV}"
+    XFCE_RDEPEND=">=xfce-base/xfce4-panel-${PV}"
 fi
 
 [[ ${GOODIES} = "1" ]] \
