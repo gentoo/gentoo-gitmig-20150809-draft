@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-1.8.7.ebuild,v 1.3 2002/08/14 12:12:29 murphy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/snort-1.8.7.ebuild,v 1.4 2002/08/30 16:19:39 seemant Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Libpcap-based packet sniffer/logger/lightweight IDS"
@@ -54,6 +54,7 @@ src_install () {
 	make DESTDIR=${D} install || die
 
 	dodir /var/log/snort
+	touch ${D}/var/log/snort/.keep
 
 	insinto /usr/lib/snort/bin
 	doins contrib/{create_mysql,snortlog,*.pl}

@@ -1,8 +1,13 @@
 # ChangeLog for net-analyzer/snort
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.4 2002/07/26 07:54:54 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/snort/ChangeLog,v 1.5 2002/08/30 16:19:39 seemant Exp $
 
 *snort-1.8.7 (23 Jul 2002)
+
+  30 Aug 2002; Seemant Kulleen <seemant@gentoo.org> snort-1.8.7.ebuild :
+
+  /var/log/snort now has a .keep in it. Closes bug #7271 by
+  mcummings@gentoo.org (Michael Cummings)
 
   26 Jul 2002; Daniel Ahlberg <aliz@gentoo.org> snort-1.8.7.ebuild snort-1.8.6.ebuild :
 
