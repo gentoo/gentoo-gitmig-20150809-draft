@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.2.1.ebuild,v 1.1 2004/08/01 20:40:10 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/mail-mta/msmtp/msmtp-1.2.1.ebuild,v 1.2 2004/08/03 19:34:49 mr_bones_ Exp $
 
 DESCRIPTION="An SMTP client and SMTP plugin for mail user agents such as Mutt"
 HOMEPAGE="http://msmtp.sourceforge.net/"
@@ -21,9 +21,9 @@ src_compile () {
 		&& myconf="${myconf} --enable-gsasl" \
 		|| myconf="${myconf} --disable-gsasl"
 
-	if [[ `use ssl` && `use gnutls` ]]; then
+	if  use ssl && use gnutls ; then
 		myconf="${myconf} --enable-ssl --with-ssl=gnutls"
-	elif [[ `use ssl` && !`use gnutls` ]]; then
+	elif  use ssl && ! use gnutls ; then
 		myconf="${myconf} --enable-ssl --with-ssl=openssl"
 	else
 		myconf="${myconf} --disable-ssl"
@@ -36,7 +36,7 @@ src_compile () {
 src_install () {
 	einstall || die "install failed"
 
-	if [[ !`use ssl` && `use gnutls` ]]; then
+	if ! use ssl && use gnutls ; then
 		ewarn " "
 		ewarn "gnutls support was not enabled (even though it was in your USE flags) as"
 		ewarn "ssl was not in them also."
