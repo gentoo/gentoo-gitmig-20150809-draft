@@ -1,0 +1,11 @@
+# ChangeLog for app-vim/align
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-vim/align/ChangeLog,v 1.1 2003/08/04 16:55:44 agriffis Exp $
+
+*align-21 (04 Aug 2003)
+
+  04 Aug 2003; Aron Griffis <agriffis@gentoo.org> align-21.ebuild:
+  Third vim plugin added to app-vim! Verified license by writing to the author,
+  Chip Campbell. His response: "I probably should put notices in all my scripts
+  so that they're all copyrighted&vim-charity-style-licensed."
+
