@@ -1,0 +1,10 @@
+# ChangeLog for app-i18n/skk-jisyo-cdb
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/app-i18n/skk-jisyo-cdb/ChangeLog,v 1.1 2003/05/05 08:16:57 phosphan Exp $
+
+*skk-jisyo-cdb-200305 (05 May 2003)
+
+  05 May 2003; Patrick Kursawe <phosphan@gentoo.org>
+  skk-jisyo-cdb-200305.ebuild:
+  New package, ebuild provided by Mamoru KOMACHI <usata@sodan.ecc.u-tokyo.ac.jp>
+  in bug #20454
