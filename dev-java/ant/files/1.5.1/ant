@@ -82,4 +82,11 @@ if $usejikes; then
   ANT_OPTS="$ANT_OPTS -Dbuild.compiler=jikes"
 fi
 
+# 2002-11-02, karltk@gentoo.org:
+# The Blackdown JDK on PPC hiccups with native threads
+#
+if [ "`arch`" == "ppc" ] ; then
+	export THREADS_FLAG="green"
+fi
+
 "$JAVACMD" -classpath "$LOCALCLASSPATH" -Dant.home="${ANT_HOME}" $ANT_OPTS org.apache.tools.ant.Main $ANT_ARGS "$@"
