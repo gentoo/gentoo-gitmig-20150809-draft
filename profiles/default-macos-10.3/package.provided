@@ -275,3 +275,4 @@ x11-base/apple-xfree-4.3
 sys-apps/sed-4.0.7
 sys-apps/ed-0.2-r3
 sys-libs/db-1.85-r1
+virtual/jre-1.3
