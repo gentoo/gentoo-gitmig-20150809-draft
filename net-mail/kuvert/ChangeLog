@@ -1,6 +1,9 @@
 # ChangeLog for net-mail/kuvert
-# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/kuvert/ChangeLog,v 1.4 2004/11/30 22:20:40 swegener Exp $
+# Copyright 1999-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-mail/kuvert/ChangeLog,v 1.5 2005/01/03 22:55:04 slarti Exp $
+
+  03 Jan 2005; Tom Martin <slarti@gentoo.org> kuvert-1.1.8.ebuild:
+  Stable on amd64.
 
   30 Nov 2004; Sven Wegener <swegener@gentoo.org> kuvert-1.1.8.ebuild:
   Fixed invalid atoms in *DEPEND.

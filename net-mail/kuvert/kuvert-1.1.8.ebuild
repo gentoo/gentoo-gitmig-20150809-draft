@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-mail/kuvert/kuvert-1.1.8.ebuild,v 1.4 2004/11/30 22:20:40 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/kuvert/kuvert-1.1.8.ebuild,v 1.5 2005/01/03 22:55:04 slarti Exp $
 
 inherit eutils
 
@@ -12,7 +12,7 @@ HOMEPAGE="http://www.snafu.priv.at/mystuff/kuvert/"
 SRC_URI="http://www.snafu.priv.at/mystuff/kuvert/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="~amd64 ~ppc"
+KEYWORDS="amd64 ~ppc"
 IUSE=""
 SLOT="0"
 

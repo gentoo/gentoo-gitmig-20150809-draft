@@ -1,15 +1,15 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 44a9ace48421cd68b91bd8003c02059f kuvert-1.1.8.ebuild 934
-MD5 5095cbed94cc338d36925356b439df78 ChangeLog 749
+MD5 38bb86472a8958e015f39bb76d18e99c ChangeLog 834
+MD5 913686f62fa002b1f2319986eb42ca4d kuvert-1.1.8.ebuild 931
 MD5 08d7f5bf6e27ff8b49a5a4c821684e7d metadata.xml 259
-MD5 c741dd345cce20ed816bcb2062765027 files/digest-kuvert-1.1.8 63
 MD5 483e068af0e3b62f4f7ae21397df6406 files/kuvert-1.1.8-idea.patch 842
+MD5 c741dd345cce20ed816bcb2062765027 files/digest-kuvert-1.1.8 63
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.10 (GNU/Linux)
+Version: GnuPG v1.2.6 (GNU/Linux)
 
-iD8DBQFBrPJEI1lqEGTUzyQRAo5NAKCi5EGPOnKjDJAMsJ+YlD3u6axwHgCfeWKR
-ksgWsQ7t6H9bD+bi6KTq5cI=
-=x388
+iD8DBQFB2c21CHk4+ZoBpvsRAiQ9AJ9+OzI0B5RM73iC7TcY7pt3phr5MwCgifiR
+nXbEYYQj0JO2BMOCq3E+h8w=
+=FOo7
 -----END PGP SIGNATURE-----
