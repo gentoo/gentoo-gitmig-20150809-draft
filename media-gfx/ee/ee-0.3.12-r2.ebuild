@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/ee/ee-0.3.12-r2.ebuild,v 1.13 2004/07/14 17:27:20 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/ee/ee-0.3.12-r2.ebuild,v 1.14 2004/10/01 12:49:58 pyrania Exp $
 
-inherit gnuconfig
+inherit gnuconfig eutils
 
 IUSE="nls"
 
@@ -21,7 +21,7 @@ RDEPEND="nls? ( sys-devel/gettext )"
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	patch -p1 < ${FILESDIR}/${PN}-mo.diff
+	epatch ${FILESDIR}/${PN}-mo.diff || die "epatch failed!"
 }
 
 src_compile() {

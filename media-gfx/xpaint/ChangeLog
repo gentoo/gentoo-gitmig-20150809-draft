@@ -1,6 +1,9 @@
 # ChangeLog for media-gfx/xpaint
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/xpaint/ChangeLog,v 1.8 2004/06/24 22:52:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/xpaint/ChangeLog,v 1.9 2004/10/01 12:52:01 pyrania Exp $
+
+  01 Oct 2004; <pyrania@gentoo.org> xpaint-2.7.0.ebuild:
+  Made epatch aware.
 
   12 Apr 2004; Jason Wever <weeve@gentoo.org> xpaint-2.7.0.ebuild:
   Added ~sparc keyword.
