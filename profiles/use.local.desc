@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.143 2003/10/18 19:23:54 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/profiles/use.local.desc,v 1.144 2003/10/18 22:04:05 strider Exp $
 
 # This file contains descriptions of local USE flags, and the ebuilds which
 # contain them.
@@ -41,6 +41,15 @@ dev-games/clanlib:clanVoice - Enables voice support in clanlib
 dev-games/crystalspace:3ds - Enables support for .3DS files in CrystalSpace
 dev-games/crystalspace:mng - Enables mng support in CrystalSpace
 dev-games/crystalspace:openal - Enables Open Audio Library support in CrystalSpace
+dev-java/ant:regexp - Enable jakarta-regexp support
+dev-java/ant:oro - Enable jakarta-oro support
+dev-java/ant:bsf - Enable IBM Bean Scripting Framework Support
+dev-java/ant:bsh - Enable BeanShell support
+dev-java/ant:antlr - Enable ANTLR support
+dev-java/ant:jdepend - Enable jdepend support
+dev-java/ant:js - Enable Rhino JavaScript Support
+dev-java/ant:bcel - Enable jakarta-bcel support
+dev-java/ant:jython - Enable Jython support.
 dev-lang/perl:threads - Enable Perl threads, has some compatibility problems
 dev-lang/ruby:ruby18 - Use ruby-1.8 as default ruby
 dev-lang/smarteiffel:tcc - use tcc instead of gcc for build (g++ is still used for c++ code)
