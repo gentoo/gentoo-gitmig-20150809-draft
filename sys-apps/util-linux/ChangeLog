@@ -1,6 +1,13 @@
 # ChangeLog for sys-apps/util-linux
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.47 2003/07/17 21:32:20 azarah Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/util-linux/ChangeLog,v 1.48 2003/07/20 17:26:12 azarah Exp $
+
+*util-linux-2.11z-r7 (20 Jul 2003)
+
+  20 Jul 2003; Martin Schlemmer <azarah@gentoo.org>
+  util-linux-2.11z-r7.ebuild, files/util-linux-2.11z-01-nfsv4.dif:
+  Add NFS4 support (kernel 2.5/2.6).  Notified by Michael Locher
+  <locher@iam.unibe.ch>.
 
 *util-linux-2.11z-r6 (17 Jul 2003)
 
