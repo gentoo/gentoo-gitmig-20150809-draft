@@ -1,17 +1,19 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/trafshow-3.1-r1.ebuild,v 1.10 2004/06/24 22:22:56 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-analyzer/trafshow/trafshow-3.1-r1.ebuild,v 1.11 2004/07/11 10:43:07 eldad Exp $
+
+inherit eutils
 
 IUSE="slang"
 
-S=${WORKDIR}/${P}
+
 DESCRIPTION="Full screen visualization of the network traffic"
 SRC_URI="ftp://ftp.nsk.su/pub/RinetSoftware/${P}.tgz"
 HOMEPAGE="http://soft.risp.ru/trafshow/index_en.shtml"
 
 SLOT="3"
 LICENSE="as-is"
-KEYWORDS="x86 sparc "
+KEYWORDS="x86 sparc"
 
 DEPEND="net-libs/libpcap
 	sys-libs/ncurses
@@ -20,7 +22,7 @@ DEPEND="net-libs/libpcap
 src_unpack() {
 	unpack ${A}
 	cd ${S}
-	patch -p1 < ${FILESDIR}/${P}-gentoo.patch
+	epatch ${FILESDIR}/${P}-gentoo.patch
 }
 
 src_compile() {
