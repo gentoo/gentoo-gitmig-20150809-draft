@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.2.0.1.ebuild,v 1.2 2003/02/09 15:09:20 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/gedit/gedit-2.2.0.1.ebuild,v 1.3 2003/02/13 06:40:09 vapier Exp $
 
 inherit gnome2
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/katoob-0.2.1.ebuild,v 1.3 2002/11/30 02:42:46 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/katoob/katoob-0.2.1.ebuild,v 1.4 2003/02/13 06:46:02 vapier Exp $
 
 DESCRIPTION="Small text editor based on the GTK+ library 2.0"
 HOMEPAGE="http://www.arabeyes.org/project.php?proj=katoob"

@@ -1,6 +1,6 @@
-# Copyright 2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.1_pre4.ebuild,v 1.4 2002/11/29 23:29:08 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-editors/jedit/jedit-4.1_pre4.ebuild,v 1.5 2003/02/13 06:45:39 vapier Exp $
 
 MY_PV="41pre4"
 
