@@ -85,4 +85,4 @@ app-editors/gtk-xemacs
 =app-editors/e3-1.7-r1
 
 # this is the pam for rc6
-=sys-libs/pam-0.75-r1
+#=sys-libs/pam-0.75-r1
