@@ -1,6 +1,10 @@
 # ChangeLog for dev-python/wxPython
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/ChangeLog,v 1.31 2003/10/08 10:21:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/wxPython/ChangeLog,v 1.32 2003/10/08 21:16:14 liquidx Exp $
+
+  08 Oct 2003; Alastair Tse <liquidx@gentoo.org> wxPython-2.4.1.2.ebuild,
+  wxPython-2.4.2.4.ebuild:
+  added debug config wx*-config and stable bumped wxPython-2.4.1.2
 
   08 Oct 2003; Seemant Kulleen <seemant@gentoo.org> wxPython-2.4.1.2.ebuild,
   wxPython-2.4.2.4.ebuild:
@@ -10,7 +14,7 @@
 
   08 Oct 2003; Alastair Tse <liquidx@gentoo.org> wxPython-2.4.0.7.ebuild,
   wxPython-2.4.1.2.ebuild, wxPython-2.4.2.4.ebuild:
-  version bump. incorporating license changes thank to Vaclav Slavik
+  version bump. incorporating license changes thanks to Vaclav Slavik
   <vaclav.slavik@matfyz.cz> (#28697)
 
   10 Jul 2003; Nick Hadaway <raker@gentoo.org> wxPython-2.4.1.2.ebuild,
