@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/gngb/gngb-20020111.ebuild,v 1.6 2002/09/23 07:13:26 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/gngb/gngb-20020111.ebuild,v 1.7 2002/10/05 05:39:07 drobbins Exp $
+
+IUSE="opengl"
 
 DESCRIPTION="gngb - Gameboy / Gameboy Color emulator"
 HOMEPAGE="http://membres.lycos.fr/frogus/gngb/"

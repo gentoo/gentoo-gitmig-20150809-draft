@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/XWine/XWine-0.2.2.ebuild,v 1.2 2002/09/04 05:51:44 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/XWine/XWine-0.2.2.ebuild,v 1.3 2002/10/05 05:39:07 drobbins Exp $
+
+IUSE="nls gnome"
 
 S="${WORKDIR}/${P}_en"
 

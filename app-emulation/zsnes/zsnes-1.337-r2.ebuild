@@ -3,6 +3,8 @@
 # /space/gentoo/cvsroot/gentoo-x86/app-emulation/zsnes/zsnes-1.337-r1.ebuild,v 1.2 2002/05/08 08:48:20 spider Exp
 # Don't attempt to introduce $CFLAGS usage, docs say result will be slower.
 
+IUSE="opengl"
+
 S=${WORKDIR}/${P}
 DESCRIPTION="zsnes is an excellent snes (super nintendo) emulator"
 SRC_URI="mirror://sourceforge/zsnes/zsnes1337src.tar.gz"

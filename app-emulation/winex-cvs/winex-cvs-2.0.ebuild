@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/winex-cvs-2.0.ebuild,v 1.3 2002/09/13 14:51:07 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/winex-cvs/winex-cvs-2.0.ebuild,v 1.4 2002/10/05 05:39:08 drobbins Exp $
+
+IUSE="cups opengl"
 
 # Dont modify the ECVS_BRANCH setting yourself.
 # Instead, make a backup of this ebuild and rename it to

@@ -2,6 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 # Don't attempt to introduce $CFLAGS usage, docs say result will be slower.
 
+IUSE="opengl"
+
 S=${WORKDIR}/${P}
 DESCRIPTION="ZSNES is a SNES (Super Nintendo) emulator that uses x86 assembly."
 SRC_URI="mirror://sourceforge/zsnes/zsnes135src.tar.gz"

@@ -1,6 +1,8 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20020904.ebuild,v 1.1 2002/09/09 19:33:57 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20020904.ebuild,v 1.2 2002/10/05 05:39:08 drobbins Exp $
+
+IUSE="nas arts cups opengl alsa"
 
 DESCRIPTION="Wine is a free implementation of Windows on Unix."
 SRC_URI="ftp://metalab.unc.edu/pub/Linux/ALPHA/wine/development/Wine-${PV}.tar.gz"
