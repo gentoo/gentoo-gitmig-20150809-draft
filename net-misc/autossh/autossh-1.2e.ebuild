@@ -1,12 +1,12 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/autossh/autossh-1.2e.ebuild,v 1.2 2004/02/11 15:43:06 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/autossh/autossh-1.2e.ebuild,v 1.3 2004/02/22 14:44:11 brad_mssw Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Automatically restart SSH sessions and tunnels"
 HOMEPAGE="http://www.harding.motd.ca/autossh/"
 LICENSE="BSD"
-KEYWORDS="~x86 ~sparc ~alpha ~ia64"
+KEYWORDS="~x86 ~sparc ~alpha ~ia64 amd64"
 SRC_URI="http://www.harding.motd.ca/autossh/${P}.tgz"
 SLOT="0"
 
