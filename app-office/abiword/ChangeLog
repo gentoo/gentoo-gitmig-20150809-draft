@@ -1,6 +1,13 @@
 # ChangeLog for app-office/abiword
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.55 2003/11/17 21:14:45 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/ChangeLog,v 1.56 2003/12/14 23:43:50 foser Exp $
+
+*abiword-2.0.2 (15 Dec 2003)
+
+  15 Dec 2003; foser <foser@gentoo.org> abiword-2.0.2.ebuild :
+  New release (#35832), minor dep fixes, add debug USE switch
+  remove the autogen stuff, doesn't seem to be needed anymore
+  plugins now moved into main pack
 
   17 Nov 2003; <spider@gentoo.org> abiword-2.0.1.ebuild:
   stable on x86
