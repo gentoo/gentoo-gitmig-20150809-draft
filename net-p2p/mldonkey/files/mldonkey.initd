@@ -11,7 +11,7 @@ start() {
 	if [ ! -d ${BASEDIR}/${SUBDIR} ]
 	then
 		einfo "Directory ${BASEDIR}/${SUBDIR} not existing, trying to create..."
-		su ${MLUSER} -c "mkdir ${BASEDIR}/${SUBDIR}"
+		su ${USER} -c "mkdir ${BASEDIR}/${SUBDIR}" 
 		if [ ! -d ${BASEDIR}/${DIR} ]
 		then
 			eerror "Directory ${BASEDIR}/${SUBDIR} could not be created!"
@@ -23,6 +23,10 @@ start() {
 	start-stop-daemon --quiet --start -c ${USER}  \
 	-x /usr/bin/mlnet &>${LOG} &
 	sleep 5
+	if ! pgrep -u ${USER} mlnet >/dev/null
+	then
+		eerror "MLDonkey could not be started! Check logfile: ${LOG}"
+	fi
 	renice ${NICE} -u ${USER} >/dev/null
 	eend $?
 }
@@ -35,11 +39,11 @@ stop() {
 	fi
 	BASE=${BASE}${SERVER}:${PORT}
 	ebegin "Stopping mldonkey - please wait"
-	wget --spider ${BASE}/submit?q=close_fds -q
-	wget --spider ${BASE}/submit?q=save -q
-	wget --spider ${BASE}/submit?q=kill -q
+	wget --spider ${BASE}/submit?q=close_fds -q 
+	wget --spider ${BASE}/submit?q=save -q 
+	wget --spider ${BASE}/submit?q=kill -q 
 	sleep 10
-	start-stop-daemon --oknodo --stop -x /usr/bin/mlnet
+	start-stop-daemon --oknodo --stop -x /usr/bin/mlnet &>/dev/null
 	eend $?
 }
 
@@ -59,9 +63,9 @@ slow() {
 	fi
 	BASE=${BASE}${SERVER}:${PORT}
 
-	wget --spider ${BASE}/submit?q=set+max_hard_download_rate+${LOW_DOWN} -q
+	wget --spider ${BASE}/submit?q=set+max_hard_download_rate+${LOW_DOWN} -q 
 
-	wget --spider ${BASE}/submit?q=set+max_hard_upload_rate+${LOW_UP} -q
+	wget --spider ${BASE}/submit?q=set+max_hard_upload_rate+${LOW_UP} -q 
 
 	eend $?
 }
@@ -76,9 +80,9 @@ fast() {
 	fi
 	BASE=${BASE}${SERVER}:${PORT}
 
-	wget --spider ${BASE}/submit?q=set+max_hard_download_rate+${HIGH_DOWN} -q
+	wget --spider ${BASE}/submit?q=set+max_hard_download_rate+${HIGH_DOWN} -q 
 
-	wget --spider ${BASE}/submit?q=set+max_hard_upload_rate+${HIGH_UP} -q
+	wget --spider ${BASE}/submit?q=set+max_hard_upload_rate+${HIGH_UP} -q 
 
 	eend $?
 }
