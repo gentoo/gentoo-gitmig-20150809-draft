@@ -1,7 +1,7 @@
 # Copyright 1999-2000 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Achim Gottinger <achim@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/app-doc/man-pages/man-pages-1.31.ebuild,v 1.1 2000/08/23 09:35:20 achim Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/man-pages/man-pages-1.31.ebuild,v 1.2 2000/10/04 16:04:34 achim Exp $
 
 P=man-pages-1.31
 A="${P}.tar.gz netman-20000610.tgz"
@@ -9,6 +9,8 @@ S=${WORKDIR}/${P}
 DESCRIPTION="A somewhat comprehensive collection of Linux man pages"
 
 SRC_URI="ftp://ftp.kernel.org/pub/linux/docs/manpages/man-pages-1.31.tar.gz
+	 ftp://ftp.de.kernel.org/pub/linux/docs/manpages/man-pages-1.31.tar.gz
+	 ftp://ftp.uk.kernel.org/pub/linux/docs/manpages/man-pages-1.31.tar.gz 
 	 ftp://ftp.suse.com/pub/people/ak/netman/netman-20000610.tgz"
 
 src_compile() {                           
