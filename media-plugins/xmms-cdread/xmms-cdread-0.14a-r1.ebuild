@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-cdread/xmms-cdread-0.14a-r1.ebuild,v 1.1 2003/09/20 10:09:38 jje Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-plugins/xmms-cdread/xmms-cdread-0.14a-r1.ebuild,v 1.2 2003/10/11 19:11:11 lu_zero Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="XMMS plugin to read audio cdroms as data"
@@ -9,7 +9,7 @@ SRC_URI="ftp://mud.stack.nl/pub/OuterSpace/willem/${P}.tar.gz"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="~x86"
+KEYWORDS="~x86 ~ppc"
 
 DEPEND=">=media-sound/xmms-1.2.8"
 
