@@ -1,6 +1,10 @@
 # ChangeLog for net-misc/openssh
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.52 2003/09/23 16:11:55 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/ChangeLog,v 1.53 2003/09/23 16:46:17 solar Exp $
+
+  23 Sep 2003; <solar@gentoo.org> openssh-3.7.1_p2.ebuild:
+  according to the ChangeLog for openssh =zlib-1.1.4 is a must now. Note:
+  openssh needs a X509 patch made upstream for p2
 
 *openssh-3.7.1_p2 (23 Sep 2003)
 

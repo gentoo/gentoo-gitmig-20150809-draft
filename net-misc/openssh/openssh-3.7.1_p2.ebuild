@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p2.ebuild,v 1.1 2003/09/23 16:11:55 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-misc/openssh/openssh-3.7.1_p2.ebuild,v 1.2 2003/09/23 16:46:17 solar Exp $
 
 inherit eutils flag-o-matic ccc
 [ `use kerberos` ] && append-flags -I/usr/include/gssapi
@@ -29,7 +29,7 @@ RDEPEND="virtual/glibc
 	selinux? ( sys-apps/selinux-small )
 	skey? ( app-admin/skey )
 	>=dev-libs/openssl-0.9.6d
-	sys-libs/zlib
+	>=sys-libs/zlib-1.1.4
 	>=sys-apps/sed-4"
 
 DEPEND="${RDEPEND}
@@ -46,11 +46,9 @@ src_unpack() {
 
 	use selinux && epatch ${DISTDIR}/${SELINUX_PATCH}
 	use alpha && epatch ${FILESDIR}/${PN}-3.5_p1-gentoo-sshd-gcc3.patch
-	use X509 && epatch ${DISTDIR}/${X509_PATCH}
-
-	# epatch ${FILESDIR}/${P}-connect-timeout.patch
-	# epatch ${FILESDIR}/${P}-double-free.patch
-	# epatch ${FILESDIR}/${P}-memory-leak.patch
+	# use X509 && epatch ${DISTDIR}/${X509_PATCH}
+	
+	# looks like this one was rewriten somewhat.
 	# epatch ${FILESDIR}/${P}-memory-bugs.patch
 
 	use skey && {
