@@ -1,5 +1,5 @@
 #####################################################################
-# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2859 2004/05/13 12:01:08 phosphan Exp $#
+# $Header: /var/cvsroot/gentoo-x86/profiles/package.mask,v 1.2860 2004/05/14 20:47:17 lanius Exp $#
 #When you add an entry to this file, add your name, the date, and an
 #explanation of why something is getting masked
 #
@@ -642,11 +642,6 @@ sys-devel/spython
 # ebuild was previously masked only in the ebuild
 # This is the correct place for it.
 =sys-libs/db-3.3.11
-
-# <agenkin@gentoo.org> 28 May 2003
-# net-www/opera-static is removed in favor of the unified
-# net-www/opera.
-net-www/opera-static
 
 # <seemant@gentoo.org> 21 May, 2003
 # Masked while it's still under development.  I need revision control on the
