@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.7-r1.ebuild,v 1.1 2004/07/23 02:07:35 avenj Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/texinfo-4.7-r1.ebuild,v 1.2 2004/08/17 20:35:06 agriffis Exp $
 
 inherit flag-o-matic gnuconfig eutils
 
@@ -10,7 +10,7 @@ SRC_URI="mirror://gnu/${PN}/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~ppc64 ~sparc ~mips ~alpha ~arm ~hppa ~amd64 ~ia64 ~s390"
+KEYWORDS="~x86 ~ppc ~ppc64 ~sparc ~mips alpha ~arm ~hppa ~amd64 ia64 ~s390"
 IUSE="nls build static"
 
 DEPEND="virtual/libc

@@ -1,6 +1,9 @@
 # ChangeLog for sys-apps/texinfo
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.43 2004/07/27 17:35:20 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/texinfo/ChangeLog,v 1.44 2004/08/17 20:35:06 agriffis Exp $
+
+  17 Aug 2004; Aron Griffis <agriffis@gentoo.org> texinfo-4.7-r1.ebuild:
+  stable on alpha and ia64
 
 *texinfo-4.7-r1 (22 Jul 2004)
 
@@ -11,7 +14,7 @@
 *texinfo-4.7 (19 Jul 2004)
 
   19 Jul 2004; <solar@gentoo.org> texinfo-4.7.ebuild:
-  version bump and added gnuconfig_updade call, needed for atleast uclibc and
+  version bump and added gnuconfig_update call, needed for atleast uclibc and
   maybe others
 
   04 Jul 2004; <solar@gentoo.org> texinfo-4.6.ebuild:
