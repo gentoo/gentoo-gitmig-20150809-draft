@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Parser/HTML-Parser-3.34-r1.ebuild,v 1.11 2004/06/25 23:22:58 kugelfang Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/HTML-Parser/HTML-Parser-3.34-r1.ebuild,v 1.12 2004/07/14 17:52:17 agriffis Exp $
 
 inherit perl-module
 
@@ -24,4 +24,3 @@ src_compile() {
 	fi
 	perl-module_src_test
 }
-
