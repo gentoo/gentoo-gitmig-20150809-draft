@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.50.10.ebuild,v 1.2 2003/04/17 20:04:30 mholzer Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdrip/dvdrip-0.50.10.ebuild,v 1.3 2003/05/11 02:29:44 jrray Exp $
 
 IUSE="cdr gnome"
 
@@ -33,7 +33,8 @@ DEPEND=" gnome? ( gnome-extra/gtkhtml )
 
 RDEPEND=">=net-analyzer/fping-2.3
 		>=media-sound/ogmtools-0.972
-		>=media-video/mjpegtools-1.6.0"
+		>=media-video/mjpegtools-1.6.0
+		sys-apps/eject"
 
 src_install () {
 	perl-module_src_install
