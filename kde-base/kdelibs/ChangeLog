@@ -1,6 +1,9 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.95 2003/10/04 22:39:18 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.96 2003/10/13 18:48:24 pauldv Exp $
+
+  13 Oct 2003; Paul de Vrieze <pauldv@gentoo.org> kdelibs-3.2.0_alpha2.ebuild:
+  Change alsa_driver dependency to depend on virtual/alsa
 
   04 Oct 2003; Brad House <brad_mssw@gentoo.org> kdelibs-3.1.4.ebuild:
   add ~amd64 flag
