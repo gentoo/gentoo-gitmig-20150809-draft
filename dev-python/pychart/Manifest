@@ -1,6 +1,18 @@
-MD5 31255411c6755f0a61b879bc3fa05252 ChangeLog 897
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+MD5 63639eb2aebae570a6b7635baf6765c2 ChangeLog 1014
+MD5 64055232fd4e27139b8702e2ea46e6d1 pychart-1.36.ebuild 860
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
 MD5 bb467a6771d0adfdd25a1bb13061f8bd pychart-1.33.ebuild 855
 MD5 1cd272c39b0d6bd62edc5305b956095a pychart-1.35.ebuild 864
 MD5 f4ec51043dad23f9cf8cf038be6df822 files/digest-pychart-1.33 64
+MD5 51d809cc42ee57467d46f7cc8dc25b27 files/digest-pychart-1.36 64
 MD5 8c95f94b204270d86e5a3ef5e543893e files/digest-pychart-1.35 64
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.6 (GNU/Linux)
+
+iD8DBQFBtSP/ugEuf3OQ0akRAjWhAJ43USm7/z9/voALykOZiZlbD3k6EACeOLVE
+cjcf2x0qO7BgqM8SfcHP49M=
+=F7WN
+-----END PGP SIGNATURE-----

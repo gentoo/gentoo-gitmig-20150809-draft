@@ -1,18 +1,8 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 0a000d4c54fa8a09b6b47fb085505b29 ChangeLog 832
-MD5 af8681a5ac93ddc4bef17a27c25a5270 soappy-0.11.1.ebuild 528
+MD5 bb88c3e5c43b752420ab769e6ae8e51c ChangeLog 924
 MD5 71c4638c9c88af75b58e5f5cb54fe008 metadata.xml 159
+MD5 af8681a5ac93ddc4bef17a27c25a5270 soappy-0.11.1.ebuild 528
 MD5 6ed5b17dc8f3dca4bb131e2e8850e649 soappy-0.11.3.ebuild 537
-MD5 2b0496612c7a2674b6541dbe108fbf35 soappy-0.11.6.ebuild 539
-MD5 e4577572885eab20f84ad6e658781681 files/digest-soappy-0.11.6 65
-MD5 2e07cf786d5fa22da74c2127424c16d7 files/digest-soappy-0.11.3 65
+MD5 85f2bd2452ef3b291b18e88f5b06a737 soappy-0.11.6.ebuild 545
 MD5 b3c3125f10348493294bd561f0d28542 files/digest-soappy-0.11.1 65
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBsy9LugEuf3OQ0akRAmIRAJ0c3JkUpuimMcUgCjS34fvGrTykmQCgnTef
-fjx7CcHewy8LDGm/4GCUNWA=
-=bVFV
------END PGP SIGNATURE-----
+MD5 2e07cf786d5fa22da74c2127424c16d7 files/digest-soappy-0.11.3 65
+MD5 e4577572885eab20f84ad6e658781681 files/digest-soappy-0.11.6 65

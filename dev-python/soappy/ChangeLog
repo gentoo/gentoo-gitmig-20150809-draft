@@ -1,6 +1,9 @@
 # ChangeLog for dev-python/soappy
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.6 2004/12/05 15:54:41 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-python/soappy/ChangeLog,v 1.7 2004/12/07 03:28:42 weeve Exp $
+
+  06 Dec 2004; Jason Wever <weeve@gentoo.org> soappy-0.11.6.ebuild:
+  Added ~sparc keyword.
 
 *soappy-0.11.6 (05 Dec 2004)
 
