@@ -1,5 +1,5 @@
 MD5 16b7da11f0404ed688410438ccaf7521 ChangeLog 894
-MD5 f4388bd1da0d1126d79ac320c73d368a kyro-kernel-2.00.20.0427.ebuild 1198
+MD5 871a2c68e474657d1dfb5c60eb113ab6 kyro-kernel-2.00.20.0427.ebuild 1194
 MD5 1c4350feeb7c515e82ea0a5b71f16b41 kyro-kernel-2.00.20.516.ebuild 1152
 MD5 ee4aaf2000e8d06274a92e3a80f1dc12 files/digest-kyro-kernel-2.00.20.0427 68
 MD5 883c1813ce151154652f82412787ccb0 files/mtrr-include-fix.diff 272
