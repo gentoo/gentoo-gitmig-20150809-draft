@@ -1,6 +1,11 @@
 # ChangeLog for app-emulation/spim
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/ChangeLog,v 1.10 2004/06/24 22:34:40 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/spim/ChangeLog,v 1.11 2004/09/05 23:26:47 kloeri Exp $
+
+*spim-7.0 (06 Sep 2004)
+
+  06 Sep 2004; Bryan Østergaard <kloeri@gentoo.org> +spim-7.0.ebuild:
+  Version bump, ebuild by mickn in #gentoo-bugs.
 
 *spim-6.5-r1 (10 Apr 2004)
 
