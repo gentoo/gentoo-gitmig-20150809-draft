@@ -1,6 +1,9 @@
-# ChangeLog for media-video/cxfe
+# ChangeLog for media-video/dvdimagecmp
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/dvdimagecmp/ChangeLog,v 1.1 2004/09/06 22:20:01 arj Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/dvdimagecmp/ChangeLog,v 1.2 2004/09/18 22:01:30 swegener Exp $
+
+  19 Sep 2004; Sven Wegener <swegener@gentoo.org> :
+  Fixed ChangeLog header.
 
 *dvdimagecmp-0.2 (06 Sep 2004)
 
