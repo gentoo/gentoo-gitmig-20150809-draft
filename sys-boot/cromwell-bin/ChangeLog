@@ -1,0 +1,9 @@
+# ChangeLog for sys-boot/cromwell-bin
+# Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-boot/cromwell-bin/ChangeLog,v 1.1 2004/10/16 15:24:27 chrb Exp $
+
+*cromwell-bin-2.31 (16 Oct 2004)
+
+  16 Oct 2004; Chris Bainbridge <chrb@gentoo.org> +cromwell-bin-2.31.ebuild:
+  New package
+
