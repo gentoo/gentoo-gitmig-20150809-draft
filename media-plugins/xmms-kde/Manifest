@@ -1,5 +1,5 @@
-MD5 3f8c84f04c02cf2b2323c9d7c89f597f xmms-kde-3.1_beta1.ebuild 1098
 MD5 f8678978dbdb30b1f1e0fd12f56cc2c9 ChangeLog 629
 MD5 12f9a79eb9cb758efadb993fd2288a91 metadata.xml 696
-MD5 8ba6b5722200f81d0d033db7deea9cff files/xmms-kde-3.1_beta1-libsuffix-fix.patch 393
+MD5 42f2bdf459490dd1cf44b85c0ab67dd3 xmms-kde-3.1_beta1.ebuild 1108
 MD5 c0d893c15bd9e1b8ac53e6bf6decffe7 files/digest-xmms-kde-3.1_beta1 70
+MD5 8ba6b5722200f81d0d033db7deea9cff files/xmms-kde-3.1_beta1-libsuffix-fix.patch 393
