@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/peercast
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/peercast/ChangeLog,v 1.3 2004/10/08 21:09:55 swegener Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/peercast/ChangeLog,v 1.4 2004/11/23 10:18:20 eradicator Exp $
+
+  23 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  peercast-0.1211.ebuild:
+  Added to ~amd64.
 
   08 Oct 2004; Sven Wegener <swegener@gentoo.org> :
   Removed stray digest.

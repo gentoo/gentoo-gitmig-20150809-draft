@@ -1,6 +1,10 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/peercast/peercast-0.1211.ebuild,v 1.1 2004/10/07 18:48:49 trapni Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/peercast/peercast-0.1211.ebuild,v 1.2 2004/11/23 10:18:20 eradicator Exp $
+
+IUSE=""
+
+S=${WORKDIR}
 
 DESCRIPTION="A client and server for Peercast P2P-radio network"
 HOMEPAGE="http://www.peercast.org"
@@ -13,16 +17,10 @@ SRC_URI="http://dev.gentoo.org/~trapni/dist/${PN}-linux-${PV}.tgz"
 LICENSE="freedist"
 
 SLOT="0"
-KEYWORDS="~x86"
-IUSE=""
+KEYWORDS="-* ~amd64 ~x86"
 
 DEPEND=""
-
-RDEPEND="
-	amd64? ( app-emulation/emul-linux-x86-baselibs )
-"
-
-S=${WORKDIR}
+RDEPEND="amd64? ( app-emulation/emul-linux-x86-baselibs )"
 
 src_compile() {
 	(
@@ -51,20 +49,9 @@ src_install() {
 }
 
 pkg_postinst() {
-	einfo
-	einfo
-
 	einfo "Start Peercast with '/etc/init.d/peercast start' and point your"
 	einfo "webbrowser to 'http://localhost:7144' to start using Peercast."
 	einfo
 	einfo "You can also run 'rc-update add peercast default' to make Peercast"
 	einfo "start at boot."
-
-	use amd64 >/dev/null && (
-		einfo
-		einfo "Also make sure you have 'IA32 Emulation' enabled in your kernel!"
-	)
-
-	einfo
-	einfo
 }
