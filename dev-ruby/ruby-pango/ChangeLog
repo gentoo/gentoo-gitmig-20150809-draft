@@ -1,6 +1,9 @@
 # ChangeLog for dev-ruby/ruby-pango
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-pango/ChangeLog,v 1.9 2004/06/29 18:06:33 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-pango/ChangeLog,v 1.10 2004/06/30 18:57:39 fmccor Exp $
+
+  30 Jun 2004; Ferris McCormick <fmccor@gentoo.org> ruby-pango-0.9.1.ebuild:
+  Add ~sparc keyword
 
   30 Jun 2004; Mamoru KOMACHI <usata@gentoo.org> -ruby-pango-0.7.0.ebuild,
   ruby-pango-0.8.1.ebuild, ruby-pango-0.9.1.ebuild:

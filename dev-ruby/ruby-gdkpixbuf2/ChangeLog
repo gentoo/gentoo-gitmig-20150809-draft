@@ -1,6 +1,10 @@
 # ChangeLog for dev-ruby/ruby-gdkpixbuf2
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkpixbuf2/ChangeLog,v 1.10 2004/06/29 18:14:57 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-ruby/ruby-gdkpixbuf2/ChangeLog,v 1.11 2004/06/30 19:06:49 fmccor Exp $
+
+  30 Jun 2004; Ferris McCormick <fmccor@gentoo.org>
+  ruby-gdkpixbuf2-0.9.1.ebuild:
+  Add ~sparc keyword (part of ruby-gnome2-all)
 
   30 Jun 2004; Mamoru KOMACHI <usata@gentoo.org>
   -ruby-gdkpixbuf2-0.7.0.ebuild, ruby-gdkpixbuf2-0.8.1.ebuild,
