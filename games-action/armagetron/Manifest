@@ -1,5 +1,4 @@
 MD5 5e347839ba90d75bdd53cda34908aba8 ChangeLog 2725
-MD5 80fcdec93c0444223f8c5683f70503e3 armagetron-0.1.4.9.ebuild 1984
 MD5 7edc1c4041d31562ae8d37180a32501a armagetron-0.2.6.0.ebuild 2015
 MD5 18f4639411b07b64d8b764c6af213eb5 metadata.xml 283
 MD5 b099d1ac147af025edade2ecdb5d4ba0 files/armagetron-0.1.4.9-Makefile.global.in.patch 400
@@ -8,5 +7,4 @@ MD5 f1f78fdf04c0f8cdd942f5bf1e06896a files/armagetron-0.1.4.9.sh 68
 MD5 c3f60ccaa75a462e14fa0bca9633a2e3 files/armagetron-0.2.4-r1.sh 358
 MD5 eff25d87d4215b2dba1dcc575047cb67 files/armagetron-0.2.4.sh 425
 MD5 e28f3cbd064e6429d08a76e3b91e6afe files/armagetron-0.2_pre2.sh 434
-MD5 f938cf3014d477b12c62434e7e791cb9 files/digest-armagetron-0.1.4.9 196
 MD5 51635e129293b0d044d43c423a71b1d2 files/digest-armagetron-0.2.6.0 194
