@@ -1,6 +1,11 @@
 # ChangeLog for kde-base/kdebase
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.7 2002/04/13 17:52:05 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdebase/ChangeLog,v 1.8 2002/04/13 19:07:53 verwilst Exp $
+
+  13 Apr 2002; Bart Verwilst <verwilst@gentoo.org>: Make sure the gnome 
+  icons are visible when choosing a new icon (under 'other icons'), 
+  instead of 3 ugly kde-icons. I won't change the revision for something 
+  as trivial as this though :o)
 
   13 Apr 2002; Dan Armak <danarmak@gentoo.org>: add KDEDIRS to the 2.x
   startkde as well (new revision 2.2.2-r3).
