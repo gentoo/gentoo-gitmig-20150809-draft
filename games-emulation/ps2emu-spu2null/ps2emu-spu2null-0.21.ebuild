@@ -1,12 +1,12 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-cdvdiso/ps2emu-cdvdiso-0.2.ebuild,v 1.1 2003/09/09 16:26:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-emulation/ps2emu-spu2null/ps2emu-spu2null-0.21.ebuild,v 1.1 2003/12/12 22:10:51 vapier Exp $
 
 inherit games
 
-DESCRIPTION="PSEmu2 CD/DVD iso plugin"
+DESCRIPTION="PSEmu2 NULL Sound plugin"
 HOMEPAGE="http://www.pcsx2.net/"
-SRC_URI="http://www.pcsx2.net/download/0.4release/CDVDiso-${PV}.zip"
+SRC_URI="http://www.pcsx2.net/download/0.5release/SPU2null${PV}.zip"
 
 LICENSE="freedist"
 SLOT="0"
@@ -14,25 +14,21 @@ KEYWORDS="x86"
 
 DEPEND="=x11-libs/gtk+-1*"
 
-S=${WORKDIR}/CDVDiso
+S=${WORKDIR}/SPU2null
 
 src_unpack() {
 	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${PV}-makefile.patch
+	sed -i 's:-O2 -fomit-frame-pointer:$(OPTFLAGS):' ${S}/Src/Makefile
 }
 
 src_compile() {
-	cd src/Linux
+	cd Src
 	emake OPTFLAGS="${CFLAGS}" || die
 }
 
 src_install() {
 	dodoc ReadMe.txt
-	cd src/Linux
 	exeinto ${GAMES_LIBDIR}/ps2emu/plugins
-	doexe lib*
-	exeinto ${GAMES_LIBDIR}/ps2emu/cfg
-	doexe cfgCDVDiso
+	newexe Src/libSPU2null.so libSPU2null-${PV}.so
 	prepgamesdirs
 }
