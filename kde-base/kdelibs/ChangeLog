@@ -1,6 +1,10 @@
 # ChangeLog for kde-base/kdelibs
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.7 2002/04/05 20:55:19 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/ChangeLog,v 1.8 2002/04/06 08:57:49 danarmak Exp $
+
+  6 Apr 2002; Dan Armak <danarmak@gentoo.org> changelog:
+  
+  Change cups dep to >=1.1.14.
 
 *kdelibs-3.0-r1 (5 Apr 2002)
 

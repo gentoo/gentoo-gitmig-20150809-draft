@@ -1,7 +1,7 @@
 # Copyright 1999-2001 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
 # Author Dan Armak <danarmak@gentoo.org>
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.0-r1.ebuild,v 1.1 2002/04/05 20:55:19 danarmak Exp $
+# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-3.0-r1.ebuild,v 1.2 2002/04/06 08:57:49 danarmak Exp $
 . /usr/portage/eclass/inherit.eclass || die
 inherit kde kde.org
 #don't inherit kde-base or kde-dist! it calls need-kde which adds kdelibs to depend!
@@ -29,7 +29,7 @@ newdepend ">=sys-devel/gcc-2.95.2
 		>=dev-libs/libxml2-2.4.10
 		ssl? ( >=dev-libs/openssl-0.9.6 )
 		alsa? ( >=media-libs/alsa-lib-0.5.9 )
-		cups? ( net-print/cups )
+		cups? ( >=net-print/cups-1.1.14 )
 		>=media-libs/tiff-3.5.5
 		app-admin/fam-oss
 		>=kde-base/arts-1.0.0"
