@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-vim/phpdocs/phpdocs-0.26.ebuild,v 1.3 2003/10/05 21:07:28 todd Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-vim/phpdocs/phpdocs-0.26.ebuild,v 1.4 2003/10/13 18:44:16 mholzer Exp $
 
 inherit vim-plugin
 
@@ -12,6 +12,5 @@ DEPEND="${DEPEND} >=sys-apps/sed-4"
 
 src_unpack() {
 	unpack ${A}
-	sed -i 's/
-$//' ${S}/plugin/phpdoc.vim || die "sed failed"
+	sed -i 's/\r$//' ${S}/plugin/phpdoc.vim || die "sed failed"
 }
