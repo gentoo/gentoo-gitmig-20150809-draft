@@ -1,6 +1,15 @@
 # ChangeLog for media-video/vlc
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.49 2004/06/07 17:15:11 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/vlc/ChangeLog,v 1.50 2004/06/08 01:39:49 lv Exp $
+
+*vlc-0.7.2 (07 Jun 2004)
+
+  07 Jun 2004; Travis Tilley <lv@gentoo.org> +vlc-0.7.2.ebuild:
+  version bump. this version contains improved interfaces with support for
+  embedded video outputs, new formats support, an improved DVB input, subtitles
+  improvements, major stream output improvements, a VideoLAN manager to manage
+  several streams with only one instance of VLC, and (most importantly, at least
+  here) numerous fixes for compiling with gcc 3.4.
 
   07 Jun 2004; Travis Tilley <lv@gentoo.org> vlc-0.7.1-r1.ebuild:
   stable on amd64
