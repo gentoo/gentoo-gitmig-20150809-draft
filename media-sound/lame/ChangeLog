@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/lame
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.49 2004/07/30 02:38:31 tgall Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/lame/ChangeLog,v 1.50 2004/10/04 00:01:12 eradicator Exp $
+
+  03 Oct 2004; Jeremy Huddleston <eradicator@gentoo.org>
+  +files/lame-3.96.1-shared-frontend.patch:
+  link against shared libs.  Closes bug #58547.  Stable amd64, sparc, x86.
 
   29 Jul 2004; Tom Gall <tgall@gentoo.org> lame-3.96.ebuild:
   stable on ppc64, bug #55429
