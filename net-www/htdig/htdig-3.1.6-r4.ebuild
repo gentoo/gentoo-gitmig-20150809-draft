@@ -1,6 +1,8 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/htdig/htdig-3.1.6-r4.ebuild,v 1.12 2003/11/16 18:14:33 brad_mssw Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/htdig/htdig-3.1.6-r4.ebuild,v 1.13 2003/11/16 22:08:47 mholzer Exp $
+
+inherit webapp-apache
 
 S=${WORKDIR}/${P}
 DESCRIPTION="HTTP/HTML indexing and searching system"
@@ -15,16 +17,28 @@ DEPEND=">=sys-libs/zlib-1.1.3
 
 export CPPFLAGS="${CPPFLAGS} -Wno-deprecated"
 
+webapp-detect || NO_WEBSERVER=1
+
+HTTPD_USER="apache"
+HTTPD_GROUP="apache"
+
+pkg_setup() {
+	webapp-pkg_setup "${NO_WEBSERVER}"
+	einfo "Installing into ${ROOT}${HTTPD_ROOT}."
+}
+
 src_compile() {
+	local DocumentRoot=${HTTPD_ROOT}
+	local destdir=${DocumentRoot}/${PN}
 
 	cd ${S}
 	./configure \
 		--prefix=/usr \
 		--with-config-dir=/etc/${PN} \
-		--with-cgi-bin-dir=/home/httpd/cgi-bin \
+		--with-cgi-bin-dir=${HTTPD_CGIBIN} \
 		--with-common-dir=/usr/share/${PN} \
 		--with-database-dir=/var/${PN}/db \
-		--with-image-dir=/home/httpd/htdocs/${PN} \
+		--with-image-dir=${destdir} \
 		--with-default-config-file=/etc/${PN}/${PN}.conf \
 		|| die
 
@@ -33,15 +47,17 @@ src_compile() {
 }
 
 src_install () {
+	local DocumentRoot=${HTTPD_ROOT}
+	local destdir=${DocumentRoot}/${PN}
 
 	make 	\
 		DESTDIR=${D} \
 		CONFIG_DIR=${D}/etc/${PN} \
-		SEARCH_DIR=${D}/home/httpd/htdocs/${PN} \
-		CGIBIN_DIR=${D}/home/httpd/cgi-bin \
+		SEARCH_DIR=${D}/${destdir} \
+		CGIBIN_DIR=${D}/${HTTPD_CGIBIN} \
 		COMMON_DIR=${D}/usr/share/${PN} \
 		DATABASE_DIR=${D}/var/${PN}/db \
-		IMAGE_DIR=${D}/home/httpd/htdocs/${PN} \
+		IMAGE_DIR=${D}/${destdir} \
 		DEFAULT_CONFIG_FILE=${D}/etc/${PN}/${PN}.conf \
 		exec_prefix=${D}/usr \
 		install || die
@@ -57,6 +73,4 @@ src_install () {
 
 	touch ${D}/var/htdig/db/word2root.db
 	touch ${D}/var/htdig/db/root2word.db
-
 }
-
