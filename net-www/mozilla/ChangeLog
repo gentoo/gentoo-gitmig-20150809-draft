@@ -1,6 +1,11 @@
 # ChangeLog for net-www/mozilla
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.18 2002/05/31 22:51:30 spider Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/mozilla/ChangeLog,v 1.19 2002/06/01 19:38:39 azarah Exp $
+
+*mozilla-1.0_rc3-r50 (31 May 2002)
+  01 May 2002; Martin Schlemmer <azarah@gentoo.org> :
+  Add all my comments and stuff back.  Great work Spider!, but
+  some of these are bookmarks, etc.
 
 *mozilla-1.0_rc3-r50 (31 May 2002)
   31 May 2002; Spider <spider@gentoo.org> :
