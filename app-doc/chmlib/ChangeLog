@@ -1,6 +1,9 @@
 # ChangeLog for app-doc/chmlib
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-doc/chmlib/ChangeLog,v 1.8 2004/06/30 16:32:03 sergey Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-doc/chmlib/ChangeLog,v 1.9 2004/12/20 02:35:47 jhuebel Exp $
+
+  19 Dec 2004; Jason Huebel <jhuebel@gentoo.org> chmlib-0.35.ebuild:
+  stable on amd64
 
 *chmlib-0.33 (30 Jun 2004)
 
