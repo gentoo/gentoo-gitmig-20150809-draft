@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/sdif
 # Copyright 1999-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/sdif/ChangeLog,v 1.3 2004/11/11 09:48:25 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/sdif/ChangeLog,v 1.4 2004/12/19 05:23:35 eradicator Exp $
+
+  18 Dec 2004; Jeremy Huddleston <eradicator@gentoo.org> sdif-3.8.6.ebuild:
+  Stable amd64, x86.  Added to ~sparc.
 
   11 Nov 2004; Jeremy Huddleston <eradicator@gentoo.org> sdif-3.8.6.ebuild:
   Added to ~amd64.
