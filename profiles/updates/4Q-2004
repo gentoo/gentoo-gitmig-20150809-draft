@@ -1,3 +1,4 @@
+move sys-apps/memdump app-forensics/memdump
 slotmove dev-dotnet/gtk-sharp 0 1
 move sys-apps/irda-utils net-wireless/irda-utils
 move app-i18n/imhangul_status_applet app-i18n/imhangul-status-applet
