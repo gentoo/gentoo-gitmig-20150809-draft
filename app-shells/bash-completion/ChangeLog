@@ -1,6 +1,13 @@
 # ChangeLog for app-shells/bash-completion
 # Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.52 2004/01/23 00:13:24 joker Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-shells/bash-completion/ChangeLog,v 1.53 2004/01/25 15:27:06 joker Exp $
+
+*bash-completion-20040101-r1 (25 Jan 2004)
+
+  25 Jan 2004; Christian Birchinger <joker@gentoo.org>
+  bash-completion-20040101-r1.ebuild, files/gentoo.completion-20040101-r1:
+  All optional contrib scripts are now installed in /usr/share/bash-completion
+  and can be symlinked to /etc/bash_completion.d
 
   23 Jan 2004; Christian Birchinger <joker@gentoo.org>
   bash-completion-20040101.ebuild:
