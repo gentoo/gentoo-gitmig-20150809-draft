@@ -1,6 +1,12 @@
 # ChangeLog for x11-wm/windowlab
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowlab/ChangeLog,v 1.1 2003/06/20 18:14:43 mkeadle Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-wm/windowlab/ChangeLog,v 1.2 2003/07/21 01:21:29 raker Exp $
+
+*windowlab-1.12 (20 Jul 2003)
+
+  20 Jul 2003; Nick Hadaway <raker@gentoo.org> windowlab-1.12.ebuild:
+  Version bump.  Bug fixes and feature enhancements.  (Even though the
+  author has said there will be no more new features) :)  
 
 *windowlab-1.07 (20 Jun 2003)
 
