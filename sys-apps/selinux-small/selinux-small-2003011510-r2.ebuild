@@ -1,12 +1,13 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/selinux-small-2003011510-r2.ebuild,v 1.1 2003/03/20 06:27:21 method Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-apps/selinux-small/selinux-small-2003011510-r2.ebuild,v 1.2 2003/03/21 19:19:02 method Exp $
 
 DESCRIPTION="SELinux policy compiler and example policies"
 HOMEPAGE="http://www.nsa.gov/selinux"
 SRC_URI="http://www.nsa.gov/selinux/archives/${P}.tgz
 	 http://www.coker.com.au/selinux/selinux-small/selinux-small_2003011510-7.diff.gz
 	 http://www.coker.com.au/selinux/policy.tgz"
+
 LICENSE="GPL-1"
 SLOT="0"
 S="${WORKDIR}/selinux"
@@ -17,8 +18,7 @@ LIBSECURE="-I${S}/libsecure/include -L${S}/libsecure/src"
 KEYWORDS="~x86"
 IUSE="selinux"
 DEPEND="<sys-libs/glibc-2.3.2
-	>=selinux-sources-2.4.20-r1
-	>=yacc-1.9.1"
+	>=selinux-sources-2.4.20-r1"
 
 pkg_setup() {
 	use selinux || eend 1 "You must have selinux USE var"
@@ -33,7 +33,9 @@ src_compile() {
 	mv -f Makefile.new Makefile
 
 	cd ${S}
+
 	epatch ${WORKDIR}/selinux-small_2003011510-7.diff
+	epatch ${FILESDIR}/${P}-bison.diff
 
 	einfo "Compiling checkpolicy"
 	cd ${S}/module
