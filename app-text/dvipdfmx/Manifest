@@ -1,19 +1,19 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-MD5 8e82a3622784d864fd4bdab772d87759 ChangeLog 3598
-MD5 f969c2314bf90fbf09b6e2df213135fa dvipdfmx-20040411.ebuild 1298
-MD5 d93e323bea2b27eb24cc78b43b9f4680 dvipdfmx-20031116.ebuild 1387
 MD5 716e3be30eefef3072ad7744502a0066 dvipdfmx-20050201.ebuild 1673
+MD5 c1687560c53f42b46d685e073d6ef219 ChangeLog 3697
 MD5 cdd44376f167de2798f3a8ad0ee6adc8 metadata.xml 849
+MD5 d93e323bea2b27eb24cc78b43b9f4680 dvipdfmx-20031116.ebuild 1387
+MD5 5a986c4416daad866d96c173a54ad900 dvipdfmx-20040411.ebuild 1295
 MD5 ff2ba9bd7b96c09aa5781527360eebd0 files/digest-dvipdfmx-20050201 70
 MD5 dc729b206342848e4ce5b3d283694bff files/digest-dvipdfmx-20031116 134
-MD5 4354a2b6ae045110960c75cddcf06476 files/digest-dvipdfmx-20040411 69
 MD5 e3a978c6844605fa75e78f42a40b6948 files/dvipdfmx-config-gentoo.diff 414
+MD5 4354a2b6ae045110960c75cddcf06476 files/digest-dvipdfmx-20040411 69
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1-ecc0.1.6 (GNU/Linux)
+Version: GnuPG v1.4.1 (GNU/Linux)
 
-iD8DBQFCSxrDKRy60XGEcJIRAkVLAKCDINJa01lv4Ba5K4fqMMB6b7huYACgjYHa
-I4kePyV3wouK+cjf3nwlYyw=
-=2uVS
+iD8DBQFCTEqKKf2g/qXtneoRAnPXAJ9zYu9kaUTyWtyv2T9uFq5iP6cL5ACffzGk
+QIKyuBewa5mSZ3B3H6/ayHo=
+=JMNr
 -----END PGP SIGNATURE-----
