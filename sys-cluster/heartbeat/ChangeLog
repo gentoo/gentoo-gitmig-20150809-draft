@@ -1,10 +1,10 @@
 # ChangeLog for sys-cluster/heartbeat
 # Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.11 2003/11/21 17:55:51 iggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-cluster/heartbeat/ChangeLog,v 1.12 2003/11/21 17:57:37 iggy Exp $
 
   21 Nov 2003; Brian Jackson <iggy@gentoo.org> heartbeat-1.1.3.ebuild:
   ltmain.sh doesn't like the new POSIX semantics, adding an export POSIX_VER to
-  the top
+  the top, thanks to martin.hajduch@assyst-intl.com for pointing this out
 
   13 Nov 2003; <tuxus@gentoo.org> heartbeat-1.1.3.ebuild:
   added mips to KEYWORDS
