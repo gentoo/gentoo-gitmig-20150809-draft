@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/wmium-1.0.9.ebuild,v 1.3 2004/08/08 01:04:17 slarti Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmium/wmium-1.0.9.ebuild,v 1.4 2004/08/12 09:44:17 dragonheart Exp $
 
 IUSE="gtk"
 
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.earthmagic.org/?software"
 SRC_URI="http://www.earthmagic.org/files/${P}.tar.gz"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 S=${WORKDIR}/${PN}
 DEPEND="virtual/libc
 	virtual/x11
