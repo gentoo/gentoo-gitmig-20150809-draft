@@ -1,15 +1,7 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 3ed99d62f6bb392cbe7df1328df7ae22 ChangeLog 2378
-MD5 0b2d75d6467d74ad134bc21130683045 cpufreqd-1.1.2-r1.ebuild 1243
-MD5 9a09f8d531c582e78977dbfd96edc1f2 metadata.xml 164
-MD5 1ecbd62bec29d7ef35701b3c71ffdc94 files/1.1.2-prefer-sysfs.patch 921
+MD5 85c3e37d63945c103731ffa679436890 cpufreqd-1.2.2.ebuild 768
+MD5 bd344950cfb020021e43f39c17ff7556 ChangeLog 2623
+MD5 b280eebc74d70d85e664debf1adce2c3 metadata.xml 255
+MD5 cc6e6f72ccd258c507269d0549adaee1 cpufreqd-1.1.2-r1.ebuild 1241
 MD5 d80d3c22801187272f72a7de7fbd1bb1 files/digest-cpufreqd-1.1.2-r1 66
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.9.8 (GNU/Linux)
-
-iD8DBQFBBu8vHTu7gpaalycRAmfPAJ9ORhnlXPoy9Y2lPku4dSzyIR7wVACgkpRB
-0baP0Wz5NgJYJBhD1QE0ofE=
-=ogmb
------END PGP SIGNATURE-----
+MD5 67d3999fd7d01ffce53d07c879735c6e files/digest-cpufreqd-1.2.2 66
+MD5 1ecbd62bec29d7ef35701b3c71ffdc94 files/1.1.2-prefer-sysfs.patch 921
