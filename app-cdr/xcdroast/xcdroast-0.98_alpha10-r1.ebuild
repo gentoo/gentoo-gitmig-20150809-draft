@@ -1,7 +1,7 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# Author Ben Lutgens <blutgens@sistina.com> 
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha10-r1.ebuild,v 1.1 2002/06/05 02:39:55 lostlogic Exp $
+# Author Ben Lutgens <lamer@gentoo.org>
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/xcdroast/xcdroast-0.98_alpha10-r1.ebuild,v 1.2 2002/06/12 03:23:49 lamer Exp $
 
 S=${WORKDIR}/xcdroast-0.98alpha10
 DESCRIPTION="Menu based front-end to mkisofs and cdrecord"
