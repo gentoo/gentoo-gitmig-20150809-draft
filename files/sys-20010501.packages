@@ -48,7 +48,7 @@
 ./sys-apps/most/most-4.9.0-r2.ebuild
 ./sys-apps/net-tools/net-tools-1.59.ebuild
 ./sys-apps/netkit-base/netkit-base-0.17-r2.ebuild
-./sys-apps/portage/portage-1.5-r4.ebuild
+./sys-apps/portage/portage-1.5-r5.ebuild
 ./sys-apps/procps/procps-2.0.6-r1.ebuild
 ./sys-apps/psmisc/psmisc-19-r2.ebuild
 ./sys-apps/raidtools/raidtools-0.90-r2.ebuild

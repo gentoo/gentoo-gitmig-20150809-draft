@@ -11,10 +11,7 @@ sys-libs/ncurses
 sys-libs/pam     
 sys-libs/readline  
 sys-libs/zlib
-
 sys-apps/at
-#Hmmm... having baselayout in here may not be a good idea
-sys-apps/baselayout
 sys-apps/bash
 sys-apps/bzip2
 sys-apps/console-data
@@ -61,7 +58,6 @@ sys-apps/setserial
 sys-apps/sh-utils
 sys-apps/shadow
 sys-apps/sharutils
-sys-apps/shtool
 sys-apps/star
 sys-apps/sysklogd
 sys-apps/sysvinit
