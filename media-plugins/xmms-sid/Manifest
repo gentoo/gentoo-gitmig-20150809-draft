@@ -1,20 +1,10 @@
------BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA1
-
-MD5 c559ff270919261f8eed03500423bdba ChangeLog 2518
-MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
-MD5 3f4cdf5c0f9ad756390d6722eaff9e4b xmms-sid-0.7.3.ebuild 608
 MD5 e94fd0958471b9c692243346d2effa8a xmms-sid-0.7.4.ebuild 607
-MD5 92428b1e7a98c8624fbb3d01cc0cccc7 xmms-sid-0.8.0_beta8.ebuild 682
+MD5 76f15b268260efd3a7e8226f09fb5994 ChangeLog 2625
 MD5 6494b87619e9fae0594ff332e30e70de xmms-sid-0.8.0_beta10.ebuild 1040
-MD5 9d2c73cc740feebe60e4d8c64a9bf20c files/digest-xmms-sid-0.7.3 67
-MD5 9f2a9e14baa6d0132bc640fd61208aff files/digest-xmms-sid-0.7.4 67
+MD5 3f4cdf5c0f9ad756390d6722eaff9e4b xmms-sid-0.7.3.ebuild 608
+MD5 92428b1e7a98c8624fbb3d01cc0cccc7 xmms-sid-0.8.0_beta8.ebuild 682
+MD5 a1eaeb2ae801daeb712c90c060e922dc metadata.xml 158
 MD5 d1e03d2763331e5973e88b05d52cc3eb files/digest-xmms-sid-0.8.0_beta10 72
 MD5 073e30620c46661936b6205498f10267 files/digest-xmms-sid-0.8.0_beta8 71
------BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.6 (GNU/Linux)
-
-iD8DBQFBaZ32ArHZZzCEUG0RAneyAJ4rflAbXPkk69SC5Ut8C3Z8bqlpUACfU2mv
-9B+7NEmKXaarMMPqNFR9HLo=
-=9p5R
------END PGP SIGNATURE-----
+MD5 9f2a9e14baa6d0132bc640fd61208aff files/digest-xmms-sid-0.7.4 67
+MD5 9d2c73cc740feebe60e4d8c64a9bf20c files/digest-xmms-sid-0.7.3 67
