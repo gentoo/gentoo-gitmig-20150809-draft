@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/jswat-2.16.ebuild,v 1.1 2003/04/30 16:43:32 absinthe Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jswat/jswat-2.16.ebuild,v 1.2 2003/04/30 16:44:01 absinthe Exp $
 
 inherit java-pkg
 
@@ -10,7 +10,7 @@ HOMEPAGE="http://www.bluemarsh.com/java/jswat"
 SRC_URI="http://switch.dl.sourceforge.net/sourceforge/jswat/${PN}-src-${PV}.tar.gz"
 LICENSE="GPL-2"
 SLOT="2"
-KEYWORDS="~x86 ~sparc ~ppc"
+KEYWORDS="x86 sparc ppc"
 DEPEND=">=dev-java/ant-1.4.1"
 RDEPEND=">=virtual/jdk-1.4"
 
