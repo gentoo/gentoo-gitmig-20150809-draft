@@ -1,6 +1,13 @@
 # ChangeLog for app-sci/calc
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/calc/ChangeLog,v 1.5 2004/09/12 20:47:45 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/calc/ChangeLog,v 1.6 2004/11/04 12:18:42 phosphan Exp $
+
+*calc-2.11.10.1 (04 Nov 2004)
+
+  04 Nov 2004; Patrick Kursawe <phosphan@gentoo.org> +calc-2.11.10.1.ebuild,
+  calc-2.11.9.3.ebuild:
+  Version bump, old version declared stable for x86, disabled check if sandbox
+  is present.
 
   12 Sep 2004; Bryan Østergaard <kloeri@gentoo.org> calc-2.11.9.3.ebuild:
   Add ~alpha keyword, bug 62067.
