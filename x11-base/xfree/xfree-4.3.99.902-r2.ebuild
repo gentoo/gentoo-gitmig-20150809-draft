@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.902-r2.ebuild,v 1.4 2004/03/07 21:18:23 psi29a Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xfree/xfree-4.3.99.902-r2.ebuild,v 1.5 2004/03/10 17:28:34 lu_zero Exp $
 
 # Make sure Portage does _NOT_ strip symbols.  We will do it later and make sure
 # that only we only strip stuff that are safe to strip ...
@@ -1048,16 +1048,6 @@ pkg_postinst() {
 		echo
 	fi
 	echo
-	ewarn "BEWARE 1:"
-	ewarn "This version of XFree won't work with ati-drivers-2.5.1-r1"
-	ewarn "if you are using them please unmerge ati-drivers"
-	ewarn " and emerge xfree-drm"
-	echo
-	ewarn "BEWARE 2:"
-	ewarn "If you experience font corruption on OpenOffice.org or similar"
-	ewarn "glitches please remake your XF86Config"
-	echo
-
 	einfo "Please note that the xcursors are in /usr/share/cursors/xfree"
 	einfo "Any custom cursor sets should be placed in that directory"
 	einfo "This is different from the previous versions of 4.3 and"
