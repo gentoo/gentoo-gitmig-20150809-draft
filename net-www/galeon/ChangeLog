@@ -1,7 +1,15 @@
 # ChangeLog for net-www/galeon
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.4 2002/03/30 13:23:31 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/galeon/ChangeLog,v 1.5 2002/03/30 22:15:35 blocke Exp $
 
+*galeon-1.2.0-r3 (30 Mar 2002)
+
+  30 Mar 2002; Bruce A. Locke <blocke@shivan.org> galeon-1.2.0-r3.ebuild :
+
+  The bonobo file chooser has been broken in galeon for quite some time
+  and should be disabled, lest it prevent most gnome users from using
+  galeon ;P
+  
 *galeon-1.2.0-r2 (30 Mar 2002)
 
   30 Mar 2002; Seemant Kulleen <seemant@gentoo.org> galeon-1.2.0-r2.ebuild :
