@@ -1,8 +1,12 @@
 # ChangeLog for net-www/phoenix-bin
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/ChangeLog,v 1.11 2002/11/21 14:55:42 phoenix Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/phoenix-bin/ChangeLog,v 1.12 2002/11/21 22:48:44 gerk Exp $
 
 *phoenix-bin-20021121 (21 Nov 2002)
+
+  21 Nov 2002; Mark Guertin <gerk@gentoo.org> phoenix-bin-20021121.ebuild:
+  set as -ppc -sparc -sparc64 -alpha to avoid confusion, these are all x86
+  binaries (set all builds visible like this)
 
   21 Nov 2002; phoen][x <phoenix@gentoo.org> phoenix-bin-20021121.ebuild,
   files/digest-phoenix-bin-20021121.ebuild :
