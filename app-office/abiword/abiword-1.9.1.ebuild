@@ -1,10 +1,10 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.9.0.ebuild,v 1.2 2003/04/23 16:12:24 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-office/abiword/abiword-1.9.1.ebuild,v 1.1 2003/05/16 16:25:00 foser Exp $
 
-inherit eutils
+inherit eutils debug
 
-IUSE="perl build spell jpeg xml2 gnome"
+IUSE="spell jpeg xml2 gnome"
 
 S=${WORKDIR}/${P}/abi
 DESCRIPTION="Fully featured yet light and fast cross platform word processor."
@@ -24,15 +24,17 @@ DEPEND="virtual/x11
 	>=app-text/wv-0.7.5
 	>=dev-libs/fribidi-0.10.4
 	jpeg?  ( >=media-libs/jpeg-6b-r2 )
-	perl?  ( >=dev-lang/perl-5.6 )
 	( xml2? >=dev-libs/libxml2-2.4.10 : dev-libs/expat )
 	spell? ( >=app-text/aspell-0.50.3 )
 	gnome? ( >=gnome-base/libgnomeui-2.2 
 		>=gnome-base/libgnomeprintui-2.2.1 
-		>=gnome-extra/gal-1.99 )
-	!app-shells/bash-completion"
+		>=gnome-extra/gal-1.99 )"
+
+#	perl?  ( >=dev-lang/perl-5.6 )
+# perl seems broken
 
 # FIXME : do 'real' use switching, add gucharmap support
+# switches do not work by the looks of it
 
 src_unpack() {
 	unpack ${A}
