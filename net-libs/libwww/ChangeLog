@@ -1,6 +1,9 @@
 # ChangeLog for net-libs/libwww
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.20 2004/02/09 02:01:32 vapier Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-libs/libwww/ChangeLog,v 1.21 2004/02/19 20:29:58 usata Exp $
+
+  20 Feb 2004; Mamoru KOMACHI <usata@gentoo.org> libwww-5.4.0-r2.ebuild:
+  Marked stable on all arches. Closing bug #41959
 
 *libwww-5.4.0-r2 (07 Oct 2003)
 
