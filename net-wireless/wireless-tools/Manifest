@@ -10,7 +10,7 @@ MD5 9701177fc7a8e02b8d1da7db7d3cfdb8 wireless-tools-27_pre23.ebuild 1309
 MD5 88af1a2e821d777e27b6034c522efcd7 wireless-tools-26_pre9.ebuild 1019
 MD5 0800eb70077fbb0400860352ba3f3908 wireless-tools-27_pre2-r1.ebuild 1333
 MD5 94316198beb9a17d7ac3820d8fca7655 wireless-tools-27_pre22.ebuild 1298
-MD5 fd133eeb98cf65eb0d24f0760790bcce wireless-tools-26-r1.ebuild 1090
+MD5 ad324a75000ccfbd01ba1e9ffad69d17 wireless-tools-26-r1.ebuild 1095
 MD5 9bd52b7924eea21d0f958496f8edc14e wireless-tools-27_pre26.ebuild 1306
 MD5 802e050ebc4a8045fede12c9010d5722 files/digest-wireless-tools-24 68
 MD5 7fff9cc8445ac11352c7ca684f63e80b files/digest-wireless-tools-25-r1 69
@@ -24,7 +24,7 @@ MD5 b9463dae5339015010d7b58a81b01260 files/digest-wireless-tools-27_pre26 75
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBPnRHHTu7gpaalycRAvG6AJ0bb+EXsG8k6HgXeNhq85F0Z7ODrwCfbHi1
-Hu/js5QNR7wXZ0vjLebae2A=
-=xDof
+iD8DBQFBPnU8HTu7gpaalycRAsGqAKD4ynFbNWD0bkRzX82JVWbuqmC0fgCgy+Gy
+GUtvd+Kvrkp3RY0Xns/2u1A=
+=66HZ
 -----END PGP SIGNATURE-----
