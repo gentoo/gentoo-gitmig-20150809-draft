@@ -1,18 +1,23 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.12.0-r3.ebuild,v 1.10 2004/02/21 20:18:33 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/timidity++/timidity++-2.13.0_rc1.ebuild,v 1.1 2004/02/21 20:18:33 eradicator Exp $
 
-MY_P=TiMidity++-${PV}-pre1
+MY_PV=${PV/_/-}
+MY_P=TiMidity++-${MY_PV}
 S=${WORKDIR}/${MY_P}
+
 DESCRIPTION="A handy MIDI to WAV converter with OSS and ALSA output support"
-HOMEPAGE="http://www.goice.co.jp/member/mo/timidity/"
-SRC_URI="http://www.goice.co.jp/member/mo/timidity/dist/${MY_P}.tar.bz2"
+HOMEPAGE="http://timidity.sourceforge.net/"
+SRC_URI="mirror://sourceforge/timidity/${MY_P}.tar.bz2"
+RESTRICT="nomirror"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc ~amd64 ~sparc"
+KEYWORDS="~x86 ~ppc ~amd64 ~sparc"
 IUSE="oss nas esd motif X gtk oggvorbis tcltk slang alsa"
+
 inherit gnuconfig
+
 
 RDEPEND=">=sys-libs/ncurses-5.0
 	X? ( >=x11-base/xfree-4.0 )
@@ -27,12 +32,6 @@ RDEPEND=">=sys-libs/ncurses-5.0
 
 DEPEND="${RDEPEND}
 	sys-devel/autoconf"
-
-src_unpack() {
-	unpack ${A}
-	cd ${S}
-	epatch ${FILESDIR}/${P}-alsalib-fix.patch || die "Alsalib-1.0 patch failed"
-}
 
 src_compile() {
 	local myconf
