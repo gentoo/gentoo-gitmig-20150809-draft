@@ -1,6 +1,6 @@
 # Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-fps/doomlegacy/doomlegacy-1.41-r1.ebuild,v 1.2 2003/12/29 05:32:36 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-fps/doomlegacy/doomlegacy-1.41-r1.ebuild,v 1.3 2003/12/29 15:57:15 vapier Exp $
 
 inherit games eutils
 
@@ -13,12 +13,13 @@ SRC_URI="mirror://sourceforge/doomlegacy/legacy_${PV/./}_src.tar.gz
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="x86 ppc"
-IUSE="sdl"
+IUSE="sdl X dga esd"
 
 DEPEND="x86? ( >=dev-lang/nasm-0.98 )
 	>=sys-apps/sed-4
 	virtual/opengl
 	virtual/x11
+	esd? ( media-sound/esound )
 	sdl? ( media-libs/libsdl media-libs/sdl-mixer )"
 
 S=${WORKDIR}/legacy_${PV//.}_src
@@ -47,48 +48,55 @@ src_unpack() {
 
 src_compile() {
 	# this is ugly but it's late (here) and it works
-	local useasm=
-	[ `use x86` ] && useasm="USEASM=1"
-	local usesdl=
-	[ `use sdl` ] && usesdl="SDL=1"
+	local makeopts=""
 	local redosnd=0
-	make \
-		EXTRAOPTS="${CFLAGS}" \
-		LINUX=1 \
-		X=1 \
-		${useasm} \
-		${usesdl} \
-		|| redosnd=1
-	if [ ${redosnd} -eq 1 ] ; then
-		cd linux_x/sndserv
-		make clean || die "clean snd srv failed"
-		make EXTRAOPTS="${CFLAGS}" || die "snd serv failed"
-	fi
-	cd ${S}
-	make \
-		EXTRAOPTS="${CFLAGS}" \
-		LINUX=1 \
-		X=1 \
-		${useasm} \
-		${usesdl} \
-		|| die "build failed"
+	local interfaces=""
+	[ `use sdl` ] && interfaces="${interfaces} SDL"
+	[ `use X` ] && interfaces="${interfaces} X"
+	[ -z "${interfaces}" ] && interfaces="X"
+	mkdir ${WORKDIR}/my-bins
+	for i in ${interfaces} ; do
+		redosnd=0
+		case ${i} in
+			SDL)
+				makeopts="SDL=1";;
+			X)
+				makeopts="LINUX=1 X=1"
+				[ `use x86` ] && makeopts="${makeopts} USEASM=1"
+				[ `use dga` ] && makeopts="${makeopts} WITH_DGA=1"
+				[ `use esd` ] && makeopts="${makeopts} HAVE_ESD=1";;
+		esac
+		emake EXTRAOPTS="${CFLAGS}" ${makeopts} || redosnd=1
+		if [ ${redosnd} -eq 1 ] ; then
+			cd linux_x/sndserv
+			emake clean || die "clean snd srv failed"
+			emake EXTRAOPTS="${CFLAGS}" || die "snd serv failed"
+		fi
+		cd ${S}
+		emake EXTRAOPTS="${CFLAGS}" ${makeopts} || die "build failed"
+		mv \
+			${WORKDIR}/bin/* \
+			linux_x/musserv/linux/musserver \
+			linux_x/sndserv/linux/llsndserv \
+			${WORKDIR}/my-bins/
+		rm ${WORKDIR}/objs/*
+	done
 }
 
 src_install() {
-	dogamesbin \
-		linux_x/musserv/linux/musserver \
-		linux_x/sndserv/linux/llsndserv \
-		${WORKDIR}/bin/llxdoom
-	use sdl && dogamesbin ${WORKDIR}/bin/lsdldoom
-	exeinto ${GAMES_LIBDIR}/${PN}
-	doexe ${WORKDIR}/bin/r_opengl.so
-
-	insinto ${GAMES_DATADIR}/${PN}
-	doins ${WORKDIR}/doom1.wad
-	newins ${WORKDIR}/legacy-${PV}.dat legacy.dat
-
 	dohtml _doc/*.html
 	rm _doc/*.html
 	dodoc _doc/*
+
+	cd ${WORKDIR}
+	exeinto ${GAMES_LIBDIR}/${PN}
+	doexe my-bins/r_opengl.so
+	rm my-bins/r_opengl.so
+	dogamesbin my-bins/*
+
+	insinto ${GAMES_DATADIR}/${PN}
+	doins doom1.wad
+	newins legacy-${PV}.dat legacy.dat
+
 	prepgamesdirs
 }
