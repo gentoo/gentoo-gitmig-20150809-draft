@@ -1,12 +1,12 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.                                 
 # Distributed under the terms of the GNU General Public License v2              
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalc/wmcalc-0.3.ebuild,v 1.1 2002/10/24 17:56:41 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/wmcalc/wmcalc-0.3.ebuild,v 1.2 2002/12/02 18:31:21 drobbins Exp $
 
 DESCRIPTION="A WindowMaker DockApp calculator"
 #The homepage is not working, but it is what the source lists
 HOMEPAGE="http://members.access1.net/ehflora/"
 SRC_URI="http://ftp.debian.org/debian/pool/main/w/wmcalc/${PN}_${PV}.orig.tar.gz"
-
+SLOT="0"
 LICENSE="GPL-2"
 KEYWORDS="x86"
 DEPEND="x11-base/xfree"
