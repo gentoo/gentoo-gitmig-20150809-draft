@@ -1,6 +1,10 @@
 # ChangeLog for media-gfx/gimp-freetype
 # Copyright 1999-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-freetype/ChangeLog,v 1.10 2004/04/26 02:14:18 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-freetype/ChangeLog,v 1.11 2004/06/22 14:40:05 leonardop Exp $
+
+  22 Jun 2004; Leonardo Boshell <leonardop@gentoo.org>
+  gimp-freetype-0.5.ebuild:
+  Marked stable on x86.
 
   25 Apr 2004; Aron Griffis <agriffis@gentoo.org> gimp-freetype-0.2-r3.ebuild:
   Add die following econf for bug 48950
