@@ -1,6 +1,13 @@
 # ChangeLog for dev-java/jdbc3-postgresql
 # Copyright 2000-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-postgresql/ChangeLog,v 1.6 2004/08/16 07:12:53 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/jdbc3-postgresql/ChangeLog,v 1.7 2004/09/26 13:48:19 axxo Exp $
+
+*jdbc3-postgresql-7.4.5 (26 Sep 2004)
+
+  26 Sep 2004; Thomas Matthijs <axxo@gentoo.org>
+  +jdbc3-postgresql-7.4.5.ebuild:
+  Now builds from source, Ebuild submitted by Hendrik Sticher
+  <hendrik_sticher@gmx.de> Thanks, bug 63251
 
   16 Aug 2004; <SeJo@gentoo.org> jdbc3-postgresql-7.3.ebuild:
   7.3 stable added 7.4
