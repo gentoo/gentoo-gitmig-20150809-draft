@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License, v2 or later
-# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/popt-1.6.3.ebuild,v 1.5 2002/08/01 18:46:28 seemant Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-libs/popt/popt-1.6.3.ebuild,v 1.6 2002/08/02 03:28:38 gerk Exp $
 
 S=${WORKDIR}/${P}
 DESCRIPTION="Parse Options - Command line parser"
@@ -9,7 +9,7 @@ HOMEPAGE="http://www.rpm.org"
 
 SLOT="0"
 LICENSE="as-is"
-KEYWORDS="x86"
+KEYWORDS="x86 ppc"
 
 DEPEND="nls? ( sys-devel/gettext )"
 
