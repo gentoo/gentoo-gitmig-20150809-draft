@@ -1,6 +1,9 @@
 # ChangeLog for media-video/kino
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.23 2004/10/27 13:19:43 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/ChangeLog,v 1.24 2004/10/28 14:02:30 phosphan Exp $
+
+  28 Oct 2004; Patrick Kursawe <phosphan@gentoo.org> kino-0.7.4.ebuild:
+  Removing imlib dependency
 
 *kino-0.7.4 (27 Oct 2004)
 

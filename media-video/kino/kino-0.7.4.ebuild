@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-0.7.4.ebuild,v 1.1 2004/10/27 13:19:43 phosphan Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-video/kino/kino-0.7.4.ebuild,v 1.2 2004/10/28 14:02:30 phosphan Exp $
 
 inherit eutils
 
@@ -18,7 +18,6 @@ DEPEND="x11-libs/gtk+
 	>=gnome-base/libgnomeui-2
 	>=gnome-base/libgnome-2
 	>=dev-libs/glib-2
-	media-libs/imlib
 	dev-libs/libxml2
 	media-libs/audiofile
 	media-sound/esound
