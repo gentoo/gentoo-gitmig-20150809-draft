@@ -21,6 +21,10 @@
 ##   End example
 ##
 
+* <seemant@gentoo.org> (09 Sep 2002)
+# masked coz it is old and broken
+=app-games/quakeforge-0.5.0
+
 # <phoenix@gentoo.org> (09 Sep 2002)
 # masked for testing
 >=app-emulation/wine-20020804
