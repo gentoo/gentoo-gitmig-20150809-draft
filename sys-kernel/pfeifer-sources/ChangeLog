@@ -1,17 +1,25 @@
 # ChangeLog for sys-kernel/pfeifer-sources
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pfeifer-sources/ChangeLog,v 1.5 2003/05/05 02:22:45 pfeifer Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-kernel/pfeifer-sources/ChangeLog,v 1.6 2003/05/08 16:00:29 pfeifer Exp $
 
   TODO:
     better ide chipset support (ie. CSB6)
     fine tune gcc optimizations (yes, there is a bit more to look @)
-    some usb driver updates (ie. WinTV USB)
-    a few other hardware updates in prep for 1.4
     
   * Maybe:
     RSBAC
     NPTL (doubtful)
     skas - probably through yet another use flag... cause most will *not* want this
+
+*pfeifer-sources-2.4.20.1_pre11 (08 May 2003)
+
+04 May 2003: Jay Pfeifer <pfeifer@gentoo-.org> pfeifer-sources-2.4.20._pre11.ebuild
+ Changes:
+ * Added support for ipvs
+ * Added support for usbvision
+ * Added vesafb fix
+ * Few minor corrections
+ * Other things I am forgetting to mention :)
 
 *pfeifer-sources-2.4.20.1_pre10 (04 May 2003)
 
