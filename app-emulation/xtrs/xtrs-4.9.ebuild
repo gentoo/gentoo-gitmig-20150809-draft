@@ -1,6 +1,6 @@
 # Copyright 2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/xtrs-4.9.ebuild,v 1.6 2002/10/20 18:37:53 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/xtrs/xtrs-4.9.ebuild,v 1.7 2002/11/04 17:49:57 seemant Exp $
 
 DESCRIPTION="XTRS 4.9.0 - RadioShack TRS80 Emulator, inc. FreeWare ROM & LDOS Image"
 HOMEPAGE="http://www.tim-mann.org/trs80.html"
@@ -40,9 +40,9 @@ src_install () {
 	### which fails miserablly if the directories dont exist, we'll create them
 	### first to keep everthing smiley happy
 
-	mkdir -p ${D}/usr/bin
-	mkdir -p ${D}/usr/share/xtrs
-	mkdir -p ${D}/usr/share/man/man1
+	dodir /usr/bin
+	dodir /usr/share/xtrs
+	dodir /usr/share/man/man1
 
 	### and now run the make install script
 

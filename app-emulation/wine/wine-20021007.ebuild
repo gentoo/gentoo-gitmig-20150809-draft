@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20021007.ebuild,v 1.3 2002/10/24 23:23:44 blizzy Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/wine/wine-20021007.ebuild,v 1.4 2002/11/04 17:49:03 seemant Exp $
 
 IUSE="nas arts cups opengl alsa"
 
@@ -61,11 +61,11 @@ src_install () {
 	make ${WINEMAKEOPTS} install || die
 	
 	# Needed for later installation
-	mkdir -p ${D}/usr/bin
+	dodir /usr/bin
  
 	### Creation of /usr/lib/wine/.data 
 	# Setting up fake_windows
-	mkdir ${D}/usr/lib/wine/.data
+	dodir /usr/lib/wine/.data
 	cd ${D}/usr/lib/wine/.data
 	tar jxvf ${FILESDIR}/${P}-fake_windows.tar.bz2
 	chown root:root fake_windows/ -R

@@ -1,6 +1,6 @@
 # Copyright 1999-2002 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-emulation/pose/pose-3.5-r1.ebuild,v 1.3 2002/10/20 18:37:50 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-emulation/pose/pose-3.5-r1.ebuild,v 1.4 2002/11/04 17:48:31 seemant Exp $
 
 S=${WORKDIR}/Emulator_Src_3.5
 FLTK_PV=1.0.11
@@ -75,8 +75,8 @@ src_install() {
 	insinto /usr/share/doc/${PF}
 	doins *.pdf
 
-	mkdir -p ${D}/usr/share/pose/downloads
-	mkdir -p ${D}/usr/share/pose/roms
+	dodir /usr/share/pose/downloads
+	dodir /usr/share/pose/roms
 
 	cd ${S}/ROMTransfer/Source
 	insinto /usr/share/pose/downloads
