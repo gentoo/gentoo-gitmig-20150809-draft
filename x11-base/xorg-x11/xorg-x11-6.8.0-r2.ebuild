@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.49 2004/11/03 20:40:08 spyderous Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-base/xorg-x11/xorg-x11-6.8.0-r2.ebuild,v 1.50 2004/11/04 02:48:06 spyderous Exp $
 
 # Set TDFX_RISKY to "yes" to get 16-bit, 1024x768 or higher on low-memory
 # voodoo3 cards.
@@ -144,7 +144,7 @@ cflag_setup() {
 	# Set up CFLAGS
 	filter-flags "-funroll-loops"
 
-	ALLOWED_FLAGS="-fstack-protector -march -mcpu -O -O1 -O2 -O3 -pipe -fomit-frame-pointer -g -gstabs+ -gstabs -ggdb"
+	ALLOWED_FLAGS="-fstack-protector -march -mcpu -O -O1 -O2 -O3 -Os -pipe -fomit-frame-pointer -g -gstabs+ -gstabs -ggdb"
 	# arch-specific section added by popular demand
 	case "${ARCH}" in
 		mips)	ALLOWED_FLAGS="${ALLOWED_FLAGS} -mtune -mips1 -mips2 -mips3 -mips4 -mabi"
@@ -311,34 +311,47 @@ host_def_setup() {
 		# Set location of DRM source to be installed
 		echo "#define InstSrcDir ${ROOT}/usr/src/${PF}" >> ${HOSTCONF}
 
-		# Bug #12775 .. fails with -Os.
-		replace-flags "-Os" "-O2"
+		if [ "$(gcc-major-version)" -eq "3" ]; then
+			if use x86; then
+				# Should fix bug #4189.  gcc 3.x have problems with
+				# -march=pentium4 and -march=athlon-tbird
+				# Seems fixed on 3.3 and higher
+				if [ "$(gcc-minor-version)" -le "2" ]; then
+					replace-cpu-flags pentium4 pentium3
+					replace-cpu-flags athlon athlon-tbird
+				fi
 
-		if [ "$(gcc-version)" != "2.95" ]; then
-			# Should fix bug #4189.  gcc 3.x have problems with -march=pentium4
-			# and -march=athlon-tbird
-			# Seems fixed on 3.3 and higher
+				#to fix #56702 for now, thanks Spanky
+				if [ "$(gcc-minor-version)" -eq "4" ]; then
+					if test_flag -mno-sse2; then
+						append-flags -mno-sse2
+					fi
+				fi
 
-			if [ "$(gcc-major-version)" -eq "3" -a "$(gcc-minor-version)" -le "2" ]; then
-				replace-cpu-flags pentium4 pentium3
-				replace-cpu-flags athlon athlon-tbird
-			fi
-
-			#to fix #56702 for now, thanks Spanky
-			[ "$(gcc-version)" == "3.4" ] && use x86 && test_flag -mno-sse2 \
-				&& append-flags -mno-sse2
-
-
-			# Try a fix for #49310, see #50931 for more info. <spyderous>
-			if [ "$(is-flag -fomit-frame-pointer)" ]; then
-				replace-cpu-flags k6 k6-2 k6-3 i586
+				# Try a fix for #49310, see #50931 for more info. <spyderous>
+				if [ "$(is-flag -fomit-frame-pointer)" ]; then
+					replace-cpu-flags k6 k6-2 k6-3 i586
+				fi
 			fi
 
 			# Without this, modules breaks with gcc3
-			if [ "$(gcc-version)" = "3.1" ]; then
+			if [ "$(gcc-minor-version)" -eq "1" ]; then
 				append-flags "-fno-merge-constants"
 				append-flags "-fno-merge-constants"
 			fi
+
+			if [ "$(gcc-minor-version)" -eq "2" ]; then
+				if [ "$(gcc-micro-version)" -lt "2" ]; then
+					# Bug #12775 .. fails with -Os.
+					replace-flags "-Os" "-O2"
+				fi
+			elif [ "$(gcc-minor-version)" -lt "2" ]; then
+				# Bug #12775 .. fails with -Os.
+				replace-flags "-Os" "-O2"
+			fi
+		elif [ "$(gcc-major-version)" -lt "3" ]; then
+			# Bug #12775 .. fails with -Os.
+			replace-flags "-Os" "-O2"
 		fi
 
 		if ( [ -e "${ROOT}/usr/src/linux" ] \
