@@ -1,6 +1,10 @@
 # ChangeLog for net-irc/konversation
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.8 2003/11/19 23:44:13 gregf Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/net-irc/konversation/ChangeLog,v 1.9 2004/03/01 00:35:38 caleb Exp $
+
+  29 Feb 2004; Caleb Tennis <caleb@gentoo.org> konversation-0.12.ebuild,
+  konversation-0.13.ebuild:
+  x86 stable
 
 *konversation-0.13 (19 Nov 2003)
 
