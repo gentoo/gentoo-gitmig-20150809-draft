@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/eclass/confutils.eclass,v 1.12 2004/08/24 20:55:43 stuart Exp $
+# $Header: /var/cvsroot/gentoo-x86/eclass/confutils.eclass,v 1.13 2005/02/21 14:52:05 stuart Exp $
 #
 # eclass/confutils.eclass
 #		Utility functions to help with configuring a package
@@ -12,14 +12,14 @@
 #
 # ========================================================================
 
-IUSE="$IUSE shared"
+IUSE="$IUSE sharedext"
 
 # ========================================================================
 
 # list of USE flags that need deps that aren't yet in Portage
 # this list was originally added for PHP
 
-CONFUTILS_MISSING_DEPS="adabas birdstep db2 dbmaker empress empress-bcs esoob frontbase hyperwave-api informix ingres interbase mnogosearch msession msql oci8 oracle7 ovrimos pfpro sapdb solid sybase sybase-ct"
+CONFUTILS_MISSING_DEPS="adabas aolserver birdstep caudium continuity db2 dbmaker empress empress-bcs esoob frontbase hyperwave-api informix ingres interbase isapi mnogosearch msession msql nsapi oci8 oracle7 ovrimos pfpro phttpd pi3web sapdb solid sybase sybase-ct tux"
 
 # ========================================================================
 # confutils_init ()
@@ -28,7 +28,7 @@ CONFUTILS_MISSING_DEPS="adabas birdstep db2 dbmaker empress empress-bcs esoob fr
 # this eclass first
 
 confutils_init () {
-	if useq shared ; then
+	if useq sharedext ; then
 		shared="=shared"
 	else
 		shared=
@@ -167,10 +167,14 @@ confutils_use_depend_any () {
 #
 # $1	- extension name
 # $2	- USE flag
+# $3	- optional message to einfo() to the user
 
 enable_extension_disable () {
 	if ! useq "$2" ; then
 		my_conf="${my_conf} --disable-$1"
+		[ -n "$3" ] && einfo "  Disabling $3"
+	else
+		[ -n "$3" ] && einfo "  Enabling $3"
 	fi
 }
 
@@ -185,6 +189,7 @@ enable_extension_disable () {
 # $2	- USE flag
 # $3	- 1 = support shared, 0 = never support shared
 # $4	- additional setting for configure
+# $5	- additional message to einfo out to the user
 
 enable_extension_enable () {
 	local my_shared
@@ -206,11 +211,52 @@ enable_extension_enable () {
 
 	if useq $2 ; then
 		my_conf="${my_conf} --enable-$1$my_shared"
+		[ -n "$5" ] && einfo "  Enabling $5"
 	else
 		my_conf="${my_conf} --disable-$1"
+		[ -n "$5" ] && einfo "  Disabling $5"
 	fi
 }
 
+# ========================================================================
+# enable_extension_enableonly () 
+#
+# This function is like use_enable(), except that it knows about
+# enabling modules as shared libraries, and it supports passing
+# additional data with the switch
+#
+# $1	- extension name
+# $2	- USE flag
+# $3	- 1 = support shared, 0 = never support shared
+# $4	- additional setting for configure
+# $5	- additional message to einfo out to the user
+
+enable_extension_enableonly () {
+	local my_shared
+
+	if [ "$3" == "1" ]; then
+		if [ "$shared+" != "+" ]; then
+			my_shared="${shared}"
+			if [ "$4+" != "+" ]; then
+				my_shared="${my_shared},$4"
+			fi
+		elif [ "$4+" != "+" ]; then
+		  my_shared="=$4"
+		fi
+	else
+		if [ "$4+" != "+" ]; then
+			my_shared="=$4"
+		fi
+	fi
+
+	if useq $2 ; then
+		my_conf="${my_conf} --enable-$1$my_shared"
+		[ -n "$5" ] && einfo "  Enabling $5"
+	else
+		# note: we deliberately do *not* use a --disable switch here
+		[ -n "$5" ] && einfo "  Disabling $5"
+	fi
+}
 # ========================================================================
 # enable_extension_without ()
 #
@@ -220,10 +266,14 @@ enable_extension_enable () {
 #
 # $1	- extension name
 # $2	- USE flag
+# $3	- optional message to einfo() to the user
 
 enable_extension_without () {
 	if ! useq "$2" ; then
 		my_conf="${my_conf} --without-$1"
+		[ -n "$3" ] && einfo "  Disabling $3"
+	else
+		[ -n "$3" ] && einfo "  Enabling $3"
 	fi
 }
 
@@ -237,6 +287,7 @@ enable_extension_without () {
 # $2	- USE flag
 # $3	- 1 = support shared, 0 = never support shared
 # $4	- additional setting for configure
+# $5	- optional message to einfo() out to the user
 
 enable_extension_with () {
 	local my_shared
@@ -258,8 +309,49 @@ enable_extension_with () {
 
 	if useq $2 ; then
 		my_conf="${my_conf} --with-$1$my_shared"
+		[ -n "$5" ] && einfo "  Enabling $5"
 	else
 		my_conf="${my_conf} --without-$1"
+		[ -n "$5" ] && einfo "  Disabling $5"
+	fi
+}
+
+# ========================================================================
+# enable_extension_withonly ()
+#
+# This function is a replacement for use_with.  It supports building
+# extensions as shared libraries,
+
+# $1	- extension name
+# $2	- USE flag
+# $3	- 1 = support shared, 0 = never support shared
+# $4	- additional setting for configure
+# $5	- optional message to einfo() out to the user
+
+enable_extension_withonly () {
+	local my_shared
+
+	if [ "$3" == "1" ]; then
+		if [ "$shared+" != "+" ]; then
+			my_shared="${shared}"
+			if [ "$4+" != "+" ]; then
+				my_shared="${my_shared},$4"
+			fi
+		elif [ "$4+" != "+" ]; then
+		  my_shared="=$4"
+		fi
+	else
+		if [ "$4+" != "+" ]; then
+			my_shared="=$4"
+		fi
+	fi
+
+	if useq $2 ; then
+		my_conf="${my_conf} --with-$1$my_shared"
+		[ -n "$5" ] && einfo "  Enabling $5"
+	else
+		# note - we deliberately do *not* use --without here
+		[ -n "$5" ] && einfo "  Disabling $5"
 	fi
 }
 
