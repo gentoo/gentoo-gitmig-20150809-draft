@@ -12,7 +12,7 @@ DEPEND="media-gfx/sane-backends media-gfx/gimp"
 
 src_compile() {
 
-	./configure --enable-gimp --prefix=/usr --mandir=/usr/man --host=${CHOST} || die
+	./configure --prefix=/usr --mandir=/usr/man --host=${CHOST} || die
 	make || die
 
 }
