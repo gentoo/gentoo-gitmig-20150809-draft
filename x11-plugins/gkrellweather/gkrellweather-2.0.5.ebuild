@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellweather/gkrellweather-2.0.5.ebuild,v 1.7 2004/01/05 13:14:25 weeve Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellweather/gkrellweather-2.0.5.ebuild,v 1.8 2004/06/19 04:09:02 kloeri Exp $
 
-S=${WORKDIR}/${P}
+IUSE=""
 DESCRIPTION="GKrellM2 Plugin that monitors a METAR station and displays weather
 info"
 SRC_URI="http://kmlinux.fjfi.cvut.cz/~makovick/gkrellm/${P}.tgz"
@@ -28,10 +28,6 @@ src_unpack() {
 		-e "s:GrabWeather:GrabWeather2:g" \
 		gkrellweather.c
 
-}
-
-src_compile() {
-	emake || die
 }
 
 src_install () {

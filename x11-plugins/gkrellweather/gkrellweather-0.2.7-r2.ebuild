@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellweather/gkrellweather-0.2.7-r2.ebuild,v 1.13 2004/03/26 23:10:06 aliz Exp $
+# $Header: /var/cvsroot/gentoo-x86/x11-plugins/gkrellweather/gkrellweather-0.2.7-r2.ebuild,v 1.14 2004/06/19 04:09:02 kloeri Exp $
 
 IUSE=""
 DEBPATCH=${PN}_${PV}-1.diff.gz
@@ -23,10 +23,6 @@ RDEPEND="${DEPEND}
 src_unpack() {
 	unpack ${P}.tar.gz
 	zcat ${DISTDIR}/${DEBPATCH} | patch -d ${P} -p1
-}
-
-src_compile() {
-	emake || die
 }
 
 src_install () {
