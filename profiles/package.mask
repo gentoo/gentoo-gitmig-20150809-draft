@@ -174,16 +174,16 @@ gnome-apps/ggv
 gnome-libs/bonobo-conf
 gnome-apps/evolution
 app-admin/procman
+gnome-apps/glade
+gnome-apps/glademm
+gnome-apps/anjuta
 
 # Don't use these.
 # These are the old locations. Will be removed when new locations are tested.
 # /Hallski
 
-dev-util/anjuta
 net-im/gabber
 app-misc/gentoo
-dev-util/glade
-dev-util/glademm
 dev-util/glimmer
 app-office/gnofin
 app-arch/gnorpm
