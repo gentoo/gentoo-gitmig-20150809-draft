@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-util/fenris/fenris-0.07m-r1.ebuild,v 1.4 2004/06/25 02:31:31 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-util/fenris/fenris-0.07m-r1.ebuild,v 1.5 2004/07/09 22:00:08 lv Exp $
 
 inherit eutils
 
@@ -19,7 +19,7 @@ DEPEND=">=sys-apps/portage-2.0.47-r10
 	app-misc/screen
 	sys-libs/ncurses
 	dev-libs/openssl
-	sys-kernel/linux-headers
+	virtual/os-headers
 	sys-devel/gdb"
 RDEPEND="sys-apps/gawk"
 
