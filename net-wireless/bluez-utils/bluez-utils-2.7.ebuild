@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.7.ebuild,v 1.6 2004/08/21 04:45:07 puggy Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/bluez-utils-2.7.ebuild,v 1.7 2004/10/03 20:18:20 sekretarz Exp $
 
 inherit eutils
 
@@ -76,7 +76,7 @@ src_install() {
 pkg_postinst() {
 	einfo ""
 	einfo "A startup script has been installed in /etc/init.d/bluetooth."
-	einfo "RFComm devices are found in /dev/bluetooh/rfcomm/* instead of /dev/rfcomm*"
+	einfo "RFComm devices are found in /dev/bluetooth/rfcomm/* instead of /dev/rfcomm*"
 	einfo "If you need to set a default PIN, edit /etc/bluetooth/pin, and change"
 	einfo "/etc/bluetooth/hcid.conf option 'pin_helper' to /etc/bluetooth/pin."
 	if use gtk; then

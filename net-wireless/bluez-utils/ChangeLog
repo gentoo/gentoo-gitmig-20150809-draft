@@ -1,6 +1,10 @@
 # ChangeLog for net-wireless/bluez-utils
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.30 2004/09/27 01:05:02 lv Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-wireless/bluez-utils/ChangeLog,v 1.31 2004/10/03 20:18:20 sekretarz Exp $
+
+  03 Oct 2004; Karol Wojtaszek <sekretarz@gentoo.org>
+  bluez-utils-2.10.ebuild, bluez-utils-2.7.ebuild:
+  Fix typos in ebuilds, Bug #63519
 
   26 Sep 2004; Travis Tilley <lv@gentoo.org> bluez-utils-2.10.ebuild:
   stable on amd64
