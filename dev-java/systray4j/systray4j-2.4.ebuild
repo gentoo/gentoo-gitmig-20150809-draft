@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-java/systray4j/systray4j-2.4.ebuild,v 1.2 2004/05/05 07:32:55 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-java/systray4j/systray4j-2.4.ebuild,v 1.3 2004/05/13 18:28:21 aliz Exp $
 
 inherit kde java-pkg
 
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/systray/${P}-kde3-src.tar.bz2"
 RESTRICT="nomirror"
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86 ~sparc"
+KEYWORDS="~x86 ~sparc ~amd64"
 DEPEND="=kde-base/kdelibs-3*
 	dev-java/java-config
 	>=virtual/jdk-1.3
@@ -34,6 +34,8 @@ src_unpack() {
 	       -e 's:^KDE3_PATH = .*$:KDE3_PATH = $(KDEDIR):g' \
 	       -e 's:-L/opt/kde3/lib:-L$(KDEDIR)/lib -L$(QTDIR)/lib:g' \
 		${S}/kde/Makefile || die "Could not edit Makefile"
+
+	cd ${S} ; epatch ${FILESDIR}/${P}-fPIC.patch
 }
 
 src_compile() {
