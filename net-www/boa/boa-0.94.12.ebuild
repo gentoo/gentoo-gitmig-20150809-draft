@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-www/boa/boa-0.94.12.ebuild,v 1.12 2004/05/17 16:14:45 usata Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-www/boa/boa-0.94.12.ebuild,v 1.13 2004/06/15 03:17:18 agriffis Exp $
 
 DESCRIPTION="Boa - A very small and very fast http daemon."
 SRC_URI="http://www.boa.org/${P}.tar.gz"
@@ -35,7 +35,7 @@ src_install() {
 	dodoc docs/boa.html || die
 	dodoc docs/boa_banner.png || die
 	doinfo docs/boa.info || die
-	if [ "`use tetex`" ]; then
+	if use tetex; then
 		dodoc docs/boa.dvi || die
 	fi
 
