@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/lufs-0.9.7-r3.ebuild,v 1.1 2004/12/14 17:59:50 genstef Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/lufs-0.9.7-r3.ebuild,v 1.2 2005/01/15 19:50:37 genstef Exp $
 
 inherit eutils
 
@@ -10,10 +10,11 @@ SRC_URI="mirror://sourceforge/lufs/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~x86"
+KEYWORDS="x86"
 IUSE="debug"
 DEPEND="sys-fs/lufis
-		=sys-devel/automake-1.7*
+		|| ( =sys-devel/automake-1.7*
+			=sys-devel/automake-1.8.5-r1 )
 		=sys-devel/autoconf-2.5*"
 
 src_unpack() {
@@ -75,4 +76,5 @@ pkg_postinst() {
 	echo "# lufis fs=sshfs,host=dev.gentoo.org,username=genstef /mnt/lufis/ -s"
 	ewarn "If something does not work for you with this setup please"
 	ewarn "complain to bugs.gentoo.org"
+	einfo "Note: There is also the native sshfs-fuse implementation now"
 }

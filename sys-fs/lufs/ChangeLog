@@ -1,6 +1,9 @@
 # ChangeLog for sys-fs/lufs
-# Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/ChangeLog,v 1.17 2004/12/14 17:59:50 genstef Exp $
+# Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/ChangeLog,v 1.18 2005/01/15 19:50:37 genstef Exp $
+
+  15 Jan 2005; Stefan Schweizer <genstef@gentoo.org> lufs-0.9.7-r3.ebuild:
+  Version 0.9.7-r3 stable on x86, changed einfo to tell about sshfs-fuse
 
 *lufs-0.9.7-r3 (14 Dec 2004)
 

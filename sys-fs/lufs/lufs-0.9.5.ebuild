@@ -1,6 +1,6 @@
-# Copyright 1999-2004 Gentoo Foundation
+# Copyright 1999-2005 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/lufs-0.9.5.ebuild,v 1.4 2004/06/30 17:11:45 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/sys-fs/lufs/lufs-0.9.5.ebuild,v 1.5 2005/01/15 19:50:37 genstef Exp $
 
 DESCRIPTION="User-mode filesystem implementation"
 HOMEPAGE="http://lufs.sourceforge.net/lufs/"
