@@ -1,6 +1,13 @@
 # ChangeLog for net-mail/cyrus-imapd
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.15 2002/11/26 08:07:50 raker Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-mail/cyrus-imapd/ChangeLog,v 1.16 2002/12/04 01:22:06 raker Exp $
+
+*cyrus-imapd-2.1.10 (03 Dec 2002)
+
+  03 Dec 2002; Nick Hadaway <raker@gentoo.org>
+  cyrus-imapd-2.1.10.ebuild, files/digest-cyrus-imapd-2.1.10,
+  files/libsieve-overflow.diff, files/imap-overflow.diff :
+  New ebuild with overflow patches from bug #11537.
 
 *cyrus-imapd-2.1.9-r2 (26 Nov 2002)
 
