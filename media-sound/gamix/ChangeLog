@@ -1,6 +1,10 @@
 # ChangeLog for media-sound/gamix
-# Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/gamix/ChangeLog,v 1.6 2003/12/04 17:33:51 seemant Exp $
+# Copyright 2002-2004 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/media-sound/gamix/ChangeLog,v 1.7 2004/02/17 19:06:35 ciaranm Exp $
+
+  17 Feb 2004; Ciaran McCreesh <ciaranm@gentoo.org> gamix-1.99_p13-r1.ebuild,
+  gamix-1.99_p14-r1.ebuild:
+  Changing to -sparc as we don't have ALSA support
 
 *gamix-1.99_p13-r1 (04 Dec 2003)
 

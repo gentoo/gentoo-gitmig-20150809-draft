@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.75-r1.ebuild,v 1.3 2004/01/22 10:48:51 torbenh Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-sound/alsaplayer/alsaplayer-0.99.75-r1.ebuild,v 1.4 2004/02/17 19:03:54 ciaranm Exp $
 
 IUSE="nas nls esd opengl doc oss gtk oggvorbis alsa"
 
@@ -11,7 +11,7 @@ SRC_URI="http://www.alsaplayer.org/${P}.tar.bz2"
 
 SLOT="0"
 LICENSE="GPL-2"
-KEYWORDS="x86 ~ppc ~sparc ~alpha ~amd64"
+KEYWORDS="x86 ~ppc -sparc ~alpha ~amd64"
 
 DEPEND="alsa? ( >=media-libs/alsa-lib-0.9 )
 	doc? ( app-doc/doxygen )
