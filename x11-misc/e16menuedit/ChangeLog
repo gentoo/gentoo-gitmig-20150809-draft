@@ -1,0 +1,8 @@
+# ChangeLog for x11-misc/e16menuedit
+# Copyright 2000-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
+# $Header: /var/cvsroot/gentoo-x86/x11-misc/e16menuedit/ChangeLog,v 1.1 2003/06/24 00:52:04 vapier Exp $
+
+*e16menuedit-0.1 (23 Jun 2003)
+
+  23 Jun 2003; Mike Frysinger <vapier@gentoo.org> :
+  Initial import.  Ebuild submitted by Nicolas Pouillon <nipo@ssji.net> #23340.
