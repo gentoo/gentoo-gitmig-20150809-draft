@@ -1,8 +1,8 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/enchant-1.1.3.ebuild,v 1.1 2004/02/07 18:52:40 foser Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-text/enchant/enchant-1.1.3.ebuild,v 1.2 2004/03/14 01:23:26 geoman Exp $
 
-inherit gnome2
+inherit gnome2 gnuconfig
 
 DESCRIPTION="Spellchecker wrapping library"
 HOMEPAGE="http://www.abisource.com/enchant/"
@@ -12,7 +12,7 @@ SRC_URI="mirror://sourceforge/abiword/${P}.tar.gz"
 LICENSE="LGPL-2.1"
 SLOT="0"
 
-KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~alpha ~ia64"
+KEYWORDS="~x86 ~ppc ~sparc ~amd64 ~alpha ~ia64 ~mips"
 
 IUSE=""
 # FIXME : some sort of proper spellchecker selection needed
@@ -25,5 +25,8 @@ RDEPEND=">=dev-libs/glib-2
 
 DEPEND="${RDEPEND}
 	dev-util/pkgconfig"
+
+#allow to build on mipslinux systems
+use mips && gnuconfig_update
 
 DOCS="AUTHORS BUGS COPYING.LIB ChangeLog HACKING MAINTAINERS NEWS README TODO"
