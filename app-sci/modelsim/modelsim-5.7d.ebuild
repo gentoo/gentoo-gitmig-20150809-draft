@@ -1,6 +1,6 @@
-# Copyright 1999-2002 Gentoo Technologies, Inc.
+# Copyright 1999-2003 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-sci/modelsim/modelsim-5.7d.ebuild,v 1.1 2003/07/10 19:26:56 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/modelsim/modelsim-5.7d.ebuild,v 1.2 2003/09/08 07:26:32 msterret Exp $
 
 DESCRIPTION="VHDL and mixed-VHDL/Verilog simulator"
 HOMEPAGE="http://www.model.com/"
