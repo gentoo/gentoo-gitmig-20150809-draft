@@ -1,6 +1,11 @@
 # ChangeLog for app-sci/orsa
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/app-sci/orsa/ChangeLog,v 1.10 2004/07/01 19:38:48 eradicator Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-sci/orsa/ChangeLog,v 1.11 2004/09/07 09:15:55 phosphan Exp $
+
+*orsa-0.6.1 (07 Sep 2004)
+
+  07 Sep 2004; Patrick Kursawe <phosphan@gentoo.org> +orsa-0.6.1.ebuild:
+  Version bump
 
   01 Jul 2004; Jeremy Huddleston <eradicator@gentoo.org> orsa-0.3.1.ebuild,
   orsa-0.5.0_rc2.ebuild:
