@@ -1,6 +1,10 @@
 # ChangeLog for media-libs/xine-lib
 # Copyright 2002-2004 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.146 2004/09/20 11:56:13 sejo Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/xine-lib/ChangeLog,v 1.147 2004/09/20 18:09:40 gustavoz Exp $
+
+  20 Sep 2004; Gustavo Zacarias <gustavoz@gentoo.org> xine-lib-1_rc6.ebuild:
+  Stable on sparc wrt #64348, also pulled in a sparc32 thingy that should
+  hopefully allow it to compile
 
   20 Sep 2004; <SeJo@gentoo.org> xine-lib-1_rc6.ebuild:
   marked ppc gsla bug: 64348
