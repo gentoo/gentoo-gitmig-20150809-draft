@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.5.ebuild,v 1.18 2004/06/05 09:50:02 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.5.ebuild,v 1.19 2004/06/07 21:40:36 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -67,7 +67,7 @@ src_compile() {
 		`use_enable doc gtk-doc` \
 		${myconf} || die
 
-	if [ -z "`use aalib`" ] ; then
+	if ! use aalib ; then
 		# Horrible automake brokenness
 		cp plug-ins/common/Makefile plug-ins/common/Makefile.orig
 		cat plug-ins/common/Makefile.orig | \

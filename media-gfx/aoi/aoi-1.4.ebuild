@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/aoi/aoi-1.4.ebuild,v 1.6 2004/03/26 10:51:46 dholm Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/aoi/aoi-1.4.ebuild,v 1.7 2004/06/07 21:38:00 agriffis Exp $
 
 inherit java-pkg
 
@@ -33,7 +33,7 @@ src_install() {
 	use quicktime && DEP_APPEND="jmf"
 	dobin ${FILESDIR}/aoi
 	dodoc HISTORY LICENSE README
-	if [ -n "`use doc`" ] ; then
+	if use doc ; then
 		mv ${WORKDIR}/AoI\ Manual/ ${WORKDIR}/aoi_manual/
 		dohtml -r ${WORKDIR}/aoi_manual/
 	fi

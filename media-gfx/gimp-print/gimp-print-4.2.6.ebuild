@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.2.6.ebuild,v 1.9 2004/06/05 09:52:07 kloeri Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp-print/gimp-print-4.2.6.ebuild,v 1.10 2004/06/07 21:43:50 agriffis Exp $
 
 inherit libtool
 
@@ -43,7 +43,7 @@ src_compile() {
 		&& myconf="${myconf} --with-gimp" \
 		|| myconf="${myconf} --without-gimp"
 
-	if [ "`use cups`" ]; then
+	if use cups; then
 		myconf="${myconf} --with-cups"
 	else
 		myconf="${myconf} --without-cups"
@@ -71,7 +71,7 @@ src_compile() {
 src_install () {
 	make install DESTDIR=${D} || die
 
-	if [ ! "`use ppds`" ]; then
+	if ! use ppds; then
 		rm -fR ${D}/usr/share/cups/model/
 	fi
 

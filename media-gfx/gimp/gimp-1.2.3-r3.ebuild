@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.3-r3.ebuild,v 1.14 2004/01/30 05:52:20 drobbins Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-gfx/gimp/gimp-1.2.3-r3.ebuild,v 1.15 2004/06/07 21:40:36 agriffis Exp $
 
 inherit eutils flag-o-matic
 
@@ -27,7 +27,7 @@ DEPEND="nls? ( sys-devel/gettext )
 	${RDEPEND}"
 
 src_unpack() {
-	if [ "`use threads`" ]; then
+	if use threads; then
 		eerror "I'm sorry I can't build against a threaded perl,"
 		eerror "please remerge perl and libperl without"
 		eerror "'USE=threads' and try again.  (Note: this message"
@@ -88,28 +88,28 @@ src_compile() {
 	local myconf=""
 	local mymake=""
 	local myvars=""
-	if [ -z "`use nls`" ] ; then
+	if ! use nls ; then
 		myconf="${myconf} --disable-nls"
 	fi
 
-	if [ -z "`use perl`" ] ; then
+	if ! use perl ; then
 		myconf="${myconf} --disable-perl"
 	else
 		export  PERL_MM_OPT=' PREFIX=${D}/usr'
 		myconf="${myconf} --enable-perl"
 	fi
 
-	if [ -z "`use python`" ] ; then
+	if ! use python ; then
 		myconf="${myconf} --disable-python"
 	else
 		myconf="${myconf} --enable-python"
 	fi
 
-	if [ -z "`use aalib`" ] ; then
+	if ! use aalib ; then
 		mymake="LIBAA= AA="
 	fi
 
-	if [ -z "`use gnome`" ] ; then
+	if ! use gnome ; then
 		mymake="${mymake} HELPBROWSER="
 	fi
 
@@ -119,7 +119,7 @@ src_compile() {
 		--disable-debug \
 		${myconf} || die
 
-	if [ -z "`use aalib`" ] ; then
+	if ! use aalib ; then
 		# Horrible automake brokenness
 		cp plug-ins/common/Makefile plug-ins/common/Makefile.orig
 		cat plug-ins/common/Makefile.orig | \
@@ -134,11 +134,11 @@ src_compile() {
 src_install() {
 
 	local mymake=""
-	if [ -z "`use aalib`" ] ; then
+	if ! use aalib ; then
 		mymake="LIBAA= AA="
 	fi
 
-	if [ -z "`use gnome`" ] ; then
+	if ! use gnome ; then
 		mymake="${mymake} HELPBROWSER="
 	fi
 
@@ -160,7 +160,7 @@ src_install() {
 	#this next line closes bug #810
 	dosym gimptool-1.2 /usr/bin/gimptool
 
-	if [ "`use gnome`" ] && [ -d ${ROOT}/usr/share/applications ]
+	if use gnome && [ -d ${ROOT}/usr/share/applications ]
 	then
 		insinto /usr/share/applications
 		doins ${FILESDIR}/gimp.desktop
