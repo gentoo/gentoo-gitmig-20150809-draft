@@ -1,6 +1,11 @@
 # ChangeLog for app-admin/usermin
 # Copyright 2002-2003 Gentoo Technologies, Inc.; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.8 2003/02/12 02:27:52 vapier Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-admin/usermin/ChangeLog,v 1.9 2003/02/22 18:36:08 aliz Exp $
+
+*usermin-1.000 (22 Feb 2003)
+
+  22 Feb 2003; Daniel Ahlberg <aliz@gentoo.org> :
+  Security update.
 
 *usermin-0.980 (16 Dec 2002)
 
