@@ -1,6 +1,6 @@
-# Copyright 1999-2003 Gentoo Technologies, Inc.
+# Copyright 1999-2004 Gentoo Technologies, Inc.
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-IxHash/Tie-IxHash-1.21.ebuild,v 1.5 2004/02/22 20:51:26 agriffis Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/Tie-IxHash/Tie-IxHash-1.21.ebuild,v 1.6 2004/05/04 23:02:35 kloeri Exp $
 
 inherit perl-module
 
