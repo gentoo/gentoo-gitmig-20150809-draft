@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha37-r1.ebuild,v 1.1 2004/09/14 05:38:14 solar Exp $
+# $Header: /var/cvsroot/gentoo-x86/app-cdr/cdrtools/cdrtools-2.01_alpha37-r1.ebuild,v 1.2 2004/09/17 20:54:20 vapier Exp $
 
 inherit eutils gcc gnuconfig
 
@@ -10,7 +10,7 @@ SRC_URI="ftp://ftp.berlios.de/pub/cdrecord/alpha/${P/_alpha/a}.tar.bz2"
 
 LICENSE="GPL-2 freedist"
 SLOT="0"
-KEYWORDS="~x86 ~ppc ~sparc ~alpha ~hppa ~amd64 ~ia64 ~ppc64 ~mips"
+KEYWORDS="~x86 ~ppc ~sparc ~alpha ~arm ~hppa ~amd64 ~ia64 ~ppc64 ~mips"
 IUSE=""
 
 DEPEND="virtual/libc"
