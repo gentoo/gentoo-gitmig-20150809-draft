@@ -1,6 +1,6 @@
 # Copyright 1999-2004 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/games-board/qgo/qgo-0.2.2.ebuild,v 1.1 2004/10/19 22:55:57 mr_bones_ Exp $
+# $Header: /var/cvsroot/gentoo-x86/games-board/qgo/qgo-0.2.2.ebuild,v 1.2 2004/10/25 23:38:49 slarti Exp $
 
 inherit kde-functions eutils
 need-qt 3
@@ -11,7 +11,7 @@ SRC_URI="mirror://sourceforge/qgo/${P}-b3.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="x86 ppc"
+KEYWORDS="x86 ppc ~amd64"
 IUSE=""
 
 src_unpack() {
