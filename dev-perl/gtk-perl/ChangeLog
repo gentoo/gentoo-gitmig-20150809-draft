@@ -1,8 +1,11 @@
 # ChangeLog for dev-perl/gtk-perl
 # Copyright 2002 Gentoo Technologies, Inc.; Distributed under the GPL
-# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/ChangeLog,v 1.7 2002/09/09 21:53:26 mcummings Exp $
+# $Header: /var/cvsroot/gentoo-x86/dev-perl/gtk-perl/ChangeLog,v 1.8 2002/10/18 14:25:10 mcummings Exp $
 
 *gtk-perl-0.7008-r4 (26 May 2002)
+
+  18 Oct 2002; <mcummings@gentoo.org>
+  Added myconf flag to disable guessing (thanks malverian!)
 
   9 Sep 2002; <mcummings@gentoo.org> :
   Corrected syntax
