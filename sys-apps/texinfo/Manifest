@@ -7,7 +7,7 @@ MD5 b010ee0984e648992c747f4b17859dfa texinfo-4.3-r1.ebuild 1726
 MD5 2203374b084a0248412b72161a0c0f79 texinfo-4.5.ebuild 1664
 MD5 307657baa4ddac78d07c19bd9bd6e7aa texinfo-4.6.ebuild 1717
 MD5 6f2649b1f9ae74cb593f0a83f4853d64 texinfo-4.7.ebuild 1979
-MD5 48aa08cc8e126cbee5e1dd5693a02cf0 texinfo-4.7-r1.ebuild 2013
+MD5 34f401eccca3beab54f0c1a49d89dff6 texinfo-4.7-r1.ebuild 1980
 MD5 3173c3b67a3ef4e594cf5ce1b8253504 files/digest-texinfo-4.3-r1 64
 MD5 c14f75d4a1d21ae1776a9868bd0c0296 files/digest-texinfo-4.5 65
 MD5 247b349c3d22ddbd4288247e611bb186 files/digest-texinfo-4.6 65
@@ -19,7 +19,7 @@ MD5 a0df107ca9e3036e2ee2d501343cbf2b files/makeinfo.patch 790
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.9.10 (GNU/Linux)
 
-iD8DBQFBPyIIHTu7gpaalycRAv4fAJ0ehHDUqBSOeoSoyNkrUtsQOndIqwCgiG+W
-ikpgPBXNomi/IZ5t381gmbc=
-=Ty9O
+iD8DBQFBgariHTu7gpaalycRAhduAKCCBpYGOQUud6gsepucGbwEgFoqqACg+fya
+P/aPIbQpvgGH8z46ESsc9xE=
+=snfv
 -----END PGP SIGNATURE-----
