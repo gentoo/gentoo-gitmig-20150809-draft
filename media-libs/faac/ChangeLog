@@ -1,6 +1,9 @@
 # ChangeLog for media-libs/faac
 # Copyright 2002-2005 Gentoo Foundation; Distributed under the GPL v2
-# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/ChangeLog,v 1.24 2005/01/23 15:27:51 luckyduck Exp $
+# $Header: /var/cvsroot/gentoo-x86/media-libs/faac/ChangeLog,v 1.25 2005/03/21 05:53:13 j4rg0n Exp $
+
+  21 Mar 2005; Lina Pezzella <j4rg0n@gentoo.org> faac-1.24.ebuild:
+  Stable ppc-macos
 
   23 Jan 2005; Jan Brinkmann <luckyduck@gentoo.org> faac-1.24.ebuild:
   added faad2 dependency to fix #62866.
